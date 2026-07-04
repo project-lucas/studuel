@@ -24,3 +24,16 @@ UPDATE public.habit_catalog
 SET default_target = '{"minutes": 60, "days": [2,5]}'::jsonb
 WHERE id = '55555555-5555-4555-8555-555555555504'
   AND default_target = '{"minutes": 30}'::jsonb;
+
+-- Missions supplémentaires (2e vague).
+INSERT INTO public.habit_catalog (id, title, icon, rationale, validation_type, default_target) VALUES
+  ('55555555-5555-4555-8555-555555555512', 'Relire mes notes du jour', '📓',
+   'Relire ses notes le soir même exploite la fenêtre de consolidation : 10 minutes le jour J valent une heure de révision une semaine plus tard.',
+   'manual', '{"days": [0,1,2,3,4], "time": "18:30"}'),
+  ('55555555-5555-4555-8555-555555555513', 'Cartable prêt la veille', '🎒',
+   'Préparer ses affaires la veille supprime la friction et le stress du matin : le cerveau démarre la journée calme, prêt à apprendre.',
+   'manual', '{"days": [0,1,2,3,6], "time": "20:30"}'),
+  ('55555555-5555-4555-8555-555555555514', 'Respiration 2 minutes', '🧘',
+   'Deux minutes de respiration lente activent le système parasympathique : le stress redescend et libère la mémoire de travail avant une session ou un contrôle.',
+   'manual', '{"days": [0,1,2,3,4,5,6], "time": "19:30"}')
+ON CONFLICT (id) DO NOTHING;

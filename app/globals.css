@@ -252,6 +252,66 @@ a:hover > .wiggle-on-hover {
   animation: wiggle 0.4s ease-in-out;
 }
 
+/* --- Barre de série (WeekStrip) ------------------------------------------- */
+
+/* La flamme respire : léger scale + glow qui s'intensifie et s'atténue */
+@keyframes flame-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.35));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 14px rgba(236, 72, 153, 0.55));
+  }
+}
+.flame-breathe {
+  animation: flame-breathe 2.4s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+/* Pop façon spring : scale 0 → 1.15 → 1 */
+@keyframes pop-spring {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pop-spring {
+  animation: pop-spring 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+/* Le checkmark se dessine (stroke-dashoffset) après le pop du cercle */
+@keyframes check-draw {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.check-draw {
+  stroke-dasharray: 24;
+  animation: check-draw 0.35s ease-out backwards;
+}
+
+/* Les segments de la chaîne se remplissent de gauche à droite */
+@keyframes seg-fill {
+  from {
+    transform: scaleX(0);
+  }
+}
+.seg-fill {
+  transform-origin: left;
+  animation: seg-fill 0.3s ease-out backwards;
+}
+
 /* Le bouton GO respire tant que le défi du jour n'est pas fait */
 @keyframes go-pulse {
   0%,

@@ -22,6 +22,8 @@ import {
   isInCommuteSlot,
   longestRun,
   longestAnchored,
+  dayIndexOf,
+  PLANIFIER_CATALOG_ID,
 } from '@/lib/habits'
 import type {
   Habit,
@@ -69,6 +71,13 @@ export default async function MoiPage() {
       </div>
     )
   }
+
+  // Mission fixe pour tous : « Planifier ma semaine » (dimanche) —
+  // auto-inscrite, impossible à perdre.
+  await supabase.from('habits').upsert(
+    { user_id: user.id, catalog_id: PLANIFIER_CATALOG_ID, target: {} },
+    { onConflict: 'user_id,catalog_id', ignoreDuplicates: true },
+  )
 
   // Profil + habitudes d'abord (nécessaires à la synchro auto).
   const [{ data: profile }, { data: habits }] = await Promise.all([
@@ -278,14 +287,15 @@ export default async function MoiPage() {
         description="Ta structure de travail, jour après jour. C'est elle qui fait les notes."
       />
       <WeekStrip week={week} streak={currentStreak} />
-      <StructureScore score={score} />
       <HabitsList
         habits={activeHabits}
         catalog={catalog ?? []}
         todayByHabit={todayByHabit}
         today={today}
+        todayIdx={dayIndexOf(today)}
         commuteSlots={commuteSlots}
       />
+      <StructureScore score={score} />
       <StructureChart data={chartData} />
       <BadgeGrid
         badges={badges ?? []}

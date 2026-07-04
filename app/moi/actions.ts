@@ -35,6 +35,42 @@ export async function addHabit(catalogId: string): Promise<void> {
   revalidatePath('/moi')
 }
 
+// Planifie une habitude : jours de la semaine (0 = lundi) et heure.
+export async function updateHabitSchedule(
+  habitId: string,
+  days: number[],
+  time: string | null,
+): Promise<void> {
+  const { supabase, userId } = await requireUser()
+  if (!userId) return
+
+  const cleanDays = Array.from(
+    new Set(days.filter((d) => Number.isInteger(d) && d >= 0 && d <= 6)),
+  ).sort()
+  const cleanTime = time && /^\d{2}:\d{2}$/.test(time) ? time : null
+
+  const { data: habit } = await supabase
+    .from('habits')
+    .select('target')
+    .eq('id', habitId)
+    .eq('user_id', userId)
+    .maybeSingle()
+  if (!habit) return
+
+  await supabase
+    .from('habits')
+    .update({
+      target: {
+        ...(habit.target as Record<string, unknown>),
+        days: cleanDays,
+        time: cleanTime,
+      },
+    })
+    .eq('id', habitId)
+    .eq('user_id', userId)
+  revalidatePath('/moi')
+}
+
 export async function removeHabit(habitId: string): Promise<void> {
   const { supabase, userId } = await requireUser()
   if (!userId) return

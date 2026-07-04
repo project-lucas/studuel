@@ -33,11 +33,21 @@ export async function signIn(
   }
 
   const supabase = await createClient()
-  const { error } = await supabase.auth.signInWithPassword({ email, password })
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  })
   if (error) return { error: toFrench(error.message) }
 
+  // Première connexion (ou config jamais faite) → onboarding.
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('onboarded')
+    .eq('id', data.user.id)
+    .maybeSingle()
+
   revalidatePath('/', 'layout')
-  redirect('/test')
+  redirect(profile?.onboarded ? '/test' : '/onboarding')
 }
 
 export async function signUp(
@@ -70,7 +80,7 @@ export async function signUp(
   }
 
   revalidatePath('/', 'layout')
-  redirect('/test')
+  redirect('/onboarding')
 }
 
 export async function signOut(): Promise<void> {

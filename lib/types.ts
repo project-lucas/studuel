@@ -9,6 +9,36 @@ export type Quiz = {
   is_free: boolean
 }
 
+// Classes proposées à l'onboarding.
+export const GRADE_LEVELS = ['6e', '5e', '4e', '3e', '2de', '1re', 'Tle'] as const
+export type GradeLevel = (typeof GRADE_LEVELS)[number]
+
+// Flashcards du programme (Studio).
+export type FlashcardDeck = {
+  id: string
+  title: string
+  subject: string
+  grade_level: string | null
+  is_free: boolean
+  deck_cards: { count: number }[]
+}
+
+export type DeckCard = {
+  id: string
+  deck_id: string
+  front: string
+  back: string
+  position: number
+}
+
+export type StudySession = {
+  id: string
+  deck_id: string | null
+  cards_count: number
+  created_at: string
+  flashcard_decks: { title: string } | null
+}
+
 // Tableau de révision (classes à examen : 3e, 1re, Tle).
 export type RevisionPriority = 'normale' | 'prioritaire' | 'critique'
 export type RevisionStatus = 'a_faire' | 'en_cours' | 'a_revoir' | 'maitrise'

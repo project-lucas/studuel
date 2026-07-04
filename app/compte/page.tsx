@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { LogOut, BadgeCheck } from 'lucide-react'
 import {
@@ -33,7 +34,7 @@ export default async function ComptePage() {
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('full_name, subscription_tier')
+    .select('full_name, subscription_tier, grade_level, daily_goal')
     .eq('id', user.id)
     .single()
 
@@ -52,6 +53,18 @@ export default async function ComptePage() {
           <p className="flex items-center gap-2">
             <BadgeCheck className="size-4 text-primary" />
             Abonnement : <strong>{TIER_LABELS[tier] ?? tier}</strong>
+          </p>
+          <p className="text-muted-foreground">
+            {profile?.grade_level
+              ? `Classe : ${profile.grade_level} · Objectif : ${profile.daily_goal ?? 1} session${(profile.daily_goal ?? 1) > 1 ? 's' : ''}/jour`
+              : 'Classe non renseignée'}{' '}
+            —{' '}
+            <Link
+              href="/onboarding"
+              className="font-medium text-primary underline underline-offset-4"
+            >
+              modifier
+            </Link>
           </p>
           {tier === 'free' ? (
             <p className="text-muted-foreground">

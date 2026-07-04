@@ -9,7 +9,6 @@ import {
 } from '@/components/ui/card'
 import PageHeader from '@/components/PageHeader'
 import { createClient } from '@/lib/supabase/server'
-import { getUserTier, canAccessPremiumTests } from '@/lib/subscription'
 import type { Quiz } from '@/lib/types'
 
 export const metadata = { title: 'Test — Scolaria' }
@@ -25,29 +24,51 @@ const norm = (s: string) =>
     .toLowerCase()
     .trim()
 
+const PREMIUM_TIERS = ['tier1', 'tier2', 'tier3']
+
 export default async function TestPage({
   searchParams,
 }: {
-  searchParams: Promise<{ matiere?: string }>
+  searchParams: Promise<{ matiere?: string; tous?: string }>
 }) {
-  const { matiere } = await searchParams
+  const { matiere, tous } = await searchParams
   const supabase = await createClient()
 
-  const [{ data: quizzes, error }, tier] = await Promise.all([
-    supabase
-      .from('quizzes')
-      .select('id, title, subject, grade_level, chapter, is_free')
-      .order('subject', { ascending: true })
-      .order('title', { ascending: true }),
-    getUserTier(),
-  ])
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
-  const hasPremium = canAccessPremiumTests(tier)
+  let hasPremium = false
+  let grade: string | null = null
+  if (user) {
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('subscription_tier, grade_level')
+      .eq('id', user.id)
+      .maybeSingle()
+    hasPremium = PREMIUM_TIERS.includes(profile?.subscription_tier ?? 'free')
+    grade = profile?.grade_level ?? null
+  }
+
+  const { data: quizzes, error } = await supabase
+    .from('quizzes')
+    .select('id, title, subject, grade_level, chapter, is_free')
+    .order('subject', { ascending: true })
+    .order('title', { ascending: true })
 
   // Filtre optionnel par matière (lien « M'entraîner » du Planning).
-  const filtered = matiere
+  let filtered = matiere
     ? ((quizzes ?? []) as Quiz[]).filter((q) => norm(q.subject) === norm(matiere))
     : ((quizzes ?? []) as Quiz[])
+
+  // Filtre par classe de l'élève (sauf filtre matière ou « Voir tout »).
+  const filterByGrade = Boolean(grade) && !matiere && !tous
+  let gradeEmpty = false
+  if (filterByGrade) {
+    const ofGrade = filtered.filter((q) => q.grade_level === grade)
+    gradeEmpty = ofGrade.length === 0
+    if (!gradeEmpty) filtered = ofGrade
+  }
 
   // Regroupe le catalogue par matière pour l'affichage.
   const bySubject = new Map<string, Quiz[]>()
@@ -77,6 +98,23 @@ export default async function TestPage({
             </Link>
           </span>
         </div>
+      ) : filterByGrade && !gradeEmpty ? (
+        <div className="mb-6 flex items-center gap-2 text-sm">
+          <span className="rounded-full bg-accent px-3 py-1 font-medium text-accent-foreground">
+            Ta classe : {grade}
+          </span>
+          <Link
+            href="/test?tous=1"
+            className="text-muted-foreground underline underline-offset-4 hover:text-foreground"
+          >
+            Voir toutes les classes
+          </Link>
+        </div>
+      ) : gradeEmpty ? (
+        <p className="mb-6 text-sm text-muted-foreground">
+          Pas encore de quiz pour la {grade} — voici tout le catalogue en
+          attendant.
+        </p>
       ) : null}
 
       {error ? (

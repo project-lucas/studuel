@@ -89,6 +89,25 @@ français écrit/oral, Tle → bac) :
 - Tables : `revision_subjects`, `revision_items` (RLS owner-only,
   migration 005).
 
+### A5. Onboarding, flashcards du programme et gamification (migration 007)
+Inspirations assumées : Wooflash/Quizlet (flashcards), Duolingo/HabitKit
+(série, sons, objectif quotidien).
+- **Onboarding** (`/onboarding`, déclenché à la première connexion) : choix de
+  la classe (6e → Tle) et de l'objectif quotidien (1-3 sessions/jour), stockés
+  dans `profiles` (`grade_level`, `daily_goal`, `onboarded`).
+- **Personnalisation** : Test et Studio filtrent par défaut sur la classe de
+  l'élève (lien « Voir toutes les classes » pour élargir).
+- **Studio = flashcards du programme** : decks par classe/matière
+  (`flashcard_decks` + `deck_cards`, gating Offre 1 comme les quiz), lecteur à
+  carte 3D, boucle Wooflash (les cartes « À revoir » reviennent en fin de pile
+  jusqu'à maîtrise), score « su du premier coup ».
+- **Gamification** : chaque quiz ou session de flashcards terminé =
+  1 activité (`test_sessions` + `study_sessions`). Page Habitude : anneau
+  hebdomadaire L→D qui se remplit (mode série), streak 🔥 avec grâce d'un
+  jour, objectif du jour, heatmap 26 semaines fusionnée.
+- **Sound design** : sons synthétisés WebAudio (flip, juste/faux, victoire),
+  préférence muet en localStorage, bouton sur les lecteurs.
+
 ### A3. Module Test (v1)
 - Tables `quizzes` (catalogue public) + `quiz_questions` (contenu, protégé par RLS).
 - Types de questions : QCM (`mcq`) et Vrai/Faux (`true_false`).

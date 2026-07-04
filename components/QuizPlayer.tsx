@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { recordTestSession } from '@/app/test/actions'
+import { sfx } from '@/lib/sounds'
+import { SoundToggle } from '@/components/FlashcardPlayer'
 import { CircleCheck, CircleX, RotateCcw, ArrowLeft } from 'lucide-react'
 import {
   Card,
@@ -38,12 +40,18 @@ export default function QuizPlayer({
   const choose = (optionIndex: number) => {
     if (answered) return
     setSelected(optionIndex)
-    if (optionIndex === question.correct_index) setScore((s) => s + 1)
+    if (optionIndex === question.correct_index) {
+      setScore((s) => s + 1)
+      sfx.correct()
+    } else {
+      sfx.wrong()
+    }
   }
 
   const next = () => {
     if (index + 1 >= questions.length) {
       setFinished(true)
+      sfx.complete()
       // Enregistre la session côté serveur (heatmap Habitude).
       recordTestSession(quizId, score, questions.length)
         .then((r) => setSaved(r.saved))
@@ -110,9 +118,12 @@ export default function QuizPlayer({
   return (
     <Card className="mx-auto max-w-xl">
       <CardHeader>
-        <CardDescription>
-          Question {index + 1} / {questions.length}
-          {question.kind === 'true_false' ? ' — Vrai ou Faux' : ' — QCM'}
+        <CardDescription className="flex items-center justify-between">
+          <span>
+            Question {index + 1} / {questions.length}
+            {question.kind === 'true_false' ? ' — Vrai ou Faux' : ' — QCM'}
+          </span>
+          <SoundToggle />
         </CardDescription>
         <CardTitle className="text-lg">{question.question}</CardTitle>
         {/* Barre de progression */}

@@ -85,7 +85,7 @@
   --chart-3: oklch(0.65 0.12 277);
   --chart-4: oklch(0.52 0.035 278);
   --chart-5: oklch(0.32 0.06 278);
-  --radius: 0.75rem;
+  --radius: 1rem;
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.25 0.045 278);
   --sidebar-primary: oklch(0.47 0.19 277);
@@ -183,6 +183,11 @@
   /* Titres : Bricolage Grotesque, resserrée */
   .font-heading {
     letter-spacing: -0.02em;
+  }
+  /* Sélection de texte : coup de surligneur */
+  ::selection {
+    background: var(--highlight);
+    color: oklch(0.25 0.045 278);
   }
 }
 

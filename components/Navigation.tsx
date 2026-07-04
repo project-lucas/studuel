@@ -2,21 +2,20 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { CalendarDays, CircleUser, Zap } from 'lucide-react'
+import { CircleUser, Zap } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 // Ordre des onglets = ordre de la barre mobile. Le Défi est au centre,
-// surélevé — c'est LE geste quotidien. Émoji ou icône Lucide par onglet.
+// surélevé — c'est LE geste quotidien. Langage d'icônes : émojis stickers.
 const links = [
   { name: 'IA', path: '/ia', emoji: '✨' },
   { name: 'Réviser', path: '/reviser', emoji: '🏠' },
   { name: 'Défi', path: '/defi', center: true },
   { name: 'Moi', path: '/moi', emoji: '🧑' },
-  { name: 'Coaching', path: '/planning', icon: CalendarDays },
+  { name: 'Coaching', path: '/planning', emoji: '🤝' },
 ] as {
   name: string
   path: string
-  icon?: typeof CalendarDays
   emoji?: string
   center?: boolean
 }[]
@@ -57,7 +56,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
       {/* …et barre d'onglets fixée en bas, Défi surélevé au centre */}
       <nav className="fixed inset-x-0 bottom-0 z-50 border-t bg-card/85 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
         <ul className="flex items-end">
-          {links.map(({ name, path, icon: Icon, emoji, center }) => {
+          {links.map(({ name, path, emoji, center }) => {
             const active = isActive(path)
 
             if (center) {
@@ -104,8 +103,6 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                   >
                     {emoji ? (
                       <span className="text-[17px] leading-none">{emoji}</span>
-                    ) : Icon ? (
-                      <Icon className="size-5" />
                     ) : null}
                   </span>
                   {name}
@@ -123,7 +120,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
         </Link>
 
         <ul className="flex flex-col gap-1">
-          {links.map(({ name, path, icon: Icon, emoji, center }) => (
+          {links.map(({ name, path, emoji, center }) => (
             <li key={path}>
               <Link
                 href={path}
@@ -142,8 +139,6 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                   <span className="w-4 shrink-0 text-center text-[15px] leading-none">
                     {emoji}
                   </span>
-                ) : Icon ? (
-                  <Icon className="size-4 shrink-0" />
                 ) : null}
                 {name}
               </Link>

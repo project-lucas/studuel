@@ -127,9 +127,9 @@ export default function QuizPlayer({
         </CardDescription>
         <CardTitle className="text-lg">{question.question}</CardTitle>
         {/* Barre de progression */}
-        <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-muted">
+        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-muted">
           <div
-            className="h-full rounded-full bg-primary transition-all"
+            className="h-full rounded-full bg-highlight transition-all"
             style={{ width: `${((index + (answered ? 1 : 0)) / questions.length) * 100}%` }}
           />
         </div>
@@ -146,7 +146,7 @@ export default function QuizPlayer({
               onClick={() => choose(i)}
               disabled={answered}
               className={cn(
-                'flex items-center justify-between gap-3 rounded-lg border px-4 py-3 text-left text-sm font-medium transition-all',
+                'flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left text-sm font-medium transition-all',
                 !answered &&
                   'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
                 answered && isCorrect && 'border-green-600 bg-green-600/10 text-green-700 dark:text-green-400',

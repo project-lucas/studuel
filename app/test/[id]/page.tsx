@@ -57,7 +57,7 @@ export default async function QuizPage({
           <CardFooter>
             <Button variant="outline" asChild>
               <Link href="/test">
-                <ArrowLeft className="size-4" /> Retour aux tests
+                <ArrowLeft className="size-4" /> Retour aux révisions
               </Link>
             </Button>
           </CardFooter>
@@ -92,7 +92,7 @@ export default async function QuizPage({
           <CardFooter>
             <Button variant="outline" asChild>
               <Link href="/test">
-                <ArrowLeft className="size-4" /> Retour aux tests
+                <ArrowLeft className="size-4" /> Retour aux révisions
               </Link>
             </Button>
           </CardFooter>

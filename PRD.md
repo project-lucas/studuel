@@ -108,6 +108,25 @@ Inspirations assumées : Wooflash/Quizlet (flashcards), Duolingo/HabitKit
 - **Sound design** : sons synthétisés WebAudio (flip, juste/faux, victoire),
   préférence muet en localStorage, bouton sur les lecteurs.
 
+### A6. Refonte Réviser — navigation à 3 niveaux (migration 008)
+- **Niveau 1 `/reviser`** : « Mes matières » — grille 2 colonnes de cartes
+  arrondies (émoji sticker + nom), groupée selon la classe (Collège = section
+  unique ; Lycée = Tronc commun / Spécialités / Options). Bouton « Éditer »
+  → sélection persistée dans `profiles.selected_subjects` (jsonb). Barre
+  d'input IA flottante (placeholder).
+- **Niveau 2 `/reviser/[subject]`** : header pastel de la matière (motif
+  grille), recherche client, chapitres du programme du niveau de l'élève.
+- **Niveau 3 `/reviser/[subject]/[chapter]`** : leçons (vignette mascotte 🦉,
+  bouton « Leçon » → contenu, bouton play → quiz rattaché via
+  `quizzes.lesson_id`). Page leçon en 4e segment d'URL.
+- **Données** : `subjects` (slug, icon, color, category, levels[]),
+  `chapters` (par matière ET niveau), `lessons` (2 placeholders/chapitre
+  générés). Seed Éduscol : 15 matières, ~280 chapitres couvrant 6e → Tle.
+- **Règles** : contenu filtré par `profiles.grade_level` ; lecture
+  authentifiée (RLS) ; quiz premium toujours gatés par `subscription_tier`.
+- L'ancien catalogue `/test` redirige vers `/reviser` ; les sessions de quiz
+  restent sur `/test/[id]`.
+
 ### A3. Module Test (v1)
 - Tables `quizzes` (catalogue public) + `quiz_questions` (contenu, protégé par RLS).
 - Types de questions : QCM (`mcq`) et Vrai/Faux (`true_false`).

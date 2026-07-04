@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation'
 import {
   PlaySquare,
   Sparkles,
-  FlaskConical,
   CalendarDays,
   Flame,
   CircleUser,
@@ -13,13 +12,19 @@ import {
 import { cn } from '@/lib/utils'
 
 // Ordre des onglets = ordre de la barre mobile (Formation tout à gauche).
+// Un onglet peut avoir soit une icône Lucide, soit un émoji.
 const links = [
   { name: 'Formation', path: '/formation', icon: PlaySquare },
   { name: 'Studio', path: '/studio', icon: Sparkles },
-  { name: 'Test', path: '/test', icon: FlaskConical },
+  { name: 'Réviser', path: '/reviser', emoji: '🏠' },
   { name: 'Planning', path: '/planning', icon: CalendarDays },
   { name: 'Habitude', path: '/habitude', icon: Flame },
-]
+] as {
+  name: string
+  path: string
+  icon?: typeof PlaySquare
+  emoji?: string
+}[]
 
 export default function Navigation({ userLabel }: { userLabel: string | null }) {
   const pathname = usePathname()
@@ -57,7 +62,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
       {/* …et barre d'onglets fixée en bas — l'onglet actif est « surligné » */}
       <nav className="fixed inset-x-0 bottom-0 z-50 border-t bg-card/85 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
         <ul className="flex">
-          {links.map(({ name, path, icon: Icon }) => {
+          {links.map(({ name, path, icon: Icon, emoji }) => {
             const active = isActive(path)
             return (
               <li key={path} className="flex-1">
@@ -77,7 +82,11 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                       active && 'bg-accent text-accent-foreground',
                     )}
                   >
-                    <Icon className="size-5" />
+                    {emoji ? (
+                      <span className="text-[17px] leading-none">{emoji}</span>
+                    ) : Icon ? (
+                      <Icon className="size-5" />
+                    ) : null}
                   </span>
                   {name}
                 </Link>
@@ -94,7 +103,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
         </Link>
 
         <ul className="flex flex-col gap-1">
-          {links.map(({ name, path, icon: Icon }) => (
+          {links.map(({ name, path, icon: Icon, emoji }) => (
             <li key={path}>
               <Link
                 href={path}
@@ -106,7 +115,13 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                     : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
                 )}
               >
-                <Icon className="size-4 shrink-0" />
+                {emoji ? (
+                  <span className="w-4 shrink-0 text-center text-[15px] leading-none">
+                    {emoji}
+                  </span>
+                ) : Icon ? (
+                  <Icon className="size-4 shrink-0" />
+                ) : null}
                 {name}
               </Link>
             </li>

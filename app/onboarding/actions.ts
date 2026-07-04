@@ -26,5 +26,5 @@ export async function saveOnboarding(formData: FormData): Promise<void> {
     .eq('id', user.id)
 
   revalidatePath('/', 'layout')
-  redirect('/studio')
+  redirect('/reviser')
 }

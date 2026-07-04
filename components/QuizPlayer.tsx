@@ -106,8 +106,8 @@ export default function QuizPlayer({
             <RotateCcw className="size-4" /> Recommencer
           </Button>
           <Button variant="outline" asChild>
-            <Link href="/test">
-              <ArrowLeft className="size-4" /> Retour aux tests
+            <Link href="/reviser">
+              <ArrowLeft className="size-4" /> Retour aux révisions
             </Link>
           </Button>
         </CardFooter>

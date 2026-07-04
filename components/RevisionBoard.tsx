@@ -216,7 +216,7 @@ function SubjectCard({ subject }: { subject: RevisionSubject }) {
             />
           </span>
           <Link
-            href={`/test?matiere=${encodeURIComponent(subject.name)}`}
+            href="/reviser"
             className="ml-auto flex shrink-0 items-center gap-1 text-xs font-medium text-primary transition-colors hover:underline"
           >
             <Dumbbell className="size-3.5" /> M&apos;entraîner

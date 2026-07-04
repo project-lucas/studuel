@@ -75,7 +75,7 @@ export default function SessionCoach({ plan }: { plan: PlanEntry[] }) {
                     : STATUS_LABELS[entry.status]}
                 </span>
                 <Button asChild size="xs" variant="secondary" className="shrink-0">
-                  <Link href={`/test?matiere=${encodeURIComponent(entry.subjectName)}`}>
+                  <Link href="/reviser">
                     M&apos;entraîner
                   </Link>
                 </Button>

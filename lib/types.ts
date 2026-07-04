@@ -13,6 +13,36 @@ export type Quiz = {
 export const GRADE_LEVELS = ['6e', '5e', '4e', '3e', '2de', '1re', 'Tle'] as const
 export type GradeLevel = (typeof GRADE_LEVELS)[number]
 
+// Réviser : matières → chapitres → leçons (migration 008).
+export type SubjectCategory = 'college' | 'tronc_commun' | 'specialite' | 'option'
+
+export type Subject = {
+  id: string
+  slug: string
+  name: string
+  icon: string
+  color: string
+  category: SubjectCategory
+  levels: string[]
+}
+
+export type Chapter = {
+  id: string
+  subject_id: string
+  level: string
+  title: string
+  position: number
+}
+
+export type Lesson = {
+  id: string
+  chapter_id: string
+  title: string
+  thumbnail_url: string | null
+  content: string | null
+  position: number
+}
+
 // Flashcards du programme (Studio).
 export type FlashcardDeck = {
   id: string

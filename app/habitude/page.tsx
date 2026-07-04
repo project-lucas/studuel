@@ -192,7 +192,7 @@ export default async function HabitudePage() {
                   <Link href="/studio">Session flashcards</Link>
                 </Button>
                 <Button asChild size="sm" variant="outline">
-                  <Link href="/test">Lancer un quiz</Link>
+                  <Link href="/reviser">Lancer un quiz</Link>
                 </Button>
               </div>
             ) : null}

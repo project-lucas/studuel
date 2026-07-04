@@ -127,6 +127,25 @@ Inspirations assumées : Wooflash/Quizlet (flashcards), Duolingo/HabitKit
 - L'ancien catalogue `/test` redirige vers `/reviser` ; les sessions de quiz
   restent sur `/test/[id]`.
 
+### A7. Onglet Moi (migration 010) — structure de travail
+Navigation : Formation · Studio · 🏠 Réviser · 🧑 Moi · Coaching (ex-Planning).
+- **Score de structure** (0-100) : moyenne des taux de complétion des
+  habitudes sur 7 jours, cercle de progression + libellé d'état.
+- **Habitudes clés** : catalogue prédéfini (8 entrées avec rationale
+  scientifique affiché) — sommeil, révision quotidienne (validation AUTO via
+  les sessions), test sur trajets (AUTO si quiz complété dans
+  `profiles.commute_slots`), sport, lecture, écrans, petit-déj, téléphone.
+  Check manuel quotidien pour les manuelles ; auto-validation « à la volée »
+  au chargement de la page.
+- **Structure ↔ notes** : courbe recharts 8 semaines (score de structure vs
+  moyenne des quiz) — la preuve que la structure paye.
+- **Records & badges** : plus longue série, sessions max/jour, habitude la
+  plus ancrée ; 8 badges à jalons (7/30/100 jours, ancrage 21 j, 10 quiz en
+  trajets…), débloqués en couleur / verrouillés grisés, évaluation
+  idempotente à chaque visite.
+- Tables : `habit_catalog`, `habits`, `habit_logs`, `badges`, `user_badges`
+  (+ `profiles.commute_slots`). L'ancien onglet Habitude redirige vers /moi.
+
 ### A3. Module Test (v1)
 - Tables `quizzes` (catalogue public) + `quiz_questions` (contenu, protégé par RLS).
 - Types de questions : QCM (`mcq`) et Vrai/Faux (`true_false`).

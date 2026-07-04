@@ -43,6 +43,45 @@ export type Lesson = {
   position: number
 }
 
+// Onglet Moi : habitudes, badges, trajets (migration 010).
+export type HabitValidationType = 'auto_revision' | 'auto_commute' | 'manual'
+
+export type HabitCatalogEntry = {
+  id: string
+  title: string
+  icon: string
+  rationale: string
+  validation_type: HabitValidationType
+  default_target: Record<string, unknown>
+}
+
+export type Habit = {
+  id: string
+  catalog_id: string
+  target: Record<string, unknown>
+  created_at: string
+  habit_catalog: HabitCatalogEntry | null
+}
+
+export type HabitLog = {
+  id: string
+  habit_id: string
+  date: string // 'YYYY-MM-DD'
+  completed: boolean
+  auto_validated: boolean
+}
+
+export type Badge = {
+  id: string
+  slug: string
+  title: string
+  description: string
+  icon: string
+  condition: Record<string, unknown>
+}
+
+export type CommuteSlot = { start: string; end: string } // 'HH:MM'
+
 // Flashcards du programme (Studio).
 export type FlashcardDeck = {
   id: string

@@ -6,19 +6,18 @@ import {
   PlaySquare,
   Sparkles,
   CalendarDays,
-  Flame,
   CircleUser,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-// Ordre des onglets = ordre de la barre mobile (Formation tout à gauche).
-// Un onglet peut avoir soit une icône Lucide, soit un émoji.
+// Ordre des onglets = ordre de la barre mobile (Formation tout à gauche,
+// Coaching tout à droite). Un onglet peut avoir une icône Lucide ou un émoji.
 const links = [
   { name: 'Formation', path: '/formation', icon: PlaySquare },
   { name: 'Studio', path: '/studio', icon: Sparkles },
   { name: 'Réviser', path: '/reviser', emoji: '🏠' },
-  { name: 'Planning', path: '/planning', icon: CalendarDays },
-  { name: 'Habitude', path: '/habitude', icon: Flame },
+  { name: 'Moi', path: '/moi', emoji: '🧑' },
+  { name: 'Coaching', path: '/planning', icon: CalendarDays },
 ] as {
   name: string
   path: string

@@ -90,7 +90,7 @@ export default function QuizPlayer({
           </p>
           {saved === true ? (
             <p className="text-xs text-muted-foreground">
-              ✓ Session enregistrée dans ton historique Habitude.
+              ✓ Session enregistrée — ta série continue 🔥
             </p>
           ) : saved === false ? (
             <p className="text-xs text-muted-foreground">

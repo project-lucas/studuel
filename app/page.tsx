@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 
-// La racine renvoie vers le premier onglet de la navigation.
+// La racine ouvre le Défi : LE geste quotidien.
 export default function Home() {
-  redirect('/formation')
+  redirect('/defi')
 }

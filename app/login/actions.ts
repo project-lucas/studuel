@@ -47,7 +47,7 @@ export async function signIn(
     .maybeSingle()
 
   revalidatePath('/', 'layout')
-  redirect(profile?.onboarded ? '/reviser' : '/onboarding')
+  redirect(profile?.onboarded ? '/defi' : '/onboarding')
 }
 
 export async function signUp(

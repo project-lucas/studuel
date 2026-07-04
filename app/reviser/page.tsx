@@ -99,6 +99,7 @@ export default async function ReviserPage() {
     { data: tests },
     { data: studies },
     { data: completions },
+    { data: challenges },
     { data: levelChapters },
     mastery,
   ] = await Promise.all([
@@ -106,6 +107,7 @@ export default async function ReviserPage() {
     supabase.from('test_sessions').select('created_at'),
     supabase.from('study_sessions').select('created_at'),
     supabase.from('lesson_completions').select('created_at'),
+    supabase.from('challenge_sessions').select('created_at'),
     supabase
       .from('chapters')
       .select('id, subject_id, title, position')
@@ -136,11 +138,14 @@ export default async function ReviserPage() {
     )
   }
 
-  // --- Série : quiz, flashcards ET leçons terminées valident la journée ------
+  // --- Série : quiz, flashcards, leçons ET défis valident la journée ----------
   const activeDays = new Set(
-    [...(tests ?? []), ...(studies ?? []), ...(completions ?? [])].map((s) =>
-      String(s.created_at).slice(0, 10),
-    ),
+    [
+      ...(tests ?? []),
+      ...(studies ?? []),
+      ...(completions ?? []),
+      ...(challenges ?? []),
+    ].map((s) => String(s.created_at).slice(0, 10)),
   )
   const streak = computeStreak(activeDays)
   const week = weekProgress(activeDays)

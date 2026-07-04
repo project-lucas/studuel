@@ -2,27 +2,23 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import {
-  PlaySquare,
-  Sparkles,
-  CalendarDays,
-  CircleUser,
-} from 'lucide-react'
+import { CalendarDays, CircleUser, Zap } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-// Ordre des onglets = ordre de la barre mobile (Formation tout à gauche,
-// Coaching tout à droite). Un onglet peut avoir une icône Lucide ou un émoji.
+// Ordre des onglets = ordre de la barre mobile. Le Défi est au centre,
+// surélevé — c'est LE geste quotidien. Émoji ou icône Lucide par onglet.
 const links = [
-  { name: 'Formation', path: '/formation', icon: PlaySquare },
-  { name: 'Studio', path: '/studio', icon: Sparkles },
+  { name: 'IA', path: '/ia', emoji: '✨' },
   { name: 'Réviser', path: '/reviser', emoji: '🏠' },
+  { name: 'Défi', path: '/defi', center: true },
   { name: 'Moi', path: '/moi', emoji: '🧑' },
   { name: 'Coaching', path: '/planning', icon: CalendarDays },
 ] as {
   name: string
   path: string
-  icon?: typeof PlaySquare
+  icon?: typeof CalendarDays
   emoji?: string
+  center?: boolean
 }[]
 
 export default function Navigation({ userLabel }: { userLabel: string | null }) {
@@ -58,11 +54,36 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
         </Link>
       </header>
 
-      {/* …et barre d'onglets fixée en bas — l'onglet actif est « surligné » */}
+      {/* …et barre d'onglets fixée en bas, Défi surélevé au centre */}
       <nav className="fixed inset-x-0 bottom-0 z-50 border-t bg-card/85 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
-        <ul className="flex">
-          {links.map(({ name, path, icon: Icon, emoji }) => {
+        <ul className="flex items-end">
+          {links.map(({ name, path, icon: Icon, emoji, center }) => {
             const active = isActive(path)
+
+            if (center) {
+              return (
+                <li key={path} className="flex-1">
+                  <Link
+                    href={path}
+                    aria-current={active ? 'page' : undefined}
+                    className="flex flex-col items-center gap-0.5 pb-2 text-[11px] font-medium"
+                  >
+                    <span
+                      className={cn(
+                        '-mt-5 flex size-14 items-center justify-center rounded-full border-4 border-background bg-primary text-primary-foreground shadow-lg shadow-primary/30 transition-all active:scale-90',
+                        active && 'ring-2 ring-highlight',
+                      )}
+                    >
+                      <Zap className="size-6" />
+                    </span>
+                    <span className={active ? 'text-primary' : 'text-muted-foreground'}>
+                      {name}
+                    </span>
+                  </Link>
+                </li>
+              )
+            }
+
             return (
               <li key={path} className="flex-1">
                 <Link
@@ -95,14 +116,14 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
         </ul>
       </nav>
 
-      {/* Desktop : sidebar sticky (ne défile pas avec le contenu) */}
+      {/* Desktop : sidebar sticky */}
       <nav className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col gap-8 border-r bg-card p-5 md:flex">
         <Link href="/" className="font-heading px-3 text-2xl font-bold">
           Scolaria
         </Link>
 
         <ul className="flex flex-col gap-1">
-          {links.map(({ name, path, icon: Icon, emoji }) => (
+          {links.map(({ name, path, icon: Icon, emoji, center }) => (
             <li key={path}>
               <Link
                 href={path}
@@ -112,9 +133,12 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                   isActive(path)
                     ? 'bg-primary text-primary-foreground shadow-sm'
                     : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
+                  center && !isActive(path) && 'font-bold text-primary',
                 )}
               >
-                {emoji ? (
+                {center ? (
+                  <Zap className="size-4 shrink-0" />
+                ) : emoji ? (
                   <span className="w-4 shrink-0 text-center text-[15px] leading-none">
                     {emoji}
                   </span>

@@ -146,6 +146,24 @@ Navigation : Formation · Studio · 🏠 Réviser · 🧑 Moi · Coaching (ex-Pl
 - Tables : `habit_catalog`, `habits`, `habit_logs`, `badges`, `user_badges`
   (+ `profiles.commute_slots`). L'ancien onglet Habitude redirige vers /moi.
 
+### A8. Le Défi au centre + XP (migration 011)
+Recentrage produit : Scolaria n'est pas une app de révision, c'est un jeu
+quotidien de 3 minutes qui utilise le programme scolaire. Pensé pour l'élève
+peu motivé (gamer) : il ne choisit rien, il joue.
+- **Navigation** : ✨ IA · 🏠 Réviser · **⚡ Défi (centre, bouton surélevé,
+  onglet par défaut)** · 🧑 Moi · Coaching. Formation fusionne dans Réviser
+  (redirection) ; Studio reste accessible hors nav.
+- **Le Défi** (`/defi`, table `challenge_sessions`) : session auto-générée
+  ~8 items (questions de quiz + flashcards), chapitres les plus faibles
+  d'abord (via la maîtrise), gros bouton GO, +XP par bonne réponse,
+  bonus de fin, valide la journée (série + habitude révision).
+- **XP & niveaux** (`lib/xp.ts`) : dérivés de l'activité réelle (aucun
+  compteur stocké) — quiz 10/bonne réponse, cartes 5, leçon 15, défi
+  enregistré. 10 niveaux à titres fun (Nouveau 🐣 → Légende 👑).
+- **IA** (`/ia`) : placeholder du tuteur GPT-4o.
+- À venir (pack gamification) : gel de série ❄️, mini-jeu Match, mascotte
+  réactive.
+
 ### A3. Module Test (v1)
 - Tables `quizzes` (catalogue public) + `quiz_questions` (contenu, protégé par RLS).
 - Types de questions : QCM (`mcq`) et Vrai/Faux (`true_false`).

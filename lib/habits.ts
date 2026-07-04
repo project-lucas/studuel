@@ -76,7 +76,7 @@ export async function syncAutoHabits(
   const today = toDayKey(new Date())
   const dayStart = `${today}T00:00:00Z`
 
-  const [{ data: tests }, { data: studies }, { data: lessons }] =
+  const [{ data: tests }, { data: studies }, { data: lessons }, { data: challenges }] =
     await Promise.all([
       supabase
         .from('test_sessions')
@@ -90,10 +90,17 @@ export async function syncAutoHabits(
         .from('lesson_completions')
         .select('created_at')
         .gte('created_at', dayStart),
+      supabase
+        .from('challenge_sessions')
+        .select('created_at')
+        .gte('created_at', dayStart),
     ])
 
   const sessionsToday =
-    (tests?.length ?? 0) + (studies?.length ?? 0) + (lessons?.length ?? 0)
+    (tests?.length ?? 0) +
+    (studies?.length ?? 0) +
+    (lessons?.length ?? 0) +
+    (challenges?.length ?? 0)
   const commuteQuizToday = (tests ?? []).some((t) =>
     isInCommuteSlot(String(t.created_at), commuteSlots),
   )

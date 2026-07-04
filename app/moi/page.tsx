@@ -101,6 +101,7 @@ export default async function MoiPage() {
     { data: tests },
     { data: studies },
     { data: lessonsDone },
+    { data: challenges },
   ] = await Promise.all([
     supabase
       .from('habit_logs')
@@ -116,6 +117,7 @@ export default async function MoiPage() {
       .returns<SessionRow[]>(),
     supabase.from('study_sessions').select('created_at'),
     supabase.from('lesson_completions').select('created_at'),
+    supabase.from('challenge_sessions').select('created_at'),
   ])
 
   if (catalogError) {
@@ -195,13 +197,17 @@ export default async function MoiPage() {
   }
 
   // --- Bloc 4 : records + badges -------------------------------------------------
+  const allActivity = [
+    ...(tests ?? []),
+    ...(studies ?? []),
+    ...(lessonsDone ?? []),
+    ...(challenges ?? []),
+  ]
   const activityDays = new Set(
-    [...(tests ?? []), ...(studies ?? []), ...(lessonsDone ?? [])].map((s) =>
-      String(s.created_at).slice(0, 10),
-    ),
+    allActivity.map((s) => String(s.created_at).slice(0, 10)),
   )
   const sessionsPerDay = new Map<string, number>()
-  for (const s of [...(tests ?? []), ...(studies ?? []), ...(lessonsDone ?? [])]) {
+  for (const s of allActivity) {
     const key = String(s.created_at).slice(0, 10)
     sessionsPerDay.set(key, (sessionsPerDay.get(key) ?? 0) + 1)
   }

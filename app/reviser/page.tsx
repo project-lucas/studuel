@@ -10,14 +10,12 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import SubjectsHome from '@/components/SubjectsHome'
-import WeekStrip from '@/components/WeekStrip'
 import ContinueCard, { type ContinueTarget } from '@/components/ContinueCard'
 import ConsolidateList, {
   type ConsolidateEntry,
 } from '@/components/ConsolidateList'
 import ExamProgress, { type ExamProgressEntry } from '@/components/ExamProgress'
 import { createClient } from '@/lib/supabase/server'
-import { computeStreak, weekProgress } from '@/lib/streak'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
 import type { Subject } from '@/lib/types'
@@ -94,28 +92,17 @@ export default async function ReviserPage() {
     )
   }
 
-  const [
-    { data: subjects, error },
-    { data: tests },
-    { data: studies },
-    { data: completions },
-    { data: challenges },
-    { data: levelChapters },
-    mastery,
-  ] = await Promise.all([
-    supabase.from('subjects').select('*').order('name').returns<Subject[]>(),
-    supabase.from('test_sessions').select('created_at'),
-    supabase.from('study_sessions').select('created_at'),
-    supabase.from('lesson_completions').select('created_at'),
-    supabase.from('challenge_sessions').select('created_at'),
-    supabase
-      .from('chapters')
-      .select('id, subject_id, title, position')
-      .eq('level', grade)
-      .order('position', { ascending: true })
-      .returns<{ id: string; subject_id: string; title: string; position: number }[]>(),
-    getChapterMastery(supabase),
-  ])
+  const [{ data: subjects, error }, { data: levelChapters }, mastery] =
+    await Promise.all([
+      supabase.from('subjects').select('*').order('name').returns<Subject[]>(),
+      supabase
+        .from('chapters')
+        .select('id, subject_id, title, position')
+        .eq('level', grade)
+        .order('position', { ascending: true })
+        .returns<{ id: string; subject_id: string; title: string; position: number }[]>(),
+      getChapterMastery(supabase),
+    ])
 
   if (error) {
     return (
@@ -137,18 +124,6 @@ export default async function ReviserPage() {
       </div>
     )
   }
-
-  // --- Série : quiz, flashcards, leçons ET défis valident la journée ----------
-  const activeDays = new Set(
-    [
-      ...(tests ?? []),
-      ...(studies ?? []),
-      ...(completions ?? []),
-      ...(challenges ?? []),
-    ].map((s) => String(s.created_at).slice(0, 10)),
-  )
-  const streak = computeStreak(activeDays)
-  const week = weekProgress(activeDays)
 
   // --- Matières suivies (profil onboarding) -----------------------------------
   const selected = Array.isArray(profile?.selected_subjects)
@@ -247,7 +222,6 @@ export default async function ReviserPage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <WeekStrip week={week} streak={streak} />
       {continueTarget ? <ContinueCard target={continueTarget} /> : null}
       <ConsolidateList entries={consolidate} />
       <ExamProgress

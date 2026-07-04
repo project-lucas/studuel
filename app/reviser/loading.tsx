@@ -4,7 +4,6 @@ import { Skeleton } from '@/components/ui/skeleton'
 export default function ReviserLoading() {
   return (
     <div className="flex flex-col gap-4">
-      <Skeleton className="h-24 rounded-2xl" />
       <Skeleton className="h-32 rounded-2xl" />
       <Skeleton className="h-40 rounded-2xl" />
       <div>

@@ -9,12 +9,13 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
+import WeekStrip from '@/components/WeekStrip'
 import StructureScore from '@/components/StructureScore'
 import HabitsList from '@/components/HabitsList'
 import StructureChart, { type WeekPoint } from '@/components/StructureChart'
 import BadgeGrid from '@/components/BadgeGrid'
 import { createClient } from '@/lib/supabase/server'
-import { toDayKey } from '@/lib/streak'
+import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
 import {
   structureScore,
   syncAutoHabits,
@@ -206,6 +207,9 @@ export default async function MoiPage() {
   const activityDays = new Set(
     allActivity.map((s) => String(s.created_at).slice(0, 10)),
   )
+  // Bloc 1 : la semaine en cours (L→D) et la série vivante.
+  const currentStreak = computeStreak(activityDays)
+  const week = weekProgress(activityDays)
   const sessionsPerDay = new Map<string, number>()
   for (const s of allActivity) {
     const key = String(s.created_at).slice(0, 10)
@@ -273,6 +277,7 @@ export default async function MoiPage() {
         title={firstName ? `Moi — ${firstName}` : 'Moi'}
         description="Ta structure de travail, jour après jour. C'est elle qui fait les notes."
       />
+      <WeekStrip week={week} streak={currentStreak} />
       <StructureScore score={score} />
       <HabitsList
         habits={activeHabits}

@@ -92,8 +92,8 @@ export default async function TestPage() {
                     <Card
                       className={
                         locked
-                          ? 'opacity-70'
-                          : 'transition-shadow hover:shadow-md'
+                          ? 'opacity-60'
+                          : 'transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/10 hover:ring-primary/25'
                       }
                     >
                       <CardHeader>

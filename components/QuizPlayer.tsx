@@ -70,8 +70,8 @@ export default function QuizPlayer({
           <CardDescription>{title}</CardDescription>
         </CardHeader>
         <CardContent className="space-y-2">
-          <p className="text-3xl font-bold">
-            {score} / {questions.length}
+          <p className="font-mono text-4xl font-bold tabular-nums">
+            {score}<span className="text-muted-foreground/60"> / {questions.length}</span>
           </p>
           <p className="text-sm text-muted-foreground">
             {ratio === 1
@@ -135,8 +135,9 @@ export default function QuizPlayer({
               onClick={() => choose(i)}
               disabled={answered}
               className={cn(
-                'flex items-center justify-between gap-3 rounded-md border px-4 py-3 text-left text-sm font-medium transition-colors',
-                !answered && 'hover:bg-accent hover:text-accent-foreground',
+                'flex items-center justify-between gap-3 rounded-lg border px-4 py-3 text-left text-sm font-medium transition-all',
+                !answered &&
+                  'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
                 answered && isCorrect && 'border-green-600 bg-green-600/10 text-green-700 dark:text-green-400',
                 answered && isSelected && !isCorrect && 'border-destructive bg-destructive/10 text-destructive',
                 answered && !isSelected && !isCorrect && 'opacity-50',

@@ -20,12 +20,13 @@ export const dynamic = 'force-dynamic'
 const WEEKS = 26
 const DAYS_SHOWN = WEEKS * 7
 
+// Jours « surlignés » : plus tu travailles, plus le trait de surligneur est net.
 const levelClasses = [
   'bg-muted',
-  'bg-primary/30',
-  'bg-primary/55',
-  'bg-primary/80',
-  'bg-primary',
+  'bg-highlight/30',
+  'bg-highlight/55',
+  'bg-highlight/80',
+  'bg-highlight',
 ]
 
 // Nombre de sessions/jour → intensité (0 à 4).
@@ -160,7 +161,7 @@ export default async function HabitudePage() {
                 {recent.map((s) => (
                   <li key={s.id} className="flex items-center justify-between py-2 text-sm">
                     <span className="truncate">{s.quizzes?.title ?? 'Quiz supprimé'}</span>
-                    <span className="ml-4 shrink-0 text-muted-foreground">
+                    <span className="ml-4 shrink-0 font-mono text-xs tabular-nums text-muted-foreground">
                       {s.score}/{s.total} ·{' '}
                       {new Date(s.created_at).toLocaleDateString('fr-FR', {
                         day: 'numeric',

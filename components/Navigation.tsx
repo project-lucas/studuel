@@ -32,16 +32,16 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
 
   return (
     <>
-      {/* Mobile first : barre du haut (marque + compte)… */}
-      <header className="fixed inset-x-0 top-0 z-50 flex h-12 items-center justify-between border-b bg-card px-4 md:hidden">
-        <Link href="/" className="font-heading text-lg font-bold tracking-tight">
+      {/* Mobile first : barre du haut (marque + compte), verre dépoli… */}
+      <header className="fixed inset-x-0 top-0 z-50 flex h-12 items-center justify-between border-b bg-card/85 px-4 backdrop-blur-md md:hidden">
+        <Link href="/" className="font-heading text-lg font-bold">
           Scolaria
         </Link>
         <Link
           href={accountHref}
           aria-label={userLabel ? 'Mon compte' : 'Se connecter'}
           className={cn(
-            'flex items-center gap-2 text-sm font-medium',
+            'flex items-center gap-2 text-sm font-medium transition-colors',
             accountActive ? 'text-primary' : 'text-muted-foreground',
           )}
         >
@@ -54,32 +54,42 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
         </Link>
       </header>
 
-      {/* …et barre d'onglets fixée en bas */}
-      <nav className="fixed inset-x-0 bottom-0 z-50 border-t bg-card pb-[env(safe-area-inset-bottom)] md:hidden">
+      {/* …et barre d'onglets fixée en bas — l'onglet actif est « surligné » */}
+      <nav className="fixed inset-x-0 bottom-0 z-50 border-t bg-card/85 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
         <ul className="flex">
-          {links.map(({ name, path, icon: Icon }) => (
-            <li key={path} className="flex-1">
-              <Link
-                href={path}
-                aria-current={isActive(path) ? 'page' : undefined}
-                className={cn(
-                  'flex flex-col items-center gap-1 py-2 text-[11px] font-medium transition-colors',
-                  isActive(path)
-                    ? 'text-primary'
-                    : 'text-muted-foreground hover:text-foreground',
-                )}
-              >
-                <Icon className="size-5" />
-                {name}
-              </Link>
-            </li>
-          ))}
+          {links.map(({ name, path, icon: Icon }) => {
+            const active = isActive(path)
+            return (
+              <li key={path} className="flex-1">
+                <Link
+                  href={path}
+                  aria-current={active ? 'page' : undefined}
+                  className={cn(
+                    'flex flex-col items-center gap-0.5 pt-1.5 pb-2 text-[11px] font-medium transition-all active:scale-95',
+                    active
+                      ? 'text-foreground'
+                      : 'text-muted-foreground hover:text-foreground',
+                  )}
+                >
+                  <span
+                    className={cn(
+                      'flex h-7 w-12 items-center justify-center rounded-full transition-colors',
+                      active && 'bg-accent text-accent-foreground',
+                    )}
+                  >
+                    <Icon className="size-5" />
+                  </span>
+                  {name}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       </nav>
 
-      {/* Desktop : barre latérale */}
-      <nav className="hidden h-screen w-64 shrink-0 flex-col gap-6 border-r bg-card p-5 md:flex">
-        <Link href="/" className="font-heading text-2xl font-bold tracking-tight">
+      {/* Desktop : sidebar sticky (ne défile pas avec le contenu) */}
+      <nav className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col gap-8 border-r bg-card p-5 md:flex">
+        <Link href="/" className="font-heading px-3 text-2xl font-bold">
           Scolaria
         </Link>
 
@@ -90,9 +100,9 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                 href={path}
                 aria-current={isActive(path) ? 'page' : undefined}
                 className={cn(
-                  'flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors',
+                  'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
                   isActive(path)
-                    ? 'bg-primary text-primary-foreground'
+                    ? 'bg-primary text-primary-foreground shadow-sm'
                     : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
                 )}
               >
@@ -108,9 +118,9 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
           <Link
             href={accountHref}
             className={cn(
-              'flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors',
+              'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
               accountActive
-                ? 'bg-primary text-primary-foreground'
+                ? 'bg-primary text-primary-foreground shadow-sm'
                 : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
             )}
           >

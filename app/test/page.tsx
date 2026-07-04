@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Lock, ChevronRight, TriangleAlert } from 'lucide-react'
+import { Lock, ChevronRight, TriangleAlert, X } from 'lucide-react'
 import {
   Card,
   CardHeader,
@@ -17,7 +17,20 @@ export const metadata = { title: 'Test — Scolaria' }
 // Catalogue dynamique : pas de cache statique au build.
 export const dynamic = 'force-dynamic'
 
-export default async function TestPage() {
+// Comparaison tolérante : « Français », « francais », « FRANCAIS » se valent.
+const norm = (s: string) =>
+  s
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .trim()
+
+export default async function TestPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ matiere?: string }>
+}) {
+  const { matiere } = await searchParams
   const supabase = await createClient()
 
   const [{ data: quizzes, error }, tier] = await Promise.all([
@@ -31,9 +44,14 @@ export default async function TestPage() {
 
   const hasPremium = canAccessPremiumTests(tier)
 
+  // Filtre optionnel par matière (lien « M'entraîner » du Planning).
+  const filtered = matiere
+    ? ((quizzes ?? []) as Quiz[]).filter((q) => norm(q.subject) === norm(matiere))
+    : ((quizzes ?? []) as Quiz[])
+
   // Regroupe le catalogue par matière pour l'affichage.
   const bySubject = new Map<string, Quiz[]>()
-  for (const quiz of (quizzes ?? []) as Quiz[]) {
+  for (const quiz of filtered) {
     const list = bySubject.get(quiz.subject) ?? []
     list.push(quiz)
     bySubject.set(quiz.subject, list)
@@ -45,6 +63,21 @@ export default async function TestPage() {
         title="Test"
         description="Choisis une matière puis lance un quiz pour évaluer tes connaissances."
       />
+
+      {matiere ? (
+        <div className="mb-6 flex items-center gap-2 text-sm">
+          <span className="flex items-center gap-2 rounded-full bg-accent px-3 py-1 font-medium text-accent-foreground">
+            Matière : {matiere}
+            <Link
+              href="/test"
+              aria-label="Retirer le filtre"
+              className="transition-opacity hover:opacity-70"
+            >
+              <X className="size-3.5" />
+            </Link>
+          </span>
+        </div>
+      ) : null}
 
       {error ? (
         <Card>
@@ -60,6 +93,21 @@ export default async function TestPage() {
           <CardContent className="text-sm text-muted-foreground">
             Les tables ne sont probablement pas encore créées — voir{' '}
             <code>LOG_ERREUR.md</code> à la racine du projet pour la marche à suivre.
+          </CardContent>
+        </Card>
+      ) : bySubject.size === 0 && matiere ? (
+        <Card>
+          <CardHeader>
+            <CardTitle>Aucun quiz pour « {matiere} »</CardTitle>
+            <CardDescription>
+              Cette matière de ton tableau de révision n&apos;a pas encore de
+              quiz dans le catalogue.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-sm text-muted-foreground">
+            <Link href="/test" className="font-medium text-primary underline underline-offset-4">
+              Voir tous les tests disponibles
+            </Link>
           </CardContent>
         </Card>
       ) : bySubject.size === 0 ? (

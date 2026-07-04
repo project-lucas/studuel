@@ -11,7 +11,9 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import RevisionBoard from '@/components/RevisionBoard'
+import SessionCoach from '@/components/SessionCoach'
 import { createClient } from '@/lib/supabase/server'
+import { buildSessionPlan } from '@/lib/coach'
 import type { RevisionSubject } from '@/lib/types'
 
 export const metadata = { title: 'Planning — Scolaria' }
@@ -52,9 +54,11 @@ export default async function PlanningPage() {
 
   const { data: subjects, error } = await supabase
     .from('revision_subjects')
-    .select('id, name, exam, priority, created_at, revision_items(id, subject_id, title, kind, status, created_at)')
+    .select('id, name, exam, exam_date, priority, created_at, revision_items(id, subject_id, title, kind, status, created_at)')
     .order('created_at', { ascending: true })
     .returns<RevisionSubject[]>()
+
+  const plan = buildSessionPlan(subjects ?? [], 3)
 
   return (
     <div>
@@ -75,13 +79,17 @@ export default async function PlanningPage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
-            Les tables ne sont probablement pas encore créées — exécute{' '}
-            <code>supabase/005_revision_board.sql</code> dans le SQL Editor de
+            Les tables ne sont probablement pas à jour — exécute{' '}
+            <code>supabase/005_revision_board.sql</code> puis{' '}
+            <code>supabase/006_exam_date.sql</code> dans le SQL Editor de
             Supabase.
           </CardContent>
         </Card>
       ) : (
-        <RevisionBoard subjects={subjects ?? []} />
+        <div className="flex flex-col gap-4">
+          <SessionCoach plan={plan} />
+          <RevisionBoard subjects={subjects ?? []} />
+        </div>
       )}
     </div>
   )

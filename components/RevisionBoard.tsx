@@ -1,7 +1,16 @@
 'use client'
 
 import { useRef, useTransition } from 'react'
-import { BookOpen, FileText, Plus, X, TriangleAlert } from 'lucide-react'
+import Link from 'next/link'
+import {
+  BookOpen,
+  FileText,
+  Plus,
+  X,
+  TriangleAlert,
+  Dumbbell,
+  CalendarClock,
+} from 'lucide-react'
 import {
   Card,
   CardHeader,
@@ -17,9 +26,11 @@ import {
   addItem,
   setSubjectPriority,
   setItemStatus,
+  setExamDate,
   deleteSubject,
   deleteItem,
 } from '@/app/planning/actions'
+import { daysUntil } from '@/lib/coach'
 import type {
   RevisionSubject,
   RevisionItem,
@@ -131,6 +142,46 @@ function PriorityBadge({ subject }: { subject: RevisionSubject }) {
   )
 }
 
+// Compte à rebours : « J-42 » — rouge sous 15 jours, ambre sous 31.
+function CountdownBadge({ subject }: { subject: RevisionSubject }) {
+  const days = daysUntil(subject.exam_date)
+  if (days === null) return null
+
+  const label = days < 0 ? 'passé' : days === 0 ? "aujourd'hui !" : `J-${days}`
+  return (
+    <span
+      className={cn(
+        'flex items-center gap-1 rounded-full px-2.5 py-0.5 font-mono text-xs font-semibold tabular-nums',
+        days <= 14
+          ? 'bg-destructive/10 text-destructive'
+          : days <= 30
+            ? 'bg-amber-500/15 text-amber-700 dark:text-amber-400'
+            : 'bg-secondary text-secondary-foreground',
+      )}
+    >
+      <CalendarClock className="size-3" />
+      {label}
+    </span>
+  )
+}
+
+function ExamDateInput({ subject }: { subject: RevisionSubject }) {
+  const [pending, startTransition] = useTransition()
+  return (
+    <input
+      type="date"
+      defaultValue={subject.exam_date ?? ''}
+      disabled={pending}
+      aria-label="Date de l'examen"
+      title="Date de l'examen"
+      onChange={(e) =>
+        startTransition(() => setExamDate(subject.id, e.target.value || null))
+      }
+      className="h-6 rounded-md border border-transparent bg-transparent px-1 text-xs text-muted-foreground transition-colors hover:border-input focus-visible:border-ring focus-visible:outline-none disabled:opacity-50"
+    />
+  )
+}
+
 function SubjectCard({ subject }: { subject: RevisionSubject }) {
   const [pending, startTransition] = useTransition()
   const formRef = useRef<HTMLFormElement>(null)
@@ -151,17 +202,25 @@ function SubjectCard({ subject }: { subject: RevisionSubject }) {
               {EXAM_LABELS[subject.exam] ?? subject.exam}
             </span>
           ) : null}
+          <CountdownBadge subject={subject} />
         </CardTitle>
         <CardDescription className="flex items-center gap-3">
           <span className="font-mono text-xs tabular-nums">
             {done}/{items.length} maîtrisé{done > 1 ? 's' : ''}
           </span>
+          <ExamDateInput subject={subject} />
           <span className="h-1.5 max-w-40 flex-1 overflow-hidden rounded-full bg-muted">
             <span
               className="block h-full rounded-full bg-highlight transition-all"
               style={{ width: `${progress}%` }}
             />
           </span>
+          <Link
+            href={`/test?matiere=${encodeURIComponent(subject.name)}`}
+            className="ml-auto flex shrink-0 items-center gap-1 text-xs font-medium text-primary transition-colors hover:underline"
+          >
+            <Dumbbell className="size-3.5" /> M&apos;entraîner
+          </Link>
           <button
             type="button"
             title="Supprimer la matière"
@@ -171,7 +230,7 @@ function SubjectCard({ subject }: { subject: RevisionSubject }) {
                 startTransition(() => deleteSubject(subject.id))
               }
             }}
-            className="ml-auto text-muted-foreground transition-colors hover:text-destructive disabled:opacity-50"
+            className="shrink-0 text-muted-foreground transition-colors hover:text-destructive disabled:opacity-50"
           >
             <X className="size-4" />
           </button>
@@ -326,6 +385,13 @@ export default function RevisionBoard({ subjects }: { subjects: RevisionSubject[
               <option value="prioritaire">Prioritaire</option>
               <option value="critique">Critique</option>
             </select>
+            <input
+              type="date"
+              name="exam_date"
+              aria-label="Date de l'examen (optionnel)"
+              title="Date de l'examen (optionnel)"
+              className={selectCls}
+            />
             <Button type="submit" size="sm">
               <Plus /> Ajouter
             </Button>

@@ -27,6 +27,7 @@ export type RevisionSubject = {
   id: string
   name: string
   exam: string | null
+  exam_date: string | null // 'YYYY-MM-DD'
   priority: RevisionPriority
   created_at: string
   revision_items: RevisionItem[]

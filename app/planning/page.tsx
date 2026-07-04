@@ -1,96 +1,33 @@
-import Link from 'next/link'
-import { CircleUser, TriangleAlert } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
-  CardContent,
-  CardFooter,
 } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
-import RevisionBoard from '@/components/RevisionBoard'
-import SessionCoach from '@/components/SessionCoach'
-import { createClient } from '@/lib/supabase/server'
-import { buildSessionPlan } from '@/lib/coach'
-import type { RevisionSubject } from '@/lib/types'
 
-export const metadata = { title: 'Planning — Scolaria' }
-export const dynamic = 'force-dynamic'
+export const metadata = { title: 'Coaching — Scolaria' }
 
-export default async function PlanningPage() {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  if (!user) {
-    return (
-      <div>
-        <PageHeader
-          title="Planning"
-          description="Ton tableau de révision : matières, chapitres et textes à prioriser avant l'examen."
-        />
-        <Card className="mx-auto w-full max-w-md">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <CircleUser className="size-4" /> Connecte-toi pour construire ton tableau
-            </CardTitle>
-            <CardDescription>
-              Brevet, bac de français (écrit et oral), bac : liste tes matières et
-              vois d&apos;un coup d&apos;œil ce qui est critique.
-            </CardDescription>
-          </CardHeader>
-          <CardFooter>
-            <Button asChild>
-              <Link href="/login">Se connecter</Link>
-            </Button>
-          </CardFooter>
-        </Card>
-      </div>
-    )
-  }
-
-  const { data: subjects, error } = await supabase
-    .from('revision_subjects')
-    .select('id, name, exam, exam_date, priority, created_at, revision_items(id, subject_id, title, kind, status, created_at)')
-    .order('created_at', { ascending: true })
-    .returns<RevisionSubject[]>()
-
-  const plan = buildSessionPlan(subjects ?? [], 3)
-
+// Onglet réservé : le coaching humain arrive ici plus tard.
+export default function CoachingPage() {
   return (
     <div>
       <PageHeader
-        title="Planning"
-        description="Ton tableau de révision : priorise tes matières et suis chapitre par chapitre où tu en es."
+        title="Coaching"
+        description="Un accompagnement humain pour aller plus loin."
       />
-
-      {error ? (
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <TriangleAlert className="size-4 text-destructive" />
-              Tableau indisponible
-            </CardTitle>
-            <CardDescription>
-              Impossible de charger ton tableau de révision ({error.message}).
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-sm text-muted-foreground">
-            Les tables ne sont probablement pas à jour — exécute{' '}
-            <code>supabase/005_revision_board.sql</code> puis{' '}
-            <code>supabase/006_exam_date.sql</code> dans le SQL Editor de
-            Supabase.
-          </CardContent>
-        </Card>
-      ) : (
-        <div className="flex flex-col gap-4">
-          <SessionCoach plan={plan} />
-          <RevisionBoard subjects={subjects ?? []} />
-        </div>
-      )}
+      <Card className="mx-auto w-full max-w-md">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Sparkles className="size-4 text-primary" /> Bientôt disponible
+          </CardTitle>
+          <CardDescription>
+            Cet espace accueillera prochainement ton coach Scolaria. En
+            attendant, continue tes sessions — chaque jour compte.
+          </CardDescription>
+        </CardHeader>
+      </Card>
     </div>
   )
 }

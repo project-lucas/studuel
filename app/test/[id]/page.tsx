@@ -98,7 +98,7 @@ export default async function QuizPage({
           </CardFooter>
         </Card>
       ) : (
-        <QuizPlayer title={quiz.title} questions={questions} />
+        <QuizPlayer quizId={quiz.id} title={quiz.title} questions={questions} />
       )}
     </div>
   )

@@ -9,6 +9,15 @@ export type Quiz = {
   is_free: boolean
 }
 
+export type TestSession = {
+  id: string
+  quiz_id: string | null
+  score: number
+  total: number
+  created_at: string
+  quizzes: { title: string } | null
+}
+
 export type QuizQuestion = {
   id: string
   quiz_id: string

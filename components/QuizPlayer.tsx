@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { recordTestSession } from '@/app/test/actions'
 import { CircleCheck, CircleX, RotateCcw, ArrowLeft } from 'lucide-react'
 import {
   Card,
@@ -17,9 +18,11 @@ import type { QuizQuestion } from '@/lib/types'
 
 // Session de quiz : une question à la fois, correction immédiate, score final.
 export default function QuizPlayer({
+  quizId,
   title,
   questions,
 }: {
+  quizId: string
   title: string
   questions: QuizQuestion[]
 }) {
@@ -27,6 +30,7 @@ export default function QuizPlayer({
   const [selected, setSelected] = useState<number | null>(null)
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
+  const [saved, setSaved] = useState<boolean | null>(null)
 
   const question = questions[index]
   const answered = selected !== null
@@ -40,6 +44,10 @@ export default function QuizPlayer({
   const next = () => {
     if (index + 1 >= questions.length) {
       setFinished(true)
+      // Enregistre la session côté serveur (heatmap Habitude).
+      recordTestSession(quizId, score, questions.length)
+        .then((r) => setSaved(r.saved))
+        .catch(() => setSaved(false))
     } else {
       setIndex((i) => i + 1)
       setSelected(null)
@@ -72,6 +80,18 @@ export default function QuizPlayer({
                 ? 'Bien joué — encore quelques révisions et c’est acquis.'
                 : 'Continue de t’entraîner, tu vas progresser !'}
           </p>
+          {saved === true ? (
+            <p className="text-xs text-muted-foreground">
+              ✓ Session enregistrée dans ton historique Habitude.
+            </p>
+          ) : saved === false ? (
+            <p className="text-xs text-muted-foreground">
+              <Link href="/login" className="underline underline-offset-4">
+                Connecte-toi
+              </Link>{' '}
+              pour sauvegarder ta progression.
+            </p>
+          ) : null}
         </CardContent>
         <CardFooter className="gap-2">
           <Button onClick={restart}>

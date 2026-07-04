@@ -8,6 +8,7 @@ import {
   FlaskConical,
   CalendarDays,
   Flame,
+  CircleUser,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -20,15 +21,40 @@ const links = [
   { name: 'Habitude', path: '/habitude', icon: Flame },
 ]
 
-export default function Navigation() {
+export default function Navigation({ userLabel }: { userLabel: string | null }) {
   const pathname = usePathname()
 
   const isActive = (path: string) =>
     pathname === path || pathname.startsWith(`${path}/`)
 
+  const accountHref = userLabel ? '/compte' : '/login'
+  const accountActive = isActive('/compte') || isActive('/login')
+
   return (
     <>
-      {/* Mobile first : barre d'onglets fixée en bas */}
+      {/* Mobile first : barre du haut (marque + compte)… */}
+      <header className="fixed inset-x-0 top-0 z-50 flex h-12 items-center justify-between border-b bg-card px-4 md:hidden">
+        <Link href="/" className="font-heading text-lg font-bold tracking-tight">
+          Scolaria
+        </Link>
+        <Link
+          href={accountHref}
+          aria-label={userLabel ? 'Mon compte' : 'Se connecter'}
+          className={cn(
+            'flex items-center gap-2 text-sm font-medium',
+            accountActive ? 'text-primary' : 'text-muted-foreground',
+          )}
+        >
+          {userLabel ? (
+            <span className="max-w-32 truncate">{userLabel}</span>
+          ) : (
+            <span>Se connecter</span>
+          )}
+          <CircleUser className="size-5" />
+        </Link>
+      </header>
+
+      {/* …et barre d'onglets fixée en bas */}
       <nav className="fixed inset-x-0 bottom-0 z-50 border-t bg-card pb-[env(safe-area-inset-bottom)] md:hidden">
         <ul className="flex">
           {links.map(({ name, path, icon: Icon }) => (
@@ -76,6 +102,22 @@ export default function Navigation() {
             </li>
           ))}
         </ul>
+
+        {/* Compte, en bas de la sidebar */}
+        <div className="mt-auto border-t pt-4">
+          <Link
+            href={accountHref}
+            className={cn(
+              'flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors',
+              accountActive
+                ? 'bg-primary text-primary-foreground'
+                : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
+            )}
+          >
+            <CircleUser className="size-4 shrink-0" />
+            <span className="truncate">{userLabel ?? 'Se connecter'}</span>
+          </Link>
+        </div>
       </nav>
     </>
   )

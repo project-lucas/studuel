@@ -10,7 +10,11 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import SubjectsHome from '@/components/SubjectsHome'
+import WeekStrip from '@/components/WeekStrip'
+import ExamProgress, { type ExamProgressEntry } from '@/components/ExamProgress'
 import { createClient } from '@/lib/supabase/server'
+import { computeStreak, weekProgress } from '@/lib/streak'
+import { examsForProfile } from '@/lib/exams'
 import type { Subject } from '@/lib/types'
 
 export const metadata = { title: 'Réviser — Scolaria' }
@@ -26,8 +30,8 @@ export default async function ReviserPage() {
     return (
       <div>
         <PageHeader
-          title="Mes matières"
-          description="Ton programme, chapitre par chapitre, avec cours et quiz."
+          title="Réviser"
+          description="Ta série, ton avancement examen et ton programme, au même endroit."
         />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
@@ -48,28 +52,25 @@ export default async function ReviserPage() {
     )
   }
 
-  const [{ data: profile }, { data: subjects, error }] = await Promise.all([
-    supabase
-      .from('profiles')
-      .select('grade_level, selected_subjects')
-      .eq('id', user.id)
-      .maybeSingle(),
-    supabase.from('subjects').select('*').order('name').returns<Subject[]>(),
-  ])
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('grade_level, selected_subjects')
+    .eq('id', user.id)
+    .maybeSingle()
 
   const grade = profile?.grade_level ?? null
 
   if (!grade) {
     return (
       <div>
-        <PageHeader title="Mes matières" />
+        <PageHeader title="Réviser" />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <GraduationCap className="size-4" /> Dis-nous ta classe
             </CardTitle>
             <CardDescription>
-              Ton programme dépend de ta classe — configure-la en 10 secondes.
+              Ton programme dépend de ta classe — configure-la en 30 secondes.
             </CardDescription>
           </CardHeader>
           <CardFooter>
@@ -82,10 +83,26 @@ export default async function ReviserPage() {
     )
   }
 
+  const [
+    { data: subjects, error },
+    { data: tests },
+    { data: studies },
+    { data: levelChapters },
+  ] = await Promise.all([
+    supabase.from('subjects').select('*').order('name').returns<Subject[]>(),
+    supabase.from('test_sessions').select('created_at, quiz_id'),
+    supabase.from('study_sessions').select('created_at'),
+    supabase
+      .from('chapters')
+      .select('id, subject_id')
+      .eq('level', grade)
+      .returns<{ id: string; subject_id: string }[]>(),
+  ])
+
   if (error) {
     return (
       <div>
-        <PageHeader title="Mes matières" />
+        <PageHeader title="Réviser" />
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -102,11 +119,75 @@ export default async function ReviserPage() {
     )
   }
 
-  // Un élève de 5e ne voit que les matières enseignées en 5e.
-  const ofLevel = (subjects ?? []).filter((s) => s.levels.includes(grade))
+  // --- Bloc 1 : série hebdomadaire (quiz + flashcards confondus) -------------
+  const activeDays = new Set(
+    [...(tests ?? []), ...(studies ?? [])].map((s) =>
+      String(s.created_at).slice(0, 10),
+    ),
+  )
+  const streak = computeStreak(activeDays)
+  const week = weekProgress(activeDays)
+
+  // --- Bloc 2 : avancement examens, dérivé du profil --------------------------
   const selected = Array.isArray(profile?.selected_subjects)
     ? (profile.selected_subjects as string[])
     : null
+  const allSubjects = subjects ?? []
+  const exams = examsForProfile(grade, selected, allSubjects)
 
-  return <SubjectsHome subjects={ofLevel} selected={selected} grade={grade} />
+  let examEntries: ExamProgressEntry[] = []
+  if (exams.length > 0) {
+    // Chapitres couverts = quiz terminés → leçon → chapitre.
+    const quizIds = Array.from(
+      new Set((tests ?? []).map((t) => t.quiz_id).filter((q): q is string => !!q)),
+    )
+    const coveredChapters = new Set<string>()
+    if (quizIds.length > 0) {
+      const { data: quizRows } = await supabase
+        .from('quizzes')
+        .select('id, lesson_id')
+        .in('id', quizIds)
+        .returns<{ id: string; lesson_id: string | null }[]>()
+      const lessonIds = (quizRows ?? [])
+        .map((q) => q.lesson_id)
+        .filter((l): l is string => !!l)
+      if (lessonIds.length > 0) {
+        const { data: lessonRows } = await supabase
+          .from('lessons')
+          .select('id, chapter_id')
+          .in('id', lessonIds)
+          .returns<{ id: string; chapter_id: string }[]>()
+        for (const l of lessonRows ?? []) coveredChapters.add(l.chapter_id)
+      }
+    }
+
+    // Total et couverture par matière d'examen (programme du niveau).
+    const chaptersBySubject = new Map<string, string[]>()
+    for (const c of levelChapters ?? []) {
+      const list = chaptersBySubject.get(c.subject_id) ?? []
+      list.push(c.id)
+      chaptersBySubject.set(c.subject_id, list)
+    }
+
+    examEntries = exams.map(({ label, subject }) => {
+      const ids = chaptersBySubject.get(subject.id) ?? []
+      return {
+        label,
+        subject,
+        total: ids.length,
+        covered: ids.filter((id) => coveredChapters.has(id)).length,
+      }
+    })
+  }
+
+  // --- Bloc 3 : mes matières ---------------------------------------------------
+  const ofLevel = allSubjects.filter((s) => s.levels.includes(grade))
+
+  return (
+    <div className="flex flex-col gap-4">
+      <WeekStrip week={week} streak={streak} />
+      <ExamProgress entries={examEntries} />
+      <SubjectsHome subjects={ofLevel} selected={selected} grade={grade} />
+    </div>
+  )
 }

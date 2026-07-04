@@ -13,23 +13,31 @@ export default async function OnboardingPage() {
   } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('full_name, grade_level, daily_goal')
-    .eq('id', user.id)
-    .single()
+  const [{ data: profile }, { data: subjects }] = await Promise.all([
+    supabase
+      .from('profiles')
+      .select('full_name, grade_level, daily_goal, selected_subjects')
+      .eq('id', user.id)
+      .single(),
+    supabase.from('subjects').select('*').order('name'),
+  ])
 
   const firstName = profile?.full_name?.split(' ')[0]
+  const selected = Array.isArray(profile?.selected_subjects)
+    ? (profile.selected_subjects as string[])
+    : null
 
   return (
     <div>
       <PageHeader
         title={firstName ? `Bienvenue, ${firstName} !` : 'Bienvenue !'}
-        description="Deux questions pour personnaliser ton espace de travail."
+        description="Trois questions pour personnaliser ton espace de travail."
       />
       <OnboardingFlow
+        subjects={subjects ?? []}
         defaultGrade={profile?.grade_level ?? null}
         defaultGoal={profile?.daily_goal ?? 1}
+        defaultSelected={selected}
       />
     </div>
   )

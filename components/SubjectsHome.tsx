@@ -117,10 +117,8 @@ export default function SubjectsHome({
 
   return (
     <div className="pb-28">
-      <div className="mb-6 flex items-center justify-between">
-        <h1 className="font-heading text-3xl font-bold md:text-4xl">
-          Mes matières
-        </h1>
+      <div className="mb-4 flex items-center justify-between">
+        <h2 className="font-heading text-lg font-bold">Mes matières</h2>
         {editing ? (
           <Button size="sm" onClick={finishEditing} disabled={pending}>
             <Check className="size-4" /> {pending ? '…' : 'Terminé'}

@@ -1,21 +1,30 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 
-// Maîtrise par chapitre : meilleur score obtenu (0..1) sur les quiz du
-// chapitre (chaîne session → quiz → leçon → chapitre). Un 80 % fait avancer
-// la barre de 0,8 chapitre : l'élève voit que chaque quiz paye.
+// Progression par chapitre :
+// - quiz terminé → meilleur score (0..1), seul moyen de dépasser 30 %
+// - leçon terminée → plancher de 30 % (LESSON_FLOOR)
+// L'élève voit que chaque geste paye, et la source distingue les états
+// (une leçon lue n'est pas un quiz raté : pas de « fragile » injustifié).
 
-export type ChapterMastery = Map<string, number>
-
-// Seuils d'état d'un chapitre.
+export const LESSON_FLOOR = 0.3
 export const MASTERY_THRESHOLDS = { mastered: 0.8, fragile: 0.5 } as const
+
+export type ChapterProgress = {
+  value: number // 0..1, ce qui remplit les barres
+  quizAttempted: boolean
+  lessonDone: boolean
+}
+
+export type ChapterMastery = Map<string, ChapterProgress>
 
 export type ChapterState = 'maitrise' | 'en_cours' | 'fragile' | 'a_commencer'
 
-export function chapterState(mastery: number | undefined): ChapterState {
-  if (mastery === undefined) return 'a_commencer'
-  if (mastery >= MASTERY_THRESHOLDS.mastered) return 'maitrise'
-  if (mastery >= MASTERY_THRESHOLDS.fragile) return 'en_cours'
-  return 'fragile'
+export function chapterState(p: ChapterProgress | undefined): ChapterState {
+  if (!p || (p.value === 0 && !p.lessonDone)) return 'a_commencer'
+  if (!p.quizAttempted) return 'en_cours' // leçon lue, quiz pas encore tenté
+  if (p.value >= MASTERY_THRESHOLDS.mastered) return 'maitrise'
+  if (p.value >= MASTERY_THRESHOLDS.fragile) return 'en_cours'
+  return 'fragile' // quiz tenté mais < 50 % : à retravailler en priorité
 }
 
 export async function getChapterMastery(
@@ -23,46 +32,81 @@ export async function getChapterMastery(
 ): Promise<ChapterMastery> {
   const mastery: ChapterMastery = new Map()
 
-  const { data: sessions } = await supabase
-    .from('test_sessions')
-    .select('quiz_id, score, total')
-    .returns<{ quiz_id: string | null; score: number; total: number }[]>()
+  const [{ data: sessions }, { data: completions }] = await Promise.all([
+    supabase
+      .from('test_sessions')
+      .select('quiz_id, score, total')
+      .returns<{ quiz_id: string | null; score: number; total: number }[]>(),
+    supabase
+      .from('lesson_completions')
+      .select('lesson_id')
+      .returns<{ lesson_id: string }[]>(),
+  ])
 
+  // Meilleur score par quiz.
   const bestByQuiz = new Map<string, number>()
   for (const s of sessions ?? []) {
     if (!s.quiz_id || s.total <= 0) continue
     const ratio = Math.min(s.score / s.total, 1)
     bestByQuiz.set(s.quiz_id, Math.max(bestByQuiz.get(s.quiz_id) ?? 0, ratio))
   }
-  if (bestByQuiz.size === 0) return mastery
 
-  const { data: quizzes } = await supabase
-    .from('quizzes')
-    .select('id, lesson_id')
-    .in('id', [...bestByQuiz.keys()])
-    .returns<{ id: string; lesson_id: string | null }[]>()
+  // Quiz → leçon.
+  const quizLessons = new Map<string, string>()
+  if (bestByQuiz.size > 0) {
+    const { data: quizzes } = await supabase
+      .from('quizzes')
+      .select('id, lesson_id')
+      .in('id', [...bestByQuiz.keys()])
+      .returns<{ id: string; lesson_id: string | null }[]>()
+    for (const q of quizzes ?? []) {
+      if (q.lesson_id) quizLessons.set(q.id, q.lesson_id)
+    }
+  }
 
-  const lessonIds = (quizzes ?? [])
-    .map((q) => q.lesson_id)
-    .filter((l): l is string => l !== null)
-  if (lessonIds.length === 0) return mastery
+  // Toutes les leçons concernées (quiz joués + leçons terminées) → chapitre.
+  const completedLessons = new Set((completions ?? []).map((c) => c.lesson_id))
+  const allLessonIds = Array.from(
+    new Set([...quizLessons.values(), ...completedLessons]),
+  )
+  if (allLessonIds.length === 0) return mastery
 
   const { data: lessons } = await supabase
     .from('lessons')
     .select('id, chapter_id')
-    .in('id', lessonIds)
+    .in('id', allLessonIds)
     .returns<{ id: string; chapter_id: string }[]>()
-
   const chapterByLesson = new Map(
     (lessons ?? []).map((l) => [l.id, l.chapter_id]),
   )
 
-  for (const q of quizzes ?? []) {
-    if (!q.lesson_id) continue
-    const chapterId = chapterByLesson.get(q.lesson_id)
+  const upsert = (chapterId: string, patch: Partial<ChapterProgress>) => {
+    const current = mastery.get(chapterId) ?? {
+      value: 0,
+      quizAttempted: false,
+      lessonDone: false,
+    }
+    mastery.set(chapterId, {
+      value: Math.max(current.value, patch.value ?? 0),
+      quizAttempted: current.quizAttempted || (patch.quizAttempted ?? false),
+      lessonDone: current.lessonDone || (patch.lessonDone ?? false),
+    })
+  }
+
+  // Scores de quiz.
+  for (const [quizId, ratio] of bestByQuiz) {
+    const lessonId = quizLessons.get(quizId)
+    if (!lessonId) continue
+    const chapterId = chapterByLesson.get(lessonId)
     if (!chapterId) continue
-    const ratio = bestByQuiz.get(q.id) ?? 0
-    mastery.set(chapterId, Math.max(mastery.get(chapterId) ?? 0, ratio))
+    upsert(chapterId, { value: ratio, quizAttempted: true })
+  }
+
+  // Plancher des leçons terminées.
+  for (const lessonId of completedLessons) {
+    const chapterId = chapterByLesson.get(lessonId)
+    if (!chapterId) continue
+    upsert(chapterId, { value: LESSON_FLOOR, lessonDone: true })
   }
 
   return mastery

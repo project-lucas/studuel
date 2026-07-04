@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { CircleUser, Flame, FlaskConical, Layers } from 'lucide-react'
+import { CircleUser, Flame, FlaskConical, Layers, BookOpen } from 'lucide-react'
 import {
   Card,
   CardHeader,
@@ -67,10 +67,16 @@ function HabitHeatmap({ countsByDay }: { countsByDay: Map<string, number> }) {
 
 type Activity = {
   id: string
-  kind: 'quiz' | 'flashcards'
+  kind: 'quiz' | 'flashcards' | 'lecon'
   label: string
   detail: string
   created_at: string
+}
+
+type LessonCompletion = {
+  id: string
+  created_at: string
+  lessons: { title: string } | null
 }
 
 export default async function HabitudePage() {
@@ -109,7 +115,7 @@ export default async function HabitudePage() {
   const since = new Date()
   since.setUTCDate(since.getUTCDate() - DAYS_SHOWN)
 
-  const [{ data: tests }, { data: studies }, { data: profile }] =
+  const [{ data: tests }, { data: studies }, { data: lessonsDone }, { data: profile }] =
     await Promise.all([
       supabase
         .from('test_sessions')
@@ -123,6 +129,12 @@ export default async function HabitudePage() {
         .gte('created_at', since.toISOString())
         .order('created_at', { ascending: false })
         .returns<StudySession[]>(),
+      supabase
+        .from('lesson_completions')
+        .select('id, created_at, lessons(title)')
+        .gte('created_at', since.toISOString())
+        .order('created_at', { ascending: false })
+        .returns<LessonCompletion[]>(),
       supabase
         .from('profiles')
         .select('daily_goal')
@@ -145,6 +157,13 @@ export default async function HabitudePage() {
       label: s.flashcard_decks?.title ?? 'Deck supprimé',
       detail: `${s.cards_count} cartes`,
       created_at: s.created_at,
+    })),
+    ...(lessonsDone ?? []).map((l) => ({
+      id: l.id,
+      kind: 'lecon' as const,
+      label: l.lessons?.title ?? 'Leçon supprimée',
+      detail: 'leçon',
+      created_at: l.created_at,
     })),
   ].sort((a, b) => b.created_at.localeCompare(a.created_at))
 
@@ -235,8 +254,10 @@ export default async function HabitudePage() {
                   >
                     {a.kind === 'quiz' ? (
                       <FlaskConical className="size-3.5 shrink-0 text-muted-foreground" />
-                    ) : (
+                    ) : a.kind === 'flashcards' ? (
                       <Layers className="size-3.5 shrink-0 text-muted-foreground" />
+                    ) : (
+                      <BookOpen className="size-3.5 shrink-0 text-muted-foreground" />
                     )}
                     <span className="min-w-0 flex-1 truncate">{a.label}</span>
                     <span className="ml-2 shrink-0 font-mono text-xs tabular-nums text-muted-foreground">

@@ -11,15 +11,25 @@ import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import SubjectsHome from '@/components/SubjectsHome'
 import WeekStrip from '@/components/WeekStrip'
+import ContinueCard, { type ContinueTarget } from '@/components/ContinueCard'
+import ConsolidateList, {
+  type ConsolidateEntry,
+} from '@/components/ConsolidateList'
 import ExamProgress, { type ExamProgressEntry } from '@/components/ExamProgress'
 import { createClient } from '@/lib/supabase/server'
 import { computeStreak, weekProgress } from '@/lib/streak'
 import { examsForProfile } from '@/lib/exams'
-import { getChapterMastery, MASTERY_THRESHOLDS } from '@/lib/mastery'
+import { getChapterMastery, chapterState } from '@/lib/mastery'
 import type { Subject } from '@/lib/types'
 
 export const metadata = { title: 'Réviser — Scolaria' }
 export const dynamic = 'force-dynamic'
+
+const EXAM_TITLES: Record<string, string> = {
+  '3e': 'Objectif Brevet',
+  '1re': 'Objectif Bac de français',
+  Tle: 'Objectif Bac',
+}
 
 export default async function ReviserPage() {
   const supabase = await createClient()
@@ -32,7 +42,7 @@ export default async function ReviserPage() {
       <div>
         <PageHeader
           title="Réviser"
-          description="Ta série, ton avancement examen et ton programme, au même endroit."
+          description="Ta série, ton avancement et ton programme, au même endroit."
         />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
@@ -88,16 +98,21 @@ export default async function ReviserPage() {
     { data: subjects, error },
     { data: tests },
     { data: studies },
+    { data: completions },
     { data: levelChapters },
+    mastery,
   ] = await Promise.all([
     supabase.from('subjects').select('*').order('name').returns<Subject[]>(),
-    supabase.from('test_sessions').select('created_at, quiz_id'),
+    supabase.from('test_sessions').select('created_at'),
     supabase.from('study_sessions').select('created_at'),
+    supabase.from('lesson_completions').select('created_at'),
     supabase
       .from('chapters')
-      .select('id, subject_id')
+      .select('id, subject_id, title, position')
       .eq('level', grade)
-      .returns<{ id: string; subject_id: string }[]>(),
+      .order('position', { ascending: true })
+      .returns<{ id: string; subject_id: string; title: string; position: number }[]>(),
+    getChapterMastery(supabase),
   ])
 
   if (error) {
@@ -111,8 +126,9 @@ export default async function ReviserPage() {
               Matières indisponibles
             </CardTitle>
             <CardDescription>
-              {error.message} — exécute <code>supabase/008_reviser.sql</code>{' '}
-              dans le SQL Editor.
+              {error.message} — exécute <code>supabase/008_reviser.sql</code> et{' '}
+              <code>supabase/009_lesson_completions.sql</code> dans le SQL
+              Editor.
             </CardDescription>
           </CardHeader>
         </Card>
@@ -120,84 +136,125 @@ export default async function ReviserPage() {
     )
   }
 
-  // --- Bloc 1 : série hebdomadaire (quiz + flashcards confondus) -------------
+  // --- Série : quiz, flashcards ET leçons terminées valident la journée ------
   const activeDays = new Set(
-    [...(tests ?? []), ...(studies ?? [])].map((s) =>
+    [...(tests ?? []), ...(studies ?? []), ...(completions ?? [])].map((s) =>
       String(s.created_at).slice(0, 10),
     ),
   )
   const streak = computeStreak(activeDays)
   const week = weekProgress(activeDays)
 
-  // --- Bloc 2 : avancement pondéré par les scores ------------------------------
+  // --- Matières suivies (profil onboarding) -----------------------------------
   const selected = Array.isArray(profile?.selected_subjects)
     ? (profile.selected_subjects as string[])
     : null
   const allSubjects = subjects ?? []
+  const ofLevel = allSubjects.filter((s) => s.levels.includes(grade))
+  const followed = ofLevel.filter(
+    (s) => selected === null || selected.length === 0 || selected.includes(s.slug),
+  )
+  const followedIds = new Set(followed.map((s) => s.id))
+  const subjectById = new Map(followed.map((s) => [s.id, s]))
 
-  // Épreuves officielles si classe à examen, sinon progression des matières
-  // sélectionnées : l'élève voit toujours que ses quiz payent.
-  const exams = examsForProfile(grade, selected, allSubjects)
-  const hasExam = exams.length > 0
-  const tracked = hasExam
-    ? exams
-    : allSubjects
-        .filter(
-          (s) =>
-            s.levels.includes(grade) &&
-            (selected === null || selected.length === 0 || selected.includes(s.slug)),
-        )
-        .map((s) => ({ label: s.name, subject: s }))
+  // --- Analyse chapitre par chapitre ------------------------------------------
+  type Analyzed = {
+    subject: Subject
+    chapterId: string
+    chapterTitle: string
+    value: number
+    state: ReturnType<typeof chapterState>
+  }
+  const analyzed: Analyzed[] = []
+  const sums = new Map<string, { sum: number; total: number }>()
 
-  const mastery = await getChapterMastery(supabase)
-
-  const chaptersBySubject = new Map<string, string[]>()
   for (const c of levelChapters ?? []) {
-    const list = chaptersBySubject.get(c.subject_id) ?? []
-    list.push(c.id)
-    chaptersBySubject.set(c.subject_id, list)
+    const subject = subjectById.get(c.subject_id)
+    const agg = sums.get(c.subject_id) ?? { sum: 0, total: 0 }
+    const p = mastery.get(c.id)
+    agg.sum += p?.value ?? 0
+    agg.total += 1
+    sums.set(c.subject_id, agg)
+    if (!subject || !followedIds.has(c.subject_id)) continue
+    analyzed.push({
+      subject,
+      chapterId: c.id,
+      chapterTitle: c.title,
+      value: p?.value ?? 0,
+      state: chapterState(p),
+    })
   }
 
-  const examEntries: ExamProgressEntry[] = tracked
-    .map(({ label, subject }) => {
-      const ids = chaptersBySubject.get(subject.id) ?? []
-      let sum = 0
-      let mastered = 0
-      let fragile = 0
-      let notStarted = 0
-      for (const id of ids) {
-        const m = mastery.get(id)
-        if (m === undefined) {
-          notStarted += 1
-          continue
-        }
-        sum += m
-        if (m >= MASTERY_THRESHOLDS.mastered) mastered += 1
-        else if (m < MASTERY_THRESHOLDS.fragile) fragile += 1
+  // --- Carte « Reprendre » : fragile le plus bas > en cours le plus avancé >
+  //     premier chapitre jamais commencé ----------------------------------------
+  const fragiles = analyzed
+    .filter((a) => a.state === 'fragile')
+    .sort((a, b) => a.value - b.value)
+  const enCours = analyzed
+    .filter((a) => a.state === 'en_cours')
+    .sort((a, b) => b.value - a.value)
+  const aCommencer = analyzed.filter((a) => a.state === 'a_commencer')
+
+  const next = fragiles[0] ?? enCours[0] ?? aCommencer[0] ?? null
+  const continueTarget: ContinueTarget | null = next
+    ? {
+        subject: next.subject,
+        chapterId: next.chapterId,
+        chapterTitle: next.chapterTitle,
+        progress: next.value,
+        isNew: next.state === 'a_commencer',
       }
+    : null
+
+  // --- « À consolider » : fragiles puis à commencer (hors carte Reprendre) ----
+  const consolidate: ConsolidateEntry[] = [...fragiles, ...aCommencer]
+    .filter((a) => a.chapterId !== continueTarget?.chapterId)
+    .slice(0, 3)
+    .map((a) => ({
+      subject: a.subject,
+      chapterId: a.chapterId,
+      chapterTitle: a.chapterTitle,
+      state: a.state === 'fragile' ? 'fragile' : 'a_commencer',
+      progress: a.value,
+    }))
+
+  // --- Objectif examen (classes à examen uniquement) ---------------------------
+  const exams = examsForProfile(grade, selected, allSubjects)
+  const examEntries: ExamProgressEntry[] = exams
+    .map(({ subject }) => {
+      const agg = sums.get(subject.id) ?? { sum: 0, total: 0 }
       return {
-        label,
+        label: subject.name,
         subject,
-        total: ids.length,
-        progress: ids.length > 0 ? sum / ids.length : 0,
-        mastered,
-        fragile,
-        notStarted,
+        total: agg.total,
+        progress: agg.total > 0 ? agg.sum / agg.total : 0,
       }
     })
     .filter((e) => e.total > 0)
 
-  // --- Bloc 3 : mes matières ---------------------------------------------------
-  const ofLevel = allSubjects.filter((s) => s.levels.includes(grade))
+  // --- Anneaux des tuiles -------------------------------------------------------
+  const progressBySlug: Record<string, number> = {}
+  for (const s of ofLevel) {
+    const agg = sums.get(s.id)
+    progressBySlug[s.slug] =
+      agg && agg.total > 0 ? Math.round((agg.sum / agg.total) * 100) : 0
+  }
 
   return (
     <div className="flex flex-col gap-4">
       <WeekStrip week={week} streak={streak} />
+      {continueTarget ? <ContinueCard target={continueTarget} /> : null}
+      <ConsolidateList entries={consolidate} />
       <ExamProgress
-        title={hasExam ? 'Objectif examen' : 'Ma progression'}
+        title={EXAM_TITLES[grade] ?? 'Objectif examen'}
         entries={examEntries}
       />
-      <SubjectsHome subjects={ofLevel} selected={selected} grade={grade} />
+      <SubjectsHome
+        subjects={ofLevel}
+        selected={selected}
+        grade={grade}
+        progressBySlug={progressBySlug}
+      />
     </div>
   )
 }

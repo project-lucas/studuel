@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import Link from 'next/link'
-import { Check, Pencil, Sparkles } from 'lucide-react'
+import { Check, Pencil } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { subjectTheme } from '@/lib/subject-style'
@@ -17,13 +17,56 @@ const LYCEE_GROUPS: { category: SubjectCategory; label: string }[] = [
   { category: 'option', label: 'Options' },
 ]
 
+// Anneau de progression autour de l'émoji de la matière.
+function ProgressRing({
+  pct,
+  strokeClass,
+  icon,
+}: {
+  pct: number
+  strokeClass: string
+  icon: string
+}) {
+  const R = 26
+  const C = 2 * Math.PI * R
+  return (
+    <span className="relative inline-flex size-16 items-center justify-center">
+      <svg viewBox="0 0 60 60" className="absolute inset-0 size-full -rotate-90">
+        <circle
+          cx="30"
+          cy="30"
+          r={R}
+          fill="none"
+          strokeWidth="4.5"
+          className="stroke-black/10 dark:stroke-white/15"
+        />
+        {pct > 0 ? (
+          <circle
+            cx="30"
+            cy="30"
+            r={R}
+            fill="none"
+            strokeWidth="4.5"
+            strokeLinecap="round"
+            strokeDasharray={`${(C * pct) / 100} ${C}`}
+            className={cn('transition-all', strokeClass)}
+          />
+        ) : null}
+      </svg>
+      <span className="text-3xl leading-none drop-shadow-sm">{icon}</span>
+    </span>
+  )
+}
+
 function SubjectTile({
   subject,
+  pct,
   editing,
   checked,
   onToggle,
 }: {
   subject: Subject
+  pct: number
   editing: boolean
   checked: boolean
   onToggle: () => void
@@ -33,7 +76,7 @@ function SubjectTile({
   const inner = (
     <div
       className={cn(
-        'relative flex h-full flex-col items-center gap-2 rounded-2xl p-5 text-center shadow-sm transition-all',
+        'relative flex h-full flex-col items-center gap-1.5 rounded-2xl p-4 text-center shadow-sm transition-all',
         theme.tile,
         editing
           ? 'cursor-pointer active:scale-[0.97]'
@@ -53,8 +96,11 @@ function SubjectTile({
           {checked ? <Check className="size-3" /> : null}
         </span>
       ) : null}
-      <span className="text-4xl leading-none drop-shadow-sm">{subject.icon}</span>
+      <ProgressRing pct={pct} strokeClass={theme.stroke} icon={subject.icon} />
       <span className="text-sm font-bold">{subject.name}</span>
+      <span className="font-mono text-[11px] tabular-nums text-muted-foreground">
+        {pct > 0 ? `${pct}%` : '—'}
+      </span>
     </div>
   )
 
@@ -72,16 +118,17 @@ function SubjectTile({
   )
 }
 
-// Niveau 1 : « Mes matières » — grille par groupe, sélection éditable,
-// barre d'input IA flottante (placeholder).
+// Bloc « Mes matières » : grille avec progression intégrée, sélection éditable.
 export default function SubjectsHome({
   subjects,
   selected,
   grade,
+  progressBySlug,
 }: {
   subjects: Subject[]
   selected: string[] | null
   grade: string
+  progressBySlug: Record<string, number>
 }) {
   const [editing, setEditing] = useState(false)
   const [picked, setPicked] = useState<Set<string>>(
@@ -90,9 +137,7 @@ export default function SubjectsHome({
   const [pending, startTransition] = useTransition()
 
   const isCollege = COLLEGE_LEVELS.includes(grade)
-  const visible = editing
-    ? subjects
-    : subjects.filter((s) => picked.has(s.slug))
+  const visible = editing ? subjects : subjects.filter((s) => picked.has(s.slug))
 
   const toggle = (slug: string) =>
     setPicked((prev) => {
@@ -116,7 +161,7 @@ export default function SubjectsHome({
       })).filter((g) => g.items.length > 0)
 
   return (
-    <div className="pb-28">
+    <div className="pb-4">
       <div className="mb-4 flex items-center justify-between">
         <h2 className="font-heading text-lg font-bold">Mes matières</h2>
         {editing ? (
@@ -145,15 +190,16 @@ export default function SubjectsHome({
           {groups.map(({ label, items }) => (
             <section key={label ?? 'all'}>
               {label ? (
-                <h2 className="font-heading mb-3 text-lg font-semibold text-muted-foreground">
+                <h3 className="font-heading mb-3 text-sm font-semibold text-muted-foreground">
                   {label}
-                </h2>
+                </h3>
               ) : null}
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
                 {items.map((s) => (
                   <SubjectTile
                     key={s.id}
                     subject={s}
+                    pct={progressBySlug[s.slug] ?? 0}
                     editing={editing}
                     checked={picked.has(s.slug)}
                     onToggle={() => toggle(s.slug)}
@@ -164,23 +210,6 @@ export default function SubjectsHome({
           ))}
         </div>
       )}
-
-      {/* Barre IA flottante — placeholder, sans logique pour l'instant */}
-      <form
-        onSubmit={(e) => e.preventDefault()}
-        className="fixed inset-x-4 bottom-[84px] z-40 mx-auto flex max-w-xl items-center gap-2 rounded-full border bg-card/95 py-1.5 pr-1.5 pl-4 shadow-lg backdrop-blur-md md:inset-x-auto md:bottom-6 md:left-1/2 md:w-full md:translate-x-[calc(-50%+8rem)]"
-      >
-        <Sparkles className="size-4 shrink-0 text-primary" />
-        <input
-          type="text"
-          placeholder="Explique-moi…"
-          aria-label="Poser une question à l'IA (bientôt disponible)"
-          className="h-8 w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-        />
-        <Button type="submit" size="sm" className="rounded-full">
-          Demander
-        </Button>
-      </form>
     </div>
   )
 }

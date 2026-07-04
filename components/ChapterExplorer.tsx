@@ -5,7 +5,11 @@ import Link from 'next/link'
 import { ArrowLeft, ChevronRight, Search } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN, MASCOT } from '@/lib/subject-style'
-import { chapterState, type ChapterState } from '@/lib/mastery'
+import {
+  chapterState,
+  type ChapterState,
+  type ChapterProgress,
+} from '@/lib/mastery'
 import type { Subject, Chapter } from '@/lib/types'
 
 // État visuel d'un chapitre selon la maîtrise (meilleur score aux quiz).
@@ -33,7 +37,7 @@ export default function ChapterExplorer({
   subject: Subject
   chapters: Chapter[]
   grade: string
-  mastery: Record<string, number>
+  mastery: Record<string, ChapterProgress>
 }) {
   const [query, setQuery] = useState('')
   const theme = subjectTheme(subject.color)
@@ -42,7 +46,7 @@ export default function ChapterExplorer({
   const globalPct =
     chapters.length > 0
       ? Math.round(
-          (chapters.reduce((sum, c) => sum + (mastery[c.id] ?? 0), 0) /
+          (chapters.reduce((sum, c) => sum + (mastery[c.id]?.value ?? 0), 0) /
             chapters.length) *
             100,
         )
@@ -144,8 +148,8 @@ export default function ChapterExplorer({
                     </span>
                   </span>
                   {(() => {
-                    const m = mastery[chapter.id]
-                    const state = chapterState(m)
+                    const p = mastery[chapter.id]
+                    const state = chapterState(p)
                     const badge = STATE_BADGES[state]
                     return (
                       <span
@@ -154,8 +158,8 @@ export default function ChapterExplorer({
                           badge.cls,
                         )}
                       >
-                        {m !== undefined
-                          ? `${badge.label} · ${Math.round(m * 100)}%`
+                        {p !== undefined
+                          ? `${badge.label} · ${Math.round(p.value * 100)}%`
                           : badge.label}
                       </span>
                     )

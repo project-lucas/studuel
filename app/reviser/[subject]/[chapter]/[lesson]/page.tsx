@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
 import { ArrowLeft, Play } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import LessonCompleteButton from '@/components/LessonCompleteButton'
 import { createClient } from '@/lib/supabase/server'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN, MASCOT } from '@/lib/subject-style'
@@ -75,11 +76,18 @@ export default async function LessonPage({
     .maybeSingle<Lesson>()
   if (!lesson) notFound()
 
-  const { data: quiz } = await supabase
-    .from('quizzes')
-    .select('id')
-    .eq('lesson_id', lesson.id)
-    .maybeSingle<{ id: string }>()
+  const [{ data: quiz }, { data: completion }] = await Promise.all([
+    supabase
+      .from('quizzes')
+      .select('id')
+      .eq('lesson_id', lesson.id)
+      .maybeSingle<{ id: string }>(),
+    supabase
+      .from('lesson_completions')
+      .select('id')
+      .eq('lesson_id', lesson.id)
+      .maybeSingle<{ id: string }>(),
+  ])
 
   const theme = subjectTheme(subject.color)
 
@@ -112,15 +120,19 @@ export default async function LessonPage({
       <div className="mx-auto w-full max-w-4xl px-4 py-6 md:px-8">
         <LessonContent content={lesson.content ?? 'Contenu à venir.'} />
 
-        {quiz ? (
-          <div className="mt-8 border-t pt-6">
+        <div className="mt-8 flex flex-wrap items-center gap-3 border-t pt-6">
+          <LessonCompleteButton
+            lessonId={lesson.id}
+            initialDone={Boolean(completion)}
+          />
+          {quiz ? (
             <Button asChild className="rounded-full">
               <Link href={`/test/${quiz.id}`}>
                 <Play className="size-4" /> Tester mes connaissances
               </Link>
             </Button>
-          </div>
-        ) : null}
+          ) : null}
+        </div>
       </div>
     </div>
   )

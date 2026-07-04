@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { TriangleAlert } from 'lucide-react'
+import { Target } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { subjectTheme } from '@/lib/subject-style'
 import type { Subject } from '@/lib/types'
@@ -7,16 +7,12 @@ import type { Subject } from '@/lib/types'
 export type ExamProgressEntry = {
   label: string
   subject: Subject
-  progress: number // 0..1, pondéré par les scores (80 % = 0,8 chapitre)
-  total: number // chapitres du programme du niveau
-  mastered: number // chapitres ≥ 80 %
-  fragile: number // chapitres tentés mais < 50 % — à retravailler
-  notStarted: number // chapitres jamais travaillés
+  progress: number // 0..1, pondéré par les scores
+  total: number
 }
 
-// Bloc 2 de Réviser — avancement vers les épreuves (ou progression simple
-// pour les classes sans examen). Chaque quiz fait avancer la barre à hauteur
-// de son score ; les chapitres fragiles et manquants restent visibles.
+// Objectif examen, compact : le % global vers l'épreuve + une mini-barre
+// par matière. Le détail chapitre par chapitre vit sur les pages matières.
 export default function ExamProgress({
   title,
   entries,
@@ -26,52 +22,59 @@ export default function ExamProgress({
 }) {
   if (entries.length === 0) return null
 
+  const totalChapters = entries.reduce((s, e) => s + e.total, 0)
+  const globalPct =
+    totalChapters > 0
+      ? Math.round(
+          (entries.reduce((s, e) => s + e.progress * e.total, 0) /
+            totalChapters) *
+            100,
+        )
+      : 0
+
   return (
     <section
       aria-label={title}
       className="rounded-2xl border bg-card p-4 shadow-sm"
     >
-      <h2 className="font-heading mb-1 text-lg font-bold">{title}</h2>
-      <p className="mb-4 text-xs text-muted-foreground">
-        Chaque quiz fait avancer la barre à hauteur de ton score — touche une
-        matière pour voir le détail chapitre par chapitre.
-      </p>
+      <div className="mb-2 flex items-baseline justify-between gap-2">
+        <h2 className="font-heading flex items-center gap-2 text-lg font-bold">
+          <Target className="size-4 text-primary" /> {title}
+        </h2>
+        <span className="font-mono text-xl font-bold tabular-nums">
+          {globalPct}%
+        </span>
+      </div>
 
-      <ul className="flex flex-col gap-4">
+      {/* Barre globale */}
+      <div className="mb-4 h-3 w-full overflow-hidden rounded-full bg-muted">
+        <div
+          className="h-full rounded-full bg-highlight transition-all"
+          style={{ width: `${globalPct}%` }}
+        />
+      </div>
+
+      {/* Mini-barres par épreuve */}
+      <ul className="grid gap-x-6 gap-y-2 sm:grid-cols-2">
         {entries.map((e) => {
           const theme = subjectTheme(e.subject.color)
-          const pct = e.total > 0 ? Math.round(e.progress * 100) : 0
+          const pct = Math.round(e.progress * 100)
           return (
             <li key={e.label}>
               <Link href={`/reviser/${e.subject.slug}`} className="group block">
-                <div className="mb-1.5 flex items-baseline justify-between gap-2">
-                  <span className="flex items-center gap-2 text-sm font-semibold group-hover:underline">
-                    <span className="text-base leading-none">{e.subject.icon}</span>
-                    {e.label}
+                <div className="mb-1 flex items-baseline justify-between gap-2 text-xs">
+                  <span className="truncate font-medium group-hover:underline">
+                    {e.subject.icon} {e.label}
                   </span>
-                  <span className="font-mono text-xs font-semibold tabular-nums">
+                  <span className="font-mono shrink-0 tabular-nums text-muted-foreground">
                     {pct}%
                   </span>
                 </div>
-                <div className="h-2.5 w-full overflow-hidden rounded-full bg-muted">
+                <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
                   <div
                     className={cn('h-full rounded-full transition-all', theme.bar)}
                     style={{ width: `${pct}%` }}
                   />
-                </div>
-                <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[11px] text-muted-foreground">
-                  <span>
-                    {e.mastered}/{e.total} maîtrisé{e.mastered > 1 ? 's' : ''}
-                  </span>
-                  {e.fragile > 0 ? (
-                    <span className="flex items-center gap-1 font-medium text-destructive">
-                      <TriangleAlert className="size-3" />
-                      {e.fragile} fragile{e.fragile > 1 ? 's' : ''}
-                    </span>
-                  ) : null}
-                  {e.notStarted > 0 ? (
-                    <span>{e.notStarted} à commencer</span>
-                  ) : null}
                 </div>
               </Link>
             </li>

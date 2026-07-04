@@ -301,6 +301,45 @@ a:hover > .wiggle-on-hover {
   animation: check-draw 0.35s ease-out backwards;
 }
 
+/* Halo incitatif : une lueur balaye la chaîne de gauche à droite
+   quand la série est en cours — « viens compléter ta semaine » */
+.chain-halo {
+  position: relative;
+  overflow: hidden;
+}
+.chain-halo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 44px;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(236, 72, 153, 0.28),
+    rgba(168, 85, 247, 0.22),
+    transparent
+  );
+  animation: halo-sweep 2.8s ease-in-out infinite;
+}
+@keyframes halo-sweep {
+  0% {
+    left: -18%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 1;
+  }
+  100% {
+    left: 104%;
+    opacity: 0;
+  }
+}
+
 /* Les segments de la chaîne se remplissent de gauche à droite */
 @keyframes seg-fill {
   from {

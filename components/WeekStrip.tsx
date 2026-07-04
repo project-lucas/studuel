@@ -1,5 +1,9 @@
-import { Fragment } from 'react'
+'use client'
+
+import { Fragment, useEffect } from 'react'
 import { cn } from '@/lib/utils'
+import { sfx } from '@/lib/sounds'
+import { toDayKey } from '@/lib/streak'
 
 const DAY_LETTERS = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
 
@@ -7,8 +11,15 @@ const DAY_LETTERS = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
 const FLAME_PATH =
   'M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z'
 
+function mondayKey(now = new Date()): string {
+  const monday = new Date(now)
+  monday.setUTCDate(monday.getUTCDate() - ((monday.getUTCDay() + 6) % 7))
+  return toDayKey(monday)
+}
+
 // Bloc « Ta série » : flamme qui respire + chaîne de 7 jours reliés.
-// Chaque segment entre deux jours complétés se remplit — ne brise pas la chaîne.
+// Plusieurs jours → un halo balaye la chaîne pour inciter à continuer.
+// Semaine parfaite → les cercles se transforment en flammes, célébration.
 export default function WeekStrip({
   week,
   streak,
@@ -16,17 +27,55 @@ export default function WeekStrip({
   week: { done: boolean; isToday: boolean; isFuture: boolean }[]
   streak: number
 }) {
+  const doneCount = week.filter((d) => d.done).length
+  const perfect = doneCount === 7
+  const showHalo = doneCount >= 2 && !perfect
+
+  // Sons : une seule fois par journée validée / par semaine parfaite.
+  useEffect(() => {
+    const today = week.find((d) => d.isToday)
+    const dayKey = toDayKey(new Date())
+
+    if (today?.done && localStorage.getItem('scolaria-day-jingle') !== dayKey) {
+      localStorage.setItem('scolaria-day-jingle', dayKey)
+      // Après la cascade des cercles.
+      const t = setTimeout(() => sfx.dayComplete(), 800)
+      return () => clearTimeout(t)
+    }
+  }, [week])
+
+  useEffect(() => {
+    if (!perfect) return
+    const weekKey = mondayKey()
+    if (localStorage.getItem('scolaria-week-jingle') !== weekKey) {
+      localStorage.setItem('scolaria-week-jingle', weekKey)
+      // Synchronisé avec la cascade des flammes.
+      const t = setTimeout(() => sfx.weekComplete(), 1300)
+      return () => clearTimeout(t)
+    }
+  }, [perfect])
+
   return (
     <section
       aria-label={`Série de ${streak} jour${streak > 1 ? 's' : ''}`}
-      className="rounded-2xl border bg-card p-4 shadow-sm"
+      className="relative rounded-2xl border bg-card p-4 shadow-sm"
     >
       <div className="mb-3 flex items-baseline justify-between">
         <h2 className="font-heading text-lg font-bold">Ta série</h2>
         <span className="text-xs text-muted-foreground">
-          {week.filter((d) => d.done).length}/7 cette semaine
+          {doneCount}/7 cette semaine
         </span>
       </div>
+
+      {/* Célébration de semaine parfaite */}
+      {perfect ? (
+        <div
+          className="pop-spring absolute -top-3 left-1/2 z-20 -translate-x-1/2 rounded-full bg-gradient-to-r from-violet-500 to-pink-500 px-4 py-1 text-xs font-bold whitespace-nowrap text-white shadow-lg shadow-pink-500/30"
+          style={{ animationDelay: '1500ms' }}
+        >
+          🎉 Semaine parfaite !
+        </div>
+      ) : null}
 
       <div className="flex items-center gap-4">
         {/* Flamme dégradé violet/rose, compteur au centre */}
@@ -47,7 +96,7 @@ export default function WeekStrip({
 
         {/* La chaîne : cercles reliés par une ligne segmentée */}
         <div className="min-w-0 flex-1">
-          <div className="flex items-center">
+          <div className={cn('flex items-center', showHalo && 'chain-halo')}>
             {week.map((day, i) => {
               const missed = !day.done && !day.isToday && !day.isFuture
               const linked = i > 0 && week[i - 1].done && day.done
@@ -80,7 +129,17 @@ export default function WeekStrip({
                         'ring-2 ring-violet-400/50 ring-offset-2 ring-offset-card',
                     )}
                   >
-                    {day.done ? (
+                    {day.done && perfect ? (
+                      // Semaine parfaite : chaque coche devient une flamme, une à une.
+                      <svg
+                        viewBox="0 0 24 24"
+                        className="pop-spring size-5"
+                        style={{ animationDelay: `${700 + i * 120}ms` }}
+                        aria-hidden="true"
+                      >
+                        <path d={FLAME_PATH} fill="white" />
+                      </svg>
+                    ) : day.done ? (
                       <svg viewBox="0 0 24 24" className="size-4" fill="none" aria-hidden="true">
                         <path
                           d="M5 13l4 4 10-10"

@@ -78,4 +78,20 @@ export const sfx = {
     note(783.99, 0.2, 0.1) // sol
     note(1046.5, 0.3, 0.25) // do aigu
   },
+  // Journée validée dans la série : carillon chaleureux, deux notes.
+  dayComplete() {
+    if (!isSoundOn()) return
+    note(659.25, 0, 0.12, 'sine', 0.045) // mi
+    note(987.77, 0.12, 0.22, 'sine', 0.05) // si
+  },
+  // Semaine parfaite : fanfare ascendante + étincelle.
+  weekComplete() {
+    if (!isSoundOn()) return
+    note(523.25, 0, 0.09) // do
+    note(659.25, 0.09, 0.09) // mi
+    note(783.99, 0.18, 0.09) // sol
+    note(1046.5, 0.27, 0.12) // do aigu
+    note(1318.51, 0.39, 0.3, 'sine', 0.05) // mi aigu
+    note(1567.98, 0.5, 0.35, 'triangle', 0.035) // sol aigu, étincelle
+  },
 }

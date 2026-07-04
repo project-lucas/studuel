@@ -9,6 +9,29 @@ export type Quiz = {
   is_free: boolean
 }
 
+// Tableau de révision (classes à examen : 3e, 1re, Tle).
+export type RevisionPriority = 'normale' | 'prioritaire' | 'critique'
+export type RevisionStatus = 'a_faire' | 'en_cours' | 'a_revoir' | 'maitrise'
+export type RevisionKind = 'chapitre' | 'texte'
+
+export type RevisionItem = {
+  id: string
+  subject_id: string
+  title: string
+  kind: RevisionKind
+  status: RevisionStatus
+  created_at: string
+}
+
+export type RevisionSubject = {
+  id: string
+  name: string
+  exam: string | null
+  priority: RevisionPriority
+  created_at: string
+  revision_items: RevisionItem[]
+}
+
 export type TestSession = {
   id: string
   quiz_id: string | null

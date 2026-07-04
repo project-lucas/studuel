@@ -75,6 +75,20 @@ Barre d'onglets en bas sur mobile / sidebar sur desktop, 5 onglets dans cet ordr
 - `tier1` (**Offre 1**) et supérieurs : accès aux Tests premium.
 - Visiteur non connecté : traité comme `free` (catalogue visible, contenu premium verrouillé).
 
+### A3.bis Tableau de révision (onglet Planning)
+Fonctionnalité clé pour les classes à examen (3e → brevet, 1re → bac de
+français écrit/oral, Tle → bac) :
+- L'élève liste ses **matières** avec une **priorité** (normale / prioritaire /
+  critique) et l'**examen visé** (brevet, bac français écrit/oral, spécialité,
+  philo, grand oral).
+- Chaque matière contient des **éléments** : *chapitres* ou *textes* (bac oral),
+  avec un statut cliquable : À faire → En cours → À revoir → Maîtrisé.
+- Le tableau trie les matières critiques en premier, affiche la progression
+  par matière et signale les **urgences** (éléments non maîtrisés en matière
+  critique) pour orienter les sessions de révision.
+- Tables : `revision_subjects`, `revision_items` (RLS owner-only,
+  migration 005).
+
 ### A3. Module Test (v1)
 - Tables `quizzes` (catalogue public) + `quiz_questions` (contenu, protégé par RLS).
 - Types de questions : QCM (`mcq`) et Vrai/Faux (`true_false`).

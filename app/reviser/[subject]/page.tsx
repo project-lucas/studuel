@@ -1,6 +1,7 @@
 import { notFound, redirect } from 'next/navigation'
 import ChapterExplorer from '@/components/ChapterExplorer'
 import { createClient } from '@/lib/supabase/server'
+import { getChapterMastery } from '@/lib/mastery'
 import type { Subject, Chapter } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
@@ -35,15 +36,23 @@ export default async function SubjectPage({
   if (!grade) redirect('/onboarding')
 
   // Le contenu dépend de la classe de l'élève : programme de SON niveau.
-  const { data: chapters } = await supabase
-    .from('chapters')
-    .select('id, subject_id, level, title, position')
-    .eq('subject_id', subject.id)
-    .eq('level', grade)
-    .order('position', { ascending: true })
-    .returns<Chapter[]>()
+  const [{ data: chapters }, mastery] = await Promise.all([
+    supabase
+      .from('chapters')
+      .select('id, subject_id, level, title, position')
+      .eq('subject_id', subject.id)
+      .eq('level', grade)
+      .order('position', { ascending: true })
+      .returns<Chapter[]>(),
+    getChapterMastery(supabase),
+  ])
 
   return (
-    <ChapterExplorer subject={subject} chapters={chapters ?? []} grade={grade} />
+    <ChapterExplorer
+      subject={subject}
+      chapters={chapters ?? []}
+      grade={grade}
+      mastery={Object.fromEntries(mastery)}
+    />
   )
 }

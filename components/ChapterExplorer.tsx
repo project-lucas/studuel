@@ -5,20 +5,48 @@ import Link from 'next/link'
 import { ArrowLeft, ChevronRight, Search } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN, MASCOT } from '@/lib/subject-style'
+import { chapterState, type ChapterState } from '@/lib/mastery'
 import type { Subject, Chapter } from '@/lib/types'
 
-// Niveau 2 : header coloré de la matière + recherche + chapitres du programme.
+// État visuel d'un chapitre selon la maîtrise (meilleur score aux quiz).
+const STATE_BADGES: Record<ChapterState, { label: string; cls: string }> = {
+  maitrise: {
+    label: 'Maîtrisé',
+    cls: 'bg-green-600/10 text-green-700 dark:text-green-400',
+  },
+  en_cours: {
+    label: 'En cours',
+    cls: 'bg-amber-500/15 text-amber-700 dark:text-amber-400',
+  },
+  fragile: { label: 'Fragile', cls: 'bg-destructive/10 text-destructive' },
+  a_commencer: { label: 'À commencer', cls: 'bg-muted text-muted-foreground' },
+}
+
+// Niveau 2 : header coloré de la matière + recherche + chapitres du programme
+// avec leur état de maîtrise (le détail derrière la barre du bloc 2).
 export default function ChapterExplorer({
   subject,
   chapters,
   grade,
+  mastery,
 }: {
   subject: Subject
   chapters: Chapter[]
   grade: string
+  mastery: Record<string, number>
 }) {
   const [query, setQuery] = useState('')
   const theme = subjectTheme(subject.color)
+
+  // Progression globale de la matière (pondérée par les scores).
+  const globalPct =
+    chapters.length > 0
+      ? Math.round(
+          (chapters.reduce((sum, c) => sum + (mastery[c.id] ?? 0), 0) /
+            chapters.length) *
+            100,
+        )
+      : 0
 
   const norm = (s: string) =>
     s
@@ -47,14 +75,22 @@ export default function ChapterExplorer({
           </Link>
           <div className="flex items-center gap-4">
             <span className="text-5xl leading-none drop-shadow-sm">{subject.icon}</span>
-            <div>
+            <div className="min-w-0 flex-1">
               <h1 className="font-heading text-3xl font-bold md:text-4xl">
                 {subject.name}
               </h1>
               <p className="text-sm font-medium opacity-70">
-                Programme de {grade}
+                Programme de {grade} · {globalPct}% travaillé
               </p>
             </div>
+          </div>
+
+          {/* Barre de progression globale de la matière */}
+          <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-black/10 dark:bg-white/10">
+            <div
+              className={cn('h-full rounded-full transition-all', theme.bar)}
+              style={{ width: `${globalPct}%` }}
+            />
           </div>
 
           {/* Recherche : filtre client sur les chapitres */}
@@ -107,6 +143,23 @@ export default function ChapterExplorer({
                       Chapitre {chapter.position}
                     </span>
                   </span>
+                  {(() => {
+                    const m = mastery[chapter.id]
+                    const state = chapterState(m)
+                    const badge = STATE_BADGES[state]
+                    return (
+                      <span
+                        className={cn(
+                          'shrink-0 rounded-full px-2.5 py-0.5 font-mono text-[11px] font-semibold tabular-nums',
+                          badge.cls,
+                        )}
+                      >
+                        {m !== undefined
+                          ? `${badge.label} · ${Math.round(m * 100)}%`
+                          : badge.label}
+                      </span>
+                    )
+                  })()}
                   <ChevronRight className="size-5 shrink-0 text-muted-foreground" />
                 </Link>
               </li>

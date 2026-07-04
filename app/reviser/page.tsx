@@ -15,6 +15,7 @@ import ExamProgress, { type ExamProgressEntry } from '@/components/ExamProgress'
 import { createClient } from '@/lib/supabase/server'
 import { computeStreak, weekProgress } from '@/lib/streak'
 import { examsForProfile } from '@/lib/exams'
+import { getChapterMastery, MASTERY_THRESHOLDS } from '@/lib/mastery'
 import type { Subject } from '@/lib/types'
 
 export const metadata = { title: 'Réviser — Scolaria' }
@@ -128,57 +129,63 @@ export default async function ReviserPage() {
   const streak = computeStreak(activeDays)
   const week = weekProgress(activeDays)
 
-  // --- Bloc 2 : avancement examens, dérivé du profil --------------------------
+  // --- Bloc 2 : avancement pondéré par les scores ------------------------------
   const selected = Array.isArray(profile?.selected_subjects)
     ? (profile.selected_subjects as string[])
     : null
   const allSubjects = subjects ?? []
+
+  // Épreuves officielles si classe à examen, sinon progression des matières
+  // sélectionnées : l'élève voit toujours que ses quiz payent.
   const exams = examsForProfile(grade, selected, allSubjects)
+  const hasExam = exams.length > 0
+  const tracked = hasExam
+    ? exams
+    : allSubjects
+        .filter(
+          (s) =>
+            s.levels.includes(grade) &&
+            (selected === null || selected.length === 0 || selected.includes(s.slug)),
+        )
+        .map((s) => ({ label: s.name, subject: s }))
 
-  let examEntries: ExamProgressEntry[] = []
-  if (exams.length > 0) {
-    // Chapitres couverts = quiz terminés → leçon → chapitre.
-    const quizIds = Array.from(
-      new Set((tests ?? []).map((t) => t.quiz_id).filter((q): q is string => !!q)),
-    )
-    const coveredChapters = new Set<string>()
-    if (quizIds.length > 0) {
-      const { data: quizRows } = await supabase
-        .from('quizzes')
-        .select('id, lesson_id')
-        .in('id', quizIds)
-        .returns<{ id: string; lesson_id: string | null }[]>()
-      const lessonIds = (quizRows ?? [])
-        .map((q) => q.lesson_id)
-        .filter((l): l is string => !!l)
-      if (lessonIds.length > 0) {
-        const { data: lessonRows } = await supabase
-          .from('lessons')
-          .select('id, chapter_id')
-          .in('id', lessonIds)
-          .returns<{ id: string; chapter_id: string }[]>()
-        for (const l of lessonRows ?? []) coveredChapters.add(l.chapter_id)
-      }
-    }
+  const mastery = await getChapterMastery(supabase)
 
-    // Total et couverture par matière d'examen (programme du niveau).
-    const chaptersBySubject = new Map<string, string[]>()
-    for (const c of levelChapters ?? []) {
-      const list = chaptersBySubject.get(c.subject_id) ?? []
-      list.push(c.id)
-      chaptersBySubject.set(c.subject_id, list)
-    }
+  const chaptersBySubject = new Map<string, string[]>()
+  for (const c of levelChapters ?? []) {
+    const list = chaptersBySubject.get(c.subject_id) ?? []
+    list.push(c.id)
+    chaptersBySubject.set(c.subject_id, list)
+  }
 
-    examEntries = exams.map(({ label, subject }) => {
+  const examEntries: ExamProgressEntry[] = tracked
+    .map(({ label, subject }) => {
       const ids = chaptersBySubject.get(subject.id) ?? []
+      let sum = 0
+      let mastered = 0
+      let fragile = 0
+      let notStarted = 0
+      for (const id of ids) {
+        const m = mastery.get(id)
+        if (m === undefined) {
+          notStarted += 1
+          continue
+        }
+        sum += m
+        if (m >= MASTERY_THRESHOLDS.mastered) mastered += 1
+        else if (m < MASTERY_THRESHOLDS.fragile) fragile += 1
+      }
       return {
         label,
         subject,
         total: ids.length,
-        covered: ids.filter((id) => coveredChapters.has(id)).length,
+        progress: ids.length > 0 ? sum / ids.length : 0,
+        mastered,
+        fragile,
+        notStarted,
       }
     })
-  }
+    .filter((e) => e.total > 0)
 
   // --- Bloc 3 : mes matières ---------------------------------------------------
   const ofLevel = allSubjects.filter((s) => s.levels.includes(grade))
@@ -186,7 +193,10 @@ export default async function ReviserPage() {
   return (
     <div className="flex flex-col gap-4">
       <WeekStrip week={week} streak={streak} />
-      <ExamProgress entries={examEntries} />
+      <ExamProgress
+        title={hasExam ? 'Objectif examen' : 'Ma progression'}
+        entries={examEntries}
+      />
       <SubjectsHome subjects={ofLevel} selected={selected} grade={grade} />
     </div>
   )

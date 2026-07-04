@@ -22,7 +22,11 @@ export default function WeekStrip({
         {week.map((day, i) => {
           const missed = !day.done && !day.isToday && !day.isFuture
           return (
-            <li key={i} className="flex flex-col items-center gap-1">
+            <li
+              key={i}
+              className="pop-in flex flex-col items-center gap-1"
+              style={{ animationDelay: `${i * 50}ms` }}
+            >
               <span
                 className={cn(
                   'text-[10px] font-bold',
@@ -54,7 +58,7 @@ export default function WeekStrip({
 
       <div className="flex shrink-0 flex-col items-center border-l pl-3 sm:pl-5">
         <span className="flex items-center gap-1">
-          <Flame className="size-5 text-highlight" />
+          <Flame className={cn('size-5 text-highlight', streak > 0 && 'animate-pulse')} />
           <span className="font-mono text-2xl font-bold tabular-nums">
             {streak}
           </span>

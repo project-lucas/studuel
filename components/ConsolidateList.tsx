@@ -1,6 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import { TriangleAlert, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { sfx } from '@/lib/sounds'
 import { subjectTheme } from '@/lib/subject-style'
 import type { Subject } from '@/lib/types'
 
@@ -30,12 +33,17 @@ export default function ConsolidateList({
         <TriangleAlert className="size-4 text-destructive" /> À consolider
       </h2>
       <ul className="flex flex-col gap-1.5">
-        {entries.map((e) => {
+        {entries.map((e, i) => {
           const theme = subjectTheme(e.subject.color)
           return (
-            <li key={e.chapterId}>
+            <li
+              key={e.chapterId}
+              className="pop-in"
+              style={{ animationDelay: `${i * 60}ms` }}
+            >
               <Link
                 href={`/reviser/${e.subject.slug}/${e.chapterId}`}
+                onClick={() => sfx.tap()}
                 className="group flex items-center gap-3 rounded-xl px-2 py-2 transition-colors hover:bg-muted/60"
               >
                 <span
@@ -44,7 +52,7 @@ export default function ConsolidateList({
                     theme.chip,
                   )}
                 >
-                  {e.subject.icon}
+                  <span className="wiggle-on-hover">{e.subject.icon}</span>
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-semibold group-hover:underline">

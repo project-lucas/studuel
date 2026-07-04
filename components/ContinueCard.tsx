@@ -1,6 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import { Play } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { sfx } from '@/lib/sounds'
 import { subjectTheme, GRID_PATTERN, MASCOT } from '@/lib/subject-style'
 import type { Subject } from '@/lib/types'
 
@@ -20,8 +23,9 @@ export default function ContinueCard({ target }: { target: ContinueTarget }) {
   return (
     <Link
       href={`/reviser/${target.subject.slug}/${target.chapterId}`}
+      onClick={() => sfx.tap()}
       className={cn(
-        'relative block overflow-hidden rounded-2xl p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]',
+        'group pop-in relative block overflow-hidden rounded-2xl p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]',
         theme.header,
       )}
     >
@@ -31,7 +35,9 @@ export default function ContinueCard({ target }: { target: ContinueTarget }) {
         aria-hidden="true"
       />
       <div className="relative flex items-center gap-4">
-        <span className="text-5xl leading-none drop-shadow-sm">{MASCOT}</span>
+        <span className="float-slow text-5xl leading-none drop-shadow-sm">
+          {MASCOT}
+        </span>
         <div className="min-w-0 flex-1">
           <p className="text-[11px] font-bold tracking-widest uppercase opacity-70">
             {target.isNew ? 'Commence ici' : 'Reprendre'}
@@ -46,7 +52,7 @@ export default function ContinueCard({ target }: { target: ContinueTarget }) {
               : ` · ${pct}% — ${pct >= 50 ? 'encore un effort, tu y es presque !' : 'continue, ça rentre !'}`}
           </p>
         </div>
-        <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-card text-foreground shadow-md">
+        <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-card text-foreground shadow-md transition-transform group-hover:scale-110">
           <Play className="size-5" />
         </span>
       </div>
@@ -54,7 +60,7 @@ export default function ContinueCard({ target }: { target: ContinueTarget }) {
       {!target.isNew ? (
         <div className="relative mt-4 h-2 w-full overflow-hidden rounded-full bg-black/10 dark:bg-white/10">
           <div
-            className={cn('h-full rounded-full', theme.bar)}
+            className={cn('bar-fill h-full rounded-full', theme.bar)}
             style={{ width: `${pct}%` }}
           />
         </div>

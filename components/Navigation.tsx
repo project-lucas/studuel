@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { CircleUser, Zap } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { sfx } from '@/lib/sounds'
 
 // Ordre des onglets = ordre de la barre mobile. Le Défi est au centre,
 // surélevé — c'est LE geste quotidien. Langage d'icônes : émojis stickers.
@@ -64,6 +65,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                 <li key={path} className="flex-1">
                   <Link
                     href={path}
+                    onClick={() => sfx.tap()}
                     aria-current={active ? 'page' : undefined}
                     className="flex flex-col items-center gap-0.5 pb-2 text-[11px] font-medium"
                   >
@@ -87,6 +89,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
               <li key={path} className="flex-1">
                 <Link
                   href={path}
+                  onClick={() => sfx.tap()}
                   aria-current={active ? 'page' : undefined}
                   className={cn(
                     'flex flex-col items-center gap-0.5 pt-1.5 pb-2 text-[11px] font-medium transition-all active:scale-95',
@@ -124,6 +127,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
             <li key={path}>
               <Link
                 href={path}
+                onClick={() => sfx.tap()}
                 aria-current={isActive(path) ? 'page' : undefined}
                 className={cn(
                   'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',

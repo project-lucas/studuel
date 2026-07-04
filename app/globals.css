@@ -191,6 +191,81 @@
   }
 }
 
+/* =============================================================================
+   Micro-animations « Cahier Arcade »
+   ========================================================================== */
+
+/* Entrée en cascade des cartes/tuiles (utiliser animation-delay par index) */
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.88) translateY(10px);
+  }
+}
+.pop-in {
+  animation: pop-in 0.45s var(--ease) backwards;
+}
+
+/* Les barres de progression se remplissent à l'arrivée */
+@keyframes bar-grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+.bar-fill {
+  transform-origin: left;
+  animation: bar-grow 0.9s var(--ease) backwards;
+}
+:root {
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* La mascotte flotte doucement */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.float-slow {
+  animation: float-y 3.2s ease-in-out infinite;
+}
+
+/* Frétillement au survol (émojis, mascottes) */
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-8deg) scale(1.08);
+  }
+  75% {
+    transform: rotate(8deg) scale(1.08);
+  }
+}
+.group:hover .wiggle-on-hover,
+a:hover > .wiggle-on-hover {
+  animation: wiggle 0.4s ease-in-out;
+}
+
+/* Le bouton GO respire tant que le défi du jour n'est pas fait */
+@keyframes go-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklch, var(--primary), transparent 45%);
+  }
+  70% {
+    box-shadow: 0 0 0 18px transparent;
+  }
+}
+.go-pulse {
+  animation: go-pulse 2.2s ease-out infinite;
+}
+
 /* Accessibilité : on coupe les animations si l'utilisateur les refuse */
 @media (prefers-reduced-motion: reduce) {
   *,

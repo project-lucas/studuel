@@ -164,9 +164,9 @@ export default function FlashcardPlayer({
       </div>
 
       {/* Barre de progression */}
-      <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
+      <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
         <div
-          className="h-full rounded-full bg-highlight transition-all"
+          className="bar-fill h-full rounded-full bg-highlight transition-all"
           style={{ width: `${(knownCount / cards.length) * 100}%` }}
         />
       </div>

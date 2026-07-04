@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, ChevronRight, Search } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { sfx } from '@/lib/sounds'
 import { subjectTheme, GRID_PATTERN, MASCOT } from '@/lib/subject-style'
 import {
   chapterState,
@@ -92,7 +93,7 @@ export default function ChapterExplorer({
           {/* Barre de progression globale de la matière */}
           <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-black/10 dark:bg-white/10">
             <div
-              className={cn('h-full rounded-full transition-all', theme.bar)}
+              className={cn('bar-fill h-full rounded-full transition-all', theme.bar)}
               style={{ width: `${globalPct}%` }}
             />
           </div>
@@ -125,11 +126,16 @@ export default function ChapterExplorer({
           </p>
         ) : (
           <ul className="flex flex-col gap-3">
-            {filtered.map((chapter) => (
-              <li key={chapter.id}>
+            {filtered.map((chapter, i) => (
+              <li
+                key={chapter.id}
+                className="pop-in"
+                style={{ animationDelay: `${Math.min(i * 45, 400)}ms` }}
+              >
                 <Link
                   href={`/reviser/${subject.slug}/${chapter.id}`}
-                  className="flex items-center gap-4 rounded-2xl border bg-card p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
+                  onClick={() => sfx.tap()}
+                  className="group flex items-center gap-4 rounded-2xl border bg-card p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
                 >
                   <span
                     className={cn(
@@ -137,7 +143,7 @@ export default function ChapterExplorer({
                       theme.chip,
                     )}
                   >
-                    {MASCOT}
+                    <span className="wiggle-on-hover">{MASCOT}</span>
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block truncate font-semibold">

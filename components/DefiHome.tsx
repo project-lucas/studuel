@@ -109,7 +109,7 @@ export default function DefiHome({
           </div>
           <div className="mt-1.5 h-2 w-full overflow-hidden rounded-full bg-muted">
             <div
-              className="h-full rounded-full bg-highlight transition-all"
+              className="bar-fill h-full rounded-full bg-highlight transition-all"
               style={{ width: `${Math.round(level.progress * 100)}%` }}
             />
           </div>
@@ -142,7 +142,10 @@ export default function DefiHome({
           type="button"
           onClick={start}
           disabled={items.length === 0}
-          className="group flex size-36 flex-col items-center justify-center gap-1 rounded-full bg-primary text-primary-foreground shadow-xl shadow-primary/30 transition-all hover:scale-105 active:scale-95 disabled:opacity-40"
+          className={cn(
+            'group flex size-36 flex-col items-center justify-center gap-1 rounded-full bg-primary text-primary-foreground shadow-xl shadow-primary/30 transition-all hover:scale-105 active:scale-95 disabled:opacity-40',
+            !doneToday && items.length > 0 && 'go-pulse',
+          )}
         >
           <Zap className="size-10 transition-transform group-hover:rotate-12" />
           <span className="font-heading text-xl font-bold">GO</span>

@@ -49,7 +49,7 @@ export default function ExamProgress({
       {/* Barre globale */}
       <div className="mb-4 h-3 w-full overflow-hidden rounded-full bg-muted">
         <div
-          className="h-full rounded-full bg-highlight transition-all"
+          className="bar-fill h-full rounded-full bg-highlight transition-all"
           style={{ width: `${globalPct}%` }}
         />
       </div>
@@ -72,7 +72,7 @@ export default function ExamProgress({
                 </div>
                 <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
                   <div
-                    className={cn('h-full rounded-full transition-all', theme.bar)}
+                    className={cn('bar-fill h-full rounded-full transition-all', theme.bar)}
                     style={{ width: `${pct}%` }}
                   />
                 </div>

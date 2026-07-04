@@ -6,6 +6,7 @@ import { Check, Pencil } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { subjectTheme } from '@/lib/subject-style'
+import { sfx } from '@/lib/sounds'
 import { saveSelectedSubjects } from '@/app/reviser/actions'
 import type { Subject, SubjectCategory } from '@/lib/types'
 
@@ -53,7 +54,9 @@ function ProgressRing({
           />
         ) : null}
       </svg>
-      <span className="text-3xl leading-none drop-shadow-sm">{icon}</span>
+      <span className="wiggle-on-hover text-3xl leading-none drop-shadow-sm">
+        {icon}
+      </span>
     </span>
   )
 }
@@ -64,19 +67,22 @@ function SubjectTile({
   editing,
   checked,
   onToggle,
+  delayMs,
 }: {
   subject: Subject
   pct: number
   editing: boolean
   checked: boolean
   onToggle: () => void
+  delayMs: number
 }) {
   const theme = subjectTheme(subject.color)
 
   const inner = (
     <div
+      style={{ animationDelay: `${delayMs}ms` }}
       className={cn(
-        'relative flex h-full flex-col items-center gap-1.5 rounded-2xl p-4 text-center shadow-sm transition-all',
+        'pop-in relative flex h-full flex-col items-center gap-1.5 rounded-2xl p-4 text-center shadow-sm transition-all',
         theme.tile,
         editing
           ? 'cursor-pointer active:scale-[0.97]'
@@ -112,7 +118,11 @@ function SubjectTile({
     )
   }
   return (
-    <Link href={`/reviser/${subject.slug}`} className="block h-full">
+    <Link
+      href={`/reviser/${subject.slug}`}
+      onClick={() => sfx.tap()}
+      className="group block h-full"
+    >
       {inner}
     </Link>
   )
@@ -195,7 +205,7 @@ export default function SubjectsHome({
                 </h3>
               ) : null}
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-                {items.map((s) => (
+                {items.map((s, i) => (
                   <SubjectTile
                     key={s.id}
                     subject={s}
@@ -203,6 +213,7 @@ export default function SubjectsHome({
                     editing={editing}
                     checked={picked.has(s.slug)}
                     onToggle={() => toggle(s.slug)}
+                    delayMs={i * 45}
                   />
                 ))}
               </div>

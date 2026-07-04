@@ -58,14 +58,15 @@ export default function BadgeGrid({
 
       {/* Badges */}
       <ul className="grid grid-cols-4 gap-2 sm:grid-cols-8">
-        {badges.map((badge) => {
+        {badges.map((badge, i) => {
           const unlocked = unlockedIds.has(badge.id)
           return (
             <li
               key={badge.id}
               title={`${badge.title} — ${badge.description}${unlocked ? '' : ' (verrouillé)'}`}
+              style={{ animationDelay: `${i * 50}ms` }}
               className={cn(
-                'flex flex-col items-center gap-1 rounded-xl p-2 text-center transition-all',
+                'pop-in flex flex-col items-center gap-1 rounded-xl p-2 text-center transition-all',
                 unlocked
                   ? 'bg-highlight/15'
                   : 'opacity-40 grayscale',

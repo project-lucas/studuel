@@ -49,6 +49,11 @@ function note(
 }
 
 export const sfx = {
+  // Tap de navigation : à peine audible, juste un retour tactile.
+  tap() {
+    if (!isSoundOn()) return
+    note(880, 0, 0.035, 'triangle', 0.012)
+  },
   // Retournement de carte : petit clic doux.
   flip() {
     if (!isSoundOn()) return

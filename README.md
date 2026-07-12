@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Scolaria
 
-## Getting Started
+Application de soutien scolaire (6e → Terminale) : cours, quiz, révision espacée (SRS), examens blancs, modes de jeu compétitifs, coaching et suivi du temps de travail. Next.js 16 (App Router) + Supabase (auth, base, RLS), Tailwind CSS 4.
 
-First, run the development server:
+## Démarrer
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+L'app tourne sur [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Variables d'environnement attendues (`.env.local`) :
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+NEXT_PUBLIC_SUPABASE_URL=…
+NEXT_PUBLIC_SUPABASE_ANON_KEY=…
+OPENAI_API_KEY=…   # optionnel — génération de planning (app/planning)
+```
 
-## Learn More
+## Base de données (Supabase)
 
-To learn more about Next.js, take a look at the following resources:
+Les migrations vivent dans `supabase/` et s'exécutent **à la main** dans le SQL Editor du dashboard Supabase, dans l'ordre (`schema.sql`, puis `002_…` → `024_…`). Elles sont toutes idempotentes : réexécutables sans erreur.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+La sécurité repose sur les policies RLS définies dans ces fichiers — le serveur Next n'utilise que la clé anonyme.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts
 
-## Deploy on Vercel
+| Commande            | Rôle                          |
+| ------------------- | ----------------------------- |
+| `npm run dev`       | serveur de développement      |
+| `npm run build`     | build de production           |
+| `npm run start`     | sert le build de production   |
+| `npm run lint`      | ESLint                        |
+| `npm run typecheck` | vérification TypeScript       |
+| `npm test`          | tests unitaires (Vitest)      |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## L'app en bref
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Navigation à cinq onglets :
+
+- **Amis** — social : ligue, duels, duels fantômes contre de vrais joueurs
+- **Réviser** — cours par matière/chapitre/leçon, flashcards, quiz, file « À revoir » (SRS J+1 → J+35), examen blanc avec bilan par chapitre
+- **Défi** (onglet central) — 5 modes de jeu : Duel (BO3), Blitz, Chrono, Survie, Boss (rangs I → III par matière), mode du jour ×2 XP, boss de la semaine
+- **Moi** — série (streak), missions du jour, compagnon tamagotchi, badges, temps de travail, calendrier de discipline
+- **Trésor** — coffre quotidien, boutique, collection, récompense de connexion journalière
+
+## Organisation
+
+- `app/` — pages (App Router) : `reviser`, `defi`, `moi`, `amis`, `tresor`, `test`, `onboarding`, `login`, `compte`… + `app/api/` (routes API) et `app/auth/callback` (retour d'auth Supabase)
+- `components/` — composants React (UI de base dans `components/ui/`)
+- `lib/` — logique métier **pure et testable** (SRS, streak, XP, modes de défi, boss, compagnon, trésor…) + clients Supabase dans `lib/supabase/`
+- `supabase/` — migrations SQL numérotées
+- `docs/` — documents de travail (prompts de génération d'images…)
+- `proxy.ts` — rafraîchit la session Supabase avant chaque rendu (ex-middleware)
+
+Chaque module de `lib/` a son fichier de test à côté (`*.test.ts`, Vitest).
+
+Conventions : les jours sont des clés UTC `YYYY-MM-DD` (lundi = 0) ; les heures « élève » (créneaux de trajet) sont interprétées en Europe/Paris ; l'interface est entièrement en français.
+
+Voir `PRD.md` pour le produit et `CLAUDE.md` / `AGENTS.md` pour les consignes destinées aux agents.

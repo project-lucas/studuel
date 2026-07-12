@@ -7,7 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  /* Bricolage Grotesque partout : la même voix sur toute l'app,
+     Geist en repli si la police ne charge pas. */
+  --font-sans: var(--font-bricolage), var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-bricolage);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -50,50 +52,49 @@
 }
 
 /* =============================================================================
-   Scolaria — « Encre & Surligneur »
-   L'encre bleue du stylo-plume sur papier, le coup de surligneur fluo
-   sur ce qu'il faut retenir.
-   Light = papier ; Dark = nuit d'encre.
+   Scolaria — « Toque & Gland »
+   Les couleurs de la mascotte : le bleu marine de la toque de diplômé,
+   l'orange chaleureux du gland. Fond blanc, encre marine, touches d'orange.
    ========================================================================== */
 
 :root {
-  /* Papier : blanc cassé chaud */
-  --background: oklch(0.982 0.005 90);
-  --foreground: oklch(0.25 0.045 278);
+  /* Papier : blanc franc, à peine tiédi */
+  --background: oklch(0.99 0.003 250);
+  --foreground: oklch(0.28 0.06 262);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.045 278);
+  --card-foreground: oklch(0.28 0.06 262);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.045 278);
-  /* Encre vive : bleu-violet du stylo-plume */
-  --primary: oklch(0.47 0.19 277);
-  --primary-foreground: oklch(0.985 0.005 90);
-  --secondary: oklch(0.955 0.012 278);
-  --secondary-foreground: oklch(0.32 0.06 278);
-  --muted: oklch(0.955 0.012 278);
-  --muted-foreground: oklch(0.52 0.035 278);
-  /* Surligneur : jaune fluo doux, texte encre */
-  --accent: oklch(0.94 0.13 100);
-  --accent-foreground: oklch(0.3 0.05 278);
+  --popover-foreground: oklch(0.28 0.06 262);
+  /* Encre : bleu marine de la toque */
+  --primary: oklch(0.33 0.11 262);
+  --primary-foreground: oklch(0.99 0.005 250);
+  --secondary: oklch(0.955 0.012 262);
+  --secondary-foreground: oklch(0.33 0.08 262);
+  --muted: oklch(0.955 0.012 262);
+  --muted-foreground: oklch(0.5 0.04 262);
+  /* Accent : orange du gland, doux en surface, texte marine */
+  --accent: oklch(0.9 0.08 68);
+  --accent-foreground: oklch(0.3 0.07 262);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.91 0.012 278);
-  --input: oklch(0.91 0.012 278);
-  --ring: oklch(0.47 0.19 277);
-  /* Trait de surligneur pur (heatmap, marquages) */
-  --highlight: oklch(0.86 0.174 95);
-  --chart-1: oklch(0.47 0.19 277);
-  --chart-2: oklch(0.86 0.174 95);
-  --chart-3: oklch(0.65 0.12 277);
-  --chart-4: oklch(0.52 0.035 278);
-  --chart-5: oklch(0.32 0.06 278);
+  --border: oklch(0.9 0.014 262);
+  --input: oklch(0.9 0.014 262);
+  --ring: oklch(0.33 0.11 262);
+  /* Orange franc du gland (barres, marquages, flammes) */
+  --highlight: oklch(0.76 0.14 62);
+  --chart-1: oklch(0.33 0.11 262);
+  --chart-2: oklch(0.76 0.14 62);
+  --chart-3: oklch(0.55 0.1 262);
+  --chart-4: oklch(0.5 0.04 262);
+  --chart-5: oklch(0.28 0.07 262);
   --radius: 1rem;
   --sidebar: oklch(1 0 0);
-  --sidebar-foreground: oklch(0.25 0.045 278);
-  --sidebar-primary: oklch(0.47 0.19 277);
-  --sidebar-primary-foreground: oklch(0.985 0.005 90);
-  --sidebar-accent: oklch(0.94 0.13 100);
-  --sidebar-accent-foreground: oklch(0.3 0.05 278);
-  --sidebar-border: oklch(0.91 0.012 278);
-  --sidebar-ring: oklch(0.47 0.19 277);
+  --sidebar-foreground: oklch(0.28 0.06 262);
+  --sidebar-primary: oklch(0.33 0.11 262);
+  --sidebar-primary-foreground: oklch(0.99 0.005 250);
+  --sidebar-accent: oklch(0.9 0.08 68);
+  --sidebar-accent-foreground: oklch(0.3 0.07 262);
+  --sidebar-border: oklch(0.9 0.014 262);
+  --sidebar-ring: oklch(0.33 0.11 262);
 }
 
 /* Nuit d'encre — valeurs partagées entre .dark (classe) et le thème système */
@@ -187,8 +188,16 @@
   /* Sélection de texte : coup de surligneur */
   ::selection {
     background: var(--highlight);
-    color: oklch(0.25 0.045 278);
+    color: oklch(0.28 0.06 262);
   }
+}
+
+/* Carrousel : la molette/le doigt scrollent, la barre reste invisible. */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 /* =============================================================================
@@ -218,6 +227,27 @@
 }
 :root {
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Confettis (célébrations plein écran) : chaque pièce tombe en tournoyant,
+   position/délai/durée varient par index côté composant */
+@keyframes confetti-fall {
+  from {
+    transform: translateY(-8vh) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(105vh) rotate(660deg);
+    opacity: 0.6;
+  }
+}
+.confetti-piece {
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 14px;
+  border-radius: 2px;
+  animation: confetti-fall 2.8s linear infinite backwards;
 }
 
 /* La mascotte flotte doucement */
@@ -259,16 +289,78 @@ a:hover > .wiggle-on-hover {
   0%,
   100% {
     transform: scale(1);
-    filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.35));
+    filter: drop-shadow(0 0 4px rgba(237, 169, 78, 0.4));
   }
   50% {
     transform: scale(1.08);
-    filter: drop-shadow(0 0 14px rgba(236, 72, 153, 0.55));
+    filter: drop-shadow(0 0 14px rgba(224, 138, 40, 0.6));
   }
 }
 .flame-breathe {
   animation: flame-breathe 2.4s ease-in-out infinite;
   transform-origin: center bottom;
+}
+
+/* Le compagnon dort (série à zéro) : respiration lente et profonde,
+   il s'affaisse doucement sur son tas de cendres. */
+@keyframes compagnon-sleep {
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.03, 0.97) translateY(2px);
+  }
+}
+.compagnon-sleep {
+  animation: compagnon-sleep 3.6s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+/* Le compagnon a faim (série vivante mais rien aujourd'hui) :
+   la flamme vacille, penche et faiblit — elle appelle une session. */
+@keyframes compagnon-flicker {
+  0%,
+  100% {
+    transform: rotate(0deg) scaleY(1);
+    opacity: 1;
+  }
+  22% {
+    transform: rotate(-2.5deg) scaleY(0.96);
+    opacity: 0.85;
+  }
+  45% {
+    transform: rotate(1.5deg) scaleY(1.01);
+    opacity: 1;
+  }
+  68% {
+    transform: rotate(-1.5deg) scaleY(0.94);
+    opacity: 0.8;
+  }
+  84% {
+    transform: rotate(2deg) scaleY(1);
+    opacity: 0.95;
+  }
+}
+.compagnon-flicker {
+  animation: compagnon-flicker 2.2s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+/* Le halo du compagnon rayonnant pulse au rythme de sa respiration. */
+@keyframes compagnon-halo {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+.compagnon-halo {
+  animation: compagnon-halo 2.4s ease-in-out infinite;
 }
 
 /* Pop façon spring : scale 0 → 1.15 → 1 */
@@ -317,8 +409,8 @@ a:hover > .wiggle-on-hover {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(236, 72, 153, 0.28),
-    rgba(168, 85, 247, 0.22),
+    rgba(237, 169, 78, 0.3),
+    rgba(224, 138, 40, 0.24),
     transparent
   );
   animation: halo-sweep 2.8s ease-in-out infinite;
@@ -365,6 +457,330 @@ a:hover > .wiggle-on-hover {
   animation: go-pulse 2.2s ease-out infinite;
 }
 
+/* --- Onglet Défi : l'Arène ------------------------------------------------ */
+
+/* Les visuels des modes vivent. L'illustration étant fondue dans l'image du
+   bouton, on anime l'image entière avec l'origine haute (côté illustration) :
+   le haut balaie, le socle bouge à peine. */
+
+/* Duel : les épées s'entrechoquent — armé, choc (flash blanc), contrecoup. */
+@keyframes mode-clash {
+  0%,
+  62%,
+  91%,
+  100% {
+    transform: rotate(0deg) scale(1);
+    filter: brightness(1);
+  }
+  68% {
+    transform: rotate(-3.5deg) scale(0.985);
+    filter: brightness(1);
+  }
+  73% {
+    transform: rotate(3deg) scale(1.03);
+    filter: brightness(1.35) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  }
+  79% {
+    transform: rotate(-2deg) scale(1.01);
+    filter: brightness(1.08);
+  }
+  85% {
+    transform: rotate(1.2deg) scale(1);
+    filter: brightness(1);
+  }
+}
+.mode-anim-duel {
+  transform-origin: 50% 78%;
+  animation: mode-clash 3.6s ease-in-out infinite;
+}
+
+/* Contre-la-montre : le sablier tangue, le sable coule d'un bord à l'autre. */
+@keyframes mode-hourglass {
+  0%,
+  100% {
+    transform: rotate(-2.4deg);
+  }
+  50% {
+    transform: rotate(2.4deg);
+  }
+}
+.mode-anim-chrono {
+  transform-origin: 50% 80%;
+  animation: mode-hourglass 2.6s ease-in-out infinite;
+}
+
+/* Survie : bouclier et crayon flottent doucement. */
+@keyframes mode-survival {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.1deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(1.1deg);
+  }
+}
+.mode-anim-survie {
+  transform-origin: 50% 70%;
+  animation: mode-survival 3.4s ease-in-out infinite;
+}
+
+/* Tuile « jeu mobile » : socle 3D qui s'enfonce au tap (façon Duolingo).
+   La couleur du socle dérive du token primary — rien de codé en dur. */
+.press-3d {
+  box-shadow: 0 4px 0 0 color-mix(in oklch, var(--primary), transparent 82%);
+  transition:
+    transform 0.15s var(--ease),
+    box-shadow 0.15s var(--ease);
+}
+.press-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 0 color-mix(in oklch, var(--primary), transparent 82%);
+}
+.press-3d:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 0 color-mix(in oklch, var(--primary), transparent 82%);
+}
+
+/* Variante pour les tuiles pleines : socle = la couleur de la tuile assombrie
+   (--press-base : primary par défaut, redéfinissable par tuile). */
+.press-3d-deep {
+  --press-base: var(--primary);
+  box-shadow: 0 4px 0 0 color-mix(in oklch, var(--press-base), black 30%);
+  transition:
+    transform 0.15s var(--ease),
+    box-shadow 0.15s var(--ease);
+}
+.press-3d-deep:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 0 color-mix(in oklch, var(--press-base), black 30%);
+}
+.press-3d-deep:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 0 color-mix(in oklch, var(--press-base), black 30%);
+}
+.press-base-highlight {
+  --press-base: var(--highlight);
+}
+
+/* Palette de l'Arène — chaque mode a sa couleur de tuile, façon Brawl Stars.
+   Tokens locaux à la zone jeu : le reste de l'app garde le code couleur strict. */
+.tile-duel {
+  --tile-a: oklch(0.58 0.2 27);
+  --tile-b: oklch(0.42 0.18 22);
+}
+.tile-blitz {
+  --tile-a: oklch(0.8 0.16 85);
+  --tile-b: oklch(0.64 0.16 62);
+}
+.tile-chrono {
+  --tile-a: oklch(0.62 0.11 210);
+  --tile-b: oklch(0.45 0.1 225);
+}
+.tile-survie {
+  --tile-a: oklch(0.52 0.19 305);
+  --tile-b: oklch(0.37 0.16 305);
+}
+.tile-boss {
+  --tile-a: oklch(0.32 0.08 270);
+  --tile-b: oklch(0.2 0.06 270);
+}
+
+/* Palette « arènes de matières » (page Réviser) — même système de tokens que
+   l'Arène, décliné par couleur de matière (`subjects.color`). Les duos restent
+   assez sombres pour du texte blanc, y compris jaune et orange. */
+.tile-subject-blue {
+  --tile-a: oklch(0.66 0.15 237);
+  --tile-b: oklch(0.47 0.13 243);
+}
+.tile-subject-red {
+  --tile-a: oklch(0.64 0.2 16);
+  --tile-b: oklch(0.46 0.17 14);
+}
+.tile-subject-orange {
+  --tile-a: oklch(0.7 0.16 55);
+  --tile-b: oklch(0.53 0.14 45);
+}
+.tile-subject-green {
+  --tile-a: oklch(0.63 0.14 160);
+  --tile-b: oklch(0.45 0.11 166);
+}
+.tile-subject-purple {
+  --tile-a: oklch(0.58 0.2 295);
+  --tile-b: oklch(0.42 0.17 295);
+}
+.tile-subject-indigo {
+  --tile-a: oklch(0.55 0.19 275);
+  --tile-b: oklch(0.4 0.16 277);
+}
+.tile-subject-teal {
+  --tile-a: oklch(0.62 0.12 190);
+  --tile-b: oklch(0.45 0.1 197);
+}
+.tile-subject-pink {
+  --tile-a: oklch(0.65 0.19 350);
+  --tile-b: oklch(0.48 0.16 352);
+}
+.tile-subject-yellow {
+  --tile-a: oklch(0.74 0.14 78);
+  --tile-b: oklch(0.56 0.13 65);
+}
+.tile-subject-slate {
+  --tile-a: oklch(0.55 0.035 255);
+  --tile-b: oklch(0.38 0.035 260);
+}
+
+/* La tuile de mode : dégradé plein + rayures de lumière en diagonale,
+   socle 3D assorti à la couleur de la tuile. */
+.arena-tile {
+  background-image: linear-gradient(160deg, var(--tile-a), var(--tile-b));
+  --press-base: var(--tile-b);
+}
+.arena-tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 32%,
+    rgba(255, 255, 255, 0.09) 32%,
+    rgba(255, 255, 255, 0.09) 46%,
+    transparent 46%,
+    transparent 58%,
+    rgba(255, 255, 255, 0.05) 58%,
+    rgba(255, 255, 255, 0.05) 68%,
+    transparent 68%
+  );
+}
+
+/* Le panneau de l'Arène : fond rayé bleu très léger, comme un écran d'events. */
+.arena-panel {
+  background:
+    repeating-linear-gradient(
+      -55deg,
+      color-mix(in oklch, var(--primary), transparent 95%) 0 12px,
+      transparent 12px 24px
+    ),
+    color-mix(in oklch, var(--primary), transparent 97%);
+}
+
+/* Anneau d'arcade autour du GO : pointillés qui tournent lentement. */
+@keyframes ring-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.go-ring {
+  animation: ring-spin 24s linear infinite;
+}
+
+/* Coffre du Trésor : léger dandinement pour inviter au tap */
+@keyframes chest-wobble {
+  0%,
+  92%,
+  100% {
+    transform: rotate(0deg);
+  }
+  94% {
+    transform: rotate(-7deg);
+  }
+  96% {
+    transform: rotate(6deg);
+  }
+  98% {
+    transform: rotate(-3deg);
+  }
+}
+.chest-wobble {
+  animation: chest-wobble 3s ease-in-out infinite;
+  transform-origin: 50% 80%;
+}
+
+/* --- Barre d'onglets : crème chaud assorti au halo doré des icônes ----------
+   dessinées (public/images/nav). En nuit d'encre, on retombe sur la carte. */
+.tab-bar {
+  background: oklch(0.972 0.016 75 / 0.92);
+  border-color: oklch(0.905 0.035 75);
+}
+.dark .tab-bar {
+  background: color-mix(in oklch, var(--card), transparent 15%);
+  border-color: var(--border);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) .tab-bar {
+    background: color-mix(in oklch, var(--card), transparent 15%);
+    border-color: var(--border);
+  }
+}
+
+/* --- Accueil Réviser : palette « carnet violet » (maquette de Lucas, ---------
+   2026-07-10). Tokens locaux à cet écran — le reste de l'app garde le code
+   couleur marine/orange. Violet vif du bandeau, crème chaud du fond, jaune
+   solaire des barres de progression. */
+.rev-hero {
+  background: linear-gradient(175deg, oklch(0.54 0.26 315), oklch(0.47 0.26 310));
+}
+.rev-blob {
+  background: oklch(0.62 0.24 315 / 0.35);
+}
+.rev-bg {
+  background: oklch(0.945 0.018 55);
+}
+.rev-chip {
+  color: oklch(0.47 0.26 310);
+}
+.rev-track {
+  background: oklch(0.93 0.022 50);
+}
+.rev-fill {
+  background: oklch(0.85 0.17 88);
+}
+.rev-card {
+  box-shadow:
+    0 2px 4px oklch(0.4 0.15 310 / 0.05),
+    0 12px 24px -14px oklch(0.4 0.18 310 / 0.35);
+}
+
+/* --- Onglet Moi : cartes « jouet » sur fond crème (maquette de Lucas, ---------
+   2026-07-11, v2). Bandeau violet en carte arrondie avec la grande flamme de
+   niveau à cheval sur son bord, cartes blanches épaisses : liseré violet et
+   socle d'ombre dure, façon jeu mobile. Tokens locaux à cet écran. */
+.moi-hero {
+  background: linear-gradient(175deg, oklch(0.54 0.26 315), oklch(0.47 0.26 310));
+}
+.moi-blob {
+  background: oklch(0.62 0.24 315 / 0.35);
+}
+/* Étincelles jaunes du bandeau. */
+.moi-braise {
+  background: oklch(0.85 0.17 88 / 0.85);
+}
+.moi-bg {
+  background: oklch(0.945 0.018 55);
+}
+/* Halo ambré derrière la flamme de niveau. */
+.moi-glow {
+  background: radial-gradient(closest-side, oklch(0.76 0.14 62 / 0.4), transparent 72%);
+}
+.moi-chip {
+  color: oklch(0.47 0.26 310);
+}
+.moi-track {
+  background: oklch(0.93 0.022 50);
+}
+/* La carte « jouet » : liseré violet léger + socle d'ombre dure violette. */
+.moi-card {
+  border: 2px solid oklch(0.62 0.14 305 / 0.35);
+  box-shadow:
+    0 5px 0 oklch(0.45 0.2 305 / 0.4),
+    0 16px 24px -16px oklch(0.4 0.18 310 / 0.3);
+}
+/* Jeton de jour validé (carte « 7 jours ») : violet vif, halo assorti. */
+.moi-token-done {
+  background: linear-gradient(160deg, oklch(0.62 0.24 312), oklch(0.48 0.26 308));
+  box-shadow: 0 0 0 3px oklch(0.62 0.24 315 / 0.3);
+}
+
 /* Accessibilité : on coupe les animations si l'utilisateur les refuse */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -375,3 +791,4 @@ a:hover > .wiggle-on-hover {
     transition-duration: 0.01ms !important;
   }
 }
+

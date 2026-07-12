@@ -12,6 +12,7 @@ export const XP_RULES = {
   lesson: 15,
   challengePerCorrect: 10,
   challengeBonus: 30, // le défi du jour paye un peu plus : c'est LE geste
+  commuteBonus: 20, // exploit de trajet : défi joué pendant le trajet retour
 } as const
 
 export function computeXp(input: {

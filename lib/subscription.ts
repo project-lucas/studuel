@@ -32,3 +32,9 @@ export async function getUserTier(): Promise<Tier> {
 export function canAccessPremiumTests(tier: Tier): boolean {
   return PREMIUM_TIERS.includes(tier)
 }
+
+// Les cartes mentales des chapitres sont réservées aux abonnés (Offre 1+).
+// Les gratuits voient la tuile mais ne peuvent pas l'ouvrir.
+export function canAccessMindMaps(tier: Tier): boolean {
+  return PREMIUM_TIERS.includes(tier)
+}

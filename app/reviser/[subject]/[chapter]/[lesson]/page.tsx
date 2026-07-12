@@ -1,137 +1,246 @@
 import Link from 'next/link'
-import { notFound, redirect } from 'next/navigation'
-import { ArrowLeft, Play } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import LessonCompleteButton from '@/components/LessonCompleteButton'
-import { createClient } from '@/lib/supabase/server'
+import {
+  BookOpen,
+  Check,
+  Image as ImageIcon,
+  ListChecks,
+  Minus,
+  NotebookPen,
+  type LucideIcon,
+} from 'lucide-react'
+import BackButton from '@/components/BackButton'
+import ProgressRing from '@/components/ProgressRing'
 import { cn } from '@/lib/utils'
-import { subjectTheme, GRID_PATTERN, MASCOT } from '@/lib/subject-style'
-import type { Subject, Chapter, Lesson } from '@/lib/types'
+import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
+import {
+  lessonProgress,
+  lessonSupportCount,
+  lessonSupportsDone,
+} from '@/lib/lesson-progress'
+import { loadLessonContext } from './data'
 
 export const dynamic = 'force-dynamic'
 
-// Rendu minimaliste du contenu markdown des leçons (titres + paragraphes).
-function LessonContent({ content }: { content: string }) {
-  return (
-    <div className="space-y-4">
-      {content.split('\n').map((line, i) => {
-        const trimmed = line.trim()
-        if (!trimmed) return null
-        if (trimmed.startsWith('# ')) {
-          return (
-            <h2 key={i} className="font-heading text-2xl font-bold">
-              {trimmed.slice(2)}
-            </h2>
-          )
-        }
-        if (trimmed.startsWith('## ')) {
-          return (
-            <h3 key={i} className="font-heading text-xl font-semibold">
-              {trimmed.slice(3)}
-            </h3>
-          )
-        }
-        return (
-          <p key={i} className="leading-relaxed text-foreground/85">
-            {trimmed}
-          </p>
-        )
-      })}
-    </div>
-  )
-}
-
-export default async function LessonPage({
+// Hub de leçon (template « structure des cours ») : l'anneau d'avancement en
+// haut, puis les 4 supports en tuiles — Cours, Révision, Studygram, Quiz.
+export default async function LessonHubPage({
   params,
 }: {
   params: Promise<{ subject: string; chapter: string; lesson: string }>
 }) {
   const { subject: slug, chapter: chapterId, lesson: lessonId } = await params
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-  if (!user) redirect('/login')
+  const { supabase, user, subject, chapter, lesson } = await loadLessonContext(
+    slug,
+    chapterId,
+    lessonId,
+  )
 
-  const { data: subject } = await supabase
-    .from('subjects')
-    .select('*')
-    .eq('slug', slug)
-    .maybeSingle<Subject>()
-  if (!subject) notFound()
+  // Un seul tour de requêtes : le nombre de questions est embarqué dans le
+  // quiz, et les sessions sont filtrées par la jointure quiz → leçon.
+  const [{ data: quiz }, { data: completion }, { data: activities }, { data: sessions }] =
+    await Promise.all([
+      supabase
+        .from('quizzes')
+        .select('id, quiz_questions(count)')
+        .eq('lesson_id', lesson.id)
+        .maybeSingle<{ id: string; quiz_questions: { count: number }[] }>(),
+      supabase
+        .from('lesson_completions')
+        .select('id')
+        .eq('user_id', user.id)
+        .eq('lesson_id', lesson.id)
+        .maybeSingle<{ id: string }>(),
+      supabase
+        .from('lesson_activities')
+        .select('activity')
+        .eq('user_id', user.id)
+        .eq('lesson_id', lesson.id)
+        .returns<{ activity: string }[]>(),
+      supabase
+        .from('test_sessions')
+        .select('score, total, quizzes!inner(lesson_id)')
+        .eq('user_id', user.id)
+        .eq('quizzes.lesson_id', lesson.id)
+        .returns<{ score: number; total: number }[]>(),
+    ])
 
-  const { data: chapter } = await supabase
-    .from('chapters')
-    .select('id, subject_id, level, title, position')
-    .eq('id', chapterId)
-    .eq('subject_id', subject.id)
-    .maybeSingle<Chapter>()
-  if (!chapter) notFound()
+  // Quiz : nombre de questions + meilleur score de l'élève (« 7/10 » ou « --/10 »).
+  const questionCount = quiz?.quiz_questions[0]?.count ?? 0
+  let bestScore: number | null = null
+  if (quiz) {
+    for (const s of sessions ?? []) {
+      if (s.total <= 0) continue
+      const scaled = Math.round((s.score / s.total) * (questionCount || s.total))
+      bestScore = Math.max(bestScore ?? 0, scaled)
+    }
+  }
 
-  const { data: lesson } = await supabase
-    .from('lessons')
-    .select('id, chapter_id, title, thumbnail_url, content, position')
-    .eq('id', lessonId)
-    .eq('chapter_id', chapter.id)
-    .maybeSingle<Lesson>()
-  if (!lesson) notFound()
-
-  const [{ data: quiz }, { data: completion }] = await Promise.all([
-    supabase
-      .from('quizzes')
-      .select('id')
-      .eq('lesson_id', lesson.id)
-      .maybeSingle<{ id: string }>(),
-    supabase
-      .from('lesson_completions')
-      .select('id')
-      .eq('lesson_id', lesson.id)
-      .maybeSingle<{ id: string }>(),
-  ])
+  const seen = new Set((activities ?? []).map((a) => a.activity))
+  const supports = {
+    hasRevision: Boolean(lesson.revision_sheet),
+    hasStudygram: Boolean(lesson.studygram_url),
+    hasQuiz: Boolean(quiz),
+  }
+  const activity = {
+    coursDone: Boolean(completion),
+    revisionDone: seen.has('revision'),
+    studygramDone: seen.has('studygram'),
+    bestQuizRatio:
+      bestScore !== null && questionCount > 0 ? bestScore / questionCount : null,
+  }
+  const progress = lessonProgress(supports, activity)
+  const done = lessonSupportsDone(supports, activity)
+  const total = lessonSupportCount(supports)
 
   const theme = subjectTheme(subject.color)
+  const base = `/reviser/${subject.slug}/${chapter.id}/${lesson.id}`
+
+  const tiles: {
+    key: string
+    label: string
+    icon: LucideIcon
+    href: string | null
+    done: boolean
+    detail?: string
+  }[] = [
+    {
+      key: 'cours',
+      label: 'Cours',
+      icon: BookOpen,
+      href: `${base}/cours`,
+      done: activity.coursDone,
+    },
+    {
+      key: 'revision',
+      label: 'Révision',
+      icon: NotebookPen,
+      href: supports.hasRevision ? `${base}/revision` : null,
+      done: activity.revisionDone,
+    },
+    {
+      key: 'studygram',
+      label: 'Studygram',
+      icon: ImageIcon,
+      href: supports.hasStudygram ? `${base}/studygram` : null,
+      done: activity.studygramDone,
+    },
+    {
+      key: 'quiz',
+      label: 'Quiz',
+      icon: ListChecks,
+      href: quiz ? `/test/${quiz.id}` : null,
+      done: activity.bestQuizRatio !== null,
+      detail: quiz
+        ? `${bestScore === null ? '--' : bestScore}/${questionCount || '--'}`
+        : undefined,
+    },
+  ]
 
   return (
     <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
+      {/* Bandeau coloré : retour + place pour l'anneau qui chevauche */}
       <header
-        className={cn('relative overflow-hidden px-4 pt-20 pb-6 md:px-8 md:pt-12', theme.header)}
+        className={cn('relative overflow-hidden px-4 pt-20 pb-14 md:px-8 md:pt-12', theme.header)}
       >
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={GRID_PATTERN}
           aria-hidden="true"
         />
-        <div className="relative mx-auto w-full max-w-4xl">
-          <Link
-            href={`/reviser/${subject.slug}/${chapter.id}`}
-            className="mb-4 inline-flex items-center gap-1.5 text-sm font-semibold opacity-80 transition-opacity hover:opacity-100"
-          >
-            <ArrowLeft className="size-4" /> {chapter.title}
-          </Link>
-          <div className="flex items-center gap-3">
-            <span className="text-4xl leading-none">{MASCOT}</span>
-            <h1 className="font-heading text-2xl font-bold text-balance md:text-3xl">
-              {lesson.title}
-            </h1>
-          </div>
+        <div className="relative mx-auto w-full max-w-2xl">
+          <BackButton
+            fallback={`/reviser/${subject.slug}`}
+            label={`Retour — ${subject.name}`}
+          />
         </div>
       </header>
 
-      <div className="mx-auto w-full max-w-4xl px-4 py-6 md:px-8">
-        <LessonContent content={lesson.content ?? 'Contenu à venir.'} />
+      {/* Panneau : l'anneau global de la leçon à cheval sur le bandeau */}
+      <div className="relative -mt-6 rounded-t-3xl bg-background">
+        <div className="mx-auto w-full max-w-2xl px-4 pb-24 md:px-8">
+          <div className="-mt-9 flex justify-center">
+            <span className="rounded-full bg-background p-1.5 shadow-sm">
+              <ProgressRing
+                value={progress}
+                size={64}
+                strokeWidth={5}
+                label={`${lesson.title} — ${Math.round(progress * 100)} % d'avancement`}
+                fillClassName={theme.stroke}
+              >
+                <span className="font-mono text-xs font-bold tabular-nums">
+                  {done}/{total}
+                </span>
+              </ProgressRing>
+            </span>
+          </div>
 
-        <div className="mt-8 flex flex-wrap items-center gap-3 border-t pt-6">
-          <LessonCompleteButton
-            lessonId={lesson.id}
-            initialDone={Boolean(completion)}
-          />
-          {quiz ? (
-            <Button asChild className="rounded-full">
-              <Link href={`/test/${quiz.id}`}>
-                <Play className="size-4" /> Tester mes connaissances
-              </Link>
-            </Button>
-          ) : null}
+          <p className="mt-3 text-center text-sm font-semibold text-muted-foreground">
+            Chapitre {chapter.position} · {chapter.title}
+          </p>
+          <h1 className="font-heading mt-1 text-center text-2xl font-bold text-balance md:text-3xl">
+            {lesson.title}
+          </h1>
+
+          {/* Les 4 supports du template */}
+          <ul className="mt-6 grid grid-cols-2 gap-3">
+            {tiles.map((tile) => {
+              const Icon = tile.icon
+              const inner = (
+                <>
+                  <span
+                    className={cn(
+                      'flex size-12 items-center justify-center rounded-xl',
+                      theme.chip,
+                    )}
+                  >
+                    <Icon className="size-6" aria-hidden="true" />
+                  </span>
+                  <span className="font-heading font-bold">{tile.label}</span>
+                  {tile.href === null ? (
+                    <span className="text-xs font-semibold text-muted-foreground">
+                      Bientôt
+                    </span>
+                  ) : tile.detail ? (
+                    <span
+                      className={cn(
+                        'font-mono text-xs font-bold tabular-nums',
+                        tile.done ? 'text-foreground' : 'text-muted-foreground',
+                      )}
+                    >
+                      {tile.detail}
+                    </span>
+                  ) : tile.done ? (
+                    <span className="inline-flex items-center gap-1 text-xs font-bold text-green-700 dark:text-green-400">
+                      <Check className="size-3.5" strokeWidth={3} /> Fait
+                    </span>
+                  ) : (
+                    <span className="text-muted-foreground" aria-hidden="true">
+                      <Minus className="size-3.5" />
+                    </span>
+                  )}
+                </>
+              )
+              return (
+                <li key={tile.key}>
+                  {tile.href ? (
+                    <Link
+                      href={tile.href}
+                      className="flex min-h-32 flex-col items-center justify-center gap-1.5 rounded-2xl border bg-card p-4 text-center shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
+                    >
+                      {inner}
+                    </Link>
+                  ) : (
+                    <div
+                      aria-disabled="true"
+                      className="flex min-h-32 flex-col items-center justify-center gap-1.5 rounded-2xl border border-dashed bg-card/60 p-4 text-center opacity-70"
+                    >
+                      {inner}
+                    </div>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
         </div>
       </div>
     </div>

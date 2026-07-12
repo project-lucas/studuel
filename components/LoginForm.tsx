@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useActionState } from 'react'
+import Link from 'next/link'
+import { Eye, EyeOff } from 'lucide-react'
 import {
   Card,
   CardHeader,
@@ -17,6 +19,7 @@ const initialState: AuthState = { error: null, message: null }
 
 export default function LoginForm() {
   const [mode, setMode] = useState<'signin' | 'signup'>('signin')
+  const [showPassword, setShowPassword] = useState(false)
   const [signInState, signInAction, signInPending] = useActionState(
     signIn,
     initialState,
@@ -73,27 +76,63 @@ export default function LoginForm() {
 
           <div className="flex flex-col gap-2">
             <Label htmlFor="password">Mot de passe</Label>
-            <Input
-              id="password"
-              name="password"
-              type="password"
-              required
-              minLength={6}
-              autoComplete={
-                mode === 'signin' ? 'current-password' : 'new-password'
-              }
-              placeholder="••••••••"
-            />
+            <div className="relative">
+              <Input
+                id="password"
+                name="password"
+                type={showPassword ? 'text' : 'password'}
+                required
+                minLength={6}
+                autoComplete={
+                  mode === 'signin' ? 'current-password' : 'new-password'
+                }
+                placeholder="••••••••"
+                className="pr-10"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword((v) => !v)}
+                aria-label={
+                  showPassword
+                    ? 'Masquer le mot de passe'
+                    : 'Afficher le mot de passe'
+                }
+                aria-pressed={showPassword}
+                className="absolute inset-y-0 right-0 flex w-10 items-center justify-center text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {showPassword ? (
+                  <EyeOff className="size-4" />
+                ) : (
+                  <Eye className="size-4" />
+                )}
+              </button>
+            </div>
           </div>
 
-          {state.error ? (
-            <p className="text-sm font-medium text-destructive">{state.error}</p>
-          ) : null}
-          {state.message ? (
-            <p className="text-sm font-medium text-green-700 dark:text-green-400">
-              {state.message}
+          {mode === 'signin' ? (
+            <p className="-mt-2 text-right text-sm">
+              <Link
+                href="/login/reset"
+                className="font-medium text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
+              >
+                Mot de passe oublié ?
+              </Link>
             </p>
           ) : null}
+
+          {/* Retours d'état annoncés au lecteur d'écran (erreur = assertif). */}
+          <div aria-live="polite" className="empty:hidden">
+            {state.error ? (
+              <p role="alert" className="text-sm font-medium text-destructive">
+                {state.error}
+              </p>
+            ) : null}
+            {state.message ? (
+              <p className="text-sm font-medium text-green-700 dark:text-green-400">
+                {state.message}
+              </p>
+            ) : null}
+          </div>
 
           <Button type="submit" disabled={pending}>
             {pending

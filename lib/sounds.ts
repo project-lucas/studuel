@@ -1,4 +1,5 @@
-// Sound design façon Duolingo — tons synthétisés en WebAudio, aucun asset.
+// Sound design façon Duolingo — micro-feedbacks synthétisés en WebAudio,
+// jingles premium (assets Mixkit dans public/sounds/) pour les moments forts.
 // Utilisable uniquement côté client ; préférence persistée en localStorage.
 
 const STORAGE_KEY = 'scolaria-sound'
@@ -48,6 +49,32 @@ function note(
   osc.stop(t0 + duration + 0.05)
 }
 
+// Jingles premium : joués via <audio>, fallback synthé si l'asset ne charge pas.
+const ASSETS = {
+  coin: '/sounds/coin.wav',
+  unlock: '/sounds/unlock.wav',
+  treasure: '/sounds/treasure.wav',
+  levelUp: '/sounds/level-up.wav',
+  sessionComplete: '/sounds/session-complete.wav',
+} as const
+
+type AssetName = keyof typeof ASSETS
+
+const assetCache = new Map<AssetName, HTMLAudioElement>()
+
+function playAsset(name: AssetName, volume: number, fallback?: () => void) {
+  if (typeof window === 'undefined') return
+  let el = assetCache.get(name)
+  if (!el) {
+    el = new Audio(ASSETS[name])
+    el.preload = 'auto'
+    assetCache.set(name, el)
+  }
+  el.currentTime = 0
+  el.volume = volume
+  el.play().catch(() => fallback?.())
+}
+
 export const sfx = {
   // Tap de navigation : à peine audible, juste un retour tactile.
   tap() {
@@ -70,13 +97,50 @@ export const sfx = {
     if (!isSoundOn()) return
     note(196, 0, 0.16, 'sawtooth', 0.03)
   },
-  // Session terminée : arpège victorieux.
+  // Session/défi terminé : fanfare (asset), fallback arpège victorieux.
   complete() {
     if (!isSoundOn()) return
-    note(523.25, 0, 0.1) // do
-    note(659.25, 0.1, 0.1) // mi
-    note(783.99, 0.2, 0.1) // sol
-    note(1046.5, 0.3, 0.25) // do aigu
+    playAsset('sessionComplete', 0.35, () => {
+      note(523.25, 0, 0.1) // do
+      note(659.25, 0.1, 0.1) // mi
+      note(783.99, 0.2, 0.1) // sol
+      note(1046.5, 0.3, 0.25) // do aigu
+    })
+  },
+  // Pièces gagnées ou dépensées : tintement brillant.
+  coin() {
+    if (!isSoundOn()) return
+    playAsset('coin', 0.35, () => {
+      note(1318.51, 0, 0.06, 'triangle', 0.04) // mi aigu
+      note(1567.98, 0.06, 0.12, 'triangle', 0.045) // sol aigu
+    })
+  },
+  // Déblocage (badge, chapitre, mode) : notification satisfaisante.
+  unlock() {
+    if (!isSoundOn()) return
+    playAsset('unlock', 0.35, () => {
+      note(659.25, 0, 0.1) // mi
+      note(1046.5, 0.1, 0.18) // do aigu
+    })
+  },
+  // Ouverture du coffre : cascade scintillante.
+  treasure() {
+    if (!isSoundOn()) return
+    playAsset('treasure', 0.4, () => {
+      note(783.99, 0, 0.09) // sol
+      note(1046.5, 0.09, 0.09) // do aigu
+      note(1318.51, 0.18, 0.2, 'triangle', 0.045) // mi aigu
+    })
+  },
+  // Montée de niveau : envolée triomphante.
+  levelUp() {
+    if (!isSoundOn()) return
+    playAsset('levelUp', 0.35, () => {
+      note(523.25, 0, 0.09) // do
+      note(783.99, 0.09, 0.09) // sol
+      note(1046.5, 0.18, 0.09) // do aigu
+      note(1567.98, 0.27, 0.25, 'triangle', 0.04) // sol aigu
+    })
   },
   // Journée validée dans la série : carillon chaleureux, deux notes.
   dayComplete() {

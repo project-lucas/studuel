@@ -37,5 +37,6 @@ export async function saveOnboarding(formData: FormData): Promise<void> {
     .eq('id', user.id)
 
   revalidatePath('/', 'layout')
-  redirect('/defi')
+  // Direction l'onglet Moi : le bilan de capacités s'ouvre pour être rempli.
+  redirect('/moi?bilan=1')
 }

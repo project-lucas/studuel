@@ -1,23 +1,26 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { CircleUser, Zap } from 'lucide-react'
+import { CircleUser } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 
-// Ordre des onglets = ordre de la barre mobile. Le Défi est au centre,
-// surélevé — c'est LE geste quotidien. Langage d'icônes : émojis stickers.
+// Ordre des onglets = ordre de la barre mobile, le Défi au centre.
+// Icônes dessinées (jaune/violet, liseré encre) : l'onglet inactif est
+// grisé, l'actif reprend ses couleurs. Sur mobile, pas de libellé sous
+// l'icône : toute la place aux dessins (le nom reste porté par aria-label).
 const links = [
-  { name: 'IA', path: '/ia', emoji: '✨' },
-  { name: 'Réviser', path: '/reviser', emoji: '🏠' },
-  { name: 'Défi', path: '/defi', center: true },
-  { name: 'Moi', path: '/moi', emoji: '🧑' },
-  { name: 'Coaching', path: '/planning', emoji: '🤝' },
+  { name: 'Amis', path: '/amis', img: '/images/nav/amis.webp' },
+  { name: 'Réviser', path: '/reviser', img: '/images/nav/reviser.webp' },
+  { name: 'Défi', path: '/defi', img: '/images/nav/defi-3.webp', center: true },
+  { name: 'Moi', path: '/moi', img: '/images/nav/moi.webp' },
+  { name: 'Trésor', path: '/tresor', img: '/images/nav/tresor-3.webp' },
 ] as {
   name: string
   path: string
-  emoji?: string
+  img: string
   center?: boolean
 }[]
 
@@ -55,60 +58,32 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
       </header>
 
       {/* …et barre d'onglets fixée en bas, Défi surélevé au centre */}
-      <nav className="fixed inset-x-0 bottom-0 z-50 border-t bg-card/85 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
+      <nav className="tab-bar fixed inset-x-0 bottom-0 z-50 border-t pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
         <ul className="flex items-end">
-          {links.map(({ name, path, emoji, center }) => {
+          {links.map(({ name, path, img }) => {
             const active = isActive(path)
-
-            if (center) {
-              return (
-                <li key={path} className="flex-1">
-                  <Link
-                    href={path}
-                    onClick={() => sfx.tap()}
-                    aria-current={active ? 'page' : undefined}
-                    className="flex flex-col items-center gap-0.5 pb-2 text-[11px] font-medium"
-                  >
-                    <span
-                      className={cn(
-                        '-mt-5 flex size-14 items-center justify-center rounded-full border-4 border-background bg-primary text-primary-foreground shadow-lg shadow-primary/30 transition-all active:scale-90',
-                        active && 'ring-2 ring-highlight',
-                      )}
-                    >
-                      <Zap className="size-6" />
-                    </span>
-                    <span className={active ? 'text-primary' : 'text-muted-foreground'}>
-                      {name}
-                    </span>
-                  </Link>
-                </li>
-              )
-            }
 
             return (
               <li key={path} className="flex-1">
                 <Link
                   href={path}
                   onClick={() => sfx.tap()}
+                  aria-label={name}
                   aria-current={active ? 'page' : undefined}
-                  className={cn(
-                    'flex flex-col items-center gap-0.5 pt-1.5 pb-2 text-[11px] font-medium transition-all active:scale-95',
-                    active
-                      ? 'text-foreground'
-                      : 'text-muted-foreground hover:text-foreground',
-                  )}
+                  className="flex items-center justify-center pt-1.5 pb-2 transition-all active:scale-95"
                 >
-                  <span
-                    className={cn(
-                      'flex h-7 w-12 items-center justify-center rounded-full transition-colors',
-                      active && 'bg-accent text-accent-foreground',
-                    )}
-                  >
-                    {emoji ? (
-                      <span className="text-[17px] leading-none">{emoji}</span>
-                    ) : null}
+                  <span className="flex h-12 w-16 items-center justify-center">
+                    <Image
+                      src={img}
+                      alt=""
+                      width={40}
+                      height={40}
+                      className={cn(
+                        'size-10 transition-all',
+                        active ? 'scale-110' : 'opacity-60 grayscale',
+                      )}
+                    />
                   </span>
-                  {name}
                 </Link>
               </li>
             )
@@ -123,7 +98,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
         </Link>
 
         <ul className="flex flex-col gap-1">
-          {links.map(({ name, path, emoji, center }) => (
+          {links.map(({ name, path, img, center }) => (
             <li key={path}>
               <Link
                 href={path}
@@ -137,13 +112,16 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                   center && !isActive(path) && 'font-bold text-primary',
                 )}
               >
-                {center ? (
-                  <Zap className="size-4 shrink-0" />
-                ) : emoji ? (
-                  <span className="w-4 shrink-0 text-center text-[15px] leading-none">
-                    {emoji}
-                  </span>
-                ) : null}
+                <Image
+                  src={img}
+                  alt=""
+                  width={20}
+                  height={20}
+                  className={cn(
+                    'size-5 shrink-0 transition-all',
+                    !isActive(path) && 'opacity-70 grayscale-50',
+                  )}
+                />
                 {name}
               </Link>
             </li>

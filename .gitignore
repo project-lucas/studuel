@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# graphify (graphe de connaissances local, reconstruit par le hook post-commit)
+/graphify-out/
+
+# outillage local (agent, config machine) — pas pour le depot
+/_ASSOCIE/
+/.claude/

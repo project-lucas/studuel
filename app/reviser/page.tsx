@@ -15,10 +15,16 @@ import ConsolidateList, {
   type ConsolidateEntry,
 } from '@/components/ConsolidateList'
 import ExamProgress, { type ExamProgressEntry } from '@/components/ExamProgress'
+import CommuteBanner from '@/components/CommuteBanner'
+import ReviewQueueCard from '@/components/ReviewQueueCard'
+import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { createClient } from '@/lib/supabase/server'
+import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
-import type { Subject } from '@/lib/types'
+import { getReviewItems, reviewQueue, countsBySubject } from '@/lib/srs'
+import { toDayKey, computeStreak } from '@/lib/streak'
+import type { CommuteSlot, Subject } from '@/lib/types'
 
 export const metadata = { title: 'Réviser — Scolaria' }
 export const dynamic = 'force-dynamic'
@@ -63,7 +69,7 @@ export default async function ReviserPage() {
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('grade_level, selected_subjects')
+    .select('full_name, grade_level, selected_subjects, commute_slots')
     .eq('id', user.id)
     .maybeSingle()
 
@@ -92,19 +98,61 @@ export default async function ReviserPage() {
     )
   }
 
-  const [{ data: subjects, error }, { data: levelChapters }, mastery] =
-    await Promise.all([
-      supabase.from('subjects').select('*').order('name').returns<Subject[]>(),
-      supabase
-        .from('chapters')
-        .select('id, subject_id, title, position')
-        .eq('level', grade)
-        .order('position', { ascending: true })
-        .returns<{ id: string; subject_id: string; title: string; position: number }[]>(),
-      getChapterMastery(supabase),
-    ])
+  const [
+    cachedSubjects,
+    cachedChapters,
+    mastery,
+    reviews,
+    // Journées d'activité (tous types confondus) pour la flamme de série du
+    // header — même définition que sur l'onglet Moi.
+    { data: testDays },
+    { data: studyDays },
+    { data: lessonDays },
+    { data: challengeDays },
+  ] = await Promise.all([
+    // Catalogue servi par le cache serveur (identique pour tous les élèves).
+    getSubjectsCached(),
+    getGradeChaptersCached(grade),
+    getChapterMastery(supabase, user.id),
+    getReviewItems(supabase, user.id),
+    supabase.from('test_sessions').select('created_at').eq('user_id', user.id),
+    supabase.from('study_sessions').select('created_at').eq('user_id', user.id),
+    supabase
+      .from('lesson_completions')
+      .select('created_at')
+      .eq('user_id', user.id),
+    supabase
+      .from('challenge_sessions')
+      .select('created_at')
+      .eq('user_id', user.id),
+  ])
+
+  // Repli authentifié : cache froid ou migration 026 pas encore exécutée.
+  let subjects: Subject[] = cachedSubjects
+  let error: { message: string } | null = null
+  if (subjects.length === 0) {
+    const res = await supabase
+      .from('subjects')
+      .select('*')
+      .order('name')
+      .returns<Subject[]>()
+    subjects = res.data ?? []
+    error = res.error
+  }
+  let levelChapters = cachedChapters
+  if (levelChapters.length === 0) {
+    const { data } = await supabase
+      .from('chapters')
+      .select('id, subject_id, level, title, position')
+      .eq('level', grade)
+      .order('position', { ascending: true })
+      .returns<typeof cachedChapters>()
+    levelChapters = data ?? []
+  }
 
   if (error) {
+    // Détail technique en console pour le dev, message rassurant pour l'élève.
+    console.error('[reviser] chargement des matières impossible:', error.message)
     return (
       <div>
         <PageHeader title="Réviser" />
@@ -112,18 +160,34 @@ export default async function ReviserPage() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TriangleAlert className="size-4 text-destructive" />
-              Matières indisponibles
+              Tes matières sont momentanément indisponibles
             </CardTitle>
             <CardDescription>
-              {error.message} — exécute <code>supabase/008_reviser.sql</code> et{' '}
-              <code>supabase/009_lesson_completions.sql</code> dans le SQL
-              Editor.
+              On n&apos;arrive pas à charger ton programme pour l&apos;instant.
+              Réessaie dans quelques instants — si ça persiste, reviens un peu
+              plus tard.
             </CardDescription>
           </CardHeader>
         </Card>
       </div>
     )
   }
+
+  // File « À revoir aujourd'hui » : items SRS dus + Revanche.
+  const queue = reviewQueue(reviews, toDayKey(new Date()))
+
+  // Série vivante pour la flamme du header.
+  const activityDays = new Set(
+    [
+      ...(testDays ?? []),
+      ...(studyDays ?? []),
+      ...(lessonDays ?? []),
+      ...(challengeDays ?? []),
+    ].map((s) => String(s.created_at).slice(0, 10)),
+  )
+  const streak = computeStreak(activityDays)
+  const firstName =
+    String(profile?.full_name ?? '').split(' ')[0] || null
 
   // --- Matières suivies (profil onboarding) -----------------------------------
   const selected = Array.isArray(profile?.selected_subjects)
@@ -220,19 +284,49 @@ export default async function ReviserPage() {
       agg && agg.total > 0 ? Math.round((agg.sum / agg.total) * 100) : 0
   }
 
+  // Créneaux de trajet : la bannière « mode trajet » ne s'affiche que dans
+  // ces fenêtres (elle se teste côté client, en heure de Paris).
+  const commuteSlots: CommuteSlot[] = Array.isArray(profile?.commute_slots)
+    ? (profile.commute_slots as CommuteSlot[])
+    : []
+
   return (
     <div className="flex flex-col gap-4">
+      {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
+      <SubjectMasteryCelebration
+        entries={followed.map((s) => ({
+          slug: s.slug,
+          name: s.name,
+          pct: progressBySlug[s.slug] ?? 0,
+        }))}
+      />
+      {/* En haut, façon carnet de programme : bandeau de salutation (prénom,
+          classe, série) et la liste des matières qui le chevauche. */}
+      <SubjectsHome
+        firstName={firstName}
+        streak={streak}
+        subjects={ofLevel}
+        selected={selected}
+        grade={grade}
+        progressBySlug={progressBySlug}
+      />
+      {/* Rappel contextuel : pendant le trajet, un temps mort devient de l'XP. */}
+      <CommuteBanner slots={commuteSlots} />
+      {/* La file du jour : révision espacée + Revanche — LE geste qui fait
+          mémoriser, juste sous le programme. */}
+      <ReviewQueueCard
+        total={queue.length}
+        revanche={queue.filter((i) => i.in_revanche).length}
+        subjects={[...countsBySubject(queue).entries()].sort(
+          (a, b) => b[1] - a[1],
+        )}
+      />
+      {/* En dessous : les actions du jour (reprendre, consolider, examen). */}
       {continueTarget ? <ContinueCard target={continueTarget} /> : null}
       <ConsolidateList entries={consolidate} />
       <ExamProgress
         title={EXAM_TITLES[grade] ?? 'Objectif examen'}
         entries={examEntries}
-      />
-      <SubjectsHome
-        subjects={ofLevel}
-        selected={selected}
-        grade={grade}
-        progressBySlug={progressBySlug}
       />
     </div>
   )

@@ -29,7 +29,11 @@ export async function proxy(request: NextRequest) {
   )
 
   // Déclenche le refresh du token si expiré (écrit les cookies via setAll).
-  await supabase.auth.getUser()
+  // getClaims() valide le JWT localement (clés asymétriques mises en cache)
+  // au lieu de l'aller-retour réseau de getUser() à CHAQUE navigation ; si le
+  // projet est encore en clé symétrique, il retombe sur la vérification
+  // serveur — même comportement qu'avant, jamais pire.
+  await supabase.auth.getClaims()
 
   return supabaseResponse
 }

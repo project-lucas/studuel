@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useTransition } from 'react'
+import { useEffect, useRef, useState, useTransition } from 'react'
 import Link from 'next/link'
 import {
   BookOpen,
@@ -96,6 +96,56 @@ const selectCls =
 
 // --- Sous-composants ---------------------------------------------------------
 
+// Suppression en deux temps, sans confirm() natif : un premier appui « arme »
+// le bouton (« Confirmer ? »), un second supprime. Se désarme après 3 s.
+// Toujours visible au doigt (pas seulement au survol).
+function DeleteButton({
+  onConfirm,
+  label,
+  subtle,
+}: {
+  onConfirm: () => void
+  label: string
+  subtle?: boolean
+}) {
+  const [pending, startTransition] = useTransition()
+  const [armed, setArmed] = useState(false)
+
+  useEffect(() => {
+    if (!armed) return
+    const t = setTimeout(() => setArmed(false), 3000)
+    return () => clearTimeout(t)
+  }, [armed])
+
+  if (armed) {
+    return (
+      <button
+        type="button"
+        disabled={pending}
+        onClick={() => startTransition(() => onConfirm())}
+        className="shrink-0 rounded-full bg-destructive/10 px-2.5 py-1 text-xs font-semibold text-destructive transition-all active:scale-95 disabled:opacity-50"
+      >
+        {pending ? '…' : 'Confirmer ?'}
+      </button>
+    )
+  }
+
+  return (
+    <button
+      type="button"
+      aria-label={`Supprimer ${label}`}
+      title={`Supprimer ${label}`}
+      onClick={() => setArmed(true)}
+      className={cn(
+        'flex size-7 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-all hover:bg-destructive/10 hover:text-destructive focus-visible:opacity-100',
+        subtle && 'opacity-70 sm:opacity-0 sm:group-hover:opacity-100',
+      )}
+    >
+      <X className="size-4" />
+    </button>
+  )
+}
+
 function StatusChip({ item }: { item: RevisionItem }) {
   const [pending, startTransition] = useTransition()
   const next =
@@ -183,7 +233,6 @@ function ExamDateInput({ subject }: { subject: RevisionSubject }) {
 }
 
 function SubjectCard({ subject }: { subject: RevisionSubject }) {
-  const [pending, startTransition] = useTransition()
   const formRef = useRef<HTMLFormElement>(null)
   const items = [...subject.revision_items].sort((a, b) =>
     a.created_at.localeCompare(b.created_at),
@@ -221,19 +270,10 @@ function SubjectCard({ subject }: { subject: RevisionSubject }) {
           >
             <Dumbbell className="size-3.5" /> M&apos;entraîner
           </Link>
-          <button
-            type="button"
-            title="Supprimer la matière"
-            disabled={pending}
-            onClick={() => {
-              if (confirm(`Supprimer « ${subject.name} » et tous ses éléments ?`)) {
-                startTransition(() => deleteSubject(subject.id))
-              }
-            }}
-            className="shrink-0 text-muted-foreground transition-colors hover:text-destructive disabled:opacity-50"
-          >
-            <X className="size-4" />
-          </button>
+          <DeleteButton
+            onConfirm={() => deleteSubject(subject.id)}
+            label={`la matière « ${subject.name} » et tous ses éléments`}
+          />
         </CardDescription>
       </CardHeader>
 
@@ -272,7 +312,6 @@ function SubjectCard({ subject }: { subject: RevisionSubject }) {
 }
 
 function ItemRow({ item }: { item: RevisionItem }) {
-  const [pending, startTransition] = useTransition()
   const Icon = item.kind === 'texte' ? BookOpen : FileText
 
   return (
@@ -287,15 +326,11 @@ function ItemRow({ item }: { item: RevisionItem }) {
       >
         {item.title}
       </span>
-      <button
-        type="button"
-        title="Supprimer"
-        disabled={pending}
-        onClick={() => startTransition(() => deleteItem(item.id))}
-        className="text-muted-foreground/50 opacity-0 transition-all group-hover:opacity-100 hover:text-destructive focus-visible:opacity-100 disabled:opacity-50"
-      >
-        <X className="size-3.5" />
-      </button>
+      <DeleteButton
+        onConfirm={() => deleteItem(item.id)}
+        label={item.title}
+        subtle
+      />
     </div>
   )
 }

@@ -1,178 +1,338 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { recordTestSession } from '@/app/test/actions'
+import { recordReviewAnswers } from '@/app/reviser/actions'
+import type { ReviewAnswer } from '@/lib/srs'
 import { sfx } from '@/lib/sounds'
 import { SoundToggle } from '@/components/FlashcardPlayer'
-import { CircleCheck, CircleX, RotateCcw, ArrowLeft } from 'lucide-react'
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from '@/components/ui/card'
+import BackButton from '@/components/BackButton'
+import ProgressRing from '@/components/ProgressRing'
+import { CircleCheck, CircleX, RotateCcw, ArrowLeft, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import type { QuizQuestion } from '@/lib/types'
 
-// Session de quiz : une question à la fois, correction immédiate, score final.
+// Session de quiz (template « structure des cours ») : l'élève répond à TOUTES
+// les questions sans feedback intermédiaire — le score et la correction
+// détaillée n'apparaissent qu'à la fin, comme sur une vraie interro.
+
+// Message de la mascotte selon le score.
+function verdict(ratio: number): { emoji: string; message: string } {
+  if (ratio >= 1) return { emoji: '🤩', message: 'Parfait, sans faute ! Tu maîtrises cette leçon.' }
+  if (ratio >= 0.8) return { emoji: '😎', message: 'Excellent ! Encore un petit effort pour le sans-faute.' }
+  if (ratio >= 0.5) return { emoji: '🙂', message: 'Pas mal ! Relis la correction et retente ta chance.' }
+  return { emoji: '😮', message: 'Aïeee… Tu peux faire mieux ! On recommence ?' }
+}
+
 export default function QuizPlayer({
   quizId,
   title,
   questions,
+  subject = null,
+  backHref = '/reviser',
 }: {
   quizId: string
   title: string
   questions: QuizQuestion[]
+  subject?: string | null
+  backHref?: string
 }) {
   const [index, setIndex] = useState(0)
+  // Choix de l'élève, question par question — la correction se lit dedans.
+  const [choices, setChoices] = useState<number[]>([])
   const [selected, setSelected] = useState<number | null>(null)
-  const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
 
   const question = questions[index]
-  const answered = selected !== null
 
-  const choose = (optionIndex: number) => {
-    if (answered) return
-    setSelected(optionIndex)
-    if (optionIndex === question.correct_index) {
-      setScore((s) => s + 1)
-      sfx.correct()
-    } else {
-      sfx.wrong()
-    }
+  // Réponses de la session pour la répétition espacée (SRS + Revanche) —
+  // envoyées en une fois à la fin, en « fire and forget ».
+  const reviewsRef = useRef<ReviewAnswer[]>([])
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  useEffect(() => () => {
+    if (timerRef.current) clearTimeout(timerRef.current)
+  }, [])
+
+  const finish = (allChoices: number[]) => {
+    const score = allChoices.reduce(
+      (s, choice, i) => s + (choice === questions[i].correct_index ? 1 : 0),
+      0,
+    )
+    setFinished(true)
+    sfx.complete()
+    // Enregistre la session côté serveur (série, XP, anneau de la leçon).
+    recordTestSession(quizId, score, questions.length)
+      .then((r) => setSaved(r.saved))
+      .catch(() => setSaved(false))
+    // Et reprogramme chaque question dans la file « À revoir ».
+    recordReviewAnswers(reviewsRef.current).catch(() => {})
   }
 
-  const next = () => {
-    if (index + 1 >= questions.length) {
-      setFinished(true)
-      sfx.complete()
-      // Enregistre la session côté serveur (heatmap Habitude).
-      recordTestSession(quizId, score, questions.length)
-        .then((r) => setSaved(r.saved))
-        .catch(() => setSaved(false))
-    } else {
-      setIndex((i) => i + 1)
+  const choose = (optionIndex: number) => {
+    if (selected !== null) return
+    setSelected(optionIndex)
+    sfx.tap() // son neutre : la correction ne se devine pas à l'oreille
+    reviewsRef.current.push({
+      kind: 'question',
+      id: question.id,
+      subject,
+      good: optionIndex === question.correct_index,
+    })
+    // Petit temps de confirmation visuelle, puis question suivante.
+    timerRef.current = setTimeout(() => {
+      const next = [...choices, optionIndex]
+      setChoices(next)
       setSelected(null)
-    }
+      if (next.length >= questions.length) finish(next)
+      else setIndex((i) => i + 1)
+    }, 350)
   }
 
   const restart = () => {
     setIndex(0)
+    setChoices([])
     setSelected(null)
-    setScore(0)
     setFinished(false)
+    setSaved(null)
+    reviewsRef.current = []
   }
 
+  // ---------------------------------------------------------------------------
+  // Écran final : score + correction complète, scrollable (template).
+  // ---------------------------------------------------------------------------
   if (finished) {
-    const ratio = score / questions.length
+    const score = choices.reduce(
+      (s, choice, i) => s + (choice === questions[i].correct_index ? 1 : 0),
+      0,
+    )
+    const ratio = questions.length > 0 ? score / questions.length : 0
+    const v = verdict(ratio)
+
     return (
-      <Card className="mx-auto max-w-xl">
-        <CardHeader>
-          <CardTitle>Quiz terminé !</CardTitle>
-          <CardDescription>{title}</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          <p className="font-mono text-4xl font-bold tabular-nums">
-            {score}<span className="text-muted-foreground/60"> / {questions.length}</span>
-          </p>
-          <p className="text-sm text-muted-foreground">
-            {ratio === 1
-              ? 'Parfait, tu maîtrises ce chapitre ! 🎉'
-              : ratio >= 0.5
-                ? 'Bien joué — encore quelques révisions et c’est acquis.'
-                : 'Continue de t’entraîner, tu vas progresser !'}
-          </p>
-          {saved === true ? (
-            <p className="text-xs text-muted-foreground">
-              ✓ Session enregistrée — ta série continue 🔥
-            </p>
-          ) : saved === false ? (
-            <p className="text-xs text-muted-foreground">
-              <Link href="/login" className="underline underline-offset-4">
-                Connecte-toi
-              </Link>{' '}
-              pour sauvegarder ta progression.
-            </p>
-          ) : null}
-        </CardContent>
-        <CardFooter className="gap-2">
-          <Button onClick={restart}>
-            <RotateCcw className="size-4" /> Recommencer
-          </Button>
-          <Button variant="outline" asChild>
-            <Link href="/reviser">
-              <ArrowLeft className="size-4" /> Retour aux révisions
-            </Link>
-          </Button>
-        </CardFooter>
-      </Card>
+      <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
+        {/* Volet score, aux couleurs du quiz */}
+        <div className="bg-primary px-4 pt-16 pb-10 text-primary-foreground md:px-8 md:pt-12">
+          <div className="mx-auto w-full max-w-xl">
+            <BackButton
+              fallback={backHref}
+              label="Quitter le quiz"
+              className="mb-4 bg-white/15 text-primary-foreground shadow-none"
+            >
+              <X className="size-5" aria-hidden="true" />
+            </BackButton>
+
+            <div className="rounded-3xl bg-black/15 p-6 text-center">
+              <h1 className="font-heading text-xl font-bold">Score du quiz</h1>
+              <p className="mt-3 font-mono text-6xl font-bold tabular-nums">
+                {score}
+                <span className="text-2xl opacity-60"> / {questions.length}</span>
+              </p>
+
+              {/* Une pastille par question : vert = juste, rouge = faux */}
+              <div
+                className="mt-5 flex flex-wrap justify-center gap-1.5"
+                aria-label={`${score} bonne${score > 1 ? 's' : ''} réponse${score > 1 ? 's' : ''} sur ${questions.length}`}
+              >
+                {questions.map((q, i) => (
+                  <span
+                    key={q.id}
+                    aria-hidden="true"
+                    className={cn(
+                      'h-2.5 w-5 rounded-full',
+                      choices[i] === q.correct_index
+                        ? 'bg-green-400'
+                        : 'bg-red-400',
+                    )}
+                  />
+                ))}
+              </div>
+
+              {/* La mascotte réagit au score */}
+              <div className="mt-5 flex items-center gap-3 rounded-2xl bg-white/10 p-4 text-left">
+                <span className="text-4xl leading-none" aria-hidden="true">
+                  {v.emoji}
+                </span>
+                <p className="text-sm font-semibold">{v.message}</p>
+              </div>
+
+              {saved === true ? (
+                <p className="mt-3 text-xs opacity-80">
+                  ✓ Session enregistrée — ta série continue 🔥
+                </p>
+              ) : saved === false ? (
+                <p className="mt-3 text-xs opacity-80">
+                  <Link href="/login" className="underline underline-offset-4">
+                    Connecte-toi
+                  </Link>{' '}
+                  pour sauvegarder ta progression.
+                </p>
+              ) : null}
+            </div>
+
+            <Button
+              onClick={restart}
+              className="mt-4 w-full rounded-full bg-card text-foreground shadow-md hover:bg-card/90"
+              size="lg"
+            >
+              <RotateCcw className="size-4" /> Recommencer
+            </Button>
+          </div>
+        </div>
+
+        {/* Correction détaillée, scrollable */}
+        <div className="relative -mt-4 rounded-t-3xl bg-background">
+          <div className="mx-auto w-full max-w-xl px-4 pt-4 pb-24 md:px-8">
+            <div
+              className="mx-auto h-1.5 w-12 rounded-full bg-muted-foreground/30"
+              aria-hidden="true"
+            />
+            <h2 className="font-heading mt-4 text-center text-2xl font-bold">
+              Correction
+            </h2>
+
+            <ol className="mt-6 flex flex-col gap-4">
+              {questions.map((q, i) => {
+                const chosen = choices[i]
+                const good = chosen === q.correct_index
+                return (
+                  <li
+                    key={q.id}
+                    className="rounded-3xl border bg-card p-5 shadow-sm"
+                  >
+                    <p className="flex gap-3 font-semibold">
+                      <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-muted font-mono text-sm font-bold">
+                        {i + 1}
+                      </span>
+                      <span className="min-w-0">{q.question}</span>
+                    </p>
+
+                    <div className="mt-4 flex flex-col gap-2">
+                      {/* La bonne réponse, toujours montrée */}
+                      <p className="flex items-center gap-2.5 rounded-2xl bg-green-600/10 px-4 py-3 text-sm font-medium text-green-800 dark:text-green-300">
+                        <CircleCheck
+                          className="size-5 shrink-0 fill-green-600 text-white"
+                          aria-hidden="true"
+                        />
+                        <span className="min-w-0">
+                          <span className="sr-only">Bonne réponse : </span>
+                          {q.options[q.correct_index]}
+                        </span>
+                      </p>
+                      {/* Le choix de l'élève, seulement s'il était faux */}
+                      {!good && chosen !== undefined && q.options[chosen] !== undefined ? (
+                        <p className="flex items-center gap-2.5 rounded-2xl bg-destructive/10 px-4 py-3 text-sm font-medium text-destructive">
+                          <CircleX
+                            className="size-5 shrink-0 fill-destructive text-white"
+                            aria-hidden="true"
+                          />
+                          <span className="min-w-0">
+                            <span className="sr-only">Ta réponse : </span>
+                            {q.options[chosen]}
+                          </span>
+                        </p>
+                      ) : null}
+                    </div>
+
+                    {q.explanation ? (
+                      <div className="mt-4 border-t border-dashed pt-4">
+                        <h3 className="text-sm font-bold">Explication</h3>
+                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                          {q.explanation}
+                        </p>
+                      </div>
+                    ) : null}
+                  </li>
+                )
+              })}
+            </ol>
+
+            <Button variant="outline" asChild className="mt-6 w-full rounded-full">
+              <Link href={backHref}>
+                <ArrowLeft className="size-4" /> Retour aux révisions
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
     )
   }
 
+  // ---------------------------------------------------------------------------
+  // Écran de question : plein écran, sans feedback juste/faux (template).
+  // ---------------------------------------------------------------------------
   return (
-    <Card className="mx-auto max-w-xl">
-      <CardHeader>
-        <CardDescription className="flex items-center justify-between">
-          <span>
-            Question {index + 1} / {questions.length}
-            {question.kind === 'true_false' ? ' — Vrai ou Faux' : ' — QCM'}
-          </span>
+    <div className="-mx-4 -mt-16 flex min-h-svh flex-col bg-primary px-4 pt-16 pb-24 text-primary-foreground md:-mx-8 md:-mt-10 md:px-8 md:pt-12">
+      <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
+        <div className="flex items-center justify-between">
+          <BackButton
+            fallback={backHref}
+            label="Quitter le quiz"
+            className="bg-white/15 text-primary-foreground shadow-none"
+          >
+            <X className="size-5" aria-hidden="true" />
+          </BackButton>
+          <span className="sr-only">{title}</span>
           <SoundToggle />
-        </CardDescription>
-        <CardTitle className="text-lg">{question.question}</CardTitle>
-        {/* Barre de progression */}
-        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-muted">
-          <div
-            className="h-full rounded-full bg-highlight transition-all"
-            style={{ width: `${((index + (answered ? 1 : 0)) / questions.length) * 100}%` }}
-          />
         </div>
-      </CardHeader>
 
-      <CardContent className="flex flex-col gap-2">
-        {question.options.map((option, i) => {
-          const isCorrect = i === question.correct_index
-          const isSelected = i === selected
-          return (
+        {/* Anneau de progression : « Question N/10 » */}
+        <div className="z-10 -mb-10 flex justify-center">
+          <ProgressRing
+            value={(index + (selected !== null ? 1 : 0)) / questions.length}
+            size={104}
+            strokeWidth={7}
+            label={`Question ${index + 1} sur ${questions.length}`}
+            trackClassName="stroke-black/25"
+            fillClassName="stroke-highlight"
+          >
+            <span className="flex size-[82px] flex-col items-center justify-center rounded-full bg-black/20 text-center">
+              <span className="text-xs font-medium opacity-80">Question</span>
+              <span className="font-mono text-lg font-bold tabular-nums">
+                {index + 1}/{questions.length}
+              </span>
+            </span>
+          </ProgressRing>
+        </div>
+
+        {/* La question */}
+        <div className="rounded-3xl bg-card px-5 pt-14 pb-8 text-center shadow-md">
+          <p className="font-heading text-lg font-bold text-balance text-foreground">
+            {question.question}
+          </p>
+          {question.kind === 'true_false' ? (
+            <p className="mt-1 text-xs font-semibold text-muted-foreground">
+              Vrai ou faux ?
+            </p>
+          ) : null}
+        </div>
+
+        {/* Les réponses : choisir enchaîne directement, correction à la fin */}
+        <div className="mt-5 flex flex-col gap-3" role="group" aria-label="Réponses">
+          {question.options.map((option, i) => (
             <button
               key={i}
               type="button"
               onClick={() => choose(i)}
-              disabled={answered}
+              disabled={selected !== null}
               className={cn(
-                'flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left text-sm font-medium transition-all',
-                !answered &&
-                  'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
-                answered && isCorrect && 'border-green-600 bg-green-600/10 text-green-700 dark:text-green-400',
-                answered && isSelected && !isCorrect && 'border-destructive bg-destructive/10 text-destructive',
-                answered && !isSelected && !isCorrect && 'opacity-50',
+                'rounded-2xl bg-card px-5 py-4 text-left text-sm font-semibold text-foreground shadow-md transition-all',
+                selected === null && 'hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98]',
+                selected === i && 'ring-4 ring-highlight',
+                selected !== null && selected !== i && 'opacity-60',
               )}
             >
               {option}
-              {answered && isCorrect ? <CircleCheck className="size-4 shrink-0" /> : null}
-              {answered && isSelected && !isCorrect ? <CircleX className="size-4 shrink-0" /> : null}
             </button>
-          )
-        })}
+          ))}
+        </div>
 
-        {answered && question.explanation ? (
-          <p className="mt-2 rounded-md bg-muted p-3 text-sm text-muted-foreground">
-            {question.explanation}
-          </p>
-        ) : null}
-      </CardContent>
-
-      <CardFooter className="justify-end">
-        <Button onClick={next} disabled={!answered}>
-          {index + 1 >= questions.length ? 'Voir le score' : 'Question suivante'}
-        </Button>
-      </CardFooter>
-    </Card>
+        <p className="mt-auto pt-6 text-center text-xs font-medium opacity-70">
+          La correction s&apos;affiche à la fin du quiz.
+        </p>
+      </div>
+    </div>
   )
 }

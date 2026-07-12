@@ -22,7 +22,7 @@ export default function BadgeGrid({
   return (
     <section
       aria-label="Records et badges"
-      className="rounded-2xl border bg-card p-4 shadow-sm"
+      className="moi-card rounded-[1.75rem] bg-white p-5"
     >
       <h2 className="font-heading mb-3 text-lg font-bold">Records & badges</h2>
 
@@ -63,20 +63,23 @@ export default function BadgeGrid({
           return (
             <li
               key={badge.id}
-              title={`${badge.title} — ${badge.description}${unlocked ? '' : ' (verrouillé)'}`}
+              title={`${badge.title} — ${badge.description}${unlocked ? '' : ' (à débloquer)'}`}
               style={{ animationDelay: `${i * 50}ms` }}
               className={cn(
-                'pop-in flex flex-col items-center gap-1 rounded-xl p-2 text-center transition-all',
-                unlocked
-                  ? 'bg-highlight/15'
-                  : 'opacity-40 grayscale',
+                'pop-in relative flex flex-col items-center gap-1 rounded-xl p-2 text-center transition-all',
+                unlocked ? 'bg-highlight/15' : 'opacity-45 grayscale',
               )}
             >
-              <span className="text-2xl leading-none drop-shadow-sm">
+              <span className="text-2xl leading-none drop-shadow-sm" aria-hidden="true">
                 {badge.icon}
               </span>
-              <span className="text-[9px] leading-tight font-semibold">
+              <span className="text-[10px] leading-tight font-semibold">
                 {badge.title}
+              </span>
+              {/* Critère de déblocage + statut : lisibles au lecteur d'écran. */}
+              <span className="sr-only">
+                {badge.description}
+                {unlocked ? ' — débloqué' : ' — à débloquer'}
               </span>
             </li>
           )

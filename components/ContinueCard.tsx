@@ -4,7 +4,8 @@ import Link from 'next/link'
 import { Play } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
-import { subjectTheme, GRID_PATTERN, MASCOT } from '@/lib/subject-style'
+import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
+import SubjectIcon from '@/components/SubjectIcon'
 import type { Subject } from '@/lib/types'
 
 export type ContinueTarget = {
@@ -35,8 +36,8 @@ export default function ContinueCard({ target }: { target: ContinueTarget }) {
         aria-hidden="true"
       />
       <div className="relative flex items-center gap-4">
-        <span className="float-slow text-5xl leading-none drop-shadow-sm">
-          {MASCOT}
+        <span className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-card/60 shadow-sm backdrop-blur-sm">
+          <SubjectIcon slug={target.subject.slug} className="size-8" strokeWidth={2} aria-hidden="true" />
         </span>
         <div className="min-w-0 flex-1">
           <p className="text-[11px] font-bold tracking-widest uppercase opacity-70">
@@ -46,7 +47,7 @@ export default function ContinueCard({ target }: { target: ContinueTarget }) {
             {target.chapterTitle}
           </p>
           <p className="text-sm font-medium opacity-75">
-            {target.subject.icon} {target.subject.name}
+            {target.subject.name}
             {target.isNew
               ? ' · nouveau chapitre'
               : ` · ${pct}% — ${pct >= 50 ? 'encore un effort, tu y es presque !' : 'continue, ça rentre !'}`}

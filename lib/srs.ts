@@ -1,0 +1,113 @@
+// Répétition espacée (SRS) + cahier d'erreurs (« la Revanche »).
+// SM-2 allégé : chaque question/carte revue a une date de prochaine révision
+// qui s'allonge à chaque succès (J+1, J+3, J+7, J+16, J+35) et se réinitialise
+// à l'erreur. Une erreur envoie aussi l'item dans la Revanche — le deck des
+// erreurs à venger, par matière ; une bonne réponse l'en sort.
+// Logique pure testable ici ; la persistance vit dans review_items (021).
+
+import type { SupabaseClient } from '@supabase/supabase-js'
+
+// Intervalles (en jours) selon la série de succès consécutifs. Au-delà du
+// dernier palier, on replafonne à 35 jours — suffisant pour une année scolaire.
+export const SRS_INTERVALS = [1, 3, 7, 16, 35] as const
+
+// Pièces versées quand la Revanche est vidée (une fois par jour UTC).
+export const REVANCHE_CLEAR_COINS = 40
+
+export type ReviewKind = 'question' | 'card'
+
+export type ReviewItem = {
+  item_kind: ReviewKind
+  item_id: string
+  subject: string | null
+  streak: number // succès consécutifs (détermine l'intervalle)
+  lapses: number // erreurs cumulées (mesure la difficulté de l'item)
+  due_date: string // 'YYYY-MM-DD' — prochaine révision (clé UTC)
+  in_revanche: boolean
+}
+
+// Réponse d'un joueur sur un item suivi, telle qu'envoyée par les players.
+export type ReviewAnswer = {
+  kind: ReviewKind
+  id: string
+  subject: string | null
+  good: boolean
+}
+
+export function addDays(dayKey: string, days: number): string {
+  const d = new Date(`${dayKey}T12:00:00Z`)
+  d.setUTCDate(d.getUTCDate() + days)
+  return d.toISOString().slice(0, 10)
+}
+
+// Intervalle après une série de `streak` succès (streak ≥ 1).
+export function intervalForStreak(streak: number): number {
+  const i = Math.max(0, Math.min(streak - 1, SRS_INTERVALS.length - 1))
+  return SRS_INTERVALS[i]
+}
+
+// Nouvel état d'un item après une réponse. `prev` absent = premier passage.
+export function reviewAfterAnswer(
+  prev: Pick<ReviewItem, 'streak' | 'lapses'> | null,
+  good: boolean,
+  todayKey: string,
+): Pick<ReviewItem, 'streak' | 'lapses' | 'due_date' | 'in_revanche'> {
+  if (good) {
+    const streak = (prev?.streak ?? 0) + 1
+    return {
+      streak,
+      lapses: prev?.lapses ?? 0,
+      due_date: addDays(todayKey, intervalForStreak(streak)),
+      in_revanche: false, // une bonne réponse venge l'erreur
+    }
+  }
+  return {
+    streak: 0,
+    lapses: (prev?.lapses ?? 0) + 1,
+    due_date: addDays(todayKey, 1), // raté : on revoit dès demain
+    in_revanche: true,
+  }
+}
+
+export function isDue(item: Pick<ReviewItem, 'due_date'>, todayKey: string) {
+  return item.due_date <= todayKey
+}
+
+// File du jour : les items dus (SRS) et les erreurs à venger (Revanche),
+// classés Revanche d'abord (venger paye), puis les plus en retard.
+export function reviewQueue(
+  items: ReviewItem[],
+  todayKey: string,
+): ReviewItem[] {
+  return items
+    .filter((i) => isDue(i, todayKey) || i.in_revanche)
+    .sort((a, b) => {
+      if (a.in_revanche !== b.in_revanche) return a.in_revanche ? -1 : 1
+      return a.due_date.localeCompare(b.due_date)
+    })
+}
+
+// Comptes par matière pour l'accueil Réviser (« 3 en maths, 2 en anglais »).
+export function countsBySubject(items: ReviewItem[]): Map<string, number> {
+  const counts = new Map<string, number>()
+  for (const i of items) {
+    const key = i.subject ?? 'Autre'
+    counts.set(key, (counts.get(key) ?? 0) + 1)
+  }
+  return counts
+}
+
+// ------------------------------------------------------------------- serveur
+// Items suivis de l'élève (même pattern d'accès que getChapterMastery).
+
+export async function getReviewItems(
+  supabase: SupabaseClient,
+  userId: string,
+): Promise<ReviewItem[]> {
+  const { data } = await supabase
+    .from('review_items')
+    .select('item_kind, item_id, subject, streak, lapses, due_date, in_revanche')
+    .eq('user_id', userId)
+    .returns<ReviewItem[]>()
+  return data ?? []
+}

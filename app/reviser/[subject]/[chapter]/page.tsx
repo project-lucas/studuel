@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
-import { ArrowLeft, BookOpen, Play } from 'lucide-react'
+import { BookOpen, Lock, Play, Waypoints } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import BackButton from '@/components/BackButton'
 import { createClient } from '@/lib/supabase/server'
+import { getUserTier, canAccessMindMaps } from '@/lib/subscription'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN, MASCOT } from '@/lib/subject-style'
+import SubjectIcon from '@/components/SubjectIcon'
 import type { Subject, Chapter, Lesson } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
-
-type LinkedQuiz = { id: string; lesson_id: string | null }
 
 export default async function ChapterPage({
   params,
@@ -23,40 +24,29 @@ export default async function ChapterPage({
   } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  const { data: subject } = await supabase
-    .from('subjects')
-    .select('*')
-    .eq('slug', slug)
-    .maybeSingle<Subject>()
-  if (!subject) notFound()
+  // Matière + leçons + quiz embarqués dans la requête du chapitre (zéro
+  // cascade), slug vérifié via la jointure.
+  type Row = Chapter & {
+    subject: Subject
+    lessons: (Lesson & { quizzes: { id: string }[] })[]
+  }
+  // select('*') sur le chapitre : tolère une base sans la migration 029
+  // (colonne mind_map absente).
+  const [{ data: row }, tier] = await Promise.all([
+    supabase
+      .from('chapters')
+      .select('*, subject:subjects!inner(*), lessons(*, quizzes(id))')
+      .eq('id', chapterId)
+      .eq('subjects.slug', slug)
+      .order('position', { ascending: true, referencedTable: 'lessons' })
+      .maybeSingle<Row>(),
+    getUserTier(),
+  ])
+  if (!row) notFound()
 
-  const { data: chapter } = await supabase
-    .from('chapters')
-    .select('id, subject_id, level, title, position')
-    .eq('id', chapterId)
-    .eq('subject_id', subject.id)
-    .maybeSingle<Chapter>()
-  if (!chapter) notFound()
-
-  const { data: lessons } = await supabase
-    .from('lessons')
-    .select('id, chapter_id, title, thumbnail_url, content, position')
-    .eq('chapter_id', chapter.id)
-    .order('position', { ascending: true })
-    .returns<Lesson[]>()
-
-  // Quiz rattachés aux leçons de ce chapitre (bouton play).
-  const lessonIds = (lessons ?? []).map((l) => l.id)
-  const { data: quizzes } = lessonIds.length
-    ? await supabase
-        .from('quizzes')
-        .select('id, lesson_id')
-        .in('lesson_id', lessonIds)
-        .returns<LinkedQuiz[]>()
-    : { data: [] as LinkedQuiz[] }
-
+  const { subject, lessons, ...chapter } = row
   const quizByLesson = new Map(
-    (quizzes ?? []).map((q) => [q.lesson_id ?? '', q.id]),
+    lessons.flatMap((l) => (l.quizzes[0] ? [[l.id, l.quizzes[0].id] as const] : [])),
   )
 
   const theme = subjectTheme(subject.color)
@@ -73,23 +63,70 @@ export default async function ChapterPage({
           aria-hidden="true"
         />
         <div className="relative mx-auto w-full max-w-4xl">
-          <Link
-            href={`/reviser/${subject.slug}`}
-            className="mb-4 inline-flex items-center gap-1.5 text-sm font-semibold opacity-80 transition-opacity hover:opacity-100"
-          >
-            <ArrowLeft className="size-4" /> {subject.name}
-          </Link>
+          <BackButton
+            fallback={`/reviser/${subject.slug}`}
+            label={`Retour — ${subject.name}`}
+            className="mb-4"
+          />
           <h1 className="font-heading text-2xl font-bold text-balance md:text-3xl">
             {chapter.title}
           </h1>
-          <p className="mt-1 text-sm font-medium opacity-70">
-            {subject.icon} {subject.name} · {chapter.level}
+          <p className="mt-1 flex items-center gap-1.5 text-sm font-medium opacity-70">
+            <SubjectIcon slug={subject.slug} className="size-4 shrink-0" strokeWidth={2} aria-hidden="true" />
+            {subject.name} · {chapter.level}
           </p>
         </div>
       </header>
 
-      {/* Leçons */}
       <div className="mx-auto w-full max-w-4xl px-4 py-6 md:px-8">
+        {/* Carte mentale du chapitre — visible par tous, ouvrable par les
+            abonnés (Offre 1+) ; cadenas non cliquable pour les gratuits. */}
+        {chapter.mind_map ? (
+          canAccessMindMaps(tier) ? (
+            <Link
+              href={`/reviser/${subject.slug}/${chapter.id}/carte`}
+              className="mb-6 flex items-center gap-4 rounded-2xl border bg-card p-4 shadow-sm transition-colors hover:bg-accent/40"
+            >
+              <span
+                className={cn(
+                  'flex size-12 shrink-0 items-center justify-center rounded-xl',
+                  theme.chip,
+                )}
+              >
+                <Waypoints className="size-6" aria-hidden="true" />
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block font-semibold">Carte mentale</span>
+                <span className="block text-sm text-muted-foreground">
+                  Toutes les notions du chapitre en un coup d&apos;œil
+                </span>
+              </span>
+            </Link>
+          ) : (
+            <div
+              className="mb-6 flex items-center gap-4 rounded-2xl border bg-card p-4 opacity-80 shadow-sm"
+              aria-label="Carte mentale réservée à l'Offre 1"
+            >
+              <span
+                className={cn(
+                  'flex size-12 shrink-0 items-center justify-center rounded-xl',
+                  theme.chip,
+                )}
+              >
+                <Waypoints className="size-6" aria-hidden="true" />
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block font-semibold">Carte mentale</span>
+                <span className="block text-sm text-muted-foreground">
+                  Réservée à l&apos;Offre 1
+                </span>
+              </span>
+              <Lock className="size-4 shrink-0 text-muted-foreground" aria-hidden="true" />
+            </div>
+          )
+        ) : null}
+
+        {/* Leçons */}
         <h2 className="font-heading mb-4 text-lg font-semibold text-muted-foreground">
           Leçons
         </h2>

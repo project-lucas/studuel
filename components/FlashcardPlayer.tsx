@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Link from 'next/link'
 import {
   RotateCcw,
@@ -22,6 +22,8 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx, isSoundOn, setSoundOn } from '@/lib/sounds'
 import { recordStudySession } from '@/app/studio/actions'
+import { recordReviewAnswers } from '@/app/reviser/actions'
+import type { ReviewAnswer } from '@/lib/srs'
 import type { DeckCard } from '@/lib/types'
 
 // Bouton muet partagé (préférence localStorage).
@@ -49,10 +51,12 @@ export default function FlashcardPlayer({
   deckId,
   title,
   cards,
+  subject = null,
 }: {
   deckId: string
   title: string
   cards: DeckCard[]
+  subject?: string | null
 }) {
   const [queue, setQueue] = useState<DeckCard[]>(cards)
   const [flipped, setFlipped] = useState(false)
@@ -72,11 +76,23 @@ export default function FlashcardPlayer({
     }
   }
 
+  // Résultat au premier passage de chaque carte : c'est le signal envoyé à la
+  // répétition espacée (une carte reprise en fin de pile a déjà été « ratée »).
+  const reviewsRef = useRef<ReviewAnswer[]>([])
+
   const answer = (known: boolean) => {
     if (!current) return
     setReviews((r) => r + 1)
     const firstTry = !seen.has(current.id)
     setSeen((s) => new Set(s).add(current.id))
+    if (firstTry) {
+      reviewsRef.current.push({
+        kind: 'card',
+        id: current.id,
+        subject,
+        good: known,
+      })
+    }
 
     const rest = queue.slice(1)
     if (known) {
@@ -88,6 +104,8 @@ export default function FlashcardPlayer({
         recordStudySession(deckId, cards.length)
           .then((r) => setSaved(r.saved))
           .catch(() => setSaved(false))
+        // Reprogramme chaque carte dans la file « À revoir ».
+        recordReviewAnswers(reviewsRef.current).catch(() => {})
       }
       setQueue(rest)
     } else {
@@ -105,6 +123,7 @@ export default function FlashcardPlayer({
     setSeen(new Set())
     setFinished(false)
     setSaved(null)
+    reviewsRef.current = []
   }
 
   if (finished) {
@@ -164,7 +183,15 @@ export default function FlashcardPlayer({
       </div>
 
       {/* Barre de progression */}
-      <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
+      <div
+        className="h-2 w-full overflow-hidden rounded-full bg-muted"
+        role="progressbar"
+        aria-label="Cartes sues"
+        aria-valuemin={0}
+        aria-valuemax={cards.length}
+        aria-valuenow={knownCount}
+        aria-valuetext={`${knownCount} sur ${cards.length} cartes sues`}
+      >
         <div
           className="bar-fill h-full rounded-full bg-highlight transition-all"
           style={{ width: `${(knownCount / cards.length) * 100}%` }}
@@ -184,8 +211,11 @@ export default function FlashcardPlayer({
             flipped && '[transform:rotateY(180deg)]',
           )}
         >
-          {/* Recto */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-xl bg-card p-6 text-center ring-1 ring-foreground/10 [backface-visibility:hidden]">
+          {/* Recto — masqué au lecteur d'écran quand la carte est retournée */}
+          <div
+            aria-hidden={flipped}
+            className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-xl bg-card p-6 text-center ring-1 ring-foreground/10 [backface-visibility:hidden]"
+          >
             <p className="font-heading text-2xl font-semibold text-balance">
               {current.front}
             </p>
@@ -193,15 +223,19 @@ export default function FlashcardPlayer({
               Touche la carte pour voir la réponse
             </p>
           </div>
-          {/* Verso */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-xl bg-primary p-6 text-center text-primary-foreground ring-1 ring-foreground/10 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          {/* Verso — masqué (et non lu) tant que la réponse n'est pas révélée */}
+          <div
+            aria-hidden={!flipped}
+            className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-xl bg-primary p-6 text-center text-primary-foreground ring-1 ring-foreground/10 [backface-visibility:hidden] [transform:rotateY(180deg)]"
+          >
             <p className="text-lg font-medium text-balance">{current.back}</p>
           </div>
         </div>
       </button>
 
-      {/* Réponses — visibles une fois la carte retournée */}
+      {/* Réponses — visibles (et focusables) une fois la carte retournée */}
       <div
+        aria-hidden={!flipped}
         className={cn(
           'grid grid-cols-2 gap-2 transition-opacity',
           !flipped && 'pointer-events-none opacity-0',
@@ -210,6 +244,7 @@ export default function FlashcardPlayer({
         <Button
           variant="outline"
           size="lg"
+          tabIndex={flipped ? undefined : -1}
           onClick={() => answer(false)}
           className="border-amber-500/40 text-amber-700 hover:bg-amber-500/10 dark:text-amber-400"
         >
@@ -217,6 +252,7 @@ export default function FlashcardPlayer({
         </Button>
         <Button
           size="lg"
+          tabIndex={flipped ? undefined : -1}
           onClick={() => answer(true)}
           className="bg-green-600 text-white hover:bg-green-600/85"
         >

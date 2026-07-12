@@ -9,22 +9,29 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
-import WeekStrip from '@/components/WeekStrip'
-import StructureScore from '@/components/StructureScore'
-import HabitsList from '@/components/HabitsList'
+import CapacityScore from '@/components/CapacityScore'
+import type { DayStatus } from '@/components/DisciplineCalendar'
+import WeekSection from '@/components/WeekSection'
+import MoiHeader from '@/components/MoiHeader'
+import MoiExtras from '@/components/MoiExtras'
+import CompagnonCard from '@/components/CompagnonCard'
+import DebriefCard from '@/components/DebriefCard'
 import StructureChart, { type WeekPoint } from '@/components/StructureChart'
 import BadgeGrid from '@/components/BadgeGrid'
 import { createClient } from '@/lib/supabase/server'
 import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
 import {
-  structureScore,
   syncAutoHabits,
   isInCommuteSlot,
   longestRun,
   longestAnchored,
   dayIndexOf,
+  habitDays,
   PLANIFIER_CATALOG_ID,
 } from '@/lib/habits'
+import { commuteStreak } from '@/lib/trajet'
+import { SHOP_CATALOG } from '@/lib/tresor'
+import { isDebriefOutcome, type DebriefOutcome } from '@/lib/debrief'
 import type {
   Habit,
   HabitLog,
@@ -38,7 +45,11 @@ export const dynamic = 'force-dynamic'
 
 type SessionRow = { created_at: string; score: number; total: number }
 
-export default async function MoiPage() {
+export default async function MoiPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ bilan?: string }>
+}) {
   const supabase = await createClient()
   const {
     data: { user },
@@ -80,10 +91,13 @@ export default async function MoiPage() {
   )
 
   // Profil + habitudes d'abord (nécessaires à la synchro auto).
-  const [{ data: profile }, { data: habits }] = await Promise.all([
+  // capacity_quiz voyage avec le profil : si 013_capacite.sql n'est pas passée,
+  // profileError le signale (bandeau migration) et la page continue, dégradée.
+  const [{ data: profile, error: profileError }, { data: habits }] =
+    await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, commute_slots')
+      .select('full_name, commute_slots, capacity_quiz')
       .eq('id', user.id)
       .maybeSingle(),
     supabase
@@ -100,8 +114,9 @@ export default async function MoiPage() {
   // Validation automatique « à la volée » du jour (révision, trajets).
   await syncAutoHabits(supabase, user.id, habits ?? [], commuteSlots)
 
+  // Un an de logs : la modale « Ma discipline » propose une vue Année.
   const since = new Date()
-  since.setUTCDate(since.getUTCDate() - 180)
+  since.setUTCDate(since.getUTCDate() - 366)
 
   const [
     { data: logs },
@@ -112,6 +127,11 @@ export default async function MoiPage() {
     { data: studies },
     { data: lessonsDone },
     { data: challenges },
+    { data: workRow },
+    { data: communityRaw },
+    { data: purchases },
+    { data: debriefSel, error: debriefError },
+    { data: debriefRows },
   ] = await Promise.all([
     supabase
       .from('habit_logs')
@@ -121,25 +141,55 @@ export default async function MoiPage() {
     supabase.from('habit_catalog').select('*').returns<HabitCatalogEntry[]>(),
     supabase.from('badges').select('*').returns<Badge[]>(),
     supabase.from('user_badges').select('badge_id'),
+    // user_id explicite : la RLS le garantit aujourd'hui, mais la couche
+    // sociale ouvrira la lecture croisée des sessions — ces stats sont à soi.
     supabase
       .from('test_sessions')
       .select('created_at, score, total')
+      .eq('user_id', user.id)
       .returns<SessionRow[]>(),
-    supabase.from('study_sessions').select('created_at'),
-    supabase.from('lesson_completions').select('created_at'),
-    supabase.from('challenge_sessions').select('created_at'),
+    supabase.from('study_sessions').select('created_at').eq('user_id', user.id),
+    supabase
+      .from('lesson_completions')
+      .select('created_at')
+      .eq('user_id', user.id),
+    supabase
+      .from('challenge_sessions')
+      .select('created_at')
+      .eq('user_id', user.id),
+    // Temps de travail (chrono du Défi) — requête séparée : si 014_temps.sql
+    // n'est pas passée, seule cette colonne manque, le reste tient debout.
+    supabase
+      .from('profiles')
+      .select('work_seconds')
+      .eq('id', user.id)
+      .maybeSingle(),
+    // Temps cumulé de tous les élèves (fonction SQL 014_temps.sql). Dégradé
+    // proprement si la migration n'est pas encore passée.
+    supabase.rpc('community_seconds'),
+    // Accessoires du compagnon (achats boutique, kind « compagnon »).
+    supabase.from('shop_purchases').select('item_id').eq('user_id', user.id),
+    // Débrief d'habitudes (027_debrief.sql) — dégradé proprement si la
+    // migration n'est pas encore passée (debriefError → carte en mode info).
+    supabase.from('debrief_habits').select('pair_id'),
+    supabase
+      .from('debrief_logs')
+      .select('pair_id, outcome')
+      .eq('date', toDayKey(new Date())),
   ])
 
   if (catalogError) {
+    // Détail technique en console pour le dev, message rassurant pour l'élève.
+    console.error('[moi] catalogue des habitudes indisponible:', catalogError.message)
     return (
       <div>
         <PageHeader title="Moi" />
         <Card>
           <CardHeader>
-            <CardTitle>Onglet indisponible</CardTitle>
+            <CardTitle>Cet onglet est momentanément indisponible</CardTitle>
             <CardDescription>
-              {catalogError.message} — exécute <code>supabase/010_moi.sql</code>{' '}
-              dans le SQL Editor.
+              On n&apos;arrive pas à charger tes habitudes pour l&apos;instant.
+              Réessaie dans quelques instants.
             </CardDescription>
           </CardHeader>
         </Card>
@@ -151,19 +201,82 @@ export default async function MoiPage() {
   const allLogs = logs ?? []
   const today = toDayKey(new Date())
 
-  // --- Bloc 1 : score de structure ---------------------------------------------
-  const score = structureScore(activeHabits, allLogs)
+  // --- Bloc 1 : bilan de capacités (questionnaire post-onboarding) ---------------
+  const quiz = profile?.capacity_quiz as {
+    score?: unknown
+    answers?: unknown
+  } | null
+  const capacityScore =
+    typeof quiz?.score === 'number' ? Math.round(quiz.score) : null
+  const capacityAnswers =
+    quiz?.answers && typeof quiz.answers === 'object'
+      ? (quiz.answers as Record<string, number>)
+      : {}
+  const { bilan } = await searchParams
 
-  // --- Bloc 2 : état du jour par habitude ---------------------------------------
-  const todayByHabit: Record<string, boolean> = {}
+  // --- Bloc 2 : la semaine courante (dates, validations, missions par jour) ------
+  const weekDates: string[] = []
+  {
+    const cursor = new Date()
+    cursor.setUTCHours(0, 0, 0, 0)
+    cursor.setUTCDate(cursor.getUTCDate() - ((cursor.getUTCDay() + 6) % 7))
+    for (let i = 0; i < 7; i++) {
+      weekDates.push(toDayKey(cursor))
+      cursor.setUTCDate(cursor.getUTCDate() + 1)
+    }
+  }
+  const doneByDate: Record<string, Record<string, boolean>> = {}
   for (const log of allLogs) {
-    if (log.date === today) todayByHabit[log.habit_id] = log.completed
+    if (log.date >= weekDates[0] && log.date <= weekDates[6]) {
+      ;(doneByDate[log.date] ??= {})[log.habit_id] = log.completed
+    }
   }
 
-  // --- Bloc 3 : structure vs notes, 8 semaines -----------------------------------
+  // --- Bloc 3 : « Ma discipline » — statut de chaque journée ---------------------
+  // complete = toutes les missions planifiées validées ; partial = une partie ;
+  // missed = aucune ; rest = rien de planifié ce jour-là.
+  const completedKeys = new Set(
+    allLogs.filter((l) => l.completed).map((l) => `${l.habit_id}|${l.date}`),
+  )
+  const dayStatuses: Record<string, DayStatus> = {}
+  const dayCursor = new Date(since)
+  while (toDayKey(dayCursor) <= today) {
+    const key = toDayKey(dayCursor)
+    const idx = dayIndexOf(key)
+    const scheduled = activeHabits.filter(
+      (h) =>
+        habitDays(h).includes(idx) && String(h.created_at).slice(0, 10) <= key,
+    )
+    if (scheduled.length === 0) {
+      dayStatuses[key] = 'rest'
+    } else {
+      const done = scheduled.filter((h) =>
+        completedKeys.has(`${h.id}|${key}`),
+      ).length
+      dayStatuses[key] =
+        done === scheduled.length
+          ? 'complete'
+          : done > 0
+            ? 'partial'
+            : key === today
+              ? 'rest' // la journée n'est pas finie : pas encore « manquée »
+              : 'missed'
+    }
+    dayCursor.setUTCDate(dayCursor.getUTCDate() + 1)
+  }
+
+  // --- Bloc 4 : structure vs notes, 8 semaines -----------------------------------
   const monday = new Date()
   monday.setUTCHours(0, 0, 0, 0)
   monday.setUTCDate(monday.getUTCDate() - ((monday.getUTCDay() + 6) % 7))
+
+  // Structure d'une semaine = missions validées / missions PLANIFIÉES
+  // (chaque habitude compte pour ses jours planifiés, pas 7 j/7).
+  const activeIds = new Set(activeHabits.map((h) => h.id))
+  const slotsPerWeek = activeHabits.reduce(
+    (s, h) => s + habitDays(h).length,
+    0,
+  )
 
   const chartData: WeekPoint[] = []
   for (let w = 7; w >= 0; w--) {
@@ -177,14 +290,12 @@ export default async function MoiPage() {
     }
 
     const weekLogs = allLogs.filter(
-      (l) => l.completed && inWeek(`${l.date}T12:00:00Z`),
+      (l) =>
+        l.completed && activeIds.has(l.habit_id) && inWeek(`${l.date}T12:00:00Z`),
     )
     const structure =
-      activeHabits.length > 0
-        ? Math.min(
-            100,
-            Math.round((weekLogs.length / (activeHabits.length * 7)) * 100),
-          )
+      slotsPerWeek > 0
+        ? Math.min(100, Math.round((weekLogs.length / slotsPerWeek) * 100))
         : null
 
     const weekTests = (tests ?? []).filter(
@@ -206,13 +317,22 @@ export default async function MoiPage() {
     })
   }
 
-  // --- Bloc 4 : records + badges -------------------------------------------------
+  // --- Bloc 5 : records + badges -------------------------------------------------
   const allActivity = [
     ...(tests ?? []),
     ...(studies ?? []),
     ...(lessonsDone ?? []),
     ...(challenges ?? []),
   ]
+  // Temps de travail mesuré par le chrono du Défi, stocké sur le profil.
+  const workSeconds = Number(workRow?.work_seconds ?? 0) || 0
+  const studyMinutes = Math.floor(workSeconds / 60)
+  // bigint Postgres → nombre ou chaîne selon PostgREST : on normalise.
+  const communityParsed = Number(communityRaw)
+  const communitySeconds =
+    communityRaw != null && Number.isFinite(communityParsed)
+      ? communityParsed
+      : null
   const activityDays = new Set(
     allActivity.map((s) => String(s.created_at).slice(0, 10)),
   )
@@ -233,26 +353,35 @@ export default async function MoiPage() {
   }
 
   // Évaluation des badges (idempotente).
+  // Sessions de trajet : quiz ET défis joués dans un créneau comptent.
+  const commuteSessions = [...(tests ?? []), ...(challenges ?? [])].filter(
+    (t) => isInCommuteSlot(String(t.created_at), commuteSlots),
+  )
   const metrics = {
     streak: records.longestStreak,
     anchored: anchored.days,
-    commuteQuizzes: (tests ?? []).filter((t) =>
-      isInCommuteSlot(t.created_at, commuteSlots),
-    ).length,
+    commuteQuizzes: commuteSessions.length,
+    commuteStreak: commuteStreak(commuteSessions, commuteSlots),
     quizCount: (tests ?? []).length,
     perfect: (tests ?? []).some((t) => t.total > 0 && t.score === t.total),
     habitsCount: activeHabits.length,
+    studyMinutes,
   }
   const meets = (condition: Record<string, unknown>): boolean => {
     const days = Number(condition.days ?? 0)
     const count = Number(condition.count ?? 0)
+    const minutes = Number(condition.minutes ?? 0)
     switch (condition.type) {
+      case 'study_minutes':
+        return metrics.studyMinutes >= minutes
       case 'streak':
         return metrics.streak >= days
       case 'habit_anchored':
         return metrics.anchored >= days
       case 'commute_quizzes':
         return metrics.commuteQuizzes >= count
+      case 'commute_streak':
+        return metrics.commuteStreak >= days
       case 'habits_count':
         return metrics.habitsCount >= count
       case 'quiz_count':
@@ -278,30 +407,87 @@ export default async function MoiPage() {
     for (const b of newlyUnlocked) unlockedIds.add(b.id)
   }
 
-  const firstName = profile?.full_name?.split(' ')[0]
+  const firstName = String(profile?.full_name ?? '').split(' ')[0] || 'Élève'
+
+  // Débrief d'habitudes : sélection référencée + issues du jour.
+  const debriefSelected = (debriefSel ?? []).map((r) => String(r.pair_id))
+  const debriefOutcomes: Record<string, DebriefOutcome> = {}
+  for (const r of debriefRows ?? []) {
+    if (isDebriefOutcome(r.outcome)) {
+      debriefOutcomes[String(r.pair_id)] = r.outcome
+    }
+  }
+
+  // Compagnon d'étude : nourri par la série, habillé par la boutique.
+  const ownedIds = new Set((purchases ?? []).map((p) => String(p.item_id)))
+  const companionAccessories = SHOP_CATALOG.filter(
+    (i) => i.kind === 'compagnon' && ownedIds.has(i.id),
+  ).map((i) => i.emoji)
 
   return (
-    <div className="flex flex-col gap-4">
-      <PageHeader
-        title={firstName ? `Moi — ${firstName}` : 'Moi'}
-        description="Ta structure de travail, jour après jour. C'est elle qui fait les notes."
+    <div>
+      {/* Fond papier réchauffé pleine page, derrière tout l'onglet. */}
+      <div aria-hidden="true" className="moi-bg fixed inset-0 -z-10" />
+
+      {/* Carte bandeau : flamme de niveau à cheval, nom centré, temps total. */}
+      <MoiHeader
+        name={firstName}
+        playerSeconds={workSeconds}
+        communitySeconds={communitySeconds}
       />
-      <WeekStrip week={week} streak={currentStreak} />
-      <HabitsList
-        habits={activeHabits}
-        catalog={catalog ?? []}
-        todayByHabit={todayByHabit}
-        today={today}
-        todayIdx={dayIndexOf(today)}
-        commuteSlots={commuteSlots}
-      />
-      <StructureScore score={score} />
-      <StructureChart data={chartData} />
-      <BadgeGrid
-        badges={badges ?? []}
-        unlockedIds={unlockedIds}
-        records={records}
-      />
+
+      {/* Les cartes « jouet », empilées sous le bandeau. */}
+      <div className="relative mt-5 flex flex-col gap-5">
+        {/* La série d'abord : le bloc le plus actionnable, bien visible. */}
+        <div className="pop-in">
+          <WeekSection
+            week={week}
+            streak={currentStreak}
+            weekDates={weekDates}
+            todayIdx={dayIndexOf(today)}
+            habits={activeHabits}
+            catalog={catalog ?? []}
+            doneByDate={doneByDate}
+            dayStatuses={dayStatuses}
+            commuteSlots={commuteSlots}
+          />
+        </div>
+        {/* Le compagnon : l'attachement quotidien — il grandit avec la série. */}
+        <div className="pop-in" style={{ animationDelay: '60ms' }}>
+          <CompagnonCard
+            streak={currentStreak}
+            activeToday={activityDays.has(today)}
+            accessories={companionAccessories}
+          />
+        </div>
+        <div className="pop-in" style={{ animationDelay: '120ms' }}>
+          <CapacityScore
+            score={capacityScore}
+            answers={capacityAnswers}
+            autoOpen={bilan === '1'}
+            needsMigration={Boolean(profileError)}
+          />
+        </div>
+        {/* Le débrief : freins référencés → habitudes saines, jour par jour. */}
+        <div className="pop-in" style={{ animationDelay: '180ms' }}>
+          <DebriefCard
+            selected={debriefSelected}
+            outcomes={debriefOutcomes}
+            needsMigration={Boolean(debriefError)}
+          />
+        </div>
+        {/* Graphique et badges : repliés derrière deux icônes, à la demande. */}
+        <MoiExtras
+          chart={<StructureChart data={chartData} />}
+          badges={
+            <BadgeGrid
+              badges={badges ?? []}
+              unlockedIds={unlockedIds}
+              records={records}
+            />
+          }
+        />
+      </div>
     </div>
   )
 }

@@ -26,12 +26,19 @@ export type Subject = {
   levels: string[]
 }
 
+// Carte mentale d'un chapitre (chapters.mind_map, migration 029).
+// Réservée aux abonnés : les gratuits voient la tuile mais ne peuvent pas l'ouvrir.
+export type MindMapBranch = { titre: string; enfants: string[] }
+export type MindMapData = { centre: string; branches: MindMapBranch[] }
+
 export type Chapter = {
   id: string
   subject_id: string
   level: string
   title: string
   position: number
+  // Optionnelle tant que la migration 029 n'est pas exécutée partout.
+  mind_map?: MindMapData | null
 }
 
 export type Lesson = {
@@ -41,7 +48,14 @@ export type Lesson = {
   thumbnail_url: string | null
   content: string | null
   position: number
+  // Supports du template « structure des cours » (migration 025) — optionnels
+  // tant que la migration n'est pas exécutée partout.
+  revision_sheet?: string | null
+  studygram_url?: string | null
 }
+
+// Support consulté d'une leçon (table lesson_activities, migration 025).
+export type LessonActivityKind = 'revision' | 'studygram'
 
 // Onglet Moi : habitudes, badges, trajets (migration 010).
 export type HabitValidationType = 'auto_revision' | 'auto_commute' | 'manual'

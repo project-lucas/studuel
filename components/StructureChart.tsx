@@ -23,7 +23,7 @@ export default function StructureChart({ data }: { data: WeekPoint[] }) {
   return (
     <section
       aria-label="Corrélation structure et notes"
-      className="rounded-2xl border bg-card p-4 shadow-sm"
+      className="moi-card rounded-[1.75rem] bg-white p-5"
     >
       <h2 className="font-heading mb-1 text-lg font-bold">
         Structure ↔ notes

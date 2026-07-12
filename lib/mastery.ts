@@ -27,19 +27,44 @@ export function chapterState(p: ChapterProgress | undefined): ChapterState {
   return 'fragile' // quiz tenté mais < 50 % : à retravailler en priorité
 }
 
+// Rang de maîtrise façon jeu compétitif — même donnée que chapterState, mais
+// présentée comme un rang à monter. Au-delà de « maîtrisé » (or), deux rangs
+// de prestige tirent vers l'excellence : diamant (≥ 90 %) et légendaire (100 %).
+// Le bronze récompense le premier geste (leçon lue) ; les rangs supérieurs
+// exigent un quiz — lire ne suffit pas pour grimper.
+
+export type MasteryRank = 'bronze' | 'argent' | 'or' | 'diamant' | 'legendaire'
+
+export function masteryRank(
+  p: ChapterProgress | undefined,
+): MasteryRank | null {
+  if (!p || (p.value === 0 && !p.lessonDone)) return null
+  if (!p.quizAttempted) return 'bronze'
+  if (p.value >= 1) return 'legendaire'
+  if (p.value >= 0.9) return 'diamant'
+  if (p.value >= MASTERY_THRESHOLDS.mastered) return 'or'
+  if (p.value >= MASTERY_THRESHOLDS.fragile) return 'argent'
+  return 'bronze'
+}
+
 export async function getChapterMastery(
   supabase: SupabaseClient,
+  userId: string,
 ): Promise<ChapterMastery> {
   const mastery: ChapterMastery = new Map()
 
+  // user_id explicite : la RLS le garantit aujourd'hui, mais la couche sociale
+  // ouvrira la lecture croisée des sessions — la maîtrise reste personnelle.
   const [{ data: sessions }, { data: completions }] = await Promise.all([
     supabase
       .from('test_sessions')
       .select('quiz_id, score, total')
+      .eq('user_id', userId)
       .returns<{ quiz_id: string | null; score: number; total: number }[]>(),
     supabase
       .from('lesson_completions')
       .select('lesson_id')
+      .eq('user_id', userId)
       .returns<{ lesson_id: string }[]>(),
   ])
 

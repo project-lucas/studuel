@@ -1,13 +1,15 @@
 'use client'
 
-import { Fragment, useEffect } from 'react'
+import { useEffect } from 'react'
+import { CalendarDays } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { toDayKey } from '@/lib/streak'
+import StreakMascot from '@/components/StreakMascot'
 
 const DAY_LETTERS = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
 
-// Chemin de flamme (tracé Lucide), rempli en dégradé violet → rose.
+// Chemin de flamme (tracé Lucide) — les jetons s'embrasent en semaine parfaite.
 const FLAME_PATH =
   'M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z'
 
@@ -17,19 +19,36 @@ function mondayKey(now = new Date()): string {
   return toDayKey(monday)
 }
 
-// Bloc « Ta série » : flamme qui respire + chaîne de 7 jours reliés.
-// Plusieurs jours → un halo balaye la chaîne pour inciter à continuer.
-// Semaine parfaite → les cercles se transforment en flammes, célébration.
+// Bloc « 7 jours » : jetons L→D (lettre dans le jeton, violet quand la journée
+// est validée), et à droite le compteur de série porté par la mascotte —
+// « N jours de suite ». Semaine parfaite → les jetons s'embrasent, célébration.
+const DAY_NAMES = [
+  'lundi',
+  'mardi',
+  'mercredi',
+  'jeudi',
+  'vendredi',
+  'samedi',
+  'dimanche',
+]
+
 export default function WeekStrip({
   week,
   streak,
+  selectedIdx,
+  onSelectDay,
+  onOpenCalendar,
 }: {
   week: { done: boolean; isToday: boolean; isFuture: boolean }[]
   streak: number
+  // Jour sélectionné (0 = lundi) : cliquer un jeton affiche son planning.
+  selectedIdx?: number
+  onSelectDay?: (day: number) => void
+  // Icône agenda (angle droit) : ouvre le calendrier « Ma discipline ».
+  onOpenCalendar?: () => void
 }) {
   const doneCount = week.filter((d) => d.done).length
   const perfect = doneCount === 7
-  const showHalo = doneCount >= 2 && !perfect
 
   // Sons : une seule fois par journée validée / par semaine parfaite.
   useEffect(() => {
@@ -38,7 +57,7 @@ export default function WeekStrip({
 
     if (today?.done && localStorage.getItem('scolaria-day-jingle') !== dayKey) {
       localStorage.setItem('scolaria-day-jingle', dayKey)
-      // Après la cascade des cercles.
+      // Après la cascade des jetons.
       const t = setTimeout(() => sfx.dayComplete(), 800)
       return () => clearTimeout(t)
     }
@@ -58,123 +77,100 @@ export default function WeekStrip({
   return (
     <section
       aria-label={`Série de ${streak} jour${streak > 1 ? 's' : ''}`}
-      className="relative rounded-2xl border bg-card p-4 shadow-sm"
+      className="relative"
     >
-      <div className="mb-3 flex items-baseline justify-between">
-        <h2 className="font-heading text-lg font-bold">Ta série</h2>
-        <span className="text-xs text-muted-foreground">
-          {doneCount}/7 cette semaine
-        </span>
+      <div className="mb-4 flex items-center justify-between">
+        <h2 className="font-heading text-lg font-bold">7 jours</h2>
+        {onOpenCalendar ? (
+          <button
+            type="button"
+            aria-label="Voir mon calendrier « Ma discipline »"
+            title="Ma discipline — mon calendrier"
+            onClick={() => {
+              sfx.tap()
+              onOpenCalendar()
+            }}
+            className="flex size-8 items-center justify-center rounded-lg bg-primary/10 text-primary transition-all hover:bg-primary/20 active:scale-90"
+          >
+            <CalendarDays className="size-4" strokeWidth={2.2} />
+          </button>
+        ) : null}
       </div>
 
       {/* Célébration de semaine parfaite */}
       {perfect ? (
         <div
-          className="pop-spring absolute -top-3 left-1/2 z-20 -translate-x-1/2 rounded-full bg-gradient-to-r from-violet-500 to-pink-500 px-4 py-1 text-xs font-bold whitespace-nowrap text-white shadow-lg shadow-pink-500/30"
+          className="pop-spring absolute -top-3 left-1/2 z-20 -translate-x-1/2 rounded-full bg-gradient-to-r from-amber-400 to-orange-600 px-4 py-1 text-xs font-bold whitespace-nowrap text-white shadow-lg shadow-orange-500/30"
           style={{ animationDelay: '1500ms' }}
         >
           🎉 Semaine parfaite !
         </div>
       ) : null}
 
-      <div className="flex items-center gap-4">
-        {/* Flamme dégradé violet/rose, compteur au centre */}
-        <div className="flame-breathe relative flex size-16 shrink-0 items-center justify-center">
-          <svg viewBox="0 0 24 24" className="size-16" aria-hidden="true">
-            <defs>
-              <linearGradient id="flame-grad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#8b5cf6" />
-                <stop offset="100%" stopColor="#ec4899" />
-              </linearGradient>
-            </defs>
-            <path d={FLAME_PATH} fill="url(#flame-grad)" />
-          </svg>
-          <span className="absolute inset-x-0 top-[54%] text-center font-mono text-lg leading-none font-extrabold text-white tabular-nums drop-shadow-sm">
-            {streak}
-          </span>
+      <div className="flex items-stretch gap-3">
+        {/* Les 7 jetons, lettre dans le jeton. */}
+        <div className="flex min-w-0 flex-1 items-center justify-between gap-1">
+          {week.map((day, i) => {
+            const missed = !day.done && !day.isToday && !day.isFuture
+            return (
+              <button
+                key={i}
+                type="button"
+                disabled={!onSelectDay}
+                aria-label={`Voir mon planning de ${DAY_NAMES[i]}`}
+                aria-pressed={selectedIdx === i}
+                onClick={() => {
+                  sfx.tap()
+                  onSelectDay?.(i)
+                }}
+                style={day.done ? { animationDelay: `${i * 100}ms` } : undefined}
+                className={cn(
+                  'relative z-10 flex size-9 shrink-0 items-center justify-center rounded-full text-xs font-extrabold transition-colors',
+                  onSelectDay && 'cursor-pointer active:scale-90',
+                  day.done && 'pop-spring moi-token-done text-white',
+                  missed && 'bg-muted text-muted-foreground/60',
+                  day.isFuture &&
+                    'border-2 border-dashed border-muted-foreground/25 bg-card text-muted-foreground/60',
+                  day.isToday &&
+                    !day.done &&
+                    'border-2 border-orange-400 bg-orange-500/10 text-foreground',
+                  day.isToday &&
+                    'ring-2 ring-orange-400/50 ring-offset-2 ring-offset-card',
+                  selectedIdx === i &&
+                    !day.isToday &&
+                    'ring-2 ring-primary/60 ring-offset-2 ring-offset-card',
+                )}
+              >
+                {day.done && perfect ? (
+                  // Semaine parfaite : chaque jeton s'embrase, un à un.
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="pop-spring size-5"
+                    style={{ animationDelay: `${700 + i * 120}ms` }}
+                    aria-hidden="true"
+                  >
+                    <path d={FLAME_PATH} fill="white" />
+                  </svg>
+                ) : (
+                  DAY_LETTERS[i]
+                )}
+              </button>
+            )
+          })}
         </div>
 
-        {/* La chaîne : cercles reliés par une ligne segmentée */}
-        <div className="min-w-0 flex-1">
-          <div className={cn('flex items-center', showHalo && 'chain-halo')}>
-            {week.map((day, i) => {
-              const missed = !day.done && !day.isToday && !day.isFuture
-              const linked = i > 0 && week[i - 1].done && day.done
-              return (
-                <Fragment key={i}>
-                  {i > 0 ? (
-                    <span className="relative -mx-1 h-1.5 min-w-2 flex-1 overflow-hidden rounded-full bg-muted">
-                      {linked ? (
-                        <span
-                          className="seg-fill absolute inset-0 rounded-full bg-gradient-to-r from-violet-500 to-pink-500"
-                          style={{ animationDelay: `${(i - 1) * 100 + 150}ms` }}
-                        />
-                      ) : null}
-                    </span>
-                  ) : null}
-
-                  <span
-                    style={day.done ? { animationDelay: `${i * 100}ms` } : undefined}
-                    className={cn(
-                      'relative z-10 flex size-9 shrink-0 items-center justify-center rounded-full transition-colors',
-                      day.done &&
-                        'pop-spring bg-gradient-to-br from-violet-500 to-pink-500 text-white shadow-md shadow-violet-500/30',
-                      missed && 'bg-muted',
-                      day.isFuture &&
-                        'border-2 border-dashed border-muted-foreground/25 bg-card',
-                      day.isToday &&
-                        !day.done &&
-                        'border-2 border-violet-400 bg-violet-500/10',
-                      day.isToday &&
-                        'ring-2 ring-violet-400/50 ring-offset-2 ring-offset-card',
-                    )}
-                  >
-                    {day.done && perfect ? (
-                      // Semaine parfaite : chaque coche devient une flamme, une à une.
-                      <svg
-                        viewBox="0 0 24 24"
-                        className="pop-spring size-5"
-                        style={{ animationDelay: `${700 + i * 120}ms` }}
-                        aria-hidden="true"
-                      >
-                        <path d={FLAME_PATH} fill="white" />
-                      </svg>
-                    ) : day.done ? (
-                      <svg viewBox="0 0 24 24" className="size-4" fill="none" aria-hidden="true">
-                        <path
-                          d="M5 13l4 4 10-10"
-                          pathLength={24}
-                          stroke="white"
-                          strokeWidth={3.5}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="check-draw"
-                          style={{ animationDelay: `${i * 100 + 250}ms` }}
-                        />
-                      </svg>
-                    ) : null}
-                  </span>
-                </Fragment>
-              )
-            })}
+        {/* Le compteur, porté par la mascotte. */}
+        <span aria-hidden="true" className="w-px self-stretch bg-border" />
+        <div className="flex shrink-0 flex-col items-center justify-center px-0.5">
+          <div className="flex items-center gap-0.5">
+            <span className="font-mono text-2xl leading-none font-extrabold tabular-nums">
+              {streak}
+            </span>
+            <StreakMascot streak={streak} size={30} badge={false} />
           </div>
-
-          {/* Lettres des jours, alignées sous les cercles */}
-          <div className="mt-1.5 flex">
-            {week.map((day, i) => (
-              <Fragment key={i}>
-                {i > 0 ? <span className="-mx-1 min-w-2 flex-1" /> : null}
-                <span
-                  className={cn(
-                    'w-9 shrink-0 text-center text-[10px] font-bold',
-                    day.isToday ? 'text-violet-500' : 'text-muted-foreground',
-                  )}
-                >
-                  {DAY_LETTERS[i]}
-                </span>
-              </Fragment>
-            ))}
-          </div>
+          <p className="mt-0.5 text-[10px] leading-none font-bold text-muted-foreground">
+            jours de suite
+          </p>
         </div>
       </div>
     </section>

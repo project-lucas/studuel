@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { Target } from 'lucide-react'
+import { AlarmClock, Target } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { subjectTheme } from '@/lib/subject-style'
+import { subjectTheme, subjectIcon } from '@/lib/subject-style'
 import type { Subject } from '@/lib/types'
 
 export type ExamProgressEntry = {
@@ -47,7 +48,14 @@ export default function ExamProgress({
       </div>
 
       {/* Barre globale */}
-      <div className="mb-4 h-3 w-full overflow-hidden rounded-full bg-muted">
+      <div
+        className="mb-4 h-3 w-full overflow-hidden rounded-full bg-muted"
+        role="progressbar"
+        aria-label={`${title} — progression globale`}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={globalPct}
+      >
         <div
           className="bar-fill h-full rounded-full bg-highlight transition-all"
           style={{ width: `${globalPct}%` }}
@@ -58,19 +66,28 @@ export default function ExamProgress({
       <ul className="grid gap-x-6 gap-y-2 sm:grid-cols-2">
         {entries.map((e) => {
           const theme = subjectTheme(e.subject.color)
+          const SubjectIcon = subjectIcon(e.subject.slug)
           const pct = Math.round(e.progress * 100)
           return (
             <li key={e.label}>
               <Link href={`/reviser/${e.subject.slug}`} className="group block">
-                <div className="mb-1 flex items-baseline justify-between gap-2 text-xs">
-                  <span className="truncate font-medium group-hover:underline">
-                    {e.subject.icon} {e.label}
+                <div className="mb-1 flex items-center justify-between gap-2 text-xs">
+                  <span className="flex min-w-0 items-center gap-1.5 font-medium">
+                    <SubjectIcon className="size-3.5 shrink-0 text-muted-foreground" strokeWidth={2} aria-hidden="true" />
+                    <span className="truncate group-hover:underline">{e.label}</span>
                   </span>
                   <span className="font-mono shrink-0 tabular-nums text-muted-foreground">
                     {pct}%
                   </span>
                 </div>
-                <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
+                <div
+                  className="h-1.5 w-full overflow-hidden rounded-full bg-muted"
+                  role="progressbar"
+                  aria-label={`${e.label} — progression`}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-valuenow={pct}
+                >
                   <div
                     className={cn('bar-fill h-full rounded-full transition-all', theme.bar)}
                     style={{ width: `${pct}%` }}
@@ -81,6 +98,13 @@ export default function ExamProgress({
           )
         })}
       </ul>
+
+      {/* La progression se mesure en conditions réelles : l'examen blanc. */}
+      <Button asChild variant="outline" className="mt-4 w-full rounded-full">
+        <Link href="/reviser/examen-blanc">
+          <AlarmClock className="size-4" /> Passer un examen blanc
+        </Link>
+      </Button>
     </section>
   )
 }

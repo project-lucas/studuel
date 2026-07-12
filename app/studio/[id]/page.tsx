@@ -92,7 +92,12 @@ export default async function DeckPage({
           </CardFooter>
         </Card>
       ) : (
-        <FlashcardPlayer deckId={deck.id} title={deck.title} cards={cards} />
+        <FlashcardPlayer
+          deckId={deck.id}
+          title={deck.title}
+          cards={cards}
+          subject={deck.subject}
+        />
       )}
     </div>
   )

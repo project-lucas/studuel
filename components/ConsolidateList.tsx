@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { TriangleAlert, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
-import { subjectTheme } from '@/lib/subject-style'
+import { subjectTheme, subjectIcon } from '@/lib/subject-style'
 import type { Subject } from '@/lib/types'
 
 export type ConsolidateEntry = {
@@ -35,6 +35,7 @@ export default function ConsolidateList({
       <ul className="flex flex-col gap-1.5">
         {entries.map((e, i) => {
           const theme = subjectTheme(e.subject.color)
+          const SubjectIcon = subjectIcon(e.subject.slug)
           return (
             <li
               key={e.chapterId}
@@ -48,11 +49,15 @@ export default function ConsolidateList({
               >
                 <span
                   className={cn(
-                    'flex size-9 shrink-0 items-center justify-center rounded-lg text-lg',
+                    'flex size-9 shrink-0 items-center justify-center rounded-lg',
                     theme.chip,
                   )}
                 >
-                  <span className="wiggle-on-hover">{e.subject.icon}</span>
+                  <SubjectIcon
+                    className="wiggle-on-hover size-4.5 text-foreground/80"
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  />
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-semibold group-hover:underline">

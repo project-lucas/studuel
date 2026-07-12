@@ -86,6 +86,7 @@ export default function SessionCoach({ plan }: { plan: PlanEntry[] }) {
 
         {state.message ? (
           <p
+            aria-live="polite"
             className={cn(
               'mt-1 rounded-lg p-3 text-sm',
               state.ai
@@ -95,14 +96,20 @@ export default function SessionCoach({ plan }: { plan: PlanEntry[] }) {
           >
             {state.message}
           </p>
-        ) : (
-          <form action={adviceAction}>
-            <Button type="submit" size="sm" variant="outline" disabled={pending}>
-              <Sparkles className="size-4" />
-              {pending ? 'Le coach réfléchit…' : 'Conseil du coach'}
-            </Button>
-          </form>
-        )}
+        ) : null}
+
+        {/* Le conseil reste demandable : on garde le bouton visible même
+            après une première réponse (« Autre conseil »). */}
+        <form action={adviceAction}>
+          <Button type="submit" size="sm" variant="outline" disabled={pending}>
+            <Sparkles className="size-4" />
+            {pending
+              ? 'Le coach réfléchit…'
+              : state.message
+                ? 'Autre conseil'
+                : 'Conseil du coach'}
+          </Button>
+        </form>
       </CardContent>
     </Card>
   )

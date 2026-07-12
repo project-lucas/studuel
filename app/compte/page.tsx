@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
-import { LogOut, BadgeCheck } from 'lucide-react'
+import { LogOut, BadgeCheck, HeartHandshake, Wrench } from 'lucide-react'
 import {
   Card,
   CardHeader,
@@ -32,11 +32,19 @@ export default async function ComptePage() {
 
   if (!user) redirect('/login')
 
+  // select('*') : tolère une base où la migration 028 (is_admin) n'est pas
+  // encore passée — la colonne manquante ne casse pas la page.
   const { data: profile } = await supabase
     .from('profiles')
-    .select('full_name, subscription_tier, grade_level, daily_goal')
+    .select('*')
     .eq('id', user.id)
-    .single()
+    .maybeSingle<{
+      full_name: string | null
+      subscription_tier: string | null
+      grade_level: string | null
+      daily_goal: number | null
+      is_admin?: boolean
+    }>()
 
   const tier = profile?.subscription_tier ?? 'free'
 
@@ -72,12 +80,24 @@ export default async function ComptePage() {
             </p>
           ) : null}
         </CardContent>
-        <CardFooter>
+        <CardFooter className="flex flex-wrap gap-2">
           <form action={signOut}>
             <Button variant="outline" type="submit">
               <LogOut className="size-4" /> Se déconnecter
             </Button>
           </form>
+          <Button asChild variant="outline">
+            <Link href="/parents">
+              <HeartHandshake className="size-4" /> Espace parents
+            </Link>
+          </Button>
+          {profile?.is_admin ? (
+            <Button asChild variant="outline">
+              <Link href="/admin">
+                <Wrench className="size-4" /> Studio de contenu
+              </Link>
+            </Button>
+          ) : null}
         </CardFooter>
       </Card>
     </div>

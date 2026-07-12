@@ -1,4 +1,45 @@
 import type { CSSProperties } from 'react'
+import {
+  Atom,
+  BookOpen,
+  Brain,
+  Calculator,
+  Code2,
+  Cpu,
+  Globe,
+  Infinity,
+  Landmark,
+  Languages,
+  Leaf,
+  LineChart,
+  Microscope,
+  ScrollText,
+  type LucideIcon,
+} from 'lucide-react'
+
+// Icône de trait sobre par matière (clé `subjects.slug`), en remplacement des
+// emojis colorés — cohérent avec le thème marine/orange.
+const SUBJECT_ICONS: Record<string, LucideIcon> = {
+  maths: Calculator,
+  'maths-expertes': Infinity,
+  francais: BookOpen,
+  'histoire-geo': Landmark,
+  hggsp: Globe,
+  anglais: Languages,
+  espagnol: Languages,
+  latin: ScrollText,
+  svt: Leaf,
+  'physique-chimie': Atom,
+  'enseignement-scientifique': Microscope,
+  technologie: Cpu,
+  nsi: Code2,
+  ses: LineChart,
+  philosophie: Brain,
+}
+
+export function subjectIcon(slug: string): LucideIcon {
+  return SUBJECT_ICONS[slug] ?? BookOpen
+}
 
 // Thèmes pastel par matière (clé `subjects.color`).
 // Classes statiques → compatibles avec le compilateur Tailwind.
@@ -9,6 +50,7 @@ export type SubjectTheme = {
   chip: string // vignette de leçon / chapitre
   bar: string // remplissage des barres de progression
   stroke: string // anneaux de progression (SVG)
+  arena: string // duo de tokens --tile-a/--tile-b (globals.css) pour la tuile « arène »
 }
 
 const THEMES: Record<string, SubjectTheme> = {
@@ -18,6 +60,7 @@ const THEMES: Record<string, SubjectTheme> = {
     chip: 'bg-sky-100 dark:bg-sky-900/60',
     bar: 'bg-sky-500',
     stroke: 'stroke-sky-500',
+    arena: 'tile-subject-blue',
   },
   red: {
     header: 'bg-rose-100 text-rose-950 dark:bg-rose-950/60 dark:text-rose-100',
@@ -25,6 +68,7 @@ const THEMES: Record<string, SubjectTheme> = {
     chip: 'bg-rose-100 dark:bg-rose-900/60',
     bar: 'bg-rose-500',
     stroke: 'stroke-rose-500',
+    arena: 'tile-subject-red',
   },
   orange: {
     header: 'bg-orange-100 text-orange-950 dark:bg-orange-950/60 dark:text-orange-100',
@@ -32,6 +76,7 @@ const THEMES: Record<string, SubjectTheme> = {
     chip: 'bg-orange-100 dark:bg-orange-900/60',
     bar: 'bg-orange-500',
     stroke: 'stroke-orange-500',
+    arena: 'tile-subject-orange',
   },
   green: {
     header: 'bg-emerald-100 text-emerald-950 dark:bg-emerald-950/60 dark:text-emerald-100',
@@ -39,6 +84,7 @@ const THEMES: Record<string, SubjectTheme> = {
     chip: 'bg-emerald-100 dark:bg-emerald-900/60',
     bar: 'bg-emerald-500',
     stroke: 'stroke-emerald-500',
+    arena: 'tile-subject-green',
   },
   purple: {
     header: 'bg-violet-100 text-violet-950 dark:bg-violet-950/60 dark:text-violet-100',
@@ -46,6 +92,7 @@ const THEMES: Record<string, SubjectTheme> = {
     chip: 'bg-violet-100 dark:bg-violet-900/60',
     bar: 'bg-violet-500',
     stroke: 'stroke-violet-500',
+    arena: 'tile-subject-purple',
   },
   indigo: {
     header: 'bg-indigo-100 text-indigo-950 dark:bg-indigo-950/60 dark:text-indigo-100',
@@ -53,6 +100,7 @@ const THEMES: Record<string, SubjectTheme> = {
     chip: 'bg-indigo-100 dark:bg-indigo-900/60',
     bar: 'bg-indigo-500',
     stroke: 'stroke-indigo-500',
+    arena: 'tile-subject-indigo',
   },
   teal: {
     header: 'bg-teal-100 text-teal-950 dark:bg-teal-950/60 dark:text-teal-100',
@@ -60,6 +108,7 @@ const THEMES: Record<string, SubjectTheme> = {
     chip: 'bg-teal-100 dark:bg-teal-900/60',
     bar: 'bg-teal-500',
     stroke: 'stroke-teal-500',
+    arena: 'tile-subject-teal',
   },
   pink: {
     header: 'bg-pink-100 text-pink-950 dark:bg-pink-950/60 dark:text-pink-100',
@@ -67,6 +116,7 @@ const THEMES: Record<string, SubjectTheme> = {
     chip: 'bg-pink-100 dark:bg-pink-900/60',
     bar: 'bg-pink-500',
     stroke: 'stroke-pink-500',
+    arena: 'tile-subject-pink',
   },
   yellow: {
     header: 'bg-amber-100 text-amber-950 dark:bg-amber-950/60 dark:text-amber-100',
@@ -74,6 +124,7 @@ const THEMES: Record<string, SubjectTheme> = {
     chip: 'bg-amber-100 dark:bg-amber-900/60',
     bar: 'bg-amber-500',
     stroke: 'stroke-amber-500',
+    arena: 'tile-subject-yellow',
   },
   slate: {
     header: 'bg-slate-200 text-slate-950 dark:bg-slate-800/80 dark:text-slate-100',
@@ -81,11 +132,44 @@ const THEMES: Record<string, SubjectTheme> = {
     chip: 'bg-slate-200 dark:bg-slate-700/80',
     bar: 'bg-slate-500',
     stroke: 'stroke-slate-500',
+    arena: 'tile-subject-slate',
   },
 }
 
 export function subjectTheme(color: string): SubjectTheme {
   return THEMES[color] ?? THEMES.blue
+}
+
+// Décors d'ambiance par matière (public/images/matieres/<slug>.webp).
+// Seules les matières dont l'image est générée sont listées — les autres
+// gardent le header coloré uni.
+const SUBJECT_DECORS: Record<string, string> = {
+  maths: '/images/matieres/maths.webp',
+}
+
+export function subjectDecor(slug: string): string | undefined {
+  return SUBJECT_DECORS[slug]
+}
+
+// Vignettes illustrées des cartes matières de l'accueil Réviser (batch 8 du
+// doc de prompts) : illustration à fond transparent qui déborde du bord droit
+// de la carte. Ajouter le slug ici dès que l'image est déposée dans
+// public/images/matieres/vignettes/<slug>.webp — repli sur le médaillon sinon.
+const VIGNETTE_SLUGS: string[] = [
+  'anglais',
+  'espagnol',
+  'francais',
+  'hggsp',
+  'histoire-geo',
+  'maths',
+  'physique-chimie',
+  'svt',
+]
+
+export function subjectVignette(slug: string): string | undefined {
+  return VIGNETTE_SLUGS.includes(slug)
+    ? `/images/matieres/vignettes/${slug}.webp`
+    : undefined
 }
 
 // Motif grille léger pour les headers colorés.

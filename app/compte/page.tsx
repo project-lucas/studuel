@@ -11,10 +11,11 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
+import NotificationsOptIn from '@/components/NotificationsOptIn'
 import { createClient } from '@/lib/supabase/server'
 import { signOut } from '@/app/login/actions'
 
-export const metadata = { title: 'Mon compte — Scolaria' }
+export const metadata = { title: 'Mon compte — Studuel' }
 export const dynamic = 'force-dynamic'
 
 const TIER_LABELS: Record<string, string> = {
@@ -100,6 +101,8 @@ export default async function ComptePage() {
           ) : null}
         </CardFooter>
       </Card>
+
+      <NotificationsOptIn />
     </div>
   )
 }

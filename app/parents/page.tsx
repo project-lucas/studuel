@@ -8,13 +8,18 @@ import {
   MonitorPlay,
 } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
+import ChildReport from '@/components/parents/ChildReport'
+import LinkChildForm from '@/components/parents/LinkChildForm'
 import { createClient } from '@/lib/supabase/server'
+import { computeStreak, weekProgress } from '@/lib/streak'
+import type { ChildDashboard } from '@/lib/parents'
 
-export const metadata = { title: 'Espace parents — Scolaria' }
+export const metadata = { title: 'Espace parents — Studuel' }
 export const dynamic = 'force-dynamic'
 
-// Espace parents : le « Programme » — une liste de vidéos préparée par le
-// coach scolaire (gérée dans /admin) — et, bientôt, le suivi de l'enfant.
+// Espace parents : le suivi réel de l'enfant (temps, régularité, matières),
+// le « Programme » — des vidéos préparées par le coach (gérées dans /admin) —
+// et un rappel du rôle du parent.
 type ParentVideo = {
   id: string
   title: string
@@ -25,6 +30,8 @@ type ParentVideo = {
   position: number
 }
 
+type ChildRow = { child_id: string; full_name: string | null }
+
 export default async function ParentsPage() {
   const supabase = await createClient()
   const {
@@ -32,21 +39,82 @@ export default async function ParentsPage() {
   } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  // Tolère une base sans la migration 029 : data vaut alors null et la
-  // section affiche son message « arrive bientôt ».
+  // Enfants liés (tolère une base sans la migration 044 : data = null).
+  const { data: childrenData } = await supabase.rpc('parent_children_overview')
+  const children = (childrenData ?? []) as ChildRow[]
+
+  const reports: { childId: string; dashboard: ChildDashboard | null }[] =
+    await Promise.all(
+      children.map(async (child) => {
+        const { data } = await supabase.rpc('child_dashboard', {
+          p_child: child.child_id,
+        })
+        return {
+          childId: child.child_id,
+          dashboard: (data as ChildDashboard | null) ?? null,
+        }
+      }),
+    )
+
+  // Vidéos du coach (tolère une base sans la migration 029).
   const { data: videos } = await supabase
     .from('parent_videos')
     .select('id, title, description, url, theme, duration, position')
     .order('position', { ascending: true })
     .returns<ParentVideo[]>()
 
+  const now = new Date()
+
   return (
     <div className="mx-auto w-full max-w-2xl">
       <PageHeader title="Espace parents" />
       <p className="text-muted-foreground -mt-2 mb-6 text-sm">
-        Comprendre la méthode Scolaria et accompagner votre enfant au quotidien,
+        Comprendre la méthode Studuel et accompagner votre enfant au quotidien,
         avec les conseils du coach scolaire.
       </p>
+
+      {/* Suivi de l'enfant */}
+      <section className="mb-8">
+        <h2 className="font-heading mb-1 flex items-center gap-2 text-lg font-semibold">
+          <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-xl">
+            <LineChart className="size-4" aria-hidden="true" />
+          </span>
+          Le suivi de votre enfant
+        </h2>
+        <p className="text-muted-foreground mb-4 text-sm">
+          Temps de travail, régularité et progrès par matière, mis à jour à
+          chaque session.
+        </p>
+
+        {reports.map(({ childId, dashboard }) => {
+          if (!dashboard) return null
+          const activeDays = new Set(dashboard.active_days)
+          const streak = computeStreak(activeDays, now)
+          const week = weekProgress(activeDays, now)
+          return (
+            <ChildReport
+              key={childId}
+              childId={childId}
+              dashboard={dashboard}
+              streak={streak}
+              week={week}
+            />
+          )
+        })}
+
+        {/* Toujours proposer de lier un (autre) enfant. */}
+        <div className="bg-card rounded-2xl border p-5 shadow-sm">
+          <h3 className="mb-1 font-semibold">
+            {reports.length === 0
+              ? 'Lier le compte de votre enfant'
+              : 'Lier un autre enfant'}
+          </h3>
+          <p className="text-muted-foreground mb-4 text-sm">
+            Saisissez le code de votre enfant pour suivre ses progrès ici.
+          </p>
+          <LinkChildForm />
+        </div>
+      </section>
 
       {/* Programme : vidéos du coach */}
       <section className="mb-8">
@@ -62,7 +130,7 @@ export default async function ParentsPage() {
         </p>
 
         {(videos ?? []).length === 0 ? (
-          <p className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">
+          <p className="text-muted-foreground rounded-2xl border border-dashed p-6 text-center text-sm">
             Les premières vidéos du programme arrivent bientôt.
           </p>
         ) : (
@@ -73,13 +141,13 @@ export default async function ParentsPage() {
                   href={video.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-4 rounded-2xl border bg-card p-4 shadow-sm transition-colors hover:border-primary/50"
+                  className="bg-card hover:border-primary/50 flex items-start gap-4 rounded-2xl border p-4 shadow-sm transition-colors"
                 >
                   <span className="bg-accent text-accent-foreground font-heading flex size-10 shrink-0 items-center justify-center rounded-xl font-bold">
                     {i + 1}
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block font-semibold text-balance">
+                    <span className="block text-balance font-semibold">
                       {video.title}
                     </span>
                     {video.description ? (
@@ -110,22 +178,8 @@ export default async function ParentsPage() {
         )}
       </section>
 
-      {/* Suivi de l'enfant — à venir */}
-      <section className="mb-8">
-        <h2 className="font-heading mb-1 flex items-center gap-2 text-lg font-semibold">
-          <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-xl">
-            <LineChart className="size-4" aria-hidden="true" />
-          </span>
-          Le suivi de votre enfant
-        </h2>
-        <p className="rounded-2xl border border-dashed p-6 text-center text-sm text-muted-foreground">
-          Temps de travail, régularité, progrès par matière : le tableau de
-          suivi arrive bientôt dans cet espace.
-        </p>
-      </section>
-
       {/* Rappel du rôle du parent */}
-      <section className="rounded-2xl border bg-card p-4 shadow-sm">
+      <section className="bg-card rounded-2xl border p-4 shadow-sm">
         <h2 className="font-heading mb-2 flex items-center gap-2 font-semibold">
           <HeartHandshake className="text-primary size-5" aria-hidden="true" />
           Votre rôle en trois gestes
@@ -147,7 +201,10 @@ export default async function ParentsPage() {
         </ul>
         <p className="text-muted-foreground mt-3 text-xs">
           Retour à l&apos;application :{' '}
-          <Link href="/reviser" className="text-primary font-medium underline underline-offset-4">
+          <Link
+            href="/reviser"
+            className="text-primary font-medium underline underline-offset-4"
+          >
             espace élève
           </Link>
         </p>

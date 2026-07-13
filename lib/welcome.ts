@@ -1,95 +1,189 @@
 import type { Subject } from '@/lib/types'
 import { GRADE_LEVELS } from '@/lib/types'
 
-// Parcours d'accueil « façon Duolingo » : entièrement AVANT la création de
-// compte. L'élève vit le parcours, on stocke ses réponses en local, puis on
-// les applique à l'inscription (metadata → trigger handle_new_user). Toute la
-// logique testable vit ici ; les composants ne font qu'afficher.
+// Parcours d'accueil « façon Duolingo » (page /bienvenue) — direction fidèle au
+// design handoff Studuel : 14 écrans, on qualifie l'élève, on l'accroche avec
+// le duel, puis on lui livre un plan perso. Le parcours vit AVANT la création de
+// compte : on stocke les réponses en local, puis on les applique à l'inscription
+// (metadata → trigger handle_new_user). Toute la logique testable vit ici ; les
+// composants ne font qu'afficher et orchestrer.
 
-export type Motivation =
-  | 'controles'
-  | 'examen'
-  | 'confiance'
-  | 'avance'
-  | 'parents'
+export type ProfileType = 'eleve' | 'parent'
 
 export type Source =
   | 'tiktok'
   | 'instagram'
+  | 'youtube'
   | 'ami'
-  | 'prof'
-  | 'recherche'
+  | 'app_store'
   | 'autre'
 
+// Objectif n°1 de l'élève (écran 5) — sert à personnaliser le plan final.
+export type Goal = 'controles' | 'moyenne' | 'examen' | 'avance' | 'defi'
+
+// Objectif quotidien exprimé en minutes (écran 8), façon Duolingo.
+export type DailyGoalMinutes = 3 | 10 | 15 | 30
+
+export type PlacementLevel = 'debutant' | 'intermediaire' | 'avance'
+
+// Résultat du test de placement (écran 10) — null tant qu'il n'a pas été fait
+// ou s'il a été sauté (« Je débute, passer »).
+export type PlacementResult = {
+  correct: number
+  total: number
+  level: PlacementLevel
+} | null
+
 export type OnboardingAnswers = {
-  motivation: Motivation | null
+  profileType: ProfileType | null
   source: Source | null
+  goal: Goal | null
   grade: string | null
   subjects: string[]
-  goal: number
+  dailyGoalMinutes: DailyGoalMinutes
+  placement: PlacementResult
+  friendsInvited: boolean
+  notificationsEnabled: boolean
 }
 
 export const EMPTY_ANSWERS: OnboardingAnswers = {
-  motivation: null,
+  profileType: null,
   source: null,
+  goal: null,
   grade: null,
   subjects: [],
-  goal: 1,
+  dailyGoalMinutes: 10,
+  placement: null,
+  friendsInvited: false,
+  notificationsEnabled: false,
 }
 
-// Ordre des écrans. `intro` accueille, `preparing` est l'écran « on prépare
-// ton espace… », `signup` est le mur d'inscription final.
+// Ordre des 14 écrans (numérotation du design handoff en commentaire).
 export const WELCOME_STEPS = [
-  'intro',
-  'motivation',
-  'source',
-  'grade',
-  'subjects',
-  'goal',
-  'preparing',
-  'signup',
+  'intro', //           1. Bienvenue (splash + logo)
+  'profil', //          2. Parent ou élève
+  'motivation', //      3. Motivation (le crayon te parle)
+  'source', //          4. Comment tu nous as connu ?
+  'goal', //            5. Objectif n°1
+  'grade', //           6. Ta classe
+  'subjects', //        7. Matières (choix multiple)
+  'dailyGoal', //       8. Objectif quotidien (minutes)
+  'placementIntro', //  9. Placement — intro
+  'placementQuiz', //  10. Mini-quiz de placement
+  'friends', //        11. Défie tes amis
+  'notifications', //  12. Notifications
+  'signup', //         13. Créer un compte
+  'plan', //           14. Plan personnalisé (récap)
 ] as const
 
 export type WelcomeStep = (typeof WELCOME_STEPS)[number]
 
-// Étapes qui comptent dans la barre de progression (les questions).
-export const QUESTION_STEPS: WelcomeStep[] = [
-  'motivation',
-  'source',
-  'grade',
-  'subjects',
-  'goal',
-]
-
-export const MOTIVATIONS: { value: Motivation; label: string; emoji: string }[] =
-  [
-    { value: 'controles', label: 'Réussir mes contrôles', emoji: '🎯' },
-    { value: 'examen', label: 'Préparer le brevet ou le bac', emoji: '🏆' },
-    { value: 'confiance', label: 'Reprendre confiance', emoji: '💪' },
-    { value: 'avance', label: "Prendre de l'avance", emoji: '🚀' },
-    { value: 'parents', label: 'Faire plaisir à mes parents', emoji: '💛' },
-  ]
-
-export const SOURCES: { value: Source; label: string; emoji: string }[] = [
-  { value: 'tiktok', label: 'TikTok', emoji: '🎵' },
-  { value: 'instagram', label: 'Instagram', emoji: '📸' },
-  { value: 'ami', label: 'Un ami', emoji: '🧑‍🤝‍🧑' },
-  { value: 'prof', label: 'Un professeur', emoji: '🧑‍🏫' },
-  { value: 'recherche', label: 'Une recherche Google', emoji: '🔎' },
-  { value: 'autre', label: 'Autrement', emoji: '✨' },
-]
-
-export const GOALS: { value: number; label: string; hint: string }[] = [
-  { value: 1, label: '1 session / jour', hint: 'Tranquille et régulier' },
-  { value: 2, label: '2 sessions / jour', hint: 'Motivé·e' },
-  { value: 3, label: '3 sessions / jour', hint: 'Mode examen 🔥' },
-]
-
-export const GRADE_HINTS: Record<string, string> = {
-  '3e': 'Année du brevet',
-  '1re': 'Bac de français',
-  Tle: 'Année du bac',
+// Progression de la barre par écran (valeurs du design). La barre n'apparaît
+// pas sur l'accueil, le profil, la motivation ni le plan final (null).
+const STEP_PROGRESS: Partial<Record<WelcomeStep, number>> = {
+  source: 0.12,
+  goal: 0.24,
+  grade: 0.36,
+  subjects: 0.48,
+  dailyGoal: 0.6,
+  placementIntro: 0.7,
+  placementQuiz: 0.78,
+  friends: 0.86,
+  notifications: 0.92,
+  signup: 0.96,
 }
+
+export function stepProgress(step: WelcomeStep): number | null {
+  return STEP_PROGRESS[step] ?? null
+}
+
+// --- Catalogues d'options ---------------------------------------------------
+
+export const SOURCES: { value: Source; label: string }[] = [
+  { value: 'tiktok', label: 'TikTok' },
+  { value: 'instagram', label: 'Instagram' },
+  { value: 'youtube', label: 'YouTube' },
+  { value: 'ami', label: 'Un ami / la famille' },
+  { value: 'app_store', label: 'App Store' },
+  { value: 'autre', label: 'Autre' },
+]
+
+export const GOALS: { value: Goal; label: string }[] = [
+  { value: 'controles', label: 'Réussir mes contrôles' },
+  { value: 'moyenne', label: 'Remonter ma moyenne' },
+  { value: 'examen', label: 'Préparer le brevet / le bac' },
+  { value: 'avance', label: "Prendre de l'avance" },
+  { value: 'defi', label: 'Défier mes amis' },
+]
+
+// Titre du plan final (écran 14), personnalisé selon l'objectif n°1.
+export const GOAL_HEADLINE: Record<Goal, string> = {
+  controles: 'Objectif : cartonner tes contrôles 🎯',
+  moyenne: 'Objectif : remonter ta moyenne 🚀',
+  examen: 'Objectif : décrocher ton examen 🏆',
+  avance: "Objectif : prendre de l'avance ⚡",
+  defi: 'Objectif : dominer tes duels 🔥',
+}
+
+export const DAILY_GOALS: {
+  minutes: DailyGoalMinutes
+  label: string
+  hint: string
+}[] = [
+  { minutes: 3, label: 'Détente', hint: '3 min / jour' },
+  { minutes: 10, label: 'Régulier', hint: '10 min / jour' },
+  { minutes: 15, label: 'Sérieux', hint: '15 min / jour' },
+  { minutes: 30, label: 'Intense', hint: '30 min / jour' },
+]
+
+const DAILY_GOAL_MINUTES: DailyGoalMinutes[] = [3, 10, 15, 30]
+
+export function isDailyGoalMinutes(n: unknown): n is DailyGoalMinutes {
+  return typeof n === 'number' && DAILY_GOAL_MINUTES.includes(n as DailyGoalMinutes)
+}
+
+// Étiquettes d'affichage des classes (exposants du design).
+export const GRADE_LABELS: Record<string, string> = {
+  '6e': '6ᵉ',
+  '5e': '5ᵉ',
+  '4e': '4ᵉ',
+  '3e': '3ᵉ',
+  '2de': '2ⁿᵈᵉ',
+  '1re': '1ʳᵉ',
+  Tle: 'Terminale',
+}
+
+// --- Conversions & scoring --------------------------------------------------
+
+// La colonne legacy `profiles.daily_goal` est en sessions/jour (utilisée par la
+// capacité, la série, etc.). On dérive les sessions depuis les minutes choisies
+// pour ne rien casser : minutes = source de vérité de l'onboarding.
+export function minutesToSessions(minutes: DailyGoalMinutes): number {
+  if (minutes >= 30) return 3
+  if (minutes >= 15) return 2
+  return 1
+}
+
+// Niveau de placement à partir du score du mini-quiz. Sauté / vide → débutant.
+export function placementLevel(correct: number, total: number): PlacementLevel {
+  if (total <= 0) return 'debutant'
+  const ratio = correct / total
+  if (ratio >= 0.8) return 'avance'
+  if (ratio >= 0.4) return 'intermediaire'
+  return 'debutant'
+}
+
+export function makePlacement(correct: number, total: number): PlacementResult {
+  const safeTotal = Math.max(0, total)
+  const safeCorrect = Math.max(0, Math.min(correct, safeTotal))
+  return {
+    correct: safeCorrect,
+    total: safeTotal,
+    level: placementLevel(safeCorrect, safeTotal),
+  }
+}
+
+// --- Matières ---------------------------------------------------------------
 
 // Matières proposées pour un niveau donné.
 export function subjectsForGrade(
@@ -108,38 +202,34 @@ export function defaultSelectedForGrade(
   return subjectsForGrade(subjects, grade).map((s) => s.slug)
 }
 
-// L'étape en cours est-elle validée (peut-on continuer) ?
+// --- Validation d'avancement ------------------------------------------------
+
+// L'écran en cours autorise-t-il le bouton primaire « Continuer » ? Ne concerne
+// que les écrans à bouton standard (profil, source, goal, grade, subjects,
+// dailyGoal). Les autres écrans ont leurs propres boutons → true.
 export function canAdvance(
   step: WelcomeStep,
   answers: OnboardingAnswers,
 ): boolean {
   switch (step) {
-    case 'motivation':
-      return answers.motivation !== null
+    case 'profil':
+      return answers.profileType !== null
     case 'source':
       return answers.source !== null
+    case 'goal':
+      return answers.goal !== null
     case 'grade':
       return answers.grade !== null
     case 'subjects':
       return answers.subjects.length > 0
-    case 'goal':
-      return [1, 2, 3].includes(answers.goal)
+    case 'dailyGoal':
+      return isDailyGoalMinutes(answers.dailyGoalMinutes)
     default:
-      // intro / preparing / signup n'ont pas de bouton « Continuer » standard.
       return true
   }
 }
 
-// Progression 0→1 pour la barre, ou null quand la barre est masquée
-// (accueil et écran de préparation, où l'on ne veut pas de distraction).
-export function stepProgress(step: WelcomeStep): number | null {
-  const index = QUESTION_STEPS.indexOf(step)
-  if (index >= 0) return (index + 1) / QUESTION_STEPS.length
-  if (step === 'signup') return 1
-  return null
-}
-
-// --- Persistance locale (reprise du parcours après un rafraîchissement) ---
+// --- Persistance locale (reprise du parcours après un rafraîchissement) -----
 
 export const STORAGE_KEY = 'studuel:onboarding'
 
@@ -159,12 +249,14 @@ export function parseAnswers(raw: string | null): OnboardingAnswers {
   if (typeof data !== 'object' || data === null) return { ...EMPTY_ANSWERS }
   const d = data as Record<string, unknown>
 
-  const motivation = MOTIVATIONS.some((m) => m.value === d.motivation)
-    ? (d.motivation as Motivation)
-    : null
+  const profileType =
+    d.profileType === 'eleve' || d.profileType === 'parent'
+      ? d.profileType
+      : null
   const source = SOURCES.some((s) => s.value === d.source)
     ? (d.source as Source)
     : null
+  const goal = GOALS.some((g) => g.value === d.goal) ? (d.goal as Goal) : null
   const grade =
     typeof d.grade === 'string' &&
     (GRADE_LEVELS as readonly string[]).includes(d.grade)
@@ -172,10 +264,33 @@ export function parseAnswers(raw: string | null): OnboardingAnswers {
       : null
   const subjects = Array.isArray(d.subjects)
     ? d.subjects.filter(
-        (s): s is string => typeof s === 'string' && s.length > 0 && s.length < 64,
+        (s): s is string =>
+          typeof s === 'string' && s.length > 0 && s.length < 64,
       )
     : []
-  const goal = [1, 2, 3].includes(d.goal as number) ? (d.goal as number) : 1
+  const dailyGoalMinutes = isDailyGoalMinutes(d.dailyGoalMinutes)
+    ? d.dailyGoalMinutes
+    : 10
+  const placement = readPlacement(d.placement)
+  const friendsInvited = d.friendsInvited === true
+  const notificationsEnabled = d.notificationsEnabled === true
 
-  return { motivation, source, grade, subjects, goal }
+  return {
+    profileType,
+    source,
+    goal,
+    grade,
+    subjects,
+    dailyGoalMinutes,
+    placement,
+    friendsInvited,
+    notificationsEnabled,
+  }
+}
+
+function readPlacement(value: unknown): PlacementResult {
+  if (typeof value !== 'object' || value === null) return null
+  const p = value as Record<string, unknown>
+  if (typeof p.correct !== 'number' || typeof p.total !== 'number') return null
+  return makePlacement(p.correct, p.total)
 }

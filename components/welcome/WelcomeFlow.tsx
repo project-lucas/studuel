@@ -1,45 +1,68 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
-import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
+import { useRouter } from 'next/navigation'
 import type { Subject } from '@/lib/types'
 import {
   STORAGE_KEY,
-  WELCOME_STEPS,
   canAdvance,
   defaultSelectedForGrade,
+  makePlacement,
   parseAnswers,
   serializeAnswers,
   stepProgress,
-  subjectsForGrade,
   type OnboardingAnswers,
   type WelcomeStep,
 } from '@/lib/welcome'
 import {
+  applyOnboarding,
+  fetchPlacementQuestions,
+} from '@/app/bienvenue/actions'
+import type { PlacementQuestion } from '@/lib/placement'
+import PencilLogo from './PencilLogo'
+import OnbButton from './OnbButton'
+import { ProgressHeader } from './OnbBits'
+import {
+  DailyGoalStep,
   GoalStep,
   GradeStep,
-  MascotBubble,
   MotivationStep,
+  ProfilStep,
   SourceStep,
   SubjectsStep,
 } from './WelcomeSteps'
+import {
+  FriendsStep,
+  NotificationsStep,
+  PlacementIntroStep,
+  PlacementQuizStep,
+  PlanStep,
+} from './EngageSteps'
 import SignUpStep from './SignUpStep'
 
-const PREPARING_MS = 2400
-const PREPARING_LINES = [
-  'On adapte ton programme à ta classe…',
-  'On choisit tes premiers défis…',
-  'On allume ta flamme… 🔥',
+// Écrans à bouton « Continuer » standard (footer géré par le flux). Les autres
+// portent leurs propres boutons.
+const STANDARD_FOOTER: WelcomeStep[] = [
+  'profil',
+  'motivation',
+  'source',
+  'goal',
+  'grade',
+  'subjects',
+  'dailyGoal',
 ]
 
-export default function WelcomeFlow({ subjects }: { subjects: Subject[] }) {
-  const [index, setIndex] = useState(0)
-  // Reprise : relit le brouillon local dès le premier rendu (l'accueil ne
-  // dépend d'aucune réponse → pas de décalage d'hydratation visible).
+export default function WelcomeFlow({
+  subjects,
+  finish = false,
+}: {
+  subjects: Subject[]
+  finish?: boolean
+}) {
+  const router = useRouter()
+  const [step, setStep] = useState<WelcomeStep>(finish ? 'plan' : 'intro')
+  const [history, setHistory] = useState<WelcomeStep[]>([])
   const [answers, setAnswers] = useState<OnboardingAnswers>(() =>
     parseAnswers(
       typeof window !== 'undefined'
@@ -47,145 +70,105 @@ export default function WelcomeFlow({ subjects }: { subjects: Subject[] }) {
         : null,
     ),
   )
+  const [questions, setQuestions] = useState<PlacementQuestion[]>([])
+  const [loadingQuiz, setLoadingQuiz] = useState(false)
+  const [finishing, setFinishing] = useState(false)
 
-  const step: WelcomeStep = WELCOME_STEPS[index]
-
-  // Sauvegarde à chaque changement de réponse (reprise après rafraîchissement).
+  // Reprise / persistance du brouillon local.
   useEffect(() => {
     window.localStorage.setItem(STORAGE_KEY, serializeAnswers(answers))
   }, [answers])
 
-  const goNext = useCallback(
-    () => setIndex((i) => Math.min(i + 1, WELCOME_STEPS.length - 1)),
-    [],
-  )
-  const goBack = useCallback(
-    () =>
-      setIndex((i) => {
-        let next = Math.max(i - 1, 0)
-        // Jamais l'écran de préparation en arrière : il s'auto-avance.
-        if (WELCOME_STEPS[next] === 'preparing') next = Math.max(next - 1, 0)
-        return next
-      }),
-    [],
-  )
-
-  // Écran de préparation : avance tout seul vers l'inscription.
-  const [prepLine, setPrepLine] = useState(0)
+  // Retour OAuth (?finish=1) : applique les réponses au profil puis montre le
+  // plan. Le compte existe déjà (session ouverte), pas de metadata au signUp.
   useEffect(() => {
-    if (step !== 'preparing') return
-    const cycle = setInterval(
-      () => setPrepLine((n) => Math.min(n + 1, PREPARING_LINES.length - 1)),
-      PREPARING_MS / PREPARING_LINES.length,
-    )
-    const done = setTimeout(goNext, PREPARING_MS)
-    return () => {
-      clearInterval(cycle)
-      clearTimeout(done)
+    if (!finish) return
+    void applyOnboarding(answers)
+    // On applique une seule fois au montage ; answers vient du localStorage.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [finish])
+
+  function go(to: WelcomeStep) {
+    setHistory((h) => [...h, step])
+    setStep(to)
+  }
+  function back() {
+    if (history.length === 0) return
+    const prev = history[history.length - 1]
+    setHistory((h) => h.slice(0, -1))
+    setStep(prev)
+  }
+
+  // Enchaînement naturel des écrans à bouton « Continuer ».
+  function next() {
+    switch (step) {
+      case 'profil':
+        return go(answers.profileType === 'parent' ? 'signup' : 'motivation')
+      case 'motivation':
+        return go('source')
+      case 'source':
+        return go('goal')
+      case 'goal':
+        return go('grade')
+      case 'grade':
+        return go('subjects')
+      case 'subjects':
+        return go('dailyGoal')
+      case 'dailyGoal':
+        return go('placementIntro')
+      default:
+        return
     }
-  }, [step, goNext])
+  }
 
-  const pickGrade = (grade: string) =>
-    setAnswers((a) => ({
-      ...a,
-      grade,
-      // Nouvelle classe → toutes ses matières cochées par défaut.
-      subjects: defaultSelectedForGrade(subjects, grade),
-    }))
+  async function startPlacement() {
+    setLoadingQuiz(true)
+    const qs = await fetchPlacementQuestions(answers.grade)
+    setQuestions(qs)
+    setLoadingQuiz(false)
+    go('placementQuiz')
+  }
 
-  const toggleSubject = (slug: string) =>
-    setAnswers((a) => ({
-      ...a,
-      subjects: a.subjects.includes(slug)
-        ? a.subjects.filter((s) => s !== slug)
-        : [...a.subjects, slug],
-    }))
+  function finishOnboarding() {
+    setFinishing(true)
+    router.push(answers.profileType === 'parent' ? '/parents' : '/defi')
+  }
 
   const progress = stepProgress(step)
-  const showChrome = step !== 'intro' && step !== 'preparing'
+  const showFlowHeader = progress !== null && step !== 'placementQuiz'
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-background pb-[env(safe-area-inset-bottom)]">
-      {/* En-tête : retour + barre de progression (masqués sur accueil/prépa). */}
-      {showChrome ? (
-        <header className="flex items-center gap-3 px-4 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-3">
-          <button
-            type="button"
-            onClick={goBack}
-            aria-label="Étape précédente"
-            className="flex size-9 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-          >
-            <ArrowLeft className="size-5" />
-          </button>
-          <div
-            className="h-2.5 flex-1 overflow-hidden rounded-full bg-muted"
-            role="progressbar"
-            aria-label="Progression de l'inscription"
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-valuenow={Math.round((progress ?? 0) * 100)}
-          >
-            <div
-              className="h-full rounded-full bg-primary transition-[width] duration-300 ease-out"
-              style={{ width: `${(progress ?? 0) * 100}%` }}
-            />
-          </div>
-        </header>
+    <div className="onb fixed inset-0 z-50 flex flex-col pb-[env(safe-area-inset-bottom)]">
+      {showFlowHeader ? (
+        <ProgressHeader progress={progress} onBack={back} />
       ) : null}
 
-      {step === 'intro' ? (
-        <IntroStep onStart={goNext} />
-      ) : step === 'preparing' ? (
-        <PreparingStep line={PREPARING_LINES[prepLine]} />
+      {step === 'placementQuiz' ? (
+        <div className="mx-auto flex min-h-0 w-full max-w-md flex-1 flex-col">
+          <PlacementQuizStep
+            progress={progress ?? 0.78}
+            questions={questions}
+            onBack={back}
+            onDone={(correct, total) => {
+              setAnswers((a) => ({ ...a, placement: makePlacement(correct, total) }))
+              go('friends')
+            }}
+          />
+        </div>
       ) : (
         <>
-          <main className="min-h-0 flex-1 overflow-y-auto px-5 pb-4">
-            <div className="mx-auto flex w-full max-w-md flex-col pt-2">
-              {step === 'motivation' ? (
-                <MotivationStep
-                  answers={answers}
-                  onPick={(v) => setAnswers((a) => ({ ...a, motivation: v }))}
-                />
-              ) : step === 'source' ? (
-                <SourceStep
-                  answers={answers}
-                  onPick={(v) => setAnswers((a) => ({ ...a, source: v }))}
-                />
-              ) : step === 'grade' ? (
-                <GradeStep answers={answers} onPick={pickGrade} />
-              ) : step === 'subjects' ? (
-                <SubjectsStep
-                  subjects={subjects}
-                  answers={answers}
-                  onToggle={toggleSubject}
-                />
-              ) : step === 'goal' ? (
-                <GoalStep
-                  answers={answers}
-                  onPick={(v) => setAnswers((a) => ({ ...a, goal: v }))}
-                />
-              ) : step === 'signup' ? (
-                <SignUpStep
-                  answers={answers}
-                  subjectCount={subjectsForGrade(subjects, answers.grade).length}
-                />
-              ) : null}
+          <main className="min-h-0 flex-1 overflow-y-auto">
+            <div className="mx-auto flex min-h-full w-full max-w-md flex-col px-[22px] pt-2 pb-[22px]">
+              {renderStep()}
             </div>
           </main>
 
-          {/* Barre d'action : le bouton « Continuer » vit ici, hors du signup
-              (qui a son propre bouton de soumission). */}
-          {step !== 'signup' ? (
-            <footer className="border-t bg-card/60 px-5 py-4 backdrop-blur-sm">
+          {STANDARD_FOOTER.includes(step) ? (
+            <footer className="px-[22px] pt-3 pb-[22px]">
               <div className="mx-auto w-full max-w-md">
-                <Button
-                  size="lg"
-                  className="w-full"
-                  disabled={!canAdvance(step, answers)}
-                  onClick={goNext}
-                >
+                <OnbButton disabled={!canAdvance(step, answers)} onClick={next}>
                   Continuer
-                </Button>
+                </OnbButton>
               </div>
             </footer>
           ) : null}
@@ -193,54 +176,150 @@ export default function WelcomeFlow({ subjects }: { subjects: Subject[] }) {
       )}
     </div>
   )
-}
 
-function IntroStep({ onStart }: { onStart: () => void }) {
-  return (
-    <main className="flex min-h-0 flex-1 flex-col items-center justify-center gap-8 px-6 text-center">
-      <MascotBubble image="/images/mascotte/flamme-3-rayonnante.webp" size={132}>
-        Salut ! Moi c&apos;est ta flamme 🔥 En 30 secondes, je prépare ton
-        espace de révision rien que pour toi.
-      </MascotBubble>
-      <div className="flex w-full max-w-md flex-col gap-2.5">
-        <Button size="lg" className="w-full" onClick={onStart}>
-          Commencer
-        </Button>
-        <Button asChild variant="ghost" size="lg" className="w-full">
-          <Link href="/login">J&apos;ai déjà un compte</Link>
-        </Button>
-      </div>
-    </main>
-  )
-}
+  function renderStep() {
+    switch (step) {
+      case 'intro':
+        return <IntroStep onStart={() => go('profil')} />
+      case 'profil':
+        return (
+          <ProfilStep
+            answers={answers}
+            onPick={(v) => setAnswers((a) => ({ ...a, profileType: v }))}
+          />
+        )
+      case 'motivation':
+        return <MotivationStep />
+      case 'source':
+        return (
+          <SourceStep
+            answers={answers}
+            onPick={(v) => setAnswers((a) => ({ ...a, source: v }))}
+          />
+        )
+      case 'goal':
+        return (
+          <GoalStep
+            answers={answers}
+            onPick={(v) => setAnswers((a) => ({ ...a, goal: v }))}
+          />
+        )
+      case 'grade':
+        return (
+          <GradeStep
+            answers={answers}
+            onPick={(grade) =>
+              setAnswers((a) => ({
+                ...a,
+                grade,
+                subjects: defaultSelectedForGrade(subjects, grade),
+              }))
+            }
+          />
+        )
+      case 'subjects':
+        return (
+          <SubjectsStep
+            subjects={subjects}
+            answers={answers}
+            onToggle={(slug) =>
+              setAnswers((a) => ({
+                ...a,
+                subjects: a.subjects.includes(slug)
+                  ? a.subjects.filter((s) => s !== slug)
+                  : [...a.subjects, slug],
+              }))
+            }
+          />
+        )
+      case 'dailyGoal':
+        return (
+          <DailyGoalStep
+            answers={answers}
+            onPick={(minutes) =>
+              setAnswers((a) => ({ ...a, dailyGoalMinutes: minutes }))
+            }
+          />
+        )
+      case 'placementIntro':
+        return (
+          <PlacementIntroStep
+            loading={loadingQuiz}
+            onStart={() => void startPlacement()}
+            onSkip={() => {
+              setAnswers((a) => ({ ...a, placement: makePlacement(0, 0) }))
+              go('friends')
+            }}
+          />
+        )
+      case 'friends':
+        return (
+          <FriendsStep
+            onInvited={() => {
+              setAnswers((a) => ({ ...a, friendsInvited: true }))
+              go('notifications')
+            }}
+            onSkip={() => go('notifications')}
+          />
+        )
+      case 'notifications':
+        return (
+          <NotificationsStep
+            onDecided={(enabled) => {
+              setAnswers((a) => ({ ...a, notificationsEnabled: enabled }))
+              go('signup')
+            }}
+          />
+        )
+      case 'signup':
+        return (
+          <SignUpStep
+            answers={answers}
+            onSignedUp={() =>
+              // Le parcours parent n'a pas de plan élève : direct l'espace parents.
+              answers.profileType === 'parent'
+                ? router.push('/parents')
+                : go('plan')
+            }
+          />
+        )
+      case 'plan':
+        return (
+          <PlanStep
+            answers={answers}
+            subjectCount={answers.subjects.length}
+            onFinish={finishOnboarding}
+            finishing={finishing}
+          />
+        )
+      default:
+        return null
+    }
+  }
 
-function PreparingStep({ line }: { line: string }) {
-  return (
-    <main className="flex min-h-0 flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
-      <Image
-        src="/images/mascotte/flamme-celebration.webp"
-        alt=""
-        aria-hidden="true"
-        width={148}
-        height={148}
-        priority
-        className="float-slow drop-shadow-sm"
-      />
-      <div className="w-full max-w-xs">
-        <div className="h-2.5 w-full overflow-hidden rounded-full bg-muted">
-          <div className="h-full w-full origin-left animate-[bar-grow_2.4s_ease-out_forwards] rounded-full bg-primary" />
+  // Loader minimal pendant le chargement du quiz (rare, réseau).
+  function IntroStep({ onStart }: { onStart: () => void }) {
+    return (
+      <div className="flex flex-1 flex-col">
+        <div className="flex flex-1 flex-col items-center justify-center text-center">
+          <PencilLogo size={150} className="float-slow" />
+          <div className="onb-word mt-1.5 text-[34px]" style={{ color: 'var(--onb-ink)' }}>
+            studuel
+          </div>
+          <p
+            className="mt-2.5 max-w-[210px] text-[16px] font-bold"
+            style={{ color: 'var(--onb-mut)' }}
+          >
+            Révise, défie tes potes, et cartonne ton année.
+          </p>
         </div>
-        <p
-          aria-live="polite"
-          className={cn(
-            'mt-4 text-sm font-medium text-muted-foreground',
-            'motion-safe:animate-in motion-safe:fade-in',
-          )}
-          key={line}
-        >
-          {line}
-        </p>
+        <div className="mt-auto flex flex-col gap-2.5 pt-4">
+          <OnbButton onClick={onStart}>C&apos;est parti</OnbButton>
+          <Link href="/login" className="onb-btn onb-btn-ghost block text-center no-underline">
+            J&apos;ai déjà un compte
+          </Link>
+        </div>
       </div>
-    </main>
-  )
+    )
+  }
 }

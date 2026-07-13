@@ -1,123 +1,147 @@
 'use client'
 
-import Image from 'next/image'
-import { Check } from 'lucide-react'
+import type { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
-import { subjectIcon } from '@/lib/subject-style'
 import { GRADE_LEVELS, type Subject } from '@/lib/types'
 import {
+  DAILY_GOALS,
   GOALS,
-  GRADE_HINTS,
-  MOTIVATIONS,
+  GRADE_LABELS,
   SOURCES,
   subjectsForGrade,
+  type DailyGoalMinutes,
+  type Goal,
   type OnboardingAnswers,
+  type ProfileType,
+  type Source,
 } from '@/lib/welcome'
+import PencilLogo from './PencilLogo'
+import { Bubble, OptionIcon, OptionRow, StepHead, usePressFx } from './OnbBits'
 
-// La flamme, compagnon du parcours : elle accueille, encourage, félicite.
-// Une bulle de dialogue lui donne une voix (le ressort « façon Duolingo »).
-export function MascotBubble({
-  image,
-  size = 104,
-  children,
-  className,
-}: {
-  image: string
-  size?: number
-  children: React.ReactNode
-  className?: string
-}) {
-  return (
-    <div className={cn('flex flex-col items-center gap-3', className)}>
-      <Image
-        src={image}
-        alt=""
-        aria-hidden="true"
-        width={size}
-        height={size}
-        priority
-        className="float-slow drop-shadow-sm"
-      />
-      <div className="relative max-w-xs rounded-2xl rounded-tl-sm border bg-card px-4 py-3 text-center text-sm font-medium text-foreground shadow-sm">
-        {children}
-      </div>
-    </div>
-  )
-}
-
-// Grand bouton d'option, cœur de chaque écran-question (choix unique).
-function OptionButton({
-  selected,
-  emoji,
-  label,
-  onClick,
-}: {
-  selected: boolean
-  emoji: string
-  label: string
-  onClick: () => void
-}) {
-  return (
-    <button
-      type="button"
-      aria-pressed={selected}
-      onClick={onClick}
-      className={cn(
-        'flex min-h-14 w-full items-center gap-3 rounded-2xl border-2 px-4 py-3 text-left transition-all active:scale-[0.99]',
-        selected
-          ? 'border-primary bg-primary/[0.06] shadow-sm'
-          : 'border-border bg-card hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md',
-      )}
-    >
-      <span aria-hidden className="text-2xl leading-none">
-        {emoji}
-      </span>
-      <span className="min-w-0 flex-1 text-sm font-semibold">{label}</span>
-      <span
-        className={cn(
-          'flex size-5 shrink-0 items-center justify-center rounded-full border-2 transition-colors',
-          selected
-            ? 'border-primary bg-primary text-primary-foreground'
-            : 'border-muted-foreground/30 bg-card',
-        )}
-      >
-        {selected ? <Check className="size-3" strokeWidth={3.5} /> : null}
-      </span>
-    </button>
-  )
-}
-
-function StepTitle({ children }: { children: React.ReactNode }) {
-  return (
-    <h1 className="font-heading text-xl leading-tight font-bold text-balance">
-      {children}
-    </h1>
-  )
-}
-
-export function MotivationStep({
+// ---------------------------------------------------------------------------
+// Écran 2 — Parent ou élève
+// ---------------------------------------------------------------------------
+export function ProfilStep({
   answers,
   onPick,
 }: {
   answers: OnboardingAnswers
-  onPick: (value: OnboardingAnswers['motivation']) => void
+  onPick: (value: ProfileType) => void
 }) {
   return (
-    <div className="flex flex-col gap-4">
-      <StepTitle>Pourquoi tu veux réviser ?</StepTitle>
-      <div className="flex flex-col gap-2.5">
-        {MOTIVATIONS.map((m) => (
-          <OptionButton
-            key={m.value}
-            selected={answers.motivation === m.value}
-            emoji={m.emoji}
-            label={m.label}
-            onClick={() => onPick(m.value)}
-          />
-        ))}
+    <div className="flex flex-1 flex-col pt-3">
+      <StepHead
+        title="Qui utilise Studuel ?"
+        subtitle="On adapte l'expérience selon ton profil."
+      />
+      <div className="flex flex-col gap-[11px] pt-6">
+        <OptionRow
+          selected={answers.profileType === 'eleve'}
+          onClick={() => onPick('eleve')}
+          icon={
+            <OptionIcon color="var(--onb-pp)">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" strokeWidth="2.2">
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 20a8 8 0 0 1 16 0" />
+              </svg>
+            </OptionIcon>
+          }
+          label="Je suis élève"
+          description="Je révise et je défie mes amis en duel"
+        />
+        <OptionRow
+          selected={answers.profileType === 'parent'}
+          onClick={() => onPick('parent')}
+          icon={
+            <OptionIcon color="var(--onb-yl)">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5a3d00" strokeWidth="2.2">
+                <circle cx="8" cy="8" r="3.2" />
+                <circle cx="16" cy="9" r="2.6" />
+                <path d="M2 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 8-3.8" />
+              </svg>
+            </OptionIcon>
+          }
+          label="Je suis parent"
+          description="Je crée un compte pour mon enfant"
+        />
       </div>
     </div>
   )
+}
+
+// ---------------------------------------------------------------------------
+// Écran 3 — Motivation (le crayon te parle)
+// ---------------------------------------------------------------------------
+export function MotivationStep() {
+  return (
+    <div className="flex flex-1 flex-col items-center justify-center text-center">
+      <div className="mb-7 max-w-[280px]">
+        <Bubble>Salut ! On va faire de toi la terreur des contrôles 💪</Bubble>
+      </div>
+      <PencilLogo size={130} className="float-slow" />
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Écran 4 — Comment tu nous as connu ?
+// ---------------------------------------------------------------------------
+const SOURCE_ICONS: Record<Source, { color: string; icon: ReactNode }> = {
+  tiktok: {
+    color: '#111',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M16 3c.5 2.5 2 4 4.5 4.2v3C18.8 10 17.3 9.4 16 8.4V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.2A3 3 0 1 0 13 15V3h3z" />
+      </svg>
+    ),
+  },
+  instagram: {
+    color: '#E1306C',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+      </svg>
+    ),
+  },
+  youtube: {
+    color: '#FF0000',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M22 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.5A2.5 2.5 0 0 0 2.4 7.3C2 8.8 2 12 2 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C5.7 19 12 19 12 19s6.3 0 7.8-.5a2.5 2.5 0 0 0 1.8-1.8C22 15.2 22 12 22 12zM10 15V9l5 3-5 3z" />
+      </svg>
+    ),
+  },
+  ami: {
+    color: 'var(--onb-yl)',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2">
+        <circle cx="9" cy="8" r="3" />
+        <circle cx="17" cy="9" r="2.3" />
+        <path d="M3 19a6 6 0 0 1 12 0M15.5 19a5 5 0 0 1 5.5-4.7" />
+      </svg>
+    ),
+  },
+  app_store: {
+    color: 'var(--onb-pp)',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M20 20l-3.5-3.5" />
+      </svg>
+    ),
+  },
+  autre: {
+    color: 'var(--onb-mut)',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <circle cx="5" cy="12" r="2" />
+        <circle cx="12" cy="12" r="2" />
+        <circle cx="19" cy="12" r="2" />
+      </svg>
+    ),
+  },
 }
 
 export function SourceStep({
@@ -125,23 +149,133 @@ export function SourceStep({
   onPick,
 }: {
   answers: OnboardingAnswers
-  onPick: (value: OnboardingAnswers['source']) => void
+  onPick: (value: Source) => void
 }) {
   return (
-    <div className="flex flex-col gap-4">
-      <StepTitle>Comment tu as connu Studuel ?</StepTitle>
-      <div className="flex flex-col gap-2.5">
-        {SOURCES.map((s) => (
-          <OptionButton
-            key={s.value}
-            selected={answers.source === s.value}
-            emoji={s.emoji}
-            label={s.label}
-            onClick={() => onPick(s.value)}
-          />
-        ))}
+    <div className="flex flex-1 flex-col">
+      <StepHead title="Comment tu as connu Studuel ?" />
+      <div className="flex flex-col gap-[11px] pt-6">
+        {SOURCES.map((s) => {
+          const meta = SOURCE_ICONS[s.value]
+          return (
+            <OptionRow
+              key={s.value}
+              selected={answers.source === s.value}
+              onClick={() => onPick(s.value)}
+              icon={<OptionIcon color={meta.color}>{meta.icon}</OptionIcon>}
+              label={s.label}
+            />
+          )
+        })}
       </div>
     </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Écran 5 — Objectif n°1
+// ---------------------------------------------------------------------------
+const GOAL_ICONS: Record<Goal, { color: string; icon: ReactNode }> = {
+  controles: {
+    color: 'var(--onb-co)',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2">
+        <path d="M5 13l4 4L19 7" />
+      </svg>
+    ),
+  },
+  moyenne: {
+    color: 'var(--onb-pp)',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2">
+        <path d="M4 19V9m5 10V5m5 14v-7m5 7V8" />
+      </svg>
+    ),
+  },
+  examen: {
+    color: 'var(--onb-yl)',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2">
+        <path d="M12 3l2.5 5.3 5.8.8-4.2 4 1 5.7L12 16l-5.1 2.6 1-5.7L3.7 9l5.8-.8z" />
+      </svg>
+    ),
+  },
+  avance: {
+    color: '#2AA36B',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2">
+        <path d="M4 18l6-6 4 4 6-8" />
+      </svg>
+    ),
+  },
+  defi: {
+    color: 'var(--onb-ink)',
+    icon: (
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2">
+        <path d="M13 3L5 14h5l-1 7 8-11h-5z" />
+      </svg>
+    ),
+  },
+}
+
+export function GoalStep({
+  answers,
+  onPick,
+}: {
+  answers: OnboardingAnswers
+  onPick: (value: Goal) => void
+}) {
+  return (
+    <div className="flex flex-1 flex-col">
+      <StepHead title="Ton objectif n°1 ?" subtitle="On adapte ton plan en fonction." />
+      <div className="flex flex-col gap-[11px] pt-6">
+        {GOALS.map((g) => {
+          const meta = GOAL_ICONS[g.value]
+          return (
+            <OptionRow
+              key={g.value}
+              selected={answers.goal === g.value}
+              onClick={() => onPick(g.value)}
+              icon={<OptionIcon color={meta.color}>{meta.icon}</OptionIcon>}
+              label={g.label}
+            />
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Écran 6 — Ta classe
+// ---------------------------------------------------------------------------
+function GradeCell({
+  label,
+  selected,
+  onPick,
+}: {
+  label: string
+  selected: boolean
+  onPick: () => void
+}) {
+  const { pop, onPress, onAnimationEnd } = usePressFx()
+  return (
+    <button
+      type="button"
+      aria-pressed={selected}
+      onClick={() => {
+        onPress()
+        onPick()
+      }}
+      onAnimationEnd={onAnimationEnd}
+      className={cn(
+        'onb-card flex items-center justify-center px-3 py-[15px] text-[15px] font-extrabold',
+        selected && 'onb-card-on',
+        pop && 'onb-pop',
+      )}
+    >
+      {label}
+    </button>
   )
 }
 
@@ -153,52 +287,63 @@ export function GradeStep({
   onPick: (grade: string) => void
 }) {
   return (
-    <div className="flex flex-col gap-4">
-      <StepTitle>En quelle classe es-tu ?</StepTitle>
-      <p className="text-sm text-muted-foreground">
-        On adapte tes cours, quiz et flashcards à ton programme.
-      </p>
-      <div className="grid grid-cols-2 gap-2.5">
-        {GRADE_LEVELS.map((g) => {
-          const selected = answers.grade === g
-          return (
-            <button
-              key={g}
-              type="button"
-              aria-pressed={selected}
-              onClick={() => onPick(g)}
-              className={cn(
-                'relative flex min-h-16 flex-col justify-center rounded-2xl border-2 px-4 py-3 text-left transition-all active:scale-[0.98]',
-                selected
-                  ? 'border-primary bg-primary text-primary-foreground shadow-md shadow-primary/25'
-                  : 'border-border bg-card hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md',
-              )}
-            >
-              {selected ? (
-                <span className="absolute top-2.5 right-2.5 flex size-5 items-center justify-center rounded-full bg-primary-foreground/20">
-                  <Check className="size-3" strokeWidth={3.2} />
-                </span>
-              ) : null}
-              <span className="font-heading text-xl leading-none font-bold">
-                {g}
-              </span>
-              {GRADE_HINTS[g] ? (
-                <span
-                  className={cn(
-                    'mt-1.5 inline-block w-fit rounded-full px-2 py-0.5 text-[10px] font-semibold',
-                    selected
-                      ? 'bg-primary-foreground/15 text-primary-foreground/90'
-                      : 'bg-highlight/20 text-foreground/70',
-                  )}
-                >
-                  {GRADE_HINTS[g]}
-                </span>
-              ) : null}
-            </button>
-          )
-        })}
+    <div className="flex flex-1 flex-col">
+      <StepHead
+        title="Tu es en quelle classe ?"
+        subtitle="Pour te proposer le bon programme."
+      />
+      <div className="grid grid-cols-2 gap-[11px] pt-6">
+        {GRADE_LEVELS.map((g) => (
+          <GradeCell
+            key={g}
+            label={GRADE_LABELS[g] ?? g}
+            selected={answers.grade === g}
+            onPick={() => onPick(g)}
+          />
+        ))}
       </div>
     </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Écran 7 — Matières (choix multiple)
+// ---------------------------------------------------------------------------
+function SubjectChip({
+  name,
+  selected,
+  onToggle,
+}: {
+  name: string
+  selected: boolean
+  onToggle: () => void
+}) {
+  const { pop, onPress, onAnimationEnd } = usePressFx()
+  return (
+    <button
+      type="button"
+      role="checkbox"
+      aria-checked={selected}
+      onClick={() => {
+        onPress()
+        onToggle()
+      }}
+      onAnimationEnd={onAnimationEnd}
+      className={cn(
+        'rounded-[18px] border-2 px-[16px] py-[11px] text-[14.5px] font-extrabold transition-colors active:translate-y-[2px]',
+        pop && 'onb-pop',
+      )}
+      style={{
+        borderColor: selected ? 'var(--onb-pp)' : 'var(--onb-line)',
+        background: selected ? 'var(--onb-pp)' : '#fff',
+        color: selected ? '#fff' : 'var(--onb-ink)',
+        boxShadow: selected
+          ? '0 3px 0 var(--onb-ppd)'
+          : '0 3px 0 var(--onb-line-d)',
+      }}
+    >
+      {name}
+    </button>
   )
 }
 
@@ -213,118 +358,73 @@ export function SubjectsStep({
 }) {
   const ofLevel = subjectsForGrade(subjects, answers.grade)
   return (
-    <div className="flex flex-col gap-4">
-      <StepTitle>Tes matières en {answers.grade}</StepTitle>
-      <p className="text-sm text-muted-foreground">
-        Décoche ce que tu ne suis pas (options, spécialités…). Modifiable plus
-        tard.
-      </p>
-      <div className="grid grid-cols-2 gap-2">
-        {ofLevel.map((s) => {
-          const checked = answers.subjects.includes(s.slug)
-          const Icon = subjectIcon(s.slug)
-          return (
-            <button
-              key={s.slug}
-              type="button"
-              role="checkbox"
-              aria-checked={checked}
-              aria-label={s.name}
-              onClick={() => onToggle(s.slug)}
-              className={cn(
-                'relative flex items-center gap-2.5 rounded-2xl border-2 p-2.5 text-left transition-all active:scale-[0.97]',
-                checked
-                  ? 'border-primary/40 bg-primary/[0.04] shadow-sm'
-                  : 'border-border bg-card opacity-55 hover:opacity-100',
-              )}
-            >
-              <span
-                className={cn(
-                  'flex size-9 shrink-0 items-center justify-center rounded-xl transition-colors',
-                  checked
-                    ? 'bg-primary/10 text-primary'
-                    : 'bg-muted text-muted-foreground',
-                )}
-              >
-                <Icon className="size-4.5" strokeWidth={2} />
-              </span>
-              <span className="min-w-0 flex-1 pr-5 text-xs leading-tight font-bold">
-                {s.name}
-              </span>
-              <span
-                className={cn(
-                  'absolute top-2 right-2 flex size-4.5 items-center justify-center rounded-full border transition-colors',
-                  checked
-                    ? 'border-primary bg-primary text-primary-foreground'
-                    : 'border-muted-foreground/30 bg-card',
-                )}
-              >
-                {checked ? <Check className="size-3" strokeWidth={3} /> : null}
-              </span>
-            </button>
-          )
-        })}
+    <div className="flex flex-1 flex-col">
+      <StepHead
+        title="Quelles matières bosser ?"
+        subtitle="Choisis-en autant que tu veux."
+      />
+      <div className="flex flex-wrap content-start gap-[10px] pt-6">
+        {ofLevel.map((s) => (
+          <SubjectChip
+            key={s.slug}
+            name={s.name}
+            selected={answers.subjects.includes(s.slug)}
+            onToggle={() => onToggle(s.slug)}
+          />
+        ))}
       </div>
     </div>
   )
 }
 
-export function GoalStep({
+// ---------------------------------------------------------------------------
+// Écran 8 — Objectif quotidien (minutes)
+// ---------------------------------------------------------------------------
+export function DailyGoalStep({
   answers,
   onPick,
 }: {
   answers: OnboardingAnswers
-  onPick: (goal: number) => void
+  onPick: (minutes: DailyGoalMinutes) => void
 }) {
   return (
-    <div className="flex flex-col gap-4">
-      <StepTitle>Ton objectif quotidien ?</StepTitle>
-      <p className="text-sm text-muted-foreground">
-        Chaque jour tenu remplit ta série 🔥 — tu pourras le changer plus tard.
-      </p>
-      <div className="flex flex-col gap-2.5">
-        {GOALS.map((g) => {
-          const selected = answers.goal === g.value
+    <div className="flex flex-1 flex-col">
+      <StepHead
+        title="Ton objectif quotidien ?"
+        subtitle="Tu pourras le changer plus tard."
+      />
+      <div className="flex flex-col gap-[11px] pt-6">
+        {DAILY_GOALS.map((g) => {
+          const selected = answers.dailyGoalMinutes === g.minutes
           return (
-            <button
-              key={g.value}
-              type="button"
-              aria-pressed={selected}
-              onClick={() => onPick(g.value)}
-              className={cn(
-                'flex items-center gap-3 rounded-2xl border-2 px-4 py-3 text-left transition-all active:scale-[0.99]',
-                selected
-                  ? 'border-primary bg-primary text-primary-foreground shadow-md shadow-primary/25'
-                  : 'border-border bg-card hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md',
-              )}
-            >
-              <span
-                className={cn(
-                  'flex size-9 shrink-0 items-center justify-center rounded-xl font-heading text-base font-bold tabular-nums transition-colors',
-                  selected
-                    ? 'bg-primary-foreground/20 text-primary-foreground'
-                    : 'bg-primary/10 text-primary',
-                )}
-              >
-                {g.value}
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block text-sm font-semibold">{g.label}</span>
-                <span
-                  className={cn(
-                    'block text-xs',
-                    selected
-                      ? 'text-primary-foreground/80'
-                      : 'text-muted-foreground',
-                  )}
-                >
-                  {g.hint}
-                </span>
-              </span>
-              {selected ? (
-                <Check className="size-4.5 shrink-0" strokeWidth={3} />
-              ) : null}
-            </button>
+            <OptionRow
+              key={g.minutes}
+              selected={selected}
+              onClick={() => onPick(g.minutes)}
+              label={g.label}
+              trailing={
+                <div className="flex items-center gap-3">
+                  <span
+                    className="text-[13px] font-bold"
+                    style={{
+                      color: selected ? 'var(--onb-pp)' : 'var(--onb-mut)',
+                    }}
+                  >
+                    {g.hint}
+                  </span>
+                  <span
+                    className="shrink-0 rounded-full border-2"
+                    style={{
+                      width: 26,
+                      height: 26,
+                      borderColor: selected ? 'var(--onb-pp)' : 'var(--onb-line)',
+                      background: selected ? 'var(--onb-pp)' : '#fff',
+                      boxShadow: selected ? 'inset 0 0 0 4px #fff' : undefined,
+                    }}
+                  />
+                </div>
+              }
+            />
           )
         })}
       </div>

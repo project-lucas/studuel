@@ -29,7 +29,7 @@ npm test           # Vitest (tests unitaires de lib/)
 - **Nouvelle migration = nouveau fichier numéroté idempotent** dans `supabase/` (ne jamais modifier une migration déjà exécutée) ; signaler à l'utilisateur qu'il doit l'exécuter à la main.
 - **Dates** : jours = clés UTC `YYYY-MM-DD`, semaine commence lundi (index 0). Heures « élève » (créneaux de trajet) en Europe/Paris. Helpers dans `lib/time.ts`.
 - **UI en français** uniquement (textes, labels, messages d'erreur).
-- **Design system « Toque & Gland »** : couleurs par rôle sémantique via les tokens Tailwind/CSS existants (marine `primary` = action/marque, orange `highlight`/`accent` = progression/récompense, flamme ambre→orange = série uniquement, palette `.rev-*` sur Réviser) — pas de couleurs hex en dur hors flamme, pas d'orange comme couleur d'action.
+- **Design system « crème & violet » (façon Duolingo)** : le monde visuel de l'onboarding `/bienvenue` étendu à toute l'app via les tokens sémantiques dans `:root` (globals.css). Fond **crème** `--background`, encre marine douce `--foreground`, **violet** `primary` = action/marque, **jaune solaire** `highlight`/`accent` = progression/récompense/XP, corail `destructive` = alertes, flamme ambre→orange = série uniquement. Typo **Nunito** (corps) + **Baloo 2** (titres). Utiliser les rôles sémantiques, **pas de couleurs hex en dur** hors flamme. Mondes scoping toujours en place : `.rev-*` (Réviser) et `.moi-*` (Moi) déjà violet+crème, `.onb-*` (onboarding), arène Défi en violet profond (`.defi-arena-bg`). Le mode sombre est neutralisé (`<html class="light">`).
 - Pas de commit sans demande explicite de l'utilisateur.
 
 ## Navigation du code (graphify — par défaut)

@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Bricolage_Grotesque,
+  Nunito,
+  Baloo_2,
+} from "next/font/google";
 import "./globals.css";
 // Navigation responsive : barre d'onglets en bas (mobile) + sidebar (desktop)
 import Navigation from "@/components/Navigation";
@@ -25,6 +31,21 @@ const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
 });
 
+// Onboarding « Studuel » — monde visuel autonome façon Duolingo : Nunito pour
+// l'UI, Baloo 2 pour le wordmark et les gros titres. Chargées ici (variables
+// CSS) mais utilisées uniquement sous la portée `.onb` (page /bienvenue).
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const baloo = Baloo_2({
+  variable: "--font-baloo",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+});
+
 export const metadata: Metadata = {
   title: "Studuel",
   description: "Apprends, teste-toi, progresse — de la 6e à la Terminale.",
@@ -47,7 +68,7 @@ export default async function RootLayout({
       lang="fr"
       // Les variables de police vivent sur <html> : la règle globale
       // `font-sans` s'applique ici, elles doivent y être visibles.
-      className={`light ${geistSans.variable} ${geistMono.variable} ${bricolage.variable}`}
+      className={`light ${geistSans.variable} ${geistMono.variable} ${bricolage.variable} ${nunito.variable} ${baloo.variable}`}
     >
       <body className="antialiased">
         {/* Mobile first : contenu entre la barre du haut (compte) et la barre

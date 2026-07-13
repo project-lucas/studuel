@@ -7,11 +7,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /* Bricolage Grotesque partout : la même voix sur toute l'app,
-     Geist en repli si la police ne charge pas. */
-  --font-sans: var(--font-bricolage), var(--font-geist-sans);
+  /* Nunito partout (monde « Studuel » façon Duolingo) : la même voix ronde et
+     chaleureuse sur toute l'app, Baloo 2 pour les gros titres. Geist en repli. */
+  --font-sans: var(--font-nunito), var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-bricolage);
+  --font-heading: var(--font-baloo), var(--font-nunito);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -52,49 +52,54 @@
 }
 
 /* =============================================================================
-   Scolaria — « Toque & Gland »
-   Les couleurs de la mascotte : le bleu marine de la toque de diplômé,
-   l'orange chaleureux du gland. Fond blanc, encre marine, touches d'orange.
+   Studuel — monde « crème & violet » (façon Duolingo)
+   Le monde visuel de l'onboarding étendu à toute l'app : fond crème chaud,
+   encre marine douce, violet primaire pour l'action, jaune solaire pour la
+   récompense/progression, corail pour les alertes. Voir aussi la portée `.onb`
+   (page /bienvenue) : mêmes valeurs, en tokens locaux.
    ========================================================================== */
 
 :root {
-  /* Papier : blanc franc, à peine tiédi */
-  --background: oklch(0.99 0.003 250);
-  --foreground: oklch(0.28 0.06 262);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.28 0.06 262);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.28 0.06 262);
-  /* Encre : bleu marine de la toque */
-  --primary: oklch(0.33 0.11 262);
-  --primary-foreground: oklch(0.99 0.005 250);
-  --secondary: oklch(0.955 0.012 262);
-  --secondary-foreground: oklch(0.33 0.08 262);
-  --muted: oklch(0.955 0.012 262);
-  --muted-foreground: oklch(0.5 0.04 262);
-  /* Accent : orange du gland, doux en surface, texte marine */
-  --accent: oklch(0.9 0.08 68);
-  --accent-foreground: oklch(0.3 0.07 262);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.9 0.014 262);
-  --input: oklch(0.9 0.014 262);
-  --ring: oklch(0.33 0.11 262);
-  /* Orange franc du gland (barres, marquages, flammes) */
-  --highlight: oklch(0.76 0.14 62);
-  --chart-1: oklch(0.33 0.11 262);
-  --chart-2: oklch(0.76 0.14 62);
-  --chart-3: oklch(0.55 0.1 262);
-  --chart-4: oklch(0.5 0.04 262);
-  --chart-5: oklch(0.28 0.07 262);
-  --radius: 1rem;
-  --sidebar: oklch(1 0 0);
-  --sidebar-foreground: oklch(0.28 0.06 262);
-  --sidebar-primary: oklch(0.33 0.11 262);
-  --sidebar-primary-foreground: oklch(0.99 0.005 250);
-  --sidebar-accent: oklch(0.9 0.08 68);
-  --sidebar-accent-foreground: oklch(0.3 0.07 262);
-  --sidebar-border: oklch(0.9 0.014 262);
-  --sidebar-ring: oklch(0.33 0.11 262);
+  /* Papier : crème chaud (identique au fond onboarding) */
+  --background: #ede7d6;
+  --foreground: #24304f;
+  --card: #ffffff;
+  --card-foreground: #24304f;
+  --popover: #ffffff;
+  --popover-foreground: #24304f;
+  /* Action / marque : violet vif, texte blanc */
+  --primary: #7a3fe0;
+  --primary-foreground: #ffffff;
+  /* Surfaces douces : violet très clair */
+  --secondary: #eee7fc;
+  --secondary-foreground: #4a2597;
+  /* Sourdine : crème assombri, texte taupe */
+  --muted: #e6ddc9;
+  --muted-foreground: #8f8a78;
+  /* Accent : jaune doux en surface, texte brun chaud */
+  --accent: #fdecc7;
+  --accent-foreground: #5a3d00;
+  /* Alerte : corail (cœurs, erreurs) */
+  --destructive: #f1566c;
+  --border: #e2dac6;
+  --input: #e2dac6;
+  --ring: #7a3fe0;
+  /* Récompense / progression / flammes : jaune solaire */
+  --highlight: #f5b722;
+  --chart-1: #7a3fe0;
+  --chart-2: #f5b722;
+  --chart-3: #f1566c;
+  --chart-4: #8f8a78;
+  --chart-5: #24304f;
+  --radius: 1.1rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #24304f;
+  --sidebar-primary: #7a3fe0;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fdecc7;
+  --sidebar-accent-foreground: #5a3d00;
+  --sidebar-border: #e2dac6;
+  --sidebar-ring: #7a3fe0;
 }
 
 /* Nuit d'encre — valeurs partagées entre .dark (classe) et le thème système */
@@ -664,6 +669,24 @@ a:hover > .wiggle-on-hover {
     color-mix(in oklch, var(--primary), transparent 97%);
 }
 
+/* Fond de l'onglet Défi : arène immersive en violet profond, dérivée du token
+   --primary (plus de mur marine). On garde une base sombre pour que les tuiles
+   vives et le texte blanc de l'Arène restent lisibles, tout en restant sur la
+   couleur de marque du monde « Studuel ». */
+.defi-arena-bg {
+  background:
+    radial-gradient(
+      130% 90% at 50% -8%,
+      color-mix(in oklch, var(--primary), white 6%),
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--primary), black 55%),
+      color-mix(in oklch, var(--primary), black 74%)
+    );
+}
+
 /* Anneau d'arcade autour du GO : pointillés qui tournent lentement. */
 @keyframes ring-spin {
   to {
@@ -779,6 +802,141 @@ a:hover > .wiggle-on-hover {
 .moi-token-done {
   background: linear-gradient(160deg, oklch(0.62 0.24 312), oklch(0.48 0.26 308));
   box-shadow: 0 0 0 3px oklch(0.62 0.24 315 / 0.3);
+}
+
+/* =============================================================================
+   Onboarding « Studuel » — monde visuel autonome (page /bienvenue)
+   Direction fidèle au design handoff (Duolingo-like) : violet + crème, polices
+   Nunito/Baloo 2, boutons 3D à socle dur. Tokens LOCAUX à cette portée `.onb`
+   — même principe que `.rev-*` (Réviser) et `.moi-*` (Moi) : le reste de l'app
+   garde le code couleur marine/orange strict. Monde clair assumé (aucun mode
+   nuit) : les couleurs sont posées en dur sous `.onb`, insensibles au thème.
+   ========================================================================== */
+.onb {
+  --onb-cream: #ede7d6;
+  --onb-ink: #24304f;
+  --onb-pp: #7a3fe0; /* violet primaire — action / sélection */
+  --onb-ppd: #5b27b3; /* socle bouton violet */
+  --onb-pps: #eee7fc; /* fond sélection */
+  --onb-yl: #f5b722; /* jaune accent — CTA secondaire / XP */
+  --onb-yld: #d8990a;
+  --onb-co: #f1566c; /* corail — cœurs / accents */
+  --onb-wood: #f3d3a0;
+  --onb-line: #e2dac6; /* bordure carte */
+  --onb-line-d: #cdc4ab; /* socle dur des cartes non sélectionnées */
+  --onb-mut: #8f8a78; /* texte secondaire */
+  --onb-track: #ddd4be; /* piste barre de progression */
+
+  background: var(--onb-cream);
+  color: var(--onb-ink);
+  font-family: var(--font-nunito), system-ui, sans-serif;
+}
+.onb-title {
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.onb-word {
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Boutons 3D « façon Duolingo » : socle dur qui s'enfonce au press (~80 ms). */
+.onb-btn {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  background: var(--onb-pp);
+  color: #fff;
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 15px;
+  box-shadow: 0 5px 0 var(--onb-ppd);
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease;
+}
+.onb-btn:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--onb-ppd);
+}
+.onb-btn:disabled {
+  background: var(--onb-track);
+  color: #fff;
+  box-shadow: 0 5px 0 #c7bda6;
+  cursor: not-allowed;
+}
+.onb-btn-yellow {
+  background: var(--onb-yl);
+  color: #5a3d00;
+  box-shadow: 0 5px 0 var(--onb-yld);
+}
+.onb-btn-yellow:active:not(:disabled) {
+  box-shadow: 0 1px 0 var(--onb-yld);
+}
+.onb-btn-ghost {
+  background: #fff;
+  color: var(--onb-pp);
+  border: 2px solid var(--onb-line);
+  box-shadow: 0 4px 0 var(--onb-line);
+}
+.onb-btn-ghost:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--onb-line);
+}
+
+/* Cartes de choix (options / cases à cocher) : socle dur « façon Duolingo »,
+   plus grandes, qui s'enfoncent au press, avec un petit rebond « pop » au clic. */
+.onb-card {
+  position: relative;
+  border: 2px solid var(--onb-line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 3px 0 var(--onb-line-d);
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease,
+    border-color 0.12s ease,
+    background 0.12s ease;
+}
+.onb-card:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--onb-line-d);
+}
+.onb-card-on {
+  border-color: var(--onb-pp);
+  background: var(--onb-pps);
+  box-shadow: 0 3px 0 var(--onb-ppd);
+}
+.onb-card-on:active {
+  box-shadow: 0 1px 0 var(--onb-ppd);
+}
+@keyframes onb-pop {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.035);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.onb-pop {
+  animation: onb-pop 0.2s ease;
+}
+
+/* Piste de progression : reflet interne sur le remplissage violet. */
+.onb-track-bar {
+  background: var(--onb-track);
+}
+.onb-fill {
+  background: var(--onb-pp);
+  box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.32);
 }
 
 /* Accessibilité : on coupe les animations si l'utilisateur les refuse */

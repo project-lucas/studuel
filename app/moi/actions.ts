@@ -4,9 +4,19 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { habitDays, PLANIFIER_CATALOG_ID } from '@/lib/habits'
 import { CAPACITY_QUESTIONS, computeCapacity } from '@/lib/capacity'
-import { isDebriefOutcome, isDebriefPairId } from '@/lib/debrief'
+import {
+  DEBRIEF_REWARD_COINS,
+  debriefComplete,
+  isDebriefOutcome,
+  isDebriefPairId,
+  type DebriefOutcome,
+} from '@/lib/debrief'
+import { normalizeAvatarConfig } from '@/lib/avatar'
 import { toDayKey } from '@/lib/streak'
 import type { CommuteSlot, Habit } from '@/lib/types'
+
+// Le client Supabase tel que renvoyé par notre createClient serveur.
+type ServerSupabase = Awaited<ReturnType<typeof createClient>>
 
 const isTimeStr = (v: unknown): v is string =>
   typeof v === 'string' && /^\d{2}:\d{2}$/.test(v)
@@ -231,6 +241,38 @@ export async function saveDebriefHabits(pairIds: string[]): Promise<void> {
   revalidatePath('/moi')
 }
 
+// Récompense du débrief du jour : si toutes les habitudes référencées ont une
+// issue aujourd'hui, on réclame le forfait de pièces. claim_debrief_reward est
+// idempotent (une fois par jour UTC), donc on peut l'appeler à chaque tap sans
+// risque de double crédit. Toute erreur reste non bloquante (loggée).
+async function maybeClaimDebriefReward(
+  supabase: ServerSupabase,
+  userId: string,
+): Promise<void> {
+  const date = toDayKey(new Date())
+  const [{ data: selRows }, { data: logRows }] = await Promise.all([
+    supabase.from('debrief_habits').select('pair_id').eq('user_id', userId),
+    supabase
+      .from('debrief_logs')
+      .select('pair_id, outcome')
+      .eq('user_id', userId)
+      .eq('date', date),
+  ])
+
+  const selected = (selRows ?? []).map((r) => String(r.pair_id))
+  const outcomes: Record<string, DebriefOutcome> = {}
+  for (const r of logRows ?? []) {
+    if (isDebriefOutcome(r.outcome)) outcomes[String(r.pair_id)] = r.outcome
+  }
+  if (!debriefComplete(selected, outcomes)) return
+
+  const { error } = await supabase.rpc('claim_debrief_reward', {
+    p_coins: DEBRIEF_REWARD_COINS,
+  })
+  // Fonction absente (081 pas encore passée) → on n'en fait pas un plantage.
+  if (error) console.error('[moi] récompense débrief non créditée:', error.message)
+}
+
 // Débrief du jour : victoire ('good'), rechute ('bad') ou effacement (null).
 export async function logDebrief(
   pairId: string,
@@ -250,7 +292,25 @@ export async function logDebrief(
       { user_id: userId, pair_id: pairId, date, outcome },
       { onConflict: 'user_id,pair_id,date' },
     )
+    // Créditer dès que le débrief du jour est complet (idempotent, 1×/jour).
+    await maybeClaimDebriefReward(supabase, userId)
   }
+  revalidatePath('/moi')
+}
+
+// Avatar personnalisé : enregistre la config choisie (validée contre le
+// catalogue fermé de lib/avatar.ts). Voir supabase/082_avatar.sql.
+export async function saveAvatar(config: unknown): Promise<void> {
+  const { supabase, userId } = await requireUser()
+  if (!userId) return
+
+  const clean = normalizeAvatarConfig(config)
+  const { error } = await supabase
+    .from('profiles')
+    .update({ avatar: clean })
+    .eq('id', userId)
+  // GRANT UPDATE(avatar) manquant (082 pas passée) échouerait en silence.
+  if (error) console.error('[moi] avatar non enregistré:', error.message)
   revalidatePath('/moi')
 }
 

@@ -13,6 +13,7 @@ import CapacityScore from '@/components/CapacityScore'
 import type { DayStatus } from '@/components/DisciplineCalendar'
 import WeekSection from '@/components/WeekSection'
 import MoiHeader from '@/components/MoiHeader'
+import MoiTabs from '@/components/MoiTabs'
 import MoiExtras from '@/components/MoiExtras'
 import CompagnonCard from '@/components/CompagnonCard'
 import DebriefCard from '@/components/DebriefCard'
@@ -31,7 +32,12 @@ import {
 } from '@/lib/habits'
 import { commuteStreak } from '@/lib/trajet'
 import { SHOP_CATALOG } from '@/lib/tresor'
-import { isDebriefOutcome, type DebriefOutcome } from '@/lib/debrief'
+import {
+  debriefYearStats,
+  isDebriefOutcome,
+  type DebriefOutcome,
+} from '@/lib/debrief'
+import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
 import type {
   Habit,
   HabitLog,
@@ -97,7 +103,7 @@ export default async function MoiPage({
     await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, commute_slots, capacity_quiz')
+      .select('full_name, commute_slots, capacity_quiz, avatar')
       .eq('id', user.id)
       .maybeSingle(),
     supabase
@@ -132,6 +138,8 @@ export default async function MoiPage({
     { data: purchases },
     { data: debriefSel, error: debriefError },
     { data: debriefRows },
+    { data: debriefYearRows },
+    { data: debriefRewardRow },
   ] = await Promise.all([
     supabase
       .from('habit_logs')
@@ -176,6 +184,17 @@ export default async function MoiPage({
       .from('debrief_logs')
       .select('pair_id, outcome')
       .eq('date', toDayKey(new Date())),
+    // Un an de débriefs pour la rétrospective annuelle « ce que j'ai coaché ».
+    supabase
+      .from('debrief_logs')
+      .select('pair_id, date, outcome')
+      .gte('date', toDayKey(since)),
+    // Récompense du jour déjà créditée ? (081 — dégradé si migration absente.)
+    supabase
+      .from('debrief_rewards')
+      .select('date')
+      .eq('date', toDayKey(new Date()))
+      .maybeSingle(),
   ])
 
   if (catalogError) {
@@ -417,6 +436,21 @@ export default async function MoiPage({
       debriefOutcomes[String(r.pair_id)] = r.outcome
     }
   }
+  // Rétrospective annuelle + récompense du jour déjà prise.
+  const debriefYearData = debriefYearStats(
+    debriefSelected,
+    (debriefYearRows ?? []).map((r) => ({
+      pair_id: String(r.pair_id),
+      date: String(r.date),
+      outcome: String(r.outcome),
+    })),
+  )
+  const debriefRewardClaimed = Boolean(debriefRewardRow)
+
+  // Avatar personnalisable du bandeau : config validée + rendu pré-calculé
+  // (data-URI) pour un affichage immédiat sans embarquer DiceBear côté client.
+  const avatarConfig = normalizeAvatarConfig(profile?.avatar)
+  const avatarUri = avatarDataUri(avatarConfig, 160)
 
   // Compagnon d'étude : nourri par la série, habillé par la boutique.
   const ownedIds = new Set((purchases ?? []).map((p) => String(p.item_id)))
@@ -429,17 +463,33 @@ export default async function MoiPage({
       {/* Fond papier réchauffé pleine page, derrière tout l'onglet. */}
       <div aria-hidden="true" className="moi-bg fixed inset-0 -z-10" />
 
-      {/* Carte bandeau : flamme de niveau à cheval, nom centré, temps total. */}
+      {/* Carte bandeau : flamme de niveau à cheval, nom centré, série ramassée
+          dans une pastille, temps total. */}
       <MoiHeader
         name={firstName}
+        avatarUri={avatarUri}
+        avatarConfig={avatarConfig}
         playerSeconds={workSeconds}
         communitySeconds={communitySeconds}
+        streak={currentStreak}
       />
 
-      {/* Les cartes « jouet », empilées sous le bandeau. */}
-      <div className="relative mt-5 flex flex-col gap-5">
-        {/* La série d'abord : le bloc le plus actionnable, bien visible. */}
-        <div className="pop-in">
+      {/* Le débrief du jour, sorti en évidence juste sous l'identité : le geste
+          quotidien qui rapporte des pièces + la rétro annuelle du parcours. */}
+      <div className="mt-5">
+        <DebriefCard
+          selected={debriefSelected}
+          outcomes={debriefOutcomes}
+          yearStats={debriefYearData}
+          rewardClaimedToday={debriefRewardClaimed}
+          needsMigration={Boolean(debriefError)}
+        />
+      </div>
+
+      {/* Le reste, rangé derrière trois onglets (une section à la fois) au lieu
+          d'être empilé : Ma semaine · Compagnon · Progrès. Fini le scroll. */}
+      <MoiTabs
+        semaine={
           <WeekSection
             week={week}
             streak={currentStreak}
@@ -451,43 +501,36 @@ export default async function MoiPage({
             dayStatuses={dayStatuses}
             commuteSlots={commuteSlots}
           />
-        </div>
-        {/* Le compagnon : l'attachement quotidien — il grandit avec la série. */}
-        <div className="pop-in" style={{ animationDelay: '60ms' }}>
+        }
+        compagnon={
           <CompagnonCard
             streak={currentStreak}
             activeToday={activityDays.has(today)}
             accessories={companionAccessories}
           />
-        </div>
-        <div className="pop-in" style={{ animationDelay: '120ms' }}>
-          <CapacityScore
-            score={capacityScore}
-            answers={capacityAnswers}
-            autoOpen={bilan === '1'}
-            needsMigration={Boolean(profileError)}
-          />
-        </div>
-        {/* Le débrief : freins référencés → habitudes saines, jour par jour. */}
-        <div className="pop-in" style={{ animationDelay: '180ms' }}>
-          <DebriefCard
-            selected={debriefSelected}
-            outcomes={debriefOutcomes}
-            needsMigration={Boolean(debriefError)}
-          />
-        </div>
-        {/* Graphique et badges : repliés derrière deux icônes, à la demande. */}
-        <MoiExtras
-          chart={<StructureChart data={chartData} />}
-          badges={
-            <BadgeGrid
-              badges={badges ?? []}
-              unlockedIds={unlockedIds}
-              records={records}
+        }
+        progres={
+          <>
+            <CapacityScore
+              score={capacityScore}
+              answers={capacityAnswers}
+              autoOpen={bilan === '1'}
+              needsMigration={Boolean(profileError)}
             />
-          }
-        />
-      </div>
+            {/* Graphique et badges : repliés derrière deux icônes, à la demande. */}
+            <MoiExtras
+              chart={<StructureChart data={chartData} />}
+              badges={
+                <BadgeGrid
+                  badges={badges ?? []}
+                  unlockedIds={unlockedIds}
+                  records={records}
+                />
+              }
+            />
+          </>
+        }
+      />
     </div>
   )
 }

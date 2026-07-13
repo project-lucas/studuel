@@ -134,3 +134,114 @@ export function debriefMessage(wins: number, total: number): string {
   if (wins > 0) return 'Une victoire aujourd’hui, c’est une de plus qu’hier.'
   return 'Demain est une nouvelle chance : choisis UNE habitude à tenir.'
 }
+
+// -----------------------------------------------------------------------------
+// Récompense du débrief du jour — un petit gain de pièces qui met le bloc « en
+// évidence » : terminer son point du jour vaut quelque chose. Montant FIXE (pas
+// indexé sur les victoires) pour que la promesse affichée reste stable et qu'on
+// récompense l'acte de faire son débrief, pas la performance. Voir 081.
+// -----------------------------------------------------------------------------
+export const DEBRIEF_REWARD_COINS = 10
+
+// Le débrief du jour est « terminé » quand chaque habitude référencée a reçu une
+// issue (rechute ou victoire). Sélection vide → jamais terminé (rien à raconter).
+export function debriefComplete(
+  selected: string[],
+  outcomes: Record<string, DebriefOutcome>,
+): boolean {
+  if (selected.length === 0) return false
+  return selected.every((id) => isDebriefOutcome(outcomes[id]))
+}
+
+// Pièces à créditer pour le débrief du jour : le forfait s'il est terminé, 0
+// sinon. Gardé pur et minuscule pour être testé et réutilisé côté action/UI.
+export function debriefDailyReward(
+  selected: string[],
+  outcomes: Record<string, DebriefOutcome>,
+): number {
+  return debriefComplete(selected, outcomes) ? DEBRIEF_REWARD_COINS : 0
+}
+
+// -----------------------------------------------------------------------------
+// Rétrospective annuelle — « ce que j'ai coaché cette année ». On agrège tous
+// les débriefs du jour sur la période pour donner à l'élève une vision claire de
+// son parcours : par habitude (victoires / rechutes / réponses), et en global.
+// -----------------------------------------------------------------------------
+export type DebriefLogEntry = {
+  pair_id: string
+  date: string
+  outcome: DebriefOutcome
+}
+
+export type DebriefPairStat = {
+  id: string
+  bad: string
+  good: string
+  goodEmoji: string
+  wins: number
+  slips: number
+  answered: number
+}
+
+export type DebriefYearStats = {
+  // Une entrée par habitude coachée (sélectionnée ou présente dans l'historique),
+  // triée : plus de victoires d'abord, puis plus de réponses.
+  perPair: DebriefPairStat[]
+  totalWins: number
+  totalSlips: number
+  totalAnswered: number
+  // Jours distincts où l'élève a fait au moins un débrief.
+  daysCoached: number
+  // Part de victoires sur l'ensemble des réponses (0..1, 0 si aucune réponse).
+  winRate: number
+  // L'habitude la mieux tenue (le plus de victoires), null si rien.
+  bestPairId: string | null
+}
+
+export function debriefYearStats(
+  selected: string[],
+  // Accepte les lignes brutes de debrief_logs (outcome typé string en base).
+  logs: ReadonlyArray<{ pair_id: string; date: string; outcome: string }>,
+): DebriefYearStats {
+  const valid = logs.filter((l) => isDebriefPairId(l.pair_id) && isDebriefOutcome(l.outcome))
+
+  // Univers des habitudes à afficher : celles référencées + celles vues passer.
+  const ids = new Set<string>()
+  for (const id of selected) if (isDebriefPairId(id)) ids.add(id)
+  for (const l of valid) ids.add(l.pair_id)
+
+  const perPair: DebriefPairStat[] = []
+  for (const id of ids) {
+    const meta = DEBRIEF_CATALOG.find((p) => p.id === id)
+    if (!meta) continue
+    const mine = valid.filter((l) => l.pair_id === id)
+    const wins = mine.filter((l) => l.outcome === 'good').length
+    const slips = mine.filter((l) => l.outcome === 'bad').length
+    perPair.push({
+      id,
+      bad: meta.bad,
+      good: meta.good,
+      goodEmoji: meta.goodEmoji,
+      wins,
+      slips,
+      answered: wins + slips,
+    })
+  }
+  perPair.sort((a, b) => b.wins - a.wins || b.answered - a.answered)
+
+  const totalWins = perPair.reduce((s, p) => s + p.wins, 0)
+  const totalSlips = perPair.reduce((s, p) => s + p.slips, 0)
+  const totalAnswered = totalWins + totalSlips
+  const daysCoached = new Set(valid.map((l) => l.date)).size
+  const bestPairId = perPair.length > 0 && perPair[0].wins > 0 ? perPair[0].id : null
+
+  return {
+    perPair,
+    totalWins,
+    totalSlips,
+    totalAnswered,
+    daysCoached,
+    winRate: totalAnswered > 0 ? totalWins / totalAnswered : 0,
+    bestPairId,
+  }
+}

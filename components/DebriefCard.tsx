@@ -1,17 +1,21 @@
 'use client'
 
 import { Fragment, useState, useTransition } from 'react'
-import { ArrowRight, Check, Pencil, X } from 'lucide-react'
+import { ArrowRight, Check, ChevronDown, Coins, Pencil, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
   DEBRIEF_CATALOG,
+  DEBRIEF_REWARD_COINS,
+  debriefComplete,
   debriefIcon,
   debriefMessage,
   debriefScore,
   type DebriefOutcome,
   type DebriefPair,
+  type DebriefYearStats,
 } from '@/lib/debrief'
+import DebriefYearRecap from '@/components/DebriefYearRecap'
 import { logDebrief, saveDebriefHabits } from '@/app/moi/actions'
 
 // -----------------------------------------------------------------------------
@@ -163,12 +167,18 @@ function OutcomeCell({
 export default function DebriefCard({
   selected,
   outcomes,
+  yearStats,
+  rewardClaimedToday = false,
   needsMigration = false,
 }: {
   // Ids des paires référencées par l'élève (debrief_habits).
   selected: string[]
   // Issues du jour : pair_id → 'bad' | 'good' (debrief_logs, date du jour).
   outcomes: Record<string, DebriefOutcome>
+  // Rétrospective annuelle (debrief_logs sur ~1 an) — « ce que j'ai coaché ».
+  yearStats: DebriefYearStats
+  // La récompense du jour a-t-elle déjà été créditée (debrief_rewards) ?
+  rewardClaimedToday?: boolean
   needsMigration?: boolean
 }) {
   // État local optimiste : le tap répond tout de suite, l'action suit.
@@ -177,11 +187,16 @@ export default function DebriefCard({
   )
   const [myOutcomes, setMyOutcomes] = useState(outcomes)
   const [editing, setEditing] = useState(false)
+  const [showYear, setShowYear] = useState(false)
   const [pending, startTransition] = useTransition()
 
   const pairs = DEBRIEF_CATALOG.filter((p) => mySelection.has(p.id))
   const empty = pairs.length === 0
   const score = debriefScore([...mySelection], myOutcomes)
+  // Complet côté client (optimiste) OU déjà crédité côté serveur → récompense
+  // acquise. Sinon elle est « à la clé » : c'est la carotte mise en évidence.
+  const rewardEarned =
+    rewardClaimedToday || debriefComplete([...mySelection], myOutcomes)
 
   const toggle = (id: string) =>
     setMySelection((prev) => {
@@ -210,26 +225,50 @@ export default function DebriefCard({
   return (
     <section
       aria-label="Ton débrief d'habitudes"
-      className="moi-card rounded-[1.75rem] bg-white p-5"
+      className="moi-card rounded-[1.75rem] bg-white p-5 ring-2 ring-primary/15"
     >
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-3 flex items-center justify-between gap-2">
         <p className="text-[11px] font-bold tracking-widest text-muted-foreground uppercase">
-          Ton débrief
+          Ton débrief du jour
         </p>
-        {!empty && !editing && !needsMigration ? (
-          <button
-            type="button"
-            aria-label="Modifier mes habitudes référencées"
-            title="Modifier mes habitudes"
-            onClick={() => {
-              sfx.tap()
-              setEditing(true)
-            }}
-            className="flex size-8 items-center justify-center rounded-lg text-muted-foreground transition-all hover:bg-muted hover:text-foreground active:scale-90"
-          >
-            <Pencil className="size-4" strokeWidth={2.2} />
-          </button>
-        ) : null}
+        <div className="flex items-center gap-1.5">
+          {!empty && !editing && !needsMigration ? (
+            <span
+              className={cn(
+                'flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-extrabold tabular-nums transition-colors',
+                rewardEarned
+                  ? 'bg-green-600/15 text-green-700 dark:text-green-400'
+                  : 'bg-highlight/20 text-amber-700 dark:text-amber-300',
+              )}
+              aria-label={
+                rewardEarned
+                  ? `Récompense obtenue : ${DEBRIEF_REWARD_COINS} pièces`
+                  : `${DEBRIEF_REWARD_COINS} pièces à gagner en terminant ton débrief`
+              }
+            >
+              {rewardEarned ? (
+                <Check className="size-3.5" strokeWidth={3} aria-hidden="true" />
+              ) : (
+                <Coins className="size-3.5" strokeWidth={2.5} aria-hidden="true" />
+              )}
+              +{DEBRIEF_REWARD_COINS}
+            </span>
+          ) : null}
+          {!empty && !editing && !needsMigration ? (
+            <button
+              type="button"
+              aria-label="Modifier mes habitudes référencées"
+              title="Modifier mes habitudes"
+              onClick={() => {
+                sfx.tap()
+                setEditing(true)
+              }}
+              className="flex size-8 items-center justify-center rounded-lg text-muted-foreground transition-all hover:bg-muted hover:text-foreground active:scale-90"
+            >
+              <Pencil className="size-4" strokeWidth={2.2} />
+            </button>
+          ) : null}
+        </div>
       </div>
 
       {needsMigration ? (
@@ -330,6 +369,45 @@ export default function DebriefCard({
               {debriefMessage(score.wins, score.total)}
             </p>
           ) : null}
+
+          {rewardEarned ? (
+            <p className="mt-3 flex items-center justify-center gap-1.5 rounded-full bg-green-600/10 py-2 text-xs font-bold text-green-700 dark:text-green-400">
+              <Coins className="size-4" strokeWidth={2.5} aria-hidden="true" />
+              Débrief du jour validé · +{DEBRIEF_REWARD_COINS} pièces
+            </p>
+          ) : (
+            <p className="mt-3 text-center text-[11px] font-semibold text-muted-foreground">
+              Réponds à chaque habitude pour empocher tes{' '}
+              {DEBRIEF_REWARD_COINS} pièces du jour.
+            </p>
+          )}
+
+          {/* La rétrospective annuelle, repliée : « ce que j'ai coaché ». */}
+          <div className="mt-4 border-t border-border pt-3">
+            <button
+              type="button"
+              aria-expanded={showYear}
+              onClick={() => {
+                sfx.tap()
+                setShowYear((v) => !v)
+              }}
+              className="flex w-full items-center justify-between gap-2 rounded-xl px-1 py-1.5 text-left text-xs font-bold text-foreground transition-colors hover:text-primary"
+            >
+              <span>Mon année de coaching</span>
+              <ChevronDown
+                className={cn(
+                  'size-4 shrink-0 text-muted-foreground transition-transform',
+                  showYear && 'rotate-180',
+                )}
+                aria-hidden="true"
+              />
+            </button>
+            {showYear ? (
+              <div className="mt-3">
+                <DebriefYearRecap stats={yearStats} />
+              </div>
+            ) : null}
+          </div>
         </>
       )}
     </section>

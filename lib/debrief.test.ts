@@ -1,11 +1,16 @@
 import { describe, expect, it } from 'vitest'
 import {
   DEBRIEF_CATALOG,
+  DEBRIEF_REWARD_COINS,
+  debriefComplete,
+  debriefDailyReward,
   debriefIcon,
   debriefMessage,
   debriefScore,
+  debriefYearStats,
   isDebriefOutcome,
   isDebriefPairId,
+  type DebriefLogEntry,
 } from './debrief'
 
 describe('DEBRIEF_CATALOG', () => {
@@ -90,5 +95,84 @@ describe('debriefMessage', () => {
 
   it('relance sans culpabiliser à zéro victoire', () => {
     expect(debriefMessage(0, 4)).toContain('Demain')
+  })
+})
+
+describe('debriefComplete', () => {
+  it('vrai quand chaque habitude référencée a une issue', () => {
+    expect(debriefComplete(['a', 'b'], { a: 'good', b: 'bad' })).toBe(true)
+  })
+
+  it('faux tant qu\'une habitude reste sans réponse', () => {
+    expect(debriefComplete(['a', 'b'], { a: 'good' })).toBe(false)
+  })
+
+  it('faux sur une sélection vide (rien à raconter)', () => {
+    expect(debriefComplete([], {})).toBe(false)
+  })
+
+  it('ignore les issues hors sélection', () => {
+    expect(debriefComplete(['a'], { a: 'good', z: 'bad' })).toBe(true)
+  })
+})
+
+describe('debriefDailyReward', () => {
+  it('donne le forfait quand le débrief du jour est terminé', () => {
+    expect(debriefDailyReward(['a', 'b'], { a: 'good', b: 'good' })).toBe(
+      DEBRIEF_REWARD_COINS,
+    )
+  })
+
+  it('donne 0 tant que le débrief n\'est pas terminé', () => {
+    expect(debriefDailyReward(['a', 'b'], { a: 'good' })).toBe(0)
+    expect(debriefDailyReward([], {})).toBe(0)
+  })
+})
+
+describe('debriefYearStats', () => {
+  const id0 = DEBRIEF_CATALOG[0].id
+  const id1 = DEBRIEF_CATALOG[1].id
+  const logs: DebriefLogEntry[] = [
+    { pair_id: id0, date: '2026-01-01', outcome: 'good' },
+    { pair_id: id0, date: '2026-01-02', outcome: 'good' },
+    { pair_id: id0, date: '2026-01-03', outcome: 'bad' },
+    { pair_id: id1, date: '2026-01-01', outcome: 'bad' },
+    { pair_id: 'inconnue', date: '2026-01-01', outcome: 'good' }, // ignorée
+  ]
+
+  it('agrège victoires, rechutes et réponses par habitude', () => {
+    const stats = debriefYearStats([id0, id1], logs)
+    const p0 = stats.perPair.find((p) => p.id === id0)!
+    expect(p0).toMatchObject({ wins: 2, slips: 1, answered: 3 })
+    const p1 = stats.perPair.find((p) => p.id === id1)!
+    expect(p1).toMatchObject({ wins: 0, slips: 1, answered: 1 })
+  })
+
+  it('calcule les totaux, les jours coachés et le taux de victoires', () => {
+    const stats = debriefYearStats([id0, id1], logs)
+    expect(stats.totalWins).toBe(2)
+    expect(stats.totalSlips).toBe(2)
+    expect(stats.totalAnswered).toBe(4)
+    expect(stats.daysCoached).toBe(3) // 3 dates distinctes valides
+    expect(stats.winRate).toBeCloseTo(0.5)
+    expect(stats.bestPairId).toBe(id0)
+  })
+
+  it('inclut une habitude historique même si elle n\'est plus référencée', () => {
+    const stats = debriefYearStats([], logs)
+    expect(stats.perPair.map((p) => p.id)).toContain(id0)
+  })
+
+  it('sélection et historique vides → tout à zéro, pas de meilleure habitude', () => {
+    const stats = debriefYearStats([], [])
+    expect(stats).toMatchObject({
+      totalWins: 0,
+      totalSlips: 0,
+      totalAnswered: 0,
+      daysCoached: 0,
+      winRate: 0,
+      bestPairId: null,
+    })
+    expect(stats.perPair).toEqual([])
   })
 })

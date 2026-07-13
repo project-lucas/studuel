@@ -2,49 +2,62 @@ import Link from 'next/link'
 import { UserRound, Users } from 'lucide-react'
 import { formatDurationFromSeconds, formatHours } from '@/lib/time'
 import { workLevel } from '@/lib/work-level'
+import AvatarBadge from '@/components/AvatarBadge'
+import type { AvatarConfig } from '@/lib/avatar'
 
 // Flamme (tracé Lucide), remplie en dégradé ambre → orange — comme la série.
 const FLAME_PATH =
   'M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z'
 
 // Bandeau héros de l'onglet Moi, façon carte de jeu : carte violette arrondie
-// avec la grande flamme de niveau à cheval sur son bord supérieur (chiffre
-// centré dedans), prénom et rang centrés dessous, pilules aux angles (temps
-// total à gauche, accès au compte à droite), barre vers le niveau suivant.
+// avec l'AVATAR personnalisable à cheval sur son bord supérieur (crayon d'édition
+// à un angle, badge de niveau flamme à l'autre), prénom et rang centrés dessous,
+// pilules aux angles (temps total à gauche, compte à droite), barre de niveau.
 export default function MoiHeader({
   name,
+  avatarUri,
+  avatarConfig,
   playerSeconds,
   communitySeconds,
+  streak,
 }: {
   name: string
+  // Avatar pré-rendu (data-URI) pour un affichage immédiat + sa config éditable.
+  avatarUri: string
+  avatarConfig: AvatarConfig
   playerSeconds: number
   communitySeconds: number | null
+  // Série vivante : ramassée dans le bandeau (plus de bloc « série » à part).
+  streak: number
 }) {
   const lvl = workLevel(playerSeconds)
   const pct = Math.round(lvl.progress * 100)
 
   return (
     <section aria-label="Mon profil" className="relative mt-12">
-      {/* La flamme de niveau trône au-dessus de la carte, halo ambré. */}
+      {/* L'avatar trône au-dessus de la carte ; badge de niveau flamme à l'angle.
+          Le <defs> #level-flame vit ici et sert aussi à la pilule de série. */}
       <div className="absolute -top-12 left-1/2 z-10 -translate-x-1/2">
-        <div className="relative flex size-24 items-center justify-center">
-          <span aria-hidden="true" className="moi-glow absolute -inset-5" />
-          <svg
-            viewBox="0 0 24 24"
-            className="flame-breathe relative size-24 drop-shadow-md"
-            aria-hidden="true"
+        <div className="relative">
+          <span aria-hidden="true" className="moi-glow absolute -inset-3" />
+          <AvatarBadge uri={avatarUri} config={avatarConfig} />
+          <div
+            className="absolute -top-1 -left-4 flex items-center gap-0.5 rounded-full bg-white px-1.5 py-0.5 shadow-sm ring-1 ring-black/5"
+            aria-label={`Niveau ${lvl.level}`}
           >
-            <defs>
-              <linearGradient id="level-flame" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#fbbf24" />
-                <stop offset="100%" stopColor="#ea580c" />
-              </linearGradient>
-            </defs>
-            <path d={FLAME_PATH} fill="url(#level-flame)" />
-          </svg>
-          <span className="absolute inset-x-0 top-[52%] text-center font-mono text-2xl leading-none font-extrabold text-white tabular-nums drop-shadow-sm">
-            {lvl.level}
-          </span>
+            <svg viewBox="0 0 24 24" className="size-3.5 shrink-0" aria-hidden="true">
+              <defs>
+                <linearGradient id="level-flame" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#fbbf24" />
+                  <stop offset="100%" stopColor="#ea580c" />
+                </linearGradient>
+              </defs>
+              <path d={FLAME_PATH} fill="url(#level-flame)" />
+            </svg>
+            <span className="font-mono text-xs font-extrabold text-foreground tabular-nums">
+              {lvl.level}
+            </span>
+          </div>
         </div>
       </div>
 
@@ -95,6 +108,31 @@ export default function MoiHeader({
           <p className="mt-1 text-sm font-semibold text-white/85">
             Niveau {lvl.level} · {lvl.title}
           </p>
+
+          {/* La série, ramassée dans l'identité : une pastille flamme, plus
+              besoin d'un bloc « série » empilé plus bas. */}
+          <div className="mt-3 flex justify-center">
+            <span
+              className="flex items-center gap-1.5 rounded-full bg-white/12 px-3.5 py-1.5 text-sm font-bold text-white ring-1 ring-white/25"
+              aria-label={
+                streak > 0
+                  ? `Série de ${streak} jour${streak > 1 ? 's' : ''}`
+                  : 'Aucune série en cours'
+              }
+            >
+              <svg viewBox="0 0 24 24" className="size-4 shrink-0" aria-hidden="true">
+                <path d={FLAME_PATH} fill="url(#level-flame)" />
+              </svg>
+              {streak > 0 ? (
+                <>
+                  <span className="font-mono tabular-nums">{streak}</span>
+                  jour{streak > 1 ? 's' : ''} de série
+                </>
+              ) : (
+                'Allume ta série'
+              )}
+            </span>
+          </div>
         </div>
 
         {/* Vers le niveau suivant : la barre flamme sur le violet. */}

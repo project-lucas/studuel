@@ -52,8 +52,14 @@ je le vérifie.
 > Editor). Statut d'exécution incertain pour `032→046` ; tout étant idempotent,
 > rejouer `032→078` d'un bloc est sûr. **Seul support encore à 0 : Studygram (P2).**
 
+**MAJ 2026-07-14 (soir)** : Lucas a livré sur `main` **onboarding v2**
+(`/bienvenue`, migration `048`), **classement à trophées + coop** dans le Défi
+(migrations `079`/`080`) et **débrief récompensé + avatar** dans Moi (migrations
+`081`/`082`). Ces 5 migrations sont **écrites mais NON exécutées** (à passer par
+Lucas). Ne pas s'appuyer sur leurs tables en base tant qu'elles ne sont pas jouées.
+
 **Chantiers produit ouverts** (au-delà du contenu) : interface, animations,
-matchmaking / duels, onboarding, scalabilité. Voir le backlog §4.
+matchmaking / duels, scalabilité. Voir le backlog §4.
 
 ---
 
@@ -196,6 +202,24 @@ breaking changes vs. l'entraînement.
 
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible évidente,
      pièges rencontrés. Lucas peut aussi y déposer une consigne du jour. -->
+
+**2026-07-14 (soir, note de Lucas via Claude) — Arbre remis à plat avant /jour :**
+- **Le gros WIP est commité.** Tout le travail non commité de Lucas (onboarding
+  v2 **+** chantier Défi classement/trophées/coop/avatar/débrief) a été commité en
+  3 lots verts sur `main` : `7865947` (onboarding), `9d998ba` (Défi classement/
+  coop), `93f8d8c` (Moi débrief/avatar). **L'arbre est PROPRE et VERT** au réveil
+  (typecheck/lint/289 tests OK).
+- **⇒ Plus aucun piège « ne pas commiter le WIP de Lucas ».** Tu travailles
+  normalement, dans n'importe quelle zone (Défi/Moi/onboarding inclus). `git add`
+  ciblé par hygiène, mais zéro risque d'embarquer du WIP.
+- **⚠️ 5 migrations neuves sur `main`, NON exécutées** : `048` (onboarding),
+  `079` (classement/trophées), `080` (coop), `081` (débrief récompense),
+  `082` (avatar). Comme toujours : **tu ne les exécutes pas**, tu les signales.
+  Ne t'appuie pas sur leurs données (tables peut-être absentes en base).
+- **Cycle 1 conseillé** : ouvrir par le **shuffle des options de quiz** (P1, zone
+  désormais sûre car `defi-modes` est commité) — fort levier, finissable — puis
+  **cadrage Studygram** (P2). Fallbacks anti-panne-sèche dans le backlog (P3).
+  Détail et ordre dans `_ASSOCIE/BACKLOG-JOUR.md`.
 
 **2026-07-14 [jour] — Couverture quiz complète + fiches à 100 % (30 commits) :**
 - **Fait & sur `main`** : `049→057` (77 quiz, 9 matières secondaires) + `058→078`

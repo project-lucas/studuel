@@ -3,7 +3,7 @@ import { notFound, redirect } from 'next/navigation'
 import { Wrench } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
 
-export const metadata = { title: 'Studio de contenu — Scolaria' }
+export const metadata = { title: 'Studio de contenu — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // Espace admin : édition du catalogue (matières → chapitres → leçons → quiz).

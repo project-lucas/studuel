@@ -117,7 +117,7 @@ export async function setEventDuration(
 }
 
 // Semaine type : retire un événement (un jour d'une mission). Plus aucun jour
-// → la mission est désactivée. La mission fixe Scolaria ne bouge pas.
+// → la mission est désactivée. La mission fixe Studuel ne bouge pas.
 export async function removeEvent(habitId: string, day: number): Promise<void> {
   const { supabase, userId } = await requireUser()
   if (!userId || !Number.isInteger(day)) return

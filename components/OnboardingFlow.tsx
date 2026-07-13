@@ -103,7 +103,7 @@ export default function OnboardingFlow({
               En quelle classe es-tu ?
             </CardTitle>
             <CardDescription>
-              Scolaria adapte tes cours, quiz et flashcards à ton programme.
+              Studuel adapte tes cours, quiz et flashcards à ton programme.
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4">

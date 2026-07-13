@@ -15,7 +15,7 @@ import { examsForProfile } from '@/lib/exams'
 import { composeExam, type ExamQuestion } from '@/lib/exam-blanc'
 import type { QuizQuestion, Subject } from '@/lib/types'
 
-export const metadata = { title: 'Examen blanc — Scolaria' }
+export const metadata = { title: 'Examen blanc — Studuel' }
 export const dynamic = 'force-dynamic'
 
 const EXAM_TITLES: Record<string, string> = {

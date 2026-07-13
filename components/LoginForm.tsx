@@ -41,7 +41,7 @@ export default function LoginForm() {
         <CardDescription>
           {mode === 'signin'
             ? 'Retrouve tes tests, ta progression et tes habitudes.'
-            : 'Rejoins Scolaria et commence à t’entraîner gratuitement.'}
+            : 'Rejoins Studuel et commence à t’entraîner gratuitement.'}
         </CardDescription>
       </CardHeader>
 

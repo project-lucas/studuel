@@ -10,7 +10,7 @@ import {
   MOCK_COINS,
 } from '@/lib/tresor'
 
-export const metadata = { title: 'Trésor — Scolaria' }
+export const metadata = { title: 'Trésor — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // Onglet récompense (extrême droite). Connecté : données réelles

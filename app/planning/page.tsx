@@ -7,7 +7,7 @@ import {
 } from '@/components/ui/card'
 import PageHeader from '@/components/PageHeader'
 
-export const metadata = { title: 'Coaching — Scolaria' }
+export const metadata = { title: 'Coaching — Studuel' }
 
 // Onglet réservé : le coaching humain arrive ici plus tard.
 export default function CoachingPage() {
@@ -23,7 +23,7 @@ export default function CoachingPage() {
             <Sparkles className="size-4 text-primary" /> Bientôt disponible
           </CardTitle>
           <CardDescription>
-            Cet espace accueillera prochainement ton coach Scolaria. En
+            Cet espace accueillera prochainement ton coach Studuel. En
             attendant, continue tes sessions — chaque jour compte.
           </CardDescription>
         </CardHeader>

@@ -3,7 +3,7 @@ import PageHeader from '@/components/PageHeader'
 import ResetRequestForm from '@/components/ResetRequestForm'
 import { createClient } from '@/lib/supabase/server'
 
-export const metadata = { title: 'Mot de passe oublié — Scolaria' }
+export const metadata = { title: 'Mot de passe oublié — Studuel' }
 export const dynamic = 'force-dynamic'
 
 export default async function ResetRequestPage() {

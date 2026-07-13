@@ -1,7 +1,7 @@
 import { Sparkles } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
 
-export const metadata = { title: 'IA — Scolaria' }
+export const metadata = { title: 'IA — Studuel' }
 
 // Placeholder : le tuteur IA (GPT-4o) arrivera ici.
 export default function IaPage() {

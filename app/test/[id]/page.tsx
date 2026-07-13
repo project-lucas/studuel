@@ -63,7 +63,7 @@ export default async function QuizPage({
               <Lock className="size-4" /> Test réservé à l’Offre 1
             </CardTitle>
             <CardDescription>
-              Ce quiz fait partie du contenu premium de Scolaria.
+              Ce quiz fait partie du contenu premium de Studuel.
             </CardDescription>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">

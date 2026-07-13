@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import PageHeader from '@/components/PageHeader'
 
-export const metadata = { title: 'Coaching — Scolaria' }
+export const metadata = { title: 'Coaching — Studuel' }
 
 export default function CoachingPage() {
   return (

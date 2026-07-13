@@ -11,7 +11,7 @@ import {
   MOCK_PRIORITY_SUBJECT,
 } from '@/lib/social'
 
-export const metadata = { title: 'Amis — Scolaria' }
+export const metadata = { title: 'Amis — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // Onglet social (extrême gauche). Amis, duels et ligue sont encore des

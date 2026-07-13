@@ -45,7 +45,7 @@ export default async function DeckPage({
               <Lock className="size-4" /> Deck réservé à l’Offre 1
             </CardTitle>
             <CardDescription>
-              Ces flashcards font partie du contenu premium de Scolaria.
+              Ces flashcards font partie du contenu premium de Studuel.
             </CardDescription>
           </CardHeader>
           <CardFooter>

@@ -15,7 +15,7 @@ import { toDayKey } from '@/lib/streak'
 import { getReviewItems, reviewQueue } from '@/lib/srs'
 import type { QuizQuestion, DeckCard } from '@/lib/types'
 
-export const metadata = { title: 'À revoir — Scolaria' }
+export const metadata = { title: 'À revoir — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // Une session « À revoir » reste courte : la régularité bat le marathon.

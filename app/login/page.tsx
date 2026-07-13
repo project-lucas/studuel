@@ -3,7 +3,7 @@ import PageHeader from '@/components/PageHeader'
 import LoginForm from '@/components/LoginForm'
 import { createClient } from '@/lib/supabase/server'
 
-export const metadata = { title: 'Connexion — Scolaria' }
+export const metadata = { title: 'Connexion — Studuel' }
 export const dynamic = 'force-dynamic'
 
 export default async function LoginPage({

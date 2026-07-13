@@ -497,7 +497,7 @@ export default function WeekPlanner({
                           ) : null}
                           {isFixed ? (
                             <span
-                              title="Rituel Scolaria — chaque dimanche, pour tous"
+                              title="Rituel Studuel — chaque dimanche, pour tous"
                               className="flex size-8 shrink-0 items-center justify-center text-muted-foreground/50"
                             >
                               <Lock className="size-3.5" />

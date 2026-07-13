@@ -26,7 +26,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Scolaria",
+  title: "Studuel",
   description: "Apprends, teste-toi, progresse — de la 6e à la Terminale.",
 };
 

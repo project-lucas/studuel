@@ -11,7 +11,7 @@ import PageHeader from '@/components/PageHeader'
 import { createClient } from '@/lib/supabase/server'
 import type { FlashcardDeck } from '@/lib/types'
 
-export const metadata = { title: 'Studio — Scolaria' }
+export const metadata = { title: 'Studio — Studuel' }
 export const dynamic = 'force-dynamic'
 
 const PREMIUM_TIERS = ['tier1', 'tier2', 'tier3']

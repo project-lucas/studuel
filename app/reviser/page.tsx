@@ -26,7 +26,7 @@ import { getReviewItems, reviewQueue, countsBySubject } from '@/lib/srs'
 import { toDayKey, computeStreak } from '@/lib/streak'
 import type { CommuteSlot, Subject } from '@/lib/types'
 
-export const metadata = { title: 'Réviser — Scolaria' }
+export const metadata = { title: 'Réviser — Studuel' }
 export const dynamic = 'force-dynamic'
 
 const EXAM_TITLES: Record<string, string> = {

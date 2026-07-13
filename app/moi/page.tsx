@@ -40,7 +40,7 @@ import type {
   CommuteSlot,
 } from '@/lib/types'
 
-export const metadata = { title: 'Moi — Scolaria' }
+export const metadata = { title: 'Moi — Studuel' }
 export const dynamic = 'force-dynamic'
 
 type SessionRow = { created_at: string; score: number; total: number }

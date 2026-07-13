@@ -11,7 +11,7 @@ import PageHeader from '@/components/PageHeader'
 import NewPasswordForm from '@/components/NewPasswordForm'
 import { createClient } from '@/lib/supabase/server'
 
-export const metadata = { title: 'Nouveau mot de passe — Scolaria' }
+export const metadata = { title: 'Nouveau mot de passe — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // Arrivée du lien email de réinitialisation (via /auth/callback).

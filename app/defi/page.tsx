@@ -19,7 +19,7 @@ import { commuteStreak } from '@/lib/trajet'
 import type { FriendGhost } from '@/lib/social'
 import type { CommuteSlot, QuizQuestion, DeckCard } from '@/lib/types'
 
-export const metadata = { title: 'Défi — Scolaria' }
+export const metadata = { title: 'Défi — Studuel' }
 export const dynamic = 'force-dynamic'
 
 function shuffle<T>(arr: T[]): T[] {
@@ -297,6 +297,7 @@ export default async function DefiPage() {
       commuteStreak={commuteRun}
       featuredId={featuredModeId(today)}
       ghosts={ghosts}
+      userId={user.id}
     />
   )
 }

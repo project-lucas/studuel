@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
 
-// Manifest PWA : permet d'installer Scolaria sur l'écran d'accueil
+// Manifest PWA : permet d'installer Studuel sur l'écran d'accueil
 // (icône, plein écran sans barre d'adresse, splash indigo).
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Scolaria",
-    short_name: "Scolaria",
+    name: "Studuel",
+    short_name: "Studuel",
     description: "Apprends, teste-toi, progresse — de la 6e à la Terminale.",
     start_url: "/",
     display: "standalone",

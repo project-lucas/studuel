@@ -3,7 +3,7 @@ import PageHeader from '@/components/PageHeader'
 import OnboardingFlow from '@/components/OnboardingFlow'
 import { createClient } from '@/lib/supabase/server'
 
-export const metadata = { title: 'Bienvenue — Scolaria' }
+export const metadata = { title: 'Bienvenue — Studuel' }
 export const dynamic = 'force-dynamic'
 
 export default async function OnboardingPage() {

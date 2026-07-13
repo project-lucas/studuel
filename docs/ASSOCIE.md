@@ -40,12 +40,15 @@ je le vérifie.
 | Cours (texte de leçon) | **100 %** (538/538) | — |
 | Fiches de révision | **50 %** (269/538) | 269 |
 | Studygram | **0 %** (0/538) | 538 |
-| Quiz | **~1,5 %** (8/538 leçons) | 530 |
+| Quiz (leçons « L'essentiel ») | **~2 % en base** (12/538) — **+180 en migrations non exécutées** | ~350 |
 
-> Chiffres **re-mesurés le 2026-07-12** (clé anon, comptage direct des colonnes
-> `content` / `revision_sheet` / `studygram_url` + jointure `quizzes.lesson_id`).
-> Voir §6 pour re-mesurer. Levier n°1 confirmé : **les quiz** (530 leçons
-> injouables en Défi/Test tant qu'elles n'en ont pas).
+> Chiffres **re-mesurés le 2026-07-12** (clé anon). **MAJ 2026-07-13** : les
+> migrations `032`→`043` (non encore exécutées) ajoutent **180 quiz** couvrant
+> les **6 matières à fort trafic, collège + lycée** (Maths, Français, HG,
+> Anglais, SVT, PC). Une fois passées par Lucas → **192/538 leçons** auront un
+> quiz. Reste ensuite : matières secondaires (Espagnol, Latin, Techno, Philo,
+> SES, NSI, HGGSP, Maths expertes, Ens. scientifique). Levier n°1 toujours = les
+> quiz, mais le cœur du sujet sera débloqué dès l'exécution des migrations.
 
 **Chantiers produit ouverts** (au-delà du contenu) : interface, animations,
 matchmaking / duels, onboarding, scalabilité. Voir le backlog §4.
@@ -191,6 +194,24 @@ breaking changes vs. l'entraînement.
 
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible évidente,
      pièges rencontrés. Lucas peut aussi y déposer une consigne du jour. -->
+
+**2026-07-13 [jour] — 180 quiz créés (6 matières cœur, collège + lycée) :**
+- **Fait & sur `main`** : migrations `032`→`043`, 180 quiz / 540 questions,
+  gabarit `030`, idempotentes, **non exécutées** (à passer par Lucas). Détail et
+  consignes dans `_ASSOCIE/A-LIRE-JOUR.md`.
+- **Méthode qui marche** (à réutiliser) : script anon jetable pour lister les
+  titres de chapitres exacts d'un `slug|niveau` (rattachement fiable) → écrire la
+  migration sur le gabarit `030` avec **un préfixe UUID neuf par fichier**
+  (`03X0000`/`03X1000`, `04X0000`/`04X1000`) → **valider hors-ligne** (unicité
+  UUID globale, JSON `options`, `correct_index` borné) → `git add` **du seul
+  fichier** migration (laisse la pile welcome intacte) → commit vert.
+- **Prochaine cible évidente** : `044_quiz_<matière>_*.sql` pour les matières
+  secondaires encore sans quiz (Espagnol, Latin, Techno, Philo, SES, NSI, HGGSP,
+  Maths expertes, Ens. scientifique — ~40 chapitres). Puis fiches (P1).
+- **Piège** : au réveil, `main` portait la feature `/bienvenue` **non commitée**
+  (WIP de Lucas, dépend de migration `031`) + racine `page.tsx` redirigeant vers
+  `/bienvenue`. **Ne pas la commiter à sa place** — je l'ai laissée intacte et
+  signalée. `git add` toujours ciblé sur mes fichiers, jamais `git add .`.
 
 **2026-07-12 (analyse de prépa, pas de code écrit) :**
 - État confirmé (voir §2) : cœur du sujet = **quiz** (8/538 leçons). Attaquer

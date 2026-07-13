@@ -27,6 +27,9 @@ const links = [
 export default function Navigation({ userLabel }: { userLabel: string | null }) {
   const pathname = usePathname()
 
+  // Parcours d'accueil plein écran (façon Duolingo) : aucune barre de nav.
+  if (pathname === '/bienvenue' || pathname.startsWith('/bienvenue/')) return null
+
   const isActive = (path: string) =>
     pathname === path || pathname.startsWith(`${path}/`)
 
@@ -38,7 +41,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
       {/* Mobile first : barre du haut (marque + compte), verre dépoli… */}
       <header className="fixed inset-x-0 top-0 z-50 flex h-12 items-center justify-between border-b bg-card/85 px-4 backdrop-blur-md md:hidden">
         <Link href="/" className="font-heading text-lg font-bold">
-          Scolaria
+          Studuel
         </Link>
         <Link
           href={accountHref}
@@ -94,7 +97,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
       {/* Desktop : sidebar sticky */}
       <nav className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col gap-8 border-r bg-card p-5 md:flex">
         <Link href="/" className="font-heading px-3 text-2xl font-bold">
-          Scolaria
+          Studuel
         </Link>
 
         <ul className="flex flex-col gap-1">

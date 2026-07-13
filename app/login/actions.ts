@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
+import { GRADE_LEVELS } from '@/lib/types'
 
 export type AuthState = {
   error: string | null
@@ -74,12 +75,40 @@ export async function signUp(
     return { error: 'Email et mot de passe requis.' }
   }
 
+  // Réponses du parcours d'accueil « façon Duolingo » (page /bienvenue),
+  // transmises en champs cachés. Absentes quand l'inscription vient de la
+  // page /login classique → on retombe sur l'onboarding après connexion.
+  const grade = String(formData.get('grade_level') ?? '')
+  const hasWelcome = (GRADE_LEVELS as readonly string[]).includes(grade)
+
+  // Ces réponses voyagent dans le metadata utilisateur : le trigger
+  // handle_new_user les recopie dans le profil dès la création du compte,
+  // donc même si la confirmation d'email est active (pas de session ici).
+  const meta: Record<string, unknown> = { full_name: fullName }
+  if (hasWelcome) {
+    const goalRaw = Number(formData.get('daily_goal') ?? 1)
+    const subjects = Array.from(
+      new Set(
+        formData
+          .getAll('subjects')
+          .map((s) => String(s))
+          .filter((s) => s.length > 0 && s.length < 64),
+      ),
+    )
+    meta.grade_level = grade
+    meta.daily_goal = [1, 2, 3].includes(goalRaw) ? goalRaw : 1
+    meta.selected_subjects = subjects
+    meta.onboarded = true
+    // Conservées pour comprendre nos élèves (pas de colonne dédiée).
+    meta.motivation = String(formData.get('motivation') ?? '')
+    meta.source = String(formData.get('source') ?? '')
+  }
+
   const supabase = await createClient()
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
-    // full_name est repris par le trigger handle_new_user → profiles.full_name
-    options: { data: { full_name: fullName } },
+    options: { data: meta },
   })
   if (error) return { error: toFrench(error.message) }
 
@@ -93,7 +122,8 @@ export async function signUp(
   }
 
   revalidatePath('/', 'layout')
-  redirect('/onboarding')
+  // Parcours d'accueil déjà fait → le bilan de capacités ; sinon l'onboarding.
+  redirect(hasWelcome ? '/moi?bilan=1' : '/onboarding')
 }
 
 // Mot de passe oublié, étape 1 : envoi de l'email de réinitialisation.

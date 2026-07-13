@@ -38,17 +38,19 @@ je le vérifie.
 | Support | Avancement | Reste |
 |---|---|---|
 | Cours (texte de leçon) | **100 %** (538/538) | — |
-| Fiches de révision | **50 %** (269/538) | 269 |
+| Fiches de révision | **100 % en migrations** (269/269 chapitres) | — |
 | Studygram | **0 %** (0/538) | 538 |
-| Quiz (leçons « L'essentiel ») | **~2 % en base** (12/538) — **+180 en migrations non exécutées** | ~350 |
+| Quiz (leçons « L'essentiel ») | **100 % en migrations** (toutes matières) | — |
 
-> Chiffres **re-mesurés le 2026-07-12** (clé anon). **MAJ 2026-07-13** : les
-> migrations `032`→`043` (non encore exécutées) ajoutent **180 quiz** couvrant
-> les **6 matières à fort trafic, collège + lycée** (Maths, Français, HG,
-> Anglais, SVT, PC). Une fois passées par Lucas → **192/538 leçons** auront un
-> quiz. Reste ensuite : matières secondaires (Espagnol, Latin, Techno, Philo,
-> SES, NSI, HGGSP, Maths expertes, Ens. scientifique). Levier n°1 toujours = les
-> quiz, mais le cœur du sujet sera débloqué dès l'exécution des migrations.
+> Chiffres re-mesurés le 2026-07-12 (clé anon). **MAJ 2026-07-14** : le contenu
+> quiz **et** fiches est désormais **entièrement écrit** (en migrations).
+> - **Quiz** : `030`+`032→043` (6 matières cœur) + `049→057` (9 matières
+>   secondaires) → **un quiz par chapitre pour les 15 matières**.
+> - **Fiches** : Maths 6e·5e (`047`) + `058→078` → **une vraie fiche pour les 269
+>   chapitres** (fin du placeholder générique de `025`).
+> ⚠️ **Ces migrations doivent être exécutées à la main par Lucas** (Supabase SQL
+> Editor). Statut d'exécution incertain pour `032→046` ; tout étant idempotent,
+> rejouer `032→078` d'un bloc est sûr. **Seul support encore à 0 : Studygram (P2).**
 
 **Chantiers produit ouverts** (au-delà du contenu) : interface, animations,
 matchmaking / duels, onboarding, scalabilité. Voir le backlog §4.
@@ -194,6 +196,31 @@ breaking changes vs. l'entraînement.
 
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible évidente,
      pièges rencontrés. Lucas peut aussi y déposer une consigne du jour. -->
+
+**2026-07-14 [jour] — Couverture quiz complète + fiches à 100 % (30 commits) :**
+- **Fait & sur `main`** : `049→057` (77 quiz, 9 matières secondaires) + `058→078`
+  (259 fiches : collège 101, lycée 81, secondaires 77). Avec l'existant, **toutes
+  les matières ont un quiz par chapitre** et **les 269 chapitres ont une vraie
+  fiche**. Idempotent, non exécuté (à passer par Lucas). Détail : `A-LIRE-JOUR.md`.
+- **Méthode qui marche (à réutiliser pour du contenu en masse)** : mesurer les
+  titres de chapitres exacts en base (clé anon) → **fan-out de sous-agents**, un
+  par matière, chacun calquant un fichier gabarit (`030` pour quiz, `047` pour
+  fiches) et écrivant SON fichier → **moi = validateur/committeur** : script de
+  validation hors-ligne (UUID/JSON/bornes pour quiz ; `$md$` équilibré / titres en
+  base / anti-entités-HTML pour fiches) + relecture ciblée des matières à calcul +
+  commit par matière. ~10× plus rapide en tokens de contexte que tout écrire soi-même.
+- **Prochaine cible évidente** : (1) **Studygram** (P2, seul support à 0) — cadrer
+  d'abord le format (`studygram_url` / composant) ; (2) **mélange des options de
+  quiz au rendu** — dette repérée : bonne réponse toujours en index 0 dans
+  `032→047`, et `QuizPlayer.options.map` n'est pas mélangé (mes `049→057` varient
+  déjà l'index, mais un shuffle au rendu corrige TOUS les quiz d'un coup).
+- **Pièges** : (a) le WIP onboarding `/bienvenue` v2 (dossier `bienvenue/`,
+  `components/welcome/*`, `lib/welcome.ts`+`placement.ts`, `048_onboarding_v2.sql`)
+  est **non commité** = travail de Lucas → **laissé intact**, `git add` toujours
+  ciblé sur mes seuls fichiers, jamais `git add .`. (b) Les fiches Maths 6e·5e
+  (`047`) étaient déjà exécutées en base : mesurer l'existant avant d'écrire.
+  (c) Le commentaire d'en-tête de `047` contient `$md$…$md$` → le validateur doit
+  ignorer les lignes de commentaire pour compter les paires.
 
 **2026-07-13 [jour] — 180 quiz créés (6 matières cœur, collège + lycée) :**
 - **Fait & sur `main`** : migrations `032`→`043`, 180 quiz / 540 questions,

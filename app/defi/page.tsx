@@ -16,7 +16,8 @@ import { computeStreak, toDayKey } from '@/lib/streak'
 import { getChapterMastery } from '@/lib/mastery'
 import { computeXp, levelFor } from '@/lib/xp'
 import { commuteStreak } from '@/lib/trajet'
-import type { FriendGhost } from '@/lib/social'
+import { avatarEmojiFor, type FriendGhost } from '@/lib/social'
+import type { RankPlayer } from '@/lib/trophies'
 import type { CommuteSlot, QuizQuestion, DeckCard } from '@/lib/types'
 
 export const metadata = { title: 'Défi — Studuel' }
@@ -102,6 +103,8 @@ export default async function DefiPage() {
     { data: quizzes },
     { data: decks },
     { data: ghostRows },
+    { data: friendTrophyRows },
+    { data: trophyRow },
   ] = await Promise.all([
     // user_id explicite : la RLS le garantit aujourd'hui, mais la couche
     // sociale ouvrira la lecture croisée des sessions — XP et série sont à soi.
@@ -134,6 +137,17 @@ export default async function DefiPage() {
     // Fantômes des amis (duels asynchrones) — [] tant que la migration 023
     // n'est pas passée ou qu'aucun ami n'a joué de duel.
     supabase.rpc('friend_ghosts'),
+    // Trophées des amis pour le classement — [] tant que la migration 079
+    // n'est pas passée ou qu'aucun ami n'est accepté.
+    supabase.rpc('friends_trophies'),
+    // Mes trophées, dans un select ISOLÉ : si la migration 079 n'est pas encore
+    // passée (colonnes absentes), cette requête échoue seule → repli sur 0, sans
+    // casser la lecture du profil (classe, prénom).
+    supabase
+      .from('profiles')
+      .select('trophies, best_trophies')
+      .eq('id', user.id)
+      .maybeSingle(),
   ])
 
   const xpTotal = computeXp({
@@ -262,6 +276,23 @@ export default async function DefiPage() {
 
   const firstName = profile?.full_name?.split(' ')[0] ?? null
 
+  // Classement : trophées des amis acceptés (prénom + total), formes revalidées.
+  const friendRanks: RankPlayer[] = (
+    Array.isArray(friendTrophyRows) ? friendTrophyRows : []
+  ).flatMap((r) => {
+    const id = r?.friend_id
+    const trophies = Number(r?.trophies)
+    if (!id || !Number.isFinite(trophies)) return []
+    return [
+      {
+        id: String(id),
+        name: String(r.full_name ?? 'Ami').split(' ')[0] || 'Ami',
+        emoji: avatarEmojiFor(String(id)),
+        trophies: Math.max(0, Math.floor(trophies)),
+      },
+    ]
+  })
+
   // Fantômes réels : les manches enregistrées des amis (prénom + manches,
   // rien d'autre). Formes revalidées — la donnée vient du réseau.
   const ghosts: FriendGhost[] = (Array.isArray(ghostRows) ? ghostRows : [])
@@ -298,6 +329,9 @@ export default async function DefiPage() {
       featuredId={featuredModeId(today)}
       ghosts={ghosts}
       userId={user.id}
+      trophies={Math.max(0, Math.floor(Number(trophyRow?.trophies ?? 0)))}
+      bestTrophies={Math.max(0, Math.floor(Number(trophyRow?.best_trophies ?? 0)))}
+      friendRanks={friendRanks}
     />
   )
 }

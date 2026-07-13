@@ -26,18 +26,6 @@ export function modeImage(id: GameModeId): string | undefined {
     : undefined
 }
 
-// Icônes-boutons pleine tuile : l'image EST le bouton (carte sombre à halo,
-// titre du mode intégré au visuel). Ajouter l'id ici dès que l'image est
-// déposée dans public/images/defi/modes/<id>-bouton.webp — les autres modes
-// gardent la tuile colorée classique.
-const MODE_BUTTON_IDS: GameModeId[] = ['duel', 'chrono', 'survie']
-
-export function modeButtonImage(id: GameModeId): string | undefined {
-  return MODE_BUTTON_IDS.includes(id)
-    ? `/images/defi/modes/${id}-bouton.webp`
-    : undefined
-}
-
 export type GameMode = {
   id: GameModeId
   name: string

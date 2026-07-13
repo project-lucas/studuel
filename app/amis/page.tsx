@@ -5,18 +5,20 @@ import { toDayKey } from '@/lib/streak'
 import {
   getMockLive,
   getMockDuels,
-  getMockLeague,
   getMockFriends,
   getMockSchool,
+  avatarEmojiFor,
   MOCK_PRIORITY_SUBJECT,
 } from '@/lib/social'
+import type { RankPlayer } from '@/lib/trophies'
 
 export const metadata = { title: 'Amis — Studuel' }
 export const dynamic = 'force-dynamic'
 
-// Onglet social (extrême gauche). Amis, duels et ligue sont encore des
-// données de démonstration ; le classement de l'école, lui, bouge déjà avec
-// le vrai temps de travail de l'élève (profiles.work_seconds).
+// Onglet social (extrême gauche). Le classement à l'XP mock a été remplacé par
+// le VRAI classement aux trophées (mode classé du Défi) : mes trophées +
+// ceux de mes amis acceptés (RPC friends_trophies). En direct, duels et école
+// restent des données de démonstration pour l'instant.
 export default async function AmisPage() {
   const supabase = await createClient()
   const {
@@ -24,13 +26,55 @@ export default async function AmisPage() {
   } = await supabase.auth.getUser()
 
   let mySeconds = 0
+  let ranking: RankPlayer[] = []
+
   if (user) {
-    const { data: profile } = await supabase
-      .from('profiles')
-      .select('work_seconds')
-      .eq('id', user.id)
-      .maybeSingle()
+    const [{ data: profile }, { data: trophyRow }, { data: friendTrophyRows }] =
+      await Promise.all([
+        supabase
+          .from('profiles')
+          .select('work_seconds')
+          .eq('id', user.id)
+          .maybeSingle(),
+        // Select ISOLÉ : si la migration 079 n'est pas passée (colonnes
+        // absentes), il échoue seul → repli 0, sans casser le reste.
+        supabase
+          .from('profiles')
+          .select('trophies, best_trophies')
+          .eq('id', user.id)
+          .maybeSingle(),
+        // [] tant que 079 n'est pas passée ou qu'aucun ami n'est accepté.
+        supabase.rpc('friends_trophies'),
+      ])
+
     mySeconds = Number(profile?.work_seconds ?? 0) || 0
+
+    const friendRanks: RankPlayer[] = (
+      Array.isArray(friendTrophyRows) ? friendTrophyRows : []
+    ).flatMap((r) => {
+      const id = r?.friend_id
+      const trophies = Number(r?.trophies)
+      if (!id || !Number.isFinite(trophies)) return []
+      return [
+        {
+          id: String(id),
+          name: String(r.full_name ?? 'Ami').split(' ')[0] || 'Ami',
+          emoji: avatarEmojiFor(String(id)),
+          trophies: Math.max(0, Math.floor(trophies)),
+        },
+      ]
+    })
+
+    ranking = [
+      {
+        id: 'me',
+        name: 'Toi',
+        emoji: '🔥',
+        trophies: Math.max(0, Math.floor(Number(trophyRow?.trophies ?? 0))),
+        isMe: true,
+      },
+      ...friendRanks,
+    ]
   }
 
   return (
@@ -42,7 +86,7 @@ export default async function AmisPage() {
       <AmisHome
         live={getMockLive()}
         duels={getMockDuels()}
-        league={getMockLeague()}
+        ranking={ranking}
         school={getMockSchool(mySeconds)}
         friends={getMockFriends()}
         prioritySubject={MOCK_PRIORITY_SUBJECT}

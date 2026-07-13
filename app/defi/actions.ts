@@ -7,6 +7,7 @@ import { isCommuteNow } from '@/lib/trajet'
 import { XP_RULES } from '@/lib/xp'
 import { MODE_XP_BONUS, modeXpBonus, type GameModeId } from '@/lib/defi-modes'
 import { weeklyBoss, weeklyTrophyId, WEEKLY_TROPHY_COINS } from '@/lib/bosses'
+import { matchmakeOpponentTrophies } from '@/lib/trophies'
 import { toDayKey } from '@/lib/streak'
 import type { CommuteSlot } from '@/lib/types'
 
@@ -130,6 +131,63 @@ export async function saveDuelRecording(
     updated_at: new Date().toISOString(),
   })
   return { saved: !error }
+}
+
+// Résultat d'un match CLASSÉ : fait bouger les trophées de l'élève. Le barème
+// (Elo-lite) est recalculé côté serveur par l'RPC apply_ranked_match — le
+// client ne fournit que l'issue (won) et la graine du match ; les trophées de
+// l'adversaire sont dérivés du matchmaking serveur (autour du joueur), et le
+// delta est borné. Renvoie le total avant/après pour l'animation, ou null.
+export type RankedOutcome = {
+  before: number
+  after: number
+  delta: number
+  best: number
+} | null
+
+export async function recordRankedMatch(
+  won: boolean,
+  seed: string,
+  opponentLabel?: string,
+): Promise<RankedOutcome> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return null
+
+  // Trophées actuels → matchmaking d'un adversaire proche (±120), déterministe.
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('trophies')
+    .eq('id', user.id)
+    .maybeSingle()
+  const myTrophies = Number(profile?.trophies ?? 0)
+  const oppTrophies = matchmakeOpponentTrophies(
+    myTrophies,
+    typeof seed === 'string' && seed ? seed.slice(0, 64) : `${user.id}`,
+  )
+
+  const { data, error } = await supabase.rpc('apply_ranked_match', {
+    p_won: won === true,
+    p_opponent_trophies: oppTrophies,
+    p_opponent_label:
+      typeof opponentLabel === 'string' ? opponentLabel.slice(0, 80) : null,
+  })
+  if (error || !data) {
+    console.error('[defi] match classé non enregistré:', error?.message)
+    return null
+  }
+
+  revalidatePath('/defi')
+  revalidatePath('/amis')
+  const r = data as { before: number; after: number; delta: number; best: number }
+  return {
+    before: Number(r.before ?? myTrophies),
+    after: Number(r.after ?? myTrophies),
+    delta: Number(r.delta ?? 0),
+    best: Number(r.best ?? myTrophies),
+  }
 }
 
 // Le versement du temps de travail (chrono du Défi) passe par la route

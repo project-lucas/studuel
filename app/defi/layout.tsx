@@ -7,7 +7,7 @@ export default function DefiLayout({
     <>
       <div
         aria-hidden="true"
-        className="fixed inset-0 -z-10 bg-[url('/images/defi/fond-ecran.webp')] bg-cover bg-center"
+        className="defi-arena-bg fixed inset-0 -z-10"
       />
       {children}
     </>

@@ -1,19 +1,17 @@
 'use client'
 
 import { useState, useSyncExternalStore } from 'react'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import {
   Radio,
   Swords,
   Trophy,
   Crown,
-  Flame,
   Zap,
   Plus,
   Copy,
   Check,
-  ChevronUp,
-  ChevronDown,
   UserPlus,
   ArrowRight,
   School,
@@ -27,9 +25,7 @@ import {
   type Friend,
   type LiveSession,
   type Duel,
-  type LeagueEntry,
   type SchoolBoard,
-  leagueZone,
   sinceLabel,
   schoolTotalSeconds,
   duelMissionAvailable,
@@ -37,6 +33,12 @@ import {
   DUEL_DAY_STORAGE_KEY,
   MOCK_FRIEND_CODE,
 } from '@/lib/social'
+import {
+  arenaFor,
+  rankPlayers,
+  rivalAhead,
+  type RankPlayer,
+} from '@/lib/trophies'
 
 // En-tête de section : petite étiquette icône + titre, cohérente partout.
 function SectionTitle({
@@ -331,14 +333,16 @@ function DuelRow({ duel }: { duel: Duel }) {
   )
 }
 
-// ----------------------------------------------------------------------- Ligue
-function LeagueBoard({ entries }: { entries: LeagueEntry[] }) {
-  const total = entries.length
+// ------------------------------------------------------------------- Classement
+// Le VRAI classement aux trophées (mode classé du Défi) : moi + mes amis,
+// triés par trophées. Chaque joueur porte l'emoji de son arène courante.
+function RankingBoard({ players }: { players: RankPlayer[] }) {
+  const rows = rankPlayers(players)
   return (
     <ol className="overflow-hidden rounded-2xl bg-card ring-1 ring-foreground/10">
-      {entries.map((e, i) => {
-        const rank = i + 1
-        const zone = leagueZone(rank, total)
+      {rows.map((e) => {
+        const rank = e.rank
+        const arena = arenaFor(e.trophies)
         return (
           <li
             key={e.id}
@@ -359,25 +363,25 @@ function LeagueBoard({ entries }: { entries: LeagueEntry[] }) {
               {rank}
             </span>
             <Avatar emoji={e.emoji} />
-            <span
-              className={cn(
-                'min-w-0 flex-1 truncate text-sm',
-                e.isMe ? 'font-bold' : 'font-medium',
-              )}
-            >
-              {e.name}
-              {rank === 1 ? (
-                <Crown className="ml-1 inline size-3.5 -translate-y-0.5 text-highlight" />
-              ) : null}
+            <span className="min-w-0 flex-1">
+              <span
+                className={cn(
+                  'flex items-center gap-1 truncate text-sm',
+                  e.isMe ? 'font-bold' : 'font-medium',
+                )}
+              >
+                {e.name}
+                {rank === 1 ? (
+                  <Crown className="inline size-3.5 text-highlight" aria-hidden="true" />
+                ) : null}
+              </span>
+              <span className="block truncate text-[11px] text-muted-foreground">
+                {arena.emoji} {arena.name}
+              </span>
             </span>
-            {zone === 'promote' ? (
-              <ChevronUp className="size-4 text-green-600" aria-label="Zone de montée" />
-            ) : zone === 'relegate' ? (
-              <ChevronDown className="size-4 text-destructive" aria-label="Zone de descente" />
-            ) : null}
             <span className="flex items-center gap-1 font-mono text-sm font-semibold tabular-nums">
-              <Zap className="size-3.5 text-highlight" />
-              {e.xp}
+              {e.trophies}
+              <Trophy className="size-3.5 text-highlight" aria-hidden="true" />
             </span>
           </li>
         )
@@ -473,7 +477,7 @@ function SchoolSection({ school }: { school: SchoolBoard }) {
 export default function AmisHome({
   live,
   duels,
-  league,
+  ranking,
   school,
   friends,
   prioritySubject,
@@ -481,15 +485,22 @@ export default function AmisHome({
 }: {
   live: LiveSession[]
   duels: Duel[]
-  league: LeagueEntry[]
+  ranking: RankPlayer[]
   school: SchoolBoard
   friends: Friend[]
   prioritySubject: { subject: string; topic: string }
   todayKey: string
 }) {
   const [copied, setCopied] = useState(false)
-  const myRank = league.findIndex((e) => e.isMe) + 1
-  const me = league.find((e) => e.isMe)
+  // Classement réel aux trophées : ma place, mes trophées, mon arène, et le
+  // rival juste devant (« +40 pour le doubler »).
+  const rankedRows = rankPlayers(ranking)
+  const meRow = rankedRows.find((e) => e.isMe)
+  const myRank = meRow ? meRow.rank : 0
+  const myTrophies = meRow?.trophies ?? 0
+  const myArena = arenaFor(myTrophies)
+  const ahead = rivalAhead(rankedRows)
+  const friendCount = ranking.filter((e) => !e.isMe).length
 
   const copyCode = async () => {
     try {
@@ -562,37 +573,52 @@ export default function AmisHome({
         </ul>
       </section>
 
-      {/* La Ligue — classement hebdomadaire à l'XP. */}
+      {/* Le Classement — aux trophées, en temps réel (mode classé du Défi). */}
       <section>
-        <SectionTitle icon={Flame}>La Ligue</SectionTitle>
-        {/* Résumé : où tu en es, cette semaine. */}
+        <SectionTitle
+          icon={Trophy}
+          aside={
+            <Link
+              href="/defi"
+              onClick={() => sfx.tap()}
+              className="flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground transition-transform active:scale-95"
+            >
+              <Swords className="size-3.5" /> Match classé
+            </Link>
+          }
+        >
+          Classement
+        </SectionTitle>
+        {/* Résumé : ta place, ton arène, et l'objectif juste devant. */}
         <div className="mb-2 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
           <div className="flex items-center gap-3">
-            <Trophy className="size-8 shrink-0 text-highlight" />
+            <span aria-hidden="true" className="text-3xl">
+              {myArena.emoji}
+            </span>
             <div className="min-w-0 flex-1">
               <p className="font-heading font-bold">
-                {myRank <= 5
-                  ? `${myRank}e — tu montes ! 🚀`
-                  : `${myRank}e de ta ligue`}
+                {friendCount > 0
+                  ? myRank === 1
+                    ? `1er sur ${friendCount + 1} — tu domines 👑`
+                    : `${myRank}e sur ${friendCount + 1} amis`
+                  : myArena.name}
               </p>
-              <p className="text-xs text-muted-foreground">
-                Ligue Argent · fin dimanche
+              <p className="truncate text-xs text-muted-foreground">
+                {ahead
+                  ? `${ahead.trophies - myTrophies} trophées pour doubler ${ahead.name}`
+                  : `Arène ${myArena.name}`}
               </p>
             </div>
             <span className="flex shrink-0 items-center gap-1 font-mono font-bold tabular-nums">
-              <Zap className="size-4 text-highlight" />
-              {me?.xp ?? 0}
+              {myTrophies}
+              <Trophy className="size-4 text-highlight" />
             </span>
           </div>
         </div>
-        <LeagueBoard entries={league} />
-        <p className="mt-2 flex items-center gap-3 px-1 text-[11px] text-muted-foreground">
-          <span className="flex items-center gap-1">
-            <ChevronUp className="size-3.5 text-green-600" /> montent
-          </span>
-          <span className="flex items-center gap-1">
-            <ChevronDown className="size-3.5 text-destructive" /> descendent
-          </span>
+        <RankingBoard players={ranking} />
+        <p className="mt-2 px-1 text-[11px] text-muted-foreground">
+          Gagne des matchs classés dans le Défi pour grimper — chaque victoire
+          rapporte des trophées.
         </p>
       </section>
 

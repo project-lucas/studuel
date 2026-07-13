@@ -16,6 +16,8 @@ import {
   Crown,
   Lock,
   Star,
+  HandHeart,
+  CornerDownRight,
   type LucideIcon,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -30,6 +32,10 @@ import LiveDuelMode from '@/components/LiveDuelMode'
 import ChronoMode from '@/components/ChronoMode'
 import SurvivalMode from '@/components/SurvivalMode'
 import BossMode from '@/components/BossMode'
+import RankedMode from '@/components/RankedMode'
+import RankedHero from '@/components/RankedHero'
+import CoopMode from '@/components/CoopMode'
+import type { RankPlayer } from '@/lib/trophies'
 import { bossForSubject, dominantSubject } from '@/lib/bosses'
 import { XP_RULES, type LevelInfo } from '@/lib/xp'
 import { isCommuteNow } from '@/lib/trajet'
@@ -42,7 +48,6 @@ import {
   GAME_MODES,
   MODE_XP_BONUS,
   FEATURED_XP_MULTIPLIER,
-  modeButtonImage,
   modeImage,
   modeStatus,
   ROUND_SIZE,
@@ -78,6 +83,8 @@ type Phase =
   | 'chrono'
   | 'survie'
   | 'boss'
+  | 'ranked'
+  | 'coop'
 
 // Icône de chaque mode de jeu — sobres (Lucide), pas d'emoji.
 const MODE_ICONS: Record<GameModeId, LucideIcon> = {
@@ -96,14 +103,6 @@ const TILE_CLASS: Record<GameModeId, string> = {
   chrono: 'tile-chrono text-white',
   survie: 'tile-survie text-white',
   boss: 'tile-boss text-white',
-}
-
-// Idle par mode : le visuel du bouton vit (choc d'épées, sablier qui tangue,
-// bouclier qui flotte) — keyframes dans globals.css, section Arène.
-const MODE_BUTTON_ANIM: Partial<Record<GameModeId, string>> = {
-  duel: 'mode-anim-duel',
-  chrono: 'mode-anim-chrono',
-  survie: 'mode-anim-survie',
 }
 
 // Badge « +XP » : or sur les tuiles colorées, marine sur la tuile or.
@@ -129,6 +128,9 @@ export default function DefiHome({
   featuredId = null,
   ghosts = [],
   userId = null,
+  trophies: trophiesProp = 0,
+  bestTrophies = 0,
+  friendRanks = [],
 }: {
   items: ChallengeItem[]
   pool?: ModeQuestion[]
@@ -145,9 +147,16 @@ export default function DefiHome({
   ghosts?: FriendGhost[]
   // Identifiant de l'élève : requis pour le duel en temps réel (Realtime).
   userId?: string | null
+  // Classement compétitif : mes trophées, mon record, et ceux de mes amis.
+  trophies?: number
+  bestTrophies?: number
+  friendRanks?: RankPlayer[]
 }) {
   const router = useRouter()
   const [phase, setPhase] = useState<Phase>('landing')
+  // Trophées suivis localement : le match classé les met à jour tout de suite
+  // (le serveur reste la source de vérité, re-tirée au retour à l'accueil).
+  const [trophies, setTrophies] = useState(trophiesProp)
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
   const [revealed, setRevealed] = useState(false)
@@ -279,17 +288,60 @@ export default function DefiHome({
   if (phase === 'boss') {
     return <BossMode pool={pool} onExit={exitMode} />
   }
+  if (phase === 'ranked') {
+    return (
+      <RankedMode
+        pool={pool}
+        myTrophies={trophies}
+        friends={friendRanks}
+        onResult={(after) => setTrophies(after)}
+        onExit={exitMode}
+      />
+    )
+  }
+  if (phase === 'coop' && userId) {
+    return (
+      <CoopMode
+        userId={userId}
+        pool={pool}
+        subject={dominantSubject(pool)}
+        onExit={exitMode}
+      />
+    )
+  }
 
   // ---------------------------------------------------------------- landing
   if (phase === 'landing') {
     // Récompense affichée sur le GO : le potentiel du défi du jour.
     const dailyXp =
       items.length * XP_RULES.challengePerCorrect + XP_RULES.challengeBonus
+    // Classement : moi (trophées suivis localement) + mes amis.
+    const rankedPlayers: RankPlayer[] = [
+      {
+        id: 'me',
+        name: firstName ?? 'Toi',
+        emoji: '🔥',
+        trophies,
+        isMe: true,
+      },
+      ...friendRanks,
+    ]
     return (
       <div className="flex flex-col items-center gap-6 pt-2 text-center">
+        {/* LE classement : hero de l'onglet, mode classé par défaut. */}
+        <RankedHero
+          trophies={trophies}
+          bestTrophies={Math.max(bestTrophies, trophies)}
+          players={rankedPlayers}
+          onPlay={() => {
+            sfx.tap()
+            setPhase('ranked')
+          }}
+        />
+
         {/* HUD : niveau à gauche, série à droite — l'écran d'accueil du jeu. */}
         <div className="grid w-full max-w-sm grid-cols-2 gap-2 text-left">
-          <div className="pop-in flex items-center gap-2.5 rounded-2xl border bg-card p-3 shadow-sm">
+          <div className="pop-in flex items-center gap-2.5 rounded-2xl bg-card p-3 shadow-sm ring-1 ring-black/5">
             <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 font-mono text-base font-extrabold text-primary tabular-nums">
               {level.level}
             </span>
@@ -316,7 +368,7 @@ export default function DefiHome({
           </div>
 
           <div
-            className="pop-in flex items-center gap-2.5 rounded-2xl border bg-card p-3 shadow-sm"
+            className="pop-in flex items-center gap-2.5 rounded-2xl bg-card p-3 shadow-sm ring-1 ring-black/5"
             style={{ animationDelay: '70ms' }}
           >
             <StreakMascot streak={streak} size={40} />
@@ -344,65 +396,100 @@ export default function DefiHome({
           </p>
         ) : null}
 
-        {/* Sur le fond sombre de l'Arène, les textes posés à même le décor
-            passent en blanc. */}
-        <div className="space-y-1">
-          <p className="text-[11px] font-bold tracking-widest text-white/80 uppercase">
-            Défi du jour
-          </p>
-          <h1 className="font-heading text-3xl font-bold text-white">
-            {doneToday
-              ? 'Encore un, pour la gloire ?'
-              : firstName
-                ? `À toi de jouer, ${firstName} !`
-                : 'À toi de jouer !'}
-          </h1>
-          <p className="text-sm text-white/70">
-            {items.length} questions · environ 3 minutes ·{' '}
-            {doneToday ? 'défi du jour déjà validé ✓' : 'valide ta journée'}
-          </p>
-        </div>
+        {/* Défi du jour — carte « clay » violette qui appelle le bouton GO
+            flottant (même couleur d'action). Contour clair + reflet doux =
+            langage claymorphism, cohérent avec le reste du monde Studuel. */}
+        <section aria-label="Défi du jour" className="w-full max-w-sm text-left">
+          <div className="relative overflow-hidden rounded-3xl border-2 border-white/15 bg-primary p-4 text-primary-foreground shadow-xl shadow-black/30">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white/12 to-transparent"
+            />
+            <div className="relative flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <p className="text-[11px] font-bold tracking-widest text-highlight uppercase">
+                  Défi du jour
+                </p>
+                <h1 className="font-heading mt-0.5 text-2xl font-bold text-balance">
+                  {doneToday
+                    ? 'Encore un, pour la gloire ?'
+                    : firstName
+                      ? `À toi de jouer, ${firstName} !`
+                      : 'À toi de jouer !'}
+                </h1>
+                <p className="mt-1 text-sm text-primary-foreground/80">
+                  {items.length} questions · environ 3 minutes ·{' '}
+                  {doneToday ? 'déjà validé ✓' : 'valide ta journée'}
+                </p>
+              </div>
+              {items.length > 0 && !doneToday ? (
+                <span className="flex shrink-0 items-center gap-1 rounded-full bg-highlight px-2.5 py-1 font-mono text-xs font-bold text-foreground tabular-nums shadow-sm">
+                  <Zap className="size-3.5" aria-hidden="true" />+{dailyXp} XP
+                </span>
+              ) : null}
+            </div>
+            {items.length > 0 ? (
+              <p className="relative mt-3 flex items-center gap-1.5 text-xs font-semibold text-primary-foreground/85">
+                <CornerDownRight className="size-4 text-highlight" aria-hidden="true" />
+                Appuie sur le gros bouton{' '}
+                <span className="font-heading font-extrabold">GO</span> en bas à
+                droite
+              </p>
+            ) : (
+              <p className="relative mt-3 text-sm text-primary-foreground/80">
+                Pas encore de contenu pour ta classe — reviens bientôt !
+              </p>
+            )}
+          </div>
+        </section>
 
-        {/* LE bouton — avec sa récompense affichée, comme un niveau de jeu. */}
-        <div className="relative">
+        {/* LE bouton du défi du jour — FAB flottant fixe, ancré en bas à droite,
+            toujours visible au scroll, au-dessus du contenu, en zone sûre
+            (safe-area) et dégagé de la barre d'onglets (mêmes offsets que le
+            bouton d'arrêt de session). Contour marine + ombre dure décalée. */}
+        <div
+          className="fixed z-50 right-[calc(env(safe-area-inset-right)+1rem)] bottom-[calc(env(safe-area-inset-bottom)+6rem)] md:right-[calc(env(safe-area-inset-right)+2rem)] md:bottom-[calc(env(safe-area-inset-bottom)+2rem)]"
+        >
           {/* Anneau d'arcade : pointillés en rotation lente autour du GO. */}
           <span
             aria-hidden="true"
-            className="go-ring pointer-events-none absolute -inset-2.5 rounded-full border-2 border-dashed border-white/30"
+            className="go-ring pointer-events-none absolute -inset-2 rounded-full border-2 border-dashed border-white/40"
           />
           <button
             type="button"
             onClick={start}
             disabled={items.length === 0}
-            className={cn(
-              'group relative flex size-36 flex-col items-center justify-center gap-1 overflow-hidden rounded-full bg-primary text-primary-foreground shadow-xl shadow-black/40 ring-2 ring-white/20 transition-all hover:scale-105 active:scale-95 disabled:opacity-40',
-              !doneToday && items.length > 0 && 'go-pulse',
-            )}
+            aria-label={
+              doneToday
+                ? 'Rejouer le défi du jour'
+                : 'Lancer le défi du jour'
+            }
+            style={{
+              boxShadow:
+                '0 6px 0 0 var(--foreground), 0 14px 22px rgba(0,0,0,0.45)',
+            }}
+            className="group relative flex size-24 flex-col items-center justify-center gap-0.5 overflow-hidden rounded-full border-[3px] border-foreground bg-primary text-primary-foreground transition-transform hover:-translate-y-0.5 active:translate-y-1 active:scale-95 disabled:opacity-40"
           >
             {/* Reflet en haut du bouton : le « bouton d'arcade ». */}
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute inset-x-4 top-2 h-14 rounded-full bg-gradient-to-b from-white/20 to-transparent"
+              className="pointer-events-none absolute inset-x-3 top-1.5 h-9 rounded-full bg-gradient-to-b from-white/25 to-transparent"
             />
-            <Zap className="size-10 transition-transform group-hover:rotate-12" />
-            <span className="font-heading text-xl font-bold">GO</span>
+            <Zap className="size-8 transition-transform group-hover:rotate-12" />
+            <span className="font-heading text-base leading-none font-bold">
+              GO
+            </span>
           </button>
 
           {items.length > 0 && !doneToday ? (
             <span
-              className="pop-spring absolute -top-1 -right-8 rotate-6 rounded-full bg-highlight px-2.5 py-1 font-mono text-xs font-bold shadow-md tabular-nums"
+              className="pop-spring absolute -top-3 left-1/2 -translate-x-1/2 rotate-[-4deg] rounded-full border-2 border-foreground bg-highlight px-2 py-0.5 font-mono text-[11px] font-bold text-foreground shadow-md tabular-nums"
               style={{ animationDelay: '500ms' }}
             >
               +{dailyXp} XP
             </span>
           ) : null}
         </div>
-
-        {items.length === 0 ? (
-          <p className="max-w-xs text-sm text-white/70">
-            Pas encore de contenu pour ta classe — reviens bientôt !
-          </p>
-        ) : null}
 
         {/* L'Arène : les modes compétitifs, sous le rituel quotidien.
             Sans cadre ni décor : les tuiles colorées respirent sur le fond
@@ -430,56 +517,11 @@ export default function DefiHome({
                 : null
               const Icon = MODE_ICONS[mode.id]
               const image = playable ? modeImage(mode.id) : undefined
-              const buttonImage = playable
-                ? modeButtonImage(mode.id)
-                : undefined
 
-              // L'image EST le bouton : carte sombre à halo, titre du mode
-              // intégré au visuel. On ne surimprime que la pastille XP (dans
-              // la moitié basse de la carte, laissée vide) et le badge du
-              // mode du jour ; le nom et la promesse passent en aria-label.
-              if (buttonImage) {
-                return (
-                  <button
-                    key={mode.id}
-                    type="button"
-                    onClick={() => {
-                      sfx.tap()
-                      setPhase(mode.id)
-                    }}
-                    aria-label={`${mode.name} — ${mode.tagline}`}
-                    className="pop-in group flex items-center transition-transform hover:scale-[1.03] active:scale-95"
-                    style={{ animationDelay: `${120 + i * 90}ms` }}
-                  >
-                    <span className="relative w-full">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={buttonImage}
-                        alt=""
-                        aria-hidden="true"
-                        className={cn('h-auto w-full', MODE_BUTTON_ANIM[mode.id])}
-                      />
-                      {featured ? (
-                        <span className="absolute top-[6%] left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-highlight px-2 py-0.5 text-[9px] font-extrabold tracking-widest whitespace-nowrap text-foreground uppercase">
-                          <Star className="size-2.5" aria-hidden="true" /> Mode
-                          du jour
-                        </span>
-                      ) : null}
-                      <span
-                        className={cn(
-                          'absolute inset-x-0 bottom-[14%] mx-auto w-fit rotate-3 rounded-full border border-white/30 px-2 py-0.5 font-mono text-[10px] font-bold shadow-sm tabular-nums',
-                          featured
-                            ? 'bg-highlight text-foreground'
-                            : TILE_CHIP[mode.id],
-                        )}
-                      >
-                        +{xpChip} XP{featured ? ' ·×2' : ''}
-                      </span>
-                    </span>
-                  </button>
-                )
-              }
-
+              // Toutes les tuiles parlent le MÊME langage : carte 3D colorée
+              // (couleur propre au mode), illustration cartoon en cartouche,
+              // en-tête pastille icône + pastille XP, titre + promesse, « Jouer ».
+              // Un seul chemin de rendu = grille cohérente d'un mode à l'autre.
               return (
                 <button
                   key={mode.id}
@@ -490,7 +532,7 @@ export default function DefiHome({
                     setPhase(mode.id)
                   }}
                   className={cn(
-                    'pop-in group relative flex flex-col gap-2 overflow-hidden rounded-2xl p-3 text-left',
+                    'pop-in group relative flex min-h-36 flex-col gap-2 overflow-hidden rounded-2xl p-3 text-left',
                     playable
                       ? cn('press-3d-deep arena-tile', TILE_CLASS[mode.id])
                       : 'border border-dashed bg-card opacity-70 shadow-sm',
@@ -507,7 +549,10 @@ export default function DefiHome({
                       src={image}
                       alt=""
                       aria-hidden="true"
-                      className="pointer-events-none absolute -right-2 -bottom-3 h-24 w-auto max-w-[45%] rotate-6 object-contain object-bottom drop-shadow-[0_3px_6px_rgba(0,0,0,0.35)] transition-transform group-hover:rotate-3 group-hover:scale-105"
+                      className={cn(
+                        'pointer-events-none absolute -right-2 -bottom-3 w-auto max-w-[46%] rotate-6 object-contain object-bottom drop-shadow-[0_3px_6px_rgba(0,0,0,0.35)] transition-transform group-hover:rotate-3 group-hover:scale-105',
+                        isBoss ? 'h-28' : 'h-24',
+                      )}
                     />
                   ) : (
                     <Icon
@@ -588,19 +633,37 @@ export default function DefiHome({
             })}
           </div>
 
-          {/* Duel en temps réel : match synchrone contre un ami (Realtime). */}
-          {userId && pool.length >= ROUND_SIZE ? (
-            <button
-              type="button"
-              onClick={() => {
-                sfx.tap()
-                setPhase('duel-live')
-              }}
-              className="press-3d-deep mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-extrabold tracking-wide text-white uppercase ring-1 ring-white/25 transition-transform hover:scale-[1.01] active:scale-95"
-            >
-              <Swords className="size-4" aria-hidden="true" /> Duel en ligne · en
-              direct
-            </button>
+          {/* Jouer à deux, en temps réel (Realtime). Coop = entraide, Duel =
+              affrontement — les deux se lancent par un code d'invitation. */}
+          {userId ? (
+            <div className="mt-4 flex flex-col gap-2.5">
+              {pool.length >= 2 ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    sfx.tap()
+                    setPhase('coop')
+                  }}
+                  className="press-3d-deep flex w-full items-center justify-center gap-2 rounded-2xl bg-highlight px-4 py-3.5 font-heading text-sm font-extrabold tracking-wide text-foreground uppercase italic ring-1 ring-black/10 transition-transform active:scale-[0.99]"
+                >
+                  <HandHeart className="size-4.5" aria-hidden="true" /> Mode Coop ·
+                  à deux
+                </button>
+              ) : null}
+              {pool.length >= ROUND_SIZE ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    sfx.tap()
+                    setPhase('duel-live')
+                  }}
+                  className="press-3d-deep flex w-full items-center justify-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-extrabold tracking-wide text-white uppercase ring-1 ring-white/25 transition-transform hover:scale-[1.01] active:scale-95"
+                >
+                  <Swords className="size-4" aria-hidden="true" /> Duel en ligne ·
+                  en direct
+                </button>
+              ) : null}
+            </div>
           ) : null}
         </section>
       </div>

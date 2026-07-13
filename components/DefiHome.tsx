@@ -26,6 +26,7 @@ import StreakMascot from '@/components/StreakMascot'
 import DefiTimer from '@/components/DefiTimer'
 import BlitzMode from '@/components/BlitzMode'
 import DuelMode from '@/components/DuelMode'
+import LiveDuelMode from '@/components/LiveDuelMode'
 import ChronoMode from '@/components/ChronoMode'
 import SurvivalMode from '@/components/SurvivalMode'
 import BossMode from '@/components/BossMode'
@@ -44,6 +45,7 @@ import {
   modeButtonImage,
   modeImage,
   modeStatus,
+  ROUND_SIZE,
   type GameModeId,
   type ModeQuestion,
 } from '@/lib/defi-modes'
@@ -72,6 +74,7 @@ type Phase =
   | 'done'
   | 'blitz'
   | 'duel'
+  | 'duel-live'
   | 'chrono'
   | 'survie'
   | 'boss'
@@ -125,6 +128,7 @@ export default function DefiHome({
   commuteStreak = 0,
   featuredId = null,
   ghosts = [],
+  userId = null,
 }: {
   items: ChallengeItem[]
   pool?: ModeQuestion[]
@@ -139,6 +143,8 @@ export default function DefiHome({
   featuredId?: GameModeId | null
   // Fantômes réels des amis (duels asynchrones, duel_recordings).
   ghosts?: FriendGhost[]
+  // Identifiant de l'élève : requis pour le duel en temps réel (Realtime).
+  userId?: string | null
 }) {
   const router = useRouter()
   const [phase, setPhase] = useState<Phase>('landing')
@@ -250,6 +256,16 @@ export default function DefiHome({
         pool={pool}
         myLevel={level.level}
         ghosts={ghosts}
+        onExit={exitMode}
+      />
+    )
+  }
+  if (phase === 'duel-live' && userId) {
+    return (
+      <LiveDuelMode
+        userId={userId}
+        pool={pool}
+        subject={dominantSubject(pool)}
         onExit={exitMode}
       />
     )
@@ -571,6 +587,21 @@ export default function DefiHome({
               )
             })}
           </div>
+
+          {/* Duel en temps réel : match synchrone contre un ami (Realtime). */}
+          {userId && pool.length >= ROUND_SIZE ? (
+            <button
+              type="button"
+              onClick={() => {
+                sfx.tap()
+                setPhase('duel-live')
+              }}
+              className="press-3d-deep mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-extrabold tracking-wide text-white uppercase ring-1 ring-white/25 transition-transform hover:scale-[1.01] active:scale-95"
+            >
+              <Swords className="size-4" aria-hidden="true" /> Duel en ligne · en
+              direct
+            </button>
+          ) : null}
         </section>
       </div>
     )

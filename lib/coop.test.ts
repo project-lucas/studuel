@@ -53,6 +53,16 @@ describe('coopStatus', () => {
     expect(s.cleared).toBe(2)
   })
 
+  it('is won on a short series only with the real total (garde du hook coop)', () => {
+    // Petit chapitre : 6 questions partagées, toutes sauvées par le partenaire.
+    const theirs = [0, 1, 2, 3, 4, 5].map((q) => a(q, true))
+    // Avec le vrai total (6) → victoire d'équipe.
+    expect(coopStatus([], theirs, 6).outcome).toBe('won')
+    // Avec le total par défaut (10, le bug corrigé dans useCoop) → jamais gagné,
+    // ce qui privait l'équipe de son XP alors que l'écran affichait la victoire.
+    expect(coopStatus([], theirs).outcome).toBeNull()
+  })
+
   it('is a team loss when shared lives run out', () => {
     const mine = [a(0, false), a(1, false), a(2, false)]
     const theirs = [a(0, false), a(1, false), a(2, false)]

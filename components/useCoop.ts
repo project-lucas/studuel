@@ -77,10 +77,16 @@ export function useCoop(userId: string) {
           setState((s) => {
             if (s.theirAnswers.some((x) => x.q === ans.q)) return s
             const theirAnswers = [...s.theirAnswers, ans]
+            // Total réel = la série partagée (peut être < 10 sur un petit
+            // chapitre) — sinon l'issue « gagné » ne se déclenche jamais.
+            const total = s.questionIds.length
             return {
               ...s,
               theirAnswers,
-              outcome: coopStatus(s.myAnswers, theirAnswers).outcome,
+              outcome:
+                total > 0
+                  ? coopStatus(s.myAnswers, theirAnswers, total).outcome
+                  : null,
             }
           })
         })
@@ -179,10 +185,14 @@ export function useCoop(userId: string) {
     setState((s) => {
       if (s.myAnswers.some((x) => x.q === answer.q)) return s
       const myAnswers = [...s.myAnswers, answer]
+      const total = s.questionIds.length
       return {
         ...s,
         myAnswers,
-        outcome: coopStatus(myAnswers, s.theirAnswers).outcome,
+        outcome:
+          total > 0
+            ? coopStatus(myAnswers, s.theirAnswers, total).outcome
+            : null,
       }
     })
   }, [])

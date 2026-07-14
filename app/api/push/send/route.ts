@@ -1,3 +1,4 @@
+import { timingSafeEqual } from 'node:crypto'
 import { createClient } from '@supabase/supabase-js'
 import webpush from 'web-push'
 import { srsMessage, streakMessage, type PushMessage } from '@/lib/notifications'
@@ -25,10 +26,20 @@ function todayKeyUtc(): string {
   return new Date().toISOString().slice(0, 10)
 }
 
+// Comparaison à temps constant du secret cron (évite qu'une attaque par timing
+// puisse deviner CRON_SECRET caractère par caractère). Échoue fermé.
+function matchesCronSecret(authHeader: string | null, secret: string): boolean {
+  if (!authHeader) return false
+  const provided = Buffer.from(authHeader)
+  const expected = Buffer.from(`Bearer ${secret}`)
+  if (provided.length !== expected.length) return false
+  return timingSafeEqual(provided, expected)
+}
+
 export async function GET(request: Request): Promise<Response> {
   const secret = process.env.CRON_SECRET
   const authHeader = request.headers.get('authorization')
-  if (!secret || authHeader !== `Bearer ${secret}`) {
+  if (!secret || !matchesCronSecret(authHeader, secret)) {
     return new Response(null, { status: 401 })
   }
 

@@ -1,17 +1,11 @@
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
-import {
-  Clock,
-  ExternalLink,
-  HeartHandshake,
-  LineChart,
-  MonitorPlay,
-} from 'lucide-react'
-import PageHeader from '@/components/PageHeader'
+import { Clock, ExternalLink, HeartHandshake, MonitorPlay } from 'lucide-react'
 import ChildReport from '@/components/parents/ChildReport'
 import LinkChildForm from '@/components/parents/LinkChildForm'
 import { createClient } from '@/lib/supabase/server'
 import { computeStreak, weekProgress } from '@/lib/streak'
+import { GRID_PATTERN } from '@/lib/subject-style'
 import type { ChildDashboard } from '@/lib/parents'
 
 export const metadata = { title: 'Espace parents — Studuel' }
@@ -66,26 +60,29 @@ export default async function ParentsPage() {
   const now = new Date()
 
   return (
-    <div className="mx-auto w-full max-w-2xl">
-      <PageHeader title="Espace parents" />
-      <p className="text-muted-foreground -mt-2 mb-6 text-sm">
-        Comprendre la méthode Studuel et accompagner votre enfant au quotidien,
-        avec les conseils du coach scolaire.
-      </p>
+    <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
+      {/* Hero violet : le suivi des enfants, façon espace famille */}
+      <header className="bg-primary text-primary-foreground relative overflow-hidden px-4 pt-20 pb-10 md:px-8 md:pt-14">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.08]"
+          style={GRID_PATTERN}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto w-full max-w-2xl">
+          <h1 className="font-heading text-3xl font-bold text-balance md:text-4xl">
+            Suivi de vos enfants
+          </h1>
+          <p className="mt-2 max-w-prose text-sm opacity-90">
+            Le temps de travail, la régularité et les progrès par matière — mis à
+            jour à chaque session. Les résultats peuvent mettre un moment à
+            s&apos;actualiser.
+          </p>
+        </div>
+      </header>
 
+      <div className="mx-auto w-full max-w-2xl px-4 py-8 md:px-8">
       {/* Suivi de l'enfant */}
       <section className="mb-8">
-        <h2 className="font-heading mb-1 flex items-center gap-2 text-lg font-semibold">
-          <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-xl">
-            <LineChart className="size-4" aria-hidden="true" />
-          </span>
-          Le suivi de votre enfant
-        </h2>
-        <p className="text-muted-foreground mb-4 text-sm">
-          Temps de travail, régularité et progrès par matière, mis à jour à
-          chaque session.
-        </p>
-
         {reports.map(({ childId, dashboard }) => {
           if (!dashboard) return null
           const activeDays = new Set(dashboard.active_days)
@@ -209,6 +206,7 @@ export default async function ParentsPage() {
           </Link>
         </p>
       </section>
+      </div>
     </div>
   )
 }

@@ -1,6 +1,7 @@
-import { Clock, Flame, Trophy, Unlink } from 'lucide-react'
+import { CalendarClock, Clock, Flame, Gauge, Trophy, Unlink } from 'lucide-react'
 import { workLevel } from '@/lib/work-level'
 import {
+  averageDailySeconds,
   formatWorkDuration,
   parentHeadline,
   scorePercent,
@@ -33,6 +34,10 @@ export default function ChildReport({
   const strong = strongestSubject(dashboard.per_subject)
   const avgPct = scorePercent(dashboard.avg_ratio)
   const name = dashboard.full_name?.trim() || 'Votre enfant'
+  const avgDaily = averageDailySeconds(
+    dashboard.week_seconds,
+    dashboard.week_active_days,
+  )
 
   return (
     <article className="bg-card mb-6 rounded-2xl border p-5 shadow-sm">
@@ -56,14 +61,34 @@ export default function ChildReport({
         </form>
       </header>
 
-      {/* Trois indicateurs clés */}
-      <div className="mb-5 grid grid-cols-3 gap-3">
-        <Stat
+      {/* Les trois temps mis en avant : total, cette semaine, moyenne/jour */}
+      <div className="mb-4 grid grid-cols-3 gap-3">
+        <BigStat
           icon={<Clock className="size-4" aria-hidden="true" />}
-          label="Temps de travail"
+          label="Temps total"
           value={formatWorkDuration(dashboard.work_seconds)}
           sub={level.title}
         />
+        <BigStat
+          icon={<CalendarClock className="size-4" aria-hidden="true" />}
+          label="Cette semaine"
+          value={formatWorkDuration(dashboard.week_seconds)}
+          sub={
+            dashboard.week_active_days > 0
+              ? `${dashboard.week_active_days} jour${dashboard.week_active_days > 1 ? 's' : ''} travaillé${dashboard.week_active_days > 1 ? 's' : ''}`
+              : 'à relancer'
+          }
+        />
+        <BigStat
+          icon={<Gauge className="size-4" aria-hidden="true" />}
+          label="Moyenne / jour"
+          value={avgDaily > 0 ? formatWorkDuration(avgDaily) : '—'}
+          sub="par jour travaillé"
+        />
+      </div>
+
+      {/* Série + réussite, en second plan */}
+      <div className="mb-5 grid grid-cols-2 gap-3">
         <Stat
           icon={<Flame className="size-4" aria-hidden="true" />}
           label="Série"
@@ -146,6 +171,34 @@ export default function ChildReport({
         ) : null}
       </section>
     </article>
+  )
+}
+
+// Indicateur mis en avant (les trois temps) : liseré violet, chiffre large.
+function BigStat({
+  icon,
+  label,
+  value,
+  sub,
+}: {
+  icon: React.ReactNode
+  label: string
+  value: string
+  sub: string
+}) {
+  return (
+    <div className="border-primary/25 bg-primary/5 rounded-2xl border p-3 text-center">
+      <span className="bg-primary/10 text-primary mx-auto mb-1.5 flex size-8 items-center justify-center rounded-lg">
+        {icon}
+      </span>
+      <span className="font-heading block text-lg leading-none font-bold tabular-nums">
+        {value}
+      </span>
+      <span className="text-muted-foreground mt-1.5 block text-[11px] leading-tight font-medium">
+        {label}
+      </span>
+      <span className="text-muted-foreground/80 block text-[11px]">{sub}</span>
+    </div>
   )
 }
 

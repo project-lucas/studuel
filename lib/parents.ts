@@ -15,6 +15,8 @@ export type SubjectScore = {
 export type ChildDashboard = {
   full_name: string | null
   work_seconds: number
+  week_seconds: number // temps travaillé sur les 7 derniers jours (glissant)
+  week_active_days: number // nb de jours travaillés sur ces 7 jours
   active_days: string[] // clés UTC 'YYYY-MM-DD'
   sessions_total: number
   sessions_7: number
@@ -112,4 +114,15 @@ export function formatWorkDuration(seconds: number): string {
   if (hours <= 0) return `${minutes} min`
   if (minutes === 0) return `${hours} h`
   return `${hours} h ${String(minutes).padStart(2, '0')}`
+}
+
+// Temps de révision moyen par jour travaillé de la semaine, en secondes.
+// Moyenné sur les jours réellement travaillés (plus parlant que sur 7) ;
+// 0 si aucun jour travaillé cette semaine.
+export function averageDailySeconds(
+  weekSeconds: number,
+  weekActiveDays: number,
+): number {
+  if (weekActiveDays <= 0) return 0
+  return Math.round(Math.max(0, weekSeconds) / weekActiveDays)
 }

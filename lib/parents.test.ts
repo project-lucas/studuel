@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   activityLevel,
+  averageDailySeconds,
   formatWorkDuration,
   parentHeadline,
   scorePercent,
@@ -124,5 +125,21 @@ describe('formatWorkDuration', () => {
 
   it('borne les valeurs négatives', () => {
     expect(formatWorkDuration(-100)).toBe('0 min')
+  })
+})
+
+describe('averageDailySeconds', () => {
+  it('moyenne sur les jours travaillés de la semaine', () => {
+    expect(averageDailySeconds(3600, 3)).toBe(1200)
+    expect(averageDailySeconds(45 * 60, 1)).toBe(2700)
+  })
+
+  it('retourne 0 sans jour travaillé', () => {
+    expect(averageDailySeconds(0, 0)).toBe(0)
+    expect(averageDailySeconds(3600, 0)).toBe(0)
+  })
+
+  it('borne les valeurs négatives', () => {
+    expect(averageDailySeconds(-500, 2)).toBe(0)
   })
 })

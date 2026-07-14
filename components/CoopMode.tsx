@@ -222,7 +222,15 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
   const status = coopStatus(state.myAnswers, state.theirAnswers, total)
   const finished = status.outcome !== null || (iFinished && state.myAnswers.length >= total)
 
-  if (status.outcome || (finished && iFinished && partnerDone(state, total))) {
+  // On révèle le bilan dès qu'il y a une issue tranchée, OU quand j'ai terminé
+  // ma série et que le partenaire a lui aussi fini — OU s'est déconnecté :
+  // sans ce dernier cas, un partenaire qui quitte laissait l'écran bloqué sur
+  // « En attente… » indéfiniment (alors que mon XP était déjà enregistrée).
+  const partnerGone = !state.partnerPresent
+  if (
+    status.outcome ||
+    (finished && iFinished && (partnerDone(state, total) || partnerGone))
+  ) {
     const won = status.outcome === 'won'
     return (
       <div className="mx-auto flex max-w-md flex-col items-center gap-4 p-8 text-center">

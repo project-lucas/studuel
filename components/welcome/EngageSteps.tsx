@@ -95,9 +95,10 @@ export function PlacementQuizStep({
 
   function advance() {
     const answered = index + 1
-    const livesLeft = isRight ? lives : lives - 1
+    // `check()` a déjà décrémenté `lives` (state à jour ici) : ne pas le
+    // re-décompter, sinon le test s'arrête une mauvaise réponse trop tôt.
     const isLast = index >= questions.length - 1
-    if (isLast || livesLeft <= 0) {
+    if (isLast || lives <= 0) {
       onDone(correct, answered)
       return
     }

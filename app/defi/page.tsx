@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import DefiHome, { type ChallengeItem } from '@/components/DefiHome'
 import { featuredModeId, type ModeQuestion } from '@/lib/defi-modes'
+import { permuteOptions } from '@/lib/quiz-shuffle'
 import { createClient } from '@/lib/supabase/server'
 import { computeStreak, toDayKey } from '@/lib/streak'
 import { getChapterMastery } from '@/lib/mastery'
@@ -233,23 +234,31 @@ export default async function DefiPage() {
     const pickedIds = new Set(pickedQuizzes.map((q) => q.id))
     const daily = valid.filter((q) => pickedIds.has(q.quiz_id))
     for (const q of shuffle(daily).slice(0, 5)) {
+      const shuffled =
+        q.kind === 'true_false'
+          ? { options: q.options, correctIndex: q.correct_index }
+          : permuteOptions(q.options, q.correct_index, q.id)
       items.push({
         kind: 'question',
         id: q.id,
         prompt: q.question,
-        options: q.options,
-        correctIndex: q.correct_index,
+        options: shuffled.options,
+        correctIndex: shuffled.correctIndex,
         explanation: q.explanation,
         subject: subjectByQuiz.get(q.quiz_id) ?? null,
       })
     }
 
     for (const q of shuffle(valid).slice(0, 60)) {
+      const shuffled =
+        q.kind === 'true_false'
+          ? { options: q.options, correctIndex: q.correct_index }
+          : permuteOptions(q.options, q.correct_index, q.id)
       pool.push({
         id: q.id,
         prompt: q.question,
-        options: q.options,
-        correctIndex: q.correct_index,
+        options: shuffled.options,
+        correctIndex: shuffled.correctIndex,
         explanation: q.explanation,
         subject: subjectByQuiz.get(q.quiz_id) ?? null,
       })

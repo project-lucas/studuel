@@ -14,6 +14,7 @@ import PageHeader from '@/components/PageHeader'
 import QuizPlayer from '@/components/QuizPlayer'
 import { createClient } from '@/lib/supabase/server'
 import { getUserTier, canAccessPremiumTests } from '@/lib/subscription'
+import { permuteOptions } from '@/lib/quiz-shuffle'
 import type { Quiz, QuizQuestion } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
@@ -91,13 +92,22 @@ export default async function QuizPage({
 
   const meta = [quiz.subject, quiz.grade_level, quiz.chapter].filter(Boolean).join(' · ')
 
+  // Options mélangées à la source (bonne réponse déplacée avec son index) pour
+  // que « toujours cliquer la 1re » ne marche pas ; les vrai/faux gardent leur
+  // ordre. Le player continue de lire `correct_index`, resté juste.
+  const shuffledQuestions = (questions ?? []).map((q) => {
+    if (q.kind === 'true_false') return q
+    const p = permuteOptions(q.options, q.correct_index, q.id)
+    return { ...q, options: p.options, correct_index: p.correctIndex }
+  })
+
   // Le player occupe tout l'écran (template) : pas de PageHeader autour.
   if (!error && questions && questions.length > 0) {
     return (
       <QuizPlayer
         quizId={quiz.id}
         title={quiz.title}
-        questions={questions}
+        questions={shuffledQuestions}
         subject={quiz.subject}
         backHref={backHref}
       />

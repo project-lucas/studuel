@@ -13,6 +13,7 @@ import ExamBlancPlayer from '@/components/ExamBlancPlayer'
 import { createClient } from '@/lib/supabase/server'
 import { examsForProfile } from '@/lib/exams'
 import { composeExam, type ExamQuestion } from '@/lib/exam-blanc'
+import { permuteOptions } from '@/lib/quiz-shuffle'
 import type { QuizQuestion, Subject } from '@/lib/types'
 
 export const metadata = { title: 'Examen blanc — Studuel' }
@@ -181,11 +182,15 @@ export default async function ExamenBlancPage() {
         ? (chapterByLesson.get(quiz.lesson_id) ?? null)
         : null
       const list = bySubject.get(quiz.subject) ?? []
+      const shuffled =
+        q.kind === 'true_false'
+          ? { options: q.options, correctIndex: q.correct_index }
+          : permuteOptions(q.options, q.correct_index, q.id)
       list.push({
         id: q.id,
         prompt: q.question,
-        options: q.options,
-        correctIndex: q.correct_index,
+        options: shuffled.options,
+        correctIndex: shuffled.correctIndex,
         explanation: q.explanation,
         subject: quiz.subject,
         subjectSlug: slugBySubjectName.get(quiz.subject) ?? null,

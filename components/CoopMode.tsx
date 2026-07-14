@@ -19,6 +19,7 @@ import { createClient } from '@/lib/supabase/client'
 import { useCoop } from '@/components/useCoop'
 import { recordChallenge } from '@/app/defi/actions'
 import { nowMs, type ModeQuestion } from '@/lib/defi-modes'
+import { permuteOptions } from '@/lib/quiz-shuffle'
 import {
   coopStatus,
   coopQuestionState,
@@ -39,6 +40,7 @@ type Props = {
 type QuestionRow = {
   id: string
   question: string
+  kind: 'mcq' | 'true_false'
   options: unknown
   correct_index: number
   explanation: string | null
@@ -75,7 +77,7 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
       const supabase = createClient()
       const { data } = await supabase
         .from('quiz_questions')
-        .select('id, question, options, correct_index, explanation, quiz:quizzes(subject)')
+        .select('id, question, kind, options, correct_index, explanation, quiz:quizzes(subject)')
         .in('id', state.questionIds)
         .returns<QuestionRow[]>()
       if (cancelled) return
@@ -83,14 +85,21 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
       const ordered = state.questionIds
         .map((id) => byId.get(id))
         .filter((r): r is QuestionRow => Boolean(r))
-        .map((r) => ({
-          id: r.id,
-          prompt: r.question,
-          options: Array.isArray(r.options) ? (r.options as string[]) : [],
-          correctIndex: r.correct_index,
-          explanation: r.explanation,
-          subject: r.quiz?.subject ?? null,
-        }))
+        .map((r) => {
+          const opts = Array.isArray(r.options) ? (r.options as string[]) : []
+          const shuffled =
+            r.kind === 'true_false'
+              ? { options: opts, correctIndex: r.correct_index }
+              : permuteOptions(opts, r.correct_index, r.id)
+          return {
+            id: r.id,
+            prompt: r.question,
+            options: shuffled.options,
+            correctIndex: shuffled.correctIndex,
+            explanation: r.explanation,
+            subject: r.quiz?.subject ?? null,
+          }
+        })
       setGuestQuestions(ordered)
     }
     load()

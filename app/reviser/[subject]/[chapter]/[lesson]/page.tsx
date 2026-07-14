@@ -1,11 +1,14 @@
 import Link from 'next/link'
 import {
   BookOpen,
+  Brain,
   Check,
   Image as ImageIcon,
+  Layers,
   ListChecks,
   Minus,
   NotebookPen,
+  Swords,
   type LucideIcon,
 } from 'lucide-react'
 import BackButton from '@/components/BackButton'
@@ -22,7 +25,9 @@ import { loadLessonContext } from './data'
 export const dynamic = 'force-dynamic'
 
 // Hub de leçon (template « structure des cours ») : l'anneau d'avancement en
-// haut, puis les 4 supports en tuiles — Cours, Révision, Studygram, Quiz.
+// haut, puis les supports en tuiles. Quatre supports « suivis » comptent dans
+// l'anneau (Cours, Révision, Studygram, Quiz) ; trois ressources complètent la
+// structure sans peser sur la progression (Carte mentale, Flashcards, Défis).
 export default async function LessonHubPage({
   params,
 }: {
@@ -95,26 +100,34 @@ export default async function LessonHubPage({
   const theme = subjectTheme(subject.color)
   const base = `/reviser/${subject.slug}/${chapter.id}/${lesson.id}`
 
-  const tiles: {
+  // Une tuile « suivie » affiche fait/à faire (et compte dans l'anneau) ; une
+  // tuile non suivie affiche une légende neutre (ressource complémentaire).
+  type Tile = {
     key: string
     label: string
     icon: LucideIcon
     href: string | null
-    done: boolean
+    tracked: boolean
+    done?: boolean
     detail?: string
-  }[] = [
+    caption?: string
+  }
+
+  const tiles: Tile[] = [
     {
       key: 'cours',
       label: 'Cours',
       icon: BookOpen,
       href: `${base}/cours`,
+      tracked: true,
       done: activity.coursDone,
     },
     {
       key: 'revision',
-      label: 'Révision',
+      label: 'Fiche de révision',
       icon: NotebookPen,
       href: supports.hasRevision ? `${base}/revision` : null,
+      tracked: true,
       done: activity.revisionDone,
     },
     {
@@ -122,6 +135,7 @@ export default async function LessonHubPage({
       label: 'Studygram',
       icon: ImageIcon,
       href: supports.hasStudygram ? `${base}/studygram` : null,
+      tracked: true,
       done: activity.studygramDone,
     },
     {
@@ -129,10 +143,37 @@ export default async function LessonHubPage({
       label: 'Quiz',
       icon: ListChecks,
       href: quiz ? `/test/${quiz.id}` : null,
+      tracked: true,
       done: activity.bestQuizRatio !== null,
       detail: quiz
         ? `${bestScore === null ? '--' : bestScore}/${questionCount || '--'}`
         : undefined,
+    },
+    {
+      key: 'carte',
+      label: 'Carte mentale',
+      icon: Brain,
+      href: chapter.mind_map
+        ? `/reviser/${subject.slug}/${chapter.id}/carte`
+        : null,
+      tracked: false,
+      caption: 'Chapitre',
+    },
+    {
+      key: 'flashcards',
+      label: 'Flashcards',
+      icon: Layers,
+      href: quiz ? `${base}/flashcards` : null,
+      tracked: false,
+      caption: quiz ? 'Recto / verso' : undefined,
+    },
+    {
+      key: 'defis',
+      label: 'Défis',
+      icon: Swords,
+      href: quiz ? `${base}/defi` : '/defi',
+      tracked: false,
+      caption: quiz ? 'Par niveaux' : 'Arène',
     },
   ]
 
@@ -181,7 +222,7 @@ export default async function LessonHubPage({
             {lesson.title}
           </h1>
 
-          {/* Les 4 supports du template */}
+          {/* Les supports de la leçon */}
           <ul className="mt-6 grid grid-cols-2 gap-3">
             {tiles.map((tile) => {
               const Icon = tile.icon
@@ -209,15 +250,21 @@ export default async function LessonHubPage({
                     >
                       {tile.detail}
                     </span>
-                  ) : tile.done ? (
-                    <span className="inline-flex items-center gap-1 text-xs font-bold text-green-700 dark:text-green-400">
-                      <Check className="size-3.5" strokeWidth={3} /> Fait
+                  ) : tile.tracked ? (
+                    tile.done ? (
+                      <span className="inline-flex items-center gap-1 text-xs font-bold text-green-700 dark:text-green-400">
+                        <Check className="size-3.5" strokeWidth={3} /> Fait
+                      </span>
+                    ) : (
+                      <span className="text-muted-foreground" aria-hidden="true">
+                        <Minus className="size-3.5" />
+                      </span>
+                    )
+                  ) : tile.caption ? (
+                    <span className="text-xs font-semibold text-muted-foreground">
+                      {tile.caption}
                     </span>
-                  ) : (
-                    <span className="text-muted-foreground" aria-hidden="true">
-                      <Minus className="size-3.5" />
-                    </span>
-                  )}
+                  ) : null}
                 </>
               )
               return (

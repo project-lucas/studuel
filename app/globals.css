@@ -255,6 +255,35 @@
   animation: confetti-fall 2.8s linear infinite backwards;
 }
 
+/* Défi : éclat de confettis DEPUIS LE CENTRE vers l'extérieur (fin de niveau).
+   Chaque pièce reçoit sa cible --tx/--ty/--rot et son --delay côté composant. */
+@keyframes defi-burst {
+  0% {
+    transform: translate(0, 0) scale(0.3) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx, 0), var(--ty, 0)) scale(1)
+      rotate(var(--rot, 180deg));
+    opacity: 0;
+  }
+}
+.defi-confetti {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  animation: defi-burst 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .defi-confetti {
+    animation: none;
+    opacity: 0;
+  }
+}
+
 /* La mascotte flotte doucement */
 @keyframes float-y {
   0%,

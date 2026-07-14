@@ -105,7 +105,7 @@ export default function DefiSoloPlayer({
   }
 
   const validate = () => {
-    if (selected === null || correction) return
+    if (phase !== 'playing' || selected === null || correction) return
     if (selected === question.correct_index) {
       const gain = levelPoints(wrongThisLevel, hintUsed)
       setScore((s) => s + gain)
@@ -171,9 +171,13 @@ export default function DefiSoloPlayer({
         />
       ) : null}
 
-      {/* Zone de jeu */}
+      {/* Zone de jeu — rendue inerte (ni cliquable ni tabulable) dès qu'une
+          modale est ouverte, pour ne pas contourner la machine à états. */}
       {question ? (
-        <div className="bg-muted/40 mt-4 rounded-3xl border p-5 md:p-6">
+        <div
+          inert={phase !== 'playing'}
+          className="bg-muted/40 mt-4 rounded-3xl border p-5 md:p-6"
+        >
           <p className="text-muted-foreground mb-1 text-center text-sm font-semibold">
             Choisis la bonne réponse
           </p>
@@ -491,7 +495,11 @@ function Modal({
   children: React.ReactNode
 }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div
+      role="dialog"
+      aria-modal="true"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+    >
       <div className="bg-foreground/50 absolute inset-0" aria-hidden="true" />
       <div className="pop-spring relative w-full max-w-sm">
         {/* Pastille + confettis, à cheval sur le haut de la carte */}

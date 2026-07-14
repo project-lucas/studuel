@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import BackButton from '@/components/BackButton'
 import ProgressRing from '@/components/ProgressRing'
+import PairMatch from '@/components/PairMatch'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -21,14 +22,16 @@ import {
   maxScore,
   starsForScore,
 } from '@/lib/defi-solo'
+import { pairsFromQuestions, type Pair } from '@/lib/pair-match'
 import type { QuizQuestion } from '@/lib/types'
 
-// Défi solo par niveaux (Phase 1) monté sur le quiz de la leçon. Chaque
-// question = un niveau ; l'élève a MAX_LIVES cœurs et accumule des points.
-// Shell gamifié façon concurrent : modale Objectif, rail (niveau/vies/points/
-// indice), modales Échec (« Oups… ») et Réussite (confettis), écran final avec
-// étoiles. Barème dans lib/defi-solo (pur, testé). Phase 1 : QCM uniquement,
-// aucun enregistrement en base (partie d'entraînement).
+// Défi solo par niveaux monté sur le quiz de la leçon. Chaque niveau est une
+// épreuve : un QCM (« Choisis la bonne réponse ») ou, intercalée, une manche
+// « Associe les paires » (Phase 2). L'élève a MAX_LIVES cœurs et accumule des
+// points. Shell gamifié façon concurrent : modale Objectif, rail (niveau/vies/
+// points/indice), modales Échec (« Oups… ») et Réussite (confettis), écran final
+// avec étoiles. Barème pur dans lib/defi-solo. Aucun enregistrement en base
+// (partie d'entraînement).
 type Phase =
   | 'objective'
   | 'playing'
@@ -36,6 +39,11 @@ type Phase =
   | 'levelSuccess'
   | 'defiSuccess'
   | 'defiFail'
+
+// Un niveau du défi : soit un QCM, soit une manche d'association de paires.
+type Level =
+  | { kind: 'qcm'; q: QuizQuestion }
+  | { kind: 'pairs'; pairs: Pair[] }
 
 export default function DefiSoloPlayer({
   questions,
@@ -48,8 +56,21 @@ export default function DefiSoloPlayer({
   subject: string | null
   backHref: string
 }) {
-  const total = questions.length
+  // Plan des niveaux (stable) : un QCM par question, plus une manche « paires »
+  // intercalée en 3e position quand assez de paires sont dérivables du quiz.
+  const levels = useMemo<Level[]>(() => {
+    const qcm: Level[] = questions.map((q) => ({ kind: 'qcm', q }))
+    const pairs = pairsFromQuestions(questions)
+    if (pairs.length >= 3) {
+      const at = Math.min(2, qcm.length)
+      return [...qcm.slice(0, at), { kind: 'pairs', pairs }, ...qcm.slice(at)]
+    }
+    return qcm
+  }, [questions])
+
+  const total = levels.length
   const max = maxScore(total)
+  const pairsSeed = questions[0]?.id ?? 'defi'
 
   const [phase, setPhase] = useState<Phase>('objective')
   const [levelIndex, setLevelIndex] = useState(0)
@@ -62,7 +83,8 @@ export default function DefiSoloPlayer({
   const [correction, setCorrection] = useState(false)
   const [lastGain, setLastGain] = useState(0)
 
-  const question = questions[levelIndex]
+  const level = levels[levelIndex]
+  const question = level?.kind === 'qcm' ? level.q : null
 
   // Recommence entièrement le défi (vies, score, niveau, état du niveau).
   const restartDefi = () => {
@@ -92,7 +114,7 @@ export default function DefiSoloPlayer({
     question.options.length - eliminated.length > 2
 
   const useHint = () => {
-    if (!canHint) return
+    if (!canHint || !question) return
     const wrongs = question.options
       .map((_, i) => i)
       .filter((i) => i !== question.correct_index && !eliminated.includes(i))
@@ -105,7 +127,8 @@ export default function DefiSoloPlayer({
   }
 
   const validate = () => {
-    if (phase !== 'playing' || selected === null || correction) return
+    if (phase !== 'playing' || !question || selected === null || correction)
+      return
     if (selected === question.correct_index) {
       const gain = levelPoints(wrongThisLevel, hintUsed)
       setScore((s) => s + gain)
@@ -122,6 +145,16 @@ export default function DefiSoloPlayer({
     setPhase(nextLives <= 0 ? 'defiFail' : 'levelFail')
   }
 
+  // Manche « paires » réussie : crédite les points (pénalité = erreurs
+  // d'appariement) sans coûter de vie, puis célèbre le niveau.
+  const handlePairsSolved = (mistakes: number) => {
+    const gain = levelPoints(mistakes, false)
+    setScore((s) => s + gain)
+    setLastGain(gain)
+    sfx.correct()
+    setPhase('levelSuccess')
+  }
+
   const goNextLevel = () => {
     if (levelIndex + 1 < total) {
       setLevelIndex((i) => i + 1)
@@ -135,6 +168,7 @@ export default function DefiSoloPlayer({
 
   // « Voir la correction » : révèle la bonne réponse, niveau non crédité.
   const showCorrection = () => {
+    if (!question) return
     setSelected(question.correct_index)
     setCorrection(true)
     setPhase('playing')
@@ -173,11 +207,13 @@ export default function DefiSoloPlayer({
 
       {/* Zone de jeu — rendue inerte (ni cliquable ni tabulable) dès qu'une
           modale est ouverte, pour ne pas contourner la machine à états. */}
-      {question ? (
+      {level ? (
         <div
           inert={phase !== 'playing'}
           className="bg-muted/40 mt-4 rounded-3xl border p-5 md:p-6"
         >
+          {question ? (
+          <>
           <p className="text-muted-foreground mb-1 text-center text-sm font-semibold">
             Choisis la bonne réponse
           </p>
@@ -231,6 +267,19 @@ export default function DefiSoloPlayer({
               </ClayButton>
             )}
           </div>
+          </>
+          ) : level.kind === 'pairs' ? (
+            <>
+              <p className="text-muted-foreground mb-4 text-center text-sm font-semibold">
+                Associe les paires
+              </p>
+              <PairMatch
+                pairs={level.pairs}
+                seed={pairsSeed}
+                onSolved={handlePairsSolved}
+              />
+            </>
+          ) : null}
         </div>
       ) : null}
 

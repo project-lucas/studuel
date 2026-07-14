@@ -4,12 +4,14 @@ import { createClient } from '@/lib/supabase/server'
 import { toDayKey } from '@/lib/streak'
 import {
   getMockLive,
-  getMockDuels,
   getMockSchool,
   avatarEmojiFor,
   mapFriendsOverview,
+  duelView,
   MOCK_PRIORITY_SUBJECT,
   type Friend,
+  type Duel,
+  type DuelRow,
   type PendingRequest,
 } from '@/lib/social'
 import type { RankPlayer } from '@/lib/trophies'
@@ -31,7 +33,10 @@ export default async function AmisPage() {
   let ranking: RankPlayer[] = []
   let friends: Friend[] = []
   let pendingRequests: PendingRequest[] = []
+  let duels: Duel[] = []
+  let missionDoneAgainst: string | null = null
   let myFriendCode = ''
+  const today = toDayKey(new Date())
 
   if (user) {
     const [
@@ -39,6 +44,7 @@ export default async function AmisPage() {
       { data: trophyRow },
       { data: friendTrophyRows },
       { data: overviewRows },
+      { data: duelRows },
     ] = await Promise.all([
       // friend_code vit sur profiles depuis 019 (déjà en base) → sûr à lire ici.
       supabase
@@ -57,6 +63,14 @@ export default async function AmisPage() {
       supabase.rpc('friends_trophies'),
       // Amis acceptés + demandes reçues/envoyées (migration 019).
       supabase.rpc('friends_overview'),
+      // Mes duels (RLS : uniquement ceux où je participe), récents d'abord.
+      supabase
+        .from('duels')
+        .select(
+          'id, challenger_id, opponent_id, subject, total, challenger_score, opponent_score, day',
+        )
+        .order('created_at', { ascending: false })
+        .limit(20),
     ])
 
     mySeconds = Number(profile?.work_seconds ?? 0) || 0
@@ -67,6 +81,31 @@ export default async function AmisPage() {
     )
     friends = overview.accepted
     pendingRequests = overview.incoming
+
+    // Adversaires de duel = amis acceptés → on résout prénom/emoji localement.
+    const friendById = new Map(friends.map((f) => [f.id, f]))
+    const rows = (Array.isArray(duelRows) ? duelRows : []) as (DuelRow & {
+      day?: string
+    })[]
+    duels = rows.map((row) => {
+      const oppId = row.challenger_id === user.id ? row.opponent_id : row.challenger_id
+      const opponent: Friend = friendById.get(oppId) ?? {
+        id: oppId,
+        name: 'Ami',
+        emoji: avatarEmojiFor(oppId),
+        level: 0,
+      }
+      return duelView(row, user.id, opponent)
+    })
+
+    // Mission du jour déjà lancée ? = un duel créé aujourd'hui par moi.
+    const todaysOutgoing = rows.find(
+      (r) => r.challenger_id === user.id && String(r.day ?? '') === today,
+    )
+    if (todaysOutgoing) {
+      const oppId = todaysOutgoing.opponent_id
+      missionDoneAgainst = friendById.get(oppId)?.name ?? 'un ami'
+    }
 
     const friendRanks: RankPlayer[] = (
       Array.isArray(friendTrophyRows) ? friendTrophyRows : []
@@ -104,14 +143,14 @@ export default async function AmisPage() {
       />
       <AmisHome
         live={getMockLive()}
-        duels={getMockDuels()}
+        duels={duels}
         ranking={ranking}
         school={getMockSchool(mySeconds)}
         friends={friends}
         pendingRequests={pendingRequests}
         myFriendCode={myFriendCode}
+        missionDoneAgainst={missionDoneAgainst}
         prioritySubject={MOCK_PRIORITY_SUBJECT}
-        todayKey={toDayKey(new Date())}
       />
     </div>
   )

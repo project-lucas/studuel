@@ -259,6 +259,59 @@ export function addFriendMessage(status: AddFriendStatus): {
   }
 }
 
+// ================================================================ Duels réels
+// Branchés sur la table `duels` + fonctions create_duel / submit_duel_score
+// (migration 019, en base). Le duel se joue sur le Défi du jour : au lancement
+// on retient l'id du duel actif (sessionStorage), et la fin de partie du Défi
+// dépose le score via submit_duel_score.
+
+// Clé sessionStorage : id du duel en cours de jeu (posée par l'onglet Amis,
+// lue puis effacée par le Défi à la fin de la partie).
+export const ACTIVE_DUEL_KEY = 'studuel-active-duel'
+
+// Ligne brute de la table `duels` (RLS : seulement mes duels).
+export type DuelRow = {
+  id: string
+  challenger_id: string
+  opponent_id: string
+  subject: string
+  total: number
+  challenger_score: number | null
+  opponent_score: number | null
+}
+
+// Statut du duel du point de vue de l'élève, à partir des deux scores.
+export function duelStatus(
+  myScore: number | null,
+  theirScore: number | null,
+): DuelStatus {
+  if (myScore != null && theirScore != null) {
+    if (myScore > theirScore) return 'won'
+    if (myScore < theirScore) return 'lost'
+    return 'tie'
+  }
+  if (myScore != null) return 'outgoing' // j'ai joué, j'attends l'adversaire
+  return 'incoming' // à moi de jouer
+}
+
+// Transforme une ligne `duels` en carte d'affichage `Duel`, du point de vue de
+// `myId`. L'adversaire (prénom + emoji) est résolu en amont depuis la liste
+// d'amis (tout adversaire de duel est un ami accepté).
+export function duelView(row: DuelRow, myId: string, opponent: Friend): Duel {
+  const iAmChallenger = row.challenger_id === myId
+  const myScore = iAmChallenger ? row.challenger_score : row.opponent_score
+  const theirScore = iAmChallenger ? row.opponent_score : row.challenger_score
+  return {
+    id: row.id,
+    opponent,
+    subject: row.subject,
+    status: duelStatus(myScore, theirScore),
+    myScore,
+    theirScore,
+    total: row.total,
+  }
+}
+
 // L'école de l'élève (mock) — `mySeconds` vient du vrai profil quand il est
 // connecté, pour que sa place dans le classement bouge avec son travail réel.
 export function getMockSchool(mySeconds: number): SchoolBoard {

@@ -55,6 +55,43 @@ export async function acceptFriend(
   return { ok: true }
 }
 
+// Lance un duel contre un ami accepté (fonction create_duel : exige l'amitié,
+// 1 duel/jour par challenger via contrainte unique). Retourne l'id ou null.
+export async function createDuel(
+  opponentId: string,
+  subject: string,
+): Promise<{ id: string | null }> {
+  if (!UUID_RE.test(opponentId ?? '')) return { id: null }
+
+  const supabase = await createClient()
+  const { data, error } = await supabase.rpc('create_duel', {
+    p_opponent: opponentId,
+    p_subject: (subject ?? 'Duel').slice(0, 80),
+  })
+  if (error || !data) return { id: null }
+  revalidatePath('/amis')
+  return { id: String(data) }
+}
+
+// Dépose son score sur un duel (fonction submit_duel_score : une fois par camp,
+// borné à [0, total] côté SQL). Appelé par le Défi à la fin de la partie.
+export async function submitDuelScore(
+  duelId: string,
+  score: number,
+): Promise<{ ok: boolean }> {
+  if (!UUID_RE.test(duelId ?? '') || !Number.isFinite(score)) {
+    return { ok: false }
+  }
+  const supabase = await createClient()
+  const { error } = await supabase.rpc('submit_duel_score', {
+    p_duel: duelId,
+    p_score: Math.max(0, Math.floor(score)),
+  })
+  if (error) return { ok: false }
+  revalidatePath('/amis')
+  return { ok: true }
+}
+
 // Retire un ami, ou annule/refuse une demande. La policy friendships_delete_own
 // n'autorise à supprimer que ses propres lignes → cibler l'autre partie suffit,
 // la RLS garantit qu'aucune ligne étrangère n'est touchée.

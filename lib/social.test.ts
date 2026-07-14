@@ -8,6 +8,8 @@ import {
   sinceLabel,
   mapFriendsOverview,
   addFriendMessage,
+  duelStatus,
+  duelView,
   type FriendOverviewRow,
 } from '@/lib/social'
 
@@ -123,5 +125,60 @@ describe('addFriendMessage', () => {
       expect(res.ok).toBe(false)
       expect(res.message.length).toBeGreaterThan(0)
     }
+  })
+})
+
+describe('duelStatus', () => {
+  it('compare les scores quand les deux ont joué', () => {
+    expect(duelStatus(5, 3)).toBe('won')
+    expect(duelStatus(2, 4)).toBe('lost')
+    expect(duelStatus(3, 3)).toBe('tie')
+  })
+
+  it("attend l'adversaire quand seul moi ai joué", () => {
+    expect(duelStatus(5, null)).toBe('outgoing')
+  })
+
+  it('me réclame de jouer quand je n’ai pas encore joué', () => {
+    expect(duelStatus(null, 4)).toBe('incoming')
+    expect(duelStatus(null, null)).toBe('incoming')
+  })
+})
+
+describe('duelView', () => {
+  const me = 'me-id'
+  const opp = { id: 'opp', name: 'Léa', emoji: '🦊', level: 0 }
+
+  it('lit mes scores selon mon rôle (challenger)', () => {
+    const row = {
+      id: 'd1',
+      challenger_id: me,
+      opponent_id: 'opp',
+      subject: 'Maths',
+      total: 5,
+      challenger_score: 4,
+      opponent_score: 2,
+    }
+    const v = duelView(row, me, opp)
+    expect(v.myScore).toBe(4)
+    expect(v.theirScore).toBe(2)
+    expect(v.status).toBe('won')
+    expect(v.opponent.name).toBe('Léa')
+  })
+
+  it('inverse les scores quand je suis l’adversaire', () => {
+    const row = {
+      id: 'd2',
+      challenger_id: 'opp',
+      opponent_id: me,
+      subject: 'Histoire',
+      total: 5,
+      challenger_score: 5,
+      opponent_score: null,
+    }
+    const v = duelView(row, me, opp)
+    expect(v.myScore).toBeNull()
+    expect(v.theirScore).toBe(5)
+    expect(v.status).toBe('incoming')
   })
 })

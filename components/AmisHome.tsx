@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useSyncExternalStore, useTransition } from 'react'
+import { useState, useTransition } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import {
@@ -9,7 +9,6 @@ import {
   Trophy,
   Crown,
   Zap,
-  Plus,
   Copy,
   Check,
   UserPlus,
@@ -30,11 +29,15 @@ import {
   type PendingRequest,
   sinceLabel,
   schoolTotalSeconds,
-  duelMissionAvailable,
   DUEL_XP_BONUS,
-  DUEL_DAY_STORAGE_KEY,
+  ACTIVE_DUEL_KEY,
 } from '@/lib/social'
-import { addFriendByCode, acceptFriend, removeFriend } from '@/app/amis/actions'
+import {
+  addFriendByCode,
+  acceptFriend,
+  removeFriend,
+  createDuel,
+} from '@/app/amis/actions'
 import {
   arenaFor,
   rankPlayers,
@@ -80,58 +83,40 @@ function Avatar({ emoji, size = 'md' }: { emoji: string; size?: 'md' | 'lg' }) {
 // -------------------------------------------------------------- Mission duel
 // LA mission bonus du jour : défier un ami sur sa matière prioritaire.
 // Une seule par jour, non renouvelable — c'est le cœur de l'onglet.
-
-// Le localStorage est un « store externe » : on le lit via useSyncExternalStore
-// (null côté serveur, la vraie valeur après hydratation — sans mismatch).
-const subscribeStorage = (onChange: () => void) => {
-  window.addEventListener('storage', onChange)
-  return () => window.removeEventListener('storage', onChange)
-}
-const readDuelDay = () => localStorage.getItem(DUEL_DAY_STORAGE_KEY)
-
+// Le duel est réel : create_duel persiste le défi (1/jour garanti côté SQL),
+// et l'id du duel est retenu pour que le Défi dépose le score à la fin.
 function DuelMissionCard({
   friends,
   subject,
   topic,
-  todayKey,
+  doneAgainst,
 }: {
   friends: Friend[]
   subject: string
   topic: string
-  todayKey: string
+  doneAgainst: string | null
 }) {
   const router = useRouter()
   const [picked, setPicked] = useState<Friend | null>(null)
-  const [launched, setLaunched] = useState(false)
-  const rawDuel = useSyncExternalStore(subscribeStorage, readDuelDay, () => null)
-
-  // Mission déjà lancée aujourd'hui ? (mock localStorage — demain : table duels)
-  let doneAgainst: string | null = null
-  if (rawDuel) {
-    try {
-      const stored = JSON.parse(rawDuel) as { day?: string; opponent?: string }
-      if (!duelMissionAvailable(stored.day ?? null, todayKey)) {
-        doneAgainst = stored.opponent ?? 'un ami'
-      }
-    } catch {
-      /* valeur corrompue : mission disponible */
-    }
-  }
+  const [launching, startLaunch] = useTransition()
 
   const launch = () => {
-    if (!picked) return
+    if (!picked || launching) return
     sfx.correct()
-    setLaunched(true)
-    try {
-      localStorage.setItem(
-        DUEL_DAY_STORAGE_KEY,
-        JSON.stringify({ day: todayKey, opponent: picked.name }),
-      )
-    } catch {
-      /* tant pis : la mission redeviendra disponible au refresh */
-    }
-    // Le duel se joue sur le Défi du jour — même contenu, deux joueurs.
-    setTimeout(() => router.push('/defi'), 400)
+    startLaunch(async () => {
+      const res = await createDuel(picked.id, subject)
+      if (res.id) {
+        // Le duel se joue sur le Défi du jour — même contenu, deux joueurs.
+        try {
+          sessionStorage.setItem(ACTIVE_DUEL_KEY, res.id)
+        } catch {
+          /* sessionStorage indispo : le score ne sera pas déposé, tant pis */
+        }
+        router.push('/defi')
+      }
+      // res.id null (déjà lancé aujourd'hui / plus ami) : revalidatePath
+      // rafraîchit l'état « mission faite » sans nous faire quitter la page.
+    })
   }
 
   const done = doneAgainst !== null
@@ -172,48 +157,54 @@ function DuelMissionCard({
           </p>
 
           {/* Choix de l'adversaire : une rangée d'avatars, un tap. */}
-          <ul
-            aria-label="Choisir un adversaire"
-            className="mt-3 flex gap-2 overflow-x-auto pb-1"
-          >
-            {friends.map((f) => {
-              const isPicked = picked?.id === f.id
-              return (
-                <li key={f.id}>
-                  <button
-                    type="button"
-                    aria-pressed={isPicked}
-                    onClick={() => {
-                      sfx.tap()
-                      setPicked(f)
-                    }}
-                    className={cn(
-                      'flex w-16 flex-col items-center gap-1 rounded-2xl p-2 transition-all',
-                      isPicked
-                        ? 'bg-primary-foreground text-primary'
-                        : 'bg-primary-foreground/10 hover:bg-primary-foreground/20',
-                    )}
-                  >
-                    <span aria-hidden="true" className="text-2xl">
-                      {f.emoji}
-                    </span>
-                    <span className="max-w-full truncate text-xs font-semibold">
-                      {f.name}
-                    </span>
-                  </button>
-                </li>
-              )
-            })}
-          </ul>
+          {friends.length > 0 ? (
+            <ul
+              aria-label="Choisir un adversaire"
+              className="mt-3 flex gap-2 overflow-x-auto pb-1"
+            >
+              {friends.map((f) => {
+                const isPicked = picked?.id === f.id
+                return (
+                  <li key={f.id}>
+                    <button
+                      type="button"
+                      aria-pressed={isPicked}
+                      onClick={() => {
+                        sfx.tap()
+                        setPicked(f)
+                      }}
+                      className={cn(
+                        'flex w-16 flex-col items-center gap-1 rounded-2xl p-2 transition-all',
+                        isPicked
+                          ? 'bg-primary-foreground text-primary'
+                          : 'bg-primary-foreground/10 hover:bg-primary-foreground/20',
+                      )}
+                    >
+                      <span aria-hidden="true" className="text-2xl">
+                        {f.emoji}
+                      </span>
+                      <span className="max-w-full truncate text-xs font-semibold">
+                        {f.name}
+                      </span>
+                    </button>
+                  </li>
+                )
+              })}
+            </ul>
+          ) : (
+            <p className="mt-3 rounded-2xl bg-primary-foreground/10 p-3 text-sm text-primary-foreground/80">
+              Ajoute un ami plus bas pour pouvoir le défier 👇
+            </p>
+          )}
 
           <Button
             size="lg"
             variant="secondary"
             className="mt-3 w-full rounded-full font-bold"
-            disabled={!picked || launched}
+            disabled={!picked || launching}
             onClick={launch}
           >
-            {launched ? (
+            {launching ? (
               <>
                 <Check className="size-4" /> C&apos;est parti !
               </>
@@ -316,6 +307,13 @@ function DuelRow({ duel }: { duel: Duel }) {
           onClick={() => {
             sfx.correct()
             setAccepted(true)
+            // Relever = jouer le Défi du jour ; on retient l'id du duel pour
+            // que la fin de partie y dépose mon score.
+            try {
+              sessionStorage.setItem(ACTIVE_DUEL_KEY, duel.id)
+            } catch {
+              /* sessionStorage indispo : le score ne sera pas déposé */
+            }
             setTimeout(() => router.push('/defi'), 350)
           }}
         >
@@ -549,8 +547,8 @@ export default function AmisHome({
   friends,
   pendingRequests,
   myFriendCode,
+  missionDoneAgainst,
   prioritySubject,
-  todayKey,
 }: {
   live: LiveSession[]
   duels: Duel[]
@@ -559,8 +557,8 @@ export default function AmisHome({
   friends: Friend[]
   pendingRequests: PendingRequest[]
   myFriendCode: string
+  missionDoneAgainst: string | null
   prioritySubject: { subject: string; topic: string }
-  todayKey: string
 }) {
   const [copied, setCopied] = useState(false)
   const [code, setCode] = useState('')
@@ -609,7 +607,7 @@ export default function AmisHome({
         friends={friends}
         subject={prioritySubject.subject}
         topic={prioritySubject.topic}
-        todayKey={todayKey}
+        doneAgainst={missionDoneAgainst}
       />
 
       {/* En direct — qui bosse là, maintenant. */}
@@ -638,28 +636,21 @@ export default function AmisHome({
         )}
       </section>
 
-      {/* Duels — se défier sur un thème. */}
+      {/* Duels — l'historique réel : reçus (à relever), envoyés, résultats. */}
       <section>
-        <SectionTitle
-          icon={Swords}
-          aside={
-            <Button
-              size="sm"
-              variant="outline"
-              className="rounded-full"
-              onClick={() => sfx.tap()}
-            >
-              <Plus className="size-4" /> Défier
-            </Button>
-          }
-        >
-          Duels
-        </SectionTitle>
-        <ul className="flex flex-col gap-2">
-          {duels.map((d) => (
-            <DuelRow key={d.id} duel={d} />
-          ))}
-        </ul>
+        <SectionTitle icon={Swords}>Duels</SectionTitle>
+        {duels.length > 0 ? (
+          <ul className="flex flex-col gap-2">
+            {duels.map((d) => (
+              <DuelRow key={d.id} duel={d} />
+            ))}
+          </ul>
+        ) : (
+          <p className="rounded-2xl bg-muted p-3 text-sm text-muted-foreground">
+            Aucun duel pour l’instant. Défie un ami avec la mission du jour
+            ci-dessus ⚔️
+          </p>
+        )}
       </section>
 
       {/* Le Classement — aux trophées, en temps réel (mode classé du Défi). */}

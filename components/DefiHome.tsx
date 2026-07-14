@@ -42,6 +42,8 @@ import { isCommuteNow } from '@/lib/trajet'
 import type { CommuteSlot } from '@/lib/types'
 import { recordChallenge } from '@/app/defi/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
+import { submitDuelScore } from '@/app/amis/actions'
+import { ACTIVE_DUEL_KEY } from '@/lib/social'
 import type { ReviewAnswer } from '@/lib/srs'
 import type { FriendGhost } from '@/lib/social'
 import {
@@ -224,6 +226,17 @@ export default function DefiHome({
       .catch(() => setSaved(false))
     // Reprogramme chaque item dans la file « À revoir » (SRS + Revanche).
     recordReviewAnswers(reviewsRef.current).catch(() => {})
+    // Duel en cours (lancé/relevé depuis l'onglet Amis) : dépose mon score une
+    // seule fois, puis oublie le duel. submit_duel_score borne côté SQL.
+    try {
+      const duelId = sessionStorage.getItem(ACTIVE_DUEL_KEY)
+      if (duelId) {
+        sessionStorage.removeItem(ACTIVE_DUEL_KEY)
+        submitDuelScore(duelId, finalCorrect).catch(() => {})
+      }
+    } catch {
+      /* sessionStorage indispo : pas de duel à créditer */
+    }
   }
 
   const next = (gained: boolean) => {

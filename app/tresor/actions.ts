@@ -85,7 +85,7 @@ export async function openDailyChest(): Promise<ChestResult> {
   }
 
   const coins = await currentCoins(supabase, user.id)
-  revalidatePath('/tresor')
+  revalidatePath('/coffre')
   return { opened: opened === true, reward: opened ? reward : null, coins }
 }
 
@@ -114,7 +114,7 @@ export async function claimLoginReward(): Promise<LoginRewardResult> {
 
   const r = data as { claimed?: boolean; coins?: number; streak?: number } | null
   if (!r?.claimed) return none
-  revalidatePath('/tresor')
+  revalidatePath('/coffre')
   return { claimed: true, coins: r.coins ?? 0, streak: r.streak ?? 1 }
 }
 
@@ -142,6 +142,6 @@ export async function buyShopItem(itemId: string): Promise<PurchaseResult> {
   }
 
   const coins = await currentCoins(supabase, user.id)
-  revalidatePath('/tresor')
+  revalidatePath('/coffre')
   return { bought: bought === true, coins }
 }

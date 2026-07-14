@@ -1,18 +1,18 @@
 import { Skeleton } from '@/components/ui/skeleton'
 
-// Squelette de l'onglet Trésor : le tap sur l'onglet répond immédiatement,
-// le contenu (coffre, boutique, collection) arrive derrière.
-export default function TresorLoading() {
+// Squelette de l'onglet Premium : le tap répond immédiatement, les offres
+// (hero de valeur + comparatif des abonnements) arrivent derrière.
+export default function PremiumLoading() {
   return (
     <div className="flex flex-col gap-4">
       <div className="space-y-2">
-        <Skeleton className="h-8 w-32" />
-        <Skeleton className="h-4 w-56" />
+        <Skeleton className="h-8 w-40" />
+        <Skeleton className="h-4 w-64" />
       </div>
-      <Skeleton className="h-44 rounded-3xl" />
-      <div className="grid grid-cols-2 gap-3">
-        {Array.from({ length: 4 }, (_, i) => (
-          <Skeleton key={i} className="h-32 rounded-2xl" />
+      <Skeleton className="h-40 rounded-3xl" />
+      <div className="flex flex-col gap-3">
+        {Array.from({ length: 3 }, (_, i) => (
+          <Skeleton key={i} className="h-52 rounded-3xl" />
         ))}
       </div>
     </div>

@@ -192,11 +192,11 @@ export default function CompagnonCard({
 
       {accessories.length === 0 ? (
         <Link
-          href="/tresor"
+          href="/coffre"
           className="mt-3 flex items-center justify-center gap-1.5 text-xs font-semibold text-primary underline-offset-4 hover:underline"
         >
           <ShoppingBag className="size-3.5" aria-hidden="true" />
-          Habille-le avec les accessoires du Trésor
+          Habille-le avec les accessoires du coffre
         </Link>
       ) : null}
     </section>

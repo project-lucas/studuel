@@ -94,7 +94,7 @@ export async function claimWeeklyTrophy(): Promise<{
     return { claimed: false, trophyId }
   }
 
-  revalidatePath('/tresor')
+  revalidatePath('/coffre')
   return { claimed: claimed === true, trophyId }
 }
 

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { UserRound, Users } from 'lucide-react'
+import { UserRound, Users, Gem } from 'lucide-react'
 import { formatDurationFromSeconds, formatHours } from '@/lib/time'
 import { workLevel } from '@/lib/work-level'
 import AvatarBadge from '@/components/AvatarBadge'
@@ -91,13 +91,24 @@ export default function MoiHeader({
               {formatHours(playerSeconds)}
             </span>
           </span>
-          <Link
-            href="/compte"
-            className="flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-white/20 active:translate-y-px"
-          >
-            <UserRound className="size-4" strokeWidth={2.4} aria-hidden="true" />
-            Compte
-          </Link>
+          <div className="flex items-center gap-2">
+            {/* Icône discrète : accès au coffre (pièces, boutique, collection),
+                autrefois onglet « Trésor » à part entière. */}
+            <Link
+              href="/coffre"
+              aria-label="Mon coffre"
+              className="flex size-8 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition hover:bg-white/20 active:translate-y-px"
+            >
+              <Gem className="size-4 text-highlight" strokeWidth={2.4} aria-hidden="true" />
+            </Link>
+            <Link
+              href="/compte"
+              className="flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-white/20 active:translate-y-px"
+            >
+              <UserRound className="size-4" strokeWidth={2.4} aria-hidden="true" />
+              Compte
+            </Link>
+          </div>
         </div>
 
         {/* Prénom + rang, centrés sous la flamme. */}

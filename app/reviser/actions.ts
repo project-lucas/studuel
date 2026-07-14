@@ -172,7 +172,7 @@ export async function finishReviewSession(
 
   revalidatePath('/reviser')
   revalidatePath('/moi')
-  revalidatePath('/tresor')
+  revalidatePath('/coffre')
   return {
     saved: !error,
     revancheCleared: cleared === true,

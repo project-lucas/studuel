@@ -119,12 +119,17 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
     }
   }, [iFinished, state.outcome, state.sessionId, state.myAnswers, persist])
 
+  // On n'enregistre l'XP qu'UNE fois : `iFinished` puis `state.outcome` peuvent
+  // basculer à « fini » l'un après l'autre (je termine avec des questions en
+  // attente, puis le partenaire les sauve → outcome='won'), ce qui rejouerait
+  // l'effet et créditerait l'XP en double sans ce garde one-shot.
+  const recordedRef = useRef(false)
   useEffect(() => {
-    if (iFinished || state.outcome) {
+    if ((iFinished || state.outcome) && !recordedRef.current) {
+      recordedRef.current = true
       const status = coopStatus(state.myAnswers, state.theirAnswers, total)
       recordChallenge(status.cleared, total, 'duel').catch(() => {})
     }
-    // On n'enregistre qu'une fois : à la bascule vers "fini".
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [iFinished, state.outcome])
 

@@ -67,9 +67,21 @@ Coop/Duel en direct (hôte/invité alignés par seed = id de question). Ajout de
 + 526 références de chapitre vérifiées à chaque test (0 anomalie). Le **cœur de
 jeu `lib/` a été revu (code-reviewer) : 0 défaut de correctness**.
 
+**MAJ 2026-07-14 (jour cycle 2)** : session de **durcissement piloté par revues**
+(15 commits, `81ec004→507682c`, verts + build OK). **3 revues de correctness**
+(sous-agents) sur les zones non encore auditées → **9 bugs réels corrigés** :
+Défi temps réel (Coop victoire/spinner/double-XP, duel live décompte, timers
+d'abandon non nettoyés), Onboarding/Moi (placement vies ×2, `/moi` cassé si 082
+absente, hydratation OAuth), Réviser (double-soumission players). Ajouts sûrs :
+**index `quizzes.lesson_id`** (migration **083** à exécuter), secret cron en temps
+constant, 2 gardes de contenu (unicité quiz↔leçon, assets matières), tests
+`exams`/`subscription`/`subject-style` (**308→336 tests**). Verdict global des
+revues : Server Actions (RLS + `auth.uid()`), `lib/` et boutique/coffres (SQL
+idempotent) **sains**. La couche **Amis reste en mock client** (chantier ouvert).
+
 **Chantiers produit ouverts** (au-delà du contenu) : **Studygram** (décision de
-format en attente — voir `docs/CADRAGE-STUDYGRAM.md`), interface, animations,
-matchmaking / duels, scalabilité. Voir le backlog §4.
+format en attente — voir `docs/CADRAGE-STUDYGRAM.md`), **backend social Amis**
+(encore en mock), interface, animations, scalabilité. Voir le backlog §4.
 
 ---
 
@@ -212,6 +224,34 @@ breaking changes vs. l'entraînement.
 
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible évidente,
      pièges rencontrés. Lucas peut aussi y déposer une consigne du jour. -->
+
+**2026-07-14 [jour cycle 2] — Durcissement piloté par revues (15 commits, verts) :**
+- **Méthode qui a marché (à réutiliser quand la file est épuisée)** : quand le
+  backlog non-gated est vide/risqué, lancer des **revues de correctness par
+  sous-agents** sur les zones à risque non encore auditées (temps réel, code
+  récent, boucle cœur), puis **vérifier chaque finding dans le code avant de
+  corriger** et committer par lot vert. 3 revues → 9 bugs réels corrigés, 0
+  faux positif embarqué. Coût ~contenu, valeur élevée.
+- **Fait & sur `main`** : voir `A-LIRE-JOUR.md` (liste des 15 commits). Grands
+  axes : Défi temps réel (Coop/duel live/timers d'abandon), Onboarding/Moi
+  (placement, `/moi` robuste sans 082, hydratation), Réviser (double-soumission),
+  + index `083`, secret cron, 2 gardes de contenu, +28 tests.
+- **Prochaine cible évidente** : (1) **Studygram Option B** si validé (seul support
+  à 0) ; (2) **backend social Amis** — `components/AmisHome.tsx`/`lib/social.ts`
+  sont encore du **mock client** (duels/école/ajout d'ami « demain : table »),
+  seul le classement trophées est réel → gros chantier tables+RLS+actions.
+- **Pièges rencontrés** : (a) la base ne reflète pas le contenu (migrations
+  `048`/`079→083` **non exécutées**) → ne pas mesurer la DB pour décider, et **le
+  fix `/moi` `796c531` était nécessaire** car ajouter `avatar` (082) au `select`
+  groupé cassait tout le profil tant que 082 n'est pas passée : **isoler toute
+  nouvelle colonne dépendante d'une migration dans sa propre requête**. (b) Mon
+  fix Coop sur le vrai total (`a580e2d`) a **exposé** un double-XP latent
+  (`b92cea2`) — quand on corrige un `outcome` qui restait bloqué, vérifier les
+  effets qui en dépendent. (c) `react-hooks/set-state-in-effect` : envelopper le
+  setState de chargement dans une fonction locale (pattern BossMode) pour passer
+  le lint.
+- **Migrations** : **`083` créée** (index `quizzes.lesson_id`, à exécuter). Les 5
+  autres (`048`, `079→082`) restent à passer. Aucune exécutée par l'agent.
 
 **2026-07-14 [jour cycle 1] — Shuffle des options + cadrage Studygram + gardes de contenu :**
 - **Fait & sur `main`** (8 commits `9952250→db8ab98`, verts + build OK) :

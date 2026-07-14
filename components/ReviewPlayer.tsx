@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { ArrowRight, Check, Flame, Swords, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -49,12 +49,17 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
   const [answers, setAnswers] = useState<ReviewAnswer[]>([])
   const [done, setDone] = useState(false)
   const [result, setResult] = useState<Result | null>(null)
+  // Garde anti-double-soumission : un double-tap sur la dernière carte pourrait
+  // sinon enregistrer la session deux fois (ligne dupliquée en base).
+  const finishedRef = useRef(false)
 
   const item = items[index]
   const answered = selected !== null
   const revancheCount = items.filter((i) => i.inRevanche).length
 
   const finish = (finalAnswers: ReviewAnswer[]) => {
+    if (finishedRef.current) return
+    finishedRef.current = true
     setDone(true)
     sfx.complete()
     finishReviewSession(finalAnswers)

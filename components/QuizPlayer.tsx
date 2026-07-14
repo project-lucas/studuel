@@ -52,11 +52,17 @@ export default function QuizPlayer({
   // envoyées en une fois à la fin, en « fire and forget ».
   const reviewsRef = useRef<ReviewAnswer[]>([])
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  // Garde anti-double-soumission : un double-tap rapide sur la dernière option
+  // peut franchir le garde `selected` (state périmé) et lancer deux timers →
+  // sans ce verrou, la session serait enregistrée deux fois.
+  const finishedRef = useRef(false)
   useEffect(() => () => {
     if (timerRef.current) clearTimeout(timerRef.current)
   }, [])
 
   const finish = (allChoices: number[]) => {
+    if (finishedRef.current) return
+    finishedRef.current = true
     const score = allChoices.reduce(
       (s, choice, i) => s + (choice === questions[i].correct_index ? 1 : 0),
       0,
@@ -98,6 +104,7 @@ export default function QuizPlayer({
     setFinished(false)
     setSaved(null)
     reviewsRef.current = []
+    finishedRef.current = false
   }
 
   // ---------------------------------------------------------------------------

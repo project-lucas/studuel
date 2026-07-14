@@ -58,7 +58,17 @@ je le vérifie.
 `081`/`082`). Ces 5 migrations sont **écrites mais NON exécutées** (à passer par
 Lucas). Ne pas s'appuyer sur leurs tables en base tant qu'elles ne sont pas jouées.
 
-**Chantiers produit ouverts** (au-delà du contenu) : interface, animations,
+**MAJ 2026-07-14 (jour cycle 1)** : **les options de quiz sont désormais mélangées
+à la source** sur toutes les surfaces (helper pur `lib/quiz-shuffle.ts`) — la dette
+« bonne réponse toujours en 1re position » est réglée, y compris le cas
+Coop/Duel en direct (hôte/invité alignés par seed = id de question). Ajout de
+**gardes d'intégrité de contenu** dans `npm test` (`lib/quiz-content.test.ts`,
+`fiche-content.test.ts`, `content-linkage.test.ts`) : 808 questions + 269 fiches
++ 526 références de chapitre vérifiées à chaque test (0 anomalie). Le **cœur de
+jeu `lib/` a été revu (code-reviewer) : 0 défaut de correctness**.
+
+**Chantiers produit ouverts** (au-delà du contenu) : **Studygram** (décision de
+format en attente — voir `docs/CADRAGE-STUDYGRAM.md`), interface, animations,
 matchmaking / duels, scalabilité. Voir le backlog §4.
 
 ---
@@ -202,6 +212,29 @@ breaking changes vs. l'entraînement.
 
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible évidente,
      pièges rencontrés. Lucas peut aussi y déposer une consigne du jour. -->
+
+**2026-07-14 [jour cycle 1] — Shuffle des options + cadrage Studygram + gardes de contenu :**
+- **Fait & sur `main`** (8 commits `9952250→db8ab98`, verts + build OK) :
+  (1) **mélange des options de quiz à la source** — toutes surfaces, Coop/Duel
+  inclus, helper `lib/quiz-shuffle.ts` +11 tests ; (2) **cadrage Studygram**
+  (`docs/CADRAGE-STUDYGRAM.md`, reco B, décision à Lucas) ; (3) **fix** distracteur
+  en double (placement) ; (4) **4 gardes d'intégrité de contenu** (quiz/fiches/
+  rattachement chapitres) dans `npm test` ; (5) **revue `lib/`** : 0 défaut.
+- **Prochaine cible évidente** : **Studygram Option B** si Lucas la valide — socle
+  **additif non destructif** (nouvelle colonne `studygram_card jsonb` nullable +
+  composant de carte mémo rendu par l'app + `hasStudygram = url || card`), puis
+  contenu en masse via la méthode fan-out sous-agents. Détail dans le cadrage.
+- **Pièges rencontrés** : (a) au réveil, une partie du travail shuffle (defi/page,
+  pages sources, Coop/LiveDuel) était **déjà en WIP non commité** (cycle 1
+  interrompu ?) et **auto-stagée** par les hooks d'outil → je l'ai **relue à fond**
+  avant de la commiter (jamais commiter du code non relu). (b) **Ne pas** mesurer
+  le contenu via la clé anon pour décider quoi produire : les migrations
+  `032→082` sont **écrites mais NON exécutées**, donc la base ne reflète pas le
+  contenu réel → risque de doublons. Travailler au niveau des **fichiers**.
+  (c) Le shuffle est fait **à la source** (serveur), pas dans les players — ne pas
+  re-mélanger dans QuizPlayer/etc. (double shuffle inutile).
+- **Migrations** : **aucune créée** cette session. Les 5 en attente (`048`,
+  `079→082`) restent à exécuter par Lucas.
 
 **2026-07-14 (soir, note de Lucas via Claude) — Arbre remis à plat avant /jour :**
 - **Le gros WIP est commité.** Tout le travail non commité de Lucas (onboarding

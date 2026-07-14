@@ -63,30 +63,36 @@ export default function WelcomeFlow({
   const router = useRouter()
   const [step, setStep] = useState<WelcomeStep>(finish ? 'plan' : 'intro')
   const [history, setHistory] = useState<WelcomeStep[]>([])
-  const [answers, setAnswers] = useState<OnboardingAnswers>(() =>
-    parseAnswers(
-      typeof window !== 'undefined'
-        ? window.localStorage.getItem(STORAGE_KEY)
-        : null,
-    ),
-  )
+  // On démarre vide pour que le rendu serveur et le premier rendu client soient
+  // identiques (pas d'écart d'hydratation) ; le brouillon localStorage est
+  // chargé juste après, au montage côté client (effet ci-dessous).
+  const [answers, setAnswers] = useState<OnboardingAnswers>(() => parseAnswers(null))
+  const [draftLoaded, setDraftLoaded] = useState(false)
   const [questions, setQuestions] = useState<PlacementQuestion[]>([])
   const [loadingQuiz, setLoadingQuiz] = useState(false)
   const [finishing, setFinishing] = useState(false)
 
-  // Reprise / persistance du brouillon local.
+  // Montage (client) : charge le brouillon local, puis — au retour OAuth
+  // (?finish=1) — applique CE brouillon au profil (le compte existe déjà). On
+  // lit ici et pas dans l'initialiseur d'état pour éviter tout écart
+  // d'hydratation sur l'écran « plan ».
   useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, serializeAnswers(answers))
-  }, [answers])
-
-  // Retour OAuth (?finish=1) : applique les réponses au profil puis montre le
-  // plan. Le compte existe déjà (session ouverte), pas de metadata au signUp.
-  useEffect(() => {
-    if (!finish) return
-    void applyOnboarding(answers)
-    // On applique une seule fois au montage ; answers vient du localStorage.
+    const loadDraft = () => {
+      const draft = parseAnswers(window.localStorage.getItem(STORAGE_KEY))
+      setAnswers(draft)
+      setDraftLoaded(true)
+      if (finish) void applyOnboarding(draft)
+    }
+    loadDraft()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [finish])
+  }, [])
+
+  // Persistance du brouillon — jamais avant de l'avoir chargé, sinon on
+  // écraserait le brouillon existant avec l'état vide initial.
+  useEffect(() => {
+    if (!draftLoaded) return
+    window.localStorage.setItem(STORAGE_KEY, serializeAnswers(answers))
+  }, [answers, draftLoaded])
 
   function go(to: WelcomeStep) {
     setHistory((h) => [...h, step])
@@ -136,6 +142,17 @@ export default function WelcomeFlow({
 
   const progress = stepProgress(step)
   const showFlowHeader = progress !== null && step !== 'placementQuiz'
+
+  // Retour OAuth (?finish=1) : on attend d'avoir chargé le brouillon avant
+  // d'afficher le plan — évite un flash de valeurs par défaut. Identique côté
+  // serveur et au 1er rendu client → aucun écart d'hydratation.
+  if (finish && !draftLoaded) {
+    return (
+      <div className="onb fixed inset-0 z-50 flex flex-col items-center justify-center pb-[env(safe-area-inset-bottom)]">
+        <PencilLogo size={120} className="float-slow" />
+      </div>
+    )
+  }
 
   return (
     <div className="onb fixed inset-0 z-50 flex flex-col pb-[env(safe-area-inset-bottom)]">

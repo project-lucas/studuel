@@ -79,9 +79,23 @@ constant, 2 gardes de contenu (unicité quiz↔leçon, assets matières), tests
 revues : Server Actions (RLS + `auth.uid()`), `lib/` et boutique/coffres (SQL
 idempotent) **sains**. La couche **Amis reste en mock client** (chantier ouvert).
 
+**MAJ 2026-07-14 (soir)** : thread **parent → apprentissage → gamification**
+livré sur `main` (12 commits, verts + build OK). **Espace parent post-paiement**
+(3 temps mis en avant, migration **084** `work_daily` + chrono sur Réviser pour
+que le temps de révision soit réel). **Flashcards de leçon** (dérivées du quiz,
+0 contenu à saisir) → hub de leçon à **7 tuiles**. **Défi solo par niveaux**
+(Phase 1 : Objectif/vies/indice/confettis/étoiles ; Phase 2 : manche « associe
+les paires ») monté sur le quiz, `lib/defi-solo` + `lib/pair-match` purs+testés.
+Durcissement par 4 revues sous-agents → fix CRITICAL (machine à états Défi
+contournable), a11y flashcards, paywall flashcards/défi, + migration **085**
+(purge `review_items` orphelins, débloquait le bonus « Revanche vidée »).
+**Tests 336 → 388.** Migrations **084**/**085** à exécuter. Support Studygram
+toujours à 0.
+
 **Chantiers produit ouverts** (au-delà du contenu) : **Studygram** (décision de
 format en attente — voir `docs/CADRAGE-STUDYGRAM.md`), **backend social Amis**
-(encore en mock), interface, animations, scalabilité. Voir le backlog §4.
+(encore en mock), **Défi Phase 3 « texte à trous »** + **persistance du défi**
+(décision anti-farming à trancher), interface, animations, scalabilité. Voir §4.
 
 ---
 
@@ -224,6 +238,34 @@ breaking changes vs. l'entraînement.
 
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible évidente,
      pièges rencontrés. Lucas peut aussi y déposer une consigne du jour. -->
+
+**2026-07-14 (soir) [jour] — Thread parent→apprentissage→gamification (12 commits) :**
+- **Fait & sur `main`** : voir `A-LIRE-JOUR.md` (12 commits `8ede31e→8b6f6ad`).
+  Espace parent (migration 084) + chrono Réviser, flashcards de leçon, Défi solo
+  Phase 1 & 2 (paires), + 5 corrections de revue dont 1 CRITICAL (Défi) et la
+  migration 085 (purge review_items).
+- **Méthode réutilisée** : après avoir écrit du code neuf, lancer des **revues de
+  correctness par sous-agents** dessus (react/typescript/database/code-reviewer),
+  **vérifier chaque finding dans le code avant de corriger**, committer par lot
+  vert. 4 revues → 5 fixes réels, 0 faux positif embarqué.
+- **Prochaine cible évidente** : (1) **Défi Phase 3 « texte à trous »** — le shell
+  (niveaux/vies/modales) et le point d'intégration (`planLevels` dans
+  `lib/defi-solo`) sont prêts ; il manque le composant d'exercice + une SOURCE de
+  contenu (phrases à trou), non dérivable proprement du quiz → à cadrer.
+  (2) **Persistance du défi** (coins/étoiles) une fois la règle anti-farming
+  tranchée. (3) Studygram / backend Amis (inchangés).
+- **Pièges rencontrés** : (a) `Math.random()` est **interdit pendant le render**
+  par la règle lint `react-hooks/purity` → pour les confettis/mélanges, dériver
+  du contenu de façon **déterministe par index** (ou via `seededRng`, SSR-safe).
+  (b) Ajouter un `layout.tsx` **périme les types de routes Next** → lancer
+  `npx next typegen` avant `tsc`. (c) `review_items` (021) n'a **ni policy ni
+  GRANT DELETE** → tout nettoyage doit passer par un trigger `SECURITY DEFINER`
+  (migration 085), pas par une action serveur côté client. (d) le pattern d'ombre
+  dure claymorphique existant est `shadow-[0_Npx_0_0] shadow-<token>/N`.
+- **Migrations** : **`084` et `085` créées** (à exécuter). Les autres (`048`,
+  `079→083`) restent à passer. Aucune exécutée par l'agent.
+- **⚠️ Relance cycle 2 non armée** : `armer-relance-jour.ps1` **refusé par le
+  classifieur de permissions** → pas de reprise auto ; relancer `/jour` à la main.
 
 **2026-07-14 [jour cycle 2] — Durcissement piloté par revues (15 commits, verts) :**
 - **Méthode qui a marché (à réutiliser quand la file est épuisée)** : quand le

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { permuteOptions } from './quiz-shuffle'
+import { permuteOptions, permuteQuizOptions } from './quiz-shuffle'
 
 describe('permuteOptions', () => {
   const options = ['Paris', 'Londres', 'Berlin', 'Madrid']
@@ -52,6 +52,28 @@ describe('permuteOptions', () => {
     // mais sèment par `question.id` → même ordre des deux côtés.
     const host = permuteOptions(options, 1, 'q-shared-id')
     const guest = permuteOptions(options, 1, 'q-shared-id')
+    expect(host).toEqual(guest)
+  })
+})
+
+describe('permuteQuizOptions', () => {
+  const options = ['Paris', 'Londres', 'Berlin', 'Madrid']
+
+  it('ne touche pas un vrai/faux (garde « Vrai » puis « Faux »)', () => {
+    const vf = ['Vrai', 'Faux']
+    expect(permuteQuizOptions('true_false', vf, 0, 'seed')).toEqual({ options: vf, correctIndex: 0 })
+    expect(permuteQuizOptions('true_false', vf, 1, 'seed')).toEqual({ options: vf, correctIndex: 1 })
+  })
+
+  it('mélange un QCM en gardant la bonne réponse', () => {
+    const r = permuteQuizOptions('mcq', options, 2, 'seed-xyz')
+    expect(r.options[r.correctIndex]).toBe('Berlin')
+    expect([...r.options].sort()).toEqual([...options].sort())
+  })
+
+  it('donne le même ordre des deux côtés pour un même id (hôte/invité)', () => {
+    const host = permuteQuizOptions('mcq', options, 3, 'q-42')
+    const guest = permuteQuizOptions('mcq', options, 3, 'q-42')
     expect(host).toEqual(guest)
   })
 })

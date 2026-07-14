@@ -14,7 +14,7 @@ import PageHeader from '@/components/PageHeader'
 import QuizPlayer from '@/components/QuizPlayer'
 import { createClient } from '@/lib/supabase/server'
 import { getUserTier, canAccessPremiumTests } from '@/lib/subscription'
-import { permuteOptions } from '@/lib/quiz-shuffle'
+import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import type { Quiz, QuizQuestion } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
@@ -96,8 +96,7 @@ export default async function QuizPage({
   // que « toujours cliquer la 1re » ne marche pas ; les vrai/faux gardent leur
   // ordre. Le player continue de lire `correct_index`, resté juste.
   const shuffledQuestions = (questions ?? []).map((q) => {
-    if (q.kind === 'true_false') return q
-    const p = permuteOptions(q.options, q.correct_index, q.id)
+    const p = permuteQuizOptions(q.kind, q.options, q.correct_index, q.id)
     return { ...q, options: p.options, correct_index: p.correctIndex }
   })
 

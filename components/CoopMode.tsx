@@ -19,7 +19,7 @@ import { createClient } from '@/lib/supabase/client'
 import { useCoop } from '@/components/useCoop'
 import { recordChallenge } from '@/app/defi/actions'
 import { nowMs, type ModeQuestion } from '@/lib/defi-modes'
-import { permuteOptions } from '@/lib/quiz-shuffle'
+import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import {
   coopStatus,
   coopQuestionState,
@@ -87,10 +87,7 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
         .filter((r): r is QuestionRow => Boolean(r))
         .map((r) => {
           const opts = Array.isArray(r.options) ? (r.options as string[]) : []
-          const shuffled =
-            r.kind === 'true_false'
-              ? { options: opts, correctIndex: r.correct_index }
-              : permuteOptions(opts, r.correct_index, r.id)
+          const shuffled = permuteQuizOptions(r.kind, opts, r.correct_index, r.id)
           return {
             id: r.id,
             prompt: r.question,

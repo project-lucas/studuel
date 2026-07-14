@@ -35,3 +35,20 @@ export function permuteOptions(
     correctIndex: perm.indexOf(correctIndex),
   }
 }
+
+// Politique de mélange partagée par TOUTES les surfaces de quiz (Défi, Quiz,
+// Révision, Examen blanc, Coop/Duel en direct) : on permute les QCM mais on
+// laisse les vrai/faux dans l'ordre « Vrai » puis « Faux ». Centralisé ici pour
+// que le comportement reste identique partout — en particulier, en Coop/Duel en
+// direct, hôte et invité chargent leurs questions séparément mais appellent
+// cette même fonction avec le même seed (`question.id`), donc obtiennent le
+// MÊME ordre. Accepte le `kind` de la question ; `seed` = l'id de la question.
+export function permuteQuizOptions(
+  kind: 'mcq' | 'true_false',
+  options: string[],
+  correctIndex: number,
+  seed: string,
+): { options: string[]; correctIndex: number } {
+  if (kind === 'true_false') return { options, correctIndex }
+  return permuteOptions(options, correctIndex, seed)
+}

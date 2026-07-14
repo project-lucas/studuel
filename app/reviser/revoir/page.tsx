@@ -13,7 +13,7 @@ import ReviewPlayer, { type ReviewPlayItem } from '@/components/ReviewPlayer'
 import { createClient } from '@/lib/supabase/server'
 import { toDayKey } from '@/lib/streak'
 import { getReviewItems, reviewQueue } from '@/lib/srs'
-import { permuteOptions } from '@/lib/quiz-shuffle'
+import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import type { QuizQuestion, DeckCard } from '@/lib/types'
 
 export const metadata = { title: 'À revoir — Studuel' }
@@ -103,10 +103,7 @@ export default async function RevoirPage() {
         q.correct_index >= q.options.length
       )
         continue
-      const shuffled =
-        q.kind === 'true_false'
-          ? { options: q.options, correctIndex: q.correct_index }
-          : permuteOptions(q.options, q.correct_index, q.id)
+      const shuffled = permuteQuizOptions(q.kind, q.options, q.correct_index, q.id)
       items.push({
         kind: 'question',
         id: q.id,

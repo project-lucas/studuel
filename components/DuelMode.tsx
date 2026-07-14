@@ -87,6 +87,10 @@ export default function DuelMode({
   const [roundCorrect, setRoundCorrect] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
   const roundStartRef = useRef(0)
+  // Timer d'auto-avance / de révélation : gardé pour être annulé au démontage,
+  // sinon un abandon juste après une réponse enregistre le duel après coup
+  // (XP, fantôme, mission du jour).
+  const advanceTimerRef = useRef<number | null>(null)
 
   // Cumul pour l'XP (le serveur recalcule depuis score/total).
   const [totalCorrect, setTotalCorrect] = useState(0)
@@ -140,6 +144,14 @@ export default function DuelMode({
     return () => window.clearTimeout(t)
   }, [phase])
 
+  // Annule tout timer d'avance/révélation en attente au démontage (abandon).
+  useEffect(
+    () => () => {
+      if (advanceTimerRef.current) window.clearTimeout(advanceTimerRef.current)
+    },
+    [],
+  )
+
   const answer = (i: number) => {
     if (!question || answered) return
     setSelected(i)
@@ -158,7 +170,7 @@ export default function DuelMode({
 
     // Auto-avance : dans un duel, le rythme fait partie du jeu (le temps
     // départage les manches à égalité) — pas de bouton « Suivant ».
-    window.setTimeout(() => {
+    advanceTimerRef.current = window.setTimeout(() => {
       setQIndex((n) => n + 1)
       setSelected(null)
       if (qInRound + 1 >= ROUND_SIZE) {
@@ -189,7 +201,7 @@ export default function DuelMode({
     setGhostVisible(false)
     setPhase('reveal')
     // Suspense : l'adversaire « joue » sa manche avant la révélation.
-    window.setTimeout(() => {
+    advanceTimerRef.current = window.setTimeout(() => {
       setGhostVisible(true)
       const w = duelWinner(newRounds)
       if (w) {

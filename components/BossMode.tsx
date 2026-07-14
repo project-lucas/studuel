@@ -86,6 +86,15 @@ export default function BossMode({
 
   // Réponses du combat pour la répétition espacée (SRS + Revanche).
   const reviewsRef = useRef<ReviewAnswer[]>([])
+  // Timer d'auto-avance : annulé au démontage pour qu'un abandon juste après
+  // une réponse n'enregistre pas le combat après coup (XP, boss hebdo, trophée).
+  const advanceTimerRef = useRef<number | null>(null)
+  useEffect(
+    () => () => {
+      if (advanceTimerRef.current) window.clearTimeout(advanceTimerRef.current)
+    },
+    [],
+  )
 
   const start = (event: boolean) => {
     sfx.flip()
@@ -162,7 +171,7 @@ export default function BossMode({
     setCorrect(newCorrect)
     setAnsweredCount(newAnswered)
     const result = bossOutcome(newBoss)
-    window.setTimeout(() => {
+    advanceTimerRef.current = window.setTimeout(() => {
       if (result) {
         finish(result, newCorrect, newAnswered)
       } else {

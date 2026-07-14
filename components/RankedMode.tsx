@@ -132,6 +132,16 @@ export default function RankedMode({
 
   const [ranked, setRanked] = useState<RankedResult>(null)
   const reviewsRef = useRef<ReviewAnswer[]>([])
+  // Timer d'auto-avance / de révélation : annulé au démontage pour qu'un abandon
+  // juste après une réponse n'enregistre pas le match classé après coup
+  // (XP, trophées, mouvement de classement).
+  const advanceTimerRef = useRef<number | null>(null)
+  useEffect(
+    () => () => {
+      if (advanceTimerRef.current) window.clearTimeout(advanceTimerRef.current)
+    },
+    [],
+  )
 
   const question = pool.length > 0 ? pool[qIndex % pool.length] : null
   const answered = selected !== null
@@ -170,7 +180,7 @@ export default function RankedMode({
     const newRoundCorrect = roundCorrect + (good ? 1 : 0)
     setRoundCorrect(newRoundCorrect)
 
-    window.setTimeout(() => {
+    advanceTimerRef.current = window.setTimeout(() => {
       setQIndex((n) => n + 1)
       setSelected(null)
       if (qInRound + 1 >= ROUND_SIZE) {
@@ -193,7 +203,7 @@ export default function RankedMode({
     setRounds(newRounds)
     setGhostVisible(false)
     setPhase('reveal')
-    window.setTimeout(() => {
+    advanceTimerRef.current = window.setTimeout(() => {
       setGhostVisible(true)
       const w = duelWinner(newRounds)
       if (w) {

@@ -1,7 +1,9 @@
 import Link from 'next/link'
 import BackButton from '@/components/BackButton'
 import DefiSoloPlayer from '@/components/DefiSoloPlayer'
+import LessonSupportLock from '@/components/LessonSupportLock'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
+import { canAccessPremiumTests, getUserTier } from '@/lib/subscription'
 import type { QuizQuestion } from '@/lib/types'
 import { loadLessonContext } from '../data'
 
@@ -24,11 +26,27 @@ export default async function LessonDefiPage({
 
   const backHref = `/reviser/${subject.slug}/${chapter.id}/${lesson.id}`
 
-  const { data: quiz } = await supabase
-    .from('quizzes')
-    .select('id')
-    .eq('lesson_id', lesson.id)
-    .maybeSingle<{ id: string }>()
+  // On lit `is_free` pour gater le premium (sinon la RLS renvoie 0 question et
+  // on afficherait un trompeur « bientôt » au lieu du paywall).
+  const [{ data: quiz }, tier] = await Promise.all([
+    supabase
+      .from('quizzes')
+      .select('id, is_free')
+      .eq('lesson_id', lesson.id)
+      .maybeSingle<{ id: string; is_free: boolean }>(),
+    getUserTier(),
+  ])
+
+  if (quiz && !quiz.is_free && !canAccessPremiumTests(tier)) {
+    return (
+      <div className="mx-auto w-full max-w-2xl">
+        <BackButton fallback={backHref} />
+        <div className="mt-8">
+          <LessonSupportLock support="Le défi" backHref={backHref} />
+        </div>
+      </div>
+    )
+  }
 
   let questions: QuizQuestion[] = []
   if (quiz) {

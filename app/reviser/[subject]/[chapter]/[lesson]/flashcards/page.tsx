@@ -2,8 +2,10 @@ import Link from 'next/link'
 import { Layers } from 'lucide-react'
 import BackButton from '@/components/BackButton'
 import LessonFlashcards from '@/components/LessonFlashcards'
+import LessonSupportLock from '@/components/LessonSupportLock'
 import SubjectIcon from '@/components/SubjectIcon'
 import { flashcardsFromQuestions } from '@/lib/flashcards'
+import { canAccessPremiumTests, getUserTier } from '@/lib/subscription'
 import type { QuizQuestion } from '@/lib/types'
 import { loadLessonContext } from '../data'
 
@@ -27,15 +29,22 @@ export default async function FlashcardsPage({
 
   const backHref = `/reviser/${subject.slug}/${chapter.id}/${lesson.id}`
 
-  // Le quiz de la leçon fournit la matière des cartes.
-  const { data: quiz } = await supabase
-    .from('quizzes')
-    .select('id')
-    .eq('lesson_id', lesson.id)
-    .maybeSingle<{ id: string }>()
+  // Le quiz de la leçon fournit la matière des cartes. On lit `is_free` pour
+  // gater le premium comme /test et la carte mentale (sinon la RLS renvoie
+  // 0 question et on afficherait un trompeur « bientôt »).
+  const [{ data: quiz }, tier] = await Promise.all([
+    supabase
+      .from('quizzes')
+      .select('id, is_free')
+      .eq('lesson_id', lesson.id)
+      .maybeSingle<{ id: string; is_free: boolean }>(),
+    getUserTier(),
+  ])
+
+  const locked = Boolean(quiz && !quiz.is_free && !canAccessPremiumTests(tier))
 
   let cards: ReturnType<typeof flashcardsFromQuestions> = []
-  if (quiz) {
+  if (quiz && !locked) {
     const { data: questions } = await supabase
       .from('quiz_questions')
       .select(
@@ -68,7 +77,9 @@ export default async function FlashcardsPage({
         <p className="text-muted-foreground mt-1 text-sm">{lesson.title}</p>
       </div>
 
-      {cards.length > 0 ? (
+      {locked ? (
+        <LessonSupportLock support="Les flashcards" backHref={backHref} />
+      ) : cards.length > 0 ? (
         <LessonFlashcards
           cards={cards}
           backHref={backHref}

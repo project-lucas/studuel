@@ -71,7 +71,7 @@ export default function ChildReport({
         />
         <BigStat
           icon={<CalendarClock className="size-4" aria-hidden="true" />}
-          label="Cette semaine"
+          label="7 derniers jours"
           value={formatWorkDuration(dashboard.week_seconds)}
           sub={
             dashboard.week_active_days > 0

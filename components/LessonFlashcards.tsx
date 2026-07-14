@@ -145,14 +145,13 @@ export default function LessonFlashcards({
         <button
           type="button"
           onClick={() => setFlipped((f) => !f)}
-          aria-label={
-            flipped ? 'Revoir la question' : 'Découvrir la réponse'
-          }
           className="relative block min-h-[24rem] w-full cursor-pointer text-left [transform-style:preserve-3d] transition-transform duration-500 motion-reduce:transition-none"
           style={{ transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
         >
-          {/* Recto — violet : la question */}
+          {/* Recto — violet : la question. Masqué aux lecteurs d'écran quand la
+              carte est retournée, pour n'exposer que la face visible. */}
           <CardFace
+            ariaHidden={flipped}
             className="bg-primary text-primary-foreground shadow-primary/30"
             tab="?"
             body={card.front}
@@ -165,6 +164,7 @@ export default function LessonFlashcards({
           />
           {/* Verso — jaune : la réponse (+ indice) */}
           <CardFace
+            ariaHidden={!flipped}
             className="bg-highlight text-foreground shadow-highlight/40 [transform:rotateY(180deg)]"
             tab="!"
             body={card.back}
@@ -213,15 +213,18 @@ function CardFace({
   body,
   hint,
   footer,
+  ariaHidden,
 }: {
   className?: string
   tab: string
   body: string
   hint?: string | null
   footer: React.ReactNode
+  ariaHidden?: boolean
 }) {
   return (
     <div
+      aria-hidden={ariaHidden}
       className={cn(
         'absolute inset-0 flex flex-col items-center justify-between rounded-[1.75rem] border-4 border-white/30 p-6 shadow-[0_10px_0_0] [backface-visibility:hidden]',
         className,

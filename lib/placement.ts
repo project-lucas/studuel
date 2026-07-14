@@ -33,7 +33,7 @@ const FALLBACK_COLLEGE: PlacementQuestion[] = [
     id: 'fb-col-3',
     subject: 'Français',
     question: 'Quel est le pluriel de « cheval » ?',
-    options: ['chevals', 'chevaux', 'cheveaux', 'chevals'],
+    options: ['chevals', 'chevaux', 'cheveaux', 'chevaus'],
     correctIndex: 1,
   },
   {

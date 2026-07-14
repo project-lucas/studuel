@@ -20,9 +20,9 @@ import {
   MAX_LIVES,
   levelPoints,
   maxScore,
+  planLevels,
   starsForScore,
 } from '@/lib/defi-solo'
-import { pairsFromQuestions, type Pair } from '@/lib/pair-match'
 import type { QuizQuestion } from '@/lib/types'
 
 // Défi solo par niveaux monté sur le quiz de la leçon. Chaque niveau est une
@@ -40,11 +40,6 @@ type Phase =
   | 'defiSuccess'
   | 'defiFail'
 
-// Un niveau du défi : soit un QCM, soit une manche d'association de paires.
-type Level =
-  | { kind: 'qcm'; q: QuizQuestion }
-  | { kind: 'pairs'; pairs: Pair[] }
-
 export default function DefiSoloPlayer({
   questions,
   title,
@@ -56,17 +51,8 @@ export default function DefiSoloPlayer({
   subject: string | null
   backHref: string
 }) {
-  // Plan des niveaux (stable) : un QCM par question, plus une manche « paires »
-  // intercalée en 3e position quand assez de paires sont dérivables du quiz.
-  const levels = useMemo<Level[]>(() => {
-    const qcm: Level[] = questions.map((q) => ({ kind: 'qcm', q }))
-    const pairs = pairsFromQuestions(questions)
-    if (pairs.length >= 3) {
-      const at = Math.min(2, qcm.length)
-      return [...qcm.slice(0, at), { kind: 'pairs', pairs }, ...qcm.slice(at)]
-    }
-    return qcm
-  }, [questions])
+  // Plan des niveaux (stable) — logique pure testée dans lib/defi-solo.
+  const levels = useMemo(() => planLevels(questions), [questions])
 
   const total = levels.length
   const max = maxScore(total)

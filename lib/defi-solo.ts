@@ -1,7 +1,29 @@
-// Défi solo par niveaux (Phase 1) — logique pure, testable.
+// Défi solo par niveaux — logique pure, testable.
 // Un défi = les questions du quiz de la leçon jouées comme des NIVEAUX
-// successifs, avec des vies (cœurs) et un score. Ici, uniquement le barème :
-// points par niveau, score max, étoiles finales. Voir [[espace-parent-hub-supports]].
+// successifs (QCM + une manche « paires » intercalée), avec des vies (cœurs) et
+// un score. Ici : le barème (points/niveau, score max, étoiles) et le plan des
+// niveaux. Voir [[espace-parent-hub-supports]].
+
+import { pairsFromQuestions, type Pair } from './pair-match'
+import type { QuizQuestion } from './types'
+
+// Un niveau du défi : soit un QCM, soit une manche d'association de paires.
+export type DefiLevel =
+  | { kind: 'qcm'; q: QuizQuestion }
+  | { kind: 'pairs'; pairs: Pair[] }
+
+// Construit le plan des niveaux : un QCM par question, plus UNE manche
+// « paires » intercalée en 3e position dès qu'au moins 3 paires sont
+// dérivables du quiz (sinon, que des QCM).
+export function planLevels(questions: QuizQuestion[]): DefiLevel[] {
+  const qcm: DefiLevel[] = questions.map((q) => ({ kind: 'qcm', q }))
+  const pairs = pairsFromQuestions(questions)
+  if (pairs.length >= 3) {
+    const at = Math.min(2, qcm.length)
+    return [...qcm.slice(0, at), { kind: 'pairs', pairs }, ...qcm.slice(at)]
+  }
+  return qcm
+}
 
 export const MAX_LIVES = 3
 export const LEVEL_BASE_POINTS = 60

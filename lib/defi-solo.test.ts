@@ -6,8 +6,21 @@ import {
   WRONG_PENALTY,
   levelPoints,
   maxScore,
+  planLevels,
   starsForScore,
 } from './defi-solo'
+import type { QuizQuestion } from './types'
+
+const mkQ = (i: number): QuizQuestion => ({
+  id: `q${i}`,
+  quiz_id: 'quiz1',
+  question: `Q${i}`,
+  kind: 'mcq',
+  options: [`r${i}`, `x${i}`],
+  correct_index: 0,
+  explanation: null,
+  position: i,
+})
 
 describe('levelPoints', () => {
   it('plein tarif du premier coup sans indice', () => {
@@ -53,5 +66,32 @@ describe('starsForScore', () => {
 
   it('gère un dénominateur nul', () => {
     expect(starsForScore(0, 0)).toBe(0)
+  })
+})
+
+describe('planLevels', () => {
+  it('intercale une manche paires en 3e position quand ≥3 paires', () => {
+    const levels = planLevels(Array.from({ length: 5 }, (_, i) => mkQ(i)))
+    expect(levels).toHaveLength(6) // 5 QCM + 1 manche paires
+    expect(levels.map((l) => l.kind)).toEqual([
+      'qcm',
+      'qcm',
+      'pairs',
+      'qcm',
+      'qcm',
+      'qcm',
+    ])
+    const pairsLevel = levels[2]
+    if (pairsLevel.kind !== 'pairs') throw new Error('attendu: pairs')
+    expect(pairsLevel.pairs.length).toBeGreaterThanOrEqual(3)
+  })
+
+  it('ne met que des QCM quand moins de 3 paires dérivables', () => {
+    const levels = planLevels([mkQ(0), mkQ(1)])
+    expect(levels.map((l) => l.kind)).toEqual(['qcm', 'qcm'])
+  })
+
+  it('gère un quiz vide', () => {
+    expect(planLevels([])).toEqual([])
   })
 })

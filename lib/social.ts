@@ -186,6 +186,79 @@ export function getMockFriends(): Friend[] {
 // de l'élève (même logique que la carte « Reprendre » de Réviser).
 export const MOCK_PRIORITY_SUBJECT = { subject: 'Maths', topic: 'Les fractions' }
 
+// =============================================================== Amitiés réelles
+// Branchées sur la fondation sociale (migration 019) : code ami unique, table
+// `friendships` (pending → accepted) et fonctions SECURITY DEFINER. Ces helpers
+// restent purs (mappage + messages) ; les appels Supabase vivent dans les
+// Server Actions de `app/amis/actions.ts`.
+
+// Ligne brute renvoyée par la fonction SQL `friends_overview()`.
+export type FriendOverviewRow = {
+  friend_id: string
+  full_name: string | null
+  status: string
+  incoming: boolean
+}
+
+// Une demande d'ami reçue (ou envoyée), en attente.
+export type PendingRequest = {
+  id: string
+  name: string
+  emoji: string
+}
+
+// Prénom d'affichage : premier mot du nom complet, repli « Ami ».
+function displayFirstName(fullName: string | null): string {
+  return (fullName ?? '').trim().split(/\s+/)[0] || 'Ami'
+}
+
+// Éclate les lignes de `friends_overview()` en trois listes prêtes à afficher :
+// amis acceptés (pour défier), demandes reçues (à accepter), demandes envoyées.
+export function mapFriendsOverview(rows: readonly FriendOverviewRow[] | null): {
+  accepted: Friend[]
+  incoming: PendingRequest[]
+  outgoing: PendingRequest[]
+} {
+  const accepted: Friend[] = []
+  const incoming: PendingRequest[] = []
+  const outgoing: PendingRequest[] = []
+  for (const r of rows ?? []) {
+    const id = r?.friend_id
+    if (!id) continue
+    const name = displayFirstName(r.full_name)
+    const emoji = avatarEmojiFor(String(id))
+    if (r.status === 'accepted') {
+      accepted.push({ id: String(id), name, emoji, level: 0, real: true })
+    } else if (r.status === 'pending' && r.incoming) {
+      incoming.push({ id: String(id), name, emoji })
+    } else if (r.status === 'pending') {
+      outgoing.push({ id: String(id), name, emoji })
+    }
+  }
+  return { accepted, incoming, outgoing }
+}
+
+// Résultat de `add_friend_by_code()` → message français pour l'élève.
+export type AddFriendStatus = 'sent' | 'already' | 'self' | 'not_found' | 'error'
+
+export function addFriendMessage(status: AddFriendStatus): {
+  ok: boolean
+  message: string
+} {
+  switch (status) {
+    case 'sent':
+      return { ok: true, message: 'Demande envoyée ! 🎉' }
+    case 'already':
+      return { ok: false, message: 'Vous êtes déjà liés (ou une demande est en cours).' }
+    case 'self':
+      return { ok: false, message: "C'est ton propre code 😄" }
+    case 'not_found':
+      return { ok: false, message: 'Aucun élève avec ce code.' }
+    default:
+      return { ok: false, message: 'Oups, réessaie dans un instant.' }
+  }
+}
+
 // L'école de l'élève (mock) — `mySeconds` vient du vrai profil quand il est
 // connecté, pour que sa place dans le classement bouge avec son travail réel.
 export function getMockSchool(mySeconds: number): SchoolBoard {

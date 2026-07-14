@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useSyncExternalStore } from 'react'
+import { useState, useSyncExternalStore, useTransition } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import {
@@ -16,6 +16,7 @@ import {
   ArrowRight,
   School,
   Hourglass,
+  X,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -26,13 +27,14 @@ import {
   type LiveSession,
   type Duel,
   type SchoolBoard,
+  type PendingRequest,
   sinceLabel,
   schoolTotalSeconds,
   duelMissionAvailable,
   DUEL_XP_BONUS,
   DUEL_DAY_STORAGE_KEY,
-  MOCK_FRIEND_CODE,
 } from '@/lib/social'
+import { addFriendByCode, acceptFriend, removeFriend } from '@/app/amis/actions'
 import {
   arenaFor,
   rankPlayers,
@@ -473,6 +475,71 @@ function SchoolSection({ school }: { school: SchoolBoard }) {
   )
 }
 
+// ------------------------------------------------------------- Demandes reçues
+// Une demande d'ami à accepter ou refuser. Optimiste : la ligne se fige sur son
+// issue dès l'action réussie, sans attendre le rechargement de la page.
+function PendingRow({ request }: { request: PendingRequest }) {
+  const [pending, start] = useTransition()
+  const [done, setDone] = useState<'accepted' | 'refused' | null>(null)
+
+  if (done === 'refused') return null
+
+  if (done === 'accepted') {
+    return (
+      <li className="flex items-center gap-3 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
+        <Avatar emoji={request.emoji} />
+        <span className="min-w-0 flex-1 truncate text-sm font-semibold">
+          {request.name}
+        </span>
+        <span className="flex items-center gap-1 rounded-full bg-green-600/15 px-2.5 py-1 text-xs font-semibold text-green-700 dark:text-green-400">
+          <Check className="size-3.5" /> Ami ajouté
+        </span>
+      </li>
+    )
+  }
+
+  return (
+    <li className="flex items-center gap-3 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
+      <Avatar emoji={request.emoji} />
+      <span className="min-w-0 flex-1 truncate text-sm font-semibold">
+        {request.name}
+        <span className="block text-xs font-normal text-muted-foreground">
+          veut être ton ami
+        </span>
+      </span>
+      <Button
+        size="sm"
+        className="rounded-full"
+        disabled={pending}
+        onClick={() => {
+          sfx.correct()
+          start(async () => {
+            const res = await acceptFriend(request.id)
+            if (res.ok) setDone('accepted')
+          })
+        }}
+      >
+        Accepter
+      </Button>
+      <button
+        type="button"
+        aria-label={`Refuser la demande de ${request.name}`}
+        disabled={pending}
+        className="flex size-8 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted disabled:opacity-50"
+        onClick={() => {
+          sfx.tap()
+          start(async () => {
+            const res = await removeFriend(request.id)
+            if (res.ok) setDone('refused')
+          })
+        }}
+      >
+        <X className="size-4" />
+      </button>
+    </li>
+  )
+}
+
 // ------------------------------------------------------------------------- Page
 export default function AmisHome({
   live,
@@ -480,6 +547,8 @@ export default function AmisHome({
   ranking,
   school,
   friends,
+  pendingRequests,
+  myFriendCode,
   prioritySubject,
   todayKey,
 }: {
@@ -488,10 +557,17 @@ export default function AmisHome({
   ranking: RankPlayer[]
   school: SchoolBoard
   friends: Friend[]
+  pendingRequests: PendingRequest[]
+  myFriendCode: string
   prioritySubject: { subject: string; topic: string }
   todayKey: string
 }) {
   const [copied, setCopied] = useState(false)
+  const [code, setCode] = useState('')
+  const [feedback, setFeedback] = useState<{ ok: boolean; message: string } | null>(
+    null,
+  )
+  const [isAdding, startAdding] = useTransition()
   // Classement réel aux trophées : ma place, mes trophées, mon arène, et le
   // rival juste devant (« +40 pour le doubler »).
   const rankedRows = rankPlayers(ranking)
@@ -503,14 +579,27 @@ export default function AmisHome({
   const friendCount = ranking.filter((e) => !e.isMe).length
 
   const copyCode = async () => {
+    if (!myFriendCode) return
     try {
-      await navigator.clipboard.writeText(MOCK_FRIEND_CODE)
+      await navigator.clipboard.writeText(myFriendCode)
       setCopied(true)
       sfx.tap()
       setTimeout(() => setCopied(false), 1600)
     } catch {
       /* clipboard indisponible : on ignore silencieusement */
     }
+  }
+
+  const submitCode = (e: React.FormEvent) => {
+    e.preventDefault()
+    const value = code.trim()
+    if (!value || isAdding) return
+    sfx.tap()
+    startAdding(async () => {
+      const res = await addFriendByCode(value)
+      setFeedback(res)
+      if (res.ok) setCode('')
+    })
   }
 
   return (
@@ -622,6 +711,27 @@ export default function AmisHome({
         </p>
       </section>
 
+      {/* Demandes reçues — à accepter ou refuser. Masqué s'il n'y en a pas. */}
+      {pendingRequests.length > 0 ? (
+        <section>
+          <SectionTitle
+            icon={UserPlus}
+            aside={
+              <span className="rounded-full bg-highlight px-2.5 py-0.5 font-mono text-xs font-bold text-foreground tabular-nums">
+                {pendingRequests.length}
+              </span>
+            }
+          >
+            Demandes reçues
+          </SectionTitle>
+          <ul className="flex flex-col gap-2">
+            {pendingRequests.map((r) => (
+              <PendingRow key={r.id} request={r} />
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       {/* Ton collège — la cagnotte d'heures et le classement interne. */}
       <SchoolSection school={school} />
 
@@ -635,9 +745,13 @@ export default function AmisHome({
           <button
             type="button"
             onClick={copyCode}
-            className="flex flex-1 items-center justify-between gap-2 rounded-full border bg-muted/50 px-4 py-2 font-mono text-sm font-bold transition-colors hover:bg-muted"
+            disabled={!myFriendCode}
+            aria-label={
+              myFriendCode ? `Copier ton code ${myFriendCode}` : 'Code indisponible'
+            }
+            className="flex flex-1 items-center justify-between gap-2 rounded-full border bg-muted/50 px-4 py-2 font-mono text-sm font-bold transition-colors hover:bg-muted disabled:opacity-60"
           >
-            {MOCK_FRIEND_CODE}
+            {myFriendCode || '——————'}
             {copied ? (
               <Check className="size-4 text-green-600" />
             ) : (
@@ -645,23 +759,47 @@ export default function AmisHome({
             )}
           </button>
         </div>
-        <form
-          className="mt-2 flex items-center gap-2"
-          onSubmit={(e) => {
-            e.preventDefault()
-            sfx.tap()
-          }}
-        >
+        <form className="mt-2 flex items-center gap-2" onSubmit={submitCode}>
           <input
             type="text"
+            value={code}
+            onChange={(e) => {
+              setCode(e.target.value.toUpperCase())
+              if (feedback) setFeedback(null)
+            }}
+            maxLength={10}
+            autoCapitalize="characters"
+            autoComplete="off"
             placeholder="Code d’un ami…"
             aria-label="Entrer le code d’un ami"
-            className="h-10 flex-1 rounded-full border bg-card px-4 text-sm outline-none placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/40"
+            className="h-10 flex-1 rounded-full border bg-card px-4 font-mono text-sm tracking-wide uppercase outline-none placeholder:font-sans placeholder:normal-case placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/40"
           />
-          <Button type="submit" className="rounded-full">
-            Ajouter <ArrowRight className="size-4" />
+          <Button
+            type="submit"
+            className="rounded-full"
+            disabled={isAdding || code.trim().length === 0}
+          >
+            {isAdding ? (
+              'Envoi…'
+            ) : (
+              <>
+                Ajouter <ArrowRight className="size-4" />
+              </>
+            )}
           </Button>
         </form>
+        {feedback ? (
+          <p
+            role="status"
+            aria-live="polite"
+            className={cn(
+              'mt-2 px-1 text-sm font-medium',
+              feedback.ok ? 'text-green-700 dark:text-green-400' : 'text-destructive',
+            )}
+          >
+            {feedback.message}
+          </p>
+        ) : null}
       </section>
     </div>
   )

@@ -8,8 +8,10 @@ import { useLiveDuel } from '@/components/useLiveDuel'
 import {
   ROUND_SIZE,
   nowMs,
+  duelScore,
   type ModeQuestion,
 } from '@/lib/defi-modes'
+import { mergeRounds } from '@/lib/duel-live'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 
 type Props = {
@@ -183,6 +185,10 @@ export default function LiveDuelMode({ userId, pool, subject, onExit }: Props) {
   // --- Résultat --------------------------------------------------------------
   if (state.winner) {
     const iWon = state.winner === 'me'
+    // Décompte des manches via la MÊME logique que le vainqueur (départage à
+    // l'égalité de bonnes réponses par le temps) — sinon l'affichage pouvait
+    // contredire le titre « Victoire/Défaite ».
+    const score = duelScore(mergeRounds(state.myRounds, state.theirRounds))
     return (
       <div className="mx-auto flex max-w-md flex-col items-center gap-4 p-8 text-center">
         <Trophy
@@ -193,8 +199,7 @@ export default function LiveDuelMode({ userId, pool, subject, onExit }: Props) {
           {iWon ? 'Victoire !' : 'Défaite'}
         </h2>
         <p className="text-muted-foreground text-sm">
-          Manches gagnées : {state.myRounds.length > 0 ? '' : ''}
-          {countWins(state)} — {countWins(state, true)}
+          Manches gagnées : {score.me} — {score.them}
         </p>
         <Button onClick={handleExit}>Retour à l’arène</Button>
       </div>
@@ -215,22 +220,6 @@ export default function LiveDuelMode({ userId, pool, subject, onExit }: Props) {
       onExit={handleExit}
     />
   )
-}
-
-function countWins(
-  state: { myRounds: { round: number; correct: number }[]; theirRounds: { round: number; correct: number }[] },
-  forThem = false,
-): number {
-  let mine = 0
-  let theirs = 0
-  const byRound = new Map(state.theirRounds.map((r) => [r.round, r]))
-  for (const m of state.myRounds) {
-    const t = byRound.get(m.round)
-    if (!t) continue
-    if (m.correct >= t.correct) mine += 1
-    else theirs += 1
-  }
-  return forThem ? theirs : mine
 }
 
 // Une manche de ROUND_SIZE questions : on répond, on chronomètre, on déclare.

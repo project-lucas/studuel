@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Check, Lightbulb, RotateCcw, RotateCw, Trophy } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { sfx } from '@/lib/sounds'
 import {
   countReview,
   reviewDeck,
@@ -144,7 +145,10 @@ export default function LessonFlashcards({
       <div className="[perspective:1600px]">
         <button
           type="button"
-          onClick={() => setFlipped((f) => !f)}
+          onClick={() => {
+            setFlipped((f) => !f)
+            sfx.flip()
+          }}
           className="relative block min-h-[24rem] w-full cursor-pointer text-left [transform-style:preserve-3d] transition-transform duration-500 motion-reduce:transition-none"
           style={{ transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
         >

@@ -99,11 +99,11 @@ export default async function MoiPage({
   // Profil + habitudes d'abord (nécessaires à la synchro auto).
   // capacity_quiz voyage avec le profil : si 013_capacite.sql n'est pas passée,
   // profileError le signale (bandeau migration) et la page continue, dégradée.
-  const [{ data: profile, error: profileError }, { data: habits }] =
+  const [{ data: profile, error: profileError }, { data: habits }, { data: avatarRow }] =
     await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, commute_slots, capacity_quiz, avatar')
+      .select('full_name, commute_slots, capacity_quiz')
       .eq('id', user.id)
       .maybeSingle(),
     supabase
@@ -111,6 +111,10 @@ export default async function MoiPage({
       .select('id, catalog_id, target, created_at, habit_catalog(*)')
       .order('created_at', { ascending: true })
       .returns<Habit[]>(),
+    // avatar isolé : la colonne vient de 082_avatar.sql (peut-être pas encore
+    // passée) — son absence ne doit pas casser la lecture du profil (prénom,
+    // créneaux) ni afficher un bandeau de migration trompeur.
+    supabase.from('profiles').select('avatar').eq('id', user.id).maybeSingle(),
   ])
 
   const commuteSlots: CommuteSlot[] = Array.isArray(profile?.commute_slots)
@@ -449,7 +453,7 @@ export default async function MoiPage({
 
   // Avatar personnalisable du bandeau : config validée + rendu pré-calculé
   // (data-URI) pour un affichage immédiat sans embarquer DiceBear côté client.
-  const avatarConfig = normalizeAvatarConfig(profile?.avatar)
+  const avatarConfig = normalizeAvatarConfig(avatarRow?.avatar)
   const avatarUri = avatarDataUri(avatarConfig, 160)
 
   // Compagnon d'étude : nourri par la série, habillé par la boutique.

@@ -12,6 +12,7 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import QuizPlayer from '@/components/QuizPlayer'
+import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
 import { getUserTier, canAccessPremiumTests } from '@/lib/subscription'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
@@ -103,13 +104,17 @@ export default async function QuizPage({
   // Le player occupe tout l'écran (template) : pas de PageHeader autour.
   if (!error && questions && questions.length > 0) {
     return (
-      <QuizPlayer
-        quizId={quiz.id}
-        title={quiz.title}
-        questions={shuffledQuestions}
-        subject={quiz.subject}
-        backHref={backHref}
-      />
+      <>
+        {/* Le temps passé sur un quiz compte comme temps de révision. */}
+        <WorkTimer />
+        <QuizPlayer
+          quizId={quiz.id}
+          title={quiz.title}
+          questions={shuffledQuestions}
+          subject={quiz.subject}
+          backHref={backHref}
+        />
+      </>
     )
   }
 

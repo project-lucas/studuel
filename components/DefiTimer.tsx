@@ -1,68 +1,14 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
 import { Clock } from 'lucide-react'
+import { useWorkTimer } from './useWorkTimer'
 
-// Chronomètre du Défi : démarre dès l'affichage de la page, ne compte que
-// lorsque l'onglet est visible, et verse régulièrement le temps mesuré au
-// compteur de travail (onglet Moi). Verse aussi le reliquat en quittant.
+// Chronomètre VISIBLE du Défi : démarre dès l'affichage de la page, ne compte
+// que lorsque l'onglet est visible, et verse le temps mesuré au compteur de
+// travail. La mécanique est partagée avec Réviser (useWorkTimer) ; ce
+// composant n'ajoute que l'affichage.
 export default function DefiTimer() {
-  const [seconds, setSeconds] = useState(0)
-  // Secondes comptées mais pas encore envoyées au serveur.
-  const unsavedRef = useRef(0)
-
-  useEffect(() => {
-    // Versement périodique : fetch keepalive, pour pouvoir remettre les
-    // secondes en attente si le réseau échoue.
-    const flush = () => {
-      const n = unsavedRef.current
-      if (n <= 0) return
-      unsavedRef.current = 0
-      fetch('/api/work-time', {
-        method: 'POST',
-        body: String(n),
-        keepalive: true,
-      })
-        .then((r) => {
-          if (!r.ok) unsavedRef.current += n
-        })
-        .catch(() => {
-          unsavedRef.current += n
-        })
-    }
-
-    // Versement de sortie : sendBeacon — le navigateur garantit l'envoi même
-    // quand la page se ferme (un fetch y est souvent tué sur mobile).
-    const flushOnExit = () => {
-      const n = unsavedRef.current
-      if (n <= 0) return
-      if (navigator.sendBeacon?.('/api/work-time', String(n))) {
-        unsavedRef.current = 0
-      } else {
-        flush() // vieux navigateur : au moins un fetch keepalive
-      }
-    }
-
-    const id = setInterval(() => {
-      if (document.visibilityState !== 'visible') return
-      setSeconds((s) => s + 1)
-      unsavedRef.current += 1
-      if (unsavedRef.current >= 20) flush() // versement toutes les ~20 s
-    }, 1000)
-
-    const onVisibility = () => {
-      if (document.visibilityState === 'hidden') flushOnExit()
-    }
-    document.addEventListener('visibilitychange', onVisibility)
-    window.addEventListener('pagehide', flushOnExit)
-
-    return () => {
-      clearInterval(id)
-      document.removeEventListener('visibilitychange', onVisibility)
-      window.removeEventListener('pagehide', flushOnExit)
-      flushOnExit() // sortie de page (navigation interne)
-    }
-  }, [])
+  const seconds = useWorkTimer()
 
   const mm = String(Math.floor(seconds / 60)).padStart(2, '0')
   const ss = String(seconds % 60).padStart(2, '0')

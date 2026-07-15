@@ -10,14 +10,11 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import SubjectsHome from '@/components/SubjectsHome'
-import { type ContinueTarget } from '@/components/ContinueCard'
 import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
 import ReviserTools from '@/components/ReviserTools'
-import UpcomingExamsCard from '@/components/UpcomingExamsCard'
-import ConsolidateList, {
-  type ConsolidateEntry,
-} from '@/components/ConsolidateList'
-import ExamProgress, { type ExamProgressEntry } from '@/components/ExamProgress'
+import WeekPlannerStrip from '@/components/WeekPlannerStrip'
+import ExamObjectiveToggle from '@/components/ExamObjectiveToggle'
+import { type ExamProgressEntry } from '@/components/ExamProgress'
 import CommuteBanner from '@/components/CommuteBanner'
 import ReviewQueueCard from '@/components/ReviewQueueCard'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
@@ -26,7 +23,7 @@ import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
 import { getReviewItems, reviewQueue, countsBySubject } from '@/lib/srs'
-import { toDayKey, computeStreak } from '@/lib/streak'
+import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
 import {
   normalizeExamList,
   activeExams,
@@ -196,6 +193,7 @@ export default async function ReviserPage() {
     ].map((s) => String(s.created_at).slice(0, 10)),
   )
   const streak = computeStreak(activityDays)
+  const week = weekProgress(activityDays)
   const firstName =
     String(profile?.full_name ?? '').split(' ')[0] || null
 
@@ -248,29 +246,6 @@ export default async function ReviserPage() {
     .filter((a) => a.state === 'en_cours')
     .sort((a, b) => b.value - a.value)
   const aCommencer = analyzed.filter((a) => a.state === 'a_commencer')
-
-  const next = fragiles[0] ?? enCours[0] ?? aCommencer[0] ?? null
-  const continueTarget: ContinueTarget | null = next
-    ? {
-        subject: next.subject,
-        chapterId: next.chapterId,
-        chapterTitle: next.chapterTitle,
-        progress: next.value,
-        isNew: next.state === 'a_commencer',
-      }
-    : null
-
-  // --- « À consolider » : fragiles puis à commencer (hors carte Reprendre) ----
-  const consolidate: ConsolidateEntry[] = [...fragiles, ...aCommencer]
-    .filter((a) => a.chapterId !== continueTarget?.chapterId)
-    .slice(0, 3)
-    .map((a) => ({
-      subject: a.subject,
-      chapterId: a.chapterId,
-      chapterTitle: a.chapterTitle,
-      state: a.state === 'fragile' ? 'fragile' : 'a_commencer',
-      progress: a.value,
-    }))
 
   // --- Objectif examen (classes à examen uniquement) ---------------------------
   const exams = examsForProfile(grade, selected, allSubjects)
@@ -374,8 +349,11 @@ export default async function ReviserPage() {
             <ResumeSessions items={resumeItems} />
             {/* 2. Tes outils — revoir ses erreurs, ouvrir sa bibliothèque. */}
             <ReviserTools reviewCount={queue.length} />
-            {/* 3. Mes contrôles à venir — bloc calendrier (partagé avec Moi). */}
-            <UpcomingExamsCard
+            {/* 3. Ta semaine — barre d'activité fine + mini-planning du prochain
+                contrôle, avec « + » pour en annoncer un (remplace la grosse
+                carte, conservée sur Moi). */}
+            <WeekPlannerStrip
+              week={week}
               exams={upcomingExams}
               today={today}
               subjects={examSubjects}
@@ -387,7 +365,7 @@ export default async function ReviserPage() {
         }
       />
       {/* Sous le programme : la file du jour (SRS + Revanche) en détail, puis
-          les chapitres à consolider et l'objectif examen. */}
+          l'objectif examen replié (volet discret). */}
       <ReviewQueueCard
         total={queue.length}
         revanche={queue.filter((i) => i.in_revanche).length}
@@ -395,8 +373,7 @@ export default async function ReviserPage() {
           (a, b) => b[1] - a[1],
         )}
       />
-      <ConsolidateList entries={consolidate} />
-      <ExamProgress
+      <ExamObjectiveToggle
         title={EXAM_TITLES[grade] ?? 'Objectif examen'}
         entries={examEntries}
       />

@@ -12,41 +12,37 @@ export type ExamProgressEntry = {
   total: number
 }
 
+// % global vers l'épreuve, réutilisé par la version repliable du header.
+export function examGlobalPct(entries: ExamProgressEntry[]): number {
+  const totalChapters = entries.reduce((s, e) => s + e.total, 0)
+  return totalChapters > 0
+    ? Math.round(
+        (entries.reduce((s, e) => s + e.progress * e.total, 0) /
+          totalChapters) *
+          100,
+      )
+    : 0
+}
+
 // Objectif examen, compact : le % global vers l'épreuve + une mini-barre
 // par matière. Le détail chapitre par chapitre vit sur les pages matières.
+// `embedded` : rendu sans carte ni en-tête, pour vivre dans le volet repliable
+// « Objectif Bac » du haut de page (ExamObjectiveToggle).
 export default function ExamProgress({
   title,
   entries,
+  embedded = false,
 }: {
   title: string
   entries: ExamProgressEntry[]
+  embedded?: boolean
 }) {
   if (entries.length === 0) return null
 
-  const totalChapters = entries.reduce((s, e) => s + e.total, 0)
-  const globalPct =
-    totalChapters > 0
-      ? Math.round(
-          (entries.reduce((s, e) => s + e.progress * e.total, 0) /
-            totalChapters) *
-            100,
-        )
-      : 0
+  const globalPct = examGlobalPct(entries)
 
-  return (
-    <section
-      aria-label={title}
-      className="rounded-2xl border bg-card p-4 shadow-sm"
-    >
-      <div className="mb-2 flex items-baseline justify-between gap-2">
-        <h2 className="font-heading flex items-center gap-2 text-lg font-bold">
-          <Target className="size-4 text-primary" /> {title}
-        </h2>
-        <span className="font-mono text-xl font-bold tabular-nums">
-          {globalPct}%
-        </span>
-      </div>
-
+  const body = (
+    <>
       {/* Barre globale */}
       <div
         className="mb-4 h-3 w-full overflow-hidden rounded-full bg-muted"
@@ -105,6 +101,25 @@ export default function ExamProgress({
           <AlarmClock className="size-4" /> Passer un examen blanc
         </Link>
       </Button>
+    </>
+  )
+
+  if (embedded) return body
+
+  return (
+    <section
+      aria-label={title}
+      className="rounded-2xl border bg-card p-4 shadow-sm"
+    >
+      <div className="mb-2 flex items-baseline justify-between gap-2">
+        <h2 className="font-heading flex items-center gap-2 text-lg font-bold">
+          <Target className="size-4 text-primary" /> {title}
+        </h2>
+        <span className="font-mono text-xl font-bold tabular-nums">
+          {globalPct}%
+        </span>
+      </div>
+      {body}
     </section>
   )
 }

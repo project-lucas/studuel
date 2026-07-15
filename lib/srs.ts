@@ -34,6 +34,34 @@ export type ReviewAnswer = {
   good: boolean
 }
 
+const REVIEW_UUID_RE =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
+const REVIEW_KINDS: ReviewKind[] = ['question', 'card']
+
+// Assainit les réponses brutes d'un player avant tout traitement : formes
+// valides seulement (kind connu + UUID), dernière réponse conservée par item
+// (dédup), volume borné. Le SRS ET le calcul d'XP de session doivent partir de
+// CETTE liste — sinon des doublons ou entrées invalides gonfleraient le total
+// d'XP sans correspondre aux items réellement suivis.
+export function sanitizeReviewAnswers(answers: ReviewAnswer[]): ReviewAnswer[] {
+  const byKey = new Map<string, ReviewAnswer>()
+  for (const a of (Array.isArray(answers) ? answers : []).slice(0, 120)) {
+    if (
+      !a ||
+      !REVIEW_KINDS.includes(a.kind) ||
+      !REVIEW_UUID_RE.test(String(a.id))
+    )
+      continue
+    byKey.set(`${a.kind}:${a.id}`, {
+      kind: a.kind,
+      id: String(a.id),
+      subject: typeof a.subject === 'string' ? a.subject.slice(0, 80) : null,
+      good: a.good === true,
+    })
+  }
+  return [...byKey.values()].slice(0, 60)
+}
+
 export function addDays(dayKey: string, days: number): string {
   const d = new Date(`${dayKey}T12:00:00Z`)
   d.setUTCDate(d.getUTCDate() + days)

@@ -6,7 +6,9 @@ import {
   reviewAfterAnswer,
   reviewQueue,
   countsBySubject,
+  sanitizeReviewAnswers,
   type ReviewItem,
+  type ReviewAnswer,
 } from '@/lib/srs'
 
 const item = (over: Partial<ReviewItem>): ReviewItem => ({
@@ -121,5 +123,49 @@ describe('countsBySubject', () => {
     expect(counts.get('Maths')).toBe(2)
     expect(counts.get('Anglais')).toBe(1)
     expect(counts.get('Autre')).toBe(1)
+  })
+})
+
+describe('sanitizeReviewAnswers', () => {
+  const uuidA = '11111111-1111-4111-8111-111111111111'
+  const uuidB = '22222222-2222-4222-8222-222222222222'
+  const ans = (over: Partial<ReviewAnswer>): ReviewAnswer => ({
+    kind: 'question',
+    id: uuidA,
+    subject: 'Maths',
+    good: true,
+    ...over,
+  })
+
+  it('dédoublonne par item en gardant la DERNIÈRE réponse', () => {
+    const out = sanitizeReviewAnswers([
+      ans({ id: uuidA, good: false }),
+      ans({ id: uuidA, good: true }), // même item, doit écraser
+      ans({ id: uuidB, good: false }),
+    ])
+    expect(out).toHaveLength(2)
+    expect(out.find((a) => a.id === uuidA)?.good).toBe(true)
+  })
+
+  it('rejette les entrées à kind inconnu ou UUID invalide', () => {
+    const out = sanitizeReviewAnswers([
+      ans({ id: 'pas-un-uuid' }),
+      ans({ kind: 'bidon' as ReviewAnswer['kind'] }),
+      ans({ id: uuidB }),
+    ])
+    expect(out).toHaveLength(1)
+    expect(out[0].id).toBe(uuidB)
+  })
+
+  it('normalise good non-booléen à false et borne le sujet à 80 caractères', () => {
+    const out = sanitizeReviewAnswers([
+      ans({ good: 'oui' as unknown as boolean, subject: 'x'.repeat(200) }),
+    ])
+    expect(out[0].good).toBe(false)
+    expect(out[0].subject).toHaveLength(80)
+  })
+
+  it('tolère une entrée non-tableau', () => {
+    expect(sanitizeReviewAnswers(null as unknown as ReviewAnswer[])).toEqual([])
   })
 })

@@ -6,9 +6,9 @@ import { validateRevisionToday } from '@/lib/habits'
 import { toDayKey } from '@/lib/streak'
 import {
   reviewAfterAnswer,
+  sanitizeReviewAnswers,
   REVANCHE_CLEAR_COINS,
   type ReviewAnswer,
-  type ReviewKind,
 } from '@/lib/srs'
 
 // Marque une leçon comme terminée : le chapitre progresse (plancher 30 %)
@@ -74,7 +74,6 @@ export async function markLessonActivity(
 
 const UUID_RE =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
-const KINDS: ReviewKind[] = ['question', 'card']
 
 export async function recordReviewAnswers(
   answers: ReviewAnswer[],
@@ -87,18 +86,7 @@ export async function recordReviewAnswers(
 
   // Assainissement : formes valides seulement, dernière réponse par item,
   // volume borné (une session ne dépasse jamais quelques dizaines d'items).
-  const byKey = new Map<string, ReviewAnswer>()
-  for (const a of (Array.isArray(answers) ? answers : []).slice(0, 120)) {
-    if (!a || !KINDS.includes(a.kind) || !UUID_RE.test(String(a.id))) continue
-    byKey.set(`${a.kind}:${a.id}`, {
-      kind: a.kind,
-      id: String(a.id),
-      subject:
-        typeof a.subject === 'string' ? a.subject.slice(0, 80) : null,
-      good: a.good === true,
-    })
-  }
-  const clean = [...byKey.values()].slice(0, 60)
+  const clean = sanitizeReviewAnswers(answers)
   if (clean.length === 0) return { saved: true }
 
   // État actuel des items touchés (pour prolonger la série de succès).
@@ -154,13 +142,16 @@ export async function finishReviewSession(
   if (!saved) return { saved: false, revancheCleared: false, coins: 0 }
 
   // XP et série : une session de révision est une session de test sans quiz.
-  const list = (Array.isArray(answers) ? answers : []).slice(0, 60)
-  const score = list.filter((a) => a?.good === true).length
+  // On repart de la MÊME liste assainie que le SRS (dédup + entrées valides),
+  // sinon des doublons côté client gonfleraient le total sans correspondre aux
+  // items réellement suivis.
+  const clean = sanitizeReviewAnswers(answers)
+  const score = clean.filter((a) => a.good).length
   const { error } = await supabase.from('test_sessions').insert({
     user_id: user.id,
     quiz_id: null,
     score,
-    total: list.length,
+    total: clean.length,
   })
   if (!error) await validateRevisionToday(supabase, user.id)
 

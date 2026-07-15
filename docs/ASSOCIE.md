@@ -105,19 +105,24 @@ trouvé et corrigé**. Migrations **086/087/088/089** à exécuter. Tests **411*
 ⚠️ Bug **confirmé non corrigé** : le même double-tap existe dans les 5 modes Défi
 (temps réel → QA requise, laissé au cycle 2).
 
-**MAJ 2026-07-15 (contenu COLLÈGE complet, sur demande de Lucas)** : tout le
-**collège (6e → 3e)** a désormais, pour chaque chapitre, un **vrai cours** (fini le
-placeholder de 008), une **carte mentale** (mind_map) et un **quiz étendu à ~10
-questions**, du programme officiel Éduscol. **Migrations 090→121** (idempotentes,
-à exécuter) : 6e `090-094` (5 matières), 5e `095-103` (9 matières, PC sans « états
-de la matière » = 086), 4e `104-112`, 3e `113-121`. **La 3e ajoute des exercices
-type BREVET corrigés** dans la 2e leçon « Exercices types » (jusque-là placeholder).
-~142 chapitres, ~1100 questions de quiz. Méthode : gabarit unique (086/090), Maths
+**MAJ 2026-07-15 (contenu 6e→Tle COMPLET, sur demande de Lucas)** : **TOUT le
+parcours (6e → Terminale)** a désormais, pour chaque chapitre, un **vrai cours**
+(fini le placeholder de 008), une **carte mentale** (mind_map) et un **quiz étendu
+à ~10 questions**, du programme officiel Éduscol. **Migrations 090→149**
+(idempotentes, à exécuter) :
+- Collège : 6e `090-094`, 5e `095-103` (PC sans « états de la matière » = 086),
+  4e `104-112`, 3e `113-121`.
+- Lycée : 2de `122-128` (7 matières tronc commun), 1re `129-138` (10 matières,
+  spécialités incluses), Tle `139-149` (11 matières dont Philo, Maths expertes).
+- **Exercices type BREVET corrigés en 3e** et **type BAC corrigés en Tle** (+ bac
+  de français en 1re, migration 130), dans la 2e leçon « Exercices types ».
+**~267 chapitres, ~1700 questions**, + ~90 fiches d'exercices brevet/bac corrigés.
+Méthode : gabarit unique (086/090 ; 4e section brevet/bac calquée sur 113), Maths
 6e écrit+relu à la main, le reste par **fan-out de sous-agents** (1 par matière)
 puis **validation hors-ligne systématique** (UUID 12-hex uniques sans collision,
-JSON des cartes, correct_index bornés, rattachement des titres au seed 008) +
-`npm test`. **Prochain contenu évident : le LYCÉE** (2de→Tle : tronc commun +
-spécialités + options, cf. seed 008). Studygram reste le seul support à 0.
+JSON des cartes, correct_index bornés, rattachement titres+leçon au seed 008) +
+`npm test`. Techno/Espagnol/Latin s'arrêtent au collège (conforme au seed).
+**Studygram reste le seul support à 0.** Prochain : Studygram, ou brancher AmisHome.
 
 **Chantiers produit ouverts** (au-delà du contenu) : **Studygram** (décision de
 format en attente — voir `docs/CADRAGE-STUDYGRAM.md`), **backend social Amis**

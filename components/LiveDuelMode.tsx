@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Copy, Loader2, Swords, Trophy, Wifi, WifiOff } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { createClient } from '@/lib/supabase/client'
@@ -246,6 +246,15 @@ function LiveMatch({
   const [correct, setCorrect] = useState(0)
   const [startedAt] = useState(() => nowMs())
   const [answered, setAnswered] = useState(false)
+  // Verrou synchrone anti-double-tap : la garde `answered` (state) est en retard
+  // d'un rendu, donc deux taps rapprochés la franchissent tous deux. Sur la
+  // dernière question d'une manche, cela appellerait `onRoundDone` (→ sendRound)
+  // DEUX fois avec le même numéro de manche → risque de désync du duel. Purement
+  // défensif (aucun changement de sync). Relâché au changement d'`index`.
+  const advancingRef = useRef(false)
+  useEffect(() => {
+    advancingRef.current = false
+  }, [index])
 
   if (questions.length === 0) return <Centered>Chargement des questions…</Centered>
 
@@ -262,7 +271,8 @@ function LiveMatch({
   if (!q) return <Centered>Manche terminée…</Centered>
 
   const answer = (choice: number) => {
-    if (answered) return
+    if (answered || advancingRef.current) return
+    advancingRef.current = true
     setAnswered(true)
     const isCorrect = choice === q.correctIndex
     const nextCorrect = correct + (isCorrect ? 1 : 0)

@@ -207,6 +207,7 @@ export default function SubjectsHome({
   grade,
   progressBySlug,
   examBySubject = {},
+  topSlot,
 }: {
   firstName: string | null
   streak: number
@@ -215,6 +216,9 @@ export default function SubjectsHome({
   grade: string
   progressBySlug: Record<string, number>
   examBySubject?: Record<string, SubjectExamHint>
+  // Blocs insérés entre le hero et la grille des matières (reprise, outils,
+  // contrôles…) — rendus côté serveur et passés en enfant.
+  topSlot?: React.ReactNode
 }) {
   const [editing, setEditing] = useState(false)
   const [picked, setPicked] = useState<Set<string>>(
@@ -319,9 +323,10 @@ export default function SubjectsHome({
         </div>
       </div>
 
-      {/* Les cartes matières chevauchent le bandeau — grille 2 colonnes,
-          resserrée pour limiter le scroll. */}
+      {/* Ce qui chevauche le bandeau : d'abord les blocs d'action (reprise,
+          outils, contrôles), puis la grille des matières resserrée. */}
       <div className="relative -mt-8 flex flex-col gap-4 sm:px-1">
+        {topSlot ? <div className="flex flex-col gap-4">{topSlot}</div> : null}
         {groups.length === 0 ? (
           <div className="rev-card rounded-[1.75rem] bg-white p-5 text-sm text-muted-foreground">
             Aucune matière sélectionnée — touche «&nbsp;Modifier&nbsp;» pour en

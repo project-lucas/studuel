@@ -10,7 +10,10 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import SubjectsHome from '@/components/SubjectsHome'
-import ContinueCard, { type ContinueTarget } from '@/components/ContinueCard'
+import { type ContinueTarget } from '@/components/ContinueCard'
+import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
+import ReviserTools from '@/components/ReviserTools'
+import UpcomingExamsCard from '@/components/UpcomingExamsCard'
 import ConsolidateList, {
   type ConsolidateEntry,
 } from '@/components/ConsolidateList'
@@ -306,6 +309,44 @@ export default async function ReviserPage() {
   )
   const examBySubject = examHintsBySubject(upcomingExams, today)
 
+  // « On s'y remet ? » : chapitres en cours (puis fragiles) ; à défaut, les
+  // premiers chapitres à commencer.
+  let resumeItems: ResumeItem[] = [...enCours, ...fragiles]
+    .slice(0, 5)
+    .map((a) => ({
+      subject: a.subject,
+      chapterId: a.chapterId,
+      chapterTitle: a.chapterTitle,
+      progress: a.value,
+      isNew: false,
+    }))
+  if (resumeItems.length === 0) {
+    resumeItems = aCommencer.slice(0, 3).map((a) => ({
+      subject: a.subject,
+      chapterId: a.chapterId,
+      chapterTitle: a.chapterTitle,
+      progress: 0,
+      isNew: true,
+    }))
+  }
+
+  // Données de la carte « Mes contrôles à venir » : matières + chapitres du
+  // niveau (identique à l'onglet Moi, la carte est partagée).
+  const subjectByIdAll = new Map(allSubjects.map((s) => [s.id, s]))
+  const chaptersBySubject: Record<string, { id: string; title: string }[]> = {}
+  const examSubjects: { slug: string; name: string; icon: string }[] = []
+  const seenExamSubjects = new Set<string>()
+  for (const ch of levelChapters ?? []) {
+    const subj = subjectByIdAll.get(ch.subject_id)
+    if (!subj) continue
+    ;(chaptersBySubject[subj.slug] ??= []).push({ id: ch.id, title: ch.title })
+    if (!seenExamSubjects.has(subj.slug)) {
+      seenExamSubjects.add(subj.slug)
+      examSubjects.push({ slug: subj.slug, name: subj.name, icon: subj.icon })
+    }
+  }
+  examSubjects.sort((a, b) => a.name.localeCompare(b.name, 'fr'))
+
   return (
     <div className="flex flex-col gap-4">
       {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
@@ -316,8 +357,9 @@ export default async function ReviserPage() {
           pct: progressBySlug[s.slug] ?? 0,
         }))}
       />
-      {/* En haut, façon carnet de programme : bandeau de salutation (prénom,
-          classe, série) et la liste des matières qui le chevauche. */}
+      {/* Accueil façon carnet : bandeau de salutation (prénom, classe, série),
+          puis les blocs d'action qui chevauchent le bandeau (reprise, outils,
+          contrôles), et enfin la grille des matières. */}
       <SubjectsHome
         firstName={firstName}
         streak={streak}
@@ -326,11 +368,26 @@ export default async function ReviserPage() {
         grade={grade}
         progressBySlug={progressBySlug}
         examBySubject={examBySubject}
+        topSlot={
+          <>
+            {/* 1. On s'y remet — reprendre la dernière session en un tap. */}
+            <ResumeSessions items={resumeItems} />
+            {/* 2. Tes outils — revoir ses erreurs, ouvrir sa bibliothèque. */}
+            <ReviserTools reviewCount={queue.length} />
+            {/* 3. Mes contrôles à venir — bloc calendrier (partagé avec Moi). */}
+            <UpcomingExamsCard
+              exams={upcomingExams}
+              today={today}
+              subjects={examSubjects}
+              chaptersBySubject={chaptersBySubject}
+            />
+            {/* Rappel contextuel : pendant le trajet, un temps mort = de l'XP. */}
+            <CommuteBanner slots={commuteSlots} />
+          </>
+        }
       />
-      {/* Rappel contextuel : pendant le trajet, un temps mort devient de l'XP. */}
-      <CommuteBanner slots={commuteSlots} />
-      {/* La file du jour : révision espacée + Revanche — LE geste qui fait
-          mémoriser, juste sous le programme. */}
+      {/* Sous le programme : la file du jour (SRS + Revanche) en détail, puis
+          les chapitres à consolider et l'objectif examen. */}
       <ReviewQueueCard
         total={queue.length}
         revanche={queue.filter((i) => i.in_revanche).length}
@@ -338,8 +395,6 @@ export default async function ReviserPage() {
           (a, b) => b[1] - a[1],
         )}
       />
-      {/* En dessous : les actions du jour (reprendre, consolider, examen). */}
-      {continueTarget ? <ContinueCard target={continueTarget} /> : null}
       <ConsolidateList entries={consolidate} />
       <ExamProgress
         title={EXAM_TITLES[grade] ?? 'Objectif examen'}

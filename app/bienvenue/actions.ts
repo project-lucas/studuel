@@ -202,6 +202,15 @@ export async function applyOnboarding(
     : []
   const placementLevel = answers.placement?.level ?? null
 
+  // Garde anti-perte de données : les boutons OAuth de /bienvenue servent aussi
+  // de CONNEXION à un compte existant. Au retour ?finish=1, on applique le
+  // brouillon localStorage — vide sur un navigateur neuf. Un brouillon sans
+  // classe ET non-parent = personne n'a rempli l'onboarding ici : on ne réécrit
+  // rien, sinon une reconnexion Google effacerait le niveau/les matières d'un
+  // compte déjà onboardé. (Élève → classe requise ; parent → profileType suffit.)
+  const isParentOnboarding = answers.profileType === 'parent'
+  if (!grade && !isParentOnboarding) return { ok: false }
+
   const { error } = await supabase
     .from('profiles')
     .update({

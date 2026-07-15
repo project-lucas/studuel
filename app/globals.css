@@ -770,10 +770,27 @@ a:hover > .wiggle-on-hover {
    couleur marine/orange. Violet vif du bandeau, crème chaud du fond, jaune
    solaire des barres de progression. */
 .rev-hero {
-  background: linear-gradient(175deg, oklch(0.54 0.26 315), oklch(0.47 0.26 310));
+  /* Violet de marque monté en profondeur : un foyer clair en haut à droite qui
+     accroche la lumière, un creux plus sombre en bas à gauche pour détacher les
+     cartes blanches qui viennent chevaucher le bandeau. */
+  background:
+    radial-gradient(
+      115% 80% at 88% -12%,
+      oklch(0.63 0.25 322 / 0.75),
+      transparent 58%
+    ),
+    radial-gradient(
+      95% 75% at -5% 112%,
+      oklch(0.4 0.24 305 / 0.55),
+      transparent 55%
+    ),
+    linear-gradient(175deg, oklch(0.55 0.26 315), oklch(0.46 0.26 310));
 }
 .rev-blob {
-  background: oklch(0.62 0.24 315 / 0.35);
+  /* Floutées, les capsules décoratives deviennent des halos de lumière plutôt
+     que des formes à bords nets — le hero respire. */
+  background: oklch(0.68 0.23 322 / 0.45);
+  filter: blur(20px);
 }
 .rev-bg {
   background: oklch(0.945 0.018 55);
@@ -785,12 +802,17 @@ a:hover > .wiggle-on-hover {
   background: oklch(0.93 0.022 50);
 }
 .rev-fill {
-  background: oklch(0.85 0.17 88);
+  /* Ambre « allumé » : léger dégradé vertical, sheen en haut et halo chaud —
+     la progression a l'air d'émettre de la lumière au lieu d'un aplat. */
+  background: linear-gradient(180deg, oklch(0.9 0.16 92), oklch(0.82 0.18 84));
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 0.55),
+    0 1px 3px oklch(0.75 0.17 80 / 0.5);
 }
 .rev-card {
   box-shadow:
-    0 2px 4px oklch(0.4 0.15 310 / 0.05),
-    0 12px 24px -14px oklch(0.4 0.18 310 / 0.35);
+    0 1px 2px oklch(0.4 0.15 310 / 0.06),
+    0 14px 28px -18px oklch(0.42 0.18 310 / 0.42);
 }
 
 /* --- Onglet Moi : cartes « jouet » sur fond crème (maquette de Lucas, ---------
@@ -966,6 +988,255 @@ a:hover > .wiggle-on-hover {
 .onb-fill {
   background: var(--onb-pp);
   box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.32);
+}
+
+/* =============================================================================
+   Onglet Défi v2 — « la route des trophées » (refonte /defi, 2026-07)
+   Direction : crème + violet façon Duolingo/Brawl Stars, cartes « jouet » à
+   liseré marine et ombre dure décalée (offset 4px, 0 flou). Tokens sémantiques
+   uniquement — navy = --foreground, jaune = --highlight, violet = --primary,
+   corail = --destructive — plus quelques teintes locales (vert promo, teal) à
+   cette portée `.defi2-*`, comme les autres mondes de l'app.
+   ========================================================================== */
+
+/* La carte « verre d'arène » : panneau violet sombre translucide, bord lumineux
+   fin, reflet en haut et halo porté profond. Texte clair par défaut. */
+.defi2-card {
+  position: relative;
+  border-radius: 22px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.02) 42%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    color-mix(in oklch, var(--primary) 40%, oklch(0.16 0.035 300));
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow:
+    0 18px 40px -18px rgba(0, 0, 0, 0.82),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  color: oklch(0.96 0.015 300);
+}
+/* Variante pressable (boutons/tuiles) : s'enfonce et s'éclaire au tap. */
+.defi2-press {
+  transition:
+    transform 0.12s var(--ease),
+    box-shadow 0.12s var(--ease),
+    filter 0.12s var(--ease);
+}
+.defi2-press:active {
+  transform: translateY(2px) scale(0.99);
+  filter: brightness(1.08);
+}
+
+/* Bandeau Saison : dégradé violet de marque, foyer clair en haut à droite. */
+.defi2-banner {
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 16px 34px -16px rgba(0, 0, 0, 0.72),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  background:
+    radial-gradient(
+      120% 130% at 92% -25%,
+      color-mix(in oklch, var(--primary), white 24%),
+      transparent 60%
+    ),
+    linear-gradient(
+      158deg,
+      color-mix(in oklch, var(--primary), white 6%),
+      color-mix(in oklch, var(--primary), black 36%)
+    );
+}
+
+/* Carte Arène : verre sombre + halo lumineux au sommet (comme un projecteur
+   d'arène) et fines rayures diagonales à peine perceptibles. */
+.defi2-arena {
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 20px 44px -18px rgba(0, 0, 0, 0.82),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  color: oklch(0.96 0.015 300);
+  background:
+    radial-gradient(
+      120% 82% at 50% -12%,
+      color-mix(in oklch, var(--primary), white 12%),
+      transparent 58%
+    ),
+    repeating-linear-gradient(
+      -52deg,
+      rgba(255, 255, 255, 0.035) 0 14px,
+      transparent 14px 28px
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.02)
+    ),
+    color-mix(in oklch, var(--primary) 46%, oklch(0.15 0.03 300));
+}
+
+/* =============================================================================
+   Vitrine du perso (haut de /defi) — fond « soleil » doré façon Brawl Stars.
+   Base radiale dorée + rayons en éventail (conique alterné) qui tournent très
+   lentement, personnage en idle (respiration + balancement) et ombre au sol.
+   Teinte dorée = token --highlight (jaune solaire = récompense/vitrine).
+   ========================================================================== */
+.defi2-hero {
+  /* Dôme doré : foyer clair au centre-haut (là où se tient le perso), qui
+     descend vers un or plus chaud sur les bords. Le halo doré porté détache
+     la vitrine du fond violet profond de l'arène. */
+  border-radius: 22px;
+  border: 1px solid color-mix(in oklch, var(--highlight), black 22%);
+  box-shadow:
+    0 22px 48px -20px color-mix(in oklch, var(--highlight), black 4%),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  background:
+    radial-gradient(
+      120% 95% at 50% 38%,
+      color-mix(in oklch, var(--highlight), white 20%),
+      color-mix(in oklch, var(--highlight), white 4%) 46%,
+      color-mix(in oklch, var(--highlight), black 12%) 100%
+    );
+}
+
+/* Les rayons : secteurs alternés clair/transparent, centrés sur le perso.
+   Masque radial pour qu'ils s'estompent avant le bord de la carte. */
+.defi2-hero-rays {
+  position: absolute;
+  inset: -45%;
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    color-mix(in oklch, var(--highlight), white 34%) 0deg 8deg,
+    transparent 8deg 16deg
+  );
+  opacity: 0.7;
+  animation: hero-rays-spin 100s linear infinite;
+  -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
+}
+@keyframes hero-rays-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Halo blanc doux derrière le perso, pour le détacher des rayons. */
+.defi2-hero-glow {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: 74%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklch, var(--highlight), white 60%),
+    transparent 72%
+  );
+}
+
+/* Idle du perso : respire et se balance doucement, ancré sur ses pieds. */
+.defi2-hero-char {
+  transform-origin: 50% 92%;
+  animation: hero-idle 3.8s ease-in-out infinite;
+  filter: drop-shadow(0 14px 12px rgba(60, 30, 0, 0.28));
+}
+@keyframes hero-idle {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.4deg) scale(1);
+  }
+  50% {
+    transform: translateY(-9px) rotate(1.4deg) scale(1.02);
+  }
+}
+
+/* Ombre au sol : ellipse qui rétrécit quand le perso s'élève (contre-idle). */
+.defi2-hero-floor {
+  margin-top: -8px;
+  width: 7rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklch, var(--foreground), transparent 55%),
+    transparent 78%
+  );
+  animation: hero-floor 3.8s ease-in-out infinite;
+}
+@keyframes hero-floor {
+  0%,
+  100% {
+    transform: scaleX(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scaleX(0.82);
+    opacity: 0.35;
+  }
+}
+
+/* Zones de la ligue (bandes de fond derrière les rangs) — teintes vives, car
+   posées sur le verre sombre de l'arène. */
+.defi2-zone-promo {
+  background: color-mix(in oklch, oklch(0.72 0.17 150), transparent 80%);
+}
+.defi2-zone-releg {
+  background: color-mix(in oklch, var(--destructive), transparent 78%);
+}
+.defi2-promo-ink {
+  color: oklch(0.84 0.16 152);
+}
+
+/* Accents des modes libres (petites tuiles d'échauffement). */
+.defi2-accent-jaune {
+  --accent-a: oklch(0.82 0.15 85);
+  --accent-b: oklch(0.68 0.15 62);
+}
+.defi2-accent-teal {
+  --accent-a: oklch(0.66 0.11 195);
+  --accent-b: oklch(0.48 0.1 200);
+}
+.defi2-accent-violet {
+  --accent-a: oklch(0.5 0.2 300);
+  --accent-b: oklch(0.36 0.16 302);
+}
+.defi2-mode-tile {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 14px 28px -14px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  background: linear-gradient(155deg, var(--accent-a), var(--accent-b));
+}
+
+/* Coffre prêt : socle doré + lueur pulsée (repli CSS si Framer réduit). */
+.defi2-chest-ready {
+  border: 1px solid color-mix(in oklch, var(--highlight), black 18%);
+  color: oklch(0.24 0.06 70);
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--highlight), white 6%),
+    color-mix(in oklch, var(--highlight), black 6%)
+  );
+}
+
+/* Coffre verrouillé / vide : verre sombre discret. */
+.defi2-chest-slot {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
+    color-mix(in oklch, var(--primary) 34%, oklch(0.15 0.03 300));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.defi2-chest-empty {
+  border-radius: 18px;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 /* Accessibilité : on coupe les animations si l'utilisateur les refuse */

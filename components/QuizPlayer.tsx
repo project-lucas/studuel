@@ -8,6 +8,7 @@ import type { ReviewAnswer } from '@/lib/srs'
 import { sfx } from '@/lib/sounds'
 import { SoundToggle } from '@/components/FlashcardPlayer'
 import BackButton from '@/components/BackButton'
+import QuitGuardButton from '@/components/QuitGuardButton'
 import ProgressRing from '@/components/ProgressRing'
 import { CircleCheck, CircleX, RotateCcw, ArrowLeft, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -284,13 +285,13 @@ export default function QuizPlayer({
     <div className="-mx-4 -mt-16 flex min-h-svh flex-col bg-primary px-4 pt-16 pb-24 text-primary-foreground md:-mx-8 md:-mt-10 md:px-8 md:pt-12">
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
         <div className="flex items-center justify-between">
-          <BackButton
+          <QuitGuardButton
             fallback={backHref}
             label="Quitter le quiz"
             className="bg-white/15 text-primary-foreground shadow-none"
           >
             <X className="size-5" aria-hidden="true" />
-          </BackButton>
+          </QuitGuardButton>
           <span className="sr-only">{title}</span>
           <SoundToggle />
         </div>

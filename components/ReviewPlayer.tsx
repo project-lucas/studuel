@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { ArrowRight, Check, Flame, Swords, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -52,10 +52,20 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
   // Garde anti-double-soumission : un double-tap sur la dernière carte pourrait
   // sinon enregistrer la session deux fois (ligne dupliquée en base).
   const finishedRef = useRef(false)
+  // Verrou d'avancement : sans lui, deux taps rapprochés sur « Suivant » /
+  // « Je savais » (avant que React re-rende) franchissent tous deux la garde et
+  // font `setIndex(i => i+1)` deux fois → un item sauté, jamais présenté ni
+  // enregistré. Comme l'avancement est synchrone, on ne relâche le verrou qu'au
+  // changement d'`index` (après re-rendu), pas dans le même tick.
+  const advancingRef = useRef(false)
 
   const item = items[index]
   const answered = selected !== null
   const revancheCount = items.filter((i) => i.inRevanche).length
+
+  useEffect(() => {
+    advancingRef.current = false
+  }, [index])
 
   const finish = (finalAnswers: ReviewAnswer[]) => {
     if (finishedRef.current) return
@@ -68,7 +78,8 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
   }
 
   const next = (good: boolean) => {
-    if (!item) return
+    if (!item || advancingRef.current) return
+    advancingRef.current = true
     const newAnswers: ReviewAnswer[] = [
       ...answers,
       { kind: item.kind, id: item.id, subject: item.subject, good },

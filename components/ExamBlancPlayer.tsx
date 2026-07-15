@@ -64,11 +64,27 @@ export default function ExamBlancPlayer({
   const goodByIdRef = useRef(new Map<string, boolean>())
   const secondsRef = useRef(duration)
   const finishedRef = useRef(false)
+  // Verrou synchrone anti double-tap : `selected` (state) ne se met à jour qu'au
+  // prochain rendu, donc deux taps rapprochés le franchissaient tous deux et
+  // armaient deux avancements → l'index sautait de 2 (une question jamais
+  // affichée). L'id du timeout d'avancement est gardé pour pouvoir l'annuler
+  // (fin de copie / relance) et éviter qu'il déborde sur la tentative suivante.
+  const lockedRef = useRef(false)
+  const advanceTimerRef = useRef<number | null>(null)
+
+  const clearAdvance = () => {
+    if (advanceTimerRef.current !== null) {
+      window.clearTimeout(advanceTimerRef.current)
+      advanceTimerRef.current = null
+    }
+  }
 
   const question = questions[index]
 
   const start = () => {
     sfx.flip()
+    clearAdvance()
+    lockedRef.current = false
     goodByIdRef.current = new Map()
     finishedRef.current = false
     secondsRef.current = duration
@@ -82,6 +98,7 @@ export default function ExamBlancPlayer({
   const finish = () => {
     if (finishedRef.current) return
     finishedRef.current = true
+    clearAdvance()
     sfx.complete()
     const goodById = goodByIdRef.current
     const finalScore = questions.filter((q) => goodById.get(q.id) === true).length
@@ -116,17 +133,30 @@ export default function ExamBlancPlayer({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 
+  // Annule un avancement encore en attente au démontage.
+  useEffect(
+    () => () => {
+      if (advanceTimerRef.current !== null) {
+        window.clearTimeout(advanceTimerRef.current)
+      }
+    },
+    [],
+  )
+
   const answer = (i: number) => {
-    if (!question || selected !== null) return
+    if (!question || lockedRef.current) return
+    lockedRef.current = true
     setSelected(i)
     sfx.tap() // pas de son juste/faux : la correction attend la fin, comme le jour J
     goodByIdRef.current.set(question.id, i === question.correctIndex)
-    window.setTimeout(() => {
+    advanceTimerRef.current = window.setTimeout(() => {
+      advanceTimerRef.current = null
       if (index + 1 >= questions.length) {
         finish()
       } else {
         setIndex((n) => n + 1)
         setSelected(null)
+        lockedRef.current = false
       }
     }, 350)
   }

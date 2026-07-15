@@ -200,7 +200,14 @@ export default function SubjectsHome({
   const [pending, startTransition] = useTransition()
 
   const isCollege = COLLEGE_LEVELS.includes(grade)
-  const visible = editing ? subjects : subjects.filter((s) => picked.has(s.slug))
+  // Les dossiers « Culture générale » (catégorie culture, hors-programme et
+  // hors-niveau) sont TOUJOURS visibles, dans leur propre section en bas, et ne
+  // font pas partie de la sélection de matières (ni du mode édition).
+  const cultureSubjects = subjects.filter((s) => s.category === 'culture')
+  const selectable = subjects.filter((s) => s.category !== 'culture')
+  const visible = editing
+    ? selectable
+    : selectable.filter((s) => picked.has(s.slug))
 
   const toggle = (slug: string) =>
     setPicked((prev) => {
@@ -323,6 +330,27 @@ export default function SubjectsHome({
             </section>
           ))
         )}
+
+        {/* Dossiers hors-programme (Culture générale) : toujours là, en bonus,
+            pas concernés par « Modifier mes matières ». */}
+        {!editing && cultureSubjects.length > 0 ? (
+          <section className="flex flex-col gap-5">
+            <h2 className="font-heading -mb-1 px-2 text-sm font-semibold text-muted-foreground">
+              Culture générale · hors-programme
+            </h2>
+            {cultureSubjects.map((s) => (
+              <SubjectRow
+                key={s.id}
+                subject={s}
+                pct={progressBySlug[s.slug] ?? 0}
+                editing={false}
+                checked
+                onToggle={() => {}}
+                delayMs={cardIndex++ * 45}
+              />
+            ))}
+          </section>
+        ) : null}
       </div>
     </section>
   )

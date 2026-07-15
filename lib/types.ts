@@ -14,7 +14,12 @@ export const GRADE_LEVELS = ['6e', '5e', '4e', '3e', '2de', '1re', 'Tle'] as con
 export type GradeLevel = (typeof GRADE_LEVELS)[number]
 
 // Réviser : matières → chapitres → leçons (migration 008).
-export type SubjectCategory = 'college' | 'tronc_commun' | 'specialite' | 'option'
+export type SubjectCategory =
+  | 'college'
+  | 'tronc_commun'
+  | 'specialite'
+  | 'option'
+  | 'culture'
 
 export type Subject = {
   id: string
@@ -24,6 +29,10 @@ export type Subject = {
   color: string
   category: SubjectCategory
   levels: string[]
+  // Matière HORS-NIVEAU (ex. Culture générale) : quand défini, ses chapitres
+  // (« thèmes ») sont lus à CE niveau fixe (« tous ») au lieu de la classe de
+  // l'élève. Optionnel tant que la migration 150 n'est pas exécutée.
+  fixed_level?: string | null
 }
 
 // Carte mentale d'un chapitre (chapters.mind_map, migration 029).

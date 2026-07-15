@@ -57,15 +57,21 @@ export default async function SubjectPage({
   const grade = profile?.grade_level
   if (!grade) redirect('/onboarding')
 
-  // Programme de la matière pour SA classe (chapitres → leçons → quiz),
-  // servi par le cache serveur, avec le même repli authentifié.
-  let catalog = await getProgrammeCached(subject.id, grade)
+  // Niveau de lecture des chapitres : la classe de l'élève, SAUF pour une
+  // matière hors-niveau (ex. Culture générale) dont les thèmes vivent à un
+  // niveau fixe (subject.fixed_level = « tous »), identique pour toutes les
+  // classes.
+  const level = subject.fixed_level ?? grade
+
+  // Programme de la matière (chapitres → leçons → quiz), servi par le cache
+  // serveur, avec le même repli authentifié.
+  let catalog = await getProgrammeCached(subject.id, level)
   if (catalog.length === 0) {
     const { data } = await supabase
       .from('chapters')
       .select('*, lessons(*, quizzes(id))')
       .eq('subject_id', subject.id)
-      .eq('level', grade)
+      .eq('level', level)
       .order('position', { ascending: true })
       .order('position', { ascending: true, referencedTable: 'lessons' })
       .returns<CatalogChapter[]>()

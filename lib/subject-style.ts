@@ -11,6 +11,7 @@ import {
   Landmark,
   Languages,
   Leaf,
+  Lightbulb,
   LineChart,
   Microscope,
   ScrollText,
@@ -35,6 +36,7 @@ const SUBJECT_ICONS: Record<string, LucideIcon> = {
   nsi: Code2,
   ses: LineChart,
   philosophie: Brain,
+  'culture-generale': Lightbulb,
 }
 
 export function subjectIcon(slug: string): LucideIcon {

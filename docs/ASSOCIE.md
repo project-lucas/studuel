@@ -124,6 +124,20 @@ JSON des cartes, correct_index bornés, rattachement titres+leçon au seed 008) 
 `npm test`. Techno/Espagnol/Latin s'arrêtent au collège (conforme au seed).
 **Studygram reste le seul support à 0.** Prochain : Studygram, ou brancher AmisHome.
 
+**MAJ 2026-07-15 (jour cycle 2)** : session **durcissement piloté par revues**,
+**8 correctifs**, verts (411→**421 tests**), **zéro migration**. **Double-tap réglé
+dans TOUS les modes Défi** (`6efe2b8` 5 solo + `2d6ae45` Duel fantôme + Duel en
+ligne défensif ; Coop déjà sûr) — la cible n°1 du cycle 1. **7 revues de correctness
+→ 6 bugs réels** (chacun vérifié avant fix) : mastery quiz 0/10 → fragile
+(`1063316`), XP « À revoir » alignée sur les items suivis (`86175d2`), récompense
+débrief non créditée quand la sélection change (`8d179bc`), accroche parent
+contradictoire (`f4b2ddd`), « Test sur trajets » créditée au fil de l'eau
+(`71ac10d`), et **onboarding HIGH** : reconnexion OAuth d'un compte existant avec
+brouillon vide **effaçait niveau/matières** (`b1451f4`). Sweeps propres : logique
+pure Défi (bosses/coop/duel-live/trophies) + économie serveur. **Non corrigé (par
+design)** : abus d'économie auto-infligé (`recordChallenge`/`recordRankedMatch`),
+cas limite réseau du chrono, mineurs onboarding.
+
 **Chantiers produit ouverts** (au-delà du contenu) : **Studygram** (décision de
 format en attente — voir `docs/CADRAGE-STUDYGRAM.md`), **backend social Amis**
 (encore en mock), **Défi Phase 3 « texte à trous »** + **persistance du défi**
@@ -270,6 +284,36 @@ breaking changes vs. l'entraînement.
 
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible évidente,
      pièges rencontrés. Lucas peut aussi y déposer une consigne du jour. -->
+
+**2026-07-15 (jour cycle 2) — Double-tap Défi complet + 6 bugs par revues (8 commits) :**
+- **Fait & sur `main`** : voir `A-LIRE-JOUR.md`. Double-tap réglé dans TOUS les
+  modes Défi (`6efe2b8` 5 solo, `2d6ae45` Duel fantôme + Duel en ligne défensif ;
+  Coop déjà sûr) ; puis 6 bugs par revues : mastery 0/10→fragile (`1063316`), XP « À
+  revoir » (`86175d2`), récompense débrief (`8d179bc`), accroche parent (`f4b2ddd`),
+  « Test sur trajets » au fil de l'eau (`71ac10d`), **onboarding perte de données
+  HIGH** (`b1451f4`). **Zéro migration** (que du code). Tests 411→**421**.
+- **Prochaine cible évidente** : **brancher `AmisHome`** sur les RPC amis réelles
+  (socle DB fait + audité sain : `add_friend_by_code`/`accept_friend`/`create_duel`/
+  `friends_overview`) — aujourd'hui mock client. Gros mais bien scopé. ⚠️ pas d'auth
+  côté agent pour QA. Puis gated : Studygram (format B), texte à trous, persistance défi.
+- **Pièges rencontrés** : (a) **un agent contenu tournait EN PARALLÈLE sur `main`**
+  et a intercalé ses commits (lycée 139-149) entre les miens → HEAD bougeait sous
+  mes pieds ; mes commits stackent proprement (historique linéaire), mais **relire
+  `docs/ASSOCIE.md` juste avant de l'éditer** (son §2 est géré par l'autre agent) et
+  **`git add` ciblé** sont indispensables. (b) Le double-tap **DuelMode** est en fait
+  sûr à patcher : le « rival » est un **fantôme enregistré/simulé** (pas de sync
+  live) — seul **LiveDuel** est vraiment temps réel, et là le fix est **défensif**
+  (empêche un double `sendRound`, ne touche pas la sync). (c) `parseAnswers(null)`
+  rend `profileType: null` : pour distinguer « brouillon vide » d'un onboarding réel,
+  gater sur `grade` présent **OU** `profileType === 'parent'` (un parent n'a pas de
+  classe). (d) La règle « logique pure dans `lib/` » paie : extraire
+  `sanitizeReviewAnswers` a réglé l'asymétrie XP↔SRS **et** ajouté 4 tests.
+- **Migrations** : **aucune créée ce cycle**. En attente (à exécuter) : **090→149**
+  (contenu collège+lycée, poussé par l'agent contenu), **086/087/088/089**, et
+  **048/079→085**.
+- **Non corrigé volontairement** (par design/faible valeur, détail `A-LIRE-JOUR.md`)
+  : abus d'économie auto-infligé (`recordChallenge`/`recordRankedMatch`), cas limite
+  réseau du chrono temps de travail, sticker démo Trésor, mineurs onboarding.
 
 **2026-07-15 (jour cycle 1) — Feature « contrôles à venir » + durcissement (9 commits) :**
 - **Fait & sur `main`** : voir `A-LIRE-JOUR.md` (`fb5270b→85c9478`). Feature

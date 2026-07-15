@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import dynamic from 'next/dynamic'
 import { Pencil } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
@@ -45,9 +46,16 @@ export default function AvatarBadge({
         </span>
       </button>
 
-      {editing ? (
-        <AvatarEditor initial={config} onClose={() => setEditing(false)} />
-      ) : null}
+      {/* Portail vers <body> : la modale est en position:fixed, mais le bandeau
+          Moi la place dans un conteneur `-translate-x-1/2` (transform), ce qui
+          re-ancre le `fixed` sur ce petit conteneur. Le portail lui rend son
+          plein écran. */}
+      {editing
+        ? createPortal(
+            <AvatarEditor initial={config} onClose={() => setEditing(false)} />,
+            document.body,
+          )
+        : null}
     </>
   )
 }

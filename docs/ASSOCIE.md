@@ -105,6 +105,16 @@ trouvé et corrigé**. Migrations **086/087/088/089** à exécuter. Tests **411*
 ⚠️ Bug **confirmé non corrigé** : le même double-tap existe dans les 5 modes Défi
 (temps réel → QA requise, laissé au cycle 2).
 
+**MAJ 2026-07-15 (contenu 6e, sur demande de Lucas)** : les **5 matières de 6e**
+(Maths, Français, Histoire-Géo, Anglais, SVT — **25 chapitres**) ont désormais un
+**vrai cours** (fini le placeholder de 008), une **carte mentale** (mind_map) et un
+**quiz étendu à ~10 questions**, du programme officiel cycle 3. Migrations
+**090→094** (idempotentes, à exécuter). Méthode : gabarit unique (086/090), Maths
+écrit + relu à la main, les 4 autres par fan-out de sous-agents puis **validation
+hors-ligne** (UUID/JSON/dollar-quoting/rattachement seed). **Prochain contenu
+évident : la 5e** (même méthode : Maths/Français/HG/Anglais/SVT **+ Physique-Chimie
++ Techno + Espagnol + Latin** démarrent en 5e).
+
 **Chantiers produit ouverts** (au-delà du contenu) : **Studygram** (décision de
 format en attente — voir `docs/CADRAGE-STUDYGRAM.md`), **backend social Amis**
 (encore en mock), **Défi Phase 3 « texte à trous »** + **persistance du défi**

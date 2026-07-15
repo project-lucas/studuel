@@ -56,6 +56,11 @@ export default function QuizPlayer({
   // peut franchir le garde `selected` (state périmé) et lancer deux timers →
   // sans ce verrou, la session serait enregistrée deux fois.
   const finishedRef = useRef(false)
+  // Verrou synchrone anti double-tap MI-quiz : `selected` (state) ne se met à
+  // jour qu'au prochain rendu ; sans ce ref, deux taps rapprochés poussaient une
+  // réponse en double dans reviewsRef ET faisaient `setIndex(i => i+1)` deux fois
+  // → une question sautée. Relâché quand on passe réellement à la suivante.
+  const lockedRef = useRef(false)
   useEffect(() => () => {
     if (timerRef.current) clearTimeout(timerRef.current)
   }, [])
@@ -78,7 +83,8 @@ export default function QuizPlayer({
   }
 
   const choose = (optionIndex: number) => {
-    if (selected !== null) return
+    if (selected !== null || lockedRef.current) return
+    lockedRef.current = true
     setSelected(optionIndex)
     sfx.tap() // son neutre : la correction ne se devine pas à l'oreille
     reviewsRef.current.push({
@@ -93,7 +99,10 @@ export default function QuizPlayer({
       setChoices(next)
       setSelected(null)
       if (next.length >= questions.length) finish(next)
-      else setIndex((i) => i + 1)
+      else {
+        setIndex((i) => i + 1)
+        lockedRef.current = false
+      }
     }, 350)
   }
 
@@ -105,6 +114,7 @@ export default function QuizPlayer({
     setSaved(null)
     reviewsRef.current = []
     finishedRef.current = false
+    lockedRef.current = false
   }
 
   // ---------------------------------------------------------------------------

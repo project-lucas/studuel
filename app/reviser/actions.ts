@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
-import { validateRevisionToday } from '@/lib/habits'
+import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { toDayKey } from '@/lib/streak'
 import {
   reviewAfterAnswer,
@@ -153,7 +153,10 @@ export async function finishReviewSession(
     score,
     total: clean.length,
   })
-  if (!error) await validateRevisionToday(supabase, user.id)
+  if (!error) {
+    await validateRevisionToday(supabase, user.id)
+    await validateCommuteToday(supabase, user.id)
+  }
 
   // Bonus Revanche : la fonction SQL revérifie que la Revanche est vide et
   // qu'aucun bonus n'a été versé aujourd'hui.
@@ -231,7 +234,10 @@ export async function finishExamBlanc(
       total: cleanTotal,
     }),
   ])
-  if (!xpError) await validateRevisionToday(supabase, user.id)
+  if (!xpError) {
+    await validateRevisionToday(supabase, user.id)
+    await validateCommuteToday(supabase, user.id)
+  }
 
   revalidatePath('/reviser')
   revalidatePath('/moi')

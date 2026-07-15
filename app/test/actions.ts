@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
-import { validateRevisionToday } from '@/lib/habits'
+import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 
 // Enregistre une session de test terminée (alimente la heatmap Habitude).
 // Visiteur non connecté : on n'enregistre rien, sans erreur.
@@ -30,9 +30,11 @@ export async function recordTestSession(
     total: cleanTotal,
   })
 
-  // Coche « Révision quotidienne » du jour tout de suite si le seuil est atteint.
+  // Coche « Révision quotidienne » (et « Test sur trajets » si on est en
+  // créneau) du jour tout de suite si le seuil est atteint.
   if (!error) {
     await validateRevisionToday(supabase, user.id)
+    await validateCommuteToday(supabase, user.id)
     revalidatePath('/moi')
   }
 

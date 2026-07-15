@@ -2,7 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
-import { validateRevisionToday } from '@/lib/habits'
+import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { isCommuteNow } from '@/lib/trajet'
 import { XP_RULES } from '@/lib/xp'
 import { MODE_XP_BONUS, modeXpBonus, type GameModeId } from '@/lib/defi-modes'
@@ -61,8 +61,12 @@ export async function recordChallenge(
     xp,
   })
 
-  // Coche « Révision quotidienne » du jour tout de suite si le seuil est atteint.
-  if (!error) await validateRevisionToday(supabase, user.id)
+  // Coche « Révision quotidienne » (et « Test sur trajets » si on est en
+  // créneau) du jour tout de suite, sans attendre le prochain chargement de /moi.
+  if (!error) {
+    await validateRevisionToday(supabase, user.id)
+    await validateCommuteToday(supabase, user.id, slots)
+  }
 
   revalidatePath('/defi')
   revalidatePath('/moi')

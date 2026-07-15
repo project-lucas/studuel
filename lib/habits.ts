@@ -16,6 +16,10 @@ export const PLANIFIER_CATALOG_ID = '55555555-5555-4555-8555-555555555509'
 // Habitude « Révision quotidienne » (auto-validée dès qu'une session est faite).
 export const REVISION_CATALOG_ID = '55555555-5555-4555-8555-555555555502'
 
+// Habitude « Test sur trajets » (auto-validée quand un quiz/défi est joué
+// pendant un créneau de trajet). Voir supabase/010_moi.sql.
+export const COMMUTE_CATALOG_ID = '55555555-5555-4555-8555-555555555503'
+
 // Les 4 tables qui comptent comme « session de travail » (série, temps, révision).
 export const SESSION_TABLES = [
   'test_sessions',
@@ -226,6 +230,55 @@ export async function validateRevisionToday(
   )
   const sessions = await countSessionsToday(supabase, userId)
   if (sessions < Math.max(target, 1)) return
+
+  await supabase.from('habit_logs').upsert(
+    {
+      habit_id: habit.id,
+      user_id: userId,
+      date: today,
+      completed: true,
+      auto_validated: true,
+    },
+    { onConflict: 'habit_id,date' },
+  )
+}
+
+// Coche « Test sur trajets » du jour dès qu'un quiz/défi est joué pendant un
+// créneau de trajet — sans attendre le prochain chargement de /moi. Sinon un
+// élève qui se teste en trajet mais n'ouvre pas Moi ce jour-là voit sa journée
+// mal classée dans « Ma discipline » et son record « habitude ancrée »
+// sous-compté. `slots` est réutilisé quand l'appelant les a déjà chargés (Défi) ;
+// sinon on les lit du profil. La fonction s'auto-garde (créneau actif requis) et
+// l'upsert par (habit, jour) est idempotent — même clé que syncAutoHabits, donc
+// aucun double comptage.
+export async function validateCommuteToday(
+  supabase: SupabaseClient,
+  userId: string,
+  slots?: CommuteSlot[],
+): Promise<void> {
+  let commuteSlots = slots
+  if (!commuteSlots) {
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('commute_slots')
+      .eq('id', userId)
+      .maybeSingle()
+    commuteSlots = Array.isArray(profile?.commute_slots)
+      ? (profile.commute_slots as CommuteSlot[])
+      : []
+  }
+  if (!isInCommuteSlot(new Date().toISOString(), commuteSlots)) return
+
+  const { data: habit } = await supabase
+    .from('habits')
+    .select('id, catalog_id, target, created_at, habit_catalog(*)')
+    .eq('user_id', userId)
+    .eq('catalog_id', COMMUTE_CATALOG_ID)
+    .maybeSingle<Habit>()
+  if (!habit) return
+
+  const today = toDayKey(new Date())
+  if (!habitDays(habit).includes(dayIndexOf(today))) return // pas prévue ce jour
 
   await supabase.from('habit_logs').upsert(
     {

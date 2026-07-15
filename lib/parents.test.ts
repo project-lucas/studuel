@@ -113,6 +113,14 @@ describe('parentHeadline', () => {
   it("ne mentionne pas la série quand elle est faible", () => {
     expect(parentHeadline(5, 1)).not.toContain("d'affilée")
   })
+
+  it("ne se contredit pas : série active sans quiz n'affiche pas « aucune activité »", () => {
+    // 5 jours d'affilée (révision/leçon/défi) mais 0 quiz sur 7 jours.
+    const msg = parentHeadline(0, 5)
+    expect(msg).toContain("5 jours d'affilée")
+    expect(msg).not.toContain('Aucune activité')
+    expect(msg.toLowerCase()).not.toContain('aucune activité')
+  })
 })
 
 describe('formatWorkDuration', () => {

@@ -97,12 +97,20 @@ const ACTIVITY_HEADLINE: Record<ActivityLevel, string> = {
 }
 
 // Le message d'accroche affiché au parent, fonction du rythme et de la série.
+// `sessions7` ne compte que les quiz, mais `streak` agrège 4 sources (quiz,
+// révision, leçon, défi) : une série ≥ 3 PROUVE donc une activité même sans
+// aucun quiz. On évite alors le libellé « inactif » (« aucune activité cette
+// semaine ») qui contredirait la série affichée juste avant.
 export function parentHeadline(sessions7: number, streak: number): string {
-  const base = ACTIVITY_HEADLINE[activityLevel(sessions7)]
+  const level = activityLevel(sessions7)
   if (streak >= 3) {
-    return `${streak} jours d'affilée — ${base.charAt(0).toLowerCase()}${base.slice(1)}`
+    const tail =
+      level === 'inactif'
+        ? "la régularité est là ; quelques quiz l'aideraient à mesurer ses progrès."
+        : `${ACTIVITY_HEADLINE[level].charAt(0).toLowerCase()}${ACTIVITY_HEADLINE[level].slice(1)}`
+    return `${streak} jours d'affilée — ${tail}`
   }
-  return base
+  return ACTIVITY_HEADLINE[level]
 }
 
 // Temps de travail en format lisible « 12 h 30 » / « 45 min ».

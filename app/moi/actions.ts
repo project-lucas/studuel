@@ -330,6 +330,11 @@ export async function saveDebriefHabits(pairIds: string[]): Promise<void> {
       .insert(valid.map((pair_id) => ({ user_id: userId, pair_id })))
     if (error) console.error('[moi] débrief non enregistré:', error.message)
   }
+  // Modifier la sélection peut compléter le débrief du jour (ex. retirer la
+  // seule habitude non répondue) : on tente le crédit ici aussi, sinon l'UI
+  // affiche « +10 pièces obtenu » sans que les pièces soient jamais versées.
+  // Idempotent (1×/jour UTC), donc sans risque de double crédit avec logDebrief.
+  await maybeClaimDebriefReward(supabase, userId)
   revalidatePath('/moi')
 }
 

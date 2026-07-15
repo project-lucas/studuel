@@ -55,6 +55,11 @@ export default function BlitzMode({
   const finishedRef = useRef(false)
   // Réponses de la partie pour la répétition espacée (SRS + Revanche).
   const reviewsRef = useRef<ReviewAnswer[]>([])
+  // Verrou synchrone anti-double-tap : deux taps rapprochés franchissent sinon
+  // la garde `answered` (en retard d'un rendu) → deux timers d'avance armés →
+  // une question sautée + un combo/score comptés deux fois. Relâché au prochain
+  // `qIndex`.
+  const answerLockRef = useRef(false)
 
   // Le record se lit après montage (localStorage) — même pattern que le mode
   // trajet de DefiHome.
@@ -62,6 +67,10 @@ export default function BlitzMode({
     const load = () => setBest(readBest())
     load()
   }, [])
+
+  useEffect(() => {
+    answerLockRef.current = false
+  }, [qIndex])
 
   const question = pool.length > 0 ? pool[qIndex % pool.length] : null
   const answered = selected !== null
@@ -125,7 +134,9 @@ export default function BlitzMode({
   }, [phase])
 
   const answer = (i: number) => {
-    if (!question || answered || secondsRef.current === 0) return
+    if (!question || answered || answerLockRef.current || secondsRef.current === 0)
+      return
+    answerLockRef.current = true
     setSelected(i)
     const good = i === question.correctIndex
     reviewsRef.current.push({

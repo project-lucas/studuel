@@ -95,6 +95,14 @@ export default function BossMode({
     },
     [],
   )
+  // Verrou synchrone anti-double-tap : deux taps rapprochés franchissent sinon
+  // la garde `answered` (en retard d'un rendu) → deux timers d'avance armés →
+  // une question sautée + une réponse en double (SRS). Relâché au prochain
+  // `qIndex` (nouvelle question) ou à `start()` (qui incrémente aussi `qIndex`).
+  const answerLockRef = useRef(false)
+  useEffect(() => {
+    answerLockRef.current = false
+  }, [qIndex])
 
   const start = (event: boolean) => {
     sfx.flip()
@@ -153,7 +161,8 @@ export default function BossMode({
   }
 
   const answer = (i: number) => {
-    if (!question || answered) return
+    if (!question || answered || answerLockRef.current) return
+    answerLockRef.current = true
     setSelected(i)
     const good = i === question.correctIndex
     reviewsRef.current.push({

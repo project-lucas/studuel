@@ -43,11 +43,20 @@ export default function SurvivalMode({
   const [saved, setSaved] = useState<boolean | null>(null)
   // Réponses de la partie pour la répétition espacée (SRS + Revanche).
   const reviewsRef = useRef<ReviewAnswer[]>([])
+  // Verrou synchrone anti-double-tap : sans lui, deux taps rapprochés (avant que
+  // React re-rende) franchissent tous deux la garde `answered` (en retard d'un
+  // rendu) → deux timers d'avance armés → une question sautée + une réponse en
+  // double dans la file SRS. On ne le relâche qu'au changement de `qIndex`.
+  const answerLockRef = useRef(false)
 
   useEffect(() => {
     const load = () => setBest(readBest())
     load()
   }, [])
+
+  useEffect(() => {
+    answerLockRef.current = false
+  }, [qIndex])
 
   const question = pool.length > 0 ? pool[qIndex % pool.length] : null
   const answered = selected !== null
@@ -88,7 +97,8 @@ export default function SurvivalMode({
   }
 
   const answer = (i: number) => {
-    if (!question || answered) return
+    if (!question || answered || answerLockRef.current) return
+    answerLockRef.current = true
     setSelected(i)
     const good = i === question.correctIndex
     reviewsRef.current.push({

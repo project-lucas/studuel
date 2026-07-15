@@ -92,6 +92,19 @@ contournable), a11y flashcards, paywall flashcards/défi, + migration **085**
 **Tests 336 → 388.** Migrations **084**/**085** à exécuter. Support Studygram
 toujours à 0.
 
+**MAJ 2026-07-15 (jour cycle 1)** : feature **« Mes contrôles à venir »** livrée
+(l'élève annonce ses contrôles sur Moi → le Défi révise ces chapitres en
+priorité ; migration **087** avec 2 RPC atomiques ; accueil connecté déplacé sur
+**/moi**). Durcissement par **3 revues de correctness** (5 bugs réels corrigés) :
+**fix sécurité** `buy_shop_item` (prix client → prix autoritatif en base,
+migration **088**) ; **double-tap qui sautait une question** dans l'examen blanc,
+« À revoir » **et le QuizPlayer** (verrou ref) ; purge **rétroactive** des
+`review_items` orphelins (migration **089**). Audit sécurité large (économie,
+ranked, social, abonnement, admin, temps) : **app robuste, un seul vrai trou
+trouvé et corrigé**. Migrations **086/087/088/089** à exécuter. Tests **411**.
+⚠️ Bug **confirmé non corrigé** : le même double-tap existe dans les 5 modes Défi
+(temps réel → QA requise, laissé au cycle 2).
+
 **Chantiers produit ouverts** (au-delà du contenu) : **Studygram** (décision de
 format en attente — voir `docs/CADRAGE-STUDYGRAM.md`), **backend social Amis**
 (encore en mock), **Défi Phase 3 « texte à trous »** + **persistance du défi**
@@ -238,6 +251,31 @@ breaking changes vs. l'entraînement.
 
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible évidente,
      pièges rencontrés. Lucas peut aussi y déposer une consigne du jour. -->
+
+**2026-07-15 (jour cycle 1) — Feature « contrôles à venir » + durcissement (9 commits) :**
+- **Fait & sur `main`** : voir `A-LIRE-JOUR.md` (`fb5270b→85c9478`). Feature
+  contrôles à venir (087), fix sécurité boutique (088), 2 fixes double-tap boucle
+  cœur, purge rétroactive SRS (089), contenu PC 5e (086), accueil → /moi.
+- **Prochaine cible évidente** : (1) **double-tap dans les 5 modes Défi** — bug
+  **confirmé** (même pattern que Quiz/Review/ExamBlanc, vérifié dans
+  `SurvivalMode.answer`), même correctif (verrou `useRef`), mais **QA visuelle
+  requise** pour Duel/LiveDuel (temps réel). (2) **Brancher AmisHome** sur les RPC
+  amis (socle DB fait + audité sain ce cycle) — le mock client devient réel.
+  (3) Gated : Studygram, texte à trous, persistance défi.
+- **Pièges rencontrés** : (a) un **WIP non commité** attendait au réveil (cycle
+  `/jour` interrompu) → **relu à fond + passé en revue AVANT de commiter** (jamais
+  commiter du code non relu). (b) Le pattern « garde sur state (`selected`/
+  `answered`) + setTimeout + setIndex » est **partout dans les players** et laisse
+  passer un double-tap → **verrou synchrone par `useRef`** (le state est en retard
+  d'un rendu). (c) `react-hooks/set-state-in-effect` bloque `useEffect(() =>
+  setState)` → pour resync sur une prop, **ajuster l'état pendant le rendu**
+  (comparer à la prop précédente), pas d'effet. (d) Fixer une RPC qui existe déjà
+  en prod : garder la **même signature** et neutraliser le paramètre dangereux
+  (ex. 088 ignore `p_price`) → zéro fenêtre de casse, l'action reste inchangée.
+- **Migrations** : **086, 087, 088, 089 créées** (à exécuter, dans l'ordre ; 088 =
+  fix sécurité à passer vite). Les autres (048, 079→085) restent à passer.
+- **Relance cycle 2 armée** (`Studuel-Jour-Cycle2`, ~11:01) : le script
+  `armer-relance-jour.ps1` est passé cette fois (contrairement au 2026-07-14).
 
 **2026-07-14 (soir) [jour] — Thread parent→apprentissage→gamification (12 commits) :**
 - **Fait & sur `main`** : voir `A-LIRE-JOUR.md` (12 commits `8ede31e→8b6f6ad`).

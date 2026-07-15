@@ -17,6 +17,8 @@ import MoiTabs from '@/components/MoiTabs'
 import MoiExtras from '@/components/MoiExtras'
 import CompagnonCard from '@/components/CompagnonCard'
 import DebriefCard from '@/components/DebriefCard'
+import GradeSelector from '@/components/GradeSelector'
+import UpcomingExamsCard from '@/components/UpcomingExamsCard'
 import StructureChart, { type WeekPoint } from '@/components/StructureChart'
 import BadgeGrid from '@/components/BadgeGrid'
 import { createClient } from '@/lib/supabase/server'
@@ -38,6 +40,9 @@ import {
   type DebriefOutcome,
 } from '@/lib/debrief'
 import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
+import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
+import { normalizeExamList, activeExams } from '@/lib/next-exam'
+import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
 import type {
   Habit,
   HabitLog,
@@ -103,7 +108,7 @@ export default async function MoiPage({
     await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, commute_slots, capacity_quiz')
+      .select('full_name, grade_level, commute_slots, capacity_quiz')
       .eq('id', user.id)
       .maybeSingle(),
     supabase
@@ -432,6 +437,47 @@ export default async function MoiPage({
 
   const firstName = String(profile?.full_name ?? '').split(' ')[0] || 'Élève'
 
+  // Classe courante, validée contre la liste fermée (null si non renseignée).
+  const gradeLevel: GradeLevel | null = GRADE_LEVELS.includes(
+    profile?.grade_level as GradeLevel,
+  )
+    ? (profile!.grade_level as GradeLevel)
+    : null
+
+  // --- Bloc « contrôles à venir » : catalogue de la classe + liste déclarée ------
+  // upcoming_exams est requêté À PART : si 087 n'est pas passée, seule cette
+  // colonne manque (dégradé propre, la carte reste utilisable sans planter).
+  const [allSubjects, gradeChapters, { data: examsRow }] = await Promise.all([
+    gradeLevel ? getSubjectsCached() : Promise.resolve([]),
+    gradeLevel ? getGradeChaptersCached(gradeLevel) : Promise.resolve([]),
+    supabase
+      .from('profiles')
+      .select('upcoming_exams')
+      .eq('id', user.id)
+      .maybeSingle(),
+  ])
+
+  // Matières ayant du contenu pour la classe → { slug: [chapitres] }.
+  const subjectById = new Map(allSubjects.map((s) => [s.id, s]))
+  const chaptersBySubject: Record<string, { id: string; title: string }[]> = {}
+  const examSubjects: { slug: string; name: string; icon: string }[] = []
+  const seenSubjects = new Set<string>()
+  for (const ch of gradeChapters) {
+    const subj = subjectById.get(ch.subject_id)
+    if (!subj) continue
+    ;(chaptersBySubject[subj.slug] ??= []).push({ id: ch.id, title: ch.title })
+    if (!seenSubjects.has(subj.slug)) {
+      seenSubjects.add(subj.slug)
+      examSubjects.push({ slug: subj.slug, name: subj.name, icon: subj.icon })
+    }
+  }
+  examSubjects.sort((a, b) => a.name.localeCompare(b.name, 'fr'))
+
+  const examList = normalizeExamList(
+    (examsRow as { upcoming_exams?: unknown } | null)?.upcoming_exams,
+  )
+  const upcomingExams = activeExams(examList, today)
+
   // Débrief d'habitudes : sélection référencée + issues du jour.
   const debriefSelected = (debriefSel ?? []).map((r) => String(r.pair_id))
   const debriefOutcomes: Record<string, DebriefOutcome> = {}
@@ -478,6 +524,17 @@ export default async function MoiPage({
         streak={currentStreak}
       />
 
+      {/* Contrôles à venir : l'élève les annonce ici, le Défi pioche dedans.
+          En tête, car c'est LE geste qui remplace le scroll dans Réviser. */}
+      <div className="mt-5">
+        <UpcomingExamsCard
+          exams={upcomingExams}
+          today={today}
+          subjects={examSubjects}
+          chaptersBySubject={chaptersBySubject}
+        />
+      </div>
+
       {/* Le débrief du jour, sorti en évidence juste sous l'identité : le geste
           quotidien qui rapporte des pièces + la rétro annuelle du parcours. */}
       <div className="mt-5">
@@ -515,6 +572,9 @@ export default async function MoiPage({
         }
         progres={
           <>
+            <div className="mb-4">
+              <GradeSelector current={gradeLevel} />
+            </div>
             <CapacityScore
               score={capacityScore}
               answers={capacityAnswers}

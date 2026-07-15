@@ -18,6 +18,7 @@ import {
   Star,
   HandHeart,
   CornerDownRight,
+  Target,
   type LucideIcon,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -133,6 +134,7 @@ export default function DefiHome({
   trophies: trophiesProp = 0,
   bestTrophies = 0,
   friendRanks = [],
+  examFocus = null,
 }: {
   items: ChallengeItem[]
   pool?: ModeQuestion[]
@@ -153,6 +155,9 @@ export default function DefiHome({
   trophies?: number
   bestTrophies?: number
   friendRanks?: RankPlayer[]
+  // Contrôles à venir déclarés sur Moi : le Défi pioche dans leurs chapitres.
+  // Titres montrés en bannière (« Révise ton contrôle : … »).
+  examFocus?: { titles: string[] } | null
 }) {
   const router = useRouter()
   const [phase, setPhase] = useState<Phase>('landing')
@@ -434,6 +439,20 @@ export default function DefiHome({
                   {items.length} questions · environ 3 minutes ·{' '}
                   {doneToday ? 'déjà validé ✓' : 'valide ta journée'}
                 </p>
+                {examFocus && examFocus.titles.length > 0 ? (
+                  <p className="mt-2 inline-flex max-w-full items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-primary-foreground ring-1 ring-white/25">
+                    <Target
+                      className="size-3.5 shrink-0 text-highlight"
+                      aria-hidden="true"
+                    />
+                    <span className="truncate">
+                      Révise ton contrôle : {examFocus.titles[0]}
+                      {examFocus.titles.length > 1
+                        ? ` +${examFocus.titles.length - 1}`
+                        : ''}
+                    </span>
+                  </p>
+                ) : null}
               </div>
               {items.length > 0 && !doneToday ? (
                 <span className="flex shrink-0 items-center gap-1 rounded-full bg-highlight px-2.5 py-1 font-mono text-xs font-bold text-foreground tabular-nums shadow-sm">

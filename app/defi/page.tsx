@@ -15,6 +15,7 @@ import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import { createClient } from '@/lib/supabase/server'
 import { computeStreak, toDayKey } from '@/lib/streak'
 import { getChapterMastery } from '@/lib/mastery'
+import { normalizeExamList, activeExams, examChapterIds } from '@/lib/next-exam'
 import { computeXp, levelFor } from '@/lib/xp'
 import { commuteStreak } from '@/lib/trajet'
 import { avatarEmojiFor, type FriendGhost } from '@/lib/social'
@@ -106,6 +107,7 @@ export default async function DefiPage() {
     { data: ghostRows },
     { data: friendTrophyRows },
     { data: trophyRow },
+    { data: examsRow },
   ] = await Promise.all([
     // user_id explicite : la RLS le garantit aujourd'hui, mais la couche
     // sociale ouvrira la lecture croisée des sessions — XP et série sont à soi.
@@ -147,6 +149,13 @@ export default async function DefiPage() {
     supabase
       .from('profiles')
       .select('trophies, best_trophies')
+      .eq('id', user.id)
+      .maybeSingle(),
+    // Contrôles à venir (087), select ISOLÉ : si la colonne manque, repli sur []
+    // sans casser le Défi. Ces chapitres sont priorisés dans la pioche.
+    supabase
+      .from('profiles')
+      .select('upcoming_exams')
       .eq('id', user.id)
       .maybeSingle(),
   ])
@@ -201,12 +210,27 @@ export default async function DefiPage() {
       chapterByLesson.set(String(l.id), String(l.chapter_id))
     }
   }
+  // Contrôles à venir déclarés sur Moi (087) : leurs chapitres passent DEVANT
+  // dans la pioche → le Défi révise le prochain contrôle sans changer d'onglet.
+  const upcomingExams = activeExams(
+    normalizeExamList((examsRow as { upcoming_exams?: unknown } | null)?.upcoming_exams),
+    today,
+  )
+  const examChapters = new Set(examChapterIds(upcomingExams))
+
   const weightOf = (q: { lesson_id: string | null }) => {
     const chapterId = q.lesson_id ? chapterByLesson.get(q.lesson_id) : undefined
     const p = chapterId ? mastery.get(chapterId) : undefined
     return p?.value ?? 0 // jamais travaillé = priorité maximale
   }
-  const rankedQuizzes = shuffle(quizList).sort((a, b) => weightOf(a) - weightOf(b))
+  // Priorité 1 : un chapitre de contrôle annoncé. Priorité 2 : maîtrise faible.
+  const examPriorityOf = (q: { lesson_id: string | null }) => {
+    const chapterId = q.lesson_id ? chapterByLesson.get(q.lesson_id) : undefined
+    return chapterId && examChapters.has(chapterId) ? 0 : 1
+  }
+  const rankedQuizzes = shuffle(quizList).sort(
+    (a, b) => examPriorityOf(a) - examPriorityOf(b) || weightOf(a) - weightOf(b),
+  )
   const pickedQuizzes = rankedQuizzes.slice(0, 2)
   // Pool élargi pour les modes de jeu (Duel, Blitz) : jusqu'à 8 quiz, les
   // chapitres fragiles d'abord — on s'entraîne en s'affrontant.
@@ -335,6 +359,11 @@ export default async function DefiPage() {
       trophies={Math.max(0, Math.floor(Number(trophyRow?.trophies ?? 0)))}
       bestTrophies={Math.max(0, Math.floor(Number(trophyRow?.best_trophies ?? 0)))}
       friendRanks={friendRanks}
+      examFocus={
+        upcomingExams.length > 0
+          ? { titles: upcomingExams.map((e) => e.chapterTitle) }
+          : null
+      }
     />
   )
 }

@@ -13,6 +13,8 @@ import {
 } from '@/lib/debrief'
 import { normalizeAvatarConfig } from '@/lib/avatar'
 import { toDayKey } from '@/lib/streak'
+import { GRADE_LEVELS } from '@/lib/types'
+import { normalizeNextExam } from '@/lib/next-exam'
 import type { CommuteSlot, Habit } from '@/lib/types'
 
 // Le client Supabase tel que renvoyé par notre createClient serveur.
@@ -190,6 +192,96 @@ export async function toggleHabitLog(
     { onConflict: 'habit_id,date' },
   )
   revalidatePath('/moi')
+}
+
+// Classe / année scolaire : change le niveau de l'élève (6e → Tle). Pilote tout
+// le contenu filtré par niveau (Réviser, Défi, examen blanc…), d'où le
+// revalidate global. GRANT UPDATE(grade_level) déjà accordé par 010_moi.sql.
+export async function saveGradeLevel(grade: string): Promise<void> {
+  const { supabase, userId } = await requireUser()
+  if (!userId) return
+  if (!GRADE_LEVELS.includes(grade as (typeof GRADE_LEVELS)[number])) return
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ grade_level: grade })
+    .eq('id', userId)
+  if (error) console.error('[moi] classe non enregistrée:', error.message)
+  // Le niveau conditionne le contenu de tous les onglets : on rafraîchit tout.
+  revalidatePath('/', 'layout')
+}
+
+// Annonce un contrôle : ajoute (matière+chapitre+date) à la liste. On résout le
+// chapitre EN BASE pour ne stocker que des données fiables (titre, niveau, slug),
+// pas ce que dit le client. L'écriture passe par la RPC atomique
+// add_upcoming_exam (read-modify-write sûr contre la concurrence : deux appareils
+// qui annoncent en même temps ne s'écrasent plus). Le Défi pioche ensuite dans
+// ces chapitres. Voir supabase/087_upcoming_exams.sql.
+// Renvoie { ok } pour que l'UI ne ferme la feuille qu'en cas de succès réel
+// (si 087 n'est pas passée, la RPC est absente → { ok: false }, pas un faux OK).
+export async function addUpcomingExam(
+  chapterId: string,
+  date: string | null,
+): Promise<{ ok: boolean }> {
+  const { supabase, userId } = await requireUser()
+  if (!userId || typeof chapterId !== 'string' || chapterId.length === 0)
+    return { ok: false }
+
+  const cleanDate =
+    typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : null
+
+  // Le chapitre doit exister ; sa matière (slug) vient de la jointure.
+  type ChapterRow = {
+    id: string
+    title: string
+    level: string
+    subject: { slug: string } | null
+  }
+  const { data: chapter } = await supabase
+    .from('chapters')
+    .select('id, title, level, subject:subjects!inner(slug)')
+    .eq('id', chapterId)
+    .maybeSingle<ChapterRow>()
+  if (!chapter?.subject?.slug) return { ok: false }
+
+  const exam = normalizeNextExam({
+    subject: chapter.subject.slug,
+    chapterId: chapter.id,
+    chapterTitle: chapter.title,
+    level: chapter.level,
+    date: cleanDate,
+  })
+  if (!exam) return { ok: false }
+
+  const { error } = await supabase.rpc('add_upcoming_exam', { p_exam: exam })
+  if (error) {
+    // RPC absente (087 pas passée) ou échec DB : on signale au client.
+    console.error('[moi] contrôle non ajouté:', error.message)
+    return { ok: false }
+  }
+  revalidatePath('/moi')
+  revalidatePath('/defi')
+  return { ok: true }
+}
+
+// Retire un contrôle de la liste (contrôle passé, ou déclaré par erreur).
+export async function removeUpcomingExam(
+  chapterId: string,
+): Promise<{ ok: boolean }> {
+  const { supabase, userId } = await requireUser()
+  if (!userId || typeof chapterId !== 'string' || chapterId.length === 0)
+    return { ok: false }
+
+  const { error } = await supabase.rpc('remove_upcoming_exam', {
+    p_chapter: chapterId,
+  })
+  if (error) {
+    console.error('[moi] contrôle non retiré:', error.message)
+    return { ok: false }
+  }
+  revalidatePath('/moi')
+  revalidatePath('/defi')
+  return { ok: true }
 }
 
 // Bilan de capacités : réponses du questionnaire (0 = Jamais … 3 = Toujours),

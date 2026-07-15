@@ -20,7 +20,11 @@ export type ChapterMastery = Map<string, ChapterProgress>
 export type ChapterState = 'maitrise' | 'en_cours' | 'fragile' | 'a_commencer'
 
 export function chapterState(p: ChapterProgress | undefined): ChapterState {
-  if (!p || (p.value === 0 && !p.lessonDone)) return 'a_commencer'
+  // « À commencer » = aucun geste posé. Un quiz TENTÉ (même échoué 0/10) est une
+  // progression : il doit remonter en « fragile » (priorité à revoir), pas se
+  // faire masquer — sinon l'élève en difficulté disparaît du radar.
+  if (!p || (p.value === 0 && !p.lessonDone && !p.quizAttempted))
+    return 'a_commencer'
   if (!p.quizAttempted) return 'en_cours' // leçon lue, quiz pas encore tenté
   if (p.value >= MASTERY_THRESHOLDS.mastered) return 'maitrise'
   if (p.value >= MASTERY_THRESHOLDS.fragile) return 'en_cours'
@@ -38,7 +42,8 @@ export type MasteryRank = 'bronze' | 'argent' | 'or' | 'diamant' | 'legendaire'
 export function masteryRank(
   p: ChapterProgress | undefined,
 ): MasteryRank | null {
-  if (!p || (p.value === 0 && !p.lessonDone)) return null
+  // Idem chapterState : un quiz tenté à 0 vaut « bronze », pas « pas de rang ».
+  if (!p || (p.value === 0 && !p.lessonDone && !p.quizAttempted)) return null
   if (!p.quizAttempted) return 'bronze'
   if (p.value >= 1) return 'legendaire'
   if (p.value >= 0.9) return 'diamant'

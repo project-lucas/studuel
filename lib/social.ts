@@ -10,6 +10,8 @@ export type Friend = {
   level: number
   // true = fantôme réel (manches enregistrées d'un vrai ami, duel_recordings)
   real?: boolean
+  // Série (jours consécutifs d'activité), quand elle est connue (RPC 155).
+  streak?: number
 }
 
 // Fantôme d'un ami : ses manches réellement jouées (migration 023).
@@ -120,6 +122,28 @@ export function leagueZone(rank: number, total: number): LeagueZone {
 
 export function sortLeague(entries: LeagueEntry[]): LeagueEntry[] {
   return [...entries].sort((a, b) => b.xp - a.xp)
+}
+
+// -------------------------------------------------------- Séries des amis
+// Mini-classement des séries : voir où en sont ses amis (jours consécutifs) et
+// se comparer, pour ajouter de la compétition. Les séries viennent du RPC
+// friends_streaks() / my_streak() (migration 155) ; ces helpers restent purs.
+export type StreakEntry = {
+  id: string
+  name: string
+  emoji: string
+  streak: number // jours consécutifs d'activité
+  isMe?: boolean
+}
+
+// Trie les séries décroissantes ; à égalité, « Toi » passe devant (ta place se
+// lit d'un coup d'œil), puis ordre alpha stable.
+export function sortStreaks(entries: readonly StreakEntry[]): StreakEntry[] {
+  return [...entries].sort((a, b) => {
+    if (b.streak !== a.streak) return b.streak - a.streak
+    if (a.isMe !== b.isMe) return a.isMe ? -1 : 1
+    return a.name.localeCompare(b.name)
+  })
 }
 
 // « il y a 12 min » à partir d'un nombre de minutes.

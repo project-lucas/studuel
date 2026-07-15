@@ -10,7 +10,9 @@ import {
   addFriendMessage,
   duelStatus,
   duelView,
+  sortStreaks,
   type FriendOverviewRow,
+  type StreakEntry,
 } from '@/lib/social'
 
 describe('leagueZone', () => {
@@ -180,5 +182,35 @@ describe('duelView', () => {
     expect(v.myScore).toBeNull()
     expect(v.theirScore).toBe(5)
     expect(v.status).toBe('incoming')
+  })
+})
+
+describe('sortStreaks', () => {
+  const base: StreakEntry[] = [
+    { id: 'a', name: 'Alice', emoji: '🦊', streak: 3 },
+    { id: 'me', name: 'Toi', emoji: '🔥', streak: 7, isMe: true },
+    { id: 'b', name: 'Bob', emoji: '🐼', streak: 12 },
+  ]
+
+  it('classe par série décroissante sans muter l’original', () => {
+    const sorted = sortStreaks(base)
+    expect(sorted.map((e) => e.id)).toEqual(['b', 'me', 'a'])
+    expect(base[0].id).toBe('a') // original intact
+  })
+
+  it('à égalité de série, « Toi » passe devant', () => {
+    const tie: StreakEntry[] = [
+      { id: 'x', name: 'Zoé', emoji: '🐝', streak: 5 },
+      { id: 'me', name: 'Toi', emoji: '🔥', streak: 5, isMe: true },
+    ]
+    expect(sortStreaks(tie).map((e) => e.id)).toEqual(['me', 'x'])
+  })
+
+  it('à égalité sans moi, ordre alphabétique stable', () => {
+    const tie: StreakEntry[] = [
+      { id: 'z', name: 'Zoé', emoji: '🐝', streak: 4 },
+      { id: 'a', name: 'Ana', emoji: '🦉', streak: 4 },
+    ]
+    expect(sortStreaks(tie).map((e) => e.name)).toEqual(['Ana', 'Zoé'])
   })
 })

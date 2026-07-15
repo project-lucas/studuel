@@ -8,11 +8,13 @@ import {
   avatarEmojiFor,
   mapFriendsOverview,
   duelView,
+  sortStreaks,
   MOCK_PRIORITY_SUBJECT,
   type Friend,
   type Duel,
   type DuelRow,
   type PendingRequest,
+  type StreakEntry,
 } from '@/lib/social'
 import type { RankPlayer } from '@/lib/trophies'
 
@@ -34,6 +36,7 @@ export default async function AmisPage() {
   let friends: Friend[] = []
   let pendingRequests: PendingRequest[] = []
   let duels: Duel[] = []
+  let streaks: StreakEntry[] = []
   let missionDoneAgainst: string | null = null
   let myFriendCode = ''
   const today = toDayKey(new Date())
@@ -45,6 +48,8 @@ export default async function AmisPage() {
       { data: friendTrophyRows },
       { data: overviewRows },
       { data: duelRows },
+      { data: friendStreakRows },
+      { data: myStreakRaw },
     ] = await Promise.all([
       // friend_code vit sur profiles depuis 019 (déjà en base) → sûr à lire ici.
       supabase
@@ -71,6 +76,10 @@ export default async function AmisPage() {
         )
         .order('created_at', { ascending: false })
         .limit(20),
+      // Séries des amis + ma série (migration 155). Appels ISOLÉS : si 155 n'est
+      // pas passée, ils échouent seuls → repli sans série, sans casser le reste.
+      supabase.rpc('friends_streaks'),
+      supabase.rpc('my_streak'),
     ])
 
     mySeconds = Number(profile?.work_seconds ?? 0) || 0
@@ -79,8 +88,33 @@ export default async function AmisPage() {
     const overview = mapFriendsOverview(
       Array.isArray(overviewRows) ? overviewRows : [],
     )
-    friends = overview.accepted
     pendingRequests = overview.incoming
+
+    // Séries : on indexe friend_id → jours, puis on décore chaque ami de sa
+    // série (0 par défaut : migration 155 absente ou ami sans activité).
+    const streakById = new Map<string, number>(
+      (Array.isArray(friendStreakRows) ? friendStreakRows : []).flatMap((r) => {
+        const id = r?.friend_id
+        const n = Number(r?.streak)
+        return id && Number.isFinite(n) ? [[String(id), Math.max(0, n)]] : []
+      }),
+    )
+    friends = overview.accepted.map((f) => ({
+      ...f,
+      streak: streakById.get(f.id) ?? 0,
+    }))
+
+    // Mini-classement des séries : moi + mes amis, trié par jours décroissants.
+    const myStreak = Math.max(0, Number(myStreakRaw ?? 0) || 0)
+    streaks = sortStreaks([
+      { id: 'me', name: 'Toi', emoji: '🔥', streak: myStreak, isMe: true },
+      ...friends.map((f) => ({
+        id: f.id,
+        name: f.name,
+        emoji: f.emoji,
+        streak: f.streak ?? 0,
+      })),
+    ])
 
     // Adversaires de duel = amis acceptés → on résout prénom/emoji localement.
     const friendById = new Map(friends.map((f) => [f.id, f]))
@@ -145,6 +179,7 @@ export default async function AmisPage() {
         live={getMockLive()}
         duels={duels}
         ranking={ranking}
+        streaks={streaks}
         school={getMockSchool(mySeconds)}
         friends={friends}
         pendingRequests={pendingRequests}

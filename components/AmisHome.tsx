@@ -15,6 +15,7 @@ import {
   ArrowRight,
   School,
   Hourglass,
+  Flame,
   X,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -27,6 +28,7 @@ import {
   type Duel,
   type SchoolBoard,
   type PendingRequest,
+  type StreakEntry,
   sinceLabel,
   schoolTotalSeconds,
   DUEL_XP_BONUS,
@@ -390,6 +392,102 @@ function RankingBoard({ players }: { players: RankPlayer[] }) {
   )
 }
 
+// --------------------------------------------------------------------- Séries
+// Le classement des séries : voir où en sont ses amis (jours consécutifs de
+// travail) et se comparer. La flamme est LA récompense de régularité — c'est ce
+// qui pousse à ne pas lâcher le premier. Moi + amis, triés séries décroissantes.
+function StreakSection({ streaks }: { streaks: StreakEntry[] }) {
+  const meIndex = streaks.findIndex((e) => e.isMe)
+  const top = streaks[0]
+  // « X jours d'avance » sur celui juste derrière moi, ou « rattrape untel »
+  // s'il y a quelqu'un devant : un objectif concret par-dessus le classement.
+  const ahead = meIndex > 0 ? streaks[meIndex - 1] : null
+  const me = meIndex >= 0 ? streaks[meIndex] : null
+  const gap = ahead && me ? ahead.streak - me.streak : 0
+
+  return (
+    <section>
+      <SectionTitle
+        icon={Flame}
+        aside={
+          top && top.streak > 0 ? (
+            <span className="flex items-center gap-1 text-xs font-semibold text-muted-foreground">
+              <Crown className="size-3.5 text-highlight" />
+              {top.name} · {top.streak} j
+            </span>
+          ) : undefined
+        }
+      >
+        Séries en cours
+      </SectionTitle>
+
+      {ahead && me && gap > 0 ? (
+        <p className="mb-2 rounded-2xl bg-primary p-3 text-sm font-medium text-primary-foreground">
+          {gap} jour{gap > 1 ? 's' : ''} pour rattraper {ahead.name} — tiens ta
+          série aujourd&apos;hui 🔥
+        </p>
+      ) : me && meIndex === 0 && me.streak > 0 ? (
+        <p className="mb-2 rounded-2xl bg-primary p-3 text-sm font-medium text-primary-foreground">
+          Tu as la plus longue série du groupe — ne la casse pas 👑🔥
+        </p>
+      ) : null}
+
+      <ol className="overflow-hidden rounded-2xl bg-card ring-1 ring-foreground/10">
+        {streaks.map((e, i) => {
+          const rank = i + 1
+          const cold = e.streak === 0
+          return (
+            <li
+              key={e.id}
+              className={cn(
+                'flex items-center gap-3 border-b px-3 py-2.5 last:border-b-0',
+                e.isMe && 'bg-accent/40',
+              )}
+            >
+              <span
+                className={cn(
+                  'flex size-6 shrink-0 items-center justify-center rounded-full font-mono text-xs font-bold tabular-nums',
+                  rank === 1 && 'bg-highlight text-foreground',
+                  rank === 2 && 'bg-muted-foreground/25',
+                  rank === 3 && 'bg-accent text-accent-foreground',
+                  rank > 3 && 'text-muted-foreground',
+                )}
+              >
+                {rank}
+              </span>
+              <Avatar emoji={e.emoji} />
+              <span
+                className={cn(
+                  'min-w-0 flex-1 truncate text-sm',
+                  e.isMe ? 'font-bold' : 'font-medium',
+                )}
+              >
+                {e.name}
+              </span>
+              <span
+                className={cn(
+                  'flex shrink-0 items-center gap-1 font-mono text-sm font-bold tabular-nums',
+                  cold ? 'text-muted-foreground' : 'text-orange-500',
+                )}
+              >
+                <Flame
+                  className={cn('size-4', cold && 'opacity-40')}
+                  strokeWidth={2.4}
+                />
+                {e.streak}
+              </span>
+            </li>
+          )
+        })}
+      </ol>
+      <p className="mt-2 px-1 text-[11px] text-muted-foreground">
+        Une série = des jours de suite où tu travailles. Reviens chaque jour pour
+        garder ta flamme allumée.
+      </p>
+    </section>
+  )
+}
+
 // ---------------------------------------------------------------------- École
 // Les heures de chaque élève s'additionnent pour son école ; le classement
 // interne départage les élèves au temps de travail réel.
@@ -543,6 +641,7 @@ export default function AmisHome({
   live,
   duels,
   ranking,
+  streaks,
   school,
   friends,
   pendingRequests,
@@ -553,6 +652,7 @@ export default function AmisHome({
   live: LiveSession[]
   duels: Duel[]
   ranking: RankPlayer[]
+  streaks: StreakEntry[]
   school: SchoolBoard
   friends: Friend[]
   pendingRequests: PendingRequest[]
@@ -652,6 +752,9 @@ export default function AmisHome({
           </p>
         )}
       </section>
+
+      {/* Séries — qui tient sa flamme le plus longtemps. Masqué sans ami. */}
+      {friends.length > 0 ? <StreakSection streaks={streaks} /> : null}
 
       {/* Le Classement — aux trophées, en temps réel (mode classé du Défi). */}
       <section>

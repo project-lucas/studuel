@@ -105,15 +105,19 @@ trouvé et corrigé**. Migrations **086/087/088/089** à exécuter. Tests **411*
 ⚠️ Bug **confirmé non corrigé** : le même double-tap existe dans les 5 modes Défi
 (temps réel → QA requise, laissé au cycle 2).
 
-**MAJ 2026-07-15 (contenu 6e, sur demande de Lucas)** : les **5 matières de 6e**
-(Maths, Français, Histoire-Géo, Anglais, SVT — **25 chapitres**) ont désormais un
-**vrai cours** (fini le placeholder de 008), une **carte mentale** (mind_map) et un
-**quiz étendu à ~10 questions**, du programme officiel cycle 3. Migrations
-**090→094** (idempotentes, à exécuter). Méthode : gabarit unique (086/090), Maths
-écrit + relu à la main, les 4 autres par fan-out de sous-agents puis **validation
-hors-ligne** (UUID/JSON/dollar-quoting/rattachement seed). **Prochain contenu
-évident : la 5e** (même méthode : Maths/Français/HG/Anglais/SVT **+ Physique-Chimie
-+ Techno + Espagnol + Latin** démarrent en 5e).
+**MAJ 2026-07-15 (contenu COLLÈGE complet, sur demande de Lucas)** : tout le
+**collège (6e → 3e)** a désormais, pour chaque chapitre, un **vrai cours** (fini le
+placeholder de 008), une **carte mentale** (mind_map) et un **quiz étendu à ~10
+questions**, du programme officiel Éduscol. **Migrations 090→121** (idempotentes,
+à exécuter) : 6e `090-094` (5 matières), 5e `095-103` (9 matières, PC sans « états
+de la matière » = 086), 4e `104-112`, 3e `113-121`. **La 3e ajoute des exercices
+type BREVET corrigés** dans la 2e leçon « Exercices types » (jusque-là placeholder).
+~142 chapitres, ~1100 questions de quiz. Méthode : gabarit unique (086/090), Maths
+6e écrit+relu à la main, le reste par **fan-out de sous-agents** (1 par matière)
+puis **validation hors-ligne systématique** (UUID 12-hex uniques sans collision,
+JSON des cartes, correct_index bornés, rattachement des titres au seed 008) +
+`npm test`. **Prochain contenu évident : le LYCÉE** (2de→Tle : tronc commun +
+spécialités + options, cf. seed 008). Studygram reste le seul support à 0.
 
 **Chantiers produit ouverts** (au-delà du contenu) : **Studygram** (décision de
 format en attente — voir `docs/CADRAGE-STUDYGRAM.md`), **backend social Amis**

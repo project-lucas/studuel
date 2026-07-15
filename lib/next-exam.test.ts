@@ -9,6 +9,8 @@ import {
   addExam,
   removeExam,
   examChapterIds,
+  examProximity,
+  examHintsBySubject,
   MAX_UPCOMING_EXAMS,
   type NextExam,
 } from './next-exam'
@@ -170,5 +172,41 @@ describe('examChapterIds', () => {
       base.chapterId,
       other.chapterId,
     ])
+  })
+})
+
+describe('examProximity', () => {
+  const mk = (date: string | null): NextExam => ({ ...base, date })
+  const today = '2026-07-15'
+
+  it('rouge (imminent) à 2 jours ou moins', () => {
+    expect(examProximity(mk('2026-07-15'), today)).toBe('imminent') // aujourd'hui
+    expect(examProximity(mk('2026-07-17'), today)).toBe('imminent') // dans 2 j
+  })
+
+  it('orange (soon) entre 3 et 6 jours', () => {
+    expect(examProximity(mk('2026-07-18'), today)).toBe('soon') // 3 j
+    expect(examProximity(mk('2026-07-21'), today)).toBe('soon') // 6 j
+  })
+
+  it('vert (far) au-delà de 6 jours ou sans date', () => {
+    expect(examProximity(mk('2026-07-22'), today)).toBe('far') // 7 j
+    expect(examProximity(mk(null), today)).toBe('far')
+  })
+})
+
+describe('examHintsBySubject', () => {
+  const today = '2026-07-15'
+  it('garde le contrôle le plus proche par matière (liste triée)', () => {
+    const list: NextExam[] = [
+      { ...base, subject: 'maths', chapterId: 'c1', date: '2026-07-16' },
+      { ...base, subject: 'maths', chapterId: 'c2', date: '2026-07-25' },
+      { ...base, subject: 'svt', chapterId: 'c3', date: '2026-07-20' },
+    ]
+    const hints = examHintsBySubject(list, today)
+    expect(hints.maths.proximity).toBe('imminent')
+    expect(hints.maths.label).toBe('demain')
+    expect(hints.svt.proximity).toBe('soon')
+    expect(Object.keys(hints).sort()).toEqual(['maths', 'svt'])
   })
 })

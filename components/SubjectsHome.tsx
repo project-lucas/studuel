@@ -2,14 +2,26 @@
 
 import { useState, useTransition } from 'react'
 import Link from 'next/link'
-import { Check, Pencil } from 'lucide-react'
+import { Check, Pencil, CalendarClock } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { subjectTheme, subjectVignette } from '@/lib/subject-style'
+import { subjectTheme } from '@/lib/subject-style'
 import SubjectIcon from '@/components/SubjectIcon'
 import StreakMascot from '@/components/StreakMascot'
 import { sfx } from '@/lib/sounds'
 import { saveSelectedSubjects } from '@/app/reviser/actions'
+import type { ExamProximity, SubjectExamHint } from '@/lib/next-exam'
 import type { Subject, SubjectCategory } from '@/lib/types'
+
+// Palette des 3 paliers d'annotation « contrôle qui arrive » sur un dossier :
+// vert = de la marge, orange = bientôt, rouge = très proche.
+const PROX_STYLE: Record<
+  ExamProximity,
+  { ring: string; pill: string }
+> = {
+  far: { ring: 'ring-green-500/70', pill: 'bg-green-600 text-white' },
+  soon: { ring: 'ring-amber-500/80', pill: 'bg-amber-500 text-white' },
+  imminent: { ring: 'ring-destructive', pill: 'bg-destructive text-white' },
+}
 
 const COLLEGE_LEVELS = ['6e', '5e', '4e', '3e']
 
@@ -56,16 +68,18 @@ function GradeChip({ grade }: { grade: string }) {
   )
 }
 
-// Carte matière façon carnet : nom + barre de progression jaune, et à droite
-// la vignette illustrée qui déborde de la carte (batch 8 du doc de prompts).
-// Tant que l'illustration d'une matière n'est pas générée, un médaillon
-// dégradé (couleur de la matière + icône) prend sa place.
+// Carte matière compacte (grille 2 colonnes) : médaillon coloré + nom + barre
+// de progression. Volontairement resserrée pour limiter le scroll. Si un
+// contrôle est annoncé sur la matière, la carte prend un liseré coloré (3
+// paliers) + une pastille compte à rebours — pour repérer d'un coup d'œil que
+// « ça arrive ».
 function SubjectRow({
   subject,
   pct,
   editing,
   checked,
   onToggle,
+  exam,
   delayMs,
 }: {
   subject: Subject
@@ -73,80 +87,82 @@ function SubjectRow({
   editing: boolean
   checked: boolean
   onToggle: () => void
+  exam?: SubjectExamHint
   delayMs: number
 }) {
   const theme = subjectTheme(subject.color)
-  const vignette = subjectVignette(subject.slug)
+  const prox = exam ? PROX_STYLE[exam.proximity] : null
 
   const inner = (
     <div
       style={{ animationDelay: `${delayMs}ms` }}
       className={cn(
-        'pop-in rev-card relative flex min-h-[104px] items-center gap-3 rounded-[1.75rem] bg-white py-5 pr-28 pl-5 transition',
-        !vignette && 'overflow-hidden',
+        'pop-in rev-card relative flex min-h-[92px] flex-col justify-between rounded-3xl bg-white p-3.5 transition',
+        prox ? `ring-2 ${prox.ring}` : 'ring-1 ring-black/5',
         !editing &&
           'group-hover:-translate-y-0.5 group-hover:shadow-lg group-active:translate-y-px',
         editing && 'cursor-pointer',
         editing && !checked && 'opacity-45 grayscale',
       )}
     >
-      {editing ? (
+      {/* Pastille « contrôle » : compte à rebours coloré, coin haut-droit. */}
+      {exam && prox && !editing ? (
         <span
           className={cn(
-            'flex size-5 shrink-0 items-center justify-center rounded-full border text-[11px] transition-colors',
-            checked
-              ? 'border-highlight bg-highlight text-foreground'
-              : 'border-muted-foreground/40 bg-muted',
+            'absolute -top-2 right-2 flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold shadow-sm',
+            prox.pill,
           )}
         >
-          {checked ? <Check className="size-3" /> : null}
+          <CalendarClock className="size-3" aria-hidden="true" />
+          {exam.label}
         </span>
       ) : null}
 
-      <div className="min-w-0 flex-1">
-        <p className="font-heading truncate text-xl font-bold">
+      <div className="flex items-center gap-2.5">
+        {editing ? (
+          <span
+            className={cn(
+              'flex size-5 shrink-0 items-center justify-center rounded-full border text-[11px] transition-colors',
+              checked
+                ? 'border-highlight bg-highlight text-foreground'
+                : 'border-muted-foreground/40 bg-muted',
+            )}
+          >
+            {checked ? <Check className="size-3" /> : null}
+          </span>
+        ) : (
+          <span
+            aria-hidden="true"
+            className={cn(
+              'arena-tile flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-sm',
+              theme.arena,
+            )}
+          >
+            <SubjectIcon
+              slug={subject.slug}
+              className="size-6 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.35)]"
+              strokeWidth={2.25}
+            />
+          </span>
+        )}
+        <p className="font-heading min-w-0 flex-1 text-base leading-tight font-bold">
           {subject.name}
         </p>
-        <div
-          className="rev-track mt-2.5 h-3 w-full max-w-56 overflow-hidden rounded-full"
-          role="progressbar"
-          aria-label={`Avancement en ${subject.name}`}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={pct}
-        >
-          <div
-            className="rev-fill h-full rounded-full transition-all"
-            style={{ width: `${pct}%` }}
-          />
-        </div>
       </div>
 
-      {vignette ? (
-        /* L'illustration à fond transparent déborde du coin droit, comme sur
-           la maquette — la carte ne la rogne pas. */
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={vignette}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute -top-3 right-0 h-[calc(100%+1.5rem)] w-auto max-w-32 object-contain object-right transition-transform group-hover:scale-105"
+      <div
+        className="rev-track mt-2.5 h-2 w-full overflow-hidden rounded-full"
+        role="progressbar"
+        aria-label={`Avancement en ${subject.name}`}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={pct}
+      >
+        <div
+          className="rev-fill h-full rounded-full transition-all"
+          style={{ width: `${pct}%` }}
         />
-      ) : (
-        <span
-          aria-hidden="true"
-          className={cn(
-            'arena-tile absolute -right-4 top-1/2 flex size-24 -translate-y-1/2 rotate-12 items-center justify-center overflow-hidden rounded-[1.9rem] shadow-md transition-transform group-hover:rotate-6',
-            theme.arena,
-          )}
-        >
-          <SubjectIcon
-            slug={subject.slug}
-            className="size-10 -rotate-12 text-white drop-shadow-[0_1.5px_1px_rgba(0,0,0,0.35)]"
-            strokeWidth={2.25}
-          />
-        </span>
-      )}
+      </div>
     </div>
   )
 
@@ -169,6 +185,11 @@ function SubjectRow({
       href={`/reviser/${subject.slug}`}
       onClick={() => sfx.tap()}
       className="group block"
+      aria-label={
+        exam
+          ? `${subject.name} — contrôle ${exam.label}`
+          : subject.name
+      }
     >
       {inner}
     </Link>
@@ -185,6 +206,7 @@ export default function SubjectsHome({
   selected,
   grade,
   progressBySlug,
+  examBySubject = {},
 }: {
   firstName: string | null
   streak: number
@@ -192,6 +214,7 @@ export default function SubjectsHome({
   selected: string[] | null
   grade: string
   progressBySlug: Record<string, number>
+  examBySubject?: Record<string, SubjectExamHint>
 }) {
   const [editing, setEditing] = useState(false)
   const [picked, setPicked] = useState<Set<string>>(
@@ -296,8 +319,9 @@ export default function SubjectsHome({
         </div>
       </div>
 
-      {/* Les cartes matières chevauchent le bandeau, comme sur la maquette. */}
-      <div className="relative -mt-10 flex flex-col gap-5 sm:px-1">
+      {/* Les cartes matières chevauchent le bandeau — grille 2 colonnes,
+          resserrée pour limiter le scroll. */}
+      <div className="relative -mt-8 flex flex-col gap-4 sm:px-1">
         {groups.length === 0 ? (
           <div className="rev-card rounded-[1.75rem] bg-white p-5 text-sm text-muted-foreground">
             Aucune matière sélectionnée — touche «&nbsp;Modifier&nbsp;» pour en
@@ -305,28 +329,31 @@ export default function SubjectsHome({
           </div>
         ) : (
           groups.map(({ label, items }, gi) => (
-            <section key={label ?? 'all'} className="flex flex-col gap-5">
+            <section key={label ?? 'all'} className="flex flex-col gap-2.5">
               {label ? (
                 <h2
                   className={cn(
-                    'font-heading -mb-1 px-2 text-sm font-semibold',
+                    'font-heading px-1 text-sm font-semibold',
                     gi === 0 ? 'text-white/90' : 'text-muted-foreground',
                   )}
                 >
                   {label}
                 </h2>
               ) : null}
-              {items.map((s) => (
-                <SubjectRow
-                  key={s.id}
-                  subject={s}
-                  pct={progressBySlug[s.slug] ?? 0}
-                  editing={editing}
-                  checked={picked.has(s.slug)}
-                  onToggle={() => toggle(s.slug)}
-                  delayMs={cardIndex++ * 45}
-                />
-              ))}
+              <div className="grid grid-cols-2 gap-3">
+                {items.map((s) => (
+                  <SubjectRow
+                    key={s.id}
+                    subject={s}
+                    pct={progressBySlug[s.slug] ?? 0}
+                    editing={editing}
+                    checked={picked.has(s.slug)}
+                    onToggle={() => toggle(s.slug)}
+                    exam={examBySubject[s.slug]}
+                    delayMs={cardIndex++ * 40}
+                  />
+                ))}
+              </div>
             </section>
           ))
         )}
@@ -334,21 +361,24 @@ export default function SubjectsHome({
         {/* Dossiers hors-programme (Culture générale) : toujours là, en bonus,
             pas concernés par « Modifier mes matières ». */}
         {!editing && cultureSubjects.length > 0 ? (
-          <section className="flex flex-col gap-5">
-            <h2 className="font-heading -mb-1 px-2 text-sm font-semibold text-muted-foreground">
+          <section className="flex flex-col gap-2.5">
+            <h2 className="font-heading px-1 text-sm font-semibold text-muted-foreground">
               Culture générale · hors-programme
             </h2>
-            {cultureSubjects.map((s) => (
-              <SubjectRow
-                key={s.id}
-                subject={s}
-                pct={progressBySlug[s.slug] ?? 0}
-                editing={false}
-                checked
-                onToggle={() => {}}
-                delayMs={cardIndex++ * 45}
-              />
-            ))}
+            <div className="grid grid-cols-2 gap-3">
+              {cultureSubjects.map((s) => (
+                <SubjectRow
+                  key={s.id}
+                  subject={s}
+                  pct={progressBySlug[s.slug] ?? 0}
+                  editing={false}
+                  checked
+                  onToggle={() => {}}
+                  exam={examBySubject[s.slug]}
+                  delayMs={cardIndex++ * 40}
+                />
+              ))}
+            </div>
           </section>
         ) : null}
       </div>

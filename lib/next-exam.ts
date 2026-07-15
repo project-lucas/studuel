@@ -75,6 +75,47 @@ export function examCountdownLabel(
   return `dans ${days} jours`
 }
 
+// Proximité d'un contrôle, en 3 paliers pour annoter les dossiers de matières :
+// vert = encore de la marge, orange = bientôt, rouge = très proche (ou
+// aujourd'hui). Sans date : palier neutre « far » (annoncé, pas urgent).
+export type ExamProximity = 'far' | 'soon' | 'imminent'
+
+export const EXAM_SOON_DAYS = 6 // ≤ 6 jours → orange
+export const EXAM_IMMINENT_DAYS = 2 // ≤ 2 jours → rouge
+
+export function examProximity(exam: NextExam, today: string): ExamProximity {
+  if (exam.date === null) return 'far'
+  const days = daysBetween(today, exam.date)
+  if (days <= EXAM_IMMINENT_DAYS) return 'imminent'
+  if (days <= EXAM_SOON_DAYS) return 'soon'
+  return 'far'
+}
+
+// Indice d'annotation d'un dossier : le contrôle le PLUS proche de la matière.
+export type SubjectExamHint = {
+  proximity: ExamProximity
+  label: string // « demain », « dans 3 jours », « à venir »…
+  chapterTitle: string
+}
+
+// Le contrôle le plus proche par matière (slug), à partir d'une liste DÉJÀ
+// triée soonest-first (cf. activeExams) : le premier vu par matière gagne.
+export function examHintsBySubject(
+  activeList: readonly NextExam[],
+  today: string,
+): Record<string, SubjectExamHint> {
+  const out: Record<string, SubjectExamHint> = {}
+  for (const exam of activeList) {
+    if (out[exam.subject]) continue
+    out[exam.subject] = {
+      proximity: examProximity(exam, today),
+      label: examCountdownLabel(exam, today) ?? 'à venir',
+      chapterTitle: exam.chapterTitle,
+    }
+  }
+  return out
+}
+
 // Différence en jours entre deux clés UTC 'YYYY-MM-DD' (from → to).
 function daysBetween(from: string, to: string): number {
   const a = Date.parse(`${from}T00:00:00Z`)

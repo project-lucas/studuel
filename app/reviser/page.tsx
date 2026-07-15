@@ -24,6 +24,11 @@ import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
 import { getReviewItems, reviewQueue, countsBySubject } from '@/lib/srs'
 import { toDayKey, computeStreak } from '@/lib/streak'
+import {
+  normalizeExamList,
+  activeExams,
+  examHintsBySubject,
+} from '@/lib/next-exam'
 import type { CommuteSlot, Subject } from '@/lib/types'
 
 export const metadata = { title: 'Réviser — Studuel' }
@@ -69,7 +74,9 @@ export default async function ReviserPage() {
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('full_name, grade_level, selected_subjects, commute_slots')
+    .select(
+      'full_name, grade_level, selected_subjects, commute_slots, upcoming_exams',
+    )
     .eq('id', user.id)
     .maybeSingle()
 
@@ -290,6 +297,15 @@ export default async function ReviserPage() {
     ? (profile.commute_slots as CommuteSlot[])
     : []
 
+  // Contrôles à venir (migration 087) → annotation des dossiers : chaque matière
+  // qui a un contrôle proche porte un liseré coloré + un compte à rebours.
+  const today = toDayKey(new Date())
+  const upcomingExams = activeExams(
+    normalizeExamList(profile?.upcoming_exams),
+    today,
+  )
+  const examBySubject = examHintsBySubject(upcomingExams, today)
+
   return (
     <div className="flex flex-col gap-4">
       {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
@@ -309,6 +325,7 @@ export default async function ReviserPage() {
         selected={selected}
         grade={grade}
         progressBySlug={progressBySlug}
+        examBySubject={examBySubject}
       />
       {/* Rappel contextuel : pendant le trajet, un temps mort devient de l'XP. */}
       <CommuteBanner slots={commuteSlots} />

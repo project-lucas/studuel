@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { examCountdownLabel, type NextExam } from '@/lib/next-exam'
 import { addUpcomingExam, removeUpcomingExam } from '@/app/moi/actions'
+import { useDialog } from '@/lib/use-dialog'
 
 type SubjectLite = { slug: string; name: string; icon: string }
 type ChapterLite = { id: string; title: string }
@@ -191,15 +192,12 @@ function AddExamSheet({
   const [pending, startTransition] = useTransition()
   const firstFieldRef = useRef<HTMLSelectElement>(null)
 
-  // A11y : au montage, on amène le focus dans la feuille et on la ferme à Escape.
+  // Échap ferme + fond figé : primitive commune des modales maison (useDialog).
+  useDialog(onClose)
+  // A11y : au montage, on amène le focus dans la feuille.
   useEffect(() => {
     firstFieldRef.current?.focus()
-    function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') onClose()
-    }
-    document.addEventListener('keydown', onKey)
-    return () => document.removeEventListener('keydown', onKey)
-  }, [onClose])
+  }, [])
 
   const chapters = subject ? (chaptersBySubject[subject] ?? []) : []
 

@@ -25,7 +25,7 @@ type Phase = 'intro' | 'playing' | 'done'
 // décoratives : c'est un diagnostic.
 const VERDICT_CLASS: Record<ExamVerdict, string> = {
   solide:
-    'bg-green-600/10 text-green-700 dark:text-green-400 border-green-600/40',
+    'bg-success/10 text-success dark:text-green-400 border-success/40',
   fragile: 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/40',
   a_revoir: 'bg-destructive/10 text-destructive border-destructive/40',
 }

@@ -141,6 +141,7 @@ export default function SubjectProgramme({
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Chercher un sujet"
+              aria-label="Chercher un chapitre ou une leçon"
               className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
             />
           </label>

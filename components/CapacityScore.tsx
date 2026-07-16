@@ -305,7 +305,7 @@ export default function CapacityScore({
                   </ul>
                 </>
               ) : (
-                <p className="text-xs font-semibold text-green-700 dark:text-green-400">
+                <p className="text-xs font-semibold text-success dark:text-green-400">
                   💪 Toutes tes habitudes sont ancrées — rien d&apos;urgent.
                 </p>
               )}

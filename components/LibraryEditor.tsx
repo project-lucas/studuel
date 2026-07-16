@@ -219,7 +219,7 @@ function QuizBody({
                   className={cn(
                     'flex size-6 shrink-0 items-center justify-center rounded-full border-2 transition',
                     q.correct_index === j
-                      ? 'border-green-600 bg-green-600 text-white'
+                      ? 'border-success bg-success text-white'
                       : 'border-border bg-white text-transparent',
                   )}
                 >

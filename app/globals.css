@@ -42,6 +42,8 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
   --color-highlight: var(--highlight);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -86,6 +88,9 @@
   --ring: #7a3fe0;
   /* Récompense / progression / flammes : jaune solaire */
   --highlight: #f5b722;
+  /* Réussite : bonne réponse, objectif atteint, « maîtrisé » (vert feuille) */
+  --success: #1f9d57;
+  --success-foreground: #ffffff;
   --chart-1: #7a3fe0;
   --chart-2: #f5b722;
   --chart-3: #f1566c;
@@ -123,6 +128,8 @@
   --input: oklch(1 0 0 / 14%);
   --ring: oklch(0.72 0.15 277);
   --highlight: oklch(0.87 0.174 95);
+  --success: oklch(0.75 0.16 155);
+  --success-foreground: oklch(0.18 0.04 160);
   --chart-1: oklch(0.72 0.15 277);
   --chart-2: oklch(0.87 0.174 95);
   --chart-3: oklch(0.55 0.12 277);
@@ -160,6 +167,8 @@
     --input: oklch(1 0 0 / 14%);
     --ring: oklch(0.72 0.15 277);
     --highlight: oklch(0.87 0.174 95);
+    --success: oklch(0.75 0.16 155);
+    --success-foreground: oklch(0.18 0.04 160);
     --chart-1: oklch(0.72 0.15 277);
     --chart-2: oklch(0.87 0.174 95);
     --chart-3: oklch(0.55 0.12 277);

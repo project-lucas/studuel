@@ -229,7 +229,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
                     'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
                   answered &&
                     isCorrect &&
-                    'border-green-600 bg-green-600/10 text-green-700 dark:text-green-400',
+                    'border-success bg-success/10 text-success dark:text-green-400',
                   answered &&
                     isSelected &&
                     !isCorrect &&
@@ -256,7 +256,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
               !answered && 'sr-only',
               answered &&
                 selected === item.correctIndex &&
-                'text-green-700 dark:text-green-400',
+                'text-success dark:text-green-400',
               answered && selected !== item.correctIndex && 'text-destructive',
             )}
           >
@@ -331,7 +331,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
             <Button
               size="lg"
               tabIndex={revealed ? undefined : -1}
-              className="rounded-full bg-green-600 text-white hover:bg-green-600/85"
+              className="rounded-full bg-success text-white hover:bg-success/85"
               onClick={() => {
                 sfx.correct()
                 next(true)

@@ -23,7 +23,7 @@ import {
 const STATUS_CHIP: Record<OralTextStatus, string> = {
   a_faire: 'bg-muted text-muted-foreground',
   en_cours: 'bg-highlight text-foreground',
-  maitrise: 'bg-green-600 text-white',
+  maitrise: 'bg-success text-white',
 }
 
 // -----------------------------------------------------------------------------

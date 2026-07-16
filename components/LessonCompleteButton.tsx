@@ -20,7 +20,7 @@ export default function LessonCompleteButton({
 
   if (done) {
     return (
-      <span className="inline-flex items-center gap-2 rounded-full bg-green-600/10 px-4 py-2 text-sm font-semibold text-green-700 dark:text-green-400">
+      <span className="inline-flex items-center gap-2 rounded-full bg-success/10 px-4 py-2 text-sm font-semibold text-success dark:text-green-400">
         <Check className="size-4" strokeWidth={3} /> Leçon terminée
       </span>
     )

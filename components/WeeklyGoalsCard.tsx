@@ -109,7 +109,7 @@ export default function WeeklyGoalsCard({
                 className={cn(
                   'flex size-6 shrink-0 items-center justify-center rounded-full border-2 transition active:scale-90',
                   g.done
-                    ? 'border-green-600 bg-green-600 text-white'
+                    ? 'border-success bg-success text-white'
                     : 'border-border bg-white text-transparent',
                 )}
               >
@@ -153,6 +153,7 @@ export default function WeeklyGoalsCard({
             }}
             maxLength={200}
             placeholder="Ex. 3 sessions de maths"
+            aria-label="Nouvel objectif de la semaine"
             className="min-h-11 min-w-0 flex-1 rounded-2xl border border-border bg-muted/40 px-3 text-sm font-medium text-foreground"
           />
           <button

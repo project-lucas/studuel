@@ -238,9 +238,9 @@ export default function QuizPlayer({
 
                     <div className="mt-4 flex flex-col gap-2">
                       {/* La bonne réponse, toujours montrée */}
-                      <p className="flex items-center gap-2.5 rounded-2xl bg-green-600/10 px-4 py-3 text-sm font-medium text-green-800 dark:text-green-300">
+                      <p className="flex items-center gap-2.5 rounded-2xl bg-success/10 px-4 py-3 text-sm font-medium text-success">
                         <CircleCheck
-                          className="size-5 shrink-0 fill-green-600 text-white"
+                          className="size-5 shrink-0 fill-success text-white"
                           aria-hidden="true"
                         />
                         <span className="min-w-0">
@@ -355,7 +355,7 @@ export default function QuizPlayer({
                   !answered &&
                     'bg-card text-foreground hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98]',
                   // Après réponse : la bonne en vert, le mauvais choix en rouge.
-                  answered && isTheAnswer && 'bg-green-600 text-white',
+                  answered && isTheAnswer && 'bg-success text-white',
                   answered && !isTheAnswer && isMyPick && 'bg-destructive text-white',
                   answered && !isTheAnswer && !isMyPick && 'bg-card text-foreground opacity-50',
                 )}

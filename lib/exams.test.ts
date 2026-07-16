@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { examsForProfile } from '@/lib/exams'
+import { examsForProfile, examPriorityHint } from '@/lib/exams'
 import type { Subject, SubjectCategory } from '@/lib/types'
 
 // Fabrique une matière de catalogue minimale pour les tests.
@@ -116,5 +116,63 @@ describe('examsForProfile', () => {
       'Bac — Spécialité Maths',
       'Bac — Spécialité NSI',
     ])
+  })
+})
+
+describe('examPriorityHint', () => {
+  it('aucune épreuve mesurable → null', () => {
+    expect(examPriorityHint([])).toBeNull()
+    expect(
+      examPriorityHint([{ label: 'Maths', progress: 0, total: 0 }]),
+    ).toBeNull()
+  })
+
+  it('épreuve la plus faible < 40 % → « commence par » cette épreuve', () => {
+    const hint = examPriorityHint([
+      { label: 'Français', progress: 0.7, total: 10 },
+      { label: 'Maths', progress: 0.2, total: 10 },
+    ])
+    expect(hint?.tone).toBe('start')
+    expect(hint?.focusLabel).toBe('Maths')
+    expect(hint?.message).toContain('Maths')
+  })
+
+  it('en milieu de parcours → « concentre-toi sur » la plus faible, avec son %', () => {
+    const hint = examPriorityHint([
+      { label: 'Français', progress: 0.7, total: 10 },
+      { label: 'Maths', progress: 0.5, total: 10 },
+    ])
+    expect(hint?.tone).toBe('focus')
+    expect(hint?.focusLabel).toBe('Maths')
+    expect(hint?.message).toContain('50 %')
+  })
+
+  it('global ≥ 80 % partout → « prêt·e », sans épreuve à prioriser', () => {
+    const hint = examPriorityHint([
+      { label: 'Français', progress: 0.9, total: 10 },
+      { label: 'Maths', progress: 0.85, total: 10 },
+    ])
+    expect(hint?.tone).toBe('ready')
+    expect(hint?.focusLabel).toBeNull()
+  })
+
+  it('ignore les épreuves sans contenu (total 0) dans le calcul', () => {
+    const hint = examPriorityHint([
+      { label: 'Français', progress: 0.9, total: 10 },
+      { label: 'Vide', progress: 0, total: 0 },
+    ])
+    // Seul Français compte → 90 % global → prêt·e.
+    expect(hint?.tone).toBe('ready')
+  })
+
+  it('pondère le % global par le nombre de chapitres', () => {
+    // Grosse épreuve faible (20 ch. à 30 %) + petite épreuve forte (2 ch. à
+    // 100 %) : global ≈ 36 % → pas « prêt·e », priorité sur la faible.
+    const hint = examPriorityHint([
+      { label: 'Histoire', progress: 0.3, total: 20 },
+      { label: 'Option', progress: 1, total: 2 },
+    ])
+    expect(hint?.tone).toBe('start')
+    expect(hint?.focusLabel).toBe('Histoire')
   })
 })

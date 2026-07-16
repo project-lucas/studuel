@@ -1,8 +1,9 @@
 import Link from 'next/link'
-import { AlarmClock, Target } from 'lucide-react'
+import { AlarmClock, Sparkles, Target } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { subjectTheme, subjectIcon } from '@/lib/subject-style'
+import { examPriorityHint } from '@/lib/exams'
 import type { Subject } from '@/lib/types'
 
 export type ExamProgressEntry = {
@@ -40,6 +41,10 @@ export default function ExamProgress({
   if (entries.length === 0) return null
 
   const globalPct = examGlobalPct(entries)
+  // Conseil adaptatif (où mettre l'effort) + affichage la plus faible d'abord :
+  // l'élève voit tout de suite quoi prioriser.
+  const hint = examPriorityHint(entries)
+  const sorted = [...entries].sort((a, b) => a.progress - b.progress)
 
   const body = (
     <>
@@ -58,9 +63,28 @@ export default function ExamProgress({
         />
       </div>
 
-      {/* Mini-barres par épreuve */}
+      {/* Conseil adaptatif : où mettre l'effort maintenant. */}
+      {hint ? (
+        <div
+          className={cn(
+            'mb-4 flex items-start gap-2 rounded-xl px-3 py-2 text-xs font-semibold',
+            hint.tone === 'ready'
+              ? 'bg-green-600/10 text-green-700'
+              : 'bg-primary/10 text-primary',
+          )}
+        >
+          {hint.tone === 'ready' ? (
+            <Sparkles className="mt-px size-4 shrink-0" aria-hidden="true" />
+          ) : (
+            <Target className="mt-px size-4 shrink-0" aria-hidden="true" />
+          )}
+          <span>{hint.message}</span>
+        </div>
+      ) : null}
+
+      {/* Mini-barres par épreuve (la plus faible d'abord). */}
       <ul className="grid gap-x-6 gap-y-2 sm:grid-cols-2">
-        {entries.map((e) => {
+        {sorted.map((e) => {
           const theme = subjectTheme(e.subject.color)
           const SubjectIcon = subjectIcon(e.subject.slug)
           const pct = Math.round(e.progress * 100)

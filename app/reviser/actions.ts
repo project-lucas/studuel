@@ -10,6 +10,12 @@ import {
   REVANCHE_CLEAR_COINS,
   type ReviewAnswer,
 } from '@/lib/srs'
+import {
+  normalizeOralList,
+  isOralStatus,
+  type OralText,
+  type OralTextStatus,
+} from '@/lib/oral-texts'
 
 // Marque une leçon comme terminée : le chapitre progresse (plancher 30 %)
 // et la journée est validée dans la série.
@@ -262,4 +268,83 @@ export async function saveSelectedSubjects(slugs: string[]): Promise<void> {
     .eq('id', user.id)
 
   revalidatePath('/reviser')
+}
+
+// --- Textes du bac oral (le descriptif) — migration 156 ----------------------
+// Les 3 écritures passent par des RPC atomiques (read-modify-write sûr sous
+// FOR UPDATE, cf. add_upcoming_exam). Chacune renvoie { ok, texts } : la liste
+// normalisée revient à l'UI pour rester synchro sans re-fetch. Si 156 n'est pas
+// passée, la RPC est absente → { ok: false } (pas de faux succès), texts = [].
+type OralResult = { ok: boolean; texts: OralText[] }
+
+async function requireUserId(): Promise<string | null> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  return user?.id ?? null
+}
+
+// Ajoute un texte au descriptif (titre + œuvre facultative). L'id et le statut
+// initial sont posés en base.
+export async function addOralTextAction(
+  title: string,
+  work: string | null,
+): Promise<OralResult> {
+  const supabase = await createClient()
+  if (!(await requireUserId())) return { ok: false, texts: [] }
+
+  const cleanTitle = typeof title === 'string' ? title.trim() : ''
+  if (cleanTitle.length === 0) return { ok: false, texts: [] }
+  const cleanWork =
+    typeof work === 'string' && work.trim().length > 0 ? work.trim() : null
+
+  const { data, error } = await supabase.rpc('add_oral_text', {
+    p_title: cleanTitle,
+    p_work: cleanWork,
+  })
+  if (error) {
+    console.error('[reviser] texte oral non ajouté:', error.message)
+    return { ok: false, texts: [] }
+  }
+  revalidatePath('/reviser')
+  return { ok: true, texts: normalizeOralList(data) }
+}
+
+// Change le statut d'un texte (À faire ↔ En cours ↔ Maîtrisé).
+export async function setOralTextStatusAction(
+  id: string,
+  status: OralTextStatus,
+): Promise<OralResult> {
+  const supabase = await createClient()
+  if (!(await requireUserId())) return { ok: false, texts: [] }
+  if (typeof id !== 'string' || id.length === 0 || !isOralStatus(status))
+    return { ok: false, texts: [] }
+
+  const { data, error } = await supabase.rpc('set_oral_text_status', {
+    p_id: id,
+    p_status: status,
+  })
+  if (error) {
+    console.error('[reviser] statut texte oral non changé:', error.message)
+    return { ok: false, texts: [] }
+  }
+  revalidatePath('/reviser')
+  return { ok: true, texts: normalizeOralList(data) }
+}
+
+// Retire un texte du descriptif.
+export async function removeOralTextAction(id: string): Promise<OralResult> {
+  const supabase = await createClient()
+  if (!(await requireUserId())) return { ok: false, texts: [] }
+  if (typeof id !== 'string' || id.length === 0)
+    return { ok: false, texts: [] }
+
+  const { data, error } = await supabase.rpc('remove_oral_text', { p_id: id })
+  if (error) {
+    console.error('[reviser] texte oral non retiré:', error.message)
+    return { ok: false, texts: [] }
+  }
+  revalidatePath('/reviser')
+  return { ok: true, texts: normalizeOralList(data) }
 }

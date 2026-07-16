@@ -15,6 +15,7 @@ import ReviserTools from '@/components/ReviserTools'
 import WeekPlannerStrip from '@/components/WeekPlannerStrip'
 import ExamObjectiveToggle from '@/components/ExamObjectiveToggle'
 import { type ExamProgressEntry } from '@/components/ExamProgress'
+import OralTextsCard from '@/components/OralTextsCard'
 import CommuteBanner from '@/components/CommuteBanner'
 import ReviewQueueCard from '@/components/ReviewQueueCard'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
@@ -30,6 +31,7 @@ import {
   activeExams,
   examHintsBySubject,
 } from '@/lib/next-exam'
+import { normalizeOralList } from '@/lib/oral-texts'
 import type { CommuteSlot, Subject } from '@/lib/types'
 
 export const metadata = { title: 'Réviser — Studuel' }
@@ -89,6 +91,17 @@ export default async function ReviserPage() {
     .eq('id', user.id)
     .maybeSingle()
   const avatarUri = avatarDataUri(normalizeAvatarConfig(avatarRow?.avatar), 128)
+
+  // Textes du bac oral isolés : la colonne vient de 156_oral_texts.sql (peut-être
+  // pas encore passée) — requête à part pour dégrader proprement (liste vide).
+  const { data: oralRow } = await supabase
+    .from('profiles')
+    .select('oral_texts')
+    .eq('id', user.id)
+    .maybeSingle()
+  const oralTexts = normalizeOralList(
+    (oralRow as { oral_texts?: unknown } | null)?.oral_texts,
+  )
 
   const grade = profile?.grade_level ?? null
 
@@ -259,6 +272,10 @@ export default async function ReviserPage() {
 
   // --- Objectif examen (classes à examen uniquement) ---------------------------
   const exams = examsForProfile(grade, selected, allSubjects)
+  // Descriptif de l'oral : réservé à la 1re qui suit le français (bac de
+  // français écrit + oral). Ailleurs, pas de liste de textes à présenter.
+  const hasFrenchOral =
+    grade === '1re' && exams.some((e) => e.subject.slug === 'francais')
   const examEntries: ExamProgressEntry[] = exams
     .map(({ subject }) => {
       const agg = sums.get(subject.id) ?? { sum: 0, total: 0 }
@@ -371,11 +388,14 @@ export default async function ReviserPage() {
               chaptersBySubject={chaptersBySubject}
             />
             {/* 4. Objectif examen (classes à examen) — remonté en accueil,
-                replié par défaut. */}
+                replié par défaut, avec conseil adaptatif. */}
             <ExamObjectiveToggle
               title={EXAM_TITLES[grade] ?? 'Objectif examen'}
               entries={examEntries}
             />
+            {/* 4bis. Descriptif de l'oral (1re français) : la liste des textes
+                à présenter, suivie texte par texte. */}
+            {hasFrenchOral ? <OralTextsCard initial={oralTexts} /> : null}
             {/* Rappel contextuel : pendant le trajet, un temps mort = de l'XP. */}
             <CommuteBanner slots={commuteSlots} />
           </>

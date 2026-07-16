@@ -6,23 +6,14 @@ import { usePathname } from 'next/navigation'
 import { CircleUser } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { NAV_TABS } from '@/lib/nav-tabs'
 
-// Ordre des onglets = ordre de la barre mobile, le Défi au centre.
-// Icônes dessinées (jaune/violet, liseré encre) : l'onglet inactif est
-// grisé, l'actif reprend ses couleurs. Sur mobile, pas de libellé sous
-// l'icône : toute la place aux dessins (le nom reste porté par aria-label).
-const links = [
-  { name: 'Amis', path: '/amis', img: '/images/nav/amis.webp' },
-  { name: 'Réviser', path: '/reviser', img: '/images/nav/reviser.webp' },
-  { name: 'Défi', path: '/defi', img: '/images/nav/defi-3.webp', center: true },
-  { name: 'Moi', path: '/moi', img: '/images/nav/moi.webp' },
-  { name: 'Trésor', path: '/tresor', img: '/images/nav/tresor-3.webp' },
-] as {
-  name: string
-  path: string
-  img: string
-  center?: boolean
-}[]
+// Ordre des onglets = ordre de la barre mobile (Défi au centre) et ordre du
+// balayage horizontal : les deux lisent NAV_TABS. Icônes dessinées
+// (jaune/violet, liseré encre) : l'onglet inactif est grisé, l'actif reprend
+// ses couleurs. Sur mobile, pas de libellé sous l'icône : toute la place aux
+// dessins (le nom reste porté par aria-label).
+const links = NAV_TABS
 
 export default function Navigation({ userLabel }: { userLabel: string | null }) {
   const pathname = usePathname()

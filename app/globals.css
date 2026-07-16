@@ -1248,6 +1248,59 @@ a:hover > .wiggle-on-hover {
   background: rgba(255, 255, 255, 0.03);
 }
 
+/* ---- Défi v3 : écran d'arène plein viewport (façon Clash Royale) --------
+   L'onglet Défi devient un écran de jeu : arène au centre, icônes rondes
+   flottantes sur les bords qui ouvrent des feuilles, gros CTA en bas. */
+
+/* Disque d'icône flottante : verre violet bombé, liseré or. */
+.defi3-orb {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 9999px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+    circle at 32% 26%,
+    color-mix(in oklch, var(--primary), white 34%),
+    color-mix(in oklch, var(--primary), black 6%) 62%,
+    color-mix(in oklch, var(--primary), black 40%)
+  );
+  border: 2px solid color-mix(in oklch, var(--highlight), black 14%);
+  box-shadow:
+    0 6px 14px -4px rgba(0, 0, 0, 0.6),
+    inset 0 2px 4px rgba(255, 255, 255, 0.35);
+}
+
+/* Libellé sous l'orbe : lisible quel que soit le décor d'arène derrière. */
+.defi3-orb-label {
+  font-size: 0.62rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+/* Feuille ancrée en bas (contenu des orbes) : panneau violet profond. */
+.defi3-sheet {
+  border-radius: 24px 24px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0) 30%
+    ),
+    color-mix(in oklch, var(--primary) 34%, oklch(0.17 0.035 300));
+  box-shadow: 0 -18px 50px rgba(0, 0, 0, 0.55);
+}
+@media (min-width: 640px) {
+  .defi3-sheet {
+    border-radius: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  }
+}
+
 /* Accessibilité : on coupe les animations si l'utilisateur les refuse */
 @media (prefers-reduced-motion: reduce) {
   *,

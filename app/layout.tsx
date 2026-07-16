@@ -9,6 +9,9 @@ import {
 import "./globals.css";
 // Navigation responsive : barre d'onglets en bas (mobile) + sidebar (desktop)
 import Navigation from "@/components/Navigation";
+// Balayage horizontal (façon Clash Royale) : change d'onglet depuis n'importe
+// quel endroit de l'écran.
+import SwipeTabs from "@/components/SwipeTabs";
 // Cadeau de connexion : crédite les pièces du jour au premier passage.
 import DailyLoginReward from "@/components/DailyLoginReward";
 // Retour matériel du téléphone : reste dans l'app au lieu de la quitter.
@@ -81,7 +84,9 @@ export default async function RootLayout({
           {/* min-w-0 : sans lui, l'item flex refuse de rétrécir sous la
               largeur intrinsèque de son contenu et la page déborde sur mobile. */}
           <main className="min-w-0 flex-1 px-4 pt-16 pb-24 md:px-8 md:py-10">
-            <div className="mx-auto w-full max-w-4xl">{children}</div>
+            <div className="mx-auto w-full max-w-4xl">
+              <SwipeTabs>{children}</SwipeTabs>
+            </div>
           </main>
         </div>
       </body>

@@ -19,6 +19,7 @@ import CommuteBanner from '@/components/CommuteBanner'
 import ReviewQueueCard from '@/components/ReviewQueueCard'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { createClient } from '@/lib/supabase/server'
+import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
 import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
@@ -79,6 +80,15 @@ export default async function ReviserPage() {
     )
     .eq('id', user.id)
     .maybeSingle()
+
+  // Avatar isolé : la colonne vient de 082_avatar.sql (peut-être pas encore
+  // passée) — requête à part pour ne pas faire échouer tout le reste.
+  const { data: avatarRow } = await supabase
+    .from('profiles')
+    .select('avatar')
+    .eq('id', user.id)
+    .maybeSingle()
+  const avatarUri = avatarDataUri(normalizeAvatarConfig(avatarRow?.avatar), 128)
 
   const grade = profile?.grade_level ?? null
 
@@ -337,6 +347,7 @@ export default async function ReviserPage() {
           contrôles), et enfin la grille des matières. */}
       <SubjectsHome
         firstName={firstName}
+        avatarUri={avatarUri}
         streak={streak}
         subjects={ofLevel}
         selected={selected}
@@ -359,23 +370,24 @@ export default async function ReviserPage() {
               subjects={examSubjects}
               chaptersBySubject={chaptersBySubject}
             />
+            {/* 4. Objectif examen (classes à examen) — remonté en accueil,
+                replié par défaut. */}
+            <ExamObjectiveToggle
+              title={EXAM_TITLES[grade] ?? 'Objectif examen'}
+              entries={examEntries}
+            />
             {/* Rappel contextuel : pendant le trajet, un temps mort = de l'XP. */}
             <CommuteBanner slots={commuteSlots} />
           </>
         }
       />
-      {/* Sous le programme : la file du jour (SRS + Revanche) en détail, puis
-          l'objectif examen replié (volet discret). */}
+      {/* Sous le programme : la file du jour (SRS + Revanche) en détail. */}
       <ReviewQueueCard
         total={queue.length}
         revanche={queue.filter((i) => i.in_revanche).length}
         subjects={[...countsBySubject(queue).entries()].sort(
           (a, b) => b[1] - a[1],
         )}
-      />
-      <ExamObjectiveToggle
-        title={EXAM_TITLES[grade] ?? 'Objectif examen'}
-        entries={examEntries}
       />
     </div>
   )

@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import Link from 'next/link'
-import { Check, Pencil, CalendarClock } from 'lucide-react'
+import { Check, Pencil, CalendarClock, ChevronDown, Settings } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { subjectTheme } from '@/lib/subject-style'
 import SubjectIcon from '@/components/SubjectIcon'
@@ -45,6 +45,74 @@ function StreakPill({ streak }: { streak: number }) {
         {streak}
       </span>
     </span>
+  )
+}
+
+// Avatar du header façon « bouton-menu » : l'avatar de l'élève, tapable, qui
+// déplie autour de lui les actions du profil (modifier ses matières, ouvrir son
+// compte). Replié par défaut pour libérer de la hauteur en haut de Réviser.
+function HeaderAvatar({
+  avatarUri,
+  onEdit,
+}: {
+  avatarUri: string
+  onEdit: () => void
+}) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div className="relative flex shrink-0 items-center">
+      <button
+        type="button"
+        onClick={() => {
+          sfx.tap()
+          setOpen((o) => !o)
+        }}
+        aria-label="Menu du profil"
+        aria-expanded={open}
+        className="relative size-14 shrink-0 overflow-hidden rounded-full bg-white shadow-md ring-2 ring-white/70 transition active:scale-95"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={avatarUri}
+          alt="Mon avatar"
+          className="size-full object-cover"
+        />
+        <span className="absolute right-0 bottom-0 flex size-5 items-center justify-center rounded-full bg-highlight text-foreground shadow ring-2 ring-white">
+          <ChevronDown
+            className={cn('size-3 transition-transform', open && 'rotate-180')}
+            aria-hidden="true"
+          />
+        </span>
+      </button>
+
+      {/* Les actions se déplient à droite de l'avatar. */}
+      <div
+        className={cn(
+          'flex items-center gap-2 overflow-hidden transition-all duration-200',
+          open ? 'ml-2 max-w-[120px] opacity-100' : 'max-w-0 opacity-0',
+        )}
+      >
+        <button
+          type="button"
+          onClick={() => {
+            setOpen(false)
+            onEdit()
+          }}
+          aria-label="Modifier mes matières"
+          className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-white ring-1 ring-white/30 transition hover:bg-white/25 active:scale-90"
+        >
+          <Pencil className="size-4" aria-hidden="true" />
+        </button>
+        <Link
+          href="/compte"
+          onClick={() => sfx.tap()}
+          aria-label="Mon compte"
+          className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-white ring-1 ring-white/30 transition hover:bg-white/25 active:scale-90"
+        >
+          <Settings className="size-4" aria-hidden="true" />
+        </Link>
+      </div>
+    </div>
   )
 }
 
@@ -201,6 +269,7 @@ function SubjectRow({
 // la liste des matières qui vient le chevaucher.
 export default function SubjectsHome({
   firstName,
+  avatarUri,
   streak,
   subjects,
   selected,
@@ -210,6 +279,7 @@ export default function SubjectsHome({
   topSlot,
 }: {
   firstName: string | null
+  avatarUri: string
   streak: number
   subjects: Subject[]
   selected: string[] | null
@@ -282,26 +352,27 @@ export default function SubjectsHome({
           className="rev-blob absolute -bottom-10 left-1/3 h-12 w-48 rotate-[-35deg] rounded-full"
         />
 
-        <div className="relative flex justify-end">
+        {/* Identité compacte : avatar-menu + salutation/classe + série, sur une
+            seule ligne pour gagner de la hauteur. */}
+        <div className="relative flex items-center gap-3">
+          <HeaderAvatar avatarUri={avatarUri} onEdit={() => setEditing(true)} />
+          <div className="min-w-0 flex-1">
+            <p className="truncate text-sm font-medium text-white/80">
+              {firstName ? `Bonjour ${firstName}` : 'Bonjour !'}
+            </p>
+            <div className="mt-1">
+              <GradeChip grade={grade} />
+            </div>
+          </div>
           <StreakPill streak={streak} />
         </div>
 
-        <div className="relative mt-4 flex items-center justify-between gap-3">
-          <h1 className="font-heading text-3xl font-bold text-balance">
-            {firstName ? `Bonjour ${firstName}` : 'Bonjour !'}
-          </h1>
-          <GradeChip grade={grade} />
-        </div>
-
-        <div className="relative mt-3 flex items-center justify-between gap-3">
-          {editing ? (
+        {/* En mode édition seulement : consigne + bouton Terminé. */}
+        {editing ? (
+          <div className="relative mt-3 flex items-center justify-between gap-3">
             <p className="text-sm text-white/85">
               Touche une matière pour l&apos;ajouter ou la retirer.
             </p>
-          ) : (
-            <span />
-          )}
-          {editing ? (
             <button
               type="button"
               onClick={finishEditing}
@@ -311,16 +382,8 @@ export default function SubjectsHome({
               <Check className="size-3.5" />
               {pending ? 'Enregistrement…' : 'Terminé'}
             </button>
-          ) : (
-            <button
-              type="button"
-              onClick={() => setEditing(true)}
-              className="flex shrink-0 items-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-semibold text-white transition hover:bg-white/20 active:translate-y-px"
-            >
-              <Pencil className="size-3" /> Modifier
-            </button>
-          )}
-        </div>
+          </div>
+        ) : null}
       </div>
 
       {/* Ce qui chevauche le bandeau : d'abord les blocs d'action (reprise,

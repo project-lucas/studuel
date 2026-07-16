@@ -28,7 +28,7 @@ export default function ResumeSessions({ items }: { items: ResumeItem[] }) {
       <h2 className="font-heading mb-2 px-1 text-sm font-bold tracking-wide text-muted-foreground uppercase">
         On s&apos;y remet ?
       </h2>
-      <ul className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0">
+      <ul className="hide-scrollbar -mx-4 flex gap-3 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0">
         {items.map((item) => {
           const theme = subjectTheme(item.subject.color)
           const pct = Math.round(item.progress * 100)

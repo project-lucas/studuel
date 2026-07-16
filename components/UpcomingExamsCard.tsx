@@ -6,6 +6,7 @@ import { createPortal } from 'react-dom'
 import { Target, Plus, Play, X, CalendarClock } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { subjectIcon } from '@/lib/subject-style'
 import { examCountdownLabel, type NextExam } from '@/lib/next-exam'
 import { removeUpcomingExam } from '@/app/moi/actions'
 import AddExamSheet, {
@@ -32,8 +33,6 @@ export default function UpcomingExamsCard({
 }) {
   const [adding, setAdding] = useState(false)
   const [pending, startTransition] = useTransition()
-
-  const iconBySlug = new Map(subjects.map((s) => [s.slug, s.icon]))
 
   function remove(chapterId: string) {
     sfx.tap()
@@ -94,13 +93,16 @@ export default function UpcomingExamsCard({
           {exams.map((exam) => {
             const countdown = examCountdownLabel(exam, today)
             const soon = exam.date !== null && countdown !== 'contrôle passé'
+            // Icône dessinée de la matière (lib/subject-style) : même rendu
+            // que la grille des matières et « Ma maîtrise », pas d'emoji brut.
+            const Icon = subjectIcon(exam.subject)
             return (
               <li
                 key={exam.chapterId}
                 className="flex items-center gap-3 rounded-2xl bg-muted/50 py-2.5 pr-2 pl-3"
               >
-                <span className="text-xl" aria-hidden="true">
-                  {iconBySlug.get(exam.subject) ?? '📘'}
+                <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <Icon className="size-4.5" strokeWidth={2} aria-hidden="true" />
                 </span>
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-bold text-foreground">

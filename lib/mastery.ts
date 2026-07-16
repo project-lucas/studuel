@@ -39,6 +39,36 @@ export function chapterState(p: ChapterProgress | undefined): ChapterState {
 
 export type MasteryRank = 'bronze' | 'argent' | 'or' | 'diamant' | 'legendaire'
 
+// Habillage des rangs pour l'UI (carnet, célébrations…) : un seul vocabulaire
+// visuel pour toute l'app.
+export const MASTERY_RANK_LABEL: Record<MasteryRank, string> = {
+  bronze: 'Bronze',
+  argent: 'Argent',
+  or: 'Or',
+  diamant: 'Diamant',
+  legendaire: 'Légendaire',
+}
+
+export const MASTERY_RANK_EMOJI: Record<MasteryRank, string> = {
+  bronze: '🥉',
+  argent: '🥈',
+  or: '🥇',
+  diamant: '💎',
+  legendaire: '🏆',
+}
+
+// Rang d'une valeur agrégée (moyenne de matière, 0..1) — mêmes paliers que
+// masteryRank, sans la nuance leçon/quiz qui n'a pas de sens sur une moyenne.
+// null tant que rien n'est commencé (pas de rang « vide » culpabilisant).
+export function rankForValue(value: number): MasteryRank | null {
+  if (value <= 0) return null
+  if (value >= 1) return 'legendaire'
+  if (value >= 0.9) return 'diamant'
+  if (value >= MASTERY_THRESHOLDS.mastered) return 'or'
+  if (value >= MASTERY_THRESHOLDS.fragile) return 'argent'
+  return 'bronze'
+}
+
 export function masteryRank(
   p: ChapterProgress | undefined,
 ): MasteryRank | null {

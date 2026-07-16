@@ -1,16 +1,11 @@
 'use client'
 
-import { useState } from 'react'
 import Link from 'next/link'
-import { createPortal } from 'react-dom'
 import { Plus, CalendarClock, Flame, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { examCountdownLabel, type NextExam } from '@/lib/next-exam'
-import AddExamSheet, {
-  type SubjectLite,
-  type ChapterLite,
-} from '@/components/AddExamSheet'
+import type { SubjectLite } from '@/components/AddExamSheet'
 
 // Jours de la semaine, lundi → dimanche (index 0 = lundi, cf. lib/streak).
 const DAY_LABELS = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
@@ -20,24 +15,21 @@ type WeekDay = { done: boolean; isToday: boolean; isFuture: boolean }
 // -----------------------------------------------------------------------------
 // Barre de semaine « sans contour » de l'onglet Réviser : la ligne des 7 jours
 // (activité de la semaine, aujourd'hui mis en avant) + un mini-planning du
-// prochain contrôle, avec un « + » pour en annoncer un nouveau. Remplace la
-// grosse carte « Mes contrôles à venir » sur Réviser (conservée telle quelle sur
-// Moi). Voir lib/streak.weekProgress et lib/next-exam.
+// prochain contrôle, en LECTURE SEULE. L'ajout/retrait de contrôles a un point
+// d'entrée unique : « Mes contrôles à venir » dans Mon carnet — le « + » d'ici
+// y renvoie au lieu d'ouvrir une deuxième feuille d'ajout.
 // -----------------------------------------------------------------------------
 export default function WeekPlannerStrip({
   week,
   exams,
   today,
   subjects,
-  chaptersBySubject,
 }: {
   week: WeekDay[]
   exams: NextExam[]
   today: string
   subjects: SubjectLite[]
-  chaptersBySubject: Record<string, ChapterLite[]>
 }) {
-  const [adding, setAdding] = useState(false)
   const iconBySlug = new Map(subjects.map((s) => [s.slug, s.icon]))
 
   // Le contrôle le plus proche (les dates nulles passent en dernier).
@@ -80,7 +72,7 @@ export default function WeekPlannerStrip({
         ))}
       </ul>
 
-      {/* Mini-planning : le prochain contrôle + bouton d'ajout. */}
+      {/* Mini-planning : le prochain contrôle + renvoi vers Mon carnet. */}
       <div className="mt-3 flex items-center gap-2">
         {next ? (
           <Link
@@ -111,34 +103,19 @@ export default function WeekPlannerStrip({
           </Link>
         ) : (
           <p className="min-w-0 flex-1 text-sm font-medium text-muted-foreground">
-            Aucun contrôle prévu — annonce-en un pour que le Défi le révise.
+            Aucun contrôle prévu — annonce-en un dans Mon carnet.
           </p>
         )}
 
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            setAdding(true)
-          }}
-          aria-label="Annoncer un nouveau contrôle"
+        <Link
+          href="/reviser?espace=carnet"
+          onClick={() => sfx.tap()}
+          aria-label="Annoncer un contrôle dans Mon carnet"
           className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm transition active:translate-y-px"
         >
           <Plus className="size-5" strokeWidth={2.8} aria-hidden="true" />
-        </button>
+        </Link>
       </div>
-
-      {adding && typeof document !== 'undefined'
-        ? createPortal(
-            <AddExamSheet
-              subjects={subjects}
-              chaptersBySubject={chaptersBySubject}
-              existing={new Set(exams.map((e) => e.chapterId))}
-              onClose={() => setAdding(false)}
-            />,
-            document.body,
-          )
-        : null}
     </section>
   )
 }

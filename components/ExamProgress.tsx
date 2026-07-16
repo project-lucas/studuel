@@ -119,12 +119,16 @@ export default function ExamProgress({
         })}
       </ul>
 
-      {/* La progression se mesure en conditions réelles : l'examen blanc. */}
-      <Button asChild variant="outline" className="mt-4 w-full rounded-full">
-        <Link href="/reviser/examen-blanc">
-          <AlarmClock className="size-4" /> Passer un examen blanc
-        </Link>
-      </Button>
+      {/* La progression se mesure en conditions réelles : l'examen blanc.
+          Masqué en mode embarqué (Mon carnet) : la carte « Examen blanc »
+          voisine est LE point d'entrée — pas deux accès côte à côte. */}
+      {!embedded ? (
+        <Button asChild variant="outline" className="mt-4 w-full rounded-full">
+          <Link href="/reviser/examen-blanc">
+            <AlarmClock className="size-4" /> Passer un examen blanc
+          </Link>
+        </Button>
+      ) : null}
     </>
   )
 

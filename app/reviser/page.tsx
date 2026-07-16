@@ -10,6 +10,10 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import SubjectsHome from '@/components/SubjectsHome'
+import ReviserSpaces from '@/components/ReviserSpaces'
+import CarnetMastery from '@/components/CarnetMastery'
+import CarnetExamBlanc from '@/components/CarnetExamBlanc'
+import UpcomingExamsCard from '@/components/UpcomingExamsCard'
 import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
 import ReviserTools from '@/components/ReviserTools'
 import WeekPlannerStrip from '@/components/WeekPlannerStrip'
@@ -349,6 +353,22 @@ export default async function ReviserPage() {
   }
   examSubjects.sort((a, b) => a.name.localeCompare(b.name, 'fr'))
 
+  // --- Espace « Mon carnet » : les données scolaires de l'élève -----------------
+  // Maîtrise par matière suivie + chapitres les plus fragiles à consolider.
+  const masteryEntries = followed.map((s) => ({
+    slug: s.slug,
+    name: s.name,
+    icon: s.icon,
+    pct: progressBySlug[s.slug] ?? 0,
+  }))
+  const fragileChapters = fragiles.slice(0, 4).map((a) => ({
+    subjectSlug: a.subject.slug,
+    subjectIcon: a.subject.icon,
+    chapterId: a.chapterId,
+    chapterTitle: a.chapterTitle,
+    pct: Math.round(a.value * 100),
+  }))
+
   return (
     <div className="flex flex-col gap-4">
       {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
@@ -359,55 +379,87 @@ export default async function ReviserPage() {
           pct: progressBySlug[s.slug] ?? 0,
         }))}
       />
-      {/* Accueil façon carnet : bandeau de salutation (prénom, classe, série),
-          puis les blocs d'action qui chevauchent le bandeau (reprise, outils,
-          contrôles), et enfin la grille des matières. */}
-      <SubjectsHome
-        firstName={firstName}
-        avatarUri={avatarUri}
-        streak={streak}
-        subjects={ofLevel}
-        selected={selected}
-        grade={grade}
-        progressBySlug={progressBySlug}
-        examBySubject={examBySubject}
-        topSlot={
-          <>
-            {/* 1. On s'y remet — reprendre la dernière session en un tap. */}
-            <ResumeSessions items={resumeItems} />
-            {/* 2. Tes outils — revoir ses erreurs, ouvrir sa bibliothèque. */}
-            <ReviserTools reviewCount={queue.length} />
-            {/* 3. Ta semaine — barre d'activité fine + mini-planning du prochain
-                contrôle, avec « + » pour en annoncer un (remplace la grosse
-                carte, conservée sur Moi). */}
-            <WeekPlannerStrip
-              week={week}
+      {/* Deux espaces façon Decks / Collection : « Mes matières » (le
+          programme) et « Mon carnet » (les données scolaires : contrôles,
+          maîtrise, préparation examen — les chiffres d'activité vivent sur
+          l'onglet Moi, pas ici). */}
+      <ReviserSpaces
+        reviser={
+          <div className="flex flex-col gap-4">
+            {/* Accueil façon carnet : bandeau de salutation (prénom, classe,
+                série), puis les blocs d'action qui chevauchent le bandeau
+                (reprise, file du jour, bibliothèque), et enfin la grille des
+                matières. */}
+            <SubjectsHome
+              firstName={firstName}
+              avatarUri={avatarUri}
+              streak={streak}
+              subjects={ofLevel}
+              selected={selected}
+              grade={grade}
+              progressBySlug={progressBySlug}
+              examBySubject={examBySubject}
+              underHeader={false}
+              topSlot={
+                <>
+                  {/* 1. On s'y remet — reprendre la dernière session en un tap. */}
+                  <ResumeSessions items={resumeItems} />
+                  {/* 2. À revoir aujourd'hui — LA porte de la file SRS +
+                      Revanche (entrée unique, l'ancienne tuile jumelle des
+                      outils a été retirée). Absente si la file est vide. */}
+                  <ReviewQueueCard
+                    total={queue.length}
+                    revanche={queue.filter((i) => i.in_revanche).length}
+                    subjects={[...countsBySubject(queue).entries()].sort(
+                      (a, b) => b[1] - a[1],
+                    )}
+                  />
+                  {/* 3. Ma bibliothèque — fiches, quiz, flashcards. */}
+                  <ReviserTools />
+                  {/* 4. Ta semaine — barre d'activité + prochain contrôle en
+                      lecture seule ; l'ajout vit dans Mon carnet. */}
+                  <WeekPlannerStrip
+                    week={week}
+                    exams={upcomingExams}
+                    today={today}
+                    subjects={examSubjects}
+                  />
+                  {/* Rappel contextuel : pendant le trajet, un temps mort = de
+                      l'XP. */}
+                  <CommuteBanner slots={commuteSlots} />
+                </>
+              }
+            />
+          </div>
+        }
+        carnet={
+          <div className="flex flex-col gap-4">
+            {/* Une ligne d'intro : dire à l'élève ce qu'est ce carnet. */}
+            <p className="px-1 text-sm text-muted-foreground">
+              Ton carnet de bord scolaire : tes contrôles, ta maîtrise par
+              matière et ta préparation d&apos;examen.
+            </p>
+            {/* 1. Mes contrôles à venir — LE point d'ajout/retrait (unique). */}
+            <UpcomingExamsCard
               exams={upcomingExams}
               today={today}
               subjects={examSubjects}
               chaptersBySubject={chaptersBySubject}
             />
-            {/* 4. Objectif examen (classes à examen) — remonté en accueil,
-                replié par défaut, avec conseil adaptatif. */}
+            {/* 2. Ma maîtrise — rangs par matière + chapitres à progresser. */}
+            <CarnetMastery entries={masteryEntries} fragiles={fragileChapters} />
+            {/* 3. L'examen blanc — remonté sous la maîtrise (on voit son
+                niveau, on le teste en conditions réelles). */}
+            <CarnetExamBlanc />
+            {/* 4. Préparation examen : objectif par matière (classes à examen)
+                et descriptif de l'oral (1re français). */}
             <ExamObjectiveToggle
               title={EXAM_TITLES[grade] ?? 'Objectif examen'}
               entries={examEntries}
             />
-            {/* 4bis. Descriptif de l'oral (1re français) : la liste des textes
-                à présenter, suivie texte par texte. */}
             {hasFrenchOral ? <OralTextsCard initial={oralTexts} /> : null}
-            {/* Rappel contextuel : pendant le trajet, un temps mort = de l'XP. */}
-            <CommuteBanner slots={commuteSlots} />
-          </>
+          </div>
         }
-      />
-      {/* Sous le programme : la file du jour (SRS + Revanche) en détail. */}
-      <ReviewQueueCard
-        total={queue.length}
-        revanche={queue.filter((i) => i.in_revanche).length}
-        subjects={[...countsBySubject(queue).entries()].sort(
-          (a, b) => b[1] - a[1],
-        )}
       />
     </div>
   )

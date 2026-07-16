@@ -1,5 +1,10 @@
 import { describe, it, expect } from 'vitest'
-import { masteryRank, chapterState, type ChapterProgress } from '@/lib/mastery'
+import {
+  masteryRank,
+  rankForValue,
+  chapterState,
+  type ChapterProgress,
+} from '@/lib/mastery'
 
 const p = (
   value: number,
@@ -36,6 +41,21 @@ describe('masteryRank', () => {
     expect(masteryRank(p(0.79))).toBe('argent')
     expect(masteryRank(p(0.89))).toBe('or')
     expect(masteryRank(p(0.99))).toBe('diamant')
+  })
+})
+
+describe('rankForValue', () => {
+  it('pas de rang tant que la moyenne est nulle', () => {
+    expect(rankForValue(0)).toBeNull()
+    expect(rankForValue(-0.1)).toBeNull()
+  })
+
+  it('mêmes paliers que masteryRank sur la valeur', () => {
+    expect(rankForValue(0.1)).toBe('bronze')
+    expect(rankForValue(0.5)).toBe('argent')
+    expect(rankForValue(0.8)).toBe('or')
+    expect(rankForValue(0.9)).toBe('diamant')
+    expect(rankForValue(1)).toBe('legendaire')
   })
 })
 

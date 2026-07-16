@@ -277,6 +277,7 @@ export default function SubjectsHome({
   progressBySlug,
   examBySubject = {},
   topSlot,
+  underHeader = true,
 }: {
   firstName: string | null
   avatarUri: string
@@ -289,6 +290,10 @@ export default function SubjectsHome({
   // Blocs insérés entre le hero et la grille des matières (reprise, outils,
   // contrôles…) — rendus côté serveur et passés en enfant.
   topSlot?: React.ReactNode
+  // Vrai (défaut) : le bandeau file sous la barre du haut, bord à bord.
+  // Faux : un élément (ex. le sélecteur d'espaces) vit au-dessus — le bandeau
+  // reste bord à bord mais ne remonte plus sous la barre.
+  underHeader?: boolean
 }) {
   const [editing, setEditing] = useState(false)
   const [picked, setPicked] = useState<Set<string>>(
@@ -337,7 +342,11 @@ export default function SubjectsHome({
 
       {/* Bandeau violet : bord à bord sur mobile (il file sous la barre du
           haut), carte arrondie sur desktop. */}
-      <div className="rev-hero relative -mx-4 -mt-16 overflow-hidden px-5 pt-20 pb-16 text-white md:mx-0 md:mt-0 md:rounded-3xl md:px-7 md:pt-7">
+      <div
+        className={`rev-hero relative overflow-hidden px-5 pb-16 text-white md:mx-0 md:mt-0 md:rounded-3xl md:px-7 md:pt-7 ${
+          underHeader ? '-mx-4 -mt-16 pt-20' : 'mx-0 mt-0 rounded-3xl pt-7'
+        }`}
+      >
         {/* Capsules décoratives, violet plus clair — comme la maquette. */}
         <span
           aria-hidden="true"

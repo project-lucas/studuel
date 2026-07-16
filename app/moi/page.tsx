@@ -22,10 +22,15 @@ import StructureChart, { type WeekPoint } from '@/components/StructureChart'
 import BadgeGrid from '@/components/BadgeGrid'
 import WeeklyRecapCard from '@/components/WeeklyRecapCard'
 import MilestonesTimeline from '@/components/MilestonesTimeline'
+import WeeklyGoalsCard from '@/components/WeeklyGoalsCard'
 import { createClient } from '@/lib/supabase/server'
 import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
 import { computeWeeklyRecap } from '@/lib/weekly-recap'
 import { computeMilestones } from '@/lib/milestones'
+import {
+  normalizeWeeklyGoalsList,
+  goalsForWeek,
+} from '@/lib/weekly-goals'
 import {
   syncAutoHabits,
   isInCommuteSlot,
@@ -379,6 +384,20 @@ export default async function MoiPage({
       total: t.total,
     })),
   )
+  // Objectifs perso de la semaine : colonne isolée (migration 157 peut-être pas
+  // passée) — son absence ne casse pas le reste (liste vide, dégradé propre).
+  const weekStart = weekDates[0]
+  const { data: goalsRow } = await supabase
+    .from('profiles')
+    .select('weekly_goals')
+    .eq('id', user.id)
+    .maybeSingle()
+  const weekGoals = goalsForWeek(
+    normalizeWeeklyGoalsList(
+      (goalsRow as { weekly_goals?: unknown } | null)?.weekly_goals,
+    ),
+    weekStart,
+  )
   // Journal de progression : jalons horodatés reconstruits sur les données déjà
   // chargées (sessions + jours d'activité), du plus récent au plus ancien.
   const milestones = computeMilestones({
@@ -533,6 +552,8 @@ export default async function MoiPage({
           <div className="flex flex-col gap-4">
             {/* Rétro hebdo : la semaine en cours résumée en chiffres. */}
             <WeeklyRecapCard recap={weeklyRecap} />
+            {/* Objectifs perso de la semaine (1 à 3, reset lundi). */}
+            <WeeklyGoalsCard initial={weekGoals} weekStart={weekStart} />
             <WeekSection
               week={week}
               streak={currentStreak}

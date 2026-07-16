@@ -15,6 +15,10 @@ import { normalizeAvatarConfig } from '@/lib/avatar'
 import { toDayKey } from '@/lib/streak'
 import { GRADE_LEVELS } from '@/lib/types'
 import { normalizeNextExam } from '@/lib/next-exam'
+import {
+  normalizeWeeklyGoalsList,
+  type WeeklyGoal,
+} from '@/lib/weekly-goals'
 import type { CommuteSlot, Habit } from '@/lib/types'
 
 // Le client Supabase tel que renvoyé par notre createClient serveur.
@@ -431,4 +435,70 @@ export async function saveCommuteSlots(formData: FormData): Promise<void> {
     .eq('id', userId)
   if (error) console.error('[moi] créneaux de trajet non enregistrés:', error.message)
   revalidatePath('/moi')
+}
+
+// --- Objectifs perso de la semaine — migration 157 ---------------------------
+// Les 3 écritures passent par des RPC atomiques (read-modify-write sous
+// FOR UPDATE, modèle 087/156). Chacune renvoie { ok, goals } : la liste
+// normalisée revient à l'UI pour rester synchro sans re-fetch. Si 157 n'est pas
+// passée, la RPC est absente → { ok:false } (pas de faux succès), goals = [].
+type GoalsResult = { ok: boolean; goals: WeeklyGoal[] }
+
+// Ajoute un objectif à la semaine `week` (clé du lundi 'YYYY-MM-DD'). L'id et
+// l'état non coché sont posés en base ; les objectifs des autres semaines sont
+// purgés (reset hebdo).
+export async function addWeeklyGoalAction(
+  text: string,
+  week: string,
+): Promise<GoalsResult> {
+  const { supabase, userId } = await requireUser()
+  if (!userId) return { ok: false, goals: [] }
+
+  const cleanText = typeof text === 'string' ? text.trim() : ''
+  if (cleanText.length === 0 || !/^\d{4}-\d{2}-\d{2}$/.test(week)) {
+    return { ok: false, goals: [] }
+  }
+
+  const { data, error } = await supabase.rpc('add_weekly_goal', {
+    p_text: cleanText,
+    p_week: week,
+  })
+  if (error) {
+    console.error('[moi] objectif non ajouté:', error.message)
+    return { ok: false, goals: [] }
+  }
+  revalidatePath('/moi')
+  return { ok: true, goals: normalizeWeeklyGoalsList(data) }
+}
+
+// Coche / décoche un objectif.
+export async function toggleWeeklyGoalAction(id: string): Promise<GoalsResult> {
+  const { supabase, userId } = await requireUser()
+  if (!userId || typeof id !== 'string' || id.length === 0) {
+    return { ok: false, goals: [] }
+  }
+
+  const { data, error } = await supabase.rpc('toggle_weekly_goal', { p_id: id })
+  if (error) {
+    console.error('[moi] objectif non basculé:', error.message)
+    return { ok: false, goals: [] }
+  }
+  revalidatePath('/moi')
+  return { ok: true, goals: normalizeWeeklyGoalsList(data) }
+}
+
+// Retire un objectif.
+export async function removeWeeklyGoalAction(id: string): Promise<GoalsResult> {
+  const { supabase, userId } = await requireUser()
+  if (!userId || typeof id !== 'string' || id.length === 0) {
+    return { ok: false, goals: [] }
+  }
+
+  const { data, error } = await supabase.rpc('remove_weekly_goal', { p_id: id })
+  if (error) {
+    console.error('[moi] objectif non retiré:', error.message)
+    return { ok: false, goals: [] }
+  }
+  revalidatePath('/moi')
+  return { ok: true, goals: normalizeWeeklyGoalsList(data) }
 }

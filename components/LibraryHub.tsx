@@ -8,6 +8,7 @@ import {
   ListChecks,
   Network,
   Plus,
+  Pencil,
   Trash2,
   ChevronRight,
 } from 'lucide-react'
@@ -137,8 +138,13 @@ export default function LibraryHub({ items }: { items: LibraryRow[] }) {
                       key={item.id}
                       className="flex items-center gap-2 rounded-2xl bg-white p-2 pl-3 shadow-sm ring-1 ring-black/5"
                     >
+                      {/* Prêt → on ouvre la vue lecture/jeu ; brouillon → l'éditeur. */}
                       <Link
-                        href={`/reviser/bibliotheque/${item.id}`}
+                        href={
+                          item.ready
+                            ? `/reviser/bibliotheque/${item.id}/jouer`
+                            : `/reviser/bibliotheque/${item.id}`
+                        }
                         onClick={() => sfx.tap()}
                         className="flex min-w-0 flex-1 items-center gap-2"
                       >
@@ -152,13 +158,25 @@ export default function LibraryHub({ items }: { items: LibraryRow[] }) {
                               item.ready ? 'text-primary' : 'text-muted-foreground',
                             )}
                           >
-                            {item.ready ? 'Prêt' : 'Brouillon'}
+                            {item.ready
+                              ? item.kind === 'quiz'
+                                ? 'Prêt · toucher pour jouer'
+                                : 'Prêt · toucher pour lire'
+                              : 'Brouillon'}
                           </span>
                         </span>
                         <ChevronRight
                           className="size-4 shrink-0 text-muted-foreground"
                           aria-hidden="true"
                         />
+                      </Link>
+                      <Link
+                        href={`/reviser/bibliotheque/${item.id}`}
+                        onClick={() => sfx.tap()}
+                        aria-label={`Modifier ${item.title}`}
+                        className="flex size-9 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted active:scale-90"
+                      >
+                        <Pencil className="size-4" aria-hidden="true" />
                       </Link>
                       <button
                         type="button"

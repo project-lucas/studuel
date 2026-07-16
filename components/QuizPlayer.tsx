@@ -34,12 +34,17 @@ export default function QuizPlayer({
   questions,
   subject = null,
   backHref = '/reviser',
+  record = true,
 }: {
   quizId: string
   title: string
   questions: QuizQuestion[]
   subject?: string | null
   backHref?: string
+  // `false` pour un quiz PERSONNEL (bibliothèque) : on ne l'enregistre pas comme
+  // une session de catalogue (quiz_id absent de `quizzes` → violerait la FK) et
+  // il ne doit pas gonfler l'XP / la file « À revoir ».
+  record?: boolean
 }) {
   const [index, setIndex] = useState(0)
   // Choix de l'élève, question par question — la correction se lit dedans.
@@ -71,6 +76,8 @@ export default function QuizPlayer({
     )
     setFinished(true)
     sfx.complete()
+    // Quiz personnel (bibliothèque) : on ne persiste rien (ni session, ni SRS).
+    if (!record) return
     // Enregistre la session côté serveur (série, XP, anneau de la leçon).
     recordTestSession(quizId, score, questions.length)
       .then((r) => setSaved(r.saved))

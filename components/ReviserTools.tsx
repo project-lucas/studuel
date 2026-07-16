@@ -36,8 +36,8 @@ export default function ReviserTools({
     },
     {
       href: '/reviser/bibliotheque',
-      label: 'Voir ma bibliothèque',
-      hint: 'Fiches, quiz, flashcards',
+      label: 'Ma bibliothèque',
+      hint: 'Crée fiches, quiz, cartes',
       icon: Library,
       tile: 'bg-highlight/25 text-foreground',
     },

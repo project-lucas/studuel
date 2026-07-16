@@ -20,8 +20,10 @@ import DebriefCard from '@/components/DebriefCard'
 import GradeSelector from '@/components/GradeSelector'
 import StructureChart, { type WeekPoint } from '@/components/StructureChart'
 import BadgeGrid from '@/components/BadgeGrid'
+import WeeklyRecapCard from '@/components/WeeklyRecapCard'
 import { createClient } from '@/lib/supabase/server'
 import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
+import { computeWeeklyRecap } from '@/lib/weekly-recap'
 import {
   syncAutoHabits,
   isInCommuteSlot,
@@ -364,6 +366,17 @@ export default async function MoiPage({
   // Bloc 1 : la semaine en cours (L→D) et la série vivante.
   const currentStreak = computeStreak(activityDays)
   const week = weekProgress(activityDays)
+  // Bilan hebdo : les chiffres marquants de la semaine courante (sessions, jours
+  // actifs, moyenne aux quiz), calculés sur les données déjà chargées.
+  const weeklyRecap = computeWeeklyRecap(
+    weekDates[0],
+    allActivity.map((s) => String(s.created_at).slice(0, 10)),
+    (tests ?? []).map((t) => ({
+      date: String(t.created_at).slice(0, 10),
+      score: t.score,
+      total: t.total,
+    })),
+  )
   const sessionsPerDay = new Map<string, number>()
   for (const s of allActivity) {
     const key = String(s.created_at).slice(0, 10)
@@ -503,17 +516,21 @@ export default async function MoiPage({
           d'être empilé : Ma semaine · Compagnon · Progrès. Fini le scroll. */}
       <MoiTabs
         semaine={
-          <WeekSection
-            week={week}
-            streak={currentStreak}
-            weekDates={weekDates}
-            todayIdx={dayIndexOf(today)}
-            habits={activeHabits}
-            catalog={catalog ?? []}
-            doneByDate={doneByDate}
-            dayStatuses={dayStatuses}
-            commuteSlots={commuteSlots}
-          />
+          <div className="flex flex-col gap-4">
+            {/* Rétro hebdo : la semaine en cours résumée en chiffres. */}
+            <WeeklyRecapCard recap={weeklyRecap} />
+            <WeekSection
+              week={week}
+              streak={currentStreak}
+              weekDates={weekDates}
+              todayIdx={dayIndexOf(today)}
+              habits={activeHabits}
+              catalog={catalog ?? []}
+              doneByDate={doneByDate}
+              dayStatuses={dayStatuses}
+              commuteSlots={commuteSlots}
+            />
+          </div>
         }
         compagnon={
           <CompagnonCard

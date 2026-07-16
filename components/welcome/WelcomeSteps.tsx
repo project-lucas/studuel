@@ -15,6 +15,7 @@ import {
   type ProfileType,
   type Source,
 } from '@/lib/welcome'
+import { schoolLevelForGrade, SCHOOL_LEVEL_LABEL } from '@/lib/clan'
 import PencilLogo from './PencilLogo'
 import { Bubble, OptionIcon, OptionRow, StepHead, usePressFx } from './OnbBits'
 
@@ -301,6 +302,52 @@ export function GradeStep({
             onPick={() => onPick(g)}
           />
         ))}
+      </div>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Écran 6bis — Ton établissement = ton clan
+// ---------------------------------------------------------------------------
+export function SchoolStep({
+  answers,
+  onChange,
+}: {
+  answers: OnboardingAnswers
+  onChange: (name: string | null, city: string | null) => void
+}) {
+  const level = schoolLevelForGrade(answers.grade)
+  const word = SCHOOL_LEVEL_LABEL[level].toLowerCase()
+  return (
+    <div className="flex flex-1 flex-col">
+      <StepHead
+        title={`Ton ${word}, c’est ton clan`}
+        subtitle="Tu grimperas au classement avec les élèves de ton établissement. Tu pourras le changer plus tard."
+      />
+      <div className="flex flex-col gap-3 pt-6">
+        <input
+          value={answers.schoolName ?? ''}
+          onChange={(e) => onChange(e.target.value || null, answers.schoolCity)}
+          placeholder={`Nom de ton ${word}`}
+          aria-label={`Nom de ton ${word}`}
+          maxLength={120}
+          className="w-full rounded-2xl border-2 bg-white px-4 py-3 text-[15px] font-semibold outline-none"
+          style={{ borderColor: 'var(--onb-line)' }}
+        />
+        <input
+          value={answers.schoolCity ?? ''}
+          onChange={(e) => onChange(answers.schoolName, e.target.value || null)}
+          placeholder="Ville (facultatif)"
+          aria-label="Ville de ton établissement"
+          maxLength={80}
+          className="w-full rounded-2xl border-2 bg-white px-4 py-3 text-[15px] font-semibold outline-none"
+          style={{ borderColor: 'var(--onb-line)' }}
+        />
+        <p className="px-1 text-[13px] font-semibold" style={{ color: 'var(--onb-mut)' }}>
+          Pas envie maintenant ? Passe cette étape, tu choisiras ton clan depuis
+          le Défi.
+        </p>
       </div>
     </div>
   )

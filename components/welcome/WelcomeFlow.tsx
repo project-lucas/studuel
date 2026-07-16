@@ -29,6 +29,7 @@ import {
   GradeStep,
   MotivationStep,
   ProfilStep,
+  SchoolStep,
   SourceStep,
   SubjectsStep,
 } from './WelcomeSteps'
@@ -49,6 +50,7 @@ const STANDARD_FOOTER: WelcomeStep[] = [
   'source',
   'goal',
   'grade',
+  'school',
   'subjects',
   'dailyGoal',
 ]
@@ -117,6 +119,8 @@ export default function WelcomeFlow({
       case 'goal':
         return go('grade')
       case 'grade':
+        return go('school')
+      case 'school':
         return go('subjects')
       case 'subjects':
         return go('dailyGoal')
@@ -231,6 +235,15 @@ export default function WelcomeFlow({
                 grade,
                 subjects: defaultSelectedForGrade(subjects, grade),
               }))
+            }
+          />
+        )
+      case 'school':
+        return (
+          <SchoolStep
+            answers={answers}
+            onChange={(schoolName, schoolCity) =>
+              setAnswers((a) => ({ ...a, schoolName, schoolCity }))
             }
           />
         )

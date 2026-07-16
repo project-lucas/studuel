@@ -44,6 +44,10 @@ export type OnboardingAnswers = {
   placement: PlacementResult
   friendsInvited: boolean
   notificationsEnabled: boolean
+  // École = clan (choisie à l'écran « ton établissement »). Appliquée APRÈS la
+  // création du compte (l'onboarding est pré-auth), d'où le stockage en brouillon.
+  schoolName: string | null
+  schoolCity: string | null
 }
 
 export const EMPTY_ANSWERS: OnboardingAnswers = {
@@ -56,6 +60,8 @@ export const EMPTY_ANSWERS: OnboardingAnswers = {
   placement: null,
   friendsInvited: false,
   notificationsEnabled: false,
+  schoolName: null,
+  schoolCity: null,
 }
 
 // Ordre des 14 écrans (numérotation du design handoff en commentaire).
@@ -66,6 +72,7 @@ export const WELCOME_STEPS = [
   'source', //          4. Comment tu nous as connu ?
   'goal', //            5. Objectif n°1
   'grade', //           6. Ta classe
+  'school', //          6bis. Ton établissement = ton clan
   'subjects', //        7. Matières (choix multiple)
   'dailyGoal', //       8. Objectif quotidien (minutes)
   'placementIntro', //  9. Placement — intro
@@ -84,6 +91,7 @@ const STEP_PROGRESS: Partial<Record<WelcomeStep, number>> = {
   source: 0.12,
   goal: 0.24,
   grade: 0.36,
+  school: 0.42,
   subjects: 0.48,
   dailyGoal: 0.6,
   placementIntro: 0.7,
@@ -274,6 +282,14 @@ export function parseAnswers(raw: string | null): OnboardingAnswers {
   const placement = readPlacement(d.placement)
   const friendsInvited = d.friendsInvited === true
   const notificationsEnabled = d.notificationsEnabled === true
+  const schoolName =
+    typeof d.schoolName === 'string' && d.schoolName.trim().length > 0
+      ? d.schoolName.trim().slice(0, 120)
+      : null
+  const schoolCity =
+    typeof d.schoolCity === 'string' && d.schoolCity.trim().length > 0
+      ? d.schoolCity.trim().slice(0, 80)
+      : null
 
   return {
     profileType,
@@ -285,6 +301,8 @@ export function parseAnswers(raw: string | null): OnboardingAnswers {
     placement,
     friendsInvited,
     notificationsEnabled,
+    schoolName,
+    schoolCity,
   }
 }
 

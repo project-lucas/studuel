@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { GRADE_LEVELS } from '@/lib/types'
+import { schoolLevelForGrade } from '@/lib/clan'
 import {
   ensurePlacement,
   PLACEMENT_SIZE,
@@ -142,6 +143,28 @@ export async function signUpWelcome(input: {
     }
   }
 
+  // Compte créé avec session : on rattache l'école-clan tout de suite (le cycle
+  // découle de la classe). Best-effort — sans incidence si 159 n'est pas passée.
+  const schoolName = typeof a.schoolName === 'string' ? a.schoolName.trim() : ''
+  if (grade && schoolName.length > 0) {
+    const level = schoolLevelForGrade(grade)
+    const city =
+      typeof a.schoolCity === 'string' && a.schoolCity.trim().length > 0
+        ? a.schoolCity.trim()
+        : null
+    const { data: schoolId } = await supabase.rpc('find_or_create_school', {
+      p_name: schoolName,
+      p_city: city,
+      p_level: level,
+    })
+    if (schoolId) {
+      await supabase.rpc('set_my_school', {
+        p_school_id: String(schoolId),
+        p_level: level,
+      })
+    }
+  }
+
   revalidatePath('/', 'layout')
   return { status: 'session' }
 }
@@ -228,6 +251,32 @@ export async function applyOnboarding(
     .eq('id', user.id)
 
   if (error) return { ok: false }
+
+  // École = clan : si l'élève a renseigné son établissement, on le crée/retrouve
+  // et on l'y rattache (le cycle découle de sa classe). Best-effort : un échec
+  // (migration 159 absente) ne compromet pas l'onboarding.
+  const schoolName =
+    typeof answers.schoolName === 'string' ? answers.schoolName.trim() : ''
+  if (grade && schoolName.length > 0) {
+    const level = schoolLevelForGrade(grade)
+    const city =
+      typeof answers.schoolCity === 'string' && answers.schoolCity.trim().length > 0
+        ? answers.schoolCity.trim()
+        : null
+    const { data: schoolId } = await supabase.rpc('find_or_create_school', {
+      p_name: schoolName,
+      p_city: city,
+      p_level: level,
+    })
+    if (schoolId) {
+      await supabase.rpc('set_my_school', {
+        p_school_id: String(schoolId),
+        p_level: level,
+      })
+    }
+  }
+
   revalidatePath('/', 'layout')
   return { ok: true }
 }
+

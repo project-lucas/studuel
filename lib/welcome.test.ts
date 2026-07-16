@@ -41,6 +41,8 @@ const FILLED: OnboardingAnswers = {
   placement: makePlacement(4, 5),
   friendsInvited: true,
   notificationsEnabled: true,
+  schoolName: 'Collège Jean Moulin',
+  schoolCity: 'Lyon',
 }
 
 describe('subjectsForGrade', () => {

@@ -108,6 +108,67 @@ export function schoolTotalSeconds(mates: SchoolMate[]): number {
   return mates.reduce((sum, m) => sum + Math.max(0, m.seconds), 0)
 }
 
+// --- Backend réel (migration 160) : « en direct » + « mon école » ------------
+
+// Texte d'activité selon le type de session renvoyé par friends_live.
+export const LIVE_KIND_LABEL: Record<string, { activity: string; subject: string }> = {
+  defi: { activity: 'fait un défi', subject: 'Défi' },
+  quiz: { activity: 'joue un quiz', subject: 'Quiz' },
+  revision: { activity: 'révise', subject: 'Révision' },
+  lecon: { activity: 'revoit une leçon', subject: 'Leçon' },
+}
+
+// Construit les sessions « en direct » à partir des lignes de la RPC
+// friends_live ({ friend_id, full_name, kind, minutes }). Pur → testable.
+export function buildLiveSessions(rows: unknown): LiveSession[] {
+  if (!Array.isArray(rows)) return []
+  return rows.flatMap((r) => {
+    const o = (r ?? {}) as Record<string, unknown>
+    const id = String(o.friend_id ?? '')
+    if (id.length === 0) return []
+    const label = LIVE_KIND_LABEL[String(o.kind ?? '')] ?? LIVE_KIND_LABEL.revision
+    return [
+      {
+        friend: {
+          id,
+          name: String(o.full_name ?? 'Ami').split(' ')[0] || 'Ami',
+          emoji: avatarEmojiFor(id),
+          level: 0,
+        },
+        activity: label.activity,
+        subject: label.subject,
+        minutes: Math.max(0, Number(o.minutes) || 0),
+      },
+    ]
+  })
+}
+
+// Construit le tableau « mon école » à partir du JSONB de la RPC clan_mates
+// ({ school_name, mates:[{ id, name, seconds }] }). Marque l'élève courant.
+export function buildSchoolBoard(raw: unknown, myId: string): SchoolBoard {
+  const o = (raw ?? {}) as Record<string, unknown>
+  const matesRaw = Array.isArray(o.mates) ? o.mates : []
+  const mates: SchoolMate[] = matesRaw.flatMap((m) => {
+    const mo = (m ?? {}) as Record<string, unknown>
+    const id = String(mo.id ?? '')
+    if (id.length === 0) return []
+    return [
+      {
+        id,
+        name: id === myId ? 'Toi' : String(mo.name ?? 'Élève'),
+        emoji: avatarEmojiFor(id),
+        seconds: Math.max(0, Number(mo.seconds) || 0),
+        isMe: id === myId,
+      },
+    ]
+  })
+  return {
+    name: typeof o.school_name === 'string' ? o.school_name : '',
+    emoji: '🏫',
+    mates: sortSchool(mates),
+  }
+}
+
 // La ligue hebdomadaire : les 5 premiers montent, les 5 derniers descendent.
 export const LEAGUE_PROMOTE = 5
 export const LEAGUE_RELEGATE = 5

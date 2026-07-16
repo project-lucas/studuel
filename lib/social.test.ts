@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import {
+  buildLiveSessions,
+  buildSchoolBoard,
   leagueZone,
   sortLeague,
   sortSchool,
@@ -212,5 +214,53 @@ describe('sortStreaks', () => {
       { id: 'a', name: 'Ana', emoji: '🦉', streak: 4 },
     ]
     expect(sortStreaks(tie).map((e) => e.name)).toEqual(['Ana', 'Zoé'])
+  })
+})
+
+describe('buildLiveSessions', () => {
+  it('mappe les lignes friends_live en sessions (type → activité)', () => {
+    const sessions = buildLiveSessions([
+      { friend_id: 'f1', full_name: 'Léa Martin', kind: 'defi', minutes: 3 },
+      { friend_id: 'f2', full_name: 'Rayan', kind: 'quiz', minutes: 12 },
+      { friend_id: 'f3', full_name: 'Inès', kind: 'inconnu', minutes: 0 },
+    ])
+    expect(sessions).toHaveLength(3)
+    expect(sessions[0].friend.name).toBe('Léa') // prénom seul
+    expect(sessions[0].activity).toBe('fait un défi')
+    expect(sessions[0].minutes).toBe(3)
+    expect(sessions[1].subject).toBe('Quiz')
+    // Type inconnu → repli sur « révise ».
+    expect(sessions[2].activity).toBe('révise')
+  })
+
+  it('jette les lignes sans id, tolère un non-tableau', () => {
+    expect(buildLiveSessions([{ full_name: 'X', kind: 'defi' }])).toEqual([])
+    expect(buildLiveSessions(null)).toEqual([])
+  })
+})
+
+describe('buildSchoolBoard', () => {
+  it('construit le tableau école, marque « Toi », trie par temps', () => {
+    const board = buildSchoolBoard(
+      {
+        school_name: 'Lycée Hugo',
+        mates: [
+          { id: 'a', name: 'Ana', seconds: 100 },
+          { id: 'me', name: 'Lucas', seconds: 500 },
+        ],
+      },
+      'me',
+    )
+    expect(board.name).toBe('Lycée Hugo')
+    expect(board.mates[0]).toMatchObject({ id: 'me', name: 'Toi', isMe: true })
+    expect(board.mates[1]).toMatchObject({ id: 'a', name: 'Ana' })
+  })
+
+  it('forme vide → école sans nom, sans camarade', () => {
+    expect(buildSchoolBoard(null, 'me')).toEqual({
+      name: '',
+      emoji: '🏫',
+      mates: [],
+    })
   })
 })

@@ -6,6 +6,8 @@ import {
   getMockLive,
   getMockSchool,
   avatarEmojiFor,
+  buildLiveSessions,
+  buildSchoolBoard,
   mapFriendsOverview,
   duelView,
   sortStreaks,
@@ -13,9 +15,12 @@ import {
   type Friend,
   type Duel,
   type DuelRow,
+  type LiveSession,
+  type SchoolBoard,
   type PendingRequest,
   type StreakEntry,
 } from '@/lib/social'
+import { schoolLevelForGrade } from '@/lib/clan'
 import type { RankPlayer } from '@/lib/trophies'
 
 export const metadata = { title: 'Amis — Studuel' }
@@ -31,7 +36,6 @@ export default async function AmisPage() {
     data: { user },
   } = await supabase.auth.getUser()
 
-  let mySeconds = 0
   let ranking: RankPlayer[] = []
   let friends: Friend[] = []
   let pendingRequests: PendingRequest[] = []
@@ -39,6 +43,10 @@ export default async function AmisPage() {
   let streaks: StreakEntry[] = []
   let missionDoneAgainst: string | null = null
   let myFriendCode = ''
+  // « En direct » et « Mon école » : réels si l'élève est connecté (RPC 160),
+  // sinon démo mockée (visiteur).
+  let live: LiveSession[] = getMockLive()
+  let school: SchoolBoard = getMockSchool(0)
   const today = toDayKey(new Date())
 
   if (user) {
@@ -50,11 +58,13 @@ export default async function AmisPage() {
       { data: duelRows },
       { data: friendStreakRows },
       { data: myStreakRaw },
+      { data: liveRows },
     ] = await Promise.all([
       // friend_code vit sur profiles depuis 019 (déjà en base) → sûr à lire ici.
+      // grade_level (onboarding) sert à choisir le cycle du clan (collège/lycée).
       supabase
         .from('profiles')
-        .select('work_seconds, friend_code')
+        .select('work_seconds, friend_code, grade_level')
         .eq('id', user.id)
         .maybeSingle(),
       // Select ISOLÉ : si la migration 079 n'est pas passée (colonnes
@@ -80,10 +90,21 @@ export default async function AmisPage() {
       // pas passée, ils échouent seuls → repli sans série, sans casser le reste.
       supabase.rpc('friends_streaks'),
       supabase.rpc('my_streak'),
+      // « En direct » : amis actifs dans les 20 dernières minutes (migration 160).
+      supabase.rpc('friends_live'),
     ])
 
-    mySeconds = Number(profile?.work_seconds ?? 0) || 0
     myFriendCode = String(profile?.friend_code ?? '')
+
+    // « En direct » réel (vide si personne n'est actif). « Mon école » réelle via
+    // le clan (cycle déduit de la classe) ; à défaut de clan, on garde la démo.
+    live = buildLiveSessions(liveRows)
+    const level = schoolLevelForGrade(profile?.grade_level ?? null)
+    const { data: clanMatesRaw } = await supabase.rpc('clan_mates', {
+      p_level: level,
+    })
+    const realSchool = buildSchoolBoard(clanMatesRaw, user.id)
+    if (realSchool.mates.length > 0) school = realSchool
 
     const overview = mapFriendsOverview(
       Array.isArray(overviewRows) ? overviewRows : [],
@@ -176,11 +197,11 @@ export default async function AmisPage() {
         description="Défie, rejoins, grimpe — ton cerveau contre les leurs."
       />
       <AmisHome
-        live={getMockLive()}
+        live={live}
         duels={duels}
         ranking={ranking}
         streaks={streaks}
-        school={getMockSchool(mySeconds)}
+        school={school}
         friends={friends}
         pendingRequests={pendingRequests}
         myFriendCode={myFriendCode}

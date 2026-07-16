@@ -4,13 +4,13 @@
 
 import type {
   Chest,
-  FreeMode,
   League,
   LeaguePlayer,
   RankingBoard,
   RankingEntry,
   Season,
 } from './types'
+import type { TournamentBoard } from '@/lib/tournament'
 
 /** Total de trophées du joueur (mock) — dans « Salle d'étude », 180 avant CDI… */
 export const MOCK_TROPHIES = 520
@@ -96,15 +96,26 @@ function fr(n: number): string {
   return n.toLocaleString('fr-FR')
 }
 
-function xpEntry(
+// Les classements comptent des TROPHÉES (mode classé), comme les données
+// réelles — le mock doit parler la même unité que le réel, sinon l'écran
+// change de monnaie selon qu'on est connecté ou non.
+function trophyEntry(
   id: string,
   rank: number,
   name: string,
   avatar: string,
-  xp: number,
+  trophies: number,
   isMe = false,
 ): RankingEntry {
-  return { id, rank, name, avatar, score: xp, scoreLabel: `${fr(xp)} XP`, isMe }
+  return {
+    id,
+    rank,
+    name,
+    avatar,
+    score: trophies,
+    scoreLabel: `${fr(trophies)} 🏆`,
+    isMe,
+  }
 }
 
 export const MOCK_RANKINGS: Record<RankingBoard['scope'], RankingBoard> = {
@@ -113,12 +124,12 @@ export const MOCK_RANKINGS: Record<RankingBoard['scope'], RankingBoard> = {
     headline: '12e sur 87 élèves de 5e',
     subline: 'Collège Jean Moulin',
     entries: [
-      xpEntry('col-1', 1, 'Sofia', '🐼', 4820),
-      xpEntry('col-2', 2, 'Marius', '🦁', 4515),
-      xpEntry('col-3', 3, 'Jade', '🦄', 4230),
-      xpEntry('col-11', 11, 'Camille', '🐰', 2510),
-      xpEntry('col-12', 12, 'Toi', '🚀', 2440, true),
-      xpEntry('col-13', 13, 'Malo', '🐺', 2388),
+      trophyEntry('col-1', 1, 'Sofia', '🐼', 1240),
+      trophyEntry('col-2', 2, 'Marius', '🦁', 1105),
+      trophyEntry('col-3', 3, 'Jade', '🦄', 980),
+      trophyEntry('col-11', 11, 'Camille', '🐰', 560),
+      trophyEntry('col-12', 12, 'Toi', '🚀', 520, true),
+      trophyEntry('col-13', 13, 'Malo', '🐺', 505),
     ],
     ctaLabel: 'Voir le classement complet',
   },
@@ -127,9 +138,9 @@ export const MOCK_RANKINGS: Record<RankingBoard['scope'], RankingBoard> = {
     headline: 'Top 8 % des 5e de France',
     subline: '3 214e sur 41 900 élèves',
     entries: [
-      xpEntry('nat-1', 1, 'Elyas_92', '👑', 18240),
-      xpEntry('nat-2', 2, 'matheuse', '🦊', 17110),
-      xpEntry('nat-3', 3, 'zoé.exe', '🐲', 16480),
+      trophyEntry('nat-1', 1, 'Elyas_92', '👑', 4820),
+      trophyEntry('nat-2', 2, 'matheuse', '🦊', 4515),
+      trophyEntry('nat-3', 3, 'zoé.exe', '🐲', 4390),
     ],
     ctaLabel: 'Voir le top 100',
   },
@@ -138,19 +149,62 @@ export const MOCK_RANKINGS: Record<RankingBoard['scope'], RankingBoard> = {
     headline: '2e sur 5 amis',
     subline: 'Ta bande cette saison',
     entries: [
-      xpEntry('ami-1', 1, 'Rayan', '🐯', 3120),
-      xpEntry('ami-2', 2, 'Toi', '🚀', 2440, true),
-      xpEntry('ami-3', 3, 'Lou', '🐨', 2015),
-      xpEntry('ami-4', 4, 'Ambre', '🦩', 1780),
-      xpEntry('ami-5', 5, 'Noé', '🐧', 1204),
+      trophyEntry('ami-1', 1, 'Rayan', '🐯', 705),
+      trophyEntry('ami-2', 2, 'Toi', '🚀', 520, true),
+      trophyEntry('ami-3', 3, 'Lou', '🐨', 480),
+      trophyEntry('ami-4', 4, 'Ambre', '🦩', 350),
+      trophyEntry('ami-5', 5, 'Noé', '🐧', 210),
     ],
   },
 }
 
-// --- Modes libres (échauffement) --------------------------------------------
+// --- Tournoi des écoles (vitrine tant que la migration 162 n'est pas là) -----
 
-export const MOCK_FREE_MODES: FreeMode[] = [
-  { id: 'blitz', name: 'Blitz 60s', icon: '⚡', xpLabel: '+40 XP', accent: 'jaune' },
-  { id: 'chrono', name: 'Contre-la-montre', icon: '⏱️', xpLabel: '+30 XP', accent: 'teal' },
-  { id: 'survie', name: 'Survie', icon: '🛡️', xpLabel: '+50 XP', accent: 'violet' },
-]
+export const MOCK_TOURNAMENT: TournamentBoard = {
+  tournamentStart: null,
+  isOpen: false,
+  mySchoolId: 'demo-2',
+  standings: [
+    {
+      schoolId: 'demo-1',
+      name: 'Collège Camille Claudel',
+      city: 'Lyon',
+      points: 4210,
+      students: 38,
+      rank: 1,
+    },
+    {
+      schoolId: 'demo-2',
+      name: 'Collège Jean Moulin',
+      city: 'Paris',
+      points: 3865,
+      students: 31,
+      rank: 2,
+    },
+    {
+      schoolId: 'demo-3',
+      name: 'Collège Les Tilleuls',
+      city: 'Nantes',
+      points: 2990,
+      students: 24,
+      rank: 3,
+    },
+    {
+      schoolId: 'demo-4',
+      name: 'Collège Rosa Parks',
+      city: 'Lille',
+      points: 2410,
+      students: 19,
+      rank: 4,
+    },
+    {
+      schoolId: 'demo-5',
+      name: 'Collège du Vieux Port',
+      city: 'Marseille',
+      points: 1870,
+      students: 17,
+      rank: 5,
+    },
+  ],
+}
+

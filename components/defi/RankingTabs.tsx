@@ -94,6 +94,13 @@ export default function RankingTabs({ boards, clanLabel }: RankingTabsProps) {
                 <ChevronRightIcon className="size-4" />
               </button>
             ) : null}
+
+            {/* La monnaie, dite explicitement — la Ligue, elle, compte l'XP
+                de la semaine : deux classements, deux règles. */}
+            <p className="mt-3 text-[0.7rem] font-bold text-white/45">
+              🏆 = trophées gagnés en match classé. La Ligue compte l&apos;XP de
+              la semaine.
+            </p>
           </motion.div>
         </AnimatePresence>
       </div>

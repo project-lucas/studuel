@@ -12,6 +12,9 @@ import type { Chest, ChestReward } from '@/lib/defi/types'
 
 interface ChestOpenModalProps {
   chest: Chest | null
+  // true = récompenses de démonstration : le modal le dit noir sur blanc au
+  // lieu de laisser croire que « +120 XP » a été crédité.
+  demo?: boolean
   onClose: () => void
 }
 
@@ -53,6 +56,7 @@ function makeConfetti(count: number): Confetto[] {
  */
 export default function ChestOpenModal({
   chest,
+  demo = false,
   onClose,
 }: ChestOpenModalProps) {
   const reduce = useReducedMotion()
@@ -139,8 +143,16 @@ export default function ChestOpenModal({
               Coffre ouvert !
             </h2>
             <p className="mt-0.5 text-sm font-semibold text-white/60">
-              Tu remportes {chest.rewards.length} récompenses
+              {demo
+                ? 'Aperçu des récompenses à venir'
+                : `Tu remportes ${chest.rewards.length} récompenses`}
             </p>
+            {demo ? (
+              <p className="mt-1 text-xs font-semibold text-white/45">
+                Les vrais coffres arrivent bientôt — rien n&apos;est encore
+                crédité sur ton compte.
+              </p>
+            ) : null}
 
             {/* Récompenses en cascade */}
             <motion.ul

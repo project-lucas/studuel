@@ -12,6 +12,9 @@ import {
 
 interface WeeklyLeagueProps {
   league: League
+  // true = classement de démonstration (visiteur / migration absente) :
+  // badge « Aperçu » pour ne jamais faire passer le mock pour du réel.
+  isDemo?: boolean
 }
 
 function zoneOf(
@@ -30,7 +33,7 @@ function zoneOf(
  * relégation (corail). En replié, on montre le top 5, les 3 joueurs autour de
  * toi et le bottom 5 ; « Voir tout » déplie l'intégralité.
  */
-export default function WeeklyLeague({ league }: WeeklyLeagueProps) {
+export default function WeeklyLeague({ league, isDemo = false }: WeeklyLeagueProps) {
   const [expanded, setExpanded] = useState(false)
   const { players, promotionCount, relegationCount } = league
   const total = players.length
@@ -55,6 +58,17 @@ export default function WeeklyLeague({ league }: WeeklyLeagueProps) {
 
   return (
     <div>
+      {/* La monnaie de la ligue, dite explicitement : l'XP de la semaine —
+          à ne pas confondre avec les trophées des Classements. */}
+      <p className="flex items-center justify-between gap-2 px-4 pt-2 text-[0.7rem] font-bold text-white/55">
+        <span>Classement à l&apos;XP gagnée cette semaine</span>
+        {isDemo ? (
+          <span className="shrink-0 rounded-full bg-highlight/25 px-2 py-0.5 text-[10px] font-extrabold text-white/85">
+            Aperçu
+          </span>
+        ) : null}
+      </p>
+
       {/* Légende des zones + rappel du reset hebdomadaire */}
       <div className="flex items-center gap-4 px-4 py-2 text-[0.7rem] font-bold">
         <span className="defi2-promo-ink flex items-center gap-1">

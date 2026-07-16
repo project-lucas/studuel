@@ -120,17 +120,3 @@ export interface Season {
   /** Libellé de la récompense, ex. « Cadre légendaire ». */
   rewardLabel: string
 }
-
-// --- Modes libres -----------------------------------------------------------
-
-export type FreeModeAccent = 'jaune' | 'teal' | 'violet'
-
-export interface FreeMode {
-  id: string
-  /** Nom du mode, ex. « Blitz 60s ». */
-  name: string
-  icon: string
-  /** Gain, ex. « +40 XP ». */
-  xpLabel: string
-  accent: FreeModeAccent
-}

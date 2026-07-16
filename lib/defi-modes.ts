@@ -39,9 +39,12 @@ export type GameMode = {
 // Tous les modes sont ouverts : on récompense l'envie de jouer, pas l'attente.
 export const GAME_MODES: GameMode[] = [
   {
+    // « Fantôme » assumé dans le nom : on affronte les manches ENREGISTRÉES
+    // d'un ami, pas quelqu'un en direct — le duel live, lui, s'appelle
+    // « Duel en direct » (LiveDuelMode / Partie rapide).
     id: 'duel',
-    name: 'Duel',
-    tagline: 'Premier à 2 manches gagnées',
+    name: 'Duel fantôme',
+    tagline: 'Bats le rejeu d’un ami · 2 manches gagnantes',
     unlockLevel: 1,
     implemented: true,
   },

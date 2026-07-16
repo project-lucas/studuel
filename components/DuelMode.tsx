@@ -66,11 +66,15 @@ export default function DuelMode({
   pool,
   myLevel,
   ghosts = [],
+  srs = true,
   onExit,
 }: {
   pool: ModeQuestion[]
   myLevel: number
   ghosts?: FriendGhost[]
+  // Les jeux de salon (capitales, orthographe…) posent des questions hors
+  // programme : elles ne doivent PAS entrer dans la file « À revoir ».
+  srs?: boolean
   onExit: () => void
 }) {
   const [phase, setPhase] = useState<Phase>('pick')
@@ -239,8 +243,9 @@ export default function DuelMode({
     recordChallenge(correctCount, answeredCount, 'duel')
       .then((r) => setSaved(r.saved))
       .catch(() => setSaved(false))
-    // Reprogramme chaque question dans la file « À revoir ».
-    recordReviewAnswers(reviewsRef.current).catch(() => {})
+    // Reprogramme chaque question dans la file « À revoir » — sauf pour les
+    // jeux de salon, dont les questions ne vivent pas dans quiz_questions.
+    if (srs) recordReviewAnswers(reviewsRef.current).catch(() => {})
     // Mes manches deviennent MON fantôme : mes amis pourront me défier.
     saveDuelRecording(
       newRounds.map((r) => ({ correct: r.me, timeMs: r.myTimeMs })),

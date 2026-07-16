@@ -8,6 +8,9 @@ import { GiftIcon, LockIcon } from './icons'
 
 interface ChestRowProps {
   chests: Chest[]
+  // true = coffres de démonstration (rien n'est crédité) : la rangée porte un
+  // badge « Aperçu » et le modal le redit — jamais de fausse récompense.
+  demo?: boolean
 }
 
 function formatCountdown(totalSeconds: number): string {
@@ -25,7 +28,7 @@ function formatCountdown(totalSeconds: number): string {
  * révélation au tap ; les coffres verrouillés égrènent leur minuterie ; les
  * emplacements vides invitent à jouer.
  */
-export default function ChestRow({ chests }: ChestRowProps) {
+export default function ChestRow({ chests, demo = false }: ChestRowProps) {
   // État local : permet de « vider » un coffre après ouverture (mock).
   const [slots, setSlots] = useState<Chest[]>(chests)
   const [openChest, setOpenChest] = useState<Chest | null>(null)
@@ -49,12 +52,19 @@ export default function ChestRow({ chests }: ChestRowProps) {
 
   return (
     <section aria-label="Tes coffres">
+      {demo ? (
+        <p className="mb-1 flex justify-end">
+          <span className="rounded-full bg-highlight/25 px-2 py-0.5 text-[10px] font-extrabold text-white/85">
+            Aperçu
+          </span>
+        </p>
+      ) : null}
       <div className="grid grid-cols-4 gap-2.5">
         {slots.map((chest) => (
           <ChestSlot key={chest.id} chest={chest} onOpen={handleOpen} />
         ))}
       </div>
-      <ChestOpenModal chest={openChest} onClose={handleClose} />
+      <ChestOpenModal chest={openChest} demo={demo} onClose={handleClose} />
     </section>
   )
 }

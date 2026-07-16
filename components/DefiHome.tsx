@@ -1,11 +1,13 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import {
   Zap,
   Check,
   X,
+  ArrowLeft,
   ArrowRight,
   RotateCcw,
   BusFront,
@@ -135,6 +137,7 @@ export default function DefiHome({
   bestTrophies = 0,
   friendRanks = [],
   examFocus = null,
+  initialMode = null,
 }: {
   items: ChallengeItem[]
   pool?: ModeQuestion[]
@@ -158,9 +161,12 @@ export default function DefiHome({
   // Contrôles à venir déclarés sur Moi : le Défi pioche dans leurs chapitres.
   // Titres montrés en bannière (« Révise ton contrôle : … »).
   examFocus?: { titles: string[] } | null
+  // Mode ouvert directement à l'arrivée (lien profond /defi/jouer?mode=…) :
+  // un id de mode, 'ranked', ou null pour l'accueil de la salle de jeu.
+  initialMode?: GameModeId | 'ranked' | null
 }) {
   const router = useRouter()
-  const [phase, setPhase] = useState<Phase>('landing')
+  const [phase, setPhase] = useState<Phase>(initialMode ?? 'landing')
   // Trophées suivis localement : le match classé les met à jour tout de suite
   // (le serveur reste la source de vérité, re-tirée au retour à l'accueil).
   const [trophies, setTrophies] = useState(trophiesProp)
@@ -346,6 +352,17 @@ export default function DefiHome({
     ]
     return (
       <div className="flex flex-col items-center gap-6 pt-2 text-center">
+        {/* Retour vers l'écran d'arène : la salle de jeu est une sous-page,
+            l'élève ne doit jamais y rester coincé (libellé standard). */}
+        <Link
+          href="/defi"
+          onClick={() => sfx.tap()}
+          className="flex items-center gap-1.5 self-start text-sm font-bold text-white/70 transition-colors hover:text-white"
+        >
+          <ArrowLeft className="size-4" aria-hidden="true" />
+          Retour à l&apos;arène
+        </Link>
+
         {/* LE classement : hero de l'onglet, mode classé par défaut. */}
         <RankedHero
           trophies={trophies}
@@ -691,8 +708,8 @@ export default function DefiHome({
                   }}
                   className="press-3d-deep flex w-full items-center justify-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-extrabold tracking-wide text-white uppercase ring-1 ring-white/25 transition-transform hover:scale-[1.01] active:scale-95"
                 >
-                  <Swords className="size-4" aria-hidden="true" /> Duel en ligne ·
-                  en direct
+                  <Swords className="size-4" aria-hidden="true" /> Duel en direct
+                  · par code
                 </button>
               ) : null}
             </div>

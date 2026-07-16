@@ -1,7 +1,8 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Copy, Loader2, Swords, Trophy, Wifi, WifiOff } from 'lucide-react'
+import { Copy, Loader2, Swords, Trophy, Wifi, WifiOff, Zap } from 'lucide-react'
+import { QRCodeSVG } from 'qrcode.react'
 import { Button } from '@/components/ui/button'
 import { createClient } from '@/lib/supabase/client'
 import { useLiveDuel } from '@/components/useLiveDuel'
@@ -14,10 +15,18 @@ import {
 import { mergeRounds } from '@/lib/duel-live'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 
+// Démarrage automatique (partie rapide par QR code) : 'create' crée la
+// session dès le montage (l'hôte affiche son QR), 'join' rejoint directement
+// la session scannée. Sans `auto`, le lobby classique s'affiche.
+export type LiveDuelAutoStart =
+  | { kind: 'create' }
+  | { kind: 'join'; duelId: string }
+
 type Props = {
   userId: string
   pool: ModeQuestion[] // questions de l'hôte (partagées avec le rival)
   subject?: string | null
+  auto?: LiveDuelAutoStart
   onExit: () => void
 }
 
@@ -33,7 +42,13 @@ type QuestionRow = {
 
 // Duel en temps réel : un lobby (créer/rejoindre), l'attente du rival, puis des
 // manches de 5 questions synchronisées, et le verdict BO3.
-export default function LiveDuelMode({ userId, pool, subject, onExit }: Props) {
+export default function LiveDuelMode({
+  userId,
+  pool,
+  subject,
+  auto,
+  onExit,
+}: Props) {
   const { state, create, join, sendRound, persist, leave } = useLiveDuel(userId)
   const [joinCode, setJoinCode] = useState('')
   const [guestQuestions, setGuestQuestions] = useState<ModeQuestion[] | null>(
@@ -92,6 +107,19 @@ export default function LiveDuelMode({ userId, pool, subject, onExit }: Props) {
     leave()
     onExit()
   }, [leave, onExit])
+
+  // Partie rapide (QR) : on saute le lobby — création ou rejointe immédiate.
+  // Une seule fois par montage, même si les deps bougent ensuite.
+  const autoStartedRef = useRef(false)
+  useEffect(() => {
+    if (!auto || autoStartedRef.current) return
+    autoStartedRef.current = true
+    if (auto.kind === 'create') {
+      create(subject ?? 'Duel', pool.map((q) => q.id))
+    } else {
+      join(auto.duelId)
+    }
+  }, [auto, create, join, pool, subject])
 
   // Persiste les manches en fin de duel (historique).
   useEffect(() => {
@@ -152,32 +180,73 @@ export default function LiveDuelMode({ userId, pool, subject, onExit }: Props) {
     )
   }
 
-  // --- Attente du rival ------------------------------------------------------
+  // --- Attente du rival : le QR code façon « Partie rapide » ------------------
+  // Scanner le QR (appareil photo du téléphone) ouvre l'app directement sur
+  // /defi/duel-rapide?rejoindre=<id> → le match démarre instantanément.
   if (state.phase === 'waiting') {
+    const joinUrl =
+      state.duelId && typeof window !== 'undefined'
+        ? `${window.location.origin}/defi/duel-rapide?rejoindre=${state.duelId}`
+        : null
     return (
-      <div className="mx-auto flex max-w-md flex-col items-center gap-4 p-6 text-center">
-        <Loader2 className="text-primary size-8 animate-spin" aria-hidden="true" />
-        <p className="font-medium">En attente d’un adversaire…</p>
-        <p className="text-muted-foreground text-sm">
-          Partage ce code pour qu’un ami te rejoigne :
-        </p>
-        <button
-          type="button"
-          onClick={async () => {
-            if (state.duelId) {
-              await navigator.clipboard?.writeText(state.duelId)
-              setCopied(true)
-            }
-          }}
-          className="bg-muted flex items-center gap-2 rounded-xl px-4 py-2 font-mono text-sm break-all"
-        >
-          <Copy className="size-4 shrink-0" aria-hidden="true" />
-          {state.duelId}
-        </button>
-        {copied ? <span className="text-xs text-green-600">Copié !</span> : null}
-        <Button variant="ghost" onClick={handleExit}>
-          Annuler
-        </Button>
+      <div className="mx-auto w-full max-w-md p-4">
+        <div className="flex flex-col items-center gap-4 rounded-3xl border border-[oklch(0.75_0.1_255)]/60 bg-gradient-to-b from-[oklch(0.58_0.15_255)] to-[oklch(0.46_0.16_262)] p-6 text-center shadow-[0_20px_45px_-18px_oklch(0.4_0.16_260)]">
+          <h3 className="font-heading flex items-center gap-2 text-xl font-extrabold text-white">
+            <Zap className="size-5 text-highlight" aria-hidden="true" />
+            Duel en direct
+          </h3>
+
+          {joinUrl ? (
+            <div className="rounded-2xl bg-white p-3 shadow-inner">
+              <QRCodeSVG
+                value={joinUrl}
+                size={208}
+                marginSize={1}
+                fgColor="#1c2a4a"
+                bgColor="#ffffff"
+                aria-label="QR code de la partie — à faire scanner par ton adversaire"
+              />
+            </div>
+          ) : (
+            <Loader2
+              className="size-8 animate-spin text-white"
+              aria-hidden="true"
+            />
+          )}
+
+          <p className="text-sm font-semibold text-white/90">
+            Si quelqu’un scanne ce code, il commence instantanément un match
+            contre toi !
+          </p>
+          <p className="text-xs font-medium text-white/70">
+            Le code est valable tant que cette fenêtre est ouverte.
+          </p>
+
+          <button
+            type="button"
+            onClick={async () => {
+              if (state.duelId) {
+                await navigator.clipboard?.writeText(state.duelId)
+                setCopied(true)
+              }
+            }}
+            className="flex max-w-full items-center gap-2 rounded-xl bg-white/15 px-4 py-2 font-mono text-xs break-all text-white"
+          >
+            <Copy className="size-4 shrink-0" aria-hidden="true" />
+            {state.duelId}
+          </button>
+          {copied ? (
+            <span className="text-xs font-bold text-highlight">Copié !</span>
+          ) : null}
+
+          <Button
+            variant="ghost"
+            onClick={handleExit}
+            className="text-white hover:bg-white/10 hover:text-white"
+          >
+            Annuler
+          </Button>
+        </div>
       </div>
     )
   }

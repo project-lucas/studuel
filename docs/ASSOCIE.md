@@ -138,6 +138,19 @@ pure Défi (bosses/coop/duel-live/trophies) + économie serveur. **Non corrigé 
 design)** : abus d'économie auto-infligé (`recordChallenge`/`recordRankedMatch`),
 cas limite réseau du chrono, mineurs onboarding.
 
+**MAJ 2026-07-16 (jour cycle 1)** : cible **« 4 nouvelles features Onglet Moi »** —
+**3 livrées, 1 différée**, 3 commits `/jour` verts (477→**490 tests**). **A. Bilan
+de la semaine** (`f36853c`, carte « Ta semaine » : sessions/jours actifs/moyenne
+quiz + accroche adaptative, `lib/weekly-recap.ts`, 0 migration) ; **D. Journal de
+progression** (`1cb3330`, carte « Ton parcours » : frise des jalons horodatés,
+`lib/milestones.ts`, 0 migration) ; **B. Objectifs perso de la semaine** (`58d0b6e`,
+1 à 3 objectifs cochables, reset lundi sans cron, `lib/weekly-goals.ts`, **migration
+157**). **C. compagnon différée** (rename + accessoires déjà présents → décision
+produit à Lucas). En amont, session interactive : **objectif examen adaptatif +
+liste des textes du bac oral** (`b3f7b18`, `lib/oral-texts.ts`, **migration 156**),
+accueil Réviser compacté, QuizPlayer à correction immédiate. **Migrations 156/157 à
+exécuter.** Studygram toujours à 0.
+
 **Chantiers produit ouverts** (au-delà du contenu) : **Studygram** (décision de
 format en attente — voir `docs/CADRAGE-STUDYGRAM.md`), **backend social Amis**
 (encore en mock), **Défi Phase 3 « texte à trous »** + **persistance du défi**
@@ -284,6 +297,35 @@ breaking changes vs. l'entraînement.
 
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible évidente,
      pièges rencontrés. Lucas peut aussi y déposer une consigne du jour. -->
+
+**2026-07-16 (jour cycle 1) — Onglet Moi : 3 features livrées (A/D/B) + #3 Réviser :**
+- **Fait & sur `main`** : voir `A-LIRE-JOUR.md`. 3 features Moi en `/jour` — **A**
+  bilan de la semaine (`f36853c`), **D** journal de progression (`1cb3330`), **B**
+  objectifs perso de la semaine (`58d0b6e`, migration **157**). **C** (compagnon)
+  **différée** : rename (localStorage) + accessoires (Trésor) **déjà présents** → le
+  delta (persistance serveur / équiper un accessoire) est une décision produit. En
+  amont (session interactive) : **#3** objectif examen adaptatif + textes du bac oral
+  (`b3f7b18`, migration **156**), accueil Réviser compacté, QuizPlayer correction
+  immédiate. Tests 421→**490**.
+- **Prochaine cible évidente** : (1) **trancher la feature C** (ou la retirer) ;
+  (2) **backend social Amis** — `AmisHome` encore mock, RPC réelles prêtes+auditées
+  (`add_friend_by_code`/`accept_friend`/`create_duel`/`friends_overview`), ~XL, pas
+  d'auth agent pour QA ; (3) gated : Studygram (format B), texte à trous, persistance
+  défi.
+- **Pièges rencontrés** : (a) **feature à moitié déjà là** — investiguer AVANT de
+  coder : le compagnon avait déjà rename + accessoires, ce qui a évité de dupliquer.
+  (b) **Colonne dépendante d'une migration** (`oral_texts` 156, `weekly_goals` 157) :
+  la mettre dans **sa propre requête** `.select()`, jamais dans le `select` groupé du
+  profil (sinon toute la page casse tant que la migration n'est pas passée) — même
+  leçon que `avatar`/082. (c) **Reset hebdo sans cron** : stocker la clé du lundi par
+  objectif et filtrer/purger par semaine à la lecture/à l'ajout → remise à zéro
+  automatique. (d) `lib/exams.ts` doit rester **pur** : `examPriorityHint` prend la
+  forme minimale `{label,progress,total}`, pas le type `ExamProgressEntry` du
+  composant (pas de dépendance lib→composant).
+- **Migrations** : **156 (oral_texts) et 157 (weekly_goals) créées** (à exécuter).
+  En attente aussi : 048, 079→089, 090→155.
+- **⚠️ Cycle 2 NON armé** : `armer-relance-jour.ps1` refusé par le classifieur
+  (`-ExecutionPolicy Bypass`) → relancer `/jour` à la main.
 
 **2026-07-15 (jour cycle 2) — Double-tap Défi complet + 6 bugs par revues (8 commits) :**
 - **Fait & sur `main`** : voir `A-LIRE-JOUR.md`. Double-tap réglé dans TOUS les

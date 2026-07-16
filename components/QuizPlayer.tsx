@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Link from 'next/link'
 import { recordTestSession } from '@/app/test/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
@@ -15,9 +15,10 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import type { QuizQuestion } from '@/lib/types'
 
-// Session de quiz (template « structure des cours ») : l'élève répond à TOUTES
-// les questions sans feedback intermédiaire — le score et la correction
-// détaillée n'apparaissent qu'à la fin, comme sur une vraie interro.
+// Session de quiz (template « structure des cours ») : à chaque réponse, l'élève
+// voit tout de suite si c'est juste ou faux, la bonne réponse et l'explication,
+// puis passe à la suivante d'un tap. Le score + le récap complet restent à la
+// fin. (L'examen blanc, lui, garde la correction différée — autre composant.)
 
 // Message de la mascotte selon le score.
 function verdict(ratio: number): { emoji: string; message: string } {
@@ -52,19 +53,14 @@ export default function QuizPlayer({
   // Réponses de la session pour la répétition espacée (SRS + Revanche) —
   // envoyées en une fois à la fin, en « fire and forget ».
   const reviewsRef = useRef<ReviewAnswer[]>([])
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-  // Garde anti-double-soumission : un double-tap rapide sur la dernière option
-  // peut franchir le garde `selected` (state périmé) et lancer deux timers →
-  // sans ce verrou, la session serait enregistrée deux fois.
+  // Garde anti-double-soumission : un double-tap rapide sur « Continuer » de la
+  // dernière question pourrait franchir le garde `selected` (state périmé) et
+  // enregistrer la session deux fois.
   const finishedRef = useRef(false)
-  // Verrou synchrone anti double-tap MI-quiz : `selected` (state) ne se met à
-  // jour qu'au prochain rendu ; sans ce ref, deux taps rapprochés poussaient une
-  // réponse en double dans reviewsRef ET faisaient `setIndex(i => i+1)` deux fois
-  // → une question sautée. Relâché quand on passe réellement à la suivante.
+  // Verrou synchrone anti double-tap sur une option : `selected` (state) ne se
+  // met à jour qu'au prochain rendu ; sans ce ref, deux taps rapprochés
+  // pousseraient une réponse en double dans reviewsRef. Relâché à la suivante.
   const lockedRef = useRef(false)
-  useEffect(() => () => {
-    if (timerRef.current) clearTimeout(timerRef.current)
-  }, [])
 
   const finish = (allChoices: number[]) => {
     if (finishedRef.current) return
@@ -83,28 +79,34 @@ export default function QuizPlayer({
     recordReviewAnswers(reviewsRef.current).catch(() => {})
   }
 
+  // Répondre : on révèle tout de suite le résultat (juste/faux, bonne réponse,
+  // explication) et on attend un tap « Continuer » pour avancer.
   const choose = (optionIndex: number) => {
     if (selected !== null || lockedRef.current) return
     lockedRef.current = true
     setSelected(optionIndex)
-    sfx.tap() // son neutre : la correction ne se devine pas à l'oreille
+    const good = optionIndex === question.correct_index
+    if (good) sfx.correct()
+    else sfx.wrong()
     reviewsRef.current.push({
       kind: 'question',
       id: question.id,
       subject,
-      good: optionIndex === question.correct_index,
+      good,
     })
-    // Petit temps de confirmation visuelle, puis question suivante.
-    timerRef.current = setTimeout(() => {
-      const next = [...choices, optionIndex]
-      setChoices(next)
-      setSelected(null)
-      if (next.length >= questions.length) finish(next)
-      else {
-        setIndex((i) => i + 1)
-        lockedRef.current = false
-      }
-    }, 350)
+  }
+
+  // Passer à la suite (ou terminer) une fois le feedback lu.
+  const advance = () => {
+    if (selected === null) return
+    const next = [...choices, selected]
+    setChoices(next)
+    setSelected(null)
+    if (next.length >= questions.length) finish(next)
+    else {
+      setIndex((i) => i + 1)
+      lockedRef.current = false
+    }
   }
 
   const restart = () => {
@@ -279,8 +281,11 @@ export default function QuizPlayer({
   }
 
   // ---------------------------------------------------------------------------
-  // Écran de question : plein écran, sans feedback juste/faux (template).
+  // Écran de question : plein écran, feedback immédiat à la réponse.
   // ---------------------------------------------------------------------------
+  const answered = selected !== null
+  const isCorrect = selected === question.correct_index
+  const isLast = index + 1 >= questions.length
   return (
     <div className="-mx-4 -mt-16 flex min-h-svh flex-col bg-primary px-4 pt-16 pb-24 text-primary-foreground md:-mx-8 md:-mt-10 md:px-8 md:pt-12">
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
@@ -327,29 +332,68 @@ export default function QuizPlayer({
           ) : null}
         </div>
 
-        {/* Les réponses : choisir enchaîne directement, correction à la fin */}
+        {/* Les réponses : au tap, on révèle juste/faux + la bonne réponse. */}
         <div className="mt-5 flex flex-col gap-3" role="group" aria-label="Réponses">
-          {question.options.map((option, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => choose(i)}
-              disabled={selected !== null}
-              className={cn(
-                'rounded-2xl bg-card px-5 py-4 text-left text-sm font-semibold text-foreground shadow-md transition-all',
-                selected === null && 'hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98]',
-                selected === i && 'ring-4 ring-highlight',
-                selected !== null && selected !== i && 'opacity-60',
-              )}
-            >
-              {option}
-            </button>
-          ))}
+          {question.options.map((option, i) => {
+            const isTheAnswer = i === question.correct_index
+            const isMyPick = i === selected
+            return (
+              <button
+                key={i}
+                type="button"
+                onClick={() => choose(i)}
+                disabled={answered}
+                className={cn(
+                  'flex items-center justify-between gap-3 rounded-2xl px-5 py-4 text-left text-sm font-semibold shadow-md transition-all',
+                  !answered &&
+                    'bg-card text-foreground hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98]',
+                  // Après réponse : la bonne en vert, le mauvais choix en rouge.
+                  answered && isTheAnswer && 'bg-green-600 text-white',
+                  answered && !isTheAnswer && isMyPick && 'bg-destructive text-white',
+                  answered && !isTheAnswer && !isMyPick && 'bg-card text-foreground opacity-50',
+                )}
+              >
+                <span className="min-w-0">{option}</span>
+                {answered && isTheAnswer ? (
+                  <CircleCheck className="size-5 shrink-0" aria-hidden="true" />
+                ) : answered && isMyPick ? (
+                  <CircleX className="size-5 shrink-0" aria-hidden="true" />
+                ) : null}
+              </button>
+            )
+          })}
         </div>
 
-        <p className="mt-auto pt-6 text-center text-xs font-medium opacity-70">
-          La correction s&apos;affiche à la fin du quiz.
-        </p>
+        {/* Feedback + explication + bouton pour continuer. */}
+        {answered ? (
+          <div className="mt-5">
+            <p
+              role="status"
+              className={cn(
+                'font-heading text-center text-lg font-bold',
+                isCorrect ? 'text-highlight' : 'text-white',
+              )}
+            >
+              {isCorrect ? '✅ Bonne réponse !' : '❌ Pas tout à fait…'}
+            </p>
+            {question.explanation ? (
+              <p className="mx-auto mt-2 max-w-md rounded-2xl bg-black/20 px-4 py-3 text-center text-sm leading-relaxed text-primary-foreground/90">
+                {question.explanation}
+              </p>
+            ) : null}
+            <Button
+              onClick={advance}
+              size="lg"
+              className="mt-5 w-full rounded-full bg-card text-foreground shadow-md hover:bg-card/90"
+            >
+              {isLast ? 'Voir mon score' : 'Continuer'}
+            </Button>
+          </div>
+        ) : (
+          <p className="mt-auto pt-6 text-center text-xs font-medium opacity-70">
+            Touche une réponse — le résultat s&apos;affiche aussitôt.
+          </p>
+        )}
       </div>
     </div>
   )

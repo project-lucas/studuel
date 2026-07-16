@@ -19,6 +19,7 @@ import {
   X,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import FriendQrButton from '@/components/FriendQrButton'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { formatHours } from '@/lib/time'
@@ -30,6 +31,7 @@ import {
   type PendingRequest,
   type StreakEntry,
   sinceLabel,
+  schoolNoun,
   schoolTotalSeconds,
   DUEL_XP_BONUS,
   ACTIVE_DUEL_KEY,
@@ -68,6 +70,16 @@ function SectionTitle({
   )
 }
 
+// Pastille « Aperçu » : signale une section en données de démonstration, même
+// wording que le Tournoi des écoles du Défi. Jamais de mock sans ce badge.
+function DemoBadge() {
+  return (
+    <span className="rounded-full bg-highlight/25 px-2.5 py-0.5 text-xs font-semibold text-foreground/80">
+      Aperçu
+    </span>
+  )
+}
+
 function Avatar({ emoji, size = 'md' }: { emoji: string; size?: 'md' | 'lg' }) {
   return (
     <span
@@ -83,19 +95,16 @@ function Avatar({ emoji, size = 'md' }: { emoji: string; size?: 'md' | 'lg' }) {
 }
 
 // -------------------------------------------------------------- Mission duel
-// LA mission bonus du jour : défier un ami sur sa matière prioritaire.
-// Une seule par jour, non renouvelable — c'est le cœur de l'onglet.
+// LA mission bonus du jour : défier un ami sur le Défi du jour (même quiz pour
+// les deux joueurs — on annonce exactement ce qui sera joué, pas une matière
+// fictive). Une seule par jour, non renouvelable — c'est le cœur de l'onglet.
 // Le duel est réel : create_duel persiste le défi (1/jour garanti côté SQL),
 // et l'id du duel est retenu pour que le Défi dépose le score à la fin.
 function DuelMissionCard({
   friends,
-  subject,
-  topic,
   doneAgainst,
 }: {
   friends: Friend[]
-  subject: string
-  topic: string
   doneAgainst: string | null
 }) {
   const router = useRouter()
@@ -106,7 +115,7 @@ function DuelMissionCard({
     if (!picked || launching) return
     sfx.correct()
     startLaunch(async () => {
-      const res = await createDuel(picked.id, subject)
+      const res = await createDuel(picked.id, 'Défi du jour')
       if (res.id) {
         // Le duel se joue sur le Défi du jour — même contenu, deux joueurs.
         try {
@@ -151,11 +160,11 @@ function DuelMissionCard({
       ) : (
         <>
           <h2 className="font-heading text-xl font-bold">
-            Défie un ami en {subject}
+            Défie un ami sur le Défi du jour
           </h2>
           <p className="mt-1 text-sm text-primary-foreground/75">
-            {topic} — ta priorité du moment. Montre-lui qui a le plus gros
-            cerveau 🧠
+            Le même quiz pour vous deux, le meilleur score gagne. Montre-lui
+            qui a le plus gros cerveau 🧠
           </p>
 
           {/* Choix de l'adversaire : une rangée d'avatars, un tap. */}
@@ -255,7 +264,8 @@ function LiveRow({ session }: { session: LiveSession }) {
         onClick={() => {
           sfx.flip()
           setJoined(true)
-          // Rejoindre = démarrer une session en même temps que l'ami.
+          // « Bosser aussi » = démarrer sa propre session pendant que l'ami
+          // travaille (on ne rejoint pas SA partie — ne pas surpromettre).
           setTimeout(() => router.push('/defi'), 350)
         }}
       >
@@ -264,7 +274,7 @@ function LiveRow({ session }: { session: LiveSession }) {
             <Check className="size-4" /> En route
           </>
         ) : (
-          'Rejoindre'
+          'Bosser aussi'
         )}
       </Button>
     </li>
@@ -490,14 +500,18 @@ function StreakSection({ streaks }: { streaks: StreakEntry[] }) {
 
 // ---------------------------------------------------------------------- École
 // Les heures de chaque élève s'additionnent pour son école ; le classement
-// interne départage les élèves au temps de travail réel.
-function SchoolSection({ school }: { school: SchoolBoard }) {
+// interne départage les élèves au temps de travail réel. Le titre suit le
+// cycle de l'élève (« Ton collège » / « Ton lycée »), jamais codé en dur.
+function SchoolSection({ school, demo }: { school: SchoolBoard; demo: boolean }) {
   const total = schoolTotalSeconds(school.mates)
   const myRank = school.mates.findIndex((m) => m.isMe) + 1
+  const noun = schoolNoun(school.level)
 
   return (
     <section>
-      <SectionTitle icon={School}>Ton collège</SectionTitle>
+      <SectionTitle icon={School} aside={demo ? <DemoBadge /> : undefined}>
+        Ton {noun}
+      </SectionTitle>
 
       {/* Cagnotte d'heures : l'effort de chacun compte pour tous. */}
       <div className="rounded-t-2xl bg-primary p-4 text-primary-foreground">
@@ -511,7 +525,7 @@ function SchoolSection({ school }: { school: SchoolBoard }) {
             </p>
             <p className="text-sm text-primary-foreground/75">
               {myRank > 0 ? `Tu es ${myRank === 1 ? '1er' : `${myRank}e`} · ` : ''}
-              chaque minute que tu travailles compte pour ton collège
+              chaque minute que tu travailles compte pour ton {noun}
             </p>
           </div>
           <span className="flex shrink-0 items-center gap-1.5 font-mono text-lg font-bold tabular-nums">
@@ -564,8 +578,9 @@ function SchoolSection({ school }: { school: SchoolBoard }) {
         })}
       </ol>
       <p className="mt-2 px-1 text-[11px] text-muted-foreground">
-        Le temps est mesuré par le chrono de tes sessions — celui qui travaille
-        le plus grimpe.
+        {demo
+          ? `Exemple de classement — choisis ton ${noun} dans ton profil pour voir le vrai.`
+          : 'Le temps est mesuré par le chrono de tes sessions — celui qui travaille le plus grimpe.'}
       </p>
     </section>
   )
@@ -639,28 +654,33 @@ function PendingRow({ request }: { request: PendingRequest }) {
 // ------------------------------------------------------------------------- Page
 export default function AmisHome({
   live,
+  liveDemo,
   duels,
   ranking,
   streaks,
   school,
+  schoolDemo,
   friends,
   pendingRequests,
   myFriendCode,
   missionDoneAgainst,
-  prioritySubject,
 }: {
   live: LiveSession[]
+  // true = données d'exemple (visiteur / élève sans établissement) : l'UI le
+  // signale avec la pastille « Aperçu » au lieu de les faire passer pour vraies.
+  liveDemo: boolean
   duels: Duel[]
   ranking: RankPlayer[]
   streaks: StreakEntry[]
   school: SchoolBoard
+  schoolDemo: boolean
   friends: Friend[]
   pendingRequests: PendingRequest[]
   myFriendCode: string
   missionDoneAgainst: string | null
-  prioritySubject: { subject: string; topic: string }
 }) {
   const [copied, setCopied] = useState(false)
+  const [copyFailed, setCopyFailed] = useState(false)
   const [code, setCode] = useState('')
   const [feedback, setFeedback] = useState<{ ok: boolean; message: string } | null>(
     null,
@@ -680,11 +700,14 @@ export default function AmisHome({
     if (!myFriendCode) return
     try {
       await navigator.clipboard.writeText(myFriendCode)
+      setCopyFailed(false)
       setCopied(true)
       sfx.tap()
       setTimeout(() => setCopied(false), 1600)
     } catch {
-      /* clipboard indisponible : on ignore silencieusement */
+      // Presse-papiers indisponible (contexte non sécurisé, permission…) :
+      // on le dit au lieu de laisser un tap sans effet.
+      setCopyFailed(true)
     }
   }
 
@@ -703,32 +726,39 @@ export default function AmisHome({
   return (
     <div className="flex flex-col gap-6">
       {/* LA mission du jour : défier un ami. Central, récurrent, non skippable. */}
-      <DuelMissionCard
-        friends={friends}
-        subject={prioritySubject.subject}
-        topic={prioritySubject.topic}
-        doneAgainst={missionDoneAgainst}
-      />
+      <DuelMissionCard friends={friends} doneAgainst={missionDoneAgainst} />
 
-      {/* En direct — qui bosse là, maintenant. */}
+      {/* En direct — qui bosse là, maintenant. En démo (visiteur), la pastille
+          « Aperçu » remplace le compteur « en ligne » : pas de faux amis. */}
       <section>
         <SectionTitle
           icon={Radio}
           aside={
-            <span className="flex items-center gap-1.5 text-xs font-medium text-green-600">
-              <span className="size-2 animate-pulse rounded-full bg-green-500" />
-              {live.length} en ligne
-            </span>
+            liveDemo ? (
+              <DemoBadge />
+            ) : (
+              <span className="flex items-center gap-1.5 text-xs font-medium text-green-600">
+                <span className="size-2 animate-pulse rounded-full bg-green-500" />
+                {live.length} en ligne
+              </span>
+            )
           }
         >
           En direct
         </SectionTitle>
         {live.length > 0 ? (
-          <ul className="flex flex-col gap-2">
-            {live.map((s) => (
-              <LiveRow key={s.friend.id} session={s} />
-            ))}
-          </ul>
+          <>
+            <ul className="flex flex-col gap-2">
+              {live.map((s) => (
+                <LiveRow key={s.friend.id} session={s} />
+              ))}
+            </ul>
+            {liveDemo ? (
+              <p className="mt-2 px-1 text-[11px] text-muted-foreground">
+                Exemple — connecte-toi pour voir tes vrais amis en session.
+              </p>
+            ) : null}
+          </>
         ) : (
           <p className="rounded-2xl bg-muted p-3 text-sm text-muted-foreground">
             Personne en session pour l’instant. Lance-toi le premier 🔥
@@ -772,37 +802,48 @@ export default function AmisHome({
         >
           Classement
         </SectionTitle>
-        {/* Résumé : ta place, ton arène, et l'objectif juste devant. */}
-        <div className="mb-2 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
-          <div className="flex items-center gap-3">
-            <span aria-hidden="true" className="text-3xl">
-              {myArena.emoji}
-            </span>
-            <div className="min-w-0 flex-1">
-              <p className="font-heading font-bold">
-                {friendCount > 0
-                  ? myRank === 1
-                    ? `1er sur ${friendCount + 1} — tu domines 👑`
-                    : `${myRank}e sur ${friendCount + 1} amis`
-                  : myArena.name}
-              </p>
-              <p className="truncate text-xs text-muted-foreground">
-                {ahead
-                  ? `${ahead.trophies - myTrophies} trophées pour doubler ${ahead.name}`
-                  : `Arène ${myArena.name}`}
-              </p>
+        {ranking.length === 0 ? (
+          /* Visiteur : pas de classement à montrer — état vide explicite,
+             cohérent avec « En direct » et « Duels ». */
+          <p className="rounded-2xl bg-muted p-3 text-sm text-muted-foreground">
+            Connecte-toi et ajoute des amis pour vous comparer aux trophées 🏆
+          </p>
+        ) : (
+          <>
+            {/* Résumé : ta place, ton arène, et l'objectif juste devant. */}
+            <div className="mb-2 rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
+              <div className="flex items-center gap-3">
+                <span aria-hidden="true" className="text-3xl">
+                  {myArena.emoji}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className="font-heading font-bold">
+                    {friendCount > 0
+                      ? myRank === 1
+                        ? `1er sur ${friendCount + 1} — tu domines 👑`
+                        : `${myRank}e sur ${friendCount + 1} amis`
+                      : myArena.name}
+                  </p>
+                  <p className="truncate text-xs text-muted-foreground">
+                    {ahead
+                      ? `${ahead.trophies - myTrophies} trophées pour doubler ${ahead.name}`
+                      : `Arène ${myArena.name}`}
+                  </p>
+                </div>
+                <span className="flex shrink-0 items-center gap-1 font-mono font-bold tabular-nums">
+                  {myTrophies}
+                  <Trophy className="size-4 text-highlight" />
+                </span>
+              </div>
             </div>
-            <span className="flex shrink-0 items-center gap-1 font-mono font-bold tabular-nums">
-              {myTrophies}
-              <Trophy className="size-4 text-highlight" />
-            </span>
-          </div>
-        </div>
-        <RankingBoard players={ranking} />
-        <p className="mt-2 px-1 text-[11px] text-muted-foreground">
-          Gagne des matchs classés dans le Défi pour grimper — chaque victoire
-          rapporte des trophées.
-        </p>
+            <RankingBoard players={ranking} />
+            <p className="mt-2 px-1 text-[11px] text-muted-foreground">
+              {friendCount > 0
+                ? 'Gagne des matchs classés dans le Défi pour grimper — chaque victoire rapporte des trophées.'
+                : 'Ajoute des amis plus bas pour vous comparer — chaque match classé gagné rapporte des trophées.'}
+            </p>
+          </>
+        )}
       </section>
 
       {/* Demandes reçues — à accepter ou refuser. Masqué s'il n'y en a pas. */}
@@ -826,15 +867,22 @@ export default function AmisHome({
         </section>
       ) : null}
 
-      {/* Ton collège — la cagnotte d'heures et le classement interne. */}
-      <SchoolSection school={school} />
+      {/* Ton collège / ton lycée — la cagnotte d'heures et le classement interne. */}
+      <SchoolSection school={school} demo={schoolDemo} />
 
       {/* Ajouter un ami. */}
       <section className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
         <SectionTitle icon={UserPlus}>Ajouter un ami</SectionTitle>
         <p className="mb-3 text-sm text-muted-foreground">
-          Partage ton code, ou entre celui d’un pote.
+          Fais scanner ton QR code : vous devenez amis direct. Par code, ton
+          ami reçoit une demande à accepter.
         </p>
+        {/* Mon QR à faire scanner — quiconque le scanne devient mon ami. */}
+        {myFriendCode ? (
+          <div className="mb-2">
+            <FriendQrButton friendCode={myFriendCode} />
+          </div>
+        ) : null}
         <div className="flex items-center gap-2">
           <button
             type="button"
@@ -853,6 +901,11 @@ export default function AmisHome({
             )}
           </button>
         </div>
+        {copyFailed ? (
+          <p role="status" className="mt-1 px-1 text-xs text-destructive">
+            Copie impossible sur cet appareil — recopie ton code à la main.
+          </p>
+        ) : null}
         <form className="mt-2 flex items-center gap-2" onSubmit={submitCode}>
           <input
             type="text"

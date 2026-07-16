@@ -1,7 +1,9 @@
 // Couche sociale (onglet « Amis ») — logique pure + données de démonstration.
-// Aujourd'hui : mock local, pour poser l'agencement et les interactions.
-// Demain : chaque `getMock*` sera remplacé par une requête Supabase (tables
-// friends / live_sessions / duels / league_week) sans toucher aux composants.
+// Amitiés, duels, « en direct » et « mon école » sont branchés sur Supabase ;
+// les `getMock*` restants ne servent que d'aperçu (visiteur non connecté ou
+// élève sans établissement), toujours signalé comme tel dans l'UI.
+
+import { type SchoolLevel } from '@/lib/clan'
 
 export type Friend = {
   id: string
@@ -56,31 +58,15 @@ export type Duel = {
   total: number
 }
 
-export type LeagueEntry = {
-  id: string
-  name: string
-  emoji: string
-  xp: number
-  isMe?: boolean
-}
-
 // ------------------------------------------------------------- Mission duel
 // Le défi d'ami est LA mission bonus du jour : une seule par jour, non
 // renouvelable. Elle paye plus que le défi classique — c'est le geste social
-// qu'on veut ancrer (« prouve que tu es plus malin que ton pote »).
+// qu'on veut ancrer (« prouve que tu es plus malin que ton ami »).
 export const DUEL_XP_BONUS = 50
 
-// Mock côté client : on retient le jour ('YYYY-MM-DD' UTC) du dernier duel
-// lancé. Demain : table duels + contrainte unique (challenger, jour).
+// Jour ('YYYY-MM-DD' UTC) du dernier duel fantôme lancé (mode Duel du Défi) :
+// utilisé par DuelMode pour son propre verrou quotidien côté client.
 export const DUEL_DAY_STORAGE_KEY = 'scolaria-duel-day'
-
-// La mission est disponible tant qu'aucun duel n'a été lancé aujourd'hui.
-export function duelMissionAvailable(
-  lastDuelDayKey: string | null,
-  todayKey: string,
-): boolean {
-  return lastDuelDayKey !== todayKey
-}
 
 // ----------------------------------------------------------------- L'école
 // Les heures travaillées par chaque élève s'accumulent au bénéfice de son
@@ -96,7 +82,14 @@ export type SchoolMate = {
 export type SchoolBoard = {
   name: string
   emoji: string
+  // Cycle de l'établissement : pilote les textes (« ton collège »/« ton lycée »).
+  level: SchoolLevel
   mates: SchoolMate[]
+}
+
+// Nom courant de l'établissement pour les phrases de l'UI.
+export function schoolNoun(level: SchoolLevel): string {
+  return level === 'lycee' ? 'lycée' : 'collège'
 }
 
 export function sortSchool(mates: SchoolMate[]): SchoolMate[] {
@@ -145,7 +138,11 @@ export function buildLiveSessions(rows: unknown): LiveSession[] {
 
 // Construit le tableau « mon école » à partir du JSONB de la RPC clan_mates
 // ({ school_name, mates:[{ id, name, seconds }] }). Marque l'élève courant.
-export function buildSchoolBoard(raw: unknown, myId: string): SchoolBoard {
+export function buildSchoolBoard(
+  raw: unknown,
+  myId: string,
+  level: SchoolLevel = 'college',
+): SchoolBoard {
   const o = (raw ?? {}) as Record<string, unknown>
   const matesRaw = Array.isArray(o.mates) ? o.mates : []
   const mates: SchoolMate[] = matesRaw.flatMap((m) => {
@@ -165,24 +162,9 @@ export function buildSchoolBoard(raw: unknown, myId: string): SchoolBoard {
   return {
     name: typeof o.school_name === 'string' ? o.school_name : '',
     emoji: '🏫',
+    level,
     mates: sortSchool(mates),
   }
-}
-
-// La ligue hebdomadaire : les 5 premiers montent, les 5 derniers descendent.
-export const LEAGUE_PROMOTE = 5
-export const LEAGUE_RELEGATE = 5
-
-export type LeagueZone = 'promote' | 'relegate' | 'safe'
-
-export function leagueZone(rank: number, total: number): LeagueZone {
-  if (rank <= LEAGUE_PROMOTE) return 'promote'
-  if (rank > total - LEAGUE_RELEGATE) return 'relegate'
-  return 'safe'
-}
-
-export function sortLeague(entries: LeagueEntry[]): LeagueEntry[] {
-  return [...entries].sort((a, b) => b.xp - a.xp)
 }
 
 // -------------------------------------------------------- Séries des amis
@@ -234,42 +216,11 @@ export function getMockLive(): LiveSession[] {
   ]
 }
 
-export function getMockDuels(): Duel[] {
-  return [
-    { id: 'd1', opponent: F.tom, subject: 'Fractions', status: 'incoming', myScore: null, theirScore: 4, total: 5 },
-    { id: 'd2', opponent: F.ines, subject: 'Conjugaison', status: 'outgoing', myScore: null, theirScore: null, total: 5 },
-    { id: 'd3', opponent: F.hugo, subject: 'Théorème de Pythagore', status: 'won', myScore: 5, theirScore: 3, total: 5 },
-    { id: 'd4', opponent: F.naila, subject: 'Révolution française', status: 'lost', myScore: 2, theirScore: 4, total: 5 },
-  ]
-}
-
-export function getMockLeague(): LeagueEntry[] {
-  return sortLeague([
-    { id: 'naila', name: 'Naïla', emoji: '🦉', xp: 640 },
-    { id: 'rayan', name: 'Rayan', emoji: '🦁', xp: 585 },
-    { id: 'me', name: 'Toi', emoji: '🚀', xp: 520, isMe: true },
-    { id: 'lea', name: 'Léa', emoji: '🦊', xp: 470 },
-    { id: 'ines', name: 'Inès', emoji: '🐝', xp: 430 },
-    { id: 'tom', name: 'Tom', emoji: '🐼', xp: 360 },
-    { id: 'hugo', name: 'Hugo', emoji: '🐺', xp: 295 },
-    { id: 'chloe', name: 'Chloé', emoji: '🐰', xp: 210 },
-    { id: 'sofiane', name: 'Sofiane', emoji: '🐢', xp: 150 },
-    { id: 'maya', name: 'Maya', emoji: '🦋', xp: 90 },
-  ])
-}
-
-// Code d'ami — mock. Servira à l'ajout par code / lien d'invitation.
-export const MOCK_FRIEND_CODE = 'LUCAS-7K2'
-
-// Liste d'amis à défier (mock) — l'ordre met en avant les rivaux « proches »
-// en niveau : battre un ami de son niveau est plus savoureux.
+// Liste d'amis à défier (mock, adversaires fantômes du mode Duel du Défi) —
+// l'ordre met en avant les rivaux « proches » en niveau.
 export function getMockFriends(): Friend[] {
   return [F.tom, F.ines, F.lea, F.hugo, F.rayan, F.naila]
 }
-
-// Matière prioritaire du duel — mock. Demain : le chapitre le plus fragile
-// de l'élève (même logique que la carte « Reprendre » de Réviser).
-export const MOCK_PRIORITY_SUBJECT = { subject: 'Maths', topic: 'Les fractions' }
 
 // =============================================================== Amitiés réelles
 // Branchées sur la fondation sociale (migration 019) : code ami unique, table
@@ -323,8 +274,15 @@ export function mapFriendsOverview(rows: readonly FriendOverviewRow[] | null): {
   return { accepted, incoming, outgoing }
 }
 
-// Résultat de `add_friend_by_code()` → message français pour l'élève.
-export type AddFriendStatus = 'sent' | 'already' | 'self' | 'not_found' | 'error'
+// Résultat de `add_friend_by_code()` / `add_friend_qr()` → message français.
+// 'added' vient du scan de QR (163) : amitié créée directement, sans attente.
+export type AddFriendStatus =
+  | 'sent'
+  | 'added'
+  | 'already'
+  | 'self'
+  | 'not_found'
+  | 'error'
 
 export function addFriendMessage(status: AddFriendStatus): {
   ok: boolean
@@ -333,6 +291,8 @@ export function addFriendMessage(status: AddFriendStatus): {
   switch (status) {
     case 'sent':
       return { ok: true, message: 'Demande envoyée ! 🎉' }
+    case 'added':
+      return { ok: true, message: 'Vous êtes maintenant amis ! 🎉' }
     case 'already':
       return { ok: false, message: 'Vous êtes déjà liés (ou une demande est en cours).' }
     case 'self':
@@ -397,12 +357,17 @@ export function duelView(row: DuelRow, myId: string, opponent: Friend): Duel {
   }
 }
 
-// L'école de l'élève (mock) — `mySeconds` vient du vrai profil quand il est
-// connecté, pour que sa place dans le classement bouge avec son travail réel.
-export function getMockSchool(mySeconds: number): SchoolBoard {
+// L'école de l'élève (aperçu, signalé comme tel dans l'UI) — `mySeconds` vient
+// du vrai profil quand il est connecté, pour que sa place bouge avec son
+// travail réel. Le nom suit le cycle pour ne pas contredire le titre.
+export function getMockSchool(
+  mySeconds: number,
+  level: SchoolLevel = 'college',
+): SchoolBoard {
   return {
-    name: 'Collège Jean-Moulin',
+    name: level === 'lycee' ? 'Lycée Jean-Moulin' : 'Collège Jean-Moulin',
     emoji: '🏫',
+    level,
     mates: sortSchool([
       { id: 'me', name: 'Toi', emoji: '🚀', seconds: mySeconds, isMe: true },
       { id: 'naila', name: 'Naïla', emoji: '🦉', seconds: 41 * 3600 },

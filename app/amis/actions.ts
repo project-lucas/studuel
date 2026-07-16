@@ -40,6 +40,37 @@ export async function addFriendByCode(
   return addFriendMessage(status)
 }
 
+// Statuts renvoyés par add_friend_qr (migration 163) — amitié instantanée.
+const QR_STATUSES: readonly AddFriendStatus[] = [
+  'added',
+  'already',
+  'self',
+  'not_found',
+]
+
+// Ajoute un ami par scan de QR code : amitié acceptée DIRECTEMENT (les deux
+// téléphones sont côte à côte, le scan vaut consentement mutuel). Si la
+// migration 163 n'est pas encore passée (RPC absente), on se replie sur la
+// demande classique add_friend_by_code — l'élève reçoit alors une demande.
+export async function addFriendByQr(
+  code: string,
+): Promise<{ ok: boolean; message: string }> {
+  const clean = (code ?? '').trim().toUpperCase()
+  if (!CODE_RE.test(clean)) return addFriendMessage('not_found')
+
+  const supabase = await createClient()
+  const { data, error } = await supabase.rpc('add_friend_qr', {
+    p_code: clean,
+  })
+  if (error) return addFriendByCode(clean)
+
+  const status: AddFriendStatus = QR_STATUSES.includes(data as AddFriendStatus)
+    ? (data as AddFriendStatus)
+    : 'error'
+  revalidatePath('/amis')
+  return addFriendMessage(status)
+}
+
 // Accepte une demande d'ami reçue (fonction accept_friend, SECURITY DEFINER).
 export async function acceptFriend(
   requesterId: string,

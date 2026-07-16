@@ -11,7 +11,6 @@ import {
   mapFriendsOverview,
   duelView,
   sortStreaks,
-  MOCK_PRIORITY_SUBJECT,
   type Friend,
   type Duel,
   type DuelRow,
@@ -26,10 +25,10 @@ import type { RankPlayer } from '@/lib/trophies'
 export const metadata = { title: 'Amis — Studuel' }
 export const dynamic = 'force-dynamic'
 
-// Onglet social (extrême gauche). Le classement à l'XP mock a été remplacé par
-// le VRAI classement aux trophées (mode classé du Défi) : mes trophées +
-// ceux de mes amis acceptés (RPC friends_trophies). En direct, duels et école
-// restent des données de démonstration pour l'instant.
+// Onglet social (extrême gauche). Tout est réel pour un élève connecté :
+// classement aux trophées (RPC friends_trophies), duels, « en direct »
+// (RPC 160) et école via le clan. Seuls le visiteur et l'élève sans
+// établissement voient un aperçu mocké, signalé par la pastille « Aperçu ».
 export default async function AmisPage() {
   const supabase = await createClient()
   const {
@@ -44,9 +43,12 @@ export default async function AmisPage() {
   let missionDoneAgainst: string | null = null
   let myFriendCode = ''
   // « En direct » et « Mon école » : réels si l'élève est connecté (RPC 160),
-  // sinon démo mockée (visiteur).
+  // sinon aperçu mocké (visiteur). Les drapeaux *Demo suivent la vérité et
+  // affichent la pastille « Aperçu » — jamais de mock déguisé en réel.
   let live: LiveSession[] = getMockLive()
+  let liveDemo = true
   let school: SchoolBoard = getMockSchool(0)
+  let schoolDemo = true
   const today = toDayKey(new Date())
 
   if (user) {
@@ -97,14 +99,21 @@ export default async function AmisPage() {
     myFriendCode = String(profile?.friend_code ?? '')
 
     // « En direct » réel (vide si personne n'est actif). « Mon école » réelle via
-    // le clan (cycle déduit de la classe) ; à défaut de clan, on garde la démo.
+    // le clan (cycle déduit de la classe) ; à défaut de clan, aperçu adapté au
+    // cycle (avec mon vrai temps) et signalé comme tel.
     live = buildLiveSessions(liveRows)
+    liveDemo = false
     const level = schoolLevelForGrade(profile?.grade_level ?? null)
     const { data: clanMatesRaw } = await supabase.rpc('clan_mates', {
       p_level: level,
     })
-    const realSchool = buildSchoolBoard(clanMatesRaw, user.id)
-    if (realSchool.mates.length > 0) school = realSchool
+    const realSchool = buildSchoolBoard(clanMatesRaw, user.id, level)
+    if (realSchool.mates.length > 0) {
+      school = realSchool
+      schoolDemo = false
+    } else {
+      school = getMockSchool(Number(profile?.work_seconds ?? 0) || 0, level)
+    }
 
     const overview = mapFriendsOverview(
       Array.isArray(overviewRows) ? overviewRows : [],
@@ -198,15 +207,16 @@ export default async function AmisPage() {
       />
       <AmisHome
         live={live}
+        liveDemo={liveDemo}
         duels={duels}
         ranking={ranking}
         streaks={streaks}
         school={school}
+        schoolDemo={schoolDemo}
         friends={friends}
         pendingRequests={pendingRequests}
         myFriendCode={myFriendCode}
         missionDoneAgainst={missionDoneAgainst}
-        prioritySubject={MOCK_PRIORITY_SUBJECT}
       />
     </div>
   )

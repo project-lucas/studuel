@@ -2,11 +2,10 @@ import { describe, it, expect } from 'vitest'
 import {
   buildLiveSessions,
   buildSchoolBoard,
-  leagueZone,
-  sortLeague,
   sortSchool,
+  schoolNoun,
   schoolTotalSeconds,
-  duelMissionAvailable,
+  getMockSchool,
   sinceLabel,
   mapFriendsOverview,
   addFriendMessage,
@@ -17,28 +16,7 @@ import {
   type StreakEntry,
 } from '@/lib/social'
 
-describe('leagueZone', () => {
-  it('les 5 premiers montent, les 5 derniers descendent', () => {
-    expect(leagueZone(1, 30)).toBe('promote')
-    expect(leagueZone(5, 30)).toBe('promote')
-    expect(leagueZone(6, 30)).toBe('safe')
-    expect(leagueZone(25, 30)).toBe('safe')
-    expect(leagueZone(26, 30)).toBe('relegate')
-    expect(leagueZone(30, 30)).toBe('relegate')
-  })
-})
-
-describe('sortLeague / sortSchool', () => {
-  it('classe par XP décroissant sans muter l’original', () => {
-    const entries = [
-      { id: 'a', name: 'A', emoji: '🦊', xp: 10 },
-      { id: 'b', name: 'B', emoji: '🐼', xp: 30 },
-    ]
-    const sorted = sortLeague(entries)
-    expect(sorted.map((e) => e.id)).toEqual(['b', 'a'])
-    expect(entries[0].id).toBe('a') // pas de mutation
-  })
-
+describe('sortSchool', () => {
   it('classe l’école au temps de travail décroissant', () => {
     const mates = [
       { id: 'a', name: 'A', emoji: '🦊', seconds: 100 },
@@ -59,11 +37,17 @@ describe('schoolTotalSeconds', () => {
   })
 })
 
-describe('duelMissionAvailable', () => {
-  it('une seule mission duel par jour', () => {
-    expect(duelMissionAvailable(null, '2026-07-06')).toBe(true)
-    expect(duelMissionAvailable('2026-07-05', '2026-07-06')).toBe(true)
-    expect(duelMissionAvailable('2026-07-06', '2026-07-06')).toBe(false)
+describe('schoolNoun / getMockSchool', () => {
+  it('nomme l’établissement selon le cycle', () => {
+    expect(schoolNoun('college')).toBe('collège')
+    expect(schoolNoun('lycee')).toBe('lycée')
+  })
+
+  it('l’aperçu suit le cycle (nom et level cohérents avec le titre)', () => {
+    expect(getMockSchool(0).name).toBe('Collège Jean-Moulin')
+    expect(getMockSchool(0).level).toBe('college')
+    expect(getMockSchool(0, 'lycee').name).toBe('Lycée Jean-Moulin')
+    expect(getMockSchool(0, 'lycee').level).toBe('lycee')
   })
 })
 
@@ -121,6 +105,12 @@ describe('mapFriendsOverview', () => {
 describe('addFriendMessage', () => {
   it('marque « sent » comme succès', () => {
     expect(addFriendMessage('sent').ok).toBe(true)
+  })
+
+  it('marque « added » (scan de QR) comme succès immédiat', () => {
+    const res = addFriendMessage('added')
+    expect(res.ok).toBe(true)
+    expect(res.message.length).toBeGreaterThan(0)
   })
 
   it('marque tous les autres statuts comme échec avec un message', () => {
@@ -256,10 +246,16 @@ describe('buildSchoolBoard', () => {
     expect(board.mates[1]).toMatchObject({ id: 'a', name: 'Ana' })
   })
 
+  it('porte le cycle demandé (collège par défaut)', () => {
+    expect(buildSchoolBoard(null, 'me').level).toBe('college')
+    expect(buildSchoolBoard(null, 'me', 'lycee').level).toBe('lycee')
+  })
+
   it('forme vide → école sans nom, sans camarade', () => {
     expect(buildSchoolBoard(null, 'me')).toEqual({
       name: '',
       emoji: '🏫',
+      level: 'college',
       mates: [],
     })
   })

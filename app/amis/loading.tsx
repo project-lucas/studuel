@@ -1,7 +1,7 @@
 import { Skeleton } from '@/components/ui/skeleton'
 
 // Squelette de l'onglet Amis : le tap sur l'onglet répond immédiatement,
-// le contenu (ligue, duels, amis) arrive derrière.
+// le contenu (mission, en direct, duels, classements) arrive derrière.
 export default function AmisLoading() {
   return (
     <div className="flex flex-col gap-4">

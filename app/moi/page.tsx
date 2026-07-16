@@ -21,9 +21,11 @@ import GradeSelector from '@/components/GradeSelector'
 import StructureChart, { type WeekPoint } from '@/components/StructureChart'
 import BadgeGrid from '@/components/BadgeGrid'
 import WeeklyRecapCard from '@/components/WeeklyRecapCard'
+import MilestonesTimeline from '@/components/MilestonesTimeline'
 import { createClient } from '@/lib/supabase/server'
 import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
 import { computeWeeklyRecap } from '@/lib/weekly-recap'
+import { computeMilestones } from '@/lib/milestones'
 import {
   syncAutoHabits,
   isInCommuteSlot,
@@ -377,6 +379,18 @@ export default async function MoiPage({
       total: t.total,
     })),
   )
+  // Journal de progression : jalons horodatés reconstruits sur les données déjà
+  // chargées (sessions + jours d'activité), du plus récent au plus ancien.
+  const milestones = computeMilestones({
+    quizzes: (tests ?? []).map((t) => ({
+      date: String(t.created_at).slice(0, 10),
+      score: t.score,
+      total: t.total,
+    })),
+    lessonDates: (lessonsDone ?? []).map((l) => String(l.created_at).slice(0, 10)),
+    challengeDates: (challenges ?? []).map((c) => String(c.created_at).slice(0, 10)),
+    activityDays: [...activityDays],
+  })
   const sessionsPerDay = new Map<string, number>()
   for (const s of allActivity) {
     const key = String(s.created_at).slice(0, 10)
@@ -550,6 +564,10 @@ export default async function MoiPage({
               autoOpen={bilan === '1'}
               needsMigration={Boolean(profileError)}
             />
+            {/* Journal de progression : la frise des jalons du parcours. */}
+            <div className="mt-4">
+              <MilestonesTimeline milestones={milestones} />
+            </div>
             {/* Graphique et badges : repliés derrière deux icônes, à la demande. */}
             <MoiExtras
               chart={<StructureChart data={chartData} />}

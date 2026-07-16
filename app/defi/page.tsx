@@ -29,7 +29,13 @@ import {
   type Ranking,
   type School,
 } from '@/lib/clan'
+import {
+  normalizeLeagueStandings,
+  buildLeague,
+  tierMeta,
+} from '@/lib/league'
 import type {
+  League,
   RankingBoard,
   RankingEntry,
   RankingScope,
@@ -100,6 +106,8 @@ export default async function DefiPage() {
   // Valeurs par défaut (visiteur non connecté : démo mockée).
   let trophies = MOCK_TROPHIES
   let boards: Record<RankingScope, RankingBoard> = MOCK_RANKINGS
+  let league: League = MOCK_LEAGUE
+  let leaguePreview: string | undefined
   let clanLabel: string | undefined
   let clanNode: ReactNode = null
   let rankingPreview: string | undefined
@@ -123,18 +131,20 @@ export default async function DefiPage() {
 
     // Classements réels + école courante, chacun tolérant à l'absence de la
     // migration 159 (RPC absente → data null → classement vide).
-    const [clanRes, natRes, friendsRes, schoolRes] = await Promise.all([
-      supabase.rpc('clan_ranking', { p_level: level }),
-      supabase.rpc('national_ranking'),
-      supabase.rpc('friends_trophies'),
-      schoolId
-        ? supabase
-            .from('schools')
-            .select('id, name, city, level')
-            .eq('id', schoolId)
-            .maybeSingle()
-        : Promise.resolve({ data: null }),
-    ])
+    const [clanRes, natRes, friendsRes, schoolRes, leagueRes] =
+      await Promise.all([
+        supabase.rpc('clan_ranking', { p_level: level }),
+        supabase.rpc('national_ranking'),
+        supabase.rpc('friends_trophies'),
+        schoolId
+          ? supabase
+              .from('schools')
+              .select('id, name, city, level')
+              .eq('id', schoolId)
+              .maybeSingle()
+          : Promise.resolve({ data: null }),
+        supabase.rpc('league_standings'),
+      ])
 
     const clan = normalizeRanking(clanRes.data)
     const national = normalizeRanking(natRes.data)
@@ -166,6 +176,16 @@ export default async function DefiPage() {
       },
     }
 
+    // Ligue hebdo réelle (XP de la semaine par palier). À défaut de données
+    // (migration 161 non passée), on garde la vitrine mockée.
+    const standings = normalizeLeagueStandings(leagueRes.data)
+    if (standings.entries.length > 0) {
+      league = buildLeague(standings, user.id, avatarEmojiFor)
+      leaguePreview = standings.myRank
+        ? `${ordinalFr(standings.myRank)} · ${tierMeta(standings.tier).name.replace('Ligue ', '')}`
+        : undefined
+    }
+
     clanLabel = level === 'college' ? 'Mon collège' : 'Mon lycée'
     clanNode = <ClanBanner level={level} current={currentSchool} />
     rankingPreview =
@@ -177,8 +197,11 @@ export default async function DefiPage() {
   }
 
   const arena = arenaProgress(trophies)
-  const me = MOCK_LEAGUE.players.find((p) => p.isMe)
-  const leaguePreview = me ? `${me.rank}e · ${me.weeklyXp} XP` : undefined
+  // Visiteur (league = MOCK_LEAGUE) : aperçu dérivé du mock.
+  if (leaguePreview === undefined && league === MOCK_LEAGUE) {
+    const meMock = MOCK_LEAGUE.players.find((p) => p.isMe)
+    leaguePreview = meMock ? `${meMock.rank}e · ${meMock.weeklyXp} XP` : undefined
+  }
 
   return (
     <div className="mx-auto flex w-full max-w-md flex-col gap-4">
@@ -188,16 +211,16 @@ export default async function DefiPage() {
       <ChestRow chests={MOCK_CHESTS} />
 
       <CollapsibleSection
-        title={MOCK_LEAGUE.name}
+        title={league.name}
         icon={
           <span className="text-2xl leading-none" aria-hidden>
-            {MOCK_LEAGUE.tierIcon}
+            {league.tierIcon}
           </span>
         }
         preview={leaguePreview}
         ariaLabel="Ligue hebdomadaire"
       >
-        <WeeklyLeague league={MOCK_LEAGUE} />
+        <WeeklyLeague league={league} />
       </CollapsibleSection>
 
       {/* Clan (école) + classements réels. */}

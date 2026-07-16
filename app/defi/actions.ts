@@ -196,3 +196,99 @@ export async function recordRankedMatch(
 
 // Le versement du temps de travail (chrono du Défi) passe par la route
 // app/api/work-time — compatible sendBeacon, garanti même quand la page se ferme.
+
+// -----------------------------------------------------------------------------
+// Écoles = clans (migration 159). Recherche/ajout d'école, rattachement de
+// l'élève, le tout via RPC atomiques SECURITY DEFINER. Les classements réels
+// (clan_ranking / national_ranking) sont lus directement côté page.
+// -----------------------------------------------------------------------------
+
+// Recherche d'écoles par nom pour un cycle donné (lecture directe : la table
+// schools est lisible par tous les élèves authentifiés). Vide si < 2 caractères.
+export async function searchSchools(
+  query: string,
+  level: string,
+): Promise<import('@/lib/clan').School[]> {
+  const q = typeof query === 'string' ? query.trim() : ''
+  if (q.length < 2 || (level !== 'college' && level !== 'lycee')) return []
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return []
+
+  const { data, error } = await supabase
+    .from('schools')
+    .select('id, name, city, level')
+    .eq('level', level)
+    .ilike('name', `%${q}%`)
+    .order('name', { ascending: true })
+    .limit(12)
+  if (error) {
+    console.error('[clan] recherche école impossible:', error.message)
+    return []
+  }
+  const { normalizeSchoolList } = await import('@/lib/clan')
+  return normalizeSchoolList(data)
+}
+
+// Ajoute (ou retrouve) une école, puis rattache l'élève dessus. Renvoie
+// l'école normalisée en cas de succès.
+export async function joinNewSchool(
+  name: string,
+  city: string | null,
+  level: string,
+): Promise<{ ok: boolean; school: import('@/lib/clan').School | null }> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user || (level !== 'college' && level !== 'lycee')) {
+    return { ok: false, school: null }
+  }
+  const cleanName = typeof name === 'string' ? name.trim() : ''
+  if (cleanName.length === 0) return { ok: false, school: null }
+  const cleanCity =
+    typeof city === 'string' && city.trim().length > 0 ? city.trim() : null
+
+  const { data: id, error } = await supabase.rpc('find_or_create_school', {
+    p_name: cleanName,
+    p_city: cleanCity,
+    p_level: level,
+  })
+  if (error || !id) {
+    console.error('[clan] école non créée:', error?.message)
+    return { ok: false, school: null }
+  }
+  const set = await setMySchool(String(id), level)
+  return {
+    ok: set.ok,
+    school: set.ok
+      ? { id: String(id), name: cleanName, city: cleanCity, level }
+      : null,
+  }
+}
+
+// Rattache l'élève à une école existante (ou la quitte avec schoolId null).
+export async function setMySchool(
+  schoolId: string | null,
+  level: string,
+): Promise<{ ok: boolean }> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user || (level !== 'college' && level !== 'lycee')) return { ok: false }
+
+  const { data, error } = await supabase.rpc('set_my_school', {
+    p_school_id: schoolId,
+    p_level: level,
+  })
+  if (error || data !== true) {
+    console.error('[clan] rattachement école impossible:', error?.message)
+    return { ok: false }
+  }
+  revalidatePath('/defi')
+  revalidatePath('/compte')
+  return { ok: true }
+}

@@ -7,23 +7,25 @@ import { ChevronRightIcon } from './icons'
 
 interface RankingTabsProps {
   boards: Record<RankingScope, RankingBoard>
+  /** Libellé de l'onglet « clan » (nom de l'école, ex. « Mon collège »). */
+  clanLabel?: string
 }
 
-const TABS: { scope: RankingScope; label: string }[] = [
-  { scope: 'college', label: 'Collège' },
-  { scope: 'national', label: 'National' },
-  { scope: 'amis', label: 'Amis' },
-]
-
 /**
- * Classements en 3 onglets internes (Collège / National / Amis). Contrôle
+ * Classements en 3 onglets internes (Mon clan / National / Amis). Contrôle
  * segmenté restylé au design system ; le contenu glisse en fondu à chaque
- * changement d'onglet (Framer Motion).
+ * changement d'onglet (Framer Motion). Le libellé du clan reflète l'école.
  */
-export default function RankingTabs({ boards }: RankingTabsProps) {
+export default function RankingTabs({ boards, clanLabel }: RankingTabsProps) {
   const [scope, setScope] = useState<RankingScope>('college')
   const reduce = useReducedMotion()
   const board = boards[scope]
+
+  const TABS: { scope: RankingScope; label: string }[] = [
+    { scope: 'college', label: clanLabel ?? 'Mon clan' },
+    { scope: 'national', label: 'National' },
+    { scope: 'amis', label: 'Amis' },
+  ]
 
   return (
     <div>

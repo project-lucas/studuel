@@ -34,10 +34,16 @@ export default function ResumeSessions({ items }: { items: ResumeItem[] }) {
           const pct = Math.round(item.progress * 100)
           return (
             <li key={item.chapterId} className="w-44 shrink-0">
+              {/* Carte teintée à la couleur de la matière (et non blanche) :
+                  la rangée de reprise se distingue au premier coup d'œil des
+                  autres blocs de la page, et chaque carte « dit » sa matière. */}
               <Link
                 href={`/reviser/${item.subject.slug}/${item.chapterId}`}
                 onClick={() => sfx.tap()}
-                className="group flex h-full flex-col rounded-3xl bg-white p-4 shadow-sm ring-1 ring-black/5 transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
+                className={cn(
+                  'group flex h-full flex-col rounded-3xl p-4 shadow-sm ring-1 ring-black/10 transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]',
+                  theme.header,
+                )}
               >
                 <div className="flex items-start justify-between">
                   <span
@@ -54,7 +60,7 @@ export default function ResumeSessions({ items }: { items: ResumeItem[] }) {
                     />
                   </span>
                   {item.isNew ? (
-                    <span className="rounded-full bg-highlight px-2 py-0.5 text-[10px] font-bold text-foreground">
+                    <span className="rounded-full bg-highlight px-2 py-0.5 text-[10px] font-bold text-foreground shadow-sm">
                       Nouveau
                     </span>
                   ) : (
@@ -63,25 +69,30 @@ export default function ResumeSessions({ items }: { items: ResumeItem[] }) {
                       size={34}
                       strokeWidth={4}
                       label={`${pct}% fait`}
-                      trackClassName="stroke-muted"
-                      fillClassName="stroke-primary"
+                      trackClassName="stroke-white/70"
+                      fillClassName={theme.stroke}
                     >
-                      <span className="font-mono text-[10px] font-bold text-foreground tabular-nums">
+                      <span className="font-mono text-[10px] font-bold tabular-nums">
                         {pct}%
                       </span>
                     </ProgressRing>
                   )}
                 </div>
 
-                <p className="font-heading mt-3 line-clamp-2 text-sm leading-tight font-bold text-foreground">
+                <p className="font-heading mt-3 line-clamp-2 text-sm leading-tight font-bold">
                   {item.chapterTitle}
                 </p>
-                <p className="mt-0.5 truncate text-xs text-muted-foreground">
+                <p className="mt-0.5 truncate text-xs opacity-70">
                   {item.subject.name}
                 </p>
 
-                <span className="mt-3 flex items-center gap-1.5 text-xs font-bold text-primary">
-                  <span className="flex size-7 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm transition-transform group-hover:scale-110">
+                <span className="mt-3 flex items-center gap-1.5 text-xs font-bold">
+                  <span
+                    className={cn(
+                      'flex size-7 items-center justify-center rounded-full text-white shadow-sm transition-transform group-hover:scale-110',
+                      theme.bar,
+                    )}
+                  >
                     {item.isNew ? (
                       <Play className="size-3.5" aria-hidden="true" />
                     ) : (

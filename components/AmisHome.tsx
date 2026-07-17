@@ -9,17 +9,14 @@ import {
   Trophy,
   Crown,
   Zap,
-  Copy,
   Check,
   UserPlus,
-  ArrowRight,
   School,
   Hourglass,
   Flame,
   X,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import FriendQrButton from '@/components/FriendQrButton'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { formatHours } from '@/lib/time'
@@ -36,12 +33,7 @@ import {
   DUEL_XP_BONUS,
   ACTIVE_DUEL_KEY,
 } from '@/lib/social'
-import {
-  addFriendByCode,
-  acceptFriend,
-  removeFriend,
-  createDuel,
-} from '@/app/amis/actions'
+import { acceptFriend, removeFriend, createDuel } from '@/app/amis/actions'
 import {
   arenaFor,
   rankPlayers,
@@ -204,7 +196,8 @@ function DuelMissionCard({
             </ul>
           ) : (
             <p className="mt-3 rounded-2xl bg-primary-foreground/10 p-3 text-sm text-primary-foreground/80">
-              Ajoute un ami plus bas pour pouvoir le défier 👇
+              Ajoute un ami avec le bouton en haut à droite pour pouvoir le
+              défier 👆
             </p>
           )}
 
@@ -662,7 +655,6 @@ export default function AmisHome({
   schoolDemo,
   friends,
   pendingRequests,
-  myFriendCode,
   missionDoneAgainst,
 }: {
   live: LiveSession[]
@@ -676,16 +668,8 @@ export default function AmisHome({
   schoolDemo: boolean
   friends: Friend[]
   pendingRequests: PendingRequest[]
-  myFriendCode: string
   missionDoneAgainst: string | null
 }) {
-  const [copied, setCopied] = useState(false)
-  const [copyFailed, setCopyFailed] = useState(false)
-  const [code, setCode] = useState('')
-  const [feedback, setFeedback] = useState<{ ok: boolean; message: string } | null>(
-    null,
-  )
-  const [isAdding, startAdding] = useTransition()
   // Classement réel aux trophées : ma place, mes trophées, mon arène, et le
   // rival juste devant (« +40 pour le doubler »).
   const rankedRows = rankPlayers(ranking)
@@ -695,33 +679,6 @@ export default function AmisHome({
   const myArena = arenaFor(myTrophies)
   const ahead = rivalAhead(rankedRows)
   const friendCount = ranking.filter((e) => !e.isMe).length
-
-  const copyCode = async () => {
-    if (!myFriendCode) return
-    try {
-      await navigator.clipboard.writeText(myFriendCode)
-      setCopyFailed(false)
-      setCopied(true)
-      sfx.tap()
-      setTimeout(() => setCopied(false), 1600)
-    } catch {
-      // Presse-papiers indisponible (contexte non sécurisé, permission…) :
-      // on le dit au lieu de laisser un tap sans effet.
-      setCopyFailed(true)
-    }
-  }
-
-  const submitCode = (e: React.FormEvent) => {
-    e.preventDefault()
-    const value = code.trim()
-    if (!value || isAdding) return
-    sfx.tap()
-    startAdding(async () => {
-      const res = await addFriendByCode(value)
-      setFeedback(res)
-      if (res.ok) setCode('')
-    })
-  }
 
   return (
     <div className="flex flex-col gap-6">
@@ -840,7 +797,7 @@ export default function AmisHome({
             <p className="mt-2 px-1 text-[11px] text-muted-foreground">
               {friendCount > 0
                 ? 'Gagne des matchs classés dans le Défi pour grimper — chaque victoire rapporte des trophées.'
-                : 'Ajoute des amis plus bas pour vous comparer — chaque match classé gagné rapporte des trophées.'}
+                : 'Ajoute des amis (bouton en haut à droite) pour vous comparer — chaque match classé gagné rapporte des trophées.'}
             </p>
           </>
         )}
@@ -869,85 +826,6 @@ export default function AmisHome({
 
       {/* Ton collège / ton lycée — la cagnotte d'heures et le classement interne. */}
       <SchoolSection school={school} demo={schoolDemo} />
-
-      {/* Ajouter un ami. */}
-      <section className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
-        <SectionTitle icon={UserPlus}>Ajouter un ami</SectionTitle>
-        <p className="mb-3 text-sm text-muted-foreground">
-          Fais scanner ton QR code : vous devenez amis direct. Par code, ton
-          ami reçoit une demande à accepter.
-        </p>
-        {/* Mon QR à faire scanner — quiconque le scanne devient mon ami. */}
-        {myFriendCode ? (
-          <div className="mb-2">
-            <FriendQrButton friendCode={myFriendCode} />
-          </div>
-        ) : null}
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={copyCode}
-            disabled={!myFriendCode}
-            aria-label={
-              myFriendCode ? `Copier ton code ${myFriendCode}` : 'Code indisponible'
-            }
-            className="flex flex-1 items-center justify-between gap-2 rounded-full border bg-muted/50 px-4 py-2 font-mono text-sm font-bold transition-colors hover:bg-muted disabled:opacity-60"
-          >
-            {myFriendCode || '——————'}
-            {copied ? (
-              <Check className="size-4 text-green-600" />
-            ) : (
-              <Copy className="size-4 text-muted-foreground" />
-            )}
-          </button>
-        </div>
-        {copyFailed ? (
-          <p role="status" className="mt-1 px-1 text-xs text-destructive">
-            Copie impossible sur cet appareil — recopie ton code à la main.
-          </p>
-        ) : null}
-        <form className="mt-2 flex items-center gap-2" onSubmit={submitCode}>
-          <input
-            type="text"
-            value={code}
-            onChange={(e) => {
-              setCode(e.target.value.toUpperCase())
-              if (feedback) setFeedback(null)
-            }}
-            maxLength={10}
-            autoCapitalize="characters"
-            autoComplete="off"
-            placeholder="Code d’un ami…"
-            aria-label="Entrer le code d’un ami"
-            className="h-10 flex-1 rounded-full border bg-card px-4 font-mono text-sm tracking-wide uppercase outline-none placeholder:font-sans placeholder:normal-case placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/40"
-          />
-          <Button
-            type="submit"
-            className="rounded-full"
-            disabled={isAdding || code.trim().length === 0}
-          >
-            {isAdding ? (
-              'Envoi…'
-            ) : (
-              <>
-                Ajouter <ArrowRight className="size-4" />
-              </>
-            )}
-          </Button>
-        </form>
-        {feedback ? (
-          <p
-            role="status"
-            aria-live="polite"
-            className={cn(
-              'mt-2 px-1 text-sm font-medium',
-              feedback.ok ? 'text-green-700 dark:text-green-400' : 'text-destructive',
-            )}
-          >
-            {feedback.message}
-          </p>
-        ) : null}
-      </section>
     </div>
   )
 }

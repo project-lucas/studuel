@@ -388,8 +388,8 @@ export default async function ReviserPage() {
           <div className="flex flex-col gap-4">
             {/* Accueil façon carnet : bandeau de salutation (prénom, classe,
                 série), puis les blocs d'action qui chevauchent le bandeau
-                (reprise, file du jour, bibliothèque), et enfin la grille des
-                matières. */}
+                (série de la semaine, file du jour, reprise), et enfin la
+                grille des matières. */}
             <SubjectsHome
               firstName={firstName}
               avatarUri={avatarUri}
@@ -402,8 +402,16 @@ export default async function ReviserPage() {
               underHeader={false}
               topSlot={
                 <>
-                  {/* 1. On s'y remet — reprendre la dernière session en un tap. */}
-                  <ResumeSessions items={resumeItems} />
+                  {/* 1. Ta série — la semaine d'activité mise en avant, tout en
+                      haut, dans une carte blanche qui chevauche le bandeau. */}
+                  <div className="rev-card rounded-3xl bg-white p-4 shadow-sm ring-1 ring-black/5">
+                    <WeekPlannerStrip
+                      week={week}
+                      exams={upcomingExams}
+                      today={today}
+                      subjects={examSubjects}
+                    />
+                  </div>
                   {/* 2. À revoir aujourd'hui — LA porte de la file SRS +
                       Revanche (entrée unique, l'ancienne tuile jumelle des
                       outils a été retirée). Absente si la file est vide. */}
@@ -414,16 +422,8 @@ export default async function ReviserPage() {
                       (a, b) => b[1] - a[1],
                     )}
                   />
-                  {/* 3. Ma bibliothèque — fiches, quiz, flashcards. */}
-                  <ReviserTools />
-                  {/* 4. Ta semaine — barre d'activité + prochain contrôle en
-                      lecture seule ; l'ajout vit dans Mon carnet. */}
-                  <WeekPlannerStrip
-                    week={week}
-                    exams={upcomingExams}
-                    today={today}
-                    subjects={examSubjects}
-                  />
+                  {/* 3. On s'y remet — les dernières sessions, sous la série. */}
+                  <ResumeSessions items={resumeItems} />
                   {/* Rappel contextuel : pendant le trajet, un temps mort = de
                       l'XP. */}
                   <CommuteBanner slots={commuteSlots} />
@@ -446,12 +446,15 @@ export default async function ReviserPage() {
               subjects={examSubjects}
               chaptersBySubject={chaptersBySubject}
             />
-            {/* 2. Ma maîtrise — rangs par matière + chapitres à progresser. */}
+            {/* 2. Ma bibliothèque — fiches, quiz, flashcards (déplacée depuis
+                Mes matières : c'est un outil de carnet, pas de programme). */}
+            <ReviserTools />
+            {/* 3. Ma maîtrise — rangs par matière + chapitres à progresser. */}
             <CarnetMastery entries={masteryEntries} fragiles={fragileChapters} />
-            {/* 3. L'examen blanc — remonté sous la maîtrise (on voit son
+            {/* 4. L'examen blanc — remonté sous la maîtrise (on voit son
                 niveau, on le teste en conditions réelles). */}
             <CarnetExamBlanc />
-            {/* 4. Préparation examen : objectif par matière (classes à examen)
+            {/* 5. Préparation examen : objectif par matière (classes à examen)
                 et descriptif de l'oral (1re français). */}
             <ExamObjectiveToggle
               title={EXAM_TITLES[grade] ?? 'Objectif examen'}

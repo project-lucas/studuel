@@ -1,5 +1,6 @@
 import PageHeader from '@/components/PageHeader'
 import AmisHome from '@/components/AmisHome'
+import FriendAddButton from '@/components/FriendAddButton'
 import { createClient } from '@/lib/supabase/server'
 import { toDayKey } from '@/lib/streak'
 import {
@@ -201,10 +202,14 @@ export default async function AmisPage() {
 
   return (
     <div>
-      <PageHeader
-        title="Amis"
-        description="Défie, rejoins, grimpe — ton cerveau contre les leurs."
-      />
+      {/* L'ajout d'ami vit en icône en haut à droite, à hauteur du titre. */}
+      <div className="flex items-start justify-between gap-3">
+        <PageHeader
+          title="Amis"
+          description="Défie, rejoins, grimpe — ton cerveau contre les leurs."
+        />
+        <FriendAddButton myFriendCode={myFriendCode} />
+      </div>
       <AmisHome
         live={live}
         liveDemo={liveDemo}
@@ -215,7 +220,6 @@ export default async function AmisPage() {
         schoolDemo={schoolDemo}
         friends={friends}
         pendingRequests={pendingRequests}
-        myFriendCode={myFriendCode}
         missionDoneAgainst={missionDoneAgainst}
       />
     </div>

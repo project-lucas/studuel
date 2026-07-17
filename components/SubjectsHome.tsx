@@ -2,11 +2,24 @@
 
 import { useState, useTransition } from 'react'
 import Link from 'next/link'
-import { Check, Pencil, CalendarClock, ChevronDown, Settings } from 'lucide-react'
+import {
+  Check,
+  Pencil,
+  CalendarClock,
+  ChevronDown,
+  Crown,
+  Settings,
+} from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { subjectTheme } from '@/lib/subject-style'
+import {
+  rankForValue,
+  MASTERY_RANK_LABEL,
+  type MasteryRank,
+} from '@/lib/mastery'
 import SubjectIcon from '@/components/SubjectIcon'
 import StreakMascot from '@/components/StreakMascot'
+import WorldBackdrop from '@/components/WorldBackdrop'
 import { sfx } from '@/lib/sounds'
 import { saveSelectedSubjects } from '@/app/reviser/actions'
 import type { ExamProximity, SubjectExamHint } from '@/lib/next-exam'
@@ -24,6 +37,71 @@ const PROX_STYLE: Record<
 }
 
 const COLLEGE_LEVELS = ['6e', '5e', '4e', '3e']
+
+// Cote « couronnes » façon Duolingo : à la place du pourcentage (déprimant),
+// chaque matière porte 3 emplacements de couronne remplis selon son rang de
+// maîtrise (lib/mastery). Diamant et Légendaire gardent 3 couronnes mais
+// passent en violet — le prestige au-delà de l'or.
+const RANK_CROWNS: Record<MasteryRank, number> = {
+  bronze: 1,
+  argent: 2,
+  or: 3,
+  diamant: 3,
+  legendaire: 3,
+}
+
+const RANK_COLOR: Record<MasteryRank, string> = {
+  bronze: 'text-amber-700',
+  argent: 'text-slate-400',
+  or: 'text-yellow-500',
+  diamant: 'text-primary',
+  legendaire: 'text-primary',
+}
+
+// Rangée de 3 couronnes + libellé du rang (« À débloquer » tant que rien n'est
+// commencé). Purement décorative : le texte porte l'information.
+function CrownRating({
+  rank,
+  subjectName,
+}: {
+  rank: MasteryRank | null
+  subjectName: string
+}) {
+  const filled = rank ? RANK_CROWNS[rank] : 0
+  const color = rank ? RANK_COLOR[rank] : ''
+  const label = rank ? MASTERY_RANK_LABEL[rank] : 'À débloquer'
+
+  return (
+    <div
+      className="mt-2.5 flex items-center gap-1.5"
+      aria-label={`Rang en ${subjectName} : ${label}`}
+    >
+      <span aria-hidden="true" className="flex items-center gap-0.5">
+        {[0, 1, 2].map((i) => (
+          <Crown
+            key={i}
+            strokeWidth={2.2}
+            className={cn(
+              'size-4',
+              i < filled
+                ? cn(color, 'fill-current')
+                : 'text-muted-foreground/30',
+            )}
+          />
+        ))}
+      </span>
+      <span
+        aria-hidden="true"
+        className={cn(
+          'text-xs font-bold',
+          rank ? color : 'text-muted-foreground/70',
+        )}
+      >
+        {label}
+      </span>
+    </div>
+  )
+}
 
 const LYCEE_GROUPS: { category: SubjectCategory; label: string }[] = [
   { category: 'tronc_commun', label: 'Tronc commun' },
@@ -165,7 +243,10 @@ function SubjectRow({
     <div
       style={{ animationDelay: `${delayMs}ms` }}
       className={cn(
-        'pop-in rev-card relative flex min-h-[92px] flex-col justify-between rounded-3xl bg-white p-3.5 transition',
+        // Fond pastel de la matière (theme.tile) plutôt que blanc : chaque
+        // bloc porte sa couleur, la grille est moins monochrome.
+        'pop-in rev-card relative flex min-h-[92px] flex-col justify-between rounded-3xl p-3.5 transition',
+        theme.tile,
         prox ? `ring-2 ${prox.ring}` : 'ring-1 ring-black/5',
         !editing &&
           'group-hover:-translate-y-0.5 group-hover:shadow-lg group-active:translate-y-px',
@@ -218,19 +299,7 @@ function SubjectRow({
         </p>
       </div>
 
-      <div
-        className="rev-track mt-2.5 h-2 w-full overflow-hidden rounded-full"
-        role="progressbar"
-        aria-label={`Avancement en ${subject.name}`}
-        aria-valuemin={0}
-        aria-valuemax={100}
-        aria-valuenow={pct}
-      >
-        <div
-          className="rev-fill h-full rounded-full transition-all"
-          style={{ width: `${pct}%` }}
-        />
-      </div>
+      <CrownRating rank={rankForValue(pct / 100)} subjectName={subject.name} />
     </div>
   )
 
@@ -338,7 +407,7 @@ export default function SubjectsHome({
   return (
     <section aria-label="Mes matières">
       {/* Fond crème pleine page, derrière tout le contenu de l'onglet. */}
-      <div aria-hidden="true" className="rev-bg fixed inset-0 -z-10" />
+      <WorldBackdrop className="rev-bg" />
 
       {/* Bandeau violet : bord à bord sur mobile (il file sous la barre du
           haut), carte arrondie sur desktop. */}
@@ -457,6 +526,27 @@ export default function SubjectsHome({
               ))}
             </div>
           </section>
+        ) : null}
+
+        {/* Légende des rangs de couronnes, comme sur la maquette. */}
+        {!editing ? (
+          <div
+            aria-hidden="true"
+            className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 px-1 pb-1"
+          >
+            {(['bronze', 'argent', 'or', 'diamant'] as const).map((rank) => (
+              <span
+                key={rank}
+                className="flex items-center gap-1 text-[11px] font-bold text-muted-foreground"
+              >
+                <Crown
+                  strokeWidth={2.2}
+                  className={cn('size-3.5 fill-current', RANK_COLOR[rank])}
+                />
+                {MASTERY_RANK_LABEL[rank]}
+              </span>
+            ))}
+          </div>
         ) : null}
       </div>
     </section>

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import { NotificationBadge } from './SculptedPlate'
 
@@ -43,8 +43,8 @@ interface ArenaHudProps {
   leftOrbs: OrbItem[]
   /** Colonne d'entrées « social » (clan, historique, amis). */
   rightOrbs: OrbItem[]
-  /** Le centre de la scène (arène, mascotte, trophées). */
-  children: ReactNode
+  /** Le centre de la scène (optionnel : l'arène peut rester plein cadre). */
+  children?: ReactNode
 }
 
 /**
@@ -90,7 +90,9 @@ export default function ArenaHud({
   return (
     <div className="relative min-h-0 flex-1">
       {/* Bouton burger : unique porte vers les entrées secondaires, calé dans le
-          coin haut-droit pour dégager complètement le décor de l'arène. */}
+          coin haut-droit pour dégager complètement le décor de l'arène. Le picto
+          est le parchemin scellé illustré (drop-shadow pour le détacher du décor,
+          pas de cadre — l'objet se suffit à lui-même). */}
       <button
         type="button"
         onClick={() => {
@@ -99,9 +101,16 @@ export default function ArenaHud({
         }}
         aria-haspopup="dialog"
         aria-label="Menu de l'arène — ligue, classements, clan, amis…"
-        className="olympe-glass olympe-press absolute top-1 right-0 z-10 flex size-12 cursor-pointer items-center justify-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+        className="olympe-press absolute top-0 right-0 z-10 flex size-14 cursor-pointer items-center justify-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
-        <Menu className="size-6 text-[#faf6ef]" strokeWidth={2.6} aria-hidden="true" />
+        <Image
+          src="/images/defi/modes/burger.webp"
+          alt=""
+          width={56}
+          height={47}
+          className="w-11 drop-shadow-[0_3px_6px_rgba(0,0,0,0.55)]"
+          aria-hidden
+        />
       </button>
 
       {/* Le centre, dégagé pour l'arène. */}
@@ -124,12 +133,14 @@ export default function ArenaHud({
                     onClose={() => setMenuOpen(false)}
                     header={
                       <>
-                        <span
-                          className="grid size-9 shrink-0 place-items-center rounded-xl border border-white/12 bg-white/8 leading-none"
-                          aria-hidden="true"
-                        >
-                          <Menu className="size-5 text-white" strokeWidth={2.4} />
-                        </span>
+                        <Image
+                          src="/images/defi/modes/burger.webp"
+                          alt=""
+                          width={36}
+                          height={30}
+                          className="size-9 shrink-0 object-contain"
+                          aria-hidden
+                        />
                         <h2 className="font-heading min-w-0 flex-1 truncate text-lg font-extrabold text-white">
                           Menu
                         </h2>

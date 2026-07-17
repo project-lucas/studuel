@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import ModesSheet from '@/components/defi/ModesSheet'
 import ArenaHud, { type OrbItem } from '@/components/defi/ArenaHud'
-import ArenaCenter from '@/components/defi/ArenaCenter'
+import TrophyBlock from '@/components/defi/TrophyBlock'
 import WeeklyLeague from '@/components/defi/WeeklyLeague'
 import LeaguePromotionWatch from '@/components/defi/LeaguePromotionWatch'
 import RankingTabs from '@/components/defi/RankingTabs'
@@ -349,14 +349,13 @@ export default async function DefiPage() {
           </p>
         </div>
 
-        {/* La scène : arène au centre, orbes flottants sur les bords. */}
-        <ArenaHud leftOrbs={leftOrbs} rightOrbs={rightOrbs}>
-          <ArenaCenter trophies={trophies} />
-        </ArenaHud>
+        {/* La scène : arène plein cadre, entrées secondaires derrière le burger. */}
+        <ArenaHud leftOrbs={leftOrbs} rightOrbs={rightOrbs} />
 
-        {/* Le bas d'écran : rangée sociale (QR), puis CTA principal. */}
-        {/* Duel en direct par QR — « Ajouter un ami » vit dans l'onglet Amis. */}
-        {user ? <QuickActions /> : null}
+        {/* Le bas d'écran, de haut en bas : bloc trophées, CTA « Match classé »,
+            duel en direct (QR), puis la feuille des modes. */}
+        {/* Bloc trophées : descendu du centre de l'arène, juste au-dessus du CTA. */}
+        <TrophyBlock trophies={trophies} />
 
         {/* CTA principal : plaque « or ciselé » pleine largeur, l'élément le
             plus proéminent de la pile. Texte encre ; l'ombre dure s'écrase au
@@ -377,6 +376,10 @@ export default async function DefiPage() {
           </span>
           <ChevronRightIcon className="ml-auto size-5 shrink-0" />
         </Link>
+
+        {/* Duel en direct par QR, sous le CTA — « Ajouter un ami » vit dans
+            l'onglet Amis. */}
+        {user ? <QuickActions /> : null}
 
         {/* Tous les modes de jeu, en feuille qui monte du bas (billets +
             filtres) — le bouton remplace l'ancien lien vers /defi/jeux. */}

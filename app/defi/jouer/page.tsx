@@ -264,12 +264,29 @@ export default async function DefiJouerPage({
   const items: ChallengeItem[] = []
   const pool: ModeQuestion[] = []
 
+  // Questions et cartes de deck : deux requêtes indépendantes (le deck vient
+  // du Promise.all initial) — lancées en parallèle, pas l'une après l'autre.
+  const deck = shuffle(decks ?? [])[0]
+  const [{ data: questions }, { data: deckCards }] = await Promise.all([
+    poolQuizzes.length > 0
+      ? supabase
+          .from('quiz_questions')
+          .select(
+            'id, quiz_id, question, kind, options, correct_index, explanation, position',
+          )
+          .in('quiz_id', poolQuizzes.map((q) => q.id))
+          .returns<QuizQuestion[]>()
+      : Promise.resolve({ data: null as QuizQuestion[] | null }),
+    deck
+      ? supabase
+          .from('deck_cards')
+          .select('id, deck_id, front, back, position')
+          .eq('deck_id', deck.id)
+          .returns<DeckCard[]>()
+      : Promise.resolve({ data: null as DeckCard[] | null }),
+  ])
+
   if (poolQuizzes.length > 0) {
-    const { data: questions } = await supabase
-      .from('quiz_questions')
-      .select('id, quiz_id, question, kind, options, correct_index, explanation, position')
-      .in('quiz_id', poolQuizzes.map((q) => q.id))
-      .returns<QuizQuestion[]>()
     const subjectByQuiz = new Map(poolQuizzes.map((q) => [q.id, q.subject]))
     const valid = (questions ?? []).filter(
       (q) =>
@@ -308,14 +325,8 @@ export default async function DefiJouerPage({
     }
   }
 
-  const deck = shuffle(decks ?? [])[0]
   if (deck) {
-    const { data: cards } = await supabase
-      .from('deck_cards')
-      .select('id, deck_id, front, back, position')
-      .eq('deck_id', deck.id)
-      .returns<DeckCard[]>()
-    for (const c of shuffle(cards ?? []).slice(0, 3)) {
+    for (const c of shuffle(deckCards ?? []).slice(0, 3)) {
       items.push({
         kind: 'card',
         id: c.id,

@@ -9,6 +9,18 @@ function shiftDays(d: Date, days: number): Date {
   return copy
 }
 
+// Fenêtre glissante des requêtes d'« activité » (série + semaine) : borne les
+// selects sur les tables d'événements qui grossissent sans fin. 400 jours
+// couvrent toute série affichable — au-delà, l'historique n'apporte rien à
+// computeStreak/weekProgress.
+export const ACTIVITY_WINDOW_DAYS = 400
+
+export function activityCutoff(now: Date = new Date()): string {
+  return new Date(
+    now.getTime() - ACTIVITY_WINDOW_DAYS * 86_400_000,
+  ).toISOString()
+}
+
 // Série de jours consécutifs avec activité, en remontant depuis aujourd'hui.
 // Clémence façon Duolingo : si rien aujourd'hui mais activité hier,
 // la série d'hier est toujours vivante.

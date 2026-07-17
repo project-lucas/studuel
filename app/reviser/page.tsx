@@ -29,7 +29,12 @@ import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
 import { getReviewItems, reviewQueue, countsBySubject } from '@/lib/srs'
-import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
+import {
+  toDayKey,
+  computeStreak,
+  weekProgress,
+  activityCutoff,
+} from '@/lib/streak'
 import {
   normalizeExamList,
   activeExams,
@@ -79,30 +84,26 @@ export default async function ReviserPage() {
     )
   }
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select(
-      'full_name, grade_level, selected_subjects, commute_slots, upcoming_exams',
-    )
-    .eq('id', user.id)
-    .maybeSingle()
-
-  // Avatar isolé : la colonne vient de 082_avatar.sql (peut-être pas encore
-  // passée) — requête à part pour ne pas faire échouer tout le reste.
-  const { data: avatarRow } = await supabase
-    .from('profiles')
-    .select('avatar')
-    .eq('id', user.id)
-    .maybeSingle()
+  // Avatar (082) et textes du bac oral (156) restent des requêtes ISOLÉES
+  // (colonne peut-être absente → dégradation propre sans casser le profil),
+  // mais lancées en PARALLÈLE du profil : elles ne dépendent de rien.
+  const [{ data: profile }, { data: avatarRow }, { data: oralRow }] =
+    await Promise.all([
+      supabase
+        .from('profiles')
+        .select(
+          'full_name, grade_level, selected_subjects, commute_slots, upcoming_exams',
+        )
+        .eq('id', user.id)
+        .maybeSingle(),
+      supabase.from('profiles').select('avatar').eq('id', user.id).maybeSingle(),
+      supabase
+        .from('profiles')
+        .select('oral_texts')
+        .eq('id', user.id)
+        .maybeSingle(),
+    ])
   const avatarUri = avatarDataUri(normalizeAvatarConfig(avatarRow?.avatar), 128)
-
-  // Textes du bac oral isolés : la colonne vient de 156_oral_texts.sql (peut-être
-  // pas encore passée) — requête à part pour dégrader proprement (liste vide).
-  const { data: oralRow } = await supabase
-    .from('profiles')
-    .select('oral_texts')
-    .eq('id', user.id)
-    .maybeSingle()
   const oralTexts = normalizeOralList(
     (oralRow as { oral_texts?: unknown } | null)?.oral_texts,
   )
@@ -149,16 +150,29 @@ export default async function ReviserPage() {
     getGradeChaptersCached(grade),
     getChapterMastery(supabase, user.id),
     getReviewItems(supabase, user.id),
-    supabase.from('test_sessions').select('created_at').eq('user_id', user.id),
-    supabase.from('study_sessions').select('created_at').eq('user_id', user.id),
+    // Fenêtre glissante : ces requêtes ne servent qu'à la série et à la
+    // semaine — inutile de retransférer tout l'historique d'un élève assidu
+    // (400 jours couvrent toute série affichable).
+    supabase
+      .from('test_sessions')
+      .select('created_at')
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
+    supabase
+      .from('study_sessions')
+      .select('created_at')
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
     supabase
       .from('lesson_completions')
       .select('created_at')
-      .eq('user_id', user.id),
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
     supabase
       .from('challenge_sessions')
       .select('created_at')
-      .eq('user_id', user.id),
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
   ])
 
   // Repli authentifié : cache froid ou migration 026 pas encore exécutée.

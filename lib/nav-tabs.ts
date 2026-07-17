@@ -9,9 +9,10 @@ export type NavTab = {
 }
 
 export const NAV_TABS: NavTab[] = [
-  { name: 'Amis', path: '/amis', img: '/images/nav/amis.webp' },
+  { name: 'Coffre', path: '/coffre', img: '/images/nav/coffre.webp' },
+  { name: 'Amis', path: '/amis', img: '/images/nav/ami.webp' },
   { name: 'Réviser', path: '/reviser', img: '/images/nav/reviser.webp' },
-  { name: 'Défi', path: '/defi', img: '/images/nav/defi-3.webp', center: true },
+  { name: 'Défi', path: '/defi', img: '/images/nav/defi2.webp', center: true },
   { name: 'Moi', path: '/moi', img: '/images/nav/moi.webp' },
   { name: 'Trésor', path: '/tresor', img: '/images/nav/tresor-3.webp' },
 ]

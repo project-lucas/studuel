@@ -1,12 +1,7 @@
 import Link from 'next/link'
-import {
-  School as SchoolIcon,
-  Users as UsersIcon,
-} from 'lucide-react'
 import ModesSheet from '@/components/defi/ModesSheet'
 import ArenaHud, { type OrbItem } from '@/components/defi/ArenaHud'
 import ArenaCenter from '@/components/defi/ArenaCenter'
-import ChestRow from '@/components/defi/ChestRow'
 import WeeklyLeague from '@/components/defi/WeeklyLeague'
 import LeaguePromotionWatch from '@/components/defi/LeaguePromotionWatch'
 import RankingTabs from '@/components/defi/RankingTabs'
@@ -14,16 +9,16 @@ import ClanBanner from '@/components/defi/ClanBanner'
 import QuickActions from '@/components/defi/QuickActions'
 import DuelHistory from '@/components/defi/DuelHistory'
 import SchoolTournament from '@/components/defi/SchoolTournament'
+import { ChevronRightIcon, CrownIcon, SwordsIcon } from '@/components/defi/icons'
 import {
-  ChevronRightIcon,
-  ClockIcon,
-  CrownIcon,
-  SwordsIcon,
-  TrophyIcon,
-  ZapIcon,
-} from '@/components/defi/icons'
+  Crown,
+  Hourglass,
+  Shield,
+  Trophy,
+  Users,
+  Zap,
+} from 'lucide-react'
 import {
-  MOCK_CHESTS,
   MOCK_LEAGUE,
   MOCK_RANKINGS,
   MOCK_SEASON,
@@ -56,6 +51,9 @@ import type { ReactNode } from 'react'
 
 export const metadata = { title: 'Défi — Studuel' }
 export const dynamic = 'force-dynamic'
+
+// Icône crème centrée des médaillons d'orbes (cœur gemme violette derrière).
+const ORB_ICON = 'size-6 text-[#faf6ef]'
 
 // Convertit un classement (lib/clan) en tableau prêt pour RankingTabs.
 // L'unité est TOUJOURS affichée (🏆) : un nombre nu ne dit pas dans quelle
@@ -263,11 +261,7 @@ export default async function DefiPage() {
     {
       id: 'ligue',
       label: 'Ligue',
-      icon: (
-        <span className="text-2xl leading-none" aria-hidden>
-          {league.tierIcon}
-        </span>
-      ),
+      icon: <Crown className={ORB_ICON} strokeWidth={2.5} />,
       sub: leaguePreview,
       sheetTitle: league.name,
       sheetContent: <WeeklyLeague league={league} isDemo={leagueIsDemo} />,
@@ -275,7 +269,7 @@ export default async function DefiPage() {
     {
       id: 'classements',
       label: 'Classements',
-      icon: <TrophyIcon className="size-6 text-highlight" />,
+      icon: <Trophy className={ORB_ICON} strokeWidth={2.5} />,
       sub: rankingPreview,
       sheetTitle: 'Classements',
       sheetContent: <RankingTabs boards={boards} clanLabel={clanLabel} />,
@@ -286,7 +280,7 @@ export default async function DefiPage() {
       // des gains XP mockés — supprimée.
       id: 'entrainement',
       label: 'Entraînement',
-      icon: <ZapIcon className="size-6 text-white" />,
+      icon: <Zap className={ORB_ICON} strokeWidth={2.5} />,
       href: '/defi/jouer',
     },
   ]
@@ -296,7 +290,7 @@ export default async function DefiPage() {
     {
       id: 'clan',
       label: 'Mon clan',
-      icon: <SchoolIcon className="size-6 text-white" aria-hidden="true" />,
+      icon: <Shield className={ORB_ICON} strokeWidth={2.5} />,
       badge: user && !hasSchool ? '!' : undefined,
       sheetTitle: clanLabel ?? 'Mon clan',
       sheetContent: (
@@ -319,7 +313,7 @@ export default async function DefiPage() {
     {
       id: 'historique',
       label: 'Historique',
-      icon: <ClockIcon className="size-6 text-white" />,
+      icon: <Hourglass className={ORB_ICON} strokeWidth={2.5} />,
       sheetTitle: 'Mes derniers matchs',
       sheetContent: (
         <DuelHistory
@@ -332,7 +326,7 @@ export default async function DefiPage() {
     {
       id: 'amis',
       label: 'Amis',
-      icon: <UsersIcon className="size-6 text-white" aria-hidden="true" />,
+      icon: <Users className={ORB_ICON} strokeWidth={2.5} />,
       href: '/amis',
     },
   ]
@@ -346,10 +340,10 @@ export default async function DefiPage() {
             (aucun cron de saison) → badge « Aperçu », sans faux compte à
             rebours qui prétendrait être vrai. */}
         <div className="flex justify-center">
-          <p className="flex max-w-full items-center gap-2 rounded-full border border-white/15 bg-black/25 px-4 py-1.5 text-xs font-bold text-white/85 backdrop-blur-sm">
-            <CrownIcon className="size-4 shrink-0 text-highlight" />
+          <p className="olympe-glass flex max-w-full items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold">
+            <CrownIcon className="size-4 shrink-0 text-[#fcd34d]" />
             <span className="truncate">{MOCK_SEASON.name}</span>
-            <span className="shrink-0 rounded-full bg-highlight/25 px-2 py-0.5 text-[10px] font-extrabold text-white/85">
+            <span className="olympe-tag shrink-0 rounded-full px-2 py-0.5 text-[10px] font-extrabold">
               Aperçu
             </span>
           </p>
@@ -360,27 +354,28 @@ export default async function DefiPage() {
           <ArenaCenter trophies={trophies} />
         </ArenaHud>
 
-        {/* Le bas d'écran : coffres, rangée sociale (QR), puis CTA principal. */}
-        <ChestRow chests={MOCK_CHESTS} demo />
-
+        {/* Le bas d'écran : rangée sociale (QR), puis CTA principal. */}
         {/* Duel en direct par QR — « Ajouter un ami » vit dans l'onglet Amis. */}
         {user ? <QuickActions /> : null}
 
+        {/* CTA principal : plaque « or ciselé » pleine largeur, l'élément le
+            plus proéminent de la pile. Texte encre ; l'ombre dure s'écrase au
+            clic (olympe-press). */}
         <Link
           href="/defi/jouer?mode=ranked"
-          className="defi2-press flex w-full items-center justify-center gap-2.5 rounded-2xl border border-[oklch(0.72_0.16_70)] bg-gradient-to-b from-highlight to-[oklch(0.74_0.16_62)] px-5 py-3.5 text-center shadow-[0_14px_30px_-10px_color-mix(in_oklch,var(--highlight),transparent_35%)] focus-visible:ring-4 focus-visible:ring-highlight/50 focus-visible:outline-none"
+          className="olympe-gold olympe-press flex min-h-16 w-full items-center gap-3 rounded-2xl px-5 focus-visible:ring-4 focus-visible:ring-highlight/50 focus-visible:outline-none"
           aria-label="Lancer un match classé"
         >
-          <SwordsIcon className="size-6 text-[oklch(0.26_0.06_70)]" />
+          <SwordsIcon className="size-7 shrink-0" />
           <span className="flex flex-col items-start leading-tight">
-            <span className="font-heading text-lg font-extrabold text-[oklch(0.24_0.06_70)]">
+            <span className="font-heading text-base font-extrabold">
               MATCH CLASSÉ
             </span>
-            <span className="text-[0.7rem] font-bold text-[oklch(0.32_0.06_70)]">
+            <span className="text-[0.72rem] font-bold opacity-80">
               BO3 · +30 victoire / −20 défaite
             </span>
           </span>
-          <ChevronRightIcon className="ml-auto size-5 text-[oklch(0.3_0.06_70)]" />
+          <ChevronRightIcon className="ml-auto size-5 shrink-0" />
         </Link>
 
         {/* Tous les modes de jeu, en feuille qui monte du bas (billets +

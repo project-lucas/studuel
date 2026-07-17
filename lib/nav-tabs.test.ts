@@ -3,11 +3,11 @@ import { NAV_TABS, neighborTabPath, tabIndexForPath } from './nav-tabs'
 
 describe('tabIndexForPath', () => {
   it('reconnaît un onglet exact', () => {
-    expect(tabIndexForPath('/defi')).toBe(2)
+    expect(tabIndexForPath('/defi')).toBe(3)
   })
 
   it('reconnaît une sous-page comme appartenant à son onglet', () => {
-    expect(tabIndexForPath('/defi/jeux')).toBe(2)
+    expect(tabIndexForPath('/defi/jeux')).toBe(3)
   })
 
   it('renvoie -1 hors des onglets principaux', () => {

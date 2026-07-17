@@ -1,10 +1,18 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
-import { Plus, CalendarClock, Flame, ChevronRight } from 'lucide-react'
+import {
+  Plus,
+  CalendarClock,
+  CalendarDays,
+  Check,
+  ChevronRight,
+} from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { examCountdownLabel, type NextExam } from '@/lib/next-exam'
+import YearHistory from '@/components/YearHistory'
 import type { SubjectLite } from '@/components/AddExamSheet'
 
 // Jours de la semaine, lundi → dimanche (index 0 = lundi, cf. lib/streak).
@@ -24,13 +32,18 @@ export default function WeekPlannerStrip({
   exams,
   today,
   subjects,
+  activeDays = [],
 }: {
   week: WeekDay[]
   exams: NextExam[]
   today: string
   subjects: SubjectLite[]
+  // Jours travaillés (clés UTC) sur la fenêtre d'activité — alimentent
+  // l'historique ANNUEL ouvert par l'icône agenda.
+  activeDays?: string[]
 }) {
   const iconBySlug = new Map(subjects.map((s) => [s.slug, s.icon]))
+  const [historyOpen, setHistoryOpen] = useState(false)
 
   // Le contrôle le plus proche (les dates nulles passent en dernier).
   const next = exams[0] ?? null
@@ -63,7 +76,7 @@ export default function WeekPlannerStrip({
               )}
             >
               {d.done ? (
-                <Flame className="size-4" strokeWidth={2.4} />
+                <Check className="size-4" strokeWidth={3} aria-hidden="true" />
               ) : (
                 DAY_LABELS[i]
               )}
@@ -115,7 +128,31 @@ export default function WeekPlannerStrip({
         >
           <Plus className="size-5" strokeWidth={2.8} aria-hidden="true" />
         </Link>
+
+        {/* Icône Agenda, à côté du « + » : ouvre l'historique ANNUEL complet
+            (pas la page carnet — c'était une erreur). */}
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setHistoryOpen(true)
+          }}
+          aria-label="Voir mon historique de travail complet"
+          aria-haspopup="dialog"
+          className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white text-primary ring-1 ring-black/5 shadow-sm transition active:translate-y-px"
+        >
+          <CalendarDays className="size-5" strokeWidth={2.4} aria-hidden="true" />
+        </button>
       </div>
+
+      {/* L'historique annuel, en plein écran, ouvert par l'icône agenda. */}
+      {historyOpen ? (
+        <YearHistory
+          activeDays={activeDays}
+          today={today}
+          onClose={() => setHistoryOpen(false)}
+        />
+      ) : null}
     </section>
   )
 }

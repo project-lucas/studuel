@@ -54,7 +54,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
       {/* …et barre d'onglets fixée en bas, Défi surélevé au centre */}
       <nav className="tab-bar fixed inset-x-0 bottom-0 z-50 border-t pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
         <ul className="flex items-end">
-          {links.map(({ name, path, img }) => {
+          {links.map(({ name, path, img, center }) => {
             const active = isActive(path)
 
             return (
@@ -66,15 +66,24 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                   aria-current={active ? 'page' : undefined}
                   className="flex items-center justify-center pt-1.5 pb-2 transition-all active:scale-95"
                 >
-                  <span className="flex h-12 w-16 items-center justify-center">
+                  <span
+                    className={cn(
+                      'flex w-16 items-center justify-center',
+                      // Onglet central (Défi) surélevé façon écran d'arène.
+                      center ? 'tab-center h-14' : 'h-12',
+                    )}
+                  >
                     <Image
                       src={img}
                       alt=""
-                      width={40}
-                      height={40}
+                      width={center ? 56 : 40}
+                      height={center ? 56 : 40}
                       className={cn(
-                        'size-10 transition-all',
-                        active ? 'scale-110' : 'opacity-60 grayscale',
+                        'transition-all',
+                        center ? 'size-14' : 'size-10',
+                        active
+                          ? cn('scale-110', center && 'tab-center-active')
+                          : 'opacity-60 grayscale',
                       )}
                     />
                   </span>

@@ -13,7 +13,7 @@ import ArenaSky from '@/components/ArenaSky'
 
 /**
  * Fond dynamique de l'Arène (onglet Défi) : l'image du colisée suit l'heure
- * locale de l'appareil (5 variantes, voir lib/arena-background.ts).
+ * locale de l'appareil (6 variantes, voir lib/arena-background.ts).
  *
  * - Bascule SANS redémarrage : un timer est programmé exactement sur la
  *   prochaine frontière de plage (pas de polling), et l'heure est revérifiée
@@ -26,8 +26,9 @@ import ArenaSky from '@/components/ArenaSky'
  * - SSR : le serveur ne connaît pas l'heure de l'élève → il rend le violet de
  *   secours du conteneur, l'image du moment apparaît en fondu à l'hydratation.
  *
- * Test en dev : suffixer l'URL de `?arena=morning|noon|afternoon|evening|night`
- * pour forcer une plage (ignoré en production).
+ * Test en dev : suffixer l'URL de
+ * `?arena=dawn|morning|noon|afternoon|evening|night` pour forcer une plage
+ * (ignoré en production).
  */
 export default function ArenaBackdrop() {
   const [period, setPeriod] = useState<ArenaPeriod | null>(null)

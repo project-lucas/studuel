@@ -132,7 +132,7 @@ export default function ModesSheet({ todayKey }: { todayKey: string }) {
         }}
         aria-haspopup="dialog"
         aria-label="Modes de jeu — tous les modes du Défi"
-        className="defi2-press flex w-full cursor-pointer items-center justify-center gap-2.5 rounded-2xl border border-[oklch(0.62_0.18_300)] bg-gradient-to-b from-[oklch(0.56_0.2_300)] to-[oklch(0.44_0.2_302)] px-5 py-3 text-center shadow-[0_14px_30px_-10px_oklch(0.4_0.2_300)] focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none"
+        className="olympe-gem-frame olympe-press flex min-h-14 w-full cursor-pointer items-center gap-2.5 rounded-2xl bg-gradient-to-b from-[#7b4fd8] to-[#5b35b0] px-5 focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none"
       >
         <Gamepad2 className="size-6 text-white" aria-hidden="true" />
         <span className="flex flex-col items-start leading-tight">

@@ -9,6 +9,7 @@ import {
   Zap,
   Check,
   UserPlus,
+  Users,
   School,
   Hourglass,
   Flame,
@@ -24,6 +25,12 @@ import {
   type SchoolBoard,
   type PendingRequest,
   type StreakEntry,
+  type GeoScope,
+  GEO_SCOPES,
+  geoScopeLabel,
+  geoScopeTitle,
+  geoScopePossessive,
+  getMockGeoBoard,
   schoolNoun,
   schoolTotalSeconds,
   SCHOOL_BOARD_LIMIT,
@@ -165,7 +172,7 @@ function RankingBoard({
           <li
             key={e.id}
             className={cn(
-              'flex items-center gap-3 rounded-2xl bg-card p-2.5 pr-2.5 text-foreground ring-1 ring-foreground/15',
+              'flex items-center gap-3 rounded-2xl bg-card p-2.5 pr-2.5 text-foreground shadow-sm ring-1 ring-black/5',
               e.isMe && 'ring-2 ring-highlight',
             )}
           >
@@ -254,25 +261,25 @@ function ClassementArena({
 
   return (
     <section
-      aria-label="Classement entre amis"
-      className="overflow-hidden rounded-3xl bg-[color-mix(in_oklch,var(--primary),black_45%)] p-3 text-white shadow-[0_18px_40px_-18px_rgba(0,0,0,0.55)] ring-1 ring-white/10"
+      aria-label="Mes amis"
+      className="overflow-hidden rounded-3xl bg-card p-3 text-foreground shadow-sm ring-1 ring-black/5"
     >
       <div className="mb-3 flex items-center justify-between gap-2 px-1 pt-1">
-        <h2 className="font-heading flex items-center gap-2 text-sm font-extrabold tracking-wide uppercase">
-          <Trophy
-            className="size-4 text-highlight"
+        <h2 className="font-heading flex items-center gap-2 text-sm font-extrabold tracking-wide text-foreground uppercase">
+          <Users
+            className="size-4 text-primary"
             strokeWidth={2.4}
             aria-hidden="true"
           />
-          Classement
+          Amis
         </h2>
         {onlineCount > 0 ? (
-          <span className="flex items-center gap-1.5 text-xs font-semibold text-green-400">
+          <span className="flex items-center gap-1.5 text-xs font-semibold text-green-600">
             <span className="size-2 animate-pulse rounded-full bg-green-500" />
             {onlineCount} en ligne
           </span>
         ) : friendCount > 0 ? (
-          <span className="text-xs font-semibold text-white/70">
+          <span className="text-xs font-semibold text-muted-foreground">
             {friendCount + 1} joueurs
           </span>
         ) : null}
@@ -280,31 +287,31 @@ function ClassementArena({
 
       {ranking.length === 0 ? (
         /* Visiteur : pas de classement à montrer — état vide explicite. */
-        <p className="rounded-2xl bg-white/10 p-3 text-sm text-white/85">
+        <p className="rounded-2xl bg-muted/50 p-3 text-sm text-foreground/80">
           Connecte-toi et ajoute des amis pour vous comparer aux trophées 🏆
         </p>
       ) : (
         <>
           {/* Résumé : ta place, ton arène, et l'objectif juste devant. */}
-          <div className="mb-2 flex items-center gap-3 rounded-2xl bg-white/10 p-3">
+          <div className="mb-2 flex items-center gap-3 rounded-2xl bg-muted/50 p-3">
             <span aria-hidden="true" className="text-3xl">
               {myArena.emoji}
             </span>
             <div className="min-w-0 flex-1">
-              <p className="font-heading font-bold">
+              <p className="font-heading font-bold text-foreground">
                 {friendCount > 0
                   ? myRank === 1
                     ? `1er sur ${friendCount + 1} — tu domines 👑`
                     : `${myRank}e sur ${friendCount + 1} amis`
                   : myArena.name}
               </p>
-              <p className="truncate text-xs text-white/70">
+              <p className="truncate text-xs text-muted-foreground">
                 {ahead
                   ? `${ahead.trophies - myTrophies} trophées pour doubler ${ahead.name}`
                   : `Arène ${myArena.name}`}
               </p>
             </div>
-            <span className="flex shrink-0 items-center gap-1 font-mono font-bold tabular-nums">
+            <span className="flex shrink-0 items-center gap-1 font-mono font-bold text-foreground tabular-nums">
               {myTrophies}
               <Trophy className="size-4 text-highlight" aria-hidden="true" />
             </span>
@@ -317,7 +324,7 @@ function ClassementArena({
           {duelNotice ? (
             <p
               role="status"
-              className="mt-2 rounded-2xl bg-white/10 p-2.5 text-xs font-medium text-white/85"
+              className="mt-2 rounded-2xl bg-muted/60 p-2.5 text-xs font-medium text-foreground/80"
             >
               Ton défi du jour est déjà lancé — une seule mission par jour,
               reviens demain ⚔️
@@ -330,7 +337,7 @@ function ClassementArena({
       <div className="mt-3">
         <FriendAddButton variant="cta" myFriendCode={myFriendCode} />
       </div>
-      <p className="mt-2 px-1 pb-1 text-[11px] text-white/60">
+      <p className="mt-2 px-1 pb-1 text-[11px] text-muted-foreground">
         {friendCount > 0
           ? `Tape l’épée d’un ami pour le défier sur le Défi du jour (+${DUEL_XP_BONUS} XP) — le point vert signale un ami en session.`
           : 'Ajoute des amis pour vous comparer — chaque match classé gagné rapporte des trophées.'}
@@ -435,39 +442,51 @@ function StreakSection({ streaks }: { streaks: StreakEntry[] }) {
   )
 }
 
-// ---------------------------------------------------------------------- École
-// Les heures de chaque élève s'additionnent pour son école ; le classement
-// interne départage les élèves au temps de travail réel. Le titre suit le
-// cycle de l'élève (« Ton collège » / « Ton lycée »), jamais codé en dur.
-function SchoolSection({ school, demo }: { school: SchoolBoard; demo: boolean }) {
-  const total = schoolTotalSeconds(school.mates)
-  const myRank = school.mates.findIndex((m) => m.isMe) + 1
-  const noun = schoolNoun(school.level)
-  // Liste au plafond de la RPC : la cagnotte ne couvre que le top 50 — on le
-  // dit (et un élève hors top n'a simplement pas de rang affiché).
-  const capped = school.mates.length >= SCHOOL_BOARD_LIMIT
+// ------------------------------------------------------- Classement géographique
+// Les heures de chaque élève s'additionnent pour son échelon ; le classement
+// interne départage les élèves au temps de travail réel. Un sélecteur d'échelon
+// (Lycée/Collège → Département → Région → National, cf. docs/CADRAGE-GEO.md)
+// laisse l'élève voir où il se situe à chaque échelle. L'établissement affiche
+// les vraies données quand elles existent ; les échelons plus larges sont un
+// aperçu tant que le back-end géo (code postal + RPC) n'est pas branché.
+
+// La cagnotte + le classement d'un échelon donné. Extrait pour être réutilisé à
+// l'identique par chaque onglet du sélecteur.
+function ScopeBoard({
+  board,
+  scope,
+  demo,
+}: {
+  board: SchoolBoard
+  scope: GeoScope
+  demo: boolean
+}) {
+  const total = schoolTotalSeconds(board.mates)
+  const myRank = board.mates.findIndex((m) => m.isMe) + 1
+  const noun = schoolNoun(board.level)
+  const possessive = geoScopePossessive(scope, board.level)
+  // Établissement réel : la RPC plafonne à 50 élèves — on le dit. Les aperçus
+  // d'échelons larges ne sont jamais plafonnés (données de démonstration).
+  const capped =
+    scope === 'school' && !demo && board.mates.length >= SCHOOL_BOARD_LIMIT
 
   return (
-    <section>
-      <SectionTitle icon={School} aside={demo ? <DemoBadge /> : undefined}>
-        Ton {noun}
-      </SectionTitle>
-
-      {/* Cagnotte d'heures : l'effort de chacun compte pour tous. */}
+    <>
+      {/* Cagnotte d'heures : l'effort de chacun compte pour tout l'échelon. */}
       <div className="rounded-t-2xl bg-primary p-4 text-primary-foreground">
         <div className="flex items-center gap-3">
           <span aria-hidden="true" className="text-3xl">
-            {school.emoji}
+            {board.emoji}
           </span>
           <div className="min-w-0 flex-1">
             <p className="font-heading truncate text-lg font-bold">
-              {school.name}
+              {board.name}
             </p>
             <p className="text-sm text-primary-foreground/75">
               {myRank > 0 ? `Tu es ${myRank === 1 ? '1er' : `${myRank}e`} · ` : ''}
               {capped
                 ? `les heures des ${SCHOOL_BOARD_LIMIT} plus actifs de ton ${noun}`
-                : `chaque minute que tu travailles compte pour ton ${noun}`}
+                : `chaque minute que tu travailles compte pour ${possessive}`}
             </p>
           </div>
           <span className="flex shrink-0 items-center gap-1.5 font-mono text-lg font-bold tabular-nums">
@@ -479,7 +498,7 @@ function SchoolSection({ school, demo }: { school: SchoolBoard; demo: boolean })
 
       {/* Classement inter-élèves, au temps de travail. */}
       <ol className="overflow-hidden rounded-b-2xl bg-card ring-1 ring-foreground/10">
-        {school.mates.map((m, i) => {
+        {board.mates.map((m, i) => {
           const rank = i + 1
           return (
             <li
@@ -520,10 +539,74 @@ function SchoolSection({ school, demo }: { school: SchoolBoard; demo: boolean })
         })}
       </ol>
       <p className="mt-2 px-1 text-[11px] text-muted-foreground">
-        {demo
-          ? `Exemple de classement — choisis ton ${noun} dans ton profil pour voir le vrai.`
-          : 'Le temps est mesuré par le chrono de tes sessions — celui qui travaille le plus grimpe.'}
+        {scope === 'school'
+          ? demo
+            ? `Exemple de classement — choisis ton ${noun} dans ton profil pour voir le vrai.`
+            : 'Le temps est mesuré par le chrono de tes sessions — celui qui travaille le plus grimpe.'
+          : `Aperçu — ton classement au niveau ${geoScopeLabel(scope, board.level).toLowerCase()} arrivera avec ton code postal.`}
       </p>
+    </>
+  )
+}
+
+function GeoRankingSection({
+  school,
+  schoolDemo,
+}: {
+  school: SchoolBoard
+  schoolDemo: boolean
+}) {
+  const [scope, setScope] = useState<GeoScope>('school')
+  // Mon temps réel, lu depuis l'établissement : il replace « Toi » au bon rang
+  // dans les aperçus d'échelons plus larges.
+  const mySeconds = school.mates.find((m) => m.isMe)?.seconds ?? 0
+
+  // Établissement : vraies données si dispo. Échelons plus larges : aperçu
+  // (« Aperçu ») tant que le back-end géo n'est pas branché.
+  const board =
+    scope === 'school'
+      ? school
+      : getMockGeoBoard(scope, mySeconds, school.level)
+  const demo = scope === 'school' ? schoolDemo : true
+
+  return (
+    <section>
+      <SectionTitle icon={School} aside={demo ? <DemoBadge /> : undefined}>
+        {geoScopeTitle(scope, school.level)}
+      </SectionTitle>
+
+      {/* Sélecteur d'échelon : de ton établissement au national. */}
+      <div
+        role="tablist"
+        aria-label="Échelle du classement"
+        className="mb-2 flex gap-1 rounded-2xl bg-muted p-1"
+      >
+        {GEO_SCOPES.map((s) => {
+          const active = s === scope
+          return (
+            <button
+              key={s}
+              type="button"
+              role="tab"
+              aria-selected={active}
+              onClick={() => {
+                sfx.tap()
+                setScope(s)
+              }}
+              className={cn(
+                'flex-1 rounded-xl px-1 py-1.5 text-xs font-semibold transition-colors',
+                active
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground hover:text-foreground',
+              )}
+            >
+              {geoScopeLabel(s, school.level)}
+            </button>
+          )
+        })}
+      </div>
+
+      <ScopeBoard board={board} scope={scope} demo={demo} />
     </section>
   )
 }
@@ -652,8 +735,9 @@ export default function AmisHome({
         </section>
       ) : null}
 
-      {/* Ton collège / ton lycée — la cagnotte d'heures et le classement interne. */}
-      <SchoolSection school={school} demo={schoolDemo} />
+      {/* Classement géographique — ton établissement, ton département, ta
+          région, le national, au choix via le sélecteur d'échelon. */}
+      <GeoRankingSection school={school} schoolDemo={schoolDemo} />
     </div>
   )
 }

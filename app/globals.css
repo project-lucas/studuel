@@ -1451,10 +1451,29 @@ a:hover > .wiggle-on-hover {
     color-mix(in oklch, var(--primary), black 6%) 62%,
     color-mix(in oklch, var(--primary), black 40%)
   );
-  border: 2px solid color-mix(in oklch, var(--highlight), black 14%);
+  border: 2px solid color-mix(in oklch, var(--highlight), black 10%);
+  /* Médaillon « cadré or » façon écran d'arène : un liseré doré discret entoure
+     le disque violet pour que les icônes ressortent nettement sur le décor,
+     sans virer au tout-or. */
   box-shadow:
+    0 0 0 2px color-mix(in oklch, var(--highlight), transparent 62%),
     0 6px 14px -4px rgba(0, 0, 0, 0.6),
-    inset 0 2px 4px rgba(255, 255, 255, 0.35);
+    inset 0 2px 4px rgba(255, 255, 255, 0.42);
+}
+
+/* Orbe « médaillon » : l'image illustrée porte déjà son cadre violet + liseré
+   or, donc on neutralise le fond/bordure/box-shadow du disque (qui créait un
+   halo rond autour du médaillon). Un `drop-shadow` épouse la forme ronde du
+   coin pour le détacher du décor sans halo. Un poil plus grand pour la présence. */
+.defi3-orb--medallion {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  overflow: visible;
+  width: 3.75rem;
+  height: 3.75rem;
+  filter: drop-shadow(0 4px 7px rgba(0, 0, 0, 0.5));
 }
 
 /* Libellé sous l'orbe : lisible quel que soit le décor d'arène derrière. */
@@ -1485,6 +1504,267 @@ a:hover > .wiggle-on-hover {
     border-radius: 24px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   }
+}
+
+/* =============================================================================
+   Écran d'arène « Olympe » — langage d'OBJETS SCULPTÉS. Chaque élément d'UI
+   ressemble à un objet forgé (or ciselé, gemme violette, marbre), la lumière
+   venant toujours d'en haut (reflet interne systématique) pour rester cohérent
+   avec le décor « escalier de l'Olympe ». Trois recettes réutilisables, plus le
+   médaillon rond et le badge de notification. Palette adossée aux tokens du
+   design system (or = --highlight, gemme = --primary, encre = --foreground,
+   crème = --background) ; les rampes chaudes de l'or/gemme sont figées comme la
+   flamme (dégradés sculptés à points précis). Réutilisable sur d'autres écrans.
+   ========================================================================== */
+
+/* Effet « or ciselé » : dégradé vertical clair→or→ambre, contour encre 3px,
+   reflet lumineux interne en haut, ombre dure décalée vers le bas. */
+.olympe-gold {
+  background: linear-gradient(180deg, #fcd34d 0%, #f9b233 52%, #d97706 100%);
+  border: 3px solid var(--foreground);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -3px 7px rgba(120, 60, 0, 0.28),
+    0 4px 0 var(--foreground);
+  color: var(--foreground);
+}
+
+/* Effet « gemme violette » : radial clair→violet→profond, glow interne, double
+   bordure (liseré or 2px puis contour encre 3px), ombre dure. */
+.olympe-gem {
+  background: radial-gradient(
+    circle at 50% 28%,
+    #9b6fe8 0%,
+    #7b4fd8 55%,
+    #5b35b0 100%
+  );
+  border: 2px solid var(--highlight);
+  box-shadow:
+    0 0 0 3px var(--foreground),
+    inset 0 0 12px rgba(255, 255, 255, 0.26),
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    0 4px 0 var(--foreground);
+  color: #fff;
+}
+
+/* Cadre « gemme » SANS fond (liseré or 2px + contour encre 3px + ombre dure) :
+   à combiner avec un dégradé Tailwind propre quand la teinte varie (Duel qui
+   vire au magenta, Modes en violet plein). */
+.olympe-gem-frame {
+  border: 2px solid var(--highlight);
+  box-shadow:
+    0 0 0 3px var(--foreground),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    0 4px 0 var(--foreground);
+  color: #fff;
+}
+
+/* Effet « marbre » : crème, très léger voile gris-bleu diagonal, liseré or 2px,
+   reflet interne en haut, ombre dure. */
+.olympe-marble {
+  background:
+    linear-gradient(
+      158deg,
+      rgba(120, 140, 180, 0.12),
+      rgba(255, 255, 255, 0) 58%
+    ),
+    #faf6ef;
+  border: 2px solid color-mix(in oklch, var(--highlight), black 3%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.75),
+    0 4px 0 var(--foreground);
+  color: var(--foreground);
+}
+
+/* Les plaques pressables « Olympe » écrasent leur ombre dure au tap. */
+.olympe-press {
+  transition:
+    transform 0.1s var(--ease),
+    box-shadow 0.1s var(--ease),
+    filter 0.1s var(--ease);
+}
+.olympe-press:active {
+  transform: translateY(4px);
+  filter: brightness(1.05);
+}
+.olympe-gold.olympe-press:active,
+.olympe-marble.olympe-press:active {
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    0 0 0 0 var(--foreground);
+}
+.olympe-gem.olympe-press:active,
+.olympe-gem-frame.olympe-press:active {
+  box-shadow:
+    0 0 0 3px var(--foreground),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    0 0 0 0 var(--foreground);
+}
+
+/* Effet « verre fumé violet » : la chrome flottante du HUD d'arène (pilule de
+   saison, burger, cartouche de trophées) posée sur le décor peint. Contrairement
+   au marbre crème opaque — qui « faisait tache » comme un autocollant blanc —, le
+   verre est translucide + flouté : il capte la scène derrière et partage le
+   vocabulaire des feuilles (.defi3-sheet) et des médaillons (liseré or, reflet
+   haut). Texte/icônes en crème par défaut pour rester lisibles sur toute arène. */
+.olympe-glass {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0.02) 46%
+    ),
+    color-mix(in oklch, oklch(0.24 0.06 300), transparent 20%);
+  border: 1px solid color-mix(in oklch, var(--highlight), transparent 45%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 7px 20px -7px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px) saturate(1.12);
+  -webkit-backdrop-filter: blur(10px) saturate(1.12);
+  color: #faf6ef;
+}
+.olympe-glass.olympe-press:active {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 2px 8px -4px rgba(0, 0, 0, 0.6);
+}
+
+/* Médaillon rond (orbes latéraux + éléments récompense) : anneau extérieur en
+   or ciselé (~5px, via le padding), cœur en gemme violette, icône crème au
+   centre. La lumière vient d'en haut sur les deux couches. */
+.olympe-medallion {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  padding: 5px;
+  background: linear-gradient(180deg, #fcd34d 0%, #f9b233 55%, #d97706 100%);
+  border: 3px solid var(--foreground);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.5),
+    0 5px 10px -3px rgba(0, 0, 0, 0.55);
+}
+.olympe-medallion-core {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+    circle at 50% 28%,
+    #9b6fe8 0%,
+    #7b4fd8 55%,
+    #5b35b0 100%
+  );
+  box-shadow:
+    inset 0 0 12px rgba(255, 255, 255, 0.25),
+    inset 0 -4px 9px rgba(40, 20, 80, 0.45),
+    inset 0 2px 0 rgba(255, 255, 255, 0.28);
+}
+
+/* Badge de notification : pastille corail, liseré or fin + contour encre. */
+.olympe-badge {
+  background: var(--destructive);
+  border: 1.5px solid var(--highlight);
+  box-shadow: 0 0 0 2px var(--foreground);
+  color: #fff;
+}
+
+/* Jeton d'aperçu « Olympe » (rang « 7e », « Aperçu ») : mini gemme violette. */
+.olympe-tag {
+  background: radial-gradient(
+    circle at 50% 20%,
+    #9b6fe8,
+    #7b4fd8 70%,
+    #5b35b0
+  );
+  border: 1px solid var(--highlight);
+  box-shadow: 0 0 0 1.5px color-mix(in oklch, var(--foreground), transparent 30%);
+  color: #fff;
+}
+
+/* Cartouche de trophées : plaque marbre horizontale, une gemme en losange à
+   chaque extrémité (pseudo-éléments). */
+.olympe-cartouche {
+  position: relative;
+}
+.olympe-cartouche::before,
+.olympe-cartouche::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  transform: translateY(-50%) rotate(45deg);
+  background: radial-gradient(circle at 50% 30%, #9b6fe8, #7b4fd8 70%, #5b35b0);
+  border: 1.5px solid var(--foreground);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.olympe-cartouche::before {
+  left: -0.35rem;
+}
+.olympe-cartouche::after {
+  right: -0.35rem;
+}
+
+/* Coffre CSS : carré marbre, bandeau supérieur (couvercle) en or, serrure gemme
+   ronde. Deux variantes : neutre (verrouillé/vide) et doré saturé (ouvrable). */
+.olympe-chest {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.olympe-chest-lid {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 38%;
+  border-bottom: 2px solid var(--foreground);
+  background: linear-gradient(180deg, #fcd34d, #f9b233);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.45);
+}
+.olympe-chest--locked .olympe-chest-lid {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--highlight), #8a8398 60%),
+    color-mix(in oklch, var(--highlight), #6f6a80 70%)
+  );
+}
+/* Serrure : petite gemme violette ronde, centrée sur la ligne du couvercle. */
+.olympe-chest-lock {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  width: 0.85rem;
+  height: 0.85rem;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  background: radial-gradient(circle at 50% 30%, #9b6fe8, #7b4fd8 70%, #5b35b0);
+  border: 1.5px solid var(--foreground);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+/* Lueur dorée pulsée derrière un coffre ouvrable (moment de récompense). */
+.olympe-chest-glow {
+  position: absolute;
+  inset: -18%;
+  border-radius: 9999px;
+  background: radial-gradient(
+    closest-side,
+    color-mix(in oklch, var(--highlight), transparent 25%),
+    transparent 72%
+  );
+}
+
+/* Barre d'onglets « Olympe » : socle crème, hairline or en haut, onglet central
+   surélevé avec halo violet quand il est actif. Appliqué globalement (barre
+   partagée) mais discret : ne dénature pas les autres mondes. */
+.tab-bar {
+  border-top-width: 2px;
+  border-top-color: color-mix(in oklch, var(--highlight), transparent 45%);
+}
+.tab-center {
+  transform: translateY(-8px);
+}
+.tab-center-active {
+  filter: drop-shadow(0 0 10px color-mix(in oklch, var(--primary), transparent 35%));
 }
 
 /* Accessibilité : on coupe les animations si l'utilisateur les refuse */

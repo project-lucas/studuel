@@ -1,11 +1,12 @@
 /**
- * Fond d'arène dynamique de l'onglet Défi : cinq variantes du colisée selon
+ * Fond d'arène dynamique de l'onglet Défi : six variantes du colisée selon
  * l'heure locale de l'appareil (la lumière que l'élève voit par sa fenêtre).
  * Logique pure et testable ici ; le composant client
  * `components/ArenaBackdrop.tsx` gère le timer, le fondu et le préchargement.
  */
 
 export type ArenaPeriod =
+  | 'dawn'
   | 'morning'
   | 'noon'
   | 'afternoon'
@@ -21,15 +22,16 @@ export interface ArenaSlot {
 
 /**
  * Les plages horaires, triées par heure de début — SEULE structure à modifier
- * pour changer les horaires ou les visuels. `night` couvre 22h → 5h59 :
- * les heures avant le premier début (0h-5h59) retombent sur la dernière plage.
+ * pour changer les horaires ou les visuels. `night` couvre 21h → 4h59 :
+ * les heures avant le premier début (0h-4h59) retombent sur la dernière plage.
  */
 export const ARENA_SCHEDULE: readonly ArenaSlot[] = [
-  { start: 6, period: 'morning', src: '/images/arene/arena-morning.webp' },
-  { start: 11, period: 'noon', src: '/images/arene/arena-noon.webp' },
-  { start: 14, period: 'afternoon', src: '/images/arene/arena-afternoon.webp' },
+  { start: 5, period: 'dawn', src: '/images/arene/arena-dawn.webp' },
+  { start: 8, period: 'morning', src: '/images/arene/arena-morning.webp' },
+  { start: 12, period: 'noon', src: '/images/arene/arena-noon.webp' },
+  { start: 15, period: 'afternoon', src: '/images/arene/arena-afternoon.webp' },
   { start: 18, period: 'evening', src: '/images/arene/arena-evening.webp' },
-  { start: 22, period: 'night', src: '/images/arene/arena-night.webp' },
+  { start: 21, period: 'night', src: '/images/arene/arena-night.webp' },
 ]
 
 /** La plage active pour une heure donnée (0-23). */

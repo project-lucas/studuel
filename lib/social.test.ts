@@ -6,6 +6,12 @@ import {
   schoolNoun,
   schoolTotalSeconds,
   getMockSchool,
+  getMockGeoBoard,
+  geoScopeLabel,
+  geoScopeTitle,
+  geoScopePossessive,
+  GEO_SCOPES,
+  type GeoScope,
   sinceLabel,
   mapFriendsOverview,
   addFriendMessage,
@@ -258,5 +264,50 @@ describe('buildSchoolBoard', () => {
       level: 'college',
       mates: [],
     })
+  })
+})
+
+describe('échelons géographiques', () => {
+  it('couvre les 4 échelons dans l’ordre', () => {
+    expect(GEO_SCOPES).toEqual(['school', 'dept', 'region', 'national'])
+  })
+
+  it('libellé d’onglet : l’établissement suit le cycle', () => {
+    expect(geoScopeLabel('school', 'lycee')).toBe('Lycée')
+    expect(geoScopeLabel('school', 'college')).toBe('Collège')
+    expect(geoScopeLabel('dept', 'lycee')).toBe('Département')
+    expect(geoScopeLabel('national', 'college')).toBe('National')
+  })
+
+  it('titre et groupe nominal cohérents par échelon', () => {
+    expect(geoScopeTitle('school', 'lycee')).toBe('Ton lycée')
+    expect(geoScopeTitle('region', 'lycee')).toBe('Ta région')
+    expect(geoScopePossessive('national', 'college')).toBe('la France')
+    expect(geoScopePossessive('school', 'college')).toBe('ton collège')
+  })
+
+  it('échelon établissement → réutilise l’aperçu d’école', () => {
+    const board = getMockGeoBoard('school', 10 * 3600, 'lycee')
+    expect(board).toEqual(getMockSchool(10 * 3600, 'lycee'))
+  })
+
+  it('échelon large → me place au bon rang selon mon vrai temps', () => {
+    // Petit temps : « Toi » finit dernier du vivier national (on grimpe en bossant).
+    const low = getMockGeoBoard('national', 1 * 3600, 'lycee')
+    expect(low.name).toBe('France')
+    expect(low.mates.at(-1)).toMatchObject({ id: 'me', isMe: true })
+
+    // Gros temps : « Toi » remonte en tête.
+    const high = getMockGeoBoard('national', 9999 * 3600, 'lycee')
+    expect(high.mates[0]).toMatchObject({ id: 'me', isMe: true })
+  })
+
+  it('chaque échelon large porte un nom, un vivier et un seul « Toi »', () => {
+    for (const scope of GEO_SCOPES.filter((s) => s !== 'school') as GeoScope[]) {
+      const board = getMockGeoBoard(scope, 5 * 3600, 'college')
+      expect(board.name.length).toBeGreaterThan(0)
+      expect(board.mates.length).toBeGreaterThan(1)
+      expect(board.mates.filter((m) => m.isMe)).toHaveLength(1)
+    }
   })
 })

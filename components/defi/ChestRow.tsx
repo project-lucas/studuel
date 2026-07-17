@@ -1,10 +1,9 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
 import type { Chest } from '@/lib/defi/types'
 import ChestOpenModal from './ChestOpenModal'
-import { GiftIcon, LockIcon } from './icons'
+import { LockIcon } from './icons'
 
 interface ChestRowProps {
   chests: Chest[]
@@ -76,8 +75,6 @@ function ChestSlot({
   chest: Chest
   onOpen: (chest: Chest) => void
 }) {
-  const reduce = useReducedMotion()
-
   // Minuterie décrémentée chaque seconde pour les coffres verrouillés.
   const [remaining, setRemaining] = useState(chest.unlocksInSeconds ?? 0)
   useEffect(() => {
@@ -88,26 +85,28 @@ function ChestSlot({
     return () => clearInterval(id)
   }, [chest.state])
 
+  // Emplacement vide : silhouette de coffre fantôme (pointillés crème), effacée.
   if (chest.state === 'empty') {
     return (
       <div
-        className="defi2-chest-empty flex aspect-square flex-col items-center justify-center text-center"
+        className="relative flex aspect-square flex-col items-center justify-end rounded-2xl border-2 border-dashed border-[#faf6ef]/40 pb-1.5 opacity-50"
         aria-label="Emplacement de coffre vide"
       >
-        <GiftIcon className="size-6 text-white/20" />
-        <span className="mt-1 text-[0.6rem] font-bold text-white/35">Vide</span>
+        <span className="text-[0.58rem] font-bold text-[#faf6ef]/60">Vide</span>
       </div>
     )
   }
 
+  // Coffre verrouillé : coffre marbre, couvercle neutre, serrure gemme, timer.
   if (chest.state === 'locked') {
     return (
       <div
-        className="defi2-chest-slot flex aspect-square flex-col items-center justify-center px-1 text-center"
+        className="olympe-chest olympe-marble olympe-chest--locked flex aspect-square flex-col items-center justify-end pb-1.5"
         aria-label={`Coffre verrouillé, ouvre dans ${formatCountdown(remaining)}`}
       >
-        <GiftIcon className="size-7 text-white/45" />
-        <span className="mt-1 flex items-center gap-0.5 text-[0.58rem] leading-tight font-bold text-white/55">
+        <div className="olympe-chest-lid" aria-hidden="true" />
+        <div className="olympe-chest-lock" aria-hidden="true" />
+        <span className="relative z-[1] flex items-center gap-0.5 rounded-full bg-[color:var(--foreground)]/75 px-1.5 py-0.5 text-[0.52rem] leading-none font-bold text-white">
           <LockIcon className="size-2.5" />
           {formatCountdown(remaining)}
         </span>
@@ -115,32 +114,23 @@ function ChestSlot({
     )
   }
 
-  // state === 'ready' (ou 'opening') : coffre scintillant et cliquable.
+  // state === 'ready' (ou 'opening') : coffre doré prêt à ouvrir. Halo doré
+  // pulsé DERRIÈRE le coffre (moment de récompense, la richesse est justifiée).
   return (
-    <motion.button
-      type="button"
-      onClick={() => onOpen(chest)}
-      className="defi2-chest-ready flex aspect-square flex-col items-center justify-center rounded-[18px] px-1 text-center focus-visible:ring-4 focus-visible:ring-highlight/50 focus-visible:outline-none"
-      aria-label="Coffre prêt — ouvrir"
-      animate={
-        reduce
-          ? undefined
-          : {
-              scale: [1, 1.06, 1],
-              boxShadow: [
-                '0 0 0px 0px color-mix(in oklch, var(--highlight), transparent 25%)',
-                '0 0 20px 5px color-mix(in oklch, var(--highlight), transparent 25%)',
-                '0 0 0px 0px color-mix(in oklch, var(--highlight), transparent 25%)',
-              ],
-            }
-      }
-      transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
-      whileTap={{ scale: 0.92 }}
-    >
-      <GiftIcon className="size-8 text-[oklch(0.26_0.06_70)]" />
-      <span className="mt-0.5 text-[0.58rem] font-extrabold text-[oklch(0.26_0.06_70)]">
-        Ouvrir
-      </span>
-    </motion.button>
+    <div className="relative aspect-square">
+      <div className="olympe-chest-glow animate-pulse" aria-hidden="true" />
+      <button
+        type="button"
+        onClick={() => onOpen(chest)}
+        className="olympe-chest olympe-marble olympe-press relative flex size-full flex-col items-center justify-end pb-1.5 focus-visible:ring-4 focus-visible:ring-highlight/50 focus-visible:outline-none"
+        aria-label="Coffre prêt — ouvrir"
+      >
+        <div className="olympe-chest-lid" aria-hidden="true" />
+        <div className="olympe-chest-lock" aria-hidden="true" />
+        <span className="relative z-[1] rounded-full border border-[color:var(--foreground)] bg-gradient-to-b from-[#fcd34d] to-[#f9b233] px-2 py-0.5 text-[0.54rem] font-extrabold text-[color:var(--foreground)]">
+          Ouvrir
+        </span>
+      </button>
+    </div>
   )
 }

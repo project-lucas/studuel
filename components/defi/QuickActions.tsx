@@ -17,7 +17,7 @@ export default function QuickActions() {
     <Link
       href="/defi/duel-rapide"
       onClick={() => sfx.tap()}
-      className="defi2-press flex w-full items-center justify-center gap-1.5 rounded-2xl border border-[oklch(0.7_0.12_255)] bg-gradient-to-b from-[oklch(0.62_0.15_255)] to-[oklch(0.5_0.16_262)] px-3 py-2.5 shadow-[0_10px_22px_-10px_oklch(0.45_0.16_260)] focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none"
+      className="olympe-gem-frame olympe-press flex min-h-12 w-full items-center justify-center gap-1.5 rounded-2xl bg-gradient-to-r from-[#7b4fd8] to-[#a855c8] px-3 focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none"
     >
       <Zap className="size-4 text-highlight" aria-hidden="true" />
       <span className="font-heading text-sm font-extrabold text-white">

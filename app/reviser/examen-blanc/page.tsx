@@ -34,7 +34,14 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-export default async function ExamenBlancPage() {
+export default async function ExamenBlancPage({
+  searchParams,
+}: {
+  // `?subject=slug` : examen blanc ciblé sur UNE matière (lancé depuis son
+  // dossier). Absent → examen multi-matières classique.
+  searchParams: Promise<{ subject?: string }>
+}) {
+  const { subject: subjectParam } = await searchParams
   const supabase = await createClient()
   const {
     data: { user },
@@ -125,6 +132,14 @@ export default async function ExamenBlancPage() {
   const examSubjectNames = new Set(exams.map((e) => e.subject.name))
   const slugBySubjectName = new Map(allSubjects.map((s) => [s.name, s.slug]))
 
+  // Examen blanc ciblé : la matière du dossier d'où l'élève l'a lancé. On ne
+  // compose alors que sur cette matière, quelle que soit la classe (toutes les
+  // matières et toutes les classes disposent ainsi de leur examen blanc).
+  const targetSubject = subjectParam
+    ? (allSubjects.find((s) => s.slug === subjectParam) ?? null)
+    : null
+  const targetSubjectName = targetSubject?.name ?? null
+
   // Chapitre de chaque quiz (pour le bilan) : quiz → leçon → chapitre.
   const quizList = quizzes ?? []
   const lessonIds = quizList
@@ -175,9 +190,13 @@ export default async function ExamenBlancPage() {
     for (const q of shuffle(valid)) {
       const quiz = quizById.get(q.quiz_id)
       if (!quiz?.subject) continue
-      // Classes à examen : seules les matières de l'épreuve composent.
-      if (examSubjectNames.size > 0 && !examSubjectNames.has(quiz.subject))
+      // Examen ciblé : uniquement la matière demandée. Sinon, classes à examen :
+      // seules les matières de l'épreuve composent.
+      if (targetSubjectName) {
+        if (quiz.subject !== targetSubjectName) continue
+      } else if (examSubjectNames.size > 0 && !examSubjectNames.has(quiz.subject)) {
         continue
+      }
       const chapterId = quiz.lesson_id
         ? (chapterByLesson.get(quiz.lesson_id) ?? null)
         : null
@@ -205,12 +224,20 @@ export default async function ExamenBlancPage() {
     // — le bilan en cours serait perdu (voir SwipeTabs).
     <div data-no-swipe className="flex flex-col gap-4">
       <PageHeader
-        title="Examen blanc"
-        description="Comme le jour J : chrono, plusieurs matières, bilan à la fin."
+        title={targetSubjectName ? `Examen blanc · ${targetSubjectName}` : 'Examen blanc'}
+        description={
+          targetSubjectName
+            ? `Comme le jour J, sur ${targetSubjectName} : chrono et bilan par chapitre.`
+            : 'Comme le jour J : chrono, plusieurs matières, bilan à la fin.'
+        }
       />
       <ExamBlancPlayer
         questions={examQuestions}
-        examTitle={EXAM_TITLES[grade] ?? 'Contrôle toutes matières'}
+        examTitle={
+          targetSubjectName
+            ? `Examen blanc · ${targetSubjectName}`
+            : (EXAM_TITLES[grade] ?? 'Contrôle toutes matières')
+        }
         lastScore={
           lastExam
             ? { score: Number(lastExam.score), total: Number(lastExam.total) }

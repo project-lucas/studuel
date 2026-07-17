@@ -14,16 +14,18 @@ describe('arenaPeriodAt', () => {
     // Arrange : les attentes du cahier des charges (heure → plage).
     const cases: Array<[number, string]> = [
       [0, 'night'],
-      [5, 'night'],
-      [6, 'morning'],
-      [10, 'morning'],
-      [11, 'noon'],
-      [13, 'noon'],
-      [14, 'afternoon'],
+      [4, 'night'],
+      [5, 'dawn'],
+      [7, 'dawn'],
+      [8, 'morning'],
+      [11, 'morning'],
+      [12, 'noon'],
+      [14, 'noon'],
+      [15, 'afternoon'],
       [17, 'afternoon'],
       [18, 'evening'],
-      [21, 'evening'],
-      [22, 'night'],
+      [20, 'evening'],
+      [21, 'night'],
       [23, 'night'],
     ]
 
@@ -43,33 +45,34 @@ describe('arenaSlotAt / arenaSrcOf', () => {
 })
 
 describe('nextArenaSlot', () => {
-  it('enchaîne les plages dans l’ordre et boucle nuit → matin', () => {
-    expect(nextArenaSlot(7).period).toBe('noon')
-    expect(nextArenaSlot(12).period).toBe('afternoon')
-    expect(nextArenaSlot(15).period).toBe('evening')
+  it('enchaîne les plages dans l’ordre et boucle nuit → aube', () => {
+    expect(nextArenaSlot(6).period).toBe('morning')
+    expect(nextArenaSlot(9).period).toBe('noon')
+    expect(nextArenaSlot(13).period).toBe('afternoon')
+    expect(nextArenaSlot(16).period).toBe('evening')
     expect(nextArenaSlot(19).period).toBe('night')
-    expect(nextArenaSlot(23).period).toBe('morning')
-    expect(nextArenaSlot(3).period).toBe('morning')
+    expect(nextArenaSlot(23).period).toBe('dawn')
+    expect(nextArenaSlot(3).period).toBe('dawn')
   })
 })
 
 describe('msUntilNextArenaChange', () => {
   it('vise exactement la prochaine frontière de plage', () => {
-    // 10h30 → bascule à 11h00 : 30 min.
-    const at1030 = new Date(2026, 6, 17, 10, 30, 0)
-    expect(msUntilNextArenaChange(at1030)).toBe(30 * 60_000)
+    // 11h30 → bascule à 12h00 : 30 min.
+    const at1130 = new Date(2026, 6, 17, 11, 30, 0)
+    expect(msUntilNextArenaChange(at1130)).toBe(30 * 60_000)
 
-    // 5h59m30 → bascule à 6h00 : 30 s.
-    const at0559 = new Date(2026, 6, 17, 5, 59, 30)
-    expect(msUntilNextArenaChange(at0559)).toBe(30_000)
+    // 4h59m30 → bascule à 5h00 : 30 s.
+    const at0459 = new Date(2026, 6, 17, 4, 59, 30)
+    expect(msUntilNextArenaChange(at0459)).toBe(30_000)
 
-    // 23h00 → prochaine frontière 6h00 le lendemain : 7 h.
+    // 23h00 → prochaine frontière 5h00 le lendemain : 6 h.
     const at2300 = new Date(2026, 6, 17, 23, 0, 0)
-    expect(msUntilNextArenaChange(at2300)).toBe(7 * 3_600_000)
+    expect(msUntilNextArenaChange(at2300)).toBe(6 * 3_600_000)
 
-    // Pile sur une frontière (6h00) → la suivante est 11h00 : 5 h.
-    const at0600 = new Date(2026, 6, 17, 6, 0, 0)
-    expect(msUntilNextArenaChange(at0600)).toBe(5 * 3_600_000)
+    // Pile sur une frontière (5h00) → la suivante est 8h00 : 3 h.
+    const at0500 = new Date(2026, 6, 17, 5, 0, 0)
+    expect(msUntilNextArenaChange(at0500)).toBe(3 * 3_600_000)
   })
 
   it('reste strictement positif à toute heure', () => {
@@ -82,7 +85,8 @@ describe('msUntilNextArenaChange', () => {
 })
 
 describe('isArenaPeriod', () => {
-  it('accepte les cinq plages et rejette le reste', () => {
+  it('accepte les six plages et rejette le reste', () => {
+    expect(isArenaPeriod('dawn')).toBe(true)
     expect(isArenaPeriod('morning')).toBe(true)
     expect(isArenaPeriod('night')).toBe(true)
     expect(isArenaPeriod('minuit')).toBe(false)

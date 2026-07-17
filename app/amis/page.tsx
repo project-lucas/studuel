@@ -1,6 +1,5 @@
 import PageHeader from '@/components/PageHeader'
 import AmisHome from '@/components/AmisHome'
-import FriendAddButton from '@/components/FriendAddButton'
 import { createClient } from '@/lib/supabase/server'
 import {
   getMockSchool,
@@ -158,14 +157,10 @@ export default async function AmisPage() {
 
   return (
     <div>
-      {/* L'ajout d'ami vit en icône en haut à droite, à hauteur du titre. */}
-      <div className="flex items-start justify-between gap-3">
-        <PageHeader
-          title="Amis"
-          description="Défie, rejoins, grimpe — ton cerveau contre les leurs."
-        />
-        <FriendAddButton myFriendCode={myFriendCode} />
-      </div>
+      <PageHeader
+        title="Amis"
+        description="Défie, rejoins, grimpe — ton cerveau contre les leurs."
+      />
       <AmisHome
         ranking={ranking}
         onlineFriendIds={onlineFriendIds}

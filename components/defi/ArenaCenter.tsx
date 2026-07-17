@@ -1,27 +1,19 @@
-import Image from 'next/image'
 import { arenaProgress } from '@/lib/defi/arena'
-import { MASCOT_SKINS, type MascotSkin } from './DefiHero'
 import { TrophyIcon } from './icons'
 
 interface ArenaCenterProps {
   trophies: number
-  /** Skin de mascotte affiché au centre de l'arène. */
-  skin?: MascotSkin
 }
 
 /**
- * Le cœur de l'écran Défi : la mascotte plantée dans l'arène courante, le
- * compteur de trophées et la progression vers l'arène suivante. Remplace
- * l'ancienne carte d'arène — le CTA « Match classé » vit désormais en bas
- * d'écran. Purement présentationnel (`arenaProgress` fait le calcul).
+ * Le cœur de l'écran Défi : le compteur de trophées et la progression vers
+ * l'arène suivante, plantés au centre de l'arène. La mascotte et la plaque
+ * d'arène ont été retirées pour dégager le décor. Purement présentationnel
+ * (`arenaProgress` fait le calcul).
  */
-export default function ArenaCenter({
-  trophies,
-  skin = 'classique',
-}: ArenaCenterProps) {
+export default function ArenaCenter({ trophies }: ArenaCenterProps) {
   const p = arenaProgress(trophies)
   const pct = Math.round(p.ratio * 100)
-  const mascot = MASCOT_SKINS[skin] ?? MASCOT_SKINS.classique
   const nextLabel =
     p.next && p.remaining !== null
       ? `Encore ${p.remaining} pour ${p.next.name}`
@@ -32,47 +24,22 @@ export default function ArenaCenter({
       className="flex w-full max-w-60 flex-col items-center text-center"
       aria-label="Ton arène"
     >
-      {/* La mascotte, en idle, avec un halo doux qui la détache du décor. */}
-      <div className="relative flex flex-col items-center">
+      {/* Cartouche « marbre » horizontal : gemme en losange à chaque extrémité
+          (pseudo-éléments .olympe-cartouche), Trophy or + nombre encre. */}
+      <div className="olympe-glass olympe-cartouche flex w-44 items-center justify-center gap-2.5 rounded-2xl px-6 py-2.5">
+        <TrophyIcon className="size-6 shrink-0 text-[#fcd34d]" />
         <span
-          aria-hidden="true"
-          className="absolute top-1/2 left-1/2 size-44 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(closest-side,color-mix(in_oklch,var(--highlight),white_30%),transparent_72%)] opacity-45"
-        />
-        <Image
-          src={`/images/mascotte/${mascot.file}`}
-          alt={mascot.label}
-          width={180}
-          height={230}
-          priority
-          className="defi2-hero-char relative z-10 h-auto w-28 object-contain"
-        />
-      </div>
-
-      {/* Plaque d'arène. */}
-      <div className="relative z-10 mt-1 flex items-center gap-2 rounded-full border border-white/15 bg-[oklch(0.2_0.04_300)]/85 px-4 py-1.5 shadow-[0_8px_20px_-8px_rgba(0,0,0,0.6)] backdrop-blur-sm">
-        <span className="text-base leading-none" aria-hidden>
-          {p.current.icon}
-        </span>
-        <span className="font-heading text-sm font-extrabold tracking-wide text-white">
-          {p.current.name}
-        </span>
-      </div>
-
-      {/* Compteur de trophées. */}
-      <div className="mt-3 flex items-center gap-2 rounded-2xl border border-highlight/40 bg-highlight/15 px-4 py-1.5">
-        <TrophyIcon className="size-5 text-highlight" />
-        <span
-          className="font-heading text-2xl leading-none font-extrabold text-white tabular-nums"
+          className="font-heading text-2xl leading-none font-extrabold tabular-nums"
           aria-label={`${trophies} trophées`}
         >
           {trophies}
         </span>
       </div>
 
-      {/* Progression vers l'arène suivante. */}
+      {/* Progression vers l'arène suivante — fin ruban doré, caption crème. */}
       <div className="mt-3 w-full">
         <div
-          className="h-3 w-full overflow-hidden rounded-full border border-white/12 bg-black/30"
+          className="h-2 w-full overflow-hidden rounded-full border border-[color:var(--foreground)]/25 bg-black/25"
           role="progressbar"
           aria-valuenow={pct}
           aria-valuemin={0}
@@ -80,11 +47,13 @@ export default function ArenaCenter({
           aria-label={nextLabel}
         >
           <div
-            className="bar-fill h-full rounded-full bg-gradient-to-r from-highlight to-[oklch(0.78_0.17_62)] shadow-[0_0_12px_color-mix(in_oklch,var(--highlight),transparent_40%)]"
+            className="bar-fill h-full rounded-full bg-gradient-to-r from-[#fcd34d] to-[#f9b233] shadow-[0_0_10px_color-mix(in_oklch,var(--highlight),transparent_40%)]"
             style={{ width: `${pct}%` }}
           />
         </div>
-        <p className="mt-1.5 text-xs font-bold text-white/80">{nextLabel}</p>
+        <p className="mt-1.5 text-xs font-bold text-white [text-shadow:0_1px_2px_rgba(36,48,79,0.9)]">
+          {nextLabel}
+        </p>
       </div>
     </section>
   )

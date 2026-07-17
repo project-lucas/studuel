@@ -11,11 +11,9 @@ import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import SubjectsHome from '@/components/SubjectsHome'
 import ReviserSpaces from '@/components/ReviserSpaces'
-import CarnetMastery from '@/components/CarnetMastery'
-import CarnetExamBlanc from '@/components/CarnetExamBlanc'
-import UpcomingExamsCard from '@/components/UpcomingExamsCard'
 import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
 import CarnetLibrary from '@/components/CarnetLibrary'
+import CarnetCreateFab from '@/components/CarnetCreateFab'
 import WeekPlannerStrip from '@/components/WeekPlannerStrip'
 import ExamObjectiveToggle from '@/components/ExamObjectiveToggle'
 import { type ExamProgressEntry } from '@/components/ExamProgress'
@@ -400,13 +398,11 @@ export default async function ReviserPage() {
   // Données de la carte « Mes contrôles à venir » : matières + chapitres du
   // niveau (identique à l'onglet Moi, la carte est partagée).
   const subjectByIdAll = new Map(allSubjects.map((s) => [s.id, s]))
-  const chaptersBySubject: Record<string, { id: string; title: string }[]> = {}
   const examSubjects: { slug: string; name: string; icon: string }[] = []
   const seenExamSubjects = new Set<string>()
   for (const ch of levelChapters ?? []) {
     const subj = subjectByIdAll.get(ch.subject_id)
     if (!subj) continue
-    ;(chaptersBySubject[subj.slug] ??= []).push({ id: ch.id, title: ch.title })
     if (!seenExamSubjects.has(subj.slug)) {
       seenExamSubjects.add(subj.slug)
       examSubjects.push({ slug: subj.slug, name: subj.name, icon: subj.icon })
@@ -432,22 +428,6 @@ export default async function ReviserPage() {
         meta: previewMeta(r.kind, content),
       }
     })
-
-  // --- Espace « Mon carnet » : les données scolaires de l'élève -----------------
-  // Maîtrise par matière suivie + chapitres les plus fragiles à consolider.
-  const masteryEntries = followed.map((s) => ({
-    slug: s.slug,
-    name: s.name,
-    icon: s.icon,
-    pct: progressBySlug[s.slug] ?? 0,
-  }))
-  const fragileChapters = fragiles.slice(0, 4).map((a) => ({
-    subjectSlug: a.subject.slug,
-    subjectIcon: a.subject.icon,
-    chapterId: a.chapterId,
-    chapterTitle: a.chapterTitle,
-    pct: Math.round(a.value * 100),
-  }))
 
   return (
     <div className="flex flex-col gap-4">
@@ -493,6 +473,7 @@ export default async function ReviserPage() {
                       exams={upcomingExams}
                       today={today}
                       subjects={examSubjects}
+                      activeDays={[...activityDays]}
                     />
                   </div>
                   {/* 2. À revoir aujourd'hui — LA porte de la file SRS +
@@ -517,34 +498,29 @@ export default async function ReviserPage() {
         }
         carnet={
           <div className="flex flex-col gap-4">
-            {/* Une ligne d'intro : dire à l'élève ce qu'est ce carnet. */}
-            <p className="px-1 text-sm text-muted-foreground">
-              Ton carnet de bord scolaire : tes contrôles, ta maîtrise par
-              matière et ta préparation d&apos;examen.
-            </p>
-            {/* 1. Mes contrôles à venir — LE point d'ajout/retrait (unique). */}
-            <UpcomingExamsCard
-              exams={upcomingExams}
-              today={today}
-              subjects={examSubjects}
-              chaptersBySubject={chaptersBySubject}
-            />
-            {/* 2. La Bibliothèque — bloc à part entière : fiches, quiz et
-                cartes mentales visibles directement (aperçus, filtres par
-                type, groupes de récence), création sans quitter le carnet. */}
-            <CarnetLibrary items={shelfItems} now={nowIso} />
-            {/* 3. Ma maîtrise — rangs par matière + chapitres à progresser. */}
-            <CarnetMastery entries={masteryEntries} fragiles={fragileChapters} />
-            {/* 4. L'examen blanc — remonté sous la maîtrise (on voit son
-                niveau, on le teste en conditions réelles). */}
-            <CarnetExamBlanc />
-            {/* 5. Préparation examen : objectif par matière (classes à examen)
-                et descriptif de l'oral (1re français). */}
+            {/* Objectif examen tout en haut : pastille icône + % global,
+                dépliable sur le tableau d'avancement par matière (rendu null
+                hors classes à examen). */}
             <ExamObjectiveToggle
               title={EXAM_TITLES[grade] ?? 'Objectif examen'}
               entries={examEntries}
             />
+            {/* Une ligne d'intro : dire à l'élève ce qu'est ce carnet. */}
+            <p className="px-1 text-sm text-muted-foreground">
+              Ton carnet de bord scolaire : ta bibliothèque de fiches, quiz et
+              cartes mentales.
+            </p>
+            {/* La Bibliothèque — LE bloc du carnet : fiches, quiz et cartes
+                mentales visibles directement (aperçus, filtres par type,
+                groupes de récence), création sans quitter le carnet.
+                (Contrôles à venir, maîtrise et examen blanc retirés d'ici :
+                l'examen blanc vit désormais dans chaque dossier de matière.) */}
+            <CarnetLibrary items={shelfItems} now={nowIso} />
+            {/* Descriptif de l'oral (1re français). */}
             {hasFrenchOral ? <OralTextsCard initial={oralTexts} /> : null}
+            {/* Bouton flottant « + » : créer fiche quiz / flash cards / carte
+                mentale sans quitter le carnet. */}
+            <CarnetCreateFab />
           </div>
         }
       />

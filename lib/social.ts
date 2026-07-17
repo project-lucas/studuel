@@ -386,3 +386,127 @@ export function getMockSchool(
     ]),
   }
 }
+
+// --- Échelons géographiques du classement (docs/CADRAGE-GEO.md) ---------------
+// Du plus proche au plus large : ton établissement (la « ville » de départ),
+// ton département, ta région, le national. Un sélecteur d'échelon laisse
+// l'élève voir où il se situe à chaque échelle.
+
+export type GeoScope = 'school' | 'dept' | 'region' | 'national'
+
+export const GEO_SCOPES: readonly GeoScope[] = [
+  'school',
+  'dept',
+  'region',
+  'national',
+]
+
+// Libellé court de l'onglet. L'établissement suit le cycle (« Lycée »/« Collège »).
+export function geoScopeLabel(scope: GeoScope, level: SchoolLevel): string {
+  switch (scope) {
+    case 'school':
+      return level === 'lycee' ? 'Lycée' : 'Collège'
+    case 'dept':
+      return 'Département'
+    case 'region':
+      return 'Région'
+    case 'national':
+      return 'National'
+  }
+}
+
+// Titre du bloc pour l'échelon courant (« Ton lycée », « Ton département »…).
+export function geoScopeTitle(scope: GeoScope, level: SchoolLevel): string {
+  switch (scope) {
+    case 'school':
+      return `Ton ${schoolNoun(level)}`
+    case 'dept':
+      return 'Ton département'
+    case 'region':
+      return 'Ta région'
+    case 'national':
+      return 'France entière'
+  }
+}
+
+// Groupe nominal pour les phrases « … compte pour {…} » selon l'échelon.
+export function geoScopePossessive(scope: GeoScope, level: SchoolLevel): string {
+  switch (scope) {
+    case 'school':
+      return `ton ${schoolNoun(level)}`
+    case 'dept':
+      return 'ton département'
+    case 'region':
+      return 'ta région'
+    case 'national':
+      return 'la France'
+  }
+}
+
+// Meneurs d'exemple par échelon (hors établissement) : plus le vivier est large,
+// plus les meneurs cumulent d'heures. « Toi » y est inséré avec ton vrai temps,
+// puis tout est trié — au national tu apparais donc plus bas, ce qui dit la
+// vérité du jeu : on grimpe en travaillant.
+const GEO_DEMO_LEADERS: Record<
+  Exclude<GeoScope, 'school'>,
+  { name: string; emoji: string; leaders: Omit<SchoolMate, 'isMe'>[] }
+> = {
+  dept: {
+    name: 'Seine-et-Marne',
+    emoji: '🏙️',
+    leaders: [
+      { id: 'd1', name: 'Yasmine', emoji: '🦅', seconds: 92 * 3600 },
+      { id: 'd2', name: 'Théo', emoji: '🐯', seconds: 78 * 3600 },
+      { id: 'd3', name: 'Camille', emoji: '🦊', seconds: 64 * 3600 + 1800 },
+      { id: 'd4', name: 'Adam', emoji: '🐺', seconds: 51 * 3600 },
+      { id: 'd5', name: 'Sofia', emoji: '🦉', seconds: 43 * 3600 },
+      { id: 'd6', name: 'Nael', emoji: '🐼', seconds: 38 * 3600 + 2400 },
+    ],
+  },
+  region: {
+    name: 'Île-de-France',
+    emoji: '🗺️',
+    leaders: [
+      { id: 'r1', name: 'Jade', emoji: '🦄', seconds: 214 * 3600 },
+      { id: 'r2', name: 'Gabriel', emoji: '🐉', seconds: 187 * 3600 },
+      { id: 'r3', name: 'Louna', emoji: '🦅', seconds: 156 * 3600 + 1800 },
+      { id: 'r4', name: 'Ibrahim', emoji: '🦁', seconds: 133 * 3600 },
+      { id: 'r5', name: 'Manon', emoji: '🦊', seconds: 118 * 3600 },
+      { id: 'r6', name: 'Ethan', emoji: '🐯', seconds: 101 * 3600 + 1200 },
+    ],
+  },
+  national: {
+    name: 'France',
+    emoji: '🇫🇷',
+    leaders: [
+      { id: 'n1', name: 'Alia', emoji: '👑', seconds: 512 * 3600 },
+      { id: 'n2', name: 'Noah', emoji: '🚀', seconds: 468 * 3600 },
+      { id: 'n3', name: 'Lina', emoji: '🦄', seconds: 421 * 3600 + 1800 },
+      { id: 'n4', name: 'Raphaël', emoji: '🐉', seconds: 389 * 3600 },
+      { id: 'n5', name: 'Emma', emoji: '🦅', seconds: 352 * 3600 },
+      { id: 'n6', name: 'Aymen', emoji: '🦁', seconds: 318 * 3600 + 600 },
+    ],
+  },
+}
+
+// Aperçu d'exemple d'un échelon géographique, tant que le back-end géo (code
+// postal + RPC geo_ranking, cf. docs/CADRAGE-GEO.md) n'est pas branché. Pour
+// l'établissement, on réutilise l'aperçu d'école existant.
+export function getMockGeoBoard(
+  scope: GeoScope,
+  mySeconds: number,
+  level: SchoolLevel = 'college',
+): SchoolBoard {
+  if (scope === 'school') return getMockSchool(mySeconds, level)
+
+  const preset = GEO_DEMO_LEADERS[scope]
+  return {
+    name: preset.name,
+    emoji: preset.emoji,
+    level,
+    mates: sortSchool([
+      { id: 'me', name: 'Toi', emoji: '🚀', seconds: mySeconds, isMe: true },
+      ...preset.leaders.map((l) => ({ ...l })),
+    ]),
+  }
+}

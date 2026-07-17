@@ -1,5 +1,6 @@
 import PageHeader from '@/components/PageHeader'
 import TresorHome from '@/components/TresorHome'
+import CoffreStore from '@/components/CoffreStore'
 import { createClient } from '@/lib/supabase/server'
 import { toDayKey } from '@/lib/streak'
 import {
@@ -63,18 +64,28 @@ export default async function CoffrePage() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col gap-8">
       <PageHeader
-        title="Mon coffre"
-        description="Ton XP se transforme en pièces — ouvre, dépense, collectionne."
+        title="Le Coffre"
+        description="Capsules pour progresser, personnalisation à débloquer, coffres à ouvrir."
       />
-      <TresorHome
-        live={live}
-        initialCoins={coins}
-        shop={shop}
-        collection={collection}
-        chestOpened={chestOpened}
-      />
+
+      {/* La devanture : capsules d'apprentissage (€) + personnalisation (pièces). */}
+      <CoffreStore coins={coins} />
+
+      {/* L'économie de pièces : coffre du jour, boutique de boosts, collection. */}
+      <section aria-label="Tes pièces et ta collection" className="mx-auto w-full max-w-md">
+        <h2 className="font-heading mb-3 px-1 text-xl font-extrabold text-foreground">
+          Tes pièces & ta collection
+        </h2>
+        <TresorHome
+          live={live}
+          initialCoins={coins}
+          shop={shop}
+          collection={collection}
+          chestOpened={chestOpened}
+        />
+      </section>
     </div>
   )
 }

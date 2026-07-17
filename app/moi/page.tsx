@@ -13,6 +13,7 @@ import CapacityScore from '@/components/CapacityScore'
 import type { DayStatus } from '@/components/DisciplineCalendar'
 import WeekSection from '@/components/WeekSection'
 import MoiHeader from '@/components/MoiHeader'
+import WorldBackdrop from '@/components/WorldBackdrop'
 import MoiTabs from '@/components/MoiTabs'
 import MoiExtras from '@/components/MoiExtras'
 import CompagnonCard from '@/components/CompagnonCard'
@@ -520,7 +521,7 @@ export default async function MoiPage({
   return (
     <div>
       {/* Fond papier réchauffé pleine page, derrière tout l'onglet. */}
-      <div aria-hidden="true" className="moi-bg fixed inset-0 -z-10" />
+      <WorldBackdrop className="moi-bg" />
 
       {/* Carte bandeau : flamme de niveau à cheval, nom centré, série ramassée
           dans une pastille, temps total. */}

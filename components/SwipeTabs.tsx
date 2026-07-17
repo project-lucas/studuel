@@ -43,9 +43,21 @@ export default function SwipeTabs({ children }: { children: React.ReactNode }) {
     let startedAt = 0
     let tracking = false
 
+    // will-change/transform uniquement PENDANT le geste : un transform (même
+    // identité) fait du conteneur le containing block des descendants
+    // `position: fixed` — les fonds plein écran (arène, crème) se retrouvent
+    // calés sur la zone de contenu au lieu du viewport (bordures blanches).
+    // Au repos, le conteneur redevient neutre.
     const setOffset = (px: number) => {
-      surface.style.transform = px === 0 ? '' : `translate3d(${px}px, 0, 0)`
-      surface.style.transition = px === 0 ? 'transform 200ms ease-out' : ''
+      if (px === 0) {
+        surface.style.transform = ''
+        surface.style.transition = 'transform 200ms ease-out'
+        surface.style.willChange = ''
+      } else {
+        surface.style.transform = `translate3d(${px}px, 0, 0)`
+        surface.style.transition = ''
+        surface.style.willChange = 'transform'
+      }
     }
 
     const onStart = (event: TouchEvent) => {
@@ -117,11 +129,7 @@ export default function SwipeTabs({ children }: { children: React.ReactNode }) {
     }
   }, [router])
 
-  return (
-    <div ref={surfaceRef} className="will-change-transform">
-      {children}
-    </div>
-  )
+  return <div ref={surfaceRef}>{children}</div>
 }
 
 /** Balises interactives ou carrousels : le geste leur appartient, pas à nous. */

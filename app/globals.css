@@ -707,22 +707,176 @@ a:hover > .wiggle-on-hover {
     color-mix(in oklch, var(--primary), transparent 97%);
 }
 
-/* Fond de l'onglet Défi : arène immersive en violet profond, dérivée du token
-   --primary (plus de mur marine). On garde une base sombre pour que les tuiles
-   vives et le texte blanc de l'Arène restent lisibles, tout en restant sur la
-   couleur de marque du monde « Studuel ». */
+/* Fond de l'onglet Défi : le colisée dessiné, en 5 variantes qui suivent
+   l'heure de l'élève (couches .arena-img montées par ArenaBackdrop). Le
+   conteneur ne garde que le violet de secours — visible avant l'hydratation
+   et pendant le chargement de la première image, pour éviter tout flash
+   blanc. */
 .defi-arena-bg {
+  background-color: color-mix(in oklch, var(--primary), black 55%);
+}
+
+/* Une couche d'image du fond : la nouvelle variante se monte PAR-DESSUS
+   l'ancienne et apparaît en fondu (~500 ms). */
+@keyframes arena-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.arena-img {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: arena-fade-in 500ms ease both;
+}
+
+/* Voiles violets discrets en haut et en bas : gardent le HUD blanc et la
+   barre d'onglets lisibles sur la pierre claire des variantes de jour. */
+.arena-veils {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   background:
-    radial-gradient(
-      130% 90% at 50% -8%,
-      color-mix(in oklch, var(--primary), white 6%),
-      transparent 55%
-    ),
     linear-gradient(
       180deg,
-      color-mix(in oklch, var(--primary), black 55%),
-      color-mix(in oklch, var(--primary), black 74%)
+      color-mix(
+          in oklch,
+          color-mix(in oklch, var(--primary), black 58%),
+          transparent 35%
+        )
+        0,
+      transparent 24%
+    ),
+    linear-gradient(
+      0deg,
+      color-mix(
+          in oklch,
+          color-mix(in oklch, var(--primary), black 60%),
+          transparent 40%
+        )
+        0,
+      transparent 28%
     );
+}
+
+/* --- Vie du ciel de l'Arène : nuages, oiseaux, lumière du moment ------------
+   Monté DANS le WorldBackdrop du Défi (voir components/ArenaSky.tsx). Tout est
+   décoratif : pointer-events désactivés, animations transform/opacity
+   uniquement, et neutralisées si l'utilisateur préfère réduire le mouvement. */
+.arena-sky {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Nuages : deux masses floues qui dérivent lentement dans la bande de ciel de
+   l'image (haut de l'écran). Les délais négatifs les font naître déjà à
+   l'écran au premier affichage. */
+@keyframes arena-cloud-drift {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(150vw);
+  }
+}
+.arena-cloud {
+  position: absolute;
+  left: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.55);
+  filter: blur(14px);
+  animation: arena-cloud-drift 95s linear infinite;
+}
+.arena-cloud-1 {
+  top: 7%;
+  width: 38vw;
+  max-width: 320px;
+  height: 34px;
+  animation-delay: -38s;
+}
+.arena-cloud-2 {
+  top: 12.5%;
+  width: 26vw;
+  max-width: 220px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.4);
+  animation-duration: 140s;
+  animation-delay: -110s;
+}
+
+/* Oiseaux : silhouettes qui traversent le ciel en ondulant, ailes battantes. */
+@keyframes arena-bird-fly {
+  0% {
+    transform: translate(-12vw, 0);
+  }
+  30% {
+    transform: translate(26vw, -1.6vh);
+  }
+  60% {
+    transform: translate(64vw, 0.9vh);
+  }
+  100% {
+    transform: translate(114vw, -1.2vh);
+  }
+}
+@keyframes arena-bird-flap {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.45);
+  }
+}
+.arena-bird {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: auto;
+  color: color-mix(in oklch, var(--primary), black 45%);
+  animation: arena-bird-fly 28s linear infinite;
+}
+.arena-bird path {
+  transform-origin: 50% 50%;
+  animation: arena-bird-flap 0.7s ease-in-out infinite alternate;
+}
+.arena-bird-1 {
+  top: 9%;
+}
+.arena-bird-2 {
+  top: 13%;
+  width: 16px;
+  opacity: 0.75;
+  animation-duration: 36s;
+  animation-delay: -17s;
+}
+
+/* La nuit (image étoilée avec lune), oiseaux et nuages s'effacent en douceur :
+   le ciel de l'illustration prend le relais. */
+.arena-bird,
+.arena-cloud {
+  transition: opacity 800ms ease;
+}
+.arena-sky-night .arena-bird,
+.arena-sky-night .arena-cloud {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arena-cloud,
+  .arena-bird,
+  .arena-bird path {
+    animation: none;
+  }
+  .arena-bird {
+    display: none;
+  }
 }
 
 /* Anneau d'arcade autour du GO : pointillés qui tournent lentement. */

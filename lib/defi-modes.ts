@@ -4,8 +4,10 @@
 
 // ------------------------------------------------------------------ catalogue
 
-// Le décor de l'Arène (hub Défi, écran VS, résultats de duel).
-export const ARENA_IMAGE = '/images/arene/arene.webp'
+// Le décor de l'Arène (écran VS, résultats de duel). Le hub Défi a son fond
+// dynamique à 5 variantes horaires (lib/arena-background) ; ici on garde la
+// variante de midi, la plus lumineuse, comme décor fixe des écrans de match.
+export const ARENA_IMAGE = '/images/arene/arena-noon.webp'
 
 export type GameModeId = 'duel' | 'blitz' | 'chrono' | 'survie' | 'boss'
 

@@ -1,5 +1,6 @@
 import { CalendarCheck, Flame, TrendingUp } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import ShareWeekButton from '@/components/ShareWeekButton'
 import type { WeeklyRecap } from '@/lib/weekly-recap'
 
 const DAY_NAMES = [
@@ -40,8 +41,15 @@ function StatTile({
 }
 
 // « Ta semaine » — rétro hebdo de l'onglet Moi : les chiffres marquants de la
-// semaine en cours + une accroche qui s'adapte (cf. lib/weekly-recap).
-export default function WeeklyRecapCard({ recap }: { recap: WeeklyRecap }) {
+// semaine en cours + une accroche qui s'adapte (cf. lib/weekly-recap), et le
+// partage en story (ShareWeekButton) dès qu'il y a quelque chose à montrer.
+export default function WeeklyRecapCard({
+  recap,
+  streak,
+}: {
+  recap: WeeklyRecap
+  streak: number
+}) {
   const deltaLabel =
     recap.sessionsDelta > 0
       ? `+${recap.sessionsDelta} vs sem. dernière`
@@ -99,6 +107,9 @@ export default function WeeklyRecapCard({ recap }: { recap: WeeklyRecap }) {
           Ton jour le plus actif : {DAY_NAMES[recap.bestDay.index]}
         </p>
       ) : null}
+
+      {/* La semaine en story : montrer ses chiffres = la boucle virale. */}
+      <ShareWeekButton recap={recap} streak={streak} />
     </section>
   )
 }

@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom'
 import { PartyPopper, Share2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { sfx } from '@/lib/sounds'
+import { shareStory } from '@/components/story-share'
 import type { Palier } from '@/lib/palier'
 
 // Chaque palier n'est fêté qu'UNE fois (mémoire locale, comme la fête de
@@ -30,66 +31,6 @@ function ConfettiRain() {
       ))}
     </div>
   )
-}
-
-// Image « story » 1080×1920 générée à la volée pour le partage : fond violet
-// de marque (token --primary résolu au runtime), gros emoji, nom du palier,
-// signature Studuel. Rendue en File pour navigator.share({ files }).
-async function buildStoryImage(palier: Palier): Promise<File | null> {
-  try {
-    const canvas = document.createElement('canvas')
-    canvas.width = 1080
-    canvas.height = 1920
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return null
-
-    const styles = getComputedStyle(document.documentElement)
-    const primary = styles.getPropertyValue('--primary').trim() || 'rebeccapurple'
-    const highlight = styles.getPropertyValue('--highlight').trim() || 'gold'
-
-    const bg = ctx.createLinearGradient(0, 0, 0, 1920)
-    bg.addColorStop(0, primary)
-    bg.addColorStop(1, `color-mix(in oklch, ${primary}, black 55%)`)
-    ctx.fillStyle = bg
-    ctx.fillRect(0, 0, 1080, 1920)
-
-    // Confettis figés, dérivés de l'index (déterministe).
-    for (let i = 0; i < 40; i++) {
-      ctx.fillStyle = i % 3 === 0 ? highlight : 'rgba(255,255,255,0.35)'
-      const x = (i * 173 + 91) % 1080
-      const y = (i * 389 + 127) % 1920
-      ctx.save()
-      ctx.translate(x, y)
-      ctx.rotate(((i * 47) % 360) * (Math.PI / 180))
-      ctx.fillRect(-7, -12, 14, 24)
-      ctx.restore()
-    }
-
-    ctx.textAlign = 'center'
-    ctx.fillStyle = 'rgba(255,255,255,0.85)'
-    ctx.font = 'bold 56px system-ui, sans-serif'
-    ctx.fillText(palier.title.toUpperCase(), 540, 560)
-
-    ctx.font = '300px serif'
-    ctx.fillText(palier.emoji, 540, 1010)
-
-    ctx.fillStyle = '#ffffff'
-    ctx.font = 'bold 88px system-ui, sans-serif'
-    ctx.fillText(palier.name, 540, 1230)
-
-    ctx.fillStyle = highlight
-    ctx.font = 'bold 48px system-ui, sans-serif'
-    ctx.fillText('⭐ Rejoins-moi sur Studuel ⭐', 540, 1650)
-
-    const blob = await new Promise<Blob | null>((resolve) =>
-      canvas.toBlob(resolve, 'image/png'),
-    )
-    if (!blob) return null
-    return new File([blob], 'palier-studuel.png', { type: 'image/png' })
-  } catch {
-    // Canvas indisponible (vieux navigateur…) : le partage texte prend le relais.
-    return null
-  }
 }
 
 /**
@@ -143,35 +84,13 @@ export default function PalierCelebration({
   const share = async () => {
     if (shareState === 'sharing') return
     setShareState('sharing')
-    const url = window.location.origin
-    const text = `${palier.shareText} ${url}`
-    try {
-      const file = await buildStoryImage(palier)
-      if (file && navigator.canShare?.({ files: [file] })) {
-        await navigator.share({ files: [file], text: palier.shareText })
-        setShareState('idle')
-        return
-      }
-      if (navigator.share) {
-        await navigator.share({ text })
-        setShareState('idle')
-        return
-      }
-      await navigator.clipboard.writeText(text)
-      setShareState('copied')
-    } catch (err) {
-      // L'élève a refermé la feuille de partage : pas une erreur.
-      if (err instanceof Error && err.name === 'AbortError') {
-        setShareState('idle')
-        return
-      }
-      try {
-        await navigator.clipboard.writeText(text)
-        setShareState('copied')
-      } catch {
-        setShareState('failed')
-      }
-    }
+    const outcome = await shareStory(
+      { title: palier.title, emoji: palier.emoji, headline: palier.name },
+      palier.shareText,
+    )
+    setShareState(
+      outcome === 'copied' ? 'copied' : outcome === 'failed' ? 'failed' : 'idle',
+    )
   }
 
   return createPortal(

@@ -24,7 +24,11 @@ import BadgeGrid from '@/components/BadgeGrid'
 import WeeklyRecapCard from '@/components/WeeklyRecapCard'
 import MilestonesTimeline from '@/components/MilestonesTimeline'
 import WeeklyGoalsCard from '@/components/WeeklyGoalsCard'
+import TrajectoireCard from '@/components/TrajectoireCard'
 import { createClient } from '@/lib/supabase/server'
+import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
+import { getChapterMastery } from '@/lib/mastery'
+import { computeTrajectoire } from '@/lib/trajectoire'
 import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
 import { computeWeeklyRecap } from '@/lib/weekly-recap'
 import { computeMilestones } from '@/lib/milestones'
@@ -115,7 +119,7 @@ export default async function MoiPage({
     await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, grade_level, commute_slots, capacity_quiz')
+      .select('full_name, grade_level, selected_subjects, commute_slots, capacity_quiz')
       .eq('id', user.id)
       .maybeSingle(),
     supabase
@@ -156,6 +160,10 @@ export default async function MoiPage({
     { data: debriefRows },
     { data: debriefYearRows },
     { data: debriefRewardRow },
+    // Trajectoire (« Progrès ») : catalogue (cache serveur) + maîtrise.
+    subjectsAll,
+    gradeChapters,
+    chapterMastery,
   ] = await Promise.all([
     supabase
       .from('habit_logs')
@@ -211,6 +219,11 @@ export default async function MoiPage({
       .select('date')
       .eq('date', toDayKey(new Date()))
       .maybeSingle(),
+    getSubjectsCached(),
+    profile?.grade_level
+      ? getGradeChaptersCached(String(profile.grade_level))
+      : Promise.resolve([]),
+    getChapterMastery(supabase, user.id),
   ])
 
   if (catalogError) {
@@ -488,6 +501,42 @@ export default async function MoiPage({
     ? (profile!.grade_level as GradeLevel)
     : null
 
+  // Trajectoire de l'année : maîtrise 0..1 de chaque chapitre des matières
+  // SUIVIES (mêmes règles de suivi que l'accueil Réviser) + rythme moyen
+  // depuis la toute première activité — voir lib/trajectoire.
+  const selectedSubjects = Array.isArray(profile?.selected_subjects)
+    ? (profile.selected_subjects as string[])
+    : null
+  const followedSubjectIds = new Set(
+    subjectsAll
+      .filter((s) => gradeLevel !== null && s.levels.includes(gradeLevel))
+      .filter(
+        (s) =>
+          selectedSubjects === null ||
+          selectedSubjects.length === 0 ||
+          selectedSubjects.includes(s.slug),
+      )
+      .map((s) => s.id),
+  )
+  const masteryValues = gradeChapters
+    .filter((c) => followedSubjectIds.has(c.subject_id))
+    .map((c) => chapterMastery.get(c.id)?.value ?? 0)
+  const firstActivityKey =
+    [
+      ...(tests ?? []),
+      ...(studies ?? []),
+      ...(lessonsDone ?? []),
+      ...(challenges ?? []),
+    ]
+      .map((s) => String(s.created_at).slice(0, 10))
+      .sort()[0] ?? null
+  const trajectoire = computeTrajectoire({
+    masteryValues,
+    grade: gradeLevel ?? '',
+    todayKey: today,
+    firstActivityKey,
+  })
+
   // Débrief d'habitudes : sélection référencée + issues du jour.
   const debriefSelected = (debriefSel ?? []).map((r) => String(r.pair_id))
   const debriefOutcomes: Record<string, DebriefOutcome> = {}
@@ -552,7 +601,7 @@ export default async function MoiPage({
         semaine={
           <div className="flex flex-col gap-4">
             {/* Rétro hebdo : la semaine en cours résumée en chiffres. */}
-            <WeeklyRecapCard recap={weeklyRecap} />
+            <WeeklyRecapCard recap={weeklyRecap} streak={currentStreak} />
             {/* Objectifs perso de la semaine (1 à 3, reset lundi). */}
             <WeeklyGoalsCard initial={weekGoals} weekStart={weekStart} />
             <WeekSection
@@ -577,6 +626,10 @@ export default async function MoiPage({
         }
         progres={
           <>
+            {/* La carte macro : préparation de l'année + projection honnête. */}
+            <div className="mb-4">
+              <TrajectoireCard trajectoire={trajectoire} />
+            </div>
             <div className="mb-4">
               <GradeSelector current={gradeLevel} />
             </div>

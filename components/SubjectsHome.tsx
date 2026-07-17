@@ -21,6 +21,7 @@ import SubjectIcon from '@/components/SubjectIcon'
 import StreakMascot from '@/components/StreakMascot'
 import WorldBackdrop from '@/components/WorldBackdrop'
 import { sfx } from '@/lib/sounds'
+import { toast } from '@/lib/toast'
 import { saveSelectedSubjects } from '@/app/reviser/actions'
 import type { ExamProximity, SubjectExamHint } from '@/lib/next-exam'
 import type { Subject, SubjectCategory } from '@/lib/types'
@@ -390,7 +391,13 @@ export default function SubjectsHome({
 
   const finishEditing = () =>
     startTransition(async () => {
-      await saveSelectedSubjects([...picked])
+      try {
+        await saveSelectedSubjects([...picked])
+      } catch {
+        toast('Sélection non enregistrée — réessaie.', 'error')
+        return
+      }
+      toast('Matières enregistrées ✓')
       setEditing(false)
     })
 

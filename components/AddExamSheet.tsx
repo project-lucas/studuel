@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useTransition } from 'react'
 import { Plus, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { toast } from '@/lib/toast'
 import { addUpcomingExam } from '@/app/moi/actions'
 import { useDialog } from '@/lib/use-dialog'
 
@@ -52,8 +53,10 @@ export default function AddExamSheet({
     setError(false)
     startTransition(async () => {
       const res = await addUpcomingExam(chapterId, date || null)
-      if (res.ok) onClose()
-      else setError(true)
+      if (res.ok) {
+        toast('Contrôle ajouté ✓')
+        onClose()
+      } else setError(true)
     })
   }
 

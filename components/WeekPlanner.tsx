@@ -35,6 +35,7 @@ import {
   PLANIFIER_CATALOG_ID,
 } from '@/lib/habits'
 import { formatDuration } from '@/lib/time'
+import { toast } from '@/lib/toast'
 import {
   addEvent,
   removeEvent,
@@ -162,7 +163,13 @@ export default function WeekPlanner({
     if (!typeId) return
     sfx.tap()
     startTransition(async () => {
-      await addEvent(typeId, formDay, formTime || null, formDuration)
+      try {
+        await addEvent(typeId, formDay, formTime || null, formDuration)
+      } catch {
+        toast("Impossible d'ajouter — réessaie.", 'error')
+        return
+      }
+      toast('Ajouté à ton planning ✓')
       sfx.correct()
       // Formulaire prêt pour l'ajout suivant (le jour choisi est conservé).
       setTypeId('')

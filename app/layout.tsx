@@ -16,6 +16,8 @@ import SwipeTabs from "@/components/SwipeTabs";
 import DailyLoginReward from "@/components/DailyLoginReward";
 // Retour matériel du téléphone : reste dans l'app au lieu de la quitter.
 import BackGuard from "@/components/BackGuard";
+// Toasts globaux (« Enregistré ✓ ») : file lib/toast, aucun provider.
+import Toaster from "@/components/Toaster";
 import { createClient } from "@/lib/supabase/server";
 
 const geistSans = Geist({
@@ -89,6 +91,7 @@ export default async function RootLayout({
             </div>
           </main>
         </div>
+        <Toaster />
       </body>
     </html>
   );

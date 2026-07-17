@@ -30,6 +30,7 @@ import {
   sinceLabel,
   schoolNoun,
   schoolTotalSeconds,
+  SCHOOL_BOARD_LIMIT,
   DUEL_XP_BONUS,
   ACTIVE_DUEL_KEY,
 } from '@/lib/social'
@@ -499,6 +500,9 @@ function SchoolSection({ school, demo }: { school: SchoolBoard; demo: boolean })
   const total = schoolTotalSeconds(school.mates)
   const myRank = school.mates.findIndex((m) => m.isMe) + 1
   const noun = schoolNoun(school.level)
+  // Liste au plafond de la RPC : la cagnotte ne couvre que le top 50 — on le
+  // dit (et un élève hors top n'a simplement pas de rang affiché).
+  const capped = school.mates.length >= SCHOOL_BOARD_LIMIT
 
   return (
     <section>
@@ -518,7 +522,9 @@ function SchoolSection({ school, demo }: { school: SchoolBoard; demo: boolean })
             </p>
             <p className="text-sm text-primary-foreground/75">
               {myRank > 0 ? `Tu es ${myRank === 1 ? '1er' : `${myRank}e`} · ` : ''}
-              chaque minute que tu travailles compte pour ton {noun}
+              {capped
+                ? `les heures des ${SCHOOL_BOARD_LIMIT} plus actifs de ton ${noun}`
+                : `chaque minute que tu travailles compte pour ton ${noun}`}
             </p>
           </div>
           <span className="flex shrink-0 items-center gap-1.5 font-mono text-lg font-bold tabular-nums">

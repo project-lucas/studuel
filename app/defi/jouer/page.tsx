@@ -369,27 +369,32 @@ export default async function DefiJouerPage({
     })
 
   return (
-    <DefiHome
-      items={shuffle(items)}
-      pool={pool}
-      streak={streak}
-      doneToday={doneToday}
-      level={level}
-      firstName={firstName}
-      commuteSlots={commuteSlots}
-      commuteStreak={commuteRun}
-      featuredId={featuredModeId(today)}
-      ghosts={ghosts}
-      userId={user.id}
-      trophies={Math.max(0, Math.floor(Number(trophyRow?.trophies ?? 0)))}
-      bestTrophies={Math.max(0, Math.floor(Number(trophyRow?.best_trophies ?? 0)))}
-      friendRanks={friendRanks}
-      initialMode={initialMode}
-      examFocus={
-        upcomingExams.length > 0
-          ? { titles: upcomingExams.map((e) => e.chapterTitle) }
-          : null
-      }
-    />
+    // data-no-swipe : la salle de jeu est une pièce immersive — un balayage
+    // pendant un duel/blitz/boss ne doit jamais changer d'onglet et perdre la
+    // partie en cours (la sortie passe par les boutons explicites).
+    <div data-no-swipe>
+      <DefiHome
+        items={shuffle(items)}
+        pool={pool}
+        streak={streak}
+        doneToday={doneToday}
+        level={level}
+        firstName={firstName}
+        commuteSlots={commuteSlots}
+        commuteStreak={commuteRun}
+        featuredId={featuredModeId(today)}
+        ghosts={ghosts}
+        userId={user.id}
+        trophies={Math.max(0, Math.floor(Number(trophyRow?.trophies ?? 0)))}
+        bestTrophies={Math.max(0, Math.floor(Number(trophyRow?.best_trophies ?? 0)))}
+        friendRanks={friendRanks}
+        initialMode={initialMode}
+        examFocus={
+          upcomingExams.length > 0
+            ? { titles: upcomingExams.map((e) => e.chapterTitle) }
+            : null
+        }
+      />
+    </div>
   )
 }

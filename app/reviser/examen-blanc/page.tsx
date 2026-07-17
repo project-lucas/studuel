@@ -201,7 +201,9 @@ export default async function ExamenBlancPage() {
   const examQuestions = composeExam(bySubject)
 
   return (
-    <div className="flex flex-col gap-4">
+    // data-no-swipe : pas de changement d'onglet au balayage pendant l'examen
+    // — le bilan en cours serait perdu (voir SwipeTabs).
+    <div data-no-swipe className="flex flex-col gap-4">
       <PageHeader
         title="Examen blanc"
         description="Comme le jour J : chrono, plusieurs matières, bilan à la fin."

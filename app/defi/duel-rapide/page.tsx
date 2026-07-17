@@ -170,7 +170,12 @@ export default async function DuelRapidePage({
 
 function Shell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mx-auto flex w-full max-w-md flex-col items-center gap-4 pb-8">
+    // data-no-swipe : un balayage pendant le duel en direct ne doit pas
+    // changer d'onglet et abandonner le match (voir SwipeTabs).
+    <div
+      data-no-swipe
+      className="mx-auto flex w-full max-w-md flex-col items-center gap-4 pb-8"
+    >
       {children}
     </div>
   )

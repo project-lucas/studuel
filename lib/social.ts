@@ -96,7 +96,13 @@ export function sortSchool(mates: SchoolMate[]): SchoolMate[] {
   return [...mates].sort((a, b) => b.seconds - a.seconds)
 }
 
-// Total des heures de l'école : la somme de tous ses élèves.
+// La RPC clan_mates (160) ne renvoie que les 50 élèves les plus actifs :
+// au-delà, la cagnotte et le rang affichés ne couvrent que ce top — l'UI
+// doit le dire au lieu de présenter la somme comme le total de l'école.
+export const SCHOOL_BOARD_LIMIT = 50
+
+// Total des heures des élèves listés (tout l'établissement tant que la liste
+// n'atteint pas SCHOOL_BOARD_LIMIT ; sinon, celles du top 50).
 export function schoolTotalSeconds(mates: SchoolMate[]): number {
   return mates.reduce((sum, m) => sum + Math.max(0, m.seconds), 0)
 }

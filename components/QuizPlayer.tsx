@@ -294,7 +294,13 @@ export default function QuizPlayer({
   const isCorrect = selected === question.correct_index
   const isLast = index + 1 >= questions.length
   return (
-    <div className="-mx-4 -mt-16 flex min-h-svh flex-col bg-primary px-4 pt-16 pb-24 text-primary-foreground md:-mx-8 md:-mt-10 md:px-8 md:pt-12">
+    // data-no-swipe : pendant une question, le balayage d'onglet (SwipeTabs)
+    // est neutralisé — sinon un glissé du pouce quitte le quiz sans passer par
+    // la garde de sortie et la session est perdue.
+    <div
+      data-no-swipe
+      className="-mx-4 -mt-16 flex min-h-svh flex-col bg-primary px-4 pt-16 pb-24 text-primary-foreground md:-mx-8 md:-mt-10 md:px-8 md:pt-12"
+    >
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
         <div className="flex items-center justify-between">
           <QuitGuardButton

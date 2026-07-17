@@ -19,6 +19,10 @@ export const LEAGUE_TIERS: readonly { name: string; icon: string }[] = [
 
 export const LEAGUE_PROMOTE = 5
 export const LEAGUE_RELEGATE = 5
+// Le cron (161/164) ne relègue que si le palier compte PLUS de 10 joueurs
+// (« pour ne pas vider les petits paliers ») — l'UI doit refléter la même
+// règle, sinon elle peint une zone de relégation qui ne tombera jamais.
+export const LEAGUE_RELEGATION_MIN_SIZE = 11
 export const MAX_TIER = LEAGUE_TIERS.length - 1
 
 export function tierMeta(tier: number): { name: string; icon: string } {
@@ -94,8 +98,12 @@ export function buildLeague(
     tierIcon: meta.icon,
     resetLabel: 'Reset lundi',
     players,
-    // Pas de promotion depuis le sommet, pas de relégation depuis le bas.
+    // Pas de promotion depuis le sommet ; pas de relégation depuis le bas,
+    // ni dans un petit palier (le cron exige > 10 joueurs, cf. 161/164).
     promotionCount: standings.tier < MAX_TIER ? LEAGUE_PROMOTE : 0,
-    relegationCount: standings.tier > 0 ? LEAGUE_RELEGATE : 0,
+    relegationCount:
+      standings.tier > 0 && standings.total >= LEAGUE_RELEGATION_MIN_SIZE
+        ? LEAGUE_RELEGATE
+        : 0,
   }
 }

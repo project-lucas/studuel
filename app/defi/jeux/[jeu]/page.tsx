@@ -63,7 +63,9 @@ export default async function SalonJeuPage({
   const pool = buildPool(`${user.id}:${jeu}:${nowMs()}`)
 
   return (
-    <div className="mx-auto w-full max-w-xl pb-8">
+    // data-no-swipe : un balayage pendant le duel du salon ne doit pas changer
+    // d'onglet et perdre la partie (voir SwipeTabs).
+    <div data-no-swipe className="mx-auto w-full max-w-xl pb-8">
       <SalonDuel
         pool={pool}
         myLevel={levelFor(xp).level}

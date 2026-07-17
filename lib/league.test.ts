@@ -78,10 +78,23 @@ describe('buildLeague', () => {
     expect(l.relegationCount).toBe(0)
   })
 
-  it('au palier max : promotion coupée, relégation active', () => {
-    const l = buildLeague({ ...standings, tier: MAX_TIER }, 'me', avatarFor)
+  it('au palier max : promotion coupée, relégation active (si palier assez peuplé)', () => {
+    const l = buildLeague(
+      { ...standings, tier: MAX_TIER, total: 30 },
+      'me',
+      avatarFor,
+    )
     expect(l.promotionCount).toBe(0)
     expect(l.relegationCount).toBe(5)
     expect(l.name).toBe('Ligue Maître')
+  })
+
+  it('petit palier (≤ 10 joueurs) : pas de zone de relégation — le cron ne relègue pas', () => {
+    // Miroir de la garde SQL « tier_size > 10 » (161/164) : l'UI ne doit pas
+    // promettre une descente que le lundi n'appliquera jamais.
+    const l = buildLeague({ ...standings, tier: 2, total: 8 }, 'me', avatarFor)
+    expect(l.relegationCount).toBe(0)
+    const big = buildLeague({ ...standings, tier: 2, total: 11 }, 'me', avatarFor)
+    expect(big.relegationCount).toBe(5)
   })
 })

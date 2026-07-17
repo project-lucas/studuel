@@ -9,6 +9,7 @@ import { sfx } from '@/lib/sounds'
 import {
   companionMood,
   companionName,
+  companionWeeklyLine,
   setCompanionName,
   stageForStreak,
   nextStage,
@@ -25,11 +26,16 @@ export default function CompagnonCard({
   streak,
   activeToday,
   accessories,
+  weekSessions = 0,
+  weekDelta = 0,
 }: {
   streak: number
   activeToday: boolean
   // Emojis des accessoires « compagnon » possédés (shop_purchases).
   accessories: string[]
+  // Sessions de la semaine + écart vs la précédente : il COMMENTE ta semaine.
+  weekSessions?: number
+  weekDelta?: number
 }) {
   const stage = stageForStreak(streak)
   const next = nextStage(streak)
@@ -147,6 +153,10 @@ export default function CompagnonCard({
               : ''}
           </p>
           <p className="text-xs text-muted-foreground">{MOOD_LINES[mood]}</p>
+          {/* Il vit ta semaine avec toi — le commentaire de la rétro, chez lui. */}
+          <p className="mt-1 text-xs font-medium text-foreground/70 italic">
+            {companionWeeklyLine(name, weekSessions, weekDelta)}
+          </p>
         </div>
       </div>
 

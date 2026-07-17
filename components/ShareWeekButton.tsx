@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Share2 } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import { shareStory, type ShareOutcome } from '@/components/story-share'
+import { companionName, stageForStreak } from '@/lib/compagnon'
 import type { WeeklyRecap } from '@/lib/weekly-recap'
 
 // « Partager ma semaine » — la rétro hebdo en story (components/story-share) :
@@ -27,10 +28,12 @@ export default function ShareWeekButton({
     const days = `${recap.activeDays}/7 jours actifs`
     const sessions = `${recap.sessions} session${recap.sessions > 1 ? 's' : ''}`
     const avg = recap.quizAvg !== null ? ` · ${recap.quizAvg} % aux quiz` : ''
+    // La story est portée par SON compagnon — c'est sa semaine à lui aussi.
     const outcome = await shareStory(
       {
-        title: 'Ma semaine Studuel',
+        title: `Ma semaine avec ${companionName()}`,
         emoji: streak > 0 ? '🔥' : '📚',
+        imageUrl: stageForStreak(streak).image,
         headline: `${sessions} · ${days}`,
         sub:
           (recap.quizAvg !== null ? `${recap.quizAvg} % de moyenne aux quiz` : '') ||

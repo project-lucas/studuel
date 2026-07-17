@@ -103,6 +103,26 @@ export const MOOD_LINES: Record<CompanionMood, string> = {
   rayonnant: 'Elle rayonne ! Ta régularité la rend invincible.',
 }
 
+// Le compagnon commente la SEMAINE (rétro de l'onglet Moi) : une phrase à son
+// nom, jamais culpabilisante — il s'ennuie, il ne gronde pas.
+export function companionWeeklyLine(
+  name: string,
+  sessions: number,
+  sessionsDelta: number,
+): string {
+  const plur = sessions > 1 ? 'sessions' : 'session'
+  if (sessions === 0) {
+    return `${name} attend ta première session de la semaine…`
+  }
+  if (sessionsDelta > 0) {
+    return `${name} est fier de toi : ${sessions} ${plur} cette semaine, mieux que la dernière !`
+  }
+  if (sessionsDelta < 0) {
+    return `${name} s'ennuie un peu — la semaine dernière était plus intense.`
+  }
+  return `${name} tient le rythme avec toi : ${sessions} ${plur} cette semaine.`
+}
+
 // ---------------------------------------------------------------------- nom
 
 const NAME_STORAGE_KEY = 'scolaria-compagnon-name'

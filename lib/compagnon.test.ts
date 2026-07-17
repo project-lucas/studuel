@@ -5,6 +5,7 @@ import {
   nextStage,
   stageProgress,
   companionMood,
+  companionWeeklyLine,
 } from '@/lib/compagnon'
 
 describe('stageForStreak', () => {
@@ -53,5 +54,18 @@ describe('companionMood', () => {
   it('rien aujourd’hui : affamé si la série vit, endormi sinon', () => {
     expect(companionMood(false, 3)).toBe('affame')
     expect(companionMood(false, 0)).toBe('endormi')
+  })
+})
+
+describe('companionWeeklyLine', () => {
+  it('adapte la phrase à la semaine, au nom du compagnon', () => {
+    expect(companionWeeklyLine('Pixel', 0, 0)).toContain('attend ta première')
+    expect(companionWeeklyLine('Pixel', 4, 2)).toContain('fier')
+    expect(companionWeeklyLine('Pixel', 2, -1)).toContain('ennuie')
+    expect(companionWeeklyLine('Pixel', 3, 0)).toContain('tient le rythme')
+    expect(companionWeeklyLine('Flamme', 1, 0)).toContain('Flamme')
+    // Singulier/pluriel propre.
+    expect(companionWeeklyLine('Pixel', 1, 0)).toContain('1 session')
+    expect(companionWeeklyLine('Pixel', 5, 0)).toContain('5 sessions')
   })
 })

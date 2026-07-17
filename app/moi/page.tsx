@@ -622,6 +622,8 @@ export default async function MoiPage({
             streak={currentStreak}
             activeToday={activityDays.has(today)}
             accessories={companionAccessories}
+            weekSessions={weeklyRecap.sessions}
+            weekDelta={weeklyRecap.sessionsDelta}
           />
         }
         progres={

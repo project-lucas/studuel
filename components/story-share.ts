@@ -7,8 +7,10 @@
 export type StoryContent = {
   /** Bandeau du haut, en capitales (« NOUVELLE ARÈNE ! », « MA SEMAINE »). */
   title: string
-  /** Gros emoji central. */
+  /** Gros emoji central (repli si `imageUrl` absente ou illisible). */
   emoji: string
+  /** Visuel central optionnel (ex. le compagnon de l'élève) — même origine. */
+  imageUrl?: string
   /** Ligne principale (nom du palier, chiffres de la semaine). */
   headline: string
   /** Ligne secondaire optionnelle, sous la principale. */
@@ -54,8 +56,24 @@ async function buildStoryFile(content: StoryContent): Promise<File | null> {
     ctx.font = 'bold 56px system-ui, sans-serif'
     ctx.fillText(content.title.toUpperCase(), 540, 560)
 
-    ctx.font = '300px serif'
-    ctx.fillText(content.emoji, 540, 1010)
+    // Visuel central : l'image (compagnon…) si elle charge, sinon l'emoji.
+    let drewImage = false
+    if (content.imageUrl) {
+      const img = await new Promise<HTMLImageElement | null>((resolve) => {
+        const el = new window.Image()
+        el.onload = () => resolve(el)
+        el.onerror = () => resolve(null)
+        el.src = content.imageUrl as string
+      })
+      if (img) {
+        ctx.drawImage(img, 540 - 240, 640, 480, 480)
+        drewImage = true
+      }
+    }
+    if (!drewImage) {
+      ctx.font = '300px serif'
+      ctx.fillText(content.emoji, 540, 1010)
+    }
 
     ctx.fillStyle = '#ffffff'
     ctx.font = 'bold 88px system-ui, sans-serif'

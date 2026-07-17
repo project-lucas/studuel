@@ -41,10 +41,10 @@ exercices type brevet/bac corrigés) : **100 %**. **Studygram : 0 %** — seul
 support vide, gated par une décision de format (voir
 `docs/CADRAGE-STUDYGRAM.md`).
 
-**Base de données : 100 % à jour.** Schema + migrations **001→163 TOUTES
-exécutées** (2026-07-16, runner pg de Lucas). La base reflète enfin le contenu :
-tu peux la mesurer avec la clé anon et t'appuyer sur ses données. **Prochaine
-migration = `164`** (idempotente, jamais exécutée par l'agent).
+**Base de données : 001→163 exécutées** (2026-07-16, runner pg de Lucas).
+**⚠️ 164, 165, 166 créées le 2026-07-17, EN ATTENTE d'exécution (dans
+l'ordre)** — la 165 ferme une faille CRITIQUE de farming de pièces. **Prochaine
+migration à créer = `167`** (idempotente, jamais exécutée par l'agent).
 
 **Fonctionnel livré (l'essentiel)** :
 - **Boucle cœur Réviser** : accueil « carnet violet », chapitres → leçon-hub
@@ -64,17 +64,20 @@ migration = `164`** (idempotente, jamais exécutée par l'agent).
 - **Trésor** (coffres/boutique/collection), **espace parents** (3 temps +
   programme du coach), **onboarding v2** `/bienvenue`, abonnement, PWA.
 
-**⚠️ WIP non commité sur `main` (au 2026-07-17)** : refonte visuelle
-Amis/Réviser/Moi + `WorldBackdrop` (fond de monde plein écran) +
-`FriendAddButton` (modale d'ajout d'ami). **À relire et commiter en P0** —
-détail dans `_ASSOCIE/BACKLOG-JOUR.md`.
+**Livré le 2026-07-17 (jour cycle 1)** : WIP refonte visuelle commité (fond
+d'arène horaire + fonds `<body>` + couronnes + modale ami), **bulle de
+célébration de palier partageable** (arène + ligue, réutilisable par l'échelle
+géo), toast global, `lib/geo` (CP→dept→région), 8 revues de durcissement
+(fixes swipe/ligue/école, **boutons OAuth onboarding réparés**, perf pages
+chaudes et RPC classements).
 
-**Chantiers ouverts** : durcissement par revues de la vague récente
-(`17a12c4→05edf5f`), **célébration de palier partageable + échelle
-géographique ville→département→région→national** (demande Lucas 2026-07-17),
-salons 2v2, Studygram, texte à trous, persistance du défi solo, polish UX
-reporté (toast, mot de passe oublié, chrono défi), perf navigation niveau 3.
-La file détaillée et estimée : `_ASSOCIE/BACKLOG-JOUR.md`.
+**Chantiers ouverts** : **échelle géographique** — cadrage écrit
+(`docs/CADRAGE-GEO.md`), décisions D1-D4 de Lucas requises avant de coder ;
+salons 2v2, Studygram, texte à trous, persistance du défi solo (gated) ;
+perf navigation niveau 3 (remisé : exige `cacheComponents: true`, session
+dédiée sur branche) ; idées neuves en bas de `_ASSOCIE/BACKLOG-JOUR.md`
+(swipe interne Réviser|Carnet, tirage coffre en SQL, rate-limit
+friend_preview, current_streak borné).
 
 ---
 
@@ -207,16 +210,21 @@ breaking changes vs. l'entraînement.
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
 
-**2026-07-17 — remise à plat par Claude (session interactive, pas un cycle
-/jour) :**
-- **État** : base 100 % à jour (001→163 exécutées, prochaine = 164). Grosse
-  vague livrée sur `main` (`17a12c4→05edf5f`) : bibliothèque élève,
-  clans/ligue/classements réels (mock Amis débranché), tournoi des écoles,
-  QR amis + partie rapide, nav swipe, Réviser/Mon carnet, espace Jeux,
-  Défi v3 « écran d'arène ». **WIP refonte visuelle non commité** (voir §2).
-- **Consigne pour le prochain `/jour`** : P0 relire+vérifier+commiter le WIP,
-  P1 durcir la vague par revues de correctness. Le reste : la file
-  `_ASSOCIE/BACKLOG-JOUR.md`.
+**2026-07-17 — fin du cycle 1 `/jour` (Lia) :**
+- **Fait** : P0 WIP commité, P1 durci par 8 revues (fixes + migrations
+  164/165/166 **à faire exécuter**), P2 célébration de palier livrée +
+  cadrage géo + `lib/geo`, P4 toast, perf pages chaudes, fixes onboarding
+  (boutons OAuth morts). 14 commits verts sur `main`, dernier `ad5649f`.
+  Détail : `_ASSOCIE/A-LIRE-JOUR.md` + `_ASSOCIE/JOURNAL.md`.
+- **Cycle 2 (relance ~11h01)** : prendre les décisions de Lucas arrivées
+  entre-temps (D1-D4 géo, GO des recommandations), sinon les idées neuves en
+  bas de `_ASSOCIE/BACKLOG-JOUR.md` (tirage coffre SQL ~M est le meilleur
+  levier sans décision), et rien d'autre du P3 gated.
+- **Pièges du jour** : la 166 ÉCRASE `school_tournament_standings` de la 164
+  (garde NULL conservée — exécuter 164→165→166 dans l'ordre) ; la rotation
+  des boss est dupliquée en SQL (165) — tout changement de `ALL_BOSSES` exige
+  une migration miroir ; `data-no-swipe` est LE mécanisme pour protéger un
+  écran d'activité du swipe d'onglets (posé sur QuizPlayer + 4 salles).
 
 **Pièges durables (leçons des cycles passés — à garder en tête) :**
 - **Jamais commiter du code non relu** : un WIP au réveil se relit à fond

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import type { Subject } from '@/lib/types'
+import { toast } from '@/lib/toast'
 import {
   STORAGE_KEY,
   canAdvance,
@@ -73,6 +74,9 @@ export default function WelcomeFlow({
   const [questions, setQuestions] = useState<PlacementQuestion[]>([])
   const [loadingQuiz, setLoadingQuiz] = useState(false)
   const [finishing, setFinishing] = useState(false)
+  // Retour OAuth : l'enregistrement du plan a échoué (RLS, réseau…) — on
+  // retentera au « Commencer » et on préviendra au lieu d'échouer en silence.
+  const [applyFailed, setApplyFailed] = useState(false)
 
   // Montage (client) : charge le brouillon local, puis — au retour OAuth
   // (?finish=1) — applique CE brouillon au profil (le compte existe déjà). On
@@ -83,7 +87,15 @@ export default function WelcomeFlow({
       const draft = parseAnswers(window.localStorage.getItem(STORAGE_KEY))
       setAnswers(draft)
       setDraftLoaded(true)
-      if (finish) void applyOnboarding(draft)
+      if (finish) {
+        // Résultat surveillé : un échec silencieux laisserait l'élève croire
+        // son plan enregistré (profil resté vide) sans aucun signal.
+        applyOnboarding(draft)
+          .then((res) => {
+            if (!res?.ok) setApplyFailed(true)
+          })
+          .catch(() => setApplyFailed(true))
+      }
     }
     loadDraft()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -141,7 +153,23 @@ export default function WelcomeFlow({
 
   function finishOnboarding() {
     setFinishing(true)
-    router.push(answers.profileType === 'parent' ? '/parents' : '/defi')
+    const dest = answers.profileType === 'parent' ? '/parents' : '/defi'
+    if (!applyFailed) {
+      router.push(dest)
+      return
+    }
+    // L'enregistrement du plan avait échoué au retour OAuth : on retente une
+    // fois, et en cas de nouvel échec on le DIT (sans bloquer l'entrée).
+    applyOnboarding(answers)
+      .then((res) => {
+        if (!res?.ok) {
+          toast('Ton plan n’a pas pu être enregistré — refais-le depuis ton compte.', 'error')
+        }
+      })
+      .catch(() => {
+        toast('Ton plan n’a pas pu être enregistré — refais-le depuis ton compte.', 'error')
+      })
+      .finally(() => router.push(dest))
   }
 
   const progress = stepProgress(step)

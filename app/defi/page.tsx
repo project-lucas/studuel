@@ -8,6 +8,7 @@ import ArenaHud, { type OrbItem } from '@/components/defi/ArenaHud'
 import ArenaCenter from '@/components/defi/ArenaCenter'
 import ChestRow from '@/components/defi/ChestRow'
 import WeeklyLeague from '@/components/defi/WeeklyLeague'
+import LeaguePromotionWatch from '@/components/defi/LeaguePromotionWatch'
 import RankingTabs from '@/components/defi/RankingTabs'
 import ClanBanner from '@/components/defi/ClanBanner'
 import QuickActions from '@/components/defi/QuickActions'
@@ -127,6 +128,8 @@ export default async function DefiPage() {
   // est signalée comme telle, jamais déguisée en réelle.
   let leagueIsDemo = true
   let leaguePreview: string | undefined
+  // Palier de ligue réel (pour la vigie de promotion) — null tant que démo.
+  let leagueTier: number | null = null
   let clanLabel: string | undefined
   let clanNode: ReactNode = null
   let rankingPreview: string | undefined
@@ -236,6 +239,7 @@ export default async function DefiPage() {
     if (standings.entries.length > 0) {
       league = buildLeague(standings, user.id, avatarEmojiFor)
       leagueIsDemo = false
+      leagueTier = standings.tier
       // Aperçu court sous l'orbe (l'espace y est compté) : le rang seul.
       leaguePreview = standings.myRank
         ? ordinalFr(standings.myRank)
@@ -335,6 +339,8 @@ export default async function DefiPage() {
 
   return (
     <div className="-mx-4 -mt-16 -mb-24 flex h-dvh flex-col overflow-hidden px-3 pt-14 pb-[calc(4.75rem+env(safe-area-inset-bottom))] md:mx-0 md:-my-10 md:pt-4 md:pb-4">
+      {/* Vigie de promotion : fête la montée de ligue depuis la dernière visite. */}
+      {leagueTier !== null ? <LeaguePromotionWatch tier={leagueTier} /> : null}
       <div className="mx-auto flex h-full w-full max-w-md flex-col gap-3">
         {/* Pilule de saison, discrète en haut de l'arène. Encore mockée
             (aucun cron de saison) → badge « Aperçu », sans faux compte à

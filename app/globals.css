@@ -264,6 +264,14 @@
   animation: confetti-fall 2.8s linear infinite backwards;
 }
 
+/* Réduction de mouvement : pas de pluie de confettis — les célébrations
+   restent entières (texte, emoji, boutons), simplement immobiles. */
+@media (prefers-reduced-motion: reduce) {
+  .confetti-piece {
+    display: none;
+  }
+}
+
 /* Défi : éclat de confettis DEPUIS LE CENTRE vers l'extérieur (fin de niveau).
    Chaque pièce reçoit sa cible --tx/--ty/--rot et son --delay côté composant. */
 @keyframes defi-burst {

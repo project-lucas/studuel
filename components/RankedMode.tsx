@@ -36,6 +36,8 @@ import {
   matchmakeOpponentTrophies,
   type RankPlayer,
 } from '@/lib/trophies'
+import { arenaPalier } from '@/lib/palier'
+import PalierCelebration from '@/components/PalierCelebration'
 
 const PLAYER_AVATAR = '/images/mascotte/flamme-2-vive.webp'
 
@@ -553,9 +555,13 @@ function RankedDone({
   const arena = arenaFor(ranked?.after ?? 0)
   const crossedArena =
     ranked && arenaFor(ranked.before).id !== arenaFor(ranked.after).id
+  // Le VRAI palier : bulle de célébration plein écran, partageable (une seule
+  // fois par arène — la ligne inline ci-dessous reste en rappel).
+  const palier = ranked ? arenaPalier(ranked.before, ranked.after) : null
 
   return (
     <div className="flex w-full max-w-sm flex-col items-center gap-4">
+      {palier ? <PalierCelebration palier={palier} /> : null}
       <div
         id="ranked-result"
         tabIndex={-1}

@@ -1,49 +1,11 @@
 import { describe, expect, it } from 'vitest'
 import {
-  tournamentWindow,
   tournamentStatusLabel,
   normalizeTournamentStandings,
   normalizeTournamentBoard,
 } from './tournament'
 
 // Repères : le 2026-07-16 est un jeudi ; 18-19 juillet = week-end.
-
-describe('tournamentWindow', () => {
-  it('vise le week-end à venir en semaine (fenêtre fermée)', () => {
-    const w = tournamentWindow('2026-07-16') // jeudi
-    expect(w).toEqual({
-      id: '2026-07-18',
-      startKey: '2026-07-18',
-      endKey: '2026-07-19',
-      isOpen: false,
-    })
-  })
-
-  it('est ouvert le samedi, sur le week-end courant', () => {
-    const w = tournamentWindow('2026-07-18') // samedi
-    expect(w.isOpen).toBe(true)
-    expect(w.startKey).toBe('2026-07-18')
-    expect(w.endKey).toBe('2026-07-19')
-  })
-
-  it('est ouvert le dimanche, toujours rattaché au samedi de la veille', () => {
-    const w = tournamentWindow('2026-07-19') // dimanche
-    expect(w.isOpen).toBe(true)
-    expect(w.id).toBe('2026-07-18')
-  })
-
-  it('le lundi, bascule sur le week-end suivant (fermé)', () => {
-    const w = tournamentWindow('2026-07-20') // lundi
-    expect(w.isOpen).toBe(false)
-    expect(w.startKey).toBe('2026-07-25')
-  })
-
-  it('tolère une clé illisible sans jeter', () => {
-    const w = tournamentWindow('pas-une-date')
-    expect(w.isOpen).toBe(false)
-    expect(w.id).toBe('pas-une-date')
-  })
-})
 
 describe('tournamentStatusLabel', () => {
   it('compte à rebours en semaine', () => {

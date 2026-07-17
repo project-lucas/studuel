@@ -5,17 +5,6 @@
 // normalisation du classement renvoyé par l'RPC `school_tournament_standings`
 // (migration 162).
 
-export interface TournamentWindow {
-  /** Identifiant du tournoi = clé du samedi `YYYY-MM-DD`. */
-  id: string
-  /** Samedi (premier jour, inclus). */
-  startKey: string
-  /** Dimanche (dernier jour, inclus). */
-  endKey: string
-  /** Vrai si le jour donné tombe dans la fenêtre (samedi ou dimanche). */
-  isOpen: boolean
-}
-
 export interface SchoolStanding {
   schoolId: string
   name: string
@@ -27,39 +16,10 @@ export interface SchoolStanding {
   rank: number
 }
 
-const DAY_MS = 86_400_000
-
 function parseKey(dayKey: string): Date | null {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(dayKey)) return null
   const d = new Date(`${dayKey}T00:00:00Z`)
   return Number.isNaN(d.getTime()) ? null : d
-}
-
-function toKey(d: Date): string {
-  return d.toISOString().slice(0, 10)
-}
-
-/**
- * La fenêtre de tournoi vue depuis un jour donné : le week-end en cours si on
- * est samedi/dimanche (fenêtre ouverte), sinon le week-end À VENIR (fermée).
- * Clé de jour UTC, semaine commençant lundi (index 0) — conventions de l'app.
- */
-export function tournamentWindow(todayKey: string): TournamentWindow {
-  const today = parseKey(todayKey)
-  if (!today) {
-    return { id: todayKey, startKey: todayKey, endKey: todayKey, isOpen: false }
-  }
-
-  // getUTCDay() : 0 = dimanche → on ramène lundi = 0 (donc samedi = 5).
-  const weekday = (today.getUTCDay() + 6) % 7
-  const isOpen = weekday >= 5
-  // Samedi du week-end visé : celui en cours si ouvert (dimanche → la veille),
-  // sinon le prochain.
-  const saturday = new Date(today.getTime() + (5 - weekday) * DAY_MS)
-  const startKey = toKey(saturday)
-  const endKey = toKey(new Date(saturday.getTime() + DAY_MS))
-
-  return { id: startKey, startKey, endKey, isOpen }
 }
 
 /**

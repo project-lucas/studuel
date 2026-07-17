@@ -165,6 +165,9 @@ export const FALLBACK_BOSS: Boss = {
 
 // Tous les boss (catalogue + Nox), sans leur regexp de matching — pour la
 // rotation hebdomadaire et les catalogues dérivés (trophées du Trésor).
+// ⚠️ L'ORDRE et les ids sont dupliqués dans supabase/165 (claim_weekly_trophy
+// recalcule le trophée de la semaine en SQL) : tout changement ici exige une
+// nouvelle migration miroir.
 const stripMatch = ({ match, ...boss }: BossEntry): Boss => {
   void match
   return boss

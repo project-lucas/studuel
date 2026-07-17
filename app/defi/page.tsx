@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import {
-  Gamepad2 as GamepadIcon,
   School as SchoolIcon,
   Users as UsersIcon,
 } from 'lucide-react'
+import ModesSheet from '@/components/defi/ModesSheet'
 import ArenaHud, { type OrbItem } from '@/components/defi/ArenaHud'
 import ArenaCenter from '@/components/defi/ArenaCenter'
 import ChestRow from '@/components/defi/ChestRow'
@@ -383,23 +383,9 @@ export default async function DefiPage() {
           <ChevronRightIcon className="ml-auto size-5 text-[oklch(0.3_0.06_70)]" />
         </Link>
 
-        {/* L'espace Jeux : salons par matière + modes 2v2 entre amis. */}
-        <Link
-          href="/defi/jeux"
-          className="defi2-press flex w-full items-center justify-center gap-2.5 rounded-2xl border border-[oklch(0.62_0.18_300)] bg-gradient-to-b from-[oklch(0.56_0.2_300)] to-[oklch(0.44_0.2_302)] px-5 py-3 text-center shadow-[0_14px_30px_-10px_oklch(0.4_0.2_300)] focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none"
-          aria-label="Modes de jeu — salons par matière et 2v2 entre amis"
-        >
-          <GamepadIcon className="size-6 text-white" aria-hidden="true" />
-          <span className="flex flex-col items-start leading-tight">
-            <span className="font-heading text-lg font-extrabold text-white">
-              MODES DE JEU
-            </span>
-            <span className="text-[0.7rem] font-bold text-white/75">
-              Salons par matière · 2v2 entre amis
-            </span>
-          </span>
-          <ChevronRightIcon className="ml-auto size-5 text-white/70" />
-        </Link>
+        {/* Tous les modes de jeu, en feuille qui monte du bas (billets +
+            filtres) — le bouton remplace l'ancien lien vers /defi/jeux. */}
+        <ModesSheet todayKey={todayKey} />
       </div>
     </div>
   )

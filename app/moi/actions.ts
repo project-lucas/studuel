@@ -12,6 +12,12 @@ import {
   type DebriefOutcome,
 } from '@/lib/debrief'
 import { normalizeAvatarConfig } from '@/lib/avatar'
+import {
+  normalizeGrade,
+  MAX_GRADE_OUT_OF,
+  MAX_GRADE_COEFFICIENT,
+  type SchoolGrade,
+} from '@/lib/notes'
 import { toDayKey } from '@/lib/streak'
 import { GRADE_LEVELS } from '@/lib/types'
 import { normalizeNextExam } from '@/lib/next-exam'
@@ -285,6 +291,100 @@ export async function removeUpcomingExam(
   }
   revalidatePath('/moi')
   revalidatePath('/defi')
+  return { ok: true }
+}
+
+// --- Notes réelles — migration 167 -------------------------------------------
+// L'élève saisit les notes de ses vrais contrôles ; la carte « Mes notes » de
+// Moi en tire moyennes et évolution par trimestre (lib/notes.ts). Écriture
+// directe sur la table (lignes indépendantes, RLS « chacun ses lignes ») —
+// chaque action renvoie { ok } pour que l'UI ne confirme qu'un succès réel
+// (167 pas passée → table absente → { ok: false }, pas un faux OK).
+
+export async function addGradeAction(input: {
+  subject: string
+  score: number
+  outOf: number
+  coefficient: number
+  date: string
+  label: string | null
+}): Promise<{ ok: boolean; grade: SchoolGrade | null }> {
+  const { supabase, userId } = await requireUser()
+  if (!userId) return { ok: false, grade: null }
+
+  // Bornes identiques aux CHECK de la base : on refuse ici plutôt que de
+  // laisser la contrainte SQL échouer avec un message opaque.
+  const score = Number(input.score)
+  const outOf = Number(input.outOf)
+  const coefficient = Number(input.coefficient)
+  if (
+    typeof input.subject !== 'string' ||
+    input.subject.length === 0 ||
+    !Number.isFinite(score) ||
+    !Number.isFinite(outOf) ||
+    !Number.isFinite(coefficient) ||
+    score < 0 ||
+    outOf <= 0 ||
+    outOf > MAX_GRADE_OUT_OF ||
+    score > outOf ||
+    coefficient <= 0 ||
+    coefficient > MAX_GRADE_COEFFICIENT ||
+    typeof input.date !== 'string' ||
+    !/^\d{4}-\d{2}-\d{2}$/.test(input.date)
+  ) {
+    return { ok: false, grade: null }
+  }
+
+  // La matière doit exister au catalogue : on ne stocke que des slugs fiables.
+  const { data: subjectRow } = await supabase
+    .from('subjects')
+    .select('slug')
+    .eq('slug', input.subject)
+    .maybeSingle()
+  if (!subjectRow) return { ok: false, grade: null }
+
+  const label =
+    typeof input.label === 'string' && input.label.trim().length > 0
+      ? input.label.trim().slice(0, 120)
+      : null
+
+  const { data, error } = await supabase
+    .from('school_grades')
+    .insert({
+      user_id: userId,
+      subject: input.subject,
+      label,
+      score,
+      out_of: outOf,
+      coefficient,
+      date: input.date,
+    })
+    .select('id, subject, label, score, out_of, coefficient, date')
+    .single()
+  if (error) {
+    console.error('[moi] note non enregistrée:', error.message)
+    return { ok: false, grade: null }
+  }
+  revalidatePath('/moi')
+  return { ok: true, grade: normalizeGrade(data) }
+}
+
+// Retire une note (saisie par erreur). La RLS garantit qu'on ne peut effacer
+// que les siennes ; le .eq('user_id') est une ceinture en plus.
+export async function removeGradeAction(id: string): Promise<{ ok: boolean }> {
+  const { supabase, userId } = await requireUser()
+  if (!userId || typeof id !== 'string' || id.length === 0) return { ok: false }
+
+  const { error } = await supabase
+    .from('school_grades')
+    .delete()
+    .eq('id', id)
+    .eq('user_id', userId)
+  if (error) {
+    console.error('[moi] note non retirée:', error.message)
+    return { ok: false }
+  }
+  revalidatePath('/moi')
   return { ok: true }
 }
 

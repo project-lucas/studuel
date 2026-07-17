@@ -1,29 +1,8 @@
 'use client'
 
-import { useState, useTransition, type ReactNode } from 'react'
-import {
-  Backpack,
-  BedDouble,
-  BookOpen,
-  Bus,
-  CalendarCheck,
-  Check,
-  Clock,
-  Croissant,
-  Dumbbell,
-  Footprints,
-  GlassWater,
-  Lock,
-  MonitorOff,
-  NotebookPen,
-  PhoneOff,
-  Sparkles,
-  Target,
-  Trash2,
-  Wind,
-  X,
-  Zap,
-} from 'lucide-react'
+import { useState, useTransition } from 'react'
+import { Bus, Check, Clock, Lock, Trash2, X, Zap } from 'lucide-react'
+import HabitIcon from '@/components/HabitIcon'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
@@ -57,38 +36,6 @@ const WEEKDAYS = [
 
 // Durées proposées (minutes) pour un événement.
 const DURATION_OPTIONS = [10, 15, 20, 30, 45, 60, 90, 120]
-
-// L'émoji du catalogue est remplacé par une icône ligne (style produit) :
-// icône encre sur pastille encre pâle (cohérent avec le reste de l'app).
-const iconProps = { className: 'size-4', strokeWidth: 2.2 }
-const ICONS: Record<string, ReactNode> = {
-  '😴': <BedDouble {...iconProps} />,
-  '🎯': <Target {...iconProps} />,
-  '🚌': <Bus {...iconProps} />,
-  '⚽': <Dumbbell {...iconProps} />,
-  '📖': <BookOpen {...iconProps} />,
-  '🌙': <MonitorOff {...iconProps} />,
-  '🥐': <Croissant {...iconProps} />,
-  '📵': <PhoneOff {...iconProps} />,
-  '🗓': <CalendarCheck {...iconProps} />,
-  '💧': <GlassWater {...iconProps} />,
-  '🚶': <Footprints {...iconProps} />,
-  '📓': <NotebookPen {...iconProps} />,
-  '🎒': <Backpack {...iconProps} />,
-  '🧘': <Wind {...iconProps} />,
-}
-
-function IconTile({ entry }: { entry: HabitCatalogEntry }) {
-  // U+FE0F (sélecteur de variante) est retiré : « 🗓️ » et « 🗓 » → même clé.
-  const key = [...entry.icon]
-    .filter((c) => c.codePointAt(0) !== 0xfe0f)
-    .join('')
-  return (
-    <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-      {ICONS[key] ?? <Sparkles {...iconProps} />}
-    </span>
-  )
-}
 
 // -----------------------------------------------------------------------------
 // « Mon planning » : les missions d'un jour de la semaine (À faire / Fait) —
@@ -277,7 +224,7 @@ export default function WeekPlanner({
                         : 'border-l-primary',
                     )}
                   >
-                    <IconTile entry={entry} />
+                    <HabitIcon entry={entry} />
                     <span className="min-w-0 flex-1">
                       <span
                         className={cn(
@@ -471,7 +418,7 @@ export default function WeekPlanner({
                           key={habit.id}
                           className="flex items-center gap-3 rounded-xl border bg-card p-2.5 shadow-sm"
                         >
-                          <IconTile entry={entry} />
+                          <HabitIcon entry={entry} />
                           <span className="min-w-0 flex-1 truncate text-sm font-semibold text-foreground">
                             {entry.title}
                           </span>

@@ -15,7 +15,7 @@ import CarnetMastery from '@/components/CarnetMastery'
 import CarnetExamBlanc from '@/components/CarnetExamBlanc'
 import UpcomingExamsCard from '@/components/UpcomingExamsCard'
 import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
-import ReviserTools from '@/components/ReviserTools'
+import CarnetLibrary from '@/components/CarnetLibrary'
 import WeekPlannerStrip from '@/components/WeekPlannerStrip'
 import ExamObjectiveToggle from '@/components/ExamObjectiveToggle'
 import { type ExamProgressEntry } from '@/components/ExamProgress'
@@ -28,6 +28,7 @@ import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
 import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
+import { computeXp } from '@/lib/xp'
 import { getReviewItems, reviewQueue, countsBySubject } from '@/lib/srs'
 import {
   toDayKey,
@@ -41,6 +42,17 @@ import {
   examHintsBySubject,
 } from '@/lib/next-exam'
 import { normalizeOralList } from '@/lib/oral-texts'
+import {
+  isLibraryKind,
+  normalizeContent,
+  normalizeTitle,
+  isContentReady,
+} from '@/lib/library'
+import {
+  previewLines,
+  previewMeta,
+  type ShelfItem,
+} from '@/lib/library-shelf'
 import type { CommuteSlot, Subject } from '@/lib/types'
 
 export const metadata = { title: 'Réviser — Studuel' }
@@ -92,7 +104,7 @@ export default async function ReviserPage() {
       supabase
         .from('profiles')
         .select(
-          'full_name, grade_level, selected_subjects, commute_slots, upcoming_exams',
+          'full_name, grade_level, selected_subjects, commute_slots, upcoming_exams, daily_goal_minutes',
         )
         .eq('id', user.id)
         .maybeSingle(),
@@ -139,11 +151,16 @@ export default async function ReviserPage() {
     mastery,
     reviews,
     // Journées d'activité (tous types confondus) pour la flamme de série du
-    // header — même définition que sur l'onglet Moi.
+    // header — même définition que sur l'onglet Moi. On récupère au passage les
+    // colonnes qui alimentent l'XP du header (score, cartes, xp du défi).
     { data: testDays },
     { data: studyDays },
     { data: lessonDays },
     { data: challengeDays },
+    { data: libraryRows },
+    // Temps travaillé aujourd'hui (work_daily, migration 084) → objectif du jour
+    // du header. Bucket par date UTC, cohérent avec la série.
+    { data: workToday },
   ] = await Promise.all([
     // Catalogue servi par le cache serveur (identique pour tous les élèves).
     getSubjectsCached(),
@@ -155,12 +172,12 @@ export default async function ReviserPage() {
     // (400 jours couvrent toute série affichable).
     supabase
       .from('test_sessions')
-      .select('created_at')
+      .select('created_at, score')
       .eq('user_id', user.id)
       .gte('created_at', activityCutoff()),
     supabase
       .from('study_sessions')
-      .select('created_at')
+      .select('created_at, cards_count')
       .eq('user_id', user.id)
       .gte('created_at', activityCutoff()),
     supabase
@@ -170,9 +187,23 @@ export default async function ReviserPage() {
       .gte('created_at', activityCutoff()),
     supabase
       .from('challenge_sessions')
-      .select('created_at')
+      .select('created_at, xp')
       .eq('user_id', user.id)
       .gte('created_at', activityCutoff()),
+    // Bibliothèque de Mon carnet (library_items, migration 158) : les 60
+    // derniers contenus suffisent à l'étagère — échec isolé → bloc vide.
+    supabase
+      .from('library_items')
+      .select('id, kind, title, content, updated_at')
+      .eq('user_id', user.id)
+      .order('updated_at', { ascending: false })
+      .limit(60),
+    supabase
+      .from('work_daily')
+      .select('seconds')
+      .eq('user_id', user.id)
+      .eq('day', toDayKey(new Date()))
+      .maybeSingle(),
   ])
 
   // Repli authentifié : cache froid ou migration 026 pas encore exécutée.
@@ -237,6 +268,22 @@ export default async function ReviserPage() {
   const week = weekProgress(activityDays)
   const firstName =
     String(profile?.full_name ?? '').split(' ')[0] || null
+
+  // Stats du header : XP dérivée de l'activité réelle (lib/xp) et objectif du
+  // jour (minutes travaillées aujourd'hui vs objectif fixé à l'onboarding).
+  const xp = computeXp({
+    quizzes: (testDays ?? []).map((t) => ({ score: Number(t.score ?? 0) })),
+    decks: (studyDays ?? []).map((s) => ({
+      cards_count: Number(s.cards_count ?? 0),
+    })),
+    lessonsCount: (lessonDays ?? []).length,
+    challengesXp: (challengeDays ?? []).reduce(
+      (sum, c) => sum + Number(c.xp ?? 0),
+      0,
+    ),
+  })
+  const todayMinutes = Math.floor(Number(workToday?.seconds ?? 0) / 60)
+  const goalMinutes = profile?.daily_goal_minutes ?? 15
 
   // --- Matières suivies (profil onboarding) -----------------------------------
   const selected = Array.isArray(profile?.selected_subjects)
@@ -367,6 +414,25 @@ export default async function ReviserPage() {
   }
   examSubjects.sort((a, b) => a.name.localeCompare(b.name, 'fr'))
 
+  // --- Bibliothèque (Mon carnet) : aperçus calculés côté serveur ----------------
+  // On ne transfère au client que des miniatures (lignes rognées), jamais le
+  // contenu complet des fiches.
+  const nowIso = new Date().toISOString()
+  const shelfItems: ShelfItem[] = (libraryRows ?? [])
+    .filter((r) => isLibraryKind(r.kind))
+    .map((r) => {
+      const content = normalizeContent(r.kind, r.content)
+      return {
+        id: String(r.id),
+        kind: r.kind,
+        title: normalizeTitle(r.title),
+        ready: isContentReady(r.kind, content),
+        updatedAt: String(r.updated_at ?? ''),
+        lines: previewLines(r.kind, content),
+        meta: previewMeta(r.kind, content),
+      }
+    })
+
   // --- Espace « Mon carnet » : les données scolaires de l'élève -----------------
   // Maîtrise par matière suivie + chapitres les plus fragiles à consolider.
   const masteryEntries = followed.map((s) => ({
@@ -408,6 +474,9 @@ export default async function ReviserPage() {
               firstName={firstName}
               avatarUri={avatarUri}
               streak={streak}
+              xp={xp}
+              todayMinutes={todayMinutes}
+              goalMinutes={goalMinutes}
               subjects={ofLevel}
               selected={selected}
               grade={grade}
@@ -460,9 +529,10 @@ export default async function ReviserPage() {
               subjects={examSubjects}
               chaptersBySubject={chaptersBySubject}
             />
-            {/* 2. Ma bibliothèque — fiches, quiz, flashcards (déplacée depuis
-                Mes matières : c'est un outil de carnet, pas de programme). */}
-            <ReviserTools />
+            {/* 2. La Bibliothèque — bloc à part entière : fiches, quiz et
+                cartes mentales visibles directement (aperçus, filtres par
+                type, groupes de récence), création sans quitter le carnet. */}
+            <CarnetLibrary items={shelfItems} now={nowIso} />
             {/* 3. Ma maîtrise — rangs par matière + chapitres à progresser. */}
             <CarnetMastery entries={masteryEntries} fragiles={fragileChapters} />
             {/* 4. L'examen blanc — remonté sous la maîtrise (on voit son

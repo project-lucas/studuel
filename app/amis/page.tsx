@@ -2,20 +2,14 @@ import PageHeader from '@/components/PageHeader'
 import AmisHome from '@/components/AmisHome'
 import FriendAddButton from '@/components/FriendAddButton'
 import { createClient } from '@/lib/supabase/server'
-import { toDayKey } from '@/lib/streak'
 import {
-  getMockLive,
   getMockSchool,
   avatarEmojiFor,
   buildLiveSessions,
   buildSchoolBoard,
   mapFriendsOverview,
-  duelView,
   sortStreaks,
   type Friend,
-  type Duel,
-  type DuelRow,
-  type LiveSession,
   type SchoolBoard,
   type PendingRequest,
   type StreakEntry,
@@ -27,8 +21,8 @@ export const metadata = { title: 'Amis — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // Onglet social (extrême gauche). Tout est réel pour un élève connecté :
-// classement aux trophées (RPC friends_trophies), duels, « en direct »
-// (RPC 160) et école via le clan. Seuls le visiteur et l'élève sans
+// classement aux trophées (RPC friends_trophies) enrichi de la présence en
+// ligne (RPC 160) et école via le clan. Seuls le visiteur et l'élève sans
 // établissement voient un aperçu mocké, signalé par la pastille « Aperçu ».
 export default async function AmisPage() {
   const supabase = await createClient()
@@ -39,18 +33,15 @@ export default async function AmisPage() {
   let ranking: RankPlayer[] = []
   let friends: Friend[] = []
   let pendingRequests: PendingRequest[] = []
-  let duels: Duel[] = []
   let streaks: StreakEntry[] = []
-  let missionDoneAgainst: string | null = null
   let myFriendCode = ''
-  // « En direct » et « Mon école » : réels si l'élève est connecté (RPC 160),
-  // sinon aperçu mocké (visiteur). Les drapeaux *Demo suivent la vérité et
-  // affichent la pastille « Aperçu » — jamais de mock déguisé en réel.
-  let live: LiveSession[] = getMockLive()
-  let liveDemo = true
+  // Amis en session en ce moment (RPC 160) : points verts du classement.
+  let onlineFriendIds: string[] = []
+  // « Mon école » : réelle si l'élève est connecté, sinon aperçu mocké
+  // (visiteur). Le drapeau schoolDemo suit la vérité et affiche la pastille
+  // « Aperçu » — jamais de mock déguisé en réel.
   let school: SchoolBoard = getMockSchool(0)
   let schoolDemo = true
-  const today = toDayKey(new Date())
 
   if (user) {
     const [
@@ -58,7 +49,6 @@ export default async function AmisPage() {
       { data: trophyRow },
       { data: friendTrophyRows },
       { data: overviewRows },
-      { data: duelRows },
       { data: friendStreakRows },
       { data: myStreakRaw },
       { data: liveRows },
@@ -81,14 +71,6 @@ export default async function AmisPage() {
       supabase.rpc('friends_trophies'),
       // Amis acceptés + demandes reçues/envoyées (migration 019).
       supabase.rpc('friends_overview'),
-      // Mes duels (RLS : uniquement ceux où je participe), récents d'abord.
-      supabase
-        .from('duels')
-        .select(
-          'id, challenger_id, opponent_id, subject, total, challenger_score, opponent_score, day',
-        )
-        .order('created_at', { ascending: false })
-        .limit(20),
       // Séries des amis + ma série (migration 155). Appels ISOLÉS : si 155 n'est
       // pas passée, ils échouent seuls → repli sans série, sans casser le reste.
       supabase.rpc('friends_streaks'),
@@ -99,11 +81,10 @@ export default async function AmisPage() {
 
     myFriendCode = String(profile?.friend_code ?? '')
 
-    // « En direct » réel (vide si personne n'est actif). « Mon école » réelle via
+    // Présence réelle (vide si personne n'est actif). « Mon école » réelle via
     // le clan (cycle déduit de la classe) ; à défaut de clan, aperçu adapté au
     // cycle (avec mon vrai temps) et signalé comme tel.
-    live = buildLiveSessions(liveRows)
-    liveDemo = false
+    onlineFriendIds = buildLiveSessions(liveRows).map((s) => s.friend.id)
     const level = schoolLevelForGrade(profile?.grade_level ?? null)
     const { data: clanMatesRaw } = await supabase.rpc('clan_mates', {
       p_level: level,
@@ -147,31 +128,6 @@ export default async function AmisPage() {
       })),
     ])
 
-    // Adversaires de duel = amis acceptés → on résout prénom/emoji localement.
-    const friendById = new Map(friends.map((f) => [f.id, f]))
-    const rows = (Array.isArray(duelRows) ? duelRows : []) as (DuelRow & {
-      day?: string
-    })[]
-    duels = rows.map((row) => {
-      const oppId = row.challenger_id === user.id ? row.opponent_id : row.challenger_id
-      const opponent: Friend = friendById.get(oppId) ?? {
-        id: oppId,
-        name: 'Ami',
-        emoji: avatarEmojiFor(oppId),
-        level: 0,
-      }
-      return duelView(row, user.id, opponent)
-    })
-
-    // Mission du jour déjà lancée ? = un duel créé aujourd'hui par moi.
-    const todaysOutgoing = rows.find(
-      (r) => r.challenger_id === user.id && String(r.day ?? '') === today,
-    )
-    if (todaysOutgoing) {
-      const oppId = todaysOutgoing.opponent_id
-      missionDoneAgainst = friendById.get(oppId)?.name ?? 'un ami'
-    }
-
     const friendRanks: RankPlayer[] = (
       Array.isArray(friendTrophyRows) ? friendTrophyRows : []
     ).flatMap((r) => {
@@ -211,16 +167,14 @@ export default async function AmisPage() {
         <FriendAddButton myFriendCode={myFriendCode} />
       </div>
       <AmisHome
-        live={live}
-        liveDemo={liveDemo}
-        duels={duels}
         ranking={ranking}
+        onlineFriendIds={onlineFriendIds}
         streaks={streaks}
         school={school}
         schoolDemo={schoolDemo}
         friends={friends}
         pendingRequests={pendingRequests}
-        missionDoneAgainst={missionDoneAgainst}
+        myFriendCode={myFriendCode}
       />
     </div>
   )

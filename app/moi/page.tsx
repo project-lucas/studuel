@@ -16,6 +16,8 @@ import MoiHeader from '@/components/MoiHeader'
 import WorldBackdrop from '@/components/WorldBackdrop'
 import MoiTabs from '@/components/MoiTabs'
 import MoiExtras from '@/components/MoiExtras'
+import TableauAnnee from '@/components/TableauAnnee'
+import MissionsJour from '@/components/MissionsJour'
 import CompagnonCard from '@/components/CompagnonCard'
 import DebriefCard from '@/components/DebriefCard'
 import GradeSelector from '@/components/GradeSelector'
@@ -25,9 +27,11 @@ import WeeklyRecapCard from '@/components/WeeklyRecapCard'
 import MilestonesTimeline from '@/components/MilestonesTimeline'
 import WeeklyGoalsCard from '@/components/WeeklyGoalsCard'
 import TrajectoireCard from '@/components/TrajectoireCard'
+import NotesCard from '@/components/NotesCard'
 import { createClient } from '@/lib/supabase/server'
 import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
 import { getChapterMastery } from '@/lib/mastery'
+import { normalizeGradeList } from '@/lib/notes'
 import { computeTrajectoire } from '@/lib/trajectoire'
 import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
 import { computeWeeklyRecap } from '@/lib/weekly-recap'
@@ -160,6 +164,7 @@ export default async function MoiPage({
     { data: debriefRows },
     { data: debriefYearRows },
     { data: debriefRewardRow },
+    { data: gradeRows, error: gradesError },
     // Trajectoire (« Progrès ») : catalogue (cache serveur) + maîtrise.
     subjectsAll,
     gradeChapters,
@@ -219,6 +224,14 @@ export default async function MoiPage({
       .select('date')
       .eq('date', toDayKey(new Date()))
       .maybeSingle(),
+    // Notes réelles (167) — dégradé proprement si la migration n'est pas
+    // passée (gradesError → carte « Mes notes » en mode info).
+    supabase
+      .from('school_grades')
+      .select('id, subject, label, score, out_of, coefficient, date')
+      .eq('user_id', user.id)
+      .order('date', { ascending: false })
+      .limit(300),
     getSubjectsCached(),
     profile?.grade_level
       ? getGradeChaptersCached(String(profile.grade_level))
@@ -537,6 +550,13 @@ export default async function MoiPage({
     firstActivityKey,
   })
 
+  // Notes réelles (167) : la réalité du bulletin à côté de la projection.
+  // Matières proposées à la saisie = celles de la classe (toutes si inconnue).
+  const schoolGrades = normalizeGradeList(gradeRows ?? [])
+  const gradeSubjects = subjectsAll
+    .filter((s) => gradeLevel === null || s.levels.includes(gradeLevel))
+    .map((s) => ({ slug: s.slug, name: s.name, icon: s.icon }))
+
   // Débrief d'habitudes : sélection référencée + issues du jour.
   const debriefSelected = (debriefSel ?? []).map((r) => String(r.pair_id))
   const debriefOutcomes: Record<string, DebriefOutcome> = {}
@@ -572,8 +592,8 @@ export default async function MoiPage({
       {/* Fond papier réchauffé pleine page, derrière tout l'onglet. */}
       <WorldBackdrop className="moi-bg" />
 
-      {/* Carte bandeau : flamme de niveau à cheval, nom centré, série ramassée
-          dans une pastille, temps total. */}
+      {/* Bandeau compact : le cercle profil avec les infos autour (temps total,
+          série, niveau) — le dashboard prend la vedette juste dessous. */}
       <MoiHeader
         name={firstName}
         avatarUri={avatarUri}
@@ -583,23 +603,41 @@ export default async function MoiPage({
         streak={currentStreak}
       />
 
-      {/* Le débrief du jour, sorti en évidence juste sous l'identité : le geste
-          quotidien qui rapporte des pièces + la rétro annuelle du parcours. */}
+      {/* Le tableau scolaire de l'année : notes réelles par matière × trimestre,
+          filtres, moyenne générale — le cœur du dashboard Moi. */}
       <div className="mt-5">
-        <DebriefCard
-          selected={debriefSelected}
-          outcomes={debriefOutcomes}
-          yearStats={debriefYearData}
-          rewardClaimedToday={debriefRewardClaimed}
-          needsMigration={Boolean(debriefError)}
+        <TableauAnnee
+          initial={schoolGrades}
+          subjects={gradeSubjects}
+          today={today}
+          needsMigration={Boolean(gradesError)}
         />
       </div>
 
-      {/* Le reste, rangé derrière trois onglets (une section à la fois) au lieu
-          d'être empilé : Ma semaine · Compagnon · Progrès. Fini le scroll. */}
+      {/* Les missions du jour, toujours visibles : la checklist quotidienne. */}
+      <div className="mt-4">
+        <MissionsJour
+          habits={activeHabits}
+          doneByHabit={doneByDate[today] ?? {}}
+          todayIdx={dayIndexOf(today)}
+          date={today}
+        />
+      </div>
+
+      {/* Le reste, rangé derrière trois onglets (une section à la fois) :
+          Habitudes (développé) · Compagnon · Progrès. */}
       <MoiTabs
         semaine={
           <div className="flex flex-col gap-4">
+            {/* Le débrief du jour : le geste quotidien qui rapporte des pièces
+                + la rétro annuelle du parcours. */}
+            <DebriefCard
+              selected={debriefSelected}
+              outcomes={debriefOutcomes}
+              yearStats={debriefYearData}
+              rewardClaimedToday={debriefRewardClaimed}
+              needsMigration={Boolean(debriefError)}
+            />
             {/* Rétro hebdo : la semaine en cours résumée en chiffres. */}
             <WeeklyRecapCard recap={weeklyRecap} streak={currentStreak} />
             {/* Objectifs perso de la semaine (1 à 3, reset lundi). */}
@@ -631,6 +669,17 @@ export default async function MoiPage({
             {/* La carte macro : préparation de l'année + projection honnête. */}
             <div className="mb-4">
               <TrajectoireCard trajectoire={trajectoire} />
+            </div>
+            {/* La réalité scolaire : notes des vrais contrôles, moyenne et
+                évolution par trimestre — le pendant « bulletin » de la
+                projection ci-dessus. */}
+            <div className="mb-4">
+              <NotesCard
+                initial={schoolGrades}
+                subjects={gradeSubjects}
+                today={today}
+                needsMigration={Boolean(gradesError)}
+              />
             </div>
             <div className="mb-4">
               <GradeSelector current={gradeLevel} />

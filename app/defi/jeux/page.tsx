@@ -16,7 +16,14 @@ export const dynamic = 'force-dynamic'
  * Le déblocage est recalculé côté serveur (salons-data) à chaque visite ;
  * l'affichage (bascule, onglets, grille) vit dans JeuxBoard.
  */
-export default async function JeuxPage() {
+export default async function JeuxPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ matiere?: string }>
+}) {
+  // ?matiere=… (billets « Par matière » de la feuille Modes de jeu) : ouvre
+  // directement le salon demandé. Valeur inconnue → accueil normal.
+  const { matiere } = await searchParams
   const supabase = await createClient()
   const {
     data: { user },
@@ -54,7 +61,7 @@ export default async function JeuxPage() {
         <ChevronLeft className="size-4" aria-hidden="true" /> Retour à l’arène
       </Link>
 
-      <JeuxBoard board={board} />
+      <JeuxBoard board={board} initialSubject={matiere ?? null} />
     </div>
   )
 }

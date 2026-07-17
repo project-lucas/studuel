@@ -9,6 +9,9 @@ import {
   ChevronDown,
   Crown,
   Settings,
+  Search,
+  Bell,
+  Zap,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { subjectTheme } from '@/lib/subject-style'
@@ -110,20 +113,154 @@ const LYCEE_GROUPS: { category: SubjectCategory; label: string }[] = [
   { category: 'option', label: 'Options' },
 ]
 
-// Pastille de série du header : la mascotte flamme (à son stade d'évolution)
-// + nombre de jours. À zéro, la Braise endormie — la rallumer devient
-// l'objectif du jour.
-function StreakPill({ streak }: { streak: number }) {
+// Barre de recherche du header — visuelle pour l'instant (la recherche des
+// matières/chapitres arrive plus tard) — flanquée d'une cloche de notifications.
+function SearchRow() {
   return (
-    <span
-      className="flex shrink-0 items-center gap-1.5 rounded-full bg-white py-1 pr-3 pl-1.5 shadow-sm"
-      aria-label={`Série : ${streak} jour${streak > 1 ? 's' : ''}`}
+    <div className="relative mt-3 flex items-center gap-2">
+      <button
+        type="button"
+        onClick={() => {
+          sfx.tap()
+          toast('La recherche arrive bientôt 🔎')
+        }}
+        aria-label="Rechercher (bientôt disponible)"
+        className="flex min-w-0 flex-1 items-center gap-2 rounded-full bg-white px-4 py-2.5 text-left shadow-sm transition active:translate-y-px"
+      >
+        <Search
+          className="size-4 shrink-0 text-muted-foreground"
+          aria-hidden="true"
+        />
+        <span className="truncate text-sm font-medium text-muted-foreground">
+          Rechercher
+        </span>
+      </button>
+      <button
+        type="button"
+        onClick={() => {
+          sfx.tap()
+          toast('Aucune notification pour le moment 🔔')
+        }}
+        aria-label="Mes notifications"
+        className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm transition active:translate-y-px"
+      >
+        <Bell className="size-5" strokeWidth={2.2} aria-hidden="true" />
+      </button>
+    </div>
+  )
+}
+
+// Anneau de progression de l'objectif du jour (0..1) : jaune solaire sur piste
+// claire — la progression/récompense porte toujours le highlight.
+function GoalRing({ pct }: { pct: number }) {
+  const r = 15
+  const circ = 2 * Math.PI * r
+  const dash = Math.max(0, Math.min(1, pct)) * circ
+  return (
+    <svg
+      viewBox="0 0 36 36"
+      className="size-9 shrink-0 -rotate-90"
+      aria-hidden="true"
     >
-      <StreakMascot streak={streak} size={26} badge={false} />
-      <span className="font-mono text-sm font-extrabold text-foreground tabular-nums">
-        {streak}
-      </span>
-    </span>
+      <circle
+        cx="18"
+        cy="18"
+        r={r}
+        fill="none"
+        strokeWidth="4"
+        className="stroke-foreground/10"
+      />
+      <circle
+        cx="18"
+        cy="18"
+        r={r}
+        fill="none"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeDasharray={`${dash} ${circ}`}
+        className="stroke-highlight"
+      />
+    </svg>
+  )
+}
+
+// Bande de stats blanche qui chevauche le bandeau : objectif du jour (minutes
+// travaillées vs objectif), XP du jour cumulée, et série vivante.
+function HeaderStats({
+  todayMinutes,
+  goalMinutes,
+  xp,
+  streak,
+}: {
+  todayMinutes: number
+  goalMinutes: number
+  xp: number
+  streak: number
+}) {
+  const pct = goalMinutes > 0 ? todayMinutes / goalMinutes : 0
+  const done = goalMinutes > 0 && todayMinutes >= goalMinutes
+  return (
+    <div className="rev-card relative mt-3 flex items-stretch rounded-2xl bg-white p-1.5">
+      <div
+        className="flex flex-1 items-center gap-2 px-2.5 py-1.5"
+        aria-label={`Objectif du jour : ${todayMinutes} minute${todayMinutes > 1 ? 's' : ''} sur ${goalMinutes}`}
+      >
+        <div className="relative shrink-0">
+          <GoalRing pct={pct} />
+          {done ? (
+            <Check
+              className="absolute inset-0 m-auto size-4 text-highlight"
+              strokeWidth={3}
+              aria-hidden="true"
+            />
+          ) : null}
+        </div>
+        <div className="min-w-0 leading-tight">
+          <p className="font-mono text-sm font-extrabold text-foreground tabular-nums">
+            {todayMinutes}
+            <span className="text-xs font-bold text-muted-foreground"> min</span>
+          </p>
+          <p className="text-[11px] font-semibold text-muted-foreground">
+            / {goalMinutes} min
+          </p>
+        </div>
+      </div>
+
+      <span aria-hidden="true" className="my-1.5 w-px self-stretch bg-black/5" />
+
+      <div
+        className="flex flex-1 items-center justify-center gap-1.5 px-2 py-1.5"
+        aria-label={`${xp} points d'expérience`}
+      >
+        <Zap
+          className="size-4 shrink-0 fill-highlight text-highlight"
+          aria-hidden="true"
+        />
+        <div className="leading-tight">
+          <p className="font-mono text-sm font-extrabold text-foreground tabular-nums">
+            {xp}
+          </p>
+          <p className="text-[11px] font-semibold text-muted-foreground">XP</p>
+        </div>
+      </div>
+
+      <span aria-hidden="true" className="my-1.5 w-px self-stretch bg-black/5" />
+
+      <div
+        className="flex flex-1 items-center justify-center gap-1.5 px-2 py-1.5"
+        aria-label={`Série : ${streak} jour${streak > 1 ? 's' : ''}`}
+      >
+        <StreakMascot streak={streak} size={24} badge={false} />
+        <div className="leading-tight">
+          <p className="font-mono text-sm font-extrabold text-foreground tabular-nums">
+            {streak}
+          </p>
+          <p className="text-[11px] font-semibold text-muted-foreground">
+            série
+          </p>
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -341,6 +478,9 @@ export default function SubjectsHome({
   firstName,
   avatarUri,
   streak,
+  xp,
+  todayMinutes,
+  goalMinutes,
   subjects,
   selected,
   grade,
@@ -352,6 +492,10 @@ export default function SubjectsHome({
   firstName: string | null
   avatarUri: string
   streak: number
+  // Stats du header : XP cumulée, minutes travaillées aujourd'hui, objectif.
+  xp: number
+  todayMinutes: number
+  goalMinutes: number
   subjects: Subject[]
   selected: string[] | null
   grade: string
@@ -437,8 +581,9 @@ export default function SubjectsHome({
           className="rev-blob absolute -bottom-10 left-1/3 h-12 w-48 rotate-[-35deg] rounded-full"
         />
 
-        {/* Identité compacte : avatar-menu + salutation/classe + série, sur une
-            seule ligne pour gagner de la hauteur. */}
+        {/* Identité compacte : avatar-menu + salutation/classe, sur une seule
+            ligne pour gagner de la hauteur (la série a rejoint la bande de
+            stats juste dessous). */}
         <div className="relative flex items-center gap-3">
           <HeaderAvatar avatarUri={avatarUri} onEdit={() => setEditing(true)} />
           <div className="min-w-0 flex-1">
@@ -449,8 +594,21 @@ export default function SubjectsHome({
               <GradeChip grade={grade} />
             </div>
           </div>
-          <StreakPill streak={streak} />
         </div>
+
+        {/* Hors édition : barre de recherche + cloche, puis la bande de stats
+            (objectif du jour · XP · série) qui chevauche le bas du bandeau. */}
+        {!editing ? (
+          <>
+            <SearchRow />
+            <HeaderStats
+              todayMinutes={todayMinutes}
+              goalMinutes={goalMinutes}
+              xp={xp}
+              streak={streak}
+            />
+          </>
+        ) : null}
 
         {/* En mode édition seulement : consigne + bouton Terminé. */}
         {editing ? (

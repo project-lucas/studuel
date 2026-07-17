@@ -11,15 +11,18 @@ import { sfx } from '@/lib/sounds'
 import { addFriendByCode } from '@/app/amis/actions'
 
 /**
- * « Ajouter un ami » de l'onglet Amis, version bouton-icône : un rond en haut
- * à droite de la page qui ouvre une modale avec tout le nécessaire — mon QR à
- * faire scanner, mon code à copier, et le champ « code d'un ami ».
- * (Remplace l'ancienne grande carte en bas de page.)
+ * « Ajouter un ami » de l'onglet Amis : ouvre une modale avec tout le
+ * nécessaire — mon QR à faire scanner, mon code à copier, et le champ
+ * « code d'un ami ». Deux déclencheurs possibles : le rond du header
+ * (`icon`, défaut) ou le gros bouton vert façon Clash Royale sous le
+ * classement (`cta`).
  */
 export default function FriendAddButton({
   myFriendCode,
+  variant = 'icon',
 }: {
   myFriendCode: string
+  variant?: 'icon' | 'cta'
 }) {
   const [open, setOpen] = useState(false)
   const [copied, setCopied] = useState(false)
@@ -71,18 +74,39 @@ export default function FriendAddButton({
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => {
-          sfx.tap()
-          setOpen(true)
-        }}
-        aria-haspopup="dialog"
-        aria-label="Ajouter un ami"
-        className="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm transition active:scale-95"
-      >
-        <UserPlus className="size-5" strokeWidth={2.4} aria-hidden="true" />
-      </button>
+      {variant === 'cta' ? (
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setOpen(true)
+          }}
+          aria-haspopup="dialog"
+          className="defi2-press flex w-full cursor-pointer items-center justify-center gap-1.5 rounded-2xl border border-[oklch(0.72_0.15_145)] bg-gradient-to-b from-[oklch(0.68_0.17_145)] to-[oklch(0.55_0.18_148)] px-3 py-2.5 shadow-[0_10px_22px_-10px_oklch(0.5_0.17_147)] focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none"
+        >
+          <UserPlus
+            className="size-4 shrink-0 text-white"
+            strokeWidth={2.8}
+            aria-hidden="true"
+          />
+          <span className="font-heading truncate text-sm font-extrabold text-white">
+            Ajouter un ami
+          </span>
+        </button>
+      ) : (
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setOpen(true)
+          }}
+          aria-haspopup="dialog"
+          aria-label="Ajouter un ami"
+          className="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm transition active:scale-95"
+        >
+          <UserPlus className="size-5" strokeWidth={2.4} aria-hidden="true" />
+        </button>
+      )}
 
       {typeof document !== 'undefined'
         ? createPortal(

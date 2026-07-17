@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
-import { CalendarDays, PawPrint, ChartLine, type LucideIcon } from 'lucide-react'
+import { ListChecks, PawPrint, ChartLine, type LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 
@@ -24,7 +24,7 @@ export default function MoiTabs({
   progres: ReactNode
 }) {
   const tabs: TabDef[] = [
-    { id: 'semaine', label: 'Ma semaine', icon: CalendarDays, panel: semaine },
+    { id: 'semaine', label: 'Habitudes', icon: ListChecks, panel: semaine },
     { id: 'compagnon', label: 'Compagnon', icon: PawPrint, panel: compagnon },
     { id: 'progres', label: 'Progrès', icon: ChartLine, panel: progres },
   ]

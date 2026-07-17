@@ -1025,6 +1025,30 @@ a:hover > .wiggle-on-hover {
   background: linear-gradient(160deg, oklch(0.62 0.24 312), oklch(0.48 0.26 308));
   box-shadow: 0 0 0 3px oklch(0.62 0.24 315 / 0.3);
 }
+/* Tableau scolaire (bandeau v4) : ardoise violet profond, cadre bois crème,
+   même famille que l'arène Défi — le violet reste la couleur du monde. */
+.moi-board {
+  background:
+    radial-gradient(90% 70% at 18% 8%, oklch(1 0 0 / 0.06), transparent 60%),
+    radial-gradient(80% 60% at 85% 92%, oklch(0.55 0.18 310 / 0.22), transparent 65%),
+    linear-gradient(172deg, oklch(0.33 0.09 302), oklch(0.25 0.08 296));
+  border: 8px solid oklch(0.84 0.055 70);
+  box-shadow:
+    inset 0 0 0 2px oklch(0.2 0.06 296 / 0.6),
+    inset 0 10px 24px oklch(0.15 0.05 296 / 0.45),
+    0 5px 0 oklch(0.66 0.07 65),
+    0 16px 24px -16px oklch(0.4 0.18 310 / 0.35);
+}
+/* Écriture à la craie : blanc cassé + halo poudreux léger. */
+.moi-chalk {
+  color: oklch(0.97 0.008 90);
+  text-shadow: 0 0 6px oklch(1 0 0 / 0.22);
+}
+/* Case du tableau de bord, tracée à la craie (pointillés main levée). */
+.moi-chalk-box {
+  border: 2px dashed oklch(1 0 0 / 0.38);
+  background: oklch(1 0 0 / 0.05);
+}
 
 /* =============================================================================
    Onboarding « Studuel » — monde visuel autonome (page /bienvenue)

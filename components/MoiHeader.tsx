@@ -9,10 +9,11 @@ import type { AvatarConfig } from '@/lib/avatar'
 const FLAME_PATH =
   'M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z'
 
-// Bandeau héros de l'onglet Moi, façon carte de jeu : carte violette arrondie
-// avec l'AVATAR personnalisable à cheval sur son bord supérieur (crayon d'édition
-// à un angle, badge de niveau flamme à l'autre), prénom et rang centrés dessous,
-// pilules aux angles (temps total à gauche, compte à droite), barre de niveau.
+// Bandeau v5 « compact » : l'onglet Moi devient un dashboard, l'identité se
+// ramasse — le cercle AVATAR à cheval sur la carte violette (badge de niveau
+// flamme à l'angle), les infos AUTOUR du cercle (temps total à gauche, série à
+// droite), prénom + rang dessous, accès coffre/compte en bas. Ni barre de
+// progression ni grand décor : le tableau de l'année prend la vedette dessous.
 export default function MoiHeader({
   name,
   avatarUri,
@@ -27,16 +28,15 @@ export default function MoiHeader({
   avatarConfig: AvatarConfig
   playerSeconds: number
   communitySeconds: number | null
-  // Série vivante : ramassée dans le bandeau (plus de bloc « série » à part).
+  // Série vivante : chip flamme à droite du cercle.
   streak: number
 }) {
   const lvl = workLevel(playerSeconds)
-  const pct = Math.round(lvl.progress * 100)
 
   return (
     <section aria-label="Mon profil" className="relative mt-12">
       {/* L'avatar trône au-dessus de la carte ; badge de niveau flamme à l'angle.
-          Le <defs> #level-flame vit ici et sert aussi à la pilule de série. */}
+          Le <defs> #level-flame vit ici et sert aussi au chip de série. */}
       <div className="absolute -top-12 left-1/2 z-10 -translate-x-1/2">
         <div className="relative">
           <span aria-hidden="true" className="moi-glow absolute -inset-3" />
@@ -61,129 +61,84 @@ export default function MoiHeader({
         </div>
       </div>
 
-      <div className="moi-hero moi-card relative overflow-hidden rounded-3xl px-5 pt-14 pb-6 text-white">
-        {/* Capsules décoratives violet clair + étincelles jaunes. */}
+      <div className="moi-hero moi-card relative overflow-hidden rounded-3xl px-4 pt-4 pb-3 text-white">
         <span
           aria-hidden="true"
-          className="moi-blob absolute -top-8 -left-10 h-32 w-32 rounded-full"
-        />
-        <span
-          aria-hidden="true"
-          className="moi-blob absolute -right-12 -bottom-10 h-32 w-32 rounded-full"
-        />
-        <span
-          aria-hidden="true"
-          className="moi-braise absolute top-16 right-8 size-2 rounded-full"
-        />
-        <span
-          aria-hidden="true"
-          className="moi-braise absolute top-24 left-10 size-1.5 rounded-full"
+          className="moi-blob absolute -top-8 -left-10 h-24 w-24 rounded-full"
         />
 
-        {/* Les pilules aux angles, de part et d'autre de la flamme. */}
-        <div className="absolute inset-x-4 top-4 flex items-start justify-between">
+        {/* Les infos autour du cercle : temps total | (avatar) | série. */}
+        <div className="relative flex items-center justify-between gap-2">
           <span
-            className="flex items-center gap-1.5 rounded-full bg-white py-1.5 pr-3 pl-3.5 text-sm font-bold text-primary shadow-sm"
+            className="flex items-center gap-1 rounded-full bg-white/12 px-2.5 py-1 text-xs font-bold ring-1 ring-white/25"
             aria-label={`Temps de travail total : ${formatHours(playerSeconds)}`}
           >
             Total
-            <span className="font-mono font-extrabold text-foreground tabular-nums">
+            <span className="font-mono font-extrabold tabular-nums">
               {formatHours(playerSeconds)}
             </span>
           </span>
-          <div className="flex items-center gap-2">
-            {/* Icône discrète : accès au coffre (pièces, boutique, collection),
-                autrefois onglet « Trésor » à part entière. */}
+          <span
+            className="flex items-center gap-1 rounded-full bg-white/12 px-2.5 py-1 text-xs font-bold ring-1 ring-white/25"
+            aria-label={
+              streak > 0
+                ? `Série de ${streak} jour${streak > 1 ? 's' : ''}`
+                : 'Aucune série en cours'
+            }
+          >
+            <svg viewBox="0 0 24 24" className="size-3.5 shrink-0" aria-hidden="true">
+              <path d={FLAME_PATH} fill="url(#level-flame)" />
+            </svg>
+            <span className="font-mono font-extrabold tabular-nums">{streak}</span>
+            j
+          </span>
+        </div>
+
+        {/* Prénom + rang, ramassés sous le cercle. */}
+        <div className="relative mt-3 text-center">
+          <h1 className="font-heading text-2xl leading-tight font-bold text-balance">
+            {name}
+          </h1>
+          <p className="mt-0.5 text-xs font-semibold text-white/85">
+            Niveau {lvl.level} · {lvl.title}
+          </p>
+        </div>
+
+        {/* Pied de carte : la communauté à gauche, coffre + compte à droite. */}
+        <div className="relative mt-3 flex items-center justify-between gap-2">
+          {communitySeconds !== null ? (
+            <p className="flex min-w-0 items-center gap-1.5 text-[11px] text-white/75">
+              <Users
+                className="size-3.5 shrink-0 text-highlight"
+                aria-hidden="true"
+              />
+              <span className="truncate">
+                Ensemble :{' '}
+                <strong className="font-semibold text-white tabular-nums">
+                  {formatDurationFromSeconds(communitySeconds)}
+                </strong>
+              </span>
+            </p>
+          ) : (
+            <span />
+          )}
+          <div className="flex shrink-0 items-center gap-1.5">
             <Link
               href="/coffre"
               aria-label="Mon coffre"
-              className="flex size-8 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition hover:bg-white/20 active:translate-y-px"
+              className="flex size-8 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition-colors duration-200 hover:bg-white/20 active:translate-y-px"
             >
               <Gem className="size-4 text-highlight" strokeWidth={2.4} aria-hidden="true" />
             </Link>
             <Link
               href="/compte"
-              className="flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white transition hover:bg-white/20 active:translate-y-px"
+              aria-label="Mon compte"
+              className="flex size-8 cursor-pointer items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition-colors duration-200 hover:bg-white/20 active:translate-y-px"
             >
               <UserRound className="size-4" strokeWidth={2.4} aria-hidden="true" />
-              Compte
             </Link>
           </div>
         </div>
-
-        {/* Prénom + rang, centrés sous la flamme. */}
-        <div className="relative mt-2 text-center">
-          <h1 className="font-heading text-3xl leading-tight font-bold text-balance">
-            {name}
-          </h1>
-          <p className="mt-1 text-sm font-semibold text-white/85">
-            Niveau {lvl.level} · {lvl.title}
-          </p>
-
-          {/* La série, ramassée dans l'identité : une pastille flamme, plus
-              besoin d'un bloc « série » empilé plus bas. */}
-          <div className="mt-3 flex justify-center">
-            <span
-              className="flex items-center gap-1.5 rounded-full bg-white/12 px-3.5 py-1.5 text-sm font-bold text-white ring-1 ring-white/25"
-              aria-label={
-                streak > 0
-                  ? `Série de ${streak} jour${streak > 1 ? 's' : ''}`
-                  : 'Aucune série en cours'
-              }
-            >
-              <svg viewBox="0 0 24 24" className="size-4 shrink-0" aria-hidden="true">
-                <path d={FLAME_PATH} fill="url(#level-flame)" />
-              </svg>
-              {streak > 0 ? (
-                <>
-                  <span className="font-mono tabular-nums">{streak}</span>
-                  jour{streak > 1 ? 's' : ''} de série
-                </>
-              ) : (
-                'Allume ta série'
-              )}
-            </span>
-          </div>
-        </div>
-
-        {/* Vers le niveau suivant : la barre flamme sur le violet. */}
-        <div className="relative mt-4">
-          <div
-            className="h-2.5 w-full overflow-hidden rounded-full bg-white/15"
-            role="progressbar"
-            aria-label={
-              lvl.nextHours !== null
-                ? `Progression vers le niveau ${lvl.level + 1}`
-                : 'Niveau maximum atteint'
-            }
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-valuenow={pct}
-          >
-            <div
-              className="bar-fill h-full rounded-full bg-gradient-to-r from-amber-400 to-orange-600"
-              style={{ width: `${pct}%` }}
-            />
-          </div>
-          <p className="mt-1.5 text-center text-xs font-medium text-white/70">
-            {lvl.nextHours !== null
-              ? `Niveau ${lvl.level + 1} à ${lvl.nextHours} h de travail`
-              : 'Niveau maximum atteint 👑'}
-          </p>
-        </div>
-
-        {communitySeconds !== null ? (
-          <p className="relative mt-3 flex items-center justify-center gap-2 text-xs text-white/75">
-            <Users className="size-3.5 shrink-0 text-highlight" aria-hidden="true" />
-            <span>
-              Ensemble, les élèves ont déjà travaillé{' '}
-              <strong className="font-semibold text-white tabular-nums">
-                {formatDurationFromSeconds(communitySeconds)}
-              </strong>
-              .
-            </span>
-          </p>
-        ) : null}
       </div>
     </section>
   )

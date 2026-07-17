@@ -148,11 +148,19 @@ function SubjectStrip({
  */
 export default function JeuxBoard({
   board,
+  initialSubject = null,
 }: {
   board: Record<string, SalonState>
+  // Matière à ouvrir directement (?matiere=… depuis la feuille Modes de jeu).
+  // Inconnue ou absente → première matière du catalogue.
+  initialSubject?: string | null
 }) {
   const [wing, setWing] = useState<Wing>('salons')
-  const [subject, setSubject] = useState(SALONS[0].subject)
+  const [subject, setSubject] = useState(
+    () =>
+      SALONS.find((s) => s.subject === initialSubject)?.subject ??
+      SALONS[0].subject,
+  )
 
   const salon = SALONS.find((s) => s.subject === subject) ?? SALONS[0]
   const state = board[salon.subject] ?? LOCKED_STATE

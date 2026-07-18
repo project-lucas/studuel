@@ -69,10 +69,17 @@ export default function FlashcardPlayer({
   const current = queue[0]
   const knownCount = cards.length - queue.length
 
+  // Verrou synchrone anti-double-tap : le state (flipped) est en retard d'un
+  // rendu, donc deux clics rapides sur « Je savais » rejoueraient answer() sur
+  // la même carte (double session + double SRS sur la dernière). Le ref bloque
+  // le 2e clic ; il se relâche au flip de la carte suivante.
+  const lockRef = useRef(false)
+
   const flip = () => {
     if (!flipped) {
       sfx.flip()
       setFlipped(true)
+      lockRef.current = false
     }
   }
 
@@ -81,7 +88,8 @@ export default function FlashcardPlayer({
   const reviewsRef = useRef<ReviewAnswer[]>([])
 
   const answer = (known: boolean) => {
-    if (!current) return
+    if (!current || lockRef.current) return
+    lockRef.current = true
     setReviews((r) => r + 1)
     const firstTry = !seen.has(current.id)
     setSeen((s) => new Set(s).add(current.id))
@@ -124,6 +132,7 @@ export default function FlashcardPlayer({
     setFinished(false)
     setSaved(null)
     reviewsRef.current = []
+    lockRef.current = false
   }
 
   if (finished) {

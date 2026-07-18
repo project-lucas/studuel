@@ -42,13 +42,15 @@ support vide, gated par une décision de format (voir
 `docs/CADRAGE-STUDYGRAM.md`).
 
 **Base de données : 001→167 exécutées** (164→167 par Lucas le 2026-07-18, SQL
-Editor). **⚠️ 168, 169, 170, 171 créées le 2026-07-18 (jour), EN ATTENTE
-d'exécution** (idempotentes, indépendantes, ordre indifférent) : 168 = tirage
-coffre en SQL (`open_chest_v2`, **supprime `open_chest(JSONB)`**), 169 =
-rate-limit codes amis, 170 = borne série 400 j, 171 = durcissement économie 2e
-passe (claim_revanche_bonus 40 / claim_debrief_reward 10 / add_work_time
-plafond 8 h/j / **apply_ranked_match borné 30/h — CRITIQUE farming trophées**).
-**Prochaine à créer = `172`.**
+Editor). **⚠️ 168 → 173 créées le 2026-07-18 (jour), EN ATTENTE d'exécution**
+(idempotentes, indépendantes, ordre indifférent, audit d'idempotence refait
+cycle 2) : 168 = tirage coffre en SQL (`open_chest_v2`, **supprime
+`open_chest(JSONB)`**), 169 = rate-limit codes amis, 170 = borne série 400 j,
+171 = durcissement économie 2e passe (claim_revanche_bonus 40 / claim_debrief_
+reward 10 / add_work_time plafond 8 h/j / **apply_ranked_match borné 30/h —
+CRITIQUE farming trophées**), **172 = fermeture faille confidentialité parents**
+(`link_child_by_code` refuse les comptes `eleve` + rate-limit), **173 = rate-limit
+`add_friend_by_code`** (dernier oracle de code). **Prochaine à créer = `174`.**
 
 **Fonctionnel livré (l'essentiel)** :
 - **Boucle cœur Réviser** : accueil « carnet violet », chapitres → leçon-hub
@@ -213,6 +215,32 @@ breaking changes vs. l'entraînement.
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible,
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
+
+**2026-07-18 — fin du cycle 2 `/jour` (Lia) :**
+- **Fait** : file explicite déjà épuisée (cycle 1) → **6 revues sous-agents** sur
+  zones sous-auditées, findings vérifiés en code. **8 commits verts** (dernier
+  `9a20de8`, typecheck/lint/704 + build ×2). Points forts : **faille de
+  confidentialité fermée** (`30017e8`, **migration 172** : `link_child_by_code`
+  laissait un élève espionner un camarade via son code ami) ; **robustesse selects
+  groupés** (`f20a539` : colonnes de migration tardive isolées sur `defi` +
+  `reviser`, sinon la page casse pendant la fenêtre de migration manuelle) ; **4
+  correctifs onboarding J1** (`9a20de8`) ; perf pages chaudes (`613ee91`) ;
+  anti-double-tap flashcards (`07d02c2`) ; a11y (`5cff5ae`) ; rate-limit
+  `add_friend_by_code` (`e7b4ace`, **migration 173**). Correctness/sécurité :
+  arènes + 8 miroirs SQL↔app cohérents, admin/onboarding/auth **sains**.
+- **Prochaine cible** : rien de non gated ne reste dans la file ; le code neuf est
+  audité en profondeur. Restent des **décisions produit** (grading serveur des
+  quiz — conflit design « correction immédiate » ; `apply_ranked_match` jeton ;
+  géo D1-D4 ; Studygram ; 2v2 ; texte à trous) et des **items à QA visuelle**
+  (focus onboarding au changement d'écran, sémantiques ARIA radiogroup/tablist,
+  perf `syncAutoHabits` de /moi). Débloquer une décision → coder l'item.
+- **Pièges du cycle** : 172 dépend de 048 (`profile_type`) ET 169
+  (`friend_lookup_allowed`) ; 173 dépend de 019 ET 169 → exécuter 169 avant/avec.
+  La garde 172 refuse le NÉGATIF (`profile_type='eleve'`) pour ne PAS casser un
+  vrai parent (`'parent'`/NULL) sur une feature PAYANTE ; un gate positif
+  (`='parent'`) est possible si tu confirmes que tous les comptes parents portent
+  `'parent'`. Le finding « grading quiz » ne se corrige PAS à l'aveugle : masquer
+  `correct_index` casse la correction immédiate.
 
 **2026-07-18 — fin du cycle 1 `/jour` (Lia) :**
 - **Fait** : durcissement des deux gros commits récents non audités. `b63d14d`

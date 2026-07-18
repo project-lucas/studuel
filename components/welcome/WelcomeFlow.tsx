@@ -145,10 +145,18 @@ export default function WelcomeFlow({
 
   async function startPlacement() {
     setLoadingQuiz(true)
-    const qs = await fetchPlacementQuestions(answers.grade)
-    setQuestions(qs)
-    setLoadingQuiz(false)
-    go('placementQuiz')
+    try {
+      const qs = await fetchPlacementQuestions(answers.grade)
+      setQuestions(qs)
+      go('placementQuiz')
+    } catch {
+      // Réseau KO : sans ce garde, la promesse rejetée laissait loadingQuiz à
+      // true pour toujours → les DEUX boutons (disabled={loading}) restaient
+      // bloqués et l'élève ne pouvait ni tester ni passer. On relâche le verrou
+      // (finally) pour qu'il réessaie ou passe.
+    } finally {
+      setLoadingQuiz(false)
+    }
   }
 
   function finishOnboarding() {
@@ -355,29 +363,33 @@ export default function WelcomeFlow({
     }
   }
 
-  // Loader minimal pendant le chargement du quiz (rare, réseau).
-  function IntroStep({ onStart }: { onStart: () => void }) {
-    return (
-      <div className="flex flex-1 flex-col">
-        <div className="flex flex-1 flex-col items-center justify-center text-center">
-          <PencilLogo size={150} className="float-slow" />
-          <div className="onb-word mt-1.5 text-[34px]" style={{ color: 'var(--onb-ink)' }}>
-            studuel
-          </div>
-          <p
-            className="mt-2.5 max-w-[210px] text-[16px] font-bold"
-            style={{ color: 'var(--onb-mut)' }}
-          >
-            Révise, défie tes potes, et cartonne ton année.
-          </p>
+}
+
+// Écran d'accueil de l'onboarding. Défini au niveau module (et non dans le corps
+// de WelcomeFlow) pour garder une identité de composant STABLE : sinon chaque
+// rendu du parent recréait la fonction, React remontait l'écran entier et
+// l'animation du logo repartait de zéro (flicker sur l'écran le plus critique J1).
+function IntroStep({ onStart }: { onStart: () => void }) {
+  return (
+    <div className="flex flex-1 flex-col">
+      <div className="flex flex-1 flex-col items-center justify-center text-center">
+        <PencilLogo size={150} className="float-slow" />
+        <div className="onb-word mt-1.5 text-[34px]" style={{ color: 'var(--onb-ink)' }}>
+          studuel
         </div>
-        <div className="mt-auto flex flex-col gap-2.5 pt-4">
-          <OnbButton onClick={onStart}>C&apos;est parti</OnbButton>
-          <Link href="/login" className="onb-btn onb-btn-ghost block text-center no-underline">
-            J&apos;ai déjà un compte
-          </Link>
-        </div>
+        <p
+          className="mt-2.5 max-w-[210px] text-[16px] font-bold"
+          style={{ color: 'var(--onb-mut)' }}
+        >
+          Révise, défie tes potes, et cartonne ton année.
+        </p>
       </div>
-    )
-  }
+      <div className="mt-auto flex flex-col gap-2.5 pt-4">
+        <OnbButton onClick={onStart}>C&apos;est parti</OnbButton>
+        <Link href="/login" className="onb-btn onb-btn-ghost block text-center no-underline">
+          J&apos;ai déjà un compte
+        </Link>
+      </div>
+    </div>
+  )
 }

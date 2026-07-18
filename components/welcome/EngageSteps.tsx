@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 import {
   GOAL_HEADLINE,
@@ -79,11 +79,13 @@ export function PlacementQuizStep({
   const [correct, setCorrect] = useState(0)
 
   const q = questions[index]
-  if (!q) {
-    // Sécurité : aucune question → on sort proprement.
-    onDone(correct, 0)
-    return null
-  }
+  // Sécurité : aucune question (liste vide) → on sort proprement. L'appel à
+  // onDone (qui met à jour l'état du PARENT) doit passer par un effet, jamais
+  // depuis le corps du rendu (mise à jour d'un autre composant pendant le rendu).
+  useEffect(() => {
+    if (!q) onDone(correct, 0)
+  }, [q, correct, onDone])
+  if (!q) return null
   const isRight = selected === q.correctIndex
 
   function check() {

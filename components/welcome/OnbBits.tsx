@@ -43,7 +43,7 @@ export function ProgressHeader({
         type="button"
         onClick={onBack}
         aria-label="Étape précédente"
-        className="-ml-1 shrink-0 text-3xl leading-none font-extrabold"
+        className="-ml-2 flex size-11 shrink-0 items-center justify-center text-3xl leading-none font-extrabold"
         style={{ color: '#BEB6A0' }}
       >
         ‹

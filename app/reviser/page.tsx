@@ -97,22 +97,32 @@ export default async function ReviserPage() {
   // Avatar (082) et textes du bac oral (156) restent des requêtes ISOLÉES
   // (colonne peut-être absente → dégradation propre sans casser le profil),
   // mais lancées en PARALLÈLE du profil : elles ne dépendent de rien.
-  const [{ data: profile }, { data: avatarRow }, { data: oralRow }] =
-    await Promise.all([
-      supabase
-        .from('profiles')
-        .select(
-          'full_name, grade_level, selected_subjects, commute_slots, upcoming_exams, daily_goal_minutes',
-        )
-        .eq('id', user.id)
-        .maybeSingle(),
-      supabase.from('profiles').select('avatar').eq('id', user.id).maybeSingle(),
-      supabase
-        .from('profiles')
-        .select('oral_texts')
-        .eq('id', user.id)
-        .maybeSingle(),
-    ])
+  const [
+    { data: profile },
+    { data: avatarRow },
+    { data: oralRow },
+    { data: extraRow },
+  ] = await Promise.all([
+    supabase
+      .from('profiles')
+      .select('full_name, grade_level, selected_subjects, commute_slots')
+      .eq('id', user.id)
+      .maybeSingle(),
+    supabase.from('profiles').select('avatar').eq('id', user.id).maybeSingle(),
+    supabase
+      .from('profiles')
+      .select('oral_texts')
+      .eq('id', user.id)
+      .maybeSingle(),
+    // upcoming_exams (087) + daily_goal_minutes (048) isolés : une migration pas
+    // encore passée ne doit pas faire perdre grade_level (sinon un élève onboardé
+    // retombe à tort sur l'écran « Dis-nous ta classe »).
+    supabase
+      .from('profiles')
+      .select('upcoming_exams, daily_goal_minutes')
+      .eq('id', user.id)
+      .maybeSingle(),
+  ])
   const avatarUri = avatarDataUri(normalizeAvatarConfig(avatarRow?.avatar), 128)
   const oralTexts = normalizeOralList(
     (oralRow as { oral_texts?: unknown } | null)?.oral_texts,
@@ -281,7 +291,7 @@ export default async function ReviserPage() {
     ),
   })
   const todayMinutes = Math.floor(Number(workToday?.seconds ?? 0) / 60)
-  const goalMinutes = profile?.daily_goal_minutes ?? 15
+  const goalMinutes = extraRow?.daily_goal_minutes ?? 15
 
   // --- Matières suivies (profil onboarding) -----------------------------------
   const selected = Array.isArray(profile?.selected_subjects)
@@ -369,7 +379,7 @@ export default async function ReviserPage() {
   // qui a un contrôle proche porte un liseré coloré + un compte à rebours.
   const today = toDayKey(new Date())
   const upcomingExams = activeExams(
-    normalizeExamList(profile?.upcoming_exams),
+    normalizeExamList(extraRow?.upcoming_exams),
     today,
   )
   const examBySubject = examHintsBySubject(upcomingExams, today)

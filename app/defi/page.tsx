@@ -140,21 +140,31 @@ export default async function DefiPage() {
   const todayKey = toDayKey(new Date())
 
   if (user) {
-    const { data: profile } = await supabase
-      .from('profiles')
-      .select(
-        'full_name, grade_level, trophies, college_school_id, lycee_school_id',
-      )
-      .eq('id', user.id)
-      .maybeSingle()
+    // Identité de base (toujours présente) séparée des colonnes de migration
+    // tardive : trophies (079) + college/lycee_school_id (159) isolés dans leur
+    // propre requête, pour qu'une migration pas encore passée ne fasse pas perdre
+    // le prénom et la classe (modèle avatar/weekly_goals de /moi). Parallèle =
+    // perf-neutre.
+    const [{ data: profile }, { data: geoRow }] = await Promise.all([
+      supabase
+        .from('profiles')
+        .select('full_name, grade_level')
+        .eq('id', user.id)
+        .maybeSingle(),
+      supabase
+        .from('profiles')
+        .select('trophies, college_school_id, lycee_school_id')
+        .eq('id', user.id)
+        .maybeSingle(),
+    ])
 
-    trophies = Math.max(0, Number(profile?.trophies) || 0)
+    trophies = Math.max(0, Number(geoRow?.trophies) || 0)
     const firstName = String(profile?.full_name ?? '').split(' ')[0] || 'Moi'
     const level = schoolLevelForGrade(profile?.grade_level ?? null)
     const schoolId =
       level === 'college'
-        ? profile?.college_school_id
-        : profile?.lycee_school_id
+        ? geoRow?.college_school_id
+        : geoRow?.lycee_school_id
 
     // Classements réels + école courante, chacun tolérant à l'absence de la
     // migration 159 (RPC absente → data null → classement vide).

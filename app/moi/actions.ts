@@ -92,9 +92,10 @@ export async function addEvent(
     }
     if (cleanTime) target.times = { [String(day)]: cleanTime }
     if (dur !== null) target.duration = dur
-    await supabase
+    const { error } = await supabase
       .from('habits')
       .insert({ user_id: userId, catalog_id: catalogId, target })
+    if (error) console.error('[moi] semaine type — ajout impossible:', error.message)
   } else {
     const target = existing.target as Record<string, unknown>
     const days = Array.from(new Set([...habitDays(existing), day])).sort()
@@ -103,11 +104,12 @@ export async function addEvent(
     else delete times[String(day)]
     const next: Record<string, unknown> = { ...target, days, times }
     if (dur !== null) next.duration = dur
-    await supabase
+    const { error } = await supabase
       .from('habits')
       .update({ target: next })
       .eq('id', existing.id)
       .eq('user_id', userId)
+    if (error) console.error('[moi] semaine type — maj impossible:', error.message)
   }
   revalidatePath('/moi')
 }
@@ -130,11 +132,12 @@ export async function setEventDuration(
   if (!habit) return
 
   const target = (habit.target as Record<string, unknown>) ?? {}
-  await supabase
+  const { error } = await supabase
     .from('habits')
     .update({ target: { ...target, duration: dur } })
     .eq('id', habitId)
     .eq('user_id', userId)
+  if (error) console.error('[moi] durée événement non enregistrée:', error.message)
   revalidatePath('/moi')
 }
 
@@ -154,20 +157,22 @@ export async function removeEvent(habitId: string, day: number): Promise<void> {
 
   const days = habitDays(habit).filter((d) => d !== day)
   if (days.length === 0) {
-    await supabase
+    const { error } = await supabase
       .from('habits')
       .delete()
       .eq('id', habitId)
       .eq('user_id', userId)
+    if (error) console.error('[moi] retrait événement (suppr.) impossible:', error.message)
   } else {
     const target = habit.target as Record<string, unknown>
     const times = habitTimes(target)
     delete times[String(day)]
-    await supabase
+    const { error } = await supabase
       .from('habits')
       .update({ target: { ...target, days, times } })
       .eq('id', habitId)
       .eq('user_id', userId)
+    if (error) console.error('[moi] retrait événement (maj) impossible:', error.message)
   }
   revalidatePath('/moi')
 }
@@ -191,7 +196,7 @@ export async function toggleHabitLog(
     .maybeSingle()
   if (!habit) return
 
-  await supabase.from('habit_logs').upsert(
+  const { error } = await supabase.from('habit_logs').upsert(
     {
       habit_id: habitId,
       user_id: userId,
@@ -201,6 +206,7 @@ export async function toggleHabitLog(
     },
     { onConflict: 'habit_id,date' },
   )
+  if (error) console.error('[moi] check du jour non enregistré:', error.message)
   revalidatePath('/moi')
 }
 
@@ -427,7 +433,11 @@ export async function saveDebriefHabits(pairIds: string[]): Promise<void> {
   if (!userId || !Array.isArray(pairIds)) return
 
   const valid = [...new Set(pairIds.filter((id) => isDebriefPairId(id)))]
-  await supabase.from('debrief_habits').delete().eq('user_id', userId)
+  const { error: delError } = await supabase
+    .from('debrief_habits')
+    .delete()
+    .eq('user_id', userId)
+  if (delError) console.error('[moi] débrief — remise à zéro impossible:', delError.message)
   if (valid.length > 0) {
     const { error } = await supabase
       .from('debrief_habits')
@@ -484,15 +494,17 @@ export async function logDebrief(
   const date = toDayKey(new Date())
 
   if (outcome === null) {
-    await supabase
+    const { error } = await supabase
       .from('debrief_logs')
       .delete()
       .match({ user_id: userId, pair_id: pairId, date })
+    if (error) console.error('[moi] débrief du jour — effacement impossible:', error.message)
   } else if (isDebriefOutcome(outcome)) {
-    await supabase.from('debrief_logs').upsert(
+    const { error } = await supabase.from('debrief_logs').upsert(
       { user_id: userId, pair_id: pairId, date, outcome },
       { onConflict: 'user_id,pair_id,date' },
     )
+    if (error) console.error('[moi] débrief du jour non enregistré:', error.message)
     // Créditer dès que le débrief du jour est complet (idempotent, 1×/jour).
     await maybeClaimDebriefReward(supabase, userId)
   }

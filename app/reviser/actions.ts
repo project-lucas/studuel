@@ -27,6 +27,9 @@ export async function completeLesson(
     data: { user },
   } = await supabase.auth.getUser()
   if (!user) return { saved: false }
+  // Même garde que markLessonActivity : un id non-UUID ferait échouer le cast
+  // Postgres (saved:false silencieux) — on refuse tôt et proprement.
+  if (!UUID_RE.test(String(lessonId))) return { saved: false }
 
   const { error } = await supabase
     .from('lesson_completions')
@@ -255,21 +258,28 @@ export async function finishExamBlanc(
 }
 
 // Persiste la sélection de matières de l'élève (bouton « Éditer »).
+// Lève sur échec : l'UI (SubjectsHome) enveloppe l'appel dans un try/catch et
+// affiche un toast d'erreur — sans remontée, une sélection perdue passerait
+// pour un succès silencieux.
 export async function saveSelectedSubjects(slugs: string[]): Promise<void> {
   const supabase = await createClient()
   const {
     data: { user },
   } = await supabase.auth.getUser()
-  if (!user) return
+  if (!user) throw new Error('non authentifié')
 
   const clean = Array.from(
     new Set(slugs.filter((s) => typeof s === 'string' && s.length < 64)),
   )
 
-  await supabase
+  const { error } = await supabase
     .from('profiles')
     .update({ selected_subjects: clean })
     .eq('id', user.id)
+  if (error) {
+    console.error('[reviser] sélection de matières non enregistrée:', error.message)
+    throw new Error(error.message)
+  }
 
   revalidatePath('/reviser')
 }

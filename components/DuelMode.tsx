@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import DefiTimer from '@/components/DefiTimer'
 import { XP_RULES } from '@/lib/xp'
-import { recordChallenge, saveDuelRecording } from '@/app/defi/actions'
+import { recordChallenge, recordDuelResult, saveDuelRecording } from '@/app/defi/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import {
@@ -243,13 +243,19 @@ export default function DuelMode({
     recordChallenge(correctCount, answeredCount, 'duel')
       .then((r) => setSaved(r.saved))
       .catch(() => setSaved(false))
+    // Bilan Victoires/Défaites (+ monnaie de victoire) — hors trophées/classement.
+    recordDuelResult(w === 'me').catch(() => {})
     // Reprogramme chaque question dans la file « À revoir » — sauf pour les
     // jeux de salon, dont les questions ne vivent pas dans quiz_questions.
     if (srs) recordReviewAnswers(reviewsRef.current).catch(() => {})
-    // Mes manches deviennent MON fantôme : mes amis pourront me défier.
-    saveDuelRecording(
-      newRounds.map((r) => ({ correct: r.me, timeMs: r.myTimeMs })),
-    ).catch(() => {})
+    // Mes manches deviennent MON fantôme : mes amis pourront me défier. Réservé
+    // aux duels du PROGRAMME (srs) : un jeu de salon (capitales, orthographe…)
+    // ne doit pas se substituer à mon fantôme de révision.
+    if (srs) {
+      saveDuelRecording(
+        newRounds.map((r) => ({ correct: r.me, timeMs: r.myTimeMs })),
+      ).catch(() => {})
+    }
   }
 
   // ------------------------------------------------------------------- choix

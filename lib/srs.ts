@@ -132,10 +132,19 @@ export async function getReviewItems(
   supabase: SupabaseClient,
   userId: string,
 ): Promise<ReviewItem[]> {
-  const { data } = await supabase
+  // Ne rapatrier que la file du jour : items dus (due_date ≤ aujourd'hui) OU en
+  // Revanche — exactement ce que `reviewQueue` conserve. Inutile de transférer
+  // tout l'historique SRS d'un élève assidu (l'index (user_id, due_date) de 021
+  // sert ce filtre). Borné par sûreté : la file du jour n'a jamais besoin de
+  // plus. L'erreur est journalisée (une panne ≠ « pas d'items »).
+  const today = new Date().toISOString().slice(0, 10)
+  const { data, error } = await supabase
     .from('review_items')
     .select('item_kind, item_id, subject, streak, lapses, due_date, in_revanche')
     .eq('user_id', userId)
+    .or(`due_date.lte.${today},in_revanche.eq.true`)
+    .limit(300)
     .returns<ReviewItem[]>()
+  if (error) console.error('[srs] file « À revoir » indisponible:', error.message)
   return data ?? []
 }

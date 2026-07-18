@@ -1,12 +1,16 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
+import { Swords } from 'lucide-react'
+import ModeStage from '@/components/defi/ModeStage'
 import DuelMode from '@/components/DuelMode'
 import type { ModeQuestion } from '@/lib/defi-modes'
 
-// Un jeu de salon = un duel BO3 (DuelMode) sur une banque de questions
-// dédiée, hors SRS. Ce wrapper ne fait que la bannière du jeu et la sortie
-// vers l'espace Jeux — toute la mécanique vit dans DuelMode.
+// Un jeu de salon = un duel BO3 (DuelMode) sur une banque de questions dédiée,
+// hors SRS. Comme les modes fun de l'Arène, il se joue dans une SCÈNE plein
+// cadre et opaque (ModeStage) qui recouvre le décor d'arène — la table de jeu
+// remplit tout l'espace, jamais une carte qui flotte sur le colisée. La sortie
+// (croix de la scène ou boutons du mode) ramène à l'arène.
 export default function SalonDuel({
   pool,
   myLevel,
@@ -21,29 +25,19 @@ export default function SalonDuel({
   subject: string
 }) {
   const router = useRouter()
+  const exit = () => router.push('/defi')
   return (
-    <div className="flex flex-col gap-4">
-      <div className="mx-auto flex items-center gap-2 rounded-full border border-white/15 bg-black/25 px-4 py-1.5 backdrop-blur-sm">
-        <span className="text-base leading-none" aria-hidden="true">
-          {emoji}
+    <ModeStage
+      title={name}
+      Icon={Swords}
+      onExit={exit}
+      headerRight={
+        <span className="shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-bold text-primary">
+          <span aria-hidden="true">{emoji}</span> {subject}
         </span>
-        <span className="font-heading text-sm font-extrabold text-white">
-          {name}
-        </span>
-        <span className="text-xs font-bold text-white/60">
-          · Salon {subject}
-        </span>
-      </div>
-      {/* Les cartes de DuelMode sont claires : on les pose sur un panneau
-          crème pour rester lisible sur le fond d'arène sombre. */}
-      <div className="rounded-3xl bg-background p-4 shadow-lg">
-        <DuelMode
-          pool={pool}
-          myLevel={myLevel}
-          srs={false}
-          onExit={() => router.push('/defi/jeux')}
-        />
-      </div>
-    </div>
+      }
+    >
+      <DuelMode pool={pool} myLevel={myLevel} srs={false} onExit={exit} />
+    </ModeStage>
   )
 }

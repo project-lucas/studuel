@@ -7,7 +7,22 @@ import { MASTERY_THRESHOLDS, type ChapterMastery } from '@/lib/mastery'
 // ------------------------------------------------------------------ salons
 
 // Jeux réellement jouables aujourd'hui (les autres sont annoncés « bientôt »).
-export type SalonGameId = 'capitales' | 'orthographe'
+// Chaque id ci-dessous a sa banque de questions dans lib/jeux et son entrée
+// dans POOL_BUILDERS (app/defi/jeux/[jeu]).
+export type SalonGameId =
+  | 'capitales'
+  | 'orthographe'
+  | 'conjugaison-eclair'
+  | 'chasse-faute'
+  | 'calcul-mental'
+  | 'suite-logique'
+  | 'traduction-flash'
+  | 'faux-amis'
+  | 'traduccion-flash'
+  | 'falsos-amigos'
+  | 'classe-moi-ca'
+  | 'chasse-elements'
+  | 'bonne-unite'
 
 export type SalonGame = {
   id: string
@@ -68,15 +83,15 @@ export const SALONS: Salon[] = [
         id: 'chasse-faute',
         name: 'Chasse à la faute',
         emoji: '🔎',
-        tagline: 'Une phrase, une faute cachée — le premier qui la touche',
-        implemented: false,
+        tagline: 'Quatre mots, une seule faute — débusque l’intrus',
+        implemented: true,
       },
       {
         id: 'conjugaison-eclair',
         name: 'Conjugaison éclair',
         emoji: '⚡',
         tagline: '« prendre, subjonctif présent, 3e personne » — chrono court',
-        implemented: false,
+        implemented: true,
       },
     ],
   },
@@ -89,7 +104,7 @@ export const SALONS: Salon[] = [
         name: 'Calcul mental éclair',
         emoji: '🧮',
         tagline: 'Les opérations s’enchaînent de plus en plus vite',
-        implemented: false,
+        implemented: true,
       },
       {
         id: 'compte-est-bon',
@@ -103,7 +118,7 @@ export const SALONS: Salon[] = [
         name: 'Suite logique',
         emoji: '🔮',
         tagline: 'Devine le terme suivant avant l’adversaire',
-        implemented: false,
+        implemented: true,
       },
     ],
   },
@@ -116,14 +131,14 @@ export const SALONS: Salon[] = [
         name: 'Traduction flash',
         emoji: '💬',
         tagline: 'Un mot, 4 traductions — vitesse pure',
-        implemented: false,
+        implemented: true,
       },
       {
         id: 'faux-amis',
         name: 'Faux amis',
         emoji: '🎭',
-        tagline: '« actually = actuellement ? » Vrai/Faux piégeux',
-        implemented: false,
+        tagline: '« actually » ≠ actuellement — évite le piège',
+        implemented: true,
       },
       {
         id: 'phrase-en-vrac',
@@ -143,14 +158,14 @@ export const SALONS: Salon[] = [
         name: 'Traducción flash',
         emoji: '💬',
         tagline: 'Una palabra, 4 traductions — vitesse pure',
-        implemented: false,
+        implemented: true,
       },
       {
         id: 'falsos-amigos',
         name: 'Falsos amigos',
         emoji: '🎭',
-        tagline: '« constipado = constipé ? » Vrai/Faux piégeux',
-        implemented: false,
+        tagline: '« constipado » ≠ constipé — évite le piège',
+        implemented: true,
       },
     ],
   },
@@ -170,7 +185,7 @@ export const SALONS: Salon[] = [
         name: 'Classe-moi ça',
         emoji: '🐾',
         tagline: 'Mammifère, reptile ou amphibien ? Tri rapide',
-        implemented: false,
+        implemented: true,
       },
     ],
   },
@@ -182,15 +197,15 @@ export const SALONS: Salon[] = [
         id: 'chasse-elements',
         name: 'Chasse aux éléments',
         emoji: '🧪',
-        tagline: 'Retrouve l’élément dans le tableau périodique',
-        implemented: false,
+        tagline: 'Le nom de l’élément, retrouve son symbole',
+        implemented: true,
       },
       {
         id: 'bonne-unite',
         name: 'La bonne unité',
         emoji: '📏',
         tagline: 'Associe grandeur et unité à toute vitesse',
-        implemented: false,
+        implemented: true,
       },
     ],
   },

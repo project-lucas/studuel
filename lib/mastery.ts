@@ -90,7 +90,10 @@ export async function getChapterMastery(
 
   // user_id explicite : la RLS le garantit aujourd'hui, mais la couche sociale
   // ouvrira la lecture croisée des sessions — la maîtrise reste personnelle.
-  const [{ data: sessions }, { data: completions }] = await Promise.all([
+  const [
+    { data: sessions, error: sessErr },
+    { data: completions, error: compErr },
+  ] = await Promise.all([
     supabase
       .from('test_sessions')
       .select('quiz_id, score, total')
@@ -102,6 +105,11 @@ export async function getChapterMastery(
       .eq('user_id', userId)
       .returns<{ lesson_id: string }[]>(),
   ])
+  // Journaliser une vraie panne : sans ça, une erreur Supabase transitoire est
+  // indiscernable d'« élève sans historique » et fait retomber toute la maîtrise
+  // (et donc les couronnes) à zéro en silence.
+  if (sessErr) console.error('[mastery] scores indisponibles:', sessErr.message)
+  if (compErr) console.error('[mastery] leçons terminées indisponibles:', compErr.message)
 
   // Meilleur score par quiz.
   const bestByQuiz = new Map<string, number>()

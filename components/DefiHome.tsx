@@ -21,6 +21,7 @@ import {
   HandHeart,
   CornerDownRight,
   Target,
+  Trophy,
   type LucideIcon,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -38,6 +39,7 @@ import BossMode from '@/components/BossMode'
 import RankedMode from '@/components/RankedMode'
 import RankedHero from '@/components/RankedHero'
 import CoopMode from '@/components/CoopMode'
+import ModeStage from '@/components/defi/ModeStage'
 import type { RankPlayer } from '@/lib/trophies'
 import { bossForSubject, dominantSubject } from '@/lib/bosses'
 import { XP_RULES, type LevelInfo } from '@/lib/xp'
@@ -272,65 +274,102 @@ export default function DefiHome({
     }
   }
 
-  // Sortie d'un mode : retour à l'accueil + rafraîchissement des stats
-  // (le mode vient peut-être d'enregistrer un défi → série, XP, doneToday).
+  // Sortie d'un mode. Entrée profonde (?mode=… depuis l'écran d'arène) : on
+  // retourne À L'ARÈNE, pas à la salle d'entraînement — celle-ci rejouerait
+  // trophées/Match classé/grille des modes déjà présents sur /defi. Sinon (on
+  // était sur la salle d'entraînement), on revient à son accueil + on rafraîchit
+  // les stats (le mode vient peut-être d'enregistrer un défi → série, XP…).
   const exitMode = () => {
+    if (initialMode !== null) {
+      router.push('/defi')
+      return
+    }
     setPhase('landing')
     router.refresh()
   }
 
   // ------------------------------------------------------------ modes de jeu
+  // Chaque mode joue désormais dans une PAGE plein cadre opaque (ModeStage) :
+  // fini le calque posé sur l'image d'arène qui rendait les questions
+  // illisibles. Teinte `light` (crème) pour les modes conçus clairs, `dark`
+  // (violet uni) pour les modes compétitifs conçus sombres — aucun mode n'est
+  // repeint, on ne fait que leur rendre le fond pour lequel ils sont dessinés.
   if (phase === 'blitz') {
-    return <BlitzMode pool={pool} onExit={exitMode} />
+    return (
+      <ModeStage title="Blitz 60s" Icon={Timer} onExit={exitMode}>
+        <BlitzMode pool={pool} onExit={exitMode} />
+      </ModeStage>
+    )
   }
   if (phase === 'duel') {
     return (
-      <DuelMode
-        pool={pool}
-        myLevel={level.level}
-        ghosts={ghosts}
-        onExit={exitMode}
-      />
+      <ModeStage title="Duel fantôme" Icon={Swords} onExit={exitMode}>
+        <DuelMode
+          pool={pool}
+          myLevel={level.level}
+          ghosts={ghosts}
+          onExit={exitMode}
+        />
+      </ModeStage>
     )
   }
   if (phase === 'duel-live' && userId) {
     return (
-      <LiveDuelMode
-        userId={userId}
-        pool={pool}
-        subject={dominantSubject(pool)}
-        onExit={exitMode}
-      />
+      <ModeStage title="Duel en direct" Icon={Swords} onExit={exitMode}>
+        <LiveDuelMode
+          userId={userId}
+          pool={pool}
+          subject={dominantSubject(pool)}
+          myLevel={level.level}
+          onExit={exitMode}
+        />
+      </ModeStage>
     )
   }
   if (phase === 'chrono') {
-    return <ChronoMode pool={pool} onExit={exitMode} />
+    return (
+      <ModeStage title="Contre-la-montre" Icon={Hourglass} onExit={exitMode}>
+        <ChronoMode pool={pool} onExit={exitMode} />
+      </ModeStage>
+    )
   }
   if (phase === 'survie') {
-    return <SurvivalMode pool={pool} onExit={exitMode} />
+    return (
+      <ModeStage title="Survie" Icon={Skull} onExit={exitMode}>
+        <SurvivalMode pool={pool} onExit={exitMode} />
+      </ModeStage>
+    )
   }
   if (phase === 'boss') {
-    return <BossMode pool={pool} onExit={exitMode} />
+    return (
+      <ModeStage title="Boss" Icon={Crown} onExit={exitMode}>
+        <BossMode pool={pool} onExit={exitMode} />
+      </ModeStage>
+    )
   }
   if (phase === 'ranked') {
     return (
-      <RankedMode
-        pool={pool}
-        myTrophies={trophies}
-        friends={friendRanks}
-        onResult={(after) => setTrophies(after)}
-        onExit={exitMode}
-      />
+      <ModeStage title="Match classé" Icon={Trophy} tone="dark" onExit={exitMode}>
+        <RankedMode
+          pool={pool}
+          myTrophies={trophies}
+          friends={friendRanks}
+          onResult={(after) => setTrophies(after)}
+          onExit={exitMode}
+        />
+      </ModeStage>
     )
   }
   if (phase === 'coop' && userId) {
     return (
-      <CoopMode
-        userId={userId}
-        pool={pool}
-        subject={dominantSubject(pool)}
-        onExit={exitMode}
-      />
+      <ModeStage title="Mode Coop" Icon={HandHeart} tone="dark" onExit={exitMode}>
+        <CoopMode
+          userId={userId}
+          pool={pool}
+          subject={dominantSubject(pool)}
+          onExit={exitMode}
+        />
+      </ModeStage>
     )
   }
 

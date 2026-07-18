@@ -120,6 +120,9 @@ export default async function DefiPage() {
 
   // Valeurs par défaut (visiteur non connecté : démo mockée).
   let trophies = MOCK_TROPHIES
+  // Bilan Victoires/Défaites des duels 1v1 (0 pour un visiteur).
+  let wins = 0
+  let losses = 0
   let boards: Record<RankingScope, RankingBoard> = MOCK_RANKINGS
   let league: League = MOCK_LEAGUE
   // Drapeau « Aperçu » : la ligue mockée (visiteur ou migration 161 absente)
@@ -145,20 +148,31 @@ export default async function DefiPage() {
     // propre requête, pour qu'une migration pas encore passée ne fasse pas perdre
     // le prénom et la classe (modèle avatar/weekly_goals de /moi). Parallèle =
     // perf-neutre.
-    const [{ data: profile }, { data: geoRow }] = await Promise.all([
-      supabase
-        .from('profiles')
-        .select('full_name, grade_level')
-        .eq('id', user.id)
-        .maybeSingle(),
-      supabase
-        .from('profiles')
-        .select('trophies, college_school_id, lycee_school_id')
-        .eq('id', user.id)
-        .maybeSingle(),
-    ])
+    const [{ data: profile }, { data: geoRow }, { data: recordRow }] =
+      await Promise.all([
+        supabase
+          .from('profiles')
+          .select('full_name, grade_level')
+          .eq('id', user.id)
+          .maybeSingle(),
+        supabase
+          .from('profiles')
+          .select('trophies, college_school_id, lycee_school_id')
+          .eq('id', user.id)
+          .maybeSingle(),
+        // Bilan V/D (migration 174) isolé : une migration pas encore passée ne
+        // doit pas faire perdre trophées ni identité (discipline « colonnes
+        // tardives », cf. f20a539).
+        supabase
+          .from('profiles')
+          .select('wins, losses')
+          .eq('id', user.id)
+          .maybeSingle(),
+      ])
 
     trophies = Math.max(0, Number(geoRow?.trophies) || 0)
+    wins = Math.max(0, Number(recordRow?.wins) || 0)
+    losses = Math.max(0, Number(recordRow?.losses) || 0)
     const firstName = String(profile?.full_name ?? '').split(' ')[0] || 'Moi'
     const level = schoolLevelForGrade(profile?.grade_level ?? null)
     const schoolId =
@@ -365,14 +379,14 @@ export default async function DefiPage() {
         {/* Le bas d'écran, de haut en bas : bloc trophées, CTA « Match classé »,
             duel en direct (QR), puis la feuille des modes. */}
         {/* Bloc trophées : descendu du centre de l'arène, juste au-dessus du CTA. */}
-        <TrophyBlock trophies={trophies} />
+        <TrophyBlock trophies={trophies} wins={wins} losses={losses} />
 
         {/* CTA principal : plaque « or ciselé » pleine largeur, l'élément le
             plus proéminent de la pile. Texte encre ; l'ombre dure s'écrase au
             clic (olympe-press). */}
         <Link
           href="/defi/jouer?mode=ranked"
-          className="olympe-gold olympe-press flex min-h-16 w-full items-center gap-3 rounded-2xl px-5 focus-visible:ring-4 focus-visible:ring-highlight/50 focus-visible:outline-none"
+          className="olympe-gold olympe-press attract-sheen flex min-h-16 w-full items-center gap-3 rounded-2xl px-5 focus-visible:ring-4 focus-visible:ring-highlight/50 focus-visible:outline-none"
           aria-label="Lancer un match classé"
         >
           <SwordsIcon className="size-7 shrink-0" />

@@ -24,6 +24,11 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
   const isActive = (path: string) =>
     pathname === path || pathname.startsWith(`${path}/`)
 
+  // Halo violet unique qui « voyage » vers l'onglet actif (barre mobile) : sa
+  // position horizontale se dérive de l'index actif, le CSS anime le glissement.
+  const activeIndex = links.findIndex(({ path }) => isActive(path))
+  const activeIsCenter = activeIndex >= 0 && Boolean(links[activeIndex].center)
+
   const accountHref = userLabel ? '/compte' : '/login'
   const accountActive = isActive('/compte') || isActive('/login')
 
@@ -53,12 +58,22 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
 
       {/* …et barre d'onglets fixée en bas, Défi surélevé au centre */}
       <nav className="tab-bar fixed inset-x-0 bottom-0 z-50 border-t pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
-        <ul className="flex items-end">
+        <ul className="relative flex items-end">
+          {/* Halo violet qui suit l'onglet actif — glisse en douceur d'un onglet
+              à l'autre à chaque changement de route. */}
+          {activeIndex >= 0 && (
+            <span
+              aria-hidden="true"
+              className="tab-glow"
+              data-center={activeIsCenter ? '' : undefined}
+              style={{ left: `${((activeIndex + 0.5) / links.length) * 100}%` }}
+            />
+          )}
           {links.map(({ name, path, img, center }) => {
             const active = isActive(path)
 
             return (
-              <li key={path} className="flex-1">
+              <li key={path} className="relative z-10 flex-1">
                 <Link
                   href={path}
                   onClick={() => sfx.tap()}

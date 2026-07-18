@@ -53,6 +53,7 @@ export type SubjectTheme = {
   bar: string // remplissage des barres de progression
   stroke: string // anneaux de progression (SVG)
   arena: string // duo de tokens --tile-a/--tile-b (globals.css) pour la tuile « arène »
+  edge: string // couleur du socle 3D (border-bottom) du bouton matière « chunky »
 }
 
 const THEMES: Record<string, SubjectTheme> = {
@@ -63,6 +64,7 @@ const THEMES: Record<string, SubjectTheme> = {
     bar: 'bg-sky-500',
     stroke: 'stroke-sky-500',
     arena: 'tile-subject-blue',
+    edge: 'border-b-sky-300',
   },
   red: {
     header: 'bg-rose-100 text-rose-950 dark:bg-rose-950/60 dark:text-rose-100',
@@ -71,6 +73,7 @@ const THEMES: Record<string, SubjectTheme> = {
     bar: 'bg-rose-500',
     stroke: 'stroke-rose-500',
     arena: 'tile-subject-red',
+    edge: 'border-b-rose-300',
   },
   orange: {
     header: 'bg-orange-100 text-orange-950 dark:bg-orange-950/60 dark:text-orange-100',
@@ -79,6 +82,7 @@ const THEMES: Record<string, SubjectTheme> = {
     bar: 'bg-orange-500',
     stroke: 'stroke-orange-500',
     arena: 'tile-subject-orange',
+    edge: 'border-b-orange-300',
   },
   green: {
     header: 'bg-emerald-100 text-emerald-950 dark:bg-emerald-950/60 dark:text-emerald-100',
@@ -87,6 +91,7 @@ const THEMES: Record<string, SubjectTheme> = {
     bar: 'bg-emerald-500',
     stroke: 'stroke-emerald-500',
     arena: 'tile-subject-green',
+    edge: 'border-b-emerald-300',
   },
   purple: {
     header: 'bg-violet-100 text-violet-950 dark:bg-violet-950/60 dark:text-violet-100',
@@ -95,6 +100,7 @@ const THEMES: Record<string, SubjectTheme> = {
     bar: 'bg-violet-500',
     stroke: 'stroke-violet-500',
     arena: 'tile-subject-purple',
+    edge: 'border-b-violet-300',
   },
   indigo: {
     header: 'bg-indigo-100 text-indigo-950 dark:bg-indigo-950/60 dark:text-indigo-100',
@@ -103,6 +109,7 @@ const THEMES: Record<string, SubjectTheme> = {
     bar: 'bg-indigo-500',
     stroke: 'stroke-indigo-500',
     arena: 'tile-subject-indigo',
+    edge: 'border-b-indigo-300',
   },
   teal: {
     header: 'bg-teal-100 text-teal-950 dark:bg-teal-950/60 dark:text-teal-100',
@@ -111,6 +118,7 @@ const THEMES: Record<string, SubjectTheme> = {
     bar: 'bg-teal-500',
     stroke: 'stroke-teal-500',
     arena: 'tile-subject-teal',
+    edge: 'border-b-teal-300',
   },
   pink: {
     header: 'bg-pink-100 text-pink-950 dark:bg-pink-950/60 dark:text-pink-100',
@@ -119,6 +127,7 @@ const THEMES: Record<string, SubjectTheme> = {
     bar: 'bg-pink-500',
     stroke: 'stroke-pink-500',
     arena: 'tile-subject-pink',
+    edge: 'border-b-pink-300',
   },
   yellow: {
     header: 'bg-amber-100 text-amber-950 dark:bg-amber-950/60 dark:text-amber-100',
@@ -127,6 +136,7 @@ const THEMES: Record<string, SubjectTheme> = {
     bar: 'bg-amber-500',
     stroke: 'stroke-amber-500',
     arena: 'tile-subject-yellow',
+    edge: 'border-b-amber-300',
   },
   slate: {
     header: 'bg-slate-200 text-slate-950 dark:bg-slate-800/80 dark:text-slate-100',
@@ -135,6 +145,7 @@ const THEMES: Record<string, SubjectTheme> = {
     bar: 'bg-slate-500',
     stroke: 'stroke-slate-500',
     arena: 'tile-subject-slate',
+    edge: 'border-b-slate-300',
   },
 }
 
@@ -144,18 +155,18 @@ export function subjectTheme(color: string): SubjectTheme {
 
 // Décors d'ambiance par matière (public/images/matieres/<slug>.webp).
 // Seules les matières dont l'image est générée sont listées — les autres
-// gardent le header coloré uni.
-const SUBJECT_DECORS: Record<string, string> = {
-  maths: '/images/matieres/maths.webp',
-}
+// gardent le header coloré uni. (Vide pour l'instant : le décor maths a été
+// retiré ; l'identité matière passe désormais par les vignettes de carte.)
+const SUBJECT_DECORS: Record<string, string> = {}
 
 export function subjectDecor(slug: string): string | undefined {
   return SUBJECT_DECORS[slug]
 }
 
-// Vignettes illustrées des cartes matières de l'accueil Réviser (batch 8 du
-// doc de prompts) : illustration à fond transparent qui déborde du bord droit
-// de la carte. Ajouter le slug ici dès que l'image est déposée dans
+// Vignettes illustrées des cartes matières de l'accueil Réviser : illustration
+// à fond transparent, détourée et normalisée sur une toile carrée 320×320 (voir
+// scripts de génération) pour que toutes les cartes portent une image de taille
+// identique. Ajouter le slug ici dès que l'image est déposée dans
 // public/images/matieres/vignettes/<slug>.webp — repli sur le médaillon sinon.
 const VIGNETTE_SLUGS: string[] = [
   'anglais',
@@ -163,9 +174,14 @@ const VIGNETTE_SLUGS: string[] = [
   'francais',
   'hggsp',
   'histoire-geo',
+  'latin',
   'maths',
+  'nsi',
+  'philosophie',
   'physique-chimie',
+  'ses',
   'svt',
+  'technologie',
 ]
 
 export function subjectVignette(slug: string): string | undefined {

@@ -15,7 +15,7 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import DefiTimer from '@/components/DefiTimer'
-import { recordChallenge, recordRankedMatch } from '@/app/defi/actions'
+import { recordChallenge, recordDuelResult, recordRankedMatch } from '@/app/defi/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import {
@@ -235,6 +235,9 @@ export default function RankedMode({
     // XP du défi (barème serveur) — un match classé reste une session d'entraînement.
     recordChallenge(correctCount, answeredCount, 'duel').catch(() => {})
     recordReviewAnswers(reviewsRef.current).catch(() => {})
+    // Bilan V/D + monnaie de victoire : le classé compte AUSSI au bilan (en plus
+    // des trophées, versés par recordRankedMatch juste après).
+    recordDuelResult(iWon).catch(() => {})
     // Le résultat classé : trophées recalculés et persistés côté serveur.
     recordRankedMatch(iWon, seed, bot.name)
       .then((r) => {

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
+  Bot,
   Copy,
   Loader2,
   Heart,
@@ -18,8 +19,10 @@ import { sfx } from '@/lib/sounds'
 import { createClient } from '@/lib/supabase/client'
 import { useCoop } from '@/components/useCoop'
 import { recordChallenge } from '@/app/defi/actions'
+import { recordReviewAnswers } from '@/app/reviser/actions'
 import { nowMs, type ModeQuestion } from '@/lib/defi-modes'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
+import type { ReviewAnswer } from '@/lib/srs'
 import {
   coopStatus,
   coopQuestionState,
@@ -58,6 +61,8 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
     null,
   )
   const [copied, setCopied] = useState(false)
+  // Repli solo : on fait équipe avec un bot coéquipier (aucun 2e joueur requis).
+  const [botMode, setBotMode] = useState(false)
 
   const questions = useMemo<ModeQuestion[]>(() => {
     if (state.isHost) {
@@ -133,6 +138,11 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [iFinished, state.outcome])
 
+  // --- Repli solo : coéquipier bot -------------------------------------------
+  if (botMode) {
+    return <BotCoopMatch pool={pool} onExit={handleExit} />
+  }
+
   // --- Lobby -----------------------------------------------------------------
   if (state.phase === 'idle') {
     return (
@@ -152,6 +162,14 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
           disabled={pool.length < 2}
         >
           <Users className="size-4" /> Créer une équipe
+        </Button>
+        {/* Personne de dispo ? On joue tout de suite avec un bot coéquipier. */}
+        <Button
+          variant="secondary"
+          onClick={() => setBotMode(true)}
+          disabled={pool.length < 2}
+        >
+          <Bot className="size-4" /> Coéquipier bot
         </Button>
         <div className="text-center text-sm text-white/60">ou</div>
         <div className="flex gap-2">
@@ -289,6 +307,119 @@ function partnerDone(
   total: number,
 ): boolean {
   return partnerProgress(state.theirAnswers, total) >= total
+}
+
+// Coop solo : un coéquipier BOT rejoint l'équipe (aucun 2e joueur requis). Il
+// répond aux questions dans l'ordre, à un rythme humain (~2,5-6 s) et ~68 % de
+// réussite : assez pour aider sans jouer à ta place. Toute la logique d'équipe
+// (vies partagées, sauvetages) est la même que le vrai Coop — on réutilise
+// CoopPlay et coopStatus — et on crédite l'XP + la file « À revoir » à la fin.
+function BotCoopMatch({
+  pool,
+  onExit,
+}: {
+  pool: ModeQuestion[]
+  onExit: () => void
+}) {
+  const questions = useMemo(() => pool.slice(0, COOP_QUESTIONS), [pool])
+  const total = Math.min(questions.length, COOP_QUESTIONS)
+  const [myAnswers, setMyAnswers] = useState<CoopAnswer[]>([])
+  const [theirAnswers, setTheirAnswers] = useState<CoopAnswer[]>([])
+
+  const status = coopStatus(myAnswers, theirAnswers, total)
+  const finished =
+    status.outcome !== null ||
+    (total > 0 && myAnswers.length >= total && theirAnswers.length >= total)
+
+  // Le bot répond une question à la fois, tant que l'issue n'est pas tranchée.
+  const botNext = theirAnswers.length
+  useEffect(() => {
+    if (status.outcome || botNext >= total) return
+    const delay = 2500 + Math.random() * 3500
+    const id = window.setTimeout(() => {
+      setTheirAnswers((prev) =>
+        prev.length === botNext
+          ? [...prev, { q: botNext, correct: Math.random() < 0.68 }]
+          : prev,
+      )
+    }, delay)
+    return () => window.clearTimeout(id)
+  }, [botNext, total, status.outcome])
+
+  // Enregistre UNE fois en fin de partie : XP (questions sauvées) + file « À
+  // revoir » (mes réponses) + son de résultat.
+  const recordedRef = useRef(false)
+  useEffect(() => {
+    if (!finished || recordedRef.current || total === 0) return
+    recordedRef.current = true
+    recordChallenge(status.cleared, total, 'duel').catch(() => {})
+    const reviews: ReviewAnswer[] = myAnswers
+      .filter((a) => a.q >= 0 && a.q < total)
+      .map((a) => ({
+        kind: 'question',
+        id: questions[a.q].id,
+        subject: questions[a.q].subject,
+        good: a.correct,
+      }))
+    recordReviewAnswers(reviews).catch(() => {})
+    if (status.outcome === 'won') sfx.complete()
+    else if (status.outcome === 'lost') sfx.wrong()
+    else sfx.dayComplete()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [finished])
+
+  if (total === 0) {
+    return <Centered>Pas assez de questions pour une partie coop.</Centered>
+  }
+
+  if (finished) {
+    const won = status.outcome === 'won'
+    return (
+      <div className="mx-auto flex max-w-md flex-col items-center gap-4 p-8 text-center">
+        <span aria-hidden="true" className="text-6xl">
+          {won ? '🏆' : status.outcome === 'lost' ? '💔' : '🤝'}
+        </span>
+        <h2 className="font-heading text-2xl font-bold text-white">
+          {won
+            ? 'Équipe victorieuse !'
+            : status.outcome === 'lost'
+              ? 'Équipe à terre'
+              : 'Manche terminée'}
+        </h2>
+        <p className="flex items-center gap-2 rounded-full bg-highlight px-5 py-2.5 font-mono text-lg font-bold text-foreground tabular-nums">
+          <PartyPopper className="size-5" aria-hidden="true" />
+          {status.cleared}/{total} sauvées
+        </p>
+        <p className="text-sm text-white/75">
+          {won
+            ? 'Toi et ton bot avez tout géré. Refais-en une !'
+            : status.outcome === 'lost'
+              ? 'Les vies partagées sont tombées — retente ta chance !'
+              : 'Belle synchro avec ton coéquipier.'}
+        </p>
+        <Button onClick={onExit} className="press-3d-deep">
+          Retour à l’Arène
+        </Button>
+      </div>
+    )
+  }
+
+  return (
+    <CoopPlay
+      questions={questions}
+      total={total}
+      myAnswers={myAnswers}
+      theirAnswers={theirAnswers}
+      livesLeft={status.livesLeft}
+      partnerPresent
+      onAnswer={(q, correct) =>
+        setMyAnswers((prev) =>
+          prev.some((a) => a.q === q) ? prev : [...prev, { q, correct }],
+        )
+      }
+      onExit={onExit}
+    />
+  )
 }
 
 // La série d'équipe : je réponds à mon rythme, chaque question sous chrono.

@@ -18,7 +18,7 @@ export default function ReviewQueueCard({
 
   return (
     <section
-      className="rounded-2xl border-2 border-primary/25 bg-card p-4 shadow-sm"
+      className="rev-card rounded-2xl border border-black/[0.06] border-b-[6px] border-b-primary/35 bg-card p-4"
       aria-label="À revoir aujourd'hui"
     >
       <div className="flex items-start justify-between gap-3">

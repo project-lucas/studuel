@@ -29,20 +29,26 @@ export default function ResumeSessions({ items }: { items: ResumeItem[] }) {
         On s&apos;y remet ?
       </h2>
       <ul className="hide-scrollbar -mx-4 flex gap-3 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0">
-        {items.map((item) => {
+        {items.map((item, i) => {
           const theme = subjectTheme(item.subject.color)
           const pct = Math.round(item.progress * 100)
           return (
             <li key={item.chapterId} className="w-44 shrink-0">
               {/* Carte teintée à la couleur de la matière (et non blanche) :
                   la rangée de reprise se distingue au premier coup d'œil des
-                  autres blocs de la page, et chaque carte « dit » sa matière. */}
+                  autres blocs de la page, et chaque carte « dit » sa matière.
+                  Une brillance balaie la carte en continu (décalée d'une carte
+                  à l'autre) pour attirer l'œil vers la reprise. */}
               <Link
                 href={`/reviser/${item.subject.slug}/${item.chapterId}`}
                 onClick={() => sfx.tap()}
+                style={{ ['--sheen-delay' as string]: `${i * 1.3}s` }}
                 className={cn(
-                  'group flex h-full flex-col rounded-3xl p-4 shadow-sm ring-1 ring-black/10 transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]',
+                  // Même langage « bouton chunky » que les cartes matières :
+                  // socle 3D coloré (theme.edge) + appui tactile au tap.
+                  'group attract-sheen attract-sheen--soft rev-card flex h-full flex-col rounded-3xl border border-black/[0.06] border-b-[6px] p-4 transition-all duration-150 hover:-translate-y-0.5 active:translate-y-[3px] active:border-b-[3px]',
                   theme.header,
+                  theme.edge,
                 )}
               >
                 <div className="flex items-start justify-between">

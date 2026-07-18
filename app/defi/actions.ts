@@ -60,6 +60,11 @@ export async function recordChallenge(
     total: cleanTotal,
     xp,
   })
+  if (error) {
+    // Sans trace, l'élève perd en silence son XP + sa validation de série : on
+    // journalise comme les actions sœurs (claimWeeklyTrophy, recordDuelResult).
+    console.error('[defi] défi non enregistré:', error.message)
+  }
 
   // Coche « Révision quotidienne » (et « Test sur trajets » si on est en
   // créneau) du jour tout de suite, sans attendre le prochain chargement de /moi.
@@ -193,6 +198,44 @@ export async function recordRankedMatch(
     after: Number(r.after ?? myTrophies),
     delta: Number(r.delta ?? 0),
     best: Number(r.best ?? myTrophies),
+  }
+}
+
+// Issue d'un duel 1v1 → bilan Victoires/Défaites (profiles.wins/losses) + monnaie
+// de victoire plafonnée. Appelé à la fin de CHAQUE duel — salons, fantômes,
+// entraînement ET classé (en plus de recordRankedMatch qui bouge les trophées).
+// N'affecte NI les trophées NI le classement ; le montant de pièces est figé et
+// plafonné côté serveur (RPC record_duel_result, migration 174). Renvoie le
+// nouveau bilan + les pièces versées, ou null (déconnecté / migration absente).
+export type DuelResultOutcome = {
+  wins: number
+  losses: number
+  coinsAwarded: number
+} | null
+
+export async function recordDuelResult(won: boolean): Promise<DuelResultOutcome> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return null
+
+  const { data, error } = await supabase.rpc('record_duel_result', {
+    p_won: won === true,
+  })
+  if (error || !data) {
+    // Migration 174 pas encore passée, ou déconnexion : le duel reste jouable,
+    // seul le bilan V/D n'est pas mis à jour.
+    if (error) console.error('[defi] bilan V/D non enregistré:', error.message)
+    return null
+  }
+
+  revalidatePath('/defi')
+  const r = data as { wins: number; losses: number; coins_awarded: number }
+  return {
+    wins: Math.max(0, Number(r.wins) || 0),
+    losses: Math.max(0, Number(r.losses) || 0),
+    coinsAwarded: Math.max(0, Number(r.coins_awarded) || 0),
   }
 }
 

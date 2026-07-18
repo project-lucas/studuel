@@ -27,6 +27,7 @@ describe('subjectTheme', () => {
     'bar',
     'stroke',
     'arena',
+    'edge',
   ]
 
   it('repli sur le thème bleu pour une couleur inconnue', () => {
@@ -39,7 +40,7 @@ describe('subjectTheme', () => {
     expect(red.bar).toContain('rose')
   })
 
-  it('tout thème connu renseigne les 6 rôles (aucune classe vide)', () => {
+  it('tout thème connu renseigne les 7 rôles (aucune classe vide)', () => {
     for (const color of ['blue', 'red', 'green', 'purple', 'yellow', 'slate']) {
       const theme = subjectTheme(color)
       for (const key of KEYS) {
@@ -50,8 +51,10 @@ describe('subjectTheme', () => {
 })
 
 describe('subjectDecor', () => {
-  it('rend le décor des matières illustrées, undefined sinon', () => {
-    expect(subjectDecor('maths')).toBe('/images/matieres/maths.webp')
+  it('undefined tant qu’aucun décor de header n’est fourni', () => {
+    // Plus aucun décor listé : les headers matière retombent sur le fond
+    // coloré (arena-tile). Le repli undefined doit tenir pour tout slug.
+    expect(subjectDecor('maths')).toBeUndefined()
     expect(subjectDecor('philosophie')).toBeUndefined()
   })
 })
@@ -64,6 +67,7 @@ describe('subjectVignette', () => {
   })
 
   it('undefined pour un slug sans vignette générée', () => {
-    expect(subjectVignette('philosophie')).toBeUndefined()
+    // Maths expertes n'a pas (encore) d'illustration dédiée → repli médaillon.
+    expect(subjectVignette('maths-expertes')).toBeUndefined()
   })
 })

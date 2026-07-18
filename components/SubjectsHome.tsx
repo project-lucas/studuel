@@ -14,7 +14,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { subjectTheme } from '@/lib/subject-style'
+import { subjectTheme, subjectVignette } from '@/lib/subject-style'
 import {
   rankForValue,
   MASTERY_RANK_LABEL,
@@ -67,9 +67,14 @@ const RANK_COLOR: Record<MasteryRank, string> = {
 function CrownRating({
   rank,
   subjectName,
+  showLabel = true,
 }: {
   rank: MasteryRank | null
   subjectName: string
+  // Sur une carte illustrée, on masque le libellé texte (l'illustration occupe
+  // le coin bas-droit) : seules les couronnes restent, la légende de la page
+  // explique les rangs. Le rang reste annoncé via l'aria-label.
+  showLabel?: boolean
 }) {
   const filled = rank ? RANK_CROWNS[rank] : 0
   const color = rank ? RANK_COLOR[rank] : ''
@@ -94,15 +99,17 @@ function CrownRating({
           />
         ))}
       </span>
-      <span
-        aria-hidden="true"
-        className={cn(
-          'text-xs font-bold',
-          rank ? color : 'text-muted-foreground/70',
-        )}
-      >
-        {label}
-      </span>
+      {showLabel ? (
+        <span
+          aria-hidden="true"
+          className={cn(
+            'text-xs font-bold',
+            rank ? color : 'text-muted-foreground/70',
+          )}
+        >
+          {label}
+        </span>
+      ) : null}
     </div>
   )
 }
@@ -376,18 +383,25 @@ function SubjectRow({
 }) {
   const theme = subjectTheme(subject.color)
   const prox = exam ? PROX_STYLE[exam.proximity] : null
+  // Illustration dédiée de la matière (toile carrée normalisée) : elle habille
+  // la carte hors édition. Quand elle est là, elle remplace le médaillon
+  // d'icône — une seule image forte par carte, façon grande app.
+  const vignette = subjectVignette(subject.slug)
+  const showVignette = !!vignette && !editing
 
   const inner = (
     <div
       style={{ animationDelay: `${delayMs}ms` }}
       className={cn(
-        // Fond pastel de la matière (theme.tile) plutôt que blanc : chaque
-        // bloc porte sa couleur, la grille est moins monochrome.
-        'pop-in rev-card relative flex min-h-[92px] flex-col justify-between rounded-3xl p-3.5 transition',
+        // Bouton « chunky » façon jeu mobile : fond pastel de la matière + un
+        // socle 3D coloré (border-bottom épais à la couleur de la matière) et un
+        // appui tactile au tap. Chaque carte lit comme un vrai bouton scolaire.
+        'pop-in rev-card relative flex min-h-[116px] flex-col justify-between rounded-3xl border border-black/[0.06] border-b-[6px] p-3.5 transition-all duration-150 will-change-transform',
         theme.tile,
-        prox ? `ring-2 ${prox.ring}` : 'ring-1 ring-black/5',
+        theme.edge,
+        prox ? `ring-2 ${prox.ring}` : null,
         !editing &&
-          'group-hover:-translate-y-0.5 group-hover:shadow-lg group-active:translate-y-px',
+          'group-hover:-translate-y-0.5 group-active:translate-y-[3px] group-active:border-b-[3px]',
         editing && 'cursor-pointer',
         editing && !checked && 'opacity-45 grayscale',
       )}
@@ -396,7 +410,7 @@ function SubjectRow({
       {exam && prox && !editing ? (
         <span
           className={cn(
-            'absolute -top-2 right-2 flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold shadow-sm',
+            'absolute -top-2 right-2 z-20 flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold shadow-sm',
             prox.pill,
           )}
         >
@@ -405,7 +419,22 @@ function SubjectRow({
         </span>
       ) : null}
 
-      <div className="flex items-center gap-2.5">
+      {/* Illustration de la matière : ancrée en bas à droite, taille identique
+          d'une carte à l'autre. Purement décorative — le nom porte le sens. */}
+      {showVignette ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={vignette}
+          alt=""
+          aria-hidden="true"
+          width={320}
+          height={320}
+          loading="lazy"
+          className="pointer-events-none absolute right-0 bottom-0 z-0 size-[76px] select-none object-contain drop-shadow-[0_4px_10px_rgba(31,17,71,0.16)] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105"
+        />
+      ) : null}
+
+      <div className="relative z-10 flex items-center gap-2.5">
         {editing ? (
           <span
             className={cn(
@@ -417,7 +446,7 @@ function SubjectRow({
           >
             {checked ? <Check className="size-3" /> : null}
           </span>
-        ) : (
+        ) : showVignette ? null : (
           <span
             aria-hidden="true"
             className={cn(
@@ -432,12 +461,25 @@ function SubjectRow({
             />
           </span>
         )}
-        <p className="font-heading min-w-0 flex-1 text-base leading-tight font-bold">
+        <p
+          className={cn(
+            'font-heading min-w-0 flex-1 text-base leading-tight font-bold',
+            // Petite réserve à droite : le nom reste au-dessus, l'illustration
+            // vit dans le coin bas-droit sans le chevaucher.
+            showVignette && 'pr-2',
+          )}
+        >
           {subject.name}
         </p>
       </div>
 
-      <CrownRating rank={rankForValue(pct / 100)} subjectName={subject.name} />
+      <div className="relative z-10">
+        <CrownRating
+          rank={rankForValue(pct / 100)}
+          subjectName={subject.name}
+          showLabel={!showVignette}
+        />
+      </div>
     </div>
   )
 

@@ -198,7 +198,7 @@ export default function SubjectProgramme({
           <Link
             href={`/reviser/examen-blanc?subject=${subject.slug}`}
             onClick={() => sfx.tap()}
-            className="group mt-3 flex items-center gap-3 rounded-2xl bg-gradient-to-r from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] p-3.5 text-white shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.99]"
+            className="group mt-3 flex items-center gap-3 rounded-2xl border-b-4 border-b-black/25 bg-gradient-to-r from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] p-3.5 text-white shadow-md transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-[2px] active:border-b-2"
           >
             <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/15">
               <GraduationCap className="size-5.5" strokeWidth={2.2} aria-hidden="true" />

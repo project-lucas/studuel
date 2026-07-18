@@ -1,11 +1,13 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Copy, Loader2, Swords, Trophy, Wifi, WifiOff, Zap } from 'lucide-react'
+import { Bot, Copy, Loader2, Swords, Trophy, Wifi, WifiOff, Zap } from 'lucide-react'
 import { QRCodeSVG } from 'qrcode.react'
 import { Button } from '@/components/ui/button'
 import { createClient } from '@/lib/supabase/client'
 import { useLiveDuel } from '@/components/useLiveDuel'
+import DuelMode from '@/components/DuelMode'
+import { recordChallenge } from '@/app/defi/actions'
 import {
   ROUND_SIZE,
   nowMs,
@@ -26,6 +28,8 @@ type Props = {
   userId: string
   pool: ModeQuestion[] // questions de l'hôte (partagées avec le rival)
   subject?: string | null
+  // Niveau du joueur : calibre le bot d'entraînement (repli solo). Défaut 1.
+  myLevel?: number
   auto?: LiveDuelAutoStart
   onExit: () => void
 }
@@ -46,11 +50,15 @@ export default function LiveDuelMode({
   userId,
   pool,
   subject,
+  myLevel = 1,
   auto,
   onExit,
 }: Props) {
   const { state, create, join, sendRound, persist, leave } = useLiveDuel(userId)
   const [joinCode, setJoinCode] = useState('')
+  // Repli solo : on affronte un bot (duel BO3 contre un rival simulé). Rendu par
+  // DuelMode, qui porte déjà l'écran VS, les sons, l'XP et la file « À revoir ».
+  const [botMode, setBotMode] = useState(false)
   const [guestQuestions, setGuestQuestions] = useState<ModeQuestion[] | null>(
     null,
   )
@@ -121,12 +129,32 @@ export default function LiveDuelMode({
     }
   }, [auto, create, join, pool, subject])
 
-  // Persiste les manches en fin de duel (historique).
+  // Persiste les manches en fin de duel (historique) ET crédite l'XP : un vrai
+  // duel en direct gagné rapportait 0 XP (le serveur recalcule sur score/total
+  // réels). Garde one-shot : le `winner` ne bascule qu'une fois, mais l'effet
+  // pouvait rejouer si `myRounds`/`persist` changeaient d'identité.
+  const recordedRef = useRef(false)
   useEffect(() => {
-    if (state.winner && state.duelId) {
-      persist(state.duelId, state.myRounds)
-    }
+    if (!state.winner || !state.duelId) return
+    persist(state.duelId, state.myRounds)
+    if (recordedRef.current) return
+    recordedRef.current = true
+    const answered = state.myRounds.length * ROUND_SIZE
+    const correct = state.myRounds.reduce((s, r) => s + r.correct, 0)
+    recordChallenge(correct, answered, 'duel').catch(() => {})
   }, [state.winner, state.duelId, state.myRounds, persist])
+
+  // --- Repli solo : duel contre un bot ---------------------------------------
+  if (botMode) {
+    return (
+      <DuelMode
+        pool={pool}
+        myLevel={myLevel}
+        ghosts={[]}
+        onExit={handleExit}
+      />
+    )
+  }
 
   // --- Lobby -----------------------------------------------------------------
   if (state.phase === 'idle') {
@@ -141,6 +169,15 @@ export default function LiveDuelMode({
           disabled={pool.length < ROUND_SIZE}
         >
           Créer un duel
+        </Button>
+        {/* Personne sous la main ? On s'entraîne tout de suite contre un bot —
+            même format BO3, mais sans attendre un 2e joueur en ligne. */}
+        <Button
+          variant="secondary"
+          onClick={() => setBotMode(true)}
+          disabled={pool.length < ROUND_SIZE}
+        >
+          <Bot className="size-4" aria-hidden="true" /> Défier un bot
         </Button>
         <div className="text-muted-foreground text-center text-sm">ou</div>
         <div className="flex gap-2">

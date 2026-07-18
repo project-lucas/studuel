@@ -16,19 +16,18 @@ import { NotificationBadge } from './SculptedPlate'
  */
 export interface OrbItem {
   id: string
-  /** Libellé court affiché sous le disque. */
+  /** Libellé court affiché à côté du disque. */
   label: string
   /** Picto du disque (SVG dimensionné par l'appelant, ou emoji). */
   icon?: ReactNode
   /**
    * Médaillon illustré (chemin `/images/...`) qui remplace tout le disque —
-   * l'image porte déjà son cadre violet + liseré or, donc le fond de `.defi3-orb`
-   * est neutralisé. Prioritaire sur `icon`.
+   * l'image porte déjà son cadre violet + liseré or. Prioritaire sur `icon`.
    */
   image?: string
   /** Pastille corail en haut à droite du disque (compteur, « ! »…). */
   badge?: string
-  /** Aperçu sous le libellé (rang, minuterie…), en jeton sombre. */
+  /** Aperçu à côté du libellé (rang, minuterie…), en jeton sombre. */
   sub?: string
   /** Navigation directe — exclusif de `sheetContent`. */
   href?: string
@@ -50,11 +49,11 @@ interface ArenaHudProps {
 /**
  * La scène de l'onglet Défi : le décor d'arène est laissé libre au centre, et
  * toutes les entrées secondaires sont regroupées derrière un unique bouton
- * « burger » en haut à droite (au lieu des deux colonnes d'orbes qui
- * encombraient le fond). Le tap ouvre une feuille-menu listant les six
- * médaillons (ligue, classements, entraînement, clan, historique, amis) ;
- * chaque médaillon navigue (`href`) ou ouvre sa propre feuille de détail
- * (`sheetContent`, fournie par le serveur).
+ * « burger » calé EN BAS À DROITE. Au tap, le burger se DÉPLIE sur place : la
+ * pile des six médaillons (ligue, classements, entraînement, clan, historique,
+ * amis) se déroule verticalement vers le haut en cascade — un vrai menu
+ * dépliant, pas une feuille qui monte du bas. Chaque médaillon navigue (`href`)
+ * ou ouvre sa propre feuille de détail (`sheetContent`, fournie par le serveur).
  */
 export default function ArenaHud({
   leftOrbs,
@@ -87,116 +86,139 @@ export default function ArenaHud({
     setOpenId(id)
   }
 
+  // Cascade : les médaillons se déroulent depuis le burger vers le haut
+  // (staggerDirection -1 → le plus proche du bouton apparaît en premier).
+  const listVariants = {
+    open: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
+    closed: { transition: { staggerChildren: 0.03 } },
+  }
+  const rowVariants = reduce
+    ? { open: { opacity: 1 }, closed: { opacity: 0 } }
+    : {
+        open: { opacity: 1, y: 0, scale: 1 },
+        closed: { opacity: 0, y: 16, scale: 0.8 },
+      }
+
   return (
     <div className="relative min-h-0 flex-1">
-      {/* Bouton burger : unique porte vers les entrées secondaires, calé dans le
-          coin haut-droit pour dégager complètement le décor de l'arène. Le picto
-          est le parchemin scellé illustré (drop-shadow pour le détacher du décor,
-          pas de cadre — l'objet se suffit à lui-même). */}
-      <button
-        type="button"
-        onClick={() => {
-          sfx.tap()
-          setMenuOpen(true)
-        }}
-        aria-haspopup="dialog"
-        aria-label="Menu de l'arène — ligue, classements, clan, amis…"
-        className="olympe-press absolute top-0 right-0 z-10 flex size-14 cursor-pointer items-center justify-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
-      >
-        <Image
-          src="/images/defi/modes/burger.webp"
-          alt=""
-          width={56}
-          height={47}
-          className="w-11 drop-shadow-[0_3px_6px_rgba(0,0,0,0.55)]"
-          aria-hidden
-        />
-      </button>
-
       {/* Le centre, dégagé pour l'arène. */}
       <div className="flex h-full items-center justify-center px-6">
         {children}
       </div>
 
-      {/* Feuille-menu et feuille de détail — portail pour échapper à l'overflow
-          du layout. Les deux partagent la même mécanique (fond + panneau qui
-          monte du bas). */}
+      {/* Voile de fermeture : un tap hors du menu déplié le referme. Cantonné à
+          la scène (le reste de l'écran reste actionnable), fondu discret. */}
+      <AnimatePresence>
+        {menuOpen ? (
+          <motion.button
+            type="button"
+            aria-label="Fermer le menu"
+            className="absolute inset-0 z-10 cursor-default bg-black/25"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.18 }}
+            onClick={() => setMenuOpen(false)}
+          />
+        ) : null}
+      </AnimatePresence>
+
+      {/* Le menu dépliant, ancré en bas à droite : la pile des entrées au-dessus
+          du burger. Le parchemin descend d'un cran (-bottom) pour venir se
+          poser tout contre le bloc trophée qui le suit. */}
+      <div className="absolute right-1 -bottom-3 z-20 flex flex-col items-end gap-2">
+        <AnimatePresence>
+          {menuOpen ? (
+            <motion.ul
+              key="menu"
+              className="flex flex-col items-end gap-2"
+              variants={listVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
+            >
+              {items.map((item) => (
+                <motion.li key={item.id} variants={rowVariants}>
+                  <MenuRow item={item} onOpen={openSheet} />
+                </motion.li>
+              ))}
+            </motion.ul>
+          ) : null}
+        </AnimatePresence>
+
+        {/* Le burger lui-même : parchemin scellé, il pivote quand le menu est
+            ouvert (et refait office de bouton « fermer »). */}
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setMenuOpen((v) => !v)
+          }}
+          aria-haspopup="menu"
+          aria-expanded={menuOpen}
+          aria-label="Menu de l'arène — ligue, classements, clan, amis…"
+          className="olympe-press flex size-14 cursor-pointer items-center justify-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+        >
+          <motion.span
+            className="block"
+            animate={
+              reduce
+                ? undefined
+                : { rotate: menuOpen ? 90 : 0, scale: menuOpen ? 1.06 : 1 }
+            }
+            transition={{ type: 'spring', stiffness: 380, damping: 22 }}
+          >
+            <Image
+              src="/images/defi/modes/burger.webp"
+              alt=""
+              width={56}
+              height={47}
+              className="w-11 drop-shadow-[0_3px_6px_rgba(0,0,0,0.55)]"
+              aria-hidden
+            />
+          </motion.span>
+        </button>
+      </div>
+
+      {/* Feuille de détail d'une entrée (ligue, classements…) — portail pour
+          échapper à l'overflow du layout. */}
       {typeof document !== 'undefined'
         ? createPortal(
-            <>
-              {/* Feuille-menu : la grille des six médaillons. */}
-              <AnimatePresence>
-                {menuOpen ? (
-                  <SheetShell
-                    label="Menu de l'arène"
-                    reduce={reduce}
-                    onClose={() => setMenuOpen(false)}
-                    header={
-                      <>
+            <AnimatePresence>
+              {open ? (
+                <SheetShell
+                  label={open.sheetTitle ?? open.label}
+                  reduce={reduce}
+                  onClose={() => setOpenId(null)}
+                  header={
+                    <>
+                      {open.image ? (
                         <Image
-                          src="/images/defi/modes/burger.webp"
+                          src={open.image}
                           alt=""
                           width={36}
-                          height={30}
+                          height={36}
                           className="size-9 shrink-0 object-contain"
                           aria-hidden
                         />
-                        <h2 className="font-heading min-w-0 flex-1 truncate text-lg font-extrabold text-white">
-                          Menu
-                        </h2>
-                      </>
-                    }
-                  >
-                    <div className="grid grid-cols-3 gap-3 p-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))]">
-                      {items.map((item) => (
-                        <MenuTile
-                          key={item.id}
-                          item={item}
-                          onOpen={openSheet}
-                        />
-                      ))}
-                    </div>
-                  </SheetShell>
-                ) : null}
-              </AnimatePresence>
-
-              {/* Feuille de détail d'une entrée (ligue, classements…). */}
-              <AnimatePresence>
-                {open ? (
-                  <SheetShell
-                    label={open.sheetTitle ?? open.label}
-                    reduce={reduce}
-                    onClose={() => setOpenId(null)}
-                    header={
-                      <>
-                        {open.image ? (
-                          <Image
-                            src={open.image}
-                            alt=""
-                            width={36}
-                            height={36}
-                            className="size-9 shrink-0 object-contain"
-                            aria-hidden
-                          />
-                        ) : (
-                          <span
-                            className="grid size-9 shrink-0 place-items-center rounded-xl border border-white/12 bg-white/8 leading-none"
-                            aria-hidden
-                          >
-                            {open.icon}
-                          </span>
-                        )}
-                        <h2 className="font-heading min-w-0 flex-1 truncate text-lg font-extrabold text-white">
-                          {open.sheetTitle ?? open.label}
-                        </h2>
-                      </>
-                    }
-                  >
-                    {open.sheetContent}
-                  </SheetShell>
-                ) : null}
-              </AnimatePresence>
-            </>,
+                      ) : (
+                        <span
+                          className="grid size-9 shrink-0 place-items-center rounded-xl border border-white/12 bg-white/8 leading-none"
+                          aria-hidden
+                        >
+                          {open.icon}
+                        </span>
+                      )}
+                      <h2 className="font-heading min-w-0 flex-1 truncate text-lg font-extrabold text-white">
+                        {open.sheetTitle ?? open.label}
+                      </h2>
+                    </>
+                  }
+                >
+                  {open.sheetContent}
+                </SheetShell>
+              ) : null}
+            </AnimatePresence>,
             document.body,
           )
         : null}
@@ -263,11 +285,12 @@ function SheetShell({
 }
 
 /**
- * Une tuile de la feuille-menu : le médaillon « objet sculpté » (anneau or
- * ciselé + cœur gemme + icône crème) surmonté de son libellé et d'un éventuel
- * aperçu. Navigue (`href`) ou ouvre la feuille de détail via `onOpen`.
+ * Une entrée de la pile dépliée : un libellé (jeton verre fumé, avec un éventuel
+ * aperçu) à gauche, le médaillon « objet sculpté » (anneau or + cœur gemme +
+ * icône crème) à droite, aligné sous le burger. Navigue (`href`) ou ouvre la
+ * feuille de détail via `onOpen`.
  */
-function MenuTile({
+function MenuRow({
   item,
   onOpen,
 }: {
@@ -280,42 +303,49 @@ function MenuTile({
     </NotificationBadge>
   ) : null
 
-  // Un médaillon illustré (`image`) porte déjà son cadre : il remplace tout le
-  // disque, comme dans la feuille de détail. Sinon, le disque « objet sculpté »
-  // (anneau or + cœur gemme) avec l'icône crème.
+  // Un médaillon illustré (`image`) porte déjà son cadre ; sinon le disque
+  // « objet sculpté » compact (anneau or + cœur gemme) avec l'icône crème.
   const medallion = item.image ? (
-    <span className="olympe-medallion-img relative block size-16 shrink-0 rounded-full">
+    <span className="olympe-medallion-img relative block size-12 shrink-0 rounded-full">
       <Image
         src={item.image}
         alt=""
-        width={64}
-        height={64}
+        width={48}
+        height={48}
         className="size-full rounded-full object-contain drop-shadow-[0_5px_10px_rgba(0,0,0,0.5)]"
         aria-hidden
       />
       {badge}
     </span>
   ) : (
-    <span className="olympe-medallion relative">
+    <span className="olympe-medallion olympe-medallion--sm relative">
       <span className="olympe-medallion-core">{item.icon}</span>
       {badge}
     </span>
   )
 
-  const face = (
-    <>
-      {medallion}
-      <span className="defi3-orb-label max-w-full truncate">{item.label}</span>
+  const label = (
+    <span className="olympe-glass flex items-center gap-1.5 rounded-full py-1.5 pr-3 pl-3.5">
+      <span className="font-heading text-sm font-extrabold whitespace-nowrap text-white">
+        {item.label}
+      </span>
       {item.sub ? (
-        <span className="olympe-tag max-w-full truncate rounded-full px-2 py-0.5 font-heading text-[0.55rem] font-extrabold">
+        <span className="olympe-tag rounded-full px-1.5 py-0.5 font-heading text-[0.6rem] font-extrabold">
           {item.sub}
         </span>
       ) : null}
+    </span>
+  )
+
+  const face = (
+    <>
+      {label}
+      {medallion}
     </>
   )
 
   const className =
-    'defi2-press flex cursor-pointer flex-col items-center gap-1 rounded-2xl py-2 focus-visible:outline-none focus-visible:[&_.olympe-medallion]:ring-4 focus-visible:[&_.olympe-medallion]:ring-highlight/60 focus-visible:[&_.olympe-medallion-img]:ring-4 focus-visible:[&_.olympe-medallion-img]:ring-highlight/60'
+    'defi2-press flex cursor-pointer items-center gap-2.5 rounded-full focus-visible:outline-none focus-visible:[&_.olympe-medallion]:ring-4 focus-visible:[&_.olympe-medallion]:ring-highlight/60 focus-visible:[&_.olympe-medallion-img]:ring-4 focus-visible:[&_.olympe-medallion-img]:ring-highlight/60'
 
   if (item.href) {
     return (

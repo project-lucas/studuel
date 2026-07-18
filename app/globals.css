@@ -724,6 +724,25 @@ a:hover > .wiggle-on-hover {
   background-color: color-mix(in oklch, var(--primary), black 55%);
 }
 
+/* Fond des modes de jeu compétitifs (Match classé, Coop) joués en plein écran :
+   un violet profond UNI (pas l'image d'arène chargée), pour que la partie soit
+   une vraie page lisible et non un calque posé sur le décor. Les modes « clairs »
+   (Blitz, Chrono, Survie, Boss, Duel, Duel en direct) utilisent, eux, le fond
+   crème `bg-background` — voir components/defi/ModeStage.tsx. */
+.mode-stage-dark {
+  background:
+    radial-gradient(
+      120% 80% at 50% -10%,
+      color-mix(in oklch, var(--primary), white 6%) 0%,
+      transparent 62%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--primary), black 42%) 0%,
+      color-mix(in oklch, var(--primary), black 62%) 100%
+    );
+}
+
 /* Une couche d'image du fond : la nouvelle variante se monte PAR-DESSUS
    l'ancienne et apparaît en fondu (~500 ms). */
 @keyframes arena-fade-in {
@@ -895,6 +914,314 @@ a:hover > .wiggle-on-hover {
 }
 .go-ring {
   animation: ring-spin 24s linear infinite;
+}
+
+/* --- Atmosphère vivante de l'Arène : flammes + feuilles au vent ---------------
+   Monté DANS le WorldBackdrop du Défi (voir components/ArenaAtmosphere.tsx),
+   PAR-DESSUS le décor peint. Tout est décoratif : pointer-events désactivés,
+   animations transform/opacity/filter uniquement, et neutralisées si
+   l'utilisateur préfère réduire le mouvement. Les positions en % suivent la
+   composition portrait de l'illustration (braseros violets en bas, torches
+   dorées de part et d'autre de l'escalier, feuilles dans la bande médiane). */
+.arena-atmos {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Une flamme : halo radial doux qui vacille (l'exactitude au pixel n'est pas
+   requise — le halo est diffus, il « rallume » la zone peinte). Deux rythmes
+   superposés (vacillement + respiration) pour un feu organique, jamais robotique. */
+@keyframes arena-flame-flicker {
+  0% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(0.92) scaleY(0.96);
+  }
+  18% {
+    opacity: 0.85;
+    transform: translate(-50%, -52%) scale(1.05) scaleY(1.08);
+  }
+  33% {
+    opacity: 0.62;
+    transform: translate(-51%, -50%) scale(0.97) scaleY(1);
+  }
+  52% {
+    opacity: 0.92;
+    transform: translate(-49%, -53%) scale(1.08) scaleY(1.12);
+  }
+  71% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(0.95) scaleY(0.98);
+  }
+  87% {
+    opacity: 0.8;
+    transform: translate(-50%, -51%) scale(1.02) scaleY(1.05);
+  }
+  100% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(0.92) scaleY(0.96);
+  }
+}
+.arena-flame {
+  position: absolute;
+  width: 26%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  will-change: opacity, transform;
+  animation: arena-flame-flicker 2.4s ease-in-out infinite;
+}
+/* Braseros violets : les deux vasques au sol, à gauche et à droite. */
+.arena-flame--violet {
+  background: radial-gradient(
+    circle,
+    rgba(214, 158, 255, 0.9) 0%,
+    rgba(168, 85, 247, 0.55) 34%,
+    rgba(123, 79, 216, 0.22) 60%,
+    transparent 72%
+  );
+}
+.arena-flame--gold {
+  width: 17%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 236, 179, 0.92) 0%,
+    rgba(249, 178, 51, 0.55) 36%,
+    rgba(217, 119, 6, 0.2) 62%,
+    transparent 74%
+  );
+}
+.arena-flame--vl {
+  left: 9%;
+  top: 80%;
+  animation-duration: 2.6s;
+}
+.arena-flame--vr {
+  left: 88%;
+  top: 80%;
+  animation-duration: 2.1s;
+  animation-delay: -0.9s;
+}
+.arena-flame--gl {
+  left: 19%;
+  top: 36%;
+  animation-duration: 1.9s;
+  animation-delay: -0.5s;
+}
+.arena-flame--gr {
+  left: 81%;
+  top: 36%;
+  animation-duration: 2.3s;
+  animation-delay: -1.4s;
+}
+
+/* Étincelles : de fines braises dorées qui montent des braseros et s'éteignent. */
+@keyframes arena-mote-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  12% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-70px) translateX(var(--mote-drift, 8px)) scale(0.4);
+  }
+}
+.arena-mote {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffe8a3 0%, rgba(249, 178, 51, 0.6) 60%, transparent 75%);
+  will-change: transform, opacity;
+  animation: arena-mote-rise 3.4s ease-out infinite;
+}
+
+/* Feuilles de laurier : chute lente en diagonale (le vent) + tangage. La
+   translation est portée par l'élément, la rotation par l'enfant, pour composer
+   « dérive » et « tangage » sans conflit de transform. */
+@keyframes arena-leaf-fall {
+  0% {
+    transform: translate(0, -8vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(var(--leaf-x, 10vw), 42vh);
+    opacity: 0;
+  }
+}
+@keyframes arena-leaf-sway {
+  0% {
+    transform: rotate(-24deg) scaleX(1);
+  }
+  50% {
+    transform: rotate(28deg) scaleX(0.82);
+  }
+  100% {
+    transform: rotate(-24deg) scaleX(1);
+  }
+}
+.arena-leaf {
+  position: absolute;
+  width: 16px;
+  height: auto;
+  will-change: transform, opacity;
+  animation: arena-leaf-fall 13s linear infinite;
+}
+.arena-leaf svg {
+  display: block;
+  animation: arena-leaf-sway 2.6s ease-in-out infinite;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+}
+.arena-leaf--1 {
+  left: 22%;
+  --leaf-x: 9vw;
+  animation-duration: 14s;
+  animation-delay: -3s;
+}
+.arena-leaf--2 {
+  left: 68%;
+  --leaf-x: -11vw;
+  animation-duration: 11s;
+  animation-delay: -7s;
+}
+.arena-leaf--2 svg {
+  animation-duration: 2s;
+}
+.arena-leaf--3 {
+  left: 46%;
+  --leaf-x: 7vw;
+  width: 12px;
+  animation-duration: 16s;
+  animation-delay: -11s;
+}
+.arena-leaf--3 svg {
+  animation-duration: 3.1s;
+}
+.arena-leaf--4 {
+  left: 82%;
+  --leaf-x: -8vw;
+  width: 13px;
+  animation-duration: 12.5s;
+  animation-delay: -5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arena-flame {
+    animation: none;
+    opacity: 0.7;
+  }
+  .arena-mote,
+  .arena-leaf {
+    display: none;
+  }
+}
+
+/* --- Brillance continue « attire-l'œil » (façon Clash Royale) -----------------
+   Une bande de lumière diagonale traverse périodiquement l'élément pour attirer
+   le regard sur une action clé, sans clignoter agressivement. À poser sur un
+   conteneur `position: relative; overflow: hidden`. Neutralisée en reduced-motion. */
+@keyframes attract-sheen-sweep {
+  0% {
+    transform: translateX(-160%) rotate(8deg);
+  }
+  14%,
+  100% {
+    transform: translateX(160%) rotate(8deg);
+  }
+}
+.attract-sheen {
+  position: relative;
+  overflow: hidden;
+}
+.attract-sheen::after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  bottom: -30%;
+  left: -40%;
+  width: 40%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 100%
+  );
+  transform: translateX(-160%) rotate(8deg);
+  animation: attract-sheen-sweep 4.2s ease-in-out infinite;
+  animation-delay: var(--sheen-delay, 0s);
+}
+/* Variante douce sur carte crème/colorée : reflet moins intense. */
+.attract-sheen--soft::after {
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.34) 50%,
+    transparent 100%
+  );
+  animation-duration: 5.6s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .attract-sheen::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+/* --- Bloc trophées « plaque de marbre ciselée » ------------------------------
+   Reconstruit en CSS net (au lieu d'un raster pleine largeur) : plus petit,
+   plus fin, infiniment croustillant. Marbre crème + cadre or + deux gemmes
+   violettes en bout, dans le vocabulaire olympe. */
+.trophy-plate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  background:
+    linear-gradient(158deg, rgba(120, 140, 180, 0.12), rgba(255, 255, 255, 0) 58%),
+    #faf6ef;
+  border: 2px solid color-mix(in oklch, var(--highlight), black 3%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    inset 0 0 0 3px rgba(249, 178, 51, 0.25),
+    0 4px 0 var(--foreground),
+    0 10px 18px -8px rgba(0, 0, 0, 0.5);
+}
+/* Gemme violette en losange, sertie sur le cadre à chaque extrémité. */
+.trophy-gem {
+  position: absolute;
+  top: 50%;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 3px;
+  background: radial-gradient(circle at 50% 30%, #b98bf0 0%, #7b4fd8 55%, #5b35b0 100%);
+  border: 1.5px solid var(--highlight);
+  box-shadow:
+    0 0 0 2px var(--foreground),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  transform: translateY(-50%) rotate(45deg);
+}
+.trophy-gem--l {
+  left: -0.42rem;
+}
+.trophy-gem--r {
+  right: -0.42rem;
 }
 
 /* Coffre du Trésor : léger dandinement pour inviter au tap */
@@ -1643,6 +1970,13 @@ a:hover > .wiggle-on-hover {
     inset 0 2px 0 rgba(255, 255, 255, 0.5),
     0 5px 10px -3px rgba(0, 0, 0, 0.55);
 }
+/* Variante compacte pour le menu dépliant du burger (colonne d'entrées). */
+.olympe-medallion--sm {
+  width: 3rem;
+  height: 3rem;
+  padding: 4px;
+  border-width: 2.5px;
+}
 .olympe-medallion-core {
   width: 100%;
   height: 100%;
@@ -1765,6 +2099,34 @@ a:hover > .wiggle-on-hover {
 }
 .tab-center-active {
   filter: drop-shadow(0 0 10px color-mix(in oklch, var(--primary), transparent 35%));
+}
+/* Halo violet qui suit l'onglet actif : blob radial centré sur l'icône, glissé
+   d'un onglet à l'autre. `left` est posé en ligne (index actif) ; on recentre
+   avec translateX(-50%) et on garde le blob DERRIÈRE les icônes (z-index 0,
+   les <li> passent au-dessus en z-10). */
+.tab-glow {
+  position: absolute;
+  bottom: 2px;
+  z-index: 0;
+  width: 78px;
+  height: 78px;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  /* Cœur violet vif qui reste dense jusqu'à 40% du rayon, puis fond : ainsi le
+     halo déborde AUTOUR de l'icône (opaque au centre) et reste bien visible. */
+  background: radial-gradient(
+    circle,
+    color-mix(in oklch, var(--primary), transparent 55%) 0%,
+    color-mix(in oklch, var(--primary), transparent 70%) 45%,
+    transparent 78%
+  );
+  filter: blur(6px);
+  pointer-events: none;
+  transition: left 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+/* L'onglet central (Défi) est surélevé de 8px : on remonte le halo d'autant. */
+.tab-glow[data-center] {
+  bottom: 10px;
 }
 
 /* Accessibilité : on coupe les animations si l'utilisateur les refuse */

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { sfx } from '@/lib/sounds'
 import { claimLoginReward } from '@/app/tresor/actions'
@@ -17,6 +17,7 @@ export default function DailyLoginReward() {
   const [reward, setReward] = useState<{ coins: number; streak: number } | null>(
     null,
   )
+  const dismissRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const key = todayKey()
@@ -34,6 +35,21 @@ export default function DailyLoginReward() {
       cancelled = true
     }
   }, [])
+
+  // Modale : focus sur « Récupérer » à l'ouverture + fermeture au clavier
+  // (Échap) — cohérent avec PalierCelebration / ChestOpenModal.
+  useEffect(() => {
+    if (!reward) return
+    dismissRef.current?.focus()
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        sfx.coin()
+        setReward(null)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [reward])
 
   if (!reward) return null
 
@@ -71,7 +87,11 @@ export default function DailyLoginReward() {
             <>Reviens demain : la récompense grossit chaque jour de suite. 🔥</>
           )}
         </p>
-        <Button onClick={collect} className="mt-5 w-full rounded-full">
+        <Button
+          ref={dismissRef}
+          onClick={collect}
+          className="mt-5 w-full rounded-full"
+        >
           Récupérer
         </Button>
       </div>

@@ -140,7 +140,7 @@ export default function CompagnonCard({
                   setEditing(true)
                 }}
                 aria-label="Renommer ton compagnon"
-                className="text-muted-foreground transition-colors hover:text-foreground"
+                className="-m-1.5 flex size-11 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Pencil className="size-3.5" />
               </button>

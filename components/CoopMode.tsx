@@ -203,6 +203,7 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
         </p>
         <button
           type="button"
+          aria-label="Copier le code de l'équipe"
           onClick={async () => {
             if (state.sessionId) {
               await navigator.clipboard?.writeText(state.sessionId)

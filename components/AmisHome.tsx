@@ -594,7 +594,7 @@ function GeoRankingSection({
                 setScope(s)
               }}
               className={cn(
-                'flex-1 rounded-xl px-1 py-1.5 text-xs font-semibold transition-colors',
+                'flex min-h-11 flex-1 items-center justify-center rounded-xl px-1 text-xs font-semibold transition-colors',
                 active
                   ? 'bg-primary text-primary-foreground shadow-sm'
                   : 'text-muted-foreground hover:text-foreground',
@@ -661,7 +661,7 @@ function PendingRow({ request }: { request: PendingRequest }) {
         type="button"
         aria-label={`Refuser la demande de ${request.name}`}
         disabled={pending}
-        className="flex size-8 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted disabled:opacity-50"
+        className="flex size-11 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted disabled:opacity-50"
         onClick={() => {
           sfx.tap()
           start(async () => {

@@ -224,6 +224,7 @@ export default function LiveDuelMode({
 
           <button
             type="button"
+            aria-label="Copier le code du duel"
             onClick={async () => {
               if (state.duelId) {
                 await navigator.clipboard?.writeText(state.duelId)

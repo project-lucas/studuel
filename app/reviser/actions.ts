@@ -160,8 +160,10 @@ export async function finishReviewSession(
     total: clean.length,
   })
   if (!error) {
-    await validateRevisionToday(supabase, user.id)
-    await validateCommuteToday(supabase, user.id)
+    await Promise.all([
+      validateRevisionToday(supabase, user.id),
+      validateCommuteToday(supabase, user.id),
+    ])
   }
 
   // Bonus Revanche : la fonction SQL revérifie que la Revanche est vide et
@@ -241,8 +243,10 @@ export async function finishExamBlanc(
     }),
   ])
   if (!xpError) {
-    await validateRevisionToday(supabase, user.id)
-    await validateCommuteToday(supabase, user.id)
+    await Promise.all([
+      validateRevisionToday(supabase, user.id),
+      validateCommuteToday(supabase, user.id),
+    ])
   }
 
   revalidatePath('/reviser')

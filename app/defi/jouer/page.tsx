@@ -18,7 +18,7 @@ import {
 } from '@/lib/defi-modes'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import { createClient } from '@/lib/supabase/server'
-import { computeStreak, toDayKey } from '@/lib/streak'
+import { activityCutoff, computeStreak, toDayKey } from '@/lib/streak'
 import { getChapterMastery } from '@/lib/mastery'
 import { normalizeExamList, activeExams, examChapterIds } from '@/lib/next-exam'
 import { computeXp, levelFor } from '@/lib/xp'
@@ -139,19 +139,23 @@ export default async function DefiJouerPage({
     supabase
       .from('test_sessions')
       .select('created_at, score')
-      .eq('user_id', user.id),
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
     supabase
       .from('study_sessions')
       .select('created_at, cards_count')
-      .eq('user_id', user.id),
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
     supabase
       .from('lesson_completions')
       .select('created_at')
-      .eq('user_id', user.id),
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
     supabase
       .from('challenge_sessions')
       .select('created_at, xp')
-      .eq('user_id', user.id),
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
     getChapterMastery(supabase, user.id),
     supabase
       .from('quizzes')

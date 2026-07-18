@@ -64,8 +64,10 @@ export async function recordChallenge(
   // Coche « Révision quotidienne » (et « Test sur trajets » si on est en
   // créneau) du jour tout de suite, sans attendre le prochain chargement de /moi.
   if (!error) {
-    await validateRevisionToday(supabase, user.id)
-    await validateCommuteToday(supabase, user.id, slots)
+    await Promise.all([
+      validateRevisionToday(supabase, user.id),
+      validateCommuteToday(supabase, user.id, slots),
+    ])
   }
 
   revalidatePath('/defi')

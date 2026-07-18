@@ -119,8 +119,12 @@ export default async function MoiPage({
   // Profil + habitudes d'abord (nécessaires à la synchro auto).
   // capacity_quiz voyage avec le profil : si 013_capacite.sql n'est pas passée,
   // profileError le signale (bandeau migration) et la page continue, dégradée.
-  const [{ data: profile, error: profileError }, { data: habits }, { data: avatarRow }] =
-    await Promise.all([
+  const [
+    { data: profile, error: profileError },
+    { data: habits },
+    { data: avatarRow },
+    { data: goalsRow },
+  ] = await Promise.all([
     supabase
       .from('profiles')
       .select('full_name, grade_level, selected_subjects, commute_slots, capacity_quiz')
@@ -135,6 +139,9 @@ export default async function MoiPage({
     // passée) — son absence ne doit pas casser la lecture du profil (prénom,
     // créneaux) ni afficher un bandeau de migration trompeur.
     supabase.from('profiles').select('avatar').eq('id', user.id).maybeSingle(),
+    // weekly_goals isolé de même (157 peut-être pas passée) mais chargé en
+    // parallèle ici plutôt qu'en requête série plus bas.
+    supabase.from('profiles').select('weekly_goals').eq('id', user.id).maybeSingle(),
   ])
 
   const commuteSlots: CommuteSlot[] = Array.isArray(profile?.commute_slots)
@@ -413,12 +420,8 @@ export default async function MoiPage({
   )
   // Objectifs perso de la semaine : colonne isolée (migration 157 peut-être pas
   // passée) — son absence ne casse pas le reste (liste vide, dégradé propre).
+  // goalsRow est chargé en parallèle dans le Promise.all du haut de page.
   const weekStart = weekDates[0]
-  const { data: goalsRow } = await supabase
-    .from('profiles')
-    .select('weekly_goals')
-    .eq('id', user.id)
-    .maybeSingle()
   const weekGoals = goalsForWeek(
     normalizeWeeklyGoalsList(
       (goalsRow as { weekly_goals?: unknown } | null)?.weekly_goals,

@@ -33,6 +33,18 @@ export default async function ParentsPage() {
   } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
+  // Garde de rôle : l'espace parents ne s'ouvre pas à un compte élève (le code
+  // de liaison est le même que le code ami partagé en classe — cf. migration
+  // 172). Un parent a profile_type 'parent' (ou NULL legacy) ; un élève 'eleve'.
+  const { data: me } = await supabase
+    .from('profiles')
+    .select('profile_type')
+    .eq('id', user.id)
+    .maybeSingle()
+  if ((me as { profile_type?: string | null } | null)?.profile_type === 'eleve') {
+    redirect('/reviser')
+  }
+
   // Enfants liés (tolère une base sans la migration 044 : data = null).
   const { data: childrenData } = await supabase.rpc('parent_children_overview')
   const children = (childrenData ?? []) as ChildRow[]

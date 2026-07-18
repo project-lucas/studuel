@@ -53,8 +53,9 @@ export const VERDICT_LABELS: Record<ExamVerdict, string> = {
   a_revoir: 'À revoir',
 }
 
-// Mêmes seuils d'esprit que la maîtrise des chapitres (lib/mastery.ts) :
-// ≥ 75 % en conditions d'examen = solide, ≥ 50 % = fragile, sinon à revoir.
+// Seuils PROPRES à l'examen blanc, volontairement plus souples que la maîtrise
+// de chapitre (lib/mastery.ts, « acquis » à 80 %) : en conditions d'examen,
+// ≥ 75 % = solide, ≥ 50 % = fragile, sinon à revoir.
 export function verdictFor(ratio: number): ExamVerdict {
   if (ratio >= 0.75) return 'solide'
   if (ratio >= 0.5) return 'fragile'

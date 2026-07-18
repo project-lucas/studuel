@@ -58,6 +58,51 @@ export function drawChestReward(rand: number = Math.random()): ChestReward {
   return CHEST_REWARDS[0]
 }
 
+// Récompense minimale telle que renvoyée par le tirage SERVEUR (open_chest_v2,
+// migration 168) : le serveur ne renvoie que le strict nécessaire (kind +
+// amount OU item_id), le libellé et l'emoji d'affichage sont ré-résolus ici.
+export type ServerReward = {
+  kind?: string | null
+  amount?: number | null
+  item_id?: string | null
+}
+
+// Reconstitue un ChestReward affichable à partir de la récompense autoritaire
+// du serveur. Renvoie null si le payload est incohérent (montant NaN/négatif,
+// carte inconnue) — l'appelant traite alors l'ouverture comme indisponible
+// plutôt que d'afficher une fausse récompense.
+export function resolveServerReward(
+  raw: ServerReward | null | undefined,
+): ChestReward | null {
+  if (!raw) return null
+
+  if (raw.kind === 'coins') {
+    const amount = Number(raw.amount)
+    if (!Number.isFinite(amount) || amount <= 0) return null
+    // Réutilise l'entrée du catalogue (emoji/label soignés) quand le montant
+    // correspond à un palier connu ; sinon, libellé générique.
+    const known = CHEST_REWARDS.find(
+      (r) => r.kind === 'coins' && r.amount === amount,
+    )
+    if (known) return known
+    return { kind: 'coins', amount, emoji: '🪙', label: `+${amount} pièces`, weight: 0 }
+  }
+
+  if (raw.kind === 'sticker' && raw.item_id) {
+    const card = COLLECTION_CATALOG.find((c) => c.id === raw.item_id)
+    if (!card) return null
+    return {
+      kind: 'sticker',
+      emoji: card.emoji,
+      label: `Carte « ${card.name} » débloquée !`,
+      weight: 0,
+      itemId: card.id,
+    }
+  }
+
+  return null
+}
+
 export const RARITY_LABEL: Record<Rarity, string> = {
   commune: 'Commune',
   rare: 'Rare',

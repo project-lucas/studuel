@@ -6,12 +6,15 @@ import {
   SHOP_CATALOG,
   COLLECTION_CATALOG,
   drawChestReward,
+  resolveServerReward,
   type ChestReward,
 } from '@/lib/tresor'
 
+type ServerClient = Awaited<ReturnType<typeof createClient>>
+
 // Solde courant (après opération) — bigint PostgREST : nombre ou chaîne.
 async function currentCoins(
-  supabase: Awaited<ReturnType<typeof createClient>>,
+  supabase: ServerClient,
   userId: string,
 ): Promise<number> {
   const { data } = await supabase
@@ -29,10 +32,11 @@ export type ChestResult = {
   coins: number
 }
 
-// Ouvre le coffre du jour : tirage côté serveur, crédit atomique en SQL
-// (open_chest garantit une ouverture par jour UTC). Un sticker débloque une
-// carte de collection encore verrouillée ; s'il n'en reste aucune, il se
-// transforme en pièces.
+// Ouvre le coffre du jour. Le tirage est AUTORITAIRE côté serveur : depuis la
+// migration 168, `open_chest_v2` tire la récompense elle-même en SQL (le client
+// ne peut plus la choisir, même par appel RPC direct) et la renvoie. Tant que
+// 168 n'est pas exécutée, on retombe sur l'ancien chemin (tirage dans l'action
+// + `open_chest`). Une ouverture par jour UTC dans les deux cas.
 export async function openDailyChest(): Promise<ChestResult> {
   const supabase = await createClient()
   const {
@@ -40,13 +44,47 @@ export async function openDailyChest(): Promise<ChestResult> {
   } = await supabase.auth.getUser()
   if (!user) return { opened: false, reward: null, coins: 0 }
 
+  const drawn = await drawServerChest(supabase)
+  if (drawn === 'unavailable') {
+    // Migration 168 pas encore passée : ancien chemin (identique à avant).
+    return openDailyChestLegacy(supabase, user.id)
+  }
+  if (!drawn) return { opened: false, reward: null, coins: 0 }
+
+  const coins = await currentCoins(supabase, user.id)
+  revalidatePath('/coffre')
+  return { opened: true, reward: drawn, coins }
+}
+
+// Tirage serveur (168). Renvoie la récompense tirée, `null` si déjà ouvert /
+// non connecté, `'unavailable'` si la fonction n'existe pas encore (repli).
+async function drawServerChest(
+  supabase: ServerClient,
+): Promise<ChestReward | null | 'unavailable'> {
+  const { data, error } = await supabase.rpc('open_chest_v2')
+  if (error) {
+    // PGRST202 = fonction absente du cache de schéma → migration 168 en attente.
+    if (error.code === 'PGRST202') return 'unavailable'
+    console.error('[tresor] ouverture du coffre impossible:', error.message)
+    return null
+  }
+  // `data` est la récompense (JSONB) ou null (déjà ouvert aujourd'hui).
+  return resolveServerReward(data as Parameters<typeof resolveServerReward>[0])
+}
+
+// Ancien chemin (avant 168) : tirage dans l'action, crédit via `open_chest`.
+// Conservé comme repli tant que la migration 168 n'est pas exécutée.
+async function openDailyChestLegacy(
+  supabase: ServerClient,
+  userId: string,
+): Promise<ChestResult> {
   let reward = drawChestReward()
 
   if (reward.kind === 'sticker') {
     const { data: unlocks } = await supabase
       .from('collection_unlocks')
       .select('item_id')
-      .eq('user_id', user.id)
+      .eq('user_id', userId)
     const unlocked = new Set((unlocks ?? []).map((u) => String(u.item_id)))
     // Les cartes exclusives (trophées de boss) ne sortent jamais d'un coffre.
     const locked = COLLECTION_CATALOG.filter(
@@ -84,7 +122,7 @@ export async function openDailyChest(): Promise<ChestResult> {
     return { opened: false, reward: null, coins: 0 }
   }
 
-  const coins = await currentCoins(supabase, user.id)
+  const coins = await currentCoins(supabase, userId)
   revalidatePath('/coffre')
   return { opened: opened === true, reward: opened ? reward : null, coins }
 }

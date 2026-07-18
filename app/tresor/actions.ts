@@ -26,8 +26,10 @@ async function currentCoins(
   return Number.isFinite(n) ? n : 0
 }
 
+// `status` distingue les trois issues pour que l'UI ne confonde plus « coffre
+// déjà ouvert aujourd'hui » (état normal) et « panne » (l'élève peut réessayer).
 export type ChestResult = {
-  opened: boolean
+  status: 'opened' | 'already' | 'error'
   reward: ChestReward | null
   coins: number
 }
@@ -42,34 +44,43 @@ export async function openDailyChest(): Promise<ChestResult> {
   const {
     data: { user },
   } = await supabase.auth.getUser()
-  if (!user) return { opened: false, reward: null, coins: 0 }
+  if (!user) return { status: 'error', reward: null, coins: 0 }
 
   const drawn = await drawServerChest(supabase)
   if (drawn === 'unavailable') {
     // Migration 168 pas encore passée : ancien chemin (identique à avant).
     return openDailyChestLegacy(supabase, user.id)
   }
-  if (!drawn) return { opened: false, reward: null, coins: 0 }
+  if (drawn === 'error') return { status: 'error', reward: null, coins: 0 }
+  if (drawn === 'already') {
+    return { status: 'already', reward: null, coins: await currentCoins(supabase, user.id) }
+  }
 
   const coins = await currentCoins(supabase, user.id)
   revalidatePath('/coffre')
-  return { opened: true, reward: drawn, coins }
+  return { status: 'opened', reward: drawn, coins }
 }
 
-// Tirage serveur (168). Renvoie la récompense tirée, `null` si déjà ouvert /
-// non connecté, `'unavailable'` si la fonction n'existe pas encore (repli).
+// Tirage serveur (168). Renvoie la récompense tirée, `'already'` si déjà ouvert
+// aujourd'hui, `'error'` sur panne, `'unavailable'` si la fonction n'existe pas
+// encore (repli sur l'ancien chemin).
 async function drawServerChest(
   supabase: ServerClient,
-): Promise<ChestReward | null | 'unavailable'> {
+): Promise<ChestReward | 'already' | 'error' | 'unavailable'> {
   const { data, error } = await supabase.rpc('open_chest_v2')
   if (error) {
     // PGRST202 = fonction absente du cache de schéma → migration 168 en attente.
     if (error.code === 'PGRST202') return 'unavailable'
     console.error('[tresor] ouverture du coffre impossible:', error.message)
-    return null
+    return 'error'
   }
-  // `data` est la récompense (JSONB) ou null (déjà ouvert aujourd'hui).
-  return resolveServerReward(data as Parameters<typeof resolveServerReward>[0])
+  // `data` null = déjà ouvert aujourd'hui (ON CONFLICT DO NOTHING côté SQL).
+  if (data == null) return 'already'
+  const reward = resolveServerReward(
+    data as Parameters<typeof resolveServerReward>[0],
+  )
+  // Récompense illisible (ne devrait pas arriver) : on ne prétend pas gagner.
+  return reward ?? 'error'
 }
 
 // Ancien chemin (avant 168) : tirage dans l'action, crédit via `open_chest`.
@@ -119,12 +130,15 @@ async function openDailyChestLegacy(
   })
   if (error) {
     console.error('[tresor] ouverture du coffre impossible:', error.message)
-    return { opened: false, reward: null, coins: 0 }
+    return { status: 'error', reward: null, coins: 0 }
   }
 
   const coins = await currentCoins(supabase, userId)
   revalidatePath('/coffre')
-  return { opened: opened === true, reward: opened ? reward : null, coins }
+  // opened === false = déjà ouvert aujourd'hui (ON CONFLICT DO NOTHING).
+  return opened === true
+    ? { status: 'opened', reward, coins }
+    : { status: 'already', reward: null, coins }
 }
 
 export type LoginRewardResult = {

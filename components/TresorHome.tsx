@@ -23,33 +23,47 @@ const RARITY_STYLE: Record<Rarity, string> = {
   légendaire: 'ring-highlight/60 text-highlight',
 }
 
+// Issue d'une ouverture : la récompense, « déjà ouvert aujourd'hui », ou panne.
+type ChestOutcome =
+  | { status: 'opened'; reward: ChestReward }
+  | { status: 'already' }
+  | { status: 'error' }
+
 // ------------------------------------------------------------- Coffre du jour
 function DailyChest({
   alreadyOpened,
   onOpen,
 }: {
   alreadyOpened: boolean
-  onOpen: () => Promise<ChestReward | null>
+  onOpen: () => Promise<ChestOutcome>
 }) {
   const [phase, setPhase] = useState<'closed' | 'opening' | 'opened' | 'done'>(
     alreadyOpened ? 'done' : 'closed',
   )
   const [reward, setReward] = useState<ChestReward | null>(null)
+  const [failed, setFailed] = useState(false)
 
   const open = async () => {
     if (phase !== 'closed') return
+    setFailed(false)
     setPhase('opening')
     sfx.flip()
     // Le tirage (serveur) et le suspense (700 ms) courent en parallèle.
-    const [r] = await Promise.all([
+    const [outcome] = await Promise.all([
       onOpen(),
       new Promise((resolve) => setTimeout(resolve, 700)),
     ])
-    if (!r) {
-      setPhase('done') // déjà ouvert (autre onglet) ou indisponible
+    if (outcome.status === 'already') {
+      setPhase('done') // déjà ouvert aujourd'hui (autre onglet)
       return
     }
-    setReward(r)
+    if (outcome.status === 'error') {
+      // Panne réseau/serveur : on ne prétend pas « déjà ouvert », on réarme.
+      setFailed(true)
+      setPhase('closed')
+      return
+    }
+    setReward(outcome.reward)
     setPhase('opened')
     sfx.treasure()
   }
@@ -104,7 +118,9 @@ function DailyChest({
             {phase === 'opening' ? 'Ouverture…' : 'Touche pour ouvrir'}
           </span>
           <span className="text-xs text-primary-foreground/70">
-            Une récompense t’attend, chaque jour.
+            {failed
+              ? 'Petit souci — touche pour réessayer.'
+              : 'Une récompense t’attend, chaque jour.'}
           </span>
         </button>
       )}
@@ -223,14 +239,16 @@ export default function TresorHome({
     )
 
   // Ouverture du coffre : tirage serveur en mode live, local en démo.
-  const openChest = async (): Promise<ChestReward | null> => {
+  const openChest = async (): Promise<ChestOutcome> => {
     if (!live) {
       const r = drawChestReward()
       if (r.kind === 'coins') setBalance(coins + r.amount)
-      return r
+      return { status: 'opened', reward: r }
     }
     const res = await openDailyChest().catch(() => null)
-    if (!res || !res.opened || !res.reward) return null
+    if (!res || res.status === 'error') return { status: 'error' }
+    if (res.status === 'already') return { status: 'already' }
+    if (!res.reward) return { status: 'error' }
     setBalance(res.coins)
     const itemId = res.reward.kind === 'sticker' ? res.reward.itemId : undefined
     if (itemId) {
@@ -238,7 +256,7 @@ export default function TresorHome({
         list.map((c) => (c.id === itemId ? { ...c, unlocked: true } : c)),
       )
     }
-    return res.reward
+    return { status: 'opened', reward: res.reward }
   }
 
   const onBuy = async (item: ShopItem) => {

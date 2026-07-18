@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { arenaProgress } from '@/lib/defi/arena'
+import { arenaProgress } from '@/lib/trophies'
 
 interface TrophyBlockProps {
   trophies: number
@@ -14,11 +14,10 @@ interface TrophyBlockProps {
  */
 export default function TrophyBlock({ trophies }: TrophyBlockProps) {
   const p = arenaProgress(trophies)
-  const pct = Math.round(p.ratio * 100)
-  const nextLabel =
-    p.next && p.remaining !== null
-      ? `Encore ${p.remaining} pour ${p.next.name}`
-      : 'Sommet atteint — tu es au Grand Oral'
+  const pct = Math.round(p.progress * 100)
+  const nextLabel = p.next
+    ? `Encore ${p.toNext} pour ${p.next.name}`
+    : `Sommet atteint — tu es ${p.arena.name}`
 
   return (
     <section className="flex w-full flex-col items-center" aria-label="Tes trophées">

@@ -42,10 +42,13 @@ support vide, gated par une décision de format (voir
 `docs/CADRAGE-STUDYGRAM.md`).
 
 **Base de données : 001→167 exécutées** (164→167 par Lucas le 2026-07-18, SQL
-Editor). **⚠️ 168, 169, 170 créées le 2026-07-18 (jour), EN ATTENTE
+Editor). **⚠️ 168, 169, 170, 171 créées le 2026-07-18 (jour), EN ATTENTE
 d'exécution** (idempotentes, indépendantes, ordre indifférent) : 168 = tirage
 coffre en SQL (`open_chest_v2`, **supprime `open_chest(JSONB)`**), 169 =
-rate-limit codes amis, 170 = borne série 400 j. **Prochaine à créer = `171`.**
+rate-limit codes amis, 170 = borne série 400 j, 171 = durcissement économie 2e
+passe (claim_revanche_bonus 40 / claim_debrief_reward 10 / add_work_time
+plafond 8 h/j / **apply_ranked_match borné 30/h — CRITIQUE farming trophées**).
+**Prochaine à créer = `172`.**
 
 **Fonctionnel livré (l'essentiel)** :
 - **Boucle cœur Réviser** : accueil « carnet violet », chapitres → leçon-hub
@@ -231,6 +234,16 @@ breaking changes vs. l'entraînement.
   passe `friend_preview` de sql STABLE à plpgsql VOLATILE et re-crée
   `add_friend_qr` (fidèle à 163) — si la liste des statuts d'`add_friend_qr`
   change, re-vérifier. 170 est un miroir d'`activityCutoff` (400 j).
+- **Passe « incohérences » (à la demande de Lucas)** : 3 analyses sous-agents
+  (autorité économie / dérive miroirs SQL↔app / cohérence boucle cœur). Résultats :
+  **migration 171** (4 RPC créditrices durcies, dont `apply_ranked_match`
+  CRITIQUE) ; **échelle d'arènes unifiée** (`f8d6635` : `lib/defi/arena.ts`
+  supprimé, `TrophyBlock` pointe sur `lib/trophies.ts` — l'écran Arène et l'écran
+  classé montraient des noms de paliers DIFFÉRENTS pour un même total) ; commentaire
+  seuils exam-blanc corrigé (`851000f`). Miroirs SQL↔app tous cohérents. Reste
+  ouvert (signalé) : le VRAI correctif d'`apply_ranked_match` = jeton de match
+  serveur (refonte du flux `/defi/jouer` + QA) ; la 171 ne fait que BORNER le
+  rythme (30/h).
 
 **2026-07-17 — fin du cycle 1 `/jour` (Lia) :**
 - **Fait** : P0 WIP commité, P1 durci par 8 revues (fixes + migrations

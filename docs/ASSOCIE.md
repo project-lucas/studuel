@@ -41,10 +41,11 @@ exercices type brevet/bac corrigés) : **100 %**. **Studygram : 0 %** — seul
 support vide, gated par une décision de format (voir
 `docs/CADRAGE-STUDYGRAM.md`).
 
-**Base de données : 001→163 exécutées** (2026-07-16, runner pg de Lucas).
-**⚠️ 164, 165, 166 créées le 2026-07-17, EN ATTENTE d'exécution (dans
-l'ordre)** — la 165 ferme une faille CRITIQUE de farming de pièces. **Prochaine
-migration à créer = `167`** (idempotente, jamais exécutée par l'agent).
+**Base de données : 001→167 exécutées** (164→167 par Lucas le 2026-07-18, SQL
+Editor). **⚠️ 168, 169, 170 créées le 2026-07-18 (jour), EN ATTENTE
+d'exécution** (idempotentes, indépendantes, ordre indifférent) : 168 = tirage
+coffre en SQL (`open_chest_v2`, **supprime `open_chest(JSONB)`**), 169 =
+rate-limit codes amis, 170 = borne série 400 j. **Prochaine à créer = `171`.**
 
 **Fonctionnel livré (l'essentiel)** :
 - **Boucle cœur Réviser** : accueil « carnet violet », chapitres → leçon-hub
@@ -209,6 +210,27 @@ breaking changes vs. l'entraînement.
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible,
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
+
+**2026-07-18 — fin du cycle 1 `/jour` (Lia) :**
+- **Fait** : durcissement des deux gros commits récents non audités. `b63d14d`
+  (2185 l.) — 2 revues sous-agents : économie coffre SAINE, 2 findings MEDIUM
+  corrigés (`92eeceb` : ArenaHud `image`, examen ciblé). `60b17c1` (« Mes notes »,
+  167) — 2 revues : SAIN, 0 fix. P1b assets (`45151e4`). **3 migrations
+  créées 168/169/170 À EXÉCUTER** (tirage coffre SQL / rate-limit amis / borne
+  série). Bonus `ded28dd` (coffre déjà-ouvert vs panne). 6 commits verts, dernier
+  `ded28dd`. Détail : `_ASSOCIE/A-LIRE-JOUR.md`.
+- **Prochaine cible** : la file explicite + les 3 idées neuves non gated sont
+  épuisées. Reste du GATED en attente de décisions Lucas (géo D1-D4, swipe
+  sous-onglets, Studygram, 2v2, texte à trous, persistance défi solo, rename
+  Trésor) et la perf nav niveau 3 (remisée, branche dédiée). **Décision produit
+  ouverte** : nav Défi décentré depuis l'ajout de l'onglet Coffre (6 onglets →
+  Défi à 58 %) — réordonner vs FAB overlay.
+- **Pièges du jour** : 168 **supprime `open_chest(JSONB)`** — la Server Action
+  `openDailyChest` bascule sur `open_chest_v2` (repli PGRST202 avant exécution) ;
+  le tirage SQL est un MIROIR de `CHEST_REWARDS`+`c1..c8` (lib/tresor.ts). 169
+  passe `friend_preview` de sql STABLE à plpgsql VOLATILE et re-crée
+  `add_friend_qr` (fidèle à 163) — si la liste des statuts d'`add_friend_qr`
+  change, re-vérifier. 170 est un miroir d'`activityCutoff` (400 j).
 
 **2026-07-17 — fin du cycle 1 `/jour` (Lia) :**
 - **Fait** : P0 WIP commité, P1 durci par 8 revues (fixes + migrations

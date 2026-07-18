@@ -274,16 +274,37 @@ function MenuTile({
   item: OrbItem
   onOpen: (id: string) => void
 }) {
+  const badge = item.badge ? (
+    <NotificationBadge className="absolute -top-1 -right-1">
+      {item.badge}
+    </NotificationBadge>
+  ) : null
+
+  // Un médaillon illustré (`image`) porte déjà son cadre : il remplace tout le
+  // disque, comme dans la feuille de détail. Sinon, le disque « objet sculpté »
+  // (anneau or + cœur gemme) avec l'icône crème.
+  const medallion = item.image ? (
+    <span className="olympe-medallion-img relative block size-16 shrink-0 rounded-full">
+      <Image
+        src={item.image}
+        alt=""
+        width={64}
+        height={64}
+        className="size-full rounded-full object-contain drop-shadow-[0_5px_10px_rgba(0,0,0,0.5)]"
+        aria-hidden
+      />
+      {badge}
+    </span>
+  ) : (
+    <span className="olympe-medallion relative">
+      <span className="olympe-medallion-core">{item.icon}</span>
+      {badge}
+    </span>
+  )
+
   const face = (
     <>
-      <span className="olympe-medallion relative">
-        <span className="olympe-medallion-core">{item.icon}</span>
-        {item.badge ? (
-          <NotificationBadge className="absolute -top-1 -right-1">
-            {item.badge}
-          </NotificationBadge>
-        ) : null}
-      </span>
+      {medallion}
       <span className="defi3-orb-label max-w-full truncate">{item.label}</span>
       {item.sub ? (
         <span className="olympe-tag max-w-full truncate rounded-full px-2 py-0.5 font-heading text-[0.55rem] font-extrabold">
@@ -294,7 +315,7 @@ function MenuTile({
   )
 
   const className =
-    'defi2-press flex cursor-pointer flex-col items-center gap-1 rounded-2xl py-2 focus-visible:outline-none focus-visible:[&_.olympe-medallion]:ring-4 focus-visible:[&_.olympe-medallion]:ring-highlight/60'
+    'defi2-press flex cursor-pointer flex-col items-center gap-1 rounded-2xl py-2 focus-visible:outline-none focus-visible:[&_.olympe-medallion]:ring-4 focus-visible:[&_.olympe-medallion]:ring-highlight/60 focus-visible:[&_.olympe-medallion-img]:ring-4 focus-visible:[&_.olympe-medallion-img]:ring-highlight/60'
 
   if (item.href) {
     return (

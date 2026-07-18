@@ -238,8 +238,12 @@ export default async function ExamenBlancPage({
             ? `Examen blanc · ${targetSubjectName}`
             : (EXAM_TITLES[grade] ?? 'Contrôle toutes matières')
         }
+        subjectName={targetSubjectName}
+        // Le dernier score enregistré n'a pas de matière : ne le montrer que
+        // pour l'examen multi-matières (sinon comparaison trompeuse — total
+        // différent d'un examen mono-matière ciblé).
         lastScore={
-          lastExam
+          !targetSubjectName && lastExam
             ? { score: Number(lastExam.score), total: Number(lastExam.total) }
             : null
         }

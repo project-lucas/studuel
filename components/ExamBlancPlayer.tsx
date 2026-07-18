@@ -43,10 +43,14 @@ export default function ExamBlancPlayer({
   questions,
   examTitle,
   lastScore,
+  subjectName = null,
 }: {
   questions: ExamQuestion[]
   examTitle: string
   lastScore: { score: number; total: number } | null
+  // Examen ciblé sur UNE matière (lancé depuis son dossier) → l'intro le dit ;
+  // null = examen multi-matières classique.
+  subjectName?: string | null
 }) {
   const router = useRouter()
   const duration = examDurationSeconds(questions.length)
@@ -172,8 +176,8 @@ export default function ExamBlancPlayer({
           <h1 className="font-heading text-3xl font-bold">Examen blanc</h1>
           <p className="text-sm font-semibold text-primary">{examTitle}</p>
           <p className="text-sm text-muted-foreground">
-            {questions.length} questions · {formatClock(duration)} chrono ·
-            toutes tes matières
+            {questions.length} questions · {formatClock(duration)} chrono ·{' '}
+            {subjectName ?? 'toutes tes matières'}
             <br />
             Pas de correction pendant l&apos;épreuve — comme le jour J. Le
             bilan chapitre par chapitre tombe à la fin.

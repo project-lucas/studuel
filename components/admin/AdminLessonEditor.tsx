@@ -16,6 +16,7 @@ import {
 } from '@/app/admin/actions'
 import { cn } from '@/lib/utils'
 import type { QuizQuestion } from '@/lib/types'
+import { useTablist } from '@/components/useTablist'
 
 // Éditeur admin d'une leçon : onglets Cours / Révision / Studygram / Quiz.
 // Les textes utilisent le mini-markdown maison (rendu par LessonRichContent),
@@ -60,6 +61,7 @@ export default function AdminLessonEditor({
 }) {
   const router = useRouter()
   const [tab, setTab] = useState<TabKey>('cours')
+  const supportTabs = useTablist(TABS.length, (i) => setTab(TABS[i].key))
   const [draft, setDraft] = useState(lesson)
   const [preview, setPreview] = useState(false)
   const [status, setStatus] = useState<string | null>(null)
@@ -111,12 +113,20 @@ export default function AdminLessonEditor({
       ) : null}
 
       {/* Onglets des supports */}
-      <div role="tablist" className="flex gap-1 rounded-full border bg-card p-1">
-        {TABS.map((t) => (
+      <div
+        role="tablist"
+        aria-label="Support de la leçon"
+        className="flex gap-1 rounded-full border bg-card p-1"
+      >
+        {TABS.map((t, i) => (
           <button
             key={t.key}
+            type="button"
             role="tab"
+            id={`lesson-tab-${t.key}`}
             aria-selected={tab === t.key}
+            aria-controls="lesson-support-panel"
+            {...supportTabs.props(i, tab === t.key)}
             onClick={() => setTab(t.key)}
             className={cn(
               'flex-1 rounded-full px-3 py-1.5 text-sm font-medium transition-colors',
@@ -130,6 +140,16 @@ export default function AdminLessonEditor({
         ))}
       </div>
 
+      <div
+        id="lesson-support-panel"
+        role="tabpanel"
+        aria-labelledby={`lesson-tab-${tab}`}
+        // `space-y-4` et non `display:contents` : le parent espace ses enfants
+        // DIRECTS (`> * + *` suit le DOM, pas la mise en page), donc `contents`
+        // aurait aplati l'espacement — et un rôle ARIA sur un `display:contents`
+        // a longtemps disparu de l'arbre d'accessibilité.
+        className="space-y-4"
+      >
       {/* Cours & Révision : texte mini-markdown + aperçu */}
       {textField ? (
         <div className="space-y-2">
@@ -206,6 +226,7 @@ export default function AdminLessonEditor({
       {tab === 'quiz' ? (
         <QuizEditor lessonId={lesson.id} quiz={quiz} questions={questions} />
       ) : null}
+      </div>
     </div>
   )
 }

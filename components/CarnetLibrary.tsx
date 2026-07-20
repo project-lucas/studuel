@@ -291,9 +291,13 @@ export default function CarnetLibrary({
         </p>
       ) : null}
 
-      {/* Puces de filtre — comme la maquette : Tout / Fiches / Quiz / Cartes. */}
+      {/* Puces de filtre — comme la maquette : Tout / Fiches / Quiz / Cartes.
+          Groupe de bascules `aria-pressed` et NON des onglets : il n'y a pas
+          plusieurs panneaux, seulement UNE grille filtrée. Même arbitrage que
+          le Coffre (a17a855) — annoncer « onglet 2 sur 4 » promettrait un
+          panneau et un clavier qui n'existent pas. */}
       <div
-        role="tablist"
+        role="group"
         aria-label="Filtrer la bibliothèque"
         className="-mx-1 mb-3 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
@@ -307,8 +311,7 @@ export default function CarnetLibrary({
             <button
               key={id}
               type="button"
-              role="tab"
-              aria-selected={active}
+              aria-pressed={active}
               onClick={() => {
                 sfx.tap()
                 setFilter(id)

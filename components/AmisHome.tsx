@@ -51,6 +51,7 @@ import {
   type RankPlayer,
 } from '@/lib/trophies'
 import { rankFor } from '@/lib/rank'
+import { useTablist } from '@/components/useTablist'
 
 // En-tête de section : petite étiquette icône + titre, cohérente partout.
 function SectionTitle({
@@ -680,6 +681,7 @@ function GeoRankingSection({
   schoolDemo: boolean
 }) {
   const [scope, setScope] = useState<GeoScope>('school')
+  const scopeTabs = useTablist(GEO_SCOPES.length, (i) => setScope(GEO_SCOPES[i]))
   // Mon temps réel, lu depuis l'établissement : il replace « Toi » au bon rang
   // dans les aperçus d'échelons plus larges.
   const mySeconds = school.mates.find((m) => m.isMe)?.seconds ?? 0
@@ -699,19 +701,25 @@ function GeoRankingSection({
       </SectionTitle>
 
       {/* Sélecteur d'échelon : de ton établissement au national. */}
+      {/* Le motif ARIA est complet (panneau lié + flèches + tabindex baladeur) :
+          annoncer « onglet 2 sur 4 » sans le clavier qui va avec est une
+          promesse non tenue au lecteur d'écran. */}
       <div
         role="tablist"
         aria-label="Échelle du classement"
         className="mb-2 flex gap-1 rounded-2xl bg-muted p-1"
       >
-        {GEO_SCOPES.map((s) => {
+        {GEO_SCOPES.map((s, i) => {
           const active = s === scope
           return (
             <button
               key={s}
               type="button"
               role="tab"
+              id={`geo-tab-${s}`}
               aria-selected={active}
+              aria-controls="geo-panel"
+              {...scopeTabs.props(i, active)}
               onClick={() => {
                 sfx.tap()
                 setScope(s)
@@ -729,7 +737,9 @@ function GeoRankingSection({
         })}
       </div>
 
-      <ScopeBoard board={board} scope={scope} demo={demo} />
+      <div id="geo-panel" role="tabpanel" aria-labelledby={`geo-tab-${scope}`}>
+        <ScopeBoard board={board} scope={scope} demo={demo} />
+      </div>
     </section>
   )
 }

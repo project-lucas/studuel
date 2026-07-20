@@ -18,6 +18,7 @@ import {
 } from '@/lib/debrief'
 import DebriefYearRecap from '@/components/DebriefYearRecap'
 import { logDebrief, saveDebriefHabits } from '@/app/moi/actions'
+import { useTablist } from '@/components/useTablist'
 
 // -----------------------------------------------------------------------------
 // « Ton débrief » — l'élève référence ses habitudes actuelles (les freins),
@@ -228,6 +229,10 @@ export default function DebriefCard({
   const [editing, setEditing] = useState(false)
   // Onglet interne du bloc : le débrief du jour ou l'historique annuel.
   const [tab, setTab] = useState<'today' | 'history'>('today')
+  const DEBRIEF_VIEWS = ['today', 'history'] as const
+  const viewTabs = useTablist(DEBRIEF_VIEWS.length, (i) =>
+    setTab(DEBRIEF_VIEWS[i]),
+  )
   const [pending, startTransition] = useTransition()
 
   const pairs = DEBRIEF_CATALOG.filter((p) => mySelection.has(p.id))
@@ -365,12 +370,15 @@ export default function DebriefCard({
                 { key: 'today', label: "Aujourd'hui", icon: ListChecks },
                 { key: 'history', label: 'Historique', icon: History },
               ] as const
-            ).map(({ key, label, icon: Icon }) => (
+            ).map(({ key, label, icon: Icon }, i) => (
               <button
                 key={key}
                 type="button"
                 role="tab"
+                id={`debrief-tab-${key}`}
                 aria-selected={tab === key}
+                aria-controls="debrief-panel"
+                {...viewTabs.props(i, tab === key)}
                 onClick={() => {
                   sfx.tap()
                   setTab(key)
@@ -388,6 +396,11 @@ export default function DebriefCard({
             ))}
           </div>
 
+          <div
+            id="debrief-panel"
+            role="tabpanel"
+            aria-labelledby={`debrief-tab-${tab}`}
+          >
           {tab === 'history' ? (
             <DebriefYearRecap stats={yearStats} today={today} />
           ) : (
@@ -447,6 +460,7 @@ export default function DebriefCard({
           )}
             </>
           )}
+          </div>
         </>
       )}
     </section>

@@ -85,3 +85,23 @@ export function autoAdvanceDelay(
   if (!good || hasExplanation) return null
   return AUTO_ADVANCE_MS
 }
+
+// ------------------------------------------------------------------- deuil
+// Quand la série casse, le badge disparaissait SANS BRUIT : on perdait un
+// « Inarrêtable ×8 » aussi discrètement qu'un « ×2 ». Or dans un jeu de série,
+// c'est la peur de casser qui crée la tension — une perte muette la supprime.
+//
+// On n'annonce le deuil que si la série valait quelque chose (elle avait un
+// badge, donc >= COMBO_HOT) : « Série perdue ×1 » n'aurait aucun sens.
+export function comboBreakLabel(brokenStreak: number): string | null {
+  if (comboTier(brokenStreak) === 'aucun') return null
+  return `Série perdue ×${brokenStreak}`
+}
+
+/** Durée d'affichage du badge de série perdue (ms). */
+export const COMBO_BREAK_MS = 900
+
+/** Meilleure série d'une session, pour le bilan de fin. */
+export function bestStreak(previous: number, current: number): number {
+  return Math.max(previous, current)
+}

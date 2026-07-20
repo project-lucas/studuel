@@ -21,7 +21,8 @@ import {
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx, buzz, isSoundOn, setSoundOn } from '@/lib/sounds'
-import { comboLabel, comboTier } from '@/lib/juice'
+import ComboBadge from '@/components/ComboBadge'
+import { bestStreak, COMBO_HOT } from '@/lib/juice'
 import { sessionXp } from '@/lib/xp'
 import { deckProgress } from '@/lib/flashcards'
 import { recordStudySession } from '@/app/studio/actions'
@@ -68,6 +69,9 @@ export default function FlashcardPlayer({
   const [seen, setSeen] = useState<Set<string>>(new Set())
   // Cartes sues d'affilée (remise à zéro dès qu'une carte n'est pas sue).
   const [streak, setStreak] = useState(0)
+  // Meilleure série de la session : sans elle, un « Inarrêtable ×8 » atteint en
+  // cours de route ne laisse aucune trace sur l'écran de fin.
+  const [best, setBest] = useState(0)
   const [finished, setFinished] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
 
@@ -115,6 +119,7 @@ export default function FlashcardPlayer({
     // cartes sues, et retombe net dès qu'une carte lui échappe.
     const nextStreak = known ? streak + 1 : 0
     setStreak(nextStreak)
+    setBest((b) => bestStreak(b, nextStreak))
     buzz(known, nextStreak)
 
     const rest = queue.slice(1)
@@ -142,6 +147,7 @@ export default function FlashcardPlayer({
     setQueue(cards)
     setFlipped(false)
     setStreak(0)
+    setBest(0)
     setReviews(0)
     setFirstTryKnown(0)
     setSeen(new Set())
@@ -172,6 +178,11 @@ export default function FlashcardPlayer({
               ? 'Toutes les cartes sues du premier coup — impressionnant !'
               : `${firstTryKnown}/${cards.length} cartes sues du premier coup, en ${reviews} passages. La répétition paie !`}
           </p>
+          {best >= COMBO_HOT ? (
+            <p className="text-sm font-semibold text-primary">
+              🔥 Meilleure série : {best} d&apos;affilée
+            </p>
+          ) : null}
           {saved === true ? (
             <p className="text-xs text-muted-foreground">
               ✓ Session enregistrée — ta série continue 🔥
@@ -222,19 +233,7 @@ export default function FlashcardPlayer({
         {/* Région `aria-live` toujours montée (cf. QuizPlayer) : un lecteur
             d'écran n'annonce que le changement d'une région déjà présente. */}
         <span aria-live="polite" className="min-h-6">
-          {comboLabel(streak) ? (
-            <span
-              className={cn(
-                'animate-in zoom-in-50 font-heading rounded-full px-2.5 py-0.5 text-xs font-extrabold duration-300',
-                comboTier(streak) === 'chaud'
-                  ? 'bg-primary/10 text-primary'
-                  : 'bg-highlight text-foreground shadow-sm',
-              )}
-            >
-              {comboTier(streak) === 'chaud' ? '' : '🔥 '}
-              {comboLabel(streak)}
-            </span>
-          ) : null}
+          <ComboBadge streak={streak} />
         </span>
         <SoundToggle />
       </div>

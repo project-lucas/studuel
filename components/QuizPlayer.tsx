@@ -6,7 +6,8 @@ import { recordTestSession } from '@/app/test/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import { sfx, buzz } from '@/lib/sounds'
-import { comboLabel, comboTier, autoAdvanceDelay } from '@/lib/juice'
+import { autoAdvanceDelay, bestStreak, COMBO_HOT } from '@/lib/juice'
+import ComboBadge from '@/components/ComboBadge'
 import { sessionXp } from '@/lib/xp'
 import { SoundToggle } from '@/components/FlashcardPlayer'
 import BackButton from '@/components/BackButton'
@@ -54,6 +55,9 @@ export default function QuizPlayer({
   const [selected, setSelected] = useState<number | null>(null)
   // Bonnes réponses d'affilée (remise à zéro à la première erreur).
   const [streak, setStreak] = useState(0)
+  // Meilleure série de la session : sans elle, un « Inarrêtable ×8 » atteint en
+  // cours de route ne laisse aucune trace sur l'écran de fin.
+  const [best, setBest] = useState(0)
   const [finished, setFinished] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
 
@@ -101,6 +105,7 @@ export default function QuizPlayer({
     // à la première erreur. C'est ce qui donne envie de continuer.
     const nextStreak = good ? streak + 1 : 0
     setStreak(nextStreak)
+    setBest((b) => bestStreak(b, nextStreak))
     if (good) sfx.correctCombo(nextStreak)
     else sfx.wrong()
     buzz(good, nextStreak)
@@ -155,6 +160,7 @@ export default function QuizPlayer({
     setChoices([])
     setSelected(null)
     setStreak(0)
+    setBest(0)
     setFinished(false)
     setSaved(null)
     reviewsRef.current = []
@@ -205,8 +211,8 @@ export default function QuizPlayer({
                     className={cn(
                       'h-2.5 w-5 rounded-full',
                       choices[i] === q.correct_index
-                        ? 'bg-green-400'
-                        : 'bg-red-400',
+                        ? 'bg-success'
+                        : 'bg-destructive',
                     )}
                   />
                 ))}
@@ -218,6 +224,12 @@ export default function QuizPlayer({
               {record ? (
                 <p className="font-heading mt-4 text-lg font-extrabold text-highlight">
                   +{sessionXp('quiz', score, questions.length)} XP
+                </p>
+              ) : null}
+
+              {best >= COMBO_HOT ? (
+                <p className="mt-2 text-sm font-semibold opacity-90">
+                  🔥 Meilleure série : {best} d&apos;affilée
                 </p>
               ) : null}
 
@@ -365,21 +377,7 @@ export default function QuizPlayer({
             n'annonce que les CHANGEMENTS d'une région déjà présente. Si elle
             apparaissait en même temps que son texte, l'annonce serait ratée. */}
         <div className="flex min-h-7 justify-center" aria-live="polite">
-          {comboLabel(streak) ? (
-            <span
-              className={cn(
-                'animate-in zoom-in-50 font-heading rounded-full px-3 py-1 text-sm font-extrabold shadow-md duration-300',
-                comboTier(streak) === 'inarretable'
-                  ? 'bg-highlight text-foreground ring-2 ring-white/70'
-                  : comboTier(streak) === 'feu'
-                    ? 'bg-highlight text-foreground'
-                    : 'bg-white/20 text-primary-foreground',
-              )}
-            >
-              {comboTier(streak) === 'aucun' ? null : '🔥 '}
-              {comboLabel(streak)}
-            </span>
-          ) : null}
+          <ComboBadge streak={streak} variant="arene" />
         </div>
 
         {/* Anneau de progression : « Question N/10 » */}

@@ -6,7 +6,7 @@ import { ArrowRight, Check, Flame, Swords, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx, buzz } from '@/lib/sounds'
-import { comboLabel, comboTier } from '@/lib/juice'
+import ComboBadge from '@/components/ComboBadge'
 import { SoundToggle } from '@/components/FlashcardPlayer'
 import { finishReviewSession } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
@@ -183,19 +183,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
             région `aria-live` reste toujours montée : un lecteur d'écran
             n'annonce que le changement d'une région déjà présente. */}
         <span aria-live="polite" className="min-h-6">
-          {comboLabel(streak) ? (
-            <span
-              className={cn(
-                'animate-in zoom-in-50 font-heading rounded-full px-2.5 py-0.5 text-xs font-extrabold duration-300',
-                comboTier(streak) === 'chaud'
-                  ? 'bg-primary/10 text-primary'
-                  : 'bg-highlight text-foreground shadow-sm',
-              )}
-            >
-              {comboTier(streak) === 'chaud' ? '' : '🔥 '}
-              {comboLabel(streak)}
-            </span>
-          ) : null}
+          <ComboBadge streak={streak} />
         </span>
         <SoundToggle />
       </div>

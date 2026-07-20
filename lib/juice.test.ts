@@ -9,6 +9,9 @@ import {
   BUZZ_WRONG,
   autoAdvanceDelay,
   AUTO_ADVANCE_MS,
+  comboBreakLabel,
+  bestStreak,
+  COMBO_HOT,
 } from './juice'
 
 describe('comboTier', () => {
@@ -92,5 +95,33 @@ describe('autoAdvanceDelay', () => {
     // moment où il apprend vraiment quelque chose.
     expect(autoAdvanceDelay(false, false)).toBeNull()
     expect(autoAdvanceDelay(false, true)).toBeNull()
+  })
+})
+
+describe('comboBreakLabel', () => {
+  it('annonce la perte d’une série qui valait un badge', () => {
+    expect(comboBreakLabel(8)).toBe('Série perdue ×8')
+    expect(comboBreakLabel(COMBO_HOT)).toBe(`Série perdue ×${COMBO_HOT}`)
+  })
+
+  it('reste muet quand il n’y avait rien à perdre', () => {
+    // Sans ça, une seule bonne réponse suivie d'une erreur afficherait
+    // « Série perdue ×1 » — du bruit, pas de la tension.
+    expect(comboBreakLabel(0)).toBeNull()
+    expect(comboBreakLabel(1)).toBeNull()
+  })
+
+  it('reste cohérent avec comboLabel (même seuil d’apparition)', () => {
+    for (let s = 0; s <= 10; s++) {
+      expect(comboBreakLabel(s) === null).toBe(comboLabel(s) === null)
+    }
+  })
+})
+
+describe('bestStreak', () => {
+  it('retient le maximum atteint dans la session', () => {
+    expect(bestStreak(0, 3)).toBe(3)
+    expect(bestStreak(7, 2)).toBe(7)
+    expect(bestStreak(4, 4)).toBe(4)
   })
 })

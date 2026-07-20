@@ -22,6 +22,7 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx, buzz, isSoundOn, setSoundOn } from '@/lib/sounds'
 import { comboLabel, comboTier } from '@/lib/juice'
+import { sessionXp } from '@/lib/xp'
 import { recordStudySession } from '@/app/studio/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
@@ -157,6 +158,9 @@ export default function FlashcardPlayer({
           <p className="font-mono text-4xl font-bold tabular-nums">
             {rate}
             <span className="text-muted-foreground/60"> %</span>
+          </p>
+          <p className="font-heading text-lg font-extrabold text-primary">
+            +{sessionXp('deck', cards.length, cards.length)} XP
           </p>
           <p className="text-sm text-muted-foreground">
             {rate === 100

@@ -7,6 +7,7 @@ import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import { sfx, buzz } from '@/lib/sounds'
 import { comboLabel, comboTier } from '@/lib/juice'
+import { sessionXp } from '@/lib/xp'
 import { SoundToggle } from '@/components/FlashcardPlayer'
 import BackButton from '@/components/BackButton'
 import QuitGuardButton from '@/components/QuitGuardButton'
@@ -185,6 +186,15 @@ export default function QuizPlayer({
                   />
                 ))}
               </div>
+
+              {/* XP gagnée : la récompense existait déjà (10 XP par bonne
+                  réponse + 20 de session) mais n'était affichée NULLE PART —
+                  l'élève gagnait sans le savoir. C'est le moment de le dire. */}
+              {record ? (
+                <p className="font-heading mt-4 text-lg font-extrabold text-highlight">
+                  +{sessionXp('quiz', score, questions.length)} XP
+                </p>
+              ) : null}
 
               {/* La mascotte réagit au score */}
               <div className="mt-5 flex items-center gap-3 rounded-2xl bg-white/10 p-4 text-left">

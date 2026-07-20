@@ -71,3 +71,28 @@ export function levelFor(xp: number): LevelInfo {
     progress: next ? (xp - floor) / (next.xp - floor) : 1,
   }
 }
+
+// XP gagnée par UNE session, pour l'annoncer à l'élève à la fin.
+//
+// `computeXp` ci-dessus recalcule le total depuis TOUT l'historique (c'est ce
+// qui rend le niveau indésynchronisable) ; il ne dit pas ce que la session qui
+// vient de se terminer a rapporté. Sans ce calcul, l'écran de fin affichait un
+// score sec et l'élève gagnait de l'XP sans jamais le voir — la récompense
+// existait mais restait muette.
+//
+// Le bonus de session est versé MÊME à 0 bonne réponse : on récompense d'être
+// venu réviser, on ne punit pas l'échec (doctrine du projet, cf. la douceur du
+// barème de trophées).
+export function sessionXp(
+  kind: 'quiz' | 'deck' | 'review',
+  score: number,
+  total: number,
+): number {
+  const bons = Math.max(0, Math.min(Math.round(score), Math.max(0, Math.round(total))))
+  if (kind === 'deck') {
+    return bons * XP_RULES.deckPerCard + XP_RULES.deckBonus
+  }
+  // Une session « À revoir » paye comme un quiz : c'est le geste qu'on veut
+  // quotidien, il ne doit pas rapporter moins que le quiz de la leçon.
+  return bons * XP_RULES.quizPerCorrect + XP_RULES.quizBonus
+}

@@ -20,11 +20,16 @@ import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
 export const metadata = { title: 'Mon compte — Studuel' }
 export const dynamic = 'force-dynamic'
 
+// Noms COMMERCIAUX des paliers, alignés sur lib/premium.ts (PLANS). L'app
+// disait « Offre 1 » ici et « Studuel+ » sur l'écran de conversion, pour le
+// même abonnement : l'élève ne pouvait pas faire le lien entre ce qu'on lui
+// vend et ce qu'il possède. `tier1`/`tier2`/`tier3` restent les identifiants
+// techniques, jamais montrés.
 const TIER_LABELS: Record<string, string> = {
   free: 'Gratuit',
-  tier1: 'Offre 1',
-  tier2: 'Offre 2',
-  tier3: 'Offre 3',
+  tier1: 'Studuel+',
+  tier2: 'Studuel+',
+  tier3: 'Studuel+ Famille',
 }
 
 export default async function ComptePage() {
@@ -85,7 +90,7 @@ export default async function ComptePage() {
           </p>
           {tier === 'free' ? (
             <p className="text-muted-foreground">
-              Passe à l’Offre 1 pour débloquer tous les tests premium.
+              Passe à Studuel+ pour débloquer tous les tests premium.
             </p>
           ) : null}
         </CardContent>

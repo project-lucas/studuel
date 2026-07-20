@@ -22,10 +22,20 @@ describe('PLANS (intégrité du catalogue)', () => {
     expect(famille.priceMonthly).toBeGreaterThan(0)
   })
 
-  it('le gratuit est le seul avec pubs et à 0 €', () => {
-    const withAds = PLANS.filter((p) => p.withAds)
-    expect(withAds.map((p) => p.id)).toEqual(['gratuit'])
+  it('le gratuit est à 0 €', () => {
     expect(PLANS.find((p) => p.id === 'gratuit')!.priceMonthly).toBe(0)
+  })
+
+  // Garde anti-promesse-creuse : l'app n'a AUCUN système de publicité. Tant
+  // que ce sera le cas, aucune offre ne doit s'en prévaloir — ni en promettant
+  // de la retirer, ni en prêtant au gratuit un défaut qu'il n'a pas.
+  it('aucune offre ne parle de publicité', () => {
+    for (const plan of PLANS) {
+      for (const feature of plan.features) {
+        expect(feature).not.toMatch(/publicit|pubs?\b/i)
+      }
+      expect(plan.tagline).not.toMatch(/publicit|pubs?\b/i)
+    }
   })
 
   it('le gratuit ne promet aucun « illimité » (réservé au payant)', () => {

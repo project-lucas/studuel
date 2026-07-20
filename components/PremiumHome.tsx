@@ -192,7 +192,12 @@ export default function PremiumHome({ currentTier }: { currentTier: Tier }) {
 
       <p className="flex items-center justify-center gap-1.5 px-1 text-center text-xs text-muted-foreground">
         <ShieldCheck className="size-3.5 shrink-0 text-primary" />
-        Sans engagement · annulable à tout moment · paiement sécurisé
+        {/* Ne PAS annoncer « paiement sécurisé » : il n'y a pas encore de
+            paiement du tout, et le bouton juste au-dessus le dit lui-même
+            (« Le paiement arrive très bientôt »). Promettre la sécurité d'une
+            transaction inexistante, c'est le genre de détail qui fait douter
+            un parent de tout le reste. */}
+        Sans engagement · annulable à tout moment
       </p>
     </div>
   )

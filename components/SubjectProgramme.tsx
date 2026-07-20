@@ -303,7 +303,7 @@ function AiFab({ premium }: { premium: boolean }) {
           </p>
           <p className="mt-1 text-sm text-muted-foreground">
             Fiches et quiz générés par IA sur ce programme — réservé à
-            l&apos;Offre 1.
+            Studuel+.
           </p>
           <Button asChild size="sm" className="mt-3 w-full rounded-full">
             <Link href="/compte">Découvrir l&apos;offre</Link>

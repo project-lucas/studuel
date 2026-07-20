@@ -33,7 +33,7 @@ export default async function DeckPage({
 
   if (!deck) notFound()
 
-  // Même règle que les quiz : le contenu premium requiert l'Offre 1.
+  // Même règle que les quiz : le contenu premium requiert Studuel+.
   const tier = await getUserTier()
   if (!deck.is_free && !canAccessPremiumTests(tier)) {
     return (
@@ -42,7 +42,7 @@ export default async function DeckPage({
         <Card className="mx-auto max-w-xl">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Lock className="size-4" /> Deck réservé à l’Offre 1
+              <Lock className="size-4" /> Paquet réservé à Studuel+
             </CardTitle>
             <CardDescription>
               Ces flashcards font partie du contenu premium de Studuel.

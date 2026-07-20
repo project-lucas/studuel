@@ -51,7 +51,11 @@ export default function NotificationsOptIn() {
       const permission = await Notification.requestPermission()
       if (permission !== 'granted') {
         setStatus('off')
-        setError('Autorisation refusée. Activez les notifications dans le navigateur.')
+        // Tutoiement : c'est la règle partout dans l'app côté élève, et ce
+        // composant tutoie déjà dans tous ses autres textes.
+        setError(
+          'Autorisation refusée. Active les notifications dans ton navigateur.',
+        )
         return
       }
       const reg = await navigator.serviceWorker.ready

@@ -317,9 +317,11 @@ export default function DebriefCard({
       </div>
 
       {needsMigration ? (
+        /* Message ÉLÈVE : cette carte s'affiche sur /moi — pas d'instruction
+           technique ici. */
         <p className="text-xs leading-relaxed text-muted-foreground">
-          Exécute <code>supabase/027_debrief.sql</code> dans le SQL Editor
-          Supabase, puis recharge la page.
+          Le point sur tes habitudes n&apos;est pas encore disponible. Reviens
+          un peu plus tard !
         </p>
       ) : empty || editing ? (
         /* ------------------------------------ sélection des habitudes-freins */

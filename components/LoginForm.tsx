@@ -57,7 +57,7 @@ export default function LoginForm() {
                 id="full_name"
                 name="full_name"
                 autoComplete="name"
-                placeholder="Lucas Potier"
+                placeholder="Prénom et nom"
               />
             </div>
           ) : null}

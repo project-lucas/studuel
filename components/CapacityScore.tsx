@@ -312,10 +312,14 @@ export default function CapacityScore({
               <Gauge className="size-6" strokeWidth={2.2} />
             </span>
             <div className="min-w-0">
-              <p className="text-sm font-bold">Bilan à activer</p>
+              {/* Message ÉLÈVE, pas message de développeur : cet écran est
+                  monté sur /moi. Le détail technique (quelle migration
+                  manque) appartient aux logs, pas au collégien qui vient
+                  regarder sa progression. */}
+              <p className="text-sm font-bold">Bilan bientôt disponible</p>
               <p className="text-xs leading-relaxed text-muted-foreground">
-                Exécute <code>supabase/013_capacite.sql</code> dans le SQL
-                Editor Supabase, puis recharge la page.
+                Ton bilan de capacités n&apos;est pas encore prêt. Reviens un
+                peu plus tard !
               </p>
             </div>
           </div>

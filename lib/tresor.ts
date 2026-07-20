@@ -138,14 +138,12 @@ export const SHOP_CATALOG: ShopItem[] = [
       emoji: '🔵',
       kind: 'flamme',
     },
-    {
-      id: 'theme-nuit',
-      name: 'Thème Nuit étoilée',
-      desc: 'Un fond sombre et profond pour toute l’app.',
-      price: 150,
-      emoji: '🌌',
-      kind: 'theme',
-    },
+    // « Thème Nuit étoilée » RETIRÉ de la boutique : le mode sombre est
+    // neutralisé au niveau du document (`<html class="light">` dans
+    // app/layout.tsx, choix assumé du design system crème & violet). L'article
+    // était donc invendable — un élève pouvait dépenser 150 pièces pour un fond
+    // sombre que l'app est structurellement incapable d'afficher. À réintroduire
+    // le jour où le mode sombre existera vraiment.
     {
       id: 'avatar-astro',
       name: 'Avatar Astronaute',

@@ -46,6 +46,13 @@ export default async function StudioPage({
     .order('subject', { ascending: true })
     .returns<FlashcardDeck[]>()
 
+  // Le détail technique va dans les logs serveur, jamais à l'écran de l'élève :
+  // il reste consultable pour diagnostiquer, sans divulguer la structure de la
+  // base ni afficher de l'anglais à un collégien.
+  if (error) {
+    console.error('[studio] chargement des paquets impossible:', error.message)
+  }
+
   // Filtre par classe de l'élève (désactivable via « Voir tout »).
   const all = decks ?? []
   const filterByGrade = Boolean(grade) && !tous
@@ -87,19 +94,22 @@ export default async function StudioPage({
               <TriangleAlert className="size-4 text-destructive" />
               Studio indisponible
             </CardTitle>
+            {/* /studio n'a AUCUNE garde admin : n'importe quel élève passe
+                ici. On ne lui montre donc ni instruction de migration, ni
+                `error.message` brut de Postgres (en anglais, et qui divulgue
+                la structure de la base). Le détail reste dans les logs. */}
             <CardDescription>
-              Impossible de charger les decks ({error.message}) — exécute{' '}
-              <code>supabase/007_programme.sql</code> dans le SQL Editor.
+              Les paquets de cartes ne sont pas accessibles pour le moment.
+              Réessaie dans un instant.
             </CardDescription>
           </CardHeader>
         </Card>
       ) : visible.length === 0 ? (
         <Card>
           <CardHeader>
-            <CardTitle>Aucun deck disponible</CardTitle>
+            <CardTitle>Aucun paquet disponible</CardTitle>
             <CardDescription>
-              Exécute <code>supabase/007_programme.sql</code> pour créer les
-              decks du programme.
+              Les paquets de cartes de ton programme arrivent bientôt.
             </CardDescription>
           </CardHeader>
         </Card>
@@ -134,7 +144,7 @@ export default async function StudioPage({
                 <CardContent className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Layers className="size-3.5" />
                   {count} carte{count > 1 ? 's' : ''}
-                  {locked ? ' · Offre 1' : ''}
+                  {locked ? ' · Studuel+' : ''}
                 </CardContent>
               </Card>
             )

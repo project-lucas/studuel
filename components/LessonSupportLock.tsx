@@ -3,7 +3,7 @@ import { Lock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 // Écran de verrouillage premium d'un support de leçon dont le quiz est réservé
-// à l'Offre 1 (cohérent avec /test/[id] et la carte mentale). On montre le
+// à Studuel+ (cohérent avec /test/[id] et la carte mentale). On montre le
 // paywall plutôt qu'un trompeur « bientôt » quand le contenu existe mais que
 // l'élève n'y a pas droit.
 export default function LessonSupportLock({
@@ -19,7 +19,7 @@ export default function LessonSupportLock({
         <Lock className="text-muted-foreground size-6" aria-hidden="true" />
       </span>
       <p className="font-heading font-semibold text-balance">
-        {support} de cette leçon est réservé à l&apos;Offre 1.
+        {support} de cette leçon est réservé à Studuel+.
       </p>
       <p className="text-muted-foreground mt-2 text-sm">
         Abonne-toi pour débloquer les quiz premium, ou entraîne-toi d&apos;abord
@@ -27,7 +27,7 @@ export default function LessonSupportLock({
       </p>
       <div className="mt-4 flex flex-col items-center gap-2">
         <Button asChild className="rounded-full">
-          <Link href="/compte">Débloquer avec l&apos;Offre 1</Link>
+          <Link href="/compte">Débloquer avec Studuel+</Link>
         </Button>
         <Link
           href={backHref}

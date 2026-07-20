@@ -52,7 +52,7 @@ export default async function QuizPage({
     ? `/reviser/${quiz.lesson.chapter.subject.slug}/${quiz.lesson.chapter.id}/${quiz.lesson.id}`
     : '/reviser'
 
-  // Gating abonnement : les quiz premium requièrent l'Offre 1 (tier1+).
+  // Gating abonnement : les quiz premium requièrent Studuel+ (tier1+).
   // La RLS sur quiz_questions applique la même règle côté base.
   const tier = await getUserTier()
   if (!quiz.is_free && !canAccessPremiumTests(tier)) {
@@ -62,14 +62,14 @@ export default async function QuizPage({
         <Card className="mx-auto max-w-xl">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Lock className="size-4" /> Test réservé à l’Offre 1
+              <Lock className="size-4" /> Test réservé à Studuel+
             </CardTitle>
             <CardDescription>
               Ce quiz fait partie du contenu premium de Studuel.
             </CardDescription>
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground">
-            Abonne-toi à l’Offre 1 pour débloquer tous les tests, ou entraîne-toi
+            Abonne-toi à Studuel+ pour débloquer tous les tests, ou entraîne-toi
             d’abord avec les quiz gratuits.
           </CardContent>
           <CardFooter>

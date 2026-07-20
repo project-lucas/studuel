@@ -19,8 +19,6 @@ export type Plan = {
   members: number
   // Offre mise en avant (bandeau « RECOMMANDÉ », carte surlignée).
   recommended: boolean
-  // Contient de la publicité (le gratuit).
-  withAds: boolean
   // Avantages listés, dans l'ordre d'affichage.
   features: string[]
   // Libellé du bouton d'action.
@@ -28,38 +26,48 @@ export type Plan = {
 }
 
 // Le cœur de l'offre payante (demande de Lucas) : cartes illimitées + famille
-// jusqu'à 3 membres. Le reste habille la proposition façon Duolingo.
+// jusqu'à 3 membres.
+//
+// ⚠️ RÈGLE : chaque ligne de `features` doit correspondre à quelque chose de
+// RÉELLEMENT implémenté ET gaté dans le code. Trois promesses ont été retirées
+// parce qu'elles ne tenaient à rien :
+//   • « Énergie & vies illimitées » — il n'existe aucun système d'énergie, et
+//     les vies du Défi solo sont une règle de jeu interne à une partie, pas une
+//     ressource bridée qu'un abonnement débloquerait ;
+//   • « Statistiques détaillées » — l'onglet Moi affiche les mêmes statistiques
+//     à tout le monde, ce n'est pas un différenciateur ;
+//   • « Zéro publicité » / « Avec publicités » — il n'y a aucune publicité dans
+//     l'app. Annoncer qu'on en retire donne au gratuit un défaut imaginaire.
+// Vendre du vide est le meilleur moyen de faire résilier un parent au premier
+// mois. Ce qui reste ci-dessous est vérifiable écran par écran.
 export const PLANS: readonly Plan[] = [
   {
     id: 'gratuit',
     name: 'Gratuit',
-    tagline: 'Pour démarrer, avec quelques pubs.',
+    tagline: 'Pour démarrer, sans rien payer.',
     priceMonthly: 0,
     members: 1,
     recommended: false,
-    withAds: true,
     features: [
       'Le Défi du jour',
       'Cours & quiz de base',
-      'Cartes mentales limitées',
-      'Avec publicités',
+      '3 gemmes offertes pour débloquer des chapitres',
+      'Gagne des gemmes en invitant tes amis',
     ],
     cta: 'Ton offre actuelle',
   },
   {
     id: 'plus',
     name: 'Studuel+',
-    tagline: 'Tout Studuel, sans limite ni pub.',
+    tagline: 'Tout Studuel, sans limite.',
     priceMonthly: 4.99,
     members: 1,
     recommended: true,
-    withAds: false,
     features: [
-      'Cartes mentales & flashcards illimitées',
-      'Tous les tests premium',
-      'Zéro publicité',
-      'Énergie & vies illimitées',
-      'Statistiques détaillées',
+      'Toutes les cartes mentales, sans gemme',
+      'Toutes les fiches de révision',
+      'Tous les quiz & flashcards premium',
+      'Tous les paquets de cartes du Studio',
     ],
     cta: 'Passer à Studuel+',
   },
@@ -70,7 +78,6 @@ export const PLANS: readonly Plan[] = [
     priceMonthly: 9.99,
     members: 3,
     recommended: false,
-    withAds: false,
     features: [
       'Tout Studuel+ pour chacun',
       'Jusqu’à 3 membres',

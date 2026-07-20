@@ -1,9 +1,16 @@
 'use client'
 
-import { useState } from 'react'
-import type { CSSProperties, ReactNode } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import type {
+  CSSProperties,
+  KeyboardEvent as ReactKeyboardEvent,
+  ReactNode,
+} from 'react'
 import { cn } from '@/lib/utils'
 import { playPop } from './onbSound'
+
+// Flèches qui déplacent la sélection dans un groupe de choix exclusif.
+const ARROW_KEYS = ['ArrowDown', 'ArrowRight', 'ArrowUp', 'ArrowLeft']
 
 // Effet d'appui partagé par toutes les cartes de choix : un « pop » sonore +
 // un rebond visuel (classe `onb-pop` retirée à la fin de l'animation). À câbler
@@ -97,6 +104,71 @@ export function Bubble({ children }: { children: ReactNode }) {
   )
 }
 
+// Groupe de choix EXCLUSIF (une seule réponse). Porte la sémantique
+// `radiogroup` et le clavier attendu du motif : flèches pour passer d'une
+// option à l'autre, et une seule option tabulable (« tabindex baladeur ») pour
+// qu'un Tab traverse le groupe entier au lieu de s'arrêter sur chaque ligne.
+//
+// Le tabindex est posé sur le DOM plutôt que passé en prop : les appelants
+// construisent leurs options par `map()` et n'ont pas à savoir laquelle est
+// tabulable — la règle reste ici, en un seul endroit.
+export function OptionGroup({
+  label,
+  children,
+  className = 'flex flex-col gap-[11px]',
+}: {
+  /** Libellé du groupe, annoncé avant les options (ex. « Ton objectif n°1 »). */
+  label: string
+  children: ReactNode
+  /** Mise en page du groupe (par défaut une colonne ; la classe est une grille). */
+  className?: string
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+
+  const radios = () => [
+    ...(ref.current?.querySelectorAll<HTMLElement>('[role="radio"]') ?? []),
+  ]
+
+  useEffect(() => {
+    const items = radios()
+    if (items.length === 0) return
+    const checked = items.find((r) => r.getAttribute('aria-checked') === 'true')
+    // Rien de coché encore : c'est la PREMIÈRE option qui est tabulable (motif
+    // ARIA), sinon l'option cochée.
+    const tabbable = checked ?? items[0]
+    for (const r of items) r.tabIndex = r === tabbable ? 0 : -1
+  })
+
+  function onKeyDown(e: ReactKeyboardEvent<HTMLDivElement>) {
+    if (!ARROW_KEYS.includes(e.key)) return
+    const items = radios()
+    if (items.length === 0) return
+    const current = items.indexOf(document.activeElement as HTMLElement)
+    const forward = e.key === 'ArrowDown' || e.key === 'ArrowRight'
+    // Depuis l'extérieur du groupe (current === -1), on entre par la première.
+    const next =
+      current === -1
+        ? 0
+        : (current + (forward ? 1 : -1) + items.length) % items.length
+    e.preventDefault()
+    items[next].focus()
+    // Motif radio : la sélection suit le focus.
+    items[next].click()
+  }
+
+  return (
+    <div
+      ref={ref}
+      role="radiogroup"
+      aria-label={label}
+      onKeyDown={onKeyDown}
+      className={className}
+    >
+      {children}
+    </div>
+  )
+}
+
 // Grande carte d'option (radio, choix unique) : icône + libellé (+ description),
 // pastille de sélection à droite (centrée verticalement). Socle 3D, rebond +
 // son au clic. Utilisée sur profil, source, objectif, etc.
@@ -119,7 +191,12 @@ export function OptionRow({
   return (
     <button
       type="button"
-      aria-pressed={selected}
+      // Choix EXCLUSIF : `radio` (« option 2 sur 4, sélectionnée ») et non
+      // `aria-pressed`, qui annonce un interrupteur et ne dit rien du fait que
+      // les options s'excluent. À utiliser dans un <OptionGroup>, qui porte le
+      // `radiogroup` et le clavier.
+      role="radio"
+      aria-checked={selected}
       onClick={() => {
         onPress()
         onClick()

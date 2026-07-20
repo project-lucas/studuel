@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import type { Subject } from '@/lib/types'
@@ -108,6 +108,25 @@ export default function WelcomeFlow({
     window.localStorage.setItem(STORAGE_KEY, serializeAnswers(answers))
   }, [answers, draftLoaded])
 
+  // Changement d'écran : on déplace le focus sur le nouvel écran. Sans ça, le
+  // clavier et le lecteur d'écran restent sur le bouton qui vient de
+  // disparaître — l'élève au lecteur d'écran n'entend RIEN du nouvel écran, et
+  // la tabulation repart du haut du document. On remet aussi le défilement en
+  // haut : un écran long laissé à mi-hauteur ferait manquer son titre.
+  // Volontairement pas au tout premier rendu : voler le focus à l'arrivée sur
+  // la page serait plus gênant qu'utile.
+  const screenRef = useRef<HTMLDivElement>(null)
+  const scrollRef = useRef<HTMLElement>(null)
+  const firstRender = useRef(true)
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false
+      return
+    }
+    scrollRef.current?.scrollTo({ top: 0 })
+    screenRef.current?.focus({ preventScroll: true })
+  }, [step])
+
   function go(to: WelcomeStep) {
     setHistory((h) => [...h, step])
     setStep(to)
@@ -195,7 +214,11 @@ export default function WelcomeFlow({
   }
 
   return (
-    <div className="onb fixed inset-0 z-50 flex flex-col pb-[env(safe-area-inset-bottom)]">
+    <div
+      ref={screenRef}
+      tabIndex={-1}
+      className="onb fixed inset-0 z-50 flex flex-col pb-[env(safe-area-inset-bottom)] outline-none"
+    >
       {showFlowHeader ? (
         <ProgressHeader progress={progress} onBack={back} />
       ) : null}
@@ -214,7 +237,7 @@ export default function WelcomeFlow({
         </div>
       ) : (
         <>
-          <main className="min-h-0 flex-1 overflow-y-auto">
+          <main ref={scrollRef} className="min-h-0 flex-1 overflow-y-auto">
             <div className="mx-auto flex min-h-full w-full max-w-md flex-col px-[22px] pt-2 pb-[22px]">
               {renderStep()}
             </div>

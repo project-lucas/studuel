@@ -17,7 +17,14 @@ import {
 } from '@/lib/welcome'
 import { schoolLevelForGrade, SCHOOL_LEVEL_LABEL } from '@/lib/clan'
 import PencilLogo from './PencilLogo'
-import { Bubble, OptionIcon, OptionRow, StepHead, usePressFx } from './OnbBits'
+import {
+  Bubble,
+  OptionGroup,
+  OptionIcon,
+  OptionRow,
+  StepHead,
+  usePressFx,
+} from './OnbBits'
 
 // ---------------------------------------------------------------------------
 // Écran 2 — Parent ou élève
@@ -35,36 +42,38 @@ export function ProfilStep({
         title="Qui utilise Studuel ?"
         subtitle="On adapte l'expérience selon ton profil."
       />
-      <div className="flex flex-col gap-[11px] pt-6">
-        <OptionRow
-          selected={answers.profileType === 'eleve'}
-          onClick={() => onPick('eleve')}
-          icon={
-            <OptionIcon color="var(--onb-pp)">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" strokeWidth="2.2">
-                <circle cx="12" cy="8" r="4" />
-                <path d="M4 20a8 8 0 0 1 16 0" />
-              </svg>
-            </OptionIcon>
-          }
-          label="Je suis élève"
-          description="Je révise et je défie mes amis en duel"
-        />
-        <OptionRow
-          selected={answers.profileType === 'parent'}
-          onClick={() => onPick('parent')}
-          icon={
-            <OptionIcon color="var(--onb-yl)">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5a3d00" strokeWidth="2.2">
-                <circle cx="8" cy="8" r="3.2" />
-                <circle cx="16" cy="9" r="2.6" />
-                <path d="M2 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 8-3.8" />
-              </svg>
-            </OptionIcon>
-          }
-          label="Je suis parent"
-          description="Je crée un compte pour mon enfant"
-        />
+      <div className="pt-6">
+        <OptionGroup label="Qui utilise Studuel">
+          <OptionRow
+            selected={answers.profileType === 'eleve'}
+            onClick={() => onPick('eleve')}
+            icon={
+              <OptionIcon color="var(--onb-pp)">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" strokeWidth="2.2">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 20a8 8 0 0 1 16 0" />
+                </svg>
+              </OptionIcon>
+            }
+            label="Je suis élève"
+            description="Je révise et je défie mes amis en duel"
+          />
+          <OptionRow
+            selected={answers.profileType === 'parent'}
+            onClick={() => onPick('parent')}
+            icon={
+              <OptionIcon color="var(--onb-yl)">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5a3d00" strokeWidth="2.2">
+                  <circle cx="8" cy="8" r="3.2" />
+                  <circle cx="16" cy="9" r="2.6" />
+                  <path d="M2 20a6 6 0 0 1 12 0M14 20a5 5 0 0 1 8-3.8" />
+                </svg>
+              </OptionIcon>
+            }
+            label="Je suis parent"
+            description="Je crée un compte pour mon enfant"
+          />
+        </OptionGroup>
       </div>
     </div>
   )
@@ -155,19 +164,21 @@ export function SourceStep({
   return (
     <div className="flex flex-1 flex-col">
       <StepHead title="Comment tu as connu Studuel ?" />
-      <div className="flex flex-col gap-[11px] pt-6">
-        {SOURCES.map((s) => {
-          const meta = SOURCE_ICONS[s.value]
-          return (
-            <OptionRow
-              key={s.value}
-              selected={answers.source === s.value}
-              onClick={() => onPick(s.value)}
-              icon={<OptionIcon color={meta.color}>{meta.icon}</OptionIcon>}
-              label={s.label}
-            />
-          )
-        })}
+      <div className="pt-6">
+        <OptionGroup label="Comment tu as connu Studuel">
+          {SOURCES.map((s) => {
+            const meta = SOURCE_ICONS[s.value]
+            return (
+              <OptionRow
+                key={s.value}
+                selected={answers.source === s.value}
+                onClick={() => onPick(s.value)}
+                icon={<OptionIcon color={meta.color}>{meta.icon}</OptionIcon>}
+                label={s.label}
+              />
+            )
+          })}
+        </OptionGroup>
       </div>
     </div>
   )
@@ -229,19 +240,21 @@ export function GoalStep({
   return (
     <div className="flex flex-1 flex-col">
       <StepHead title="Ton objectif n°1 ?" subtitle="On adapte ton plan en fonction." />
-      <div className="flex flex-col gap-[11px] pt-6">
-        {GOALS.map((g) => {
-          const meta = GOAL_ICONS[g.value]
-          return (
-            <OptionRow
-              key={g.value}
-              selected={answers.goal === g.value}
-              onClick={() => onPick(g.value)}
-              icon={<OptionIcon color={meta.color}>{meta.icon}</OptionIcon>}
-              label={g.label}
-            />
-          )
-        })}
+      <div className="pt-6">
+        <OptionGroup label="Ton objectif n°1">
+          {GOALS.map((g) => {
+            const meta = GOAL_ICONS[g.value]
+            return (
+              <OptionRow
+                key={g.value}
+                selected={answers.goal === g.value}
+                onClick={() => onPick(g.value)}
+                icon={<OptionIcon color={meta.color}>{meta.icon}</OptionIcon>}
+                label={g.label}
+              />
+            )
+          })}
+        </OptionGroup>
       </div>
     </div>
   )
@@ -263,7 +276,9 @@ function GradeCell({
   return (
     <button
       type="button"
-      aria-pressed={selected}
+      // Choix exclusif (une seule classe) : même motif radio que OptionRow.
+      role="radio"
+      aria-checked={selected}
       onClick={() => {
         onPress()
         onPick()
@@ -293,15 +308,20 @@ export function GradeStep({
         title="Tu es en quelle classe ?"
         subtitle="Pour te proposer le bon programme."
       />
-      <div className="grid grid-cols-2 gap-[11px] pt-6">
-        {GRADE_LEVELS.map((g) => (
-          <GradeCell
-            key={g}
-            label={GRADE_LABELS[g] ?? g}
-            selected={answers.grade === g}
-            onPick={() => onPick(g)}
-          />
-        ))}
+      <div className="pt-6">
+        <OptionGroup
+          label="Tu es en quelle classe"
+          className="grid grid-cols-2 gap-[11px]"
+        >
+          {GRADE_LEVELS.map((g) => (
+            <GradeCell
+              key={g}
+              label={GRADE_LABELS[g] ?? g}
+              selected={answers.grade === g}
+              onPick={() => onPick(g)}
+            />
+          ))}
+        </OptionGroup>
       </div>
     </div>
   )
@@ -440,40 +460,42 @@ export function DailyGoalStep({
         title="Ton objectif quotidien ?"
         subtitle="Tu pourras le changer plus tard."
       />
-      <div className="flex flex-col gap-[11px] pt-6">
-        {DAILY_GOALS.map((g) => {
-          const selected = answers.dailyGoalMinutes === g.minutes
-          return (
-            <OptionRow
-              key={g.minutes}
-              selected={selected}
-              onClick={() => onPick(g.minutes)}
-              label={g.label}
-              trailing={
-                <div className="flex items-center gap-3">
-                  <span
-                    className="text-[13px] font-bold"
-                    style={{
-                      color: selected ? 'var(--onb-pp)' : 'var(--onb-mut)',
-                    }}
-                  >
-                    {g.hint}
-                  </span>
-                  <span
-                    className="shrink-0 rounded-full border-2"
-                    style={{
-                      width: 26,
-                      height: 26,
-                      borderColor: selected ? 'var(--onb-pp)' : 'var(--onb-line)',
-                      background: selected ? 'var(--onb-pp)' : '#fff',
-                      boxShadow: selected ? 'inset 0 0 0 4px #fff' : undefined,
-                    }}
-                  />
-                </div>
-              }
-            />
-          )
-        })}
+      <div className="pt-6">
+        <OptionGroup label="Ton objectif quotidien">
+          {DAILY_GOALS.map((g) => {
+            const selected = answers.dailyGoalMinutes === g.minutes
+            return (
+              <OptionRow
+                key={g.minutes}
+                selected={selected}
+                onClick={() => onPick(g.minutes)}
+                label={g.label}
+                trailing={
+                  <div className="flex items-center gap-3">
+                    <span
+                      className="text-[13px] font-bold"
+                      style={{
+                        color: selected ? 'var(--onb-pp)' : 'var(--onb-mut)',
+                      }}
+                    >
+                      {g.hint}
+                    </span>
+                    <span
+                      className="shrink-0 rounded-full border-2"
+                      style={{
+                        width: 26,
+                        height: 26,
+                        borderColor: selected ? 'var(--onb-pp)' : 'var(--onb-line)',
+                        background: selected ? 'var(--onb-pp)' : '#fff',
+                        boxShadow: selected ? 'inset 0 0 0 4px #fff' : undefined,
+                      }}
+                    />
+                  </div>
+                }
+              />
+            )
+          })}
+        </OptionGroup>
       </div>
     </div>
   )

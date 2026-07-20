@@ -154,7 +154,13 @@ export default function FlashcardPlayer({
     const rate = Math.round((firstTryKnown / cards.length) * 100)
 
     return (
-      <div className="relative mx-auto flex max-w-xl flex-col items-center gap-4 overflow-hidden rounded-3xl bg-primary px-6 py-10 text-center text-primary-foreground">
+      // `key` explicite sur chaque branche : le démontage de l'écran de jeu
+      // (et donc de l'état de ComboBadge) ne doit pas dépendre de l'alignement
+      // positionnel des deux arbres JSX.
+      <div
+        key="deck-fin"
+        className="relative mx-auto flex max-w-xl flex-col items-center gap-4 overflow-hidden rounded-3xl bg-primary px-6 py-10 text-center text-primary-foreground"
+      >
         {/* L'écran de fin était une carte nue, face au volet plein écran du
             quiz : un élève qui retourne 20 cartes recevait MOINS de récompense
             que celui qui répond à 5 questions. */}
@@ -231,7 +237,7 @@ export default function FlashcardPlayer({
   if (!current) return null
 
   return (
-    <div className="mx-auto flex max-w-xl flex-col gap-3">
+    <div key="deck-session" className="mx-auto flex max-w-xl flex-col gap-3">
       <div className="flex items-center justify-between text-sm text-muted-foreground">
         {/* « 8 sues · 3 à repasser » : sans le second chiffre, l'élève qui
             bloque sur quelques cartes voit un compteur figé et ne sait pas

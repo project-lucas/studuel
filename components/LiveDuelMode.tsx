@@ -375,7 +375,11 @@ function LiveMatch({
     // (reseau mobile, mise en veille), et un faux positif volerait un duel en
     // cours. On informe, et on rend la sortie possible.
     return (
-      <Centered>
+      // `aria-live` : c'est TOUT l'intérêt de cet écran — prévenir un élève
+      // bloqué. Sans région annoncée, un élève non-voyant ne saurait pas que le
+      // message et la sortie viennent d'apparaître. Même convention que les
+      // players de quiz/flashcards.
+      <Centered live>
         {opponentPresent ? (
           <>
             <Loader2 className="text-primary mb-2 size-6 animate-spin" aria-hidden="true" />
@@ -392,12 +396,10 @@ function LiveMatch({
             </span>
           </>
         )}
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={onExit}
-          className="mt-4"
-        >
+        {/* Seule action possible de tout l'écran quand l'élève est coincé :
+            cible tactile pleine (44 px), pas le `sm` réservé aux boutons en
+            ligne d'un écran qui en compte plusieurs. */}
+        <Button variant="ghost" onClick={onExit} className="mt-4">
           {opponentPresent ? 'Abandonner' : 'Quitter le duel'}
         </Button>
       </Centered>
@@ -465,9 +467,20 @@ function LiveMatch({
   )
 }
 
-function Centered({ children }: { children: React.ReactNode }) {
+function Centered({
+  children,
+  live = false,
+}: {
+  children: React.ReactNode
+  // `true` pour les écrans d'ATTENTE dont le contenu change tout seul : le
+  // lecteur d'écran doit annoncer le changement (rival parti, sortie offerte).
+  live?: boolean
+}) {
   return (
-    <div className="text-muted-foreground flex min-h-40 flex-col items-center justify-center gap-1 p-6 text-center text-sm">
+    <div
+      aria-live={live ? 'polite' : undefined}
+      className="text-muted-foreground flex min-h-40 flex-col items-center justify-center gap-1 p-6 text-center text-sm"
+    >
       {children}
     </div>
   )

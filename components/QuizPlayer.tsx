@@ -78,6 +78,8 @@ export default function QuizPlayer({
   // met à jour qu'au prochain rendu ; sans ce ref, deux taps rapprochés
   // pousseraient une réponse en double dans reviewsRef. Relâché à la suivante.
   const lockedRef = useRef(false)
+  // Verrou d'avancement, relâché au changement d'`index` (donc après re-rendu).
+  const advancingRef = useRef(false)
 
   const finish = (allChoices: number[]) => {
     if (finishedRef.current) return
@@ -132,7 +134,15 @@ export default function QuizPlayer({
 
   // Passer à la suite (ou terminer) une fois le feedback lu.
   const advance = () => {
-    if (selected === null) return
+    // Verrou synchrone : `selected` (state) est en retard d'un rendu, donc deux
+    // taps rapprochés sur « Continuer » franchissent tous deux la garde. Or
+    // `setIndex` est un updater FONCTIONNEL : il s'applique deux fois (index+2)
+    // alors qu'une SEULE réponse est poussée dans `choices` — tout le reste de
+    // la session lit alors `choices[i]` face à la mauvaise question (score,
+    // pastilles de correction et « Revoir mes erreurs » faussés). `choose()` et
+    // `finish()` avaient déjà leur verrou, pas celui-ci.
+    if (selected === null || advancingRef.current) return
+    advancingRef.current = true
     const next = [...choices, selected]
     setChoices(next)
     setSelected(null)
@@ -146,6 +156,10 @@ export default function QuizPlayer({
   // Toujours la DERNIÈRE version d'`advance` (elle capture `choices`/`selected`).
   // Mise à jour dans un effet, jamais pendant le rendu : écrire un ref pendant
   // le rendu casse les garanties du rendu concurrent de React.
+  useEffect(() => {
+    advancingRef.current = false
+  }, [index])
+
   const advanceRef = useRef(advance)
   useEffect(() => {
     advanceRef.current = advance
@@ -198,7 +212,11 @@ export default function QuizPlayer({
     const v = verdictFor(ratio, gradeLevel)
 
     return (
-      <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
+      // `key` explicite : sans elle, le démontage de l'écran de question (et
+      // donc de l'état de ComboBadge) ne tient qu'à l'alignement positionnel
+      // des deux arbres JSX — une coïncidence qu'un simple <div> ajouté plus
+      // tard casserait, en faisant réapparaître un badge fantôme.
+      <div key="quiz-fin" className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
         {/* Volet score, aux couleurs du quiz */}
         <div className="bg-primary px-4 pt-16 pb-10 text-primary-foreground md:px-8 md:pt-12">
           <div className="mx-auto w-full max-w-xl">
@@ -245,10 +263,15 @@ export default function QuizPlayer({
                 </p>
               ) : null}
 
+              {/* `record &&` est essentiel : un quiz PERSONNEL (bibliothèque)
+                  n'écrit RIEN — ni session, ni SRS (`finish` sort avant
+                  `recordReviewAnswers`). Promettre « tes erreurs sont
+                  reprogrammées » y serait donc un mensonge pur. */}
               {isPartial ? (
                 <p className="mt-4 text-sm opacity-80">
-                  Séance d&apos;entraînement : elle ne recompte pas dans ton
-                  score du quiz, mais tes erreurs sont bien reprogrammées.
+                  {record
+                    ? "Séance d'entraînement : elle ne recompte pas dans ton score du quiz, mais tes erreurs sont bien reprogrammées."
+                    : "Séance d'entraînement sur tes erreurs."}
                 </p>
               ) : null}
 
@@ -406,6 +429,7 @@ export default function QuizPlayer({
     // est neutralisé — sinon un glissé du pouce quitte le quiz sans passer par
     // la garde de sortie et la session est perdue.
     <div
+      key="quiz-session"
       data-no-swipe
       className="-mx-4 -mt-16 flex min-h-svh flex-col bg-primary px-4 pt-16 pb-24 text-primary-foreground md:-mx-8 md:-mt-10 md:px-8 md:pt-12"
     >

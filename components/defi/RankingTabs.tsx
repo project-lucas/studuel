@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import type { RankingBoard, RankingEntry, RankingScope } from '@/lib/defi/types'
 import { ChevronRightIcon } from './icons'
+import { useTablist } from '@/components/useTablist'
 
 interface RankingTabsProps {
   boards: Record<RankingScope, RankingBoard>
@@ -26,6 +27,7 @@ export default function RankingTabs({ boards, clanLabel }: RankingTabsProps) {
     { scope: 'national', label: 'National' },
     { scope: 'amis', label: 'Amis' },
   ]
+  const scopeTabs = useTablist(TABS.length, (i) => setScope(TABS[i].scope))
 
   return (
     <div>
@@ -35,14 +37,17 @@ export default function RankingTabs({ boards, clanLabel }: RankingTabsProps) {
         aria-label="Portée du classement"
         className="flex gap-1 border-b border-white/10 bg-white/5 p-1.5"
       >
-        {TABS.map((tab) => {
+        {TABS.map((tab, i) => {
           const active = tab.scope === scope
           return (
             <button
               key={tab.scope}
               role="tab"
               type="button"
+              id={`ranking-tab-${tab.scope}`}
               aria-selected={active}
+              aria-controls="ranking-panel"
+              {...scopeTabs.props(i, active)}
               onClick={() => setScope(tab.scope)}
               className={`flex-1 cursor-pointer rounded-xl py-2 text-sm font-extrabold transition-colors focus-visible:ring-2 focus-visible:ring-highlight/40 focus-visible:outline-none ${
                 active
@@ -65,7 +70,9 @@ export default function RankingTabs({ boards, clanLabel }: RankingTabsProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={reduce ? { opacity: 0 } : { opacity: 0, x: -12 }}
             transition={{ duration: 0.18, ease: 'easeOut' }}
+            id="ranking-panel"
             role="tabpanel"
+            aria-labelledby={`ranking-tab-${scope}`}
           >
             {/* Contexte : rang / percentile */}
             <div className="mb-3">

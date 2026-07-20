@@ -1,9 +1,10 @@
 'use client'
 
-import { useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { CalendarHeart, ChartLine, type LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { useTablist } from '@/components/useTablist'
 
 // -----------------------------------------------------------------------------
 // Tableau de bord de l'onglet Moi : au lieu d'empiler des cartes qui obligent à
@@ -26,17 +27,10 @@ export default function MoiTabs({
     { id: 'progres', label: 'Ma progression', icon: ChartLine, panel: progres },
   ]
   const [active, setActive] = useState(tabs[0].id)
-  const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
 
-  // Navigation clavier ← / → entre les onglets (motif ARIA tablist).
-  const onKeyDown = (e: KeyboardEvent<HTMLButtonElement>, i: number) => {
-    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return
-    e.preventDefault()
-    const dir = e.key === 'ArrowRight' ? 1 : -1
-    const nextIdx = (i + dir + tabs.length) % tabs.length
-    setActive(tabs[nextIdx].id)
-    tabRefs.current[nextIdx]?.focus()
-  }
+  // Navigation clavier du motif ARIA tablist — mutualisée avec les autres
+  // groupes d'onglets (elle ajoute au passage Origine/Fin, qui manquaient ici).
+  const tabNav = useTablist(tabs.length, (i) => setActive(tabs[i].id))
 
   return (
     <div className="mt-5">
@@ -53,16 +47,12 @@ export default function MoiTabs({
           return (
             <button
               key={t.id}
-              ref={(el) => {
-                tabRefs.current[i] = el
-              }}
               type="button"
               role="tab"
               id={`moi-tab-${t.id}`}
               aria-controls={`moi-panel-${t.id}`}
               aria-selected={selected}
-              tabIndex={selected ? 0 : -1}
-              onKeyDown={(e) => onKeyDown(e, i)}
+              {...tabNav.props(i, selected)}
               onClick={() => {
                 sfx.tap()
                 setActive(t.id)

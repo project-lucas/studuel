@@ -54,7 +54,10 @@ plafond journalier d'XP de défi** (ferme un VRAI trou : l'INSERT direct dans
 hérite des policies existantes), **177 = bornes `test_sessions` /
 `exam_blanc_sessions`** (la table jumelle de `challenge_sessions` n'avait JAMAIS
 eu de CHECK depuis 003 : `score: 999999` par INSERT direct → XP `score×10+20`
-sans plafond ; miroir exact de la 165). **Prochaine à créer = `178`.**
+sans plafond ; miroir exact de la 165), **178 = autorisation Realtime** (canaux
+`duel-*`/`coop-*` privés ; **INERTE tant que le client n'est pas basculé en
+`private: true`** — donc sûre à exécuter, mais NE PAS basculer le client avant,
+sous peine de refuser toutes les souscriptions). **Prochaine à créer = `179`.**
 
 **Fonctionnel livré (l'essentiel)** :
 - **Boucle cœur Réviser** : accueil « carnet violet », chapitres → leçon-hub
@@ -261,11 +264,11 @@ breaking changes vs. l'entraînement.
 - **P0 laissé au prochain cycle (à faire d'un bloc)** : les cartes mentales
   restent lisibles par requête directe (`chapters` en RLS `USING (true)`). La
   moitié applicative est fermée (`6fafd33`, leurre au lieu du contenu flouté),
-  mais le correctif complet est une migration `178` (REVOKE de la colonne +
+  mais le correctif complet est une migration `179` (REVOKE de la colonne +
   `has_mind_map` généré + RPC `SECURITY DEFINER`) qui **casse Réviser si elle est
   exécutée avant le changement de code** : 4 requêtes font `select('*')` sur
   `chapters` et un `*` renverrait « permission denied ». Plan ordonné dans
-  `_ASSOCIE/BACKLOG-JOUR.md`. **Ne pas écrire la 178 sans faire d'abord les
+  `_ASSOCIE/BACKLOG-JOUR.md`. **Ne pas écrire la 179 sans faire d'abord les
   colonnes explicites.**
 - **Zones auditées et déclarées SAINES le 2026-07-20** (ne pas les ré-auditer au
   prochain cycle, c'est du budget perdu) : **studio/admin** (le gate n'est pas

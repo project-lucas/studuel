@@ -67,8 +67,15 @@ export function useCoop(userId: string) {
     (sessionId: string) => {
       teardown()
       const supabase = supabaseRef.current
+      // `private: true` : même raison que dans useLiveDuel — les policies RLS
+      // de la migration 178 sur `realtime.messages` ne couvrent que les canaux
+      // privés. Sans ce drapeau, un tiers peut rejoindre une session de coop et
+      // saboter les vies partagées.
+      //
+      // ⚠️ DÉPENDANCE DE DÉPLOIEMENT : migration 178 exécutée AVANT ce code,
+      // sinon toutes les souscriptions du canal sont refusées.
       const channel = supabase.channel(coopChannelName(sessionId), {
-        config: { presence: { key: userId } },
+        config: { presence: { key: userId }, private: true },
       })
 
       channel

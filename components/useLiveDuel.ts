@@ -65,8 +65,20 @@ export function useLiveDuel(userId: string) {
     (duelId: string) => {
       teardown()
       const supabase = supabaseRef.current
+      // `private: true` n'est PAS cosmétique : les policies RLS posées sur
+      // `realtime.messages` par la migration 178 ne s'appliquent QU'AUX canaux
+      // privés. Sans ce drapeau, elles sont inertes et n'importe qui muni de la
+      // clé anon (publique, dans le bundle JS) et d'un id de duel (fait pour
+      // être partagé, affiché en QR) peut rejoindre le canal sans passer par
+      // `join_live_duel` : espionner les manches, injecter de fausses réponses,
+      // ou forcer la partie en `active` avant l'arrivée du vrai adversaire.
+      //
+      // ⚠️ DÉPENDANCE DE DÉPLOIEMENT : la migration 178 doit être exécutée
+      // AVANT que ce code n'arrive en production. Sur un canal privé sans
+      // policies, toutes les souscriptions sont refusées et les duels en direct
+      // cessent purement et simplement de fonctionner.
       const channel = supabase.channel(channelName(duelId), {
-        config: { presence: { key: userId } },
+        config: { presence: { key: userId }, private: true },
       })
 
       channel

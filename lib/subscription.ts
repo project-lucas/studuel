@@ -3,7 +3,11 @@ import { createClient } from '@/lib/supabase/server'
 // Niveaux d'abonnement du PRD + 'anonymous' pour les visiteurs non connectés.
 export type Tier = 'anonymous' | 'free' | 'tier1' | 'tier2' | 'tier3'
 
-const PREMIUM_TIERS: Tier[] = ['tier1', 'tier2', 'tier3']
+// La liste des paliers payants est définie une seule fois, dans lib/gems.ts —
+// module PUR, donc importable aussi bien ici (serveur) que par les composants
+// client. L'inverse ne serait pas vrai : ce fichier-ci tire le client Supabase
+// serveur, et le réexporter vers un composant client casserait le bundle.
+import { PREMIUM_TIERS } from '@/lib/gems'
 
 // Récupère le niveau d'abonnement de l'utilisateur courant (côté serveur).
 // Visiteur non connecté → 'anonymous' (traité comme 'free' pour l'accès).
@@ -28,12 +32,12 @@ export async function getUserTier(): Promise<Tier> {
   }
 }
 
-// Offre 1 (tier1) et supérieures débloquent les tests premium.
+// Studuel+ (tier1) et au-dessus débloquent les tests premium.
 export function canAccessPremiumTests(tier: Tier): boolean {
   return PREMIUM_TIERS.includes(tier)
 }
 
-// Les cartes mentales des chapitres sont réservées aux abonnés (Offre 1+).
+// Les cartes mentales des chapitres sont réservées aux abonnés Studuel+.
 // Les gratuits voient la tuile mais ne peuvent pas l'ouvrir.
 export function canAccessMindMaps(tier: Tier): boolean {
   return PREMIUM_TIERS.includes(tier)

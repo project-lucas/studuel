@@ -137,7 +137,12 @@ export function capsuleById(id: string): Capsule | null {
 
 // --------------------------------------------------- personnalisation (pièces)
 
-export type PersoCategory = 'fond' | 'credit' | 'skin'
+// Les crédits de cartes mentales ont quitté cette boutique : ils sont devenus
+// les GEMMES (lib/gems), qui ne s'achètent pas en pièces mais se gagnent en
+// invitant des amis. Laisser du contenu payant s'acheter avec la monnaie du
+// grind cosmétique vidait l'offre Studuel+ de sa contrepartie — et cassait le
+// levier viral, puisqu'il devenait inutile d'inviter qui que ce soit.
+export type PersoCategory = 'fond' | 'skin'
 
 export type PersoProduct = {
   id: string
@@ -153,7 +158,6 @@ export type PersoProduct = {
 
 export const PERSO_CATEGORIES: { id: PersoCategory; label: string; emoji: string }[] = [
   { id: 'fond', label: 'Fonds d’écran', emoji: '🖼️' },
-  { id: 'credit', label: 'Cartes mentales', emoji: '🧩' },
   { id: 'skin', label: 'Skins', emoji: '✨' },
 ]
 
@@ -184,24 +188,6 @@ export const PERSO_CATALOG: PersoProduct[] = [
     emoji: '🌈',
     category: 'fond',
     available: false,
-  },
-  {
-    id: 'credit-5',
-    name: 'Pack 5 cartes mentales',
-    desc: 'Cinq cartes mentales à générer sur tes chapitres.',
-    priceCoins: 200,
-    emoji: '🧩',
-    category: 'credit',
-    available: true,
-  },
-  {
-    id: 'credit-15',
-    name: 'Pack 15 cartes mentales',
-    desc: 'De quoi cartographier tout un trimestre.',
-    priceCoins: 500,
-    emoji: '🗺️',
-    category: 'credit',
-    available: true,
   },
   {
     id: 'skin-go-or',

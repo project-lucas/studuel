@@ -19,6 +19,9 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import FriendAddButton from '@/components/FriendAddButton'
+import ParrainageCard from '@/components/ParrainageCard'
+import SquadSection from '@/components/SquadSection'
+import type { ReferralSummary } from '@/lib/gems'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { formatHours } from '@/lib/time'
@@ -821,6 +824,9 @@ export default function AmisHome({
   myFriendCode,
   squadName,
   canRenameSquad,
+  gems,
+  referral,
+  squadIds,
 }: {
   ranking: RankPlayer[]
   // Amis actuellement en session (RPC friends_live) : point vert sur leur
@@ -837,6 +843,11 @@ export default function AmisHome({
   // Nom du groupe d'amis (« squad », migration 176) et droit de le renommer.
   squadName: string | null
   canRenameSquad: boolean
+  // Économie des gemmes (migration 183) : solde et avancement du parrainage.
+  gems: number
+  referral: ReferralSummary
+  // Composition du groupe privé (migration 183), sous-ensemble des relations.
+  squadIds: string[]
 }) {
   return (
     <div className="flex flex-col gap-6">
@@ -851,8 +862,23 @@ export default function AmisHome({
         canRenameSquad={canRenameSquad}
       />
 
+      {/* Parrainage — juste sous le classement, là où l'élève constate qu'il
+          lui manque des amis : c'est là que l'invitation convertit. */}
+      <ParrainageCard
+        myFriendCode={myFriendCode}
+        gems={gems}
+        summary={referral}
+      />
+
       {/* Séries — qui tient sa flamme le plus longtemps. Masqué sans ami. */}
       {friends.length > 0 ? <StreakSection streaks={streaks} /> : null}
+
+      {/* Mon groupe — la sélection privée parmi toutes les relations. */}
+      <SquadSection
+        friends={friends}
+        squadIds={squadIds}
+        squadName={squadName}
+      />
 
       {/* Demandes reçues — à accepter ou refuser. Masqué s'il n'y en a pas. */}
       {pendingRequests.length > 0 ? (

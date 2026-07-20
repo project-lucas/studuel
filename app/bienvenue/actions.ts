@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
+import { claimPendingReferral } from '@/lib/referral-claim'
 import { GRADE_LEVELS } from '@/lib/types'
 import { schoolLevelForGrade } from '@/lib/clan'
 import {
@@ -143,8 +144,11 @@ export async function signUpWelcome(input: {
     }
   }
 
-  // Compte créé avec session : on rattache l'école-clan tout de suite (le cycle
-  // découle de la classe). Best-effort — sans incidence si 159 n'est pas passée.
+  // Compte créé avec session : on enregistre le parrain s'il y en a un, puis on
+  // rattache l'école-clan (le cycle découle de la classe). Les deux sont
+  // best-effort — sans incidence si les migrations 183/159 ne sont pas passées.
+  await claimPendingReferral()
+
   const schoolName = typeof a.schoolName === 'string' ? a.schoolName.trim() : ''
   if (grade && schoolName.length > 0) {
     const level = schoolLevelForGrade(grade)
@@ -251,6 +255,10 @@ export async function applyOnboarding(
     .eq('id', user.id)
 
   if (error) return { ok: false }
+
+  // Chemin OAuth : la query string du lien d'invitation a été perdue dans la
+  // redirection, mais le cookie a survécu — c'est ici qu'on le réclame.
+  await claimPendingReferral()
 
   // École = clan : si l'élève a renseigné son établissement, on le crée/retrouve
   // et on l'y rattache (le cycle découle de sa classe). Best-effort : un échec

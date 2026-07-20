@@ -15,6 +15,12 @@ import {
 } from '@/lib/social'
 import { schoolLevelForGrade } from '@/lib/clan'
 import { rankPlayers, type RankPlayer } from '@/lib/trophies'
+import { referralSummary, STARTING_GEMS } from '@/lib/gems'
+import {
+  fetchGems,
+  fetchReferralCounts,
+  fetchSquadIds,
+} from '@/lib/gems-access'
 
 export const metadata = { title: 'Amis — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -45,6 +51,12 @@ export default async function AmisPage() {
   // « Aperçu » — jamais de mock déguisé en réel.
   let school: SchoolBoard = getMockSchool(0)
   let schoolDemo = true
+  // Économie des gemmes (migration 183). Le visiteur voit la dotation de
+  // départ et un parrainage vierge : la carte lui montre ce qu'il gagnerait,
+  // ce qui est exactement le message qu'on veut lui faire passer.
+  let gems = STARTING_GEMS
+  let referral = referralSummary(0, 0)
+  let squadIds: string[] = []
 
   if (user) {
     const [
@@ -56,6 +68,9 @@ export default async function AmisPage() {
       { data: myStreakRaw },
       { data: liveRows },
       { data: squadRow },
+      gemsBalance,
+      referralCounts,
+      squadSet,
     ] = await Promise.all([
       // friend_code vit sur profiles depuis 019 (déjà en base) → sûr à lire ici.
       // grade_level (onboarding) sert à choisir le cycle du clan (collège/lycée).
@@ -88,8 +103,16 @@ export default async function AmisPage() {
         .select('squad_name')
         .eq('id', user.id)
         .maybeSingle(),
+      // Gemmes et filleuls (migration 183). Les deux helpers ont leur propre
+      // repli si la migration n'est pas passée — pas de quoi casser l'onglet.
+      fetchGems(supabase, user.id),
+      fetchReferralCounts(supabase, user.id),
+      fetchSquadIds(supabase, user.id),
     ])
 
+    gems = gemsBalance
+    referral = referralSummary(referralCounts.pending, referralCounts.activated)
+    squadIds = [...squadSet]
     myFriendCode = String(profile?.friend_code ?? '')
     const rawSquad = String(squadRow?.squad_name ?? '').trim()
     squadName = rawSquad.length > 0 ? rawSquad : null
@@ -192,6 +215,9 @@ export default async function AmisPage() {
         myFriendCode={myFriendCode}
         squadName={squadName}
         canRenameSquad={canRenameSquad}
+        gems={gems}
+        referral={referral}
+        squadIds={squadIds}
       />
     </div>
   )

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { claimPendingReferral } from '@/lib/referral-claim'
 
 // Retour des liens email Supabase (réinitialisation de mot de passe,
 // confirmations) : échange le code PKCE contre une session (cookies),
@@ -13,7 +14,15 @@ export async function GET(request: Request): Promise<Response> {
   if (code) {
     const supabase = await createClient()
     const { error } = await supabase.auth.exchangeCodeForSession(code)
-    if (!error) return NextResponse.redirect(`${origin}${next}`)
+    if (!error) {
+      // Une session vient de s'ouvrir : c'est le premier moment où le
+      // parrainage devient réclamable sur le parcours « inscription email avec
+      // confirmation ». Sans cet appel, ce parcours-là perdait le parrainage à
+      // tous les coups (signUp renvoie une session nulle et rend la main avant
+      // toute réclamation). Best-effort : n'empêche jamais la redirection.
+      await claimPendingReferral()
+      return NextResponse.redirect(`${origin}${next}`)
+    }
   }
 
   return NextResponse.redirect(`${origin}/login?error=lien-expire`)

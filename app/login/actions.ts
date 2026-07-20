@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
+import { claimPendingReferral } from '@/lib/referral-claim'
 import { GRADE_LEVELS } from '@/lib/types'
 
 export type AuthState = {
@@ -52,6 +53,12 @@ export async function signIn(
     password,
   })
   if (error) return { error: toFrench(error.message) }
+
+  // Dernier filet du parrainage : l'élève qui s'est inscrit par email avec
+  // confirmation arrive ici après avoir validé son adresse. Le cookie du lien
+  // d'invitation vit 7 jours, donc il est encore là. Sans cet appel, un
+  // parcours d'inscription entier perdait le parrainage silencieusement.
+  await claimPendingReferral()
 
   // Première connexion (ou config jamais faite) → onboarding.
   const { data: profile } = await supabase
@@ -120,6 +127,10 @@ export async function signUp(
         'Compte créé ! Vérifie ta boîte mail pour confirmer ton adresse, puis connecte-toi.',
     }
   }
+
+  // Inscription depuis /login avec session immédiate : c'est aussi un chemin
+  // par lequel un filleul peut arriver.
+  await claimPendingReferral()
 
   revalidatePath('/', 'layout')
   // Parcours d'accueil déjà fait → le bilan de capacités ; sinon l'onboarding.

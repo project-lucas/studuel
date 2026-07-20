@@ -3,6 +3,8 @@
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { addFriendMessage, type AddFriendStatus } from '@/lib/social'
+import { addToSquad, removeFromSquad } from '@/lib/gems-access'
+import { MAX_SQUAD_SIZE } from '@/lib/gems'
 
 // Statuts renvoyés par la fonction SQL add_friend_by_code (migration 019).
 const ADD_STATUSES: readonly AddFriendStatus[] = [
@@ -175,4 +177,60 @@ export async function removeFriend(
   if (error) return { ok: false }
   revalidatePath('/amis')
   return { ok: true }
+}
+
+// -----------------------------------------------------------------------------
+// Squad — le cercle intime, distinct des relations (migration 183).
+//
+// Ajouter quelqu'un crée une RELATION : elle compte pour le parrainage, les
+// classements et les duels, et on veut qu'il y en ait beaucoup. Le SQUAD est un
+// sous-ensemble choisi à la main, plafonné à MAX_SQUAD_SIZE. Sans cette
+// séparation, accepter un inconnu pour gagner une gemme polluerait le
+// classement entre vrais copains — et les élèves cesseraient d'ajouter, ce qui
+// tuerait précisément le levier viral qu'on cherche à créer.
+//
+// La composition est PRIVÉE et unilatérale : personne ne sait s'il figure dans
+// le squad d'un autre, donc il n'y a rien à refuser et personne à blesser.
+// -----------------------------------------------------------------------------
+
+const SQUAD_MESSAGES: Record<string, string> = {
+  added: 'Ajouté à ton groupe.',
+  already: 'Il est déjà dans ton groupe.',
+  full: `Ton groupe est complet (${MAX_SQUAD_SIZE} maximum).`,
+  not_friend: 'Il faut d’abord être amis.',
+  self: 'Tu es déjà dans ton propre groupe !',
+  error: 'Impossible pour le moment. Réessaie.',
+}
+
+export async function addFriendToSquad(
+  memberId: string,
+): Promise<{ ok: boolean; message: string }> {
+  if (!UUID_RE.test(memberId ?? '')) {
+    return { ok: false, message: SQUAD_MESSAGES.error }
+  }
+
+  const supabase = await createClient()
+  const result = await addToSquad(supabase, memberId)
+  if (result === 'added' || result === 'already') revalidatePath('/amis')
+
+  return {
+    ok: result === 'added' || result === 'already',
+    message: SQUAD_MESSAGES[result] ?? SQUAD_MESSAGES.error,
+  }
+}
+
+export async function removeFriendFromSquad(
+  memberId: string,
+): Promise<{ ok: boolean }> {
+  if (!UUID_RE.test(memberId ?? '')) return { ok: false }
+
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return { ok: false }
+
+  const ok = await removeFromSquad(supabase, user.id, memberId)
+  if (ok) revalidatePath('/amis')
+  return { ok }
 }

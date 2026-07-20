@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation'
 import { ArrowRight, Check, Flame, Swords, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { sfx } from '@/lib/sounds'
+import { sfx, buzz } from '@/lib/sounds'
+import { comboLabel, comboTier } from '@/lib/juice'
 import { SoundToggle } from '@/components/FlashcardPlayer'
 import { finishReviewSession } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
@@ -48,6 +49,9 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
   const [revealed, setRevealed] = useState(false)
   const [answers, setAnswers] = useState<ReviewAnswer[]>([])
   const [done, setDone] = useState(false)
+  // Bonnes réponses d'affilée : la file « À revoir » mérite la même
+  // récompense qui monte que le quiz et les flashcards.
+  const [streak, setStreak] = useState(0)
   const [result, setResult] = useState<Result | null>(null)
   // Garde anti-double-soumission : un double-tap sur la dernière carte pourrait
   // sinon enregistrer la session deux fois (ligne dupliquée en base).
@@ -175,6 +179,24 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
             <Flame className="size-3.5 text-primary" /> Révision espacée
           </span>
         )}
+        {/* Badge de SÉRIE, même grammaire que le quiz et les flashcards. La
+            région `aria-live` reste toujours montée : un lecteur d'écran
+            n'annonce que le changement d'une région déjà présente. */}
+        <span aria-live="polite" className="min-h-6">
+          {comboLabel(streak) ? (
+            <span
+              className={cn(
+                'animate-in zoom-in-50 font-heading rounded-full px-2.5 py-0.5 text-xs font-extrabold duration-300',
+                comboTier(streak) === 'chaud'
+                  ? 'bg-primary/10 text-primary'
+                  : 'bg-highlight text-foreground shadow-sm',
+              )}
+            >
+              {comboTier(streak) === 'chaud' ? '' : '🔥 '}
+              {comboLabel(streak)}
+            </span>
+          ) : null}
+        </span>
         <SoundToggle />
       </div>
       <div
@@ -220,8 +242,11 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
                 disabled={answered}
                 onClick={() => {
                   setSelected(i)
-                  if (isCorrect) sfx.correct()
+                  const nextStreak = isCorrect ? streak + 1 : 0
+                  setStreak(nextStreak)
+                  if (isCorrect) sfx.correctCombo(nextStreak)
                   else sfx.wrong()
+                  buzz(isCorrect, nextStreak)
                 }}
                 className={cn(
                   'flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left text-sm font-medium transition-all',
@@ -322,7 +347,9 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
               tabIndex={revealed ? undefined : -1}
               className="rounded-full border-amber-500/40 text-amber-700 hover:bg-amber-500/10 dark:text-amber-400"
               onClick={() => {
+                setStreak(0)
                 sfx.wrong()
+                buzz(false, 0)
                 next(false)
               }}
             >
@@ -333,7 +360,10 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
               tabIndex={revealed ? undefined : -1}
               className="rounded-full bg-success text-white hover:bg-success/85"
               onClick={() => {
-                sfx.correct()
+                const nextStreak = streak + 1
+                setStreak(nextStreak)
+                sfx.correctCombo(nextStreak)
+                buzz(true, nextStreak)
                 next(true)
               }}
             >

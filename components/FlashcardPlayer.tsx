@@ -201,20 +201,23 @@ export default function FlashcardPlayer({
         {/* Badge de SÉRIE : apparaît à partir de 2 cartes sues d'affilée et
             disparaît net dès qu'une carte échappe — même récompense que le
             quiz, pour que les deux formats se ressemblent. */}
-        {comboLabel(streak) ? (
-          <span
-            aria-live="polite"
-            className={cn(
-              'animate-in zoom-in-50 font-heading rounded-full px-2.5 py-0.5 text-xs font-extrabold duration-300',
-              comboTier(streak) === 'chaud'
-                ? 'bg-primary/10 text-primary'
-                : 'bg-highlight text-foreground shadow-sm',
-            )}
-          >
-            {comboTier(streak) === 'chaud' ? '' : '🔥 '}
-            {comboLabel(streak)}
-          </span>
-        ) : null}
+        {/* Région `aria-live` toujours montée (cf. QuizPlayer) : un lecteur
+            d'écran n'annonce que le changement d'une région déjà présente. */}
+        <span aria-live="polite" className="min-h-6">
+          {comboLabel(streak) ? (
+            <span
+              className={cn(
+                'animate-in zoom-in-50 font-heading rounded-full px-2.5 py-0.5 text-xs font-extrabold duration-300',
+                comboTier(streak) === 'chaud'
+                  ? 'bg-primary/10 text-primary'
+                  : 'bg-highlight text-foreground shadow-sm',
+              )}
+            >
+              {comboTier(streak) === 'chaud' ? '' : '🔥 '}
+              {comboLabel(streak)}
+            </span>
+          ) : null}
+        </span>
         <SoundToggle />
       </div>
 

@@ -326,8 +326,11 @@ export default function QuizPlayer({
         {/* Badge de SÉRIE : n'apparaît qu'à partir de 2 bonnes réponses
             d'affilée, grossit avec le palier, et disparaît net à la première
             erreur. C'est la récompense visible qui accompagne la montée du son. */}
-        {comboLabel(streak) ? (
-          <div className="flex justify-center" aria-live="polite">
+        {/* La région `aria-live` reste TOUJOURS montée : un lecteur d'écran
+            n'annonce que les CHANGEMENTS d'une région déjà présente. Si elle
+            apparaissait en même temps que son texte, l'annonce serait ratée. */}
+        <div className="flex min-h-7 justify-center" aria-live="polite">
+          {comboLabel(streak) ? (
             <span
               className={cn(
                 'animate-in zoom-in-50 font-heading rounded-full px-3 py-1 text-sm font-extrabold shadow-md duration-300',
@@ -341,8 +344,8 @@ export default function QuizPlayer({
               {comboTier(streak) === 'aucun' ? null : '🔥 '}
               {comboLabel(streak)}
             </span>
-          </div>
-        ) : null}
+          ) : null}
+        </div>
 
         {/* Anneau de progression : « Question N/10 » */}
         <div className="z-10 -mb-10 flex justify-center">

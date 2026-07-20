@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import ExamBlancPlayer from '@/components/ExamBlancPlayer'
 import { createClient } from '@/lib/supabase/server'
+import { getSubjectsCached } from '@/lib/catalog'
 import { examsForProfile } from '@/lib/exams'
 import { composeExam, type ExamQuestion } from '@/lib/exam-blanc'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
@@ -108,9 +109,11 @@ export default async function ExamenBlancPage({
     ? (profile.selected_subjects as string[])
     : null
 
-  const [{ data: subjects }, { data: quizzes }, { data: lastExam }] =
+  // Le catalogue des matières sort du cache serveur (lib/catalog), pas d'un
+  // scan Supabase à chaque composition d'examen.
+  const [cachedSubjects, { data: quizzes }, { data: lastExam }] =
     await Promise.all([
-      supabase.from('subjects').select('*').returns<Subject[]>(),
+      getSubjectsCached(),
       supabase
         .from('quizzes')
         .select('id, subject, lesson_id')
@@ -127,7 +130,16 @@ export default async function ExamenBlancPage({
   // Matières de l'épreuve : celles de l'examen officiel (brevet/bac) si la
   // classe en a un, sinon toutes les matières suivies — l'examen blanc reste
   // un contrôle multi-matières utile dès la 6e.
-  const allSubjects = subjects ?? []
+  // Repli authentifié : cache froid ou migration 026 pas encore exécutée
+  // (même motif que /reviser/[subject]).
+  let allSubjects: Subject[] = cachedSubjects
+  if (allSubjects.length === 0) {
+    const { data } = await supabase
+      .from('subjects')
+      .select('*')
+      .returns<Subject[]>()
+    allSubjects = data ?? []
+  }
   const exams = examsForProfile(grade, selected, allSubjects)
   const examSubjectNames = new Set(exams.map((e) => e.subject.name))
   const slugBySubjectName = new Map(allSubjects.map((s) => [s.name, s.slug]))
@@ -145,8 +157,25 @@ export default async function ExamenBlancPage({
   const lessonIds = quizList
     .map((q) => q.lesson_id)
     .filter((l): l is string => !!l)
+
+  // La requête la plus lourde (quiz_questions) ne dépend QUE de quizList :
+  // elle part en parallèle de la chaîne leçons → chapitres au lieu d'attendre
+  // derrière elle (2 allers-retours sortis du chemin critique).
+  const questionsPromise =
+    quizList.length > 0
+      ? supabase
+          .from('quiz_questions')
+          .select(
+            'id, quiz_id, question, kind, options, correct_index, explanation, position',
+          )
+          .in('quiz_id', quizList.map((q) => q.id))
+          .returns<QuizQuestion[]>()
+      : Promise.resolve({ data: [] as QuizQuestion[] })
+
   const chapterByLesson = new Map<string, string>()
-  if (lessonIds.length > 0) {
+  const chapterTitles = new Map<string, string>()
+  const chapterChain = (async () => {
+    if (lessonIds.length === 0) return
     const { data: lessons } = await supabase
       .from('lessons')
       .select('id, chapter_id')
@@ -154,10 +183,8 @@ export default async function ExamenBlancPage({
     for (const l of lessons ?? []) {
       chapterByLesson.set(String(l.id), String(l.chapter_id))
     }
-  }
-  const chapterTitles = new Map<string, string>()
-  const chapterIds = [...new Set(chapterByLesson.values())]
-  if (chapterIds.length > 0) {
+    const chapterIds = [...new Set(chapterByLesson.values())]
+    if (chapterIds.length === 0) return
     const { data: chapters } = await supabase
       .from('chapters')
       .select('id, title')
@@ -165,19 +192,16 @@ export default async function ExamenBlancPage({
     for (const c of chapters ?? []) {
       chapterTitles.set(String(c.id), String(c.title))
     }
-  }
+  })()
+
+  const [{ data: questions }] = await Promise.all([
+    questionsPromise,
+    chapterChain,
+  ])
 
   // Questions candidates, groupées par matière pour un sujet équilibré.
   const bySubject = new Map<string, ExamQuestion[]>()
   if (quizList.length > 0) {
-    const { data: questions } = await supabase
-      .from('quiz_questions')
-      .select(
-        'id, quiz_id, question, kind, options, correct_index, explanation, position',
-      )
-      .in('quiz_id', quizList.map((q) => q.id))
-      .returns<QuizQuestion[]>()
-
     const quizById = new Map(quizList.map((q) => [q.id, q]))
     const valid = (questions ?? []).filter(
       (q) =>

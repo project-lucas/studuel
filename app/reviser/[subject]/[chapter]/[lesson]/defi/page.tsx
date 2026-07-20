@@ -3,7 +3,7 @@ import BackButton from '@/components/BackButton'
 import DefiSoloPlayer from '@/components/DefiSoloPlayer'
 import LessonSupportLock from '@/components/LessonSupportLock'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
-import { canAccessPremiumTests, getUserTier } from '@/lib/subscription'
+import { canAccessPremiumTests, getUserTierFor } from '@/lib/subscription'
 import type { QuizQuestion } from '@/lib/types'
 import { loadLessonContext } from '../data'
 
@@ -18,7 +18,7 @@ export default async function LessonDefiPage({
   params: Promise<{ subject: string; chapter: string; lesson: string }>
 }) {
   const { subject: slug, chapter: chapterId, lesson: lessonId } = await params
-  const { supabase, subject, chapter, lesson } = await loadLessonContext(
+  const { supabase, user, subject, chapter, lesson } = await loadLessonContext(
     slug,
     chapterId,
     lessonId,
@@ -34,7 +34,8 @@ export default async function LessonDefiPage({
       .select('id, is_free')
       .eq('lesson_id', lesson.id)
       .maybeSingle<{ id: string; is_free: boolean }>(),
-    getUserTier(),
+    // Le user vient de loadLessonContext : pas de second aller-retour Auth.
+    getUserTierFor(supabase, user.id),
   ])
 
   if (quiz && !quiz.is_free && !canAccessPremiumTests(tier)) {

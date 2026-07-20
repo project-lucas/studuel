@@ -4,7 +4,7 @@ import { BookOpen, Lock, Play, Waypoints } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import BackButton from '@/components/BackButton'
 import { createClient } from '@/lib/supabase/server'
-import { getUserTier } from '@/lib/subscription'
+import { getUserTierFor } from '@/lib/subscription'
 import { canOpenChapter } from '@/lib/gems'
 import { fetchUnlockedChapters } from '@/lib/gems-access'
 import GemIcon from '@/components/ui/GemIcon'
@@ -51,7 +51,8 @@ export default async function ChapterPage({
       .eq('subjects.slug', slug)
       .order('position', { ascending: true, referencedTable: 'lessons' })
       .maybeSingle<Row>(),
-    getUserTier(),
+    // Le user est déjà validé ci-dessus : pas de second aller-retour Auth.
+    getUserTierFor(supabase, user.id),
     chapterHasMindMap(supabase, chapterId),
     fetchUnlockedChapters(supabase, user.id),
   ])

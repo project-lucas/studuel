@@ -19,16 +19,31 @@ export async function getUserTier(): Promise<Tier> {
     } = await supabase.auth.getUser()
     if (!user) return 'anonymous'
 
+    return await getUserTierFor(supabase, user.id)
+  } catch {
+    // Supabase injoignable : on retombe sur l'accès minimal.
+    return 'anonymous'
+  }
+}
+
+// Variante pour les pages qui ont DÉJÀ le client et l'utilisateur en main :
+// évite de revalider le JWT auprès de l'Auth API (aller-retour réseau) et de
+// recréer un client — une seule lecture profiles. À préférer partout où
+// auth.getUser() a déjà été appelé dans le rendu.
+export async function getUserTierFor(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  userId: string,
+): Promise<Tier> {
+  try {
     const { data: profile } = await supabase
       .from('profiles')
       .select('subscription_tier')
-      .eq('id', user.id)
+      .eq('id', userId)
       .single()
 
     return (profile?.subscription_tier as Tier) ?? 'free'
   } catch {
-    // Supabase injoignable : on retombe sur l'accès minimal.
-    return 'anonymous'
+    return 'free'
   }
 }
 

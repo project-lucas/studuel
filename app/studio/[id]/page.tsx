@@ -25,16 +25,19 @@ export default async function DeckPage({
   const { id } = await params
   const supabase = await createClient()
 
-  const { data: deck } = await supabase
-    .from('flashcard_decks')
-    .select('id, title, subject, grade_level, is_free')
-    .eq('id', id)
-    .maybeSingle()
+  // Le tier (gating premium) ne dépend pas du deck : les deux partent ensemble.
+  const [{ data: deck }, tier] = await Promise.all([
+    supabase
+      .from('flashcard_decks')
+      .select('id, title, subject, grade_level, is_free')
+      .eq('id', id)
+      .maybeSingle(),
+    getUserTier(),
+  ])
 
   if (!deck) notFound()
 
   // Même règle que les quiz : le contenu premium requiert Studuel+.
-  const tier = await getUserTier()
   if (!deck.is_free && !canAccessPremiumTests(tier)) {
     return (
       <div>

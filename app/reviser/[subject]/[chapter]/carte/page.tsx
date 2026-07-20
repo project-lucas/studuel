@@ -3,7 +3,7 @@ import BackButton from '@/components/BackButton'
 import MindMap from '@/components/MindMap'
 import UnlockChapterCard from '@/components/UnlockChapterCard'
 import { createClient } from '@/lib/supabase/server'
-import { getUserTier } from '@/lib/subscription'
+import { getUserTierFor } from '@/lib/subscription'
 import { chapterAccess } from '@/lib/gems'
 import { fetchGems, fetchUnlockedChapters } from '@/lib/gems-access'
 import { mindMapPlaceholder } from '@/lib/mind-map'
@@ -44,7 +44,8 @@ export default async function MindMapPage({
         .eq('id', chapterId)
         .eq('subjects.slug', slug)
         .maybeSingle<Row>(),
-      getUserTier(),
+      // Le user est déjà validé ci-dessus : pas de second aller-retour Auth.
+      getUserTierFor(supabase, user.id),
       chapterHasMindMap(supabase, chapterId),
       fetchUnlockedChapters(supabase, user.id),
       fetchGems(supabase, user.id),

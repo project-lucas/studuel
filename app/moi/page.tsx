@@ -105,6 +105,8 @@ export default async function MoiPage() {
     { data: studies },
     { data: lessonsDone },
     { data: challenges },
+    { data: gradeRows },
+    { data: termRows, error: termError },
   ] = await Promise.all([
     supabase
       .from('profiles')
@@ -137,6 +139,19 @@ export default async function MoiPage() {
       .from('challenge_sessions')
       .select('created_at')
       .eq('user_id', user.id),
+    // Notes réelles (167) et moyennes saisies (187) : indépendantes de la
+    // synchro des habitudes → chargées ici plutôt que derrière syncAutoHabits.
+    supabase
+      .from('school_grades')
+      .select('id, subject, label, score, out_of, coefficient, date')
+      .eq('user_id', user.id)
+      .order('date', { ascending: false })
+      .limit(300),
+    // termError → saisie masquée si la 187 n'est pas passée.
+    supabase
+      .from('term_grades')
+      .select('school_year, term, average')
+      .eq('user_id', user.id),
   ])
 
   const commuteSlots: CommuteSlot[] = Array.isArray(profile?.commute_slots)
@@ -156,29 +171,12 @@ export default async function MoiPage() {
   const since = new Date()
   since.setUTCDate(since.getUTCDate() - (DRIVER_WINDOW_DAYS - 1))
 
-  const [
-    { data: logs },
-    { data: gradeRows },
-    { data: termRows, error: termError },
-  ] = await Promise.all([
-    supabase
-      .from('habit_logs')
-      .select('id, habit_id, date, completed, auto_validated')
-      .gte('date', toDayKey(since))
-      .returns<HabitLog[]>(),
-    // Notes réelles (167) — dégradé en liste vide si absente.
-    supabase
-      .from('school_grades')
-      .select('id, subject, label, score, out_of, coefficient, date')
-      .eq('user_id', user.id)
-      .order('date', { ascending: false })
-      .limit(300),
-    // Moyennes trimestrielles saisies (187) — termError → saisie masquée.
-    supabase
-      .from('term_grades')
-      .select('school_year, term, average')
-      .eq('user_id', user.id),
-  ])
+  // Les logs, EUX, doivent attendre syncAutoHabits (qui les écrit).
+  const { data: logs } = await supabase
+    .from('habit_logs')
+    .select('id, habit_id, date, completed, auto_validated')
+    .gte('date', toDayKey(since))
+    .returns<HabitLog[]>()
 
   const activeHabits = habits ?? []
   const allLogs = logs ?? []

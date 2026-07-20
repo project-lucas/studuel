@@ -5,7 +5,7 @@ import MarkLessonActivity from '@/components/MarkLessonActivity'
 import UnlockChapterCard from '@/components/UnlockChapterCard'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
-import { getUserTier } from '@/lib/subscription'
+import { getUserTierFor } from '@/lib/subscription'
 import { chapterAccess } from '@/lib/gems'
 import { fetchGems, fetchUnlockedChapters } from '@/lib/gems-access'
 import { fetchRevisionSheet, lessonHasRevisionSheet } from '@/lib/revision-access'
@@ -37,7 +37,8 @@ export default async function RevisionPage({
   if (!hasSheet) notFound()
 
   const [tier, unlockedChapters, gems] = await Promise.all([
-    getUserTier(),
+    // Le user vient de loadLessonContext : pas de second aller-retour Auth.
+    getUserTierFor(supabase, user.id),
     fetchUnlockedChapters(supabase, user.id),
     fetchGems(supabase, user.id),
   ])

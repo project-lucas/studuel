@@ -38,13 +38,17 @@ export default async function QuizPage({
         }
       | null
   }
-  const { data: quiz } = await supabase
-    .from('quizzes')
-    .select(
-      'id, title, subject, grade_level, chapter, is_free, lesson:lessons(id, chapter:chapters(id, subject:subjects(slug)))',
-    )
-    .eq('id', id)
-    .single<QuizRow>()
+  // Le tier (gating premium) ne dépend pas du quiz : les deux partent ensemble.
+  const [{ data: quiz }, tier] = await Promise.all([
+    supabase
+      .from('quizzes')
+      .select(
+        'id, title, subject, grade_level, chapter, is_free, lesson:lessons(id, chapter:chapters(id, subject:subjects(slug)))',
+      )
+      .eq('id', id)
+      .single<QuizRow>(),
+    getUserTier(),
+  ])
 
   if (!quiz) notFound()
 
@@ -54,7 +58,6 @@ export default async function QuizPage({
 
   // Gating abonnement : les quiz premium requièrent Studuel+ (tier1+).
   // La RLS sur quiz_questions applique la même règle côté base.
-  const tier = await getUserTier()
   if (!quiz.is_free && !canAccessPremiumTests(tier)) {
     return (
       <div>

@@ -27,10 +27,14 @@
 -- 1. Ouvrir les deux matières au niveau 6e (sinon leurs chapitres resteraient
 --    invisibles : Réviser filtre les matières sur `levels`). Ajout NON destructif
 --    et non dupliquant.
+-- `subjects.levels` est un TEXT[] natif (008), PAS du JSONB : on utilise donc
+-- les opérateurs de tableau Postgres. Avec la syntaxe jsonb, cette instruction
+-- lèverait « operator does not exist » et, étant la PREMIÈRE du script, ferait
+-- échouer toute la migration — pas un chapitre, pas une leçon, pas un quiz.
 UPDATE public.subjects
-   SET levels = '["6e"]'::jsonb || levels
+   SET levels = array_prepend('6e', levels)
  WHERE name IN ('Technologie', 'Physique-Chimie')
-   AND NOT (levels @> '["6e"]'::jsonb);
+   AND NOT ('6e' = ANY(levels));
 
 -- 2. Chapitres (niveau 6e)
 INSERT INTO public.chapters (id, subject_id, level, title, position)
@@ -42,7 +46,10 @@ SELECT v.id, s.id, '6e', v.title, v.position
     ('55555555-5555-4555-8555-555555555604'::uuid, 'Physique-Chimie', 'Sources et formes d''énergie',   2)
   ) AS v(id, subject_name, title, position)
   JOIN public.subjects s ON s.name = v.subject_name
-ON CONFLICT (id) DO NOTHING;
+-- `ON CONFLICT` NU (sans colonne) : `chapters` porte aussi UNIQUE(subject_id,
+-- level, title). Cibler seulement (id) laisserait passer une violation sur ce
+-- triplet et ferait echouer tout le script au rejeu.
+ON CONFLICT DO NOTHING;
 
 -- 3. Leçons (une par chapitre)
 INSERT INTO public.lessons (id, chapter_id, title, content, position) VALUES
@@ -57,7 +64,8 @@ INSERT INTO public.lessons (id, chapter_id, title, content, position) VALUES
 
   ('66666666-6666-4666-8666-666666666604', '55555555-5555-4555-8555-555555555604', 'D''où vient l''énergie ?',
    E'L''énergie permet de **chauffer, éclairer, déplacer**.\n\n## Les sources d''énergie\n- **Renouvelables** : soleil, vent, eau, biomasse — elles se reconstituent à l''échelle humaine.\n- **Non renouvelables** : charbon, pétrole, gaz, uranium — leurs stocks sont limités.\n\n## Les formes d''énergie\nÉlectrique, thermique (chaleur), lumineuse, sonore, de mouvement.\n\n## Conversion et chaîne d''énergie\nUn objet technique **convertit** une forme d''énergie en une autre : une lampe convertit l''énergie électrique en lumière (et en chaleur). L''énergie ne se crée pas et ne disparaît pas : elle se **transforme**.', 1)
-ON CONFLICT (id) DO NOTHING;
+-- Idem : `lessons` porte aussi UNIQUE(chapter_id, title).
+ON CONFLICT DO NOTHING;
 
 -- 4. Quiz (rattachés aux leçons)
 --    Double garde, et les deux sont nécessaires :

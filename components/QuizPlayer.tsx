@@ -7,6 +7,7 @@ import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import { sfx, buzz } from '@/lib/sounds'
 import { autoAdvanceDelay, bestStreak, COMBO_HOT } from '@/lib/juice'
+import { missedQuestions, canRetryMissed } from '@/lib/quiz-retry'
 import ComboBadge from '@/components/ComboBadge'
 import { sessionXp } from '@/lib/xp'
 import { SoundToggle } from '@/components/FlashcardPlayer'
@@ -34,7 +35,7 @@ function verdict(ratio: number): { emoji: string; message: string } {
 export default function QuizPlayer({
   quizId,
   title,
-  questions,
+  questions: allQuestions,
   subject = null,
   backHref = '/reviser',
   record = true,
@@ -49,6 +50,9 @@ export default function QuizPlayer({
   // il ne doit pas gonfler l'XP / la file « À revoir ».
   record?: boolean
 }) {
+  // Le paquet EN COURS. Il vaut le quiz complet, sauf après « Revoir mes
+  // erreurs », où il ne contient plus que les questions ratées.
+  const [questions, setQuestions] = useState<QuizQuestion[]>(allQuestions)
   const [index, setIndex] = useState(0)
   // Choix de l'élève, question par question — la correction se lit dedans.
   const [choices, setChoices] = useState<number[]>([])
@@ -62,6 +66,8 @@ export default function QuizPlayer({
   const [saved, setSaved] = useState<boolean | null>(null)
 
   const question = questions[index]
+  // Rejeu partiel : le paquet en cours ne couvre plus tout le quiz.
+  const isPartial = questions.length < allQuestions.length
 
   // Réponses de la session pour la répétition espacée (SRS + Revanche) —
   // envoyées en une fois à la fin, en « fire and forget ».
@@ -86,11 +92,20 @@ export default function QuizPlayer({
     sfx.complete()
     // Quiz personnel (bibliothèque) : on ne persiste rien (ni session, ni SRS).
     if (!record) return
-    // Enregistre la session côté serveur (série, XP, anneau de la leçon).
-    recordTestSession(quizId, score, questions.length)
-      .then((r) => setSaved(r.saved))
-      .catch(() => setSaved(false))
-    // Et reprogramme chaque question dans la file « À revoir ».
+
+    // ⚠️ Un REJEU DES ERREURS n'est PAS une session de quiz. `lib/mastery.ts`
+    // agrège le MEILLEUR RATIO par quiz : enregistrer un 2/2 obtenu sur les
+    // seules questions ratées ferait passer le chapitre à 100 % — donc
+    // « maîtrisé », couronne comprise — alors que l'élève avait fait 8/10.
+    // On garde donc l'entraînement (SRS, ci-dessous) sans la comptabilité.
+    if (!isPartial) {
+      recordTestSession(quizId, score, questions.length)
+        .then((r) => setSaved(r.saved))
+        .catch(() => setSaved(false))
+    }
+    // La file « À revoir » est reprogrammée dans TOUS les cas : elle raisonne
+    // par question, pas par session — retravailler une erreur est justement
+    // l'information la plus utile qu'on puisse lui donner.
     recordReviewAnswers(reviewsRef.current).catch(() => {})
   }
 
@@ -155,7 +170,9 @@ export default function QuizPlayer({
     return () => clearTimeout(t)
   }, [selected, question])
 
-  const restart = () => {
+  // Repart sur un paquet donné (le quiz entier, ou seulement les erreurs).
+  const replay = (deck: QuizQuestion[]) => {
+    setQuestions(deck)
     setIndex(0)
     setChoices([])
     setSelected(null)
@@ -168,6 +185,8 @@ export default function QuizPlayer({
     lockedRef.current = false
   }
 
+  const restart = () => replay(allQuestions)
+
   // ---------------------------------------------------------------------------
   // Écran final : score + correction complète, scrollable (template).
   // ---------------------------------------------------------------------------
@@ -177,6 +196,7 @@ export default function QuizPlayer({
       0,
     )
     const ratio = questions.length > 0 ? score / questions.length : 0
+    const missed = missedQuestions(questions, choices)
     const v = verdict(ratio)
 
     return (
@@ -221,9 +241,16 @@ export default function QuizPlayer({
               {/* XP gagnée : la récompense existait déjà (10 XP par bonne
                   réponse + 20 de session) mais n'était affichée NULLE PART —
                   l'élève gagnait sans le savoir. C'est le moment de le dire. */}
-              {record ? (
+              {record && !isPartial ? (
                 <p className="font-heading mt-4 text-lg font-extrabold text-highlight">
                   +{sessionXp('quiz', score, questions.length)} XP
+                </p>
+              ) : null}
+
+              {isPartial ? (
+                <p className="mt-4 text-sm opacity-80">
+                  Séance d&apos;entraînement : elle ne recompte pas dans ton
+                  score du quiz, mais tes erreurs sont bien reprogrammées.
                 </p>
               ) : null}
 
@@ -255,12 +282,39 @@ export default function QuizPlayer({
               ) : null}
             </div>
 
+            {/* « Revoir mes erreurs » d'abord : refaire les 8 questions déjà
+                sues pour retravailler les 2 ratées, personne ne le fait — et
+                les 2 ratées sont pourtant le seul contenu utile de la session. */}
+            {canRetryMissed(questions.length, missed.length) ? (
+              <Button
+                onClick={() => replay(missed)}
+                className="mt-4 w-full rounded-full bg-card text-foreground shadow-md hover:bg-card/90"
+                size="lg"
+              >
+                <RotateCcw className="size-4" /> Revoir mes {missed.length}{' '}
+                erreur{missed.length > 1 ? 's' : ''}
+              </Button>
+            ) : null}
+
             <Button
               onClick={restart}
-              className="mt-4 w-full rounded-full bg-card text-foreground shadow-md hover:bg-card/90"
+              variant={
+                canRetryMissed(questions.length, missed.length)
+                  ? 'ghost'
+                  : 'default'
+              }
+              className={cn(
+                'mt-2 w-full rounded-full',
+                canRetryMissed(questions.length, missed.length)
+                  ? 'text-primary-foreground hover:bg-white/10'
+                  : 'bg-card text-foreground shadow-md hover:bg-card/90',
+              )}
               size="lg"
             >
-              <RotateCcw className="size-4" /> Recommencer
+              <RotateCcw className="size-4" />{' '}
+              {questions.length === allQuestions.length
+                ? 'Recommencer'
+                : 'Refaire le quiz entier'}
             </Button>
           </div>
         </div>

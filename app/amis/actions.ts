@@ -40,6 +40,42 @@ export async function addFriendByCode(
   return addFriendMessage(status)
 }
 
+// Renomme le groupe d'amis (« squad ») — migration 176. Écrit sur MON profil
+// (profiles.squad_name), borné à 40 caractères. La règle « seul le leader peut
+// renommer » est une mécanique de jeu portée par l'UI ; côté données, chacun ne
+// touche que son propre profil (RLS owner-only + GRANT colonne), donc rien à
+// sécuriser de plus ici. Renvoie le nom retenu (ou null si effacé/invalide).
+const MAX_SQUAD_LEN = 40
+
+export async function renameSquad(
+  name: string,
+): Promise<{ ok: boolean; name: string | null }> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return { ok: false, name: null }
+
+  // Nettoyage : on retire les retours à la ligne / caractères de contrôle,
+  // on rogne et on borne. Une chaîne vide efface le nom (retour au défaut).
+  const clean = String(name ?? '')
+    .replace(/[\u0000-\u001f\u007f]/g, ' ')
+    .trim()
+    .slice(0, MAX_SQUAD_LEN)
+  const value = clean.length > 0 ? clean : null
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ squad_name: value })
+    .eq('id', user.id)
+  if (error) {
+    console.error('[amis] renommage du groupe impossible:', error.message)
+    return { ok: false, name: null }
+  }
+  revalidatePath('/amis')
+  return { ok: true, name: value }
+}
+
 // Statuts renvoyés par add_friend_qr (migration 163) — amitié instantanée.
 const QR_STATUSES: readonly AddFriendStatus[] = [
   'added',

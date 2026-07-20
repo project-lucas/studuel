@@ -14,7 +14,7 @@ import {
   type StreakEntry,
 } from '@/lib/social'
 import { schoolLevelForGrade } from '@/lib/clan'
-import type { RankPlayer } from '@/lib/trophies'
+import { rankPlayers, type RankPlayer } from '@/lib/trophies'
 
 export const metadata = { title: 'Amis — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -34,6 +34,10 @@ export default async function AmisPage() {
   let pendingRequests: PendingRequest[] = []
   let streaks: StreakEntry[] = []
   let myFriendCode = ''
+  // Nom du groupe d'amis (« squad », migration 176) et droit de le renommer
+  // (réservé au leader du classement) — défauts sûrs pour le visiteur.
+  let squadName: string | null = null
+  let canRenameSquad = false
   // Amis en session en ce moment (RPC 160) : points verts du classement.
   let onlineFriendIds: string[] = []
   // « Mon école » : réelle si l'élève est connecté, sinon aperçu mocké
@@ -51,6 +55,7 @@ export default async function AmisPage() {
       { data: friendStreakRows },
       { data: myStreakRaw },
       { data: liveRows },
+      { data: squadRow },
     ] = await Promise.all([
       // friend_code vit sur profiles depuis 019 (déjà en base) → sûr à lire ici.
       // grade_level (onboarding) sert à choisir le cycle du clan (collège/lycée).
@@ -76,9 +81,18 @@ export default async function AmisPage() {
       supabase.rpc('my_streak'),
       // « En direct » : amis actifs dans les 20 dernières minutes (migration 160).
       supabase.rpc('friends_live'),
+      // Nom du groupe (squad_name, 176), select ISOLÉ : si la migration n'est
+      // pas passée, il échoue seul → nom par défaut, sans casser le reste.
+      supabase
+        .from('profiles')
+        .select('squad_name')
+        .eq('id', user.id)
+        .maybeSingle(),
     ])
 
     myFriendCode = String(profile?.friend_code ?? '')
+    const rawSquad = String(squadRow?.squad_name ?? '').trim()
+    squadName = rawSquad.length > 0 ? rawSquad : null
 
     // Présence réelle (vide si personne n'est actif). « Mon école » réelle via
     // le clan (cycle déduit de la classe) ; à défaut de clan, aperçu adapté au
@@ -153,6 +167,12 @@ export default async function AmisPage() {
       },
       ...friendRanks,
     ]
+
+    // Droit de renommer le groupe : réservé au n°1 du classement (« celui qui a
+    // le plus grimpé »). Un élève solo est trivialement n°1 → peut baptiser son
+    // équipe. C'est une mécanique de jeu (l'action ne touche que mon profil).
+    const meRanked = rankPlayers(ranking).find((p) => p.isMe)
+    canRenameSquad = meRanked?.rank === 1
   }
 
   return (
@@ -170,6 +190,8 @@ export default async function AmisPage() {
         friends={friends}
         pendingRequests={pendingRequests}
         myFriendCode={myFriendCode}
+        squadName={squadName}
+        canRenameSquad={canRenameSquad}
       />
     </div>
   )

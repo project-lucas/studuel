@@ -14,6 +14,8 @@ import {
   Hourglass,
   Flame,
   X,
+  Pencil,
+  Lock,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import FriendAddButton from '@/components/FriendAddButton'
@@ -37,7 +39,12 @@ import {
   DUEL_XP_BONUS,
   ACTIVE_DUEL_KEY,
 } from '@/lib/social'
-import { acceptFriend, removeFriend, createDuel } from '@/app/amis/actions'
+import {
+  acceptFriend,
+  removeFriend,
+  createDuel,
+  renameSquad,
+} from '@/app/amis/actions'
 import {
   arenaFor,
   rankPlayers,
@@ -232,6 +239,120 @@ function RankingBoard({
   )
 }
 
+// Le titre du groupe d'amis (« squad ») : à la place de l'arène. Le n°1 du
+// classement (celui qui a le plus grimpé) peut le renommer d'un tap ; les
+// autres le voient en lecture seule, avec l'invitation à devenir n°1. Le nom est
+// optimiste : il se fige dès l'action réussie, sans recharger la page.
+const DEFAULT_SQUAD_NAME = 'Mon équipe'
+
+function SquadHeader({
+  squadName,
+  canRename,
+}: {
+  squadName: string | null
+  canRename: boolean
+}) {
+  const [name, setName] = useState(squadName)
+  const [editing, setEditing] = useState(false)
+  const [draft, setDraft] = useState(squadName ?? '')
+  const [pending, start] = useTransition()
+
+  const display = name ?? DEFAULT_SQUAD_NAME
+
+  const submit = () => {
+    if (pending) return
+    sfx.tap()
+    start(async () => {
+      const res = await renameSquad(draft)
+      if (res.ok) {
+        setName(res.name)
+        setEditing(false)
+      }
+    })
+  }
+
+  if (editing) {
+    return (
+      <div className="mb-3 flex items-center gap-2">
+        <input
+          value={draft}
+          onChange={(e) => setDraft(e.target.value)}
+          maxLength={40}
+          autoFocus
+          aria-label="Nom du groupe"
+          placeholder="Nom de ton équipe…"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') submit()
+            if (e.key === 'Escape') setEditing(false)
+          }}
+          className="font-heading min-h-10 min-w-0 flex-1 rounded-full border border-primary/40 bg-white px-4 text-base font-extrabold text-foreground"
+        />
+        <button
+          type="button"
+          onClick={submit}
+          disabled={pending}
+          aria-label="Valider le nom"
+          className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm active:scale-90 disabled:opacity-50"
+        >
+          <Check className="size-5" strokeWidth={2.6} aria-hidden="true" />
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setDraft(name ?? '')
+            setEditing(false)
+          }}
+          aria-label="Annuler"
+          className="flex size-10 shrink-0 items-center justify-center rounded-full text-muted-foreground hover:bg-muted active:scale-90"
+        >
+          <X className="size-5" aria-hidden="true" />
+        </button>
+      </div>
+    )
+  }
+
+  return (
+    <div className="mb-3 flex items-center gap-2">
+      <span
+        aria-hidden="true"
+        className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-highlight/25 text-xl"
+      >
+        🛡️
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className="text-[10px] font-bold tracking-wide text-muted-foreground uppercase">
+          Ton équipe
+        </p>
+        <h2 className="font-heading truncate text-lg font-extrabold text-foreground">
+          {display}
+        </h2>
+      </div>
+      {canRename ? (
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setDraft(name ?? '')
+            setEditing(true)
+          }}
+          aria-label="Renommer le groupe"
+          className="flex size-10 shrink-0 items-center justify-center rounded-full text-primary transition-colors hover:bg-primary/10 active:scale-90"
+        >
+          <Pencil className="size-4.5" strokeWidth={2.4} aria-hidden="true" />
+        </button>
+      ) : (
+        <span
+          className="flex shrink-0 items-center gap-1 rounded-full bg-muted px-2.5 py-1 text-[10px] font-semibold text-muted-foreground"
+          title="Le n°1 du groupe peut le renommer"
+        >
+          <Lock className="size-3" aria-hidden="true" /> N°1 seulement
+        </span>
+      )}
+    </div>
+  )
+}
+
 // L'écran d'accueil de l'onglet, façon liste de clan Clash Royale : on arrive
 // du swipe depuis Réviser DIRECTEMENT sur le classement entre amis — panneau
 // violet profond de l'arène, cartes empilées avec un bouton ⚔️ par ami, et
@@ -240,10 +361,14 @@ function ClassementArena({
   ranking,
   onlineFriendIds,
   myFriendCode,
+  squadName,
+  canRenameSquad,
 }: {
   ranking: RankPlayer[]
   onlineFriendIds: string[]
   myFriendCode: string
+  squadName: string | null
+  canRenameSquad: boolean
 }) {
   // Défi refusé (1/jour déjà lancé, ou plus ami) : message sous la liste.
   const [duelNotice, setDuelNotice] = useState(false)
@@ -264,26 +389,22 @@ function ClassementArena({
       aria-label="Mes amis"
       className="overflow-hidden rounded-3xl bg-card p-3 text-foreground shadow-sm ring-1 ring-black/5"
     >
-      <div className="mb-3 flex items-center justify-between gap-2 px-1 pt-1">
-        <h2 className="font-heading flex items-center gap-2 text-sm font-extrabold tracking-wide text-foreground uppercase">
-          <Users
-            className="size-4 text-primary"
-            strokeWidth={2.4}
-            aria-hidden="true"
-          />
-          Amis
-        </h2>
-        {onlineCount > 0 ? (
-          <span className="flex items-center gap-1.5 text-xs font-semibold text-green-600">
-            <span className="size-2 animate-pulse rounded-full bg-green-500" />
-            {onlineCount} en ligne
-          </span>
-        ) : friendCount > 0 ? (
-          <span className="text-xs font-semibold text-muted-foreground">
-            {friendCount + 1} joueurs
-          </span>
-        ) : null}
-      </div>
+      {/* Le titre du groupe (renommable par le n°1) — remplace l'arène comme
+          identité du cercle d'amis. */}
+      <SquadHeader squadName={squadName} canRename={canRenameSquad} />
+
+      {/* Compteur discret : amis en ligne / nombre de joueurs. */}
+      {onlineCount > 0 ? (
+        <p className="mb-2 flex items-center gap-1.5 px-1 text-xs font-semibold text-green-600">
+          <span className="size-2 animate-pulse rounded-full bg-green-500" />
+          {onlineCount} en ligne
+        </p>
+      ) : friendCount > 0 ? (
+        <p className="mb-2 flex items-center gap-1.5 px-1 text-xs font-semibold text-muted-foreground">
+          <Users className="size-3.5 text-primary" aria-hidden="true" />
+          {friendCount + 1} joueurs
+        </p>
+      ) : null}
 
       {ranking.length === 0 ? (
         /* Visiteur : pas de classement à montrer — état vide explicite. */
@@ -303,12 +424,14 @@ function ClassementArena({
                   ? myRank === 1
                     ? `1er sur ${friendCount + 1} — tu domines 👑`
                     : `${myRank}e sur ${friendCount + 1} amis`
-                  : myArena.name}
+                  : 'En solo pour l’instant'}
               </p>
               <p className="truncate text-xs text-muted-foreground">
                 {ahead
                   ? `${ahead.trophies - myTrophies} trophées pour doubler ${ahead.name}`
-                  : `Arène ${myArena.name}`}
+                  : friendCount > 0
+                    ? `Arène ${myArena.name} · ${myTrophies} 🏆`
+                    : 'Ajoute des amis pour vous comparer'}
               </p>
             </div>
             <span className="flex shrink-0 items-center gap-1 font-mono font-bold text-foreground tabular-nums">
@@ -686,6 +809,8 @@ export default function AmisHome({
   friends,
   pendingRequests,
   myFriendCode,
+  squadName,
+  canRenameSquad,
 }: {
   ranking: RankPlayer[]
   // Amis actuellement en session (RPC friends_live) : point vert sur leur
@@ -699,6 +824,9 @@ export default function AmisHome({
   friends: Friend[]
   pendingRequests: PendingRequest[]
   myFriendCode: string
+  // Nom du groupe d'amis (« squad », migration 176) et droit de le renommer.
+  squadName: string | null
+  canRenameSquad: boolean
 }) {
   return (
     <div className="flex flex-col gap-6">
@@ -709,6 +837,8 @@ export default function AmisHome({
         ranking={ranking}
         onlineFriendIds={onlineFriendIds}
         myFriendCode={myFriendCode}
+        squadName={squadName}
+        canRenameSquad={canRenameSquad}
       />
 
       {/* Séries — qui tient sa flamme le plus longtemps. Masqué sans ami. */}

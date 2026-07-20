@@ -12,8 +12,10 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import NotificationsOptIn from '@/components/NotificationsOptIn'
+import GradeSelector from '@/components/GradeSelector'
 import { createClient } from '@/lib/supabase/server'
 import { signOut } from '@/app/login/actions'
+import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
 
 export const metadata = { title: 'Mon compte — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -48,6 +50,12 @@ export default async function ComptePage() {
     }>()
 
   const tier = profile?.subscription_tier ?? 'free'
+  // Classe courante validée contre la liste fermée (null si non renseignée).
+  const gradeLevel: GradeLevel | null = GRADE_LEVELS.includes(
+    profile?.grade_level as GradeLevel,
+  )
+    ? (profile!.grade_level as GradeLevel)
+    : null
 
   return (
     <div>
@@ -101,6 +109,12 @@ export default async function ComptePage() {
           ) : null}
         </CardFooter>
       </Card>
+
+      {/* Choix de la classe : déplacé ici depuis l'onglet Moi (c'est un réglage
+          de compte, pas un indicateur de progrès). Pilote tout le contenu. */}
+      <div className="mx-auto mt-4 w-full max-w-md">
+        <GradeSelector current={gradeLevel} />
+      </div>
 
       <NotificationsOptIn />
     </div>

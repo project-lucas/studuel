@@ -46,11 +46,11 @@ import {
   renameSquad,
 } from '@/app/amis/actions'
 import {
-  arenaFor,
   rankPlayers,
   rivalAhead,
   type RankPlayer,
 } from '@/lib/trophies'
+import { rankFor } from '@/lib/rank'
 
 // En-tête de section : petite étiquette icône + titre, cohérente partout.
 function SectionTitle({
@@ -173,7 +173,7 @@ function RankingBoard({
   return (
     <ol className="flex flex-col gap-2">
       {rows.map((e) => {
-        const arena = arenaFor(e.trophies)
+        const rank = rankFor(e.trophies)
         const online = !e.isMe && onlineIds.has(e.id)
         return (
           <li
@@ -218,7 +218,7 @@ function RankingBoard({
                 ) : null}
               </span>
               <span className="block truncate text-xs font-semibold text-primary">
-                {arena.emoji} {arena.name}
+                {rank.tier.emoji} {rank.label}
               </span>
             </span>
             <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-foreground/5 px-2.5 py-1 font-mono text-sm font-bold tabular-nums">
@@ -376,7 +376,7 @@ function ClassementArena({
   const meRow = rows.find((e) => e.isMe)
   const myRank = meRow?.rank ?? 0
   const myTrophies = meRow?.trophies ?? 0
-  const myArena = arenaFor(myTrophies)
+  const myRankTier = rankFor(myTrophies)
   const ahead = rivalAhead(rows)
   const friendCount = ranking.filter((e) => !e.isMe).length
   const onlineIds = new Set(onlineFriendIds)
@@ -413,10 +413,10 @@ function ClassementArena({
         </p>
       ) : (
         <>
-          {/* Résumé : ta place, ton arène, et l'objectif juste devant. */}
+          {/* Résumé : ta place, ton palier, et l'objectif juste devant. */}
           <div className="mb-2 flex items-center gap-3 rounded-2xl bg-muted/50 p-3">
             <span aria-hidden="true" className="text-3xl">
-              {myArena.emoji}
+              {myRankTier.tier.emoji}
             </span>
             <div className="min-w-0 flex-1">
               <p className="font-heading font-bold text-foreground">
@@ -430,7 +430,7 @@ function ClassementArena({
                 {ahead
                   ? `${ahead.trophies - myTrophies} trophées pour doubler ${ahead.name}`
                   : friendCount > 0
-                    ? `Arène ${myArena.name} · ${myTrophies} 🏆`
+                    ? `${myRankTier.label} · ${myTrophies} 🏆`
                     : 'Ajoute des amis pour vous comparer'}
               </p>
             </div>

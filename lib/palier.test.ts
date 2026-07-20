@@ -1,36 +1,42 @@
 import { describe, expect, it } from 'vitest'
-import { allPalierIds, arenaPalier, leaguePalier } from './palier'
-import { ARENAS } from './trophies'
+import { allPalierIds, rankPalier, leaguePalier } from './palier'
+import { RANK_TIERS, tierFloor } from './rank'
 import { LEAGUE_TIERS, MAX_TIER } from './league'
 
-describe('arenaPalier', () => {
-  it('détecte le franchissement d’un seuil d’arène vers le haut', () => {
-    // Arrange : 290 → 310 franchit le seuil 300 (Salle d'étude).
-    const palier = arenaPalier(290, 310)
+describe('rankPalier', () => {
+  it('détecte le franchissement d’un palier vers le haut', () => {
+    // Arrange : 390 → 410 franchit le seuil 400 (Bronze I → Argent IV).
+    const palier = rankPalier(390, 410)
 
     // Assert
     expect(palier).not.toBeNull()
-    expect(palier?.id).toBe('arene:etude')
-    expect(palier?.name).toBe("Salle d'étude")
+    expect(palier?.id).toBe('rang:argent')
+    expect(palier?.name).toBe('Argent')
     expect(palier?.shareText).toContain('Studuel')
   })
 
-  it('fête l’arène la plus haute si plusieurs seuils sautent d’un coup', () => {
-    const palier = arenaPalier(290, 750)
-    expect(palier?.id).toBe('arene:honneur')
+  it('fête le palier le plus haut si plusieurs seuils sautent d’un coup', () => {
+    expect(rankPalier(390, 1250)?.id).toBe('rang:platine')
+  })
+
+  it('ne fête PAS un simple changement de division', () => {
+    // 50 → 150 passe de Bronze IV à Bronze III : même palier, pas de bulle
+    // plein écran (sinon une célébration tous les 100 trophées).
+    expect(rankPalier(50, 150)).toBeNull()
   })
 
   it('ne fête rien sans franchissement ni en descente', () => {
-    expect(arenaPalier(310, 320)).toBeNull() // même arène
-    expect(arenaPalier(310, 290)).toBeNull() // descente
-    expect(arenaPalier(300, 300)).toBeNull() // aucun mouvement
+    expect(rankPalier(410, 420)).toBeNull() // même palier
+    expect(rankPalier(410, 390)).toBeNull() // descente
+    expect(rankPalier(400, 400)).toBeNull() // aucun mouvement
   })
 
-  it('couvre chaque seuil d’arène (hors première, qui démarre à 0)', () => {
-    for (const arena of ARENAS.slice(1)) {
-      const palier = arenaPalier(arena.min - 1, arena.min)
-      expect(palier?.id, arena.id).toBe(`arene:${arena.id}`)
-      expect(palier?.emoji).toBe(arena.emoji)
+  it('couvre chaque seuil de palier (hors premier, qui démarre à 0)', () => {
+    for (const tier of RANK_TIERS.slice(1)) {
+      const floor = tierFloor(tier.id)
+      const palier = rankPalier(floor - 1, floor)
+      expect(palier?.id, tier.id).toBe(`rang:${tier.id}`)
+      expect(palier?.emoji).toBe(tier.emoji)
     }
   })
 })

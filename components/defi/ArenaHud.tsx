@@ -106,27 +106,45 @@ export default function ArenaHud({
         {children}
       </div>
 
-      {/* Voile de fermeture : un tap hors du menu déplié le referme. Cantonné à
-          la scène (le reste de l'écran reste actionnable), fondu discret. */}
-      <AnimatePresence>
-        {menuOpen ? (
-          <motion.button
-            type="button"
-            aria-label="Fermer le menu"
-            className="absolute inset-0 z-10 cursor-default bg-black/25"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.18 }}
-            onClick={() => setMenuOpen(false)}
-          />
-        ) : null}
-      </AnimatePresence>
+      {/* Voile de fermeture, façon Clash Royale : assombrit TOUTE l'interface
+          (portail plein viewport, au-dessus de la barre d'onglets), pour ne
+          laisser rayonner que les médaillons du menu. Un tap le referme. */}
+      {typeof document !== 'undefined'
+        ? createPortal(
+            <AnimatePresence>
+              {menuOpen ? (
+                <motion.button
+                  type="button"
+                  aria-label="Fermer le menu"
+                  className="fixed inset-0 z-[55] cursor-default bg-black/65 backdrop-blur-[2px]"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  onClick={() => setMenuOpen(false)}
+                />
+              ) : null}
+            </AnimatePresence>,
+            document.body,
+          )
+        : null}
 
       {/* Le menu dépliant, ancré en bas à droite : la pile des entrées au-dessus
-          du burger. Le parchemin descend d'un cran (-bottom) pour venir se
-          poser tout contre le bloc trophée qui le suit. */}
-      <div className="absolute right-1 -bottom-3 z-20 flex flex-col items-end gap-2">
+          du burger. Z-index conditionnel : menu OUVERT → z-[60] > voile (55),
+          pour que la pile et le parchemin restent en pleine lumière quand le
+          reste s'assombrit ; menu FERMÉ → z-40, SOUS les feuilles modales
+          (ModesSheet, feuilles de détail en z-50) pour que le parchemin ne
+          transperce plus leur voile sombre. Le parchemin PLONGE dans
+          l'espace blanc du bloc trophée : horizontalement son bord droit se cale
+          sur l'extrémité droite du bloc (celui-ci fait 17rem centré dans la
+          colonne → bord droit à `50% - 8.5rem` du bord droit) ; verticalement le
+          `-bottom` négatif le descend d'un bloc entier pour qu'il repose DANS la
+          plaque (sur le contrepoids blanc à droite du nombre), pas au-dessus. */}
+      <div
+        className={`absolute right-[calc(50%-8.5rem)] -bottom-16 flex flex-col items-end gap-2 ${
+          menuOpen ? 'z-[60]' : 'z-40'
+        }`}
+      >
         <AnimatePresence>
           {menuOpen ? (
             <motion.ul
@@ -146,8 +164,11 @@ export default function ArenaHud({
           ) : null}
         </AnimatePresence>
 
-        {/* Le burger lui-même : parchemin scellé, il pivote quand le menu est
-            ouvert (et refait office de bouton « fermer »). */}
+        {/* Le burger lui-même : parchemin scellé qui, au tap, se DÉROULE — le
+            rouleau fermé se fond vers le parchemin ouvert (et non plus un simple
+            pivot). Les deux visuels restent montés, superposés au centre, et on
+            croise leurs opacités/échelles pour l'effet d'ouverture. Rouvrir
+            referme le parchemin (le bouton fait aussi office de « fermer »). */}
         <button
           type="button"
           onClick={() => {
@@ -159,24 +180,53 @@ export default function ArenaHud({
           aria-label="Menu de l'arène — ligue, classements, clan, amis…"
           className="olympe-press flex size-14 cursor-pointer items-center justify-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
         >
-          <motion.span
-            className="block"
-            animate={
-              reduce
-                ? undefined
-                : { rotate: menuOpen ? 90 : 0, scale: menuOpen ? 1.06 : 1 }
-            }
-            transition={{ type: 'spring', stiffness: 380, damping: 22 }}
-          >
-            <Image
-              src="/images/defi/modes/burger.webp"
-              alt=""
-              width={56}
-              height={47}
-              className="w-11 drop-shadow-[0_3px_6px_rgba(0,0,0,0.55)]"
-              aria-hidden
-            />
-          </motion.span>
+          <span className="relative grid size-11 place-items-center">
+            {/* Rouleau fermé — se rétracte et s'efface à l'ouverture. */}
+            <motion.span
+              className="col-start-1 row-start-1 block"
+              initial={false}
+              animate={
+                reduce
+                  ? { opacity: menuOpen ? 0 : 1 }
+                  : { opacity: menuOpen ? 0 : 1, scale: menuOpen ? 0.7 : 1 }
+              }
+              transition={{ type: 'spring', stiffness: 380, damping: 26 }}
+            >
+              <Image
+                src="/images/defi/modes/burger.webp"
+                alt=""
+                width={56}
+                height={47}
+                className="w-11 drop-shadow-[0_3px_6px_rgba(0,0,0,0.55)]"
+                aria-hidden
+              />
+            </motion.span>
+
+            {/* Parchemin ouvert — se déroule et apparaît à l'ouverture. */}
+            <motion.span
+              className="pointer-events-none col-start-1 row-start-1 block"
+              initial={false}
+              animate={
+                reduce
+                  ? { opacity: menuOpen ? 1 : 0 }
+                  : {
+                      opacity: menuOpen ? 1 : 0,
+                      scale: menuOpen ? 1 : 0.6,
+                      y: menuOpen ? 0 : 4,
+                    }
+              }
+              transition={{ type: 'spring', stiffness: 340, damping: 24 }}
+            >
+              <Image
+                src="/images/defi/modes/burger-open.webp"
+                alt=""
+                width={92}
+                height={137}
+                className="w-12 drop-shadow-[0_3px_6px_rgba(0,0,0,0.55)]"
+                aria-hidden
+              />
+            </motion.span>
+          </span>
         </button>
       </div>
 

@@ -7,7 +7,7 @@
 // il sera réutilisé par l'échelle géographique (ville → département → région).
 // -----------------------------------------------------------------------------
 
-import { ARENAS, arenaFor, type Arena } from '@/lib/trophies'
+import { RANK_TIERS, rankFor, type RankTier } from '@/lib/rank'
 import { LEAGUE_TIERS, MAX_TIER, tierMeta } from '@/lib/league'
 
 export type Palier = {
@@ -24,20 +24,25 @@ export type Palier = {
   shareText: string
 }
 
-// Franchissement d'arène VERS LE HAUT après un match classé. Si le match fait
-// sauter plusieurs seuils d'un coup, on fête l'arène la plus haute atteinte.
-export function arenaPalier(before: number, after: number): Palier | null {
+// Franchissement de PALIER de rang VERS LE HAUT après un match classé (Bronze →
+// Argent → Or…). Si le match fait sauter plusieurs seuils d'un coup, on fête le
+// palier le plus haut atteint.
+//
+// On ne fête QUE le changement de palier, pas le changement de division : une
+// division vaut 100 trophées (3 à 8 victoires), une célébration plein écran à
+// ce rythme serait une gêne plutôt qu'une récompense.
+export function rankPalier(before: number, after: number): Palier | null {
   if (after <= before) return null
-  const from = arenaFor(before)
-  const to = arenaFor(after)
-  if (from.id === to.id) return null
+  const from = rankFor(before)
+  const to = rankFor(after)
+  if (from.tier.id === to.tier.id) return null
   return {
-    id: `arene:${to.id}`,
-    emoji: to.emoji,
-    title: 'Nouvelle arène !',
-    name: to.name,
-    subtitle: `Tu entres dans l'arène ${to.name} — continue de gagner pour viser la suivante.`,
-    shareText: `J'ai atteint l'arène ${to.emoji} ${to.name} sur Studuel !`,
+    id: `rang:${to.tier.id}`,
+    emoji: to.tier.emoji,
+    title: 'Nouveau palier !',
+    name: to.tier.name,
+    subtitle: `Tu entres chez les ${to.tier.name} — continue de gagner pour viser le palier suivant.`,
+    shareText: `J'ai atteint le palier ${to.tier.emoji} ${to.tier.name} sur Studuel !`,
   }
 }
 
@@ -67,7 +72,7 @@ export function leaguePalier(
 // Toutes les clés de palier possibles (utile aux tests : aucune collision).
 export function allPalierIds(): string[] {
   return [
-    ...ARENAS.map((a: Arena) => `arene:${a.id}`),
+    ...RANK_TIERS.map((t: RankTier) => `rang:${t.id}`),
     ...LEAGUE_TIERS.map((_, i) => `ligue:${i}`),
   ]
 }

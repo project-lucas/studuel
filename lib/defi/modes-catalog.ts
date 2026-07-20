@@ -10,6 +10,7 @@ import {
   MODE_XP_BONUS,
   FEATURED_XP_MULTIPLIER,
   featuredModeId,
+  modeImage,
 } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
 
@@ -23,6 +24,12 @@ export type ModeTicket = {
   name: string
   tagline: string
   emoji: string
+  /**
+   * Visuel illustré du billet (chemin `/images/...`) qui remplace l'emoji dans
+   * la zone d'art. Optionnel : tant qu'il n'est pas fourni, on retombe sur
+   * l'emoji.
+   */
+  image?: string | null
   /** Destination du billet — null tant que le jeu n'est pas construit. */
   href: string | null
   /** Jeton d'info (« +20 XP », « Jouer »…). */
@@ -95,6 +102,7 @@ export function funModeTickets(dayKey: string): ModeTicket[] {
       name: m.name,
       tagline: m.tagline,
       emoji: ARENA_EMOJI[m.id] ?? '🎮',
+      image: modeImage(m.id),
       href: `/defi/jouer?mode=${m.id}`,
       chip: `+${bonus} XP`,
       badge: isFeatured ? '×2 XP' : undefined,

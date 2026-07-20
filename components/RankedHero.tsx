@@ -1,18 +1,21 @@
 'use client'
 
+import Image from 'next/image'
 import { Trophy, Swords, ChevronUp, ChevronDown, Crown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import {
-  arenaProgress,
   rankPlayers,
   rivalAhead,
   rivalBehind,
   type RankPlayer,
 } from '@/lib/trophies'
+import { rankFor } from '@/lib/rank'
+import RankBadge from '@/components/defi/RankBadge'
 
-// LE hero du Défi : la carte de classement. Où j'en suis (trophées + arène),
-// où je me situe face à mes amis, et le bouton qui lance un match classé.
-// Carte crème (lisible sur le fond sombre de l'Arène), accents violet + or.
+// LE hero du Défi : la carte de classement. Où j'en suis (trophées + rang LoL :
+// palier + division romaine), où je me situe face à mes amis, et le bouton qui
+// lance un match classé. Carte crème (lisible sur le fond sombre de l'Arène),
+// accents violet + or.
 export default function RankedHero({
   trophies,
   bestTrophies,
@@ -24,7 +27,10 @@ export default function RankedHero({
   players: RankPlayer[] // moi + amis (avec isMe sur moi)
   onPlay: () => void
 }) {
-  const prog = arenaProgress(trophies)
+  const rank = rankFor(trophies)
+  // Le rang juste au-dessus : on relit le rang au seuil de fin de division.
+  // (null au sommet, Maître — échelle ouverte.)
+  const nextRank = rank.ceiling !== null ? rankFor(rank.ceiling) : null
   const rows = rankPlayers(players)
   const meIdx = rows.findIndex((r) => r.isMe)
   const myRank = meIdx >= 0 ? meIdx + 1 : 1
@@ -42,14 +48,12 @@ export default function RankedHero({
       aria-label="Classement"
       className="w-full max-w-sm overflow-hidden rounded-3xl bg-card text-left shadow-xl ring-1 ring-black/5"
     >
-      {/* Bandeau arène : emoji + nom + record. */}
+      {/* Bandeau rang : blason + palier/division + record. */}
       <div className="flex items-center justify-between gap-2 bg-primary px-4 py-2.5 text-primary-foreground">
         <span className="flex items-center gap-2 text-sm font-bold">
-          <span aria-hidden="true" className="text-lg">
-            {prog.arena.emoji}
-          </span>
+          <RankBadge rank={rank} size={30} hideDivision />
           <span className="font-heading tracking-wide uppercase italic">
-            {prog.arena.name}
+            {rank.label}
           </span>
         </span>
         <span className="flex items-center gap-1 rounded-full bg-white/15 px-2 py-0.5 font-mono text-[11px] font-bold tabular-nums">
@@ -62,7 +66,14 @@ export default function RankedHero({
         <div className="flex items-end justify-between gap-3">
           <div>
             <p className="flex items-center gap-1.5 font-mono text-4xl leading-none font-extrabold tabular-nums">
-              <Trophy className="size-7 text-highlight" aria-hidden="true" />
+              <Image
+                src="/images/defi/trophy-cup.webp"
+                alt=""
+                width={36}
+                height={36}
+                className="size-9 shrink-0 object-contain drop-shadow-[0_2px_3px_rgba(0,0,0,0.3)]"
+                aria-hidden="true"
+              />
               {trophies}
             </p>
             <p className="mt-1 text-xs font-medium text-muted-foreground">
@@ -84,30 +95,30 @@ export default function RankedHero({
           ) : null}
         </div>
 
-        {/* Progression vers l'arène suivante. */}
-        {prog.next ? (
+        {/* Progression (LP) vers la division / le palier suivant. */}
+        {nextRank ? (
           <div>
             <div
               className="h-2.5 w-full overflow-hidden rounded-full bg-muted"
               role="progressbar"
-              aria-label={`Progression vers ${prog.next.name}`}
+              aria-label={`Progression vers ${nextRank.label}`}
               aria-valuemin={0}
               aria-valuemax={100}
-              aria-valuenow={Math.round(prog.progress * 100)}
+              aria-valuenow={Math.round(rank.progress * 100)}
             >
               <div
                 className="h-full rounded-full bg-highlight transition-all"
-                style={{ width: `${Math.round(prog.progress * 100)}%` }}
+                style={{ width: `${Math.round(rank.progress * 100)}%` }}
               />
             </div>
             <p className="mt-1 text-[11px] text-muted-foreground">
-              Encore <span className="font-bold text-foreground">{prog.toNext}</span> pour{' '}
-              {prog.next.emoji} {prog.next.name}
+              Encore <span className="font-bold text-foreground">{rank.toNext}</span> pour{' '}
+              {nextRank.tier.emoji} {nextRank.label}
             </p>
           </div>
         ) : (
           <p className="text-[11px] font-semibold text-primary">
-            Arène maximale atteinte — reste au sommet 👑
+            Rang maximal atteint — reste Maître 👑
           </p>
         )}
 

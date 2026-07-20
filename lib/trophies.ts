@@ -1,76 +1,14 @@
 // Trophées & classement compétitif du Défi — logique pure, sans React ni
 // Supabase. C'est le cœur de la rétention « façon Clash Royale » : chaque match
-// classé fait bouger un compteur de trophées, qui situe l'élève dans une
-// ARÈNE scolaire et, surtout, face à ses amis. Tout est testable ici ; les
+// classé fait bouger un compteur de trophées, qui situe l'élève dans un RANG
+// (`lib/rank.ts`) et, surtout, face à ses amis. Tout est testable ici ; les
 // composants et le serveur ne font qu'orchestrer.
-
-// ------------------------------------------------------------------- arènes
-// Paliers de trophées, thème « ascension scolaire ». On monte d'arène en
-// gagnant des matchs — le nom devient un flex (« je suis Major de promo »).
-// L'ordre est croissant ; `min` est le seuil d'entrée (le premier est à 0).
-
-export type Arena = {
-  id: string
-  name: string
-  emoji: string
-  min: number
-  // Teinte de la tuile (token .tile-* réutilisé de l'Arène), pour le badge.
-  tile: string
-}
-
-export const ARENAS: Arena[] = [
-  { id: 'recre', name: 'Cour de récré', emoji: '🎒', min: 0, tile: 'tile-subject-green' },
-  { id: 'etude', name: "Salle d'étude", emoji: '📚', min: 300, tile: 'tile-subject-teal' },
-  { id: 'honneur', name: "Tableau d'honneur", emoji: '⭐', min: 700, tile: 'tile-subject-blue' },
-  { id: 'conseil', name: 'Conseil de classe', emoji: '🎓', min: 1200, tile: 'tile-subject-indigo' },
-  { id: 'brevet', name: 'Brevet en poche', emoji: '📜', min: 1800, tile: 'tile-subject-purple' },
-  { id: 'bac', name: 'Bac blanc', emoji: '✍️', min: 2500, tile: 'tile-survie' },
-  { id: 'mention', name: 'Mention Très Bien', emoji: '🏅', min: 3300, tile: 'tile-blitz' },
-  { id: 'major', name: 'Major de promo', emoji: '👑', min: 4200, tile: 'tile-boss' },
-]
-
-// L'arène courante pour un total de trophées donné (le plus haut seuil atteint).
-export function arenaFor(trophies: number): Arena {
-  const t = Math.max(0, Math.floor(trophies))
-  let current = ARENAS[0]
-  for (const a of ARENAS) {
-    if (t >= a.min) current = a
-    else break
-  }
-  return current
-}
-
-export type ArenaProgress = {
-  arena: Arena
-  next: Arena | null // null si arène max
-  // Progression 0..1 dans l'arène courante (1 si arène max).
-  progress: number
-  // Trophées restants avant la prochaine arène (0 si arène max).
-  toNext: number
-  // Bornes de l'arène courante, pratiques pour l'affichage.
-  floor: number
-  ceiling: number | null
-}
-
-export function arenaProgress(trophies: number): ArenaProgress {
-  const t = Math.max(0, Math.floor(trophies))
-  const arena = arenaFor(t)
-  const idx = ARENAS.findIndex((a) => a.id === arena.id)
-  const next = ARENAS[idx + 1] ?? null
-  if (!next) {
-    return { arena, next: null, progress: 1, toNext: 0, floor: arena.min, ceiling: null }
-  }
-  const span = next.min - arena.min
-  const progress = span > 0 ? Math.min(1, Math.max(0, (t - arena.min) / span)) : 0
-  return {
-    arena,
-    next,
-    progress,
-    toNext: Math.max(0, next.min - t),
-    floor: arena.min,
-    ceiling: next.min,
-  }
-}
+//
+// L'échelle d'affichage (palier + division, façon LoL) vit dans `lib/rank.ts` —
+// elle a remplacé les anciennes « arènes scolaires », retirées d'ici pour qu'il
+// n'existe plus qu'UNE SEULE traduction trophées → palier. Deux échelles
+// concurrentes avaient déjà produit le bug « Bronze III » d'un côté et
+// « Salle d'étude » de l'autre pour le même total.
 
 // -------------------------------------------------------------- gain / perte
 // Barème Elo-lite : battre plus fort que soi rapporte gros, perdre contre plus

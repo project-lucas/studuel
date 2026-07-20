@@ -30,13 +30,13 @@ import {
   type RoundResult,
 } from '@/lib/defi-modes'
 import {
-  arenaFor,
   friendsPassed,
   friendsLostTo,
   matchmakeOpponentTrophies,
   type RankPlayer,
 } from '@/lib/trophies'
-import { arenaPalier } from '@/lib/palier'
+import { rankFor } from '@/lib/rank'
+import { rankPalier } from '@/lib/palier'
 import PalierCelebration from '@/components/PalierCelebration'
 
 const PLAYER_AVATAR = '/images/mascotte/flamme-2-vive.webp'
@@ -430,7 +430,7 @@ export default function RankedMode({
                 disabled={answered}
                 onClick={() => answer(i)}
                 className={cn(
-                  'flex items-center justify-between gap-3 rounded-2xl border bg-card px-4 py-3 text-left text-sm font-medium transition-all',
+                  'flex items-center justify-between gap-3 rounded-2xl border bg-card px-4 py-3 text-left text-sm font-medium text-card-foreground transition-all',
                   !answered &&
                     'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
                   answered &&
@@ -555,12 +555,12 @@ function RankedDone({
 
   const passed = ranked ? friendsPassed(ranked.before, ranked.after, friends) : []
   const lost = ranked ? friendsLostTo(ranked.before, ranked.after, friends) : []
-  const arena = arenaFor(ranked?.after ?? 0)
-  const crossedArena =
-    ranked && arenaFor(ranked.before).id !== arenaFor(ranked.after).id
+  const rank = rankFor(ranked?.after ?? 0)
+  const crossedTier =
+    ranked && rankFor(ranked.before).tier.id !== rankFor(ranked.after).tier.id
   // Le VRAI palier : bulle de célébration plein écran, partageable (une seule
-  // fois par arène — la ligne inline ci-dessous reste en rappel).
-  const palier = ranked ? arenaPalier(ranked.before, ranked.after) : null
+  // fois par palier — la ligne inline ci-dessous reste en rappel).
+  const palier = ranked ? rankPalier(ranked.before, ranked.after) : null
 
   return (
     <div className="flex w-full max-w-sm flex-col items-center gap-4">
@@ -627,11 +627,11 @@ function RankedDone({
         </p>
       )}
 
-      {/* Franchissement d'arène : le vrai palier. */}
-      {crossedArena && ranked && ranked.delta >= 0 ? (
+      {/* Franchissement de palier de rang : le vrai palier. */}
+      {crossedTier && ranked && ranked.delta >= 0 ? (
         <p className="animate-in fade-in flex items-center gap-1.5 rounded-2xl bg-white/10 px-4 py-2 text-sm font-bold text-white ring-1 ring-highlight/50 duration-700">
-          <span aria-hidden="true" className="text-lg">{arena.emoji}</span>
-          Nouvelle arène : {arena.name} !
+          <span aria-hidden="true" className="text-lg">{rank.tier.emoji}</span>
+          Nouveau palier : {rank.label} !
         </p>
       ) : null}
 

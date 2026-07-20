@@ -1,10 +1,11 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { Gamepad2, ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { Gamepad2, ChevronLeft, ChevronRight, ChevronDown, Swords } from 'lucide-react'
 import { ChevronRightIcon } from '@/components/defi/icons'
 import { sfx } from '@/lib/sounds'
 import {
@@ -19,71 +20,105 @@ import {
 // violet = jeu de matière, bleu = mode fun de l'Arène, or = mode du jour.
 const TICKET_CLASS: Record<ModeTone, string> = {
   matiere:
-    'border-[oklch(0.62_0.18_300)] bg-gradient-to-b from-[oklch(0.52_0.19_300)] to-[oklch(0.4_0.19_302)]',
-  fun: 'border-[oklch(0.7_0.12_255)] bg-gradient-to-b from-[oklch(0.58_0.15_255)] to-[oklch(0.46_0.16_262)]',
+    'bg-gradient-to-br from-[oklch(0.56_0.19_300)] to-[oklch(0.4_0.19_302)]',
+  fun: 'bg-gradient-to-br from-[oklch(0.6_0.15_255)] to-[oklch(0.44_0.16_262)]',
   featured:
-    'border-[oklch(0.72_0.16_70)] bg-gradient-to-b from-[oklch(0.6_0.14_75)] to-[oklch(0.48_0.13_70)]',
+    'bg-gradient-to-br from-[oklch(0.64_0.15_75)] to-[oklch(0.48_0.13_70)]',
 }
 
-// Fond opaque des zones collantes de la feuille : le même mélange que
-// .defi3-sheet (globals.css), pour que les billets glissent dessous sans
-// transparaître.
-const SHEET_BG =
-  'bg-[color-mix(in_oklch,var(--primary)_34%,oklch(0.17_0.035_300))]'
+// La robe du TALON détachable (un cran plus sombre que le corps, pour lire la
+// déchirure), par famille.
+const STUB_CLASS: Record<ModeTone, string> = {
+  matiere: 'bg-[oklch(0.34_0.16_302)]',
+  fun: 'bg-[oklch(0.36_0.13_262)]',
+  featured: 'bg-[oklch(0.42_0.12_70)]',
+}
 
-// Un billet de mode, façon ticket Clash Royale : le nom et la promesse à
-// gauche, l'emoji dans le talon détachable à droite (pointillés), le ruban
-// (« ×2 XP », « Bientôt ») en coin.
+// Un billet de mode, façon ticket Clash Royale : le corps porte le nom, la
+// promesse et l'art (image si fournie, sinon l'emoji en grand) ; le TALON
+// détachable à droite (perforation en pointillés + encoches demi-lune de la
+// classe .defi-ticket) porte l'emblème. Le ruban (« ×2 XP », « Bientôt ») se
+// pose en coin.
 function Ticket({ ticket }: { ticket: ModeTicket }) {
+  const disabled = !ticket.href
+
   const inner = (
-    <>
-      <span className="flex min-w-0 flex-1 flex-col justify-center gap-0.5 py-2.5 pl-4">
-        <span className="font-heading truncate text-base font-extrabold text-white">
+    <span
+      className={`defi-ticket relative flex min-h-[84px] overflow-hidden rounded-[20px] ${TICKET_CLASS[ticket.tone]}`}
+    >
+      {/* Corps : texte à gauche, art à droite (débordant, façon perso CR). */}
+      <span className="relative z-10 flex min-w-0 flex-1 flex-col justify-center gap-0.5 py-3 pl-4">
+        <span className="font-heading text-[1.05rem] leading-tight font-extrabold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
           {ticket.name}
         </span>
-        <span className="line-clamp-1 text-[11px] font-semibold text-white/70">
+        <span className="line-clamp-1 text-[11px] font-semibold text-white/75">
           {ticket.tagline}
         </span>
         {ticket.chip ? (
-          <span className="mt-1 self-start rounded-full bg-black/35 px-2 py-0.5 text-[10px] font-extrabold text-highlight">
+          <span className="mt-1.5 self-start rounded-full bg-black/35 px-2 py-0.5 text-[10px] font-extrabold text-highlight">
             {ticket.chip}
           </span>
         ) : null}
       </span>
+
+      {/* Zone d'art du corps : image si fournie, sinon l'emoji en grand. */}
       <span
         aria-hidden="true"
-        className="grid w-16 shrink-0 place-items-center self-stretch border-l-2 border-dashed border-white/30 text-3xl"
+        className="relative z-10 grid w-[4.5rem] shrink-0 place-items-center self-stretch"
       >
-        {ticket.emoji}
+        {ticket.image ? (
+          <Image
+            src={ticket.image}
+            alt=""
+            width={96}
+            height={96}
+            className="h-[118%] w-auto object-contain drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
+          />
+        ) : (
+          <span className="text-[2.6rem] leading-none drop-shadow-[0_3px_6px_rgba(0,0,0,0.45)]">
+            {ticket.emoji}
+          </span>
+        )}
       </span>
+
+      {/* Talon détachable : perforation pointillée + emblème sur robe sombre. */}
+      <span
+        aria-hidden="true"
+        className={`relative grid w-16 shrink-0 place-items-center self-stretch border-l-2 border-dashed border-white/35 ${STUB_CLASS[ticket.tone]}`}
+      >
+        <span className="grid size-11 place-items-center rounded-full bg-black/25 text-2xl shadow-[inset_0_2px_4px_rgba(0,0,0,0.35)]">
+          {ticket.emoji}
+        </span>
+      </span>
+
       {ticket.badge ? (
         <span
-          className={`absolute top-0 right-12 rounded-b-md px-1.5 py-0.5 text-[9px] font-extrabold tracking-wide uppercase ${
+          className={`absolute top-0 right-[4.75rem] z-20 rounded-b-md px-1.5 py-0.5 text-[9px] font-extrabold tracking-wide uppercase ${
             ticket.badge === 'Bientôt'
-              ? 'bg-white/20 text-white/80'
+              ? 'bg-black/45 text-white/85'
               : 'bg-destructive text-white'
           }`}
         >
           {ticket.badge}
         </span>
       ) : null}
-    </>
+    </span>
   )
 
-  const base = `relative flex min-h-[64px] overflow-hidden rounded-2xl border ${TICKET_CLASS[ticket.tone]}`
-
+  // L'anneau de focus vit sur l'élément parent NON masqué (le mask du billet
+  // rognerait le ring).
   if (ticket.href) {
     return (
       <Link
         href={ticket.href}
         onClick={() => sfx.tap()}
-        className={`${base} defi2-press shadow-[0_10px_24px_-12px_rgba(0,0,0,0.9)] focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none`}
+        className="defi2-press block rounded-[20px] focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
         {inner}
       </Link>
     )
   }
-  return <div className={`${base} opacity-60`}>{inner}</div>
+  return <div className={disabled ? 'opacity-55' : undefined}>{inner}</div>
 }
 
 /**
@@ -229,22 +264,37 @@ function SubjectRoulette({
  * Le bouton « MODES DE JEU » de l'arène et sa feuille. Au tap, un panneau monte
  * du bas (même mécanique que les feuilles d'orbes). En haut, la ROULETTE de
  * matières ; en dessous, les JEUX de la matière choisie, puis les MODES FUN de
- * l'Arène (communs à toutes les matières). Le compétitif (Match classé, Duel en
- * direct) n'est PAS repris ici : il a ses propres boutons sur l'écran d'arène.
+ * l'Arène (communs à toutes les matières). Le « Duel en direct » (QR) vit ici en
+ * icône flottante (en-tête, haut à droite) ; le Match classé garde son CTA sur
+ * l'écran d'arène.
  */
-export default function ModesSheet({ todayKey }: { todayKey: string }) {
+export default function ModesSheet({
+  todayKey,
+  liveDuel = false,
+}: {
+  todayKey: string
+  /** Élève connecté : affiche l'icône flottante « Duel en direct » (QR). */
+  liveDuel?: boolean
+}) {
   const [open, setOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
   const reduce = useReducedMotion()
 
-  // Fermeture au clavier (Échap), comme les autres feuilles de l'arène.
+  // Fermeture au clavier (Échap) + verrou du défilement de la page tant que
+  // l'espace plein écran est ouvert (il couvre tout, la page derrière ne doit
+  // pas glisser).
   useEffect(() => {
     if (!open) return
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false)
     }
     window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = prevOverflow
+    }
   }, [open])
 
   const subject = ROULETTE_SUBJECTS[activeIndex]?.subject ?? ''
@@ -279,82 +329,104 @@ export default function ModesSheet({ todayKey }: { todayKey: string }) {
         ? createPortal(
             <AnimatePresence>
               {open ? (
+                // L'espace PLEIN ÉCRAN : opaque, au-dessus de la barre d'onglets
+                // (z-[70] > nav en z-50), il monte du bas et couvre tout.
                 <motion.div
-                  className="fixed inset-0 z-50 flex items-end justify-center bg-black/55 sm:items-center sm:p-4"
+                  data-no-swipe
+                  className="defi-modes-screen fixed inset-0 z-[70] flex flex-col"
                   role="dialog"
                   aria-modal="true"
                   aria-label="Modes de jeu"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.18 }}
-                  onClick={() => setOpen(false)}
+                  initial={reduce ? { opacity: 0 } : { y: '100%' }}
+                  animate={reduce ? { opacity: 1 } : { y: 0 }}
+                  exit={reduce ? { opacity: 0 } : { y: '100%' }}
+                  transition={{ type: 'tween', duration: 0.3, ease: 'easeOut' }}
                 >
-                  {/* data-no-swipe : le geste d'onglets ne vole pas les taps
-                      dans la feuille (SwipeTabs écoute window). */}
-                  <motion.div
-                    data-no-swipe
-                    className="defi3-sheet w-full max-w-md"
-                    initial={reduce ? { opacity: 0 } : { y: '100%' }}
-                    animate={reduce ? { opacity: 1 } : { y: 0 }}
-                    exit={reduce ? { opacity: 0 } : { y: '100%' }}
-                    transition={{ type: 'tween', duration: 0.26, ease: 'easeOut' }}
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <div className="flex items-center gap-3 border-b border-white/10 px-5 py-4">
-                      <span
-                        className="grid size-9 shrink-0 place-items-center rounded-xl border border-white/12 bg-white/8 leading-none"
+                  {/* En-tête : gros bouton FERMER (chevron bas, imposant et
+                      clair) + bandeau-titre en pierre, façon écran de modes. */}
+                  <header className="relative flex shrink-0 flex-col items-center gap-3 px-4 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-3">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        sfx.tap()
+                        setOpen(false)
+                      }}
+                      aria-label="Fermer les modes de jeu"
+                      className="olympe-gem olympe-press grid size-14 cursor-pointer place-items-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+                    >
+                      <ChevronDown
+                        className="size-8 text-white"
+                        strokeWidth={3}
                         aria-hidden="true"
+                      />
+                    </button>
+
+                    {/* « Duel en direct » (QR) : icône flottante en haut à droite
+                        de l'écran des modes — remplace l'ancien bouton pleine
+                        largeur de l'arène. Uniquement pour l'élève connecté. */}
+                    {liveDuel ? (
+                      <Link
+                        href="/defi/duel-rapide"
+                        onClick={() => sfx.tap()}
+                        aria-label="Duel en direct — invite un ami par QR"
+                        title="Duel en direct"
+                        className="olympe-gem olympe-press absolute top-[calc(env(safe-area-inset-top)+0.75rem)] right-4 z-10 grid size-14 cursor-pointer place-items-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
                       >
-                        <Gamepad2 className="size-5 text-white" />
-                      </span>
-                      <h2 className="font-heading min-w-0 flex-1 truncate text-lg font-extrabold text-white">
+                        <Swords className="size-7 text-white" aria-hidden="true" />
+                        <span
+                          aria-hidden="true"
+                          className="font-heading absolute -bottom-2.5 left-1/2 -translate-x-1/2 rounded-full bg-highlight px-1.5 py-0.5 text-[9px] font-extrabold tracking-wide text-foreground uppercase shadow-sm"
+                        >
+                          Direct
+                        </span>
+                      </Link>
+                    ) : null}
+
+                    <div className="defi-modes-banner flex w-full max-w-md items-center justify-center gap-2 rounded-2xl px-5 py-2.5">
+                      <Gamepad2
+                        className="size-6 text-highlight"
+                        aria-hidden="true"
+                      />
+                      <h2 className="font-heading text-center text-2xl font-extrabold tracking-wide text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                         Modes de jeu
                       </h2>
-                      <button
-                        type="button"
-                        onClick={() => setOpen(false)}
-                        aria-label="Fermer"
-                        className="flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full text-white/70 transition-colors hover:bg-white/10 active:scale-90"
-                      >
-                        <X className="size-5" strokeWidth={2.4} aria-hidden="true" />
-                      </button>
                     </div>
+                  </header>
 
-                    <div className="max-h-[72dvh] overflow-y-auto overscroll-contain pb-[env(safe-area-inset-bottom)]">
-                      {/* La roulette de matières, collée en haut du scroll. */}
-                      <div
-                        className={`sticky top-0 z-10 border-b border-white/8 pb-2 pt-1 ${SHEET_BG}`}
-                      >
-                        <SubjectRoulette
-                          activeIndex={activeIndex}
-                          onSelect={setActiveIndex}
-                        />
-                      </div>
-
-                      <div className="flex flex-col gap-2.5 px-4 pt-3 pb-4">
-                        {/* Les jeux de la matière choisie. */}
-                        <h3 className="font-heading flex items-center gap-2 text-center text-sm font-extrabold tracking-wide text-white/80 uppercase">
-                          <span className="text-lg" aria-hidden="true">
-                            {ROULETTE_SUBJECTS[activeIndex]?.emoji}
-                          </span>
-                          Jeux · {subject}
-                        </h3>
-                        {gameTickets.map((t) => (
-                          <Ticket key={t.id} ticket={t} />
-                        ))}
-
-                        {/* Les modes fun de l'Arène, communs à toutes les
-                            matières. */}
-                        <h3 className="font-heading mt-3 border-t border-white/10 pt-4 text-center text-sm font-extrabold tracking-wide text-white/80 uppercase">
-                          Modes fun de l’Arène
-                        </h3>
-                        {funTickets.map((t) => (
-                          <Ticket key={t.id} ticket={t} />
-                        ))}
-                      </div>
+                  {/* La roulette de matières, collée sous l'en-tête. */}
+                  <div className="shrink-0 border-y border-white/10 bg-black/15 py-1">
+                    <div className="mx-auto w-full max-w-md">
+                      <SubjectRoulette
+                        activeIndex={activeIndex}
+                        onSelect={setActiveIndex}
+                      />
                     </div>
-                  </motion.div>
+                  </div>
+
+                  {/* Le corps défilant : jeux de la matière, puis modes fun. */}
+                  <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
+                    <div className="mx-auto flex w-full max-w-md flex-col gap-3 px-4 pt-4 pb-[calc(env(safe-area-inset-bottom)+1.5rem)]">
+                      {/* Les jeux de la matière choisie. */}
+                      <h3 className="font-heading flex items-center justify-center gap-2 text-sm font-extrabold tracking-wide text-white/80 uppercase">
+                        <span className="text-lg" aria-hidden="true">
+                          {ROULETTE_SUBJECTS[activeIndex]?.emoji}
+                        </span>
+                        Jeux · {subject}
+                      </h3>
+                      {gameTickets.map((t) => (
+                        <Ticket key={t.id} ticket={t} />
+                      ))}
+
+                      {/* Les modes fun de l'Arène, communs à toutes les
+                          matières. */}
+                      <h3 className="font-heading mt-3 border-t border-white/10 pt-4 text-center text-sm font-extrabold tracking-wide text-white/80 uppercase">
+                        Modes fun de l’Arène
+                      </h3>
+                      {funTickets.map((t) => (
+                        <Ticket key={t.id} ticket={t} />
+                      ))}
+                    </div>
+                  </div>
                 </motion.div>
               ) : null}
             </AnimatePresence>,

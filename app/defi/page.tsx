@@ -6,7 +6,6 @@ import WeeklyLeague from '@/components/defi/WeeklyLeague'
 import LeaguePromotionWatch from '@/components/defi/LeaguePromotionWatch'
 import RankingTabs from '@/components/defi/RankingTabs'
 import ClanBanner from '@/components/defi/ClanBanner'
-import QuickActions from '@/components/defi/QuickActions'
 import DuelHistory from '@/components/defi/DuelHistory'
 import SchoolTournament from '@/components/defi/SchoolTournament'
 import { ChevronRightIcon, CrownIcon, SwordsIcon } from '@/components/defi/icons'
@@ -120,9 +119,6 @@ export default async function DefiPage() {
 
   // Valeurs par défaut (visiteur non connecté : démo mockée).
   let trophies = MOCK_TROPHIES
-  // Bilan Victoires/Défaites des duels 1v1 (0 pour un visiteur).
-  let wins = 0
-  let losses = 0
   let boards: Record<RankingScope, RankingBoard> = MOCK_RANKINGS
   let league: League = MOCK_LEAGUE
   // Drapeau « Aperçu » : la ligue mockée (visiteur ou migration 161 absente)
@@ -148,31 +144,20 @@ export default async function DefiPage() {
     // propre requête, pour qu'une migration pas encore passée ne fasse pas perdre
     // le prénom et la classe (modèle avatar/weekly_goals de /moi). Parallèle =
     // perf-neutre.
-    const [{ data: profile }, { data: geoRow }, { data: recordRow }] =
-      await Promise.all([
-        supabase
-          .from('profiles')
-          .select('full_name, grade_level')
-          .eq('id', user.id)
-          .maybeSingle(),
-        supabase
-          .from('profiles')
-          .select('trophies, college_school_id, lycee_school_id')
-          .eq('id', user.id)
-          .maybeSingle(),
-        // Bilan V/D (migration 174) isolé : une migration pas encore passée ne
-        // doit pas faire perdre trophées ni identité (discipline « colonnes
-        // tardives », cf. f20a539).
-        supabase
-          .from('profiles')
-          .select('wins, losses')
-          .eq('id', user.id)
-          .maybeSingle(),
-      ])
+    const [{ data: profile }, { data: geoRow }] = await Promise.all([
+      supabase
+        .from('profiles')
+        .select('full_name, grade_level')
+        .eq('id', user.id)
+        .maybeSingle(),
+      supabase
+        .from('profiles')
+        .select('trophies, college_school_id, lycee_school_id')
+        .eq('id', user.id)
+        .maybeSingle(),
+    ])
 
     trophies = Math.max(0, Number(geoRow?.trophies) || 0)
-    wins = Math.max(0, Number(recordRow?.wins) || 0)
-    losses = Math.max(0, Number(recordRow?.losses) || 0)
     const firstName = String(profile?.full_name ?? '').split(' ')[0] || 'Moi'
     const level = schoolLevelForGrade(profile?.grade_level ?? null)
     const schoolId =
@@ -379,7 +364,7 @@ export default async function DefiPage() {
         {/* Le bas d'écran, de haut en bas : bloc trophées, CTA « Match classé »,
             duel en direct (QR), puis la feuille des modes. */}
         {/* Bloc trophées : descendu du centre de l'arène, juste au-dessus du CTA. */}
-        <TrophyBlock trophies={trophies} wins={wins} losses={losses} />
+        <TrophyBlock trophies={trophies} />
 
         {/* CTA principal : plaque « or ciselé » pleine largeur, l'élément le
             plus proéminent de la pile. Texte encre ; l'ombre dure s'écrase au
@@ -401,13 +386,10 @@ export default async function DefiPage() {
           <ChevronRightIcon className="ml-auto size-5 shrink-0" />
         </Link>
 
-        {/* Duel en direct par QR, sous le CTA — « Ajouter un ami » vit dans
-            l'onglet Amis. */}
-        {user ? <QuickActions /> : null}
-
         {/* Tous les modes de jeu, en feuille qui monte du bas (billets +
-            filtres) — le bouton remplace l'ancien lien vers /defi/jeux. */}
-        <ModesSheet todayKey={todayKey} />
+            filtres). « Duel en direct » (QR) y vit désormais en icône flottante,
+            en haut à droite de l'écran des modes — plus de bouton dédié ici. */}
+        <ModesSheet todayKey={todayKey} liveDuel={!!user} />
       </div>
     </div>
   )

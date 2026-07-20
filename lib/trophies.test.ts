@@ -1,8 +1,5 @@
 import { describe, it, expect } from 'vitest'
 import {
-  ARENAS,
-  arenaFor,
-  arenaProgress,
   trophyDelta,
   applyTrophyDelta,
   matchmakeOpponentTrophies,
@@ -18,58 +15,6 @@ import {
   LOSS_MAX,
   type RankPlayer,
 } from './trophies'
-
-describe('arenaFor', () => {
-  it('returns the first arena at zero trophies', () => {
-    expect(arenaFor(0).id).toBe('recre')
-  })
-
-  it('clamps negative trophies to the first arena', () => {
-    expect(arenaFor(-50).id).toBe('recre')
-  })
-
-  it('returns the arena whose threshold is reached but not the next', () => {
-    expect(arenaFor(300).id).toBe('etude')
-    expect(arenaFor(699).id).toBe('etude')
-    expect(arenaFor(700).id).toBe('honneur')
-  })
-
-  it('returns the top arena above the last threshold', () => {
-    const top = ARENAS[ARENAS.length - 1]
-    expect(arenaFor(99999).id).toBe(top.id)
-  })
-
-  it('arenas are strictly increasing thresholds', () => {
-    for (let i = 1; i < ARENAS.length; i++) {
-      expect(ARENAS[i].min).toBeGreaterThan(ARENAS[i - 1].min)
-    }
-  })
-})
-
-describe('arenaProgress', () => {
-  it('is at the start of an arena at its floor', () => {
-    const p = arenaProgress(300)
-    expect(p.arena.id).toBe('etude')
-    expect(p.progress).toBe(0)
-    expect(p.next?.id).toBe('honneur')
-    expect(p.toNext).toBe(700 - 300)
-  })
-
-  it('is halfway between two thresholds', () => {
-    // etude 300 → honneur 700, midpoint 500
-    const p = arenaProgress(500)
-    expect(p.progress).toBeCloseTo(0.5, 5)
-    expect(p.toNext).toBe(200)
-  })
-
-  it('caps at full progress in the top arena', () => {
-    const p = arenaProgress(10000)
-    expect(p.next).toBeNull()
-    expect(p.progress).toBe(1)
-    expect(p.toNext).toBe(0)
-    expect(p.ceiling).toBeNull()
-  })
-})
 
 describe('trophyDelta', () => {
   it('gains at least WIN_MIN even against a much weaker opponent', () => {

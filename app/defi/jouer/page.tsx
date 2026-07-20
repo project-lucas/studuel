@@ -26,6 +26,7 @@ import { commuteStreak } from '@/lib/trajet'
 import { avatarEmojiFor, type FriendGhost } from '@/lib/social'
 import type { RankPlayer } from '@/lib/trophies'
 import { HORS_NIVEAU } from '@/lib/types'
+import { composePool } from '@/lib/defi/pool'
 import type { CommuteSlot, QuizQuestion, DeckCard } from '@/lib/types'
 
 export const metadata = { title: 'Jouer — Studuel' }
@@ -166,7 +167,7 @@ export default async function DefiJouerPage({
     // quiz, et c'est autant de contenu en plus pour toutes les classes.
     supabase
       .from('quizzes')
-      .select('id, subject, lesson_id')
+      .select('id, subject, lesson_id, grade_level')
       .in('grade_level', [grade, HORS_NIVEAU]),
     supabase
       .from('flashcard_decks')
@@ -267,10 +268,16 @@ export default async function DefiJouerPage({
   const rankedQuizzes = shuffle(quizList).sort(
     (a, b) => examPriorityOf(a) - examPriorityOf(b) || weightOf(a) - weightOf(b),
   )
-  const pickedQuizzes = rankedQuizzes.slice(0, 2)
+  // Le défi du jour porte le PROGRAMME de l'élève : aucun hors-programme (d'où
+  // le plafond à 0). Sinon un élève pourrait tomber sur « Keynes » en guise de
+  // défi quotidien de 6e.
+  const pickedQuizzes = composePool(rankedQuizzes, 2, 0)
   // Pool élargi pour les modes de jeu (Duel, Blitz) : jusqu'à 8 quiz, les
-  // chapitres fragiles d'abord — on s'entraîne en s'affrontant.
-  const poolQuizzes = rankedQuizzes.slice(0, 8)
+  // chapitres fragiles d'abord — on s'entraîne en s'affrontant. La culture
+  // générale y entre en BONUS plafonné : jamais travaillée, elle serait sinon
+  // en tête de classement à égalité avec le programme jamais travaillé, et
+  // l'évincerait (surtout en 6e, où le catalogue est le plus petit).
+  const poolQuizzes = composePool(rankedQuizzes, 8)
 
   const items: ChallengeItem[] = []
   const pool: ModeQuestion[] = []

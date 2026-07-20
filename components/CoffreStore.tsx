@@ -262,9 +262,14 @@ export default function CoffreStore({ coins }: { coins: number }) {
           </p>
         </div>
 
-        {/* Chips de catégorie. */}
+        {/* Chips de catégorie : un GROUPE de filtres, pas des onglets. Le
+            motif tablist était incomplet (ni aria-controls, ni tabpanel, ni
+            navigation aux flèches) et promettait au lecteur d'écran un
+            comportement absent ; et il n'y a pas de panneau ici, seulement une
+            grille filtrée. Des boutons `aria-pressed` disent la même chose,
+            sans rien promettre de faux, et restent tabulables nativement. */}
         <div
-          role="tablist"
+          role="group"
           aria-label="Catégories de personnalisation"
           className="-mx-1 mb-3 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
@@ -274,14 +279,13 @@ export default function CoffreStore({ coins }: { coins: number }) {
               <button
                 key={c.id}
                 type="button"
-                role="tab"
-                aria-selected={active}
+                aria-pressed={active}
                 onClick={() => {
                   sfx.tap()
                   setCategory(c.id)
                 }}
                 className={cn(
-                  'font-heading flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-bold whitespace-nowrap transition-colors',
+                  'font-heading flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-bold whitespace-nowrap transition-colors',
                   active
                     ? 'bg-primary text-primary-foreground shadow-sm'
                     : 'bg-white/70 text-muted-foreground hover:text-foreground',

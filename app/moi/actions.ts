@@ -19,6 +19,8 @@ import {
   type SchoolGrade,
 } from '@/lib/notes'
 import { toDayKey } from '@/lib/streak'
+import { LEVERS } from '@/lib/capacite-drivers'
+import { trimestreOf } from '@/lib/notes'
 import { GRADE_LEVELS } from '@/lib/types'
 import { normalizeNextExam } from '@/lib/next-exam'
 import {
@@ -526,6 +528,107 @@ export async function saveAvatar(config: unknown): Promise<void> {
   // GRANT UPDATE(avatar) manquant (082 pas passée) échouerait en silence.
   if (error) console.error('[moi] avatar non enregistré:', error.message)
   revalidatePath('/moi')
+}
+
+// --- Leviers de la semaine (hero card Moi) -----------------------------------
+// Un tap sur une chip bascule le log DU JOUR de l'habitude du levier. Si
+// l'élève n'a jamais activé cette habitude, elle est activée à la volée (avec
+// la planification par défaut du catalogue) — habit_logs reste la source
+// unique de vérité, aucune table parallèle.
+export async function toggleLeverAction(
+  catalogId: string,
+  date: string,
+  completed: boolean,
+): Promise<{ ok: boolean }> {
+  const { supabase, userId } = await requireUser()
+  if (!userId) return { ok: false }
+  // Catalogue fermé : seuls les 4 leviers de la carte sont acceptés.
+  if (!LEVERS.some((l) => l.catalogId === catalogId)) return { ok: false }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return { ok: false }
+
+  let { data: habit } = await supabase
+    .from('habits')
+    .select('id')
+    .eq('user_id', userId)
+    .eq('catalog_id', catalogId)
+    .maybeSingle()
+
+  if (!habit) {
+    const { data: inserted, error } = await supabase
+      .from('habits')
+      .insert({ user_id: userId, catalog_id: catalogId, target: {} })
+      .select('id')
+      .single()
+    if (error) {
+      // Course possible (autre appareil) : l'UNIQUE (user_id, catalog_id) a pu
+      // claquer — on relit avant d'abandonner.
+      const { data: retry } = await supabase
+        .from('habits')
+        .select('id')
+        .eq('user_id', userId)
+        .eq('catalog_id', catalogId)
+        .maybeSingle()
+      habit = retry
+    } else {
+      habit = inserted
+    }
+  }
+  if (!habit) {
+    console.error('[moi] levier — habitude introuvable/inactivable:', catalogId)
+    return { ok: false }
+  }
+
+  const { error } = await supabase.from('habit_logs').upsert(
+    {
+      habit_id: habit.id,
+      user_id: userId,
+      date,
+      completed,
+      auto_validated: false,
+    },
+    { onConflict: 'habit_id,date' },
+  )
+  if (error) {
+    console.error('[moi] levier non enregistré:', error.message)
+    return { ok: false }
+  }
+  revalidatePath('/moi')
+  return { ok: true }
+}
+
+// --- Moyennes trimestrielles saisies — migration 187 --------------------------
+// Repli de « Ta trajectoire au bac » : quand un trimestre n'a aucune note
+// détaillée, l'élève tape directement la moyenne de son bulletin. L'année
+// scolaire est celle du jour (convention lib/notes.ts). Renvoie { ok } pour ne
+// jamais afficher un faux succès si 187 n'est pas passée.
+export async function saveTermAverageAction(
+  term: number,
+  average: number,
+): Promise<{ ok: boolean }> {
+  const { supabase, userId } = await requireUser()
+  if (!userId) return { ok: false }
+  if (term !== 1 && term !== 2 && term !== 3) return { ok: false }
+  const avg = Number(average)
+  if (!Number.isFinite(avg) || avg < 0 || avg > 20) return { ok: false }
+
+  const now = trimestreOf(toDayKey(new Date()))
+  if (!now) return { ok: false }
+
+  const { error } = await supabase.from('term_grades').upsert(
+    {
+      user_id: userId,
+      school_year: now.year,
+      term,
+      average: Math.round(avg * 100) / 100,
+    },
+    { onConflict: 'user_id,school_year,term' },
+  )
+  if (error) {
+    console.error('[moi] moyenne de trimestre non enregistrée:', error.message)
+    return { ok: false }
+  }
+  revalidatePath('/moi')
+  return { ok: true }
 }
 
 // Créneaux de trajet (validation auto des quiz en déplacement).

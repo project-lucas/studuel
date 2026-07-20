@@ -5,7 +5,16 @@ import { createServerClient } from '@supabase/ssr'
 // (cookies) avant le rendu, pour que les Server Components voient
 // toujours un utilisateur à jour.
 export async function proxy(request: NextRequest) {
-  let supabaseResponse = NextResponse.next({ request })
+  // Chemin demandé, exposé aux Server Components (Next ne le leur donne pas).
+  // Sert au layout à ne PAS charger le bandeau du haut sur les parcours plein
+  // écran (/bienvenue) : sans ça, l'onboarding paie 5 requêtes Supabase par
+  // écran pour un bandeau qui se masque ensuite côté client.
+  const requestHeaders = new Headers(request.headers)
+  requestHeaders.set('x-pathname', request.nextUrl.pathname)
+
+  let supabaseResponse = NextResponse.next({
+    request: { headers: requestHeaders },
+  })
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -19,7 +28,9 @@ export async function proxy(request: NextRequest) {
           cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value),
           )
-          supabaseResponse = NextResponse.next({ request })
+          supabaseResponse = NextResponse.next({
+            request: { headers: requestHeaders },
+          })
           cookiesToSet.forEach(({ name, value, options }) =>
             supabaseResponse.cookies.set(name, value, options),
           )

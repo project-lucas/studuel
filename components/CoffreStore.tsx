@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Clock, Gift, Lock, Sparkles, Coins, ChevronRight } from 'lucide-react'
+import { Clock, Gift, Lock, Sparkles, ChevronRight } from 'lucide-react'
+import CoinIcon from '@/components/ui/CoinIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -142,7 +143,9 @@ function CapsuleCard({ capsule }: { capsule: Capsule }) {
   )
 }
 
-// Un produit de personnalisation : carte compacte (emoji, nom, prix pièces).
+// Un produit de personnalisation : ligne pleine largeur (icône généreuse à
+// gauche, nom + promesse au centre, prix pièces à droite) — la vignette respire
+// enfin sur toute la largeur du coffre au lieu d'être coincée dans une demi-case.
 function PersoCard({
   emoji,
   name,
@@ -159,26 +162,24 @@ function PersoCard({
   affordable: boolean
 }) {
   return (
-    <div className="flex flex-col rounded-2xl bg-white p-3 shadow-sm ring-1 ring-black/5">
-      <div className="flex items-start gap-2">
-        <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-2xl">
-          {emoji}
-        </span>
-        <div className="min-w-0 flex-1">
-          <p className="font-heading truncate text-sm font-extrabold text-foreground">
-            {name}
-          </p>
-          <p className="mt-0.5 line-clamp-2 text-[11px] leading-snug text-muted-foreground">
-            {desc}
-          </p>
-        </div>
+    <div className="flex w-full items-center gap-3 rounded-2xl bg-white p-3 shadow-sm ring-1 ring-black/5">
+      <span className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-3xl">
+        {emoji}
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className="font-heading truncate text-sm font-extrabold text-foreground">
+          {name}
+        </p>
+        <p className="mt-0.5 line-clamp-2 text-[11px] leading-snug text-muted-foreground">
+          {desc}
+        </p>
       </div>
       <button
         type="button"
         disabled={!available}
         onClick={() => sfx.tap()}
         className={cn(
-          'mt-2.5 flex items-center justify-center gap-1 rounded-full px-3 py-1.5 font-mono text-xs font-extrabold tabular-nums transition-colors',
+          'flex shrink-0 items-center justify-center gap-1 rounded-full px-3.5 py-2 font-mono text-xs font-extrabold tabular-nums transition-colors',
           !available
             ? 'bg-muted text-muted-foreground'
             : affordable
@@ -192,7 +193,7 @@ function PersoCard({
           </>
         ) : (
           <>
-            <Coins className="size-3.5" aria-hidden="true" /> {priceCoins}
+            <CoinIcon className="size-3.5" strokeWidth={2.2} /> {priceCoins}
           </>
         )}
       </button>
@@ -219,7 +220,7 @@ export default function CoffreStore({ coins }: { coins: number }) {
           Ta boutique
         </span>
         <span className="flex items-center gap-1.5 font-mono text-sm font-extrabold text-foreground tabular-nums">
-          <Coins className="size-4 text-highlight" aria-hidden="true" />
+          <CoinIcon className="size-4 text-highlight" strokeWidth={2.2} />
           {coins} pièces
         </span>
       </div>
@@ -293,7 +294,7 @@ export default function CoffreStore({ coins }: { coins: number }) {
           })}
         </div>
 
-        <div className="grid grid-cols-2 gap-2.5">
+        <div className="grid grid-cols-1 gap-2.5">
           {visiblePerso.map((p) => (
             <PersoCard
               key={p.id}

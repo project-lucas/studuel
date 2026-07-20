@@ -418,9 +418,9 @@ function LiveMatch({
             type="button"
             disabled={answered}
             onClick={() => answer(i)}
-            className={`rounded-xl border px-4 py-3 text-left text-sm transition-colors ${
+            className={`rounded-xl border bg-card px-4 py-3 text-left text-sm text-card-foreground transition-colors ${
               answered && i === q.correctIndex
-                ? 'border-green-500 bg-green-50'
+                ? 'border-green-500 bg-green-50 text-green-700'
                 : 'hover:border-primary/50'
             } disabled:cursor-default`}
           >

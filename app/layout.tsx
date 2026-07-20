@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import {
   Geist,
   Geist_Mono,
@@ -9,6 +10,8 @@ import {
 import "./globals.css";
 // Navigation responsive : barre d'onglets en bas (mobile) + sidebar (desktop)
 import Navigation from "@/components/Navigation";
+// Bandeau du haut, toujours visible (pièces + niveau) façon Clash Royale.
+import TopHudLoader from "@/components/TopHudLoader";
 // Balayage horizontal (façon Clash Royale) : change d'onglet depuis n'importe
 // quel endroit de l'écran.
 import SwipeTabs from "@/components/SwipeTabs";
@@ -81,6 +84,16 @@ export default async function RootLayout({
             le contenu est centré en largeur de lecture confortable */}
         <div className="flex min-h-screen">
           <BackGuard />
+          {/* Bandeau du haut streamé : ne bloque pas le rendu de la page. Le
+              repli est une barre vide de même hauteur (aucun saut de mise en
+              page). */}
+          <Suspense
+            fallback={
+              <header className="fixed inset-x-0 top-0 z-50 h-14 border-b bg-card/85 backdrop-blur-md md:hidden" />
+            }
+          >
+            <TopHudLoader />
+          </Suspense>
           <Navigation userLabel={userLabel} />
           {user ? <DailyLoginReward /> : null}
           {/* min-w-0 : sans lui, l'item flex refuse de rétrécir sous la

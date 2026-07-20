@@ -222,7 +222,7 @@ export default function DefiSoloPlayer({
                     sfx.tap()
                   }}
                   className={cn(
-                    'min-h-16 rounded-2xl border-2 bg-card px-4 py-3 text-center text-sm font-medium transition-all',
+                    'min-h-16 rounded-2xl border-2 bg-card px-4 py-3 text-center text-sm font-medium text-card-foreground transition-all',
                     isGone && 'pointer-events-none opacity-30 line-through',
                     isAnswer &&
                       'border-green-600 bg-green-600/10 text-green-800 dark:text-green-300',

@@ -34,29 +34,10 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
 
   return (
     <>
-      {/* Mobile first : barre du haut (marque + compte), verre dépoli… */}
-      <header className="fixed inset-x-0 top-0 z-50 flex h-12 items-center justify-between border-b bg-card/85 px-4 backdrop-blur-md md:hidden">
-        <Link href="/" className="font-heading text-lg font-bold">
-          Studuel
-        </Link>
-        <Link
-          href={accountHref}
-          aria-label={userLabel ? 'Mon compte' : 'Se connecter'}
-          className={cn(
-            'flex items-center gap-2 text-sm font-medium transition-colors',
-            accountActive ? 'text-primary' : 'text-muted-foreground',
-          )}
-        >
-          {userLabel ? (
-            <span className="max-w-32 truncate">{userLabel}</span>
-          ) : (
-            <span>Se connecter</span>
-          )}
-          <CircleUser className="size-5" />
-        </Link>
-      </header>
+      {/* La barre du haut sur mobile (pièces + niveau + compte) est portée par
+          TopHud (bandeau de jeu, toujours visible), rendu par le layout. */}
 
-      {/* …et barre d'onglets fixée en bas, Défi surélevé au centre */}
+      {/* Barre d'onglets fixée en bas, Défi surélevé au centre */}
       <nav className="tab-bar fixed inset-x-0 bottom-0 z-50 border-t pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
         <ul className="relative flex items-end">
           {/* Halo violet qui suit l'onglet actif — glisse en douceur d'un onglet

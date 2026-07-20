@@ -880,7 +880,7 @@ export default function DefiHome({
                 className={cn(
                   // bg-card : les options restent des cartes claires lisibles
                   // sur le fond d'écran sombre de l'Arène.
-                  'flex items-center justify-between gap-3 rounded-2xl border bg-card px-4 py-3 text-left text-sm font-medium transition-all',
+                  'flex items-center justify-between gap-3 rounded-2xl border bg-card px-4 py-3 text-left text-sm font-medium text-card-foreground transition-all',
                   !answered &&
                     'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
                   answered &&

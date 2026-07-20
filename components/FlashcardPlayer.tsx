@@ -23,6 +23,7 @@ import { cn } from '@/lib/utils'
 import { sfx, buzz, isSoundOn, setSoundOn } from '@/lib/sounds'
 import { comboLabel, comboTier } from '@/lib/juice'
 import { sessionXp } from '@/lib/xp'
+import { deckProgress } from '@/lib/flashcards'
 import { recordStudySession } from '@/app/studio/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
@@ -71,7 +72,11 @@ export default function FlashcardPlayer({
   const [saved, setSaved] = useState<boolean | null>(null)
 
   const current = queue[0]
-  const knownCount = cards.length - queue.length
+  const progress = deckProgress(
+    cards.length,
+    queue.map((c) => c.id),
+    seen,
+  )
 
   // Verrou synchrone anti-double-tap : le state (flipped) est en retard d'un
   // rendu, donc deux clics rapides sur « Je savais » rejoueraient answer() sur
@@ -199,8 +204,17 @@ export default function FlashcardPlayer({
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-3">
       <div className="flex items-center justify-between text-sm text-muted-foreground">
+        {/* « 8 sues · 3 à repasser » : sans le second chiffre, l'élève qui
+            bloque sur quelques cartes voit un compteur figé et ne sait pas
+            combien il lui reste. */}
         <span className="font-mono tabular-nums">
-          {knownCount}/{cards.length} sues
+          {progress.known}/{cards.length} sues
+          {progress.toRedo > 0 ? (
+            <span className="text-muted-foreground/70">
+              {' · '}
+              {progress.toRedo} à repasser
+            </span>
+          ) : null}
         </span>
         {/* Badge de SÉRIE : apparaît à partir de 2 cartes sues d'affilée et
             disparaît net dès qu'une carte échappe — même récompense que le
@@ -225,19 +239,30 @@ export default function FlashcardPlayer({
         <SoundToggle />
       </div>
 
-      {/* Barre de progression */}
+      {/* Barre de progression à DEUX segments : le clair marque les cartes
+          déjà passées (il avance à chaque réponse, même ratée), le plein les
+          cartes sues. Avec le seul segment plein, un élève bloqué sur 3 cartes
+          voyait une barre parfaitement immobile. */}
       <div
-        className="h-2 w-full overflow-hidden rounded-full bg-muted"
+        className="relative h-2 w-full overflow-hidden rounded-full bg-muted"
         role="progressbar"
         aria-label="Cartes sues"
         aria-valuemin={0}
         aria-valuemax={cards.length}
-        aria-valuenow={knownCount}
-        aria-valuetext={`${knownCount} sur ${cards.length} cartes sues`}
+        aria-valuenow={progress.known}
+        aria-valuetext={
+          progress.toRedo > 0
+            ? `${progress.known} sur ${cards.length} cartes sues, ${progress.toRedo} à repasser`
+            : `${progress.known} sur ${cards.length} cartes sues`
+        }
       >
         <div
-          className="bar-fill h-full rounded-full bg-highlight transition-all"
-          style={{ width: `${(knownCount / cards.length) * 100}%` }}
+          className="absolute inset-y-0 left-0 rounded-full bg-highlight/40 transition-all"
+          style={{ width: `${progress.seenRatio * 100}%` }}
+        />
+        <div
+          className="bar-fill absolute inset-y-0 left-0 rounded-full bg-highlight transition-all"
+          style={{ width: `${progress.knownRatio * 100}%` }}
         />
       </div>
 

@@ -8,7 +8,8 @@ import { getUserTier, canAccessMindMaps } from '@/lib/subscription'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN, MASCOT } from '@/lib/subject-style'
 import SubjectIcon from '@/components/SubjectIcon'
-import type { Subject, Chapter, Lesson } from '@/lib/types'
+import { chapterHasMindMap } from '@/lib/mind-map-access'
+import { CHAPTER_COLUMNS, type Subject, type Chapter, type Lesson } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
 
@@ -30,17 +31,19 @@ export default async function ChapterPage({
     subject: Subject
     lessons: (Lesson & { quizzes: { id: string }[] })[]
   }
-  // select('*') sur le chapitre : tolère une base sans la migration 029
-  // (colonne mind_map absente).
-  const [{ data: row }, tier] = await Promise.all([
+  // Colonnes explicites sur le chapitre : `*` inclurait `mind_map`, dont la
+  // lecture est révoquée (contenu payant, migration 182). La tuile n'a besoin
+  // que de son EXISTENCE, lue à part pour rester robuste aux migrations.
+  const [{ data: row }, tier, hasMindMap] = await Promise.all([
     supabase
       .from('chapters')
-      .select('*, subject:subjects!inner(*), lessons(*, quizzes(id))')
+      .select(`${CHAPTER_COLUMNS}, subject:subjects!inner(*), lessons(*, quizzes(id))`)
       .eq('id', chapterId)
       .eq('subjects.slug', slug)
       .order('position', { ascending: true, referencedTable: 'lessons' })
       .maybeSingle<Row>(),
     getUserTier(),
+    chapterHasMindMap(supabase, chapterId),
   ])
   if (!row) notFound()
 
@@ -81,7 +84,7 @@ export default async function ChapterPage({
       <div className="mx-auto w-full max-w-4xl px-4 py-6 md:px-8">
         {/* Carte mentale du chapitre — visible par tous, ouvrable par les
             abonnés (Offre 1+) ; cadenas non cliquable pour les gratuits. */}
-        {chapter.mind_map ? (
+        {hasMindMap ? (
           canAccessMindMaps(tier) ? (
             <Link
               href={`/reviser/${subject.slug}/${chapter.id}/carte`}

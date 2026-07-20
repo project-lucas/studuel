@@ -3,33 +3,37 @@
 
 import type { MindMapData } from '@/lib/types'
 
-// Bornes de l'aperçu : assez pour garder une silhouette crédible, jamais assez
-// pour deviner le contenu.
-const MAX_DECOY_BRANCHES = 6
-const MAX_DECOY_CHILDREN = 4
+// Silhouette de l'aperçu montré aux NON-ABONNÉS : assez de matière pour donner
+// envie, jamais rien du contenu payant. Longueurs choisies pour ressembler à une
+// carte réelle une fois floutée.
+const PLACEHOLDER_SHAPE: readonly (readonly number[])[] = [
+  [12, 9, 7],
+  [8, 14, 10],
+  [10, 7, 12, 8],
+  [7, 11, 9],
+  [11, 8, 13],
+]
 
-function dots(length: number, min: number, max: number): string {
-  return '•'.repeat(Math.min(Math.max(length, min), max))
+function dots(length: number): string {
+  return '•'.repeat(length)
 }
 
 // Aperçu d'une carte mentale pour un NON-ABONNÉ.
 //
-// Le verrou était purement cosmétique : la vraie carte était rendue puis floutée
-// en CSS, donc tout son texte partait quand même dans le HTML envoyé au
-// navigateur — un simple « afficher le code source » suffisait à lire le
-// contenu payant, sans exécuter la moindre ligne de JS.
+// Le verrou était d'abord purement cosmétique : la vraie carte était rendue puis
+// floutée en CSS, donc tout son texte partait quand même dans le HTML envoyé au
+// navigateur — un « afficher le code source » suffisait à lire le contenu payant.
 //
-// On renvoie désormais un LEURRE de même FORME (même nombre de branches et
-// d'enfants, longueurs de mots comparables) pour que l'aperçu flouté garde sa
-// silhouette crédible et donne envie — mais sans un seul mot du vrai contenu.
-export function mindMapDecoy(data: MindMapData): MindMapData {
+// On renvoie un leurre de silhouette CRÉDIBLE mais FIXE : il ne dérive pas de la
+// vraie carte, ce qui permet à la page de ne même pas la charger tant que
+// l'élève n'est pas abonné (le serveur ne lit plus le contenu qu'il ne doit pas
+// montrer, plutôt que de le lire pour le masquer).
+export function mindMapPlaceholder(): MindMapData {
   return {
-    centre: dots(data.centre.length, 3, 14),
-    branches: data.branches.slice(0, MAX_DECOY_BRANCHES).map((b) => ({
-      titre: dots(b.titre.length, 4, 12),
-      enfants: b.enfants
-        .slice(0, MAX_DECOY_CHILDREN)
-        .map((e) => dots(e.length, 6, 18)),
+    centre: dots(10),
+    branches: PLACEHOLDER_SHAPE.map((enfants) => ({
+      titre: dots(8),
+      enfants: enfants.map(dots),
     })),
   }
 }

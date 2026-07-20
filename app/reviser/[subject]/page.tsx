@@ -16,7 +16,7 @@ import {
   lessonSupportsDone,
 } from '@/lib/lesson-progress'
 import { canAccessPremiumTests, type Tier } from '@/lib/subscription'
-import type { Subject } from '@/lib/types'
+import { CHAPTER_COLUMNS, type Subject } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
 
@@ -69,7 +69,7 @@ export default async function SubjectPage({
   if (catalog.length === 0) {
     const { data } = await supabase
       .from('chapters')
-      .select('*, lessons(*, quizzes(id))')
+      .select(`${CHAPTER_COLUMNS}, lessons(*, quizzes(id))`)
       .eq('subject_id', subject.id)
       .eq('level', level)
       .order('position', { ascending: true })

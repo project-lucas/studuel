@@ -20,6 +20,7 @@ import {
   lessonSupportCount,
   lessonSupportsDone,
 } from '@/lib/lesson-progress'
+import { chapterHasMindMap } from '@/lib/mind-map-access'
 import { loadLessonContext } from './data'
 
 export const dynamic = 'force-dynamic'
@@ -42,8 +43,13 @@ export default async function LessonHubPage({
 
   // Un seul tour de requêtes : le nombre de questions est embarqué dans le
   // quiz, et les sessions sont filtrées par la jointure quiz → leçon.
-  const [{ data: quiz }, { data: completion }, { data: activities }, { data: sessions }] =
-    await Promise.all([
+  const [
+    { data: quiz },
+    { data: completion },
+    { data: activities },
+    { data: sessions },
+    hasMindMap,
+  ] = await Promise.all([
       supabase
         .from('quizzes')
         .select('id, quiz_questions(count)')
@@ -67,6 +73,9 @@ export default async function LessonHubPage({
         .eq('user_id', user.id)
         .eq('quizzes.lesson_id', lesson.id)
         .returns<{ score: number; total: number }[]>(),
+      // Existence de la carte mentale du chapitre : lue à part, le contenu
+      // (`mind_map`) étant révoqué pour tout le monde (migration 182).
+      chapterHasMindMap(supabase, chapter.id),
     ])
 
   // Quiz : nombre de questions + meilleur score de l'élève (« 7/10 » ou « --/10 »).
@@ -153,9 +162,7 @@ export default async function LessonHubPage({
       key: 'carte',
       label: 'Carte mentale',
       icon: Brain,
-      href: chapter.mind_map
-        ? `/reviser/${subject.slug}/${chapter.id}/carte`
-        : null,
+      href: hasMindMap ? `/reviser/${subject.slug}/${chapter.id}/carte` : null,
       tracked: false,
       caption: 'Chapitre',
     },

@@ -6,11 +6,12 @@ import BackButton from '@/components/BackButton'
 import MindMap from '@/components/MindMap'
 import { createClient } from '@/lib/supabase/server'
 import { getUserTier, canAccessMindMaps } from '@/lib/subscription'
-import { mindMapDecoy } from '@/lib/mind-map'
+import { mindMapPlaceholder } from '@/lib/mind-map'
+import { chapterHasMindMap, fetchMindMap } from '@/lib/mind-map-access'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
 import SubjectIcon from '@/components/SubjectIcon'
-import type { Subject, Chapter } from '@/lib/types'
+import { CHAPTER_COLUMNS, type Subject, type Chapter, type MindMapData } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
 
@@ -29,22 +30,29 @@ export default async function MindMapPage({
   } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  // select('*') : tolère une base sans la migration 029 (mind_map absent).
+  // Colonnes explicites : le CONTENU de la carte ne se lit plus par requête
+  // directe (révoqué, migration 182) mais par la RPC `chapter_mind_map`, qui
+  // revérifie l'abonnement côté serveur. On ne le charge donc QUE pour un
+  // abonné — un non-abonné voit un aperçu générique, jamais le vrai contenu.
   type Row = Chapter & { subject: Subject }
-  const [{ data: row }, tier] = await Promise.all([
+  const [{ data: row }, tier, hasMindMap] = await Promise.all([
     supabase
       .from('chapters')
-      .select('*, subject:subjects!inner(*)')
+      .select(`${CHAPTER_COLUMNS}, subject:subjects!inner(*)`)
       .eq('id', chapterId)
       .eq('subjects.slug', slug)
       .maybeSingle<Row>(),
     getUserTier(),
+    chapterHasMindMap(supabase, chapterId),
   ])
   if (!row) notFound()
 
   const { subject, ...chapter } = row
   const theme = subjectTheme(subject.color)
   const unlocked = canAccessMindMaps(tier)
+
+  let mindMap: MindMapData | null = null
+  if (hasMindMap && unlocked) mindMap = await fetchMindMap(supabase, chapterId)
 
   return (
     <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
@@ -73,21 +81,27 @@ export default async function MindMapPage({
       </header>
 
       <div className="mx-auto w-full max-w-4xl px-4 py-6 md:px-8">
-        {!chapter.mind_map ? (
+        {!hasMindMap ? (
           <p className="text-sm text-muted-foreground">
             La carte mentale de ce chapitre arrive bientôt.
           </p>
+        ) : mindMap ? (
+          <MindMap data={mindMap} />
         ) : unlocked ? (
-          <MindMap data={chapter.mind_map} />
+          // Abonné, carte existante, mais contenu injoignable : ne JAMAIS lui
+          // servir l'écran « Débloquer l'Offre 1 », il a déjà payé.
+          <p className="text-sm text-muted-foreground">
+            La carte mentale n&apos;a pas pu être chargée. Réessaie dans un instant.
+          </p>
         ) : (
           <div className="relative">
             {/* LEURRE, pas la vraie carte : le flou n'est que du CSS, le texte
                 partait quand même dans le HTML (« afficher le code source »
-                suffisait à lire le contenu payant). On envoie une carte de même
-                forme, sans un mot du vrai contenu. */}
+                suffisait à lire le contenu payant). L'aperçu est une silhouette
+                générique — le serveur n'a même pas chargé la vraie carte. */}
             <div aria-hidden="true">
               <MindMap
-                data={mindMapDecoy(chapter.mind_map)}
+                data={mindMapPlaceholder()}
                 className="pointer-events-none blur-sm select-none opacity-50"
               />
             </div>

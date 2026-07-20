@@ -1,6 +1,6 @@
 import { notFound, redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
-import type { Subject, Chapter, Lesson } from '@/lib/types'
+import { CHAPTER_COLUMNS, type Subject, type Chapter, type Lesson } from '@/lib/types'
 
 // Contexte commun du hub de leçon et de ses supports (cours, révision,
 // studygram) : élève connecté + triplet matière/chapitre/leçon cohérent.
@@ -19,10 +19,12 @@ export async function loadLessonContext(
 
   // select('*') sur la leçon : tolère une base où la migration 025 n'est pas
   // encore passée (revision_sheet / studygram_url absents → undefined).
+  // Sur le chapitre en revanche, colonnes explicites : `*` inclurait `mind_map`,
+  // dont la lecture est révoquée (contenu payant, migration 182).
   type Row = Lesson & { chapter: (Chapter & { subject: Subject }) | null }
   const { data: row } = await supabase
     .from('lessons')
-    .select('*, chapter:chapters!inner(*, subject:subjects!inner(*))')
+    .select(`*, chapter:chapters!inner(${CHAPTER_COLUMNS}, subject:subjects!inner(*))`)
     .eq('id', lessonId)
     .eq('chapter_id', chapterId)
     .maybeSingle<Row>()

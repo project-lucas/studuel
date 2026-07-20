@@ -52,9 +52,18 @@ export type Chapter = {
   level: string
   title: string
   position: number
-  // Optionnelle tant que la migration 029 n'est pas exécutée partout.
-  mind_map?: MindMapData | null
+  // EXISTENCE de la carte mentale (colonne générée, migration 181). Le CONTENU
+  // (`chapters.mind_map`) n'est PAS dans ce type : il est révoqué pour anon et
+  // authenticated, et ne se lit que par la RPC `chapter_mind_map`, qui vérifie
+  // l'abonnement. Cf. `lib/mind-map-access.ts`.
+  has_mind_map?: boolean
 }
+
+// Colonnes de `chapters` lisibles par tout le monde. À utiliser à la place d'un
+// `select('*')` : après la migration 182, `*` inclut `mind_map` (contenu payant,
+// révoqué) et PostgREST répond « permission denied » — ce qui casserait Réviser
+// en entier. Ajouter ici toute colonne publique future.
+export const CHAPTER_COLUMNS = 'id, subject_id, level, title, position'
 
 export type Lesson = {
   id: string

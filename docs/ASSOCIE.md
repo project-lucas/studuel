@@ -31,7 +31,7 @@ le finis et je le vérifie.
 
 ## 2. État réel du projet (à réactualiser)
 
-**Dernière remise à plat : 2026-07-17** (Claude, session interactive).
+**Dernière remise à plat : 2026-07-20** (Lia, `/jour` cycle 2).
 L'historique détaillé des cycles passés vit dans `_ASSOCIE/JOURNAL.md` + le
 git log — ce paragraphe ne garde que l'état courant.
 
@@ -57,7 +57,20 @@ eu de CHECK depuis 003 : `score: 999999` par INSERT direct → XP `score×10+20`
 sans plafond ; miroir exact de la 165), **178 = autorisation Realtime** (canaux
 `duel-*`/`coop-*` privés ; **INERTE tant que le client n'est pas basculé en
 `private: true`** — donc sûre à exécuter, mais NE PAS basculer le client avant,
-sous peine de refuser toutes les souscriptions). **Prochaine à créer = `179`.**
+sous peine de refuser toutes les souscriptions), **179 = decks de flashcards
+gratuits pour 5e/4e/2de/Tle** (quatre classes sur sept n'en avaient AUCUN, donc
+le pool du Défi y perdait silencieusement ses cartes), **180 = Sciences et
+Technologie en 6e** (classe d'entrée, la plus pauvre du catalogue),
+**181 = accès aux cartes mentales** (colonne générée `has_mind_map` + RPC
+`chapter_mind_map` gardée par l'abonnement — **ADDITIVE, sûre à tout moment**),
+**182 = retrait de la lecture directe de `chapters.mind_map`** (**⚠️ à exécuter
+UNIQUEMENT après le déploiement de `4c4396e`**, sinon tout Réviser répond
+« permission denied »). **Prochaine à créer = `183`.**
+
+**Sondé à la clé anon le 2026-07-20 (cycle 2)** : `168`→`182` sont TOUTES encore
+en attente. Conséquences visibles en prod : le contenu 6e et les decks gratuits
+ne sont pas là, et **`chapters.mind_map` reste lisible publiquement** jusqu'à
+l'exécution de la `182`.
 
 **Fonctionnel livré (l'essentiel)** :
 - **Boucle cœur Réviser** : accueil « carnet violet », chapitres → leçon-hub
@@ -222,6 +235,46 @@ breaking changes vs. l'entraînement.
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible,
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
+
+**2026-07-20 — fin du cycle 2 `/jour` (Lia) :**
+- **Fait** : la **P0 laissée par le cycle 1 est fermée** (`4c4396e`) — le contenu
+  payant des cartes mentales n'est plus lisible par requête directe. Puis la file
+  « quiz & flashcards » **entièrement consommée** (6 lots), le duel en direct
+  débloqué, le motif ARIA des onglets complété, et **2 revues sous-agents sur mon
+  propre travail du jour**. **11 commits verts** (dernier `fa01717`),
+  typecheck/lint/**844 tests**/build prod. Migrations **181** et **182** créées.
+- **⚠️ PIÈGE MAJEUR — à retenir pour toute future révocation de colonne.** Le
+  plan (écrit par le cycle 1) prévoyait `REVOKE SELECT (mind_map) ON chapters`.
+  **Ça n'aurait rien protégé** : Supabase accorde `SELECT` au niveau **TABLE** à
+  `anon`/`authenticated`, et un retrait de droit par COLONNE ne rogne pas un
+  droit accordé sur la TABLE. La migration serait passée **verte sans rien
+  fermer** — le pire scénario possible, une faille qu'on croit corrigée. Le bon
+  motif : `REVOKE SELECT ON <table>` puis `GRANT SELECT (colonnes publiques)`.
+- **Autre piège** : un plan qui énumère les sites à corriger n'est pas une
+  mesure. Le plan listait 4 `select('*')` sur `chapters` ; il y en avait **5** —
+  la jointure imbriquée `chapters!inner(*)` du hub de leçon échappe à un grep
+  naïf sur `from('chapters')`. **Toujours re-balayer soi-même**, y compris les
+  jointures PostgREST imbriquées.
+- **Défaut que j'ai failli introduire**, attrapé en le codant : le rejeu des
+  seules erreurs d'un quiz allait être enregistré comme une session normale — or
+  `lib/mastery.ts` agrège le **MEILLEUR ratio par quiz**, donc un 2/2 sur les
+  questions ratées aurait fait passer le chapitre « maîtrisé » (couronne
+  comprise) alors que l'élève avait fait 8/10. **Réflexe à garder** : avant
+  d'enregistrer une session d'un type nouveau, se demander ce que les agrégats
+  existants (maîtrise, XP, ligue, série) vont en faire.
+- **Leçon de méthode reconfirmée** : les revues sous-agents sur MON PROPRE
+  travail du jour ont sorti 1 HIGH (un message qui promettait une reprogrammation
+  SRS jamais effectuée) **et un défaut préexistant** — `advance()` sans verrou
+  anti-double-tap dans `QuizPlayer` alors que `choose()` et `finish()` en ont un,
+  désalignant `choices[i]`/`questions[i]` pour toute la session. Elles ont aussi
+  pointé deux angles morts de couverture, comblés (`7bd276a`, `89b3f42`).
+- **Prochaine cible** : la file explicite non gated est **vide**. Zones jamais
+  auditées en profondeur restantes : **notifications push**, **studio de contenu**
+  côté correctness, **funnel onboarding → paiement**. Idée neuve à instruire :
+  aucun test ne couvre les 3 players eux-mêmes (toute la logique pure est testée,
+  l'assemblage non) — or les défauts trouvés aujourd'hui étaient TOUS des défauts
+  d'assemblage ; installer `@testing-library/react` demande l'accord de Lucas.
+  Levier produit n°1 mesuré, inchangé : **le contenu de 6e**.
 
 **2026-07-20 — fin du cycle 1 `/jour` (Lia) :**
 - **Fait** : réveil **sur un arbre sale** (~2900 lignes non commitées et non

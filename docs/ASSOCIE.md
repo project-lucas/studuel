@@ -41,16 +41,17 @@ exercices type brevet/bac corrigés) : **100 %**. **Studygram : 0 %** — seul
 support vide, gated par une décision de format (voir
 `docs/CADRAGE-STUDYGRAM.md`).
 
-**Base de données : 001→167 exécutées** (164→167 par Lucas le 2026-07-18, SQL
-Editor). **⚠️ 168 → 173 créées le 2026-07-18 (jour), EN ATTENTE d'exécution**
-(idempotentes, indépendantes, ordre indifférent, audit d'idempotence refait
-cycle 2) : 168 = tirage coffre en SQL (`open_chest_v2`, **supprime
+**Base de données : 001→173 créées, 001→167 confirmées exécutées.**
+**⚠️ `168` → `176` EN ATTENTE d'exécution** (idempotentes, indépendantes, ordre
+indifférent) : 168 = tirage coffre en SQL (`open_chest_v2`, **supprime
 `open_chest(JSONB)`**), 169 = rate-limit codes amis, 170 = borne série 400 j,
-171 = durcissement économie 2e passe (claim_revanche_bonus 40 / claim_debrief_
-reward 10 / add_work_time plafond 8 h/j / **apply_ranked_match borné 30/h —
-CRITIQUE farming trophées**), **172 = fermeture faille confidentialité parents**
-(`link_child_by_code` refuse les comptes `eleve` + rate-limit), **173 = rate-limit
-`add_friend_by_code`** (dernier oracle de code). **Prochaine à créer = `174`.**
+171 = durcissement économie 2e passe (**`apply_ranked_match` borné 30/h**),
+172 = fermeture faille confidentialité parents, 173 = rate-limit
+`add_friend_by_code`, **174 = bilan victoires/défaites des duels**, **175 =
+plafond journalier d'XP de défi** (ferme un VRAI trou : l'INSERT direct dans
+`challenge_sessions` était borné par ligne mais pas en VOLUME → ligue truquable),
+**176 = nom de groupe d'amis** (`squad_name` sur `profiles`, colonne + GRANT,
+hérite des policies existantes). **Prochaine à créer = `177`.**
 
 **Fonctionnel livré (l'essentiel)** :
 - **Boucle cœur Réviser** : accueil « carnet violet », chapitres → leçon-hub
@@ -215,6 +216,36 @@ breaking changes vs. l'entraînement.
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible,
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
+
+**2026-07-20 — fin du cycle 1 `/jour` (Lia) :**
+- **Fait** : réveil **sur un arbre sale** (~2900 lignes non commitées et non
+  relues laissées par la session interactive) → P0 = 5 revues sous-agents puis
+  5 lots verts, suivis de 4 autres commits. **9 commits** (dernier `b55f6e9`),
+  typecheck/lint/774 tests/build + smoke HTTP. Points forts : **incohérence de
+  paliers fermée** (`8bd76f8` — « Bronze III » vs « Salle d'étude » pour le même
+  total ; ancienne échelle SUPPRIMÉE de `lib/trophies.ts` pour qu'il n'en reste
+  qu'une), modèle de carte mentale qui ne s'affichait jamais (`af73c10`),
+  rétrospective /moi incohérente avec ses propres heatmaps (`00f2a8a`), perf
+  `/moi` (`8580e32`), a11y Coffre (`a17a855`). **Migration 176 créée.**
+- **Piège que je me suis infligé — à retenir** : en ajoutant l'en-tête
+  `x-pathname` dans `proxy.ts` (`69ac0fb`), j'ai capturé
+  `new Headers(request.headers)` **une seule fois, avant** le callback `setAll`
+  des cookies. Or `request.cookies.set()` met à jour l'en-tête `cookie` : le
+  rendu recevait l'ANCIEN cookie sur la requête qui rafraîchit le jeton →
+  déconnexion passagère possible. **Ne JAMAIS figer les en-têtes dans ce
+  proxy** : les reconstruire à chaque usage (corrigé en `b55f6e9`). C'est une
+  revue de mon PROPRE travail qui l'a fait sortir — garder ce réflexe.
+- **Prochaine cible** : onboarding `/bienvenue` (focus au changement d'écran +
+  sémantique `radiogroup`), dernier item non gated, demande une QA visuelle sur
+  les 14 écrans. Ensuite la file non gated est VIDE → il faut une décision de
+  Lucas. Deux décisions produit neuves l'attendent (cf. `A-LIRE-JOUR.md`) :
+  fêter ou non les changements de **division** (aujourd'hui seuls les paliers le
+  sont), et appliquer ou non côté serveur la règle « seul le n°1 renomme le
+  groupe » (impact réel nul, `squad_name` est personnel).
+- **Autre piège du jour** : `emptyContent()` ne peut PAS servir à amorcer un
+  contenu d'édition — la page d'édition normalise au chargement et retire
+  justement les formes vides. Tout « modèle » visible doit vivre côté édition
+  (`carteWithModel`).
 
 **2026-07-18 — fin du cycle 2 `/jour` (Lia) :**
 - **Fait** : file explicite déjà épuisée (cycle 1) → **6 revues sous-agents** sur

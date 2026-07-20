@@ -3,7 +3,6 @@
 // sans toucher aux composants.
 
 import type {
-  Chest,
   League,
   LeaguePlayer,
   RankingBoard,
@@ -21,35 +20,6 @@ export const MOCK_SEASON: Season = {
   rewardIcon: '👑',
   rewardLabel: 'Cadre légendaire « Major »',
 }
-
-// --- Coffres : 1 prêt, 1 verrouillé (2h14), 2 vides ------------------------
-
-export const MOCK_CHESTS: Chest[] = [
-  {
-    id: 'chest-1',
-    state: 'ready',
-    rarity: 'rare',
-    rewards: [
-      { kind: 'xp', label: '+120 XP', icon: '⭐' },
-      { kind: 'cosmetic', label: 'Cadre doré', icon: '🖼️', detail: 'Rare' },
-      { kind: 'boost', label: 'Boost ×2 XP', icon: '⚡', detail: '30 min' },
-    ],
-  },
-  {
-    id: 'chest-2',
-    state: 'locked',
-    rarity: 'commun',
-    // 2h 14min = 8040 s
-    unlocksInSeconds: 2 * 3600 + 14 * 60,
-    rewards: [
-      { kind: 'xp', label: '+60 XP', icon: '⭐' },
-      { kind: 'cosmetic', label: 'Sticker « Éclair »', icon: '⚡', detail: 'Commun' },
-      { kind: 'boost', label: 'Indice gratuit', icon: '💡', detail: '×3' },
-    ],
-  },
-  { id: 'chest-3', state: 'empty', rarity: 'commun', rewards: [] },
-  { id: 'chest-4', state: 'empty', rarity: 'commun', rewards: [] },
-]
 
 // --- Ligue hebdomadaire : 30 joueurs, toi 12e avec 240 XP ------------------
 

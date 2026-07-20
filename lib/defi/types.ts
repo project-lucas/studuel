@@ -21,34 +21,6 @@ export interface Arena {
   minTrophies: number
 }
 
-// --- Coffres ----------------------------------------------------------------
-
-export type ChestState = 'empty' | 'locked' | 'ready' | 'opening'
-
-export type ChestRarity = 'commun' | 'rare' | 'epique'
-
-export type ChestRewardKind = 'xp' | 'cosmetic' | 'boost'
-
-export interface ChestReward {
-  kind: ChestRewardKind
-  /** Libellé de la récompense, ex. « +120 XP ». */
-  label: string
-  /** Emoji de la récompense. */
-  icon: string
-  /** Détail optionnel, ex. « Cadre doré ». */
-  detail?: string
-}
-
-export interface Chest {
-  id: string
-  state: ChestState
-  rarity: ChestRarity
-  /** Secondes restantes avant déverrouillage (état `locked` uniquement). */
-  unlocksInSeconds?: number
-  /** Récompenses révélées à l'ouverture. */
-  rewards: ChestReward[]
-}
-
 // --- Ligue hebdomadaire -----------------------------------------------------
 
 export type LeagueZone = 'promotion' | 'safe' | 'relegation'

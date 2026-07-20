@@ -1,12 +1,12 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { recordTestSession } from '@/app/test/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import { sfx, buzz } from '@/lib/sounds'
-import { comboLabel, comboTier } from '@/lib/juice'
+import { comboLabel, comboTier, autoAdvanceDelay } from '@/lib/juice'
 import { sessionXp } from '@/lib/xp'
 import { SoundToggle } from '@/components/FlashcardPlayer'
 import BackButton from '@/components/BackButton'
@@ -124,6 +124,31 @@ export default function QuizPlayer({
       lockedRef.current = false
     }
   }
+
+  // Toujours la DERNIÈRE version d'`advance` (elle capture `choices`/`selected`).
+  // Mise à jour dans un effet, jamais pendant le rendu : écrire un ref pendant
+  // le rendu casse les garanties du rendu concurrent de React.
+  const advanceRef = useRef(advance)
+  useEffect(() => {
+    advanceRef.current = advance
+  })
+
+  // Enchaînement automatique : sur une bonne réponse sans explication à lire,
+  // le tap « Continuer » n'apporte rien et casse le rythme dix fois par
+  // session. On enchaîne donc seul — jamais après une erreur ni quand il y a
+  // une explication, où la pause sert vraiment à comprendre. Le bouton reste
+  // là : un élève qui tape plus vite que le délai garde la main, et le
+  // nettoyage évite un double `advance()`.
+  useEffect(() => {
+    if (selected === null) return
+    const good = selected === question.correct_index
+    const delay = autoAdvanceDelay(good, Boolean(question.explanation))
+    if (delay === null) return
+    const t = setTimeout(() => advanceRef.current(), delay)
+    // `advance` passe par un ref : le garder hors des deps évite de relancer le
+    // minuteur à chaque rendu (ce qui rallongerait le délai indéfiniment).
+    return () => clearTimeout(t)
+  }, [selected, question])
 
   const restart = () => {
     setIndex(0)

@@ -7,6 +7,8 @@ import {
   buzzPattern,
   MAX_COMBO_SEMITONES,
   BUZZ_WRONG,
+  autoAdvanceDelay,
+  AUTO_ADVANCE_MS,
 } from './juice'
 
 describe('comboTier', () => {
@@ -73,5 +75,22 @@ describe('buzzPattern', () => {
 
     expect(typeof simple).toBe('number')
     expect(enSerie).toBeGreaterThan(simple)
+  })
+})
+
+describe('autoAdvanceDelay', () => {
+  it('enchaîne tout seul sur une bonne réponse sans rien à lire', () => {
+    expect(autoAdvanceDelay(true, false)).toBe(AUTO_ADVANCE_MS)
+  })
+
+  it('laisse le temps de LIRE quand il y a une explication', () => {
+    expect(autoAdvanceDelay(true, true)).toBeNull()
+  })
+
+  it('n’enchaîne JAMAIS tout seul après une erreur', () => {
+    // L'élève doit avoir le temps de voir la bonne réponse : c'est le seul
+    // moment où il apprend vraiment quelque chose.
+    expect(autoAdvanceDelay(false, false)).toBeNull()
+    expect(autoAdvanceDelay(false, true)).toBeNull()
   })
 })

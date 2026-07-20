@@ -63,3 +63,25 @@ export function buzzPattern(good: boolean, streak: number): number | number[] {
   if (!good) return BUZZ_WRONG
   return comboTier(streak) === 'aucun' ? BUZZ_GOOD : BUZZ_GREAT
 }
+
+// ------------------------------------------------------------- enchaînement
+// Délai avant d'enchaîner AUTOMATIQUEMENT sur la question suivante, en ms
+// (`null` = on attend le tap de l'élève).
+//
+// Sur une bonne réponse sans explication à lire, le tap « Continuer » n'apporte
+// rien : l'élève a déjà vu le vert et attend. Sur dix questions, ce sont dix
+// ruptures de rythme — c'est ce qui fait qu'une session se sent administrative
+// au lieu de filer.
+//
+// On n'enchaîne JAMAIS tout seul quand il y a quelque chose à lire : une
+// erreur (l'élève doit voir la bonne réponse) ou une explication. Là, la pause
+// est utile — la supprimer transformerait le quiz en machine à cliquer.
+export const AUTO_ADVANCE_MS = 750
+
+export function autoAdvanceDelay(
+  good: boolean,
+  hasExplanation: boolean,
+): number | null {
+  if (!good || hasExplanation) return null
+  return AUTO_ADVANCE_MS
+}

@@ -100,8 +100,18 @@ export function reviewAfterAnswer(
 ): ReviewState {
   if (good) {
     // Bonne réponse sur un item pas encore dû : on ne touche à rien. Avancer
-    // ici reviendrait à récompenser la répétition immédiate.
-    if (!isReviewable(prev, todayKey) && prev !== null) return prev
+    // ici reviendrait à récompenser la répétition immédiate. On renvoie une
+    // forme EXPLICITE plutôt que `prev` tel quel : l'appelant étale ce retour
+    // dans son upsert, et `prev` vient d'un `select` — lui rendre la ligne
+    // brute ferait fuiter toute colonne ajoutée un jour à ce select.
+    if (prev !== null && !isReviewable(prev, todayKey)) {
+      return {
+        streak: prev.streak,
+        lapses: prev.lapses,
+        due_date: prev.due_date,
+        in_revanche: prev.in_revanche,
+      }
+    }
     const streak = (prev?.streak ?? 0) + 1
     return {
       streak,

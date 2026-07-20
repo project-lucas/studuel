@@ -60,11 +60,25 @@ INSERT INTO public.lessons (id, chapter_id, title, content, position) VALUES
 ON CONFLICT (id) DO NOTHING;
 
 -- 4. Quiz (rattachés aux leçons)
-INSERT INTO public.quizzes (id, title, subject, grade_level, chapter, is_free, lesson_id) VALUES
-  ('04900000-0000-4000-8000-000000006601', 'Quiz — À quoi sert un objet technique ?', 'Technologie',     '6e', 'Objets techniques du quotidien', true, '66666666-6666-4666-8666-666666666601'),
-  ('04900000-0000-4000-8000-000000006602', 'Quiz — Choisir le bon matériau',          'Technologie',     '6e', 'Matériaux et usages',            true, '66666666-6666-4666-8666-666666666602'),
-  ('04900000-0000-4000-8000-000000006603', 'Quiz — Solide, liquide, gaz',             'Physique-Chimie', '6e', 'États et changements d''état',   true, '66666666-6666-4666-8666-666666666603'),
-  ('04900000-0000-4000-8000-000000006604', 'Quiz — D''où vient l''énergie ?',          'Physique-Chimie', '6e', 'Sources et formes d''énergie',   true, '66666666-6666-4666-8666-666666666604')
+--    Double garde, et les deux sont nécessaires :
+--    - `ON CONFLICT (id)` protège du rejeu de CE seed (mêmes UUID) ;
+--    - `WHERE NOT EXISTS (… lesson_id = l.id)` protège la leçon d'un SECOND
+--      quiz venu d'ailleurs. Le hub de leçon lit son quiz en `.maybeSingle()` :
+--      deux quiz sur la même leçon feraient lever « multiple rows » à de vrais
+--      élèves. C'est la convention du projet, vérifiée par
+--      `lib/quiz-lesson-guard.test.ts`.
+INSERT INTO public.quizzes (id, title, subject, grade_level, chapter, is_free, lesson_id)
+SELECT v.id, v.title, v.subject, '6e', v.chapter, true, l.id
+  FROM (VALUES
+    ('04900000-0000-4000-8000-000000006601'::uuid, 'Quiz — À quoi sert un objet technique ?', 'Technologie',     'Objets techniques du quotidien', '66666666-6666-4666-8666-666666666601'::uuid),
+    ('04900000-0000-4000-8000-000000006602'::uuid, 'Quiz — Choisir le bon matériau',          'Technologie',     'Matériaux et usages',            '66666666-6666-4666-8666-666666666602'::uuid),
+    ('04900000-0000-4000-8000-000000006603'::uuid, 'Quiz — Solide, liquide, gaz',             'Physique-Chimie', 'États et changements d''état',   '66666666-6666-4666-8666-666666666603'::uuid),
+    ('04900000-0000-4000-8000-000000006604'::uuid, 'Quiz — D''où vient l''énergie ?',          'Physique-Chimie', 'Sources et formes d''énergie',   '66666666-6666-4666-8666-666666666604'::uuid)
+  ) AS v(id, title, subject, chapter, lesson_id)
+  JOIN public.lessons l ON l.id = v.lesson_id
+ WHERE NOT EXISTS (
+   SELECT 1 FROM public.quizzes q WHERE q.lesson_id = l.id
+ )
 ON CONFLICT (id) DO NOTHING;
 
 -- 5. Questions (10 par quiz)

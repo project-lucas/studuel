@@ -1,6 +1,12 @@
 import { notFound, redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
-import { CHAPTER_COLUMNS, type Subject, type Chapter, type Lesson } from '@/lib/types'
+import {
+  CHAPTER_COLUMNS,
+  LESSON_COLUMNS,
+  type Subject,
+  type Chapter,
+  type Lesson,
+} from '@/lib/types'
 
 // Contexte commun du hub de leçon et de ses supports (cours, révision,
 // studygram) : élève connecté + triplet matière/chapitre/leçon cohérent.
@@ -17,14 +23,18 @@ export async function loadLessonContext(
   } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  // select('*') sur la leçon : tolère une base où la migration 025 n'est pas
-  // encore passée (revision_sheet / studygram_url absents → undefined).
-  // Sur le chapitre en revanche, colonnes explicites : `*` inclurait `mind_map`,
-  // dont la lecture est révoquée (contenu payant, migration 182).
+  // Colonnes explicites des DEUX côtés : un `*` sur la leçon inclurait
+  // `revision_sheet` (fiche = contenu payant, révoquée par la migration 185) et
+  // un `*` sur le chapitre inclurait `mind_map` (révoquée par la 182) — dans
+  // les deux cas PostgREST répondrait « permission denied » et casserait tout
+  // le hub de leçon. Le contenu de la fiche se lit à part, par la RPC gardée
+  // (`lib/revision-access.ts`).
   type Row = Lesson & { chapter: (Chapter & { subject: Subject }) | null }
   const { data: row } = await supabase
     .from('lessons')
-    .select(`*, chapter:chapters!inner(${CHAPTER_COLUMNS}, subject:subjects!inner(*))`)
+    .select(
+      `${LESSON_COLUMNS}, chapter:chapters!inner(${CHAPTER_COLUMNS}, subject:subjects!inner(*))`,
+    )
     .eq('id', lessonId)
     .eq('chapter_id', chapterId)
     .maybeSingle<Row>()

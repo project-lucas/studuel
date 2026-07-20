@@ -4,12 +4,21 @@ import { BookOpen, Lock, Play, Waypoints } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import BackButton from '@/components/BackButton'
 import { createClient } from '@/lib/supabase/server'
-import { getUserTier, canAccessMindMaps } from '@/lib/subscription'
+import { getUserTier } from '@/lib/subscription'
+import { canOpenChapter } from '@/lib/gems'
+import { fetchUnlockedChapters } from '@/lib/gems-access'
+import GemIcon from '@/components/ui/GemIcon'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN, MASCOT } from '@/lib/subject-style'
 import SubjectIcon from '@/components/SubjectIcon'
 import { chapterHasMindMap } from '@/lib/mind-map-access'
-import { CHAPTER_COLUMNS, type Subject, type Chapter, type Lesson } from '@/lib/types'
+import {
+  CHAPTER_COLUMNS,
+  LESSON_COLUMNS,
+  type Subject,
+  type Chapter,
+  type Lesson,
+} from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
 
@@ -34,16 +43,17 @@ export default async function ChapterPage({
   // Colonnes explicites sur le chapitre : `*` inclurait `mind_map`, dont la
   // lecture est révoquée (contenu payant, migration 182). La tuile n'a besoin
   // que de son EXISTENCE, lue à part pour rester robuste aux migrations.
-  const [{ data: row }, tier, hasMindMap] = await Promise.all([
+  const [{ data: row }, tier, hasMindMap, unlockedChapters] = await Promise.all([
     supabase
       .from('chapters')
-      .select(`${CHAPTER_COLUMNS}, subject:subjects!inner(*), lessons(*, quizzes(id))`)
+      .select(`${CHAPTER_COLUMNS}, subject:subjects!inner(*), lessons(${LESSON_COLUMNS}, quizzes(id))`)
       .eq('id', chapterId)
       .eq('subjects.slug', slug)
       .order('position', { ascending: true, referencedTable: 'lessons' })
       .maybeSingle<Row>(),
     getUserTier(),
     chapterHasMindMap(supabase, chapterId),
+    fetchUnlockedChapters(supabase, user.id),
   ])
   if (!row) notFound()
 
@@ -82,10 +92,12 @@ export default async function ChapterPage({
       </header>
 
       <div className="mx-auto w-full max-w-4xl px-4 py-6 md:px-8">
-        {/* Carte mentale du chapitre — visible par tous, ouvrable par les
-            abonnés (Offre 1+) ; cadenas non cliquable pour les gratuits. */}
+        {/* Carte mentale du chapitre — visible par tous, ouverte par
+            l'abonnement OU par une gemme. La tuile verrouillée reste CLIQUABLE
+            et mène à l'écran de déblocage : un cadenas mort ne dit pas à
+            l'élève qu'une gemme suffit, et il en a trois en poche. */}
         {hasMindMap ? (
-          canAccessMindMaps(tier) ? (
+          canOpenChapter(tier, chapter.id, unlockedChapters) ? (
             <Link
               href={`/reviser/${subject.slug}/${chapter.id}/carte`}
               className="mb-6 flex items-center gap-4 rounded-2xl border bg-card p-4 shadow-sm transition-colors hover:bg-accent/40"
@@ -106,26 +118,29 @@ export default async function ChapterPage({
               </span>
             </Link>
           ) : (
-            <div
-              className="mb-6 flex items-center gap-4 rounded-2xl border bg-card p-4 opacity-80 shadow-sm"
-              aria-label="Carte mentale réservée à l'Offre 1"
+            <Link
+              href={`/reviser/${subject.slug}/${chapter.id}/carte`}
+              className="mb-6 flex items-center gap-4 rounded-2xl border bg-card p-4 shadow-sm transition-colors hover:bg-accent/40"
             >
               <span
                 className={cn(
-                  'flex size-12 shrink-0 items-center justify-center rounded-xl',
+                  'relative flex size-12 shrink-0 items-center justify-center rounded-xl',
                   theme.chip,
                 )}
               >
                 <Waypoints className="size-6" aria-hidden="true" />
+                <span className="bg-card absolute -right-1 -bottom-1 flex size-5 items-center justify-center rounded-full border shadow-sm">
+                  <Lock className="size-2.5" aria-hidden="true" />
+                </span>
               </span>
               <span className="min-w-0 flex-1">
                 <span className="block font-semibold">Carte mentale</span>
-                <span className="block text-sm text-muted-foreground">
-                  Réservée à l&apos;Offre 1
+                <span className="text-muted-foreground flex items-center gap-1 text-sm">
+                  <GemIcon className="size-3.5 shrink-0" aria-hidden="true" />
+                  Débloque le chapitre avec 1 gemme
                 </span>
               </span>
-              <Lock className="size-4 shrink-0 text-muted-foreground" aria-hidden="true" />
-            </div>
+            </Link>
           )
         ) : null}
 

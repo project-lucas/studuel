@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import AdminLessonEditor from '@/components/admin/AdminLessonEditor'
 import { createClient } from '@/lib/supabase/server'
+import { fetchRevisionSheet } from '@/lib/revision-access'
 import type { QuizQuestion } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
@@ -11,7 +12,6 @@ type LessonRow = {
   title: string
   position: number
   content: string | null
-  revision_sheet: string | null
   studygram_url: string | null
   chapters: {
     id: string
@@ -31,14 +31,21 @@ export default async function AdminLessonPage({
   const { id } = await params
   const supabase = await createClient()
 
+  // `revision_sheet` n'est PLUS lisible en direct (migration 185 : contenu
+  // payant, droit retiré même à `authenticated`). L'éditeur la relit par la
+  // RPC `lesson_revision_sheet`, qui ouvre explicitement une porte à
+  // l'administrateur — sinon le Studio ne pourrait plus rouvrir les fiches
+  // qu'il vient lui-même d'écrire.
   const { data: lesson } = await supabase
     .from('lessons')
     .select(
-      'id, title, position, content, revision_sheet, studygram_url, chapters!inner(id, title, level, subjects!inner(id, name, icon))',
+      'id, title, position, content, studygram_url, chapters!inner(id, title, level, subjects!inner(id, name, icon))',
     )
     .eq('id', id)
     .maybeSingle<LessonRow>()
   if (!lesson) notFound()
+
+  const revisionSheet = await fetchRevisionSheet(supabase, lesson.id)
 
   const { data: quiz } = await supabase
     .from('quizzes')
@@ -75,7 +82,7 @@ export default async function AdminLessonPage({
           id: lesson.id,
           title: lesson.title,
           content: lesson.content ?? '',
-          revision_sheet: lesson.revision_sheet ?? '',
+          revision_sheet: revisionSheet ?? '',
           studygram_url: lesson.studygram_url ?? '',
         }}
         quiz={quiz ?? null}

@@ -91,7 +91,9 @@ export default async function LessonHubPage({
 
   const seen = new Set((activities ?? []).map((a) => a.activity))
   const supports = {
-    hasRevision: Boolean(lesson.revision_sheet),
+    // Existence lue sur la colonne générée (migration 184), jamais sur le
+    // texte : la fiche est payante et n'est plus transportée jusqu'ici.
+    hasRevision: Boolean(lesson.has_revision_sheet),
     hasStudygram: Boolean(lesson.studygram_url),
     hasQuiz: Boolean(quiz),
   }

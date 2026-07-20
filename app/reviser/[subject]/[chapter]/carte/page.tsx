@@ -1,11 +1,11 @@
-import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
-import { Lock } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import BackButton from '@/components/BackButton'
 import MindMap from '@/components/MindMap'
+import UnlockChapterCard from '@/components/UnlockChapterCard'
 import { createClient } from '@/lib/supabase/server'
-import { getUserTier, canAccessMindMaps } from '@/lib/subscription'
+import { getUserTier } from '@/lib/subscription'
+import { chapterAccess } from '@/lib/gems'
+import { fetchGems, fetchUnlockedChapters } from '@/lib/gems-access'
 import { mindMapPlaceholder } from '@/lib/mind-map'
 import { chapterHasMindMap, fetchMindMap } from '@/lib/mind-map-access'
 import { cn } from '@/lib/utils'
@@ -15,9 +15,10 @@ import { CHAPTER_COLUMNS, type Subject, type Chapter, type MindMapData } from '@
 
 export const dynamic = 'force-dynamic'
 
-// Carte mentale du chapitre — réservée aux abonnés (Offre 1+). Les gratuits
-// qui arrivent ici (URL directe) voient un aperçu flouté et l'invitation à
-// s'abonner, cohérent avec la tuile verrouillée de la page chapitre.
+// Carte mentale du chapitre — ouverte par l'ABONNEMENT ou par une GEMME
+// (migration 183 : une gemme = un chapitre, à vie). Les élèves qui arrivent ici
+// sans l'un ni l'autre voient un aperçu leurre et les deux portes de sortie,
+// la gratuite d'abord. Cohérent avec la tuile verrouillée de la page chapitre.
 export default async function MindMapPage({
   params,
 }: {
@@ -32,24 +33,28 @@ export default async function MindMapPage({
 
   // Colonnes explicites : le CONTENU de la carte ne se lit plus par requête
   // directe (révoqué, migration 182) mais par la RPC `chapter_mind_map`, qui
-  // revérifie l'abonnement côté serveur. On ne le charge donc QUE pour un
-  // abonné — un non-abonné voit un aperçu générique, jamais le vrai contenu.
+  // revérifie l'accès côté serveur. On ne le charge donc QUE pour quelqu'un qui
+  // y a droit — sinon l'élève voit un aperçu générique, jamais le vrai contenu.
   type Row = Chapter & { subject: Subject }
-  const [{ data: row }, tier, hasMindMap] = await Promise.all([
-    supabase
-      .from('chapters')
-      .select(`${CHAPTER_COLUMNS}, subject:subjects!inner(*)`)
-      .eq('id', chapterId)
-      .eq('subjects.slug', slug)
-      .maybeSingle<Row>(),
-    getUserTier(),
-    chapterHasMindMap(supabase, chapterId),
-  ])
+  const [{ data: row }, tier, hasMindMap, unlockedChapters, gems] =
+    await Promise.all([
+      supabase
+        .from('chapters')
+        .select(`${CHAPTER_COLUMNS}, subject:subjects!inner(*)`)
+        .eq('id', chapterId)
+        .eq('subjects.slug', slug)
+        .maybeSingle<Row>(),
+      getUserTier(),
+      chapterHasMindMap(supabase, chapterId),
+      fetchUnlockedChapters(supabase, user.id),
+      fetchGems(supabase, user.id),
+    ])
   if (!row) notFound()
 
   const { subject, ...chapter } = row
   const theme = subjectTheme(subject.color)
-  const unlocked = canAccessMindMaps(tier)
+  const access = chapterAccess(tier, chapterId, unlockedChapters)
+  const unlocked = access !== 'locked'
 
   let mindMap: MindMapData | null = null
   if (hasMindMap && unlocked) mindMap = await fetchMindMap(supabase, chapterId)
@@ -88,35 +93,22 @@ export default async function MindMapPage({
         ) : mindMap ? (
           <MindMap data={mindMap} />
         ) : unlocked ? (
-          // Abonné, carte existante, mais contenu injoignable : ne JAMAIS lui
-          // servir l'écran « Débloquer l'Offre 1 », il a déjà payé.
+          // Accès légitime (abonnement ou gemme déjà dépensée) mais contenu
+          // injoignable : ne JAMAIS lui servir l'écran « Débloque », il a payé.
           <p className="text-sm text-muted-foreground">
             La carte mentale n&apos;a pas pu être chargée. Réessaie dans un instant.
           </p>
         ) : (
-          <div className="relative">
+          <UnlockChapterCard chapterId={chapterId} gems={gems}>
             {/* LEURRE, pas la vraie carte : le flou n'est que du CSS, le texte
                 partait quand même dans le HTML (« afficher le code source »
                 suffisait à lire le contenu payant). L'aperçu est une silhouette
                 générique — le serveur n'a même pas chargé la vraie carte. */}
-            <div aria-hidden="true">
-              <MindMap
-                data={mindMapPlaceholder()}
-                className="pointer-events-none blur-sm select-none opacity-50"
-              />
-            </div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center">
-              <span className="bg-card flex size-14 items-center justify-center rounded-2xl border shadow-md">
-                <Lock className="text-muted-foreground size-6" aria-hidden="true" />
-              </span>
-              <p className="font-heading max-w-xs font-semibold text-balance">
-                Les cartes mentales sont réservées à l&apos;Offre 1.
-              </p>
-              <Button asChild className="rounded-full">
-                <Link href="/compte">Débloquer avec l&apos;Offre 1</Link>
-              </Button>
-            </div>
-          </div>
+            <MindMap
+              data={mindMapPlaceholder()}
+              className="pointer-events-none blur-sm select-none opacity-50"
+            />
+          </UnlockChapterCard>
         )}
       </div>
     </div>

@@ -1,6 +1,12 @@
 import { unstable_cache } from 'next/cache'
 import { createClient } from '@supabase/supabase-js'
-import { CHAPTER_COLUMNS, type Subject, type Chapter, type Lesson } from '@/lib/types'
+import {
+  CHAPTER_COLUMNS,
+  LESSON_COLUMNS,
+  type Subject,
+  type Chapter,
+  type Lesson,
+} from '@/lib/types'
 
 // Catalogue en cache serveur : matières, chapitres et leçons sont identiques
 // pour tous les élèves d'une même classe — aucune raison de les requêter à
@@ -64,7 +70,7 @@ export const getProgrammeCached = unstable_cache(
   async (subjectId: string, grade: string): Promise<CatalogChapter[]> => {
     const { data } = await anonClient()
       .from('chapters')
-      .select(`${CHAPTER_COLUMNS}, lessons(*, quizzes(id))`)
+      .select(`${CHAPTER_COLUMNS}, lessons(${LESSON_COLUMNS}, quizzes(id))`)
       .eq('subject_id', subjectId)
       .eq('level', grade)
       .order('position', { ascending: true })

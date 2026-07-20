@@ -16,7 +16,7 @@ import {
   lessonSupportsDone,
 } from '@/lib/lesson-progress'
 import { canAccessPremiumTests, type Tier } from '@/lib/subscription'
-import { CHAPTER_COLUMNS, type Subject } from '@/lib/types'
+import { CHAPTER_COLUMNS, LESSON_COLUMNS, type Subject } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
 
@@ -69,7 +69,7 @@ export default async function SubjectPage({
   if (catalog.length === 0) {
     const { data } = await supabase
       .from('chapters')
-      .select(`${CHAPTER_COLUMNS}, lessons(*, quizzes(id))`)
+      .select(`${CHAPTER_COLUMNS}, lessons(${LESSON_COLUMNS}, quizzes(id))`)
       .eq('subject_id', subject.id)
       .eq('level', level)
       .order('position', { ascending: true })
@@ -126,7 +126,9 @@ export default async function SubjectPage({
     lessons: chapter.lessons.map((l) => {
       const quizId = l.quizzes[0]?.id
       const supports = {
-        hasRevision: Boolean(l.revision_sheet),
+        // Existence lue sur la colonne générée (migration 184), jamais sur le
+        // texte : la fiche est payante et n'est plus transportée jusqu'ici.
+        hasRevision: Boolean(l.has_revision_sheet),
         hasStudygram: Boolean(l.studygram_url),
         hasQuiz: Boolean(quizId),
       }

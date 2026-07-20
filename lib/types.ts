@@ -63,7 +63,13 @@ export type Chapter = {
 // `select('*')` : après la migration 182, `*` inclut `mind_map` (contenu payant,
 // révoqué) et PostgREST répond « permission denied » — ce qui casserait Réviser
 // en entier. Ajouter ici toute colonne publique future.
-export const CHAPTER_COLUMNS = 'id, subject_id, level, title, position'
+//
+// `has_mind_map` en fait partie : elle est publique (la migration 182 la
+// ré-accorde explicitement) et le type `Chapter` la déclare. Sans elle ici,
+// le champ arrivait toujours à `undefined` sur les objets issus de ces
+// requêtes — un champ mort qui piégeait quiconque s'y fierait.
+export const CHAPTER_COLUMNS =
+  'id, subject_id, level, title, position, has_mind_map'
 
 export type Lesson = {
   id: string
@@ -74,9 +80,23 @@ export type Lesson = {
   position: number
   // Supports du template « structure des cours » (migration 025) — optionnels
   // tant que la migration n'est pas exécutée partout.
-  revision_sheet?: string | null
   studygram_url?: string | null
+  // EXISTENCE de la fiche de révision (colonne générée, migration 184). Son
+  // CONTENU n'est plus jamais transporté ici : il est payant, et se lit par la
+  // RPC `lesson_revision_sheet` (cf. lib/revision-access.ts).
+  has_revision_sheet?: boolean
 }
+
+// Colonnes de `lessons` lisibles par tout le monde. Même raison d'être que
+// CHAPTER_COLUMNS : après la migration 185, un `select('*')` inclurait
+// `revision_sheet` (contenu payant, révoqué) et PostgREST répondrait
+// « permission denied », ce qui casserait Réviser en entier.
+//
+// `content` (le cours) est volontairement DANS la liste : `lib/premium.ts`
+// annonce « Cours & quiz de base » dans l'offre gratuite. Seule la fiche est
+// payante. Ajouter ici toute colonne publique future — et dans la 185.
+export const LESSON_COLUMNS =
+  'id, chapter_id, title, thumbnail_url, content, position, studygram_url, has_revision_sheet'
 
 // Support consulté d'une leçon (table lesson_activities, migration 025).
 export type LessonActivityKind = 'revision' | 'studygram'

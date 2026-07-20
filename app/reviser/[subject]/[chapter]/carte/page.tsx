@@ -6,6 +6,7 @@ import BackButton from '@/components/BackButton'
 import MindMap from '@/components/MindMap'
 import { createClient } from '@/lib/supabase/server'
 import { getUserTier, canAccessMindMaps } from '@/lib/subscription'
+import { mindMapDecoy } from '@/lib/mind-map'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
 import SubjectIcon from '@/components/SubjectIcon'
@@ -80,9 +81,13 @@ export default async function MindMapPage({
           <MindMap data={chapter.mind_map} />
         ) : (
           <div className="relative">
+            {/* LEURRE, pas la vraie carte : le flou n'est que du CSS, le texte
+                partait quand même dans le HTML (« afficher le code source »
+                suffisait à lire le contenu payant). On envoie une carte de même
+                forme, sans un mot du vrai contenu. */}
             <div aria-hidden="true">
               <MindMap
-                data={chapter.mind_map}
+                data={mindMapDecoy(chapter.mind_map)}
                 className="pointer-events-none blur-sm select-none opacity-50"
               />
             </div>

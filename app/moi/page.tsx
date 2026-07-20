@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { CircleUser } from 'lucide-react'
+import { CircleUser, Sparkles } from 'lucide-react'
 import {
   Card,
   CardHeader,
@@ -9,68 +9,51 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
-import CapacityScore from '@/components/CapacityScore'
-import type { DayStatus } from '@/components/DisciplineCalendar'
-import WeekSection from '@/components/WeekSection'
-import MoiHeader from '@/components/MoiHeader'
+import TabHeader from '@/components/TabHeader'
 import WorldBackdrop from '@/components/WorldBackdrop'
-import MoiTabs from '@/components/MoiTabs'
-import MoiExtras from '@/components/MoiExtras'
-import TableauAnnee from '@/components/TableauAnnee'
-import MissionsJour from '@/components/MissionsJour'
-import CompagnonCard from '@/components/CompagnonCard'
-import DebriefCard from '@/components/DebriefCard'
-import StructureChart, { type WeekPoint } from '@/components/StructureChart'
-import BadgeGrid from '@/components/BadgeGrid'
-import SemaineCard from '@/components/SemaineCard'
-import TrajectoireCard from '@/components/TrajectoireCard'
+import MoiTopBar from '@/components/moi/MoiTopBar'
+import MoiTabSwitcher from '@/components/moi/MoiTabSwitcher'
+import HeroCard from '@/components/moi/HeroCard'
+import TrajectoryCard from '@/components/moi/TrajectoryCard'
+import WeeklyLeversCard, {
+  type LeverState,
+} from '@/components/moi/WeeklyLeversCard'
 import { createClient } from '@/lib/supabase/server'
-import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
-import { getChapterMastery } from '@/lib/mastery'
-import { normalizeGradeList } from '@/lib/notes'
-import { computeTrajectoire } from '@/lib/trajectoire'
-import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
-import { computeWeeklyRecap } from '@/lib/weekly-recap'
+import { toDayKey } from '@/lib/streak'
+import { syncAutoHabits, dayIndexOf, PLANIFIER_CATALOG_ID } from '@/lib/habits'
 import {
-  normalizeWeeklyGoalsList,
-  goalsForWeek,
-} from '@/lib/weekly-goals'
+  DRIVER_WINDOW_DAYS,
+  LEVERS,
+  computeCapacite,
+  computeDriverScores,
+  computePlafond,
+} from '@/lib/capacite-drivers'
+import { normalizeGradeList, trimestreOf, trimestreSummaries } from '@/lib/notes'
 import {
-  syncAutoHabits,
-  isInCommuteSlot,
-  longestRun,
-  longestAnchored,
-  dayIndexOf,
-  habitDays,
-  PLANIFIER_CATALOG_ID,
-} from '@/lib/habits'
-import { commuteStreak } from '@/lib/trajet'
-import { SHOP_CATALOG } from '@/lib/tresor'
-import {
-  debriefYearStats,
-  isDebriefOutcome,
-  type DebriefOutcome,
-} from '@/lib/debrief'
+  computeBacTrajectory,
+  mergeTermAverages,
+  normalizeTermGrades,
+} from '@/lib/trajectoire-bac'
 import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
+import { workLevel } from '@/lib/work-level'
 import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
-import type {
-  Habit,
-  HabitLog,
-  HabitCatalogEntry,
-  Badge,
-  CommuteSlot,
-} from '@/lib/types'
+import type { Habit, HabitLog, CommuteSlot } from '@/lib/types'
 
 export const metadata = { title: 'Moi — Studuel' }
 export const dynamic = 'force-dynamic'
 
-type SessionRow = { created_at: string; score: number; total: number }
+// Libellés des classes pour la pill du héros (le slug court sinon).
+const GRADE_LABELS: Partial<Record<GradeLevel, string>> = {
+  '2de': 'Seconde',
+  '1re': 'Première',
+  Tle: 'Terminale',
+}
 
-export default async function MoiPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ bilan?: string }>
-}) {
+// L'onglet Moi refondu : un miroir motivant, pas un dashboard. La hero card
+// montre la capacité (et son plafond possible), la trajectoire au bac montre
+// deux futurs, les leviers de la semaine donnent la main. L'app ne juge
+// jamais : elle montre, l'élève choisit.
+export default async function MoiPage() {
   const supabase = await createClient()
   const {
     data: { user },
@@ -81,17 +64,17 @@ export default async function MoiPage({
       <div>
         <PageHeader
           title="Moi"
-          description="Ton score de structure, tes habitudes et tes records."
+          description="Ta capacité, ta trajectoire et tes leviers."
         />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <CircleUser className="size-4" /> Connecte-toi pour construire ta
-              structure
+              <CircleUser className="size-4" /> Connecte-toi pour voir ton
+              miroir
             </CardTitle>
             <CardDescription>
-              Sommeil, révision quotidienne, sport : les habitudes qui font
-              monter les notes, suivies jour par jour.
+              Sommeil, hydratation, régularité : l&apos;app te montre ton
+              plafond invisible — et comment le repousser.
             </CardDescription>
           </CardHeader>
           <CardFooter>
@@ -104,21 +87,20 @@ export default async function MoiPage({
     )
   }
 
-  // Mission fixe pour tous : « Planifier ma semaine » (dimanche) —
-  // auto-inscrite, impossible à perdre.
+  // Mission fixe pour tous : « Planifier ma semaine » (dimanche) — auto-
+  // inscrite, elle nourrit le driver Régularité.
   await supabase.from('habits').upsert(
     { user_id: user.id, catalog_id: PLANIFIER_CATALOG_ID, target: {} },
     { onConflict: 'user_id,catalog_id', ignoreDuplicates: true },
   )
 
-  // Profil + habitudes d'abord (nécessaires à la synchro auto).
-  // capacity_quiz voyage avec le profil : si 013_capacite.sql n'est pas passée,
-  // profileError le signale (bandeau migration) et la page continue, dégradée.
+  // Profil + habitudes + sessions (nécessaires à la synchro auto AVANT de lire
+  // les logs). Colonnes de migrations différentes isolées pour dégrader proprement.
   const [
-    { data: profile, error: profileError },
-    { data: habits },
+    { data: profile },
+    { data: statsRow },
     { data: avatarRow },
-    { data: goalsRow },
+    { data: habits },
     { data: tests },
     { data: studies },
     { data: lessonsDone },
@@ -126,32 +108,26 @@ export default async function MoiPage({
   ] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, grade_level, selected_subjects, commute_slots, capacity_quiz')
+      .select('full_name, grade_level, commute_slots, capacity_quiz')
       .eq('id', user.id)
       .maybeSingle(),
+    // work_seconds (014) + coins (018) : isolés du profil de base.
+    supabase
+      .from('profiles')
+      .select('work_seconds, coins')
+      .eq('id', user.id)
+      .maybeSingle(),
+    // avatar (082) : isolé aussi — son absence ne casse rien.
+    supabase.from('profiles').select('avatar').eq('id', user.id).maybeSingle(),
     supabase
       .from('habits')
       .select('id, catalog_id, target, created_at, habit_catalog(*)')
       .order('created_at', { ascending: true })
       .returns<Habit[]>(),
-    // avatar isolé : la colonne vient de 082_avatar.sql (peut-être pas encore
-    // passée) — son absence ne doit pas casser la lecture du profil (prénom,
-    // créneaux) ni afficher un bandeau de migration trompeur.
-    supabase.from('profiles').select('avatar').eq('id', user.id).maybeSingle(),
-    // weekly_goals isolé de même (157 peut-être pas passée) mais chargé en
-    // parallèle ici plutôt qu'en requête série plus bas.
-    supabase.from('profiles').select('weekly_goals').eq('id', user.id).maybeSingle(),
-    // Sessions de travail : chargées DÈS ce lot parce que la synchro auto des
-    // habitudes en a besoin juste après (et que le lot suivant lit habit_logs,
-    // donc doit venir APRÈS l'écriture). Elles resservent telles quelles aux
-    // statistiques plus bas — les redemander coûtait 4 requêtes en série.
-    // user_id explicite : la RLS le garantit aujourd'hui, mais la couche
-    // sociale ouvrira la lecture croisée des sessions — ces stats sont à soi.
     supabase
       .from('test_sessions')
       .select('created_at, score, total')
-      .eq('user_id', user.id)
-      .returns<SessionRow[]>(),
+      .eq('user_id', user.id),
     supabase.from('study_sessions').select('created_at').eq('user_id', user.id),
     supabase
       .from('lesson_completions')
@@ -167,7 +143,8 @@ export default async function MoiPage({
     ? (profile.commute_slots as CommuteSlot[])
     : []
 
-  // Validation automatique « à la volée » du jour (révision, trajets).
+  // Validation automatique du jour (révision, trajets) : les leviers Révision
+  // et la Régularité se cochent tout seuls quand l'élève a vraiment travaillé.
   await syncAutoHabits(supabase, user.id, habits ?? [], commuteSlots, {
     tests: tests ?? [],
     studies: studies ?? [],
@@ -175,529 +152,137 @@ export default async function MoiPage({
     challenges: challenges ?? [],
   })
 
-  // Un an de logs : la modale « Ma discipline » propose une vue Année.
+  const today = toDayKey(new Date())
   const since = new Date()
-  since.setUTCDate(since.getUTCDate() - 366)
+  since.setUTCDate(since.getUTCDate() - (DRIVER_WINDOW_DAYS - 1))
 
   const [
     { data: logs },
-    { data: catalog, error: catalogError },
-    { data: badges },
-    { data: userBadges },
-    { data: workRow },
-    { data: communityRaw },
-    { data: purchases },
-    { data: debriefSel, error: debriefError },
-    { data: debriefRows },
-    { data: debriefYearRows },
-    { data: debriefRewardRow },
-    { data: gradeRows, error: gradesError },
-    // Trajectoire (« Progrès ») : catalogue (cache serveur) + maîtrise.
-    subjectsAll,
-    gradeChapters,
-    chapterMastery,
+    { data: gradeRows },
+    { data: termRows, error: termError },
   ] = await Promise.all([
     supabase
       .from('habit_logs')
       .select('id, habit_id, date, completed, auto_validated')
       .gte('date', toDayKey(since))
       .returns<HabitLog[]>(),
-    supabase.from('habit_catalog').select('*').returns<HabitCatalogEntry[]>(),
-    supabase.from('badges').select('*').returns<Badge[]>(),
-    supabase.from('user_badges').select('badge_id'),
-    // Temps de travail (chrono du Défi) — requête séparée : si 014_temps.sql
-    // n'est pas passée, seule cette colonne manque, le reste tient debout.
-    supabase
-      .from('profiles')
-      .select('work_seconds')
-      .eq('id', user.id)
-      .maybeSingle(),
-    // Temps cumulé de tous les élèves (fonction SQL 014_temps.sql). Dégradé
-    // proprement si la migration n'est pas encore passée.
-    supabase.rpc('community_seconds'),
-    // Accessoires du compagnon (achats boutique, kind « compagnon »).
-    supabase.from('shop_purchases').select('item_id').eq('user_id', user.id),
-    // Débrief d'habitudes (027_debrief.sql) — dégradé proprement si la
-    // migration n'est pas encore passée (debriefError → carte en mode info).
-    supabase.from('debrief_habits').select('pair_id'),
-    supabase
-      .from('debrief_logs')
-      .select('pair_id, outcome')
-      .eq('date', toDayKey(new Date())),
-    // Un an de débriefs pour la rétrospective annuelle « ce que j'ai coaché ».
-    supabase
-      .from('debrief_logs')
-      .select('pair_id, date, outcome')
-      .gte('date', toDayKey(since)),
-    // Récompense du jour déjà créditée ? (081 — dégradé si migration absente.)
-    supabase
-      .from('debrief_rewards')
-      .select('date')
-      .eq('date', toDayKey(new Date()))
-      .maybeSingle(),
-    // Notes réelles (167) — dégradé proprement si la migration n'est pas
-    // passée (gradesError → carte « Mes notes » en mode info).
+    // Notes réelles (167) — dégradé en liste vide si absente.
     supabase
       .from('school_grades')
       .select('id, subject, label, score, out_of, coefficient, date')
       .eq('user_id', user.id)
       .order('date', { ascending: false })
       .limit(300),
-    getSubjectsCached(),
-    profile?.grade_level
-      ? getGradeChaptersCached(String(profile.grade_level))
-      : Promise.resolve([]),
-    getChapterMastery(supabase, user.id),
+    // Moyennes trimestrielles saisies (187) — termError → saisie masquée.
+    supabase
+      .from('term_grades')
+      .select('school_year, term, average')
+      .eq('user_id', user.id),
   ])
-
-  if (catalogError) {
-    // Détail technique en console pour le dev, message rassurant pour l'élève.
-    console.error('[moi] catalogue des habitudes indisponible:', catalogError.message)
-    return (
-      <div>
-        <PageHeader title="Moi" />
-        <Card>
-          <CardHeader>
-            <CardTitle>Cet onglet est momentanément indisponible</CardTitle>
-            <CardDescription>
-              On n&apos;arrive pas à charger tes habitudes pour l&apos;instant.
-              Réessaie dans quelques instants.
-            </CardDescription>
-          </CardHeader>
-        </Card>
-      </div>
-    )
-  }
 
   const activeHabits = habits ?? []
   const allLogs = logs ?? []
-  const today = toDayKey(new Date())
 
-  // --- Bloc 1 : bilan de capacités (questionnaire post-onboarding) ---------------
-  const quiz = profile?.capacity_quiz as {
-    score?: unknown
-    answers?: unknown
-  } | null
-  const capacityScore =
+  // --- Capacité : 4 drivers sur 14 jours, repli sur le quiz d'onboarding ------
+  const quiz = profile?.capacity_quiz as { score?: unknown } | null
+  const quizScore =
     typeof quiz?.score === 'number' ? Math.round(quiz.score) : null
-  const capacityAnswers =
-    quiz?.answers && typeof quiz.answers === 'object'
-      ? (quiz.answers as Record<string, number>)
-      : {}
-  const { bilan } = await searchParams
+  const drivers = computeDriverScores(activeHabits, allLogs, today)
+  const capacite = computeCapacite(drivers, quizScore)
+  const plafond = computePlafond(drivers, capacite)
 
-  // --- Bloc 2 : la semaine courante (dates, validations, missions par jour) ------
-  const weekDates: string[] = []
-  {
-    const cursor = new Date()
-    cursor.setUTCHours(0, 0, 0, 0)
-    cursor.setUTCDate(cursor.getUTCDate() - ((cursor.getUTCDay() + 6) % 7))
-    for (let i = 0; i < 7; i++) {
-      weekDates.push(toDayKey(cursor))
-      cursor.setUTCDate(cursor.getUTCDate() + 1)
+  // --- Trajectoire au bac : notes réelles d'abord, saisie manuelle en repli ---
+  const schoolGrades = normalizeGradeList(gradeRows ?? [])
+  const summaries = trimestreSummaries(schoolGrades, today)
+  const schoolYear = trimestreOf(today)?.year ?? new Date().getUTCFullYear()
+  const manualTerms = normalizeTermGrades(termRows ?? [], schoolYear)
+  const terms = mergeTermAverages(summaries, manualTerms)
+  const trajectory = computeBacTrajectory(terms, capacite, plafond)
+
+  // --- Leviers du jour : l'état coché vient de habit_logs (source unique) -----
+  const habitByCatalog = new Map(activeHabits.map((h) => [h.catalog_id, h.id]))
+  const doneToday = new Set(
+    allLogs
+      .filter((l) => l.completed && l.date === today)
+      .map((l) => l.habit_id),
+  )
+  const levers: LeverState[] = LEVERS.map((l) => {
+    const habitId = habitByCatalog.get(l.catalogId)
+    return {
+      catalogId: l.catalogId,
+      label: l.label,
+      points: l.points,
+      driverKey: l.driverKey,
+      doneToday: habitId !== undefined && doneToday.has(habitId),
     }
-  }
-  const doneByDate: Record<string, Record<string, boolean>> = {}
-  for (const log of allLogs) {
-    if (log.date >= weekDates[0] && log.date <= weekDates[6]) {
-      ;(doneByDate[log.date] ??= {})[log.habit_id] = log.completed
-    }
-  }
+  })
 
-  // --- Bloc 3 : « Ma discipline » — statut de chaque journée ---------------------
-  // complete = toutes les missions planifiées validées ; partial = une partie ;
-  // missed = aucune ; rest = rien de planifié ce jour-là.
-  const completedKeys = new Set(
-    allLogs.filter((l) => l.completed).map((l) => `${l.habit_id}|${l.date}`),
-  )
-  const dayStatuses: Record<string, DayStatus> = {}
-  const dayCursor = new Date(since)
-  while (toDayKey(dayCursor) <= today) {
-    const key = toDayKey(dayCursor)
-    const idx = dayIndexOf(key)
-    const scheduled = activeHabits.filter(
-      (h) =>
-        habitDays(h).includes(idx) && String(h.created_at).slice(0, 10) <= key,
-    )
-    if (scheduled.length === 0) {
-      dayStatuses[key] = 'rest'
-    } else {
-      const done = scheduled.filter((h) =>
-        completedKeys.has(`${h.id}|${key}`),
-      ).length
-      dayStatuses[key] =
-        done === scheduled.length
-          ? 'complete'
-          : done > 0
-            ? 'partial'
-            : key === today
-              ? 'rest' // la journée n'est pas finie : pas encore « manquée »
-              : 'missed'
-    }
-    dayCursor.setUTCDate(dayCursor.getUTCDate() + 1)
-  }
-
-  // --- Bloc 4 : structure vs notes, 8 semaines -----------------------------------
-  const monday = new Date()
-  monday.setUTCHours(0, 0, 0, 0)
-  monday.setUTCDate(monday.getUTCDate() - ((monday.getUTCDay() + 6) % 7))
-
-  // Structure d'une semaine = missions validées / missions PLANIFIÉES
-  // (chaque habitude compte pour ses jours planifiés, pas 7 j/7).
-  const activeIds = new Set(activeHabits.map((h) => h.id))
-  const slotsPerWeek = activeHabits.reduce(
-    (s, h) => s + habitDays(h).length,
-    0,
-  )
-
-  const chartData: WeekPoint[] = []
-  for (let w = 7; w >= 0; w--) {
-    const start = new Date(monday)
-    start.setUTCDate(start.getUTCDate() - w * 7)
-    const end = new Date(start)
-    end.setUTCDate(end.getUTCDate() + 7)
-    const inWeek = (dateStr: string) => {
-      const d = new Date(dateStr)
-      return d >= start && d < end
-    }
-
-    const weekLogs = allLogs.filter(
-      (l) =>
-        l.completed && activeIds.has(l.habit_id) && inWeek(`${l.date}T12:00:00Z`),
-    )
-    const structure =
-      slotsPerWeek > 0
-        ? Math.min(100, Math.round((weekLogs.length / slotsPerWeek) * 100))
-        : null
-
-    const weekTests = (tests ?? []).filter(
-      (t) => t.total > 0 && inWeek(t.created_at),
-    )
-    const notes =
-      weekTests.length > 0
-        ? Math.round(
-            (weekTests.reduce((s, t) => s + t.score / t.total, 0) /
-              weekTests.length) *
-              100,
-          )
-        : null
-
-    chartData.push({
-      week: `${String(start.getUTCDate()).padStart(2, '0')}/${String(start.getUTCMonth() + 1).padStart(2, '0')}`,
-      structure,
-      notes,
-    })
-  }
-
-  // --- Bloc 5 : records + badges -------------------------------------------------
-  const allActivity = [
-    ...(tests ?? []),
-    ...(studies ?? []),
-    ...(lessonsDone ?? []),
-    ...(challenges ?? []),
-  ]
-  // Temps de travail mesuré par le chrono du Défi, stocké sur le profil.
-  const workSeconds = Number(workRow?.work_seconds ?? 0) || 0
-  const studyMinutes = Math.floor(workSeconds / 60)
-  // bigint Postgres → nombre ou chaîne selon PostgREST : on normalise.
-  const communityParsed = Number(communityRaw)
-  const communitySeconds =
-    communityRaw != null && Number.isFinite(communityParsed)
-      ? communityParsed
-      : null
-  const activityDays = new Set(
-    allActivity.map((s) => String(s.created_at).slice(0, 10)),
-  )
-  // Bloc 1 : la semaine en cours (L→D) et la série vivante.
-  const currentStreak = computeStreak(activityDays)
-  const week = weekProgress(activityDays)
-  // Bilan hebdo : les chiffres marquants de la semaine courante (sessions, jours
-  // actifs, moyenne aux quiz), calculés sur les données déjà chargées.
-  const weeklyRecap = computeWeeklyRecap(
-    weekDates[0],
-    allActivity.map((s) => String(s.created_at).slice(0, 10)),
-    (tests ?? []).map((t) => ({
-      date: String(t.created_at).slice(0, 10),
-      score: t.score,
-      total: t.total,
-    })),
-  )
-  // Objectifs perso de la semaine : colonne isolée (migration 157 peut-être pas
-  // passée) — son absence ne casse pas le reste (liste vide, dégradé propre).
-  // goalsRow est chargé en parallèle dans le Promise.all du haut de page.
-  const weekStart = weekDates[0]
-  const weekGoals = goalsForWeek(
-    normalizeWeeklyGoalsList(
-      (goalsRow as { weekly_goals?: unknown } | null)?.weekly_goals,
-    ),
-    weekStart,
-  )
-  const sessionsPerDay = new Map<string, number>()
-  for (const s of allActivity) {
-    const key = String(s.created_at).slice(0, 10)
-    sessionsPerDay.set(key, (sessionsPerDay.get(key) ?? 0) + 1)
-  }
-  const anchored = longestAnchored(activeHabits, allLogs)
-  const records = {
-    longestStreak: longestRun(activityDays),
-    maxSessionsDay: Math.max(0, ...sessionsPerDay.values()),
-    anchoredDays: anchored.days,
-    anchoredTitle: anchored.title,
-  }
-
-  // Évaluation des badges (idempotente).
-  // Sessions de trajet : quiz ET défis joués dans un créneau comptent.
-  const commuteSessions = [...(tests ?? []), ...(challenges ?? [])].filter(
-    (t) => isInCommuteSlot(String(t.created_at), commuteSlots),
-  )
-  const metrics = {
-    streak: records.longestStreak,
-    anchored: anchored.days,
-    commuteQuizzes: commuteSessions.length,
-    commuteStreak: commuteStreak(commuteSessions, commuteSlots),
-    quizCount: (tests ?? []).length,
-    perfect: (tests ?? []).some((t) => t.total > 0 && t.score === t.total),
-    habitsCount: activeHabits.length,
-    studyMinutes,
-  }
-  const meets = (condition: Record<string, unknown>): boolean => {
-    const days = Number(condition.days ?? 0)
-    const count = Number(condition.count ?? 0)
-    const minutes = Number(condition.minutes ?? 0)
-    switch (condition.type) {
-      case 'study_minutes':
-        return metrics.studyMinutes >= minutes
-      case 'streak':
-        return metrics.streak >= days
-      case 'habit_anchored':
-        return metrics.anchored >= days
-      case 'commute_quizzes':
-        return metrics.commuteQuizzes >= count
-      case 'commute_streak':
-        return metrics.commuteStreak >= days
-      case 'habits_count':
-        return metrics.habitsCount >= count
-      case 'quiz_count':
-        return metrics.quizCount >= count
-      case 'perfect_quiz':
-        return metrics.perfect
-      default:
-        return false
-    }
-  }
-
-  const unlockedIds = new Set((userBadges ?? []).map((b) => String(b.badge_id)))
-  const newlyUnlocked = (badges ?? []).filter(
-    (b) => !unlockedIds.has(b.id) && meets(b.condition),
-  )
-  if (newlyUnlocked.length > 0) {
-    await supabase
-      .from('user_badges')
-      .upsert(
-        newlyUnlocked.map((b) => ({ user_id: user.id, badge_id: b.id })),
-        { onConflict: 'user_id,badge_id', ignoreDuplicates: true },
-      )
-    for (const b of newlyUnlocked) unlockedIds.add(b.id)
-  }
-
+  // --- Identité : prénom, classe, niveau de travail, pièces, avatar -----------
   const firstName = String(profile?.full_name ?? '').split(' ')[0] || 'Élève'
-
-  // Classe courante, validée contre la liste fermée (null si non renseignée).
   const gradeLevel: GradeLevel | null = GRADE_LEVELS.includes(
     profile?.grade_level as GradeLevel,
   )
     ? (profile!.grade_level as GradeLevel)
     : null
-
-  // Trajectoire de l'année : maîtrise 0..1 de chaque chapitre des matières
-  // SUIVIES (mêmes règles de suivi que l'accueil Réviser) + rythme moyen
-  // depuis la toute première activité — voir lib/trajectoire.
-  const selectedSubjects = Array.isArray(profile?.selected_subjects)
-    ? (profile.selected_subjects as string[])
-    : null
-  const followedSubjectIds = new Set(
-    subjectsAll
-      .filter((s) => gradeLevel !== null && s.levels.includes(gradeLevel))
-      .filter(
-        (s) =>
-          selectedSubjects === null ||
-          selectedSubjects.length === 0 ||
-          selectedSubjects.includes(s.slug),
-      )
-      .map((s) => s.id),
-  )
-  const masteryValues = gradeChapters
-    .filter((c) => followedSubjectIds.has(c.subject_id))
-    .map((c) => chapterMastery.get(c.id)?.value ?? 0)
-  const firstActivityKey =
-    [
-      ...(tests ?? []),
-      ...(studies ?? []),
-      ...(lessonsDone ?? []),
-      ...(challenges ?? []),
-    ]
-      .map((s) => String(s.created_at).slice(0, 10))
-      .sort()[0] ?? null
-  const trajectoire = computeTrajectoire({
-    masteryValues,
-    grade: gradeLevel ?? '',
-    todayKey: today,
-    firstActivityKey,
-  })
-
-  // Notes réelles (167) : la réalité du bulletin à côté de la projection.
-  // Matières proposées à la saisie = celles de la classe (toutes si inconnue).
-  const schoolGrades = normalizeGradeList(gradeRows ?? [])
-  const gradeSubjects = subjectsAll
-    .filter((s) => gradeLevel === null || s.levels.includes(gradeLevel))
-    .map((s) => ({ slug: s.slug, name: s.name, icon: s.icon }))
-
-  // Débrief d'habitudes : sélection référencée + issues du jour.
-  const debriefSelected = (debriefSel ?? []).map((r) => String(r.pair_id))
-  const debriefOutcomes: Record<string, DebriefOutcome> = {}
-  for (const r of debriefRows ?? []) {
-    if (isDebriefOutcome(r.outcome)) {
-      debriefOutcomes[String(r.pair_id)] = r.outcome
-    }
-  }
-  // Rétrospective annuelle + récompense du jour déjà prise.
-  const debriefYearData = debriefYearStats(
-    debriefSelected,
-    (debriefYearRows ?? []).map((r) => ({
-      pair_id: String(r.pair_id),
-      date: String(r.date),
-      outcome: String(r.outcome),
-    })),
-    // Même année civile que les heatmaps de DebriefYearRecap : les chiffres du
-    // bandeau et les grilles en dessous doivent parler du même intervalle.
-    toDayKey(new Date()).slice(0, 4),
-  )
-  const debriefRewardClaimed = Boolean(debriefRewardRow)
-
-  // Avatar personnalisable du bandeau : config validée + rendu pré-calculé
-  // (data-URI) pour un affichage immédiat sans embarquer DiceBear côté client.
+  const gradeLabel = gradeLevel ? (GRADE_LABELS[gradeLevel] ?? gradeLevel) : null
+  const level = workLevel(Number(statsRow?.work_seconds ?? 0) || 0)
+  const coins = Number(statsRow?.coins ?? 0) || 0
   const avatarConfig = normalizeAvatarConfig(avatarRow?.avatar)
-  const avatarUri = avatarDataUri(avatarConfig, 160)
-
-  // Compagnon d'étude : nourri par la série, habillé par la boutique.
-  const ownedIds = new Set((purchases ?? []).map((p) => String(p.item_id)))
-  const companionAccessories = SHOP_CATALOG.filter(
-    (i) => i.kind === 'compagnon' && ownedIds.has(i.id),
-  ).map((i) => i.emoji)
+  const heroAvatarUri = avatarDataUri(avatarConfig, 320)
+  const miniAvatarUri = avatarDataUri(avatarConfig, 80)
 
   return (
     <div>
-      {/* Fond papier réchauffé pleine page, derrière tout l'onglet. */}
       <WorldBackdrop className="moi-bg" />
 
-      {/* Bandeau compact : le cercle profil avec les infos autour (temps total,
-          série, niveau) — le dashboard prend la vedette juste dessous. */}
-      <MoiHeader
-        name={firstName}
-        avatarUri={avatarUri}
-        avatarConfig={avatarConfig}
-        playerSeconds={workSeconds}
-        communitySeconds={communitySeconds}
-        streak={currentStreak}
+      <TabHeader
+        title="Moi"
+        subtitle="Ta capacité, ta trajectoire et tes leviers."
       />
 
-      {/* Le tableau scolaire de l'année : notes réelles par matière × trimestre,
-          filtres, moyenne générale — le cœur du dashboard Moi. */}
-      <div className="mt-5">
-        <TableauAnnee
-          initial={schoolGrades}
-          subjects={gradeSubjects}
-          today={today}
-          needsMigration={Boolean(gradesError)}
-        />
-      </div>
+      <MoiTopBar level={level} coins={coins} avatarUri={miniAvatarUri} />
 
-      {/* Les missions du jour, toujours visibles : la checklist quotidienne. */}
       <div className="mt-4">
-        <MissionsJour
-          habits={activeHabits}
-          doneByHabit={doneByDate[today] ?? {}}
-          todayIdx={dayIndexOf(today)}
-          date={today}
-        />
-      </div>
-
-      {/* Le reste, rangé derrière deux onglets denses (une section à la fois) :
-          Ma semaine (rituels + compagnon) · Ma progression (trajectoire + stats). */}
-      <MoiTabs
-        semaine={
-          <div className="flex flex-col gap-4">
-            {/* Le débrief du jour : le geste quotidien qui rapporte des pièces
-                + la rétro annuelle du parcours. */}
-            <DebriefCard
-              selected={debriefSelected}
-              outcomes={debriefOutcomes}
-              yearStats={debriefYearData}
-              today={today}
-              rewardClaimedToday={debriefRewardClaimed}
-              needsMigration={Boolean(debriefError)}
-            />
-            {/* Une seule carte dense : rétro hebdo + objectifs perso. */}
-            <SemaineCard
-              recap={weeklyRecap}
-              streak={currentStreak}
-              weekGoals={weekGoals}
-              weekStart={weekStart}
-            />
-            <WeekSection
-              week={week}
-              streak={currentStreak}
-              weekDates={weekDates}
-              todayIdx={dayIndexOf(today)}
-              habits={activeHabits}
-              catalog={catalog ?? []}
-              doneByDate={doneByDate}
-              dayStatuses={dayStatuses}
-              commuteSlots={commuteSlots}
-            />
-            {/* Le compagnon, en encart resserré (plus d'onglet dédié). */}
-            <CompagnonCard
-              streak={currentStreak}
-              activeToday={activityDays.has(today)}
-              accessories={companionAccessories}
-              weekSessions={weeklyRecap.sessions}
-              weekDelta={weeklyRecap.sessionsDelta}
-              compact
-            />
-          </div>
-        }
-        progres={
-          <>
-            {/* La carte macro : préparation de l'année + projection honnête,
-                avec le bilan de capacités fondu en pied de carte. */}
-            <div className="mb-4">
-              <TrajectoireCard
-                trajectoire={trajectoire}
-                capacity={
-                  <CapacityScore
-                    score={capacityScore}
-                    answers={capacityAnswers}
-                    autoOpen={bilan === '1'}
-                    needsMigration={Boolean(profileError)}
-                    variant="line"
-                  />
-                }
+        <MoiTabSwitcher
+          progression={
+            <div className="flex flex-col gap-4">
+              <HeroCard
+                name={firstName}
+                gradeLabel={gradeLabel}
+                avatarUri={heroAvatarUri}
+                avatarConfig={avatarConfig}
+                capacite={capacite}
+                plafond={plafond}
+                drivers={drivers}
+              />
+              <TrajectoryCard
+                trajectory={trajectory}
+                needsMigration={Boolean(termError)}
+              />
+              <WeeklyLeversCard
+                levers={levers}
+                todayIdx={dayIndexOf(today)}
+                today={today}
               />
             </div>
-            {/* Graphique et badges : repliés derrière deux icônes, à la demande. */}
-            <MoiExtras
-              chart={<StructureChart data={chartData} />}
-              badges={
-                <BadgeGrid
-                  badges={badges ?? []}
-                  unlockedIds={unlockedIds}
-                  records={records}
-                />
-              }
-            />
-          </>
-        }
-      />
+          }
+          habitudes={
+            <div className="moi-card rounded-3xl bg-white px-4 py-8 text-center">
+              <Sparkles
+                className="mx-auto size-6 text-primary"
+                aria-hidden="true"
+              />
+              <p className="mt-2 font-heading text-lg font-bold text-foreground">
+                Bientôt ici
+              </p>
+              <p className="mx-auto mt-1 max-w-xs text-sm text-muted-foreground">
+                Le détail de tes habitudes arrive : en attendant, coche tes
+                leviers de la semaine dans « Ma progression ».
+              </p>
+            </div>
+          }
+        />
+      </div>
     </div>
   )
 }

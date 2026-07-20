@@ -9,11 +9,13 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
+import TabHeader from '@/components/TabHeader'
 import SubjectsHome from '@/components/SubjectsHome'
 import ReviserSpaces from '@/components/ReviserSpaces'
 import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
-import CarnetLibrary from '@/components/CarnetLibrary'
-import CarnetCreateFab from '@/components/CarnetCreateFab'
+import CoursesShelf, {
+  type CourseShelfItem,
+} from '@/components/carnet/CoursesShelf'
 import WeekPlannerStrip from '@/components/WeekPlannerStrip'
 import ExamObjectiveToggle from '@/components/ExamObjectiveToggle'
 import { type ExamProgressEntry } from '@/components/ExamProgress'
@@ -40,17 +42,6 @@ import {
   examHintsBySubject,
 } from '@/lib/next-exam'
 import { normalizeOralList } from '@/lib/oral-texts'
-import {
-  isLibraryKind,
-  normalizeContent,
-  normalizeTitle,
-  isContentReady,
-} from '@/lib/library'
-import {
-  previewLines,
-  previewMeta,
-  type ShelfItem,
-} from '@/lib/library-shelf'
 import type { CommuteSlot, Subject } from '@/lib/types'
 
 export const metadata = { title: 'Réviser — Studuel' }
@@ -73,7 +64,7 @@ export default async function ReviserPage() {
       <div>
         <PageHeader
           title="Réviser"
-          description="Ta série, ton avancement et ton programme, au même endroit."
+          description="Ton programme, tes cours et ta file du jour."
         />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
@@ -169,7 +160,8 @@ export default async function ReviserPage() {
     { data: studyDays },
     { data: lessonDays },
     { data: challengeDays },
-    { data: libraryRows },
+    { data: courseRows },
+    { data: courseQuestionRows },
     // Temps travaillé aujourd'hui (work_daily, migration 084) → objectif du jour
     // du header. Bucket par date UTC, cohérent avec la série.
     { data: workToday },
@@ -202,14 +194,17 @@ export default async function ReviserPage() {
       .select('created_at, xp')
       .eq('user_id', user.id)
       .gte('created_at', activityCutoff()),
-    // Bibliothèque de Mon carnet (library_items, migration 158) : les 60
-    // derniers contenus suffisent à l'étagère — échec isolé → bloc vide.
+    // Cours de Mon carnet (carnet_courses, migration 186) : l'étagère des
+    // cours façon Wooflash — échec isolé (migration pas passée) → bloc vide.
     supabase
-      .from('library_items')
-      .select('id, kind, title, content, updated_at')
-      .eq('user_id', user.id)
+      .from('carnet_courses')
+      .select('id, title, description, icon, color')
+      .eq('owner_id', user.id)
       .order('updated_at', { ascending: false })
       .limit(60),
+    // Compteur de questions par cours (ids seuls : jamais le contenu
+    // complet) — borné comme les autres listes de la page.
+    supabase.from('carnet_questions').select('course_id').limit(2_000),
     supabase
       .from('work_daily')
       .select('seconds')
@@ -436,27 +431,28 @@ export default async function ReviserPage() {
   }
   const existingExamChapters = new Set(upcomingExams.map((e) => e.chapterId))
 
-  // --- Bibliothèque (Mon carnet) : aperçus calculés côté serveur ----------------
-  // On ne transfère au client que des miniatures (lignes rognées), jamais le
-  // contenu complet des fiches.
-  const nowIso = new Date().toISOString()
-  const shelfItems: ShelfItem[] = (libraryRows ?? [])
-    .filter((r) => isLibraryKind(r.kind))
-    .map((r) => {
-      const content = normalizeContent(r.kind, r.content)
-      return {
-        id: String(r.id),
-        kind: r.kind,
-        title: normalizeTitle(r.title),
-        ready: isContentReady(r.kind, content),
-        updatedAt: String(r.updated_at ?? ''),
-        lines: previewLines(r.kind, content),
-        meta: previewMeta(r.kind, content),
-      }
-    })
+  // --- Mes cours (Mon carnet) : étagère calculée côté serveur -----------------
+  // Compteur de questions par cours (la RLS limite déjà aux cours de l'élève).
+  const questionCountByCourse = new Map<string, number>()
+  for (const row of courseQuestionRows ?? []) {
+    const key = String(row.course_id)
+    questionCountByCourse.set(key, (questionCountByCourse.get(key) ?? 0) + 1)
+  }
+  const courseItems: CourseShelfItem[] = (courseRows ?? []).map((r) => ({
+    id: String(r.id),
+    title: String(r.title ?? 'Sans titre'),
+    description: r.description ? String(r.description) : null,
+    icon: r.icon ? String(r.icon) : null,
+    color: r.color ? String(r.color) : null,
+    questionCount: questionCountByCourse.get(String(r.id)) ?? 0,
+  }))
 
   return (
     <div className="flex flex-col gap-4">
+      <TabHeader
+        title="Réviser"
+        subtitle="Ton programme, tes cours et ta file du jour."
+      />
       {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
       <SubjectMasteryCelebration
         entries={followed.map((s) => ({
@@ -536,20 +532,16 @@ export default async function ReviserPage() {
             />
             {/* Une ligne d'intro : dire à l'élève ce qu'est ce carnet. */}
             <p className="px-1 text-sm text-muted-foreground">
-              Ton carnet de bord scolaire : ta bibliothèque de fiches, quiz et
-              cartes mentales.
+              Ton carnet de cours : crée tes cours, remplis-les de questions et
+              révise-les.
             </p>
-            {/* La Bibliothèque — LE bloc du carnet : fiches, quiz et cartes
-                mentales visibles directement (aperçus, filtres par type,
-                groupes de récence), création sans quitter le carnet.
-                (Contrôles à venir, maîtrise et examen blanc retirés d'ici :
-                l'examen blanc vit désormais dans chaque dossier de matière.) */}
-            <CarnetLibrary items={shelfItems} now={nowIso} />
+            {/* « Mes cours » — LE bloc du carnet : les cours façon Wooflash
+                (chapitres imbriqués + questions de 5 types), création sans
+                quitter le carnet. Remplace l'ancienne Bibliothèque (les
+                library_items restent en base, plus affichés ici). */}
+            <CoursesShelf items={courseItems} />
             {/* Descriptif de l'oral (1re français). */}
             {hasFrenchOral ? <OralTextsCard initial={oralTexts} /> : null}
-            {/* Bouton flottant « + » : créer fiche quiz / flash cards / carte
-                mentale sans quitter le carnet. */}
-            <CarnetCreateFab />
           </div>
         }
       />

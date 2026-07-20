@@ -1,4 +1,4 @@
-import PageHeader from '@/components/PageHeader'
+import TabHeader from '@/components/TabHeader'
 import AmisHome from '@/components/AmisHome'
 import { createClient } from '@/lib/supabase/server'
 import {
@@ -200,9 +200,9 @@ export default async function AmisPage() {
 
   return (
     <div>
-      <PageHeader
+      <TabHeader
         title="Amis"
-        description="Défie, rejoins, grimpe — ton cerveau contre les leurs."
+        subtitle="Ton équipe, ton école et vos classements."
       />
       <AmisHome
         ranking={ranking}

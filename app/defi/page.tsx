@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import ModesSheet from '@/components/defi/ModesSheet'
+import TabHeader from '@/components/TabHeader'
 import ArenaHud, { type OrbItem } from '@/components/defi/ArenaHud'
 import TrophyBlock from '@/components/defi/TrophyBlock'
 import WeeklyLeague from '@/components/defi/WeeklyLeague'
@@ -345,6 +346,12 @@ export default async function DefiPage() {
       {/* Vigie de promotion : fête la montée de ligue depuis la dernière visite. */}
       {leagueTier !== null ? <LeaguePromotionWatch tier={leagueTier} /> : null}
       <div className="mx-auto flex h-full w-full max-w-md flex-col gap-3">
+        {/* Bandeau d'onglet compact, en crème sur l'arène violette. */}
+        <TabHeader
+          tone="arena"
+          title="Défi"
+          subtitle="Duels et classements : gagne des trophées."
+        />
         {/* Pilule de saison, discrète en haut de l'arène. Encore mockée
             (aucun cron de saison) → badge « Aperçu », sans faux compte à
             rebours qui prétendrait être vrai. */}

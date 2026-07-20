@@ -1,4 +1,4 @@
-import PageHeader from '@/components/PageHeader'
+import TabHeader from '@/components/TabHeader'
 import PremiumHome from '@/components/PremiumHome'
 import { getUserTier } from '@/lib/subscription'
 
@@ -13,9 +13,9 @@ export default async function TresorPage() {
 
   return (
     <div>
-      <PageHeader
-        title="Passe à Studuel+"
-        description="Débloque tout, sans limite — pour toi ou toute la famille."
+      <TabHeader
+        title="Trésor"
+        subtitle="Débloque tout Studuel, sans limite."
       />
       <PremiumHome currentTier={tier} />
     </div>

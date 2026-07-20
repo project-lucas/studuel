@@ -100,9 +100,12 @@ export async function recordReviewAnswers(
   if (clean.length === 0) return { saved: true }
 
   // État actuel des items touchés (pour prolonger la série de succès).
+  // `due_date` et `in_revanche` sont indispensables : ils disent si l'item
+  // était RÉELLEMENT à revoir — un succès sur un item pas encore dû ne doit
+  // pas faire progresser le barème (cf. reviewAfterAnswer).
   const { data: existing } = await supabase
     .from('review_items')
-    .select('item_kind, item_id, streak, lapses')
+    .select('item_kind, item_id, streak, lapses, due_date, in_revanche')
     .eq('user_id', user.id)
     .in('item_id', clean.map((a) => a.id))
   const prevByKey = new Map(

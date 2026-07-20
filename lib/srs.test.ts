@@ -57,14 +57,20 @@ describe('reviewAfterAnswer', () => {
   })
 
   it('les succès consécutifs éloignent la prochaine révision', () => {
-    const after = reviewAfterAnswer({ streak: 2, lapses: 1 }, true, today)
+    // Item bien ÉCHU aujourd'hui : le succès doit faire progresser le barème.
+    const after = reviewAfterAnswer(
+      { streak: 2, lapses: 1, due_date: today, in_revanche: false },
+      true,
+      today,
+    )
     expect(after.streak).toBe(3)
     expect(after.due_date).toBe(addDays(today, 7))
     expect(after.lapses).toBe(1) // les erreurs passées restent comptées
   })
 
   it("une erreur réinitialise la série, revient demain et entre dans la Revanche", () => {
-    expect(reviewAfterAnswer({ streak: 4, lapses: 0 }, false, today)).toEqual({
+    const prev = { streak: 4, lapses: 0, due_date: addDays(today, 30), in_revanche: false }
+    expect(reviewAfterAnswer(prev, false, today)).toEqual({
       streak: 0,
       lapses: 1,
       due_date: '2026-07-09',
@@ -79,7 +85,67 @@ describe('reviewAfterAnswer', () => {
     expect(avenged.in_revanche).toBe(false)
     expect(avenged.streak).toBe(1)
   })
+
+  it('n’avance PAS le barème sur un succès avant l’échéance', () => {
+    // Le bug historique : le même item revenait via plusieurs modes de jeu le
+    // même jour (quiz de la leçon, Boss, Chrono, Blitz, Duel…) et chaque bonne
+    // réponse allongeait l'intervalle — J+1 à J+35 en une seule session.
+    const prev = {
+      streak: 1,
+      lapses: 0,
+      due_date: addDays(today, 1), // pas encore dû
+      in_revanche: false,
+    }
+
+    expect(reviewAfterAnswer(prev, true, today)).toEqual(prev)
+  })
+
+  it('le bachotage d’une journée ne peut plus atteindre le palier maximal', () => {
+    // Rejoue 5 succès d'affilée le MÊME jour, comme le ferait un élève qui
+    // enchaîne les modes : l'item doit rester à J+1, pas filer à J+35.
+    let state = reviewAfterAnswer(null, true, today)
+    const apresPremier = { ...state }
+    for (let i = 0; i < 4; i++) state = reviewAfterAnswer(state, true, today)
+
+    expect(state).toEqual(apresPremier)
+    expect(state.due_date).toBe(addDays(today, 1))
+    expect(state.streak).toBe(1)
+  })
+
+  it('mais un échec compte TOUJOURS, même avant l’échéance', () => {
+    // Oublier est une information : on ne l'ignore pas sous prétexte que
+    // l'item n'était pas encore programmé.
+    const prev = {
+      streak: 4,
+      lapses: 0,
+      due_date: addDays(today, 30),
+      in_revanche: false,
+    }
+
+    const after = reviewAfterAnswer(prev, false, today)
+
+    expect(after.streak).toBe(0)
+    expect(after.in_revanche).toBe(true)
+    expect(after.due_date).toBe(addDays(today, 1))
+  })
+
+  it('un item en Revanche reste jouable le jour même', () => {
+    // La Revanche est dans la file par construction : la garde d'échéance ne
+    // doit pas empêcher de la venger tout de suite.
+    const enRevanche = {
+      streak: 0,
+      lapses: 1,
+      due_date: addDays(today, 1),
+      in_revanche: true,
+    }
+
+    const avenged = reviewAfterAnswer(enRevanche, true, today)
+
+    expect(avenged.in_revanche).toBe(false)
+    expect(avenged.streak).toBe(1)
+  })
 })
+
 
 describe('reviewQueue', () => {
   const today = '2026-07-08'

@@ -74,13 +74,34 @@ export function intervalForStreak(streak: number): number {
   return SRS_INTERVALS[i]
 }
 
+// État d'un item suivi, tel que relu en base avant d'appliquer une réponse.
+type ReviewState = Pick<
+  ReviewItem,
+  'streak' | 'lapses' | 'due_date' | 'in_revanche'
+>
+
+// Un succès ne fait progresser le barème que si l'item était RÉELLEMENT à
+// revoir : échu, à venger, ou jamais vu. Sans cette garde, répondre juste
+// plusieurs fois le même jour (le même item revient via le quiz de la leçon,
+// puis Boss, Chrono, Blitz, Duel…) suffirait à pousser un item de J+1 à J+35
+// en une seule session : ce ne serait plus de la répétition ESPACÉE, mais du
+// bachotage compté comme tel. Un échec, lui, compte TOUJOURS : oublier est une
+// information, quelle que soit l'échéance prévue.
+export function isReviewable(prev: ReviewState | null, todayKey: string): boolean {
+  if (prev === null) return true
+  return prev.in_revanche || prev.due_date <= todayKey
+}
+
 // Nouvel état d'un item après une réponse. `prev` absent = premier passage.
 export function reviewAfterAnswer(
-  prev: Pick<ReviewItem, 'streak' | 'lapses'> | null,
+  prev: ReviewState | null,
   good: boolean,
   todayKey: string,
-): Pick<ReviewItem, 'streak' | 'lapses' | 'due_date' | 'in_revanche'> {
+): ReviewState {
   if (good) {
+    // Bonne réponse sur un item pas encore dû : on ne touche à rien. Avancer
+    // ici reviendrait à récompenser la répétition immédiate.
+    if (!isReviewable(prev, todayKey) && prev !== null) return prev
     const streak = (prev?.streak ?? 0) + 1
     return {
       streak,

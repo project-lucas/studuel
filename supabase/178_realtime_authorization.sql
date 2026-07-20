@@ -41,7 +41,19 @@
 -- (broadcast et presence passent tous les deux par là).
 -- `realtime.topic()` renvoie le nom du canal demandé par le client.
 
-ALTER TABLE IF EXISTS realtime.messages ENABLE ROW LEVEL SECURITY;
+-- ⚠️ NE PAS écrire `ALTER TABLE realtime.messages ENABLE ROW LEVEL SECURITY`.
+-- Cette table appartient à `supabase_realtime_admin`, pas au rôle du SQL
+-- Editor : la commande échoue en `42501: must be owner of table messages` et
+-- fait avorter toute la migration avant même la création des policies.
+--
+-- Elle est de toute façon INUTILE : Supabase active la RLS sur
+-- `realtime.messages` par défaut dès que Realtime Authorization est en place.
+-- On se contente donc d'y ajouter nos policies — ce que le rôle du SQL Editor
+-- a bien le droit de faire.
+--
+-- Pour le vérifier si besoin :
+--   SELECT relrowsecurity FROM pg_class
+--    WHERE oid = 'realtime.messages'::regclass;   -- doit renvoyer true
 
 -- ------------------------------------------------------- duels live (046)
 -- Topic `duel-<uuid>` : réservé à l'hôte et à l'invité de CE duel.

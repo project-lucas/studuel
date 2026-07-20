@@ -119,6 +119,10 @@ export default async function MoiPage({
     { data: habits },
     { data: avatarRow },
     { data: goalsRow },
+    { data: tests },
+    { data: studies },
+    { data: lessonsDone },
+    { data: challenges },
   ] = await Promise.all([
     supabase
       .from('profiles')
@@ -137,6 +141,26 @@ export default async function MoiPage({
     // weekly_goals isolé de même (157 peut-être pas passée) mais chargé en
     // parallèle ici plutôt qu'en requête série plus bas.
     supabase.from('profiles').select('weekly_goals').eq('id', user.id).maybeSingle(),
+    // Sessions de travail : chargées DÈS ce lot parce que la synchro auto des
+    // habitudes en a besoin juste après (et que le lot suivant lit habit_logs,
+    // donc doit venir APRÈS l'écriture). Elles resservent telles quelles aux
+    // statistiques plus bas — les redemander coûtait 4 requêtes en série.
+    // user_id explicite : la RLS le garantit aujourd'hui, mais la couche
+    // sociale ouvrira la lecture croisée des sessions — ces stats sont à soi.
+    supabase
+      .from('test_sessions')
+      .select('created_at, score, total')
+      .eq('user_id', user.id)
+      .returns<SessionRow[]>(),
+    supabase.from('study_sessions').select('created_at').eq('user_id', user.id),
+    supabase
+      .from('lesson_completions')
+      .select('created_at')
+      .eq('user_id', user.id),
+    supabase
+      .from('challenge_sessions')
+      .select('created_at')
+      .eq('user_id', user.id),
   ])
 
   const commuteSlots: CommuteSlot[] = Array.isArray(profile?.commute_slots)
@@ -144,7 +168,12 @@ export default async function MoiPage({
     : []
 
   // Validation automatique « à la volée » du jour (révision, trajets).
-  await syncAutoHabits(supabase, user.id, habits ?? [], commuteSlots)
+  await syncAutoHabits(supabase, user.id, habits ?? [], commuteSlots, {
+    tests: tests ?? [],
+    studies: studies ?? [],
+    lessons: lessonsDone ?? [],
+    challenges: challenges ?? [],
+  })
 
   // Un an de logs : la modale « Ma discipline » propose une vue Année.
   const since = new Date()
@@ -155,10 +184,6 @@ export default async function MoiPage({
     { data: catalog, error: catalogError },
     { data: badges },
     { data: userBadges },
-    { data: tests },
-    { data: studies },
-    { data: lessonsDone },
-    { data: challenges },
     { data: workRow },
     { data: communityRaw },
     { data: purchases },
@@ -180,22 +205,6 @@ export default async function MoiPage({
     supabase.from('habit_catalog').select('*').returns<HabitCatalogEntry[]>(),
     supabase.from('badges').select('*').returns<Badge[]>(),
     supabase.from('user_badges').select('badge_id'),
-    // user_id explicite : la RLS le garantit aujourd'hui, mais la couche
-    // sociale ouvrira la lecture croisée des sessions — ces stats sont à soi.
-    supabase
-      .from('test_sessions')
-      .select('created_at, score, total')
-      .eq('user_id', user.id)
-      .returns<SessionRow[]>(),
-    supabase.from('study_sessions').select('created_at').eq('user_id', user.id),
-    supabase
-      .from('lesson_completions')
-      .select('created_at')
-      .eq('user_id', user.id),
-    supabase
-      .from('challenge_sessions')
-      .select('created_at')
-      .eq('user_id', user.id),
     // Temps de travail (chrono du Défi) — requête séparée : si 014_temps.sql
     // n'est pas passée, seule cette colonne manque, le reste tient debout.
     supabase

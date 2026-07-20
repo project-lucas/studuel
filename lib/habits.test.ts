@@ -6,6 +6,7 @@ import {
   dayIndexOf,
   isInCommuteSlot,
   longestRun,
+  autoHabitLogs,
 } from '@/lib/habits'
 import type { Habit } from '@/lib/types'
 
@@ -108,5 +109,124 @@ describe('longestRun', () => {
 
   it('ensemble vide → 0', () => {
     expect(longestRun(new Set())).toBe(0)
+  })
+})
+
+describe('autoHabitLogs', () => {
+  // 2026-07-20 est un LUNDI (index 0 dans la convention du projet).
+  const TODAY = '2026-07-20'
+
+  function autoHabit(
+    validationType: 'auto_revision' | 'auto_commute',
+    target: Record<string, unknown> = {},
+  ): Habit {
+    return {
+      id: `h-${validationType}`,
+      catalog_id: 'c1',
+      target,
+      created_at: '2026-01-01T00:00:00Z',
+      habit_catalog: {
+        validation_type: validationType,
+        days: [0, 1, 2, 3, 4, 5, 6],
+      } as unknown as Habit['habit_catalog'],
+    }
+  }
+
+  const noSessions = { tests: [], studies: [], lessons: [], challenges: [] }
+
+  it('ne renvoie rien sans habitude automatique', () => {
+    expect(autoHabitLogs('u1', [], [], noSessions, TODAY)).toEqual([])
+  })
+
+  it('valide la révision quand l’objectif de sessions est atteint', () => {
+    const logs = autoHabitLogs(
+      'u1',
+      [autoHabit('auto_revision', { sessions: 2 })],
+      [],
+      { ...noSessions, tests: [{ created_at: `${TODAY}T09:00:00Z` }, { created_at: `${TODAY}T10:00:00Z` }] },
+      TODAY,
+    )
+
+    expect(logs).toHaveLength(1)
+    expect(logs[0]).toMatchObject({ completed: true, date: TODAY, auto_validated: true })
+  })
+
+  it('ne valide pas la révision sous l’objectif', () => {
+    const logs = autoHabitLogs(
+      'u1',
+      [autoHabit('auto_revision', { sessions: 3 })],
+      [],
+      { ...noSessions, tests: [{ created_at: `${TODAY}T09:00:00Z` }] },
+      TODAY,
+    )
+
+    expect(logs[0].completed).toBe(false)
+  })
+
+  it('ignore les sessions des AUTRES jours', () => {
+    // Le cœur du correctif de perf : les listes reçues couvrent tout
+    // l'historique (la page les charge déjà), la journée est filtrée ici.
+    const logs = autoHabitLogs(
+      'u1',
+      [autoHabit('auto_revision', { sessions: 1 })],
+      [],
+      {
+        ...noSessions,
+        tests: [
+          { created_at: '2026-07-19T09:00:00Z' },
+          { created_at: '2026-01-02T09:00:00Z' },
+        ],
+      },
+      TODAY,
+    )
+
+    expect(logs[0].completed).toBe(false)
+  })
+
+  it('tolère un horodatage illisible sans le compter', () => {
+    const logs = autoHabitLogs(
+      'u1',
+      [autoHabit('auto_revision', { sessions: 1 })],
+      [],
+      { ...noSessions, tests: [{ created_at: 'pas-une-date' }, { created_at: null }] },
+      TODAY,
+    )
+
+    expect(logs[0].completed).toBe(false)
+  })
+
+  it('valide le trajet si un quiz OU un défi tombe dans un créneau', () => {
+    // 08:30 Europe/Paris en été = 06:30 UTC.
+    const slots = [{ start: '08:00', end: '09:00' }] as never
+
+    const parQuiz = autoHabitLogs(
+      'u1',
+      [autoHabit('auto_commute')],
+      slots,
+      { ...noSessions, tests: [{ created_at: `${TODAY}T06:30:00Z` }] },
+      TODAY,
+    )
+    const parDefi = autoHabitLogs(
+      'u1',
+      [autoHabit('auto_commute')],
+      slots,
+      { ...noSessions, challenges: [{ created_at: `${TODAY}T06:30:00Z` }] },
+      TODAY,
+    )
+
+    expect(parQuiz[0].completed).toBe(true)
+    expect(parDefi[0].completed).toBe(true)
+  })
+
+  it('ne valide pas le trajet hors créneau', () => {
+    const logs = autoHabitLogs(
+      'u1',
+      [autoHabit('auto_commute')],
+      [{ start: '08:00', end: '09:00' }] as never,
+      { ...noSessions, tests: [{ created_at: `${TODAY}T15:00:00Z` }] },
+      TODAY,
+    )
+
+    expect(logs[0].completed).toBe(false)
   })
 })

@@ -104,13 +104,36 @@ export function isInCommuteSlot(
 // logs du jour pour les habitudes automatiques à partir des sessions réelles.
 // -----------------------------------------------------------------------------
 
-export async function syncAutoHabits(
-  supabase: SupabaseClient,
+/** Une ligne d'horodatage de session, telle que lue en base. */
+export type SessionStamp = { created_at: unknown }
+
+/** Les sessions de l'élève, déjà chargées par la page appelante. */
+export type SessionsByKind = {
+  tests: ReadonlyArray<SessionStamp>
+  studies: ReadonlyArray<SessionStamp>
+  lessons: ReadonlyArray<SessionStamp>
+  challenges: ReadonlyArray<SessionStamp>
+}
+
+/** Ligne de `habit_logs` à écrire pour une habitude auto-validée. */
+export type AutoHabitLog = {
+  habit_id: string
+  user_id: string
+  date: string
+  completed: boolean
+  auto_validated: true
+}
+
+// Décision pure : quelles habitudes automatiques sont validées aujourd'hui, au
+// vu des sessions de la journée. Isolée de l'accès base pour être testable —
+// c'est ici que vit la règle, `syncAutoHabits` ne fait plus que l'écrire.
+export function autoHabitLogs(
   userId: string,
   habits: Habit[],
   commuteSlots: CommuteSlot[],
-): Promise<void> {
-  const today = toDayKey(new Date())
+  sessions: SessionsByKind,
+  today: string,
+): AutoHabitLog[] {
   const todayIdx = dayIndexOf(today)
   const autoHabits = habits.filter(
     (h) =>
@@ -118,47 +141,30 @@ export async function syncAutoHabits(
         h.habit_catalog?.validation_type === 'auto_commute') &&
       habitDays(h).includes(todayIdx), // seulement si planifiée aujourd'hui
   )
-  if (autoHabits.length === 0) return
-  const dayStart = `${today}T00:00:00Z`
+  if (autoHabits.length === 0) return []
 
-  // user_id explicite : la RLS le garantit aujourd'hui, mais la couche sociale
-  // ouvrira la lecture croisée des sessions — ces comptes doivent rester à soi.
-  const [{ data: tests }, { data: studies }, { data: lessons }, { data: challenges }] =
-    await Promise.all([
-      supabase
-        .from('test_sessions')
-        .select('created_at')
-        .eq('user_id', userId)
-        .gte('created_at', dayStart),
-      supabase
-        .from('study_sessions')
-        .select('created_at')
-        .eq('user_id', userId)
-        .gte('created_at', dayStart),
-      supabase
-        .from('lesson_completions')
-        .select('created_at')
-        .eq('user_id', userId)
-        .gte('created_at', dayStart),
-      supabase
-        .from('challenge_sessions')
-        .select('created_at')
-        .eq('user_id', userId)
-        .gte('created_at', dayStart),
-    ])
-
+  // Les listes reçues couvrent TOUT l'historique (la page les charge déjà pour
+  // ses statistiques) : on retient la journée en cours. Comparaison par clé de
+  // jour UTC plutôt que sur la chaîne brute, dont le format varie selon la base.
+  const isToday = (r: SessionStamp) => {
+    const d = new Date(String(r.created_at))
+    return !Number.isNaN(d.getTime()) && toDayKey(d) === today
+  }
+  const testsToday = sessions.tests.filter(isToday)
+  const challengesToday = sessions.challenges.filter(isToday)
   const sessionsToday =
-    (tests?.length ?? 0) +
-    (studies?.length ?? 0) +
-    (lessons?.length ?? 0) +
-    (challenges?.length ?? 0)
+    testsToday.length +
+    sessions.studies.filter(isToday).length +
+    sessions.lessons.filter(isToday).length +
+    challengesToday.length
+
   // Quiz OU défi joué pendant un trajet : les deux comptent — l'objectif est
   // « se tester pendant le trajet », peu importe le format.
-  const commuteQuizToday = [...(tests ?? []), ...(challenges ?? [])].some((t) =>
+  const commuteQuizToday = [...testsToday, ...challengesToday].some((t) =>
     isInCommuteSlot(String(t.created_at), commuteSlots),
   )
 
-  const rows = autoHabits.map((h) => {
+  return autoHabits.map((h) => {
     const type = h.habit_catalog?.validation_type
     const target = Number(
       (h.target as { sessions?: unknown }).sessions ??
@@ -174,9 +180,29 @@ export async function syncAutoHabits(
       user_id: userId,
       date: today,
       completed,
-      auto_validated: true,
+      auto_validated: true as const,
     }
   })
+}
+
+// Écrit les validations automatiques du jour. Les sessions sont FOURNIES par
+// l'appelant : /moi les a déjà chargées pour ses statistiques, les redemander
+// coûtait 4 allers-retours réseau en SÉRIE après le chargement parallèle.
+export async function syncAutoHabits(
+  supabase: SupabaseClient,
+  userId: string,
+  habits: Habit[],
+  commuteSlots: CommuteSlot[],
+  sessions: SessionsByKind,
+): Promise<void> {
+  const rows = autoHabitLogs(
+    userId,
+    habits,
+    commuteSlots,
+    sessions,
+    toDayKey(new Date()),
+  )
+  if (rows.length === 0) return
 
   await supabase
     .from('habit_logs')

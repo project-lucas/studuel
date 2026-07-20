@@ -28,6 +28,7 @@ export default function CompagnonCard({
   accessories,
   weekSessions = 0,
   weekDelta = 0,
+  compact = false,
 }: {
   streak: number
   activeToday: boolean
@@ -36,6 +37,8 @@ export default function CompagnonCard({
   // Sessions de la semaine + écart vs la précédente : il COMMENTE ta semaine.
   weekSessions?: number
   weekDelta?: number
+  // `compact` : encart resserré (ligne unique + barre fine), pour « Ma semaine ».
+  compact?: boolean
 }) {
   const stage = stageForStreak(streak)
   const next = nextStage(streak)
@@ -59,6 +62,83 @@ export default function CompagnonCard({
       sfx.tap()
     }
     setEditing(false)
+  }
+
+  // Encart resserré pour l'onglet « Ma semaine » : le compagnon vit sa forme et
+  // sa progression en une ligne, sans le détail plein écran.
+  if (compact) {
+    return (
+      <section
+        className="moi-card flex items-center gap-3 rounded-[1.75rem] bg-white p-4"
+        aria-label="Ton compagnon d'étude"
+      >
+        <span
+          className={cn(
+            'relative flex size-14 shrink-0 items-center justify-center',
+            mood === 'endormi' && 'opacity-80',
+          )}
+        >
+          {mood === 'rayonnant' ? (
+            <span
+              aria-hidden="true"
+              className="moi-glow compagnon-halo absolute -inset-1 rounded-full"
+            />
+          ) : null}
+          <Image
+            src={mood === 'affame' ? COMPANION_HUNGRY_IMAGE : stage.image}
+            alt=""
+            aria-hidden="true"
+            width={52}
+            height={52}
+            className={cn(
+              'relative size-full object-contain',
+              mood === 'endormi' && 'compagnon-sleep',
+              mood === 'affame' && 'compagnon-flicker',
+              (mood === 'en_forme' || mood === 'rayonnant') && 'flame-breathe',
+            )}
+          />
+          {accessories.length > 0 ? (
+            <span
+              aria-hidden="true"
+              className="absolute -bottom-1 flex gap-0.5 text-xs drop-shadow-sm"
+            >
+              {accessories.slice(0, 3).map((a) => (
+                <span key={a}>{a}</span>
+              ))}
+            </span>
+          ) : null}
+        </span>
+
+        <div className="min-w-0 flex-1">
+          <p className="truncate font-heading text-base font-bold">{name}</p>
+          <p className="text-[11px] font-semibold text-primary">
+            {stage.name}
+            {streak > 0
+              ? ` · série de ${streak} jour${streak > 1 ? 's' : ''}`
+              : ''}
+          </p>
+          {next ? (
+            <div
+              className="moi-track mt-1.5 h-2 w-full overflow-hidden rounded-full"
+              role="progressbar"
+              aria-label={`Évolution vers ${next.name}`}
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-valuenow={Math.round(progress * 100)}
+            >
+              <div
+                className="bar-fill h-full rounded-full bg-highlight"
+                style={{ width: `${Math.round(progress * 100)}%` }}
+              />
+            </div>
+          ) : (
+            <p className="mt-0.5 text-[11px] font-semibold text-muted-foreground">
+              Forme finale atteinte 👑
+            </p>
+          )}
+        </div>
+      </section>
+    )
   }
 
   return (

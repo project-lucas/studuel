@@ -148,6 +148,18 @@ describe('debriefYearStats', () => {
     expect(p1).toMatchObject({ wins: 0, slips: 1, answered: 1 })
   })
 
+  it('détaille les issues jour par jour (byDate) pour la heatmap', () => {
+    const stats = debriefYearStats([id0, id1], logs)
+    const p0 = stats.perPair.find((p) => p.id === id0)!
+    expect(p0.byDate).toEqual({
+      '2026-01-01': 'good',
+      '2026-01-02': 'good',
+      '2026-01-03': 'bad',
+    })
+    const p1 = stats.perPair.find((p) => p.id === id1)!
+    expect(p1.byDate).toEqual({ '2026-01-01': 'bad' })
+  })
+
   it('calcule les totaux, les jours coachés et le taux de victoires', () => {
     const stats = debriefYearStats([id0, id1], logs)
     expect(stats.totalWins).toBe(2)
@@ -161,6 +173,34 @@ describe('debriefYearStats', () => {
   it('inclut une habitude historique même si elle n\'est plus référencée', () => {
     const stats = debriefYearStats([], logs)
     expect(stats.perPair.map((p) => p.id)).toContain(id0)
+  })
+
+  it('restreint le bilan à l’année civile demandée', () => {
+    // La page charge 366 jours glissants (donc 2 années civiles) alors que les
+    // heatmaps ne dessinent que l'année en cours : sans ce filtre, le bandeau
+    // compterait des jours invisibles dans les grilles.
+    const across: DebriefLogEntry[] = [
+      ...logs,
+      { pair_id: id0, date: '2025-12-31', outcome: 'good' },
+      { pair_id: id0, date: '2025-06-15', outcome: 'good' },
+    ]
+
+    const stats = debriefYearStats([id0, id1], across, '2026')
+
+    expect(stats.totalWins).toBe(2) // les 2 victoires de 2025 sont exclues
+    expect(stats.daysCoached).toBe(3)
+    expect(Object.keys(stats.perPair.find((p) => p.id === id0)!.byDate)).not.toContain(
+      '2025-12-31',
+    )
+  })
+
+  it('sans année précisée, garde tout l’historique', () => {
+    const across: DebriefLogEntry[] = [
+      ...logs,
+      { pair_id: id0, date: '2025-12-31', outcome: 'good' },
+    ]
+
+    expect(debriefYearStats([id0, id1], across).totalWins).toBe(3)
   })
 
   it('sélection et historique vides → tout à zéro, pas de meilleure habitude', () => {

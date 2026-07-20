@@ -217,17 +217,66 @@ export default function CapacityScore({
   answers = {},
   autoOpen = false,
   needsMigration = false,
+  variant = 'full',
 }: {
   score: number | null
   answers?: CapacityAnswers
   // Ouvre le questionnaire à l'arrivée (fin d'onboarding, score encore vide).
   autoOpen?: boolean
   needsMigration?: boolean
+  // `line` : ligne compacte sans carte, à glisser dans la carte Trajectoire.
+  variant?: 'full' | 'line'
 }) {
   const [open, setOpen] = useState(autoOpen && score === null && !needsMigration)
   const priorities = capacityPriorities(answers)
   // Tant qu'aucun vrai bilan n'a été fait, on affiche un score fictif (50 %).
   const displayScore = score ?? 50
+  const topPriority = priorities[0] ?? null
+
+  // Version « 1 ligne » fondue dans la carte Trajectoire : score + priorité +
+  // ⚙ pour (re)faire le point. Pas de chrome de carte propre.
+  if (variant === 'line') {
+    return (
+      <>
+        <div className="flex items-center gap-2.5">
+          <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <Gauge className="size-4.5" strokeWidth={2.2} aria-hidden="true" />
+          </span>
+          <div className="min-w-0 flex-1">
+            <p className="text-sm font-bold text-foreground">
+              <span className="tabular-nums">{displayScore}%</span> de tes
+              capacités d&apos;apprentissage
+            </p>
+            <p className="truncate text-xs text-muted-foreground">
+              {needsMigration
+                ? 'Bilan à activer (migration 013).'
+                : topPriority
+                  ? `À renforcer : ${topPriority.label}`
+                  : capacityMessage(displayScore)}
+            </p>
+          </div>
+          {!needsMigration ? (
+            <button
+              type="button"
+              aria-label="Faire ou refaire le point et actualiser mon score"
+              title="Faire le point"
+              onClick={() => {
+                sfx.tap()
+                setOpen(true)
+              }}
+              className="flex size-11 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-all hover:bg-muted hover:text-foreground active:scale-90"
+            >
+              <Settings2 className="size-4" strokeWidth={2.2} />
+            </button>
+          ) : null}
+        </div>
+
+        {open ? (
+          <CapacityQuiz initial={answers} onClose={() => setOpen(false)} />
+        ) : null}
+      </>
+    )
+  }
 
   return (
     <>

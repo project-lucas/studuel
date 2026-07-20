@@ -1,32 +1,29 @@
 'use client'
 
 import { useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
-import { ListChecks, PawPrint, ChartLine, type LucideIcon } from 'lucide-react'
+import { CalendarHeart, ChartLine, type LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 
 // -----------------------------------------------------------------------------
-// Tableau de bord de l'onglet Moi : au lieu d'empiler cinq cartes qui obligent
-// à scroller sans fin (semaine, compagnon, capacités, débrief, extras), on
-// range tout derrière trois onglets — une seule section visible à la fois.
-// Les cartes existantes sont passées telles quelles en slots ; tous les
-// panneaux restent montés (leur état survit au changement d'onglet).
+// Tableau de bord de l'onglet Moi : au lieu d'empiler des cartes qui obligent à
+// scroller sans fin, on range tout derrière deux onglets denses — Ma semaine
+// (rituels, objectifs, compagnon) et Ma progression (trajectoire, graphiques,
+// badges). Une seule section visible à la fois ; tous les panneaux restent
+// montés (leur état survit au changement d'onglet).
 // -----------------------------------------------------------------------------
 type TabDef = { id: string; label: string; icon: LucideIcon; panel: ReactNode }
 
 export default function MoiTabs({
   semaine,
-  compagnon,
   progres,
 }: {
   semaine: ReactNode
-  compagnon: ReactNode
   progres: ReactNode
 }) {
   const tabs: TabDef[] = [
-    { id: 'semaine', label: 'Habitudes', icon: ListChecks, panel: semaine },
-    { id: 'compagnon', label: 'Compagnon', icon: PawPrint, panel: compagnon },
-    { id: 'progres', label: 'Progrès', icon: ChartLine, panel: progres },
+    { id: 'semaine', label: 'Ma semaine', icon: CalendarHeart, panel: semaine },
+    { id: 'progres', label: 'Ma progression', icon: ChartLine, panel: progres },
   ]
   const [active, setActive] = useState(tabs[0].id)
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([])
@@ -48,7 +45,7 @@ export default function MoiTabs({
       <div
         role="tablist"
         aria-label="Sections de mon profil"
-        className="moi-card sticky top-2 z-20 grid grid-cols-3 gap-1 rounded-full bg-white p-1"
+        className="moi-card sticky top-2 z-20 grid grid-cols-2 gap-1 rounded-full bg-white p-1"
       >
         {tabs.map((t, i) => {
           const selected = active === t.id

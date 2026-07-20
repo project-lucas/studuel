@@ -181,6 +181,8 @@ export type DebriefPairStat = {
   wins: number
   slips: number
   answered: number
+  // Détail jour par jour (clé UTC YYYY-MM-DD → issue) pour la heatmap annuelle.
+  byDate: Record<string, DebriefOutcome>
 }
 
 export type DebriefYearStats = {
@@ -202,8 +204,19 @@ export function debriefYearStats(
   selected: string[],
   // Accepte les lignes brutes de debrief_logs (outcome typé string en base).
   logs: ReadonlyArray<{ pair_id: string; date: string; outcome: string }>,
+  // Année civile (« 2026 ») à laquelle restreindre le bilan. La page charge une
+  // fenêtre glissante de 366 jours, donc à cheval sur DEUX années civiles ; or
+  // les heatmaps ne dessinent que l'année en cours. Sans ce filtre, les chiffres
+  // du bandeau comptent des jours qui n'apparaissent sur AUCUNE grille en
+  // dessous (« 40 jours coachés » sans 40 points verts). Omis = tout l'historique.
+  year?: string,
 ): DebriefYearStats {
-  const valid = logs.filter((l) => isDebriefPairId(l.pair_id) && isDebriefOutcome(l.outcome))
+  const inYear = year
+    ? logs.filter((l) => String(l.date).slice(0, 4) === year)
+    : logs
+  const valid = inYear.filter(
+    (l) => isDebriefPairId(l.pair_id) && isDebriefOutcome(l.outcome),
+  )
 
   // Univers des habitudes à afficher : celles référencées + celles vues passer.
   const ids = new Set<string>()
@@ -217,6 +230,12 @@ export function debriefYearStats(
     const mine = valid.filter((l) => l.pair_id === id)
     const wins = mine.filter((l) => l.outcome === 'good').length
     const slips = mine.filter((l) => l.outcome === 'bad').length
+    // Dernière issue connue par jour (une seule ligne/jour en base, mais on reste
+    // robuste si l'historique en contenait plusieurs : la dernière l'emporte).
+    const byDate: Record<string, DebriefOutcome> = {}
+    for (const l of mine) {
+      if (isDebriefOutcome(l.outcome)) byDate[l.date] = l.outcome
+    }
     perPair.push({
       id,
       bad: meta.bad,
@@ -225,6 +244,7 @@ export function debriefYearStats(
       wins,
       slips,
       answered: wins + slips,
+      byDate,
     })
   }
   perPair.sort((a, b) => b.wins - a.wins || b.answered - a.answered)

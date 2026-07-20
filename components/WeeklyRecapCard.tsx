@@ -43,12 +43,16 @@ function StatTile({
 // « Ta semaine » — rétro hebdo de l'onglet Moi : les chiffres marquants de la
 // semaine en cours + une accroche qui s'adapte (cf. lib/weekly-recap), et le
 // partage en story (ShareWeekButton) dès qu'il y a quelque chose à montrer.
+// `bare` : rendu sans chrome de carte ni gros titre, pour s'imbriquer dans la
+// carte fusionnée « Ma semaine » (SemaineCard).
 export default function WeeklyRecapCard({
   recap,
   streak,
+  bare = false,
 }: {
   recap: WeeklyRecap
   streak: number
+  bare?: boolean
 }) {
   const deltaLabel =
     recap.sessionsDelta > 0
@@ -57,19 +61,26 @@ export default function WeeklyRecapCard({
         ? `${recap.sessionsDelta} vs sem. dernière`
         : undefined
 
-  return (
-    <section
-      aria-label="Bilan de la semaine"
-      className="moi-card rounded-[1.75rem] bg-white p-5"
-    >
-      <div className="mb-3 flex items-center gap-2">
-        <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-          <CalendarCheck className="size-4.5" strokeWidth={2.2} aria-hidden="true" />
-        </span>
-        <h2 className="font-heading text-lg font-extrabold text-foreground">
-          Ta semaine
-        </h2>
-      </div>
+  const body = (
+    <>
+      {bare ? (
+        <p className="mb-2 text-[11px] font-bold tracking-widest text-muted-foreground uppercase">
+          Cette semaine en chiffres
+        </p>
+      ) : (
+        <div className="mb-3 flex items-center gap-2">
+          <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <CalendarCheck
+              className="size-4.5"
+              strokeWidth={2.2}
+              aria-hidden="true"
+            />
+          </span>
+          <h2 className="font-heading text-lg font-extrabold text-foreground">
+            Ta semaine
+          </h2>
+        </div>
+      )}
 
       <p className="mb-4 flex items-start gap-1.5 text-sm font-medium text-foreground/80">
         <TrendingUp
@@ -110,6 +121,17 @@ export default function WeeklyRecapCard({
 
       {/* La semaine en story : montrer ses chiffres = la boucle virale. */}
       <ShareWeekButton recap={recap} streak={streak} />
+    </>
+  )
+
+  if (bare) return body
+
+  return (
+    <section
+      aria-label="Bilan de la semaine"
+      className="moi-card rounded-[1.75rem] bg-white p-5"
+    >
+      {body}
     </section>
   )
 }

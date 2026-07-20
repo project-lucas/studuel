@@ -1,20 +1,35 @@
+import type { ReactNode } from 'react'
 import { Target, Rocket } from 'lucide-react'
 import ProgressRing from '@/components/ProgressRing'
 import { cn } from '@/lib/utils'
 import { monthLabelFr, type Trajectoire } from '@/lib/trajectoire'
 
-// « Ma trajectoire » — la carte macro de l'onglet Moi (onglet Progrès) : la
+// « Ma trajectoire » — la carte macro de l'onglet Moi (onglet Progression) : la
 // préparation globale de l'année en un anneau, le rythme réel de l'élève, et
 // une projection honnête face à l'échéance (brevet/bac/fin d'année). Toute la
-// logique vit dans lib/trajectoire ; ici, uniquement l'affichage.
+// logique vit dans lib/trajectoire ; ici, uniquement l'affichage. `capacity` :
+// la ligne « bilan de capacités » fondue en pied de carte (plus de bloc dédié).
 export default function TrajectoireCard({
   trajectoire,
+  capacity,
 }: {
   trajectoire: Trajectoire
+  capacity?: ReactNode
 }) {
   const t = trajectoire
-  // Pas de classe/chapitres suivis : rien à projeter, la carte s'efface.
-  if (t.chaptersTotal === 0) return null
+  // Pas de classe/chapitres suivis : rien à projeter. On garde quand même la
+  // carte si elle porte la ligne capacités, sinon elle s'efface.
+  if (t.chaptersTotal === 0) {
+    if (!capacity) return null
+    return (
+      <section
+        aria-label="Mes capacités"
+        className="moi-card rounded-[1.75rem] bg-white p-5"
+      >
+        {capacity}
+      </section>
+    )
+  }
 
   const pct = Math.round(t.readiness * 100)
   const perWeekLabel =
@@ -91,6 +106,11 @@ export default function TrajectoireCard({
           </p>
         </div>
       </div>
+
+      {/* Bilan de capacités, fondu en pied de carte (ex-bloc autonome). */}
+      {capacity ? (
+        <div className="mt-4 border-t border-border/60 pt-4">{capacity}</div>
+      ) : null}
     </section>
   )
 }

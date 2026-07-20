@@ -23,9 +23,12 @@ import {
 export default function WeeklyGoalsCard({
   initial,
   weekStart,
+  bare = false,
 }: {
   initial: WeeklyGoal[]
   weekStart: string
+  // `bare` : rendu sans chrome de carte, pour s'imbriquer dans SemaineCard.
+  bare?: boolean
 }) {
   const [goals, setGoals] = useState<WeeklyGoal[]>(initial)
   const [text, setText] = useState('')
@@ -76,24 +79,34 @@ export default function WeeklyGoalsCard({
     })
   }
 
-  return (
-    <section
-      aria-label="Mes objectifs de la semaine"
-      className="moi-card rounded-[1.75rem] bg-white p-5"
-    >
-      <div className="mb-3 flex items-center gap-2">
-        <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-          <Target className="size-4.5" strokeWidth={2.2} aria-hidden="true" />
-        </span>
-        <h2 className="font-heading flex-1 text-lg font-extrabold text-foreground">
-          Mes objectifs
-        </h2>
-        {total > 0 ? (
-          <span className="shrink-0 text-xs font-bold text-primary tabular-nums">
-            {done}/{total}
+  const body = (
+    <>
+      {bare ? (
+        <div className="mb-2 flex items-center gap-2">
+          <p className="flex-1 text-[11px] font-bold tracking-widest text-muted-foreground uppercase">
+            Mes objectifs
+          </p>
+          {total > 0 ? (
+            <span className="shrink-0 text-xs font-bold text-primary tabular-nums">
+              {done}/{total}
+            </span>
+          ) : null}
+        </div>
+      ) : (
+        <div className="mb-3 flex items-center gap-2">
+          <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <Target className="size-4.5" strokeWidth={2.2} aria-hidden="true" />
           </span>
-        ) : null}
-      </div>
+          <h2 className="font-heading flex-1 text-lg font-extrabold text-foreground">
+            Mes objectifs
+          </h2>
+          {total > 0 ? (
+            <span className="shrink-0 text-xs font-bold text-primary tabular-nums">
+              {done}/{total}
+            </span>
+          ) : null}
+        </div>
+      )}
 
       {goals.length > 0 ? (
         <ul className="mb-3 flex flex-col gap-2">
@@ -184,6 +197,17 @@ export default function WeeklyGoalsCard({
           Impossible d&apos;enregistrer pour le moment. Réessaie.
         </p>
       ) : null}
+    </>
+  )
+
+  if (bare) return body
+
+  return (
+    <section
+      aria-label="Mes objectifs de la semaine"
+      className="moi-card rounded-[1.75rem] bg-white p-5"
+    >
+      {body}
     </section>
   )
 }

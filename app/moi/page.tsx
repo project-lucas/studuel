@@ -20,14 +20,10 @@ import TableauAnnee from '@/components/TableauAnnee'
 import MissionsJour from '@/components/MissionsJour'
 import CompagnonCard from '@/components/CompagnonCard'
 import DebriefCard from '@/components/DebriefCard'
-import GradeSelector from '@/components/GradeSelector'
 import StructureChart, { type WeekPoint } from '@/components/StructureChart'
 import BadgeGrid from '@/components/BadgeGrid'
-import WeeklyRecapCard from '@/components/WeeklyRecapCard'
-import MilestonesTimeline from '@/components/MilestonesTimeline'
-import WeeklyGoalsCard from '@/components/WeeklyGoalsCard'
+import SemaineCard from '@/components/SemaineCard'
 import TrajectoireCard from '@/components/TrajectoireCard'
-import NotesCard from '@/components/NotesCard'
 import { createClient } from '@/lib/supabase/server'
 import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
 import { getChapterMastery } from '@/lib/mastery'
@@ -35,7 +31,6 @@ import { normalizeGradeList } from '@/lib/notes'
 import { computeTrajectoire } from '@/lib/trajectoire'
 import { toDayKey, computeStreak, weekProgress } from '@/lib/streak'
 import { computeWeeklyRecap } from '@/lib/weekly-recap'
-import { computeMilestones } from '@/lib/milestones'
 import {
   normalizeWeeklyGoalsList,
   goalsForWeek,
@@ -428,18 +423,6 @@ export default async function MoiPage({
     ),
     weekStart,
   )
-  // Journal de progression : jalons horodatés reconstruits sur les données déjà
-  // chargées (sessions + jours d'activité), du plus récent au plus ancien.
-  const milestones = computeMilestones({
-    quizzes: (tests ?? []).map((t) => ({
-      date: String(t.created_at).slice(0, 10),
-      score: t.score,
-      total: t.total,
-    })),
-    lessonDates: (lessonsDone ?? []).map((l) => String(l.created_at).slice(0, 10)),
-    challengeDates: (challenges ?? []).map((c) => String(c.created_at).slice(0, 10)),
-    activityDays: [...activityDays],
-  })
   const sessionsPerDay = new Map<string, number>()
   for (const s of allActivity) {
     const key = String(s.created_at).slice(0, 10)
@@ -576,6 +559,9 @@ export default async function MoiPage({
       date: String(r.date),
       outcome: String(r.outcome),
     })),
+    // Même année civile que les heatmaps de DebriefYearRecap : les chiffres du
+    // bandeau et les grilles en dessous doivent parler du même intervalle.
+    toDayKey(new Date()).slice(0, 4),
   )
   const debriefRewardClaimed = Boolean(debriefRewardRow)
 
@@ -627,8 +613,8 @@ export default async function MoiPage({
         />
       </div>
 
-      {/* Le reste, rangé derrière trois onglets (une section à la fois) :
-          Habitudes (développé) · Compagnon · Progrès. */}
+      {/* Le reste, rangé derrière deux onglets denses (une section à la fois) :
+          Ma semaine (rituels + compagnon) · Ma progression (trajectoire + stats). */}
       <MoiTabs
         semaine={
           <div className="flex flex-col gap-4">
@@ -638,13 +624,17 @@ export default async function MoiPage({
               selected={debriefSelected}
               outcomes={debriefOutcomes}
               yearStats={debriefYearData}
+              today={today}
               rewardClaimedToday={debriefRewardClaimed}
               needsMigration={Boolean(debriefError)}
             />
-            {/* Rétro hebdo : la semaine en cours résumée en chiffres. */}
-            <WeeklyRecapCard recap={weeklyRecap} streak={currentStreak} />
-            {/* Objectifs perso de la semaine (1 à 3, reset lundi). */}
-            <WeeklyGoalsCard initial={weekGoals} weekStart={weekStart} />
+            {/* Une seule carte dense : rétro hebdo + objectifs perso. */}
+            <SemaineCard
+              recap={weeklyRecap}
+              streak={currentStreak}
+              weekGoals={weekGoals}
+              weekStart={weekStart}
+            />
             <WeekSection
               week={week}
               streak={currentStreak}
@@ -656,46 +646,34 @@ export default async function MoiPage({
               dayStatuses={dayStatuses}
               commuteSlots={commuteSlots}
             />
+            {/* Le compagnon, en encart resserré (plus d'onglet dédié). */}
+            <CompagnonCard
+              streak={currentStreak}
+              activeToday={activityDays.has(today)}
+              accessories={companionAccessories}
+              weekSessions={weeklyRecap.sessions}
+              weekDelta={weeklyRecap.sessionsDelta}
+              compact
+            />
           </div>
-        }
-        compagnon={
-          <CompagnonCard
-            streak={currentStreak}
-            activeToday={activityDays.has(today)}
-            accessories={companionAccessories}
-            weekSessions={weeklyRecap.sessions}
-            weekDelta={weeklyRecap.sessionsDelta}
-          />
         }
         progres={
           <>
-            {/* La carte macro : préparation de l'année + projection honnête. */}
+            {/* La carte macro : préparation de l'année + projection honnête,
+                avec le bilan de capacités fondu en pied de carte. */}
             <div className="mb-4">
-              <TrajectoireCard trajectoire={trajectoire} />
-            </div>
-            {/* La réalité scolaire : notes des vrais contrôles, moyenne et
-                évolution par trimestre — le pendant « bulletin » de la
-                projection ci-dessus. */}
-            <div className="mb-4">
-              <NotesCard
-                initial={schoolGrades}
-                subjects={gradeSubjects}
-                today={today}
-                needsMigration={Boolean(gradesError)}
+              <TrajectoireCard
+                trajectoire={trajectoire}
+                capacity={
+                  <CapacityScore
+                    score={capacityScore}
+                    answers={capacityAnswers}
+                    autoOpen={bilan === '1'}
+                    needsMigration={Boolean(profileError)}
+                    variant="line"
+                  />
+                }
               />
-            </div>
-            <div className="mb-4">
-              <GradeSelector current={gradeLevel} />
-            </div>
-            <CapacityScore
-              score={capacityScore}
-              answers={capacityAnswers}
-              autoOpen={bilan === '1'}
-              needsMigration={Boolean(profileError)}
-            />
-            {/* Journal de progression : la frise des jalons du parcours. */}
-            <div className="mt-4">
-              <MilestonesTimeline milestones={milestones} />
             </div>
             {/* Graphique et badges : repliés derrière deux icônes, à la demande. */}
             <MoiExtras

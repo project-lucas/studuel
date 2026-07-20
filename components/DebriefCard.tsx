@@ -1,7 +1,8 @@
 'use client'
 
-import { Fragment, useState, useTransition } from 'react'
-import { ArrowRight, Check, ChevronDown, Coins, Pencil, X } from 'lucide-react'
+import { useState, useTransition } from 'react'
+import { ArrowRight, Check, History, ListChecks, Pencil, X } from 'lucide-react'
+import CoinIcon from '@/components/ui/CoinIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -122,10 +123,9 @@ function PickRow({
   )
 }
 
-// Une case du débrief du jour : l'image EST le bouton — l'icône illustrée en
-// grand, le libellé réduit dessous (le bénéfice reste en mode sélection).
-// Recliquer la même case efface la réponse ; l'autre côté se met en retrait.
-function OutcomeCell({
+// Un côté du débrief du jour : l'habitude (icône + libellé) qui EST le bouton.
+// Recliquer le côté actif efface la réponse ; l'autre côté se met en retrait.
+function OutcomeSide({
   pair,
   side,
   outcome,
@@ -138,29 +138,65 @@ function OutcomeCell({
 }) {
   const active = outcome === side
   const dimmed = outcome !== undefined && !active
+  const label = side === 'bad' ? pair.bad : pair.good
 
   return (
     <button
       type="button"
       aria-pressed={active}
+      aria-label={
+        side === 'bad'
+          ? `Aujourd'hui, j'ai flanché : ${label}`
+          : `Aujourd'hui, j'ai tenu : ${label}`
+      }
       onClick={() => {
         sfx.tap()
         onPick(active ? null : side)
       }}
       className={cn(
-        'flex flex-col items-center gap-1.5 rounded-2xl p-2 transition-all active:scale-95',
-        active &&
-          (side === 'bad'
-            ? 'bg-destructive/10 ring-2 ring-destructive'
-            : 'bg-green-600/10 ring-2 ring-green-600'),
-        dimmed && 'opacity-40 grayscale',
+        'flex h-full items-start gap-2 rounded-2xl border-2 p-2.5 text-left transition-all active:scale-[0.98]',
+        active
+          ? side === 'bad'
+            ? 'border-destructive bg-destructive/10'
+            : 'border-green-600 bg-green-600/10'
+          : dimmed
+            ? 'border-transparent bg-muted/40 opacity-60 hover:opacity-100'
+            : 'border-transparent bg-muted/50 hover:bg-muted',
       )}
     >
-      <DebriefIcon pair={pair} side={side} className="size-14 text-3xl" />
-      <span className="text-center text-[10px] leading-tight font-semibold">
-        {side === 'bad' ? pair.bad : pair.good}
+      <DebriefIcon pair={pair} side={side} className="size-7 text-base" />
+      <span className="min-w-0 text-xs leading-snug">
+        <span className="font-semibold">{label}</span>
+        {side === 'good' ? (
+          <span className="mt-0.5 block text-[11px] font-semibold text-green-700 dark:text-green-400">
+            {pair.benefit}
+          </span>
+        ) : null}
       </span>
     </button>
+  )
+}
+
+// Une ligne du débrief du jour : le frein à gauche, l'habitude saine à droite —
+// on touche le côté qu'on a vécu aujourd'hui (rechute ou victoire).
+function OutcomeRow({
+  pair,
+  outcome,
+  onPick,
+}: {
+  pair: DebriefPair
+  outcome: DebriefOutcome | undefined
+  onPick: (next: DebriefOutcome | null) => void
+}) {
+  return (
+    <div className="grid grid-cols-[1fr_auto_1fr] items-stretch gap-2">
+      <OutcomeSide pair={pair} side="bad" outcome={outcome} onPick={onPick} />
+      <ArrowRight
+        aria-hidden="true"
+        className="size-4 shrink-0 self-center text-muted-foreground"
+      />
+      <OutcomeSide pair={pair} side="good" outcome={outcome} onPick={onPick} />
+    </div>
   )
 }
 
@@ -168,6 +204,7 @@ export default function DebriefCard({
   selected,
   outcomes,
   yearStats,
+  today,
   rewardClaimedToday = false,
   needsMigration = false,
 }: {
@@ -177,6 +214,8 @@ export default function DebriefCard({
   outcomes: Record<string, DebriefOutcome>
   // Rétrospective annuelle (debrief_logs sur ~1 an) — « ce que j'ai coaché ».
   yearStats: DebriefYearStats
+  // Jour courant (clé UTC YYYY-MM-DD) — repère de la heatmap annuelle.
+  today: string
   // La récompense du jour a-t-elle déjà été créditée (debrief_rewards) ?
   rewardClaimedToday?: boolean
   needsMigration?: boolean
@@ -187,7 +226,8 @@ export default function DebriefCard({
   )
   const [myOutcomes, setMyOutcomes] = useState(outcomes)
   const [editing, setEditing] = useState(false)
-  const [showYear, setShowYear] = useState(false)
+  // Onglet interne du bloc : le débrief du jour ou l'historique annuel.
+  const [tab, setTab] = useState<'today' | 'history'>('today')
   const [pending, startTransition] = useTransition()
 
   const pairs = DEBRIEF_CATALOG.filter((p) => mySelection.has(p.id))
@@ -249,7 +289,7 @@ export default function DebriefCard({
               {rewardEarned ? (
                 <Check className="size-3.5" strokeWidth={3} aria-hidden="true" />
               ) : (
-                <Coins className="size-3.5" strokeWidth={2.5} aria-hidden="true" />
+                <CoinIcon className="size-3.5" strokeWidth={2.5} />
               )}
               +{DEBRIEF_REWARD_COINS}
             </span>
@@ -312,53 +352,77 @@ export default function DebriefCard({
           </button>
         </>
       ) : (
-        /* ------------------------------------------------ débrief du jour */
+        /* -------------------------------- débrief du jour + historique */
         <>
-          <p className="mb-4 text-center text-xs leading-relaxed text-muted-foreground">
-            Touche ce qui s&apos;est vraiment passé aujourd&apos;hui.
-          </p>
-          <div className="relative">
-            {/* Le trait vertical entre les deux colonnes, comme la maquette. */}
-            <span
-              aria-hidden="true"
-              className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-border"
-            />
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-              {/* En-têtes de colonnes : ❌ mauvaises / ✅ saines. */}
-              <div className="flex flex-col items-center gap-1.5 pb-1">
-                <span className="flex size-9 items-center justify-center rounded-full bg-destructive text-white shadow-sm">
-                  <X className="size-5" strokeWidth={3} aria-hidden="true" />
-                </span>
-                <p className="text-center text-sm leading-tight font-extrabold">
-                  Mauvaises habitudes
-                </p>
-              </div>
-              <div className="flex flex-col items-center gap-1.5 pb-1">
-                <span className="flex size-9 items-center justify-center rounded-full bg-green-600 text-white shadow-sm">
-                  <Check className="size-5" strokeWidth={3} aria-hidden="true" />
-                </span>
-                <p className="text-center text-sm leading-tight font-extrabold">
-                  Saines habitudes
-                </p>
-              </div>
+          {/* Segmented control : le geste du jour ou la vue sur l'année. */}
+          <div
+            role="tablist"
+            aria-label="Vue du débrief"
+            className="mb-4 flex gap-1 rounded-full bg-muted/70 p-1"
+          >
+            {(
+              [
+                { key: 'today', label: "Aujourd'hui", icon: ListChecks },
+                { key: 'history', label: 'Historique', icon: History },
+              ] as const
+            ).map(({ key, label, icon: Icon }) => (
+              <button
+                key={key}
+                type="button"
+                role="tab"
+                aria-selected={tab === key}
+                onClick={() => {
+                  sfx.tap()
+                  setTab(key)
+                }}
+                className={cn(
+                  'flex min-h-11 flex-1 items-center justify-center gap-1.5 rounded-full py-1.5 text-xs font-bold transition-all',
+                  tab === key
+                    ? 'bg-primary text-primary-foreground shadow-sm'
+                    : 'text-muted-foreground hover:text-foreground',
+                )}
+              >
+                <Icon className="size-3.5" strokeWidth={2.5} aria-hidden="true" />
+                {label}
+              </button>
+            ))}
+          </div>
 
-              {pairs.map((pair) => (
-                <Fragment key={pair.id}>
-                  <OutcomeCell
-                    pair={pair}
-                    side="bad"
-                    outcome={myOutcomes[pair.id]}
-                    onPick={(next) => pickOutcome(pair.id, next)}
-                  />
-                  <OutcomeCell
-                    pair={pair}
-                    side="good"
-                    outcome={myOutcomes[pair.id]}
-                    onPick={(next) => pickOutcome(pair.id, next)}
-                  />
-                </Fragment>
-              ))}
-            </div>
+          {tab === 'history' ? (
+            <DebriefYearRecap stats={yearStats} today={today} />
+          ) : (
+            <>
+          <p className="mb-3 text-center text-xs leading-relaxed text-muted-foreground">
+            Sur chaque ligne, touche ce qui s&apos;est vraiment passé
+            aujourd&apos;hui : à gauche si tu as flanché, à droite si tu as tenu
+            la bonne habitude.
+          </p>
+          {/* En-têtes de colonnes : ❌ rechute / ✅ victoire. */}
+          <div className="mb-2 grid grid-cols-[1fr_auto_1fr] items-center gap-2">
+            <span className="flex items-center justify-center gap-1.5 text-xs font-extrabold text-destructive">
+              <span className="flex size-6 items-center justify-center rounded-full bg-destructive text-white shadow-sm">
+                <X className="size-3.5" strokeWidth={3} aria-hidden="true" />
+              </span>
+              Rechute
+            </span>
+            <span className="w-4" aria-hidden="true" />
+            <span className="flex items-center justify-center gap-1.5 text-xs font-extrabold text-green-700 dark:text-green-400">
+              <span className="flex size-6 items-center justify-center rounded-full bg-green-600 text-white shadow-sm">
+                <Check className="size-3.5" strokeWidth={3} aria-hidden="true" />
+              </span>
+              Victoire
+            </span>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            {pairs.map((pair) => (
+              <OutcomeRow
+                key={pair.id}
+                pair={pair}
+                outcome={myOutcomes[pair.id]}
+                onPick={(next) => pickOutcome(pair.id, next)}
+              />
+            ))}
           </div>
           {score.pending < score.total ? (
             <p className="mt-4 text-center text-xs font-semibold">
@@ -372,7 +436,7 @@ export default function DebriefCard({
 
           {rewardEarned ? (
             <p className="mt-3 flex items-center justify-center gap-1.5 rounded-full bg-green-600/10 py-2 text-xs font-bold text-green-700 dark:text-green-400">
-              <Coins className="size-4" strokeWidth={2.5} aria-hidden="true" />
+              <CoinIcon className="size-4" strokeWidth={2.5} />
               Débrief du jour validé · +{DEBRIEF_REWARD_COINS} pièces
             </p>
           ) : (
@@ -381,33 +445,8 @@ export default function DebriefCard({
               {DEBRIEF_REWARD_COINS} pièces du jour.
             </p>
           )}
-
-          {/* La rétrospective annuelle, repliée : « ce que j'ai coaché ». */}
-          <div className="mt-4 border-t border-border pt-3">
-            <button
-              type="button"
-              aria-expanded={showYear}
-              onClick={() => {
-                sfx.tap()
-                setShowYear((v) => !v)
-              }}
-              className="flex w-full items-center justify-between gap-2 rounded-xl px-1 py-1.5 text-left text-xs font-bold text-foreground transition-colors hover:text-primary"
-            >
-              <span>Mon année de coaching</span>
-              <ChevronDown
-                className={cn(
-                  'size-4 shrink-0 text-muted-foreground transition-transform',
-                  showYear && 'rotate-180',
-                )}
-                aria-hidden="true"
-              />
-            </button>
-            {showYear ? (
-              <div className="mt-3">
-                <DebriefYearRecap stats={yearStats} />
-              </div>
-            ) : null}
-          </div>
+            </>
+          )}
         </>
       )}
     </section>

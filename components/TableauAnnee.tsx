@@ -1,17 +1,25 @@
 'use client'
 
-import { useMemo, useState } from 'react'
-import { Minus, Plus, TrendingDown, TrendingUp } from 'lucide-react'
+import { useMemo, useState, useTransition } from 'react'
+import { ChevronDown, Minus, Plus, TrendingDown, TrendingUp, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { removeGradeAction } from '@/app/moi/actions'
 import AddGradeSheet, { type SubjectLite } from '@/components/AddGradeSheet'
 import {
   anneeMatrix,
+  displayedTrimestre,
   formatNote,
+  trimestreDelta,
   trimestreOf,
+  trimestreSummaries,
+  trimestreTrendMessage,
   type SchoolGrade,
   type Trimestre,
 } from '@/lib/notes'
+
+// 'YYYY-MM-DD' → 'JJ/MM' (affichage compact des dernières notes).
+const shortDate = (dayKey: string) => `${dayKey.slice(8, 10)}/${dayKey.slice(5, 7)}`
 
 // -----------------------------------------------------------------------------
 // « Tableau de l'année » : LE tableau scolaire de l'onglet Moi — une ardoise
@@ -68,17 +76,53 @@ export default function TableauAnnee({
   const [adding, setAdding] = useState(false)
   // Notes ajoutées depuis CE tableau, en attendant le rafraîchissement serveur.
   const [extra, setExtra] = useState<SchoolGrade[]>([])
+  // Notes retirées en optimiste (X sur « Dernières notes »), le temps de la revalidation.
+  const [removedIds, setRemovedIds] = useState<Set<string>>(() => new Set())
+  const [notesOpen, setNotesOpen] = useState(false)
+  const [removeError, setRemoveError] = useState(false)
+  const [pending, startTransition] = useTransition()
 
   const grades = useMemo(() => {
     const seen = new Set(initial.map((g) => g.id))
-    return [...initial, ...extra.filter((g) => !seen.has(g.id))]
-  }, [initial, extra])
+    const merged = [...initial, ...extra.filter((g) => !seen.has(g.id))]
+    return removedIds.size > 0
+      ? merged.filter((g) => !removedIds.has(g.id))
+      : merged
+  }, [initial, extra, removedIds])
 
   const { rows, general } = useMemo(
     () => anneeMatrix(grades, today),
     [grades, today],
   )
   const currentTri = trimestreOf(today)?.t ?? null
+
+  // Tendance narrative (T1 → T2 → T3), reprise de « Mes notes » pour densifier
+  // le tableau : « +1,2 pt depuis le trimestre dernier ».
+  const summaries = trimestreSummaries(grades, today)
+  const displayed = displayedTrimestre(summaries, today)
+  const delta = trimestreDelta(summaries, displayed)
+  const trendMessage = trimestreTrendMessage(delta)
+
+  // Dernières notes (plus récentes d'abord) : la seule vue où l'on peut retirer
+  // une note saisie par erreur.
+  const recent = useMemo(
+    () =>
+      [...grades]
+        .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0))
+        .slice(0, 8),
+    [grades],
+  )
+  const totalNotes = rows.reduce((s, r) => s + r.count, 0)
+
+  const removeNote = (id: string) => {
+    if (pending) return
+    setRemoveError(false)
+    startTransition(async () => {
+      const res = await removeGradeAction(id)
+      if (res.ok) setRemovedIds((prev) => new Set(prev).add(id))
+      else setRemoveError(true)
+    })
+  }
 
   const nameOf = (slug: string) =>
     subjects.find((s) => s.slug === slug)?.name ?? slug
@@ -285,14 +329,89 @@ export default function TableauAnnee({
         </div>
       )}
 
-      {/* Légende craie, discrète : les moyennes sont ramenées sur 20. */}
+      {/* Tendance + dernières notes (retrait) + légende — l'ex « Mes notes »
+          fondu ici pour ne plus dupliquer les notes dans un second bloc. */}
       {rows.length > 0 && !needsMigration ? (
-        <p className="moi-chalk mt-2 text-right text-[10px] opacity-50">
-          Moyennes /20 ·{' '}
-          {rows.reduce((s, r) => s + r.count, 0) > 1
-            ? `${rows.reduce((s, r) => s + r.count, 0)} notes cette année`
-            : '1 note cette année'}
-        </p>
+        <div className="mt-3">
+          {trendMessage && delta !== null ? (
+            <p className="moi-chalk mb-2 flex items-center gap-1.5 text-xs font-semibold">
+              <TrendingUp
+                className={cn(
+                  'size-3.5 shrink-0',
+                  delta < 0 && 'rotate-180 -scale-x-100',
+                )}
+                strokeWidth={2.4}
+                aria-hidden="true"
+              />
+              {trendMessage}
+            </p>
+          ) : null}
+
+          <button
+            type="button"
+            aria-expanded={notesOpen}
+            onClick={() => {
+              sfx.tap()
+              setNotesOpen((o) => !o)
+            }}
+            className="moi-chalk flex w-full cursor-pointer items-center justify-between rounded-lg px-1 py-1.5 text-xs font-bold opacity-80 transition-opacity hover:opacity-100"
+          >
+            <span>Dernières notes</span>
+            <ChevronDown
+              className={cn('size-4 transition-transform', notesOpen && 'rotate-180')}
+              aria-hidden="true"
+            />
+          </button>
+
+          {notesOpen ? (
+            <ul className="mt-1 flex flex-col gap-0.5">
+              {recent.map((g) => (
+                <li
+                  key={g.id}
+                  className="moi-chalk flex items-center gap-2 py-0.5 text-sm"
+                >
+                  <span className="shrink-0 text-sm" aria-hidden="true">
+                    {iconOf(g.subject)}
+                  </span>
+                  <span className="min-w-0 flex-1 truncate">
+                    {g.label ?? nameOf(g.subject)}
+                  </span>
+                  <span className="shrink-0 text-[11px] opacity-60 tabular-nums">
+                    {shortDate(g.date)}
+                  </span>
+                  <span className="shrink-0 font-mono font-extrabold tabular-nums">
+                    {formatNote(g.score)}/{formatNote(g.outOf)}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={() => removeNote(g.id)}
+                    disabled={pending}
+                    aria-label={`Retirer la note ${formatNote(g.score)}/${formatNote(g.outOf)} en ${nameOf(g.subject)}`}
+                    className="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full opacity-70 transition-colors hover:bg-white/15 hover:opacity-100 active:scale-90 disabled:opacity-40"
+                  >
+                    <X className="size-3.5" strokeWidth={2.4} aria-hidden="true" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          ) : null}
+
+          {removeError ? (
+            <p
+              role="alert"
+              className="moi-chalk mt-2 rounded-lg bg-white/10 px-2 py-1.5 text-xs font-semibold"
+            >
+              Impossible de retirer cette note pour le moment. Réessaie.
+            </p>
+          ) : null}
+
+          <p className="moi-chalk mt-2 text-right text-[10px] opacity-50">
+            Moyennes /20 ·{' '}
+            {totalNotes > 1
+              ? `${totalNotes} notes cette année`
+              : '1 note cette année'}
+          </p>
+        </div>
       ) : null}
 
       {adding ? (

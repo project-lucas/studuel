@@ -277,6 +277,7 @@ export async function addUpcomingExam(
   }
   revalidatePath('/moi')
   revalidatePath('/defi')
+  revalidatePath('/reviser')
   return { ok: true }
 }
 

@@ -8,6 +8,8 @@ import {
   normalizeCarte,
   normalizeContent,
   emptyContent,
+  carteWithModel,
+  CARTE_MODEL_BRANCHES,
   isContentReady,
   toQuizQuestions,
   MAX_TITLE_LEN,
@@ -138,6 +140,40 @@ describe('normalizeContent / emptyContent', () => {
     expect(emptyContent('fiche')).toEqual({ markdown: '' })
     expect(emptyContent('quiz')).toEqual({ questions: [] })
     expect(emptyContent('carte')).toEqual({ centre: '', branches: [] })
+  })
+})
+
+describe('carteWithModel', () => {
+  it('propose un modèle de branches vides sur une carte vierge', () => {
+    const carte = carteWithModel({ centre: '', branches: [] })
+
+    expect(carte.branches).toHaveLength(CARTE_MODEL_BRANCHES)
+    expect(carte.branches.every((b) => b.titre === '')).toBe(true)
+  })
+
+  it('ne touche pas une carte qui a déjà des branches', () => {
+    const rempli = { centre: 'Eau', branches: [{ titre: 'États', enfants: [] }] }
+
+    expect(carteWithModel(rempli)).toEqual(rempli)
+  })
+
+  it('conserve le centre déjà saisi en amorçant les branches', () => {
+    // Cas réel : l'élève nomme son cœur, enregistre, revient — il doit
+    // retrouver son centre ET le modèle de branches.
+    expect(carteWithModel({ centre: 'Eau', branches: [] })).toMatchObject({
+      centre: 'Eau',
+    })
+  })
+
+  it('le modèle non rempli ne persiste pas en base', () => {
+    // Contrat : les branches d'amorce sont une aide de SAISIE ; enregistrée
+    // telle quelle, la carte doit repartir vide (normalizeCarte les retire).
+    const modele = carteWithModel({ centre: '', branches: [] })
+
+    expect(normalizeContent('carte', modele)).toEqual({
+      centre: '',
+      branches: [],
+    })
   })
 })
 

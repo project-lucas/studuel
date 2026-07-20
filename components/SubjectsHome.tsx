@@ -10,8 +10,10 @@ import {
   Crown,
   Settings,
   Search,
-  Bell,
   Zap,
+  Trophy,
+  Flame,
+  X,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { subjectTheme, subjectVignette } from '@/lib/subject-style'
@@ -21,11 +23,11 @@ import {
   type MasteryRank,
 } from '@/lib/mastery'
 import SubjectIcon from '@/components/SubjectIcon'
-import StreakMascot from '@/components/StreakMascot'
 import WorldBackdrop from '@/components/WorldBackdrop'
 import { sfx } from '@/lib/sounds'
 import { toast } from '@/lib/toast'
-import { saveSelectedSubjects } from '@/app/reviser/actions'
+import { saveSelectedSubjects, saveDailyGoalMinutes } from '@/app/reviser/actions'
+import { DAILY_GOAL_OPTIONS } from '@/lib/daily-goal'
 import type { ExamProximity, SubjectExamHint } from '@/lib/next-exam'
 import type { Subject, SubjectCategory } from '@/lib/types'
 
@@ -120,40 +122,124 @@ const LYCEE_GROUPS: { category: SubjectCategory; label: string }[] = [
   { category: 'option', label: 'Options' },
 ]
 
-// Barre de recherche du header — visuelle pour l'instant (la recherche des
-// matières/chapitres arrive plus tard) — flanquée d'une cloche de notifications.
-function SearchRow() {
+// Normalise pour une recherche tolérante aux accents/casse.
+function normalizeSearch(s: string): string {
+  return s
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .trim()
+}
+
+// Recherche sur TOUT le programme : une loupe (posée près de « Tronc commun »)
+// qui ouvre un panneau plein écran filtrant les matières du niveau. Tap sur un
+// résultat → la page de la matière. Remplace l'ancienne barre visuelle inerte.
+function ProgramSearch({ subjects }: { subjects: Subject[] }) {
+  const [open, setOpen] = useState(false)
+  const [query, setQuery] = useState('')
+
+  const q = normalizeSearch(query)
+  const results = q
+    ? subjects.filter((s) => normalizeSearch(s.name).includes(q))
+    : subjects
+
   return (
-    <div className="relative mt-3 flex items-center gap-2">
+    <>
       <button
         type="button"
         onClick={() => {
           sfx.tap()
-          toast('La recherche arrive bientôt 🔎')
+          setOpen(true)
         }}
-        aria-label="Rechercher (bientôt disponible)"
-        className="flex min-w-0 flex-1 items-center gap-2 rounded-full bg-white px-4 py-2.5 text-left shadow-sm transition active:translate-y-px"
+        aria-label="Rechercher dans le programme"
+        aria-haspopup="dialog"
+        className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
       >
-        <Search
-          className="size-4 shrink-0 text-muted-foreground"
-          aria-hidden="true"
-        />
-        <span className="truncate text-sm font-medium text-muted-foreground">
-          Rechercher
-        </span>
+        <Search className="size-4.5" strokeWidth={2.4} aria-hidden="true" />
       </button>
-      <button
-        type="button"
-        onClick={() => {
-          sfx.tap()
-          toast('Aucune notification pour le moment 🔔')
-        }}
-        aria-label="Mes notifications"
-        className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm transition active:translate-y-px"
-      >
-        <Bell className="size-5" strokeWidth={2.2} aria-hidden="true" />
-      </button>
-    </div>
+
+      {open ? (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Recherche dans le programme"
+          className="fixed inset-0 z-[70] flex flex-col bg-background/95 backdrop-blur-sm"
+        >
+          {/* Barre de recherche en haut du panneau. */}
+          <div className="flex items-center gap-2 border-b border-black/5 p-3">
+            <div className="flex min-w-0 flex-1 items-center gap-2 rounded-full bg-muted/60 px-4 py-2.5">
+              <Search
+                className="size-4 shrink-0 text-muted-foreground"
+                aria-hidden="true"
+              />
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                autoFocus
+                placeholder="Chercher une matière…"
+                aria-label="Chercher dans le programme"
+                className="min-w-0 flex-1 bg-transparent text-sm font-medium text-foreground outline-none"
+              />
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                sfx.tap()
+                setOpen(false)
+              }}
+              aria-label="Fermer la recherche"
+              className="flex size-10 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted active:scale-90"
+            >
+              <X className="size-5" aria-hidden="true" />
+            </button>
+          </div>
+
+          {/* Résultats : les matières du programme, filtrées. */}
+          <div className="min-h-0 flex-1 overflow-y-auto p-3">
+            {results.length === 0 ? (
+              <p className="mt-8 text-center text-sm text-muted-foreground">
+                Aucune matière ne correspond à « {query} ».
+              </p>
+            ) : (
+              <ul className="flex flex-col gap-2">
+                {results.map((s) => {
+                  const theme = subjectTheme(s.color)
+                  return (
+                    <li key={s.id}>
+                      <Link
+                        href={`/reviser/${s.slug}`}
+                        onClick={() => {
+                          sfx.tap()
+                          setOpen(false)
+                        }}
+                        className="flex items-center gap-3 rounded-2xl bg-white p-2.5 shadow-sm ring-1 ring-black/5 transition active:scale-[0.99]"
+                      >
+                        <span
+                          aria-hidden="true"
+                          className={cn(
+                            'arena-tile flex size-10 shrink-0 items-center justify-center rounded-2xl',
+                            theme.arena,
+                          )}
+                        >
+                          <SubjectIcon
+                            slug={s.slug}
+                            className="size-5 text-white"
+                            strokeWidth={2.25}
+                          />
+                        </span>
+                        <span className="min-w-0 flex-1 truncate text-sm font-bold text-foreground">
+                          {s.name}
+                        </span>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            )}
+          </div>
+        </div>
+      ) : null}
+    </>
   )
 }
 
@@ -191,82 +277,161 @@ function GoalRing({ pct }: { pct: number }) {
   )
 }
 
-// Bande de stats blanche qui chevauche le bandeau : objectif du jour (minutes
-// travaillées vs objectif), XP du jour cumulée, et série vivante.
+// Une case de donnée du header (icône + grand nombre + libellé), compacte.
+function StatTile({
+  icon,
+  value,
+  label,
+  ariaLabel,
+}: {
+  icon: React.ReactNode
+  value: React.ReactNode
+  label: string
+  ariaLabel: string
+}) {
+  return (
+    <div
+      className="flex flex-col items-center justify-center gap-0.5 px-1 py-2"
+      aria-label={ariaLabel}
+    >
+      <span aria-hidden="true" className="flex h-5 items-center">
+        {icon}
+      </span>
+      <p className="font-mono text-sm font-extrabold text-foreground tabular-nums">
+        {value}
+      </p>
+      <p className="text-[10px] font-semibold text-muted-foreground">{label}</p>
+    </div>
+  )
+}
+
+// Les GRANDES données de Réviser, sur une rangée : trophées, XP (lié aux tests
+// sur le programme), série, et l'objectif du jour — ce dernier est CLIQUABLE
+// pour changer l'objectif quotidien en minutes (3/10/15/30, bornes SQL). La
+// sélection est optimiste : le compteur se met à jour tout de suite.
 function HeaderStats({
-  todayMinutes,
-  goalMinutes,
+  trophies,
   xp,
   streak,
+  todayMinutes,
+  goalMinutes,
 }: {
-  todayMinutes: number
-  goalMinutes: number
+  trophies: number
   xp: number
   streak: number
+  todayMinutes: number
+  goalMinutes: number
 }) {
-  const pct = goalMinutes > 0 ? todayMinutes / goalMinutes : 0
-  const done = goalMinutes > 0 && todayMinutes >= goalMinutes
+  const [goal, setGoal] = useState(goalMinutes)
+  const [editing, setEditing] = useState(false)
+  const [pending, start] = useTransition()
+
+  const pct = goal > 0 ? todayMinutes / goal : 0
+  const done = goal > 0 && todayMinutes >= goal
+
+  const choose = (min: number) => {
+    sfx.tap()
+    setGoal(min) // optimiste
+    setEditing(false)
+    start(async () => {
+      const res = await saveDailyGoalMinutes(min)
+      if (!res.ok) {
+        setGoal(goalMinutes) // rollback
+        toast('Objectif non enregistré — réessaie.', 'error')
+      }
+    })
+  }
+
   return (
-    <div className="rev-card relative mt-3 flex items-stretch rounded-2xl bg-white p-1.5">
-      <div
-        className="flex flex-1 items-center gap-2 px-2.5 py-1.5"
-        aria-label={`Objectif du jour : ${todayMinutes} minute${todayMinutes > 1 ? 's' : ''} sur ${goalMinutes}`}
-      >
-        <div className="relative shrink-0">
-          <GoalRing pct={pct} />
-          {done ? (
-            <Check
-              className="absolute inset-0 m-auto size-4 text-highlight"
-              strokeWidth={3}
+    <div className="rev-card relative mt-3 rounded-2xl bg-white p-1.5">
+      <div className="grid grid-cols-4 divide-x divide-black/5">
+        <StatTile
+          icon={<Trophy className="size-4 text-highlight" aria-hidden="true" />}
+          value={trophies}
+          label="trophées"
+          ariaLabel={`${trophies} trophées`}
+        />
+        <StatTile
+          icon={
+            <Zap
+              className="size-4 fill-highlight text-highlight"
               aria-hidden="true"
             />
-          ) : null}
-        </div>
-        <div className="min-w-0 leading-tight">
-          <p className="font-mono text-sm font-extrabold text-foreground tabular-nums">
-            {todayMinutes}
-            <span className="text-xs font-bold text-muted-foreground"> min</span>
-          </p>
-          <p className="text-[11px] font-semibold text-muted-foreground">
-            / {goalMinutes} min
-          </p>
-        </div>
-      </div>
-
-      <span aria-hidden="true" className="my-1.5 w-px self-stretch bg-black/5" />
-
-      <div
-        className="flex flex-1 items-center justify-center gap-1.5 px-2 py-1.5"
-        aria-label={`${xp} points d'expérience`}
-      >
-        <Zap
-          className="size-4 shrink-0 fill-highlight text-highlight"
-          aria-hidden="true"
+          }
+          value={xp}
+          label="XP"
+          ariaLabel={`${xp} points d'expérience`}
         />
-        <div className="leading-tight">
+        <StatTile
+          icon={<Flame className="size-4 text-orange-500" aria-hidden="true" />}
+          value={streak}
+          label="série"
+          ariaLabel={`Série : ${streak} jour${streak > 1 ? 's' : ''}`}
+        />
+
+        {/* Objectif du jour — CLIQUABLE pour changer l'objectif quotidien. */}
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setEditing((v) => !v)
+          }}
+          aria-haspopup="menu"
+          aria-expanded={editing}
+          aria-label={`Objectif du jour : ${todayMinutes} sur ${goal} minutes — toucher pour changer`}
+          className="relative flex flex-col items-center justify-center gap-0.5 px-1 py-2 transition-colors hover:bg-muted/40"
+        >
+          <span aria-hidden="true" className="relative flex h-5 items-center">
+            <GoalRing pct={pct} />
+            {done ? (
+              <Check
+                className="absolute inset-0 m-auto size-3.5 text-highlight"
+                strokeWidth={3}
+                aria-hidden="true"
+              />
+            ) : null}
+          </span>
           <p className="font-mono text-sm font-extrabold text-foreground tabular-nums">
-            {xp}
+            {goal}
+            <span className="text-[10px]">m</span>
           </p>
-          <p className="text-[11px] font-semibold text-muted-foreground">XP</p>
-        </div>
+          <p className="flex items-center gap-0.5 text-[10px] font-semibold text-primary">
+            objectif
+            <Pencil className="size-2.5" aria-hidden="true" />
+          </p>
+        </button>
       </div>
 
-      <span aria-hidden="true" className="my-1.5 w-px self-stretch bg-black/5" />
-
-      <div
-        className="flex flex-1 items-center justify-center gap-1.5 px-2 py-1.5"
-        aria-label={`Série : ${streak} jour${streak > 1 ? 's' : ''}`}
-      >
-        <StreakMascot streak={streak} size={24} badge={false} />
-        <div className="leading-tight">
-          <p className="font-mono text-sm font-extrabold text-foreground tabular-nums">
-            {streak}
-          </p>
-          <p className="text-[11px] font-semibold text-muted-foreground">
-            série
-          </p>
+      {/* Le sélecteur d'objectif quotidien, déplié sous la rangée. */}
+      {editing ? (
+        <div
+          role="menu"
+          aria-label="Choisir l'objectif quotidien"
+          className="mt-1.5 flex items-center gap-1.5 border-t border-black/5 px-1 pt-2"
+        >
+          <span className="mr-auto pl-1 text-[11px] font-bold text-muted-foreground">
+            Objectif / jour
+          </span>
+          {DAILY_GOAL_OPTIONS.map((min) => (
+            <button
+              key={min}
+              type="button"
+              role="menuitemradio"
+              aria-checked={goal === min}
+              disabled={pending}
+              onClick={() => choose(min)}
+              className={cn(
+                'min-h-8 rounded-full px-3 font-mono text-xs font-extrabold tabular-nums transition',
+                goal === min
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'bg-muted/70 text-foreground hover:bg-muted',
+              )}
+            >
+              {min}m
+            </button>
+          ))}
         </div>
-      </div>
+      ) : null}
     </div>
   )
 }
@@ -521,6 +686,7 @@ export default function SubjectsHome({
   avatarUri,
   streak,
   xp,
+  trophies,
   todayMinutes,
   goalMinutes,
   subjects,
@@ -536,6 +702,8 @@ export default function SubjectsHome({
   streak: number
   // Stats du header : XP cumulée, minutes travaillées aujourd'hui, objectif.
   xp: number
+  // Trophées (mode classé du Défi) : la 4e grande donnée du header.
+  trophies: number
   todayMinutes: number
   goalMinutes: number
   subjects: Subject[]
@@ -638,18 +806,17 @@ export default function SubjectsHome({
           </div>
         </div>
 
-        {/* Hors édition : barre de recherche + cloche, puis la bande de stats
-            (objectif du jour · XP · série) qui chevauche le bas du bandeau. */}
+        {/* Hors édition : les 4 grandes données (trophées · XP · série ·
+            objectif éditable) qui chevauchent le bas du bandeau. La recherche a
+            migré plus bas, en loupe près des matières. */}
         {!editing ? (
-          <>
-            <SearchRow />
-            <HeaderStats
-              todayMinutes={todayMinutes}
-              goalMinutes={goalMinutes}
-              xp={xp}
-              streak={streak}
-            />
-          </>
+          <HeaderStats
+            trophies={trophies}
+            xp={xp}
+            streak={streak}
+            todayMinutes={todayMinutes}
+            goalMinutes={goalMinutes}
+          />
         ) : null}
 
         {/* En mode édition seulement : consigne + bouton Terminé. */}
@@ -683,15 +850,17 @@ export default function SubjectsHome({
         ) : (
           groups.map(({ label, items }, gi) => (
             <section key={label ?? 'all'} className="flex flex-col gap-2.5">
-              {label ? (
-                <h2
-                  className={cn(
-                    'font-heading px-1 text-sm font-semibold',
-                    gi === 0 ? 'text-white/90' : 'text-muted-foreground',
-                  )}
-                >
-                  {label}
-                </h2>
+              {/* En-tête de section : le libellé (bien lisible sur crème) et,
+                  sur la PREMIÈRE section, la loupe qui cherche dans tout le
+                  programme. Pour le collège (une seule section sans libellé),
+                  on affiche « Mes matières » pour porter la loupe. */}
+              {label || gi === 0 ? (
+                <div className="flex items-center justify-between gap-2 px-1">
+                  <h2 className="font-heading text-sm font-bold text-foreground">
+                    {label ?? 'Mes matières'}
+                  </h2>
+                  {gi === 0 ? <ProgramSearch subjects={subjects} /> : null}
+                </div>
               ) : null}
               <div className="grid grid-cols-2 gap-3">
                 {items.map((s) => (

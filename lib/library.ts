@@ -151,6 +151,29 @@ export function emptyContent(kind: LibraryKind): LibraryContent {
   return { centre: '', branches: [] }
 }
 
+// Nombre de branches vides proposées à l'ouverture d'une carte mentale encore
+// vierge : le modèle (cœur + branches à remplir) est ainsi visible d'emblée,
+// au lieu d'une page nue.
+export const CARTE_MODEL_BRANCHES = 3
+
+// Amorce d'ÉDITION d'une carte mentale — purement une aide de saisie, jamais du
+// contenu stocké : une carte sans aucune branche s'ouvre sur un modèle de
+// branches vides. `normalizeCarte` les retire à l'enregistrement, donc une
+// carte ouverte puis quittée sans être remplie reste bien vide en base.
+// (Le seeding vit ici, et non dans `emptyContent`, parce que le chargement de
+// l'éditeur normalise le contenu : des branches vides insérées à la création
+// seraient filtrées avant d'atteindre l'écran.)
+export function carteWithModel(carte: CarteContent): CarteContent {
+  if (carte.branches.length > 0) return carte
+  return {
+    ...carte,
+    branches: Array.from({ length: CARTE_MODEL_BRANCHES }, () => ({
+      titre: '',
+      enfants: [],
+    })),
+  }
+}
+
 // --- Complétude (pour afficher un état « brouillon » vs « prêt ») -------------
 export function isContentReady(kind: LibraryKind, content: LibraryContent): boolean {
   if (kind === 'fiche') return (content as FicheContent).markdown.trim().length > 0

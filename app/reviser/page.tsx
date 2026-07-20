@@ -102,6 +102,7 @@ export default async function ReviserPage() {
     { data: avatarRow },
     { data: oralRow },
     { data: extraRow },
+    { data: trophyRow },
   ] = await Promise.all([
     supabase
       .from('profiles')
@@ -122,6 +123,9 @@ export default async function ReviserPage() {
       .select('upcoming_exams, daily_goal_minutes')
       .eq('id', user.id)
       .maybeSingle(),
+    // trophies (079) ISOLÉ : alimente la donnée « Trophées » du header ; si 079
+    // n'est pas passée, échoue seul → 0, sans casser le reste.
+    supabase.from('profiles').select('trophies').eq('id', user.id).maybeSingle(),
   ])
   const avatarUri = avatarDataUri(normalizeAvatarConfig(avatarRow?.avatar), 128)
   const oralTexts = normalizeOralList(
@@ -292,6 +296,7 @@ export default async function ReviserPage() {
   })
   const todayMinutes = Math.floor(Number(workToday?.seconds ?? 0) / 60)
   const goalMinutes = extraRow?.daily_goal_minutes ?? 15
+  const trophies = Math.max(0, Number(trophyRow?.trophies) || 0)
 
   // --- Matières suivies (profil onboarding) -----------------------------------
   const selected = Array.isArray(profile?.selected_subjects)
@@ -420,6 +425,17 @@ export default async function ReviserPage() {
   }
   examSubjects.sort((a, b) => a.name.localeCompare(b.name, 'fr'))
 
+  // Chapitres par matière (slug → { id, title }) + chapitres déjà planifiés :
+  // de quoi ouvrir la bulle « Nouveau contrôle » directement depuis la barre de
+  // semaine, sans détour par le carnet (même contrat qu'AddExamSheet).
+  const chaptersBySubject: Record<string, { id: string; title: string }[]> = {}
+  for (const ch of levelChapters ?? []) {
+    const subj = subjectByIdAll.get(ch.subject_id)
+    if (!subj) continue
+    ;(chaptersBySubject[subj.slug] ??= []).push({ id: ch.id, title: ch.title })
+  }
+  const existingExamChapters = new Set(upcomingExams.map((e) => e.chapterId))
+
   // --- Bibliothèque (Mon carnet) : aperçus calculés côté serveur ----------------
   // On ne transfère au client que des miniatures (lignes rognées), jamais le
   // contenu complet des fiches.
@@ -465,6 +481,7 @@ export default async function ReviserPage() {
               avatarUri={avatarUri}
               streak={streak}
               xp={xp}
+              trophies={trophies}
               todayMinutes={todayMinutes}
               goalMinutes={goalMinutes}
               subjects={ofLevel}
@@ -483,6 +500,8 @@ export default async function ReviserPage() {
                       exams={upcomingExams}
                       today={today}
                       subjects={examSubjects}
+                      chaptersBySubject={chaptersBySubject}
+                      existingExamChapters={[...existingExamChapters]}
                       activeDays={[...activityDays]}
                     />
                   </div>

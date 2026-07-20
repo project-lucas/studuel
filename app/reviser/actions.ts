@@ -16,6 +16,7 @@ import {
   type OralText,
   type OralTextStatus,
 } from '@/lib/oral-texts'
+import { DAILY_GOAL_OPTIONS, type DailyGoalMinutes } from '@/lib/daily-goal'
 
 // Marque une leçon comme terminée : le chapitre progresse (plancher 30 %)
 // et la journée est validée dans la série.
@@ -282,6 +283,34 @@ export async function saveSelectedSubjects(slugs: string[]): Promise<void> {
   }
 
   revalidatePath('/reviser')
+}
+
+// Change l'objectif quotidien en minutes (colonne profiles.daily_goal_minutes,
+// déjà dans le GRANT UPDATE de 048). Renvoie { ok } — l'UI est optimiste.
+// Les valeurs autorisées vivent dans lib/daily-goal.ts (un fichier « use server »
+// ne peut exporter que des fonctions async).
+export async function saveDailyGoalMinutes(
+  minutes: number,
+): Promise<{ ok: boolean }> {
+  if (!DAILY_GOAL_OPTIONS.includes(minutes as DailyGoalMinutes)) {
+    return { ok: false }
+  }
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return { ok: false }
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ daily_goal_minutes: minutes })
+    .eq('id', user.id)
+  if (error) {
+    console.error('[reviser] objectif quotidien non enregistré:', error.message)
+    return { ok: false }
+  }
+  revalidatePath('/reviser')
+  return { ok: true }
 }
 
 // --- Textes du bac oral (le descriptif) — migration 156 ----------------------

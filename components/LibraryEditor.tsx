@@ -2,18 +2,22 @@
 
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { Check, Plus, Trash2, Save, ListChecks } from 'lucide-react'
+import { Check, Plus, Trash2, Save, ListChecks, FilePlus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import BackButton from '@/components/BackButton'
 import MindMap from '@/components/MindMap'
-import { saveLibraryItem } from '@/app/reviser/bibliotheque/actions'
+import {
+  saveLibraryItem,
+  createLibraryItem,
+} from '@/app/reviser/bibliotheque/actions'
 import {
   KIND_LABEL,
   MAX_QUIZ_QUESTIONS,
   MAX_QUIZ_OPTIONS,
   MIN_QUIZ_OPTIONS,
   MAX_CARTE_BRANCHES,
+  carteWithModel,
   type LibraryKind,
   type LibraryContent,
   type FicheContent,
@@ -41,7 +45,13 @@ export default function LibraryEditor({
 }) {
   const router = useRouter()
   const [title, setTitle] = useState(initialTitle)
-  const [content, setContent] = useState<LibraryContent>(initialContent)
+  // Une carte mentale vierge s'ouvre sur un modèle de branches vides (aide de
+  // saisie ; elles ne sont pas enregistrées tant qu'elles restent vides).
+  const [content, setContent] = useState<LibraryContent>(() =>
+    kind === 'carte'
+      ? carteWithModel(initialContent as CarteContent)
+      : initialContent,
+  )
   const [pending, startTransition] = useTransition()
   const [status, setStatus] = useState<'idle' | 'ok' | 'err'>('idle')
 
@@ -55,6 +65,35 @@ export default function LibraryEditor({
       if (res.ok) router.refresh()
     })
   }
+
+  // « Enregistrer + nouvelle » : classe l'item courant puis ouvre aussitôt un
+  // nouvel item VIDE du MÊME type — pour en enchaîner plusieurs à la suite sans
+  // repasser par la bibliothèque (demande produit : création rapide en série).
+  const saveAndNew = () => {
+    if (pending) return
+    sfx.tap()
+    setStatus('idle')
+    startTransition(async () => {
+      const saved = await saveLibraryItem(id, kind, title, content)
+      if (!saved.ok) {
+        setStatus('err')
+        return
+      }
+      const next = await createLibraryItem(kind)
+      if (next.ok && next.id) {
+        router.push(`/reviser/bibliotheque/${next.id}`)
+      } else {
+        setStatus('err')
+      }
+    })
+  }
+
+  const kindNewLabel =
+    kind === 'fiche'
+      ? 'Nouvelle fiche'
+      : kind === 'quiz'
+        ? 'Nouveau quiz'
+        : 'Nouvelle carte'
 
   return (
     <div className="mx-auto w-full max-w-xl pb-28">
@@ -111,10 +150,24 @@ export default function LibraryEditor({
           </span>
           <button
             type="button"
+            onClick={saveAndNew}
+            disabled={pending}
+            aria-label={`Enregistrer et créer une ${kindNewLabel.toLowerCase()}`}
+            className={cn(
+              'flex min-h-11 shrink-0 items-center gap-1.5 rounded-full border border-primary/40 bg-primary/10 px-3.5 font-heading text-sm font-extrabold text-primary transition active:translate-y-px',
+              pending && 'opacity-60',
+            )}
+          >
+            <FilePlus className="size-4" strokeWidth={2.6} aria-hidden="true" />
+            <span className="hidden sm:inline">{kindNewLabel}</span>
+            <span className="sm:hidden">+ Nouvelle</span>
+          </button>
+          <button
+            type="button"
             onClick={save}
             disabled={pending}
             className={cn(
-              'flex min-h-11 items-center gap-2 rounded-full bg-primary px-5 font-heading text-sm font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px',
+              'flex min-h-11 shrink-0 items-center gap-2 rounded-full bg-primary px-5 font-heading text-sm font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px',
               pending && 'opacity-60',
             )}
           >
@@ -136,11 +189,16 @@ function FicheBody({
   onChange: (c: FicheContent) => void
 }) {
   return (
-    <div>
+    <div className="flex flex-col gap-2">
+      <p className="rounded-2xl bg-primary/5 px-3 py-2 text-xs font-medium text-muted-foreground">
+        Donne un <strong>titre</strong> à ta fiche en haut, puis résume ton
+        chapitre ici : définitions, dates, formules, l’essentiel à retenir. Tu
+        pourras la relire quand tu veux.
+      </p>
       <textarea
         value={content.markdown}
         onChange={(e) => onChange({ markdown: e.target.value })}
-        rows={16}
+        rows={14}
         placeholder={
           'Écris ta fiche…\n\nAstuce : **gras**, *italique*, listes avec des tirets — la mise en forme Markdown est conservée.'
         }
@@ -311,9 +369,15 @@ function CarteBody({
 
   return (
     <div className="flex flex-col gap-3">
+      <p className="rounded-2xl bg-primary/5 px-3 py-2 text-xs font-medium text-muted-foreground">
+        Une carte mentale part d’un <strong>sujet au centre</strong> d’où
+        rayonnent des <strong>branches</strong> (les grandes idées), chacune
+        détaillée par des mots-clés. Remplis le modèle ci-dessous — l’aperçu se
+        dessine en dessous.
+      </p>
       <label className="block">
         <span className="mb-1 block text-xs font-semibold text-muted-foreground">
-          Notion centrale
+          Sujet central
         </span>
         <input
           value={content.centre}

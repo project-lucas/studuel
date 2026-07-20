@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
-import { LogOut, BadgeCheck, HeartHandshake, Wrench } from 'lucide-react'
+import {
+  LogOut,
+  BadgeCheck,
+  Compass,
+  HeartHandshake,
+  Wrench,
+} from 'lucide-react'
 import {
   Card,
   CardHeader,
@@ -107,6 +113,12 @@ export default async function ComptePage() {
           <Button asChild variant="outline">
             <Link href="/parents">
               <HeartHandshake className="size-4" /> Espace parents
+            </Link>
+          </Button>
+          {/* Relance le tour guidé des onglets (chemin forcé ?tour=1). */}
+          <Button asChild variant="outline">
+            <Link href="/reviser?tour=1">
+              <Compass className="size-4" /> Revoir le tutoriel
             </Link>
           </Button>
           {profile?.is_admin ? (

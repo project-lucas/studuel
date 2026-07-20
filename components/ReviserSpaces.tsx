@@ -74,6 +74,7 @@ export default function ReviserSpaces({
               aria-selected={active}
               aria-controls={`espace-panel-${id}`}
               tabIndex={active ? 0 : -1}
+              data-tour={id === 'carnet' ? 'carnet-switch' : undefined}
               onClick={() => select(id)}
               className={cn(
                 'font-heading flex cursor-pointer items-center justify-center gap-2 rounded-full py-2.5 text-sm font-bold transition-colors focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:outline-none',

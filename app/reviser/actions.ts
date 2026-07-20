@@ -394,3 +394,25 @@ export async function removeOralTextAction(id: string): Promise<OralResult> {
   revalidatePath('/reviser')
   return { ok: true, texts: normalizeOralList(data) }
 }
+
+// Marque le tour guidé comme vu (colonne tutorial_completed, migration 188) :
+// il ne se relancera plus automatiquement. Échec silencieux si la migration
+// n'est pas passée — le tour se représentera, sans rien casser.
+export async function completeTutorial(): Promise<{ saved: boolean }> {
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return { saved: false }
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ tutorial_completed: true })
+    .eq('id', user.id)
+  if (error) {
+    console.error('[reviser] tour guidé non enregistré:', error.message)
+    return { saved: false }
+  }
+  revalidatePath('/reviser')
+  return { saved: true }
+}

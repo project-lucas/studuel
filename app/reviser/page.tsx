@@ -10,6 +10,7 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import TabHeader from '@/components/TabHeader'
+import TourGuide from '@/components/TourGuide'
 import SubjectsHome from '@/components/SubjectsHome'
 import ReviserSpaces from '@/components/ReviserSpaces'
 import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
@@ -94,6 +95,7 @@ export default async function ReviserPage() {
     { data: oralRow },
     { data: extraRow },
     { data: trophyRow },
+    { data: tutorialRow, error: tutorialError },
   ] = await Promise.all([
     supabase
       .from('profiles')
@@ -117,6 +119,13 @@ export default async function ReviserPage() {
     // trophies (079) ISOLÉ : alimente la donnée « Trophées » du header ; si 079
     // n'est pas passée, échoue seul → 0, sans casser le reste.
     supabase.from('profiles').select('trophies').eq('id', user.id).maybeSingle(),
+    // tutorial_completed (188) ISOLÉ : si la migration n'est pas passée, on ne
+    // lance simplement pas le tour guidé (pas de harcèlement par défaut).
+    supabase
+      .from('profiles')
+      .select('tutorial_completed')
+      .eq('id', user.id)
+      .maybeSingle(),
   ])
   const avatarUri = avatarDataUri(normalizeAvatarConfig(avatarRow?.avatar), 128)
   const oralTexts = normalizeOralList(
@@ -447,12 +456,18 @@ export default async function ReviserPage() {
     questionCount: questionCountByCourse.get(String(r.id)) ?? 0,
   }))
 
+  // Tour guidé : uniquement si la colonne existe (188) et dit « jamais vu ».
+  const tourAutoStart =
+    !tutorialError && tutorialRow?.tutorial_completed === false
+
   return (
     <div className="flex flex-col gap-4">
       <TabHeader
         title="Réviser"
         subtitle="Ton programme, tes cours et ta file du jour."
       />
+      {/* Tour guidé post-onboarding (spotlights sur la nav + bulles). */}
+      <TourGuide autoStart={tourAutoStart} />
       {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
       <SubjectMasteryCelebration
         entries={followed.map((s) => ({
@@ -503,14 +518,18 @@ export default async function ReviserPage() {
                   </div>
                   {/* 2. À revoir aujourd'hui — LA porte de la file SRS +
                       Revanche (entrée unique, l'ancienne tuile jumelle des
-                      outils a été retirée). Absente si la file est vide. */}
-                  <ReviewQueueCard
-                    total={queue.length}
-                    revanche={queue.filter((i) => i.in_revanche).length}
-                    subjects={[...countsBySubject(queue).entries()].sort(
-                      (a, b) => b[1] - a[1],
-                    )}
-                  />
+                      outils a été retirée). Absente si la file est vide.
+                      L'ancre data-tour vit sur un wrapper : le tour saute
+                      l'étape quand la file est vide. */}
+                  <div data-tour="file-du-jour">
+                    <ReviewQueueCard
+                      total={queue.length}
+                      revanche={queue.filter((i) => i.in_revanche).length}
+                      subjects={[...countsBySubject(queue).entries()].sort(
+                        (a, b) => b[1] - a[1],
+                      )}
+                    />
+                  </div>
                   {/* 3. On s'y remet — les dernières sessions, sous la série. */}
                   <ResumeSessions items={resumeItems} />
                   {/* Rappel contextuel : pendant le trajet, un temps mort = de

@@ -60,6 +60,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                   onClick={() => sfx.tap()}
                   aria-label={name}
                   aria-current={active ? 'page' : undefined}
+                  data-tour={`tab-${path.slice(1)}`}
                   className="flex items-center justify-center pt-1.5 pb-2 transition-all active:scale-95"
                 >
                   <span
@@ -103,6 +104,7 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                 href={path}
                 onClick={() => sfx.tap()}
                 aria-current={isActive(path) ? 'page' : undefined}
+                data-tour={`tab-${path.slice(1)}`}
                 className={cn(
                   'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
                   isActive(path)

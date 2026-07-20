@@ -267,6 +267,15 @@ breaking changes vs. l'entraînement.
   `chapters` et un `*` renverrait « permission denied ». Plan ordonné dans
   `_ASSOCIE/BACKLOG-JOUR.md`. **Ne pas écrire la 178 sans faire d'abord les
   colonnes explicites.**
+- **Zones auditées et déclarées SAINES le 2026-07-20** (ne pas les ré-auditer au
+  prochain cycle, c'est du budget perdu) : **studio/admin** (le gate n'est pas
+  qu'une page — chaque table du catalogue porte une policy `FOR ALL USING
+  (is_admin())`, donc un élève ne peut pas écrire le contenu par requête
+  directe ; `is_admin` est absent de TOUS les `GRANT UPDATE` par colonnes, sur 8
+  migrations — revérifié à la main) et **push/PWA** (clé VAPID privée seulement
+  dans le Route Handler serveur, endpoint d'envoi protégé par `CRON_SECRET` en
+  comparaison à temps constant, RLS « soi uniquement » sur `push_subscriptions`).
+  Vérifié aussi au passage : **aucun `dangerouslySetInnerHTML` dans le dépôt**.
 - **Écarté volontairement, décision de Lucas** : l'espace parents (offre Famille
   à 9,99 €) n'a AUCUN contrôle d'abonnement — seulement un contrôle de rôle.
   Verrouiller une page aujourd'hui gratuite est un choix produit/business, pas

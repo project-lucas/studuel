@@ -366,10 +366,40 @@ function LiveMatch({
   if (questions.length === 0) return <Centered>Chargement des questions…</Centered>
 
   if (waitingForOpponent) {
+    // Sans le cas « rival parti », cet ecran restait bloque INDEFINIMENT sur
+    // « En attente… » quand l'adversaire fermait l'onglet : la seule issue
+    // etait un bouton « Abandonner » qui n'etait meme pas affiche ici. La coop
+    // gere deja ce cas (partnerGone) — on s'aligne dessus.
+    //
+    // On ne declare PAS forfait automatiquement : une presence peut clignoter
+    // (reseau mobile, mise en veille), et un faux positif volerait un duel en
+    // cours. On informe, et on rend la sortie possible.
     return (
       <Centered>
-        <Loader2 className="text-primary mb-2 size-6 animate-spin" aria-hidden="true" />
-        En attente de la manche du rival…
+        {opponentPresent ? (
+          <>
+            <Loader2 className="text-primary mb-2 size-6 animate-spin" aria-hidden="true" />
+            En attente de la manche du rival…
+          </>
+        ) : (
+          <>
+            <span aria-hidden="true" className="mb-2 text-4xl">
+              👋
+            </span>
+            <span className="font-semibold">Ton rival a quitté la partie</span>
+            <span className="mt-1 text-sm opacity-75">
+              S&apos;il revient, la manche reprendra toute seule.
+            </span>
+          </>
+        )}
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={onExit}
+          className="mt-4"
+        >
+          {opponentPresent ? 'Abandonner' : 'Quitter le duel'}
+        </Button>
       </Centered>
     )
   }

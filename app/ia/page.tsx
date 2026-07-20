@@ -1,5 +1,6 @@
 import { Sparkles } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
+import BackButton from '@/components/BackButton'
 
 export const metadata = { title: 'IA — Studuel' }
 
@@ -7,6 +8,9 @@ export const metadata = { title: 'IA — Studuel' }
 export default function IaPage() {
   return (
     <div className="flex min-h-[60vh] flex-col">
+      <div className="mb-4">
+        <BackButton fallback="/reviser" />
+      </div>
       <PageHeader
         title="Ton tuteur IA"
         description="Pose n'importe quelle question de cours, il t'explique simplement."

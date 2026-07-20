@@ -3,10 +3,11 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { AlarmClock, ArrowRight, GraduationCap, Target } from 'lucide-react'
+import { AlarmClock, ArrowRight, GraduationCap, Target, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import QuitGuardButton from '@/components/QuitGuardButton'
 import { finishExamBlanc, recordReviewAnswers } from '@/app/reviser/actions'
 import {
   buildReport,
@@ -331,6 +332,11 @@ export default function ExamBlancPlayer({
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-3">
       <div className="flex items-center justify-between text-sm">
+        {/* Croix « quitter » gardée : l'épreuve en cours serait perdue, on
+            confirme avant de sortir (même pattern que le quiz). */}
+        <QuitGuardButton fallback="/reviser" label="Quitter l'examen blanc">
+          <X className="size-5" aria-hidden="true" />
+        </QuitGuardButton>
         <span className="font-mono tabular-nums text-muted-foreground">
           {index + 1}/{questions.length}
         </span>

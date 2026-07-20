@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { sfx } from '@/lib/sounds'
+import DialogCloseButton from '@/components/DialogCloseButton'
 
 export type CelebrationEntry = { slug: string; name: string; pct: number }
 
@@ -85,9 +86,14 @@ export default function SubjectMasteryCelebration({
       aria-modal="true"
       aria-label={`Matière ${entry.name} maîtrisée`}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-6"
+      onClick={dismiss}
     >
       <ConfettiRain />
-      <div className="pop-in relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10">
+      <div
+        className="pop-in relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <DialogCloseButton onClose={dismiss} />
         <span className="float-slow block text-7xl" aria-hidden="true">
           {legendary ? '🏆' : '💎'}
         </span>

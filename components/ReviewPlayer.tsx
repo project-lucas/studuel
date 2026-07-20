@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx, buzz } from '@/lib/sounds'
 import ComboBadge from '@/components/ComboBadge'
+import QuitGuardButton from '@/components/QuitGuardButton'
 import { SoundToggle } from '@/components/FlashcardPlayer'
 import { finishReviewSession } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
@@ -166,6 +167,11 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-3">
       <div className="flex items-center justify-between text-sm text-muted-foreground">
+        {/* Croix « quitter » gardée : même pattern que le quiz — la session
+            en cours serait perdue, on confirme avant de sortir. */}
+        <QuitGuardButton fallback="/reviser" label="Quitter la session">
+          <X className="size-5" aria-hidden="true" />
+        </QuitGuardButton>
         <span className="font-mono tabular-nums">
           {index + 1}/{items.length}
         </span>

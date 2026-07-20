@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { Button } from '@/components/ui/button'
+import DialogCloseButton from '@/components/DialogCloseButton'
 
 // Bouton « quitter » d'une activité (quiz, examen blanc, révision…) qui, quand
 // une session est en cours (`guarded`), demande confirmation façon Duolingo
@@ -75,9 +76,15 @@ export default function QuitGuardButton({
               onClick={() => setOpen(false)}
             >
               <div
-                className="w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-2xl"
+                className="relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
               >
+                <DialogCloseButton
+                  onClose={() => {
+                    sfx.tap()
+                    setOpen(false)
+                  }}
+                />
                 <Image
                   src="/images/mascotte/flamme-affamee.webp"
                   alt=""

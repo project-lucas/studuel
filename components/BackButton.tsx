@@ -1,11 +1,11 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { ChevronLeft } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 
-// Bouton retour du template (pastille ronde, chevron) : fait un VRAI retour
+// Bouton retour du template (pastille ronde, flèche) : fait un VRAI retour
 // dans l'historique quand il existe — le bouton retour du téléphone reste
 // alors cohérent (pas d'aller-retour en boucle) — et remonte au parent
 // logique quand l'élève est arrivé directement sur la page (lien partagé).
@@ -39,7 +39,7 @@ export default function BackButton({
         className,
       )}
     >
-      {children ?? <ChevronLeft className="size-5" aria-hidden="true" />}
+      {children ?? <ArrowLeft className="size-5" aria-hidden="true" />}
     </button>
   )
 }

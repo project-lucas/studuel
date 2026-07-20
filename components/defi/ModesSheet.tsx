@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { Gamepad2, ChevronLeft, ChevronRight, ChevronDown, Swords } from 'lucide-react'
+import { Gamepad2, ChevronLeft, ChevronRight, Swords, X } from 'lucide-react'
 import { ChevronRightIcon } from '@/components/defi/icons'
 import { sfx } from '@/lib/sounds'
 import {
@@ -342,8 +342,9 @@ export default function ModesSheet({
                   exit={reduce ? { opacity: 0 } : { y: '100%' }}
                   transition={{ type: 'tween', duration: 0.3, ease: 'easeOut' }}
                 >
-                  {/* En-tête : gros bouton FERMER (chevron bas, imposant et
-                      clair) + bandeau-titre en pierre, façon écran de modes. */}
+                  {/* En-tête : gros bouton FERMER (croix, imposante et claire,
+                      cohérente avec les autres modales) + bandeau-titre en
+                      pierre, façon écran de modes. */}
                   <header className="relative flex shrink-0 flex-col items-center gap-3 px-4 pt-[calc(env(safe-area-inset-top)+0.75rem)] pb-3">
                     <button
                       type="button"
@@ -354,7 +355,7 @@ export default function ModesSheet({
                       aria-label="Fermer les modes de jeu"
                       className="olympe-gem olympe-press grid size-14 cursor-pointer place-items-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
                     >
-                      <ChevronDown
+                      <X
                         className="size-8 text-white"
                         strokeWidth={3}
                         aria-hidden="true"

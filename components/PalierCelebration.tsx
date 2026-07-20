@@ -8,6 +8,7 @@ import { sfx } from '@/lib/sounds'
 import { shareStory } from '@/components/story-share'
 import type { Palier } from '@/lib/palier'
 import ConfettiRain from '@/components/ConfettiRain'
+import DialogCloseButton from '@/components/DialogCloseButton'
 
 // Chaque palier n'est fêté qu'UNE fois (mémoire locale, comme la fête de
 // matière) : pas de re-tir au re-rendu, ni si l'élève redescend puis refranchit.
@@ -79,9 +80,14 @@ export default function PalierCelebration({
       aria-modal="true"
       aria-label={`${palier.title} ${palier.name}`}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-6"
+      onClick={dismiss}
     >
       <ConfettiRain />
-      <div className="pop-in relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10">
+      <div
+        className="pop-in relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <DialogCloseButton onClose={dismiss} />
         <span className="float-slow block text-7xl" aria-hidden="true">
           {palier.emoji}
         </span>

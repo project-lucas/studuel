@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
+import DialogCloseButton from '@/components/DialogCloseButton'
 import { sfx } from '@/lib/sounds'
 import { claimLoginReward } from '@/app/tresor/actions'
 
@@ -64,8 +65,13 @@ export default function DailyLoginReward() {
       aria-modal="true"
       aria-label="Récompense de connexion"
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-6"
+      onClick={collect}
     >
-      <div className="pop-in w-full max-w-xs rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10">
+      <div
+        className="pop-in relative w-full max-w-xs rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <DialogCloseButton onClose={collect} />
         <p className="font-heading text-xs font-bold tracking-wide text-muted-foreground uppercase">
           Cadeau de connexion
         </p>

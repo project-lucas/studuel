@@ -9,6 +9,7 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import FriendAddCard from '@/components/FriendAddCard'
+import BackButton from '@/components/BackButton'
 import { createClient } from '@/lib/supabase/server'
 
 export const metadata = { title: 'Ajouter un ami — Studuel' }
@@ -104,6 +105,9 @@ export default async function AjouterAmiPage({
 function Shell({ children }: { children: React.ReactNode }) {
   return (
     <div className="mx-auto flex w-full max-w-md flex-col items-center gap-4 pb-8">
+      <div className="self-start">
+        <BackButton fallback="/amis" />
+      </div>
       {children}
     </div>
   )

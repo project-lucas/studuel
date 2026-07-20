@@ -9,6 +9,7 @@ import {
   type Variants,
 } from 'framer-motion'
 import type { Chest, ChestReward } from '@/lib/defi/types'
+import DialogCloseButton from '@/components/DialogCloseButton'
 
 interface ChestOpenModalProps {
   chest: Chest | null
@@ -106,6 +107,11 @@ export default function ChestOpenModal({
             exit={{ scale: reduce ? 1 : 0.9, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 320, damping: 24 }}
           >
+            {/* Croix : carte sombre du Défi → croix claire, pas de fond gris. */}
+            <DialogCloseButton
+              onClose={onClose}
+              className="text-white/70 hover:bg-white/10"
+            />
             {/* Confettis (jaillissent du centre haut) */}
             <div className="pointer-events-none absolute inset-x-0 top-24 flex justify-center">
               {confetti.map((c, i) => (

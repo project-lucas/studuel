@@ -8,6 +8,7 @@ import {
   CardContent,
 } from '@/components/ui/card'
 import PageHeader from '@/components/PageHeader'
+import BackButton from '@/components/BackButton'
 import { createClient } from '@/lib/supabase/server'
 import type { FlashcardDeck } from '@/lib/types'
 
@@ -62,6 +63,9 @@ export default async function StudioPage({
 
   return (
     <div>
+      <div className="mb-4">
+        <BackButton fallback="/reviser" />
+      </div>
       <PageHeader
         title="Studio"
         description="Tes flashcards du programme : retourne, mémorise, recommence jusqu'à tout savoir."

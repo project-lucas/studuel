@@ -9,12 +9,14 @@ import {
   Undo2,
   Volume2,
   VolumeX,
+  X,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx, buzz, isSoundOn, setSoundOn } from '@/lib/sounds'
 import ComboBadge from '@/components/ComboBadge'
 import ConfettiRain from '@/components/ConfettiRain'
+import QuitGuardButton from '@/components/QuitGuardButton'
 import { bestStreak, COMBO_HOT } from '@/lib/juice'
 import { sessionXp } from '@/lib/xp'
 import { deckProgress } from '@/lib/flashcards'
@@ -239,6 +241,11 @@ export default function FlashcardPlayer({
   return (
     <div key="deck-session" className="mx-auto flex max-w-xl flex-col gap-3">
       <div className="flex items-center justify-between text-sm text-muted-foreground">
+        {/* Croix « quitter » gardée : la session du deck serait perdue, on
+            confirme avant de sortir (même pattern que le quiz). */}
+        <QuitGuardButton fallback="/studio" label="Quitter le deck">
+          <X className="size-5" aria-hidden="true" />
+        </QuitGuardButton>
         {/* « 8 sues · 3 à repasser » : sans le second chiffre, l'élève qui
             bloque sur quelques cartes voit un compteur figé et ne sait pas
             combien il lui reste. */}

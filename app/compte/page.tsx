@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
+import BackButton from '@/components/BackButton'
 import NotificationsOptIn from '@/components/NotificationsOptIn'
 import GradeSelector from '@/components/GradeSelector'
 import { createClient } from '@/lib/supabase/server'
@@ -64,6 +65,9 @@ export default async function ComptePage() {
 
   return (
     <div>
+      <div className="mb-4">
+        <BackButton fallback="/reviser" />
+      </div>
       <PageHeader title="Mon compte" />
 
       <Card className="mx-auto w-full max-w-md">

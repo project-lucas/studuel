@@ -25,6 +25,7 @@ import { computeXp, levelFor } from '@/lib/xp'
 import { commuteStreak } from '@/lib/trajet'
 import { avatarEmojiFor, type FriendGhost } from '@/lib/social'
 import type { RankPlayer } from '@/lib/trophies'
+import { HORS_NIVEAU } from '@/lib/types'
 import type { CommuteSlot, QuizQuestion, DeckCard } from '@/lib/types'
 
 export const metadata = { title: 'Jouer — Studuel' }
@@ -157,10 +158,16 @@ export default async function DefiJouerPage({
       .eq('user_id', user.id)
       .gte('created_at', activityCutoff()),
     getChapterMastery(supabase, user.id),
+    // Le programme de la classe + les quiz HORS-NIVEAU (`grade_level = 'tous'`,
+    // ex. Culture générale : Keynes, Marx, budget, intérêts composés…). Ces 17
+    // quiz / 170 questions existaient déjà mais n'entraient dans AUCUN mode du
+    // Défi, faute d'être rattachés à une classe — Réviser, lui, les sert via
+    // `fixed_level`. La culture générale a toute sa place dans une arène de
+    // quiz, et c'est autant de contenu en plus pour toutes les classes.
     supabase
       .from('quizzes')
       .select('id, subject, lesson_id')
-      .eq('grade_level', grade),
+      .in('grade_level', [grade, HORS_NIVEAU]),
     supabase
       .from('flashcard_decks')
       .select('id, subject')

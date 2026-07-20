@@ -35,6 +35,12 @@ export type Subject = {
   fixed_level?: string | null
 }
 
+// Le niveau des contenus HORS-PROGRAMME, communs à toutes les classes
+// (Culture générale). Valeur portée par `chapters.level`, `quizzes.grade_level`
+// et `subjects.fixed_level` — d'où la constante partagée plutôt qu'un littéral
+// recopié : une requête qui l'oublie rend le contenu invisible sans rien casser.
+export const HORS_NIVEAU = 'tous'
+
 // Carte mentale d'un chapitre (chapters.mind_map, migration 029).
 // Réservée aux abonnés : les gratuits voient la tuile mais ne peuvent pas l'ouvrir.
 export type MindMapBranch = { titre: string; enfants: string[] }

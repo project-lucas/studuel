@@ -258,6 +258,20 @@ breaking changes vs. l'entraînement.
   (`9d79219`). **Réflexe à garder** : quand une table jumelle reçoit un
   durcissement (165 sur `challenge_sessions`), vérifier SYSTÉMATIQUEMENT les
   tables de même forme — c'est comme ça que la 177 est sortie.
+- **P0 laissé au prochain cycle (à faire d'un bloc)** : les cartes mentales
+  restent lisibles par requête directe (`chapters` en RLS `USING (true)`). La
+  moitié applicative est fermée (`6fafd33`, leurre au lieu du contenu flouté),
+  mais le correctif complet est une migration `178` (REVOKE de la colonne +
+  `has_mind_map` généré + RPC `SECURITY DEFINER`) qui **casse Réviser si elle est
+  exécutée avant le changement de code** : 4 requêtes font `select('*')` sur
+  `chapters` et un `*` renverrait « permission denied ». Plan ordonné dans
+  `_ASSOCIE/BACKLOG-JOUR.md`. **Ne pas écrire la 178 sans faire d'abord les
+  colonnes explicites.**
+- **Écarté volontairement, décision de Lucas** : l'espace parents (offre Famille
+  à 9,99 €) n'a AUCUN contrôle d'abonnement — seulement un contrôle de rôle.
+  Verrouiller une page aujourd'hui gratuite est un choix produit/business, pas
+  une correction de bug ; et le gate devrait être posé côté page ET côté RPC
+  (`child_dashboard`, `parent_children_overview`) pour ne pas être contournable.
 - **Écarté volontairement, décision de Lucas** : la maîtrise agrège par
   `Math.max` (« meilleur score par quiz », choix assumé et commenté) donc ne
   redescend jamais. Ce n'est pas clairement un bug — l'oubli est déjà géré par le

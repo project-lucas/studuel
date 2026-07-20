@@ -242,7 +242,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
                     'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
                   answered &&
                     isCorrect &&
-                    'border-success bg-success/10 text-success dark:text-green-400',
+                    'border-success bg-success/10 text-success',
                   answered &&
                     isSelected &&
                     !isCorrect &&
@@ -269,7 +269,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
               !answered && 'sr-only',
               answered &&
                 selected === item.correctIndex &&
-                'text-success dark:text-green-400',
+                'text-success',
               answered && selected !== item.correctIndex && 'text-destructive',
             )}
           >
@@ -333,7 +333,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
               variant="outline"
               size="lg"
               tabIndex={revealed ? undefined : -1}
-              className="rounded-full border-amber-500/40 text-amber-700 hover:bg-amber-500/10 dark:text-amber-400"
+              className="rounded-full border-warning/40 text-warning hover:bg-warning/10"
               onClick={() => {
                 setStreak(0)
                 sfx.wrong()

@@ -7,31 +7,11 @@ import { Button } from '@/components/ui/button'
 import { sfx } from '@/lib/sounds'
 import { shareStory } from '@/components/story-share'
 import type { Palier } from '@/lib/palier'
+import ConfettiRain from '@/components/ConfettiRain'
 
 // Chaque palier n'est fêté qu'UNE fois (mémoire locale, comme la fête de
 // matière) : pas de re-tir au re-rendu, ni si l'élève redescend puis refranchit.
 const storageKey = (id: string) => `studuel-palier-fete:${id}`
-
-// Pluie de confettis déterministe (positions/délais par index — pas de
-// Math.random au rendu), même recette que SubjectMasteryCelebration.
-function ConfettiRain() {
-  const colors = ['bg-primary', 'bg-highlight', 'bg-chart-2', 'bg-chart-4']
-  return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-      {Array.from({ length: 32 }, (_, i) => (
-        <span
-          key={i}
-          className={`confetti-piece ${colors[i % colors.length]}`}
-          style={{
-            left: `${(i * 31 + 7) % 100}%`,
-            animationDelay: `${(i % 8) * 0.24}s`,
-            animationDuration: `${2.2 + (i % 5) * 0.4}s`,
-          }}
-        />
-      ))}
-    </div>
-  )
-}
 
 /**
  * Bulle de célébration plein écran au passage d'un palier (nouvelle arène,

@@ -44,6 +44,8 @@
   --color-highlight: var(--highlight);
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -91,6 +93,10 @@
   /* Réussite : bonne réponse, objectif atteint, « maîtrisé » (vert feuille) */
   --success: #1f9d57;
   --success-foreground: #ffffff;
+  /* « À revoir » : ni une réussite, ni une alerte — l'ambre du travail en
+     cours. Distinct de --highlight (jaune solaire), qui est une RÉCOMPENSE. */
+  --warning: #b45309;
+  --warning-foreground: #ffffff;
   --chart-1: #7a3fe0;
   --chart-2: #f5b722;
   --chart-3: #f1566c;

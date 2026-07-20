@@ -10,18 +10,11 @@ import {
   Volume2,
   VolumeX,
 } from 'lucide-react'
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx, buzz, isSoundOn, setSoundOn } from '@/lib/sounds'
 import ComboBadge from '@/components/ComboBadge'
+import ConfettiRain from '@/components/ConfettiRain'
 import { bestStreak, COMBO_HOT } from '@/lib/juice'
 import { sessionXp } from '@/lib/xp'
 import { deckProgress } from '@/lib/flashcards'
@@ -159,54 +152,79 @@ export default function FlashcardPlayer({
 
   if (finished) {
     const rate = Math.round((firstTryKnown / cards.length) * 100)
+
     return (
-      <Card className="mx-auto max-w-xl">
-        <CardHeader>
-          <CardTitle>Deck terminé ! 🎉</CardTitle>
-          <CardDescription>{title}</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-2">
-          <p className="font-mono text-4xl font-bold tabular-nums">
+      <div className="relative mx-auto flex max-w-xl flex-col items-center gap-4 overflow-hidden rounded-3xl bg-primary px-6 py-10 text-center text-primary-foreground">
+        {/* L'écran de fin était une carte nue, face au volet plein écran du
+            quiz : un élève qui retourne 20 cartes recevait MOINS de récompense
+            que celui qui répond à 5 questions. */}
+        {rate >= 80 ? <ConfettiRain /> : null}
+
+        <div className="relative flex flex-col items-center gap-4">
+          <span className="animate-in zoom-in text-6xl duration-500" aria-hidden="true">
+            {rate === 100 ? '🤩' : rate >= 80 ? '😎' : rate >= 50 ? '🙂' : '🌱'}
+          </span>
+
+          <div>
+            <h1 className="font-heading text-2xl font-bold">Deck terminé !</h1>
+            <p className="mt-1 text-sm opacity-80">{title}</p>
+          </div>
+
+          <p className="font-mono text-6xl font-bold tabular-nums">
             {rate}
-            <span className="text-muted-foreground/60"> %</span>
+            <span className="text-2xl opacity-60"> %</span>
           </p>
-          <p className="font-heading text-lg font-extrabold text-primary">
+
+          <p className="font-heading text-lg font-extrabold text-highlight">
             +{sessionXp('deck', cards.length, cards.length)} XP
           </p>
-          <p className="text-sm text-muted-foreground">
+
+          {best >= COMBO_HOT ? (
+            <p className="text-sm font-semibold opacity-90">
+              🔥 Meilleure série : {best} d&apos;affilée
+            </p>
+          ) : null}
+
+          <p className="max-w-xs text-sm opacity-90">
             {rate === 100
               ? 'Toutes les cartes sues du premier coup — impressionnant !'
               : `${firstTryKnown}/${cards.length} cartes sues du premier coup, en ${reviews} passages. La répétition paie !`}
           </p>
-          {best >= COMBO_HOT ? (
-            <p className="text-sm font-semibold text-primary">
-              🔥 Meilleure série : {best} d&apos;affilée
-            </p>
-          ) : null}
+
           {saved === true ? (
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs opacity-80">
               ✓ Session enregistrée — ta série continue 🔥
             </p>
           ) : saved === false ? (
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs opacity-80">
               <Link href="/login" className="underline underline-offset-4">
                 Connecte-toi
               </Link>{' '}
               pour faire compter cette session dans ta série.
             </p>
           ) : null}
-        </CardContent>
-        <CardFooter className="gap-2">
-          <Button onClick={restart}>
-            <RotateCcw className="size-4" /> Recommencer
-          </Button>
-          <Button variant="outline" asChild>
-            <Link href="/studio">
-              <ArrowLeft className="size-4" /> Retour au Studio
-            </Link>
-          </Button>
-        </CardFooter>
-      </Card>
+
+          <div className="mt-2 flex w-full flex-col gap-2">
+            <Button
+              onClick={restart}
+              size="lg"
+              className="w-full rounded-full bg-card text-foreground shadow-md hover:bg-card/90"
+            >
+              <RotateCcw className="size-4" /> Recommencer
+            </Button>
+            <Button
+              variant="ghost"
+              asChild
+              size="lg"
+              className="w-full rounded-full text-primary-foreground hover:bg-white/10"
+            >
+              <Link href="/studio">
+                <ArrowLeft className="size-4" /> Retour au Studio
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
     )
   }
 
@@ -313,7 +331,7 @@ export default function FlashcardPlayer({
           size="lg"
           tabIndex={flipped ? undefined : -1}
           onClick={() => answer(false)}
-          className="border-amber-500/40 text-amber-700 hover:bg-amber-500/10 dark:text-amber-400"
+          className="border-warning/40 text-warning hover:bg-warning/10"
         >
           <Undo2 className="size-4" /> À revoir
         </Button>
@@ -321,7 +339,7 @@ export default function FlashcardPlayer({
           size="lg"
           tabIndex={flipped ? undefined : -1}
           onClick={() => answer(true)}
-          className="bg-green-600 text-white hover:bg-green-600/85"
+          className="bg-success text-success-foreground hover:bg-success/85"
         >
           <Check className="size-4" /> Je savais
         </Button>

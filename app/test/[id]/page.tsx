@@ -112,6 +112,7 @@ export default async function QuizPage({
           title={quiz.title}
           questions={shuffledQuestions}
           subject={quiz.subject}
+          gradeLevel={quiz.grade_level}
           backHref={backHref}
         />
       </>

@@ -8,6 +8,7 @@ import type { ReviewAnswer } from '@/lib/srs'
 import { sfx, buzz } from '@/lib/sounds'
 import { autoAdvanceDelay, bestStreak, COMBO_HOT } from '@/lib/juice'
 import { missedQuestions, canRetryMissed } from '@/lib/quiz-retry'
+import { verdictFor } from '@/lib/verdict'
 import ComboBadge from '@/components/ComboBadge'
 import { sessionXp } from '@/lib/xp'
 import { SoundToggle } from '@/components/FlashcardPlayer'
@@ -25,13 +26,6 @@ import type { QuizQuestion } from '@/lib/types'
 // fin. (L'examen blanc, lui, garde la correction différée — autre composant.)
 
 // Message de la mascotte selon le score.
-function verdict(ratio: number): { emoji: string; message: string } {
-  if (ratio >= 1) return { emoji: '🤩', message: 'Parfait, sans faute ! Tu maîtrises cette leçon.' }
-  if (ratio >= 0.8) return { emoji: '😎', message: 'Excellent ! Encore un petit effort pour le sans-faute.' }
-  if (ratio >= 0.5) return { emoji: '🙂', message: 'Pas mal ! Relis la correction et retente ta chance.' }
-  return { emoji: '😮', message: 'Aïeee… Tu peux faire mieux ! On recommence ?' }
-}
-
 export default function QuizPlayer({
   quizId,
   title,
@@ -39,6 +33,7 @@ export default function QuizPlayer({
   subject = null,
   backHref = '/reviser',
   record = true,
+  gradeLevel = null,
 }: {
   quizId: string
   title: string
@@ -49,6 +44,9 @@ export default function QuizPlayer({
   // une session de catalogue (quiz_id absent de `quizzes` → violerait la FK) et
   // il ne doit pas gonfler l'XP / la file « À revoir ».
   record?: boolean
+  // Classe du quiz : règle le TON du bilan (« Aïeee… » convient à un 6e, pas à
+  // un Terminale qui prépare le bac). Absente pour un quiz personnel.
+  gradeLevel?: string | null
 }) {
   // Le paquet EN COURS. Il vaut le quiz complet, sauf après « Revoir mes
   // erreurs », où il ne contient plus que les questions ratées.
@@ -197,7 +195,7 @@ export default function QuizPlayer({
     )
     const ratio = questions.length > 0 ? score / questions.length : 0
     const missed = missedQuestions(questions, choices)
-    const v = verdict(ratio)
+    const v = verdictFor(ratio, gradeLevel)
 
     return (
       <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">

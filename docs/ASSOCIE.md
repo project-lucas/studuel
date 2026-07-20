@@ -51,7 +51,10 @@ indifférent) : 168 = tirage coffre en SQL (`open_chest_v2`, **supprime
 plafond journalier d'XP de défi** (ferme un VRAI trou : l'INSERT direct dans
 `challenge_sessions` était borné par ligne mais pas en VOLUME → ligue truquable),
 **176 = nom de groupe d'amis** (`squad_name` sur `profiles`, colonne + GRANT,
-hérite des policies existantes). **Prochaine à créer = `177`.**
+hérite des policies existantes), **177 = bornes `test_sessions` /
+`exam_blanc_sessions`** (la table jumelle de `challenge_sessions` n'avait JAMAIS
+eu de CHECK depuis 003 : `score: 999999` par INSERT direct → XP `score×10+20`
+sans plafond ; miroir exact de la 165). **Prochaine à créer = `178`.**
 
 **Fonctionnel livré (l'essentiel)** :
 - **Boucle cœur Réviser** : accueil « carnet violet », chapitres → leçon-hub
@@ -246,6 +249,20 @@ breaking changes vs. l'entraînement.
   contenu d'édition — la page d'édition normalise au chargement et retire
   justement les formes vides. Tout « modèle » visible doit vivre côté édition
   (`carteWithModel`).
+- **Leçon de méthode confirmée** : quand la file explicite est vide, l'audit de
+  zones sous-auditées reste la source de valeur n°1. Trois défauts RÉELS sortis
+  du seul cœur pédagogique, tous **silencieux** (aucune exception, aucun test
+  rouge) : SRS avançable sans échéance (`6ae70d2` — J+1→J+35 en une session de
+  grind, la « répétition espacée » n'espaçait plus), `test_sessions` sans borne
+  en base (`cd9d0c6`, migration 177), file « À revoir » tronquée sans tri
+  (`9d79219`). **Réflexe à garder** : quand une table jumelle reçoit un
+  durcissement (165 sur `challenge_sessions`), vérifier SYSTÉMATIQUEMENT les
+  tables de même forme — c'est comme ça que la 177 est sortie.
+- **Écarté volontairement, décision de Lucas** : la maîtrise agrège par
+  `Math.max` (« meilleur score par quiz », choix assumé et commenté) donc ne
+  redescend jamais. Ce n'est pas clairement un bug — l'oubli est déjà géré par le
+  SRS, et faire disparaître des couronnes acquises est un changement produit
+  visible. Ne PAS le « corriger » à l'aveugle au prochain cycle.
 
 **2026-07-18 — fin du cycle 2 `/jour` (Lia) :**
 - **Fait** : file explicite déjà épuisée (cycle 1) → **6 revues sous-agents** sur

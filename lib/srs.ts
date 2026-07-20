@@ -158,12 +158,19 @@ export async function getReviewItems(
   // tout l'historique SRS d'un élève assidu (l'index (user_id, due_date) de 021
   // sert ce filtre). Borné par sûreté : la file du jour n'a jamais besoin de
   // plus. L'erreur est journalisée (une panne ≠ « pas d'items »).
+  // Le tri SQL reproduit celui de `reviewQueue` (Revanche d'abord, puis les
+  // plus en retard) : sans lui, `limit(300)` tronque un ensemble NON ordonné,
+  // et l'élève qui revient après une longue absence (plus de 300 items dus)
+  // pourrait voir ses Revanches écartées du lot — alors que la promesse est
+  // qu'elles passent en premier. Trier avant de couper garde la file honnête.
   const today = new Date().toISOString().slice(0, 10)
   const { data, error } = await supabase
     .from('review_items')
     .select('item_kind, item_id, subject, streak, lapses, due_date, in_revanche')
     .eq('user_id', userId)
     .or(`due_date.lte.${today},in_revanche.eq.true`)
+    .order('in_revanche', { ascending: false })
+    .order('due_date', { ascending: true })
     .limit(300)
     .returns<ReviewItem[]>()
   if (error) console.error('[srs] file « À revoir » indisponible:', error.message)

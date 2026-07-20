@@ -5,7 +5,8 @@ import Link from 'next/link'
 import { recordTestSession } from '@/app/test/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
-import { sfx } from '@/lib/sounds'
+import { sfx, buzz } from '@/lib/sounds'
+import { comboLabel, comboTier } from '@/lib/juice'
 import { SoundToggle } from '@/components/FlashcardPlayer'
 import BackButton from '@/components/BackButton'
 import QuitGuardButton from '@/components/QuitGuardButton'
@@ -50,6 +51,8 @@ export default function QuizPlayer({
   // Choix de l'élève, question par question — la correction se lit dedans.
   const [choices, setChoices] = useState<number[]>([])
   const [selected, setSelected] = useState<number | null>(null)
+  // Bonnes réponses d'affilée (remise à zéro à la première erreur).
+  const [streak, setStreak] = useState(0)
   const [finished, setFinished] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
 
@@ -93,8 +96,13 @@ export default function QuizPlayer({
     lockedRef.current = true
     setSelected(optionIndex)
     const good = optionIndex === question.correct_index
-    if (good) sfx.correct()
+    // Série en cours : la récompense MONTE tant qu'on enchaîne, et retombe net
+    // à la première erreur. C'est ce qui donne envie de continuer.
+    const nextStreak = good ? streak + 1 : 0
+    setStreak(nextStreak)
+    if (good) sfx.correctCombo(nextStreak)
     else sfx.wrong()
+    buzz(good, nextStreak)
     reviewsRef.current.push({
       kind: 'question',
       id: question.id,
@@ -120,6 +128,7 @@ export default function QuizPlayer({
     setIndex(0)
     setChoices([])
     setSelected(null)
+    setStreak(0)
     setFinished(false)
     setSaved(null)
     reviewsRef.current = []
@@ -313,6 +322,27 @@ export default function QuizPlayer({
           <span className="sr-only">{title}</span>
           <SoundToggle />
         </div>
+
+        {/* Badge de SÉRIE : n'apparaît qu'à partir de 2 bonnes réponses
+            d'affilée, grossit avec le palier, et disparaît net à la première
+            erreur. C'est la récompense visible qui accompagne la montée du son. */}
+        {comboLabel(streak) ? (
+          <div className="flex justify-center" aria-live="polite">
+            <span
+              className={cn(
+                'animate-in zoom-in-50 font-heading rounded-full px-3 py-1 text-sm font-extrabold shadow-md duration-300',
+                comboTier(streak) === 'inarretable'
+                  ? 'bg-highlight text-foreground ring-2 ring-white/70'
+                  : comboTier(streak) === 'feu'
+                    ? 'bg-highlight text-foreground'
+                    : 'bg-white/20 text-primary-foreground',
+              )}
+            >
+              {comboTier(streak) === 'aucun' ? null : '🔥 '}
+              {comboLabel(streak)}
+            </span>
+          </div>
+        ) : null}
 
         {/* Anneau de progression : « Question N/10 » */}
         <div className="z-10 -mb-10 flex justify-center">

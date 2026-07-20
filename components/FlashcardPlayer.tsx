@@ -20,7 +20,8 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { sfx, isSoundOn, setSoundOn } from '@/lib/sounds'
+import { sfx, buzz, isSoundOn, setSoundOn } from '@/lib/sounds'
+import { comboLabel, comboTier } from '@/lib/juice'
 import { recordStudySession } from '@/app/studio/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
@@ -63,6 +64,8 @@ export default function FlashcardPlayer({
   const [reviews, setReviews] = useState(0)
   const [firstTryKnown, setFirstTryKnown] = useState(0)
   const [seen, setSeen] = useState<Set<string>>(new Set())
+  // Cartes sues d'affilée (remise à zéro dès qu'une carte n'est pas sue).
+  const [streak, setStreak] = useState(0)
   const [finished, setFinished] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
 
@@ -102,9 +105,15 @@ export default function FlashcardPlayer({
       })
     }
 
+    // Série en cours : la récompense monte tant que l'élève enchaîne les
+    // cartes sues, et retombe net dès qu'une carte lui échappe.
+    const nextStreak = known ? streak + 1 : 0
+    setStreak(nextStreak)
+    buzz(known, nextStreak)
+
     const rest = queue.slice(1)
     if (known) {
-      sfx.correct()
+      sfx.correctCombo(nextStreak)
       if (firstTry) setFirstTryKnown((n) => n + 1)
       if (rest.length === 0) {
         setFinished(true)
@@ -126,6 +135,7 @@ export default function FlashcardPlayer({
   const restart = () => {
     setQueue(cards)
     setFlipped(false)
+    setStreak(0)
     setReviews(0)
     setFirstTryKnown(0)
     setSeen(new Set())
@@ -188,6 +198,23 @@ export default function FlashcardPlayer({
         <span className="font-mono tabular-nums">
           {knownCount}/{cards.length} sues
         </span>
+        {/* Badge de SÉRIE : apparaît à partir de 2 cartes sues d'affilée et
+            disparaît net dès qu'une carte échappe — même récompense que le
+            quiz, pour que les deux formats se ressemblent. */}
+        {comboLabel(streak) ? (
+          <span
+            aria-live="polite"
+            className={cn(
+              'animate-in zoom-in-50 font-heading rounded-full px-2.5 py-0.5 text-xs font-extrabold duration-300',
+              comboTier(streak) === 'chaud'
+                ? 'bg-primary/10 text-primary'
+                : 'bg-highlight text-foreground shadow-sm',
+            )}
+          >
+            {comboTier(streak) === 'chaud' ? '' : '🔥 '}
+            {comboLabel(streak)}
+          </span>
+        ) : null}
         <SoundToggle />
       </div>
 

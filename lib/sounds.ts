@@ -2,6 +2,8 @@
 // jingles premium (assets Mixkit dans public/sounds/) pour les moments forts.
 // Utilisable uniquement côté client ; préférence persistée en localStorage.
 
+import { comboSemitones, comboTier, transpose, buzzPattern } from '@/lib/juice'
+
 const STORAGE_KEY = 'scolaria-sound'
 
 export function isSoundOn(): boolean {
@@ -92,6 +94,20 @@ export const sfx = {
     note(523.25, 0, 0.1) // do
     note(783.99, 0.09, 0.14) // sol
   },
+  // Bonne réponse EN SÉRIE : la même récompense, mais transposée vers le haut à
+  // chaque bonne réponse d'affilée. C'est le cœur du « juice » — la montée se
+  // ressent immédiatement et donne envie d'enchaîner. Plafonnée par
+  // `comboSemitones` pour ne pas finir dans des aigus pénibles. Une troisième
+  // note s'ajoute à partir du palier « en feu » pour marquer le cap.
+  correctCombo(streak: number) {
+    if (!isSoundOn()) return
+    const up = comboSemitones(streak)
+    note(transpose(523.25, up), 0, 0.1) // do transposé
+    note(transpose(783.99, up), 0.09, 0.14) // sol transposé
+    if (comboTier(streak) !== 'aucun' && comboTier(streak) !== 'chaud') {
+      note(transpose(1046.5, up), 0.19, 0.18, 'triangle', 0.04) // do aigu
+    }
+  },
   // Mauvaise réponse : buzz grave, bref.
   wrong() {
     if (!isSoundOn()) return
@@ -158,4 +174,23 @@ export const sfx = {
     note(1318.51, 0.39, 0.3, 'sine', 0.05) // mi aigu
     note(1567.98, 0.5, 0.35, 'triangle', 0.035) // sol aigu, étincelle
   },
+}
+
+// Retour HAPTIQUE — le compagnon du son sur mobile (PWA installée), et le plus
+// souvent oublié : sur téléphone c'est lui qui donne la sensation « premium ».
+// Il suit le même interrupteur que le son (un élève qui coupe le son en cours
+// veut la discrétion COMPLÈTE, vibration comprise), et se tait silencieusement
+// là où l'API n'existe pas (iOS Safari, bureau).
+export function buzz(good: boolean, streak = 0): void {
+  if (typeof window === 'undefined' || !isSoundOn()) return
+  const nav = window.navigator as Navigator & {
+    vibrate?: (p: number | number[]) => boolean
+  }
+  if (typeof nav.vibrate !== 'function') return
+  try {
+    nav.vibrate(buzzPattern(good, streak))
+  } catch {
+    // Certains navigateurs lèvent si l'appel n'est pas lié à un geste : le
+    // retour haptique est un bonus, jamais une raison de casser la session.
+  }
 }

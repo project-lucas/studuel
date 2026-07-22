@@ -1,13 +1,15 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import Image from 'next/image'
 import { Heart, Zap, Check, X, RotateCcw, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { sfx } from '@/lib/sounds'
+import { gameSfx, sfx } from '@/lib/sounds'
 import { XP_RULES } from '@/lib/xp'
 import { recordChallenge } from '@/app/defi/actions'
 import {
+  MODE_TIMBRE,
   MODE_XP_BONUS,
   bossAfterAnswer,
   bossOutcome,
@@ -27,6 +29,7 @@ import {
   RANK_STATS,
   RANK_LABELS,
   MAX_BOSS_RANK,
+  type Boss,
   type BossRank,
 } from '@/lib/bosses'
 import { toDayKey } from '@/lib/streak'
@@ -36,6 +39,23 @@ import type { ReviewAnswer } from '@/lib/srs'
 
 type Phase = 'intro' | 'playing' | 'done'
 
+// Visage du boss dans un médaillon : buste détouré si la DA est prête,
+// emoji sinon. Le parent donne la taille (size-*) et le fond ; l'image
+// déborde légèrement du cadre (scale) pour l'effet « portrait d'arène ».
+function BossFace({ boss, px }: { boss: Boss; px: number }) {
+  if (!boss.image) return <span aria-hidden="true">{boss.emoji}</span>
+  return (
+    <Image
+      src={boss.image}
+      alt=""
+      width={px}
+      height={px}
+      aria-hidden="true"
+      className="size-full scale-110 object-contain object-bottom"
+    />
+  )
+}
+
 // Boss de la semaine : un combat contre le boss de ta matière prioritaire.
 // Chaque bonne réponse le frappe, chaque erreur coûte un cœur. Le pool vise
 // déjà les chapitres fragiles — battre le boss, c'est réviser ce qui rapporte
@@ -43,10 +63,17 @@ type Phase = 'intro' | 'playing' | 'done'
 export default function BossMode({
   pool,
   onExit,
+  variant = 'arena',
 }: {
   pool: ModeQuestion[]
   onExit: () => void
+  // 'subject' : combat lancé depuis l'onglet Boss d'une page matière — pas
+  // d'événement hebdo (il vit dans l'Arène) et libellé de retour neutre.
+  variant?: 'arena' | 'subject'
 }) {
+  // Le Boss sonne CUIVRE : fanfare courte et franche, dents de scie. Un combat
+  // de boss doit s'annoncer à l'oreille comme un événement, pas comme un quiz.
+  const audio = useMemo(() => gameSfx(MODE_TIMBRE.boss), [])
   // Le boss incarne la matière la plus représentée du pool (= la priorité).
   const subjectBoss = useMemo(() => bossForSubject(dominantSubject(pool)), [pool])
   // L'événement : le boss de la semaine, plus dur, trophée exclusif à la clé.
@@ -100,12 +127,15 @@ export default function BossMode({
   // une question sautée + une réponse en double (SRS). Relâché au prochain
   // `qIndex` (nouvelle question) ou à `start()` (qui incrémente aussi `qIndex`).
   const answerLockRef = useRef(false)
+  // Série de coups portés d'affilée : elle fait monter la récompense sonore.
+  const streakRef = useRef(0)
   useEffect(() => {
     answerLockRef.current = false
   }, [qIndex])
 
   const start = (event: boolean) => {
     sfx.flip()
+    streakRef.current = 0
     setEventFight(event)
     const s = event ? WEEKLY_BOSS_STATS : RANK_STATS[rank]
     setBoss({ hp: s.hp, lives: s.lives })
@@ -144,7 +174,7 @@ export default function BossMode({
       if (up) sfx.levelUp()
       else sfx.complete()
     } else {
-      sfx.wrong()
+      audio.lose()
     }
     setOutcome(result)
     setPhase('done')
@@ -171,8 +201,12 @@ export default function BossMode({
       subject: question.subject,
       good,
     })
-    if (good) sfx.correct()
-    else sfx.wrong()
+    // Chaque bonne réponse FRAPPE le boss, chaque erreur coûte un cœur : deux
+    // événements de nature différente, deux sons différents. Les cuivres du
+    // Boss ne s'entendent dans aucun autre mode.
+    if (good) audio.correct(streakRef.current + 1)
+    else audio.lifeLost()
+    streakRef.current = good ? streakRef.current + 1 : 0
     const newBoss = bossAfterAnswer(boss, good)
     const newCorrect = correct + (good ? 1 : 0)
     const newAnswered = answeredCount + 1
@@ -232,8 +266,8 @@ export default function BossMode({
     return (
       <div className="mx-auto flex max-w-xl flex-col items-center gap-6 pt-4 text-center">
         <div className="flex flex-col items-center gap-2">
-          <span className="flex size-24 items-center justify-center rounded-full bg-primary text-5xl shadow-lg shadow-primary/30">
-            <span aria-hidden="true">{character.emoji}</span>
+          <span className="flex size-24 items-center justify-center overflow-hidden rounded-full bg-primary text-5xl shadow-lg shadow-primary/30">
+            <BossFace boss={character} px={96} />
           </span>
           <div className="flex items-center gap-2">
             <h1 className="font-heading text-3xl font-bold">{character.name}</h1>
@@ -281,15 +315,16 @@ export default function BossMode({
         ) : null}
 
         {/* Événement : le boss de la semaine, toutes matières, trophée
-            exclusif. Disparaît lundi — vaincu ou pas. */}
+            exclusif. Disparaît lundi — vaincu ou pas. Réservé à l'Arène. */}
+        {variant === 'arena' ? (
         <section className="w-full max-w-sm rounded-3xl border-2 border-highlight/60 bg-card p-4 text-left shadow-sm">
           <p className="flex items-center gap-1.5 text-[11px] font-extrabold tracking-widest text-primary uppercase">
             <Zap className="size-3.5 text-highlight" aria-hidden="true" />
             Événement · Boss de la semaine
           </p>
           <div className="mt-2 flex items-center gap-3">
-            <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary text-2xl">
-              <span aria-hidden="true">{weekly.emoji}</span>
+            <span className="flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-primary text-2xl">
+              <BossFace boss={weekly} px={48} />
             </span>
             <div className="min-w-0 flex-1">
               <p className="font-heading text-base font-bold leading-tight">
@@ -314,9 +349,10 @@ export default function BossMode({
             {weeklyDone ? 'Déjà vaincu cette semaine ✓' : 'Affronter le boss de la semaine'}
           </Button>
         </section>
+        ) : null}
 
         <Button variant="ghost" onClick={onExit}>
-          Retour à l&apos;Arène
+          {variant === 'arena' ? 'Retour à l’Arène' : 'Retour'}
         </Button>
       </div>
     )
@@ -331,7 +367,20 @@ export default function BossMode({
     return (
       <div className="mx-auto flex max-w-xl flex-col items-center gap-5 pt-8 text-center">
         <div className="animate-in zoom-in text-6xl duration-500">
-          {outcome === 'won' ? '👑' : character.emoji}
+          {outcome === 'won' ? (
+            '👑'
+          ) : character.image ? (
+            <Image
+              src={character.image}
+              alt=""
+              width={112}
+              height={112}
+              aria-hidden="true"
+              className="mx-auto"
+            />
+          ) : (
+            character.emoji
+          )}
         </div>
         <div>
           <h1 className="font-heading text-3xl font-bold">
@@ -392,7 +441,7 @@ export default function BossMode({
             {outcome === 'won' ? 'Rejouer' : 'Revanche'}
           </Button>
           <Button variant="outline" size="lg" onClick={onExit}>
-            Retour à l&apos;Arène
+            {variant === 'arena' ? 'Retour à l’Arène' : 'Retour'}
           </Button>
         </div>
       </div>
@@ -409,9 +458,9 @@ export default function BossMode({
         <div className="flex items-center gap-3">
           <span
             key={boss.hp}
-            className="pop-spring flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary-foreground/15 text-2xl"
+            className="pop-spring flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-primary-foreground/15 text-2xl"
           >
-            <span aria-hidden="true">{character.emoji}</span>
+            <BossFace boss={character} px={44} />
           </span>
           <div className="min-w-0 flex-1">
             <div className="flex items-baseline justify-between text-xs font-bold">

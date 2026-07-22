@@ -32,7 +32,9 @@ describe('catalogue des salons', () => {
   })
 
   it('ne retourne jamais un jeu non implémenté ni inconnu', () => {
-    expect(playableSalonGame('frise-folle')).toBeNull()
+    // « Pointe la carte » reste annoncé sans être construit : c'est le cas que
+    // ce garde-fou protège (un billet « Bientôt » ne doit jamais mener au jeu).
+    expect(playableSalonGame('pointe-carte')).toBeNull()
     expect(playableSalonGame('nimporte-quoi')).toBeNull()
   })
 })

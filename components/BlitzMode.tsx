@@ -1,10 +1,11 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Timer, Zap, Check, X, RotateCcw, Trophy } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { sfx } from '@/lib/sounds'
+import { gameSfx, sfx } from '@/lib/sounds'
+import { MODE_TIMBRE } from '@/lib/defi-modes'
 import { XP_RULES } from '@/lib/xp'
 import { recordChallenge } from '@/app/defi/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
@@ -36,6 +37,10 @@ export default function BlitzMode({
   pool: ModeQuestion[]
   onExit: () => void
 }) {
+  // Le Blitz sonne MÉTAL : cliquetis secs et courts, comme une mitraille. C'est
+  // le mode le plus nerveux de l'Arène, il doit s'entendre comme tel — et ne
+  // jamais se confondre à l'oreille avec le Chrono ou la Survie.
+  const audio = useMemo(() => gameSfx(MODE_TIMBRE.blitz), [])
   const [phase, setPhase] = useState<Phase>('intro')
   const [secondsLeft, setSecondsLeft] = useState(BLITZ_SECONDS)
   const [qIndex, setQIndex] = useState(0)
@@ -148,7 +153,7 @@ export default function BlitzMode({
     statsRef.current.answered += 1
     setAnsweredCount((n) => n + 1)
     if (good) {
-      sfx.correct()
+      audio.correct(combo + 1)
       statsRef.current.score += blitzPoints(combo)
       statsRef.current.correct += 1
       setScore((s) => s + blitzPoints(combo))
@@ -159,7 +164,10 @@ export default function BlitzMode({
       })
       setCorrect((n) => n + 1)
     } else {
-      sfx.wrong()
+      // Dans le Blitz, l'erreur ne coûte pas de temps : elle casse le combo.
+      // C'est cette perte-là qu'on fait entendre, pas un simple « faux ».
+      if (combo >= 3) audio.lifeLost()
+      else audio.wrong()
       setCombo(0)
     }
     window.setTimeout(() => {

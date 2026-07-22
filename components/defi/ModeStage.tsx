@@ -28,6 +28,7 @@ export default function ModeStage({
   title,
   Icon,
   tone = 'light',
+  theme,
   onExit,
   headerRight,
   children,
@@ -35,12 +36,22 @@ export default function ModeStage({
   title: string
   Icon: LucideIcon
   tone?: 'light' | 'dark'
+  /**
+   * Robe du mode : le nom d'une classe `.jeu-*` de globals.css (sans le préfixe).
+   * Elle pose `--jeu-accent` / `--jeu-surface` / `--jeu-glow`, et la scène prend
+   * alors l'atmosphère du mode au lieu du crème commun à tous.
+   *
+   * Sans thème, on garde le fond `bg-background` d'origine — un mode qui n'a pas
+   * encore sa robe ne doit pas devenir illisible pour autant.
+   */
+  theme?: string
   onExit: () => void
   /** Emplacement optionnel à droite du titre (score, adversaire compact…). */
   headerRight?: ReactNode
   children: ReactNode
 }) {
   const dark = tone === 'dark'
+  const themed = !dark && !!theme
   return (
     // data-no-swipe : une partie en cours ne doit jamais changer d'onglet sur un
     // balayage (on quitte par la croix ou les boutons explicites du mode).
@@ -48,7 +59,11 @@ export default function ModeStage({
       data-no-swipe
       className={cn(
         '-mx-4 -mt-16 -mb-24 flex min-h-dvh flex-col pt-12 md:-mx-8 md:-my-10 md:pt-0',
-        dark ? 'mode-stage-dark text-white' : 'bg-background text-foreground',
+        dark
+          ? 'mode-stage-dark text-white'
+          : themed
+            ? `jeu-${theme} jeu-table text-foreground`
+            : 'bg-background text-foreground',
       )}
     >
       <header
@@ -56,14 +71,20 @@ export default function ModeStage({
           'sticky top-12 z-10 flex items-center gap-3 px-4 py-3 backdrop-blur-md md:top-0',
           dark
             ? 'border-b border-white/10 bg-black/15'
-            : 'border-b border-black/5 bg-background/80',
+            : themed
+              ? 'border-b border-black/5 bg-[color:var(--jeu-surface)]/80'
+              : 'border-b border-black/5 bg-background/80',
         )}
       >
         <span
           aria-hidden="true"
           className={cn(
             'grid size-9 shrink-0 place-items-center rounded-xl',
-            dark ? 'bg-white/12 text-white' : 'bg-primary/10 text-primary',
+            dark
+              ? 'bg-white/12 text-white'
+              : themed
+                ? 'bg-[color:var(--jeu-accent)] text-[color:var(--jeu-ink)]'
+                : 'bg-primary/10 text-primary',
           )}
         >
           <Icon className="size-5" />

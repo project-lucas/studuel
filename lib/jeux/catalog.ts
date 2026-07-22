@@ -23,6 +23,9 @@ export type SalonGameId =
   | 'classe-moi-ca'
   | 'chasse-elements'
   | 'bonne-unite'
+  | 'frise-folle'
+  | 'phrase-en-vrac'
+  | 'compte-est-bon'
 
 export type SalonGame = {
   id: string
@@ -57,7 +60,7 @@ export const SALONS: Salon[] = [
         name: 'La Frise folle',
         emoji: '📜',
         tagline: '5 événements à remettre dans l’ordre chronologique',
-        implemented: false,
+        implemented: true,
       },
       {
         id: 'pointe-carte',
@@ -110,8 +113,8 @@ export const SALONS: Salon[] = [
         id: 'compte-est-bon',
         name: 'Le compte est bon',
         emoji: '🎯',
-        tagline: 'Atteins le nombre cible — même tirage que ton rival',
-        implemented: false,
+        tagline: 'Six plaques, un nombre cible — fabrique le compte',
+        implemented: true,
       },
       {
         id: 'suite-logique',
@@ -144,8 +147,8 @@ export const SALONS: Salon[] = [
         id: 'phrase-en-vrac',
         name: 'Phrase en vrac',
         emoji: '🧩',
-        tagline: 'Remets les mots dans l’ordre plus vite que l’autre',
-        implemented: false,
+        tagline: 'Remets les mots dans l’ordre avant la fin du chrono',
+        implemented: true,
       },
     ],
   },

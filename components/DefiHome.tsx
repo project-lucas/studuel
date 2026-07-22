@@ -292,18 +292,27 @@ export default function DefiHome({
   // Chaque mode joue désormais dans une PAGE plein cadre opaque (ModeStage) :
   // fini le calque posé sur l'image d'arène qui rendait les questions
   // illisibles. Teinte `light` (crème) pour les modes conçus clairs, `dark`
-  // (violet uni) pour les modes compétitifs conçus sombres — aucun mode n'est
-  // repeint, on ne fait que leur rendre le fond pour lequel ils sont dessinés.
+  // (violet uni) pour les modes compétitifs conçus sombres.
+  //
+  // Chaque mode clair porte en plus SA ROBE (`theme`) : le Blitz est jaune
+  // électrique, le Contre-la-montre turquoise, la Survie braise, le Boss
+  // pourpre et or, le Duel cyan spectral. Cinq modes qui partageaient le même
+  // fond crème se ressemblaient bien plus que leurs affiches ne le promettaient.
   if (phase === 'blitz') {
     return (
-      <ModeStage title="Blitz 60s" Icon={Timer} onExit={exitMode}>
+      <ModeStage title="Blitz 60s" Icon={Timer} theme="eclair" onExit={exitMode}>
         <BlitzMode pool={pool} onExit={exitMode} />
       </ModeStage>
     )
   }
   if (phase === 'duel') {
     return (
-      <ModeStage title="Duel fantôme" Icon={Swords} onExit={exitMode}>
+      <ModeStage
+        title="Duel fantôme"
+        Icon={Swords}
+        theme="fantome"
+        onExit={exitMode}
+      >
         <DuelMode
           pool={pool}
           myLevel={level.level}
@@ -315,7 +324,12 @@ export default function DefiHome({
   }
   if (phase === 'duel-live' && userId) {
     return (
-      <ModeStage title="Duel en direct" Icon={Swords} onExit={exitMode}>
+      <ModeStage
+        title="Duel en direct"
+        Icon={Swords}
+        theme="fantome"
+        onExit={exitMode}
+      >
         <LiveDuelMode
           userId={userId}
           pool={pool}
@@ -328,21 +342,26 @@ export default function DefiHome({
   }
   if (phase === 'chrono') {
     return (
-      <ModeStage title="Contre-la-montre" Icon={Hourglass} onExit={exitMode}>
+      <ModeStage
+        title="Contre-la-montre"
+        Icon={Hourglass}
+        theme="sablier"
+        onExit={exitMode}
+      >
         <ChronoMode pool={pool} onExit={exitMode} />
       </ModeStage>
     )
   }
   if (phase === 'survie') {
     return (
-      <ModeStage title="Survie" Icon={Skull} onExit={exitMode}>
+      <ModeStage title="Survie" Icon={Skull} theme="abysse" onExit={exitMode}>
         <SurvivalMode pool={pool} onExit={exitMode} />
       </ModeStage>
     )
   }
   if (phase === 'boss') {
     return (
-      <ModeStage title="Boss" Icon={Crown} onExit={exitMode}>
+      <ModeStage title="Boss" Icon={Crown} theme="couronne" onExit={exitMode}>
         <BossMode pool={pool} onExit={exitMode} />
       </ModeStage>
     )
@@ -660,9 +679,19 @@ export default function DefiHome({
                       )}
                     >
                       {arenaBoss ? (
-                        <span aria-hidden="true" className="wiggle-on-hover text-2xl">
-                          {arenaBoss.emoji}
-                        </span>
+                        arenaBoss.image ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={arenaBoss.image}
+                            alt=""
+                            aria-hidden="true"
+                            className="wiggle-on-hover size-full rounded-xl object-contain object-bottom"
+                          />
+                        ) : (
+                          <span aria-hidden="true" className="wiggle-on-hover text-2xl">
+                            {arenaBoss.emoji}
+                          </span>
+                        )
                       ) : (
                         <Icon className="wiggle-on-hover size-5" />
                       )}

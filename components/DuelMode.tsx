@@ -1,11 +1,11 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import { Swords, Check, X, Trophy, RotateCcw, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { sfx } from '@/lib/sounds'
+import { gameSfx, sfx } from '@/lib/sounds'
 import DefiTimer from '@/components/DefiTimer'
 import { XP_RULES } from '@/lib/xp'
 import { recordChallenge, recordDuelResult, saveDuelRecording } from '@/app/defi/actions'
@@ -21,6 +21,7 @@ import {
 import { toDayKey } from '@/lib/streak'
 import {
   ARENA_IMAGE,
+  MODE_TIMBRE,
   ROUND_SIZE,
   duelScore,
   duelWinner,
@@ -122,6 +123,7 @@ export default function DuelMode({
 
   const startDuel = (friend: Friend) => {
     sfx.flip()
+    streakRef.current = 0
     setOpponent(friend)
     setDuelKey(`${friend.id}-${nowMs()}`)
     setRounds([])
@@ -161,6 +163,11 @@ export default function DuelMode({
   // fantôme étant déterministe/enregistré (pas de sync live), c'est aussi sûr
   // qu'en Classé. Relâché au prochain `qIndex` (incrémenté à chaque réponse).
   const answerLockRef = useRef(false)
+  // Le Duel sonne BOIS : notes rondes et pentatoniques, chaleureuses. On
+  // affronte un ami — l'ambiance est celle d'un jeu de société, pas d'un
+  // examen sous chrono. Série suivie pour faire monter la récompense.
+  const audio = useMemo(() => gameSfx(MODE_TIMBRE.duel), [])
+  const streakRef = useRef(0)
   useEffect(() => {
     answerLockRef.current = false
   }, [qIndex])
@@ -176,8 +183,9 @@ export default function DuelMode({
       subject: question.subject,
       good,
     })
-    if (good) sfx.correct()
-    else sfx.wrong()
+    if (good) audio.correct(streakRef.current + 1)
+    else audio.wrong()
+    streakRef.current = good ? streakRef.current + 1 : 0
     const newRoundCorrect = roundCorrect + (good ? 1 : 0)
     setRoundCorrect(newRoundCorrect)
     setTotalCorrect((c) => c + (good ? 1 : 0))
@@ -221,16 +229,17 @@ export default function DuelMode({
       if (w) {
         finishDuel(w, newRounds)
       } else if (roundWinner(result) === 'me') {
-        sfx.dayComplete()
+        // Manche remportée : l'étape franchie, pas la victoire finale.
+        audio.stepCleared()
       } else {
-        sfx.wrong()
+        audio.lifeLost()
       }
     }, 1400)
   }
 
   const finishDuel = (w: 'me' | 'them', newRounds: RoundResult[]) => {
     if (w === 'me') sfx.complete()
-    else sfx.wrong()
+    else audio.lose()
     // Le duel compte comme mission du jour (mock partagé avec l'onglet Amis).
     try {
       window.localStorage.setItem(DUEL_DAY_STORAGE_KEY, toDayKey(new Date()))

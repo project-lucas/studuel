@@ -12,6 +12,8 @@
   --font-sans: var(--font-nunito), var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-baloo), var(--font-nunito);
+  /* Pastilles d'initiales des matières : Fredoka, repli Baloo 2. */
+  --font-initials: var(--font-fredoka), var(--font-baloo);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -797,7 +799,7 @@ a:hover > .wiggle-on-hover {
     );
 }
 
-/* --- Vie du ciel de l'Arène : nuages, oiseaux, lumière du moment ------------
+/* --- Vie du ciel de l'Arène : nuages, lumière du moment ---------------------
    Monté DANS le WorldBackdrop du Défi (voir components/ArenaSky.tsx). Tout est
    décoratif : pointer-events désactivés, animations transform/opacity
    uniquement, et neutralisées si l'utilisateur préfère réduire le mouvement. */
@@ -844,71 +846,18 @@ a:hover > .wiggle-on-hover {
   animation-delay: -110s;
 }
 
-/* Oiseaux : silhouettes qui traversent le ciel en ondulant, ailes battantes. */
-@keyframes arena-bird-fly {
-  0% {
-    transform: translate(-12vw, 0);
-  }
-  30% {
-    transform: translate(26vw, -1.6vh);
-  }
-  60% {
-    transform: translate(64vw, 0.9vh);
-  }
-  100% {
-    transform: translate(114vw, -1.2vh);
-  }
-}
-@keyframes arena-bird-flap {
-  from {
-    transform: scaleY(1);
-  }
-  to {
-    transform: scaleY(0.45);
-  }
-}
-.arena-bird {
-  position: absolute;
-  left: 0;
-  width: 24px;
-  height: auto;
-  color: color-mix(in oklch, var(--primary), black 45%);
-  animation: arena-bird-fly 28s linear infinite;
-}
-.arena-bird path {
-  transform-origin: 50% 50%;
-  animation: arena-bird-flap 0.7s ease-in-out infinite alternate;
-}
-.arena-bird-1 {
-  top: 9%;
-}
-.arena-bird-2 {
-  top: 13%;
-  width: 16px;
-  opacity: 0.75;
-  animation-duration: 36s;
-  animation-delay: -17s;
-}
-
-/* La nuit (image étoilée avec lune), oiseaux et nuages s'effacent en douceur :
+/* La nuit (image étoilée avec lune), les nuages s'effacent en douceur :
    le ciel de l'illustration prend le relais. */
-.arena-bird,
 .arena-cloud {
   transition: opacity 800ms ease;
 }
-.arena-sky-night .arena-bird,
 .arena-sky-night .arena-cloud {
   opacity: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .arena-cloud,
-  .arena-bird,
-  .arena-bird path {
+  .arena-cloud {
     animation: none;
-  }
-  .arena-bird {
-    display: none;
   }
 }
 
@@ -922,24 +871,64 @@ a:hover > .wiggle-on-hover {
   animation: ring-spin 24s linear infinite;
 }
 
-/* --- Atmosphère vivante de l'Arène : flammes + feuilles au vent ---------------
-   Monté DANS le WorldBackdrop du Défi (voir components/ArenaAtmosphere.tsx),
-   PAR-DESSUS le décor peint. Tout est décoratif : pointer-events désactivés,
-   animations transform/opacity/filter uniquement, et neutralisées si
-   l'utilisateur préfère réduire le mouvement. Les positions en % suivent la
-   composition portrait de l'illustration (braseros violets en bas, torches
-   dorées de part et d'autre de l'escalier, feuilles dans la bande médiane). */
-.arena-atmos {
+/* --- Fond animé de l'Arène : bannières, feuilles, torches, poussière ----------
+   Monté DANS le WorldBackdrop du Défi (components/background/AnimatedBackground.tsx),
+   PAR-DESSUS le décor peint. Quatre couches procédurales en boucle continue,
+   sans coupure visible. Tout est décoratif : pointer-events désactivés,
+   animations transform/opacity uniquement, et neutralisées si l'utilisateur
+   préfère réduire le mouvement. Les positions en % suivent la composition
+   portrait de l'illustration (braseros violets en bas, torches dorées de part
+   et d'autre de l'escalier). */
+.abg {
+  position: absolute;
+  inset: 0;
+}
+/* Image de fond du mode autonome — l'Arène peint la sienne via .arena-img
+   (fondu horaire), cette couche reste alors absente. */
+.abg-image {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.abg-layers {
   position: absolute;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
 }
+.abg-layer {
+  position: absolute;
+  inset: 0;
+}
+/* Empilement : bannières (1) → feuilles (2) → torches (3) → poussière (4). */
+.abg-layer--banners {
+  z-index: 1;
+}
+.abg-layer--leaves {
+  z-index: 2;
+}
+.abg-layer--torches {
+  z-index: 3;
+}
+.abg-layer--dust {
+  z-index: 4;
+}
+
+/* Canvas des feuilles (composant FallingLeaves) : il remplit sa couche, le
+   dessin et la physique sont pilotés en JS (lib/animated-background.ts). */
+.abg-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
 
 /* Une flamme : halo radial doux qui vacille (l'exactitude au pixel n'est pas
    requise — le halo est diffus, il « rallume » la zone peinte). Deux rythmes
    superposés (vacillement + respiration) pour un feu organique, jamais robotique. */
-@keyframes arena-flame-flicker {
+@keyframes abg-flame-flicker {
   0% {
     opacity: 0.55;
     transform: translate(-50%, -50%) scale(0.92) scaleY(0.96);
@@ -969,7 +958,7 @@ a:hover > .wiggle-on-hover {
     transform: translate(-50%, -50%) scale(0.92) scaleY(0.96);
   }
 }
-.arena-flame {
+.abg-flame {
   position: absolute;
   width: 26%;
   aspect-ratio: 1;
@@ -977,10 +966,10 @@ a:hover > .wiggle-on-hover {
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
   will-change: opacity, transform;
-  animation: arena-flame-flicker 2.4s ease-in-out infinite;
+  animation: abg-flame-flicker 2.4s ease-in-out infinite;
 }
 /* Braseros violets : les deux vasques au sol, à gauche et à droite. */
-.arena-flame--violet {
+.abg-flame--violet {
   background: radial-gradient(
     circle,
     rgba(214, 158, 255, 0.9) 0%,
@@ -989,7 +978,7 @@ a:hover > .wiggle-on-hover {
     transparent 72%
   );
 }
-.arena-flame--gold {
+.abg-flame--gold {
   width: 17%;
   background: radial-gradient(
     circle,
@@ -999,139 +988,114 @@ a:hover > .wiggle-on-hover {
     transparent 74%
   );
 }
-.arena-flame--vl {
+.abg-flame--vl {
   left: 9%;
   top: 80%;
   animation-duration: 2.6s;
 }
-.arena-flame--vr {
+.abg-flame--vr {
   left: 88%;
   top: 80%;
   animation-duration: 2.1s;
   animation-delay: -0.9s;
 }
-.arena-flame--gl {
+.abg-flame--gl {
   left: 19%;
   top: 36%;
   animation-duration: 1.9s;
   animation-delay: -0.5s;
 }
-.arena-flame--gr {
+.abg-flame--gr {
   left: 81%;
   top: 36%;
   animation-duration: 2.3s;
   animation-delay: -1.4s;
 }
 
-/* Étincelles : de fines braises dorées qui montent des braseros et s'éteignent. */
-@keyframes arena-mote-rise {
-  0% {
-    opacity: 0;
-    transform: translateY(0) translateX(0) scale(1);
+/* Bannières violettes suspendues aux bords : liseré doré en tête (premiers 7%
+   du dégradé), corps violet, pointe en V taillée au clip-path. L'ondulation
+   pivote autour du point d'accroche (transform-origin en haut), gauche et
+   droite désynchronisées par durée + délai. */
+@keyframes abg-banner-sway {
+  from {
+    transform: rotate(-1.2deg);
   }
-  12% {
-    opacity: 0.9;
-  }
-  80% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-70px) translateX(var(--mote-drift, 8px)) scale(0.4);
+  to {
+    transform: rotate(1.2deg);
   }
 }
-.arena-mote {
+.abg-banner {
   position: absolute;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ffe8a3 0%, rgba(249, 178, 51, 0.6) 60%, transparent 75%);
-  will-change: transform, opacity;
-  animation: arena-mote-rise 3.4s ease-out infinite;
+  top: 22%;
+  width: clamp(30px, 6vw, 52px);
+  height: clamp(84px, 16vh, 140px);
+  transform-origin: top center;
+  opacity: 0.82;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--highlight), white 14%) 0%,
+    var(--highlight) 7%,
+    color-mix(in oklch, var(--primary), white 8%) 7%,
+    color-mix(in oklch, var(--primary), black 26%) 100%
+  );
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%);
+  will-change: transform;
+  animation: abg-banner-sway 3.4s ease-in-out infinite alternate;
+}
+.abg-banner--left {
+  left: 2.5%;
+}
+.abg-banner--right {
+  right: 2.5%;
+  animation-duration: 4.1s;
+  animation-delay: -1.7s;
 }
 
-/* Feuilles de laurier : chute lente en diagonale (le vent) + tangage. La
-   translation est portée par l'élément, la rotation par l'enfant, pour composer
-   « dérive » et « tangage » sans conflit de transform. */
-@keyframes arena-leaf-fall {
+/* Poussière de lumière ambiante : petits points dorés qui montent lentement
+   en pulsant. Positions/délais/durées randomisés côté lib (graine fixe, rendu
+   SSR identique) et posés en styles inline par GoldenDust.tsx. */
+@keyframes abg-dust-float {
   0% {
-    transform: translate(0, -8vh);
+    transform: translateY(0) translateX(0);
     opacity: 0;
   }
-  10% {
-    opacity: 0.9;
+  18% {
+    opacity: var(--dust-opacity, 0.45);
   }
-  90% {
-    opacity: 0.9;
+  55% {
+    opacity: calc(var(--dust-opacity, 0.45) * 0.55);
+  }
+  78% {
+    opacity: var(--dust-opacity, 0.45);
   }
   100% {
-    transform: translate(var(--leaf-x, 10vw), 42vh);
+    transform: translateY(-14vh) translateX(var(--dust-drift, 0px));
     opacity: 0;
   }
 }
-@keyframes arena-leaf-sway {
-  0% {
-    transform: rotate(-24deg) scaleX(1);
-  }
-  50% {
-    transform: rotate(28deg) scaleX(0.82);
-  }
-  100% {
-    transform: rotate(-24deg) scaleX(1);
-  }
-}
-.arena-leaf {
+.abg-dust {
   position: absolute;
-  width: 16px;
-  height: auto;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #ffe8a3 0%,
+    rgba(249, 178, 51, 0.65) 55%,
+    transparent 75%
+  );
   will-change: transform, opacity;
-  animation: arena-leaf-fall 13s linear infinite;
-}
-.arena-leaf svg {
-  display: block;
-  animation: arena-leaf-sway 2.6s ease-in-out infinite;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
-}
-.arena-leaf--1 {
-  left: 22%;
-  --leaf-x: 9vw;
-  animation-duration: 14s;
-  animation-delay: -3s;
-}
-.arena-leaf--2 {
-  left: 68%;
-  --leaf-x: -11vw;
-  animation-duration: 11s;
-  animation-delay: -7s;
-}
-.arena-leaf--2 svg {
-  animation-duration: 2s;
-}
-.arena-leaf--3 {
-  left: 46%;
-  --leaf-x: 7vw;
-  width: 12px;
-  animation-duration: 16s;
-  animation-delay: -11s;
-}
-.arena-leaf--3 svg {
-  animation-duration: 3.1s;
-}
-.arena-leaf--4 {
-  left: 82%;
-  --leaf-x: -8vw;
-  width: 13px;
-  animation-duration: 12.5s;
-  animation-delay: -5s;
+  animation: abg-dust-float var(--dust-duration, 9s) linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .arena-flame {
+  .abg-flame {
     animation: none;
     opacity: 0.7;
   }
-  .arena-mote,
-  .arena-leaf {
+  .abg-banner {
+    animation: none;
+  }
+  .abg-dust,
+  .abg-canvas {
     display: none;
   }
 }
@@ -1902,20 +1866,94 @@ a:hover > .wiggle-on-hover {
     0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
-/* Le BILLET : silhouette de coupon avec une encoche demi-lune à chaque
-   extrémité (mask). Le liseré et l'ombre passent par `filter` (respectent le
-   mask). L'anneau de focus est porté par le parent NON masqué (voir le TSX). */
+/* Le BILLET façon carte « Modes de jeu » de Clash Royale : silhouette de
+   ticket découpée au mask — encoches demi-lune en haut et en bas de la
+   perforation verticale (à --tk-split, la frontière corps/talon) + quatre
+   coins crantés (coupes à 45°). Le liseré et l'ombre passent par `filter`
+   (respectent le mask). L'anneau de focus est porté par le parent NON masqué
+   (voir le TSX). */
 .defi-ticket {
-  --tk-notch: 13px;
+  --tk-notch: 11px; /* rayon des encoches de la perforation */
+  --tk-cut: 9px; /* profondeur des coins crantés */
+  --tk-split: 70%; /* position de la découpe corps/talon */
   filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.55));
   -webkit-mask:
-    radial-gradient(var(--tk-notch) at 0 50%, #0000 98%, #000 100%),
-    radial-gradient(var(--tk-notch) at 100% 50%, #0000 98%, #000 100%);
+    radial-gradient(var(--tk-notch) at var(--tk-split) 0, #0000 98%, #000 100%),
+    radial-gradient(
+      var(--tk-notch) at var(--tk-split) 100%,
+      #0000 98%,
+      #000 100%
+    ),
+    linear-gradient(135deg, #0000 var(--tk-cut), #000 0),
+    linear-gradient(225deg, #0000 var(--tk-cut), #000 0),
+    linear-gradient(315deg, #0000 var(--tk-cut), #000 0),
+    linear-gradient(45deg, #0000 var(--tk-cut), #000 0);
   -webkit-mask-composite: source-in;
   mask:
-    radial-gradient(var(--tk-notch) at 0 50%, #0000 98%, #000 100%),
-    radial-gradient(var(--tk-notch) at 100% 50%, #0000 98%, #000 100%);
+    radial-gradient(var(--tk-notch) at var(--tk-split) 0, #0000 98%, #000 100%),
+    radial-gradient(
+      var(--tk-notch) at var(--tk-split) 100%,
+      #0000 98%,
+      #000 100%
+    ),
+    linear-gradient(135deg, #0000 var(--tk-cut), #000 0),
+    linear-gradient(225deg, #0000 var(--tk-cut), #000 0),
+    linear-gradient(315deg, #0000 var(--tk-cut), #000 0),
+    linear-gradient(45deg, #0000 var(--tk-cut), #000 0);
   mask-composite: intersect;
+}
+
+/* Motif losange : quadrillage diagonal subtil (lignes croisées à 45°), comme la
+   texture des cartes Clash Royale. Sous le contenu (les enfants sont en z-10). */
+.defi-ticket::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.08) 0 1.5px,
+      transparent 1.5px 15px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.08) 0 1.5px,
+      transparent 1.5px 15px
+    );
+}
+
+/* Biseau brillant : liseré intérieur clair en haut, sombre en bas. Au-dessus du
+   motif, sous le contenu. */
+.defi-ticket::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 3px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.28),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Titre de billet façon cartoon Clash Royale : blanc, gras, contour sombre
+   épais multi-directionnel, assise portée vers le bas. */
+.defi-ticket-title {
+  color: #fff;
+  text-shadow:
+    -2px -2px 0 rgba(22, 16, 48, 0.95),
+    2px -2px 0 rgba(22, 16, 48, 0.95),
+    -2px 2px 0 rgba(22, 16, 48, 0.95),
+    2px 2px 0 rgba(22, 16, 48, 0.95),
+    -2px 0 0 rgba(22, 16, 48, 0.95),
+    2px 0 0 rgba(22, 16, 48, 0.95),
+    0 -2px 0 rgba(22, 16, 48, 0.95),
+    0 2px 0 rgba(22, 16, 48, 0.95),
+    0 4px 0 rgba(22, 16, 48, 0.6),
+    0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* =============================================================================
@@ -2212,6 +2250,256 @@ a:hover > .wiggle-on-hover {
 /* L'onglet central (Défi) est surélevé de 8px : on remonte le halo d'autant. */
 .tab-glow[data-center] {
   bottom: 10px;
+}
+
+/* Vestiaire d'avatar : micro-pop de l'aperçu à chaque équipement — feedback
+   instantané, discret (scale 0.95 → 1). Rejoué en remontant la clé React. */
+@keyframes avatar-pop {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.avatar-pop {
+  animation: avatar-pop 150ms ease-out;
+}
+
+/* =============================================================================
+   ROBES DES JEUX DE SALON (`.jeu-<theme>`)
+   -----------------------------------------------------------------------------
+   Chaque jeu de salon est vendu par une illustration qui promet un univers. Si
+   les 13 tables de jeu partagent la même robe violette, la promesse tombe à la
+   seconde où la partie démarre. Chaque thème pose donc quatre variables, et les
+   composants ne connaissent QUE ces variables (jamais une couleur en dur) :
+
+     --jeu-accent   couleur d'action du jeu (jauges, bonne réponse, boutons)
+     --jeu-ink      encre lisible SUR l'accent
+     --jeu-surface  fond de la table, très désaturé (le texte reste lisible)
+     --jeu-glow     halo d'ambiance, posé en radial derrière la scène
+
+   Le design system reste maître : ces robes habillent la TABLE DE JEU (un lieu
+   qu'on visite le temps d'une partie), pas la navigation. Le violet `primary`
+   garde son rôle d'action partout ailleurs dans l'app.
+   ========================================================================== */
+
+/* --- Robes des MODES DE L'ARÈNE ------------------------------------------
+   Mêmes variables, même mécanique : les cinq modes fun (Blitz, Contre-la-montre,
+   Survie, Boss, Duel fantôme) partageaient un fond crème identique alors qu'ils
+   promettent des univers opposés. Chacun a désormais son atmosphère, accordée à
+   son timbre sonore (lib/defi-modes → MODE_TIMBRE). */
+
+.jeu-eclair {
+  /* Blitz 60s — jaune électrique, la mitraille. */
+  --jeu-accent: oklch(0.68 0.17 68);
+  --jeu-ink: oklch(0.22 0.04 60);
+  --jeu-surface: oklch(0.96 0.035 88);
+  --jeu-glow: oklch(0.86 0.16 85 / 0.36);
+}
+.jeu-sablier {
+  /* Contre-la-montre — turquoise et sable, le temps qui coule. */
+  --jeu-accent: oklch(0.56 0.11 196);
+  --jeu-ink: oklch(0.99 0.01 196);
+  --jeu-surface: oklch(0.955 0.02 194);
+  --jeu-glow: oklch(0.77 0.1 194 / 0.28);
+}
+.jeu-abysse {
+  /* Survie — braise sur cendre, mort subite. */
+  --jeu-accent: oklch(0.52 0.17 20);
+  --jeu-ink: oklch(0.99 0.01 20);
+  --jeu-surface: oklch(0.95 0.018 24);
+  --jeu-glow: oklch(0.64 0.16 24 / 0.3);
+}
+.jeu-couronne {
+  /* Boss — or et pourpre, l'événement. */
+  --jeu-accent: oklch(0.5 0.16 322);
+  --jeu-ink: oklch(0.99 0.01 322);
+  --jeu-surface: oklch(0.955 0.026 328);
+  --jeu-glow: oklch(0.74 0.14 60 / 0.34);
+}
+.jeu-fantome {
+  /* Duel fantôme — cyan spectral, le rejeu d'un ami. */
+  --jeu-accent: oklch(0.55 0.13 212);
+  --jeu-ink: oklch(0.99 0.01 212);
+  --jeu-surface: oklch(0.955 0.022 208);
+  --jeu-glow: oklch(0.78 0.12 205 / 0.3);
+}
+
+.jeu-plaques {
+  /* Le compte est bon — vert plateau de jeu télévisé, plaques crème. */
+  --jeu-accent: oklch(0.48 0.12 165);
+  --jeu-ink: oklch(0.99 0.01 165);
+  --jeu-surface: oklch(0.955 0.024 162);
+  --jeu-glow: oklch(0.7 0.12 162 / 0.28);
+}
+.jeu-frise {
+  /* La Frise folle — parchemin ambré, encre sépia. */
+  --jeu-accent: oklch(0.52 0.1 62);
+  --jeu-ink: oklch(0.99 0.01 62);
+  --jeu-surface: oklch(0.955 0.032 78);
+  --jeu-glow: oklch(0.76 0.09 70 / 0.3);
+}
+.jeu-grammaire {
+  /* Phrase en vrac — bleu ardoise de cahier, réglure claire. */
+  --jeu-accent: oklch(0.5 0.13 255);
+  --jeu-ink: oklch(0.99 0.01 255);
+  --jeu-surface: oklch(0.955 0.016 252);
+  --jeu-glow: oklch(0.7 0.12 252 / 0.26);
+}
+.jeu-atlas {
+  /* Capitales — bleu océan, papier de carte marine. */
+  --jeu-accent: oklch(0.55 0.13 235);
+  --jeu-ink: oklch(0.99 0.01 235);
+  --jeu-surface: oklch(0.95 0.022 230);
+  --jeu-glow: oklch(0.72 0.11 220 / 0.28);
+}
+.jeu-plume {
+  /* Orthographe — encre bleu-noir sur papier vergé. */
+  --jeu-accent: oklch(0.42 0.09 268);
+  --jeu-ink: oklch(0.99 0.005 90);
+  --jeu-surface: oklch(0.955 0.012 265);
+  --jeu-glow: oklch(0.6 0.09 270 / 0.24);
+}
+.jeu-loupe {
+  /* Chasse à la faute — vert enquête, feutré. */
+  --jeu-accent: oklch(0.5 0.11 158);
+  --jeu-ink: oklch(0.99 0.01 158);
+  --jeu-surface: oklch(0.955 0.02 150);
+  --jeu-glow: oklch(0.7 0.1 155 / 0.26);
+}
+.jeu-foudre {
+  /* Conjugaison éclair — jaune orage sur ciel bas. */
+  --jeu-accent: oklch(0.72 0.16 78);
+  --jeu-ink: oklch(0.24 0.04 70);
+  --jeu-surface: oklch(0.96 0.03 85);
+  --jeu-glow: oklch(0.85 0.16 88 / 0.34);
+}
+.jeu-circuit {
+  /* Calcul mental — cyan machine, tôle claire. */
+  --jeu-accent: oklch(0.58 0.12 205);
+  --jeu-ink: oklch(0.99 0.01 205);
+  --jeu-surface: oklch(0.95 0.018 200);
+  --jeu-glow: oklch(0.75 0.12 200 / 0.28);
+}
+.jeu-oracle {
+  /* Suite logique — violet mystique, le seul thème proche de la marque : c'est
+     le jeu de pure réflexion, il a droit à la couleur de l'app. */
+  --jeu-accent: oklch(0.48 0.17 300);
+  --jeu-ink: oklch(0.99 0.01 300);
+  --jeu-surface: oklch(0.955 0.022 300);
+  --jeu-glow: oklch(0.68 0.16 300 / 0.3);
+}
+.jeu-union {
+  /* Traduction flash — rouge sprint, drapeau. */
+  --jeu-accent: oklch(0.55 0.18 22);
+  --jeu-ink: oklch(0.99 0.01 22);
+  --jeu-surface: oklch(0.955 0.02 25);
+  --jeu-glow: oklch(0.68 0.17 25 / 0.28);
+}
+.jeu-masque {
+  /* Faux amis — pourpre théâtre, rideau lourd. */
+  --jeu-accent: oklch(0.45 0.16 340);
+  --jeu-ink: oklch(0.99 0.01 340);
+  --jeu-surface: oklch(0.95 0.022 340);
+  --jeu-glow: oklch(0.65 0.15 340 / 0.28);
+}
+.jeu-fiesta {
+  /* Traducción flash — orange fête, guirlandes. */
+  --jeu-accent: oklch(0.64 0.17 48);
+  --jeu-ink: oklch(0.99 0.01 48);
+  --jeu-surface: oklch(0.96 0.03 55);
+  --jeu-glow: oklch(0.79 0.16 55 / 0.32);
+}
+.jeu-mirage {
+  /* Falsos amigos — terracotta désert, chaleur basse. */
+  --jeu-accent: oklch(0.56 0.12 42);
+  --jeu-ink: oklch(0.99 0.01 42);
+  --jeu-surface: oklch(0.955 0.028 65);
+  --jeu-glow: oklch(0.76 0.1 60 / 0.3);
+}
+.jeu-jungle {
+  /* Classe-moi ça — vert canopée, profond et vivant. */
+  --jeu-accent: oklch(0.52 0.15 142);
+  --jeu-ink: oklch(0.99 0.01 142);
+  --jeu-surface: oklch(0.955 0.028 140);
+  --jeu-glow: oklch(0.72 0.14 140 / 0.28);
+}
+.jeu-labo {
+  /* Chasse aux éléments — turquoise verrerie. */
+  --jeu-accent: oklch(0.56 0.12 190);
+  --jeu-ink: oklch(0.99 0.01 190);
+  --jeu-surface: oklch(0.955 0.022 188);
+  --jeu-glow: oklch(0.76 0.11 188 / 0.28);
+}
+.jeu-regle {
+  /* La bonne unité — ardoise d'atelier, la plus sobre du lot. */
+  --jeu-accent: oklch(0.42 0.045 250);
+  --jeu-ink: oklch(0.99 0.005 250);
+  --jeu-surface: oklch(0.945 0.008 250);
+  --jeu-glow: oklch(0.6 0.05 250 / 0.22);
+}
+
+/* La table de jeu : le fond du thème + son halo d'ambiance en haut de scène.
+   Le halo est en `background-image` (pas un pseudo-élément) pour ne pas gêner
+   l'empilement des éléments de jeu. */
+.jeu-table {
+  background-color: var(--jeu-surface);
+  background-image: radial-gradient(
+    120% 55% at 50% -8%,
+    var(--jeu-glow),
+    transparent 70%
+  );
+}
+
+/* Pulsation d'urgence : la jauge de chrono bat quand le temps manque. Réservée
+   aux dernières secondes — une pulsation permanente devient un bruit visuel. */
+@keyframes jeu-urgence {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+.jeu-urgence {
+  animation: jeu-urgence 620ms ease-in-out infinite;
+}
+
+/* Secousse courte sur une erreur / une vie perdue — le corps de la table encaisse. */
+@keyframes jeu-secousse {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  45% {
+    transform: translateX(5px);
+  }
+  70% {
+    transform: translateX(-3px);
+  }
+}
+.jeu-secousse {
+  animation: jeu-secousse 320ms ease-out;
+}
+
+/* Montée d'un étage / d'une escale : la pastille jaillit vers le haut. */
+@keyframes jeu-monte {
+  from {
+    transform: translateY(10px) scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.jeu-monte {
+  animation: jeu-monte 280ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Accessibilité : on coupe les animations si l'utilisateur les refuse */

@@ -11,8 +11,11 @@ import {
   FEATURED_XP_MULTIPLIER,
   featuredModeId,
   modeImage,
+  modeScene,
 } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
+import { formatTeaser, gameFormat } from '@/lib/jeux/formats'
+import { bossForSubject } from '@/lib/bosses'
 
 // La robe d'un billet : matière (violet), mode fun (bleu Arène), ou mode du
 // jour (or). Sert au composant à choisir le dégradé — pas de hex en dur ici.
@@ -30,6 +33,11 @@ export type ModeTicket = {
    * l'emoji.
    */
   image?: string | null
+  /**
+   * Scène illustrée plein-fond (bannière 16:9) qui remplace la robe unie du
+   * corps du billet. Optionnel : sans scène, on garde le dégradé de la famille.
+   */
+  scene?: string | null
   /** Destination du billet — null tant que le jeu n'est pas construit. */
   href: string | null
   /** Jeton d'info (« +20 XP », « Jouer »…). */
@@ -63,6 +71,27 @@ const ARENA_EMOJI: Record<string, string> = {
   boss: '👑',
 }
 
+// Scènes plein-fond des billets de jeux (bannières 16:9 du batch 13 des
+// prompts). Ajouter l'id ici dès que la scène est déposée dans
+// public/images/defi/jeux/<id>-scene.webp — repli sur la robe unie sinon.
+const GAME_SCENE_IDS = [
+  'conjugaison-eclair',
+  'frise-folle',
+  'orthographe',
+  'chasse-faute',
+  'capitales',
+  'pointe-carte',
+  'calcul-mental',
+  'traduction-flash',
+  'traduccion-flash',
+]
+
+export function gameScene(id: string): string | undefined {
+  return GAME_SCENE_IDS.includes(id)
+    ? `/images/defi/jeux/${id}-scene.webp`
+    : undefined
+}
+
 /**
  * Les jeux d'une matière, en billets. Un jeu construit mène DROIT à sa table de
  * jeu (`/defi/jeux/{id}`) — plus d'écran intermédiaire : on tape, on joue. Un
@@ -72,16 +101,54 @@ const ARENA_EMOJI: Record<string, string> = {
 export function subjectGameTickets(subject: string): ModeTicket[] {
   const salon = SALONS.find((s) => s.subject === subject)
   if (!salon) return []
-  return salon.games.map((g) => ({
-    id: `${subject}:${g.id}`,
-    tone: 'matiere' as const,
-    name: g.name,
-    tagline: g.tagline,
-    emoji: g.emoji,
-    href: g.implemented ? `/defi/jeux/${g.id}` : null,
-    chip: g.implemented ? 'Jouer' : undefined,
-    badge: g.implemented ? undefined : 'Bientôt',
-  }))
+  return salon.games.map((g) => {
+    // Le jeton annonce la RÈGLE du jeu (« 8 escales », « 2 vies · 10 pièges »),
+    // pas un « Jouer » interchangeable : c'est la première moitié de la promesse
+    // que la table de jeu doit ensuite tenir.
+    const format = g.implemented ? gameFormat(g.id) : null
+    return {
+      id: `${subject}:${g.id}`,
+      tone: 'matiere' as const,
+      name: g.name,
+      tagline: g.tagline,
+      emoji: g.emoji,
+      scene: gameScene(g.id),
+      href: g.implemented ? `/defi/jeux/${g.id}` : null,
+      chip: format ? formatTeaser(format) : g.implemented ? 'Jouer' : undefined,
+      badge: g.implemented ? undefined : 'Bientôt',
+    }
+  })
+}
+
+// Slug d'une matière de salon (« Histoire-Géo » → « histoire-geo ») — pour
+// pointer le billet Boss vers l'onglet Boss de sa page matière.
+const subjectSlug = (subject: string) =>
+  subject
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+
+/**
+ * Le billet « Boss » d'une matière : son gardien (le même de la 6e à la
+ * Terminale), qui mène à l'onglet Boss de la page matière — là où vit le
+ * combat 100 % matière. Matière inconnue → null.
+ */
+export function subjectBossTicket(subject: string): ModeTicket | null {
+  const salon = SALONS.find((s) => s.subject === subject)
+  if (!salon) return null
+  const boss = bossForSubject(subject)
+  return {
+    id: `${subject}:boss`,
+    tone: 'matiere',
+    name: `Boss : ${boss.name}`,
+    tagline: `${boss.epithet} — bats-le, prends l'XP`,
+    emoji: boss.emoji,
+    image: boss.image ?? null,
+    scene: boss.scene ?? null,
+    href: `/reviser/${subjectSlug(subject)}?onglet=boss`,
+    chip: `+${MODE_XP_BONUS.boss} XP`,
+  }
 }
 
 /**
@@ -103,6 +170,7 @@ export function funModeTickets(dayKey: string): ModeTicket[] {
       tagline: m.tagline,
       emoji: ARENA_EMOJI[m.id] ?? '🎮',
       image: modeImage(m.id),
+      scene: modeScene(m.id),
       href: `/defi/jouer?mode=${m.id}`,
       chip: `+${bonus} XP`,
       badge: isFeatured ? '×2 XP' : undefined,

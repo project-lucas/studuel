@@ -1,6 +1,7 @@
 // Modes de jeu du Défi — logique pure, sans React ni Supabase.
 // Le moteur de duel (manches, fantôme) et le scoring du Blitz vivent ici
 // pour être testables ; les composants ne font que de l'affichage.
+import type { GameTimbre } from '@/lib/game-audio'
 
 // ------------------------------------------------------------------ catalogue
 
@@ -25,6 +26,24 @@ const MODE_IMAGE_IDS: GameModeId[] = [
 export function modeImage(id: GameModeId): string | undefined {
   return MODE_IMAGE_IDS.includes(id)
     ? `/images/defi/modes/${id}.webp`
+    : undefined
+}
+
+// Scènes plein-fond des billets de mode (bannières 16:9 du batch 12 des
+// prompts) : le corps du billet les affiche en décor derrière le titre.
+// Ajouter l'id ici dès que la scène est déposée dans
+// public/images/defi/modes/<id>-scene.webp — repli sur la robe unie sinon.
+const MODE_SCENE_IDS: GameModeId[] = [
+  'duel',
+  'blitz',
+  'chrono',
+  'survie',
+  'boss',
+]
+
+export function modeScene(id: GameModeId): string | undefined {
+  return MODE_SCENE_IDS.includes(id)
+    ? `/images/defi/modes/${id}-scene.webp`
     : undefined
 }
 
@@ -79,6 +98,19 @@ export const GAME_MODES: GameMode[] = [
     implemented: true,
   },
 ]
+
+// Timbre sonore de chaque mode de l'Arène. Même raison que pour les jeux de
+// salon (lib/jeux/formats) : cinq modes qui jouaient les MÊMES deux notes se
+// ressemblaient à l'oreille avant même de se ressembler à l'écran. Ici le choix
+// suit la promesse du mode — le Blitz claque, le Boss sonne les cuivres, la
+// Survie retient son souffle.
+export const MODE_TIMBRE: Record<GameModeId, GameTimbre> = {
+  blitz: 'metal',
+  chrono: 'cristal',
+  survie: 'velours',
+  boss: 'cuivre',
+  duel: 'bois',
+}
 
 // Bonus d'XP par mode, ajouté côté serveur au barème du défi. Les modes les
 // plus exigeants (et les plus utiles : le boss vise ton chapitre faible)

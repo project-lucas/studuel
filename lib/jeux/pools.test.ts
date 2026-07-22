@@ -1,39 +1,78 @@
 import { describe, expect, it } from 'vitest'
-import { POOL_BUILDERS, buildSalonPool } from './pools'
+import {
+  COUNTDOWN_BUILDERS,
+  ORDER_BUILDERS,
+  POOL_BUILDERS,
+  buildOrderPool,
+  buildSalonPool,
+  idsWithPool,
+  poolKind,
+} from './pools'
 import { SALONS, playableSalonGame } from './catalog'
+import { GAME_FORMATS } from './formats'
+import { isBoardComplete, isNextInOrder } from './ordering'
 
 // Tous les ids de jeux marqués « implemented » dans le catalogue.
 const implementedIds = SALONS.flatMap((s) =>
   s.games.filter((g) => g.implemented).map((g) => g.id),
 )
 
+// Trois formes de banque, trois registres : des QCM, des tableaux à remettre
+// dans l'ordre, des tirages de plaques.
+const qcmIds = implementedIds.filter((id) => poolKind(id) === 'qcm')
+const orderIds = implementedIds.filter((id) => poolKind(id) === 'ordre')
+const countdownIds = implementedIds.filter((id) => poolKind(id) === 'compte')
+
 describe('cohérence catalogue ↔ banques de questions', () => {
   it('chaque jeu jouable a une banque enregistrée (aucun cul-de-sac)', () => {
     for (const id of implementedIds) {
-      expect(POOL_BUILDERS[id], `builder manquant pour « ${id} »`).toBeDefined()
+      expect(idsWithPool(), `banque manquante pour « ${id} »`).toContain(id)
     }
   })
 
   it('aucune banque orpheline (chaque builder cible un jeu implémenté)', () => {
-    for (const id of Object.keys(POOL_BUILDERS)) {
+    for (const id of idsWithPool()) {
       expect(implementedIds, `builder « ${id} » sans jeu implémenté`).toContain(id)
     }
   })
 
+  it('range chaque jeu dans exactement un registre', () => {
+    for (const id of qcmIds) expect(POOL_BUILDERS[id]).toBeDefined()
+    for (const id of orderIds) expect(ORDER_BUILDERS[id]).toBeDefined()
+    for (const id of countdownIds) expect(COUNTDOWN_BUILDERS[id]).toBeDefined()
+    // Chaque jeu jouable tombe dans une forme, et une seule.
+    expect(qcmIds.length + orderIds.length + countdownIds.length).toBe(
+      implementedIds.length,
+    )
+  })
+
+  it('n’inscrit jamais un jeu dans deux registres à la fois', () => {
+    const all = [
+      ...Object.keys(POOL_BUILDERS),
+      ...Object.keys(ORDER_BUILDERS),
+      ...Object.keys(COUNTDOWN_BUILDERS),
+    ]
+    expect(new Set(all).size).toBe(all.length)
+  })
+
+  it('rend null pour un id sans aucune banque', () => {
+    expect(poolKind('pointe-carte')).toBeNull()
+  })
+
   it('playableSalonGame résout exactement les jeux ayant une banque', () => {
-    for (const id of Object.keys(POOL_BUILDERS)) {
+    for (const id of idsWithPool()) {
       expect(playableSalonGame(id)).not.toBeNull()
     }
   })
 })
 
 describe('buildSalonPool', () => {
-  it('produit un pool non vide et bien formé pour chaque jeu jouable', () => {
-    for (const id of implementedIds) {
+  it('produit un pool non vide et bien formé pour chaque jeu à QCM', () => {
+    for (const id of qcmIds) {
       const pool = buildSalonPool(id, 'verif')
       expect(pool, `pool null pour « ${id} »`).not.toBeNull()
-      // Assez de questions pour tenir un BO3 (jusqu'à 15 questions) sans
-      // recyclage trop visible.
+      // Assez de questions pour tenir une partie complète sans recyclage
+      // trop visible.
       expect(pool!.length).toBeGreaterThanOrEqual(10)
       for (const q of pool!) {
         expect(q.prompt.length).toBeGreaterThan(0)
@@ -46,8 +85,77 @@ describe('buildSalonPool', () => {
     }
   })
 
-  it('renvoie null pour un id sans banque', () => {
+  it('renvoie null pour un id sans banque de QCM', () => {
+    // La Frise folle EXISTE, mais sert des tableaux : elle n'a rien à faire ici.
     expect(buildSalonPool('frise-folle', 'x')).toBeNull()
     expect(buildSalonPool('nimporte-quoi', 'x')).toBeNull()
+  })
+})
+
+describe('buildOrderPool', () => {
+  it('produit des tableaux cohérents et jouables jusqu’au bout', () => {
+    for (const id of orderIds) {
+      const format = GAME_FORMATS[id as keyof typeof GAME_FORMATS]
+      const boards = buildOrderPool(id, 'verif', 6)
+      expect(boards, `tableaux null pour « ${id} »`).not.toBeNull()
+      expect(boards!.length).toBe(6)
+
+      for (const board of boards!) {
+        expect(board.prompt.length).toBeGreaterThan(0)
+        // La solution couvre exactement les tuiles, une fois chacune.
+        expect(board.solution.length).toBe(board.items.length)
+        expect(new Set(board.solution).size).toBe(board.items.length)
+        for (const i of board.solution) {
+          expect(i).toBeGreaterThanOrEqual(0)
+          expect(i).toBeLessThan(board.items.length)
+        }
+        for (const item of board.items) {
+          expect(item.label.length).toBeGreaterThan(0)
+          expect(item.hint.length).toBeGreaterThan(0)
+        }
+
+        // On rejoue la solution : chaque tap attendu est accepté, et le tableau
+        // se termine pile au bon moment.
+        for (let placed = 0; placed < board.solution.length; placed++) {
+          expect(isBoardComplete(board, placed)).toBe(false)
+          expect(isNextInOrder(board, placed, board.solution[placed])).toBe(true)
+          // Toute autre tuile est refusée.
+          const wrong = board.solution[(placed + 1) % board.solution.length]
+          if (wrong !== board.solution[placed]) {
+            expect(isNextInOrder(board, placed, wrong)).toBe(false)
+          }
+        }
+        expect(isBoardComplete(board, board.solution.length)).toBe(true)
+      }
+
+      // `itemsPerBoard` est un MAXIMUM : les tableaux peuvent être plus courts
+      // (une phrase anglaise fait 4 à 6 mots), jamais plus longs — sinon la
+      // partie se bloquerait sur un tableau que le moteur ne sait pas boucler.
+      if (format.params.mechanic === 'ordre') {
+        for (const board of boards!) {
+          expect(board.items.length).toBeGreaterThanOrEqual(3)
+          expect(board.items.length).toBeLessThanOrEqual(
+            format.params.ordre.itemsPerBoard,
+          )
+        }
+      }
+    }
+  })
+
+  it('est déterministe : même graine, mêmes tableaux', () => {
+    const a = buildOrderPool('frise-folle', 'graine', 3)
+    const b = buildOrderPool('frise-folle', 'graine', 3)
+    expect(a).toEqual(b)
+  })
+
+  it('mélange vraiment (deux graines ne donnent pas le même tirage)', () => {
+    const a = buildOrderPool('frise-folle', 'graine-a', 4)
+    const b = buildOrderPool('frise-folle', 'graine-b', 4)
+    expect(a).not.toEqual(b)
+  })
+
+  it('renvoie null pour un id sans banque de tableaux', () => {
+    expect(buildOrderPool('capitales', 'x', 3)).toBeNull()
+    expect(buildOrderPool('nimporte-quoi', 'x', 3)).toBeNull()
   })
 })

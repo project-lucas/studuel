@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Hourglass, Zap, Check, X, RotateCcw, Trophy } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { sfx } from '@/lib/sounds'
+import { gameSfx, sfx } from '@/lib/sounds'
 import { XP_RULES } from '@/lib/xp'
 import { recordChallenge } from '@/app/defi/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
@@ -15,6 +15,7 @@ import {
   CHRONO_LOSS_SECONDS,
   CHRONO_MAX_SECONDS,
   CHRONO_BEST_STORAGE_KEY,
+  MODE_TIMBRE,
   MODE_XP_BONUS,
   chronoAfterAnswer,
   type ModeQuestion,
@@ -39,6 +40,12 @@ export default function ChronoMode({
   pool: ModeQuestion[]
   onExit: () => void
 }) {
+  // Le Contre-la-montre sonne CRISTAL : des cloches hautes et claires, comme un
+  // sablier. À l'opposé exact du Blitz (métal) avec lequel il partage pourtant
+  // le principe du chrono — c'est le son qui les distingue en une seconde.
+  const audio = useMemo(() => gameSfx(MODE_TIMBRE.chrono), [])
+  // Série en cours : elle ne sert qu'à faire MONTER la récompense sonore.
+  const streakRef = useRef(0)
   const [phase, setPhase] = useState<Phase>('intro')
   const [secondsLeft, setSecondsLeft] = useState(CHRONO_START_SECONDS)
   const [qIndex, setQIndex] = useState(0)
@@ -76,6 +83,7 @@ export default function ChronoMode({
     sfx.flip()
     finishedRef.current = false
     statsRef.current = { correct: 0, answered: 0 }
+    streakRef.current = 0
     reviewsRef.current = []
     secondsRef.current = CHRONO_START_SECONDS
     setSecondsLeft(CHRONO_START_SECONDS)
@@ -144,11 +152,15 @@ export default function ChronoMode({
     setSecondsLeft(secondsRef.current)
     setLastDelta(good ? CHRONO_GAIN_SECONDS : -CHRONO_LOSS_SECONDS)
     if (good) {
-      sfx.correct()
+      streakRef.current += 1
+      audio.correct(streakRef.current)
       statsRef.current.correct += 1
       setCorrect((n) => n + 1)
     } else {
-      sfx.wrong()
+      // Ici l'erreur PREND DU TEMPS — c'est une vie qu'on perd, pas juste un
+      // faux : le son descend au lieu de simplement buzzer.
+      streakRef.current = 0
+      audio.lifeLost()
     }
     window.setTimeout(() => {
       setQIndex((n) => n + 1)

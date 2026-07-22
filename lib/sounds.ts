@@ -3,6 +3,18 @@
 // Utilisable uniquement côté client ; préférence persistée en localStorage.
 
 import { comboSemitones, comboTier, transpose, buzzPattern } from '@/lib/juice'
+import {
+  correctTones,
+  countdownTone,
+  lifeLostTones,
+  loseTones,
+  stepClearedTones,
+  tickTone,
+  winTones,
+  wrongTones,
+  type GameTimbre,
+  type ToneSpec,
+} from '@/lib/game-audio'
 
 const STORAGE_KEY = 'scolaria-sound'
 
@@ -174,6 +186,46 @@ export const sfx = {
     note(1318.51, 0.39, 0.3, 'sine', 0.05) // mi aigu
     note(1567.98, 0.5, 0.35, 'triangle', 0.035) // sol aigu, étincelle
   },
+}
+
+// ------------------------------------------------------- sons par mode de jeu
+// `sfx` ci-dessus est le langage COMMUN de l'app (tap, coin, level-up) : il doit
+// sonner pareil partout. Les modes de jeu, eux, ont besoin de l'inverse — une
+// couleur qui leur appartient. `gameSfx(timbre)` rend la même palette d'événements
+// jouée dans le timbre du mode (partition calculée dans lib/game-audio).
+
+function playTones(tones: ToneSpec[]) {
+  if (!isSoundOn()) return
+  for (const t of tones) note(t.freq, t.at, t.dur, t.wave, t.peak)
+}
+
+export type GameSfx = {
+  /** Bonne réponse : monte avec la série. */
+  correct: (streak: number) => void
+  wrong: () => void
+  /** Vie perdue — plus lourd qu'une simple erreur. */
+  lifeLost: () => void
+  /** Vague / escale / étage franchi. */
+  stepCleared: () => void
+  /** Tic du chrono ; `urgency` de 0 (calme) à 1 (dernière seconde). */
+  tick: (urgency: number) => void
+  win: () => void
+  lose: () => void
+  /** Décompte de départ : 3, 2, 1 puis 0 pour le « GO ». */
+  countdown: (n: number) => void
+}
+
+export function gameSfx(timbre: GameTimbre): GameSfx {
+  return {
+    correct: (streak) => playTones(correctTones(timbre, streak)),
+    wrong: () => playTones(wrongTones(timbre)),
+    lifeLost: () => playTones(lifeLostTones(timbre)),
+    stepCleared: () => playTones(stepClearedTones(timbre)),
+    tick: (urgency) => playTones([tickTone(timbre, urgency)]),
+    win: () => playTones(winTones(timbre)),
+    lose: () => playTones(loseTones(timbre)),
+    countdown: (n) => playTones([countdownTone(timbre, n)]),
+  }
 }
 
 // Retour HAPTIQUE — le compagnon du son sur mobile (PWA installée), et le plus

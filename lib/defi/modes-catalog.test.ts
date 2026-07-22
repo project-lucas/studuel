@@ -6,6 +6,7 @@ import {
 } from '@/lib/defi/modes-catalog'
 import { GAME_MODES, MODE_XP_BONUS, featuredModeId } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
+import { formatTeaser, gameFormat } from '@/lib/jeux/formats'
 
 const DAY = '2026-07-17'
 
@@ -41,13 +42,17 @@ describe('subjectGameTickets', () => {
     })
   })
 
-  it('marque « Jouer » les jeux construits et « Bientôt » les autres', () => {
+  it('annonce la règle des jeux construits et « Bientôt » pour les autres', () => {
     for (const salon of SALONS) {
       const tickets = subjectGameTickets(salon.subject)
       salon.games.forEach((game, i) => {
         const t = tickets[i]
         if (game.implemented) {
-          expect(t.chip).toBe('Jouer')
+          // Le jeton porte la promesse du format (« 8 escales », « 45 s
+          // chrono »), jamais un « Jouer » qui laisserait croire que les 13
+          // jeux se jouent pareil.
+          expect(t.chip).toBe(formatTeaser(gameFormat(game.id)!))
+          expect(t.chip).not.toBe('Jouer')
           expect(t.badge).toBeUndefined()
         } else {
           expect(t.badge).toBe('Bientôt')

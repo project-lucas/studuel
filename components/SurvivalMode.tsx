@@ -1,16 +1,17 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Skull, Zap, Check, X, RotateCcw, Trophy } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { sfx } from '@/lib/sounds'
+import { gameSfx, sfx } from '@/lib/sounds'
 import { XP_RULES } from '@/lib/xp'
 import { recordChallenge } from '@/app/defi/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import {
   SURVIE_BEST_STORAGE_KEY,
+  MODE_TIMBRE,
   MODE_XP_BONUS,
   type ModeQuestion,
 } from '@/lib/defi-modes'
@@ -34,6 +35,9 @@ export default function SurvivalMode({
   pool: ModeQuestion[]
   onExit: () => void
 }) {
+  // La Survie sonne VELOURS : registre grave, attaque lente, mineur. On retient
+  // son souffle — l'inverse exact de la mitraille du Blitz.
+  const audio = useMemo(() => gameSfx(MODE_TIMBRE.survie), [])
   const [phase, setPhase] = useState<Phase>('intro')
   const [qIndex, setQIndex] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
@@ -73,7 +77,10 @@ export default function SurvivalMode({
   }
 
   const finish = (finalStreak: number) => {
-    sfx.complete()
+    // La Survie ne se « termine » jamais bien : on tombe. Fanfare partagée
+    // seulement quand la série valait le coup, sinon la descente du timbre.
+    if (finalStreak >= 5) sfx.complete()
+    else audio.lose()
     const prevBest = readBest()
     if (finalStreak > prevBest) {
       setIsRecord(true)
@@ -108,7 +115,7 @@ export default function SurvivalMode({
       good,
     })
     if (good) {
-      sfx.correct()
+      audio.correct(streak + 1)
       const newStreak = streak + 1
       setStreak(newStreak)
       window.setTimeout(() => {
@@ -116,7 +123,9 @@ export default function SurvivalMode({
         setSelected(null)
       }, 550)
     } else {
-      sfx.wrong()
+      // Mort subite : ce n'est pas « une erreur », c'est LA fin. Le son de vie
+      // perdue (deux notes qui tombent) le dit avant même l'écran de résultat.
+      audio.lifeLost()
       // On laisse voir la bonne réponse avant l'écran de fin.
       window.setTimeout(() => finish(streak), 1200)
     }

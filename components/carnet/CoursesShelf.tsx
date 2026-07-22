@@ -46,20 +46,20 @@ export default function CoursesShelf({ items }: { items: CourseShelfItem[] }) {
   return (
     <section
       aria-label="Mes cours"
-      className="rev-card rounded-3xl bg-white p-4 shadow-sm ring-1 ring-black/5"
+      className="rev-card rounded-3xl bg-white p-5 shadow-sm ring-1 ring-black/5"
     >
-      <div className="mb-3 flex items-center gap-3">
-        <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-          <GraduationCap className="size-5" strokeWidth={2.2} aria-hidden="true" />
+      <div className="mb-4 flex items-center gap-3">
+        <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+          <GraduationCap className="size-6" strokeWidth={2.2} aria-hidden="true" />
         </span>
-        <h2 className="font-heading min-w-0 flex-1 truncate text-lg font-extrabold text-foreground">
+        <h2 className="font-heading min-w-0 flex-1 truncate text-xl font-extrabold text-foreground">
           Mes cours
         </h2>
         <button
           type="button"
           disabled={pending}
           onClick={create}
-          className="font-heading flex shrink-0 cursor-pointer items-center gap-1 rounded-full bg-primary px-3.5 py-2 text-xs font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
+          className="font-heading flex shrink-0 cursor-pointer items-center gap-1 rounded-full bg-primary px-4 py-2.5 text-sm font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
         >
           <Plus className="size-4" strokeWidth={2.8} aria-hidden="true" />
           {pending ? 'Création…' : 'Créer un cours'}
@@ -76,12 +76,12 @@ export default function CoursesShelf({ items }: { items: CourseShelfItem[] }) {
       ) : null}
 
       {items.length === 0 ? (
-        <p className="rounded-2xl bg-muted/40 px-3 py-4 text-center text-sm text-muted-foreground">
+        <p className="rounded-2xl bg-muted/40 px-4 py-10 text-center text-base text-muted-foreground">
           Crée ton premier cours (« Anglais 3e », « SVT — chapitre 2 »…) puis
           remplis-le de questions à réviser 📚
         </p>
       ) : (
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2.5">
           {items.map((course) => {
             const Icon = COURSE_ICON[normalizeCourseIcon(course.icon)]
             const tint = COURSE_TINT[normalizeCourseColor(course.color)]
@@ -90,18 +90,18 @@ export default function CoursesShelf({ items }: { items: CourseShelfItem[] }) {
                 <Link
                   href={`/reviser/cours/${course.id}`}
                   onClick={() => sfx.tap()}
-                  className="flex items-center gap-3 rounded-2xl bg-white p-3 ring-1 ring-black/5 transition active:scale-[0.99]"
+                  className="flex items-center gap-3 rounded-2xl bg-white p-3.5 ring-1 ring-black/5 transition active:scale-[0.99]"
                 >
                   <span
-                    className={`flex size-11 shrink-0 items-center justify-center rounded-2xl ${tint}`}
+                    className={`flex size-12 shrink-0 items-center justify-center rounded-2xl ${tint}`}
                   >
-                    <Icon className="size-5" strokeWidth={2.2} aria-hidden="true" />
+                    <Icon className="size-6" strokeWidth={2.2} aria-hidden="true" />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="font-heading line-clamp-2 text-sm leading-snug font-extrabold text-foreground">
+                    <span className="font-heading line-clamp-2 text-base leading-snug font-extrabold text-foreground">
                       {course.title}
                     </span>
-                    <span className="mt-0.5 block text-[11px] font-semibold text-muted-foreground">
+                    <span className="mt-0.5 block text-xs font-semibold text-muted-foreground">
                       {course.questionCount}{' '}
                       {course.questionCount > 1 ? 'questions' : 'question'}
                     </span>

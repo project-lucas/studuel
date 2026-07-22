@@ -17,27 +17,34 @@
 // sa contrepartie. Les gemmes ne s'achètent PAS avec des pièces — elles se
 // gagnent, essentiellement en faisant venir des amis.
 //
-// Logique PURE et testable. La base (migration 183) ne stocke que des compteurs
-// et des ids ; toutes les règles de prix et de plafond vivent ici.
+// Logique PURE et testable. La base (migrations 183 puis 192) ne stocke que des
+// compteurs et des ids ; toutes les règles de prix et de plafond vivent ici.
+//
+// ÉCHELLE ×30 (migration 192) : depuis que les gemmes se gagnent AUSSI en jeu
+// (paliers rares : 3 couronnes, série de 7 jours, victoire de défi, passage de
+// niveau — cf. lib/wallet.GEM_AWARDS), l'unité « 1 gemme = 1 chapitre » était
+// trop grosse pour graduer ces récompenses. Tout a été multiplié par 30 : un
+// chapitre coûte 30, le parrainage verse 30 de chaque côté, la dotation de
+// départ passe à 90. Les ratios d'origine sont inchangés.
 
 import type { Tier } from '@/lib/subscription'
 
 // --------------------------------------------------------------- les montants
 
 /** Gemmes offertes à la création du compte : de quoi goûter 3 chapitres. */
-export const STARTING_GEMS = 3
+export const STARTING_GEMS = 90
 
 /** Coût du déverrouillage d'un chapitre — tous supports compris, à vie. */
-export const GEM_COST_CHAPTER = 1
+export const GEM_COST_CHAPTER = 30
 
 /** Gemmes versées au parrain ET au filleul quand le parrainage s'active. */
-export const REFERRAL_GEM_REWARD = 1
+export const REFERRAL_GEM_REWARD = 30
 
 // Plafond de gemmes gagnables par parrainage. Ce n'est pas une punition : sans
 // borne, un élève motivé (ou un script) débloque le catalogue entier et l'offre
 // payante ne vaut plus rien. 20 filleuls activés = 20 chapitres offerts, c'est
 // déjà énorme, et c'est bien au-delà de ce qu'un élève atteint réellement.
-export const REFERRAL_GEM_CAP = 20
+export const REFERRAL_GEM_CAP = 600
 
 /** Taille maximale du groupe privé (« squad »). */
 export const MAX_SQUAD_SIZE = 10
@@ -140,11 +147,22 @@ export function gemsAfterSpend(gems: number): number {
   return Math.max(0, Math.floor(gems) - GEM_COST_CHAPTER)
 }
 
+/** Gemmes manquantes pour ouvrir un chapitre (0 quand le solde suffit). */
+export function gemsShortfall(gems: number): number {
+  return Math.max(0, GEM_COST_CHAPTER - Math.max(0, Math.floor(gems)))
+}
+
+/** « Il te manque 1 gemme » — null quand le solde suffit. */
+export function missingGemsLabel(gems: number): string | null {
+  const missing = gemsShortfall(gems)
+  return missing === 0 ? null : `Il te manque ${gemsLabel(missing)}`
+}
+
 const UNLOCK_MESSAGES: Record<UnlockResult, string> = {
   unlocked: 'Chapitre débloqué ! Tous ses supports sont à toi, pour toujours.',
   already: 'Tu as déjà débloqué ce chapitre.',
   premium: 'Ton abonnement t’ouvre déjà tous les chapitres.',
-  no_gems: 'Il te faut une gemme. Invite un ami pour en gagner une !',
+  no_gems: `Il te faut ${GEM_COST_CHAPTER} gemmes. Invite un ami ou décroche des couronnes pour en gagner !`,
   not_found: 'Ce chapitre est introuvable.',
   error: 'Impossible de débloquer pour le moment. Réessaie.',
 }
@@ -213,7 +231,7 @@ export function referralHeadline(summary: ReferralSummary): string {
     return 'Tu as atteint le maximum de gemmes par parrainage. Chapeau !'
   }
   if (summary.activated === 0 && summary.pending === 0) {
-    return 'Invite un ami : vous gagnez chacun une gemme.'
+    return `Invite un ami : vous gagnez chacun ${REFERRAL_GEM_REWARD} gemmes.`
   }
   if (summary.activated === 0) {
     return summary.pending === 1

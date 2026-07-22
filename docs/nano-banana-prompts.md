@@ -306,6 +306,21 @@ les autres (`match the exact art style of the reference image`).
 | ses | `ses.webp` | A rising turquoise bar chart with golden coins and a coral arrow pointing up. |
 | philosophie | `philosophie.webp` | A soft-pink glowing lantern next to a small cream thinking-statue bust and a purple question mark. |
 
+### Vignettes « culture » (migration 190 — thèmes sortis du dossier Culture générale)
+
+Mêmes contraintes et même prompt de style maître que ci-dessus. Une fois chaque
+image déposée dans `public/images/matieres/vignettes/`, ajouter son slug à
+`VIGNETTE_SLUGS` (lib/subject-style.ts) — en attendant, la carte replie sur le
+médaillon d'icône.
+
+| Matière | Fichier `vignettes/` | Objet principal (après le style maître) |
+|---|---|---|
+| economie | `economie.webp` | A large golden coin with a classical profile portrait, a rising turquoise line-chart arrow behind it and two small purple factory chimneys. |
+| finances-personnelles | `finances-personnelles.webp` | A cheerful coral-pink piggy bank with golden coins dropping into its slot and a small turquoise wallet leaning against it. |
+| fiscalite | `fiscalite.webp` | A long cream paper receipt curling at the bottom with a big purple percent sign on it, golden coins and a small teal calculator. |
+| entrepreneuriat | `entrepreneuriat.webp` | A coral rocket lifting off from an open purple cardboard box, with a sunny yellow lightbulb and small turquoise spark shapes. |
+| figures-historiques | `figures-historiques.webp` | A cream marble bust statue wearing a purple Napoleon-style bicorne hat, with a small blue-white-red French cockade ribbon and a golden laurel branch. |
+
 ---
 
 ## Batch 9 — Icônes de la barre d'onglets (5)
@@ -370,6 +385,260 @@ incomplète).
 | relecture | A glossy open book with sleepy half-closed emoji eyes floating above it. | A glossy coral-red dartboard target with a golden dart in the bullseye. |
 | pauses | A glossy overheated red emoji face with sweat drops and steam. | A glossy rounded turquoise pause button with two soft bars, shiny finish. |
 | petit-dej | A glossy empty plate with crossed fork and knife, a small sad sparkle. | A glossy golden croissant next to a small glass of orange juice. |
+
+---
+
+## Batch 11 — Champions de matière plein pied (bouton Boss sur Réviser)
+
+Feature « Champion de matière » : chaque boss du Défi devient aussi le champion
+de sa matière sur la page Réviser — un bouton **Boss** y lance un combat sur
+tout le programme (vies + jauge de PV, rangs I→III existants). Il faut donc le
+**plein pied** de chaque personnage pour l'écran de combat, en plus du portrait
+médaillon du batch 3.
+
+**Règle de cohérence** : joindre le portrait du batch 3 en **image de référence**
+pour chaque personnage (`match the exact character and art style of the reference
+image`). Générer les portraits d'abord si ce n'est pas fait.
+
+Préfixe commun : `match the exact character and art style of the reference
+image. Full body view of the same character, confident battle-ready stance,
+facing the viewer in 3/4 view, dynamic but friendly, feet visible, centered,
+isolated on a plain flat white background.`
+
+| Champion | Fichier | Complément de prompt |
+|---|---|---|
+| Delta (maths) | `boss/delta-full.png` | The slate golem standing tall, one fist raised glowing with golden equations, cracked confident grin. |
+| Grammatork (français) | `boss/grammatork-full.png` | The ogre in his tattered academic robe, giant quill held like a war club over his shoulder. |
+| Imperator (latin) | `boss/imperator-full.png` | The imperial eagle perched upright on a marble capital, wings half-spread, laurel crown and red sash. |
+| Chronos (histoire-géo) | `boss/chronos-full.png` | The hooded keeper floating slightly, hourglass body swirling with golden sand, clock gears orbiting. |
+| Big Ben (anglais) | `boss/bigben-full.png` | The dapper dragon standing with a cane umbrella, Union-Jack top hat, teacup in the other claw. |
+| El Toro (espagnol) | `boss/eltoro-full.png` | The bull standing on two legs, matador cape flowing, one hoof stomping arena dust. |
+| Dr Plasma (physique-chimie) | `boss/plasma-full.png` | The mad scientist in lab coat, lightning arcing between raised hands, goggles up on forehead. |
+| Mitochondrix (SVT) | `boss/mitochondrix-full.png` | The bioluminescent microbe creature rearing up, tentacle cilia spread, organelles glowing. |
+| Bugzilla (NSI) | `boss/bugzilla-full.png` | The glitchy pixel-bug on six legs, antennas sparking, trailing neon-green code fragments. |
+| Mécatron (techno) | `boss/mecatron-full.png` | The battle robot in full stance, wrench hand raised, visor glowing, steam venting from shoulders. |
+| Krach (SES) | `boss/krach-full.png` | The wolf in pinstripe suit leaning on a cane, pocket watch dangling, sly grin. |
+| Le Sphinx (philo) | `boss/sphinx-full.png` | The sphinx seated regally, lion body fully visible, golden headdress, floating question marks. |
+| Nova (ens. sci.) | `boss/nova-full.png` | The cosmic entity hovering, galaxy body flowing like a gown, supernova halo blazing. |
+| Nox (fallback) | `boss/nox-full.png` | The ink-shadow creature rising in a swirl of torn report-card papers, amber eyes glowing. |
+
+**Format** : personnage plein pied → cible **768×1024** (3:4), détourer →
+**WebP transparent** < 80 Ko → `public/images/boss/<id>-full.webp`.
+Les rangs II/III restent gérés en CSS (aura/anneau), comme pour les portraits.
+
+---
+
+## Batch 12 — Scènes des modes de jeu (feuille « Modes » du Défi)
+
+Objectif : casser le violet uniforme de la feuille des modes. Chaque billet
+(ticket Clash Royale de `ModesSheet.tsx`) reçoit une **scène illustrée
+plein-fond** avec sa propre ambiance colorée — le violet reste le cadre de
+l'app, les modes deviennent des mondes. Le titre, le jeton XP et le ruban
+« ×2 XP »/« Bientôt » restent posés **en code** (jamais de texte dans l'image :
+le mode du jour change chaque jour, les bonus aussi).
+
+**Contrainte de composition (cruciale)** : le titre s'affiche sur la moitié
+gauche du billet → sujet principal dans le **tiers droit**, moitié gauche plus
+calme et plus sombre (le texte blanc doit rester lisible). Le billet fait
+~2.5:1 en hauteur 136 px : générer en **16:9 (1536×864)**, le CSS rognera
+haut/bas — garder l'action au centre vertical.
+
+**Format** : 16:9 → **WebP < 100 Ko** → `public/images/defi/modes/<id>-scene.webp`.
+Générer la première (blitz), la garder en **référence de style** pour les
+autres (`match the exact art style of the reference image`).
+
+**✅ LIVRÉ (2026-07-22)** : les 5 scènes (blitz, duel, chrono, survie, boss)
+sont générées et branchées (`modeScene()` dans `lib/defi-modes.ts`, fond
+plein-cadre du corps du billet dans `ModesSheet.tsx`). Sources PNG 4K dans
+`assets-sources/bannieres-modes/` (hors git).
+
+### Le prompt de style maître « scène de mode » (à coller au début de chaque prompt)
+
+**Higgsfield** : cocher le format **16:9** dans l'interface — le ratio ne se
+met PAS dans le prompt (ça embrouille le modèle). Le prompt ne décrit que la
+composition : sujet unique dans le tiers droit, les deux tiers gauches vides.
+
+> Highly detailed vibrant cartoon splash art scene for a playful mobile
+> quiz battle game for teenagers, rich painterly shading, bold chunky
+> shapes with thick clean outlines, dramatic cinematic lighting, glowing
+> atmospheric depth, volumetric clouds and mist, rich saturated colors,
+> premium mobile-game event splash art. The artwork is FULL-BLEED and
+> fills the ENTIRE canvas edge to edge — no frame, no border, no white
+> margins, no card, no mockup, no letterboxing.
+> Composition: ONE single hero subject placed in the RIGHT third of the
+> image; the same rich atmospheric background continues across the LEFT
+> two thirds but gets progressively darker toward the left, with only soft
+> clouds, glow and floating particles there — no objects and no characters
+> on the left side. No text, no letters, no logo, no watermark.
+
+**Piège appris (2026-07-22)** : demander une gauche « vide/calme/simple »
+appauvrit TOUT le rendu (le modèle aplatit l'image entière). Il faut décrire
+une gauche **riche mais sombre et sans objet**, jamais « empty ».
+
+**Piège appris (2026-07-22, bis)** : le mot **« banner »** dans le prompt fait
+dessiner à Higgsfield une *maquette de bannière* — une petite image encadrée de
+blanc au centre de la toile (vu sur `duel-scene`). Dire « splash art scene » +
+« full-bleed, fills the entire canvas edge to edge, no frame, no border ».
+
+| Mode | Fichier | Scène (après le style maître) |
+|---|---|---|
+| Duel fantôme | `duel-scene.webp` | A mischievous friendly translucent cyan ghost wearing a gaming headset, striking a challenge pose with sparks flying, spectral teal-and-midnight-blue misty background, glowing wisps. |
+| Blitz 60s | `blitz-scene.webp` | A giant electric yellow lightning bolt character sprinting at full speed, orange energy trail behind it, amber-and-gold storm background, crackling sparks. |
+| Contre-la-montre | `chrono-scene.webp` | A golden hourglass bursting with flowing sand that turns into glowing clock hands, deep teal-and-blue background with speed lines, floating gears. |
+| Survie | `survie-scene.webp` | A single glowing heart held inside a cracked shield, embers and small flames rising, crimson-and-dark-red arena background, dramatic but fun, never scary. |
+| Boss de la semaine | `boss-scene.webp` | A massive royal golden crown radiating light above a dark menacing (but cartoonish) silhouette with glowing eyes, deep purple-and-gold throne-room background, epic. |
+
+---
+
+## Batch 13 — Scènes des jeux de matière (roulette de la feuille « Modes »)
+
+La suite directe du batch 12 : les billets violets des jeux de la roulette
+(Capitales du monde, La Frise folle…) reçoivent leur scène plein-fond, avec le
+**même style maître** que les 5 modes fun (le coller au début de chaque prompt,
+et donner une scène du batch 12 en référence : `match the exact art style of
+the reference image`).
+
+**Lien de famille** : chaque MATIÈRE a sa palette dominante — les 2-3 jeux
+d'une même matière partagent l'ambiance, comme une collection. Palettes
+choisies pour ne pas répéter celles des modes fun (teal fantôme, ambre Blitz,
+bleu Chrono, cramoisi Survie, violet-or Boss) :
+
+| Matière | Ambiance commune |
+|---|---|
+| Histoire-Géo | émeraude + or vieux parchemin |
+| Français | bordeaux + bleu encre |
+| Maths | marine profond + or cosmique |
+| Anglais | bleu royal + rouge pop |
+| Espagnol | écarlate + tournesol fiesta |
+| SVT | vert menthe + teal jungle |
+| Physique-Chimie | teal sombre + vert néon de labo |
+
+**Format** : identique au batch 12 — 16:9 (1536×864, cocher le ratio dans
+Higgsfield, pas dans le prompt), sujet unique dans le **tiers droit**, gauche
+riche mais sombre et sans objet, **jamais de texte ni de lettres** (les jeux de
+mots utilisent des cartes/bulles VIERGES). WebP < 100 Ko →
+`public/images/defi/jeux/<id>-scene.webp`.
+
+**Câblage** : `gameScene(id)` dans `lib/defi/modes-catalog.ts` — ajouter l'id
+du jeu à `GAME_SCENE_IDS` dès que sa scène est déposée. Sources PNG 4K dans
+`assets-sources/bannieres-jeux/` (hors git).
+
+**✅ Livrées (2026-07-22)** : conjugaison-eclair, frise-folle, orthographe,
+chasse-faute, capitales, pointe-carte, calcul-mental, traduction-flash,
+traduccion-flash. Restent : compte-est-bon, suite-logique, faux-amis,
+phrase-en-vrac, falsos-amigos, anatomie-express, classe-moi-ca,
+chasse-elements, bonne-unite.
+
+| Jeu | Fichier | Scène (après le style maître) |
+|---|---|---|
+| Capitales du monde | `capitales-scene.webp` | A cheerful spinning globe character surrounded by tiny famous landmarks popping out of it (tower, pyramid, big clock), small blank waving flags orbiting around, deep emerald-and-antique-gold atlas background with glowing dotted travel routes. |
+| La Frise folle | `frise-folle-scene.webp` | A long parchment scroll unrolling and twisting like a roller-coaster track, tiny historical icons riding it (a crown, a knight helmet, a rocket), sepia-and-gold dusty library background with floating candle sparks. |
+| Pointe la carte | `pointe-carte-scene.webp` | A giant glossy red map pin character slamming into a stylized blank paper map with a burst of impact, a glowing compass rose spinning beside it, deep emerald-and-parchment cartography background. |
+| Duel d'orthographe | `orthographe-scene.webp` | Two elegant fountain pens crossed like fencing swords, dark ink drops splashing like sparks between them, deep burgundy-and-ink-blue library background with floating quill feathers. |
+| Chasse à la faute | `chasse-faute-scene.webp` | A giant golden magnifying glass revealing a sneaky little ink-blot creature caught in its lens, warm lamplight beam, deep plum-and-burgundy detective office background with drifting dust motes. |
+| Conjugaison éclair | `conjugaison-eclair-scene.webp` | A heroic open book character surfing on a bolt of blue lightning, pages flapping at high speed, deep ink-blue-and-burgundy stormy background with electric sparks. |
+| Calcul mental éclair | `calcul-mental-scene.webp` | A rocket-powered wooden abacus blasting forward with a fiery trail, its beads glowing like little stars, deep navy-and-gold cosmic background with shooting stars. |
+| Le compte est bon | `compte-est-bon-scene.webp` | A glowing golden dartboard target with playful dice and blank tiles flying toward the bullseye, spotlight beams crossing, deep navy game-show background with golden confetti. |
+| Suite logique | `suite-logique-scene.webp` | A mystical glowing crystal ball with a spiral of shining dominoes continuing a pattern inside it, deep midnight-blue-and-gold starry background with drifting sparkles. |
+| Traduction flash | `traduction-flash-scene.webp` | Two cheerful blank speech-bubble characters high-fiving in mid-air with a bright energy flash between them, comic speed lines, royal-blue-and-red pop background with halftone dots. |
+| Faux amis | `faux-amis-scene.webp` | Two twin theater masks — one smiling, one mischievous — secretly swapping blank cards behind their backs, crossing spotlight beams, deep royal-blue-and-crimson stage background with velvet curtains. |
+| Phrase en vrac | `phrase-en-vrac-scene.webp` | Colorful blank jigsaw puzzle pieces snapping together in mid-air around a proud little puzzle-piece character flexing its arms, royal-blue-and-red workshop background with floating sparks. |
+| Traducción flash | `traduccion-flash-scene.webp` | A festive blank speech-bubble character shaking maracas mid-dance, colorful papel-picado pennants and folding fans swirling around, warm scarlet-and-sunflower fiesta background with glowing lanterns. |
+| Falsos amigos | `falsos-amigos-scene.webp` | Two flamenco-dancing twin masks swapping blank cards mid-twirl, rose petals and a red fan flying, deep carmine-and-orange stage background with warm string lights. |
+| Anatomie express | `anatomie-express-scene.webp` | A friendly cartoon skeleton striking a sprinter pose while soft glowing organ shapes float around it waiting to snap into place, mint-and-deep-green laboratory background with DNA helix glows. |
+| Classe-moi ça | `classe-moi-ca-scene.webp` | A cheerful trio — a lion cub, a gecko and a round frog — leaping through floating glowing sorting rings, lush emerald-and-teal jungle background with fireflies. |
+| Chasse aux éléments | `chasse-elements-scene.webp` | A bubbling round-flask character with goggles chasing glowing colored orbs with a butterfly net, neon-green liquid sloshing, dark-teal-and-neon-green laboratory background with rising bubbles. |
+| La bonne unité | `bonne-unite-scene.webp` | A heroic golden folding ruler and a round stopwatch character bumping fists, measuring tapes swirling like victory ribbons around them, dark-teal-and-amber workshop background with floating gears. |
+
+---
+
+## Batch 14 — Les 2 barres CTA de l'écran d'arène (Match classé + Modes de jeu)
+
+Objectif : les deux barres pleine largeur sous l'arène (`app/defi/page.tsx` et
+le déclencheur de `ModesSheet.tsx`) troquent leur robe unie (plaque or ciselé /
+gemme violette) contre une **scène illustrée plein-fond**, comme les billets —
+le « donne envie de cliquer » de Clash Royale. Titre, sous-titre et chevron
+restent posés en code.
+
+**Géométrie (différente des billets, cruciale)** : ces barres sont des
+**bandeaux très plats** (~430×60, ratio ≈ 6,5:1). On génère quand même en
+**16:9 (cocher dans Higgsfield)** : le CSS (`object-cover`) ne gardera que la
+**bande horizontale centrale (~le tiers du milieu)**. Donc :
+
+- TOUTE l'action sur la **ligne médiane horizontale** — rien d'important en
+  haut ou en bas de l'image (coupés au rognage) ;
+- sujet **compact, dans le quart droit** (il vit entre le texte et le chevron),
+  pas de sujet géant qui déborde verticalement ;
+- moitié gauche : le fond continue, riche mais **sans objet ni personnage**
+  (le texte s'affiche là).
+
+**Lisibilité — contrainte inversée entre les deux** :
+
+- **Match classé** : le texte est **encre foncée** → la moitié gauche doit
+  rester **claire et dorée** (jamais sombre).
+- **Modes de jeu** : le texte est **blanc** → la moitié gauche doit rester
+  **sombre et violette** (comme les billets).
+
+**Format** : 16:9 → WebP < 100 Ko → `public/images/defi/<id>-scene.webp`.
+Donner une scène du batch 12 en référence de style (`match the exact art style
+of the reference image`).
+
+### Prompt de style maître « barre CTA » (à coller au début de chaque prompt)
+
+> Highly detailed vibrant cartoon splash art scene for a playful mobile
+> quiz battle game for teenagers, rich painterly shading, bold chunky
+> shapes with thick clean outlines, dramatic cinematic lighting, glowing
+> atmospheric depth, rich saturated colors, premium mobile-game event
+> splash art. The artwork is FULL-BLEED and fills the ENTIRE canvas edge
+> to edge — no frame, no border, no white margins, no card, no mockup,
+> no letterboxing.
+> Composition: everything important sits on the HORIZONTAL CENTER LINE of
+> the image — the top quarter and bottom quarter contain only background
+> atmosphere. ONE compact hero subject in the RIGHT quarter of the image;
+> the same rich atmospheric background continues across the rest with only
+> soft glow and floating particles — no objects and no characters outside
+> the right quarter. No text, no letters, no logo, no watermark.
+
+**Pièges appris (2026-07-22, essai 1)** : (a) le sujet sort **centré** si le
+prompt ne martèle pas « ENTIRELY in the RIGHT QUARTER, never crossing the
+center » — centré = collision avec le texte de la barre ; (b) demander une
+ambiance « arcade/néon » fait dessiner des **panneaux avec des mots** (« LEVEL
+UP! », « LARN! »…) — interdire explicitement « no neon signs, no billboards,
+no banners with words ».
+
+| Barre | Fichier | Scène (après le style maître) |
+|---|---|---|
+| Match classé | `classe-scene.webp` | Two crossed cartoon swords through a compact golden laurel wreath with a small trophy cup gleaming between them, a tight emblem placed ENTIRELY in the RIGHT QUARTER of the image, never crossing the center — the left three quarters are only a luminous bright golden glow with soft light rays, warm bokeh crowd lights and sparkles, no objects there. The whole image stays bright and golden. The emblem is vertically centered and compact. No text, no letters, no numbers, no logo. |
+| Modes de jeu | `modes-scene.webp` | A cheerful chunky game controller character standing on a small glowing stage, juggling a rainbow arc of small glowing colored orbs with simple mute icons (a book, a flask, a globe), placed ENTIRELY in the RIGHT QUARTER of the image, never crossing the center — the left three quarters fade into rich dark violet mist with floating confetti and particles only, no objects there. Deep royal-purple-and-magenta festive background with soft neon glows. Strictly NO text anywhere: no neon signs, no billboards, no banners with words, no letters, no numbers. |
+
+**Câblage prévu** : dès les 2 PNG déposés → conversion webp → fond plein-cadre
+dans le `<Link>` or (`app/defi/page.tsx`) et le `<button>` gemme
+(`ModesSheet.tsx`) avec `next/image` + voile dégradé côté texte, robes
+`olympe-gold`/`olympe-gem` conservées en repli tant que l'image manque.
+
+**✅ LIVRÉ (2026-07-22)** : les 2 barres. `modes-scene.webp` branché dans le
+déclencheur de `ModesSheet.tsx` (le « LEVEL UP » résiduel du bord droit a été
+supprimé au rognage — couper à 3600 px avant resize) ; `classe-scene.webp`
+(trophée mascotte + crayons croisés) branché dans le `<Link>` or de
+`app/defi/page.tsx` avec voile CLAIR (`from-white/35`) côté texte — texte encre
+sur or, on éclaircit au lieu d'assombrir. Sources dans
+`assets-sources/bannieres-cta/`.
+
+**Piège appris (2026-07-22, ter)** : une 16:9 `object-cover` dans une barre
+6,6:1 = zoom ×2,6 sur la tranche centrale (on ne voyait que le visage du
+trophée). Si le sujet doit rester ENTIER dans une barre plate → fabriquer la
+bannière AU RATIO DE LA BARRE en composite sharp (fond = bande de dégradé
+étirée, sujet complet réduit à la hauteur de bande, fondu aux bords, ancré à
+droite) + `object-right` pour que les petits écrans ne rognent que le dégradé.
+Script : scratchpad `classe-strip.mjs`. La barre Modes garde sa 16:9 rognée
+(là, le zoom sur la mascotte rend bien).
+
+**Piège appris (2026-07-22, quater)** : remplacer un webp SOUS LE MÊME NOM ne
+suffit pas — l'optimiseur d'images de Next ressert sa version en cache (on a
+cru la correction inefficace alors que c'était l'ancien fichier). Toujours
+**renommer** l'asset quand on change son contenu (`classe-scene.webp` →
+`classe-strip.webp`). Au passage, barre Match classé agrandie (`min-h-20`,
+c'est LE CTA) et bannière refaite à ce ratio (1536×290, 5.3:1).
 
 ---
 

@@ -34,52 +34,94 @@ export async function saveGradeLevel(grade: string): Promise<void> {
   revalidatePath('/', 'layout')
 }
 
-// Annonce un contrôle : ajoute (matière+chapitre+date) à la liste. On résout le
-// chapitre EN BASE pour ne stocker que des données fiables (titre, niveau, slug),
-// pas ce que dit le client. L'écriture passe par la RPC atomique
-// add_upcoming_exam (read-modify-write sûr contre la concurrence : deux appareils
-// qui annoncent en même temps ne s'écrasent plus). Le Défi pioche ensuite dans
-// ces chapitres. Voir supabase/087_upcoming_exams.sql.
-// Renvoie { ok } pour que l'UI ne ferme la feuille qu'en cas de succès réel
-// (si 087 n'est pas passée, la RPC est absente → { ok: false }, pas un faux OK).
-export async function addUpcomingExam(
-  chapterId: string,
+// Annonce un ou plusieurs contrôles : un contrôle par chapitre coché (même
+// matière, même date). On résout les chapitres EN BASE pour ne stocker que des
+// données fiables (titre, niveau, slug), pas ce que dit le client. Chaque
+// écriture passe par la RPC atomique add_upcoming_exam (read-modify-write sûr
+// contre la concurrence : deux appareils qui annoncent en même temps ne
+// s'écrasent plus) — appelée en séquence, un contrôle à la fois. Le Défi pioche
+// ensuite dans ces chapitres. Voir supabase/087_upcoming_exams.sql.
+// Renvoie { ok, added } pour que l'UI ne ferme la feuille qu'en cas de succès
+// complet (si 087 n'est pas passée, la RPC est absente → ok: false, pas un
+// faux OK) ; `added` permet un message partiel si une partie est passée.
+const MAX_EXAMS_PER_ADD = 20
+
+export async function addUpcomingExams(
+  chapterIds: string[],
   date: string | null,
-): Promise<{ ok: boolean }> {
+): Promise<{ ok: boolean; added: number }> {
   const { supabase, userId } = await requireUser()
-  if (!userId || typeof chapterId !== 'string' || chapterId.length === 0)
-    return { ok: false }
+  const cleanIds = Array.isArray(chapterIds)
+    ? [
+        ...new Set(
+          chapterIds.filter(
+            (id): id is string => typeof id === 'string' && id.length > 0,
+          ),
+        ),
+      ].slice(0, MAX_EXAMS_PER_ADD)
+    : []
+  if (!userId || cleanIds.length === 0) return { ok: false, added: 0 }
 
   const cleanDate =
     typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : null
 
-  // Le chapitre doit exister ; sa matière (slug) vient de la jointure.
+  // Les chapitres doivent exister ; leur matière (slug) vient de la jointure.
   type ChapterRow = {
     id: string
     title: string
     level: string
     subject: { slug: string } | null
   }
-  const { data: chapter } = await supabase
+  const { data: chapters } = await supabase
     .from('chapters')
     .select('id, title, level, subject:subjects!inner(slug)')
-    .eq('id', chapterId)
-    .maybeSingle<ChapterRow>()
-  if (!chapter?.subject?.slug) return { ok: false }
+    .in('id', cleanIds)
+    .returns<ChapterRow[]>()
+  if (!chapters || chapters.length !== cleanIds.length)
+    return { ok: false, added: 0 }
 
-  const exam = normalizeNextExam({
-    subject: chapter.subject.slug,
-    chapterId: chapter.id,
-    chapterTitle: chapter.title,
-    level: chapter.level,
-    date: cleanDate,
+  let added = 0
+  for (const chapter of chapters) {
+    const exam = normalizeNextExam({
+      subject: chapter.subject?.slug ?? '',
+      chapterId: chapter.id,
+      chapterTitle: chapter.title,
+      level: chapter.level,
+      date: cleanDate,
+    })
+    if (!exam) break
+
+    const { error } = await supabase.rpc('add_upcoming_exam', { p_exam: exam })
+    if (error) {
+      // RPC absente (087 pas passée) ou échec DB : on signale au client.
+      console.error('[moi] contrôle non ajouté:', error.message)
+      break
+    }
+    added += 1
+  }
+
+  if (added > 0) {
+    revalidatePath('/moi')
+    revalidatePath('/defi')
+    revalidatePath('/reviser')
+  }
+  return { ok: added === chapters.length, added }
+}
+
+// Retire un contrôle annoncé (déclaré par erreur, ou passé). Même garantie
+// d'atomicité que l'ajout : RPC remove_upcoming_exam (087).
+export async function removeUpcomingExam(
+  chapterId: string,
+): Promise<{ ok: boolean }> {
+  const { supabase, userId } = await requireUser()
+  if (!userId || typeof chapterId !== 'string' || chapterId.length === 0)
+    return { ok: false }
+
+  const { error } = await supabase.rpc('remove_upcoming_exam', {
+    p_chapter: chapterId,
   })
-  if (!exam) return { ok: false }
-
-  const { error } = await supabase.rpc('add_upcoming_exam', { p_exam: exam })
   if (error) {
-    // RPC absente (087 pas passée) ou échec DB : on signale au client.
-    console.error('[moi] contrôle non ajouté:', error.message)
+    console.error('[moi] contrôle non retiré:', error.message)
     return { ok: false }
   }
   revalidatePath('/moi')

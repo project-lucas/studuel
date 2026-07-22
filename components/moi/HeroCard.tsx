@@ -1,8 +1,6 @@
 'use client'
 
-import { useState } from 'react'
-import { createPortal } from 'react-dom'
-import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import {
   BookOpen,
   Brain,
@@ -12,14 +10,8 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
-import type { AvatarConfig } from '@/lib/avatar'
+import { EquipmentArt } from '@/components/avatar/vestiaire-assets'
 import type { DriverKey, DriverScore } from '@/lib/capacite-drivers'
-
-// L'éditeur (et DiceBear) n'est chargé qu'à l'ouverture — même approche que
-// l'ancien AvatarBadge : l'avatar affiché est un data-URI pré-rendu serveur.
-const AvatarEditor = dynamic(() => import('@/components/AvatarEditor'), {
-  ssr: false,
-})
 
 const DRIVER_ICONS: Record<DriverKey, LucideIcon> = {
   sommeil: Moon,
@@ -108,7 +100,7 @@ export default function HeroCard({
   name,
   gradeLabel,
   avatarUri,
-  avatarConfig,
+  equipment,
   capacite,
   plafond,
   drivers,
@@ -116,13 +108,12 @@ export default function HeroCard({
   name: string
   gradeLabel: string | null
   avatarUri: string
-  avatarConfig: AvatarConfig
+  /** Slug de l'accessoire porté (vestiaire), '' si aucun. */
+  equipment: string
   capacite: number | null
   plafond: number | null
   drivers: DriverScore[]
 }) {
-  const [editing, setEditing] = useState(false)
-
   return (
     <section
       aria-label="Ma capacité"
@@ -146,12 +137,10 @@ export default function HeroCard({
 
       {/* ~40 % avatar / 60 % jauge : la jauge reste dominante. */}
       <div className="relative mt-3 grid grid-cols-[minmax(140px,2fr)_3fr] items-end gap-2">
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            setEditing(true)
-          }}
+        {/* Tap sur l'avatar (ou le crayon) : entrée dans le vestiaire. */}
+        <Link
+          href="/moi/avatar"
+          onClick={() => sfx.tap()}
           aria-label="Personnaliser mon avatar"
           className="group relative mx-auto block w-full max-w-44 min-w-[140px] cursor-pointer self-end transition-transform active:scale-[0.97]"
         >
@@ -163,10 +152,19 @@ export default function HeroCard({
             alt=""
             className="relative mx-auto w-full rounded-full ring-4 ring-white/25 drop-shadow-md"
           />
+          {/* Accessoire du vestiaire, superposé côté crayon opposé. */}
+          {equipment ? (
+            <span
+              aria-hidden="true"
+              className="absolute bottom-0 left-0 block size-[34%] drop-shadow-md"
+            >
+              <EquipmentArt slug={equipment} />
+            </span>
+          ) : null}
           <span className="absolute right-1 bottom-1 flex size-10 items-center justify-center rounded-full bg-white text-primary shadow-md transition-transform group-hover:scale-110">
             <Pencil className="size-4" strokeWidth={2.6} aria-hidden="true" />
           </span>
-        </button>
+        </Link>
 
         <div className="flex flex-col items-center gap-2">
           <CapacityRing capacite={capacite} plafond={plafond} />
@@ -201,12 +199,6 @@ export default function HeroCard({
         })}
       </div>
 
-      {editing
-        ? createPortal(
-            <AvatarEditor initial={avatarConfig} onClose={() => setEditing(false)} />,
-            document.body,
-          )
-        : null}
     </section>
   )
 }

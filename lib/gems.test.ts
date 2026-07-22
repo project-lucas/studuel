@@ -3,6 +3,7 @@ import {
   GEM_COST_CHAPTER,
   MAX_SQUAD_SIZE,
   REFERRAL_GEM_CAP,
+  REFERRAL_GEM_REWARD,
   STARTING_GEMS,
   canJoinSquad,
   canOpenChapter,
@@ -10,6 +11,8 @@ import {
   chapterAccess,
   gemsAfterSpend,
   gemsLabel,
+  gemsShortfall,
+  missingGemsLabel,
   isPremiumTier,
   isSquadFull,
   referralGemsEarned,
@@ -63,12 +66,13 @@ describe('isPremiumTier', () => {
 
 describe('canSpendGem', () => {
   it('autorise la dépense sur un chapitre fermé avec assez de gemmes', () => {
-    expect(canSpendGem('free', 1, CHAP, [])).toBe(true)
+    expect(canSpendGem('free', GEM_COST_CHAPTER, CHAP, [])).toBe(true)
     expect(canSpendGem('free', STARTING_GEMS, CHAP, [])).toBe(true)
   })
 
-  it('refuse quand le solde est vide', () => {
+  it('refuse quand le solde est insuffisant', () => {
     expect(canSpendGem('free', 0, CHAP, [])).toBe(false)
+    expect(canSpendGem('free', GEM_COST_CHAPTER - 1, CHAP, [])).toBe(false)
   })
 
   it('refuse de faire payer deux fois le même chapitre', () => {
@@ -82,12 +86,37 @@ describe('canSpendGem', () => {
 
 describe('gemsAfterSpend', () => {
   it('débite exactement le coût d’un chapitre', () => {
-    expect(gemsAfterSpend(3)).toBe(3 - GEM_COST_CHAPTER)
+    expect(gemsAfterSpend(GEM_COST_CHAPTER + 3)).toBe(3)
   })
 
   it('ne descend jamais sous zéro', () => {
     expect(gemsAfterSpend(0)).toBe(0)
     expect(gemsAfterSpend(-4)).toBe(0)
+  })
+})
+
+describe('gemsShortfall', () => {
+  it('compte ce qui manque pour ouvrir un chapitre', () => {
+    expect(gemsShortfall(0)).toBe(GEM_COST_CHAPTER)
+    expect(gemsShortfall(GEM_COST_CHAPTER)).toBe(0)
+    expect(gemsShortfall(GEM_COST_CHAPTER + 4)).toBe(0)
+  })
+
+  it('ignore les soldes absurdes', () => {
+    expect(gemsShortfall(-3)).toBe(GEM_COST_CHAPTER)
+    expect(gemsShortfall(0.9)).toBe(GEM_COST_CHAPTER)
+  })
+})
+
+describe('missingGemsLabel', () => {
+  it('dit combien il manque quand le solde est court', () => {
+    expect(missingGemsLabel(0)).toBe(`Il te manque ${GEM_COST_CHAPTER} gemmes`)
+    expect(missingGemsLabel(GEM_COST_CHAPTER - 1)).toBe('Il te manque 1 gemme')
+  })
+
+  it('se tait quand le solde suffit', () => {
+    expect(missingGemsLabel(GEM_COST_CHAPTER)).toBeNull()
+    expect(missingGemsLabel(99)).toBeNull()
   })
 })
 
@@ -110,10 +139,10 @@ describe('unlockMessage', () => {
 })
 
 describe('referralGemsEarned', () => {
-  it('verse une gemme par filleul activé', () => {
+  it('verse la récompense pleine par filleul activé', () => {
     expect(referralGemsEarned(0)).toBe(0)
-    expect(referralGemsEarned(1)).toBe(1)
-    expect(referralGemsEarned(7)).toBe(7)
+    expect(referralGemsEarned(1)).toBe(REFERRAL_GEM_REWARD)
+    expect(referralGemsEarned(7)).toBe(7 * REFERRAL_GEM_REWARD)
   })
 
   it('plafonne pour empêcher le farm de comptes', () => {
@@ -122,7 +151,7 @@ describe('referralGemsEarned', () => {
 
   it('ignore les valeurs absurdes', () => {
     expect(referralGemsEarned(-3)).toBe(0)
-    expect(referralGemsEarned(2.9)).toBe(2)
+    expect(referralGemsEarned(2.9)).toBe(2 * REFERRAL_GEM_REWARD)
   })
 })
 
@@ -131,8 +160,8 @@ describe('referralSummary', () => {
     const s = referralSummary(4, 2)
     expect(s.pending).toBe(4)
     expect(s.activated).toBe(2)
-    expect(s.gemsEarned).toBe(2)
-    expect(s.gemsRemaining).toBe(REFERRAL_GEM_CAP - 2)
+    expect(s.gemsEarned).toBe(2 * REFERRAL_GEM_REWARD)
+    expect(s.gemsRemaining).toBe(REFERRAL_GEM_CAP - 2 * REFERRAL_GEM_REWARD)
     expect(s.capped).toBe(false)
   })
 
@@ -154,14 +183,18 @@ describe('referralHeadline', () => {
   })
 
   it('félicite quand des gemmes sont tombées', () => {
-    expect(referralHeadline(referralSummary(0, 1))).toMatch(/1 gemme /)
-    expect(referralHeadline(referralSummary(0, 4))).toMatch(/4 gemmes/)
+    expect(referralHeadline(referralSummary(0, 1))).toMatch(
+      new RegExp(`${REFERRAL_GEM_REWARD} gemmes`),
+    )
+    expect(referralHeadline(referralSummary(0, 4))).toMatch(
+      new RegExp(`${4 * REFERRAL_GEM_REWARD} gemmes`),
+    )
   })
 
   it('salue le plafond', () => {
-    expect(referralHeadline(referralSummary(0, REFERRAL_GEM_CAP))).toMatch(
-      /maximum/i,
-    )
+    expect(
+      referralHeadline(referralSummary(0, REFERRAL_GEM_CAP / REFERRAL_GEM_REWARD)),
+    ).toMatch(/maximum/i)
   })
 })
 

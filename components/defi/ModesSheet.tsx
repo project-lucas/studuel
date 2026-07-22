@@ -1,6 +1,12 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { createPortal } from 'react-dom'
@@ -11,6 +17,7 @@ import { sfx } from '@/lib/sounds'
 import {
   ROULETTE_SUBJECTS,
   subjectGameTickets,
+  subjectBossTicket,
   funModeTickets,
   type ModeTicket,
   type ModeTone,
@@ -18,82 +25,89 @@ import {
 
 // Robe de chaque billet selon sa famille — même vocabulaire que l'arène :
 // violet = jeu de matière, bleu = mode fun de l'Arène, or = mode du jour.
+// Dégradé VERTICAL façon Clash Royale : plus clair en haut, plus foncé en bas.
 const TICKET_CLASS: Record<ModeTone, string> = {
   matiere:
-    'bg-gradient-to-br from-[oklch(0.56_0.19_300)] to-[oklch(0.4_0.19_302)]',
-  fun: 'bg-gradient-to-br from-[oklch(0.6_0.15_255)] to-[oklch(0.44_0.16_262)]',
+    'bg-gradient-to-b from-[oklch(0.62_0.19_300)] to-[oklch(0.41_0.2_302)]',
+  fun: 'bg-gradient-to-b from-[oklch(0.66_0.14_255)] to-[oklch(0.44_0.16_262)]',
   featured:
-    'bg-gradient-to-br from-[oklch(0.64_0.15_75)] to-[oklch(0.48_0.13_70)]',
+    'bg-gradient-to-b from-[oklch(0.72_0.14_80)] to-[oklch(0.49_0.13_70)]',
 }
 
-// La robe du TALON détachable (un cran plus sombre que le corps, pour lire la
-// déchirure), par famille.
-const STUB_CLASS: Record<ModeTone, string> = {
-  matiere: 'bg-[oklch(0.34_0.16_302)]',
-  fun: 'bg-[oklch(0.36_0.13_262)]',
-  featured: 'bg-[oklch(0.42_0.12_70)]',
-}
-
-// Un billet de mode, façon ticket Clash Royale : le corps porte le nom, la
-// promesse et l'art (image si fournie, sinon l'emoji en grand) ; le TALON
-// détachable à droite (perforation en pointillés + encoches demi-lune de la
-// classe .defi-ticket) porte l'emblème. Le ruban (« ×2 XP », « Bientôt ») se
-// pose en coin.
+// Un billet de mode, façon carte « Modes de jeu » de Clash Royale, pleine
+// largeur (essai : le talon détachable a été retiré — les encoches demi-lune
+// du masque .defi-ticket sont neutralisées via --tk-notch, les coins crantés
+// restent). Le billet porte le TITRE cartoon (blanc, contour sombre épais) et
+// soit la SCÈNE plein-fond (bannière 16:9, sujet dans le tiers droit,
+// désormais visible en entier), soit la GRANDE illustration détourée ancrée
+// en bas à droite sur robe unie. Le ruban (« ×2 XP », « Bientôt ») se pose
+// discrètement en coin haut-gauche.
 function Ticket({ ticket }: { ticket: ModeTicket }) {
   const disabled = !ticket.href
 
   const inner = (
     <span
-      className={`defi-ticket relative flex min-h-[84px] overflow-hidden rounded-[20px] ${TICKET_CLASS[ticket.tone]}`}
+      className={`defi-ticket relative flex h-[136px] overflow-hidden rounded-[18px] ${TICKET_CLASS[ticket.tone]}`}
+      style={{ '--tk-notch': '0px' } as CSSProperties}
     >
-      {/* Corps : texte à gauche, art à droite (débordant, façon perso CR). */}
-      <span className="relative z-10 flex min-w-0 flex-1 flex-col justify-center gap-0.5 py-3 pl-4">
-        <span className="font-heading text-[1.05rem] leading-tight font-extrabold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
-          {ticket.name}
-        </span>
-        <span className="line-clamp-1 text-[11px] font-semibold text-white/75">
-          {ticket.tagline}
-        </span>
-        {ticket.chip ? (
-          <span className="mt-1.5 self-start rounded-full bg-black/35 px-2 py-0.5 text-[10px] font-extrabold text-highlight">
-            {ticket.chip}
+      {/* Corps pleine largeur : titre à gauche, scène plein-fond OU grand art
+          ancré en bas à droite. */}
+      <span className="relative min-w-0 flex-1">
+        {ticket.scene ? (
+          /* La SCÈNE plein-fond : elle couvre tout le corps (au-dessus du
+             motif losange z-0, sous le biseau z-1 posé après elle dans
+             l'arbre), avec un voile dégradé à gauche pour asseoir le titre. */
+          <span aria-hidden="true" className="absolute inset-0 z-[1]">
+            <Image
+              src={ticket.scene}
+              alt=""
+              fill
+              sizes="(max-width: 448px) 92vw, 400px"
+              className="object-cover"
+            />
+            <span className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/15 to-transparent" />
           </span>
-        ) : null}
-      </span>
-
-      {/* Zone d'art du corps : image si fournie, sinon l'emoji en grand. */}
-      <span
-        aria-hidden="true"
-        className="relative z-10 grid w-[4.5rem] shrink-0 place-items-center self-stretch"
-      >
-        {ticket.image ? (
-          <Image
-            src={ticket.image}
-            alt=""
-            width={96}
-            height={96}
-            className="h-[118%] w-auto object-contain drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
-          />
         ) : (
-          <span className="text-[2.6rem] leading-none drop-shadow-[0_3px_6px_rgba(0,0,0,0.45)]">
-            {ticket.emoji}
+          /* La GRANDE illustration : absolue dans la moitié droite du corps,
+             ancrée en bas (le bas du perso est coupé net par la carte). */
+          <span
+            aria-hidden="true"
+            className="absolute right-1 bottom-0 z-[5] flex h-[110%] items-end"
+          >
+            {ticket.image ? (
+              <Image
+                src={ticket.image}
+                alt=""
+                width={200}
+                height={200}
+                className="h-full w-auto object-contain object-bottom drop-shadow-[0_6px_12px_rgba(0,0,0,0.45)]"
+              />
+            ) : (
+              <span className="text-[4.75rem] leading-none drop-shadow-[0_6px_12px_rgba(0,0,0,0.45)]">
+                {ticket.emoji}
+              </span>
+            )}
           </span>
         )}
-      </span>
 
-      {/* Talon détachable : perforation pointillée + emblème sur robe sombre. */}
-      <span
-        aria-hidden="true"
-        className={`relative grid w-16 shrink-0 place-items-center self-stretch border-l-2 border-dashed border-white/35 ${STUB_CLASS[ticket.tone]}`}
-      >
-        <span className="grid size-11 place-items-center rounded-full bg-black/25 text-2xl shadow-[inset_0_2px_4px_rgba(0,0,0,0.35)]">
-          {ticket.emoji}
+        {/* Le titre cartoon : très gros, blanc, contour sombre épais, aligné
+            à gauche sur 1-2 lignes — et sur une scène, le jeton XP en pastille
+            dorée juste dessous. */}
+        <span className="relative z-10 flex h-full max-w-[62%] flex-col items-start justify-center gap-1.5 pl-4">
+          <span className="defi-ticket-title font-heading line-clamp-2 text-[1.45rem] leading-[1.08] font-extrabold">
+            {ticket.name}
+          </span>
+          {ticket.scene && ticket.chip ? (
+            <span className="font-heading rounded-full bg-highlight px-2.5 py-0.5 text-[11px] font-extrabold text-foreground shadow-[0_2px_6px_rgba(0,0,0,0.4)]">
+              {ticket.chip}
+            </span>
+          ) : null}
         </span>
       </span>
 
       {ticket.badge ? (
         <span
-          className={`absolute top-0 right-[4.75rem] z-20 rounded-b-md px-1.5 py-0.5 text-[9px] font-extrabold tracking-wide uppercase ${
+          className={`absolute top-2 left-0 z-20 rounded-r-md px-2 py-0.5 text-[9px] font-extrabold tracking-wide uppercase shadow-[0_2px_4px_rgba(0,0,0,0.35)] ${
             ticket.badge === 'Bientôt'
               ? 'bg-black/45 text-white/85'
               : 'bg-destructive text-white'
@@ -106,13 +120,13 @@ function Ticket({ ticket }: { ticket: ModeTicket }) {
   )
 
   // L'anneau de focus vit sur l'élément parent NON masqué (le mask du billet
-  // rognerait le ring).
+  // rognerait le ring). Effet « press » : la carte se tasse au tap (scale).
   if (ticket.href) {
     return (
       <Link
         href={ticket.href}
         onClick={() => sfx.tap()}
-        className="defi2-press block rounded-[20px] focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+        className="block rounded-[18px] transition-transform duration-100 ease-out focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none active:scale-[0.97]"
       >
         {inner}
       </Link>
@@ -299,6 +313,7 @@ export default function ModesSheet({
 
   const subject = ROULETTE_SUBJECTS[activeIndex]?.subject ?? ''
   const gameTickets = subjectGameTickets(subject)
+  const bossTicket = subjectBossTicket(subject)
   const funTickets = funModeTickets(todayKey)
 
   return (
@@ -310,16 +325,29 @@ export default function ModesSheet({
           setOpen(true)
         }}
         aria-haspopup="dialog"
-        aria-label="Modes de jeu — choisis ta matière et tes modes"
-        className="olympe-gem olympe-press flex min-h-14 w-full cursor-pointer items-center gap-2.5 rounded-2xl px-5 focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none"
+        aria-label="Modes de jeu — jeux par matière, modes fun et boss"
+        className="olympe-gem olympe-press relative isolate flex min-h-14 w-full cursor-pointer items-center gap-2.5 overflow-hidden rounded-2xl px-5 focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none"
       >
+        {/* Scène plein-fond (batch 14) : mascotte manette à droite, voile
+            dégradé à gauche pour asseoir le texte — la robe gemme reste le
+            cadre et le repli. Même grammaire que les billets. */}
+        <span aria-hidden="true" className="absolute inset-0 -z-10">
+          <Image
+            src="/images/defi/modes-scene.webp"
+            alt=""
+            fill
+            sizes="(max-width: 480px) 94vw, 424px"
+            className="object-cover"
+          />
+          <span className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent" />
+        </span>
         <Gamepad2 className="size-6 text-white" aria-hidden="true" />
         <span className="flex flex-col items-start leading-tight">
           <span className="font-heading text-lg font-extrabold text-white">
             MODES DE JEU
           </span>
           <span className="text-[0.7rem] font-bold text-white/75">
-            Choisis ta matière · Modes fun
+            Jeux par matière · Modes fun · Boss
           </span>
         </span>
         <ChevronRightIcon className="ml-auto size-5 rotate-90 text-white/70" />
@@ -406,7 +434,7 @@ export default function ModesSheet({
 
                   {/* Le corps défilant : jeux de la matière, puis modes fun. */}
                   <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
-                    <div className="mx-auto flex w-full max-w-md flex-col gap-3 px-4 pt-4 pb-[calc(env(safe-area-inset-bottom)+1.5rem)]">
+                    <div className="mx-auto flex w-full max-w-md flex-col gap-4 px-4 pt-4 pb-[calc(env(safe-area-inset-bottom)+1.5rem)]">
                       {/* Les jeux de la matière choisie. */}
                       <h3 className="font-heading flex items-center justify-center gap-2 text-sm font-extrabold tracking-wide text-white/80 uppercase">
                         <span className="text-lg" aria-hidden="true">
@@ -417,6 +445,9 @@ export default function ModesSheet({
                       {gameTickets.map((t) => (
                         <Ticket key={t.id} ticket={t} />
                       ))}
+                      {/* Le gardien de la matière — mène à l'onglet Boss de
+                          sa page matière (combat 100 % matière). */}
+                      {bossTicket ? <Ticket ticket={bossTicket} /> : null}
 
                       {/* Les modes fun de l'Arène, communs à toutes les
                           matières. */}

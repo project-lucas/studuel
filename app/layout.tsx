@@ -6,6 +6,7 @@ import {
   Bricolage_Grotesque,
   Nunito,
   Baloo_2,
+  Fredoka,
 } from "next/font/google";
 import "./globals.css";
 // Navigation responsive : barre d'onglets en bas (mobile) + sidebar (desktop)
@@ -54,6 +55,13 @@ const baloo = Baloo_2({
   weight: ["600", "700", "800"],
 });
 
+// Pastilles d'initiales des matières (cartes « On s'y remet ? ») — police
+// dédiée demandée par le design, exposée via l'utilitaire `font-initials`.
+const fredoka = Fredoka({
+  variable: "--font-fredoka",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Studuel",
   description: "Apprends, teste-toi, progresse — de la 6e à la Terminale.",
@@ -76,7 +84,7 @@ export default async function RootLayout({
       lang="fr"
       // Les variables de police vivent sur <html> : la règle globale
       // `font-sans` s'applique ici, elles doivent y être visibles.
-      className={`light ${geistSans.variable} ${geistMono.variable} ${bricolage.variable} ${nunito.variable} ${baloo.variable}`}
+      className={`light ${geistSans.variable} ${geistMono.variable} ${bricolage.variable} ${nunito.variable} ${baloo.variable} ${fredoka.variable}`}
     >
       <body className="antialiased">
         {/* Mobile first : contenu entre la barre du haut (compte) et la barre

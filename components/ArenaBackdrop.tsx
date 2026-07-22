@@ -10,7 +10,7 @@ import {
   type ArenaPeriod,
 } from '@/lib/arena-background'
 import ArenaSky from '@/components/ArenaSky'
-import ArenaAtmosphere from '@/components/ArenaAtmosphere'
+import AnimatedBackground from '@/components/background/AnimatedBackground'
 
 /**
  * Fond dynamique de l'Arène (onglet Défi) : l'image du colisée suit l'heure
@@ -95,10 +95,12 @@ export default function ArenaBackdrop() {
       ))}
       {/* Voiles violets haut/bas : gardent HUD et barre d'onglets lisibles. */}
       <div className="arena-veils" />
-      {/* Le ciel vit (nuages, oiseaux) puis la scène s'anime (flammes, braises,
-          feuilles au vent) — montée après les voiles pour rester bien lisible. */}
+      {/* Le ciel vit (nuages) puis la scène s'anime en continu
+          (bannières, feuilles sur canvas, torches, poussière dorée) — montée
+          après les voiles pour rester bien lisible. Sans imageUrl : le décor
+          horaire est déjà peint par les couches .arena-img ci-dessus. */}
       <ArenaSky period={period} />
-      <ArenaAtmosphere />
+      <AnimatedBackground />
     </>
   )
 }

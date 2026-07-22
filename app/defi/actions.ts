@@ -9,6 +9,7 @@ import { MODE_XP_BONUS, modeXpBonus, type GameModeId } from '@/lib/defi-modes'
 import { weeklyBoss, weeklyTrophyId, WEEKLY_TROPHY_COINS } from '@/lib/bosses'
 import { matchmakeOpponentTrophies } from '@/lib/trophies'
 import { toDayKey } from '@/lib/streak'
+import { awardXp } from '@/lib/wallet-server'
 import type { CommuteSlot } from '@/lib/types'
 
 // Enregistre un défi terminé : compte pour la série, les habitudes et l'XP.
@@ -72,6 +73,9 @@ export async function recordChallenge(
     await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id, slots),
+      // Verse la même XP au portefeuille (192) — la session reste la trace
+      // historique, le portefeuille le total courant.
+      awardXp(supabase, 'defi_arena', undefined, xp),
     ])
   }
 

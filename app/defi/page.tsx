@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import ModesSheet from '@/components/defi/ModesSheet'
 import TabHeader from '@/components/TabHeader'
 import ArenaHud, { type OrbItem } from '@/components/defi/ArenaHud'
@@ -378,19 +379,41 @@ export default async function DefiPage() {
             clic (olympe-press). */}
         <Link
           href="/defi/jouer?mode=ranked"
-          className="olympe-gold olympe-press attract-sheen flex min-h-16 w-full items-center gap-3 rounded-2xl px-5 focus-visible:ring-4 focus-visible:ring-highlight/50 focus-visible:outline-none"
+          className="olympe-gold olympe-press attract-sheen relative isolate flex min-h-24 w-full items-center gap-3 overflow-hidden rounded-2xl px-5 focus-visible:ring-4 focus-visible:ring-highlight/50 focus-visible:outline-none"
           aria-label="Lancer un match classé"
         >
-          <SwordsIcon className="size-7 shrink-0" />
+          {/* Scène plein-fond immersive, même grammaire que « Modes de jeu » :
+              l'illustration couvre TOUTE la hauteur, ancrée à droite, et FOND
+              vers la robe or sur la gauche — pas de vignette posée sur le
+              jaune. Deux couches : un masque horizontal efface l'image (et son
+              fond incrusté) vers la gauche pour laisser voir la vraie robe
+              olympe-gold (dégradé vertical sculpté intact), et un voile ambre
+              opaque→transparent assoit le texte encre dans la transition.
+              Cadrage 94,5 % (au lieu de 100 %) : aligne verticalement le
+              trophée sur la mascotte de « Modes de jeu » juste dessous. */}
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_right,transparent_8%,black_48%)]"
+          >
+            <Image
+              src="/images/defi/classe-scene-v4b.webp"
+              alt=""
+              fill
+              sizes="(max-width: 480px) 94vw, 424px"
+              className="object-cover [object-position:94.5%_center]"
+            />
+            <span className="absolute inset-0 bg-gradient-to-r from-[#f9b233] via-[#f9b233]/35 to-transparent" />
+          </span>
+          <SwordsIcon className="size-8 shrink-0" />
           <span className="flex flex-col items-start leading-tight">
-            <span className="font-heading text-base font-extrabold">
+            <span className="font-heading text-lg font-extrabold">
               MATCH CLASSÉ
             </span>
-            <span className="text-[0.72rem] font-bold opacity-80">
+            <span className="text-[0.8rem] font-bold opacity-80">
               BO3 · +30 victoire / −20 défaite
             </span>
           </span>
-          <ChevronRightIcon className="ml-auto size-5 shrink-0" />
+          <ChevronRightIcon className="ml-auto size-6 shrink-0" />
         </Link>
 
         {/* Tous les modes de jeu, en feuille qui monte du bas (billets +

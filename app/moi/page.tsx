@@ -248,7 +248,7 @@ export default async function MoiPage() {
                 name={firstName}
                 gradeLabel={gradeLabel}
                 avatarUri={heroAvatarUri}
-                avatarConfig={avatarConfig}
+                equipment={avatarConfig.equipment}
                 capacite={capacite}
                 plafond={plafond}
                 drivers={drivers}

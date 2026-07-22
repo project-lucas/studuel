@@ -53,7 +53,7 @@ export default async function QuizPage({
   if (!quiz) notFound()
 
   const backHref = quiz.lesson?.chapter?.subject
-    ? `/reviser/${quiz.lesson.chapter.subject.slug}/${quiz.lesson.chapter.id}/${quiz.lesson.id}`
+    ? `/reviser/${quiz.lesson.chapter.subject.slug}/${quiz.lesson.chapter.id}/${quiz.lesson.id}/cours`
     : '/reviser'
 
   // Gating abonnement : les quiz premium requièrent Studuel+ (tier1+).

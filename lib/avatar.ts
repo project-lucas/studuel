@@ -23,6 +23,8 @@ export type AvatarConfig = {
   clothing: string
   clothesColor: string
   backgroundColor: string // '' = transparent
+  equipment: string // '' = aucun accessoire porté (couche vestiaire, hors DiceBear)
+  banner: string // fond du profil (couche vestiaire, hors DiceBear)
 }
 
 // Un champ éditable : sa clé, son libellé FR, son type (pastille de couleur ou
@@ -173,6 +175,28 @@ const CLOTHING = [
   'overall',
 ] as const
 
+// Couches du vestiaire, HORS DiceBear : l'équipement est un SVG maison
+// superposé à l'avatar, la bannière est le fond du profil. Listes fermées
+// (mêmes slugs que les asset_key du catalogue avatar_items — migration 189).
+export const EQUIPMENT_KEYS = [
+  'ballon-basket',
+  'casque-audio',
+  'lunettes-soleil',
+  'livre',
+  'sac-a-dos',
+] as const
+
+export const BANNER_KEYS = [
+  'uni-lavande',
+  'terrain-basket',
+  'bibliotheque',
+  'ciel-etoile',
+  'neon',
+] as const
+
+// Bannière par défaut : le pastel uni de la marque (toujours présente, jamais '').
+export const DEFAULT_BANNER: (typeof BANNER_KEYS)[number] = 'uni-lavande'
+
 // L'ordre des onglets de l'éditeur suit ce tableau.
 export const AVATAR_FIELDS: readonly AvatarField[] = [
   { key: 'skinColor', label: 'Peau', kind: 'color', options: SKIN_COLORS, allowNone: false },
@@ -203,6 +227,8 @@ export const DEFAULT_AVATAR: AvatarConfig = {
   clothing: 'shirtCrewNeck',
   clothesColor: '7c4dff',
   backgroundColor: 'b9a6ff',
+  equipment: '',
+  banner: DEFAULT_BANNER,
 }
 
 // Ramène n'importe quelle entrée (valeur DB ou payload d'action) à une config
@@ -224,6 +250,18 @@ export function normalizeAvatarConfig(input: unknown): AvatarConfig {
     (HAIR_COLORS as readonly string[]).includes(raw.facialHairColor)
       ? raw.facialHairColor
       : out.hairColor
+  // Couches vestiaire (pas dans AVATAR_FIELDS : elles ne passent pas par
+  // DiceBear). Équipement optionnel, bannière toujours valide.
+  out.equipment =
+    typeof raw.equipment === 'string' &&
+    (EQUIPMENT_KEYS as readonly string[]).includes(raw.equipment)
+      ? raw.equipment
+      : ''
+  out.banner =
+    typeof raw.banner === 'string' &&
+    (BANNER_KEYS as readonly string[]).includes(raw.banner)
+      ? raw.banner
+      : DEFAULT_BANNER
   return out
 }
 

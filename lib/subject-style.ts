@@ -6,6 +6,7 @@ import {
   Calculator,
   Code2,
   Cpu,
+  Crown,
   Globe,
   Infinity,
   Landmark,
@@ -14,7 +15,11 @@ import {
   Lightbulb,
   LineChart,
   Microscope,
+  PiggyBank,
+  Receipt,
+  Rocket,
   ScrollText,
+  TrendingUp,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -36,7 +41,15 @@ const SUBJECT_ICONS: Record<string, LucideIcon> = {
   nsi: Code2,
   ses: LineChart,
   philosophie: Brain,
+  // Matières « culture » (hors-programme). L'ancien dossier unique
+  // 'culture-generale' garde son icône tant que la migration 190 (éclatement en
+  // matières séparées) n'est pas exécutée.
   'culture-generale': Lightbulb,
+  economie: TrendingUp,
+  'finances-personnelles': PiggyBank,
+  fiscalite: Receipt,
+  entrepreneuriat: Rocket,
+  'figures-historiques': Crown,
 }
 
 export function subjectIcon(slug: string): LucideIcon {
@@ -153,6 +166,80 @@ export function subjectTheme(color: string): SubjectTheme {
   return THEMES[color] ?? THEMES.blue
 }
 
+// Fond pastel uni par couleur de matière (`subjects.color`) — mêmes teintes que
+// les tuiles pastel de subjectTheme, en hex pour les fonds inline (bulles,
+// pastilles d'initiales…).
+const PASTELS: Record<string, string> = {
+  blue: '#DFEBFF',
+  red: '#FFE4E6',
+  orange: '#FFEDD5',
+  green: '#D1FAE5',
+  purple: '#EFE7FB',
+  indigo: '#E0E7FF',
+  teal: '#CCFBF1',
+  pink: '#FCE7F3',
+  yellow: '#FEF3C7',
+  slate: '#E2E8F0',
+}
+
+// Crème neutre (fond du médaillon de repli des illustrations).
+const PASTEL_FALLBACK = '#FBF3DC'
+
+export function subjectPastel(color: string): string {
+  return PASTELS[color] ?? PASTEL_FALLBACK
+}
+
+// Sigle court par matière (clé `subjects.slug`) pour les pastilles d'initiales.
+// Les sigles longs (SVT, NSI, HGGSP…) sont rendus en police réduite pour tenir
+// dans le cercle de 40px ; HGGSP est le seul à 5 lettres (sigle officiel,
+// aucune forme courte n'existe).
+const SUBJECT_INITIALS: Record<string, string> = {
+  maths: 'MA',
+  'maths-expertes': 'ME',
+  francais: 'FR',
+  'histoire-geo': 'HG',
+  hggsp: 'HGGSP',
+  anglais: 'AN',
+  espagnol: 'ESP',
+  allemand: 'ALL',
+  latin: 'LA',
+  grec: 'GR',
+  svt: 'SVT',
+  'physique-chimie': 'PC',
+  'enseignement-scientifique': 'ES',
+  technologie: 'TECH',
+  nsi: 'NSI',
+  ses: 'SES',
+  philosophie: 'PH',
+  'culture-generale': 'CG',
+  economie: 'ECO',
+  'finances-personnelles': 'FP',
+  fiscalite: 'FI',
+  entrepreneuriat: 'EN',
+  'figures-historiques': 'FH',
+  musique: 'MU',
+  sport: 'EPS',
+  'arts-plastiques': 'AP',
+}
+
+// Plafond des initiales DÉRIVÉES (matière sans sigle dédié) : 4 caractères.
+const INITIALS_MAX = 4
+
+// Petits mots ignorés lors de la dérivation des initiales depuis un nom.
+const INITIALS_STOP_WORDS = new Set(['de', 'des', 'du', 'la', 'le', 'les', 'et'])
+
+export function subjectInitials(slug: string, name?: string): string {
+  const known = SUBJECT_INITIALS[slug]
+  if (known) return known
+  const words = (name ?? slug)
+    .split(/[\s\-']+/)
+    .filter((w) => w.length > 0 && !INITIALS_STOP_WORDS.has(w.toLowerCase()))
+  if (words.length === 0) return '?'
+  const derived =
+    words.length === 1 ? words[0].slice(0, 2) : words.map((w) => w[0]).join('')
+  return derived.slice(0, INITIALS_MAX).toUpperCase()
+}
+
 // Décors d'ambiance par matière (public/images/matieres/<slug>.webp).
 // Seules les matières dont l'image est générée sont listées — les autres
 // gardent le header coloré uni. (Vide pour l'instant : le décor maths a été
@@ -169,19 +256,30 @@ export function subjectDecor(slug: string): string | undefined {
 // identique. Ajouter le slug ici dès que l'image est déposée dans
 // public/images/matieres/vignettes/<slug>.webp — repli sur le médaillon sinon.
 const VIGNETTE_SLUGS: string[] = [
+  'allemand',
   'anglais',
+  'arts-plastiques',
+  'economie',
+  'entrepreneuriat',
   'espagnol',
+  'figures-historiques',
+  'fiscalite',
   'francais',
+  'grec',
   'hggsp',
   'histoire-geo',
   'latin',
   'maths',
+  'musique',
   'nsi',
   'philosophie',
   'physique-chimie',
   'ses',
+  'sport',
   'svt',
   'technologie',
+  // Manque encore : finances-personnelles (pas d'image dans le lot v2 —
+  // sources dans assets-sources/vignettes-v2/, hors dépôt).
 ]
 
 export function subjectVignette(slug: string): string | undefined {

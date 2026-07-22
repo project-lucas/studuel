@@ -11,6 +11,7 @@ import { chapterHasMindMap, fetchMindMap } from '@/lib/mind-map-access'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
 import SubjectIcon from '@/components/SubjectIcon'
+import GemIcon from '@/components/ui/GemIcon'
 import { CHAPTER_COLUMNS, type Subject, type Chapter, type MindMapData } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
@@ -72,8 +73,8 @@ export default async function MindMapPage({
         />
         <div className="relative mx-auto w-full max-w-4xl">
           <BackButton
-            fallback={`/reviser/${subject.slug}/${chapter.id}`}
-            label={`Retour — ${chapter.title}`}
+            fallback={`/reviser/${subject.slug}`}
+            label={`Retour — ${subject.name}`}
             className="mb-4"
           />
           <h1 className="font-heading text-2xl font-bold text-balance md:text-3xl">
@@ -83,6 +84,14 @@ export default async function MindMapPage({
             <SubjectIcon slug={subject.slug} className="size-4 shrink-0" strokeWidth={2} aria-hidden="true" />
             {subject.name} · {chapter.level} · {chapter.title}
           </p>
+          {access === 'unlocked' ? (
+            // Badge réservé au déblocage à la gemme : il rappelle que CE
+            // chapitre appartient à l'élève (un abonné, lui, a déjà tout).
+            <p className="bg-card/70 mt-3 inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-bold">
+              <GemIcon className="size-3.5" aria-hidden="true" />
+              Débloquée
+            </p>
+          ) : null}
         </div>
       </header>
 

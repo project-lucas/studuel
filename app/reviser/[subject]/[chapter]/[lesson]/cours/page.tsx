@@ -19,7 +19,7 @@ export default async function CoursPage({
   params: Promise<{ subject: string; chapter: string; lesson: string }>
 }) {
   const { subject: slug, chapter: chapterId, lesson: lessonId } = await params
-  const { supabase, user, subject, chapter, lesson } = await loadLessonContext(
+  const { supabase, user, subject, lesson } = await loadLessonContext(
     slug,
     chapterId,
     lessonId,
@@ -53,9 +53,7 @@ export default async function CoursPage({
           aria-hidden="true"
         />
         <div className="relative mx-auto w-full max-w-2xl">
-          <BackButton
-            fallback={`/reviser/${subject.slug}/${chapter.id}/${lesson.id}`}
-          />
+          <BackButton fallback={`/reviser/${subject.slug}`} />
           <h1 className="font-heading mt-4 text-center text-2xl font-bold text-balance md:text-3xl">
             {lesson.title}
           </h1>

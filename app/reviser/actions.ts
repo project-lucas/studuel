@@ -17,6 +17,7 @@ import {
   type OralTextStatus,
 } from '@/lib/oral-texts'
 import { DAILY_GOAL_OPTIONS, type DailyGoalMinutes } from '@/lib/daily-goal'
+import { awardGems, awardQuizProgression, awardXp } from '@/lib/wallet-server'
 
 // Marque une leçon comme terminée : le chapitre progresse (plancher 30 %)
 // et la journée est validée dans la série.
@@ -170,6 +171,8 @@ export async function finishReviewSession(
     await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id),
+      // Une session « À revoir » paye comme un quiz (portefeuille 192).
+      awardQuizProgression(supabase, score, clean.length),
     ])
   }
 
@@ -253,12 +256,42 @@ export async function finishExamBlanc(
     await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id),
+      // L'examen blanc paye comme un gros quiz (portefeuille 192).
+      awardQuizProgression(supabase, cleanScore, cleanTotal),
     ])
   }
 
   revalidatePath('/reviser')
   revalidatePath('/moi')
   return { saved: !examError && !xpError }
+}
+
+// Fin d'un défi de leçon (DefiSoloPlayer) : +25 XP d'avoir joué (une fois par
+// leçon et par jour — l'idempotence est portée par la clé « leçon:jour » côté
+// SQL), et +10 gemmes en cas de victoire (même clé, même garde-fou). Le défi
+// ne persiste pas ses manches : gagné/perdu est déclaré par le client, mais
+// les montants et la fréquence sont verrouillés en base.
+export async function recordLessonDefi(
+  lessonId: string,
+  won: boolean,
+): Promise<{ saved: boolean; xp: number; gems: number }> {
+  if (!UUID_RE.test(String(lessonId))) return { saved: false, xp: 0, gems: 0 }
+
+  const supabase = await createClient()
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+  if (!user) return { saved: false, xp: 0, gems: 0 }
+
+  const key = `${lessonId}:${toDayKey(new Date())}`
+  const [award, gems] = await Promise.all([
+    awardXp(supabase, 'defi', key),
+    won ? awardGems(supabase, 'defi_win', key) : Promise.resolve(0),
+  ])
+  await validateRevisionToday(supabase, user.id)
+
+  revalidatePath('/reviser')
+  return { saved: award !== null, xp: award?.awarded ?? 0, gems }
 }
 
 // Persiste la sélection de matières de l'élève (bouton « Éditer »).

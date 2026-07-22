@@ -24,7 +24,7 @@ export default async function LessonDefiPage({
     lessonId,
   )
 
-  const backHref = `/reviser/${subject.slug}/${chapter.id}/${lesson.id}`
+  const backHref = `/reviser/${subject.slug}/${chapter.id}/${lesson.id}/cours`
 
   // On lit `is_free` pour gater le premium (sinon la RLS renvoie 0 question et
   // on afficherait un trompeur « bientôt » au lieu du paywall).
@@ -96,6 +96,7 @@ export default async function LessonDefiPage({
       title={lesson.title}
       subject={subject.name}
       backHref={backHref}
+      lessonId={lesson.id}
     />
   )
 }

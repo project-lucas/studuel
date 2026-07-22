@@ -1,8 +1,18 @@
-// XP & niveaux — dérivés de l'activité réelle (pas de compteur stocké,
-// donc rien à synchroniser et impossible à désynchroniser).
-// Quiz : 10 XP par bonne réponse + 20 de bonus de session.
-// Flashcards : 5 XP par carte + 20 de bonus. Leçon terminée : 15 XP.
-// Défi : XP enregistrés avec la session.
+// XP & niveaux — ANCIEN système dérivé de l'activité, conservé comme REPLI.
+//
+// Depuis la migration 192, la source de vérité de l'XP est le portefeuille
+// stocké (user_wallet + xp_events, barème forfaitaire dans lib/wallet.ts).
+// Ce module reste pour deux usages précis :
+//   • `computeXp` — repli d'affichage tant que le portefeuille n'existe pas
+//     (migration pas passée, ou compte sans activité depuis) ; c'est AUSSI la
+//     formule que la RPC `wallet_ensure` (192) rejoue en SQL pour rétro-remplir
+//     l'XP d'ouverture du portefeuille — toute évolution doit toucher les deux ;
+//   • `XP_RULES` — barème de l'ARÈNE Défi (modes Blitz/Boss/Chrono…), dont
+//     l'XP par session reste proportionnelle au score, enregistrée avec la
+//     session puis versée au portefeuille via la source 'defi_arena'.
+// Les niveaux et titres vivent désormais dans lib/wallet.walletLevelInfo.
+
+import { XP_AWARDS, xpForQuiz } from '@/lib/wallet'
 
 export const XP_RULES = {
   quizPerCorrect: 10,
@@ -74,25 +84,20 @@ export function levelFor(xp: number): LevelInfo {
 
 // XP gagnée par UNE session, pour l'annoncer à l'élève à la fin.
 //
-// `computeXp` ci-dessus recalcule le total depuis TOUT l'historique (c'est ce
-// qui rend le niveau indésynchronisable) ; il ne dit pas ce que la session qui
-// vient de se terminer a rapporté. Sans ce calcul, l'écran de fin affichait un
-// score sec et l'élève gagnait de l'XP sans jamais le voir — la récompense
-// existait mais restait muette.
+// Aligné sur le barème FORFAITAIRE du portefeuille (lib/wallet.XP_AWARDS) :
+// c'est ce que la Server Action verse réellement, donc ce que l'écran de fin
+// doit annoncer — la promesse « +20 XP » affichée sur l'item avant de jouer et
+// la récompense affichée après doivent être le même nombre.
 //
-// Le bonus de session est versé MÊME à 0 bonne réponse : on récompense d'être
-// venu réviser, on ne punit pas l'échec (doctrine du projet, cf. la douceur du
-// barème de trophées).
+// L'XP tombe MÊME à 0 bonne réponse : on récompense d'être venu réviser, on ne
+// punit pas l'échec (doctrine du projet, cf. la douceur du barème de trophées).
 export function sessionXp(
   kind: 'quiz' | 'deck' | 'review',
   score: number,
   total: number,
 ): number {
-  const bons = Math.max(0, Math.min(Math.round(score), Math.max(0, Math.round(total))))
-  if (kind === 'deck') {
-    return bons * XP_RULES.deckPerCard + XP_RULES.deckBonus
-  }
+  if (kind === 'deck') return XP_AWARDS.flashcards
   // Une session « À revoir » paye comme un quiz : c'est le geste qu'on veut
   // quotidien, il ne doit pas rapporter moins que le quiz de la leçon.
-  return bons * XP_RULES.quizPerCorrect + XP_RULES.quizBonus
+  return xpForQuiz(score, total)
 }

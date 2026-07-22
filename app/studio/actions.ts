@@ -3,6 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { validateRevisionToday } from '@/lib/habits'
+import { awardXp } from '@/lib/wallet-server'
 
 // Enregistre une session de flashcards terminée (série + heatmap Habitude).
 // Visiteur non connecté : rien n'est enregistré, sans erreur.
@@ -27,9 +28,13 @@ export async function recordStudySession(
     cards_count: clean,
   })
 
-  // Coche « Révision quotidienne » du jour tout de suite si le seuil est atteint.
+  // Coche « Révision quotidienne » du jour tout de suite si le seuil est
+  // atteint, et verse le forfait flashcards du portefeuille (192).
   if (!error) {
-    await validateRevisionToday(supabase, user.id)
+    await Promise.all([
+      validateRevisionToday(supabase, user.id),
+      awardXp(supabase, 'flashcards'),
+    ])
     revalidatePath('/moi')
   }
 

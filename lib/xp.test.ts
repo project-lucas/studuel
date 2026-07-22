@@ -57,18 +57,19 @@ describe('levelFor', () => {
 })
 
 describe('sessionXp', () => {
-  it('paye 10 XP par bonne réponse plus le bonus de session (quiz)', () => {
-    expect(sessionXp('quiz', 7, 10)).toBe(90)
-    expect(sessionXp('quiz', 10, 10)).toBe(120)
+  it('paye le forfait du quiz, bonus compris à partir de 8/10', () => {
+    expect(sessionXp('quiz', 7, 10)).toBe(20)
+    expect(sessionXp('quiz', 8, 10)).toBe(30)
+    expect(sessionXp('quiz', 10, 10)).toBe(30)
   })
 
-  it('verse le bonus MÊME sans aucune bonne réponse', () => {
+  it("verse l'XP MÊME sans aucune bonne réponse", () => {
     // Doctrine du projet : on récompense d'être venu réviser, on ne punit pas.
     expect(sessionXp('quiz', 0, 10)).toBe(20)
   })
 
-  it('paye les flashcards à la carte', () => {
-    expect(sessionXp('deck', 12, 12)).toBe(80)
+  it('paye les flashcards au forfait', () => {
+    expect(sessionXp('deck', 12, 12)).toBe(10)
   })
 
   it('la file « À revoir » ne rapporte pas moins que le quiz', () => {
@@ -77,8 +78,8 @@ describe('sessionXp', () => {
   })
 
   it('borne les valeurs aberrantes', () => {
-    expect(sessionXp('quiz', 999, 10)).toBe(120) // score plafonné au total
-    expect(sessionXp('quiz', -5, 10)).toBe(20) // score négatif ramené à 0
-    expect(sessionXp('quiz', 3, -1)).toBe(20) // total absurde → aucun point
+    expect(sessionXp('quiz', 999, 10)).toBe(30) // ratio absurde → simple bonus
+    expect(sessionXp('quiz', -5, 10)).toBe(20) // score négatif ramené au forfait
+    expect(sessionXp('quiz', 3, -1)).toBe(20) // total absurde → pas de bonus
   })
 })

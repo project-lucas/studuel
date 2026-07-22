@@ -5,6 +5,8 @@ import {
   subjectTheme,
   subjectDecor,
   subjectVignette,
+  subjectPastel,
+  subjectInitials,
   type SubjectTheme,
 } from '@/lib/subject-style'
 
@@ -56,6 +58,49 @@ describe('subjectDecor', () => {
     // coloré (arena-tile). Le repli undefined doit tenir pour tout slug.
     expect(subjectDecor('maths')).toBeUndefined()
     expect(subjectDecor('philosophie')).toBeUndefined()
+  })
+})
+
+describe('subjectPastel', () => {
+  it('rend le fond pastel d’une couleur connue', () => {
+    expect(subjectPastel('purple')).toBe('#EFE7FB')
+    expect(subjectPastel('blue')).toBe('#DFEBFF')
+  })
+
+  it('repli crème pour une couleur inconnue', () => {
+    expect(subjectPastel('couleur-fantome')).toBe('#FBF3DC')
+  })
+})
+
+describe('subjectInitials', () => {
+  it('rend le sigle dédié des matières connues', () => {
+    expect(subjectInitials('histoire-geo')).toBe('HG')
+    expect(subjectInitials('maths')).toBe('MA')
+    expect(subjectInitials('physique-chimie')).toBe('PC')
+    expect(subjectInitials('svt')).toBe('SVT')
+    expect(subjectInitials('philosophie')).toBe('PH')
+    expect(subjectInitials('anglais')).toBe('AN')
+    expect(subjectInitials('enseignement-scientifique')).toBe('ES')
+    expect(subjectInitials('nsi')).toBe('NSI')
+    expect(subjectInitials('ses')).toBe('SES')
+    // Sigle officiel à 5 lettres, seul au-delà de 4 — rendu en police réduite.
+    expect(subjectInitials('hggsp')).toBe('HGGSP')
+  })
+
+  it('les autres sigles dédiés tiennent en 4 caractères maximum', () => {
+    for (const slug of ['technologie', 'sport', 'allemand', 'espagnol']) {
+      expect(subjectInitials(slug).length, slug).toBeLessThanOrEqual(4)
+    }
+  })
+
+  it('dérive les initiales du nom pour un slug inconnu', () => {
+    expect(subjectInitials('matiere-fantome', 'Sciences économiques')).toBe('SÉ')
+    expect(subjectInitials('matiere-fantome', 'Histoire des arts')).toBe('HA')
+  })
+
+  it('repli sur le slug quand le nom manque, plafonné à 4 caractères', () => {
+    expect(subjectInitials('option-theatre-expression-dramatique')).toBe('OTED')
+    expect(subjectInitials('chinois')).toBe('CH')
   })
 })
 

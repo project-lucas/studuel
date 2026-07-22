@@ -10,7 +10,9 @@ import {
   removeExam,
   examChapterIds,
   examProximity,
+  examCardLabel,
   examHintsBySubject,
+  examHeroUrgency,
   MAX_UPCOMING_EXAMS,
   type NextExam,
 } from './next-exam'
@@ -192,6 +194,71 @@ describe('examProximity', () => {
   it('vert (far) au-delà de 6 jours ou sans date', () => {
     expect(examProximity(mk('2026-07-22'), today)).toBe('far') // 7 j
     expect(examProximity(mk(null), today)).toBe('far')
+  })
+})
+
+describe('examCardLabel', () => {
+  const mk = (date: string | null): NextExam => ({ ...base, date })
+  const today = '2026-07-15'
+
+  it('annonce le jour J avec urgence', () => {
+    expect(examCardLabel(mk('2026-07-15'), today)).toBe(
+      "Contrôle aujourd'hui !",
+    )
+  })
+
+  it('annonce demain puis le compte en jours', () => {
+    expect(examCardLabel(mk('2026-07-16'), today)).toBe('Contrôle demain')
+    expect(examCardLabel(mk('2026-07-18'), today)).toBe(
+      'Contrôle dans 3 jours',
+    )
+  })
+
+  it('badge neutre pour un contrôle sans date', () => {
+    expect(examCardLabel(mk(null), today)).toBe('Contrôle à venir')
+  })
+})
+
+describe('examHeroUrgency', () => {
+  const today = '2026-07-15'
+
+  it('jaune à 3 jours ou plus, avec le compte en jours', () => {
+    expect(examHeroUrgency('2026-07-18', today)).toEqual({
+      label: 'Contrôle dans 3 jours',
+      tone: 'yellow',
+    })
+    expect(examHeroUrgency('2026-07-25', today)).toEqual({
+      label: 'Contrôle dans 10 jours',
+      tone: 'yellow',
+    })
+  })
+
+  it('corail à 2 jours', () => {
+    expect(examHeroUrgency('2026-07-17', today)).toEqual({
+      label: 'Contrôle dans 2 jours',
+      tone: 'coral',
+    })
+  })
+
+  it('corail à J-1 avec le libellé « demain »', () => {
+    expect(examHeroUrgency('2026-07-16', today)).toEqual({
+      label: 'Contrôle demain',
+      tone: 'coral',
+    })
+  })
+
+  it('corail le jour J', () => {
+    expect(examHeroUrgency('2026-07-15', today)).toEqual({
+      label: "Contrôle aujourd'hui !",
+      tone: 'coral',
+    })
+  })
+
+  it('jaune et neutre sans date', () => {
+    expect(examHeroUrgency(null, today)).toEqual({
+      label: 'Contrôle à venir',
+      tone: 'yellow',
+    })
   })
 })
 

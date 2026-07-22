@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import ReviewPlayer, { type ReviewPlayItem } from '@/components/ReviewPlayer'
 import { createClient } from '@/lib/supabase/server'
+import { getSubjectsCached } from '@/lib/catalog'
 import { toDayKey } from '@/lib/streak'
 import { getReviewItems, reviewQueue } from '@/lib/srs'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
@@ -22,7 +23,21 @@ export const dynamic = 'force-dynamic'
 // Une session « À revoir » reste courte : la régularité bat le marathon.
 const SESSION_SIZE = 15
 
-export default async function RevoirPage() {
+// Les items SRS portent tantôt le slug (« physique-chimie »), tantôt le nom
+// (« Physique-Chimie ») selon le player qui les a enregistrés — on compare
+// en normalisé pour couvrir les deux.
+const normalize = (s: string) =>
+  s
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+
+export default async function RevoirPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ matiere?: string }>
+}) {
+  const { matiere } = await searchParams
   const supabase = await createClient()
   const {
     data: { user },
@@ -57,7 +72,44 @@ export default async function RevoirPage() {
 
   // File du jour : Revanche d'abord, puis les items dus les plus en retard.
   const today = toDayKey(new Date())
-  const queue = reviewQueue(await getReviewItems(supabase, user.id), today)
+  let queue = reviewQueue(await getReviewItems(supabase, user.id), today)
+
+  // Filtre matière (onglet « Mes erreurs » de la page matière) : un item est
+  // gardé si son étiquette matière correspond, OU si sa question appartient à
+  // un quiz de la matière — même règle de rattachement que la page matière.
+  let subjectName: string | null = null
+  if (matiere) {
+    const subject = (await getSubjectsCached()).find((s) => s.slug === matiere)
+    if (subject) {
+      subjectName = subject.name
+      const wanted = new Set([normalize(subject.slug), normalize(subject.name)])
+      const questionIds = queue
+        .filter((i) => i.item_kind === 'question')
+        .map((i) => i.item_id)
+      const { data: subjectQuizzes } = await supabase
+        .from('quizzes')
+        .select('id')
+        .eq('subject', subject.name)
+        .returns<{ id: string }[]>()
+      const quizIdSet = new Set((subjectQuizzes ?? []).map((q) => q.id))
+      const inSubject = new Set<string>()
+      if (questionIds.length > 0 && quizIdSet.size > 0) {
+        const { data: qs } = await supabase
+          .from('quiz_questions')
+          .select('id, quiz_id')
+          .in('id', questionIds)
+          .returns<{ id: string; quiz_id: string }[]>()
+        for (const q of qs ?? [])
+          if (quizIdSet.has(q.quiz_id)) inSubject.add(q.id)
+      }
+      queue = queue.filter(
+        (i) =>
+          (i.subject && wanted.has(normalize(i.subject))) ||
+          inSubject.has(i.item_id),
+      )
+    }
+  }
+
   const picked = queue.slice(0, SESSION_SIZE)
 
   // Contenu des items (les review_items ne stockent que des ids).
@@ -131,7 +183,7 @@ export default async function RevoirPage() {
   return (
     <div className="flex flex-col gap-4">
       <PageHeader
-        title="À revoir"
+        title={subjectName ? `À revoir · ${subjectName}` : 'À revoir'}
         description="Revanche d'abord, puis ce que ta mémoire s'apprête à oublier."
       />
       <ReviewPlayer items={items} />

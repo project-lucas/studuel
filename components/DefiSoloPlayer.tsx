@@ -14,6 +14,7 @@ import {
 import BackButton from '@/components/BackButton'
 import ProgressRing from '@/components/ProgressRing'
 import PairMatch from '@/components/PairMatch'
+import GemIcon from '@/components/ui/GemIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -23,6 +24,7 @@ import {
   planLevels,
   starsForScore,
 } from '@/lib/defi-solo'
+import { recordLessonDefi } from '@/app/reviser/actions'
 import type { QuizQuestion } from '@/lib/types'
 
 // Défi solo par niveaux monté sur le quiz de la leçon. Chaque niveau est une
@@ -30,8 +32,10 @@ import type { QuizQuestion } from '@/lib/types'
 // « Associe les paires » (Phase 2). L'élève a MAX_LIVES cœurs et accumule des
 // points. Shell gamifié façon concurrent : modale Objectif, rail (niveau/vies/
 // points/indice), modales Échec (« Oups… ») et Réussite (confettis), écran final
-// avec étoiles. Barème pur dans lib/defi-solo. Aucun enregistrement en base
-// (partie d'entraînement).
+// avec étoiles. Barème pur dans lib/defi-solo. En fin de partie, la Server
+// Action recordLessonDefi verse l'XP du portefeuille (+25, une fois par leçon
+// et par jour) et les gemmes de victoire (+10) — les montants et la fréquence
+// sont verrouillés côté SQL, l'écran ne fait qu'afficher ce qui est tombé.
 type Phase =
   | 'objective'
   | 'playing'
@@ -45,11 +49,14 @@ export default function DefiSoloPlayer({
   title,
   subject,
   backHref,
+  lessonId,
 }: {
   questions: QuizQuestion[]
   title: string
   subject: string | null
   backHref: string
+  /** Leçon d'origine — absent, la partie reste un pur entraînement. */
+  lessonId?: string | null
 }) {
   // Plan des niveaux (stable) — logique pure testée dans lib/defi-solo.
   const levels = useMemo(() => planLevels(questions), [questions])
@@ -68,6 +75,17 @@ export default function DefiSoloPlayer({
   const [eliminated, setEliminated] = useState<number[]>([])
   const [correction, setCorrection] = useState(false)
   const [lastGain, setLastGain] = useState(0)
+  // Récompense réellement versée en fin de partie (0 = déjà relevé aujourd'hui).
+  const [reward, setReward] = useState<{ xp: number; gems: number } | null>(null)
+
+  // Fin de partie : versement en « fire and forget » — l'idempotence (une fois
+  // par leçon et par jour) est portée par la clé côté SQL, rejouer ne re-paye pas.
+  const finishDefi = (won: boolean) => {
+    if (!lessonId) return
+    recordLessonDefi(lessonId, won)
+      .then((r) => setReward({ xp: r.xp, gems: r.gems }))
+      .catch(() => {})
+  }
 
   const level = levels[levelIndex]
   const question = level?.kind === 'qcm' ? level.q : null
@@ -78,6 +96,7 @@ export default function DefiSoloPlayer({
     setLevelIndex(0)
     setLives(MAX_LIVES)
     setScore(0)
+    setReward(null)
     resetLevelState()
   }
 
@@ -128,6 +147,7 @@ export default function DefiSoloPlayer({
     setLives(nextLives)
     setWrongThisLevel((w) => w + 1)
     sfx.wrong()
+    if (nextLives <= 0) finishDefi(false)
     setPhase(nextLives <= 0 ? 'defiFail' : 'levelFail')
   }
 
@@ -148,6 +168,7 @@ export default function DefiSoloPlayer({
       setPhase('playing')
     } else {
       sfx.complete()
+      finishDefi(true)
       setPhase('defiSuccess')
     }
   }
@@ -386,6 +407,21 @@ export default function DefiSoloPlayer({
             </p>
             <Stars count={starsForScore(score, max)} />
           </div>
+          {reward && (reward.xp > 0 || reward.gems > 0) ? (
+            <p className="bg-muted mt-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold">
+              {reward.xp > 0 ? <span>+{reward.xp} XP</span> : null}
+              {reward.gems > 0 ? (
+                <span className="text-primary inline-flex items-center gap-1">
+                  +{reward.gems}
+                  <GemIcon className="size-4" aria-hidden="true" />
+                </span>
+              ) : null}
+            </p>
+          ) : reward ? (
+            <p className="text-muted-foreground mt-4 text-xs font-medium">
+              Défi déjà relevé aujourd&apos;hui — reviens demain pour l&apos;XP !
+            </p>
+          ) : null}
           <div className="mt-6 flex w-full flex-col gap-3">
             <Link
               href={backHref}

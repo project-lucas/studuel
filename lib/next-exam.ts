@@ -75,6 +75,16 @@ export function examCountdownLabel(
   return `dans ${days} jours`
 }
 
+// Libellé du badge des cartes prioritaires « contrôle » (rangée On s'y remet ?) :
+// une carte par contrôle actif, le badge dit l'échéance d'un coup d'œil.
+export function examCardLabel(exam: NextExam, today: string): string {
+  if (exam.date === null) return 'Contrôle à venir'
+  const days = daysBetween(today, exam.date)
+  if (days <= 0) return "Contrôle aujourd'hui !"
+  if (days === 1) return 'Contrôle demain'
+  return `Contrôle dans ${days} jours`
+}
+
 // Proximité d'un contrôle, en 3 paliers pour annoter les dossiers de matières :
 // vert = encore de la marge, orange = bientôt, rouge = très proche (ou
 // aujourd'hui). Sans date : palier neutre « far » (annoncé, pas urgent).
@@ -89,6 +99,31 @@ export function examProximity(exam: NextExam, today: string): ExamProximity {
   if (days <= EXAM_IMMINENT_DAYS) return 'imminent'
   if (days <= EXAM_SOON_DAYS) return 'soon'
   return 'far'
+}
+
+// --- Carte héro « Pour ton prochain contrôle » ---------------------------------
+
+// Ton du badge d'urgence de la carte héro : jaune tant qu'il reste de la marge
+// (≥ 3 jours, ou sans date), corail quand c'est imminent (≤ 2 jours).
+export type ExamHeroTone = 'yellow' | 'coral'
+
+export type ExamHeroUrgency = {
+  label: string // « Contrôle dans 3 jours », « Contrôle demain »…
+  tone: ExamHeroTone
+}
+
+// Badge de la carte héro, à partir de la SEULE date du contrôle : calculé côté
+// client en jours calendaires (clés UTC 'YYYY-MM-DD', convention projet).
+export function examHeroUrgency(
+  date: string | null,
+  today: string,
+): ExamHeroUrgency {
+  if (date === null) return { label: 'Contrôle à venir', tone: 'yellow' }
+  const days = daysBetween(today, date)
+  if (days <= 0) return { label: "Contrôle aujourd'hui !", tone: 'coral' }
+  if (days === 1) return { label: 'Contrôle demain', tone: 'coral' }
+  if (days === 2) return { label: 'Contrôle dans 2 jours', tone: 'coral' }
+  return { label: `Contrôle dans ${days} jours`, tone: 'yellow' }
 }
 
 // Indice d'annotation d'un dossier : le contrôle le PLUS proche de la matière.

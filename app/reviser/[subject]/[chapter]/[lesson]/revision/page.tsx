@@ -69,7 +69,7 @@ export default async function RevisionPage({
         />
         <div className="relative mx-auto w-full max-w-2xl">
           <BackButton
-            fallback={`/reviser/${subject.slug}/${chapter.id}/${lesson.id}`}
+            fallback={`/reviser/${subject.slug}/${chapter.id}/${lesson.id}/cours`}
           />
           <p className="mt-4 text-center text-sm font-semibold opacity-70">
             Fiche de révision

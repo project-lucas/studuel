@@ -27,7 +27,7 @@ export default async function FlashcardsPage({
     lessonId,
   )
 
-  const backHref = `/reviser/${subject.slug}/${chapter.id}/${lesson.id}`
+  const backHref = `/reviser/${subject.slug}/${chapter.id}/${lesson.id}/cours`
 
   // Le quiz de la leçon fournit la matière des cartes. On lit `is_free` pour
   // gater le premium comme /test et la carte mentale (sinon la RLS renvoie

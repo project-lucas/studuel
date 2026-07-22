@@ -41,6 +41,8 @@ import {
   normalizeExamList,
   activeExams,
   examHintsBySubject,
+  examCardLabel,
+  examProximity,
 } from '@/lib/next-exam'
 import { normalizeOralList } from '@/lib/oral-texts'
 import type { CommuteSlot, Subject } from '@/lib/types'
@@ -282,6 +284,15 @@ export default async function ReviserPage() {
   )
   const streak = computeStreak(activityDays)
   const week = weekProgress(activityDays)
+  // Sessions faites aujourd'hui (tous types confondus) → indicateur
+  // « Objectif du jour » de la section On s'y remet ?.
+  const todayKey = toDayKey(new Date())
+  const sessionsToday = [
+    ...(testDays ?? []),
+    ...(studyDays ?? []),
+    ...(lessonDays ?? []),
+    ...(challengeDays ?? []),
+  ].filter((s) => String(s.created_at).slice(0, 10) === todayKey).length
   const firstName =
     String(profile?.full_name ?? '').split(' ')[0] || null
 
@@ -414,6 +425,37 @@ export default async function ReviserPage() {
     }))
   }
 
+  // Cartes PRIORITAIRES « pour le contrôle » : une carte par contrôle déclaré
+  // encore actif (upcomingExams est déjà trié du plus proche au plus lointain,
+  // les sans-date en fin), insérées EN TÊTE de la rangée. Ajouter un contrôle
+  // dans « Ta semaine » fait donc apparaître sa carte immédiatement.
+  const subjectBySlug = new Map(ofLevel.map((s) => [s.slug, s]))
+  const examResumeItems: ResumeItem[] = upcomingExams.flatMap((exam) => {
+    const subject = subjectBySlug.get(exam.subject)
+    if (!subject) return []
+    return [
+      {
+        subject,
+        chapterId: exam.chapterId,
+        chapterTitle: exam.chapterTitle,
+        progress: mastery.get(exam.chapterId)?.value ?? 0,
+        isNew: false,
+        exam: {
+          label: examCardLabel(exam, today),
+          proximity: examProximity(exam, today),
+          date: exam.date,
+        },
+      },
+    ]
+  })
+  // Dédoublonnage : un chapitre déjà porté par une carte contrôle ne
+  // réapparaît pas parmi les reprises classiques à droite.
+  const examChapterSet = new Set(examResumeItems.map((i) => i.chapterId))
+  resumeItems = [
+    ...examResumeItems,
+    ...resumeItems.filter((i) => !examChapterSet.has(i.chapterId)),
+  ]
+
   // Données de la carte « Mes contrôles à venir » : matières + chapitres du
   // niveau (identique à l'onglet Moi, la carte est partagée).
   const subjectByIdAll = new Map(allSubjects.map((s) => [s.id, s]))
@@ -531,7 +573,10 @@ export default async function ReviserPage() {
                     />
                   </div>
                   {/* 3. On s'y remet — les dernières sessions, sous la série. */}
-                  <ResumeSessions items={resumeItems} />
+                  <ResumeSessions
+                    items={resumeItems}
+                    sessionsToday={sessionsToday}
+                  />
                   {/* Rappel contextuel : pendant le trajet, un temps mort = de
                       l'XP. */}
                   <CommuteBanner slots={commuteSlots} />
@@ -554,13 +599,13 @@ export default async function ReviserPage() {
               Ton carnet de cours : crée tes cours, remplis-les de questions et
               révise-les.
             </p>
+            {/* Descriptif de l'oral (1re français). */}
+            {hasFrenchOral ? <OralTextsCard initial={oralTexts} /> : null}
             {/* « Mes cours » — LE bloc du carnet : les cours façon Wooflash
                 (chapitres imbriqués + questions de 5 types), création sans
                 quitter le carnet. Remplace l'ancienne Bibliothèque (les
                 library_items restent en base, plus affichés ici). */}
             <CoursesShelf items={courseItems} />
-            {/* Descriptif de l'oral (1re français). */}
-            {hasFrenchOral ? <OralTextsCard initial={oralTexts} /> : null}
           </div>
         }
       />

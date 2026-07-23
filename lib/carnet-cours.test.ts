@@ -75,6 +75,21 @@ describe('normalizeQcm', () => {
     expect(qcm.choix[0]).toEqual({ texte: 'Paris', correct: false })
   })
 
+  test('un QCM sans bonne réponse n’est jamais « réussi », même en ne cochant rien', () => {
+    // Deux ensembles vides sont égaux : sans ce garde-fou, ne rien cocher
+    // validait la question. `recordAttempt` corrige sans passer par
+    // `isQuestionReady`, donc le flux « brouillon hors session » ne suffit pas.
+    const sansCorrige = normalizeQcm({
+      enonce: 'Capitale de la France ?',
+      choix: [
+        { texte: 'Lyon', correct: false },
+        { texte: 'Paris', correct: false },
+      ],
+    })
+    expect(gradeQcm(sansCorrige, [])).toBe(false)
+    expect(gradeQcm(sansCorrige, [1])).toBe(false)
+  })
+
   test('une question sans bonne réponse cochée est un BROUILLON, pas une question fausse', () => {
     const content = normalizeQcm({
       enonce: 'Capitale de la France ?',

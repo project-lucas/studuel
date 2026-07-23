@@ -361,6 +361,14 @@ export function gradeQcm(content: QcmContent, selected: number[]): boolean {
   const want = new Set(
     content.choix.flatMap((c, i) => (c.correct ? [i] : [])),
   )
+  // Un QCM SANS bonne réponse n'est pas corrigeable : ne rien cocher y aurait
+  // été « juste » (deux ensembles vides sont égaux). Le cas n'existait pas tant
+  // que la normalisation cochait d'office la première réponse ; il apparaît
+  // depuis qu'elle a cessé de fabriquer un corrigé. Le flux normal écarte déjà
+  // ces questions (elles sont « brouillon », donc hors session), mais
+  // `recordAttempt` corrige sans passer par `isQuestionReady` : un appel forgé
+  // se serait offert des tentatives réussies à volonté.
+  if (want.size === 0) return false
   // Un index hors bornes invalide la réponse (pas de filtrage silencieux).
   if (
     selected.some(

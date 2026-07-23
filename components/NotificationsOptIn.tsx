@@ -93,10 +93,16 @@ export default function NotificationsOptIn() {
       const applicationServerKey = urlBase64ToUint8Array(
         VAPID_PUBLIC_KEY,
       ) as BufferSource
+      // `subscribe()` renvoie l'abonnement EXISTANT si le navigateur en a déjà
+      // un pour cette origine (il est lié au navigateur, pas à l'onglet). On
+      // note donc s'il préexistait : le défaire dans le `catch` couperait alors
+      // les rappels d'un autre onglet — ou du même élève — qui, lui, marchait.
+      const deja = await reg.pushManager.getSubscription()
       subscription = await reg.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey,
       })
+      if (deja) subscription = null // pas le nôtre : on n'y touchera pas
       const res = await fetch('/api/push/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -109,7 +115,8 @@ export default function NotificationsOptIn() {
       // place alors que le serveur ne le connaissait pas. Au rechargement,
       // `getSubscription()` le retrouvait, la carte affichait « Désactiver les
       // rappels »… et l'élève n'aurait JAMAIS rien reçu. On défait donc
-      // l'abonnement pour que l'écran redise la vérité.
+      // l'abonnement — mais SEULEMENT celui qu'on vient de créer (cf. plus
+      // haut) : défaire un abonnement préexistant casserait ce qui marchait.
       if (subscription) {
         try {
           await subscription.unsubscribe()

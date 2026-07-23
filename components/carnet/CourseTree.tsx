@@ -484,6 +484,8 @@ function TreeLevel({
   pending: boolean
   startTransition: (fn: () => Promise<void>) => void
 }) {
+  // Sert à revenir à la vérité du serveur quand un réordonnancement échoue.
+  const router = useRouter()
   // Ordres locaux (optimistes) — resynchronisés quand le serveur répond
   // (dérivation pendant le rendu, pas d'effet : pattern « previous props »).
   const [chapterOrder, setChapterOrder] = useState(chapters.map((c) => c.id))
@@ -511,7 +513,14 @@ function TreeLevel({
           onReorder={(order) => {
             setChapterOrder(order)
             startTransition(async () => {
-              await reorderChapters(courseId, order)
+              // Le résultat était jeté : un échec serveur laissait l'ordre
+              // optimiste à l'écran jusqu'au rechargement, qui « annulait » le
+              // geste sans explication.
+              const res = await reorderChapters(courseId, order)
+              if (!res.ok) {
+                toast('L’ordre n’a pas pu être enregistré.', 'error')
+                router.refresh()
+              }
             })
           }}
           className="list-none"
@@ -547,7 +556,11 @@ function TreeLevel({
           onReorder={(order) => {
             setQuestionOrder(order)
             startTransition(async () => {
-              await reorderQuestions(courseId, order)
+              const res = await reorderQuestions(courseId, order)
+              if (!res.ok) {
+                toast('L’ordre n’a pas pu être enregistré.', 'error')
+                router.refresh()
+              }
             })
           }}
           className="list-none"

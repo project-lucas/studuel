@@ -29,7 +29,9 @@ import { toast } from '@/lib/toast'
 import { saveSelectedSubjects, saveDailyGoalMinutes } from '@/app/reviser/actions'
 import { DAILY_GOAL_OPTIONS } from '@/lib/daily-goal'
 import type { ExamProximity, SubjectExamHint } from '@/lib/next-exam'
-import type { Subject, SubjectCategory } from '@/lib/types'
+import type { Subject } from '@/lib/types'
+import SubjectFolder from '@/components/reviser/SubjectFolder'
+import { subjectFolders } from '@/lib/reviser-folders'
 
 // Palette des 3 paliers d'annotation « contrôle qui arrive » sur un dossier :
 // vert = de la marge, orange = bientôt, rouge = très proche.
@@ -42,7 +44,6 @@ const PROX_STYLE: Record<
   imminent: { ring: 'ring-destructive', pill: 'bg-destructive text-white' },
 }
 
-const COLLEGE_LEVELS = ['6e', '5e', '4e', '3e']
 
 // Cote « couronnes » façon Duolingo : à la place du pourcentage (déprimant),
 // chaque matière porte 3 emplacements de couronne remplis selon son rang de
@@ -115,12 +116,6 @@ function CrownRating({
     </div>
   )
 }
-
-const LYCEE_GROUPS: { category: SubjectCategory; label: string }[] = [
-  { category: 'tronc_commun', label: 'Tronc commun' },
-  { category: 'specialite', label: 'Spécialités' },
-  { category: 'option', label: 'Options' },
-]
 
 // Normalise pour une recherche tolérante aux accents/casse.
 function normalizeSearch(s: string): string {
@@ -725,10 +720,9 @@ export default function SubjectsHome({
   )
   const [pending, startTransition] = useTransition()
 
-  const isCollege = COLLEGE_LEVELS.includes(grade)
-  // Les dossiers « Culture générale » (catégorie culture, hors-programme et
-  // hors-niveau) sont TOUJOURS visibles, dans leur propre section en bas, et ne
-  // font pas partie de la sélection de matières (ni du mode édition).
+  // Les matières « culture » (hors-programme, hors-niveau) vivent dans leur
+  // propre dossier et ne font pas partie de la sélection de matières (ni du
+  // mode édition).
   const cultureSubjects = subjects.filter((s) => s.category === 'culture')
   const selectable = subjects.filter((s) => s.category !== 'culture')
   const visible = editing
@@ -755,12 +749,14 @@ export default function SubjectsHome({
       setEditing(false)
     })
 
-  const groups: { label: string | null; items: Subject[] }[] = isCollege
-    ? [{ label: null, items: visible }]
-    : LYCEE_GROUPS.map((g) => ({
-        label: g.label,
-        items: visible.filter((s) => s.category === g.category),
-      })).filter((g) => g.items.length > 0)
+  // En édition, on ne montre QUE le dossier Programme : la culture générale
+  // n'est pas sélectionnable, un dossier qu'on ne peut pas modifier n'a rien à
+  // faire dans un écran de modification.
+  const folders = subjectFolders({
+    programmeSubjects: visible,
+    cultureSubjects: editing ? [] : cultureSubjects,
+    grade,
+  })
 
   // Décalage d'apparition continu d'une carte à l'autre, tous groupes confondus.
   let cardIndex = 0
@@ -842,67 +838,65 @@ export default function SubjectsHome({
           outils, contrôles), puis la grille des matières resserrée. */}
       <div className="relative -mt-8 flex flex-col gap-4 sm:px-1">
         {topSlot ? <div className="flex flex-col gap-4">{topSlot}</div> : null}
-        {groups.length === 0 ? (
+
+        {/* La loupe reste au-dessus des dossiers : elle cherche dans TOUT le
+            programme, y compris ce qui est replié — sinon fermer un dossier
+            reviendrait à cacher son contenu de la recherche. */}
+        <div className="flex items-center justify-between gap-2 px-1">
+          <h2 className="font-heading text-sm font-bold text-foreground">
+            Mes matières
+          </h2>
+          <ProgramSearch subjects={subjects} />
+        </div>
+
+        {/* On teste le dossier PROGRAMME, pas le nombre de dossiers : la culture
+            générale reste visible même quand l'élève n'a plus aucune matière
+            sélectionnée, et compter les dossiers ferait alors disparaître le
+            seul message qui lui dit comment se réinscrire. */}
+        {!folders.some((f) => f.id === 'programme') ? (
           <div className="rev-card rounded-[1.75rem] bg-white p-5 text-sm text-muted-foreground">
             Aucune matière sélectionnée — touche «&nbsp;Modifier&nbsp;» pour en
             ajouter.
           </div>
-        ) : (
-          groups.map(({ label, items }, gi) => (
-            <section key={label ?? 'all'} className="flex flex-col gap-2.5">
-              {/* En-tête de section : le libellé (bien lisible sur crème) et,
-                  sur la PREMIÈRE section, la loupe qui cherche dans tout le
-                  programme. Pour le collège (une seule section sans libellé),
-                  on affiche « Mes matières » pour porter la loupe. */}
-              {label || gi === 0 ? (
-                <div className="flex items-center justify-between gap-2 px-1">
-                  <h2 className="font-heading text-sm font-bold text-foreground">
-                    {label ?? 'Mes matières'}
-                  </h2>
-                  {gi === 0 ? <ProgramSearch subjects={subjects} /> : null}
-                </div>
-              ) : null}
-              <div className="grid grid-cols-2 gap-3">
-                {items.map((s) => (
-                  <SubjectRow
-                    key={s.id}
-                    subject={s}
-                    pct={progressBySlug[s.slug] ?? 0}
-                    editing={editing}
-                    checked={picked.has(s.slug)}
-                    onToggle={() => toggle(s.slug)}
-                    exam={examBySubject[s.slug]}
-                    delayMs={cardIndex++ * 40}
-                  />
-                ))}
-              </div>
-            </section>
-          ))
-        )}
-
-        {/* Dossiers hors-programme (Culture générale) : toujours là, en bonus,
-            pas concernés par « Modifier mes matières ». */}
-        {!editing && cultureSubjects.length > 0 ? (
-          <section className="flex flex-col gap-2.5">
-            <h2 className="font-heading px-1 text-sm font-semibold text-muted-foreground">
-              Culture générale · hors-programme
-            </h2>
-            <div className="grid grid-cols-2 gap-3">
-              {cultureSubjects.map((s) => (
-                <SubjectRow
-                  key={s.id}
-                  subject={s}
-                  pct={progressBySlug[s.slug] ?? 0}
-                  editing={false}
-                  checked
-                  onToggle={() => {}}
-                  exam={examBySubject[s.slug]}
-                  delayMs={cardIndex++ * 40}
-                />
-              ))}
-            </div>
-          </section>
         ) : null}
+
+        {folders.map((folder) => (
+            // En édition, le dossier reste ouvert de force : le choix
+            // ouvert/fermé étant mémorisé, un élève qui l'avait replié entrait
+            // en édition devant un dossier fermé, donc sans une seule case.
+            <SubjectFolder key={folder.id} folder={folder} forceOpen={editing}>
+              {folder.groups.map(({ label, items }) => (
+                <section key={label ?? 'tout'} className="flex flex-col gap-2.5">
+                  {label ? (
+                    <h3 className="font-heading px-1 text-xs font-bold tracking-wide text-muted-foreground uppercase">
+                      {label}
+                    </h3>
+                  ) : null}
+                  <div className="grid grid-cols-2 gap-3">
+                    {items.map((s) => {
+                      // La culture générale n'entre pas dans la sélection : ses
+                      // cartes restent inertes même en mode édition.
+                      const isCulture = folder.id === 'hors-programme'
+                      return (
+                        <SubjectRow
+                          key={s.id}
+                          subject={s}
+                          pct={progressBySlug[s.slug] ?? 0}
+                          editing={editing && !isCulture}
+                          checked={isCulture ? true : picked.has(s.slug)}
+                          onToggle={() => {
+                            if (!isCulture) toggle(s.slug)
+                          }}
+                          exam={examBySubject[s.slug]}
+                          delayMs={cardIndex++ * 40}
+                        />
+                      )
+                    })}
+                  </div>
+                </section>
+              ))}
+            </SubjectFolder>
+        ))}
 
         {/* Légende des rangs de couronnes, comme sur la maquette. */}
         {!editing ? (

@@ -576,6 +576,7 @@ export default async function ReviserPage() {
                   <ResumeSessions
                     items={resumeItems}
                     sessionsToday={sessionsToday}
+                    today={today}
                   />
                   {/* Rappel contextuel : pendant le trajet, un temps mort = de
                       l'XP. */}

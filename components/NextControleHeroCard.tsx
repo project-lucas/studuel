@@ -8,7 +8,6 @@ import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { toast } from '@/lib/toast'
 import { examHeroUrgency } from '@/lib/next-exam'
-import { toDayKey } from '@/lib/streak'
 import { removeUpcomingExam } from '@/app/moi/actions'
 import type { Subject } from '@/lib/types'
 
@@ -29,16 +28,25 @@ export default function NextControleHeroCard({
   chapterTitle,
   date,
   minutes,
+  today,
 }: {
   subject: Subject
   chapterId: string
   chapterTitle: string
   date: string | null // clé UTC 'YYYY-MM-DD' du contrôle, ou null
   minutes: number
+  /**
+   * Clé UTC du jour, calculée PAR LE SERVEUR. Elle ne peut pas l'être ici :
+   * ce composant est rendu côté serveur puis hydraté, et un `new Date()` au
+   * rendu donne deux résultats différents de part et d'autre (horloges
+   * décalées, ou simplement le passage de minuit entre les deux) — donc un
+   * badge d'urgence qui saute, et un avertissement d'hydratation React.
+   */
+  today: string
 }) {
   const reduceMotion = useReducedMotion()
   const [removing, startRemove] = useTransition()
-  const { label, tone } = examHeroUrgency(date, toDayKey(new Date()))
+  const { label, tone } = examHeroUrgency(date, today)
   const isCoral = tone === 'coral'
 
   // Croix « je me suis trompé » : retire ce contrôle de la liste (RPC

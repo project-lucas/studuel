@@ -199,9 +199,12 @@ function CardRow({ children }: { children: React.ReactNode }) {
 export default function ResumeSessions({
   items,
   sessionsToday = 0,
+  today,
 }: {
   items: ResumeItem[]
   sessionsToday?: number
+  /** Clé UTC du jour, calculée par le serveur (cf. NextControleHeroCard). */
+  today: string
 }) {
   if (items.length === 0) return null
 
@@ -233,6 +236,7 @@ export default function ResumeSessions({
                 chapterTitle={item.chapterTitle}
                 date={item.exam?.date ?? null}
                 minutes={sessionMinutes(item)}
+                today={today}
               />
             ))}
           </div>

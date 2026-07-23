@@ -333,7 +333,7 @@ export default async function SubjectPage({
             id: quizId,
             title: l.title,
             href: `/test/${quizId}`,
-            meta: quizMeta(best, questionCountByQuiz.get(quizId) ?? 0),
+            meta: quizMeta(best),
             done: (best?.ratio ?? 0) >= COMPLETE_THRESHOLD,
             xp: XP_AWARDS.quiz,
           },

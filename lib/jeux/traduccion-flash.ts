@@ -38,6 +38,16 @@ export const ES_WORDS: WordPair[] = [
   { es: 'leche', fr: 'lait' },
   { es: 'ventana', fr: 'fenêtre' },
   { es: 'trabajo', fr: 'travail' },
+  { es: 'gato', fr: 'chat' },
+  { es: 'mesa', fr: 'table' },
+  { es: 'puerta', fr: 'porte' },
+  { es: 'calle', fr: 'rue' },
+  { es: 'flor', fr: 'fleur' },
+  { es: 'luna', fr: 'lune' },
+  { es: 'queso', fr: 'fromage' },
+  { es: 'azul', fr: 'bleu' },
+  { es: 'comprar', fr: 'acheter' },
+  { es: 'abrir', fr: 'ouvrir' },
 ]
 
 export function buildTraduccionFlashPool(seed: string, count = 30): ModeQuestion[] {

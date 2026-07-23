@@ -143,6 +143,38 @@ export const EN_FALSE_FRIENDS: FalseFriend[] = [
     decoys: ['coing', 'couloir'],
     tip: '« coin » = pièce de monnaie. Un coin (angle) = *corner*.',
   },
+  {
+    id: 'achieve',
+    word: 'to achieve',
+    real: 'réussir',
+    trap: 'achever',
+    decoys: ['acheter', 'accueillir'],
+    tip: '« to achieve » = réussir, accomplir. Achever = *to complete*.',
+  },
+  {
+    id: 'hazard',
+    word: 'hazard',
+    real: 'danger',
+    trap: 'hasard',
+    decoys: ['hâte', 'habitude'],
+    tip: '« hazard » = un danger. Le hasard = *chance*.',
+  },
+  {
+    id: 'resume',
+    word: 'to resume',
+    real: 'reprendre',
+    trap: 'résumer',
+    decoys: ['résister', 'résoudre'],
+    tip: '« to resume » = reprendre. Résumer = *to summarize*.',
+  },
+  {
+    id: 'sympathetic',
+    word: 'sympathetic',
+    real: 'compatissant',
+    trap: 'sympathique',
+    decoys: ['symbolique', 'systématique'],
+    tip: '« sympathetic » = compatissant. Sympathique = *friendly*.',
+  },
 ]
 
 export function buildFauxAmisPool(seed: string, count = 30): ModeQuestion[] {

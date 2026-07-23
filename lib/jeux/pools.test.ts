@@ -76,27 +76,11 @@ describe('cohérence catalogue ↔ banques de questions', () => {
   })
 })
 
-// Dette de contenu CONSTATÉE le 2026-07-23, en questions manquantes.
-//
-// Ces six banques sont plus courtes que ce que leur mécanique consomme : la
-// table reboucle donc sur `pool[i % n]` et re-sert la même question, mêmes
-// options, même ordre, en pleine partie. Ce n'est pas un bug de code — le
-// câblage est correct depuis que `POOL_BUILDERS` reçoit la taille demandée —
-// c'est du CONTENU à écrire (anglais, espagnol, SVT, physique-chimie), et le
-// bâcler apprendrait des erreurs à des élèves.
-//
-// Les chiffres sont des PLAFONDS : la dette peut diminuer (le test s'en
-// réjouit), jamais augmenter, et un jeu absent de cette liste n'a droit à
-// aucun manque. Un jeu remboursé doit sortir d'ici.
-const DETTE_DE_BANQUE: Partial<Record<SalonGameId, number>> = {
-  'traduction-flash': 1, // 32/33
-  'faux-amis': 4, // 16/20
-  'traduccion-flash': 10, // 30/40
-  'falsos-amigos': 9, // 14/23
-  'classe-moi-ca': 2, // 22/24
-  'bonne-unite': 8, // 17/25
-}
-
+// La dette de banque constatée le 2026-07-23 (34 questions manquantes sur six
+// jeux) a été REMBOURSÉE le même jour : la liste de tolérance qui vivait ici
+// n'a plus lieu d'être, et le contrôle ci-dessous est redevenu strict. Ajouter
+// un jeu dont la banque est plus courte que ce que sa mécanique consomme fait
+// donc échouer les tests immédiatement — c'est voulu.
 describe('buildSalonPool', () => {
   it('sert VRAIMENT le nombre de questions que le format consomme', () => {
     // Le vrai invariant, celui qui manquait : un plancher fixe de 10 ne dit
@@ -110,34 +94,11 @@ describe('buildSalonPool', () => {
       const attendu = poolSizeFor(GAME_FORMATS[id as SalonGameId])
       const pool = buildSalonPool(id, 'verif', attendu)
       expect(pool, `pool null pour « ${id} »`).not.toBeNull()
-      const manque = attendu - pool!.length
-      // Parenthèses obligatoires : `??` a une précédence PLUS BASSE que `>`,
-      // donc `manque > dette ?? 0` se lit `(manque > dette) ?? 0` — toujours
-      // faux pour un jeu absent de la liste, ce qui désactivait le contrôle
-      // exactement là où il sert.
-      const dette = DETTE_DE_BANQUE[id as SalonGameId] ?? 0
-      if (manque > dette) {
+      if (pool!.length < attendu) {
         manques.push(`${id} : ${pool!.length}/${attendu}`)
       }
     }
-    expect(
-      manques,
-      `banque trop courte (ou dette aggravée) → ${manques.join(' · ')}`,
-    ).toEqual([])
-  })
-
-  it('ne laisse pas s’installer une dette de banque non déclarée', () => {
-    // Le garde-fou de la dette elle-même : un jeu qui n'a PLUS de manque doit
-    // sortir de la liste, sinon elle se fossilise et ne veut plus rien dire.
-    for (const [id, dette] of Object.entries(DETTE_DE_BANQUE)) {
-      const attendu = poolSizeFor(GAME_FORMATS[id as SalonGameId])
-      const pool = buildSalonPool(id, 'verif', attendu)
-      expect(
-        attendu - (pool?.length ?? 0),
-        `« ${id} » n’a plus de dette : retire-le de DETTE_DE_BANQUE`,
-      ).toBeGreaterThan(0)
-      expect(dette).toBeGreaterThan(0)
-    }
+    expect(manques, `banque trop courte → ${manques.join(' · ')}`).toEqual([])
   })
 
   it('produit un pool non vide et bien formé pour chaque jeu à QCM', () => {

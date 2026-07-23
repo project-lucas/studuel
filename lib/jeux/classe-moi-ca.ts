@@ -54,6 +54,8 @@ export const CRITTERS: Critter[] = [
   { id: 'fourmi', name: 'fourmi', emoji: '🐜', klass: 'Insecte', tip: 'Six pattes : un insecte.' },
   { id: 'coccinelle', name: 'coccinelle', emoji: '🐞', klass: 'Insecte', tip: 'Six pattes et des ailes sous les élytres : un insecte.' },
   { id: 'papillon', name: 'papillon', emoji: '🦋', klass: 'Insecte', tip: 'Chenille puis six pattes : un insecte.' },
+  { id: 'anguille', name: 'anguille', emoji: '🐟', klass: 'Poisson', tip: 'Malgré son allure de serpent, l’anguille a des branchies et des nageoires : un poisson.' },
+  { id: 'triton', name: 'triton', emoji: '🦎', klass: 'Amphibien', tip: 'Le triton ressemble à un lézard, mais sa peau est nue et humide : un amphibien.' },
 ]
 
 export function buildClasseMoiCaPool(seed: string, count = 30): ModeQuestion[] {

@@ -41,6 +41,9 @@ export const EN_WORDS: WordPair[] = [
   { en: 'bread', fr: 'pain' },
   { en: 'milk', fr: 'lait' },
   { en: 'window', fr: 'fenêtre' },
+  { en: 'to open', fr: 'ouvrir' },
+  { en: 'to close', fr: 'fermer' },
+  { en: 'street', fr: 'rue' },
 ]
 
 export function buildTraductionFlashPool(seed: string, count = 30): ModeQuestion[] {

@@ -31,6 +31,14 @@ export const QUANTITIES: Quantity[] = [
   { id: 'quantite', grandeur: 'une quantité de matière', unit: 'la mole (mol)', tip: 'La quantité de matière se mesure en moles (mol).' },
   { id: 'charge', grandeur: 'une charge électrique', unit: 'le coulomb (C)', tip: 'La charge électrique se mesure en coulombs (C).' },
   { id: 'aire', grandeur: 'une aire', unit: 'le mètre carré (m²)', tip: 'Une aire se mesure en mètres carrés (m²).' },
+  { id: 'masse-volumique', grandeur: 'une masse volumique', unit: 'le kilogramme par mètre cube (kg/m³)', tip: 'La masse volumique = masse ÷ volume, en kg/m³ (ou g/cm³).' },
+  { id: 'acceleration', grandeur: 'une accélération', unit: 'le mètre par seconde carrée (m/s²)', tip: 'Une accélération = variation de vitesse ÷ durée, en m/s².' },
+  { id: 'concentration', grandeur: 'une concentration en masse', unit: 'le gramme par litre (g/L)', tip: 'La concentration en masse = masse dissoute ÷ volume, en g/L.' },
+  { id: 'debit', grandeur: 'un débit de fluide', unit: 'le mètre cube par seconde (m³/s)', tip: 'Un débit = volume écoulé ÷ durée, en m³/s (ou L/min).' },
+  { id: 'intensite-lumineuse', grandeur: 'une intensité lumineuse', unit: 'la candela (cd)', tip: 'L’intensité lumineuse se mesure en candelas (cd) : une des 7 unités de base du SI.' },
+  { id: 'radioactivite', grandeur: 'une activité radioactive', unit: 'le becquerel (Bq)', tip: 'L’activité d’une source radioactive se mesure en becquerels (Bq) : 1 Bq = 1 désintégration par seconde.' },
+  { id: 'niveau-sonore', grandeur: 'un niveau sonore', unit: 'le décibel (dB)', tip: 'Le niveau sonore se mesure en décibels (dB) : 85 dB, c’est le seuil de risque.' },
+  { id: 'angle', grandeur: 'un angle', unit: 'le degré (°)', tip: 'Un angle se mesure en degrés (°), ou en radians.' },
 ]
 
 export function buildBonneUnitePool(seed: string, count = 30): ModeQuestion[] {

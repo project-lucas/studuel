@@ -56,8 +56,9 @@ Cours, cartes mentales, fiches de révision et quiz : **100 %** sur les matière
 remplies. **Studygram : 0 %** — seul support vide, gated par une décision de
 format (voir `docs/CADRAGE-STUDYGRAM.md`).
 
-**Base de données : 001→194 créées. État SONDÉ à la clé anon le 2026-07-23** —
-et il ne ressemble pas du tout à ce que ce document affirmait :
+**Base de données : 001→198 créées** (`195`→`198` écrites au cycle 2 du
+2026-07-23). **État SONDÉ à la clé anon le 2026-07-23**, re-sondé au cycle 2 et
+inchangé — il ne ressemblait pas du tout à ce que ce document affirmait :
 
 - **Exécutées (vérifiées)** : jusqu'à **191 inclus**, à l'exception de la 188.
   Notamment **179** (decks gratuits), **181/182** (cartes mentales — *le trou
@@ -68,7 +69,10 @@ et il ne ressemble pas du tout à ce que ce document affirmait :
 - **NON exécutées** : **188** (tour guidé — `profiles.tutorial_completed`
   absente), **192** (économie/progression — `user_wallet`, `xp_events`,
   `gem_events`, `app_flags` absentes), **193** et **194** (écrites, jamais
-  passées). **Prochaine à créer = `195`.**
+  passées), plus les quatre du cycle 2 : **195** (journal d'envoi push),
+  **196** (appareil familial — *code d'abord*), **197** (miroir de maîtrise
+  parent/élève), **198** (quota d'appels IA du carnet — **la seule qui coûte de
+  l'argent tant qu'elle attend**). **Prochaine à créer = `199`.**
 - **Le code encaisse les deux absences sans casser** (vérifié ligne à ligne) :
   `tutorial_completed` est isolée dans sa propre requête, `fetchWallet` renvoie
   `null` si `user_wallet` manque, `defiEvents` retombe sur `[]`. Le tour guidé
@@ -233,6 +237,68 @@ breaking changes vs. l'entraînement.
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible,
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
+
+**2026-07-23 — fin du cycle 2 `/jour` (Lia, relance automatique de 11:05) :**
+- **Fait** : arbre propre au réveil → **file du cycle 1 entièrement consommée**
+  (espace Jeux + notifications push, 8 lots), puis **6 audits** de zones jamais
+  relues. **20 commits verts**, poussés (dernier `93c83f1`, **1160 tests**).
+  **4 migrations créées : `195` → `198`.** Détail : `_ASSOCIE/A-LIRE-JOUR.md`.
+- **⚠️ LA PRIORITÉ DE LUCAS : exécuter la `198`.** `generateQuestionFeedback`
+  (Mon carnet) n'exigeait **que d'être connecté**, prenait un énoncé et une
+  réponse en **texte libre**, et renvoyait la réponse du modèle au client :
+  avec une inscription en libre-service, c'était un **relais LLM gratuit
+  facturé sur la clé du projet**, rejouable en boucle par un POST de Server
+  Action (le `disabled` du bouton n'est qu'un garde-fou d'interface). La `198`
+  pose un quota quotidien ; **le code tolère volontairement son absence** (sinon
+  déployer avant de l'exécuter couperait la génération pour tout le monde),
+  donc **le trou reste ouvert tant qu'elle attend**.
+- **Faille ACTIVE en production, fermée** (`1d4a4fc`) : le **catalogue de repli**
+  du vestiaire servait de passe-partout. `loadItem` y retombait dès qu'un id
+  était introuvable en base, or ses items sont tous `price: null, unlock: null`,
+  ses ids sont déterministes (`libre-<catégorie>-<index>`) et ses `assetKey`
+  sont **exactement** ceux des objets payants et verrouillés. Un id forgé
+  suffisait à porter la bannière légendaire Niveau 8. **Le prix était bien
+  enfermé en SQL (leçon de la 088) — c'est la POSSESSION qui avait une porte de
+  service côté application. Réflexe à garder : tout repli « tout gratuit » doit
+  être atteignable UNIQUEMENT par l'absence de données, jamais par un id.**
+- **Miroir SQL ↔ `lib/` cassé, 2e famille** (`66d2722`, migration `197`) :
+  `child_dashboard` moyennait TOUTES les tentatives quand `lib/mastery.ts`
+  agrège le **meilleur score par quiz**. Comme le SRS pousse à REFAIRE ce qu'on
+  a raté, l'écart était structurel et **toujours pessimiste côté parent** (9/10
+  après un 3/10 : couronne à 90 %, parent à 60 % et « à renforcer »). Le
+  commentaire de `lib/parents.ts` affirmait pourtant l'alignement — il ne
+  portait que sur les SEUILS. **Une fonction SQL écrite « en autonome » finit
+  toujours par diverger : le miroir doit être explicite et commenté des deux
+  côtés.**
+- **Le garde-fou qui ne pouvait pas échouer, 4e occurrence** (`93c83f1`) :
+  `normalizeQcm` cochait d'office la 1re réponse quand aucune ne l'était, ce
+  qui rendait le contrôle `choix.some(x => x.correct)` d'`isQuestionReady`
+  **toujours vrai**. Conséquence pour l'élève : un corrigé inventé, et une
+  question comptée fausse à chaque révision sans qu'il puisse comprendre
+  pourquoi. Même famille que le test à plancher constant (cycle 1) et que le
+  `REVOKE` par colonne (20/07).
+- **Écarté volontairement, avec la raison** : le `<div>` animé de
+  `app/template.tsx` casse tout `position: fixed` pendant 300 ms (vestiaire,
+  modales) — le mécanisme CSS est vérifié, mais **retirer l'animation NE SUFFIT
+  PAS** (la keyframe `enter` de tw-animate-css applique un `transform` même en
+  simple `fade-in`) ; le vrai correctif est un portail et il demande une QA
+  visuelle impossible ici. Idem : chantier hors-ligne, gating produit du carnet
+  IA, réécriture des configs d'avatar héritées, dénominateur du % par matière
+  côté parent (les deux définitions sont défendables).
+- **Zones auditées et déclarées SAINES le 2026-07-23 (cycle 2)** — ne pas les
+  ré-auditer : **`app/api/` + `proxy.ts` + `app/auth/callback`** (le piège des
+  en-têtes figés du proxy n'a PAS rechuté ; `/api/work-time` est borné en base
+  par la 171 ; pas de redirection ouverte au callback), **RLS et propriété du
+  carnet** (les 5 tables de la 186 ont leurs policies, chaque mutation
+  revérifie), **validation de la sortie du modèle IA** (schéma + normalisation
+  + `isQuestionReady` avant écriture), **autorité serveur des prix du
+  vestiaire** (`purchase_avatar_item` lit le prix en base, double achat
+  impossible).
+- **Prochaine cible** : le chantier **hors-ligne + portails** (un seul lot
+  cohérent, avec QA), puis borner `per_subject` à la classe courante côté
+  parent, puis les trois fenêtres « semaine » de la carte parent. La liste
+  complète est dans `_ASSOCIE/BACKLOG-JOUR.md`, section « Findings d'audit du
+  2026-07-23 ». Levier produit inchangé : **le contenu des 5 matières vides**.
 
 **2026-07-23 — fin du cycle 1 `/jour` (Lia) :**
 - **Réveil sur un arbre sale** (~2 700 lignes non relues laissées par trois jours

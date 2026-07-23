@@ -12,7 +12,7 @@ import {
   globalTimeUp,
   isRecordable,
   questionSeconds,
-  runProgress,
+  runAchieved,
   runTarget,
   startRun,
   timeout,
@@ -354,18 +354,34 @@ describe('série et enregistrement', () => {
   })
 })
 
-describe('HUD : objectif et avancement', () => {
+describe('écran de fin : objectif et réussites', () => {
   it('parle la même unité que la mécanique', () => {
     expect(runTarget(vies)).toBe(10)
-    expect(runProgress(vies, play(vies, [true, false, true]))).toBe(2)
-
-    expect(runTarget(expedition)).toBe(8)
-    expect(runProgress(expedition, play(expedition, [true, false]))).toBe(2)
+    expect(runAchieved(vies, play(vies, [true, false, true]))).toBe(2)
 
     expect(runTarget(ascension)).toBe(10)
-    expect(runProgress(ascension, play(ascension, [true, true]))).toBe(2)
+    expect(runAchieved(ascension, play(ascension, [true, true]))).toBe(2)
 
     expect(runTarget(paliers)).toBe(4)
     expect(runTarget(sprint)).toBeNull()
+  })
+
+  it('ne compte pas une escale ratée comme un drapeau planté', () => {
+    // Le mensonge d'origine : l'expédition avance qu'on réponde juste ou faux,
+    // et l'écran de fin affichait cet avancement sous un libellé de réussite —
+    // « 8/8 drapeaux plantés » avec 2 bonnes réponses sur 8.
+    const rate = play(expedition, [
+      true, false, true, false, false, false, false, false,
+    ])
+    expect(rate.status).toBe('lost')
+    expect(rate.answered).toBe(8)
+    expect(runTarget(expedition)).toBe(8)
+    expect(runAchieved(expedition, rate)).toBe(2)
+  })
+
+  it('dit la vérité aussi quand le parcours est parfait', () => {
+    const parfait = play(expedition, Array(8).fill(true))
+    expect(parfait.status).toBe('won')
+    expect(runAchieved(expedition, parfait)).toBe(8)
   })
 })

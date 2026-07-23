@@ -155,16 +155,27 @@ export function runTarget(format: GameFormat): number | null {
   }
 }
 
-/** Avancement de la partie tel qu'affiché face à `runTarget` (même unité). */
-export function runProgress(format: GameFormat, run: GameRun): number {
+/**
+ * Ce que le joueur a RÉUSSI, dans l'unité de `runTarget` — le chiffre qu'on
+ * affiche face à l'objectif sous un libellé de réussite (« 6/8 drapeaux
+ * plantés »).
+ *
+ * Attention au piège de l'expédition : on visite l'escale qu'on réponde juste
+ * ou faux, donc l'AVANCEMENT y vaut `answered`. C'est ce qui était affiché
+ * jusqu'ici, et un élève à 2 bonnes réponses sur 8 lisait « 8/8 drapeaux
+ * plantés » sur son écran de fin. L'avancement d'un parcours n'est pas une
+ * réussite : ici c'est bien `correct`.
+ *
+ * (Le HUD de jeu, lui, montre volontairement l'avancement — « 3/8 escales » —
+ * et le calcule sur place : c'est une autre question, et un autre libellé.)
+ */
+export function runAchieved(format: GameFormat, run: GameRun): number {
   const p = format.params
   switch (p.mechanic) {
     case 'vies':
-      return run.correct
     case 'expedition':
-      return run.answered
+      return run.correct
     case 'ascension':
-      return run.step
     case 'paliers':
     case 'ordre':
       return run.step

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { XP_RULES } from '@/lib/xp'
 import type { GameFormat } from '@/lib/jeux/formats'
-import { runProgress, runTarget, type GameRun } from '@/lib/jeux/run'
+import { runAchieved, runTarget, type GameRun } from '@/lib/jeux/run'
 
 /**
  * L'écran de fin d'un jeu de salon. Il raconte la partie DANS LA LANGUE DU JEU
@@ -38,7 +38,9 @@ export default function GameOutcome({
   const won = run.status === 'won'
   const xp = run.correct * XP_RULES.challengePerCorrect + XP_RULES.challengeBonus
   const target = runTarget(format)
-  const progress = runProgress(format, run)
+  // `runAchieved` et non `runProgress` : la case porte un libellé de RÉUSSITE
+  // (« drapeau planté », « organe localisé »), pas d'avancement.
+  const achieved = runAchieved(format, run)
 
   return (
     <div className="mx-auto flex max-w-md flex-col items-center gap-5 pt-6 text-center">
@@ -75,7 +77,7 @@ export default function GameOutcome({
       <dl className="grid w-full grid-cols-3 gap-2 text-xs">
         <Stat
           label={format.lexicon.hit}
-          value={target !== null ? `${progress}/${target}` : String(run.correct)}
+          value={target !== null ? `${achieved}/${target}` : String(run.correct)}
         />
         <Stat label="meilleure série" value={`×${run.bestStreak}`} />
         {/* `best` a déjà été remonté au nouveau score par la table de jeu. */}

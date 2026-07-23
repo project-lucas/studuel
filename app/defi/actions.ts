@@ -55,12 +55,20 @@ export async function recordChallenge(
     modeBonus +
     (isCommuteNow(slots) ? XP_RULES.commuteBonus : 0)
 
-  const { error } = await supabase.from('challenge_sessions').insert({
-    user_id: user.id,
-    score: cleanScore,
-    total: cleanTotal,
-    xp,
-  })
+  // On récupère l'id de la ligne écrite : c'est lui qui sert de preuve au
+  // portefeuille. `wallet_award_xp` ne prend plus de montant, il relit l'XP sur
+  // cette session — sans quoi la RPC, appelable directement avec la clé anon
+  // publique, permettait de se verser de l'XP sans jouer.
+  const { data: session, error } = await supabase
+    .from('challenge_sessions')
+    .insert({
+      user_id: user.id,
+      score: cleanScore,
+      total: cleanTotal,
+      xp,
+    })
+    .select('id')
+    .maybeSingle<{ id: string }>()
   if (error) {
     // Sans trace, l'élève perd en silence son XP + sa validation de série : on
     // journalise comme les actions sœurs (claimWeeklyTrophy, recordDuelResult).
@@ -74,8 +82,12 @@ export async function recordChallenge(
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id, slots),
       // Verse la même XP au portefeuille (192) — la session reste la trace
-      // historique, le portefeuille le total courant.
-      awardXp(supabase, 'defi_arena', undefined, xp),
+      // historique, le portefeuille le total courant. La clé est l'id de la
+      // session : le montant est relu dessus côté serveur, et l'index unique
+      // sur la clé interdit de la réclamer deux fois.
+      session?.id
+        ? awardXp(supabase, 'defi_arena', session.id)
+        : Promise.resolve(null),
     ])
   }
 

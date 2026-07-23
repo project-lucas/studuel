@@ -240,15 +240,41 @@ DECLARE
 BEGIN
   IF v_user IS NULL THEN RETURN NULL; END IF;
 
-  v_amount := CASE p_source
-    WHEN 'quiz'       THEN 20
-    WHEN 'quiz_top'   THEN 30
-    WHEN 'flashcards' THEN 10
-    WHEN 'defi'       THEN 25
-    WHEN 'defi_arena' THEN LEAST(GREATEST(COALESCE(p_amount, 0), 0), 600)
-    ELSE NULL
-  END;
-  IF v_amount IS NULL THEN RETURN NULL; END IF;
+  -- 'defi_arena' est le seul barème variable, donc le seul qui tentait de lire
+  -- un montant fourni par l'APPELANT. C'était le trou : cette fonction est
+  -- `GRANT EXECUTE ... TO authenticated`, et la clé anon est publique — un élève
+  -- pouvait donc l'appeler directement, sans jouer, avec p_amount = 600, trente
+  -- fois par jour (le plafond ci-dessous), soit 18 000 XP/jour fabriqués, et les
+  -- gemmes de passage de niveau qui vont avec.
+  --
+  -- Le montant est désormais RELU sur la session d'arène désignée par la clé :
+  -- une ligne réelle, appartenant à l'appelant, et déjà bornée par les CHECK des
+  -- migrations 165 et 175. La clé étant obligatoire ici, l'index unique
+  -- `xp_events_once_per_key` empêche de la réclamer deux fois.
+  IF p_source = 'defi_arena' THEN
+    -- La clé est un id de session : tout ce qui n'a pas la forme d'un UUID est
+    -- refusé avant le cast, sinon un `p_key` arbitraire ferait échouer la
+    -- fonction entière au lieu de rendre la main proprement.
+    IF v_key IS NULL OR v_key !~* '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$' THEN
+      RETURN NULL;
+    END IF;
+    SELECT cs.xp INTO v_amount
+      FROM public.challenge_sessions cs
+     WHERE cs.id = v_key::UUID
+       AND cs.user_id = v_user;
+    -- Aucune session de l'appelant sous cette clé : on ne verse rien.
+    IF v_amount IS NULL THEN RETURN NULL; END IF;
+    v_amount := LEAST(GREATEST(v_amount, 0), 600);
+  ELSE
+    v_amount := CASE p_source
+      WHEN 'quiz'       THEN 20
+      WHEN 'quiz_top'   THEN 30
+      WHEN 'flashcards' THEN 10
+      WHEN 'defi'       THEN 25
+      ELSE NULL
+    END;
+    IF v_amount IS NULL THEN RETURN NULL; END IF;
+  END IF;
 
   PERFORM public.wallet_ensure(v_user);
 

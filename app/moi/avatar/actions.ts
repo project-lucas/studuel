@@ -29,7 +29,14 @@ async function requireUser() {
 }
 
 // L'avatar apparaît sur ces onglets (hero card, top bars, classements…).
-const AVATAR_PATHS = ['/moi', '/amis', '/defi', '/reviser', '/moi/avatar']
+//
+// `/moi/avatar` n'y est PAS, volontairement : la page du vestiaire est
+// `force-dynamic` (elle se recharge donc de toute façon à chaque visite) et
+// c'est celle depuis laquelle on tape. L'y inclure faisait re-rendre tout le
+// vestiaire — dont un `claim_avatar_unlocks` et cinq requêtes Supabase — à
+// CHAQUE essayage d'une couleur de peau, alors que l'écran est déjà à jour
+// côté client.
+const AVATAR_PATHS = ['/moi', '/amis', '/defi', '/reviser']
 
 // Item du catalogue en base ; repli sur le catalogue gratuit embarqué SEULEMENT
 // si la table est vide/absente (189 pas encore passée) — ids `libre-…`.

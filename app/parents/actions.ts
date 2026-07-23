@@ -48,20 +48,30 @@ export async function linkChild(
 }
 
 // Rompre le lien avec un enfant (côté parent).
-export async function unlinkChild(formData: FormData): Promise<void> {
+//
+// Retourne un message d'erreur ou `null` : sans ça, un échec ne produisait
+// AUCUN signal — le parent cliquait « Délier », rien ne bougeait à l'écran, et
+// il ne pouvait que recommencer sans jamais savoir pourquoi.
+export async function unlinkChild(
+  _prev: string | null,
+  formData: FormData,
+): Promise<string | null> {
   const childId = formData.get('childId')
-  if (typeof childId !== 'string' || childId.length === 0) return
+  if (typeof childId !== 'string' || childId.length === 0) {
+    return 'Enfant introuvable.'
+  }
 
   const supabase = await createClient()
   const {
     data: { user },
   } = await supabase.auth.getUser()
-  if (!user) return
+  if (!user) return 'Votre session a expiré — reconnectez-vous.'
 
   const { error } = await supabase.rpc('unlink_child', { p_child: childId })
   if (error) {
     console.error('unlink_child', error)
-    return
+    return 'Le lien n’a pas pu être rompu. Réessayez dans un moment.'
   }
   revalidatePath('/parents')
+  return null
 }

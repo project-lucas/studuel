@@ -56,7 +56,7 @@ export default function PurchaseModal({
             type="button"
             onClick={onClose}
             aria-label="Annuler l'achat"
-            className="flex size-9 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted active:scale-90"
+            className="flex size-11 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted active:scale-90"
           >
             <X className="size-5" strokeWidth={2.4} aria-hidden="true" />
           </button>

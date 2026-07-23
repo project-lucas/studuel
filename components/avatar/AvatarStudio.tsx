@@ -134,6 +134,9 @@ export default function AvatarStudio({
   return (
     <div
       data-no-swipe
+      // `role="region"` : un `aria-label` posé sur un `div` nu est simplement
+      // ignoré par les lecteurs d'écran — l'écran plein n'avait donc aucun nom.
+      role="region"
       className="fixed inset-0 z-50 flex flex-col bg-background"
       aria-label="Mon vestiaire"
     >
@@ -152,7 +155,7 @@ export default function AvatarStudio({
           <Link
             href="/moi"
             aria-label="Retour à Moi"
-            className="flex size-10 items-center justify-center rounded-full bg-white/90 text-foreground shadow-md transition active:scale-90"
+            className="flex size-11 items-center justify-center rounded-full bg-white/90 text-foreground shadow-md transition active:scale-90"
           >
             <ArrowLeft className="size-5" strokeWidth={2.6} aria-hidden="true" />
           </Link>
@@ -186,7 +189,9 @@ export default function AvatarStudio({
                   setActiveTab(t.id)
                 }}
                 className={cn(
-                  'shrink-0 rounded-full px-3.5 py-1.5 text-sm font-bold transition-colors',
+                  // min-h-11 = 44 px : les onglets tombaient à ~32 px de haut,
+                  // sous le seuil tactile de la règle projet.
+                  'min-h-11 shrink-0 rounded-full px-3.5 py-1.5 text-sm font-bold transition-colors',
                   selected
                     ? 'bg-primary text-primary-foreground'
                     : 'bg-muted text-muted-foreground hover:text-foreground',

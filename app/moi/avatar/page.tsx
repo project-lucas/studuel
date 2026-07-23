@@ -22,7 +22,13 @@ export default async function AvatarStudioPage() {
 
   // Conditions remplies → items crédités AVANT la lecture des possessions.
   // RPC absente (189 pas passée) : on ignore, le repli gratuit prend le relais.
-  await supabase.rpc('claim_avatar_unlocks')
+  // Mais toute AUTRE erreur se journalise : sans ça, un élève ne réclamerait
+  // jamais les déblocages qu'il a mérités et personne ne le saurait — le reste
+  // du vestiaire journalise déjà ses échecs.
+  const { error: unlockError } = await supabase.rpc('claim_avatar_unlocks')
+  if (unlockError && unlockError.code !== 'PGRST202') {
+    console.error('[vestiaire] déblocages non réclamés:', unlockError.message)
+  }
 
   const [
     { data: profile },

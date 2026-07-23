@@ -1,4 +1,4 @@
-import { CalendarClock, Clock, Flame, Gauge, Trophy, Unlink } from 'lucide-react'
+import { CalendarClock, Clock, Flame, Gauge, Trophy } from 'lucide-react'
 import { workLevel } from '@/lib/work-level'
 import {
   averageDailySeconds,
@@ -11,7 +11,7 @@ import {
   weakestSubjects,
   type ChildDashboard,
 } from '@/lib/parents'
-import { unlinkChild } from '@/app/parents/actions'
+import UnlinkChildButton from '@/components/parents/UnlinkChildButton'
 
 type WeekDay = { done: boolean; isToday: boolean; isFuture: boolean }
 
@@ -55,17 +55,7 @@ export default function ChildReport({
             )}
           </p>
         </div>
-        <form action={unlinkChild}>
-          <input type="hidden" name="childId" value={childId} />
-          <button
-            type="submit"
-            className="text-muted-foreground hover:text-destructive flex items-center gap-1 rounded-lg px-2 py-1 text-xs transition-colors"
-            aria-label={`Rompre le lien avec ${name}`}
-          >
-            <Unlink className="size-3.5" aria-hidden="true" />
-            Délier
-          </button>
-        </form>
+        <UnlinkChildButton childId={childId} childName={name} />
       </header>
 
       {/* Les trois temps mis en avant : total, cette semaine, moyenne/jour */}

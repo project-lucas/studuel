@@ -16,6 +16,7 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { toast } from '@/lib/toast'
 import {
   buildCourseTree,
   canMoveChapter,
@@ -393,7 +394,17 @@ function ChapterBlock({
               run: () => {
                 if (pending) return
                 startTransition(async () => {
-                  await duplicateChapter(courseId, node.id)
+                  // La copie peut réussir à moitié (un sous-chapitre qui
+                  // échoue emporte sa descendance). L'élève doit l'apprendre
+                  // maintenant, pas en découvrant le trou des semaines plus
+                  // tard.
+                  const res = await duplicateChapter(courseId, node.id)
+                  if (!res.ok) {
+                    toast(
+                      'La copie est incomplète — vérifie le chapitre dupliqué.',
+                      'error',
+                    )
+                  }
                   onMenu(null)
                 })
               },

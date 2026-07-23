@@ -30,6 +30,33 @@ import {
 type Ok = { ok: boolean }
 type OkId = { ok: boolean; id: string | null }
 
+/**
+ * Borne d'un réordonnancement. `orderedIds` arrive du client et n'était pas
+ * bornée : la limite de corps d'une Server Action étant de 1 Mo, un appel forgé
+ * pouvait demander ~27 000 mises à jour PostgREST simultanées depuis le
+ * serveur. Aucun cours réel n'approche ce chiffre.
+ */
+const MAX_REORDER = 500
+
+/**
+ * Les écritures parallèles ont-elles TOUTES réussi ? Les résultats du
+ * `Promise.all` étaient jetés et `{ ok: true }` renvoyé quoi qu'il arrive : un
+ * glisser-déposer raté laissait l'interface dans l'ordre optimiste jusqu'au
+ * prochain chargement, qui « annulait » le geste sans explication.
+ */
+function allSucceeded(
+  results: { error: { message: string } | null }[],
+  label: string,
+): boolean {
+  const failed = results.filter((r) => r.error)
+  if (failed.length === 0) return true
+  console.error(
+    `[carnet-cours] ${label} : ${failed.length} écriture(s) en échec —`,
+    failed[0].error?.message,
+  )
+  return false
+}
+
 const fail: OkId = { ok: false, id: null }
 
 async function requireUserId(): Promise<{
@@ -165,6 +192,20 @@ export async function createChapter(
   const { supabase, userId } = await requireUserId()
   if (!userId || typeof courseId !== 'string') return fail
   if (!(await ownsCourse(supabase, userId, courseId))) return fail
+
+  // Le parent doit appartenir AU MÊME cours. La policy ne contrôle que
+  // `course_id` : sans ce test, un appel forgé accrochait son chapitre sous
+  // celui d'un autre élève, qui l'emporterait en supprimant le sien.
+  // `moveQuestion` fait déjà ce contrôle — on s'aligne.
+  if (parentChapterId !== null) {
+    const { data: parent } = await supabase
+      .from('carnet_chapters')
+      .select('id')
+      .eq('id', parentChapterId)
+      .eq('course_id', courseId)
+      .maybeSingle()
+    if (!parent) return fail
+  }
 
   const position = await nextPosition(
     supabase,
@@ -319,6 +360,8 @@ export async function duplicateChapter(
 
   // ancien id → nouvel id
   const idMap = new Map<string, string>([[chapterId, String(rootCopy.id)]])
+  // Une copie qui perd des morceaux ne doit pas se présenter comme réussie.
+  let incomplet = false
   let level = [chapterId]
   while (level.length > 0) {
     const children = chapters.filter((c) => {
@@ -339,6 +382,9 @@ export async function duplicateChapter(
         .select('id')
         .single()
       if (copy) idMap.set(String(child.id), String(copy.id))
+      // Un sous-chapitre non copié emporte TOUTE sa descendance en silence :
+      // on retient l'incident pour ne pas annoncer une copie complète.
+      else incomplet = true
     }
     level = children.map((c) => String(c.id))
   }
@@ -364,10 +410,13 @@ export async function duplicateChapter(
     const { error } = await supabase.from('carnet_questions').insert(inserts)
     if (error) {
       console.error('[carnet-cours] copie des questions impossible:', error.message)
+      incomplet = true
     }
   }
   refresh(courseId)
-  return { ok: true }
+  // La copie existe mais lui manque des morceaux : le dire, plutôt que laisser
+  // l'élève découvrir tout seul, plus tard, qu'il en manque.
+  return { ok: !incomplet }
 }
 
 // Supprime un chapitre — ses sous-chapitres et questions partent en cascade
@@ -402,11 +451,13 @@ export async function reorderChapters(
   if (!userId || !Array.isArray(orderedIds)) return { ok: false }
   if (!(await ownsCourse(supabase, userId, courseId))) return { ok: false }
 
+  if (orderedIds.length > MAX_REORDER) return { ok: false }
+
   // En parallèle : un glisser-déposer sur un cours de 20 chapitres faisait
   // autant d'allers-retours ATTENDUS un par un, soit plusieurs secondes de
   // latence pour un simple réordonnancement. Aucune contrainte d'unicité sur
   // `position` n'impose de les sérialiser.
-  await Promise.all(
+  const results = await Promise.all(
     orderedIds.map((id, i) =>
       typeof id === 'string'
         ? supabase
@@ -414,11 +465,11 @@ export async function reorderChapters(
             .update({ position: i })
             .eq('id', id)
             .eq('course_id', courseId)
-        : Promise.resolve(),
+        : Promise.resolve({ error: null }),
     ),
   )
   refresh(courseId)
-  return { ok: true }
+  return { ok: allSucceeded(results, 'réordonnancement des chapitres') }
 }
 
 // --------------------------------------------------------------- questions ---
@@ -433,6 +484,18 @@ export async function createQuestion(
     return fail
   }
   if (!(await ownsCourse(supabase, userId, courseId))) return fail
+
+  // Même contrôle que dans `createChapter` et `moveQuestion` : le chapitre
+  // d'accueil doit appartenir à CE cours.
+  if (chapterId !== null) {
+    const { data: chapter } = await supabase
+      .from('carnet_chapters')
+      .select('id')
+      .eq('id', chapterId)
+      .eq('course_id', courseId)
+      .maybeSingle()
+    if (!chapter) return fail
+  }
 
   const position = await nextPosition(
     supabase,
@@ -598,8 +661,10 @@ export async function reorderQuestions(
   if (!userId || !Array.isArray(orderedIds)) return { ok: false }
   if (!(await ownsCourse(supabase, userId, courseId))) return { ok: false }
 
+  if (orderedIds.length > MAX_REORDER) return { ok: false }
+
   // Même raison que `reorderChapters` : en parallèle, pas un par un.
-  await Promise.all(
+  const results = await Promise.all(
     orderedIds.map((id, i) =>
       typeof id === 'string'
         ? supabase
@@ -607,11 +672,11 @@ export async function reorderQuestions(
             .update({ position: i })
             .eq('id', id)
             .eq('course_id', courseId)
-        : Promise.resolve(),
+        : Promise.resolve({ error: null }),
     ),
   )
   refresh(courseId)
-  return { ok: true }
+  return { ok: allSucceeded(results, 'réordonnancement des questions') }
 }
 
 // ---------------------------------------------------------------- révision ---

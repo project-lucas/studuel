@@ -47,10 +47,18 @@ export default async function CoursePage({
         .from('carnet_questions')
         .select('id, chapter_id, type, position, content')
         .eq('course_id', id),
+      // Les tentatives sont bornées AU COURS affiché. Sans la jointure, on
+      // ramenait les 2 000 dernières tentatives TOUS COURS CONFONDUS puis on
+      // filtrait en mémoire : passé ce seuil (≈ 200 sessions de 10 questions,
+      // atteignable sur une année), les tentatives d'un cours peu récent
+      // sortaient de la fenêtre et il rebasculait en « Jamais vues » / « 0 % »
+      // sans le moindre signal. La borne reste, mais elle protège maintenant
+      // sans mentir.
       supabase
         .from('carnet_review_attempts')
-        .select('question_id, is_correct, answered_at')
+        .select('question_id, is_correct, answered_at, carnet_questions!inner(course_id)')
         .eq('user_id', user.id)
+        .eq('carnet_questions.course_id', id)
         .order('answered_at', { ascending: false })
         .limit(2_000),
     ])

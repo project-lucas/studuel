@@ -1,12 +1,16 @@
 import type { CSSProperties } from 'react'
 import {
   Atom,
+  BookMarked,
   BookOpen,
   Brain,
   Calculator,
   Code2,
+  Cog,
   Cpu,
   Crown,
+  Drama,
+  Dumbbell,
   Globe,
   Infinity,
   Landmark,
@@ -15,10 +19,14 @@ import {
   Lightbulb,
   LineChart,
   Microscope,
+  Music,
+  Palette,
   PiggyBank,
   Receipt,
   Rocket,
+  Scale,
   ScrollText,
+  Sigma,
   TrendingUp,
   type LucideIcon,
 } from 'lucide-react'
@@ -41,6 +49,20 @@ const SUBJECT_ICONS: Record<string, LucideIcon> = {
   nsi: Code2,
   ses: LineChart,
   philosophie: Brain,
+  // Matières ajoutées par les migrations 191 et 193. Sans entrée ici, elles
+  // retombaient toutes sur l'icône générique BookOpen — cinq matières
+  // indiscernables dans les listes compactes et la recherche.
+  allemand: Languages,
+  'arts-plastiques': Palette,
+  grec: ScrollText,
+  musique: Music,
+  sport: Dumbbell,
+  emc: Scale,
+  snt: Cpu,
+  hlp: BookMarked,
+  'llcer-anglais': Drama,
+  si: Cog,
+  'maths-complementaires': Sigma,
   // Matières « culture » (hors-programme). L'ancien dossier unique
   // 'culture-generale' garde son icône tant que la migration 190 (éclatement en
   // matières séparées) n'est pas exécutée.
@@ -54,6 +76,15 @@ const SUBJECT_ICONS: Record<string, LucideIcon> = {
 
 export function subjectIcon(slug: string): LucideIcon {
   return SUBJECT_ICONS[slug] ?? BookOpen
+}
+
+/**
+ * Cette matière a-t-elle son icône ? Même raison que `hasSubjectTheme` : sans
+ * entrée, une matière retombe sur l'icône générique et devient indiscernable
+ * de ses voisines dans les listes compactes et la recherche.
+ */
+export function hasSubjectIcon(slug: string): boolean {
+  return slug in SUBJECT_ICONS
 }
 
 // Thèmes pastel par matière (clé `subjects.color`).
@@ -164,6 +195,16 @@ const THEMES: Record<string, SubjectTheme> = {
 
 export function subjectTheme(color: string): SubjectTheme {
   return THEMES[color] ?? THEMES.blue
+}
+
+/**
+ * Cette couleur a-t-elle VRAIMENT un thème ? `subjectTheme` retombe en silence
+ * sur le bleu, donc une couleur mal orthographiée dans une migration passe
+ * inaperçue — la matière s'affiche simplement dans la mauvaise teinte. Sert au
+ * garde-fou du catalogue (lib/subject-catalogue.test.ts).
+ */
+export function hasSubjectTheme(color: string): boolean {
+  return color in THEMES
 }
 
 // Fond pastel uni par couleur de matière (`subjects.color`) — mêmes teintes que
@@ -295,5 +336,3 @@ export const GRID_PATTERN: CSSProperties = {
   backgroundSize: '26px 26px',
 }
 
-// Mascotte récurrente des vignettes de leçons.
-export const MASCOT = '🦉'

@@ -96,15 +96,15 @@ describe('isNewToSubject', () => {
 
 describe('quizMeta', () => {
   test('meilleur essai quand le quiz a été joué', () => {
-    expect(quizMeta({ score: 7, total: 10 }, 10)).toBe('7/10')
+    expect(quizMeta({ score: 7, total: 10 })).toBe('7/10')
   })
 
   test('« Jamais tenté » sinon', () => {
-    expect(quizMeta(null, 12)).toBe('Jamais tenté')
+    expect(quizMeta(null)).toBe('Jamais tenté')
   })
 
   test('un essai à total nul ne compte pas', () => {
-    expect(quizMeta({ score: 0, total: 0 }, 10)).toBe('Jamais tenté')
+    expect(quizMeta({ score: 0, total: 0 })).toBe('Jamais tenté')
   })
 })
 

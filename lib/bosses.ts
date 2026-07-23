@@ -186,7 +186,9 @@ const CATALOG: BossEntry[] = [
     name: 'Coach Turbo',
     epithet: 'le Sergent du Chrono',
     emoji: '🏋️',
-    image: '/images/boss/coach-turbo.webp',
+    // Buste pas encore produit (cf. docs/nano-banana-prompts.md, P1) : le
+    // déclarer quand même affichait une image cassée au lieu du repli emoji.
+    // Le champ se rétablit le jour où le fichier arrive.
     scene: '/images/boss/coach-turbo-scene.webp',
     intro: 'Échauffement terminé ? Le chrono tourne déjà.',
     defeat: 'Battu sur le fil… joli sprint, champion.',

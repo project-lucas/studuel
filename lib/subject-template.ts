@@ -114,11 +114,10 @@ export function isNewToSubject(values: number[]): boolean {
 // Libellés d'état des contenus par mode.
 
 // Quiz : « 7/10 » (meilleur essai) ou « Jamais tenté ».
+// Ne prend PAS le nombre de questions : il est déjà porté par le titre côté
+// défi, et un paramètre ignoré fait croire à chaque appel qu'il sert.
 export function quizMeta(
   best: { score: number; total: number } | null,
-  // Gardé pour la symétrie d'appel avec les autres metas (le compte de
-  // questions reste porté par le titre côté défi).
-  _questionCount: number,
 ): string {
   if (best && best.total > 0) return `${best.score}/${best.total}`
   return NEVER_TRIED_LABEL

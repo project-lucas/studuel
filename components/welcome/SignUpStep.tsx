@@ -13,16 +13,20 @@ import PencilLogo from './PencilLogo'
 export default function SignUpStep({
   answers,
   onSignedUp,
+  initialError = null,
 }: {
   answers: OnboardingAnswers
   onSignedUp: () => void
+  /** Erreur venue de la redirection (échec du lancement OAuth), à afficher
+   *  d'entrée : sans elle, l'élève revenait sur un écran muet. */
+  initialError?: string | null
 }) {
   const [showEmail, setShowEmail] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(initialError)
   const [message, setMessage] = useState<string | null>(null)
   const [pending, startTransition] = useTransition()
 

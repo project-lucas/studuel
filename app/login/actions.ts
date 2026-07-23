@@ -63,11 +63,17 @@ export async function signIn(
   // Première connexion (ou config jamais faite) → onboarding.
   const { data: profile } = await supabase
     .from('profiles')
-    .select('onboarded')
+    .select('onboarded, profile_type')
     .eq('id', data.user.id)
-    .maybeSingle()
+    .maybeSingle<{ onboarded: boolean | null; profile_type: string | null }>()
 
   revalidatePath('/', 'layout')
+  // Un parent n'a pas de classe : l'envoyer sur les onglets élève le faisait
+  // atterrir sur « Dis-nous ta classe », un écran qui ne le concerne pas et
+  // dont la seule issue est de s'en inventer une. Seule la toute première
+  // session le routait correctement ; à partir de la deuxième, il était perdu
+  // (/parents n'est dans aucune barre de navigation).
+  if (profile?.profile_type === 'parent') redirect('/parents')
   redirect(profile?.onboarded ? '/defi' : '/onboarding')
 }
 

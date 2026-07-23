@@ -59,12 +59,20 @@ const STANDARD_FOOTER: WelcomeStep[] = [
 export default function WelcomeFlow({
   subjects,
   finish = false,
+  oauthFailed = false,
 }: {
   subjects: Subject[]
   finish?: boolean
+  /** Le lancement OAuth a échoué (fournisseur non activé côté Supabase, panne).
+   *  On reprend à l'écran de création de compte, PAS à l'intro : renvoyer
+   *  l'élève au début lui faisait retraverser douze écrans sans jamais lui dire
+   *  ce qui s'était passé — et il retentait le même bouton. */
+  oauthFailed?: boolean
 }) {
   const router = useRouter()
-  const [step, setStep] = useState<WelcomeStep>(finish ? 'plan' : 'intro')
+  const [step, setStep] = useState<WelcomeStep>(
+    finish ? 'plan' : oauthFailed ? 'signup' : 'intro',
+  )
   const [history, setHistory] = useState<WelcomeStep[]>([])
   // On démarre vide pour que le rendu serveur et le premier rendu client soient
   // identiques (pas d'écart d'hydratation) ; le brouillon localStorage est
@@ -364,6 +372,11 @@ export default function WelcomeFlow({
         return (
           <SignUpStep
             answers={answers}
+            initialError={
+              oauthFailed
+                ? 'La connexion avec ce service n’a pas pu démarrer. Réessaie, ou crée ton compte avec un e-mail.'
+                : null
+            }
             onSignedUp={() =>
               // Le parcours parent n'a pas de plan élève : direct l'espace parents.
               answers.profileType === 'parent'

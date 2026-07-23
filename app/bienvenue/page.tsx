@@ -13,11 +13,15 @@ export const dynamic = 'force-dynamic'
 export default async function BienvenuePage({
   searchParams,
 }: {
-  searchParams: Promise<{ apercu?: string; finish?: string }>
+  searchParams: Promise<{ apercu?: string; finish?: string; erreur?: string }>
 }) {
-  const { apercu, finish } = await searchParams
+  const { apercu, finish, erreur } = await searchParams
   const preview = apercu === '1'
   const isFinish = finish === '1'
+  // `startOAuth` redirige ici avec ?erreur=oauth quand le fournisseur ne
+  // démarre pas. Ce paramètre n'était lu nulle part : l'élève retombait sur
+  // l'intro, sans message, et recommençait tout.
+  const oauthFailed = erreur === 'oauth'
 
   const supabase = await createClient()
   const {
@@ -26,9 +30,17 @@ export default async function BienvenuePage({
 
   // Un compte connecté est renvoyé au geste quotidien — sauf en prévisualisation
   // ou au retour OAuth (où il doit finir son onboarding sur l'écran « plan »).
-  if (user && !preview && !isFinish) redirect('/defi')
+  // …et sauf après un échec OAuth : l'élève n'est justement PAS connecté, mais
+  // s'il l'était par ailleurs on ne veut pas l'expédier avant d'avoir expliqué.
+  if (user && !preview && !isFinish && !oauthFailed) redirect('/defi')
 
   const subjects = await getSubjectsCached()
 
-  return <WelcomeFlow subjects={subjects} finish={isFinish} />
+  return (
+    <WelcomeFlow
+      subjects={subjects}
+      finish={isFinish}
+      oauthFailed={oauthFailed}
+    />
+  )
 }

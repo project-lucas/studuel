@@ -238,6 +238,32 @@ export async function applyOnboarding(
   const isParentOnboarding = answers.profileType === 'parent'
   if (!grade && !isParentOnboarding) return { ok: false }
 
+  // …mais un brouillon VIDE n'est pas le seul cas de reconnexion. Le lien
+  // « J'ai déjà un compte » est discret : un élève qui a perdu sa session
+  // reclique le plus souvent sur « C'est parti » et retraverse les écrans en
+  // trente secondes avant d'appuyer sur « Continuer avec Google » — croyant se
+  // reconnecter. Supabase l'authentifie alors sur son compte EXISTANT, et le
+  // brouillon tout neuf, lui, est bien rempli : la garde ci-dessus ne voit rien
+  // passer et l'update écrasait sa vraie classe, ses vraies matières, voire son
+  // `profile_type` (un parent repassé « élève » se retrouve verrouillé hors de
+  // /parents).
+  //
+  // On demande donc à la BASE, pas au brouillon : un compte déjà onboardé ne se
+  // fait jamais réécrire par ce chemin. Il ne perd rien — il voulait se
+  // connecter, et c'est fait. Changer de classe passe par les réglages.
+  const { data: existing } = await supabase
+    .from('profiles')
+    .select('onboarded')
+    .eq('id', user.id)
+    .maybeSingle<{ onboarded: boolean | null }>()
+
+  if (existing?.onboarded === true) {
+    // Le parrainage reste réclamé : il est porté par un cookie, pas par le
+    // profil, et n'a rien à voir avec l'écrasement qu'on vient d'éviter.
+    await claimPendingReferral()
+    return { ok: true }
+  }
+
   const { error } = await supabase
     .from('profiles')
     .update({

@@ -98,11 +98,15 @@ export default function ChildReport({
         />
         {/* « exercices » et non « quiz » : ce compteur inclut aussi la file
             « À revoir » et les examens blancs (test_sessions à quiz_id nul),
-            que le score par matière, lui, ne juge pas. */}
+            que le score par matière, lui, ne juge pas.
+            La valeur suit `avg_ratio` et NON le nombre d'exercices : un élève
+            n'ayant fait que des exercices non notés par matière (file « À
+            revoir », examen blanc) affichait « 0 % » sur 30 exercices — soit
+            le pire contresens possible sur un écran de suivi. */}
         <Stat
           icon={<Trophy className="size-4" aria-hidden="true" />}
           label="Score moyen"
-          value={dashboard.sessions_total > 0 ? `${avgPct} %` : '—'}
+          value={dashboard.avg_ratio != null ? `${avgPct} %` : '—'}
           sub={`${dashboard.sessions_total} exercices`}
         />
       </div>

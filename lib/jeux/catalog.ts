@@ -53,7 +53,7 @@ export const SALONS: Salon[] = [
         id: 'capitales',
         name: 'Capitales du monde',
         emoji: '🗺️',
-        tagline: 'Drapeau affiché, 4 capitales — le plus rapide marque',
+        tagline: 'Drapeau affiché, 4 capitales — 8 escales autour du monde',
         implemented: true,
       },
       {
@@ -121,7 +121,7 @@ export const SALONS: Salon[] = [
         id: 'suite-logique',
         name: 'Suite logique',
         emoji: '🔮',
-        tagline: 'Devine le terme suivant avant l’adversaire',
+        tagline: 'Devine le terme suivant et grimpe de 10 étages',
         implemented: true,
       },
     ],

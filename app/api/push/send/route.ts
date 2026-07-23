@@ -36,6 +36,11 @@ function todayKeyUtc(): string {
   return new Date().toISOString().slice(0, 10)
 }
 
+// Clé de jour UTC d'il y a N jours (purge du journal d'envoi).
+function dayKeyUtcAgo(days: number): string {
+  return new Date(Date.now() - days * 86_400_000).toISOString().slice(0, 10)
+}
+
 // Comparaison à temps constant du secret cron (évite qu'une attaque par timing
 // puisse deviner CRON_SECRET caractère par caractère). Échoue fermé.
 function matchesCronSecret(authHeader: string | null, secret: string): boolean {
@@ -94,6 +99,9 @@ export async function GET(request: Request): Promise<Response> {
   const targets = (data ?? []) as Target[]
   let sent = 0
   let pruned = 0
+  // Élèves réellement notifiés — c'est ce qu'on journalise, pas la liste des
+  // cibles : un envoi qui échoue ne doit pas empêcher le rattrapage.
+  const notified = new Set<string>()
 
   await Promise.all(
     targets.map(async (t) => {
@@ -109,6 +117,7 @@ export async function GET(request: Request): Promise<Response> {
           JSON.stringify(message),
         )
         sent += 1
+        notified.add(t.user_id)
       } catch (err: unknown) {
         // 404/410 : abonnement expiré → on le supprime.
         const statusCode =
@@ -127,6 +136,34 @@ export async function GET(request: Request): Promise<Response> {
       }
     }),
   )
+
+  // Journal d'envoi (migration 195) : c'est lui qui rend le cron rejouable sans
+  // buzzer deux fois le même élève — les RPC de ciblage écartent qui y figure
+  // déjà pour aujourd'hui. Un même élève peut avoir plusieurs appareils, d'où
+  // l'ensemble et l'ignorance des doublons.
+  //
+  // Un échec ici n'annule rien : la notification est PARTIE. On le journalise
+  // et on rend quand même le compte-rendu — c'est aussi ce qui laisse le code
+  // tourner tant que la 195 n'est pas exécutée (la table n'existe pas encore).
+  if (notified.size > 0) {
+    const { error: logError } = await admin.from('push_send_log').upsert(
+      [...notified].map((userId) => ({
+        user_id: userId,
+        kind: type,
+        sent_on: today,
+      })),
+      { onConflict: 'user_id,kind,sent_on', ignoreDuplicates: true },
+    )
+    if (logError) console.error('push send log', logError.message)
+  }
+
+  // Ménage : le journal n'a d'intérêt que pour la journée en cours, on garde
+  // un mois pour pouvoir enquêter sur un envoi douteux.
+  const { error: pruneError } = await admin
+    .from('push_send_log')
+    .delete()
+    .lt('sent_on', dayKeyUtcAgo(30))
+  if (pruneError) console.error('push send log purge', pruneError.message)
 
   return Response.json({ type, targets: targets.length, sent, pruned })
 }

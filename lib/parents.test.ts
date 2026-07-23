@@ -3,6 +3,7 @@ import {
   activityLevel,
   averageDailySeconds,
   formatWorkDuration,
+  hasJudgeableSubject,
   parentHeadline,
   scorePercent,
   strongestSubject,
@@ -120,6 +121,34 @@ describe('parentHeadline', () => {
     expect(msg).toContain("5 jours d'affilée")
     expect(msg).not.toContain('Aucune activité')
     expect(msg.toLowerCase()).not.toContain('aucune activité')
+  })
+
+  it("ne dit jamais « aucune activité » quand la grille de la semaine montre des jours faits", () => {
+    // Le trou que laissait la garde `streak >= 3` : 1 et 2 jours travaillés
+    // affichaient « Aucune activité cette semaine » juste au-dessus d'une
+    // grille où ces jours étaient allumés.
+    for (const jours of [1, 2]) {
+      const msg = parentHeadline(0, jours, jours)
+      expect(msg.toLowerCase()).not.toContain('aucune activité')
+      expect(msg).toContain('cette semaine')
+    }
+  })
+
+  it('reste « aucune activité » quand la semaine est vraiment vide', () => {
+    expect(parentHeadline(0, 0, 0).toLowerCase()).toContain('aucune activité')
+  })
+})
+
+describe('hasJudgeableSubject', () => {
+  it('refuse de conclure « tout est au vert » sur une seule tentative par matière', () => {
+    const uneSeule = [subj('Maths', 0, 1), subj('Français', 1, 1)]
+    expect(hasJudgeableSubject(uneSeule)).toBe(false)
+    expect(weakestSubjects(uneSeule)).toEqual([]) // d'où le message trompeur
+  })
+
+  it('conclut dès qu’une matière a assez de tentatives', () => {
+    expect(hasJudgeableSubject([subj('Maths', 0.9, 2)])).toBe(true)
+    expect(hasJudgeableSubject([])).toBe(false)
   })
 })
 

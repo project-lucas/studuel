@@ -45,16 +45,30 @@ export default async function ParentsPage() {
     redirect('/reviser')
   }
 
-  // Enfants liés (tolère une base sans la migration 044 : data = null).
-  const { data: childrenData } = await supabase.rpc('parent_children_overview')
+  // Enfants liés. On tolère une base sans la migration 044 (RPC absente =
+  // PGRST202) : l'écran se replie alors sur « aucun enfant lié ». Toute AUTRE
+  // erreur est une panne, et la faire passer pour « vous n'avez pas d'enfant
+  // lié » est le pire message possible pour un parent qui en a lié un.
+  const { data: childrenData, error: childrenError } = await supabase.rpc(
+    'parent_children_overview',
+  )
+  const listePerdue = Boolean(childrenError) && childrenError?.code !== 'PGRST202'
+  if (childrenError) {
+    console.error('[parents] liste des enfants:', childrenError.message)
+  }
   const children = (childrenData ?? []) as ChildRow[]
 
   const reports: { childId: string; dashboard: ChildDashboard | null }[] =
     await Promise.all(
       children.map(async (child) => {
-        const { data } = await supabase.rpc('child_dashboard', {
+        const { data, error } = await supabase.rpc('child_dashboard', {
           p_child: child.child_id,
         })
+        // Même règle : une carte qui DISPARAÎT sans un mot laisse croire au
+        // parent que le lien a sauté. On garde l'entrée et on le dit.
+        if (error) {
+          console.error('[parents] tableau de bord enfant:', error.message)
+        }
         return {
           childId: child.child_id,
           dashboard: (data as ChildDashboard | null) ?? null,
@@ -95,8 +109,37 @@ export default async function ParentsPage() {
       <div className="mx-auto w-full max-w-2xl px-4 py-8 md:px-8">
       {/* Suivi de l'enfant */}
       <section className="mb-8">
+        {listePerdue ? (
+          <div
+            role="alert"
+            className="bg-card border-destructive/40 mb-4 rounded-2xl border p-5 shadow-sm"
+          >
+            <h3 className="mb-1 font-semibold">Suivi momentanément indisponible</h3>
+            <p className="text-muted-foreground text-sm">
+              Nous n&apos;avons pas pu charger vos enfants liés. Rien n&apos;est
+              perdu : réessayez dans un moment en rechargeant la page.
+            </p>
+          </div>
+        ) : null}
+
         {reports.map(({ childId, dashboard }) => {
-          if (!dashboard) return null
+          if (!dashboard) {
+            return (
+              <div
+                key={childId}
+                role="alert"
+                className="bg-card border-destructive/40 mb-4 rounded-2xl border p-5 shadow-sm"
+              >
+                <h3 className="mb-1 font-semibold">
+                  Données de cet enfant indisponibles
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Le lien avec son compte est toujours actif — seul le détail
+                  n&apos;a pas pu être chargé. Réessayez en rechargeant la page.
+                </p>
+              </div>
+            )
+          }
           const activeDays = new Set(dashboard.active_days)
           const streak = computeStreak(activeDays, now)
           const week = weekProgress(activeDays, now)

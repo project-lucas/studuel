@@ -3,6 +3,7 @@ import { workLevel } from '@/lib/work-level'
 import {
   averageDailySeconds,
   formatWorkDuration,
+  hasJudgeableSubject,
   parentHeadline,
   scorePercent,
   strongestSubject,
@@ -45,7 +46,13 @@ export default function ChildReport({
         <div>
           <h3 className="font-heading text-lg font-semibold">{name}</h3>
           <p className="text-muted-foreground text-sm">
-            {parentHeadline(dashboard.sessions_7, streak)}
+            {/* Le 3e argument est EXACTEMENT ce que compte la grille « Cette
+                semaine » plus bas : les deux ne peuvent plus se contredire. */}
+            {parentHeadline(
+              dashboard.sessions_7,
+              streak,
+              week.filter((d) => d.done).length,
+            )}
           </p>
         </div>
         <form action={unlinkChild}>
@@ -135,9 +142,9 @@ export default function ChildReport({
         </h4>
         {weak.length === 0 ? (
           <p className="text-muted-foreground text-sm">
-            {dashboard.sessions_total > 0
+            {hasJudgeableSubject(dashboard.per_subject)
               ? 'Aucune matière en difficulté — tout est au vert.'
-              : 'Pas encore assez de quiz pour évaluer les matières.'}
+              : 'Pas encore assez de quiz par matière pour les évaluer.'}
           </p>
         ) : (
           <ul className="flex flex-col gap-2">

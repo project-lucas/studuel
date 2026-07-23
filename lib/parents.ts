@@ -79,6 +79,17 @@ export function strongestSubject(
   return eligible.reduce((best, s) => (s.ratio > best.ratio ? s : best))
 }
 
+// Y a-t-il au moins une matière assez travaillée pour être JUGÉE ? Sans ce
+// test, un enfant ayant fait 5 matières à un seul quiz — dont un 0/10 — lisait
+// « Aucune matière en difficulté, tout est au vert » : le seuil de
+// `MIN_ATTEMPTS_FOR_SIGNAL` est légitime, le message de repli ne l'était pas.
+export function hasJudgeableSubject(
+  perSubject: SubjectScore[],
+  minAttempts = MIN_ATTEMPTS_FOR_SIGNAL,
+): boolean {
+  return perSubject.some((s) => s.attempts >= minAttempts)
+}
+
 export type ActivityLevel = 'inactif' | 'faible' | 'regulier' | 'intense'
 
 // Rythme de la semaine, à partir du nombre de quiz passés sur 7 jours.
@@ -97,11 +108,21 @@ const ACTIVITY_HEADLINE: Record<ActivityLevel, string> = {
 }
 
 // Le message d'accroche affiché au parent, fonction du rythme et de la série.
-// `sessions7` ne compte que les quiz, mais `streak` agrège 4 sources (quiz,
-// révision, leçon, défi) : une série ≥ 3 PROUVE donc une activité même sans
-// aucun quiz. On évite alors le libellé « inactif » (« aucune activité cette
-// semaine ») qui contredirait la série affichée juste avant.
-export function parentHeadline(sessions7: number, streak: number): string {
+//
+// `sessions7` ne compte que les QUIZ, alors que la série et la grille « Cette
+// semaine » agrègent 4 sources (quiz, révision, leçon, défi). Dire « aucune
+// activité cette semaine » au-dessus d'une grille où des jours sont allumés
+// est la contradiction la plus visible de cet écran — et elle sapait la
+// confiance du parent dans tout le reste.
+//
+// La garde reposait sur `streak >= 3`, ce qui laissait passer 1 et 2 jours.
+// On s'appuie désormais sur `joursActifsSemaine`, exactement le chiffre que la
+// grille affiche : si une case est allumée, on ne dit jamais « aucune ».
+export function parentHeadline(
+  sessions7: number,
+  streak: number,
+  joursActifsSemaine = 0,
+): string {
   const level = activityLevel(sessions7)
   if (streak >= 3) {
     const tail =
@@ -109,6 +130,11 @@ export function parentHeadline(sessions7: number, streak: number): string {
         ? "la régularité est là ; quelques quiz l'aideraient à mesurer ses progrès."
         : `${ACTIVITY_HEADLINE[level].charAt(0).toLowerCase()}${ACTIVITY_HEADLINE[level].slice(1)}`
     return `${streak} jours d'affilée — ${tail}`
+  }
+  if (level === 'inactif' && joursActifsSemaine > 0) {
+    return joursActifsSemaine === 1
+      ? 'Un jour travaillé cette semaine — quelques quiz l’aideraient à mesurer ses progrès.'
+      : `${joursActifsSemaine} jours travaillés cette semaine — quelques quiz l’aideraient à mesurer ses progrès.`
   }
   return ACTIVITY_HEADLINE[level]
 }

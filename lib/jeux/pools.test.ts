@@ -115,7 +115,22 @@ describe('buildSalonPool', () => {
         expect(q.correctIndex).toBeLessThan(q.options.length)
         expect(q.options[q.correctIndex]).toBeTruthy()
         expect(q.subject).toBeTruthy()
+        // Deux options identiques = deux boutons identiques, dont un est
+        // compté FAUX. L'élève a raison et le jeu lui dit qu'il a tort : rien
+        // n'est plus destructeur pour la confiance dans le contenu. Rien ne
+        // gardait ça, alors que chaque banque ajoutée en fait courir le risque
+        // (un leurre écrit à l'identique de la bonne réponse dans un autre item).
+        expect(
+          new Set(q.options).size,
+          `options en double dans « ${id} » : ${q.options.join(' / ')}`,
+        ).toBe(q.options.length)
       }
+      // Une même question servie deux fois dans la même partie : c'est le
+      // symptôme d'une entrée dupliquée en banque.
+      const ids = pool!.map((q) => q.id)
+      expect(new Set(ids).size, `questions en double dans « ${id} »`).toBe(
+        ids.length,
+      )
     }
   })
 

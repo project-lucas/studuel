@@ -360,6 +360,10 @@ export default function CourseScreen({
         router.refresh()
       } else if (res.unavailable) {
         setAiMessage('Génération indisponible pour le moment (service IA non configuré).')
+      } else if (res.quota) {
+        setAiMessage(
+          'Tu as atteint ta limite de générations pour aujourd’hui. Elle repart demain.',
+        )
       } else {
         setAiMessage('La génération a échoué. Réessaie dans un instant.')
       }

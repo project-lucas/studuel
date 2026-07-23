@@ -92,6 +92,10 @@ function FeedbackField({
       if (res.ok && res.feedback) onChange(res.feedback)
       else if (res.unavailable) {
         setMessage('Génération indisponible pour le moment (service IA non configuré).')
+      } else if (res.quota) {
+        setMessage(
+          'Tu as atteint ta limite de feedbacks pour aujourd’hui. Elle repart demain.',
+        )
       } else setMessage('La génération a échoué. Réessaie dans un instant.')
     })
   }

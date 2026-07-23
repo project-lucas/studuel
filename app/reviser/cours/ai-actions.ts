@@ -24,6 +24,8 @@ type AiResult = {
   ok: boolean
   /** Aucune clé configurée : la génération est indisponible (pas une erreur). */
   unavailable?: boolean
+  /** Quota quotidien atteint (migration 198) — ce n'est pas une panne. */
+  quota?: boolean
   created?: number
   feedback?: string
 }
@@ -39,7 +41,36 @@ async function aiClient() {
   return new OpenAI({
     apiKey,
     ...(process.env.AI_BASE_URL ? { baseURL: process.env.AI_BASE_URL } : {}),
+    // Les défauts du SDK sont 10 MINUTES et 2 réessais — donc jusqu'à ~30 min
+    // d'attente. Une Server Action bloquée aussi longtemps laisse l'élève sur
+    // « Génération en cours… » sans aucune issue.
+    timeout: 20_000,
+    maxRetries: 1,
   })
+}
+
+/**
+ * Le quota quotidien d'appels IA (migration 198). C'est le seul rempart contre
+ * l'usage de la clé du projet comme d'un relais LLM gratuit : le `disabled` du
+ * bouton n'est qu'un garde-fou d'interface, une Server Action se rejoue.
+ *
+ * Tant que la 198 n'est pas exécutée, la RPC est absente (PGRST202) et on
+ * laisse passer — sinon déployer avant d'exécuter couperait la génération pour
+ * tout le monde. Toute AUTRE erreur, elle, ferme la porte.
+ */
+async function quotaOk(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  kind: 'generation' | 'feedback',
+): Promise<boolean> {
+  const { data, error } = await supabase.rpc('ai_call_allowed', {
+    p_kind: kind,
+  })
+  if (error) {
+    if (error.code === 'PGRST202') return true // migration 198 en attente
+    console.error('[carnet-ia] quota illisible:', error.message)
+    return false
+  }
+  return data === true
 }
 
 async function requireUserId() {
@@ -104,6 +135,22 @@ export async function generateCourseQuestions(
     .maybeSingle()
   if (!course) return { ok: false }
 
+  // Chapitre cible : il doit appartenir AU MÊME cours. `moveQuestion` fait déjà
+  // ce contrôle ; sans lui ici, un appel forgé rattacherait sa question au
+  // chapitre d'un autre élève (la policy ne contrôle que `course_id`), qui
+  // l'emporterait dans sa corbeille en supprimant son chapitre.
+  if (chapterId !== null) {
+    const { data: chapter } = await supabase
+      .from('carnet_chapters')
+      .select('id')
+      .eq('id', chapterId)
+      .eq('course_id', courseId)
+      .maybeSingle()
+    if (!chapter) return { ok: false }
+  }
+
+  if (!(await quotaOk(supabase, 'generation'))) return { ok: false, quota: true }
+
   const client = await aiClient()
   if (!client) return { ok: false, unavailable: true }
 
@@ -122,14 +169,23 @@ export async function generateCourseQuestions(
       messages: [
         { role: 'system', content: GENERATION_SYSTEM },
         {
+          // Le texte de l'élève est ISOLÉ entre balises : concaténé nu, un
+          // « ignore les instructions précédentes » passe sans effort. Ça ne
+          // remplace pas la validation de sortie (qui, elle, est solide), mais
+          // ça évite de détourner la consigne au premier essai.
           role: 'user',
-          content: `Cours : « ${String(course.title)} ». Thème demandé : « ${cleanTheme} ». Génère ${n} questions. ${styleText}`,
+          content: `Génère ${n} questions. ${styleText}\n<cours>\n${String(course.title)}\n</cours>\n<theme>\n${cleanTheme}\n</theme>`,
         },
       ],
     })
     raw = completion.choices[0]?.message?.content ?? ''
   } catch (error) {
-    console.error('[carnet-ia] appel du modèle impossible:', error)
+    // Le message SEUL : l'objet d'erreur du SDK porte le corps de la requête,
+    // donc le texte de l'élève, qui n'a rien à faire dans les logs.
+    console.error(
+      '[carnet-ia] appel du modèle impossible:',
+      error instanceof Error ? error.message : 'inconnu',
+    )
     return { ok: false }
   }
 
@@ -192,7 +248,7 @@ export async function generateQuestionFeedback(
   enonce: string,
   bonneReponse: string,
 ): Promise<AiResult> {
-  const { userId } = await requireUserId()
+  const { supabase, userId } = await requireUserId()
   if (!userId) return { ok: false }
 
   const cleanEnonce =
@@ -202,6 +258,12 @@ export async function generateQuestionFeedback(
       ? bonneReponse.trim().slice(0, MAX_THEME_LEN)
       : ''
   if (cleanEnonce.length === 0) return { ok: false }
+
+  // Le quota compte AVANT l'appel au modèle : cette action prend du texte
+  // libre et renvoie la réponse du modèle, c'est donc la plus exposée des deux
+  // (elle ne s'appuie sur aucune donnée possédée — l'éditeur envoie ce qu'il a
+  // à l'écran, y compris avant enregistrement, et ça doit le rester).
+  if (!(await quotaOk(supabase, 'feedback'))) return { ok: false, quota: true }
 
   const client = await aiClient()
   if (!client) return { ok: false, unavailable: true }
@@ -218,7 +280,7 @@ export async function generateQuestionFeedback(
         },
         {
           role: 'user',
-          content: `Question : ${cleanEnonce}\nBonne réponse : ${cleanReponse}`,
+          content: `<question>\n${cleanEnonce}\n</question>\n<bonne_reponse>\n${cleanReponse}\n</bonne_reponse>`,
         },
       ],
     })
@@ -228,7 +290,10 @@ export async function generateQuestionFeedback(
     if (!feedback) return { ok: false }
     return { ok: true, feedback }
   } catch (error) {
-    console.error('[carnet-ia] génération du feedback impossible:', error)
+    console.error(
+      '[carnet-ia] génération du feedback impossible:',
+      error instanceof Error ? error.message : 'inconnu',
+    )
     return { ok: false }
   }
 }

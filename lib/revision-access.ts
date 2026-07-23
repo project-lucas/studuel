@@ -1,4 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
+import { isMissingSchemaObject } from '@/lib/schema-fallback'
 
 // Accès aux fiches de révision — la partie qui touche la base.
 //
@@ -16,7 +17,10 @@ import type { SupabaseClient } from '@supabase/supabase-js'
 //
 // Les deux fonctions tolèrent une base où les migrations 184/185 ne sont pas
 // encore passées — le code doit être déployé AVANT elles, sinon Réviser casse
-// le temps du déploiement.
+// le temps du déploiement. Ce repli ne se déclenche QUE sur « l'objet n'existe
+// pas » (cf. lib/schema-fallback.ts) : sur toute autre erreur on échoue fermé,
+// sinon le repli redeviendrait un contournement du verrou payant le jour où la
+// colonne serait de nouveau lisible.
 
 /**
  * Contenu d'une fiche. Renvoie `null` si la leçon n'en a pas OU si l'appelant
@@ -38,6 +42,11 @@ export async function fetchRevisionSheet(
 
   // Repli transitoire : migration 184 pas encore exécutée (RPC absente). La 185
   // n'est pas passée non plus, donc `revision_sheet` est encore lisible.
+  if (!isMissingSchemaObject(error)) {
+    console.error('[fiche] contenu indisponible:', error.message)
+    return null
+  }
+
   const { data: legacy } = await supabase
     .from('lessons')
     .select('revision_sheet')
@@ -66,6 +75,11 @@ export async function lessonHasRevisionSheet(
   if (!error) return Boolean(data?.has_revision_sheet)
 
   // Repli transitoire : migration 184 pas encore exécutée (colonne absente).
+  if (!isMissingSchemaObject(error)) {
+    console.error('[fiche] existence indisponible:', error.message)
+    return false
+  }
+
   const { data: legacy } = await supabase
     .from('lessons')
     .select('revision_sheet')

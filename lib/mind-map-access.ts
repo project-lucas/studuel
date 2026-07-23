@@ -1,4 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
+import { isMissingSchemaObject } from '@/lib/schema-fallback'
 import type { MindMapData } from '@/lib/types'
 
 // Accès aux cartes mentales — la partie qui touche la base.
@@ -14,7 +15,10 @@ import type { MindMapData } from '@/lib/types'
 //
 // Les deux fonctions ci-dessous tolèrent une base où les migrations 181/182 ne
 // sont pas encore passées — le code doit être déployé AVANT elles, sinon
-// Réviser casse le temps du déploiement.
+// Réviser casse le temps du déploiement. Ce repli ne se déclenche QUE sur
+// « l'objet n'existe pas » (cf. lib/schema-fallback.ts) : sur toute autre
+// erreur on échoue fermé, sinon le repli redeviendrait un contournement du
+// verrou payant le jour où la colonne serait de nouveau lisible.
 
 // Chapitres (parmi `chapterIds`) qui ont une carte mentale.
 export async function chaptersWithMindMap(
@@ -35,6 +39,11 @@ export async function chaptersWithMindMap(
 
   // Repli transitoire : migration 181 pas encore exécutée (colonne absente).
   // La 182 n'est pas passée non plus, donc `mind_map` est encore lisible.
+  if (!isMissingSchemaObject(error)) {
+    console.error('[mind-map] existence indisponible:', error.message)
+    return new Set()
+  }
+
   const { data: legacy } = await supabase
     .from('chapters')
     .select('id, mind_map')
@@ -66,6 +75,11 @@ export async function fetchMindMap(
   if (!error) return (data as MindMapData | null) ?? null
 
   // Repli transitoire : migration 181 pas encore exécutée (RPC absente).
+  if (!isMissingSchemaObject(error)) {
+    console.error('[mind-map] contenu indisponible:', error.message)
+    return null
+  }
+
   const { data: legacy } = await supabase
     .from('chapters')
     .select('mind_map')

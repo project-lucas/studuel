@@ -19,6 +19,26 @@ export function formatDurationFromSeconds(seconds: number): string {
   return formatDuration(Math.floor(s / 60))
 }
 
+// -----------------------------------------------------------------------------
+// Heure « élève ». Tout ce qui est destiné à l'élève (créneaux de trajet, heure
+// d'un rappel) se lit en Europe/Paris : le serveur, lui, tourne en UTC, et le
+// décalage change deux fois par an. Une conversion implicite dérive donc d'une
+// heure entre mars et octobre.
+// -----------------------------------------------------------------------------
+
+const PARIS_TIME = new Intl.DateTimeFormat('fr-FR', {
+  timeZone: 'Europe/Paris',
+  hour: '2-digit',
+  minute: '2-digit',
+  hourCycle: 'h23', // jamais « 24:xx » à minuit
+})
+
+/** Heure et minute de Paris correspondant à un instant donné. */
+export function parisHourMinute(date: Date): { hour: number; minute: number } {
+  const [hour, minute] = PARIS_TIME.format(date).split(':').map(Number)
+  return { hour, minute }
+}
+
 // Format « heures » toujours en h : « 0 h », « 0 h 03 », « 2 h 05 », « 12 h ».
 export function formatHours(seconds: number): string {
   const total = Math.max(0, Math.round(seconds))

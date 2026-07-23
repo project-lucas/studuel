@@ -1,14 +1,24 @@
 import { timingSafeEqual } from 'node:crypto'
 import { createClient } from '@supabase/supabase-js'
 import webpush from 'web-push'
-import { srsMessage, streakMessage, type PushMessage } from '@/lib/notifications'
+import {
+  isReminderDue,
+  srsMessage,
+  streakMessage,
+  type PushMessage,
+} from '@/lib/notifications'
 
 // Endpoint déclenché par le cron Vercel (cf. vercel.json) pour envoyer les
 // rappels push. Deux passes selon ?type= :
-//   - srs    : « X cartes à revoir » (le matin)
-//   - streak : « ta série est en jeu » (le soir)
+//   - srs    : « X cartes à revoir » (le matin, 8h de Paris)
+//   - streak : « ta série est en jeu » (le soir, 19h de Paris)
 // Sécurisé par l'en-tête Authorization: Bearer $CRON_SECRET (posé par Vercel).
 // Utilise la clé service_role (RLS contournée) pour lire tous les abonnés.
+//
+// ⚠️ Le cron est programmé sur DEUX heures UTC par rappel (`vercel.json`), parce
+// que Vercel ne connaît pas de fuseau : c'est `isReminderDue` qui tranche
+// laquelle des deux correspond à l'heure de Paris visée. L'autre sort tout de
+// suite, avant la moindre requête.
 
 export const dynamic = 'force-dynamic'
 
@@ -47,6 +57,12 @@ export async function GET(request: Request): Promise<Response> {
   const type = url.searchParams.get('type') ?? 'srs'
   if (type !== 'srs' && type !== 'streak') {
     return new Response('unknown type', { status: 400 })
+  }
+
+  // `force=1` : déclenchement manuel hors créneau, pour tester l'envoi. Déjà
+  // protégé par CRON_SECRET, donc inaccessible depuis l'extérieur.
+  if (url.searchParams.get('force') !== '1' && !isReminderDue(type)) {
+    return Response.json({ type, skipped: 'hors de l’heure de Paris visée' })
   }
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL

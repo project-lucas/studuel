@@ -1,5 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { toDayKey } from '@/lib/streak'
+import { parisHourMinute } from '@/lib/time'
 import type { Habit, HabitLog, CommuteSlot } from '@/lib/types'
 
 // -----------------------------------------------------------------------------
@@ -76,20 +77,13 @@ export function dayIndexOf(dayKey: string): number {
 // explicitement en Europe/Paris, car ce code tourne sur un serveur en UTC.
 // -----------------------------------------------------------------------------
 
-const PARIS_TIME = new Intl.DateTimeFormat('fr-FR', {
-  timeZone: 'Europe/Paris',
-  hour: '2-digit',
-  minute: '2-digit',
-  hourCycle: 'h23', // jamais « 24:xx » à minuit
-})
-
 export function isInCommuteSlot(
   timestamp: string,
   slots: CommuteSlot[],
 ): boolean {
   const d = new Date(timestamp)
   if (Number.isNaN(d.getTime())) return false
-  const [h, m] = PARIS_TIME.format(d).split(':').map(Number)
+  const { hour: h, minute: m } = parisHourMinute(d)
   const minutes = h * 60 + m
   return slots.some((slot) => {
     const [sh, sm] = slot.start.split(':').map(Number)

@@ -3,8 +3,16 @@
 // aucun accès réseau ni DB ici, donc entièrement testable.
 // L'infrastructure (service worker, abonnements, envoi VAPID, cron) s'appuie
 // dessus : cf. public/sw.js, app/api/push/*, supabase/045_push.sql.
+//
+// Deux rappels, et deux seulement : `srs` le matin, `streak` le soir. Un
+// troisième (« ton créneau de trajet commence ») a existé ici sans jamais être
+// envoyé par quoi que ce soit — il demanderait un ciblage par créneau, propre à
+// chaque élève, donc un autre cron et une autre requête. Il est retiré plutôt
+// que gardé en vitrine : cf. git si le sujet revient.
 
-export type ReminderKind = 'srs' | 'streak' | 'commute'
+import { parisHourMinute } from '@/lib/time'
+
+export type ReminderKind = 'srs' | 'streak'
 
 export type PushMessage = {
   kind: ReminderKind
@@ -16,7 +24,6 @@ export type PushMessage = {
 // Destinations profondes dans l'app.
 export const SRS_URL = '/reviser/revoir'
 export const STREAK_URL = '/defi'
-export const COMMUTE_URL = '/reviser'
 
 // Rappel SRS : « X cartes à revoir ». Rien à envoyer si la file est vide.
 export function srsMessage(
@@ -53,14 +60,34 @@ export function streakMessage(
   }
 }
 
-// Rappel de créneau de trajet : au début d'un créneau habituel.
-export function commuteMessage(slotStart: string): PushMessage {
-  return {
-    kind: 'commute',
-    title: 'Un trajet = une révision',
-    body: `Ton créneau de ${slotStart} commence — 5 minutes de quiz, ça compte.`,
-    url: COMMUTE_URL,
-  }
+// -----------------------------------------------------------------------------
+// À quelle heure part un rappel ?
+// -----------------------------------------------------------------------------
+
+/** Les deux rappels envoyés par le cron (le `?type=` de /api/push/send). */
+export type ScheduledReminder = 'srs' | 'streak'
+
+/** Heure de PARIS à laquelle chaque rappel doit arriver chez l'élève. */
+export const REMINDER_PARIS_HOUR: Record<ScheduledReminder, number> = {
+  srs: 8,
+  streak: 19,
+}
+
+/**
+ * Le rappel doit-il partir maintenant ?
+ *
+ * Les crons Vercel tournent en **UTC** et n'acceptent pas de fuseau : une heure
+ * fixe dans `vercel.json` dérive donc d'une heure à chaque changement d'horaire
+ * (le rappel du matin arrivait à 8h en hiver et 9h en été, contre la règle
+ * « heures élève en Europe/Paris »). Le cron est donc programmé sur les DEUX
+ * heures UTC candidates, et cette fonction ne laisse passer que celle qui tombe
+ * à la bonne heure de Paris — l'autre sort sans rien envoyer, gratuitement.
+ */
+export function isReminderDue(
+  kind: ScheduledReminder,
+  now: Date = new Date(),
+): boolean {
+  return parisHourMinute(now).hour === REMINDER_PARIS_HOUR[kind]
 }
 
 // Convertit une clé VAPID publique (base64url) en Uint8Array pour

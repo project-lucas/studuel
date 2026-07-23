@@ -1,9 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import {
-  COMMUTE_URL,
   SRS_URL,
   STREAK_URL,
-  commuteMessage,
+  isReminderDue,
   srsMessage,
   streakMessage,
   urlBase64ToUint8Array,
@@ -58,12 +57,29 @@ describe('streakMessage', () => {
   })
 })
 
-describe('commuteMessage', () => {
-  it('mentionne l’heure du créneau', () => {
-    const m = commuteMessage('08:15')
-    expect(m.body).toContain('08:15')
-    expect(m.url).toBe(COMMUTE_URL)
-    expect(m.kind).toBe('commute')
+describe('isReminderDue', () => {
+  // Les crons Vercel tournent en UTC : c'est le décalage saisonnier qu'on teste.
+  it('laisse passer 8h de Paris en HIVER (UTC+1)', () => {
+    expect(isReminderDue('srs', new Date('2026-01-15T07:00:00Z'))).toBe(true)
+    expect(isReminderDue('srs', new Date('2026-01-15T06:00:00Z'))).toBe(false)
+  })
+
+  it('laisse passer 8h de Paris en ÉTÉ (UTC+2)', () => {
+    expect(isReminderDue('srs', new Date('2026-07-15T06:00:00Z'))).toBe(true)
+    expect(isReminderDue('srs', new Date('2026-07-15T07:00:00Z'))).toBe(false)
+  })
+
+  it('vise 19h de Paris pour le rappel de série, dans les deux saisons', () => {
+    expect(isReminderDue('streak', new Date('2026-01-15T18:00:00Z'))).toBe(true)
+    expect(isReminderDue('streak', new Date('2026-01-15T17:00:00Z'))).toBe(false)
+    expect(isReminderDue('streak', new Date('2026-07-15T17:00:00Z'))).toBe(true)
+    expect(isReminderDue('streak', new Date('2026-07-15T18:00:00Z'))).toBe(false)
+  })
+
+  it('ne confond pas les deux rappels', () => {
+    const matin = new Date('2026-07-15T06:00:00Z') // 8h de Paris
+    expect(isReminderDue('srs', matin)).toBe(true)
+    expect(isReminderDue('streak', matin)).toBe(false)
   })
 })
 

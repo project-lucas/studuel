@@ -2,7 +2,6 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
-import { normalizeAvatarConfig } from '@/lib/avatar'
 import { toDayKey } from '@/lib/streak'
 import { LEVERS } from '@/lib/capacite-drivers'
 import { trimestreOf } from '@/lib/notes'
@@ -130,21 +129,14 @@ export async function removeUpcomingExam(
   return { ok: true }
 }
 
-// Avatar personnalisé : enregistre la config choisie (validée contre le
-// catalogue fermé de lib/avatar.ts). Voir supabase/082_avatar.sql.
-export async function saveAvatar(config: unknown): Promise<void> {
-  const { supabase, userId } = await requireUser()
-  if (!userId) return
-
-  const clean = normalizeAvatarConfig(config)
-  const { error } = await supabase
-    .from('profiles')
-    .update({ avatar: clean })
-    .eq('id', userId)
-  // GRANT UPDATE(avatar) manquant (082 pas passée) échouerait en silence.
-  if (error) console.error('[moi] avatar non enregistré:', error.message)
-  revalidatePath('/moi')
-}
+// `saveAvatar` vivait ici : elle écrivait n'importe quelle config normalisée
+// dans profiles.avatar SANS aucun contrôle de possession — l'héritage de
+// l'ancien éditeur libre (082), où tout était gratuit. Plus aucun appelant
+// depuis l'arrivée du vestiaire, et pas enregistrée comme Server Action dans le
+// build : elle n'était donc pas exploitable. Mais le jour où un composant
+// client l'aurait ré-importée, elle contournait toute l'économie du vestiaire
+// (`equipAvatarItemAction` est le seul chemin légitime, cf. app/moi/avatar).
+// Supprimée plutôt que laissée en embuscade — cf. git si le sujet revient.
 
 // --- Leviers de la semaine (hero card Moi) -----------------------------------
 // Un tap sur une chip bascule le log DU JOUR de l'habitude du levier. Si

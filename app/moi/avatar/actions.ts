@@ -31,19 +31,40 @@ async function requireUser() {
 // L'avatar apparaît sur ces onglets (hero card, top bars, classements…).
 const AVATAR_PATHS = ['/moi', '/amis', '/defi', '/reviser', '/moi/avatar']
 
-// Item du catalogue en base ; repli sur le catalogue gratuit embarqué si la
-// table est vide/absente (189 pas encore passée) — ids `libre-…`, tous gratuits.
+// Item du catalogue en base ; repli sur le catalogue gratuit embarqué SEULEMENT
+// si la table est vide/absente (189 pas encore passée) — ids `libre-…`.
+//
+// ⚠️ Le repli ne doit JAMAIS servir de porte de service. Ses items sont tous
+// `price: null, unlock: null`, donc « gratuits d'office » pour le contrôle de
+// possession ci-dessous, et leurs `assetKey` sont exactement ceux des objets
+// payants ou verrouillés du vrai catalogue (`libre-banner-4` = la bannière
+// légendaire Niveau 8, `libre-hair_color-7` = les cheveux roux à 150 pièces…).
+// Comme ses ids sont déterministes, un id forgé suffisait à porter n'importe
+// quel objet sans l'avoir mérité — le prix était bien enfermé en SQL (leçon de
+// la 088), mais la POSSESSION avait une porte de service côté application.
 async function loadItem(
   supabase: SupabaseClient,
   itemId: string,
 ): Promise<AvatarItem | null> {
-  const { data } = await supabase
+  const { data, error } = await supabase
     .from('avatar_items')
     .select('id, category, name, asset_key, price, unlock_condition, rarity, sort')
     .eq('id', itemId)
     .maybeSingle()
   const [item] = normalizeCatalog(data ? [data] : [])
-  return item ?? fallbackCatalog().find((i) => i.id === itemId) ?? null
+  if (item) return item
+
+  // Pas de ligne pour cet id. Le catalogue existe-t-il seulement ? S'il répond
+  // (même une seule ligne), l'id demandé est inconnu : on refuse. Une erreur,
+  // elle, signe une table absente — le repli reprend alors tout son sens.
+  if (!error) {
+    const { data: sonde } = await supabase
+      .from('avatar_items')
+      .select('id')
+      .limit(1)
+    if (sonde && sonde.length > 0) return null
+  }
+  return fallbackCatalog().find((i) => i.id === itemId) ?? null
 }
 
 // Équipe un item (gratuit ou possédé) : applique son mapping à la config

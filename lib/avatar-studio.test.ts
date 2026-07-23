@@ -65,6 +65,25 @@ describe('itemState', () => {
     expect(itemState(skin, DEFAULT_AVATAR, none)).toBe('equipped')
   })
 
+  it('n’offre pas un item PAYANT que la config porte déjà par héritage', () => {
+    // Les profils créés avant le vestiaire (éditeur libre de la 082) portent
+    // des valeurs qui coïncident avec des items désormais payants. Les compter
+    // « équipés » les donnait à vie, sans prix affiché ni moyen de les acheter.
+    const paid = item({ id: 'peau-solaire', assetKey: DEFAULT_AVATAR.skinColor, price: 110 })
+    expect(itemState(paid, DEFAULT_AVATAR, none)).toBe('buyable')
+    expect(itemState(paid, DEFAULT_AVATAR, new Set(['peau-solaire']))).toBe('equipped')
+  })
+
+  it('n’offre pas non plus un item VERROUILLÉ porté par héritage', () => {
+    const locked = item({
+      id: 'chev-platine',
+      assetKey: DEFAULT_AVATAR.skinColor,
+      unlock: { type: 'level', value: 5 },
+    })
+    expect(itemState(locked, DEFAULT_AVATAR, none)).toBe('locked')
+    expect(itemState(locked, DEFAULT_AVATAR, new Set(['chev-platine']))).toBe('equipped')
+  })
+
   it('possédé si gratuit ou acheté, achetable si prix, verrouillé sinon', () => {
     const free = item({ assetKey: 'ae5d29' })
     const paid = item({ id: 'paid', assetKey: 'ae5d29', price: 120 })

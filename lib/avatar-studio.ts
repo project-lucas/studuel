@@ -160,10 +160,15 @@ export function itemState(
   cfg: AvatarConfig,
   ownedIds: ReadonlySet<string>,
 ): ItemState {
-  if (isItemEquipped(cfg, item)) return 'equipped'
-  if (isFreeItem(item) || ownedIds.has(item.id)) return 'owned'
-  if (item.price !== null) return 'buyable'
-  return 'locked'
+  // Possession D'ABORD, équipement ensuite. `isItemEquipped` ne compare qu'un
+  // `assetKey` : les configs héritées de l'ancien éditeur libre (migration 082,
+  // où l'on choisissait n'importe quelle option DiceBear) portent des valeurs
+  // qui coïncident avec des objets PAYANTS ou VERROUILLÉS. Les classer
+  // « équipé » les offrait à vie — ni pastille de prix, ni moyen de les
+  // acheter, alors que l'élève ne les avait jamais gagnés.
+  const owned = isFreeItem(item) || ownedIds.has(item.id)
+  if (!owned) return item.price !== null ? 'buyable' : 'locked'
+  return isItemEquipped(cfg, item) ? 'equipped' : 'owned'
 }
 
 // --- Conditions de déblocage --------------------------------------------------

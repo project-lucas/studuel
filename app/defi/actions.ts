@@ -16,16 +16,20 @@ import type { CommuteSlot } from '@/lib/types'
 // L'XP est recalculée ICI depuis score/total (+ bonus trajet, + bonus du mode
 // de jeu, borné par le barème) — la valeur affichée côté client n'est jamais
 // prise pour argent comptant.
+//
+// Elle est RENVOYÉE pour que l'écran de fin annonce le montant réellement
+// versé : le recalculer côté client ratait le bonus de trajet et l'écrêtage,
+// donc l'élève lisait un nombre différent de celui crédité à son compte.
 export async function recordChallenge(
   score: number,
   total: number,
   mode?: GameModeId,
-): Promise<{ saved: boolean }> {
+): Promise<{ saved: boolean; xp: number }> {
   const supabase = await createClient()
   const {
     data: { user },
   } = await supabase.auth.getUser()
-  if (!user) return { saved: false }
+  if (!user) return { saved: false, xp: 0 }
 
   const clean = (n: number, max: number) =>
     Number.isFinite(n) ? Math.max(0, Math.min(Math.round(n), max)) : 0
@@ -93,7 +97,8 @@ export async function recordChallenge(
 
   revalidatePath('/defi')
   revalidatePath('/moi')
-  return { saved: !error }
+  // `xp` seulement si la session a bien été écrite : rien n'a été versé sinon.
+  return { saved: !error, xp: error ? 0 : xp }
 }
 
 // Victoire sur le boss de la semaine : débloque le trophée exclusif de la

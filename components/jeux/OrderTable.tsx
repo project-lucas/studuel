@@ -80,6 +80,8 @@ export default function OrderTable({
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // XP réellement versée, renvoyée par le serveur (null tant qu'il n'a pas répondu).
+  const [awardedXp, setAwardedXp] = useState<number | null>(null)
   const [globalLeft, setGlobalLeft] = useState<number | null>(null)
 
   const runRef = useRef(run)
@@ -124,7 +126,10 @@ export default function OrderTable({
       setBest(Math.max(prev, final.score))
 
       recordChallenge(final.correct, final.answered)
-        .then((r) => setSaved(r.saved))
+        .then((r) => {
+          setSaved(r.saved)
+          if (r.saved) setAwardedXp(r.xp)
+        })
         .catch(() => setSaved(false))
     },
     [audio, format.id],
@@ -208,6 +213,7 @@ export default function OrderTable({
     setPlaced([])
     setRejected(null)
     setSaved(null)
+    setAwardedXp(null)
     setIsRecord(false)
     setBoardIndex((n) => n + 1) // un autre tableau d'une partie à l'autre
     globalLeftRef.current = seconds
@@ -264,6 +270,7 @@ export default function OrderTable({
             best={best}
             isRecord={isRecord}
             saved={saved}
+            awardedXp={awardedXp}
             onReplay={startCountdown}
             onExit={exit}
           />

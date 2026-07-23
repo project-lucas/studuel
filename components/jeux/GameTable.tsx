@@ -84,6 +84,8 @@ export default function GameTable({
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // XP réellement versée, renvoyée par le serveur (null tant qu'il n'a pas répondu).
+  const [awardedXp, setAwardedXp] = useState<number | null>(null)
   // Chrono de la question courante et de la course, en secondes (fractionnaires).
   const [questionLeft, setQuestionLeft] = useState<number | null>(null)
   const [globalLeft, setGlobalLeft] = useState<number | null>(null)
@@ -161,7 +163,10 @@ export default function GameTable({
       // file de révision non plus — un jeu de salon pioche dans sa propre banque
       // (capitales, faux amis…), pas dans le programme de l'élève.
       recordChallenge(final.correct, final.answered)
-        .then((r) => setSaved(r.saved))
+        .then((r) => {
+          setSaved(r.saved)
+          if (r.saved) setAwardedXp(r.xp)
+        })
         .catch(() => setSaved(false))
     },
     [audio, format.id],
@@ -265,6 +270,7 @@ export default function GameTable({
     setSelected(null)
     setRevealed(false)
     setSaved(null)
+    setAwardedXp(null)
     setIsRecord(false)
     setQIndex((n) => n + 1) // on repart ailleurs dans la banque
     globalLeftRef.current = sprintSeconds
@@ -325,6 +331,7 @@ export default function GameTable({
             best={best}
             isRecord={isRecord}
             saved={saved}
+            awardedXp={awardedXp}
             onReplay={startCountdown}
             onExit={exit}
           />

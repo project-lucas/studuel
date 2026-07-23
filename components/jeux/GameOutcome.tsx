@@ -22,6 +22,7 @@ export default function GameOutcome({
   best,
   isRecord,
   saved,
+  awardedXp,
   onReplay,
   onExit,
 }: {
@@ -32,11 +33,18 @@ export default function GameOutcome({
   isRecord: boolean
   /** Partie enregistrée côté serveur : null tant que la réponse n'est pas là. */
   saved: boolean | null
+  /** XP réellement versée, telle que renvoyée par le serveur (null en attente). */
+  awardedXp: number | null
   onReplay: () => void
   onExit: () => void
 }) {
   const won = run.status === 'won'
-  const xp = run.correct * XP_RULES.challengePerCorrect + XP_RULES.challengeBonus
+  // Le serveur fait foi dès qu'il a répondu : lui seul connaît le bonus de
+  // trajet et l'écrêtage. L'estimation locale ne sert qu'à ne pas laisser un
+  // trou à l'écran pendant l'aller-retour.
+  const xp =
+    awardedXp ??
+    run.correct * XP_RULES.challengePerCorrect + XP_RULES.challengeBonus
   const target = runTarget(format)
   // `runAchieved` et non `runProgress` : la case porte un libellé de RÉUSSITE
   // (« drapeau planté », « organe localisé »), pas d'avancement.

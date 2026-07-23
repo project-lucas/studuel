@@ -241,8 +241,8 @@ breaking changes vs. l'entraînement.
 **2026-07-23 — fin du cycle 2 `/jour` (Lia, relance automatique de 11:05) :**
 - **Fait** : arbre propre au réveil → **file du cycle 1 entièrement consommée**
   (espace Jeux + notifications push, 8 lots), puis **7 audits** de zones jamais
-  relues — le dernier portant sur mon propre travail du jour. **22 commits
-  verts**, poussés (dernier `0384db8`, **1161 tests**).
+  relues — dont un sur mon propre travail du jour. **24 commits
+  verts**, poussés (dernier `1cd4350`, **1162 tests**).
   **4 migrations créées : `195` → `198`.** Détail : `_ASSOCIE/A-LIRE-JOUR.md`.
 - **Leçon neuve, à garder** : *un message de commit n'est pas une preuve.* La
   revue finale a montré que `724b376` **annonçait** que l'échec d'un
@@ -303,6 +303,23 @@ breaking changes vs. l'entraînement.
   + `isQuestionReady` avant écriture), **autorité serveur des prix du
   vestiaire** (`purchase_avatar_item` lit le prix en base, double achat
   impossible).
+- **⚠️ DÉCISION BUSINESS, chiffrée — le paywall ne garde presque rien.** Le
+  cœur du dispositif est SAIN (impossible de s'attribuer un palier :
+  `subscription_tier` est absent des `GRANT` par colonne des 9 migrations qui
+  les posent ; aucun contenu payant dans le HTML d'un non-abonné). Mais
+  `lib/premium.ts` promet « Tous les quiz & flashcards premium » alors que les
+  **88 quiz du programme réel sont TOUS `is_free = true`** : les seuls contenus
+  payants du dépôt sont **6 quiz de démo et 1 paquet de démo**. Remplir ou
+  réécrire la promesse — mais ne pas encaisser en l'état. Et **aucune date
+  d'expiration n'existe** (ni colonne, ni vérification, ni cron) : un palier
+  posé est acquis à vie, à trancher AVANT de brancher le paiement.
+- **5e occurrence du garde-fou aveugle** (`1cd4350`) : le test miroir des
+  paliers lisait la migration **181** en dur, alors que la **183** redéfinit la
+  RPC (`CREATE OR REPLACE`) — il validait un corps qui n'est plus déployé. Il
+  balaye désormais TOUTES les migrations (7 gates), avec un plancher pour
+  qu'une regex cassée ne le rende pas muet, et distingue un GATE d'un DOMAINE
+  par le mot-clé `CHECK` et **non** par la présence de `free` (sinon un gate
+  trop permissif serait reclassé en domaine et échapperait au contrôle).
 - **Prochaine cible** : le chantier **hors-ligne + portails** (un seul lot
   cohérent, avec QA), puis borner `per_subject` à la classe courante côté
   parent, puis les trois fenêtres « semaine » de la carte parent. La liste

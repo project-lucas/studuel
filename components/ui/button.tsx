@@ -1,22 +1,26 @@
+'use client'
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "radix-ui"
 
 import { cn } from "@/lib/utils"
+import { press } from "@/lib/sounds"
+import { intentOfVariant, type ButtonVariant } from "@/lib/press"
 
 const buttonVariants = cva(
-  // Pilule nette : fond plein, ombre douce, léger enfoncement au clic
-  // (retour tactile sans l'effet « bloc décalé »).
-  "group/button inline-flex shrink-0 items-center justify-center rounded-full border border-transparent bg-clip-padding text-sm font-semibold whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  // Pilule nette, socle 3D (`.btn-chunky` + `--btn-edge` dans globals.css) et
+  // enfoncement au tap : le bouton se comporte comme un objet physique, pas
+  // comme une zone cliquable.
+  "btn-chunky group/button inline-flex shrink-0 items-center justify-center rounded-full border border-transparent bg-clip-padding text-sm font-semibold whitespace-nowrap outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
-        default:
-          "bg-primary text-primary-foreground shadow-sm shadow-primary/25 hover:bg-primary/90 active:translate-y-px active:shadow-none",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
         outline:
-          "border-border bg-background shadow-sm hover:bg-muted hover:text-foreground active:translate-y-px active:shadow-none aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+          "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] active:translate-y-px active:shadow-none aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
+          "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
         ghost:
           "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
         destructive:
@@ -49,19 +53,48 @@ function Button({
   variant = "default",
   size = "default",
   asChild = false,
+  shine = false,
+  onClick,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    /**
+     * Balayage de lumière permanent. À réserver à l'action UNIQUE et principale
+     * d'un écran (le « GO » d'un mode, le CTA d'une modale) : deux boutons qui
+     * brillent en même temps ne se distinguent plus l'un de l'autre.
+     */
+    shine?: boolean
   }) {
   const Comp = asChild ? Slot.Root : "button"
+
+  // Le retour sonore/haptique se joue au CLICK, pas au pointerdown.
+  //
+  // Le pointerdown paraît plus vif — mais un son ne se rattrape pas : poser le
+  // pouce sur un bouton puis faire glisser pour dérouler la page (le geste le
+  // plus courant du mobile, et l'app est pleine de boutons dans le flux) tirait
+  // le son ET la vibration alors qu'aucun clic n'aurait lieu. Un bouton qui
+  // sonne quand on scrolle est bien pire qu'un bouton qui sonne 80 ms plus tard.
+  //
+  // Le click a deux autres mérites : il part aussi à l'ENTRÉE/ESPACE et sous
+  // lecteur d'écran (le pointerdown, jamais — ces élèves n'avaient aucun
+  // retour), et l'enfoncement VISUEL reste instantané puisqu'il est en CSS pur
+  // (`.btn-chunky:active`). C'est le comportement des boutons natifs.
+  //
+  // `press()` respecte l'interrupteur de son de l'app et se tait tout seul là
+  // où l'haptique n'existe pas (iOS Safari, bureau).
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    press(intentOfVariant((variant ?? undefined) as ButtonVariant | undefined))
+    onClick?.(e)
+  }
 
   return (
     <Comp
       data-slot="button"
       data-variant={variant}
       data-size={size}
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, className }), shine && "btn-shine")}
+      onClick={handleClick}
       {...props}
     />
   )

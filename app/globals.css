@@ -2267,6 +2267,121 @@ a:hover > .wiggle-on-hover {
 }
 
 /* =============================================================================
+   BOUTONS « CHUNKY » — le socle 3D et l'enfoncement au tap
+   -----------------------------------------------------------------------------
+   Ce qui donne à un bouton de jeu mobile sa sensation de bouton PHYSIQUE, c'est
+   une épaisseur visible sous lui, qui s'écrase quand on appuie. Trois règles :
+
+   1. L'épaisseur est une OMBRE DURE (`box-shadow: 0 Npx 0`), jamais une
+      bordure : une bordure change la hauteur de l'élément, donc la mise en
+      page saute d'un pixel à chaque appui sur toute la page.
+   2. À l'appui, le bouton descend de la hauteur du socle MOINS 1 px, et le
+      socle rétrécit d'autant. La somme reste constante → le bas du bouton ne
+      bouge pas, seul le dessus s'enfonce. C'est ce détail qui fait « bloc
+      pressé » plutôt que « bloc qui glisse ».
+   3. Transition très courte (~60 ms) à l'aller, un poil plus longue au retour :
+      un bouton doit s'enfoncer instantanément et se relever avec un rien
+      d'élan.
+
+   La couleur du socle est une variable par variante (`--btn-edge`), pour que la
+   tranche soit toujours la version assombrie du dessus — un socle gris sous un
+   bouton violet casse l'illusion.
+   ========================================================================== */
+
+[data-slot='button'] {
+  --btn-edge: transparent;
+  --btn-depth: 0px;
+}
+
+[data-slot='button'][data-variant='default'] {
+  /* Violet de marque, assombri : la tranche du même bloc, pas une autre couleur. */
+  --btn-edge: color-mix(in oklab, var(--primary), black 28%);
+  --btn-depth: 4px;
+}
+[data-slot='button'][data-variant='secondary'] {
+  --btn-edge: color-mix(in oklab, var(--secondary), var(--foreground) 22%);
+  --btn-depth: 3px;
+}
+[data-slot='button'][data-variant='outline'] {
+  --btn-edge: color-mix(in oklab, var(--border), var(--foreground) 14%);
+  --btn-depth: 3px;
+}
+[data-slot='button'][data-variant='destructive'] {
+  --btn-edge: color-mix(in oklab, var(--destructive), black 24%);
+  --btn-depth: 3px;
+}
+
+/* Le socle lui-même. Posé par components/ui/button.tsx, mais utilisable sur
+   n'importe quel élément pressable : il suffit de lui donner ses deux
+   variables (`--btn-edge` et `--btn-depth`). Les valeurs de repli permettent de
+   l'appliquer tel quel à un bouton brut. */
+.btn-chunky {
+  box-shadow: 0 var(--btn-depth, 3px) 0 0 var(--btn-edge, transparent);
+  transition:
+    transform 60ms ease-out,
+    box-shadow 60ms ease-out,
+    background-color 150ms ease-out,
+    color 150ms ease-out;
+  /* Supprime le délai de 300 ms et le zoom au double-tap sur mobile : sans ça,
+     l'enfoncement est parfait mais l'action arrive un tiers de seconde après —
+     et c'est ce retard, pas l'animation, qui fait « site web » au lieu d'« app ». */
+  touch-action: manipulation;
+  /* Android peint un rectangle gris translucide par-dessus tout élément tapé.
+     Il écrase le socle et donne un rendu bon marché ; on le remplace par notre
+     propre état pressé. */
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-chunky:active:not(:disabled) {
+  /* -1px : il reste toujours un filet de socle, sinon le bouton a l'air
+     décollé de la page au moment précis où il devrait sembler enfoncé. */
+  transform: translateY(calc(var(--btn-depth, 3px) - 1px));
+  box-shadow: 0 1px 0 0 var(--btn-edge, transparent);
+}
+/* Un bouton désactivé n'a pas d'épaisseur : rien à enfoncer. */
+.btn-chunky:disabled {
+  box-shadow: none;
+}
+
+/* Balayage de lumière sur l'action principale : une bande claire qui traverse
+   lentement le bouton. C'est le seul ornement permanent qu'on s'autorise, et
+   il ne vit QUE sur la variante principale — partout ailleurs il deviendrait
+   du clignotement. */
+@keyframes btn-shine {
+  0% {
+    transform: translateX(-140%) skewX(-18deg);
+  }
+  55%,
+  100% {
+    transform: translateX(340%) skewX(-18deg);
+  }
+}
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-shine::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inline-size: 45%;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255 255 255 / 0.28),
+    transparent
+  );
+  animation: btn-shine 3.8s ease-in-out infinite;
+  pointer-events: none;
+}
+/* Pas de balayage sur un bouton éteint ou en attente : la lumière promet une
+   action disponible. */
+.btn-shine:disabled::after {
+  display: none;
+}
+
+/* =============================================================================
    ROBES DES JEUX DE SALON (`.jeu-<theme>`)
    -----------------------------------------------------------------------------
    Chaque jeu de salon est vendu par une illustration qui promet un univers. Si
@@ -2326,6 +2441,13 @@ a:hover > .wiggle-on-hover {
   --jeu-glow: oklch(0.78 0.12 205 / 0.3);
 }
 
+.jeu-anatomie {
+  /* Anatomie express — ivoire de planche médicale, accent rouge sang. */
+  --jeu-accent: oklch(0.52 0.15 22);
+  --jeu-ink: oklch(0.99 0.01 22);
+  --jeu-surface: oklch(0.96 0.012 40);
+  --jeu-glow: oklch(0.72 0.12 28 / 0.24);
+}
 .jeu-plaques {
   /* Le compte est bon — vert plateau de jeu télévisé, plaques crème. */
   --jeu-accent: oklch(0.48 0.12 165);

@@ -15,6 +15,7 @@ import {
   type GameTimbre,
   type ToneSpec,
 } from '@/lib/game-audio'
+import { pressBuzz, pressTones, type PressIntent } from '@/lib/press'
 
 const STORAGE_KEY = 'scolaria-sound'
 
@@ -90,10 +91,12 @@ function playAsset(name: AssetName, volume: number, fallback?: () => void) {
 }
 
 export const sfx = {
-  // Tap de navigation : à peine audible, juste un retour tactile.
+  // Tap de navigation. Rendu par le MÊME moteur que le clic des boutons
+  // (lib/press) : partout où l'app appelait déjà `sfx.tap()` — barre d'onglets,
+  // croix de fermeture, pastilles de classe — le retour devient celui d'un
+  // bouton pressé, sans avoir à toucher ces fichiers un par un.
   tap() {
-    if (!isSoundOn()) return
-    note(880, 0, 0.035, 'triangle', 0.012)
+    press('neutral')
   },
   // Retournement de carte : petit clic doux.
   flip() {
@@ -225,6 +228,50 @@ export function gameSfx(timbre: GameTimbre): GameSfx {
     win: () => playTones(winTones(timbre)),
     lose: () => playTones(loseTones(timbre)),
     countdown: (n) => playTones([countdownTone(timbre, n)]),
+  }
+}
+
+// ----------------------------------------------------------- clic de bouton
+// Le retour d'appui commun à toute l'app. Joué au POINTERDOWN (cf. lib/press) :
+// au relâchement, le son arrive ~80 ms trop tard et le bouton semble mou.
+
+// Un même geste déclenche souvent DEUX retours : `press()` au pointerdown du
+// bouton partagé, puis un `sfx.tap()` que le gestionnaire de clic appelait déjà
+// de son côté. Sans garde, on entendrait le clic en double — le défaut le plus
+// audible qu'on puisse introduire en généralisant un son.
+//
+// On ne déduplique pas par bouton (impossible à suivre) mais par FENÊTRE : deux
+// clics à moins de 150 ms d'intervalle sont le même geste. Taper deux boutons
+// différents aussi vite n'arrive pas au doigt.
+const CLICK_DEDUPE_MS = 150
+let lastClickAt = -Infinity
+
+function claimClick(): boolean {
+  const now = Date.now()
+  if (now - lastClickAt < CLICK_DEDUPE_MS) return false
+  lastClickAt = now
+  return true
+}
+
+/**
+ * Joue le clic d'un bouton : son + vibration, accordés à son importance.
+ * Silencieux si l'élève a coupé le son — l'interrupteur couvre aussi la
+ * vibration (couper le son en cours, c'est vouloir la discrétion complète).
+ */
+export function press(intent: PressIntent = 'primary'): void {
+  if (!isSoundOn() || !claimClick()) return
+  playTones(pressTones(intent))
+  const pattern = pressBuzz(intent)
+  if (pattern === null || typeof window === 'undefined') return
+  const nav = window.navigator as Navigator & {
+    vibrate?: (p: number | number[]) => boolean
+  }
+  if (typeof nav.vibrate !== 'function') return
+  try {
+    nav.vibrate(pattern)
+  } catch {
+    // Certains navigateurs lèvent hors geste utilisateur : l'haptique est un
+    // bonus, jamais une raison de casser un clic.
   }
 }
 

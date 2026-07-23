@@ -218,10 +218,7 @@ export default function TrajectoryCard({
           </p>
           <Button
             className="mt-3"
-            onClick={() => {
-              sfx.tap()
-              setShowForm(true)
-            }}
+            onClick={() => setShowForm(true)}
             disabled={needsMigration}
           >
             Ajouter mes moyennes

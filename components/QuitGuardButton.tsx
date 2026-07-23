@@ -100,10 +100,7 @@ export default function QuitGuardButton({
                 <Button
                   size="lg"
                   className="mt-6 w-full rounded-full font-bold"
-                  onClick={() => {
-                    sfx.tap()
-                    setOpen(false)
-                  }}
+                  onClick={() => setOpen(false)}
                 >
                   Continuer à apprendre
                 </Button>

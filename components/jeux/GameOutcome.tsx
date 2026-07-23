@@ -95,7 +95,9 @@ export default function GameOutcome({
       </p>
 
       <div className="flex w-full flex-col gap-2">
-        <Button size="lg" onClick={onReplay} className="w-full">
+        {/* `shine` : l'écran de fin n'a qu'UNE action qui compte — relancer.
+            Le balayage de lumière la désigne sans un mot. */}
+        <Button size="lg" shine onClick={onReplay} className="w-full">
           <RotateCcw className="size-4" aria-hidden="true" /> Rejouer
         </Button>
         <Button variant="ghost" onClick={onExit}>

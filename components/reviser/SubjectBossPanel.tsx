@@ -6,7 +6,6 @@ import { Star, Swords } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import BossMode from '@/components/BossMode'
 import { cn } from '@/lib/utils'
-import { sfx } from '@/lib/sounds'
 import {
   bossForSubject,
   currentBossRank,
@@ -98,10 +97,7 @@ export default function SubjectBossPanel({
         size="lg"
         className="rounded-full px-8"
         disabled={pool.length === 0}
-        onClick={() => {
-          sfx.tap()
-          setFighting(true)
-        }}
+        onClick={() => setFighting(true)}
       >
         <Swords className="size-4" /> Affronter {boss.name}
       </Button>

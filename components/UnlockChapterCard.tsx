@@ -65,10 +65,7 @@ export default function UnlockChapterCard({
         {canUnlock ? (
           <Button
             className="rounded-full"
-            onClick={() => {
-              sfx.tap()
-              setConfirming(true)
-            }}
+            onClick={() => setConfirming(true)}
           >
             <GemIcon className="size-4" aria-hidden="true" />
             Utiliser {gemsLabel(GEM_COST_CHAPTER)}

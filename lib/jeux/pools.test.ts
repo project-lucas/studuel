@@ -3,8 +3,10 @@ import {
   COUNTDOWN_BUILDERS,
   ORDER_BUILDERS,
   POOL_BUILDERS,
+  ZONE_BUILDERS,
   buildOrderPool,
   buildSalonPool,
+  buildZonePool,
   idsWithPool,
   poolKind,
 } from './pools'
@@ -22,6 +24,7 @@ const implementedIds = SALONS.flatMap((s) =>
 const qcmIds = implementedIds.filter((id) => poolKind(id) === 'qcm')
 const orderIds = implementedIds.filter((id) => poolKind(id) === 'ordre')
 const countdownIds = implementedIds.filter((id) => poolKind(id) === 'compte')
+const zoneIds = implementedIds.filter((id) => poolKind(id) === 'zones')
 
 describe('cohérence catalogue ↔ banques de questions', () => {
   it('chaque jeu jouable a une banque enregistrée (aucun cul-de-sac)', () => {
@@ -40,10 +43,11 @@ describe('cohérence catalogue ↔ banques de questions', () => {
     for (const id of qcmIds) expect(POOL_BUILDERS[id]).toBeDefined()
     for (const id of orderIds) expect(ORDER_BUILDERS[id]).toBeDefined()
     for (const id of countdownIds) expect(COUNTDOWN_BUILDERS[id]).toBeDefined()
+    for (const id of zoneIds) expect(ZONE_BUILDERS[id]).toBeDefined()
     // Chaque jeu jouable tombe dans une forme, et une seule.
-    expect(qcmIds.length + orderIds.length + countdownIds.length).toBe(
-      implementedIds.length,
-    )
+    expect(
+      qcmIds.length + orderIds.length + countdownIds.length + zoneIds.length,
+    ).toBe(implementedIds.length)
   })
 
   it('n’inscrit jamais un jeu dans deux registres à la fois', () => {
@@ -51,12 +55,18 @@ describe('cohérence catalogue ↔ banques de questions', () => {
       ...Object.keys(POOL_BUILDERS),
       ...Object.keys(ORDER_BUILDERS),
       ...Object.keys(COUNTDOWN_BUILDERS),
+      ...Object.keys(ZONE_BUILDERS),
     ]
     expect(new Set(all).size).toBe(all.length)
   })
 
   it('rend null pour un id sans aucune banque', () => {
     expect(poolKind('pointe-carte')).toBeNull()
+  })
+
+  it('sert des zones pour le jeu de désignation, et rien d’autre', () => {
+    expect(buildZonePool('anatomie-express', 'v', 8)).toHaveLength(8)
+    expect(buildZonePool('capitales', 'v', 8)).toBeNull()
   })
 
   it('playableSalonGame résout exactement les jeux ayant une banque', () => {

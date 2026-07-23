@@ -23,6 +23,7 @@ import {
   buildComptePool,
   type CountdownPuzzle,
 } from '@/lib/jeux/compte-est-bon'
+import { buildAnatomiePool, type OrganRound } from '@/lib/jeux/anatomie'
 
 // Chaque id doit être marqué `implemented: true` dans le catalogue ET présent
 // ici OU dans ORDER_BUILDERS. La divergence est bloquée par pools.test.ts
@@ -93,18 +94,39 @@ export function buildCountdownPool(
   return builder ? builder(seed, count) : null
 }
 
+// --------------------------------------------------------------- anatomie
+// Quatrième forme : des ZONES à désigner sur un schéma, ni QCM, ni tableaux,
+// ni tirages.
+export const ZONE_BUILDERS: Record<
+  string,
+  (seed: string, count: number) => OrganRound[]
+> = {
+  'anatomie-express': (seed, count) => buildAnatomiePool(seed, count),
+}
+
+/** Les manches d'un jeu de désignation, ou null si aucune banque enregistrée. */
+export function buildZonePool(
+  id: string,
+  seed: string,
+  count: number,
+): OrganRound[] | null {
+  const builder = ZONE_BUILDERS[id]
+  return builder ? builder(seed, count) : null
+}
+
 /**
  * La FORME de banque d'un jeu — c'est elle qui décide de la table de jeu à
  * monter, pas la mécanique : « Capitales du monde » et « Le compte est bon »
  * partagent la mécanique `expedition` mais ne servent pas du tout la même
  * matière (des QCM d'un côté, des tirages de plaques de l'autre).
  */
-export type PoolKind = 'qcm' | 'ordre' | 'compte'
+export type PoolKind = 'qcm' | 'ordre' | 'compte' | 'zones'
 
 export function poolKind(id: string): PoolKind | null {
   if (POOL_BUILDERS[id]) return 'qcm'
   if (ORDER_BUILDERS[id]) return 'ordre'
   if (COUNTDOWN_BUILDERS[id]) return 'compte'
+  if (ZONE_BUILDERS[id]) return 'zones'
   return null
 }
 
@@ -114,5 +136,6 @@ export function idsWithPool(): string[] {
     ...Object.keys(POOL_BUILDERS),
     ...Object.keys(ORDER_BUILDERS),
     ...Object.keys(COUNTDOWN_BUILDERS),
+    ...Object.keys(ZONE_BUILDERS),
   ]
 }

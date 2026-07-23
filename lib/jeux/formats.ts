@@ -114,6 +114,7 @@ export type MechanicParams =
 // dur ici ni dans les composants : on ne manipule que le NOM du thème.
 
 export type GameTheme =
+  | 'anatomie'
   | 'plaques'
   | 'frise'
   | 'grammaire'
@@ -518,6 +519,28 @@ export const GAME_FORMATS: Record<SalonGameId, GameFormat> = {
       mechanic: 'ascension',
       ascension: { floors: 8, fall: 1, questionSeconds: 8 },
     },
+  },
+
+  // Le seul jeu où l'on répond en DÉSIGNANT un endroit : pas de proposition à
+  // lire, donc pas d'élimination possible. On sait ou on ne sait pas. D'où une
+  // expédition (8 escales, personne n'élimine) avec un chrono confortable :
+  // chercher sur un schéma prend plus longtemps que choisir dans une liste.
+  'anatomie-express': {
+    id: 'anatomie-express',
+    theme: 'anatomie',
+    timbre: 'cristal',
+    layout: 'grille',
+    rule: '8 organes à localiser sur la silhouette. 15 secondes chacun, et rien ne t’élimine.',
+    emoji: '🫀',
+    lexicon: {
+      verb: 'Touche-le sur la silhouette',
+      step: 'organe',
+      steps: 'organes',
+      hit: 'organe localisé',
+      win: 'Planche complète !',
+      lose: 'Révision d’anatomie conseillée',
+    },
+    params: { mechanic: 'expedition', expedition: { stops: 8, questionSeconds: 15 } },
   },
 
   // --- Physique-Chimie ------------------------------------------------------

@@ -23,6 +23,7 @@ export type SalonGameId =
   | 'classe-moi-ca'
   | 'chasse-elements'
   | 'bonne-unite'
+  | 'anatomie-express'
   | 'frise-folle'
   | 'phrase-en-vrac'
   | 'compte-est-bon'
@@ -180,8 +181,8 @@ export const SALONS: Salon[] = [
         id: 'anatomie-express',
         name: 'Anatomie express',
         emoji: '🦴',
-        tagline: 'Place l’organe au bon endroit sur la silhouette',
-        implemented: false,
+        tagline: 'Touche l’organe demandé sur la silhouette',
+        implemented: true,
       },
       {
         id: 'classe-moi-ca',

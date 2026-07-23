@@ -2,11 +2,13 @@ import { redirect } from 'next/navigation'
 import GameTable from '@/components/jeux/GameTable'
 import OrderTable from '@/components/jeux/OrderTable'
 import CountdownTable from '@/components/jeux/CountdownTable'
+import AnatomyTable from '@/components/jeux/AnatomyTable'
 import { playableSalonGame } from '@/lib/jeux/catalog'
 import {
   buildCountdownPool,
   buildOrderPool,
   buildSalonPool,
+  buildZonePool,
   poolKind,
 } from '@/lib/jeux/pools'
 import { gameFormat, poolSizeFor } from '@/lib/jeux/formats'
@@ -55,6 +57,20 @@ export default async function SalonJeuPage({
   // « Capitales du monde » et « Le compte est bon » sont deux expéditions, mais
   // l'une sert des QCM et l'autre des tirages de plaques.
   const kind = poolKind(jeu)
+
+  if (kind === 'zones') {
+    const zoneRounds = buildZonePool(jeu, seed, size)
+    if (!zoneRounds || zoneRounds.length === 0) redirect('/defi')
+    return (
+      <AnatomyTable
+        format={format}
+        rounds={zoneRounds}
+        name={found.game.name}
+        subject={found.salon.subject}
+        subjectEmoji={found.salon.emoji}
+      />
+    )
+  }
 
   if (kind === 'compte') {
     const puzzles = buildCountdownPool(jeu, seed, size)

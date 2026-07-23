@@ -179,7 +179,7 @@ describe('annonces et dimensionnement', () => {
     // L'unité dépend de la FORME de la banque : des QUESTIONS pour les QCM, des
     // TABLEAUX pour la remise en ordre, des TIRAGES pour le compte est bon —
     // un tableau ou un tirage valent chacun plusieurs interactions.
-    const FLOOR = { qcm: 12, ordre: 4, compte: 5 } as const
+    const FLOOR = { qcm: 12, ordre: 4, compte: 5, zones: 8 } as const
     for (const f of formats) {
       const kind = poolKind(f.id)
       expect(kind, `${f.id} sans banque`).not.toBeNull()

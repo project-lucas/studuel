@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 import { CircleUser, GraduationCap, TriangleAlert } from 'lucide-react'
 import {
   Card,
@@ -101,7 +102,12 @@ export default async function ReviserPage() {
   ] = await Promise.all([
     supabase
       .from('profiles')
-      .select('full_name, grade_level, selected_subjects, commute_slots')
+      // `profile_type` vient de la 048 : une migration ANCIENNE et appliquée
+      // depuis longtemps, donc rien à isoler ici (la règle des colonnes
+      // tardives ne s'applique qu'aux migrations pas encore passées).
+      .select(
+        'full_name, grade_level, selected_subjects, commute_slots, profile_type',
+      )
       .eq('id', user.id)
       .maybeSingle(),
     supabase.from('profiles').select('avatar').eq('id', user.id).maybeSingle(),
@@ -135,6 +141,15 @@ export default async function ReviserPage() {
   )
 
   const grade = profile?.grade_level ?? null
+
+  // Un compte parent n'a pas de classe : sans ça, il tombait sur « Dis-nous ta
+  // classe » — un écran d'élève dont la seule issue est de s'en inventer une.
+  // Le test vit ICI plutôt qu'à la racine parce que le profil y est DÉJÀ
+  // chargé : le faire en amont coûtait une requête de plus à chaque lancement
+  // de l'app, pour tous les élèves, afin de router une poignée de parents.
+  if ((profile as { profile_type?: string | null } | null)?.profile_type === 'parent') {
+    redirect('/parents')
+  }
 
   if (!grade) {
     return (

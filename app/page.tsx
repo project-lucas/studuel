@@ -14,18 +14,9 @@ export default async function Home() {
     data: { user },
   } = await supabase.auth.getUser()
 
-  if (!user) redirect('/bienvenue')
-
-  // Un compte parent n'a pas de classe : le renvoyer sur Réviser l'amenait sur
-  // « Dis-nous ta classe », un écran d'élève sans issue pour lui. Son espace
-  // n'étant listé dans aucune barre de navigation, la racine est justement le
-  // point d'entrée de l'app installée (start_url du manifest) — c'est ici que
-  // ça se joue.
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('profile_type')
-    .eq('id', user.id)
-    .maybeSingle<{ profile_type: string | null }>()
-
-  redirect(profile?.profile_type === 'parent' ? '/parents' : '/reviser')
+  // Le cas du compte PARENT (qui n'a pas de classe et n'a rien à faire sur
+  // Réviser) est traité dans `/reviser`, où le profil est déjà chargé : le
+  // router ici coûterait une requête de plus à chaque lancement de l'app, pour
+  // tous les élèves, au bénéfice d'une poignée de parents.
+  redirect(user ? '/reviser' : '/bienvenue')
 }

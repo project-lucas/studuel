@@ -31,79 +31,77 @@ le finis et je le vérifie.
 
 ## 2. État réel du projet (à réactualiser)
 
-**Dernière remise à plat : 2026-07-20** (Lia, `/jour` cycle 2).
-L'historique détaillé des cycles passés vit dans `_ASSOCIE/JOURNAL.md` + le
-git log — ce paragraphe ne garde que l'état courant.
+**Dernière remise à plat : 2026-07-23** (Lia, `/jour` cycle 1), **après mesure
+réelle à la clé anon** — les chiffres ci-dessous sont sondés, pas recopiés.
 
-**Contenu** — structure complète : **15 matières, 269 chapitres, 538 leçons**.
-Cours, cartes mentales, fiches de révision et quiz (~10 questions/chapitre,
-exercices type brevet/bac corrigés) : **100 %**. **Studygram : 0 %** — seul
-support vide, gated par une décision de format (voir
-`docs/CADRAGE-STUDYGRAM.md`).
+**Contenu mesuré le 2026-07-23** : **25 matières, 278 chapitres, 564 leçons**,
+**295 quiz**. Répartition par classe (matières / chapitres) : 6e 15/29 ·
+5e 18/40 · 4e 18/39 · 3e 19/40 · 2de 14/33 · 1re 17/44 · Tle 18/48.
 
-**Base de données : 001→173 créées, 001→167 confirmées exécutées.**
-**⚠️ `168` → `176` EN ATTENTE d'exécution** (idempotentes, indépendantes, ordre
-indifférent) : 168 = tirage coffre en SQL (`open_chest_v2`, **supprime
-`open_chest(JSONB)`**), 169 = rate-limit codes amis, 170 = borne série 400 j,
-171 = durcissement économie 2e passe (**`apply_ranked_match` borné 30/h**),
-172 = fermeture faille confidentialité parents, 173 = rate-limit
-`add_friend_by_code`, **174 = bilan victoires/défaites des duels**, **175 =
-plafond journalier d'XP de défi** (ferme un VRAI trou : l'INSERT direct dans
-`challenge_sessions` était borné par ligne mais pas en VOLUME → ligue truquable),
-**176 = nom de groupe d'amis** (`squad_name` sur `profiles`, colonne + GRANT,
-hérite des policies existantes), **177 = bornes `test_sessions` /
-`exam_blanc_sessions`** (la table jumelle de `challenge_sessions` n'avait JAMAIS
-eu de CHECK depuis 003 : `score: 999999` par INSERT direct → XP `score×10+20`
-sans plafond ; miroir exact de la 165), **178 = autorisation Realtime** (canaux
-`duel-*`/`coop-*` privés ; **INERTE tant que le client n'est pas basculé en
-`private: true`** — donc sûre à exécuter, mais NE PAS basculer le client avant,
-sous peine de refuser toutes les souscriptions), **179 = decks de flashcards
-gratuits pour 5e/4e/2de/Tle** (quatre classes sur sept n'en avaient AUCUN, donc
-le pool du Défi y perdait silencieusement ses cartes), **180 = Sciences et
-Technologie en 6e** (classe d'entrée, la plus pauvre du catalogue),
-**181 = accès aux cartes mentales** (colonne générée `has_mind_map` + RPC
-`chapter_mind_map` gardée par l'abonnement — **ADDITIVE, sûre à tout moment**),
-**182 = retrait de la lecture directe de `chapters.mind_map`** (**⚠️ à exécuter
-UNIQUEMENT après le déploiement de `4c4396e`**, sinon tout Réviser répond
-« permission denied »). **Prochaine à créer = `183`.**
+⚠️ **5 matières sont des coquilles vides** (déclarées au catalogue, zéro
+chapitre) : `allemand`, `arts-plastiques`, `grec`, `musique`, `sport` — toutes
+posées par la migration 191. L'écran s'en sort proprement (« Le programme de X
+en 6e arrive bientôt »), donc ce n'est pas un bug, mais **la migration 193 en
+ajouterait 6 de plus** (`emc`, `snt`, `hlp`, `llcer-anglais`, `si`,
+`maths-complementaires`) : on passerait à **11 matières sans contenu sur 31**.
+C'est une décision de Lucas, pas une correction à faire à l'aveugle.
 
-**Sondé à la clé anon le 2026-07-20 (cycle 2)** : `168`→`182` sont TOUTES encore
-en attente. Conséquences visibles en prod : le contenu 6e et les decks gratuits
-ne sont pas là, et **`chapters.mind_map` reste lisible publiquement** jusqu'à
-l'exécution de la `182`.
+**Bonne nouvelle mesurée** : le vieux « levier n°1 » (la 6e trop pauvre) est
+**réglé côté matières** — 15 au lieu de 5 — et **chaque classe a désormais au
+moins un deck gratuit** (6e=2, toutes les autres=1), ce qui referme la
+dégradation silencieuse du pool du Défi. Reste que la 6e est toujours la classe
+la moins fournie en CHAPITRES (29).
+
+Cours, cartes mentales, fiches de révision et quiz : **100 %** sur les matières
+remplies. **Studygram : 0 %** — seul support vide, gated par une décision de
+format (voir `docs/CADRAGE-STUDYGRAM.md`).
+
+**Base de données : 001→194 créées. État SONDÉ à la clé anon le 2026-07-23** —
+et il ne ressemble pas du tout à ce que ce document affirmait :
+
+- **Exécutées (vérifiées)** : jusqu'à **191 inclus**, à l'exception de la 188.
+  Notamment **179** (decks gratuits), **181/182** (cartes mentales — *le trou
+  premium est FERMÉ*, `chapters.mind_map` répond « permission denied »),
+  **183** (gemmes/parrainage/squad), **184/185** (fiches de révision, même motif
+  correct), **186** (carnet), **187** (capacité), **189** (avatar), **190/191**
+  (nouvelles matières).
+- **NON exécutées** : **188** (tour guidé — `profiles.tutorial_completed`
+  absente), **192** (économie/progression — `user_wallet`, `xp_events`,
+  `gem_events`, `app_flags` absentes), **193** et **194** (écrites, jamais
+  passées). **Prochaine à créer = `195`.**
+- **Le code encaisse les deux absences sans casser** (vérifié ligne à ligne) :
+  `tutorial_completed` est isolée dans sa propre requête, `fetchWallet` renvoie
+  `null` si `user_wallet` manque, `defiEvents` retombe sur `[]`. Le tour guidé
+  ne s'affiche simplement jamais et le portefeuille reste en XP dérivée.
+
+⚠️ **Ne pas exécuter la 192 sans avoir déployé `15577ed`** (voir §9).
+
+*Ancienne ligne, fausse depuis plusieurs jours : « 001→173 créées, 001→167
+confirmées exécutées ». Leçon : **sonder, ne jamais recopier**.*
 
 **Fonctionnel livré (l'essentiel)** :
-- **Boucle cœur Réviser** : accueil « carnet violet », chapitres → leçon-hub
+- **Boucle cœur Réviser** : accueil « carnet violet », matières rangées en
+  **dossiers repliables** (Programme / Hors programme), chapitres → leçon-hub
   multi-supports (cours, fiche, flashcards, quiz à correction immédiate, défi
   solo par niveaux), SRS + file « À revoir », examen blanc, contrôles à venir,
-  bibliothèque de contenus créés par l'élève, Mon carnet (mastery + examen).
+  bibliothèque de l'élève, Mon carnet de cours (chapitres, questions, révision).
 - **Défi v3 « écran d'arène »** : HUD plein écran, salle de jeu `/defi/jouer`
   (Duel BO3, Blitz, Chrono, Survie, Boss, coop temps réel, classé), historique
   des duels, partie rapide par QR, camp d'entraînement, espace Jeux (salons 1v1
-  par matière, capitales & orthographe ; 2v2 « bientôt »).
-- **Social réel — le mock est débranché** : amis par code + QR (163), clans =
-  écoles, classements clan/national/amis, **ligue hebdomadaire** (paliers,
-  promo/relégation par cron), tournoi des écoles (162), « en direct » +
-  « mon école ».
-- **Moi** : bilan de la semaine, objectifs perso (reset lundi), journal de
-  progression, compagnon, débrief récompensé, avatar, calendrier de discipline.
-- **Trésor** (coffres/boutique/collection), **espace parents** (3 temps +
-  programme du coach), **onboarding v2** `/bienvenue`, abonnement, PWA.
+  par matière — **chaque jeu a désormais son propre gameplay**, dont
+  « Anatomie express », 4e forme d'interaction : on désigne au lieu de choisir).
+- **Social réel** : amis par code + QR, clans = écoles, classements, ligue
+  hebdomadaire, tournoi des écoles, « en direct », squad, parrainage.
+- **Moi v7 « miroir motivant »** : capacité/plafond, trajectoire au bac,
+  leviers de la semaine, compagnon, avatar, débrief récompensé.
+- **Trésor** (coffres/boutique/collection), **gemmes** (déblocage de chapitre,
+  parrainage), **espace parents**, **onboarding v2** `/bienvenue`, PWA.
 
-**Livré le 2026-07-17 (jour cycle 1)** : WIP refonte visuelle commité (fond
-d'arène horaire + fonds `<body>` + couronnes + modale ami), **bulle de
-célébration de palier partageable** (arène + ligue, réutilisable par l'échelle
-géo), toast global, `lib/geo` (CP→dept→région), 8 revues de durcissement
-(fixes swipe/ligue/école, **boutons OAuth onboarding réparés**, perf pages
-chaudes et RPC classements).
-
-**Chantiers ouverts** : **échelle géographique** — cadrage écrit
-(`docs/CADRAGE-GEO.md`), décisions D1-D4 de Lucas requises avant de coder ;
-salons 2v2, Studygram, texte à trous, persistance du défi solo (gated) ;
-perf navigation niveau 3 (remisé : exige `cacheComponents: true`, session
-dédiée sur branche) ; idées neuves en bas de `_ASSOCIE/BACKLOG-JOUR.md`
-(swipe interne Réviser|Carnet, tirage coffre en SQL, rate-limit
-friend_preview, current_streak borné).
+**Chantiers ouverts** : échelle géographique (cadrage `docs/CADRAGE-GEO.md`,
+décisions D1-D4 requises) ; Studygram, salons 2v2, texte à trous, persistance du
+défi solo (gated) ; perf navigation niveau 3 (remisé : exige
+`cacheComponents: true`, session dédiée sur branche) ; **grading serveur des
+quiz** — désormais chiffré, voir §9.
 
 ---
 
@@ -235,6 +233,58 @@ breaking changes vs. l'entraînement.
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible,
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
+
+**2026-07-23 — fin du cycle 1 `/jour` (Lia) :**
+- **Réveil sur un arbre sale** (~2 700 lignes non relues laissées par trois jours
+  de sessions interactives) → P0 = 4 revues sous-agents, findings vérifiés un par
+  un, puis **6 lots verts**. Ensuite **4 audits** de zones jamais relues.
+  **12 commits**, tous `typecheck` + `lint` + `test` + `next build` verts,
+  **poussés sur `origin/main`** (dernier `f4c1c49`, 1145 tests).
+- **⚠️ BLOQUEUR N°1 À VÉRIFIER — les duels en direct sont peut-être MORTS en
+  prod.** Le commit `0ba384a` (20/07) a basculé `useLiveDuel` et `useCoop` en
+  `config: { private: true }`. Sur un canal privé **sans policies**, Supabase
+  refuse TOUTES les souscriptions. Or la migration `178` qui pose ces policies a
+  connu un échec (`c8b762c` la corrige) et je **n'ai pas pu vérifier son état à
+  la clé anon** (les policies `realtime.messages` ne sont pas sondables ainsi).
+  **Test à faire à deux comptes : lancer un duel.** Si ça ne marche pas, exécuter
+  la `178` — c'est l'ordre inverse des autres migrations.
+- **⚠️ NE PAS EXÉCUTER LA 192 telle qu'elle était.** L'audit économie a sorti un
+  trou : `wallet_award_xp` est `GRANT EXECUTE TO authenticated`, la clé anon est
+  publique, et le montant de `defi_arena` était **fourni par l'appelant**
+  (clampé à 600, 30 fois/jour = **18 000 XP/jour fabriqués sans jouer**, plus les
+  gemmes de niveau). **Corrigé sur place** (`15577ed`) : le montant est relu sur
+  la session d'arène désignée par la clé. C'était légitime parce que **la 192
+  n'a jamais été exécutée** (sondé) — la règle « ne jamais modifier une migration
+  déjà exécutée » ne s'appliquait pas.
+- **Trou économique qui reste OUVERT, et qui est une décision de Lucas** : la
+  migration `183` étant passée, `referral_activation_trigger` se déclenche sur
+  **n'importe quel** INSERT dans `test_sessions` — table dont la policy autorise
+  l'écriture directe (`auth.uid() = user_id`). Un faux compte + un
+  `insert({score:1,total:1})` suffit donc à activer un parrainage : **+30 💎 au
+  parrain et au filleul, sans avoir rien révisé** (borné à 600 💎 par le cap).
+  Je ne l'ai **pas** colmaté : le seul vrai correctif est le **grading serveur
+  des quiz**, déjà en attente d'arbitrage depuis le 18/07, et un demi-correctif
+  (exiger `quiz_id` + `total >= 3`) n'ajoute que deux lignes au script d'un
+  attaquant tout en risquant de casser une activation légitime. **Ce trou est le
+  chiffrage concret qui manquait à cette décision.**
+- **Piège confirmé une 3e fois — le « site oublié ».** La migration 185 a révoqué
+  `lessons.revision_sheet`, et un site de lecture avait échappé au balayage :
+  `app/admin/matiere/[id]/page.tsx` nommait la colonne dans une **jointure
+  imbriquée** `lessons(...)`. Résultat, **en production depuis le 20/07** : le
+  Studio affichait **0 chapitre pour toutes les matières**, sans un mot (l'erreur
+  n'était pas testée, `data` retombait à `null`). Corrigé (`6e64596`). Le
+  changelog du commit d'origine annonçait 4 sites ; il y en avait 6. **Un plan
+  qui énumère des sites n'est pas une mesure — re-balayer soi-même, jointures
+  imbriquées comprises.** Et : être admin **côté application** ne contourne pas
+  un `GRANT` Postgres, qui s'applique au RÔLE.
+- **Contenu re-mesuré (sondé, pas recopié)** : le vieux « levier n°1 » (6e trop
+  pauvre) est réglé côté matières (15 au lieu de 5) et **chaque classe a enfin un
+  deck gratuit**. Mais **5 matières sont des coquilles vides** (0 chapitre) et la
+  **193 en ajouterait 6 de plus** → 11 sur 31. Décision de Lucas.
+- **Prochaine cible** : zones encore jamais auditées = **notifications push côté
+  correctness** (le volet sécurité est sain) et **l'espace Jeux** (13 gameplays
+  livrés le 20/07, jamais relus — seul « Anatomie express » l'a été). Sinon, le
+  levier produit est passé du catalogue au **contenu des 5 matières vides**.
 
 **2026-07-20 — fin du cycle 2 `/jour` (Lia) :**
 - **Fait** : la **P0 laissée par le cycle 1 est fermée** (`4c4396e`) — le contenu

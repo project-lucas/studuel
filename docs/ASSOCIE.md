@@ -281,10 +281,31 @@ breaking changes vs. l'entraînement.
   pauvre) est réglé côté matières (15 au lieu de 5) et **chaque classe a enfin un
   deck gratuit**. Mais **5 matières sont des coquilles vides** (0 chapitre) et la
   **193 en ajouterait 6 de plus** → 11 sur 31. Décision de Lucas.
-- **Prochaine cible** : zones encore jamais auditées = **notifications push côté
-  correctness** (le volet sécurité est sain) et **l'espace Jeux** (13 gameplays
-  livrés le 20/07, jamais relus — seul « Anatomie express » l'a été). Sinon, le
-  levier produit est passé du catalogue au **contenu des 5 matières vides**.
+- **Cycle 2 démarré en avance (demande de Lucas), + un cycle 3 armé à 16:10.**
+  Le mécanisme ne prévoyait que 2 cycles (`relance-jour.cmd` pose
+  `JOUR_CYCLE=2` = « ne ré-arme rien ») : le cycle 3 a donc ses propres fichiers
+  (`_ASSOCIE/relance-jour-cycle3.cmd`, `armer-relance-jour-cycle3.ps1`), et son
+  heure est **lue sur la tâche du cycle 2** plutôt que recalculée.
+- **Espace Jeux audité (cycle 2, `c393d9b`) — en MESURANT.** Un agent a construit
+  une partie de chaque jeu (graine fixe) au lieu de lire le code. C'est ce qui a
+  révélé qu'**il y a 17 jeux et non 13**, et surtout que **2 d'entre eux ne
+  peuvent jamais se terminer** : la mécanique `ascension` n'a ni vies ni chrono
+  global, et `run.ts` ne renvoyait jamais `lost` — le message de défaite de ces
+  jeux était du code mort. **Leçon : sur du gameplay, simuler bat relire.**
+- **Le garde-fou qui ne gardait rien.** Le test de cohérence des banques
+  vérifiait un plancher **constant** de 10 questions, jamais la consommation
+  réelle : vert depuis toujours pendant que `POOL_BUILDERS` tronquait les
+  banques. Même famille de piège que le `REVOKE` par colonne et que le plan qui
+  énumère 4 sites quand il y en a 6. **Un test qui ne peut pas échouer n'est pas
+  un test.**
+- **Piège de langage à retenir** : `manque > dette ?? 0` se parse
+  `(manque > dette) ?? 0` — `??` a une précédence PLUS BASSE que `>`. Le contrôle
+  était désactivé exactement là où il servait. Toujours parenthéser, et toujours
+  vérifier qu'un nouveau garde-fou ÉCHOUE quand on lui retire sa raison d'être.
+- **Prochaine cible** : rembourser la **dette de banque (34 questions**, chiffres
+  exacts dans `DETTE_DE_BANQUE`), puis les suites d'audit listées dans
+  `_ASSOCIE/BACKLOG-JOUR.md` (écran de fin qui ment, XP affichée ≠ versée, crons
+  push en UTC). Levier produit inchangé : **le contenu des 5 matières vides**.
 
 **2026-07-20 — fin du cycle 2 `/jour` (Lia) :**
 - **Fait** : la **P0 laissée par le cycle 1 est fermée** (`4c4396e`) — le contenu

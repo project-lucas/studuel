@@ -23,6 +23,11 @@ export async function GET(request: Request): Promise<Response> {
       await claimPendingReferral()
       return NextResponse.redirect(`${origin}${next}`)
     }
+    // L'élève ne verra qu'« lien expiré » — c'est volontaire (ne rien révéler
+    // sur l'existence d'un compte). Mais côté serveur, un lien qui échoue
+    // toujours ne laissait AUCUNE trace : impossible de distinguer un code
+    // réellement périmé d'une configuration Supabase cassée.
+    console.error('[auth] échange du code impossible:', error.message)
   }
 
   return NextResponse.redirect(`${origin}/login?error=lien-expire`)

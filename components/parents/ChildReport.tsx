@@ -102,11 +102,14 @@ export default function ChildReport({
           value={`${streak} j`}
           sub={streak > 0 ? 'en cours' : 'à relancer'}
         />
+        {/* « exercices » et non « quiz » : ce compteur inclut aussi la file
+            « À revoir » et les examens blancs (test_sessions à quiz_id nul),
+            que le score par matière, lui, ne juge pas. */}
         <Stat
           icon={<Trophy className="size-4" aria-hidden="true" />}
           label="Score moyen"
           value={dashboard.sessions_total > 0 ? `${avgPct} %` : '—'}
-          sub={`${dashboard.sessions_total} quiz`}
+          sub={`${dashboard.sessions_total} exercices`}
         />
       </div>
 

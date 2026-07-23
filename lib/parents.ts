@@ -1,7 +1,13 @@
 // Logique pure du tableau de bord parents.
-// Les données brutes viennent de la fonction SQL child_dashboard (migration 044) ;
-// ici on ne fait que dériver des libellés et des classements — testable sans DB.
-// Les seuils de maîtrise sont alignés sur lib/mastery.ts (0.5 fragile, 0.8 maîtrisé).
+// Les données brutes viennent de la fonction SQL child_dashboard (migration 044,
+// redéfinie par la 084 puis la 197) ; ici on ne fait que dériver des libellés et
+// des classements — testable sans DB.
+//
+// Alignement sur lib/mastery.ts : les SEUILS (0.5 fragile, 0.8 maîtrisé) l'ont
+// toujours été ; la MÉTRIQUE ne l'était pas — la fonction SQL moyennait toutes
+// les tentatives quand l'élève voit son meilleur score par quiz. Corrigé par la
+// migration 197 ; ce commentaire est le rappel que les deux doivent bouger
+// ensemble.
 
 import { MASTERY_THRESHOLDS } from './mastery'
 

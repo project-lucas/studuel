@@ -28,26 +28,40 @@ import { buildAnatomiePool, type OrganRound } from '@/lib/jeux/anatomie'
 // Chaque id doit être marqué `implemented: true` dans le catalogue ET présent
 // ici OU dans ORDER_BUILDERS. La divergence est bloquée par pools.test.ts
 // (aucun jeu jouable sans banque, aucune banque orpheline).
-export const POOL_BUILDERS: Record<string, (seed: string) => ModeQuestion[]> = {
-  capitales: (seed) => buildCapitalesPool(seed),
-  orthographe: (seed) => buildOrthographePool(seed),
-  'conjugaison-eclair': (seed) => buildConjugaisonPool(seed),
-  'chasse-faute': (seed) => buildChasseFautePool(seed),
-  'calcul-mental': (seed) => buildCalculMentalPool(seed),
-  'suite-logique': (seed) => buildSuiteLogiquePool(seed),
-  'traduction-flash': (seed) => buildTraductionFlashPool(seed),
-  'faux-amis': (seed) => buildFauxAmisPool(seed),
-  'traduccion-flash': (seed) => buildTraduccionFlashPool(seed),
-  'falsos-amigos': (seed) => buildFalsosAmigosPool(seed),
-  'classe-moi-ca': (seed) => buildClasseMoiCaPool(seed),
-  'chasse-elements': (seed) => buildChasseElementsPool(seed),
-  'bonne-unite': (seed) => buildBonneUnitePool(seed),
+// La taille demandée est TRANSMISE au builder, comme dans les trois registres
+// ci-dessous. Sans elle, chaque builder retombait sur son propre défaut interne
+// (20 pour la suite logique, 30 ailleurs) — parfois plus petit que ce que la
+// mécanique consomme réellement. Le `.slice()` de l'appelant ne pouvait alors
+// que raccourcir, jamais compléter, et la table rebouclait sur `pool[i % n]` :
+// la même question, avec les mêmes options dans le même ordre, re-servie en
+// pleine partie. C'est exactement ce que `formats.ts` interdit.
+export const POOL_BUILDERS: Record<
+  string,
+  (seed: string, count: number) => ModeQuestion[]
+> = {
+  capitales: (seed, count) => buildCapitalesPool(seed, count),
+  orthographe: (seed, count) => buildOrthographePool(seed, count),
+  'conjugaison-eclair': (seed, count) => buildConjugaisonPool(seed, count),
+  'chasse-faute': (seed, count) => buildChasseFautePool(seed, count),
+  'calcul-mental': (seed, count) => buildCalculMentalPool(seed, count),
+  'suite-logique': (seed, count) => buildSuiteLogiquePool(seed, count),
+  'traduction-flash': (seed, count) => buildTraductionFlashPool(seed, count),
+  'faux-amis': (seed, count) => buildFauxAmisPool(seed, count),
+  'traduccion-flash': (seed, count) => buildTraduccionFlashPool(seed, count),
+  'falsos-amigos': (seed, count) => buildFalsosAmigosPool(seed, count),
+  'classe-moi-ca': (seed, count) => buildClasseMoiCaPool(seed, count),
+  'chasse-elements': (seed, count) => buildChasseElementsPool(seed, count),
+  'bonne-unite': (seed, count) => buildBonneUnitePool(seed, count),
 }
 
-// Le pool d'un jeu par id, ou null si aucune banque n'est enregistrée.
-export function buildSalonPool(id: string, seed: string): ModeQuestion[] | null {
+/** Le pool d'un jeu par id, ou null si aucune banque n'est enregistrée. */
+export function buildSalonPool(
+  id: string,
+  seed: string,
+  count: number,
+): ModeQuestion[] | null {
   const builder = POOL_BUILDERS[id]
-  return builder ? builder(seed) : null
+  return builder ? builder(seed, count) : null
 }
 
 // ------------------------------------------------------- jeux de remise en ordre

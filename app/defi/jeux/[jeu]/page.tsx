@@ -104,15 +104,17 @@ export default async function SalonJeuPage({
   // buildSalonPool renvoie null si aucune banque n'est enregistrée pour cet id
   // (jeu implémenté mais builder oublié — bloqué en amont par pools.test.ts) ;
   // par sûreté au runtime, on retombe alors sur l'arène plutôt qu'une table vide.
-  const full = buildSalonPool(jeu, seed)
+  // On ne demande QUE ce que le format peut consommer — une expédition de 8
+  // escales n'a pas besoin d'embarquer 60 questions dans le HTML — mais on le
+  // demande vraiment, au lieu de tronquer après coup ce que le builder a bien
+  // voulu servir.
+  const full = buildSalonPool(jeu, seed, size)
   if (!full) redirect('/defi')
 
-  // On ne sert que ce que le format peut consommer : une expédition de 8 escales
-  // n'a pas besoin d'embarquer 60 questions dans le HTML de la page.
   return (
     <GameTable
       format={format}
-      pool={full.slice(0, size)}
+      pool={full}
       name={found.game.name}
       subject={found.salon.subject}
       subjectEmoji={found.salon.emoji}

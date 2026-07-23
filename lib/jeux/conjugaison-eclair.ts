@@ -197,6 +197,42 @@ export const CONJUGATIONS: ConjugationItem[] = [
     wrong: ['il a écris', 'il a écrivé', 'il a écrivu'],
     tip: 'Participe passé irrégulier : écrit.',
   },
+  {
+    id: 'aller-futur',
+    verb: 'aller',
+    tense: 'futur simple',
+    person: '1ʳᵉ personne du singulier (je…)',
+    right: 'j’irai',
+    wrong: ['j’allerai', 'j’irais', 'j’irerai'],
+    tip: 'Au futur, « aller » devient ir- : j’irai. « J’irais » est du conditionnel.',
+  },
+  {
+    id: 'faire-present-vous',
+    verb: 'faire',
+    tense: 'présent',
+    person: '2ᵉ personne du pluriel (vous…)',
+    right: 'vous faites',
+    wrong: ['vous faisez', 'vous faitez', 'vous faisent'],
+    tip: 'Un des trois verbes en -tes au présent : vous êtes, vous dites, vous faites.',
+  },
+  {
+    id: 'pouvoir-passe-compose',
+    verb: 'pouvoir',
+    tense: 'passé composé',
+    person: '1ʳᵉ personne du singulier (j’…)',
+    right: 'j’ai pu',
+    wrong: ['j’ai peu', 'j’ai pouvu', 'j’ai pouvé'],
+    tip: 'Participe passé de « pouvoir » : pu — à ne pas confondre avec « peu ».',
+  },
+  {
+    id: 'venir-imparfait',
+    verb: 'venir',
+    tense: 'imparfait',
+    person: '3ᵉ personne du pluriel (ils…)',
+    right: 'ils venaient',
+    wrong: ['ils viennaient', 'ils venait', 'ils venaits'],
+    tip: 'À l’imparfait, la 3ᵉ personne du pluriel se termine toujours par -aient.',
+  },
 ]
 
 export function buildConjugaisonPool(seed: string, count = 30): ModeQuestion[] {

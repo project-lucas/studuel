@@ -324,12 +324,16 @@ export function answer(
         ? run.step + 1
         : Math.max(0, run.step - p.ascension.fall)
       const reached = step >= p.ascension.floors
+      // Les essais sont épuisés : c'est la SEULE façon de perdre une ascension.
+      // Sans ça, un élève qui alterne juste/faux monte et redescend sans fin,
+      // avec « Abandonner » pour unique issue.
+      const outOfAttempts = base.answered >= p.ascension.attempts
       return {
         ...base,
         score: base.score + gained + (input.good ? FLOOR_BONUS : 0),
         step,
         stepJustCleared: input.good,
-        status: reached ? 'won' : 'playing',
+        status: reached ? 'won' : outOfAttempts ? 'lost' : 'playing',
       }
     }
   }

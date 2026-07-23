@@ -84,6 +84,15 @@ export type AscensionParams = {
   fall: number
   /** Chrono par question, ou null. */
   questionSeconds: number | null
+  /**
+   * Essais accordés pour atteindre le sommet. SANS cette borne, l'ascension est
+   * la seule mécanique du catalogue qui ne peut PAS être perdue : ni vies, ni
+   * chrono global, et une erreur ne fait que redescendre. Un élève qui alterne
+   * juste/faux monte et redescend indéfiniment, sans autre issue que
+   * « Abandonner » — et le `lexicon.lose` de ces jeux était du code mort,
+   * jamais affichable.
+   */
+  attempts: number
 }
 
 export type OrdreParams = {
@@ -374,7 +383,9 @@ export const GAME_FORMATS: Record<SalonGameId, GameFormat> = {
     },
     params: {
       mechanic: 'ascension',
-      ascension: { floors: 10, fall: 2, questionSeconds: null },
+      // 30 essais pour 10 étages : large pour qui progresse (10 suffisent en
+      // sans-faute), fini pour qui yo-yote.
+      ascension: { floors: 10, fall: 2, questionSeconds: null, attempts: 30 },
     },
   },
 
@@ -517,7 +528,7 @@ export const GAME_FORMATS: Record<SalonGameId, GameFormat> = {
     },
     params: {
       mechanic: 'ascension',
-      ascension: { floors: 8, fall: 1, questionSeconds: 8 },
+      ascension: { floors: 8, fall: 1, questionSeconds: 8, attempts: 24 },
     },
   },
 
@@ -659,8 +670,11 @@ export function poolSizeFor(format: GameFormat): number {
     case 'expedition':
       return p.expedition.stops + 4
     case 'ascension':
-      // Chaque chute rallonge la partie : large marge.
-      return p.ascension.floors * 3
+      // Exactement le nombre d'essais accordés : c'est le maximum de questions
+      // qu'une partie peut consommer, puisque les essais épuisés la terminent.
+      // Une estimation « large marge » ne veut rien dire quand la borne est
+      // connue exactement.
+      return p.ascension.attempts
     case 'ordre':
       // Ici l'unité est le TABLEAU, pas la question : on en prépare autant que
       // la partie peut en consommer, chrono compris.

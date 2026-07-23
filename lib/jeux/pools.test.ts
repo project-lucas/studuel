@@ -10,8 +10,8 @@ import {
   idsWithPool,
   poolKind,
 } from './pools'
-import { SALONS, playableSalonGame } from './catalog'
-import { GAME_FORMATS } from './formats'
+import { SALONS, playableSalonGame, type SalonGameId } from './catalog'
+import { GAME_FORMATS, poolSizeFor } from './formats'
 import { isBoardComplete, isNextInOrder } from './ordering'
 
 // Tous les ids de jeux marqués « implemented » dans le catalogue.
@@ -76,10 +76,73 @@ describe('cohérence catalogue ↔ banques de questions', () => {
   })
 })
 
+// Dette de contenu CONSTATÉE le 2026-07-23, en questions manquantes.
+//
+// Ces six banques sont plus courtes que ce que leur mécanique consomme : la
+// table reboucle donc sur `pool[i % n]` et re-sert la même question, mêmes
+// options, même ordre, en pleine partie. Ce n'est pas un bug de code — le
+// câblage est correct depuis que `POOL_BUILDERS` reçoit la taille demandée —
+// c'est du CONTENU à écrire (anglais, espagnol, SVT, physique-chimie), et le
+// bâcler apprendrait des erreurs à des élèves.
+//
+// Les chiffres sont des PLAFONDS : la dette peut diminuer (le test s'en
+// réjouit), jamais augmenter, et un jeu absent de cette liste n'a droit à
+// aucun manque. Un jeu remboursé doit sortir d'ici.
+const DETTE_DE_BANQUE: Partial<Record<SalonGameId, number>> = {
+  'traduction-flash': 1, // 32/33
+  'faux-amis': 4, // 16/20
+  'traduccion-flash': 10, // 30/40
+  'falsos-amigos': 9, // 14/23
+  'classe-moi-ca': 2, // 22/24
+  'bonne-unite': 8, // 17/25
+}
+
 describe('buildSalonPool', () => {
+  it('sert VRAIMENT le nombre de questions que le format consomme', () => {
+    // Le vrai invariant, celui qui manquait : un plancher fixe de 10 ne dit
+    // rien. Ce qui compte est que la banque tienne la partie que la MÉCANIQUE
+    // va jouer — sinon la table reboucle sur `pool[i % n]` et re-sert la même
+    // question, mêmes options, même ordre, en pleine partie.
+    // On collecte TOUS les manques avant d'échouer : s'arrêter au premier
+    // cache les suivants et fait corriger la banque une par une, à l'aveugle.
+    const manques: string[] = []
+    for (const id of qcmIds) {
+      const attendu = poolSizeFor(GAME_FORMATS[id as SalonGameId])
+      const pool = buildSalonPool(id, 'verif', attendu)
+      expect(pool, `pool null pour « ${id} »`).not.toBeNull()
+      const manque = attendu - pool!.length
+      // Parenthèses obligatoires : `??` a une précédence PLUS BASSE que `>`,
+      // donc `manque > dette ?? 0` se lit `(manque > dette) ?? 0` — toujours
+      // faux pour un jeu absent de la liste, ce qui désactivait le contrôle
+      // exactement là où il sert.
+      const dette = DETTE_DE_BANQUE[id as SalonGameId] ?? 0
+      if (manque > dette) {
+        manques.push(`${id} : ${pool!.length}/${attendu}`)
+      }
+    }
+    expect(
+      manques,
+      `banque trop courte (ou dette aggravée) → ${manques.join(' · ')}`,
+    ).toEqual([])
+  })
+
+  it('ne laisse pas s’installer une dette de banque non déclarée', () => {
+    // Le garde-fou de la dette elle-même : un jeu qui n'a PLUS de manque doit
+    // sortir de la liste, sinon elle se fossilise et ne veut plus rien dire.
+    for (const [id, dette] of Object.entries(DETTE_DE_BANQUE)) {
+      const attendu = poolSizeFor(GAME_FORMATS[id as SalonGameId])
+      const pool = buildSalonPool(id, 'verif', attendu)
+      expect(
+        attendu - (pool?.length ?? 0),
+        `« ${id} » n’a plus de dette : retire-le de DETTE_DE_BANQUE`,
+      ).toBeGreaterThan(0)
+      expect(dette).toBeGreaterThan(0)
+    }
+  })
+
   it('produit un pool non vide et bien formé pour chaque jeu à QCM', () => {
     for (const id of qcmIds) {
-      const pool = buildSalonPool(id, 'verif')
+      const pool = buildSalonPool(id, 'verif', 30)
       expect(pool, `pool null pour « ${id} »`).not.toBeNull()
       // Assez de questions pour tenir une partie complète sans recyclage
       // trop visible.
@@ -97,8 +160,8 @@ describe('buildSalonPool', () => {
 
   it('renvoie null pour un id sans banque de QCM', () => {
     // La Frise folle EXISTE, mais sert des tableaux : elle n'a rien à faire ici.
-    expect(buildSalonPool('frise-folle', 'x')).toBeNull()
-    expect(buildSalonPool('nimporte-quoi', 'x')).toBeNull()
+    expect(buildSalonPool('frise-folle', 'x', 10)).toBeNull()
+    expect(buildSalonPool('nimporte-quoi', 'x', 10)).toBeNull()
   })
 })
 

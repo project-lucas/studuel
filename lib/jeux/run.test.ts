@@ -221,6 +221,32 @@ describe('ascension', () => {
       BASE_POINTS + FLOOR_BONUS,
     )
   })
+
+  it('PERD quand les essais sont épuisés (la partie se termine toujours)', () => {
+    // C'était le trou : ni vies ni chrono global, et une erreur ne fait que
+    // redescendre. Un élève qui alterne juste/faux montait et redescendait
+    // indéfiniment, sans autre issue que « Abandonner » — et le message de
+    // défaite du jeu n'était jamais affichable.
+    const params = ascension.params
+    if (params.mechanic !== 'ascension') throw new Error('format inattendu')
+    const essais = params.ascension.attempts
+
+    // Yo-yo parfait : on ne monte jamais durablement, on ne gagne jamais.
+    const yoyo = Array.from({ length: essais }, (_, i) => i % 2 === 0)
+    const run = play(ascension, yoyo)
+    expect(run.status).toBe('lost')
+    expect(run.answered).toBe(essais)
+  })
+
+  it('ne perd pas tant qu’il reste un essai', () => {
+    const params = ascension.params
+    if (params.mechanic !== 'ascension') throw new Error('format inattendu')
+    const presque = Array.from(
+      { length: params.ascension.attempts - 1 },
+      (_, i) => i % 2 === 0,
+    )
+    expect(play(ascension, presque).status).toBe('playing')
+  })
 })
 
 describe('ordre', () => {

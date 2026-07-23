@@ -86,6 +86,9 @@ export default function GameTable({
   const [saved, setSaved] = useState<boolean | null>(null)
   // XP réellement versée, renvoyée par le serveur (null tant qu'il n'a pas répondu).
   const [awardedXp, setAwardedXp] = useState<number | null>(null)
+  // Numéro de la partie en cours. Une réponse serveur qui arrive APRÈS le
+  // lancement de la partie suivante ne doit pas repeindre son écran de fin.
+  const partieRef = useRef(0)
   // Chrono de la question courante et de la course, en secondes (fractionnaires).
   const [questionLeft, setQuestionLeft] = useState<number | null>(null)
   const [globalLeft, setGlobalLeft] = useState<number | null>(null)
@@ -162,12 +165,16 @@ export default function GameTable({
       // les bonus de mode appartiennent à l'Arène, pas aux salons. Et pas de
       // file de révision non plus — un jeu de salon pioche dans sa propre banque
       // (capitales, faux amis…), pas dans le programme de l'élève.
+      const partie = partieRef.current
       recordChallenge(final.correct, final.answered)
         .then((r) => {
+          if (partie !== partieRef.current) return
           setSaved(r.saved)
           if (r.saved) setAwardedXp(r.xp)
         })
-        .catch(() => setSaved(false))
+        .catch(() => {
+          if (partie === partieRef.current) setSaved(false)
+        })
     },
     [audio, format.id],
   )
@@ -271,6 +278,7 @@ export default function GameTable({
     setRevealed(false)
     setSaved(null)
     setAwardedXp(null)
+    partieRef.current += 1
     setIsRecord(false)
     setQIndex((n) => n + 1) // on repart ailleurs dans la banque
     globalLeftRef.current = sprintSeconds

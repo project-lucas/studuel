@@ -79,6 +79,9 @@ export default function CountdownTable({
   const [saved, setSaved] = useState<boolean | null>(null)
   // XP réellement versée, renvoyée par le serveur (null tant qu'il n'a pas répondu).
   const [awardedXp, setAwardedXp] = useState<number | null>(null)
+  // Numéro de la partie en cours. Une réponse serveur qui arrive APRÈS le
+  // lancement de la partie suivante ne doit pas repeindre son écran de fin.
+  const partieRef = useRef(0)
   const [left, setLeft] = useState<number | null>(null)
 
   const runRef = useRef(run)
@@ -121,12 +124,16 @@ export default function CountdownTable({
       }
       setBest(Math.max(prev, final.score))
 
+      const partie = partieRef.current
       recordChallenge(final.correct, final.answered)
         .then((r) => {
+          if (partie !== partieRef.current) return
           setSaved(r.saved)
           if (r.saved) setAwardedXp(r.xp)
         })
-        .catch(() => setSaved(false))
+        .catch(() => {
+          if (partie === partieRef.current) setSaved(false)
+        })
     },
     [audio, format.id],
   )
@@ -217,6 +224,7 @@ export default function CountdownTable({
     setRevealed(false)
     setSaved(null)
     setAwardedXp(null)
+    partieRef.current += 1
     setIsRecord(false)
     setIndex((n) => n + 1)
     leftRef.current = questionSeconds(format, fresh)

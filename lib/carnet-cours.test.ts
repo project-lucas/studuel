@@ -59,7 +59,7 @@ describe('normalizeCourseColor / normalizeCourseIcon', () => {
 })
 
 describe('normalizeQcm', () => {
-  test('filtre les choix vides et coche la 1re option si rien n’est coché', () => {
+  test('filtre les choix vides sans inventer de bonne réponse', () => {
     const qcm = normalizeQcm({
       enonce: 'Capitale de la France ?',
       choix: [
@@ -69,7 +69,25 @@ describe('normalizeQcm', () => {
       ],
     })
     expect(qcm.choix).toHaveLength(2)
-    expect(qcm.choix[0]).toEqual({ texte: 'Paris', correct: true })
+    // Le choix coché était le choix VIDE : il disparaît, et rien ne le
+    // remplace. Cocher la 1re option d'office fabriquait un corrigé — ici
+    // « Paris », par chance juste ; sur « Lyon / Paris » ç'aurait été faux.
+    expect(qcm.choix[0]).toEqual({ texte: 'Paris', correct: false })
+  })
+
+  test('une question sans bonne réponse cochée est un BROUILLON, pas une question fausse', () => {
+    const content = normalizeQcm({
+      enonce: 'Capitale de la France ?',
+      choix: [
+        { texte: 'Lyon', correct: false },
+        { texte: 'Paris', correct: false },
+      ],
+    })
+    // `isQuestionReady` refuse : la question sort donc des sessions de
+    // révision (cf. `sessionQuestions`) au lieu d'y être comptée fausse à
+    // chaque passage.
+    expect(isQuestionReady('qcm', content)).toBe(false)
+    expect(sessionQuestions([], [{ id: 'q1', chapterId: null, type: 'qcm', position: 0, content }], null)).toEqual([])
   })
 
   test('feedback vide → null', () => {

@@ -172,10 +172,16 @@ export function normalizeQcm(raw: unknown): QcmContent {
     })
     .filter((c): c is QcmChoice => c !== null)
     .slice(0, MAX_QCM_CHOICES)
-  // Un QCM sans bonne réponse cochée n'est pas jouable : on coche la première.
-  if (choix.length > 0 && !choix.some((c) => c.correct)) {
-    choix[0] = { ...choix[0], correct: true }
-  }
+  // On NE coche PLUS d'office la première réponse. C'était fabriquer un
+  // corrigé : l'élève qui enregistre sans rien cocher voyait « Enregistré ✓ »,
+  // sa question passait « complète », et elle lui serait comptée FAUSSE à
+  // chaque révision — sauf s'il devinait la première case. Mieux vaut une
+  // question déclarée « Brouillon » (elle sort alors des sessions, cf.
+  // `sessionQuestions`) qu'une question qui enseigne une erreur.
+  //
+  // Effet de bord voulu : le test `choix.some(x => x.correct)` d'
+  // `isQuestionReady` était jusqu'ici TOUJOURS vrai — un garde-fou qui ne
+  // pouvait pas échouer. Il redevient utile.
   return {
     enonce: str(o.enonce).trim().slice(0, MAX_ENONCE_LEN),
     choix,

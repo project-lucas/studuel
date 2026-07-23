@@ -53,7 +53,7 @@ function readBest(id: string): number {
  * — sa mécanique, son rythme, sa robe, son timbre — sur la banque de questions
  * du jeu.
  *
- * Avant elle, les 13 jeux de salon partageaient un unique duel BO3 : on cliquait
+ * Avant elle, tous les jeux de salon partageaient un unique duel BO3 : on cliquait
  * sur une illustration de chasse au trésor et on retombait sur la même partie
  * que la veille. Ici, deux jeux ne se jouent, ne se lisent et ne s'entendent
  * jamais pareil, parce que tout vient du format et rien n'est écrit en dur.

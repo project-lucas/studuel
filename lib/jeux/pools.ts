@@ -25,9 +25,10 @@ import {
 } from '@/lib/jeux/compte-est-bon'
 import { buildAnatomiePool, type OrganRound } from '@/lib/jeux/anatomie'
 
-// Chaque id doit être marqué `implemented: true` dans le catalogue ET présent
-// ici OU dans ORDER_BUILDERS. La divergence est bloquée par pools.test.ts
-// (aucun jeu jouable sans banque, aucune banque orpheline).
+// Chaque id marqué `implemented: true` au catalogue doit figurer dans EXACTEMENT
+// un des quatre registres de ce fichier : QCM (ici), ordre, compte, zones. La
+// divergence est bloquée par pools.test.ts (aucun jeu jouable sans banque,
+// aucune banque orpheline, jamais deux registres pour un même jeu).
 // La taille demandée est TRANSMISE au builder, comme dans les trois registres
 // ci-dessous. Sans elle, chaque builder retombait sur son propre défaut interne
 // (20 pour la suite logique, 30 ailleurs) — parfois plus petit que ce que la

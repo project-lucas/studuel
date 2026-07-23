@@ -80,7 +80,7 @@ export const SALONS: Salon[] = [
         id: 'orthographe',
         name: 'Duel d’orthographe',
         emoji: '🖋️',
-        tagline: 'Deux graphies, 3 secondes pour choisir la bonne',
+        tagline: '40 secondes pour reconnaître la bonne orthographe',
         implemented: true,
       },
       {

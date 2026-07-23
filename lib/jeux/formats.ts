@@ -1,6 +1,6 @@
 // Le FORMAT de chaque jeu de salon — sa règle, son rythme, sa robe, son timbre.
 //
-// Pourquoi ce fichier existe : les 13 jeux de salon partageaient jusqu'ici UNE
+// Pourquoi ce fichier existe : les jeux de salon partageaient jusqu'ici UNE
 // SEULE table de jeu (un duel BO3 identique pour tous). Chaque jeu est pourtant
 // vendu par une illustration qui promet une expérience à part — on cliquait sur
 // « Chasse à la faute » et on retombait sur le duel de « Capitales du monde ».
@@ -247,16 +247,18 @@ export const GAME_FORMATS: Record<SalonGameId, GameFormat> = {
   },
 
   // --- Français -------------------------------------------------------------
-  // Duel d'orthographe : deux graphies face à face, aucun temps mort. Le format
-  // le plus INSTINCTIF du catalogue — on ne réfléchit pas, on reconnaît. D'où le
-  // sprint le plus court et le seuil de vitesse le plus serré : ici, hésiter
-  // c'est déjà avoir perdu du temps.
+  // Duel d'orthographe : le mot juste contre son sosie fautif, ou l'homophone
+  // qui manque dans la phrase. Aucun temps mort. Le format le plus INSTINCTIF du
+  // catalogue — on ne réfléchit pas, on reconnaît. D'où le sprint le plus court
+  // et le seuil de vitesse le plus serré : ici, hésiter c'est déjà avoir perdu
+  // du temps. (Le plus souvent deux propositions, trois quand l'homophone
+  // l'exige : ses/ces/s'est, quel/quelle/qu'elle.)
   orthographe: {
     id: 'orthographe',
     theme: 'plume',
     timbre: 'cristal',
     layout: 'duo',
-    rule: '40 secondes, deux graphies à chaque fois. Reconnais la bonne — ne la déduis pas.',
+    rule: '40 secondes en tout, aucun chrono par question. Reconnais la bonne orthographe — ne la déduis pas.',
     emoji: '🖋️',
     lexicon: {
       verb: 'Laquelle s’écrit comme ça ?',

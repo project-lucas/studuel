@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Check, Crown, Users, Sparkles, ShieldCheck, X } from 'lucide-react'
+import { Check, Crown, Users, Sparkles, ShieldCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
@@ -34,9 +34,15 @@ function ValueHero() {
         <h2 className="font-heading text-2xl font-bold text-balance">
           Débloque tout Studuel
         </h2>
+        {/* Le nettoyage documenté dans lib/premium.ts (« vendre du vide est le
+            meilleur moyen de faire résilier un parent ») avait été appliqué à
+            la liste des offres, mais PAS à ce bandeau : il re-promettait
+            « zéro pub » alors qu'il n'y a aucune publicité dans l'app, et donc
+            rien à retirer. On n'annonce plus que ce qui est vérifiable écran
+            par écran. */}
         <p className="mx-auto mt-1.5 max-w-xs text-sm text-primary-foreground/80">
-          Cartes illimitées, tests premium, zéro pub — et jusqu’à 3 enfants sur
-          une seule offre.
+          Cartes mentales, fiches de révision — et jusqu’à 3 enfants sur une
+          seule offre.
         </p>
       </div>
     </section>
@@ -100,28 +106,21 @@ function PlanCard({
         </div>
 
         <ul className="mt-4 flex flex-col gap-2">
-          {plan.features.map((f) => {
-            const isAds = /publicité/i.test(f)
-            return (
-              <li key={f} className="flex items-start gap-2 text-sm">
-                {isAds ? (
-                  <X
-                    className="mt-0.5 size-4 shrink-0 text-muted-foreground"
-                    strokeWidth={2.4}
-                  />
-                ) : (
-                  <Check
-                    className={cn(
-                      'mt-0.5 size-4 shrink-0',
-                      plan.recommended ? 'text-primary' : 'text-green-600',
-                    )}
-                    strokeWidth={2.6}
-                  />
+          {/* La branche « publicité » (croix grise au lieu d'une coche) est
+              partie avec la promesse : plus aucune offre ne cite de publicité,
+              elle ne pouvait donc plus jamais s'afficher. */}
+          {plan.features.map((f) => (
+            <li key={f} className="flex items-start gap-2 text-sm">
+              <Check
+                className={cn(
+                  'mt-0.5 size-4 shrink-0',
+                  plan.recommended ? 'text-primary' : 'text-green-600',
                 )}
-                <span className={cn(isAds && 'text-muted-foreground')}>{f}</span>
-              </li>
-            )
-          })}
+                strokeWidth={2.6}
+              />
+              <span>{f}</span>
+            </li>
+          ))}
         </ul>
 
         <div className="mt-5">

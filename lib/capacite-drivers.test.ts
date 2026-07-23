@@ -147,6 +147,14 @@ describe('computePlafond', () => {
     const scores = DRIVERS.map((d) => ({ key: d.key, label: d.label, score: 96 }))
     expect(computePlafond(scores, 96)).toBeGreaterThanOrEqual(96)
   })
+
+  it('jamais en dessous de la capacité NON PLUS sans aucun driver suivi', () => {
+    // Le cas qui affichait « 100 actuel · 95 possible » : capacité issue du
+    // seul quiz, au-dessus de la cible, et pas une habitude cochée.
+    const empty = DRIVERS.map((d) => ({ key: d.key, label: d.label, score: null }))
+    expect(computePlafond(empty, 100)).toBe(100)
+    expect(computePlafond(empty, 96)).toBe(96)
+  })
 })
 
 describe('LEVERS', () => {

@@ -167,7 +167,11 @@ export function computePlafond(
     sum += Math.max(s.score, PLAFOND_TARGET) * def.weight
     weight += def.weight
   }
-  if (weight === 0) return PLAFOND_TARGET
+  // `Math.max` des DEUX côtés : un plafond « possible » ne doit jamais passer
+  // sous la capacité actuelle. Sans lui, un élève dont la capacité vient du
+  // seul quiz et dépasse la cible (96+) et qui n'a coché aucune habitude lisait
+  // « 100 actuel · 95 possible » — un objectif plus bas que son niveau.
+  if (weight === 0) return Math.max(capacite, PLAFOND_TARGET)
   return Math.max(capacite, Math.round(sum / weight))
 }
 

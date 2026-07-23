@@ -402,15 +402,21 @@ export async function reorderChapters(
   if (!userId || !Array.isArray(orderedIds)) return { ok: false }
   if (!(await ownsCourse(supabase, userId, courseId))) return { ok: false }
 
-  for (let i = 0; i < orderedIds.length; i++) {
-    const id = orderedIds[i]
-    if (typeof id !== 'string') continue
-    await supabase
-      .from('carnet_chapters')
-      .update({ position: i })
-      .eq('id', id)
-      .eq('course_id', courseId)
-  }
+  // En parallèle : un glisser-déposer sur un cours de 20 chapitres faisait
+  // autant d'allers-retours ATTENDUS un par un, soit plusieurs secondes de
+  // latence pour un simple réordonnancement. Aucune contrainte d'unicité sur
+  // `position` n'impose de les sérialiser.
+  await Promise.all(
+    orderedIds.map((id, i) =>
+      typeof id === 'string'
+        ? supabase
+            .from('carnet_chapters')
+            .update({ position: i })
+            .eq('id', id)
+            .eq('course_id', courseId)
+        : Promise.resolve(),
+    ),
+  )
   refresh(courseId)
   return { ok: true }
 }
@@ -592,15 +598,18 @@ export async function reorderQuestions(
   if (!userId || !Array.isArray(orderedIds)) return { ok: false }
   if (!(await ownsCourse(supabase, userId, courseId))) return { ok: false }
 
-  for (let i = 0; i < orderedIds.length; i++) {
-    const id = orderedIds[i]
-    if (typeof id !== 'string') continue
-    await supabase
-      .from('carnet_questions')
-      .update({ position: i })
-      .eq('id', id)
-      .eq('course_id', courseId)
-  }
+  // Même raison que `reorderChapters` : en parallèle, pas un par un.
+  await Promise.all(
+    orderedIds.map((id, i) =>
+      typeof id === 'string'
+        ? supabase
+            .from('carnet_questions')
+            .update({ position: i })
+            .eq('id', id)
+            .eq('course_id', courseId)
+        : Promise.resolve(),
+    ),
+  )
   refresh(courseId)
   return { ok: true }
 }

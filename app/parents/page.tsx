@@ -6,7 +6,7 @@ import LinkChildForm from '@/components/parents/LinkChildForm'
 import { createClient } from '@/lib/supabase/server'
 import { computeStreak, weekProgress } from '@/lib/streak'
 import { GRID_PATTERN } from '@/lib/subject-style'
-import type { ChildDashboard } from '@/lib/parents'
+import { childDisplayNames, type ChildDashboard } from '@/lib/parents'
 
 export const metadata = { title: 'Espace parents — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -57,10 +57,18 @@ export default async function ParentsPage() {
     console.error('[parents] liste des enfants:', childrenError.message)
   }
   const children = (childrenData ?? []) as ChildRow[]
+  // Deux enfants sans prénom (ou deux homonymes) affichaient exactement la même
+  // carte : on numérote ce qui est ambigu, et seulement ça. Les noms sont
+  // dérivés de la LISTE, pas du tableau de bord, pour rester corrects même sur
+  // une carte d'erreur (où le tableau de bord est justement absent).
+  const displayNames = childDisplayNames(children.map((c) => c.full_name))
 
-  const reports: { childId: string; dashboard: ChildDashboard | null }[] =
-    await Promise.all(
-      children.map(async (child) => {
+  const reports: {
+    childId: string
+    displayName: string
+    dashboard: ChildDashboard | null
+  }[] = await Promise.all(
+      children.map(async (child, i) => {
         const { data, error } = await supabase.rpc('child_dashboard', {
           p_child: child.child_id,
         })
@@ -71,16 +79,20 @@ export default async function ParentsPage() {
         }
         return {
           childId: child.child_id,
+          displayName: displayNames[i],
           dashboard: (data as ChildDashboard | null) ?? null,
         }
       }),
     )
 
-  // Vidéos du coach (tolère une base sans la migration 029).
+  // Vidéos du coach (tolère une base sans la migration 029). Bornée : c'était
+  // la seule requête sans limite de la page, et le programme est une liste
+  // éditoriale — au-delà de 50 entrées, c'est le contenu qu'il faut trier.
   const { data: videos } = await supabase
     .from('parent_videos')
     .select('id, title, description, url, theme, duration, position')
     .order('position', { ascending: true })
+    .limit(50)
     .returns<ParentVideo[]>()
 
   const now = new Date()
@@ -122,7 +134,7 @@ export default async function ParentsPage() {
           </div>
         ) : null}
 
-        {reports.map(({ childId, dashboard }) => {
+        {reports.map(({ childId, displayName, dashboard }) => {
           if (!dashboard) {
             return (
               <div
@@ -131,7 +143,7 @@ export default async function ParentsPage() {
                 className="bg-card border-destructive/40 mb-4 rounded-2xl border p-5 shadow-sm"
               >
                 <h3 className="mb-1 font-semibold">
-                  Données de cet enfant indisponibles
+                  {displayName} : données indisponibles
                 </h3>
                 <p className="text-muted-foreground text-sm">
                   Le lien avec son compte est toujours actif — seul le détail
@@ -147,6 +159,7 @@ export default async function ParentsPage() {
             <ChildReport
               key={childId}
               childId={childId}
+              displayName={displayName}
               dashboard={dashboard}
               streak={streak}
               week={week}

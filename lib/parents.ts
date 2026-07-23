@@ -96,6 +96,32 @@ export function hasJudgeableSubject(
   return perSubject.some((s) => s.attempts >= minAttempts)
 }
 
+// Libellé de repli quand le compte de l'enfant n'a pas de prénom renseigné.
+export const UNNAMED_CHILD = 'Votre enfant'
+
+// Deux enfants liés sans prénom s'affichaient tous les deux « Votre enfant » :
+// le parent ne pouvait plus dire quelle carte allait avec quel compte — ni
+// lequel il déliait. On ne numérote QUE ce qui est ambigu : un parent qui n'a
+// qu'un enfant sans prénom ne doit pas lire « Votre enfant 1 ».
+//
+// La règle vaut pour n'importe quel doublon, pas seulement pour le repli : deux
+// comptes réellement prénommés « Léa » posent exactement le même problème.
+export function childDisplayNames(
+  fullNames: readonly (string | null | undefined)[],
+): string[] {
+  const labels = fullNames.map((n) => n?.trim() || UNNAMED_CHILD)
+  const total = new Map<string, number>()
+  for (const label of labels) total.set(label, (total.get(label) ?? 0) + 1)
+
+  const seen = new Map<string, number>()
+  return labels.map((label) => {
+    if ((total.get(label) ?? 0) < 2) return label
+    const rank = (seen.get(label) ?? 0) + 1
+    seen.set(label, rank)
+    return `${label} ${rank}`
+  })
+}
+
 export type ActivityLevel = 'inactif' | 'faible' | 'regulier' | 'intense'
 
 // Rythme de la semaine, à partir du nombre de quiz passés sur 7 jours.

@@ -43,7 +43,15 @@ export async function linkChild(
     case 'self':
       return { error: 'Vous ne pouvez pas vous lier à votre propre compte.' }
     default:
-      return { error: 'Aucun élève ne correspond à ce code.' }
+      // `link_child_by_code` renvoie 'not_found' aussi bien pour un code
+      // inexistant que pour un parent bloqué par le limiteur horaire (172/169) :
+      // le flou est VOLONTAIRE (ne pas offrir d'oracle sur les codes valides).
+      // Mais accuser le code envoyait le parent le revérifier en boucle alors
+      // qu'il n'y était pour rien — le message couvre désormais les deux causes.
+      return {
+        error:
+          'Impossible de lier ce compte avec ce code. Vérifiez le code affiché dans l’application de votre enfant ; si vous venez d’en essayer plusieurs, patientez quelques minutes avant de réessayer.',
+      }
   }
 }
 

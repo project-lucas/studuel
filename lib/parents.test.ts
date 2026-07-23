@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import {
   activityLevel,
   averageDailySeconds,
+  childDisplayNames,
   formatWorkDuration,
   hasJudgeableSubject,
   parentHeadline,
@@ -178,5 +179,32 @@ describe('averageDailySeconds', () => {
 
   it('borne les valeurs négatives', () => {
     expect(averageDailySeconds(-500, 2)).toBe(0)
+  })
+})
+
+describe('childDisplayNames', () => {
+  it('garde les prénoms renseignés tels quels', () => {
+    expect(childDisplayNames(['Léa', 'Tom'])).toEqual(['Léa', 'Tom'])
+  })
+
+  it('ne numérote pas un enfant sans prénom quand il est seul', () => {
+    expect(childDisplayNames([null])).toEqual(['Votre enfant'])
+    expect(childDisplayNames(['  ', 'Tom'])).toEqual(['Votre enfant', 'Tom'])
+  })
+
+  it('numérote les enfants sans prénom dès qu’ils sont plusieurs', () => {
+    expect(childDisplayNames([null, 'Tom', undefined])).toEqual([
+      'Votre enfant 1',
+      'Tom',
+      'Votre enfant 2',
+    ])
+  })
+
+  it('lève aussi l’ambiguïté de deux prénoms identiques', () => {
+    expect(childDisplayNames(['Léa', 'Léa'])).toEqual(['Léa 1', 'Léa 2'])
+  })
+
+  it('conserve l’ordre des enfants', () => {
+    expect(childDisplayNames([])).toEqual([])
   })
 })

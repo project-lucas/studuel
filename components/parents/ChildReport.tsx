@@ -17,6 +17,9 @@ type WeekDay = { done: boolean; isToday: boolean; isFuture: boolean }
 
 type Props = {
   childId: string
+  // Déjà désambiguïsé par childDisplayNames() : deux enfants sans prénom ne
+  // doivent pas afficher la même carte (cf. lib/parents.ts).
+  displayName: string
   dashboard: ChildDashboard
   streak: number
   week: WeekDay[]
@@ -26,6 +29,7 @@ const DAY_LABELS = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
 
 export default function ChildReport({
   childId,
+  displayName,
   dashboard,
   streak,
   week,
@@ -34,7 +38,7 @@ export default function ChildReport({
   const weak = weakestSubjects(dashboard.per_subject)
   const strong = strongestSubject(dashboard.per_subject)
   const avgPct = scorePercent(dashboard.avg_ratio)
-  const name = dashboard.full_name?.trim() || 'Votre enfant'
+  const name = displayName
   const avgDaily = averageDailySeconds(
     dashboard.week_seconds,
     dashboard.week_active_days,

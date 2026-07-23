@@ -26,7 +26,7 @@ type ChapterRow = {
     title: string
     position: number
     content: string | null
-    revision_sheet: string | null
+    has_revision_sheet: boolean | null
     studygram_url: string | null
     quizzes: { id: string }[]
   }[]
@@ -51,7 +51,14 @@ export default async function AdminSubjectPage({
     supabase
       .from('chapters')
       .select(
-        'id, level, title, position, lessons(id, title, position, content, revision_sheet, studygram_url, quizzes(id))',
+        // `has_revision_sheet` (colonne générée) et NON `revision_sheet` : la
+        // migration 185 a retiré le droit de lire la fiche elle-même, y compris
+        // à `authenticated` — un GRANT Postgres s'applique au RÔLE, donc être
+        // admin côté application n'y change rien. Nommer la colonne interdite
+        // dans cette jointure imbriquée faisait répondre « permission denied »
+        // pour TOUT le lot, et l'écran affichait 0 chapitre sans un mot.
+        // Cet écran n'a de toute façon besoin que de savoir si la fiche existe.
+        'id, level, title, position, lessons(id, title, position, content, has_revision_sheet, studygram_url, quizzes(id))',
       )
       .eq('subject_id', id)
       .order('position', { ascending: true })
@@ -142,7 +149,7 @@ export default async function AdminSubjectPage({
                   {chapter.lessons.map((lesson) => {
                     const filled = [
                       lesson.content,
-                      lesson.revision_sheet,
+                      lesson.has_revision_sheet ? 'fiche' : null,
                       lesson.studygram_url,
                       lesson.quizzes.length > 0 ? 'quiz' : null,
                     ].filter(Boolean).length

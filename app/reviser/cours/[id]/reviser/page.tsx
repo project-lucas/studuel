@@ -2,6 +2,7 @@ import { notFound, redirect } from 'next/navigation'
 import ReviewSession, {
   type PlayableQuestion,
 } from '@/components/carnet/ReviewSession'
+import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
 import {
   isQuestionType,
@@ -84,12 +85,18 @@ export default async function CourseReviewPage({
       : (chapters.find((c) => c.id === chapterId)?.title ?? 'Chapitre')
 
   return (
-    <ReviewSession
-      courseId={id}
-      chapterId={chapterId}
-      courseTitle={String(course.title ?? 'Sans titre')}
-      scopeLabel={scopeLabel}
-      questions={queue}
-    />
+    <>
+      {/* Réviser son propre carnet est du travail : sans ce compteur, un élève
+          qui s'appuie surtout sur ses notes n'existait pas dans le temps de
+          travail affiché sur /moi ni chez ses parents. */}
+      <WorkTimer />
+      <ReviewSession
+        courseId={id}
+        chapterId={chapterId}
+        courseTitle={String(course.title ?? 'Sans titre')}
+        scopeLabel={scopeLabel}
+        questions={queue}
+      />
+    </>
   )
 }

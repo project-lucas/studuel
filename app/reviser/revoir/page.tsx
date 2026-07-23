@@ -10,6 +10,7 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import ReviewPlayer, { type ReviewPlayItem } from '@/components/ReviewPlayer'
+import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
 import { getSubjectsCached } from '@/lib/catalog'
 import { toDayKey } from '@/lib/streak'
@@ -182,6 +183,10 @@ export default async function RevoirPage({
 
   return (
     <div className="flex flex-col gap-4">
+      {/* La file « À revoir » est du travail au même titre qu'une leçon : sans
+          ce compteur, un élève qui ne révise QUE par le SRS affichait 0 min de
+          temps de travail, sur /moi comme chez ses parents. */}
+      <WorkTimer />
       <PageHeader
         title={subjectName ? `À revoir · ${subjectName}` : 'À revoir'}
         description="Revanche d'abord, puis ce que ta mémoire s'apprête à oublier."

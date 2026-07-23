@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
+import WorkTimer from '@/components/WorkTimer'
 import FlashcardPlayer from '@/components/FlashcardPlayer'
 import { createClient } from '@/lib/supabase/server'
 import { getUserTier, canAccessPremiumTests } from '@/lib/subscription'
@@ -95,12 +96,18 @@ export default async function DeckPage({
           </CardFooter>
         </Card>
       ) : (
-        <FlashcardPlayer
-          deckId={deck.id}
-          title={deck.title}
-          cards={cards}
-          subject={deck.subject}
-        />
+        <>
+          {/* Un deck de flashcards est du travail — et c'est même la seule
+              source de `study_sessions`. Le compter ici ferme le dernier gros
+              trou du temps de travail (rien sur un deck retourné en entier). */}
+          <WorkTimer />
+          <FlashcardPlayer
+            deckId={deck.id}
+            title={deck.title}
+            cards={cards}
+            subject={deck.subject}
+          />
+        </>
       )}
     </div>
   )

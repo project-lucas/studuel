@@ -10,6 +10,7 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import ExamBlancPlayer from '@/components/ExamBlancPlayer'
+import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
 import { getSubjectsCached } from '@/lib/catalog'
 import { examsForProfile } from '@/lib/exams'
@@ -247,6 +248,9 @@ export default async function ExamenBlancPage({
     // data-no-swipe : pas de changement d'onglet au balayage pendant l'examen
     // — le bilan en cours serait perdu (voir SwipeTabs).
     <div data-no-swipe className="flex flex-col gap-4">
+      {/* Un examen blanc est l'exercice le plus long de l'app : ne pas le
+          compter dans le temps de travail était le plus gros trou du compteur. */}
+      <WorkTimer />
       <PageHeader
         title={targetSubjectName ? `Examen blanc · ${targetSubjectName}` : 'Examen blanc'}
         description={

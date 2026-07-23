@@ -2,12 +2,9 @@ import { describe, it, expect } from 'vitest'
 import {
   normalizeNextExam,
   isExamActive,
-  examHref,
   examCountdownLabel,
   normalizeExamList,
   activeExams,
-  addExam,
-  removeExam,
   examChapterIds,
   examProximity,
   examCardLabel,
@@ -71,14 +68,6 @@ describe('isExamActive', () => {
   })
 })
 
-describe('examHref', () => {
-  it('deep-linke vers le chapitre (slug + id)', () => {
-    expect(examHref(base)).toBe(
-      '/reviser/physique-chimie/11111111-1111-4111-8111-111111111107',
-    )
-  })
-})
-
 describe('examCountdownLabel', () => {
   it('null sans date', () => {
     expect(examCountdownLabel({ ...base, date: null }, '2026-07-14')).toBeNull()
@@ -123,7 +112,7 @@ describe('normalizeExamList', () => {
     expect(normalizeExamList(many)).toHaveLength(MAX_UPCOMING_EXAMS)
   })
 
-  it('garde les plus RÉCENTS quand la liste dépasse la borne (cohérent avec addExam)', () => {
+  it('garde les plus RÉCENTS quand la liste dépasse la borne', () => {
     const many = Array.from({ length: MAX_UPCOMING_EXAMS + 3 }, (_, i) => ({
       ...base,
       chapterId: `chap-${i}`,
@@ -147,24 +136,6 @@ describe('activeExams', () => {
     const noDate = { ...base, chapterId: 'nd', date: null }
     const result = activeExams([noDate, other], '2026-07-14')
     expect(result[result.length - 1].chapterId).toBe('nd')
-  })
-})
-
-describe('addExam / removeExam', () => {
-  it('ajoute sans muter la liste d’origine', () => {
-    const list = [base]
-    const next = addExam(list, other)
-    expect(next).toHaveLength(2)
-    expect(list).toHaveLength(1)
-  })
-
-  it('remplace le contrôle du même chapitre', () => {
-    const updated = { ...base, date: '2026-08-01' }
-    expect(addExam([base], updated)).toEqual([updated])
-  })
-
-  it('retire par chapitre', () => {
-    expect(removeExam([base, other], base.chapterId)).toEqual([other])
   })
 })
 

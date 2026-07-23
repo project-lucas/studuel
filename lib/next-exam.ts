@@ -56,12 +56,6 @@ export function isExamActive(
   return exam.date >= today
 }
 
-// Lien profond vers la session de révision du chapitre visé :
-// /reviser/{slug-matière}/{id-chapitre} (le chapitre est identifié par son id).
-export function examHref(exam: NextExam): string {
-  return `/reviser/${exam.subject}/${exam.chapterId}`
-}
-
 // Compte à rebours lisible en français, ou null si aucune date.
 export function examCountdownLabel(
   exam: NextExam,
@@ -188,18 +182,6 @@ export function activeExams(list: NextExam[], today: string): NextExam[] {
       if (b.date === null) return -1
       return a.date < b.date ? -1 : 1
     })
-}
-
-// Ajoute (ou met à jour) un contrôle dans la liste : dédoublonné par chapitre,
-// borné. Retourne une NOUVELLE liste (immutabilité).
-export function addExam(list: NextExam[], exam: NextExam): NextExam[] {
-  const withoutDup = list.filter((e) => e.chapterId !== exam.chapterId)
-  return [...withoutDup, exam].slice(-MAX_UPCOMING_EXAMS)
-}
-
-// Retire le contrôle d'un chapitre. Nouvelle liste.
-export function removeExam(list: NextExam[], chapterId: string): NextExam[] {
-  return list.filter((e) => e.chapterId !== chapterId)
 }
 
 // Identifiants des chapitres visés par les contrôles à venir (sans doublon) —

@@ -240,9 +240,18 @@ breaking changes vs. l'entraînement.
 
 **2026-07-23 — fin du cycle 2 `/jour` (Lia, relance automatique de 11:05) :**
 - **Fait** : arbre propre au réveil → **file du cycle 1 entièrement consommée**
-  (espace Jeux + notifications push, 8 lots), puis **6 audits** de zones jamais
-  relues. **20 commits verts**, poussés (dernier `93c83f1`, **1160 tests**).
+  (espace Jeux + notifications push, 8 lots), puis **7 audits** de zones jamais
+  relues — le dernier portant sur mon propre travail du jour. **22 commits
+  verts**, poussés (dernier `0384db8`, **1161 tests**).
   **4 migrations créées : `195` → `198`.** Détail : `_ASSOCIE/A-LIRE-JOUR.md`.
+- **Leçon neuve, à garder** : *un message de commit n'est pas une preuve.* La
+  revue finale a montré que `724b376` **annonçait** que l'échec d'un
+  réordonnancement remontait à l'écran — le calcul serveur était bien là, mais
+  **aucun appelant ne lisait le résultat**. Vérifier le chemin COMPLET, du
+  serveur jusqu'au pixel, avant d'écrire qu'un défaut est fermé. Corollaire du
+  même lot : corriger un défaut peut en OUVRIR un autre — en cessant de
+  fabriquer un corrigé, `gradeQcm` s'est mis à valider une réponse vide (deux
+  ensembles vides sont égaux). Les deux sont fermés (`0384db8`).
 - **⚠️ LA PRIORITÉ DE LUCAS : exécuter la `198`.** `generateQuestionFeedback`
   (Mon carnet) n'exigeait **que d'être connecté**, prenait un énoncé et une
   réponse en **texte libre**, et renvoyait la réponse du modèle au client :

@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { CircleUser } from 'lucide-react'
+import { Settings, LogIn } from 'lucide-react'
 import CoinIcon from '@/components/ui/CoinIcon'
 import { isHudHidden } from '@/lib/top-hud-routes'
 import { cn } from '@/lib/utils'
@@ -111,18 +111,27 @@ export default function TopHud({
         </Link>
       )}
 
-      {/* Profil — pastille ronde flottante à l'extrême droite (icône seule, plus
-          de nom en clair : l'info se réduit à un bouton profil net). */}
+      {/* Réglages du compte — pastille ronde flottante à l'extrême droite. Ce
+          n'est PAS l'entrée « profil de jeu » (avatar, stats, badges) : celle-ci
+          est la carte joueur en haut à gauche de l'arène. Pour lever la
+          confusion des deux entrées jumelles, on affiche ici un engrenage
+          (réglages du compte : /compte), pas une silhouette qui se lisait comme
+          un second bouton profil. Visiteur non connecté → icône « entrer ». */}
       <Link
         href={accountHref}
-        aria-label={userLabel ? `Mon profil — ${userLabel}` : 'Se connecter'}
+        aria-label={userLabel ? `Réglages du compte — ${userLabel}` : 'Se connecter'}
+        title={userLabel ? 'Réglages du compte' : 'Se connecter'}
         className={cn(
           'pointer-events-auto flex size-10 shrink-0 items-center justify-center rounded-full bg-card/80 shadow-lg ring-1 ring-black/5 backdrop-blur-md transition active:scale-95',
           connected ? '' : 'ml-auto',
           accountActive ? 'text-primary' : 'text-foreground',
         )}
       >
-        <CircleUser className="size-6" strokeWidth={2.1} aria-hidden="true" />
+        {userLabel ? (
+          <Settings className="size-6" strokeWidth={2.1} aria-hidden="true" />
+        ) : (
+          <LogIn className="size-6" strokeWidth={2.1} aria-hidden="true" />
+        )}
       </Link>
     </header>
   )

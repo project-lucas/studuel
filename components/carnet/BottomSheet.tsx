@@ -1,10 +1,11 @@
 'use client'
 
-import { useEffect, type ReactNode } from 'react'
+import { useEffect, useRef, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
+import { useDialogFocus } from '@/lib/use-dialog'
 
 /**
  * Feuille montante (bottom sheet) du carnet : voile sombre + panneau blanc
@@ -24,6 +25,10 @@ export default function BottomSheet({
   children: ReactNode
 }) {
   const reduce = useReducedMotion()
+  // La feuille reste MONTÉE et bascule sur `open` : le piège de focus doit
+  // suivre cet état, pas le montage du composant.
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, open)
 
   useEffect(() => {
     if (!open) return
@@ -50,7 +55,7 @@ export default function BottomSheet({
             type="button"
             aria-label="Fermer"
             onClick={() => {
-              sfx.tap()
+              sfx.back()
               onClose()
             }}
             className="absolute inset-0 cursor-pointer bg-foreground/40"
@@ -60,10 +65,11 @@ export default function BottomSheet({
             transition={{ duration: 0.2 }}
           />
           <motion.div
+            ref={panel}
             role="dialog"
             aria-modal="true"
             aria-label={title}
-            className="relative max-h-[85dvh] overflow-y-auto overscroll-contain rounded-t-3xl bg-white px-4 pt-3 pb-[calc(env(safe-area-inset-bottom)+1.25rem)] shadow-2xl"
+            className="relative max-h-[85dvh] overflow-y-auto overscroll-contain rounded-t-3xl bg-white px-4 pt-3 pb-[calc(env(safe-area-inset-bottom)+1.25rem)] shadow-2xl outline-none"
             initial={reduce ? { opacity: 0 } : { y: '100%' }}
             animate={reduce ? { opacity: 1 } : { y: 0 }}
             exit={reduce ? { opacity: 0 } : { y: '100%' }}
@@ -81,7 +87,7 @@ export default function BottomSheet({
               <button
                 type="button"
                 onClick={() => {
-                  sfx.tap()
+                  sfx.back()
                   onClose()
                 }}
                 aria-label="Fermer"

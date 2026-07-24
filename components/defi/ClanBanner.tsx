@@ -1,11 +1,12 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { School as SchoolIcon, X } from 'lucide-react'
 import SchoolPicker from '@/components/SchoolPicker'
 import { sfx } from '@/lib/sounds'
 import { SCHOOL_LEVEL_LABEL, type School, type SchoolLevel } from '@/lib/clan'
+import { useDialogFocus } from '@/lib/use-dialog'
 
 // Bannière « clan » en tête des classements du Défi : montre l'école de l'élève
 // (son clan) et permet d'en choisir/changer via le sélecteur d'école, ouvert en
@@ -19,6 +20,8 @@ export default function ClanBanner({
 }) {
   const router = useRouter()
   const [open, setOpen] = useState(false)
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, open)
 
   const done = () => {
     setOpen(false)
@@ -71,10 +74,14 @@ export default function ClanBanner({
           role="dialog"
           aria-modal="true"
           aria-label="Choisir mon école"
-          onClick={() => setOpen(false)}
+          onClick={() => {
+            sfx.back()
+            setOpen(false)
+          }}
         >
           <div
-            className="w-full max-w-md rounded-t-3xl bg-card p-5 shadow-xl sm:rounded-3xl"
+            ref={panel}
+            className="w-full max-w-md rounded-t-3xl bg-card p-5 shadow-xl outline-none sm:rounded-3xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-4 flex items-center justify-between">
@@ -83,7 +90,10 @@ export default function ClanBanner({
               </h2>
               <button
                 type="button"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  sfx.back()
+                  setOpen(false)
+                }}
                 aria-label="Fermer"
                 className="flex size-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted active:scale-90"
               >

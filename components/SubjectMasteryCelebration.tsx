@@ -1,9 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { sfx } from '@/lib/sounds'
 import DialogCloseButton from '@/components/DialogCloseButton'
+import { useDialogFocus } from '@/lib/use-dialog'
 
 export type CelebrationEntry = { slug: string; name: string; pct: number }
 
@@ -52,6 +53,8 @@ export default function SubjectMasteryCelebration({
     entry: CelebrationEntry
     tier: Tier
   } | null>(null)
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, current != null)
 
   useEffect(() => {
     // Petit délai : la page s'installe, puis la fête éclate.
@@ -90,7 +93,8 @@ export default function SubjectMasteryCelebration({
     >
       <ConfettiRain />
       <div
-        className="pop-in relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10"
+        ref={panel}
+        className="pop-in relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10 outline-none"
         onClick={(e) => e.stopPropagation()}
       >
         <DialogCloseButton onClose={dismiss} />

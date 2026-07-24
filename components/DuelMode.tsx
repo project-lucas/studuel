@@ -311,9 +311,6 @@ export default function DuelMode({
           ))}
         </ul>
 
-        <Button variant="ghost" onClick={onExit} className="self-center">
-          Retour aux modes
-        </Button>
       </div>
     )
   }

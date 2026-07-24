@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useTransition } from 'react'
+import { useRef, useState, useTransition } from 'react'
 import Link from 'next/link'
 import {
   Check,
@@ -25,6 +25,7 @@ import {
 import SubjectIcon from '@/components/SubjectIcon'
 import WorldBackdrop from '@/components/WorldBackdrop'
 import { sfx } from '@/lib/sounds'
+import { useDialogFocus } from '@/lib/use-dialog'
 import { toast } from '@/lib/toast'
 import { saveSelectedSubjects, saveDailyGoalMinutes } from '@/app/reviser/actions'
 import { DAILY_GOAL_OPTIONS } from '@/lib/daily-goal'
@@ -65,7 +66,7 @@ const RANK_COLOR: Record<MasteryRank, string> = {
   legendaire: 'text-primary',
 }
 
-// Rangée de 3 couronnes + libellé du rang (« À débloquer » tant que rien n'est
+// Rangée de 3 couronnes + libellé du rang (« À découvrir » tant que rien n'est
 // commencé). Purement décorative : le texte porte l'information.
 function CrownRating({
   rank,
@@ -81,7 +82,10 @@ function CrownRating({
 }) {
   const filled = rank ? RANK_CROWNS[rank] : 0
   const color = rank ? RANK_COLOR[rank] : ''
-  const label = rank ? MASTERY_RANK_LABEL[rank] : 'À débloquer'
+  // « À découvrir » et non « À débloquer » : rien n'est verrouillé ici (ni
+  // paywall, ni condition). Le rang est simplement vide tant qu'on n'a pas
+  // commencé — « débloquer » promettait une serrure qui n'existe pas.
+  const label = rank ? MASTERY_RANK_LABEL[rank] : 'À découvrir'
 
   return (
     <div
@@ -132,6 +136,10 @@ function normalizeSearch(s: string): string {
 function ProgramSearch({ subjects }: { subjects: Subject[] }) {
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState('')
+  // Le champ porte `autoFocus` : le hook le détecte et ne lui prend pas le
+  // focus — il ne fait ici que piéger la tabulation dans le panneau.
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, open)
 
   const q = normalizeSearch(query)
   const results = q
@@ -155,10 +163,11 @@ function ProgramSearch({ subjects }: { subjects: Subject[] }) {
 
       {open ? (
         <div
+          ref={panel}
           role="dialog"
           aria-modal="true"
           aria-label="Recherche dans le programme"
-          className="fixed inset-0 z-[70] flex flex-col bg-background/95 backdrop-blur-sm"
+          className="fixed inset-0 z-[70] flex flex-col bg-background/95 outline-none backdrop-blur-sm"
         >
           {/* Barre de recherche en haut du panneau. */}
           <div className="flex items-center gap-2 border-b border-black/5 p-3">
@@ -548,6 +557,11 @@ function SubjectRow({
   // d'icône — une seule image forte par carte, façon grande app.
   const vignette = subjectVignette(subject.slug)
   const showVignette = !!vignette && !editing
+  // Matière sans illustration dédiée (ex. Finances personnelles, seule du dossier
+  // culture sans visuel) : on pose son icône AU MÊME endroit et à la même taille
+  // qu'une illustration, pour que la carte garde la silhouette des autres (visuel
+  // ancré en bas à droite) au lieu du médaillon à gauche qui la faisait dépareiller.
+  const showFallbackArt = !vignette && !editing
 
   const inner = (
     <div
@@ -592,6 +606,23 @@ function SubjectRow({
           loading="lazy"
           className="pointer-events-none absolute right-0 bottom-0 z-0 size-[76px] select-none object-contain drop-shadow-[0_4px_10px_rgba(31,17,71,0.16)] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105"
         />
+      ) : showFallbackArt ? (
+        // Repli sans illustration : l'icône de la matière au même ancrage (bas
+        // droite), dans son médaillon d'arène — même silhouette que les cartes
+        // illustrées, pas de layout à part.
+        <span
+          aria-hidden="true"
+          className={cn(
+            'arena-tile pointer-events-none absolute right-1.5 bottom-1.5 z-0 flex size-[68px] items-center justify-center rounded-2xl shadow-sm transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105',
+            theme.arena,
+          )}
+        >
+          <SubjectIcon
+            slug={subject.slug}
+            className="size-9 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
+            strokeWidth={2.25}
+          />
+        </span>
       ) : null}
 
       <div className="relative z-10 flex items-center gap-2.5">
@@ -599,34 +630,22 @@ function SubjectRow({
           <span
             className={cn(
               'flex size-5 shrink-0 items-center justify-center rounded-full border text-[11px] transition-colors',
+              // Coche de sélection en VERT (validation), pas en jaune : le jaune
+              // reste la monnaie/récompense.
               checked
-                ? 'border-highlight bg-highlight text-foreground'
+                ? 'border-green-500 bg-green-500 text-white'
                 : 'border-muted-foreground/40 bg-muted',
             )}
           >
             {checked ? <Check className="size-3" /> : null}
           </span>
-        ) : showVignette ? null : (
-          <span
-            aria-hidden="true"
-            className={cn(
-              'arena-tile flex size-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-sm',
-              theme.arena,
-            )}
-          >
-            <SubjectIcon
-              slug={subject.slug}
-              className="size-6 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.35)]"
-              strokeWidth={2.25}
-            />
-          </span>
-        )}
+        ) : null}
         <p
           className={cn(
             'font-heading min-w-0 flex-1 text-base leading-tight font-bold',
-            // Petite réserve à droite : le nom reste au-dessus, l'illustration
-            // vit dans le coin bas-droit sans le chevaucher.
-            showVignette && 'pr-2',
+            // Petite réserve à droite : le nom reste au-dessus, le visuel
+            // (illustration ou icône de repli) vit dans le coin bas-droit.
+            (showVignette || showFallbackArt) && 'pr-2',
           )}
         >
           {subject.name}
@@ -634,10 +653,13 @@ function SubjectRow({
       </div>
 
       <div className="relative z-10">
+        {/* Les couronnes portent le rang ; le libellé texte est masqué sur la
+            carte (un visuel occupe déjà le coin), la légende de la page l'explique
+            et l'aria-label l'annonce. Uniforme désormais sur TOUTES les cartes. */}
         <CrownRating
           rank={rankForValue(pct / 100)}
           subjectName={subject.name}
-          showLabel={!showVignette}
+          showLabel={false}
         />
       </div>
     </div>
@@ -762,7 +784,7 @@ export default function SubjectsHome({
   let cardIndex = 0
 
   return (
-    <section aria-label="Mes matières">
+    <section aria-label="Ton programme">
       {/* Fond crème pleine page, derrière tout le contenu de l'onglet. */}
       <WorldBackdrop className="rev-bg" />
 
@@ -843,8 +865,10 @@ export default function SubjectsHome({
             programme, y compris ce qui est replié — sinon fermer un dossier
             reviendrait à cacher son contenu de la recherche. */}
         <div className="flex items-center justify-between gap-2 px-1">
+          {/* « Ton programme » et non « Mes matières » : ce dernier nomme déjà
+              l'onglet actif tout en haut, la répétition brouillait le repère. */}
           <h2 className="font-heading text-sm font-bold text-foreground">
-            Mes matières
+            Ton programme
           </h2>
           <ProgramSearch subjects={subjects} />
         </div>
@@ -864,7 +888,12 @@ export default function SubjectsHome({
             // En édition, le dossier reste ouvert de force : le choix
             // ouvert/fermé étant mémorisé, un élève qui l'avait replié entrait
             // en édition devant un dossier fermé, donc sans une seule case.
-            <SubjectFolder key={folder.id} folder={folder} forceOpen={editing}>
+            <SubjectFolder
+              key={folder.id}
+              folder={folder}
+              progressBySlug={progressBySlug}
+              forceOpen={editing}
+            >
               {folder.groups.map(({ label, items }) => (
                 <section key={label ?? 'tout'} className="flex flex-col gap-2.5">
                   {label ? (

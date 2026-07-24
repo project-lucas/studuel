@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import {
   ArrowLeft,
   BarChart3,
@@ -125,6 +125,92 @@ function ResultsPanel({ stats }: { stats: CourseStats }) {
   )
 }
 
+// ------------------------------------------------------- allure d'un cours ----
+
+/**
+ * Les deux réglages d'ALLURE d'un cours : son icône et sa couleur. Extraits
+ * pour vivre à deux endroits — dans l'onglet Paramètres (là où on range les
+ * réglages) et dans la feuille « Personnaliser » qu'on ouvre en touchant
+ * directement la pastille du cours. Sans ce raccourci, changer l'icône
+ * demandait de savoir qu'elle se règle dans un troisième onglet : cinq cours
+ * finissaient identiques, tous « Nouveau cours » avec le même livre violet.
+ */
+function CourseLook({
+  course,
+  disabled,
+  onPatch,
+}: {
+  course: CourseHeader
+  disabled: boolean
+  onPatch: (p: Parameters<typeof updateCourse>[1]) => void
+}) {
+  return (
+    <div className="flex flex-col gap-4">
+      <div>
+        <p className="font-heading mb-1.5 text-sm font-extrabold text-foreground">
+          Icône
+        </p>
+        <div className="grid grid-cols-5 gap-2">
+          {COURSE_ICONS.map((iconId) => {
+            const Icon = COURSE_ICON[iconId]
+            const active = normalizeCourseIcon(course.icon) === iconId
+            return (
+              <button
+                key={iconId}
+                type="button"
+                disabled={disabled}
+                aria-pressed={active}
+                aria-label={`Icône ${iconId}`}
+                onClick={() => {
+                  sfx.tap()
+                  onPatch({ icon: iconId })
+                }}
+                className={cn(
+                  'flex aspect-square cursor-pointer items-center justify-center rounded-2xl transition disabled:opacity-60',
+                  active
+                    ? 'bg-primary text-primary-foreground ring-2 ring-primary'
+                    : 'bg-muted/60 text-foreground hover:bg-muted',
+                )}
+              >
+                <Icon className="size-5" strokeWidth={2.2} aria-hidden="true" />
+              </button>
+            )
+          })}
+        </div>
+      </div>
+
+      <div>
+        <p className="font-heading mb-1.5 text-sm font-extrabold text-foreground">
+          Couleur
+        </p>
+        <div className="flex gap-2.5">
+          {COURSE_COLORS.map((colorId) => {
+            const active = normalizeCourseColor(course.color) === colorId
+            return (
+              <button
+                key={colorId}
+                type="button"
+                disabled={disabled}
+                aria-pressed={active}
+                aria-label={`Couleur ${colorId}`}
+                onClick={() => {
+                  sfx.tap()
+                  onPatch({ color: colorId })
+                }}
+                className={cn(
+                  'size-9 cursor-pointer rounded-full transition disabled:opacity-60',
+                  COURSE_DOT[colorId],
+                  active && 'ring-2 ring-foreground/50 ring-offset-2',
+                )}
+              />
+            )
+          })}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // -------------------------------------------------------- onglet paramètres ----
 
 function SettingsPanel({ course }: { course: CourseHeader }) {
@@ -190,67 +276,8 @@ function SettingsPanel({ course }: { course: CourseHeader }) {
         </button>
       </div>
 
-      {/* Icône. */}
-      <div>
-        <p className="font-heading mb-1.5 text-sm font-extrabold text-foreground">
-          Icône
-        </p>
-        <div className="grid grid-cols-5 gap-2">
-          {COURSE_ICONS.map((iconId) => {
-            const Icon = COURSE_ICON[iconId]
-            const active = normalizeCourseIcon(course.icon) === iconId
-            return (
-              <button
-                key={iconId}
-                type="button"
-                aria-pressed={active}
-                aria-label={`Icône ${iconId}`}
-                onClick={() => {
-                  sfx.tap()
-                  patch({ icon: iconId })
-                }}
-                className={cn(
-                  'flex aspect-square cursor-pointer items-center justify-center rounded-2xl transition',
-                  active
-                    ? 'bg-primary text-primary-foreground ring-2 ring-primary'
-                    : 'bg-muted/60 text-foreground hover:bg-muted',
-                )}
-              >
-                <Icon className="size-5" strokeWidth={2.2} aria-hidden="true" />
-              </button>
-            )
-          })}
-        </div>
-      </div>
-
-      {/* Couleur. */}
-      <div>
-        <p className="font-heading mb-1.5 text-sm font-extrabold text-foreground">
-          Couleur
-        </p>
-        <div className="flex gap-2.5">
-          {COURSE_COLORS.map((colorId) => {
-            const active = normalizeCourseColor(course.color) === colorId
-            return (
-              <button
-                key={colorId}
-                type="button"
-                aria-pressed={active}
-                aria-label={`Couleur ${colorId}`}
-                onClick={() => {
-                  sfx.tap()
-                  patch({ color: colorId })
-                }}
-                className={cn(
-                  'size-9 cursor-pointer rounded-full transition',
-                  COURSE_DOT[colorId],
-                  active && 'ring-2 ring-foreground/50 ring-offset-2',
-                )}
-              />
-            )
-          })}
-        </div>
-      </div>
+      {/* Icône et couleur (mêmes commandes que la feuille « Personnaliser »). */}
+      <CourseLook course={course} disabled={pending} onPatch={patch} />
 
       {/* Zone dangereuse. */}
       <div className="mt-2 border-t border-black/5 pt-4">
@@ -289,15 +316,20 @@ export default function CourseScreen({
   stats: CourseStats
 }) {
   const router = useRouter()
+  const params = useSearchParams()
   const [tab, setTab] = useState<Tab>('contenu')
   const [editingTitle, setEditingTitle] = useState(false)
   const [titleDraft, setTitleDraft] = useState(course.title)
   const [reviseOpen, setReviseOpen] = useState(false)
   const [createOpen, setCreateOpen] = useState(false)
+  const [lookOpen, setLookOpen] = useState(false)
   // Conteneur cible de la création (racine par défaut, chapitre via son menu).
   const [createTarget, setCreateTarget] = useState<string | null>(null)
   const [typePickerOpen, setTypePickerOpen] = useState(false)
-  const [aiOpen, setAiOpen] = useState(false)
+  // `?ia=1` : le cours vient d'être créé depuis « Cours généré par l'IA » du
+  // carnet — la feuille de génération s'ouvre d'emblée, sinon l'élève retombe
+  // sur un cours vide sans savoir par où on lui avait promis de commencer.
+  const [aiOpen, setAiOpen] = useState(params.get('ia') === '1')
   const [aiTheme, setAiTheme] = useState('')
   const [aiCount, setAiCount] = useState(5)
   const [aiStyle, setAiStyle] = useState<'qcm' | 'flashcard' | 'mixte'>('mixte')
@@ -398,14 +430,29 @@ export default function CourseScreen({
       {/* Header : icône + titre éditable + introduction + Réviser. */}
       <header className="rev-card rounded-3xl bg-white p-4 pr-12 shadow-sm ring-1 ring-black/5">
         <div className="flex items-start gap-3">
-          <span
+          {/* La pastille EST la commande de personnalisation : on touche
+              l'icône du cours pour la changer, là où on la regarde. */}
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              setLookOpen(true)
+            }}
+            aria-haspopup="dialog"
+            aria-label="Personnaliser l’icône et la couleur du cours"
             className={cn(
-              'flex size-12 shrink-0 items-center justify-center rounded-2xl',
+              'relative flex size-12 shrink-0 cursor-pointer items-center justify-center rounded-2xl transition active:scale-95',
               tint,
             )}
           >
             <Icon className="size-6" strokeWidth={2.2} aria-hidden="true" />
-          </span>
+            <span
+              aria-hidden="true"
+              className="absolute -right-1 -bottom-1 flex size-5 items-center justify-center rounded-full bg-white text-primary shadow-sm ring-1 ring-black/5"
+            >
+              <Pencil className="size-3" strokeWidth={2.6} />
+            </span>
+          </button>
           <div className="min-w-0 flex-1">
             {editingTitle ? (
               <form
@@ -554,6 +601,26 @@ export default function CourseScreen({
           <Plus className="size-7" strokeWidth={2.6} aria-hidden="true" />
         </button>
       ) : null}
+
+      {/* Feuille « Personnaliser » : icône + couleur, ouverte depuis la
+          pastille de l'en-tête. Les mêmes commandes restent dans Paramètres. */}
+      <BottomSheet
+        open={lookOpen}
+        onClose={() => setLookOpen(false)}
+        title="Personnaliser ce cours"
+      >
+        <CourseLook
+          course={course}
+          disabled={pending}
+          onPatch={(p) => {
+            if (pending) return
+            startTransition(async () => {
+              await updateCourse(course.id, p)
+              router.refresh()
+            })
+          }}
+        />
+      </BottomSheet>
 
       {/* Feuille « Réviser » : tout le cours ou un chapitre. */}
       <BottomSheet

@@ -10,6 +10,8 @@
 // concurrentes avaient déjà produit le bug « Bronze III » d'un côté et
 // « Salle d'étude » de l'autre pour le même total.
 
+import { DIVISION_SPAN, tierFloor } from './rank'
+
 // -------------------------------------------------------------- gain / perte
 // Barème Elo-lite : battre plus fort que soi rapporte gros, perdre contre plus
 // faible coûte cher, et l'inverse est amorti. Les pertes sont volontairement
@@ -44,6 +46,32 @@ export function trophyDelta(
 // Applique une variation, borné à 0 (on ne descend jamais sous zéro trophée).
 export function applyTrophyDelta(current: number, delta: number): number {
   return Math.max(0, Math.floor(current) + Math.round(delta))
+}
+
+// ---------------------------------------------------- filet de perte « Bronze »
+// Un débutant à 20 trophées qui perd −20 retombait à zéro : décourageant, et
+// contraire à la doctrine « on récompense l'envie de jouer, on ne punit pas ».
+// Dans le palier BRONZE (0 → APEX du bronze), la défaite est amortie :
+//   • Bronze IV (0..DIVISION_SPAN-1) : aucune perte — filet total du débutant ;
+//   • Bronze III/II/I : la perte ne peut PAS faire redescendre sous le seuil de
+//     la division courante (paliers 100/200/300) — un cliquet qui verrouille la
+//     division atteinte.
+// Hors Bronze (Argent+), barème normal (la défaite mord pleinement).
+// MIROIR EXACT du SQL apply_ranked_match (migration 202) : toute évolution ici
+// doit toucher les deux — le serveur reste la source de persistance.
+const BRONZE_CEILING = tierFloor('argent') // seuil d'entrée d'Argent = fin du Bronze
+
+export function bronzeLossShield(before: number, delta: number): number {
+  // Les gains ne sont jamais amortis.
+  if (delta >= 0) return delta
+  const b = Math.max(0, Math.floor(before))
+  // Hors Bronze : la défaite s'applique telle quelle.
+  if (b >= BRONZE_CEILING) return delta
+  // Bronze IV : filet total, la défaite ne coûte aucun trophée.
+  if (b < DIVISION_SPAN) return 0
+  // Bronze III/II/I : on ne descend jamais sous le seuil de la division courante.
+  const gate = Math.floor(b / DIVISION_SPAN) * DIVISION_SPAN
+  return Math.min(0, Math.max(delta, gate - b))
 }
 
 // -------------------------------------------------- adversaire du mode classé

@@ -14,6 +14,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Gamepad2, ChevronLeft, ChevronRight, Swords, X } from 'lucide-react'
 import { ChevronRightIcon } from '@/components/defi/icons'
 import { sfx } from '@/lib/sounds'
+import { useDialogFocus } from '@/lib/use-dialog'
 import {
   ROULETTE_SUBJECTS,
   subjectGameTickets,
@@ -293,6 +294,8 @@ export default function ModesSheet({
   const [open, setOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
   const reduce = useReducedMotion()
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, open)
 
   // Fermeture au clavier (Échap) + verrou du défilement de la page tant que
   // l'espace plein écran est ouvert (il couvre tout, la page derrière ne doit
@@ -360,8 +363,9 @@ export default function ModesSheet({
                 // L'espace PLEIN ÉCRAN : opaque, au-dessus de la barre d'onglets
                 // (z-[70] > nav en z-50), il monte du bas et couvre tout.
                 <motion.div
+                  ref={panel}
                   data-no-swipe
-                  className="defi-modes-screen fixed inset-0 z-[70] flex flex-col"
+                  className="defi-modes-screen fixed inset-0 z-[70] flex flex-col outline-none"
                   role="dialog"
                   aria-modal="true"
                   aria-label="Modes de jeu"
@@ -377,7 +381,7 @@ export default function ModesSheet({
                     <button
                       type="button"
                       onClick={() => {
-                        sfx.tap()
+                        sfx.back()
                         setOpen(false)
                       }}
                       aria-label="Fermer les modes de jeu"

@@ -24,7 +24,6 @@ export default function GameOutcome({
   saved,
   awardedXp,
   onReplay,
-  onExit,
 }: {
   format: GameFormat
   run: GameRun
@@ -36,7 +35,12 @@ export default function GameOutcome({
   /** XP réellement versée, telle que renvoyée par le serveur (null en attente). */
   awardedXp: number | null
   onReplay: () => void
-  onExit: () => void
+  /**
+   * Sortie du jeu. Désormais portée par la flèche retour du header ModeStage :
+   * la prop reste acceptée pour compat avec les appelants, mais l'écran de fin
+   * n'affiche plus son propre bouton de retour (seul « Rejouer » subsiste).
+   */
+  onExit?: () => void
 }) {
   const won = run.status === 'won'
   // Le serveur fait foi dès qu'il a répondu : lui seul connaît le bonus de
@@ -104,16 +108,12 @@ export default function GameOutcome({
             : ''}
       </p>
 
-      <div className="flex w-full flex-col gap-2">
-        {/* `shine` : l'écran de fin n'a qu'UNE action qui compte — relancer.
-            Le balayage de lumière la désigne sans un mot. */}
-        <Button size="lg" shine onClick={onReplay} className="w-full">
-          <RotateCcw className="size-4" aria-hidden="true" /> Rejouer
-        </Button>
-        <Button variant="ghost" onClick={onExit}>
-          Retour à l&apos;arène
-        </Button>
-      </div>
+      {/* `shine` : l'écran de fin n'a qu'UNE action qui compte — relancer.
+          Le balayage de lumière la désigne sans un mot. Le retour à l'arène
+          vit dans la flèche flottante (ArenaBackButton). */}
+      <Button size="lg" shine onClick={onReplay} className="w-full">
+        <RotateCcw className="size-4" aria-hidden="true" /> Rejouer
+      </Button>
     </div>
   )
 }

@@ -1,16 +1,17 @@
-import BannerSway from './layers/BannerSway'
 import FallingLeaves from './layers/FallingLeaves'
 import TorchFlames from './layers/TorchFlames'
 import GoldenDust from './layers/GoldenDust'
 
 /**
- * Fond animé de l'Arène : quatre couches décoratives superposées au décor
+ * Fond animé de l'Arène : trois couches décoratives superposées au décor
  * peint, toutes en boucle continue sans coupure visible (CSS procédural +
  * canvas, aucune vidéo/GIF, aucune dépendance externe).
  *
- * Empilement (z croissant) : image (0) → bannières (1) → feuilles (2) →
- * torches (3) → poussière dorée (4). Les couches sont `pointer-events: none`
- * et respectent prefers-reduced-motion (flammes figées, reste masqué/arrêté).
+ * Empilement (z croissant) : image (0) → feuilles (2) → torches (3) →
+ * poussière dorée (4). Les couches sont `pointer-events: none` et respectent
+ * prefers-reduced-motion (flammes figées, reste masqué/arrêté). Les bannières
+ * violettes suspendues aux bords ont été retirées : elles doublonnaient avec
+ * les oriflammes déjà peintes dans le décor de l'arène.
  *
  * Deux modes d'emploi :
  * - DANS l'Arène (app/defi/layout.tsx → ArenaBackdrop) : sans `imageUrl`,
@@ -35,7 +36,6 @@ export default function AnimatedBackground({ imageUrl, children }: Props) {
         />
       ) : null}
       <div aria-hidden="true" className="abg-layers">
-        <BannerSway />
         <FallingLeaves />
         <TorchFlames />
         <GoldenDust />

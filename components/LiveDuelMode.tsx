@@ -308,7 +308,6 @@ export default function LiveDuelMode({
         <p className="text-muted-foreground text-sm">
           Manches gagnées : {score.me} — {score.them}
         </p>
-        <Button onClick={handleExit}>Retour à l’arène</Button>
       </div>
     )
   }

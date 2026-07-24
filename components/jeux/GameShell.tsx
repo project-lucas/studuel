@@ -1,6 +1,9 @@
 'use client'
 
+import Image from 'next/image'
 import { Trophy } from 'lucide-react'
+import { gameScene } from '@/lib/defi/modes-catalog'
+import { cn } from '@/lib/utils'
 import type { GameFormat } from '@/lib/jeux/formats'
 
 /**
@@ -22,7 +25,6 @@ export function GameIntro({
   best,
   empty,
   onStart,
-  onExit,
 }: {
   format: GameFormat
   /** Meilleur score local sur ce jeu (0 s'il n'y en a pas encore). */
@@ -30,18 +32,71 @@ export function GameIntro({
   /** Aucune question disponible : on n'ouvre pas une table vide. */
   empty: boolean
   onStart: () => void
-  onExit: () => void
+  /**
+   * Sortie du jeu. Désormais portée par la flèche retour du header ModeStage
+   * (qui enveloppe toutes les tables) : la prop reste acceptée pour compat avec
+   * les appelants, mais l'intro n'affiche plus son propre bouton de retour.
+   */
+  onExit?: () => void
 }) {
+  // Le rappel de l'illustration : la MÊME bannière que le billet de l'arène sur
+  // lequel on vient de taper. C'est elle qui relie l'écran de lancement au jeu
+  // choisi — la table tient enfin la promesse de l'image. Repli sur la pastille
+  // emoji (posée sur un halo d'ambiance de la robe) pour les jeux qui n'ont pas
+  // encore leur scène : bland, mais jamais nu.
+  const scene = gameScene(format.id)
   return (
     <div className="mx-auto flex max-w-sm flex-col items-center gap-5 pt-6 text-center">
-      <span
-        aria-hidden="true"
-        className="grid size-24 place-items-center rounded-3xl bg-[color:var(--jeu-accent)] text-5xl shadow-lg"
-      >
-        {format.emoji}
-      </span>
+      {scene ? (
+        <div className="relative w-full">
+          <div className="relative aspect-video w-full overflow-hidden rounded-3xl shadow-lg ring-1 ring-black/5">
+            <Image
+              src={scene}
+              alt=""
+              fill
+              sizes="(max-width: 448px) 92vw, 384px"
+              className="object-cover"
+              priority
+            />
+            {/* Léger voile bas : assoit la pastille qui déborde sans ternir la
+                scène. */}
+            <span
+              aria-hidden="true"
+              className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/30 to-transparent"
+            />
+          </div>
+          {/* La pastille emoji, à cheval sur le bas de la scène — le même code
+              couleur (robe du jeu) que partout ailleurs. */}
+          <span
+            aria-hidden="true"
+            className="absolute -bottom-6 left-1/2 grid size-16 -translate-x-1/2 place-items-center rounded-2xl bg-[color:var(--jeu-accent)] text-3xl shadow-lg ring-4 ring-[color:var(--jeu-surface)]"
+          >
+            {format.emoji}
+          </span>
+        </div>
+      ) : (
+        <span className="relative grid size-24 place-items-center">
+          {/* Halo d'ambiance de la robe, posé en radial derrière la pastille. */}
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 -z-10 scale-150 rounded-full blur-2xl"
+            style={{ background: 'var(--jeu-glow)' }}
+          />
+          <span
+            aria-hidden="true"
+            className="grid size-24 place-items-center rounded-3xl bg-[color:var(--jeu-accent)] text-5xl shadow-lg"
+          >
+            {format.emoji}
+          </span>
+        </span>
+      )}
 
-      <p className="text-base leading-snug font-semibold text-balance">
+      <p
+        className={cn(
+          'text-base leading-snug font-semibold text-balance',
+          scene && 'pt-6',
+        )}
+      >
         {format.rule}
       </p>
 
@@ -70,14 +125,6 @@ export function GameIntro({
           Pas encore de questions pour ce jeu — reviens bientôt !
         </p>
       ) : null}
-
-      <button
-        type="button"
-        onClick={onExit}
-        className="text-sm text-muted-foreground underline-offset-4 hover:underline"
-      >
-        Retour à l&apos;arène
-      </button>
     </div>
   )
 }

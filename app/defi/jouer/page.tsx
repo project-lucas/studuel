@@ -21,7 +21,8 @@ import { createClient } from '@/lib/supabase/server'
 import { activityCutoff, computeStreak, toDayKey } from '@/lib/streak'
 import { getChapterMastery } from '@/lib/mastery'
 import { normalizeExamList, activeExams, examChapterIds } from '@/lib/next-exam'
-import { computeXp, levelFor } from '@/lib/xp'
+import { computeXp } from '@/lib/xp'
+import { fetchDisplayLevel } from '@/lib/wallet-server'
 import { commuteStreak } from '@/lib/trajet'
 import { avatarEmojiFor, type FriendGhost } from '@/lib/social'
 import type { RankPlayer } from '@/lib/trophies'
@@ -205,7 +206,10 @@ export default async function DefiJouerPage({
     lessonsCount: (lessonsDone ?? []).length,
     challengesXp: (challenges ?? []).reduce((s, c) => s + Number(c.xp ?? 0), 0),
   })
-  const level = levelFor(xpTotal)
+  // Niveau du PORTEFEUILLE (source unique, migration 192) dès qu'il existe, sinon
+  // repli sur l'XP dérivée : le même niveau que le bandeau du haut et le profil,
+  // fini le « Niveau 4 » en haut vs « Niv. 1 » sur l'écran de duel.
+  const level = await fetchDisplayLevel(supabase, user.id, xpTotal)
 
   const activeDays = new Set(
     [

@@ -22,6 +22,20 @@ export function isCollegeLevel(grade: string): boolean {
   return COLLEGE_LEVELS.includes(grade)
 }
 
+/**
+ * Les classes où l'on sous-groupe le programme en tronc commun / spécialités /
+ * options : la 1re et la Terminale UNIQUEMENT.
+ *
+ * En seconde, il n'y a pas encore de spécialités dans le système français —
+ * tout le monde suit le même tronc commun. Afficher une section « Spécialités »
+ * en 2de était donc une erreur : les matières comme Maths ou SVT (marquées
+ * `specialite` parce qu'elles LE deviennent au cycle terminal) s'y retrouvaient
+ * rangées à tort. On traite donc la 2de comme le collège — une grille unique.
+ */
+export function usesTrackGroups(grade: string): boolean {
+  return grade === '1re' || grade === 'Tle'
+}
+
 /** Sous-groupes du dossier Programme, au lycée uniquement. */
 export const LYCEE_GROUPS: { category: SubjectCategory; label: string }[] = [
   { category: 'tronc_commun', label: 'Tronc commun' },
@@ -42,8 +56,24 @@ export type SubjectFolder = {
   groups: SubjectGroup[]
   /** Nombre total de matières dans le dossier (affiché sur la pastille). */
   count: number
+  /**
+   * L'unité de ce que compte le dossier, au pluriel (« matières », « modules »).
+   * Une pastille « 6 » toute seule ne dit pas 6 de quoi ; associée à `count`
+   * elle donne « 6 matières », « 5 modules ». Voir `folderCountLabel`.
+   */
+  unit: string
   /** Ouvert au premier affichage ? */
   defaultOpen: boolean
+}
+
+/**
+ * Le libellé complet de la pastille de comptage : « 6 matières », « 1 module ».
+ * Accorde l'unité au singulier quand il n'y a qu'un élément (chute du « s »).
+ */
+export function folderCountLabel(folder: Pick<SubjectFolder, 'count' | 'unit'>): string {
+  const unit =
+    folder.count === 1 ? folder.unit.replace(/s$/, '') : folder.unit
+  return `${folder.count} ${unit}`
 }
 
 /** Le dossier auquel appartient une matière. */
@@ -74,12 +104,14 @@ export function subjectFolders({
   const folders: SubjectFolder[] = []
 
   if (programmeSubjects.length > 0) {
-    const groups: SubjectGroup[] = isCollegeLevel(grade)
-      ? [{ label: null, items: programmeSubjects }]
-      : LYCEE_GROUPS.map((g) => ({
+    // Grille unique au collège ET en seconde (pas de spécialités avant la 1re) ;
+    // sous-groupes tronc commun / spé / options seulement en 1re et Terminale.
+    const groups: SubjectGroup[] = usesTrackGroups(grade)
+      ? LYCEE_GROUPS.map((g) => ({
           label: g.label,
           items: programmeSubjects.filter((s) => s.category === g.category),
         })).filter((g) => g.items.length > 0)
+      : [{ label: null, items: programmeSubjects }]
 
     // Filet de sécurité : au lycée, une matière dont la catégorie ne tombe dans
     // aucun sous-groupe connu (catégorie « college » sur une matière de 2de,
@@ -97,6 +129,7 @@ export function subjectFolders({
       hint: `Tes matières de ${grade}`,
       groups,
       count: programmeSubjects.length,
+      unit: 'matières',
       defaultOpen: true,
     })
   }
@@ -104,15 +137,39 @@ export function subjectFolders({
   if (cultureSubjects.length > 0) {
     folders.push({
       id: 'hors-programme',
-      label: 'Hors programme',
-      hint: 'Culture générale — en bonus, à ton rythme',
+      label: 'Culture générale',
+      hint: 'En bonus, à ton rythme',
       groups: [{ label: null, items: cultureSubjects }],
       count: cultureSubjects.length,
+      unit: 'modules',
       defaultOpen: false,
     })
   }
 
   return folders
+}
+
+/** Toutes les matières d'un dossier, groupes confondus, dans l'ordre affiché. */
+export function folderSubjects(folder: SubjectFolder): Subject[] {
+  return folder.groups.flatMap((g) => g.items)
+}
+
+/**
+ * L'avancement MOYEN d'un dossier, en pourcentage entier (0–100).
+ *
+ * C'est ce que l'en-tête d'un dossier fermé a de plus utile à dire : la
+ * pastille de comptage annonce combien de matières il y a dedans, elle ne dit
+ * rien de ce qui reste à faire. Un dossier sans matière n'a pas d'avancement —
+ * on renvoie `null` plutôt que 0, qui se lirait « tout est à faire ».
+ */
+export function folderProgress(
+  folder: SubjectFolder,
+  progressBySlug: Record<string, number>,
+): number | null {
+  const subjects = folderSubjects(folder)
+  if (subjects.length === 0) return null
+  const sum = subjects.reduce((acc, s) => acc + (progressBySlug[s.slug] ?? 0), 0)
+  return Math.round(sum / subjects.length)
 }
 
 // Mémorisation de l'état ouvert/fermé, par dossier. On garde le choix de

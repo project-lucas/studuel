@@ -1,9 +1,10 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { X } from 'lucide-react'
 import type { AvatarItem } from '@/lib/avatar-studio'
 import CoinIcon from '@/components/ui/CoinIcon'
+import { useDialogFocus } from '@/lib/use-dialog'
 
 // -----------------------------------------------------------------------------
 // Modale d'achat du vestiaire : « Acheter [nom] pour [prix] ? ». Le débit réel
@@ -27,6 +28,8 @@ export default function PurchaseModal({
 }) {
   const price = item.price ?? 0
   const missing = Math.max(0, price - coins)
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel)
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -45,7 +48,8 @@ export default function PurchaseModal({
       onClick={onClose}
     >
       <div
-        className="w-full max-w-sm rounded-t-3xl bg-white p-5 sm:rounded-3xl"
+        ref={panel}
+        className="w-full max-w-sm rounded-t-3xl bg-white p-5 outline-none sm:rounded-3xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between gap-3">

@@ -2,16 +2,20 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import {
-  Plus,
-  CalendarClock,
-  CalendarDays,
-  Check,
-  ChevronRight,
-} from 'lucide-react'
+import { Plus, CalendarDays, Check, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
-import { examCountdownLabel, type NextExam } from '@/lib/next-exam'
+import { subjectTheme } from '@/lib/subject-style'
+import SubjectIcon from '@/components/SubjectIcon'
+import {
+  addDays,
+  derivePlanView,
+  controleTitle,
+  launchChapterId,
+  nearestActiveControle,
+  countdownTag,
+  type Controle,
+} from '@/lib/prep-plan'
 import YearHistory from '@/components/YearHistory'
 import AddExamSheet, {
   type SubjectLite,
@@ -20,49 +24,89 @@ import AddExamSheet, {
 
 // Jours de la semaine, lundi → dimanche (index 0 = lundi, cf. lib/streak).
 const DAY_LABELS = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
+// Noms complets pour l'accessibilité : deux « M » à l'écran (mardi/mercredi)
+// sont ambigus au lecteur d'écran, la lettre seule ne suffit pas.
+const DAY_FULL = [
+  'lundi',
+  'mardi',
+  'mercredi',
+  'jeudi',
+  'vendredi',
+  'samedi',
+  'dimanche',
+]
 
 type WeekDay = { done: boolean; isToday: boolean; isFuture: boolean }
 
+// Métadonnée d'affichage d'une matière (couleur de la pastille + nom du libellé).
+export type ControleSubjectMeta = { name: string; color: string }
+
+// Les 7 clés UTC de la semaine courante (lundi → dimanche), à partir d'une clé
+// « aujourd'hui » — même définition que weekProgress (lundi = 0).
+function weekDatesOf(today: string): string[] {
+  const t = Date.parse(`${today}T00:00:00Z`)
+  const dow = Number.isNaN(t) ? 0 : new Date(t).getUTCDay()
+  const mondayOffset = (dow + 6) % 7
+  const monday = addDays(today, -mondayOffset)
+  return Array.from({ length: 7 }, (_, i) => addDays(monday, i))
+}
+
 // -----------------------------------------------------------------------------
-// Barre de semaine « sans contour » de l'onglet Réviser : la ligne des 7 jours
-// (activité de la semaine, aujourd'hui mis en avant) + un mini-planning du
-// prochain contrôle, en LECTURE SEULE. L'ajout/retrait de contrôles a un point
-// d'entrée unique : « Mes contrôles à venir » dans Mon carnet — le « + » d'ici
-// y renvoie au lieu d'ouvrir une deuxième feuille d'ajout.
+// Barre de semaine de l'onglet Réviser : la ligne des 7 jours (activité + jours
+// portant une session du plan de préparation, pastille de la couleur de la
+// matière) + la ligne du prochain contrôle (compte à rebours « J-3 » et
+// progression « 1/3 sessions »). Le tap sur la ligne LANCE directement la
+// session du jour — même action que le bouton de la carte de préparation.
 // -----------------------------------------------------------------------------
 export default function WeekPlannerStrip({
   week,
-  exams,
+  controles,
   today,
+  subjectMeta,
   subjects,
   chaptersBySubject = {},
   existingExamChapters = [],
+  goalMinutes,
   activeDays = [],
 }: {
   week: WeekDay[]
-  exams: NextExam[]
+  controles: Controle[]
   today: string
+  subjectMeta: Record<string, ControleSubjectMeta>
   subjects: SubjectLite[]
-  // Chapitres par matière + chapitres déjà planifiés : de quoi ouvrir la bulle
-  // « Nouveau contrôle » sur place (au lieu de renvoyer vers le carnet).
   chaptersBySubject?: Record<string, ChapterLite[]>
   existingExamChapters?: string[]
-  // Jours travaillés (clés UTC) sur la fenêtre d'activité — alimentent
-  // l'historique ANNUEL ouvert par l'icône agenda.
+  goalMinutes: number
   activeDays?: string[]
 }) {
-  const iconBySlug = new Map(subjects.map((s) => [s.slug, s.icon]))
   const [historyOpen, setHistoryOpen] = useState(false)
   const [addOpen, setAddOpen] = useState(false)
 
-  // Le contrôle le plus proche (les dates nulles passent en dernier).
-  const next = exams[0] ?? null
-  const countdown = next ? examCountdownLabel(next, today) : null
+  const weekDates = weekDatesOf(today)
+
+  // Couleur (thème matière) d'un jour portant une session du plan : le premier
+  // contrôle vu ce jour-là donne la teinte de la pastille.
+  const colorByDate = new Map<string, string>()
+  for (const c of controles) {
+    const color = subjectMeta[c.subject]?.color ?? 'blue'
+    for (const s of c.sessions) {
+      if (!colorByDate.has(s.plannedDate)) colorByDate.set(s.plannedDate, color)
+    }
+  }
+
+  // Le prochain contrôle actif → sa ligne (compte à rebours + progression).
+  const next = nearestActiveControle(controles, today)
+  const nextView = next ? derivePlanView(next, today) : null
+  const nextName = next ? (subjectMeta[next.subject]?.name ?? '') : ''
+  const nextColor = next ? (subjectMeta[next.subject]?.color ?? 'blue') : 'blue'
+  const nextHref =
+    next && nextView
+      ? `/reviser/${next.subject}/${launchChapterId(nextView, next)}`
+      : '/reviser'
+  const nextTag = next ? countdownTag(next.date, today) : null
 
   return (
     <section aria-label="Ta semaine" className="px-1">
-      {/* En-tête : titre à gauche, agenda à droite — l'icône se cale AU-DESSUS
-          de la colonne du dimanche (dernière du strip). */}
       <div className="mb-2 flex items-center justify-between">
         <h3 className="font-heading text-sm font-extrabold text-foreground">
           Ta semaine
@@ -81,62 +125,96 @@ export default function WeekPlannerStrip({
         </button>
       </div>
 
-      {/* Ligne des 7 jours — sans cadre, juste des pastilles. */}
-      <ul className="flex items-end justify-between gap-1">
-        {week.map((d, i) => (
-          <li key={i} className="flex flex-1 flex-col items-center gap-1.5">
-            <span
-              className={cn(
-                'text-[11px] font-bold uppercase',
-                d.isToday ? 'text-primary' : 'text-muted-foreground',
-              )}
-            >
-              {DAY_LABELS[i]}
-            </span>
-            <span
-              aria-hidden="true"
-              className={cn(
-                'flex size-8 items-center justify-center rounded-full text-xs font-bold transition',
-                d.done
-                  ? 'bg-highlight text-foreground shadow-sm'
-                  : d.isFuture
-                    ? 'bg-white/60 text-muted-foreground/50'
-                    : 'bg-white text-muted-foreground ring-1 ring-black/5',
-                d.isToday && 'ring-2 ring-primary ring-offset-1 ring-offset-background',
-              )}
-            >
-              {d.done ? (
-                <Check className="size-4" strokeWidth={3} aria-hidden="true" />
-              ) : (
-                DAY_LABELS[i]
-              )}
-            </span>
-          </li>
-        ))}
+      {/* Ligne des 7 jours : UNE seule lettre par jour (dans la pastille), plus
+          la rangée de lettres redondante d'avant. Un jour validé garde sa lettre
+          et reçoit un ✓ vert en badge superposé — l'information « quel jour » ne
+          disparaît plus derrière la coche. Vert = validation (le jaune reste la
+          monnaie). Point coloré dessous = session du plan de révision. */}
+      <ul className="flex items-center justify-between gap-1">
+        {week.map((d, i) => {
+          const sessionColor = colorByDate.get(weekDates[i])
+          return (
+            <li key={i} className="flex flex-1 flex-col items-center gap-1.5">
+              <span
+                className="relative"
+                aria-label={`${DAY_FULL[i]}${
+                  d.done ? ' — fait' : d.isToday ? " — aujourd'hui" : ''
+                }`}
+              >
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    'flex size-8 items-center justify-center rounded-full text-xs font-bold uppercase transition',
+                    d.done
+                      ? 'bg-green-500/15 text-green-700 ring-1 ring-green-500/40'
+                      : d.isFuture
+                        ? 'bg-white/60 text-muted-foreground/50'
+                        : 'bg-white text-muted-foreground ring-1 ring-black/5',
+                    d.isToday &&
+                      'ring-2 ring-primary ring-offset-1 ring-offset-background',
+                  )}
+                >
+                  {DAY_LABELS[i]}
+                </span>
+                {d.done ? (
+                  <span
+                    aria-hidden="true"
+                    className="absolute -top-1 -right-1 flex size-4 items-center justify-center rounded-full bg-green-500 text-white shadow-sm ring-2 ring-white"
+                  >
+                    <Check className="size-2.5" strokeWidth={3.5} />
+                  </span>
+                ) : null}
+              </span>
+              {/* Pastille « session de révision planifiée » (couleur matière). */}
+              <span
+                aria-hidden="true"
+                className={cn(
+                  'size-1.5 rounded-full',
+                  sessionColor ? subjectTheme(sessionColor).bar : 'bg-transparent',
+                )}
+              />
+            </li>
+          )
+        })}
       </ul>
 
-      {/* Le prochain contrôle : carte cliquable, ou rien s'il n'y en a pas. */}
-      {next ? (
+      {/* Le prochain contrôle : ligne cliquable qui lance la session du jour. */}
+      {next && nextView ? (
         <Link
-          href="/defi"
+          href={nextHref}
           onClick={() => sfx.tap()}
+          aria-label={`Lancer la session de préparation — ${controleTitle(next, nextName)}`}
           className="group mt-3 flex min-w-0 items-center gap-2.5 rounded-2xl bg-white/70 px-3 py-2 ring-1 ring-black/5 transition active:scale-[0.99]"
         >
-          <span className="text-lg" aria-hidden="true">
-            {iconBySlug.get(next.subject) ?? '📘'}
+          <span
+            aria-hidden="true"
+            className={cn(
+              'grid size-9 shrink-0 place-items-center rounded-full',
+              subjectTheme(nextColor).chip,
+            )}
+          >
+            <SubjectIcon
+              slug={next.subject}
+              className="size-4 text-foreground"
+              strokeWidth={2.4}
+            />
           </span>
           <span className="min-w-0 flex-1">
             <span className="block truncate text-sm font-bold text-foreground">
-              {next.chapterTitle}
+              {controleTitle(next, nextName)}
             </span>
-            {countdown ? (
-              <span className="flex items-center gap-1 text-xs font-semibold text-primary">
-                <CalendarClock className="size-3" aria-hidden="true" />
-                {countdown}
+            <span className="flex items-center gap-1.5 text-xs font-semibold text-primary">
+              {nextTag ? (
+                <span className="rounded-full bg-primary/10 px-1.5 py-0.5 font-extrabold tabular-nums">
+                  {nextTag}
+                </span>
+              ) : (
+                <span className="text-muted-foreground">Sans date</span>
+              )}
+              <span className="text-muted-foreground">
+                {nextView.progressLabel} sessions
               </span>
-            ) : (
-              <span className="text-xs text-muted-foreground">Sans date</span>
-            )}
+            </span>
           </span>
           <ChevronRight
             className="size-4 shrink-0 text-muted-foreground/50 transition-transform group-hover:translate-x-0.5"
@@ -145,9 +223,8 @@ export default function WeekPlannerStrip({
         </Link>
       ) : null}
 
-      {/* Ligne compacte : à défaut de contrôle, un mot discret + un bouton
-          « + Nouveau contrôle » resserré qui OUVRE LA BULLE de configuration
-          (matière · chapitre · date) sur place — plus de détour par le carnet. */}
+      {/* Ligne compacte : à défaut de contrôle, un mot discret + le bouton
+          « Nouveau contrôle » qui ouvre la configuration + confirmation du plan. */}
       <div className="mt-2.5 flex items-center justify-between gap-2">
         {next ? (
           <span aria-hidden="true" />
@@ -172,17 +249,17 @@ export default function WeekPlannerStrip({
         </button>
       </div>
 
-      {/* La bulle « Nouveau contrôle » (bottom-sheet), montée à la demande. */}
       {addOpen ? (
         <AddExamSheet
           subjects={subjects}
           chaptersBySubject={chaptersBySubject}
           existing={new Set(existingExamChapters)}
+          today={today}
+          goalMinutes={goalMinutes}
           onClose={() => setAddOpen(false)}
         />
       ) : null}
 
-      {/* L'historique annuel, en plein écran, ouvert par l'icône agenda. */}
       {historyOpen ? (
         <YearHistory
           activeDays={activeDays}

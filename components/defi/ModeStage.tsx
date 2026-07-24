@@ -1,7 +1,7 @@
 'use client'
 
 import type { ReactNode } from 'react'
-import { X, type LucideIcon } from 'lucide-react'
+import { ArrowLeft, type LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 
@@ -76,6 +76,29 @@ export default function ModeStage({
               : 'border-b border-black/5 bg-background/80',
         )}
       >
+        {/* Quitter le mode : une FLÈCHE RETOUR (pastille ronde) à GAUCHE, seul et
+            unique accès de sortie de la scène — elle remplace l'ancienne croix à
+            droite et rend inutiles les boutons-texte « Retour à l'Arène » que
+            chaque mode répétait en bas d'écran. */}
+        <button
+          type="button"
+          onClick={() => {
+            sfx.back()
+            onExit()
+          }}
+          aria-label="Retour à l’Arène"
+          title="Retour à l’Arène"
+          className={cn(
+            'flex size-9 shrink-0 items-center justify-center rounded-full transition-transform active:scale-90',
+            dark
+              ? 'bg-white/12 text-white hover:bg-white/20'
+              : themed
+                ? 'bg-[color:var(--jeu-accent)] text-[color:var(--jeu-ink)] hover:brightness-95'
+                : 'bg-primary/10 text-primary hover:bg-primary/15',
+          )}
+        >
+          <ArrowLeft className="size-5" strokeWidth={2.4} aria-hidden="true" />
+        </button>
         <span
           aria-hidden="true"
           className={cn(
@@ -93,22 +116,6 @@ export default function ModeStage({
           {title}
         </h1>
         {headerRight}
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            onExit()
-          }}
-          aria-label="Quitter le mode"
-          className={cn(
-            'flex size-9 shrink-0 items-center justify-center rounded-full transition-colors active:scale-90',
-            dark
-              ? 'text-white/70 hover:bg-white/10'
-              : 'text-muted-foreground hover:bg-muted',
-          )}
-        >
-          <X className="size-5" strokeWidth={2.4} aria-hidden="true" />
-        </button>
       </header>
 
       {/* Le contenu du mode, centré, avec la marge basse qui dégage la barre

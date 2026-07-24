@@ -9,6 +9,7 @@ import { shareStory } from '@/components/story-share'
 import type { Palier } from '@/lib/palier'
 import ConfettiRain from '@/components/ConfettiRain'
 import DialogCloseButton from '@/components/DialogCloseButton'
+import { useDialogFocus } from '@/lib/use-dialog'
 
 // Chaque palier n'est fêté qu'UNE fois (mémoire locale, comme la fête de
 // matière) : pas de re-tir au re-rendu, ni si l'élève redescend puis refranchit.
@@ -37,6 +38,10 @@ export default function PalierCelebration({
     'idle' | 'sharing' | 'copied' | 'failed'
   >('idle')
   const dismissRef = useRef<HTMLButtonElement>(null)
+  // Déclaré AVANT l'effet qui focalise le bouton de sortie, pour mémoriser
+  // l'élément qui avait le focus avant la fête — et le lui rendre.
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, visible)
 
   useEffect(() => {
     if (once && window.localStorage.getItem(storageKey(palier.id))) return
@@ -84,7 +89,8 @@ export default function PalierCelebration({
     >
       <ConfettiRain />
       <div
-        className="pop-in relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10"
+        ref={panel}
+        className="pop-in relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10 outline-none"
         onClick={(e) => e.stopPropagation()}
       >
         <DialogCloseButton onClose={dismiss} />

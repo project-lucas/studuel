@@ -1,11 +1,8 @@
 'use client'
 
-import { useState, useTransition } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { ChevronRight, GraduationCap, Plus } from 'lucide-react'
+import { ChevronRight, NotebookPen, Play } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
-import { createCourse } from '@/app/reviser/cours/actions'
 import {
   normalizeCourseColor,
   normalizeCourseIcon,
@@ -25,92 +22,101 @@ export type CourseShelfItem = {
 /**
  * « Mes cours » — LE bloc de Mon carnet : les cours créés par l'élève (façon
  * Wooflash), chacun avec son icône dans un container arrondi pastel et son
- * compteur de questions. Remplace l'ancienne Bibliothèque.
+ * compteur de questions.
+ *
+ * Chaque ligne porte désormais SES DEUX gestes : ouvrir le cours (toute la
+ * ligne) et le réviser tout de suite (le bouton ▶). Réviser demandait avant
+ * d'ouvrir le cours, de trouver le bouton « Réviser », puis de choisir la
+ * portée — trois écrans pour l'action qu'on vient faire le plus souvent.
+ * La création, elle, a quitté l'en-tête pour le bouton flottant (CarnetFab) :
+ * elle reste à portée de pouce où qu'on soit dans la liste.
  */
 export default function CoursesShelf({ items }: { items: CourseShelfItem[] }) {
-  const router = useRouter()
-  const [pending, startTransition] = useTransition()
-  const [failed, setFailed] = useState(false)
-
-  const create = () => {
-    if (pending) return
-    sfx.tap()
-    setFailed(false)
-    startTransition(async () => {
-      const res = await createCourse()
-      if (res.ok && res.id) router.push(`/reviser/cours/${res.id}`)
-      else setFailed(true)
-    })
-  }
-
   return (
     <section
       aria-label="Mes cours"
-      className="rev-card rounded-3xl bg-white p-5 shadow-sm ring-1 ring-black/5"
+      className="rev-card rounded-3xl bg-white p-4 shadow-sm ring-1 ring-black/5"
     >
-      <div className="mb-4 flex items-center gap-3">
-        <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-          <GraduationCap className="size-6" strokeWidth={2.2} aria-hidden="true" />
+      <div className="mb-3 flex items-center gap-3 px-1">
+        <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+          <NotebookPen className="size-5" strokeWidth={2.2} aria-hidden="true" />
         </span>
-        <h2 className="font-heading min-w-0 flex-1 truncate text-xl font-extrabold text-foreground">
+        <h2 className="font-heading min-w-0 flex-1 truncate text-lg font-extrabold text-foreground">
           Mes cours
         </h2>
-        <button
-          type="button"
-          disabled={pending}
-          onClick={create}
-          className="font-heading flex shrink-0 cursor-pointer items-center gap-1 rounded-full bg-primary px-4 py-2.5 text-sm font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
-        >
-          <Plus className="size-4" strokeWidth={2.8} aria-hidden="true" />
-          {pending ? 'Création…' : 'Créer un cours'}
-        </button>
+        {items.length > 0 ? (
+          <span className="shrink-0 rounded-full bg-primary/12 px-2.5 py-1 font-mono text-[11px] font-bold text-primary tabular-nums">
+            {items.length}
+          </span>
+        ) : null}
       </div>
 
-      {failed ? (
-        <p
-          role="alert"
-          className="mb-3 rounded-2xl bg-destructive/10 px-3 py-2 text-xs font-semibold text-destructive"
-        >
-          La création a échoué. Réessaie dans un instant.
-        </p>
-      ) : null}
-
       {items.length === 0 ? (
-        <p className="rounded-2xl bg-muted/40 px-4 py-10 text-center text-base text-muted-foreground">
-          Crée ton premier cours (« Anglais 3e », « SVT — chapitre 2 »…) puis
-          remplis-le de questions à réviser 📚
-        </p>
+        <div className="rounded-2xl bg-muted/40 px-4 py-8 text-center">
+          <p className="text-4xl" aria-hidden="true">
+            📚
+          </p>
+          <p className="font-heading mt-2 text-base font-extrabold text-foreground">
+            Ton carnet est vide
+          </p>
+          <p className="mx-auto mt-1 max-w-xs text-sm text-muted-foreground">
+            Un cours = un paquet de questions à toi (« Anglais — irréguliers »,
+            « SVT chap. 2 »). Touche le bouton{' '}
+            <span className="font-bold text-primary">+</span> en bas à droite
+            pour en créer un, seul ou avec l&apos;IA.
+          </p>
+        </div>
       ) : (
-        <ul className="flex flex-col gap-2.5">
+        <ul className="flex flex-col gap-2">
           {items.map((course) => {
             const Icon = COURSE_ICON[normalizeCourseIcon(course.icon)]
             const tint = COURSE_TINT[normalizeCourseColor(course.color)]
+            const revisable = course.questionCount > 0
             return (
-              <li key={course.id}>
+              <li
+                key={course.id}
+                className="flex items-center gap-2 rounded-2xl ring-1 ring-black/5 transition active:scale-[0.99]"
+              >
                 <Link
                   href={`/reviser/cours/${course.id}`}
                   onClick={() => sfx.tap()}
-                  className="flex items-center gap-3 rounded-2xl bg-white p-3.5 ring-1 ring-black/5 transition active:scale-[0.99]"
+                  className="flex min-w-0 flex-1 items-center gap-3 rounded-2xl py-3 pl-3"
                 >
                   <span
-                    className={`flex size-12 shrink-0 items-center justify-center rounded-2xl ${tint}`}
+                    className={`flex size-11 shrink-0 items-center justify-center rounded-2xl ${tint}`}
                   >
-                    <Icon className="size-6" strokeWidth={2.2} aria-hidden="true" />
+                    <Icon className="size-5" strokeWidth={2.2} aria-hidden="true" />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="font-heading line-clamp-2 text-base leading-snug font-extrabold text-foreground">
+                    <span className="font-heading line-clamp-2 text-[0.95rem] leading-snug font-extrabold text-foreground">
                       {course.title}
                     </span>
                     <span className="mt-0.5 block text-xs font-semibold text-muted-foreground">
-                      {course.questionCount}{' '}
-                      {course.questionCount > 1 ? 'questions' : 'question'}
+                      {revisable
+                        ? `${course.questionCount} ${course.questionCount > 1 ? 'questions' : 'question'}`
+                        : 'Vide — ajoute tes premières questions'}
                     </span>
                   </span>
+                </Link>
+
+                {/* Le geste le plus fréquent, à un tap : réviser ce cours. Un
+                    cours vide n'a rien à réviser — on montre alors la simple
+                    flèche d'ouverture plutôt qu'un bouton qui ne ferait rien. */}
+                {revisable ? (
+                  <Link
+                    href={`/reviser/cours/${course.id}/reviser`}
+                    onClick={() => sfx.tap()}
+                    aria-label={`Réviser ${course.title}`}
+                    className="mr-3 flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm transition active:translate-y-px"
+                  >
+                    <Play className="size-4 fill-current" aria-hidden="true" />
+                  </Link>
+                ) : (
                   <ChevronRight
-                    className="size-4 shrink-0 text-muted-foreground"
+                    className="mr-4 size-4 shrink-0 text-muted-foreground"
                     aria-hidden="true"
                   />
-                </Link>
+                )}
               </li>
             )
           })}

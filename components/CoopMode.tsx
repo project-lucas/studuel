@@ -275,9 +275,6 @@ export default function CoopMode({ userId, pool, subject, onExit }: Props) {
               ? 'Les vies partagées sont tombées — retentez ensemble !'
               : 'Belle synchro.'}
         </p>
-        <Button onClick={handleExit} className="press-3d-deep">
-          Retour à l’Arène
-        </Button>
       </div>
     )
   }
@@ -397,9 +394,6 @@ function BotCoopMatch({
               ? 'Les vies partagées sont tombées — retente ta chance !'
               : 'Belle synchro avec ton coéquipier.'}
         </p>
-        <Button onClick={onExit} className="press-3d-deep">
-          Retour à l’Arène
-        </Button>
       </div>
     )
   }

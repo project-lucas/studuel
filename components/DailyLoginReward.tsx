@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import DialogCloseButton from '@/components/DialogCloseButton'
+import { useDialogFocus } from '@/lib/use-dialog'
 import { sfx } from '@/lib/sounds'
 import { claimLoginReward } from '@/app/tresor/actions'
 
@@ -19,6 +20,10 @@ export default function DailyLoginReward() {
     null,
   )
   const dismissRef = useRef<HTMLButtonElement>(null)
+  // Déclaré AVANT l'effet qui focalise « Récupérer » : il mémorise ainsi
+  // l'élément qui avait le focus avant la modale, et non ce bouton-là.
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, reward != null)
 
   useEffect(() => {
     const key = todayKey()
@@ -68,7 +73,8 @@ export default function DailyLoginReward() {
       onClick={collect}
     >
       <div
-        className="pop-in relative w-full max-w-xs rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10"
+        ref={panel}
+        className="pop-in relative w-full max-w-xs rounded-3xl bg-card p-6 text-center shadow-xl ring-1 ring-foreground/10 outline-none"
         onClick={(e) => e.stopPropagation()}
       >
         <DialogCloseButton onClose={collect} />

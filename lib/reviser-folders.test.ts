@@ -1,11 +1,15 @@
 import { describe, expect, it } from 'vitest'
 import type { Subject, SubjectCategory } from '@/lib/types'
 import {
+  folderCountLabel,
   folderOf,
+  folderProgress,
   folderStorageKey,
+  folderSubjects,
   isCollegeLevel,
   resolveOpenState,
   subjectFolders,
+  usesTrackGroups,
 } from '@/lib/reviser-folders'
 
 let seq = 0
@@ -30,6 +34,15 @@ describe('isCollegeLevel', () => {
   it('couvre la 6e à la 3e, et rien d’autre', () => {
     for (const g of ['6e', '5e', '4e', '3e']) expect(isCollegeLevel(g)).toBe(true)
     for (const g of ['2de', '1re', 'Tle']) expect(isCollegeLevel(g)).toBe(false)
+  })
+})
+
+describe('usesTrackGroups', () => {
+  it('ne sous-groupe qu’en 1re et Terminale (pas de spécialités avant)', () => {
+    for (const g of ['1re', 'Tle']) expect(usesTrackGroups(g)).toBe(true)
+    for (const g of ['6e', '5e', '4e', '3e', '2de']) {
+      expect(usesTrackGroups(g)).toBe(false)
+    }
   })
 })
 
@@ -106,25 +119,45 @@ describe('subjectFolders — lycée', () => {
 
   it('n’affiche pas un sous-groupe vide', () => {
     const f = subjectFolders({
-      programmeSubjects: [sub('francais', 'tronc_commun', ['2de'])],
+      programmeSubjects: [sub('francais', 'tronc_commun', ['1re'])],
       cultureSubjects: [],
-      grade: '2de',
+      grade: '1re',
     })
     expect(f[0].groups.map((g) => g.label)).toEqual(['Tronc commun'])
   })
 
   it('ne perd jamais une matière dont la catégorie sort des sous-groupes', () => {
-    // Une matière « college » qui traînerait sur un niveau lycée n'entre dans
-    // aucun des trois sous-groupes : sans filet, elle disparaissait de l'écran.
-    const orpheline = sub('techno', 'college', ['2de'])
+    // Une matière « college » qui traînerait sur un niveau à sous-groupes n'entre
+    // dans aucun des trois : sans filet, elle disparaissait de l'écran.
+    const orpheline = sub('techno', 'college', ['1re'])
     const f = subjectFolders({
-      programmeSubjects: [sub('francais', 'tronc_commun', ['2de']), orpheline],
+      programmeSubjects: [sub('francais', 'tronc_commun', ['1re']), orpheline],
       cultureSubjects: [],
-      grade: '2de',
+      grade: '1re',
     })
     const all = f[0].groups.flatMap((g) => g.items)
     expect(all).toContain(orpheline)
     expect(f[0].groups.at(-1)?.label).toBe('Autres matières')
+  })
+})
+
+describe('subjectFolders — seconde', () => {
+  it('range la 2de en grille unique, sans section « Spécialités »', () => {
+    // La 2de n'a pas de spécialités : Maths (marquée `specialite` car elle le
+    // devient au cycle terminal) ne doit PAS créer de sous-groupe « Spécialités »
+    // — tout le tronc commun de seconde vit dans une seule grille.
+    const f = subjectFolders({
+      programmeSubjects: [
+        sub('francais', 'tronc_commun', ['2de']),
+        sub('maths', 'specialite', ['2de']),
+        sub('svt', 'specialite', ['2de']),
+      ],
+      cultureSubjects: [],
+      grade: '2de',
+    })
+    expect(f[0].groups).toHaveLength(1)
+    expect(f[0].groups[0].label).toBeNull()
+    expect(f[0].groups[0].items).toHaveLength(3)
   })
 })
 
@@ -183,5 +216,53 @@ describe('mémorisation ouvert/fermé', () => {
   it('ignore une valeur de stockage corrompue', () => {
     expect(resolveOpenState(programme, 'oui')).toBe(true)
     expect(resolveOpenState(hors, '')).toBe(false)
+  })
+})
+
+describe('libellé de comptage', () => {
+  it('accole l’unité au nombre, accordée en nombre', () => {
+    expect(folderCountLabel({ count: 6, unit: 'matières' })).toBe('6 matières')
+    expect(folderCountLabel({ count: 5, unit: 'modules' })).toBe('5 modules')
+    expect(folderCountLabel({ count: 1, unit: 'matières' })).toBe('1 matière')
+    expect(folderCountLabel({ count: 1, unit: 'modules' })).toBe('1 module')
+    expect(folderCountLabel({ count: 0, unit: 'matières' })).toBe('0 matières')
+  })
+
+  it('donne « matières » au programme et « modules » à la culture générale', () => {
+    const folders = subjectFolders({
+      programmeSubjects: [sub('maths', 'tronc_commun')],
+      cultureSubjects: [sub('economie', 'culture')],
+      grade: '6e',
+    })
+    expect(folders[0].unit).toBe('matières')
+    expect(folders[1].unit).toBe('modules')
+  })
+})
+
+describe('avancement d’un dossier', () => {
+  const [programme] = subjectFolders({
+    programmeSubjects: [sub('maths', 'tronc_commun'), sub('francais', 'tronc_commun')],
+    cultureSubjects: [],
+    grade: '6e',
+  })
+
+  it('liste les matières du dossier, groupes confondus', () => {
+    expect(folderSubjects(programme).map((s) => s.slug)).toEqual([
+      'maths',
+      'francais',
+    ])
+  })
+
+  it('fait la moyenne des pourcentages de ses matières', () => {
+    expect(folderProgress(programme, { maths: 80, francais: 20 })).toBe(50)
+  })
+
+  it('compte une matière sans avancement comme 0 %', () => {
+    expect(folderProgress(programme, { maths: 50 })).toBe(25)
+  })
+
+  it('renvoie null pour un dossier vide (et non 0 %)', () => {
+    const vide = { ...programme, groups: [] }
+    expect(folderProgress(vide, {})).toBeNull()
   })
 })

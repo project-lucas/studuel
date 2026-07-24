@@ -61,13 +61,13 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                   aria-label={name}
                   aria-current={active ? 'page' : undefined}
                   data-tour={`tab-${path.slice(1)}`}
-                  className="flex items-center justify-center pt-1.5 pb-2 transition-all active:scale-95"
+                  className="flex flex-col items-center justify-end gap-0.5 pt-1 pb-1.5 transition-all active:scale-95"
                 >
                   <span
                     className={cn(
                       'flex w-16 items-center justify-center',
                       // Onglet central (Défi) surélevé façon écran d'arène.
-                      center ? 'tab-center h-14' : 'h-12',
+                      center ? 'tab-center h-12' : 'h-10',
                     )}
                   >
                     <Image
@@ -77,12 +77,24 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                       height={center ? 56 : 40}
                       className={cn(
                         'transition-all',
-                        center ? 'size-14' : 'size-10',
+                        center ? 'size-12' : 'size-9',
                         active
                           ? cn('scale-110', center && 'tab-center-active')
                           : 'opacity-60 grayscale',
                       )}
                     />
+                  </span>
+                  {/* Libellé texte sous chaque icône : l'onglet ne se devine plus,
+                      il se lit. L'état actif se marque AUSSI par le texte (violet
+                      marqué) en plus de l'icône (couleurs vs grisé) — un repère
+                      redondant, jamais porté par la seule couleur de l'icône. */}
+                  <span
+                    className={cn(
+                      'font-heading text-[0.6rem] leading-none font-extrabold tracking-tight transition-colors',
+                      active ? 'text-primary' : 'text-muted-foreground/70',
+                    )}
+                  >
+                    {name}
                   </span>
                 </Link>
               </li>

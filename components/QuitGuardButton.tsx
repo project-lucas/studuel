@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { Button } from '@/components/ui/button'
 import DialogCloseButton from '@/components/DialogCloseButton'
+import { useDialogFocus } from '@/lib/use-dialog'
 
 // Bouton « quitter » d'une activité (quiz, examen blanc, révision…) qui, quand
 // une session est en cours (`guarded`), demande confirmation façon Duolingo
@@ -36,6 +37,8 @@ export default function QuitGuardButton({
 }) {
   const router = useRouter()
   const [open, setOpen] = useState(false)
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, open)
 
   // Retour réel si l'historique interne existe (le bouton retour du téléphone
   // reste cohérent), sinon remontée au parent logique — même règle que
@@ -76,7 +79,8 @@ export default function QuitGuardButton({
               onClick={() => setOpen(false)}
             >
               <div
-                className="relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-2xl"
+                ref={panel}
+                className="relative w-full max-w-sm rounded-3xl bg-card p-6 text-center shadow-2xl outline-none"
                 onClick={(e) => e.stopPropagation()}
               >
                 <DialogCloseButton

@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -12,6 +12,7 @@ import {
   Trophy,
 } from 'lucide-react'
 import BackButton from '@/components/BackButton'
+import { useDialogFocus } from '@/lib/use-dialog'
 import ProgressRing from '@/components/ProgressRing'
 import PairMatch from '@/components/PairMatch'
 import GemIcon from '@/components/ui/GemIcon'
@@ -565,6 +566,9 @@ function Modal({
   confetti?: boolean
   children: React.ReactNode
 }) {
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel)
+
   return (
     <div
       role="dialog"
@@ -572,7 +576,7 @@ function Modal({
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
     >
       <div className="bg-foreground/50 absolute inset-0" aria-hidden="true" />
-      <div className="pop-spring relative w-full max-w-sm">
+      <div ref={panel} className="pop-spring relative w-full max-w-sm outline-none">
         {/* Pastille + confettis, à cheval sur le haut de la carte */}
         <div className="absolute -top-10 left-1/2 z-10 -translate-x-1/2">
           {confetti ? <ConfettiBurst /> : null}

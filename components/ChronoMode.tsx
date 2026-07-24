@@ -208,10 +208,6 @@ export default function ChronoMode({
             Pas encore de questions pour ta classe — reviens bientôt !
           </p>
         ) : null}
-
-        <Button variant="ghost" onClick={onExit}>
-          Retour à l&apos;Arène
-        </Button>
       </div>
     )
   }
@@ -256,14 +252,9 @@ export default function ChronoMode({
               : ''}
         </p>
 
-        <div className="flex gap-2">
-          <Button size="lg" onClick={start}>
-            <RotateCcw className="size-4" /> Rejouer
-          </Button>
-          <Button variant="outline" size="lg" onClick={onExit}>
-            Retour à l&apos;Arène
-          </Button>
-        </div>
+        <Button size="lg" onClick={start}>
+          <RotateCcw className="size-4" /> Rejouer
+        </Button>
       </div>
     )
   }

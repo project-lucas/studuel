@@ -28,7 +28,7 @@ export default function BackButton({
       aria-label={label}
       title={label}
       onClick={() => {
-        sfx.tap()
+        sfx.back()
         // > 2 : l'entrée d'origine + le tampon du BackGuard comptent déjà
         // pour 2 — au-delà, il y a un historique interne à dépiler.
         if (window.history.length > 2) router.back()

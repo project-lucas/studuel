@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import {
   trophyDelta,
   applyTrophyDelta,
+  bronzeLossShield,
   matchmakeOpponentTrophies,
   rankPlayers,
   rivalAhead,
@@ -177,6 +178,33 @@ describe('friendsLostTo', () => {
 
   it('is empty on a win', () => {
     expect(friendsLostTo(500, 540, friends)).toEqual([])
+  })
+})
+
+describe('bronzeLossShield', () => {
+  it('never touches gains', () => {
+    expect(bronzeLossShield(20, +25)).toBe(25)
+    expect(bronzeLossShield(350, +12)).toBe(12)
+  })
+
+  it('cancels the loss entirely in Bronze IV (below 100)', () => {
+    // 20 trophées, −20 → ne retombe plus à zéro : perte annulée.
+    expect(bronzeLossShield(20, -20)).toBe(0)
+    expect(bronzeLossShield(99, -30)).toBe(0)
+    expect(bronzeLossShield(0, -6)).toBe(0)
+  })
+
+  it('caps the loss at the current division floor in upper Bronze', () => {
+    // Bronze III (100..199) : on ne redescend jamais sous 100.
+    expect(bronzeLossShield(110, -30)).toBe(-10) // 110 → 100, pas plus bas
+    expect(bronzeLossShield(150, -20)).toBe(-20) // 150 → 130, au-dessus de 100 : perte pleine
+    // Bronze II (200..299) : plancher 200.
+    expect(bronzeLossShield(205, -25)).toBe(-5)
+  })
+
+  it('leaves the full loss untouched outside Bronze (Argent and above)', () => {
+    expect(bronzeLossShield(400, -30)).toBe(-30)
+    expect(bronzeLossShield(1000, -18)).toBe(-18)
   })
 })
 

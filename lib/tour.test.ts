@@ -10,9 +10,9 @@ import {
 const viewport = { width: 400, height: 800 }
 
 describe('TOUR_STEPS', () => {
-  test('contient 8 étapes aux ids uniques', () => {
-    expect(TOUR_STEPS).toHaveLength(8)
-    expect(new Set(TOUR_STEPS.map((s) => s.id)).size).toBe(8)
+  test('contient 7 étapes aux ids uniques', () => {
+    expect(TOUR_STEPS).toHaveLength(7)
+    expect(new Set(TOUR_STEPS.map((s) => s.id)).size).toBe(7)
   })
 
   test('commence par une étape de bienvenue sans cible', () => {
@@ -88,9 +88,9 @@ describe('nextAvailableStep', () => {
     expect(nextAvailableStep(TOUR_STEPS, hasAll, 2)).toBe(2)
   })
 
-  test('saute une étape dont la cible est absente (file du jour vide)', () => {
-    const sansFile = (t: string) => t !== 'file-du-jour'
-    expect(nextAvailableStep(TOUR_STEPS, sansFile, 2)).toBe(3)
+  test("saute une étape dont la cible est absente (carnet hors de l'écran)", () => {
+    const sansCarnet = (t: string) => t !== 'carnet-switch'
+    expect(nextAvailableStep(TOUR_STEPS, sansCarnet, 2)).toBe(3)
   })
 
   test('renvoie null après la dernière étape', () => {
@@ -98,7 +98,7 @@ describe('nextAvailableStep', () => {
   })
 
   test('remonte en arrière avec direction -1', () => {
-    const sansFile = (t: string) => t !== 'file-du-jour'
-    expect(nextAvailableStep(TOUR_STEPS, sansFile, 2, -1)).toBe(1)
+    const sansCarnet = (t: string) => t !== 'carnet-switch'
+    expect(nextAvailableStep(TOUR_STEPS, sansCarnet, 2, -1)).toBe(1)
   })
 })

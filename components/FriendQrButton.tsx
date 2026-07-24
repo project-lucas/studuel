@@ -1,11 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { QRCodeSVG } from 'qrcode.react'
 import { QrCode, Share2, UserPlus, X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
+import { useDialogFocus } from '@/lib/use-dialog'
 
 interface FriendQrButtonProps {
   /** Code ami de l'élève (profiles.friend_code) — encodé dans le QR vert. */
@@ -19,6 +20,8 @@ interface FriendQrButtonProps {
  */
 export default function FriendQrButton({ friendCode }: FriendQrButtonProps) {
   const [open, setOpen] = useState(false)
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, open)
   const [copied, setCopied] = useState(false)
   const reduce = useReducedMotion()
 
@@ -92,7 +95,8 @@ export default function FriendQrButton({ friendCode }: FriendQrButtonProps) {
                   onClick={() => setOpen(false)}
                 >
                   <motion.div
-                    className="flex w-full max-w-sm flex-col items-center gap-4 rounded-3xl border border-[oklch(0.75_0.12_150)]/60 bg-gradient-to-b from-[oklch(0.6_0.15_150)] to-[oklch(0.48_0.14_152)] p-6 text-center shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)]"
+                    ref={panel}
+                    className="flex w-full max-w-sm flex-col items-center gap-4 rounded-3xl border border-[oklch(0.75_0.12_150)]/60 bg-gradient-to-b from-[oklch(0.6_0.15_150)] to-[oklch(0.48_0.14_152)] p-6 text-center shadow-[0_24px_60px_-20px_rgba(0,0,0,0.7)] outline-none"
                     initial={reduce ? { opacity: 0 } : { scale: 0.9, opacity: 0 }}
                     animate={reduce ? { opacity: 1 } : { scale: 1, opacity: 1 }}
                     exit={reduce ? { opacity: 0 } : { scale: 0.9, opacity: 0 }}

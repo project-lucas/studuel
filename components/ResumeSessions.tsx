@@ -1,13 +1,15 @@
 'use client'
 
+import { useTransition } from 'react'
 import Link from 'next/link'
-import { CheckCircle2, Flame, Play, Timer } from 'lucide-react'
+import { CheckCircle2, Flame, Play, Timer, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
-import { subjectInitials, subjectPastel } from '@/lib/subject-style'
+import { toast } from '@/lib/toast'
+import { subjectPastel } from '@/lib/subject-style'
 import SubjectIcon from '@/components/SubjectIcon'
 import ProgressRing from '@/components/ProgressRing'
-import NextControleHeroCard from '@/components/NextControleHeroCard'
+import { removeUpcomingExam } from '@/app/moi/actions'
 import type { ExamProximity } from '@/lib/next-exam'
 import type { Subject } from '@/lib/types'
 
@@ -18,19 +20,14 @@ export type ResumeItem = {
   progress: number // 0..1
   isNew: boolean // chapitre jamais commencé (→ « commencer » plutôt que reprise)
   // Carte PRIORITAIRE liée à un contrôle déclaré (Ta semaine → Nouveau
-  // contrôle) : rendue en carte HÉRO pleine largeur dans sa propre section
-  // « Pour ton prochain contrôle », au-dessus de « On s'y remet ? ». Absente =
-  // carte de reprise classique.
+  // contrôle) : rendue EN TÊTE de rangée, plus large et en violet plein.
+  // Absente = carte de reprise classique.
   exam?: {
     label: string // « Contrôle demain », « Contrôle dans 3 jours »…
     proximity: ExamProximity
-    date: string | null // clé UTC 'YYYY-MM-DD' — le badge héro recalcule
-    // l'urgence côté client en jours calendaires.
+    date: string | null // clé UTC 'YYYY-MM-DD' du contrôle
   }
 }
-
-// Objectif quotidien affiché sous le titre de section : 1 session par jour.
-const DAILY_GOAL_SESSIONS = 1
 
 // Durée estimée de la session : courte quand le chapitre est presque acquis,
 // longue quand il repart de loin (chapitre fragile).
@@ -41,235 +38,290 @@ function sessionMinutes(item: ResumeItem): 3 | 5 | 10 {
   return 10
 }
 
-// Carte de session façon « mock papier » : blanche à contour navy et ombre
-// offset dure, pastille d'initiales de la matière ancrée dans le coin
-// supérieur droit, CTA plein. Trois humeurs : contrôle (badge compte à
-// rebours, corail quand c'est imminent), recommandation du jour (badge série
-// + bordure jaune), reprise classique.
-function SessionCard({ item, isStar }: { item: ResumeItem; isStar: boolean }) {
-  const isImminent = item.exam?.proximity === 'imminent'
-  const pct = Math.round(item.progress * 100)
-  const minutes = sessionMinutes(item)
-  const initials = subjectInitials(item.subject.slug, item.subject.name)
-  // Sigles longs (SVT, NSI, HGGSP…) : police réduite pour rester dans l'onglet.
-  const initialsSize = initials.length <= 3 ? 'text-[11px]' : 'text-[9px]'
+// La pastille de matière, commune aux deux cartes : rond pastel + icône, puis
+// le nom. Sur fond violet (`onDark`), le rond passe en verre clair pour rester
+// lisible sans introduire une deuxième couleur.
+function SubjectChip({
+  subject,
+  onDark = false,
+}: {
+  subject: Subject
+  onDark?: boolean
+}) {
   return (
-    <li
-      className={cn('w-48 shrink-0', (isStar || item.exam) && 'scale-[1.03]')}
+    <span
+      className={cn(
+        'flex min-w-0 items-center gap-1.5 text-[11px] font-bold',
+        onDark ? 'text-[color:var(--background)]/80' : 'text-muted-foreground',
+      )}
     >
-      {/* Toute la carte reste tapable (Link) ; le CTA est le bouton visuel,
-          animé au press via group-active. */}
+      <span
+        aria-hidden="true"
+        className="grid size-6 shrink-0 place-items-center rounded-full"
+        style={
+          onDark
+            ? { backgroundColor: 'rgba(255,255,255,0.18)' }
+            : { backgroundColor: subjectPastel(subject.color) }
+        }
+      >
+        <SubjectIcon
+          slug={subject.slug}
+          className={cn('size-3.5', onDark ? 'text-white' : 'text-foreground')}
+          strokeWidth={2.6}
+        />
+      </span>
+      <span className="truncate">{subject.name}</span>
+    </span>
+  )
+}
+
+// La chip « durée » / « Série +1 » : même jeton discret que partout ailleurs.
+function MetaChip({
+  children,
+  onDark = false,
+}: {
+  children: React.ReactNode
+  onDark?: boolean
+}) {
+  return (
+    <span
+      className={cn(
+        'inline-flex w-fit items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-bold',
+        onDark
+          ? 'bg-white/15 text-[color:var(--background)]'
+          : 'bg-muted text-muted-foreground',
+      )}
+    >
+      {children}
+    </span>
+  )
+}
+
+/**
+ * LA carte de tête : celle du prochain contrôle. C'est la seule carte de la
+ * rangée à fond violet plein — le reste de l'accueil est en cartes blanches,
+ * donc elle sort du lot sans avoir besoin d'un vocabulaire graphique à part
+ * (bordures épaisses, ombres dures) qui la coupait du reste de l'app.
+ */
+function ExamCard({ item }: { item: ResumeItem }) {
+  const [removing, startRemove] = useTransition()
+  const isImminent = item.exam?.proximity === 'imminent'
+  const minutes = sessionMinutes(item)
+
+  // Croix « je me suis trompé » : retire ce contrôle de la liste (RPC
+  // remove_upcoming_exam) — la carte disparaît au revalidate.
+  const handleRemove = () => {
+    if (removing) return
+    sfx.tap()
+    startRemove(async () => {
+      const res = await removeUpcomingExam(item.chapterId)
+      toast(res.ok ? 'Contrôle retiré ✓' : 'Impossible de retirer ce contrôle. Réessaie.')
+    })
+  }
+
+  return (
+    <li className={cn('relative w-60 shrink-0', removing && 'opacity-60')}>
+      {/* La croix est SŒUR du lien, pas imbriquée dedans : un bouton dans un
+          <a> est invalide. */}
+      <button
+        type="button"
+        onClick={handleRemove}
+        disabled={removing}
+        aria-label="Retirer ce contrôle"
+        className="absolute top-2.5 right-2.5 z-10 flex size-7 items-center justify-center rounded-full bg-white/15 text-[color:var(--background)]/80 transition-colors hover:bg-white/25 hover:text-white active:scale-90"
+      >
+        <X className="size-3.5" strokeWidth={2.8} aria-hidden="true" />
+      </button>
+
       <Link
         href={`/reviser/${item.subject.slug}/${item.chapterId}`}
         onClick={() => sfx.tap()}
-        className={cn(
-          'group relative flex h-full flex-col rounded-[20px] border-[3px] bg-white p-3 shadow-[4px_4px_0_#2D2A4A] transition-transform hover:-translate-y-0.5',
-          // Carte contrôle : bordure corail quand c'est imminent (≤ 2 jours),
-          // jaune sinon. Carte recommandée : jaune.
-          item.exam
-            ? isImminent
-              ? 'border-[#F87171]'
-              : 'border-[#F9B233]'
-            : isStar
-              ? 'border-[#F9B233]'
-              : 'border-[#2D2A4A]',
-        )}
+        className="rev-card group flex h-full flex-col rounded-3xl bg-primary p-3.5 text-[color:var(--background)] ring-1 ring-black/5 transition-transform hover:-translate-y-0.5"
       >
-        {/* Onglet matière façon intercalaire de classeur, posé sur le bord
-            supérieur droit : fond pastel de la matière, icône + sigle, contour
-            navy ouvert en bas pour se fondre dans la carte. */}
-        <span
-          aria-hidden="true"
-          className="absolute right-4 -top-[25px] flex h-7 items-center gap-1 rounded-t-xl border-[3px] border-b-0 border-[#2D2A4A] px-2.5"
-          style={{ backgroundColor: subjectPastel(item.subject.color) }}
-        >
-          <SubjectIcon
-            slug={item.subject.slug}
-            className="size-3.5 text-[#2D2A4A]"
-            strokeWidth={2.75}
-          />
-          <span
-            className={cn(
-              'font-initials font-bold text-[#2D2A4A]',
-              initialsSize,
-            )}
-          >
-            {initials}
-          </span>
-        </span>
-
-        {/* Badge (ou anneau de progression) — l'onglet vit au-dessus de la
-            carte, la rangée garde toute la largeur. */}
-        <div className="flex min-h-8 items-start">
-          {item.exam ? (
-            <span
-              className={cn(
-                'rounded-full border-2 border-[#2D2A4A] px-2 py-0.5 text-[10px] font-extrabold',
-                isImminent
-                  ? 'bg-[#F87171] text-white'
-                  : 'bg-[#F9B233] text-[#2D2A4A]',
-              )}
-            >
-              📝 {item.exam.label}
-            </span>
-          ) : isStar ? (
-            <span className="rounded-full border-2 border-[#2D2A4A] bg-[#F9B233] px-2 py-0.5 text-[10px] font-extrabold text-[#2D2A4A]">
-              Ta série du jour 🔥
-            </span>
-          ) : item.isNew ? (
-            // Mêmes gabarits (bordure, padding, corps de texte) que le badge
-            // « Ta série du jour » pour que les badges s'alignent d'une carte
-            // à l'autre.
-            <span className="rounded-full border-2 border-[#2D2A4A]/40 bg-[#FAF6EF] px-2 py-0.5 text-[10px] font-extrabold text-[#2D2A4A]/70">
-              Nouveau
-            </span>
-          ) : (
-            <ProgressRing
-              value={item.progress}
-              size={32}
-              strokeWidth={4}
-              label={`${pct}% fait`}
-              trackClassName="stroke-[#EFE7FB]"
-              fillClassName="stroke-[#7B4FD8]"
-            >
-              <span className="font-mono text-[9px] font-bold text-[#2D2A4A] tabular-nums">
-                {pct}%
-              </span>
-            </ProgressRing>
-          )}
-        </div>
-
-        <p className="font-heading mt-1.5 line-clamp-2 text-sm leading-tight font-bold text-[#2D2A4A]">
-          {item.chapterTitle}
-        </p>
-        {/* Ligne matière atténuée — l'onglet porte déjà l'identification. */}
-        <p className="mt-0.5 truncate text-[11px] font-semibold text-[#2D2A4A]/45">
-          {item.subject.name}
-        </p>
-
-        {/* Chips : durée + récompense de série (la session du jour ajoute
-            un jour à la flamme quand il clique et la termine). */}
-        <span className="mt-1.5 flex flex-wrap items-center gap-1.5">
-          <span className="inline-flex w-fit items-center gap-1 rounded-full border-2 border-[#2D2A4A] bg-[#FAF6EF] px-2 py-0.5 text-[11px] font-bold text-[#2D2A4A]">
-            <Timer className="size-3" aria-hidden="true" />
-            {minutes} min
-          </span>
-          <span className="inline-flex w-fit items-center gap-0.5 rounded-full border-2 border-[#2D2A4A] bg-[#FAF6EF] px-2 py-0.5 text-[11px] font-bold text-[#2D2A4A]">
-            <Flame
-              className="size-3 fill-[#F9B233] text-[#F9B233]"
-              aria-hidden="true"
-            />
-            +1 jour
-          </span>
-        </span>
-
-        {/* CTA plein jaune (corail sur contrôle imminent), ombre offset dure
-            + effet press. */}
+        {/* 1. L'urgence d'abord : c'est l'info qui justifie la carte. */}
         <span
           className={cn(
-            'mt-2.5 flex items-center justify-center gap-1.5 rounded-2xl border-[3px] border-[#2D2A4A] px-3 py-1.5 font-extrabold shadow-[0_4px_0_#2D2A4A] transition-all group-active:translate-y-[3px] group-active:shadow-[0_1px_0_#2D2A4A]',
-            isImminent ? 'bg-[#F87171] text-white' : 'bg-[#F9B233] text-[#2D2A4A]',
-            item.exam ? 'text-[13px]' : 'text-sm',
+            'w-fit rounded-full px-2.5 py-1 pr-8 text-[11px] font-extrabold',
+            isImminent
+              ? 'bg-destructive text-white'
+              : 'bg-highlight text-foreground',
           )}
         >
+          ⏰ {item.exam?.label}
+        </span>
+
+        <p className="font-heading mt-2 line-clamp-2 text-[0.95rem] leading-tight font-extrabold">
+          {item.chapterTitle}
+        </p>
+
+        <span className="mt-1.5 flex items-center gap-2">
+          <SubjectChip subject={item.subject} onDark />
+        </span>
+
+        <span className="mt-1.5 flex flex-wrap items-center gap-1.5">
+          <MetaChip onDark>
+            <Timer className="size-3" aria-hidden="true" />
+            {minutes} min
+          </MetaChip>
+          <MetaChip onDark>
+            <Flame className="size-3 fill-highlight text-highlight" aria-hidden="true" />
+            Série +1
+          </MetaChip>
+        </span>
+
+        {/* CTA principal : violet (couleur d'action de l'app), pas jaune — le
+            jaune reste réservé à la monnaie et aux récompenses. */}
+        <span className="font-heading mt-auto flex items-center justify-center gap-1.5 rounded-2xl bg-[color:var(--background)] px-3 py-2 pt-2.5 text-[13px] font-extrabold text-primary transition-transform group-active:translate-y-px">
           <Play className="size-4 fill-current" aria-hidden="true" />
-          {item.exam ? 'Préparer le contrôle' : 'Commencer'}
+          Préparer le contrôle
         </span>
       </Link>
     </li>
   )
 }
 
-// Rangée horizontale de cartes, défilable — le padding haut laisse dépasser
-// les onglets matière au-dessus des cartes, le bas absorbe l'ombre offset.
-function CardRow({ children }: { children: React.ReactNode }) {
+/**
+ * Carte de session ordinaire : carte blanche arrondie, ombre douce et liseré
+ * fin — exactement les cartes du reste de l'accueil (Ta semaine, Mes cours,
+ * dossiers de matières). Elle portait auparavant un vocabulaire à part
+ * (contour navy 3px, ombre dure décalée, intercalaire de classeur en débord),
+ * seule de toute l'app à le faire : la rangée ressemblait à un encart collé.
+ */
+function SessionCard({ item, isStar }: { item: ResumeItem; isStar: boolean }) {
+  const pct = Math.round(item.progress * 100)
+  const minutes = sessionMinutes(item)
+
   return (
-    <ul className="hide-scrollbar -mx-4 flex gap-4 overflow-x-auto px-4 pt-7 pb-3 sm:mx-0 sm:px-1">
-      {children}
-    </ul>
+    <li className="w-48 shrink-0">
+      <Link
+        href={`/reviser/${item.subject.slug}/${item.chapterId}`}
+        onClick={() => sfx.tap()}
+        className={cn(
+          'rev-card group flex h-full flex-col rounded-3xl bg-white p-3.5 transition-transform hover:-translate-y-0.5',
+          // La carte recommandée garde un liseré jaune : mise en avant douce,
+          // dans la palette, sans changer de matière.
+          isStar ? 'ring-2 ring-highlight' : 'ring-1 ring-black/5',
+        )}
+      >
+        <div className="flex min-h-8 items-start justify-between gap-2">
+          <SubjectChip subject={item.subject} />
+          {item.isNew ? (
+            <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 text-[10px] font-extrabold text-muted-foreground">
+              Nouveau
+            </span>
+          ) : (
+            <ProgressRing
+              value={item.progress}
+              size={30}
+              strokeWidth={4}
+              label={`${pct}% fait`}
+              trackClassName="stroke-muted"
+              fillClassName="stroke-primary"
+            >
+              <span className="font-mono text-[9px] font-bold text-foreground tabular-nums">
+                {pct}%
+              </span>
+            </ProgressRing>
+          )}
+        </div>
+
+        <p className="font-heading mt-1.5 line-clamp-2 text-sm leading-tight font-extrabold text-foreground">
+          {item.chapterTitle}
+        </p>
+
+        {isStar ? (
+          <span className="mt-1.5 w-fit rounded-full bg-highlight/25 px-2 py-0.5 text-[10px] font-extrabold text-foreground">
+            Ta série du jour 🔥
+          </span>
+        ) : null}
+
+        <span className="mt-1.5 flex flex-wrap items-center gap-1.5">
+          <MetaChip>
+            <Timer className="size-3" aria-hidden="true" />
+            {minutes} min
+          </MetaChip>
+          <MetaChip>
+            <Flame className="size-3 fill-highlight text-highlight" aria-hidden="true" />
+            Série +1
+          </MetaChip>
+        </span>
+
+        <span className="font-heading mt-auto flex items-center justify-center gap-1.5 rounded-2xl bg-primary px-3 py-2 pt-2.5 text-sm font-extrabold text-primary-foreground transition-transform group-active:translate-y-px">
+          <Play className="size-4 fill-current" aria-hidden="true" />
+          Commencer
+        </span>
+      </Link>
+    </li>
   )
 }
 
-// Deux sections empilées :
-// 1. « Pour ton prochain contrôle » — les cartes générées par les contrôles
-//    déclarés dans Ta semaine (une par contrôle, du plus proche au plus
-//    lointain). N'existe que s'il y a au moins un contrôle actif.
-// 2. « On s'y remet ? » — les dernières sessions non terminées, avec
-//    l'objectif du jour.
+/**
+ * « On s'y remet ? » — UNE seule rangée horizontale, du plus urgent au moins
+ * urgent : les contrôles déclarés d'abord (cartes violettes, tout à gauche),
+ * puis les chapitres en cours. Les contrôles vivaient dans une section héro
+ * séparée au-dessus ; deux sections pour une même intention (« reprends ici »)
+ * coupaient la lecture en deux et repoussaient la grille des matières.
+ */
 export default function ResumeSessions({
   items,
-  sessionsToday = 0,
-  today,
+  goalReached = false,
 }: {
   items: ResumeItem[]
-  sessionsToday?: number
-  /** Clé UTC du jour, calculée par le serveur (cf. NextControleHeroCard). */
-  today: string
+  // Objectif du jour ATTEINT — dérivé des minutes travaillées (la seule unité de
+  // l'objectif, affichée dans le header). Ici on n'en montre que l'ÉTAT : plus de
+  // second compteur « 1/1 session » qui doublait l'unité.
+  goalReached?: boolean
 }) {
   if (items.length === 0) return null
 
-  const examItems = items.filter((i) => i.exam)
-  const regularItems = items.filter((i) => !i.exam)
-
-  const goalDone = sessionsToday >= DAILY_GOAL_SESSIONS
-  const goalCount = Math.min(sessionsToday, DAILY_GOAL_SESSIONS)
+  // `items` arrive déjà trié par le serveur : contrôles en tête (du plus proche
+  // au plus lointain), puis les reprises.
+  const examCount = items.filter((i) => i.exam).length
 
   return (
-    <>
-      {examItems.length > 0 ? (
-        // Carte(s) HÉRO pleine largeur — le point focal de la page. La marge
-        // basse (mb-2, en plus du gap-4 du conteneur) creuse l'écart avec la
-        // grille en dessous pour que la hiérarchie reste nette.
-        <section aria-label="Préparer tes prochains contrôles" className="mb-2">
-          <h2 className="font-heading mb-2 px-1 text-sm font-bold tracking-wide text-muted-foreground uppercase">
-            📝{' '}
-            {examItems.length > 1
-              ? 'Pour tes prochains contrôles'
-              : 'Pour ton prochain contrôle'}
-          </h2>
-          <div className="flex flex-col gap-3">
-            {examItems.map((item) => (
-              <NextControleHeroCard
-                key={item.chapterId}
-                subject={item.subject}
-                chapterId={item.chapterId}
-                chapterTitle={item.chapterTitle}
-                date={item.exam?.date ?? null}
-                minutes={sessionMinutes(item)}
-                today={today}
+    <section aria-label="Reprendre une session">
+      <div className="mb-2 px-1">
+        {/* Titre CONDITIONNEL : renforcement positif quand l'objectif du jour est
+            atteint, incitation sinon. « On s'y remet ? » alors qu'on a déjà fait
+            sa part sonnait faux. */}
+        <h2 className="font-heading text-sm font-bold tracking-wide text-muted-foreground uppercase">
+          {goalReached ? 'Beau travail !' : 'On s’y remet ?'}
+        </h2>
+        {/* Objectif du jour : simple ÉTAT de complétion (l'unité — les minutes —
+            vit dans le header). Coche verte quand c'est fait, flamme sinon. */}
+        <p className="mt-0.5 flex items-center gap-1 text-xs font-bold text-foreground">
+          {goalReached ? (
+            <>
+              <CheckCircle2
+                className="size-3.5 text-[#22C55E]"
+                aria-hidden="true"
               />
-            ))}
-          </div>
-        </section>
-      ) : null}
+              Objectif du jour atteint
+            </>
+          ) : (
+            <>
+              <Flame className="size-3.5 text-highlight" aria-hidden="true" />
+              Encore un peu pour ton objectif du jour
+            </>
+          )}
+        </p>
+      </div>
 
-      {regularItems.length > 0 ? (
-        <section aria-label="Reprendre une session">
-          <div className="mb-2 px-1">
-            <h2 className="font-heading text-sm font-bold tracking-wide text-muted-foreground uppercase">
-              On s&apos;y remet ?
-            </h2>
-            {/* Objectif du jour : 1 session — coche verte quand c'est fait,
-                flamme tant que ça reste à faire. */}
-            <p className="mt-0.5 flex items-center gap-1 text-xs font-bold text-[#2D2A4A]">
-              {goalDone ? (
-                <CheckCircle2
-                  className="size-3.5 text-[#22C55E]"
-                  aria-hidden="true"
-                />
-              ) : (
-                <Flame className="size-3.5 text-[#F9B233]" aria-hidden="true" />
-              )}
-              Objectif du jour : {goalCount}/{DAILY_GOAL_SESSIONS} session
-            </p>
-          </div>
-          <CardRow>
-            {regularItems.map((item, i) => (
-              <SessionCard key={item.chapterId} item={item} isStar={i === 0} />
-            ))}
-          </CardRow>
-        </section>
-      ) : null}
-    </>
+      <ul className="hide-scrollbar -mx-4 flex gap-3 overflow-x-auto px-4 pt-1 pb-4 sm:mx-0 sm:px-1">
+        {items.map((item, i) =>
+          item.exam ? (
+            <ExamCard key={item.chapterId} item={item} />
+          ) : (
+            // La carte « série du jour » n'est étoilée que s'il n'y a aucun
+            // contrôle devant : deux mises en avant côte à côte n'en font plus.
+            <SessionCard
+              key={item.chapterId}
+              item={item}
+              isStar={examCount === 0 && i === 0}
+            />
+          ),
+        )}
+      </ul>
+    </section>
   )
 }

@@ -16,6 +16,12 @@ import {
   type ToneSpec,
 } from '@/lib/game-audio'
 import { pressBuzz, pressTones, type PressIntent } from '@/lib/press'
+import {
+  battleTones,
+  edgeBumpTones,
+  openTones,
+  swipeTones,
+} from '@/lib/ui-audio'
 
 const STORAGE_KEY = 'scolaria-sound'
 
@@ -97,6 +103,35 @@ export const sfx = {
   // bouton pressé, sans avoir à toucher ces fichiers un par un.
   tap() {
     press('neutral')
+  },
+  // Retour / fermeture d'une fenêtre : la DESCENTE commune à toute l'app (croix
+  // de pop-up, flèche retour, voile qu'on tape pour fermer). Deux notes qui
+  // descendent — l'oreille entend « on recule ». Passe par le même moteur de
+  // clic que les boutons (dédup + haptique compris).
+  back() {
+    press('back')
+  },
+  // Ouverture d'un dossier de matières OU entrée dans un mode de jeu : le même
+  // « pwip » qui monte, avec un léger retour haptique. Ces deux gestes ouvrent
+  // quelque chose — ils doivent sonner pareil.
+  open() {
+    playTones(openTones())
+    uiVibrate(9)
+  },
+  // Balayage horizontal entre onglets : souffle directionnel (cf. SwipeTabs).
+  // `up` = vers l'onglet suivant, `down` = retour vers le précédent.
+  swipe(direction: 'up' | 'down') {
+    playTones(swipeTones(direction))
+  },
+  // Rebond d'extrémité (rubber-band) au bout d'une liste (cf. ScrollEdgeSound).
+  edgeBump() {
+    playTones(edgeBumpTones())
+  },
+  // « MATCH CLASSÉ » — le bouton central de l'arène, et le SEUL son épique de
+  // l'app : cuivres + coup grave + un rumble haptique plus appuyé que le reste.
+  battle() {
+    playTones(battleTones())
+    uiVibrate([14, 30, 22])
   },
   // Retournement de carte : petit clic doux.
   flip() {
@@ -262,7 +297,15 @@ export function press(intent: PressIntent = 'primary'): void {
   if (!isSoundOn() || !claimClick()) return
   playTones(pressTones(intent))
   const pattern = pressBuzz(intent)
-  if (pattern === null || typeof window === 'undefined') return
+  if (pattern !== null) uiVibrate(pattern)
+}
+
+// Vibration d'un geste d'UI. Couplée à l'interrupteur de son (couper le son en
+// cours, c'est vouloir la discrétion COMPLÈTE, vibration comprise) et silencieuse
+// là où l'API n'existe pas (iOS Safari, bureau). Le point unique par lequel
+// passe TOUTE l'haptique de l'app — clic de bouton, ouverture, « Battle ».
+function uiVibrate(pattern: number | number[]): void {
+  if (typeof window === 'undefined' || !isSoundOn()) return
   const nav = window.navigator as Navigator & {
     vibrate?: (p: number | number[]) => boolean
   }
@@ -271,7 +314,7 @@ export function press(intent: PressIntent = 'primary'): void {
     nav.vibrate(pattern)
   } catch {
     // Certains navigateurs lèvent hors geste utilisateur : l'haptique est un
-    // bonus, jamais une raison de casser un clic.
+    // bonus, jamais une raison de casser un geste.
   }
 }
 
@@ -281,15 +324,5 @@ export function press(intent: PressIntent = 'primary'): void {
 // veut la discrétion COMPLÈTE, vibration comprise), et se tait silencieusement
 // là où l'API n'existe pas (iOS Safari, bureau).
 export function buzz(good: boolean, streak = 0): void {
-  if (typeof window === 'undefined' || !isSoundOn()) return
-  const nav = window.navigator as Navigator & {
-    vibrate?: (p: number | number[]) => boolean
-  }
-  if (typeof nav.vibrate !== 'function') return
-  try {
-    nav.vibrate(buzzPattern(good, streak))
-  } catch {
-    // Certains navigateurs lèvent si l'appel n'est pas lié à un geste : le
-    // retour haptique est un bonus, jamais une raison de casser la session.
-  }
+  uiVibrate(buzzPattern(good, streak))
 }

@@ -1,13 +1,11 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import {
   Zap,
   Check,
   X,
-  ArrowLeft,
   ArrowRight,
   RotateCcw,
   BusFront,
@@ -39,6 +37,7 @@ import BossMode from '@/components/BossMode'
 import RankedMode from '@/components/RankedMode'
 import RankedHero from '@/components/RankedHero'
 import CoopMode from '@/components/CoopMode'
+import ArenaBackButton from '@/components/defi/ArenaBackButton'
 import ModeStage from '@/components/defi/ModeStage'
 import type { RankPlayer } from '@/lib/trophies'
 import { bossForSubject, dominantSubject } from '@/lib/bosses'
@@ -212,7 +211,7 @@ export default function DefiHome({
   // Arrête la session en cours : le chrono se démonte (le temps mesuré est
   // versé au compteur) et on revient à l'écran d'accueil du Défi.
   const stop = () => {
-    sfx.tap()
+    sfx.back()
     setPhase('landing')
     setIndex(0)
     setSelected(null)
@@ -411,15 +410,9 @@ export default function DefiHome({
     return (
       <div className="flex flex-col items-center gap-6 pt-2 text-center">
         {/* Retour vers l'écran d'arène : la salle de jeu est une sous-page,
-            l'élève ne doit jamais y rester coincé (libellé standard). */}
-        <Link
-          href="/defi"
-          onClick={() => sfx.tap()}
-          className="flex items-center gap-1.5 self-start text-sm font-bold text-white/70 transition-colors hover:text-white"
-        >
-          <ArrowLeft className="size-4" aria-hidden="true" />
-          Retour à l&apos;arène
-        </Link>
+            l'élève ne doit jamais y rester coincé. Flèche flottante commune
+            (ArenaBackButton), calée dans l'angle haut-gauche. */}
+        <ArenaBackButton href="/defi" />
 
         {/* LE classement : hero de l'onglet, mode classé par défaut. */}
         <RankedHero
@@ -427,7 +420,7 @@ export default function DefiHome({
           bestTrophies={Math.max(bestTrophies, trophies)}
           players={rankedPlayers}
           onPlay={() => {
-            sfx.tap()
+            sfx.open()
             setPhase('ranked')
           }}
         />
@@ -635,7 +628,7 @@ export default function DefiHome({
                   type="button"
                   disabled={!playable}
                   onClick={() => {
-                    sfx.tap()
+                    sfx.open()
                     setPhase(mode.id)
                   }}
                   className={cn(
@@ -758,7 +751,7 @@ export default function DefiHome({
                 <button
                   type="button"
                   onClick={() => {
-                    sfx.tap()
+                    sfx.open()
                     setPhase('coop')
                   }}
                   className="press-3d-deep flex w-full items-center justify-center gap-2 rounded-2xl bg-highlight px-4 py-3.5 font-heading text-sm font-extrabold tracking-wide text-foreground uppercase italic ring-1 ring-black/10 transition-transform active:scale-[0.99]"
@@ -771,7 +764,7 @@ export default function DefiHome({
                 <button
                   type="button"
                   onClick={() => {
-                    sfx.tap()
+                    sfx.open()
                     setPhase('duel-live')
                   }}
                   className="press-3d-deep flex w-full items-center justify-center gap-2 rounded-2xl bg-white/10 px-4 py-3 text-sm font-extrabold tracking-wide text-white uppercase ring-1 ring-white/25 transition-transform hover:scale-[1.01] active:scale-95"

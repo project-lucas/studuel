@@ -1,12 +1,13 @@
 'use client'
 
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
+import { useDialogFocus } from '@/lib/use-dialog'
 import { NotificationBadge } from './SculptedPlate'
 
 /**
@@ -42,6 +43,13 @@ interface ArenaHudProps {
   leftOrbs: OrbItem[]
   /** Colonne d'entrées « social » (clan, historique, amis). */
   rightOrbs: OrbItem[]
+  /** Cartouche de rang (blason + trophées), posée AU-DESSUS du parchemin. */
+  rankSlot?: ReactNode
+  /** Carte de profil (avatar + pseudo), calée en haut à GAUCHE (façon Clash
+   *  Royale). Symétrique du bloc rang/menu de droite. */
+  profileSlot?: ReactNode
+  /** Pilule de saison, calée discrètement en bas à gauche de la scène. */
+  seasonSlot?: ReactNode
   /** Le centre de la scène (optionnel : l'arène peut rester plein cadre). */
   children?: ReactNode
 }
@@ -49,15 +57,22 @@ interface ArenaHudProps {
 /**
  * La scène de l'onglet Défi : le décor d'arène est laissé libre au centre, et
  * toutes les entrées secondaires sont regroupées derrière un unique bouton
- * « burger » calé EN BAS À DROITE. Au tap, le burger se DÉPLIE sur place : la
- * pile des six médaillons (ligue, classements, entraînement, clan, historique,
- * amis) se déroule verticalement vers le haut en cascade — un vrai menu
- * dépliant, pas une feuille qui monte du bas. Chaque médaillon navigue (`href`)
- * ou ouvre sa propre feuille de détail (`sheetContent`, fournie par le serveur).
+ * « burger » calé EN HAUT À DROITE, juste sous la cartouche de rang. Au tap, le
+ * parchemin se DÉROULE sur place : la pile des six médaillons (ligue,
+ * classements, entraînement, clan, historique, amis) descend verticalement en
+ * cascade — un vrai rouleau qui se déplie vers le bas, pas une feuille qui monte
+ * du bas. Chaque médaillon navigue (`href`) ou ouvre sa propre feuille de détail
+ * (`sheetContent`, fournie par le serveur).
+ *
+ * Rang + parchemin partagent le même coin : c'est le bloc « mon statut, mes
+ * accès », et il libère tout le centre-bas pour la scène et le bouton de match.
  */
 export default function ArenaHud({
   leftOrbs,
   rightOrbs,
+  rankSlot,
+  profileSlot,
+  seasonSlot,
   children,
 }: ArenaHudProps) {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -86,17 +101,18 @@ export default function ArenaHud({
     setOpenId(id)
   }
 
-  // Cascade : les médaillons se déroulent depuis le burger vers le haut
-  // (staggerDirection -1 → le plus proche du bouton apparaît en premier).
+  // Cascade : les médaillons se déroulent depuis le parchemin vers le BAS — le
+  // premier de la liste (le plus proche du bouton) apparaît en premier, donc
+  // stagger dans l'ordre naturel.
   const listVariants = {
-    open: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
-    closed: { transition: { staggerChildren: 0.03 } },
+    open: { transition: { staggerChildren: 0.05 } },
+    closed: { transition: { staggerChildren: 0.03, staggerDirection: -1 } },
   }
   const rowVariants = reduce
     ? { open: { opacity: 1 }, closed: { opacity: 0 } }
     : {
         open: { opacity: 1, y: 0, scale: 1 },
-        closed: { opacity: 0, y: 16, scale: 0.8 },
+        closed: { opacity: 0, y: -16, scale: 0.8 },
       }
 
   return (
@@ -129,40 +145,39 @@ export default function ArenaHud({
           )
         : null}
 
-      {/* Le menu dépliant, ancré en bas à droite : la pile des entrées au-dessus
-          du burger. Z-index conditionnel : menu OUVERT → z-[60] > voile (55),
-          pour que la pile et le parchemin restent en pleine lumière quand le
-          reste s'assombrit ; menu FERMÉ → z-40, SOUS les feuilles modales
-          (ModesSheet, feuilles de détail en z-50) pour que le parchemin ne
-          transperce plus leur voile sombre. Le parchemin PLONGE dans
-          l'espace blanc du bloc trophée : horizontalement son bord droit se cale
-          sur l'extrémité droite du bloc (celui-ci fait 17rem centré dans la
-          colonne → bord droit à `50% - 8.5rem` du bord droit) ; verticalement le
-          `-bottom` négatif le descend d'un bloc entier pour qu'il repose DANS la
-          plaque (sur le contrepoids blanc à droite du nombre), pas au-dessus. */}
+      {/* Carte de profil : angle haut-GAUCHE, symétrique du bloc rang/menu de
+          droite. `fixed` pour tenir l'angle quel que soit le format (mêmes
+          offsets verticaux que la droite). z-40 : sous les feuilles modales et
+          sous le voile du menu (elle s'assombrit avec le reste quand il ouvre). */}
+      {profileSlot ? (
+        <div className="fixed top-14 left-3 z-40 md:top-4">{profileSlot}</div>
+      ) : null}
+
+      {/* Pilule de saison : posée en bas à gauche de la scène, hors du chemin
+          du regard. Le centre haut reste au décor. */}
+      {seasonSlot ? (
+        <div className="pointer-events-none absolute bottom-1 left-0 z-30 flex max-w-[62%] justify-start [&>*]:pointer-events-auto">
+          {seasonSlot}
+        </div>
+      ) : null}
+
+      {/* Le bloc « statut & accès », icônes FLOTTANTES en haut à DROITE : la
+          cartouche de rang, le parchemin scellé juste dessous, et — une fois
+          déroulé — la pile des entrées qui descend. Position `fixed` (pas
+          `absolute`) pour tenir l'angle haut-droit PEU IMPORTE LE FORMAT : calé
+          sous la pastille « solde » du bandeau flottant (`top-14 right-3` sur
+          mobile, `md:top-4` sur desktop). `items-end` pour que la cartouche, le
+          parchemin et la pile se plaquent tous au bord droit. Z-index
+          conditionnel : menu OUVERT → z-[60] > voile (55), pour que la pile et le
+          parchemin restent en pleine lumière quand le reste s'assombrit ; menu
+          FERMÉ → z-40, SOUS les feuilles modales (ModesSheet, feuilles de détail
+          en z-50) pour que le parchemin ne transperce plus leur voile sombre. */}
       <div
-        className={`absolute right-[calc(50%-8.5rem)] -bottom-16 flex flex-col items-end gap-2 ${
+        className={`fixed top-14 right-3 flex flex-col items-end gap-1.5 md:top-4 ${
           menuOpen ? 'z-[60]' : 'z-40'
         }`}
       >
-        <AnimatePresence>
-          {menuOpen ? (
-            <motion.ul
-              key="menu"
-              className="flex flex-col items-end gap-2"
-              variants={listVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-            >
-              {items.map((item) => (
-                <motion.li key={item.id} variants={rowVariants}>
-                  <MenuRow item={item} onOpen={openSheet} />
-                </motion.li>
-              ))}
-            </motion.ul>
-          ) : null}
-        </AnimatePresence>
+        {rankSlot}
 
         {/* Le burger lui-même : parchemin scellé qui, au tap, se DÉROULE — le
             rouleau fermé se fond vers le parchemin ouvert (et non plus un simple
@@ -178,6 +193,7 @@ export default function ArenaHud({
           aria-haspopup="menu"
           aria-expanded={menuOpen}
           aria-label="Menu de l'arène — ligue, classements, clan, amis…"
+          title="Menu de l'arène"
           className="olympe-press flex size-14 cursor-pointer items-center justify-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
         >
           <span className="relative grid size-11 place-items-center">
@@ -228,6 +244,26 @@ export default function ArenaHud({
             </motion.span>
           </span>
         </button>
+
+        {/* La pile déroulée, SOUS le parchemin : elle descend en cascade. */}
+        <AnimatePresence>
+          {menuOpen ? (
+            <motion.ul
+              key="menu"
+              className="flex flex-col items-end gap-2"
+              variants={listVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
+            >
+              {items.map((item) => (
+                <motion.li key={item.id} variants={rowVariants}>
+                  <MenuRow item={item} onOpen={openSheet} />
+                </motion.li>
+              ))}
+            </motion.ul>
+          ) : null}
+        </AnimatePresence>
       </div>
 
       {/* Feuille de détail d'une entrée (ligue, classements…) — portail pour
@@ -294,6 +330,9 @@ function SheetShell({
   header: ReactNode
   children: ReactNode
 }) {
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel)
+
   return (
     <motion.div
       className="fixed inset-0 z-50 flex items-end justify-center bg-black/55 sm:items-center sm:p-4"
@@ -307,8 +346,9 @@ function SheetShell({
       onClick={onClose}
     >
       <motion.div
+        ref={panel}
         data-no-swipe
-        className="defi3-sheet w-full max-w-md"
+        className="defi3-sheet w-full max-w-md outline-none"
         initial={reduce ? { opacity: 0 } : { y: '100%' }}
         animate={reduce ? { opacity: 1 } : { y: 0 }}
         exit={reduce ? { opacity: 0 } : { y: '100%' }}
@@ -375,7 +415,7 @@ function MenuRow({
   )
 
   const label = (
-    <span className="olympe-glass flex items-center gap-1.5 rounded-full py-1.5 pr-3 pl-3.5">
+    <span className="olympe-glass flex items-center gap-1.5 rounded-full py-1.5 pr-3.5 pl-3">
       <span className="font-heading text-sm font-extrabold whitespace-nowrap text-white">
         {item.label}
       </span>
@@ -387,6 +427,9 @@ function MenuRow({
     </span>
   )
 
+  // Aligné à DROITE sous le parchemin : le libellé d'abord (il s'étend vers la
+  // gauche), puis le médaillon calé sur le bord droit, sous le rouleau — les
+  // médaillons s'empilent ainsi en colonne juste sous le parchemin.
   const face = (
     <>
       {label}

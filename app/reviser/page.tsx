@@ -18,12 +18,16 @@ import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
 import CoursesShelf, {
   type CourseShelfItem,
 } from '@/components/carnet/CoursesShelf'
-import WeekPlannerStrip from '@/components/WeekPlannerStrip'
+import CarnetFab from '@/components/carnet/CarnetFab'
+import WeekPlannerStrip, {
+  type ControleSubjectMeta,
+} from '@/components/WeekPlannerStrip'
+import PrepCards from '@/components/reviser/PrepCards'
+import NoteInbox from '@/components/reviser/NoteInbox'
 import ExamObjectiveToggle from '@/components/ExamObjectiveToggle'
 import { type ExamProgressEntry } from '@/components/ExamProgress'
 import OralTextsCard from '@/components/OralTextsCard'
 import CommuteBanner from '@/components/CommuteBanner'
-import ReviewQueueCard from '@/components/ReviewQueueCard'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { createClient } from '@/lib/supabase/server'
 import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
@@ -31,7 +35,7 @@ import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
 import { computeXp } from '@/lib/xp'
-import { getReviewItems, reviewQueue, countsBySubject } from '@/lib/srs'
+import { fetchWallet } from '@/lib/wallet-server'
 import {
   toDayKey,
   computeStreak,
@@ -39,12 +43,16 @@ import {
   activityCutoff,
 } from '@/lib/streak'
 import {
-  normalizeExamList,
-  activeExams,
-  examHintsBySubject,
-  examCardLabel,
-  examProximity,
-} from '@/lib/next-exam'
+  rowsToControles,
+  derivePlanView,
+  controleTitle,
+  countdownTag,
+  daysBetween,
+  type ControleRow,
+  type SessionRow,
+  type Controle,
+} from '@/lib/prep-plan'
+import type { SubjectExamHint } from '@/lib/next-exam'
 import { normalizeOralList } from '@/lib/oral-texts'
 import type { CommuteSlot, Subject } from '@/lib/types'
 
@@ -178,7 +186,6 @@ export default async function ReviserPage() {
     cachedSubjects,
     cachedChapters,
     mastery,
-    reviews,
     // Journées d'activité (tous types confondus) pour la flamme de série du
     // header — même définition que sur l'onglet Moi. On récupère au passage les
     // colonnes qui alimentent l'XP du header (score, cartes, xp du défi).
@@ -191,12 +198,18 @@ export default async function ReviserPage() {
     // Temps travaillé aujourd'hui (work_daily, migration 084) → objectif du jour
     // du header. Bucket par date UTC, cohérent avec la série.
     { data: workToday },
+    { data: controleRows },
+    { data: sessionRows },
+    // Portefeuille (migration 192) : LA source de vérité de l'XP/niveau. Lu ici
+    // pour que l'XP du header découle des mêmes actions traçables que le niveau
+    // du bandeau et du profil — pas d'un second calcul concurrent. Null tant que
+    // la 192 n'est pas passée → repli sur l'XP dérivée (computeXp) plus bas.
+    walletRow,
   ] = await Promise.all([
     // Catalogue servi par le cache serveur (identique pour tous les élèves).
     getSubjectsCached(),
     getGradeChaptersCached(grade),
     getChapterMastery(supabase, user.id),
-    getReviewItems(supabase, user.id),
     // Fenêtre glissante : ces requêtes ne servent qu'à la série et à la
     // semaine — inutile de retransférer tout l'historique d'un élève assidu
     // (400 jours couvrent toute série affichable).
@@ -237,6 +250,24 @@ export default async function ReviserPage() {
       .eq('user_id', user.id)
       .eq('day', toDayKey(new Date()))
       .maybeSingle(),
+    // Contrôles + plans de préparation (migration 203) : les deux tables sont
+    // lues en isolation — si 203 n'est pas passée, `error` non nul et data null,
+    // sans casser le reste de la page (le client Supabase ne lève pas).
+    supabase
+      .from('controles')
+      .select(
+        'id, subject_slug, chapters, exam_date, grade, note, note_prompted, snooze_date',
+      )
+      .eq('user_id', user.id)
+      .returns<ControleRow[]>(),
+    supabase
+      .from('sessions_preparation')
+      .select(
+        'id, controle_id, planned_date, duration_min, chapter_id, status, position',
+      )
+      .eq('user_id', user.id)
+      .returns<SessionRow[]>(),
+    fetchWallet(supabase, user.id),
   ])
 
   // Repli authentifié : cache froid ou migration 026 pas encore exécutée.
@@ -285,9 +316,6 @@ export default async function ReviserPage() {
     )
   }
 
-  // File « À revoir aujourd'hui » : items SRS dus + Revanche.
-  const queue = reviewQueue(reviews, toDayKey(new Date()))
-
   // Série vivante pour la flamme du header.
   const activityDays = new Set(
     [
@@ -299,21 +327,14 @@ export default async function ReviserPage() {
   )
   const streak = computeStreak(activityDays)
   const week = weekProgress(activityDays)
-  // Sessions faites aujourd'hui (tous types confondus) → indicateur
-  // « Objectif du jour » de la section On s'y remet ?.
-  const todayKey = toDayKey(new Date())
-  const sessionsToday = [
-    ...(testDays ?? []),
-    ...(studyDays ?? []),
-    ...(lessonDays ?? []),
-    ...(challengeDays ?? []),
-  ].filter((s) => String(s.created_at).slice(0, 10) === todayKey).length
   const firstName =
     String(profile?.full_name ?? '').split(' ')[0] || null
 
-  // Stats du header : XP dérivée de l'activité réelle (lib/xp) et objectif du
-  // jour (minutes travaillées aujourd'hui vs objectif fixé à l'onboarding).
-  const xp = computeXp({
+  // Stats du header : XP et objectif du jour (minutes travaillées aujourd'hui vs
+  // objectif fixé à l'onboarding). L'XP vient du PORTEFEUILLE quand il existe
+  // (source unique, même chiffre que le niveau du bandeau et du profil) ; sinon
+  // repli sur l'XP dérivée de l'activité — le calcul que la 192 rejoue en SQL.
+  const derivedXp = computeXp({
     quizzes: (testDays ?? []).map((t) => ({ score: Number(t.score ?? 0) })),
     decks: (studyDays ?? []).map((s) => ({
       cards_count: Number(s.cards_count ?? 0),
@@ -324,6 +345,10 @@ export default async function ReviserPage() {
       0,
     ),
   })
+  const xp =
+    walletRow && walletRow.xp != null
+      ? Math.max(0, Number(walletRow.xp) || 0)
+      : derivedXp
   const todayMinutes = Math.floor(Number(workToday?.seconds ?? 0) / 60)
   const goalMinutes = extraRow?.daily_goal_minutes ?? 15
   const trophies = Math.max(0, Number(trophyRow?.trophies) || 0)
@@ -410,17 +435,43 @@ export default async function ReviserPage() {
     ? (profile.commute_slots as CommuteSlot[])
     : []
 
-  // Contrôles à venir (migration 087) → annotation des dossiers : chaque matière
-  // qui a un contrôle proche porte un liseré coloré + un compte à rebours.
+  // Contrôles + plans de préparation (migration 203) : LA source unique de
+  // « Ta semaine » (ligne + pastilles), des cartes de préparation et de la
+  // boucle post-contrôle. Une seule entité, plusieurs vues synchronisées.
   const today = toDayKey(new Date())
-  const upcomingExams = activeExams(
-    normalizeExamList(extraRow?.upcoming_exams),
-    today,
+  const controles: Controle[] = rowsToControles(
+    controleRows ?? [],
+    sessionRows ?? [],
   )
-  const examBySubject = examHintsBySubject(upcomingExams, today)
+
+  // Métadonnée d'affichage par matière (couleur de pastille + nom du libellé),
+  // sur TOUT le catalogue : un contrôle se déclare sur un chapitre du niveau,
+  // mais la matière peut n'avoir aucun chapitre de ce niveau dans `ofLevel`.
+  const subjectMeta: Record<string, ControleSubjectMeta> = {}
+  for (const s of allSubjects) {
+    subjectMeta[s.slug] = { name: s.name, color: s.color }
+  }
+
+  // Annotation des dossiers de matières : le contrôle actif le plus proche par
+  // matière → liseré coloré + compte à rebours (dérivé des contrôles, plus de
+  // upcoming_exams). Proximité en 3 paliers (imminent ≤ 2 j, bientôt ≤ 6 j).
+  const examBySubject: Record<string, SubjectExamHint> = {}
+  for (const c of controles) {
+    if (derivePlanView(c, today).isComplete) continue
+    if (examBySubject[c.subject]) continue
+    const d = c.date === null ? null : daysBetween(today, c.date)
+    const proximity =
+      d === null ? 'far' : d <= 2 ? 'imminent' : d <= 6 ? 'soon' : 'far'
+    examBySubject[c.subject] = {
+      proximity,
+      label: countdownTag(c.date, today) ?? 'à venir',
+      chapterTitle: controleTitle(c, subjectMeta[c.subject]?.name ?? c.subject),
+    }
+  }
 
   // « On s'y remet ? » : chapitres en cours (puis fragiles) ; à défaut, les
-  // premiers chapitres à commencer.
+  // premiers chapitres à commencer. (Les cartes de contrôle vivent désormais
+  // dans leur propre rangée PrepCards, plus dans cette file.)
   let resumeItems: ResumeItem[] = [...enCours, ...fragiles]
     .slice(0, 5)
     .map((a) => ({
@@ -439,37 +490,6 @@ export default async function ReviserPage() {
       isNew: true,
     }))
   }
-
-  // Cartes PRIORITAIRES « pour le contrôle » : une carte par contrôle déclaré
-  // encore actif (upcomingExams est déjà trié du plus proche au plus lointain,
-  // les sans-date en fin), insérées EN TÊTE de la rangée. Ajouter un contrôle
-  // dans « Ta semaine » fait donc apparaître sa carte immédiatement.
-  const subjectBySlug = new Map(ofLevel.map((s) => [s.slug, s]))
-  const examResumeItems: ResumeItem[] = upcomingExams.flatMap((exam) => {
-    const subject = subjectBySlug.get(exam.subject)
-    if (!subject) return []
-    return [
-      {
-        subject,
-        chapterId: exam.chapterId,
-        chapterTitle: exam.chapterTitle,
-        progress: mastery.get(exam.chapterId)?.value ?? 0,
-        isNew: false,
-        exam: {
-          label: examCardLabel(exam, today),
-          proximity: examProximity(exam, today),
-          date: exam.date,
-        },
-      },
-    ]
-  })
-  // Dédoublonnage : un chapitre déjà porté par une carte contrôle ne
-  // réapparaît pas parmi les reprises classiques à droite.
-  const examChapterSet = new Set(examResumeItems.map((i) => i.chapterId))
-  resumeItems = [
-    ...examResumeItems,
-    ...resumeItems.filter((i) => !examChapterSet.has(i.chapterId)),
-  ]
 
   // Données de la carte « Mes contrôles à venir » : matières + chapitres du
   // niveau (identique à l'onglet Moi, la carte est partagée).
@@ -495,7 +515,11 @@ export default async function ReviserPage() {
     if (!subj) continue
     ;(chaptersBySubject[subj.slug] ??= []).push({ id: ch.id, title: ch.title })
   }
-  const existingExamChapters = new Set(upcomingExams.map((e) => e.chapterId))
+  // Chapitres déjà couverts par un contrôle (pour le repère « déjà annoncé » de
+  // la feuille d'ajout).
+  const existingExamChapters = new Set(
+    controles.flatMap((c) => c.chapters.map((ch) => ch.id)),
+  )
 
   // --- Mes cours (Mon carnet) : étagère calculée côté serveur -----------------
   // Compteur de questions par cours (la RLS limite déjà aux cours de l'élève).
@@ -560,38 +584,45 @@ export default async function ReviserPage() {
               underHeader={false}
               topSlot={
                 <>
+                  {/* 0. Boucle post-contrôle : demande de note le lendemain +
+                      récap effort → résultat. Rendu null s'il n'y a rien à
+                      demander/afficher. */}
+                  <NoteInbox
+                    controles={controles}
+                    today={today}
+                    subjectMeta={subjectMeta}
+                  />
                   {/* 1. Ta série — la semaine d'activité mise en avant, tout en
                       haut, dans une carte blanche qui chevauche le bandeau. */}
                   <div className="rev-card rounded-3xl bg-white p-4 shadow-sm ring-1 ring-black/5">
                     <WeekPlannerStrip
                       week={week}
-                      exams={upcomingExams}
+                      controles={controles}
                       today={today}
+                      subjectMeta={subjectMeta}
                       subjects={examSubjects}
                       chaptersBySubject={chaptersBySubject}
                       existingExamChapters={[...existingExamChapters]}
+                      goalMinutes={goalMinutes}
                       activeDays={[...activityDays]}
                     />
                   </div>
-                  {/* 2. À revoir aujourd'hui — LA porte de la file SRS +
-                      Revanche (entrée unique, l'ancienne tuile jumelle des
-                      outils a été retirée). Absente si la file est vide.
-                      L'ancre data-tour vit sur un wrapper : le tour saute
-                      l'étape quand la file est vide. */}
-                  <div data-tour="file-du-jour">
-                    <ReviewQueueCard
-                      total={queue.length}
-                      revanche={queue.filter((i) => i.in_revanche).length}
-                      subjects={[...countsBySubject(queue).entries()].sort(
-                        (a, b) => b[1] - a[1],
-                      )}
-                    />
-                  </div>
-                  {/* 3. On s'y remet — les dernières sessions, sous la série. */}
+                  {/* 2. Préparer mes contrôles — une carte par contrôle actif,
+                      même couleur/intitulé que la ligne de semaine. */}
+                  <PrepCards
+                    controles={controles}
+                    today={today}
+                    subjectMeta={subjectMeta}
+                  />
+                  {/* 3. On s'y remet — les dernières sessions, sous la série.
+                      (La carte « À revoir aujourd'hui » a été retirée d'ici :
+                      elle empilait une troisième porte d'entrée au-dessus de la
+                      grille des matières. La file SRS reste accessible depuis
+                      l'historique des duels, la bannière de matière et les
+                      notifications — cf. lib/notifications SRS_URL.) */}
                   <ResumeSessions
                     items={resumeItems}
-                    sessionsToday={sessionsToday}
-                    today={today}
+                    goalReached={goalMinutes > 0 && todayMinutes >= goalMinutes}
                   />
                   {/* Rappel contextuel : pendant le trajet, un temps mort = de
                       l'XP. */}
@@ -615,6 +646,9 @@ export default async function ReviserPage() {
               Ton carnet de cours : crée tes cours, remplis-les de questions et
               révise-les.
             </p>
+            {/* Créer, de partout dans la liste : le « + » flottant (il ne vit
+                que dans ce volet, le panneau inactif étant `hidden`). */}
+            <CarnetFab />
             {/* Descriptif de l'oral (1re français). */}
             {hasFrenchOral ? <OralTextsCard initial={oralTexts} /> : null}
             {/* « Mes cours » — LE bloc du carnet : les cours façon Wooflash

@@ -237,6 +237,19 @@
   animation: pop-in 0.45s var(--ease) backwards;
 }
 
+/* Ouverture d'un dossier de matières : la zone rattachée se déplie sous la
+   carte-dossier (fondu + glissé), les cartes prennent ensuite le relais avec
+   leur propre entrée en cascade (pop-in). */
+@keyframes folder-zone-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+.folder-zone-in {
+  animation: folder-zone-in 0.3s var(--ease) backwards;
+}
+
 /* Les barres de progression se remplissent à l'arrivée */
 @keyframes bar-grow {
   from {
@@ -902,10 +915,7 @@ a:hover > .wiggle-on-hover {
   position: absolute;
   inset: 0;
 }
-/* Empilement : bannières (1) → feuilles (2) → torches (3) → poussière (4). */
-.abg-layer--banners {
-  z-index: 1;
-}
+/* Empilement : feuilles (2) → torches (3) → poussière (4). */
 .abg-layer--leaves {
   z-index: 2;
 }
@@ -1012,45 +1022,6 @@ a:hover > .wiggle-on-hover {
   animation-delay: -1.4s;
 }
 
-/* Bannières violettes suspendues aux bords : liseré doré en tête (premiers 7%
-   du dégradé), corps violet, pointe en V taillée au clip-path. L'ondulation
-   pivote autour du point d'accroche (transform-origin en haut), gauche et
-   droite désynchronisées par durée + délai. */
-@keyframes abg-banner-sway {
-  from {
-    transform: rotate(-1.2deg);
-  }
-  to {
-    transform: rotate(1.2deg);
-  }
-}
-.abg-banner {
-  position: absolute;
-  top: 22%;
-  width: clamp(30px, 6vw, 52px);
-  height: clamp(84px, 16vh, 140px);
-  transform-origin: top center;
-  opacity: 0.82;
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklch, var(--highlight), white 14%) 0%,
-    var(--highlight) 7%,
-    color-mix(in oklch, var(--primary), white 8%) 7%,
-    color-mix(in oklch, var(--primary), black 26%) 100%
-  );
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 84%, 0 100%);
-  will-change: transform;
-  animation: abg-banner-sway 3.4s ease-in-out infinite alternate;
-}
-.abg-banner--left {
-  left: 2.5%;
-}
-.abg-banner--right {
-  right: 2.5%;
-  animation-duration: 4.1s;
-  animation-delay: -1.7s;
-}
-
 /* Poussière de lumière ambiante : petits points dorés qui montent lentement
    en pulsant. Positions/délais/durées randomisés côté lib (graine fixe, rendu
    SSR identique) et posés en styles inline par GoldenDust.tsx. */
@@ -1090,9 +1061,6 @@ a:hover > .wiggle-on-hover {
   .abg-flame {
     animation: none;
     opacity: 0.7;
-  }
-  .abg-banner {
-    animation: none;
   }
   .abg-dust,
   .abg-canvas {
@@ -1216,6 +1184,32 @@ a:hover > .wiggle-on-hover {
 }
 .trophy-plate::after {
   right: -0.4rem;
+}
+
+/* Variante compacte : la cartouche de rang en haut à droite de l'arène. Mêmes
+   matières (parchemin, liseré, rouleaux), au tiers de l'encombrement. */
+.trophy-plate--sm {
+  gap: 0.35rem;
+  padding: 0.25rem 1.05rem;
+  border-radius: 0.4rem;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -5px 10px -6px rgba(120, 82, 34, 0.45),
+    0 3px 0 var(--foreground),
+    0 8px 14px -8px rgba(0, 0, 0, 0.5);
+}
+.trophy-plate--sm::before,
+.trophy-plate--sm::after {
+  top: 0.2rem;
+  bottom: -0.24rem;
+  width: 0.68rem;
+  border-radius: 0.35rem;
+}
+.trophy-plate--sm::before {
+  left: -0.28rem;
+}
+.trophy-plate--sm::after {
+  right: -0.28rem;
 }
 
 /* Coffre du Trésor : léger dandinement pour inviter au tap */
@@ -2229,7 +2223,9 @@ a:hover > .wiggle-on-hover {
    les <li> passent au-dessus en z-10). */
 .tab-glow {
   position: absolute;
-  bottom: 2px;
+  /* Remonté pour rester centré sur l'ICÔNE maintenant qu'un libellé texte
+     occupe le bas de chaque onglet (sinon le halo se posait sous le mot). */
+  bottom: 16px;
   z-index: 0;
   width: 78px;
   height: 78px;
@@ -2249,7 +2245,7 @@ a:hover > .wiggle-on-hover {
 }
 /* L'onglet central (Défi) est surélevé de 8px : on remonte le halo d'autant. */
 .tab-glow[data-center] {
-  bottom: 10px;
+  bottom: 24px;
 }
 
 /* Vestiaire d'avatar : micro-pop de l'aperçu à chaque équipement — feedback
@@ -2622,6 +2618,300 @@ a:hover > .wiggle-on-hover {
 }
 .jeu-monte {
   animation: jeu-monte 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   MATCH CLASSÉ — l'entrée en scène du duel.
+   L'écran d'attente était une image fixe avec une phrase : on regardait un
+   chargement, on ne vivait rien. Il joue maintenant en trois temps —
+   recherche (balayage radar sur un adversaire encore masqué), verrouillage
+   (l'adversaire s'abat, l'onde de choc part du VS), départ (compte à rebours).
+   Chaque temps a son animation ci-dessous ; toutes s'éteignent en
+   prefers-reduced-motion (bloc commun en fin de fichier).
+   ========================================================================== */
+
+/* Balayage radar : un trait de lumière descend sur le panneau adverse tant
+   qu'on cherche. C'est le signal « ça travaille », version arène. */
+@keyframes rk-scan {
+  0% {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
+  12%,
+  88% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+}
+.rk-scan {
+  animation: rk-scan 1.15s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Verrouillage : l'adversaire s'abat depuis la droite, dépasse, puis se cale. */
+@keyframes rk-slam {
+  0% {
+    transform: translateX(38%) scale(1.35);
+    opacity: 0;
+  }
+  55% {
+    transform: translateX(-4%) scale(0.94);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(2%) scale(1.03);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+.rk-slam {
+  animation: rk-slam 460ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Onde de choc : un anneau d'or part du VS au moment du verrouillage. */
+@keyframes rk-shock {
+  0% {
+    transform: scale(0.25);
+    opacity: 0.85;
+    border-width: 10px;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+.rk-shock {
+  animation: rk-shock 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Le « VS » encaisse l'impact : il grossit d'un coup puis retombe. */
+@keyframes rk-impact {
+  0% {
+    transform: scale(2.1) rotate(-8deg);
+    opacity: 0;
+  }
+  45% {
+    transform: scale(0.86) rotate(3deg);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1.12) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+.rk-impact {
+  animation: rk-impact 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Flash blanc plein cadre au verrouillage — un seul battement, très court. */
+@keyframes rk-flash {
+  0% {
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.rk-flash {
+  animation: rk-flash 420ms ease-out both;
+}
+
+/* Jauge de recherche : elle se remplit pendant qu'on cherche l'adversaire. La
+   durée est calée sur SEARCH_MS (components/RankedMode.tsx) — les deux doivent
+   bouger ensemble, sinon la barre ment sur ce qui se passe. */
+@keyframes rk-search {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.rk-search {
+  animation: rk-search 1100ms linear both;
+}
+
+/* Compte à rebours : chaque chiffre jaillit puis s'efface en s'éloignant. */
+@keyframes rk-count {
+  0% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+  22% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.72);
+    opacity: 0;
+  }
+}
+.rk-count {
+  animation: rk-count 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ==========================================================================
+   ARÈNE DE BOSS — l'onglet « Boss » de Réviser bascule en salle de combat.
+   La zone crème vire au violet profond (fond .mode-stage-dark, déjà défini) :
+   le gardien entre en grand, encaisse / bondit / se dissout. Réactions courtes
+   et lisibles ; screen-shake et flash blanc réutilisent .jeu-secousse / .rk-flash.
+   Tout s'éteint en prefers-reduced-motion (garde commune juste en dessous).
+   ========================================================================== */
+
+/* Entrée : le calque sombre monte sur la zone crème en ~600 ms. */
+@keyframes boss-arena-dark {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.boss-arena-dark {
+  animation: boss-arena-dark 600ms ease-out both;
+}
+
+/* Retour : le calque sombre s'efface, la crème réapparaît. */
+@keyframes boss-arena-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.boss-arena-out {
+  animation: boss-arena-out 460ms ease-in both;
+}
+
+/* Le gardien entre : il grossit depuis le fond puis se pose. */
+@keyframes boss-portrait-in {
+  0% {
+    transform: scale(0.55) translateY(20px);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+.boss-portrait-in {
+  animation: boss-portrait-in 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Coup encaissé (bonne réponse) : le boss recule d'un cran puis revient. */
+@keyframes boss-recoil {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  30% {
+    transform: translateX(15px) rotate(3deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+.boss-recoil {
+  animation: boss-recoil 460ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Riposte (mauvaise réponse) : le boss bondit vers toi. */
+@keyframes boss-lunge {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.boss-lunge {
+  animation: boss-lunge 380ms ease-out;
+}
+
+/* Blessé (PV < 30 %) : un voile rouge bat sur le gardien. */
+@keyframes boss-wounded {
+  0%,
+  100% {
+    opacity: 0.14;
+  }
+  50% {
+    opacity: 0.42;
+  }
+}
+.boss-wounded {
+  animation: boss-wounded 900ms ease-in-out infinite;
+}
+
+/* La réponse choisie s'élève vers le boss en s'estompant (feedback conservé). */
+@keyframes answer-to-boss {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-16px) scale(0.97);
+    opacity: 0.82;
+  }
+}
+.answer-to-boss {
+  animation: answer-to-boss 480ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Le cœur perdu se brise et s'envole. */
+@keyframes heart-break {
+  0% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+  35% {
+    transform: scale(1.4) rotate(-12deg);
+  }
+  100% {
+    transform: scale(0.3) rotate(18deg) translateY(-10px);
+    opacity: 0;
+  }
+}
+.heart-break {
+  animation: heart-break 520ms ease-out both;
+}
+
+/* Chute du boss : il se dissout (flou + éclat + fondu). */
+@keyframes boss-dissolve {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0) brightness(1);
+  }
+  40% {
+    filter: blur(1px) brightness(1.7);
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+    filter: blur(10px) brightness(2.2);
+  }
+}
+.boss-dissolve {
+  animation: boss-dissolve 760ms ease-in both;
 }
 
 /* Accessibilité : on coupe les animations si l'utilisateur les refuse */

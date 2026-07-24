@@ -16,6 +16,9 @@ import TopHudLoader from "@/components/TopHudLoader";
 // Balayage horizontal (façon Clash Royale) : change d'onglet depuis n'importe
 // quel endroit de l'écran.
 import SwipeTabs from "@/components/SwipeTabs";
+// Rebond sonore aux extrémités : « bwomp » grave quand on tire une liste au-delà
+// de son haut ou de son bas (aucun son pendant le défilement normal).
+import ScrollEdgeSound from "@/components/ScrollEdgeSound";
 // Cadeau de connexion : crédite les pièces du jour au premier passage.
 import DailyLoginReward from "@/components/DailyLoginReward";
 // Retour matériel du téléphone : reste dans l'app au lieu de la quitter.
@@ -92,6 +95,7 @@ export default async function RootLayout({
             le contenu est centré en largeur de lecture confortable */}
         <div className="flex min-h-screen">
           <BackGuard />
+          <ScrollEdgeSound />
           {/* Bandeau du haut streamé : ne bloque pas le rendu de la page. Le
               repli est une barre vide de même hauteur (aucun saut de mise en
               page). */}

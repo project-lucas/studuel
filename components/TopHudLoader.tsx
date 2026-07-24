@@ -1,6 +1,7 @@
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { computeXp, levelFor } from '@/lib/xp'
+import { walletLevelInfo } from '@/lib/wallet'
 import { activityCutoff } from '@/lib/streak'
 import { isHudHidden } from '@/lib/top-hud-routes'
 import TopHud from './TopHud'
@@ -29,15 +30,49 @@ export default async function TopHudLoader() {
     return <TopHud coins={null} level={null} levelTitle={null} progress={0} userLabel={null} />
   }
 
+  // Solde + niveau du PORTEFEUILLE (user_wallet, migration 192) : c'est LA
+  // source de vérité de l'XP/niveau depuis la 192, la même que la carte et la
+  // modale de profil (RPC profile_stats). On la lit ici pour que le « Niveau »
+  // du bandeau et le niveau du profil affichent TOUJOURS le même nombre — fini
+  // le « Niveau 4 » en haut vs « Niv. 1 » sur la carte, qui venaient de deux
+  // calculs concurrents (fenêtre d'activité récente ici, XP cumulée là-bas).
+  const [{ data: coinsRow }, { data: walletRow }] = await Promise.all([
+    supabase.from('profiles').select('coins').eq('id', user.id).maybeSingle(),
+    supabase
+      .from('user_wallet')
+      .select('xp, level')
+      .eq('user_id', user.id)
+      .maybeSingle(),
+  ])
+
+  const coins = Math.max(0, Number(coinsRow?.coins) || 0)
+  const userLabel = user.user_metadata?.full_name || user.email || null
+
+  // Portefeuille présent (cas normal d'un compte actif) → niveau du portefeuille.
+  if (walletRow && walletRow.xp != null) {
+    const info = walletLevelInfo(Math.max(0, Number(walletRow.xp) || 0))
+    return (
+      <TopHud
+        coins={coins}
+        level={info.level}
+        levelTitle={info.title}
+        progress={info.progress}
+        userLabel={userLabel}
+      />
+    )
+  }
+
+  // Repli : le portefeuille n'existe pas encore (migration pas passée, ou compte
+  // sans activité) → ancien calcul dérivé de l'activité récente, comme avant.
+  // La RPC profile_stats crée le portefeuille au premier passage sur le profil,
+  // donc ce repli reste marginal.
   const cutoff = activityCutoff()
   const [
-    { data: coinsRow },
     { data: tests },
     { data: studies },
     { data: lessons },
     { data: challenges },
   ] = await Promise.all([
-    supabase.from('profiles').select('coins').eq('id', user.id).maybeSingle(),
     supabase
       .from('test_sessions')
       .select('score')
@@ -60,7 +95,6 @@ export default async function TopHudLoader() {
       .gte('created_at', cutoff),
   ])
 
-  const coins = Math.max(0, Number(coinsRow?.coins) || 0)
   const xp = computeXp({
     quizzes: (tests ?? []).map((t) => ({ score: Number(t.score ?? 0) })),
     decks: (studies ?? []).map((s) => ({ cards_count: Number(s.cards_count ?? 0) })),
@@ -68,7 +102,6 @@ export default async function TopHudLoader() {
     challengesXp: (challenges ?? []).reduce((s, c) => s + Number(c.xp ?? 0), 0),
   })
   const level = levelFor(xp)
-  const userLabel = user.user_metadata?.full_name || user.email || null
 
   return (
     <TopHud

@@ -118,7 +118,7 @@ function ConfirmUnlockSheet({
   const [pending, startTransition] = useTransition()
   const [error, setError] = useState<string | null>(null)
 
-  useDialog(onClose)
+  const panel = useDialog(onClose)
 
   function handleConfirm() {
     if (pending) return
@@ -147,7 +147,8 @@ function ConfirmUnlockSheet({
       onClick={onClose}
     >
       <div
-        className="w-full max-w-md rounded-t-3xl bg-white p-5 shadow-xl sm:rounded-3xl"
+        ref={panel}
+        className="w-full max-w-md rounded-t-3xl bg-white p-5 shadow-xl outline-none sm:rounded-3xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="mb-4 flex items-center justify-between">

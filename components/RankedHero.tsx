@@ -191,7 +191,7 @@ export default function RankedHero({
           <Swords className="size-5" aria-hidden="true" /> Match classé
         </button>
         <p className="-mt-1 text-center text-[11px] text-muted-foreground">
-          BO3 · tes trophées sont en jeu
+          Au meilleur des 3 manches · tes trophées sont en jeu
         </p>
       </div>
     </section>

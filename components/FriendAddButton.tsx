@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useTransition } from 'react'
+import { useEffect, useRef, useState, useTransition } from 'react'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Check, Copy, UserPlus, X } from 'lucide-react'
@@ -9,6 +9,7 @@ import FriendQrButton from '@/components/FriendQrButton'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { addFriendByCode } from '@/app/amis/actions'
+import { useDialogFocus } from '@/lib/use-dialog'
 
 /**
  * « Ajouter un ami » de l'onglet Amis : ouvre une modale avec tout le
@@ -25,6 +26,8 @@ export default function FriendAddButton({
   variant?: 'icon' | 'cta'
 }) {
   const [open, setOpen] = useState(false)
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel, open)
   const [copied, setCopied] = useState(false)
   const [copyFailed, setCopyFailed] = useState(false)
   const [code, setCode] = useState('')
@@ -124,7 +127,8 @@ export default function FriendAddButton({
                   onClick={() => setOpen(false)}
                 >
                   <motion.div
-                    className="flex w-full max-w-sm flex-col gap-3 rounded-3xl bg-card p-5 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] ring-1 ring-foreground/10"
+                    ref={panel}
+                    className="flex w-full max-w-sm flex-col gap-3 rounded-3xl bg-card p-5 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.6)] ring-1 ring-foreground/10 outline-none"
                     initial={reduce ? { opacity: 0 } : { scale: 0.9, opacity: 0 }}
                     animate={reduce ? { opacity: 1 } : { scale: 1, opacity: 1 }}
                     exit={reduce ? { opacity: 0 } : { scale: 0.9, opacity: 0 }}

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react
 import { createPortal } from 'react-dom'
 import { useSearchParams } from 'next/navigation'
 import { sfx } from '@/lib/sounds'
+import { useDialogFocus } from '@/lib/use-dialog'
 import { completeTutorial } from '@/app/reviser/actions'
 import {
   TOUR_STEPS,
@@ -46,6 +47,10 @@ export default function TourGuide({ autoStart }: { autoStart: boolean }) {
   const [targetRect, setTargetRect] = useState<Rect | null>(null)
   const [bubbleSize, setBubbleSize] = useState({ width: 300, height: 160 })
   const bubbleRef = useRef<HTMLDivElement>(null)
+  // La bulle EST le panneau du dialogue : c'est elle qui porte les boutons
+  // « Suivant » / « Passer ». Sans piège, la tabulation partait explorer la
+  // page assombrie derrière le spotlight.
+  useDialogFocus(bubbleRef, stepIndex !== null)
 
   // Lancement : petit délai pour laisser la page s'installer.
   useEffect(() => {
@@ -151,7 +156,7 @@ export default function TourGuide({ autoStart }: { autoStart: boolean }) {
       {/* La bulle. */}
       <div
         ref={bubbleRef}
-        className="absolute w-[19rem] max-w-[calc(100vw-1.5rem)] rounded-3xl bg-card p-5 shadow-2xl ring-1 ring-foreground/10 transition-all duration-300"
+        className="absolute w-[19rem] max-w-[calc(100vw-1.5rem)] rounded-3xl bg-card p-5 shadow-2xl ring-1 ring-foreground/10 outline-none transition-all duration-300"
         style={{ top: bubble.top, left: bubble.left }}
       >
         <p className="text-xs font-bold text-muted-foreground tabular-nums">

@@ -84,6 +84,22 @@ function ArenaBackdrop() {
 
 type Phase = 'vs' | 'playing' | 'reveal' | 'done'
 
+// L'entrée en scène du match, en trois temps. Elle ne « charge » pas : elle
+// raconte. On cherche (l'adversaire défile, masqué), on verrouille (il s'abat,
+// l'onde de choc part du VS), on démarre (3·2·1).
+type MatchStep = 'searching' | 'locked' | 'countdown'
+
+const SEARCH_MS = 1100
+const LOCK_MS = 800
+const COUNT_MS = 400
+const COUNTDOWN = ['3', '2', '1']
+// Cadence du défilement des candidats pendant la recherche.
+const SPIN_MS = 90
+
+// Les lettres des réponses (A, B, C…) : un repère de lecture stable, comme sur
+// un vrai sujet — et une cible de tap plus grande que le seul texte.
+const OPTION_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F']
+
 type RankedResult = {
   before: number
   after: number
@@ -123,6 +139,10 @@ export default function RankedMode({
   const oppLevel = Math.floor(oppTrophies / 150) + 1
 
   const [phase, setPhase] = useState<Phase>('vs')
+  const [step, setStep] = useState<MatchStep>('searching')
+  const [countIndex, setCountIndex] = useState(0)
+  // Compteur du défilement des candidats (l'adversaire encore masqué).
+  const [spin, setSpin] = useState(0)
   const [rounds, setRounds] = useState<RoundResult[]>([])
   const [ghostVisible, setGhostVisible] = useState(false)
 
@@ -165,14 +185,42 @@ export default function RankedMode({
     roundStartRef.current = nowMs()
   }
 
-  // L'écran VS s'efface tout seul.
+  // Défilement des candidats tant qu'on « cherche » : l'adversaire réel est déjà
+  // tiré (la graine le fige), mais on ne le montre qu'au verrouillage — sinon
+  // la recherche est un mensonge visible dès la première frame.
+  useEffect(() => {
+    if (phase !== 'vs' || step !== 'searching') return
+    const id = window.setInterval(() => setSpin((n) => n + 1), SPIN_MS)
+    return () => window.clearInterval(id)
+  }, [phase, step])
+
+  // La chronologie de l'entrée en scène : recherche → verrouillage → 3·2·1 →
+  // première manche. Tous les minuteurs sont annulés au démontage (abandon
+  // pendant l'intro).
   useEffect(() => {
     if (phase !== 'vs') return
-    const t = window.setTimeout(() => {
-      startRound()
-      setPhase('playing')
-    }, 2400)
-    return () => window.clearTimeout(t)
+    const lockAt = SEARCH_MS
+    const countAt = SEARCH_MS + LOCK_MS
+    const timers = [
+      window.setTimeout(() => {
+        sfx.tap()
+        setStep('locked')
+      }, lockAt),
+      window.setTimeout(() => setStep('countdown'), countAt),
+      ...COUNTDOWN.map((_, i) =>
+        window.setTimeout(() => setCountIndex(i), countAt + i * COUNT_MS),
+      ),
+      window.setTimeout(
+        () => {
+          startRound()
+          setPhase('playing')
+        },
+        countAt + COUNTDOWN.length * COUNT_MS,
+      ),
+    ]
+    // startRound ne lit que des setters (stables) : la chronologie ne se rejoue
+    // que sur un changement de phase.
+    return () => timers.forEach((t) => window.clearTimeout(t))
   }, [phase])
 
   const answer = (i: number) => {
@@ -249,9 +297,15 @@ export default function RankedMode({
 
   // -------------------------------------------------------- entrée en scène
   if (phase === 'vs') {
+    const searching = step === 'searching'
+    // Le candidat affiché tant qu'on cherche : il défile, le vrai adversaire
+    // n'apparaît qu'au verrouillage.
+    const shown = searching ? RANKED_BOTS[spin % RANKED_BOTS.length] : bot
+
     return (
       <div className="relative mx-auto flex min-h-[68vh] max-w-xl flex-col items-center justify-center overflow-hidden rounded-3xl p-6 text-center text-white shadow-lg">
         <ArenaBackdrop />
+        {/* Les deux camps, séparés par la diagonale de lumière. */}
         <div
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-tr from-highlight/60 via-highlight/20 to-transparent"
@@ -259,7 +313,12 @@ export default function RankedMode({
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-bl from-primary/70 via-primary/25 to-transparent"
+          className={cn(
+            'absolute inset-0 transition-colors duration-500',
+            searching
+              ? 'bg-gradient-to-bl from-black/75 via-black/60 to-black/45'
+              : 'bg-gradient-to-bl from-primary/70 via-primary/25 to-transparent',
+          )}
           style={{ clipPath: 'polygon(58% 0, 100% 0, 100% 100%, 42% 100%)' }}
         />
         <div
@@ -267,11 +326,31 @@ export default function RankedMode({
           className="absolute inset-0 bg-white/60"
           style={{ clipPath: 'polygon(57.7% 0, 58.3% 0, 42.3% 100%, 41.7% 100%)' }}
         />
-        <div className="relative flex w-full flex-col items-center gap-7">
+        {/* Balayage radar sur le camp adverse, tant que la recherche court. */}
+        {searching ? (
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 overflow-hidden"
+            style={{ clipPath: 'polygon(58% 0, 100% 0, 100% 100%, 42% 100%)' }}
+          >
+            <div className="rk-scan absolute inset-x-0 h-24 bg-gradient-to-b from-transparent via-highlight/45 to-transparent" />
+          </div>
+        ) : null}
+        {/* Flash blanc au moment où l'adversaire se verrouille. */}
+        {step === 'locked' ? (
+          <div
+            aria-hidden="true"
+            className="rk-flash pointer-events-none absolute inset-0 bg-white"
+          />
+        ) : null}
+
+        <div className="relative flex w-full flex-col items-center gap-6">
           <p className="pop-in flex items-center gap-1.5 rounded-full bg-highlight px-3 py-1 text-[11px] font-extrabold tracking-widest text-foreground uppercase">
-            <Trophy className="size-3.5" aria-hidden="true" /> Match classé
+            <Trophy className="size-3.5" aria-hidden="true" /> Match classé · 3 manches
           </p>
+
           <div className="flex w-full items-stretch justify-evenly gap-2">
+            {/* Mon camp — présent d'emblée : c'est le repère. */}
             <div className="animate-in slide-in-from-left-8 fade-in flex flex-col items-center gap-2 duration-500">
               <Image
                 src={PLAYER_AVATAR}
@@ -288,48 +367,116 @@ export default function RankedMode({
                 <Trophy className="size-3" aria-hidden="true" /> {myTrophies}
               </span>
             </div>
-            <span
-              aria-hidden="true"
-              className="pop-spring self-center font-heading text-6xl font-extrabold text-highlight italic drop-shadow-[0_4px_0_rgba(0,0,0,0.45)]"
-              style={{ animationDelay: '350ms' }}
-            >
-              VS
-            </span>
-            <div className="animate-in slide-in-from-right-8 fade-in flex flex-col items-center gap-2 duration-500">
+
+            {/* Le VS : discret pendant la recherche, il encaisse l'impact au
+                verrouillage et lâche son onde de choc. */}
+            <span className="relative self-center">
+              {!searching ? (
+                <span
+                  aria-hidden="true"
+                  className="rk-shock absolute top-1/2 left-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full border-highlight"
+                />
+              ) : null}
               <span
                 aria-hidden="true"
-                className="flex size-24 items-center justify-center text-7xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]"
+                className={cn(
+                  'font-heading relative block text-6xl font-extrabold text-highlight italic drop-shadow-[0_4px_0_rgba(0,0,0,0.45)] transition-opacity duration-300',
+                  searching ? 'opacity-35' : 'rk-impact opacity-100',
+                )}
               >
-                {bot.emoji}
+                VS
+              </span>
+            </span>
+
+            {/* Le camp adverse : masqué et grisé pendant la recherche (les
+                candidats y défilent), il s'abat au verrouillage. */}
+            <div
+              key={searching ? 'search' : 'locked'}
+              className={cn(
+                'flex flex-col items-center gap-2',
+                searching ? '' : 'rk-slam',
+              )}
+            >
+              <span className="relative flex size-24 items-center justify-center">
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    'text-7xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] transition',
+                    searching && 'brightness-[0.35] grayscale',
+                  )}
+                >
+                  {shown.emoji}
+                </span>
+                {searching ? (
+                  <span
+                    aria-hidden="true"
+                    className="font-heading absolute inset-0 grid place-items-center text-5xl font-extrabold text-white/85 drop-shadow-[0_3px_6px_rgba(0,0,0,0.6)]"
+                  >
+                    ?
+                  </span>
+                ) : null}
               </span>
               <span className="font-heading text-lg font-extrabold italic uppercase">
-                {bot.name}
+                {searching ? '· · ·' : bot.name}
               </span>
               <span className="flex items-center gap-1 font-mono text-xs font-bold text-white/80 tabular-nums">
-                <Trophy className="size-3" aria-hidden="true" /> {oppTrophies}
+                <Trophy className="size-3" aria-hidden="true" />{' '}
+                {searching ? '???' : oppTrophies}
               </span>
             </div>
           </div>
-          <p role="status" className="text-sm font-semibold text-white/85">
-            Recherche d’un adversaire à ta taille…
-          </p>
+
+          {/* La ligne d'état + la jauge de recherche : on voit le temps passer,
+              on ne le subit pas. */}
+          <div className="flex w-full max-w-xs flex-col items-center gap-2">
+            <p role="status" className="text-sm font-semibold text-white/85">
+              {searching
+                ? 'Recherche d’un adversaire à ta taille…'
+                : `Adversaire trouvé — ${bot.name} !`}
+            </p>
+            <div
+              aria-hidden="true"
+              className="h-1.5 w-full overflow-hidden rounded-full bg-white/15"
+            >
+              <div
+                className={cn(
+                  'h-full rounded-full bg-highlight',
+                  searching ? 'rk-search' : 'w-full',
+                )}
+              />
+            </div>
+          </div>
         </div>
+
+        {/* Le compte à rebours, plein cadre par-dessus la scène. */}
+        {step === 'countdown' ? (
+          <span
+            key={countIndex}
+            aria-hidden="true"
+            className="rk-count font-heading pointer-events-none absolute inset-0 grid place-items-center text-[7rem] leading-none font-extrabold text-white italic drop-shadow-[0_6px_0_rgba(0,0,0,0.5)]"
+          >
+            {COUNTDOWN[countIndex]}
+          </span>
+        ) : null}
       </div>
     )
   }
 
+  // Le bandeau de face-à-face : verre fumé (la chrome de l'arène) plutôt qu'une
+  // carte blanche posée sur le violet. Les manches gagnées se lisent en gemmes
+  // pleines de chaque côté du score, comme les couronnes d'un duel.
   const scoreboard = (
-    <div className="flex w-full items-center justify-between gap-2 rounded-2xl border bg-card px-3 py-2 shadow-sm">
+    <div className="olympe-glass flex w-full items-center justify-between gap-2 rounded-2xl px-3 py-2">
       <span className="flex min-w-0 flex-1 items-center gap-1.5">
         <Image
           src={PLAYER_AVATAR}
           alt=""
           aria-hidden="true"
-          width={28}
-          height={28}
-          className="size-7 shrink-0 object-contain"
+          width={32}
+          height={32}
+          className="size-8 shrink-0 object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
         />
-        <span className="truncate text-sm font-semibold">Toi</span>
+        <span className="font-heading truncate text-sm font-extrabold">Toi</span>
       </span>
       <span className="flex shrink-0 items-center gap-2">
         <span
@@ -341,15 +488,17 @@ export default function RankedMode({
             <span
               key={i}
               className={cn(
-                'size-1.5 rounded-full',
-                i < score.me ? 'bg-highlight' : 'bg-muted',
+                'size-2.5 rounded-full ring-1 ring-black/30',
+                i < score.me
+                  ? 'bg-highlight shadow-[0_0_8px_color-mix(in_oklch,var(--highlight),transparent_30%)]'
+                  : 'bg-white/15',
               )}
             />
           ))}
         </span>
         <span
           key={`${score.me}-${score.them}`}
-          className="pop-spring -skew-x-6 rounded-lg bg-primary px-2.5 py-0.5 font-mono text-sm font-bold text-primary-foreground tabular-nums shadow-sm"
+          className="pop-spring font-heading -skew-x-6 rounded-lg border-2 border-[color:var(--foreground)] bg-highlight px-2.5 py-0.5 text-base font-extrabold text-[color:var(--foreground)] tabular-nums shadow-[0_3px_0_var(--foreground)]"
         >
           <span className="inline-block skew-x-6">
             {score.me} — {score.them}
@@ -364,18 +513,23 @@ export default function RankedMode({
             <span
               key={i}
               className={cn(
-                'size-1.5 rounded-full',
-                i < score.them ? 'bg-primary' : 'bg-muted',
+                'size-2.5 rounded-full ring-1 ring-black/30',
+                i < score.them ? 'bg-destructive' : 'bg-white/15',
               )}
             />
           ))}
         </span>
       </span>
       <span className="flex min-w-0 flex-1 items-center justify-end gap-1.5">
-        <span aria-hidden="true" className="text-xl leading-none">
+        <span
+          aria-hidden="true"
+          className="text-2xl leading-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+        >
           {bot.emoji}
         </span>
-        <span className="truncate text-sm font-semibold">{bot.name}</span>
+        <span className="font-heading truncate text-sm font-extrabold">
+          {bot.name}
+        </span>
       </span>
     </div>
   )
@@ -387,42 +541,61 @@ export default function RankedMode({
       <div className="mx-auto flex max-w-xl flex-col gap-3">
         <DefiTimer />
         {scoreboard}
-        <div className="flex items-center justify-between text-sm text-white/75">
-          <span className="font-semibold text-white">
+        {/* Manche + avancement en SEGMENTS : on voit d'un coup d'œil combien de
+            questions restent, là où une barre lisse ne disait qu'un pourcentage. */}
+        <div className="flex items-center gap-3">
+          <span className="font-heading shrink-0 text-sm font-extrabold text-white">
             Manche {rounds.length + 1}
           </span>
-          <span className="font-mono tabular-nums">
+          <span
+            className="flex min-w-0 flex-1 gap-1"
+            role="progressbar"
+            aria-label="Progression de la manche"
+            aria-valuemin={0}
+            aria-valuemax={ROUND_SIZE}
+            aria-valuenow={qInRound}
+            aria-valuetext={`Question ${qInRound + 1} sur ${ROUND_SIZE}`}
+          >
+            {Array.from({ length: ROUND_SIZE }, (_, i) => (
+              <span
+                key={i}
+                aria-hidden="true"
+                className={cn(
+                  'h-2 flex-1 rounded-full transition-colors',
+                  i < qInRound
+                    ? 'bg-highlight'
+                    : i === qInRound
+                      ? 'bg-highlight/45'
+                      : 'bg-white/15',
+                )}
+              />
+            ))}
+          </span>
+          <span className="font-mono shrink-0 text-xs font-bold text-white/70 tabular-nums">
             {qInRound + 1}/{ROUND_SIZE}
           </span>
         </div>
-        <div
-          className="h-2 w-full overflow-hidden rounded-full bg-white/20"
-          role="progressbar"
-          aria-label="Progression de la manche"
-          aria-valuemin={0}
-          aria-valuemax={ROUND_SIZE}
-          aria-valuenow={qInRound}
-          aria-valuetext={`Question ${qInRound + 1} sur ${ROUND_SIZE}`}
-        >
-          <div
-            className="h-full rounded-full bg-highlight transition-all"
-            style={{ width: `${(qInRound / ROUND_SIZE) * 100}%` }}
-          />
+
+        {/* La question sur une plaque de marbre : encre sur crème, comme un vrai
+            sujet posé sur la table de jeu. Le texte blanc à même le fond violet
+            se lisait mal et n'avait aucune présence. */}
+        <div className="olympe-marble rounded-3xl px-4 py-4">
+          {question.subject ? (
+            <p className="font-heading mb-1.5 text-[11px] font-extrabold tracking-widest text-[color:var(--foreground)]/55 uppercase">
+              {question.subject}
+            </p>
+          ) : null}
+          <h2 className="font-heading text-xl leading-snug font-extrabold text-balance text-[color:var(--foreground)]">
+            {question.prompt}
+          </h2>
         </div>
 
-        {question.subject ? (
-          <p className="text-xs font-semibold text-white/70 uppercase">
-            {question.subject}
-          </p>
-        ) : null}
-
-        <h2 className="font-heading mb-1 text-xl font-bold text-balance text-white">
-          {question.prompt}
-        </h2>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2.5">
           {question.options.map((option, i) => {
             const isCorrect = i === question.correctIndex
             const isSelected = i === selected
+            const revealGood = answered && isCorrect
+            const revealBad = answered && isSelected && !isCorrect
             return (
               <button
                 key={i}
@@ -430,24 +603,36 @@ export default function RankedMode({
                 disabled={answered}
                 onClick={() => answer(i)}
                 className={cn(
-                  'flex items-center justify-between gap-3 rounded-2xl border bg-card px-4 py-3 text-left text-sm font-medium text-card-foreground transition-all',
+                  // Plaque pressable façon arène : contour encre 3px, ombre dure
+                  // qui s'écrase au tap. La cible fait toute la largeur.
+                  'flex items-center gap-3 rounded-2xl border-[3px] border-[color:var(--foreground)] px-3 py-3 text-left text-[0.95rem] leading-snug font-bold text-[color:var(--foreground)] shadow-[0_4px_0_var(--foreground)] transition-all',
                   !answered &&
-                    'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
-                  answered &&
-                    isCorrect &&
-                    'border-green-600 bg-green-50 text-green-700',
-                  answered &&
-                    isSelected &&
-                    !isCorrect &&
-                    'border-destructive bg-red-50 text-destructive',
-                  answered && !isSelected && !isCorrect && 'opacity-50',
+                    'bg-[#faf6ef] active:translate-y-[4px] active:shadow-[0_0_0_var(--foreground)]',
+                  revealGood && 'bg-[#86efac]',
+                  revealBad && 'jeu-secousse bg-[#fca5a5]',
+                  answered && !isCorrect && !isSelected && 'bg-[#faf6ef] opacity-40',
                 )}
               >
-                {option}
-                {answered && isCorrect ? <Check className="size-4 shrink-0" /> : null}
-                {answered && isSelected && !isCorrect ? (
-                  <X className="size-4 shrink-0" />
+                {/* Lettre de la réponse : repère de lecture + point d'ancrage
+                    visuel de la plaque. */}
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    'font-heading grid size-7 shrink-0 place-items-center rounded-lg border-2 border-[color:var(--foreground)] text-xs font-extrabold',
+                    revealGood
+                      ? 'bg-white'
+                      : revealBad
+                        ? 'bg-white'
+                        : 'bg-highlight',
+                  )}
+                >
+                  {OPTION_LETTERS[i] ?? i + 1}
+                </span>
+                <span className="min-w-0 flex-1">{option}</span>
+                {revealGood ? (
+                  <Check className="size-5 shrink-0" strokeWidth={3} />
                 ) : null}
+                {revealBad ? <X className="size-5 shrink-0" strokeWidth={3} /> : null}
               </button>
             )
           })}

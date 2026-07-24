@@ -1,9 +1,10 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { createPortal } from 'react-dom'
 import { X, Flame, CalendarDays } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { useDialogFocus } from '@/lib/use-dialog'
 
 const WEEKS = 53
 const MONTHS_FR = [
@@ -71,6 +72,9 @@ export default function YearHistory({
   today: string
   onClose: () => void
 }) {
+  const panel = useRef<HTMLDivElement>(null)
+  useDialogFocus(panel)
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
@@ -92,8 +96,9 @@ export default function YearHistory({
       onClick={onClose}
     >
       <div
+        ref={panel}
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-md rounded-t-3xl bg-card p-5 shadow-xl ring-1 ring-black/5 sm:rounded-3xl"
+        className="w-full max-w-md rounded-t-3xl bg-card p-5 shadow-xl ring-1 ring-black/5 outline-none sm:rounded-3xl"
       >
         <div className="mb-4 flex items-center gap-3">
           <span className="flex size-10 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">

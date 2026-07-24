@@ -216,10 +216,6 @@ export default function BlitzMode({
             Pas encore de questions pour ta classe — reviens bientôt !
           </p>
         ) : null}
-
-        <Button variant="ghost" onClick={onExit}>
-          Retour aux modes
-        </Button>
       </div>
     )
   }
@@ -260,14 +256,9 @@ export default function BlitzMode({
               : ''}
         </p>
 
-        <div className="flex gap-2">
-          <Button size="lg" onClick={start}>
-            <RotateCcw className="size-4" /> Rejouer
-          </Button>
-          <Button variant="outline" size="lg" onClick={onExit}>
-            Retour aux modes
-          </Button>
-        </div>
+        <Button size="lg" onClick={start}>
+          <RotateCcw className="size-4" /> Rejouer
+        </Button>
       </div>
     )
   }

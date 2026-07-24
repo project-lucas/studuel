@@ -1,16 +1,16 @@
-import Link from 'next/link'
-import Image from 'next/image'
 import ModesSheet from '@/components/defi/ModesSheet'
-import TabHeader from '@/components/TabHeader'
+import MatchClasseCta from '@/components/defi/MatchClasseCta'
 import ArenaHud, { type OrbItem } from '@/components/defi/ArenaHud'
 import TrophyBlock from '@/components/defi/TrophyBlock'
 import WeeklyLeague from '@/components/defi/WeeklyLeague'
 import LeaguePromotionWatch from '@/components/defi/LeaguePromotionWatch'
 import RankingTabs from '@/components/defi/RankingTabs'
 import ClanBanner from '@/components/defi/ClanBanner'
+import ProfileChip from '@/components/defi/ProfileChip'
+import { getProfileData } from '@/app/defi/profile-actions'
 import DuelHistory from '@/components/defi/DuelHistory'
 import SchoolTournament from '@/components/defi/SchoolTournament'
-import { ChevronRightIcon, CrownIcon, SwordsIcon } from '@/components/defi/icons'
+import { CrownIcon } from '@/components/defi/icons'
 import {
   Crown,
   Hourglass,
@@ -22,7 +22,6 @@ import {
 import {
   MOCK_LEAGUE,
   MOCK_RANKINGS,
-  MOCK_SEASON,
   MOCK_TOURNAMENT,
   MOCK_TROPHIES,
 } from '@/lib/defi/mock-data'
@@ -267,6 +266,11 @@ export default async function DefiPage() {
     leaguePreview = meMock ? `${meMock.rank}e` : undefined
   }
 
+  // Profil de jeu (carte haut-gauche) : agrégation stats + badges + cosmétiques.
+  // Null pour un visiteur non connecté (pas de carte). Attribue au passage les
+  // badges mérités (recalcul serveur).
+  const profileData = user ? await getProfileData() : null
+
   // Colonne gauche : la compétition (ligue, classements, modes libres).
   const leftOrbs: OrbItem[] = [
     {
@@ -347,74 +351,39 @@ export default async function DefiPage() {
       {/* Vigie de promotion : fête la montée de ligue depuis la dernière visite. */}
       {leagueTier !== null ? <LeaguePromotionWatch tier={leagueTier} /> : null}
       <div className="mx-auto flex h-full w-full max-w-md flex-col gap-3">
-        {/* Bandeau d'onglet compact, en crème sur l'arène violette. */}
-        <TabHeader
-          tone="arena"
-          title="Défi"
-          subtitle="Duels et classements : gagne des trophées."
+        {/* La scène : arène plein cadre. En haut à droite la cartouche de rang
+            et le parchemin des entrées secondaires ; en bas à gauche la saison.
+            Aucun bandeau de titre : l'arène DIT déjà où l'on est, et le centre
+            haut reste au décor. */}
+        <ArenaHud
+          leftOrbs={leftOrbs}
+          rightOrbs={rightOrbs}
+          profileSlot={profileData ? <ProfileChip data={profileData} /> : null}
+          rankSlot={<TrophyBlock trophies={trophies} />}
+          seasonSlot={
+            // PRÉ-SAISON assumée : il n'existe pas encore de saison datée (aucun
+            // cron de saison), mais le classement est bien LIVE — les trophées
+            // gagnés en match classé comptent déjà et sont conservés. On ne
+            // prétend donc ni une « Saison 1 » nommée ni un faux compte à
+            // rebours : on dit simplement « pré-saison » (la saison datée, avec
+            // récompenses, arrivera plus tard).
+            <p
+              className="olympe-glass flex max-w-full items-center gap-1.5 rounded-full px-3 py-1 text-[0.68rem] font-bold"
+              aria-label="Pré-saison : le classement est déjà actif, tes trophées comptent et sont conservés. La saison datée, avec récompenses, arrivera plus tard."
+            >
+              <CrownIcon className="size-3.5 shrink-0 text-[#fcd34d]" />
+              <span className="truncate">Classement · pré-saison</span>
+            </p>
+          }
         />
-        {/* Pilule de saison, discrète en haut de l'arène. Encore mockée
-            (aucun cron de saison) → badge « Aperçu », sans faux compte à
-            rebours qui prétendrait être vrai. */}
-        <div className="flex justify-center">
-          <p className="olympe-glass flex max-w-full items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold">
-            <CrownIcon className="size-4 shrink-0 text-[#fcd34d]" />
-            <span className="truncate">{MOCK_SEASON.name}</span>
-            <span className="olympe-tag shrink-0 rounded-full px-2 py-0.5 text-[10px] font-extrabold">
-              Aperçu
-            </span>
-          </p>
-        </div>
-
-        {/* La scène : arène plein cadre, entrées secondaires derrière le burger. */}
-        <ArenaHud leftOrbs={leftOrbs} rightOrbs={rightOrbs} />
-
-        {/* Le bas d'écran, de haut en bas : bloc trophées, CTA « Match classé »,
-            duel en direct (QR), puis la feuille des modes. */}
-        {/* Bloc trophées : descendu du centre de l'arène, juste au-dessus du CTA. */}
-        <TrophyBlock trophies={trophies} />
 
         {/* CTA principal : plaque « or ciselé » pleine largeur, l'élément le
-            plus proéminent de la pile. Texte encre ; l'ombre dure s'écrase au
-            clic (olympe-press). */}
-        <Link
-          href="/defi/jouer?mode=ranked"
-          className="olympe-gold olympe-press attract-sheen relative isolate flex min-h-24 w-full items-center gap-3 overflow-hidden rounded-2xl px-5 focus-visible:ring-4 focus-visible:ring-highlight/50 focus-visible:outline-none"
-          aria-label="Lancer un match classé"
-        >
-          {/* Scène plein-fond immersive, même grammaire que « Modes de jeu » :
-              l'illustration couvre TOUTE la hauteur, ancrée à droite, et FOND
-              vers la robe or sur la gauche — pas de vignette posée sur le
-              jaune. Deux couches : un masque horizontal efface l'image (et son
-              fond incrusté) vers la gauche pour laisser voir la vraie robe
-              olympe-gold (dégradé vertical sculpté intact), et un voile ambre
-              opaque→transparent assoit le texte encre dans la transition.
-              Cadrage 94,5 % (au lieu de 100 %) : aligne verticalement le
-              trophée sur la mascotte de « Modes de jeu » juste dessous. */}
-          <span
-            aria-hidden="true"
-            className="absolute inset-0 -z-10 [mask-image:linear-gradient(to_right,transparent_8%,black_48%)]"
-          >
-            <Image
-              src="/images/defi/classe-scene-v4b.webp"
-              alt=""
-              fill
-              sizes="(max-width: 480px) 94vw, 424px"
-              className="object-cover [object-position:94.5%_center]"
-            />
-            <span className="absolute inset-0 bg-gradient-to-r from-[#f9b233] via-[#f9b233]/35 to-transparent" />
-          </span>
-          <SwordsIcon className="size-8 shrink-0" />
-          <span className="flex flex-col items-start leading-tight">
-            <span className="font-heading text-lg font-extrabold">
-              MATCH CLASSÉ
-            </span>
-            <span className="text-[0.8rem] font-bold opacity-80">
-              BO3 · +30 victoire / −20 défaite
-            </span>
-          </span>
-          <ChevronRightIcon className="ml-auto size-6 shrink-0" />
-        </Link>
+            plus proéminent de la pile. Sobre façon bouton « Battle » de Clash
+            Royale — la matière (or ciselé, ombre dure, reflet qui balaye) porte
+            tout le poids, sans illustration qui vole la lecture au libellé.
+            L'ombre dure s'écrase au clic (olympe-press). Isolé en composant
+            client (MatchClasseCta) pour porter LE son épique de l'app au clic. */}
+        <MatchClasseCta />
 
         {/* Tous les modes de jeu, en feuille qui monte du bas (billets +
             filtres). « Duel en direct » (QR) y vit désormais en icône flottante,

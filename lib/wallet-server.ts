@@ -1,5 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
-import { quizXpSource, type XpSource } from '@/lib/wallet'
+import { quizXpSource, walletLevelInfo, type XpSource } from '@/lib/wallet'
+import { levelFor, type LevelInfo } from '@/lib/xp'
 
 // Accès serveur au portefeuille de progression (migration 192).
 //
@@ -41,6 +42,30 @@ export async function fetchWallet(
     .maybeSingle<WalletRow>()
   if (error) return null
   return data
+}
+
+/**
+ * Le niveau/XP à AFFICHER pour l'élève, source unique de vérité.
+ *
+ * Dès que le portefeuille existe (migration 192), c'est LUI qui fait foi —
+ * exactement comme le bandeau du haut (TopHudLoader). Sinon on retombe sur le
+ * niveau dérivé de l'activité récente (`fallbackXp`, via lib/xp.levelFor),
+ * strictement comme l'ancien calcul, pour que le repli reste identique partout.
+ *
+ * Centralisé ici pour que TOUS les écrans (bandeau, arène Défi, Réviser)
+ * affichent le MÊME niveau : fini le « Niveau 4 » en haut vs « Niv. 1 » sur
+ * l'écran de duel, qui venaient de deux calculs concurrents.
+ */
+export async function fetchDisplayLevel(
+  supabase: SupabaseClient,
+  userId: string,
+  fallbackXp: number,
+): Promise<LevelInfo> {
+  const wallet = await fetchWallet(supabase, userId)
+  if (wallet && wallet.xp != null) {
+    return walletLevelInfo(Math.max(0, Number(wallet.xp) || 0))
+  }
+  return levelFor(fallbackXp)
 }
 
 /** Verse l'XP d'une activité. Renvoie l'état après coup, null sur échec. */

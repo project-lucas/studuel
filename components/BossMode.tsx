@@ -351,9 +351,11 @@ export default function BossMode({
         </section>
         ) : null}
 
-        <Button variant="ghost" onClick={onExit}>
-          {variant === 'arena' ? 'Retour à l’Arène' : 'Retour'}
-        </Button>
+        {variant === 'arena' ? null : (
+          <Button variant="ghost" onClick={onExit}>
+            Retour
+          </Button>
+        )}
       </div>
     )
   }
@@ -440,9 +442,11 @@ export default function BossMode({
             <RotateCcw className="size-4" />{' '}
             {outcome === 'won' ? 'Rejouer' : 'Revanche'}
           </Button>
-          <Button variant="outline" size="lg" onClick={onExit}>
-            {variant === 'arena' ? 'Retour à l’Arène' : 'Retour'}
-          </Button>
+          {variant === 'arena' ? null : (
+            <Button variant="outline" size="lg" onClick={onExit}>
+              Retour
+            </Button>
+          )}
         </div>
       </div>
     )

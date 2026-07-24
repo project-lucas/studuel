@@ -106,7 +106,9 @@ export default function SwipeTabs({ children }: { children: React.ReactNode }) {
       const target = neighborTabPath(pathRef.current, direction)
       if (!target) return
 
-      sfx.tap()
+      // Souffle directionnel : vers l'onglet suivant (le doigt part à gauche) le
+      // son monte, vers le précédent il descend — l'oreille suit le glissement.
+      sfx.swipe(direction === 'left' ? 'up' : 'down')
       router.push(target)
     }
 

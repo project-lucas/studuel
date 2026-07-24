@@ -11,9 +11,9 @@ export type TourStep = {
   text: string
 }
 
-// Les 8 étapes validées : une par onglet + les 3 fonctionnalités phares
-// (file SRS, Mon carnet, Match classé — porté par l'étape Défi). Toutes les
-// cibles vivent sur /reviser (bottom nav incluse) : pas de navigation à gérer.
+// Les étapes validées : une par onglet + Mon carnet. Toutes les cibles vivent
+// sur /reviser (bottom nav incluse) : pas de navigation à gérer. Une étape dont
+// la cible est absente au moment du tour est sautée (cf. nextAvailableStep).
 export const TOUR_STEPS: TourStep[] = [
   {
     id: 'bienvenue',
@@ -26,12 +26,6 @@ export const TOUR_STEPS: TourStep[] = [
     target: 'tab-reviser',
     title: 'Réviser',
     text: 'Ton programme, tes cours et ta file du jour — c’est ici que tout commence.',
-  },
-  {
-    id: 'file-du-jour',
-    target: 'file-du-jour',
-    title: 'À revoir aujourd’hui',
-    text: 'Chaque jour, l’app te ressert pile ce que tu risques d’oublier. 5 minutes suffisent.',
   },
   {
     id: 'carnet',

@@ -1,0 +1,89 @@
+# Rappels planifiés de Studuel — ex-crons Vercel.
+#
+# POURQUOI ICI PLUTÔT QUE DANS vercel.json
+# Les rappels sont programmés sur DEUX heures UTC (6 ET 7, 17 ET 18) parce que
+# Vercel ne connaît pas les fuseaux : 8h de Paris valent 7h UTC en hiver et
+# 6h UTC en été. C'est la route qui tranche laquelle des deux est la bonne
+# (`isReminderDue` dans lib/notifications), et l'autre ressort immédiatement.
+# Or le plan Hobby de Vercel n'autorise qu'UN déclenchement par jour et par
+# cron : ce double créneau y faisait échouer tout déploiement. GitHub Actions
+# n'a pas cette limite et exécute exactement les mêmes horaires, gratuitement.
+#
+# CE QU'IL FAUT AVOIR CONFIGURÉ (Settings → Secrets and variables → Actions)
+#   · Secret   CRON_SECRET  — la MÊME valeur que la variable d'environnement
+#                             CRON_SECRET du projet Vercel. Sans elle les
+#                             routes répondent 401 et rien n'est envoyé.
+#   · Variable APP_URL       — facultative. À défaut, l'URL de prod ci-dessous.
+#
+# À SAVOIR : GitHub désactive les workflows planifiés d'un dépôt resté 60 jours
+# sans activité (il envoie un mail avant). Et l'heure de déclenchement peut
+# glisser de quelques minutes quand la file est chargée — sans conséquence pour
+# un rappel du matin.
+
+name: Rappels planifiés
+
+on:
+  schedule:
+    # Rappel SRS — 8h de Paris (7h UTC en hiver, 6h UTC en été).
+    - cron: '0 6,7 * * *'
+    # Rappel de série — 19h de Paris (18h UTC en hiver, 17h UTC en été).
+    - cron: '0 17,18 * * *'
+    # Clôture de la ligue hebdomadaire — lundi, juste après minuit UTC.
+    - cron: '10 0 * * 1'
+  # Permet de déclencher un rappel à la main depuis l'onglet Actions, pour
+  # vérifier le montage sans attendre le lendemain matin.
+  workflow_dispatch:
+    inputs:
+      cible:
+        description: 'Route à appeler'
+        required: true
+        default: 'srs'
+        type: choice
+        options: [srs, streak, league]
+
+jobs:
+  rappel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Appeler la route planifiée
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          APP_URL: ${{ vars.APP_URL || 'https://studuel.vercel.app' }}
+          SCHEDULE: ${{ github.event.schedule }}
+          CIBLE: ${{ inputs.cible }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${CRON_SECRET:-}" ]; then
+            echo "::error::Le secret CRON_SECRET n'est pas configuré sur le dépôt."
+            echo "Settings → Secrets and variables → Actions → New repository secret,"
+            echo "avec la même valeur que la variable CRON_SECRET du projet Vercel."
+            exit 1
+          fi
+
+          # Quel rappel ? Déclenchement planifié → d'après l'horaire ;
+          # déclenchement manuel → d'après le choix de l'utilisateur.
+          case "${SCHEDULE:-}" in
+            '0 6,7 * * *')   chemin='/api/push/send?type=srs' ;;
+            '0 17,18 * * *') chemin='/api/push/send?type=streak' ;;
+            '10 0 * * 1')    chemin='/api/cron/league-reset' ;;
+            *)
+              case "${CIBLE:-srs}" in
+                srs)    chemin='/api/push/send?type=srs' ;;
+                streak) chemin='/api/push/send?type=streak' ;;
+                league) chemin='/api/cron/league-reset' ;;
+                *) echo "::error::Cible inconnue : ${CIBLE:-}" ; exit 1 ;;
+              esac
+              ;;
+          esac
+
+          echo "Appel de ${APP_URL}${chemin}"
+          # --fail-with-body : un 4xx/5xx fait échouer l'étape ET montre la
+          # réponse, pour que l'onglet Actions dise POURQUOI ça a raté.
+          # Pas de -s : on veut voir passer le transfert dans le journal.
+          curl --fail-with-body --show-error --silent \
+               --retry 3 --retry-delay 10 --retry-all-errors \
+               --max-time 300 \
+               -H "Authorization: Bearer ${CRON_SECRET}" \
+               "${APP_URL}${chemin}"
+          echo

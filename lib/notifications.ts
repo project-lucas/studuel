@@ -77,7 +77,7 @@ export const REMINDER_PARIS_HOUR: Record<ScheduledReminder, number> = {
  * Le rappel doit-il partir maintenant ?
  *
  * Les crons Vercel tournent en **UTC** et n'acceptent pas de fuseau : une heure
- * fixe dans `vercel.json` dérive donc d'une heure à chaque changement d'horaire
+ * fixe (côté planificateur) dérive donc d'une heure à chaque changement d'horaire
  * (le rappel du matin arrivait à 8h en hiver et 9h en été, contre la règle
  * « heures élève en Europe/Paris »). Le cron est donc programmé sur les DEUX
  * heures UTC candidates, et cette fonction ne laisse passer que celle qui tombe

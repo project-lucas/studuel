@@ -8,17 +8,20 @@ import {
   type PushMessage,
 } from '@/lib/notifications'
 
-// Endpoint déclenché par le cron Vercel (cf. vercel.json) pour envoyer les
-// rappels push. Deux passes selon ?type= :
+// Endpoint déclenché par la planification GitHub Actions
+// (.github/workflows/rappels.yml) pour envoyer les rappels push. Deux passes
+// selon ?type= :
 //   - srs    : « X cartes à revoir » (le matin, 8h de Paris)
 //   - streak : « ta série est en jeu » (le soir, 19h de Paris)
-// Sécurisé par l'en-tête Authorization: Bearer $CRON_SECRET (posé par Vercel).
+// Sécurisé par l'en-tête Authorization: Bearer $CRON_SECRET (posé par le
+// workflow depuis le secret du dépôt, valeur identique à celle de Vercel).
 // Utilise la clé service_role (RLS contournée) pour lire tous les abonnés.
 //
-// ⚠️ Le cron est programmé sur DEUX heures UTC par rappel (`vercel.json`), parce
-// que Vercel ne connaît pas de fuseau : c'est `isReminderDue` qui tranche
-// laquelle des deux correspond à l'heure de Paris visée. L'autre sort tout de
-// suite, avant la moindre requête.
+// ⚠️ Le rappel est programmé sur DEUX heures UTC, parce qu'un planificateur ne
+// connaît pas de fuseau : c'est `isReminderDue` qui tranche laquelle des deux
+// correspond à l'heure de Paris visée. L'autre sort tout de suite, avant la
+// moindre requête. C'est ce double créneau qui a fait quitter les crons Vercel :
+// le plan Hobby n'autorise qu'un déclenchement par jour et par cron.
 
 export const dynamic = 'force-dynamic'
 

@@ -1,7 +1,8 @@
 import { timingSafeEqual } from 'node:crypto'
 import { createClient } from '@supabase/supabase-js'
 
-// Endpoint déclenché par le cron Vercel (cf. vercel.json), chaque lundi : clôt la
+// Endpoint déclenché chaque lundi par la planification GitHub Actions
+// (.github/workflows/rappels.yml) : clôt la
 // semaine de ligue écoulée en appelant process_league_rollover() — les 5 premiers
 // de chaque palier montent, les 5 derniers descendent. Idempotent côté base
 // (journal league_rollovers). Sécurisé par Authorization: Bearer $CRON_SECRET et

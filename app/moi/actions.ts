@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { toDayKey } from '@/lib/streak'
 import { LEVERS } from '@/lib/capacite-drivers'
 import { trimestreOf } from '@/lib/notes'
@@ -10,9 +11,7 @@ import { normalizeNextExam } from '@/lib/next-exam'
 
 async function requireUser() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   return { supabase, userId: user?.id ?? null }
 }
 

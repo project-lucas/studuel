@@ -7,8 +7,53 @@ import {
   isInCommuteSlot,
   longestRun,
   autoHabitLogs,
+  mergeHabitLogs,
 } from '@/lib/habits'
-import type { Habit } from '@/lib/types'
+import type { Habit, HabitLog } from '@/lib/types'
+
+describe('mergeHabitLogs', () => {
+  const stored: HabitLog[] = [
+    { id: 'l1', habit_id: 'h1', date: '2026-07-26', completed: true, auto_validated: false },
+    { id: 'l2', habit_id: 'h1', date: '2026-07-27', completed: false, auto_validated: false },
+  ]
+
+  it('rend les logs tels quels quand rien n\'est validé automatiquement', () => {
+    expect(mergeHabitLogs(stored, [])).toBe(stored)
+  })
+
+  it('écrase la ligne du même (habitude, jour) — comme l\'upsert en base', () => {
+    const merged = mergeHabitLogs(stored, [
+      { habit_id: 'h1', user_id: 'u1', date: '2026-07-27', completed: true, auto_validated: true },
+    ])
+    expect(merged).toHaveLength(2)
+    const jour = merged.find((l) => l.date === '2026-07-27')
+    expect(jour).toMatchObject({ id: 'l2', completed: true, auto_validated: true })
+    // La veille n'est pas touchée.
+    expect(merged.find((l) => l.date === '2026-07-26')).toEqual(stored[0])
+  })
+
+  it('ajoute une ligne quand la validation du jour n\'existait pas encore', () => {
+    const merged = mergeHabitLogs(stored, [
+      { habit_id: 'h2', user_id: 'u1', date: '2026-07-27', completed: true, auto_validated: true },
+    ])
+    expect(merged).toHaveLength(3)
+    expect(merged[2]).toMatchObject({
+      habit_id: 'h2',
+      date: '2026-07-27',
+      completed: true,
+      auto_validated: true,
+    })
+    expect(merged[2].id).toBeTruthy()
+  })
+
+  it('ne mute pas le tableau reçu', () => {
+    const copie = [...stored]
+    mergeHabitLogs(stored, [
+      { habit_id: 'h1', user_id: 'u1', date: '2026-07-27', completed: true, auto_validated: true },
+    ])
+    expect(stored).toEqual(copie)
+  })
+})
 
 // Fixture minimale : seuls target et habit_catalog.default_target comptent
 // pour les helpers purs testés ici.

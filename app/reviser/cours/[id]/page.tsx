@@ -1,6 +1,7 @@
 import { notFound, redirect } from 'next/navigation'
 import CourseScreen from '@/components/carnet/CourseScreen'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import {
   computeCourseStats,
   isQuestionReady,
@@ -24,9 +25,7 @@ export default async function CoursePage({
 }) {
   const { id } = await params
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/login')
 
   const { data: course } = await supabase

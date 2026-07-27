@@ -10,6 +10,7 @@ import {
   canAdvance,
   defaultSelectedForGrade,
   makePlacement,
+  nextStep,
   parseAnswers,
   serializeAnswers,
   stepProgress,
@@ -146,28 +147,11 @@ export default function WelcomeFlow({
     setStep(prev)
   }
 
-  // Enchaînement naturel des écrans à bouton « Continuer ».
+  // Enchaînement des écrans : l'ORDRE vit dans lib/welcome (pur et testé), pas
+  // ici. C'est lui qui porte la décision « jouer d'abord, questionner ensuite ».
   function next() {
-    switch (step) {
-      case 'profil':
-        return go(answers.profileType === 'parent' ? 'signup' : 'motivation')
-      case 'motivation':
-        return go('source')
-      case 'source':
-        return go('goal')
-      case 'goal':
-        return go('grade')
-      case 'grade':
-        return go('school')
-      case 'school':
-        return go('subjects')
-      case 'subjects':
-        return go('dailyGoal')
-      case 'dailyGoal':
-        return go('placementIntro')
-      default:
-        return
-    }
+    const to = nextStep(step, answers)
+    if (to !== null) go(to)
   }
 
   async function startPlacement() {
@@ -239,7 +223,7 @@ export default function WelcomeFlow({
             onBack={back}
             onDone={(correct, total) => {
               setAnswers((a) => ({ ...a, placement: makePlacement(correct, total) }))
-              go('friends')
+              go(nextStep('placementQuiz', answers) ?? 'signup')
             }}
           />
         </div>
@@ -268,7 +252,7 @@ export default function WelcomeFlow({
   function renderStep() {
     switch (step) {
       case 'intro':
-        return <IntroStep onStart={() => go('profil')} />
+        return <IntroStep onStart={next} />
       case 'profil':
         return (
           <ProfilStep
@@ -345,7 +329,9 @@ export default function WelcomeFlow({
             onStart={() => void startPlacement()}
             onSkip={() => {
               setAnswers((a) => ({ ...a, placement: makePlacement(0, 0) }))
-              go('friends')
+              // Passer le quiz saute AUSSI l'écran de quiz : on rejoint la
+              // suite du chemin (le compte), sans écran orphelin.
+              go(nextStep('placementQuiz', answers) ?? 'signup')
             }}
           />
         )
@@ -364,7 +350,7 @@ export default function WelcomeFlow({
           <NotificationsStep
             onDecided={(enabled) => {
               setAnswers((a) => ({ ...a, notificationsEnabled: enabled }))
-              go('signup')
+              go(nextStep('notifications', answers) ?? 'plan')
             }}
           />
         )
@@ -377,12 +363,13 @@ export default function WelcomeFlow({
                 ? 'La connexion avec ce service n’a pas pu démarrer. Réessaie, ou crée ton compte avec un e-mail.'
                 : null
             }
-            onSignedUp={() =>
-              // Le parcours parent n'a pas de plan élève : direct l'espace parents.
-              answers.profileType === 'parent'
-                ? router.push('/parents')
-                : go('plan')
-            }
+            onSignedUp={() => {
+              // Le parcours parent n'a pas de suite élève : direct l'espace
+              // parents (nextStep renvoie null pour lui).
+              const to = nextStep('signup', answers)
+              if (to === null) router.push('/parents')
+              else go(to)
+            }}
           />
         )
       case 'plan':

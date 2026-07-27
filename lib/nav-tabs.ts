@@ -1,20 +1,35 @@
 // Onglets principaux — source unique pour la barre du bas (Navigation) et le
 // balayage horizontal (SwipeTabs). L'ordre du tableau = l'ordre à l'écran,
 // donc l'ordre du geste : balayer vers la gauche va vers l'onglet suivant.
+/**
+ * Clé d'icône (trait minimaliste). Volontairement du TEXTE et non un composant
+ * React : `lib/` reste pur et testable, la correspondance clé → dessin vit dans
+ * `components/Navigation.tsx`.
+ */
+export type NavIconName = 'gift' | 'users' | 'house' | 'swords' | 'user' | 'gem'
+
+/**
+ * Rôle de l'onglet dans la direction artistique : `action` = violet (le geste),
+ * `recompense` = jaune solaire (ce qu'on gagne). Le rôle ne pilote QUE la teinte
+ * du remplissage de l'icône active — jamais, à lui seul, l'état actif.
+ */
+export type NavTabRole = 'action' | 'recompense'
+
 export type NavTab = {
   name: string
   path: string
-  img: string
+  icon: NavIconName
+  role: NavTabRole
   center?: boolean
 }
 
 export const NAV_TABS: NavTab[] = [
-  { name: 'Coffre', path: '/coffre', img: '/images/nav/coffre.webp' },
-  { name: 'Amis', path: '/amis', img: '/images/nav/ami.webp' },
-  { name: 'Réviser', path: '/reviser', img: '/images/nav/reviser.webp' },
-  { name: 'Défi', path: '/defi', img: '/images/nav/defi2.webp', center: true },
-  { name: 'Moi', path: '/moi', img: '/images/nav/moi.webp' },
-  { name: 'Trésor', path: '/tresor', img: '/images/nav/tresor-3.webp' },
+  { name: 'Coffre', path: '/coffre', icon: 'gift', role: 'recompense' },
+  { name: 'Amis', path: '/amis', icon: 'users', role: 'action' },
+  { name: 'Réviser', path: '/reviser', icon: 'house', role: 'action' },
+  { name: 'Défi', path: '/defi', icon: 'swords', role: 'action', center: true },
+  { name: 'Moi', path: '/moi', icon: 'user', role: 'action' },
+  { name: 'Trésor', path: '/tresor', icon: 'gem', role: 'recompense' },
 ]
 
 /** Index de l'onglet courant, -1 si on n'est pas sur un onglet principal. */

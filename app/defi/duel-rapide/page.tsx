@@ -10,6 +10,7 @@ import {
 import { Button } from '@/components/ui/button'
 import QuickMatch from '@/components/defi/QuickMatch'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { toModeQuestions, type QuickQuestionRow } from '@/lib/defi/quick-pool'
 import { ROUND_SIZE, ROUNDS_TO_WIN, type ModeQuestion } from '@/lib/defi-modes'
 
@@ -50,9 +51,7 @@ export default async function DuelRapidePage({
   const joinId = rejoindre && UUID_RE.test(rejoindre) ? rejoindre : null
 
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   if (!user) {
     return (

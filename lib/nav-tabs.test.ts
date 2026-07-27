@@ -19,6 +19,24 @@ describe('tabIndexForPath', () => {
   })
 })
 
+describe('NAV_TABS', () => {
+  it('donne une icône et un rôle à chaque onglet', () => {
+    for (const tab of NAV_TABS) {
+      expect(tab.icon, tab.name).toBeTruthy()
+      expect(['action', 'recompense'], tab.name).toContain(tab.role)
+    }
+  })
+
+  it('n’a qu’un seul onglet central', () => {
+    expect(NAV_TABS.filter((tab) => tab.center)).toHaveLength(1)
+  })
+
+  it('ne réutilise jamais deux fois la même icône', () => {
+    const icons = NAV_TABS.map((tab) => tab.icon)
+    expect(new Set(icons).size).toBe(icons.length)
+  })
+})
+
 describe('neighborTabPath', () => {
   it('balayer vers la gauche avance vers l’onglet de droite', () => {
     expect(neighborTabPath('/defi', 'left')).toBe('/moi')

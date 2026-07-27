@@ -2,15 +2,14 @@ import { redirect } from 'next/navigation'
 import PageHeader from '@/components/PageHeader'
 import OnboardingFlow from '@/components/OnboardingFlow'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 export const metadata = { title: 'Bienvenue — Studuel' }
 export const dynamic = 'force-dynamic'
 
 export default async function OnboardingPage() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/login')
 
   const [{ data: profile }, { data: subjects }] = await Promise.all([

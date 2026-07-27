@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import PageHeader from '@/components/PageHeader'
 import LoginForm from '@/components/LoginForm'
-import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 export const metadata = { title: 'Connexion — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -11,10 +11,7 @@ export default async function LoginPage({
 }: {
   searchParams: Promise<{ error?: string }>
 }) {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   // Déjà connecté → direction le compte.
   if (user) redirect('/compte')

@@ -1,16 +1,13 @@
 import { redirect } from 'next/navigation'
 import PageHeader from '@/components/PageHeader'
 import ResetRequestForm from '@/components/ResetRequestForm'
-import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 export const metadata = { title: 'Mot de passe oublié — Studuel' }
 export const dynamic = 'force-dynamic'
 
 export default async function ResetRequestPage() {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   // Déjà connecté → rien à réinitialiser ici.
   if (user) redirect('/compte')

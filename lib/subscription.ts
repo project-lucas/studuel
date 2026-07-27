@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 // Niveaux d'abonnement du PRD + 'anonymous' pour les visiteurs non connectés.
 export type Tier = 'anonymous' | 'free' | 'tier1' | 'tier2' | 'tier3'
@@ -14,9 +15,7 @@ import { PREMIUM_TIERS } from '@/lib/gems'
 export async function getUserTier(): Promise<Tier> {
   try {
     const supabase = await createClient()
-    const {
-      data: { user },
-    } = await supabase.auth.getUser()
+    const user = await getCurrentUser()
     if (!user) return 'anonymous'
 
     return await getUserTierFor(supabase, user.id)

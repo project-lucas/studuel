@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation'
-import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 export const dynamic = 'force-dynamic'
 
@@ -9,10 +9,7 @@ export const dynamic = 'force-dynamic'
 // Sinon → l'accueil « façon Duolingo » qui fait vivre le parcours avant de
 // demander un compte.
 export default async function Home() {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   // Le cas du compte PARENT (qui n'a pas de classe et n'a rien à faire sur
   // Réviser) est traité dans `/reviser`, où le profil est déjà chargé : le

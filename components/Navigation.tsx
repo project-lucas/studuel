@@ -1,19 +1,38 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { CircleUser } from 'lucide-react'
+import { CircleUser, Gem, Gift, House, Swords, User, Users } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
-import { NAV_TABS } from '@/lib/nav-tabs'
+import { NAV_TABS, type NavIconName } from '@/lib/nav-tabs'
 
 // Ordre des onglets = ordre de la barre mobile (Défi au centre) et ordre du
-// balayage horizontal : les deux lisent NAV_TABS. Icônes dessinées
-// (jaune/violet, liseré encre) : l'onglet inactif est grisé, l'actif reprend
-// ses couleurs. Sur mobile, pas de libellé sous l'icône : toute la place aux
-// dessins (le nom reste porté par aria-label).
+// balayage horizontal : les deux lisent NAV_TABS.
 const links = NAV_TABS
+
+// Correspondance clé (lib, pure) → dessin (composant). Icônes de TRAIT : un seul
+// poids de ligne, aucun détail décoratif, elles restent lisibles à 20 px.
+const ICONS: Record<NavIconName, LucideIcon> = {
+  gift: Gift,
+  users: Users,
+  house: House,
+  swords: Swords,
+  user: User,
+  gem: Gem,
+}
+
+/**
+ * Deux tons hérités de la DA, appliqués à l'icône ACTIVE : le trait prend le
+ * violet d'action, le remplissage prend la couleur du rôle de l'onglet — jaune
+ * solaire pour ce qu'on gagne (Coffre, Trésor), violet pâle pour le reste.
+ * L'onglet inactif est un simple trait gris, sans remplissage.
+ */
+const ACTIVE_FILL: Record<string, string> = {
+  action: 'fill-primary/15',
+  recompense: 'fill-highlight/45',
+}
 
 export default function Navigation({ userLabel }: { userLabel: string | null }) {
   const pathname = usePathname()
@@ -50,8 +69,9 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
               style={{ left: `${((activeIndex + 0.5) / links.length) * 100}%` }}
             />
           )}
-          {links.map(({ name, path, img, center }) => {
+          {links.map(({ name, path, icon, role, center }) => {
             const active = isActive(path)
+            const Icon = ICONS[icon]
 
             return (
               <li key={path} className="relative z-10 flex-1">
@@ -70,17 +90,19 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                       center ? 'tab-center h-12' : 'h-10',
                     )}
                   >
-                    <Image
-                      src={img}
-                      alt=""
-                      width={center ? 56 : 40}
-                      height={center ? 56 : 40}
+                    <Icon
+                      aria-hidden="true"
+                      strokeWidth={active ? 2.25 : 1.75}
                       className={cn(
                         'transition-all',
-                        center ? 'size-12' : 'size-9',
+                        center ? 'size-8' : 'size-6',
                         active
-                          ? cn('scale-110', center && 'tab-center-active')
-                          : 'opacity-60 grayscale',
+                          ? cn(
+                              'scale-110 text-primary',
+                              ACTIVE_FILL[role],
+                              center && 'tab-center-active',
+                            )
+                          : 'fill-transparent text-muted-foreground/70',
                       )}
                     />
                   </span>
@@ -110,35 +132,42 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
         </Link>
 
         <ul className="flex flex-col gap-1">
-          {links.map(({ name, path, img, center }) => (
-            <li key={path}>
-              <Link
-                href={path}
-                onClick={() => sfx.tap()}
-                aria-current={isActive(path) ? 'page' : undefined}
-                data-tour={`tab-${path.slice(1)}`}
-                className={cn(
-                  'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
-                  isActive(path)
-                    ? 'bg-primary text-primary-foreground shadow-sm'
-                    : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
-                  center && !isActive(path) && 'font-bold text-primary',
-                )}
-              >
-                <Image
-                  src={img}
-                  alt=""
-                  width={20}
-                  height={20}
+          {links.map(({ name, path, icon, center }) => {
+            const active = isActive(path)
+            const Icon = ICONS[icon]
+
+            return (
+              <li key={path}>
+                <Link
+                  href={path}
+                  onClick={() => sfx.tap()}
+                  aria-current={active ? 'page' : undefined}
+                  data-tour={`tab-${path.slice(1)}`}
                   className={cn(
-                    'size-5 shrink-0 transition-all',
-                    !isActive(path) && 'opacity-70 grayscale-50',
+                    'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+                    active
+                      ? 'bg-primary text-primary-foreground shadow-sm'
+                      : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
+                    center && !active && 'font-bold text-primary',
                   )}
-                />
-                {name}
-              </Link>
-            </li>
-          ))}
+                >
+                  {/* Sur la pastille violette pleine, l'icône passe en trait
+                      blanc (currentColor) et son remplissage devient un simple
+                      voile clair : le jaune de récompense y serait illisible.
+                      `role` ne sert donc qu'à la barre mobile, sur crème. */}
+                  <Icon
+                    aria-hidden="true"
+                    strokeWidth={active ? 2.25 : 1.75}
+                    className={cn(
+                      'size-5 shrink-0 transition-all',
+                      active ? 'fill-primary-foreground/20' : 'fill-transparent',
+                    )}
+                  />
+                  {name}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
 
         {/* Compte, en bas de la sidebar */}

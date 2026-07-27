@@ -87,22 +87,105 @@ export type WelcomeStep = (typeof WELCOME_STEPS)[number]
 
 // Progression de la barre par écran (valeurs du design). La barre n'apparaît
 // pas sur l'accueil, le profil, la motivation ni le plan final (null).
+// Recalé sur le NOUVEL ordre (cf. FAST_PATH plus bas) : la barre doit refléter
+// le chemin réellement parcouru, sinon elle ment. Elle avance vite jusqu'au jeu
+// — c'est la promesse « on y est presque » qui fait franchir les trois écrans.
 const STEP_PROGRESS: Partial<Record<WelcomeStep, number>> = {
-  source: 0.12,
-  goal: 0.24,
-  grade: 0.36,
-  school: 0.42,
-  subjects: 0.48,
-  dailyGoal: 0.6,
-  placementIntro: 0.7,
-  placementQuiz: 0.78,
-  friends: 0.86,
-  notifications: 0.92,
-  signup: 0.96,
+  grade: 0.2,
+  placementIntro: 0.3,
+  placementQuiz: 0.4,
+  signup: 0.55,
+  goal: 0.7,
+  dailyGoal: 0.8,
+  school: 0.88,
+  notifications: 0.94,
+  // Écrans hors chemin par défaut : gardés pour qu'un brouillon repris affiche
+  // toujours une barre cohérente.
+  source: 0.6,
+  subjects: 0.75,
+  friends: 0.9,
 }
 
 export function stepProgress(step: WelcomeStep): number | null {
   return STEP_PROGRESS[step] ?? null
+}
+
+// --- Ordre du parcours : « jouer d'abord, questionner ensuite » --------------
+//
+// Les 14 écrans ci-dessus décrivent le design complet. L'ORDRE dans lequel on
+// les enchaîne, lui, est une décision produit — et c'est elle qu'on a changée.
+//
+// Le parcours d'origine posait DOUZE écrans de questions avant que l'élève ne
+// touche à une seule question de son programme. Or l'écran qui vend l'app n'est
+// aucun de ces douze : c'est le mini-quiz. Chaque écran placé avant lui est un
+// péage devant la démonstration.
+//
+// Nouvel ordre : le strict nécessaire (qui es-tu, quelle classe) puis LE JEU,
+// et tout le reste APRÈS la création du compte — quand l'élève est investi et
+// qu'un abandon ne coûte plus l'acquisition.
+//
+// Rien n'est supprimé : les écrans écartés du chemin par défaut existent
+// toujours (composants et logique intacts). Les remettre = les rajouter ici.
+// Ce qui n'est pas demandé prend une valeur par défaut saine — les matières
+// découlent déjà de la classe (defaultSelectedForGrade), l'objectif quotidien a
+// son défaut.
+
+/** Les écrans posés AVANT le premier jeu. Toute addition ici se paie en
+ *  abandons : n'y mettre que ce sans quoi le jeu ne peut pas démarrer. */
+export const STEPS_BEFORE_PLAY: readonly WelcomeStep[] = [
+  'intro', // le splash, un tap
+  'profil', // parent ou élève : la seule vraie bifurcation du produit
+  'grade', // sans la classe, impossible de servir le bon programme
+]
+
+/** Le chemin par défaut, dans l'ordre. */
+export const FAST_PATH: readonly WelcomeStep[] = [
+  ...STEPS_BEFORE_PLAY,
+  'placementIntro', // → le jeu
+  'placementQuiz', // ← LA démonstration
+  'signup', // on demande le compte une fois la valeur montrée
+  'goal', // à partir d'ici : du confort, plus de l'acquisition
+  'dailyGoal',
+  'school', // ton établissement = ton clan (cf. lib/clan-week)
+  'notifications',
+  'plan',
+]
+
+/** Écrans conservés dans le code mais retirés du chemin par défaut :
+ *  `motivation` (pur habillage), `source` (attribution marketing),
+ *  `subjects` (déduit de la classe), `friends` (le clan le remplace). */
+export const OFF_PATH: readonly WelcomeStep[] = [
+  'motivation',
+  'source',
+  'subjects',
+  'friends',
+]
+
+/**
+ * L'écran suivant, ou null à la fin du parcours.
+ *
+ * Le parcours PARENT court-circuite tout ce qui est élève : un parent n'a ni
+ * classe, ni objectif quotidien, ni quiz de placement. Il va droit au compte.
+ */
+export function nextStep(
+  step: WelcomeStep,
+  answers: OnboardingAnswers,
+): WelcomeStep | null {
+  if (step === 'profil' && answers.profileType === 'parent') return 'signup'
+  // Un parent qui arrive au compte a fini : la suite est l'espace parents.
+  if (step === 'signup' && answers.profileType === 'parent') return null
+
+  const i = FAST_PATH.indexOf(step)
+  // Un écran hors chemin (remis à la main, ou repris d'un brouillon plus
+  // ancien) ne bloque pas : on rejoint le chemin au compte.
+  if (i === -1) return 'signup'
+  return i + 1 < FAST_PATH.length ? FAST_PATH[i + 1] : null
+}
+
+/** Combien d'écrans séparent l'ouverture de l'app du premier jeu. Sert de
+ *  garde-fou testé : cette valeur ne doit pas remonter sans décision explicite. */
+export function screensBeforePlay(): number {
+  return STEPS_BEFORE_PLAY.length
 }
 
 // --- Catalogues d'options ---------------------------------------------------

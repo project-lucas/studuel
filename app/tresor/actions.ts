@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import {
   SHOP_CATALOG,
   COLLECTION_CATALOG,
@@ -41,9 +42,7 @@ export type ChestResult = {
 // + `open_chest`). Une ouverture par jour UTC dans les deux cas.
 export async function openDailyChest(): Promise<ChestResult> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { status: 'error', reward: null, coins: 0 }
 
   const drawn = await drawServerChest(supabase)
@@ -152,9 +151,7 @@ export type LoginRewardResult = {
 export async function claimLoginReward(): Promise<LoginRewardResult> {
   const none: LoginRewardResult = { claimed: false, coins: 0, streak: 0 }
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return none
 
   const { data, error } = await supabase.rpc('claim_login_reward')
@@ -176,9 +173,7 @@ export type PurchaseResult = { bought: boolean; coins: number }
 // et l'enregistrement sont atomiques côté SQL (buy_shop_item).
 export async function buyShopItem(itemId: string): Promise<PurchaseResult> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { bought: false, coins: 0 }
 
   const item = SHOP_CATALOG.find((i) => i.id === itemId)

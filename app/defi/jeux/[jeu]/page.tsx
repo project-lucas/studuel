@@ -12,7 +12,7 @@ import {
   poolKind,
 } from '@/lib/jeux/pools'
 import { gameFormat, poolSizeFor } from '@/lib/jeux/formats'
-import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { nowMs } from '@/lib/defi-modes'
 
 export const metadata = { title: 'Salon — Studuel' }
@@ -42,10 +42,7 @@ export default async function SalonJeuPage({
   const format = gameFormat(jeu)
   if (!format) redirect('/defi')
 
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/defi')
 
   // Graine par partie : chaque visite est un nouveau tirage, mais la partie en

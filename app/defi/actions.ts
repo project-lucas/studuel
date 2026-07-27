@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { isCommuteNow } from '@/lib/trajet'
 import { XP_RULES } from '@/lib/xp'
@@ -26,9 +27,7 @@ export async function recordChallenge(
   mode?: GameModeId,
 ): Promise<{ saved: boolean; xp: number }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false, xp: 0 }
 
   const clean = (n: number, max: number) =>
@@ -110,9 +109,7 @@ export async function claimWeeklyTrophy(): Promise<{
   trophyId: string
 }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   const boss = weeklyBoss(toDayKey(new Date()))
   const trophyId = weeklyTrophyId(boss.id)
   if (!user) return { claimed: false, trophyId }
@@ -137,9 +134,7 @@ export async function saveDuelRecording(
   rounds: { correct: number; timeMs: number }[],
 ): Promise<{ saved: boolean }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false }
 
   const clean = (Array.isArray(rounds) ? rounds : [])
@@ -183,9 +178,7 @@ export async function recordRankedMatch(
   opponentLabel?: string,
 ): Promise<RankedOutcome> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return null
 
   // Trophées actuels → matchmaking d'un adversaire proche (±120), déterministe.
@@ -236,9 +229,7 @@ export type DuelResultOutcome = {
 
 export async function recordDuelResult(won: boolean): Promise<DuelResultOutcome> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return null
 
   const { data, error } = await supabase.rpc('record_duel_result', {
@@ -278,9 +269,7 @@ export async function searchSchools(
   const q = typeof query === 'string' ? query.trim() : ''
   if (q.length < 2 || (level !== 'college' && level !== 'lycee')) return []
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return []
 
   const { data, error } = await supabase
@@ -306,9 +295,7 @@ export async function joinNewSchool(
   level: string,
 ): Promise<{ ok: boolean; school: import('@/lib/clan').School | null }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user || (level !== 'college' && level !== 'lycee')) {
     return { ok: false, school: null }
   }
@@ -341,9 +328,7 @@ export async function setMySchool(
   level: string,
 ): Promise<{ ok: boolean }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user || (level !== 'college' && level !== 'lycee')) return { ok: false }
 
   const { data, error } = await supabase.rpc('set_my_school', {

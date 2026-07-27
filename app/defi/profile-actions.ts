@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import {
   normalizeAvatarConfig,
   DEFAULT_AVATAR,
@@ -53,9 +54,7 @@ const str = (v: unknown): string => (typeof v === 'string' ? v : '')
 // l'état à jour — comme le vestiaire réclame ses déblocages à l'ouverture.
 export async function getProfileData(): Promise<ProfileData | null> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return null
 
   // 1) Attribution serveur des badges mérités (renvoie les slugs neufs).
@@ -221,9 +220,7 @@ export async function updateGamertag(
   raw: string,
 ): Promise<{ ok: boolean; error?: string }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false, error: 'Connecte-toi pour choisir un pseudo.' }
 
   const name = String(raw ?? '').trim()
@@ -250,9 +247,7 @@ export async function setEquippedBadges(
   ids: string[],
 ): Promise<{ ok: boolean; equipped?: string[]; error?: string }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false, error: 'Connecte-toi pour équiper des badges.' }
 
   const clean = (Array.isArray(ids) ? ids : [])
@@ -276,9 +271,7 @@ export async function equipProfileBanner(
   banner: string,
 ): Promise<{ ok: boolean; error?: string }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false, error: 'Connecte-toi pour changer de bannière.' }
 
   const { error } = await supabase.rpc('equip_profile_banner', {
@@ -296,9 +289,7 @@ export async function purchaseProfileBanner(
   itemId: string,
 ): Promise<{ ok: boolean; error?: string }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false, error: 'Connecte-toi pour acheter une bannière.' }
 
   const { error } = await supabase.rpc('purchase_avatar_item', {

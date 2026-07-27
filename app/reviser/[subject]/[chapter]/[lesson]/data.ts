@@ -1,5 +1,6 @@
 import { notFound, redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import {
   CHAPTER_COLUMNS,
   LESSON_COLUMNS,
@@ -18,9 +19,7 @@ export async function loadLessonContext(
   lessonId: string,
 ) {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/login')
 
   // Colonnes explicites des DEUX côtés : un `*` sur la leçon inclurait

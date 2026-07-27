@@ -1,4 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 // Versement du temps de travail mesuré par le chrono du Défi.
 // Route API (et pas une server action) pour être compatible avec
@@ -7,9 +8,7 @@ import { createClient } from '@/lib/supabase/server'
 // Corps : le nombre de secondes, en texte brut (sendBeacon n'envoie pas de JSON).
 export async function POST(request: Request): Promise<Response> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return new Response(null, { status: 401 })
 
   const n = Number(await request.text())

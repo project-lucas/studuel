@@ -3,6 +3,7 @@ import BackButton from '@/components/BackButton'
 import MindMap from '@/components/MindMap'
 import UnlockChapterCard from '@/components/UnlockChapterCard'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { getUserTierFor } from '@/lib/subscription'
 import { chapterAccess } from '@/lib/gems'
 import { fetchGems, fetchUnlockedChapters } from '@/lib/gems-access'
@@ -27,9 +28,7 @@ export default async function MindMapPage({
 }) {
   const { subject: slug, chapter: chapterId } = await params
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/login')
 
   // Colonnes explicites : le CONTENU de la carte ne se lit plus par requête

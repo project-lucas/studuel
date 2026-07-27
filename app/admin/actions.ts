@@ -3,6 +3,7 @@
 import { revalidatePath, updateTag } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import type { SupabaseClient } from '@supabase/supabase-js'
 
 // Server actions de l'espace admin (/admin). Double garde : vérification
@@ -18,9 +19,7 @@ const NOT_ADMIN: AdminResult = { saved: false, error: 'Accès réservé.' }
 
 async function adminClient(): Promise<SupabaseClient | null> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return null
   const { data: profile } = await supabase
     .from('profiles')

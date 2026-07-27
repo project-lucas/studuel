@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import {
   isQuestionReady,
   isQuestionType,
@@ -75,9 +76,7 @@ async function quotaOk(
 
 async function requireUserId() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   return { supabase, userId: user?.id ?? null }
 }
 

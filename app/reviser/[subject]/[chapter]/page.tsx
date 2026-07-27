@@ -1,5 +1,6 @@
 import { notFound, redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 export const dynamic = 'force-dynamic'
 
@@ -14,9 +15,7 @@ export default async function ChapterPage({
 }) {
   const { subject: slug, chapter: chapterId } = await params
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/login')
 
   // Slug vérifié via la jointure ; seule la première leçon (position) compte.

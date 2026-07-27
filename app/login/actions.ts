@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { claimPendingReferral } from '@/lib/referral-claim'
 import { GRADE_LEVELS } from '@/lib/types'
 
@@ -188,9 +189,7 @@ export async function updatePassword(
   }
 
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) {
     return {
       error:

@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { normalizeAvatarConfig } from '@/lib/avatar'
 import {
   applyItem,
@@ -22,9 +23,7 @@ import type { SupabaseClient } from '@supabase/supabase-js'
 
 async function requireUser() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   return { supabase, userId: user?.id ?? null }
 }
 

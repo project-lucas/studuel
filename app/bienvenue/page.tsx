@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import WelcomeFlow from '@/components/welcome/WelcomeFlow'
 import { getSubjectsCached } from '@/lib/catalog'
-import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 export const metadata = { title: 'Bienvenue — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -23,10 +23,7 @@ export default async function BienvenuePage({
   // l'intro, sans message, et recommençait tout.
   const oauthFailed = erreur === 'oauth'
 
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   // Un compte connecté est renvoyé au geste quotidien — sauf en prévisualisation
   // ou au retour OAuth (où il doit finir son onboarding sur l'écran « plan »).

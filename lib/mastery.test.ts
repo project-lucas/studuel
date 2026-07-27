@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import {
+  assembleMastery,
+  LESSON_FLOOR,
   masteryRank,
   rankForValue,
   chapterState,
@@ -78,5 +80,74 @@ describe('chapterState', () => {
     expect(chapterState(p(0.4))).toBe('fragile')
     expect(chapterState(p(0.5))).toBe('en_cours')
     expect(chapterState(p(0.8))).toBe('maitrise')
+  })
+})
+
+describe('assembleMastery', () => {
+  // Charpente du catalogue : quiz Q1 → leçon L1 → chapitre C1, etc.
+  const quizLessons = new Map([
+    ['Q1', 'L1'],
+    ['Q2', 'L2'],
+  ])
+  const chapterByLesson = new Map([
+    ['L1', 'C1'],
+    ['L2', 'C1'],
+    ['L3', 'C2'],
+  ])
+
+  it('remonte le meilleur score de quiz jusqu\u2019au chapitre', () => {
+    const m = assembleMastery(
+      new Map([['Q1', 0.9]]),
+      new Set(),
+      quizLessons,
+      chapterByLesson,
+    )
+    expect(m.get('C1')).toEqual({
+      value: 0.9,
+      quizAttempted: true,
+      lessonDone: false,
+    })
+  })
+
+  it('garde le meilleur des deux quiz d\u2019un m\u00eame chapitre', () => {
+    const m = assembleMastery(
+      new Map([
+        ['Q1', 0.4],
+        ['Q2', 0.85],
+      ]),
+      new Set(),
+      quizLessons,
+      chapterByLesson,
+    )
+    expect(m.get('C1')?.value).toBeCloseTo(0.85)
+  })
+
+  it('applique le plancher des le\u00e7ons termin\u00e9es sans \u00e9craser un meilleur score', () => {
+    const m = assembleMastery(
+      new Map([['Q1', 0.9]]),
+      new Set(['L1', 'L3']),
+      quizLessons,
+      chapterByLesson,
+    )
+    expect(m.get('C1')).toEqual({
+      value: 0.9,
+      quizAttempted: true,
+      lessonDone: true,
+    })
+    expect(m.get('C2')).toEqual({
+      value: LESSON_FLOOR,
+      quizAttempted: false,
+      lessonDone: true,
+    })
+  })
+
+  it('ignore les quiz et le\u00e7ons absents de la charpente', () => {
+    const m = assembleMastery(
+      new Map([['Q-inconnu', 1]]),
+      new Set(['L-inconnue']),
+      quizLessons,
+      chapterByLesson,
+    )
+    expect(m.size).toBe(0)
   })
 })

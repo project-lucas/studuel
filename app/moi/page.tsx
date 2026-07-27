@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { after } from 'next/server'
 import { CircleUser, Sparkles } from 'lucide-react'
 import {
   Card,
@@ -19,8 +20,15 @@ import WeeklyLeversCard, {
   type LeverState,
 } from '@/components/moi/WeeklyLeversCard'
 import { createClient } from '@/lib/supabase/server'
-import { toDayKey } from '@/lib/streak'
-import { syncAutoHabits, dayIndexOf, PLANIFIER_CATALOG_ID } from '@/lib/habits'
+import { getCurrentUser } from '@/lib/supabase/user'
+import { readRowTolerant } from '@/lib/profile-read'
+import { toDayKey, activityCutoff } from '@/lib/streak'
+import {
+  autoHabitLogs,
+  mergeHabitLogs,
+  dayIndexOf,
+  PLANIFIER_CATALOG_ID,
+} from '@/lib/habits'
 import {
   DRIVER_WINDOW_DAYS,
   LEVERS,
@@ -42,6 +50,17 @@ import type { Habit, HabitLog, CommuteSlot } from '@/lib/types'
 export const metadata = { title: 'Moi — Studuel' }
 export const dynamic = 'force-dynamic'
 
+// Les colonnes du profil que cet écran affiche, toutes migrations confondues.
+type MoiProfileRow = {
+  full_name: string | null
+  grade_level: string | null
+  commute_slots: unknown
+  capacity_quiz: unknown
+  work_seconds: number | null
+  coins: number | null
+  avatar: unknown
+}
+
 // Libellés des classes pour la pill du héros (le slug court sinon).
 const GRADE_LABELS: Partial<Record<GradeLevel, string>> = {
   '2de': 'Seconde',
@@ -55,9 +74,7 @@ const GRADE_LABELS: Partial<Record<GradeLevel, string>> = {
 // jamais : elle montre, l'élève choisit.
 export default async function MoiPage() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   if (!user) {
     return (
@@ -87,19 +104,28 @@ export default async function MoiPage() {
     )
   }
 
-  // Mission fixe pour tous : « Planifier ma semaine » (dimanche) — auto-
-  // inscrite, elle nourrit le driver Régularité.
-  await supabase.from('habits').upsert(
-    { user_id: user.id, catalog_id: PLANIFIER_CATALOG_ID, target: {} },
-    { onConflict: 'user_id,catalog_id', ignoreDuplicates: true },
-  )
+  // --- UNE SEULE VAGUE ----------------------------------------------------------
+  // Cet écran enchaînait cinq allers-retours en série : l'inscription de la
+  // mission fixe, puis le paquet de lectures, puis la synchro, puis les logs.
+  // Trois d'entre eux n'avaient aucune raison d'attendre les autres :
+  //
+  //  · l'upsert « Planifier ma semaine » est idempotent et ne conditionne
+  //    aucune des lectures qui suivaient — il part avec elles ;
+  //  · les trois `select` sur `profiles` visaient la MÊME ligne : fusionnés ;
+  //  · les logs d'habitudes étaient lus APRÈS `syncAutoHabits` alors que
+  //    celle-ci n'écrit que la journée d'AUJOURD'HUI. On les lit maintenant en
+  //    parallèle et on applique le résultat de la synchro par-dessus, en
+  //    mémoire : même affichage, un aller-retour de moins (voir plus bas).
+  //
+  // Les quatre historiques de sessions sont désormais BORNÉS à la fenêtre
+  // d'activité (400 j) : ils ne servent qu'à la série, aux drivers et à la
+  // trajectoire, mais retransféraient tout le passé d'un élève assidu.
+  const today = toDayKey(new Date())
+  const since = new Date()
+  since.setUTCDate(since.getUTCDate() - (DRIVER_WINDOW_DAYS - 1))
 
-  // Profil + habitudes + sessions (nécessaires à la synchro auto AVANT de lire
-  // les logs). Colonnes de migrations différentes isolées pour dégrader proprement.
   const [
-    { data: profile },
-    { data: statsRow },
-    { data: avatarRow },
+    profile,
     { data: habits },
     { data: tests },
     { data: studies },
@@ -107,20 +133,20 @@ export default async function MoiPage() {
     { data: challenges },
     { data: gradeRows },
     { data: termRows, error: termError },
+    { data: storedLogs },
   ] = await Promise.all([
-    supabase
-      .from('profiles')
-      .select('full_name, grade_level, commute_slots, capacity_quiz')
-      .eq('id', user.id)
-      .maybeSingle(),
-    // work_seconds (014) + coins (018) : isolés du profil de base.
-    supabase
-      .from('profiles')
-      .select('work_seconds, coins')
-      .eq('id', user.id)
-      .maybeSingle(),
-    // avatar (082) : isolé aussi — son absence ne casse rien.
-    supabase.from('profiles').select('avatar').eq('id', user.id).maybeSingle(),
+    readRowTolerant<MoiProfileRow>(supabase, 'profiles', 'id', user.id, [
+      'full_name',
+      'grade_level',
+      'commute_slots',
+      'capacity_quiz',
+      // work_seconds (014), coins (018), avatar (082) : plus besoin de trois
+      // requêtes pour trois migrations — `readRowTolerant` retire tout seul
+      // celles que le schéma ne connaîtrait pas encore.
+      'work_seconds',
+      'coins',
+      'avatar',
+    ]),
     supabase
       .from('habits')
       .select('id, catalog_id, target, created_at, habit_catalog(*)')
@@ -129,16 +155,23 @@ export default async function MoiPage() {
     supabase
       .from('test_sessions')
       .select('created_at, score, total')
-      .eq('user_id', user.id),
-    supabase.from('study_sessions').select('created_at').eq('user_id', user.id),
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
+    supabase
+      .from('study_sessions')
+      .select('created_at')
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
     supabase
       .from('lesson_completions')
       .select('created_at')
-      .eq('user_id', user.id),
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
     supabase
       .from('challenge_sessions')
       .select('created_at')
-      .eq('user_id', user.id),
+      .eq('user_id', user.id)
+      .gte('created_at', activityCutoff()),
     // Notes réelles (167) et moyennes saisies (187) : indépendantes de la
     // synchro des habitudes → chargées ici plutôt que derrière syncAutoHabits.
     supabase
@@ -152,6 +185,18 @@ export default async function MoiPage() {
       .from('term_grades')
       .select('school_year, term, average')
       .eq('user_id', user.id),
+    supabase
+      .from('habit_logs')
+      .select('id, habit_id, date, completed, auto_validated')
+      .gte('date', toDayKey(since))
+      .returns<HabitLog[]>(),
+    // Mission fixe pour tous : « Planifier ma semaine » (dimanche) — auto-
+    // inscrite, elle nourrit le driver Régularité. Idempotente, donc sans
+    // ordre imposé vis-à-vis des lectures ci-dessus.
+    supabase.from('habits').upsert(
+      { user_id: user.id, catalog_id: PLANIFIER_CATALOG_ID, target: {} },
+      { onConflict: 'user_id,catalog_id', ignoreDuplicates: true },
+    ),
   ])
 
   const commuteSlots: CommuteSlot[] = Array.isArray(profile?.commute_slots)
@@ -160,23 +205,34 @@ export default async function MoiPage() {
 
   // Validation automatique du jour (révision, trajets) : les leviers Révision
   // et la Régularité se cochent tout seuls quand l'élève a vraiment travaillé.
-  await syncAutoHabits(supabase, user.id, habits ?? [], commuteSlots, {
-    tests: tests ?? [],
-    studies: studies ?? [],
-    lessons: lessonsDone ?? [],
-    challenges: challenges ?? [],
-  })
+  // La décision est PURE — on l'applique tout de suite sur les logs déjà lus…
+  const autoRows = autoHabitLogs(
+    user.id,
+    habits ?? [],
+    commuteSlots,
+    {
+      tests: tests ?? [],
+      studies: studies ?? [],
+      lessons: lessonsDone ?? [],
+      challenges: challenges ?? [],
+    },
+    today,
+  )
+  const logs = mergeHabitLogs(storedLogs ?? [], autoRows)
 
-  const today = toDayKey(new Date())
-  const since = new Date()
-  since.setUTCDate(since.getUTCDate() - (DRIVER_WINDOW_DAYS - 1))
-
-  // Les logs, EUX, doivent attendre syncAutoHabits (qui les écrit).
-  const { data: logs } = await supabase
-    .from('habit_logs')
-    .select('id, habit_id, date, completed, auto_validated')
-    .gte('date', toDayKey(since))
-    .returns<HabitLog[]>()
+  // … et on la persiste APRÈS l'envoi de la réponse (`after`). L'élève n'attend
+  // plus une écriture dont l'écran connaît déjà le résultat ; au prochain
+  // chargement, la base dira la même chose.
+  if (autoRows.length > 0) {
+    after(async () => {
+      const { error } = await supabase
+        .from('habit_logs')
+        .upsert(autoRows, { onConflict: 'habit_id,date' })
+      if (error) {
+        console.error('[moi] validations auto non enregistrées :', error.message)
+      }
+    })
+  }
 
   const activeHabits = habits ?? []
   const allLogs = logs ?? []
@@ -223,9 +279,9 @@ export default async function MoiPage() {
     ? (profile!.grade_level as GradeLevel)
     : null
   const gradeLabel = gradeLevel ? (GRADE_LABELS[gradeLevel] ?? gradeLevel) : null
-  const level = workLevel(Number(statsRow?.work_seconds ?? 0) || 0)
-  const coins = Number(statsRow?.coins ?? 0) || 0
-  const avatarConfig = normalizeAvatarConfig(avatarRow?.avatar)
+  const level = workLevel(Number(profile.work_seconds ?? 0) || 0)
+  const coins = Number(profile.coins ?? 0) || 0
+  const avatarConfig = normalizeAvatarConfig(profile.avatar)
   const heroAvatarUri = avatarDataUri(avatarConfig, 320)
   const miniAvatarUri = avatarDataUri(avatarConfig, 80)
 

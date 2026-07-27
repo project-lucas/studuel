@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { addFriendMessage, type AddFriendStatus } from '@/lib/social'
 import { addToSquad, removeFromSquad } from '@/lib/gems-access'
 import { MAX_SQUAD_SIZE } from '@/lib/gems'
@@ -53,9 +54,7 @@ export async function renameSquad(
   name: string,
 ): Promise<{ ok: boolean; name: string | null }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false, name: null }
 
   // Nettoyage : on retire les retours à la ligne / caractères de contrôle,
@@ -225,9 +224,7 @@ export async function removeFriendFromSquad(
   if (!UUID_RE.test(memberId ?? '')) return { ok: false }
 
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false }
 
   const ok = await removeFromSquad(supabase, user.id, memberId)

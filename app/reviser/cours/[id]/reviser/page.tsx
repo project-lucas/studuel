@@ -4,6 +4,7 @@ import ReviewSession, {
 } from '@/components/carnet/ReviewSession'
 import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import {
   isQuestionType,
   normalizeQuestionContent,
@@ -27,9 +28,7 @@ export default async function CourseReviewPage({
 }) {
   const [{ id }, { chapitre }] = await Promise.all([params, searchParams])
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/login')
 
   const { data: course } = await supabase

@@ -2,19 +2,7 @@
 
 import { useRef, useState, useTransition } from 'react'
 import Link from 'next/link'
-import {
-  Check,
-  Pencil,
-  CalendarClock,
-  ChevronDown,
-  Crown,
-  Settings,
-  Search,
-  Zap,
-  Trophy,
-  Flame,
-  X,
-} from 'lucide-react'
+import { Check, Pencil, CalendarClock, Crown, Search, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { subjectTheme, subjectVignette } from '@/lib/subject-style'
 import {
@@ -27,8 +15,7 @@ import WorldBackdrop from '@/components/WorldBackdrop'
 import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
 import { toast } from '@/lib/toast'
-import { saveSelectedSubjects, saveDailyGoalMinutes } from '@/app/reviser/actions'
-import { DAILY_GOAL_OPTIONS } from '@/lib/daily-goal'
+import { saveSelectedSubjects } from '@/app/reviser/actions'
 import type { ExamProximity, SubjectExamHint } from '@/lib/next-exam'
 import type { Subject } from '@/lib/types'
 import SubjectFolder from '@/components/reviser/SubjectFolder'
@@ -247,287 +234,6 @@ function ProgramSearch({ subjects }: { subjects: Subject[] }) {
   )
 }
 
-// Anneau de progression de l'objectif du jour (0..1) : jaune solaire sur piste
-// claire — la progression/récompense porte toujours le highlight.
-function GoalRing({ pct }: { pct: number }) {
-  const r = 15
-  const circ = 2 * Math.PI * r
-  const dash = Math.max(0, Math.min(1, pct)) * circ
-  return (
-    <svg
-      viewBox="0 0 36 36"
-      className="size-9 shrink-0 -rotate-90"
-      aria-hidden="true"
-    >
-      <circle
-        cx="18"
-        cy="18"
-        r={r}
-        fill="none"
-        strokeWidth="4"
-        className="stroke-foreground/10"
-      />
-      <circle
-        cx="18"
-        cy="18"
-        r={r}
-        fill="none"
-        strokeWidth="4"
-        strokeLinecap="round"
-        strokeDasharray={`${dash} ${circ}`}
-        className="stroke-highlight"
-      />
-    </svg>
-  )
-}
-
-// Une case de donnée du header (icône + grand nombre + libellé), compacte.
-function StatTile({
-  icon,
-  value,
-  label,
-  ariaLabel,
-}: {
-  icon: React.ReactNode
-  value: React.ReactNode
-  label: string
-  ariaLabel: string
-}) {
-  return (
-    <div
-      className="flex flex-col items-center justify-center gap-0.5 px-1 py-2"
-      aria-label={ariaLabel}
-    >
-      <span aria-hidden="true" className="flex h-5 items-center">
-        {icon}
-      </span>
-      <p className="font-mono text-sm font-extrabold text-foreground tabular-nums">
-        {value}
-      </p>
-      <p className="text-[10px] font-semibold text-muted-foreground">{label}</p>
-    </div>
-  )
-}
-
-// Les GRANDES données de Réviser, sur une rangée : trophées, XP (lié aux tests
-// sur le programme), série, et l'objectif du jour — ce dernier est CLIQUABLE
-// pour changer l'objectif quotidien en minutes (3/10/15/30, bornes SQL). La
-// sélection est optimiste : le compteur se met à jour tout de suite.
-function HeaderStats({
-  trophies,
-  xp,
-  streak,
-  todayMinutes,
-  goalMinutes,
-}: {
-  trophies: number
-  xp: number
-  streak: number
-  todayMinutes: number
-  goalMinutes: number
-}) {
-  const [goal, setGoal] = useState(goalMinutes)
-  const [editing, setEditing] = useState(false)
-  const [pending, start] = useTransition()
-
-  const pct = goal > 0 ? todayMinutes / goal : 0
-  const done = goal > 0 && todayMinutes >= goal
-
-  const choose = (min: number) => {
-    sfx.tap()
-    setGoal(min) // optimiste
-    setEditing(false)
-    start(async () => {
-      const res = await saveDailyGoalMinutes(min)
-      if (!res.ok) {
-        setGoal(goalMinutes) // rollback
-        toast('Objectif non enregistré — réessaie.', 'error')
-      }
-    })
-  }
-
-  return (
-    <div className="rev-card relative mt-3 rounded-2xl bg-white p-1.5">
-      <div className="grid grid-cols-4 divide-x divide-black/5">
-        <StatTile
-          icon={<Trophy className="size-4 text-highlight" aria-hidden="true" />}
-          value={trophies}
-          label="trophées"
-          ariaLabel={`${trophies} trophées`}
-        />
-        <StatTile
-          icon={
-            <Zap
-              className="size-4 fill-highlight text-highlight"
-              aria-hidden="true"
-            />
-          }
-          value={xp}
-          label="XP"
-          ariaLabel={`${xp} points d'expérience`}
-        />
-        <StatTile
-          icon={<Flame className="size-4 text-orange-500" aria-hidden="true" />}
-          value={streak}
-          label="série"
-          ariaLabel={`Série : ${streak} jour${streak > 1 ? 's' : ''}`}
-        />
-
-        {/* Objectif du jour — CLIQUABLE pour changer l'objectif quotidien. */}
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            setEditing((v) => !v)
-          }}
-          aria-haspopup="menu"
-          aria-expanded={editing}
-          aria-label={`Objectif du jour : ${todayMinutes} sur ${goal} minutes — toucher pour changer`}
-          className="relative flex flex-col items-center justify-center gap-0.5 px-1 py-2 transition-colors hover:bg-muted/40"
-        >
-          <span aria-hidden="true" className="relative flex h-5 items-center">
-            <GoalRing pct={pct} />
-            {done ? (
-              <Check
-                className="absolute inset-0 m-auto size-3.5 text-highlight"
-                strokeWidth={3}
-                aria-hidden="true"
-              />
-            ) : null}
-          </span>
-          <p className="font-mono text-sm font-extrabold text-foreground tabular-nums">
-            {goal}
-            <span className="text-[10px]">m</span>
-          </p>
-          <p className="flex items-center gap-0.5 text-[10px] font-semibold text-primary">
-            objectif
-            <Pencil className="size-2.5" aria-hidden="true" />
-          </p>
-        </button>
-      </div>
-
-      {/* Le sélecteur d'objectif quotidien, déplié sous la rangée. */}
-      {editing ? (
-        <div
-          role="menu"
-          aria-label="Choisir l'objectif quotidien"
-          className="mt-1.5 flex items-center gap-1.5 border-t border-black/5 px-1 pt-2"
-        >
-          <span className="mr-auto pl-1 text-[11px] font-bold text-muted-foreground">
-            Objectif / jour
-          </span>
-          {DAILY_GOAL_OPTIONS.map((min) => (
-            <button
-              key={min}
-              type="button"
-              role="menuitemradio"
-              aria-checked={goal === min}
-              disabled={pending}
-              onClick={() => choose(min)}
-              className={cn(
-                'min-h-8 rounded-full px-3 font-mono text-xs font-extrabold tabular-nums transition',
-                goal === min
-                  ? 'bg-primary text-primary-foreground shadow-sm'
-                  : 'bg-muted/70 text-foreground hover:bg-muted',
-              )}
-            >
-              {min}m
-            </button>
-          ))}
-        </div>
-      ) : null}
-    </div>
-  )
-}
-
-// Avatar du header façon « bouton-menu » : l'avatar de l'élève, tapable, qui
-// déplie autour de lui les actions du profil (modifier ses matières, ouvrir son
-// compte). Replié par défaut pour libérer de la hauteur en haut de Réviser.
-function HeaderAvatar({
-  avatarUri,
-  onEdit,
-}: {
-  avatarUri: string
-  onEdit: () => void
-}) {
-  const [open, setOpen] = useState(false)
-  return (
-    <div className="relative flex shrink-0 items-center">
-      <button
-        type="button"
-        onClick={() => {
-          sfx.tap()
-          setOpen((o) => !o)
-        }}
-        aria-label="Menu du profil"
-        aria-expanded={open}
-        className="relative size-14 shrink-0 overflow-hidden rounded-full bg-white shadow-md ring-2 ring-white/70 transition active:scale-95"
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={avatarUri}
-          alt="Mon avatar"
-          className="size-full object-cover"
-        />
-        <span className="absolute right-0 bottom-0 flex size-5 items-center justify-center rounded-full bg-highlight text-foreground shadow ring-2 ring-white">
-          <ChevronDown
-            className={cn('size-3 transition-transform', open && 'rotate-180')}
-            aria-hidden="true"
-          />
-        </span>
-      </button>
-
-      {/* Les actions se déplient à droite de l'avatar. */}
-      <div
-        className={cn(
-          'flex items-center gap-2 overflow-hidden transition-all duration-200',
-          open ? 'ml-2 max-w-[120px] opacity-100' : 'max-w-0 opacity-0',
-        )}
-      >
-        <button
-          type="button"
-          onClick={() => {
-            setOpen(false)
-            onEdit()
-          }}
-          aria-label="Modifier mes matières"
-          className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-white ring-1 ring-white/30 transition hover:bg-white/25 active:scale-90"
-        >
-          <Pencil className="size-4" aria-hidden="true" />
-        </button>
-        <Link
-          href="/compte"
-          onClick={() => sfx.tap()}
-          aria-label="Mon compte"
-          className="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-white ring-1 ring-white/30 transition hover:bg-white/25 active:scale-90"
-        >
-          <Settings className="size-4" aria-hidden="true" />
-        </Link>
-      </div>
-    </div>
-  )
-}
-
-// « Classe de 5ᵉ » : l'exposant typographique de la maquette, dérivé de la
-// valeur brute de `grade_level` ('5e', '2de', '1re', 'Tle'…).
-function GradeChip({ grade }: { grade: string }) {
-  const m = /^(\d)(e|de|re)$/.exec(grade)
-  return (
-    <span className="rev-chip shrink-0 rounded-full bg-white px-3.5 py-1.5 text-sm font-bold shadow-sm">
-      {m ? (
-        <>
-          Classe de {m[1]}
-          <sup>{m[2]}</sup>
-        </>
-      ) : grade === 'Tle' ? (
-        'Terminale'
-      ) : (
-        grade
-      )}
-    </span>
-  )
-}
-
 // Carte matière compacte (grille 2 colonnes) : médaillon coloré + nom + barre
 // de progression. Volontairement resserrée pour limiter le scroll. Si un
 // contrôle est annoncé sur la matière, la carte prend un liseré coloré (3
@@ -695,46 +401,29 @@ function SubjectRow({
   )
 }
 
-// Accueil Réviser façon carnet violet : fond crème pleine page, bandeau de
-// salutation (prénom, classe, série) qui file jusqu'aux bords sur mobile, et
-// la liste des matières qui vient le chevaucher.
+// Accueil Réviser : fond crème pleine page + la liste des matières. L'ancienne
+// carte d'identité violette (avatar, salutation, classe, stats) a été retirée
+// pour que l'action du jour (carte « Ta semaine ») soit au-dessus du pli : la
+// classe vit sur Moi, XP/trophées sur le HUD et le Défi, série + objectif ont
+// rejoint la carte « Ta semaine ».
 export default function SubjectsHome({
-  firstName,
-  avatarUri,
-  streak,
-  xp,
-  trophies,
-  todayMinutes,
-  goalMinutes,
   subjects,
   selected,
   grade,
   progressBySlug,
   examBySubject = {},
   topSlot,
-  underHeader = true,
 }: {
-  firstName: string | null
-  avatarUri: string
-  streak: number
-  // Stats du header : XP cumulée, minutes travaillées aujourd'hui, objectif.
-  xp: number
-  // Trophées (mode classé du Défi) : la 4e grande donnée du header.
-  trophies: number
-  todayMinutes: number
-  goalMinutes: number
   subjects: Subject[]
   selected: string[] | null
+  // Toujours nécessaire au regroupement des matières par dossier (tronc commun
+  // vs spécialités), même si la puce « Classe de … » a disparu de cet écran.
   grade: string
   progressBySlug: Record<string, number>
   examBySubject?: Record<string, SubjectExamHint>
-  // Blocs insérés entre le hero et la grille des matières (reprise, outils,
-  // contrôles…) — rendus côté serveur et passés en enfant.
+  // Blocs insérés au-dessus de la grille des matières (série/semaine, contrôles,
+  // reprise…) — rendus côté serveur et passés en enfant.
   topSlot?: React.ReactNode
-  // Vrai (défaut) : le bandeau file sous la barre du haut, bord à bord.
-  // Faux : un élément (ex. le sélecteur d'espaces) vit au-dessus — le bandeau
-  // reste bord à bord mais ne remonte plus sous la barre.
-  underHeader?: boolean
 }) {
   const [editing, setEditing] = useState(false)
   const [picked, setPicked] = useState<Set<string>>(
@@ -788,90 +477,55 @@ export default function SubjectsHome({
       {/* Fond crème pleine page, derrière tout le contenu de l'onglet. */}
       <WorldBackdrop className="rev-bg" />
 
-      {/* Bandeau violet : bord à bord sur mobile (il file sous la barre du
-          haut), carte arrondie sur desktop. */}
-      <div
-        className={`rev-hero relative overflow-hidden px-5 pb-16 text-white md:mx-0 md:mt-0 md:rounded-3xl md:px-7 md:pt-7 ${
-          underHeader ? '-mx-4 -mt-16 pt-20' : 'mx-0 mt-0 rounded-3xl pt-7'
-        }`}
-      >
-        {/* Capsules décoratives, violet plus clair — comme la maquette. */}
-        <span
-          aria-hidden="true"
-          className="rev-blob absolute -top-8 -left-10 h-36 w-36 rounded-full"
-        />
-        <span
-          aria-hidden="true"
-          className="rev-blob absolute top-6 right-16 h-10 w-40 rotate-[-35deg] rounded-full"
-        />
-        <span
-          aria-hidden="true"
-          className="rev-blob absolute -bottom-10 left-1/3 h-12 w-48 rotate-[-35deg] rounded-full"
-        />
-
-        {/* Identité compacte : avatar-menu + salutation/classe, sur une seule
-            ligne pour gagner de la hauteur (la série a rejoint la bande de
-            stats juste dessous). */}
-        <div className="relative flex items-center gap-3">
-          <HeaderAvatar avatarUri={avatarUri} onEdit={() => setEditing(true)} />
-          <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-medium text-white/80">
-              {firstName ? `Bonjour ${firstName}` : 'Bonjour !'}
-            </p>
-            <div className="mt-1">
-              <GradeChip grade={grade} />
-            </div>
-          </div>
-        </div>
-
-        {/* Hors édition : les 4 grandes données (trophées · XP · série ·
-            objectif éditable) qui chevauchent le bas du bandeau. La recherche a
-            migré plus bas, en loupe près des matières. */}
-        {!editing ? (
-          <HeaderStats
-            trophies={trophies}
-            xp={xp}
-            streak={streak}
-            todayMinutes={todayMinutes}
-            goalMinutes={goalMinutes}
-          />
-        ) : null}
-
-        {/* En mode édition seulement : consigne + bouton Terminé. */}
-        {editing ? (
-          <div className="relative mt-3 flex items-center justify-between gap-3">
-            <p className="text-sm text-white/85">
-              Touche une matière pour l&apos;ajouter ou la retirer.
-            </p>
-            <button
-              type="button"
-              onClick={finishEditing}
-              disabled={pending}
-              className="rev-chip flex shrink-0 items-center gap-1.5 rounded-full bg-white px-3 py-1 text-xs font-bold shadow-sm transition active:translate-y-px disabled:opacity-60"
-            >
-              <Check className="size-3.5" />
-              {pending ? 'Enregistrement…' : 'Terminé'}
-            </button>
-          </div>
-        ) : null}
-      </div>
-
-      {/* Ce qui chevauche le bandeau : d'abord les blocs d'action (reprise,
-          outils, contrôles), puis la grille des matières resserrée. */}
-      <div className="relative -mt-8 flex flex-col gap-4 sm:px-1">
+      {/* Plus de carte d'identité : les blocs d'action (série/semaine,
+          contrôles, reprise) arrivent directement, puis la grille des matières. */}
+      <div className="relative flex flex-col gap-4 sm:px-1">
         {topSlot ? <div className="flex flex-col gap-4">{topSlot}</div> : null}
 
         {/* La loupe reste au-dessus des dossiers : elle cherche dans TOUT le
             programme, y compris ce qui est replié — sinon fermer un dossier
-            reviendrait à cacher son contenu de la recherche. */}
+            reviendrait à cacher son contenu de la recherche. Le crayon
+            (édition des matières) a récupéré l'entrée qu'offrait l'avatar. */}
         <div className="flex items-center justify-between gap-2 px-1">
           {/* « Ton programme » et non « Mes matières » : ce dernier nomme déjà
               l'onglet actif tout en haut, la répétition brouillait le repère. */}
           <h2 className="font-heading text-sm font-bold text-foreground">
             Ton programme
           </h2>
-          <ProgramSearch subjects={subjects} />
+          <div className="flex items-center gap-2">
+            {editing ? (
+              <button
+                type="button"
+                onClick={finishEditing}
+                disabled={pending}
+                className="font-heading flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-primary px-3 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
+              >
+                <Check className="size-3.5" aria-hidden="true" />
+                {pending ? 'Enregistrement…' : 'Terminé'}
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => {
+                  sfx.tap()
+                  setEditing(true)
+                }}
+                aria-label="Modifier mes matières"
+                className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
+              >
+                <Pencil className="size-4.5" strokeWidth={2.4} aria-hidden="true" />
+              </button>
+            )}
+            <ProgramSearch subjects={subjects} />
+          </div>
         </div>
+
+        {/* En édition : la consigne sous la barre de titre. */}
+        {editing ? (
+          <p className="px-1 text-sm text-muted-foreground">
+            Touche une matière pour l&apos;ajouter ou la retirer.
+          </p>
+        ) : null}
 
         {/* On teste le dossier PROGRAMME, pas le nombre de dossiers : la culture
             générale reste visible même quand l'élève n'a plus aucune matière

@@ -2,6 +2,7 @@ import PageHeader from '@/components/PageHeader'
 import TresorHome from '@/components/TresorHome'
 import CoffreStore from '@/components/CoffreStore'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { toDayKey } from '@/lib/streak'
 import {
   getMockShop,
@@ -19,9 +20,7 @@ export const dynamic = 'force-dynamic'
 // Visiteur — ou migration pas encore passée — : démo.
 export default async function CoffrePage() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   let live = false
   let coins = MOCK_COINS

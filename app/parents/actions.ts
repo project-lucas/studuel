@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 export type LinkChildState = {
   error: string | null
@@ -21,9 +22,7 @@ export async function linkChild(
   }
 
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { error: 'Vous devez être connecté.' }
 
   const { data, error } = await supabase.rpc('link_child_by_code', {
@@ -70,9 +69,7 @@ export async function unlinkChild(
   }
 
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return 'Votre session a expiré — reconnectez-vous.'
 
   const { error } = await supabase.rpc('unlink_child', { p_child: childId })

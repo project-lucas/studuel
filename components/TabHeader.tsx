@@ -7,14 +7,20 @@ export default function TabHeader({
   tone = 'light',
 }: {
   title: string
-  subtitle: string
+  // Optionnel : certains accueils d'onglet (ex. Réviser) se passent de
+  // sous-titre pour gagner de la hauteur — on ne rend alors que le titre.
+  subtitle?: string
   // 'arena' : texte crème pour l'écran violet plein cadre du Défi (le crème
   // #faf6ef est la convention de l'arène, cf. .olympe-glass / ORB_ICON).
   tone?: 'light' | 'arena'
 }) {
   const isArena = tone === 'arena'
   return (
-    <header className={isArena ? 'text-center' : 'mb-4 space-y-0.5'}>
+    <header
+      className={
+        isArena ? 'text-center' : subtitle ? 'mb-3 space-y-0.5' : 'mb-3'
+      }
+    >
       <h1
         className={
           isArena
@@ -24,15 +30,17 @@ export default function TabHeader({
       >
         {title}
       </h1>
-      <p
-        className={
-          isArena
-            ? 'text-xs font-semibold text-[#faf6ef]/70'
-            : 'text-sm text-muted-foreground'
-        }
-      >
-        {subtitle}
-      </p>
+      {subtitle ? (
+        <p
+          className={
+            isArena
+              ? 'text-xs font-semibold text-[#faf6ef]/70'
+              : 'text-sm text-muted-foreground'
+          }
+        >
+          {subtitle}
+        </p>
+      ) : null}
     </header>
   )
 }

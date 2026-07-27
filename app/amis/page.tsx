@@ -1,6 +1,8 @@
 import TabHeader from '@/components/TabHeader'
 import AmisHome from '@/components/AmisHome'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
+import { readRowTolerant } from '@/lib/profile-read'
 import {
   getMockSchool,
   avatarEmojiFor,
@@ -25,15 +27,23 @@ import {
 export const metadata = { title: 'Amis — Studuel' }
 export const dynamic = 'force-dynamic'
 
+// Les colonnes du profil qu'affiche cet écran, toutes migrations confondues.
+type AmisProfileRow = {
+  work_seconds: number | null
+  friend_code: string | null
+  grade_level: string | null
+  trophies: number | null
+  best_trophies: number | null
+  squad_name: string | null
+}
+
 // Onglet social (extrême gauche). Tout est réel pour un élève connecté :
 // classement aux trophées (RPC friends_trophies) enrichi de la présence en
 // ligne (RPC 160) et école via le clan. Seuls le visiteur et l'élève sans
 // établissement voient un aperçu mocké, signalé par la pastille « Aperçu ».
 export default async function AmisPage() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   let ranking: RankPlayer[] = []
   let friends: Friend[] = []
@@ -60,32 +70,30 @@ export default async function AmisPage() {
 
   if (user) {
     const [
-      { data: profile },
-      { data: trophyRow },
+      profile,
       { data: friendTrophyRows },
       { data: overviewRows },
       { data: friendStreakRows },
       { data: myStreakRaw },
       { data: liveRows },
-      { data: squadRow },
       gemsBalance,
       referralCounts,
       squadSet,
     ] = await Promise.all([
-      // friend_code vit sur profiles depuis 019 (déjà en base) → sûr à lire ici.
-      // grade_level (onboarding) sert à choisir le cycle du clan (collège/lycée).
-      supabase
-        .from('profiles')
-        .select('work_seconds, friend_code, grade_level')
-        .eq('id', user.id)
-        .maybeSingle(),
-      // Select ISOLÉ : si la migration 079 n'est pas passée (colonnes
-      // absentes), il échoue seul → repli 0, sans casser le reste.
-      supabase
-        .from('profiles')
-        .select('trophies, best_trophies')
-        .eq('id', user.id)
-        .maybeSingle(),
+      // Une seule lecture de `profiles` pour toutes les colonnes de l'écran,
+      // quelles que soient leurs migrations d'origine : friend_code (019),
+      // grade_level (onboarding), trophies/best_trophies (079), squad_name
+      // (176). `readRowTolerant` retire tout seul celles que le schéma ne
+      // connaît pas encore — l'isolation d'avant, sans les trois allers-retours
+      // sur la même ligne.
+      readRowTolerant<AmisProfileRow>(supabase, 'profiles', 'id', user.id, [
+        'work_seconds',
+        'friend_code',
+        'grade_level',
+        'trophies',
+        'best_trophies',
+        'squad_name',
+      ]),
       // [] tant que 079 n'est pas passée ou qu'aucun ami n'est accepté.
       supabase.rpc('friends_trophies'),
       // Amis acceptés + demandes reçues/envoyées (migration 019).
@@ -96,13 +104,6 @@ export default async function AmisPage() {
       supabase.rpc('my_streak'),
       // « En direct » : amis actifs dans les 20 dernières minutes (migration 160).
       supabase.rpc('friends_live'),
-      // Nom du groupe (squad_name, 176), select ISOLÉ : si la migration n'est
-      // pas passée, il échoue seul → nom par défaut, sans casser le reste.
-      supabase
-        .from('profiles')
-        .select('squad_name')
-        .eq('id', user.id)
-        .maybeSingle(),
       // Gemmes et filleuls (migration 183). Les deux helpers ont leur propre
       // repli si la migration n'est pas passée — pas de quoi casser l'onglet.
       fetchGems(supabase, user.id),
@@ -114,7 +115,7 @@ export default async function AmisPage() {
     referral = referralSummary(referralCounts.pending, referralCounts.activated)
     squadIds = [...squadSet]
     myFriendCode = String(profile?.friend_code ?? '')
-    const rawSquad = String(squadRow?.squad_name ?? '').trim()
+    const rawSquad = String(profile.squad_name ?? '').trim()
     squadName = rawSquad.length > 0 ? rawSquad : null
 
     // Présence réelle (vide si personne n'est actif). « Mon école » réelle via
@@ -185,7 +186,7 @@ export default async function AmisPage() {
         id: 'me',
         name: 'Toi',
         emoji: '🔥',
-        trophies: Math.max(0, Math.floor(Number(trophyRow?.trophies ?? 0))),
+        trophies: Math.max(0, Math.floor(Number(profile.trophies ?? 0))),
         isMe: true,
       },
       ...friendRanks,

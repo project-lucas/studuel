@@ -1,6 +1,7 @@
 import { notFound, redirect } from 'next/navigation'
 import QuestionEditor from '@/components/carnet/QuestionEditor'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import {
   isQuestionType,
   normalizeQuestionContent,
@@ -18,9 +19,7 @@ export default async function QuestionEditorPage({
 }) {
   const { id, qid } = await params
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/login')
 
   // La propriété est vérifiée par la jointure cours → owner (et par la RLS).

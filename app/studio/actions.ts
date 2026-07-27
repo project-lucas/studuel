@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday } from '@/lib/habits'
 import { awardXp } from '@/lib/wallet-server'
 
@@ -12,9 +13,7 @@ export async function recordStudySession(
   cardsCount: number,
 ): Promise<{ saved: boolean }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false }
 
   // Borne serveur : cards_count alimente l'XP (5 XP/carte), max 200 par session.

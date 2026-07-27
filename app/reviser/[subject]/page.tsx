@@ -2,6 +2,7 @@ import { notFound, redirect } from 'next/navigation'
 import SubjectTemplate from '@/components/reviser/SubjectTemplate'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import {
   getSubjectsCached,
   getProgrammeCached,
@@ -76,9 +77,7 @@ export default async function SubjectPage({
   const { subject: slug } = await params
   const { onglet } = await searchParams
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/login')
 
   // Profil (classe), catalogue des matières et contrôles annoncés en

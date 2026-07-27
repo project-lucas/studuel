@@ -10,6 +10,7 @@ import {
 import PageHeader from '@/components/PageHeader'
 import BackButton from '@/components/BackButton'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import type { FlashcardDeck } from '@/lib/types'
 
 export const metadata = { title: 'Studio — Studuel' }
@@ -25,9 +26,7 @@ export default async function StudioPage({
   const { tous } = await searchParams
   const supabase = await createClient()
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   let hasPremium = false
   let grade: string | null = null

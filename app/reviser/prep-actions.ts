@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { toDayKey } from '@/lib/streak'
 import {
   buildSessionDrafts,
@@ -44,9 +45,7 @@ export async function createControle(
   sessionDates?: string[],
 ): Promise<{ ok: boolean; controleId: string | null }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false, controleId: null }
 
   const cleanIds = Array.isArray(chapterIds)
@@ -122,9 +121,7 @@ export async function completePrepSession(
 ): Promise<{ ok: boolean }> {
   if (!UUID_RE.test(String(sessionId))) return { ok: false }
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false }
 
   const { data, error } = await supabase.rpc('complete_prep_session', {
@@ -146,9 +143,7 @@ export async function snoozeControleCard(
 ): Promise<{ ok: boolean }> {
   if (!UUID_RE.test(String(controleId))) return { ok: false }
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false }
 
   const { data, error } = await supabase.rpc('snooze_controle_card', {
@@ -170,9 +165,7 @@ export async function setControleNote(
   if (!UUID_RE.test(String(controleId))) return { ok: false }
   if (!Number.isFinite(note)) return { ok: false }
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false }
 
   const { data, error } = await supabase.rpc('set_controle_note', {
@@ -194,9 +187,7 @@ export async function dismissControleNote(
 ): Promise<{ ok: boolean }> {
   if (!UUID_RE.test(String(controleId))) return { ok: false }
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false }
 
   const { data, error } = await supabase.rpc('dismiss_controle_note', {
@@ -216,9 +207,7 @@ export async function deleteControle(
 ): Promise<{ ok: boolean }> {
   if (!UUID_RE.test(String(controleId))) return { ok: false }
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false }
 
   const { data, error } = await supabase.rpc('delete_controle', {

@@ -1,10 +1,13 @@
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { computeXp, levelFor } from '@/lib/xp'
 import { walletLevelInfo } from '@/lib/wallet'
 import { activityCutoff } from '@/lib/streak'
 import { isHudHidden } from '@/lib/top-hud-routes'
 import TopHud from './TopHud'
+
+type WalletRow = { xp: number | null; level: number | null }
 
 /**
  * Chargeur serveur du bandeau du haut : lit le solde de pièces et calcule le
@@ -21,10 +24,7 @@ export default async function TopHudLoader() {
   const pathname = (await headers()).get('x-pathname') ?? ''
   if (isHudHidden(pathname)) return null
 
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
 
   if (!user) {
     return <TopHud coins={null} level={null} levelTitle={null} progress={0} userLabel={null} />
@@ -36,16 +36,25 @@ export default async function TopHudLoader() {
   // du bandeau et le niveau du profil affichent TOUJOURS le même nombre — fini
   // le « Niveau 4 » en haut vs « Niv. 1 » sur la carte, qui venaient de deux
   // calculs concurrents (fenêtre d'activité récente ici, XP cumulée là-bas).
-  const [{ data: coinsRow }, { data: walletRow }] = await Promise.all([
-    supabase.from('profiles').select('coins').eq('id', user.id).maybeSingle(),
-    supabase
-      .from('user_wallet')
-      .select('xp, level')
-      .eq('user_id', user.id)
-      .maybeSingle(),
-  ])
+  //
+  // Les deux lectures tiennent en UNE requête : `user_wallet` est joint au
+  // profil par PostgREST (relation `user_id`), au lieu de deux allers-retours
+  // pour deux lignes qui parlent du même élève.
+  const { data: hudRow } = await supabase
+    .from('profiles')
+    .select('coins, user_wallet(xp, level)')
+    .eq('id', user.id)
+    .maybeSingle<{
+      coins: number | null
+      // PostgREST renvoie un objet quand il détecte une relation 1-1, un
+      // tableau sinon : on accepte les deux formes.
+      user_wallet: WalletRow | WalletRow[] | null
+    }>()
 
-  const coins = Math.max(0, Number(coinsRow?.coins) || 0)
+  const walletRow = Array.isArray(hudRow?.user_wallet)
+    ? (hudRow.user_wallet[0] ?? null)
+    : (hudRow?.user_wallet ?? null)
+  const coins = Math.max(0, Number(hudRow?.coins) || 0)
   const userLabel = user.user_metadata?.full_name || user.email || null
 
   // Portefeuille présent (cas normal d'un compte actif) → niveau du portefeuille.

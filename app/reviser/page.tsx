@@ -30,12 +30,11 @@ import OralTextsCard from '@/components/OralTextsCard'
 import CommuteBanner from '@/components/CommuteBanner'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { createClient } from '@/lib/supabase/server'
-import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
+import { readRowTolerant } from '@/lib/profile-read'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
-import { computeXp } from '@/lib/xp'
-import { fetchWallet } from '@/lib/wallet-server'
 import {
   toDayKey,
   computeStreak,
@@ -59,6 +58,21 @@ import type { CommuteSlot, Subject } from '@/lib/types'
 export const metadata = { title: 'Réviser — Studuel' }
 export const dynamic = 'force-dynamic'
 
+// Les colonnes du profil dont cet écran a besoin, toutes migrations confondues.
+// `tutorial_completed` (188) peut ne pas exister encore : elle ressort alors à
+// `undefined` et le tour guidé ne se lance simplement pas.
+type ProfileRow = {
+  full_name: string | null
+  grade_level: string | null
+  selected_subjects: unknown
+  commute_slots: unknown
+  profile_type: string | null
+  oral_texts: unknown
+  upcoming_exams: unknown
+  daily_goal_minutes: number | null
+  tutorial_completed: boolean | null
+}
+
 const EXAM_TITLES: Record<string, string> = {
   '3e': 'Objectif Brevet',
   '1re': 'Objectif Bac de français',
@@ -67,9 +81,7 @@ const EXAM_TITLES: Record<string, string> = {
 
 export default async function ReviserPage() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   if (!user) {
     return (
@@ -97,94 +109,21 @@ export default async function ReviserPage() {
     )
   }
 
-  // Avatar (082) et textes du bac oral (156) restent des requêtes ISOLÉES
-  // (colonne peut-être absente → dégradation propre sans casser le profil),
-  // mais lancées en PARALLÈLE du profil : elles ne dépendent de rien.
+  // --- UNE SEULE VAGUE ----------------------------------------------------------
+  // Tout ce qui ne dépend pas de la classe part ensemble. Avant, la page
+  // enchaînait deux vagues séquentielles (profil, PUIS le reste) et lisait la
+  // table `profiles` QUATRE fois pour la même ligne — un aller-retour par
+  // colonne « tardive » à isoler. `readRowTolerant` fait la même isolation,
+  // mais après coup et seulement en cas de besoin : une requête, toutes les
+  // colonnes, retrait automatique de celles que le schéma ne connaît pas
+  // encore (`tutorial_completed` de la 188 tant qu'elle n'est pas exécutée).
+  //
+  // Les gardes « pas de classe » / « compte parent » plus bas peuvent donc
+  // jeter le résultat de requêtes déjà parties. C'est assumé : elles ne
+  // concernent qu'un premier lancement ou un compte parent, et ces requêtes
+  // sont parallèles — elles ne coûtent aucun délai au cas courant.
   const [
-    { data: profile },
-    { data: avatarRow },
-    { data: oralRow },
-    { data: extraRow },
-    { data: trophyRow },
-    { data: tutorialRow, error: tutorialError },
-  ] = await Promise.all([
-    supabase
-      .from('profiles')
-      // `profile_type` vient de la 048 : une migration ANCIENNE et appliquée
-      // depuis longtemps, donc rien à isoler ici (la règle des colonnes
-      // tardives ne s'applique qu'aux migrations pas encore passées).
-      .select(
-        'full_name, grade_level, selected_subjects, commute_slots, profile_type',
-      )
-      .eq('id', user.id)
-      .maybeSingle(),
-    supabase.from('profiles').select('avatar').eq('id', user.id).maybeSingle(),
-    supabase
-      .from('profiles')
-      .select('oral_texts')
-      .eq('id', user.id)
-      .maybeSingle(),
-    // upcoming_exams (087) + daily_goal_minutes (048) isolés : une migration pas
-    // encore passée ne doit pas faire perdre grade_level (sinon un élève onboardé
-    // retombe à tort sur l'écran « Dis-nous ta classe »).
-    supabase
-      .from('profiles')
-      .select('upcoming_exams, daily_goal_minutes')
-      .eq('id', user.id)
-      .maybeSingle(),
-    // trophies (079) ISOLÉ : alimente la donnée « Trophées » du header ; si 079
-    // n'est pas passée, échoue seul → 0, sans casser le reste.
-    supabase.from('profiles').select('trophies').eq('id', user.id).maybeSingle(),
-    // tutorial_completed (188) ISOLÉ : si la migration n'est pas passée, on ne
-    // lance simplement pas le tour guidé (pas de harcèlement par défaut).
-    supabase
-      .from('profiles')
-      .select('tutorial_completed')
-      .eq('id', user.id)
-      .maybeSingle(),
-  ])
-  const avatarUri = avatarDataUri(normalizeAvatarConfig(avatarRow?.avatar), 128)
-  const oralTexts = normalizeOralList(
-    (oralRow as { oral_texts?: unknown } | null)?.oral_texts,
-  )
-
-  const grade = profile?.grade_level ?? null
-
-  // Un compte parent n'a pas de classe : sans ça, il tombait sur « Dis-nous ta
-  // classe » — un écran d'élève dont la seule issue est de s'en inventer une.
-  // Le test vit ICI plutôt qu'à la racine parce que le profil y est DÉJÀ
-  // chargé : le faire en amont coûtait une requête de plus à chaque lancement
-  // de l'app, pour tous les élèves, afin de router une poignée de parents.
-  if ((profile as { profile_type?: string | null } | null)?.profile_type === 'parent') {
-    redirect('/parents')
-  }
-
-  if (!grade) {
-    return (
-      <div>
-        <PageHeader title="Réviser" />
-        <Card className="mx-auto w-full max-w-md">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <GraduationCap className="size-4" /> Dis-nous ta classe
-            </CardTitle>
-            <CardDescription>
-              Ton programme dépend de ta classe — configure-la en 30 secondes.
-            </CardDescription>
-          </CardHeader>
-          <CardFooter>
-            <Button asChild>
-              <Link href="/onboarding">Choisir ma classe</Link>
-            </Button>
-          </CardFooter>
-        </Card>
-      </div>
-    )
-  }
-
-  const [
-    cachedSubjects,
-    cachedChapters,
+    profile,
     mastery,
     // Journées d'activité (tous types confondus) pour la flamme de série du
     // header — même définition que sur l'onglet Moi. On récupère au passage les
@@ -200,15 +139,19 @@ export default async function ReviserPage() {
     { data: workToday },
     { data: controleRows },
     { data: sessionRows },
-    // Portefeuille (migration 192) : LA source de vérité de l'XP/niveau. Lu ici
-    // pour que l'XP du header découle des mêmes actions traçables que le niveau
-    // du bandeau et du profil — pas d'un second calcul concurrent. Null tant que
-    // la 192 n'est pas passée → repli sur l'XP dérivée (computeXp) plus bas.
-    walletRow,
+    cachedSubjects,
   ] = await Promise.all([
-    // Catalogue servi par le cache serveur (identique pour tous les élèves).
-    getSubjectsCached(),
-    getGradeChaptersCached(grade),
+    readRowTolerant<ProfileRow>(supabase, 'profiles', 'id', user.id, [
+      'full_name',
+      'grade_level',
+      'selected_subjects',
+      'commute_slots',
+      'profile_type',
+      'oral_texts',
+      'upcoming_exams',
+      'daily_goal_minutes',
+      'tutorial_completed',
+    ]),
     getChapterMastery(supabase, user.id),
     // Fenêtre glissante : ces requêtes ne servent qu'à la série et à la
     // semaine — inutile de retransférer tout l'historique d'un élève assidu
@@ -267,8 +210,50 @@ export default async function ReviserPage() {
       )
       .eq('user_id', user.id)
       .returns<SessionRow[]>(),
-    fetchWallet(supabase, user.id),
+    // Catalogue servi par le cache serveur (identique pour tous les élèves).
+    getSubjectsCached(),
   ])
+
+  const oralTexts = normalizeOralList(profile.oral_texts)
+
+  const grade = profile.grade_level ?? null
+
+  // Un compte parent n'a pas de classe : sans ça, il tombait sur « Dis-nous ta
+  // classe » — un écran d'élève dont la seule issue est de s'en inventer une.
+  // Le test vit ICI plutôt qu'à la racine parce que le profil y est DÉJÀ
+  // chargé : le faire en amont coûtait une requête de plus à chaque lancement
+  // de l'app, pour tous les élèves, afin de router une poignée de parents.
+  if ((profile as { profile_type?: string | null } | null)?.profile_type === 'parent') {
+    redirect('/parents')
+  }
+
+  if (!grade) {
+    return (
+      <div>
+        <PageHeader title="Réviser" />
+        <Card className="mx-auto w-full max-w-md">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <GraduationCap className="size-4" /> Dis-nous ta classe
+            </CardTitle>
+            <CardDescription>
+              Ton programme dépend de ta classe — configure-la en 30 secondes.
+            </CardDescription>
+          </CardHeader>
+          <CardFooter>
+            <Button asChild>
+              <Link href="/onboarding">Choisir ma classe</Link>
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
+    )
+  }
+
+  // Seule requête qui dépend de la classe — et elle est servie par le cache
+  // serveur (unstable_cache, 5 min), donc sans aller-retour Supabase la plupart
+  // du temps. Tout le reste est déjà chargé au-dessus, en une vague.
+  const cachedChapters = await getGradeChaptersCached(grade)
 
   // Repli authentifié : cache froid ou migration 026 pas encore exécutée.
   let subjects: Subject[] = cachedSubjects
@@ -327,31 +312,12 @@ export default async function ReviserPage() {
   )
   const streak = computeStreak(activityDays)
   const week = weekProgress(activityDays)
-  const firstName =
-    String(profile?.full_name ?? '').split(' ')[0] || null
 
-  // Stats du header : XP et objectif du jour (minutes travaillées aujourd'hui vs
-  // objectif fixé à l'onboarding). L'XP vient du PORTEFEUILLE quand il existe
-  // (source unique, même chiffre que le niveau du bandeau et du profil) ; sinon
-  // repli sur l'XP dérivée de l'activité — le calcul que la 192 rejoue en SQL.
-  const derivedXp = computeXp({
-    quizzes: (testDays ?? []).map((t) => ({ score: Number(t.score ?? 0) })),
-    decks: (studyDays ?? []).map((s) => ({
-      cards_count: Number(s.cards_count ?? 0),
-    })),
-    lessonsCount: (lessonDays ?? []).length,
-    challengesXp: (challengeDays ?? []).reduce(
-      (sum, c) => sum + Number(c.xp ?? 0),
-      0,
-    ),
-  })
-  const xp =
-    walletRow && walletRow.xp != null
-      ? Math.max(0, Number(walletRow.xp) || 0)
-      : derivedXp
+  // Série + objectif du jour : les deux seules stats conservées sur cet écran
+  // (elles vivent désormais en tête de la carte « Ta semaine »). XP et trophées
+  // ne sont plus calculés ni affichés ici — le HUD et le Défi les portent.
   const todayMinutes = Math.floor(Number(workToday?.seconds ?? 0) / 60)
-  const goalMinutes = extraRow?.daily_goal_minutes ?? 15
-  const trophies = Math.max(0, Number(trophyRow?.trophies) || 0)
+  const goalMinutes = profile.daily_goal_minutes ?? 15
 
   // --- Matières suivies (profil onboarding) -----------------------------------
   const selected = Array.isArray(profile?.selected_subjects)
@@ -538,15 +504,13 @@ export default async function ReviserPage() {
   }))
 
   // Tour guidé : uniquement si la colonne existe (188) et dit « jamais vu ».
-  const tourAutoStart =
-    !tutorialError && tutorialRow?.tutorial_completed === false
+  // Colonne absente → `undefined`, donc jamais `=== false` : le tour ne se
+  // lance pas, exactement comme quand la lecture isolée échouait.
+  const tourAutoStart = profile.tutorial_completed === false
 
   return (
-    <div className="flex flex-col gap-4">
-      <TabHeader
-        title="Réviser"
-        subtitle="Ton programme, tes cours et ta file du jour."
-      />
+    <div className="flex flex-col gap-3">
+      <TabHeader title="Réviser" />
       {/* Tour guidé post-onboarding (spotlights sur la nav + bulles). */}
       <TourGuide autoStart={tourAutoStart} />
       {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
@@ -564,24 +528,15 @@ export default async function ReviserPage() {
       <ReviserSpaces
         reviser={
           <div className="flex flex-col gap-4">
-            {/* Accueil façon carnet : bandeau de salutation (prénom, classe,
-                série), puis les blocs d'action qui chevauchent le bandeau
-                (série de la semaine, file du jour, reprise), et enfin la
-                grille des matières. */}
+            {/* Plus de carte d'identité : les blocs d'action (série/semaine,
+                contrôles, reprise) arrivent d'emblée, puis la grille des
+                matières — pour que la session du jour soit au-dessus du pli. */}
             <SubjectsHome
-              firstName={firstName}
-              avatarUri={avatarUri}
-              streak={streak}
-              xp={xp}
-              trophies={trophies}
-              todayMinutes={todayMinutes}
-              goalMinutes={goalMinutes}
               subjects={ofLevel}
               selected={selected}
               grade={grade}
               progressBySlug={progressBySlug}
               examBySubject={examBySubject}
-              underHeader={false}
               topSlot={
                 <>
                   {/* 0. Boucle post-contrôle : demande de note le lendemain +
@@ -592,9 +547,10 @@ export default async function ReviserPage() {
                     today={today}
                     subjectMeta={subjectMeta}
                   />
-                  {/* 1. Ta série — la semaine d'activité mise en avant, tout en
-                      haut, dans une carte blanche qui chevauche le bandeau. */}
-                  <div className="rev-card rounded-3xl bg-white p-4 shadow-sm ring-1 ring-black/5">
+                  {/* 1. « Ta semaine » — LA carte d'action : bande série +
+                      objectif (éditable), semaine d'activité, et la session du
+                      jour avec son CTA « Faire ma session ». */}
+                  <div className="rev-card rounded-3xl bg-white p-3 shadow-sm ring-1 ring-black/5">
                     <WeekPlannerStrip
                       week={week}
                       controles={controles}
@@ -603,6 +559,8 @@ export default async function ReviserPage() {
                       subjects={examSubjects}
                       chaptersBySubject={chaptersBySubject}
                       existingExamChapters={[...existingExamChapters]}
+                      streak={streak}
+                      todayMinutes={todayMinutes}
                       goalMinutes={goalMinutes}
                       activeDays={[...activityDays]}
                     />

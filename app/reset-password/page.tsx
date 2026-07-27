@@ -9,7 +9,7 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import NewPasswordForm from '@/components/NewPasswordForm'
-import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 export const metadata = { title: 'Nouveau mot de passe — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -17,10 +17,7 @@ export const dynamic = 'force-dynamic'
 // Arrivée du lien email de réinitialisation (via /auth/callback).
 // Sans session, le lien a expiré ou a déjà servi : on propose d'en redemander un.
 export default async function ResetPasswordPage() {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   if (!user) {
     return (

@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import {
   canMoveChapter,
   emptyQuestionContent,
@@ -64,9 +65,7 @@ async function requireUserId(): Promise<{
   userId: string | null
 }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   return { supabase, userId: user?.id ?? null }
 }
 

@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { toDayKey } from '@/lib/streak'
 import {
@@ -24,15 +25,13 @@ import { awardGems, awardQuizProgression, awardXp } from '@/lib/wallet-server'
 export async function completeLesson(
   lessonId: string,
 ): Promise<{ saved: boolean }> {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false }
   // Même garde que markLessonActivity : un id non-UUID ferait échouer le cast
   // Postgres (saved:false silencieux) — on refuse tôt et proprement.
   if (!UUID_RE.test(String(lessonId))) return { saved: false }
 
+  const supabase = await createClient()
   const { error } = await supabase
     .from('lesson_completions')
     .upsert(
@@ -62,9 +61,7 @@ export async function markLessonActivity(
   }
 
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false }
 
   const { error } = await supabase.from('lesson_activities').upsert(
@@ -90,9 +87,7 @@ export async function recordReviewAnswers(
   answers: ReviewAnswer[],
 ): Promise<{ saved: boolean }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false }
 
   // Assainissement : formes valides seulement, dernière réponse par item,
@@ -147,9 +142,7 @@ export async function finishReviewSession(
   answers: ReviewAnswer[],
 ): Promise<{ saved: boolean; revancheCleared: boolean; coins: number }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false, revancheCleared: false, coins: 0 }
 
   const { saved } = await recordReviewAnswers(answers)
@@ -201,9 +194,7 @@ export async function finishExamBlanc(
   report: unknown,
 ): Promise<{ saved: boolean }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false }
 
   const clean = (n: number, max: number) =>
@@ -278,9 +269,7 @@ export async function recordLessonDefi(
   if (!UUID_RE.test(String(lessonId))) return { saved: false, xp: 0, gems: 0 }
 
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false, xp: 0, gems: 0 }
 
   const key = `${lessonId}:${toDayKey(new Date())}`
@@ -300,9 +289,7 @@ export async function recordLessonDefi(
 // pour un succès silencieux.
 export async function saveSelectedSubjects(slugs: string[]): Promise<void> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) throw new Error('non authentifié')
 
   const clean = Array.from(
@@ -332,9 +319,7 @@ export async function saveDailyGoalMinutes(
     return { ok: false }
   }
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { ok: false }
 
   const { error } = await supabase
@@ -357,10 +342,7 @@ export async function saveDailyGoalMinutes(
 type OralResult = { ok: boolean; texts: OralText[] }
 
 async function requireUserId(): Promise<string | null> {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   return user?.id ?? null
 }
 
@@ -433,9 +415,7 @@ export async function removeOralTextAction(id: string): Promise<OralResult> {
 // n'est pas passée — le tour se représentera, sans rien casser.
 export async function completeTutorial(): Promise<{ saved: boolean }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false }
 
   const { error } = await supabase

@@ -1,10 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useTransition } from 'react'
 import Link from 'next/link'
-import { Plus, CalendarDays, Check, ChevronRight } from 'lucide-react'
+import { Plus, CalendarDays, Check, Flame, Pencil, Play } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { toast } from '@/lib/toast'
+import { saveDailyGoalMinutes } from '@/app/reviser/actions'
+import { DAILY_GOAL_OPTIONS } from '@/lib/daily-goal'
 import { subjectTheme } from '@/lib/subject-style'
 import SubjectIcon from '@/components/SubjectIcon'
 import {
@@ -66,6 +69,8 @@ export default function WeekPlannerStrip({
   subjects,
   chaptersBySubject = {},
   existingExamChapters = [],
+  streak,
+  todayMinutes,
   goalMinutes,
   activeDays = [],
 }: {
@@ -76,11 +81,34 @@ export default function WeekPlannerStrip({
   subjects: SubjectLite[]
   chaptersBySubject?: Record<string, ChapterLite[]>
   existingExamChapters?: string[]
+  // Série d'activité + minutes travaillées aujourd'hui : les deux données
+  // conservées de l'ancienne carte d'identité, désormais en tête de cette carte.
+  streak: number
+  todayMinutes: number
   goalMinutes: number
   activeDays?: string[]
 }) {
   const [historyOpen, setHistoryOpen] = useState(false)
   const [addOpen, setAddOpen] = useState(false)
+
+  // Objectif quotidien éditable (logique reprise de l'ancien HeaderStats) :
+  // sélection optimiste, rollback + toast si l'enregistrement échoue.
+  const [goal, setGoal] = useState(goalMinutes)
+  const [editingGoal, setEditingGoal] = useState(false)
+  const [pendingGoal, startGoal] = useTransition()
+
+  const chooseGoal = (min: number) => {
+    sfx.tap()
+    setGoal(min)
+    setEditingGoal(false)
+    startGoal(async () => {
+      const res = await saveDailyGoalMinutes(min)
+      if (!res.ok) {
+        setGoal(goalMinutes)
+        toast('Objectif non enregistré — réessaie.', 'error')
+      }
+    })
+  }
 
   const weekDates = weekDatesOf(today)
 
@@ -107,22 +135,105 @@ export default function WeekPlannerStrip({
 
   return (
     <section aria-label="Ta semaine" className="px-1">
-      <div className="mb-2 flex items-center justify-between">
-        <h3 className="font-heading text-sm font-extrabold text-foreground">
-          Ta semaine
-        </h3>
+      {/* Bande fine en tête : série + objectif du jour éditable — les deux
+          données rescapées de l'ancienne carte d'identité violette. */}
+      <div className="mb-2.5 flex items-center justify-between gap-2 rounded-2xl bg-muted/40 px-3 py-2">
+        <span className="flex items-center gap-1.5 text-xs font-bold text-foreground">
+          <Flame className="size-4 text-orange-500" aria-hidden="true" />
+          Série {streak}
+        </span>
         <button
           type="button"
           onClick={() => {
             sfx.tap()
-            setHistoryOpen(true)
+            setEditingGoal((v) => !v)
           }}
-          aria-label="Voir mon historique de travail complet"
-          aria-haspopup="dialog"
-          className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white text-primary ring-1 ring-black/5 shadow-sm transition active:translate-y-px"
+          aria-haspopup="menu"
+          aria-expanded={editingGoal}
+          aria-label={`Objectif du jour : ${todayMinutes} sur ${goal} minutes — toucher pour changer`}
+          className="flex items-center gap-1 text-xs font-bold text-primary transition-colors hover:text-primary/80"
         >
-          <CalendarDays className="size-5" strokeWidth={2.4} aria-hidden="true" />
+          <span>
+            Objectif&nbsp;:{' '}
+            <span className="tabular-nums">
+              {todayMinutes}/{goal}
+            </span>{' '}
+            min
+          </span>
+          <Pencil className="size-3" aria-hidden="true" />
         </button>
+      </div>
+
+      {/* Sélecteur d'objectif quotidien, déplié sous la bande. */}
+      {editingGoal ? (
+        <div
+          role="menu"
+          aria-label="Choisir l'objectif quotidien"
+          className="mb-2.5 flex items-center gap-1.5 rounded-2xl bg-muted/40 px-3 py-2"
+        >
+          <span className="mr-auto text-[11px] font-bold text-muted-foreground">
+            Objectif / jour
+          </span>
+          {DAILY_GOAL_OPTIONS.map((min) => (
+            <button
+              key={min}
+              type="button"
+              role="menuitemradio"
+              aria-checked={goal === min}
+              disabled={pendingGoal}
+              onClick={() => chooseGoal(min)}
+              className={cn(
+                'min-h-8 rounded-full px-3 font-mono text-xs font-extrabold tabular-nums transition',
+                goal === min
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'bg-white text-foreground hover:bg-muted',
+              )}
+            >
+              {min}m
+            </button>
+          ))}
+        </div>
+      ) : null}
+
+      <div className="mb-1.5 flex flex-wrap items-center justify-between gap-2">
+        <h3 className="font-heading text-sm font-extrabold text-foreground">
+          Ta semaine
+        </h3>
+        {/* Actions de la carte, en haut à droite : ajouter un contrôle (le
+            bouton a migré du bas de la carte vers ici, près du calendrier) +
+            ouvrir l'historique complet. */}
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              setAddOpen(true)
+            }}
+            aria-haspopup="dialog"
+            className="flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border border-dashed border-primary/40 py-1.5 pr-3 pl-1.5 font-heading text-xs font-bold text-primary transition hover:bg-primary/5 active:translate-y-px"
+          >
+            <span className="flex size-5 items-center justify-center rounded-full bg-primary text-primary-foreground">
+              <Plus className="size-3.5" strokeWidth={2.8} aria-hidden="true" />
+            </span>
+            Nouveau contrôle
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              setHistoryOpen(true)
+            }}
+            aria-label="Voir mon historique de travail complet"
+            aria-haspopup="dialog"
+            className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white text-primary ring-1 ring-black/5 shadow-sm transition active:translate-y-px"
+          >
+            <CalendarDays
+              className="size-5"
+              strokeWidth={2.4}
+              aria-hidden="true"
+            />
+          </button>
+        </div>
       </div>
 
       {/* Ligne des 7 jours : UNE seule lettre par jour (dans la pastille), plus
@@ -134,7 +245,7 @@ export default function WeekPlannerStrip({
         {week.map((d, i) => {
           const sessionColor = colorByDate.get(weekDates[i])
           return (
-            <li key={i} className="flex flex-1 flex-col items-center gap-1.5">
+            <li key={i} className="flex flex-1 flex-col items-center gap-1">
               <span
                 className="relative"
                 aria-label={`${DAY_FULL[i]}${
@@ -144,7 +255,7 @@ export default function WeekPlannerStrip({
                 <span
                   aria-hidden="true"
                   className={cn(
-                    'flex size-8 items-center justify-center rounded-full text-xs font-bold uppercase transition',
+                    'flex size-7 items-center justify-center rounded-full text-xs font-bold uppercase transition',
                     d.done
                       ? 'bg-green-500/15 text-green-700 ring-1 ring-green-500/40'
                       : d.isFuture
@@ -184,7 +295,7 @@ export default function WeekPlannerStrip({
           href={nextHref}
           onClick={() => sfx.tap()}
           aria-label={`Lancer la session de préparation — ${controleTitle(next, nextName)}`}
-          className="group mt-3 flex min-w-0 items-center gap-2.5 rounded-2xl bg-white/70 px-3 py-2 ring-1 ring-black/5 transition active:scale-[0.99]"
+          className="group mt-2 flex min-w-0 items-center gap-2.5 rounded-2xl bg-white/70 px-3 py-2 ring-1 ring-black/5 transition active:scale-[0.99]"
         >
           <span
             aria-hidden="true"
@@ -216,38 +327,23 @@ export default function WeekPlannerStrip({
               </span>
             </span>
           </span>
-          <ChevronRight
-            className="size-4 shrink-0 text-muted-foreground/50 transition-transform group-hover:translate-x-0.5"
-            aria-hidden="true"
-          />
+          {/* CTA explicite : l'action principale de l'écran. Le tap sur TOUTE
+              la ligne lance déjà la session (le lien enveloppe le CTA), pas
+              d'écran intermédiaire. */}
+          <span className="font-heading flex shrink-0 items-center gap-1 rounded-full bg-primary px-3 py-1.5 text-xs font-extrabold whitespace-nowrap text-primary-foreground shadow-sm transition-transform group-active:translate-y-px">
+            <Play className="size-3.5 fill-current" aria-hidden="true" />
+            Faire ma session
+          </span>
         </Link>
       ) : null}
 
-      {/* Ligne compacte : à défaut de contrôle, un mot discret + le bouton
-          « Nouveau contrôle » qui ouvre la configuration + confirmation du plan. */}
-      <div className="mt-2.5 flex items-center justify-between gap-2">
-        {next ? (
-          <span aria-hidden="true" />
-        ) : (
-          <span className="text-xs font-medium text-muted-foreground">
-            Aucun contrôle prévu.
-          </span>
-        )}
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            setAddOpen(true)
-          }}
-          aria-haspopup="dialog"
-          className="flex min-h-11 shrink-0 items-center gap-1.5 rounded-full border border-dashed border-primary/40 py-1.5 pr-3 pl-1.5 font-heading text-xs font-bold text-primary transition hover:bg-primary/5 active:translate-y-px"
-        >
-          <span className="flex size-5 items-center justify-center rounded-full bg-primary text-primary-foreground">
-            <Plus className="size-3.5" strokeWidth={2.8} aria-hidden="true" />
-          </span>
-          Nouveau contrôle
-        </button>
-      </div>
+      {/* À défaut de contrôle, un mot discret sous la semaine (le bouton
+          d'ajout vit désormais dans l'en-tête, près du calendrier). */}
+      {!next ? (
+        <p className="mt-2.5 text-xs font-medium text-muted-foreground">
+          Aucun contrôle prévu.
+        </p>
+      ) : null}
 
       {addOpen ? (
         <AddExamSheet
@@ -255,7 +351,7 @@ export default function WeekPlannerStrip({
           chaptersBySubject={chaptersBySubject}
           existing={new Set(existingExamChapters)}
           today={today}
-          goalMinutes={goalMinutes}
+          goalMinutes={goal}
           onClose={() => setAddOpen(false)}
         />
       ) : null}

@@ -57,6 +57,93 @@ export const getGradeChaptersCached = unstable_cache(
   { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
 )
 
+// Rattachements quiz → leçon → chapitre. C'est la charpente du catalogue :
+// quelques centaines de lignes de deux colonnes, RIGOUREUSEMENT identiques pour
+// tous les élèves. Elles étaient pourtant relues à chaque calcul de maîtrise,
+// et surtout EN SÉRIE (les quiz joués, puis leurs leçons, puis leurs chapitres) :
+// trois allers-retours enchaînés au cœur du chargement de Réviser et du Défi.
+//
+// Mises en cache ici, le calcul de maîtrise n'a plus qu'à lire l'historique de
+// l'élève — une seule vague. Tableaux de paires (et non `Map`) : le cache de
+// Next sérialise ce qu'il stocke.
+export const getQuizLessonPairsCached = unstable_cache(
+  async (): Promise<[string, string][]> => {
+    const { data } = await anonClient()
+      .from('quizzes')
+      .select('id, lesson_id')
+      .returns<{ id: string; lesson_id: string | null }[]>()
+    return (data ?? []).flatMap((q) => (q.lesson_id ? [[q.id, q.lesson_id]] : []))
+  },
+  ['catalog-quiz-lesson'],
+  { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
+)
+
+export const getLessonChapterPairsCached = unstable_cache(
+  async (): Promise<[string, string][]> => {
+    const { data } = await anonClient()
+      .from('lessons')
+      .select('id, chapter_id')
+      .returns<{ id: string; chapter_id: string | null }[]>()
+    return (data ?? []).flatMap((l) =>
+      l.chapter_id ? [[l.id, l.chapter_id]] : [],
+    )
+  },
+  ['catalog-lesson-chapter'],
+  { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
+)
+
+// Titre de chaque chapitre, et nombre de questions de chaque quiz. Deux autres
+// faits de catalogue que le choix du « chapitre du jour » relisait en série à
+// chaque ouverture du Défi. Le comptage se fait ICI, côté serveur : le cache ne
+// stocke qu'une paire par quiz (quelques centaines), jamais les ~2 900 lignes
+// de `quiz_questions`.
+export const getChapterTitlesCached = unstable_cache(
+  async (): Promise<[string, string][]> => {
+    const { data } = await anonClient()
+      .from('chapters')
+      .select('id, title')
+      .returns<{ id: string; title: string }[]>()
+    return (data ?? []).map((c) => [String(c.id), String(c.title)])
+  },
+  ['catalog-chapter-titles'],
+  { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
+)
+
+export const getQuizQuestionCountsCached = unstable_cache(
+  async (): Promise<[string, number][]> => {
+    const { data } = await anonClient()
+      .from('quiz_questions')
+      .select('quiz_id')
+      .returns<{ quiz_id: string }[]>()
+    const counts = new Map<string, number>()
+    for (const row of data ?? []) {
+      const id = String(row.quiz_id)
+      counts.set(id, (counts.get(id) ?? 0) + 1)
+    }
+    return [...counts]
+  },
+  ['catalog-quiz-question-counts'],
+  { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
+)
+
+// Quiz jouables d'une classe (le vivier du Défi) — catalogue, donc identique
+// pour tous les élèves de ce niveau.
+export const getGradeQuizzesCached = unstable_cache(
+  async (
+    grade: string,
+    horsNiveau: string,
+  ): Promise<{ id: string; subject: string; lesson_id: string | null }[]> => {
+    const { data } = await anonClient()
+      .from('quizzes')
+      .select('id, subject, lesson_id')
+      .in('grade_level', [grade, horsNiveau])
+      .returns<{ id: string; subject: string; lesson_id: string | null }[]>()
+    return data ?? []
+  },
+  ['catalog-grade-quizzes'],
+  { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
+)
+
 // Programme complet d'une matière pour un niveau : chapitres → leçons → quiz
 // rattachés. C'est LA structure de la page matière (template structure des
 // cours). select('*') sur les leçons : tolère une base sans la migration 025.

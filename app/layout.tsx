@@ -25,7 +25,7 @@ import DailyLoginReward from "@/components/DailyLoginReward";
 import BackGuard from "@/components/BackGuard";
 // Toasts globaux (« Enregistré ✓ ») : file lib/toast, aucun provider.
 import Toaster from "@/components/Toaster";
-import { createClient } from "@/lib/supabase/server";
+import { getCurrentUser } from "@/lib/supabase/user";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,10 +76,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   // Utilisateur courant pour l'affichage du lien compte dans la navigation.
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  // Vérification LOCALE du jeton (getClaims) et mémoïsée pour la requête : ce
+  // layout, le bandeau du haut et la page se partagent une seule résolution,
+  // là où chacun payait auparavant son propre aller-retour vers l'Auth API.
+  const user = await getCurrentUser();
   const userLabel = user?.user_metadata?.full_name || user?.email || null;
 
   return (

@@ -2,6 +2,7 @@ import 'server-only'
 
 import { cookies } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { claimReferral } from '@/lib/gems-access'
 import { REFERRAL_COOKIE } from '@/lib/gems'
 
@@ -41,9 +42,7 @@ export async function claimPendingReferral(): Promise<void> {
     if (!code) return
 
     const supabase = await createClient()
-    const {
-      data: { user },
-    } = await supabase.auth.getUser()
+    const user = await getCurrentUser()
     // Pas encore de session : on GARDE le cookie pour le prochain point
     // d'entrée. Le supprimer ici reviendrait à jeter le parrainage.
     if (!user) return

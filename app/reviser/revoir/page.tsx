@@ -12,6 +12,7 @@ import PageHeader from '@/components/PageHeader'
 import ReviewPlayer, { type ReviewPlayItem } from '@/components/ReviewPlayer'
 import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { getSubjectsCached } from '@/lib/catalog'
 import { toDayKey } from '@/lib/streak'
 import { getReviewItems, reviewQueue } from '@/lib/srs'
@@ -40,9 +41,7 @@ export default async function RevoirPage({
 }) {
   const { matiere } = await searchParams
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   if (!user) {
     return (

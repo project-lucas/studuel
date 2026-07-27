@@ -2,17 +2,24 @@ import { describe, it, expect } from 'vitest'
 import type { Subject } from '@/lib/types'
 import {
   EMPTY_ANSWERS,
+  FAST_PATH,
+  OFF_PATH,
+  STEPS_BEFORE_PLAY,
+  WELCOME_STEPS,
   canAdvance,
   defaultSelectedForGrade,
   isDailyGoalMinutes,
   makePlacement,
   minutesToSessions,
+  nextStep,
   parseAnswers,
   placementLevel,
+  screensBeforePlay,
   serializeAnswers,
   stepProgress,
   subjectsForGrade,
   type OnboardingAnswers,
+  type WelcomeStep,
 } from '@/lib/welcome'
 
 function subject(slug: string, levels: string[]): Subject {
@@ -97,10 +104,12 @@ describe('canAdvance', () => {
 })
 
 describe('stepProgress', () => {
-  it('suit les pourcentages du design', () => {
-    expect(stepProgress('source')).toBeCloseTo(0.12)
-    expect(stepProgress('dailyGoal')).toBeCloseTo(0.6)
-    expect(stepProgress('signup')).toBeCloseTo(0.96)
+  it('suit le chemin réellement parcouru', () => {
+    // Recalé sur le nouvel ordre : le jeu arrive tôt, le compte au milieu,
+    // le confort ensuite. Une barre calée sur l'ancien ordre mentirait.
+    expect(stepProgress('grade')).toBeCloseTo(0.2)
+    expect(stepProgress('signup')).toBeCloseTo(0.55)
+    expect(stepProgress('dailyGoal')).toBeCloseTo(0.8)
   })
 
   it('masque la barre sur accueil, profil, motivation et plan', () => {
@@ -185,5 +194,102 @@ describe('parseAnswers / serializeAnswers', () => {
     expect(parsed.subjects).toEqual(['maths'])
     expect(parsed.dailyGoalMinutes).toBe(10)
     expect(parsed.placement).toBeNull()
+  })
+})
+
+// --- Ordre du parcours : « jouer d'abord, questionner ensuite » --------------
+
+function answers(over: Partial<OnboardingAnswers> = {}): OnboardingAnswers {
+  return { ...EMPTY_ANSWERS, ...over }
+}
+
+describe('chemin par défaut', () => {
+  it('ne met que trois écrans avant le premier jeu', () => {
+    // GARDE-FOU produit : chaque écran ajouté ici se paie en abandons. Ce test
+    // doit échouer si quelqu'un en rajoute un sans décision explicite.
+    expect(screensBeforePlay()).toBe(3)
+    expect(STEPS_BEFORE_PLAY).toEqual(['intro', 'profil', 'grade'])
+  })
+
+  it('place le quiz de placement juste après la classe', () => {
+    const i = FAST_PATH.indexOf('placementQuiz')
+    const g = FAST_PATH.indexOf('grade')
+    expect(i - g).toBe(2) // grade → placementIntro → placementQuiz
+  })
+
+  it('demande le compte APRÈS le jeu, pas avant', () => {
+    expect(FAST_PATH.indexOf('signup')).toBeGreaterThan(
+      FAST_PATH.indexOf('placementQuiz'),
+    )
+  })
+
+  it('renvoie tout le confort après la création du compte', () => {
+    const signup = FAST_PATH.indexOf('signup')
+    for (const s of ['goal', 'dailyGoal', 'school', 'notifications'] as WelcomeStep[]) {
+      expect(FAST_PATH.indexOf(s)).toBeGreaterThan(signup)
+    }
+  })
+
+  it('n’a ni doublon ni écran inconnu', () => {
+    expect(new Set(FAST_PATH).size).toBe(FAST_PATH.length)
+    for (const s of FAST_PATH) expect(WELCOME_STEPS).toContain(s)
+    for (const s of OFF_PATH) expect(WELCOME_STEPS).toContain(s)
+  })
+
+  it('couvre chaque écran du design, sur le chemin ou hors chemin', () => {
+    // Rien ne doit être perdu : un écran absent des deux listes serait du code
+    // mort qu'on ne saurait plus remettre.
+    const known = new Set([...FAST_PATH, ...OFF_PATH])
+    for (const s of WELCOME_STEPS) expect(known.has(s)).toBe(true)
+  })
+
+  it('termine par le plan', () => {
+    expect(FAST_PATH[FAST_PATH.length - 1]).toBe('plan')
+  })
+})
+
+describe('nextStep', () => {
+  it('suit le chemin pour un élève', () => {
+    const a = answers({ profileType: 'eleve' })
+    expect(nextStep('intro', a)).toBe('profil')
+    expect(nextStep('profil', a)).toBe('grade')
+    expect(nextStep('grade', a)).toBe('placementIntro')
+    expect(nextStep('placementQuiz', a)).toBe('signup')
+  })
+
+  it('court-circuite tout l’élève pour un parent', () => {
+    const a = answers({ profileType: 'parent' })
+    expect(nextStep('profil', a)).toBe('signup')
+    // Un parent n'a pas de plan élève : son parcours s'arrête au compte.
+    expect(nextStep('signup', a)).toBeNull()
+  })
+
+  it('renvoie null à la fin du parcours', () => {
+    expect(nextStep('plan', answers({ profileType: 'eleve' }))).toBeNull()
+  })
+
+  it('rattrape un écran hors chemin sans bloquer', () => {
+    // Un brouillon repris d'une version antérieure peut pointer un écran
+    // retiré du chemin : il doit rejoindre le parcours, pas rester coincé.
+    for (const s of OFF_PATH) {
+      expect(nextStep(s, answers({ profileType: 'eleve' }))).toBe('signup')
+    }
+  })
+})
+
+describe('stepProgress sur le nouvel ordre', () => {
+  it('progresse dans l’ordre du chemin', () => {
+    const values = FAST_PATH.map(stepProgress).filter(
+      (v): v is number => v !== null,
+    )
+    for (let i = 1; i < values.length; i++) {
+      expect(values[i]).toBeGreaterThan(values[i - 1])
+    }
+  })
+
+  it('a déjà bien avancé au moment du jeu', () => {
+    // La barre doit dire « on y est presque » quand le quiz arrive, sinon les
+    // trois premiers écrans paraissent être le début d'un long tunnel.
+    expect(stepProgress('placementQuiz')).toBeGreaterThanOrEqual(0.3)
   })
 })

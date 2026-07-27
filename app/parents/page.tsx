@@ -4,6 +4,7 @@ import { Clock, ExternalLink, HeartHandshake, MonitorPlay } from 'lucide-react'
 import ChildReport from '@/components/parents/ChildReport'
 import LinkChildForm from '@/components/parents/LinkChildForm'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { computeStreak, weekProgress } from '@/lib/streak'
 import { GRID_PATTERN } from '@/lib/subject-style'
 import { childDisplayNames, type ChildDashboard } from '@/lib/parents'
@@ -28,9 +29,7 @@ type ChildRow = { child_id: string; full_name: string | null }
 
 export default async function ParentsPage() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/login')
 
   // Garde de rôle : l'espace parents ne s'ouvre pas à un compte élève (le code

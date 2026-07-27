@@ -179,6 +179,44 @@ export function autoHabitLogs(
   })
 }
 
+// Applique EN MÉMOIRE les validations automatiques du jour sur les logs lus en
+// base. Évite d'attendre l'écriture avant de pouvoir relire : /moi chargeait
+// ses logs APRÈS `syncAutoHabits`, deux allers-retours en série pour une
+// écriture dont il connaissait déjà le contenu. Il les charge maintenant en
+// parallèle et superpose ici le résultat — même affichage, deux vagues de moins.
+//
+// Une ligne auto écrase la ligne stockée du même (habitude, jour) : c'est
+// exactement ce que fait l'upsert `on_conflict=habit_id,date` côté base.
+export function mergeHabitLogs(
+  stored: HabitLog[],
+  auto: AutoHabitLog[],
+): HabitLog[] {
+  if (auto.length === 0) return stored
+  const key = (l: { habit_id: string; date: string }) => `${l.habit_id}|${l.date}`
+  const overrides = new Map(auto.map((l) => [key(l), l]))
+
+  const merged: HabitLog[] = stored.map((log) => {
+    const auto = overrides.get(key(log))
+    if (!auto) return log
+    overrides.delete(key(log))
+    return { ...log, completed: auto.completed, auto_validated: true }
+  })
+
+  // Validations d'aujourd'hui qui n'existaient pas encore en base : l'`id`
+  // définitif sera celui de l'upsert, mais rien ne le lit avant le prochain
+  // chargement — une clé locale stable suffit pour le rendu.
+  for (const [k, log] of overrides) {
+    merged.push({
+      id: `auto:${k}`,
+      habit_id: log.habit_id,
+      date: log.date,
+      completed: log.completed,
+      auto_validated: true,
+    })
+  }
+  return merged
+}
+
 // Écrit les validations automatiques du jour. Les sessions sont FOURNIES par
 // l'appelant : /moi les a déjà chargées pour ses statistiques, les redemander
 // coûtait 4 allers-retours réseau en SÉRIE après le chargement parallèle.

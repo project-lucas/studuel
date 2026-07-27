@@ -12,6 +12,7 @@ import PageHeader from '@/components/PageHeader'
 import ExamBlancPlayer from '@/components/ExamBlancPlayer'
 import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { getSubjectsCached } from '@/lib/catalog'
 import { examsForProfile } from '@/lib/exams'
 import { composeExam, type ExamQuestion } from '@/lib/exam-blanc'
@@ -45,9 +46,7 @@ export default async function ExamenBlancPage({
 }) {
   const { subject: subjectParam } = await searchParams
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   if (!user) {
     return (

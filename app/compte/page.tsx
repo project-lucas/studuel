@@ -21,6 +21,7 @@ import BackButton from '@/components/BackButton'
 import NotificationsOptIn from '@/components/NotificationsOptIn'
 import GradeSelector from '@/components/GradeSelector'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { signOut } from '@/app/login/actions'
 import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
 
@@ -41,9 +42,7 @@ const TIER_LABELS: Record<string, string> = {
 
 export default async function ComptePage() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   if (!user) redirect('/login')
 

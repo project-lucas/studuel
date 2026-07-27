@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { awardQuizProgression } from '@/lib/wallet-server'
 
@@ -13,9 +14,7 @@ export async function recordTestSession(
   total: number,
 ): Promise<{ saved: boolean }> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return { saved: false }
 
   // Bornes serveur (le score alimente l'XP et les badges) : total 0..50,

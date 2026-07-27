@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { normalizeAvatarConfig } from '@/lib/avatar'
 import { fallbackCatalog, normalizeCatalog } from '@/lib/avatar-studio'
 import { workLevel } from '@/lib/work-level'
@@ -15,9 +16,7 @@ export const dynamic = 'force-dynamic'
 // n'est pas passée, tout dégrade proprement : catalogue de repli gratuit.
 export default async function AvatarStudioPage() {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) redirect('/login')
 
   // Conditions remplies → items crédités AVANT la lecture des possessions.

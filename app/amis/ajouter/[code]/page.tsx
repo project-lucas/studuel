@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button'
 import FriendAddCard from '@/components/FriendAddCard'
 import BackButton from '@/components/BackButton'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 export const metadata = { title: 'Ajouter un ami — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -57,9 +58,7 @@ export default async function AjouterAmiPage({
   }
 
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   if (!user) {
     return (

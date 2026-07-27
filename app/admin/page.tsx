@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ChevronRight, MonitorPlay } from 'lucide-react'
+import { ChevronRight, LineChart, MonitorPlay } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
 import type { Subject } from '@/lib/types'
 
@@ -28,6 +28,24 @@ export default async function AdminHomePage() {
 
   return (
     <div className="space-y-6">
+      {/* La rétention passe DEVANT le catalogue : c'est la page à ouvrir chaque
+          matin, et elle décide de ce qu'il vaut la peine de produire ensuite. */}
+      <Link
+        href="/admin/retention"
+        className="flex items-center justify-between gap-3 rounded-2xl border-2 border-primary/40 bg-primary/10 p-4 transition-colors hover:bg-primary/15"
+      >
+        <span className="flex items-center gap-3">
+          <LineChart className="size-5 shrink-0 text-primary" aria-hidden="true" />
+          <span>
+            <span className="font-heading block font-bold">Rétention</span>
+            <span className="block text-sm text-muted-foreground">
+              D1 / D7 / D30, entonnoir d’arrivée, engagement
+            </span>
+          </span>
+        </span>
+        <ChevronRight className="size-5 shrink-0 text-muted-foreground" />
+      </Link>
+
       <header>
         <h1 className="font-heading text-2xl font-bold">Contenu pédagogique</h1>
         <p className="mt-1 text-sm text-muted-foreground">

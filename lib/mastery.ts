@@ -1,4 +1,8 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
+import {
+  getQuizLessonPairsCached,
+  getLessonChapterPairsCached,
+} from '@/lib/catalog'
 
 // Progression par chapitre :
 // - quiz terminé → meilleur score (0..1), seul moyen de dépasser 30 %
@@ -90,9 +94,17 @@ export async function getChapterMastery(
 
   // user_id explicite : la RLS le garantit aujourd'hui, mais la couche sociale
   // ouvrira la lecture croisée des sessions — la maîtrise reste personnelle.
+  //
+  // UNE SEULE VAGUE : l'historique personnel de l'élève ET la charpente du
+  // catalogue partent ensemble. Cette dernière est mise en cache serveur
+  // (identique pour tous), là où la fonction enchaînait auparavant trois
+  // allers-retours en série — les quiz joués, puis leurs leçons, puis leurs
+  // chapitres — au beau milieu du chargement de Réviser et du Défi.
   const [
     { data: sessions, error: sessErr },
     { data: completions, error: compErr },
+    quizLessonPairs,
+    lessonChapterPairs,
   ] = await Promise.all([
     supabase
       .from('test_sessions')
@@ -104,6 +116,8 @@ export async function getChapterMastery(
       .select('lesson_id')
       .eq('user_id', userId)
       .returns<{ lesson_id: string }[]>(),
+    getQuizLessonPairsCached(),
+    getLessonChapterPairsCached(),
   ])
   // Journaliser une vraie panne : sans ça, une erreur Supabase transitoire est
   // indiscernable d'« élève sans historique » et fait retomber toute la maîtrise
@@ -119,34 +133,50 @@ export async function getChapterMastery(
     bestByQuiz.set(s.quiz_id, Math.max(bestByQuiz.get(s.quiz_id) ?? 0, ratio))
   }
 
-  // Quiz → leçon.
-  const quizLessons = new Map<string, string>()
-  if (bestByQuiz.size > 0) {
+  // Quiz → leçon → chapitre, lus dans la charpente déjà en main.
+  let quizLessons = new Map(quizLessonPairs)
+  let chapterByLesson = new Map(lessonChapterPairs)
+  const completedLessons = new Set((completions ?? []).map((c) => c.lesson_id))
+
+  if (bestByQuiz.size === 0 && completedLessons.size === 0) return mastery
+
+  // Repli : catalogue en cache froid, ou migration 026 (lecture anon) pas
+  // exécutée. On retombe sur les lectures ciblées d'avant plutôt que de rendre
+  // une maîtrise vide — qui ferait retomber les couronnes de l'élève à zéro.
+  if (quizLessons.size === 0 || chapterByLesson.size === 0) {
     const { data: quizzes } = await supabase
       .from('quizzes')
       .select('id, lesson_id')
       .in('id', [...bestByQuiz.keys()])
       .returns<{ id: string; lesson_id: string | null }[]>()
-    for (const q of quizzes ?? []) {
-      if (q.lesson_id) quizLessons.set(q.id, q.lesson_id)
-    }
+    quizLessons = new Map(
+      (quizzes ?? []).flatMap((q) => (q.lesson_id ? [[q.id, q.lesson_id]] : [])),
+    )
+    const lessonIds = [
+      ...new Set([...quizLessons.values(), ...completedLessons]),
+    ]
+    if (lessonIds.length === 0) return mastery
+    const { data: lessons } = await supabase
+      .from('lessons')
+      .select('id, chapter_id')
+      .in('id', lessonIds)
+      .returns<{ id: string; chapter_id: string }[]>()
+    chapterByLesson = new Map((lessons ?? []).map((l) => [l.id, l.chapter_id]))
   }
 
-  // Toutes les leçons concernées (quiz joués + leçons terminées) → chapitre.
-  const completedLessons = new Set((completions ?? []).map((c) => c.lesson_id))
-  const allLessonIds = Array.from(
-    new Set([...quizLessons.values(), ...completedLessons]),
-  )
-  if (allLessonIds.length === 0) return mastery
+  return assembleMastery(bestByQuiz, completedLessons, quizLessons, chapterByLesson)
+}
 
-  const { data: lessons } = await supabase
-    .from('lessons')
-    .select('id, chapter_id')
-    .in('id', allLessonIds)
-    .returns<{ id: string; chapter_id: string }[]>()
-  const chapterByLesson = new Map(
-    (lessons ?? []).map((l) => [l.id, l.chapter_id]),
-  )
+// Assemblage pur : des meilleurs scores par quiz et des leçons terminées vers
+// la maîtrise par chapitre. Séparé de l'accès base pour être testable — et
+// partagé par le chemin rapide (charpente en cache) et le repli.
+export function assembleMastery(
+  bestByQuiz: Map<string, number>,
+  completedLessons: Set<string>,
+  quizLessons: Map<string, string>,
+  chapterByLesson: Map<string, string>,
+): ChapterMastery {
+  const mastery: ChapterMastery = new Map()
 
   const upsert = (chapterId: string, patch: Partial<ChapterProgress>) => {
     const current = mastery.get(chapterId) ?? {

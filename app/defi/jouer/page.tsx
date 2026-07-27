@@ -18,6 +18,7 @@ import {
 } from '@/lib/defi-modes'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { activityCutoff, computeStreak, toDayKey } from '@/lib/streak'
 import { getChapterMastery } from '@/lib/mastery'
 import { normalizeExamList, activeExams, examChapterIds } from '@/lib/next-exam'
@@ -64,9 +65,7 @@ export default async function DefiJouerPage({
         : null
 
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
 
   if (!user) {
     return (

@@ -1,12 +1,11 @@
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 
 // Enregistre (ou remplace) l'abonnement push de l'appareil courant.
 // Corps JSON : { endpoint, keys: { p256dh, auth } } (format PushSubscription).
 export async function POST(request: Request): Promise<Response> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return new Response(null, { status: 401 })
 
   let body: unknown
@@ -67,9 +66,7 @@ export async function POST(request: Request): Promise<Response> {
 // Désabonnement de l'appareil courant.
 export async function DELETE(request: Request): Promise<Response> {
   const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getCurrentUser()
   if (!user) return new Response(null, { status: 401 })
 
   let endpoint: string | null = null

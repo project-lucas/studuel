@@ -6,7 +6,13 @@
  * React : `lib/` reste pur et testable, la correspondance clé → dessin vit dans
  * `components/Navigation.tsx`.
  */
-export type NavIconName = 'gift' | 'users' | 'house' | 'swords' | 'user' | 'gem'
+export type NavIconName =
+  | 'gift'
+  | 'users'
+  | 'house'
+  | 'swords'
+  | 'user'
+  | 'crown'
 
 /**
  * Rôle de l'onglet dans la direction artistique : `action` = violet (le geste),
@@ -29,7 +35,9 @@ export const NAV_TABS: NavTab[] = [
   { name: 'Réviser', path: '/reviser', icon: 'house', role: 'action' },
   { name: 'Défi', path: '/defi', icon: 'swords', role: 'action', center: true },
   { name: 'Moi', path: '/moi', icon: 'user', role: 'action' },
-  { name: 'Trésor', path: '/tresor', icon: 'gem', role: 'recompense' },
+  // Trésor = page de conversion (abonnement) : la couronne dit « passe premium »
+  // là où le diamant disait « monnaie / butin » — rôle tenu par le Coffre.
+  { name: 'Trésor', path: '/tresor', icon: 'crown', role: 'recompense' },
 ]
 
 /** Index de l'onglet courant, -1 si on n'est pas sur un onglet principal. */

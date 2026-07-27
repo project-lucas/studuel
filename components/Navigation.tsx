@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { CircleUser, Gem, Gift, House, Swords, User, Users } from 'lucide-react'
+import type { ReactNode } from 'react'
+import { CircleUser, Crown, Gift, House, Swords, User, Users } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
@@ -20,7 +21,7 @@ const ICONS: Record<NavIconName, LucideIcon> = {
   house: House,
   swords: Swords,
   user: User,
-  gem: Gem,
+  crown: Crown,
 }
 
 /**
@@ -34,7 +35,16 @@ const ACTIVE_FILL: Record<string, string> = {
   recompense: 'fill-highlight/45',
 }
 
-export default function Navigation({ userLabel }: { userLabel: string | null }) {
+export default function Navigation({
+  userLabel,
+  // Pastille d'appel du Coffre (façon Clash Royale), rendue côté SERVEUR par le
+  // layout sous <Suspense> : la barre s'affiche tout de suite, la pastille se
+  // pose quand la réponse arrive. `null` quand il n'y a rien à récupérer.
+  chestBadge = null,
+}: {
+  userLabel: string | null
+  chestBadge?: ReactNode
+}) {
   const pathname = usePathname()
 
   // Parcours d'accueil plein écran (façon Duolingo) : aucune barre de nav.
@@ -46,7 +56,6 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
   // Halo violet unique qui « voyage » vers l'onglet actif (barre mobile) : sa
   // position horizontale se dérive de l'index actif, le CSS anime le glissement.
   const activeIndex = links.findIndex(({ path }) => isActive(path))
-  const activeIsCenter = activeIndex >= 0 && Boolean(links[activeIndex].center)
 
   const accountHref = userLabel ? '/compte' : '/login'
   const accountActive = isActive('/compte') || isActive('/login')
@@ -56,16 +65,17 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
       {/* La barre du haut sur mobile (pièces + niveau + compte) est portée par
           TopHud (bandeau de jeu, toujours visible), rendu par le layout. */}
 
-      {/* Barre d'onglets fixée en bas, Défi surélevé au centre */}
+      {/* Barre d'onglets fixée en bas : icônes seules, toutes sur la même ligne */}
       <nav className="tab-bar fixed inset-x-0 bottom-0 z-50 border-t pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
-        <ul className="relative flex items-end">
+        {/* `overflow-hidden` = garde-fou : même si le halo grossissait, il ne
+            pourrait plus déborder au-dessus du liseré doré de la barre. */}
+        <ul className="relative flex items-center overflow-hidden">
           {/* Halo violet qui suit l'onglet actif — glisse en douceur d'un onglet
               à l'autre à chaque changement de route. */}
           {activeIndex >= 0 && (
             <span
               aria-hidden="true"
               className="tab-glow"
-              data-center={activeIsCenter ? '' : undefined}
               style={{ left: `${((activeIndex + 0.5) / links.length) * 100}%` }}
             />
           )}
@@ -81,42 +91,32 @@ export default function Navigation({ userLabel }: { userLabel: string | null }) 
                   aria-label={name}
                   aria-current={active ? 'page' : undefined}
                   data-tour={`tab-${path.slice(1)}`}
-                  className="flex flex-col items-center justify-end gap-0.5 pt-1 pb-1.5 transition-all active:scale-95"
+                  className="flex items-center justify-center py-2.5 transition-transform active:scale-95"
                 >
-                  <span
-                    className={cn(
-                      'flex w-16 items-center justify-center',
-                      // Onglet central (Défi) surélevé façon écran d'arène.
-                      center ? 'tab-center h-12' : 'h-10',
-                    )}
-                  >
-                    <Icon
-                      aria-hidden="true"
-                      strokeWidth={active ? 2.25 : 1.75}
-                      className={cn(
-                        'transition-all',
-                        center ? 'size-8' : 'size-6',
-                        active
-                          ? cn(
-                              'scale-110 text-primary',
-                              ACTIVE_FILL[role],
-                              center && 'tab-center-active',
-                            )
-                          : 'fill-transparent text-muted-foreground/70',
-                      )}
-                    />
-                  </span>
-                  {/* Libellé texte sous chaque icône : l'onglet ne se devine plus,
-                      il se lit. L'état actif se marque AUSSI par le texte (violet
-                      marqué) en plus de l'icône (couleurs vs grisé) — un repère
-                      redondant, jamais porté par la seule couleur de l'icône. */}
-                  <span
-                    className={cn(
-                      'font-heading text-[0.6rem] leading-none font-extrabold tracking-tight transition-colors',
-                      active ? 'text-primary' : 'text-muted-foreground/70',
-                    )}
-                  >
-                    {name}
+                  {/* Icône seule, sans libellé : l'onglet se lit au dessin et à
+                      la couleur (violet plein = actif, gris trait = inactif).
+                      Le nom reste porté par `aria-label` pour les lecteurs
+                      d'écran, qui ne perdent donc rien. */}
+                  <span className="flex h-11 w-16 items-center justify-center">
+                    {/* Boîte au plus juste autour du dessin : la pastille se
+                        cale sur le COIN de l'icône, pas sur la zone tactile. */}
+                    <span className="relative flex">
+                      <Icon
+                        aria-hidden="true"
+                        strokeWidth={active ? 2.25 : 1.75}
+                        className={cn(
+                          'transition-all',
+                          // L'onglet central (Défi) reste sur la même ligne de
+                          // base que les autres : il se distingue par sa taille,
+                          // pas par une surélévation qui mordait sur le contenu.
+                          center ? 'size-8' : 'size-7',
+                          active
+                            ? cn('scale-110 text-primary', ACTIVE_FILL[role])
+                            : 'fill-transparent text-muted-foreground/70',
+                        )}
+                      />
+                      {icon === 'gift' ? chestBadge : null}
+                    </span>
                   </span>
                 </Link>
               </li>

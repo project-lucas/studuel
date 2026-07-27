@@ -13,6 +13,8 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 // Bandeau du haut, toujours visible (pièces + niveau) façon Clash Royale.
 import TopHudLoader from "@/components/TopHudLoader";
+// Pastille rouge « coffre à récupérer » posée sur l'onglet Coffre.
+import NavChestBadgeLoader from "@/components/NavChestBadgeLoader";
 // Balayage horizontal (façon Clash Royale) : change d'onglet depuis n'importe
 // quel endroit de l'écran.
 import SwipeTabs from "@/components/SwipeTabs";
@@ -106,7 +108,15 @@ export default async function RootLayout({
           >
             <TopHudLoader />
           </Suspense>
-          <Navigation userLabel={userLabel} />
+          <Navigation
+            userLabel={userLabel}
+            // Pastille du Coffre streamée : la barre ne l'attend pas.
+            chestBadge={
+              <Suspense fallback={null}>
+                <NavChestBadgeLoader />
+              </Suspense>
+            }
+          />
           {user ? <DailyLoginReward /> : null}
           {/* min-w-0 : sans lui, l'item flex refuse de rétrécir sous la
               largeur intrinsèque de son contenu et la page déborde sur mobile. */}

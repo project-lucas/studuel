@@ -14,6 +14,7 @@ import {
   RARITY_LABEL,
 } from '@/lib/tresor'
 import { openDailyChest, buyShopItem } from '@/app/tresor/actions'
+import { CHEST_OPENED_EVENT } from '@/components/NavChestBadge'
 
 // Couleurs de rareté — élément de jeu, une teinte par palier.
 const RARITY_STYLE: Record<Rarity, string> = {
@@ -55,6 +56,8 @@ function DailyChest({
     ])
     if (outcome.status === 'already') {
       setPhase('done') // déjà ouvert aujourd'hui (autre onglet)
+      // Rien à récupérer : la pastille d'appel de l'onglet Coffre s'éteint.
+      window.dispatchEvent(new Event(CHEST_OPENED_EVENT))
       return
     }
     if (outcome.status === 'error') {
@@ -66,6 +69,10 @@ function DailyChest({
     setReward(outcome.reward)
     setPhase('opened')
     sfx.treasure()
+    // Récompense encaissée : la pastille d'appel de l'onglet Coffre s'éteint
+    // tout de suite (le layout racine, lui, n'est pas re-rendu en navigation
+    // client — il confirmera au prochain rendu serveur).
+    window.dispatchEvent(new Event(CHEST_OPENED_EVENT))
   }
 
   return (

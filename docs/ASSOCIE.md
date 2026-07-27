@@ -47,11 +47,16 @@ le finis et je le vérifie.
 > ressemble à celle d'il y a dix jours. C'est la forme la plus coûteuse du piège
 > maison : **l'échec silencieux**, mais à l'échelle d'une semaine de travail.
 >
-> S'ajoute un doute à lever en premier : les crons Vercel viennent d'être
-> déménagés vers GitHub Actions parce que le **plan Hobby n'autorise qu'un
-> déclenchement par jour et par cron** — or nos rappels en exigent deux. Si les
-> déploiements échouaient pour cette raison, **même le code sans migration n'est
-> pas en ligne**. À mesurer avant toute autre chose (chantier 0 du 28/07).
+> **Le code, lui, EST en ligne.** Mesuré au CLI Vercel le 27/07 à 23h55 :
+> déploiement Production `Ready` en 56 s, aliasé sur `studuel.vercel.app`, qui
+> répond `307 → /bienvenue → 200`. Les crons ont bien quitté `vercel.json` pour
+> `.github/workflows/rappels.yml` (le plan Hobby n'autorise qu'un déclenchement
+> par jour et par cron, or les rappels en exigent deux), mais **les déploiements
+> n'étaient pas cassés pour autant**. Ce n'est donc pas un problème de
+> déploiement : **c'est un problème de base.** Le seul geste qui rattrape dix
+> jours de travail, c'est d'exécuter les migrations.
+> *(Méthode de vérification, à réutiliser : `npx vercel ls --yes` puis
+> `npx vercel inspect <url> --wait`.)*
 >
 > Conséquence de méthode : **une feature n'est pas « livrée » quand elle est
 > commitée, mais quand elle est exécutée et visible.** La sonde étendue et

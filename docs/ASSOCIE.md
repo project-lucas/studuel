@@ -31,8 +31,36 @@ le finis et je le vérifie.
 
 ## 2. État réel du projet (à réactualiser)
 
+> ### ⚠️ 2026-07-27 — LE FAIT QUI DOMINE TOUT LE RESTE
+>
+> **18 migrations sont créées et jamais exécutées** : `188`, puis `192` → `208`.
+> Dix jours de features livrées entre le 24 et le 27/07 en sessions interactives
+> — **profil de jeu Défi** (200/201), **bouclier Bronze** (202), **plan de
+> préparation** (203), **clan hebdo** (204), **quêtes du jour** (205),
+> **tableau de rétention** (206), **saison + Pass** (207), **perf RLS** (208),
+> plus le duel 90 s et une grosse passe de perf — **ne sont donc pas vivantes en
+> production**.
+>
+> Et comme le code **tolère volontairement** l'absence de ses migrations (règle
+> saine : déployer avant d'exécuter ne doit rien casser), **rien ne signale la
+> panne**. Les cartes disparaissent, les compteurs tombent à zéro, l'app en ligne
+> ressemble à celle d'il y a dix jours. C'est la forme la plus coûteuse du piège
+> maison : **l'échec silencieux**, mais à l'échelle d'une semaine de travail.
+>
+> S'ajoute un doute à lever en premier : les crons Vercel viennent d'être
+> déménagés vers GitHub Actions parce que le **plan Hobby n'autorise qu'un
+> déclenchement par jour et par cron** — or nos rappels en exigent deux. Si les
+> déploiements échouaient pour cette raison, **même le code sans migration n'est
+> pas en ligne**. À mesurer avant toute autre chose (chantier 0 du 28/07).
+>
+> Conséquence de méthode : **une feature n'est pas « livrée » quand elle est
+> commitée, mais quand elle est exécutée et visible.** La sonde étendue et
+> `/admin/sante` (chantier 1) existent pour que ce trou ne se recreuse pas.
+
 **Dernière remise à plat : 2026-07-23** (Lia, `/jour` cycle 1), **après mesure
 réelle à la clé anon** — les chiffres ci-dessous sont sondés, pas recopiés.
+⚠️ Ils datent d'avant les quatre jours de sessions interactives : **re-sonder
+avant tout choix P0/P1**.
 
 **Contenu mesuré le 2026-07-23** : **25 matières, 278 chapitres, 564 leçons**,
 **295 quiz**. Répartition par classe (matières / chapitres) : 6e 15/29 ·
@@ -237,6 +265,77 @@ breaking changes vs. l'entraînement.
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible,
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
+
+**2026-07-27 (soir) — CONSIGNE DE LUCAS POUR LA SESSION DU 28/07 :**
+
+> Elle **prime sur le backlog §4**. Les six chantiers sont détaillés et chiffrés
+> dans `_ASSOCIE/BACKLOG-JOUR.md`, section « 🎯 Chantiers du 2026-07-28 ». La
+> tête de `_ASSOCIE/A-LIRE-JOUR.md` porte le même fil rouge, en plus court.
+
+- **Le fil rouge : arrêter de produire du code mort.** Quatre jours de sessions
+  interactives (24→27/07) ont livré profil de jeu Défi, plan de préparation,
+  duel 90 s, clan hebdo, quêtes du jour, tableau de rétention, saison + Pass,
+  onboarding ramené à 3 écrans avant le jeu, et une passe de perf (attente
+  Supabase ÷3 à ÷4). **Rien n'est vivant** : 18 migrations dorment (voir l'encart
+  de §2). Demain n'est pas une journée de features — c'est une journée pour que
+  ce qui est écrit devienne réel, et pour poser les garde-fous.
+- **Ordre imposé, cycle 1** : **0** finir le déménagement des crons + *prouver*
+  que la prod sert le dernier commit (~S) · **1** **auditer les migrations
+  créditrices AVANT que Lucas ne les exécute** (~M) · **2** purger la dette de
+  migrations (sonde complète, fichier unique à coller, carte de « ce qui est
+  éteint », `/admin/sante`) (~M) · **3** durcir les quatre jours jamais relus
+  (~L) · **4** un seul modèle de contrôle — `controles` partout, Défi et /moi
+  rebranchés (~L) · **5** harnais de QA + portails + modales + hors-ligne (~L).
+- **Ordre imposé, cycle 2** : **6** le parcours de l'élève joué en entier, 4
+  parcours automatisés rejouables (~M) · **7** tests d'assemblage sur les 3
+  players (~M) · **8** ne plus montrer de cul-de-sac : matières vides masquées +
+  coupe 3 de la hache (~M) · **9** l'usine à contenu, une matière vide remplie
+  pour de vrai (~XL). Le paywall reste **gaté** : préparer les deux branches, ne
+  coder aucune ligne.
+- **Deux contraintes d'ordre à ne PAS renégocier** :
+  - Le **chantier 1 est une urgence de calendrier** : Lucas colle les 18
+    migrations demain. Aucune des dix dernières n'a été relue, et `200`/`202`/
+    `204`/`205`/`207` créent des RPC qui **créditent**. Ce projet a payé quatre
+    fois la même facture (`wallet_award_xp`, `open_chest(JSONB)`,
+    `claim_weekly_trophy`, `apply_ranked_match`) : **une RPC `SECURITY DEFINER`
+    qui croit un montant fourni par l'appelant**, alors que la clé anon est
+    publique. Tant qu'une migration dort, le trou est théorique ; une fois
+    collée, il est vivant. Et comme elles n'ont jamais été exécutées, **les
+    corriger sur place est autorisé** (précédent `15577ed` sur la `192`).
+  - Le **chantier 3 est la doctrine P1 sautée depuis le 23/07**. La passe de
+    perf du 27/07 a remplacé `auth.getUser()` par `getClaims()` sur **54
+    fichiers** (vérification locale de JWT : jeton révoqué ? compte supprimé ?),
+    mis `lib/catalog.ts` en `unstable_cache` (**un cache mal cloisonné sert la
+    donnée d'un élève à un autre**) et introduit un `readRowTolerant()` qui
+    mémorise des colonnes manquantes pour la durée du processus. Rien de tout ça
+    n'est passé par une revue.
+- **Deux blocages levés, exprès** :
+  - **`@testing-library/react` : GO.** Dépendance de dev, aucun risque produit.
+    L'argument est mesuré : 1162 tests couvrent `lib/`, **zéro** couvre
+    l'assemblage — or *tous* les défauts sortis des audits étaient des défauts
+    d'assemblage (XP affichée ≠ versée, écran de fin qui ment, double-tap qui
+    désaligne `choices[i]`, résultat serveur que personne ne lit).
+  - **« QA visuelle impossible » ne tient plus.** **Playwright WebKit (le moteur
+    de Safari) est installé sur la machine** avec émulation iPhone :
+    `C:\Users\potier\iPhone\node_modules` (lancer node avec `NODE_PATH` dessus),
+    profil persistant `profil-iphone-16-pro`. Les défauts reportés trois fois
+    sont **mesurables** : la largeur d'un overlay `fixed` pendant l'animation de
+    `app/template.tsx` s'assène en une assertion `getBoundingClientRect()`, et
+    le hors-ligne se teste avec `context.setOffline(true)`. Écrire l'assertion
+    ROUGE d'abord, corriger ensuite.
+- **Piège neuf à connaître (chantier 2)** : la `203` a fait de `controles` le
+  modèle du contrôle sur `/reviser`, mais **`upcoming_exams` (087) est encore lu
+  par `app/defi/jouer/page.tsx`, `app/moi/actions.ts`, `lib/next-exam.ts` et
+  `app/reviser/[subject]/page.tsx`**. Un contrôle ajouté ne nourrit donc plus le
+  pool du Défi, et `ExamCard` (`ResumeSessions.tsx`) est du code mort qui a l'air
+  vivant. Comme la `203` n'est pas exécutée, **mesurer d'abord ce que voit un
+  élève aujourd'hui** avant de coder.
+- **Ce que Lucas fait de son côté** : exécuter les 18 migrations (un seul
+  copier-coller, ordre et contraintes dans `A-LIRE-JOUR.md`), poser le secret
+  `CRON_SECRET` sur GitHub (sans lui, plus aucun rappel ne part — 401 muet),
+  trancher le paywall (A = tout ouvrir et monétiser le Pass + les cosmétiques,
+  ma recommandation ; B = remplir le premium), et tester un duel en direct à
+  deux comptes (`178`).
 
 **2026-07-23 — fin du cycle 2 `/jour` (Lia, relance automatique de 11:05) :**
 - **Fait** : arbre propre au réveil → **file du cycle 1 entièrement consommée**

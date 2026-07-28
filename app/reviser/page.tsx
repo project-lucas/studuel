@@ -31,6 +31,7 @@ import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
+import { subjectsWithContent } from '@/lib/subject-visibility'
 import { readRowTolerant } from '@/lib/profile-read'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
@@ -325,7 +326,13 @@ export default async function ReviserPage() {
     ? (profile.selected_subjects as string[])
     : null
   const allSubjects = subjects ?? []
-  const ofLevel = allSubjects.filter((s) => s.levels.includes(grade))
+  // Matières du niveau AYANT du contenu : la 193 a ajouté des matières sans
+  // chapitre (coquilles vides). On ne montre pas de cul-de-sac cliquable — le
+  // catalogue brut (allSubjects) reste utilisé plus bas pour les contrôles.
+  const ofLevel = subjectsWithContent(
+    allSubjects.filter((s) => s.levels.includes(grade)),
+    levelChapters ?? [],
+  )
   const followed = ofLevel.filter(
     (s) => selected === null || selected.length === 0 || selected.includes(s.slug),
   )

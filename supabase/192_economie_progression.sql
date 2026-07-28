@@ -96,10 +96,9 @@ CREATE TABLE IF NOT EXISTS public.xp_events (
   id         BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   user_id    UUID NOT NULL REFERENCES public.profiles (id) ON DELETE CASCADE,
   source     TEXT NOT NULL CHECK (source IN
-               ('quiz', 'quiz_top', 'flashcards', 'defi', 'defi_arena',
-                -- Versements internes (wallet_grant_xp) : quêtes du jour (205)
-                -- et coffre du clan hebdo (204).
-                'quests', 'clan_week')),
+               ('quiz', 'quiz_top', 'flashcards', 'defi', 'defi_arena')),
+  -- NB : la 209 étend ce CHECK ('quests', 'clan_week') par ALTER — cette
+  -- migration-ci a déjà été exécutée, son CREATE TABLE ne rejouera pas.
   source_key TEXT,
   amount     INTEGER NOT NULL CHECK (amount >= 0),
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
@@ -355,76 +354,9 @@ $$;
 REVOKE ALL ON FUNCTION public.wallet_award_xp(TEXT, TEXT, INTEGER) FROM PUBLIC;
 GRANT EXECUTE ON FUNCTION public.wallet_award_xp(TEXT, TEXT, INTEGER) TO authenticated;
 
--- -----------------------------------------------------------------------------
--- 6 bis. CRÉDIT D'XP INTERNE — wallet_grant_xp(user, source, clé, montant)
---
--- La primitive de versement pour les AUTRES RPC definer (quêtes 205, coffre du
--- clan 204) : elles calculent un montant depuis LEUR barème serveur, déjà borné
--- par leur propre verrou (PK de réclamation), et le versent ici selon les mêmes
--- règles que wallet_award_xp — trace xp_events, niveau recalculé, +15 💎 par
--- niveau franchi (une seule fois par niveau). Deux différences assumées :
---   • pas de mise à jour de série : les activités qui ont rempli la quête ont
---     déjà fait vivre la série, encaisser le soir ne doit pas la doubler ;
---   • pas de plafond « 30 événements/jour » : l'appelant a déjà borné.
---
--- AUCUN GRANT : la clé anon ne peut pas l'appeler. Seul le corps d'une fonction
--- SECURITY DEFINER (exécuté avec les droits du propriétaire) y accède.
--- -----------------------------------------------------------------------------
-CREATE OR REPLACE FUNCTION public.wallet_grant_xp(
-  p_user   UUID,
-  p_source TEXT,
-  p_key    TEXT,
-  p_amount INTEGER
-)
-RETURNS VOID
-LANGUAGE plpgsql
-SECURITY DEFINER
-SET search_path = public
-AS $$
-DECLARE
-  v_wallet    public.user_wallet%ROWTYPE;
-  v_new_level INTEGER;
-  v_gems      INTEGER := 0;
-  v_lvl       INTEGER;
-BEGIN
-  IF p_user IS NULL OR COALESCE(p_amount, 0) <= 0 THEN RETURN; END IF;
-
-  PERFORM public.wallet_ensure(p_user);
-  SELECT * INTO v_wallet FROM public.user_wallet
-   WHERE user_id = p_user FOR UPDATE;
-
-  -- Trace (idempotente si clé, via xp_events_once_per_key) : déjà versé → stop.
-  INSERT INTO public.xp_events (user_id, source, source_key, amount)
-  VALUES (p_user, p_source, NULLIF(LEFT(COALESCE(p_key, ''), 80), ''), p_amount)
-  ON CONFLICT DO NOTHING;
-  IF NOT FOUND THEN RETURN; END IF;
-
-  -- Niveau : +15 💎 par niveau franchi, chacun une seule fois (même règle que
-  -- wallet_award_xp — l'élève ne doit pas voir deux barèmes de passage).
-  v_new_level := public.wallet_level_from_xp(v_wallet.xp + p_amount);
-  IF v_new_level > v_wallet.level THEN
-    FOR v_lvl IN (v_wallet.level + 1) .. v_new_level LOOP
-      INSERT INTO public.gem_events (user_id, source, source_key, amount)
-      VALUES (p_user, 'level_up', v_lvl::text, 15)
-      ON CONFLICT DO NOTHING;
-      IF FOUND THEN v_gems := v_gems + 15; END IF;
-    END LOOP;
-  END IF;
-
-  UPDATE public.user_wallet
-     SET xp = xp + p_amount,
-         level = GREATEST(level, v_new_level),
-         updated_at = now()
-   WHERE user_id = p_user;
-
-  IF v_gems > 0 THEN
-    UPDATE public.profiles SET gems = COALESCE(gems, 0) + v_gems
-     WHERE id = p_user;
-  END IF;
-END;
-$$;
-
-REVOKE ALL ON FUNCTION public.wallet_grant_xp(UUID, TEXT, TEXT, INTEGER) FROM PUBLIC;
+-- NB : la primitive interne wallet_grant_xp (versement d'XP par les RPC des
+-- quêtes 205 et du clan 204) vit dans la migration 209 — cette migration-ci
+-- était déjà exécutée quand le besoin est apparu.
 
 -- -----------------------------------------------------------------------------
 -- 7. GAGNER DES GEMMES DE JEU — wallet_award_gems(source, clé)

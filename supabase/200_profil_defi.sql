@@ -36,6 +36,19 @@ ALTER TABLE public.profiles
 -- caractères). equipped_badges et profile_banner passent par RPC — pas de GRANT.
 GRANT UPDATE (gamertag) ON public.profiles TO authenticated;
 
+-- Le GRANT par colonne rend le pseudo modifiable par requête PostgREST DIRECTE,
+-- hors Server Action : la base doit donc porter sa propre borne. On borne la
+-- LONGUEUR (3–16, comme GAMERTAG_RE de app/defi/profile-actions.ts) et on
+-- refuse les caractères de contrôle ; le filtre fin d'alphabet reste côté app —
+-- un CHECK sur [[:alnum:]] dépendrait du locale de la base et risquerait de
+-- rejeter un « Théo » légitime.
+ALTER TABLE public.profiles DROP CONSTRAINT IF EXISTS profiles_gamertag_borne;
+ALTER TABLE public.profiles ADD CONSTRAINT profiles_gamertag_borne
+  CHECK (
+    gamertag IS NULL
+    OR (char_length(gamertag) BETWEEN 3 AND 16 AND gamertag !~ '[[:cntrl:]]')
+  );
+
 -- ---------------------------------------------------------------------------
 -- 2. RPC — équiper jusqu'à 3 badges mis en avant
 -- ---------------------------------------------------------------------------

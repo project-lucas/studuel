@@ -223,6 +223,11 @@ BEGIN
   IF v_xp = 0 AND v_gems = 0 THEN RETURN v_none; END IF;
 
   UPDATE public.profiles SET gems = COALESCE(gems, 0) + v_gems WHERE id = v_user;
+  -- L'XP annoncée est VERSÉE (wallet 192) — sinon l'écran promet un montant que
+  -- le portefeuille ne voit jamais. Pas de clé : plusieurs réclamations par jour
+  -- sont légitimes (une par quête finie), chacune déjà verrouillée par la PK de
+  -- daily_quest_claims — on n'atteint ce point qu'avec du RÉELLEMENT neuf.
+  PERFORM public.wallet_grant_xp(v_user, 'quests', NULL, v_xp);
 
   RETURN jsonb_build_object('claimed', TRUE, 'gems', v_gems, 'xp', v_xp,
                             'all_done', v_all);

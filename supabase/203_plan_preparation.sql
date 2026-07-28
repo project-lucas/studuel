@@ -99,9 +99,16 @@ BEGIN
      OR jsonb_array_length(p_chapters) = 0 THEN RETURN NULL; END IF;
   IF p_sessions IS NULL OR jsonb_typeof(p_sessions) <> 'array'
      OR jsonb_array_length(p_sessions) = 0 THEN RETURN NULL; END IF;
+  -- Bornes anti-abus : la RPC est appelable directement (clé anon publique), un
+  -- payload forgé ne doit pas pouvoir inonder les tables. Un plan légitime tient
+  -- en quelques sessions (lib/prep-plan.planDates) et quelques chapitres — on
+  -- borne LARGE pour ne jamais gêner l'app.
+  IF jsonb_array_length(p_chapters) > 30
+     OR jsonb_array_length(p_sessions) > 60 THEN RETURN NULL; END IF;
 
   INSERT INTO public.controles (user_id, subject_slug, chapters, exam_date, grade)
-  VALUES (v_user, p_subject, p_chapters, p_date, COALESCE(p_grade, ''))
+  VALUES (v_user, LEFT(COALESCE(p_subject, ''), 80), p_chapters, p_date,
+          LEFT(COALESCE(p_grade, ''), 20))
   RETURNING id INTO v_id;
 
   INSERT INTO public.sessions_preparation
@@ -110,8 +117,8 @@ BEGIN
     v_id,
     v_user,
     (s->>'plannedDate')::date,
-    GREATEST(1, COALESCE((s->>'durationMin')::int, 10)),
-    COALESCE(s->>'chapterId', ''),
+    LEAST(240, GREATEST(1, COALESCE((s->>'durationMin')::int, 10))),
+    LEFT(COALESCE(s->>'chapterId', ''), 80),
     COALESCE((s->>'position')::int, 0)
   FROM jsonb_array_elements(p_sessions) s;
 

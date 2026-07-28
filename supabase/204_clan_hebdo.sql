@@ -302,6 +302,10 @@ BEGIN
   IF NOT FOUND THEN RETURN v_none; END IF;
 
   UPDATE public.profiles SET gems = COALESCE(gems, 0) + v_gems WHERE id = v_user;
+  -- L'XP annoncée est VERSÉE (wallet 192) — sinon l'écran promet un montant que
+  -- le portefeuille ne voit jamais. Le verrou PK ci-dessus garantit un seul
+  -- versement par semaine ; la clé le redouble côté xp_events.
+  PERFORM public.wallet_grant_xp(v_user, 'clan_week', v_week::text, v_xp);
 
   RETURN jsonb_build_object('claimed', TRUE, 'tier', v_tier,
                             'gems', v_gems, 'xp', v_xp);

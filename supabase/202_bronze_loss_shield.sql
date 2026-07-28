@@ -10,6 +10,12 @@
 -- Bronze.
 --
 -- MIROIR EXACT de lib/trophies.bronzeLossShield (garde les deux alignes).
+--
+-- ⚠️ CREATE OR REPLACE herite de TOUT l'historique de la fonction : la 171 a
+-- ajoute une BORNE DE RYTHME (30 matchs classes par heure glissante, anti-
+-- farming de trophees — `p_won` vient du client). Cette recreation la CONSERVE,
+-- sinon executer la 202 annulerait ce durcissement deja en production.
+--
 -- Idempotente (CREATE OR REPLACE). A EXECUTER A LA MAIN apres la 201.
 -- Astuce : selectionne TOUT le fichier (Ctrl+A) avant de lancer.
 
@@ -38,6 +44,15 @@ DECLARE
   v_gate     INTEGER;
 BEGIN
   IF v_user IS NULL THEN RETURN NULL; END IF;
+
+  -- Borne de rythme (heritee de la 171) : au-dela de 30 matchs classes dans
+  -- l'heure, on refuse — un BO3 dure plusieurs minutes, un rythme superieur
+  -- trahit un appel direct en boucle.
+  IF (SELECT count(*) FROM public.ranked_matches
+        WHERE user_id = v_user
+          AND created_at >= now() - INTERVAL '1 hour') >= 30 THEN
+    RETURN NULL;
+  END IF;
 
   SELECT trophies, best_trophies INTO v_before, v_best
     FROM public.profiles WHERE id = v_user FOR UPDATE;

@@ -216,9 +216,12 @@ DECLARE
   v_kind    TEXT;
   v_amount  INTEGER := 0;
   v_title   TEXT;
+  -- MIROIR de lib/saison.TITLES, à l'apostrophe TYPOGRAPHIQUE près (’ et non
+  -- '') : le titre écrit en base doit être strictement égal à celui que la
+  -- piste affiche, sinon deux graphies du même titre coexistent à l'écran.
   v_titles  TEXT[] := ARRAY['Recrue', 'Assidu·e', 'Tête chercheuse', 'Métronome',
                             'Sans faute', 'Bourreau de travail',
-                            'Légende de l''arène'];
+                            'Légende de l’arène'];
   v_none    JSONB := jsonb_build_object('claimed', FALSE, 'kind', NULL,
                                         'amount', 0, 'title', NULL);
 BEGIN

@@ -31,7 +31,36 @@ le finis et je le vérifie.
 
 ## 2. État réel du projet (à réactualiser)
 
-> ### ⚠️ 2026-07-27 — LE FAIT QUI DOMINE TOUT LE RESTE
+> ### ✅⚠️ 2026-07-28 — LE FAIT DE 07-27 EST PÉRIMÉ : LES MIGRATIONS SONT (EN GRANDE PARTIE) EXÉCUTÉES
+>
+> **Sondé le 28/07 (fin de cycle 2 `/jour`).** Lucas a exécuté **9 migrations**
+> dans la journée : `192, 193, 200, 201, 203, 204, 205, 206, 207` sont **VIVANTES
+> en base**. Dix jours de features sont donc réels. **Restent à exécuter** :
+> `188, 194, 195, 196, 197, 198, 199, 202, 208` — plus la **`209` neuve**.
+>
+> **Piège refermé, corrigé** : l'audit `e7aca3a` (28/07 matin) a durci **sur
+> place** `192·200·203·204·205·207` en les croyant endormies. Elles étaient
+> déjà exécutées → ce durcissement (XP quêtes/clan jamais versée au portefeuille,
+> `gamertag` sans borne SQL, `create_controle` inondable) **n'est PAS en base**.
+> La migration **`209` de reprise idempotente** (commit `89a2499`, **revue DB :
+> saine**) le réapplique — **à exécuter**. Leçon gravée : *« ne jamais modifier
+> une migration exécutée » ⇒ reprise par une NOUVELLE migration, jamais sur place ;
+> et l'état de la base se SONDE, ne se suppose pas.*
+>
+> **Contenu (28/07)** : 31 matières · 278 chapitres · **11 coquilles vides**
+> (la 193 en a ajouté 6) — désormais **masquées côté élève sur Réviser**
+> (`lib/subject-visibility`, `a64f43b`), toujours visibles en `/admin`.
+>
+> **Nouveau chantier VIVANT** : la 203 exécutée ⇒ `controles` existe, mais
+> `app/defi/jouer`, `app/moi/actions.ts`, `lib/next-exam.ts`,
+> `app/reviser/[subject]/page.tsx` lisent encore `upcoming_exams`. Un contrôle
+> ajouté ne nourrit plus le Défi ni /moi → **cible n°1 du prochain cycle** (~L).
+>
+> **Outillage neuf** : harnais de tests d'ASSEMBLAGE (`@testing-library/react` +
+> jsdom, Vitest 2 projets, `95ce756`) — 1er test `QuizPlayer`. `npm test` = 1530
+> tests verts. La sonde et `/admin/sante` couvrent maintenant jusqu'à la 209.
+
+> ### ⚠️ 2026-07-27 — LE FAIT QUI DOMINE TOUT LE RESTE (périmé le 28/07, cf. bloc ci-dessus)
 >
 > **18 migrations sont créées et jamais exécutées** : `188`, puis `192` → `208`.
 > Dix jours de features livrées entre le 24 et le 27/07 en sessions interactives
@@ -270,6 +299,28 @@ breaking changes vs. l'entraînement.
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible,
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
+
+**2026-07-28 — fin du cycle 2 `/jour` (Lia) :**
+- **Où j'en suis** : 4 lots verts sur `main` (`89a2499` migration 209 de reprise
+  + `e5eb257` propagation sonde/santé + `a64f43b` matières vides masquées +
+  `95ce756` harnais de tests d'assemblage). typecheck/lint/**1530 tests**.
+- **Le fait à retenir** : la base a été **exécutée en grande partie aujourd'hui**
+  (cf. §2, bloc du 28/07) et le durcissement `e7aca3a` était **échoué dans des
+  migrations déjà passées** → la `209` le rattrape (à exécuter). L'état de la
+  base se **sonde** (`node _ASSOCIE/sonde-base.mjs` / `/admin/sante`), jamais ne
+  se suppose : c'est ce qui a fait basculer tout le cycle.
+- **Prochaine cible n°1** : **chantier 4 — `controles` partout**. La 203 est
+  exécutée, `controles` existe, mais `app/defi/jouer`, `app/moi/actions.ts`,
+  `lib/next-exam.ts`, `app/reviser/[subject]/page.tsx` lisent encore
+  `upcoming_exams`. Adaptateur pur dans `lib/` + tests, tolérance si 203 absente,
+  **migration `210`** de reprise `upcoming_exams`→`controles` (le « 209 » du
+  backlog est pris par le durcissement). Puis chantier 7 (tests `Duel90Mode` +
+  salon `lib/jeux`, harnais prêt, modèle `components/QuizPlayer.test.tsx`).
+- **Pièges** : (1) ne PAS re-modifier une migration exécutée sur place — reprise
+  par nouvelle migration idempotente ; (2) coupe 3 de la grande hache = FAUX MORT
+  (`pair-match`/`mind-map` ont des importeurs réels), ne pas supprimer ; (3) le
+  harnais de composants exige de mocker `press` de `@/lib/sounds` (Button le
+  joue à chaque clic) + `next/navigation` + les Server Actions importées.
 
 **2026-07-27 (soir) — CONSIGNE DE LUCAS POUR LA SESSION DU 28/07 :**
 

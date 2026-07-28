@@ -46,6 +46,10 @@ export type Controle = {
   sessions: PrepSession[]
 }
 
+// Métadonnée d'affichage d'une matière (couleur de pastille + nom du libellé),
+// partagée par toutes les vues d'un contrôle (héros, cartes, bannière de note).
+export type ControleSubjectMeta = { name: string; color: string }
+
 // --- Arithmétique de dates (clés UTC) ----------------------------------------
 
 // Différence en jours entre deux clés UTC 'YYYY-MM-DD' (from → to).

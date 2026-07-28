@@ -12,8 +12,8 @@ import {
   daysBetween,
   controleTitle,
   type Controle,
+  type ControleSubjectMeta,
 } from '@/lib/prep-plan'
-import type { ControleSubjectMeta } from '@/components/WeekPlannerStrip'
 
 // -----------------------------------------------------------------------------
 // Boucle post-contrôle (brief §6). Le lendemain de la date, on demande la note
@@ -25,6 +25,8 @@ import type { ControleSubjectMeta } from '@/components/WeekPlannerStrip'
 // On garde le récap visible ce nombre de jours après le contrôle.
 const RECAP_WINDOW_DAYS = 14
 
+// Bannière d'UNE ligne, repliée par défaut : l'administratif ne passe plus
+// devant la mission. « Saisir » déplie le champ de note, la croix reporte.
 function NotePrompt({
   controle,
   meta,
@@ -32,6 +34,7 @@ function NotePrompt({
   controle: Controle
   meta: ControleSubjectMeta
 }) {
+  const [open, setOpen] = useState(false)
   const [note, setNote] = useState('')
   const [busy, start] = useTransition()
 
@@ -56,64 +59,74 @@ function NotePrompt({
   return (
     <div
       className={cn(
-        'rev-card rounded-3xl bg-white p-4 ring-1 ring-black/5',
+        'rev-card rounded-2xl bg-white px-3 py-2 ring-1 ring-black/5',
         busy && 'opacity-60',
       )}
     >
-      <div className="flex items-start gap-3">
+      <div className="flex min-h-9 items-center gap-2.5">
         <span
           aria-hidden="true"
-          className="grid size-9 shrink-0 place-items-center rounded-full bg-primary/10 text-primary"
+          className="grid size-7 shrink-0 place-items-center rounded-full bg-primary/10 text-primary"
         >
-          <GraduationCap className="size-5" strokeWidth={2.4} />
+          <GraduationCap className="size-4" strokeWidth={2.4} />
         </span>
-        <div className="min-w-0 flex-1">
-          <p className="text-sm font-bold text-foreground">
-            Ton contrôle est passé — quelle note as-tu eue ?
-          </p>
-          <p className="mt-0.5 truncate text-xs text-muted-foreground">
-            {controleTitle(controle, meta.name)} · {meta.name}
-          </p>
-
-          <div className="mt-3 flex items-center gap-2">
-            <label className="flex items-center gap-1.5 rounded-2xl border border-border bg-muted/40 px-3">
-              <input
-                type="number"
-                inputMode="numeric"
-                min={0}
-                max={20}
-                step={0.5}
-                value={note}
-                onChange={(e) => setNote(e.target.value)}
-                placeholder="14"
-                aria-label="Note obtenue sur 20"
-                className="min-h-11 w-14 bg-transparent text-center text-base font-extrabold text-foreground outline-none"
-              />
-              <span className="text-sm font-bold text-muted-foreground">/20</span>
-            </label>
-            <button
-              type="button"
-              onClick={save}
-              disabled={busy || note === ''}
-              className={cn(
-                'font-heading flex min-h-11 flex-1 items-center justify-center rounded-full bg-primary px-4 text-sm font-extrabold text-primary-foreground transition active:translate-y-px',
-                (busy || note === '') && 'opacity-60',
-              )}
-            >
-              Enregistrer
-            </button>
-            <button
-              type="button"
-              onClick={skip}
-              disabled={busy}
-              aria-label="Plus tard"
-              className="flex size-9 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted active:scale-90"
-            >
-              <X className="size-5" strokeWidth={2.4} aria-hidden="true" />
-            </button>
-          </div>
-        </div>
+        <p className="min-w-0 flex-1 truncate text-[13px] font-bold text-foreground">
+          Contrôle passé ({controleTitle(controle, meta.name)}) — ta note ?
+        </p>
+        {!open ? (
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              setOpen(true)
+            }}
+            className="font-heading shrink-0 rounded-full bg-primary/10 px-3 py-1.5 text-xs font-extrabold text-primary transition hover:bg-primary/15 active:translate-y-px"
+          >
+            Saisir
+          </button>
+        ) : null}
+        <button
+          type="button"
+          onClick={skip}
+          disabled={busy}
+          aria-label="Plus tard"
+          className="flex size-8 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted active:scale-90"
+        >
+          <X className="size-4.5" strokeWidth={2.4} aria-hidden="true" />
+        </button>
       </div>
+
+      {open ? (
+        <div className="mt-2 flex items-center gap-2 pl-9">
+          <label className="flex items-center gap-1.5 rounded-2xl border border-border bg-muted/40 px-3">
+            <input
+              type="number"
+              inputMode="numeric"
+              min={0}
+              max={20}
+              step={0.5}
+              value={note}
+              onChange={(e) => setNote(e.target.value)}
+              placeholder="14"
+              autoFocus
+              aria-label="Note obtenue sur 20"
+              className="min-h-10 w-14 bg-transparent text-center text-base font-extrabold text-foreground outline-none"
+            />
+            <span className="text-sm font-bold text-muted-foreground">/20</span>
+          </label>
+          <button
+            type="button"
+            onClick={save}
+            disabled={busy || note === ''}
+            className={cn(
+              'font-heading flex min-h-10 flex-1 items-center justify-center rounded-full bg-primary px-4 text-sm font-extrabold text-primary-foreground transition active:translate-y-px',
+              (busy || note === '') && 'opacity-60',
+            )}
+          >
+            Enregistrer
+          </button>
+        </div>
+      ) : null}
     </div>
   )
 }

@@ -3,11 +3,11 @@ import { NAV_TABS, neighborTabPath, tabIndexForPath } from './nav-tabs'
 
 describe('tabIndexForPath', () => {
   it('reconnaît un onglet exact', () => {
-    expect(tabIndexForPath('/defi')).toBe(3)
+    expect(tabIndexForPath('/defi')).toBe(2)
   })
 
   it('reconnaît une sous-page comme appartenant à son onglet', () => {
-    expect(tabIndexForPath('/defi/jeux')).toBe(3)
+    expect(tabIndexForPath('/defi/jeux')).toBe(2)
   })
 
   it('renvoie -1 hors des onglets principaux', () => {
@@ -20,6 +20,11 @@ describe('tabIndexForPath', () => {
 })
 
 describe('NAV_TABS', () => {
+  it('compte 5 onglets (Coffre a fusionné dans Trésor)', () => {
+    expect(NAV_TABS).toHaveLength(5)
+    expect(NAV_TABS.some((tab) => tab.path === '/coffre')).toBe(false)
+  })
+
   it('donne une icône et un rôle à chaque onglet', () => {
     for (const tab of NAV_TABS) {
       expect(tab.icon, tab.name).toBeTruthy()

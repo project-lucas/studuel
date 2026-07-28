@@ -16,8 +16,8 @@ import {
   launchChapterId,
   countdownTag,
   type Controle,
+  type ControleSubjectMeta,
 } from '@/lib/prep-plan'
-import type { ControleSubjectMeta } from '@/components/WeekPlannerStrip'
 
 // -----------------------------------------------------------------------------
 // Rangée « Préparer mes contrôles » : UNE carte par contrôle actif, en LECTURE

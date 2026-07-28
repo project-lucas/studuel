@@ -19,9 +19,8 @@ import CoursesShelf, {
   type CourseShelfItem,
 } from '@/components/carnet/CoursesShelf'
 import CarnetFab from '@/components/carnet/CarnetFab'
-import WeekPlannerStrip, {
-  type ControleSubjectMeta,
-} from '@/components/WeekPlannerStrip'
+import CarnetTile from '@/components/carnet/CarnetTile'
+import MissionHero from '@/components/reviser/MissionHero'
 import PrepCards from '@/components/reviser/PrepCards'
 import NoteInbox from '@/components/reviser/NoteInbox'
 import ExamObjectiveToggle from '@/components/ExamObjectiveToggle'
@@ -50,7 +49,9 @@ import {
   type ControleRow,
   type SessionRow,
   type Controle,
+  type ControleSubjectMeta,
 } from '@/lib/prep-plan'
+import { pickMission, type ChapterCandidate } from '@/lib/mission'
 import type { SubjectExamHint } from '@/lib/next-exam'
 import { normalizeOralList } from '@/lib/oral-texts'
 import type { CommuteSlot, Subject } from '@/lib/types'
@@ -359,15 +360,16 @@ export default async function ReviserPage() {
     })
   }
 
-  // --- Carte « Reprendre » : fragile le plus bas > en cours le plus avancé >
-  //     premier chapitre jamais commencé ----------------------------------------
-  const fragiles = analyzed
-    .filter((a) => a.state === 'fragile')
-    .sort((a, b) => a.value - b.value)
-  const enCours = analyzed
-    .filter((a) => a.state === 'en_cours')
-    .sort((a, b) => b.value - a.value)
-  const aCommencer = analyzed.filter((a) => a.state === 'a_commencer')
+  // --- Candidats à la mission du jour : les chapitres analysés, mis à plat.
+  //     Le classement (en cours > fragiles > à commencer) vit dans lib/mission.
+  const candidates: ChapterCandidate[] = analyzed.map((a) => ({
+    subjectSlug: a.subject.slug,
+    subjectName: a.subject.name,
+    chapterId: a.chapterId,
+    chapterTitle: a.chapterTitle,
+    state: a.state,
+    value: a.value,
+  }))
 
   // --- Objectif examen (classes à examen uniquement) ---------------------------
   const exams = examsForProfile(grade, selected, allSubjects)
@@ -435,27 +437,41 @@ export default async function ReviserPage() {
     }
   }
 
-  // « On s'y remet ? » : chapitres en cours (puis fragiles) ; à défaut, les
-  // premiers chapitres à commencer. (Les cartes de contrôle vivent désormais
-  // dans leur propre rangée PrepCards, plus dans cette file.)
-  let resumeItems: ResumeItem[] = [...enCours, ...fragiles]
-    .slice(0, 5)
-    .map((a) => ({
-      subject: a.subject,
-      chapterId: a.chapterId,
-      chapterTitle: a.chapterTitle,
-      progress: a.value,
-      isNew: false,
-    }))
-  if (resumeItems.length === 0) {
-    resumeItems = aCommencer.slice(0, 3).map((a) => ({
-      subject: a.subject,
-      chapterId: a.chapterId,
-      chapterTitle: a.chapterTitle,
-      progress: 0,
-      isNew: true,
-    }))
-  }
+  // --- Mission du jour + « Ensuite » : l'app choisit LA session à lancer
+  //     (contrôle actif > reprise > découverte), le reste part en suggestions.
+  const { mission, ensuite } = pickMission({
+    today,
+    controles,
+    subjectNameBySlug: Object.fromEntries(
+      allSubjects.map((s) => [s.slug, s.name]),
+    ),
+    chapters: candidates,
+    goalMinutes,
+  })
+
+  // Les suggestions du rail « Ensuite », re-liées à leur objet Subject complet
+  // (icône + couleur de pastille).
+  const subjectBySlug = new Map(followed.map((s) => [s.slug, s]))
+  const resumeItems: ResumeItem[] = ensuite.flatMap((m) => {
+    const subject = subjectBySlug.get(m.subjectSlug)
+    if (!subject) return []
+    return [
+      {
+        subject,
+        chapterId: m.chapterId,
+        chapterTitle: m.chapterTitle,
+        progress: m.progress ?? 0,
+        minutes: m.minutes,
+        isNew: m.isNew,
+      },
+    ]
+  })
+
+  // Le contrôle porté par le héros ne se répète pas dans la rangée de cartes de
+  // préparation — les autres contrôles actifs y restent visibles.
+  const prepControles = mission?.controleId
+    ? controles.filter((c) => c.id !== mission.controleId)
+    : controles
 
   // Données de la carte « Mes contrôles à venir » : matières + chapitres du
   // niveau (identique à l'onglet Moi, la carte est partagée).
@@ -539,43 +555,40 @@ export default async function ReviserPage() {
               examBySubject={examBySubject}
               topSlot={
                 <>
-                  {/* 0. Boucle post-contrôle : demande de note le lendemain +
-                      récap effort → résultat. Rendu null s'il n'y a rien à
-                      demander/afficher. */}
+                  {/* 1. LA mission du jour : l'app a choisi la meilleure session
+                      (lib/mission), un seul CTA. Le héros porte aussi série,
+                      objectif éditable, semaine datée, nouveau contrôle et
+                      historique. */}
+                  <MissionHero
+                    mission={mission}
+                    streak={streak}
+                    todayMinutes={todayMinutes}
+                    goalMinutes={goalMinutes}
+                    week={week}
+                    today={today}
+                    controles={controles}
+                    subjectMeta={subjectMeta}
+                    subjects={examSubjects}
+                    chaptersBySubject={chaptersBySubject}
+                    existingExamChapters={[...existingExamChapters]}
+                    activeDays={[...activityDays]}
+                  />
+                  {/* 2. Boucle post-contrôle : bannière d'une ligne (repliée),
+                      APRÈS la mission — l'administratif ne passe plus devant. */}
                   <NoteInbox
                     controles={controles}
                     today={today}
                     subjectMeta={subjectMeta}
                   />
-                  {/* 1. « Ta semaine » — LA carte d'action : bande série +
-                      objectif (éditable), semaine d'activité, et la session du
-                      jour avec son CTA « Faire ma session ». */}
-                  <div className="rev-card rounded-3xl bg-white p-3 shadow-sm ring-1 ring-black/5">
-                    <WeekPlannerStrip
-                      week={week}
-                      controles={controles}
-                      today={today}
-                      subjectMeta={subjectMeta}
-                      subjects={examSubjects}
-                      chaptersBySubject={chaptersBySubject}
-                      existingExamChapters={[...existingExamChapters]}
-                      streak={streak}
-                      todayMinutes={todayMinutes}
-                      goalMinutes={goalMinutes}
-                      activeDays={[...activityDays]}
-                    />
-                  </div>
-                  {/* 2. Préparer mes contrôles — une carte par contrôle actif,
-                      même couleur/intitulé que la ligne de semaine. */}
+                  {/* 3. Les autres contrôles actifs (celui du héros ne se
+                      répète pas). */}
                   <PrepCards
-                    controles={controles}
+                    controles={prepControles}
                     today={today}
                     subjectMeta={subjectMeta}
                   />
-                  {/* 3. On s'y remet — les dernières sessions, sous la série.
-                      (La carte « À revoir aujourd'hui » a été retirée d'ici :
-                      elle empilait une troisième porte d'entrée au-dessus de la
-                      grille des matières. La file SRS reste accessible depuis
+                  {/* 4. « Ensuite » — les sessions en réserve, cartes tactiles
+                      sans triple bouton. (La file SRS reste accessible depuis
                       l'historique des duels, la bannière de matière et les
                       notifications — cf. lib/notifications SRS_URL.) */}
                   <ResumeSessions
@@ -587,6 +600,15 @@ export default async function ReviserPage() {
                   <CommuteBanner slots={commuteSlots} />
                 </>
               }
+            />
+            {/* La porte d'entrée du carnet : une tuile dédiée sous le
+                programme (remplace le segmented control d'en haut). */}
+            <CarnetTile
+              coursesCount={courseItems.length}
+              questionsCount={courseItems.reduce(
+                (sum, c) => sum + c.questionCount,
+                0,
+              )}
             />
           </div>
         }

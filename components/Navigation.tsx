@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { ReactNode } from 'react'
-import { CircleUser, Crown, Gift, House, Swords, User, Users } from 'lucide-react'
+import { CircleUser, Crown, House, Swords, User, Users } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
@@ -16,7 +16,6 @@ const links = NAV_TABS
 // Correspondance clé (lib, pure) → dessin (composant). Icônes de TRAIT : un seul
 // poids de ligne, aucun détail décoratif, elles restent lisibles à 20 px.
 const ICONS: Record<NavIconName, LucideIcon> = {
-  gift: Gift,
   users: Users,
   house: House,
   swords: Swords,
@@ -27,7 +26,7 @@ const ICONS: Record<NavIconName, LucideIcon> = {
 /**
  * Deux tons hérités de la DA, appliqués à l'icône ACTIVE : le trait prend le
  * violet d'action, le remplissage prend la couleur du rôle de l'onglet — jaune
- * solaire pour ce qu'on gagne (Coffre, Trésor), violet pâle pour le reste.
+ * solaire pour ce qu'on gagne (Trésor), violet pâle pour le reste.
  * L'onglet inactif est un simple trait gris, sans remplissage.
  */
 const ACTIVE_FILL: Record<string, string> = {
@@ -91,32 +90,51 @@ export default function Navigation({
                   aria-label={name}
                   aria-current={active ? 'page' : undefined}
                   data-tour={`tab-${path.slice(1)}`}
-                  className="flex items-center justify-center py-2.5 transition-transform active:scale-95"
+                  className="flex flex-col items-center justify-end gap-0.5 py-1.5 transition-transform active:scale-95"
                 >
-                  {/* Icône seule, sans libellé : l'onglet se lit au dessin et à
-                      la couleur (violet plein = actif, gris trait = inactif).
-                      Le nom reste porté par `aria-label` pour les lecteurs
-                      d'écran, qui ne perdent donc rien. */}
-                  <span className="flex h-11 w-16 items-center justify-center">
-                    {/* Boîte au plus juste autour du dessin : la pastille se
-                        cale sur le COIN de l'icône, pas sur la zone tactile. */}
-                    <span className="relative flex">
+                  {center ? (
+                    // Le Défi — le cœur du jeu — est un ORBE violet plein,
+                    // toujours dans les bornes de la barre (pas de surélévation
+                    // qui mordrait sur le contenu, cf. historique) : il se
+                    // distingue par la matière, pas par la position.
+                    <span className="relative flex size-11 items-center justify-center rounded-full bg-gradient-to-b from-primary to-[color-mix(in_oklch,var(--primary),black_24%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_3px_8px_-2px_color-mix(in_oklch,var(--primary),black_10%)] ring-2 ring-highlight/60">
                       <Icon
                         aria-hidden="true"
-                        strokeWidth={active ? 2.25 : 1.75}
-                        className={cn(
-                          'transition-all',
-                          // L'onglet central (Défi) reste sur la même ligne de
-                          // base que les autres : il se distingue par sa taille,
-                          // pas par une surélévation qui mordait sur le contenu.
-                          center ? 'size-8' : 'size-7',
-                          active
-                            ? cn('scale-110 text-primary', ACTIVE_FILL[role])
-                            : 'fill-transparent text-muted-foreground/70',
-                        )}
+                        strokeWidth={2.25}
+                        className="size-6 fill-primary-foreground/20 text-primary-foreground"
                       />
-                      {icon === 'gift' ? chestBadge : null}
                     </span>
+                  ) : (
+                    <span className="flex h-8 items-center justify-center">
+                      {/* Boîte au plus juste autour du dessin : la pastille se
+                          cale sur le COIN de l'icône, pas sur la zone tactile. */}
+                      <span className="relative flex">
+                        <Icon
+                          aria-hidden="true"
+                          strokeWidth={active ? 2.25 : 1.75}
+                          className={cn(
+                            'size-7 transition-all',
+                            active
+                              ? cn('scale-110 text-primary', ACTIVE_FILL[role])
+                              : 'fill-transparent text-muted-foreground/70',
+                          )}
+                        />
+                        {icon === 'crown' ? chestBadge : null}
+                      </span>
+                    </span>
+                  )}
+                  {/* Le libellé sous chaque icône : fini les devinettes — chaque
+                      onglet a son mot, le lecteur d'écran garde l'aria-label. */}
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      'font-heading text-[10px] leading-none font-bold',
+                      active || center
+                        ? 'text-primary'
+                        : 'text-muted-foreground/70',
+                    )}
+                  >
+                    {name}
                   </span>
                 </Link>
               </li>

@@ -92,10 +92,10 @@ export default function TopHud({
           </div>
 
           {/* Pièces : la monnaie du jeu, pastille dorée flottante qui route vers
-              le coffre. */}
+              le Trésor (boutique + coffre du jour). */}
           <Link
-            href="/coffre"
-            aria-label={`${coins} pièces — voir le coffre`}
+            href="/tresor"
+            aria-label={`${coins} pièces — voir le Trésor`}
             className="pointer-events-auto ml-auto flex min-h-11 shrink-0 items-center gap-1.5 rounded-full bg-highlight px-3 py-1.5 font-mono text-sm font-extrabold text-foreground shadow-lg ring-1 ring-black/10 tabular-nums transition active:scale-95"
           >
             <CoinIcon className="size-4" strokeWidth={2.2} />

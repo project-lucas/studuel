@@ -6,13 +6,7 @@
  * React : `lib/` reste pur et testable, la correspondance clé → dessin vit dans
  * `components/Navigation.tsx`.
  */
-export type NavIconName =
-  | 'gift'
-  | 'users'
-  | 'house'
-  | 'swords'
-  | 'user'
-  | 'crown'
+export type NavIconName = 'users' | 'house' | 'swords' | 'user' | 'crown'
 
 /**
  * Rôle de l'onglet dans la direction artistique : `action` = violet (le geste),
@@ -30,13 +24,13 @@ export type NavTab = {
 }
 
 export const NAV_TABS: NavTab[] = [
-  { name: 'Coffre', path: '/coffre', icon: 'gift', role: 'recompense' },
+  // 5 onglets, Défi au centre. L'ancien onglet Coffre a fusionné dans Trésor
+  // (/coffre redirige) : une seule destination « récompense » — le côté achat
+  // (coffre du jour, boutique, collection) ET le côté abonnement.
   { name: 'Amis', path: '/amis', icon: 'users', role: 'action' },
   { name: 'Réviser', path: '/reviser', icon: 'house', role: 'action' },
   { name: 'Défi', path: '/defi', icon: 'swords', role: 'action', center: true },
   { name: 'Moi', path: '/moi', icon: 'user', role: 'action' },
-  // Trésor = page de conversion (abonnement) : la couronne dit « passe premium »
-  // là où le diamant disait « monnaie / butin » — rôle tenu par le Coffre.
   { name: 'Trésor', path: '/tresor', icon: 'crown', role: 'recompense' },
 ]
 

@@ -485,56 +485,39 @@ export default function SubjectsHome({
         {/* La loupe reste au-dessus des dossiers : elle cherche dans TOUT le
             programme, y compris ce qui est replié — sinon fermer un dossier
             reviendrait à cacher son contenu de la recherche. Le crayon
-            (édition des matières) a récupéré l'entrée qu'offrait l'avatar. */}
+            (édition des matières) vit DANS le dossier Programme, le seul qu'il
+            modifie : en haut, il se confondait avec l'icône de « Mon carnet ». */}
         <div className="flex items-center justify-between gap-2 px-1">
           {/* « Ton programme » et non « Mes matières » : ce dernier nomme déjà
               l'onglet actif tout en haut, la répétition brouillait le repère. */}
           <h2 className="font-heading text-sm font-bold text-foreground">
             Ton programme
           </h2>
-          <div className="flex items-center gap-2">
-            {editing ? (
-              <button
-                type="button"
-                onClick={finishEditing}
-                disabled={pending}
-                className="font-heading flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-primary px-3 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
-              >
-                <Check className="size-3.5" aria-hidden="true" />
-                {pending ? 'Enregistrement…' : 'Terminé'}
-              </button>
-            ) : (
-              <button
-                type="button"
-                onClick={() => {
-                  sfx.tap()
-                  setEditing(true)
-                }}
-                aria-label="Modifier mes matières"
-                className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
-              >
-                <Pencil className="size-4.5" strokeWidth={2.4} aria-hidden="true" />
-              </button>
-            )}
-            <ProgramSearch subjects={subjects} />
-          </div>
+          <ProgramSearch subjects={subjects} />
         </div>
-
-        {/* En édition : la consigne sous la barre de titre. */}
-        {editing ? (
-          <p className="px-1 text-sm text-muted-foreground">
-            Touche une matière pour l&apos;ajouter ou la retirer.
-          </p>
-        ) : null}
 
         {/* On teste le dossier PROGRAMME, pas le nombre de dossiers : la culture
             générale reste visible même quand l'élève n'a plus aucune matière
             sélectionnée, et compter les dossiers ferait alors disparaître le
-            seul message qui lui dit comment se réinscrire. */}
+            seul message qui lui dit comment se réinscrire. Le bouton entre
+            directement en édition : le crayon vivant désormais dans le dossier
+            Programme, il n'existe plus quand le dossier a disparu. */}
         {!folders.some((f) => f.id === 'programme') ? (
-          <div className="rev-card rounded-[1.75rem] bg-white p-5 text-sm text-muted-foreground">
-            Aucune matière sélectionnée — touche «&nbsp;Modifier&nbsp;» pour en
-            ajouter.
+          <div className="rev-card flex flex-col items-start gap-3 rounded-[1.75rem] bg-white p-5">
+            <p className="text-sm text-muted-foreground">
+              Aucune matière sélectionnée.
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                sfx.tap()
+                setEditing(true)
+              }}
+              className="font-heading flex min-h-9 items-center gap-1.5 rounded-full bg-primary px-3.5 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px"
+            >
+              <Pencil className="size-3.5" strokeWidth={2.4} aria-hidden="true" />
+              Choisir mes matières
+            </button>
           </div>
         ) : null}
 
@@ -548,6 +531,44 @@ export default function SubjectsHome({
               progressBySlug={progressBySlug}
               forceOpen={editing}
             >
+              {/* Le crayon vit ici, dans le seul dossier qu'il modifie. En
+                  édition, la rangée devient consigne + « Terminé ». */}
+              {folder.id === 'programme' ? (
+                editing ? (
+                  <div className="flex items-center justify-between gap-3 px-1">
+                    <p className="min-w-0 text-sm text-muted-foreground">
+                      Touche une matière pour l&apos;ajouter ou la retirer.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={finishEditing}
+                      disabled={pending}
+                      className="font-heading flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-primary px-3 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
+                    >
+                      <Check className="size-3.5" aria-hidden="true" />
+                      {pending ? 'Enregistrement…' : 'Terminé'}
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex justify-end px-1">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        sfx.tap()
+                        setEditing(true)
+                      }}
+                      className="font-heading flex min-h-9 items-center gap-1.5 rounded-full bg-white px-3 text-xs font-bold text-primary shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
+                    >
+                      <Pencil
+                        className="size-3.5"
+                        strokeWidth={2.4}
+                        aria-hidden="true"
+                      />
+                      Modifier mes matières
+                    </button>
+                  </div>
+                )
+              ) : null}
               {folder.groups.map(({ label, items }) => (
                 <section key={label ?? 'tout'} className="flex flex-col gap-2.5">
                   {label ? (

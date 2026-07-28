@@ -5,15 +5,21 @@ import { toDayKey } from '@/lib/streak'
 import NavChestBadge from './NavChestBadge'
 
 /**
- * Décide si l'onglet Coffre doit porter sa pastille d'appel : oui tant que le
+ * Décide si l'onglet Trésor doit porter sa pastille d'appel : oui tant que le
  * coffre du jour n'a pas été ouvert. Rendu SOUS un <Suspense> dans le layout —
  * la barre d'onglets s'affiche immédiatement, la pastille arrive en flux et ne
  * retarde jamais la navigation (même discipline que TopHudLoader).
  */
 export default async function NavChestBadgeLoader() {
-  // Déjà sur le Coffre : la pastille n'a plus rien à dire, l'élève y est.
+  // Déjà sur le Trésor (ou une capsule du coffre) : la pastille n'a plus rien à
+  // dire, l'élève y est.
   const pathname = (await headers()).get('x-pathname') ?? ''
-  if (pathname === '/coffre' || pathname.startsWith('/coffre/')) return null
+  if (
+    pathname === '/tresor' ||
+    pathname.startsWith('/tresor/') ||
+    pathname.startsWith('/coffre')
+  )
+    return null
 
   const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
   if (!user) return null

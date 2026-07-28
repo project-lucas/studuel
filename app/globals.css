@@ -2218,9 +2218,9 @@ a:hover > .wiggle-on-hover {
    (z-index 0, les <li> passent au-dessus en z-10). */
 .tab-glow {
   position: absolute;
-  /* Centré sur la hauteur de la barre : les libellés ont disparu, l'icône est
-     seule au milieu de l'onglet. */
-  top: 50%;
+  /* Calé sur la rangée des ICÔNES (les libellés vivent en dessous) : un peu
+     au-dessus du centre de la barre. */
+  top: 42%;
   z-index: 0;
   width: 52px;
   height: 52px;

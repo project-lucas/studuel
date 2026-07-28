@@ -1,23 +1,111 @@
 import TabHeader from '@/components/TabHeader'
+import TresorSpaces from '@/components/TresorSpaces'
 import PremiumHome from '@/components/PremiumHome'
+import TresorHome from '@/components/TresorHome'
+import CoffreStore from '@/components/CoffreStore'
+import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/supabase/user'
 import { getUserTier } from '@/lib/subscription'
+import { toDayKey } from '@/lib/streak'
+import {
+  getMockShop,
+  getMockCollection,
+  shopWithOwnership,
+  collectionWithUnlocks,
+  MOCK_COINS,
+} from '@/lib/tresor'
 
-export const metadata = { title: 'Premium — Studuel' }
+export const metadata = { title: 'Trésor — Studuel' }
 export const dynamic = 'force-dynamic'
 
-// Onglet de conversion (extrême droite) : présente les offres et donne envie de
-// passer au payant. Le coffre / boutique / collection a migré vers l'icône
-// « coffre » de l'onglet Moi (route /coffre).
+// L'onglet Trésor fusionne les deux économies (ex /coffre + ex page premium) :
+// volet « Boutique » = le côté ACHAT (coffre du jour, capsules, boosts en
+// pièces, collection), volet « Premium » = le côté ABONNEMENT (les offres).
+// Connecté : données réelles (018_tresor.sql). Visiteur — ou migration pas
+// encore passée — : démo.
 export default async function TresorPage() {
-  const tier = await getUserTier()
+  const supabase = await createClient()
+  const user = await getCurrentUser()
+
+  let live = false
+  let coins = MOCK_COINS
+  let shop = getMockShop()
+  let collection = getMockCollection()
+  let chestOpened = false
+
+  // L'abonnement se résout en parallèle des données boutique (attendu en bas).
+  const tierPromise = getUserTier()
+
+  if (user) {
+    const [{ data: profile, error }, { data: purchases }, { data: unlocks }, { data: chest }] =
+      await Promise.all([
+        supabase.from('profiles').select('coins').eq('id', user.id).maybeSingle(),
+        supabase.from('shop_purchases').select('item_id').eq('user_id', user.id),
+        supabase
+          .from('collection_unlocks')
+          .select('item_id')
+          .eq('user_id', user.id),
+        supabase
+          .from('chest_opens')
+          .select('date')
+          .eq('user_id', user.id)
+          .eq('date', toDayKey(new Date()))
+          .maybeSingle(),
+      ])
+
+    if (error) {
+      // Migration 018 pas encore exécutée : la page reste visitable en démo.
+      console.error('[tresor] données indisponibles (migration 018 ?):', error.message)
+    } else {
+      live = true
+      const n = Number(profile?.coins)
+      coins = Number.isFinite(n) ? n : 0
+      shop = shopWithOwnership(
+        new Set((purchases ?? []).map((p) => String(p.item_id))),
+      )
+      collection = collectionWithUnlocks(
+        new Set((unlocks ?? []).map((u) => String(u.item_id))),
+      )
+      chestOpened = Boolean(chest)
+    }
+  }
+
+  const tier = await tierPromise
 
   return (
     <div>
       <TabHeader
         title="Trésor"
-        subtitle="Débloque tout Studuel, sans limite."
+        subtitle="Tes pièces, ta boutique — et tout Studuel en illimité."
       />
-      <PremiumHome currentTier={tier} />
+      <TresorSpaces
+        boutique={
+          <div className="flex flex-col gap-8">
+            {/* La devanture : capsules d'apprentissage (€) + personnalisation
+                (pièces). */}
+            <CoffreStore coins={coins} />
+
+            {/* L'économie de pièces : coffre du jour, boutique de boosts,
+                collection. */}
+            <section
+              aria-label="Tes pièces et ta collection"
+              className="mx-auto w-full max-w-md"
+            >
+              <h2 className="font-heading mb-3 px-1 text-xl font-extrabold text-foreground">
+                Tes pièces & ta collection
+              </h2>
+              <TresorHome
+                live={live}
+                initialCoins={coins}
+                shop={shop}
+                collection={collection}
+                chestOpened={chestOpened}
+              />
+            </section>
+          </div>
+        }
+        premium={<PremiumHome currentTier={tier} />}
+      />
     </div>
   )
 }

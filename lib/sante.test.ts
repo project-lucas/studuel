@@ -19,14 +19,15 @@ describe('MIGRATIONS_SANTE — le catalogue colle au dépôt', () => {
     }
   })
 
-  it('couvre TOUTES les migrations en attente (188, 192 → 208), sans trou', () => {
-    // La dette mesurée au 27/07 : 188 puis 192 → 208. Un numéro qui manque ici
-    // est une migration que ni /admin/sante ni la sonde CLI ne surveillent —
-    // exactement le trou silencieux que ce module existe pour fermer.
+  it('couvre TOUTES les migrations en attente (188, 192 → 209), sans trou', () => {
+    // La dette : 188 puis 192 → 209. Un numéro qui manque ici est une migration
+    // que ni /admin/sante ni la sonde CLI ne surveillent — exactement le trou
+    // silencieux que ce module existe pour fermer. La 209 est la reprise du
+    // durcissement échoué dans 192→207 (déjà exécutées au 28/07).
     const ids = MIGRATIONS_SANTE.map((m) => m.id).sort()
     const attendues = [
       '188',
-      ...Array.from({ length: 17 }, (_, i) => String(192 + i)),
+      ...Array.from({ length: 18 }, (_, i) => String(192 + i)),
     ].sort()
     expect(ids).toEqual(attendues)
   })

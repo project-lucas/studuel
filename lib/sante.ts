@@ -181,6 +181,14 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     sonde: null,
   },
   {
+    id: '209',
+    fichier: '209_reprise_hardening_192_207.sql',
+    feature: 'Reprise du durcissement de l’audit (192·200·203·204·205·207)',
+    siAbsente:
+      'Les correctifs de l’audit e7aca3a ne sont PAS en base (192→207 déjà exécutées quand ils ont été écrits) : l’XP des quêtes/du clan n’est jamais versée au portefeuille, le pseudo de jeu n’a aucune borne SQL, create_controle est inondable.',
+    sonde: null,
+  },
+  {
     id: '193',
     fichier: '193_matieres_completes.sql',
     feature: 'Catalogue de matières complet (+6 matières)',

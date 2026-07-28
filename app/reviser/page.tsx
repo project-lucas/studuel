@@ -553,6 +553,18 @@ export default async function ReviserPage() {
               grade={grade}
               progressBySlug={progressBySlug}
               examBySubject={examBySubject}
+              carnetSlot={
+                /* La porte d'entrée du carnet : un bouton-icône collé à la
+                   loupe du bandeau « Ton programme » (l'ancienne tuile pleine
+                   largeur vivait sous le pli). */
+                <CarnetTile
+                  coursesCount={courseItems.length}
+                  questionsCount={courseItems.reduce(
+                    (sum, c) => sum + c.questionCount,
+                    0,
+                  )}
+                />
+              }
               topSlot={
                 <>
                   {/* 1. LA mission du jour : l'app a choisi la meilleure session
@@ -600,15 +612,6 @@ export default async function ReviserPage() {
                   <CommuteBanner slots={commuteSlots} />
                 </>
               }
-            />
-            {/* La porte d'entrée du carnet : une tuile dédiée sous le
-                programme (remplace le segmented control d'en haut). */}
-            <CarnetTile
-              coursesCount={courseItems.length}
-              questionsCount={courseItems.reduce(
-                (sum, c) => sum + c.questionCount,
-                0,
-              )}
             />
           </div>
         }

@@ -413,6 +413,7 @@ export default function SubjectsHome({
   progressBySlug,
   examBySubject = {},
   topSlot,
+  carnetSlot,
 }: {
   subjects: Subject[]
   selected: string[] | null
@@ -424,6 +425,9 @@ export default function SubjectsHome({
   // Blocs insérés au-dessus de la grille des matières (série/semaine, contrôles,
   // reprise…) — rendus côté serveur et passés en enfant.
   topSlot?: React.ReactNode
+  // L'entrée « Mon carnet » (bouton-icône rond), rendue collée à la loupe du
+  // bandeau « Ton programme » — rendue côté serveur et passée en enfant.
+  carnetSlot?: React.ReactNode
 }) {
   const [editing, setEditing] = useState(false)
   const [picked, setPicked] = useState<Set<string>>(
@@ -493,7 +497,12 @@ export default function SubjectsHome({
           <h2 className="font-heading text-sm font-bold text-foreground">
             Ton programme
           </h2>
-          <ProgramSearch subjects={subjects} />
+          {/* Le carnet vit ici, collé à la loupe : deux commandes flottantes
+              de même robe, au lieu d'une tuile pleine largeur sous le pli. */}
+          <div className="flex items-center gap-2">
+            {carnetSlot}
+            <ProgramSearch subjects={subjects} />
+          </div>
         </div>
 
         {/* On teste le dossier PROGRAMME, pas le nombre de dossiers : la culture

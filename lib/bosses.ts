@@ -245,16 +245,25 @@ const stripMatch = ({ match, ...boss }: BossEntry): Boss => {
 
 export const ALL_BOSSES: Boss[] = [...CATALOG.map(stripMatch), FALLBACK_BOSS]
 
+/** Un boss par son id — `undefined` si l'id ne désigne rien (lien trafiqué). */
+export function bossById(id: string): Boss | undefined {
+  return ALL_BOSSES.find((b) => b.id === id)
+}
+
 const normalize = (s: string) =>
   s
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
 
+// ⚠️ Le résultat repasse par `bossById` : la regexp de matching ne doit JAMAIS
+// sortir du catalogue. Un boss traverse la frontière serveur → client (cartes
+// de La Traque), et un RegExp n'est pas sérialisable — Next casse le rendu.
 export function bossForSubject(subject: string | null): Boss {
   if (!subject) return FALLBACK_BOSS
   const n = normalize(subject)
-  return CATALOG.find((b) => b.match.test(n)) ?? FALLBACK_BOSS
+  const entry = CATALOG.find((b) => b.match.test(n))
+  return (entry && bossById(entry.id)) ?? FALLBACK_BOSS
 }
 
 // Le pool du boss est classé chapitre fragile en tête mais mélange plusieurs

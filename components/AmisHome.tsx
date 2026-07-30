@@ -8,6 +8,7 @@ import {
   Crown,
   Zap,
   Check,
+  ChevronDown,
   UserPlus,
   Users,
   School,
@@ -21,7 +22,11 @@ import { Button } from '@/components/ui/button'
 import FriendAddButton from '@/components/FriendAddButton'
 import ParrainageCard from '@/components/ParrainageCard'
 import SquadSection from '@/components/SquadSection'
+import FriendStories from '@/components/amis/FriendStories'
+import RivalCard from '@/components/amis/RivalCard'
+import TeamChestCard from '@/components/amis/TeamChestCard'
 import type { ReferralSummary } from '@/lib/gems'
+import type { ClanWeekBoard } from '@/lib/clan-week'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { formatHours } from '@/lib/time'
@@ -29,7 +34,6 @@ import {
   type Friend,
   type SchoolBoard,
   type PendingRequest,
-  type StreakEntry,
   type GeoScope,
   GEO_SCOPES,
   geoScopeLabel,
@@ -54,7 +58,6 @@ import {
   type RankPlayer,
 } from '@/lib/trophies'
 import { rankFor } from '@/lib/rank'
-import { useTablist } from '@/components/useTablist'
 
 // En-tête de section : petite étiquette icône + titre, cohérente partout.
 function SectionTitle({
@@ -473,102 +476,6 @@ function ClassementArena({
   )
 }
 
-// --------------------------------------------------------------------- Séries
-// Le classement des séries : voir où en sont ses amis (jours consécutifs de
-// travail) et se comparer. La flamme est LA récompense de régularité — c'est ce
-// qui pousse à ne pas lâcher le premier. Moi + amis, triés séries décroissantes.
-function StreakSection({ streaks }: { streaks: StreakEntry[] }) {
-  const meIndex = streaks.findIndex((e) => e.isMe)
-  const top = streaks[0]
-  // « X jours d'avance » sur celui juste derrière moi, ou « rattrape untel »
-  // s'il y a quelqu'un devant : un objectif concret par-dessus le classement.
-  const ahead = meIndex > 0 ? streaks[meIndex - 1] : null
-  const me = meIndex >= 0 ? streaks[meIndex] : null
-  const gap = ahead && me ? ahead.streak - me.streak : 0
-
-  return (
-    <section>
-      <SectionTitle
-        icon={Flame}
-        aside={
-          top && top.streak > 0 ? (
-            <span className="flex items-center gap-1 text-xs font-semibold text-muted-foreground">
-              <Crown className="size-3.5 text-highlight" />
-              {top.name} · {top.streak} j
-            </span>
-          ) : undefined
-        }
-      >
-        Séries en cours
-      </SectionTitle>
-
-      {ahead && me && gap > 0 ? (
-        <p className="mb-2 rounded-2xl bg-primary p-3 text-sm font-medium text-primary-foreground">
-          {gap} jour{gap > 1 ? 's' : ''} pour rattraper {ahead.name} — tiens ta
-          série aujourd&apos;hui 🔥
-        </p>
-      ) : me && meIndex === 0 && me.streak > 0 ? (
-        <p className="mb-2 rounded-2xl bg-primary p-3 text-sm font-medium text-primary-foreground">
-          Tu as la plus longue série du groupe — ne la casse pas 👑🔥
-        </p>
-      ) : null}
-
-      <ol className="overflow-hidden rounded-2xl bg-card ring-1 ring-foreground/10">
-        {streaks.map((e, i) => {
-          const rank = i + 1
-          const cold = e.streak === 0
-          return (
-            <li
-              key={e.id}
-              className={cn(
-                'flex items-center gap-3 border-b px-3 py-2.5 last:border-b-0',
-                e.isMe && 'bg-accent/40',
-              )}
-            >
-              <span
-                className={cn(
-                  'flex size-6 shrink-0 items-center justify-center rounded-full font-mono text-xs font-bold tabular-nums',
-                  rank === 1 && 'bg-highlight text-foreground',
-                  rank === 2 && 'bg-muted-foreground/25',
-                  rank === 3 && 'bg-accent text-accent-foreground',
-                  rank > 3 && 'text-muted-foreground',
-                )}
-              >
-                {rank}
-              </span>
-              <Avatar emoji={e.emoji} />
-              <span
-                className={cn(
-                  'min-w-0 flex-1 truncate text-sm',
-                  e.isMe ? 'font-bold' : 'font-medium',
-                )}
-              >
-                {e.name}
-              </span>
-              <span
-                className={cn(
-                  'flex shrink-0 items-center gap-1 font-mono text-sm font-bold tabular-nums',
-                  cold ? 'text-muted-foreground' : 'text-orange-500',
-                )}
-              >
-                <Flame
-                  className={cn('size-4', cold && 'opacity-40')}
-                  strokeWidth={2.4}
-                />
-                {e.streak}
-              </span>
-            </li>
-          )
-        })}
-      </ol>
-      <p className="mt-2 px-1 text-[11px] text-muted-foreground">
-        Une série = des jours de suite où tu travailles. Reviens chaque jour pour
-        garder ta flamme allumée.
-      </p>
-    </section>
-  )
-}
-
 // ------------------------------------------------------- Classement géographique
 // Les heures de chaque élève s'additionnent pour son échelon ; le classement
 // interne départage les élèves au temps de travail réel. Un sélecteur d'échelon
@@ -684,7 +591,9 @@ function GeoRankingSection({
   schoolDemo: boolean
 }) {
   const [scope, setScope] = useState<GeoScope>('school')
-  const scopeTabs = useTablist(GEO_SCOPES.length, (i) => setScope(GEO_SCOPES[i]))
+  // Replié par défaut : le podium + ta ligne suffisent au quotidien — la liste
+  // complète (et sa cagnotte) se déplie à la demande.
+  const [expanded, setExpanded] = useState(false)
   // Mon temps réel, lu depuis l'établissement : il replace « Toi » au bon rang
   // dans les aperçus d'échelons plus larges.
   const mySeconds = school.mates.find((m) => m.isMe)?.seconds ?? 0
@@ -697,52 +606,113 @@ function GeoRankingSection({
       : getMockGeoBoard(scope, mySeconds, school.level)
   const demo = scope === 'school' ? schoolDemo : true
 
+  // Le podium (1er au centre, 2e à gauche, 3e à droite) + ma ligne.
+  const podium = board.mates.slice(0, 3)
+  const ordered = [podium[1], podium[0], podium[2]].filter(
+    (m): m is NonNullable<typeof m> => Boolean(m),
+  )
+  const myIndex = board.mates.findIndex((m) => m.isMe)
+  const me = myIndex >= 0 ? board.mates[myIndex] : null
+
   return (
     <section>
-      <SectionTitle icon={School} aside={demo ? <DemoBadge /> : undefined}>
-        {geoScopeTitle(scope, school.level)}
+      <SectionTitle
+        icon={School}
+        aside={
+          <span className="flex items-center gap-2">
+            {demo ? <DemoBadge /> : null}
+            {/* Portée unique « Collège ▾ » : un seul sélecteur discret au lieu
+                de quatre onglets pour un aperçu. */}
+            <label className="relative">
+              <span className="sr-only">Échelle du classement</span>
+              <select
+                value={scope}
+                onChange={(e) => {
+                  sfx.tap()
+                  setScope(e.target.value as GeoScope)
+                }}
+                className="cursor-pointer appearance-none rounded-full bg-white py-1 pr-7 pl-3 text-xs font-bold text-primary shadow-sm ring-1 ring-black/5"
+              >
+                {GEO_SCOPES.map((s) => (
+                  <option key={s} value={s}>
+                    {geoScopeLabel(s, school.level)}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown
+                className="pointer-events-none absolute top-1/2 right-2 size-3.5 -translate-y-1/2 text-primary"
+                aria-hidden="true"
+              />
+            </label>
+          </span>
+        }
+      >
+        {board.name.length > 0 ? board.name : geoScopeTitle(scope, school.level)}
       </SectionTitle>
 
-      {/* Sélecteur d'échelon : de ton établissement au national. */}
-      {/* Le motif ARIA est complet (panneau lié + flèches + tabindex baladeur) :
-          annoncer « onglet 2 sur 4 » sans le clavier qui va avec est une
-          promesse non tenue au lecteur d'écran. */}
-      <div
-        role="tablist"
-        aria-label="Échelle du classement"
-        className="mb-2 flex gap-1 rounded-2xl bg-muted p-1"
-      >
-        {GEO_SCOPES.map((s, i) => {
-          const active = s === scope
-          return (
-            <button
-              key={s}
-              type="button"
-              role="tab"
-              id={`geo-tab-${s}`}
-              aria-selected={active}
-              aria-controls="geo-panel"
-              {...scopeTabs.props(i, active)}
-              onClick={() => {
-                sfx.tap()
-                setScope(s)
-              }}
-              className={cn(
-                'flex min-h-11 flex-1 items-center justify-center rounded-xl px-1 text-xs font-semibold transition-colors',
-                active
-                  ? 'bg-primary text-primary-foreground shadow-sm'
-                  : 'text-muted-foreground hover:text-foreground',
-              )}
-            >
-              {geoScopeLabel(s, school.level)}
-            </button>
-          )
-        })}
-      </div>
-
-      <div id="geo-panel" role="tabpanel" aria-labelledby={`geo-tab-${scope}`}>
+      {expanded ? (
         <ScopeBoard board={board} scope={scope} demo={demo} />
-      </div>
+      ) : (
+        <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
+          {/* Le podium : trois marches, le 1er au centre et plus grand. */}
+          <div className="flex items-end justify-center gap-5">
+            {ordered.map((m) => {
+              const rank = board.mates.indexOf(m) + 1
+              const first = rank === 1
+              return (
+                <div key={m.id} className="flex flex-col items-center gap-1">
+                  <span
+                    aria-hidden="true"
+                    className={cn(first ? 'text-4xl' : 'text-2xl')}
+                  >
+                    {m.emoji}
+                  </span>
+                  <span
+                    className={cn(
+                      'flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[11px] font-bold tabular-nums',
+                      first
+                        ? 'bg-highlight/40 text-foreground'
+                        : 'bg-muted text-muted-foreground',
+                    )}
+                  >
+                    {rank === 1 ? '1ᵉʳ' : `${rank}ᵉ`} · {formatHours(m.seconds)}
+                  </span>
+                  <span className="max-w-20 truncate text-[11px] font-semibold text-muted-foreground">
+                    {m.name}
+                  </span>
+                </div>
+              )
+            })}
+          </div>
+
+          {/* Ma ligne, toujours visible — c'est elle qu'on vient vérifier. */}
+          {me ? (
+            <div className="mt-3 flex items-center gap-3 rounded-2xl bg-accent/40 px-3 py-2.5">
+              <span className="w-6 shrink-0 text-center font-mono text-xs font-bold text-muted-foreground tabular-nums">
+                {myIndex + 1}
+              </span>
+              <Avatar emoji={me.emoji} />
+              <span className="min-w-0 flex-1 truncate text-sm font-bold">
+                Toi
+              </span>
+              <span className="font-mono text-sm font-semibold tabular-nums">
+                {formatHours(me.seconds)}
+              </span>
+            </div>
+          ) : null}
+
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              setExpanded(true)
+            }}
+            className="mt-2 w-full cursor-pointer rounded-full py-1.5 text-center text-xs font-bold text-primary transition-colors hover:bg-primary/5"
+          >
+            Voir tout le classement
+          </button>
+        </div>
+      )}
     </section>
   )
 }
@@ -816,7 +786,6 @@ function PendingRow({ request }: { request: PendingRequest }) {
 export default function AmisHome({
   ranking,
   onlineFriendIds,
-  streaks,
   school,
   schoolDemo,
   friends,
@@ -827,12 +796,13 @@ export default function AmisHome({
   gems,
   referral,
   squadIds,
+  clanBoard,
+  today,
 }: {
   ranking: RankPlayer[]
   // Amis actuellement en session (RPC friends_live) : point vert sur leur
   // ligne du classement + compteur « en ligne » dans son en-tête.
   onlineFriendIds: string[]
-  streaks: StreakEntry[]
   school: SchoolBoard
   // true = données d'exemple (visiteur / élève sans établissement) : l'UI le
   // signale avec la pastille « Aperçu » au lieu de les faire passer pour vraies.
@@ -848,12 +818,54 @@ export default function AmisHome({
   referral: ReferralSummary
   // Composition du groupe privé (migration 183), sous-ensemble des relations.
   squadIds: string[]
+  // Clan hebdo (migration 204) — null tant que la migration n'est pas passée.
+  clanBoard: ClanWeekBoard | null
+  today: string
 }) {
+  // Défi refusé depuis les stories ou la carte rival (1/jour déjà lancé).
+  const [duelNotice, setDuelNotice] = useState(false)
+  const rows = rankPlayers(ranking)
+  const me = rows.find((r) => r.isMe)
+  const rival = rivalAhead(rows)
+  const onlineIds = new Set(onlineFriendIds)
+
   return (
     <div className="flex flex-col gap-6">
-      {/* On arrive du swipe (Réviser → Amis) DIRECTEMENT sur le classement
-          entre amis, façon liste de clan Clash Royale. C'est LA barre d'amis
-          unique : trophées, présence en ligne et défi (+XP) sur chaque ligne. */}
+      {/* 1. « En ce moment » — la rangée stories : qui est là, qui tient sa
+          flamme, un tap = défier. L'écran s'ouvre sur du vivant. */}
+      {friends.length > 0 ? (
+        <FriendStories
+          friends={friends}
+          onlineIds={onlineIds}
+          myFriendCode={myFriendCode}
+          onDuelBlocked={() => setDuelNotice(true)}
+        />
+      ) : null}
+
+      {/* 2. Le rival direct — LA action du jour, sortie du rang. */}
+      {rival && me ? (
+        <RivalCard
+          rival={rival}
+          myTrophies={me.trophies}
+          onDuelBlocked={() => setDuelNotice(true)}
+        />
+      ) : null}
+
+      {duelNotice ? (
+        <p
+          role="status"
+          className="-mt-3 rounded-2xl bg-muted/60 p-2.5 text-xs font-medium text-foreground/80"
+        >
+          Ton défi du jour est déjà lancé — une seule mission par jour, reviens
+          demain ⚔️
+        </p>
+      ) : null}
+
+      {/* 3. Le coffre d'équipe hebdo : l'objectif commun en jauge (clan 204).
+          Masqué sans clan ou tant que la migration n'est pas passée. */}
+      {clanBoard ? <TeamChestCard board={clanBoard} today={today} /> : null}
+
+      {/* 4. Mon équipe — le classement aux trophées, façon liste de clan. */}
       <ClassementArena
         ranking={ranking}
         onlineFriendIds={onlineFriendIds}
@@ -862,22 +874,12 @@ export default function AmisHome({
         canRenameSquad={canRenameSquad}
       />
 
-      {/* Parrainage — juste sous le classement, là où l'élève constate qu'il
-          lui manque des amis : c'est là que l'invitation convertit. */}
+      {/* 5. Parrainage — compacté en une ligne (on le fait une fois, il n'a
+          plus le droit d'écraser le quotidien). */}
       <ParrainageCard
         myFriendCode={myFriendCode}
         gems={gems}
         summary={referral}
-      />
-
-      {/* Séries — qui tient sa flamme le plus longtemps. Masqué sans ami. */}
-      {friends.length > 0 ? <StreakSection streaks={streaks} /> : null}
-
-      {/* Mon groupe — la sélection privée parmi toutes les relations. */}
-      <SquadSection
-        friends={friends}
-        squadIds={squadIds}
-        squadName={squadName}
       />
 
       {/* Demandes reçues — à accepter ou refuser. Masqué s'il n'y en a pas. */}
@@ -901,8 +903,15 @@ export default function AmisHome({
         </section>
       ) : null}
 
-      {/* Classement géographique — ton établissement, ton département, ta
-          région, le national, au choix via le sélecteur d'échelon. */}
+      {/* Mon groupe — la sélection privée parmi toutes les relations. */}
+      <SquadSection
+        friends={friends}
+        squadIds={squadIds}
+        squadName={squadName}
+      />
+
+      {/* 6. Le collège, réduit à un podium + ta ligne (portée en sélecteur,
+          liste complète à la demande). */}
       <GeoRankingSection school={school} schoolDemo={schoolDemo} />
     </div>
   )

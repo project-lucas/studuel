@@ -9,6 +9,7 @@ import { claimDailyQuests } from '@/app/defi/hebdo-actions'
 import {
   ALL_DONE_GEMS,
   ALL_DONE_XP,
+  BONUS_STEP_ID,
   allDone,
   doneCount,
   questsHeadline,
@@ -43,7 +44,7 @@ export default function DailyQuests({
   // Ce qui est encaissable MAINTENANT : les quêtes finies et pas encore payées,
   // plus le bonus si les trois sont bouclées et qu'il n'a jamais été versé.
   const pendingViews = views.filter((v) => v.done && !paid.has(v.def.id))
-  const bonusDue = complete && !paid.has('__jour__')
+  const bonusDue = complete && !paid.has(BONUS_STEP_ID)
   const claimableXp =
     pendingViews.reduce((s, v) => s + v.def.xp, 0) + (bonusDue ? ALL_DONE_XP : 0)
   const claimableGems =
@@ -59,7 +60,7 @@ export default function DailyQuests({
       setPaid((prev) => {
         const next = new Set(prev)
         for (const v of pendingViews) next.add(v.def.id)
-        if (r.allDone) next.add('__jour__')
+        if (r.allDone) next.add(BONUS_STEP_ID)
         return next
       })
       setReward({ xp: r.xp, gems: r.gems })

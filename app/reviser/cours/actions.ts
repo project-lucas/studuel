@@ -92,13 +92,15 @@ const refresh = (courseId?: string) => {
 
 // ------------------------------------------------------------------- cours ---
 
-export async function createCourse(): Promise<OkId> {
+// La création demande désormais un nom (fini les « Nouveau cours » fantômes) —
+// le repli reste là pour un appel sans titre (robustesse, pas un chemin d'UI).
+export async function createCourse(title?: string): Promise<OkId> {
   const { supabase, userId } = await requireUserId()
   if (!userId) return fail
 
   const { data, error } = await supabase
     .from('carnet_courses')
-    .insert({ owner_id: userId, title: 'Nouveau cours' })
+    .insert({ owner_id: userId, title: normalizeTitle(title, 'Nouveau cours') })
     .select('id')
     .single()
   if (error) {

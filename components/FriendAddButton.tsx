@@ -14,16 +14,17 @@ import { useDialogFocus } from '@/lib/use-dialog'
 /**
  * « Ajouter un ami » de l'onglet Amis : ouvre une modale avec tout le
  * nécessaire — mon QR à faire scanner, mon code à copier, et le champ
- * « code d'un ami ». Deux déclencheurs possibles : le rond du header
- * (`icon`, défaut) ou le gros bouton vert façon Clash Royale sous le
- * classement (`cta`).
+ * « code d'un ami ». Trois déclencheurs possibles : le rond du header
+ * (`icon`, défaut), le gros bouton vert façon Clash Royale sous le
+ * classement (`cta`), ou la pastille « Inviter » de la rangée stories
+ * (`story`).
  */
 export default function FriendAddButton({
   myFriendCode,
   variant = 'icon',
 }: {
   myFriendCode: string
-  variant?: 'icon' | 'cta'
+  variant?: 'icon' | 'cta' | 'story'
 }) {
   const [open, setOpen] = useState(false)
   const panel = useRef<HTMLDivElement>(null)
@@ -94,6 +95,28 @@ export default function FriendAddButton({
           />
           <span className="font-heading truncate text-sm font-extrabold text-white">
             Ajouter un ami
+          </span>
+        </button>
+      ) : variant === 'story' ? (
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setOpen(true)
+          }}
+          aria-haspopup="dialog"
+          aria-label="Inviter un ami"
+          className="flex w-16 shrink-0 cursor-pointer flex-col items-center gap-1"
+        >
+          <span
+            aria-hidden="true"
+            className="flex size-13 items-center justify-center rounded-full border-2 border-dashed border-primary/40 text-xl text-primary"
+          >
+            ＋
+          </span>
+          <span className="text-[11px] font-bold text-foreground">Inviter</span>
+          <span className="-mt-1 text-[10px] font-semibold text-transparent">
+            ·
           </span>
         </button>
       ) : (

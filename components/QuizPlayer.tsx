@@ -15,6 +15,8 @@ import { SoundToggle } from '@/components/FlashcardPlayer'
 import BackButton from '@/components/BackButton'
 import QuitGuardButton from '@/components/QuitGuardButton'
 import ProgressRing from '@/components/ProgressRing'
+import BossApparition from '@/components/defi/BossApparition'
+import type { TraqueApparition } from '@/lib/traque'
 import { CircleCheck, CircleX, RotateCcw, ArrowLeft, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -62,6 +64,10 @@ export default function QuizPlayer({
   const [best, setBest] = useState(0)
   const [finished, setFinished] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // La Traque : ce quiz vient-il de faire sortir un gardien de sa tanière ? Le
+  // serveur le dit en enregistrant la session ; le rideau s'ouvre par-dessus
+  // l'écran de fin, jamais au milieu d'une question.
+  const [apparition, setApparition] = useState<TraqueApparition | null>(null)
 
   const question = questions[index]
   // Rejeu partiel : le paquet en cours ne couvre plus tout le quiz.
@@ -100,7 +106,10 @@ export default function QuizPlayer({
     // On garde donc l'entraînement (SRS, ci-dessous) sans la comptabilité.
     if (!isPartial) {
       recordTestSession(quizId, score, questions.length)
-        .then((r) => setSaved(r.saved))
+        .then((r) => {
+          setSaved(r.saved)
+          setApparition(r.apparition)
+        })
         .catch(() => setSaved(false))
     }
     // La file « À revoir » est reprogrammée dans TOUS les cas : elle raisonne
@@ -192,6 +201,9 @@ export default function QuizPlayer({
     setBest(0)
     setFinished(false)
     setSaved(null)
+    // Le gardien reste sorti, mais son rideau a déjà été joué : le rejeu ne le
+    // rouvre pas (la bannière de l'arène prend le relais pendant l'heure).
+    setApparition(null)
     reviewsRef.current = []
     finishedRef.current = false
     lockedRef.current = false
@@ -217,6 +229,16 @@ export default function QuizPlayer({
       // des deux arbres JSX — une coïncidence qu'un simple <div> ajouté plus
       // tard casserait, en faisant réapparaître un badge fantôme.
       <div key="quiz-fin" className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
+        {/* La Traque : si ce quiz a fait déborder la jauge, le gardien surgit
+            PAR-DESSUS le score. Il se monte en portail (document.body), donc sa
+            position dans cet arbre n'a aucune incidence sur la mise en page. */}
+        {apparition ? (
+          <BossApparition
+            apparition={apparition}
+            onClose={() => setApparition(null)}
+          />
+        ) : null}
+
         {/* Volet score, aux couleurs du quiz */}
         <div className="bg-primary px-4 pt-16 pb-10 text-primary-foreground md:px-8 md:pt-12">
           <div className="mx-auto w-full max-w-xl">

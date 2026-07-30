@@ -4,7 +4,7 @@ import {
   dayLabelFr,
   type DuelHistoryEntry,
 } from '@/lib/defi/history'
-import { ChevronRightIcon, SwordsIcon, TrophyIcon } from './icons'
+import { ChevronRight, Swords, Trophy } from 'lucide-react'
 
 interface DuelHistoryProps {
   entries: DuelHistoryEntry[]
@@ -40,7 +40,7 @@ export default function DuelHistory({
         </p>
       ) : (
         <div className="flex flex-col items-center gap-3 py-4 text-center">
-          <SwordsIcon className="size-8 text-white/35" />
+          <Swords className="size-8 text-white/35" strokeWidth={2.2} aria-hidden="true" />
           <p className="text-sm font-semibold text-white/70">
             Aucun match classé pour l&apos;instant.
             <br />
@@ -85,7 +85,7 @@ export default function DuelHistory({
                 {e.delta >= 0 ? `+${e.delta}` : e.delta}
               </span>
               <span className="flex shrink-0 items-center gap-1 text-xs font-bold text-white/60 tabular-nums">
-                <TrophyIcon className="size-3.5 text-highlight" />
+                <Trophy className="size-3.5 text-highlight" strokeWidth={2.4} aria-hidden="true" />
                 {e.trophies}
               </span>
             </li>
@@ -99,7 +99,7 @@ export default function DuelHistory({
         className="defi2-press flex items-center gap-3 rounded-2xl border border-highlight/35 bg-highlight/12 px-4 py-3 focus-visible:ring-4 focus-visible:ring-highlight/40 focus-visible:outline-none"
       >
         <span className="relative grid size-10 shrink-0 place-items-center rounded-xl bg-highlight/20 text-highlight">
-          <SwordsIcon className="size-5" />
+          <Swords className="size-5" strokeWidth={2.2} aria-hidden="true" />
           {reviewCount > 0 ? (
             <span className="absolute -top-1.5 -right-1.5 grid h-5 min-w-5 place-items-center rounded-full border-2 border-white/70 bg-destructive px-1 text-[0.6rem] font-extrabold text-white tabular-nums">
               {reviewCount > 99 ? '99+' : reviewCount}
@@ -116,7 +116,7 @@ export default function DuelHistory({
               : 'Rien à revoir, bravo !'}
           </span>
         </span>
-        <ChevronRightIcon className="size-5 shrink-0 text-white/50" />
+        <ChevronRight className="size-5 shrink-0 text-white/50" strokeWidth={2.2} aria-hidden="true" />
       </Link>
     </div>
   )

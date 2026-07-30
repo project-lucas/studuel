@@ -34,13 +34,20 @@ export default function ReviewSession({
   courseTitle,
   scopeLabel,
   questions,
+  backHref,
+  backLabel,
 }: {
-  courseId: string
+  /** null = session transverse (« À revoir » multi-cours) : les tentatives
+   *  sont enregistrées hors session, le serveur re-corrige de toute façon. */
+  courseId: string | null
   chapterId: string | null
   courseTitle: string
   /** « Tout le cours » ou le titre du chapitre révisé. */
   scopeLabel: string
   questions: PlayableQuestion[]
+  /** Destination du bouton retour (défaut : l'écran du cours). */
+  backHref?: string
+  backLabel?: string
 }) {
   const [index, setIndex] = useState(0)
   const [answered, setAnswered] = useState(false)
@@ -49,8 +56,13 @@ export default function ReviewSession({
   const sessionIdRef = useRef<string | null>(null)
   const endedRef = useRef(false)
 
-  // Ouvre la session côté serveur, une seule fois.
+  const exitHref = backHref ?? `/reviser/cours/${courseId}`
+  const exitLabel = backLabel ?? 'Retour au cours'
+
+  // Ouvre la session côté serveur, une seule fois (sessions liées à UN cours ;
+  // la session transverse enregistre ses tentatives sans en ouvrir).
   useEffect(() => {
+    if (courseId === null) return
     let cancelled = false
     startReviewSession(courseId, chapterId).then((res) => {
       if (!cancelled && res.ok && res.id) sessionIdRef.current = res.id
@@ -100,10 +112,10 @@ export default function ReviewSession({
           Aucune question complète à réviser ici pour l’instant.
         </p>
         <Link
-          href={`/reviser/cours/${courseId}`}
+          href={exitHref}
           className="font-heading mt-3 block rounded-2xl bg-primary px-4 py-3 text-center text-sm font-extrabold text-primary-foreground"
         >
-          Retour au cours
+          {exitLabel}
         </Link>
       </div>
     )
@@ -142,11 +154,11 @@ export default function ReviewSession({
               Rejouer
             </button>
             <Link
-              href={`/reviser/cours/${courseId}`}
+              href={exitHref}
               onClick={() => sfx.tap()}
               className="font-heading rounded-2xl bg-muted/60 px-4 py-3 text-sm font-extrabold text-foreground"
             >
-              Retour au cours
+              {exitLabel}
             </Link>
           </div>
         </div>
@@ -159,7 +171,7 @@ export default function ReviewSession({
       {/* Barre de progression + quitter. */}
       <div className="mb-3 flex items-center gap-3">
         <Link
-          href={`/reviser/cours/${courseId}`}
+          href={exitHref}
           onClick={() => sfx.tap()}
           aria-label="Quitter la session"
           className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white text-muted-foreground ring-1 ring-black/5 hover:text-foreground"

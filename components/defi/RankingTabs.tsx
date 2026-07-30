@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import type { RankingBoard, RankingEntry, RankingScope } from '@/lib/defi/types'
-import { ChevronRightIcon } from './icons'
+import { ChevronRight, Trophy } from 'lucide-react'
 import { useTablist } from '@/components/useTablist'
 
 interface RankingTabsProps {
@@ -98,7 +98,7 @@ export default function RankingTabs({ boards, clanLabel }: RankingTabsProps) {
                 className="defi2-press mt-3 flex w-full cursor-pointer items-center justify-center gap-1 rounded-2xl border border-white/15 bg-white/8 py-2.5 text-sm font-extrabold text-highlight focus-visible:ring-2 focus-visible:ring-highlight/40 focus-visible:outline-none"
               >
                 {board.ctaLabel}
-                <ChevronRightIcon className="size-4" />
+                <ChevronRight className="size-4" />
               </button>
             ) : null}
 
@@ -158,8 +158,17 @@ function EntryRow({ entry }: { entry: RankingEntry }) {
           </span>
         ) : null}
       </span>
-      <span className="shrink-0 text-sm font-extrabold text-white tabular-nums">
+      {/* L'unite est DITE, mais par le picto du jeu : l'emoji trophee qui
+          vivait dans la donnee etait rendu par la police du systeme (bleu sur
+          Windows, plat sur Android) - le seul dessin de la liste que l'app ne
+          controlait pas. */}
+      <span className="flex shrink-0 items-center gap-1 text-sm font-extrabold text-white tabular-nums">
         {entry.scoreLabel}
+        <Trophy
+          className="size-3.5 text-highlight"
+          strokeWidth={2.4}
+          aria-hidden="true"
+        />
       </span>
     </li>
   )

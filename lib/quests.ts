@@ -146,6 +146,79 @@ export function questsHeadline(views: readonly QuestView[]): string {
   return next ? next.def.label : 'Quêtes du jour'
 }
 
+// --- La bulle du jour (au-dessus du CTA) ---------------------------------------------
+// Reprise directe de la bulle « Événement » de Clash Royale : la checklist du
+// jour ne vit plus SEULEMENT derrière une tuile et sa feuille, elle se lit à
+// découvert, à un centimètre du pouce, juste au-dessus du bouton qui la fait
+// avancer. Ouvrir une feuille pour savoir où l'on en est, c'est un geste de
+// trop : l'élève doit voir sa journée sans rien toucher.
+//
+// Quatre cases pour trois quêtes : la DERNIÈRE est le bonus des trois. C'est
+// exactement la grammaire de Clash (deux coches, deux coffres) — la promesse du
+// bout de chaîne est visible dès la première case.
+
+/** L'identité de la case « bonus », partagée avec la table des réclamations. */
+export const BONUS_STEP_ID = '__jour__'
+
+/** Une case de la bulle : une quête, ou le coffre de bonus au bout. */
+export type BubbleStep = {
+  id: string
+  /** Libellé complet — porté par l'aria-label, jamais affiché dans la case. */
+  label: string
+  done: boolean
+  /** Déjà encaissée : la case est éteinte, le travail est derrière. */
+  claimed: boolean
+  /** La case du bout : le bonus des trois quêtes, pas une quête. */
+  isBonus: boolean
+}
+
+export type QuestBubbleView = {
+  steps: BubbleStep[]
+  /** Quêtes terminées (le bonus ne compte pas : il n'est pas une quête). */
+  done: number
+  total: number
+  /** Ce qui se réclame MAINTENANT (cases finies non encaissées, bonus compris). */
+  claimable: number
+  /** L'accroche : le prochain geste, jamais un état. */
+  headline: string
+}
+
+/**
+ * La bulle du jour, ou `null` s'il n'y a pas de quêtes (migration 205 absente) :
+ * mieux vaut pas de bulle qu'une rangée de cases qui ne se cocheraient jamais.
+ */
+export function questBubbleView(
+  views: readonly QuestView[],
+  claimedIds: readonly string[],
+): QuestBubbleView | null {
+  if (views.length === 0) return null
+  const claimed = new Set(claimedIds)
+  const complete = allDone(views)
+
+  const steps: BubbleStep[] = views.map((v) => ({
+    id: v.def.id,
+    label: v.def.label,
+    done: v.done,
+    claimed: claimed.has(v.def.id),
+    isBonus: false,
+  }))
+  steps.push({
+    id: BONUS_STEP_ID,
+    label: `Bonus des ${views.length} quêtes : +${ALL_DONE_XP} XP et +${ALL_DONE_GEMS} gemmes`,
+    done: complete,
+    claimed: claimed.has(BONUS_STEP_ID),
+    isBonus: true,
+  })
+
+  return {
+    steps,
+    done: doneCount(views),
+    total: views.length,
+    claimable: steps.filter((s) => s.done && !s.claimed).length,
+    headline: questsHeadline(views),
+  }
+}
+
 // --- Événements de jeu → avancement -------------------------------------------------
 // Un seul endroit traduit « ce qui vient de se passer » en incréments de quête.
 // Les Server Actions appellent CETTE fonction et poussent le résultat en base :

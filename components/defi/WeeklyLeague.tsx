@@ -2,13 +2,7 @@
 
 import { Fragment, useMemo, useState } from 'react'
 import type { League, LeaguePlayer, LeagueZone } from '@/lib/defi/types'
-import {
-  ArrowDownIcon,
-  ArrowUpIcon,
-  ChevronDownIcon,
-  ChevronUpIcon,
-  ClockIcon,
-} from './icons'
+import { ArrowDown, ArrowUp, ChevronDown, ChevronUp, Clock } from 'lucide-react'
 
 interface WeeklyLeagueProps {
   league: League
@@ -72,15 +66,15 @@ export default function WeeklyLeague({ league, isDemo = false }: WeeklyLeaguePro
       {/* Légende des zones + rappel du reset hebdomadaire */}
       <div className="flex items-center gap-4 px-4 py-2 text-[0.7rem] font-bold">
         <span className="defi2-promo-ink flex items-center gap-1">
-          <ArrowUpIcon className="size-3.5" />
+          <ArrowUp className="size-3.5" />
           Promotion (top {promotionCount})
         </span>
         <span className="flex items-center gap-1 text-[oklch(0.72_0.17_25)]">
-          <ArrowDownIcon className="size-3.5" />
+          <ArrowDown className="size-3.5" />
           Relégation
         </span>
         <span className="ml-auto flex items-center gap-1 text-white/50">
-          <ClockIcon className="size-3.5" />
+          <Clock className="size-3.5" />
           {league.resetLabel}
         </span>
       </div>
@@ -123,11 +117,11 @@ export default function WeeklyLeague({ league, isDemo = false }: WeeklyLeaguePro
       >
         {expanded ? (
           <>
-            Réduire <ChevronUpIcon className="size-4" />
+            Réduire <ChevronUp className="size-4" />
           </>
         ) : (
           <>
-            Voir tout ({total}) <ChevronDownIcon className="size-4" />
+            Voir tout ({total}) <ChevronDown className="size-4" />
           </>
         )}
       </button>

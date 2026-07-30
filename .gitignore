@@ -51,3 +51,15 @@ next-env.d.ts
 
 # sources brutes des vignettes matières (converties en webp dans public/images/matieres/vignettes/)
 /assets-sources/
+
+# sources brutes déposées dans public/ (PNG 4K des générateurs d'images) : elles
+# ne sont JAMAIS servies — seules leurs conversions webp le sont — et pèsent des
+# dizaines de Mo qui partiraient dans le dépôt et dans chaque déploiement.
+#   fond écran/      → public/images/arene/arena-*.webp + defi/arene-finale.webp
+#   écran chargement/ → public/images/splash.webp
+/public/images/defi/fond écran/
+/public/images/écran chargement/
+
+# doublon local des icônes PWA (identiques à /public/icons/, seul chemin servi
+# et référencé par app/manifest.ts)
+/public/LOGO/

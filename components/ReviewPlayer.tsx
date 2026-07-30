@@ -10,6 +10,8 @@ import ComboBadge from '@/components/ComboBadge'
 import QuitGuardButton from '@/components/QuitGuardButton'
 import { SoundToggle } from '@/components/FlashcardPlayer'
 import { finishReviewSession } from '@/app/reviser/actions'
+import BossApparition from '@/components/defi/BossApparition'
+import type { TraqueApparition } from '@/lib/traque'
 import type { ReviewAnswer } from '@/lib/srs'
 
 // Un item jouable de la file « À revoir » : la question (ou carte) complète,
@@ -38,6 +40,8 @@ type Result = {
   saved: boolean
   revancheCleared: boolean
   coins: number
+  // Un gardien vient-il de sortir grâce à cette session ? (La Traque.)
+  apparition: TraqueApparition | null
 }
 
 // La session « À revoir aujourd'hui » : la file SRS + Revanche, jouée d'une
@@ -79,7 +83,14 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
     sfx.complete()
     finishReviewSession(finalAnswers)
       .then(setResult)
-      .catch(() => setResult({ saved: false, revancheCleared: false, coins: 0 }))
+      .catch(() =>
+        setResult({
+          saved: false,
+          revancheCleared: false,
+          coins: 0,
+          apparition: null,
+        }),
+      )
   }
 
   const next = (good: boolean) => {
@@ -122,6 +133,17 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
     const ratio = answers.length > 0 ? correct / answers.length : 0
     return (
       <div className="flex flex-col items-center gap-5 pt-8 text-center">
+        {/* La Traque : la session vient peut-être de faire sortir un gardien.
+            Rendu en portail — sa place ici ne change rien à la mise en page. */}
+        {result?.apparition ? (
+          <BossApparition
+            apparition={result.apparition}
+            onClose={() =>
+              setResult((r) => (r ? { ...r, apparition: null } : r))
+            }
+          />
+        ) : null}
+
         <div className="animate-in zoom-in text-6xl duration-500">
           {ratio >= 0.8 ? '🧠' : ratio >= 0.5 ? '💪' : '🌱'}
         </div>

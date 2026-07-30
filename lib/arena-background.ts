@@ -1,6 +1,8 @@
 /**
- * Fond d'arène dynamique de l'onglet Défi : six variantes du colisée selon
- * l'heure locale de l'appareil (la lumière que l'élève voit par sa fenêtre).
+ * Fond d'arène dynamique de l'onglet Défi : six variantes de l'académie
+ * flottante selon l'heure locale de l'appareil (la lumière que l'élève voit
+ * par sa fenêtre). Chaque image porte SA propre heure — ciel, ombres, fenêtres
+ * allumées — et laisse sa moitié basse vide : c'est la scène du personnage.
  * Logique pure et testable ici ; le composant client
  * `components/ArenaBackdrop.tsx` gère le timer, le fondu et le préchargement.
  */

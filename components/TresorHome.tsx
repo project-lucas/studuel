@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { Gift, Lock, Check, Sparkles } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { Check, Gift, Lock } from 'lucide-react'
+import { CristalIcon, EcuIcon } from '@/components/ui/MonnaieIcon'
+import CoinIcon from '@/components/ui/CoinIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -13,6 +15,7 @@ import {
   drawChestReward,
   RARITY_LABEL,
 } from '@/lib/tresor'
+import { PERSO_CATALOG } from '@/lib/coffre'
 import { openDailyChest, buyShopItem } from '@/app/tresor/actions'
 import { CHEST_OPENED_EVENT } from '@/components/NavChestBadge'
 
@@ -31,6 +34,8 @@ type ChestOutcome =
   | { status: 'error' }
 
 // ------------------------------------------------------------- Coffre du jour
+// LE bloc de tête de la Boutique : la raison de revenir chaque jour passe
+// AVANT les rayons — prêt → gros CTA jaune ; déjà ouvert → rendez-vous demain.
 function DailyChest({
   alreadyOpened,
   onOpen,
@@ -56,7 +61,6 @@ function DailyChest({
     ])
     if (outcome.status === 'already') {
       setPhase('done') // déjà ouvert aujourd'hui (autre onglet)
-      // Rien à récupérer : la pastille d'appel de l'onglet Coffre s'éteint.
       window.dispatchEvent(new Event(CHEST_OPENED_EVENT))
       return
     }
@@ -69,74 +73,93 @@ function DailyChest({
     setReward(outcome.reward)
     setPhase('opened')
     sfx.treasure()
-    // Récompense encaissée : la pastille d'appel de l'onglet Coffre s'éteint
-    // tout de suite (le layout racine, lui, n'est pas re-rendu en navigation
-    // client — il confirmera au prochain rendu serveur).
     window.dispatchEvent(new Event(CHEST_OPENED_EVENT))
   }
 
   return (
-    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary to-primary/80 p-5 text-center text-primary-foreground shadow-sm">
+    <section
+      aria-label="Coffre du jour"
+      className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-[color-mix(in_oklch,var(--primary),black_25%)] p-5 text-center text-primary-foreground shadow-sm"
+    >
       <div className="pointer-events-none absolute inset-0 opacity-20 [background:radial-gradient(circle_at_50%_0,white,transparent_60%)]" />
-      <p className="font-heading relative text-sm font-bold tracking-wide uppercase text-primary-foreground/80">
-        Coffre du jour
-      </p>
 
       {phase === 'opened' && reward ? (
-        <div className="relative flex flex-col items-center gap-2 py-2">
+        <div className="relative flex flex-col items-center gap-1.5 py-2">
           <span className="animate-in zoom-in text-6xl duration-500">
             {reward.emoji}
           </span>
-          <p className="font-heading text-xl font-bold">{reward.label}</p>
+          <p className="font-heading text-xl font-extrabold">{reward.label}</p>
           <p className="text-sm text-primary-foreground/75">
             Reviens demain pour le prochain 🎁
           </p>
         </div>
       ) : phase === 'done' ? (
-        <div className="relative flex flex-col items-center gap-2 py-2">
+        <div className="relative flex flex-col items-center gap-1.5 py-2">
           <span className="text-6xl" aria-hidden="true">
             ✨
           </span>
-          <p className="font-heading text-lg font-bold">
+          <p className="font-heading text-lg font-extrabold">
             Coffre du jour déjà ouvert
           </p>
           <p className="text-sm text-primary-foreground/75">
-            Reviens demain pour le prochain 🎁
+            Le prochain t’attend demain matin 🎁
           </p>
         </div>
       ) : (
-        <button
-          type="button"
-          onClick={open}
-          disabled={phase === 'opening'}
-          aria-label="Ouvrir le coffre du jour"
-          className="relative flex w-full flex-col items-center gap-2 py-2"
-        >
+        <div className="relative flex flex-col items-center gap-1">
           <span
             className={cn(
               'text-6xl transition-transform',
-              phase === 'closed' && 'chest-wobble hover:scale-105',
+              phase === 'closed' && 'chest-wobble',
               phase === 'opening' && 'animate-bounce',
             )}
+            aria-hidden="true"
           >
             🎁
           </span>
-          <span className="font-heading text-lg font-bold">
-            {phase === 'opening' ? 'Ouverture…' : 'Touche pour ouvrir'}
-          </span>
-          <span className="text-xs text-primary-foreground/70">
+          <p className="font-heading text-xl leading-tight font-extrabold">
+            Ton coffre du jour est prêt !
+          </p>
+          <p className="text-xs text-primary-foreground/75">
             {failed
-              ? 'Petit souci — touche pour réessayer.'
-              : 'Une récompense t’attend, chaque jour.'}
-          </span>
-        </button>
+              ? 'Petit souci — réessaie dans un instant.'
+              : 'Pièces garanties · surprise possible'}
+          </p>
+          <button
+            type="button"
+            onClick={open}
+            disabled={phase === 'opening'}
+            className="font-heading mt-2.5 w-full cursor-pointer rounded-full bg-highlight px-4 py-3 text-base font-extrabold text-foreground shadow-[0_4px_0_color-mix(in_oklch,var(--highlight),black_25%)] transition active:translate-y-px active:shadow-none disabled:opacity-70"
+          >
+            {phase === 'opening' ? 'Ouverture…' : 'Ouvrir le coffre'}
+          </button>
+        </div>
       )}
     </section>
   )
 }
 
-// -------------------------------------------------------------------- Boutique
-function ShopCard({
+// -------------------------------------------------------------------- Rayons
+// L'en-tête d'un rayon : petite étiquette majuscule + aparté optionnel.
+function ShelfTitle({
+  children,
+  aside,
+}: {
+  children: React.ReactNode
+  aside?: React.ReactNode
+}) {
+  return (
+    <div className="flex items-end justify-between px-1">
+      <h2 className="font-heading text-xs font-extrabold tracking-widest text-muted-foreground uppercase">
+        {children}
+      </h2>
+      {aside}
+    </div>
+  )
+}
+
+// Une carte de rayon : l'article en vignette verticale, prix TOUJOURS visible.
+function ShelfCard({
   item,
   coins,
   onBuy,
@@ -147,37 +170,32 @@ function ShopCard({
 }) {
   const affordable = coins >= item.price
   return (
-    <div className="flex flex-col rounded-2xl bg-card p-3 ring-1 ring-foreground/10">
-      <div className="mb-2 flex items-start gap-2">
-        <span className="text-3xl" aria-hidden="true">
-          {item.emoji}
-        </span>
-        <div className="min-w-0">
-          <p className="text-sm font-bold">{item.name}</p>
-          <p className="text-xs leading-snug text-muted-foreground">
-            {item.desc}
-          </p>
-        </div>
-      </div>
+    <div className="flex w-36 shrink-0 snap-start flex-col items-center rounded-2xl bg-card p-3 text-center ring-1 ring-foreground/10">
+      <span className="text-3xl" aria-hidden="true">
+        {item.emoji}
+      </span>
+      <p className="font-heading mt-1 line-clamp-2 text-xs leading-tight font-extrabold text-foreground">
+        {item.name}
+      </p>
       {item.owned ? (
-        <Button
-          size="sm"
-          variant="outline"
-          disabled
-          className="mt-auto rounded-full"
-        >
-          <Check className="size-4" /> Obtenu
-        </Button>
+        <span className="mt-2 flex items-center gap-1 rounded-full bg-muted px-3 py-1.5 text-xs font-bold text-muted-foreground">
+          <Check className="size-3.5" aria-hidden="true" /> Obtenu
+        </span>
       ) : (
-        <Button
-          size="sm"
-          variant={affordable ? 'default' : 'outline'}
+        <button
+          type="button"
           disabled={!affordable}
-          className="mt-auto rounded-full"
           onClick={() => onBuy(item)}
+          aria-label={`Acheter ${item.name} pour ${item.price} pièces`}
+          className={cn(
+            'mt-2 flex cursor-pointer items-center gap-1 rounded-full px-3 py-1.5 font-mono text-xs font-extrabold tabular-nums transition active:translate-y-px',
+            affordable
+              ? 'bg-primary/10 text-primary hover:bg-primary/15'
+              : 'bg-muted text-muted-foreground/70',
+          )}
         >
-          <span className="font-mono font-bold tabular-nums">🪙 {item.price}</span>
-        </Button>
+          <CoinIcon className="size-3.5" strokeWidth={2.2} /> {item.price}
+        </button>
       )}
     </div>
   )
@@ -214,17 +232,98 @@ function CollectionGrid({ items }: { items: CollectItem[] }) {
   )
 }
 
+// La vitrine : tes dernières cartes en grand + le « prochain » en pointillés —
+// l'écran dit « voilà ce qui t'attend » au lieu d'aligner 23 cadenas gris.
+function CollectionShowcase({ cards }: { cards: CollectItem[] }) {
+  const [showAll, setShowAll] = useState(false)
+  const unlocked = cards.filter((c) => c.unlocked)
+  const nextLocked = cards.find((c) => !c.unlocked && !c.exclusive)
+  const featured = unlocked.slice(-2)
+
+  return (
+    <section aria-label="Compagnons et collection" className="flex flex-col gap-2">
+      <ShelfTitle
+        aside={
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              setShowAll((v) => !v)
+            }}
+            className="cursor-pointer text-xs font-bold text-primary"
+          >
+            {showAll ? 'Réduire ‹' : `Voir tout (${unlocked.length}/${cards.length}) ›`}
+          </button>
+        }
+      >
+        🐾 Compagnons & collection
+      </ShelfTitle>
+
+      {showAll ? (
+        <CollectionGrid items={cards} />
+      ) : (
+        <div className="flex gap-2.5">
+          {featured.length === 0 ? (
+            <div className="flex flex-1 items-center gap-2 rounded-2xl bg-card px-3 py-4 ring-1 ring-foreground/10">
+              <Gift className="size-4 shrink-0 text-primary" aria-hidden="true" />
+              <p className="text-xs font-semibold text-muted-foreground">
+                Ta première carte de savant sortira d’un coffre du jour.
+              </p>
+            </div>
+          ) : (
+            featured.map((c) => (
+              <div
+                key={c.id}
+                className={cn(
+                  'flex flex-1 flex-col items-center rounded-2xl bg-card px-2 py-3 text-center ring-1',
+                  RARITY_STYLE[c.rarity],
+                )}
+              >
+                <span className="text-3xl" aria-hidden="true">
+                  {c.emoji}
+                </span>
+                <span className="mt-1 w-full truncate text-[11px] font-bold text-foreground">
+                  {c.name}
+                </span>
+                <span className="text-[10px] font-semibold text-muted-foreground">
+                  à toi · {RARITY_LABEL[c.rarity]}
+                </span>
+              </div>
+            ))
+          )}
+          {nextLocked ? (
+            <div className="flex flex-1 flex-col items-center justify-center rounded-2xl border-2 border-dashed border-foreground/15 px-2 py-3 text-center">
+              <span className="text-3xl opacity-60 grayscale" aria-hidden="true">
+                {nextLocked.emoji}
+              </span>
+              <span className="mt-1 text-[11px] font-bold text-muted-foreground">
+                Prochain
+              </span>
+              <span className="text-[10px] font-semibold text-muted-foreground">
+                dans un coffre 🎁
+              </span>
+            </div>
+          ) : null}
+        </div>
+      )}
+    </section>
+  )
+}
+
 // ------------------------------------------------------------------------ Page
 // live = connecté et branché Supabase ; sinon, démo locale (visiteur).
 export default function TresorHome({
   live,
   initialCoins,
+  gems,
   shop,
   collection,
   chestOpened,
 }: {
   live: boolean
   initialCoins: number
+  /** Solde de gemmes (migration 183) — affiché une seule fois, ici. */
+  gems: number
   shop: ShopItem[]
   collection: CollectItem[]
   chestOpened: boolean
@@ -281,65 +380,129 @@ export default function TresorHome({
     }
   }
 
-  const unlockedCount = cards.filter((c) => c.unlocked).length
+  const boosts = items.filter((i) => i.kind === 'boost' || i.kind === 'flamme')
+  const companions = items.filter(
+    (i) => i.kind === 'compagnon' || i.kind === 'avatar',
+  )
 
   return (
-    <div className="flex flex-col gap-6">
-      {/* Solde de pièces. */}
-      <section className="flex items-center justify-between rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
-        <div className="flex items-center gap-2">
-          <span className="text-2xl" aria-hidden="true">
-            🪙
-          </span>
-          <div>
-            <p
-              className={cn(
-                'font-heading text-2xl font-bold tabular-nums transition-colors',
-                flash && 'text-highlight',
-              )}
-            >
-              {coins}
-            </p>
-            <p className="text-xs text-muted-foreground">pièces</p>
-          </div>
-        </div>
-        <p className="max-w-40 text-right text-xs text-muted-foreground">
-          {live
-            ? 'Gagne des pièces en ouvrant ton coffre chaque jour.'
-            : 'Aperçu — connecte-toi pour ton vrai trésor.'}
+    <div className="mx-auto flex w-full max-w-md flex-col gap-6">
+      {/* LE solde — une seule fois sur la page (il flashe quand il bouge). */}
+      <div className="-mb-2 flex items-center justify-between px-1">
+        <p className="text-xs font-semibold text-muted-foreground">
+          {live ? 'Ton trésor' : 'Aperçu — connecte-toi pour ton vrai trésor.'}
         </p>
-      </section>
+        <p
+          className={cn(
+            'flex items-center gap-2 rounded-full bg-white px-3 py-1.5 font-mono text-sm font-extrabold tabular-nums shadow-sm ring-1 ring-black/5 transition-colors',
+            flash && 'text-highlight',
+          )}
+          aria-label={`${coins} pièces et ${gems} gemmes`}
+        >
+          {/* Le SOLDE : les monnaies y sont des objets qu'on regarde, donc
+              illustrées. Ailleurs sur la page (les PRIX, dans les lignes de
+              texte et sur les boutons teintés), elles restent des signes
+              monochromes qui prennent la couleur du texte. */}
+          <span className="flex items-center gap-1">
+            <EcuIcon className="size-5" />
+            {coins}
+          </span>
+          <span aria-hidden="true" className="text-muted-foreground/40">
+            ·
+          </span>
+          <span className="flex items-center gap-1">
+            <CristalIcon className="size-5" />
+            {gems}
+          </span>
+        </p>
+      </div>
 
+      {/* 1. Le coffre du jour, en tête : la boucle quotidienne d'abord. */}
       <DailyChest alreadyOpened={chestOpened} onOpen={openChest} />
 
-      {/* Boutique. */}
-      <section>
-        <h2 className="font-heading mb-2 flex items-center gap-2 text-sm font-bold tracking-wide text-muted-foreground uppercase">
-          <Sparkles className="size-4 text-primary" strokeWidth={2.4} /> Boutique
-        </h2>
-        <div className="grid grid-cols-2 gap-2">
-          {items.map((item) => (
-            <ShopCard key={item.id} item={item} coins={coins} onBuy={onBuy} />
+      {/* 2. Rayon Boosts : prix visibles, défilement horizontal. */}
+      <section aria-label="Boosts" className="flex flex-col gap-2">
+        <ShelfTitle>⚡ Boosts</ShelfTitle>
+        <div className="-mx-4 flex snap-x gap-2.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {boosts.map((item) => (
+            <ShelfCard key={item.id} item={item} coins={coins} onBuy={onBuy} />
           ))}
         </div>
       </section>
 
-      {/* Collection. */}
-      <section>
-        <h2 className="font-heading mb-2 flex items-center justify-between text-sm font-bold tracking-wide text-muted-foreground uppercase">
-          <span className="flex items-center gap-2">
-            <Gift className="size-4 text-primary" strokeWidth={2.4} /> Collection
-          </span>
-          <span className="font-mono text-xs tabular-nums text-foreground">
-            {unlockedCount}/{cards.length}
-          </span>
-        </h2>
-        <CollectionGrid items={cards} />
-        <p className="mt-2 px-1 text-[11px] text-muted-foreground">
-          Débloque des cartes de savants en ouvrant des coffres, jour après
-          jour.
-        </p>
+      {/* 3. Compagnons & collection : la vitrine (le prochain, pas 23 cadenas). */}
+      <CollectionShowcase cards={cards} />
+      {companions.length > 0 ? (
+        <div className="-mx-4 -mt-3 flex snap-x gap-2.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {companions.map((item) => (
+            <ShelfCard key={item.id} item={item} coins={coins} onBuy={onBuy} />
+          ))}
+        </div>
+      ) : null}
+
+      {/* 4. Rayon Fonds & skins (payés en pièces, lib/coffre). */}
+      <section aria-label="Fonds et skins" className="flex flex-col gap-2">
+        <ShelfTitle>🎨 Fonds & skins</ShelfTitle>
+        <div className="-mx-4 flex snap-x gap-2.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {PERSO_CATALOG.map((p) => (
+            <div
+              key={p.id}
+              className="flex w-36 shrink-0 snap-start flex-col items-center rounded-2xl bg-card p-3 text-center ring-1 ring-foreground/10"
+            >
+              <span className="text-3xl" aria-hidden="true">
+                {p.emoji}
+              </span>
+              <p className="font-heading mt-1 line-clamp-2 text-xs leading-tight font-extrabold text-foreground">
+                {p.name}
+              </p>
+              <span
+                className={cn(
+                  'mt-2 flex items-center gap-1 rounded-full px-3 py-1.5 font-mono text-xs font-extrabold tabular-nums',
+                  p.available
+                    ? 'bg-highlight/40 text-foreground'
+                    : 'bg-muted text-muted-foreground/70',
+                )}
+              >
+                {p.available ? (
+                  <>
+                    <CoinIcon className="size-3.5" strokeWidth={2.2} />{' '}
+                    {p.priceCoins}
+                  </>
+                ) : (
+                  <>
+                    <Lock className="size-3" aria-hidden="true" /> Bientôt
+                  </>
+                )}
+              </span>
+            </div>
+          ))}
+        </div>
       </section>
+
+      {/* 5. Le renvoi : tout ce qui coûte des euros vit dans Premium. */}
+      <Link
+        href="/tresor?volet=premium"
+        onClick={() => sfx.tap()}
+        className="flex items-center gap-3 rounded-2xl bg-muted/50 px-3.5 py-3 ring-1 ring-black/5 transition active:scale-[0.99]"
+      >
+        <span
+          aria-hidden="true"
+          className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-black/5 text-xl"
+        >
+          🎬
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="font-heading block truncate text-sm font-extrabold text-foreground">
+            Les capsules du coach ont déménagé
+          </span>
+          <span className="block text-xs font-semibold text-muted-foreground">
+            Retrouve-les dans le volet 👑 Premium
+          </span>
+        </span>
+        <span aria-hidden="true" className="text-muted-foreground">
+          ›
+        </span>
+      </Link>
     </div>
   )
 }

@@ -1,19 +1,30 @@
 'use client'
 
 import { useState } from 'react'
-import AvatarRender from '@/components/avatar/AvatarRender'
-import ProfileBannerArt from '@/components/defi/ProfileBannerArt'
 import ProfileModal from '@/components/defi/ProfileModal'
-import { cardBadges } from '@/lib/badges'
+import { walletLevelInfo } from '@/lib/wallet'
 import type { ProfileData } from '@/app/defi/profile-actions'
 import { sfx } from '@/lib/sounds'
 
-// La carte de profil compacte, ancrée en haut-gauche de l'arène (façon le
-// « roi » de Clash Royale). Avatar sur sa bannière + pseudo + niveau, et jusqu'à
-// 3 badges mis en avant. Un tap ouvre la modale complète.
+/**
+ * La pastille NIVEAU du HUD, en haut-gauche de l'arène — verre de nuit + or,
+ * le matériau commun de TOUT le HUD de l'arène (bandeau, rang, jetons) hérité
+ * de l'écran de chargement. C'est la SEULE lecture du
+ * niveau sur cet écran (le bandeau TopHud replie sa pastille sur /defi, le
+ * socle du personnage ne porte que le prénom) : disque de niveau + « Niveau X »
+ * + barre d'XP au format « 750 / 1 000 XP ». Le remplissage de la barre est le
+ * MÊME ratio que le libellé (xp cumulée / seuil du prochain niveau) — barre et
+ * chiffres racontent la même histoire, fini l'anneau à 38 % sous un libellé qui
+ * se lisait 75 %. Un tap ouvre la modale de profil (stats, badges, bannières).
+ */
 export default function ProfileChip({ data }: { data: ProfileData }) {
   const [open, setOpen] = useState(false)
-  const badges = cardBadges(data.badges, data.equippedBadgeIds)
+  const info = walletLevelInfo(data.summary.totalXp)
+  const pct =
+    info.nextAt > 0
+      ? Math.min(100, Math.round((info.currentXp / info.nextAt) * 100))
+      : 100
+  const xpLabel = `${info.currentXp.toLocaleString('fr-FR')} / ${info.nextAt.toLocaleString('fr-FR')} XP`
 
   return (
     <>
@@ -24,44 +35,36 @@ export default function ProfileChip({ data }: { data: ProfileData }) {
           setOpen(true)
         }}
         aria-haspopup="dialog"
-        aria-label={`Profil de ${data.displayName} — voir mes stats et badges`}
-        className="olympe-press flex max-w-[62vw] items-center gap-2 rounded-2xl p-1 pr-2.5 text-left ring-1 ring-white/15 sm:max-w-xs"
-        style={{ background: 'rgba(0,0,0,0.35)', backdropFilter: 'blur(6px)' }}
+        aria-label={`Niveau ${info.level}, ${xpLabel} — voir mes stats et badges`}
+        className="olympe-glass olympe-press flex cursor-pointer items-center gap-2 rounded-full py-1.5 pr-3 pl-1.5 text-left focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
-        {/* Avatar sur sa bannière de profil (miniature). */}
-        <span className="relative block size-11 shrink-0 overflow-hidden rounded-xl ring-1 ring-white/20">
-          <ProfileBannerArt banner={data.profileBanner} />
-          <span className="absolute inset-0 p-0.5">
-            <AvatarRender config={data.avatar} className="size-full" />
-          </span>
+        {/* Le disque de niveau : violet marque, liseré or — même vocabulaire
+            que l'écusson du bandeau sur les autres écrans. */}
+        <span
+          className="font-heading grid size-8 shrink-0 place-items-center rounded-full bg-primary text-xs font-extrabold text-primary-foreground ring-2 ring-highlight/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]"
+          aria-hidden="true"
+        >
+          {info.level}
         </span>
-
-        <span className="flex min-w-0 flex-col">
-          <span className="truncate font-heading text-sm font-extrabold text-white">
-            {data.displayName}
+        <span className="flex flex-col gap-[3px]">
+          <span className="font-heading text-xs leading-none font-extrabold text-[#faf6ef]">
+            Niveau {info.level}
           </span>
-          {/* Le niveau de compte n'est PLUS répété ici : il vit une seule fois,
-              dans le bandeau du haut (toujours visible) et dans la modale de
-              profil. La ligne sous le pseudo ne porte donc que les badges mis en
-              avant — chacun avec son intitulé en info-bulle + un libellé lisible
-              par lecteur d'écran (plus d'icônes muettes). */}
-          {badges.length > 0 ? (
+          {/* Gouttière creusée dans le verre (même grammaire que la barre de
+              l'écran de chargement) : l'or n'est plus posé sur du crème, il
+              brille dans une rainure sombre. */}
+          <span
+            className="h-1.5 w-24 overflow-hidden rounded-full bg-black/40 ring-1 ring-white/15 ring-inset"
+            aria-hidden="true"
+          >
             <span
-              className="flex items-center gap-0.5"
-              aria-label={`Badges : ${badges.map((b) => b.title).join(', ')}`}
-            >
-              {badges.map((b) => (
-                <span
-                  key={b.id}
-                  className="text-xs leading-none"
-                  title={b.title}
-                  aria-hidden="true"
-                >
-                  {b.icon}
-                </span>
-              ))}
-            </span>
-          ) : null}
+              className="block h-full rounded-full bg-highlight shadow-[0_0_8px_color-mix(in_oklch,var(--highlight),transparent_45%)]"
+              style={{ width: `${pct}%` }}
+            />
+          </span>
+          <span className="text-[0.6rem] leading-none font-bold tracking-wide text-white/70">
+            {xpLabel}
+          </span>
         </span>
       </button>
 

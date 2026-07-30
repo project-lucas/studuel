@@ -189,6 +189,22 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     sonde: null,
   },
   {
+    id: '210',
+    fichier: '210_fix_clan_active_school_grade_level.sql',
+    feature: 'Clan : école active lue sur grade_level',
+    siAbsente:
+      'La carte de clan et les contributions hebdo sont mortes : clan_active_school lit une colonne `grade` qui n’existe pas.',
+    sonde: null,
+  },
+  {
+    id: '212',
+    fichier: '212_traque_boss.sql',
+    feature: 'La Traque — boss débusqués en révisant',
+    siAbsente:
+      'Aucune jauge de traque : le bandeau des gardiens du jour et la tuile Boss de /defi n’apparaissent pas, réviser ne débusque jamais personne.',
+    sonde: { type: 'table', table: 'boss_gauges' },
+  },
+  {
     id: '193',
     fichier: '193_matieres_completes.sql',
     feature: 'Catalogue de matières complet (+6 matières)',

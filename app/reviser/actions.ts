@@ -19,6 +19,12 @@ import {
 } from '@/lib/oral-texts'
 import { DAILY_GOAL_OPTIONS, type DailyGoalMinutes } from '@/lib/daily-goal'
 import { awardGems, awardQuizProgression, awardXp } from '@/lib/wallet-server'
+import {
+  creditTraque,
+  creditTraqueFromAnswers,
+  lessonContext,
+} from '@/lib/traque-server'
+import { apparitionOf, type TraqueApparition } from '@/lib/traque'
 
 // Marque une leçon comme terminée : le chapitre progresse (plancher 30 %)
 // et la journée est validée dans la série.
@@ -40,10 +46,24 @@ export async function completeLesson(
     )
 
   // Coche « Révision quotidienne » du jour tout de suite si le seuil est atteint.
-  if (!error) await validateRevisionToday(supabase, user.id)
+  // Et nourrit La Traque (212) : une leçon terminée vaut 15 points sur la jauge
+  // du gardien de sa matière — le boss sort en révisant, jamais autrement.
+  if (!error) {
+    await Promise.all([
+      validateRevisionToday(supabase, user.id),
+      lessonContext(supabase, lessonId).then((ctx) =>
+        creditTraque(supabase, {
+          subject: ctx.subject,
+          event: { lecon: 1 },
+          chapterIds: ctx.chapterId ? [ctx.chapterId] : [],
+        }),
+      ),
+    ])
+  }
 
   revalidatePath('/reviser')
   revalidatePath('/moi')
+  revalidatePath('/defi')
   return { saved: !error }
 }
 
@@ -140,13 +160,24 @@ export async function recordReviewAnswers(
 // vérifié en SQL). Renvoie ce qui s'est réellement passé pour l'écran de fin.
 export async function finishReviewSession(
   answers: ReviewAnswer[],
-): Promise<{ saved: boolean; revancheCleared: boolean; coins: number }> {
+): Promise<{
+  saved: boolean
+  revancheCleared: boolean
+  coins: number
+  apparition: TraqueApparition | null
+}> {
+  const vide = {
+    saved: false,
+    revancheCleared: false,
+    coins: 0,
+    apparition: null,
+  }
   const supabase = await createClient()
   const user = await getCurrentUser()
-  if (!user) return { saved: false, revancheCleared: false, coins: 0 }
+  if (!user) return vide
 
   const { saved } = await recordReviewAnswers(answers)
-  if (!saved) return { saved: false, revancheCleared: false, coins: 0 }
+  if (!saved) return vide
 
   // XP et série : une session de révision est une session de test sans quiz.
   // On repart de la MÊME liste assainie que le SRS (dédup + entrées valides),
@@ -160,13 +191,21 @@ export async function finishReviewSession(
     score,
     total: clean.length,
   })
+  let apparition: TraqueApparition | null = null
   if (!error) {
+    // La Traque (212) : chaque carte révisée remplit la jauge du gardien de
+    // SA matière — une carte de Maths ne fait pas sortir le boss de Français.
+    // Son résultat est attendu : c'est lui qui dit si un gardien vient de
+    // sortir, donc si l'écran de fin ouvre le rideau.
+    const traqueCredits = creditTraqueFromAnswers(supabase, clean, 'carte')
     await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id),
       // Une session « À revoir » paye comme un quiz (portefeuille 192).
       awardQuizProgression(supabase, score, clean.length),
+      traqueCredits,
     ])
+    apparition = apparitionOf(await traqueCredits, Date.now())
   }
 
   // Bonus Revanche : la fonction SQL revérifie que la Revanche est vide et
@@ -178,10 +217,13 @@ export async function finishReviewSession(
   revalidatePath('/reviser')
   revalidatePath('/moi')
   revalidatePath('/coffre')
+  // L'arène doit montrer la jauge qui vient de monter (et le boss qui sort).
+  revalidatePath('/defi')
   return {
     saved: !error,
     revancheCleared: cleared === true,
     coins: cleared === true ? REVANCHE_CLEAR_COINS : 0,
+    apparition,
   }
 }
 

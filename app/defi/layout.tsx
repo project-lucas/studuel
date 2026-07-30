@@ -1,10 +1,10 @@
-import ArenaBackdrop from '@/components/ArenaBackdrop'
 import WorldBackdrop from '@/components/WorldBackdrop'
+import ArenaBackdrop from '@/components/ArenaBackdrop'
 
-// Décor de l'Arène : le colisée couvre tout l'écran de l'onglet Défi
-// (accueil, défi du jour, modes de jeu), derrière le contenu et les barres.
-// L'image suit l'heure de l'élève (6 variantes, fondu au changement de plage)
-// et le ciel vit (nuages) — voir ArenaBackdrop/ArenaSky.
+// Décor de l'Arène : l'académie flottante, en SIX variantes qui suivent l'heure
+// de l'élève (aube → nuit, voir lib/arena-background.ts). Remplace le colisée
+// doré statique : la scène du bas est volontairement vide, c'est le podium du
+// personnage. ArenaBackdrop gère le timer, le fondu et le préchargement.
 // Porté sur <body> (WorldBackdrop) pour ne jamais être rogné par le conteneur
 // de balayage — sinon, bordures blanches autour de l'arène.
 export default function DefiLayout({

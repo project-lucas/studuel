@@ -2,11 +2,13 @@ import TabHeader from '@/components/TabHeader'
 import TresorSpaces from '@/components/TresorSpaces'
 import PremiumHome from '@/components/PremiumHome'
 import TresorHome from '@/components/TresorHome'
-import CoffreStore from '@/components/CoffreStore'
+import CapsulesShelf from '@/components/CapsulesShelf'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { getUserTier } from '@/lib/subscription'
 import { toDayKey } from '@/lib/streak'
+import { fetchGems } from '@/lib/gems-access'
+import { STARTING_GEMS } from '@/lib/gems'
 import {
   getMockShop,
   getMockCollection,
@@ -18,17 +20,18 @@ import {
 export const metadata = { title: 'Trésor — Studuel' }
 export const dynamic = 'force-dynamic'
 
-// L'onglet Trésor fusionne les deux économies (ex /coffre + ex page premium) :
-// volet « Boutique » = le côté ACHAT (coffre du jour, capsules, boosts en
-// pièces, collection), volet « Premium » = le côté ABONNEMENT (les offres).
-// Connecté : données réelles (018_tresor.sql). Visiteur — ou migration pas
-// encore passée — : démo.
+// L'onglet Trésor fusionne les deux économies, chacune dans son volet :
+// « Boutique » = les PIÈCES uniquement (coffre du jour en tête, rayons de
+// boosts, compagnons & collection, fonds & skins), « Premium » = les EUROS
+// (abonnements + capsules vidéo du coach). Connecté : données réelles
+// (018_tresor.sql). Visiteur — ou migration pas encore passée — : démo.
 export default async function TresorPage() {
   const supabase = await createClient()
   const user = await getCurrentUser()
 
   let live = false
   let coins = MOCK_COINS
+  let gems = STARTING_GEMS
   let shop = getMockShop()
   let collection = getMockCollection()
   let chestOpened = false
@@ -37,22 +40,30 @@ export default async function TresorPage() {
   const tierPromise = getUserTier()
 
   if (user) {
-    const [{ data: profile, error }, { data: purchases }, { data: unlocks }, { data: chest }] =
-      await Promise.all([
-        supabase.from('profiles').select('coins').eq('id', user.id).maybeSingle(),
-        supabase.from('shop_purchases').select('item_id').eq('user_id', user.id),
-        supabase
-          .from('collection_unlocks')
-          .select('item_id')
-          .eq('user_id', user.id),
-        supabase
-          .from('chest_opens')
-          .select('date')
-          .eq('user_id', user.id)
-          .eq('date', toDayKey(new Date()))
-          .maybeSingle(),
-      ])
+    const [
+      { data: profile, error },
+      { data: purchases },
+      { data: unlocks },
+      { data: chest },
+      gemsBalance,
+    ] = await Promise.all([
+      supabase.from('profiles').select('coins').eq('id', user.id).maybeSingle(),
+      supabase.from('shop_purchases').select('item_id').eq('user_id', user.id),
+      supabase
+        .from('collection_unlocks')
+        .select('item_id')
+        .eq('user_id', user.id),
+      supabase
+        .from('chest_opens')
+        .select('date')
+        .eq('user_id', user.id)
+        .eq('date', toDayKey(new Date()))
+        .maybeSingle(),
+      // Gemmes (migration 183) : le helper a son propre repli.
+      fetchGems(supabase, user.id),
+    ])
 
+    gems = gemsBalance
     if (error) {
       // Migration 018 pas encore exécutée : la page reste visitable en démo.
       console.error('[tresor] données indisponibles (migration 018 ?):', error.message)
@@ -76,35 +87,27 @@ export default async function TresorPage() {
     <div>
       <TabHeader
         title="Trésor"
-        subtitle="Tes pièces, ta boutique — et tout Studuel en illimité."
+        subtitle="Ton coffre du jour, tes pièces, ta boutique."
       />
       <TresorSpaces
         boutique={
+          <TresorHome
+            live={live}
+            initialCoins={coins}
+            gems={gems}
+            shop={shop}
+            collection={collection}
+            chestOpened={chestOpened}
+          />
+        }
+        premium={
           <div className="flex flex-col gap-8">
-            {/* La devanture : capsules d'apprentissage (€) + personnalisation
-                (pièces). */}
-            <CoffreStore coins={coins} />
-
-            {/* L'économie de pièces : coffre du jour, boutique de boosts,
-                collection. */}
-            <section
-              aria-label="Tes pièces et ta collection"
-              className="mx-auto w-full max-w-md"
-            >
-              <h2 className="font-heading mb-3 px-1 text-xl font-extrabold text-foreground">
-                Tes pièces & ta collection
-              </h2>
-              <TresorHome
-                live={live}
-                initialCoins={coins}
-                shop={shop}
-                collection={collection}
-                chestOpened={chestOpened}
-              />
-            </section>
+            <PremiumHome currentTier={tier} />
+            {/* Les capsules vidéo du coach (€) vivent ici : la Boutique ne
+                parle plus que pièces. */}
+            <CapsulesShelf />
           </div>
         }
-        premium={<PremiumHome currentTier={tier} />}
       />
     </div>
   )

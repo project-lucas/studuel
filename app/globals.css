@@ -736,13 +736,617 @@ a:hover > .wiggle-on-hover {
     color-mix(in oklch, var(--primary), transparent 97%);
 }
 
-/* Fond de l'onglet Défi : le colisée dessiné, en 5 variantes qui suivent
-   l'heure de l'élève (couches .arena-img montées par ArenaBackdrop). Le
-   conteneur ne garde que le violet de secours — visible avant l'hydratation
-   et pendant le chargement de la première image, pour éviter tout flash
-   blanc. */
+/* Fond de l'onglet Défi : le décor est l'académie flottante à six variantes
+   horaires (.arena-img, peintes par ArenaBackdrop). Ce violet profond est le
+   REPLI — il est ce que l'on voit avant l'hydratation et pendant le chargement
+   de l'image, et il évite tout flash blanc. Il sert aussi de fond plein à la
+   modale de profil (ProfileModal), d'où le maintien d'une valeur sombre : le
+   texte y est blanc. */
 .defi-arena-bg {
   background-color: color-mix(in oklch, var(--primary), black 55%);
+}
+
+/* --- Rails latéraux de l'arène : tuiles « familles de couleur » --------------
+   Une tuile = un objet, une famille = une fonction (leçon Clash Royale) :
+   or = agir/gagner, violet = marque/événement, vert = quête/réussite,
+   magenta = compétition, bois = butin, ambre = urgence/série. Cadre commun
+   strict : squircle, liseré blanc, socle 3D (ombre dure) + ombre portée. */
+.rail-tile {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: #fff;
+}
+.rail-tile-violet {
+  background: linear-gradient(160deg, #8b53e8, #4a2597);
+  box-shadow:
+    0 3px 0 rgba(41, 17, 92, 0.55),
+    0 6px 16px rgba(41, 17, 92, 0.35);
+}
+.rail-tile-gold {
+  background: linear-gradient(160deg, #ffd257, #eda50b);
+  box-shadow:
+    0 3px 0 #b17c02,
+    0 6px 16px rgba(146, 100, 3, 0.4);
+  color: #5a3d00;
+}
+.rail-tile-green {
+  background: linear-gradient(160deg, #4cd98a, #1f9d57);
+  box-shadow:
+    0 3px 0 #0f6b3a,
+    0 6px 16px rgba(15, 107, 58, 0.4);
+}
+.rail-tile-amber {
+  background: linear-gradient(160deg, #ffb84d, #f07f13);
+  box-shadow:
+    0 3px 0 #a85608,
+    0 6px 16px rgba(168, 86, 8, 0.4);
+}
+.rail-tile-wood {
+  background: linear-gradient(160deg, #c98d55, #8a5526);
+  box-shadow:
+    0 3px 0 #5e3a1a,
+    0 6px 16px rgba(94, 58, 26, 0.45);
+}
+.rail-tile-magenta {
+  background: linear-gradient(160deg, #d16bef, #8f2bc4);
+  box-shadow:
+    0 3px 0 #5e1585,
+    0 6px 16px rgba(94, 21, 133, 0.45);
+}
+
+/* --- Le menu du burger ------------------------------------------------------
+   Un PANNEAU qui tombe du burger, et dedans une LISTE — pas sept plaques
+   violettes empilées. Sept plaques bombées, c'était sept boutons qui criaient
+   pareil : plus rien ne se lisait, et le menu pesait plus lourd que l'arène
+   derrière. Ici le panneau seul porte le matériau (verre de nuit,
+   .olympe-glass) ; les entrées ne sont qu'un survol/appui qui s'éclaire. Le
+   violet de la marque reste aux ACTIONS (les CTA du bas), pas au sommaire. */
+.arena-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 18px;
+  padding: 6px;
+}
+/* La ligne : structure en Tailwind (flex/gap/rayon, sur le composant), matériau
+   ici. Transparente au repos, elle s'allume au survol et à l'appui. */
+.arena-menu-row {
+  background: transparent;
+  transition:
+    background-color 150ms ease,
+    transform 150ms ease;
+}
+@media (hover: hover) {
+  .arena-menu-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+button:active > .arena-menu-row,
+a:active > .arena-menu-row {
+  background: rgba(255, 255, 255, 0.16);
+}
+/* Le jeton d'icône : le carré commun de la colonne de gauche. Un seul fond, un
+   seul rayon — c'est lui qui donne au menu son alignement de sommaire. */
+.arena-menu-ico {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.09);
+  color: #faf6ef;
+}
+/* Une illustration qui porte déjà son cadre (les tuiles d'icônes du Défi) :
+   le jeton garde sa TAILLE — c'est lui qui aligne la colonne — mais perd son
+   fond et son liseré, qui feraient un second carré autour du premier. */
+.arena-menu-ico-nue {
+  border-color: transparent;
+  background: transparent;
+}
+/* Le séparateur des groupes du menu (lecture / compétition / compte). */
+.arena-menu-sep {
+  display: block;
+  height: 1px;
+  margin: 5px 8px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Minuteur d'une tuile (« 3j », « 7j ») : pastille NEUTRE (encre marine) calée
+   au coin BAS — l'autre moitié du système de badges : compteur de notification
+   = pastille corail/violette au coin HAUT-droit (.olympe-badge), temps restant
+   = ce jeton-ci. Couleurs par tokens (encre + or éclairci). */
+.rail-timer {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: var(--foreground);
+  color: color-mix(in oklch, var(--highlight), white 60%);
+  padding: 1px 7px;
+  font-size: 0.55rem;
+  font-weight: 800;
+}
+
+/* --- La bulle du jour : la flèche qui la SOUDE au bouton -------------------
+   Reprise de la bulle « Événement » de Clash Royale. Sans cette flèche, la
+   bulle serait une carte de plus posée au-dessus d'une autre ; avec elle, elle
+   DÉSIGNE le bouton — « ce que tu vois là, c'est ce bouton qui le fait
+   avancer ». Un losange tourné à 45°, à demi caché derrière le corps de la
+   bulle : ne restent visibles que ses deux arêtes basses, liserées d'or comme
+   le reste du verre de nuit. */
+.bulle-jour::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 13px;
+  height: 13px;
+  transform: translateX(-50%) rotate(45deg);
+  background: color-mix(in oklch, oklch(0.24 0.06 300), transparent 20%);
+  border-right: 1px solid color-mix(in oklch, var(--highlight), transparent 45%);
+  border-bottom: 1px solid
+    color-mix(in oklch, var(--highlight), transparent 45%);
+  pointer-events: none;
+}
+
+/* --- Scène du héros : arrivée, respiration, étincelles ----------------------
+   Le personnage arrive en descendant dans le halo, puis respire en idle.
+   Transform/opacity uniquement, neutralisé si l'utilisateur préfère réduire
+   le mouvement. */
+@keyframes arena-hero-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(-44px) scale(0.84);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .arena-hero-figure {
+    transform-origin: 50% 100%;
+    animation: arena-hero-arrive 0.9s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+  }
+  .arena-spark {
+    animation: arena-spark-drift var(--d, 7s) ease-in-out var(--dl, 0s) infinite;
+  }
+}
+@keyframes arena-spark-drift {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateY(-16px);
+    opacity: 0.25;
+  }
+}
+.arena-spark {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffd257;
+  opacity: 0.7;
+  filter: blur(0.4px);
+  pointer-events: none;
+}
+
+/* --- LA TRAQUE : le gardien débusqué (lib/traque.ts) ------------------------
+   Deux mises en scène, un seul événement : la MENACE se voit sur l'île, et
+   l'APPEL au combat se lit dans la bannière. Aucun des deux n'est une
+   notification — c'est le décor lui-même qui change.
+
+   1. `.arena-boss-loom` — la silhouette du gardien qui se pose derrière le
+      personnage. Elle ARRIVE (montée + fondu), puis respire lentement, avec
+      son halo écarlate en dessous. On ne lit pas la menace, on la voit. */
+@keyframes arena-boss-loom-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px) scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes arena-boss-breathe {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-7px) scale(1.02);
+  }
+}
+.arena-boss-loom {
+  filter: drop-shadow(0 0 22px rgba(226, 72, 72, 0.55))
+    drop-shadow(0 12px 18px rgba(23, 16, 48, 0.6));
+}
+@media (prefers-reduced-motion: no-preference) {
+  .arena-boss-loom {
+    transform-origin: 50% 100%;
+    animation:
+      arena-boss-loom-in 0.8s cubic-bezier(0.2, 0.8, 0.3, 1) both,
+      arena-boss-breathe 5.5s ease-in-out 0.8s infinite;
+  }
+}
+
+/* La lueur écarlate au sol : le décor vire quand le gardien est là. */
+@keyframes arena-boss-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateX(-50%) scale(1.08);
+  }
+}
+.arena-boss-glow {
+  background: radial-gradient(
+    circle,
+    rgba(226, 72, 72, 0.6) 0%,
+    rgba(226, 72, 72, 0) 68%
+  );
+  opacity: 0.6;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .arena-boss-glow {
+    animation: arena-boss-glow-pulse 3.2s ease-in-out infinite;
+  }
+}
+
+/* 2. `.traque-eclair` — la bannière d'alerte. Écarlate (la seule de l'arène :
+      corail = ce qui réclame maintenant), liseré or, et un ÉCLAIR qui la
+      balaie en boucle pour que l'œil y revienne sans qu'elle clignote. */
+.traque-eclair {
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid color-mix(in oklch, var(--highlight), transparent 30%);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0) 55%
+    ),
+    linear-gradient(100deg, #8e1f2f 0%, #c0392b 52%, #7a1b3d 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 0 26px -6px rgba(226, 72, 72, 0.75),
+    0 10px 24px -12px rgba(0, 0, 0, 0.75);
+}
+.traque-eclair::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 62%
+  );
+  transform: translateX(-120%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .traque-eclair::after {
+    animation: traque-eclair-sweep 3.4s ease-in-out 0.6s infinite;
+  }
+}
+@keyframes traque-eclair-sweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  35%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+/* 2 bis. `.traque-rideau*` — LE RIDEAU D'APPARITION (BossApparition.tsx).
+   Le geste du Death Match de 7DS : le gardien SANS CADRE, énorme, dont le bas
+   se dissout dans une tache d'encre, par-dessus l'écran de fin qu'on devine
+   flouté dessous. Toute la mise en scène tient dans ces cinq règles ; le
+   composant ne pose que la structure. */
+
+/* Le voile : volontairement LÉGER. Sur la maquette, l'écran de jeu reste
+   lisible dans les angles hauts, autour de la tache — c'est ce qui signe
+   l'IRRUPTION. Un voile opaque ferait une page de plus, et l'élève ne saurait
+   plus d'où il vient. La masse noire, elle, vit dans `.traque-rideau-encre`. */
+.traque-rideau {
+  background:
+    radial-gradient(
+      120% 62% at 50% 12%,
+      rgba(226, 72, 72, 0.34) 0%,
+      transparent 66%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(6, 2, 12, 0.55) 0%,
+      rgba(6, 2, 12, 0.88) 46%,
+      rgba(6, 2, 12, 0.95) 100%
+    );
+  backdrop-filter: blur(5px) saturate(0.85);
+}
+
+/* LA TACHE D'ENCRE — le geste central de la maquette. Une masse noire calée en
+   HAUT de l'écran, dont le bord BAS est bombé, et d'où le gardien émerge.
+
+   Le bord est un MASQUE fait d'un bloc plein plus une rangée de lobes ronds de
+   tailles inégales (les couches de `mask-image` s'additionnent). C'est le
+   deuxième essai : un tracé de Bézier à main levée sortait en dents pointues,
+   des stalactites, là où de l'encre fait des bourrelets. Des cercles ne peuvent
+   PAS produire d'angle — la rondeur est garantie par la forme employée, pas par
+   l'adresse du tracé. Positions et rayons en %, donc l'ensemble suit l'écran. */
+.traque-rideau-encre {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 66svh;
+  background: #07030d;
+  pointer-events: none;
+  -webkit-mask-image:
+    linear-gradient(#000 0 74%, transparent 74%),
+    radial-gradient(14% 18% at 4% 76%, #000 99%, transparent 100%),
+    radial-gradient(7% 8% at 16% 73%, #000 99%, transparent 100%),
+    radial-gradient(17% 24% at 30% 79%, #000 99%, transparent 100%),
+    radial-gradient(8% 9% at 43% 73%, #000 99%, transparent 100%),
+    radial-gradient(13% 20% at 55% 77%, #000 99%, transparent 100%),
+    radial-gradient(6% 7% at 66% 73%, #000 99%, transparent 100%),
+    radial-gradient(16% 23% at 79% 78%, #000 99%, transparent 100%),
+    radial-gradient(9% 11% at 92% 74%, #000 99%, transparent 100%),
+    radial-gradient(11% 14% at 100% 77%, #000 99%, transparent 100%);
+  mask-image:
+    linear-gradient(#000 0 74%, transparent 74%),
+    radial-gradient(14% 18% at 4% 76%, #000 99%, transparent 100%),
+    radial-gradient(7% 8% at 16% 73%, #000 99%, transparent 100%),
+    radial-gradient(17% 24% at 30% 79%, #000 99%, transparent 100%),
+    radial-gradient(8% 9% at 43% 73%, #000 99%, transparent 100%),
+    radial-gradient(13% 20% at 55% 77%, #000 99%, transparent 100%),
+    radial-gradient(6% 7% at 66% 73%, #000 99%, transparent 100%),
+    radial-gradient(16% 23% at 79% 78%, #000 99%, transparent 100%),
+    radial-gradient(9% 11% at 92% 74%, #000 99%, transparent 100%),
+    radial-gradient(11% 14% at 100% 77%, #000 99%, transparent 100%);
+}
+
+/* Les gouttes tombées plus bas que la masse. Rayons volontairement inégaux :
+   un cercle parfait se lit comme une pastille, pas comme une éclaboussure. */
+.traque-rideau-goutte {
+  position: absolute;
+  background: #07030d;
+  pointer-events: none;
+}
+.traque-rideau-goutte-1 {
+  top: calc(66svh - 0.6rem);
+  left: 21%;
+  width: 22px;
+  height: 15px;
+  border-radius: 60% 40% 55% 45% / 70% 65% 35% 30%;
+}
+.traque-rideau-goutte-2 {
+  top: calc(66svh + 1.1rem);
+  left: 49%;
+  width: 12px;
+  height: 10px;
+  border-radius: 45% 55% 40% 60% / 55% 45% 60% 40%;
+}
+.traque-rideau-goutte-3 {
+  top: calc(66svh + 0.2rem);
+  right: 25%;
+  width: 16px;
+  height: 11px;
+  border-radius: 55% 45% 65% 35% / 60% 55% 45% 40%;
+}
+/* Le gardien vit DANS la tache (il en hérite donc le contour déchiré) et
+   déborde des deux bords de l'écran : c'est ce débordement qui interdit à
+   l'œil de le lire comme une vignette. Sa boîte est plus large que l'écran
+   pour que l'image carrée se cale sur la HAUTEUR, pas sur la largeur. */
+.traque-rideau-scene {
+  position: absolute;
+  inset-block: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170vw;
+  max-width: 760px;
+}
+.traque-rideau-buste {
+  position: absolute;
+  inset: 0;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.75));
+  /* L'agrandissement final vit dans l'animation d'entrée (framer-motion écrit
+     `transform` sur cet élément) : le fixer ici serait écrasé au premier
+     rendu. Il est là pour que le gardien DÉBORDE des deux bords — nos bustes
+     laissent ~30 % de marge transparente dans leur carré source, sans quoi le
+     personnage tient sagement dans la largeur de l'écran. */
+}
+
+/* Le halo : la même lueur écarlate que sur l'île de l'arène quand le gardien
+   est sorti — l'app dit « danger » de la même couleur partout. */
+.traque-rideau-halo {
+  position: absolute;
+  inset: -6% -8% 4%;
+  background: radial-gradient(
+    circle at 50% 42%,
+    rgba(244, 88, 76, 0.92) 0%,
+    rgba(176, 38, 60, 0.62) 34%,
+    rgba(90, 18, 48, 0.3) 58%,
+    transparent 76%
+  );
+  filter: blur(18px);
+}
+/* Battement propre : `arena-boss-glow-pulse` porte un translateX(-50%) de
+   recentrage dont cette scène, déjà centrée, n'a pas besoin — le réutiliser
+   décalerait le halo d'une demi-largeur. */
+@keyframes traque-rideau-pulse {
+  0%,
+  100% {
+    opacity: 0.62;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.92;
+    transform: scale(1.07);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .traque-rideau-halo {
+    animation: traque-rideau-pulse 3.2s ease-in-out infinite;
+  }
+}
+/* LA MASSE D'ENCRE — le geste central de la maquette.
+   Une nappe noire montée du bas dont le bord est DÉCHIRÉ, pas dégradé : c'est
+   elle qui avale les épaules du gardien et qui porte le texte. Sa hauteur suit
+   son contenu (aucun `top` fixé) pour qu'un petit écran ne rogne jamais les
+   boutons ; le bord vit dans un SVG collé juste au-dessus, en `bottom: 100%`.
+   `color` sert de source au `fill="currentColor"` du tracé — une seule valeur à
+   changer pour teinter l'ensemble. */
+.traque-rideau-encre {
+  color: #07030d;
+  background: linear-gradient(180deg, #07030d 0%, #07030d 100%);
+}
+/* Le texte n'a PAS de panneau : il vit sur le voile, donc chaque ligne porte
+   son propre halo d'ombre pour rester lisible quel que soit l'écran derrière. */
+.traque-rideau-texte {
+  text-shadow: 0 2px 12px rgba(6, 2, 12, 0.95);
+}
+/* Les filets latéraux du nom — l'ornement qui transforme un titre en cartouche.
+   Faits en pseudo-éléments : aucun élément vide à porter dans le JSX. */
+.traque-rideau-titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+.traque-rideau-titre::before,
+.traque-rideau-titre::after {
+  content: '';
+  height: 1.5px;
+  width: clamp(1.5rem, 12%, 3.5rem);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklch, var(--highlight), transparent 20%)
+  );
+}
+.traque-rideau-titre::after {
+  background: linear-gradient(
+    270deg,
+    transparent,
+    color-mix(in oklch, var(--highlight), transparent 20%)
+  );
+}
+
+/* 3. `.traque-salle` — LA SALLE DE COMBAT (/defi/traque/[bossId]).
+      Le combat se joue par-dessus le décor de l'arène, qui est une académie en
+      plein jour : sans voile, l'encre marine du monde crème et les cartes de
+      réponse translucides passaient sous le château (captures du 30/07). Le
+      voile de nuit violet rend la scène lisible ET dramatise l'affrontement —
+      on entre dans la tanière, on ne reste pas sur la place du village. */
+.traque-salle {
+  background:
+    radial-gradient(
+      120% 55% at 50% 0%,
+      color-mix(in oklch, var(--primary), transparent 55%) 0%,
+      transparent 72%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--primary), black 62%) 0%,
+      color-mix(in oklch, var(--primary), black 78%) 100%
+    );
+  /* Le décor garde sa présence sous le voile : on le devine, on ne le lit pas. */
+  backdrop-filter: blur(3px) saturate(0.85);
+}
+
+/* Le sablier de la traque : une heure, autant d'essais qu'on veut. Il reste à
+   l'écran pendant tout le combat — c'est la règle du jeu rendue visible. */
+.traque-sablier {
+  border: 1.5px solid color-mix(in oklch, var(--highlight), transparent 55%);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--highlight);
+}
+
+/* --- Personnage animé (components/PersonnageAnime.tsx) ----------------------
+   Idle « timeline longue » : une seule animation de ~20 s qui enchaîne
+   respiration douce (cycles ~4 s), un léger étirement vers 45 % et une
+   inclinaison curieuse vers 80 %. Le clignement des yeux (patch superposé)
+   vit sur sa propre durée (~4,3 s) volontairement désynchronisée. Transform et
+   opacity uniquement ; tout est coupé si l'utilisateur réduit le mouvement. */
+.perso-anime {
+  position: relative;
+}
+.perso-anime-yeux {
+  position: absolute;
+  top: var(--eyes-top, 0);
+  left: var(--eyes-left, 0);
+  width: var(--eyes-width, 100%);
+  opacity: 0;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .perso-anime {
+    transform-origin: bottom center;
+    will-change: transform;
+    animation: perso-anime-idle 20s ease-in-out infinite;
+  }
+  .perso-anime-yeux {
+    animation: perso-anime-clignement 4.3s linear infinite;
+  }
+}
+@keyframes perso-anime-idle {
+  /* respiration : cycles doux de ~4 s */
+  0%,
+  20%,
+  40%,
+  50%,
+  70%,
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  10%,
+  30%,
+  60% {
+    transform: translateY(-3px) scale(1.015) rotate(0deg);
+  }
+  /* étirement vers 45 % du cycle */
+  45% {
+    transform: translateY(-6px) scale(1.03, 1.04) rotate(0deg);
+  }
+  /* inclinaison curieuse vers 80 % */
+  80% {
+    transform: translateY(-3px) scale(1.015) rotate(2deg);
+  }
+  86% {
+    transform: translateY(-1px) scale(1.005) rotate(-1deg);
+  }
+  93% {
+    transform: translateY(-2px) scale(1.01) rotate(0deg);
+  }
+}
+@keyframes perso-anime-clignement {
+  0%,
+  96.5%,
+  100% {
+    opacity: 0;
+  }
+  97%,
+  99.5% {
+    opacity: 1;
+  }
 }
 
 /* Fond des modes de jeu compétitifs (Match classé, Coop) joués en plein écran :
@@ -781,6 +1385,16 @@ a:hover > .wiggle-on-hover {
   background-size: cover;
   background-repeat: no-repeat;
   animation: arena-fade-in 500ms ease both;
+}
+/* Les six variantes sont peintes en 9:16. Sur un écran plus large que haut,
+   `cover` déborde en hauteur et ne montre qu'une bande : centrée, cette bande
+   tombe sur un mur de l'académie. On remonte le cadrage au tiers supérieur —
+   là où vivent le ciel, l'île et le bâtiment. Sans effet sur un téléphone, où
+   c'est la largeur qui est rognée. */
+@media (min-width: 768px) {
+  .arena-img {
+    background-position: center 30%;
+  }
 }
 
 /* Voiles violets discrets en haut et en bas : gardent le HUD blanc et la
@@ -870,6 +1484,91 @@ a:hover > .wiggle-on-hover {
 
 @media (prefers-reduced-motion: reduce) {
   .arena-cloud {
+    animation: none;
+  }
+}
+
+/* Étalonnage lumière de la plage horaire : un voile coloré très léger qui
+   accorde les nuages CSS, les voiles et le HUD à l'heure de l'élève. Les
+   couleurs vivent dans deux variables posées par .arena-sky-<période> ; sans
+   période (SSR, avant hydratation), le voile est transparent.
+   ATTENTION : depuis l'académie flottante, les images PORTENT DÉJÀ leur heure
+   (ciel, ombres, fenêtres allumées). Ce voile n'est donc plus là pour créer
+   l'ambiance mais pour raccorder les nuages CSS à l'image — d'où des valeurs
+   deux fois plus faibles qu'au temps du colisée neutre. L'aube est passée au
+   FROID : elle peint désormais l'heure bleue, un voile orange la contredisait. */
+.arena-grade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, var(--grade-sky, transparent) 0%, transparent 45%),
+    linear-gradient(0deg, var(--grade-ground, transparent) 0%, transparent 40%);
+}
+.arena-sky-dawn {
+  --grade-sky: rgba(148, 163, 224, 0.08);
+  --grade-ground: rgba(122, 63, 224, 0.05);
+}
+.arena-sky-morning {
+  --grade-sky: rgba(148, 197, 255, 0.05);
+  --grade-ground: rgba(255, 214, 130, 0.04);
+}
+.arena-sky-noon {
+  --grade-sky: rgba(255, 255, 255, 0.03);
+  --grade-ground: rgba(255, 199, 89, 0.04);
+}
+.arena-sky-afternoon {
+  --grade-sky: rgba(255, 190, 92, 0.06);
+  --grade-ground: rgba(255, 138, 76, 0.05);
+}
+.arena-sky-evening {
+  --grade-sky: rgba(255, 126, 62, 0.07);
+  --grade-ground: rgba(122, 63, 224, 0.07);
+}
+.arena-sky-night {
+  --grade-sky: rgba(46, 48, 128, 0.12);
+  --grade-ground: rgba(30, 24, 78, 0.1);
+}
+
+/* Rayon de lumière descendant : un faisceau doux qui respire lentement, comme
+   si le soleil perçait les nuages au-dessus de l'académie. Éteint quand la
+   lumière de l'image ne vient PAS d'en haut — la nuit (la lune suffit), à
+   l'aube et le soir, où elle rase l'horizon : un faisceau vertical y sonnerait
+   faux. Figé si l'utilisateur préfère réduire le mouvement. */
+@keyframes arena-ray-breathe {
+  0%,
+  100% {
+    opacity: 0.32;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+.arena-ray {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 46%;
+  aspect-ratio: 1 / 2.4;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 236, 180, 0.5),
+    rgba(255, 236, 180, 0) 72%
+  );
+  clip-path: polygon(38% 0, 62% 0, 94% 100%, 6% 100%);
+  filter: blur(16px);
+  opacity: 0.5;
+  animation: arena-ray-breathe 22s ease-in-out infinite;
+  transition: opacity 800ms ease;
+}
+.arena-sky-dawn .arena-ray,
+.arena-sky-evening .arena-ray,
+.arena-sky-night .arena-ray {
+  opacity: 0;
+  animation: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .arena-ray {
     animation: none;
   }
 }
@@ -1121,6 +1820,27 @@ a:hover > .wiggle-on-hover {
   .attract-sheen::after {
     animation: none;
     opacity: 0;
+  }
+}
+
+/* Pulse léger du CTA duel — UNIQUEMENT quand un ami est en ligne (le chip de
+   présence l'accompagne). Sur la luminosité, pas le transform ni l'ombre :
+   zéro conflit avec l'effet press et les robes or/gemme. */
+@keyframes duel-pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.07);
+  }
+}
+.duel-pulse {
+  animation: duel-pulse 2.2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .duel-pulse {
+    animation: none;
   }
 }
 
@@ -2020,6 +2740,19 @@ a:hover > .wiggle-on-hover {
   color: var(--foreground);
 }
 
+/* Effet « tuile de flanc » : les deux carrés qui ENCADRENT le bouton de combat
+   (Classé à gauche, Modes à droite), façon home Clash Royale. Navy-violet
+   profond, liseré violet clair, ombre dure — volontairement SOMBRE et sans or :
+   l'or n'appartient qu'au bouton du milieu, sinon la rangée n'a plus de roi. */
+.arena-flank {
+  background: linear-gradient(180deg, #3a2a6e 0%, #241b47 100%);
+  border: 2px solid rgba(205, 180, 247, 0.55);
+  box-shadow:
+    0 4px 0 #171030,
+    0 8px 16px rgba(23, 16, 48, 0.5);
+  color: #faf6ef;
+}
+
 /* Les plaques pressables « Olympe » écrasent leur ombre dure au tap. */
 .olympe-press {
   transition:
@@ -2043,6 +2776,11 @@ a:hover > .wiggle-on-hover {
     0 0 0 3px var(--foreground),
     inset 0 2px 0 rgba(255, 255, 255, 0.3),
     0 0 0 0 var(--foreground);
+}
+.arena-flank.olympe-press:active {
+  box-shadow:
+    0 0 0 0 #171030,
+    0 2px 8px rgba(23, 16, 48, 0.5);
 }
 
 /* Effet « verre fumé violet » : la chrome flottante du HUD d'arène (pilule de
@@ -2112,12 +2850,22 @@ a:hover > .wiggle-on-hover {
     inset 0 2px 0 rgba(255, 255, 255, 0.28);
 }
 
-/* Badge de notification : pastille corail, liseré or fin + contour encre. */
+/* Badge de notification : pastille corail, liseré or fin + contour encre.
+   RÉSERVÉ aux actions à réclamer MAINTENANT (coffre prêt, récompense dispo) —
+   un compteur « en cours » prend la variante neutre ci-dessous. */
 .olympe-badge {
   background: var(--destructive);
   border: 1.5px solid var(--highlight);
   box-shadow: 0 0 0 2px var(--foreground);
   color: #fff;
+}
+
+/* Variante neutre (violet marque) : information en cours, rien à encaisser. */
+.olympe-badge--neutral {
+  background: var(--primary);
+  border: 1.5px solid var(--highlight);
+  box-shadow: 0 0 0 2px var(--foreground);
+  color: var(--primary-foreground);
 }
 
 /* Jeton d'aperçu « Olympe » (rang « 7e », « Aperçu ») : mini gemme violette. */
@@ -2906,6 +3654,229 @@ a:hover > .wiggle-on-hover {
   animation: boss-dissolve 760ms ease-in both;
 }
 
+/* --- Écran de chargement (splash) --------------------------------------------
+   Illustration plein cadre (la mascotte face aux ombres des boss) surmontée du
+   wordmark, de l'astuce du jour et de la barre. L'image ne porte AUCUN texte :
+   tout ce qui se lit ici est du DOM — une astuce se change sans regénérer le
+   visuel. Le fond est posé en `background-image` et non en <Image> : tant que
+   le webp n'est pas livré, on retombe sur le violet profond au lieu d'afficher
+   une image cassée. */
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Repli sous l'illustration : le violet profond de l'arène. */
+  background-color: color-mix(in oklch, var(--primary), black 62%);
+  transform-origin: center 62%; /* le zoom part de la mascotte, pas du centre géométrique */
+  transition:
+    opacity 420ms ease-out,
+    transform 560ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Levée de rideau : le splash s'efface EN AVANÇANT, comme une caméra qui entre
+   dans la scène. Un simple fondu laissait le hub « déjà là » — l'œil ne lisait
+   aucune arrivée, et le lancement se terminait mollement. */
+.splash[data-gone='true'] {
+  transform: scale(1.08);
+}
+
+/* Cadrage « mascotte » : ancré en bas, la hauteur déborde — on rogne le ciel,
+   jamais le personnage. Sur écran large, cover reprend la main. */
+.splash-art {
+  position: absolute;
+  inset: 0;
+  background: url('/images/splash.webp') center bottom / auto 108% no-repeat;
+}
+@media (min-width: 768px) {
+  .splash-art {
+    background-size: cover;
+  }
+}
+
+/* Voile de lecture : assombrit juste assez le haut et le bas pour que le
+   wordmark et l'astuce restent lisibles quelle que soit l'illustration. */
+.splash-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 12, 61, 0.55) 0%,
+    rgba(28, 12, 61, 0) 26%,
+    rgba(28, 12, 61, 0) 62%,
+    rgba(28, 12, 61, 0.72) 100%
+  );
+}
+
+/* --- Wordmark ---------------------------------------------------------------
+   Le nom du jeu n'est pas un titre de page : c'est un LOGO. En texte blanc +
+   ombre portée, il se lisait comme du HTML posé sur une belle illustration —
+   la seule chose de l'écran qui n'avait pas l'air dessinée. On l'assemble donc
+   en deux couches, façon logo de jeu mobile :
+
+     · l'élément lui-même porte le contour épais et le socle dur — c'est lui qui
+       détache le mot de la brume violette, quel que soit ce qu'il y a derrière ;
+     · par-dessus, `::after` relit le mot et y découpe le dégradé crème → jaune
+       solaire (le rôle « récompense » du design system).
+
+   Le remplissage est en ::after, et NON en ::before + `z-index: -1` : cette
+   version-là sortait en pavé violet uni, contour compris. `-webkit-text-stroke`
+   déborde de moitié À L'INTÉRIEUR de la lettre — il faut donc que la couche
+   colorée passe par-dessus pour recouvrir cette moitié, et le contenu d'un
+   ::after est peint après le texte de l'élément sans dépendre d'un ordre
+   d'empilement. */
+.splash-wordmark {
+  position: relative;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2.9rem, 15vw, 4.75rem);
+  line-height: 1;
+  letter-spacing: -0.012em;
+  text-align: center;
+  color: #2a1150;
+  -webkit-text-stroke: 0.13em #2a1150;
+  /* Socle dur (le même vocabulaire que les boutons 3D de l'app) puis ombre
+     douce. Tout est en `em` : le logo se redimensionne d'un bloc. */
+  text-shadow:
+    0 0.04em 0 #1d0b3a,
+    0 0.085em 0 #150829,
+    0 0.14em 0.2em rgba(10, 4, 24, 0.72);
+  /* Halo chaud : le mot éclaire la brume au lieu d'être collé dessus. */
+  filter: drop-shadow(0 0 28px rgba(245, 183, 34, 0.42));
+}
+
+.splash-wordmark::after {
+  /* Le mot est relu depuis l'attribut : une seule source, aucun risque que les
+     deux couches se désynchronisent. */
+  content: attr(data-mot);
+  position: absolute;
+  inset: 0;
+  /* Sans ces deux remises à zéro, la couche du dessus hériterait du contour et
+     du socle, et les redessinerait par-dessus le dégradé. */
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+  background: linear-gradient(
+    180deg,
+    #fffdf6 0%,
+    #fdf1cf 34%,
+    var(--highlight) 70%,
+    #dd8a17 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Signature sous le logo : elle occupe la place où l'œil cherche une baseline,
+   et évite que le wordmark flotte tout seul dans le haut de l'image. */
+.splash-baseline {
+  margin-top: 0.7rem;
+  text-align: center;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  /* L'interlettrage ajoute aussi une chasse APRÈS la dernière lettre : sans ce
+     décalage, le texte paraît décentré vers la gauche. */
+  text-indent: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 250, 236, 0.86);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+}
+
+/* Le logo ARRIVE — il n'est pas juste posé là au premier rendu. Même grammaire
+   que la levée de rideau : une chose qui entre, jamais une chose qui apparaît. */
+.splash-wordmark,
+.splash-baseline {
+  animation: splash-mark-in 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.splash-baseline {
+  animation-delay: 140ms;
+}
+@keyframes splash-mark-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Gouttière de la barre : creusée dans la pierre, façon jeu mobile. */
+.splash-track {
+  position: relative;
+  height: 18px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  background: rgba(20, 8, 46, 0.72);
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.55),
+    0 2px 0 rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+/* Remplissage : jaune solaire → ambre (le rôle « progression » du design
+   system), avec une arête claire en haut qui lui donne du volume. */
+.splash-fill {
+  position: relative; /* ancre le reflet ::after ci-dessous */
+  overflow: hidden;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--highlight), white 34%) 0%,
+    var(--highlight) 52%,
+    color-mix(in oklch, var(--highlight), #c2410c 45%) 100%
+  );
+  box-shadow: 0 0 14px color-mix(in oklch, var(--highlight), transparent 40%);
+  transition: width 220ms ease-out;
+}
+
+/* Reflet qui balaie la barre : signale que ça travaille même quand le
+   pourcentage stagne sur les derniers pour-cent. */
+.splash-fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 70%
+  );
+  animation: splash-sheen 1400ms linear infinite;
+}
+@keyframes splash-sheen {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Arrivée du hub, en contrepoint de la levée du rideau : le contenu monte et
+   se pose pendant que le splash avance. La classe est posée sur <body> par
+   SplashScreen le temps de l'animation SEULEMENT — laissée en place, la
+   transformation ferait de <main> un bloc conteneur et tout `position: fixed`
+   d'une page se recalerait sur lui. */
+.hub-entering main {
+  animation: hub-enter 560ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes hub-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Accessibilité : on coupe les animations si l'utilisateur les refuse */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -2916,4 +3887,3 @@ a:hover > .wiggle-on-hover {
     transition-duration: 0.01ms !important;
   }
 }
-

@@ -12,13 +12,11 @@ import Link from 'next/link'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Gamepad2, ChevronLeft, ChevronRight, Swords, X } from 'lucide-react'
-import { ChevronRightIcon } from '@/components/defi/icons'
 import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
 import {
   ROULETTE_SUBJECTS,
   subjectGameTickets,
-  subjectBossTicket,
   funModeTickets,
   type ModeTicket,
   type ModeTone,
@@ -316,11 +314,15 @@ export default function ModesSheet({
 
   const subject = ROULETTE_SUBJECTS[activeIndex]?.subject ?? ''
   const gameTickets = subjectGameTickets(subject)
-  const bossTicket = subjectBossTicket(subject)
   const funTickets = funModeTickets(todayKey)
 
   return (
     <>
+      {/* Le déclencheur : TUILE CARRÉE de flanc, à droite du bouton de combat
+          (Classé tient l'autre flanc, même gabarit, même robe `.arena-flank`).
+          Sombre exprès : dans la rangée, seul l'or du Duel appelle. La liste
+          des modes (Blitz · Chrono · Survie · Boss) ne tient pas dans un carré
+          de 4,5 rem — elle vit dans l'`aria-label` et l'infobulle. */}
       <button
         type="button"
         onClick={() => {
@@ -328,32 +330,14 @@ export default function ModesSheet({
           setOpen(true)
         }}
         aria-haspopup="dialog"
-        aria-label="Modes de jeu — jeux par matière, modes fun et boss"
-        className="olympe-gem olympe-press relative isolate flex min-h-14 w-full cursor-pointer items-center gap-2.5 overflow-hidden rounded-2xl px-5 focus-visible:ring-4 focus-visible:ring-white/40 focus-visible:outline-none"
+        aria-label="Modes de jeu — jeux par matière, Blitz, Chrono, Survie et boss"
+        title="Modes de jeu — Blitz, Chrono, Survie, Boss"
+        className="arena-flank olympe-press flex w-[4.5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-1 rounded-lg px-1 py-2 focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
-        {/* Scène plein-fond (batch 14) : mascotte manette à droite, voile
-            dégradé à gauche pour asseoir le texte — la robe gemme reste le
-            cadre et le repli. Même grammaire que les billets. */}
-        <span aria-hidden="true" className="absolute inset-0 -z-10">
-          <Image
-            src="/images/defi/modes-scene.webp"
-            alt=""
-            fill
-            sizes="(max-width: 480px) 94vw, 424px"
-            className="object-cover"
-          />
-          <span className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent" />
+        <Gamepad2 className="size-5 shrink-0" strokeWidth={2.4} aria-hidden="true" />
+        <span className="font-heading text-[0.7rem] leading-none font-extrabold">
+          Modes
         </span>
-        <Gamepad2 className="size-6 text-white" aria-hidden="true" />
-        <span className="flex flex-col items-start leading-tight">
-          <span className="font-heading text-lg font-extrabold text-white">
-            MODES DE JEU
-          </span>
-          <span className="text-[0.7rem] font-bold text-white/75">
-            Jeux par matière · Modes fun · Boss
-          </span>
-        </span>
-        <ChevronRightIcon className="ml-auto size-5 rotate-90 text-white/70" />
       </button>
 
       {typeof document !== 'undefined'
@@ -449,9 +433,12 @@ export default function ModesSheet({
                       {gameTickets.map((t) => (
                         <Ticket key={t.id} ticket={t} />
                       ))}
-                      {/* Le gardien de la matière — mène à l'onglet Boss de
-                          sa page matière (combat 100 % matière). */}
-                      {bossTicket ? <Ticket ticket={bossTicket} /> : null}
+                      {/* Le billet « Boss de la matière » a QUITTÉ cette
+                          feuille (La Traque, lib/traque) : un gardien ne se
+                          choisit plus dans un menu, il se débusque en
+                          révisant. Il vit désormais dans la tuile Boss du rail
+                          — et Modes redevient une famille cohérente : des
+                          modes fun, tous jouables tout de suite. */}
 
                       {/* Les modes fun de l'Arène, communs à toutes les
                           matières. */}

@@ -5,6 +5,27 @@ import path from 'node:path'
 import { ALL_BOSSES, weeklyBoss, weeklyTrophyId } from '@/lib/bosses'
 import { WIN_COINS, WIN_COINS_DAILY_CAP } from '@/lib/defi/duel-record'
 import { DAILY_GOAL_OPTIONS } from '@/lib/daily-goal'
+import {
+  chasseOfDay,
+  CHASSE_MULTIPLIER,
+  NOX_GEMS,
+  TRAQUE_APRES_DEFAITE,
+  TRAQUE_FENETRE_MINUTES,
+  TRAQUE_GEMS,
+  TRAQUE_GEMS_WEEK_CAP,
+  TRAQUE_PLAFOND_JOUR,
+  TRAQUE_SEUIL,
+} from '@/lib/traque'
+
+// Une semaine de référence, lundi → vendredi (2026-07-27 est un lundi). Le
+// week-end n'y figure pas : la chasse y est ouverte à TOUS, sans liste.
+const LUNDI_TO_VENDREDI = [
+  '2026-07-27',
+  '2026-07-28',
+  '2026-07-29',
+  '2026-07-30',
+  '2026-07-31',
+]
 
 // Garde des MIROIRS lib ↔ SQL.
 //
@@ -105,6 +126,113 @@ describe('barème des duels : lib/defi/duel-record.ts ↔ record_duel_result', (
     expect(m, `barème illisible dans ${sql!.file}`).not.toBeNull()
     expect(Number(m![1]), 'pièces par victoire').toBe(WIN_COINS)
     expect(Number(m![2]), 'plafond quotidien').toBe(WIN_COINS_DAILY_CAP)
+  })
+})
+
+describe('La Traque : lib/traque.ts ↔ migrations SQL', () => {
+  // Même piège que la rotation des boss, en pire : ici une dérive ne se voit
+  // pas du tout. Le seuil côté app dirait « boss débusqué » quand le serveur
+  // dirait « jauge à 80 % », et le combat serait refusé sans un mot d'erreur.
+  //
+  // On ne lit PAS un fichier unique : la traque est répartie sur plusieurs
+  // migrations (212 la crée, 213 remplace ses RPC) et chaque CREATE OR REPLACE
+  // écrase la précédente. Ce qui compte est donc, pour chaque règle, la
+  // DERNIÈRE écriture dans l'ordre des migrations — exactement ce que la base
+  // aura appliqué.
+  const lastMatch = (re: RegExp): { file: string; m: RegExpMatchArray } | null => {
+    let found: { file: string; m: RegExpMatchArray } | null = null
+    for (const { file, sql } of migrationsInOrder()) {
+      const m = sql.match(re)
+      if (m) found = { file, m }
+    }
+    return found
+  }
+
+  /** Le match effectif, ou un échec de test explicite. */
+  const effective = (re: RegExp, what: string): RegExpMatchArray => {
+    const hit = lastMatch(re)
+    expect(hit, `${what} introuvable dans les migrations`).not.toBeNull()
+    return hit!.m
+  }
+
+  /** Corps d'une fonction SQL constante : `SELECT <valeur>`. */
+  const constant = (name: string): string =>
+    effective(
+      new RegExp(`FUNCTION public\\.${name}\\(\\)[\\s\\S]*?SELECT ([^\\s$]+)`),
+      `constante ${name}`,
+    )[1]
+
+  it('applique le MÊME seuil, plafond et retombée après défaite', () => {
+    expect(Number(constant('traque_seuil'))).toBe(TRAQUE_SEUIL)
+    expect(Number(constant('traque_plafond_jour'))).toBe(TRAQUE_PLAFOND_JOUR)
+    expect(Number(constant('traque_apres_defaite'))).toBe(TRAQUE_APRES_DEFAITE)
+    expect(Number(constant('traque_gems_week_cap'))).toBe(TRAQUE_GEMS_WEEK_CAP)
+  })
+
+  it('ouvre la MÊME fenêtre de combat', () => {
+    const m = effective(
+      /traque_fenetre[\s\S]*?INTERVAL '(\d+) minutes'/,
+      'fenêtre de combat',
+    )
+    expect(Number(m[1])).toBe(TRAQUE_FENETRE_MINUTES)
+  })
+
+  it('fait chasser les mêmes boss les mêmes jours', () => {
+    // La RPC parle en isodow (lundi = 1) ; l'app en index lundi = 0.
+    const body = effective(
+      /traque_en_chasse[\s\S]*?CASE v_dow([\s\S]*?)END\s*\n\s*\);/,
+      'calendrier de la chasse',
+    )
+    const rows = [...body[1].matchAll(/ARRAY\[([^\]]*)\]/g)].map((m) =>
+      [...m[1].matchAll(/'([a-z0-9-]+)'/g)].map((x) => x[1]),
+    )
+    // Quatre WHEN (lundi→jeudi) + le ELSE (vendredi) ; le week-end est traité
+    // à part (tout le monde chasse), donc absent du CASE.
+    expect(rows).toHaveLength(5)
+    for (const [i, ids] of rows.entries()) {
+      const day = LUNDI_TO_VENDREDI[i]
+      expect(chasseOfDay(day).map((b) => b.id), `jour ${day}`).toEqual(ids)
+    }
+  })
+
+  it('paie les mêmes gemmes, rang par rang', () => {
+    const m = effective(
+      /CASE v_rank WHEN 1 THEN (\d+) WHEN 2 THEN (\d+) ELSE (\d+) END/,
+      'barème de gemmes',
+    )
+    expect([1, 2, 3].map((r) => TRAQUE_GEMS[r as 1 | 2 | 3])).toEqual([
+      Number(m[1]),
+      Number(m[2]),
+      Number(m[3]),
+    ])
+    // Nox vaut un chapitre entier, et n'est jamais doublé.
+    const nox = effective(
+      /v_boss = 'nox' THEN\s*\n\s*v_amount := (\d+)/,
+      'montant de Nox',
+    )
+    expect(Number(nox[1])).toBe(NOX_GEMS)
+    effective(
+      new RegExp(`v_amount \\* ${CHASSE_MULTIPLIER}`),
+      'bonus du boss en chasse',
+    )
+  })
+
+  it('déclare bien la nouvelle source de gemmes', () => {
+    // Sans l'ALTER du CHECK, l'INSERT de traque_victoire lèverait — la victoire
+    // serait comptée et la gemme jamais versée.
+    effective(/gem_events_source_check[\s\S]*?'traque_win'/, 'source traque_win')
+  })
+
+  // LE contrat de la traque, celui que la 212 trahissait : le gardien sort
+  // pour une heure et perdre ne la lui reprend pas. Si une migration future
+  // remet `debusque_at = NULL` dans traque_defaite, ce test tombe.
+  it('ne referme pas la fenêtre sur une défaite', () => {
+    const defaite = lastMatch(
+      /FUNCTION public\.traque_defaite\([^)]*\)([\s\S]*?)\$\$;/,
+    )
+    expect(defaite, 'RPC traque_defaite introuvable').not.toBeNull()
+    expect(defaite!.m[1]).not.toMatch(/debusque_at\s*=\s*NULL/)
+    expect(defaite!.m[1]).toMatch(/attempts\s*=\s*attempts \+ 1/)
   })
 })
 

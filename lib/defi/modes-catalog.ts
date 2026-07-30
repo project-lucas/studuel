@@ -15,7 +15,6 @@ import {
 } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
 import { formatTeaser, gameFormat } from '@/lib/jeux/formats'
-import { bossForSubject } from '@/lib/bosses'
 
 // La robe d'un billet : matière (violet), mode fun (bleu Arène), ou mode du
 // jour (or). Sert au composant à choisir le dégradé — pas de hex en dur ici.
@@ -120,36 +119,12 @@ export function subjectGameTickets(subject: string): ModeTicket[] {
   })
 }
 
-// Slug d'une matière de salon (« Histoire-Géo » → « histoire-geo ») — pour
-// pointer le billet Boss vers l'onglet Boss de sa page matière.
-const subjectSlug = (subject: string) =>
-  subject
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-
-/**
- * Le billet « Boss » d'une matière : son gardien (le même de la 6e à la
- * Terminale), qui mène à l'onglet Boss de la page matière — là où vit le
- * combat 100 % matière. Matière inconnue → null.
- */
-export function subjectBossTicket(subject: string): ModeTicket | null {
-  const salon = SALONS.find((s) => s.subject === subject)
-  if (!salon) return null
-  const boss = bossForSubject(subject)
-  return {
-    id: `${subject}:boss`,
-    tone: 'matiere',
-    name: `Boss : ${boss.name}`,
-    tagline: `${boss.epithet} — bats-le, prends l'XP`,
-    emoji: boss.emoji,
-    image: boss.image ?? null,
-    scene: boss.scene ?? null,
-    href: `/reviser/${subjectSlug(subject)}?onglet=boss`,
-    chip: `+${MODE_XP_BONUS.boss} XP`,
-  }
-}
+// Le billet « Boss » d'une matière a été SUPPRIMÉ d'ici (chantier La Traque,
+// lib/traque.ts) : un gardien ne se choisit plus dans un menu de modes, il se
+// débusque en révisant. Il vivait au milieu de Blitz, Chrono et Survie alors
+// qu'il n'a pas la même nature — et rien ne reliait le travail au combat. Sa
+// carte vit maintenant dans la feuille Boss du rail de l'arène
+// (components/defi/BossSheet), et le combat dans /defi/traque/[bossId].
 
 /**
  * Les modes fun de l'Arène (communs à toutes les matières), en billets.

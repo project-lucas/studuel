@@ -266,6 +266,12 @@ export function isSeasonEndgame(today: string): boolean {
   return daysLeftInSeason(today) <= 3
 }
 
+/** Moins de 24 h avant la fin de saison (le dernier jour, en clés UTC
+ *  « YYYY-MM-DD ») : le compte à rebours de l'arène passe en corail. */
+export function isSeasonLastDay(today: string): boolean {
+  return daysLeftInSeason(today) <= 1
+}
+
 /** Le rythme à tenir pour finir la piste avant la fin du mois. C'est
  *  l'information la plus actionnable de l'écran : « il te faut 2 duels par
  *  jour » vaut mieux que « palier 12/30 ». */

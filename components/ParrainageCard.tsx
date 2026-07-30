@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import { Check, Copy, Share2 } from 'lucide-react'
+import { Check, ChevronDown, Copy, Share2 } from 'lucide-react'
 import GemIcon from '@/components/ui/GemIcon'
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
+import { sfx } from '@/lib/sounds'
 import {
   REFERRAL_GEM_REWARD,
   gemsLabel,
@@ -11,13 +13,12 @@ import {
   type ReferralSummary,
 } from '@/lib/gems'
 
-// Le bloc parrainage — le moteur du système de gemmes.
+// Le bloc parrainage — le moteur du système de gemmes, COMPACTÉ en une ligne.
 //
-// Il est placé HAUT dans l'onglet Amis, juste sous le classement : c'est
-// l'endroit où l'élève constate qu'il lui manque des amis, donc l'endroit où
-// l'invitation convertit. Le message met en avant le gain PARTAGÉ (« vous
-// gagnez chacun une gemme ») : demander un service marche moins bien que
-// proposer un cadeau à deux.
+// C'est une action qu'on fait une fois : elle n'a plus le droit d'écraser le
+// quotidien de l'onglet (défier, se comparer). La tuile d'une ligne dit le
+// gain partagé (« +gemmes chacun ») ; un tap déplie le détail — code à copier,
+// bouton de partage, filleuls en attente.
 export default function ParrainageCard({
   myFriendCode,
   gems,
@@ -28,6 +29,7 @@ export default function ParrainageCard({
   summary: ReferralSummary
 }) {
   const [copied, setCopied] = useState(false)
+  const [open, setOpen] = useState(false)
 
   const shareUrl =
     typeof window === 'undefined'
@@ -64,29 +66,50 @@ export default function ParrainageCard({
   }
 
   return (
-    <section className="border-primary/20 from-primary/10 rounded-3xl border bg-gradient-to-br to-transparent p-5">
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0">
-          <h2 className="font-heading flex items-center gap-2 text-lg font-bold">
-            <GemIcon className="text-primary size-5 shrink-0" aria-hidden="true" />
-            Gagne des gemmes
-          </h2>
-          <p className="text-muted-foreground mt-1 text-sm text-balance">
-            {referralHeadline(summary)}
-          </p>
-        </div>
-
-        {/* Le solde, toujours visible : c'est ce que l'invitation fait monter. */}
+    <section className="border-primary/20 from-primary/10 rounded-3xl border bg-gradient-to-br to-transparent">
+      {/* La ligne repliée : tout le message en un regard, un tap pour agir. */}
+      <button
+        type="button"
+        onClick={() => {
+          sfx.tap()
+          setOpen((v) => !v)
+        }}
+        aria-expanded={open}
+        className="flex w-full cursor-pointer items-center gap-3 p-3.5 text-left"
+      >
         <span
-          className="bg-card flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 font-mono text-sm font-bold tabular-nums shadow-sm"
+          aria-hidden="true"
+          className="bg-primary/10 flex size-10 shrink-0 items-center justify-center rounded-2xl"
+        >
+          <GemIcon className="text-primary size-5" aria-hidden="true" />
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="font-heading block truncate text-sm font-extrabold">
+            Invite un ami
+          </span>
+          <span className="text-muted-foreground block truncate text-xs">
+            +{gemsLabel(REFERRAL_GEM_REWARD)} chacun · {referralHeadline(summary)}
+          </span>
+        </span>
+        <span
+          className="bg-card flex shrink-0 items-center gap-1 rounded-full border px-2.5 py-1 font-mono text-xs font-bold tabular-nums"
           aria-label={`Tu as ${gemsLabel(gems)}`}
         >
-          <GemIcon className="text-primary size-4" aria-hidden="true" />
+          <GemIcon className="text-primary size-3.5" aria-hidden="true" />
           {gems}
         </span>
-      </div>
+        <ChevronDown
+          className={cn(
+            'text-muted-foreground size-4 shrink-0 transition-transform',
+            open && 'rotate-180',
+          )}
+          aria-hidden="true"
+        />
+      </button>
 
-      <p className="text-muted-foreground mt-4 text-xs">
+      {open ? (
+        <div className="px-4 pb-4">
+      <p className="text-muted-foreground text-xs">
         Une gemme débloque un chapitre entier — sa carte mentale et ses fiches
         de révision — pour toujours.
       </p>
@@ -140,6 +163,8 @@ export default function ParrainageCard({
             </dd>
           </div>
         </dl>
+      ) : null}
+        </div>
       ) : null}
     </section>
   )

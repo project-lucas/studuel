@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import Image from 'next/image'
 import { Heart, Zap, Check, X, RotateCcw, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -64,18 +64,46 @@ export default function BossMode({
   pool,
   onExit,
   variant = 'arena',
+  boss: forcedBoss,
+  rank: forcedRank,
+  onOutcome,
+  rewardSlot,
+  canRetry = false,
 }: {
   pool: ModeQuestion[]
   onExit: () => void
   // 'subject' : combat lancé depuis l'onglet Boss d'une page matière — pas
   // d'événement hebdo (il vit dans l'Arène) et libellé de retour neutre.
-  variant?: 'arena' | 'subject'
+  // 'traque'  : combat de LA TRAQUE (lib/traque) — le gardien a été débusqué
+  //             en révisant. Pas d'événement hebdo, et c'est la BASE qui tient
+  //             le rang et la victoire : une progression gagnée par du travail
+  //             réel n'a rien à faire en localStorage. La scène est SOMBRE (on
+  //             joue par-dessus le décor de l'arène) : l'encre du monde crème y
+  //             passe en clair et le duo question/réponses se pose sur un
+  //             panneau opaque, sans quoi rien n'est lisible.
+  variant?: 'arena' | 'subject' | 'traque'
+  /** Impose le gardien au lieu de le déduire de la matière dominante du pool. */
+  boss?: Boss
+  /** Impose le rang (lu en base) au lieu du compteur localStorage. */
+  rank?: BossRank
+  /** Issue du combat, pour que l'appelant la persiste côté serveur. */
+  onOutcome?: (result: 'won' | 'lost') => void
+  /** Bandeau de récompense de l'appelant, affiché sur l'écran de fin. */
+  rewardSlot?: ReactNode
+  /**
+   * La Traque : la fenêtre d'une heure court-elle encore ? Si oui, l'écran de
+   * défaite propose la revanche sur place — perdre coûte du temps, pas la
+   * traque. Ignoré hors variante `traque` (les autres ont toujours « Rejouer »).
+   */
+  canRetry?: boolean
 }) {
   // Le Boss sonne CUIVRE : fanfare courte et franche, dents de scie. Un combat
   // de boss doit s'annoncer à l'oreille comme un événement, pas comme un quiz.
   const audio = useMemo(() => gameSfx(MODE_TIMBRE.boss), [])
-  // Le boss incarne la matière la plus représentée du pool (= la priorité).
-  const subjectBoss = useMemo(() => bossForSubject(dominantSubject(pool)), [pool])
+  // Le boss incarne la matière la plus représentée du pool (= la priorité) —
+  // sauf quand l'appelant l'impose (La Traque : c'est LUI qu'on a débusqué).
+  const derivedBoss = useMemo(() => bossForSubject(dominantSubject(pool)), [pool])
+  const subjectBoss = forcedBoss ?? derivedBoss
   // L'événement : le boss de la semaine, plus dur, trophée exclusif à la clé.
   // BossMode n'est monté qu'après un clic (jamais en SSR) : lire la date ici
   // ne crée pas d'écart d'hydratation.
@@ -88,14 +116,15 @@ export default function BossMode({
 
   // Le rang se lit après montage (localStorage) — même pattern que le record
   // du Blitz, pour éviter tout écart d'hydratation.
-  const [rank, setRank] = useState<BossRank>(1)
+  const [rank, setRank] = useState<BossRank>(forcedRank ?? 1)
   useEffect(() => {
     const load = () => {
-      setRank(currentBossRank(subjectBoss.id))
+      // Rang imposé (lu en base, cf. La Traque) : rien à relire côté navigateur.
+      if (forcedRank === undefined) setRank(currentBossRank(subjectBoss.id))
       setWeeklyDone(weeklyBossBeaten(toDayKey(new Date())))
     }
     load()
-  }, [subjectBoss.id])
+  }, [subjectBoss.id, forcedRank])
   const stats = eventFight ? WEEKLY_BOSS_STATS : RANK_STATS[rank]
 
   const [phase, setPhase] = useState<Phase>('intro')
@@ -110,6 +139,16 @@ export default function BossMode({
 
   const question = pool.length > 0 ? pool[qIndex % pool.length] : null
   const answered = selected !== null
+
+  // La Traque se joue SUR le décor de l'arène (voile de nuit), pas sur le fond
+  // crème de Réviser : l'encre marine et les cartes transparentes y devenaient
+  // invisibles. Deux rôles suffisent — l'encre claire, et le panneau opaque qui
+  // porte la question et les réponses.
+  const onDark = variant === 'traque'
+  const inkSoft = onDark ? 'text-white/75' : 'text-muted-foreground'
+  const panel = onDark
+    ? 'rounded-3xl border border-white/10 bg-card p-4 shadow-[0_20px_45px_rgba(18,8,45,0.55)]'
+    : ''
 
   // Réponses du combat pour la répétition espacée (SRS + Revanche).
   const reviewsRef = useRef<ReviewAnswer[]>([])
@@ -156,7 +195,15 @@ export default function BossMode({
     finalCorrect: number,
     finalAnswered: number,
   ) => {
-    if (result === 'won' && eventFight) {
+    // La Traque : la victoire, le rang et les gemmes sont l'affaire du SERVEUR
+    // (RPC traque_victoire, qui revérifie que la fenêtre d'une heure court
+    // encore). Rien n'est écrit en localStorage — sinon changer de téléphone
+    // effacerait une progression gagnée en travaillant.
+    if (variant === 'traque') {
+      if (result === 'won') sfx.levelUp()
+      else audio.lose()
+      onOutcome?.(result)
+    } else if (result === 'won' && eventFight) {
       // Boss de la semaine vaincu : trophée exclusif + pièces, versés côté
       // serveur (l'identité du boss y est recalculée depuis la date).
       recordWeeklyBossWin(toDayKey(new Date()))
@@ -264,31 +311,50 @@ export default function BossMode({
   // ------------------------------------------------------------------- intro
   if (phase === 'intro') {
     return (
-      <div className="mx-auto flex max-w-xl flex-col items-center gap-6 pt-4 text-center">
+      <div
+        className={cn(
+          'mx-auto flex max-w-xl flex-col items-center gap-6 pt-4 text-center',
+          onDark && 'text-white',
+        )}
+      >
         <div className="flex flex-col items-center gap-2">
-          <span className="flex size-24 items-center justify-center overflow-hidden rounded-full bg-primary text-5xl shadow-lg shadow-primary/30">
-            <BossFace boss={character} px={96} />
+          <span
+            className={cn(
+              'flex size-24 items-center justify-center overflow-hidden rounded-full bg-primary text-5xl shadow-lg shadow-primary/30',
+              onDark && 'size-32 border-4 border-highlight/70 shadow-2xl',
+            )}
+          >
+            <BossFace boss={character} px={onDark ? 128 : 96} />
           </span>
           <div className="flex items-center gap-2">
             <h1 className="font-heading text-3xl font-bold">{character.name}</h1>
             {rankStars}
           </div>
-          <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+          <p
+            className={cn(
+              'text-sm font-semibold uppercase tracking-wide',
+              onDark ? 'text-highlight' : 'text-muted-foreground',
+            )}
+          >
             {character.epithet} · {RANK_LABELS[rank]}
           </p>
           <p className="font-heading text-lg italic">« {character.intro} »</p>
         </div>
 
-        <p className="text-sm text-muted-foreground">
+        <p className={cn('text-sm', inkSoft)}>
           {character.name} a {stats.hp} points de vie, tu as {stats.lives} cœur
           {stats.lives > 1 ? 's' : ''}.
           <br />
           Chaque bonne réponse le frappe, chaque erreur te coûte un cœur.
           <br />
-          Il garde ton chapitre le plus fragile — bats-le, prends l&apos;XP.
+          {variant === 'traque'
+            ? 'Il t’interroge sur ce que tu viens de réviser — c’est ton travail qui l’a fait sortir.'
+            : 'Il garde ton chapitre le plus fragile — bats-le, prends l’XP.'}
         </p>
 
-        <p className="flex items-center gap-1.5 rounded-full bg-highlight px-4 py-1.5 font-mono text-sm font-bold shadow-sm tabular-nums">
+        {/* text-foreground explicite : sur la scène sombre, le texte hérité
+            serait blanc sur jaune solaire — illisible. */}
+        <p className="flex items-center gap-1.5 rounded-full bg-highlight px-4 py-1.5 font-mono text-sm font-bold text-foreground shadow-sm tabular-nums">
           <Zap className="size-4" /> +{MODE_XP_BONUS.boss} XP en cas de victoire
         </p>
 
@@ -309,7 +375,7 @@ export default function BossMode({
         </button>
 
         {pool.length === 0 ? (
-          <p className="max-w-xs text-sm text-muted-foreground">
+          <p className={cn('max-w-xs text-sm', inkSoft)}>
             Pas encore de questions pour ta classe — reviens bientôt !
           </p>
         ) : null}
@@ -352,7 +418,11 @@ export default function BossMode({
         ) : null}
 
         {variant === 'arena' ? null : (
-          <Button variant="ghost" onClick={onExit}>
+          <Button
+            variant="ghost"
+            onClick={onExit}
+            className={onDark ? 'text-white hover:bg-white/10 hover:text-white' : ''}
+          >
             Retour
           </Button>
         )}
@@ -367,7 +437,12 @@ export default function BossMode({
       XP_RULES.challengeBonus +
       (outcome === 'won' ? MODE_XP_BONUS.boss : 0)
     return (
-      <div className="mx-auto flex max-w-xl flex-col items-center gap-5 pt-8 text-center">
+      <div
+        className={cn(
+          'mx-auto flex max-w-xl flex-col items-center gap-5 pt-8 text-center',
+          onDark && 'text-white',
+        )}
+      >
         <div className="animate-in zoom-in text-6xl duration-500">
           {outcome === 'won' ? (
             '👑'
@@ -393,15 +468,17 @@ export default function BossMode({
           <p className="font-heading mt-1 text-base italic">
             « {outcome === 'won' ? character.defeat : character.victory} »
           </p>
-          <p className="mt-1 text-sm text-muted-foreground">
+          <p className={cn('mt-1 text-sm', inkSoft)}>
             {outcome === 'won'
               ? `${correct} coups portés en ${answeredCount} questions.`
-              : `Il lui restait ${boss.hp} PV. Reviens plus fort — il t'attend.`}
+              : canRetry
+                ? `Il lui restait ${boss.hp} PV. Il est encore là — reprends-le tout de suite.`
+                : `Il lui restait ${boss.hp} PV. Reviens plus fort — il t'attend.`}
           </p>
         </div>
 
         {outcome === 'won' && eventFight ? (
-          <p className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-4 py-1.5 text-sm font-bold duration-500">
+          <p className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-4 py-1.5 text-sm font-bold text-foreground duration-500">
             <span aria-hidden="true">🏆</span>
             {trophy === false
               ? 'Trophée déjà en poche cette semaine.'
@@ -411,7 +488,7 @@ export default function BossMode({
           <p
             className={cn(
               'animate-in slide-in-from-bottom-2 rounded-full px-4 py-1.5 text-sm font-bold duration-500',
-              'bg-primary/10 text-primary',
+              onDark ? 'bg-white/10 text-highlight' : 'bg-primary/10 text-primary',
             )}
           >
             {rankedUp
@@ -422,11 +499,15 @@ export default function BossMode({
           </p>
         ) : null}
 
+        {/* La Traque : gemmes versées et « ouvrir la fiche » viennent de
+            l'appelant — c'est lui qui a parlé au serveur. */}
+        {rewardSlot}
+
         <div className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-6 py-3 font-mono text-2xl font-bold text-foreground shadow-lg duration-700 tabular-nums">
           <Zap className="size-6" /> +{xp} XP
         </div>
 
-        <p className="text-sm text-muted-foreground">
+        <p className={cn('text-sm', inkSoft)}>
           {saved === true
             ? '✓ Journée validée — ta série continue 🔥'
             : saved === false
@@ -435,16 +516,37 @@ export default function BossMode({
         </p>
 
         <div className="flex gap-2">
-          <Button
-            size="lg"
-            onClick={() => start(eventFight && outcome !== 'won')}
-          >
-            <RotateCcw className="size-4" />{' '}
-            {outcome === 'won' ? 'Rejouer' : 'Revanche'}
-          </Button>
+          {/* La Traque : la victoire consomme la fenêtre (le gardien retourne
+              dans sa tanière), la DÉFAITE non — tant que l'heure court, la
+              revanche est là. C'est l'appelant qui le dit : lui seul connaît
+              l'heure de fin. */}
+          {variant === 'traque' ? (
+            canRetry ? (
+              <Button size="lg" onClick={() => start(false)}>
+                <RotateCcw className="size-4" /> Revanche
+              </Button>
+            ) : null
+          ) : (
+            <Button
+              size="lg"
+              onClick={() => start(eventFight && outcome !== 'won')}
+            >
+              <RotateCcw className="size-4" />{' '}
+              {outcome === 'won' ? 'Rejouer' : 'Revanche'}
+            </Button>
+          )}
           {variant === 'arena' ? null : (
-            <Button variant="outline" size="lg" onClick={onExit}>
-              Retour
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={onExit}
+              className={
+                onDark
+                  ? 'border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white'
+                  : ''
+              }
+            >
+              {variant === 'traque' ? "Retour à l'arène" : 'Retour'}
             </Button>
           )}
         </div>
@@ -500,16 +602,19 @@ export default function BossMode({
         </div>
       </div>
 
-      {question.subject ? (
-        <p className="text-xs font-semibold text-muted-foreground uppercase">
-          {question.subject}
-        </p>
-      ) : null}
+      {/* Sur la scène sombre de La Traque, la question et les réponses se
+          posent sur un PANNEAU opaque : le décor de l'arène passait à travers
+          le texte et les cartes de réponse (captures du 30/07). */}
+      <div className={cn('flex flex-col gap-2', panel)}>
+        {question.subject ? (
+          <p className="text-xs font-semibold text-muted-foreground uppercase">
+            {question.subject}
+          </p>
+        ) : null}
 
-      <h2 className="font-heading mb-1 text-xl font-bold text-balance">
-        {question.prompt}
-      </h2>
-      <div className="flex flex-col gap-2">
+        <h2 className="font-heading mb-1 text-xl font-bold text-balance">
+          {question.prompt}
+        </h2>
         {question.options.map((option, i) => {
           const isCorrect = i === question.correctIndex
           const isSelected = i === selected
@@ -521,6 +626,9 @@ export default function BossMode({
               onClick={() => answer(i)}
               className={cn(
                 'flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left text-sm font-medium transition-all',
+                // Sur le panneau crème, une réponse « transparente » se
+                // confondrait avec le fond : on lui donne son propre relief.
+                onDark && !answered && 'bg-background',
                 !answered &&
                   'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
                 answered &&
@@ -554,7 +662,10 @@ export default function BossMode({
       <button
         type="button"
         onClick={onExit}
-        className="mt-2 self-center text-sm text-muted-foreground underline-offset-4 hover:underline"
+        className={cn(
+          'mt-2 self-center text-sm underline-offset-4 hover:underline',
+          inkSoft,
+        )}
       >
         Abandonner le combat
       </button>

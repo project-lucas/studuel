@@ -2,7 +2,7 @@ import {
   tournamentStatusLabel,
   type TournamentBoard,
 } from '@/lib/tournament'
-import { CrownIcon, TrophyIcon } from './icons'
+import { Crown, Trophy } from 'lucide-react'
 
 interface SchoolTournamentProps {
   board: TournamentBoard
@@ -33,7 +33,7 @@ export default function SchoolTournament({
     >
       <div className="flex items-center gap-3 px-4 pt-4">
         <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-highlight/20 text-highlight">
-          <CrownIcon className="size-5" />
+          <Crown className="size-5" />
         </span>
         <div className="min-w-0 flex-1">
           <h3 className="font-heading text-base leading-tight font-extrabold text-white">
@@ -94,7 +94,7 @@ export default function SchoolTournament({
                   ) : null}
                 </span>
                 <span className="flex shrink-0 items-center gap-1 text-sm font-extrabold text-white tabular-nums">
-                  <TrophyIcon className="size-3.5 text-highlight" />
+                  <Trophy className="size-3.5 text-highlight" />
                   {s.points}
                 </span>
               </li>
@@ -113,7 +113,7 @@ export default function SchoolTournament({
                 {mine.name}
               </span>
               <span className="flex shrink-0 items-center gap-1 text-sm font-extrabold text-white tabular-nums">
-                <TrophyIcon className="size-3.5 text-highlight" />
+                <Trophy className="size-3.5 text-highlight" />
                 {mine.points}
               </span>
             </li>

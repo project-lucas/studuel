@@ -13,6 +13,7 @@ import {
   crownsToNextTier,
   daysLeftInSeason,
   isSeasonEndgame,
+  isSeasonLastDay,
   lockedPrestigeCount,
   normalizeSeasonState,
   paceHeadline,
@@ -82,6 +83,12 @@ describe('countdownLabel & isSeasonEndgame', () => {
   it('déclare la fin de saison à trois jours', () => {
     expect(isSeasonEndgame('2026-07-29')).toBe(true)
     expect(isSeasonEndgame('2026-07-28')).toBe(false)
+  })
+
+  it('ne passe en corail que le dernier jour (moins de 24 h)', () => {
+    expect(isSeasonLastDay('2026-07-31')).toBe(true)
+    expect(isSeasonLastDay('2026-07-30')).toBe(false)
+    expect(isSeasonLastDay('2026-02-28')).toBe(true) // dernier jour de février
   })
 })
 

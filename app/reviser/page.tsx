@@ -19,6 +19,8 @@ import CoursesShelf, {
   type CourseShelfItem,
 } from '@/components/carnet/CoursesShelf'
 import CarnetFab from '@/components/carnet/CarnetFab'
+import CarnetHero from '@/components/carnet/CarnetHero'
+import CarnetAiCard from '@/components/carnet/CarnetAiCard'
 import CarnetTile from '@/components/carnet/CarnetTile'
 import MissionHero from '@/components/reviser/MissionHero'
 import PrepCards from '@/components/reviser/PrepCards'
@@ -53,6 +55,17 @@ import {
   type ControleSubjectMeta,
 } from '@/lib/prep-plan'
 import { pickMission, type ChapterCandidate } from '@/lib/mission'
+import {
+  isQuestionReady,
+  isQuestionType,
+  normalizeQuestionContent,
+} from '@/lib/carnet-cours'
+import {
+  crownsForCourse,
+  revoirMinutes,
+  revoirSummary,
+  type RevoirAttempt,
+} from '@/lib/carnet-revoir'
 import type { SubjectExamHint } from '@/lib/next-exam'
 import { normalizeOralList } from '@/lib/oral-texts'
 import type { CommuteSlot, Subject } from '@/lib/types'
@@ -136,6 +149,7 @@ export default async function ReviserPage() {
     { data: challengeDays },
     { data: courseRows },
     { data: courseQuestionRows },
+    { data: carnetAttemptRows },
     // Temps travaillé aujourd'hui (work_daily, migration 084) → objectif du jour
     // du header. Bucket par date UTC, cohérent avec la série.
     { data: workToday },
@@ -186,9 +200,21 @@ export default async function ReviserPage() {
       .eq('owner_id', user.id)
       .order('updated_at', { ascending: false })
       .limit(60),
-    // Compteur de questions par cours (ids seuls : jamais le contenu
-    // complet) — borné comme les autres listes de la page.
-    supabase.from('carnet_questions').select('course_id').limit(2_000),
+    // Questions des cours du carnet (type + contenu : il faut distinguer les
+    // brouillons des questions jouables pour le moteur « à revoir ») — borné
+    // comme les autres listes de la page, la RLS limite aux cours de l'élève.
+    supabase
+      .from('carnet_questions')
+      .select('id, course_id, type, content')
+      .limit(2_000),
+    // Tentatives de révision du carnet : elles nourrissent le héros « À revoir
+    // aujourd'hui », les badges par cours et les couronnes de maîtrise.
+    supabase
+      .from('carnet_review_attempts')
+      .select('question_id, is_correct, answered_at')
+      .eq('user_id', user.id)
+      .order('answered_at', { ascending: false })
+      .limit(4_000),
     supabase
       .from('work_daily')
       .select('seconds')
@@ -511,20 +537,67 @@ export default async function ReviserPage() {
   )
 
   // --- Mes cours (Mon carnet) : étagère calculée côté serveur -----------------
-  // Compteur de questions par cours (la RLS limite déjà aux cours de l'élève).
-  const questionCountByCourse = new Map<string, number>()
+  // Questions JOUABLES par cours (brouillons exclus) : c'est la matière du
+  // héros « À revoir », des badges et des couronnes.
+  const playableByCourse = new Map<string, string[]>()
+  const playableQuestions: { id: string; courseId: string }[] = []
   for (const row of courseQuestionRows ?? []) {
-    const key = String(row.course_id)
-    questionCountByCourse.set(key, (questionCountByCourse.get(key) ?? 0) + 1)
+    if (!isQuestionType(row.type)) continue
+    const content = normalizeQuestionContent(row.type, row.content)
+    if (!isQuestionReady(row.type, content)) continue
+    const courseId = String(row.course_id)
+    const id = String(row.id)
+    playableQuestions.push({ id, courseId })
+    const list = playableByCourse.get(courseId)
+    if (list) list.push(id)
+    else playableByCourse.set(courseId, [id])
   }
-  const courseItems: CourseShelfItem[] = (courseRows ?? []).map((r) => ({
-    id: String(r.id),
-    title: String(r.title ?? 'Sans titre'),
-    description: r.description ? String(r.description) : null,
-    icon: r.icon ? String(r.icon) : null,
-    color: r.color ? String(r.color) : null,
-    questionCount: questionCountByCourse.get(String(r.id)) ?? 0,
+
+  const carnetAttempts: RevoirAttempt[] = (carnetAttemptRows ?? []).map((a) => ({
+    questionId: String(a.question_id),
+    isCorrect: a.is_correct === true,
+    answeredAt: String(a.answered_at ?? ''),
   }))
+
+  // Le bilan « à revoir aujourd'hui » (moteur SRS du carnet, pur et testé).
+  const revoir = revoirSummary(playableQuestions, carnetAttempts, today)
+
+  // Questions maîtrisées par cours (dernier essai juste) → couronnes.
+  const lastByQuestion = new Map<string, RevoirAttempt>()
+  for (const a of carnetAttempts) {
+    const prev = lastByQuestion.get(a.questionId)
+    if (!prev || a.answeredAt > prev.answeredAt) lastByQuestion.set(a.questionId, a)
+  }
+
+  const courseItems: CourseShelfItem[] = (courseRows ?? []).map((r) => {
+    const id = String(r.id)
+    const playable = playableByCourse.get(id) ?? []
+    const mastered = playable.filter(
+      (qid) => lastByQuestion.get(qid)?.isCorrect === true,
+    ).length
+    return {
+      id,
+      title: String(r.title ?? 'Sans titre'),
+      description: r.description ? String(r.description) : null,
+      icon: r.icon ? String(r.icon) : null,
+      color: r.color ? String(r.color) : null,
+      questionCount: playable.length,
+      dueCount: revoir.dueByCourse.get(id) ?? 0,
+      crowns: crownsForCourse(mastered, playable.length),
+    }
+  })
+
+  // La ligne du héros : les cours qui réclament, du plus chargé au moins
+  // chargé — « Anglais — irréguliers · SVT chap. 2 · +1 cours ».
+  const titleById = new Map(courseItems.map((c) => [c.id, c.title]))
+  const dueCourses = [...revoir.dueByCourse.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([id]) => titleById.get(id) ?? 'Cours')
+  const heroCourseLine =
+    dueCourses.length <= 2
+      ? dueCourses.join(' · ')
+      : `${dueCourses.slice(0, 2).join(' · ')} · +${dueCourses.length - 2} cours`
+  const hasPlayableQuestions = playableQuestions.length > 0
 
   // Tour guidé : uniquement si la colonne existe (188) et dit « jamais vu ».
   // Colonne absente → `undefined`, donc jamais `=== false` : le tour ne se
@@ -624,28 +697,35 @@ export default async function ReviserPage() {
         }
         carnet={
           <div className="flex flex-col gap-4">
-            {/* Objectif examen tout en haut : pastille icône + % global,
-                dépliable sur le tableau d'avancement par matière (rendu null
-                hors classes à examen). */}
+            {/* 1. LE héros du carnet : l'app additionne les questions dues de
+                tous les cours et propose UNE session (mécanique du héros
+                mission appliquée au carnet). Masqué tant qu'il n'y a aucune
+                question jouable — un carnet vide n'a rien à réclamer. */}
+            {hasPlayableQuestions ? (
+              <CarnetHero
+                dueCount={revoir.total}
+                minutes={revoirMinutes(revoir.total)}
+                courseLine={heroCourseLine}
+              />
+            ) : null}
+            {/* Objectif examen : pastille icône + % global, dépliable sur le
+                tableau d'avancement par matière (rendu null hors classes à
+                examen). */}
             <ExamObjectiveToggle
               title={EXAM_TITLES[grade] ?? 'Objectif examen'}
               entries={examEntries}
             />
-            {/* Une ligne d'intro : dire à l'élève ce qu'est ce carnet. */}
-            <p className="px-1 text-sm text-muted-foreground">
-              Ton carnet de cours : crée tes cours, remplis-les de questions et
-              révise-les.
-            </p>
             {/* Créer, de partout dans la liste : le « + » flottant (il ne vit
                 que dans ce volet, le panneau inactif étant `hidden`). */}
             <CarnetFab />
             {/* Descriptif de l'oral (1re français). */}
             {hasFrenchOral ? <OralTextsCard initial={oralTexts} /> : null}
-            {/* « Mes cours » — LE bloc du carnet : les cours façon Wooflash
-                (chapitres imbriqués + questions de 5 types), création sans
-                quitter le carnet. Remplace l'ancienne Bibliothèque (les
-                library_items restent en base, plus affichés ici). */}
+            {/* « Mes cours » — LE bloc du carnet, en tableau de bord :
+                couronnes, badges « à revoir », ▶ direct, brouillons repliés. */}
             <CoursesShelf items={courseItems} />
+            {/* L'argument massue, enfin visible : l'IA rédige les questions
+                depuis le cours de l'élève (même feuille que le +). */}
+            <CarnetAiCard />
           </div>
         }
       />

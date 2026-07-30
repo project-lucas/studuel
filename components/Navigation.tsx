@@ -116,7 +116,9 @@ export default function Navigation({
                             'size-7 transition-all',
                             active
                               ? cn('scale-110 text-primary', ACTIVE_FILL[role])
-                              : 'fill-transparent text-muted-foreground/70',
+                              : // Encre atténuée, PAS muted-foreground : sur la
+                                // barre crème, le gris chaud passait sous 3:1.
+                                'fill-transparent text-foreground/70',
                           )}
                         />
                         {icon === 'crown' ? chestBadge : null}
@@ -131,7 +133,7 @@ export default function Navigation({
                       'font-heading text-[10px] leading-none font-bold',
                       active || center
                         ? 'text-primary'
-                        : 'text-muted-foreground/70',
+                        : 'text-foreground/70',
                     )}
                   >
                     {name}
@@ -165,7 +167,7 @@ export default function Navigation({
                     'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
                     active
                       ? 'bg-primary text-primary-foreground shadow-sm'
-                      : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
+                      : 'text-foreground/70 hover:bg-accent hover:text-accent-foreground',
                     center && !active && 'font-bold text-primary',
                   )}
                 >
@@ -196,7 +198,7 @@ export default function Navigation({
               'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
               accountActive
                 ? 'bg-primary text-primary-foreground shadow-sm'
-                : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground',
+                : 'text-foreground/70 hover:bg-accent hover:text-accent-foreground',
             )}
           >
             <CircleUser className="size-4 shrink-0" />

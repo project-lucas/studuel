@@ -9,12 +9,13 @@ import {
   buildLiveSessions,
   buildSchoolBoard,
   mapFriendsOverview,
-  sortStreaks,
   type Friend,
   type SchoolBoard,
   type PendingRequest,
-  type StreakEntry,
 } from '@/lib/social'
+import { fetchClanWeekBoard } from '@/lib/clan-week-server'
+import type { ClanWeekBoard } from '@/lib/clan-week'
+import { toDayKey } from '@/lib/streak'
 import { schoolLevelForGrade } from '@/lib/clan'
 import { rankPlayers, type RankPlayer } from '@/lib/trophies'
 import { referralSummary, STARTING_GEMS } from '@/lib/gems'
@@ -45,11 +46,13 @@ export default async function AmisPage() {
   const supabase = await createClient()
   const user = await getCurrentUser()
 
+  const today = toDayKey(new Date())
   let ranking: RankPlayer[] = []
   let friends: Friend[] = []
   let pendingRequests: PendingRequest[] = []
-  let streaks: StreakEntry[] = []
   let myFriendCode = ''
+  // Coffre d'équipe hebdo (migration 204) — null : carte masquée.
+  let clanBoard: ClanWeekBoard | null = null
   // Nom du groupe d'amis (« squad », migration 176) et droit de le renommer
   // (réservé au leader du classement) — défauts sûrs pour le visiteur.
   let squadName: string | null = null
@@ -74,11 +77,11 @@ export default async function AmisPage() {
       { data: friendTrophyRows },
       { data: overviewRows },
       { data: friendStreakRows },
-      { data: myStreakRaw },
       { data: liveRows },
       gemsBalance,
       referralCounts,
       squadSet,
+      clanBoardRes,
     ] = await Promise.all([
       // Une seule lecture de `profiles` pour toutes les colonnes de l'écran,
       // quelles que soient leurs migrations d'origine : friend_code (019),
@@ -98,10 +101,9 @@ export default async function AmisPage() {
       supabase.rpc('friends_trophies'),
       // Amis acceptés + demandes reçues/envoyées (migration 019).
       supabase.rpc('friends_overview'),
-      // Séries des amis + ma série (migration 155). Appels ISOLÉS : si 155 n'est
-      // pas passée, ils échouent seuls → repli sans série, sans casser le reste.
+      // Séries des amis (migration 155), pour les anneaux flamme des stories.
+      // Appel ISOLÉ : si 155 n'est pas passée, il échoue seul → sans série.
       supabase.rpc('friends_streaks'),
-      supabase.rpc('my_streak'),
       // « En direct » : amis actifs dans les 20 dernières minutes (migration 160).
       supabase.rpc('friends_live'),
       // Gemmes et filleuls (migration 183). Les deux helpers ont leur propre
@@ -109,11 +111,14 @@ export default async function AmisPage() {
       fetchGems(supabase, user.id),
       fetchReferralCounts(supabase, user.id),
       fetchSquadIds(supabase, user.id),
+      // Coffre d'équipe hebdo (migration 204) — null si pas encore en base.
+      fetchClanWeekBoard(supabase),
     ])
 
     gems = gemsBalance
     referral = referralSummary(referralCounts.pending, referralCounts.activated)
     squadIds = [...squadSet]
+    clanBoard = clanBoardRes
     myFriendCode = String(profile?.friend_code ?? '')
     const rawSquad = String(profile.squad_name ?? '').trim()
     squadName = rawSquad.length > 0 ? rawSquad : null
@@ -152,18 +157,6 @@ export default async function AmisPage() {
       ...f,
       streak: streakById.get(f.id) ?? 0,
     }))
-
-    // Mini-classement des séries : moi + mes amis, trié par jours décroissants.
-    const myStreak = Math.max(0, Number(myStreakRaw ?? 0) || 0)
-    streaks = sortStreaks([
-      { id: 'me', name: 'Toi', emoji: '🔥', streak: myStreak, isMe: true },
-      ...friends.map((f) => ({
-        id: f.id,
-        name: f.name,
-        emoji: f.emoji,
-        streak: f.streak ?? 0,
-      })),
-    ])
 
     const friendRanks: RankPlayer[] = (
       Array.isArray(friendTrophyRows) ? friendTrophyRows : []
@@ -208,7 +201,6 @@ export default async function AmisPage() {
       <AmisHome
         ranking={ranking}
         onlineFriendIds={onlineFriendIds}
-        streaks={streaks}
         school={school}
         schoolDemo={schoolDemo}
         friends={friends}
@@ -219,6 +211,8 @@ export default async function AmisPage() {
         gems={gems}
         referral={referral}
         squadIds={squadIds}
+        clanBoard={clanBoard}
+        today={today}
       />
     </div>
   )

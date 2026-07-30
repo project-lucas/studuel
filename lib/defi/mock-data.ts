@@ -83,7 +83,7 @@ function trophyEntry(
     name,
     avatar,
     score: trophies,
-    scoreLabel: `${fr(trophies)} 🏆`,
+    scoreLabel: fr(trophies),
     isMe,
   }
 }

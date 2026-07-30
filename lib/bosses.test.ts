@@ -49,6 +49,20 @@ describe('bossForSubject', () => {
     expect(bossForSubject('Arts plastiques').id).toBe(FALLBACK_BOSS.id)
     expect(bossForSubject(null).id).toBe(FALLBACK_BOSS.id)
   })
+
+  // Régression : la carte de La Traque est composée côté serveur puis passée à
+  // un composant client. Un boss qui traîne sa regexp de matching casse le
+  // rendu (« Only plain objects … can be passed to Client Components »).
+  it('ne laisse jamais sortir la regexp de matching (sérialisable)', () => {
+    for (const nom of ['Maths', 'EPS', 'Français', 'Arts plastiques']) {
+      const boss = bossForSubject(nom)
+      expect(boss).not.toHaveProperty('match')
+      expect(() => structuredClone(boss)).not.toThrow()
+    }
+    for (const boss of ALL_BOSSES) {
+      expect(boss).not.toHaveProperty('match')
+    }
+  })
 })
 
 describe('dominantSubject', () => {

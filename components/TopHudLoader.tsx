@@ -5,6 +5,7 @@ import { computeXp, levelFor } from '@/lib/xp'
 import { walletLevelInfo } from '@/lib/wallet'
 import { activityCutoff } from '@/lib/streak'
 import { isHudHidden } from '@/lib/top-hud-routes'
+import { fetchGems } from '@/lib/gems-access'
 import TopHud from './TopHud'
 
 type WalletRow = { xp: number | null; level: number | null }
@@ -27,7 +28,16 @@ export default async function TopHudLoader() {
   const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
 
   if (!user) {
-    return <TopHud coins={null} level={null} levelTitle={null} progress={0} userLabel={null} />
+    return (
+      <TopHud
+        coins={null}
+        gems={null}
+        level={null}
+        levelTitle={null}
+        progress={0}
+        userLabel={null}
+      />
+    )
   }
 
   // Solde + niveau du PORTEFEUILLE (user_wallet, migration 192) : c'est LA
@@ -40,16 +50,25 @@ export default async function TopHudLoader() {
   // Les deux lectures tiennent en UNE requête : `user_wallet` est joint au
   // profil par PostgREST (relation `user_id`), au lieu de deux allers-retours
   // pour deux lignes qui parlent du même élève.
-  const { data: hudRow } = await supabase
-    .from('profiles')
-    .select('coins, user_wallet(xp, level)')
-    .eq('id', user.id)
-    .maybeSingle<{
-      coins: number | null
-      // PostgREST renvoie un objet quand il détecte une relation 1-1, un
-      // tableau sinon : on accepte les deux formes.
-      user_wallet: WalletRow | WalletRow[] | null
-    }>()
+  //
+  // Les GEMMES partent en parallèle, dans leur propre lecture tolérante
+  // (lib/gems-access) : les joindre à ce `select` ferait tomber pièces ET
+  // niveau si la migration 183 manquait, alors qu'ici l'absence de la colonne
+  // ne doit coûter que la pastille des gemmes. Deux requêtes concurrentes, zéro
+  // latence ajoutée.
+  const [{ data: hudRow }, gems] = await Promise.all([
+    supabase
+      .from('profiles')
+      .select('coins, user_wallet(xp, level)')
+      .eq('id', user.id)
+      .maybeSingle<{
+        coins: number | null
+        // PostgREST renvoie un objet quand il détecte une relation 1-1, un
+        // tableau sinon : on accepte les deux formes.
+        user_wallet: WalletRow | WalletRow[] | null
+      }>(),
+    fetchGems(supabase, user.id),
+  ])
 
   const walletRow = Array.isArray(hudRow?.user_wallet)
     ? (hudRow.user_wallet[0] ?? null)
@@ -63,6 +82,7 @@ export default async function TopHudLoader() {
     return (
       <TopHud
         coins={coins}
+        gems={gems}
         level={info.level}
         levelTitle={info.title}
         progress={info.progress}
@@ -115,6 +135,7 @@ export default async function TopHudLoader() {
   return (
     <TopHud
       coins={coins}
+      gems={gems}
       level={level.level}
       levelTitle={level.title}
       progress={level.progress}

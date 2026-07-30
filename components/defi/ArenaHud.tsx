@@ -1,35 +1,52 @@
 'use client'
 
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
-import { useDialogFocus } from '@/lib/use-dialog'
+import { cn } from '@/lib/utils'
+import { menuAlertCount } from '@/lib/arene-hud'
+import SheetShell from './SheetShell'
 import { NotificationBadge } from './SculptedPlate'
 
 /**
- * Une entrée du menu de l'écran d'arène. Deux comportements exclusifs :
+ * Une entrée du menu burger. Deux comportements exclusifs :
  * - `href` : simple raccourci de navigation (ex. l'entrée Amis → onglet Amis) ;
  * - `sheetContent` : ouvre une feuille ancrée en bas par-dessus l'arène.
  */
 export interface OrbItem {
   id: string
-  /** Libellé court affiché à côté du disque. */
+  /** Libellé de la plaque — toujours affiché (c'est la plaque qui parle). */
   label: string
-  /** Picto du disque (SVG dimensionné par l'appelant, ou emoji). */
+  /** Picto de la plaque (SVG dimensionné par l'appelant, ou emoji). */
   icon?: ReactNode
   /**
-   * Médaillon illustré (chemin `/images/...`) qui remplace tout le disque —
-   * l'image porte déjà son cadre violet + liseré or. Prioritaire sur `icon`.
+   * Objet illustré (chemin `/images/...`) qui remplace le picto : la coupe du
+   * tournoi, le coffre d'équipe… Prioritaire sur `icon`.
    */
   image?: string
-  /** Pastille corail en haut à droite du disque (compteur, « ! »…). */
+  /**
+   * L'illustration EST déjà une tuile (squircle coloré, liseré, ombre) et se
+   * suffit : le jeton d'icône lui retire son fond et son cadre. Sans ce
+   * drapeau, on empile une tuile dans une tuile — deux liserés, deux ombres,
+   * et un objet qui rétrécit au centre d'un carré qui ne lui sert à rien.
+   */
+  imageIsTile?: boolean
+  /** Pastille de la plaque (compteur, « ! »…). */
   badge?: string
-  /** Aperçu à côté du libellé (rang, minuterie…), en jeton sombre. */
+  /**
+   * Ton de la pastille : `alert` (corail) UNIQUEMENT pour ce qui se réclame
+   * maintenant (coffre prêt, récompense) ; `neutral` (violet) pour un
+   * compteur d'avancement. Défaut : `alert`.
+   */
+  badgeTone?: 'alert' | 'neutral'
+  /** Aperçu à côté du libellé (rang, minuterie…), en jeton violet. */
   sub?: string
+  /** Filet de séparation AU-DESSUS de cette entrée (groupes du menu). */
+  dividerBefore?: boolean
   /** Navigation directe — exclusif de `sheetContent`. */
   href?: string
   /** Titre de la feuille (défaut : le libellé). */
@@ -38,40 +55,98 @@ export interface OrbItem {
   sheetContent?: ReactNode
 }
 
+/** Famille de couleur d'une tuile de rail — une famille = une fonction. */
+export type TileFamily =
+  | 'violet'
+  | 'gold'
+  | 'green'
+  | 'magenta'
+  | 'wood'
+  | 'amber'
+
+/**
+ * Une tuile du rail GAUCHE : un objet illustré dans un cadre commun (squircle,
+ * liseré blanc), la couleur dite par sa famille. Aucun libellé visible —
+ * l'illustration, le badge et le minuteur suffisent (l'aria-label porte le
+ * nom). Comme les entrées du menu : `href` OU `sheetContent`.
+ */
+export interface RailTile {
+  id: string
+  /** Nom de la tuile — aria-label uniquement, jamais affiché. */
+  label: string
+  /** Illustration détourée (webp) qui remplit la tuile. */
+  image?: string
+  /**
+   * L'illustration EST déjà une tuile : le cadre commun (squircle coloré,
+   * liseré, socle) s'efface devant elle. Sinon on empile deux tuiles.
+   */
+  imageIsTile?: boolean
+  /** À défaut d'illustration : picto SVG centré. */
+  icon?: ReactNode
+  /** Robe de la tuile (défaut : violet, la marque). */
+  family?: TileFamily
+  badge?: string
+  badgeTone?: 'alert' | 'neutral'
+  /** Minuteur marine sous la tuile (« 3j ») — l'urgence qui réclame. */
+  timer?: string
+  href?: string
+  sheetTitle?: string
+  sheetContent?: ReactNode
+}
+
 interface ArenaHudProps {
-  /** Colonne d'entrées « compétition » (ligue, classements, entraînement). */
-  leftOrbs: OrbItem[]
-  /** Colonne d'entrées « social » (clan, historique, amis). */
-  rightOrbs: OrbItem[]
-  /** Cartouche de rang (blason + trophées), posée AU-DESSUS du parchemin. */
-  rankSlot?: ReactNode
-  /** Carte de profil (avatar + pseudo), calée en haut à GAUCHE (façon Clash
-   *  Royale). Symétrique du bloc rang/menu de droite. */
+  /** Rail gauche, tuiles flottantes libres : le duo missions (Quêtes, Boss). */
+  leftTiles?: RailTile[]
+  /**
+   * Les COMPAGNONS DU BURGER — jetons ronds posés à sa GAUCHE, dans la même
+   * rangée de l'angle haut-droit (la barrette de boutons de Clash Royale, juste
+   * sous la bande des monnaies). Réservé aux portes qu'on ouvre d'un tap sans
+   * passer par le menu (Amis).
+   */
+  cornerTiles?: RailTile[]
+  /**
+   * Entrées du menu burger — TOUT le second rang : historique, classements,
+   * ligue, tournoi, coffre d'équipe, réglages.
+   */
+  menuItems: OrbItem[]
+  /** Pastille niveau + XP, calée dans l'ANGLE haut-gauche (façon Clash Royale). */
   profileSlot?: ReactNode
-  /** Pilule de saison, calée discrètement en bas à gauche de la scène. */
+  /** Cartouche de rang, JUSTE SOUS la pastille de niveau (même colonne). */
+  rankSlot?: ReactNode
+  /** Bandeau de saison — la bande du haut, centrée entre niveau et pièces. */
   seasonSlot?: ReactNode
-  /** Le centre de la scène (optionnel : l'arène peut rester plein cadre). */
+  /** Le centre de la scène (la scène du héros, calée en bas). */
   children?: ReactNode
 }
 
 /**
- * La scène de l'onglet Défi : le décor d'arène est laissé libre au centre, et
- * toutes les entrées secondaires sont regroupées derrière un unique bouton
- * « burger » calé EN HAUT À DROITE, juste sous la cartouche de rang. Au tap, le
- * parchemin se DÉROULE sur place : la pile des six médaillons (ligue,
- * classements, entraînement, clan, historique, amis) descend verticalement en
- * cascade — un vrai rouleau qui se déplie vers le bas, pas une feuille qui monte
- * du bas. Chaque médaillon navigue (`href`) ou ouvre sa propre feuille de détail
- * (`sheetContent`, fournie par le serveur).
+ * La scène de l'onglet Défi, version « écran d'arène finale » : le décor est
+ * laissé au personnage (children, ancré en bas au-dessus de la zone CTA), et
+ * les systèmes réclament leur visite depuis le HUD.
  *
- * Rang + parchemin partagent le même coin : c'est le bloc « mon statut, mes
- * accès », et il libère tout le centre-bas pour la scène et le bouton de match.
+ * Rangement façon Clash Royale (cette passe) : QUATRE rangées, exactement
+ * comme la home de Clash Royale.
+ *   1. la bande des monnaies (TopHud) à droite, la pastille de niveau dans
+ *      l'angle gauche ;
+ *   2. juste DESSOUS : la cartouche de rang à gauche, et dans l'angle DROIT la
+ *      barrette de boutons — les compagnons (Amis) puis le burger, tout au
+ *      bord ;
+ *   3. le bandeau de SAISON, pleine largeur (le « Pass Royale ») ;
+ *   4. le rail des missions, à gauche, qui descend le long de la scène.
+ *
+ * Le burger était posé au troisième cran, sous le bandeau de saison : il ne
+ * tenait plus l'angle, et la colonne droite n'avait qu'un seul objet. Remonté
+ * au ras des monnaies avec Amis à sa gauche, les deux rails se répondent de
+ * part et d'autre du personnage. Le reste du second rang (tournoi, coffre,
+ * ligue, classements, historique, réglages) vit toujours derrière le burger :
+ * une seule porte.
  */
 export default function ArenaHud({
-  leftOrbs,
-  rightOrbs,
-  rankSlot,
+  leftTiles = [],
+  cornerTiles = [],
+  menuItems,
   profileSlot,
+  rankSlot,
   seasonSlot,
   children,
 }: ArenaHudProps) {
@@ -79,8 +154,15 @@ export default function ArenaHud({
   const [openId, setOpenId] = useState<string | null>(null)
   const reduce = useReducedMotion()
 
-  const items = [...leftOrbs, ...rightOrbs]
-  const open = items.find((o) => o.id === openId && o.sheetContent) ?? null
+  const sheetItems: (OrbItem | RailTile)[] = [
+    ...leftTiles,
+    ...cornerTiles,
+    ...menuItems,
+  ]
+  const open = sheetItems.find((o) => o.id === openId && o.sheetContent) ?? null
+  // Menu fermé, le burger doit quand même DIRE qu'il y a un dû derrière lui :
+  // sinon un coffre prêt disparaîtrait de l'écran (il était visible en tuile).
+  const alerts = menuAlertCount(menuItems)
 
   // Fermeture au clavier (Échap) : la feuille de détail d'abord, sinon le menu.
   useEffect(() => {
@@ -101,30 +183,31 @@ export default function ArenaHud({
     setOpenId(id)
   }
 
-  // Cascade : les médaillons se déroulent depuis le parchemin vers le BAS — le
-  // premier de la liste (le plus proche du bouton) apparaît en premier, donc
+  // Cascade : les plaques se déroulent depuis le burger vers le BAS — la
+  // première de la liste (la plus proche du bouton) apparaît en premier, donc
   // stagger dans l'ordre naturel.
   const listVariants = {
-    open: { transition: { staggerChildren: 0.05 } },
-    closed: { transition: { staggerChildren: 0.03, staggerDirection: -1 } },
+    open: { transition: { staggerChildren: 0.04 } },
+    closed: { transition: { staggerChildren: 0.02, staggerDirection: -1 } },
   }
   const rowVariants = reduce
     ? { open: { opacity: 1 }, closed: { opacity: 0 } }
     : {
         open: { opacity: 1, y: 0, scale: 1 },
-        closed: { opacity: 0, y: -16, scale: 0.8 },
+        closed: { opacity: 0, y: -14, scale: 0.9 },
       }
 
   return (
     <div className="relative min-h-0 flex-1">
-      {/* Le centre, dégagé pour l'arène. */}
-      <div className="flex h-full items-center justify-center px-6">
+      {/* Le centre : la scène du héros, posée en bas du cadre (au-dessus de la
+          zone CTA), jamais écrasée par le HUD qui flotte par-dessus. */}
+      <div className="flex h-full items-end justify-center px-6">
         {children}
       </div>
 
       {/* Voile de fermeture, façon Clash Royale : assombrit TOUTE l'interface
           (portail plein viewport, au-dessus de la barre d'onglets), pour ne
-          laisser rayonner que les médaillons du menu. Un tap le referme. */}
+          laisser rayonner que le menu. Un tap le referme. */}
       {typeof document !== 'undefined'
         ? createPortal(
             <AnimatePresence>
@@ -145,119 +228,148 @@ export default function ArenaHud({
           )
         : null}
 
-      {/* Carte de profil : angle haut-GAUCHE, symétrique du bloc rang/menu de
-          droite. `fixed` pour tenir l'angle quel que soit le format (mêmes
-          offsets verticaux que la droite). z-40 : sous les feuilles modales et
-          sous le voile du menu (elle s'assombrit avec le reste quand il ouvre). */}
-      {profileSlot ? (
-        <div className="fixed top-14 left-3 z-40 md:top-4">{profileSlot}</div>
-      ) : null}
+      {/* La pastille de niveau REMONTE dans l'angle : elle occupe la ligne du
+          bandeau (laissée libre à gauche, les pièces étant à droite et
+          l'engrenage parti dans le burger). `fixed` pour tenir l'angle quel que
+          soit le format ; sur desktop, après la barre latérale (md:left-56). */}
+      <div className="fixed top-2 left-3 z-40 md:top-4 md:left-56">
+        {profileSlot}
+      </div>
 
-      {/* Pilule de saison : posée en bas à gauche de la scène, hors du chemin
-          du regard. Le centre haut reste au décor. */}
+      {/* RANGÉE 2, à gauche : la cartouche de rang, calée juste sous la
+          pastille de niveau — en face de la barrette de boutons de l'angle
+          droit (même hauteur, comme la bannière de nom face aux boutons chez
+          Clash Royale). */}
+      <div className="fixed top-16 left-3 z-40 md:top-[4.5rem] md:left-56">
+        {rankSlot}
+      </div>
+
+      {/* RANGÉE 3 : le bandeau de SAISON, pleine largeur. `absolute` (et non
+          `fixed`) pour rester dans la colonne de l'arène. Il occupait le cran
+          juste sous les monnaies ; ce cran appartient désormais à la barrette
+          de boutons, il descend donc d'une rangée — sans rien perdre, il reste
+          la bande qui traverse l'écran. */}
       {seasonSlot ? (
-        <div className="pointer-events-none absolute bottom-1 left-0 z-30 flex max-w-[62%] justify-start [&>*]:pointer-events-auto">
+        <div className="absolute inset-x-0 top-0 z-30 mt-[4.75rem] md:mt-[7.75rem]">
           {seasonSlot}
         </div>
       ) : null}
 
-      {/* Le bloc « statut & accès », icônes FLOTTANTES en haut à DROITE : la
-          cartouche de rang, le parchemin scellé juste dessous, et — une fois
-          déroulé — la pile des entrées qui descend. Position `fixed` (pas
-          `absolute`) pour tenir l'angle haut-droit PEU IMPORTE LE FORMAT : calé
-          sous la pastille « solde » du bandeau flottant (`top-14 right-3` sur
-          mobile, `md:top-4` sur desktop). `items-end` pour que la cartouche, le
-          parchemin et la pile se plaquent tous au bord droit. Z-index
-          conditionnel : menu OUVERT → z-[60] > voile (55), pour que la pile et le
-          parchemin restent en pleine lumière quand le reste s'assombrit ; menu
-          FERMÉ → z-40, SOUS les feuilles modales (ModesSheet, feuilles de détail
-          en z-50) pour que le parchemin ne transperce plus leur voile sombre. */}
+      {/* RANGÉE 4 : le rail des missions, qui descend le long de la scène. */}
+      {leftTiles.length > 0 ? (
+        <div className="fixed top-[10.5rem] left-3.5 z-40 flex flex-col gap-4 md:top-44 md:left-[14.125rem]">
+          {leftTiles.map((tile) => (
+            <RailTileFace key={tile.id} tile={tile} onOpen={openSheet} />
+          ))}
+        </div>
+      ) : null}
+
+      {/* ANGLE HAUT-DROIT : la barrette de boutons, au ras de la bande des
+          monnaies — les compagnons à GAUCHE, le burger tout au BORD (c'est lui
+          qui tient l'angle). Z-index conditionnel : menu OUVERT → z-[60] >
+          voile (55) pour rester en pleine lumière ; menu FERMÉ → z-40, SOUS
+          les feuilles modales (z-50). */}
       <div
-        className={`fixed top-14 right-3 flex flex-col items-end gap-1.5 md:top-4 ${
+        className={`fixed top-16 right-3 flex flex-col items-end gap-2 md:top-[4.5rem] ${
           menuOpen ? 'z-[60]' : 'z-40'
         }`}
       >
-        {rankSlot}
-
-        {/* Le burger lui-même : parchemin scellé qui, au tap, se DÉROULE — le
-            rouleau fermé se fond vers le parchemin ouvert (et non plus un simple
-            pivot). Les deux visuels restent montés, superposés au centre, et on
-            croise leurs opacités/échelles pour l'effet d'ouverture. Rouvrir
-            referme le parchemin (le bouton fait aussi office de « fermer »). */}
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            setMenuOpen((v) => !v)
-          }}
-          aria-haspopup="menu"
-          aria-expanded={menuOpen}
-          aria-label="Menu de l'arène — ligue, classements, clan, amis…"
-          title="Menu de l'arène"
-          className="olympe-press flex size-14 cursor-pointer items-center justify-center rounded-2xl focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
-        >
-          <span className="relative grid size-11 place-items-center">
-            {/* Rouleau fermé — se rétracte et s'efface à l'ouverture. */}
+        <div className="flex items-center gap-2">
+          {cornerTiles.map((tile) => (
+            <RailTileFace
+              key={tile.id}
+              tile={tile}
+              onOpen={openSheet}
+              variant="corner"
+            />
+          ))}
+          {/* Le burger. Il était NU (trois barres à même le décor) tant qu'il
+              était seul sur son bord : le fond aurait fait un objet de plus.
+              Maintenant qu'Amis l'accompagne, deux boutons côte à côte dont un
+              seul porte un matériau se lisent comme un oubli, pas comme une
+              hiérarchie — chez Clash Royale la barrette est une SÉRIE de
+              boutons identiques. Il prend donc le jeton de verre de nuit, le
+              matériau commun du HUD, qui règle au passage sa lisibilité sur
+              les arènes claires (aube, midi). */}
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              setMenuOpen((v) => !v)
+            }}
+            aria-haspopup="menu"
+            aria-expanded={menuOpen}
+            aria-label={
+              menuOpen
+                ? 'Fermer le menu de l’arène'
+                : `Menu de l’arène — classements, tournoi, coffre, réglages…${
+                    alerts > 0 ? ` ${alerts} à voir` : ''
+                  }`
+            }
+            title="Menu de l'arène"
+            className="olympe-glass defi2-press relative grid size-11 cursor-pointer place-items-center rounded-full focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+          >
             <motion.span
-              className="col-start-1 row-start-1 block"
+              className="col-start-1 row-start-1 grid place-items-center"
               initial={false}
               animate={
                 reduce
                   ? { opacity: menuOpen ? 0 : 1 }
-                  : { opacity: menuOpen ? 0 : 1, scale: menuOpen ? 0.7 : 1 }
+                  : { opacity: menuOpen ? 0 : 1, scale: menuOpen ? 0.6 : 1 }
               }
               transition={{ type: 'spring', stiffness: 380, damping: 26 }}
             >
-              <Image
-                src="/images/defi/modes/burger.webp"
-                alt=""
-                width={56}
-                height={47}
-                className="w-11 drop-shadow-[0_3px_6px_rgba(0,0,0,0.55)]"
-                aria-hidden
+              <Menu
+                className="size-6 text-[#faf6ef]"
+                strokeWidth={2.6}
+                aria-hidden="true"
               />
             </motion.span>
-
-            {/* Parchemin ouvert — se déroule et apparaît à l'ouverture. */}
             <motion.span
-              className="pointer-events-none col-start-1 row-start-1 block"
+              className="pointer-events-none col-start-1 row-start-1 grid place-items-center"
               initial={false}
               animate={
                 reduce
                   ? { opacity: menuOpen ? 1 : 0 }
-                  : {
-                      opacity: menuOpen ? 1 : 0,
-                      scale: menuOpen ? 1 : 0.6,
-                      y: menuOpen ? 0 : 4,
-                    }
+                  : { opacity: menuOpen ? 1 : 0, scale: menuOpen ? 1 : 0.6 }
               }
-              transition={{ type: 'spring', stiffness: 340, damping: 24 }}
+              transition={{ type: 'spring', stiffness: 380, damping: 26 }}
             >
-              <Image
-                src="/images/defi/modes/burger-open.webp"
-                alt=""
-                width={92}
-                height={137}
-                className="w-12 drop-shadow-[0_3px_6px_rgba(0,0,0,0.55)]"
-                aria-hidden
+              <X
+                className="size-6 text-[#faf6ef]"
+                strokeWidth={2.6}
+                aria-hidden="true"
               />
             </motion.span>
-          </span>
-        </button>
+            {alerts > 0 && !menuOpen ? (
+              <NotificationBadge
+                tone="alert"
+                className="absolute -top-1.5 -right-1.5"
+              >
+                {alerts}
+              </NotificationBadge>
+            ) : null}
+          </button>
+        </div>
 
-        {/* La pile déroulée, SOUS le parchemin : elle descend en cascade. */}
+        {/* Le panneau, SOUS la barrette : la pile des plaques, façon carte
+            Clash Royale. Borné en hauteur (petits écrans) plutôt que de
+            déborder sous la barre d'onglets. */}
         <AnimatePresence>
           {menuOpen ? (
             <motion.ul
               key="menu"
-              className="flex flex-col items-end gap-2"
+              className="olympe-glass arena-menu max-h-[calc(100dvh-12rem)] w-[15.5rem] overflow-y-auto"
               variants={listVariants}
               initial="closed"
               animate="open"
               exit="closed"
             >
-              {items.map((item) => (
+              {menuItems.map((item) => (
                 <motion.li key={item.id} variants={rowVariants}>
+                  {item.dividerBefore ? (
+                    <span className="arena-menu-sep block" aria-hidden="true" />
+                  ) : null}
                   <MenuRow item={item} onOpen={openSheet} />
                 </motion.li>
               ))}
@@ -266,7 +378,7 @@ export default function ArenaHud({
         </AnimatePresence>
       </div>
 
-      {/* Feuille de détail d'une entrée (ligue, classements…) — portail pour
+      {/* Feuille de détail d'une entrée (tuile ou plaque) — portail pour
           échapper à l'overflow du layout. */}
       {typeof document !== 'undefined'
         ? createPortal(
@@ -313,72 +425,109 @@ export default function ArenaHud({
 }
 
 /**
- * L'enveloppe commune des feuilles ancrées en bas (fond assombri + panneau
- * `.defi3-sheet` qui monte, en-tête avec bouton Fermer). Le contenu et
- * l'en-tête sont fournis par l'appelant.
+ * Une tuile de rail. Deux robes, une seule mécanique :
+ * - `rail` (défaut, rail gauche) : le cadre commun des OBJETS — squircle,
+ *   liseré blanc, socle 3D peint par la famille de couleur ;
+ * - `corner` (barrette de l'angle haut-droit) : un jeton ROND de verre de nuit,
+ *   la robe des COMMANDES du HUD — celle du burger qu'il accompagne, et celle
+ *   de la pastille de niveau et de la cartouche de rang en face.
+ * Dans les deux cas : l'illustration ou le picto, la pastille et le minuteur.
  */
-function SheetShell({
-  label,
-  reduce,
-  onClose,
-  header,
-  children,
+function RailTileFace({
+  tile,
+  onOpen,
+  variant = 'rail',
 }: {
-  label: string
-  reduce: boolean | null
-  onClose: () => void
-  header: ReactNode
-  children: ReactNode
+  tile: RailTile
+  onOpen: (id: string) => void
+  variant?: 'rail' | 'corner'
 }) {
-  const panel = useRef<HTMLDivElement>(null)
-  useDialogFocus(panel)
+  const family = tile.family ?? 'violet'
+  const corner = variant === 'corner'
+
+  // Une illustration qui EST déjà une tuile porte son propre cadre : le nôtre
+  // s'efface (plus de fond, plus de liseré, plus de socle) et elle occupe TOUTE
+  // la place, au lieu de rétrécir à 88 % au centre d'un carré redondant.
+  const nue = Boolean(tile.image && tile.imageIsTile)
+
+  const face = (
+    <span
+      className={
+        nue
+          ? cn(
+              'hud-face relative grid place-items-center',
+              corner ? 'size-11' : 'size-[52px]',
+            )
+          : corner
+            ? 'hud-face olympe-glass relative grid size-11 place-items-center rounded-full text-[#faf6ef]'
+            : `hud-face rail-tile rail-tile-${family} size-[52px]`
+      }
+    >
+      {tile.image ? (
+        <Image
+          src={tile.image}
+          alt=""
+          width={56}
+          height={56}
+          className={cn(
+            'object-contain',
+            nue
+              ? 'size-full drop-shadow-[0_3px_5px_rgba(23,16,48,0.5)]'
+              : 'size-[88%] drop-shadow-[0_2px_3px_rgba(23,16,48,0.4)]',
+          )}
+          aria-hidden
+        />
+      ) : (
+        tile.icon
+      )}
+      {tile.badge ? (
+        <NotificationBadge
+          tone={tile.badgeTone ?? 'alert'}
+          className="absolute -top-1.5 -right-1.5"
+        >
+          {tile.badge}
+        </NotificationBadge>
+      ) : null}
+      {tile.timer ? <span className="rail-timer">{tile.timer}</span> : null}
+    </span>
+  )
+
+  const className =
+    'defi2-press block cursor-pointer focus-visible:outline-none focus-visible:[&_.hud-face]:ring-4 focus-visible:[&_.hud-face]:ring-highlight/60'
+
+  if (tile.href) {
+    return (
+      <Link
+        href={tile.href}
+        onClick={() => sfx.tap()}
+        className={className}
+        aria-label={tile.label}
+      >
+        {face}
+      </Link>
+    )
+  }
 
   return (
-    <motion.div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-black/55 sm:items-center sm:p-4"
-      role="dialog"
-      aria-modal="true"
-      aria-label={label}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.18 }}
-      onClick={onClose}
+    <button
+      type="button"
+      onClick={() => {
+        sfx.tap()
+        onOpen(tile.id)
+      }}
+      className={className}
+      aria-label={tile.label}
+      aria-haspopup="dialog"
     >
-      <motion.div
-        ref={panel}
-        data-no-swipe
-        className="defi3-sheet w-full max-w-md outline-none"
-        initial={reduce ? { opacity: 0 } : { y: '100%' }}
-        animate={reduce ? { opacity: 1 } : { y: 0 }}
-        exit={reduce ? { opacity: 0 } : { y: '100%' }}
-        transition={{ type: 'tween', duration: 0.26, ease: 'easeOut' }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex items-center gap-3 border-b border-white/10 px-5 py-4">
-          {header}
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Fermer"
-            className="flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full text-white/70 transition-colors hover:bg-white/10 active:scale-90"
-          >
-            <X className="size-5" strokeWidth={2.4} aria-hidden="true" />
-          </button>
-        </div>
-        <div className="max-h-[72dvh] overflow-y-auto overscroll-contain">
-          {children}
-        </div>
-      </motion.div>
-    </motion.div>
+      {face}
+    </button>
   )
 }
 
 /**
- * Une entrée de la pile dépliée : un libellé (jeton verre fumé, avec un éventuel
- * aperçu) à gauche, le médaillon « objet sculpté » (anneau or + cœur gemme +
- * icône crème) à droite, aligné sous le burger. Navigue (`href`) ou ouvre la
- * feuille de détail via `onOpen`.
+ * Une plaque du menu, façon Clash Royale : picto (ou objet illustré) à gauche,
+ * libellé, puis l'aperçu chiffré et la pastille calés à droite. Navigue
+ * (`href`) ou ouvre la feuille de détail via `onOpen`.
  */
 function MenuRow({
   item,
@@ -387,58 +536,52 @@ function MenuRow({
   item: OrbItem
   onOpen: (id: string) => void
 }) {
-  const badge = item.badge ? (
-    <NotificationBadge className="absolute -top-1 -right-1">
-      {item.badge}
-    </NotificationBadge>
-  ) : null
-
-  // Un médaillon illustré (`image`) porte déjà son cadre ; sinon le disque
-  // « objet sculpté » compact (anneau or + cœur gemme) avec l'icône crème.
-  const medallion = item.image ? (
-    <span className="olympe-medallion-img relative block size-12 shrink-0 rounded-full">
-      <Image
-        src={item.image}
-        alt=""
-        width={48}
-        height={48}
-        className="size-full rounded-full object-contain drop-shadow-[0_5px_10px_rgba(0,0,0,0.5)]"
+  const face = (
+    <span className="arena-menu-row flex w-full items-center gap-2.5 rounded-xl py-1.5 pr-2.5 pl-1.5">
+      {/* Le jeton d'icône : même carré, même taille, pour TOUTES les entrées —
+          c'est lui qui aligne la colonne de gauche au pixel. Son FOND, lui,
+          s'efface devant une illustration qui porte déjà le sien (`imageIsTile`),
+          sinon on lit deux carrés emboîtés. */}
+      <span
+        className={cn(
+          'arena-menu-ico',
+          item.image && item.imageIsTile && 'arena-menu-ico-nue',
+        )}
         aria-hidden
-      />
-      {badge}
-    </span>
-  ) : (
-    <span className="olympe-medallion olympe-medallion--sm relative">
-      <span className="olympe-medallion-core">{item.icon}</span>
-      {badge}
-    </span>
-  )
-
-  const label = (
-    <span className="olympe-glass flex items-center gap-1.5 rounded-full py-1.5 pr-3.5 pl-3">
-      <span className="font-heading text-sm font-extrabold whitespace-nowrap text-white">
+      >
+        {item.image ? (
+          <Image
+            src={item.image}
+            alt=""
+            width={32}
+            height={32}
+            className={cn(
+              'object-contain',
+              item.imageIsTile ? 'size-full' : 'size-7',
+            )}
+          />
+        ) : (
+          item.icon
+        )}
+      </span>
+      <span className="font-heading min-w-0 flex-1 truncate text-left text-[0.82rem] font-extrabold text-[#faf6ef]">
         {item.label}
       </span>
       {item.sub ? (
-        <span className="olympe-tag rounded-full px-1.5 py-0.5 font-heading text-[0.6rem] font-extrabold">
+        <span className="font-heading shrink-0 rounded-full bg-white/12 px-1.5 py-0.5 text-[0.6rem] font-extrabold text-[#faf6ef]/85">
           {item.sub}
         </span>
+      ) : null}
+      {item.badge ? (
+        <NotificationBadge tone={item.badgeTone ?? 'alert'} className="shrink-0">
+          {item.badge}
+        </NotificationBadge>
       ) : null}
     </span>
   )
 
-  // Aligné à DROITE sous le parchemin : le libellé d'abord (il s'étend vers la
-  // gauche), puis le médaillon calé sur le bord droit, sous le rouleau — les
-  // médaillons s'empilent ainsi en colonne juste sous le parchemin.
-  const face = (
-    <>
-      {label}
-      {medallion}
-    </>
-  )
-
   const className =
-    'defi2-press flex cursor-pointer items-center gap-2.5 rounded-full focus-visible:outline-none focus-visible:[&_.olympe-medallion]:ring-4 focus-visible:[&_.olympe-medallion]:ring-highlight/60 focus-visible:[&_.olympe-medallion-img]:ring-4 focus-visible:[&_.olympe-medallion-img]:ring-highlight/60'
+    'defi2-press block w-full cursor-pointer focus-visible:outline-none focus-visible:[&_.arena-menu-row]:ring-4 focus-visible:[&_.arena-menu-row]:ring-highlight/60'
 
   if (item.href) {
     return (

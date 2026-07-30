@@ -27,7 +27,13 @@ import DailyLoginReward from "@/components/DailyLoginReward";
 import BackGuard from "@/components/BackGuard";
 // Toasts globaux (« Enregistré ✓ ») : file lib/toast, aucun provider.
 import Toaster from "@/components/Toaster";
+// Écran de chargement au lancement, façon jeu mobile (illustration + barre).
+import SplashScreen from "@/components/SplashScreen";
+// Capteur « le premier écran est peint » : autorise le rideau à lever.
+import AppReadyBeacon from "@/components/AppReadyBeacon";
+import { shouldShowSplash, tipOfDay } from "@/lib/splash";
 import { getCurrentUser } from "@/lib/supabase/user";
+import { headers } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -84,6 +90,12 @@ export default async function RootLayout({
   const user = await getCurrentUser();
   const userLabel = user?.user_metadata?.full_name || user?.email || null;
 
+  // Le rideau ne joue que pour le JEU, et uniquement pour un élève connecté :
+  // pas devant l'onboarding, la connexion, l'espace parents ni l'admin. Le
+  // `x-pathname` est posé par proxy.ts (même mécanique que TopHudLoader).
+  const pathname = (await headers()).get("x-pathname") ?? "";
+  const showSplash = shouldShowSplash(pathname, Boolean(user));
+
   return (
     <html
       lang="fr"
@@ -92,6 +104,12 @@ export default async function RootLayout({
       className={`light ${geistSans.variable} ${geistMono.variable} ${bricolage.variable} ${nunito.variable} ${baloo.variable} ${fredoka.variable}`}
     >
       <body className="antialiased">
+        {/* Écran de chargement : l'astuce est tirée ici (serveur) pour que les
+            deux rendus affichent la même phrase — sinon React signale une
+            différence d'hydratation sur le tout premier écran de l'app. */}
+        {showSplash ? (
+          <SplashScreen tip={tipOfDay(new Date().toISOString().slice(0, 10))} />
+        ) : null}
         {/* Mobile first : contenu entre la barre du haut (compte) et la barre
             d'onglets du bas ; sur desktop la sidebar sticky passe à gauche et
             le contenu est centré en largeur de lecture confortable */}
@@ -107,6 +125,12 @@ export default async function RootLayout({
             }
           >
             <TopHudLoader />
+            {/* Dans la MÊME frontière que le bandeau : React ne révèle une
+                frontière que lorsque tous ses enfants sont prêts, donc cette
+                balise se monte à l'instant précis où la première vraie
+                interface remplace le squelette. C'est ce signal qui autorise
+                l'écran de chargement à s'ouvrir. */}
+            <AppReadyBeacon />
           </Suspense>
           <Navigation
             userLabel={userLabel}

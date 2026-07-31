@@ -7,7 +7,6 @@ import { toDayKey } from '@/lib/streak'
 import { LEVERS } from '@/lib/capacite-drivers'
 import { trimestreOf } from '@/lib/notes'
 import { GRADE_LEVELS } from '@/lib/types'
-import { normalizeNextExam } from '@/lib/next-exam'
 
 async function requireUser() {
   const supabase = await createClient()
@@ -32,101 +31,16 @@ export async function saveGradeLevel(grade: string): Promise<void> {
   revalidatePath('/', 'layout')
 }
 
-// Annonce un ou plusieurs contrôles : un contrôle par chapitre coché (même
-// matière, même date). On résout les chapitres EN BASE pour ne stocker que des
-// données fiables (titre, niveau, slug), pas ce que dit le client. Chaque
-// écriture passe par la RPC atomique add_upcoming_exam (read-modify-write sûr
-// contre la concurrence : deux appareils qui annoncent en même temps ne
-// s'écrasent plus) — appelée en séquence, un contrôle à la fois. Le Défi pioche
-// ensuite dans ces chapitres. Voir supabase/087_upcoming_exams.sql.
-// Renvoie { ok, added } pour que l'UI ne ferme la feuille qu'en cas de succès
-// complet (si 087 n'est pas passée, la RPC est absente → ok: false, pas un
-// faux OK) ; `added` permet un message partiel si une partie est passée.
-const MAX_EXAMS_PER_ADD = 20
-
-export async function addUpcomingExams(
-  chapterIds: string[],
-  date: string | null,
-): Promise<{ ok: boolean; added: number }> {
-  const { supabase, userId } = await requireUser()
-  const cleanIds = Array.isArray(chapterIds)
-    ? [
-        ...new Set(
-          chapterIds.filter(
-            (id): id is string => typeof id === 'string' && id.length > 0,
-          ),
-        ),
-      ].slice(0, MAX_EXAMS_PER_ADD)
-    : []
-  if (!userId || cleanIds.length === 0) return { ok: false, added: 0 }
-
-  const cleanDate =
-    typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : null
-
-  // Les chapitres doivent exister ; leur matière (slug) vient de la jointure.
-  type ChapterRow = {
-    id: string
-    title: string
-    level: string
-    subject: { slug: string } | null
-  }
-  const { data: chapters } = await supabase
-    .from('chapters')
-    .select('id, title, level, subject:subjects!inner(slug)')
-    .in('id', cleanIds)
-    .returns<ChapterRow[]>()
-  if (!chapters || chapters.length !== cleanIds.length)
-    return { ok: false, added: 0 }
-
-  let added = 0
-  for (const chapter of chapters) {
-    const exam = normalizeNextExam({
-      subject: chapter.subject?.slug ?? '',
-      chapterId: chapter.id,
-      chapterTitle: chapter.title,
-      level: chapter.level,
-      date: cleanDate,
-    })
-    if (!exam) break
-
-    const { error } = await supabase.rpc('add_upcoming_exam', { p_exam: exam })
-    if (error) {
-      // RPC absente (087 pas passée) ou échec DB : on signale au client.
-      console.error('[moi] contrôle non ajouté:', error.message)
-      break
-    }
-    added += 1
-  }
-
-  if (added > 0) {
-    revalidatePath('/moi')
-    revalidatePath('/defi')
-    revalidatePath('/reviser')
-  }
-  return { ok: added === chapters.length, added }
-}
-
-// Retire un contrôle annoncé (déclaré par erreur, ou passé). Même garantie
-// d'atomicité que l'ajout : RPC remove_upcoming_exam (087).
-export async function removeUpcomingExam(
-  chapterId: string,
-): Promise<{ ok: boolean }> {
-  const { supabase, userId } = await requireUser()
-  if (!userId || typeof chapterId !== 'string' || chapterId.length === 0)
-    return { ok: false }
-
-  const { error } = await supabase.rpc('remove_upcoming_exam', {
-    p_chapter: chapterId,
-  })
-  if (error) {
-    console.error('[moi] contrôle non retiré:', error.message)
-    return { ok: false }
-  }
-  revalidatePath('/moi')
-  revalidatePath('/defi')
-  revalidatePath('/reviser')
-  return { ok: true }
-}
+// `addUpcomingExams` et `removeUpcomingExam` vivaient ici : elles écrivaient
+// dans `profiles.upcoming_exams` (087) via les RPC `add_upcoming_exam` /
+// `remove_upcoming_exam`. Plus aucun appelant depuis que la 203 a fait du
+// contrôle un objet unique — `AddExamSheet` passe par `createControle`
+// (app/reviser/prep-actions.ts), qui crée le contrôle ET son plan dans la même
+// transaction. Les garder, c'était offrir une seconde voie d'écriture vers une
+// source que plus rien ne lit en priorité : le Défi et les dossiers Réviser
+// piochent désormais dans `controles` (lib/controle-exams). Les RPC restent en
+// base (rien n'est supprimé côté SQL) le temps que la reprise 211 recopie les
+// anciennes lignes.
 
 // `saveAvatar` vivait ici : elle écrivait n'importe quelle config normalisée
 // dans profiles.avatar SANS aucun contrôle de possession — l'héritage de

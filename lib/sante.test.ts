@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { readFileSync, readdirSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import {
@@ -40,10 +40,15 @@ describe('MIGRATIONS_SANTE — le catalogue colle au dépôt', () => {
     expect(ids).toEqual(attendues)
   })
 
-  it('la sonde CLI (_ASSOCIE/sonde-base.mjs) mentionne chaque migration', () => {
+  // `_ASSOCIE/` est gitignoré : la copie CLI de la sonde vit en local (là où
+  // Lucas et l'agent la maintiennent), pas dans le dépôt. Sur un clone frais
+  // le fichier est absent — on SAUTE plutôt que de jeter (ENOENT ferait tomber
+  // toute la suite). Le garde anti-dérive reste actif partout où la sonde existe.
+  const sondeCli = path.join(ROOT, '_ASSOCIE', 'sonde-base.mjs')
+  it.skipIf(!existsSync(sondeCli))('la sonde CLI (_ASSOCIE/sonde-base.mjs) mentionne chaque migration', () => {
     // Le CLI ne peut pas importer ce module TS : il en tient une copie. Ce
     // test est le fil qui empêche la copie de dériver en silence.
-    const cli = readFileSync(path.join(ROOT, '_ASSOCIE', 'sonde-base.mjs'), 'utf8')
+    const cli = readFileSync(sondeCli, 'utf8')
     for (const m of MIGRATIONS_SANTE) {
       expect(cli.includes(m.id), `migration ${m.id} absente de la sonde CLI`).toBe(
         true,

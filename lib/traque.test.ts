@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { bossById, bossForSubject } from '@/lib/bosses'
 import {
+  chaptersBySubject,
   apparitionAlive,
   apparitionMessage,
   apparitionOf,
@@ -540,5 +541,61 @@ describe('accord avec le catalogue des boss', () => {
     expect(isEnChasse(bossForSubject('Mathématiques').id, LUNDI)).toBe(true)
     expect(isEnChasse(bossForSubject('Français').id, MARDI)).toBe(true)
     expect(isEnChasse(bossForSubject('Anglais').id, MERCREDI)).toBe(true)
+  })
+})
+
+describe('chaptersBySubject — le combat porte sur ce qui vient d’être révisé', () => {
+  const CHAPITRES = new Map([
+    ['q1', 'ch-maths-1'],
+    ['q2', 'ch-maths-2'],
+    ['q3', 'ch-hist-1'],
+  ])
+
+  it('range chaque chapitre sous SA matière, sans mélanger les gardiens', () => {
+    const out = chaptersBySubject(
+      [
+        { kind: 'question', id: 'q1', subject: 'Maths' },
+        { kind: 'question', id: 'q3', subject: 'Histoire' },
+        { kind: 'question', id: 'q2', subject: 'Maths' },
+      ],
+      CHAPITRES,
+    )
+    expect(out.get('Maths')).toEqual(['ch-maths-1', 'ch-maths-2'])
+    expect(out.get('Histoire')).toEqual(['ch-hist-1'])
+  })
+
+  it('garde l’ordre des réponses — le plus récemment travaillé passe en tête', () => {
+    const out = chaptersBySubject(
+      [
+        { kind: 'question', id: 'q2', subject: 'Maths' },
+        { kind: 'question', id: 'q1', subject: 'Maths' },
+      ],
+      CHAPITRES,
+    )
+    expect(out.get('Maths')).toEqual(['ch-maths-2', 'ch-maths-1'])
+  })
+
+  it('déduplique : dix questions d’un même chapitre ne le comptent qu’une fois', () => {
+    const out = chaptersBySubject(
+      Array.from({ length: 10 }, () => ({
+        kind: 'question' as const,
+        id: 'q1',
+        subject: 'Maths',
+      })),
+      CHAPITRES,
+    )
+    expect(out.get('Maths')).toEqual(['ch-maths-1'])
+  })
+
+  it('ignore les cartes (aucun chapitre) et les items sans matière', () => {
+    const out = chaptersBySubject(
+      [
+        { kind: 'card', id: 'q1', subject: 'Maths' },
+        { kind: 'question', id: 'q1', subject: null },
+        { kind: 'question', id: 'inconnue', subject: 'Maths' },
+      ],
+      CHAPITRES,
+    )
+    expect(out.size).toBe(0)
   })
 })

@@ -1,7 +1,12 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { bossById, bossForSubject, type Boss } from '@/lib/bosses'
+import {
+  getLessonChapterPairsCached,
+  getQuizLessonPairsCached,
+} from '@/lib/catalog'
 import { toDayKey } from '@/lib/streak'
 import {
+  chaptersBySubject,
   emptyGauge,
   normalizeGauge,
   pointsFor,
@@ -105,7 +110,7 @@ export async function creditTraqueMany(
  */
 export async function creditTraqueFromAnswers(
   supabase: SupabaseClient,
-  answers: readonly { subject: string | null; good: boolean }[],
+  answers: readonly { kind?: string; id?: string; subject: string | null; good: boolean }[],
   geste: 'carte' | 'bonne_reponse' = 'carte',
 ): Promise<TraqueCredit[]> {
   const bySubject = new Map<string, number>()
@@ -114,13 +119,66 @@ export async function creditTraqueFromAnswers(
     if (!subject) continue
     bySubject.set(subject, (bySubject.get(subject) ?? 0) + 1)
   }
+  const chapitres = await chaptersOfAnswers(supabase, answers)
   return creditTraqueMany(
     supabase,
     [...bySubject].map(([subject, count]) => ({
       subject,
       event: { [geste]: count } as TraqueEvent,
+      chapterIds: chapitres.get(subject) ?? [],
     })),
   )
+}
+
+/**
+ * Les chapitres derrière des items de révision, par matière.
+ *
+ * Sans eux, une jauge remplie par la SEULE file « À revoir » n'aurait aucun
+ * chapitre : le combat de traque perdrait sa promesse (« le gardien interroge
+ * ce que tu viens de réviser ») et retomberait sur le repli par matière. Les
+ * items de type `question` sont des questions de quiz : quiz → leçon →
+ * chapitre, les deux derniers sauts sortant du cache de catalogue. Les cartes
+ * (`card`) ne sont rattachées à aucun chapitre — elles ne contribuent pas.
+ *
+ * Une lecture qui échoue ne fait rien échouer : on rend ce qu'on a.
+ */
+async function chaptersOfAnswers(
+  supabase: SupabaseClient,
+  answers: readonly { kind?: string; id?: string; subject: string | null }[],
+): Promise<Map<string, string[]>> {
+  const out = new Map<string, string[]>()
+  const questionIds = [
+    ...new Set(
+      answers
+        .filter((a) => a.kind === 'question' && typeof a.id === 'string')
+        .map((a) => a.id as string),
+    ),
+  ]
+  if (questionIds.length === 0) return out
+
+  const { data } = await supabase
+    .from('quiz_questions')
+    .select('id, quiz_id')
+    .in('id', questionIds)
+    .returns<{ id: string; quiz_id: string }[]>()
+  if (!data || data.length === 0) return out
+
+  const [quizLesson, lessonChapter] = await Promise.all([
+    getQuizLessonPairsCached(),
+    getLessonChapterPairsCached(),
+  ])
+  const lessonOfQuiz = new Map(quizLesson)
+  const chapterOfLesson = new Map(lessonChapter)
+  const chapterOfQuestion = new Map<string, string>()
+  for (const row of data) {
+    const lesson = lessonOfQuiz.get(row.quiz_id)
+    const chapter = lesson ? chapterOfLesson.get(lesson) : undefined
+    if (chapter) chapterOfQuestion.set(row.id, chapter)
+  }
+
+  // Le regroupement lui-même est PUR et testé (lib/traque.chaptersBySubject) :
+  // ce module ne fait que lui apporter la résolution question → chapitre.
+  return chaptersBySubject(answers, chapterOfQuestion)
 }
 
 // --------------------------------------------- de quoi savoir QUELLE matière

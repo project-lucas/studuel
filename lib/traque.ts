@@ -286,6 +286,36 @@ export function apparitionAlive(
 export const TRAQUE_POOL_CHAPTERS = 5
 
 /**
+ * Regroupe par MATIÈRE les chapitres derrière une liste de réponses de
+ * révision, dans l'ordre où ils ont été travaillés (le premier vu en tête, ce
+ * que `traque_merge_chapters` remontera devant dans la jauge).
+ *
+ * Sans ce regroupement, une jauge remplie par la seule file « À revoir »
+ * n'aurait AUCUN chapitre, et le combat perdrait sa promesse : « le gardien
+ * interroge ce que tu viens de réviser ». Les items sans chapitre connu
+ * (cartes, question hors catalogue) sont simplement ignorés.
+ *
+ * Pur : la résolution question → chapitre est faite par l'appelant
+ * (lib/traque-server), qui seul parle à la base.
+ */
+export function chaptersBySubject(
+  answers: readonly { kind?: string; id?: string; subject: string | null }[],
+  chapterOfQuestion: ReadonlyMap<string, string>,
+): Map<string, string[]> {
+  const out = new Map<string, string[]>()
+  for (const a of answers) {
+    const subject = a.subject ?? ''
+    if (!subject || a.kind !== 'question' || typeof a.id !== 'string') continue
+    const chapter = chapterOfQuestion.get(a.id)
+    if (!chapter) continue
+    const list = out.get(subject) ?? []
+    if (!list.includes(chapter)) list.push(chapter)
+    out.set(subject, list)
+  }
+  return out
+}
+
+/**
  * Les chapitres qui composent le pool, les plus récemment nourris en tête.
  * La liste stockée est déjà ordonnée (le plus récent devant) : on déduplique
  * et on tronque.

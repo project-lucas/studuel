@@ -13,7 +13,10 @@ export type NextExam = {
   subject: string // slug de la matière (ex. 'physique-chimie')
   chapterId: string // id du chapitre visé
   chapterTitle: string
-  level: string // niveau du chapitre (ex. '1re')
+  // Niveau du chapitre (ex. '1re'). OPTIONNEL : les entrées héritées de 087 le
+  // portent, celles dérivées d'un `controle` (203, cf. lib/controle-exams) non —
+  // la table n'a pas la colonne, et aucun écran ne lit ce champ.
+  level?: string
   date: string | null // clé UTC 'YYYY-MM-DD' ou null si non précisée
 }
 

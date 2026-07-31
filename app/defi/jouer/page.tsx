@@ -22,6 +22,8 @@ import { getCurrentUser } from '@/lib/supabase/user'
 import { activityCutoff, computeStreak, toDayKey } from '@/lib/streak'
 import { getChapterMastery } from '@/lib/mastery'
 import { normalizeExamList, activeExams, examChapterIds } from '@/lib/next-exam'
+import { controlesToExams, mergeExamSources } from '@/lib/controle-exams'
+import { rowsToControles, type ControleRow } from '@/lib/prep-plan'
 import { computeXp } from '@/lib/xp'
 import { fetchDisplayLevel } from '@/lib/wallet-server'
 import { commuteStreak } from '@/lib/trajet'
@@ -135,6 +137,7 @@ export default async function DefiJouerPage({
     { data: friendTrophyRows },
     { data: trophyRow },
     { data: examsRow },
+    { data: controleRows },
   ] = await Promise.all([
     // user_id explicite : la RLS le garantit aujourd'hui, mais la couche
     // sociale ouvrira la lecture croisée des sessions — XP et série sont à soi.
@@ -188,13 +191,24 @@ export default async function DefiJouerPage({
       .select('trophies, best_trophies')
       .eq('id', user.id)
       .maybeSingle(),
-    // Contrôles à venir (087), select ISOLÉ : si la colonne manque, repli sur []
-    // sans casser le Défi. Ces chapitres sont priorisés dans la pioche.
+    // Contrôles à venir, ANCIENNE source (087, `profiles.upcoming_exams`) :
+    // plus personne ne l'alimente depuis la 203, mais elle peut encore porter
+    // des contrôles déclarés avant, tant que la reprise 211 n'est pas passée.
+    // Select ISOLÉ : si la colonne manque, repli sur [] sans casser le Défi.
     supabase
       .from('profiles')
       .select('upcoming_exams')
       .eq('id', user.id)
       .maybeSingle(),
+    // Contrôles à venir, source COURANTE (203, `controles`) : c'est ce que crée
+    // `AddExamSheet` aujourd'hui. Sans le plan de préparation — le Défi n'a
+    // besoin que des chapitres visés et de la date. Select isolé de même : si la
+    // 203 n'est pas passée, `data` est null et la priorisation retombe sur 087.
+    supabase
+      .from('controles')
+      .select('id, subject_slug, chapters, exam_date, grade, note, note_prompted, snooze_date')
+      .eq('user_id', user.id)
+      .returns<ControleRow[]>(),
   ])
 
   const xpTotal = computeXp({
@@ -250,10 +264,17 @@ export default async function DefiJouerPage({
       chapterByLesson.set(String(l.id), String(l.chapter_id))
     }
   }
-  // Contrôles à venir déclarés sur Moi (087) : leurs chapitres passent DEVANT
+  // Contrôles à venir déclarés depuis Réviser : leurs chapitres passent DEVANT
   // dans la pioche → le Défi révise le prochain contrôle sans changer d'onglet.
+  // Les deux sources sont fusionnées (la moderne `controles` gagne) le temps que
+  // la reprise 211 recopie les anciens `upcoming_exams` — voir lib/controle-exams.
   const upcomingExams = activeExams(
-    normalizeExamList((examsRow as { upcoming_exams?: unknown } | null)?.upcoming_exams),
+    mergeExamSources(
+      controlesToExams(rowsToControles(controleRows ?? [], [])),
+      normalizeExamList(
+        (examsRow as { upcoming_exams?: unknown } | null)?.upcoming_exams,
+      ),
+    ),
     today,
   )
   const examChapters = new Set(examChapterIds(upcomingExams))

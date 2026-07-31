@@ -40,6 +40,8 @@ import {
   examCardLabel,
   examProximity,
 } from '@/lib/next-exam'
+import { controlesToExams, mergeExamSources } from '@/lib/controle-exams'
+import { rowsToControles, type ControleRow } from '@/lib/prep-plan'
 import { activityCutoff, computeStreak, toDayKey } from '@/lib/streak'
 import {
   CHAPTER_COLUMNS,
@@ -82,9 +84,11 @@ export default async function SubjectPage({
 
   // Profil (classe), catalogue des matières et contrôles annoncés en
   // parallèle — le catalogue sort du cache serveur, pas de Supabase.
-  // upcoming_exams (087) reste isolé du profil : si la migration manque,
-  // seule l'annotation des contrôles saute, pas la page.
-  const [{ data: profile }, cachedSubjects, { data: examsRow }] =
+  // Les DEUX sources de contrôles sont lues, chacune dans un select ISOLÉ : si
+  // une migration manque (087 ou 203), seule l'annotation de cette source saute,
+  // pas la page. `controles` (203) est la source courante, `upcoming_exams`
+  // (087) l'ancienne, encore utile tant que la reprise 211 n'est pas passée.
+  const [{ data: profile }, cachedSubjects, { data: examsRow }, { data: controleRows }] =
     await Promise.all([
       supabase
         .from('profiles')
@@ -97,6 +101,11 @@ export default async function SubjectPage({
         .select('upcoming_exams')
         .eq('id', user.id)
         .maybeSingle<{ upcoming_exams: unknown }>(),
+      supabase
+        .from('controles')
+        .select('id, subject_slug, chapters, exam_date, grade, note, note_prompted, snooze_date')
+        .eq('user_id', user.id)
+        .returns<ControleRow[]>(),
     ])
 
   let subject = cachedSubjects.find((s) => s.slug === slug) ?? null
@@ -274,7 +283,10 @@ export default async function SubjectPage({
   const today = toDayKey(new Date())
   const examsByChapter: Record<string, ChapterExamHint> = {}
   for (const exam of activeExams(
-    normalizeExamList(examsRow?.upcoming_exams),
+    mergeExamSources(
+      controlesToExams(rowsToControles(controleRows ?? [], [])),
+      normalizeExamList(examsRow?.upcoming_exams),
+    ),
     today,
   )) {
     if (exam.subject !== subject.slug) continue

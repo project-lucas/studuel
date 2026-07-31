@@ -57,6 +57,34 @@ export const getGradeChaptersCached = unstable_cache(
   { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
 )
 
+// Couples (matière, niveau) ayant AU MOINS un chapitre — sur tous les niveaux.
+//
+// `getGradeChaptersCached` ne voit que le niveau de l'élève, ce qui suffit à
+// l'affichage mais PAS à décider qu'une matière est vide : une matière
+// hors-niveau (`fixed_level = 'tous'` — la culture générale) range son contenu
+// ailleurs et paraîtrait vide partout. Quelques dizaines de paires, identiques
+// pour tous les élèves, d'où le cache. Tableau de paires (et non `Set`) : le
+// cache de Next sérialise ce qu'il stocke.
+export const getSubjectLevelsCached = unstable_cache(
+  async (): Promise<[string, string][]> => {
+    const { data } = await anonClient()
+      .from('chapters')
+      .select('subject_id, level')
+      .returns<{ subject_id: string; level: string }[]>()
+    const seen = new Set<string>()
+    const pairs: [string, string][] = []
+    for (const row of data ?? []) {
+      const key = `${row.subject_id}|${row.level}`
+      if (seen.has(key)) continue
+      seen.add(key)
+      pairs.push([row.subject_id, row.level])
+    }
+    return pairs
+  },
+  ['catalog-subject-levels'],
+  { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
+)
+
 // Rattachements quiz → leçon → chapitre. C'est la charpente du catalogue :
 // quelques centaines de lignes de deux colonnes, RIGOUREUSEMENT identiques pour
 // tous les élèves. Elles étaient pourtant relues à chaque calcul de maîtrise,

@@ -45,8 +45,11 @@ import {
   type TraqueCard,
 } from '@/lib/traque'
 import TraqueStrip from '@/components/defi/TraqueStrip'
-import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
-import { subjectsWithContent } from '@/lib/subject-visibility'
+import {
+  getSubjectsCached,
+  getSubjectLevelsCached,
+} from '@/lib/catalog'
+import { subjectsWithContentAt } from '@/lib/subject-visibility'
 import { normalizeRankedHistory } from '@/lib/defi/history'
 import { normalizeTournamentBoard, type TournamentBoard } from '@/lib/tournament'
 import { getReviewItems, reviewQueue } from '@/lib/srs'
@@ -311,7 +314,7 @@ export default async function DefiPage() {
     // --- VAGUE 2 : ce qui dépend VRAIMENT du cycle et de l'école -------------
     // Quatre requêtes, pas quinze. Chacune reste tolérante à l'absence de sa
     // migration (RPC absente → data null → classement vide).
-    const [clanRes, schoolRes, tournamentRes, chapterRes, gradeChapters] =
+    const [clanRes, schoolRes, tournamentRes, chapterRes, subjectLevels] =
       await Promise.all([
         supabase.rpc('clan_ranking', { p_level: level }),
         schoolId
@@ -332,12 +335,12 @@ export default async function DefiPage() {
               todayKey,
             )
           : Promise.resolve(null),
-        // Chapitres du niveau (cache serveur, gratuit) : ils disent quelles
-        // matières ont VRAIMENT du contenu — une matière vide n'aurait pas de
-        // gardien à traquer, sa jauge serait un cul-de-sac.
-        profile.grade_level
-          ? getGradeChaptersCached(profile.grade_level)
-          : Promise.resolve([]),
+        // Couples (matière, niveau) ayant du contenu (cache serveur, gratuit) :
+        // ils disent quelles matières ont VRAIMENT de quoi réviser — une matière
+        // vide n'aurait pas de gardien à traquer, sa jauge serait un cul-de-sac.
+        // Tous les niveaux, pas seulement celui de l'élève : une matière
+        // hors-niveau (culture générale) range son contenu ailleurs.
+        getSubjectLevelsCached(),
       ])
 
     duelEntries = normalizeRankedHistory(matchesRes.data)
@@ -348,7 +351,11 @@ export default async function DefiPage() {
     // peut pas remplir — un cul-de-sac de plus.
     traqueBoard = buildTraqueBoard(
       gaugesRes,
-      subjectsWithContent(catalogSubjects, gradeChapters).map((s) => ({
+      subjectsWithContentAt(
+        catalogSubjects,
+        subjectLevels,
+        profile.grade_level ?? '',
+      ).map((s) => ({
         name: s.name,
         slug: s.slug,
       })),

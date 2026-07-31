@@ -32,8 +32,12 @@ import CommuteBanner from '@/components/CommuteBanner'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
-import { getSubjectsCached, getGradeChaptersCached } from '@/lib/catalog'
-import { subjectsWithContent } from '@/lib/subject-visibility'
+import {
+  getSubjectsCached,
+  getGradeChaptersCached,
+  getSubjectLevelsCached,
+} from '@/lib/catalog'
+import { subjectsWithContentAt } from '@/lib/subject-visibility'
 import { readRowTolerant } from '@/lib/profile-read'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
@@ -281,7 +285,12 @@ export default async function ReviserPage() {
   // Seule requête qui dépend de la classe — et elle est servie par le cache
   // serveur (unstable_cache, 5 min), donc sans aller-retour Supabase la plupart
   // du temps. Tout le reste est déjà chargé au-dessus, en une vague.
-  const cachedChapters = await getGradeChaptersCached(grade)
+  const [cachedChapters, subjectLevels] = await Promise.all([
+    getGradeChaptersCached(grade),
+    // Couples (matière, niveau) TOUS niveaux confondus : c'est eux qui disent
+    // si une matière a du contenu, y compris hors-niveau (culture générale).
+    getSubjectLevelsCached(),
+  ])
 
   // Repli authentifié : cache froid ou migration 026 pas encore exécutée.
   let subjects: Subject[] = cachedSubjects
@@ -355,9 +364,10 @@ export default async function ReviserPage() {
   // Matières du niveau AYANT du contenu : la 193 a ajouté des matières sans
   // chapitre (coquilles vides). On ne montre pas de cul-de-sac cliquable — le
   // catalogue brut (allSubjects) reste utilisé plus bas pour les contrôles.
-  const ofLevel = subjectsWithContent(
+  const ofLevel = subjectsWithContentAt(
     allSubjects.filter((s) => s.levels.includes(grade)),
-    levelChapters ?? [],
+    subjectLevels,
+    grade,
   )
   const followed = ofLevel.filter(
     (s) => selected === null || selected.length === 0 || selected.includes(s.slug),

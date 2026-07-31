@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation'
 import WelcomeFlow from '@/components/welcome/WelcomeFlow'
-import { getSubjectsCached } from '@/lib/catalog'
+import { getSubjectsCached, getSubjectLevelsCached } from '@/lib/catalog'
+import { narrowLevelsToContent } from '@/lib/subject-visibility'
 import { getCurrentUser } from '@/lib/supabase/user'
 
 export const metadata = { title: 'Bienvenue — Studuel' }
@@ -31,7 +32,17 @@ export default async function BienvenuePage({
   // s'il l'était par ailleurs on ne veut pas l'expédier avant d'avoir expliqué.
   if (user && !preview && !isFinish && !oauthFailed) redirect('/defi')
 
-  const subjects = await getSubjectsCached()
+  const [allSubjects, subjectLevels] = await Promise.all([
+    getSubjectsCached(),
+    getSubjectLevelsCached(),
+  ])
+  // Le sélecteur de matières filtre par `levels` sans jamais voir un chapitre :
+  // on lui donne donc des matières dont les niveaux DÉCLARÉS sont réduits à ceux
+  // qui ont du contenu. Sans ça, un futur 2de pouvait cocher « SNT » ou
+  // « Espagnol » à l'inscription — et tomber sur une page vide dès sa première
+  // visite, le pire moment possible. Le pré-cochage (`defaultSelectedForGrade`)
+  // hérite du même filtre, sans qu'il ait à le savoir.
+  const subjects = narrowLevelsToContent(allSubjects, subjectLevels)
 
   return (
     <WelcomeFlow

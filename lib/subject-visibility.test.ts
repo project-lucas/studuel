@@ -1,5 +1,10 @@
 import { describe, it, expect } from 'vitest'
-import { subjectsWithContent, emptySubjectCount } from '@/lib/subject-visibility'
+import {
+  subjectsWithContent,
+  emptySubjectCount,
+  subjectsWithContentAt,
+  narrowLevelsToContent,
+} from '@/lib/subject-visibility'
 
 const S = (id: string) => ({ id, slug: id, name: id })
 const C = (subject_id: string) => ({ subject_id })
@@ -52,5 +57,80 @@ describe('subjectsWithContent', () => {
     const subjects = [S('maths'), S('snt'), S('grec')]
     expect(emptySubjectCount(subjects, [C('maths')])).toBe(2)
     expect(emptySubjectCount(subjects, [])).toBe(0) // garde-fou
+  })
+})
+
+// --- Matières hors-niveau (fixed_level) --------------------------------------
+// Le défaut mesuré le 2026-07-31 : cinq matières de « culture générale »
+// (Économie, Fiscalité, Finances perso, Entrepreneuriat, Figures historiques)
+// déclarent 6e→Tle et rangent leur contenu au niveau `tous`. Jugées au niveau
+// de l'élève, elles paraissaient vides — masquées de Réviser et du plateau de
+// la Traque pour TOUTES les classes, alors qu'elles ont du contenu.
+
+describe('subjectsWithContentAt — le niveau fixe est respecté', () => {
+  const MATHS = { id: 'm', fixed_level: null, levels: ['3e'] }
+  const ECO = { id: 'e', fixed_level: 'tous', levels: ['6e', '3e', 'Tle'] }
+  const VIDE = { id: 'v', fixed_level: null, levels: ['3e'] }
+  const PAIRS: [string, string][] = [
+    ['m', '3e'],
+    ['e', 'tous'],
+  ]
+
+  it('garde une matière hors-niveau dont le contenu vit à son niveau fixe', () => {
+    const kept = subjectsWithContentAt([MATHS, ECO, VIDE], PAIRS, '3e')
+    expect(kept.map((s) => s.id)).toEqual(['m', 'e'])
+  })
+
+  it('la garde à TOUTES les classes, pas seulement celle qui l’a seedée', () => {
+    for (const grade of ['6e', '5e', '4e', '3e', '2de', '1re', 'Tle']) {
+      expect(
+        subjectsWithContentAt([ECO], PAIRS, grade).map((s) => s.id),
+        `classe ${grade}`,
+      ).toEqual(['e'])
+    }
+  })
+
+  it('écarte une matière hors-niveau dont le niveau fixe est vide', () => {
+    const orphelin = { id: 'o', fixed_level: 'tous', levels: ['3e'] }
+    expect(subjectsWithContentAt([orphelin], PAIRS, '3e')).toEqual([])
+  })
+
+  it('ne filtre rien sans aucune paire (cache froid) — jamais de grille vide', () => {
+    expect(subjectsWithContentAt([MATHS, VIDE], [], '3e')).toHaveLength(2)
+  })
+})
+
+describe('narrowLevelsToContent — le sélecteur de /bienvenue', () => {
+  const ESPAGNOL = { id: 'es', fixed_level: null, levels: ['5e', '4e', '3e', '2de'] }
+  const SNT = { id: 'snt', fixed_level: null, levels: ['2de'] }
+  const ECO = { id: 'e', fixed_level: 'tous', levels: ['6e', 'Tle'] }
+  const PAIRS: [string, string][] = [
+    ['es', '5e'],
+    ['es', '4e'],
+    ['es', '3e'],
+    ['e', 'tous'],
+  ]
+
+  it('retire les seuls niveaux sans contenu, garde les autres', () => {
+    const [es] = narrowLevelsToContent([ESPAGNOL], PAIRS)
+    expect(es.levels).toEqual(['5e', '4e', '3e']) // plus de 2de : rien à réviser
+  })
+
+  it('écarte la matière dont AUCUN niveau n’a de contenu', () => {
+    expect(narrowLevelsToContent([SNT], PAIRS)).toEqual([])
+  })
+
+  it('garde une matière hors-niveau avec TOUS ses niveaux déclarés', () => {
+    const [eco] = narrowLevelsToContent([ECO], PAIRS)
+    expect(eco.levels).toEqual(['6e', 'Tle'])
+  })
+
+  it('ne mute pas la matière d’origine (immutabilité)', () => {
+    narrowLevelsToContent([ESPAGNOL], PAIRS)
+    expect(ESPAGNOL.levels).toEqual(['5e', '4e', '3e', '2de'])
+  })
+
+  it('ne filtre rien sans aucune paire (cache froid)', () => {
+    expect(narrowLevelsToContent([ESPAGNOL, SNT], [])).toHaveLength(2)
   })
 })

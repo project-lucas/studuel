@@ -104,6 +104,10 @@ export default function Duel90Mode({
   const [answeredCount, setAnsweredCount] = useState(0)
   const [floater, setFloater] = useState<{ id: number; points: number } | null>(null)
   const [outcome, setOutcome] = useState<Duel90Outcome | null>(null)
+  // L'aller-retour serveur est terminé (avec OU sans résultat). Tant qu'il court,
+  // l'écran de fin n'a AUCUN chiffre à annoncer : afficher « +0 XP » en
+  // attendant, c'est mentir puis se corriger — le défaut maison n°1.
+  const [recorded, setRecorded] = useState(false)
 
   // Miroirs synchrones : la fin de partie est déclenchée par le chrono, dont le
   // callback ne voit pas les states frais (même contrainte que le Blitz).
@@ -151,18 +155,23 @@ export default function Duel90Mode({
       // Tout est recalculé côté serveur : ces valeurs ne servent qu'à afficher
       // la fin de partie sans attendre le réseau.
       recordDuel90(s.score, s.correct, s.answered, s.bestCombo, rivalFinal, chapterId)
-        .then(setOutcome)
-        .catch(() => setOutcome(null))
+        .then((o) => {
+          setOutcome(o)
+          setRecorded(true)
+        })
+        .catch(() => {
+          setOutcome(null)
+          setRecorded(true)
+        })
       recordReviewAnswers(reviewsRef.current).catch(() => {})
     }
 
     let lastSecond = DUEL_SECONDS
     const id = setInterval(() => {
-      // L'onglet caché ne consomme pas le duel : on repousse le départ d'autant.
-      if (document.visibilityState !== 'visible') {
-        startedAtRef.current += TICK_MS
-        return
-      }
+      // Appli en arrière-plan : on ne touche à rien ici. La compensation se fait
+      // sur l'événement `visibilitychange` (effet ci-dessous), qui mesure la
+      // durée RÉELLE de l'absence.
+      if (document.visibilityState !== 'visible') return
       const elapsed = nowMs() - startedAtRef.current
       const left = Math.max(0, DUEL_MS - elapsed)
       setMsLeft(left)
@@ -178,6 +187,33 @@ export default function Duel90Mode({
     }, TICK_MS)
     return () => clearInterval(id)
   }, [phase, rival, audio, chapterId])
+
+  // Le duel ne se consomme PAS pendant que l'appli est en arrière-plan — et ça
+  // demande de mesurer l'absence, pas de la deviner. L'ancienne compensation
+  // (+TICK_MS par tour de boucle) ne pouvait pas marcher : un onglet caché voit
+  // son `setInterval` bridé à ~1 Hz, donc cinq minutes passées ailleurs
+  // n'étaient rattrapées que de 30 secondes — on revenait sur un duel perdu.
+  // Sur une appli qu'on joue en changeant d'appli sans arrêt, c'était le duel
+  // volé au joueur, sans un mot.
+  useEffect(() => {
+    if (phase !== 'playing') return
+    let hiddenAt = document.visibilityState === 'hidden' ? nowMs() : 0
+    const onVisibility = () => {
+      if (document.visibilityState === 'hidden') {
+        hiddenAt = nowMs()
+        return
+      }
+      if (hiddenAt === 0) return
+      const away = nowMs() - hiddenAt
+      hiddenAt = 0
+      startedAtRef.current += away
+      // Le bonus de vitesse de la question affichée non plus : répondre en
+      // revenant ne doit pas être puni du temps passé ailleurs.
+      shownAtRef.current += away
+    }
+    document.addEventListener('visibilitychange', onVisibility)
+    return () => document.removeEventListener('visibilitychange', onVisibility)
+  }, [phase])
 
   const answer = (i: number) => {
     if (!question || answered || lockRef.current || finishedRef.current) return
@@ -254,14 +290,15 @@ export default function Duel90Mode({
 
         <div className="flex flex-wrap items-center justify-center gap-2">
           <Pill icon={<Zap className="size-4" />} tone="highlight">
-            +{result?.xp ?? 0} XP
+            {result ? `+${result.xp} XP` : '… XP'}
           </Pill>
           <Pill
             icon={<Trophy className="size-4" />}
             tone={won ? 'primary' : 'muted'}
           >
-            {(result?.trophies ?? 0) >= 0 ? '+' : ''}
-            {result?.trophies ?? 0} 🏆
+            {result
+              ? `${result.trophies >= 0 ? '+' : ''}${result.trophies} 🏆`
+              : '… 🏆'}
           </Pill>
           {outcome && outcome.crowns > 0 ? (
             <Pill icon={<Crown className="size-4" />} tone="muted">
@@ -274,6 +311,16 @@ export default function Duel90Mode({
             </Pill>
           ) : null}
         </div>
+
+        {/* Le serveur a répondu, mais sans résultat : l'appel a échoué (réseau).
+            On ne peut pas savoir si l'XP a été versée — le dire vaut mieux que
+            d'afficher un zéro qui passerait pour la vérité. */}
+        {recorded && !result ? (
+          <p className="text-sm text-muted-foreground">
+            Résultat non confirmé par le serveur — ton XP apparaîtra au prochain
+            chargement.
+          </p>
+        ) : null}
 
         {outcome && outcome.questsCompleted.length > 0 ? (
           <p className="animate-in slide-in-from-bottom-2 rounded-full bg-highlight/20 px-4 py-1.5 text-sm font-semibold">

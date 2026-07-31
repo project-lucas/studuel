@@ -228,6 +228,15 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     sonde: { type: 'colonne', table: 'boss_gauges', colonne: 'attempts' },
   },
   {
+    id: '214',
+    fichier: '214_prep_session_une_par_jour.sql',
+    feature: 'Plan de prépa : une session cochée par chapitre et par jour',
+    siAbsente:
+      'Rejouer le même quiz plusieurs fois dans la journée coche toutes les sessions du chapitre d’un coup : le plan passe « terminé » sans aucune répétition espacée (pédagogie contournée, pas de sur-crédit).',
+    // CREATE OR REPLACE d'une fonction de la 203 : non sondable à la clé anon.
+    sonde: null,
+  },
+  {
     id: '193',
     fichier: '193_matieres_completes.sql',
     feature: 'Catalogue de matières complet (+6 matières)',

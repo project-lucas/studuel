@@ -65,10 +65,11 @@ export default function ResetRequestForm() {
           </Button>
         </form>
 
-        <p className="mt-4 text-center text-sm text-muted-foreground">
+        {/* Cible tactile ≥ 44px (règle du design system) sans déplacer le texte. */}
+        <p className="mt-4 flex justify-center text-sm text-muted-foreground">
           <Link
             href="/login"
-            className="font-medium text-foreground underline underline-offset-4"
+            className="inline-flex min-h-[44px] items-center font-medium text-foreground underline underline-offset-4"
           >
             Retour à la connexion
           </Link>

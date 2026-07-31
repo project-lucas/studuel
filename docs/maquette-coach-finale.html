@@ -1,0 +1,1358 @@
+<!doctype html>
+<html lang="fr" class="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Studuel — l'onglet Coach (maquette finale)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  /* ============================================================== tokens app
+     Copiés de app/globals.css — la maquette n'invente aucune couleur. */
+  :root {
+    --background: #ede7d6;
+    --foreground: #24304f;
+    --card: #ffffff;
+    --primary: #7a3fe0;
+    --primary-deep: #5a24b4;
+    --accent: #fdecc7;
+    --highlight: #f5b722;
+    --destructive: #f1566c;
+    --muted: #5b6382;
+    --line: rgba(36, 48, 79, .09);
+    --sans: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+    --head: 'Baloo 2', 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans);
+    color: #e8e6f2;
+    background:
+      radial-gradient(900px 520px at 20% -8%, #35275e 0%, transparent 62%),
+      radial-gradient(760px 460px at 92% 4%, #1f2c52 0%, transparent 58%),
+      #141930;
+    -webkit-font-smoothing: antialiased;
+    padding: 46px 24px 70px;
+  }
+  body::before { /* grain discret */
+    content: ''; position: fixed; inset: 0; pointer-events: none; opacity: .35;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");
+  }
+
+  .stage { max-width: 1180px; margin: 0 auto; position: relative; }
+  .stage-head { max-width: 640px; margin-bottom: 40px; }
+  .kicker {
+    margin: 0 0 9px; font-size: 11.5px; font-weight: 800;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--highlight);
+  }
+  h1 {
+    font-family: var(--head); font-weight: 800; margin: 0 0 12px;
+    font-size: clamp(28px, 3.6vw, 42px); line-height: 1.05; color: #fff;
+  }
+  .stage-head p { margin: 0; color: #adb4d2; font-size: 15px; line-height: 1.6; }
+
+  .row {
+    display: flex; gap: 56px; align-items: flex-start;
+    flex-wrap: wrap; justify-content: center;
+  }
+  .unit { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+  .unit figcaption {
+    max-width: 390px; text-align: center;
+    font-size: 13px; line-height: 1.6; color: #9aa2c2;
+  }
+  .unit figcaption b { color: #fff; font-weight: 800; }
+
+  /* ================================================================ appareil */
+  .device {
+    width: 390px; flex: none; padding: 11px;
+    border-radius: 54px;
+    background: linear-gradient(155deg, #4a4372 0%, #232743 45%, #15182b 100%);
+    box-shadow:
+      0 44px 80px -28px rgba(0, 0, 0, .85),
+      0 0 0 1px rgba(255, 255, 255, .09),
+      inset 0 1px 0 rgba(255, 255, 255, .22);
+  }
+  .screen {
+    position: relative; width: 368px; height: 796px;
+    border-radius: 44px; overflow: hidden;
+    background: var(--background);
+    color: var(--foreground);
+    display: flex; flex-direction: column;
+  }
+
+  /* barre d'état iOS */
+  .status {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 13px 26px 2px; font-size: 13px; font-weight: 800;
+    letter-spacing: .01em;
+  }
+  .status .glyphs { display: flex; align-items: center; gap: 5px; }
+  .bat {
+    width: 22px; height: 11px; border-radius: 3px;
+    border: 1.4px solid rgba(36,48,79,.55); position: relative; padding: 1.4px;
+  }
+  .bat::after {
+    content: ''; position: absolute; right: -3px; top: 3px;
+    width: 2px; height: 4px; border-radius: 0 2px 2px 0;
+    background: rgba(36,48,79,.45);
+  }
+  .bat i { display: block; height: 100%; width: 72%; border-radius: 1.5px; background: #24304f; }
+
+  /* ================================================================= TopHud */
+  .hud {
+    display: flex; align-items: center; gap: 7px;
+    padding: 10px 16px 8px;
+  }
+  .pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 999px; padding: 5px 11px 5px 7px;
+    font-size: 12.5px; font-weight: 800;
+    box-shadow: 0 1px 2px rgba(36,48,79,.07);
+  }
+  .coin, .gem {
+    width: 17px; height: 17px; border-radius: 50%; flex: none;
+    display: grid; place-items: center; font-size: 9px; font-weight: 900; color: #6b4a05;
+  }
+  .coin { background: linear-gradient(160deg, #ffd76b, #e39a11); box-shadow: inset 0 -1px 0 rgba(0,0,0,.15); }
+  .gem {
+    background: linear-gradient(160deg, #9ee6ff, #4aa8f0);
+    border-radius: 4px; transform: rotate(45deg);
+  }
+  .hud .grow { flex: 1; }
+  .lvl {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: linear-gradient(170deg, #8b53ea, var(--primary-deep));
+    color: #fff; border-radius: 999px; padding: 5px 11px;
+    font-size: 12px; font-weight: 800;
+    box-shadow: 0 2px 5px -2px rgba(90,36,180,.8), inset 0 1px 0 rgba(255,255,255,.28);
+  }
+  .face {
+    width: 30px; height: 30px; border-radius: 50%; flex: none;
+    background: linear-gradient(165deg, #c3a8ff, #7a3fe0 70%);
+    border: 2px solid #fff; box-shadow: 0 2px 6px -2px rgba(36,48,79,.5);
+    position: relative;
+  }
+  .face::after {
+    content: ''; position: absolute; inset: 6px 6px auto 6px; height: 7px;
+    border-radius: 999px; background: rgba(255,255,255,.55);
+  }
+
+  /* ================================================================== corps */
+  .body {
+    flex: 1; overflow-y: auto; padding: 4px 16px 22px;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(180deg, #000 0 94%, transparent 100%);
+            mask-image: linear-gradient(180deg, #000 0 94%, transparent 100%);
+  }
+  .body::-webkit-scrollbar { display: none; }
+
+  /* Ligne de contexte — le titre « Coach » a disparu : l'onglet actif le dit
+     déjà, et ces 40 px servent mieux au contenu. */
+  .day-row {
+    display: flex; align-items: center; justify-content: space-between;
+    margin: 6px 3px 11px;
+  }
+  .day-row time { font-size: 13px; font-weight: 800; color: var(--foreground); }
+  .day-row .streak {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 12px; font-weight: 800; color: #b4550c;
+    background: #ffeed2; padding: 4px 10px; border-radius: 999px;
+  }
+  .day-row .streak svg { width: 13px; height: 13px; }
+
+  /* ---------------------------------------------------------------- le héros */
+  .hero {
+    position: relative; overflow: hidden;
+    border-radius: 26px; padding: 17px 17px 16px;
+    color: #fff;
+    background:
+      radial-gradient(130% 100% at 88% -10%, rgba(245,183,34,.32), transparent 58%),
+      radial-gradient(90% 120% at 0% 100%, rgba(255,255,255,.10), transparent 60%),
+      linear-gradient(168deg, #9159ee 0%, #6b31cd 48%, #4d1aa2 100%);
+    box-shadow:
+      0 18px 34px -20px rgba(77,26,162,.95),
+      inset 0 1px 0 rgba(255,255,255,.3);
+  }
+  .hero .halo {
+    position: absolute; width: 230px; height: 230px; border-radius: 50%;
+    left: -70px; top: -96px;
+    background: radial-gradient(circle, rgba(245,183,34,.30), transparent 68%);
+    pointer-events: none;
+  }
+  .hero .spark { position: absolute; border-radius: 50%; background: #ffe9a8; opacity: .75; }
+  .hero .s1 { width: 4px; height: 4px; top: 22px; right: 74px; }
+  .hero .s2 { width: 3px; height: 3px; top: 52px; right: 46px; opacity: .5; }
+  .hero .s3 { width: 5px; height: 5px; top: 92px; right: 22px; opacity: .35; }
+
+  .hero-top { position: relative; z-index: 1; display: flex; gap: 13px; align-items: flex-start; }
+  .mascotte {
+    width: 82px; height: 82px; flex: none; position: relative;
+    display: grid; place-items: center;
+  }
+  .mascotte::before {
+    content: ''; position: absolute; inset: 0; border-radius: 50%;
+    background: radial-gradient(circle at 50% 62%, rgba(255,214,120,.55), rgba(255,255,255,.06) 62%, transparent 72%);
+    box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.28);
+  }
+  .mascotte img { position: relative; width: 96%; height: 96%; object-fit: contain;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,.35)); }
+  .flame { /* repli si l'image n'est pas résolue */
+    position: relative; width: 42px; height: 56px;
+    background: linear-gradient(180deg, #ffd76b, #f2762a 68%, #d9421f);
+    border-radius: 50% 50% 46% 46% / 62% 62% 38% 38%;
+    box-shadow: 0 0 26px rgba(245,183,34,.65);
+  }
+  .flame::before {
+    content: ''; position: absolute; inset: 34% 27% 9% 27%;
+    background: #ffeec0; opacity: .9;
+    border-radius: 50% 50% 45% 45% / 58% 58% 42% 42%;
+  }
+
+  .bubble { flex: 1; padding-top: 3px; }
+  .bubble .who {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 10px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--highlight); margin-bottom: 7px;
+  }
+  .bubble .who svg { width: 12px; height: 12px; }
+  .bubble h3 {
+    margin: 0; font-family: var(--head); font-weight: 700;
+    font-size: 17px; line-height: 1.28; color: #fff;
+    text-shadow: 0 1px 2px rgba(40,10,90,.3);
+  }
+  .because {
+    position: relative; z-index: 1;
+    display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap;
+  }
+  .tagline {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 10.5px; font-weight: 800;
+    padding: 4px 9px; border-radius: 999px;
+    background: rgba(255,255,255,.14); color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.16);
+  }
+  .tagline.urgent { background: rgba(241,86,108,.95); box-shadow: none; }
+  .tagline svg { width: 11px; height: 11px; }
+
+  /* Le bouton d'action porte l'ENCRE VIOLETTE, jamais l'or : la règle maison dit
+     violet = action, or = récompense, et la seule dérogation assumée est le Duel
+     de /defi (décor entièrement violet). Ici le fond de page est crème, donc le
+     violet ressort — pas besoin d'une seconde dérogation. */
+  .cta {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; justify-content: center; gap: 9px;
+    margin-top: 14px; padding: 14px; min-height: 48px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #fffefa, #fbf6ea);
+    color: var(--primary-deep);
+    font-family: var(--head); font-size: 16.5px; font-weight: 800;
+    box-shadow: 0 4px 0 #3d1490, 0 8px 16px -8px rgba(0,0,0,.55);
+  }
+  /* Action secondaire (« séance bonus ») : même encre, matière effacée. */
+  .cta.soft {
+    background: rgba(255,255,255,.14); color: #fff;
+    box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.45), 0 3px 0 rgba(0,0,0,.18);
+  }
+  .cta svg { width: 17px; height: 17px; }
+
+  /* ----------------------------------------------------------------- blocs */
+  section { margin-top: 18px; }
+  .sec-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin: 0 3px 9px;
+  }
+  .sec-head h4 {
+    margin: 0; font-family: var(--head); font-size: 15.5px; font-weight: 800;
+  }
+  .sec-head .aside { font-size: 12px; font-weight: 800; color: var(--muted); }
+  .sec-head .aside.gold {
+    color: #7a5604; background: var(--accent);
+    padding: 3px 9px; border-radius: 999px;
+  }
+  /* Le quota dit ce qui RESTE, pas ce qui est interdit. */
+  .sec-head .aside.left {
+    color: var(--primary); background: #f1e9ff;
+    padding: 3px 9px; border-radius: 999px;
+  }
+
+  .card {
+    background: var(--card); border-radius: 20px; padding: 13px;
+    box-shadow: 0 2px 0 rgba(36,48,79,.06), 0 14px 26px -22px rgba(36,48,79,.9);
+  }
+
+  /* --------------------------------------------------------- séance guidée */
+  .plan { position: relative; padding-left: 6px; }
+  .plan::before {
+    content: ''; position: absolute; left: 21px; top: 24px; bottom: 24px;
+    width: 2px; border-radius: 2px;
+    background: linear-gradient(180deg, var(--primary), rgba(122,63,224,.18));
+  }
+  .stepline { position: relative; display: flex; align-items: center; gap: 12px; padding: 7px 0; }
+  .bead {
+    width: 32px; height: 32px; flex: none; border-radius: 11px;
+    display: grid; place-items: center; position: relative; z-index: 1;
+    background: #f3eee1; color: #7b6539; box-shadow: inset 0 0 0 1.5px rgba(36,48,79,.06);
+  }
+  .bead svg { width: 16px; height: 16px; }
+  .bead.now {
+    background: linear-gradient(170deg, #9159ee, var(--primary-deep)); color: #fff;
+    box-shadow: 0 3px 8px -3px rgba(90,36,180,.9), 0 0 0 4px rgba(122,63,224,.13);
+  }
+  .stepline .t { flex: 1; min-width: 0; }
+  .stepline .t b { display: block; font-size: 13.5px; font-weight: 800; line-height: 1.25; }
+  .stepline .t span { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .stepline .m {
+    font-size: 12px; font-weight: 800; color: var(--muted);
+    background: #f4f0e6; padding: 4px 9px; border-radius: 999px;
+  }
+  .stepline.done .t b { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1.5px; }
+  .bead.done { background: #e6f6ef; color: #1f9c6d; }
+
+  /* -------------------------------------------------------------- demander */
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  /* Tout ce qui se tape porte le MÊME socle dur que le bouton principal :
+     dans une matière « pâte à modeler », l'ombre plate ne dit pas « pressable ». */
+  .tile {
+    background: var(--card); border-radius: 17px; padding: 12px 11px;
+    box-shadow: 0 3px 0 rgba(36,48,79,.11), 0 12px 22px -20px rgba(36,48,79,.9);
+    display: flex; flex-direction: column; gap: 9px; min-height: 88px;
+  }
+  .tile .ic {
+    width: 30px; height: 30px; border-radius: 10px; display: grid; place-items: center;
+    background: #f3edff; color: var(--primary);
+  }
+  .tile .ic.warm { background: #fff2d9; color: #c58b0d; }
+  .tile .ic.rose { background: #ffe9ec; color: var(--destructive); }
+  .tile .ic svg { width: 16px; height: 16px; }
+  .tile b { font-size: 13px; font-weight: 800; line-height: 1.3; }
+
+  /* Le Snap est REMONTÉ au-dessus de la grille : c'est l'argument de
+     téléchargement de l'app, il n'a rien à faire en cinquième position. */
+  .snap {
+    display: flex; align-items: center; gap: 12px;
+    border-radius: 17px; padding: 13px; margin-bottom: 9px;
+    background: linear-gradient(100deg, #fff6e4, #ffeac2);
+    box-shadow:
+      inset 0 0 0 1.5px rgba(245,183,34,.55),
+      0 3px 0 rgba(197,139,13,.28),
+      0 12px 22px -20px rgba(36,48,79,.9);
+  }
+  .snap .ic {
+    width: 36px; height: 36px; border-radius: 12px; flex: none; display: grid; place-items: center;
+    background: linear-gradient(170deg, #ffd76b, #e8a015); color: #58400a;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+  }
+  .snap .ic svg { width: 19px; height: 19px; }
+  .snap .t b { display: block; font-size: 13.5px; font-weight: 800; }
+  .snap .t span { font-size: 12px; font-weight: 700; color: #7a5604; }
+  .snap .chev { margin-left: auto; color: #b98b1e; display: grid; }
+  .snap .chev svg { width: 18px; height: 18px; }
+
+  /* -------------------------------------------------------------- erreurs */
+  .errline {
+    display: flex; align-items: center; gap: 11px; padding: 9px 2px;
+  }
+  .errline + .errline { border-top: 1px solid var(--line); }
+  .errline .sub {
+    width: 30px; height: 30px; flex: none; border-radius: 10px; display: grid; place-items: center;
+    font-family: var(--head); font-size: 12px; font-weight: 800; color: #fff;
+  }
+  .sub.math { background: linear-gradient(170deg, #6fb1ff, #2f6fd0); }
+  .sub.svt  { background: linear-gradient(170deg, #78d8a8, #2a9e6c); }
+  .errline .t { flex: 1; min-width: 0; }
+  .errline .t b { display: block; font-size: 13px; font-weight: 800; }
+  .errline .t span { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .errline .go { color: var(--primary); display: grid; }
+  .errline .go svg { width: 17px; height: 17px; }
+
+  /* ------------------------------------------------------------ tab bar */
+  .tabbar {
+    display: flex; align-items: flex-end; gap: 1px;
+    padding: 8px 4px 13px;
+    background: rgba(252,250,244,.94);
+    border-top: 1px solid rgba(36,48,79,.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -8px 20px -18px rgba(36,48,79,.9);
+    position: relative;
+  }
+  .tab {
+    flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px;
+    position: relative;
+  }
+  .tab .ic { height: 28px; display: grid; place-items: center; color: rgba(36,48,79,.66); }
+  .tab .ic svg { width: 25px; height: 25px; }
+  .tab label { font-family: var(--head); font-size: 9.5px; font-weight: 800; color: rgba(36,48,79,.66); }
+  .tab.on .ic { color: var(--primary); }
+  .tab.on .ic svg { transform: scale(1.08); }
+  .tab.on label { color: var(--primary); }
+  .tab.on .glow {
+    position: absolute; top: -6px; width: 46px; height: 30px; border-radius: 999px;
+    background: radial-gradient(circle, rgba(122,63,224,.16), transparent 70%);
+  }
+  .tab.coach.on .ic { color: #ef7f22; }
+  .tab.coach.on label { color: #cf6a17; }
+  .tab.coach.on .glow { background: radial-gradient(circle, rgba(242,118,42,.22), transparent 70%); }
+  .tab.center .ic {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(180deg, #9257f0, #5b23b3);
+    color: #fff;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.4),
+      0 4px 10px -3px rgba(91,35,179,.75),
+      0 0 0 2px rgba(245,183,34,.6);
+  }
+  .tab.center label { color: var(--primary); }
+  .home-bar {
+    position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%);
+    width: 118px; height: 4px; border-radius: 999px; background: rgba(36,48,79,.35);
+  }
+
+  /* ============================================ écran 2 — la feuille coach */
+  .sheet-dim { position: absolute; inset: 0; background: rgba(24,20,48,.46); }
+  .sheet {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    background: #fbf8f0;
+    border-radius: 28px 28px 0 0;
+    padding: 10px 16px 20px;
+    box-shadow: 0 -18px 40px -18px rgba(0,0,0,.55);
+    max-height: 84%;
+    display: flex; flex-direction: column;
+  }
+  .grab { width: 42px; height: 4px; border-radius: 999px; background: rgba(36,48,79,.2); margin: 0 auto 12px; }
+  .sheet-head { display: flex; align-items: center; gap: 11px; margin-bottom: 13px; }
+  .sheet-head .mini {
+    width: 44px; height: 44px; border-radius: 50%; flex: none; display: grid; place-items: center;
+    background: radial-gradient(circle at 50% 60%, #ffe1a2, #f7c66a);
+    box-shadow: inset 0 0 0 2px #fff, 0 3px 8px -3px rgba(230,150,20,.8);
+    overflow: hidden;
+  }
+  .sheet-head .mini img { width: 100%; height: 100%; object-fit: contain; }
+  .sheet-head b { display: block; font-family: var(--head); font-size: 16px; font-weight: 800; }
+  .sheet-head span { font-size: 11.5px; color: var(--muted); font-weight: 700; }
+  .quotachip {
+    margin-left: auto; font-size: 10.5px; font-weight: 800;
+    background: #f3edff; color: var(--primary); padding: 5px 9px; border-radius: 999px;
+  }
+  .qbox {
+    background: #fff; border-radius: 15px; padding: 11px 13px; margin-bottom: 11px;
+    font-size: 13px; font-weight: 700; color: #3d4869;
+    box-shadow: 0 2px 0 rgba(36,48,79,.05);
+    border-left: 3px solid var(--primary);
+  }
+  .hint {
+    display: flex; gap: 9px; align-items: flex-start;
+    background: linear-gradient(100deg, #fff6e4, #ffeac2);
+    border-radius: 15px; padding: 11px 12px; margin-bottom: 11px;
+  }
+  .hint svg { width: 16px; height: 16px; flex: none; margin-top: 1px; color: #c58b0d; }
+  .hint p { margin: 0; font-size: 12.5px; font-weight: 700; line-height: 1.45; color: #6b4a05; }
+  .prose p { margin: 0 0 10px; font-size: 13.5px; line-height: 1.6; color: #33405f; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose b { color: var(--primary); font-weight: 800; }
+  .frac {
+    display: inline-flex; flex-direction: column; align-items: center;
+    vertical-align: -0.55em; margin: 0 2px; font-weight: 800; line-height: 1.05;
+    font-size: 11.5px;
+  }
+  .frac i { font-style: normal; }
+  .frac i:first-child { border-bottom: 1.6px solid currentColor; padding: 0 3px 1px; }
+  /* Cible tactile : 44 px minimum, comme la passe a11y déjà faite sur /login. */
+  .steps-nav { display: flex; gap: 8px; margin-top: 14px; }
+  .steps-nav span {
+    flex: 1; min-height: 44px;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    font-size: 12px; font-weight: 800;
+    padding: 8px 6px; border-radius: 13px; background: #f0ebde; color: var(--muted);
+  }
+  .steps-nav span.on {
+    background: linear-gradient(170deg, #9159ee, var(--primary-deep)); color: #fff;
+    box-shadow: 0 3px 0 #47189a;
+  }
+
+  /* =================================================== écran 3 — mode examen */
+  .hero.exam {
+    background:
+      radial-gradient(120% 95% at 86% -12%, rgba(245,183,34,.34), transparent 56%),
+      linear-gradient(168deg, #3d2777 0%, #281552 52%, #1a0f36 100%);
+    box-shadow:
+      0 18px 34px -20px rgba(16,6,44,.98),
+      inset 0 0 0 1px rgba(245,183,34,.28),
+      inset 0 1px 0 rgba(255,255,255,.2);
+  }
+  .exam-top { position: relative; z-index: 1; display: flex; align-items: center; gap: 11px; }
+  .exam-top .mascotte { width: 52px; height: 52px; }
+  .exam-top .id { display: block; min-width: 0; }
+  .exam-top .id .lab {
+    display: block;
+    font-size: 9.5px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--highlight); margin-bottom: 3px; white-space: nowrap;
+  }
+  .exam-top .id b {
+    display: block; font-family: var(--head); font-size: 16px; font-weight: 800;
+    color: #fff; line-height: 1.1;
+  }
+  .count { margin-left: auto; text-align: right; flex: none; }
+  .count b {
+    display: block; font-family: var(--head); font-size: 38px; line-height: .82; font-weight: 800;
+    color: #ffd76b; white-space: nowrap; text-shadow: 0 2px 10px rgba(245,183,34,.45);
+  }
+  .count span {
+    display: block; margin-top: 3px; white-space: nowrap;
+    font-size: 10px; font-weight: 700; color: rgba(255,255,255,.7);
+  }
+
+  .weeks { position: relative; z-index: 1; margin-top: 14px; }
+  .weeks .segs { display: flex; gap: 4px; }
+  .weeks .segs i {
+    flex: 1; height: 6px; border-radius: 3px; background: rgba(255,255,255,.16);
+  }
+  .weeks .segs i.on { background: linear-gradient(90deg, #ffd76b, var(--highlight)); }
+  .weeks .segs i.now { background: #fff; box-shadow: 0 0 8px rgba(255,255,255,.8); }
+  .weeks p {
+    margin: 7px 0 0; font-size: 11px; font-weight: 700; color: rgba(255,255,255,.78);
+    display: flex; justify-content: space-between;
+  }
+
+  /* couverture du programme */
+  .cover + .cover { margin-top: 11px; }
+  .cover .row-top {
+    display: flex; align-items: center; gap: 8px; margin-bottom: 6px;
+  }
+  .cover .badge {
+    width: 22px; height: 22px; border-radius: 7px; flex: none; display: grid; place-items: center;
+    font-family: var(--head); font-size: 10.5px; font-weight: 800; color: #fff;
+  }
+  .cover .nm { font-size: 13px; font-weight: 800; }
+  /* Le coefficient est VISIBLE : sans lui, les 4 matières se lisent à plat
+     alors que l'examen ne les note pas pareil. */
+  .cover .coef {
+    flex: 1; margin-left: 7px;
+    font-size: 11px; font-weight: 800; color: var(--muted);
+  }
+  .cover .pct { font-size: 12px; font-weight: 800; color: var(--muted); }
+  .cover .pct.late { color: #cf2b45; }
+  .covbar { display: flex; gap: 2px; height: 9px; }
+  .covbar i { border-radius: 3px; }
+  .covbar .solid { background: var(--primary); }
+  .covbar .seen  { background: #cdb8f0; }
+  .covbar .never { background: #e4ddcc; }
+  .cover .note { margin-top: 6px; font-size: 12px; font-weight: 700; color: var(--muted); }
+  .cover .note.warn { color: #cf2b45; }
+  .cov-legend {
+    display: flex; gap: 12px; margin-top: 12px; padding-top: 11px;
+    border-top: 1px solid var(--line);
+    font-size: 11.5px; font-weight: 700; color: var(--muted);
+  }
+  .cov-legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .cov-legend em { width: 9px; height: 9px; border-radius: 3px; }
+
+  /* le blanc programmé */
+  .blanc {
+    display: flex; align-items: center; gap: 12px;
+    border-radius: 20px; padding: 13px;
+    background: linear-gradient(100deg, #fff6e4, #ffe6b8);
+    box-shadow: inset 0 0 0 1.5px rgba(245,183,34,.55), 0 12px 22px -20px rgba(36,48,79,.9);
+  }
+  .blanc .dt {
+    width: 46px; height: 46px; flex: none; border-radius: 14px;
+    display: grid; place-items: center; align-content: center;
+    background: linear-gradient(170deg, #ffd76b, #e8a015); color: #4a3204;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+  }
+  .blanc .dt b { font-family: var(--head); font-size: 17px; line-height: 1; }
+  .blanc .dt span { font-size: 8.5px; font-weight: 800; letter-spacing: .06em; }
+  .blanc .t b { display: block; font-size: 13.5px; font-weight: 800; }
+  .blanc .t span { font-size: 12px; font-weight: 700; color: #7a5604; }
+
+  /* la semaine planifiée */
+  .weekplan { display: flex; gap: 5px; }
+  .weekplan div {
+    flex: 1; text-align: center; border-radius: 12px; padding: 8px 2px;
+    background: #f4f0e6; border: 1px solid transparent;
+  }
+  .weekplan div { min-height: 44px; }
+  .weekplan div b { display: block; font-size: 11px; font-weight: 800; color: var(--muted); }
+  .weekplan div span { font-size: 12px; font-weight: 800; color: #3d4869; }
+  .weekplan div.done { background: #e6f6ef; }
+  .weekplan div.done span { color: #1f9c6d; }
+  .weekplan div.today {
+    background: #fff; border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(122,63,224,.12);
+  }
+  .weekplan div.today span { color: var(--primary); }
+  .weekplan div.off span { color: #b3b7c6; }
+
+  /* ============================================ écrans 4 & 5 — états manquants */
+  /* Jour 1 : l'élève n'a ni erreur, ni SRS, ni maîtrise. Le coach ne peut rien
+     diagnostiquer — il annonce ce qu'il fera, et demande de quoi le faire. */
+  .promise .pl { display: flex; align-items: center; gap: 11px; padding: 9px 2px; }
+  .promise .pl + .pl { border-top: 1px solid var(--line); }
+  .promise .pl .ic {
+    width: 32px; height: 32px; flex: none; border-radius: 11px;
+    display: grid; place-items: center; background: #f3edff; color: var(--primary);
+  }
+  .promise .pl .ic svg { width: 16px; height: 16px; }
+  .promise .pl b { display: block; font-size: 13px; font-weight: 800; }
+  .promise .pl span { font-size: 12px; font-weight: 600; color: var(--muted); }
+
+  /* File vide : jamais un blanc — on dit pourquoi c'est vide et quoi faire. */
+  .empty { text-align: center; padding: 18px 14px; }
+  .empty .ic {
+    width: 42px; height: 42px; margin: 0 auto 9px; border-radius: 14px;
+    display: grid; place-items: center; background: #e9f7f0; color: #1f9c6d;
+  }
+  .empty .ic svg { width: 21px; height: 21px; }
+  .empty b { display: block; font-family: var(--head); font-size: 15px; font-weight: 800; }
+  .empty p { margin: 5px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--muted); }
+
+  /* Rappel de reprise, collé sous le bouton du hero. */
+  .resume {
+    position: relative; z-index: 1;
+    margin-top: 9px; text-align: center;
+    font-size: 12px; font-weight: 700; color: rgba(255,255,255,.8);
+  }
+
+  /* Le mockup n'anime rien, mais la consigne suit le code : halos et lueurs
+     doivent se couper quand l'utilisateur demande moins de mouvement. */
+  @media (prefers-reduced-motion: reduce) {
+    .hero .halo, .hero .spark, .tab.on .glow { display: none; }
+    * { animation: none !important; transition: none !important; }
+  }
+
+  @media (max-width: 900px) { .row { gap: 46px; } }
+  @media (max-width: 460px) {
+    body { padding: 22px 8px 40px; }
+    .device { width: 100%; max-width: 390px; }
+    .screen { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+
+  <header class="stage-head">
+    <p class="kicker">Studuel · maquette finale · 31 juillet 2026</p>
+    <h1>Coach</h1>
+    <p>Le sixième onglet, tel qu'il sortirait du Lot 1 : une phrase de
+      diagnostic, une séance, une porte vers l'IA. Rien sur cet écran ne coûte
+      un token, sauf ce que l'élève demande explicitement.</p>
+  </header>
+
+  <div class="row">
+
+    <!-- ==================================================== ÉCRAN PRINCIPAL -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+
+        <div class="status">
+          <span>18:04</span>
+          <span class="glyphs">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+            <span class="bat"><i></i></span>
+          </span>
+        </div>
+
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>1 240</span>
+          <span class="pill"><span class="gem"></span>60</span>
+          <span class="grow"></span>
+          <span class="lvl">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>
+            Niv. 12
+          </span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row">
+            <time>Mercredi 31 juillet</time>
+            <span class="streak">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>
+              12 jours
+            </span>
+          </div>
+
+          <!-- ------------------------------------------------------ le héros -->
+          <div class="hero">
+            <span class="halo"></span>
+            <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span>
+
+            <div class="hero-top">
+              <div class="mascotte">
+                <img src="../public/images/mascotte/reaction-bonne-3.webp" alt=""
+                     onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame'}))" />
+              </div>
+              <div class="bubble">
+                <div class="who">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>
+                  Le point du jour
+                </div>
+                <h3>Les fractions te résistent&nbsp;: 3 erreurs hier, aucune reprise depuis.</h3>
+              </div>
+            </div>
+
+            <div class="because">
+              <span class="tagline urgent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                Contrôle de maths dans 4 jours
+              </span>
+              <span class="tagline">Chapitre à 41 %</span>
+            </div>
+
+            <div class="cta">
+              Reprendre la séance · 4 min
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+            <div class="resume">Tu en es à l'étape 2 sur 3</div>
+          </div>
+
+          <!-- --------------------------------------------------- la séance -->
+          <section>
+            <div class="sec-head">
+              <h4>Ta séance, dans l'ordre</h4>
+              <span class="aside">1 sur 3 fait</span>
+            </div>
+            <div class="card">
+              <div class="plan">
+                <div class="stepline done">
+                  <span class="bead done">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+                  </span>
+                  <span class="t"><b>Échauffement</b><span>3 cartes d'anglais · fait à 12 h 40</span></span>
+                  <span class="m">✓</span>
+                </div>
+                <div class="stepline">
+                  <span class="bead now">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4H10a2 2 0 0 1 2 2v14a1.5 1.5 0 0 0-1.5-1.5H5.5A2.5 2.5 0 0 1 3 16Z"/><path d="M21 6.5A2.5 2.5 0 0 0 18.5 4H14a2 2 0 0 0-2 2v14a1.5 1.5 0 0 1 1.5-1.5h5A2.5 2.5 0 0 0 21 16Z"/></svg>
+                  </span>
+                  <span class="t"><b>Consolider les fractions</b><span>Addition et simplification · 8 questions</span></span>
+                  <span class="m">3 min</span>
+                </div>
+                <div class="stepline">
+                  <span class="bead">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/></svg>
+                  </span>
+                  <span class="t"><b>Finir sur un duel</b><span>90 secondes · +40 XP en jeu</span></span>
+                  <span class="m">1 min</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ------------------------------------------------- demander au coach -->
+          <section>
+            <div class="sec-head">
+              <h4>Demander au coach</h4>
+              <span class="aside left">3 questions restantes</span>
+            </div>
+
+            <div class="snap">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h1.8l1.3-2h6.8l1.3 2h1.8A2.5 2.5 0 0 1 21 8.5v9A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5Z"/><circle cx="12" cy="13" r="3.6"/></svg></span>
+              <span class="t">
+                <b>Photo de mon exercice</b>
+                <span>3 offertes — il t'en reste 3</span>
+              </span>
+              <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+            </div>
+
+            <div class="grid2">
+              <div class="tile">
+                <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.2a2.9 2.9 0 0 1 5.6 1c0 1.9-2.8 2.4-2.8 2.4"/><path d="M12 17h.01"/></svg></span>
+                <b>Je n'ai pas compris cette question</b>
+              </div>
+              <div class="tile">
+                <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg></span>
+                <b>Explique-moi ce chapitre autrement</b>
+              </div>
+              <div class="tile">
+                <span class="ic rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg></span>
+                <b>Interroge-moi · 5 questions</b>
+              </div>
+              <div class="tile">
+                <span class="ic warm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2.5 21.5 9.5 9 22H2v-7Z"/><path d="m12 5 7 7"/></svg></span>
+                <b>La méthode, pas la réponse</b>
+              </div>
+            </div>
+          </section>
+
+          <!-- ----------------------------------------------- erreurs expliquées -->
+          <section>
+            <div class="sec-head">
+              <h4>Tes erreurs d'hier, expliquées</h4>
+              <span class="aside gold">Offert</span>
+            </div>
+            <div class="card">
+              <div class="errline">
+                <span class="sub math">M</span>
+                <span class="t"><b>3/4 + 1/6 ≠ 4/10</b><span>Tu as additionné les dénominateurs</span></span>
+                <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+              </div>
+              <div class="errline">
+                <span class="sub svt">S</span>
+                <span class="t"><b>Rôle des stomates</b><span>Confusion entre respiration et transpiration</span></span>
+                <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          </section>
+
+          <div style="height:14px"></div>
+        </div>
+
+        <!-- ------------------------------------------------------- tab bar -->
+        <nav class="tabbar">
+          <div class="tab">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span>
+            <label>Amis</label>
+          </div>
+          <div class="tab">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span>
+            <label>Réviser</label>
+          </div>
+          <div class="tab coach on">
+            <span class="glow"></span>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg></span>
+            <label>Coach</label>
+          </div>
+          <div class="tab center">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span>
+            <label>Défi</label>
+          </div>
+          <div class="tab">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span>
+            <label>Moi</label>
+          </div>
+          <div class="tab">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span>
+            <label>Trésor</label>
+          </div>
+          <span class="home-bar"></span>
+        </nav>
+
+      </div></div>
+      <figcaption>
+        <b>L'écran au repos.</b> Une phrase, un bouton — le reste se lit en
+        descendant. La flamme est le seul onglet qui n'est pas violet&nbsp;: le
+        Défi garde son orbe, le Coach se distingue par sa chaleur.
+      </figcaption>
+    </figure>
+
+    <!-- ================================================= ÉCRAN 2 — LA FEUILLE -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+
+        <div class="status">
+          <span>18:07</span>
+          <span class="glyphs">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+            <span class="bat"><i></i></span>
+          </span>
+        </div>
+
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>1 240</span>
+          <span class="pill"><span class="gem"></span>60</span>
+          <span class="grow"></span>
+          <span class="lvl">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>
+            Niv. 12
+          </span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row">
+            <time>Mercredi 31 juillet</time>
+            <span class="streak">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>
+              12 jours
+            </span>
+          </div>
+          <div class="hero">
+            <span class="halo"></span>
+            <div class="hero-top">
+              <div class="mascotte">
+                <img src="../public/images/mascotte/reaction-bonne-3.webp" alt=""
+                     onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame'}))" />
+              </div>
+              <div class="bubble">
+                <div class="who">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>
+                  Le point du jour
+                </div>
+                <h3>Les fractions te résistent&nbsp;: 3 erreurs hier, aucune reprise depuis.</h3>
+              </div>
+            </div>
+            <div class="cta">Séance guidée · 6 min</div>
+          </div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span><label>Amis</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><label>Réviser</label></div>
+          <div class="tab coach on"><span class="glow"></span><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg></span><label>Coach</label></div>
+          <div class="tab center"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span><label>Défi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span><label>Moi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span><label>Trésor</label></div>
+        </nav>
+
+        <!-- la feuille par-dessus -->
+        <div class="sheet-dim"></div>
+        <div class="sheet">
+          <span class="grab"></span>
+          <div class="sheet-head">
+            <span class="mini">
+              <img src="../public/images/mascotte/reaction-bonne-1.webp" alt=""
+                   onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame',style:'width:22px;height:30px'}))" />
+            </span>
+            <span>
+              <b>Le coach répond</b>
+              <span>Maths · Fractions</span>
+            </span>
+            <span class="quotachip">2 restantes</span>
+          </div>
+
+          <div class="qbox">« Pourquoi 3/4 + 1/6 ne fait pas 4/10 ? »</div>
+
+          <div class="hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 1 3.6 10.8c-.5.4-.8 1-.8 1.7H9.2c0-.7-.3-1.3-.8-1.7A6 6 0 0 1 12 3Z"/></svg>
+            <p>Indice — quand tu coupes un gâteau en 4 et un autre en 6, tes parts
+              n'ont pas la même taille.</p>
+          </div>
+
+          <div class="prose">
+            <p>Pour additionner, il faut d'abord des parts <b>de même taille</b> :
+              on cherche un dénominateur commun. 4 et 6 tombent tous les deux sur
+              <b>12</b>.</p>
+            <p>Alors <span class="frac"><i>3</i><i>4</i></span> devient
+              <span class="frac"><i>9</i><i>12</i></span> et
+              <span class="frac"><i>1</i><i>6</i></span> devient
+              <span class="frac"><i>2</i><i>12</i></span>. Là seulement on
+              additionne les numérateurs : <b>11/12</b>.</p>
+          </div>
+
+          <div class="steps-nav">
+            <span class="on">Indice</span>
+            <span>Étape suivante</span>
+            <span>La méthode</span>
+          </div>
+        </div>
+
+      </div></div>
+      <figcaption>
+        <b>La réponse se déplie par paliers.</b> Indice → étape → méthode :
+        l'élève qui comprend dès l'indice s'arrête là, et le coach n'a jamais
+        écrit son devoir à sa place.
+      </figcaption>
+    </figure>
+
+    <!-- ================================================= ÉCRAN 3 — MODE EXAMEN -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+
+        <div class="status">
+          <span>7:52</span>
+          <span class="glyphs">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+            <span class="bat"><i></i></span>
+          </span>
+        </div>
+
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>1 240</span>
+          <span class="pill"><span class="gem"></span>60</span>
+          <span class="grow"></span>
+          <span class="lvl">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>
+            Niv. 12
+          </span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row">
+            <time>Lundi 18 mai</time>
+            <span class="streak">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>
+              12 jours
+            </span>
+          </div>
+
+          <!-- ------------------------------------------ le héros mode examen -->
+          <div class="hero exam">
+            <span class="halo"></span>
+            <div class="exam-top">
+              <div class="mascotte">
+                <img src="../public/images/mascotte/reaction-bonne-2.webp" alt=""
+                     onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame',style:'width:26px;height:34px'}))" />
+              </div>
+              <span class="id">
+                <span class="lab">Mode examen</span>
+                <b>Brevet des collèges</b>
+              </span>
+              <span class="count">
+                <b>J-38</b>
+                <span>vendredi 26 juin</span>
+              </span>
+            </div>
+
+            <div class="weeks">
+              <div class="segs">
+                <i class="on"></i><i class="now"></i><i></i><i></i><i></i><i></i>
+              </div>
+              <p><span>Semaine 2 sur 6</span><span>4 h 20 travaillées</span></p>
+            </div>
+
+            <div class="cta">
+              Séance du jour · 12 min
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+          </div>
+
+          <!-- ------------------------------------- la couverture du programme -->
+          <section>
+            <div class="sec-head">
+              <h4>Où tu en es du programme</h4>
+              <span class="aside">61 %</span>
+            </div>
+            <div class="card">
+              <div class="cover">
+                <div class="row-top">
+                  <span class="badge" style="background:linear-gradient(170deg,#6fb1ff,#2f6fd0)">M</span>
+                  <span class="nm">Mathématiques</span>
+                  <span class="coef">coef 2</span>
+                  <span class="pct">74 %</span>
+                </div>
+                <div class="covbar">
+                  <i class="solid" style="flex:5"></i><i class="seen" style="flex:3"></i><i class="never" style="flex:2"></i>
+                </div>
+                <div class="note">2 chapitres jamais ouverts · Thalès, probabilités</div>
+              </div>
+
+              <div class="cover">
+                <div class="row-top">
+                  <span class="badge" style="background:linear-gradient(170deg,#ffb36b,#e2711d)">F</span>
+                  <span class="nm">Français</span>
+                  <span class="coef">coef 2</span>
+                  <span class="pct">68 %</span>
+                </div>
+                <div class="covbar">
+                  <i class="solid" style="flex:4"></i><i class="seen" style="flex:4"></i><i class="never" style="flex:2"></i>
+                </div>
+                <div class="note">Le sujet de réflexion n'a jamais été travaillé</div>
+              </div>
+
+              <div class="cover">
+                <div class="row-top">
+                  <span class="badge" style="background:linear-gradient(170deg,#f58aa0,#d23b58)">H</span>
+                  <span class="nm">Histoire-géo · EMC</span>
+                  <span class="coef">coef 2</span>
+                  <span class="pct late">39 %</span>
+                </div>
+                <div class="covbar">
+                  <i class="solid" style="flex:2"></i><i class="seen" style="flex:2"></i><i class="never" style="flex:6"></i>
+                </div>
+                <div class="note warn">6 chapitres jamais ouverts — le retard est ici</div>
+              </div>
+
+              <div class="cover">
+                <div class="row-top">
+                  <span class="badge" style="background:linear-gradient(170deg,#78d8a8,#2a9e6c)">S</span>
+                  <span class="nm">Sciences</span>
+                  <span class="coef">coef 1</span>
+                  <span class="pct">63 %</span>
+                </div>
+                <div class="covbar">
+                  <i class="solid" style="flex:4"></i><i class="seen" style="flex:2"></i><i class="never" style="flex:4"></i>
+                </div>
+              </div>
+
+              <div class="cov-legend">
+                <span><em class="solid" style="background:var(--primary)"></em>Solide</span>
+                <span><em style="background:#cdb8f0"></em>Vu une fois</span>
+                <span><em style="background:#e4ddcc"></em>Jamais ouvert</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- --------------------------------------------- le brevet blanc -->
+          <section>
+            <div class="sec-head">
+              <h4>Ton prochain brevet blanc</h4>
+              <span class="aside">2 sur 3</span>
+            </div>
+            <div class="blanc">
+              <span class="dt"><b>27</b><span>MAI</span></span>
+              <span class="t">
+                <b>Dans 9 jours · 1 h 30</b>
+                <span>Il couvrira 12 chapitres — le plan se recale après</span>
+              </span>
+            </div>
+          </section>
+
+          <!-- ------------------------------------------- la semaine planifiée -->
+          <section>
+            <div class="sec-head">
+              <h4>Ta semaine</h4>
+              <span class="aside">1 h 10 prévue</span>
+            </div>
+            <div class="card">
+              <div class="weekplan">
+                <div class="done"><b>L</b><span>✓</span></div>
+                <div class="today"><b>M</b><span>12′</span></div>
+                <div><b>M</b><span>10′</span></div>
+                <div><b>J</b><span>12′</span></div>
+                <div><b>V</b><span>10′</span></div>
+                <div class="off"><b>S</b><span>—</span></div>
+                <div><b>D</b><span>25′</span></div>
+              </div>
+            </div>
+          </section>
+
+          <div style="height:14px"></div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span><label>Amis</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><label>Réviser</label></div>
+          <div class="tab coach on"><span class="glow"></span><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg></span><label>Coach</label></div>
+          <div class="tab center"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span><label>Défi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span><label>Moi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span><label>Trésor</label></div>
+          <span class="home-bar"></span>
+        </nav>
+
+      </div></div>
+      <figcaption>
+        <b>Le même onglet, second régime.</b> Le compte à rebours remplace le
+        diagnostic du jour, la couverture du programme remplace la file d'erreurs
+        — mais la séance du jour, elle, ne change pas de forme.
+      </figcaption>
+    </figure>
+
+    <!-- ==================================================== ÉCRAN 4 — JOUR 1 -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+
+        <div class="status">
+          <span>17:31</span>
+          <span class="glyphs">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+            <span class="bat"><i></i></span>
+          </span>
+        </div>
+
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>0</span>
+          <span class="pill"><span class="gem"></span>90</span>
+          <span class="grow"></span>
+          <span class="lvl">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>
+            Niv. 1
+          </span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row">
+            <time>Mardi 2 septembre</time>
+            <span class="streak" style="background:#efeadd;color:#5b6382">Premier jour</span>
+          </div>
+
+          <div class="hero">
+            <span class="halo"></span>
+            <span class="spark s1"></span><span class="spark s2"></span>
+            <div class="hero-top">
+              <div class="mascotte">
+                <img src="../public/images/mascotte/reaction-bonne-1.webp" alt=""
+                     onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame'}))" />
+              </div>
+              <div class="bubble">
+                <div class="who">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>
+                  Faisons connaissance
+                </div>
+                <h3>Quatre questions, et je saurai par où te faire commencer.</h3>
+              </div>
+            </div>
+            <div class="cta">
+              Commencer · 2 min
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+            <div class="resume">Aucune inscription de plus — tu es déjà chez toi</div>
+          </div>
+
+          <section>
+            <div class="sec-head"><h4>Ce que je ferai, tous les jours</h4></div>
+            <div class="card promise">
+              <div class="pl">
+                <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg></span>
+                <span><b>Je lis tes erreurs</b><span>Pas tes notes — ce que tu rates vraiment</span></span>
+              </div>
+              <div class="pl">
+                <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h11"/><path d="M4 18h7"/></svg></span>
+                <span><b>Je compose ta séance</b><span>10 minutes, dans le bon ordre</span></span>
+              </div>
+              <div class="pl">
+                <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span>
+                <span><b>Je te préviens avant les contrôles</b><span>Et je répartis le travail d'ici là</span></span>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="sec-head"><h4>À essayer tout de suite</h4></div>
+            <div class="snap">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5A2.5 2.5 0 0 1 5.5 6h1.8l1.3-2h6.8l1.3 2h1.8A2.5 2.5 0 0 1 21 8.5v9A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5Z"/><circle cx="12" cy="13" r="3.6"/></svg></span>
+              <span class="t">
+                <b>Photo de mon exercice</b>
+                <span>3 offertes, sans compte à rebours</span>
+              </span>
+              <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 5 7 7-7 7"/></svg></span>
+            </div>
+          </section>
+
+          <div style="height:14px"></div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span><label>Amis</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><label>Réviser</label></div>
+          <div class="tab coach on"><span class="glow"></span><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg></span><label>Coach</label></div>
+          <div class="tab center"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span><label>Défi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span><label>Moi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span><label>Trésor</label></div>
+          <span class="home-bar"></span>
+        </nav>
+
+      </div></div>
+      <figcaption>
+        <b>Jour 1 — l'état qui manquait.</b> Sans erreur ni historique, le coach
+        n'a rien à diagnostiquer : il annonce ce qu'il fera, demande le minimum
+        pour le faire, et pose le Snap à portée de pouce.
+      </figcaption>
+    </figure>
+
+    <!-- ============================================= ÉCRAN 5 — RIEN À RATTRAPER -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+
+        <div class="status">
+          <span>9:12</span>
+          <span class="glyphs">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+            <span class="bat"><i></i></span>
+          </span>
+        </div>
+
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>2 060</span>
+          <span class="pill"><span class="gem"></span>120</span>
+          <span class="grow"></span>
+          <span class="lvl">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>
+            Niv. 19
+          </span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row">
+            <time>Jeudi 14 août</time>
+            <span class="streak">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>
+              31 jours
+            </span>
+          </div>
+
+          <div class="hero">
+            <span class="halo"></span>
+            <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span>
+            <div class="hero-top">
+              <div class="mascotte">
+                <img src="../public/images/mascotte/reaction-bonne-5.webp" alt=""
+                     onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame'}))" />
+              </div>
+              <div class="bubble">
+                <div class="who">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>
+                  Tu es en avance
+                </div>
+                <h3>Rien à rattraper aujourd'hui. Ça n'arrive pas souvent — savoure.</h3>
+              </div>
+            </div>
+
+            <div class="because">
+              <span class="tagline">Maîtrise +6 % cette semaine</span>
+              <span class="tagline">4 chapitres solides</span>
+            </div>
+
+            <div class="cta soft">
+              Séance bonus · 5 min
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+            </div>
+            <div class="resume">Facultatif — ta série est déjà validée</div>
+          </div>
+
+          <section>
+            <div class="sec-head">
+              <h4>Tes erreurs à revoir</h4>
+              <span class="aside gold">À jour</span>
+            </div>
+            <div class="card">
+              <div class="empty">
+                <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>
+                <b>Ta file est vide</b>
+                <p>Les 9 erreurs de la semaine dernière sont toutes retombées
+                  juste. Les prochaines reviendront d'elles-mêmes.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="sec-head"><h4>Si tu veux pousser</h4></div>
+            <div class="grid2">
+              <div class="tile">
+                <span class="ic rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/></svg></span>
+                <b>Le boss de la semaine</b>
+              </div>
+              <div class="tile">
+                <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg></span>
+                <b>Prendre de l'avance sur le chapitre suivant</b>
+              </div>
+            </div>
+          </section>
+
+          <div style="height:14px"></div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span><label>Amis</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><label>Réviser</label></div>
+          <div class="tab coach on"><span class="glow"></span><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg></span><label>Coach</label></div>
+          <div class="tab center"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span><label>Défi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span><label>Moi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span><label>Trésor</label></div>
+          <span class="home-bar"></span>
+        </nav>
+
+      </div></div>
+      <figcaption>
+        <b>Rien à rattraper — le troisième ton.</b> Sans cet état, le coach n'a
+        que des reproches à faire et l'élève finit par ne plus ouvrir l'onglet.
+        La file vide se dit, elle ne se laisse pas blanche.
+      </figcaption>
+    </figure>
+
+  </div>
+</div>
+</body>
+</html>

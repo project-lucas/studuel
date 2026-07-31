@@ -6,7 +6,7 @@
  * React : `lib/` reste pur et testable, la correspondance clé → dessin vit dans
  * `components/Navigation.tsx`.
  */
-export type NavIconName = 'users' | 'house' | 'swords' | 'user' | 'crown'
+export type NavIconName = 'users' | 'house' | 'cap' | 'swords' | 'user' | 'crown'
 
 /**
  * Rôle de l'onglet dans la direction artistique : `action` = violet (le geste),
@@ -24,11 +24,16 @@ export type NavTab = {
 }
 
 export const NAV_TABS: NavTab[] = [
-  // 5 onglets, Défi au centre. L'ancien onglet Coffre a fusionné dans Trésor
+  // 6 onglets, Défi au centre. L'ancien onglet Coffre a fusionné dans Trésor
   // (/coffre redirige) : une seule destination « récompense » — le côté achat
   // (coffre du jour, boutique, collection) ET le côté abonnement.
+  //
+  // Marcel est posé ENTRE Réviser et Défi, à gauche de l'orbe : il dit quoi
+  // faire et pourquoi, Réviser est l'endroit où on le fait. Les deux voisinent
+  // parce qu'on passe de l'un à l'autre en permanence.
   { name: 'Amis', path: '/amis', icon: 'users', role: 'action' },
   { name: 'Réviser', path: '/reviser', icon: 'house', role: 'action' },
+  { name: 'Marcel', path: '/marcel', icon: 'cap', role: 'action' },
   { name: 'Défi', path: '/defi', icon: 'swords', role: 'action', center: true },
   { name: 'Moi', path: '/moi', icon: 'user', role: 'action' },
   { name: 'Trésor', path: '/tresor', icon: 'crown', role: 'recompense' },

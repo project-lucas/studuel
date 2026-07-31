@@ -3,11 +3,11 @@ import { NAV_TABS, neighborTabPath, tabIndexForPath } from './nav-tabs'
 
 describe('tabIndexForPath', () => {
   it('reconnaît un onglet exact', () => {
-    expect(tabIndexForPath('/defi')).toBe(2)
+    expect(tabIndexForPath('/defi')).toBe(3)
   })
 
   it('reconnaît une sous-page comme appartenant à son onglet', () => {
-    expect(tabIndexForPath('/defi/jeux')).toBe(2)
+    expect(tabIndexForPath('/defi/jeux')).toBe(3)
   })
 
   it('renvoie -1 hors des onglets principaux', () => {
@@ -20,9 +20,18 @@ describe('tabIndexForPath', () => {
 })
 
 describe('NAV_TABS', () => {
-  it('compte 5 onglets (Coffre a fusionné dans Trésor)', () => {
-    expect(NAV_TABS).toHaveLength(5)
+  it('compte 6 onglets (Coffre a fusionné dans Trésor, Marcel s’est ajouté)', () => {
+    expect(NAV_TABS).toHaveLength(6)
     expect(NAV_TABS.some((tab) => tab.path === '/coffre')).toBe(false)
+    expect(NAV_TABS.some((tab) => tab.path === '/marcel')).toBe(true)
+  })
+
+  it('pose Marcel juste à gauche du Défi, à droite de Réviser', () => {
+    // Marcel dit quoi faire et pourquoi, Réviser est l'endroit où on le fait :
+    // on passe de l'un à l'autre en permanence, ils doivent se toucher.
+    const paths = NAV_TABS.map((tab) => tab.path)
+    expect(paths.indexOf('/marcel')).toBe(paths.indexOf('/reviser') + 1)
+    expect(paths.indexOf('/marcel')).toBe(paths.indexOf('/defi') - 1)
   })
 
   it('donne une icône et un rôle à chaque onglet', () => {
@@ -48,7 +57,7 @@ describe('neighborTabPath', () => {
   })
 
   it('balayer vers la droite recule vers l’onglet de gauche', () => {
-    expect(neighborTabPath('/defi', 'right')).toBe('/reviser')
+    expect(neighborTabPath('/defi', 'right')).toBe('/marcel')
   })
 
   it('s’arrête au premier onglet', () => {

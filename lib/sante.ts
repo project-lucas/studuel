@@ -237,6 +237,14 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     sonde: null,
   },
   {
+    id: '215',
+    fichier: '215_marcel_jetons.sql',
+    feature: 'Marcel : quota d’IA et jetons de Prof',
+    siAbsente:
+      'La porte de « Demander à Marcel » n’existe pas côté serveur : l’action REFUSE tout appel (fail closed), donc aucun coût ne peut fuir — mais la fonction est simplement indisponible pour les élèves.',
+    sonde: { type: 'table', table: 'coach_tokens' },
+  },
+  {
     id: '193',
     fichier: '193_matieres_completes.sql',
     feature: 'Catalogue de matières complet (+6 matières)',

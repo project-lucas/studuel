@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="fr" class="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Studuel — Marcel, l'onglet Prof</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  /* ============================================================== tokens app */
+  :root {
+    --background: #ede7d6;
+    --foreground: #24304f;
+    --card: #ffffff;
+    --primary: #7a3fe0;
+    --primary-deep: #5a24b4;
+    --accent: #fdecc7;
+    --highlight: #f5b722;
+    --destructive: #f1566c;
+    --muted: #5b6382;
+    --line: rgba(36, 48, 79, .09);
+    --sans: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+    --head: 'Baloo 2', 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--sans); color: #e8e6f2;
+    background:
+      radial-gradient(900px 520px at 18% -8%, #35275e 0%, transparent 62%),
+      radial-gradient(760px 460px at 92% 4%, #1f2c52 0%, transparent 58%),
+      #141930;
+    -webkit-font-smoothing: antialiased;
+    padding: 42px 22px 70px;
+  }
+  body::before {
+    content: ''; position: fixed; inset: 0; pointer-events: none; opacity: .32;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");
+  }
+
+  .stage { max-width: 2400px; margin: 0 auto; }
+  .stage-head { max-width: 660px; margin-bottom: 34px; }
+  .kicker { margin: 0 0 9px; font-size: 11.5px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--highlight); }
+  h1 { font-family: var(--head); font-weight: 800; margin: 0 0 12px; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.05; color: #fff; }
+  .stage-head p { margin: 0; color: #adb4d2; font-size: 15px; line-height: 1.6; }
+
+  .row { display: flex; gap: 22px; align-items: flex-start; justify-content: center; flex-wrap: wrap; }
+  .unit { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .unit figcaption { max-width: 368px; text-align: center; font-size: 12.5px; line-height: 1.55; color: #9aa2c2; }
+  .unit figcaption b { color: #fff; font-weight: 800; }
+
+  /* ================================================================ appareil */
+  .device {
+    width: 390px; flex: none; padding: 11px; border-radius: 54px;
+    background: linear-gradient(155deg, #4a4372 0%, #232743 45%, #15182b 100%);
+    box-shadow: 0 44px 80px -28px rgba(0,0,0,.85), 0 0 0 1px rgba(255,255,255,.09), inset 0 1px 0 rgba(255,255,255,.22);
+  }
+  .screen {
+    position: relative; width: 368px; height: 796px; border-radius: 44px; overflow: hidden;
+    background: var(--background); color: var(--foreground); display: flex; flex-direction: column;
+  }
+  .status { display: flex; align-items: center; justify-content: space-between; padding: 13px 26px 2px; font-size: 13px; font-weight: 800; }
+  .status .glyphs { display: flex; align-items: center; gap: 5px; }
+  .bat { width: 22px; height: 11px; border-radius: 3px; border: 1.4px solid rgba(36,48,79,.55); position: relative; padding: 1.4px; }
+  .bat::after { content: ''; position: absolute; right: -3px; top: 3px; width: 2px; height: 4px; border-radius: 0 2px 2px 0; background: rgba(36,48,79,.45); }
+  .bat i { display: block; height: 100%; width: 72%; border-radius: 1.5px; background: #24304f; }
+
+  .hud { display: flex; align-items: center; gap: 7px; padding: 10px 16px 6px; }
+  .pill { display: inline-flex; align-items: center; gap: 5px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 5px 11px 5px 7px; font-size: 12.5px; font-weight: 800; box-shadow: 0 1px 2px rgba(36,48,79,.07); }
+  .coin, .gem { width: 17px; height: 17px; border-radius: 50%; flex: none; display: grid; place-items: center; font-size: 9px; font-weight: 900; color: #6b4a05; }
+  .coin { background: linear-gradient(160deg, #ffd76b, #e39a11); box-shadow: inset 0 -1px 0 rgba(0,0,0,.15); }
+  .gem { background: linear-gradient(160deg, #9ee6ff, #4aa8f0); border-radius: 4px; transform: rotate(45deg); }
+  .hud .grow { flex: 1; }
+  .lvl { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(170deg, #8b53ea, var(--primary-deep)); color: #fff; border-radius: 999px; padding: 5px 11px; font-size: 12px; font-weight: 800; box-shadow: 0 2px 5px -2px rgba(90,36,180,.8), inset 0 1px 0 rgba(255,255,255,.28); }
+  .face { width: 30px; height: 30px; border-radius: 50%; flex: none; background: linear-gradient(165deg, #c3a8ff, #7a3fe0 70%); border: 2px solid #fff; box-shadow: 0 2px 6px -2px rgba(36,48,79,.5); position: relative; }
+  .face::after { content: ''; position: absolute; inset: 6px 6px auto 6px; height: 7px; border-radius: 999px; background: rgba(255,255,255,.55); }
+
+  .body { flex: 1; overflow: hidden; padding: 0 16px; }
+  .day-row { display: flex; align-items: center; justify-content: space-between; margin: 2px 3px 7px; }
+  .day-row time { font-size: 13px; font-weight: 800; }
+  .day-row .streak { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 800; color: #b4550c; background: #ffeed2; padding: 4px 10px; border-radius: 999px; }
+  .day-row .streak svg { width: 13px; height: 13px; }
+
+  /* ============================================== le filtre des fonctions */
+  /* Marcel fait quatre métiers. Sans ce sélecteur, l'onglet devient un rouleau
+     infini — chaque fonction tient sur un écran, sans défilement. */
+  .segs { display: flex; gap: 6px; margin: 0 0 12px; }
+  .segs span {
+    flex: 1; min-height: 32px; display: flex; align-items: center; justify-content: center;
+    font-family: var(--head); font-size: 12.5px; font-weight: 800;
+    border-radius: 12px; background: rgba(36,48,79,.06); color: var(--muted);
+  }
+  .segs span.on {
+    background: linear-gradient(170deg, #8b53ea, var(--primary-deep)); color: #fff;
+    box-shadow: 0 3px 0 #43168f;
+  }
+
+  /* ==================================================================== héros */
+  .hero {
+    position: relative; overflow: hidden; border-radius: 24px; padding: 16px; color: #fff;
+    background:
+      radial-gradient(130% 100% at 88% -10%, rgba(245,183,34,.3), transparent 58%),
+      linear-gradient(168deg, #9159ee 0%, #6b31cd 48%, #4d1aa2 100%);
+    box-shadow: 0 18px 32px -20px rgba(77,26,162,.95), inset 0 1px 0 rgba(255,255,255,.3);
+  }
+  .hero .halo { position: absolute; width: 210px; height: 210px; border-radius: 50%; left: -66px; top: -88px; background: radial-gradient(circle, rgba(245,183,34,.28), transparent 68%); }
+  .hero-top { position: relative; z-index: 1; display: flex; gap: 12px; align-items: flex-start; }
+  .mascotte { width: 74px; height: 74px; flex: none; position: relative; display: grid; place-items: center; }
+  .mascotte::before { content: ''; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle at 50% 62%, rgba(255,214,120,.5), rgba(255,255,255,.06) 62%, transparent 72%); box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.28); }
+  .mascotte img { position: relative; width: 96%; height: 96%; object-fit: contain; filter: drop-shadow(0 6px 12px rgba(0,0,0,.35)); }
+  .flame { position: relative; width: 40px; height: 52px; background: linear-gradient(180deg, #ffd76b, #f2762a 68%, #d9421f); border-radius: 50% 50% 46% 46% / 62% 62% 38% 38%; box-shadow: 0 0 24px rgba(245,183,34,.6); }
+  .bubble { flex: 1; padding-top: 2px; }
+  .bubble .who { display: flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; color: var(--highlight); margin-bottom: 6px; }
+  .bubble .who svg { width: 12px; height: 12px; }
+  .bubble h3 { margin: 0; font-family: var(--head); font-weight: 700; font-size: 16.5px; line-height: 1.3; color: #fff; }
+  .because { position: relative; z-index: 1; display: flex; gap: 6px; margin-top: 11px; flex-wrap: wrap; }
+  .tagline { display: inline-flex; align-items: center; gap: 5px; font-size: 10.5px; font-weight: 800; padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,.14); color: #fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,.16); }
+  .tagline.urgent { background: rgba(241,86,108,.95); box-shadow: none; }
+  .tagline svg { width: 11px; height: 11px; }
+  .cta {
+    position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 9px;
+    margin-top: 13px; padding: 13px; min-height: 48px; border-radius: 16px;
+    background: linear-gradient(180deg, #fffefa, #fbf6ea); color: var(--primary-deep);
+    font-family: var(--head); font-size: 16px; font-weight: 800;
+    box-shadow: 0 4px 0 #3d1490, 0 8px 16px -8px rgba(0,0,0,.55);
+  }
+  .cta svg { width: 16px; height: 16px; }
+  .resume { position: relative; z-index: 1; margin-top: 8px; text-align: center; font-size: 12px; font-weight: 700; color: rgba(255,255,255,.8); }
+
+  /* =================================================================== blocs */
+  section { margin-top: 10px; }
+  .sec-head { display: flex; align-items: center; justify-content: space-between; margin: 0 3px 6px; }
+  .sec-head h4 { margin: 0; font-family: var(--head); font-size: 15px; font-weight: 800; }
+  .sec-head .aside { font-size: 12px; font-weight: 800; color: var(--muted); }
+  .sec-head .aside.gold { color: #7a5604; background: var(--accent); padding: 3px 9px; border-radius: 999px; }
+  .card { background: var(--card); border-radius: 20px; padding: 13px; box-shadow: 0 2px 0 rgba(36,48,79,.06), 0 14px 26px -22px rgba(36,48,79,.9); }
+
+  /* séance */
+  .plan { position: relative; }
+  .plan::before { content: ''; position: absolute; left: 15px; top: 22px; bottom: 22px; width: 2px; border-radius: 2px; background: linear-gradient(180deg, var(--primary), rgba(122,63,224,.18)); }
+  .stepline { position: relative; display: flex; align-items: center; gap: 11px; padding: 6px 0; }
+  .bead { width: 32px; height: 32px; flex: none; border-radius: 11px; display: grid; place-items: center; position: relative; z-index: 1; background: #f3eee1; color: #7b6539; box-shadow: inset 0 0 0 1.5px rgba(36,48,79,.06); }
+  .bead svg { width: 16px; height: 16px; }
+  .bead.now { background: linear-gradient(170deg, #9159ee, var(--primary-deep)); color: #fff; box-shadow: 0 3px 8px -3px rgba(90,36,180,.9), 0 0 0 4px rgba(122,63,224,.13); }
+  .bead.done { background: #e6f6ef; color: #1f9c6d; }
+  .stepline .t { flex: 1; min-width: 0; }
+  .stepline .t b { display: block; font-size: 13.5px; font-weight: 800; line-height: 1.25; }
+  .stepline .t span { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .stepline .m { font-size: 12px; font-weight: 800; color: var(--muted); background: #f4f0e6; padding: 4px 9px; border-radius: 999px; }
+  .stepline.done .t b { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1.5px; }
+
+  /* la ligne « demander », volontairement en bas et discrète */
+  .ask-row {
+    display: flex; align-items: center; gap: 11px; margin-top: 14px;
+    background: rgba(255,255,255,.65); border: 1.5px dashed rgba(122,63,224,.32);
+    border-radius: 17px; padding: 12px 13px;
+  }
+  .ask-row .ic { width: 30px; height: 30px; flex: none; border-radius: 10px; display: grid; place-items: center; background: #f1e9ff; color: var(--primary); }
+  .ask-row .ic svg { width: 16px; height: 16px; }
+  .ask-row b { display: block; font-size: 13px; font-weight: 800; }
+  .ask-row span { font-size: 11.5px; font-weight: 700; color: var(--muted); }
+  .jeton {
+    margin-left: auto; display: inline-flex; align-items: center; gap: 5px;
+    background: #f1e9ff; color: var(--primary); font-size: 11.5px; font-weight: 800;
+    padding: 5px 9px; border-radius: 999px;
+  }
+  .jeton svg { width: 13px; height: 13px; }
+
+  /* ======================================================== choix de matière */
+  .subjpick { display: flex; gap: 6px; margin-bottom: 9px; }
+  .subjpick span {
+    min-width: 40px; height: 32px; padding: 0 10px; border-radius: 11px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--head); font-size: 12px; font-weight: 800;
+    background: var(--card); color: var(--muted); box-shadow: 0 2px 0 rgba(36,48,79,.07);
+  }
+  .subjpick span.on { background: var(--foreground); color: #fff; box-shadow: 0 2px 0 rgba(0,0,0,.25); }
+
+  /* le régime de la matière */
+  .regime { border-radius: 20px; padding: 12px 13px; color: #fff; position: relative; overflow: hidden; }
+  .regime.r3 { background: linear-gradient(165deg, #e2703a, #b8431f); box-shadow: 0 14px 26px -20px rgba(184,67,31,.95), inset 0 1px 0 rgba(255,255,255,.28); }
+  .regime.r1 { background: linear-gradient(165deg, #3f7fd4, #21489b); box-shadow: 0 14px 26px -20px rgba(33,72,155,.95), inset 0 1px 0 rgba(255,255,255,.28); }
+  .regime .lab { font-size: 10px; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,.78); margin-bottom: 5px; }
+  .regime h3 { margin: 0 0 8px; font-family: var(--head); font-size: 19px; font-weight: 800; }
+  .regime p { margin: 0; font-size: 12.5px; line-height: 1.45; color: rgba(255,255,255,.94); }
+  .regime .sig {
+    display: flex; align-items: center; gap: 8px; margin-top: 10px; padding-top: 9px;
+    border-top: 1px solid rgba(255,255,255,.22); font-size: 11.5px; font-weight: 800;
+  }
+  .regime .sig b { margin-left: auto; font-size: 14px; font-family: var(--head); }
+
+  /* l'échelle de l'oral */
+  .ladder { position: relative; }
+  .ladder::before { content: ''; position: absolute; left: 15px; top: 22px; bottom: 22px; width: 2px; background: linear-gradient(180deg, #1f9c6d 0 34%, var(--primary) 34% 62%, rgba(36,48,79,.14) 62%); }
+  .rung { position: relative; display: flex; align-items: center; gap: 11px; padding: 4px 0; }
+  .rung .n { width: 32px; height: 32px; flex: none; border-radius: 11px; display: grid; place-items: center; position: relative; z-index: 1; font-family: var(--head); font-size: 13px; font-weight: 800; background: #f3eee1; color: #7b6539; }
+  .rung .n.done { background: #e6f6ef; color: #1f9c6d; }
+  .rung .n.now { background: linear-gradient(170deg, #9159ee, var(--primary-deep)); color: #fff; box-shadow: 0 0 0 4px rgba(122,63,224,.13); }
+  .rung .t { flex: 1; min-width: 0; }
+  .rung .t b { display: block; font-size: 13px; font-weight: 800; }
+  .rung .t span { font-size: 11.5px; font-weight: 600; color: var(--muted); }
+  .rung .go { font-size: 11px; font-weight: 800; color: var(--primary); background: #f1e9ff; padding: 5px 9px; border-radius: 999px; }
+  .rung .faces { display: flex; }
+  .rung .faces i {
+    width: 22px; height: 22px; border-radius: 50%; border: 2px solid #fff; margin-left: -7px;
+    background: linear-gradient(160deg, #c3a8ff, #7a3fe0);
+  }
+  .rung .faces i:first-child { margin-left: 0; background: linear-gradient(160deg, #ffd08a, #e2703a); }
+
+  /* le piège */
+  .trap { display: flex; gap: 10px; align-items: flex-start; border-radius: 17px; padding: 10px 12px; background: #ffe9ec; }
+  .trap svg { width: 17px; height: 17px; flex: none; margin-top: 1px; color: #cf2b45; }
+  .trap b { color: #a11f36; font-weight: 800; }
+  .trap p { margin: 0; font-size: 12px; line-height: 1.45; color: #8e2236; }
+
+  /* ============================================================== contrôles */
+  .ctrl + .ctrl { margin-top: 9px; }
+  .ctrl .top { display: flex; align-items: center; gap: 9px; margin-bottom: 9px; }
+  .ctrl .badge { width: 24px; height: 24px; border-radius: 8px; flex: none; display: grid; place-items: center; font-family: var(--head); font-size: 10.5px; font-weight: 800; color: #fff; }
+  .ctrl .nm { font-size: 13px; font-weight: 800; flex: 1; }
+  .variants { display: flex; gap: 7px; }
+  .variants span {
+    flex: 1; min-height: 44px; border-radius: 12px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 1px;
+    background: #f5f1e6; font-size: 11px; font-weight: 800; color: var(--muted);
+  }
+  .variants span b { font-family: var(--head); font-size: 13px; }
+  .variants span.done { background: #e6f6ef; color: #17805a; }
+  .variants span.paid { background: #f1e9ff; color: var(--primary); }
+
+  /* typologie d'erreur */
+  .typo .tl { display: flex; align-items: center; gap: 9px; padding: 6px 0; }
+  .typo .tl .k { font-size: 12px; font-weight: 700; width: 108px; flex: none; }
+  .typo .tl .bar { flex: 1; height: 9px; border-radius: 5px; background: #efe9db; overflow: hidden; }
+  .typo .tl .bar i { display: block; height: 100%; border-radius: 5px; }
+  .typo .tl .v { font-size: 11.5px; font-weight: 800; color: var(--muted); width: 34px; text-align: right; }
+  .verdict {
+    margin-top: 11px; padding-top: 11px; border-top: 1px solid var(--line);
+    font-size: 12.5px; line-height: 1.5; font-weight: 700; color: #3d4869;
+  }
+  .verdict b { color: var(--primary); }
+
+  /* ================================================================ progrès */
+  .phrase { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; }
+  .phrase + .phrase { border-top: 1px solid var(--line); }
+  .phrase .badge { width: 26px; height: 26px; border-radius: 9px; flex: none; display: grid; place-items: center; font-family: var(--head); font-size: 11px; font-weight: 800; color: #fff; }
+  .phrase p { margin: 0; font-size: 12.5px; line-height: 1.45; }
+  .phrase p b { font-weight: 800; }
+  .traj { display: flex; align-items: flex-end; gap: 5px; height: 56px; margin: 2px 0 6px; }
+  .traj i { flex: 1; border-radius: 5px 5px 3px 3px; background: var(--primary); opacity: .85; }
+  .traj i.pale { background: #d9cfeb; }
+  .wks { display: flex; gap: 5px; font-size: 10.5px; font-weight: 700; color: var(--muted); }
+  .wks span { flex: 1; text-align: center; }
+
+  /* ============================================================ mur de jetons */
+  .sheet-dim { position: absolute; inset: 0; background: rgba(24,20,48,.5); }
+  .sheet {
+    position: absolute; left: 0; right: 0; bottom: 0; background: #fbf8f0;
+    border-radius: 28px 28px 0 0; padding: 10px 16px 20px;
+    box-shadow: 0 -18px 40px -18px rgba(0,0,0,.55);
+  }
+  .grab { width: 42px; height: 4px; border-radius: 999px; background: rgba(36,48,79,.2); margin: 0 auto 12px; }
+  .sheet-head { display: flex; align-items: center; gap: 11px; margin-bottom: 12px; }
+  .sheet-head .mini { width: 46px; height: 46px; border-radius: 50%; flex: none; display: grid; place-items: center; background: radial-gradient(circle at 50% 60%, #ffe1a2, #f7c66a); box-shadow: inset 0 0 0 2px #fff, 0 3px 8px -3px rgba(230,150,20,.8); overflow: hidden; }
+  .sheet-head .mini img { width: 100%; height: 100%; object-fit: contain; }
+  .sheet-head b { display: block; font-family: var(--head); font-size: 16px; font-weight: 800; }
+  .sheet-head span { font-size: 12px; color: var(--muted); font-weight: 700; }
+  .buy { display: flex; align-items: center; gap: 11px; border-radius: 16px; padding: 12px; background: #fff; box-shadow: 0 3px 0 rgba(36,48,79,.09); }
+  .buy + .buy { margin-top: 8px; }
+  .buy .ic { width: 34px; height: 34px; border-radius: 11px; flex: none; display: grid; place-items: center; }
+  .buy .ic.coin { background: linear-gradient(165deg, #ffd76b, #e39a11); }
+  .buy .ic.gem { background: linear-gradient(165deg, #9ee6ff, #4aa8f0); }
+  .buy .ic.sub { background: linear-gradient(165deg, #9159ee, var(--primary-deep)); }
+  .buy .ic svg { width: 17px; height: 17px; color: #fff; }
+  .buy .t b { display: block; font-size: 13px; font-weight: 800; }
+  .buy .t span { font-size: 11.5px; font-weight: 700; color: var(--muted); }
+  .buy .px { margin-left: auto; font-family: var(--head); font-size: 13px; font-weight: 800; color: var(--primary); }
+  .buy.best { box-shadow: 0 3px 0 #c58b0d, inset 0 0 0 1.5px rgba(245,183,34,.55); background: linear-gradient(100deg, #fff6e4, #ffeac2); }
+  .rule {
+    margin-top: 12px; text-align: center; font-size: 11.5px; font-weight: 700;
+    color: var(--muted); line-height: 1.45;
+  }
+
+  /* ================================================================= tab bar */
+  .tabbar { display: flex; align-items: flex-end; gap: 1px; padding: 8px 4px 13px; background: rgba(252,250,244,.94); border-top: 1px solid rgba(36,48,79,.1); position: relative; }
+  .tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; position: relative; }
+  .tab .ic { height: 28px; display: grid; place-items: center; color: rgba(36,48,79,.66); }
+  .tab .ic svg { width: 25px; height: 25px; }
+  .tab label { font-family: var(--head); font-size: 9.5px; font-weight: 800; color: rgba(36,48,79,.66); }
+  .tab.on .glow { position: absolute; top: -6px; width: 46px; height: 30px; border-radius: 999px; background: radial-gradient(circle, rgba(242,118,42,.22), transparent 70%); }
+  .tab.coach.on .ic { color: #ef7f22; }
+  .tab.coach.on label { color: #cf6a17; }
+  .tab.center .ic { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(180deg, #9257f0, #5b23b3); color: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 4px 10px -3px rgba(91,35,179,.75), 0 0 0 2px rgba(245,183,34,.6); }
+  .tab.center label { color: var(--primary); }
+  .home-bar { position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); width: 118px; height: 4px; border-radius: 999px; background: rgba(36,48,79,.35); }
+
+  @media (prefers-reduced-motion: reduce) { .hero .halo, .tab.on .glow { display: none; } * { animation: none !important; transition: none !important; } }
+  @media (max-width: 460px) { body { padding: 20px 8px 40px; } .device { width: 100%; max-width: 390px; } .screen { width: 100%; } }
+</style>
+</head>
+<body>
+<div class="stage">
+
+  <header class="stage-head">
+    <p class="kicker">Studuel · l'onglet Prof · 31 juillet 2026</p>
+    <h1>Marcel</h1>
+    <p>Quatre métiers derrière un seul visage — et un filtre pour les séparer,
+      parce qu'un prof qui déroule tout d'un coup n'est pas un repère. Chaque
+      fonction tient sur un écran, sans défilement.</p>
+  </header>
+
+  <div class="row">
+
+    <!-- ============================================== 1 · AUJOURD'HUI -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+        <div class="status"><span>18:04</span><span class="glyphs">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+          <span class="bat"><i></i></span></span></div>
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>1 240</span>
+          <span class="pill"><span class="gem"></span>60</span>
+          <span class="grow"></span>
+          <span class="lvl"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>Niv. 12</span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row">
+            <time>Mercredi 31 juillet</time>
+            <span class="streak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>12 jours</span>
+          </div>
+
+          <div class="segs">
+            <span class="on">Aujourd'hui</span><span>Méthode</span><span>Contrôles</span><span>Progrès</span>
+          </div>
+
+          <div class="hero">
+            <span class="halo"></span>
+            <div class="hero-top">
+              <div class="mascotte"><img src="../public/images/mascotte/reaction-bonne-3.webp" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame'}))" /></div>
+              <div class="bubble">
+                <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11v4c0 1.4 2.2 2.6 5 2.6s5-1.2 5-2.6v-4"/></svg>Marcel · le point du jour</div>
+                <h3>Les fractions te résistent : 3 erreurs hier, aucune reprise depuis.</h3>
+              </div>
+            </div>
+            <div class="because">
+              <span class="tagline urgent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Contrôle dans 4 jours</span>
+              <span class="tagline">Chapitre à 41 %</span>
+            </div>
+            <div class="cta">Reprendre la séance · 4 min<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="resume">Tu en es à l'étape 2 sur 3</div>
+          </div>
+
+          <section>
+            <div class="sec-head"><h4>Ta séance, dans l'ordre</h4><span class="aside">1 sur 3 fait</span></div>
+            <div class="card"><div class="plan">
+              <div class="stepline done">
+                <span class="bead done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>
+                <span class="t"><b>Échauffement</b><span>3 cartes d'anglais</span></span><span class="m">✓</span>
+              </div>
+              <div class="stepline">
+                <span class="bead now"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v18a1.5 1.5 0 0 0-1.5-1.5h-4A2.5 2.5 0 0 1 4 17Z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v18a1.5 1.5 0 0 1 1.5-1.5h4A2.5 2.5 0 0 0 20 17Z"/></svg></span>
+                <span class="t"><b>S'entraîner aux fractions</b><span>8 exercices, correction à chaud</span></span><span class="m">3 min</span>
+              </div>
+              <div class="stepline">
+                <span class="bead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/></svg></span>
+                <span class="t"><b>Finir sur un duel</b><span>90 secondes</span></span><span class="m">1 min</span>
+              </div>
+            </div></div>
+          </section>
+
+          <div class="ask-row">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 1 1-3.2-6.4"/><path d="M9.3 9.3a2.8 2.8 0 0 1 5.4 1c0 1.9-2.7 2.3-2.7 2.3"/><path d="M12 17h.01"/></svg></span>
+            <span><b>Une question ? Demande à Marcel</b><span>Il ne donne jamais la réponse toute faite</span></span>
+            <span class="jeton"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11v4c0 1.4 2.2 2.6 5 2.6s5-1.2 5-2.6v-4"/></svg>3</span>
+          </div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span><label>Amis</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><label>Réviser</label></div>
+          <div class="tab coach on"><span class="glow"></span><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11.5V16c0 1.5 2.2 2.8 5 2.8s5-1.3 5-2.8v-4.5"/><path d="M21 9v5"/></svg></span><label>Marcel</label></div>
+          <div class="tab center"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span><label>Défi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span><label>Moi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span><label>Trésor</label></div>
+          <span class="home-bar"></span>
+        </nav>
+      </div></div>
+      <figcaption><b>Aujourd'hui.</b> Le point du jour, la séance, et l'IA
+        reléguée en bas — une ligne, avec son compteur de jetons.</figcaption>
+    </figure>
+
+    <!-- ============================================== 2 · MÉTHODE · FRANÇAIS -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+        <div class="status"><span>18:06</span><span class="glyphs">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+          <span class="bat"><i></i></span></span></div>
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>1 240</span>
+          <span class="pill"><span class="gem"></span>60</span>
+          <span class="grow"></span>
+          <span class="lvl"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>Niv. 12</span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row"><time>Mercredi 31 juillet</time>
+            <span class="streak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>12 jours</span></div>
+
+          <div class="segs"><span>Aujourd'hui</span><span class="on">Méthode</span><span>Contrôles</span><span>Progrès</span></div>
+
+          <div class="subjpick">
+            <span class="on">FR</span><span>MA</span><span>HG</span><span>AN</span><span>SVT</span><span>PH</span>
+          </div>
+
+          <div class="regime r3">
+            <div class="lab">Régime · l'expression</div>
+            <h3>Français</h3>
+            <p>« On ne te note pas sur ce que tu sais, mais sur la façon dont tu
+              l'articules. On travaille donc l'intro et l'annonce de plan. »</p>
+            <div class="sig">Ce que je mesure : le rituel tenu <b>4 / 5</b></div>
+          </div>
+
+          <section>
+            <div class="sec-head"><h4>L'échelle de l'oral</h4><span class="aside">Barreau 3</span></div>
+            <div class="card"><div class="ladder">
+              <div class="rung">
+                <span class="n done">1</span>
+                <span class="t"><b>Tes cartes</b><span>4 textes · 2 axes chacun</span></span>
+              </div>
+              <div class="rung">
+                <span class="n done">2</span>
+                <span class="t"><b>Seul, à voix haute</b><span>Chrono 6 min tenu — l'app n'écoute pas</span></span>
+              </div>
+              <div class="rung">
+                <span class="n now">3</span>
+                <span class="t"><b>T'enregistrer, te réécouter</b><span>Intro claire ? plan annoncé ? transitions ?</span></span>
+                <span class="go">Lancer</span>
+              </div>
+              <div class="rung">
+                <span class="n">4</span>
+                <span class="t"><b>Devant quelqu'un</b><span>Un ami de ton clan, ou un parent</span></span>
+                <span class="faces"><i></i><i></i><i></i></span>
+              </div>
+            </div></div>
+          </section>
+
+          <section>
+            <div class="trap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v5"/><path d="M12 17.5h.01"/><path d="M10.3 3.9 2.5 17.4A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3.1L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+              <p><b>Le piège :</b> apprendre le cours par cœur en croyant que ça
+                suffira. C'est la forme qui se note.</p>
+            </div>
+          </section>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span><label>Amis</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><label>Réviser</label></div>
+          <div class="tab coach on"><span class="glow"></span><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11.5V16c0 1.5 2.2 2.8 5 2.8s5-1.3 5-2.8v-4.5"/><path d="M21 9v5"/></svg></span><label>Marcel</label></div>
+          <div class="tab center"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span><label>Défi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span><label>Moi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span><label>Trésor</label></div>
+          <span class="home-bar"></span>
+        </nav>
+      </div></div>
+      <figcaption><b>Méthode · Français.</b> Le régime de la matière, l'échelle
+        de l'oral, le piège nommé. Barreau 4 = un ami écoute : coût IA nul.</figcaption>
+    </figure>
+
+    <!-- ============================================== 3 · MÉTHODE · MATHS -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+        <div class="status"><span>18:06</span><span class="glyphs">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+          <span class="bat"><i></i></span></span></div>
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>1 240</span>
+          <span class="pill"><span class="gem"></span>60</span>
+          <span class="grow"></span>
+          <span class="lvl"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>Niv. 12</span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row"><time>Mercredi 31 juillet</time>
+            <span class="streak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>12 jours</span></div>
+
+          <div class="segs"><span>Aujourd'hui</span><span class="on">Méthode</span><span>Contrôles</span><span>Progrès</span></div>
+
+          <div class="subjpick">
+            <span>FR</span><span class="on">MA</span><span>HG</span><span>AN</span><span>SVT</span><span>PH</span>
+          </div>
+
+          <div class="regime r1">
+            <div class="lab">Régime · la pratique</div>
+            <h3>Mathématiques</h3>
+            <p>« Ici, seule la pratique compte. Relire un exercice corrigé ne
+              t'apprend rien — c'est en le refaisant seul, sans le corrigé sous
+              les yeux, que ça rentre. »</p>
+            <div class="sig">Ce que je mesure : ta réussite à froid <b>68 %</b></div>
+          </div>
+
+          <section>
+            <div class="sec-head"><h4>Ta séance type</h4><span class="aside">10 min</span></div>
+            <div class="card"><div class="plan">
+              <div class="stepline">
+                <span class="bead now">1</span>
+                <span class="t"><b>Zéro lecture</b><span>On attaque direct par un exercice</span></span>
+              </div>
+              <div class="stepline">
+                <span class="bead">2</span>
+                <span class="t"><b>Correction à chaud</b><span>Tant que l'erreur est encore fraîche</span></span>
+              </div>
+              <div class="stepline">
+                <span class="bead">3</span>
+                <span class="t"><b>Le même type, refait seul</b><span>C'est ce troisième temps qui fait la note</span></span>
+              </div>
+            </div></div>
+          </section>
+
+          <section>
+            <div class="trap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v5"/><path d="M12 17.5h.01"/><path d="M10.3 3.9 2.5 17.4A2 2 0 0 0 4.2 20.5h15.6a2 2 0 0 0 1.7-3.1L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+              <p><b>Le piège :</b> « j'ai compris » n'est pas « je sais faire ».
+                Celui qui relit se croit prêt.</p>
+            </div>
+          </section>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span><label>Amis</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><label>Réviser</label></div>
+          <div class="tab coach on"><span class="glow"></span><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11.5V16c0 1.5 2.2 2.8 5 2.8s5-1.3 5-2.8v-4.5"/><path d="M21 9v5"/></svg></span><label>Marcel</label></div>
+          <div class="tab center"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span><label>Défi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span><label>Moi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span><label>Trésor</label></div>
+          <span class="home-bar"></span>
+        </nav>
+      </div></div>
+      <figcaption><b>Méthode · Maths.</b> Même écran, doctrine opposée. C'est la
+        preuve du produit : on ne révise pas l'histoire comme les maths.</figcaption>
+    </figure>
+
+    <!-- ============================================== 4 · CONTRÔLES -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+        <div class="status"><span>18:09</span><span class="glyphs">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+          <span class="bat"><i></i></span></span></div>
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>1 240</span>
+          <span class="pill"><span class="gem"></span>60</span>
+          <span class="grow"></span>
+          <span class="lvl"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>Niv. 12</span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row"><time>Mercredi 31 juillet</time>
+            <span class="streak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>12 jours</span></div>
+
+          <div class="segs"><span>Aujourd'hui</span><span>Méthode</span><span class="on">Contrôles</span><span>Progrès</span></div>
+
+          <section style="margin-top:2px">
+            <div class="sec-head"><h4>Ton dernier contrôle</h4><span class="aside gold">Fractions · 15/20</span></div>
+            <div class="card typo">
+              <div class="tl"><span class="k">Lecture d'énoncé</span><span class="bar"><i style="width:60%;background:#f1566c"></i></span><span class="v">−3 pts</span></div>
+              <div class="tl"><span class="k">Calcul</span><span class="bar"><i style="width:40%;background:#f5b722"></i></span><span class="v">−2 pts</span></div>
+              <div class="tl"><span class="k">Méthode</span><span class="bar"><i style="width:0%"></i></span><span class="v">0</span></div>
+              <div class="tl"><span class="k">Cours non su</span><span class="bar"><i style="width:0%"></i></span><span class="v">0</span></div>
+              <div class="verdict">« Ton cours est su — tu n'as pas perdu un point dessus.
+                C'est <b>la lecture des énoncés</b> qui te coûte. On travaille ça
+                cette semaine, pas le cours. »</div>
+            </div>
+          </section>
+
+          <section>
+            <div class="sec-head"><h4>S'entraîner par chapitre</h4><span class="aside">Illimité</span></div>
+            <div class="card">
+              <div class="ctrl">
+                <div class="top"><span class="badge" style="background:linear-gradient(170deg,#6fb1ff,#2f6fd0)">MA</span><span class="nm">Fractions</span></div>
+                <div class="variants">
+                  <span class="done"><b>A</b>15/20</span><span><b>B</b>à faire</span><span><b>C</b>à faire</span>
+                  <span class="paid"><b>★</b>mes erreurs</span>
+                </div>
+              </div>
+              <div class="ctrl" style="border-top:1px solid var(--line);padding-top:11px">
+                <div class="top"><span class="badge" style="background:linear-gradient(170deg,#78d8a8,#2a9e6c)">SVT</span><span class="nm">Respiration cellulaire</span></div>
+                <div class="variants">
+                  <span><b>A</b>à faire</span><span><b>B</b>à faire</span><span><b>C</b>à faire</span>
+                  <span class="paid"><b>★</b>mes erreurs</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="ask-row" style="margin-top:12px">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11v4c0 1.4 2.2 2.6 5 2.6s5-1.2 5-2.6v-4"/></svg></span>
+            <span><b>Les contrôles A · B · C sont offerts</b><span>Seul « mes erreurs » coûte un jeton</span></span>
+            <span class="jeton"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11v4c0 1.4 2.2 2.6 5 2.6s5-1.2 5-2.6v-4"/></svg>3</span>
+          </div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span><label>Amis</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><label>Réviser</label></div>
+          <div class="tab coach on"><span class="glow"></span><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11.5V16c0 1.5 2.2 2.8 5 2.8s5-1.3 5-2.8v-4.5"/><path d="M21 9v5"/></svg></span><label>Marcel</label></div>
+          <div class="tab center"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span><label>Défi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span><label>Moi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span><label>Trésor</label></div>
+          <span class="home-bar"></span>
+        </nav>
+      </div></div>
+      <figcaption><b>Contrôles.</b> Trois variantes pré-écrites par chapitre —
+        coût fixe, offertes. Le produit n'est pas la note, c'est la typologie
+        d'erreur.</figcaption>
+    </figure>
+
+    <!-- ============================================== 5 · PROGRÈS -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+        <div class="status"><span>18:12</span><span class="glyphs">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+          <span class="bat"><i></i></span></span></div>
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>1 240</span>
+          <span class="pill"><span class="gem"></span>60</span>
+          <span class="grow"></span>
+          <span class="lvl"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>Niv. 12</span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row"><time>Mercredi 31 juillet</time>
+            <span class="streak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>12 jours</span></div>
+
+          <div class="segs"><span>Aujourd'hui</span><span>Méthode</span><span>Contrôles</span><span class="on">Progrès</span></div>
+
+          <section style="margin-top:2px">
+            <div class="sec-head"><h4>Ce que Marcel voit</h4><span class="aside">4 matières</span></div>
+            <div class="card">
+              <div class="phrase">
+                <span class="badge" style="background:linear-gradient(170deg,#6fb1ff,#2f6fd0)">MA</span>
+                <p>Tu <b>comprends</b>, mais tu ne t'entraînes pas assez. Tes erreurs sont des erreurs de refaire, pas de savoir.</p>
+              </div>
+              <div class="phrase">
+                <span class="badge" style="background:linear-gradient(170deg,#f58aa0,#d23b58)">HG</span>
+                <p>Tu retiens les faits mais tu <b>perds le plan</b>. Refais tes cartes de mémoire, pas au propre.</p>
+              </div>
+              <div class="phrase">
+                <span class="badge" style="background:linear-gradient(170deg,#ffb36b,#e2711d)">FR</span>
+                <p>Tes idées sont bonnes. C'est <b>l'annonce de plan</b> qui n'est pas encore un réflexe.</p>
+              </div>
+              <div class="phrase">
+                <span class="badge" style="background:linear-gradient(170deg,#9ec4ff,#4a72d0)">AN</span>
+                <p>Trois jours sur quatorze. Ici c'est <b>la fréquence</b> qui décide, pas la durée.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="sec-head"><h4>Ta régularité</h4><span class="aside">8 semaines</span></div>
+            <div class="card">
+              <div class="traj">
+                <i style="height:35%"></i><i style="height:52%"></i><i class="pale" style="height:18%"></i>
+                <i style="height:60%"></i><i style="height:72%"></i><i class="pale" style="height:26%"></i>
+                <i style="height:80%"></i><i style="height:95%"></i>
+              </div>
+              <div class="wks"><span>S1</span><span>S2</span><span>S3</span><span>S4</span><span>S5</span><span>S6</span><span>S7</span><span>S8</span></div>
+              <div class="verdict">Erreur dominante du mois : <b>la lecture d'énoncé</b>.
+                Elle t'a coûté plus de points que tout le reste réuni.</div>
+            </div>
+          </section>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span><label>Amis</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><label>Réviser</label></div>
+          <div class="tab coach on"><span class="glow"></span><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11.5V16c0 1.5 2.2 2.8 5 2.8s5-1.3 5-2.8v-4.5"/><path d="M21 9v5"/></svg></span><label>Marcel</label></div>
+          <div class="tab center"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span><label>Défi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span><label>Moi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span><label>Trésor</label></div>
+          <span class="home-bar"></span>
+        </nav>
+      </div></div>
+      <figcaption><b>Progrès.</b> Une phrase par matière pour le collégien, la
+        courbe pour le lycéen. La donnée neuve : <i>pourquoi</i> il se trompe.</figcaption>
+    </figure>
+
+    <!-- ============================================== 6 · LE MUR DE JETONS -->
+    <figure class="unit" style="margin:0">
+      <div class="device"><div class="screen">
+        <div class="status"><span>18:14</span><span class="glyphs">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="#24304f"><rect x="1" y="14" width="3.4" height="6" rx="1"/><rect x="6.6" y="10" width="3.4" height="10" rx="1"/><rect x="12.2" y="6" width="3.4" height="14" rx="1"/><rect x="17.8" y="3" width="3.4" height="17" rx="1" opacity=".35"/></svg>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#24304f" stroke-width="2.2" stroke-linecap="round"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5.5 12.4a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19.5" r="1.1" fill="#24304f"/></svg>
+          <span class="bat"><i></i></span></span></div>
+        <div class="hud">
+          <span class="pill"><span class="coin">$</span>1 240</span>
+          <span class="pill"><span class="gem"></span>60</span>
+          <span class="grow"></span>
+          <span class="lvl"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8Z"/></svg>Niv. 12</span>
+          <span class="face"></span>
+        </div>
+
+        <div class="body">
+          <div class="day-row"><time>Mercredi 31 juillet</time>
+            <span class="streak"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.1-2.1-.2-4 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.2.4-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/></svg>12 jours</span></div>
+          <div class="segs"><span class="on">Aujourd'hui</span><span>Méthode</span><span>Contrôles</span><span>Progrès</span></div>
+          <div class="hero">
+            <span class="halo"></span>
+            <div class="hero-top">
+              <div class="mascotte"><img src="../public/images/mascotte/reaction-bonne-3.webp" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame'}))" /></div>
+              <div class="bubble">
+                <div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11v4c0 1.4 2.2 2.6 5 2.6s5-1.2 5-2.6v-4"/></svg>Marcel · le point du jour</div>
+                <h3>Les fractions te résistent : 3 erreurs hier.</h3>
+              </div>
+            </div>
+            <div class="cta">Reprendre la séance · 4 min</div>
+          </div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19"/><circle cx="10" cy="8" r="3.4"/><path d="M20 19v-1.5a3.5 3.5 0 0 0-2.6-3.4"/><path d="M15.4 5.2a3.4 3.4 0 0 1 0 5.6"/></svg></span><label>Amis</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><label>Réviser</label></div>
+          <div class="tab coach on"><span class="glow"></span><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" fill-opacity=".16" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-5 9 5-9 5Z"/><path d="M7 11.5V16c0 1.5 2.2 2.8 5 2.8s5-1.3 5-2.8v-4.5"/><path d="M21 9v5"/></svg></span><label>Marcel</label></div>
+          <div class="tab center"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 17.5 3 6V3h3l11.5 11.5"/><path d="m13 19 6-6 3 3-6 6Z"/><path d="M16 16 21 3l-3 3"/><path d="M5 14 2 17l4 4 3-3"/></svg></span><label>Défi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1a4.5 4.5 0 0 1 4.5-4.5h5A4.5 4.5 0 0 1 19 19v1"/></svg></span><label>Moi</label></div>
+          <div class="tab"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span><label>Trésor</label></div>
+          <span class="home-bar"></span>
+        </nav>
+
+        <div class="sheet-dim"></div>
+        <div class="sheet">
+          <span class="grab"></span>
+          <div class="sheet-head">
+            <span class="mini"><img src="../public/images/mascotte/reaction-mauvaise-1.webp" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame',style:'width:22px;height:30px'}))" /></span>
+            <span><b>Tes 3 questions sont passées</b><span>Marcel revient demain — ou tout de suite</span></span>
+          </div>
+
+          <div class="buy">
+            <span class="ic coin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.5 10h4a1.8 1.8 0 0 1 0 3.6h-3a1.8 1.8 0 0 0 0 3.6h4"/></svg></span>
+            <span class="t"><b>3 jetons</b><span>Payés avec tes écus · 2 fois par jour max</span></span>
+            <span class="px">400 écus</span>
+          </div>
+
+          <div class="buy best">
+            <span class="ic gem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 8 6-8 12L4 9Z"/><path d="M4 9h16M12 3 9 9l3 12 3-12-3-6"/></svg></span>
+            <span class="t"><b>10 jetons</b><span>Payés en cristaux · gagne-les en invitant</span></span>
+            <span class="px">5 cristaux</span>
+          </div>
+
+          <div class="buy">
+            <span class="ic sub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m2 6 3.5 12h13L22 6l-5.5 5L12 3.5 7.5 11Z"/><path d="M5.5 21h13"/></svg></span>
+            <span class="t"><b>30 par jour</b><span>Avec Studuel+, tu n'y penses plus</span></span>
+            <span class="px">S'abonner</span>
+          </div>
+
+          <p class="rule">Les jetons achètent du <b>temps de Marcel</b> — jamais une
+            réponse toute faite. Les contrôles A · B · C et tes erreurs expliquées
+            restent gratuits, quoi qu'il arrive.</p>
+        </div>
+      </div></div>
+      <figcaption><b>Le mur de jetons.</b> Trois chemins, un seul plafond de coût :
+        jouer finance apprendre, inviter finance apprendre, payer finance
+        apprendre.</figcaption>
+    </figure>
+
+  </div>
+</div>
+</body>
+</html>

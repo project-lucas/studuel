@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="fr" class="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Studuel — maquette de l'onglet Coach</title>
+<style>
+  /* ------------------------------------------------------------------ tokens
+     Repris tels quels de app/globals.css : la maquette ne réinvente aucune
+     couleur, elle rejoue le monde crème & violet. */
+  :root {
+    --background: #ede7d6;
+    --foreground: #24304f;
+    --card: #ffffff;
+    --primary: #7a3fe0;
+    --accent: #fdecc7;
+    --highlight: #f5b722;
+    --destructive: #f1566c;
+    --muted: #6b7392;
+    --board: #171d33;
+    --flame-a: #f5b722;
+    --flame-b: #f2762a;
+    --radius: 18px;
+    --sans: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+    --head: 'Baloo 2', 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background:
+      radial-gradient(1100px 600px at 12% -10%, #2c2350 0%, transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, #1e2a4d 0%, transparent 55%),
+      var(--board);
+    color: #ece9f5;
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    padding: 40px 24px 80px;
+  }
+
+  /* ------------------------------------------------------------------- board */
+  .board { max-width: 1500px; margin: 0 auto; }
+
+  .board-head { max-width: 780px; margin-bottom: 32px; }
+  .kicker {
+    font: 700 12px/1 var(--sans);
+    letter-spacing: .18em; text-transform: uppercase;
+    color: var(--highlight);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--head);
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.05; margin: 0 0 14px; font-weight: 800;
+  }
+  .lede { margin: 0; color: #b9bfd8; font-size: 16px; line-height: 1.6; max-width: 62ch; }
+
+  /* -------------------------------------------------------------- la légende */
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin: 26px 0 40px;
+  }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 7px 13px 7px 9px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+    font-size: 12.5px; font-weight: 700; color: #d7dbef;
+  }
+  .chip b { font-weight: 800; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .l0 { background: #4ad2a0; }
+  .l1 { background: #63b3ff; }
+  .l2 { background: var(--highlight); }
+  .l3 { background: var(--destructive); }
+  .chip span { font-weight: 500; color: #9aa2c0; }
+
+  /* --------------------------------------------------------------- la grille */
+  .frames {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 44px 34px;
+    align-items: start;
+  }
+  .slot { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .slot-caption { max-width: 360px; }
+  .slot-caption h3 {
+    font-family: var(--head); font-size: 18px; margin: 0 0 6px; font-weight: 800;
+    color: #fff;
+  }
+  .slot-caption p { margin: 0; font-size: 13.5px; line-height: 1.55; color: #a7aeca; }
+
+  /* ------------------------------------------------------------- le téléphone */
+  .phone {
+    width: 360px; height: 740px; flex: none;
+    border-radius: 42px;
+    padding: 10px;
+    background: linear-gradient(160deg, #3a3560, #191d33 60%);
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.07);
+  }
+  .screen {
+    position: relative;
+    width: 100%; height: 100%;
+    border-radius: 33px;
+    overflow: hidden;
+    background: var(--background);
+    color: var(--foreground);
+    display: flex; flex-direction: column;
+  }
+
+  /* ------------------------------------------------------------------- TopHud */
+  .hud {
+    display: flex; align-items: center; gap: 8px;
+    padding: 14px 14px 10px;
+    font-size: 12.5px; font-weight: 800;
+  }
+  .pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: var(--card);
+    border: 1px solid rgba(36,48,79,.1);
+    border-radius: 999px; padding: 5px 10px;
+    box-shadow: 0 1px 0 rgba(36,48,79,.06);
+  }
+  .pill.lvl { background: var(--primary); color: #fff; border-color: transparent; }
+  .hud .spacer { flex: 1; }
+  .avatar {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: linear-gradient(160deg, #b79bf5, var(--primary));
+    border: 2px solid #fff; box-shadow: 0 1px 4px rgba(36,48,79,.25);
+  }
+
+  /* -------------------------------------------------------------------- corps */
+  .body { flex: 1; overflow: hidden; padding: 2px 14px 0; }
+  .page-title {
+    font-family: var(--head); font-size: 25px; font-weight: 800;
+    margin: 2px 0 12px; line-height: 1;
+  }
+  .page-title small {
+    display: block; font-family: var(--sans);
+    font-size: 12.5px; font-weight: 600; color: var(--muted); margin-top: 4px;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 14px;
+    box-shadow: 0 2px 0 rgba(36,48,79,.08), 0 8px 20px -14px rgba(36,48,79,.5);
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .card h4 {
+    font-family: var(--head); font-size: 15px; margin: 0 0 8px; font-weight: 800;
+  }
+  .card p { margin: 0; font-size: 13px; line-height: 1.5; color: #3d4869; }
+
+  /* pastille de couche de coût, posée sur le coin du bloc */
+  .cost {
+    position: absolute; top: -8px; right: 10px;
+    font-size: 9.5px; font-weight: 800; letter-spacing: .06em;
+    padding: 3px 8px; border-radius: 999px; color: #10203a;
+    box-shadow: 0 2px 6px -2px rgba(0,0,0,.4);
+  }
+  .cost.c0 { background: #4ad2a0; }
+  .cost.c1 { background: #63b3ff; }
+  .cost.c2 { background: var(--highlight); }
+  .cost.c3 { background: var(--destructive); color: #fff; }
+
+  /* --------------------------------------------------------------- le héros */
+  .hero {
+    position: relative;
+    border-radius: 22px;
+    padding: 15px 15px 14px;
+    color: #fff;
+    background:
+      radial-gradient(120% 90% at 90% 0%, rgba(245,183,34,.28), transparent 55%),
+      linear-gradient(165deg, #8b53ea, #5a24b4);
+    box-shadow: 0 10px 24px -14px rgba(90,36,180,.9), inset 0 1px 0 rgba(255,255,255,.25);
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ''; position: absolute; inset: auto -30px -60px auto;
+    width: 160px; height: 160px; border-radius: 50%;
+    background: rgba(255,255,255,.07);
+  }
+  .hero-top { display: flex; gap: 12px; align-items: flex-start; position: relative; z-index: 1; }
+  .mascotte {
+    width: 74px; height: 74px; flex: none;
+    display: grid; place-items: center;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 60%, rgba(255,255,255,.3), rgba(255,255,255,.05));
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,.3);
+  }
+  .mascotte img { width: 100%; height: 100%; object-fit: contain; }
+  /* Repli si l'image du dépôt n'est pas résolue : une flamme dessinée en CSS. */
+  .flame {
+    width: 38px; height: 50px;
+    background: linear-gradient(180deg, var(--flame-a), var(--flame-b) 70%, #d9421f);
+    border-radius: 50% 50% 46% 46% / 62% 62% 38% 38%;
+    transform: rotate(-3deg);
+    box-shadow: 0 0 22px rgba(245,183,34,.6);
+    position: relative;
+  }
+  .flame::before {
+    content: ''; position: absolute; inset: 32% 26% 10% 26%;
+    background: #ffe9a8; border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+    opacity: .85;
+  }
+  .bubble { flex: 1; }
+  .bubble .who {
+    font: 800 10.5px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase;
+    color: var(--highlight); margin-bottom: 6px;
+  }
+  .bubble p {
+    margin: 0; font-size: 14px; line-height: 1.42; font-weight: 700; color: #fff;
+  }
+  .bubble .why {
+    margin-top: 7px; font-size: 11.5px; font-weight: 600; color: rgba(255,255,255,.72);
+  }
+
+  .cta {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    margin-top: 13px; position: relative; z-index: 1;
+    background: var(--highlight);
+    color: #3a2703;
+    font-family: var(--head); font-weight: 800; font-size: 15.5px;
+    padding: 12px; border-radius: 14px;
+    box-shadow: 0 4px 0 #c98f10;
+  }
+  .cta.violet { background: var(--primary); color: #fff; box-shadow: 0 4px 0 #4c1d99; }
+  .cta.ghost {
+    background: transparent; color: var(--primary);
+    box-shadow: inset 0 0 0 2px rgba(122,63,224,.35);
+  }
+
+  /* ------------------------------------------------------------ la séance 1-2-3 */
+  .steps { display: flex; flex-direction: column; gap: 9px; }
+  .step {
+    display: flex; align-items: center; gap: 11px;
+    background: #faf7ef; border-radius: 14px; padding: 10px 11px;
+    border: 1px solid rgba(36,48,79,.07);
+  }
+  .step .num {
+    width: 27px; height: 27px; flex: none; border-radius: 9px;
+    display: grid; place-items: center;
+    font-family: var(--head); font-weight: 800; font-size: 13px;
+    background: var(--accent); color: #7a5406;
+  }
+  .step .num.v { background: var(--primary); color: #fff; }
+  .step .txt { flex: 1; min-width: 0; }
+  .step .txt b { display: block; font-size: 13px; font-weight: 800; }
+  .step .txt span { font-size: 11.5px; color: var(--muted); }
+  .step .min { font-size: 11px; font-weight: 800; color: var(--muted); }
+
+  /* ------------------------------------------------------------- les intentions */
+  .intents { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  .intent {
+    background: #faf7ef; border: 1px solid rgba(36,48,79,.08);
+    border-radius: 14px; padding: 11px 10px;
+    font-size: 12px; font-weight: 700; line-height: 1.3;
+    display: flex; flex-direction: column; gap: 7px; min-height: 74px;
+  }
+  .intent .ico { font-size: 17px; }
+  .intent.snap {
+    grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 10px;
+    background: linear-gradient(100deg, #fff4dc, #ffe8bd);
+    border-color: rgba(245,183,34,.5); min-height: 0;
+  }
+  .intent.snap .ico { font-size: 20px; }
+  .intent .tag {
+    margin-left: auto; font-size: 9.5px; font-weight: 800; letter-spacing: .04em;
+    background: var(--primary); color: #fff; padding: 3px 7px; border-radius: 999px;
+  }
+  .ask {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: 10px; background: #fff; border: 1.5px dashed rgba(36,48,79,.2);
+    border-radius: 13px; padding: 10px 12px; font-size: 12.5px; color: #8b93ae;
+  }
+  .quota {
+    display: flex; align-items: center; gap: 6px; justify-content: center;
+    margin-top: 9px; font-size: 11px; font-weight: 700; color: var(--muted);
+  }
+  .quota i { font-style: normal; color: var(--primary); }
+
+  /* ------------------------------------------------------------------ réponse */
+  .answer { background: var(--card); border-radius: var(--radius); padding: 0; overflow: hidden; }
+  .answer .q {
+    background: #f6f1e4; padding: 11px 13px; font-size: 12px; font-weight: 700;
+    border-bottom: 1px solid rgba(36,48,79,.08); color: #4a5470;
+  }
+  .answer .a { padding: 13px; }
+  .answer .a p { font-size: 13px; line-height: 1.55; margin: 0 0 9px; }
+  .answer .a p:last-child { margin-bottom: 0; }
+  .hint {
+    background: var(--accent); border-radius: 12px; padding: 9px 11px;
+    font-size: 12.5px; font-weight: 700; color: #6b4a05; margin-bottom: 10px;
+  }
+  .reveal {
+    display: flex; gap: 8px;
+  }
+  .reveal span {
+    flex: 1; text-align: center; font-size: 11.5px; font-weight: 800;
+    padding: 9px 6px; border-radius: 11px;
+    background: #f2ecdd; color: var(--muted);
+  }
+  .reveal span.on { background: var(--primary); color: #fff; }
+
+  /* --------------------------------------------------------------------- snap */
+  .snapshot {
+    height: 168px; border-radius: 16px; margin-bottom: 12px;
+    background:
+      linear-gradient(135deg, rgba(122,63,224,.12), rgba(36,48,79,.05)),
+      repeating-linear-gradient(0deg, #fdfbf5 0 22px, #f0ebdd 22px 23px);
+    border: 1px solid rgba(36,48,79,.12);
+    position: relative; overflow: hidden;
+    display: grid; place-items: center;
+  }
+  .snapshot .scan {
+    position: absolute; inset: 14px;
+    border: 2px solid var(--primary); border-radius: 12px;
+    box-shadow: 0 0 0 9999px rgba(36,48,79,.06) inset;
+  }
+  .snapshot .exo {
+    font-family: var(--head); font-size: 19px; font-weight: 800; color: #34406a;
+    background: rgba(255,255,255,.75); padding: 7px 14px; border-radius: 10px;
+  }
+  .wall {
+    background: linear-gradient(165deg, #2b2350, #171d33);
+    border-radius: var(--radius); padding: 15px; color: #fff; text-align: center;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.14);
+  }
+  .wall h4 { font-family: var(--head); font-size: 16px; margin: 0 0 5px; }
+  .wall p { font-size: 12px; color: #b6bcd8; margin: 0 0 13px; line-height: 1.45; }
+  .wall .two { display: grid; gap: 8px; }
+  .wall .opt {
+    border-radius: 13px; padding: 11px; font-weight: 800; font-size: 13px;
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+  }
+  .wall .opt.gem { background: rgba(255,255,255,.1); color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.25); }
+  .wall .opt.sub { background: var(--highlight); color: #3a2703; box-shadow: 0 4px 0 #c98f10; }
+
+  /* ------------------------------------------------------------------- bilan */
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+  .stat {
+    background: var(--card); border-radius: 15px; padding: 11px 8px; text-align: center;
+    box-shadow: 0 2px 0 rgba(36,48,79,.07);
+  }
+  .stat b { display: block; font-family: var(--head); font-size: 21px; line-height: 1; color: var(--primary); }
+  .stat span { font-size: 10.5px; font-weight: 700; color: var(--muted); }
+  .stat.gold b { color: #c98f10; }
+  .barline { display: flex; align-items: flex-end; gap: 5px; height: 54px; margin: 4px 0 2px; }
+  .barline i {
+    flex: 1; border-radius: 5px 5px 3px 3px; background: var(--primary); opacity: .85;
+  }
+  .barline i.pale { background: #d9cfeb; }
+  .days { display: flex; gap: 5px; font-size: 9.5px; font-weight: 700; color: var(--muted); }
+  .days span { flex: 1; text-align: center; }
+  .parent {
+    display: flex; align-items: center; gap: 10px;
+    background: linear-gradient(100deg, #fff4dc, #ffe8bd);
+    border: 1px solid rgba(245,183,34,.5);
+    border-radius: var(--radius); padding: 12px;
+  }
+  .parent .ico { font-size: 20px; }
+  .parent b { display: block; font-size: 13px; }
+  .parent span { font-size: 11.5px; color: #7a5406; }
+  .parent .go {
+    margin-left: auto; background: var(--primary); color: #fff;
+    font-size: 11.5px; font-weight: 800; padding: 7px 11px; border-radius: 10px;
+  }
+
+  /* ---------------------------------------------------------------- tab bar */
+  .tabbar {
+    display: flex; align-items: flex-end;
+    border-top: 1px solid rgba(36,48,79,.12);
+    background: rgba(253,251,246,.92);
+    padding: 7px 2px 11px;
+  }
+  .tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+  .tab .ico {
+    width: 24px; height: 24px; display: grid; place-items: center;
+    font-size: 15px; opacity: .5;
+  }
+  .tab span { font-family: var(--head); font-size: 9px; font-weight: 800; color: rgba(36,48,79,.6); }
+  .tab.on .ico { opacity: 1; }
+  .tab.on span { color: var(--primary); }
+  .tab.center .ico {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(180deg, #9257f0, #5f27b8);
+    color: #fff; opacity: 1; font-size: 17px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 3px 8px -2px rgba(95,39,184,.6);
+    outline: 2px solid rgba(245,183,34,.6);
+  }
+  .tab.coach .ico {
+    opacity: 1;
+    filter: drop-shadow(0 2px 5px rgba(242,118,42,.45));
+  }
+
+  /* --------------------------------------------------------------- la note */
+  .note {
+    margin-top: 56px; max-width: 900px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.09);
+    border-left: 3px solid var(--highlight);
+    border-radius: 14px; padding: 20px 22px;
+  }
+  .note h3 { font-family: var(--head); margin: 0 0 10px; font-size: 17px; color: #fff; }
+  .note ul { margin: 0; padding-left: 18px; color: #b3bad6; font-size: 13.5px; line-height: 1.75; }
+  .note b { color: #fff; }
+
+  @media (max-width: 760px) {
+    body { padding: 24px 12px 50px; }
+    .phone { width: 100%; max-width: 360px; }
+  }
+</style>
+</head>
+<body>
+<div class="board">
+
+  <header class="board-head">
+    <p class="kicker">Studuel · maquette · 31 juillet 2026</p>
+    <h1>L'onglet Coach</h1>
+    <p class="lede">
+      La mascotte quitte le rôle de décor et devient le seul endroit de l'app qui
+      répond à « je fais quoi, là, maintenant ? ». Quatre écrans, et sur chaque
+      bloc la couche de coût : ce qui est gratuit à l'infini, ce qui se paie une
+      fois pour tout le monde, ce qui se compte.
+    </p>
+  </header>
+
+  <div class="legend">
+    <span class="chip"><i class="dot l0"></i><b>L0 — Réflexe</b><span>0 token · illimité</span></span>
+    <span class="chip"><i class="dot l1"></i><b>L1 — Mutualisé</b><span>généré 1×, servi ∞</span></span>
+    <span class="chip"><i class="dot l2"></i><b>L2 — Personnel</b><span>quota/jour par palier</span></span>
+    <span class="chip"><i class="dot l3"></i><b>L3 — Snap photo</b><span>3 offerts, puis jetons</span></span>
+  </div>
+
+  <div class="frames">
+
+    <!-- ============================================================ ÉCRAN 1 -->
+    <div class="slot">
+      <div class="phone"><div class="screen">
+        <div class="hud">
+          <span class="pill">🪙 1 240</span>
+          <span class="pill">💎 60</span>
+          <span class="spacer"></span>
+          <span class="pill lvl">Niv. 12</span>
+          <span class="avatar"></span>
+        </div>
+
+        <div class="body">
+          <h2 class="page-title">Coach
+            <small>Mercredi 31 juillet · 18 h 04</small>
+          </h2>
+
+          <div class="hero">
+            <div class="hero-top">
+              <div class="mascotte">
+                <img src="../public/images/mascotte/reaction-bonne-3.webp" alt=""
+                     onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame'}))" />
+              </div>
+              <div class="bubble">
+                <div class="who">Le point du jour</div>
+                <p>Les fractions te résistent : 3 erreurs hier, aucune reprise depuis.</p>
+                <div class="why">Contrôle de maths dans 4 jours · chapitre à 41 %</div>
+              </div>
+            </div>
+            <div class="cta">Séance guidée · 6 min →</div>
+          </div>
+
+          <div class="card">
+            <span class="cost c0">L0 · 0 TOKEN</span>
+            <h4>Ta séance, dans l'ordre</h4>
+            <div class="steps">
+              <div class="step">
+                <span class="num">1</span>
+                <span class="txt"><b>Revoir</b><span>7 cartes dues · anglais, SVT</span></span>
+                <span class="min">2 min</span>
+              </div>
+              <div class="step">
+                <span class="num v">2</span>
+                <span class="txt"><b>Consolider</b><span>Fractions — addition et simplification</span></span>
+                <span class="min">3 min</span>
+              </div>
+              <div class="step">
+                <span class="num">3</span>
+                <span class="txt"><b>Défier</b><span>Duel 90 s pour finir en beauté</span></span>
+                <span class="min">1 min</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="cost c1">L1 · COÛT FIXE</span>
+            <h4>Tes 2 erreurs d'hier, expliquées</h4>
+            <p>« 3/4 + 1/6 » — tu as additionné les dénominateurs. Le coach te
+              montre pourquoi en 4 lignes. <b>Gratuit, pour tout le monde.</b></p>
+          </div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ico">👥</span><span>Amis</span></div>
+          <div class="tab"><span class="ico">🏠</span><span>Réviser</span></div>
+          <div class="tab on coach"><span class="ico">🔥</span><span>Coach</span></div>
+          <div class="tab center"><span class="ico">⚔️</span><span>Défi</span></div>
+          <div class="tab"><span class="ico">🙂</span><span>Moi</span></div>
+          <div class="tab"><span class="ico">👑</span><span>Trésor</span></div>
+        </nav>
+      </div></div>
+
+      <div class="slot-caption">
+        <h3>① Le point du jour</h3>
+        <p>Une phrase de diagnostic, <b>un seul</b> bouton. Le coach lit le SRS,
+          la maîtrise et le calendrier des contrôles — rien n'est deviné, rien ne
+          coûte un token. Les explications d'erreur sur les questions du catalogue
+          sont générées une fois pour tous : c'est ce qui permet de les offrir.</p>
+      </div>
+    </div>
+
+    <!-- ============================================================ ÉCRAN 2 -->
+    <div class="slot">
+      <div class="phone"><div class="screen">
+        <div class="hud">
+          <span class="pill">🪙 1 240</span>
+          <span class="pill">💎 60</span>
+          <span class="spacer"></span>
+          <span class="pill lvl">Niv. 12</span>
+          <span class="avatar"></span>
+        </div>
+
+        <div class="body">
+          <h2 class="page-title">Demander au coach
+            <small>Il connaît ton chapitre en cours</small>
+          </h2>
+
+          <div class="card">
+            <span class="cost c2">L2 · 3/JOUR</span>
+            <div class="intents">
+              <div class="intent"><span class="ico">❓</span>Je n'ai pas compris cette question</div>
+              <div class="intent"><span class="ico">🔁</span>Explique-moi ce chapitre autrement</div>
+              <div class="intent"><span class="ico">🎯</span>Interroge-moi (5 questions)</div>
+              <div class="intent"><span class="ico">📐</span>Donne-moi la méthode, pas la réponse</div>
+              <div class="intent snap"><span class="ico">📸</span>Photo de mon exercice
+                <span class="tag">3 offerts</span></div>
+            </div>
+            <div class="ask">✏️ Écris ta question…</div>
+            <div class="quota">Il te reste <i>2 questions</i> aujourd'hui · reviens demain ou passe Studuel+</div>
+          </div>
+
+          <div class="answer">
+            <div class="q">« Pourquoi 3/4 + 1/6 ne fait pas 4/10 ? »</div>
+            <div class="a">
+              <div class="hint">💡 Indice — quand tu coupes un gâteau en 4 et un
+                autre en 6, tes parts n'ont pas la même taille.</div>
+              <p>Pour additionner, il faut d'abord des parts <b>de même taille</b> :
+                on cherche un dénominateur commun. 4 et 6 tombent tous les deux
+                sur 12.</p>
+              <p>3/4 devient 9/12, 1/6 devient 2/12. Là seulement on additionne
+                les numérateurs : <b>11/12</b>.</p>
+              <div class="reveal">
+                <span class="on">Indice</span>
+                <span>Étape suivante</span>
+                <span>Méthode</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ico">👥</span><span>Amis</span></div>
+          <div class="tab"><span class="ico">🏠</span><span>Réviser</span></div>
+          <div class="tab on coach"><span class="ico">🔥</span><span>Coach</span></div>
+          <div class="tab center"><span class="ico">⚔️</span><span>Défi</span></div>
+          <div class="tab"><span class="ico">🙂</span><span>Moi</span></div>
+          <div class="tab"><span class="ico">👑</span><span>Trésor</span></div>
+        </nav>
+      </div></div>
+
+      <div class="slot-caption">
+        <h3>② Demander — à intentions, pas un chat vide</h3>
+        <p>Quatre boutons portent 80 % des usages : moins de tokens, aucune
+          modération d'entrée, aucune dérive. La réponse se <b>déplie par
+          paliers</b> (indice → étape → méthode) : c'est plus pédagogique, et
+          l'élève qui s'arrête à l'indice ne coûte rien de plus.</p>
+      </div>
+    </div>
+
+    <!-- ============================================================ ÉCRAN 3 -->
+    <div class="slot">
+      <div class="phone"><div class="screen">
+        <div class="hud">
+          <span class="pill">🪙 1 240</span>
+          <span class="pill">💎 60</span>
+          <span class="spacer"></span>
+          <span class="pill lvl">Niv. 12</span>
+          <span class="avatar"></span>
+        </div>
+
+        <div class="body">
+          <h2 class="page-title">Photo de l'exercice
+            <small>Le coach lit, découpe, explique</small>
+          </h2>
+
+          <div class="snapshot">
+            <div class="scan"></div>
+            <div class="exo">Exercice 12 — p. 47</div>
+          </div>
+
+          <div class="card">
+            <span class="cost c3">L3 · JETON</span>
+            <h4>Ce que le coach en fait</h4>
+            <p>Il ne donne <b>jamais</b> le corrigé d'un coup : il découpe en
+              étapes, s'arrête à chacune et te demande la suite. Un devoir rendu
+              n'est jamais rédigé à ta place.</p>
+          </div>
+
+          <div class="wall">
+            <h4>Tes 3 photos offertes sont utilisées</h4>
+            <p>Deux façons de continuer — et l'une des deux fait grandir Studuel.</p>
+            <div class="two">
+              <div class="opt gem">💎 Inviter un ami · +30 gemmes chacun</div>
+              <div class="opt sub">👑 Passer Studuel+ · 1 photo/jour</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ico">👥</span><span>Amis</span></div>
+          <div class="tab"><span class="ico">🏠</span><span>Réviser</span></div>
+          <div class="tab on coach"><span class="ico">🔥</span><span>Coach</span></div>
+          <div class="tab center"><span class="ico">⚔️</span><span>Défi</span></div>
+          <div class="tab"><span class="ico">🙂</span><span>Moi</span></div>
+          <div class="tab"><span class="ico">👑</span><span>Trésor</span></div>
+        </nav>
+      </div></div>
+
+      <div class="slot-caption">
+        <h3>③ Snap &amp; Explain — le hameçon</h3>
+        <p>C'est le geste qui fait télécharger l'app (le moteur de Gauth,
+          Photomath). Aussi le plus cher : <b>3 offerts à vie</b>, puis un mur
+          avec deux sorties, jamais une. La monnaie qui achète de l'IA est celle
+          qui se gagne <b>en amenant des amis</b> : chaque euro de coût variable
+          est adossé à une acquisition.</p>
+      </div>
+    </div>
+
+    <!-- ============================================================ ÉCRAN 4 -->
+    <div class="slot">
+      <div class="phone"><div class="screen">
+        <div class="hud">
+          <span class="pill">🪙 1 240</span>
+          <span class="pill">💎 60</span>
+          <span class="spacer"></span>
+          <span class="pill lvl">Niv. 12</span>
+          <span class="avatar"></span>
+        </div>
+
+        <div class="body">
+          <h2 class="page-title">Ton bilan
+            <small>Semaine du 25 au 31 juillet</small>
+          </h2>
+
+          <div class="stats">
+            <div class="stat"><b>4/7</b><span>jours travaillés</span></div>
+            <div class="stat"><b>68</b><span>questions</span></div>
+            <div class="stat gold"><b>+9 %</b><span>en maths</span></div>
+          </div>
+
+          <div class="card">
+            <span class="cost c0">L0 · 0 TOKEN</span>
+            <h4>Ta régularité</h4>
+            <div class="barline">
+              <i style="height:60%"></i><i style="height:85%"></i>
+              <i class="pale" style="height:12%"></i><i style="height:45%"></i>
+              <i class="pale" style="height:12%"></i><i style="height:95%"></i>
+              <i class="pale" style="height:20%"></i>
+            </div>
+            <div class="days">
+              <span>L</span><span>M</span><span>M</span><span>J</span>
+              <span>V</span><span>S</span><span>D</span>
+            </div>
+          </div>
+
+          <div class="hero" style="margin-top:12px">
+            <div class="hero-top">
+              <div class="mascotte" style="width:56px;height:56px">
+                <img src="../public/images/mascotte/reaction-bonne-4.webp" alt=""
+                     onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'flame'}))" />
+              </div>
+              <div class="bubble">
+                <div class="who">Le mot du coach</div>
+                <p>Tu as tenu 4 jours sur 7 — et les maths remontent. Le mercredi
+                  te fait défaut : 6 minutes suffiraient.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="parent">
+            <span class="ico">📮</span>
+            <div>
+              <b>Envoyer à mes parents</b>
+              <span>Le résumé, pas les notes</span>
+            </div>
+            <span class="go">Envoyer</span>
+          </div>
+        </div>
+
+        <nav class="tabbar">
+          <div class="tab"><span class="ico">👥</span><span>Amis</span></div>
+          <div class="tab"><span class="ico">🏠</span><span>Réviser</span></div>
+          <div class="tab on coach"><span class="ico">🔥</span><span>Coach</span></div>
+          <div class="tab center"><span class="ico">⚔️</span><span>Défi</span></div>
+          <div class="tab"><span class="ico">🙂</span><span>Moi</span></div>
+          <div class="tab"><span class="ico">👑</span><span>Trésor</span></div>
+        </nav>
+      </div></div>
+
+      <div class="slot-caption">
+        <h3>④ Le bilan — et le parent</h3>
+        <p>Trois chiffres, une courbe, une phrase. Le bouton « envoyer à mes
+          parents » est le meilleur <b>convertisseur</b> de l'app : le parent est
+          le payeur, et c'est l'élève qui le lui tend — pas nous qui le
+          démarchons.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note">
+    <h3>Ce que la maquette engage</h3>
+    <ul>
+      <li><b>6ᵉ onglet, entre Réviser et Défi.</b> Le Défi garde son orbe
+        central : le Coach se distingue par sa flamme, pas par sa position.</li>
+      <li><b>Le Lot 1 est tout ce qu'on voit à gauche</b> — point du jour,
+        séance, bilan — et il ne coûte <b>rien</b> en IA. Livrable seul, il suffit
+        à juger si l'onglet mérite sa place dans la barre.</li>
+      <li><b>Aucun appel IA ne part sans un compteur qui l'autorise</b>, et aucun
+        plafond ne vient du client (migration 198, rejouée pour le coach).</li>
+      <li><b>Si le fournisseur tombe, rien ne casse</b> : le coach retombe en L0
+        et continue de parler.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>

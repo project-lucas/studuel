@@ -3,7 +3,15 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { ReactNode } from 'react'
-import { CircleUser, Crown, House, Swords, User, Users } from 'lucide-react'
+import {
+  CircleUser,
+  Crown,
+  GraduationCap,
+  House,
+  Swords,
+  User,
+  Users,
+} from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
@@ -18,6 +26,7 @@ const links = NAV_TABS
 const ICONS: Record<NavIconName, LucideIcon> = {
   users: Users,
   house: House,
+  cap: GraduationCap,
   swords: Swords,
   user: User,
   crown: Crown,

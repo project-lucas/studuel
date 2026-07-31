@@ -5,6 +5,7 @@ import Link from 'next/link'
 import {
   CalendarDays,
   Flame,
+  GraduationCap,
   Pencil,
   Play,
   Plus,
@@ -307,6 +308,21 @@ export default function MissionHero({
         >
           <Play className="size-5 fill-current" aria-hidden="true" />
           {ctaLabel}
+        </Link>
+      ) : null}
+
+      {/* Le partage avec Marcel, en une ligne : Réviser est l'endroit OÙ l'on
+          travaille, Marcel dit POURQUOI ce chapitre-là et COMMENT on l'attaque
+          (la méthode dépend de la matière). Un lien discret, pas un second
+          bouton — deux boutons à égalité, c'est déjà deux patrons. */}
+      {mission ? (
+        <Link
+          href={`/marcel?vue=methode&matiere=${mission.subjectSlug}`}
+          onClick={() => sfx.tap()}
+          className="text-foreground/70 hover:text-foreground mt-2.5 flex min-h-11 items-center justify-center gap-1.5 text-xs font-bold underline-offset-4 hover:underline"
+        >
+          <GraduationCap className="size-4" aria-hidden="true" />
+          Pourquoi ce chapitre ? Demande à Marcel
         </Link>
       ) : null}
 

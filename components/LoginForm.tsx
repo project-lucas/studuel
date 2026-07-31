@@ -110,10 +110,12 @@ export default function LoginForm() {
           </div>
 
           {mode === 'signin' ? (
-            <p className="-mt-2 text-right text-sm">
+            <p className="-mt-2 flex justify-end text-sm">
+              {/* Zone tactile ≥ 44px (règle du design system) sans déplacer le
+                  texte : le lien s'étend en hauteur, le -my compense le visuel. */}
               <Link
                 href="/login/reset"
-                className="font-medium text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
+                className="inline-flex min-h-[44px] items-center font-medium text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
               >
                 Mot de passe oublié ?
               </Link>
@@ -143,13 +145,15 @@ export default function LoginForm() {
           </Button>
         </form>
 
-        <p className="mt-4 text-center text-sm text-muted-foreground">
+        {/* Cible tactile ≥ 44px : la bascule s'aligne verticalement avec le
+            texte via inline-flex + min-h, sans casser la phrase. */}
+        <p className="mt-4 flex flex-wrap items-center justify-center gap-x-1 text-sm text-muted-foreground">
           {mode === 'signin' ? (
             <>
               Pas encore de compte ?{' '}
               <button
                 type="button"
-                className="font-medium text-foreground underline underline-offset-4"
+                className="inline-flex min-h-[44px] items-center font-medium text-foreground underline underline-offset-4"
                 onClick={() => setMode('signup')}
               >
                 S’inscrire
@@ -160,7 +164,7 @@ export default function LoginForm() {
               Déjà inscrit ?{' '}
               <button
                 type="button"
-                className="font-medium text-foreground underline underline-offset-4"
+                className="inline-flex min-h-[44px] items-center font-medium text-foreground underline underline-offset-4"
                 onClick={() => setMode('signin')}
               >
                 Se connecter

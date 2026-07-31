@@ -6,7 +6,7 @@ import { recordTestSession } from '@/app/test/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import { sfx, buzz } from '@/lib/sounds'
-import { autoAdvanceDelay, bestStreak, COMBO_HOT } from '@/lib/juice'
+import { bestStreak, COMBO_HOT } from '@/lib/juice'
 import { missedQuestions, canRetryMissed } from '@/lib/quiz-retry'
 import { verdictFor } from '@/lib/verdict'
 import ComboBadge from '@/components/ComboBadge'
@@ -16,6 +16,8 @@ import BackButton from '@/components/BackButton'
 import QuitGuardButton from '@/components/QuitGuardButton'
 import ProgressRing from '@/components/ProgressRing'
 import BossApparition from '@/components/defi/BossApparition'
+import QuizFeedbackMascotte from '@/components/QuizFeedbackMascotte'
+import { feedbackTitle, reactionSrc } from '@/lib/quiz-feedback'
 import type { TraqueApparition } from '@/lib/traque'
 import { CircleCheck, CircleX, RotateCcw, ArrowLeft, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -59,6 +61,10 @@ export default function QuizPlayer({
   const [selected, setSelected] = useState<number | null>(null)
   // Bonnes réponses d'affilée (remise à zéro à la première erreur).
   const [streak, setStreak] = useState(0)
+  // Le miroir : erreurs d'affilée, remises à zéro à la première bonne réponse.
+  // C'est ce compteur qui fait tomber les cheveux de la mascotte — et sa remise
+  // à zéro qui les fait repousser, ce qui est tout le sel du gag.
+  const [missStreak, setMissStreak] = useState(0)
   // Meilleure série de la session : sans elle, un « Inarrêtable ×8 » atteint en
   // cours de route ne laisse aucune trace sur l'écran de fin.
   const [best, setBest] = useState(0)
@@ -129,6 +135,7 @@ export default function QuizPlayer({
     // à la première erreur. C'est ce qui donne envie de continuer.
     const nextStreak = good ? streak + 1 : 0
     setStreak(nextStreak)
+    setMissStreak(good ? 0 : missStreak + 1)
     setBest((b) => bestStreak(b, nextStreak))
     if (good) sfx.correctCombo(nextStreak)
     else sfx.wrong()
@@ -169,27 +176,13 @@ export default function QuizPlayer({
     advancingRef.current = false
   }, [index])
 
-  const advanceRef = useRef(advance)
-  useEffect(() => {
-    advanceRef.current = advance
-  })
-
-  // Enchaînement automatique : sur une bonne réponse sans explication à lire,
-  // le tap « Continuer » n'apporte rien et casse le rythme dix fois par
-  // session. On enchaîne donc seul — jamais après une erreur ni quand il y a
-  // une explication, où la pause sert vraiment à comprendre. Le bouton reste
-  // là : un élève qui tape plus vite que le délai garde la main, et le
-  // nettoyage évite un double `advance()`.
-  useEffect(() => {
-    if (selected === null) return
-    const good = selected === question.correct_index
-    const delay = autoAdvanceDelay(good, Boolean(question.explanation))
-    if (delay === null) return
-    const t = setTimeout(() => advanceRef.current(), delay)
-    // `advance` passe par un ref : le garder hors des deps évite de relancer le
-    // minuteur à chaque rendu (ce qui rallongerait le délai indéfiniment).
-    return () => clearTimeout(t)
-  }, [selected, question])
+  // PLUS D'ENCHAÎNEMENT AUTOMATIQUE. Il existait pour les bonnes réponses sans
+  // explication à lire, où le tap « Continuer » ne servait à rien. Il se
+  // retourne contre la feuille de la mascotte : elle monterait et repartirait
+  // avant d'avoir été vue. La feuille étant désormais servie à TOUTES les
+  // matières, il n'y a plus un seul cas où enchaîner seul — le tap EST le
+  // rythme (c'est le geste de Duolingo). `autoAdvanceDelay` reste dans
+  // `lib/juice.ts`, testé, si on veut le rebrancher un jour.
 
   // Repart sur un paquet donné (le quiz entier, ou seulement les erreurs).
   const replay = (deck: QuizQuestion[]) => {
@@ -446,6 +439,10 @@ export default function QuizPlayer({
   const answered = selected !== null
   const isCorrect = selected === question.correct_index
   const isLast = index + 1 >= questions.length
+  // Série en cours DANS LE SENS de la réponse qu'on vient de donner : c'est elle
+  // qui choisit l'illustration et le titre. Les deux compteurs sont déjà à jour
+  // ici (`choose` les a posés), et l'un des deux vaut forcément 0.
+  const run = isCorrect ? streak : missStreak
   return (
     // data-no-swipe : pendant une question, le balayage d'onglet (SwipeTabs)
     // est neutralisé — sinon un glissé du pouce quitte le quiz sans passer par
@@ -454,6 +451,12 @@ export default function QuizPlayer({
       key="quiz-session"
       data-no-swipe
       className="-mx-4 -mt-16 flex min-h-svh flex-col bg-primary px-4 pt-16 pb-24 text-primary-foreground md:-mx-8 md:-mt-10 md:px-8 md:pt-12"
+      // La feuille de la mascotte se pose PAR-DESSUS le bas de l'écran : sans
+      // cette marge, la dernière réponse disparaîtrait sous elle. Elle tient
+      // compte de la mascotte, qui dépasse du panneau de toute sa moitié haute.
+      // En ligne (et non en classe) pour la même raison que dans
+      // QuizFeedbackMascotte.
+      style={answered ? { paddingBottom: '21rem' } : undefined}
     >
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
         <div className="flex items-center justify-between">
@@ -541,32 +544,21 @@ export default function QuizPlayer({
           })}
         </div>
 
-        {/* Feedback + explication + bouton pour continuer. */}
-        {answered ? (
-          <div className="mt-5">
-            <p
-              role="status"
-              className={cn(
-                'font-heading text-center text-lg font-bold',
-                isCorrect ? 'text-highlight' : 'text-white',
-              )}
-            >
-              {isCorrect ? '✅ Bonne réponse !' : '❌ Pas tout à fait…'}
-            </p>
-            {question.explanation ? (
-              <p className="mx-auto mt-2 max-w-md rounded-2xl bg-black/20 px-4 py-3 text-center text-sm leading-relaxed text-primary-foreground/90">
-                {question.explanation}
-              </p>
-            ) : null}
-            <Button
-              onClick={advance}
-              size="lg"
-              className="mt-5 w-full rounded-full bg-card text-foreground shadow-md hover:bg-card/90"
-            >
-              {isLast ? 'Voir mon score' : 'Continuer'}
-            </Button>
-          </div>
-        ) : (
+        {/* Feedback + explication + bouton pour continuer. La feuille porte
+            désormais TOUT le retour après réponse, pour toutes les matières :
+            l'ancien bandeau en ligne (« ✅ Bonne réponse ! ») n'avait plus
+            aucun cas d'usage une fois le pilote généralisé. */}
+        <QuizFeedbackMascotte
+          open={answered}
+          good={isCorrect}
+          imageSrc={reactionSrc(isCorrect, run)}
+          title={feedbackTitle(isCorrect, run, question.id)}
+          correctAnswer={question.options[question.correct_index]}
+          explanation={question.explanation}
+          ctaLabel={isLast ? 'Voir mon score' : 'Continuer'}
+          onContinue={advance}
+        />
+        {answered ? null : (
           <p className="mt-auto pt-6 text-center text-xs font-medium opacity-70">
             Touche une réponse — le résultat s&apos;affiche aussitôt.
           </p>

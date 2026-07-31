@@ -59,7 +59,12 @@ next-env.d.ts
 #   écran chargement/ → public/images/splash.webp
 /public/images/defi/fond écran/
 /public/images/écran chargement/
+#   mascotte/*.png   → public/images/mascotte/reaction-{bonne,mauvaise}.webp
+/public/images/mascotte/*.png
 
 # doublon local des icônes PWA (identiques à /public/icons/, seul chemin servi
 # et référencé par app/manifest.ts)
 /public/LOGO/
+#   serie quizz/     → public/images/mascotte/reaction-{bonne,mauvaise}-{1..5}.webp
+#                      (régénérables : node scripts/serie-quizz.mjs)
+/public/images/serie quizz/

@@ -1,7 +1,8 @@
 import { describe, it, expect, vi } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import type { QuizQuestion } from '@/lib/types'
+import { AUTO_ADVANCE_MS } from '@/lib/juice'
 
 // Premier test d'ASSEMBLAGE du projet : on joue une VRAIE session de quiz et on
 // vérifie que l'écran de fin ne ment pas. Le défaut historique « 8/8 planté avec
@@ -110,5 +111,114 @@ describe('QuizPlayer — l’écran de fin ne ment pas', () => {
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
 
     expect(screen.getByLabelText('2 bonnes réponses sur 2')).toBeInTheDocument()
+  })
+})
+
+// La feuille de la mascotte a d'abord été posée sur le seul anglais 3e, puis
+// généralisée : elle porte désormais TOUT le retour après réponse, quelle que
+// soit la matière — l'ancien bandeau en ligne n'existe plus.
+describe('QuizPlayer — feuille de la mascotte (toutes matières)', () => {
+  it('remplace le feedback en ligne par la feuille, avec la bonne réponse', async () => {
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        subject="Anglais"
+        gradeLevel="3e"
+        record={false}
+      />,
+    )
+
+    await user.click(screen.getByRole('button', { name: 'Lyon' }))
+
+    // La feuille annonce la bonne réponse — l'ancien bandeau, jamais.
+    expect(screen.getByText(/La bonne réponse/)).toBeInTheDocument()
+    expect(screen.queryByText('❌ Pas tout à fait…')).not.toBeInTheDocument()
+  })
+
+  it('sert la feuille aux autres matières, et même sans matière du tout', async () => {
+    // Le dossier pilote n'existe plus : ce qui se joue ici est qu'AUCUN quiz ne
+    // retombe sur l'ancien bandeau, y compris un quiz personnel sans matière.
+    for (const props of [{ subject: 'Mathématiques', gradeLevel: '5e' }, {}]) {
+      const user = userEvent.setup()
+      const vue = render(
+        <QuizPlayer
+          quizId="quiz-test"
+          title="Test"
+          questions={QUESTIONS}
+          record={false}
+          {...props}
+        />,
+      )
+
+      await user.click(screen.getByRole('button', { name: 'Lyon' }))
+
+      expect(screen.getByText(/La bonne réponse/)).toBeInTheDocument()
+      expect(screen.queryByText('❌ Pas tout à fait…')).not.toBeInTheDocument()
+      vue.unmount()
+    }
+  })
+
+  it('n’enchaîne PAS tout seul : la feuille attend le tap', async () => {
+    // Sans explication à lire, une bonne réponse enchaîne d'habitude seule
+    // (AUTO_ADVANCE_MS). Avec la feuille, ce serait un aller-retour illisible.
+    const sansExplication = QUESTIONS.map((q) => ({ ...q, explanation: null }))
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={sansExplication}
+        subject="Anglais"
+        gradeLevel="3e"
+        record={false}
+      />,
+    )
+
+    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    // Horloge réelle : les animations de la feuille (rAF) rendent les faux
+    // minuteurs instables ici, et l'attente reste courte (AUTO_ADVANCE_MS).
+    await act(async () => {
+      await new Promise((r) => setTimeout(r, AUTO_ADVANCE_MS + 400))
+    })
+
+    // Toujours la question 1 : rien n'a filé sous les yeux de l'élève.
+    expect(screen.getByText('Capitale de la France ?')).toBeInTheDocument()
+  })
+
+  // L'illustration monte avec la série. Le choix du rang est testé à part
+  // (lib/quiz-feedback.test.ts) ; ce qui se joue ICI c'est le CÂBLAGE des deux
+  // compteurs — et surtout la remise à zéro de celui des erreurs, qui est tout
+  // le sel du gag : les cheveux de la mascotte repoussent.
+  it('fait monter la série d’erreurs, puis la remet à zéro sur une bonne réponse', async () => {
+    const user = userEvent.setup()
+    // Trois questions : deux erreurs d'affilée, puis une bonne réponse.
+    const trois = [...QUESTIONS, { ...QUESTIONS[0], id: 'q3' }] as unknown as QuizQuestion[]
+    const { container } = render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={trois}
+        subject="Anglais"
+        gradeLevel="3e"
+        record={false}
+      />,
+    )
+    // L'image est décorative (aria-hidden) : le titre porte le sens, pas elle.
+    const src = () => container.querySelector('img')?.getAttribute('src')
+
+    await user.click(screen.getByRole('button', { name: 'Lyon' })) // faux
+    expect(src()).toBe('/images/mascotte/reaction-mauvaise-1.webp')
+
+    await user.click(screen.getByRole('button', { name: 'Continuer' }))
+    await user.click(screen.getByRole('button', { name: '5' })) // faux
+    expect(src()).toBe('/images/mascotte/reaction-mauvaise-2.webp')
+
+    await user.click(screen.getByRole('button', { name: 'Continuer' }))
+    await user.click(screen.getByRole('button', { name: 'Paris' })) // juste
+    // Retour au premier rang du bon côté : la série d'erreurs est bien tombée.
+    expect(src()).toBe('/images/mascotte/reaction-bonne-1.webp')
   })
 })

@@ -31,6 +31,37 @@ le finis et je le vérifie.
 
 ## 2. État réel du projet (à réactualiser)
 
+> ### 🔬 2026-07-31 (cycle 2 `/jour`) — LA QA VISUELLE EST DÉBLOQUÉE + DURCISSEMENT P1
+>
+> **7 lots verts sur `main`** (`90c5115` → `ba9e4d2`). typecheck / lint /
+> **1726 tests** / build de production. **Migration `214` créée, à exécuter**
+> (liste en attente : `188, 194→199, 202, 208, 209, 210, 211, 214`).
+>
+> **Le harnais de QA visuelle EXISTE et FONCTIONNE** (`_ASSOCIE/qa-visuelle.mjs`,
+> local/gitignoré) : WebKit iPhone headless tourne ici, dev server < 1 s,
+> assertions de géométrie + captures. Le motif « QA visuelle impossible »,
+> reporté trois fois, est mort. Il ne mesure QUE les écrans publics tant qu'il
+> n'a pas de session connectée — la suite (portails / `position:fixed` derrière
+> l'auth) est prête à être portée.
+>
+> **Chantier 3 (doctrine P1) appliqué** — 4 audits sous-agents, chaque finding
+> vérifié en code. **Beaucoup de SAIN confirmé** (à NE PAS ré-auditer) : passe de
+> perf du 27/07 (`proxy.ts`, cloisonnement du cache catalogue, `readRowTolerant`
+> par-colonne, `is_admin` frais), `/admin/retention` (206), profil Défi (200/201),
+> RPC créditrices 204/205/207 (montants recalculés en base), atomicité de
+> `create_controle`. **Deux correctifs propres** : migration **`214`** (le plan de
+> prépa ne s'effondre plus en un jour — rejouer un quiz cochait toutes les
+> sessions du chapitre ; garde « une par (contrôle, chapitre) et par jour ») et le
+> commentaire de `getClaims()` (ne détecte pas la révocation avant ~1 h).
+> **Deux fixes a11y** (cibles tactiles ≥ 44 px sur `/login` & `/login/reset`),
+> mesurés par le harnais.
+>
+> **Findings notés, non corrigés (raison)** : `apply_ranked_match`/duel90 `p_won`
+> (famille refonte = jeton de match serveur) ; `gamertag` non filtré en SQL
+> (inert, compromis documenté) ; sous-compte du catalogue premium (latent, réveillé
+> par le paywall B) ; `after()` de `/moi` (auto-cicatrisant) ; les 40 px des
+> primitives shadcn globales (décision design system). Détail : `A-LIRE-JOUR.md`.
+>
 > ### 🩹 2026-07-31 — LA FILE DIT QUOI CONSTRUIRE, LA MESURE DIT QUOI RÉPARER
 >
 > **Sondé le 31/07 (cycle 1 `/jour`).** La **`213` est exécutée** (colonne
@@ -338,6 +369,39 @@ breaking changes vs. l'entraînement.
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible,
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
+
+**2026-07-31 — fin du cycle 2 `/jour` (Lia) :**
+- **Où j'en suis** : **7 lots verts sur `main`** (`90c5115` → `ba9e4d2`).
+  typecheck / lint / **1726 tests** / build de production. **Migration `214`
+  créée, à exécuter** (garde du plan de prépa). Chantier **3** (durcissement P1)
+  fait, chantier **5** amorcé (harnais QA + 2 fixes a11y).
+- **Le fait à retenir** : **la QA visuelle n'est plus une excuse.** WebKit iPhone
+  headless FONCTIONNE ici (`_ASSOCIE/qa-visuelle.mjs`), le dev server démarre en
+  < 1 s. J'ai bouclé mesure → correctif → re-mesure sur de vraies cibles tactiles
+  < 44 px des écrans d'entrée. Corollaire de méthode confirmé : l'audit
+  sous-agents reste le meilleur rendement (beaucoup de SAIN confirmé + 1 vrai
+  défaut pédagogique, la migration 214).
+- **Prochaine cible n°1** : **chantier 5, la suite** — les portails /
+  `position:fixed` d'`app/template.tsx` (vestiaire, modales) et le piège de focus
+  des modales. Le harnais est prêt ; il faut l'ÉTENDRE avec une **session
+  connectée** (profil `profil-iphone-16-pro`) pour atteindre un overlay, assener
+  `largeur < viewport` PENDANT l'animation, puis corriger par `createPortal`
+  (⚠️ retirer l'animation NE SUFFIT PAS). Puis **chantier 6** (parcours joué).
+  **Fenêtre dédiée + un œil humain sur le rendu.**
+- **Pièges neufs** :
+  1. **Lire le CONTENU des fichiers `*mirror*`, pas leurs noms** : j'ai écrit un
+     miroir clan/quêtes déjà couvert par `recompenses-mirror.test.ts` — doublon
+     supprimé le jour même.
+  2. **Les 40 px de `/login` viennent des primitives shadcn GLOBALES**
+     (`ui/input`, `ui/button` en `h-10`) : un fix local ne suffit pas, c'est une
+     décision design system. Ne toucher que les vraies aberrations (liens texte à
+     19-20 px), pas les primitives, sans arbitrage de Lucas.
+  3. **`getClaims()` ne voit pas une révocation avant ~1 h** — pas une régression
+     à reverter (pattern recommandé Supabase, pas d'escalade), mais le commentaire
+     qui disait « même niveau de sécurité » était faux : corrigé.
+- **Économie, redit** : `apply_ranked_match` (duel 90 s) croit `p_won` du client,
+  trophées non plafonnés — 5e occurrence de la famille, correctif = jeton de match
+  serveur (refonte). Le harnais/audit n'y change rien : à arbitrer comme chantier.
 
 **2026-07-31 — fin du cycle 1 `/jour` (Lia) :**
 - **Où j'en suis** : **10 lots verts sur `main`** (`759cd55` → `d45dc01`).

@@ -197,12 +197,35 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     sonde: null,
   },
   {
+    id: '211',
+    fichier: '211_reprise_controles_depuis_upcoming_exams.sql',
+    feature: 'Reprise des contrôles hérités (087 → 203)',
+    siAbsente:
+      'Les contrôles annoncés AVANT la 203 dorment dans profiles.upcoming_exams : ils n’ouvrent aucune carte de préparation sur Réviser (le Défi et les dossiers, eux, les voient déjà — les deux sources sont fusionnées côté code).',
+    // Pas de sonde à la clé anon : la 211 ne crée aucun objet, elle recopie des
+    // lignes protégées par RLS (on ne voit que les siennes, et l'agent n'a pas
+    // de session élève). Rejeu idempotent — un groupe déjà repris est ignoré.
+    sonde: null,
+  },
+  {
     id: '212',
     fichier: '212_traque_boss.sql',
     feature: 'La Traque — boss débusqués en révisant',
     siAbsente:
       'Aucune jauge de traque : le bandeau des gardiens du jour et la tuile Boss de /defi n’apparaissent pas, réviser ne débusque jamais personne.',
     sonde: { type: 'table', table: 'boss_gauges' },
+  },
+  {
+    id: '213',
+    fichier: '213_traque_defaite_fenetre.sql',
+    feature: 'La Traque : une défaite ne referme plus la fenêtre d’une heure',
+    siAbsente:
+      'Perdre un combat de traque efface le gardien débusqué et la moitié de la jauge : la promesse « il disparaît dans 1 h » vaut en réalité UN essai. Le compteur de tentatives affiché à l’écran reste à zéro.',
+    // La colonne `attempts` est le marqueur : une colonne absente répond 42703
+    // même sous RLS « soi uniquement » (zéro ligne ≠ erreur). Le CREATE OR
+    // REPLACE de traque_defaite, lui, n'est pas sondable — mais il arrive dans
+    // le même fichier, donc la colonne suffit.
+    sonde: { type: 'colonne', table: 'boss_gauges', colonne: 'attempts' },
   },
   {
     id: '193',

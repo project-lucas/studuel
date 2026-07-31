@@ -64,7 +64,16 @@ BEGIN
     SELECT
       p.id                                          AS user_id,
       e.value->>'subject'                           AS subject_slug,
-      NULLIF(e.value->>'date', '')::date            AS exam_date,
+      -- Cast DÉFENSIF : `upcoming_exams` est un JSONB écrit par l'application,
+      -- mais rien en base n'en garantissait la forme (aucune contrainte sur la
+      -- colonne). Une seule date malformée ferait échouer TOUTE la migration —
+      -- et Lucas la colle d'un bloc. On ne caste que ce qui a la forme d'une
+      -- clé de jour ; le reste devient un contrôle sans date, jamais une erreur.
+      CASE
+        WHEN e.value->>'date' ~ '^\d{4}-\d{2}-\d{2}$'
+          THEN (e.value->>'date')::date
+        ELSE NULL
+      END                                           AS exam_date,
       -- Le niveau du 1er chapitre du groupe fait office de `grade` : c'est ce
       -- que `addUpcomingExams` résolvait en base (chapters.level).
       (array_agg(e.value->>'level' ORDER BY e.ordinality))[1] AS grade,
@@ -86,7 +95,12 @@ BEGIN
     WHERE COALESCE(e.value->>'subject', '')     <> ''
       AND COALESCE(e.value->>'chapterId', '')   <> ''
       AND COALESCE(e.value->>'chapterTitle','') <> ''
-    GROUP BY p.id, e.value->>'subject', NULLIF(e.value->>'date', '')::date
+    GROUP BY p.id, e.value->>'subject',
+             CASE
+               WHEN e.value->>'date' ~ '^\d{4}-\d{2}-\d{2}$'
+                 THEN (e.value->>'date')::date
+               ELSE NULL
+             END
   LOOP
     -- Idempotence : ce groupe a-t-il déjà son contrôle ? (`IS NOT DISTINCT FROM`
     -- pour que deux dates NULL se reconnaissent.)

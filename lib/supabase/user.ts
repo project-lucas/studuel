@@ -15,9 +15,19 @@ import { createClient } from './server'
 //    @supabase/auth-js — il n'est donc téléchargé qu'une fois par instance,
 //    pas une fois par requête.
 //
-//    Même niveau de sécurité : la signature est vérifiée cryptographiquement,
-//    exactement comme le fait Postgres pour appliquer les policies RLS. Un
-//    jeton forgé est rejeté ici comme il le serait côté base.
+//    Contre la FALSIFICATION, même niveau de sécurité : la signature est
+//    vérifiée cryptographiquement, exactement comme le fait Postgres pour
+//    appliquer les policies RLS. Un jeton forgé est rejeté ici comme côté base.
+//
+//    ⚠️ UN écart assumé, à connaître : `getClaims()` ne détecte PAS une
+//    RÉVOCATION en cours de vie du jeton (compte banni, supprimé, « déconnecté
+//    de partout »). Il valide `exp` + signature en local sans consulter l'état
+//    de session côté serveur — là où `getUser()` faisait l'aller-retour qui
+//    l'aurait vu. Un jeton déjà émis reste donc valide jusqu'à son expiration
+//    naturelle (~1 h). Pas d'escalade de privilège pour autant : les
+//    autorisations sensibles (`is_admin`, `subscription_tier`) sont relues
+//    FRAÎCHEMENT en base à chaque requête (RLS), jamais déduites d'une claim
+//    figée. Le résidu est une continuité d'accès d'au plus une heure.
 //
 // 2. Le layout, le bandeau du haut et la page appelaient CHACUN `getUser()` :
 //    3 appels pour une seule navigation. `cache()` de React mémoïse par

@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import {
   QUEST_CATALOG,
+  QUESTS_PER_DAY,
   ALL_DONE_XP,
   ALL_DONE_GEMS,
 } from '@/lib/quests'
@@ -94,6 +95,15 @@ describe('quêtes du jour : lib/quests.ts ↔ quest_catalog (205)', () => {
     expect(effectiveSql('quest_claim').sql).toMatch(
       /wallet_grant_xp\(v_user,\s*'quests'/,
     )
+  })
+
+  it('borne la réclamation au même nombre de quêtes par jour', () => {
+    // quest_claim refuse une liste plus longue que QUESTS_PER_DAY (`v_asked > N`).
+    // Si lib et SQL divergent, un 4e id passerait côté écran mais serait rejeté
+    // côté serveur, ou l'inverse — encore un mensonge silencieux.
+    const m = effectiveSql('quest_claim').sql.match(/v_asked\s*>\s*(\d+)/)
+    expect(m, 'borne du nombre de quêtes introuvable').not.toBeNull()
+    expect(Number(m![1])).toBe(QUESTS_PER_DAY)
   })
 })
 

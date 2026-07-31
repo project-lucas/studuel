@@ -31,6 +31,45 @@ le finis et je le vérifie.
 
 ## 2. État réel du projet (à réactualiser)
 
+> ### 🩹 2026-07-31 — LA FILE DIT QUOI CONSTRUIRE, LA MESURE DIT QUOI RÉPARER
+>
+> **Sondé le 31/07 (cycle 1 `/jour`).** La **`213` est exécutée** (colonne
+> `boss_gauges.attempts` présente ; la note qui disait le contraire était
+> fausse). **Restent à exécuter** : `188, 194→199, 202, 208, 209, 210` — plus la
+> **`211` neuve** (reprise des contrôles hérités 087 → 203).
+>
+> **Le chantier « `controles` partout » est FERMÉ.** `/defi/jouer` et
+> `/reviser/[subject]` lisaient encore `profiles.upcoming_exams` (087), que plus
+> personne n'alimente depuis la 203 : un contrôle annoncé ne nourrissait plus ni
+> le pool du Défi ni les annotations. `lib/controle-exams` (pur) traduit et
+> **fusionne les deux sources** (dédup par chapitre, la moderne gagne), donc rien
+> ne se perd avant l'exécution de la `211`. `/moi`, mesuré, n'affichait AUCUN
+> contrôle : rien à y rebrancher.
+>
+> **Quatre défauts VIVANTS trouvés hors file, en mesurant** :
+> 1. **Cinq matières pleines masquées depuis le 28/07** — le masquage des
+>    matières vides jugeait chaque matière au niveau de l'ÉLÈVE, or les matières
+>    `fixed_level = 'tous'` (culture générale) rangent leur contenu ailleurs.
+>    Disparues de Réviser ET de La Traque, toutes classes. **Régression du
+>    correctif précédent.**
+> 2. **Le duel 90 s se consommait en arrière-plan** (compensation de 100 ms par
+>    tour de boucle, alors qu'un navigateur BRIDE le `setInterval` d'un onglet
+>    caché) — duel perdu au retour, sans un mot, sur le CTA principal de `/defi`.
+> 3. **« +0 XP »** affiché pendant l'aller-retour serveur, puis corrigé.
+> 4. **Un gardien débusqué pas toujours combattable** : le pool venait des seuls
+>    chapitres ayant nourri la jauge, et la file « À revoir » crédite par matière
+>    SANS chapitre.
+>
+> **Outillage** : 3e test d'assemblage livré (les salons de l'espace Jeux), après
+> `Duel90Mode` — **1725 tests**. Le test de couverture de `/admin/sante` lit
+> désormais sa borne haute **sur le dépôt** (c'est ce qui manquait pour attraper
+> la `213` absente de la carte).
+>
+> **Contenu (31/07)** : 31 matières · 278 chapitres · 11 coquilles vides — mais la
+> vraie mesure est **87 couples (matière, niveau) morts** : une matière peut être
+> pleine en 3e et vide en 2de (Espagnol, Latin, SNT). Le sélecteur de
+> `/bienvenue` en tient compte depuis `0adf6aa`.
+
 > ### ✅⚠️ 2026-07-28 — LE FAIT DE 07-27 EST PÉRIMÉ : LES MIGRATIONS SONT (EN GRANDE PARTIE) EXÉCUTÉES
 >
 > **Sondé le 28/07 (fin de cycle 2 `/jour`).** Lucas a exécuté **9 migrations**
@@ -299,6 +338,45 @@ breaking changes vs. l'entraînement.
 <!-- L'agent écrit ici en fin de session : où j'en suis, prochaine cible,
      pièges. Lucas peut y déposer une consigne du jour. Les anciennes notes
      (2026-07-12 → 2026-07-16) sont dans le git log de ce fichier. -->
+
+**2026-07-31 — fin du cycle 1 `/jour` (Lia) :**
+- **Où j'en suis** : **10 lots verts sur `main`** (`759cd55` → `d45dc01`).
+  typecheck / lint / **1725 tests** / build de production. **Migration `211`
+  créée, à exécuter** (reprise `upcoming_exams` → `controles`). Chantiers **4**
+  (contrôles partout), **7** (tests d'assemblage) et **8** (culs-de-sac) fermés.
+- **Le fait à retenir** : la file dit quoi construire, **la mesure dit quoi
+  réparer**. Les quatre défauts les plus coûteux du jour (cinq matières pleines
+  masquées, le duel volé par l'arrière-plan, « +0 XP », le gardien
+  incombattable) sont sortis d'une sonde à la clé anon et de la lecture du
+  chemin complet — **aucun n'était dans le backlog**.
+- **Prochaine cible n°1** : **chantier 5 — le harnais de QA visuelle**
+  (`_ASSOCIE/qa-visuelle.mjs`, Playwright WebKit iPhone + assertions de
+  géométrie), qui débloque les portails / `position: fixed` d'`app/template.tsx`
+  et le piège de focus des modales ; puis **chantier 6** (parcours de l'élève
+  joué en entier). Les deux ouvrent un outillage neuf : prendre une fenêtre
+  entière, pas une fin de cycle. Reste aussi **la passe de perf du 27/07 jamais
+  auditée** (`getClaims()` sur 54 fichiers, catalogue en `unstable_cache`,
+  `readRowTolerant`).
+- **Pièges neufs** :
+  1. **Une matière `fixed_level` ne se juge JAMAIS au niveau de l'élève** — son
+     contenu vit à son niveau fixe (`tous`). C'est ce qui a effacé cinq matières
+     pendant trois jours.
+  2. **Un test de minuteur écrit avec `advanceTimersByTime` ne peut pas attraper
+     un bug d'arrière-plan** : il fait tourner la boucle à pleine cadence et
+     reste vert avec le code cassé. Modéliser le **bridage** (`setSystemTime` +
+     un seul tour de boucle). 6e occurrence du « garde-fou qui ne peut pas
+     échouer », attrapée avant commit.
+  3. **Un test de couverture qui compare à une borne écrite à la main dérive** :
+     la `213`, créée le 30/07, était absente de `/admin/sante` ET de la sonde
+     sans que rien ne le signale. Lire la borne sur le dépôt.
+  4. **Une migration qui caste du JSONB écrit par l'app doit se défendre** :
+     aucune contrainte ne garantit la forme, et une seule ligne malformée fait
+     échouer le bloc entier que Lucas colle d'un coup.
+- **Économie, signalé non corrigé** : `traque_credit` reçoit ses points du
+  client. Un appel direct à la clé anon débusque un gardien sans réviser puis
+  encaisse — **borné** à 150 pts/jour par gardien et **90 gemmes/semaine relues
+  en base**. 5e occurrence de la famille `apply_ranked_match` ; le vrai
+  correctif est un jeton de session serveur, donc une refonte.
 
 **2026-07-28 — fin du cycle 2 `/jour` (Lia) :**
 - **Où j'en suis** : 4 lots verts sur `main` (`89a2499` migration 209 de reprise

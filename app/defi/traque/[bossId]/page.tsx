@@ -1,6 +1,7 @@
 import { notFound, redirect } from 'next/navigation'
 import TraqueCombat from '@/components/defi/TraqueCombat'
-import { bossById } from '@/lib/bosses'
+import { bossById, bossForSubject } from '@/lib/bosses'
+import { getSubjectsCached } from '@/lib/catalog'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
@@ -13,7 +14,7 @@ import {
 } from '@/lib/traque'
 import type { ModeQuestion } from '@/lib/defi-modes'
 import type { BossRank } from '@/lib/bosses'
-import type { QuizQuestion } from '@/lib/types'
+import { HORS_NIVEAU, type QuizQuestion } from '@/lib/types'
 
 export const metadata = { title: 'La Traque — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -21,6 +22,10 @@ export const dynamic = 'force-dynamic'
 /** Nombre de quiz retenus pour composer le pool — de quoi tenir un combat. */
 const POOL_QUIZZES = 10
 const POOL_QUESTIONS = 40
+/** Chapitres retenus par le repli « matière du gardien ». */
+const POOL_CHAPTERS = 12
+
+type DbClient = Awaited<ReturnType<typeof createClient>>
 
 /**
  * Le gardien est-il RÉELLEMENT défiable à cet instant ? La question se pose
@@ -38,6 +43,126 @@ function shuffle<T>(arr: T[]): T[] {
     ;[a[i], a[j]] = [a[j], a[i]]
   }
   return a
+}
+
+type ChapterRow = {
+  id: string
+  title: string
+  subjects: { name: string; slug: string } | null
+}
+
+/** Les chapitres visés, avec leur matière. Aucun id → aucune requête. */
+function selectChapters(supabase: DbClient, ids: readonly string[]) {
+  if (ids.length === 0) {
+    return Promise.resolve({ data: [] as ChapterRow[] })
+  }
+  return supabase
+    .from('chapters')
+    .select('id, title, subjects!inner(name, slug)')
+    .in('id', ids)
+    .returns<ChapterRow[]>()
+}
+
+/**
+ * Repli : les chapitres de la (ou des) matière(s) du gardien, à la classe de
+ * l'élève. On retrouve ces matières en passant le catalogue par
+ * `bossForSubject` — c'est LA même fonction qui a désigné le gardien au moment
+ * du crédit, donc on ne peut pas dériver d'une table de correspondance de plus.
+ * `HORS_NIVEAU` est inclus : une matière de culture générale range son contenu
+ * au niveau `tous`.
+ */
+async function bossSubjectChapters(
+  supabase: DbClient,
+  bossId: string,
+  grade: string,
+): Promise<string[]> {
+  const subjectIds = (await getSubjectsCached())
+    .filter((s) => bossForSubject(s.name).id === bossId)
+    .map((s) => s.id)
+  if (subjectIds.length === 0) return []
+  const { data } = await supabase
+    .from('chapters')
+    .select('id')
+    .in('subject_id', subjectIds)
+    .in('level', [grade, HORS_NIVEAU])
+    .order('position', { ascending: true })
+    .limit(POOL_CHAPTERS)
+    .returns<{ id: string }[]>()
+  return (data ?? []).map((c) => c.id)
+}
+
+/**
+ * Le pool de questions tiré d'une liste de chapitres ORDONNÉE (le plus récent
+ * d'abord) : leçons → quiz → questions, pondérés par le rang du chapitre.
+ * Renvoie [] dès qu'un maillon manque — c'est l'appelant qui décide du repli.
+ */
+async function buildPool(
+  supabase: DbClient,
+  chapters: readonly string[],
+): Promise<ModeQuestion[]> {
+  if (chapters.length === 0) return []
+
+  const { data: lessonRows } = await supabase
+    .from('lessons')
+    .select('id, chapter_id')
+    .in('chapter_id', chapters as string[])
+    .returns<{ id: string; chapter_id: string }[]>()
+  const lessons = lessonRows ?? []
+  if (lessons.length === 0) return []
+
+  const rankByChapter = new Map(chapters.map((id, i) => [id, i]))
+  const lessonRank = new Map(
+    lessons.map((l) => [
+      l.id,
+      rankByChapter.get(l.chapter_id) ?? Number.MAX_SAFE_INTEGER,
+    ]),
+  )
+
+  const { data: quizRows } = await supabase
+    .from('quizzes')
+    .select('id, subject, lesson_id')
+    .in('lesson_id', lessons.map((l) => l.id))
+    .returns<{ id: string; subject: string | null; lesson_id: string | null }[]>()
+
+  // Pondération « le plus récent d'abord » : le combat porte sur la dernière
+  // session de révision avant tout. `sort` est stable, donc à rang égal le
+  // mélange ci-dessus est conservé.
+  const quizzes = shuffle(quizRows ?? [])
+    .sort(
+      (a, b) =>
+        (lessonRank.get(a.lesson_id ?? '') ?? Number.MAX_SAFE_INTEGER) -
+        (lessonRank.get(b.lesson_id ?? '') ?? Number.MAX_SAFE_INTEGER),
+    )
+    .slice(0, POOL_QUIZZES)
+  if (quizzes.length === 0) return []
+
+  const subjectByQuiz = new Map(quizzes.map((q) => [q.id, q.subject]))
+  const { data: questions } = await supabase
+    .from('quiz_questions')
+    .select('id, quiz_id, question, kind, options, correct_index, explanation, position')
+    .in('quiz_id', quizzes.map((q) => q.id))
+    .returns<QuizQuestion[]>()
+
+  const valid = (questions ?? []).filter(
+    (q) =>
+      Array.isArray(q.options) &&
+      q.options.length >= 2 &&
+      q.correct_index >= 0 &&
+      q.correct_index < q.options.length,
+  )
+  return shuffle(valid)
+    .slice(0, POOL_QUESTIONS)
+    .map((q) => {
+      const shuffled = permuteQuizOptions(q.kind, q.options, q.correct_index, q.id)
+      return {
+        id: q.id,
+        prompt: q.question,
+        options: shuffled.options,
+        correctIndex: shuffled.correctIndex,
+        explanation: q.explanation,
+        subject: subjectByQuiz.get(q.quiz_id) ?? null,
+      }
+    })
 }
 
 /**
@@ -73,10 +198,7 @@ export default async function TraquePage({
   if (!isFightable(gauge)) redirect('/defi')
 
   const rank = Math.min(1 + gauge.victories, 3) as BossRank
-  const chapters = poolChapters(gauge.chapters)
 
-  // --- Le vivier : les quiz de la MATIÈRE du gardien, à la classe de l'élève,
-  // priorisés par les chapitres qui ont nourri la jauge.
   const { data: profile } = await supabase
     .from('profiles')
     .select('grade_level')
@@ -85,83 +207,32 @@ export default async function TraquePage({
   const grade = profile?.grade_level ?? null
   if (!grade) redirect('/onboarding')
 
-  // Les chapitres nourris disent déjà la matière ET le contenu : on part
-  // d'eux, et le niveau de l'élève sert de garde-fou.
-  const { data: chapterRows } = await supabase
-    .from('chapters')
-    .select('id, title, subjects!inner(name, slug)')
-    .in('id', chapters.length > 0 ? chapters : ['00000000-0000-0000-0000-000000000000'])
-    .returns<
-      { id: string; title: string; subjects: { name: string; slug: string } | null }[]
-    >()
+  // --- Le vivier : les chapitres qui ont NOURRI la jauge, les plus récents
+  // d'abord. À défaut, ceux de la matière du gardien à la classe de l'élève.
+  //
+  // Le repli n'est pas décoratif : une jauge peut se remplir SANS chapitre
+  // (la file « À revoir » crédite par matière, ses items ne portent pas de
+  // chapitre), et un chapitre nourri peut n'avoir aucun quiz. Sans repli,
+  // l'élève débusquait un gardien puis trouvait un « GO » grisé : l'heure
+  // promise brûlait, la jauge retombait à 50, et la boucle entière —
+  // réviser → débusquer → combattre → gemmes — se refermait sur rien.
+  let chapters = poolChapters(gauge.chapters)
+  let pool = await buildPool(supabase, chapters)
+  if (pool.length === 0) {
+    const repli = await bossSubjectChapters(supabase, boss.id, grade)
+    if (repli.length > 0) {
+      chapters = repli
+      pool = await buildPool(supabase, chapters)
+    }
+  }
 
+  const { data: chapterRows } = await selectChapters(supabase, chapters)
   const chapterById = new Map((chapterRows ?? []).map((c) => [c.id, c]))
   // Le plus récemment travaillé est en tête de `chapters` : c'est LUI que
   // l'écran de victoire proposera d'ouvrir.
   const freshest = chapters.map((id) => chapterById.get(id)).find(Boolean) ?? null
   const subject = freshest?.subjects?.name ?? boss.epithet
-
-  const { data: lessonRows } = await supabase
-    .from('lessons')
-    .select('id, chapter_id')
-    .in('chapter_id', chapters.length > 0 ? chapters : ['x'])
-    .returns<{ id: string; chapter_id: string }[]>()
-
-  const rankByChapter = new Map(chapters.map((id, i) => [id, i]))
-  const lessonRank = new Map(
-    (lessonRows ?? []).map((l) => [
-      l.id,
-      rankByChapter.get(l.chapter_id) ?? Number.MAX_SAFE_INTEGER,
-    ]),
-  )
-
-  const { data: quizRows } = await supabase
-    .from('quizzes')
-    .select('id, subject, lesson_id')
-    .in(
-      'lesson_id',
-      (lessonRows ?? []).length > 0 ? (lessonRows ?? []).map((l) => l.id) : ['x'],
-    )
-    .returns<{ id: string; subject: string | null; lesson_id: string | null }[]>()
-
-  // Pondération « le plus récent d'abord » : le combat porte sur la dernière
-  // session de révision avant tout.
-  const quizzes = shuffle(quizRows ?? [])
-    .sort(
-      (a, b) =>
-        (lessonRank.get(a.lesson_id ?? '') ?? Number.MAX_SAFE_INTEGER) -
-        (lessonRank.get(b.lesson_id ?? '') ?? Number.MAX_SAFE_INTEGER),
-    )
-    .slice(0, POOL_QUIZZES)
-
-  const pool: ModeQuestion[] = []
-  if (quizzes.length > 0) {
-    const subjectByQuiz = new Map(quizzes.map((q) => [q.id, q.subject]))
-    const { data: questions } = await supabase
-      .from('quiz_questions')
-      .select('id, quiz_id, question, kind, options, correct_index, explanation, position')
-      .in('quiz_id', quizzes.map((q) => q.id))
-      .returns<QuizQuestion[]>()
-
-    const valid = (questions ?? []).filter(
-      (q) =>
-        Array.isArray(q.options) &&
-        q.options.length >= 2 &&
-        q.correct_index >= 0 &&
-        q.correct_index < q.options.length,
-    )
-    for (const q of shuffle(valid).slice(0, POOL_QUESTIONS)) {
-      const shuffled = permuteQuizOptions(q.kind, q.options, q.correct_index, q.id)
-      pool.push({
-        id: q.id,
-        prompt: q.question,
-        options: shuffled.options,
-        correctIndex: shuffled.correctIndex,
-        explanation: q.explanation,
-        subject: subjectByQuiz.get(q.quiz_id) ?? subject,
-      })
-    }
-  }
+  for (const q of pool) q.subject = q.subject ?? subject
 
   const chapterHref =
     freshest && freshest.subjects?.slug

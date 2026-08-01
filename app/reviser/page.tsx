@@ -79,7 +79,8 @@ export const dynamic = 'force-dynamic'
 
 // Les colonnes du profil dont cet écran a besoin, toutes migrations confondues.
 // `tutorial_completed` (188) peut ne pas exister encore : elle ressort alors à
-// `undefined` et le tour guidé ne se lance simplement pas.
+// `undefined`, et c'est la mémoire locale du navigateur qui tranche
+// (cf. lib/tour-local) — sans quoi le tour guidé ne se lançait JAMAIS.
 type ProfileRow = {
   full_name: string | null
   grade_level: string | null
@@ -89,7 +90,7 @@ type ProfileRow = {
   oral_texts: unknown
   upcoming_exams: unknown
   daily_goal_minutes: number | null
-  tutorial_completed: boolean | null
+  tutorial_completed?: boolean | null
 }
 
 const EXAM_TITLES: Record<string, string> = {
@@ -609,16 +610,17 @@ export default async function ReviserPage() {
       : `${dueCourses.slice(0, 2).join(' · ')} · +${dueCourses.length - 2} cours`
   const hasPlayableQuestions = playableQuestions.length > 0
 
-  // Tour guidé : uniquement si la colonne existe (188) et dit « jamais vu ».
-  // Colonne absente → `undefined`, donc jamais `=== false` : le tour ne se
-  // lance pas, exactement comme quand la lecture isolée échouait.
-  const tourAutoStart = profile.tutorial_completed === false
+  // Tour guidé. La base fait autorité dès qu'elle répond ; si la colonne 188
+  // n'existe pas encore, on passe la main au composant, qui lira la mémoire
+  // locale du navigateur. Avant ce changement, `=== false` ne pouvait jamais
+  // être vrai sans la migration : une fonctionnalité entière, écrite et
+  // testée, ne s'était jamais déclenchée chez un seul élève.
 
   return (
     <div className="flex flex-col gap-3">
       <TabHeader title="Réviser" />
       {/* Tour guidé post-onboarding (spotlights sur la nav + bulles). */}
-      <TourGuide autoStart={tourAutoStart} />
+      <TourGuide etatEnBase={profile.tutorial_completed} />
       {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
       <SubjectMasteryCelebration
         entries={followed.map((s) => ({

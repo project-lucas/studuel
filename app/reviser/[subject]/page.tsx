@@ -31,6 +31,7 @@ import {
   type ModeGroup,
   type SubjectTemplateData,
 } from '@/lib/subject-template'
+import { mindMapFromLessons } from '@/lib/mind-map-auto'
 import { getReviewItems } from '@/lib/srs'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import type { ModeQuestion } from '@/lib/defi-modes'
@@ -53,6 +54,13 @@ import {
 export const dynamic = 'force-dynamic'
 
 // Mélange (Fisher-Yates) — pour varier le pool du boss d'une visite à l'autre.
+// Quiz de secours d'un chapitre : celui de la PREMIÈRE leçon qui en a un.
+// Même règle (et même déterminisme) que `pickLessonQuiz` côté page de leçon —
+// ici on n'a que l'id à afficher dans la tuile.
+function quizDuChapitre(chapter: CatalogChapter): string | undefined {
+  return chapter.lessons.find((l) => l.quizzes[0]?.id)?.quizzes[0]?.id
+}
+
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -353,7 +361,10 @@ export default async function SubjectPage({
     ),
     flashcards: groupsFor((chapter) =>
       chapter.lessons.flatMap((l) => {
-        const quizId = l.quizzes[0]?.id
+        // Repli sur le quiz du chapitre : une leçon sur deux n'a pas le sien
+        // (564 leçons pour 295 quiz) et disparaissait donc de cet onglet.
+        // Même règle que la page flashcards, cf. lib/lesson-quiz.
+        const quizId = l.quizzes[0]?.id ?? quizDuChapitre(chapter)
         const count = quizId ? (questionCountByQuiz.get(quizId) ?? 0) : 0
         if (!quizId || count === 0) return []
         return [
@@ -369,7 +380,11 @@ export default async function SubjectPage({
       }),
     ),
     cartes: groupsFor((chapter) => {
-      if (!chapter.has_mind_map) return []
+      // La tuile s'affiche aussi quand la carte est DÉRIVABLE du cours
+      // (cf. lib/mind-map-auto) : sans cela, presque aucun chapitre n'avait de
+      // carte et l'onglet restait désespérément vide.
+      const derivable = mindMapFromLessons(chapter.title, chapter.lessons) !== null
+      if (!chapter.has_mind_map && !derivable) return []
       const locked = !canOpenChapter(tier, chapter.id, unlockedChapters)
       return [
         {
@@ -384,7 +399,9 @@ export default async function SubjectPage({
     }),
     defis: groupsFor((chapter) =>
       chapter.lessons.flatMap((l) => {
-        const quizId = l.quizzes[0]?.id
+        // Même repli que les flashcards : le défi se joue sur les questions du
+        // chapitre quand la leçon n'a pas son propre quiz.
+        const quizId = l.quizzes[0]?.id ?? quizDuChapitre(chapter)
         const count = quizId ? (questionCountByQuiz.get(quizId) ?? 0) : 0
         if (!quizId || count === 0) return []
         const attempted = defiAttempted.has(l.id)

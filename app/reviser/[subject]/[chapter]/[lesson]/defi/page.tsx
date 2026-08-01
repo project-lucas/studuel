@@ -2,10 +2,11 @@ import Link from 'next/link'
 import BackButton from '@/components/BackButton'
 import DefiSoloPlayer from '@/components/DefiSoloPlayer'
 import LessonSupportLock from '@/components/LessonSupportLock'
+import { quizSourceLabel } from '@/lib/lesson-quiz'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import { canAccessPremiumTests, getUserTierFor } from '@/lib/subscription'
 import type { QuizQuestion } from '@/lib/types'
-import { loadLessonContext } from '../data'
+import { loadLessonContext, loadLessonQuiz } from '../data'
 
 export const dynamic = 'force-dynamic'
 
@@ -26,19 +27,17 @@ export default async function LessonDefiPage({
 
   const backHref = `/reviser/${subject.slug}/${chapter.id}/${lesson.id}/cours`
 
-  // On lit `is_free` pour gater le premium (sinon la RLS renvoie 0 question et
-  // on afficherait un trompeur « bientôt » au lieu du paywall).
-  const [{ data: quiz }, tier] = await Promise.all([
-    supabase
-      .from('quizzes')
-      .select('id, is_free')
-      .eq('lesson_id', lesson.id)
-      .maybeSingle<{ id: string; is_free: boolean }>(),
+  // Le quiz de la leçon d'abord ; à défaut celui d'une leçon voisine du même
+  // chapitre (cf. lib/lesson-quiz) — sinon une leçon sur deux n'aurait aucun
+  // défi. On lit `is_free` pour gater le premium (sinon la RLS renvoie
+  // 0 question et on afficherait un trompeur « bientôt » au lieu du paywall).
+  const [quiz, tier] = await Promise.all([
+    loadLessonQuiz(supabase, chapter.id, lesson.id),
     // Le user vient de loadLessonContext : pas de second aller-retour Auth.
     getUserTierFor(supabase, user.id),
   ])
 
-  if (quiz && !quiz.is_free && !canAccessPremiumTests(tier)) {
+  if (quiz && !quiz.isFree && !canAccessPremiumTests(tier)) {
     return (
       <div className="mx-auto w-full max-w-2xl">
         <BackButton fallback={backHref} />
@@ -56,7 +55,7 @@ export default async function LessonDefiPage({
       .select(
         'id, quiz_id, question, kind, options, correct_index, explanation, position',
       )
-      .eq('quiz_id', quiz.id)
+      .eq('quiz_id', quiz.quizId)
       .order('position', { ascending: true })
       .returns<QuizQuestion[]>()
 
@@ -74,10 +73,11 @@ export default async function LessonDefiPage({
         <BackButton fallback={backHref} />
         <div className="mx-auto mt-8 max-w-md rounded-3xl border border-dashed p-8 text-center">
           <p className="font-heading font-semibold">
-            Le défi de cette leçon arrive bientôt.
+            Aucun défi pour ce chapitre.
           </p>
           <p className="text-muted-foreground mt-2 text-sm">
-            Il se construira automatiquement dès que la leçon aura son quiz.
+            Le défi se joue sur les questions du chapitre — et aucun quiz n&apos;y
+            est encore rattaché. Le cours, lui, est complet.
           </p>
           <Link
             href={backHref}
@@ -93,7 +93,13 @@ export default async function LessonDefiPage({
   return (
     <DefiSoloPlayer
       questions={questions}
-      title={lesson.title}
+      // Honnêteté : quand les questions viennent d'une leçon voisine, on le dit
+      // dans le titre plutôt que de les faire passer pour celles de la leçon.
+      title={
+        quiz && quizSourceLabel(quiz.source, chapter.title)
+          ? `${lesson.title} · questions du chapitre`
+          : lesson.title
+      }
       subject={subject.name}
       backHref={backHref}
       lessonId={lesson.id}

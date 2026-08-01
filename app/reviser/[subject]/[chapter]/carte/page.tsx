@@ -8,6 +8,7 @@ import { getUserTierFor } from '@/lib/subscription'
 import { chapterAccess } from '@/lib/gems'
 import { fetchGems, fetchUnlockedChapters } from '@/lib/gems-access'
 import { mindMapPlaceholder } from '@/lib/mind-map'
+import { mindMapFromLessons, type LessonForMap } from '@/lib/mind-map-auto'
 import { chapterHasMindMap, fetchMindMap } from '@/lib/mind-map-access'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
@@ -57,8 +58,32 @@ export default async function MindMapPage({
   const access = chapterAccess(tier, chapterId, unlockedChapters)
   const unlocked = access !== 'locked'
 
+  // Carte rédigée à la main d'abord. À défaut — c'est le cas de la quasi-
+  // totalité des chapitres — on la DÉRIVE du cours : le chapitre au centre, une
+  // branche par leçon, un rameau par titre de section (cf. lib/mind-map-auto).
+  // Une carte mentale n'est rien d'autre que la structure du cours, et cette
+  // structure existe déjà : mieux vaut la montrer que promettre « bientôt ».
+  //
+  // Le verrou payant ne bouge pas : on ne dérive que pour un élève qui a le
+  // droit d'ouvrir la carte. Les autres gardent le leurre.
   let mindMap: MindMapData | null = null
-  if (hasMindMap && unlocked) mindMap = await fetchMindMap(supabase, chapterId)
+  let derivee = false
+  if (unlocked) {
+    if (hasMindMap) mindMap = await fetchMindMap(supabase, chapterId)
+    if (!mindMap) {
+      const { data: lessons } = await supabase
+        .from('lessons')
+        .select('title, content')
+        .eq('chapter_id', chapterId)
+        .order('position', { ascending: true })
+        .returns<LessonForMap[]>()
+      mindMap = mindMapFromLessons(chapter.title, lessons ?? [])
+      derivee = mindMap !== null
+    }
+  }
+  // « Il y a quelque chose à ouvrir » : une carte rédigée OU dérivable. Sert
+  // aussi à l'élève non débloqué, pour qui on ne charge aucun contenu.
+  const carteExiste = hasMindMap || derivee || !unlocked
 
   return (
     <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
@@ -95,12 +120,20 @@ export default async function MindMapPage({
       </header>
 
       <div className="mx-auto w-full max-w-4xl px-4 py-6 md:px-8">
-        {!hasMindMap ? (
+        {!carteExiste ? (
           <p className="text-sm text-muted-foreground">
-            La carte mentale de ce chapitre arrive bientôt.
+            Ce chapitre n&apos;a pas encore de cours écrit : il n&apos;y a rien à
+            cartographier pour l&apos;instant.
           </p>
         ) : mindMap ? (
-          <MindMap data={mindMap} />
+          <>
+            <MindMap data={mindMap} />
+            {derivee ? (
+              <p className="text-muted-foreground mt-4 text-center text-xs">
+                Carte construite à partir du cours du chapitre.
+              </p>
+            ) : null}
+          </>
         ) : unlocked ? (
           // Accès légitime (abonnement ou gemme déjà dépensée) mais contenu
           // injoignable : ne JAMAIS lui servir l'écran « Débloque », il a payé.

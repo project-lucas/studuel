@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "sonde": "node _ASSOCIE/sonde-base.mjs",
+    "sonde:contenu": "node _ASSOCIE/sonde-contenu.mjs",
+    "contenu": "node scripts/seed-contenu.mjs --num 216 --slugs emc,sport > supabase/216_contenu_emc_sport.sql && node scripts/seed-contenu.mjs --num 217 --slugs musique,arts-plastiques > supabase/217_contenu_musique_arts.sql && node scripts/seed-contenu.mjs --num 218 --slugs allemand,grec > supabase/218_contenu_allemand_grec.sql && node scripts/seed-contenu.mjs --num 219 --slugs snt,hlp,llcer-anglais,si,maths-complementaires > supabase/219_contenu_lycee.sql && node scripts/seed-contenu.mjs --num 220 --slugs espagnol,latin > supabase/220_contenu_espagnol_latin_lycee.sql"
   },
   "dependencies": {
     "@dicebear/collection": "^9.4.2",

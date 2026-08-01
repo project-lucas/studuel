@@ -154,7 +154,7 @@ export default function ProfileModal({
               onBannerChange={setBanner}
             />
           ) : (
-            <StatDashboard summary={data.summary} />
+            <StatDashboard summary={data.summary} standings={data.standings} />
           )}
 
           <BadgeGallery

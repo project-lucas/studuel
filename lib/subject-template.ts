@@ -7,6 +7,7 @@
 import { LESSON_FLOOR } from '@/lib/mastery'
 import type { ExamProximity } from '@/lib/next-exam'
 import type { ModeQuestion } from '@/lib/defi-modes'
+import type { Standing } from '@/lib/percentile'
 
 // ---------------------------------------------------------------------------
 // Onglets de la page matière.
@@ -197,7 +198,20 @@ export type SubjectErrorsData = {
 
 export type SubjectTemplateData = {
   subject: { slug: string; name: string; color: string }
+  /** Libellé long du programme affiché en clair (« 3e », « Terminale »). */
   grade: string
+  /**
+   * Niveau brut de l'élève (`profiles.grade_level`), qui sert à NOMMER la
+   * cohorte du classement (« des 3e »). Distinct de `grade`, qui est le
+   * programme suivi et peut être écrit autrement.
+   */
+  gradeLevel: string | null
+  /**
+   * Place de l'élève dans cette matière parmi son niveau. `null` quand il n'y a
+   * rien d'honnête à annoncer — pas assez de quiz passés, ou cohorte trop
+   * petite pour un pourcentage (docs/CADRAGE-PERCENTILE.md).
+   */
+  standing: Standing | null
   progress: SubjectProgress
   isNew: boolean
   weakCount: number

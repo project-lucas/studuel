@@ -15,6 +15,8 @@ import WorldBackdrop from '@/components/WorldBackdrop'
 import MoiTopBar from '@/components/moi/MoiTopBar'
 import MoiTabSwitcher from '@/components/moi/MoiTabSwitcher'
 import HeroCard from '@/components/moi/HeroCard'
+import StandingLine from '@/components/StandingLine'
+import { parseGradeStandings } from '@/lib/percentile'
 import TrajectoryCard from '@/components/moi/TrajectoryCard'
 import WeeklyLeversCard, {
   type LeverState,
@@ -136,6 +138,7 @@ export default async function MoiPage() {
     { data: gradeRows },
     { data: termRows, error: termError },
     { data: storedLogs },
+    { data: standingsRow },
   ] = await Promise.all([
     readRowTolerant<MoiProfileRow>(supabase, 'profiles', 'id', user.id, [
       'full_name',
@@ -199,6 +202,12 @@ export default async function MoiPage() {
       { user_id: user.id, catalog_id: PLANIFIER_CATALOG_ID, target: {} },
       { onConflict: 'user_id,catalog_id', ignoreDuplicates: true },
     ),
+    // Place de l'élève dans sa cohorte de niveau (223). Passe par une RPC
+    // SECURITY DEFINER, jamais par une jointure : la RLS de `profiles` ne
+    // laisserait voir que sa propre ligne et l'app annoncerait « 1er sur 1 ».
+    // Si la migration n'est pas passée, l'erreur est avalée par le parseur et
+    // la ligne ne s'affiche simplement pas.
+    supabase.rpc('my_grade_standings'),
   ])
 
   const commuteSlots: CommuteSlot[] = Array.isArray(profile?.commute_slots)
@@ -297,6 +306,7 @@ export default async function MoiPage() {
   const gradeLabel = gradeLevel ? (GRADE_LABELS[gradeLevel] ?? gradeLevel) : null
   const level = workLevel(Number(profile.work_seconds ?? 0) || 0)
   const coins = Number(profile.coins ?? 0) || 0
+  const standings = parseGradeStandings(standingsRow)
   const avatarConfig = normalizeAvatarConfig(profile.avatar)
   const heroAvatarUri = avatarDataUri(avatarConfig, 320)
   const miniAvatarUri = avatarDataUri(avatarConfig, 80)
@@ -324,6 +334,18 @@ export default async function MoiPage() {
                 capacite={capacite}
                 plafond={plafond}
                 drivers={drivers}
+                // « Tu travailles plus que 96 % des 3e ». Sur cet onglet, la
+                // mesure est l'ASSIDUITÉ et pas les trophées : /moi est le
+                // miroir du travail fourni, pas de la compétition.
+                standing={
+                  <StandingLine
+                    standing={standings.assiduite}
+                    grade={standings.grade ?? gradeLevel}
+                    // Sur le violet plein de la hero card, l'encre de marque
+                    // disparaîtrait : ici la phrase se lit en blanc.
+                    className="text-white/90"
+                  />
+                }
               />
               <TrajectoryCard
                 trajectory={trajectory}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import StandingLine from '@/components/StandingLine'
 import SubjectHeader from '@/components/reviser/SubjectHeader'
 import ModeTabs from '@/components/reviser/ModeTabs'
 import ChapterList from '@/components/reviser/ChapterList'
@@ -37,6 +38,15 @@ export default function SubjectTemplate({
         progress={data.progress}
         gems={data.gems}
         streak={data.streak}
+        standing={
+          data.standing ? (
+            <StandingLine
+              standing={data.standing}
+              grade={data.gradeLevel}
+              className="mt-0.5"
+            />
+          ) : null
+        }
       >
         <ModeTabs active={mode} onChange={setMode} />
       </SubjectHeader>

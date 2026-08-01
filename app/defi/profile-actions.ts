@@ -20,6 +20,7 @@ import {
   type ProfileStatInputs,
 } from '@/lib/profile-stats'
 import { schoolLevelForGrade } from '@/lib/clan'
+import { parseGradeStandings, type GradeStandings } from '@/lib/percentile'
 
 // Tout ce dont la carte + la modale de profil ont besoin, sérialisable.
 export type ProfileData = {
@@ -34,6 +35,12 @@ export type ProfileData = {
   profileBanner: string | null
   schoolName: string | null
   summary: ProfileSummary
+  /**
+   * Place de l'élève parmi les élèves de son niveau. Sur cet écran c'est la
+   * mesure TROPHÉES qu'on affiche : /defi est l'arène, on y compare ce qui s'y
+   * gagne. Les autres mesures voyagent avec, prêtes pour d'autres écrans.
+   */
+  standings: GradeStandings
   /** Catalogue complet, chaque badge marqué acquis ou non (ordre catalogue). */
   badges: BadgeState[]
   /** Ids des badges mis en avant, dans l'ordre choisi (≤3). */
@@ -71,6 +78,7 @@ export async function getProfileData(): Promise<ProfileData | null> {
     { data: cosmetics },
     { data: catalog },
     { data: mine },
+    { data: standingsRow },
   ] = await Promise.all([
     supabase.rpc('profile_stats'),
     supabase
@@ -89,6 +97,10 @@ export async function getProfileData(): Promise<ProfileData | null> {
       .maybeSingle(),
     supabase.from('badges').select('id, slug, title, description, icon, condition'),
     supabase.from('user_badges').select('badge_id, unlocked_at').eq('user_id', user.id),
+    // Place de l'élève parmi son niveau (223) : ce qui traduit « 3 000
+    // trophées » en « top 2 % des 3e ». RPC SECURITY DEFINER obligatoire — la
+    // RLS de `profiles` ne laisserait voir qu'une seule ligne à l'élève.
+    supabase.rpc('my_grade_standings'),
   ])
 
   // Bannières équipables : les gratuites d'office (price + unlock null) et
@@ -202,6 +214,7 @@ export async function getProfileData(): Promise<ProfileData | null> {
     profileBanner: cosmetics?.profile_banner ? str(cosmetics.profile_banner) : null,
     schoolName,
     summary: buildProfileSummary(inputs),
+    standings: parseGradeStandings(standingsRow),
     badges,
     equippedBadgeIds,
     newlyUnlocked,

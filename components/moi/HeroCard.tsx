@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import {
   BookOpen,
   Brain,
@@ -104,6 +105,7 @@ export default function HeroCard({
   capacite,
   plafond,
   drivers,
+  standing = null,
 }: {
   name: string
   gradeLabel: string | null
@@ -113,6 +115,12 @@ export default function HeroCard({
   capacite: number | null
   plafond: number | null
   drivers: DriverScore[]
+  /**
+   * Place de l'élève parmi son niveau (« Tu travailles plus que 96 % des 3e »),
+   * rendue par le serveur. `null` quand il n'y a rien d'honnête à annoncer :
+   * cohorte trop petite pour un pourcentage, ou élève pas encore classé.
+   */
+  standing?: ReactNode
 }) {
   return (
     <section
@@ -128,11 +136,16 @@ export default function HeroCard({
         <h1 className="font-heading text-2xl leading-tight font-bold text-balance">
           Bonjour {name}
         </h1>
-        {gradeLabel ? (
-          <span className="mt-1.5 inline-block rounded-full bg-white px-3 py-1 text-xs font-extrabold text-foreground shadow-sm">
-            {gradeLabel}
-          </span>
-        ) : null}
+        <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1">
+          {gradeLabel ? (
+            <span className="inline-block rounded-full bg-white px-3 py-1 text-xs font-extrabold text-foreground shadow-sm">
+              {gradeLabel}
+            </span>
+          ) : null}
+          {/* La traduction du compteur de travail en phrase lisible. Posée à
+              côté du niveau parce qu'elle en parle : « des 3e ». */}
+          {standing}
+        </div>
       </div>
 
       {/* ~40 % avatar / 60 % jauge : la jauge reste dominante. */}

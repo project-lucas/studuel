@@ -33,6 +33,7 @@ import {
 } from '@/lib/subject-template'
 import { mindMapFromLessons } from '@/lib/mind-map-auto'
 import { getReviewItems } from '@/lib/srs'
+import { parseGradeStandings } from '@/lib/percentile'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import type { ModeQuestion } from '@/lib/defi-modes'
 import {
@@ -180,6 +181,7 @@ export default async function SubjectPage({
     { data: studyDays },
     { data: challengeDays },
     { data: defiEvents },
+    { data: standingsRow },
   ] =
     await Promise.all([
       supabase
@@ -234,6 +236,9 @@ export default async function SubjectPage({
         .eq('user_id', user.id)
         .eq('source', 'defi')
         .returns<{ source_key: string | null }[]>(),
+      // Classements par niveau (223) : on ne garde ici que la matière ouverte.
+      // RPC SECURITY DEFINER — la RLS de `profiles` interdit toute jointure.
+      supabase.rpc('my_grade_standings'),
     ])
 
   // Série 🔥 du header : jours (clés UTC) avec au moins une session, toutes
@@ -459,9 +464,18 @@ export default async function SubjectPage({
       }
     })
 
+  // Place de l'élève dans CETTE matière, parmi son niveau (223). L'appariement
+  // se fait sur le nom affichable de la matière : c'est ce que porte
+  // `quizzes.subject`, donc ce sur quoi la RPC agrège.
+  const standings = parseGradeStandings(standingsRow)
+  const subjectStanding =
+    standings.maitrise.find((m) => m.subject === subject.name)?.standing ?? null
+
   const data: SubjectTemplateData = {
     subject: { slug: subject.slug, name: subject.name, color: subject.color },
     grade,
+    gradeLevel: standings.grade,
+    standing: subjectStanding,
     progress,
     isNew: isNewToSubject(values),
     weakCount,

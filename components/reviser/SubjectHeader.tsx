@@ -17,6 +17,7 @@ export default function SubjectHeader({
   progress,
   gems,
   streak,
+  standing = null,
   children,
 }: {
   subject: { slug: string; name: string; color: string }
@@ -24,6 +25,12 @@ export default function SubjectHeader({
   progress: SubjectProgress
   gems: number
   streak: number
+  /**
+   * Place de l'élève dans cette matière parmi son niveau (« Top 8 % des 3e »).
+   * `null` tant qu'il n'a pas passé assez de quiz pour être classé, ou que la
+   * cohorte de la matière est trop petite pour qu'un pourcentage soit honnête.
+   */
+  standing?: React.ReactNode
   children?: React.ReactNode // barre d'onglets, rendue dans le monde coloré
 }) {
   const theme = subjectTheme(subject.color)
@@ -104,6 +111,10 @@ export default function SubjectHeader({
               Programme de {grade} · {progress.done}/{progress.total} chapitres
               · {progress.pct}%
             </p>
+            {/* Sous la ligne de programme, qui dit où l'élève en est DANS la
+                matière : celle-ci dit où il se situe PAR RAPPORT aux autres.
+                Deux informations différentes, d'où deux lignes. */}
+            {standing}
           </div>
         </div>
 

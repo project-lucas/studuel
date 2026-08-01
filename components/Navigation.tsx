@@ -73,21 +73,28 @@ export default function Navigation({
       {/* La barre du haut sur mobile (pièces + niveau + compte) est portée par
           TopHud (bandeau de jeu, toujours visible), rendu par le layout. */}
 
-      {/* Barre d'onglets fixée en bas : icônes seules, toutes sur la même ligne */}
+      {/* Barre d'onglets fixée en bas — modèle Clash Royale : tous les onglets
+          sont de simples icônes sur le socle crème, SEUL l'onglet sélectionné
+          porte une plaque violette et affiche son mot. Plus d'orbe central : le
+          Défi est un onglet comme les autres, c'est la sélection qui parle. */}
       <nav className="tab-bar fixed inset-x-0 bottom-0 z-50 border-t pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden">
-        {/* `overflow-hidden` = garde-fou : même si le halo grossissait, il ne
-            pourrait plus déborder au-dessus du liseré doré de la barre. */}
-        <ul className="relative flex items-center overflow-hidden">
-          {/* Halo violet qui suit l'onglet actif — glisse en douceur d'un onglet
-              à l'autre à chaque changement de route. */}
+        {/* `overflow-hidden` = garde-fou : la plaque ne peut pas déborder
+            au-dessus du liseré doré de la barre. */}
+        <ul className="relative flex h-14 items-stretch overflow-hidden">
+          {/* Plaque violette qui suit l'onglet actif — elle GLISSE d'un onglet
+              à l'autre (une seule plaque animée, pas six fondus). Elle occupe la
+              cellule entière ; le retrait visuel est dessiné par ::before. */}
           {activeIndex >= 0 && (
             <span
               aria-hidden="true"
-              className="tab-glow"
-              style={{ left: `${((activeIndex + 0.5) / links.length) * 100}%` }}
+              className="tab-plate"
+              style={{
+                left: `${(activeIndex / links.length) * 100}%`,
+                width: `${100 / links.length}%`,
+              }}
             />
           )}
-          {links.map(({ name, path, icon, role, center }) => {
+          {links.map(({ name, path, icon, role }) => {
             const active = isActive(path)
             const Icon = ICONS[icon]
 
@@ -99,50 +106,37 @@ export default function Navigation({
                   aria-label={name}
                   aria-current={active ? 'page' : undefined}
                   data-tour={`tab-${path.slice(1)}`}
-                  className="flex flex-col items-center justify-end gap-0.5 py-1.5 transition-transform active:scale-95"
+                  className="flex h-full flex-col items-center justify-center transition-transform active:scale-95"
                 >
-                  {center ? (
-                    // Le Défi — le cœur du jeu — est un ORBE violet plein,
-                    // toujours dans les bornes de la barre (pas de surélévation
-                    // qui mordrait sur le contenu, cf. historique) : il se
-                    // distingue par la matière, pas par la position.
-                    <span className="relative flex size-11 items-center justify-center rounded-full bg-gradient-to-b from-primary to-[color-mix(in_oklch,var(--primary),black_24%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_3px_8px_-2px_color-mix(in_oklch,var(--primary),black_10%)] ring-2 ring-highlight/60">
-                      <Icon
-                        aria-hidden="true"
-                        strokeWidth={2.25}
-                        className="size-6 fill-primary-foreground/20 text-primary-foreground"
-                      />
-                    </span>
-                  ) : (
-                    <span className="flex h-8 items-center justify-center">
-                      {/* Boîte au plus juste autour du dessin : la pastille se
-                          cale sur le COIN de l'icône, pas sur la zone tactile. */}
-                      <span className="relative flex">
-                        <Icon
-                          aria-hidden="true"
-                          strokeWidth={active ? 2.25 : 1.75}
-                          className={cn(
-                            'size-7 transition-all',
-                            active
-                              ? cn('scale-110 text-primary', ACTIVE_FILL[role])
-                              : // Encre atténuée, PAS muted-foreground : sur la
-                                // barre crème, le gris chaud passait sous 3:1.
-                                'fill-transparent text-foreground/70',
-                          )}
-                        />
-                        {icon === 'crown' ? chestBadge : null}
-                      </span>
-                    </span>
-                  )}
-                  {/* Le libellé sous chaque icône : fini les devinettes — chaque
-                      onglet a son mot, le lecteur d'écran garde l'aria-label. */}
+                  {/* Boîte au plus juste autour du dessin : la pastille du
+                      coffre se cale sur le COIN de l'icône, pas sur la zone
+                      tactile. */}
+                  <span className="relative flex">
+                    <Icon
+                      aria-hidden="true"
+                      strokeWidth={active ? 2.25 : 1.75}
+                      className={cn(
+                        'size-7 transition-transform duration-200',
+                        active
+                          ? // L'agrandissement, c'est LE signal de sélection :
+                            // l'icône enfle d'un tiers sur sa plaque.
+                            cn('scale-[1.3] text-primary', ACTIVE_FILL[role])
+                          : // Encre atténuée, PAS muted-foreground : sur la
+                            // barre crème, le gris chaud passait sous 3:1.
+                            'fill-transparent text-foreground/70',
+                      )}
+                    />
+                    {icon === 'crown' ? chestBadge : null}
+                  </span>
+                  {/* Le mot n'apparaît que sous l'onglet actif. On le garde
+                      TOUJOURS dans le DOM, replié à hauteur nulle : l'icône
+                      glisse au lieu de sauter quand on change d'onglet. Les
+                      lecteurs d'écran lisent l'aria-label du lien. */}
                   <span
                     aria-hidden="true"
                     className={cn(
-                      'font-heading text-[10px] leading-none font-bold',
-                      active || center
-                        ? 'text-primary'
-                        : 'text-foreground/70',
+                      'font-heading overflow-hidden text-[10px] leading-none font-bold text-primary transition-all duration-200',
+                      active ? 'mt-1.5 max-h-3 opacity-100' : 'mt-0 max-h-0 opacity-0',
                     )}
                   >
                     {name}

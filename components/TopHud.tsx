@@ -3,8 +3,9 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Settings, LogIn, Plus } from 'lucide-react'
-import type { ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { CristalIcon, EcuIcon } from '@/components/ui/MonnaieIcon'
+import { GEM_COST_CHAPTER } from '@/lib/gems'
 import {
   isHudAccountHidden,
   isHudHidden,
@@ -12,6 +13,9 @@ import {
   isHudOverDarkScene,
 } from '@/lib/top-hud-routes'
 import { cn } from '@/lib/utils'
+
+/** Quelle bulle de monnaie est ouverte, s'il y en a une. */
+type OpenPurse = 'ecu' | 'cristal' | null
 
 /**
  * Le bandeau du haut, façon Clash Royale : les infos de jeu que l'élève garde
@@ -44,6 +48,44 @@ export default function TopHud({
   userLabel: string | null
 }) {
   const pathname = usePathname()
+  // La bulle d'explication d'une monnaie (façon Brawl Stars). Une seule ouverte
+  // à la fois : taper l'autre monnaie bascule, taper ailleurs referme. On
+  // mémorise l'écran d'ouverture pour DÉDUIRE la fermeture au changement de
+  // page (plutôt qu'un effet qui remettrait l'état à zéro après coup).
+  const [opened, setOpened] = useState<{ purse: OpenPurse; path: string }>({
+    purse: null,
+    path: pathname,
+  })
+  const openPurse = opened.path === pathname ? opened.purse : null
+  const pursesRef = useRef<HTMLDivElement>(null)
+
+  const togglePurse = (purse: Exclude<OpenPurse, null>) =>
+    setOpened({ purse: openPurse === purse ? null : purse, path: pathname })
+  const closePurse = () => setOpened({ purse: null, path: pathname })
+
+  // Fermeture au tap extérieur / Échap. Les écouteurs ne sont posés QUE quand
+  // une bulle est ouverte : le bandeau est monté sur toutes les pages.
+  useEffect(() => {
+    if (!openPurse) return
+
+    const closeOnOutside = (event: PointerEvent) => {
+      if (!pursesRef.current?.contains(event.target as Node)) closePurse()
+    }
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') closePurse()
+    }
+
+    document.addEventListener('pointerdown', closeOnOutside)
+    document.addEventListener('keydown', closeOnEscape)
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutside)
+      document.removeEventListener('keydown', closeOnEscape)
+    }
+    // `closePurse` se reconstruit à chaque rendu ; ce qui compte pour poser ou
+    // retirer les écouteurs, c'est l'ouverture et l'écran courant.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [openPurse, pathname])
+
   // Parcours d'accueil plein écran (façon Duolingo) : aucun bandeau. Garde
   // indispensable même si le serveur filtre déjà : en navigation CLIENT, le
   // layout racine n'est pas re-rendu, donc ce composant reste monté.
@@ -139,30 +181,44 @@ export default function TopHud({
 
           {/* LA BANDE DE RESSOURCES, façon Clash Royale : les soldes ne sont
               pas rangés dans une boutique qu'on pense à ouvrir, ils sont sous
-              les yeux en permanence — et chacun porte son « + », qui est
-              exactement ce qui transforme un compteur passif en PORTE. Chaque
-              monnaie mène là où elle se gagne : les pièces au Trésor (la
-              boutique), les gemmes chez les Amis (elles ne s'achètent pas, elles
-              se gagnent en parrainant — cf. lib/gems).
+              les yeux en permanence. Chaque pastille porte DEUX gestes, comme
+              chez Supercell :
+                • le solde (à gauche) OUVRE une bulle qui explique la monnaie —
+                  un chiffre seul ne dit jamais à quoi il sert ;
+                • le « + » (à droite) MÈNE À LA BOUTIQUE, pour les deux monnaies.
 
-              Sur crème, la pastille des pièces EST dorée (elle doit ressortir du
-              fond clair) ; sur la scène sombre, elle prend le verre de nuit
-              comme ses voisines et c'est le CHIFFRE qui devient or — l'or dit la
-              valeur, pas le contenant. */}
-          <div className="ml-auto flex shrink-0 items-center gap-1.5">
+              Sur crème, l'écu illustré est doré et ressort du fond clair ; sur
+              la scène sombre, la pastille prend le verre de nuit et c'est le
+              CHIFFRE qui devient or — l'or dit la valeur, pas le contenant. */}
+          <div ref={pursesRef} className="ml-auto flex shrink-0 items-center gap-1.5">
             <ResourcePill
-              href="/tresor"
-              label={`${coins} pièces — voir le Trésor`}
+              name="Écu"
+              nameClassName={
+                dark
+                  ? 'text-highlight'
+                  : // Sur crème, le jaune solaire pur passerait sous le seuil de
+                    // contraste : on le fonce pour le TEXTE seulement — c'est le
+                    // même or, lisible.
+                    'text-[color-mix(in_oklch,var(--highlight),black_42%)]'
+              }
+              description={
+                <>
+                  La monnaie du style. Tu la gagnes en révisant et en jouant, et
+                  tu la dépenses à la boutique du Trésor : tenues, décors et
+                  objets pour ton avatar.
+                </>
+              }
+              open={openPurse === 'ecu'}
+              onToggle={() => togglePurse('ecu')}
+              label={`${coins} écus — à quoi sert cette monnaie`}
+              plusLabel="Aller à la boutique pour gagner des écus"
               value={coins}
               icon={<EcuIcon className="size-5" />}
+              dark={dark}
               className={
                 dark
                   ? 'olympe-glass text-highlight'
-                  : // L'écu illustré est DORÉ : la pastille dorée qui le portait
-                    // sur crème le noyait. C'est désormais l'objet qui ressort du
-                    // fond clair, pas son contenant — et le chiffre reprend
-                    // l'encre. L'or reste la couleur de la valeur.
-                    'bg-card/90 text-foreground shadow-lg ring-1 ring-black/10 backdrop-blur-md'
+                  : 'bg-card/90 text-foreground shadow-lg ring-1 ring-black/10 backdrop-blur-md'
               }
               plusClassName={
                 dark
@@ -175,10 +231,22 @@ export default function TopHud({
                 (même arbitrage que le pourcentage du niveau, juste au-dessus). */}
             {gems !== null ? (
               <ResourcePill
-                href="/amis"
-                label={`${gems} gemmes — les gagner en invitant tes amis`}
+                name="Cristal"
+                nameClassName={dark ? 'text-[#c9b4ff]' : 'text-primary'}
+                description={
+                  <>
+                    La monnaie du contenu. {GEM_COST_CHAPTER} cristaux ouvrent un
+                    chapitre entier — sa carte mentale et ses fiches — pour
+                    toujours. Ils se gagnent surtout en invitant tes amis.
+                  </>
+                }
+                open={openPurse === 'cristal'}
+                onToggle={() => togglePurse('cristal')}
+                label={`${gems} cristaux — à quoi sert cette monnaie`}
+                plusLabel="Aller à la boutique pour gagner des cristaux"
                 value={gems}
                 icon={<CristalIcon className="size-5" />}
+                dark={dark}
                 className={cn(
                   'max-[359px]:hidden',
                   dark
@@ -242,48 +310,112 @@ export default function TopHud({
 }
 
 /**
- * Une pastille de ressource de la bande du haut : le picto, le solde, et le
- * « + » qui mène là où cette monnaie se gagne. Le « + » n'est PAS un second
- * bouton — toute la pastille est le lien ; il est là pour dire « on peut en
- * avoir plus », ce qu'un nombre seul ne dit jamais.
+ * Une pastille de ressource de la bande du haut. Elle porte DEUX gestes
+ * distincts, et c'est voulu — c'est le partage de Brawl Stars :
+ *   • à GAUCHE (picto + solde) : un bouton qui déplie une bulle expliquant à
+ *     quoi sert la monnaie. Un compteur qu'on ne comprend pas ne motive rien.
+ *   • à DROITE (le « + ») : le lien vers la boutique. Il transforme un
+ *     compteur passif en PORTE.
  */
 function ResourcePill({
-  href,
+  name,
+  nameClassName,
+  description,
+  open,
+  onToggle,
   label,
+  plusLabel,
   value,
   icon,
+  dark,
   className,
   plusClassName,
 }: {
-  href: string
+  /** Le nom de la monnaie, écrit dans SA couleur en tête de la bulle. */
+  name: string
+  nameClassName: string
+  description: ReactNode
+  open: boolean
+  onToggle: () => void
   label: string
+  plusLabel: string
   value: number
   icon: ReactNode
+  /** Scène sombre (arène) : la bulle prend le verre de nuit. */
+  dark: boolean
   /** Robe de la pastille (verre de nuit sur l'arène, crème ailleurs). */
   className: string
   /** Robe du disque « + ». */
   plusClassName: string
 }) {
+  const panelId = `bourse-${name.toLowerCase()}`
+
   return (
-    <Link
-      href={href}
-      aria-label={label}
-      className={cn(
-        'pointer-events-auto flex min-h-11 shrink-0 items-center gap-1.5 rounded-full py-1.5 pr-1.5 pl-3 font-mono text-sm font-extrabold tabular-nums transition active:scale-95',
-        className,
-      )}
-    >
-      {icon}
-      {value.toLocaleString('fr-FR')}
-      <span
+    <div className="pointer-events-auto relative shrink-0">
+      <div
         className={cn(
-          'grid size-5 shrink-0 place-items-center rounded-full',
-          plusClassName,
+          'flex min-h-11 items-center rounded-full font-mono text-sm font-extrabold tabular-nums',
+          className,
         )}
-        aria-hidden="true"
       >
-        <Plus className="size-3.5" strokeWidth={3.2} />
-      </span>
-    </Link>
+        <button
+          type="button"
+          onClick={onToggle}
+          aria-expanded={open}
+          aria-controls={panelId}
+          aria-label={label}
+          className="flex min-h-11 items-center gap-1.5 rounded-l-full py-1.5 pr-1 pl-3 transition active:scale-95"
+        >
+          {icon}
+          {value.toLocaleString('fr-FR')}
+        </button>
+        {/* Le « + » est son propre lien : sa zone tactile déborde largement du
+            petit disque pour rester attrapable au pouce. */}
+        <Link
+          href="/tresor?volet=boutique"
+          aria-label={plusLabel}
+          className="flex min-h-11 items-center pr-2 pl-1.5 transition active:scale-95"
+        >
+          <span
+            className={cn(
+              'grid size-5 shrink-0 place-items-center rounded-full',
+              plusClassName,
+            )}
+            aria-hidden="true"
+          >
+            <Plus className="size-3.5" strokeWidth={3.2} />
+          </span>
+        </Link>
+      </div>
+
+      {/* La bulle : ancrée sous la pastille, avec sa pointe. Elle sort du flux
+          (absolute) pour ne jamais pousser la bande de ressources. */}
+      {open ? (
+        <div
+          id={panelId}
+          className={cn(
+            'absolute top-full right-0 z-10 mt-2 w-60 rounded-2xl p-3 text-left font-sans text-xs leading-relaxed shadow-xl',
+            dark
+              ? 'olympe-glass text-[#ece5f7]'
+              : 'bg-card text-foreground/80 ring-1 ring-black/10 backdrop-blur-md',
+          )}
+        >
+          <span
+            aria-hidden="true"
+            className={cn(
+              'absolute -top-1 right-6 size-2.5 rotate-45 rounded-[2px]',
+              // La pointe doit être OPAQUE (elle sort du verre, donc du flou) et
+              // reprendre le ton du HAUT de la bulle, où le voile clair de
+              // `.olympe-glass` est le plus fort — d'où le violet éclairci.
+              dark ? 'bg-[oklch(0.31_0.055_300)]' : 'bg-card',
+            )}
+          />
+          <p className={cn('font-heading mb-1 text-sm font-extrabold', nameClassName)}>
+            {name}
+          </p>
+          <p>{description}</p>
+        </div>
+      ) : null}
+    </div>
   )
 }

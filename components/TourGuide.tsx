@@ -7,6 +7,12 @@ import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
 import { completeTutorial } from '@/app/reviser/actions'
 import {
+  lireTourVu,
+  marquerTourVu,
+  tourDoitDemarrer,
+  type EtatTourEnBase,
+} from '@/lib/tour-local'
+import {
   TOUR_STEPS,
   bubblePosition,
   nextAvailableStep,
@@ -33,12 +39,19 @@ const hasTarget = (target: string) => findTargetRect(target) !== null
 
 /**
  * Tour guidé post-onboarding : spotlight sur l'élément + bulle explicative +
- * Suivant / Passer. Se lance à la première connexion (`autoStart`, colonne
- * profiles.tutorial_completed, migration 188) ou via `?tour=1` (bouton
- * « Revoir le tutoriel » du compte). Les étapes dont la cible est absente
- * (ex. file du jour vide) sont sautées automatiquement.
+ * Suivant / Passer. Se lance à la première connexion — d'après la colonne
+ * `profiles.tutorial_completed` (migration 188) quand elle existe, sinon
+ * d'après la mémoire locale du navigateur (cf. lib/tour-local, qui explique
+ * pourquoi ce repli existe : sans lui, le tour ne partait jamais) — ou via
+ * `?tour=1` (bouton « Revoir le tutoriel » du compte). Les étapes dont la
+ * cible est absente (ex. file du jour vide) sont sautées automatiquement.
  */
-export default function TourGuide({ autoStart }: { autoStart: boolean }) {
+export default function TourGuide({
+  etatEnBase,
+}: {
+  // `undefined` = la colonne `tutorial_completed` (188) n'existe pas encore.
+  etatEnBase: EtatTourEnBase
+}) {
   const params = useSearchParams()
   const forced = params.get('tour') === '1'
 
@@ -53,20 +66,29 @@ export default function TourGuide({ autoStart }: { autoStart: boolean }) {
   useDialogFocus(bubbleRef, stepIndex !== null)
 
   // Lancement : petit délai pour laisser la page s'installer.
+  //
+  // La décision se prend DANS le minuteur, pas au rendu : elle consulte la
+  // mémoire locale (`lireTourVu`), qui n'existe que dans le navigateur. La
+  // calculer pendant le rendu ferait diverger le HTML du serveur de celui du
+  // client — et la calculer dans un `setState` d'effet déclencherait un rendu
+  // en cascade pour rien.
   useEffect(() => {
-    if (!autoStart && !forced) return
     const timer = setTimeout(() => {
+      if (!forced && !tourDoitDemarrer(etatEnBase, lireTourVu())) return
       const first = nextAvailableStep(TOUR_STEPS, hasTarget, 0)
       if (first !== null) setStepIndex(first)
     }, 600)
     return () => clearTimeout(timer)
-  }, [autoStart, forced])
+  }, [etatEnBase, forced])
 
   const finish = useCallback((completed: boolean) => {
     sfx.tap()
     setStepIndex(null)
-    // Fire-and-forget : si la migration 188 n'est pas passée, l'échec est
-    // silencieux et le tour pourra se représenter — dégradation acceptable.
+    // Deux mémoires, et c'est voulu : la base (qui suit l'élève d'un appareil
+    // à l'autre) et le navigateur (qui prend le relais tant que la 188 dort).
+    // Sans la seconde, l'échec silencieux de la première faisait revenir le
+    // tour à CHAQUE visite.
+    marquerTourVu()
     completeTutorial().catch(() => {})
     if (completed) sfx.complete()
   }, [])

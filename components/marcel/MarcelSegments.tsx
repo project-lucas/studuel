@@ -9,11 +9,22 @@ import { cn } from '@/lib/utils'
 // elle se partage, revient avec le bouton retour, et la page reste un composant
 // serveur — aucun JavaScript envoyé pour changer d'onglet.
 
-export type MarcelVue = 'aujourdhui' | 'methode' | 'entrainement' | 'progres'
+export type MarcelVue =
+  | 'aujourdhui'
+  | 'methode'
+  | 'oral'
+  | 'entrainement'
+  | 'progres'
 
+// « L'oral » est placé APRÈS « Méthode » et avant « S'entraîner » : c'est un
+// entraînement, mais d'une autre nature — on n'y répond pas à des questions, on
+// y parle. Le mettre en dernier l'aurait enterré, alors que c'est le seul
+// exercice que les élèves ne font jamais seuls et qui décide de trois épreuves
+// du bac et du brevet.
 export const MARCEL_VUES: { key: MarcelVue; label: string }[] = [
   { key: 'aujourdhui', label: 'Aujourd’hui' },
   { key: 'methode', label: 'Méthode' },
+  { key: 'oral', label: 'L’oral' },
   { key: 'entrainement', label: 'S’entraîner' },
   { key: 'progres', label: 'Progrès' },
 ]

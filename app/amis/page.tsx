@@ -1,5 +1,6 @@
 import TabHeader from '@/components/TabHeader'
 import AmisHome from '@/components/AmisHome'
+import OralListenCard from '@/components/amis/OralListenCard'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { readRowTolerant } from '@/lib/profile-read'
@@ -13,6 +14,7 @@ import {
   type SchoolBoard,
   type PendingRequest,
 } from '@/lib/social'
+import { getDemandesRecues } from '@/lib/coach/oral-server'
 import { fetchClanWeekBoard } from '@/lib/clan-week-server'
 import type { ClanWeekBoard } from '@/lib/clan-week'
 import { toDayKey } from '@/lib/streak'
@@ -192,11 +194,28 @@ export default async function AmisPage() {
     canRenameSquad = meRanked?.rank === 1
   }
 
+  // Barreau 4 de l'échelle de l'oral (migration 222) : les amis qui demandent
+  // qu'on les écoute. C'est le seul usage social du produit qui ne soit pas une
+  // comparaison — d'où sa place TOUT EN HAUT, avant les classements : quelqu'un
+  // attend quelque chose de toi, ça passe avant ton rang.
+  const ecoutes = user
+    ? await getDemandesRecues(supabase)
+    : { disponible: false, demandes: [] }
+
   return (
     <div>
       <TabHeader
         title="Amis"
         subtitle="Ton équipe, ton école et vos classements."
+      />
+      <OralListenCard
+        className="mb-4"
+        demandes={ecoutes.demandes.map((d) => ({
+          id: d.id,
+          sujet: d.sujet,
+          epreuve: d.epreuve,
+          nom: d.nom,
+        }))}
       />
       <AmisHome
         ranking={ranking}

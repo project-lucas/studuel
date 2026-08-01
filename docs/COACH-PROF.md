@@ -268,11 +268,16 @@ coût nul et vaut plus que tout le reste.
 
 - **Lot 1** absorbe `lib/coach/regimes.ts` et le bloc « méthode de la matière ».
   Toujours **zéro IA**, et c'est maintenant le cœur, plus un préambule.
-- **Lot 1 bis (nouveau)** : l'échelle de l'oral, barreaux 1 à 3. Zéro IA.
+- **Lot 1 bis — LIVRÉ le 01/08/2026** : l'échelle de l'oral, barreaux 1 à 4
+  (migration 222). Zéro IA, comme prévu. Le barreau 4 a été livré AVEC les
+  autres et non repoussé au lot 3 : sans lui, l'échelle s'arrête à
+  l'auto-évaluation, et c'est précisément l'auditeur qui fait la différence.
+  · `lib/coach/oral.ts` (pur, testé) · vue « L'oral » dans Marcel ·
+  `/marcel/oral` (chrono + enregistrement LOCAL) · carte « On te demande
+  d'écouter » en tête de l'onglet Amis.
 - **Lot 2** : contrôles A/B/C pré-générés + typologie d'erreurs (batch admin) —
-  reste à coût fixe. Puis les jetons.
-- **Lot 3** : le barreau 4 de l'oral (écoute par un ami), le Snap, le dashboard
-  lycéen, le rapport parent.
+  reste à coût fixe. Puis les jetons. **Toujours à faire.**
+- **Lot 3** : le Snap, le dashboard lycéen, le rapport parent.
 
 L'ordre est important : **tout ce qui différencie l'app est dans les lots sans
 IA.** Si le fournisseur ferme demain, le Prof reste le meilleur de sa catégorie.
@@ -356,6 +361,25 @@ neuve, personne ne perd rien, et le trou ne peut donc jamais s'ouvrir.
 système lui impose un indice, puis la première étape, puis la main rendue — et
 elle porte la méthode du régime de la matière, gratuitement (la phrase est
 écrite d'avance dans `regimes.ts`).
+
+**Fait le 01/08/2026 — l'échelle de l'oral (§4), les quatre barreaux.**
+Migration 222. Ce qu'il faut retenir de l'implémentation :
+
+- **aucun audio ne quitte l'appareil.** Le barreau 3 enregistre via
+  `MediaRecorder`, lit depuis une `URL.createObjectURL`, et il n'existe aucun
+  chemin, dans le code, entre ce Blob et le réseau. La base ne stocke qu'une
+  DURÉE et trois booléens. Pas de voix de mineur sur nos serveurs : pas de RGPD
+  à porter, pas de stockage à payer, rien à fuiter ;
+- **le barreau 4 vérifie l'amitié EN BASE** (`request_oral_listen`, SECURITY
+  DEFINER) : on ne peut pas faire sonner un inconnu, même en appelant la RPC à
+  la clé anon. Anti-spam : une demande en attente par binôme, 20 par jour ;
+- **les noms d'amis passent par RPC, jamais par jointure.** `profiles` est en
+  RLS « soi uniquement » : une jointure aurait rendu la liste d'amis vide et
+  chaque demande anonyme, *sans lever la moindre erreur*. `oral_friends` et
+  `oral_listen_inbox` rendent le **prénom seul**, comme les RPC sociales 159/160 ;
+- **Marcel ne note toujours pas.** Il compte le temps tenu et rend la grille.
+  Les trois critères de l'auto-évaluation sont exactement ceux que coche l'ami :
+  l'élève apprend à se juger avec la grille d'un auditeur.
 
 **Reste à faire** : la typologie d'erreur (migration + remplissage du
 catalogue) — c'est le seul chantier qui débloque la moitié de « Progrès » ; le

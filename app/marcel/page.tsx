@@ -6,11 +6,13 @@ import PointDuJourHero from '@/components/marcel/PointDuJourHero'
 import SeanceCard from '@/components/marcel/SeanceCard'
 import MethodePanel from '@/components/marcel/MethodePanel'
 import EntrainementPanel from '@/components/marcel/EntrainementPanel'
+import OralPanel from '@/components/marcel/OralPanel'
 import ProgresPanel from '@/components/marcel/ProgresPanel'
 import DemanderMarcel from '@/components/marcel/DemanderMarcel'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { getMarcelSnapshot } from '@/lib/coach/marcel-server'
+import { getOralSnapshot } from '@/lib/coach/oral-server'
 import { entrainementsFor } from '@/lib/coach/entrainement'
 
 export const metadata = { title: 'Marcel — Studuel' }
@@ -91,6 +93,10 @@ export default async function MarcelPage({
     demande,
   } = await getMarcelSnapshot(supabase, user.id)
 
+  // L'échelle de l'oral n'est chargée QUE sur sa vue : c'est deux requêtes de
+  // plus, et l'écran « Aujourd'hui » n'en a aucun besoin.
+  const oral = vue === 'oral' ? await getOralSnapshot(supabase, user.id) : null
+
   // La matière du panneau Méthode : celle de l'URL, sinon celle de la mission du
   // jour, sinon la première que Marcel sait coacher.
   const demandee = matieres.find((m) => m.slug === matiereRaw)
@@ -150,6 +156,8 @@ export default async function MarcelPage({
           </>
         ) : vue === 'methode' ? (
           <MethodePanel matieres={matieres} courante={courante} />
+        ) : vue === 'oral' && oral ? (
+          <OralPanel snapshot={oral} />
         ) : vue === 'entrainement' ? (
           <EntrainementPanel
             matieres={entrainementsFor({ matieres, disponiblesBySlug })}

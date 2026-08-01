@@ -7,9 +7,7 @@ import {
   ArrowLeft,
   BarChart3,
   ChevronDown,
-  FileUp,
   FolderPlus,
-  Import,
   Pencil,
   Play,
   Plus,
@@ -708,25 +706,10 @@ export default function CourseScreen({
             </span>
             Créer un chapitre
           </button>
-          {/* Les imports arrivent plus tard : visibles mais inactifs. */}
-          {[
-            { label: 'Importer des questions', icon: Import },
-            { label: 'Insérer un fichier', icon: FileUp },
-          ].map((item) => (
-            <div
-              key={item.label}
-              aria-disabled="true"
-              className="flex items-center gap-3 rounded-2xl bg-muted/40 px-4 py-3 text-sm font-bold text-muted-foreground opacity-70"
-            >
-              <span className="flex size-8 items-center justify-center rounded-xl bg-foreground/5">
-                <item.icon className="size-4" aria-hidden="true" />
-              </span>
-              {item.label}
-              <span className="ml-auto rounded-full bg-foreground/10 px-2 py-0.5 text-[9px] font-extrabold tracking-wide uppercase">
-                Bientôt
-              </span>
-            </div>
-          ))}
+          {/* « Importer des questions » et « Insérer un fichier » vivaient ici,
+              grisés, avec un ruban « Bientôt ». Retirés le 01/08/2026 : un menu
+              ne doit pas montrer des portes qui ne s'ouvrent pas. Le jour où
+              l'import existe, il reprend sa place — en marchant. */}
         </div>
       </BottomSheet>
 

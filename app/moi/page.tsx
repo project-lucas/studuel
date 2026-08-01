@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { after } from 'next/server'
-import { CircleUser, Sparkles } from 'lucide-react'
+import { CircleUser } from 'lucide-react'
 import {
   Card,
   CardHeader,
@@ -45,6 +45,8 @@ import {
 import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
 import { workLevel } from '@/lib/work-level'
 import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
+import HabitsPanel from '@/components/moi/HabitsPanel'
+import { bilanHabitudes } from '@/lib/moi/habitudes'
 import type { Habit, HabitLog, CommuteSlot } from '@/lib/types'
 
 export const metadata = { title: 'Moi — Studuel' }
@@ -271,6 +273,20 @@ export default async function MoiPage() {
     }
   })
 
+  // --- Mes habitudes : séries, régularité, rythme de la semaine ---------------
+  // Aucune requête de plus : `activeHabits` et `allLogs` sont déjà chargés
+  // au-dessus pour la capacité. Le panneau ne coûte donc rien à l'écran.
+  const bilans = bilanHabitudes(
+    activeHabits.map((h) => ({
+      id: h.id,
+      titre: h.habit_catalog?.title ?? 'Habitude',
+      icone: h.habit_catalog?.icon ?? '✅',
+      raison: h.habit_catalog?.rationale ?? '',
+    })),
+    allLogs,
+    today,
+  )
+
   // --- Identité : prénom, classe, niveau de travail, pièces, avatar -----------
   const firstName = String(profile?.full_name ?? '').split(' ')[0] || 'Élève'
   const gradeLevel: GradeLevel | null = GRADE_LEVELS.includes(
@@ -321,19 +337,10 @@ export default async function MoiPage() {
             </div>
           }
           habitudes={
-            <div className="moi-card rounded-3xl bg-white px-4 py-8 text-center">
-              <Sparkles
-                className="mx-auto size-6 text-primary"
-                aria-hidden="true"
-              />
-              <p className="mt-2 font-heading text-lg font-bold text-foreground">
-                Bientôt ici
-              </p>
-              <p className="mx-auto mt-1 max-w-xs text-sm text-muted-foreground">
-                Le détail de tes habitudes arrive : en attendant, coche tes
-                leviers de la semaine dans « Ma progression ».
-              </p>
-            </div>
+            <HabitsPanel
+              bilans={bilans}
+              jourAujourdhui={new Date(`${today}T00:00:00.000Z`).getUTCDay()}
+            />
           }
         />
       </div>

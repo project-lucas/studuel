@@ -15,6 +15,8 @@ import Navigation from "@/components/Navigation";
 import TopHudLoader from "@/components/TopHudLoader";
 // Pastille rouge « coffre à récupérer » posée sur l'onglet Trésor.
 import NavChestBadgeLoader from "@/components/NavChestBadgeLoader";
+import NavAvatarLoader from "@/components/NavAvatarLoader";
+import NavMoiBust from "@/components/NavMoiBust";
 // Balayage horizontal (façon Clash Royale) : change d'onglet depuis n'importe
 // quel endroit de l'écran.
 import SwipeTabs from "@/components/SwipeTabs";
@@ -138,6 +140,14 @@ export default async function RootLayout({
             chestBadge={
               <Suspense fallback={null}>
                 <NavChestBadgeLoader />
+              </Suspense>
+            }
+            // Avatar de l'onglet Moi, streamé de la même façon. Le repli est le
+            // buste dessiné, ici comme dans le chargeur : la case de l'onglet
+            // n'est jamais vide, ni pendant l'attente ni après une panne.
+            avatarSlot={
+              <Suspense fallback={<NavMoiBust />}>
+                <NavAvatarLoader />
               </Suspense>
             }
           />

@@ -1,47 +1,77 @@
 'use client'
 
+import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { ReactNode } from 'react'
-import {
-  CircleUser,
-  Crown,
-  GraduationCap,
-  House,
-  Swords,
-  User,
-  Users,
-} from 'lucide-react'
-import type { LucideIcon } from 'lucide-react'
+import { CircleUser } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { NAV_TABS, type NavIconName } from '@/lib/nav-tabs'
+import amisIcone from '@/public/images/nav/amis.webp'
+import reviserIcone from '@/public/images/nav/reviser.webp'
+import marcelIcone from '@/public/images/nav/marcel.webp'
+import defiIcone from '@/public/images/nav/defi.webp'
+import moiIcone from '@/public/images/nav/moi.webp'
+import tresorIcone from '@/public/images/nav/tresor.webp'
+import cadreAvatar from '@/public/images/nav/cadre-avatar.webp'
 
 // Ordre des onglets = ordre de la barre mobile (Défi au centre) et ordre du
 // balayage horizontal : les deux lisent NAV_TABS.
 const links = NAV_TABS
 
-// Correspondance clé (lib, pure) → dessin (composant). Icônes de TRAIT : un seul
-// poids de ligne, aucun détail décoratif, elles restent lisibles à 20 px.
-const ICONS: Record<NavIconName, LucideIcon> = {
-  users: Users,
-  house: House,
-  cap: GraduationCap,
-  swords: Swords,
-  user: User,
-  crown: Crown,
+/**
+ * Chaque onglet porte son ILLUSTRATION, du même atelier que l'écu et le cristal
+ * du HUD : objet peint, contour marine épais, palette violet et or. Le fichier
+ * prend le nom de l'onglet — `lib/nav-tabs.test.ts` verrouille cette égalité,
+ * parce que le dossier a déjà porté deux dessins sans rapport sous des noms
+ * voisins et que la confusion était garantie.
+ *
+ * Le lot d'août 2026 nomme chaque onglet par son ENJEU plutôt que par son
+ * contenu, et c'est ce qui le rend lisible sans libellé : le trophée dit le
+ * classement (et non « deux silhouettes = des amis »), les épées croisées disent
+ * l'affrontement (et non « le centre de l'app »), la bourse dit ce qu'on y
+ * dépense (et non « un coffre à ouvrir »). Restent le livre de Réviser et le
+ * visage de Marcel, qui étaient déjà justes.
+ *
+ * LES DESSINS SONT IMPORTÉS, PAS DÉSIGNÉS PAR LEUR CHEMIN — et ce n'est pas un
+ * détail de style. Un chemin littéral (`/images/nav/amis.webp`) est une URL
+ * STABLE : quand on remplace le fichier par un nouveau dessin, l'URL ne bouge
+ * pas, et l'optimiseur d'images de Next comme le cache du navigateur continuent
+ * de servir l'ANCIEN. On croit alors que l'intégration n'a rien changé. L'import
+ * statique donne une URL à empreinte de contenu
+ * (`/_next/static/media/amis.<hash>.webp`) : nouveau dessin, nouvelle URL, aucun
+ * cache à vider — ni ici, ni chez les élèves qui ont déjà ouvert l'app.
+ *
+ * Les fichiers restent dans `public/images/nav/` : c'est la convention du dépôt,
+ * c'est ce que `scripts/nav-icones.mjs` produit, et c'est ce que le test
+ * d'existence de `lib/nav-tabs.test.ts` va vérifier.
+ */
+const ICONES: Record<NavIconName, StaticImageData> = {
+  amis: amisIcone,
+  reviser: reviserIcone,
+  marcel: marcelIcone,
+  defi: defiIcone,
+  moi: moiIcone,
+  tresor: tresorIcone,
 }
 
+/** L'onglet dont le dessin est remplacé par le vrai avatar de l'élève. */
+const AVATAR_ICON: NavIconName = 'moi'
+
 /**
- * Deux tons hérités de la DA, appliqués à l'icône ACTIVE : le trait prend le
- * violet d'action, le remplissage prend la couleur du rôle de l'onglet — jaune
- * solaire pour ce qu'on gagne (Trésor), violet pâle pour le reste.
- * L'onglet inactif est un simple trait gris, sans remplissage.
+ * La couronne de laurier qui entoure l'avatar. Elle n'est pas un décor gratuit :
+ * c'est le seul onglet dont le contenu change d'un élève à l'autre, et sans elle
+ * un visage nu posé au milieu de cinq objets peints ne fait pas partie de la
+ * même famille. Le cadre lui rend le contour marine épais et l'or que les autres
+ * portent déjà.
+ *
+ * Il est fabriqué par `scripts/nav-icones.mjs`, qui l'ÉVIDE (son disque
+ * intérieur arrive peint en blanc opaque) et le recentre sur son trou — la
+ * couronne pèse plus lourd en bas, son trou n'est donc pas au centre du dessin.
+ * Grâce à ce recentrage, le CSS n'a qu'un disque à poser dessous, sans décalage.
  */
-const ACTIVE_FILL: Record<string, string> = {
-  action: 'fill-primary/15',
-  recompense: 'fill-highlight/45',
-}
+const CADRE_AVATAR = cadreAvatar
 
 export default function Navigation({
   userLabel,
@@ -49,9 +79,15 @@ export default function Navigation({
   // layout sous <Suspense> : la barre s'affiche tout de suite, la pastille se
   // pose quand la réponse arrive. `null` quand il n'y a rien à récupérer.
   chestBadge = null,
+  // Avatar de l'élève pour l'onglet Moi, streamé par le layout selon la même
+  // discipline. `null` (déconnecté, panne, ou réponse pas encore arrivée) :
+  // on retombe sur le buste dessiné, qui est de la même famille que les cinq
+  // autres icônes — le repli ne se remarque pas.
+  avatarSlot = null,
 }: {
   userLabel: string | null
   chestBadge?: ReactNode
+  avatarSlot?: ReactNode
 }) {
   const pathname = usePathname()
 
@@ -94,9 +130,14 @@ export default function Navigation({
               }}
             />
           )}
-          {links.map(({ name, path, icon, role }) => {
+          {links.map(({ name, path, icon }) => {
             const active = isActive(path)
-            const Icon = ICONS[icon]
+            // Le layout confie l'onglet Moi à son chargeur d'avatar. Celui-ci
+            // rend TOUJOURS quelque chose (l'avatar, ou le buste dessiné en
+            // repli) : la barre n'a donc aucun repli à gérer ici, et ne prend
+            // le dessin par défaut que si le slot n'est pas fourni du tout —
+            // hors du layout, dans un test, un récit d'histoire.
+            const slot = icon === AVATAR_ICON ? avatarSlot : null
 
             return (
               <li key={path} className="relative z-10 flex-1">
@@ -112,35 +153,96 @@ export default function Navigation({
                       coffre se cale sur le COIN de l'icône, pas sur la zone
                       tactile. */}
                   <span className="relative flex">
-                    <Icon
-                      aria-hidden="true"
-                      strokeWidth={active ? 2.25 : 1.75}
+                    <span
                       className={cn(
-                        'size-7 transition-transform duration-200',
+                        // `relative` : cette case est le repère de la couronne
+                        // de laurier, qui se pose PAR-DESSUS l'avatar.
+                        'relative',
+                        // Centrage par le conteneur, et pas par une marge sur
+                        // l'enfant : l'avatar n'occupe que 58 % de sa case (le
+                        // diamètre du trou de la couronne) et un `margin: auto`
+                        // ne centre pas verticalement un bloc — il restait
+                        // collé en haut.
+                        // 40 px : la place rendue par le libellé est partie
+                        // ici. C'est la taille maximale qui tienne dans la
+                        // barre une fois l'onglet actif agrandi — 40 × 1,2 = 48
+                        // dans 56 px de haut, soit 4 px d'air de chaque côté.
+                        // Au-delà, `overflow-hidden` raboterait le dessin.
+                        'flex size-10 items-center justify-center transition-transform duration-200',
                         active
                           ? // L'agrandissement, c'est LE signal de sélection :
-                            // l'icône enfle d'un tiers sur sa plaque.
-                            cn('scale-[1.3] text-primary', ACTIVE_FILL[role])
-                          : // Encre atténuée, PAS muted-foreground : sur la
-                            // barre crème, le gris chaud passait sous 3:1.
-                            'fill-transparent text-foreground/70',
+                            // l'icône enfle d'un cinquième sur sa plaque. Elle
+                            // est aussi la seule à porter ses pleines couleurs.
+                            // Le facteur a baissé (1,25 → 1,2) en même temps
+                            // que la taille de repos montait : c'est l'écart
+                            // ABSOLU entre les deux états qui se voit, et il
+                            // est resté le même.
+                            'scale-[1.2]'
+                          : // Les illustrations portent leurs propres couleurs :
+                            // pour que l'onglet actif ressorte, ce sont les
+                            // AUTRES qui reculent — désaturées et atténuées,
+                            // façon Clash Royale. Le contour marine épais des
+                            // dessins tient largement le 3:1 même à 70 %.
+                            'opacity-70 saturate-[0.55]',
                       )}
-                    />
-                    {icon === 'crown' ? chestBadge : null}
+                    >
+                      {icon === AVATAR_ICON ? (
+                        <>
+                          {/* Le visage — l'avatar streamé par le layout, ou le
+                              buste dessiné en repli — rogné en disque à la
+                              taille du trou de la couronne. */}
+                          <span className="nav-cadre-disque">
+                            {slot ?? (
+                              <Image
+                                src={ICONES[icon]}
+                                alt=""
+                                aria-hidden="true"
+                                width={80}
+                                height={80}
+                                priority
+                                className="size-full object-contain"
+                              />
+                            )}
+                          </span>
+                          <Image
+                            src={CADRE_AVATAR}
+                            alt=""
+                            aria-hidden="true"
+                            width={80}
+                            height={80}
+                            priority
+                            className="nav-cadre-bague"
+                          />
+                        </>
+                      ) : (
+                        <Image
+                          src={ICONES[icon]}
+                          alt=""
+                          aria-hidden="true"
+                          // 80 = deux fois la case servie ; Next en tire aussi
+                          // un 160 pour les écrans à densité triple.
+                          width={80}
+                          height={80}
+                          // La barre est le premier chrome visible de l'app :
+                          // ces six vignettes ne doivent pas arriver en retard.
+                          priority
+                          className="size-full object-contain"
+                        />
+                      )}
+                    </span>
+                    {icon === 'tresor' ? chestBadge : null}
                   </span>
-                  {/* Le mot n'apparaît que sous l'onglet actif. On le garde
-                      TOUJOURS dans le DOM, replié à hauteur nulle : l'icône
-                      glisse au lieu de sauter quand on change d'onglet. Les
-                      lecteurs d'écran lisent l'aria-label du lien. */}
-                  <span
-                    aria-hidden="true"
-                    className={cn(
-                      'font-heading overflow-hidden text-[10px] leading-none font-bold text-primary transition-all duration-200',
-                      active ? 'mt-1.5 max-h-3 opacity-100' : 'mt-0 max-h-0 opacity-0',
-                    )}
-                  >
-                    {name}
-                  </span>
+                  {/* PAS de mot sous l'icône. Le dessin doit se suffire — c'est
+                      tout l'intérêt d'être passé du trait à l'illustration, et
+                      la place rendue par le libellé part dans la taille du
+                      dessin. La sélection reste dite par la plaque violette et
+                      par l'agrandissement, deux signaux qui ne sont pas du
+                      texte.
+
+                      L'accessibilité ne perd rien : l'`aria-label` du lien
+                      porte le nom de l'onglet et `aria-current` sa sélection.
+                      Un lecteur d'écran annonce donc exactement ce qu'il
+                      annonçait avec le mot affiché. */}
                 </Link>
               </li>
             )
@@ -157,7 +259,6 @@ export default function Navigation({
         <ul className="flex flex-col gap-1">
           {links.map(({ name, path, icon, center }) => {
             const active = isActive(path)
-            const Icon = ICONS[icon]
 
             return (
               <li key={path}>
@@ -174,18 +275,28 @@ export default function Navigation({
                     center && !active && 'font-bold text-primary',
                   )}
                 >
-                  {/* Sur la pastille violette pleine, l'icône passe en trait
-                      blanc (currentColor) et son remplissage devient un simple
-                      voile clair : le jaune de récompense y serait illisible.
-                      `role` ne sert donc qu'à la barre mobile, sur crème. */}
-                  <Icon
-                    aria-hidden="true"
-                    strokeWidth={active ? 2.25 : 1.75}
+                  {/* Ici la pastille active est un aplat violet PLEIN, et les
+                      illustrations gardent leurs couleurs : le livre violet de
+                      Réviser s'y noierait. D'où le disque clair glissé dessous,
+                      qui rend à chaque dessin le fond crème pour lequel il a
+                      été peint. L'avatar de l'élève, lui, reste sur la barre
+                      mobile : la sidebar affiche déjà les mots, personne n'y
+                      confond Marcel et Moi. */}
+                  <span
                     className={cn(
-                      'size-5 shrink-0 transition-all',
-                      active ? 'fill-primary-foreground/20' : 'fill-transparent',
+                      'flex size-6 shrink-0 items-center justify-center rounded-full transition-colors',
+                      active && 'bg-primary-foreground',
                     )}
-                  />
+                  >
+                    <Image
+                      src={ICONES[icon]}
+                      alt=""
+                      aria-hidden="true"
+                      width={48}
+                      height={48}
+                      className="size-5 object-contain"
+                    />
+                  </span>
                   {name}
                 </Link>
               </li>

@@ -2020,6 +2020,20 @@ a:active > .arena-menu-row {
     0 1px 2px oklch(0.4 0.15 310 / 0.06),
     0 14px 28px -18px oklch(0.42 0.18 310 / 0.42);
 }
+/* Carte matière de l'accueil : UN SEUL fond crème pour les 22 matières. Avant,
+   six pastels (bleu lavande, pêche, mauve, menthe, rose…) se disputaient la
+   grille et sortaient de la palette crème/violet/or — l'écran paraissait
+   dispersé. La couleur de la matière n'a pas disparu : elle s'est concentrée
+   sur la barre d'accent de 4 px du bord gauche (`accent` dans subject-style).
+   Crème chaud, posé sur le panneau blanc légèrement violet du dossier ouvert :
+   c'est le contraste de TEINTE (chaud sur froid) qui détache la carte, pas un
+   écart de clarté qui salirait le texte. */
+.rev-tile {
+  background: oklch(0.975 0.022 85);
+}
+.rev-tile:hover {
+  background: oklch(0.955 0.032 85);
+}
 
 /* --- Onglet Moi : cartes « jouet » sur fond crème (maquette de Lucas, ---------
    2026-07-11, v2). Bandeau violet en carte arrondie avec la grande flamme de
@@ -2993,6 +3007,40 @@ a:active > .arena-menu-row {
   box-shadow:
     inset 0 0 0 1.5px color-mix(in oklch, var(--primary), transparent 66%),
     inset 0 1px 0 rgb(255 255 255 / 0.55);
+}
+/* L'onglet Moi en DEUX COUCHES : le visage de l'élève, et la couronne de
+   laurier posée par-dessus. La géométrie vit ici et non en classes utilitaires
+   parce qu'elle est solidaire d'un chiffre mesuré sur le dessin — le diamètre du
+   trou de la couronne — que Tailwind ne saurait pas exprimer.
+
+   Le visage est le seul onglet dont l'encre remplit un disque plein, quand les
+   cinq autres sont des objets détourés entourés d'air. Il ne pouvait donc pas
+   occuper toute sa case sans peser plus lourd que ses voisins. La couronne règle
+   ça d'elle-même : elle le ramène au diamètre de son trou et lui rend, tout
+   autour, le contour marine et l'or de la même famille graphique. */
+.nav-cadre-disque {
+  display: block;
+  /* `scripts/nav-icones.mjs` imprime la part du canevas occupée par le trou :
+     54,3 %. On pose le disque un peu PLUS LARGE, pour qu'il passe SOUS le cerne
+     marine de la couronne, qui le rogne alors proprement. Un disque plus étroit
+     que le trou laisserait au contraire apparaître un croissant de fond entre le
+     visage et la couronne — visible, et impossible à rattraper autrement.
+     Si le cadre est redessiné, c'est ce chiffre-là qu'il faut suivre. */
+  width: 58%;
+  height: 58%;
+  overflow: hidden;
+  border-radius: 9999px;
+  background: var(--secondary);
+}
+/* La couronne, en surimpression exacte de la case. Elle ne prend pas le clic :
+   toute la cellule est déjà un lien. */
+.nav-cadre-bague {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .tab-plate {

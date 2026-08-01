@@ -529,7 +529,7 @@ croisés ne le font pas, et ça raccroche l'icône à l'écran de chargement.
 | Jeux de salon | 9 scènes 16:9 | `public/images/defi/jeux/` |
 | Vignettes de matières | 22 objets détourés | `public/images/matieres/vignettes/` |
 | Arènes horaires | 6 variantes du colisée | `public/images/arene/` |
-| Barre d'onglets | 5 icônes | `public/images/nav/` |
+| Barre d'onglets | 6 icônes, une par onglet | `public/images/nav/` |
 | Débrief d'habitudes | icônes-boutons | `public/images/debrief/` |
 | Barres CTA de l'arène | Match classé + Modes de jeu | `public/images/defi/` |
 | Écran de chargement | mascotte + 6 boss en ombres + Nox | `public/images/splash.webp` |
@@ -542,6 +542,34 @@ dragon en haut-de-forme », « un loup en costume trois-pièces », ce sont nos
 boss qui apparaissent. Second piège : la mascotte hérite de tout ce que porte
 son image de référence (ici une baguette dans le dos) — il faut écrire
 explicitement `he holds NOTHING… nothing sticking out behind his back`.
+
+**Leçon de la barre d'onglets (2026-08-01)** : deux choses, dont une qui ne se
+génère pas.
+
+D'abord, une icône d'onglet échoue d'abord sur le **sens**, pas sur le style.
+Le jeu de traits qu'elle remplace était propre, mais la maison de Réviser
+disait « accueil », la couronne du Trésor disait « roi » au lieu de
+« récompense à ouvrir », et Amis / Moi ne se distinguaient que par leur nombre
+de silhouettes. Avant de commander un dessin, écrire la phrase que l'onglet
+doit faire dire — et vérifier qu'elle ne décrit pas déjà un autre onglet.
+
+Ensuite : **l'onglet d'un personnage se recadre, il ne se redessine pas.**
+Marcel n'a demandé aucune génération — `scripts/nav-icones.mjs` découpe sa tête
+dans une réaction de quiz existante. Un nouveau dessin de lui aurait produit un
+cousin, pas lui, or tout l'intérêt de l'onglet est qu'on reconnaisse la tête
+déjà vue partout ailleurs dans l'app. Seul réglage du cadrage : garder le
+menton, qui tranché se lit comme un bug à 32 px.
+
+**Et surtout : ne jamais régler la taille d'une icône à la main.** Les six
+venaient de lots différents et occupaient leur canevas de 82 % à 96 %, avec une
+surface d'encre allant du simple au tiers en plus — côte à côte, elles
+semblaient de tailles différentes. `scripts/nav-icones.mjs` les normalise
+toutes, et la leçon vaut pour tout jeu d'icônes à venir : **égaliser les boîtes
+ne suffit pas**, l'œil compare des taches. Le script applique donc une trame
+(transposée des keylines de Material : carré 79 %, rectangle 92 % sur son grand
+côté) *puis* une correction de surface d'encre à moitié — corriger à fond fait
+enfler les dessins ajourés jusqu'à crever la case, ne pas corriger laisse les
+dessins denses écraser leurs voisins.
 
 Prompts détaillés de ces lots retirés le 2026-07-22 (le dossier faisait 656
 lignes pour ~90 % de travail terminé). Pour régénérer un asset à l'identique :

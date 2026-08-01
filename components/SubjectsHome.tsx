@@ -108,6 +108,23 @@ function CrownRating({
   )
 }
 
+// --- Réglages de la carte matière --------------------------------------------
+// Les trois valeurs qui décident de la silhouette d'une carte, exposées ici pour
+// qu'un ajustement visuel se fasse en UN endroit — pas dans six classes Tailwind
+// éparpillées dans le JSX.
+
+// Côté de l'illustration (px). Elle était à 76 px et « flottait » dans le coin ;
+// à 100 px elle habite enfin la carte. Elle n'est PAS rognée : les vignettes sont
+// des toiles carrées au motif centré, un débordement couperait le sujet en deux.
+const ART_PX = 100
+// Hauteur minimale de la carte : de quoi loger l'illustration ancrée en bas à
+// droite sans écraser le titre ni les couronnes.
+const CARD_MIN_PX = 132
+// Laisse réservée au texte : l'illustration vit à droite, le titre et les
+// couronnes ne dépassent jamais cette largeur — un nom long (« Figures
+// historiques ») passe à la ligne au lieu de courir sous l'image.
+const TEXT_ZONE = '58%'
+
 // Normalise pour une recherche tolérante aux accents/casse.
 function normalizeSearch(s: string): string {
   return s
@@ -234,11 +251,11 @@ function ProgramSearch({ subjects }: { subjects: Subject[] }) {
   )
 }
 
-// Carte matière compacte (grille 2 colonnes) : médaillon coloré + nom + barre
-// de progression. Volontairement resserrée pour limiter le scroll. Si un
-// contrôle est annoncé sur la matière, la carte prend un liseré coloré (3
-// paliers) + une pastille compte à rebours — pour repérer d'un coup d'œil que
-// « ça arrive ».
+// Carte matière (grille 2 colonnes) : fond crème identique pour toutes, barre
+// d'accent colorée au bord gauche, nom en haut à gauche, couronnes en bas à
+// gauche, grande illustration ancrée en bas à droite. Si un contrôle est annoncé
+// sur la matière, la carte prend un liseré coloré (3 paliers) + une pastille
+// compte à rebours — pour repérer d'un coup d'œil que « ça arrive ».
 function SubjectRow({
   subject,
   pct,
@@ -269,19 +286,21 @@ function SubjectRow({
   // ancré en bas à droite) au lieu du médaillon à gauche qui la faisait dépareiller.
   const showFallbackArt = !vignette && !editing
 
+  const hasArt = showVignette || showFallbackArt
+
   const inner = (
     <div
-      style={{ animationDelay: `${delayMs}ms` }}
+      style={{ animationDelay: `${delayMs}ms`, minHeight: `${CARD_MIN_PX}px` }}
       className={cn(
-        // Bouton « chunky » façon jeu mobile : fond pastel de la matière + un
-        // socle 3D coloré (border-bottom épais à la couleur de la matière) et un
-        // appui tactile au tap. Chaque carte lit comme un vrai bouton scolaire.
-        'pop-in rev-card relative flex min-h-[116px] flex-col justify-between rounded-3xl border border-black/[0.06] border-b-[6px] p-3.5 transition-all duration-150 will-change-transform',
-        theme.tile,
-        theme.edge,
+        // Fond crème unique (rev-tile) + barre d'accent de 4 px à gauche à la
+        // couleur de la matière : la seule couleur de matière de la carte. Le
+        // liseré de contour passe en `ring` — un `border` gris entrerait en
+        // conflit avec la couleur de la bordure gauche.
+        'pop-in rev-card rev-tile relative flex flex-col justify-between rounded-3xl border-l-4 p-3.5 pl-3 ring-1 ring-black/[0.06] transition-all duration-150 will-change-transform',
+        theme.accent,
         prox ? `ring-2 ${prox.ring}` : null,
         !editing &&
-          'group-hover:-translate-y-0.5 group-active:translate-y-[3px] group-active:border-b-[3px]',
+          'group-hover:-translate-y-0.5 group-active:translate-y-[2px]',
         editing && 'cursor-pointer',
         editing && !checked && 'opacity-45 grayscale',
       )}
@@ -299,8 +318,10 @@ function SubjectRow({
         </span>
       ) : null}
 
-      {/* Illustration de la matière : ancrée en bas à droite, taille identique
-          d'une carte à l'autre. Purement décorative — le nom porte le sens. */}
+      {/* Illustration de la matière : ancrée en bas à droite, `object-contain`
+          pour ne jamais déformer ni rogner le motif, taille identique d'une
+          carte à l'autre. Purement décorative — le nom porte le sens. Elle
+          passe SOUS le texte (z-0) : le titre reste lisible quoi qu'il arrive. */}
       {showVignette ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -310,32 +331,40 @@ function SubjectRow({
           width={320}
           height={320}
           loading="lazy"
-          className="pointer-events-none absolute right-0 bottom-0 z-0 size-[76px] select-none object-contain drop-shadow-[0_4px_10px_rgba(31,17,71,0.16)] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105"
+          style={{ width: `${ART_PX}px`, height: `${ART_PX}px` }}
+          className="pointer-events-none absolute right-0 bottom-0 z-0 select-none object-contain drop-shadow-[0_4px_10px_rgba(31,17,71,0.16)] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105"
         />
       ) : showFallbackArt ? (
         // Repli sans illustration : l'icône de la matière au même ancrage (bas
-        // droite), dans son médaillon d'arène — même silhouette que les cartes
+        // droite) et à la MÊME taille — même silhouette que les cartes
         // illustrées, pas de layout à part.
         <span
           aria-hidden="true"
+          style={{ width: `${ART_PX}px`, height: `${ART_PX}px` }}
           className={cn(
-            'arena-tile pointer-events-none absolute right-1.5 bottom-1.5 z-0 flex size-[68px] items-center justify-center rounded-2xl shadow-sm transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105',
+            'arena-tile pointer-events-none absolute right-1.5 bottom-1.5 z-0 flex items-center justify-center rounded-2xl shadow-sm transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105',
             theme.arena,
           )}
         >
           <SubjectIcon
             slug={subject.slug}
-            className="size-9 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
+            className="size-12 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
             strokeWidth={2.25}
           />
         </span>
       ) : null}
 
-      <div className="relative z-10 flex items-center gap-2.5">
+      {/* Zone de texte : bornée à la moitié gauche dès qu'un visuel occupe le
+          coin bas-droit. Sans cette laisse, un nom long (« Figures historiques
+          françaises ») courait par-dessus l'illustration. */}
+      <div
+        className="relative z-10 flex items-start gap-2.5"
+        style={hasArt ? { maxWidth: TEXT_ZONE } : undefined}
+      >
         {editing ? (
           <span
             className={cn(
-              'flex size-5 shrink-0 items-center justify-center rounded-full border text-[11px] transition-colors',
+              'mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border text-[11px] transition-colors',
               // Coche de sélection en VERT (validation), pas en jaune : le jaune
               // reste la monnaie/récompense.
               checked
@@ -346,19 +375,13 @@ function SubjectRow({
             {checked ? <Check className="size-3" /> : null}
           </span>
         ) : null}
-        <p
-          className={cn(
-            'font-heading min-w-0 flex-1 text-base leading-tight font-bold',
-            // Petite réserve à droite : le nom reste au-dessus, le visuel
-            // (illustration ou icône de repli) vit dans le coin bas-droit.
-            (showVignette || showFallbackArt) && 'pr-2',
-          )}
-        >
+        <p className="font-heading min-w-0 flex-1 text-[15px] leading-tight font-bold text-balance">
           {subject.name}
         </p>
       </div>
 
-      <div className="relative z-10">
+      {/* Les couronnes restent en bas à GAUCHE, au-dessus de l'illustration. */}
+      <div className="relative z-10 w-fit">
         {/* Les couronnes portent le rang ; le libellé texte est masqué sur la
             carte (un visuel occupe déjà le coin), la légende de la page l'explique
             et l'aria-label l'annonce. Uniforme désormais sur TOUTES les cartes. */}

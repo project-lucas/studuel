@@ -24,12 +24,11 @@ describe('subjectIcon', () => {
 describe('subjectTheme', () => {
   const KEYS: (keyof SubjectTheme)[] = [
     'header',
-    'tile',
     'chip',
     'bar',
     'stroke',
     'arena',
-    'edge',
+    'accent',
   ]
 
   it('repli sur le thème bleu pour une couleur inconnue', () => {
@@ -42,7 +41,16 @@ describe('subjectTheme', () => {
     expect(red.bar).toContain('rose')
   })
 
-  it('tout thème connu renseigne les 7 rôles (aucune classe vide)', () => {
+  it('la barre d’accent est bien une bordure GAUCHE, à la couleur de la matière', () => {
+    // La carte matière ne porte plus de fond pastel : la couleur ne vit que sur
+    // ces 4 px. Une classe de bordure basse (l'ancien socle 3D) ou un fond
+    // repasserait en douce à l'écran dispersé qu'on vient de corriger.
+    for (const color of ['blue', 'red', 'green', 'purple', 'yellow', 'slate']) {
+      expect(subjectTheme(color).accent, color).toMatch(/^border-l-[a-z]+-500$/)
+    }
+  })
+
+  it('tout thème connu renseigne les 6 rôles (aucune classe vide)', () => {
     for (const color of ['blue', 'red', 'green', 'purple', 'yellow', 'slate']) {
       const theme = subjectTheme(color)
       for (const key of KEYS) {

@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { Flame, GraduationCap } from 'lucide-react'
+import { Flame } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
-import MarcelSegments, { parseVue } from '@/components/marcel/MarcelSegments'
+import MarcelHub from '@/components/marcel/MarcelHub'
+import VueHeader from '@/components/marcel/VueHeader'
 import PointDuJourHero from '@/components/marcel/PointDuJourHero'
 import SeanceCard from '@/components/marcel/SeanceCard'
 import MethodePanel from '@/components/marcel/MethodePanel'
@@ -13,7 +14,9 @@ import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { getMarcelSnapshot } from '@/lib/coach/marcel-server'
 import { getOralSnapshot } from '@/lib/coach/oral-server'
-import { entrainementsFor } from '@/lib/coach/entrainement'
+import { countPretes, entrainementsFor } from '@/lib/coach/entrainement'
+import { couvertureGlobale } from '@/lib/coach/couverture'
+import { parseVue, titreVue } from '@/lib/coach/marcel-vues'
 
 export const metadata = { title: 'Marcel — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -90,6 +93,9 @@ export default async function MarcelPage({
     catalogueVide,
     disponiblesBySlug,
     couverture,
+    chapitresCouverts,
+    slugsExamen,
+    oral: oralDescriptif,
     demande,
   } = await getMarcelSnapshot(supabase, user.id)
 
@@ -102,22 +108,31 @@ export default async function MarcelPage({
   const demandee = matieres.find((m) => m.slug === matiereRaw)
   const courante = demandee ?? matieres[0] ?? null
 
+  // Les entraînements sont dérivés pour la vue « S'entraîner », et leur compte
+  // sert de repère sur la tuile du hub — même calcul, une seule fois.
+  const entrainements = entrainementsFor({ matieres, disponiblesBySlug })
+  const titre = titreVue(vue)
+
   return (
     <div className="pb-6">
       <div className="px-4 pt-2">
         {/* Pas de titre « Marcel » : l'onglet actif le dit déjà, et ces 40 px
-            servent mieux au contenu. */}
-        <div className="mx-0.5 mt-1 mb-2 flex items-center justify-between">
-          <time className="text-[13px] font-extrabold">{dateDuJour()}</time>
-          {streak >= 2 && (
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ffeed2] px-2.5 py-1 text-xs font-extrabold text-[#b4550c]">
-              <Flame aria-hidden="true" className="size-3.5" />
-              {streak} jours
-            </span>
-          )}
-        </div>
-
-        <MarcelSegments vue={vue} matiere={courante?.slug} />
+            servent mieux au contenu. La date et la série ne coiffent QUE
+            l'accueil — sur une sous-page, c'est son propre titre qui doit
+            occuper le haut de l'écran. */}
+        {vue === 'aujourdhui' ? (
+          <div className="mx-0.5 mt-1 mb-2 flex items-center justify-between">
+            <time className="text-[13px] font-extrabold">{dateDuJour()}</time>
+            {streak >= 2 && (
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ffeed2] px-2.5 py-1 text-xs font-extrabold text-[#b4550c]">
+                <Flame aria-hidden="true" className="size-3.5" />
+                {streak} jours
+              </span>
+            )}
+          </div>
+        ) : titre ? (
+          <VueHeader titre={titre} />
+        ) : null}
 
         {vue === 'aujourdhui' ? (
           <>
@@ -131,18 +146,23 @@ export default async function MarcelPage({
               </p>
             )}
 
-            {/* Le pont vers la méthode : le « comment » de la matière du jour,
-                à un tap. Un lien utile plutôt qu'une promesse en pointillés —
-                l'entrée IA viendra ici, en dernier et volontairement. */}
-            {point.regime && point.matiere && (
-              <Link
-                href={`/marcel?vue=methode&matiere=${point.matiere.slug}`}
-                className="text-primary mt-4 flex min-h-12 items-center justify-center gap-2 rounded-[17px] border-[1.5px] border-dashed border-[color-mix(in_oklch,var(--primary),transparent_62%)] bg-white/60 px-3 text-center text-[13px] font-bold"
-              >
-                <GraduationCap aria-hidden="true" className="size-4" />
-                Comment on travaille {point.matiere.name} ?
-              </Link>
-            )}
+            {/* Les quatre autres métiers de Marcel. Le pont vers la méthode du
+                jour vivait ici en lien pointillé séparé : la tuile « Méthode »
+                le remplace, et emporte la matière du point du jour — un seul
+                chemin vers un seul écran, au lieu de deux. */}
+            <MarcelHub
+              matiere={point.matiere?.slug ?? courante?.slug}
+              stats={{
+                entrainement:
+                  entrainements.length > 0
+                    ? `${countPretes(entrainements)}/${entrainements.length} prêtes`
+                    : undefined,
+                progres:
+                  couverture.length > 0
+                    ? `${couvertureGlobale(couverture)} %`
+                    : undefined,
+              }}
+            />
 
             {/* L'IA en dernier : Marcel est d'abord un repère de méthode. */}
             <DemanderMarcel
@@ -159,11 +179,13 @@ export default async function MarcelPage({
         ) : vue === 'oral' && oral ? (
           <OralPanel snapshot={oral} />
         ) : vue === 'entrainement' ? (
-          <EntrainementPanel
-            matieres={entrainementsFor({ matieres, disponiblesBySlug })}
-          />
+          <EntrainementPanel matieres={entrainements} />
         ) : (
-          <ProgresPanel couverture={couverture} />
+          <ProgresPanel
+            chapitres={chapitresCouverts}
+            slugsExamen={slugsExamen}
+            oral={oralDescriptif}
+          />
         )}
       </div>
     </div>

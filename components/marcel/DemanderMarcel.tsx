@@ -243,11 +243,13 @@ export default function DemanderMarcel({
 
         {reponse && !pending && (
           <div className="bg-accent/60 mt-3 flex items-start gap-2.5 rounded-[15px] p-3">
+            {/* Le bloc est sur `accent` : son encre est `accent-foreground`,
+                pas deux bruns choisis à la main (#c58b0d / #6b4a05). */}
             <Lightbulb
               aria-hidden="true"
-              className="mt-0.5 size-4 shrink-0 text-[#c58b0d]"
+              className="text-accent-foreground/75 mt-0.5 size-4 shrink-0"
             />
-            <p className="text-[13px] leading-relaxed font-semibold text-[#6b4a05]">
+            <p className="text-accent-foreground text-[13px] leading-relaxed font-semibold">
               {reponse}
             </p>
           </div>

@@ -18,11 +18,24 @@
 // panne réseau échouent désormais fermé : pas de contenu, pas de repli.
 
 // Codes PostgREST / PostgreSQL signifiant « objet absent du schéma ».
+//
+// Les TABLES manquaient à cette liste, et ça se voyait à l'écran : cocher un
+// chapitre « vu en cours » avant la migration 224 répondait « Impossible
+// d'enregistrer — réessaie » (un mensonge : réessayer ne pouvait pas marcher)
+// au lieu de « pas encore ouvert ». Le même trou touchait tous les replis
+// gardés par une table neuve — trésor, oral, abonnements.
+//
+// Ça n'ouvre aucune porte payante : les replis de `mind-map-access` et
+// `revision-access` relisent `chapters` / `lessons`, deux tables qui ne peuvent
+// pas être absentes sans que la lecture de repli échoue elle aussi. Le refus de
+// droit (42501) reste dehors, et c'est lui qui comptait.
 const MISSING_SCHEMA_CODES = new Set([
   'PGRST202', // fonction absente du cache de schéma (RPC pas encore créée)
   'PGRST204', // colonne absente du cache de schéma
+  'PGRST205', // table absente du cache de schéma (migration pas exécutée)
   '42883', // undefined_function
   '42703', // undefined_column
+  '42P01', // undefined_table (erreur brute, hors cache PostgREST)
 ])
 
 export function isMissingSchemaObject(

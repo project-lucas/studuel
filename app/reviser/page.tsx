@@ -41,6 +41,8 @@ import { subjectsWithContentAt } from '@/lib/subject-visibility'
 import { readRowTolerant } from '@/lib/profile-read'
 import { examsForProfile } from '@/lib/exams'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
+import { getChapitresVus } from '@/lib/chapitres-vus'
+import { progressionMatiere, type ChapitreProgression } from '@/lib/progression'
 import {
   toDayKey,
   computeStreak,
@@ -161,6 +163,7 @@ export default async function ReviserPage() {
     { data: controleRows },
     { data: sessionRows },
     cachedSubjects,
+    chapitresVus,
   ] = await Promise.all([
     readRowTolerant<ProfileRow>(supabase, 'profiles', 'id', user.id, [
       'full_name',
@@ -245,6 +248,10 @@ export default async function ReviserPage() {
       .returns<SessionRow[]>(),
     // Catalogue servi par le cache serveur (identique pour tous les élèves).
     getSubjectsCached(),
+    // Ce que le prof a traité (migration 224) : c'est le dénominateur des
+    // couronnes. Sans cette lecture, cet écran et le tableau de Marcel
+    // afficheraient deux pourcentages différents pour la même matière.
+    getChapitresVus(supabase, user.id),
   ])
 
   const oralTexts = normalizeOralList(profile.oral_texts)
@@ -385,15 +392,23 @@ export default async function ReviserPage() {
     state: ReturnType<typeof chapterState>
   }
   const analyzed: Analyzed[] = []
-  const sums = new Map<string, { sum: number; total: number }>()
+  // Les chapitres regroupés par matière, dans la forme qu'attend
+  // `progressionMatiere` — LA définition du pourcentage d'une matière, partagée
+  // avec le tableau Progrès de Marcel. Avant, cet écran faisait sa propre
+  // moyenne (somme / total) : les couronnes et Marcel pouvaient annoncer deux
+  // chiffres différents pour la même matière.
+  const parMatiere = new Map<string, ChapitreProgression[]>()
 
   for (const c of levelChapters ?? []) {
     const subject = subjectById.get(c.subject_id)
-    const agg = sums.get(c.subject_id) ?? { sum: 0, total: 0 }
     const p = mastery.get(c.id)
-    agg.sum += p?.value ?? 0
-    agg.total += 1
-    sums.set(c.subject_id, agg)
+    const liste = parMatiere.get(c.subject_id) ?? []
+    liste.push({
+      value: p?.value ?? 0,
+      state: chapterState(p),
+      vuEnCours: chapitresVus.has(c.id),
+    })
+    parMatiere.set(c.subject_id, liste)
     if (!subject || !followedIds.has(c.subject_id)) continue
     analyzed.push({
       subject,
@@ -423,12 +438,15 @@ export default async function ReviserPage() {
     grade === '1re' && exams.some((e) => e.subject.slug === 'francais')
   const examEntries: ExamProgressEntry[] = exams
     .map(({ subject }) => {
-      const agg = sums.get(subject.id) ?? { sum: 0, total: 0 }
+      const p = progressionMatiere(parMatiere.get(subject.id) ?? [])
       return {
         label: subject.name,
         subject,
-        total: agg.total,
-        progress: agg.total > 0 ? agg.sum / agg.total : 0,
+        // L'assiette de l'objectif examen, ce sont les chapitres COMMENCÉS : une
+        // matière que le prof n'a pas encore abordée ne doit pas peser dans la
+        // barre de préparation comme un trou de révision.
+        total: p.commences,
+        progress: p.pct / 100,
       }
     })
     .filter((e) => e.total > 0)
@@ -436,9 +454,7 @@ export default async function ReviserPage() {
   // --- Anneaux des tuiles -------------------------------------------------------
   const progressBySlug: Record<string, number> = {}
   for (const s of ofLevel) {
-    const agg = sums.get(s.id)
-    progressBySlug[s.slug] =
-      agg && agg.total > 0 ? Math.round((agg.sum / agg.total) * 100) : 0
+    progressBySlug[s.slug] = progressionMatiere(parMatiere.get(s.id) ?? []).pct
   }
 
   // Créneaux de trajet : la bannière « mode trajet » ne s'affiche que dans

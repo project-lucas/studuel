@@ -15,7 +15,14 @@ import type { Subject } from '@/lib/types'
 import type { Tier } from '@/lib/subscription'
 import { pointDuJour, type PointDuJour } from './point-du-jour'
 import { hasRegime, regimeOf, type Regime } from './regimes'
-import { couvertureFor, type CouvertureMatiere } from './couverture'
+import {
+  couvertureFor,
+  type ChapitreCouvert,
+  type CouvertureMatiere,
+} from './couverture'
+import { examsForProfile } from '@/lib/exams'
+import { normalizeOralList } from '@/lib/oral-texts'
+import { getChapitresVus } from '../chapitres-vus'
 
 // Résolution SERVEUR du point du jour de Marcel. La décision est PURE et testée
 // (./point-du-jour, ./regimes) ; ce module ne fait que rassembler les données.
@@ -31,6 +38,7 @@ type ProfileRow = {
   daily_goal_minutes: number | null
   subscription_tier: string | null
   gems: number | null
+  oral_texts: unknown
 }
 
 /** Une matière suivie, prête pour le sélecteur de l'onglet Méthode. */
@@ -61,6 +69,23 @@ export type MarcelSnapshot = {
    * et un écran qui prétendrait dire « pourquoi » tu te trompes mentirait.
    */
   couverture: CouvertureMatiere[]
+  /**
+   * Les chapitres bruts qui ont produit `couverture`. Le tableau Progrès les
+   * reçoit tels quels et rappelle `couvertureFor` lui-même à chaque case cochée :
+   * une seule fonction calcule le pourcentage, côté serveur comme côté client,
+   * donc aucun risque que la case cochée et le total affiché divergent.
+   */
+  chapitresCouverts: ChapitreCouvert[]
+  /**
+   * Les matières qui tombent à l'examen de l'année (brevet, bac de français,
+   * bac). Vide hors classe à examen — le mode examen ne s'affiche alors pas.
+   */
+  slugsExamen: string[]
+  /**
+   * Le descriptif de l'oral (1re français, migration 156) : ce que l'élève doit
+   * savoir présenter. `null` quand l'épreuve ne le concerne pas.
+   */
+  oral: { total: number; maitrises: number } | null
   /** De quoi afficher la porte de « Demander à Marcel » sans aller-retour. */
   demande: {
     tier: Tier
@@ -93,6 +118,7 @@ export async function getMarcelSnapshot(
       'daily_goal_minutes',
       'subscription_tier',
       'gems',
+      'oral_texts',
     ],
   )
 
@@ -112,6 +138,7 @@ export async function getMarcelSnapshot(
     { data: sessionRows },
     { data: coachCalls },
     { data: coachTokens },
+    chapitresVus,
   ] = await Promise.all([
     getSubjectsCached(),
     grade ? getGradeChaptersCached(grade) : Promise.resolve([]),
@@ -161,6 +188,9 @@ export async function getMarcelSnapshot(
       .select('balance')
       .eq('user_id', userId)
       .maybeSingle(),
+    // Ce que le prof a traité, déclaré par l'élève (migration 224) : c'est le
+    // dénominateur du pourcentage de chaque matière.
+    getChapitresVus(supabase, userId),
   ])
 
   // --- Matières suivies (choix d'onboarding, repli sur tout le catalogue) ------
@@ -191,6 +221,41 @@ export async function getMarcelSnapshot(
       value: progress?.value ?? 0,
     })
   }
+
+  // Mêmes candidats que la mission — une seule lecture du programme — augmentés
+  // de la seule chose que l'app ne peut pas deviner : ce que le prof a traité.
+  const chapitresCouverts: ChapitreCouvert[] = candidates.map((c) => ({
+    chapterId: c.chapterId,
+    chapterTitle: c.chapterTitle,
+    subjectSlug: c.subjectSlug,
+    subjectName: c.subjectName,
+    state: c.state,
+    value: c.value,
+    vuEnCours: chapitresVus.has(c.chapterId),
+  }))
+
+  // --- Ce qui tombe à l'examen de l'année -------------------------------------
+  // Dérivé du profil, comme sur Réviser : aucune configuration manuelle. Vide en
+  // 6e→2de, où il n'y a pas d'épreuve officielle.
+  const slugsExamen = grade
+    ? examsForProfile(
+        grade,
+        followed.map((s) => s.slug),
+        allSubjects,
+      ).map((e) => e.subject.slug)
+    : []
+
+  // Le descriptif de l'oral (migration 156) ne concerne que le bac de français.
+  // Ailleurs, `null` : Marcel ne compte pas des textes que personne ne doit
+  // présenter.
+  const textes = normalizeOralList(profile?.oral_texts)
+  const oral =
+    grade === '1re' && slugsExamen.includes('francais')
+      ? {
+          total: textes.length,
+          maitrises: textes.filter((t) => t.status === 'maitrise').length,
+        }
+      : null
 
   // --- Série et historique ----------------------------------------------------
   const activityDays = new Set(
@@ -260,8 +325,10 @@ export async function getMarcelSnapshot(
     grade,
     catalogueVide: candidates.length === 0,
     disponiblesBySlug,
-    // Mêmes candidats que la mission : une seule lecture du programme.
-    couverture: couvertureFor(candidates),
+    couverture: couvertureFor(chapitresCouverts),
+    chapitresCouverts,
+    slugsExamen,
+    oral,
     demande: {
       tier: (profile?.subscription_tier as Tier) ?? 'free',
       utilisesAujourdhui: Number(coachCalls?.attempts ?? 0),

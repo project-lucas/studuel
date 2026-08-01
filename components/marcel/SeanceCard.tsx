@@ -42,7 +42,11 @@ export default function SeanceCard({
               className={
                 index === 0
                   ? 'from-primary relative z-10 grid size-8 shrink-0 place-items-center rounded-xl bg-gradient-to-b to-[color-mix(in_oklch,var(--primary),black_22%)] text-sm font-extrabold text-white shadow-[0_3px_8px_-3px_color-mix(in_oklch,var(--primary),transparent_10%)]'
-                  : 'relative z-10 grid size-8 shrink-0 place-items-center rounded-xl bg-[#f3eee1] text-sm font-extrabold text-[#7b6539] shadow-[inset_0_0_0_1.5px_rgba(36,48,79,.06)]'
+                  : // Beige et brun figés (#f3eee1/#7b6539) remplacés par les
+                    // tokens. `text-foreground/80` plutôt que `muted-foreground` :
+                    // ce dernier est trop clair sur `muted` pour un chiffre de
+                    // 14 px (moins de 3:1).
+                    'bg-muted text-foreground/80 relative z-10 grid size-8 shrink-0 place-items-center rounded-xl text-sm font-extrabold shadow-[inset_0_0_0_1.5px_rgba(36,48,79,.06)]'
               }
             >
               {index === 0 ? <Check aria-hidden="true" className="size-4" /> : index + 1}
@@ -57,7 +61,7 @@ export default function SeanceCard({
               </span>
             </span>
 
-            <span className="text-muted-foreground rounded-full bg-[#f4f0e6] px-2.5 py-1 text-xs font-extrabold">
+            <span className="bg-muted/60 text-foreground/70 rounded-full px-2.5 py-1 text-xs font-extrabold">
               {etape.minutes} min
             </span>
           </li>

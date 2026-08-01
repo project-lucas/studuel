@@ -1,8 +1,10 @@
 'use server'
 
+import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { REGIMES, regimeOf } from '@/lib/coach/regimes'
+import { isMissingSchemaObject } from '@/lib/schema-fallback'
 
 // Demander quelque chose à Marcel.
 //
@@ -158,4 +160,62 @@ export async function acheterJetons(packs: number): Promise<AchatResult> {
   }
   if (data === 'no_gems') return { ok: false, noGems: true }
   return { ok: data === 'ok' }
+}
+
+// -----------------------------------------------------------------------------
+// « Vu en cours » — la seule chose que l'élève DÉCLARE, et que l'app ne peut pas
+// deviner.
+//
+// Elle déclare le PÉRIMÈTRE (ce que le prof a traité), jamais son NIVEAU : la
+// maîtrise reste mesurée par les quiz et les leçons. C'est ce qui empêche
+// l'écran Progrès de devenir un formulaire d'auto-flatterie.
+//
+// Aucune validation d'existence du chapitre ici : la clé étrangère de la
+// migration 224 refuse en base un identifiant inventé, et la RLS interdit
+// d'écrire pour quelqu'un d'autre. Revalider en TypeScript ce que Postgres
+// garantit coûterait une requête par clic pour la même réponse.
+// -----------------------------------------------------------------------------
+
+export type ChapitreVuResult = {
+  ok: boolean
+  /** Migration 224 pas encore exécutée — ce n'est pas une faute de l'élève. */
+  unavailable?: boolean
+}
+
+export async function marquerChapitreVu(
+  chapterId: string,
+  vu: boolean,
+): Promise<ChapitreVuResult> {
+  const user = await getCurrentUser()
+  if (!user) return { ok: false }
+
+  const supabase = await createClient()
+
+  const { error } = vu
+    ? await supabase
+        .from('chapitres_vus')
+        // Recocher un chapitre déjà coché ne doit pas échouer sur la clé
+        // primaire : deux onglets ouverts suffisent à produire ce doublon.
+        .upsert(
+          { user_id: user.id, chapter_id: chapterId },
+          { onConflict: 'user_id,chapter_id', ignoreDuplicates: true },
+        )
+    : await supabase
+        .from('chapitres_vus')
+        .delete()
+        .eq('user_id', user.id)
+        .eq('chapter_id', chapterId)
+
+  if (error) {
+    if (isMissingSchemaObject(error)) return { ok: false, unavailable: true }
+    console.error('[marcel] chapitre vu en cours:', error.message)
+    return { ok: false }
+  }
+
+  // L'onglet Réviser lit la MÊME donnée pour ses couronnes : sans cette
+  // invalidation, cocher un chapitre changerait le tableau de Marcel et
+  // laisserait les cartes matières sur l'ancien compte.
+  revalidatePath('/marcel')
+  revalidatePath('/reviser')
+  return { ok: true }
 }

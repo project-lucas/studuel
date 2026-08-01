@@ -12,6 +12,13 @@ describe('isMissingSchemaObject', () => {
     expect(isMissingSchemaObject({ code: 'PGRST204' })).toBe(true)
   })
 
+  it('reconnaît une TABLE pas encore créée', () => {
+    // Le cas qui manquait : `chapitres_vus` (224) absente répondait « réessaie »
+    // à l'élève, alors que réessayer ne pouvait rien changer.
+    expect(isMissingSchemaObject({ code: 'PGRST205' })).toBe(true)
+    expect(isMissingSchemaObject({ code: '42P01' })).toBe(true)
+  })
+
   it('REFUSE de se replier sur un refus de droit', () => {
     // Le cas qui compte : `REVOKE SELECT` sur la colonne payante. S'y replier
     // rouvrirait la porte que les migrations 182 et 185 ont fermée.

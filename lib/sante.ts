@@ -335,6 +335,28 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'L’atelier d’oral de Marcel s’ouvre mais ne compte rien, et « demander à un ami de m’écouter » est impossible — les deux écrans le disent franchement au lieu de faire semblant. Aucun audio n’est concerné : il ne quitte jamais l’appareil, migration ou pas.',
     sonde: { type: 'table', table: 'oral_sessions' },
   },
+  {
+    id: '223',
+    fichier: '223_percentile_niveau.sql',
+    feature:
+      'Le classement en pourcentage par niveau (« Top 2 % des 3e ») sur Défi, Moi et les pages matière',
+    siAbsente:
+      'Les compteurs restent bruts : « 3 000 trophées » sans sa traduction, et aucune ligne de classement sur Moi ni sur les matières. Rien ne casse et rien de faux ne s’affiche — la ligne est simplement absente, par construction (le lecteur retombe sur « aucun classement »).',
+    sonde: { type: 'rpc', fn: 'my_grade_standings', args: {} },
+    decision:
+      'La RPC est SECURITY DEFINER par OBLIGATION : la RLS de `profiles` ne laisse voir à l’élève que sa propre ligne, donc une jointure classerait tout le monde « 1er sur 1 ». Elle ne renvoie que des rangs et des effectifs, jamais un nom.',
+  },
+  {
+    id: '224',
+    fichier: '224_chapitres_vus.sql',
+    feature:
+      'Les chapitres « vus en cours » — le dénominateur des pourcentages de matière',
+    siAbsente:
+      'Les cases à cocher du tableau Progrès répondent « le suivi des chapitres n’est pas encore ouvert » et rien n’est enregistré. Les pourcentages ne portent alors que sur ce qui a été travaillé DANS l’app : un chapitre fait en classe mais jamais révisé ici reste compté « pas encore vu ». Rien ne casse, rien de faux ne s’affiche — l’app retombe exactement sur son comportement d’avant le 01/08.',
+    sonde: { type: 'table', table: 'chapitres_vus' },
+    decision:
+      'L’élève déclare le PÉRIMÈTRE (ce que le prof a traité), jamais son NIVEAU : la maîtrise reste mesurée par les quiz et les leçons. Sans cette séparation, l’écran deviendrait un formulaire d’auto-évaluation, et le pourcentage ne vaudrait plus rien.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

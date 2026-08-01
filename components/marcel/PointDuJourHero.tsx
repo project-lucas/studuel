@@ -28,8 +28,11 @@ export default function PointDuJourHero({ point }: { point: PointDuJour }) {
     <section
       className={cn(
         'relative overflow-hidden rounded-3xl p-4 text-white',
-        'bg-[radial-gradient(130%_100%_at_88%_-10%,color-mix(in_oklch,var(--highlight),transparent_70%),transparent_58%),linear-gradient(168deg,#9159ee_0%,#6b31cd_48%,#4d1aa2_100%)]',
-        'shadow-[0_18px_32px_-20px_rgba(77,26,162,.95),inset_0_1px_0_rgba(255,255,255,.3)]',
+        // Le violet est SCULPTÉ à partir du token, pas recopié en hex : trois
+        // valeurs figées (#9159ee/#6b31cd/#4d1aa2) auraient continué de vivre
+        // leur vie le jour où --primary bouge.
+        'bg-[radial-gradient(130%_100%_at_88%_-10%,color-mix(in_oklch,var(--highlight),transparent_70%),transparent_58%),linear-gradient(168deg,color-mix(in_oklch,var(--primary),white_10%)_0%,color-mix(in_oklch,var(--primary),black_14%)_48%,color-mix(in_oklch,var(--primary),black_30%)_100%)]',
+        'shadow-[0_18px_32px_-20px_color-mix(in_oklch,var(--primary),black_34%),inset_0_1px_0_rgba(255,255,255,.3)]',
       )}
     >
       {/* Halo doré, purement décoratif — coupé si l'utilisateur demande moins
@@ -89,7 +92,7 @@ export default function PointDuJourHero({ point }: { point: PointDuJour }) {
       {href ? (
         <Link
           href={href}
-          className="font-heading text-primary relative mt-3.5 flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(180deg,#fffefa,#fbf6ea)] px-4 text-base font-extrabold shadow-[0_4px_0_#3d1490,0_8px_16px_-8px_rgba(0,0,0,.55)] transition-transform active:translate-y-0.5 active:shadow-[0_2px_0_#3d1490]"
+          className="font-heading text-primary relative mt-3.5 flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(180deg,var(--card),color-mix(in_oklch,var(--background),white_58%))] px-4 text-base font-extrabold shadow-[0_4px_0_color-mix(in_oklch,var(--primary),black_44%),0_8px_16px_-8px_rgba(0,0,0,.55)] transition-transform active:translate-y-0.5 active:shadow-[0_2px_0_color-mix(in_oklch,var(--primary),black_44%)]"
         >
           {cta}
           <ArrowRight aria-hidden="true" className="size-4" />

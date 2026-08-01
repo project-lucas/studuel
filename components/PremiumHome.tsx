@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { Check, Crown, Users, Sparkles, ShieldCheck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { declarerInteret } from '@/app/tresor/actions'
+import { estPlanPayant } from '@/lib/abonnement'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -46,6 +48,111 @@ function ValueHero() {
         </p>
       </div>
     </section>
+  )
+}
+
+// Le formulaire qui a remplacé « Le paiement arrive très bientôt ✨ ».
+//
+// Ce message-là ne faisait RIEN : aucune trace, aucun rappel possible, et un
+// parent qui revenait deux semaines plus tard lisait le même « bientôt ». Ici
+// on enregistre l'intention (migration 221) et on dit exactement la suite :
+// quelqu'un recontacte. Le contact est FACULTATIF — on ne bloque pas un élève
+// qui n'a pas l'email de ses parents sous la main.
+function InterestForm({ planId }: { planId: PlanId }) {
+  const [contact, setContact] = useState('')
+  const [etat, setEtat] = useState<
+    'saisie' | 'envoi' | 'enregistre' | 'deja' | 'indisponible' | 'erreur'
+  >('saisie')
+  const [erreur, setErreur] = useState<string | null>(null)
+
+  // Les offres gratuites n'ont pas de bouton, donc pas de formulaire.
+  if (!estPlanPayant(planId)) return null
+
+  const envoyer = async () => {
+    setEtat('envoi')
+    setErreur(null)
+    const r = await declarerInteret(planId, contact)
+    if (r.statut === 'invalide') {
+      setErreur(r.raison)
+      setEtat('saisie')
+      return
+    }
+    setEtat(
+      r.statut === 'enregistre'
+        ? 'enregistre'
+        : r.statut === 'deja'
+          ? 'deja'
+          : r.statut === 'indisponible'
+            ? 'indisponible'
+            : 'erreur',
+    )
+  }
+
+  if (etat === 'enregistre' || etat === 'deja') {
+    return (
+      <p
+        role="status"
+        aria-live="polite"
+        className="mt-2 rounded-2xl bg-highlight/15 px-3 py-2 text-center text-sm font-medium text-foreground"
+      >
+        {etat === 'deja'
+          ? 'Ta demande est déjà enregistrée pour cette offre — on revient vers toi.'
+          : 'C’est noté ! On te recontacte pour finaliser l’abonnement.'}
+      </p>
+    )
+  }
+
+  if (etat === 'indisponible' || etat === 'erreur') {
+    return (
+      <p
+        role="status"
+        aria-live="polite"
+        className="text-muted-foreground mt-2 rounded-2xl bg-muted px-3 py-2 text-center text-sm"
+      >
+        Impossible d’enregistrer la demande pour l’instant. Réessaie dans un
+        moment.
+      </p>
+    )
+  }
+
+  return (
+    <div className="mt-2 rounded-2xl bg-highlight/10 px-3 py-3 text-left">
+      <label
+        htmlFor={`contact-${planId}`}
+        className="block text-xs font-bold text-foreground"
+      >
+        Où te recontacter&nbsp;? <span className="font-normal">(facultatif)</span>
+      </label>
+      <input
+        id={`contact-${planId}`}
+        type="text"
+        inputMode="email"
+        autoComplete="email"
+        value={contact}
+        onChange={(e) => setContact(e.target.value)}
+        placeholder="email ou téléphone d’un parent"
+        className="mt-1.5 h-11 w-full rounded-xl border bg-card px-3 text-sm"
+      />
+      {erreur ? (
+        <p role="alert" className="text-destructive mt-1.5 text-xs font-medium">
+          {erreur}
+        </p>
+      ) : null}
+      <Button
+        className="mt-2 w-full rounded-full font-bold"
+        disabled={etat === 'envoi'}
+        onClick={() => {
+          sfx.correct()
+          void envoyer()
+        }}
+      >
+        {etat === 'envoi' ? 'Envoi…' : 'Envoyer ma demande'}
+      </Button>
+      <p className="text-muted-foreground mt-2 text-center text-[11px]">
+        Aucun paiement en ligne pour l’instant&nbsp;: on te recontacte pour
+        finaliser.
+      </p>
+    </div>
   )
 }
 
@@ -148,15 +255,7 @@ function PlanCard({
             </Button>
           )}
 
-          {chosen ? (
-            <p
-              role="status"
-              aria-live="polite"
-              className="mt-2 rounded-2xl bg-highlight/15 px-3 py-2 text-center text-sm font-medium text-foreground"
-            >
-              Merci ! Le paiement arrive très bientôt — on te préviendra ✨
-            </p>
-          ) : null}
+          {chosen ? <InterestForm planId={plan.id} /> : null}
         </div>
       </div>
     </article>

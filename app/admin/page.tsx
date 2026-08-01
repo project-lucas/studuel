@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ChevronRight, LineChart, MonitorPlay } from 'lucide-react'
+import { ChevronRight, CreditCard, LineChart, MonitorPlay } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
 import type { Subject } from '@/lib/types'
 
@@ -40,6 +40,25 @@ export default async function AdminHomePage() {
             <span className="font-heading block font-bold">Rétention</span>
             <span className="block text-sm text-muted-foreground">
               D1 / D7 / D30, entonnoir d’arrivée, engagement
+            </span>
+          </span>
+        </span>
+        <ChevronRight className="size-5 shrink-0 text-muted-foreground" />
+      </Link>
+
+      {/* La caisse, juste derrière la rétention : ce sont les deux seules pages
+          qui parlent d'argent et de survie. Elle n'existait pas avant le
+          01/08/2026 — aucun compte ne pouvait devenir payant. */}
+      <Link
+        href="/admin/abonnements"
+        className="flex items-center justify-between gap-3 rounded-2xl border-2 border-highlight/50 bg-highlight/10 p-4 transition-colors hover:bg-highlight/20"
+      >
+        <span className="flex items-center gap-3">
+          <CreditCard className="size-5 shrink-0 text-foreground" aria-hidden="true" />
+          <span>
+            <span className="font-heading block font-bold">Abonnements</span>
+            <span className="block text-sm text-muted-foreground">
+              Demandes reçues, octroi manuel, échéances
             </span>
           </span>
         </span>

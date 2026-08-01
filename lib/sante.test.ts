@@ -19,7 +19,7 @@ describe('MIGRATIONS_SANTE — le catalogue colle au dépôt', () => {
     }
   })
 
-  it('couvre TOUTES les migrations en attente (188, 192 → 213), sans trou', () => {
+  it('couvre TOUTES les migrations suivies (187 → 189, puis 192 → la dernière), sans trou', () => {
     // La dette : 188 puis 192 → 213. Un numéro qui manque ici est une migration
     // que ni /admin/sante ni la sonde CLI ne surveillent — exactement le trou
     // silencieux que ce module existe pour fermer. La 209 est la reprise du
@@ -33,8 +33,15 @@ describe('MIGRATIONS_SANTE — le catalogue colle au dépôt', () => {
         .map((f) => Number(f.slice(0, 3)))
         .filter((n) => Number.isFinite(n) && n >= 192),
     )
+    // 187 et 189 ont rejoint le catalogue le 01/08/2026 : elles étaient
+    // sondables (term_grades, avatar_items) et pourtant hors surveillance —
+    // l'audit du 31/07 relevait justement que « leur état réel est inconnu ».
+    // 190 et 191 restent dehors : ce sont des seeds de contenu déjà en base
+    // (leurs matières répondent), pas de la dette.
     const attendues = [
+      '187',
       '188',
+      '189',
       ...Array.from({ length: derniere - 191 }, (_, i) => String(192 + i)),
     ].sort()
     expect(ids).toEqual(attendues)

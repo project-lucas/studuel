@@ -47,12 +47,31 @@ export type MigrationSante = {
  * Une migration confirmée exécutée en prod se RETIRE de cette liste.
  */
 export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
+  // 187 et 189 ont longtemps manqué à ce catalogue, qui commençait à 188 : leur
+  // état réel était donc INCONNU (audit du 31/07/2026). Elles sont sondables,
+  // il n'y avait aucune raison de les laisser dehors.
+  {
+    id: '187',
+    fichier: '187_moi_capacite.sql',
+    feature: 'Onglet Moi : moyennes trimestrielles saisies + habitude « Questions »',
+    siAbsente:
+      'La carte « Ta trajectoire au bac » perd son repli : sans note réelle saisie, elle ne peut afficher aucune moyenne, et le levier « Questions » n’existe pas dans le catalogue d’habitudes.',
+    sonde: { type: 'table', table: 'term_grades' },
+  },
   {
     id: '188',
     fichier: '188_tour_guide.sql',
     feature: 'Tour guidé post-onboarding',
     siAbsente: 'Le tour guidé ne se lance jamais après l’onboarding.',
     sonde: { type: 'colonne', table: 'profiles', colonne: 'tutorial_completed' },
+  },
+  {
+    id: '189',
+    fichier: '189_avatar_vestiaire.sql',
+    feature: 'Vestiaire d’avatar (catalogue, achats, déblocages)',
+    siAbsente:
+      '/moi/avatar est vide : aucun item à acheter ni à débloquer, et les deux RPC d’achat/déblocage n’existent pas — l’écran se charge mais ne propose rien.',
+    sonde: { type: 'table', table: 'avatar_items' },
   },
   {
     id: '192',
@@ -252,7 +271,69 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       '6 matières du programme officiel absentes du catalogue — MAIS les exécuter aujourd’hui ajoute 6 coquilles vides cliquables (11 matières sans contenu sur 31).',
     sonde: { type: 'ligne', table: 'subjects', colonne: 'slug', valeur: 'snt' },
     decision:
-      'À n’exécuter qu’une fois les matières vides masquées côté élève (chantier 8), ou avec leur contenu.',
+      'Exécutée. La réserve qui l’accompagnait (« +6 coquilles vides ») est levée par les migrations 216 → 219, qui apportent le contenu des 11 matières vides.',
+  },
+  // --- Contenu des 11 matières vides (généré par scripts/seed-contenu.mjs) ---
+  // Découpé en quatre fichiers : l'éditeur SQL de Supabase devient poussif
+  // au-delà de ~300 Ko, et un script à moitié collé est pire qu'un script
+  // absent. Les quatre sont indépendants et peuvent s'exécuter dans l'ordre.
+  {
+    id: '216',
+    fichier: '216_contenu_emc_sport.sql',
+    feature: 'Contenu EMC + Sport (42 chapitres, 336 questions)',
+    siAbsente:
+      'EMC et Sport restent des coquilles cliquables : l’élève ouvre la matière et voit un programme vide, à tous les niveaux.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Le respect d’autrui' },
+  },
+  {
+    id: '217',
+    fichier: '217_contenu_musique_arts.sql',
+    feature: 'Contenu Musique + Arts plastiques (42 chapitres, 336 questions)',
+    siAbsente:
+      'Musique et Arts plastiques restent des coquilles cliquables, du CM2 au lycée.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Les paramètres du son' },
+  },
+  {
+    id: '218',
+    fichier: '218_contenu_allemand_grec.sql',
+    feature: 'Contenu Allemand + Grec (30 chapitres, 240 questions)',
+    siAbsente:
+      'Allemand (LV2) et Grec restent vides : deux matières choisies à l’inscription qui ne proposent rien.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Se présenter et saluer' },
+  },
+  {
+    id: '219',
+    fichier: '219_contenu_lycee.sql',
+    feature: 'Contenu SNT, HLP, LLCER, SI, Maths complémentaires (27 chapitres, 216 questions)',
+    siAbsente:
+      'Les 5 matières du lycée créées par la 193 restent vides — dont SNT, tronc commun de 2de que TOUS les élèves de seconde ont.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Internet' },
+  },
+  {
+    id: '220',
+    fichier: '220_contenu_espagnol_latin_lycee.sql',
+    feature: 'Contenu Espagnol + Latin au LYCÉE (18 chapitres, 144 questions)',
+    siAbsente:
+      'Espagnol et Latin s’arrêtent en 3e alors que leurs `levels` vont jusqu’en Tle : un lycéen qui les choisit ouvre un programme vide — un trou invisible, puisque la matière, elle, a du contenu au collège.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Les temps du passé' },
+  },
+  {
+    id: '221',
+    fichier: '221_abonnements_v0.sql',
+    feature: 'La caisse v0 : demandes d’abonnement + octroi manuel tracé',
+    siAbsente:
+      'AUCUN compte ne peut devenir payant (subscription_tier n’est écrit par personne), et cliquer « Choisir cette offre » sur Trésor n’enregistre rien — pas même le fait qu’une famille ait voulu payer. Tout le gating premium reste du code mort.',
+    sonde: { type: 'table', table: 'subscription_interest' },
+    decision:
+      'v0 ASSUMÉE : le paiement se fait hors de l’app (virement, lien externe), Lucas accorde ensuite depuis /admin/abonnements. Aucun prestataire n’est choisi à sa place — le jour venu, son webhook appellera `grant_subscription`.',
+  },
+  {
+    id: '222',
+    fichier: '222_oral_echelle.sql',
+    feature: 'L’échelle de l’oral (4 barreaux) + le barreau 4 sur l’onglet Amis',
+    siAbsente:
+      'L’atelier d’oral de Marcel s’ouvre mais ne compte rien, et « demander à un ami de m’écouter » est impossible — les deux écrans le disent franchement au lieu de faire semblant. Aucun audio n’est concerné : il ne quitte jamais l’appareil, migration ou pas.',
+    sonde: { type: 'table', table: 'oral_sessions' },
   },
 ] as const
 

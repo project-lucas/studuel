@@ -3,7 +3,7 @@
 --
 -- ⚠️ FICHIER GÉNÉRÉ — ne pas éditer à la main.
 --    Source : scripts/contenu/*.mjs
---    Regénérer : node scripts/seed-contenu.mjs --num 216 --slugs emc,sport
+--    Regénérer : node scripts/seed-contenu.mjs --num 216 --modules emc,sport
 --
 -- CONSTAT MESURÉ (node _ASSOCIE/sonde-contenu.mjs, 01/08/2026) : 11 matières
 -- sur 31 n’avaient AUCUN chapitre — des coquilles cliquables. Un élève qui

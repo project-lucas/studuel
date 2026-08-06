@@ -3,7 +3,7 @@
 --
 -- ⚠️ FICHIER GÉNÉRÉ — ne pas éditer à la main.
 --    Source : scripts/contenu/*.mjs
---    Regénérer : node scripts/seed-contenu.mjs --num 219 --slugs hlp,llcer-anglais,maths-complementaires,si,snt
+--    Regénérer : node scripts/seed-contenu.mjs --num 219 --modules snt,hlp,llcer-anglais,si,maths-complementaires
 --
 -- CONSTAT MESURÉ (node _ASSOCIE/sonde-contenu.mjs, 01/08/2026) : 11 matières
 -- sur 31 n’avaient AUCUN chapitre — des coquilles cliquables. Un élève qui

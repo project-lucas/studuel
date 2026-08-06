@@ -119,6 +119,15 @@ const FILTRE = option('slugs', '')
   .split(',')
   .map((s) => s.trim())
   .filter(Boolean)
+// `--modules` filtre par FICHIER, pas par matière. Nécessaire dès qu'une même
+// matière est écrite en PLUSIEURS modules qui doivent partir dans des
+// migrations séparées : l'histoire (227, exécutée) et la géographie (229) sont
+// toutes deux le slug `histoire-geo`, mais 227 ne doit plus jamais être
+// régénérée. `--slugs histoire-geo` les fusionnerait dans un seul fichier.
+const FILTRE_FICHIERS = option('modules', '')
+  .split(',')
+  .map((s) => s.trim().replace(/\.mjs$/, ''))
+  .filter(Boolean)
 
 const fichiers = readdirSync(DOSSIER)
   .filter((f) => f.endsWith('.mjs'))
@@ -126,11 +135,14 @@ const fichiers = readdirSync(DOSSIER)
 
 const modules = []
 for (const f of fichiers) {
+  if (FILTRE_FICHIERS.length && !FILTRE_FICHIERS.includes(f.replace(/\.mjs$/, ''))) continue
   const mod = await import(pathToFileURL(join(DOSSIER, f)).href)
   if (FILTRE.length === 0 || FILTRE.includes(mod.default.slug)) modules.push(mod.default)
 }
 if (modules.length === 0) {
-  console.error(`✗ aucune matière retenue (filtre : ${FILTRE.join(', ') || 'aucun'})`)
+  console.error(
+    `✗ aucune matière retenue (slugs : ${FILTRE.join(', ') || 'aucun'} · modules : ${FILTRE_FICHIERS.join(', ') || 'aucun'})`,
+  )
   process.exit(1)
 }
 
@@ -156,7 +168,12 @@ for (const mod of modules) {
         const idLe = uuid(`${cleCh}|lecon|${ch.lecon.titre}`)
         const idQz = uuid(`${cleCh}|quiz`)
 
-        chapitres.push({ id: idCh, slug: mod.slug, niveau, titre: ch.titre, position: i + 1 })
+        // `positionDepart` sert quand le bloc VIENT S'AJOUTER derrière des
+        // chapitres déjà en base : la page matière trie par `position`, et
+        // repartir de 1 mêlerait les nouveaux aux anciens dans un ordre
+        // indéfini (positions à égalité). Par défaut, on numérote depuis 1.
+        const depart = bloc.positionDepart ?? 1
+        chapitres.push({ id: idCh, slug: mod.slug, niveau, titre: ch.titre, position: depart + i })
         lecons.push({ id: idLe, chapitre: idCh, titre: ch.lecon.titre, cours: ch.lecon.cours })
         quiz.push({
           id: idQz,
@@ -185,28 +202,59 @@ for (const mod of modules) {
 
 const nomsMatieres = modules.map((m) => m.slug)
 
+// La commande de régénération imprimée dans l'en-tête doit être CELLE QUI A
+// SERVI, pas une reconstruction par slug. Sinon elle ment — et dangereusement :
+// trois fichiers portent le slug `espagnol` et deux le slug `histoire-geo`, si
+// bien qu'un `--slugs espagnol` les fusionnerait dans un seul SQL et réécrirait
+// une migration DÉJÀ EXÉCUTÉE. On rejoue donc le filtre effectivement employé.
+const commandeRegen = FILTRE_FICHIERS.length
+  ? `--modules ${FILTRE_FICHIERS.join(',')}`
+  : `--slugs ${nomsMatieres.join(',')}`
+
+// Un module peut porter son propre titre d'en-tête et son propre motif : les
+// migrations 216→220 comblaient des matières VIDES, ce qui ne sera pas toujours
+// le cas. Sans ces deux crochets, toute migration de contenu ultérieure hérite
+// d'un en-tête qui ment. Défauts = le texte historique, donc 216→220 se
+// regénèrent à l'identique.
+const titreEntete =
+  modules.find((m) => m.titreMigration)?.titreMigration ?? 'LE CONTENU DES MATIÈRES VIDES'
+const motifs = modules.flatMap((m) => (m.motif ?? '').split('\n')).filter(Boolean)
+
 const out = []
 const w = (s = '') => out.push(s)
 
 w('-- =============================================================================')
-w(`-- Studuel — Migration ${NUMERO} : LE CONTENU DES MATIÈRES VIDES`)
+w(`-- Studuel — Migration ${NUMERO} : ${titreEntete}`)
 w('--')
 w('-- ⚠️ FICHIER GÉNÉRÉ — ne pas éditer à la main.')
 w('--    Source : scripts/contenu/*.mjs')
-w(`--    Regénérer : node scripts/seed-contenu.mjs --num ${NUMERO} --slugs ${nomsMatieres.join(',')}`)
+w(`--    Regénérer : node scripts/seed-contenu.mjs --num ${NUMERO} ${commandeRegen}`)
 w('--')
-w('-- CONSTAT MESURÉ (node _ASSOCIE/sonde-contenu.mjs, 01/08/2026) : 11 matières')
-w('-- sur 31 n’avaient AUCUN chapitre — des coquilles cliquables. Un élève qui')
-w('-- ouvrait Sport, EMC, Musique, Arts plastiques, Allemand, Grec, SNT, HLP,')
-w('-- LLCER, SI ou Maths complémentaires tombait sur un programme vide.')
+if (motifs.length) {
+  for (const ligne of motifs) w(`-- ${ligne}`)
+} else {
+  w('-- CONSTAT MESURÉ (node _ASSOCIE/sonde-contenu.mjs, 01/08/2026) : 11 matières')
+  w('-- sur 31 n’avaient AUCUN chapitre — des coquilles cliquables. Un élève qui')
+  w('-- ouvrait Sport, EMC, Musique, Arts plastiques, Allemand, Grec, SNT, HLP,')
+  w('-- LLCER, SI ou Maths complémentaires tombait sur un programme vide.')
+}
 w('--')
 w(`-- Cette migration apporte : ${chapitres.length} chapitres, ${lecons.length} leçons,`)
-w(`-- ${quiz.length} quiz et ${questions.length} questions, sur ${nomsMatieres.length} matières.`)
+w(
+  `-- ${quiz.length} quiz et ${questions.length} questions, sur ${nomsMatieres.length} matière${nomsMatieres.length > 1 ? 's' : ''}.`,
+)
 w('--')
 w('-- CHOIX ASSUMÉS :')
-w('--  · le contenu est écrit par CYCLE (le programme d’EPS du cycle 4 vaut pour')
-w('--    la 5e, la 4e et la 3e) puis dupliqué sur chaque niveau du cycle : c’est')
-w('--    ainsi que sont écrits les programmes de l’Éducation nationale ;')
+// Ce choix ne se raconte que s'il a servi : une matière d'un seul niveau (la
+// philosophie ne s'enseigne qu'en Tle) n'a rien à dupliquer. Réservé aux
+// modules qui prennent leur en-tête en main (`motif`) : 216→220 sont déjà
+// exécutées, elles doivent se regénérer à l'octet près.
+const dupliqueParCycle = modules.some((m) => m.blocs.some((b) => b.niveaux.length > 1))
+if (!motifs.length || dupliqueParCycle) {
+  w('--  · le contenu est écrit par CYCLE (le programme d’EPS du cycle 4 vaut pour')
+  w('--    la 5e, la 4e et la 3e) puis dupliqué sur chaque niveau du cycle : c’est')
+  w('--    ainsi que sont écrits les programmes de l’Éducation nationale ;')
+}
 w('--  · tous les quiz sont `is_free = true`. Aucun compte ne peut aujourd’hui')
 w('--    passer `tier1` (aucun paiement n’existe), donc un quiz payant serait un')
 w('--    quiz INVISIBLE pour 100 % des élèves — le contraire du but ;')
@@ -220,6 +268,21 @@ w('-- PRÉREQUIS : 002, 008, 191, 193 exécutées (les matières doivent exister
 w('-- À exécuter dans : Supabase Dashboard → SQL Editor → New query → Run.')
 w('-- =============================================================================')
 w()
+
+// 0. Ménage : du SQL fourni par le module, joué AVANT les insertions. Sert au
+// cas où un ancien découpage de chapitres entre en collision avec le nouveau —
+// `chapters` porte UNIQUE(subject_id, level, title), donc un titre déjà pris
+// ferait passer le chapitre à la trappe (ON CONFLICT DO NOTHING) et sa leçon
+// tomberait ensuite sur une clé étrangère absente : migration à moitié jouée.
+const menages = modules.flatMap((m) => (m.menage ?? []).map((x) => ({ slug: m.slug, ...x })))
+if (menages.length) {
+  w('-- 0. Ménage ----------------------------------------------------------------')
+  for (const m of menages) {
+    for (const ligne of m.raison.split('\n')) w(`-- [${m.slug}] ${ligne}`)
+    w(m.sql.trim())
+    w()
+  }
+}
 
 w('-- 1. Chapitres -------------------------------------------------------------')
 w('-- Jointure sur le SLUG (et non le nom) : c’est la clé stable de `subjects`.')

@@ -423,8 +423,9 @@ export default function BossArena({
 
 // ---------------------------------------------------------------------------
 // Visage du boss : buste détouré si la DA est prête, emoji sinon. Le parent
-// donne la taille et le fond.
-function BossFace({
+// donne la taille et le fond. Exporté pour le billet du gardien, en tête de
+// l'onglet « Mode de jeu » (même visage que dans l'arène, une seule source).
+export function BossFace({
   boss,
   px,
   className,

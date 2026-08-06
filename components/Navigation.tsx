@@ -10,7 +10,6 @@ import { sfx } from '@/lib/sounds'
 import { NAV_TABS, type NavIconName } from '@/lib/nav-tabs'
 import amisIcone from '@/public/images/nav/amis.webp'
 import reviserIcone from '@/public/images/nav/reviser.webp'
-import marcelIcone from '@/public/images/nav/marcel.webp'
 import defiIcone from '@/public/images/nav/defi.webp'
 import moiIcone from '@/public/images/nav/moi.webp'
 import tresorIcone from '@/public/images/nav/tresor.webp'
@@ -31,8 +30,11 @@ const links = NAV_TABS
  * contenu, et c'est ce qui le rend lisible sans libellé : le trophée dit le
  * classement (et non « deux silhouettes = des amis »), les épées croisées disent
  * l'affrontement (et non « le centre de l'app »), la bourse dit ce qu'on y
- * dépense (et non « un coffre à ouvrir »). Restent le livre de Réviser et le
- * visage de Marcel, qui étaient déjà justes.
+ * dépense (et non « un coffre à ouvrir »). Reste le livre de Réviser, qui était
+ * déjà juste.
+ *
+ * Le visage de Marcel a quitté cette table avec son onglet : il vit désormais
+ * dans le bouton flottant de Réviser, qui importe le même fichier.
  *
  * LES DESSINS SONT IMPORTÉS, PAS DÉSIGNÉS PAR LEUR CHEMIN — et ce n'est pas un
  * détail de style. Un chemin littéral (`/images/nav/amis.webp`) est une URL
@@ -50,7 +52,6 @@ const links = NAV_TABS
 const ICONES: Record<NavIconName, StaticImageData> = {
   amis: amisIcone,
   reviser: reviserIcone,
-  marcel: marcelIcone,
   defi: defiIcone,
   moi: moiIcone,
   tresor: tresorIcone,
@@ -62,7 +63,7 @@ const AVATAR_ICON: NavIconName = 'moi'
 /**
  * La couronne de laurier qui entoure l'avatar. Elle n'est pas un décor gratuit :
  * c'est le seul onglet dont le contenu change d'un élève à l'autre, et sans elle
- * un visage nu posé au milieu de cinq objets peints ne fait pas partie de la
+ * un visage nu posé au milieu de quatre objets peints ne fait pas partie de la
  * même famille. Le cadre lui rend le contour marine épais et l'or que les autres
  * portent déjà.
  *
@@ -118,7 +119,7 @@ export default function Navigation({
             au-dessus du liseré doré de la barre. */}
         <ul className="relative flex h-14 items-stretch overflow-hidden">
           {/* Plaque violette qui suit l'onglet actif — elle GLISSE d'un onglet
-              à l'autre (une seule plaque animée, pas six fondus). Elle occupe la
+              à l'autre (une seule plaque animée, pas cinq fondus). Elle occupe la
               cellule entière ; le retrait visuel est dessiné par ::before. */}
           {activeIndex >= 0 && (
             <span
@@ -224,7 +225,7 @@ export default function Navigation({
                           width={80}
                           height={80}
                           // La barre est le premier chrome visible de l'app :
-                          // ces six vignettes ne doivent pas arriver en retard.
+                          // ces cinq vignettes ne doivent pas arriver en retard.
                           priority
                           className="size-full object-contain"
                         />
@@ -280,8 +281,7 @@ export default function Navigation({
                       Réviser s'y noierait. D'où le disque clair glissé dessous,
                       qui rend à chaque dessin le fond crème pour lequel il a
                       été peint. L'avatar de l'élève, lui, reste sur la barre
-                      mobile : la sidebar affiche déjà les mots, personne n'y
-                      confond Marcel et Moi. */}
+                      mobile : la sidebar affiche déjà les mots. */}
                   <span
                     className={cn(
                       'flex size-6 shrink-0 items-center justify-center rounded-full transition-colors',

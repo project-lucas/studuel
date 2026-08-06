@@ -237,17 +237,38 @@
   animation: pop-in 0.45s var(--ease) backwards;
 }
 
-/* Ouverture d'un dossier de matières : la zone rattachée se déplie sous la
-   carte-dossier (fondu + glissé), les cartes prennent ensuite le relais avec
-   leur propre entrée en cascade (pop-in). */
-@keyframes folder-zone-in {
-  from {
+/* LA VAGUE de la semaine (barre de série, Réviser) : chaque jour validé
+   s'allume à son tour, de gauche à droite — le délai est porté en ligne par le
+   composant, qui seul connaît le rang du jour. Le cercle arrive un peu plus
+   petit et un peu plus bas, puis se pose : c'est ce léger dépassement qui fait
+   « vague » plutôt que « fondu ».
+
+   `backwards` retient l'état initial pendant le délai : sans lui, les jours en
+   attente s'afficheraient d'abord pleins avant de disparaître pour rejouer. */
+@keyframes wave-in {
+  0% {
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(6px) scale(0.6);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.12);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
-.folder-zone-in {
-  animation: folder-zone-in 0.3s var(--ease) backwards;
+.wave-in {
+  animation: wave-in 0.5s var(--ease) backwards;
+}
+
+/* Mouvement réduit : la vague se contente d'apparaître, sans saut ni rebond.
+   L'information (le jour est fait) ne dépend pas de l'animation. */
+@media (prefers-reduced-motion: reduce) {
+  .wave-in {
+    animation: none;
+  }
 }
 
 /* Les barres de progression se remplissent à l'arrivée */
@@ -352,6 +373,12 @@
 .group:hover .wiggle-on-hover,
 a:hover > .wiggle-on-hover {
   animation: wiggle 0.4s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .wiggle-on-hover,
+  a:hover > .wiggle-on-hover {
+    animation: none;
+  }
 }
 
 /* --- Barre de série (WeekStrip) ------------------------------------------- */
@@ -746,6 +773,28 @@ a:hover > .wiggle-on-hover {
   background-color: color-mix(in oklch, var(--primary), black 55%);
 }
 
+/* La SALLE DE DUEL : un voile violet profond posé par-dessus le décor de
+   l'arène, le temps d'un duel (WorldBackdrop de /defi/duel).
+   Le duel se jouait à même l'académie flottante : les cartes de question
+   restaient lisibles (fond crème opaque), mais TOUT ce qui vivait entre elles
+   ne l'était plus — le titre « Duel 90 s » en encre marine sur des nuages
+   blancs, « Abandonner » en gris clair sur l'herbe, et l'écran de fin entier,
+   posé à nu sur l'image. Le voile rend au texte un fond stable sans effacer le
+   décor : on voit encore où l'on est, mais on lit tout.
+   Plus sombre en haut et en bas (là où vivent le titre et les commandes) qu'au
+   centre, où les cartes portent déjà leur propre fond. */
+.duel-scrim {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--primary), black 62%) 0,
+      color-mix(in oklch, var(--primary), black 55%) 22%,
+      color-mix(in oklch, var(--primary), black 48%) 55%,
+      color-mix(in oklch, var(--primary), black 62%) 100%
+    );
+  opacity: 0.88;
+}
+
 /* --- Rails latéraux de l'arène : tuiles « familles de couleur » --------------
    Une tuile = un objet, une famille = une fonction (leçon Clash Royale) :
    or = agir/gagner, violet = marque/événement, vert = quête/réussite,
@@ -875,47 +924,13 @@ a:active > .arena-menu-row {
   font-weight: 800;
 }
 
-/* --- La bulle du jour : la flèche qui la SOUDE au bouton -------------------
-   Reprise de la bulle « Événement » de Clash Royale. Sans cette flèche, la
-   bulle serait une carte de plus posée au-dessus d'une autre ; avec elle, elle
-   DÉSIGNE le bouton — « ce que tu vois là, c'est ce bouton qui le fait
-   avancer ». Un losange tourné à 45°, à demi caché derrière le corps de la
-   bulle : ne restent visibles que ses deux arêtes basses, liserées d'or comme
-   le reste du verre de nuit. */
-.bulle-jour::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -7px;
-  width: 13px;
-  height: 13px;
-  transform: translateX(-50%) rotate(45deg);
-  background: color-mix(in oklch, oklch(0.24 0.06 300), transparent 20%);
-  border-right: 1px solid color-mix(in oklch, var(--highlight), transparent 45%);
-  border-bottom: 1px solid
-    color-mix(in oklch, var(--highlight), transparent 45%);
-  pointer-events: none;
-}
-
-/* --- Scène du héros : arrivée, respiration, étincelles ----------------------
-   Le personnage arrive en descendant dans le halo, puis respire en idle.
-   Transform/opacity uniquement, neutralisé si l'utilisateur préfère réduire
+/* --- Scène du héros : les étincelles ----------------------------------------
+   L'arrivée du personnage (`.arena-hero-figure`, qui le faisait descendre dans
+   le halo) est partie avec lui : le décor de /defi porte désormais sa mascotte
+   peinte. Ne restent que les étincelles d'or qui dérivent sur la scène —
+   transform/opacity uniquement, neutralisées si l'utilisateur préfère réduire
    le mouvement. */
-@keyframes arena-hero-arrive {
-  from {
-    opacity: 0;
-    transform: translateY(-44px) scale(0.84);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
 @media (prefers-reduced-motion: no-preference) {
-  .arena-hero-figure {
-    transform-origin: 50% 100%;
-    animation: arena-hero-arrive 0.9s cubic-bezier(0.2, 0.8, 0.3, 1) both;
-  }
   .arena-spark {
     animation: arena-spark-drift var(--d, 7s) ease-in-out var(--dl, 0s) infinite;
   }
@@ -1278,75 +1293,6 @@ a:active > .arena-menu-row {
   border: 1.5px solid color-mix(in oklch, var(--highlight), transparent 55%);
   background: rgba(255, 255, 255, 0.08);
   color: var(--highlight);
-}
-
-/* --- Personnage animé (components/PersonnageAnime.tsx) ----------------------
-   Idle « timeline longue » : une seule animation de ~20 s qui enchaîne
-   respiration douce (cycles ~4 s), un léger étirement vers 45 % et une
-   inclinaison curieuse vers 80 %. Le clignement des yeux (patch superposé)
-   vit sur sa propre durée (~4,3 s) volontairement désynchronisée. Transform et
-   opacity uniquement ; tout est coupé si l'utilisateur réduit le mouvement. */
-.perso-anime {
-  position: relative;
-}
-.perso-anime-yeux {
-  position: absolute;
-  top: var(--eyes-top, 0);
-  left: var(--eyes-left, 0);
-  width: var(--eyes-width, 100%);
-  opacity: 0;
-  pointer-events: none;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .perso-anime {
-    transform-origin: bottom center;
-    will-change: transform;
-    animation: perso-anime-idle 20s ease-in-out infinite;
-  }
-  .perso-anime-yeux {
-    animation: perso-anime-clignement 4.3s linear infinite;
-  }
-}
-@keyframes perso-anime-idle {
-  /* respiration : cycles doux de ~4 s */
-  0%,
-  20%,
-  40%,
-  50%,
-  70%,
-  100% {
-    transform: translateY(0) scale(1) rotate(0deg);
-  }
-  10%,
-  30%,
-  60% {
-    transform: translateY(-3px) scale(1.015) rotate(0deg);
-  }
-  /* étirement vers 45 % du cycle */
-  45% {
-    transform: translateY(-6px) scale(1.03, 1.04) rotate(0deg);
-  }
-  /* inclinaison curieuse vers 80 % */
-  80% {
-    transform: translateY(-3px) scale(1.015) rotate(2deg);
-  }
-  86% {
-    transform: translateY(-1px) scale(1.005) rotate(-1deg);
-  }
-  93% {
-    transform: translateY(-2px) scale(1.01) rotate(0deg);
-  }
-}
-@keyframes perso-anime-clignement {
-  0%,
-  96.5%,
-  100% {
-    opacity: 0;
-  }
-  97%,
-  99.5% {
-    opacity: 1;
-  }
 }
 
 /* Fond des modes de jeu compétitifs (Match classé, Coop) joués en plein écran :
@@ -2074,6 +2020,92 @@ a:active > .arena-menu-row {
   background: linear-gradient(160deg, oklch(0.62 0.24 312), oklch(0.48 0.26 308));
   box-shadow: 0 0 0 3px oklch(0.62 0.24 315 / 0.3);
 }
+/* --- Onglet Moi v8 : le PANNEAU d'identité -----------------------------------
+   L'écran était une pile de six cartes blanches de même taille, de même rayon,
+   de même ombre : rien n'y était plus important que le reste, et le regard n'y
+   avait aucun point d'entrée. Le haut de l'onglet devient donc une SURFACE —
+   pleine largeur, coins bas arrondis, qui porte l'identité ET les trois preuves
+   — au lieu d'une carte parmi d'autres.
+
+   Même violet que `.moi-hero` (aucune couleur nouvelle) : c'est le dégradé qui
+   change, plus profond en bas, avec une lumière chaude posée en haut à gauche
+   comme si l'écran était éclairé de biais. L'ombre porte un décalage ET un
+   flou — un halo sans décalage ne serait qu'une décoration. */
+.moi-panneau {
+  background:
+    radial-gradient(120% 80% at 12% 0%, oklch(0.62 0.22 320 / 0.55), transparent 62%),
+    radial-gradient(90% 70% at 100% 100%, oklch(0.4 0.2 300 / 0.5), transparent 60%),
+    linear-gradient(168deg, oklch(0.55 0.26 316), oklch(0.44 0.25 308));
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 0.18),
+    0 18px 34px -22px oklch(0.4 0.18 310 / 0.75);
+}
+/* L'étagère des trois preuves, posée DANS le panneau : un verre légèrement
+   plus clair que le violet, pas une carte blanche de plus. */
+.moi-etagere {
+  background: oklch(1 0 0 / 0.12);
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.22);
+}
+/* Le séparateur entre deux preuves : un filet, pas une bordure de carte. */
+.moi-filet {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    oklch(1 0 0 / 0.28),
+    transparent
+  );
+}
+/* LE SEUL MOMENT ANIMÉ DE L'ONGLET : la vague du rythme se dessine.
+   Un écran qui anime tout n'anime rien ; celui-ci n'a qu'un geste, et il tombe
+   sur la seule chose qui raconte une durée. Il rejoue au changement de période
+   (le tracé est re-monté), ce qui fait aussi office d'accusé de réception.
+
+   `pathLength: 1` normalise la longueur du chemin : le même réglage vaut pour
+   7 points comme pour 30, sans mesurer quoi que ce soit en JavaScript.
+   Décélération exponentielle, jamais de rebond. */
+@keyframes moi-trace {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.moi-trace {
+  stroke-dasharray: 1;
+  animation: moi-trace 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.moi-trace-halo {
+  animation: moi-halo 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes moi-halo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .moi-trace,
+  .moi-trace-halo {
+    animation: none;
+    stroke-dasharray: none;
+  }
+}
+
+/* La bande « matière du moment » : le seul bloc de l'écran qui sort du cadre et
+   qui porte une illustration. Crème PROFOND (la teinte des cartes matières de
+   Réviser, assombrie) — surtout pas un pastel par matière : six fonds pastel
+   avaient déjà dispersé l'accueil Réviser, la couleur de la matière se
+   concentre sur sa barre d'accent. */
+.moi-bande {
+  background:
+    radial-gradient(70% 120% at 100% 50%, oklch(0.93 0.05 82 / 0.9), transparent 70%),
+    linear-gradient(100deg, oklch(0.965 0.026 84), oklch(0.925 0.045 80));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.7);
+}
+
 /* Tableau scolaire (bandeau v4) : ardoise violet profond, cadre bois crème,
    même famille que l'arène Défi — le violet reste la couleur du monde. */
 .moi-board {
@@ -2797,6 +2829,32 @@ a:active > .arena-menu-row {
     0 2px 8px rgba(23, 16, 48, 0.5);
 }
 
+/* Halo battant de la pastille Studuel+ (components/defi/PremiumPill).
+   Un anneau doré qui s'écarte et s'éteint, deux fois par cycle lent : assez
+   pour attirer l'œil sur un HUD immobile, assez rare pour ne pas clignoter en
+   permanence sous le pouce. Uniquement `transform`/`opacity` (compositeur), et
+   le composant ne le monte pas du tout si l'élève préfère moins de mouvement. */
+@keyframes premium-pill-pulse {
+  0%,
+  60%,
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  15% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  45% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+.premium-pill-halo {
+  box-shadow: 0 0 0 3px var(--highlight);
+  animation: premium-pill-pulse 4.5s ease-out infinite;
+}
+
 /* Effet « verre fumé violet » : la chrome flottante du HUD d'arène (pilule de
    saison, burger, cartouche de trophées) posée sur le décor peint. Contrairement
    au marbre crème opaque — qui « faisait tache » comme un autocollant blanc —, le
@@ -3045,6 +3103,81 @@ a:active > .arena-menu-row {
 @media (prefers-reduced-motion: reduce) {
   .tab-plate {
     transition: none;
+  }
+}
+
+/* --- Le bouton du coach (bas droite de Réviser) ---------------------------- */
+
+/* Marcel n'a plus d'onglet : ce médaillon est la SEULE porte vers le coach. Il
+   porte donc son matériau ici, en un bloc, plutôt qu'en empilant des utilitaires
+   — et pour une raison concrète : le cerne (`ring-*`) et le socle 3D
+   (`.press-3d-deep`) écrivent TOUS DEUX la propriété `box-shadow`. Superposés,
+   l'un efface l'autre selon l'ordre des feuilles, ce qui donnait un anneau d'or
+   et un croissant d'or désolidarisés sous le disque. Une seule déclaration, deux
+   couches, plus d'ambiguïté :
+     1. le cerne violet collé au disque,
+     2. le socle, ce même violet assombri, décalé vers le bas — l'épaisseur d'un
+        vrai bouton, celle que toute l'app utilise pour dire « appuie ».
+
+   VIOLET et non or : la doctrine de la maison réserve l'or au GAIN. Aller voir
+   son prof est une action, et l'action est violette. (L'or de l'arène est une
+   dérogation assumée, cf. CLAUDE.md — elle ne s'étend pas ici.) */
+.coach-fab {
+  --coach-ring: var(--primary);
+  --coach-socle: color-mix(in oklch, var(--primary), black 32%);
+  box-shadow:
+    0 0 0 2px var(--coach-ring),
+    0 5px 0 2px var(--coach-socle);
+  transition:
+    transform 0.15s var(--ease),
+    box-shadow 0.15s var(--ease);
+}
+.coach-fab:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 2px var(--coach-ring),
+    0 7px 0 2px var(--coach-socle);
+}
+/* L'enfoncement : le disque descend EXACTEMENT de la hauteur de son socle, qui
+   disparaît. C'est ce qui fait « toucher le fond » plutôt que « rétrécir ». */
+.coach-fab:active {
+  transform: translateY(5px);
+  box-shadow:
+    0 0 0 2px var(--coach-ring),
+    0 0 0 2px var(--coach-socle);
+}
+/* Le clavier voit la même chose que le doigt : un halo violet clair par-dessus
+   le cerne, sans déplacer le bouton. */
+.coach-fab:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--coach-ring),
+    0 5px 0 2px var(--coach-socle),
+    0 0 0 7px color-mix(in oklch, var(--primary), transparent 62%);
+}
+/* La tête déborde son cadre : le dessin d'origine réserve un cinquième de son
+   canevas à des marges et à des étincelles, si bien qu'à l'échelle 1 le visage
+   n'occupait qu'un tiers du médaillon et se lisait comme une vignette lointaine.
+   On l'agrandit et on le descend d'un cheveu pour caler le REGARD au centre du
+   disque — c'est le regard qu'on reconnaît de loin, pas la silhouette. Le
+   rognage est fait par le disque lui-même (overflow), donc net et rond. */
+.coach-fab-tete {
+  transform: translateY(5%) scale(1.4);
+  transform-origin: center;
+}
+/* Pas de flottement perpétuel : ce bouton reste à l'écran pendant toute la
+   lecture du programme, et une mascotte qui bouge sans fin dans un coin devient
+   du bruit (elle n'avait pas non plus de garde-fou « mouvement réduit »). Le
+   mouvement est rendu à l'INTENTION : le frétillement maison au survol
+   (`.wiggle-on-hover`, posé sur l'enveloppe pour ne pas écraser l'échelle de la
+   tête), l'enfoncement au doigt. */
+@media (prefers-reduced-motion: reduce) {
+  .coach-fab,
+  .coach-fab:hover,
+  .coach-fab:active,
+  .coach-fab:focus-visible {
+    transition: none;
+    transform: none;
   }
 }
 

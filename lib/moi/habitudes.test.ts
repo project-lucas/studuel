@@ -3,6 +3,7 @@ import {
   bilanHabitudes,
   derniersJours,
   FENETRE_JOURS,
+  JOURS_VAGUE,
   libelleSerie,
   meilleureSerie,
   serieEnCours,
@@ -15,6 +16,9 @@ const TODAY = '2026-08-01'
 
 const habitude = (id: string, titre: string): HabitudeSuivie => ({
   id,
+  // L'identifiant du catalogue décide de la famille (donc de la couleur) : il
+  // n'entre dans aucun calcul du bilan, mais il doit voyager avec l'habitude.
+  catalogId: `catalogue-${id}`,
   titre,
   icone: '📚',
   raison: 'Parce que.',
@@ -143,6 +147,7 @@ describe('verdictHabitudes', () => {
     regularite: 85,
     aujourdhui: true,
     semaine: [],
+    historique: [],
     autoPart: 0,
   }
   const fragile = {
@@ -152,6 +157,7 @@ describe('verdictHabitudes', () => {
     regularite: 10,
     aujourdhui: false,
     semaine: [],
+    historique: [],
     autoPart: 0,
   }
 
@@ -200,5 +206,38 @@ describe('libelleSerie', () => {
     expect(libelleSerie(0)).toBe('à relancer')
     expect(libelleSerie(1)).toBe('1 jour')
     expect(libelleSerie(5)).toBe('5 jours')
+  })
+})
+
+describe('bilanHabitudes — historique de la vague', () => {
+  test('rend un point par jour de la fenêtre du tracé, du plus ancien au plus récent', () => {
+    const [bilan] = bilanHabitudes(
+      [habitude('h1', 'Sommeil')],
+      [
+        // Aujourd'hui, et J-13 (le tout premier point de la vague).
+        { habit_id: 'h1', date: '2026-08-06', completed: true, auto_validated: false },
+        { habit_id: 'h1', date: '2026-07-24', completed: true, auto_validated: false },
+      ],
+      '2026-08-06',
+    )
+    expect(bilan.historique).toHaveLength(JOURS_VAGUE)
+    expect(bilan.historique[JOURS_VAGUE - 1]).toBe(true)
+    expect(bilan.historique[0]).toBe(true)
+    expect(bilan.historique[1]).toBe(false)
+  })
+
+  test('finit par les mêmes 7 jours que le damier', () => {
+    const [bilan] = bilanHabitudes(
+      [habitude('h1', 'Sommeil')],
+      [
+        { habit_id: 'h1', date: '2026-08-05', completed: true, auto_validated: false },
+      ],
+      '2026-08-06',
+    )
+    expect(bilan.historique.slice(-7)).toEqual(bilan.semaine)
+  })
+
+  test('reste plus court que la fenêtre de régularité — sinon le tracé sort en peigne', () => {
+    expect(JOURS_VAGUE).toBeLessThan(FENETRE_JOURS)
   })
 })

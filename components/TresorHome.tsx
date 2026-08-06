@@ -16,6 +16,7 @@ import {
   RARITY_LABEL,
 } from '@/lib/tresor'
 import { PERSO_CATALOG } from '@/lib/coffre'
+import { GEM_COST_CHAPTER } from '@/lib/gems'
 import { openDailyChest, buyShopItem } from '@/app/tresor/actions'
 import { CHEST_OPENED_EVENT } from '@/components/NavChestBadge'
 
@@ -159,6 +160,13 @@ function ShelfTitle({
 }
 
 // Une carte de rayon : l'article en vignette verticale, prix TOUJOURS visible.
+//
+// L'EFFET est affiché sous le nom. Il existait depuis toujours dans le
+// catalogue (`ShopItem.desc`, lib/tresor) mais n'était rendu nulle part : la
+// carte disait « Gel de série · 120 » et laissait un élève de 4e deviner ce
+// qu'il achetait. Un prix sans promesse ne se compare à rien, et rien ne se
+// vendait. `min-h` sur les deux lignes de texte pour que les cartes d'un même
+// rayon gardent leur bouton aligné, quelle que soit la longueur du libellé.
 function ShelfCard({
   item,
   coins,
@@ -170,12 +178,15 @@ function ShelfCard({
 }) {
   const affordable = coins >= item.price
   return (
-    <div className="flex w-36 shrink-0 snap-start flex-col items-center rounded-2xl bg-card p-3 text-center ring-1 ring-foreground/10">
+    <div className="flex w-40 shrink-0 snap-start flex-col items-center rounded-2xl bg-card p-3 text-center ring-1 ring-foreground/10">
       <span className="text-3xl" aria-hidden="true">
         {item.emoji}
       </span>
-      <p className="font-heading mt-1 line-clamp-2 text-xs leading-tight font-extrabold text-foreground">
+      <p className="font-heading mt-1 line-clamp-2 min-h-8 text-xs leading-tight font-extrabold text-foreground">
         {item.name}
+      </p>
+      <p className="mt-0.5 line-clamp-3 min-h-11 text-[11px] leading-snug font-medium text-muted-foreground">
+        {item.desc}
       </p>
       {item.owned ? (
         <span className="mt-2 flex items-center gap-1 rounded-full bg-muted px-3 py-1.5 text-xs font-bold text-muted-foreground">
@@ -387,34 +398,59 @@ export default function TresorHome({
 
   return (
     <div className="mx-auto flex w-full max-w-md flex-col gap-6">
-      {/* LE solde — une seule fois sur la page (il flashe quand il bouge). */}
-      <div className="-mb-2 flex items-center justify-between px-1">
-        <p className="text-xs font-semibold text-muted-foreground">
+      {/* LES DEUX SOLDES, chacun avec CE QU'IL ACHÈTE.
+          Ils tenaient dans une seule pilule « 🪙 635 · 💎 60 », deux nombres
+          collés sans un mot : rien ne disait laquelle des deux monnaies servait
+          à quoi — et comme aucun article de cette page ne coûte de gemmes, le
+          cristal ressemblait à un compteur décoratif. Une carte par monnaie,
+          avec sa règle en une ligne : les pièces habillent, les gemmes ouvrent
+          du contenu. C'est aussi ce qui rend le prix d'un rayon lisible : on
+          sait dans quelle monnaie il est libellé. */}
+      <div className="-mb-2 flex flex-col gap-2">
+        <p className="px-1 text-xs font-semibold text-muted-foreground">
           {live ? 'Ton trésor' : 'Aperçu — connecte-toi pour ton vrai trésor.'}
         </p>
-        <p
-          className={cn(
-            'flex items-center gap-2 rounded-full bg-white px-3 py-1.5 font-mono text-sm font-extrabold tabular-nums shadow-sm ring-1 ring-black/5 transition-colors',
-            flash && 'text-highlight',
-          )}
-          aria-label={`${coins} pièces et ${gems} gemmes`}
-        >
+        <div className="grid grid-cols-2 gap-2">
           {/* Le SOLDE : les monnaies y sont des objets qu'on regarde, donc
               illustrées. Ailleurs sur la page (les PRIX, dans les lignes de
               texte et sur les boutons teintés), elles restent des signes
               monochromes qui prennent la couleur du texte. */}
-          <span className="flex items-center gap-1">
-            <EcuIcon className="size-5" />
-            {coins}
-          </span>
-          <span aria-hidden="true" className="text-muted-foreground/40">
-            ·
-          </span>
-          <span className="flex items-center gap-1">
-            <CristalIcon className="size-5" />
-            {gems}
-          </span>
-        </p>
+          <div
+            className="flex items-center gap-2 rounded-2xl bg-white px-3 py-2 shadow-sm ring-1 ring-black/5"
+            aria-label={`${coins} pièces — la monnaie de la boutique`}
+          >
+            <EcuIcon className="size-7 shrink-0" />
+            <span className="min-w-0">
+              <span
+                className={cn(
+                  'block font-mono text-sm leading-none font-extrabold tabular-nums transition-colors',
+                  flash && 'text-highlight',
+                )}
+              >
+                {coins}
+              </span>
+              <span className="block truncate text-[10px] font-semibold text-muted-foreground">
+                pièces · tout ici
+              </span>
+            </span>
+          </div>
+          <Link
+            href="/parrain"
+            onClick={() => sfx.tap()}
+            className="flex items-center gap-2 rounded-2xl bg-white px-3 py-2 shadow-sm ring-1 ring-black/5 transition active:scale-[0.99]"
+            aria-label={`${gems} gemmes — elles ouvrent les supports écrits d’un chapitre, ${GEM_COST_CHAPTER} par chapitre. Toucher pour en gagner.`}
+          >
+            <CristalIcon className="size-7 shrink-0" />
+            <span className="min-w-0">
+              <span className="block font-mono text-sm leading-none font-extrabold tabular-nums">
+                {gems}
+              </span>
+              <span className="block truncate text-[10px] font-semibold text-muted-foreground">
+                gemmes · {GEM_COST_CHAPTER}/chapitre
+              </span>
+            </span>
+          </Link>
+        </div>
       </div>
 
       {/* 1. Le coffre du jour, en tête : la boucle quotidienne d'abord. */}
@@ -447,13 +483,17 @@ export default function TresorHome({
           {PERSO_CATALOG.map((p) => (
             <div
               key={p.id}
-              className="flex w-36 shrink-0 snap-start flex-col items-center rounded-2xl bg-card p-3 text-center ring-1 ring-foreground/10"
+              className="flex w-40 shrink-0 snap-start flex-col items-center rounded-2xl bg-card p-3 text-center ring-1 ring-foreground/10"
             >
               <span className="text-3xl" aria-hidden="true">
                 {p.emoji}
               </span>
-              <p className="font-heading mt-1 line-clamp-2 text-xs leading-tight font-extrabold text-foreground">
+              <p className="font-heading mt-1 line-clamp-2 min-h-8 text-xs leading-tight font-extrabold text-foreground">
                 {p.name}
+              </p>
+              {/* Même règle que les autres rayons : l'effet avant le prix. */}
+              <p className="mt-0.5 line-clamp-3 min-h-11 text-[11px] leading-snug font-medium text-muted-foreground">
+                {p.desc}
               </p>
               <span
                 className={cn(
@@ -479,30 +519,11 @@ export default function TresorHome({
         </div>
       </section>
 
-      {/* 5. Le renvoi : tout ce qui coûte des euros vit dans Premium. */}
-      <Link
-        href="/tresor?volet=premium"
-        onClick={() => sfx.tap()}
-        className="flex items-center gap-3 rounded-2xl bg-muted/50 px-3.5 py-3 ring-1 ring-black/5 transition active:scale-[0.99]"
-      >
-        <span
-          aria-hidden="true"
-          className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-black/5 text-xl"
-        >
-          🎬
-        </span>
-        <span className="min-w-0 flex-1">
-          <span className="font-heading block truncate text-sm font-extrabold text-foreground">
-            Les capsules du coach ont déménagé
-          </span>
-          <span className="block text-xs font-semibold text-muted-foreground">
-            Retrouve-les dans le volet 👑 Premium
-          </span>
-        </span>
-        <span aria-hidden="true" className="text-muted-foreground">
-          ›
-        </span>
-      </Link>
+      {/* Le renvoi « les capsules du coach ont déménagé » a été RETIRÉ. Il
+          annonçait un déménagement vieux de plusieurs versions, en bas d'une
+          page déjà longue, et c'était le seul bloc du volet à ne rien vendre.
+          Les capsules ouvrent maintenant le volet Studuel+, qui est à un tap
+          en haut de l'écran : ce panneau n'avait plus rien à apprendre. */}
     </div>
   )
 }

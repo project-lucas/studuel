@@ -1,10 +1,12 @@
 /**
- * Fond d'arène dynamique de l'onglet Défi : six variantes de l'académie
- * flottante selon l'heure locale de l'appareil (la lumière que l'élève voit
- * par sa fenêtre). Chaque image porte SA propre heure — ciel, ombres, fenêtres
- * allumées — et laisse sa moitié basse vide : c'est la scène du personnage.
- * Logique pure et testable ici ; le composant client
- * `components/ArenaBackdrop.tsx` gère le timer, le fondu et le préchargement.
+ * Fond d'arène de l'onglet Défi. Le découpage de la journée en six plages
+ * (aube → nuit, l'heure locale de l'appareil = la lumière que l'élève voit par
+ * sa fenêtre) vit ici ; le composant client `components/ArenaBackdrop.tsx`
+ * gère le timer, le fondu et le préchargement.
+ *
+ * ⚠️ Les six plages pointent aujourd'hui vers la MÊME image — voir ARENA_SRC
+ * plus bas. Le découpage est conservé pour que les variantes horaires puissent
+ * revenir sans retoucher une ligne de composant.
  */
 
 export type ArenaPeriod =
@@ -23,17 +25,32 @@ export interface ArenaSlot {
 }
 
 /**
+ * LE DÉCOR DU MOMENT. Depuis le 02/08/2026, les six plages montrent la MÊME
+ * illustration : l'arène à la mascotte, dessinée par Lucas. Elle remplace les
+ * six académies flottantes (`arena-dawn` … `arena-night`, toujours dans
+ * `public/images/arene/`, plus servies).
+ *
+ * La mécanique horaire n'est PAS démontée pour autant — le timer, le fondu, le
+ * préchargement et le découpage des plages restent en place. Le jour où les
+ * variantes horaires de cette nouvelle arène seront dessinées, il n'y aura
+ * qu'à remettre un `src` par ligne ci-dessous : rien d'autre ne bouge. En
+ * attendant, le fondu enchaîné entre deux plages identiques ne se voit pas et
+ * ne coûte rien (même URL, donc même image en cache).
+ */
+const ARENA_SRC = '/images/arene/arena-mascotte.webp'
+
+/**
  * Les plages horaires, triées par heure de début — SEULE structure à modifier
  * pour changer les horaires ou les visuels. `night` couvre 21h → 4h59 :
  * les heures avant le premier début (0h-4h59) retombent sur la dernière plage.
  */
 export const ARENA_SCHEDULE: readonly ArenaSlot[] = [
-  { start: 5, period: 'dawn', src: '/images/arene/arena-dawn.webp' },
-  { start: 8, period: 'morning', src: '/images/arene/arena-morning.webp' },
-  { start: 12, period: 'noon', src: '/images/arene/arena-noon.webp' },
-  { start: 15, period: 'afternoon', src: '/images/arene/arena-afternoon.webp' },
-  { start: 18, period: 'evening', src: '/images/arene/arena-evening.webp' },
-  { start: 21, period: 'night', src: '/images/arene/arena-night.webp' },
+  { start: 5, period: 'dawn', src: ARENA_SRC },
+  { start: 8, period: 'morning', src: ARENA_SRC },
+  { start: 12, period: 'noon', src: ARENA_SRC },
+  { start: 15, period: 'afternoon', src: ARENA_SRC },
+  { start: 18, period: 'evening', src: ARENA_SRC },
+  { start: 21, period: 'night', src: ARENA_SRC },
 ]
 
 /** La plage active pour une heure donnée (0-23). */

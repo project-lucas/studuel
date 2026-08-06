@@ -49,13 +49,13 @@ export const TOUR_STEPS: TourStep[] = [
     id: 'moi',
     target: 'tab-moi',
     title: 'Moi',
-    text: 'Ta capacité, ta trajectoire et tes leviers de la semaine.',
+    text: 'Ta série, ton temps de travail, ta moyenne et tes habitudes.',
   },
   {
     id: 'tresor',
     target: 'tab-tresor',
-    title: 'Trésor',
-    text: 'Débloque tout Studuel, sans limite. C’est parti !',
+    title: 'Boutique',
+    text: 'Ton coffre du jour, tes pièces, et tout ce qu’elles ouvrent.',
   },
 ]
 

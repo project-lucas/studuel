@@ -1,7 +1,6 @@
 import { redirect } from 'next/navigation'
 import WelcomeFlow from '@/components/welcome/WelcomeFlow'
-import { getSubjectsCached, getSubjectLevelsCached } from '@/lib/catalog'
-import { narrowLevelsToContent } from '@/lib/subject-visibility'
+import { getSubjectsCached } from '@/lib/catalog'
 import { getCurrentUser } from '@/lib/supabase/user'
 
 export const metadata = { title: 'Bienvenue — Studuel' }
@@ -32,17 +31,21 @@ export default async function BienvenuePage({
   // s'il l'était par ailleurs on ne veut pas l'expédier avant d'avoir expliqué.
   if (user && !preview && !isFinish && !oauthFailed) redirect('/defi')
 
-  const [allSubjects, subjectLevels] = await Promise.all([
-    getSubjectsCached(),
-    getSubjectLevelsCached(),
-  ])
-  // Le sélecteur de matières filtre par `levels` sans jamais voir un chapitre :
-  // on lui donne donc des matières dont les niveaux DÉCLARÉS sont réduits à ceux
-  // qui ont du contenu. Sans ça, un futur 2de pouvait cocher « SNT » ou
-  // « Espagnol » à l'inscription — et tomber sur une page vide dès sa première
-  // visite, le pire moment possible. Le pré-cochage (`defaultSelectedForGrade`)
-  // hérite du même filtre, sans qu'il ait à le savoir.
-  const subjects = narrowLevelsToContent(allSubjects, subjectLevels)
+  // Les couples (matière, niveau) ayant du contenu ne sont plus lus ici : le
+  // sélecteur propose tout le programme (voir ci-dessous).
+  const allSubjects = await getSubjectsCached()
+  // LE PROGRAMME ENTIER, contenu ou pas. Le sélecteur ne montrait que les
+  // matières ayant des chapitres (`narrowLevelsToContent`), pour qu'un futur 2de
+  // ne coche pas « SNT » et ne tombe pas sur une page vide à sa première visite.
+  // Décision de Lucas le 02/08 : chaque classe doit voir SON programme complet —
+  // ce qui manque se remplit ensuite. Le filtrer ici serait pire qu'inutile : la
+  // sélection faite à l'inscription est ce que l'accueil affiche, donc une
+  // matière absente du sélecteur resterait invisible sur Réviser même après que
+  // son contenu est écrit, jusqu'à ce que l'élève pense à la recocher.
+  //
+  // Sur Réviser, une matière encore vide porte « Bientôt » : elle est annoncée,
+  // pas déguisée en matière prête.
+  const subjects = allSubjects
 
   return (
     <WelcomeFlow

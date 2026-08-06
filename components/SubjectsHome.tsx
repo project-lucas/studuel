@@ -18,8 +18,8 @@ import { toast } from '@/lib/toast'
 import { saveSelectedSubjects } from '@/app/reviser/actions'
 import type { ExamProximity, SubjectExamHint } from '@/lib/next-exam'
 import type { Subject } from '@/lib/types'
-import SubjectFolder from '@/components/reviser/SubjectFolder'
-import { subjectFolders } from '@/lib/reviser-folders'
+import type { SubjectGroup } from '@/lib/subject-groups'
+import { programmeGroups } from '@/lib/subject-groups'
 
 // Palette des 3 paliers d'annotation « contrôle qui arrive » sur un dossier :
 // vert = de la marge, orange = bientôt, rouge = très proche.
@@ -53,19 +53,15 @@ const RANK_COLOR: Record<MasteryRank, string> = {
   legendaire: 'text-primary',
 }
 
-// Rangée de 3 couronnes + libellé du rang (« À découvrir » tant que rien n'est
-// commencé). Purement décorative : le texte porte l'information.
+// Rangée de 3 couronnes, en petit, sous le nom de la matière. Purement
+// décorative : l'aria-label porte l'information (le libellé texte, lui, a
+// disparu avec le passage en rangée — il doublait la largeur du bloc).
 function CrownRating({
   rank,
   subjectName,
-  showLabel = true,
 }: {
   rank: MasteryRank | null
   subjectName: string
-  // Sur une carte illustrée, on masque le libellé texte (l'illustration occupe
-  // le coin bas-droit) : seules les couronnes restent, la légende de la page
-  // explique les rangs. Le rang reste annoncé via l'aria-label.
-  showLabel?: boolean
 }) {
   const filled = rank ? RANK_CROWNS[rank] : 0
   const color = rank ? RANK_COLOR[rank] : ''
@@ -75,55 +71,38 @@ function CrownRating({
   const label = rank ? MASTERY_RANK_LABEL[rank] : 'À découvrir'
 
   return (
-    <div
-      className="mt-2.5 flex items-center gap-1.5"
+    <span
+      // `role="img"` : sans rôle, l'`aria-label` d'un span n'est pas exposé, et
+      // les couronnes internes étant `aria-hidden`, le rang de maîtrise était
+      // muet — dix-huit matières annoncées comme dix-huit liens identiques.
+      role="img"
+      className="mt-1 flex items-center gap-0.5"
       aria-label={`Rang en ${subjectName} : ${label}`}
     >
-      <span aria-hidden="true" className="flex items-center gap-0.5">
-        {[0, 1, 2].map((i) => (
-          <Crown
-            key={i}
-            strokeWidth={2.2}
-            className={cn(
-              'size-4',
-              i < filled
-                ? cn(color, 'fill-current')
-                : 'text-muted-foreground/30',
-            )}
-          />
-        ))}
-      </span>
-      {showLabel ? (
-        <span
+      {[0, 1, 2].map((i) => (
+        <Crown
+          key={i}
           aria-hidden="true"
+          strokeWidth={2.4}
           className={cn(
-            'text-xs font-bold',
-            rank ? color : 'text-muted-foreground/70',
+            'size-3.5',
+            i < filled ? cn(color, 'fill-current') : 'text-muted-foreground/25',
           )}
-        >
-          {label}
-        </span>
-      ) : null}
-    </div>
+        />
+      ))}
+    </span>
   )
 }
 
-// --- Réglages de la carte matière --------------------------------------------
-// Les trois valeurs qui décident de la silhouette d'une carte, exposées ici pour
-// qu'un ajustement visuel se fasse en UN endroit — pas dans six classes Tailwind
-// éparpillées dans le JSX.
+// Défaut de `emptySlugs`. Constant de module, et non `new Set()` écrit dans les
+// paramètres : un nouvel objet à chaque rendu changerait d'identité sans raison.
+const EMPTY_SLUGS: Set<string> = new Set()
 
-// Côté de l'illustration (px). Elle était à 76 px et « flottait » dans le coin ;
-// à 100 px elle habite enfin la carte. Elle n'est PAS rognée : les vignettes sont
-// des toiles carrées au motif centré, un débordement couperait le sujet en deux.
-const ART_PX = 100
-// Hauteur minimale de la carte : de quoi loger l'illustration ancrée en bas à
-// droite sans écraser le titre ni les couronnes.
-const CARD_MIN_PX = 132
-// Laisse réservée au texte : l'illustration vit à droite, le titre et les
-// couronnes ne dépassent jamais cette largeur — un nom long (« Figures
-// historiques ») passe à la ligne au lieu de courir sous l'image.
-const TEXT_ZONE = '58%'
+// --- Réglages de la carte matière --------------------------------------------
+// Côté de l'illustration (px), à gauche du nom. Une VIGNETTE, pas un décor :
+// elle doit rester lisible à cette taille — c'est le format d'icône que suit le
+// lot de dessins (trait épais, objet unique, aplats).
+const ICON_PX = 52
 
 // Normalise pour une recherche tolérante aux accents/casse.
 function normalizeSearch(s: string): string {
@@ -251,11 +230,18 @@ function ProgramSearch({ subjects }: { subjects: Subject[] }) {
   )
 }
 
-// Carte matière (grille 2 colonnes) : fond crème identique pour toutes, barre
-// d'accent colorée au bord gauche, nom en haut à gauche, couronnes en bas à
-// gauche, grande illustration ancrée en bas à droite. Si un contrôle est annoncé
-// sur la matière, la carte prend un liseré coloré (3 paliers) + une pastille
-// compte à rebours — pour repérer d'un coup d'œil que « ça arrive ».
+// Carte matière (grille 2 colonnes) : une RANGÉE — vignette à gauche, nom à
+// droite, couronnes sous le nom. Fond blanc, comme tous les autres blocs de
+// l'écran (la barre de série, les sessions à reprendre).
+//
+// Elle était haute de 132 px : nom en haut à gauche, couronnes en bas, grande
+// illustration de 100 px ancrée dans le coin bas-droit. Un joli objet, mais qui
+// mangeait un écran entier pour six matières et forçait le nom à vivre dans 58 %
+// de la largeur — « Enseignement scientifique » y tenait sur trois lignes. En
+// rangée, la même grille en montre le double et le nom retrouve toute la carte.
+//
+// Si un contrôle est annoncé sur la matière, la carte prend un liseré coloré
+// (3 paliers) + une pastille compte à rebours — pour repérer que « ça arrive ».
 function SubjectRow({
   subject,
   pct,
@@ -263,6 +249,7 @@ function SubjectRow({
   checked,
   onToggle,
   exam,
+  empty,
   delayMs,
 }: {
   subject: Subject
@@ -271,33 +258,27 @@ function SubjectRow({
   checked: boolean
   onToggle: () => void
   exam?: SubjectExamHint
+  /** Aucun chapitre à ce niveau : la carte l'annonce au lieu de le cacher. */
+  empty?: boolean
   delayMs: number
 }) {
   const theme = subjectTheme(subject.color)
   const prox = exam ? PROX_STYLE[exam.proximity] : null
-  // Illustration dédiée de la matière (toile carrée normalisée) : elle habille
-  // la carte hors édition. Quand elle est là, elle remplace le médaillon
-  // d'icône — une seule image forte par carte, façon grande app.
+  // Illustration dédiée de la matière (toile carrée normalisée). Elle reste
+  // visible EN ÉDITION : c'est elle qui identifie la carte, la retirer au moment
+  // précis où l'on trie ses matières revenait à trier des noms nus.
   const vignette = subjectVignette(subject.slug)
-  const showVignette = !!vignette && !editing
-  // Matière sans illustration dédiée (ex. Finances personnelles, seule du dossier
-  // culture sans visuel) : on pose son icône AU MÊME endroit et à la même taille
-  // qu'une illustration, pour que la carte garde la silhouette des autres (visuel
-  // ancré en bas à droite) au lieu du médaillon à gauche qui la faisait dépareiller.
-  const showFallbackArt = !vignette && !editing
-
-  const hasArt = showVignette || showFallbackArt
 
   const inner = (
     <div
-      style={{ animationDelay: `${delayMs}ms`, minHeight: `${CARD_MIN_PX}px` }}
+      style={{ animationDelay: `${delayMs}ms` }}
       className={cn(
-        // Fond crème unique (rev-tile) + barre d'accent de 4 px à gauche à la
-        // couleur de la matière : la seule couleur de matière de la carte. Le
-        // liseré de contour passe en `ring` — un `border` gris entrerait en
-        // conflit avec la couleur de la bordure gauche.
-        'pop-in rev-card rev-tile relative flex flex-col justify-between rounded-3xl border-l-4 p-3.5 pl-3 ring-1 ring-black/[0.06] transition-all duration-150 will-change-transform',
-        theme.accent,
+        // `rounded-[1.75rem]` et non `rounded-3xl` : le MÊME rayon que les blocs
+        // du haut (barre de série, « On s'y remet ? », carte « aucune matière »).
+        // À 24 px contre 28, l'angle des cartes matières se lisait plus sec que
+        // celui du bloc juste au-dessus — deux familles de coins sur un écran
+        // qui n'empile que des cartes blanches.
+        'pop-in rev-card relative flex min-h-[76px] items-center gap-3 rounded-[1.75rem] bg-white p-2.5 ring-1 ring-black/[0.06] transition-all duration-150 will-change-transform',
         prox ? `ring-2 ${prox.ring}` : null,
         !editing &&
           'group-hover:-translate-y-0.5 group-active:translate-y-[2px]',
@@ -314,15 +295,16 @@ function SubjectRow({
           )}
         >
           <CalendarClock className="size-3" aria-hidden="true" />
+          {/* « J-1 » seul ne veut rien dire à l'oreille : le mot que l'œil lit
+              dans le picto d'agenda, le lecteur d'écran l'obtient ici. */}
+          <span className="sr-only">Contrôle </span>
           {exam.label}
         </span>
       ) : null}
 
-      {/* Illustration de la matière : ancrée en bas à droite, `object-contain`
-          pour ne jamais déformer ni rogner le motif, taille identique d'une
-          carte à l'autre. Purement décorative — le nom porte le sens. Elle
-          passe SOUS le texte (z-0) : le titre reste lisible quoi qu'il arrive. */}
-      {showVignette ? (
+      {/* La vignette : `object-contain`, jamais rognée ni déformée, même boîte
+          d'une carte à l'autre. Purement décorative — le nom porte le sens. */}
+      {vignette ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={vignette}
@@ -331,66 +313,67 @@ function SubjectRow({
           width={320}
           height={320}
           loading="lazy"
-          style={{ width: `${ART_PX}px`, height: `${ART_PX}px` }}
-          className="pointer-events-none absolute right-0 bottom-0 z-0 select-none object-contain drop-shadow-[0_4px_10px_rgba(31,17,71,0.16)] transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105"
+          style={{ width: `${ICON_PX}px`, height: `${ICON_PX}px` }}
+          className="pointer-events-none shrink-0 select-none object-contain transition-transform duration-200 group-hover:scale-105"
         />
-      ) : showFallbackArt ? (
-        // Repli sans illustration : l'icône de la matière au même ancrage (bas
-        // droite) et à la MÊME taille — même silhouette que les cartes
-        // illustrées, pas de layout à part.
+      ) : (
+        // Repli sans illustration (Finances personnelles) : l'icône de la
+        // matière dans une tuile colorée, à la MÊME taille — même silhouette de
+        // carte, pas de mise en page à part.
         <span
           aria-hidden="true"
-          style={{ width: `${ART_PX}px`, height: `${ART_PX}px` }}
+          style={{ width: `${ICON_PX}px`, height: `${ICON_PX}px` }}
           className={cn(
-            'arena-tile pointer-events-none absolute right-1.5 bottom-1.5 z-0 flex items-center justify-center rounded-2xl shadow-sm transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:scale-105',
+            'arena-tile pointer-events-none flex shrink-0 items-center justify-center rounded-2xl shadow-sm transition-transform duration-200 group-hover:scale-105',
             theme.arena,
           )}
         >
           <SubjectIcon
             slug={subject.slug}
-            className="size-12 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
+            className="size-7 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
             strokeWidth={2.25}
           />
         </span>
-      ) : null}
+      )}
 
-      {/* Zone de texte : bornée à la moitié gauche dès qu'un visuel occupe le
-          coin bas-droit. Sans cette laisse, un nom long (« Figures historiques
-          françaises ») courait par-dessus l'illustration. */}
-      <div
-        className="relative z-10 flex items-start gap-2.5"
-        style={hasArt ? { maxWidth: TEXT_ZONE } : undefined}
-      >
-        {editing ? (
-          <span
-            className={cn(
-              'mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full border text-[11px] transition-colors',
-              // Coche de sélection en VERT (validation), pas en jaune : le jaune
-              // reste la monnaie/récompense.
-              checked
-                ? 'border-green-500 bg-green-500 text-white'
-                : 'border-muted-foreground/40 bg-muted',
-            )}
-          >
-            {checked ? <Check className="size-3" /> : null}
-          </span>
-        ) : null}
-        <p className="font-heading min-w-0 flex-1 text-[15px] leading-tight font-bold text-balance">
+      {/* Nom + rang. Deux lignes au maximum : au-delà, la rangée se déformerait
+          et la grille perdrait son alignement. */}
+      <span className="flex min-w-0 flex-1 flex-col">
+        <span className="font-heading line-clamp-2 text-[15px] leading-tight font-extrabold text-balance">
           {subject.name}
-        </p>
-      </div>
+        </span>
+        {/* Matière encore sans chapitre : « Bientôt » à la place des couronnes.
+            Les couronnes diraient « rang à découvrir », donc « à toi de jouer »,
+            devant une page où il n'y a rien à jouer — la promesse serait fausse.
+            Le mot dit que le manque vient de nous, pas de l'élève. */}
+        {empty ? (
+          <span className="mt-1 w-fit rounded-full bg-muted px-2 py-0.5 text-[10px] font-bold text-muted-foreground">
+            Bientôt
+            <span className="sr-only"> — pas encore de chapitre</span>
+          </span>
+        ) : (
+          <CrownRating
+            rank={rankForValue(pct / 100)}
+            subjectName={subject.name}
+          />
+        )}
+      </span>
 
-      {/* Les couronnes restent en bas à GAUCHE, au-dessus de l'illustration. */}
-      <div className="relative z-10 w-fit">
-        {/* Les couronnes portent le rang ; le libellé texte est masqué sur la
-            carte (un visuel occupe déjà le coin), la légende de la page l'explique
-            et l'aria-label l'annonce. Uniforme désormais sur TOUTES les cartes. */}
-        <CrownRating
-          rank={rankForValue(pct / 100)}
-          subjectName={subject.name}
-          showLabel={false}
-        />
-      </div>
+      {/* En édition, la coche prend la place du chevron, à droite : le geste est
+          « je coche une ligne », pas « je clique un dossier ». Coche VERTE
+          (validation) — le jaune reste la monnaie et la récompense. */}
+      {editing ? (
+        <span
+          className={cn(
+            'flex size-6 shrink-0 items-center justify-center rounded-full border transition-colors',
+            checked
+              ? 'border-green-500 bg-green-500 text-white'
+              : 'border-muted-foreground/40 bg-muted',
+          )}
+        >
+          {checked ? <Check className="size-3.5" strokeWidth={3} /> : null}
+        </span>
+      ) : null}
     </div>
   )
 
@@ -408,19 +391,76 @@ function SubjectRow({
       </button>
     )
   }
+  // Pas d'`aria-label` sur ce lien : il REMPLAÇAIT tout son contenu accessible,
+  // et avalait donc au passage le rang de maîtrise et le « Bientôt ». Le nom de
+  // la matière est déjà du texte, la pastille de contrôle et les couronnes
+  // portent maintenant le leur — le nom accessible se compose tout seul, et il
+  // dit enfin l'état de la matière au lieu de son seul intitulé.
   return (
     <Link
       href={`/reviser/${subject.slug}`}
       onClick={() => sfx.tap()}
       className="group block"
-      aria-label={
-        exam
-          ? `${subject.name} — contrôle ${exam.label}`
-          : subject.name
-      }
     >
       {inner}
     </Link>
+  )
+}
+
+// Les blocs de matières, en grille de 2 colonnes. Un titre de groupe n'apparaît
+// qu'au lycée (tronc commun / spécialités / options) ; ailleurs la grille est
+// unique et n'a pas de titre à porter.
+//
+// `delayOffset` continue le décalage d'apparition d'un bloc à l'autre : le
+// programme part de 0, la culture générale reprend là où il s'est arrêté, pour
+// que les cartes se posent en une seule vague et non en deux.
+function SubjectGrid({
+  groups,
+  editing,
+  isChecked,
+  onToggle,
+  progressBySlug,
+  examBySubject,
+  emptySlugs,
+  delayOffset = 0,
+}: {
+  groups: SubjectGroup[]
+  editing: boolean
+  isChecked: (slug: string) => boolean
+  onToggle: (slug: string) => void
+  progressBySlug: Record<string, number>
+  examBySubject: Record<string, SubjectExamHint>
+  emptySlugs: Set<string>
+  delayOffset?: number
+}) {
+  let cardIndex = delayOffset
+  return (
+    <>
+      {groups.map(({ label, items }) => (
+        <section key={label ?? 'tout'} className="flex flex-col gap-2.5">
+          {label ? (
+            <h3 className="font-heading px-1 text-xs font-bold tracking-wide text-muted-foreground uppercase">
+              {label}
+            </h3>
+          ) : null}
+          <div className="grid grid-cols-2 gap-3">
+            {items.map((s) => (
+              <SubjectRow
+                key={s.id}
+                subject={s}
+                pct={progressBySlug[s.slug] ?? 0}
+                editing={editing}
+                checked={isChecked(s.slug)}
+                onToggle={() => onToggle(s.slug)}
+                exam={examBySubject[s.slug]}
+                empty={emptySlugs.has(s.slug)}
+                delayMs={cardIndex++ * 40}
+              />
+            ))}
+          </div>
+        </section>
+      ))}
+    </>
   )
 }
 
@@ -435,6 +475,7 @@ export default function SubjectsHome({
   grade,
   progressBySlug,
   examBySubject = {},
+  emptySlugs = EMPTY_SLUGS,
   topSlot,
   carnetSlot,
 }: {
@@ -445,6 +486,12 @@ export default function SubjectsHome({
   grade: string
   progressBySlug: Record<string, number>
   examBySubject?: Record<string, SubjectExamHint>
+  /**
+   * Les matières SANS chapitre à ce niveau : leur carte porte « Bientôt ». On
+   * les masquait ; chaque classe montre désormais son programme entier, quitte
+   * à annoncer ce qui n'est pas encore écrit.
+   */
+  emptySlugs?: Set<string>
   // Blocs insérés au-dessus de la grille des matières (série/semaine, contrôles,
   // reprise…) — rendus côté serveur et passés en enfant.
   topSlot?: React.ReactNode
@@ -487,20 +534,22 @@ export default function SubjectsHome({
       setEditing(false)
     })
 
-  // En édition, on ne montre QUE le dossier Programme : la culture générale
-  // n'est pas sélectionnable, un dossier qu'on ne peut pas modifier n'a rien à
-  // faire dans un écran de modification.
-  const folders = subjectFolders({
-    programmeSubjects: visible,
-    cultureSubjects: editing ? [] : cultureSubjects,
-    grade,
-  })
+  // Les matières du programme, directement en grille — plus de dossier à
+  // ouvrir pour arriver à sa matière.
+  const groups = programmeGroups({ subjects: visible, grade })
 
-  // Décalage d'apparition continu d'une carte à l'autre, tous groupes confondus.
-  let cardIndex = 0
+  // En édition, on ne montre QUE le programme : la culture générale n'est pas
+  // sélectionnable, une grille qu'on ne peut pas modifier n'a rien à faire dans
+  // un écran de modification.
+  const cultureShown = editing ? [] : cultureSubjects
 
+  const programmeCount = groups.reduce((n, g) => n + g.items.length, 0)
+
+  // « Tes matières » : le nom accessible de TOUT l'écran. Il porte deux grilles
+  // — le programme, qui n'a plus de titre visible, et la culture générale, qui
+  // garde le sien pour se distinguer de la première.
   return (
-    <section aria-label="Ton programme">
+    <section aria-label="Tes matières">
       {/* Fond crème pleine page, derrière tout le contenu de l'onglet. */}
       <WorldBackdrop className="rev-bg" />
 
@@ -509,32 +558,46 @@ export default function SubjectsHome({
       <div className="relative flex flex-col gap-4 sm:px-1">
         {topSlot ? <div className="flex flex-col gap-4">{topSlot}</div> : null}
 
-        {/* La loupe reste au-dessus des dossiers : elle cherche dans TOUT le
-            programme, y compris ce qui est replié — sinon fermer un dossier
-            reviendrait à cacher son contenu de la recherche. Le crayon
-            (édition des matières) vit DANS le dossier Programme, le seul qu'il
-            modifie : en haut, il se confondait avec l'icône de « Mon carnet ». */}
-        <div className="flex items-center justify-between gap-2 px-1">
-          {/* « Ton programme » et non « Mes matières » : ce dernier nomme déjà
-              l'onglet actif tout en haut, la répétition brouillait le repère. */}
-          <h2 className="font-heading text-sm font-bold text-foreground">
-            Ton programme
-          </h2>
-          {/* Le carnet vit ici, collé à la loupe : deux commandes flottantes
-              de même robe, au lieu d'une tuile pleine largeur sous le pli. */}
+        {/* Les trois commandes de l'écran, alignées à droite : trier mes
+            matières (crayon), mon carnet, chercher (loupe). La loupe cherche
+            dans TOUT le catalogue, culture générale comprise — elle évite de
+            faire défiler quand on sait déjà quelle matière on vient ouvrir.
+
+            Plus de titre « Ton programme » au-dessus de la grille : l'onglet
+            actif le dit déjà en haut de l'écran, et une grille de matières se
+            reconnaît sans qu'on la nomme. Seule la culture générale garde le
+            sien, plus bas — c'est ce qui la distingue du programme. */}
+        <div className="flex items-center justify-end gap-2 px-1">
           <div className="flex items-center gap-2">
+            {/* Le crayon SEUL : « Modifier mes matières » écrit en toutes
+                lettres au-dessus d'une grille qui ne contient que des matières,
+                c'était nommer deux fois ce que l'on voit. Le libellé reste dans
+                l'aria-label, pour le lecteur d'écran. Il disparaît PENDANT
+                l'édition : la sortie se fait par « Terminé », un crayon qui
+                resterait là promettrait une seconde façon d'entrer. */}
+            {editing ? null : (
+              <button
+                type="button"
+                onClick={() => {
+                  sfx.tap()
+                  setEditing(true)
+                }}
+                aria-label="Modifier mes matières"
+                className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
+              >
+                <Pencil className="size-4.5" strokeWidth={2.4} aria-hidden="true" />
+              </button>
+            )}
             {carnetSlot}
             <ProgramSearch subjects={subjects} />
           </div>
         </div>
 
-        {/* On teste le dossier PROGRAMME, pas le nombre de dossiers : la culture
-            générale reste visible même quand l'élève n'a plus aucune matière
-            sélectionnée, et compter les dossiers ferait alors disparaître le
-            seul message qui lui dit comment se réinscrire. Le bouton entre
-            directement en édition : le crayon vivant désormais dans le dossier
-            Programme, il n'existe plus quand le dossier a disparu. */}
-        {!folders.some((f) => f.id === 'programme') ? (
+        {/* On teste le PROGRAMME, pas l'écran entier : la culture générale
+            reste visible même quand l'élève n'a plus aucune matière
+            sélectionnée, et compter tout ce qui s'affiche ferait alors
+            disparaître le seul message qui lui dit comment se réinscrire. */}
+        {programmeCount === 0 ? (
           <div className="rev-card flex flex-col items-start gap-3 rounded-[1.75rem] bg-white p-5">
             <p className="text-sm text-muted-foreground">
               Aucune matière sélectionnée.
@@ -551,88 +614,70 @@ export default function SubjectsHome({
               Choisir mes matières
             </button>
           </div>
-        ) : null}
+        ) : (
+          <div className="flex flex-col gap-3">
+            {/* En édition seulement : la consigne et la sortie. Le reste du
+                temps, la grille suit directement la rangée de commandes. */}
+            {editing ? (
+              <div className="flex items-center justify-between gap-3 px-1">
+                <p className="min-w-0 text-sm text-muted-foreground">
+                  Touche une matière pour l&apos;ajouter ou la retirer.
+                </p>
+                <button
+                  type="button"
+                  onClick={finishEditing}
+                  disabled={pending}
+                  className="font-heading flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-primary px-3 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
+                >
+                  <Check className="size-3.5" aria-hidden="true" />
+                  {pending ? 'Enregistrement…' : 'Terminé'}
+                </button>
+              </div>
+            ) : null}
 
-        {folders.map((folder) => (
-            // En édition, le dossier reste ouvert de force : le choix
-            // ouvert/fermé étant mémorisé, un élève qui l'avait replié entrait
-            // en édition devant un dossier fermé, donc sans une seule case.
-            <SubjectFolder
-              key={folder.id}
-              folder={folder}
+            <SubjectGrid
+              groups={groups}
+              editing={editing}
+              isChecked={(slug) => picked.has(slug)}
+              onToggle={toggle}
               progressBySlug={progressBySlug}
-              forceOpen={editing}
-            >
-              {/* Le crayon vit ici, dans le seul dossier qu'il modifie. En
-                  édition, la rangée devient consigne + « Terminé ». */}
-              {folder.id === 'programme' ? (
-                editing ? (
-                  <div className="flex items-center justify-between gap-3 px-1">
-                    <p className="min-w-0 text-sm text-muted-foreground">
-                      Touche une matière pour l&apos;ajouter ou la retirer.
-                    </p>
-                    <button
-                      type="button"
-                      onClick={finishEditing}
-                      disabled={pending}
-                      className="font-heading flex min-h-9 shrink-0 items-center gap-1.5 rounded-full bg-primary px-3 text-xs font-bold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
-                    >
-                      <Check className="size-3.5" aria-hidden="true" />
-                      {pending ? 'Enregistrement…' : 'Terminé'}
-                    </button>
-                  </div>
-                ) : (
-                  <div className="flex justify-end px-1">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        sfx.tap()
-                        setEditing(true)
-                      }}
-                      className="font-heading flex min-h-9 items-center gap-1.5 rounded-full bg-white px-3 text-xs font-bold text-primary shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
-                    >
-                      <Pencil
-                        className="size-3.5"
-                        strokeWidth={2.4}
-                        aria-hidden="true"
-                      />
-                      Modifier mes matières
-                    </button>
-                  </div>
-                )
-              ) : null}
-              {folder.groups.map(({ label, items }) => (
-                <section key={label ?? 'tout'} className="flex flex-col gap-2.5">
-                  {label ? (
-                    <h3 className="font-heading px-1 text-xs font-bold tracking-wide text-muted-foreground uppercase">
-                      {label}
-                    </h3>
-                  ) : null}
-                  <div className="grid grid-cols-2 gap-3">
-                    {items.map((s) => {
-                      // La culture générale n'entre pas dans la sélection : ses
-                      // cartes restent inertes même en mode édition.
-                      const isCulture = folder.id === 'hors-programme'
-                      return (
-                        <SubjectRow
-                          key={s.id}
-                          subject={s}
-                          pct={progressBySlug[s.slug] ?? 0}
-                          editing={editing && !isCulture}
-                          checked={isCulture ? true : picked.has(s.slug)}
-                          onToggle={() => {
-                            if (!isCulture) toggle(s.slug)
-                          }}
-                          exam={examBySubject[s.slug]}
-                          delayMs={cardIndex++ * 40}
-                        />
-                      )
-                    })}
-                  </div>
-                </section>
-              ))}
-            </SubjectFolder>
-        ))}
+              examBySubject={examBySubject}
+              emptySlugs={emptySlugs}
+            />
+          </div>
+        )}
+
+        {/* La culture générale : même traitement que le programme, un titre et
+            sa grille. Elle a perdu son dossier à son tour — un pli de plus pour
+            cinq modules, c'était cacher du contenu derrière un geste. Elle
+            arrive APRÈS le programme, ce qui suffit à dire qu'elle vient en
+            second ; l'indice de droite dit qu'elle est du bonus. */}
+        {cultureShown.length > 0 ? (
+          <div className="flex flex-col gap-3">
+            <div className="flex items-baseline justify-between gap-2 px-1">
+              <h2 className="font-heading text-sm font-bold text-foreground">
+                Culture générale
+              </h2>
+              <p className="shrink-0 text-[11px] font-semibold text-muted-foreground">
+                En bonus, à ton rythme
+              </p>
+            </div>
+
+            {/* Ses matières n'entrent pas dans la sélection : leurs cartes
+                restent des liens, jamais des cases à cocher — même en édition,
+                où elles ne s'affichent tout simplement pas. */}
+            <SubjectGrid
+              groups={[{ label: null, items: cultureShown }]}
+              editing={false}
+              isChecked={() => true}
+              onToggle={() => {}}
+              progressBySlug={progressBySlug}
+              examBySubject={examBySubject}
+              emptySlugs={emptySlugs}
+              delayOffset={programmeCount}
+            />
+          </div>
+        ) : null}
 
         {/* Légende des rangs de couronnes, comme sur la maquette. */}
         {!editing ? (

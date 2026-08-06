@@ -3,7 +3,6 @@ import {
   subjectsWithContent,
   emptySubjectCount,
   subjectsWithContentAt,
-  narrowLevelsToContent,
 } from '@/lib/subject-visibility'
 
 const S = (id: string) => ({ id, slug: id, name: id })
@@ -97,40 +96,5 @@ describe('subjectsWithContentAt — le niveau fixe est respecté', () => {
 
   it('ne filtre rien sans aucune paire (cache froid) — jamais de grille vide', () => {
     expect(subjectsWithContentAt([MATHS, VIDE], [], '3e')).toHaveLength(2)
-  })
-})
-
-describe('narrowLevelsToContent — le sélecteur de /bienvenue', () => {
-  const ESPAGNOL = { id: 'es', fixed_level: null, levels: ['5e', '4e', '3e', '2de'] }
-  const SNT = { id: 'snt', fixed_level: null, levels: ['2de'] }
-  const ECO = { id: 'e', fixed_level: 'tous', levels: ['6e', 'Tle'] }
-  const PAIRS: [string, string][] = [
-    ['es', '5e'],
-    ['es', '4e'],
-    ['es', '3e'],
-    ['e', 'tous'],
-  ]
-
-  it('retire les seuls niveaux sans contenu, garde les autres', () => {
-    const [es] = narrowLevelsToContent([ESPAGNOL], PAIRS)
-    expect(es.levels).toEqual(['5e', '4e', '3e']) // plus de 2de : rien à réviser
-  })
-
-  it('écarte la matière dont AUCUN niveau n’a de contenu', () => {
-    expect(narrowLevelsToContent([SNT], PAIRS)).toEqual([])
-  })
-
-  it('garde une matière hors-niveau avec TOUS ses niveaux déclarés', () => {
-    const [eco] = narrowLevelsToContent([ECO], PAIRS)
-    expect(eco.levels).toEqual(['6e', 'Tle'])
-  })
-
-  it('ne mute pas la matière d’origine (immutabilité)', () => {
-    narrowLevelsToContent([ESPAGNOL], PAIRS)
-    expect(ESPAGNOL.levels).toEqual(['5e', '4e', '3e', '2de'])
-  })
-
-  it('ne filtre rien sans aucune paire (cache froid)', () => {
-    expect(narrowLevelsToContent([ESPAGNOL, SNT], [])).toHaveLength(2)
   })
 })

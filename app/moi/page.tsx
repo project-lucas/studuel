@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { after } from 'next/server'
 import { CircleUser } from 'lucide-react'
 import {
   Card,
@@ -10,27 +9,37 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
-import TabHeader from '@/components/TabHeader'
 import WorldBackdrop from '@/components/WorldBackdrop'
-import MoiTopBar from '@/components/moi/MoiTopBar'
-import MoiTabSwitcher from '@/components/moi/MoiTabSwitcher'
-import HeroCard from '@/components/moi/HeroCard'
+import PanneauIdentite from '@/components/moi/PanneauIdentite'
+import HistoriqueTravail from '@/components/moi/HistoriqueTravail'
+import MatiereDuMomentCard from '@/components/moi/MatiereDuMomentCard'
+import HabitudesCard, { type LeverState } from '@/components/moi/HabitudesCard'
+import AjouterMoyennes from '@/components/moi/SaisieMoyennes'
+import TrajectoryCard from '@/components/moi/TrajectoryCard'
 import StandingLine from '@/components/StandingLine'
 import { parseGradeStandings } from '@/lib/percentile'
-import TrajectoryCard from '@/components/moi/TrajectoryCard'
-import WeeklyLeversCard, {
-  type LeverState,
-} from '@/components/moi/WeeklyLeversCard'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { readRowTolerant } from '@/lib/profile-read'
-import { toDayKey, activityCutoff } from '@/lib/streak'
+import { isMissingSchemaObject } from '@/lib/schema-fallback'
+import { toDayKey, activityCutoff, computeStreak } from '@/lib/streak'
+import { getGradeChaptersCached, getSubjectsCached } from '@/lib/catalog'
+import { getChapterMastery, chapterState } from '@/lib/mastery'
+import { getChapitresVus } from '@/lib/chapitres-vus'
+import { getReviewItems, countsBySubject, reviewQueue } from '@/lib/srs'
+import { couvertureFor, type ChapitreCouvert } from '@/lib/coach/couverture'
+import { matiereDuMoment } from '@/lib/moi/matiere-du-moment'
+import { appliquerValidationsAuto } from '@/lib/moi/journal'
 import {
-  autoHabitLogs,
-  mergeHabitLogs,
-  dayIndexOf,
-  PLANIFIER_CATALOG_ID,
-} from '@/lib/habits'
+  formatDuree,
+  libelleCetteSemaine,
+  phraseRythme,
+  rythmeHebdo,
+  JOURS_HISTORIQUE,
+  type JourTravail,
+} from '@/lib/moi/temps'
+import { bilanMoyenne, formatMoyenne, phraseDelta } from '@/lib/moi/moyenne'
+import { PLANIFIER_CATALOG_ID } from '@/lib/habits'
 import {
   DRIVER_WINDOW_DAYS,
   LEVERS,
@@ -46,9 +55,8 @@ import {
 } from '@/lib/trajectoire-bac'
 import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
 import { workLevel } from '@/lib/work-level'
-import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
-import HabitsPanel from '@/components/moi/HabitsPanel'
-import { bilanHabitudes } from '@/lib/moi/habitudes'
+import { bilanHabitudes, meilleureSerie } from '@/lib/moi/habitudes'
+import { GRADE_LEVELS, type GradeLevel, type Subject } from '@/lib/types'
 import type { Habit, HabitLog, CommuteSlot } from '@/lib/types'
 
 export const metadata = { title: 'Moi — Studuel' }
@@ -58,24 +66,56 @@ export const dynamic = 'force-dynamic'
 type MoiProfileRow = {
   full_name: string | null
   grade_level: string | null
+  selected_subjects: unknown
   commute_slots: unknown
   capacity_quiz: unknown
   work_seconds: number | null
-  coins: number | null
   avatar: unknown
 }
 
-// Libellés des classes pour la pill du héros (le slug court sinon).
+// Libellés des classes pour la pill d'identité (le slug court sinon).
 const GRADE_LABELS: Partial<Record<GradeLevel, string>> = {
   '2de': 'Seconde',
   '1re': 'Première',
   Tle: 'Terminale',
 }
 
-// L'onglet Moi refondu : un miroir motivant, pas un dashboard. La hero card
-// montre la capacité (et son plafond possible), la trajectoire au bac montre
-// deux futurs, les leviers de la semaine donnent la main. L'app ne juge
-// jamais : elle montre, l'élève choisit.
+// Fenêtre du journal de travail : la plus large des portées de l'historique
+// (un an). Les lignes de `work_daily` sont deux colonnes et n'existent que les
+// jours travaillés — une année tient dans quelques kilo-octets, et le sélecteur
+// de période change alors de lunette SANS aller-retour serveur.
+
+// -----------------------------------------------------------------------------
+// L'ONGLET MOI — le miroir, en un seul scroll.
+//
+// CE QUI A CHANGÉ, ET POURQUOI (refonte du 2026-08-06).
+//
+// 1. PLUS D'ONGLET DANS L'ONGLET. « Ma progression » / « Mes habitudes »
+//    cachaient la moitié de l'écran derrière un clic que personne ne faisait.
+//    Tout tient dans un scroll ; le détail des habitudes a sa page (/moi/habitudes).
+//
+// 2. LA CAPACITÉ N'OUVRE PLUS L'ÉCRAN. « Capacité 8 · plafond 95 » avec trois
+//    drivers à 0 % était la première chose qu'un élève lisait sur l'onglet qui
+//    porte son nom : une note basse, sur une échelle qu'il ne pouvait relier à
+//    rien de ce qu'il avait fait. Le calcul est INTACT — il nourrit toujours la
+//    trajectoire au bac — mais son affichage a déménagé auprès des habitudes qui
+//    le produisent.
+//
+// 3. CE QUE L'ÉLÈVE A FAIT EST ENFIN À L'ÉCRAN. Sa série, son temps de travail
+//    cumulé, sa moyenne générale : les trois seuls chiffres qu'il reconnaît
+//    comme siens, et dont deux ne redescendent jamais. Les données existaient
+//    toutes (`work_seconds` 014, `work_daily` 084, `school_grades` 167).
+//
+// 4. L'ÉCRAN DÉSIGNE UNE MATIÈRE. Pas un tableau — celui de Marcel existe déjà.
+//    Un nom, une raison en faits, un bouton.
+//
+// 5. LA TRAJECTOIRE NE BLOQUE PLUS RIEN. Elle ne s'affiche que s'il y a des
+//    notes ; sinon la saisie vit dans la tuile « moyenne », à côté de deux
+//    preuves déjà pleines.
+//
+// PERFORMANCE. Deux vagues, pas plus : le profil ne peut pas attendre (le
+// niveau conditionne la lecture du programme), tout le reste part avec lui.
+// -----------------------------------------------------------------------------
 export default async function MoiPage() {
   const supabase = await createClient()
   const user = await getCurrentUser()
@@ -85,7 +125,7 @@ export default async function MoiPage() {
       <div>
         <PageHeader
           title="Moi"
-          description="Ta capacité, ta trajectoire et tes leviers."
+          description="Ton travail, tes chiffres, tes habitudes."
         />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
@@ -94,8 +134,8 @@ export default async function MoiPage() {
               miroir
             </CardTitle>
             <CardDescription>
-              Sommeil, hydratation, régularité : l&apos;app te montre ton
-              plafond invisible — et comment le repousser.
+              Ta série, ton temps de travail, ta moyenne et les habitudes qui
+              les font monter.
             </CardDescription>
           </CardHeader>
           <CardFooter>
@@ -108,25 +148,11 @@ export default async function MoiPage() {
     )
   }
 
-  // --- UNE SEULE VAGUE ----------------------------------------------------------
-  // Cet écran enchaînait cinq allers-retours en série : l'inscription de la
-  // mission fixe, puis le paquet de lectures, puis la synchro, puis les logs.
-  // Trois d'entre eux n'avaient aucune raison d'attendre les autres :
-  //
-  //  · l'upsert « Planifier ma semaine » est idempotent et ne conditionne
-  //    aucune des lectures qui suivaient — il part avec elles ;
-  //  · les trois `select` sur `profiles` visaient la MÊME ligne : fusionnés ;
-  //  · les logs d'habitudes étaient lus APRÈS `syncAutoHabits` alors que
-  //    celle-ci n'écrit que la journée d'AUJOURD'HUI. On les lit maintenant en
-  //    parallèle et on applique le résultat de la synchro par-dessus, en
-  //    mémoire : même affichage, un aller-retour de moins (voir plus bas).
-  //
-  // Les quatre historiques de sessions sont désormais BORNÉS à la fenêtre
-  // d'activité (400 j) : ils ne servent qu'à la série, aux drivers et à la
-  // trajectoire, mais retransféraient tout le passé d'un élève assidu.
   const today = toDayKey(new Date())
-  const since = new Date()
-  since.setUTCDate(since.getUTCDate() - (DRIVER_WINDOW_DAYS - 1))
+  const depuisDrivers = new Date()
+  depuisDrivers.setUTCDate(depuisDrivers.getUTCDate() - (DRIVER_WINDOW_DAYS - 1))
+  const depuisRythme = new Date()
+  depuisRythme.setUTCDate(depuisRythme.getUTCDate() - (JOURS_HISTORIQUE - 1))
 
   const [
     profile,
@@ -138,18 +164,22 @@ export default async function MoiPage() {
     { data: gradeRows },
     { data: termRows, error: termError },
     { data: storedLogs },
+    { data: workDays, error: workError },
     { data: standingsRow },
+    subjects,
+    mastery,
+    chapitresVus,
+    reviewItems,
   ] = await Promise.all([
     readRowTolerant<MoiProfileRow>(supabase, 'profiles', 'id', user.id, [
       'full_name',
       'grade_level',
+      'selected_subjects',
       'commute_slots',
       'capacity_quiz',
-      // work_seconds (014), coins (018), avatar (082) : plus besoin de trois
-      // requêtes pour trois migrations — `readRowTolerant` retire tout seul
-      // celles que le schéma ne connaîtrait pas encore.
+      // work_seconds (014), avatar (082) : `readRowTolerant` retire tout seul
+      // les colonnes que le schéma ne connaîtrait pas encore.
       'work_seconds',
-      'coins',
       'avatar',
     ]),
     supabase
@@ -159,7 +189,7 @@ export default async function MoiPage() {
       .returns<Habit[]>(),
     supabase
       .from('test_sessions')
-      .select('created_at, score, total')
+      .select('created_at')
       .eq('user_id', user.id)
       .gte('created_at', activityCutoff()),
     supabase
@@ -177,8 +207,6 @@ export default async function MoiPage() {
       .select('created_at')
       .eq('user_id', user.id)
       .gte('created_at', activityCutoff()),
-    // Notes réelles (167) et moyennes saisies (187) : indépendantes de la
-    // synchro des habitudes → chargées ici plutôt que derrière syncAutoHabits.
     supabase
       .from('school_grades')
       .select('id, subject, label, score, out_of, coefficient, date')
@@ -193,178 +221,254 @@ export default async function MoiPage() {
     supabase
       .from('habit_logs')
       .select('id, habit_id, date, completed, auto_validated')
-      .gte('date', toDayKey(since))
+      .gte('date', toDayKey(depuisDrivers))
       .returns<HabitLog[]>(),
-    // Mission fixe pour tous : « Planifier ma semaine » (dimanche) — auto-
-    // inscrite, elle nourrit le driver Régularité. Idempotente, donc sans
-    // ordre imposé vis-à-vis des lectures ci-dessus.
+    // Le journal quotidien du temps de travail (084). Absent tant que la
+    // migration n'est pas passée : le graphique de rythme reste alors plat, le
+    // CUMUL (work_seconds, 014) continue de s'afficher.
+    supabase
+      .from('work_daily')
+      .select('day, seconds')
+      .eq('user_id', user.id)
+      .gte('day', toDayKey(depuisRythme))
+      .returns<JourTravail[]>(),
+    // Place de l'élève dans sa cohorte (223) : RPC SECURITY DEFINER, jamais une
+    // jointure — la RLS de `profiles` ne laisserait voir que sa propre ligne.
+    supabase.rpc('my_grade_standings'),
+    // --- Ce qu'il faut pour DÉSIGNER une matière -------------------------------
+    // Le catalogue est en cache serveur (identique pour tous), la maîtrise et
+    // les chapitres déclarés sont personnels. Aucun de ces quatre n'a besoin du
+    // niveau : ils partent donc dans la même vague que le reste.
+    getSubjectsCached(),
+    getChapterMastery(supabase, user.id),
+    getChapitresVus(supabase, user.id),
+    getReviewItems(supabase, user.id),
+    // Mission fixe pour tous : « Planifier ma semaine ». Idempotente, et son
+    // résultat ne sert à personne — d'où sa place EN DERNIER, hors du
+    // déstructurage.
+    //
+    // Elle était jusqu'ici glissée AVANT la RPC de classement, alors que le
+    // déstructurage ne comptait pas de nom pour elle : `standingsRow` recevait
+    // donc le retour (vide) de l'upsert, et le vrai classement partait à la
+    // poubelle. La ligne « Tu travailles plus que 96 % des Terminale » ne
+    // pouvait pas s'afficher sur cet onglet — silencieusement, puisque
+    // `parseGradeStandings` avale ce qu'elle ne comprend pas.
     supabase.from('habits').upsert(
       { user_id: user.id, catalog_id: PLANIFIER_CATALOG_ID, target: {} },
       { onConflict: 'user_id,catalog_id', ignoreDuplicates: true },
     ),
-    // Place de l'élève dans sa cohorte de niveau (223). Passe par une RPC
-    // SECURITY DEFINER, jamais par une jointure : la RLS de `profiles` ne
-    // laisserait voir que sa propre ligne et l'app annoncerait « 1er sur 1 ».
-    // Si la migration n'est pas passée, l'erreur est avalée par le parseur et
-    // la ligne ne s'affiche simplement pas.
-    supabase.rpc('my_grade_standings'),
   ])
+
+  const grade = profile?.grade_level ?? null
+  // Seule lecture qui ne pouvait pas partir avec les autres : elle a besoin du
+  // niveau. Mise en cache serveur (5 min, partagée par toute la classe), donc
+  // cette seconde vague ne coûte presque jamais un aller-retour réseau.
+  const levelChapters = grade ? await getGradeChaptersCached(grade) : []
 
   const commuteSlots: CommuteSlot[] = Array.isArray(profile?.commute_slots)
     ? (profile.commute_slots as CommuteSlot[])
     : []
 
-  // Validation automatique du jour (révision, trajets) : les leviers Révision
-  // et la Régularité se cochent tout seuls quand l'élève a vraiment travaillé.
-  // La décision est PURE — on l'applique tout de suite sur les logs déjà lus…
-  const autoRows = autoHabitLogs(
-    user.id,
-    habits ?? [],
+  const activeHabits = habits ?? []
+  const logs = appliquerValidationsAuto(supabase, user.id, {
+    habits: activeHabits,
+    storedLogs: storedLogs ?? [],
     commuteSlots,
-    {
+    activite: {
       tests: tests ?? [],
       studies: studies ?? [],
       lessons: lessonsDone ?? [],
       challenges: challenges ?? [],
     },
     today,
+  })
+
+  // --- Preuve n°1 : la série -----------------------------------------------
+  // Calculée depuis les mêmes journées d'activité que Marcel et le bandeau du
+  // haut (lib/streak), à partir de listes DÉJÀ chargées : aucune requête de plus.
+  const joursActifs = new Set(
+    [
+      ...(tests ?? []),
+      ...(studies ?? []),
+      ...(lessonsDone ?? []),
+      ...(challenges ?? []),
+    ].map((row) => String(row.created_at).slice(0, 10)),
   )
-  const logs = mergeHabitLogs(storedLogs ?? [], autoRows)
+  const serie = computeStreak(joursActifs)
+  const record = meilleureSerie(joursActifs)
 
-  // … et on la persiste APRÈS l'envoi de la réponse (`after`). L'élève n'attend
-  // plus une écriture dont l'écran connaît déjà le résultat ; au prochain
-  // chargement, la base dira la même chose.
-  if (autoRows.length > 0) {
-    after(async () => {
-      const { error } = await supabase
-        .from('habit_logs')
-        .upsert(autoRows, { onConflict: 'habit_id,date' })
-      if (error) {
-        console.error('[moi] validations auto non enregistrées :', error.message)
-      }
-    })
-  }
+  // --- Preuve n°2 : le temps de travail ------------------------------------
+  // Le CUMUL vient de `profiles.work_seconds` (014) ; le RYTHME du journal
+  // quotidien `work_daily` (084). Si cette dernière n'est pas exécutée, on ne
+  // dessine PAS un graphique plat : il annoncerait « tu n'as pas encore
+  // travaillé » à un élève assidu, alors que le cumul à côté dit le contraire.
+  // Mieux vaut une carte absente qu'une carte qui ment (cf. lib/sante.ts, le
+  // mode de panne n°1 du projet est l'échec silencieux).
+  const secondesTotal = Number(profile?.work_seconds ?? 0) || 0
+  const rythmeDisponible = !isMissingSchemaObject(workError)
+  const semaines = rythmeHebdo(workDays ?? [], today)
 
-  const activeHabits = habits ?? []
-  const allLogs = logs ?? []
-
-  // --- Capacité : 4 drivers sur 14 jours, repli sur le quiz d'onboarding ------
-  const quiz = profile?.capacity_quiz as { score?: unknown } | null
-  const quizScore =
-    typeof quiz?.score === 'number' ? Math.round(quiz.score) : null
-  const drivers = computeDriverScores(activeHabits, allLogs, today)
-  const capacite = computeCapacite(drivers, quizScore)
-  const plafond = computePlafond(drivers, capacite)
-
-  // --- Trajectoire au bac : notes réelles d'abord, saisie manuelle en repli ---
+  // --- Preuve n°3 : la moyenne ---------------------------------------------
   const schoolGrades = normalizeGradeList(gradeRows ?? [])
   const summaries = trimestreSummaries(schoolGrades, today)
   const schoolYear = trimestreOf(today)?.year ?? new Date().getUTCFullYear()
   const manualTerms = normalizeTermGrades(termRows ?? [], schoolYear)
   const terms = mergeTermAverages(summaries, manualTerms)
+  const moyenne = bilanMoyenne(terms)
+
+  // --- Capacité : plus affichée ici, mais elle nourrit la trajectoire --------
+  const quiz = profile?.capacity_quiz as { score?: unknown } | null
+  const quizScore =
+    typeof quiz?.score === 'number' ? Math.round(quiz.score) : null
+  const drivers = computeDriverScores(activeHabits, logs, today)
+  const capacite = computeCapacite(drivers, quizScore)
+  const plafond = computePlafond(drivers, capacite)
   const trajectory = computeBacTrajectory(terms, capacite, plafond)
 
-  // --- Leviers du jour : l'état coché vient de habit_logs (source unique) -----
+  // --- La matière du moment -------------------------------------------------
+  // Mêmes règles que Réviser et Marcel, à la lettre : matières suivies, puis
+  // chapitres du niveau, puis la définition unique du pourcentage.
+  const selected = Array.isArray(profile?.selected_subjects)
+    ? (profile.selected_subjects as string[])
+    : []
+  const suivies: Subject[] =
+    selected.length > 0
+      ? subjects.filter((s) => selected.includes(s.id) || selected.includes(s.slug))
+      : subjects
+  const parId = new Map(suivies.map((s) => [s.id, s]))
+
+  const chapitresCouverts: ChapitreCouvert[] = []
+  for (const chapitre of levelChapters) {
+    const matiere = parId.get(chapitre.subject_id)
+    if (!matiere) continue
+    const progress = mastery.get(chapitre.id)
+    chapitresCouverts.push({
+      chapterId: chapitre.id,
+      chapterTitle: chapitre.title,
+      subjectSlug: matiere.slug,
+      subjectName: matiere.name,
+      state: chapterState(progress),
+      value: progress?.value ?? 0,
+      vuEnCours: chapitresVus.has(chapitre.id),
+    })
+  }
+  const cartesParMatiere = countsBySubject(reviewQueue(reviewItems, today))
+  const cible = matiereDuMoment(couvertureFor(chapitresCouverts), cartesParMatiere)
+
+  // --- Les leviers du jour --------------------------------------------------
   const habitByCatalog = new Map(activeHabits.map((h) => [h.catalog_id, h.id]))
-  const doneToday = new Set(
-    allLogs
-      .filter((l) => l.completed && l.date === today)
-      .map((l) => l.habit_id),
+  const faitAujourdhui = new Set(
+    logs.filter((l) => l.completed && l.date === today).map((l) => l.habit_id),
   )
   const levers: LeverState[] = LEVERS.map((l) => {
     const habitId = habitByCatalog.get(l.catalogId)
     return {
       catalogId: l.catalogId,
       label: l.label,
-      points: l.points,
       driverKey: l.driverKey,
-      doneToday: habitId !== undefined && doneToday.has(habitId),
+      doneToday: habitId !== undefined && faitAujourdhui.has(habitId),
     }
   })
 
-  // --- Mes habitudes : séries, régularité, rythme de la semaine ---------------
-  // Aucune requête de plus : `activeHabits` et `allLogs` sont déjà chargés
-  // au-dessus pour la capacité. Le panneau ne coûte donc rien à l'écran.
+  // --- Le résumé des habitudes ---------------------------------------------
+  // Aucune requête de plus : `activeHabits` et `logs` sont déjà en main.
   const bilans = bilanHabitudes(
     activeHabits.map((h) => ({
       id: h.id,
+      catalogId: h.catalog_id,
       titre: h.habit_catalog?.title ?? 'Habitude',
       icone: h.habit_catalog?.icon ?? '✅',
       raison: h.habit_catalog?.rationale ?? '',
     })),
-    allLogs,
+    logs,
     today,
   )
 
-  // --- Identité : prénom, classe, niveau de travail, pièces, avatar -----------
+  // --- Identité -------------------------------------------------------------
   const firstName = String(profile?.full_name ?? '').split(' ')[0] || 'Élève'
   const gradeLevel: GradeLevel | null = GRADE_LEVELS.includes(
-    profile?.grade_level as GradeLevel,
+    grade as GradeLevel,
   )
-    ? (profile!.grade_level as GradeLevel)
+    ? (grade as GradeLevel)
     : null
   const gradeLabel = gradeLevel ? (GRADE_LABELS[gradeLevel] ?? gradeLevel) : null
-  const level = workLevel(Number(profile.work_seconds ?? 0) || 0)
-  const coins = Number(profile.coins ?? 0) || 0
+  const level = workLevel(secondesTotal)
   const standings = parseGradeStandings(standingsRow)
-  const avatarConfig = normalizeAvatarConfig(profile.avatar)
-  const heroAvatarUri = avatarDataUri(avatarConfig, 320)
-  const miniAvatarUri = avatarDataUri(avatarConfig, 80)
+  const avatarConfig = normalizeAvatarConfig(profile?.avatar)
 
   return (
     <div>
       <WorldBackdrop className="moi-bg" />
 
-      <TabHeader
-        title="Moi"
-        subtitle="Ta capacité, ta trajectoire et tes leviers."
-      />
-
-      <MoiTopBar level={level} coins={coins} avatarUri={miniAvatarUri} />
-
-      <div className="mt-4">
-        <MoiTabSwitcher
-          progression={
-            <div className="flex flex-col gap-4">
-              <HeroCard
-                name={firstName}
-                gradeLabel={gradeLabel}
-                avatarUri={heroAvatarUri}
-                equipment={avatarConfig.equipment}
-                capacite={capacite}
-                plafond={plafond}
-                drivers={drivers}
-                // « Tu travailles plus que 96 % des 3e ». Sur cet onglet, la
-                // mesure est l'ASSIDUITÉ et pas les trophées : /moi est le
-                // miroir du travail fourni, pas de la compétition.
-                standing={
-                  <StandingLine
-                    standing={standings.assiduite}
-                    grade={standings.grade ?? gradeLevel}
-                    // Sur le violet plein de la hero card, l'encre de marque
-                    // disparaîtrait : ici la phrase se lit en blanc.
-                    className="text-white/90"
-                  />
-                }
-              />
-              <TrajectoryCard
-                trajectory={trajectory}
-                needsMigration={Boolean(termError)}
-              />
-              <WeeklyLeversCard
-                levers={levers}
-                todayIdx={dayIndexOf(today)}
-                today={today}
-              />
-            </div>
-          }
-          habitudes={
-            <HabitsPanel
-              bilans={bilans}
-              jourAujourdhui={new Date(`${today}T00:00:00.000Z`).getUTCDay()}
+      {/* LE RYTHME DE LA PAGE. Les blocs ne sont plus séparés par un écart
+          unique : le panneau et la carte du rythme se touchent presque (même
+          sujet — moi, mon travail), la bande « matière » prend beaucoup d'air
+          avant elle parce qu'elle est le geste de l'écran, et la trajectoire
+          reprend l'écart courant. Un espacement constant entre six blocs, c'est
+          une liste ; un espacement qui varie, c'est une lecture. */}
+      <div className="flex flex-col">
+        <PanneauIdentite
+          titre="Moi"
+          sousTitre="Ton travail, tes chiffres, tes habitudes."
+          name={firstName}
+          gradeLabel={gradeLabel}
+          avatarUri={avatarDataUri(avatarConfig, 240)}
+          equipment={avatarConfig.equipment}
+          level={level}
+          // « Tu travailles plus que 96 % des 3e ». Sur cet onglet la mesure est
+          // l'ASSIDUITÉ et pas les trophées : /moi est le miroir du travail
+          // fourni, pas de la compétition.
+          standing={
+            <StandingLine
+              standing={standings.assiduite}
+              grade={standings.grade ?? gradeLevel}
+              className="text-white/90"
             />
           }
+          serie={serie}
+          record={record}
+          temps={formatDuree(secondesTotal)}
+          tempsTendance={libelleCetteSemaine(semaines)}
+          moyenne={formatMoyenne(moyenne)}
+          moyenneTendance={phraseDelta(moyenne)}
+          saisieMoyenne={
+            <AjouterMoyennes terms={terms} disabled={Boolean(termError)} />
+          }
         />
+
+        {rythmeDisponible ? (
+          <div className="mt-5">
+            <HistoriqueTravail
+              jours={workDays ?? []}
+              today={today}
+              phrase={phraseRythme(semaines)}
+            />
+          </div>
+        ) : null}
+
+        {/* Sans chapitre commencé, on n'invente pas de cible — et on ne pose pas
+            non plus un bloc vide pour le dire : la bande disparaît. */}
+        {cible ? (
+          <div className="mt-9">
+            <MatiereDuMomentCard matiere={cible} />
+          </div>
+        ) : null}
+
+        <div className="mt-9">
+          <HabitudesCard levers={levers} today={today} bilans={bilans} />
+        </div>
+
+        {/* La trajectoire ne s'affiche QUE s'il y a de quoi projeter. Sans
+            notes, elle occupait un tiers de l'écran pour demander une saisie —
+            ce bouton vit maintenant dans le panneau, à la place du chiffre. */}
+        {trajectory.hasData ? (
+          <div className="mt-5">
+            <TrajectoryCard
+              trajectory={trajectory}
+              needsMigration={Boolean(termError)}
+            />
+          </div>
+        ) : null}
       </div>
     </div>
   )

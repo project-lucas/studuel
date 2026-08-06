@@ -17,14 +17,14 @@ import {
   MOCK_COINS,
 } from '@/lib/tresor'
 
-export const metadata = { title: 'Trésor — Studuel' }
+export const metadata = { title: 'Boutique — Studuel' }
 export const dynamic = 'force-dynamic'
 
-// L'onglet Trésor fusionne les deux économies, chacune dans son volet :
-// « Boutique » = les PIÈCES uniquement (coffre du jour en tête, rayons de
-// boosts, compagnons & collection, fonds & skins), « Premium » = les EUROS
-// (abonnements + capsules vidéo du coach). Connecté : données réelles
-// (018_tresor.sql). Visiteur — ou migration pas encore passée — : démo.
+// L'onglet Boutique fusionne les deux économies, chacune dans son volet :
+// « Objets » = les PIÈCES uniquement (coffre du jour en tête, rayons de
+// boosts, compagnons & collection, fonds & skins), « Studuel+ » = les EUROS
+// (capsules vidéo du coach en tête, puis les abonnements). Connecté : données
+// réelles (018_tresor.sql). Visiteur — ou migration pas encore passée — : démo.
 export default async function TresorPage() {
   const supabase = await createClient()
   const user = await getCurrentUser()
@@ -86,8 +86,8 @@ export default async function TresorPage() {
   return (
     <div>
       <TabHeader
-        title="Trésor"
-        subtitle="Ton coffre du jour, tes pièces, ta boutique."
+        title="Boutique"
+        subtitle="Ton coffre du jour, tes pièces, et tout ce qu’elles ouvrent."
       />
       <TresorSpaces
         boutique={
@@ -102,10 +102,12 @@ export default async function TresorPage() {
         }
         premium={
           <div className="flex flex-col gap-8">
-            <PremiumHome currentTier={tier} />
-            {/* Les capsules vidéo du coach (€) vivent ici : la Boutique ne
-                parle plus que pièces. */}
+            {/* Les capsules du coach passent DEVANT les cartes d'abonnement :
+                on montre ce qu'on achète avant de montrer ce que ça coûte.
+                Une page qui s'ouvre sur trois tarifs demande de décider ; une
+                page qui s'ouvre sur le contenu donne d'abord envie. */}
             <CapsulesShelf />
+            <PremiumHome currentTier={tier} />
           </div>
         }
       />

@@ -15,6 +15,7 @@ import { MECHANIC_ICON } from '@/components/jeux/icons'
 import { gameSfx, sfx, buzz } from '@/lib/sounds'
 import { recordChallenge } from '@/app/defi/actions'
 import type { GameFormat } from '@/lib/jeux/formats'
+import { readGameBest, writeGameBest } from '@/lib/jeux/records'
 import type { CountdownPuzzle } from '@/lib/jeux/compte-est-bon'
 import {
   answer as applyAnswer,
@@ -31,18 +32,6 @@ const URGENT_FROM = 5
 // Temps laissé sur un tirage résolu (ou manqué) avant de passer au suivant :
 // assez pour lire la solution affichée quand on est passé à côté.
 const REVEAL_MS = 2400
-
-function bestKey(id: string) {
-  return `studuel-jeu-${id}-best`
-}
-
-function readBest(id: string): number {
-  try {
-    return Number(window.localStorage.getItem(bestKey(id))) || 0
-  } catch {
-    return 0
-  }
-}
 
 /**
  * La table du « compte est bon » — le troisième jeu de Maths, et le seul du
@@ -95,7 +84,7 @@ export default function CountdownTable({
   }, [run])
 
   useEffect(() => {
-    const load = () => setBest(readBest(format.id))
+    const load = () => setBest(readGameBest(format.id))
     load()
   }, [format.id])
 
@@ -113,15 +102,8 @@ export default function CountdownTable({
       if (final.status === 'won') audio.win()
       else audio.lose()
 
-      const prev = readBest(format.id)
-      if (final.score > prev) {
-        setIsRecord(true)
-        try {
-          window.localStorage.setItem(bestKey(format.id), String(final.score))
-        } catch {
-          // stockage indisponible : tant pis pour le record local
-        }
-      }
+      const prev = readGameBest(format.id)
+      if (writeGameBest(format.id, final.score)) setIsRecord(true)
       setBest(Math.max(prev, final.score))
 
       const partie = partieRef.current

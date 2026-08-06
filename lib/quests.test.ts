@@ -14,8 +14,6 @@ import {
   applyEvent,
   questsReward,
   normalizeProgress,
-  questBubbleView,
-  BONUS_STEP_ID,
 } from './quests'
 
 const DAY = '2026-07-25'
@@ -245,65 +243,5 @@ describe('normalizeProgress', () => {
     expect(normalizeProgress(null)).toEqual({})
     expect(normalizeProgress([1, 2])).toEqual({})
     expect(normalizeProgress('nope')).toEqual({})
-  })
-})
-
-describe('questBubbleView — la bulle du jour', () => {
-  // Progression qui termine la 1re quête du jour et laisse les deux autres.
-  const defs = dailyQuests(DAY, USER)
-  const oneDone = { [defs[0].id]: defs[0].goal }
-  const allDoneProgress = Object.fromEntries(defs.map((d) => [d.id, d.goal]))
-
-  it("n'affiche rien sans quêtes (migration absente)", () => {
-    expect(questBubbleView([], [])).toBeNull()
-  })
-
-  it('ajoute UNE case de bonus après les quêtes', () => {
-    const view = questBubbleView(questViews(DAY, USER, {}), [])!
-    expect(view.steps).toHaveLength(QUESTS_PER_DAY + 1)
-    expect(view.steps.at(-1)!.isBonus).toBe(true)
-    expect(view.steps.at(-1)!.id).toBe(BONUS_STEP_ID)
-    expect(view.steps.filter((s) => s.isBonus)).toHaveLength(1)
-  })
-
-  it('ne compte pas le bonus dans les quêtes faites', () => {
-    const view = questBubbleView(questViews(DAY, USER, oneDone), [])!
-    expect(view.done).toBe(1)
-    expect(view.total).toBe(QUESTS_PER_DAY)
-  })
-
-  it('ne coche le bonus que lorsque TOUTES les quêtes sont finies', () => {
-    const partiel = questBubbleView(questViews(DAY, USER, oneDone), [])!
-    expect(partiel.steps.at(-1)!.done).toBe(false)
-
-    const complet = questBubbleView(questViews(DAY, USER, allDoneProgress), [])!
-    expect(complet.steps.at(-1)!.done).toBe(true)
-  })
-
-  it('compte comme réclamable ce qui est fini et pas encore encaissé', () => {
-    const view = questBubbleView(questViews(DAY, USER, oneDone), [])!
-    expect(view.claimable).toBe(1)
-  })
-
-  it('éteint une case déjà encaissée sans la décocher', () => {
-    const view = questBubbleView(questViews(DAY, USER, oneDone), [defs[0].id])!
-    const step = view.steps[0]
-    expect(step.done).toBe(true)
-    expect(step.claimed).toBe(true)
-    expect(view.claimable).toBe(0)
-  })
-
-  it('compte le bonus parmi les réclamables une fois les trois bouclées', () => {
-    const view = questBubbleView(
-      questViews(DAY, USER, allDoneProgress),
-      defs.map((d) => d.id),
-    )!
-    expect(view.claimable).toBe(1)
-    expect(view.steps.at(-1)!.claimed).toBe(false)
-  })
-
-  it('donne le prochain geste en accroche, jamais un état', () => {
-    const view = questBubbleView(questViews(DAY, USER, {}), [])!
-    expect(view.headline).toBe(defs[0].label)
   })
 })

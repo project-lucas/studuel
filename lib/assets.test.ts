@@ -66,6 +66,9 @@ describe('vignettes de matières', () => {
       'fiscalite',
       'entrepreneuriat',
       'figures-historiques',
+      // Arrivées avec le lot v3 (août 2026).
+      'emc',
+      'enseignement-scientifique',
     ]) {
       const v = subjectVignette(slug)
       expect(v, `${slug} : vignette non déclarée`).toBeDefined()
@@ -74,8 +77,11 @@ describe('vignettes de matières', () => {
   })
 
   it('ne déclare pas de vignette pour une matière qui n’en a pas', () => {
-    // Repli médaillon assumé — cf. docs/nano-banana-prompts.md (P3).
-    expect(subjectVignette('emc')).toBeUndefined()
+    // Repli médaillon assumé — cf. docs/nano-banana-prompts.md (P3). EMC est
+    // passée illustrée avec le lot v3 ; ces trois-là attendent toujours leur
+    // dessin.
+    expect(subjectVignette('finances-personnelles')).toBeUndefined()
+    expect(subjectVignette('maths-expertes')).toBeUndefined()
     expect(subjectVignette('slug-inconnu')).toBeUndefined()
   })
 

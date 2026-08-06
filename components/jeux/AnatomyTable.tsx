@@ -15,6 +15,7 @@ import { MECHANIC_ICON } from '@/components/jeux/icons'
 import { gameSfx, sfx, buzz } from '@/lib/sounds'
 import { recordChallenge } from '@/app/defi/actions'
 import type { GameFormat } from '@/lib/jeux/formats'
+import { readGameBest, writeGameBest } from '@/lib/jeux/records'
 import type { Organ, OrganRound } from '@/lib/jeux/anatomie'
 import {
   answer as applyAnswer,
@@ -31,18 +32,6 @@ const URGENT_FROM = 4
 // La correction reste affichée plus longtemps qu'ailleurs : c'est une planche
 // d'anatomie, l'intérêt est de VOIR où était l'organe.
 const REVEAL_MS = 2000
-
-function bestKey(id: string) {
-  return `studuel-jeu-${id}-best`
-}
-
-function readBest(id: string): number {
-  try {
-    return Number(window.localStorage.getItem(bestKey(id))) || 0
-  } catch {
-    return 0
-  }
-}
 
 /**
  * La table d'« Anatomie express » — le seul jeu où l'on répond en désignant un
@@ -94,7 +83,7 @@ export default function AnatomyTable({
   }, [run])
 
   useEffect(() => {
-    const load = () => setBest(readBest(format.id))
+    const load = () => setBest(readGameBest(format.id))
     load()
   }, [format.id])
 
@@ -112,15 +101,8 @@ export default function AnatomyTable({
       if (final.status === 'won') audio.win()
       else audio.lose()
 
-      const prev = readBest(format.id)
-      if (final.score > prev) {
-        setIsRecord(true)
-        try {
-          window.localStorage.setItem(bestKey(format.id), String(final.score))
-        } catch {
-          // stockage indisponible : tant pis pour le record local
-        }
-      }
+      const prev = readGameBest(format.id)
+      if (writeGameBest(format.id, final.score)) setIsRecord(true)
       setBest(Math.max(prev, final.score))
 
       const partie = partieRef.current

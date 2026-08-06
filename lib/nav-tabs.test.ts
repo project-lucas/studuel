@@ -8,11 +8,11 @@ const NAV_DIR = path.join(import.meta.dirname, '..', 'public', 'images', 'nav')
 
 describe('tabIndexForPath', () => {
   it('reconnaît un onglet exact', () => {
-    expect(tabIndexForPath('/defi')).toBe(3)
+    expect(tabIndexForPath('/defi')).toBe(2)
   })
 
   it('reconnaît une sous-page comme appartenant à son onglet', () => {
-    expect(tabIndexForPath('/defi/jeux')).toBe(3)
+    expect(tabIndexForPath('/defi/jeux')).toBe(2)
   })
 
   it('renvoie -1 hors des onglets principaux', () => {
@@ -25,18 +25,39 @@ describe('tabIndexForPath', () => {
 })
 
 describe('NAV_TABS', () => {
-  it('compte 6 onglets (Coffre a fusionné dans Trésor, Marcel s’est ajouté)', () => {
-    expect(NAV_TABS).toHaveLength(6)
+  it('compte 5 onglets (Coffre a fusionné dans Trésor, Marcel n’en est plus un)', () => {
+    expect(NAV_TABS).toHaveLength(5)
     expect(NAV_TABS.some((tab) => tab.path === '/coffre')).toBe(false)
-    expect(NAV_TABS.some((tab) => tab.path === '/marcel')).toBe(true)
   })
 
-  it('pose Marcel juste à gauche du Défi, à droite de Réviser', () => {
-    // Marcel dit quoi faire et pourquoi, Réviser est l'endroit où on le fait :
-    // on passe de l'un à l'autre en permanence, ils doivent se toucher.
+  it('n’a plus d’onglet Marcel — le coach se rejoint depuis Réviser', () => {
+    // Sa tête est un bouton flottant sur /reviser
+    // (components/reviser/MarcelFab). Rendre l'onglet ici ferait DEUX portes
+    // pour la même page, et remettrait la barre à six destinations.
+    expect(NAV_TABS.some((tab) => tab.path === '/marcel')).toBe(false)
+  })
+
+  it('range les onglets comme Clash Royale, du bord vers le pouce', () => {
+    // L'ordre n'est pas un plan de l'app, c'est une ERGONOMIE : la boutique au
+    // bord (on y va avec une intention), Réviser et Amis collés au Défi (les
+    // deux moitiés de la boucle, à un balayage), Moi au coin le moins
+    // accessible. Verrouillé en entier parce que c'est justement le genre de
+    // décision qu'un futur ajout d'onglet défait sans s'en rendre compte.
+    expect(NAV_TABS.map((tab) => tab.path)).toEqual([
+      '/tresor',
+      '/reviser',
+      '/defi',
+      '/amis',
+      '/moi',
+    ])
+  })
+
+  it('donne au Défi ses deux voisins : Réviser à gauche, Amis à droite', () => {
+    // « Je révise » puis « je me mesure » d'un côté, le classement de l'autre :
+    // les deux écrans que l'atterrissage doit rendre gratuits.
     const paths = NAV_TABS.map((tab) => tab.path)
-    expect(paths.indexOf('/marcel')).toBe(paths.indexOf('/reviser') + 1)
-    expect(paths.indexOf('/marcel')).toBe(paths.indexOf('/defi') - 1)
+    expect(paths.indexOf('/defi')).toBe(paths.indexOf('/reviser') + 1)
+    expect(paths.indexOf('/amis')).toBe(paths.indexOf('/defi') + 1)
   })
 
   it('donne une icône à chaque onglet', () => {
@@ -70,7 +91,7 @@ describe('NAV_TABS', () => {
   it('a le cadre de laurier qui entoure l’avatar', () => {
     // Sans lui l'onglet Moi ne casse pas non plus : il montre juste un visage nu
     // et minuscule (58 % de sa case, la taille du trou du cadre) au milieu de
-    // cinq objets peints. Un défaut discret, donc à verrouiller.
+    // quatre objets peints. Un défaut discret, donc à verrouiller.
     expect(existsSync(path.join(NAV_DIR, 'cadre-avatar.webp'))).toBe(true)
   })
 
@@ -86,11 +107,11 @@ describe('NAV_TABS', () => {
 
 describe('neighborTabPath', () => {
   it('balayer vers la gauche avance vers l’onglet de droite', () => {
-    expect(neighborTabPath('/defi', 'left')).toBe('/moi')
+    expect(neighborTabPath('/defi', 'left')).toBe('/amis')
   })
 
   it('balayer vers la droite recule vers l’onglet de gauche', () => {
-    expect(neighborTabPath('/defi', 'right')).toBe('/marcel')
+    expect(neighborTabPath('/defi', 'right')).toBe('/reviser')
   })
 
   it('s’arrête au premier onglet', () => {

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Flame } from 'lucide-react'
+import { ArrowLeft, Flame } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
 import MarcelHub from '@/components/marcel/MarcelHub'
 import VueHeader from '@/components/marcel/VueHeader'
@@ -116,13 +116,35 @@ export default async function MarcelPage({
   return (
     <div className="pb-6">
       <div className="px-4 pt-2">
-        {/* Pas de titre « Marcel » : l'onglet actif le dit déjà, et ces 40 px
-            servent mieux au contenu. La date et la série ne coiffent QUE
-            l'accueil — sur une sous-page, c'est son propre titre qui doit
+        {/* Pas de titre « Marcel » : la tête du coach vient d'être touchée, et
+            ces 40 px servent mieux au contenu. La date et la série ne coiffent
+            QUE l'accueil — sur une sous-page, c'est son propre titre qui doit
             occuper le haut de l'écran. */}
         {vue === 'aujourdhui' ? (
           <div className="mx-0.5 mt-1 mb-2 flex items-center justify-between">
-            <time className="text-[13px] font-extrabold">{dateDuJour()}</time>
+            {/* LA SORTIE. Marcel n'a plus d'onglet : on entre ici par sa tête
+                flottante, en bas à droite de Réviser. Sans cette flèche,
+                l'accueil du coach est un cul-de-sac — la barre du bas n'y
+                montre aucun onglet actif, et il ne reste que le bouton du
+                téléphone. Elle renvoie d'où l'on vient, Réviser.
+
+                Vrai lien plutôt que `history.back()`, comme la flèche des
+                sous-pages (VueHeader) : arrivé par une notification ou un lien
+                partagé, un retour d'historique sortirait de l'app. */}
+            <div className="flex min-w-0 items-center gap-2.5">
+              <Link
+                href="/reviser"
+                aria-label="Revenir à Réviser"
+                className="bg-card text-primary flex size-10 shrink-0 items-center justify-center rounded-full shadow-sm ring-1 ring-black/5 transition active:translate-y-px active:scale-95"
+              >
+                <ArrowLeft
+                  aria-hidden="true"
+                  className="size-5"
+                  strokeWidth={2.6}
+                />
+              </Link>
+              <time className="text-[13px] font-extrabold">{dateDuJour()}</time>
+            </div>
             {streak >= 2 && (
               <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ffeed2] px-2.5 py-1 text-xs font-extrabold text-[#b4550c]">
                 <Flame aria-hidden="true" className="size-3.5" />

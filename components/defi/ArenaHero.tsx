@@ -2,12 +2,11 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import PersonnageAnime from '@/components/PersonnageAnime'
 import { sfx } from '@/lib/sounds'
 import type { Boss } from '@/lib/bosses'
 
 interface ArenaHeroProps {
-  /** Prénom gravé sur le socle — absent pour le visiteur (chip masqué). */
+  /** Prénom affiché sous le podium — absent pour le visiteur (chip masqué). */
   name?: string | null
   /**
    * Le gardien DÉBUSQUÉ (La Traque) : sa silhouette se pose sur l'île, derrière
@@ -18,14 +17,20 @@ interface ArenaHeroProps {
 }
 
 /**
- * La scène du héros de l'arène : le personnage du joueur debout sur un socle
- * de marbre au laurier d'or (le podium du roi de Clash Royale, version
- * colisée), le prénom incrusté dessous. Niveau et XP vivent UNIQUEMENT dans la
- * pastille du HUD (ProfileChip, haut-gauche) — le socle ne les duplique plus.
- * Le personnage ARRIVE en descendant dans le halo (`.arena-hero-figure`) puis
- * vit en idle via <PersonnageAnime> (respiration, étirement, inclinaison —
- * coupé par prefers-reduced-motion). Un tap mène au vestiaire — la boucle
- * collection → fierté → duel.
+ * La scène du héros de l'arène. Elle ne DESSINE plus de personnage : depuis le
+ * 02/08/2026, le décor de /defi est une illustration qui porte déjà sa mascotte
+ * sur son podium (voir lib/arena-background). Ce composant ne garde donc que ce
+ * que l'image ne peut pas faire :
+ *
+ *   · la PORTE du vestiaire, posée sur le podium peint (un tap → /moi/avatar) ;
+ *   · le PRÉNOM du joueur, sous le podium — niveau et XP vivent uniquement dans
+ *     le ProfileChip du HUD, jamais en double ici ;
+ *   · le gardien de La Traque, qui surgit en surimpression quand il est
+ *     débusqué ;
+ *   · les étincelles d'or qui dérivent sur la scène.
+ *
+ * Le personnage dessiné (perso-1) et son socle de marbre SVG vivaient ici : ils
+ * doublaient la mascotte peinte, deux personnages sur deux podiums.
  */
 export default function ArenaHero({ name, boss }: ArenaHeroProps) {
   return (
@@ -59,11 +64,9 @@ export default function ArenaHero({ name, boss }: ArenaHeroProps) {
         style={{ left: '84%', top: '8%', ['--d' as string]: '9s' }}
       />
 
-      {/* Halo doré : le portail rétro-éclaire le personnage. */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute top-[4%] left-1/2 size-48 -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,219,128,0.55)_0%,rgba(255,219,128,0)_65%)]"
-      />
+      {/* Le halo doré qui rétro-éclairait le personnage a été retiré avec lui :
+          la nouvelle illustration peint déjà sa propre lumière derrière la
+          mascotte, et deux halos superposés ne faisaient que laver la scène. */}
 
       {/* LA TRAQUE — le gardien débusqué se pose sur l'île, derrière le
           personnage : plus grand que lui, décalé, la lumière du sol virant à
@@ -96,81 +99,23 @@ export default function ArenaHero({ name, boss }: ArenaHeroProps) {
         </>
       ) : null}
 
+      {/* LA ZONE DU PODIUM. Le personnage du joueur (perso-1) et son socle de
+          marbre étaient DESSINÉS ici, par-dessus le décor. La nouvelle
+          illustration de l'arène porte sa propre mascotte sur son propre
+          podium : les garder faisait deux personnages sur deux podiums.
+
+          Ne reste donc que ce que l'image ne peut pas faire — la PORTE. Le
+          podium peint mène au vestiaire, comme le personnage avant lui : c'est
+          la boucle collection → fierté → duel, et la perdre aurait coûté la
+          seule entrée visible du vestiaire depuis l'arène. La zone est
+          invisible mais réelle : elle garde sa taille, son libellé et son
+          anneau de focus au clavier. */}
       <Link
         href="/moi/avatar"
         onClick={() => sfx.tap()}
         aria-label="Ton personnage — ouvrir le vestiaire"
-        className="olympe-press relative z-[2] -mb-9 block w-[138px] cursor-pointer drop-shadow-[0_10px_14px_rgba(46,27,84,0.45)] focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
-      >
-        <span className="arena-hero-figure block">
-          <PersonnageAnime src="/images/personnage%20user/perso-1.webp" alt="" />
-        </span>
-      </Link>
-
-      {/* Le socle de marbre au laurier d'or — dessiné par l'UI, aucun asset. */}
-      <div className="relative z-[1] w-[190px]" aria-hidden="true">
-        <svg viewBox="0 0 180 74" fill="none" className="block w-full">
-          {/* flanc du socle */}
-          <path
-            d="M6 30v16c0 14.4 37.6 26 84 26s84-11.6 84-26V30"
-            fill="url(#arenaSocleSide)"
-          />
-          {/* liseré or du flanc */}
-          <path
-            d="M8 42c10 11 43.6 19 82 19s72-8 82-19"
-            stroke="#d8a93c"
-            strokeWidth="2.5"
-            opacity=".9"
-          />
-          {/* plateau */}
-          <ellipse cx="90" cy="30" rx="84" ry="25" fill="url(#arenaSocleTop)" />
-          <ellipse
-            cx="90"
-            cy="30"
-            rx="84"
-            ry="25"
-            stroke="#d8a93c"
-            strokeWidth="2"
-          />
-          {/* anneau de laurier gravé */}
-          <ellipse
-            cx="90"
-            cy="30"
-            rx="56"
-            ry="16"
-            stroke="#c9962a"
-            strokeWidth="3"
-            strokeDasharray="7 5"
-            opacity=".75"
-          />
-          {/* ombre du personnage */}
-          <ellipse cx="90" cy="27" rx="36" ry="8.5" fill="rgba(74,37,151,.24)" />
-          <defs>
-            <linearGradient
-              id="arenaSocleTop"
-              x1="0"
-              y1="6"
-              x2="0"
-              y2="55"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#fdf8ea" />
-              <stop offset="1" stopColor="#e3d7b8" />
-            </linearGradient>
-            <linearGradient
-              id="arenaSocleSide"
-              x1="0"
-              y1="30"
-              x2="0"
-              y2="72"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#cbb98d" />
-              <stop offset="1" stopColor="#96825a" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
+        className="olympe-press relative z-[2] block h-[150px] w-[150px] cursor-pointer rounded-full focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+      />
 
       {/* L'identité vit SUR le socle : le prénom seul (niveau + XP dans le
           ProfileChip du HUD, jamais en double ici). */}

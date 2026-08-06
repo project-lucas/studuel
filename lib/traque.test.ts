@@ -9,7 +9,6 @@ import {
   chasseOfDay,
   countdownLabel,
   crossedPalier,
-  dayBossCards,
   emptyGauge,
   featuredCard,
   feedChapters,
@@ -37,7 +36,6 @@ import {
   windowEndMs,
   NOX_GEMS,
   TRAQUE_APRES_DEFAITE,
-  TRAQUE_BANDEAU_MAX,
   TRAQUE_CHAPTERS_KEPT,
   TRAQUE_FENETRE_MS,
   TRAQUE_GEMS,
@@ -57,7 +55,6 @@ const DIMANCHE = '2026-08-02'
 
 const DELTA = bossById('delta')!
 const GRAMMATORK = bossById('grammatork')!
-const IMPERATOR = bossById('imperator')!
 
 describe('barème', () => {
   it('additionne les points de chaque geste', () => {
@@ -338,49 +335,6 @@ describe('tri et mise en avant', () => {
     )
     expect(featuredCard([tranquille, urgent])?.boss.id).toBe('delta')
     expect(featuredCard([make(DELTA, 40)])).toBeNull()
-  })
-})
-
-describe('bandeau des gardiens du jour (arène)', () => {
-  const T0 = Date.parse('2026-07-27T18:00:00.000Z')
-  // Lundi : Delta (Maths) et Imperator (Latin) sont en chasse, pas Grammatork.
-  const make = (
-    boss = DELTA,
-    points = 0,
-    debusqueAt: string | null = null,
-  ) =>
-    traqueCard(
-      { ...emptyGauge(boss.id), points, debusqueAt },
-      boss,
-      'Maths',
-      LUNDI,
-      T0,
-    )
-
-  it('montre les gardiens EN CHASSE avant les autres, même moins avancés', () => {
-    const cards = dayBossCards([make(GRAMMATORK, 90), make(DELTA, 20)])
-    expect(cards.map((c) => c.boss.id)).toEqual(['delta', 'grammatork'])
-  })
-
-  it('ne dépasse jamais la place disponible sur l’écran d’arène', () => {
-    const cards = dayBossCards([
-      make(DELTA, 20),
-      make(IMPERATOR, 30),
-      make(GRAMMATORK, 90),
-    ])
-    expect(cards).toHaveLength(TRAQUE_BANDEAU_MAX)
-    expect(cards.map((c) => c.boss.id)).toEqual(['imperator', 'delta'])
-  })
-
-  it('écarte le gardien déjà annoncé en grand par le message éclair', () => {
-    const sorti = make(DELTA, TRAQUE_SEUIL, '2026-07-27T17:30:00.000Z')
-    const cards = dayBossCards([sorti, make(GRAMMATORK, 40)], 2, 'delta')
-    expect(cards.map((c) => c.boss.id)).toEqual(['grammatork'])
-  })
-
-  it('ne rend rien quand il n’y a pas de place ou pas de jauge', () => {
-    expect(dayBossCards([make(DELTA, 20)], 0)).toEqual([])
-    expect(dayBossCards([])).toEqual([])
   })
 })
 

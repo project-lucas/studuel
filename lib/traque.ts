@@ -568,36 +568,6 @@ export function readyCount(cards: readonly TraqueCard[]): number {
   return cards.filter((c) => c.status === 'debusque').length
 }
 
-/**
- * Combien de jauges tiennent dans le bandeau de l'arène. Deux : l'écran de jeu
- * n'a pas de scroll, et c'est exactement le nombre de gardiens en chasse un
- * jour de semaine. Au-delà, la barre d'action mangerait la scène.
- */
-export const TRAQUE_BANDEAU_MAX = 2
-
-/**
- * Les gardiens « du jour » à montrer À DÉCOUVERT sur l'arène, sans ouvrir la
- * feuille : ceux qui portent le bonus du jour d'abord (c'est le rituel), les
- * jauges les plus avancées ensuite. Un boss déjà sorti passe devant tout —
- * mais l'appelant l'exclut en général, le message éclair l'annonce déjà en
- * grand juste au-dessus.
- */
-export function dayBossCards(
-  cards: readonly TraqueCard[],
-  max: number = TRAQUE_BANDEAU_MAX,
-  excludeBossId?: string,
-): TraqueCard[] {
-  if (max <= 0) return []
-  const pool = sortCards(
-    cards.filter((c) => c.boss.id !== excludeBossId),
-  )
-  const priority = (c: TraqueCard) =>
-    c.status === 'debusque' ? 0 : c.enChasse ? 1 : 2
-  return [...pool]
-    .sort((a, b) => priority(a) - priority(b))
-    .slice(0, Math.floor(max))
-}
-
 /** La carte à mettre en avant dans le message éclair et sur l'île. */
 export function featuredCard(cards: readonly TraqueCard[]): TraqueCard | null {
   const ready = cards.filter((c) => c.status === 'debusque')

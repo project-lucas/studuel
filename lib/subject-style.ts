@@ -297,6 +297,8 @@ const VIGNETTE_SLUGS: string[] = [
   'anglais',
   'arts-plastiques',
   'economie',
+  'emc',
+  'enseignement-scientifique',
   'entrepreneuriat',
   'espagnol',
   'figures-historiques',
@@ -315,8 +317,9 @@ const VIGNETTE_SLUGS: string[] = [
   'sport',
   'svt',
   'technologie',
-  // Manque encore : finances-personnelles (pas d'image dans le lot v2 —
-  // sources dans assets-sources/vignettes-v2/, hors dépôt).
+  // Manque encore : finances-personnelles, maths-expertes,
+  // maths-complementaires (aucun dessin dans les lots v2 ni v3 — sources dans
+  // assets-sources/, hors dépôt). Elles gardent le médaillon d'icône.
 ]
 
 export function subjectVignette(slug: string): string | undefined {

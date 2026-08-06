@@ -1,0 +1,68 @@
+'use client'
+
+import Image from 'next/image'
+import Link from 'next/link'
+import { sfx } from '@/lib/sounds'
+import marcelTete from '@/public/images/nav/marcel.webp'
+
+/**
+ * LA PORTE DE MARCEL — sa tête, posée en bas à droite de Réviser.
+ *
+ * Marcel avait un onglet, le sixième, entre Réviser et Défi. Six destinations à
+ * trancher en bas d'écran, c'est une de trop : la barre se lisait comme un menu
+ * plutôt que comme cinq lieux. Le coach se rejoint donc par son VISAGE, à
+ * l'endroit exact où l'élève travaille — cohérent avec la doctrine « Marcel
+ * oriente, Réviser exécute » : on part de Réviser pour lui demander quoi faire,
+ * et son point du jour renvoie dans Réviser pour le faire.
+ *
+ * C'est un vrai lien (`<Link>`), pas un bouton qui pousse une route : appui long,
+ * ouverture dans un onglet et préchargement de Next fonctionnent comme partout.
+ *
+ * Le dessin est le MÊME fichier que l'ancienne icône d'onglet
+ * (`public/images/nav/marcel.webp`) : l'élève qui connaissait le visage dans la
+ * barre le retrouve ici, et il n'y a pas deux têtes de Marcel à tenir à jour.
+ * Il arrive avec un cinquième de marges et d'étincelles autour du personnage —
+ * c'est ce qu'il faut à une icône d'onglet, c'est trop pour un médaillon : posé
+ * tel quel, le visage n'occupait qu'un tiers du disque. `.coach-fab-tete`
+ * l'agrandit et le recentre sur le regard, le disque rogne le reste.
+ *
+ * Le matériau (cerne violet, socle, enfoncement, halo de focus) vit dans
+ * `globals.css` sous `.coach-fab` : cerne et socle écrivent la même propriété
+ * CSS, les empiler en utilitaires faisait disparaître l'un ou l'autre.
+ *
+ * 64 px : bien au-delà de la cible tactile de 44 px, et c'est voulu qu'il soit
+ * plus gros qu'un « + » ordinaire — c'est un personnage qu'on appelle, pas une
+ * commande.
+ *
+ * `bottom-24` sur mobile = au-dessus de la barre d'onglets (56 px + la marge
+ * sûre du bas), la même hauteur que le « + » du carnet — les deux ne coexistent
+ * jamais, chacun vivant dans son volet (le volet inactif est `hidden`, donc
+ * retiré du rendu, `fixed` compris).
+ */
+export default function MarcelFab() {
+  return (
+    <Link
+      href="/marcel"
+      onClick={() => sfx.tap()}
+      aria-label="Demander à Marcel, ton coach"
+      title="Marcel, ton coach"
+      className="coach-fab bg-card fixed right-4 bottom-24 z-40 flex size-16 items-center justify-center overflow-hidden rounded-full md:bottom-8"
+    >
+      {/* Enveloppe : elle porte le frétillement du survol. S'il vivait sur
+          l'image, son `transform` écraserait l'agrandissement de la tête, qui
+          reviendrait brutalement à sa taille d'icône le temps de l'animation. */}
+      <span className="wiggle-on-hover block size-full">
+        <Image
+          src={marcelTete}
+          alt=""
+          aria-hidden="true"
+          // 192 = trois fois la case servie : le dessin est agrandi de 40 % à
+          // l'affichage, il faut les pixels pour suivre sur un écran dense.
+          width={192}
+          height={192}
+          className="coach-fab-tete size-full object-contain"
+        />
+      </span>
+    </Link>
+  )
+}

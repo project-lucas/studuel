@@ -292,6 +292,119 @@ Le trophée existe déjà (`public/images/defi/trophy-cup.webp`) — ne pas le r
 | `coffres/or` | rich violet wood with thick polished golden bands, ornate golden corners and a golden star lock, warm glow around it |
 | `coffres/legendaire` | dark violet wood with elaborate golden filigree, a large glowing purple gem set in the lid, golden sparkles and soft rainbow light escaping from the seams |
 
+### P0-ter · La rangée de combat — 3 plaques de bouton (2026-08-02)
+
+**Le constat de Lucas** : depuis que l'arène est une illustration peinte, les
+trois boutons du bas (Classé · DUEL 90 s · Modes) détonnent. Et c'est mérité :
+ce sont des **dégradés CSS** (`.olympe-gold`, `.arena-flank` dans globals.css)
+— du plat, aux bords nets, posé sur du peint. Clash Royale ne fait jamais ça :
+ses boutons sont des OBJETS dessinés, avec matière, biseau et reflet.
+
+On commande donc trois **plaques**, dans le style exact du décor.
+
+#### La règle qui commande tout : la plaque, pas le bouton
+
+L'image ne porte **ni texte ni chiffre** — le libellé reste rendu par l'app, et
+il le doit : « DUEL 90 s » change de sous-ligne (raison du chapitre, ami en
+ligne), porte une barre de progression et une échéance, et doit rester lisible
+par un lecteur d'écran. Un mot gravé dans l'image serait aussi un mot qu'on ne
+peut plus traduire ni corriger — sans compter que ces modèles écrivent mal (cf.
+le piège « jamais de CAPITALES » plus bas).
+
+L'ICÔNE, elle, est peinte dans la plaque : c'est elle qui fait tout l'effet
+« objet de jeu », et elle ne change jamais. Le libellé se pose dessous, dans une
+bande volontairement lisse réservée pour lui.
+
+#### Géométrie mesurée (à respecter, sinon rien ne s'aligne)
+
+| Plaque | Taille à l'écran | Format Higgsfield | Export |
+|---|---|---|---|
+| Classé (flanc gauche) | 72 × 72 px, fixe | **1:1** | 216×216 webp |
+| Modes (flanc droit) | 72 × 72 px, fixe | **1:1** | 216×216 webp |
+| DUEL 90 s (centre) | hauteur 64 px, **largeur VARIABLE** (~180 à 260 px) | **3:2** | 3 morceaux, cf. ci-dessous |
+
+⚠️ **Le centre s'étire.** C'est le piège de ce lot : le bouton du milieu prend
+toute la place que lui laissent ses deux flancs, donc sa largeur change d'un
+téléphone à l'autre. Une image peinte étirée à 140 % se déforme visiblement —
+les gemmes deviennent des olives. La plaque doit donc être **découpable en
+trois** (9-slice) : les ornements confinés aux DEUX EXTRÉMITÉS, et tout le
+milieu en dégradé lisse, sans rivet ni gravure. Le milieu s'étire sans que
+personne ne le voie ; les caps ne s'étirent jamais.
+
+#### A · « Classé » — plaque carrée sombre, trophée peint
+
+Joindre `public/images/arene/arena-mascotte.webp` en référence.
+
+> Match the exact art style of the reference image. Highly detailed painterly
+> 3D-cartoon mobile game UI element for a premium fantasy quiz-battle game:
+> ONE single square button plate with strongly rounded corners, seen perfectly
+> head-on, flat orthographic view. Material: polished deep violet stone with a
+> carved bevelled edge, a thin warm golden rim running around the outline, a
+> soft glossy highlight along the top edge and a deeper violet at the bottom,
+> thick clean dark ink outline all around the plate. Embossed in the UPPER
+> HALF of the plate, a small golden laurel-wreath victory trophy, glossy and
+> warmly lit, carved in relief. The LOWER THIRD of the plate is a smooth clean
+> uninterrupted surface with no ornament, no carving and no detail. Tiny golden
+> laurel sprigs in the two upper corners only. The plate is isolated and
+> centered on a plain flat white background with generous empty margin all
+> around. No text, no letters, no numbers, no words, no logo, no watermark, no
+> UI mockup, no screen, no phone frame, no drop shadow on the background.
+
+#### B · « Modes » — même plaque, borne d'arcade peinte
+
+Même prompt que A, en remplaçant la phrase de l'icône par :
+
+> Embossed in the UPPER HALF of the plate, a small glossy game controller with
+> a golden d-pad and two violet gem buttons, carved in relief.
+
+**Générer B en donnant A en référence** (« same plate, same material, same
+lighting, only the embossed icon changes ») : c'est ce qui garantit que les deux
+flancs soient jumeaux. Deux générations indépendantes donnent deux cousins, et
+côte à côte l'écart se voit immédiatement.
+
+#### C · « DUEL 90 s » — plaque d'or, découpable en trois
+
+> Match the exact art style of the reference image. Highly detailed painterly
+> 3D-cartoon mobile game UI element for a premium fantasy quiz-battle game: ONE
+> single wide horizontal button plate with strongly rounded corners, seen
+> perfectly head-on, flat orthographic view, filling the frame horizontally.
+> Material: polished warm gold, bright buttery highlight along the top edge,
+> deep amber and bronze at the bottom edge, a carved bevelled rim, thick clean
+> dark ink outline all around the plate, a subtle warm glow spilling just
+> around the plate. At the LEFT END and at the RIGHT END, symmetrically, a
+> small round violet gem set in a golden laurel mount. The ENTIRE MIDDLE of the
+> plate is one smooth uninterrupted polished gold gradient — completely free of
+> ornament, rivets, engraving, gems and detail of any kind. The plate is
+> isolated and centered on a plain flat white background with generous empty
+> margin all around. No text, no letters, no numbers, no words, no logo, no
+> watermark, no UI mockup, no screen, no phone frame.
+
+#### Pièges de ce lot
+
+- **Ne jamais écrire « button » seul.** Le mot fait dessiner une *maquette
+  d'interface* — un écran de téléphone entier avec le bouton dedans. Dire
+  « game UI element: ONE single plate », et fermer par « no UI mockup, no
+  screen, no phone frame ».
+- **Ne pas demander d'ombre portée.** Elle arrive collée au fond blanc et
+  survit au détourage sous forme de halo gris. Le relief vient du biseau et de
+  l'ombre dure du CSS (`0 4px 0`), qui existe déjà.
+- **Le milieu du centre reste NU.** À la moindre gravure au milieu, la plaque
+  n'est plus découpable et tout le lot est à refaire.
+- Les trois plaques se jugent **ensemble et à la taille réelle** (72 px !), pas
+  en grand sur l'écran du générateur : un biseau magnifique à 1024 px devient
+  une bouillie grise à 72.
+
+#### Après réception
+
+1. Détourer (fond blanc peint — même piège que les vignettes, le détourage vit
+   dans `scripts/lib/fond-peint.mjs`).
+2. `public/images/defi/boutons/{classe,modes,duel}.webp`.
+3. Câblage : les deux flancs remplacent `.arena-flank` par un
+   `background-image` ; le centre passe en `border-image` avec un `slice`
+   horizontal (caps figés, milieu étiré) — c'est le 9-slice CSS, aucune
+   librairie. Les libellés, l'or du texte et l'ombre pressée (`.olympe-press`)
+   ne bougent pas.
+
 ### P0 · Arène v2 — le fond du Défi (l'écran le plus vu du jeu)
 
 Les 6 variantes actuelles (`public/images/arene/arena-*.webp`) sont cohérentes

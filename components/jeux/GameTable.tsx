@@ -18,6 +18,7 @@ import { AUTO_ADVANCE_MS } from '@/lib/juice'
 import { recordChallenge } from '@/app/defi/actions'
 import type { ModeQuestion } from '@/lib/defi-modes'
 import type { GameFormat } from '@/lib/jeux/formats'
+import { readGameBest, writeGameBest } from '@/lib/jeux/records'
 import {
   answer as applyAnswer,
   globalSeconds,
@@ -36,17 +37,6 @@ const TICK_MS = 100
 // Sous ce seuil (secondes), le chrono d'une question se met à biper.
 const URGENT_FROM = 3
 
-function bestKey(id: string) {
-  return `studuel-jeu-${id}-best`
-}
-
-function readBest(id: string): number {
-  try {
-    return Number(window.localStorage.getItem(bestKey(id))) || 0
-  } catch {
-    return 0
-  }
-}
 
 /**
  * La TABLE DE JEU d'un salon : elle joue le format que `lib/jeux/formats` décrit
@@ -112,7 +102,7 @@ export default function GameTable({
   // serveur, et l'initialiser dans `useState` provoquerait une divergence
   // d'hydratation. Même pattern que les records du Blitz et du Chrono.
   useEffect(() => {
-    const load = () => setBest(readBest(format.id))
+    const load = () => setBest(readGameBest(format.id))
     load()
   }, [format.id])
 
@@ -150,15 +140,8 @@ export default function GameTable({
       if (won) audio.win()
       else audio.lose()
 
-      const prev = readBest(format.id)
-      if (final.score > prev) {
-        setIsRecord(true)
-        try {
-          window.localStorage.setItem(bestKey(format.id), String(final.score))
-        } catch {
-          // stockage indisponible : tant pis pour le record local
-        }
-      }
+      const prev = readGameBest(format.id)
+      if (writeGameBest(format.id, final.score)) setIsRecord(true)
       setBest(Math.max(prev, final.score))
 
       // L'XP est recalculée côté serveur depuis score/total. Pas de mode passé :

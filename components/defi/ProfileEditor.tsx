@@ -157,7 +157,7 @@ export default function ProfileEditor({
           })}
         </ul>
         <p className="text-[11px] leading-snug text-white/50">
-          Débloque de nouvelles bannières par la progression ou au Trésor.
+          Débloque de nouvelles bannières par la progression ou en Boutique.
         </p>
       </div>
     </div>

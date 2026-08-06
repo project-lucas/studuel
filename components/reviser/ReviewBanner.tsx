@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ChevronRight, Flame } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 
-// Bloc « À revoir » en tête de la vue Chapitres : visible SEULEMENT si des
+// Bloc « À revoir » en tête de la vue Programme : visible SEULEMENT si des
 // notions faibles sont détectées (file SRS de la matière), masqué sinon.
 // Le CTA lance la session ciblée existante (/reviser/revoir).
 export default function ReviewBanner({ count }: { count: number }) {

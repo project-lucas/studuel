@@ -268,7 +268,12 @@ export default function Duel90Mode({
     const issue = result?.outcome ?? duel90Outcome(score, rival.finalScore)
     const won = issue === 'win'
     return (
-      <div className="mx-auto flex max-w-xl flex-col items-center gap-5 pt-6 text-center">
+      /* L'écran de fin est un PANNEAU OPAQUE, pas une pile de textes posée sur
+         le décor. Avant, seules les deux cartes de score avaient un fond : le
+         titre « Duel gagné ! », la ligne de précision et « Retour à l'arène »
+         flottaient à même l'académie flottante — illisibles sur une variante
+         claire. Tout ce qui se lit vit maintenant sur le crème. */
+      <div className="mx-auto flex max-w-xl flex-col items-center gap-5 rounded-[1.75rem] border bg-card p-5 text-center shadow-[0_18px_40px_-18px_rgba(20,10,45,0.55)]">
         <div className="animate-in zoom-in text-6xl duration-500">
           {won ? '🏆' : issue === 'draw' ? '🤝' : '💪'}
         </div>
@@ -383,17 +388,20 @@ export default function Duel90Mode({
         </div>
       </div>
 
+      {/* Les deux lignes qui vivent ENTRE les cartes, donc à même le voile de
+          la salle de duel : elles s'écrivent en blanc, pas en gris de texte
+          courant — sur le décor, `text-muted-foreground` disparaissait. */}
       {chapterTitle ? (
-        <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
+        <p className="flex items-center justify-center gap-1.5 text-xs text-white/75">
           <Target className="size-3.5" />
-          <span className="font-semibold text-foreground">{chapterTitle}</span>
+          <span className="font-semibold text-white">{chapterTitle}</span>
           {reason ? <span>· {reason}</span> : null}
         </p>
       ) : null}
 
       {/* Série en cours : le multiplicateur doit se voir monter. */}
       {combo >= 3 ? (
-        <p className="animate-in zoom-in flex items-center justify-center gap-1.5 text-sm font-bold text-highlight-foreground">
+        <p className="animate-in zoom-in flex items-center justify-center gap-1.5 text-sm font-bold text-white">
           <Flame className="size-4 text-highlight" /> Série de {combo} · points ×
           {multiplier}
         </p>
@@ -444,10 +452,15 @@ export default function Duel90Mode({
         </div>
       )}
 
+      {/* Abandonner : un vrai bouton, pas un lien souligné en gris clair. Il
+          est volontairement discret (verre sombre, petit) — c'est la sortie,
+          pas une action qu'on encourage — mais il doit rester LISIBLE et
+          atteignable au pouce (44 px de haut) sur n'importe quelle variante du
+          décor. */}
       <button
         type="button"
         onClick={onExit}
-        className="mx-auto text-xs text-muted-foreground underline underline-offset-4"
+        className="mx-auto flex min-h-11 items-center rounded-full bg-black/35 px-5 text-xs font-bold text-white/85 ring-1 ring-white/20 backdrop-blur-sm transition hover:bg-black/45 hover:text-white active:translate-y-px"
       >
         Abandonner
       </button>
@@ -496,7 +509,10 @@ function ScoreCard({
     <div
       className={cn(
         'flex-1 rounded-2xl border-2 p-4',
-        highlight ? 'border-primary bg-primary/10' : 'border-border bg-card',
+        // Le perdant passe sur `bg-muted` : depuis que l'écran de fin est
+        // lui-même une carte crème, un `bg-card` sur `bg-card` ne dessinait
+        // plus aucune carte.
+        highlight ? 'border-primary bg-primary/10' : 'border-border bg-muted',
       )}
     >
       <p className="truncate text-xs text-muted-foreground">{label}</p>

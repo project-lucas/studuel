@@ -1,4 +1,8 @@
+import { redirect } from 'next/navigation'
+import { PREMIUM_TIERS } from '@/lib/gems'
+import type { Tier } from '@/lib/subscription'
 import ModesSheet from '@/components/defi/ModesSheet'
+import PremiumPill from '@/components/defi/PremiumPill'
 import MatchClasseCta from '@/components/defi/MatchClasseCta'
 import ArenaHud, {
   type OrbItem,
@@ -39,12 +43,10 @@ import BossSheet from '@/components/defi/BossSheet'
 import BossFlash from '@/components/defi/BossFlash'
 import {
   countdownLabel,
-  dayBossCards,
   featuredCard,
   readyCount,
   type TraqueCard,
 } from '@/lib/traque'
-import TraqueStrip from '@/components/defi/TraqueStrip'
 import {
   getSubjectsCached,
   getSubjectLevelsCached,
@@ -86,7 +88,6 @@ import { doneCount, type QuestView } from '@/lib/quests'
 import { resolveCurrentChapter } from '@/lib/chapitre-courant-server'
 import { reasonLabel } from '@/lib/chapitre-courant'
 import Duel90Cta from '@/components/defi/Duel90Cta'
-import QuestBubble from '@/components/defi/QuestBubble'
 import DailyQuests from '@/components/defi/DailyQuests'
 import { duelGoal } from '@/lib/duel-cta'
 import ClanWeekCard from '@/components/defi/ClanWeekCard'
@@ -111,6 +112,12 @@ type DefiProfileRow = {
   trophies: number | null
   college_school_id: string | null
   lycee_school_id: string | null
+  // Depuis que l'arène est la page d'accueil de l'app (app/page.tsx), c'est ici
+  // qu'atterrissent les comptes PARENT : il faut les router vers leur espace.
+  profile_type: string | null
+  // Palier d'abonnement : décide de la pastille Studuel+ du HUD (on ne propose
+  // pas de s'abonner à qui l'est déjà).
+  subscription_tier: string | null
 }
 
 // Icône d'une entrée du menu burger. UNE seule famille (Lucide), UNE seule
@@ -228,6 +235,9 @@ export default async function DefiPage() {
   // Une demande en attente est un dû, comme un coffre — elle doit se voir
   // depuis l'arène, pas seulement en ouvrant l'onglet Amis.
   let friendRequests = 0
+  // Abonné Studuel+ ? Décide de la pastille d'appel du HUD. `false` par défaut :
+  // un visiteur non connecté est justement la cible du message.
+  let isPremium = false
 
   if (user) {
     // Semaine écoulée : borne du coffre de clan, connue sans aucune requête.
@@ -266,6 +276,8 @@ export default async function DefiPage() {
         'trophies',
         'college_school_id',
         'lycee_school_id',
+        'profile_type',
+        'subscription_tier',
       ]),
       supabase.rpc('national_ranking'),
       supabase.rpc('friends_trophies'),
@@ -299,6 +311,15 @@ export default async function DefiPage() {
       supabase.rpc('friends_overview'),
     ])
 
+    // L'arène est désormais la page d'accueil de l'app : un compte PARENT y
+    // atterrit au lancement. Il n'a ni classe, ni trophées, ni quêtes — son
+    // espace est ailleurs. (Même garde que `/reviser`, qui portait ce rôle
+    // quand c'était lui la porte d'entrée.)
+    if (profile.profile_type === 'parent') redirect('/parents')
+
+    isPremium = PREMIUM_TIERS.includes(
+      (profile.subscription_tier ?? 'free') as Tier,
+    )
     trophies = Math.max(0, Number(profile.trophies) || 0)
     friendRequests = mapFriendsOverview(
       Array.isArray(overviewRes.data) ? overviewRes.data : [],
@@ -721,6 +742,8 @@ export default async function DefiPage() {
           leftTiles={leftTiles}
           cornerTiles={cornerTiles}
           menuItems={menuItems}
+          // L'appel Studuel+ n'existe que pour qui n'est pas (encore) abonné.
+          premiumSlot={isPremium ? null : <PremiumPill key="premium" />}
           profileSlot={profileData ? <ProfileChip data={profileData} /> : null}
           // key : élément serveur rendu dans la colonne du HUD client — sans
           // clé, React (SSR) le signale comme enfant de liste anonyme.
@@ -740,25 +763,10 @@ export default async function DefiPage() {
               devant tout le reste. Un tap mène droit au combat. */}
           {traqueFeatured ? <BossFlash card={traqueFeatured} /> : null}
 
-          {/* LES JAUGES DU JOUR, À DÉCOUVERT — la progression de la traque ne
-              vit plus seulement dans la feuille Boss : les deux gardiens du
-              jour montrent leur barre sur l'arène, et un tap mène là où on la
-              remplit (Réviser la matière). Le gardien déjà annoncé en grand
-              par le message éclair en est exclu : il n'y a pas deux fois la
-              même information à l'écran. */}
-          <TraqueStrip
-            cards={dayBossCards(traqueBoard, 2, traqueFeatured?.boss.id)}
-          />
-
-          {/* LA BULLE DU JOUR — la checklist des quêtes à découvert, SOUDÉE au
-              bouton par sa flèche (la bulle « Événement » de Clash Royale).
-              Elle s'efface quand un gardien vient d'être débusqué : le message
-              éclair est alors la seule urgence de l'écran, et deux appels
-              simultanés n'en font aucun. La tuile Quêtes du rail gauche reste
-              la porte dans ce cas. */}
-          {traqueFeatured ? null : (
-            <QuestBubble views={questViewList} claimedIds={questClaimedIds} />
-          )}
+          {/* Ni jauges de gardiens, ni bulle des quêtes entre la scène et le
+              bouton : l'arène n'a QU'UN appel à l'action. La traque se lit dans
+              la tuile Boss du rail gauche, les quêtes dans la tuile Quêtes —
+              chacune a déjà sa porte, et sa pastille pour dire ce qui attend. */}
 
           {/* LA RANGÉE DE COMBAT, façon home Clash Royale : le DUEL 90 s en or
               au centre — la boucle centrale du jeu, une action, 90 secondes,

@@ -9,12 +9,16 @@ import {
   GAME_MODES,
   MODE_XP_BONUS,
   FEATURED_XP_MULTIPLIER,
+  BLITZ_BEST_STORAGE_KEY,
+  CHRONO_BEST_STORAGE_KEY,
+  SURVIE_BEST_STORAGE_KEY,
   featuredModeId,
   modeImage,
   modeScene,
 } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
 import { formatTeaser, gameFormat } from '@/lib/jeux/formats'
+import { gameBestKey } from '@/lib/jeux/records'
 
 // La robe d'un billet : matière (violet), mode fun (bleu Arène), ou mode du
 // jour (or). Sert au composant à choisir le dégradé — pas de hex en dur ici.
@@ -43,6 +47,13 @@ export type ModeTicket = {
   chip?: string
   /** Ruban en coin (« ×2 XP » du mode du jour, « Bientôt »). */
   badge?: string
+  /**
+   * Clé du RECORD personnel de ce défi dans le stockage local, quand il en
+   * garde un (tous les jeux de salon, et les trois modes de l'Arène qui se
+   * jouent au score). Absente pour ce qui n'a pas de record à battre — un
+   * duel fantôme ou un boss ne se mesurent pas à un compteur.
+   */
+  recordKey?: string
 }
 
 // Un cran de la roulette : une matière, son emoji, et le nombre de jeux qu'elle
@@ -62,6 +73,15 @@ export const ROULETTE_SUBJECTS: RouletteSubject[] = SALONS.map((s) => ({
 
 // Emoji de chaque mode de l'Arène (la salle de jeu utilise des icônes Lucide,
 // mais le billet parle le langage visuel du catalogue : un emoji fort).
+// Les trois modes de l'Arène qui se jouent au SCORE gardent un record local
+// (même clé que leur écran de jeu). Le duel fantôme et le boss n'en ont pas :
+// on ne bat pas un compteur, on bat quelqu'un.
+const ARENA_RECORD_KEY: Record<string, string> = {
+  blitz: BLITZ_BEST_STORAGE_KEY,
+  chrono: CHRONO_BEST_STORAGE_KEY,
+  survie: SURVIE_BEST_STORAGE_KEY,
+}
+
 const ARENA_EMOJI: Record<string, string> = {
   duel: '👻',
   blitz: '⏱️',
@@ -115,8 +135,37 @@ export function subjectGameTickets(subject: string): ModeTicket[] {
       href: g.implemented ? `/defi/jeux/${g.id}` : null,
       chip: format ? formatTeaser(format) : g.implemented ? 'Jouer' : undefined,
       badge: g.implemented ? undefined : 'Bientôt',
+      // Un jeu pas encore construit n'a évidemment pas de record.
+      recordKey: g.implemented ? gameBestKey(g.id) : undefined,
     }
   })
+}
+
+// Les matières du programme portent le même NOM que les matières du catalogue
+// de salons (« Français », « Histoire-Géo »…), mais rien ne l'impose en base :
+// on retombe donc sur le SLUG, dérivable du nom de façon stable.
+function slugify(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+/**
+ * La matière du catalogue de salons qui correspond à une matière du programme
+ * (page `/reviser/[matiere]`), ou `null` quand elle n'a pas de jeux — une
+ * matière sans salon ne doit rien promettre.
+ */
+export function salonSubjectFor(subject: {
+  slug: string
+  name: string
+}): string | null {
+  const byName = SALONS.find((s) => s.subject === subject.name)
+  if (byName) return byName.subject
+  const slug = slugify(subject.slug || subject.name)
+  return SALONS.find((s) => slugify(s.subject) === slug)?.subject ?? null
 }
 
 // Le billet « Boss » d'une matière a été SUPPRIMÉ d'ici (chantier La Traque,
@@ -149,6 +198,7 @@ export function funModeTickets(dayKey: string): ModeTicket[] {
       href: `/defi/jouer?mode=${m.id}`,
       chip: `+${bonus} XP`,
       badge: isFeatured ? '×2 XP' : undefined,
+      recordKey: ARENA_RECORD_KEY[m.id],
     }
   })
 }

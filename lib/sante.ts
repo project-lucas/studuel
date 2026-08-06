@@ -357,6 +357,114 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'L’élève déclare le PÉRIMÈTRE (ce que le prof a traité), jamais son NIVEAU : la maîtrise reste mesurée par les quiz et les leçons. Sans cette séparation, l’écran deviendrait un formulaire d’auto-évaluation, et le pourcentage ne vaudrait plus rien.',
   },
+  {
+    id: '225',
+    fichier: '225_contenu_philosophie_tle.sql',
+    feature:
+      'Le programme de philosophie Tle : les 17 notions du bac, la liberté en trois chapitres (19 chapitres, 152 questions)',
+    siAbsente:
+      'La philosophie garde ses 5 chapitres d’origine, taillés dans un découpage maison (« La conscience et l’inconscient », « La vérité et la raison ») : un élève qui révise « le devoir », « la technique » ou « le temps » — des sujets tombables au bac — ne trouve rien. Rien ne casse : le programme est seulement incomplet, et faussement rassurant.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Le libre arbitre' },
+    decision:
+      'La migration SUPPRIME les 5 anciens chapitres au lieu de les compléter : deux d’entre eux portaient exactement le titre d’une notion nouvelle, et `chapters` est UNIQUE(subject_id, level, title) — les garder faisait échouer la migration à mi-parcours. Le contenu perdu est intégralement recouvert par les 19 notions.',
+  },
+  {
+    id: '226',
+    fichier: '226_contenu_anglais_grammaire_tle.sql',
+    feature:
+      'Les 24 fiches de grammaire anglaise en Tle (groupe nominal, groupe verbal, temps, phrase) — 192 questions',
+    siAbsente:
+      'L’anglais de Terminale n’a que ses 4 axes thématiques : l’app parle des thèmes du bac sans jamais donner l’outil de langue. Un élève bloqué sur le present perfect, les modaux ou le discours indirect ne trouve rien. Rien ne casse — la matière a du contenu, il est seulement incomplet.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Les auxiliaires modaux' },
+    decision:
+      'Les 4 axes thématiques déjà en base sont CONSERVÉS (ce sont les axes du programme de LV, ils restent au bac) : la grammaire vient derrière, à partir de la position 5. Rien n’est supprimé, contrairement à la 225.',
+  },
+  {
+    id: '227',
+    fichier: '227_contenu_histoire_tle.sql',
+    feature:
+      'Histoire Tle, chapitres 7 à 11 : le monde depuis 1989, la France de 1974 à 1988, l’Europe et la Ve République (13 chapitres, 104 questions)',
+    siAbsente:
+      'L’histoire-géo de Terminale s’arrête à la Guerre froide : tout le programme d’après 1989 est absent. Rien ne casse, mais un élève de Tle révise un programme amputé de sa seconde moitié.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: '1989, une année de bouleversement géopolitique et économique' },
+    decision:
+      'PARTIELLE ET ASSUMÉE : les chapitres 1 à 6 du programme n’ont pas encore été transmis. Le bloc démarre donc à la position 26, laissant les positions 6 à 25 libres pour eux — un INSERT gardé par ON CONFLICT DO NOTHING ne met jamais à jour la position d’une ligne existante, donc la place se réserve d’avance ou plus du tout.',
+  },
+  {
+    id: '228',
+    fichier: '228_contenu_enseignement_scientifique_tle.sql',
+    feature:
+      'Le programme d’enseignement scientifique Tle : les 16 fiches des 6 chapitres du BO (climat, énergies, vivant) — 128 questions',
+    siAbsente:
+      'L’enseignement scientifique de Terminale garde ses 4 fiches de synthèse, qui résument tout le programme en quatre cours : un élève qui révise le transport de l’électricité, les modèles démographiques, les cycles de Milankovitch ou la lignée humaine ne trouve rien. Rien ne casse — la matière a du contenu, il est seulement quatre fois trop gros.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Le transport de l’électricité' },
+    decision:
+      'La migration SUPPRIME les 4 anciens chapitres, comme la 225 : ce sont des composites que les 16 fiches recouvrent entièrement, et les garder afficherait deux fois le même cours sur la page matière. Le ménage vise les LEÇONS génériques (« L’essentiel du cours » / « Exercices types »), jamais les titres de chapitre, et il est borné au niveau Tle — la Première, bâtie sur le même modèle, n’est pas touchée.',
+  },
+  {
+    id: '229',
+    fichier: '229_contenu_geographie_tle.sql',
+    feature:
+      'Le programme de géographie Tle : mers et océans, dynamiques territoriales, l’UE et la France (20 chapitres, 160 questions)',
+    siAbsente:
+      'L’histoire-géo de Terminale n’a que DEUX fiches de géographie, deux synthèses (« Mers et océans dans la mondialisation », « L’Union européenne dans la mondialisation »). Un élève qui révise les détroits, la hiérarchie des centres de décision mondiaux, les territoires transfrontaliers ou les recompositions du territoire français ne trouve rien. Rien ne casse : la moitié géographique du programme est simplement absente.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Les lignes de force du territoire français' },
+    decision:
+      'Aucune suppression, contrairement à la 228. Les deux fiches de synthèse font pourtant doublon avec les chapitres 1 et 3 — mais elles ont été posées par une migration ancienne, idempotente et REJOUABLE, qui les recréerait au prochain passage : un ménage y serait silencieusement annulé. Le bloc démarre à la position 39, derrière les 13 chapitres d’histoire de la 227.',
+  },
+  {
+    id: '230',
+    fichier: '230_contenu_emc_tle.sql',
+    feature:
+      'Le programme d’EMC Tle « La démocratie » : fondements, élections, laïcité, transparence, engagement (12 chapitres, 96 questions)',
+    siAbsente:
+      'L’EMC de Terminale n’a que les 3 chapitres du socle lycée, écrits pour la 2de, la 1re et la Tle à la fois. Le programme propre à la Terminale — histoire de la démocratie, modes de scrutin, laïcité, exemplarité des élus, nouvelles formes de participation — est absent. Rien ne casse : la matière a du contenu, mais pas celui de l’année du bac.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Les élections, outils de la démocratie' },
+    decision:
+      'Les 3 chapitres du socle lycée RESTENT : ils valent aussi pour la 2de et la 1re, et une suppression côté Tle serait de toute façon annulée au prochain rejeu de la 216, qui est idempotente. Le bloc démarre donc à la position 4.',
+  },
+  {
+    id: '231',
+    fichier: '231_contenu_espagnol_tle.sql',
+    feature:
+      'Espagnol Tle : les 34 fiches des 4 chapitres du programme (la phrase, le groupe nominal, le groupe verbal, les temps) — 272 questions',
+    siAbsente:
+      'L’espagnol de Terminale garde ses 3 fiches maison, les mêmes qu’en 2de et en 1re. Un élève qui révise la négation, l’enclise des pronoms, cuyo, l’apocope, le subjonctif ou la concordance ne trouve rien. Rien ne casse : la matière a du contenu, mais pas celui de l’année du bac.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'L’apocope' },
+    decision:
+      'TERMINALE SEULE : le programme transmis est celui de l’année du bac. La migration SUPPRIME 2 des 3 anciens chapitres (« Les temps du passé », « Ser, estar et les tournures essentielles »), que les fiches neuves recouvrent entièrement — ménage visant les LEÇONS (« Pretérito, imperfecto, perfecto », « Deux verbes “être”, et tout change »), jamais les titres de chapitre. Le filtre `level = Tle` protège à la fois le collège (qui a son propre programme) ET la 2de et la 1re, qui gardent leurs 3 fiches puisque rien ne vient les remplacer à ces niveaux. La 3e fiche, « Le monde hispanique aujourd’hui », est CONSERVÉE partout : elle porte les axes culturels du bac, qu’aucune fiche de grammaire ne remplace. Un UPDATE la renvoie en position 90 côté Tle, parce qu’un INSERT ne renumérote jamais une ligne déjà en base.',
+  },
+  {
+    id: '232',
+    fichier: '232_contenu_hlp_tle.sql',
+    feature:
+      'HLP Tle : les 18 fiches des 6 chapitres du programme (éducation, sensibilité, moi, création, violence, limites de l’humain) — 144 questions',
+    siAbsente:
+      'La spécialité HLP de terminale garde ses 2 fiches de semestre — les titres mêmes du programme servis comme cours. Un élève qui révise l’identité et le genre, la pop culture, Foucault, la conscience écologique ou la bioéthique ne trouve rien. Rien ne casse : tout le programme tient en deux fiches.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'L’histoire de la psychiatrie (Foucault)' },
+    decision:
+      'La migration SUPPRIME les 2 chapitres de semestre (« La recherche de soi », « L’Humanité en question »), que les 18 fiches recouvrent entièrement. Le ménage vise les LEÇONS, jamais les titres de chapitre, et il est borné au niveau Tle — la Première garde ses 3 chapitres. La fiche « Méthode de l’épreuve » est CONSERVÉE (l’interprétation littéraire et l’essai ne relèvent d’aucune entrée du programme) et renvoyée en position 90 par un UPDATE.',
+  },
+  {
+    id: '233',
+    fichier: '233_contenu_svt_tle.sql',
+    feature:
+      'SVT Tle (spécialité) : les 22 fiches des 7 chapitres du programme (diversité génétique, temps des roches, la plante, climats, système nerveux, contraction musculaire, stress) — 176 questions',
+    siAbsente:
+      'La SVT de Terminale garde ses 5 chapitres composites, un par chapitre du BO. DEUX chapitres du programme n’ont aucune entrée du tout : « Comportements, mouvement et système nerveux » et « Produire le mouvement ». Un élève qui révise le réflexe myotatique, le sarcomère, la régulation de la glycémie, la chronologie absolue ou les paramètres de Milankovitch ne trouve rien.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Les réflexes' },
+    decision:
+      'La migration SUPPRIME les 5 chapitres composites, que les 22 fiches recouvrent entièrement — ménage visant les LEÇONS génériques posées par 008/142 (« L’essentiel du cours », « Exercices types »), jamais les titres de chapitre, et borné au niveau Tle : les six autres niveaux de SVT portent les mêmes leçons et ne bougent pas. ⚠️ CE QUI EST PERDU : les 5 leçons « Exercices types » de la 142 (2 exercices type bac corrigés par chapitre) partent avec leurs chapitres. Elles étaient adossées au découpage composite ; les réécrire fiche par fiche est un chantier à part. ⚠️ La 142 est REJOUABLE : la recoller un jour recréerait le contenu des 5 anciens chapitres — mais pas les chapitres eux-mêmes, qui viennent de la 008 (elle aussi rejouable). Si les deux repassent, les 5 composites reviennent en doublon des 22 fiches.',
+  },
+  {
+    id: '234',
+    fichier: '234_chapitre_axe.sql',
+    feature:
+      'L’axe du programme sur chaque chapitre : la page matière range ses chapitres en sections repliables (les 8 axes d’anglais Tle, les 7 thèmes de SVT) au lieu d’une liste à plat',
+    siAbsente:
+      'Les chapitres restent affichés à plat, comme aujourd’hui : 28 lignes d’affilée en anglais de Terminale. Rien ne casse (le select de l’axe est isolé et toléré, et `groupChaptersByTheme` retombe sur un groupe unique), mais le regroupement ne s’allumera pour aucune matière tant que la colonne n’existe pas — puis matière par matière, à mesure que les axes seront remplis.',
+    sonde: { type: 'colonne', table: 'chapters', colonne: 'theme' },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

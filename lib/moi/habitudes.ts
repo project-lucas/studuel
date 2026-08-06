@@ -26,6 +26,12 @@ export type HabitudeLog = {
 
 export type HabitudeSuivie = {
   id: string
+  /**
+   * L'entrée du catalogue dont elle vient. Elle porte l'identité DURABLE de
+   * l'habitude, là où `id` change d'un élève à l'autre : c'est elle qui décide
+   * de la famille, donc de la couleur du tracé (lib/moi/familles).
+   */
+  catalogId: string
   titre: string
   icone: string
   /** Pourquoi cette habitude existe (texte du catalogue). */
@@ -43,11 +49,26 @@ export type BilanHabitude = HabitudeSuivie & {
   aujourdhui: boolean
   /** Les 7 derniers jours, du plus ancien au plus récent. */
   semaine: boolean[]
+  /**
+   * Les 14 derniers jours, du plus ancien au plus récent.
+   *
+   * C'est ce que trace la petite vague à droite de chaque habitude. Sept jours
+   * ne suffisent pas — une série qui vient de repartir et une série qui tient
+   * depuis un mois y dessinent le même trait. Vingt-huit, en revanche, ne
+   * PASSENT PAS : dans les 110 pixels d'une ligne de liste, chaque jour ne pèse
+   * plus que quatre pixels, l'arrondi est raboté à néant et le tracé sort en
+   * peigne (vérifié à l'écran). Quatorze est la profondeur qui tient dans la
+   * largeur — deux semaines, ce qui est aussi la fenêtre des drivers.
+   */
+  historique: boolean[]
   /** Part des validations obtenues automatiquement (révision, trajet). */
   autoPart: number
 }
 
 export const FENETRE_JOURS = 28
+
+/** Profondeur du petit tracé d'une habitude, en jours (cf. `historique`). */
+export const JOURS_VAGUE = 14
 
 // --- Dates : mêmes conventions que lib/streak (clés UTC 'YYYY-MM-DD') --------
 function cleDe(d: Date): string {
@@ -120,6 +141,7 @@ export function bilanHabitudes(
   today: string,
 ): BilanHabitude[] {
   const fenetre = new Set(derniersJours(today, FENETRE_JOURS))
+  const vagueJours = derniersJours(today, JOURS_VAGUE)
   const semaineJours = derniersJours(today, 7)
 
   return habitudes.map((h) => {
@@ -138,6 +160,7 @@ export function bilanHabitudes(
           : Math.round((new Set(dansFenetre.map((l) => l.date)).size / fenetre.size) * 100),
       aujourdhui: jours.has(today),
       semaine: semaineJours.map((j) => jours.has(j)),
+      historique: vagueJours.map((j) => jours.has(j)),
       autoPart:
         dansFenetre.length === 0 ? 0 : Math.round((auto / dansFenetre.length) * 100),
     }

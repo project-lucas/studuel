@@ -1,137 +1,43 @@
 'use client'
 
-import {
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-  type CSSProperties,
-} from 'react'
-import Image from 'next/image'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Gamepad2, ChevronLeft, ChevronRight, Swords, X } from 'lucide-react'
+import ModeTicketCard from '@/components/defi/ModeTicket'
 import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
+import { useRecords } from '@/lib/jeux/use-records'
 import {
   ROULETTE_SUBJECTS,
   subjectGameTickets,
   funModeTickets,
   type ModeTicket,
-  type ModeTone,
 } from '@/lib/defi/modes-catalog'
 
-// Robe de chaque billet selon sa famille — même vocabulaire que l'arène :
-// violet = jeu de matière, bleu = mode fun de l'Arène, or = mode du jour.
-// Dégradé VERTICAL façon Clash Royale : plus clair en haut, plus foncé en bas.
-const TICKET_CLASS: Record<ModeTone, string> = {
-  matiere:
-    'bg-gradient-to-b from-[oklch(0.62_0.19_300)] to-[oklch(0.41_0.2_302)]',
-  fun: 'bg-gradient-to-b from-[oklch(0.66_0.14_255)] to-[oklch(0.44_0.16_262)]',
-  featured:
-    'bg-gradient-to-b from-[oklch(0.72_0.14_80)] to-[oklch(0.49_0.13_70)]',
-}
-
-// Un billet de mode, façon carte « Modes de jeu » de Clash Royale, pleine
-// largeur (essai : le talon détachable a été retiré — les encoches demi-lune
-// du masque .defi-ticket sont neutralisées via --tk-notch, les coins crantés
-// restent). Le billet porte le TITRE cartoon (blanc, contour sombre épais) et
-// soit la SCÈNE plein-fond (bannière 16:9, sujet dans le tiers droit,
-// désormais visible en entier), soit la GRANDE illustration détourée ancrée
-// en bas à droite sur robe unie. Le ruban (« ×2 XP », « Bientôt ») se pose
-// discrètement en coin haut-gauche.
-function Ticket({ ticket }: { ticket: ModeTicket }) {
-  const disabled = !ticket.href
-
-  const inner = (
-    <span
-      className={`defi-ticket relative flex h-[136px] overflow-hidden rounded-[18px] ${TICKET_CLASS[ticket.tone]}`}
-      style={{ '--tk-notch': '0px' } as CSSProperties}
-    >
-      {/* Corps pleine largeur : titre à gauche, scène plein-fond OU grand art
-          ancré en bas à droite. */}
-      <span className="relative min-w-0 flex-1">
-        {ticket.scene ? (
-          /* La SCÈNE plein-fond : elle couvre tout le corps (au-dessus du
-             motif losange z-0, sous le biseau z-1 posé après elle dans
-             l'arbre), avec un voile dégradé à gauche pour asseoir le titre. */
-          <span aria-hidden="true" className="absolute inset-0 z-[1]">
-            <Image
-              src={ticket.scene}
-              alt=""
-              fill
-              sizes="(max-width: 448px) 92vw, 400px"
-              className="object-cover"
-            />
-            <span className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/15 to-transparent" />
-          </span>
-        ) : (
-          /* La GRANDE illustration : absolue dans la moitié droite du corps,
-             ancrée en bas (le bas du perso est coupé net par la carte). */
-          <span
-            aria-hidden="true"
-            className="absolute right-1 bottom-0 z-[5] flex h-[110%] items-end"
-          >
-            {ticket.image ? (
-              <Image
-                src={ticket.image}
-                alt=""
-                width={200}
-                height={200}
-                className="h-full w-auto object-contain object-bottom drop-shadow-[0_6px_12px_rgba(0,0,0,0.45)]"
-              />
-            ) : (
-              <span className="text-[4.75rem] leading-none drop-shadow-[0_6px_12px_rgba(0,0,0,0.45)]">
-                {ticket.emoji}
-              </span>
-            )}
-          </span>
-        )}
-
-        {/* Le titre cartoon : très gros, blanc, contour sombre épais, aligné
-            à gauche sur 1-2 lignes — et sur une scène, le jeton XP en pastille
-            dorée juste dessous. */}
-        <span className="relative z-10 flex h-full max-w-[62%] flex-col items-start justify-center gap-1.5 pl-4">
-          <span className="defi-ticket-title font-heading line-clamp-2 text-[1.45rem] leading-[1.08] font-extrabold">
-            {ticket.name}
-          </span>
-          {ticket.scene && ticket.chip ? (
-            <span className="font-heading rounded-full bg-highlight px-2.5 py-0.5 text-[11px] font-extrabold text-foreground shadow-[0_2px_6px_rgba(0,0,0,0.4)]">
-              {ticket.chip}
-            </span>
-          ) : null}
-        </span>
-      </span>
-
-      {ticket.badge ? (
-        <span
-          className={`absolute top-2 left-0 z-20 rounded-r-md px-2 py-0.5 text-[9px] font-extrabold tracking-wide uppercase shadow-[0_2px_4px_rgba(0,0,0,0.35)] ${
-            ticket.badge === 'Bientôt'
-              ? 'bg-black/45 text-white/85'
-              : 'bg-destructive text-white'
-          }`}
-        >
-          {ticket.badge}
-        </span>
-      ) : null}
-    </span>
+/**
+ * La LISTE de billets d'une section, avec le record personnel de chacun. Les
+ * records se lisent en une fois (localStorage, après montage) : chaque billet
+ * annonce ainsi le chiffre à battre avant même qu'on tape dessus.
+ */
+function TicketList({ tickets }: { tickets: ModeTicket[] }) {
+  const records = useRecords(
+    tickets.flatMap((t) => (t.recordKey ? [t.recordKey] : [])),
   )
-
-  // L'anneau de focus vit sur l'élément parent NON masqué (le mask du billet
-  // rognerait le ring). Effet « press » : la carte se tasse au tap (scale).
-  if (ticket.href) {
-    return (
-      <Link
-        href={ticket.href}
-        onClick={() => sfx.tap()}
-        className="block rounded-[18px] transition-transform duration-100 ease-out focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none active:scale-[0.97]"
-      >
-        {inner}
-      </Link>
-    )
-  }
-  return <div className={disabled ? 'opacity-55' : undefined}>{inner}</div>
+  return (
+    <>
+      {tickets.map((t) => (
+        <ModeTicketCard
+          key={t.id}
+          ticket={t}
+          record={
+            records && t.recordKey ? (records[t.recordKey] ?? 0) : null
+          }
+        />
+      ))}
+    </>
+  )
 }
 
 /**
@@ -430,9 +336,7 @@ export default function ModesSheet({
                         </span>
                         Jeux · {subject}
                       </h3>
-                      {gameTickets.map((t) => (
-                        <Ticket key={t.id} ticket={t} />
-                      ))}
+                      <TicketList tickets={gameTickets} />
                       {/* Le billet « Boss de la matière » a QUITTÉ cette
                           feuille (La Traque, lib/traque) : un gardien ne se
                           choisit plus dans un menu, il se débusque en
@@ -445,9 +349,7 @@ export default function ModesSheet({
                       <h3 className="font-heading mt-3 border-t border-white/10 pt-4 text-center text-sm font-extrabold tracking-wide text-white/80 uppercase">
                         Modes fun de l’Arène
                       </h3>
-                      {funTickets.map((t) => (
-                        <Ticket key={t.id} ticket={t} />
-                      ))}
+                      <TicketList tickets={funTickets} />
                     </div>
                   </div>
                 </motion.div>

@@ -1,10 +1,18 @@
 /**
  * Fabrique LES VIGNETTES DES CARTES MATIÈRES de l'accueil Réviser, toutes sur
  * la même trame :
- *   assets-sources/vignettes-v2/*.png   (originaux, LOCAUX — hors dépôt)
+ *   assets-sources/<lot>/*.png   (originaux, LOCAUX — hors dépôt)
  *     → public/images/matieres/vignettes/<slug>.webp   (320x320)
  *
  *   node scripts/vignettes-matieres.mjs
+ *
+ * PLUSIEURS LOTS, UNE SEULE PLANCHE. Les dessins n'arrivent pas tous en même
+ * temps : le lot v3 en refait dix-sept, sept restent au dessin v2. On les passe
+ * malgré tout dans le MÊME générateur, en une seule fournée — la trame calibre
+ * sur la moyenne du lot traité, donc régénérer les dix-sept seuls leur donnerait
+ * une taille perçue étrangère à celle de leurs sept voisines. SRC_DIRS est
+ * ordonné du plus récent au plus ancien : le premier dossier qui contient le
+ * fichier gagne.
  *
  * POURQUOI CE SCRIPT EXISTE
  *
@@ -19,163 +27,96 @@
  *
  * DEUX PARTIS PRIS PROPRES AUX CARTES
  *
- * - ALIGNEMENT PAR LE BAS. La vignette est ancrée dans le coin bas-droit de la
- *   carte. Centrer verticalement ferait flotter les dessins courts au-dessus du
- *   bord ; on les pose donc tous sur une même ligne de sol, à MARGE_BAS du bord
- *   de la toile. Horizontalement en revanche, on centre : le dessinateur a
- *   composé autour d'un axe, le décaler à droite déséquilibrerait les objets qui
- *   dépassent du dossier.
+ * - CENTRAGE SUR LES DEUX AXES. La carte matière est passée en RANGÉE (vignette
+ *   à gauche, nom à droite) : le dessin vit désormais dans une boîte carrée
+ *   centrée, plus dans le coin bas-droit de la carte. Il était jusqu'ici posé
+ *   sur une ligne de sol commune, à 2,5 % du bord bas — ce qui était juste tant
+ *   que le bord de la toile était le bord de la carte, et qui ferait maintenant
+ *   pendre les dessins courts dans le bas de leur case.
  *
- * - TOILE CARRÉE DE 320. Servie à 100 px (constante ART_PX de SubjectsHome),
- *   c'est trois fois la taille affichée : de la marge pour les écrans denses et
+ * - TOILE CARRÉE DE 320. Servie à 52 px (constante ICON_PX de SubjectsHome),
+ *   c'est six fois la taille affichée : de la marge pour les écrans denses et
  *   pour agrandir la vignette plus tard sans repasser par le générateur.
  */
 
 import sharp from 'sharp'
 import { access, mkdir } from 'node:fs/promises'
 import { planDuLot } from './lib/trame.mjs'
+import { detourerFondPeint } from './lib/fond-peint.mjs'
 
-const SRC_DIR = 'assets-sources/vignettes-v2'
+const SRC_DIRS = [
+  'assets-sources/vignette v3/Copie de Copie de .webp (8)',
+  'assets-sources/vignettes-v2',
+]
 const DEST_DIR = 'public/images/matieres/vignettes'
 
 /** Côté de la toile finale. */
 const SIZE = 320
 
 /**
- * Distance entre le bas du dessin et le bas de la toile, en fraction du canevas.
- * Assez pour que l'ombre portée du CSS ne soit pas coupée par le bord de la
- * carte, assez peu pour que le dessin repose vraiment dans l'angle.
- */
-const MARGE_BAS = 0.025
-
-/**
- * Slug de la matière → nom du fichier original. La correspondance est explicite
- * parce que les originaux arrivent nommés à la main : accents, espaces, sigles
- * en capitales et deux orthographes fautives (« entreprenariat », « art
+ * Slug de la matière → noms possibles du fichier original, du lot le plus récent
+ * au plus ancien. La correspondance est explicite parce que les originaux
+ * arrivent nommés à la main : accents, espaces, sigles en capitales, abréviation
+ * (« math ») et deux orthographes fautives (« entreprenariat », « art
  * plastique »). Dériver le nom du slug marcherait pour quinze d'entre eux et
- * échouerait en silence sur les sept autres.
+ * échouerait en silence sur les autres.
+ *
+ * Deux dessins du lot v3 n'apparaissent PAS ici : `italien` et `marketing`. Ces
+ * matières n'existent pas dans `subjects` — les illustrer ne créerait aucune
+ * carte, seulement un fichier que rien ne sert.
  */
 const ORIGINAUX = {
-  allemand: 'allemand',
-  anglais: 'anglais',
-  'arts-plastiques': 'art plastique',
-  economie: 'économie',
-  entrepreneuriat: 'entreprenariat',
-  espagnol: 'espagnol',
-  'figures-historiques': 'figures historiques',
-  fiscalite: 'fiscalité',
-  francais: 'français',
-  grec: 'grec',
-  hggsp: 'hggsp',
-  'histoire-geo': 'histoire géo',
-  latin: 'latin',
-  maths: 'mathématiques',
-  musique: 'musique',
-  nsi: 'NSI',
-  philosophie: 'philosophie',
-  'physique-chimie': 'physique chimie',
-  ses: 'SES',
-  sport: 'sport',
-  svt: 'svt',
-  technologie: 'technologie',
+  allemand: ['allemand'],
+  anglais: ['anglais'],
+  'arts-plastiques': ['art plastique'],
+  economie: ['ECONOMIE', 'économie'],
+  emc: ['EMC'],
+  'enseignement-scientifique': ['enseignement scientifique'],
+  entrepreneuriat: ['entreprenariat'],
+  espagnol: ['espagnol'],
+  'figures-historiques': ['figures historiques'],
+  fiscalite: ['fiscalité'],
+  francais: ['français'],
+  grec: ['GREC', 'grec'],
+  hggsp: ['HGGSP', 'hggsp'],
+  'histoire-geo': ['histoire géo'],
+  latin: ['LATIN', 'latin'],
+  maths: ['math', 'mathématiques'],
+  musique: ['musique'],
+  nsi: ['NSI'],
+  philosophie: ['philosophie'],
+  'physique-chimie': ['physique-chimie', 'physique chimie'],
+  ses: ['ses', 'SES'],
+  sport: ['sport'],
+  svt: ['svt'],
+  technologie: ['technologie'],
 }
 
 /**
- * Tolérance du détourage, par canal, autour de la couleur du coin. Large parce
- * que le fond peint n'est pas parfaitement uni (bruit du générateur) ; sans
- * danger parce que le remplissage s'arrête sur le trait marine qui cerne tous
- * les dessins de ce lot.
+ * Le fichier original d'une matière : premier lot (le plus récent) qui porte
+ * l'un de ses noms possibles. Renvoie aussi le dossier, pour dire à l'écran quel
+ * lot a fourni quel dessin — sans quoi une régénération après livraison
+ * partielle ne se relit plus.
  */
-const TOLERANCE_FOND = 40
-
-/**
- * DÉTOURE UN FOND PEINT. Le générateur d'images rend parfois le fond en
- * COULEUR OPAQUE au lieu de le laisser transparent — `grec.png` arrive avec un
- * aplat crème (245,239,225) sur toute sa surface. Tel quel, la vignette porte
- * un rectangle clair bien visible sur la carte, là où ses voisines flottent sur
- * le fond crème. C'est le même piège que les icônes du HUD (damier peint) : il
- * ne se voit pas dans la visionneuse de fichiers, seulement une fois posé dans
- * l'app.
- *
- * On remplit depuis LES BORDS, de proche en proche, tant que le pixel reste
- * proche de la couleur du coin. Partir des bords plutôt que de filtrer la
- * couleur globalement est ce qui protège le dessin : le grec contient des blancs
- * et des gris très clairs (la colonne, le parchemin) qu'un filtre global
- * effacerait. Le remplissage, lui, s'arrête sur le cerne sombre du dessin.
- *
- * Rien à faire quand l'image a déjà son alpha : on renvoie le fichier tel quel.
- */
-async function detourerFondPeint(chemin) {
-  const { data, info } = await sharp(chemin)
-    .ensureAlpha()
-    .raw()
-    .toBuffer({ resolveWithObject: true })
-  const { width, height, channels } = info
-
-  if (data[3] < 128) return sharp(chemin).png().toBuffer()
-
-  const [fr, fg, fb] = [data[0], data[1], data[2]]
-  const estFond = (p) => {
-    const i = p * channels
-    return (
-      data[i + 3] > 128 &&
-      Math.abs(data[i] - fr) <= TOLERANCE_FOND &&
-      Math.abs(data[i + 1] - fg) <= TOLERANCE_FOND &&
-      Math.abs(data[i + 2] - fb) <= TOLERANCE_FOND
-    )
-  }
-
-  const vus = new Uint8Array(width * height)
-  const pile = []
-  const amorcer = (p) => {
-    if (!vus[p] && estFond(p)) {
-      vus[p] = 1
-      pile.push(p)
-    }
-  }
-  for (let x = 0; x < width; x++) {
-    amorcer(x)
-    amorcer((height - 1) * width + x)
-  }
-  for (let y = 0; y < height; y++) {
-    amorcer(y * width)
-    amorcer(y * width + width - 1)
-  }
-
-  let efface = 0
-  while (pile.length > 0) {
-    const p = pile.pop()
-    data[p * channels + 3] = 0
-    efface++
-    const x = p % width
-    const y = (p - x) / width
-    if (x + 1 < width) amorcer(p + 1)
-    if (x > 0) amorcer(p - 1)
-    if (y + 1 < height) amorcer(p + width)
-    if (y > 0) amorcer(p - width)
-  }
-
-  console.log(
-    `  détourage ${chemin} : fond peint (${fr},${fg},${fb}) — ` +
-      `${Math.round((100 * efface) / (width * height))} % de la toile effacé`,
-  )
-  return sharp(data, { raw: { width, height, channels } }).png().toBuffer()
-}
-
-async function source(nom) {
-  for (const ext of ['png', 'webp']) {
-    const chemin = `${SRC_DIR}/${nom}.${ext}`
-    try {
-      await access(chemin)
-      return chemin
-    } catch {
-      /* extension suivante */
+async function source(noms) {
+  for (const dir of SRC_DIRS) {
+    for (const nom of noms) {
+      for (const ext of ['png', 'webp']) {
+        const chemin = `${dir}/${nom}.${ext}`
+        try {
+          await access(chemin)
+          return { chemin, dir }
+        } catch {
+          /* candidat suivant */
+        }
+      }
     }
   }
   throw new Error(
-    `Original introuvable : ${SRC_DIR}/${nom}.{png,webp}. ` +
-      `Les originaux sont LOCAUX (assets-sources/ est dans .gitignore) — ` +
-      `après un clone, il faut les redéposer avant de relancer ce script.`,
+    `Original introuvable : ${noms.join(' | ')}.{png,webp} dans ` +
+      `${SRC_DIRS.join(' ni ')}. Les originaux sont LOCAUX (assets-sources/ ` +
+      `est dans .gitignore) — après un clone, il faut les redéposer avant de ` +
+      `relancer ce script.`,
   )
 }
 
@@ -183,8 +124,11 @@ await mkdir(DEST_DIR, { recursive: true })
 
 // Les dessins détourés, avant toute mise à l'échelle.
 const dessins = {}
-for (const [slug, fichier] of Object.entries(ORIGINAUX)) {
-  dessins[slug] = await sharp(await detourerFondPeint(await source(fichier)))
+const lotDe = {}
+for (const [slug, noms] of Object.entries(ORIGINAUX)) {
+  const { chemin, dir } = await source(noms)
+  lotDe[slug] = SRC_DIRS.indexOf(dir) === 0 ? 'v3' : 'v2'
+  dessins[slug] = await sharp(await detourerFondPeint(chemin))
     .trim({ threshold: 2 })
     .png()
     .toBuffer()
@@ -195,21 +139,19 @@ const { cible, plan } = await planDuLot(dessins, SIZE)
 for (const slug of Object.keys(plan).sort()) {
   const { width, height, encre } = plan[slug]
 
-  const bas = Math.round(SIZE * MARGE_BAS)
-  const haut = SIZE - height - bas
-  if (haut < 0) {
+  if (height > SIZE || width > SIZE) {
     throw new Error(
-      `${slug} : ${height} px de haut + ${bas} px de marge dépassent la toile de ` +
-        `${SIZE}. Baisser maxDim dans les réglages de la trame avant d'insister.`,
+      `${slug} : ${width}x${height} dépasse la toile de ${SIZE}. ` +
+        `Baisser maxDim dans les réglages de la trame avant d'insister.`,
     )
   }
 
   await sharp(dessins[slug])
     .resize(width, height)
     .extend({
-      top: haut,
-      bottom: bas,
-      // Centrage horizontal ; le pixel impair part à droite.
+      // Centrage sur les deux axes ; le pixel impair part en bas à droite.
+      top: Math.floor((SIZE - height) / 2),
+      bottom: Math.ceil((SIZE - height) / 2),
       left: Math.floor((SIZE - width) / 2),
       right: Math.ceil((SIZE - width) / 2),
       background: { r: 0, g: 0, b: 0, alpha: 0 },
@@ -218,7 +160,7 @@ for (const slug of Object.keys(plan).sort()) {
     .toFile(`${DEST_DIR}/${slug}.webp`)
 
   console.log(
-    `${slug.padEnd(20)} ${String(width).padStart(3)}x${String(height).padEnd(3)}` +
+    `${slug.padEnd(26)} ${lotDe[slug]}  ${String(width).padStart(3)}x${String(height).padEnd(3)}` +
       ` · encre ${String(Math.round(encre)).padStart(3)} (cible ${Math.round(cible)})`,
   )
 }

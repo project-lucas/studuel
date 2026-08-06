@@ -11,6 +11,29 @@ import TopHud from './TopHud'
 type WalletRow = { xp: number | null; level: number | null }
 
 /**
+ * LA SÉRIE, en UNE requête. Elle s'affiche désormais dans le bandeau, donc sur
+ * TOUS les onglets : la calculer comme le fait l'accueil Réviser — quatre selects
+ * sur 400 jours d'activité, puis `computeStreak` — coûterait ces quatre requêtes
+ * à chaque page de l'app. La RPC `my_streak` (migration 155, bornée par la 170)
+ * fait exactement ce calcul côté serveur ; elle existait déjà pour le classement
+ * des séries entre amis, avec ce mot dans sa migration : « sans refaire les 4
+ * requêtes d'activité côté page ».
+ *
+ * Tolérante, comme toute lecture « tardive » du projet : si la RPC manque (base
+ * dont la 155 n'est pas passée), on renvoie `null` et le bandeau se contente de
+ * ne pas afficher la flamme. Une série absente ne doit pas coûter le niveau et
+ * les monnaies.
+ */
+async function fetchStreak(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+): Promise<number | null> {
+  const { data, error } = await supabase.rpc('my_streak')
+  if (error || data == null) return null
+  const n = Number(data)
+  return Number.isFinite(n) ? Math.max(0, n) : null
+}
+
+/**
  * Chargeur serveur du bandeau du haut : lit le solde de pièces et calcule le
  * niveau (XP dérivée de l'activité récente, comme /defi et /reviser), puis rend
  * le TopHud client. Rendu SOUS un <Suspense> dans le layout : il diffuse en
@@ -32,6 +55,7 @@ export default async function TopHudLoader() {
       <TopHud
         coins={null}
         gems={null}
+        streak={null}
         level={null}
         levelTitle={null}
         progress={0}
@@ -56,7 +80,7 @@ export default async function TopHudLoader() {
   // niveau si la migration 183 manquait, alors qu'ici l'absence de la colonne
   // ne doit coûter que la pastille des gemmes. Deux requêtes concurrentes, zéro
   // latence ajoutée.
-  const [{ data: hudRow }, gems] = await Promise.all([
+  const [{ data: hudRow }, gems, streak] = await Promise.all([
     supabase
       .from('profiles')
       .select('coins, user_wallet(xp, level)')
@@ -68,6 +92,7 @@ export default async function TopHudLoader() {
         user_wallet: WalletRow | WalletRow[] | null
       }>(),
     fetchGems(supabase, user.id),
+    fetchStreak(supabase),
   ])
 
   const walletRow = Array.isArray(hudRow?.user_wallet)
@@ -83,6 +108,7 @@ export default async function TopHudLoader() {
       <TopHud
         coins={coins}
         gems={gems}
+        streak={streak}
         level={info.level}
         levelTitle={info.title}
         progress={info.progress}
@@ -136,6 +162,7 @@ export default async function TopHudLoader() {
     <TopHud
       coins={coins}
       gems={gems}
+      streak={streak}
       level={level.level}
       levelTitle={level.title}
       progress={level.progress}

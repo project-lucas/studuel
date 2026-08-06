@@ -9,19 +9,25 @@ import { sfx } from '@/lib/sounds'
 type SpaceId = 'boutique' | 'premium'
 
 const SPACES: { id: SpaceId; label: string; icon: typeof Store }[] = [
-  { id: 'boutique', label: 'Boutique', icon: Store },
-  { id: 'premium', label: 'Premium', icon: Crown },
+  { id: 'boutique', label: 'Objets', icon: Store },
+  { id: 'premium', label: 'Studuel+', icon: Crown },
 ]
 
 /**
- * L'onglet Trésor en deux volets : « Boutique » (le côté ACHAT — coffre du
- * jour, capsules, boosts en pièces, collection, l'ex-page /coffre) et
- * « Premium » (le côté ABONNEMENT — les offres payantes). Les deux volets
- * restent montés (attribut `hidden`) pour conserver leur état au basculement —
- * motif onglets WAI-ARIA, flèches gauche/droite au clavier.
+ * L'onglet Boutique en deux volets : « Objets » (ce qui s'achète en PIÈCES —
+ * coffre du jour, boosts, collection, fonds & skins, l'ex-page /coffre) et
+ * « Studuel+ » (ce qui s'achète en EUROS — capsules du coach et abonnements).
+ * Les deux volets restent montés (attribut `hidden`) pour conserver leur état
+ * au basculement — motif onglets WAI-ARIA, flèches gauche/droite au clavier.
+ *
+ * Les volets ne s'appellent plus « Boutique » et « Premium » : depuis que
+ * l'onglet lui-même s'appelle Boutique, un volet du même nom à l'intérieur
+ * disait deux fois la même chose et ne distinguait plus rien. « Objets » et
+ * « Studuel+ » nomment ce qu'on y trouve, et la marque payante se voit enfin.
  *
  * Le volet actif vit dans l'URL (`?volet=premium`), seule source de vérité —
- * même mécanique que ReviserSpaces.
+ * même mécanique que ReviserSpaces. La VALEUR du paramètre reste `premium`
+ * (les liens déjà en circulation dans l'app continuent de marcher).
  */
 export default function TresorSpaces({
   boutique,
@@ -55,7 +61,7 @@ export default function TresorSpaces({
     <div className="flex flex-col gap-5">
       <div
         role="tablist"
-        aria-label="Espaces de l'onglet Trésor"
+        aria-label="Espaces de la boutique"
         onKeyDown={onKeyDown}
         className="grid grid-cols-2 gap-1 rounded-full bg-white p-1 shadow-sm ring-1 ring-black/5"
       >

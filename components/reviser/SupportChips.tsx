@@ -1,0 +1,152 @@
+'use client'
+
+import Link from 'next/link'
+import {
+  BookOpen,
+  Check,
+  Layers,
+  ListChecks,
+  Network,
+  Swords,
+  Undo2,
+} from 'lucide-react'
+import GemIcon from '@/components/ui/GemIcon'
+import { cn } from '@/lib/utils'
+import { sfx } from '@/lib/sounds'
+import type { SupportChip, SupportKind } from '@/lib/subject-template'
+
+const ICONS: Record<SupportKind, typeof ListChecks> = {
+  cours: BookOpen,
+  quiz: ListChecks,
+  flashcards: Layers,
+  carte: Network,
+  defi: Swords,
+  // La flèche qui revient : on repasse sur ce qu'on a raté.
+  erreurs: Undo2,
+}
+
+/**
+ * Les supports d'un chapitre, en boutons cliquables.
+ *
+ * Rendu à TROIS endroits, avec la même règle de choix (`buildChapterSupports`) :
+ * - `layout="grid"` sur l'écran de chapitre et en pied de cours — des tuiles
+ *   CARRÉES, en grille centrée qui ne touche pas les bords de l'écran : une
+ *   icône, son état en pastille, son nom. C'est l'écran de choix ;
+ * - `layout="row"` dans l'onglet « Mode de jeu », où 28 chapitres se suivent :
+ *   des pastilles compactes en ligne, sinon la page ferait dix écrans.
+ */
+export default function SupportChips({
+  chips,
+  layout = 'row',
+  label,
+}: {
+  chips: SupportChip[]
+  layout?: 'row' | 'grid'
+  /** Intitulé lu par les lecteurs d'écran (le groupe n'a pas de titre visible). */
+  label: string
+}) {
+  if (chips.length === 0) return null
+  const isGrid = layout === 'grid'
+  // Nombre impair : la dernière tuile se centre sous les autres au lieu de
+  // rester échouée à gauche. Elle garde la largeur d'une colonne (la moitié,
+  // moins la moitié de la gouttière) — une tuile carrée reste carrée.
+  const centerLast = isGrid && chips.length % 2 === 1
+
+  return (
+    <ul
+      aria-label={label}
+      className={cn(
+        isGrid
+          ? 'mx-auto grid max-w-xs grid-cols-2 gap-3.5'
+          : 'flex flex-wrap gap-2',
+      )}
+    >
+      {chips.map((chip, i) => {
+        const Icon = ICONS[chip.kind]
+        const alone = centerLast && i === chips.length - 1
+        return (
+          <li
+            key={chip.kind}
+            className={
+              alone
+                ? 'col-span-2 w-[calc(50%-0.4375rem)] justify-self-center'
+                : undefined
+            }
+          >
+            <Link
+              href={chip.href}
+              onClick={() => sfx.tap()}
+              className={cn(
+                'border bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.98]',
+                isGrid
+                  ? 'flex aspect-square flex-col items-center justify-center gap-1 rounded-3xl p-3 text-center'
+                  : 'flex h-full items-center gap-2.5 rounded-2xl px-3 py-2',
+                chip.done ? 'border-primary/30' : null,
+              )}
+            >
+              {/* L'icône et son état : la pastille chevauche le bas du carré,
+                  elle se lit comme une étiquette posée dessus. */}
+              <span className={cn('relative', isGrid ? 'mb-2' : null)}>
+                <span
+                  className={cn(
+                    'flex shrink-0 items-center justify-center',
+                    isGrid ? 'size-16 rounded-2xl' : 'size-8 rounded-xl',
+                    chip.done
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-primary/10 text-primary',
+                  )}
+                  aria-hidden="true"
+                >
+                  <Icon className={isGrid ? 'size-8' : 'size-4'} strokeWidth={2.2} />
+                </span>
+
+                {isGrid && (chip.done || chip.badge) ? (
+                  <span
+                    className={cn(
+                      'absolute -bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-0.5 rounded-full px-1.5 py-0.5 text-[10px] leading-tight font-bold whitespace-nowrap',
+                      chip.done
+                        ? 'bg-primary text-primary-foreground'
+                        : 'bg-muted text-muted-foreground',
+                    )}
+                  >
+                    {chip.done ? (
+                      <Check className="size-3" strokeWidth={3} aria-hidden="true" />
+                    ) : null}
+                    {chip.locked ? (
+                      <GemIcon className="size-3 shrink-0" aria-hidden="true" />
+                    ) : null}
+                    {chip.done ? 'Fait' : chip.badge}
+                  </span>
+                ) : null}
+              </span>
+
+              <span className={isGrid ? 'w-full' : 'min-w-0 flex-1'}>
+                <span
+                  className={cn(
+                    'block leading-tight font-bold',
+                    isGrid ? 'text-[15px]' : 'text-sm',
+                  )}
+                >
+                  {chip.label}
+                </span>
+                {/* En ligne, l'état complet tient à côté du nom ; en tuile il
+                    est déjà dans la pastille, on ne le répète pas. */}
+                {isGrid ? null : (
+                  <span className="mt-0.5 flex items-center gap-1 text-[11px] leading-tight font-semibold text-muted-foreground">
+                    {chip.locked ? (
+                      <GemIcon className="size-3 shrink-0" aria-hidden="true" />
+                    ) : null}
+                    {chip.done ? (
+                      <Check className="size-3 shrink-0" strokeWidth={3} aria-hidden="true" />
+                    ) : null}
+                    <span className="truncate">{chip.meta}</span>
+                  </span>
+                )}
+              </span>
+            </Link>
+          </li>
+        )
+      })}
+    </ul>
+  )
+}

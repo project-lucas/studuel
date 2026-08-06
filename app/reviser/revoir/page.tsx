@@ -37,9 +37,9 @@ const normalize = (s: string) =>
 export default async function RevoirPage({
   searchParams,
 }: {
-  searchParams: Promise<{ matiere?: string }>
+  searchParams: Promise<{ matiere?: string; chapitre?: string }>
 }) {
-  const { matiere } = await searchParams
+  const { matiere, chapitre } = await searchParams
   const supabase = await createClient()
   const user = await getCurrentUser()
 
@@ -86,11 +86,20 @@ export default async function RevoirPage({
       const questionIds = queue
         .filter((i) => i.item_kind === 'question')
         .map((i) => i.item_id)
-      const { data: subjectQuizzes } = await supabase
-        .from('quizzes')
-        .select('id')
-        .eq('subject', subject.name)
-        .returns<{ id: string }[]>()
+      // Filtre CHAPITRE (tuile « Mes erreurs » de l'écran de chapitre) : on
+      // restreint aux quiz de ses leçons. Sans lui, la tuile annoncerait les
+      // erreurs d'un chapitre et lancerait la file de toute la matière.
+      const { data: subjectQuizzes } = chapitre
+        ? await supabase
+            .from('quizzes')
+            .select('id, lesson:lessons!inner(chapter_id)')
+            .eq('lessons.chapter_id', chapitre)
+            .returns<{ id: string }[]>()
+        : await supabase
+            .from('quizzes')
+            .select('id')
+            .eq('subject', subject.name)
+            .returns<{ id: string }[]>()
       const quizIdSet = new Set((subjectQuizzes ?? []).map((q) => q.id))
       const inSubject = new Set<string>()
       if (questionIds.length > 0 && quizIdSet.size > 0) {
@@ -102,10 +111,13 @@ export default async function RevoirPage({
         for (const q of qs ?? [])
           if (quizIdSet.has(q.quiz_id)) inSubject.add(q.id)
       }
-      queue = queue.filter(
-        (i) =>
-          (i.subject && wanted.has(normalize(i.subject))) ||
-          inSubject.has(i.item_id),
+      queue = queue.filter((i) =>
+        chapitre
+          ? // Ciblé sur un chapitre : SEULES ses questions comptent. Un item
+            // étiqueté « anglais » sans question du chapitre n'en est pas.
+            inSubject.has(i.item_id)
+          : (i.subject && wanted.has(normalize(i.subject))) ||
+            inSubject.has(i.item_id),
       )
     }
   }

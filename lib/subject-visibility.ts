@@ -1,14 +1,21 @@
-// Masquer les matières « cul-de-sac » côté élève : celles qui n'ont AUCUN
-// chapitre à son niveau. La migration 193 a ajouté 6 matières du programme
-// officiel SANS contenu (allemand, arts-plastiques, grec, musique, sport +
-// emc, hlp, llcer-anglais, maths-complementaires, si, snt) : déclarées sur
-// plusieurs niveaux, elles apparaissaient dans la grille de Réviser et menaient
-// à une page vide — un cul-de-sac cliquable.
+// Repérer les matières SANS contenu : celles qui n'ont aucun chapitre au niveau
+// de l'élève. La migration 193 a ajouté des matières du programme officiel sans
+// contenu (allemand, arts-plastiques, grec, musique, sport, emc, hlp,
+// llcer-anglais, maths-complementaires, si, snt) : déclarées sur plusieurs
+// niveaux, elles menaient à une page vide.
 //
-// Règle : une matière n'est montrée que si elle a au moins un chapitre au
-// niveau considéré. Le catalogue brut (getSubjectsCached, /admin) n'est PAS
-// touché — le filtre vit à la présentation élève, et la matière réapparaît
-// d'elle-même dès qu'un premier chapitre de ce niveau est seedé.
+// DEUX USAGES, ET UN SEUL MASQUE (02/08/2026) :
+//
+//  · RÉVISER les MONTRE, avec la mention « Bientôt » sur leur carte. Chaque
+//    classe doit voir son programme entier ; ce qui manque est annoncé, pas
+//    caché. C'est ici qu'on calcule QUI est vide, pas qui disparaît.
+//  · LE DÉFI les masque toujours. Là, une matière sans question ne donne pas
+//    une page vide mais un duel qu'on ne peut pas jouer — il n'y a rien à
+//    annoncer, seulement une partie impossible à lancer.
+//
+// Le catalogue brut (getSubjectsCached, /admin) n'est jamais touché, et une
+// matière rejoint ses voisines d'elle-même dès qu'un premier chapitre est seedé
+// à son niveau.
 
 /** Matières ayant au moins un chapitre parmi `chapters` (déjà filtrés au niveau). */
 export function subjectsWithContent<T extends { id: string }>(
@@ -69,31 +76,4 @@ export function subjectsWithContentAt<
   if (pairs.length === 0) return [...subjects]
   const have = new Set(pairs.map(([id, lvl]) => pairKey(id, lvl)))
   return subjects.filter((s) => have.has(pairKey(s.id, contentLevelOf(s, level))))
-}
-
-/**
- * Restreint les niveaux DÉCLARÉS de chaque matière à ceux qui ont du contenu,
- * et écarte celles qu'il ne reste plus rien à proposer. Sert au sélecteur de
- * matières de `/bienvenue`, qui filtre par `levels` sans jamais voir de
- * chapitre : ainsi un futur 2de ne peut plus cocher « SNT » ou « Espagnol »
- * pour découvrir une page vide à sa première visite.
- *
- * Une matière hors-niveau garde tous ses niveaux déclarés dès lors que son
- * niveau fixe a du contenu — c'est là qu'elle le range.
- */
-export function narrowLevelsToContent<
-  T extends { id: string; levels: string[]; fixed_level?: string | null },
->(subjects: readonly T[], pairs: readonly SubjectLevelPair[]): T[] {
-  if (pairs.length === 0) return [...subjects]
-  const have = new Set(pairs.map(([id, lvl]) => pairKey(id, lvl)))
-  const out: T[] = []
-  for (const s of subjects) {
-    if (s.fixed_level) {
-      if (have.has(pairKey(s.id, s.fixed_level))) out.push(s)
-      continue
-    }
-    const levels = s.levels.filter((lvl) => have.has(pairKey(s.id, lvl)))
-    if (levels.length > 0) out.push({ ...s, levels })
-  }
-  return out
 }

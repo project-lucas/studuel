@@ -1,12 +1,11 @@
-import Link from 'next/link'
-import { Play } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import BackButton from '@/components/BackButton'
 import LessonCompleteButton from '@/components/LessonCompleteButton'
 import LessonRichContent from '@/components/LessonRichContent'
+import SupportChips from '@/components/reviser/SupportChips'
 import { cn } from '@/lib/utils'
 import { subjectTheme, GRID_PATTERN } from '@/lib/subject-style'
 import { loadLessonContext } from '../data'
+import { loadChapterSupports } from '../../supports'
 
 export const dynamic = 'force-dynamic'
 
@@ -19,24 +18,20 @@ export default async function CoursPage({
   params: Promise<{ subject: string; chapter: string; lesson: string }>
 }) {
   const { subject: slug, chapter: chapterId, lesson: lessonId } = await params
-  const { supabase, user, subject, lesson } = await loadLessonContext(
+  const { supabase, user, subject, chapter, lesson } = await loadLessonContext(
     slug,
     chapterId,
     lessonId,
   )
 
-  const [{ data: quiz }, { data: completion }] = await Promise.all([
-    supabase
-      .from('quizzes')
-      .select('id')
-      .eq('lesson_id', lesson.id)
-      .maybeSingle<{ id: string }>(),
+  const [{ data: completion }, supports] = await Promise.all([
     supabase
       .from('lesson_completions')
       .select('id')
       .eq('user_id', user.id)
       .eq('lesson_id', lesson.id)
       .maybeSingle<{ id: string }>(),
+    loadChapterSupports(supabase, user.id, subject.slug, chapter, lesson.id),
   ])
 
   const theme = subjectTheme(subject.color)
@@ -65,17 +60,34 @@ export default async function CoursPage({
         <div className="mx-auto w-full max-w-2xl px-4 pt-6 pb-24 md:px-8">
           <LessonRichContent content={lesson.content ?? 'Contenu à venir.'} />
 
-          <div className="mt-8 flex flex-wrap items-center gap-3 border-t pt-6">
+          <div className="mt-8 border-t pt-6">
             <LessonCompleteButton
               lessonId={lesson.id}
               initialDone={Boolean(completion)}
             />
-            {quiz ? (
-              <Button asChild className="rounded-full">
-                <Link href={`/test/${quiz.id}`}>
-                  <Play className="size-4" /> Tester mes connaissances
-                </Link>
-              </Button>
+
+            {/* La suite, sur place. Le cours ne se terminait que par « Tester
+                mes connaissances » : pour les flashcards, la carte ou le défi
+                du MÊME chapitre, il fallait remonter à la page matière et
+                changer d'onglet. Les quatre supports sont ici, calés sur la
+                leçon qu'on vient de lire. */}
+            {supports.length > 0 ? (
+              <section className="mt-8" aria-labelledby="suite-du-chapitre">
+                <h2
+                  id="suite-du-chapitre"
+                  className="font-heading text-center text-lg font-bold"
+                >
+                  Et maintenant ?
+                </h2>
+                <p className="mt-0.5 mb-5 text-center text-sm text-muted-foreground">
+                  Le cours est lu — voici de quoi le faire tenir.
+                </p>
+                <SupportChips
+                  chips={supports}
+                  layout="grid"
+                  label={`S’entraîner sur ${chapter.title}`}
+                />
+              </section>
             ) : null}
           </div>
         </div>

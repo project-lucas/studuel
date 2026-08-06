@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { GRADE_LEVELS, HORS_NIVEAU, type SubjectCategory } from '@/lib/types'
 import { hasSubjectIcon, hasSubjectTheme } from '@/lib/subject-style'
-import { subjectFolders } from '@/lib/reviser-folders'
+import { programmeGroups } from '@/lib/subject-groups'
 
 // Garde du CATALOGUE DES MATIÈRES.
 //
@@ -221,41 +221,35 @@ describe('chaque matière est affichable', () => {
   })
 })
 
-describe('rangement en dossiers', () => {
+describe('rangement de l’accueil', () => {
+  // Ce que l'accueil Réviser affiche pour une classe : la grille du programme
+  // (découpée en groupes au lycée), puis celle de la culture générale.
+  function shownFor(grade: string) {
+    const ofLevel = all.filter((s) => s.levels.includes(grade))
+    const groups = programmeGroups({
+      subjects: ofLevel.filter((s) => s.category !== 'culture').map(asSubject),
+      grade,
+    })
+    const culture = ofLevel
+      .filter((s) => s.category === 'culture')
+      .map(asSubject)
+    return { ofLevel, groups, culture }
+  }
+
   it('range toutes les matières de chaque classe, sans doublon ni perte', () => {
     for (const grade of GRADE_LEVELS) {
-      const ofLevel = all.filter((s) => s.levels.includes(grade))
-      const folders = subjectFolders({
-        programmeSubjects: ofLevel
-          .filter((s) => s.category !== 'culture')
-          .map(asSubject),
-        cultureSubjects: ofLevel
-          .filter((s) => s.category === 'culture')
-          .map(asSubject),
-        grade,
-      })
-      const shown = folders.flatMap((f) => f.groups.flatMap((g) => g.items))
+      const { ofLevel, groups, culture } = shownFor(grade)
+      const shown = [...groups.flatMap((g) => g.items), ...culture]
       expect(shown.length, `${grade} : matières perdues`).toBe(ofLevel.length)
       expect(new Set(shown.map((s) => s.slug)).size).toBe(ofLevel.length)
     }
   })
 
-  it('donne bien deux dossiers à chaque classe', () => {
+  it('donne à chaque classe un programme rempli et sa culture générale', () => {
     for (const grade of GRADE_LEVELS) {
-      const ofLevel = all.filter((s) => s.levels.includes(grade))
-      const folders = subjectFolders({
-        programmeSubjects: ofLevel
-          .filter((s) => s.category !== 'culture')
-          .map(asSubject),
-        cultureSubjects: ofLevel
-          .filter((s) => s.category === 'culture')
-          .map(asSubject),
-        grade,
-      })
-      expect(folders.map((f) => f.id), grade).toEqual([
-        'programme',
-        'hors-programme',
-      ])
+      const { groups, culture } = shownFor(grade)
+      expect(groups.flatMap((g) => g.items).length, grade).toBeGreaterThan(0)
+      expect(culture.length, `${grade} : pas de culture générale`).toBeGreaterThan(0)
     }
   })
 })

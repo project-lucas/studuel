@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest'
 import {
   ROULETTE_SUBJECTS,
+  salonSubjectFor,
   subjectGameTickets,
   funModeTickets,
 } from '@/lib/defi/modes-catalog'
+import { gameBestKey } from '@/lib/jeux/records'
 import { GAME_MODES, MODE_XP_BONUS, featuredModeId } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
 import { formatTeaser, gameFormat } from '@/lib/jeux/formats'
@@ -64,6 +66,47 @@ describe('subjectGameTickets', () => {
 
   it('rend [] pour une matière inconnue', () => {
     expect(subjectGameTickets('Latin ancien')).toEqual([])
+  })
+
+  it('porte la clé du record des jeux construits, et rien pour « Bientôt »', () => {
+    for (const salon of SALONS) {
+      const tickets = subjectGameTickets(salon.subject)
+      salon.games.forEach((game, i) => {
+        expect(tickets[i].recordKey).toBe(
+          game.implemented ? gameBestKey(game.id) : undefined,
+        )
+      })
+    }
+  })
+})
+
+describe('salonSubjectFor', () => {
+  it('reconnaît une matière du programme par son nom', () => {
+    expect(salonSubjectFor({ slug: 'francais', name: 'Français' })).toBe(
+      'Français',
+    )
+  })
+
+  it('retombe sur le slug quand le nom en base diffère', () => {
+    expect(
+      salonSubjectFor({ slug: 'histoire-geo', name: 'Histoire et Géographie' }),
+    ).toBe('Histoire-Géo')
+    expect(
+      salonSubjectFor({ slug: 'physique-chimie', name: 'Physique / Chimie' }),
+    ).toBe('Physique-Chimie')
+  })
+
+  it('rend null pour une matière sans salon — elle ne promet rien', () => {
+    expect(salonSubjectFor({ slug: 'emc', name: 'EMC' })).toBeNull()
+    expect(salonSubjectFor({ slug: 'sport', name: 'Sport' })).toBeNull()
+  })
+
+  it('trouve un salon pour chaque matière du catalogue', () => {
+    for (const salon of SALONS) {
+      expect(salonSubjectFor({ slug: '', name: salon.subject })).toBe(
+        salon.subject,
+      )
+    }
   })
 })
 

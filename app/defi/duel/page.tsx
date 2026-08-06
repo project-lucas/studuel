@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { GraduationCap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import PageHeader from '@/components/PageHeader'
+import WorldBackdrop from '@/components/WorldBackdrop'
 import DuelArena from '@/components/defi/DuelArena'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
@@ -58,7 +58,7 @@ export default async function DuelPage({
   if (!grade) {
     return (
       <div>
-        <PageHeader title="Duel 90 s" />
+        <DuelStage />
         <div className="mx-auto max-w-md space-y-4 rounded-2xl border bg-card p-6 text-center">
           <GraduationCap className="mx-auto size-8 text-primary" />
           <p className="text-sm text-muted-foreground">
@@ -120,7 +120,7 @@ export default async function DuelPage({
 
   return (
     <div>
-      <PageHeader title="Duel 90 s" />
+      <DuelStage />
       <DuelArena
         pool={pool}
         seed={seed}
@@ -134,6 +134,30 @@ export default async function DuelPage({
         }
       />
     </div>
+  )
+}
+
+/**
+ * La salle de duel : le voile posé sur le décor de l'arène, plus le titre.
+ *
+ * Le voile est monté par WorldBackdrop, donc porté sur <body> APRÈS celui du
+ * layout de /defi : même niveau (-z-10), monté plus tard, il se peint donc
+ * par-dessus l'académie flottante sans la remplacer. (Le portail est aussi ce
+ * qui l'empêche d'être rogné par le conteneur de balayage — cf. WorldBackdrop.)
+ *
+ * Le titre passe en BLANC : c'est le premier texte qui se perdait sur le ciel
+ * clair des variantes de jour.
+ */
+function DuelStage() {
+  return (
+    <>
+      <WorldBackdrop className="duel-scrim" />
+      <header className="mb-5">
+        <h1 className="font-heading text-2xl font-extrabold text-white drop-shadow-[0_2px_6px_rgba(20,10,45,0.6)] md:text-3xl">
+          Duel 90 s
+        </h1>
+      </header>
+    </>
   )
 }
 

@@ -11,26 +11,23 @@ import {
 import { getUserTierFor } from '@/lib/subscription'
 import { canOpenChapter } from '@/lib/gems'
 import { fetchGems, fetchUnlockedChapters } from '@/lib/gems-access'
-import { XP_AWARDS } from '@/lib/wallet'
 import {
-  carteMeta,
   chapterValue,
   chapterStatus,
+  countWords,
   crowns,
-  defiMeta,
-  defiTitle,
-  flashcardsMeta,
-  isNewToSubject,
-  quizMeta,
+  estimateMinutes,
+  examBannerOnTop,
+  modeFromParam,
+  modesFor,
+  resumeCta,
   subjectProgress,
-  COMPLETE_THRESHOLD,
-  MODES,
-  type ModeKey,
   type ChapterExamHint,
   type ChapterRow,
-  type ModeGroup,
   type SubjectTemplateData,
+  type TrainingRow,
 } from '@/lib/subject-template'
+import { buildChapterSupports, type SupportLesson } from '@/lib/chapter-supports'
 import { mindMapFromLessons } from '@/lib/mind-map-auto'
 import { getReviewItems } from '@/lib/srs'
 import { parseGradeStandings } from '@/lib/percentile'
@@ -43,7 +40,7 @@ import {
   examProximity,
 } from '@/lib/next-exam'
 import { controlesToExams, mergeExamSources } from '@/lib/controle-exams'
-import { rowsToControles, type ControleRow } from '@/lib/prep-plan'
+import { daysBetween, rowsToControles, type ControleRow } from '@/lib/prep-plan'
 import { activityCutoff, computeStreak, toDayKey } from '@/lib/streak'
 import {
   CHAPTER_COLUMNS,
@@ -182,6 +179,7 @@ export default async function SubjectPage({
     { data: challengeDays },
     { data: defiEvents },
     { data: standingsRow },
+    { data: themeRows },
   ] =
     await Promise.all([
       supabase
@@ -239,6 +237,17 @@ export default async function SubjectPage({
       // Classements par niveau (223) : on ne garde ici que la matière ouverte.
       // RPC SECURITY DEFINER — la RLS de `profiles` interdit toute jointure.
       supabase.rpc('my_grade_standings'),
+      // Axes du programme (migration 234), dans un select ISOLÉ et toléré :
+      // tant que la migration n'est pas exécutée, PostgREST répond « column
+      // chapters.theme does not exist », `data` arrive à null et la liste reste
+      // à plat. La colonne n'est donc PAS dans CHAPTER_COLUMNS, où son absence
+      // casserait tout Réviser d'un coup.
+      supabase
+        .from('chapters')
+        .select('id, theme')
+        .eq('subject_id', subject.id)
+        .eq('level', level)
+        .returns<{ id: string; theme: string | null }[]>(),
     ])
 
   // Série 🔥 du header : jours (clés UTC) avec au moins une session, toutes
@@ -295,6 +304,9 @@ export default async function SubjectPage({
   // retire tout seul dès le lendemain de sa date (activeExams).
   const today = toDayKey(new Date())
   const examsByChapter: Record<string, ChapterExamHint> = {}
+  // Échéance du contrôle le plus proche : elle décide si l'examen blanc mérite
+  // la tête de page (cf. examBannerOnTop).
+  let daysToExam: number | null = null
   for (const exam of activeExams(
     mergeExamSources(
       controlesToExams(rowsToControles(controleRows ?? [], [])),
@@ -307,9 +319,13 @@ export default async function SubjectPage({
       label: examCardLabel(exam, today),
       proximity: examProximity(exam, today),
     }
+    if (exam.date) {
+      const days = Math.max(0, daysBetween(today, exam.date))
+      daysToExam = daysToExam === null ? days : Math.min(daysToExam, days)
+    }
   }
 
-  // Vue « Chapitres » : une seule entrée par chapitre, avec couronnes et état.
+  // Vue « Programme » : une seule entrée par chapitre, avec couronnes et état.
   const values = catalog.map((chapter) =>
     chapterValue({
       bestQuizRatio: chapter.lessons.reduce<number | null>((best, l) => {
@@ -321,6 +337,11 @@ export default async function SubjectPage({
       lessonDone: chapter.lessons.some((l) => completed.has(l.id)),
     }),
   )
+  // Axe du programme, quand la base le porte (migration 234).
+  const themeById = new Map(
+    (themeRows ?? []).map((r) => [r.id, r.theme?.trim() || null]),
+  )
+
   const chapters: ChapterRow[] = catalog.map((chapter, i) => ({
     id: chapter.id,
     position: chapter.position,
@@ -329,115 +350,73 @@ export default async function SubjectPage({
     crowns: crowns(values[i]),
     href: `/reviser/${subject.slug}/${chapter.id}`,
     examHint: examsByChapter[chapter.id] ?? null,
+    // « ~6 min » : lecture des cours du chapitre + ses questions.
+    minutes: estimateMinutes({
+      words: chapter.lessons.reduce((sum, l) => sum + countWords(l.content), 0),
+      questions: chapter.lessons.reduce(
+        (sum, l) =>
+          sum +
+          (l.quizzes[0]?.id
+            ? (questionCountByQuiz.get(l.quizzes[0].id) ?? 0)
+            : 0),
+        0,
+      ),
+    }),
+    theme: themeById.get(chapter.id) ?? null,
   }))
 
-  // Vues par mode : le contenu du mode groupé par chapitre. Quiz, flashcards
-  // et défis dérivent du quiz de chaque leçon ; la carte mentale est portée
-  // par le chapitre (colonne générée has_mind_map).
-  const groupsFor = (
-    itemsOf: (chapter: CatalogChapter) => ModeGroup['items'],
-  ): ModeGroup[] =>
-    catalog
-      .map((chapter) => ({
+  // Onglet « Mode de jeu » : un chapitre par ligne, ses cinq formats en
+  // pastilles. Les quiz/flashcards/défis dérivent du quiz de chaque leçon (avec
+  // le repli sur le quiz du chapitre : 564 leçons pour 295 quiz, cf.
+  // lib/lesson-quiz) ; la carte mentale est portée par le chapitre. Le CHOIX du
+  // support à proposer vit dans lib/chapter-supports, partagé avec le pied de
+  // cours pour que les deux écrans ne racontent jamais deux histoires.
+  const training: TrainingRow[] = catalog
+    .map((chapter) => {
+      const lessons: SupportLesson[] = chapter.lessons.map((l) => {
+        const ownQuizId = l.quizzes[0]?.id ?? null
+        const quizId = ownQuizId ?? quizDuChapitre(chapter) ?? null
+        return {
+          id: l.id,
+          title: l.title,
+          quizId,
+          questionCount: quizId ? (questionCountByQuiz.get(quizId) ?? 0) : 0,
+          dueCount: quizId ? (dueByQuiz.get(quizId) ?? 0) : 0,
+          best: ownQuizId ? (bestByQuiz.get(ownQuizId) ?? null) : null,
+          defiAttempted: defiAttempted.has(l.id),
+          ownQuiz: ownQuizId !== null,
+        }
+      })
+      // La carte s'affiche aussi quand elle est DÉRIVABLE du cours (cf.
+      // lib/mind-map-auto) : sans cela, presque aucun chapitre n'en avait.
+      const carteAvailable =
+        Boolean(chapter.has_mind_map) ||
+        mindMapFromLessons(chapter.title, chapter.lessons) !== null
+      return {
         chapterId: chapter.id,
-        chapterTitle: chapter.title,
         position: chapter.position,
-        items: itemsOf(chapter),
-      }))
-      .filter((g) => g.items.length > 0)
-
-  const modes: SubjectTemplateData['modes'] = {
-    quiz: groupsFor((chapter) =>
-      chapter.lessons.flatMap((l) => {
-        const quizId = l.quizzes[0]?.id
-        if (!quizId) return []
-        const best = bestByQuiz.get(quizId) ?? null
-        return [
-          {
-            id: quizId,
-            title: l.title,
-            href: `/test/${quizId}`,
-            meta: quizMeta(best),
-            done: (best?.ratio ?? 0) >= COMPLETE_THRESHOLD,
-            xp: XP_AWARDS.quiz,
+        title: chapter.title,
+        chips: buildChapterSupports({
+          subjectSlug: subject.slug,
+          chapterId: chapter.id,
+          lessons,
+          carte: {
+            available: carteAvailable,
+            locked: !canOpenChapter(tier, chapter.id, unlockedChapters),
           },
-        ]
-      }),
-    ),
-    flashcards: groupsFor((chapter) =>
-      chapter.lessons.flatMap((l) => {
-        // Repli sur le quiz du chapitre : une leçon sur deux n'a pas le sien
-        // (564 leçons pour 295 quiz) et disparaissait donc de cet onglet.
-        // Même règle que la page flashcards, cf. lib/lesson-quiz.
-        const quizId = l.quizzes[0]?.id ?? quizDuChapitre(chapter)
-        const count = quizId ? (questionCountByQuiz.get(quizId) ?? 0) : 0
-        if (!quizId || count === 0) return []
-        return [
-          {
-            id: l.id,
-            title: l.title,
-            href: `/reviser/${subject.slug}/${chapter.id}/${l.id}/flashcards`,
-            meta: flashcardsMeta(count, dueByQuiz.get(quizId) ?? 0),
-            done: false,
-            xp: XP_AWARDS.flashcards,
-          },
-        ]
-      }),
-    ),
-    cartes: groupsFor((chapter) => {
-      // La tuile s'affiche aussi quand la carte est DÉRIVABLE du cours
-      // (cf. lib/mind-map-auto) : sans cela, presque aucun chapitre n'avait de
-      // carte et l'onglet restait désespérément vide.
-      const derivable = mindMapFromLessons(chapter.title, chapter.lessons) !== null
-      if (!chapter.has_mind_map && !derivable) return []
-      const locked = !canOpenChapter(tier, chapter.id, unlockedChapters)
-      return [
-        {
-          id: chapter.id,
-          title: 'Carte mentale',
-          href: `/reviser/${subject.slug}/${chapter.id}/carte`,
-          meta: carteMeta(locked),
-          done: false,
-          locked,
-        },
-      ]
-    }),
-    defis: groupsFor((chapter) =>
-      chapter.lessons.flatMap((l) => {
-        // Même repli que les flashcards : le défi se joue sur les questions du
-        // chapitre quand la leçon n'a pas son propre quiz.
-        const quizId = l.quizzes[0]?.id ?? quizDuChapitre(chapter)
-        const count = quizId ? (questionCountByQuiz.get(quizId) ?? 0) : 0
-        if (!quizId || count === 0) return []
-        const attempted = defiAttempted.has(l.id)
-        return [
-          {
-            id: l.id,
-            title: defiTitle(count),
-            href: `/reviser/${subject.slug}/${chapter.id}/${l.id}/defi`,
-            meta: defiMeta(attempted),
-            done: attempted,
-            xp: XP_AWARDS.defi,
-          },
-        ]
-      }),
-    ),
-  }
+          // Notions de CE chapitre dans la file du jour — la tuile « Mes
+          // erreurs » n'apparaît que s'il y en a. Même rattachement que
+          // `weakCount` : un item compte pour le quiz auquel il appartient.
+          erreurs: chapter.lessons.reduce((sum, l) => {
+            const quizId = l.quizzes[0]?.id
+            return sum + (quizId ? (dueByQuiz.get(quizId) ?? 0) : 0)
+          }, 0),
+        }),
+      }
+    })
+    .filter((row) => row.chips.length > 0)
 
   const progress = subjectProgress(values)
-
-  // Onglet « Mes erreurs » : la file SRS de la matière ventilée par chapitre.
-  // Le total reste weakCount (même règle que le bandeau « À revoir ») — les
-  // items rattachés à la matière sans quiz du programme n'ont pas de chapitre.
-  const erreursByChapter = catalog
-    .map((chapter) => ({
-      title: chapter.title,
-      count: chapter.lessons.reduce((sum, l) => {
-        const quizId = l.quizzes[0]?.id
-        return sum + (quizId ? (dueByQuiz.get(quizId) ?? 0) : 0)
-      }, 0),
-    }))
-    .filter((c) => c.count > 0)
 
   // Onglet « Boss » : pool 100 % matière — le boss de la matière est le même
   // pour toutes les classes, seul le programme joué change.
@@ -477,21 +456,20 @@ export default async function SubjectPage({
     gradeLevel: standings.grade,
     standing: subjectStanding,
     progress,
-    isNew: isNewToSubject(values),
+    resume: resumeCta(chapters),
+    examOnTop: examBannerOnTop(progress.pct, daysToExam),
     weakCount,
     gems,
     streak,
     chapters,
-    modes,
-    erreurs: { total: weakCount, byChapter: erreursByChapter },
+    training,
     bossPool,
   }
 
   // Onglet demandé dans l'URL (`?onglet=boss` depuis la feuille Modes de jeu) —
-  // toute valeur inconnue retombe sur Chapitres.
-  const initialMode = MODES.some((m) => m.key === onglet)
-    ? (onglet as ModeKey)
-    : undefined
+  // les anciennes clés de format restent valides, toute valeur inconnue
+  // retombe sur Programme.
+  const initialMode = modeFromParam(onglet, modesFor(standings.grade))
 
   return (
     <>

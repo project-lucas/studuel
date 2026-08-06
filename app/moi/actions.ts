@@ -4,9 +4,12 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { toDayKey } from '@/lib/streak'
-import { LEVERS } from '@/lib/capacite-drivers'
+import { PLANIFIER_CATALOG_ID } from '@/lib/habits'
 import { trimestreOf } from '@/lib/notes'
 import { GRADE_LEVELS } from '@/lib/types'
+
+/** Un identifiant du catalogue d'habitudes est un UUID, jamais autre chose. */
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 
 async function requireUser() {
   const supabase = await createClient()
@@ -51,20 +54,25 @@ export async function saveGradeLevel(grade: string): Promise<void> {
 // (`equipAvatarItemAction` est le seul chemin légitime, cf. app/moi/avatar).
 // Supprimée plutôt que laissée en embuscade — cf. git si le sujet revient.
 
-// --- Leviers de la semaine (hero card Moi) -----------------------------------
-// Un tap sur une chip bascule le log DU JOUR de l'habitude du levier. Si
-// l'élève n'a jamais activé cette habitude, elle est activée à la volée (avec
-// la planification par défaut du catalogue) — habit_logs reste la source
-// unique de vérité, aucune table parallèle.
-export async function toggleLeverAction(
+// --- Cocher une habitude pour aujourd'hui ------------------------------------
+// Un tap bascule le log DU JOUR. Si l'élève n'a jamais activé cette habitude,
+// elle est activée à la volée (avec la planification par défaut du catalogue) —
+// habit_logs reste la source unique de vérité, aucune table parallèle.
+//
+// L'ancienne version n'acceptait QUE les 4 leviers de la hero card. La page
+// /moi/habitudes doit pouvoir cocher n'importe laquelle des habitudes du
+// catalogue : la liste fermée en dur est remplacée par la seule garantie qui
+// tienne dans le temps — la clé étrangère `habits.catalog_id → habit_catalog`,
+// qui refuse en base tout identifiant inventé. Un UUID mal formé est écarté
+// avant même de partir (message d'erreur Postgres inutile sinon).
+export async function toggleHabitudeAction(
   catalogId: string,
   date: string,
   completed: boolean,
 ): Promise<{ ok: boolean }> {
   const { supabase, userId } = await requireUser()
   if (!userId) return { ok: false }
-  // Catalogue fermé : seuls les 4 leviers de la carte sont acceptés.
-  if (!LEVERS.some((l) => l.catalogId === catalogId)) return { ok: false }
+  if (!UUID.test(catalogId)) return { ok: false }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return { ok: false }
 
   let { data: habit } = await supabase
@@ -95,7 +103,7 @@ export async function toggleLeverAction(
     }
   }
   if (!habit) {
-    console.error('[moi] levier — habitude introuvable/inactivable:', catalogId)
+    console.error('[moi] habitude introuvable/inactivable:', catalogId)
     return { ok: false }
   }
 
@@ -110,10 +118,71 @@ export async function toggleLeverAction(
     { onConflict: 'habit_id,date' },
   )
   if (error) {
-    console.error('[moi] levier non enregistré:', error.message)
+    console.error('[moi] habitude non enregistrée:', error.message)
     return { ok: false }
   }
   revalidatePath('/moi')
+  revalidatePath('/moi/habitudes')
+  return { ok: true }
+}
+
+// --- Suivre / arrêter une habitude du catalogue -------------------------------
+// Le catalogue compte seize habitudes, chacune avec son « pourquoi »
+// scientifique écrit en base depuis la migration 010 — et l'app n'en montrait
+// aucune : les seules activables étaient les quatre leviers, activés à la
+// volée par un tap. Ces deux actions ouvrent le catalogue à l'élève.
+
+export async function suivreHabitudeAction(
+  catalogId: string,
+): Promise<{ ok: boolean }> {
+  const { supabase, userId } = await requireUser()
+  if (!userId) return { ok: false }
+  if (!UUID.test(catalogId)) return { ok: false }
+
+  // Idempotent : re-suivre une habitude déjà suivie ne doit rien casser ni
+  // remettre à zéro sa planification. `target: {}` laisse `habitDays` retomber
+  // sur le `default_target` du catalogue (« sport les mardis et vendredis »),
+  // qui est précisément l'intention de l'habitude.
+  const { error } = await supabase
+    .from('habits')
+    .upsert(
+      { user_id: userId, catalog_id: catalogId, target: {} },
+      { onConflict: 'user_id,catalog_id', ignoreDuplicates: true },
+    )
+  if (error) {
+    console.error('[moi] habitude non activée:', error.message)
+    return { ok: false }
+  }
+  revalidatePath('/moi')
+  revalidatePath('/moi/habitudes')
+  return { ok: true }
+}
+
+export async function arreterHabitudeAction(
+  catalogId: string,
+): Promise<{ ok: boolean }> {
+  const { supabase, userId } = await requireUser()
+  if (!userId) return { ok: false }
+  if (!UUID.test(catalogId)) return { ok: false }
+  // « Planifier ma semaine » est la mission fixe de tous : la page Moi la
+  // ré-inscrit à chaque chargement. La retirer ne tiendrait pas une seconde —
+  // autant ne pas proposer un bouton qui ment.
+  if (catalogId === PLANIFIER_CATALOG_ID) return { ok: false }
+
+  // Le journal part avec (ON DELETE CASCADE sur habit_logs.habit_id) : arrêter
+  // une habitude efface sa série. C'est assumé et dit dans l'interface — garder
+  // des logs orphelins ferait réapparaître une série morte au moindre retour.
+  const { error } = await supabase
+    .from('habits')
+    .delete()
+    .eq('user_id', userId)
+    .eq('catalog_id', catalogId)
+  if (error) {
+    console.error('[moi] habitude non arrêtée:', error.message)
+    return { ok: false }
+  }
+  revalidatePath('/moi')
+  revalidatePath('/moi/habitudes')
   return { ok: true }
 }
 

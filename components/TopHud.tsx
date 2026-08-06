@@ -31,6 +31,7 @@ type OpenPurse = 'ecu' | 'cristal' | null
 export default function TopHud({
   coins,
   gems,
+  streak,
   level,
   levelTitle,
   progress,
@@ -40,6 +41,13 @@ export default function TopHud({
   coins: number | null
   /** Solde de gemmes, ou null pour un visiteur non connecté. */
   gems: number | null
+  /**
+   * Série en cours, en jours. `null` = inconnue (visiteur, ou base dont la
+   * migration 155 n'est pas passée) : la flamme ne s'affiche pas du tout. Zéro,
+   * lui, s'affiche — une flamme éteinte est une invitation, une flamme absente
+   * n'est rien.
+   */
+  streak: number | null
   /** Niveau (1..10), ou null pour un visiteur. */
   level: number | null
   levelTitle: string | null
@@ -125,61 +133,118 @@ export default function TopHud({
               pourcentage pour rendre l'avancée lisible d'un coup d'œil.
               Replié sur /defi (le ProfileChip de l'arène est LA source). */}
           {levelHidden ? null : (
-          <div
-            className={cn(
-              'pointer-events-auto flex min-w-0 items-center gap-2.5 rounded-full py-1 pr-3.5 pl-1',
-              pillSurface,
-            )}
-            title={levelTitle ?? undefined}
-          >
-            <span
-              className="font-heading flex size-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-b from-primary to-[color-mix(in_oklch,var(--primary),black_24%)] text-sm font-extrabold text-primary-foreground tabular-nums ring-2 ring-highlight/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_2px_5px_rgba(0,0,0,0.3)]"
-              aria-hidden="true"
+            <div
+              className={cn(
+                'pointer-events-auto flex min-w-0 items-center gap-2.5 rounded-full py-1 pr-3.5 pl-1',
+                pillSurface,
+              )}
+              title={levelTitle ?? undefined}
             >
-              {level}
-            </span>
-            <div className="min-w-0">
-              <p
-                className={cn(
-                  'font-heading text-[10px] leading-none font-extrabold tracking-wide uppercase',
-                  dark ? 'text-[#faf6ef]' : 'text-primary',
-                )}
+              <span
+                className="font-heading flex size-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-b from-primary to-[color-mix(in_oklch,var(--primary),black_24%)] text-sm font-extrabold text-primary-foreground tabular-nums ring-2 ring-highlight/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_2px_5px_rgba(0,0,0,0.3)]"
+                aria-hidden="true"
               >
-                Niveau {level}
-              </p>
-              <div className="mt-1 flex items-center gap-1.5">
-                <div
+                {level}
+              </span>
+              <div className="min-w-0">
+                <p
                   className={cn(
-                    'h-2 w-16 overflow-hidden rounded-full',
-                    dark
-                      ? 'bg-black/35 ring-1 ring-white/15'
-                      : 'bg-muted ring-1 ring-black/[0.06]',
+                    'font-heading text-[10px] leading-none font-extrabold tracking-wide uppercase',
+                    dark ? 'text-[#faf6ef]' : 'text-primary',
                   )}
-                  role="progressbar"
-                  aria-label={`Progression vers le niveau ${level + 1}`}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  aria-valuenow={pct}
                 >
+                  Niveau {level}
+                </p>
+                <div className="mt-1 flex items-center gap-1.5">
                   <div
-                    className="h-full rounded-full bg-gradient-to-r from-highlight to-accent shadow-[0_0_6px_color-mix(in_oklch,var(--highlight),transparent_45%)] transition-[width] duration-500"
-                    style={{ width: `${pct}%` }}
-                  />
+                    className={cn(
+                      'h-2 w-16 overflow-hidden rounded-full',
+                      dark
+                        ? 'bg-black/35 ring-1 ring-white/15'
+                        : 'bg-muted ring-1 ring-black/[0.06]',
+                    )}
+                    role="progressbar"
+                    aria-label={`Progression vers le niveau ${level + 1}`}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={pct}
+                  >
+                    <div
+                      className="h-full rounded-full bg-gradient-to-r from-highlight to-accent shadow-[0_0_6px_color-mix(in_oklch,var(--highlight),transparent_45%)] transition-[width] duration-500"
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                  <span
+                    className={cn(
+                      'hidden min-[360px]:inline font-mono text-[9px] leading-none font-bold tabular-nums',
+                      dark ? 'text-white/70' : 'text-muted-foreground',
+                    )}
+                  >
+                    {pct}%
+                  </span>
                 </div>
-                <span
-                  className={cn(
-                    'hidden min-[360px]:inline font-mono text-[9px] leading-none font-bold tabular-nums',
-                    dark ? 'text-white/70' : 'text-muted-foreground',
-                  )}
-                >
-                  {pct}%
-                </span>
               </div>
             </div>
-          </div>
           )}
 
-          {/* LA BANDE DE RESSOURCES, façon Clash Royale : les soldes ne sont
+          {/* LE GROUPE DE DROITE : la série, puis les deux monnaies. Tout ce
+              qui se COMPTE tient ensemble, poussé contre le bord ; la gauche du
+              bandeau reste au niveau (et, sur l'arène où le niveau se replie,
+              à la carte joueur du décor).
+
+              La série y était d'abord posée à gauche, juste après le niveau —
+              elle se superposait à la carte joueur de l'arène, qui occupe cet
+              angle et que le bandeau ne connaît pas. Un bandeau flottant ne
+              doit rien déposer là où le décor de la page a déjà quelque chose. */}
+          <div className="ml-auto flex shrink-0 items-center gap-1.5">
+            {/* LA SÉRIE, partout. C'est le geste de Duolingo : la flamme est en
+                haut de CHAQUE écran, pas rangée dans l'onglet qui la calcule.
+                Une série qu'on ne voit qu'en allant la chercher ne retient
+                personne — il faut qu'elle croise le regard sur l'arène, dans la
+                boutique, chez les amis.
+
+                Elle garde sa propre pastille : le niveau dit le chemin
+                parcouru, la série dit la régularité, ce sont deux comptes
+                différents. Série à zéro = flamme éteinte (désaturée) et non
+                pastille absente : la place reste, à rallumer. */}
+            {streak === null ? null : (
+              <div
+                className={cn(
+                  'pointer-events-auto flex h-11 shrink-0 items-center gap-1 rounded-full pr-3 pl-1.5',
+                  pillSurface,
+                )}
+                aria-label={`Série : ${streak} jour${streak > 1 ? 's' : ''}`}
+                title={`${streak} jour${streak > 1 ? 's' : ''} de série`}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/serie/flamme.webp"
+                  alt=""
+                  aria-hidden="true"
+                  width={128}
+                  height={128}
+                  className={cn(
+                    'size-8 shrink-0 object-contain',
+                    streak > 0 ? 'flame-breathe' : 'opacity-40 grayscale',
+                  )}
+                />
+                <span
+                  aria-hidden="true"
+                  className={cn(
+                    'font-mono text-sm font-extrabold tabular-nums',
+                    streak > 0
+                      ? dark
+                        ? 'text-highlight'
+                        : 'text-foreground'
+                      : 'text-muted-foreground',
+                  )}
+                >
+                  {streak}
+                </span>
+              </div>
+            )}
+
+            {/* LA BANDE DE RESSOURCES, façon Clash Royale : les soldes ne sont
               pas rangés dans une boutique qu'on pense à ouvrir, ils sont sous
               les yeux en permanence. Chaque pastille porte DEUX gestes, comme
               chez Supercell :
@@ -190,76 +255,85 @@ export default function TopHud({
               Sur crème, l'écu illustré est doré et ressort du fond clair ; sur
               la scène sombre, la pastille prend le verre de nuit et c'est le
               CHIFFRE qui devient or — l'or dit la valeur, pas le contenant. */}
-          <div ref={pursesRef} className="ml-auto flex shrink-0 items-center gap-1.5">
-            <ResourcePill
-              name="Écu"
-              nameClassName={
-                dark
-                  ? 'text-highlight'
-                  : // Sur crème, le jaune solaire pur passerait sous le seuil de
-                    // contraste : on le fonce pour le TEXTE seulement — c'est le
-                    // même or, lisible.
-                    'text-[color-mix(in_oklch,var(--highlight),black_42%)]'
-              }
-              description={
-                <>
-                  La monnaie du style. Tu la gagnes en révisant et en jouant, et
-                  tu la dépenses à la boutique du Trésor : tenues, décors et
-                  objets pour ton avatar.
-                </>
-              }
-              open={openPurse === 'ecu'}
-              onToggle={() => togglePurse('ecu')}
-              label={`${coins} écus — à quoi sert cette monnaie`}
-              plusLabel="Aller à la boutique pour gagner des écus"
-              value={coins}
-              icon={<EcuIcon className="size-5" />}
-              dark={dark}
-              className={
-                dark
-                  ? 'olympe-glass text-highlight'
-                  : 'bg-card/90 text-foreground shadow-lg ring-1 ring-black/10 backdrop-blur-md'
-              }
-              plusClassName={
-                dark
-                  ? 'bg-highlight text-foreground'
-                  : 'bg-highlight/25 text-foreground'
-              }
-            />
-            {/* Sous 360 px de large, la bande céderait sur l'écusson de niveau :
-                la seconde monnaie s'efface plutôt que d'écraser ses voisines
-                (même arbitrage que le pourcentage du niveau, juste au-dessus). */}
-            {gems !== null ? (
+            {/* La bande des monnaies garde SA propre boîte : c'est elle que
+              surveille la fermeture au tap extérieur (`pursesRef`). La flamme
+              n'en fait pas partie — elle n'ouvre aucune bulle. */}
+            <div ref={pursesRef} className="flex shrink-0 items-center gap-1.5">
               <ResourcePill
-                name="Cristal"
-                nameClassName={dark ? 'text-[#c9b4ff]' : 'text-primary'}
+                name="Écu"
+                nameClassName={
+                  dark
+                    ? 'text-highlight'
+                    : // Sur crème, le jaune solaire pur passerait sous le seuil de
+                      // contraste : on le fonce pour le TEXTE seulement — c'est le
+                      // même or, lisible.
+                      'text-[color-mix(in_oklch,var(--highlight),black_42%)]'
+                }
                 description={
                   <>
-                    La monnaie du contenu. {GEM_COST_CHAPTER} cristaux ouvrent un
-                    chapitre entier — sa carte mentale et ses fiches — pour
-                    toujours. Ils se gagnent surtout en invitant tes amis.
+                    La monnaie du style. Tu la gagnes en révisant et en jouant,
+                    et tu la dépenses dans la Boutique : tenues, décors et
+                    objets pour ton avatar.
                   </>
                 }
-                open={openPurse === 'cristal'}
-                onToggle={() => togglePurse('cristal')}
-                label={`${gems} cristaux — à quoi sert cette monnaie`}
-                plusLabel="Aller à la boutique pour gagner des cristaux"
-                value={gems}
-                icon={<CristalIcon className="size-5" />}
+                open={openPurse === 'ecu'}
+                onToggle={() => togglePurse('ecu')}
+                label={`${coins} écus — à quoi sert cette monnaie`}
+                plusLabel="Aller à la boutique pour gagner des écus"
+                value={coins}
+                icon={<EcuIcon className="size-5" />}
                 dark={dark}
-                className={cn(
-                  'max-[359px]:hidden',
+                className={
                   dark
-                    ? 'olympe-glass text-[#d8c9ff]'
-                    : 'bg-card/85 text-primary shadow-lg ring-1 ring-black/5 backdrop-blur-md',
-                )}
+                    ? 'olympe-glass text-highlight'
+                    : 'bg-card/90 text-foreground shadow-lg ring-1 ring-black/10 backdrop-blur-md'
+                }
                 plusClassName={
                   dark
-                    ? 'bg-white/18 text-[#faf6ef]'
-                    : 'bg-primary/15 text-primary'
+                    ? 'bg-highlight text-foreground'
+                    : 'bg-highlight/25 text-foreground'
                 }
               />
-            ) : null}
+              {/* LA MONNAIE QUI CÈDE. Le bandeau ne peut pas tenir, sur un
+                téléphone, l'écusson de niveau + la série + DEUX monnaies + les
+                réglages : à 390 px on demande environ 100 px de trop. Il faut
+                donc que quelque chose s'efface, et c'est le cristal — c'est la
+                monnaie secondaire, et elle reste à un tap de là (le « + » de
+                l'écu et l'onglet Boutique mènent au même endroit). Le seuil
+                (430 px) couvre les téléphones courants ; au-delà, les deux
+                monnaies reviennent. */}
+              {gems !== null ? (
+                <ResourcePill
+                  name="Cristal"
+                  nameClassName={dark ? 'text-[#c9b4ff]' : 'text-primary'}
+                  description={
+                    <>
+                      La monnaie du contenu. {GEM_COST_CHAPTER} cristaux ouvrent
+                      un chapitre entier — sa carte mentale et ses fiches — pour
+                      toujours. Ils se gagnent surtout en invitant tes amis.
+                    </>
+                  }
+                  open={openPurse === 'cristal'}
+                  onToggle={() => togglePurse('cristal')}
+                  label={`${gems} cristaux — à quoi sert cette monnaie`}
+                  plusLabel="Aller à la boutique pour gagner des cristaux"
+                  value={gems}
+                  icon={<CristalIcon className="size-5" />}
+                  dark={dark}
+                  className={cn(
+                    'max-[429px]:hidden',
+                    dark
+                      ? 'olympe-glass text-[#d8c9ff]'
+                      : 'bg-card/85 text-primary shadow-lg ring-1 ring-black/5 backdrop-blur-md',
+                  )}
+                  plusClassName={
+                    dark
+                      ? 'bg-white/18 text-[#faf6ef]'
+                      : 'bg-primary/15 text-primary'
+                  }
+                />
+              ) : null}
+            </div>
           </div>
         </>
       ) : (
@@ -281,29 +355,31 @@ export default function TopHud({
           (réglages du compte : /compte), pas une silhouette qui se lisait comme
           un second bouton profil. Visiteur non connecté → icône « entrer ». */}
       {accountHidden ? null : (
-      <Link
-        href={accountHref}
-        aria-label={userLabel ? `Réglages du compte — ${userLabel}` : 'Se connecter'}
-        title={userLabel ? 'Réglages du compte' : 'Se connecter'}
-        className={cn(
-          'pointer-events-auto flex size-10 shrink-0 items-center justify-center rounded-full transition active:scale-95',
-          pillSurface,
-          connected ? '' : 'ml-auto',
-          dark
-            ? accountActive
-              ? 'text-highlight'
-              : 'text-[#faf6ef]'
-            : accountActive
-              ? 'text-primary'
-              : 'text-foreground',
-        )}
-      >
-        {userLabel ? (
-          <Settings className="size-6" strokeWidth={2.1} aria-hidden="true" />
-        ) : (
-          <LogIn className="size-6" strokeWidth={2.1} aria-hidden="true" />
-        )}
-      </Link>
+        <Link
+          href={accountHref}
+          aria-label={
+            userLabel ? `Réglages du compte — ${userLabel}` : 'Se connecter'
+          }
+          title={userLabel ? 'Réglages du compte' : 'Se connecter'}
+          className={cn(
+            'pointer-events-auto flex size-10 shrink-0 items-center justify-center rounded-full transition active:scale-95',
+            pillSurface,
+            connected ? '' : 'ml-auto',
+            dark
+              ? accountActive
+                ? 'text-highlight'
+                : 'text-[#faf6ef]'
+              : accountActive
+                ? 'text-primary'
+                : 'text-foreground',
+          )}
+        >
+          {userLabel ? (
+            <Settings className="size-6" strokeWidth={2.1} aria-hidden="true" />
+          ) : (
+            <LogIn className="size-6" strokeWidth={2.1} aria-hidden="true" />
+          )}
+        </Link>
       )}
     </header>
   )
@@ -410,7 +486,12 @@ function ResourcePill({
               dark ? 'bg-[oklch(0.31_0.055_300)]' : 'bg-card',
             )}
           />
-          <p className={cn('font-heading mb-1 text-sm font-extrabold', nameClassName)}>
+          <p
+            className={cn(
+              'font-heading mb-1 text-sm font-extrabold',
+              nameClassName,
+            )}
+          >
             {name}
           </p>
           <p>{description}</p>

@@ -109,6 +109,13 @@ interface ArenaHudProps {
    * ligue, tournoi, coffre d'équipe, réglages.
    */
   menuItems: OrbItem[]
+  /**
+   * L'appel Studuel+ (PremiumPill), posé JUSTE SOUS le burger, dans la même
+   * colonne de l'angle. Il quitte l'écran quand le menu s'ouvre : la cascade
+   * des plaques prend alors la colonne, et deux objets dorés superposés ne
+   * feraient qu'un empilement illisible.
+   */
+  premiumSlot?: ReactNode
   /** Pastille niveau + XP, calée dans l'ANGLE haut-gauche (façon Clash Royale). */
   profileSlot?: ReactNode
   /** Cartouche de rang, JUSTE SOUS la pastille de niveau (même colonne). */
@@ -145,6 +152,7 @@ export default function ArenaHud({
   leftTiles = [],
   cornerTiles = [],
   menuItems,
+  premiumSlot,
   profileSlot,
   rankSlot,
   seasonSlot,
@@ -351,6 +359,11 @@ export default function ArenaHud({
             ) : null}
           </button>
         </div>
+
+        {/* L'appel Studuel+, sous le burger : le seul objet doré du HUD. Il
+            s'efface quand le menu s'ouvre — la colonne appartient alors à la
+            cascade des plaques. */}
+        {premiumSlot && !menuOpen ? premiumSlot : null}
 
         {/* Le panneau, SOUS la barrette : la pile des plaques, façon carte
             Clash Royale. Borné en hauteur (petits écrans) plutôt que de

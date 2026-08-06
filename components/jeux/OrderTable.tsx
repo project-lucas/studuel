@@ -15,6 +15,7 @@ import { MECHANIC_ICON } from '@/components/jeux/icons'
 import { gameSfx, sfx, buzz } from '@/lib/sounds'
 import { recordChallenge } from '@/app/defi/actions'
 import type { GameFormat } from '@/lib/jeux/formats'
+import { readGameBest, writeGameBest } from '@/lib/jeux/records'
 import { isNextInOrder, type OrderBoard as Board } from '@/lib/jeux/ordering'
 import {
   answer as applyAnswer,
@@ -30,18 +31,6 @@ const TICK_MS = 100
 // Pause après un tableau bouclé : le temps de voir la ligne complète avant que
 // la suivante n'arrive. Sans elle, la récompense de la reconstitution est volée.
 const BOARD_PAUSE_MS = 1100
-
-function bestKey(id: string) {
-  return `studuel-jeu-${id}-best`
-}
-
-function readBest(id: string): number {
-  try {
-    return Number(window.localStorage.getItem(bestKey(id))) || 0
-  } catch {
-    return 0
-  }
-}
 
 /**
  * La table des jeux de REMISE EN ORDRE (Frise folle, Phrase en vrac) — les deux
@@ -99,7 +88,7 @@ export default function OrderTable({
   }, [run])
 
   useEffect(() => {
-    const load = () => setBest(readBest(format.id))
+    const load = () => setBest(readGameBest(format.id))
     load()
   }, [format.id])
 
@@ -117,15 +106,8 @@ export default function OrderTable({
       if (final.status === 'won') audio.win()
       else audio.lose()
 
-      const prev = readBest(format.id)
-      if (final.score > prev) {
-        setIsRecord(true)
-        try {
-          window.localStorage.setItem(bestKey(format.id), String(final.score))
-        } catch {
-          // stockage indisponible : tant pis pour le record local
-        }
-      }
+      const prev = readGameBest(format.id)
+      if (writeGameBest(format.id, final.score)) setIsRecord(true)
       setBest(Math.max(prev, final.score))
 
       const partie = partieRef.current

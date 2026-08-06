@@ -5,7 +5,7 @@ import { sfx } from '@/lib/sounds'
 
 /**
  * La porte d'entrée de « Mon carnet » (cours façon Wooflash) : un bouton-icône
- * rond collé à la loupe du bandeau « Ton programme » — même robe que les autres
+ * rond collé à la loupe de la rangée de commandes — même robe que les autres
  * commandes flottantes de l'accueil. L'ancienne tuile pleine largeur en bas de
  * page doublait visuellement les dossiers et poussait le carnet sous le pli.
  * Le résumé (n cours · n questions) reste annoncé aux lecteurs d'écran via

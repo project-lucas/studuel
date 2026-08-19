@@ -11,7 +11,7 @@ node scripts/seed-contenu.mjs --num 218 --slugs allemand,grec                   
 node scripts/seed-contenu.mjs --num 219 --modules snt,hlp,llcer-anglais,si,maths-complementaires > supabase/219_contenu_lycee.sql
 node scripts/seed-contenu.mjs --num 220 --modules espagnol-lycee,latin-lycee       > supabase/220_contenu_espagnol_latin_lycee.sql
 node scripts/seed-contenu.mjs --num 225 --slugs philosophie                        > supabase/225_contenu_philosophie_tle.sql
-node scripts/seed-contenu.mjs --num 226 --slugs anglais                            > supabase/226_contenu_anglais_grammaire_tle.sql
+node scripts/seed-contenu.mjs --num 226 --modules anglais-tle                      > supabase/226_contenu_anglais_grammaire_tle.sql
 node scripts/seed-contenu.mjs --num 227 --modules histoire-geo-tle                 > supabase/227_contenu_histoire_tle.sql
 node scripts/seed-contenu.mjs --num 228 --slugs enseignement-scientifique          > supabase/228_contenu_enseignement_scientifique_tle.sql
 node scripts/seed-contenu.mjs --num 229 --modules geographie-tle                   > supabase/229_contenu_geographie_tle.sql
@@ -19,6 +19,7 @@ node scripts/seed-contenu.mjs --num 230 --modules emc-tle                       
 node scripts/seed-contenu.mjs --num 231 --modules espagnol-tle                     > supabase/231_contenu_espagnol_tle.sql
 node scripts/seed-contenu.mjs --num 232 --modules hlp-tle                          > supabase/232_contenu_hlp_tle.sql
 node scripts/seed-contenu.mjs --num 233 --modules svt-tle                          > supabase/233_contenu_svt_tle.sql
+node scripts/seed-contenu.mjs --num 235 --modules anglais-axes-tle                 > supabase/235_contenu_anglais_axes_tle.sql
 ```
 
 Un slug = un ou PLUSIEURS modules : `scripts/contenu/anglais-tle.mjs` porte le
@@ -35,7 +36,9 @@ doivent partir dans des migrations SÉPARÉES :
 - `emc.mjs` (216, **exécutée**) et `emc-tle.mjs` (230) portent tous deux `emc` ;
 - `espagnol-lycee.mjs` (220, **exécutée**) et `espagnol-tle.mjs` (231) portent
   tous deux `espagnol` ;
-- `hlp.mjs` (219, **exécutée**) et `hlp-tle.mjs` (232) portent tous deux `hlp`.
+- `hlp.mjs` (219, **exécutée**) et `hlp-tle.mjs` (232) portent tous deux `hlp` ;
+- `anglais-tle.mjs` (226, **exécutée** : la grammaire) et `anglais-axes-tle.mjs`
+  (235 : les six axes du programme) portent tous deux `anglais`.
 
 `svt-tle.mjs` (233) est aujourd'hui le seul module du slug `svt` — la SVT des
 autres niveaux vient encore des migrations écrites à la main (094 → 142). Il est
@@ -73,6 +76,7 @@ export default {
   nom: 'EMC',         // ce qui atterrit dans `quizzes.subject`
   blocs: [{
     niveaux: ['5e', '4e', '3e'],   // le bloc est dupliqué sur chaque niveau
+    axe: 'Thème 2 — …',            // FACULTATIF : l'axe du programme (voir plus bas)
     positionDepart: 5,             // FACULTATIF : numérote depuis 5 au lieu de 1
     chapitres: [{
       titre: 'La règle et le droit',
@@ -107,6 +111,31 @@ avant d'installer les 19 notions du programme.
 Un module qui déclare `motif` prend son en-tête en main : le constat historique
 des « 11 matières vides » n'est plus imprimé, ni le paragraphe sur la
 duplication par cycle si la matière n'a qu'un niveau.
+
+### L'axe du programme (`axe`)
+
+`axe` porte l'intitulé du programme officiel qui coiffe le chapitre — « Axe 6.
+Le Royaume-Uni et ses nations », « Thème 3 — Histoire et mémoires ». Il atterrit
+dans `chapters.theme` (migration 234) et c'est lui qui fait GROUPER la page
+matière au lieu d'aligner les chapitres à plat. Se déclare sur le bloc (tous ses
+chapitres le prennent) ou sur un chapitre (il gagne sur celui du bloc) :
+
+```js
+blocs: [{ niveaux: ['Tle'], axe: 'Repères culturels — les six axes', chapitres: [
+  { titre: '…', axe: 'Un autre axe', … },   // ce chapitre-ci déroge
+]}]
+```
+
+Deux garde-fous à connaître :
+
+- **La colonne n'est écrite que si au moins un chapitre déclare un axe.** Sans
+  cette condition, régénérer 216 → 233 (qui n'en portent aucun) produirait un
+  SQL différent de celui du dépôt, et la commande imprimée dans leur en-tête ne
+  les reproduirait plus à l'octet près.
+- **Un `UPDATE` accompagne l'`INSERT`.** Les chapitres sont insérés en
+  `ON CONFLICT DO NOTHING` : sur un chapitre DÉJÀ en base, l'insertion ne
+  toucherait rien et l'axe ne serait jamais posé. L'`UPDATE` qui suit vise les
+  mêmes UUID dérivés du contenu, donc stables et rejouables.
 
 `positionDepart` sert quand un bloc VIENT S'AJOUTER derrière des chapitres déjà
 en base : la page matière trie par `position`, et repartir de 1 mêlerait les

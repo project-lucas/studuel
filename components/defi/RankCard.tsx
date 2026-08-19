@@ -1,10 +1,8 @@
 'use client'
 
-import Link from 'next/link'
 import { Trophy } from 'lucide-react'
 import { rankFor, DIVISION_SPAN } from '@/lib/rank'
 import RankBadge from '@/components/defi/RankBadge'
-import { sfx } from '@/lib/sounds'
 
 /**
  * La cartouche de rang du HUD, JUSTE SOUS la pastille de niveau, en haut à
@@ -22,20 +20,23 @@ import { sfx } from '@/lib/sounds'
  * un QUATRIÈME matériau dans les 15 % hauts de l'écran (pastille crème, pilule
  * jaune pleine, disque crème, cartouche dorée) et le haut de l'arène se lisait
  * comme un patchwork. Ici c'est le BLASON qui porte la couleur du palier —
- * l'or reste l'encre des valeurs. Cliquable : même cible que le bouton Classé.
- * Au sommet (Maître, pas de division), la barre cède la place au total.
+ * l'or reste l'encre des valeurs. Au sommet (Maître, pas de division), la barre
+ * cède la place au total.
+ *
+ * ELLE N'EST PLUS CLIQUABLE. Elle ouvrait le « Match classé », supprimé le jour
+ * où Classé et Duel ont fusionné dans le bouton COMBAT. Un rang est de toute
+ * façon un ÉTAT, pas une action : le détail de ce total se lit maintenant dans
+ * la Route des trophées, en bas à droite de la rangée de combat.
  */
 export default function RankCard({ trophies }: { trophies: number }) {
   const rank = rankFor(trophies)
   const hasDivision = rank.ceiling !== null
 
   return (
-    <Link
-      href="/defi/jouer?mode=ranked"
-      onClick={() => sfx.tap()}
-      aria-label={`Ton rang : ${rank.label}, ${rank.inDivision} trophées sur ${DIVISION_SPAN} dans la division. Les trophées se gagnent en match classé : victoire +30, défaite −20 — ouvrir le match classé`}
-      title={`${trophies.toLocaleString('fr-FR')} trophées au total — gagnés en Classé (victoire +30, défaite −20)`}
-      className="olympe-glass olympe-press flex cursor-pointer items-center gap-2 rounded-[16px] py-1.5 pr-3 pl-2 focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+    <div
+      aria-label={`Ton rang : ${rank.label}, ${rank.inDivision} trophées sur ${DIVISION_SPAN} dans la division, ${trophies} au total`}
+      title={`${trophies.toLocaleString('fr-FR')} trophées au total — la somme de tous tes jeux`}
+      className="olympe-glass flex items-center gap-2 rounded-[16px] py-1.5 pr-3 pl-2"
     >
       <RankBadge
         rank={rank}
@@ -81,6 +82,6 @@ export default function RankCard({ trophies }: { trophies: number }) {
           </span>
         ) : null}
       </span>
-    </Link>
+    </div>
   )
 }

@@ -1,11 +1,14 @@
 'use client'
 
-import { RotateCcw, Trophy, Zap } from 'lucide-react'
+import { Ghost, RotateCcw, Trophy, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { XP_RULES } from '@/lib/xp'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { runAchieved, runTarget, type GameRun } from '@/lib/jeux/run'
+import type { GameTrophyOutcome } from '@/app/defi/actions'
+import { trophyBand } from '@/lib/trophy-road'
+import type { GameGhost } from '@/lib/jeux/ghost-server'
 
 /**
  * L'écran de fin d'un jeu de salon. Il raconte la partie DANS LA LANGUE DU JEU
@@ -23,6 +26,8 @@ export default function GameOutcome({
   isRecord,
   saved,
   awardedXp,
+  trophies,
+  ghost,
   onReplay,
 }: {
   format: GameFormat
@@ -34,6 +39,13 @@ export default function GameOutcome({
   saved: boolean | null
   /** XP réellement versée, telle que renvoyée par le serveur (null en attente). */
   awardedXp: number | null
+  /**
+   * Mouvement de trophées sur la Route (null en attente, ou quand le serveur
+   * n'a rien accordé : visiteur, couple hors catalogue, borne de rythme).
+   */
+  trophies?: GameTrophyOutcome
+  /** Le meilleur score d'un ami sur ce jeu, s'il y en a un. */
+  ghost?: GameGhost | null
   onReplay: () => void
   /**
    * Sortie du jeu. Désormais portée par la flèche retour du header ModeStage :
@@ -100,6 +112,9 @@ export default function GameOutcome({
         <Zap className="size-6" aria-hidden="true" /> +{xp} XP
       </div>
 
+      <TrophyLine trophies={trophies} />
+      <GhostLine ghost={ghost} score={run.score} />
+
       <p className="min-h-5 text-sm text-muted-foreground">
         {saved === true
           ? '✓ Journée validée — ta série continue 🔥'
@@ -115,6 +130,107 @@ export default function GameOutcome({
         <RotateCcw className="size-4" aria-hidden="true" /> Rejouer
       </Button>
     </div>
+  )
+}
+
+/**
+ * Le mouvement de trophées sur la Route. Trois choses, dans cet ordre : ce que
+ * la partie a rapporté, le compteur du jeu, et CE QUE VAUDRA LA PROCHAINE
+ * VICTOIRE.
+ *
+ * Cette dernière ligne est le cœur du système et non une décoration : c'est en
+ * lisant « +10 » ici et « +3 » sur son jeu habituel que l'élève arbitre tout
+ * seul, et va vers la compétence qu'il n'a jamais travaillée. Brawl Stars ne
+ * l'affiche pas ; une app scolaire le doit — on ne veut pas que l'arbitrage
+ * reste réservé à ceux qui devinent la courbe.
+ *
+ * La perte ne prend JAMAIS la couleur d'alerte : un trophée perdu n'est pas une
+ * erreur à corriger, et la doctrine du Défi est de ne pas punir l'échec au
+ * point de faire fuir un collégien.
+ */
+function TrophyLine({ trophies }: { trophies?: GameTrophyOutcome }) {
+  if (!trophies) return null
+
+  const gained = trophies.delta > 0
+  const shielded = trophies.delta === 0
+  const nextWin = trophyBand(trophies.after).win
+
+  return (
+    <div className="w-full space-y-1.5 rounded-2xl bg-card px-4 py-3 shadow-sm">
+      <div className="flex items-center justify-between gap-3">
+        <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+          <Trophy className="size-4" aria-hidden="true" /> Trophées
+        </span>
+        <span
+          className={cn(
+            'font-mono text-xl font-extrabold tabular-nums',
+            gained ? 'text-highlight' : 'text-muted-foreground',
+          )}
+        >
+          {gained ? '+' : ''}
+          {trophies.delta}
+        </span>
+      </div>
+
+      <div className="flex items-center justify-between gap-3 text-xs text-muted-foreground">
+        <span>
+          {shielded && !gained
+            ? 'Rien perdu — tu débutes sur ce jeu'
+            : `Total sur ce jeu : ${trophies.after}`}
+        </span>
+        <span>
+          Prochaine victoire{' '}
+          <strong className="font-mono font-bold text-foreground tabular-nums">
+            +{nextWin}
+          </strong>
+        </span>
+      </div>
+    </div>
+  )
+}
+
+/**
+ * LE FANTÔME — le meilleur score d'un ami sur ce jeu.
+ *
+ * Il tient la place des dix « adversaires » en dur du mode classé supprimé
+ * (Maxou, BrainZ, La Taupe…), tirés par une graine. Un collégien repère vite
+ * un adversaire scripté, et la ladder devient alors une machine à sous. Une
+ * ligne qui appartient à quelqu'un de réel, elle, continue de mordre.
+ *
+ * Le dépassement se célèbre ; l'échec ne se commente pas au-delà du chiffre —
+ * on affiche l'écart, jamais un jugement.
+ */
+function GhostLine({
+  ghost,
+  score,
+}: {
+  ghost?: GameGhost | null
+  score: number
+}) {
+  if (!ghost) return null
+
+  const beaten = score > ghost.score
+
+  return (
+    <p
+      className={cn(
+        'flex w-full items-center justify-center gap-1.5 rounded-2xl px-4 py-2 text-sm',
+        beaten
+          ? 'bg-highlight/20 font-bold text-foreground'
+          : 'text-muted-foreground',
+      )}
+    >
+      <Ghost className="size-4 shrink-0" aria-hidden="true" />
+      {beaten ? (
+        <span>
+          Tu viens de battre {ghost.name} ({ghost.score}) !
+        </span>
+      ) : (
+        <span>
+          {ghost.name} tient le record : {ghost.score}
+        </span>
+      )}
+    </p>
   )
 }
 

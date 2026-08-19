@@ -28,6 +28,7 @@ import {
   type TrainingRow,
 } from '@/lib/subject-template'
 import { buildChapterSupports, type SupportLesson } from '@/lib/chapter-supports'
+import { EXAM_PAPER_COLUMNS, parseExamPapers } from '@/lib/exam-papers'
 import { mindMapFromLessons } from '@/lib/mind-map-auto'
 import { getReviewItems } from '@/lib/srs'
 import { parseGradeStandings } from '@/lib/percentile'
@@ -180,6 +181,7 @@ export default async function SubjectPage({
     { data: defiEvents },
     { data: standingsRow },
     { data: themeRows },
+    { data: paperRows },
   ] =
     await Promise.all([
       supabase
@@ -248,6 +250,17 @@ export default async function SubjectPage({
         .eq('subject_id', subject.id)
         .eq('level', level)
         .returns<{ id: string; theme: string | null }[]>(),
+      // Annales (migrations 236/237), dans un select ISOLÉ et toléré pour la
+      // même raison que l'axe juste au-dessus : tant que la table n'existe pas,
+      // PostgREST répond « relation does not exist », `data` arrive à null et
+      // l'onglet Annales retombe sur l'épreuve blanche seule. Aucun filtre sur
+      // l'examen : c'est le NIVEAU qui le détermine (3e → brevet), et le
+      // recouper ici ferait deux vérités à tenir d'accord.
+      supabase
+        .from('exam_papers')
+        .select(EXAM_PAPER_COLUMNS)
+        .eq('subject_id', subject.id)
+        .eq('level', level),
     ])
 
   // Série 🔥 du header : jours (clés UTC) avec au moins une session, toutes
@@ -464,6 +477,7 @@ export default async function SubjectPage({
     chapters,
     training,
     bossPool,
+    papers: parseExamPapers(paperRows),
   }
 
   // Onglet demandé dans l'URL (`?onglet=boss` depuis la feuille Modes de jeu) —

@@ -9,7 +9,9 @@ import {
   reviewAfterAnswer,
   sanitizeReviewAnswers,
   REVANCHE_CLEAR_COINS,
+  REVIEW_STATE_COLUMNS,
   type ReviewAnswer,
+  type ReviewState,
 } from '@/lib/srs'
 import {
   normalizeOralList,
@@ -115,30 +117,31 @@ export async function recordReviewAnswers(
   const clean = sanitizeReviewAnswers(answers)
   if (clean.length === 0) return { saved: true }
 
-  // État actuel des items touchés (pour prolonger la série de succès).
-  // `due_date` et `in_revanche` sont indispensables : ils disent si l'item
-  // était RÉELLEMENT à revoir — un succès sur un item pas encore dû ne doit
-  // pas faire progresser le barème (cf. reviewAfterAnswer).
+  // État actuel des items touchés. Toutes les colonnes du moteur sont
+  // nécessaires : `due_at` dit si l'item était RÉELLEMENT à revoir (un succès
+  // sur un item pas encore dû ne fait pas monter la boîte), et les compteurs
+  // de passages doivent être PROLONGÉS et non recalculés — les relire à moitié
+  // remettrait `times_seen` à 1 à chaque session.
   const { data: existing } = await supabase
     .from('review_items')
-    .select('item_kind, item_id, streak, lapses, due_date, in_revanche')
+    .select(`item_kind, item_id, ${REVIEW_STATE_COLUMNS}`)
     .eq('user_id', user.id)
     .in('item_id', clean.map((a) => a.id))
   const prevByKey = new Map(
-    (existing ?? []).map((r) => [`${r.item_kind}:${r.item_id}`, r]),
+    (existing ?? []).map((r) => [`${r.item_kind}:${r.item_id}`, r as ReviewState]),
   )
 
-  const today = toDayKey(new Date())
+  const now = Date.now()
   const rows = clean.map((a) => {
     const prev = prevByKey.get(`${a.kind}:${a.id}`) ?? null
-    const next = reviewAfterAnswer(prev, a.good, today)
+    const next = reviewAfterAnswer(prev, a.good, now)
     return {
       user_id: user.id,
       item_kind: a.kind,
       item_id: a.id,
       subject: a.subject,
       ...next,
-      updated_at: new Date().toISOString(),
+      updated_at: new Date(now).toISOString(),
     }
   })
 

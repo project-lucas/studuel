@@ -1,78 +1,17 @@
-// Trophées & classement compétitif du Défi — logique pure, sans React ni
-// Supabase. C'est le cœur de la rétention « façon Clash Royale » : chaque match
-// classé fait bouger un compteur de trophées, qui situe l'élève dans un RANG
-// (`lib/rank.ts`) et, surtout, face à ses amis. Tout est testable ici ; les
-// composants et le serveur ne font qu'orchestrer.
+// CLASSEMENT du Défi — logique pure, sans React ni Supabase : le classement
+// des amis, le rival juste devant, ceux qu'on vient de doubler.
 //
-// L'échelle d'affichage (palier + division, façon LoL) vit dans `lib/rank.ts` —
-// elle a remplacé les anciennes « arènes scolaires », retirées d'ici pour qu'il
-// n'existe plus qu'UNE SEULE traduction trophées → palier. Deux échelles
-// concurrentes avaient déjà produit le bug « Bronze III » d'un côté et
-// « Salle d'étude » de l'autre pour le même total.
-
-import { DIVISION_SPAN, tierFloor } from './rank'
-
-// -------------------------------------------------------------- gain / perte
-// Barème Elo-lite : battre plus fort que soi rapporte gros, perdre contre plus
-// faible coûte cher, et l'inverse est amorti. Les pertes sont volontairement
-// plus douces que les gains (K asymétrique) — on récompense l'envie de jouer,
-// on ne punit pas l'échec au point de faire fuir un collégien.
-
-export const TROPHY_K = 40
-export const WIN_MIN = 12 // on gagne toujours au moins ça
-export const WIN_MAX = 40
-export const LOSS_MIN = 6 // on perd au moins ça…
-export const LOSS_MAX = 30 // …et jamais plus que ça
-
-function expectedScore(myTrophies: number, oppTrophies: number): number {
-  return 1 / (1 + Math.pow(10, (oppTrophies - myTrophies) / 400))
-}
-
-// Variation de trophées d'un match classé. `won` = victoire du joueur.
-// Renvoie un entier signé : positif si victoire, négatif si défaite.
-export function trophyDelta(
-  won: boolean,
-  myTrophies: number,
-  oppTrophies: number,
-): number {
-  const expected = expectedScore(myTrophies, oppTrophies)
-  const raw = TROPHY_K * ((won ? 1 : 0) - expected)
-  if (won) {
-    return Math.max(WIN_MIN, Math.min(WIN_MAX, Math.round(raw)))
-  }
-  return Math.min(-LOSS_MIN, Math.max(-LOSS_MAX, Math.round(raw)))
-}
-
-// Applique une variation, borné à 0 (on ne descend jamais sous zéro trophée).
-export function applyTrophyDelta(current: number, delta: number): number {
-  return Math.max(0, Math.floor(current) + Math.round(delta))
-}
-
-// ---------------------------------------------------- filet de perte « Bronze »
-// Un débutant à 20 trophées qui perd −20 retombait à zéro : décourageant, et
-// contraire à la doctrine « on récompense l'envie de jouer, on ne punit pas ».
-// Dans le palier BRONZE (0 → APEX du bronze), la défaite est amortie :
-//   • Bronze IV (0..DIVISION_SPAN-1) : aucune perte — filet total du débutant ;
-//   • Bronze III/II/I : la perte ne peut PAS faire redescendre sous le seuil de
-//     la division courante (paliers 100/200/300) — un cliquet qui verrouille la
-//     division atteinte.
-// Hors Bronze (Argent+), barème normal (la défaite mord pleinement).
-// MIROIR EXACT du SQL apply_ranked_match (migration 202) : toute évolution ici
-// doit toucher les deux — le serveur reste la source de persistance.
-const BRONZE_CEILING = tierFloor('argent') // seuil d'entrée d'Argent = fin du Bronze
-
-export function bronzeLossShield(before: number, delta: number): number {
-  // Les gains ne sont jamais amortis.
-  if (delta >= 0) return delta
-  const b = Math.max(0, Math.floor(before))
-  // Hors Bronze : la défaite s'applique telle quelle.
-  if (b >= BRONZE_CEILING) return delta
-  // Bronze IV : filet total, la défaite ne coûte aucun trophée.
-  if (b < DIVISION_SPAN) return 0
-  // Bronze III/II/I : on ne descend jamais sous le seuil de la division courante.
-  const gate = Math.floor(b / DIVISION_SPAN) * DIVISION_SPAN
-  return Math.min(0, Math.max(delta, gate - b))
-}
+// CE FICHIER NE FIXE PLUS LE BARÈME. Il portait l'Elo-lite du « match classé »
+// (K=40, gains 12→40, filet de perte Bronze) ; ce mode a fusionné dans le
+// bouton COMBAT, et les trophées se gagnent désormais par (matière × jeu) sur
+// une courbe par bandes — `lib/trophy-road.ts`, migration 238. Les fonctions
+// de l'ancien barème ont été SUPPRIMÉES plutôt que laissées en place : ce
+// dépôt a déjà payé le prix de deux échelles concurrentes (le bug « Bronze III »
+// d'un côté et « Salle d'étude » de l'autre pour le même total), et un barème
+// mort que rien n'appelle finit toujours par être rappelé par erreur.
+//
+// L'échelle d'affichage (palier + division, façon LoL) reste dans `lib/rank.ts`,
+// qui traduit le TOTAL — désormais la somme de tous les jeux.
 
 // -------------------------------------------------- adversaire du mode classé
 // En solo, le match classé se joue contre un fantôme. Son « niveau » de

@@ -19,7 +19,6 @@ import {
   HandHeart,
   CornerDownRight,
   Target,
-  Trophy,
   type LucideIcon,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -34,7 +33,6 @@ import LiveDuelMode from '@/components/LiveDuelMode'
 import ChronoMode from '@/components/ChronoMode'
 import SurvivalMode from '@/components/SurvivalMode'
 import BossMode from '@/components/BossMode'
-import RankedMode from '@/components/RankedMode'
 import RankedHero from '@/components/RankedHero'
 import CoopMode from '@/components/CoopMode'
 import ArenaBackButton from '@/components/defi/ArenaBackButton'
@@ -89,7 +87,6 @@ type Phase =
   | 'chrono'
   | 'survie'
   | 'boss'
-  | 'ranked'
   | 'coop'
 
 // Icône de chaque mode de jeu — sobres (Lucide), pas d'emoji.
@@ -163,14 +160,16 @@ export default function DefiHome({
   // Titres montrés en bannière (« Révise ton contrôle : … »).
   examFocus?: { titles: string[] } | null
   // Mode ouvert directement à l'arrivée (lien profond /defi/jouer?mode=…) :
-  // un id de mode, 'ranked', ou null pour l'accueil de la salle de jeu.
-  initialMode?: GameModeId | 'ranked' | null
+  // un id de mode, ou null pour l'accueil de la salle de jeu.
+  initialMode?: GameModeId | null
 }) {
   const router = useRouter()
   const [phase, setPhase] = useState<Phase>(initialMode ?? 'landing')
-  // Trophées suivis localement : le match classé les met à jour tout de suite
-  // (le serveur reste la source de vérité, re-tirée au retour à l'accueil).
-  const [trophies, setTrophies] = useState(trophiesProp)
+  // Trophées du serveur, en lecture seule ici. Ils étaient suivis localement
+  // parce que le match classé les faisait bouger sans quitter cette page ; ce
+  // mode a fusionné dans le bouton COMBAT de l'arène, et les trophées se
+  // gagnent désormais dans les tables de jeu.
+  const trophies = trophiesProp
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
   const [revealed, setRevealed] = useState(false)
@@ -365,19 +364,6 @@ export default function DefiHome({
       </ModeStage>
     )
   }
-  if (phase === 'ranked') {
-    return (
-      <ModeStage title="Match classé" Icon={Trophy} tone="dark" onExit={exitMode}>
-        <RankedMode
-          pool={pool}
-          myTrophies={trophies}
-          friends={friendRanks}
-          onResult={(after) => setTrophies(after)}
-          onExit={exitMode}
-        />
-      </ModeStage>
-    )
-  }
   if (phase === 'coop' && userId) {
     return (
       <ModeStage title="Mode Coop" Icon={HandHeart} tone="dark" onExit={exitMode}>
@@ -421,7 +407,7 @@ export default function DefiHome({
           players={rankedPlayers}
           onPlay={() => {
             sfx.open()
-            setPhase('ranked')
+            router.push('/defi')
           }}
         />
 

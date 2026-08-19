@@ -8,6 +8,7 @@ import { isExamYear } from '@/lib/annales'
 import { LESSON_FLOOR } from '@/lib/mastery'
 import type { ExamProximity } from '@/lib/next-exam'
 import type { ModeQuestion } from '@/lib/defi-modes'
+import type { ExamPaper } from '@/lib/exam-papers'
 import type { Standing } from '@/lib/percentile'
 
 // ---------------------------------------------------------------------------
@@ -454,4 +455,10 @@ export type SubjectTemplateData = {
   // Onglet « Boss » : pool de questions 100 % matière pour affronter le boss
   // de la matière (le même de la 6e à la Terminale — bossForSubject côté client).
   bossPool: ModeQuestion[]
+  /**
+   * Annales de la matière à ce niveau (migrations 236/237). Vide tant que les
+   * migrations ne sont pas jouées : l'onglet retombe alors sur l'épreuve
+   * blanche seule, sans rien casser.
+   */
+  papers: ExamPaper[]
 }

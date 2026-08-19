@@ -2769,6 +2769,58 @@ a:active > .arena-menu-row {
   color: #fff;
 }
 
+/* Le nom de matière qui se pose sous COMBAT quand la roulette s'arrête. Monté
+   par `key` (donc remonté à chaque changement), il rejoue son apparition : le
+   mot arrive APRÈS le tambour, ce qui donne au geste une fin. Sans lui, le
+   texte permutait sèchement pendant que la roulette tournait encore, et les
+   deux mouvements se marchaient dessus. */
+@keyframes subject-swap-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.subject-swap {
+  animation: subject-swap-in 240ms var(--ease) both;
+  animation-delay: 90ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  .subject-swap {
+    animation: none;
+  }
+}
+
+/* MÉDAILLON DE MATIÈRE (roulette du duel, feuille de la Route des trophées) :
+   le cadre de gemme du HUD — liseré or, contour encre, ombre dure — posé sur un
+   cœur CLAIR, le pastel de la matière (`subjectPastel`).
+
+   POURQUOI UN FOND CLAIR SUR UN ÉCRAN SOMBRE. Les vignettes de matières sont
+   dessinées POUR le crème des cartes de Réviser : contours d'encre marine,
+   aplats saturés, aucune lueur. Posées à même le violet profond de l'arène,
+   leurs contours se confondaient avec le fond et il ne restait qu'une tache —
+   on ne reconnaissait plus la matière. Le médaillon leur rend leur ground, et
+   la teinte pastel donne au passage une couleur PROPRE à chaque matière : la
+   roulette change de couleur en tournant, ce qu'aucun libellé ne fait aussi
+   vite.
+
+   Le fond est posé en ligne (`style`) : il vient de la donnée (`subjects.color`),
+   pas d'une classe — dix teintes en dur ici les auraient dupliquées. */
+.subject-medallion {
+  display: grid;
+  place-items: center;
+  border-radius: 9999px;
+  border: 2px solid var(--highlight);
+  box-shadow:
+    0 0 0 2px var(--foreground),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -5px 9px rgba(90, 60, 20, 0.14),
+    0 3px 0 var(--foreground);
+}
+
 /* Effet « marbre » : crème, très léger voile gris-bleu diagonal, liseré or 2px,
    reflet interne en haut, ombre dure. */
 .olympe-marble {
@@ -3489,6 +3541,15 @@ a:active > .arena-menu-row {
   --jeu-ink: oklch(0.99 0.005 250);
   --jeu-surface: oklch(0.945 0.008 250);
   --jeu-glow: oklch(0.6 0.05 250 / 0.22);
+}
+.jeu-programme {
+  /* « Ton programme » — le VIOLET de la marque, seul jeu à le porter. Les 17
+     robes de salon sont autant de mondes ; celle-ci ramène à l'école, et
+     signale d'un coup d'œil que la partie porte sur le vrai cours. */
+  --jeu-accent: oklch(0.52 0.2 295);
+  --jeu-ink: oklch(0.99 0.005 295);
+  --jeu-surface: oklch(0.955 0.018 295);
+  --jeu-glow: oklch(0.7 0.16 295 / 0.26);
 }
 
 /* La table de jeu : le fond du thème + son halo d'ambiance en haut de scène.

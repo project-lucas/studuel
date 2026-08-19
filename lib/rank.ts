@@ -49,11 +49,20 @@ export const RANK_TIERS: readonly RankTier[] = [
 // Une division vaut DIVISION_SPAN trophées ; chaque palier hors sommet en
 // compte DIVISIONS_PER_TIER. Le sommet commence donc à
 // (nb paliers à divisions) × DIVISIONS_PER_TIER × DIVISION_SPAN trophées.
-// Gardé simple et rond (100 trophées/division) : ~3 à 8 victoires classées par
-// division avec le barème Elo-lite (gain 12→40), ce qui donne une montée
-// lisible sans être interminable.
+//
+// RECALIBRÉ POUR LA ROUTE DES TROPHÉES (migration 238). L'échelle valait
+// 100 trophées la division, calée sur un compteur global unique qui plafonnait
+// vers 1 000 avec le barème Elo. Le total est désormais une SOMME : 7 matières
+// × 3 jeux, chacun se stabilisant vers 500-700 selon le niveau de l'élève, soit
+// un ordre de grandeur de 10 000 pour qui joue tout. À 100 la division, tout le
+// monde aurait été Maître en trois semaines et le rang n'aurait plus rien dit.
+//
+// 500 la division place donc le sommet à 10 000 : Argent à 2 000, Or à 4 000,
+// Platine à 6 000, Diamant à 8 000. Une division reste lente à dessein — c'est
+// l'identité de saison, pas le retour immédiat. Le retour immédiat, c'est le
+// compteur du jeu, qui bouge à CHAQUE partie (cf. lib/trophy-road).
 
-export const DIVISION_SPAN = 100
+export const DIVISION_SPAN = 500
 export const DIVISIONS_PER_TIER = 4
 
 // Les paliers qui portent des divisions, dans l'ordre (tout sauf le sommet).

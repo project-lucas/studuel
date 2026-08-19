@@ -4,8 +4,19 @@ import { useState } from 'react'
 import Image from 'next/image'
 import type { Rank, RankTierId } from '@/lib/rank'
 
+/**
+ * Ce dont le blason a réellement besoin. Volontairement PLUS ÉTROIT que `Rank` :
+ * le rang par matière (`lib/subject-rank`) a la même forme mais pas la même
+ * échelle (trois divisions au lieu de quatre), et les deux doivent pouvoir
+ * s'afficher avec le même blason — un élève reconnaît « Or » du premier coup
+ * d'œil, qu'il regarde son rang de maths ou son rang global. Exiger `Rank` ici
+ * aurait obligé à un second composant, donc à deux vocabulaires visuels pour
+ * une même idée.
+ */
+export type BadgeRank = Pick<Rank, 'tier' | 'roman' | 'label'>
+
 interface RankBadgeProps {
-  rank: Rank
+  rank: BadgeRank
   /** Côté du blason en pixels. */
   size?: number
   /** Masque la pastille de division (utile pour un rendu compact). */

@@ -13,9 +13,10 @@ import {
 } from '@/components/jeux/GameShell'
 import { MECHANIC_ICON } from '@/components/jeux/icons'
 import { gameSfx, sfx, buzz } from '@/lib/sounds'
-import { recordChallenge } from '@/app/defi/actions'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { readGameBest, writeGameBest } from '@/lib/jeux/records'
+import { useGameReport } from '@/lib/jeux/use-game-report'
+import type { GameGhost } from '@/lib/jeux/ghost-server'
 import type { CountdownPuzzle } from '@/lib/jeux/compte-est-bon'
 import {
   answer as applyAnswer,
@@ -47,12 +48,15 @@ export default function CountdownTable({
   name,
   subject,
   subjectEmoji,
+  ghost,
 }: {
   format: GameFormat
   puzzles: CountdownPuzzle[]
   name: string
   subject: string
   subjectEmoji: string
+  /** Meilleur score d'un ami sur ce jeu, à battre (lib/jeux/ghost-server). */
+  ghost?: GameGhost | null
 }) {
   const router = useRouter()
   const audio = useMemo(() => gameSfx(format.timbre), [format.timbre])
@@ -65,12 +69,11 @@ export default function CountdownTable({
   const [revealed, setRevealed] = useState(false)
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
-  const [saved, setSaved] = useState<boolean | null>(null)
-  // XP réellement versée, renvoyée par le serveur (null tant qu'il n'a pas répondu).
-  const [awardedXp, setAwardedXp] = useState<number | null>(null)
-  // Numéro de la partie en cours. Une réponse serveur qui arrive APRÈS le
-  // lancement de la partie suivante ne doit pas repeindre son écran de fin.
-  const partieRef = useRef(0)
+  // XP, série et trophées : un seul compte rendu partagé par les quatre tables.
+  const { saved, awardedXp, trophies, report, reset } = useGameReport(
+    subject,
+    format.id,
+  )
   const [left, setLeft] = useState<number | null>(null)
 
   const runRef = useRef(run)
@@ -106,18 +109,9 @@ export default function CountdownTable({
       if (writeGameBest(format.id, final.score)) setIsRecord(true)
       setBest(Math.max(prev, final.score))
 
-      const partie = partieRef.current
-      recordChallenge(final.correct, final.answered)
-        .then((r) => {
-          if (partie !== partieRef.current) return
-          setSaved(r.saved)
-          if (r.saved) setAwardedXp(r.xp)
-        })
-        .catch(() => {
-          if (partie === partieRef.current) setSaved(false)
-        })
+      report(final)
     },
-    [audio, format.id],
+    [audio, format.id, report],
   )
 
   // Un tirage se termine : trouvé, ou temps écoulé. Dans les deux cas on marque
@@ -204,15 +198,13 @@ export default function CountdownTable({
     runRef.current = fresh
     setRun(fresh)
     setRevealed(false)
-    setSaved(null)
-    setAwardedXp(null)
-    partieRef.current += 1
+    reset()
     setIsRecord(false)
     setIndex((n) => n + 1)
     leftRef.current = questionSeconds(format, fresh)
     setLeft(leftRef.current)
     setPhase('playing')
-  }, [format])
+  }, [format, reset])
 
   useEffect(() => {
     if (phase !== 'countdown') return
@@ -264,6 +256,8 @@ export default function CountdownTable({
             isRecord={isRecord}
             saved={saved}
             awardedXp={awardedXp}
+            trophies={trophies}
+            ghost={ghost}
             onReplay={startCountdown}
             onExit={exit}
           />

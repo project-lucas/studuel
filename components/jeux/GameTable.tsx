@@ -15,10 +15,11 @@ import { MECHANIC_ICON } from '@/components/jeux/icons'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx, buzz } from '@/lib/sounds'
 import { AUTO_ADVANCE_MS } from '@/lib/juice'
-import { recordChallenge } from '@/app/defi/actions'
 import type { ModeQuestion } from '@/lib/defi-modes'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { readGameBest, writeGameBest } from '@/lib/jeux/records'
+import { useGameReport } from '@/lib/jeux/use-game-report'
+import type { GameGhost } from '@/lib/jeux/ghost-server'
 import {
   answer as applyAnswer,
   globalSeconds,
@@ -54,12 +55,15 @@ export default function GameTable({
   name,
   subject,
   subjectEmoji,
+  ghost,
 }: {
   format: GameFormat
   pool: ModeQuestion[]
   name: string
   subject: string
   subjectEmoji: string
+  /** Meilleur score d'un ami sur ce jeu, à battre (lib/jeux/ghost-server). */
+  ghost?: GameGhost | null
 }) {
   const router = useRouter()
   const audio = useMemo(() => gameSfx(format.timbre), [format.timbre])
@@ -73,12 +77,11 @@ export default function GameTable({
   const [shake, setShake] = useState(0)
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
-  const [saved, setSaved] = useState<boolean | null>(null)
-  // XP réellement versée, renvoyée par le serveur (null tant qu'il n'a pas répondu).
-  const [awardedXp, setAwardedXp] = useState<number | null>(null)
-  // Numéro de la partie en cours. Une réponse serveur qui arrive APRÈS le
-  // lancement de la partie suivante ne doit pas repeindre son écran de fin.
-  const partieRef = useRef(0)
+  // XP, série et trophées : un seul compte rendu partagé par les quatre tables.
+  const { saved, awardedXp, trophies, report, reset } = useGameReport(
+    subject,
+    format.id,
+  )
   // Chrono de la question courante et de la course, en secondes (fractionnaires).
   const [questionLeft, setQuestionLeft] = useState<number | null>(null)
   const [globalLeft, setGlobalLeft] = useState<number | null>(null)
@@ -144,22 +147,11 @@ export default function GameTable({
       if (writeGameBest(format.id, final.score)) setIsRecord(true)
       setBest(Math.max(prev, final.score))
 
-      // L'XP est recalculée côté serveur depuis score/total. Pas de mode passé :
-      // les bonus de mode appartiennent à l'Arène, pas aux salons. Et pas de
-      // file de révision non plus — un jeu de salon pioche dans sa propre banque
-      // (capitales, faux amis…), pas dans le programme de l'élève.
-      const partie = partieRef.current
-      recordChallenge(final.correct, final.answered)
-        .then((r) => {
-          if (partie !== partieRef.current) return
-          setSaved(r.saved)
-          if (r.saved) setAwardedXp(r.xp)
-        })
-        .catch(() => {
-          if (partie === partieRef.current) setSaved(false)
-        })
+      // Pas de file de révision ici — un jeu de salon pioche dans sa propre
+      // banque (capitales, faux amis…), pas dans le programme de l'élève.
+      report(final)
     },
-    [audio, format.id],
+    [audio, format.id, report],
   )
 
   // Applique une transition du moteur et enchaîne (ou termine).
@@ -259,16 +251,14 @@ export default function GameTable({
     setRun(fresh)
     setSelected(null)
     setRevealed(false)
-    setSaved(null)
-    setAwardedXp(null)
-    partieRef.current += 1
+    reset()
     setIsRecord(false)
     setQIndex((n) => n + 1) // on repart ailleurs dans la banque
     globalLeftRef.current = sprintSeconds
     setGlobalLeft(sprintSeconds)
     armQuestion(fresh)
     setPhase('playing')
-  }, [format, sprintSeconds, armQuestion])
+  }, [format, sprintSeconds, armQuestion, reset])
 
   // Décompte 3 · 2 · 1 · GO — la respiration qui sépare « je lis la règle » de
   // « je joue ». Chaque jeu la sonne dans son propre timbre.
@@ -323,6 +313,8 @@ export default function GameTable({
             isRecord={isRecord}
             saved={saved}
             awardedXp={awardedXp}
+            trophies={trophies}
+            ghost={ghost}
             onReplay={startCountdown}
             onExit={exit}
           />

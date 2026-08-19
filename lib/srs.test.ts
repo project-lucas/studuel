@@ -2,13 +2,13 @@ import { describe, it, expect } from 'vitest'
 import {
   SRS_INTERVALS,
   addDays,
-  intervalForStreak,
   reviewAfterAnswer,
   reviewQueue,
   countsBySubject,
   sanitizeReviewAnswers,
   type ReviewItem,
   type ReviewAnswer,
+  type ReviewState,
 } from '@/lib/srs'
 
 const item = (over: Partial<ReviewItem>): ReviewItem => ({
@@ -30,119 +30,145 @@ describe('addDays', () => {
   })
 })
 
-describe('intervalForStreak', () => {
-  it('suit les paliers J+1, J+3, J+7, J+16, J+35', () => {
-    expect(intervalForStreak(1)).toBe(1)
-    expect(intervalForStreak(2)).toBe(3)
-    expect(intervalForStreak(3)).toBe(7)
-    expect(intervalForStreak(4)).toBe(16)
-    expect(intervalForStreak(5)).toBe(35)
-  })
-
-  it('plafonne au dernier palier sur les longues séries', () => {
-    expect(intervalForStreak(12)).toBe(SRS_INTERVALS[SRS_INTERVALS.length - 1])
+describe('SRS_INTERVALS', () => {
+  it('suit les paliers de Leitner J+1, J+3, J+7, J+14, J+30', () => {
+    // Réexportés depuis le moteur : une seule table d'intervalles dans l'app,
+    // sinon la valeur écrite ici dériverait au premier réglage pédagogique.
+    expect([...SRS_INTERVALS]).toEqual([1, 3, 7, 14, 30])
   })
 })
 
 describe('reviewAfterAnswer', () => {
-  const today = '2026-07-08'
+  // Le barème lui-même est éprouvé dans lib/questions/engine.test.ts (boîtes,
+  // intervalles, garde anti-bachotage). Ce qui se teste ICI, c'est la
+  // TRADUCTION : la ligne `review_items` dans un sens, l'objet du moteur dans
+  // l'autre — et la Revanche, la seule règle que le moteur ne connaît pas.
+  const NOW = Date.UTC(2026, 6, 8, 9, 0, 0)
+  const DAY = 24 * 60 * 60 * 1000
 
-  it('premier passage réussi : J+1, hors Revanche', () => {
-    expect(reviewAfterAnswer(null, true, today)).toEqual({
-      streak: 1,
-      lapses: 0,
-      due_date: '2026-07-09',
-      in_revanche: false,
-    })
+  const prev = (over: Partial<ReviewState> = {}): ReviewState => ({
+    box: 1,
+    streak: 0,
+    lapses: 0,
+    times_seen: 0,
+    times_correct: 0,
+    times_wrong: 0,
+    due_at: new Date(NOW).toISOString(),
+    last_seen_at: null,
+    in_revanche: false,
+    ...over,
+  })
+
+  it('premier passage réussi : boîte 2, J+3, hors Revanche', () => {
+    const after = reviewAfterAnswer(null, true, NOW)
+    expect(after.box).toBe(2)
+    expect(after.streak).toBe(1)
+    expect(after.times_seen).toBe(1)
+    expect(after.times_correct).toBe(1)
+    expect(after.in_revanche).toBe(false)
+    expect(Date.parse(after.due_at)).toBe(NOW + 3 * DAY)
   })
 
   it('les succès consécutifs éloignent la prochaine révision', () => {
-    // Item bien ÉCHU aujourd'hui : le succès doit faire progresser le barème.
+    // Item bien ÉCHU : le succès doit faire progresser le barème.
     const after = reviewAfterAnswer(
-      { streak: 2, lapses: 1, due_date: today, in_revanche: false },
+      prev({ box: 2, streak: 2, lapses: 1, times_seen: 3, times_wrong: 1 }),
       true,
-      today,
+      NOW,
     )
+    expect(after.box).toBe(3)
     expect(after.streak).toBe(3)
-    expect(after.due_date).toBe(addDays(today, 7))
+    expect(Date.parse(after.due_at)).toBe(NOW + 7 * DAY)
     expect(after.lapses).toBe(1) // les erreurs passées restent comptées
   })
 
-  it("une erreur réinitialise la série, revient demain et entre dans la Revanche", () => {
-    const prev = { streak: 4, lapses: 0, due_date: addDays(today, 30), in_revanche: false }
-    expect(reviewAfterAnswer(prev, false, today)).toEqual({
-      streak: 0,
-      lapses: 1,
-      due_date: '2026-07-09',
-      in_revanche: true,
-    })
+  it('une erreur renvoie en boîte 1, revient dans 10 min et entre dans la Revanche', () => {
+    const after = reviewAfterAnswer(
+      prev({ box: 4, streak: 4, due_at: new Date(NOW + 30 * DAY).toISOString() }),
+      false,
+      NOW,
+    )
+    expect(after.box).toBe(1)
+    expect(after.streak).toBe(0)
+    expect(after.lapses).toBe(1)
+    expect(after.in_revanche).toBe(true)
+    // L'échéance courte que la colonne DATE de la 021 ne savait pas porter.
+    expect(Date.parse(after.due_at)).toBe(NOW + 10 * 60 * 1000)
   })
 
   it('une bonne réponse venge une erreur (sortie de la Revanche)', () => {
-    const failed = reviewAfterAnswer(null, false, today)
+    const failed = reviewAfterAnswer(null, false, NOW)
     expect(failed.in_revanche).toBe(true)
-    const avenged = reviewAfterAnswer(failed, true, addDays(today, 1))
+
+    const avenged = reviewAfterAnswer(failed, true, NOW + 11 * 60 * 1000)
     expect(avenged.in_revanche).toBe(false)
     expect(avenged.streak).toBe(1)
+    expect(avenged.box).toBe(2)
+  })
+
+  it('venge une erreur MÊME avant l’échéance : la Revanche n’est pas la boîte', () => {
+    // Différence de nature assumée : la boîte de Leitner mesure la mémoire à
+    // long terme (l'espacement compte), la Revanche est un cahier d'erreurs
+    // qu'on vient rayer (réussir suffit).
+    const enRevanche = prev({
+      box: 1,
+      lapses: 1,
+      times_seen: 1,
+      times_wrong: 1,
+      in_revanche: true,
+      due_at: new Date(NOW + DAY).toISOString(), // pas encore dû
+    })
+
+    const avenged = reviewAfterAnswer(enRevanche, true, NOW)
+    expect(avenged.in_revanche).toBe(false)
+    // La boîte, elle, ne bouge pas : l'échéance n'était pas tombée.
+    expect(avenged.box).toBe(1)
   })
 
   it('n’avance PAS le barème sur un succès avant l’échéance', () => {
     // Le bug historique : le même item revenait via plusieurs modes de jeu le
     // même jour (quiz de la leçon, Boss, Chrono, Blitz, Duel…) et chaque bonne
-    // réponse allongeait l'intervalle — J+1 à J+35 en une seule session.
-    const prev = {
+    // réponse allongeait l'intervalle.
+    const pasDu = prev({
+      box: 2,
       streak: 1,
-      lapses: 0,
-      due_date: addDays(today, 1), // pas encore dû
-      in_revanche: false,
-    }
+      times_seen: 1,
+      times_correct: 1,
+      due_at: new Date(NOW + DAY).toISOString(),
+    })
 
-    expect(reviewAfterAnswer(prev, true, today)).toEqual(prev)
+    const after = reviewAfterAnswer(pasDu, true, NOW)
+    expect(after.box).toBe(2)
+    expect(after.due_at).toBe(pasDu.due_at)
+    // Le passage compte quand même — c'est ce que l'ancienne version perdait.
+    expect(after.times_seen).toBe(2)
   })
 
   it('le bachotage d’une journée ne peut plus atteindre le palier maximal', () => {
-    // Rejoue 5 succès d'affilée le MÊME jour, comme le ferait un élève qui
-    // enchaîne les modes : l'item doit rester à J+1, pas filer à J+35.
-    let state = reviewAfterAnswer(null, true, today)
-    const apresPremier = { ...state }
-    for (let i = 0; i < 4; i++) state = reviewAfterAnswer(state, true, today)
+    // Rejoue 5 succès d'affilée dans l'heure, comme le ferait un élève qui
+    // enchaîne les modes : l'item doit rester en boîte 2.
+    let state = reviewAfterAnswer(null, true, NOW)
+    const echeance = state.due_at
+    for (let i = 1; i <= 4; i++) {
+      state = reviewAfterAnswer(state, true, NOW + i * 60_000)
+    }
 
-    expect(state).toEqual(apresPremier)
-    expect(state.due_date).toBe(addDays(today, 1))
-    expect(state.streak).toBe(1)
+    expect(state.box).toBe(2)
+    expect(state.due_at).toBe(echeance)
+    expect(state.times_seen).toBe(5)
   })
 
   it('mais un échec compte TOUJOURS, même avant l’échéance', () => {
     // Oublier est une information : on ne l'ignore pas sous prétexte que
     // l'item n'était pas encore programmé.
-    const prev = {
-      streak: 4,
-      lapses: 0,
-      due_date: addDays(today, 30),
-      in_revanche: false,
-    }
-
-    const after = reviewAfterAnswer(prev, false, today)
-
+    const after = reviewAfterAnswer(
+      prev({ box: 5, streak: 4, due_at: new Date(NOW + 30 * DAY).toISOString() }),
+      false,
+      NOW,
+    )
+    expect(after.box).toBe(1)
     expect(after.streak).toBe(0)
     expect(after.in_revanche).toBe(true)
-    expect(after.due_date).toBe(addDays(today, 1))
-  })
-
-  it('un item en Revanche reste jouable le jour même', () => {
-    // La Revanche est dans la file par construction : la garde d'échéance ne
-    // doit pas empêcher de la venger tout de suite.
-    const enRevanche = {
-      streak: 0,
-      lapses: 1,
-      due_date: addDays(today, 1),
-      in_revanche: true,
-    }
-
-    const avenged = reviewAfterAnswer(enRevanche, true, today)
-
-    expect(avenged.in_revanche).toBe(false)
-    expect(avenged.streak).toBe(1)
   })
 })
 

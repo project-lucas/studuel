@@ -5,8 +5,8 @@ import { LEAGUE_TIERS, MAX_TIER } from './league'
 
 describe('rankPalier', () => {
   it('détecte le franchissement d’un palier vers le haut', () => {
-    // Arrange : 390 → 410 franchit le seuil 400 (Bronze I → Argent IV).
-    const palier = rankPalier(390, 410)
+    // Arrange : 1 990 → 2 010 franchit le seuil 2 000 (Bronze I → Argent IV).
+    const palier = rankPalier(1990, 2010)
 
     // Assert
     expect(palier).not.toBeNull()
@@ -16,19 +16,19 @@ describe('rankPalier', () => {
   })
 
   it('fête le palier le plus haut si plusieurs seuils sautent d’un coup', () => {
-    expect(rankPalier(390, 1250)?.id).toBe('rang:platine')
+    expect(rankPalier(1990, 6250)?.id).toBe('rang:platine')
   })
 
   it('ne fête PAS un simple changement de division', () => {
-    // 50 → 150 passe de Bronze IV à Bronze III : même palier, pas de bulle
-    // plein écran (sinon une célébration tous les 100 trophées).
-    expect(rankPalier(50, 150)).toBeNull()
+    // 250 → 750 passe de Bronze IV à Bronze III : même palier, pas de bulle
+    // plein écran (sinon une célébration à chaque division).
+    expect(rankPalier(250, 750)).toBeNull()
   })
 
   it('ne fête rien sans franchissement ni en descente', () => {
-    expect(rankPalier(410, 420)).toBeNull() // même palier
-    expect(rankPalier(410, 390)).toBeNull() // descente
-    expect(rankPalier(400, 400)).toBeNull() // aucun mouvement
+    expect(rankPalier(2010, 2020)).toBeNull() // même palier
+    expect(rankPalier(2010, 1990)).toBeNull() // descente
+    expect(rankPalier(2000, 2000)).toBeNull() // aucun mouvement
   })
 
   it('couvre chaque seuil de palier (hors premier, qui démarre à 0)', () => {

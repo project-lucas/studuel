@@ -1,11 +1,12 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { Gamepad2, ChevronLeft, ChevronRight, Swords, X } from 'lucide-react'
+import { Gamepad2, Swords, X } from 'lucide-react'
 import ModeTicketCard from '@/components/defi/ModeTicket'
+import SubjectRoulette from '@/components/defi/SubjectRoulette'
 import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
 import { useRecords } from '@/lib/jeux/use-records'
@@ -37,145 +38,6 @@ function TicketList({ tickets }: { tickets: ModeTicket[] }) {
         />
       ))}
     </>
-  )
-}
-
-/**
- * La roulette de matières : une rangée de crans qui défile (snap-scroll), avec
- * deux chevrons pour la faire tourner cran par cran. Le cran centré est le
- * « sélectionné » — il pilote les jeux affichés dessous. On peut aussi taper un
- * cran directement. La sélection suit le scroll (on lit le cran le plus proche
- * du centre), pour un vrai ressenti de roulette.
- */
-function SubjectRoulette({
-  activeIndex,
-  onSelect,
-}: {
-  activeIndex: number
-  onSelect: (index: number) => void
-}) {
-  const trackRef = useRef<HTMLDivElement>(null)
-  const cardRefs = useRef<(HTMLButtonElement | null)[]>([])
-  const rafRef = useRef<number | null>(null)
-
-  // Centre le cran d'index donné dans la piste (scroll horizontal contrôlé,
-  // jamais scrollIntoView qui ferait aussi bouger la page verticalement).
-  const centerCard = useCallback((index: number) => {
-    const track = trackRef.current
-    const card = cardRefs.current[index]
-    if (!track || !card) return
-    const left =
-      card.offsetLeft - (track.clientWidth - card.clientWidth) / 2
-    track.scrollTo({ left, behavior: 'smooth' })
-  }, [])
-
-  // Au scroll, on élit le cran dont le centre est le plus proche du centre de
-  // la piste et on le sélectionne (throttlé à un rAF).
-  const onScroll = useCallback(() => {
-    if (rafRef.current !== null) return
-    rafRef.current = requestAnimationFrame(() => {
-      rafRef.current = null
-      const track = trackRef.current
-      if (!track) return
-      const mid = track.scrollLeft + track.clientWidth / 2
-      let best = 0
-      let bestDist = Infinity
-      cardRefs.current.forEach((card, i) => {
-        if (!card) return
-        const center = card.offsetLeft + card.clientWidth / 2
-        const dist = Math.abs(center - mid)
-        if (dist < bestDist) {
-          bestDist = dist
-          best = i
-        }
-      })
-      onSelect(best)
-    })
-  }, [onSelect])
-
-  useEffect(() => {
-    return () => {
-      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current)
-    }
-  }, [])
-
-  const step = (delta: number) => {
-    const next = Math.max(
-      0,
-      Math.min(ROULETTE_SUBJECTS.length - 1, activeIndex + delta),
-    )
-    if (next === activeIndex) return
-    sfx.tap()
-    onSelect(next)
-    centerCard(next)
-  }
-
-  return (
-    <div className="flex items-center gap-1 px-2">
-      <button
-        type="button"
-        onClick={() => step(-1)}
-        disabled={activeIndex === 0}
-        aria-label="Matière précédente"
-        className="grid size-9 shrink-0 place-items-center rounded-full text-white/70 transition-colors hover:bg-white/10 disabled:opacity-30 active:scale-90"
-      >
-        <ChevronLeft className="size-5" strokeWidth={2.6} aria-hidden="true" />
-      </button>
-
-      <div
-        ref={trackRef}
-        onScroll={onScroll}
-        role="tablist"
-        aria-label="Choisis ta matière"
-        className="flex flex-1 snap-x snap-mandatory gap-2.5 overflow-x-auto scroll-px-4 px-[38%] py-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-      >
-        {ROULETTE_SUBJECTS.map((s, i) => {
-          const isActive = i === activeIndex
-          return (
-            <button
-              key={s.subject}
-              ref={(el) => {
-                cardRefs.current[i] = el
-              }}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              onClick={() => {
-                sfx.tap()
-                onSelect(i)
-                centerCard(i)
-              }}
-              className={`flex aspect-square w-[4.75rem] shrink-0 snap-center flex-col items-center justify-center gap-1 rounded-2xl border p-1 transition-all ${
-                isActive
-                  ? 'scale-105 border-highlight bg-highlight/15 shadow-[0_8px_20px_-8px_rgba(0,0,0,0.8)]'
-                  : 'scale-90 border-white/10 bg-white/5 opacity-70'
-              }`}
-            >
-              <span className="text-2xl leading-none" aria-hidden="true">
-                {s.emoji}
-              </span>
-              <span
-                className={`font-heading line-clamp-1 text-[10px] font-extrabold ${
-                  isActive ? 'text-white' : 'text-white/70'
-                }`}
-              >
-                {s.subject}
-              </span>
-            </button>
-          )
-        })}
-      </div>
-
-      <button
-        type="button"
-        onClick={() => step(1)}
-        disabled={activeIndex === ROULETTE_SUBJECTS.length - 1}
-        aria-label="Matière suivante"
-        className="grid size-9 shrink-0 place-items-center rounded-full text-white/70 transition-colors hover:bg-white/10 disabled:opacity-30 active:scale-90"
-      >
-        <ChevronRight className="size-5" strokeWidth={2.6} aria-hidden="true" />
-      </button>
-    </div>
   )
 }
 
@@ -224,11 +86,17 @@ export default function ModesSheet({
 
   return (
     <>
-      {/* Le déclencheur : TUILE CARRÉE de flanc, à droite du bouton de combat
-          (Classé tient l'autre flanc, même gabarit, même robe `.arena-flank`).
-          Sombre exprès : dans la rangée, seul l'or du Duel appelle. La liste
-          des modes (Blitz · Chrono · Survie · Boss) ne tient pas dans un carré
-          de 4,5 rem — elle vit dans l'`aria-label` et l'infobulle. */}
+      {/* Le déclencheur : TUILE DE FLANC, jumelle de la roulette qui tient
+          l'autre bord — même largeur, même robe `.arena-flank`, même rayon, et
+          la même grammaire interne : UN OBJET ROND centré, puis ce qui le
+          nomme. À gauche une gemme violette (la robe des commandes du HUD), à
+          droite un médaillon pastel (le visage d'une matière) : deux cœurs
+          différents dans le même cadre, ce qui dit d'un coup d'œil que l'un
+          ouvre un écran et que l'autre porte un choix.
+
+          Sombre exprès : dans la rangée, seul l'or de COMBAT appelle. La liste
+          des modes (Blitz · Chrono · Survie) ne tient pas dans 4,75 rem — elle
+          vit dans l'`aria-label` et l'infobulle. */}
       <button
         type="button"
         onClick={() => {
@@ -238,10 +106,15 @@ export default function ModesSheet({
         aria-haspopup="dialog"
         aria-label="Modes de jeu — jeux par matière, Blitz, Chrono, Survie et boss"
         title="Modes de jeu — Blitz, Chrono, Survie, Boss"
-        className="arena-flank olympe-press flex w-[4.5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-1 rounded-lg px-1 py-2 focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+        className="arena-flank olympe-press flex w-[4.75rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-2xl px-1 py-2 focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
-        <Gamepad2 className="size-5 shrink-0" strokeWidth={2.4} aria-hidden="true" />
-        <span className="font-heading text-[0.7rem] leading-none font-extrabold">
+        <span
+          className="olympe-gem grid size-9 shrink-0 place-items-center rounded-full"
+          aria-hidden="true"
+        >
+          <Gamepad2 className="size-[18px]" strokeWidth={2.6} />
+        </span>
+        <span className="font-heading text-[0.62rem] leading-none font-extrabold tracking-wide uppercase">
           Modes
         </span>
       </button>
@@ -320,6 +193,7 @@ export default function ModesSheet({
                   <div className="shrink-0 border-y border-white/10 bg-black/15 py-1">
                     <div className="mx-auto w-full max-w-md">
                       <SubjectRoulette
+                        items={ROULETTE_SUBJECTS}
                         activeIndex={activeIndex}
                         onSelect={setActiveIndex}
                       />

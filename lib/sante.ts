@@ -460,10 +460,73 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     id: '234',
     fichier: '234_chapitre_axe.sql',
     feature:
-      'L’axe du programme sur chaque chapitre : la page matière range ses chapitres en sections repliables (les 8 axes d’anglais Tle, les 7 thèmes de SVT) au lieu d’une liste à plat',
+      'L’axe du programme sur chaque chapitre : la page matière range ses chapitres en sections repliables (les 6 axes d’anglais Tle, les 7 thèmes de SVT) au lieu d’une liste à plat',
     siAbsente:
       'Les chapitres restent affichés à plat, comme aujourd’hui : 28 lignes d’affilée en anglais de Terminale. Rien ne casse (le select de l’axe est isolé et toléré, et `groupChaptersByTheme` retombe sur un groupe unique), mais le regroupement ne s’allumera pour aucune matière tant que la colonne n’existe pas — puis matière par matière, à mesure que les axes seront remplis.',
     sonde: { type: 'colonne', table: 'chapters', colonne: 'theme' },
+  },
+  {
+    id: '235',
+    fichier: '235_contenu_anglais_axes_tle.sql',
+    feature:
+      'Anglais Tle : les SIX axes du programme officiel (BO n° 22 du 29 mai 2025, en vigueur à la rentrée 2026-2027) remplacent les 4 intitulés hors-programme, et les 24 fiches de grammaire se rangent sous leurs 4 repères linguistiques — 48 questions',
+    siAbsente:
+      'L’anglais de Terminale ouvre sur 4 chapitres donnés pour « les axes du programme » qui n’en sont pas : « Faire société : unité et pluralité », « Environnements en mutation », « Art et débats d’idées », « Innovations et responsabilité ». Deux d’entre eux appartiennent à un AUTRE enseignement (la spécialité « Anglais, monde contemporain »). L’élève révise donc des intitulés absents de son cours, et ne trouve rien sur « Le Royaume-Uni et ses nations » — le seul axe que le programme rende obligatoire.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'title',
+      valeur: 'Axe 6 — Le Royaume-Uni et ses nations',
+    },
+    decision:
+      'La migration SUPPRIME les 4 faux axes (leurs leçons et quiz partent par cascade) : les garder laisserait quatre portes vers du hors-programme. Elle REPREND l’ALTER TABLE de la 234 en ADD COLUMN IF NOT EXISTS — 234 n’étant pas jouée en production, sans cette reprise la 235 échouerait à mi-parcours, les 4 anciens chapitres déjà supprimés et les 6 neufs pas encore posés, soit une matière vide. Les positions des 24 fiches de grammaire sont RÉÉCRITES UNE À UNE (7 à 30) et non décalées d’un « +6 » : un décalage relatif rejoué décalerait une seconde fois.',
+  },
+  {
+    id: '236',
+    fichier: '236_annales.sql',
+    feature:
+      'La table `exam_papers` : les annales (une épreuve d’examen d’une session, décrite partie par partie) que l’onglet Annales des 3e, 1re et Tle promettait sans pouvoir les servir',
+    siAbsente:
+      'L’onglet « Annales » existe pour les trois années à examen, mais n’a rien à montrer : il affiche l’encart « Pas encore d’épreuve ici » sous l’épreuve blanche. Rien ne casse — le select des annales est isolé et toléré, comme celui de l’axe.',
+    sonde: { type: 'table', table: 'exam_papers' },
+  },
+  {
+    id: '237',
+    fichier: '237_annales_session_2026.sql',
+    feature:
+      'Les 17 épreuves de la session 2026 (brevet, épreuves anticipées de 1re, bac), avec durée, coefficient, barème partie par partie et les chapitres que chacune mobilise',
+    siAbsente:
+      'La table des annales reste vide : l’élève de 3e sait que le brevet arrive sans jamais voir à quoi il ressemble — combien de temps, combien de parties, quel barème, quels chapitres tombent où.',
+    sonde: {
+      type: 'ligne',
+      table: 'exam_papers',
+      colonne: 'session',
+      valeur: '2026',
+    },
+    decision:
+      'Ce que la migration apporte est la STRUCTURE OFFICIELLE des épreuves, pas les énoncés des sujets tombés : ceux-là demandent un relevé aux sujets officiels, session par session, et viendront dans d’autres fichiers de `scripts/annales/`. Le modèle est prévu pour — les colonnes `session` et `center` distinguent déjà « 2026 » de « 2025 · Amérique du Nord ». ⚠️ LE GRAND ORAL N’Y EST PAS : il vaut coefficient 10 et se prépare sur les DEUX spécialités à la fois, il n’appartient donc à aucune matière alors que `exam_papers` en exige une. Le rattacher arbitrairement à l’une des deux mentirait sur ce qu’il est.',
+  },
+  {
+    id: '238',
+    fichier: '238_route_des_trophees.sql',
+    feature:
+      'La Route des trophées : un compteur de trophées par couple (matière × jeu) sur une courbe par bandes, sa liste blanche `game_catalog`, le journal `game_matches` et la RPC `apply_game_trophies` qui recalcule tout côté serveur',
+    siAbsente:
+      'Aucune partie de salon ne rapporte de trophée : l’écran de fin affiche l’XP mais pas la ligne « Trophées », et l’espace duel comme la Route affichent des compteurs à zéro. Rien ne casse — l’action retombe sur `null` et la ligne disparaît — mais toute la boucle compétitive est morte.',
+    sonde: { type: 'table', table: 'game_trophies' },
+    decision:
+      'Le barème vit en DEUX exemplaires — `lib/trophy-road.ts` pour l’affichage (annoncer « +10 » avant la partie) et le SQL pour la persistance — parce que le client ne doit jamais décider du gain : `p_won` vient de lui. Le test `lib/trophy-catalog.test.ts` relit le fichier SQL et bloque la dérive entre les deux. La liste blanche `game_catalog` n’est pas décorative : sans elle, un couple (matière, jeu) inventé démarre à 0 trophée, donc dans la bande +10/−0, et le total global — une somme — se gonflerait sans plafond. ⚠️ LA MIGRATION REMET LES TROPHÉES À ZÉRO : l’ancien barème Elo n’est pas convertible en bandes, le pic est donc conservé dans `profiles.legacy_best_trophies` comme trophée d’honneur et la saison repart à neuf. Elle porte aussi le PIC PAR MATIÈRE (`subject_peaks`) et le vivier d’adversaires du duel classé (`subject_ranked_ghosts`), dont dépend le ladder cloisonné par matière (`lib/subject-rank`).',
+  },
+  {
+    id: '239',
+    fichier: '239_moteur_questions.sql',
+    feature:
+      'Le moteur de sélection de questions : `review_items` passe au modèle de Leitner (boîte 1→5, échéance HORODATÉE `due_at`, compteurs de passages, chapitre et niveau dénormalisés) et la vue `question_scope` rattache chaque question à son chapitre, sa matière et son niveau',
+    siAbsente:
+      'Le jeu « Ton programme » retombe sur son ancien classement par faiblesse de chapitre (jouable, mais sans mémoire : deux parties d’affilée repiochent dans les mêmes quiz) et l’enregistrement des réponses échoue sur des colonnes inconnues — la file « À revoir » et la Revanche cessent d’avancer. Rien ne casse à l’écran ; la répétition espacée, elle, ne progresse plus.',
+    sonde: { type: 'colonne', table: 'review_items', colonne: 'due_at' },
+    decision:
+      'L’échéance passe de DATE à TIMESTAMPTZ, et c’est la raison d’être de la migration : une erreur doit revenir « dans 10 minutes », DANS la même session. Avec une colonne DATE, « maintenant + 10 min » et « aujourd’hui » sont la même valeur — le rappel court était impossible, quel que soit le code au-dessus. `due_date` SURVIT, dérivée de `due_at` par un trigger : elle est la clé de lecture de la file depuis la 021, et un seul écrivain la maintient (même doctrine que `profiles.trophies` en 238). `question_scope` est une VUE et non une table — la donnée existe déjà, la dupliquer créerait une seconde source de vérité à resynchroniser à chaque import de contenu — et elle est en `security_invoker` pour que le gating premium de `quiz_questions` reste en vigueur.',
   },
 ] as const
 

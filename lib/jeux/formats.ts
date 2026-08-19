@@ -140,6 +140,8 @@ export type GameTheme =
   | 'jungle'
   | 'labo'
   | 'regle'
+  /** Le jeu « Programme » (lib/jeux/programme.ts) — hors catalogue des salons. */
+  | 'programme'
 
 // Le timbre sonore du jeu vit dans lib/game-audio.ts : c'est lui qui définit le
 // vocabulaire des couleurs sonores (et les modes de l'Arène s'en servent aussi).
@@ -170,8 +172,16 @@ export type GameLexicon = {
   lose: string
 }
 
+/**
+ * Un jeu jouable : soit un jeu de salon, soit le « Programme » commun à toutes
+ * les matières (lib/jeux/programme.ts). Ce dernier n'entre pas dans
+ * `GAME_FORMATS` — il n'a ni banque locale ni robe à lui dans le catalogue —
+ * mais il produit bien un `GameFormat`, que les tables de jeu savent jouer.
+ */
+export type GameId = SalonGameId | 'programme'
+
 export type GameFormat = {
-  id: SalonGameId
+  id: GameId
   theme: GameTheme
   timbre: GameTimbre
   layout: GameLayout

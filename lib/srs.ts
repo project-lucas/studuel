@@ -1,15 +1,40 @@
-// Répétition espacée (SRS) + cahier d'erreurs (« la Revanche »).
-// SM-2 allégé : chaque question/carte revue a une date de prochaine révision
-// qui s'allonge à chaque succès (J+1, J+3, J+7, J+16, J+35) et se réinitialise
-// à l'erreur. Une erreur envoie aussi l'item dans la Revanche — le deck des
-// erreurs à venger, par matière ; une bonne réponse l'en sort.
-// Logique pure testable ici ; la persistance vit dans review_items (021).
+// LA REVANCHE — le cahier d'erreurs, et la file « À revoir » qu'il alimente.
+//
+// CE FICHIER A CHANGÉ DE MÉTIER. Il tenait AUSSI son propre barème de
+// répétition espacée (une série de succès → un intervalle J+1…J+35, une DATE de
+// prochaine révision). Ce barème vit désormais dans `lib/questions/engine` :
+// boîtes de Leitner, échéance HORODATÉE, compteurs de passages. Ce qui reste
+// ici, c'est ce que le moteur ne fait pas — la Revanche (le deck des erreurs à
+// venger, par matière) et la lecture de la file du jour.
+//
+// POURQUOI IL FALLAIT LES SÉPARER. Les deux systèmes écrivaient la même ligne
+// de `review_items` avec deux barèmes différents : celui d'ici sur `due_date`
+// (au jour), celui du moteur sur `due_at` (à l'heure). Deux écrivains sur une
+// même échéance finissent toujours par s'effacer l'un l'autre — c'est
+// exactement le piège que la Route des trophées a documenté sur
+// `profiles.trophies`. Il n'y a plus qu'un barème, et il est dans le moteur.
+//
+// Les fonctions exportées gardent leurs noms et leurs formes : les pages qui
+// lisent la file (`/reviser`, `/reviser/revoir`, la matière du moment) n'ont
+// rien à changer.
 
 import type { SupabaseClient } from '@supabase/supabase-js'
+import {
+  applyAnswer,
+  BOX_INTERVAL_DAYS,
+  MIN_BOX,
+  type QuestionState,
+} from '@/lib/questions/engine'
 
-// Intervalles (en jours) selon la série de succès consécutifs. Au-delà du
-// dernier palier, on replafonne à 35 jours — suffisant pour une année scolaire.
-export const SRS_INTERVALS = [1, 3, 7, 16, 35] as const
+/**
+ * Les intervalles, en jours. Réexportés depuis le moteur plutôt que redéclarés :
+ * la valeur était écrite ici ET dans le moteur, et deux tables d'intervalles
+ * auraient dérivé au premier réglage pédagogique.
+ *
+ * L'échelle a changé au passage (J+16/J+35 → J+14/J+30) : le moteur compte en
+ * boîtes de Leitner, et ces paliers-là sont ceux de la méthode.
+ */
+export const SRS_INTERVALS = BOX_INTERVAL_DAYS
 
 // Pièces versées quand la Revanche est vidée (une fois par jour UTC).
 export const REVANCHE_CLEAR_COINS = 40
@@ -68,63 +93,87 @@ export function addDays(dayKey: string, days: number): string {
   return d.toISOString().slice(0, 10)
 }
 
-// Intervalle après une série de `streak` succès (streak ≥ 1).
-export function intervalForStreak(streak: number): number {
-  const i = Math.max(0, Math.min(streak - 1, SRS_INTERVALS.length - 1))
-  return SRS_INTERVALS[i]
+/**
+ * L'état d'un item tel qu'il est relu en base avant d'appliquer une réponse,
+ * puis réécrit. Il porte MAINTENANT les colonnes du moteur (migration 239) :
+ * la boîte de Leitner, l'échéance à l'heure, les compteurs de passages.
+ *
+ * `due_date` n'y est plus : le trigger de la 239 la dérive de `due_at`. Elle
+ * reste lisible partout, elle n'est simplement plus ÉCRITE ici — un seul
+ * écrivain par valeur.
+ */
+export type ReviewState = {
+  box: number
+  streak: number
+  lapses: number
+  times_seen: number
+  times_correct: number
+  times_wrong: number
+  due_at: string
+  last_seen_at: string | null
+  in_revanche: boolean
 }
 
-// État d'un item suivi, tel que relu en base avant d'appliquer une réponse.
-type ReviewState = Pick<
-  ReviewItem,
-  'streak' | 'lapses' | 'due_date' | 'in_revanche'
->
+/** Les colonnes à relire pour appliquer une réponse. */
+export const REVIEW_STATE_COLUMNS =
+  'box, streak, lapses, times_seen, times_correct, times_wrong, due_at, last_seen_at, in_revanche'
 
-// Un succès ne fait progresser le barème que si l'item était RÉELLEMENT à
-// revoir : échu, à venger, ou jamais vu. Sans cette garde, répondre juste
-// plusieurs fois le même jour (le même item revient via le quiz de la leçon,
-// puis Boss, Chrono, Blitz, Duel…) suffirait à pousser un item de J+1 à J+35
-// en une seule session : ce ne serait plus de la répétition ESPACÉE, mais du
-// bachotage compté comme tel. Un échec, lui, compte TOUJOURS : oublier est une
-// information, quelle que soit l'échéance prévue.
-export function isReviewable(prev: ReviewState | null, todayKey: string): boolean {
-  if (prev === null) return true
-  return prev.in_revanche || prev.due_date <= todayKey
+function toEngineState(prev: ReviewState | null, id: string): QuestionState | null {
+  if (!prev) return null
+  return {
+    questionId: id,
+    chapterId: null,
+    subjectId: null,
+    level: null,
+    lastSeenAt: prev.last_seen_at ? Date.parse(prev.last_seen_at) : null,
+    timesSeen: prev.times_seen ?? 0,
+    timesCorrect: prev.times_correct ?? 0,
+    timesWrong: prev.times_wrong ?? 0,
+    consecutiveCorrect: prev.streak ?? 0,
+    box: prev.box ?? MIN_BOX,
+    dueAt: prev.due_at ? Date.parse(prev.due_at) : 0,
+  }
 }
 
-// Nouvel état d'un item après une réponse. `prev` absent = premier passage.
+/**
+ * Nouvel état d'un item après une réponse. `prev` absent = premier passage.
+ *
+ * LE BARÈME N'EST PLUS ICI : il est appliqué par `engine.applyAnswer`, y
+ * compris sa garde anti-bachotage (un succès ne fait monter la boîte que si
+ * l'item était réellement dû). Cette fonction ne fait que traduire, dans les
+ * deux sens, entre la ligne `review_items` et l'objet du moteur — et ajouter
+ * la seule chose que le moteur ne connaît pas : la Revanche.
+ *
+ * LA REVANCHE, justement. Une erreur y entre l'item, une bonne réponse l'en
+ * sort — et cette sortie-là ne demande PAS que l'item soit dû. C'est la
+ * différence de nature entre les deux systèmes : la boîte de Leitner mesure la
+ * mémoire à long terme (donc l'espacement compte), la Revanche est un cahier
+ * d'erreurs qu'on vient rayer (donc réussir suffit).
+ */
 export function reviewAfterAnswer(
   prev: ReviewState | null,
   good: boolean,
-  todayKey: string,
+  now: number = Date.now(),
 ): ReviewState {
-  if (good) {
-    // Bonne réponse sur un item pas encore dû : on ne touche à rien. Avancer
-    // ici reviendrait à récompenser la répétition immédiate. On renvoie une
-    // forme EXPLICITE plutôt que `prev` tel quel : l'appelant étale ce retour
-    // dans son upsert, et `prev` vient d'un `select` — lui rendre la ligne
-    // brute ferait fuiter toute colonne ajoutée un jour à ce select.
-    if (prev !== null && !isReviewable(prev, todayKey)) {
-      return {
-        streak: prev.streak,
-        lapses: prev.lapses,
-        due_date: prev.due_date,
-        in_revanche: prev.in_revanche,
-      }
-    }
-    const streak = (prev?.streak ?? 0) + 1
-    return {
-      streak,
-      lapses: prev?.lapses ?? 0,
-      due_date: addDays(todayKey, intervalForStreak(streak)),
-      in_revanche: false, // une bonne réponse venge l'erreur
-    }
-  }
+  // L'identifiant n'a aucune importance pour le barème : il ne sert qu'à
+  // remplir la forme attendue par le moteur.
+  const next = applyAnswer(toEngineState(prev, 'item'), {
+    questionId: 'item',
+    chapterId: null,
+    subjectId: null,
+    level: null,
+  }, good, now)
+
   return {
-    streak: 0,
-    lapses: (prev?.lapses ?? 0) + 1,
-    due_date: addDays(todayKey, 1), // raté : on revoit dès demain
-    in_revanche: true,
+    box: next.box,
+    streak: next.consecutiveCorrect,
+    lapses: next.timesWrong,
+    times_seen: next.timesSeen,
+    times_correct: next.timesCorrect,
+    times_wrong: next.timesWrong,
+    due_at: new Date(next.dueAt).toISOString(),
+    last_seen_at: new Date(next.lastSeenAt ?? now).toISOString(),
+    in_revanche: !good,
   }
 }
 

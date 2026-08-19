@@ -116,6 +116,14 @@ interface ArenaHudProps {
    * feraient qu'un empilement illisible.
    */
   premiumSlot?: ReactNode
+  /**
+   * La Route des trophées, SOUS Studuel+ — le troisième cran de la colonne de
+   * l'angle. C'est un écran de LECTURE (où j'en suis, ce que vaut la prochaine
+   * partie, pourquoi) : il rejoint les commandes du HUD au lieu d'occuper la
+   * rangée de combat, rendue à l'action. Comme Studuel+, il s'efface quand le
+   * menu s'ouvre — la colonne appartient alors à la cascade des plaques.
+   */
+  roadSlot?: ReactNode
   /** Pastille niveau + XP, calée dans l'ANGLE haut-gauche (façon Clash Royale). */
   profileSlot?: ReactNode
   /** Cartouche de rang, JUSTE SOUS la pastille de niveau (même colonne). */
@@ -153,6 +161,7 @@ export default function ArenaHud({
   cornerTiles = [],
   menuItems,
   premiumSlot,
+  roadSlot,
   profileSlot,
   rankSlot,
   seasonSlot,
@@ -364,6 +373,9 @@ export default function ArenaHud({
             s'efface quand le menu s'ouvre — la colonne appartient alors à la
             cascade des plaques. */}
         {premiumSlot && !menuOpen ? premiumSlot : null}
+
+        {/* La Route des trophées, au cran suivant de la même colonne. */}
+        {roadSlot && !menuOpen ? roadSlot : null}
 
         {/* Le panneau, SOUS la barrette : la pile des plaques, façon carte
             Clash Royale. Borné en hauteur (petits écrans) plutôt que de

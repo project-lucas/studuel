@@ -86,7 +86,7 @@ export default function SubjectTemplate({
               ) : null}
             </>
           ) : mode === 'annales' && exam ? (
-            <AnnalesPanel subject={data.subject} exam={exam} />
+            <AnnalesPanel subject={data.subject} exam={exam} papers={data.papers} />
           ) : (
             // L'onglet « Mode de jeu » porte TROIS familles, dans cet ordre :
             // le gardien de la matière (le rendez-vous), les jeux de l'arène

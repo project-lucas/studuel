@@ -8,7 +8,6 @@ import { isCommuteNow } from '@/lib/trajet'
 import { XP_RULES } from '@/lib/xp'
 import { MODE_XP_BONUS, modeXpBonus, type GameModeId } from '@/lib/defi-modes'
 import { weeklyBoss, weeklyTrophyId, WEEKLY_TROPHY_COINS } from '@/lib/bosses'
-import { matchmakeOpponentTrophies } from '@/lib/trophies'
 import { toDayKey } from '@/lib/streak'
 import { awardXp } from '@/lib/wallet-server'
 import type { CommuteSlot } from '@/lib/types'
@@ -160,58 +159,62 @@ export async function saveDuelRecording(
   return { saved: !error }
 }
 
-// Résultat d'un match CLASSÉ : fait bouger les trophées de l'élève. Le barème
-// (Elo-lite) est recalculé côté serveur par l'RPC apply_ranked_match — le
-// client ne fournit que l'issue (won) et la graine du match ; les trophées de
-// l'adversaire sont dérivés du matchmaking serveur (autour du joueur), et le
-// delta est borné. Renvoie le total avant/après pour l'animation, ou null.
-export type RankedOutcome = {
+// Résultat d'une partie sur la ROUTE DES TROPHÉES : fait bouger le compteur du
+// couple (matière × jeu). Le barème par bandes est recalculé côté serveur par
+// l'RPC apply_game_trophies (migration 238) — le client ne fournit que l'issue.
+//
+// Le serveur refait tout ce qui compte : la bande du compteur, donc le gain, la
+// liste blanche du couple (sinon on farmerait le +10 de la bande débutant sur
+// des jeux inventés) et la borne de rythme. `null` couvre les trois refus
+// possibles ainsi que le visiteur — dans tous les cas l'écran de fin n'affiche
+// simplement pas de trophées.
+export type GameTrophyOutcome = {
   before: number
   after: number
   delta: number
   best: number
+  /** Total global (somme de tous les jeux), après la partie. */
+  total: number
 } | null
 
-export async function recordRankedMatch(
+export async function recordGameTrophies(
+  subjectSlug: string,
+  gameId: string,
   won: boolean,
-  seed: string,
-  opponentLabel?: string,
-): Promise<RankedOutcome> {
+  score?: number,
+): Promise<GameTrophyOutcome> {
   const supabase = await createClient()
   const user = await getCurrentUser()
   if (!user) return null
 
-  // Trophées actuels → matchmaking d'un adversaire proche (±120), déterministe.
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('trophies')
-    .eq('id', user.id)
-    .maybeSingle()
-  const myTrophies = Number(profile?.trophies ?? 0)
-  const oppTrophies = matchmakeOpponentTrophies(
-    myTrophies,
-    typeof seed === 'string' && seed ? seed.slice(0, 64) : `${user.id}`,
-  )
-
-  const { data, error } = await supabase.rpc('apply_ranked_match', {
+  const { data, error } = await supabase.rpc('apply_game_trophies', {
+    p_subject_slug: String(subjectSlug).slice(0, 64),
+    p_game_id: String(gameId).slice(0, 64),
     p_won: won === true,
-    p_opponent_trophies: oppTrophies,
-    p_opponent_label:
-      typeof opponentLabel === 'string' ? opponentLabel.slice(0, 80) : null,
+    p_score: Number.isFinite(score) ? Math.max(0, Math.floor(score as number)) : null,
   })
   if (error || !data) {
-    console.error('[defi] match classé non enregistré:', error?.message)
+    // Pas d'erreur console pour un simple refus (couple hors catalogue, rythme
+    // dépassé) : ce n'est pas une panne. On ne journalise que l'échec technique.
+    if (error) console.error('[defi] trophées non enregistrés:', error.message)
     return null
   }
 
   revalidatePath('/defi')
   revalidatePath('/amis')
-  const r = data as { before: number; after: number; delta: number; best: number }
+  const r = data as {
+    before: number
+    after: number
+    delta: number
+    best: number
+    total: number
+  }
   return {
-    before: Number(r.before ?? myTrophies),
-    after: Number(r.after ?? myTrophies),
+    before: Number(r.before ?? 0),
+    after: Number(r.after ?? 0),
     delta: Number(r.delta ?? 0),
-    best: Number(r.best ?? myTrophies),
+    best: Number(r.best ?? 0),
+    total: Number(r.total ?? 0),
   }
 }
 

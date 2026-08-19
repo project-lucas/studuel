@@ -1,8 +1,5 @@
 import { describe, it, expect } from 'vitest'
 import {
-  trophyDelta,
-  applyTrophyDelta,
-  bronzeLossShield,
   matchmakeOpponentTrophies,
   rankPlayers,
   rivalAhead,
@@ -10,60 +7,13 @@ import {
   friendsPassed,
   friendsLostTo,
   bestTrophies,
-  WIN_MIN,
-  WIN_MAX,
-  LOSS_MIN,
-  LOSS_MAX,
   type RankPlayer,
 } from './trophies'
 
-describe('trophyDelta', () => {
-  it('gains at least WIN_MIN even against a much weaker opponent', () => {
-    const d = trophyDelta(true, 1000, 200)
-    expect(d).toBe(WIN_MIN)
-  })
-
-  it('gains up to WIN_MAX against a much stronger opponent', () => {
-    const d = trophyDelta(true, 200, 1000)
-    expect(d).toBe(WIN_MAX)
-  })
-
-  it('loses only LOSS_MIN against a much stronger opponent', () => {
-    const d = trophyDelta(false, 200, 1000)
-    expect(d).toBe(-LOSS_MIN)
-  })
-
-  it('loses up to LOSS_MAX against a much weaker opponent', () => {
-    const d = trophyDelta(false, 1000, 200)
-    expect(d).toBe(-LOSS_MAX)
-  })
-
-  it('is symmetric-ish around even matchups (win positive, loss negative)', () => {
-    const win = trophyDelta(true, 500, 500)
-    const loss = trophyDelta(false, 500, 500)
-    expect(win).toBeGreaterThan(0)
-    expect(loss).toBeLessThan(0)
-    // Even matchup: expected 0.5 → raw ±20, within bounds.
-    expect(win).toBe(20)
-    expect(loss).toBe(-20)
-  })
-
-  it('never returns a positive number on a loss', () => {
-    for (const [me, opp] of [[100, 100], [100, 900], [900, 100], [500, 480]]) {
-      expect(trophyDelta(false, me, opp)).toBeLessThan(0)
-    }
-  })
-})
-
-describe('applyTrophyDelta', () => {
-  it('adds a positive delta', () => {
-    expect(applyTrophyDelta(500, 30)).toBe(530)
-  })
-
-  it('never drops below zero', () => {
-    expect(applyTrophyDelta(10, -30)).toBe(0)
-  })
-})
+// Les suites `trophyDelta`, `applyTrophyDelta` et `bronzeLossShield` ont été
+// retirées avec le barème Elo qu'elles couvraient : les trophées se gagnent
+// désormais par (matière × jeu) sur une courbe par bandes, testée dans
+// `lib/trophy-road.test.ts`. Ce fichier ne garde que le CLASSEMENT.
 
 describe('matchmakeOpponentTrophies', () => {
   it('is deterministic for a given seed', () => {
@@ -178,33 +128,6 @@ describe('friendsLostTo', () => {
 
   it('is empty on a win', () => {
     expect(friendsLostTo(500, 540, friends)).toEqual([])
-  })
-})
-
-describe('bronzeLossShield', () => {
-  it('never touches gains', () => {
-    expect(bronzeLossShield(20, +25)).toBe(25)
-    expect(bronzeLossShield(350, +12)).toBe(12)
-  })
-
-  it('cancels the loss entirely in Bronze IV (below 100)', () => {
-    // 20 trophées, −20 → ne retombe plus à zéro : perte annulée.
-    expect(bronzeLossShield(20, -20)).toBe(0)
-    expect(bronzeLossShield(99, -30)).toBe(0)
-    expect(bronzeLossShield(0, -6)).toBe(0)
-  })
-
-  it('caps the loss at the current division floor in upper Bronze', () => {
-    // Bronze III (100..199) : on ne redescend jamais sous 100.
-    expect(bronzeLossShield(110, -30)).toBe(-10) // 110 → 100, pas plus bas
-    expect(bronzeLossShield(150, -20)).toBe(-20) // 150 → 130, au-dessus de 100 : perte pleine
-    // Bronze II (200..299) : plancher 200.
-    expect(bronzeLossShield(205, -25)).toBe(-5)
-  })
-
-  it('leaves the full loss untouched outside Bronze (Argent and above)', () => {
-    expect(bronzeLossShield(400, -30)).toBe(-30)
-    expect(bronzeLossShield(1000, -18)).toBe(-18)
   })
 })
 

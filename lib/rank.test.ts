@@ -27,9 +27,9 @@ describe('divisionRoman', () => {
 
 describe('constantes de barème', () => {
   it('le sommet démarre après tous les paliers à divisions', () => {
-    // 5 paliers à divisions × 4 × 100 = 2000
+    // 5 paliers à divisions × 4 × 500 = 10 000
     expect(APEX_FLOOR).toBe(5 * DIVISIONS_PER_TIER * DIVISION_SPAN)
-    expect(APEX_FLOOR).toBe(2000)
+    expect(APEX_FLOOR).toBe(10000)
   })
 
   it('a bien 6 paliers, le dernier sans divisions', () => {
@@ -51,49 +51,49 @@ describe('rankFor — divisions', () => {
     expect(r.inDivision).toBe(0)
     expect(r.toNext).toBe(DIVISION_SPAN)
     expect(r.floor).toBe(0)
-    expect(r.ceiling).toBe(100)
+    expect(r.ceiling).toBe(500)
   })
 
   it('milieu de division : progression et restes cohérents', () => {
-    const r = rankFor(50)
+    const r = rankFor(250)
     expect(r.label).toBe('Bronze IV')
-    expect(r.inDivision).toBe(50)
+    expect(r.inDivision).toBe(250)
     expect(r.progress).toBeCloseTo(0.5)
-    expect(r.toNext).toBe(50)
+    expect(r.toNext).toBe(250)
   })
 
-  it('99 reste en Bronze IV, 100 passe en Bronze III', () => {
-    expect(rankFor(99).label).toBe('Bronze IV')
-    const r = rankFor(100)
+  it('499 reste en Bronze IV, 500 passe en Bronze III', () => {
+    expect(rankFor(499).label).toBe('Bronze IV')
+    const r = rankFor(500)
     expect(r.label).toBe('Bronze III')
     expect(r.divisionIndex).toBe(1)
     expect(r.progress).toBe(0)
   })
 
-  it('haut du palier Bronze : 399 = Bronze I', () => {
-    const r = rankFor(399)
+  it('haut du palier Bronze : 1999 = Bronze I', () => {
+    const r = rankFor(1999)
     expect(r.tier.id).toBe('bronze')
     expect(r.roman).toBe('I')
-    expect(r.toNext).toBe(1) // 400 = palier suivant
+    expect(r.toNext).toBe(1) // 2000 = palier suivant
   })
 
-  it('changement de palier : 400 = Argent IV, 799 = Argent I', () => {
-    expect(rankFor(400).label).toBe('Argent IV')
-    expect(rankFor(799).label).toBe('Argent I')
+  it('changement de palier : 2000 = Argent IV, 3999 = Argent I', () => {
+    expect(rankFor(2000).label).toBe('Argent IV')
+    expect(rankFor(3999).label).toBe('Argent I')
   })
 
-  it('paliers intermédiaires alignés sur des tranches de 400 trophées', () => {
-    expect(rankFor(800).label).toBe('Or IV')
-    expect(rankFor(1199).label).toBe('Or I')
-    expect(rankFor(1200).label).toBe('Platine IV')
-    expect(rankFor(1600).label).toBe('Diamant IV')
-    expect(rankFor(1999).label).toBe('Diamant I')
+  it('paliers intermédiaires alignés sur des tranches de 2 000 trophées', () => {
+    expect(rankFor(4000).label).toBe('Or IV')
+    expect(rankFor(5999).label).toBe('Or I')
+    expect(rankFor(6000).label).toBe('Platine IV')
+    expect(rankFor(8000).label).toBe('Diamant IV')
+    expect(rankFor(9999).label).toBe('Diamant I')
   })
 })
 
 describe('rankFor — sommet (Maître)', () => {
-  it("2000 trophées = Maître, sans division", () => {
-    const r = rankFor(2000)
+  it("10 000 trophées = Maître, sans division", () => {
+    const r = rankFor(10000)
     expect(r.tier.id).toBe('maitre')
     expect(r.roman).toBeNull()
     expect(r.divisionIndex).toBeNull()
@@ -105,8 +105,8 @@ describe('rankFor — sommet (Maître)', () => {
   })
 
   it('au sommet, inDivision compte les trophées au-dessus du seuil', () => {
-    expect(rankFor(2000).inDivision).toBe(0)
-    expect(rankFor(2500).inDivision).toBe(500)
+    expect(rankFor(10000).inDivision).toBe(0)
+    expect(rankFor(12500).inDivision).toBe(2500)
   })
 })
 
@@ -118,17 +118,17 @@ describe('rankFor — robustesse', () => {
   })
 
   it('tronque les décimales', () => {
-    expect(rankFor(150.9).label).toBe('Bronze III')
+    expect(rankFor(750.9).label).toBe('Bronze III')
   })
 })
 
 describe('tierFloor', () => {
   it("donne le seuil d'entrée (division IV) de chaque palier", () => {
     expect(tierFloor('bronze')).toBe(0)
-    expect(tierFloor('argent')).toBe(400)
-    expect(tierFloor('or')).toBe(800)
-    expect(tierFloor('platine')).toBe(1200)
-    expect(tierFloor('diamant')).toBe(1600)
+    expect(tierFloor('argent')).toBe(2000)
+    expect(tierFloor('or')).toBe(4000)
+    expect(tierFloor('platine')).toBe(6000)
+    expect(tierFloor('diamant')).toBe(8000)
     expect(tierFloor('maitre')).toBe(APEX_FLOOR)
   })
 })

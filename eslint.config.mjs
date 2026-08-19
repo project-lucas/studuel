@@ -18,6 +18,11 @@ const eslintConfig = defineConfig([
     // générateur `scripts/seed-contenu.mjs` refuse de produire du SQL si une
     // leçon, une question ou un titre de chapitre est mal formé.
     "scripts/contenu/**",
+    // Même nature, même raison : les sessions d'examen sont des DONNÉES, et
+    // c'est `scripts/seed-annales.mjs` qui refuse de générer si une épreuve est
+    // mal formée (puis `_ASSOCIE/sonde-annales.mjs` qui vérifie, en base, que
+    // chaque chapitre cité existe bien).
+    "scripts/annales/**",
   ]),
 ]);
 

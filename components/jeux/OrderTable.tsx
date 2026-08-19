@@ -13,9 +13,10 @@ import {
 } from '@/components/jeux/GameShell'
 import { MECHANIC_ICON } from '@/components/jeux/icons'
 import { gameSfx, sfx, buzz } from '@/lib/sounds'
-import { recordChallenge } from '@/app/defi/actions'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { readGameBest, writeGameBest } from '@/lib/jeux/records'
+import { useGameReport } from '@/lib/jeux/use-game-report'
+import type { GameGhost } from '@/lib/jeux/ghost-server'
 import { isNextInOrder, type OrderBoard as Board } from '@/lib/jeux/ordering'
 import {
   answer as applyAnswer,
@@ -47,12 +48,15 @@ export default function OrderTable({
   name,
   subject,
   subjectEmoji,
+  ghost,
 }: {
   format: GameFormat
   boards: Board[]
   name: string
   subject: string
   subjectEmoji: string
+  /** Meilleur score d'un ami sur ce jeu, à battre (lib/jeux/ghost-server). */
+  ghost?: GameGhost | null
 }) {
   const router = useRouter()
   const audio = useMemo(() => gameSfx(format.timbre), [format.timbre])
@@ -68,12 +72,11 @@ export default function OrderTable({
   const [rejected, setRejected] = useState<number | null>(null)
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
-  const [saved, setSaved] = useState<boolean | null>(null)
-  // XP réellement versée, renvoyée par le serveur (null tant qu'il n'a pas répondu).
-  const [awardedXp, setAwardedXp] = useState<number | null>(null)
-  // Numéro de la partie en cours. Une réponse serveur qui arrive APRÈS le
-  // lancement de la partie suivante ne doit pas repeindre son écran de fin.
-  const partieRef = useRef(0)
+  // XP, série et trophées : un seul compte rendu partagé par les quatre tables.
+  const { saved, awardedXp, trophies, report, reset } = useGameReport(
+    subject,
+    format.id,
+  )
   const [globalLeft, setGlobalLeft] = useState<number | null>(null)
 
   const runRef = useRef(run)
@@ -110,18 +113,9 @@ export default function OrderTable({
       if (writeGameBest(format.id, final.score)) setIsRecord(true)
       setBest(Math.max(prev, final.score))
 
-      const partie = partieRef.current
-      recordChallenge(final.correct, final.answered)
-        .then((r) => {
-          if (partie !== partieRef.current) return
-          setSaved(r.saved)
-          if (r.saved) setAwardedXp(r.xp)
-        })
-        .catch(() => {
-          if (partie === partieRef.current) setSaved(false)
-        })
+      report(final)
     },
-    [audio, format.id],
+    [audio, format.id, report],
   )
 
   // -------------------------------------------------------------- une tuile
@@ -201,15 +195,13 @@ export default function OrderTable({
     setRun(fresh)
     setPlaced([])
     setRejected(null)
-    setSaved(null)
-    setAwardedXp(null)
-    partieRef.current += 1
+    reset()
     setIsRecord(false)
     setBoardIndex((n) => n + 1) // un autre tableau d'une partie à l'autre
     globalLeftRef.current = seconds
     setGlobalLeft(seconds)
     setPhase('playing')
-  }, [format, seconds])
+  }, [format, seconds, reset])
 
   useEffect(() => {
     if (phase !== 'countdown') return
@@ -261,6 +253,8 @@ export default function OrderTable({
             isRecord={isRecord}
             saved={saved}
             awardedXp={awardedXp}
+            trophies={trophies}
+            ghost={ghost}
             onReplay={startCountdown}
             onExit={exit}
           />

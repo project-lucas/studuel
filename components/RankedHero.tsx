@@ -182,16 +182,20 @@ export default function RankedHero({
           </p>
         ) : null}
 
-        {/* LE bouton — lance un match classé. */}
+        {/* LE bouton — il RENVOIE À L'ARÈNE, il ne lance plus rien ici.
+            Le « Match classé » (BO3 toutes matières contre un robot) a fusionné
+            dans le bouton COMBAT : on choisit sa matière puis son jeu, et
+            chaque jeu a son propre compteur de trophées. La salle de jeu
+            n'étant qu'une sous-page, elle pointe vers la porte d'entrée. */}
         <button
           type="button"
           onClick={onPlay}
           className="press-3d-deep mt-1 flex w-full items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3.5 font-heading text-base font-extrabold tracking-wide text-primary-foreground uppercase italic transition-transform active:scale-[0.99]"
         >
-          <Swords className="size-5" aria-hidden="true" /> Match classé
+          <Swords className="size-5" aria-hidden="true" /> Aller au combat
         </button>
         <p className="-mt-1 text-center text-[11px] text-muted-foreground">
-          Au meilleur des 3 manches · tes trophées sont en jeu
+          Choisis ta matière et ton jeu · chacun a ses trophées
         </p>
       </div>
     </section>

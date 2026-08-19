@@ -13,6 +13,9 @@ import {
 } from '@/lib/jeux/pools'
 import { gameFormat, poolSizeFor } from '@/lib/jeux/formats'
 import { getCurrentUser } from '@/lib/supabase/user'
+import { createClient } from '@/lib/supabase/server'
+import { fetchGameGhost } from '@/lib/jeux/ghost-server'
+import { programmeSlug } from '@/lib/jeux/programme'
 import { nowMs } from '@/lib/defi-modes'
 
 export const metadata = { title: 'Salon — Studuel' }
@@ -45,6 +48,15 @@ export default async function SalonJeuPage({
   const user = await getCurrentUser()
   if (!user) redirect('/defi')
 
+  // Le fantôme : le meilleur score d'un ami sur ce jeu, à battre. Null quand
+  // aucun ami n'y a joué — on n'en fabrique pas pour combler le vide.
+  const supabase = await createClient()
+  const ghost = await fetchGameGhost(
+    supabase,
+    programmeSlug(found.salon.subject),
+    jeu,
+  )
+
   // Graine par partie : chaque visite est un nouveau tirage, mais la partie en
   // cours reste stable (le pool est figé dans les props du composant client).
   const seed = `${user.id}:${jeu}:${nowMs()}`
@@ -65,6 +77,7 @@ export default async function SalonJeuPage({
         name={found.game.name}
         subject={found.salon.subject}
         subjectEmoji={found.salon.emoji}
+        ghost={ghost}
       />
     )
   }
@@ -79,6 +92,7 @@ export default async function SalonJeuPage({
         name={found.game.name}
         subject={found.salon.subject}
         subjectEmoji={found.salon.emoji}
+        ghost={ghost}
       />
     )
   }
@@ -94,6 +108,7 @@ export default async function SalonJeuPage({
         name={found.game.name}
         subject={found.salon.subject}
         subjectEmoji={found.salon.emoji}
+        ghost={ghost}
       />
     )
   }

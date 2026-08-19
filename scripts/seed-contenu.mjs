@@ -173,7 +173,18 @@ for (const mod of modules) {
         // repartir de 1 mêlerait les nouveaux aux anciens dans un ordre
         // indéfini (positions à égalité). Par défaut, on numérote depuis 1.
         const depart = bloc.positionDepart ?? 1
-        chapitres.push({ id: idCh, slug: mod.slug, niveau, titre: ch.titre, position: depart + i })
+        // `axe` = l'intitulé du programme officiel qui coiffe ce chapitre
+        // (colonne `chapters.theme`, migration 234). Se déclare sur le bloc, ou
+        // sur le chapitre quand un même bloc en couvre plusieurs.
+        const axe = ch.axe ?? bloc.axe ?? null
+        chapitres.push({
+          id: idCh,
+          slug: mod.slug,
+          niveau,
+          titre: ch.titre,
+          position: depart + i,
+          axe,
+        })
         lecons.push({ id: idLe, chapitre: idCh, titre: ch.lecon.titre, cours: ch.lecon.cours })
         quiz.push({
           id: idQz,
@@ -284,24 +295,57 @@ if (menages.length) {
   }
 }
 
+// La colonne `theme` n'est ÉCRITE que si le module déclare au moins un axe.
+// Sans cette condition, régénérer une migration déjà exécutée (216 → 233, dont
+// aucune ne porte d'axe) produirait un SQL différent de celui du dépôt : la
+// commande imprimée dans son en-tête ne la reproduirait plus à l'octet près,
+// et la seule garantie qu'on ait qu'un fichier généré dit bien ce qu'il fait
+// tomberait. Vérifié : 216 → 233 se régénèrent à l'identique.
+const avecAxes = chapitres.some((c) => c.axe)
+
 w('-- 1. Chapitres -------------------------------------------------------------')
 w('-- Jointure sur le SLUG (et non le nom) : c’est la clé stable de `subjects`.')
-w('INSERT INTO public.chapters (id, subject_id, level, title, position)')
-w('SELECT v.id, s.id, v.level, v.title, v.position')
+w(
+  `INSERT INTO public.chapters (id, subject_id, level, title, position${avecAxes ? ', theme' : ''})`,
+)
+w(`SELECT v.id, s.id, v.level, v.title, v.position${avecAxes ? ', v.theme' : ''}`)
 w('  FROM (VALUES')
 w(
   chapitres
     .map(
       (c) =>
-        `    (${q(c.id)}::uuid, ${q(c.slug)}, ${q(c.niveau)}, ${q(c.titre)}, ${c.position})`,
+        `    (${q(c.id)}::uuid, ${q(c.slug)}, ${q(c.niveau)}, ${q(c.titre)}, ${c.position}${avecAxes ? `, ${c.axe ? q(c.axe) : 'NULL'}` : ''})`,
     )
     .join(',\n'),
 )
-w('  ) AS v(id, slug, level, title, position)')
+w(`  ) AS v(id, slug, level, title, position${avecAxes ? ', theme' : ''})`)
 w('  JOIN public.subjects s ON s.slug = v.slug')
 w('-- ON CONFLICT NU : `chapters` porte aussi UNIQUE(subject_id, level, title).')
 w('ON CONFLICT DO NOTHING;')
 w()
+
+// L'INSERT ci-dessus ne touche PAS une ligne déjà en base (ON CONFLICT DO
+// NOTHING) : un chapitre existant garderait donc son axe d'avant, et un module
+// qui pose ses axes après coup n'aurait aucun effet. D'où cet UPDATE, joué sur
+// les mêmes identifiants dérivés du contenu — donc stables et rejouables.
+if (avecAxes) {
+  w('-- 1 bis. Axes du programme -------------------------------------------------')
+  w('-- `chapters.theme` (migration 234) : l’intitulé du programme officiel qui')
+  w('-- coiffe le chapitre. La page matière s’en sert pour grouper au lieu')
+  w('-- d’aligner 28 lignes à plat. UPDATE et non INSERT : le chapitre peut déjà')
+  w('-- exister (l’INSERT précédent l’aurait alors ignoré).')
+  w('UPDATE public.chapters c SET theme = v.theme')
+  w('  FROM (VALUES')
+  w(
+    chapitres
+      .filter((c) => c.axe)
+      .map((c) => `    (${q(c.id)}::uuid, ${q(c.axe)})`)
+      .join(',\n'),
+  )
+  w('  ) AS v(id, theme)')
+  w(' WHERE c.id = v.id AND c.theme IS DISTINCT FROM v.theme;')
+  w()
+}
 
 w('-- 2. Leçons ----------------------------------------------------------------')
 w('INSERT INTO public.lessons (id, chapter_id, title, content, position) VALUES')

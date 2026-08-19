@@ -3,7 +3,7 @@
 --
 -- ⚠️ FICHIER GÉNÉRÉ — ne pas éditer à la main.
 --    Source : scripts/contenu/*.mjs
---    Regénérer : node scripts/seed-contenu.mjs --num 226 --slugs anglais
+--    Regénérer : node scripts/seed-contenu.mjs --num 226 --modules anglais-tle
 --
 -- CONSTAT MESURÉ (node _ASSOCIE/sonde-contenu.mjs, 05/08/2026) : l'anglais
 -- de Terminale n'avait que ses 4 axes thématiques — aucune fiche de langue.

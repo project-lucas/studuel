@@ -16,6 +16,10 @@ import { GAME_FORMATS } from '@/lib/jeux/formats'
 // donc le seul déterministe à 100 %.
 
 const recordChallenge = vi.fn()
+const recordGameTrophies = vi.fn((...args: unknown[]) => {
+  void args
+  return Promise.resolve(null)
+})
 
 vi.mock('@/lib/sounds', () => ({
   gameSfx: () => ({
@@ -34,6 +38,11 @@ vi.mock('@/lib/sounds', () => ({
 }))
 vi.mock('@/app/defi/actions', () => ({
   recordChallenge: (...args: unknown[]) => recordChallenge(...args),
+  // La table remonte aussi la partie à la Route des trophées. Le mock renvoie
+  // `null` (le cas « pas de mouvement ») : ces tests portent sur l'XP et le
+  // décompte, pas sur les trophées — mais sans l'export, le module entier
+  // échoue à se charger.
+  recordGameTrophies: (...args: unknown[]) => recordGameTrophies(...args),
 }))
 vi.mock('next/navigation', () => ({
   useRouter: () => ({ push: vi.fn(), back: vi.fn(), replace: vi.fn(), refresh: vi.fn() }),

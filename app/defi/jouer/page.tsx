@@ -56,15 +56,19 @@ export default async function DefiJouerPage({
 }: {
   searchParams: Promise<{ mode?: string }>
 }) {
-  // Lien profond depuis le camp d'entraînement / le CTA classé : n'accepte
-  // qu'un id du catalogue (ou 'ranked') — tout le reste ouvre l'accueil.
+  // Lien profond depuis le camp d'entraînement : n'accepte qu'un id du
+  // catalogue — tout le reste ouvre l'accueil.
+  //
+  // 'ranked' N'EST PLUS ACCEPTÉ. Le match classé a fusionné dans le bouton
+  // COMBAT de l'arène (espace duel : matière puis jeu), et sa RPC est inerte
+  // depuis la 238 : le laisser ouvrable par URL aurait servi un mode qui joue
+  // normalement mais ne rapporte plus rien — le pire des deux mondes.
   const { mode } = await searchParams
-  const initialMode: GameModeId | 'ranked' | null =
-    mode === 'ranked'
-      ? 'ranked'
-      : GAME_MODES.some((m) => m.id === mode && m.implemented)
-        ? (mode as GameModeId)
-        : null
+  const initialMode: GameModeId | null = GAME_MODES.some(
+    (m) => m.id === mode && m.implemented,
+  )
+    ? (mode as GameModeId)
+    : null
 
   const supabase = await createClient()
   const user = await getCurrentUser()

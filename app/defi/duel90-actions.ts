@@ -9,7 +9,6 @@ import { advanceQuests } from '@/lib/quests-server'
 import { contributeToClan } from '@/lib/clan-week-server'
 import { addCrowns } from '@/lib/saison-server'
 import { duel90Result, type Duel90Result } from '@/lib/duel90'
-import { matchmakeOpponentTrophies } from '@/lib/trophies'
 
 // -----------------------------------------------------------------------------
 // Fin d'un Duel 90 s — LA boucle du jeu, et donc le seul endroit où convergent
@@ -135,15 +134,9 @@ export async function recordDuel90(
         bestCombo: result.bestCombo,
         chapterIds: typeof chapterId === 'string' && chapterId ? [chapterId] : [],
       }),
-      // La graine du matchmaking est l'id de la session : elle change à chaque
-      // duel (avec l'id de l'élève en repli). Prendre l'id de l'ÉLÈVE lui
-      // servirait toujours le même adversaire, donc toujours le même delta.
-      applyTrophies(
-        supabase,
-        user.id,
-        result.outcome === 'win',
-        session?.id ?? user.id,
-      ),
+      // Le duel ne fait plus bouger les trophées (cf. applyTrophies) : on ne
+      // relit que le total courant, pour que l'écran de fin l'affiche juste.
+      applyTrophies(supabase, user.id),
       // Saison : la piste avance en jouant, davantage en gagnant.
       addCrowns(supabase, 'duel_play'),
       result.outcome === 'win'
@@ -174,30 +167,26 @@ export async function recordDuel90(
   }
 }
 
-// Trophées : on réutilise la RPC du mode classé (migration 079) — un seul
-// endroit fait bouger les trophées dans toute l'app. L'adversaire est matché
-// sur les trophées courants, donc l'écart reste équitable.
+// Trophées : LE DUEL 90 s N'EN DONNE PLUS (migration 238).
+//
+// Depuis la Route des trophées, `profiles.trophies` n'est plus un compteur
+// qu'on incrémente mais la SOMME des compteurs par (matière × jeu), recopiée
+// par `apply_game_trophies`. Un second écrivain — ici l'ancien barème Elo de
+// `apply_ranked_match` — n'aurait pas « ajouté » des trophées : il aurait posé
+// une autre valeur, que la partie suivante aurait écrasée par la somme. Les
+// deux systèmes se seraient effacés l'un l'autre à tour de rôle.
+//
+// Le duel 90 s garde tout le reste : XP, série, points de clan, quêtes, bilan
+// victoires/défaites. Il reste la boucle SOCIALE de l'arène ; la boucle
+// compétitive vit sur la Route, où chaque jeu a son compteur.
 async function applyTrophies(
   supabase: Awaited<ReturnType<typeof createClient>>,
   userId: string,
-  won: boolean,
-  seed: string,
 ): Promise<number | null> {
   const { data: profile } = await supabase
     .from('profiles')
     .select('trophies')
     .eq('id', userId)
     .maybeSingle()
-  const mine = Number(profile?.trophies ?? 0)
-
-  const { data, error } = await supabase.rpc('apply_ranked_match', {
-    p_won: won,
-    p_opponent_trophies: matchmakeOpponentTrophies(mine, seed.slice(0, 64)),
-    p_opponent_label: null,
-  })
-  if (error || !data) {
-    if (error) console.error('[duel90] trophées non appliqués:', error.message)
-    return null
-  }
-  return Number((data as { after?: number }).after ?? mine)
+  return Number(profile?.trophies ?? 0)
 }

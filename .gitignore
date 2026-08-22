@@ -64,6 +64,14 @@ next-env.d.ts
 #   mascotte/*.png   → public/images/mascotte/reaction-{bonne,mauvaise}.webp
 /public/images/mascotte/*.png
 
+# Sources d'illustration LOURDES, jamais servies par l'app : elles partaient
+# dans chaque déploiement pour rien (19,6 Mo à elles trois, et zéro référence
+# dans tout le dépôt). Le rendu final vit à côté en .webp.
+/public/images/logo app/
+/public/images/serie quizz/
+/public/images/écran chargement/
+/public/images/defi/modes/match v*.png
+
 # doublon local des icônes PWA (identiques à /public/icons/, seul chemin servi
 # et référencé par app/manifest.ts)
 /public/LOGO/

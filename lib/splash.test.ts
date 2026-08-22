@@ -154,10 +154,25 @@ describe('splashProgress', () => {
     )
   })
 
-  it('laisse le temps de lire l’astuce du jour', () => {
-    // En dessous d'environ 1,5 s, la phrase n'est pas lisible : on paierait le
-    // coût d'un écran de chargement sans le bénéfice pédagogique.
-    expect(SPLASH_MIN_MS).toBeGreaterThanOrEqual(1500)
+  it('ne retient JAMAIS l’élève plus qu’il ne faut pour éviter un clignotement', () => {
+    // La règle s'est inversée le 22/08/2026, et c'est un arbitrage assumé.
+    // Elle disait : « au moins 1,5 s, sinon l'astuce du jour n'est pas
+    // lisible ». Sur un téléphone, cela revenait à facturer près de deux
+    // secondes d'écran fixe à CHAQUE ouverture et à chaque rafraîchissement —
+    // y compris quand tout était prêt en 300 ms. On ne fait pas patienter
+    // quelqu'un pour lui apprendre une chose qu'il n'a pas demandée.
+    //
+    // Le plancher ne sert donc plus qu'à une chose : qu'un rideau qui s'ouvre
+    // aussitôt ne soit pas perçu comme un clignotement. Au-delà de ~600 ms, il
+    // redevient de l'attente pure.
+    expect(SPLASH_MIN_MS).toBeGreaterThan(0)
+    expect(SPLASH_MIN_MS).toBeLessThanOrEqual(600)
+  })
+
+  it('ne retient jamais l’élève plus de 2,5 s, même si un signal manque', () => {
+    // Le plafond de sûreté : au-delà, un écran fixe ne se lit plus comme un
+    // chargement mais comme une panne.
+    expect(SPLASH_READY_CAP_MS).toBeLessThanOrEqual(2500)
   })
 })
 

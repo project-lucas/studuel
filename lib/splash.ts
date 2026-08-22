@@ -79,8 +79,12 @@ export function shouldShowSplash(
 // donc les deux, avec un plafond de sécurité pour ne jamais retenir l'élève
 // prisonnier si un signal manque (bandeau masqué, erreur réseau…).
 
-/** Au-delà, le rideau lève quoi qu'il arrive : mieux vaut un squelette qu'un mur. */
-export const SPLASH_READY_CAP_MS = 4000
+/**
+ * Au-delà, le rideau lève quoi qu'il arrive : mieux vaut un squelette qu'un mur.
+ * Ramené de 4 s à 2,5 s : quatre secondes d'écran fixe, sur un téléphone, ce
+ * n'est plus un rideau, c'est une panne.
+ */
+export const SPLASH_READY_CAP_MS = 2500
 
 /** L'app est-elle réellement prête à être révélée ? */
 export function isSplashReady(state: {
@@ -102,16 +106,22 @@ export function isSplashReady(state: {
 // prête. Elle ne recule jamais et ne ment jamais sur la fin.
 
 /** Durée avant que la barre n'atteigne son plafond d'attente (ms). */
-export const SPLASH_RAMP_MS = 2200
+export const SPLASH_RAMP_MS = 900
 /** Plafond tant que l'app n'est pas prête : on garde les 8 derniers % pour elle. */
 export const SPLASH_WAIT_CEILING = 92
 /**
- * Durée d'affichage minimale (ms). 900 ms était un flash : l'astuce du jour
- * n'avait pas le temps d'être lue, donc on payait le coût d'un écran de
- * chargement sans en encaisser le bénéfice — apprendre une chose au passage.
- * Les jeux qui font ça bien tiennent 1,5 à 2,5 s.
+ * Durée d'affichage minimale (ms) — le temps qu'il faut pour qu'un rideau ne
+ * soit pas un CLIGNOTEMENT, et rien de plus.
+ *
+ * Elle a valu 1700 ms, pour laisser lire l'astuce du jour. C'était un mauvais
+ * marché : sur un téléphone, l'élève qui ouvre son app ou rafraîchit une page
+ * payait presque deux secondes d'écran fixe À CHAQUE FOIS, y compris quand tout
+ * était déjà prêt en 300 ms. On ne fait pas patienter quelqu'un pour lui
+ * apprendre quelque chose qu'il n'a pas demandé — Duolingo ne le fait pas. Le
+ * rideau lève désormais dès que l'app est prête ; l'astuce reste affichée, elle
+ * se lit quand le chargement est réellement long.
  */
-export const SPLASH_MIN_MS = 1700
+export const SPLASH_MIN_MS = 450
 
 /**
  * Avancement affiché (0 → 100) après `elapsedMs` d'attente.

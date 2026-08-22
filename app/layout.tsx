@@ -1,13 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import {
-  Geist,
-  Geist_Mono,
-  Bricolage_Grotesque,
-  Nunito,
-  Baloo_2,
-  Fredoka,
-} from "next/font/google";
+import { Nunito, Baloo_2 } from "next/font/google";
 import "./globals.css";
 // Navigation responsive : barre d'onglets en bas (mobile) + sidebar (desktop)
 import Navigation from "@/components/Navigation";
@@ -37,42 +30,28 @@ import { shouldShowSplash, tipOfDay } from "@/lib/splash";
 import { getCurrentUser } from "@/lib/supabase/user";
 import { headers } from "next/headers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-// Titres : Bricolage Grotesque — chaleureuse, contemporaine, jamais corporate.
-const bricolage = Bricolage_Grotesque({
-  variable: "--font-bricolage",
-  subsets: ["latin"],
-});
-
-// Onboarding « Studuel » — monde visuel autonome façon Duolingo : Nunito pour
-// l'UI, Baloo 2 pour le wordmark et les gros titres. Chargées ici (variables
-// CSS) mais utilisées uniquement sous la portée `.onb` (page /bienvenue).
+// DEUX POLICES, PAS SIX. La charte n'en a jamais eu que deux — Nunito pour le
+// corps, Baloo 2 pour les titres — mais l'app en téléchargeait six sur CHAQUE
+// page : Geist et Geist Mono (survivances d'avant la refonte, plus utilisées
+// que comme repli), Bricolage Grotesque (zéro usage dans tout le dépôt) et
+// Fredoka (les seules pastilles d'initiales des matières). Six familles, c'est
+// six fichiers qui bloquent le premier rendu sur un réseau mobile, pour deux
+// qui font le travail.
+//
+// Et elles sont désormais chargées en VARIABLE : en listant les graisses une à
+// une, on demandait un fichier PAR graisse — six pour Nunito, trois pour Baloo.
+// Sans `weight`, next/font sert la version variable, un seul fichier qui les
+// contient toutes.
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 const baloo = Baloo_2({
   variable: "--font-baloo",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
-});
-
-// Pastilles d'initiales des matières (cartes « On s'y remet ? ») — police
-// dédiée demandée par le design, exposée via l'utilitaire `font-initials`.
-const fredoka = Fredoka({
-  variable: "--font-fredoka",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -103,7 +82,7 @@ export default async function RootLayout({
       lang="fr"
       // Les variables de police vivent sur <html> : la règle globale
       // `font-sans` s'applique ici, elles doivent y être visibles.
-      className={`light ${geistSans.variable} ${geistMono.variable} ${bricolage.variable} ${nunito.variable} ${baloo.variable} ${fredoka.variable}`}
+      className={`light ${nunito.variable} ${baloo.variable}`}
     >
       <body className="antialiased">
         {/* Écran de chargement : l'astuce est tirée ici (serveur) pour que les

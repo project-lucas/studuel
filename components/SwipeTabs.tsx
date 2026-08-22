@@ -25,14 +25,15 @@ export default function SwipeTabs({ children }: { children: React.ReactNode }) {
     pathRef.current = pathname
   }, [pathname])
 
-  // Les onglets voisins sont préchargés : le changement paraît instantané.
-  useEffect(() => {
-    if (tabIndexForPath(pathname) < 0) return
-    for (const direction of ['left', 'right'] as const) {
-      const target = neighborTabPath(pathname, direction)
-      if (target) router.prefetch(target)
-    }
-  }, [pathname, router])
+  // PLUS DE PRÉCHARGEMENT DES VOISINS. L'intention était bonne — un onglet
+  // déjà en mémoire s'ouvre sans attendre — mais chaque onglet est une page
+  // entièrement dynamique : `router.prefetch` y déclenche un RENDU SERVEUR
+  // complet, soit dix à quinze requêtes Supabase. Poser le doigt sur un onglet
+  // en faisait donc calculer deux autres, et le simple fait de naviguer
+  // saturait l'app : les journaux de production montraient la même page rendue
+  // trois ou quatre fois en une seconde, et des 503 sur les préchargements.
+  // On paie désormais le vrai coût d'un onglet, une seule fois, au moment où
+  // l'élève le demande.
 
   useEffect(() => {
     const surface = surfaceRef.current

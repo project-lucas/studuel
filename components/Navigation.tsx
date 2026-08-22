@@ -144,6 +144,16 @@ export default function Navigation({
               <li key={path} className="relative z-10 flex-1">
                 <Link
                   href={path}
+                  // PAS DE PRÉCHARGEMENT. Chaque onglet est une page
+                  // entièrement dynamique qui coûte de dix à quinze requêtes
+                  // Supabase : précharger les cinq revenait à faire calculer
+                  // toute l'app au serveur dès qu'un onglet entrait dans le
+                  // champ. En production, les journaux montraient /tresor rendu
+                  // quatre fois et /defi trois fois en une seconde, et des 503
+                  // sur les préchargements — c'est-à-dire une app SATURÉE PAR
+                  // ELLE-MÊME. Le cache client du routeur (staleTimes) fait le
+                  // travail, lui, sans rien demander au serveur.
+                  prefetch={false}
                   onClick={() => sfx.tap()}
                   aria-label={name}
                   aria-current={active ? 'page' : undefined}
@@ -265,6 +275,7 @@ export default function Navigation({
               <li key={path}>
                 <Link
                   href={path}
+                  prefetch={false}
                   onClick={() => sfx.tap()}
                   aria-current={active ? 'page' : undefined}
                   data-tour={`tab-${path.slice(1)}`}

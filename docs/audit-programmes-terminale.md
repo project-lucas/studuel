@@ -10,7 +10,7 @@ voir. » C'est exact, et la cause est plus profonde qu'une erreur de saisie.
 
 ---
 
-## 1. Anglais — le défaut signalé (CORRIGÉ, migration 235)
+## 1. Anglais — le défaut signalé (CORRIGÉ, migration 243)
 
 L'anglais de Terminale ouvrait sur quatre chapitres présentés dans le code comme
 « les axes du programme de LV » :
@@ -46,12 +46,26 @@ programme était le seul totalement absent.
 
 ### Ce qui a été fait
 
-Migration **235** : les quatre faux axes sont supprimés (leçons et quiz partent
-par cascade), les six vrais s'installent aux positions 1 à 6 avec cours et quiz
-(48 questions), et les 24 fiches de grammaire de la migration 226 se rangent
-derrière eux sous leurs quatre **repères linguistiques** (groupe nominal, groupe
-verbal, les temps, la phrase). La page matière groupe désormais au lieu
-d'aligner 28 lignes à plat.
+**Première réponse (migration 235, ABANDONNÉE le 19/08/2026).** Elle supprimait
+les quatre faux axes et installait les six axes du BO 2025 aux positions 1 à 6,
+avec cours et quiz. Elle n'a jamais été exécutée, et le fichier a été retiré du
+dépôt : le programme d'anglais que l'app doit servir à un élève de terminale est
+celui de la LANGUE, pas la liste des repères culturels de l'année. Ajouter six
+chapitres culturels devant ses fiches aurait reconduit le défaut d'origine —
+faire lire à l'élève, avant son cours, des intitulés qu'il ne retrouve pas
+dessus. Le texte du BO reste juste, et la migration reste récupérable dans
+l'historique git si l'on veut un jour lui donner sa place ailleurs (une entrée
+« repères culturels » à part, par exemple).
+
+**Ce qui est livré (migration 243).** Les quatre chapitres hors programme sont
+supprimés — leçons par cascade, plus leurs quatre quiz, qui autrement
+survivraient orphelins à leur chapitre (`quizzes.lesson_id` est ON DELETE SET
+NULL) et resteraient tirables par le moteur de questions. Les 24 fiches de langue
+de la migration 226 reculent aux positions 1 à 24 et reçoivent leur chapitre de
+programme : **Le groupe nominal** (3 fiches), **Le groupe verbal** (5), **Les
+temps** (5), **La phrase** (11). La page matière affiche donc quatre chapitres
+repliables au lieu de 28 lignes à plat, et l'élève y retrouve exactement le
+sommaire de son cours.
 
 ### Ce qui reste à faire sur l'anglais
 
@@ -77,10 +91,16 @@ Sondé en base le 07/08/2026. « Chapitres » = ce que l'élève voit.
 | Philosophie | 19 | Les 17 notions + repères du programme ✅ |
 | SVT (spé) | 22 | Les 7 chapitres du BO éclatés en 22 fiches ✅ |
 | Espagnol | 35 | Grammaire complète + axes culturels ✅ |
-| HLP (spé) | 19 | Les 6 chapitres des 2 semestres ✅ |
+| HLP (spé) | 19 | Les 6 chapitres des 2 semestres ✅ — **rangés sous leurs chapitres par la migration 257** (20/08/2026) : les 18 fiches de la 232 reçoivent leur `theme`, la fiche « Méthode de l'épreuve » reste volontairement hors chapitre |
 | Enseignement scientifique | 16 | Les 4 thèmes du programme ✅ |
 | EMC | 15 | ✅ |
-| **Anglais** | **30** | ✅ **depuis la migration 235** |
+| **Anglais** | **24** | ✅ **depuis la migration 243** — 4 chapitres de langue, 24 fiches |
+| **Physique-Chimie (spé)** | **31** | ✅ **depuis la migration 252** — les 7 chapitres du programme éclatés en 31 fiches, 248 questions |
+| **SES (spé)** | **31** | ✅ **depuis la migration 253** — les 12 chapitres du programme, 248 questions |
+| **NSI (spé)** | **20** | ✅ **depuis la migration 254** — les 5 chapitres du programme, 160 questions |
+| **Maths (spé)** | **19** | ✅ **depuis la migration 255** — algèbre et géométrie, analyse, probabilités ; 152 questions |
+| **Maths expertes** | **12** | ✅ **depuis la migration 255** — nombres complexes, arithmétique, graphes et matrices |
+| **Maths complémentaires** | **11** | ✅ **depuis la migration 255** — analyse, probabilités et statistique |
 
 ### Partiels — le programme n'est couvert qu'en partie
 
@@ -92,13 +112,13 @@ Sondé en base le 07/08/2026. « Chapitres » = ce que l'élève voit.
 
 | Matière | Chapitres | Programme officiel | Écart |
 |---|---|---|---|
-| **Maths (spé)** | **5** | **15 sections** en 4 parties (BO spécial n° 8 du 25/07/2019) : combinatoire et dénombrement · vecteurs, droites et plans de l'espace · orthogonalité et distances dans l'espace · représentations paramétriques et équations cartésiennes · suites · limites de fonctions · compléments sur la dérivation · continuité · fonction logarithme · fonctions sinus et cosinus · primitives et équations différentielles · calcul intégral · succession d'épreuves indépendantes · sommes de variables aléatoires · concentration et loi des grands nombres | **Manque TOUTE la géométrie dans l'espace, toute la combinatoire, les suites, le calcul intégral, sinus/cosinus et toute la chaîne probabiliste.** C'est l'écart le plus grave du lot : coefficient 16, 4 h d'épreuve. |
-| **Physique-Chimie (spé)** | 5 | 4 thèmes (constitution et transformations de la matière · mouvement et interactions · l'énergie · ondes et signaux), ~16 sections | Couverture très partielle ; épreuve 3 h 30 + 1 h d'ECE, coef. 16 |
-| **SES (spé)** | 4 | 3 parties (science économique · sociologie et science politique · regards croisés), ~10 questionnements | Seule la science économique est effleurée ; toute la sociologie manque |
-| **HGGSP (spé)** | 4 | **6 thèmes** | Manquent « De nouveaux espaces de conquête » et « Histoire et mémoires » ; les 4 présents sont des intitulés reformulés |
-| **NSI (spé)** | 4 | ~6 thèmes (structures de données · bases de données · architectures matérielles · langages et programmation · algorithmique) | Partiel |
-| **Maths complémentaires** | 4 | 12 thèmes | Partiel |
-| **Maths expertes** | 3 | 3 thèmes (nombres complexes · arithmétique · matrices et graphes) | Le découpage est juste, la granularité très grossière |
+| ~~**Maths (spé)**~~ | ~~5~~ | **15 sections** en 4 parties (BO spécial n° 8 du 25/07/2019) : combinatoire et dénombrement · vecteurs, droites et plans de l'espace · orthogonalité et distances dans l'espace · représentations paramétriques et équations cartésiennes · suites · limites de fonctions · compléments sur la dérivation · continuité · fonction logarithme · fonctions sinus et cosinus · primitives et équations différentielles · calcul intégral · succession d'épreuves indépendantes · sommes de variables aléatoires · concentration et loi des grands nombres | **RÉGLÉ par la migration 255** (20/08/2026) : les 5 fiches composites remplacées par les 19 du programme, sous 3 chapitres. Les options partent dans leurs propres matières, `maths-expertes` (12 fiches) et `maths-complementaires` (11). |
+| ~~**Physique-Chimie (spé)**~~ | ~~5~~ | 4 thèmes (constitution et transformations de la matière · mouvement et interactions · l'énergie · ondes et signaux), ~16 sections | **RÉGLÉ par la migration 252** (20/08/2026) : les 5 fiches composites remplacées par les 31 du programme, rangées sous ses 7 chapitres. |
+| ~~**SES (spé)**~~ | ~~4~~ | 3 parties (science économique · sociologie et science politique · regards croisés), ~10 questionnements | **RÉGLÉ par la migration 253** (20/08/2026) : les 4 fiches composites remplacées par les 31 du programme, sous ses 12 questionnements. |
+| ~~**HGGSP (spé)**~~ | ~~4~~ | **6 thèmes** | **RÉGLÉ par la migration 256** (20/08/2026) : les 4 fiches composites remplacées par les 24 du programme, quatre par thème — dont « De nouveaux espaces de conquête » et « Histoire et mémoires », qui n'existaient nulle part. |
+| ~~**NSI (spé)**~~ | ~~4~~ | ~6 thèmes (structures de données · bases de données · architectures matérielles · langages et programmation · algorithmique) | **RÉGLÉ par la migration 254** (20/08/2026) : 20 fiches sous 5 chapitres, dont tout le génie logiciel, absent jusque-là. |
+| ~~**Maths complémentaires**~~ | ~~4~~ | 12 thèmes | **RÉGLÉ par la migration 255** (20/08/2026) : 11 fiches sous 2 chapitres (analyse · probabilités et statistique). |
+| ~~**Maths expertes**~~ | ~~3~~ | 3 thèmes (nombres complexes · arithmétique · matrices et graphes) | **RÉGLÉ par la migration 255** (20/08/2026) : les 3 chapitres éclatés en 12 fiches. |
 | Options (allemand, latin, grec, musique, arts plastiques, EPS, SI, LLCER anglais) | 3 chacune | — | Fiches maison, jamais confrontées au BO |
 
 ---
@@ -123,14 +143,20 @@ tiennent compte — l'EMC y a sa propre fiche d'épreuve.
 
 ## 4. Priorités, dans l'ordre où je les traiterais
 
-1. **Maths spécialité Terminale** — l'écart le plus grand sur l'épreuve la plus
-   lourde (coef. 16). 15 sections à écrire.
+1. ~~**Maths spécialité Terminale**~~ — **RÉGLÉ par la migration 255**
+   (20/08/2026) : 19 fiches en spécialité, plus 12 en mathématiques expertes et
+   11 en mathématiques complémentaires, dans leurs matières respectives.
 2. **Histoire-Géo : le ménage des 5 chapitres de la 008** — c'est le moins cher
    (une migration de suppression) pour le gain immédiat le plus visible : deux
    doublons disparaissent de la liste.
 3. **Anglais Première et Seconde** — même défaut que celui corrigé en Terminale,
    même texte de référence, travail déjà balisé.
-4. **SES, HGGSP, Physique-Chimie, NSI** — spécialités à coefficient 16.
+4. ~~**HGGSP**~~ — **RÉGLÉ par la migration 256** (20/08/2026) : 24 fiches sous
+   les 6 thèmes du programme. Toutes les spécialités à coefficient 16 de
+   Terminale sont désormais traitées — ~~Physique-Chimie~~ (252), ~~SES~~ (253),
+   ~~NSI~~ (254), ~~Maths~~ (255) et ~~HGGSP~~ (256). Reste la **PREMIÈRE** :
+   HGGSP y a 4 fiches composites pour 5 thèmes (il manque « Analyser les
+   dynamiques des puissances internationales »).
 5. **`lib/exams.ts`** : ajouter l'épreuve anticipée de maths en 1re.
 
 ---

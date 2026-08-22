@@ -10,11 +10,13 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import WorldBackdrop from '@/components/WorldBackdrop'
-import PanneauIdentite from '@/components/moi/PanneauIdentite'
+import CarteProfil from '@/components/moi/CarteProfil'
+import CouronnesMatieres from '@/components/moi/CouronnesMatieres'
+import CouronnesRangee from '@/components/moi/CouronnesRangee'
+import MesChiffres from '@/components/moi/MesChiffres'
 import HistoriqueTravail from '@/components/moi/HistoriqueTravail'
-import MatiereDuMomentCard from '@/components/moi/MatiereDuMomentCard'
 import HabitudesCard, { type LeverState } from '@/components/moi/HabitudesCard'
-import AjouterMoyennes from '@/components/moi/SaisieMoyennes'
+import TuileMoyenne from '@/components/moi/TuileMoyenne'
 import TrajectoryCard from '@/components/moi/TrajectoryCard'
 import StandingLine from '@/components/StandingLine'
 import { parseGradeStandings } from '@/lib/percentile'
@@ -26,9 +28,12 @@ import { toDayKey, activityCutoff, computeStreak } from '@/lib/streak'
 import { getGradeChaptersCached, getSubjectsCached } from '@/lib/catalog'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
 import { getChapitresVus } from '@/lib/chapitres-vus'
-import { getReviewItems, countsBySubject, reviewQueue } from '@/lib/srs'
-import { couvertureFor, type ChapitreCouvert } from '@/lib/coach/couverture'
-import { matiereDuMoment } from '@/lib/moi/matiere-du-moment'
+import { getProfileData } from '@/app/defi/profile-actions'
+import {
+  bilanCouronnes,
+  couronnes,
+  type MatiereACouronner,
+} from '@/lib/moi/couronnes'
 import { appliquerValidationsAuto } from '@/lib/moi/journal'
 import {
   formatDuree,
@@ -38,7 +43,7 @@ import {
   JOURS_HISTORIQUE,
   type JourTravail,
 } from '@/lib/moi/temps'
-import { bilanMoyenne, formatMoyenne, phraseDelta } from '@/lib/moi/moyenne'
+import { bilanMoyenne } from '@/lib/moi/moyenne'
 import { PLANIFIER_CATALOG_ID } from '@/lib/habits'
 import {
   DRIVER_WINDOW_DAYS,
@@ -53,10 +58,11 @@ import {
   mergeTermAverages,
   normalizeTermGrades,
 } from '@/lib/trajectoire-bac'
-import { avatarDataUri, normalizeAvatarConfig } from '@/lib/avatar'
 import { workLevel } from '@/lib/work-level'
 import { bilanHabitudes, meilleureSerie } from '@/lib/moi/habitudes'
+import type { ChapitreProgression } from '@/lib/progression'
 import { GRADE_LEVELS, type GradeLevel, type Subject } from '@/lib/types'
+import { GRADE_FULL_LABELS } from '@/lib/grades'
 import type { Habit, HabitLog, CommuteSlot } from '@/lib/types'
 
 export const metadata = { title: 'Moi — Studuel' }
@@ -73,48 +79,49 @@ type MoiProfileRow = {
   avatar: unknown
 }
 
-// Libellés des classes pour la pill d'identité (le slug court sinon).
-const GRADE_LABELS: Partial<Record<GradeLevel, string>> = {
-  '2de': 'Seconde',
-  '1re': 'Première',
-  Tle: 'Terminale',
-}
-
-// Fenêtre du journal de travail : la plus large des portées de l'historique
-// (un an). Les lignes de `work_daily` sont deux colonnes et n'existent que les
-// jours travaillés — une année tient dans quelques kilo-octets, et le sélecteur
-// de période change alors de lunette SANS aller-retour serveur.
+// Libellés des classes pour la pastille d'identité. La table vivait ICI, ne
+// couvrait que 2de/1re/Tle et retombait sur le slug pour le reste — « 6e »
+// s'affichait tel quel, et « 1re techno » se serait affiché « 1re techno ».
+// Une seule liste désormais, à côté des classes qu'elle nomme (lib/grades).
 
 // -----------------------------------------------------------------------------
-// L'ONGLET MOI — le miroir, en un seul scroll.
+// L'ONGLET MOI — LA CARTE DE JOUEUR.
 //
-// CE QUI A CHANGÉ, ET POURQUOI (refonte du 2026-08-06).
+// CE QUI A CHANGÉ, ET POURQUOI (refonte du 2026-08-19).
 //
-// 1. PLUS D'ONGLET DANS L'ONGLET. « Ma progression » / « Mes habitudes »
-//    cachaient la moitié de l'écran derrière un clic que personne ne faisait.
-//    Tout tient dans un scroll ; le détail des habitudes a sa page (/moi/habitudes).
+// 1. L'ONGLET DEVIENT LE PROFIL. Son icône est le visage de l'élève, c'est le
+//    seul onglet dont l'icône change d'un élève à l'autre — et il ne contenait
+//    pas son profil. Bannière, badges, pseudo, école, blason de rang, stats de
+//    duel : tout existait déjà, enfermé dans une modale de `/defi`. Une modale
+//    n'a pas d'URL, pas de retour arrière, pas de partage ; personne n'y va
+//    « pour voir ». Ça vit ici maintenant (`CarteProfil`), et `/compte` est
+//    enfin accessible d'un geste, par l'engrenage de la carte.
 //
-// 2. LA CAPACITÉ N'OUVRE PLUS L'ÉCRAN. « Capacité 8 · plafond 95 » avec trois
-//    drivers à 0 % était la première chose qu'un élève lisait sur l'onglet qui
-//    porte son nom : une note basse, sur une échelle qu'il ne pouvait relier à
-//    rien de ce qu'il avait fait. Le calcul est INTACT — il nourrit toujours la
-//    trajectoire au bac — mais son affichage a déménagé auprès des habitudes qui
-//    le produisent.
+// 2. UN SEUL NIVEAU. L'écran affichait « Assidu · niveau 5 » avec sa barre, à
+//    trois centimètres du bandeau du haut qui affiche « Niveau 6 · 93 % » :
+//    même mot, même forme, deux échelles sans rapport. Le rang de travail garde
+//    son TITRE et perd son numéro.
 //
-// 3. CE QUE L'ÉLÈVE A FAIT EST ENFIN À L'ÉCRAN. Sa série, son temps de travail
-//    cumulé, sa moyenne générale : les trois seuls chiffres qu'il reconnaît
-//    comme siens, et dont deux ne redescendent jamais. Les données existaient
-//    toutes (`work_seconds` 014, `work_daily` 084, `school_grades` 167).
+// 3. LES COURONNES. Une par matière, du bronze au diamant, décernées sur les
+//    chapitres RÉELLEMENT MAÎTRISÉS du programme de l'année
+//    (`lib/moi/couronnes`, logique pure, aucune migration). C'est la seule vue
+//    transversale de l'app : Réviser voit une matière à la fois, Marcel voit les
+//    chapitres, l'arène voit les trophées — personne ne voyait l'élève.
 //
-// 4. L'ÉCRAN DÉSIGNE UNE MATIÈRE. Pas un tableau — celui de Marcel existe déjà.
-//    Un nom, une raison en faits, un bouton.
+// 4. « REPRENDS ANGLAIS » A ÉTÉ SUPPRIMÉ. Cette bande répondait à « par quoi je
+//    commence ? », question que l'arène, Marcel et Réviser posent déjà chacun à
+//    leur manière. Le profil répond à l'autre : « qu'est-ce que j'ai accompli ? »
+//    La liste des couronnes prend sa place, et mène aux mêmes matières.
 //
-// 5. LA TRAJECTOIRE NE BLOQUE PLUS RIEN. Elle ne s'affiche que s'il y a des
-//    notes ; sinon la saisie vit dans la tuile « moyenne », à côté de deux
-//    preuves déjà pleines.
+// 5. LES CHIFFRES SONT RÉUNIS. Les trois preuves (série, temps, moyenne) et les
+//    stats d'arène (parties, victoires, trophées) étaient à deux écrans l'un de
+//    l'autre. Un seul bloc, deux rangées : ce qui ne redescend jamais au-dessus,
+//    ce qui se gagne et se perd en dessous.
 //
-// PERFORMANCE. Deux vagues, pas plus : le profil ne peut pas attendre (le
+// PERFORMANCE. Deux vagues, comme avant : le profil ne peut pas attendre (le
 // niveau conditionne la lecture du programme), tout le reste part avec lui.
+// `getProfileData` (la carte de joueur) rejoint la première vague ; la file SRS,
+// qui ne servait qu'à désigner la matière du moment, a disparu avec elle.
 // -----------------------------------------------------------------------------
 export default async function MoiPage() {
   const supabase = await createClient()
@@ -125,17 +132,16 @@ export default async function MoiPage() {
       <div>
         <PageHeader
           title="Moi"
-          description="Ton travail, tes chiffres, tes habitudes."
+          description="Ton profil, tes couronnes, tes chiffres."
         />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <CircleUser className="size-4" /> Connecte-toi pour voir ton
-              miroir
+              <CircleUser className="size-4" /> Connecte-toi pour voir ton profil
             </CardTitle>
             <CardDescription>
-              Ta série, ton temps de travail, ta moyenne et les habitudes qui
-              les font monter.
+              Ta carte de joueur, tes couronnes par matière, ta série, ton temps
+              de travail et tes habitudes.
             </CardDescription>
           </CardHeader>
           <CardFooter>
@@ -156,6 +162,7 @@ export default async function MoiPage() {
 
   const [
     profile,
+    profilJeu,
     { data: habits },
     { data: tests },
     { data: studies },
@@ -169,7 +176,6 @@ export default async function MoiPage() {
     subjects,
     mastery,
     chapitresVus,
-    reviewItems,
   ] = await Promise.all([
     readRowTolerant<MoiProfileRow>(supabase, 'profiles', 'id', user.id, [
       'full_name',
@@ -182,6 +188,11 @@ export default async function MoiPage() {
       'work_seconds',
       'avatar',
     ]),
+    // La carte de joueur : pseudo, bannière, badges, blason, école, stats de
+    // duel. Une seule porte (la même que la modale de /defi utilisait) plutôt
+    // que huit lectures recopiées ici — le jour où le profil gagne un champ,
+    // les deux écrans l'ont.
+    getProfileData(),
     supabase
       .from('habits')
       .select('id, catalog_id, target, created_at, habit_catalog(*)')
@@ -235,24 +246,16 @@ export default async function MoiPage() {
     // Place de l'élève dans sa cohorte (223) : RPC SECURITY DEFINER, jamais une
     // jointure — la RLS de `profiles` ne laisserait voir que sa propre ligne.
     supabase.rpc('my_grade_standings'),
-    // --- Ce qu'il faut pour DÉSIGNER une matière -------------------------------
+    // --- Ce qu'il faut pour DÉCERNER les couronnes ---------------------------
     // Le catalogue est en cache serveur (identique pour tous), la maîtrise et
-    // les chapitres déclarés sont personnels. Aucun de ces quatre n'a besoin du
+    // les chapitres déclarés sont personnels. Aucun des trois n'a besoin du
     // niveau : ils partent donc dans la même vague que le reste.
     getSubjectsCached(),
     getChapterMastery(supabase, user.id),
     getChapitresVus(supabase, user.id),
-    getReviewItems(supabase, user.id),
     // Mission fixe pour tous : « Planifier ma semaine ». Idempotente, et son
     // résultat ne sert à personne — d'où sa place EN DERNIER, hors du
     // déstructurage.
-    //
-    // Elle était jusqu'ici glissée AVANT la RPC de classement, alors que le
-    // déstructurage ne comptait pas de nom pour elle : `standingsRow` recevait
-    // donc le retour (vide) de l'upsert, et le vrai classement partait à la
-    // poubelle. La ligne « Tu travailles plus que 96 % des Terminale » ne
-    // pouvait pas s'afficher sur cet onglet — silencieusement, puisque
-    // `parseGradeStandings` avale ce qu'elle ne comprend pas.
     supabase.from('habits').upsert(
       { user_id: user.id, catalog_id: PLANIFIER_CATALOG_ID, target: {} },
       { onConflict: 'user_id,catalog_id', ignoreDuplicates: true },
@@ -325,9 +328,12 @@ export default async function MoiPage() {
   const plafond = computePlafond(drivers, capacite)
   const trajectory = computeBacTrajectory(terms, capacite, plafond)
 
-  // --- La matière du moment -------------------------------------------------
-  // Mêmes règles que Réviser et Marcel, à la lettre : matières suivies, puis
-  // chapitres du niveau, puis la définition unique du pourcentage.
+  // --- Les couronnes --------------------------------------------------------
+  // Mêmes règles de périmètre que Réviser et Marcel, à la lettre : matières
+  // suivies, puis chapitres du niveau. Ce qui change, c'est le COMPTE : une
+  // couronne se décerne sur les chapitres maîtrisés du programme ENTIER, quand
+  // le pourcentage de Réviser porte sur les chapitres commencés (cf. le
+  // commentaire d'en-tête de lib/moi/couronnes.ts).
   const selected = Array.isArray(profile?.selected_subjects)
     ? (profile.selected_subjects as string[])
     : []
@@ -337,23 +343,29 @@ export default async function MoiPage() {
       : subjects
   const parId = new Map(suivies.map((s) => [s.id, s]))
 
-  const chapitresCouverts: ChapitreCouvert[] = []
+  const parMatiere = new Map<string, MatiereACouronner & { chapitres: ChapitreProgression[] }>()
   for (const chapitre of levelChapters) {
     const matiere = parId.get(chapitre.subject_id)
     if (!matiere) continue
+    let entree = parMatiere.get(matiere.id)
+    if (!entree) {
+      entree = {
+        subjectId: matiere.id,
+        subjectSlug: matiere.slug,
+        subjectName: matiere.name,
+        chapitres: [],
+      }
+      parMatiere.set(matiere.id, entree)
+    }
     const progress = mastery.get(chapitre.id)
-    chapitresCouverts.push({
-      chapterId: chapitre.id,
-      chapterTitle: chapitre.title,
-      subjectSlug: matiere.slug,
-      subjectName: matiere.name,
-      state: chapterState(progress),
+    entree.chapitres.push({
       value: progress?.value ?? 0,
+      state: chapterState(progress),
       vuEnCours: chapitresVus.has(chapitre.id),
     })
   }
-  const cartesParMatiere = countsBySubject(reviewQueue(reviewItems, today))
-  const cible = matiereDuMoment(couvertureFor(chapitresCouverts), cartesParMatiere)
+  const listeCouronnes = couronnes([...parMatiere.values()])
+  const bilan = bilanCouronnes(listeCouronnes)
 
   // --- Les leviers du jour --------------------------------------------------
   const habitByCatalog = new Map(activeHabits.map((h) => [h.catalog_id, h.id]))
@@ -385,59 +397,104 @@ export default async function MoiPage() {
   )
 
   // --- Identité -------------------------------------------------------------
-  const firstName = String(profile?.full_name ?? '').split(' ')[0] || 'Élève'
   const gradeLevel: GradeLevel | null = GRADE_LEVELS.includes(
     grade as GradeLevel,
   )
     ? (grade as GradeLevel)
     : null
-  const gradeLabel = gradeLevel ? (GRADE_LABELS[gradeLevel] ?? gradeLevel) : null
+  const gradeLabel = gradeLevel ? GRADE_FULL_LABELS[gradeLevel] : null
   const level = workLevel(secondesTotal)
   const standings = parseGradeStandings(standingsRow)
-  const avatarConfig = normalizeAvatarConfig(profile?.avatar)
 
   return (
     <div>
       <WorldBackdrop className="moi-bg" />
 
-      {/* LE RYTHME DE LA PAGE. Les blocs ne sont plus séparés par un écart
-          unique : le panneau et la carte du rythme se touchent presque (même
-          sujet — moi, mon travail), la bande « matière » prend beaucoup d'air
-          avant elle parce qu'elle est le geste de l'écran, et la trajectoire
-          reprend l'écart courant. Un espacement constant entre six blocs, c'est
-          une liste ; un espacement qui varie, c'est une lecture. */}
+      {/* LE RYTHME DE LA PAGE. La carte porte tout ce qui dit QUI EST cet élève
+          et CE QU'IL A GAGNÉ ; le rythme et les habitudes reprennent ensuite
+          l'écart courant. Un espacement constant entre cinq blocs, c'est une
+          liste ; un espacement qui varie, c'est une lecture.
+
+          Il y a deux blocs de moins qu'avant : « Mes chiffres » a rejoint la
+          carte en pied de celle-ci (components/moi/MesChiffres.tsx), et « Mes
+          couronnes » s'est replié dans l'étagère de la carte, derrière le ⋮
+          (components/moi/CouronnesRangee.tsx). */}
       <div className="flex flex-col">
-        <PanneauIdentite
-          titre="Moi"
-          sousTitre="Ton travail, tes chiffres, tes habitudes."
-          name={firstName}
-          gradeLabel={gradeLabel}
-          avatarUri={avatarDataUri(avatarConfig, 240)}
-          equipment={avatarConfig.equipment}
-          level={level}
-          // « Tu travailles plus que 96 % des 3e ». Sur cet onglet la mesure est
-          // l'ASSIDUITÉ et pas les trophées : /moi est le miroir du travail
-          // fourni, pas de la compétition.
-          standing={
-            <StandingLine
-              standing={standings.assiduite}
-              grade={standings.grade ?? gradeLevel}
-              className="text-white/90"
-            />
-          }
-          serie={serie}
-          record={record}
-          temps={formatDuree(secondesTotal)}
-          tempsTendance={libelleCetteSemaine(semaines)}
-          moyenne={formatMoyenne(moyenne)}
-          moyenneTendance={phraseDelta(moyenne)}
-          saisieMoyenne={
-            <AjouterMoyennes terms={terms} disabled={Boolean(termError)} />
-          }
-        />
+        {profilJeu ? (
+          <CarteProfil
+            data={{
+              displayName: profilJeu.displayName,
+              gamertag: profilJeu.gamertag,
+              gradeLabel,
+              schoolName: profilJeu.schoolName,
+              avatar: profilJeu.avatar,
+              profileBanner: profilJeu.profileBanner,
+              availableBanners: profilJeu.availableBanners,
+              rank: profilJeu.summary.rank,
+              level: profilJeu.summary.level,
+              badges: profilJeu.badges,
+              equippedBadgeIds: profilJeu.equippedBadgeIds,
+            }}
+            workTitle={level.title}
+            // L'étagère : un emplacement par matière suivie, vide tant que la
+            // couronne n'est pas gagnée. Rendue ici (côté serveur) et passée en
+            // nœud — la carte, elle, est un composant client. Elle porte
+            // maintenant le DÉTAIL en enfant : le ⋮ au bout de la rangée le
+            // déroule sur place, il n'y a plus de bloc « Mes couronnes » sous
+            // la carte.
+            couronnes={
+              <CouronnesRangee liste={listeCouronnes} bilan={bilan}>
+                <CouronnesMatieres liste={listeCouronnes} bilan={bilan} />
+              </CouronnesRangee>
+            }
+            // « Tu travailles plus que 96 % des 3e ». Sur cet onglet la mesure
+            // est l'ASSIDUITÉ et pas les trophées : /moi est le miroir du
+            // travail fourni, l'arène a déjà le classement de la compétition.
+            standing={
+              <StandingLine
+                standing={standings.assiduite}
+                grade={standings.grade ?? gradeLevel}
+                className="text-white/90"
+              />
+            }
+            // LE PIED DE LA CARTE. « Mes chiffres » n'est plus une section :
+            // il est devenu la plaque de statistiques de la carte de joueur.
+            // Passé en nœud (et non importé par la carte) pour qu'il reste
+            // rendu côté serveur — il n'a aucun état client.
+            chiffres={
+              <MesChiffres
+                serie={serie}
+                record={record}
+                temps={formatDuree(secondesTotal)}
+                tempsTendance={libelleCetteSemaine(semaines)}
+                // LA TUILE DES NOTES, entière et cliente : c'est la seule
+                // cellule du bloc qui ouvre quelque chose (la saisie des
+                // moyennes de trimestre), et la seule qui change de nature
+                // selon qu'une moyenne est connue ou non.
+                tuileMoyenne={
+                  <TuileMoyenne
+                    bilan={moyenne}
+                    terms={terms}
+                    disabled={Boolean(termError)}
+                  />
+                }
+                arene={{
+                  duels: profilJeu.summary.gamesPlayed,
+                  victoires:
+                    profilJeu.summary.gamesPlayed > 0
+                      ? profilJeu.summary.winRateLabel
+                      : null,
+                  trophees: profilJeu.summary.trophies,
+                  recordTrophees: profilJeu.summary.bestTrophies,
+                  meilleureSerie: profilJeu.summary.bestStreak,
+                }}
+              />
+            }
+          />
+        ) : null}
 
         {rythmeDisponible ? (
-          <div className="mt-5">
+          <div className="mt-7">
             <HistoriqueTravail
               jours={workDays ?? []}
               today={today}
@@ -446,21 +503,13 @@ export default async function MoiPage() {
           </div>
         ) : null}
 
-        {/* Sans chapitre commencé, on n'invente pas de cible — et on ne pose pas
-            non plus un bloc vide pour le dire : la bande disparaît. */}
-        {cible ? (
-          <div className="mt-9">
-            <MatiereDuMomentCard matiere={cible} />
-          </div>
-        ) : null}
-
-        <div className="mt-9">
+        <div className="mt-7">
           <HabitudesCard levers={levers} today={today} bilans={bilans} />
         </div>
 
         {/* La trajectoire ne s'affiche QUE s'il y a de quoi projeter. Sans
             notes, elle occupait un tiers de l'écran pour demander une saisie —
-            ce bouton vit maintenant dans le panneau, à la place du chiffre. */}
+            ce bouton vit maintenant dans le bloc des chiffres. */}
         {trajectory.hasData ? (
           <div className="mt-5">
             <TrajectoryCard

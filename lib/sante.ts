@@ -466,22 +466,6 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     sonde: { type: 'colonne', table: 'chapters', colonne: 'theme' },
   },
   {
-    id: '235',
-    fichier: '235_contenu_anglais_axes_tle.sql',
-    feature:
-      'Anglais Tle : les SIX axes du programme officiel (BO n° 22 du 29 mai 2025, en vigueur à la rentrée 2026-2027) remplacent les 4 intitulés hors-programme, et les 24 fiches de grammaire se rangent sous leurs 4 repères linguistiques — 48 questions',
-    siAbsente:
-      'L’anglais de Terminale ouvre sur 4 chapitres donnés pour « les axes du programme » qui n’en sont pas : « Faire société : unité et pluralité », « Environnements en mutation », « Art et débats d’idées », « Innovations et responsabilité ». Deux d’entre eux appartiennent à un AUTRE enseignement (la spécialité « Anglais, monde contemporain »). L’élève révise donc des intitulés absents de son cours, et ne trouve rien sur « Le Royaume-Uni et ses nations » — le seul axe que le programme rende obligatoire.',
-    sonde: {
-      type: 'ligne',
-      table: 'chapters',
-      colonne: 'title',
-      valeur: 'Axe 6 — Le Royaume-Uni et ses nations',
-    },
-    decision:
-      'La migration SUPPRIME les 4 faux axes (leurs leçons et quiz partent par cascade) : les garder laisserait quatre portes vers du hors-programme. Elle REPREND l’ALTER TABLE de la 234 en ADD COLUMN IF NOT EXISTS — 234 n’étant pas jouée en production, sans cette reprise la 235 échouerait à mi-parcours, les 4 anciens chapitres déjà supprimés et les 6 neufs pas encore posés, soit une matière vide. Les positions des 24 fiches de grammaire sont RÉÉCRITES UNE À UNE (7 à 30) et non décalées d’un « +6 » : un décalage relatif rejoué décalerait une seconde fois.',
-  },
-  {
     id: '236',
     fichier: '236_annales.sql',
     feature:
@@ -527,6 +511,641 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     sonde: { type: 'colonne', table: 'review_items', colonne: 'due_at' },
     decision:
       'L’échéance passe de DATE à TIMESTAMPTZ, et c’est la raison d’être de la migration : une erreur doit revenir « dans 10 minutes », DANS la même session. Avec une colonne DATE, « maintenant + 10 min » et « aujourd’hui » sont la même valeur — le rappel court était impossible, quel que soit le code au-dessus. `due_date` SURVIT, dérivée de `due_at` par un trigger : elle est la clé de lecture de la file depuis la 021, et un seul écrivain la maintient (même doctrine que `profiles.trophies` en 238). `question_scope` est une VUE et non une table — la donnée existe déjà, la dupliquer créerait une seconde source de vérité à resynchroniser à chaque import de contenu — et elle est en `security_invoker` pour que le gating premium de `quiz_questions` reste en vigueur.',
+  },
+  {
+    id: '240',
+    fichier: '240_vestiaire_open_peeps.sql',
+    feature:
+      'Le catalogue du vestiaire réécrit pour le moteur Open Peeps : 30 coiffures et couvre-chefs (voile, turban, tresses, locks, twists, afro, bantu knots, bonnet, casquette) au lieu de 6, 8 teintes de peau, la tenue devenue couleur de haut',
+    siAbsente:
+      'Le vestiaire retombe sur son catalogue de repli embarqué (`fallbackCatalog`) : toutes les options s’affichent et se portent, mais GRATUITEMENT — plus de prix, plus de cadenas, plus de déblocages à mériter. L’avatar lui-même se rend correctement (le moteur vit dans lib/avatar.ts, pas en base) ; c’est l’économie du vestiaire qui s’éteint. Rien ne casse à l’écran.',
+    sonde: {
+      type: 'ligne',
+      table: 'avatar_items',
+      colonne: 'asset_key',
+      valeur: 'hijab',
+    },
+    decision:
+      'Le moteur de rendu passe d’avataaars (22 coiffures, aucune texture de cheveux, ni voile ni tresses) à Open Peeps. Les IDS DES ITEMS NE CHANGENT PAS : un élève qui avait acheté `coif-locks` le possède toujours, seul son `asset_key` est réécrit — `user_avatar_items` n’est jamais touchée, et rien n’est supprimé (on ne rembourse pas en effaçant). CE QUI SE PERD, ET C’EST ASSUMÉ : la coiffure et la couleur de haut de chaque élève repartent du défaut (aucune valeur d’avataaars n’a d’équivalent), tandis que la PEAU et la COULEUR DE CHEVEUX traversent, les palettes ayant été alignées hex pour hex dans lib/avatar.ts. La catégorie `outfit` ne porte plus une coupe de vêtement mais une COULEUR : Open Peeps n’a qu’une silhouette, la variété a déménagé côté coiffures. La catégorie `hair_color` DISPARAÎT — Open Peeps peint la chevelure et les contours du visage d’un même tracé noir, une teinte y serait invisible ; ses sept articles deviennent des coiffures de même prix, ids et possessions inchangés. Le voile, le turban, les tresses et l’afro sont GRATUITS — ce ne sont pas des cosmétiques, ce sont des têtes.',
+  },
+  {
+    id: '241',
+    fichier: '241_classes_primaire_et_techno.sql',
+    feature:
+      'Sept classes de plus : le primaire (CP → CM2) et la voie technologique (1re techno, Tle techno). Le catalogue des matières s’ouvre à ces quatorze classes, et deux matières naissent — « Sciences et technologie » (l’unique science du primaire) et « Grand oral »',
+    siAbsente:
+      'Les sept classes neuves existent dans l’app — le menu « Ma classe » les propose, un élève peut s’y inscrire — mais AUCUNE matière ne déclare leur niveau. Résultat : un CP, un CM2 ou un 1re techno ouvre Réviser sur une grille VIDE, sans même la mention « Bientôt » (elle suppose une matière à annoncer). Le lycéen de la voie générale et le collégien, eux, ne voient aucune différence. C’est le seul écran cassé, mais il l’est complètement.',
+    sonde: {
+      type: 'ligne',
+      table: 'subjects',
+      colonne: 'slug',
+      valeur: 'sciences-technologie',
+    },
+    decision:
+      'La voie techno est une CLASSE (« 1re techno »), pas une filière à côté de la classe : c’est ce que demandait la maquette, et ça garde un seul champ à renseigner à l’inscription. Mais son CONTENU n’est pas dupliqué — son tronc commun EST celui de la voie générale, et il reste rangé aux niveaux « 1re » / « Tle ». L’app replie la classe sur son niveau général pour lire les chapitres (`contentLevelFor`, lib/grades.ts) : un 1re techno a donc TOUT le français, l’histoire-géo et les maths de la 1re dès l’exécution de cette migration, sans une ligne de contenu recopiée. Les spécialités technologiques (STMG, STI2D, ST2S…) ne sont PAS déclarées : elles dépendent d’une série que le profil ne demande pas encore, et proposer les spés de la voie générale à un STMG serait pire que ne rien proposer. Le primaire, lui, n’a pas d’alias : son programme lui est propre, ses matières s’affichent « Bientôt » jusqu’à ce que son contenu soit écrit.',
+  },
+  {
+    id: '242',
+    fichier: '242_ecole_primaire_clan.sql',
+    feature:
+      'L’ÉCOLE PRIMAIRE devient un cycle de clan : `schools.level` accepte « primaire », `profiles.primaire_school_id` existe, et les six fonctions qui décidaient du cycle passent de deux branches à trois',
+    siAbsente:
+      'Un élève du primaire est rattaché à un clan de COLLÈGE : l’app lui demande de chercher SON COLLÈGE, le classe avec des 3e et l’inscrit au tournoi des collèges. Rien ne plante — le `ELSE` des anciennes fonctions envoyait au collège tout ce qui n’était pas le lycée, il continue de répondre. C’est un écran qui ment, pas une erreur. Le collège et le lycée ne voient aucune différence. La lecture du profil, elle, est protégée : `readRowTolerant` réessaie sans la colonne absente (app/defi/profile-actions.ts), donc pseudo, classe et avatar restent affichés.',
+    sonde: {
+      type: 'colonne',
+      table: 'profiles',
+      colonne: 'primaire_school_id',
+    },
+    decision:
+      'Un troisième cycle plutôt que ranger le primaire avec le collège : le clan est l’ÉTABLISSEMENT, et une école primaire n’est pas un collège — les mélanger ferait s’affronter des CP et des 3e dans le même classement. `clan_active_school` est réécrite au passage pour DEUX oublis, pas un : le primaire, et la voie technologique (elle lisait `grade_level IN (2de,1re,Tle)`, donc un 1re techno tombait côté collège alors qu’il est au lycée). Les six fonctions sont redéfinies par CREATE OR REPLACE, en repartant de leur dernière version connue (166 pour le tournoi, 210 pour le clan hebdo) : les migrations d’origine ne sont pas modifiées. Côté TypeScript, le ternaire `cycle === college ? … : lycee_school_id` qui traînait à trois endroits devient `activeSchoolId` — c’est ce ternaire, écrit pour deux cycles, qui envoyait un CM1 chercher son lycée.',
+  },
+  {
+    id: '243',
+    fichier: '243_anglais_tle_programme_officiel.sql',
+    feature:
+      'Anglais Tle rendu à son programme : les 4 chapitres hors programme (« Faire société : unité et pluralité », « Environnements en mutation », « Art et débats d’idées », « Innovations et responsabilité ») sont supprimés, et les 24 fiches de langue déjà en base se rangent sous leurs 4 chapitres — Le groupe nominal, Le groupe verbal, Les temps, La phrase',
+    siAbsente:
+      'L’anglais de Terminale ouvre sur 4 chapitres qui ne sont à aucun programme : ils viennent du tout premier jeu de données (008), qui les donnait pour « les axes du programme de LV » — deux d’entre eux appartiennent en réalité à la spécialité « Anglais, monde contemporain ». L’élève lit donc quatre intitulés absents de son cours avant d’atteindre ses fiches de langue, alignées derrière eux sur 24 lignes à plat.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Le groupe verbal',
+    },
+    decision:
+      'La migration SUPPRIME les 4 chapitres hors programme (leurs leçons partent par cascade) et leurs 4 quiz — `quizzes.lesson_id` étant ON DELETE SET NULL, les quiz survivraient sinon à leur chapitre, orphelins mais toujours tirables par le moteur de questions. Elle REPREND l’ALTER TABLE de la 234 en ADD COLUMN IF NOT EXISTS : 234 n’étant pas jouée en production, sans cette reprise la migration échouerait à mi-parcours, les 4 chapitres déjà supprimés et les fiches pas encore rangées. Les positions des 24 fiches sont RÉÉCRITES UNE À UNE (1 à 24) et non décalées d’un « -4 » : un décalage relatif rejoué décalerait une seconde fois. ⚠️ CE QUI EST PERDU : les cours, fiches de révision, cartes mentales et 12 questions des 4 chapitres supprimés (migrations 043, 067, 141) — tous adossés à des intitulés hors programme.',
+  },
+  {
+    id: '244',
+    fichier: '244_espagnol_tle_programme_officiel.sql',
+    feature:
+      'Espagnol Tle rangé sous les 4 chapitres de son programme (La phrase · Le groupe nominal · Le groupe verbal · Les temps), et la fiche culturelle « Le monde hispanique aujourd’hui » retirée du niveau Tle',
+    siAbsente:
+      'Les 34 fiches du programme (migration 231) s’affichent à plat, sur 35 lignes d’affilée — la dernière étant une fiche culturelle hors programme renvoyée en fin de liste. L’élève ne retrouve pas les quatre chapitres de son cours, et doit lire les 35 intitulés pour situer le sien.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Le groupe nominal',
+    },
+    decision:
+      'La fiche « Le monde hispanique aujourd’hui » est SUPPRIMÉE côté Terminale (leçon en cascade, plus son quiz et les lignes « À revoir » qui pointaient ses questions) : la 231 l’avait conservée au motif que « les axes du bac ne sont pas de la grammaire », mais une fiche unique qui prétend tenir tous les axes culturels d’une année n’est pas un chapitre du programme — c’est la cinquième ligne qui rouvre le doute sur les quatre autres. Le ménage est borné au niveau Tle : la 2de et la 1re gardent la leur. ⚠️ Le sondage porte sur « Le groupe nominal », un thème que l’anglais (243) porte AUSSI : jouer la 243 seule ferait passer cette ligne au vert à tort. Les deux migrations se collent ensemble.',
+  },
+  {
+    id: '245',
+    fichier: '245_contenu_histoire_geo_1re.sql',
+    feature:
+      'Histoire-Géographie 1re : le programme complet — 43 fiches rangées sous 15 chapitres (6 d’histoire, de la Révolution française à la sortie de la Grande Guerre ; 9 de géographie : métropolisation, espaces productifs, espaces ruraux, France et Chine), 344 questions',
+    siAbsente:
+      'La Première n’a que CINQ chapitres, hérités du premier jeu de données (« L’Europe face aux révolutions », « La Troisième République », « La Grande Guerre et la fin des empires », « La métropolisation », « Les espaces productifs français »), avec deux leçons génériques chacun. Un élève de 1re qui révise le Second Empire, la question sociale, les sociétés coloniales, les espaces ruraux ou la Chine ne trouve rien : quinze chapitres du programme sur quinze sont absents ou réduits à un titre.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'title',
+      valeur: 'Le Second Empire (1852-1870) : un régime autoritaire au vernis démocratique',
+    },
+    decision:
+      'La migration SUPPRIME les 5 chapitres hérités (leçons en cascade, plus leurs 5 quiz et les lignes « À revoir » qui pointaient leurs questions) : deux d’entre eux deviennent des CHAPITRES du programme (« L’Europe face aux révolutions », « La Troisième République »), et les garder ferait deux objets du même nom à deux places différentes — un en-tête de section et une ligne de liste. ⚠️ CE QUI EST PERDU : les 10 leçons génériques (« L’essentiel du cours », « Exercices types ») et les questions de ces 5 quiz, écrites pour un découpage que les 43 fiches recouvrent entièrement. ⚠️ Les DELETE sont bornés aux CINQ TITRES EXACTS : sans cette borne, un rejeu effacerait les quiz des 43 fiches neuves, le ménage tournant avant les insertions à chaque passage. Elle reprend enfin l’ALTER TABLE de la 234, jamais exécutée.',
+  },
+  {
+    id: '246',
+    fichier: '246_contenu_histoire_tle_1_6.sql',
+    feature:
+      'Histoire Tle : les chapitres 1 à 6 du programme (1929 → 1969) — crise de 1929, régimes totalitaires, Seconde Guerre mondiale, ordre bipolaire, guerre froide et décolonisation, France de la IVe et de la Ve République : 20 fiches et 160 questions. La migration range aussi TOUT le dossier sous ses 15 chapitres (11 d’histoire, 4 de géographie) et retire les 5 fiches héritées, dont les 2 doublons de géographie connus depuis la 229',
+    siAbsente:
+      'L’histoire de Terminale commence à « L’influence de la chute de l’URSS sur l’Europe » : tout ce qui précède 1989 manque, sauf trois fiches génériques héritées du premier jeu de données. Un élève qui révise le nazisme, Vichy, la Shoah, la crise de Cuba ou la guerre d’Algérie ne trouve rien. Et les 33 fiches déjà en base (13 d’histoire, 20 de géographie) restent affichées à plat, sans chapitre.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'title',
+      valeur: 'Le modèle nazi : en Allemagne, Hitler et la montée du nazisme',
+    },
+    decision:
+      'La migration SUPPRIME les 5 chapitres hérités du premier jeu de données. Ce n’est pas seulement un choix : la fiche « La Seconde Guerre mondiale » de ce module porte le MÊME TITRE que l’un d’eux, et `chapters` a un UNIQUE(subject_id, level, title) — sans le ménage, l’insertion serait ignorée et sa leçon tomberait sur une clé étrangère absente, migration arrêtée à mi-parcours. ⚠️ LE POINT DÉLICAT est la garde `theme IS NULL` du ménage : celui-ci tourne AVANT les insertions à chaque rejeu, et borner par le titre seul ferait viser, au second passage, la fiche NEUVE qui porte le même titre. Les chapitres hérités n’ont jamais eu d’axe, les fiches de ce module en portent un dès l’INSERT : la garde les sépare. ⚠️ CE QUI EST PERDU : les leçons génériques et les quiz des 5 chapitres supprimés — dont « Mers et océans dans la mondialisation » et « L’Union européenne dans la mondialisation », les deux doublons que la 229 avait signalés et laissés en place. Deux UPDATE posent enfin leur chapitre sur les 13 fiches de la 227 et les 20 de la 229, qui sont antérieures à la colonne `theme`.',
+  },
+  {
+    id: '247',
+    fichier: '247_chapitre_discipline.sql',
+    feature:
+      'La discipline portée par le chapitre (`chapters.discipline`) : « Histoire-Géo » cesse d’être une liste de 15 chapitres et se lit en DEUX onglets, « Histoire » et « Géographie », chacun avec ses chapitres, sa progression et son bouton « Reprendre »',
+    siAbsente:
+      'Le dossier Histoire-Géo garde un onglet « Programme » unique, où les 15 chapitres se suivent — les 11 d’histoire puis les 4 de géographie en Terminale, 6 puis 9 en Première. L’élève qui révise la géo remonte tout le programme d’histoire pour l’atteindre. Rien ne casse (le select de la discipline est isolé et toléré, et il retombe sur `id, theme` seul), mais le filtre ne s’allume pour aucune matière tant que la colonne n’existe pas.',
+    sonde: { type: 'colonne', table: 'chapters', colonne: 'discipline' },
+    decision:
+      'Une COLONNE et non deux matières : le bulletin, l’emploi du temps et le bac disent « Histoire-Géographie ». Séparer les deux matières dédoublerait la moyenne, le classement, le boss et la vignette pour une distinction qui n’existe qu’À L’INTÉRIEUR du dossier — c’est un problème d’affichage, il se règle à l’affichage. Le remplissage passe par le THÈME (30 lignes) et non par le titre des 96 fiches : chaque chapitre du programme appartient à une discipline et à une seule. PRÉREQUIS 245 et 246 : sans les thèmes qu’elles posent, l’UPDATE ne trouve rien à remplir.',
+  },
+  {
+    id: '248',
+    fichier: '248_enseignement_scientifique_tle_chapitres.sql',
+    feature:
+      'Enseignement scientifique Tle rangé sous les 6 chapitres de son programme (Science climat et société · Le futur des énergies × 2 · Une histoire du vivant × 3)',
+    siAbsente:
+      'Les 16 fiches du programme (migration 228) s’affichent à plat, sur 16 lignes d’affilée dont plusieurs intitulés longs et jumeaux (« L’énergie électrique au cours des deux derniers siècles : le XIXe siècle », puis « … : le XXe siècle »). L’élève ne retrouve pas les chapitres de son cours et doit lire les seize titres pour situer le sien.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Le futur des énergies : choix de développement et futur climatique',
+    },
+    decision:
+      'Migration d’ÉCRITURE PURE : un seul UPDATE, aucune suppression — les 4 fiches de synthèse héritées du premier jeu de données sont déjà parties avec la 228, et la sonde confirme que le dossier ne contient que les 16 fiches du programme. Le découpage est en SIX chapitres et non en quatre thèmes du BO : « Le futur des énergies » pèse 6 fiches et « Une histoire du vivant » 6 aussi — les laisser d’un bloc rendrait l’en-tête inutile. Le thème 2 se lit donc en deux chapitres (l’électricité ; les choix de développement) et le thème 3 en trois (biodiversité ; théorie de l’évolution ; technologies et vivant), comme dans les manuels ; le « projet expérimental et numérique » du BO n’est pas un chapitre de cours et n’a aucune fiche. Aucune fiche n’est déplacée : l’ordre du BO est conservé, seules les frontières de sections sont posées. La colonne `theme` (234, jamais exécutée) est reprise en ADD COLUMN IF NOT EXISTS avec ses GRANT par colonne, comme dans les 243 à 246.',
+  },
+  {
+    id: '249',
+    fichier: '249_contenu_allemand_tle.sql',
+    feature:
+      'Allemand Tle : le programme officiel — 36 fiches rangées sous 5 chapitres (La phrase · Le groupe nominal · Les groupes prépositionnels · Le groupe verbal · Les temps), 288 questions',
+    siAbsente:
+      'L’allemand de Terminale n’a que TROIS chapitres, hérités du bloc lycée de la 218 et identiques en 2de, en 1re et en Tle (« Raconter au passé », « Le datif et les prépositions », « L’Allemagne d’aujourd’hui »). Un élève de Terminale qui révise la déclinaison de l’adjectif épithète, le passif, la relative, le subjonctif II, les verbes à préverbe séparable ou le génitif ne trouve rien.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'title',
+      valeur: 'L’adjectif épithète et ses déclinaisons',
+    },
+    decision:
+      'TERMINALE SEULE : le programme transmis est celui de l’année du bac. La migration SUPPRIME les 3 chapitres hérités au seul niveau Tle (leçons en cascade, plus leurs quiz et les lignes « À revoir » qui pointaient leurs questions) — deux sont des composites que les fiches neuves recouvrent entièrement (« Raconter au passé » se lit désormais en « Le prétérit » et « Le parfait », « Le datif et les prépositions » en trois fiches du chapitre 3), le troisième est la fiche de civilisation « L’Allemagne d’aujourd’hui », hors programme de langue : même décision que pour « Le monde hispanique aujourd’hui » (244), un dossier de matière ne montre QUE son programme. Le filtre `level = Tle` protège le collège (qui a son propre bloc) ET la 2de et la 1re, qui gardent leurs 3 fiches puisque rien ne vient les remplacer à ces niveaux. ⚠️ CE QUI EST PERDU : les 3 leçons et les 24 questions de ces chapitres, écrites pour un découpage que les 36 fiches recouvrent. ⚠️ La 218 est REJOUABLE : la recoller un jour ferait revenir les 3 anciennes fiches au niveau Tle. Elle reprend enfin l’ALTER TABLE de la 234, jamais exécutée, avec ses GRANT par colonne.',
+  },
+  {
+    id: '250',
+    fichier: '250_emc_tle_programme_officiel.sql',
+    feature:
+      'EMC Tle rangé sous les 2 chapitres de son programme (Fondements et expériences de la démocratie · Repenser et faire vivre la démocratie), et les 3 fiches du socle lycée retirées côté Terminale',
+    siAbsente:
+      'Les 12 fiches du programme (migration 230) s’affichent à plat, sur 15 lignes d’affilée — les trois premières étant les fiches du socle lycée (« La liberté d’expression et ses limites », « Démocratie et État de droit », « Enjeux du numérique et de l’information »), écrites pour la 2de, la 1re et la Tle à la fois. L’élève ne retrouve pas les deux chapitres de son cours et lit trois intitulés hors programme avant d’arriver au sien.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Fondements et expériences de la démocratie',
+    },
+    decision:
+      'Les 3 fiches du socle sont SUPPRIMÉES au seul niveau Tle (leçons en cascade, plus leurs quiz et les lignes « À revoir » qui pointaient leurs questions) : la 230 les avait conservées et démarrait son bloc à la position 4, au motif qu’un rejeu de la 216 les recréerait — mais trois lignes hors programme en TÊTE de liste rouvrent le doute sur les douze autres, comme les quatre faux axes d’anglais (243) et la fiche culturelle d’espagnol (244). La 2de et la 1re gardent les leurs : elles n’ont pas encore de programme propre. ⚠️ CE QUI EST PERDU : les 3 leçons et les questions de leurs quiz, côté Terminale seulement — le même contenu reste servi en 2de et en 1re. ⚠️ LA 216 EST REJOUABLE : la recoller ferait revenir les trois fiches au niveau Tle. Les positions des 12 fiches sont réécrites une à une (1 à 12) et non décalées d’un « -3 » : un décalage relatif rejoué décalerait une seconde fois.',
+  },
+  {
+    id: '251',
+    fichier: '251_svt_tle_chapitres.sql',
+    feature:
+      'SVT Tle rangée sous les 7 chapitres de son programme (diversité génétique · passé géologique · la plante · climats · système nerveux · contraction musculaire · stress)',
+    siAbsente:
+      'Les 22 fiches du programme (migration 233) s’affichent à plat, sur 22 lignes d’affilée dont plusieurs intitulés longs et jumeaux (« La chronologie relative : décrypter le temps des roches par l’observation », puis « La chronologie absolue : … par des mesures »). L’élève doit lire les vingt-deux titres pour situer le sien, alors que son cours est écrit en sept chapitres.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'De la plante sauvage à la plante domestiquée',
+    },
+    decision:
+      'Migration d’ÉCRITURE PURE : un seul UPDATE, aucune suppression — les 5 fiches composites héritées de 008/142 sont déjà parties avec la 233, et la sonde confirme que le dossier ne contient plus que les 22 fiches du programme. Le découpage est en SEPT chapitres et non en trois thèmes du BO : « Corps humain et santé » pèserait à lui seul 8 fiches, et ce sont les chapitres, pas les thèmes, que l’élève lit sur le cahier de son professeur — même arbitrage que pour l’enseignement scientifique (248). Aucune fiche n’est déplacée : l’ordre du BO est déjà celui de la base, seules les frontières de sections sont posées. La colonne `theme` (234, jamais exécutée) est reprise en ADD COLUMN IF NOT EXISTS avec ses GRANT par colonne, comme dans les 243 à 250.',
+  },
+  {
+    id: '252',
+    fichier: '252_contenu_physique_chimie_tle.sql',
+    feature:
+      'Physique-Chimie Tle (spécialité) : le programme officiel — 31 fiches rangées sous 7 chapitres (composantes d’un système chimique · évolution temporelle · état final · synthèse organique · mouvements et interactions · énergie · ondes et signaux), 248 questions',
+    siAbsente:
+      'La spécialité physique-chimie de Terminale n’a que CINQ chapitres, taillés dans un découpage maison hérité des migrations 008 et 143 (« Cinétique chimique », « Acides et bases », « Mécanique : lois de Newton », « Ondes lumineuses : diffraction », « Énergie et thermodynamique »), chacun résumant un pan entier du programme en UNE fiche de dix questions. Des chapitres entiers du BO n’ont aucune entrée : radioactivité et décroissance radioactive, piles et électrolyse, équilibre chimique et quotient de réaction, toute la synthèse organique, champ de gravitation et lois de Kepler, écoulement des fluides, premier principe, transferts thermiques, intensité sonore, effet Doppler, interférences, lunette astronomique, photon, condensateur. Sur une spécialité à coefficient 16, l’élève ne trouve rien sur les deux tiers de son année.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Stratégies en synthèse organique',
+    },
+    decision:
+      'TERMINALE SEULE : le ménage est borné au niveau Tle — les six autres niveaux de physique-chimie portent les mêmes leçons génériques (« L’essentiel du cours », « Exercices types ») et ne bougent pas. La migration SUPPRIME les 5 chapitres composites, que les 31 fiches recouvrent (leçons en cascade, plus leurs quiz et les lignes « À revoir » qui pointaient leurs questions) ; le ménage vise les TITRES DE CHAPITRE exacts, aucun d’eux ne portant d’apostrophe — pas de piège typographique ici, contrairement à la 249. Le découpage est en SEPT chapitres et non en quatre thèmes du BO : le premier thème (« Constitution et transformations de la matière ») pèserait à lui seul 15 fiches sur 31, soit la moitié du dossier sous un seul en-tête — même arbitrage que pour l’enseignement scientifique (248) et la SVT (251). ⚠️ CE QUI EST PERDU : les 5 leçons « Exercices types » de la 143 (elles n’ont aucun quiz en base, sondé le 20/08/2026) et les 50 questions des 5 leçons « L’essentiel du cours ». ⚠️ LES 008 ET 143 SONT REJOUABLES : les recoller ferait revenir les 5 composites en doublon des 31 fiches. La colonne `theme` (234, jamais exécutée) est reprise en ADD COLUMN IF NOT EXISTS avec ses GRANT par colonne, comme dans les 243 à 251.',
+  },
+  {
+    id: '253',
+    fichier: '253_contenu_ses_tle.sql',
+    feature:
+      'SES Tle (spécialité) : le programme officiel — 31 fiches rangées sous les 12 chapitres du BO (croissance · commerce international · chômage · crises financières · politiques européennes · structure sociale · École · mobilité sociale · travail et emploi · engagement politique · justice sociale · environnement), 248 questions',
+    siAbsente:
+      'La spécialité SES de Terminale n’a que QUATRE chapitres, hérités des migrations 008 et 145 (« Croissance et environnement », « Le commerce international », « Les mutations du travail », « La justice sociale »). Sur les douze chapitres du programme, HUIT n’ont aucune entrée : le chômage, les crises financières, les politiques économiques européennes, la structure sociale, l’École, la mobilité sociale, l’engagement politique, l’action publique pour l’environnement. Toute la sociologie, hormis un chapitre sur le travail, est absente — sur une spécialité à coefficient 16 dont l’épreuve dure 4 heures.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Quelle action publique pour l’environnement ?',
+    },
+    decision:
+      'TERMINALE SEULE : le ménage est borné au niveau Tle — la 2de et la 1re portent les mêmes leçons génériques et ne bougent pas. La migration SUPPRIME les 4 chapitres composites, que les 31 fiches recouvrent (leçons en cascade, plus leurs quiz et les lignes « À revoir » qui pointaient leurs questions) ; aucun des quatre titres ne porte d’apostrophe, donc pas de piège typographique ici. Le découpage est en DOUZE chapitres et non en trois parties du BO : « science économique » pèserait à elle seule 14 fiches, et ce sont les questionnements, formulés en question comme le veut la discipline, que l’élève lit sur le cahier de son professeur — même arbitrage que pour l’enseignement scientifique (248), la SVT (251) et la physique-chimie (252). ⚠️ CE QUI EST PERDU : les 4 leçons « Exercices types » de la 145 (aucun quiz en base, sondé le 20/08/2026) et les 40 questions des 4 leçons « L’essentiel du cours ». ⚠️ LES 008 ET 145 SONT REJOUABLES : les recoller ferait revenir les 4 composites en doublon.',
+  },
+  {
+    id: '254',
+    fichier: '254_contenu_nsi_tle.sql',
+    feature:
+      'NSI Tle (spécialité) : le programme officiel — 20 fiches rangées sous 5 chapitres (appareils en réseaux · structures de données · bases de données · génie logiciel · algorithmique), 160 questions',
+    siAbsente:
+      'La spécialité NSI de Terminale n’a que QUATRE chapitres, hérités des migrations 008 et 146 (« Structures de données », « Bases de données et SQL », « Réseaux et protocoles », « Algorithmique : les graphes »). Des parties entières du BO n’ont AUCUNE entrée : tout le génie logiciel (paradigmes, modularité, tests, mise au point), la programmation orientée objet, les arbres, la programmation dynamique, la recherche de sous-chaîne, la modélisation d’une base de données et le rôle d’un SGBD.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Génie logiciel',
+    },
+    decision:
+      'TERMINALE SEULE : la Première, qui a son propre programme, n’est pas touchée. ⚠️ LE MÉNAGE EST INDISPENSABLE, pas seulement souhaitable : le chapitre neuf « Structures de données » porte EXACTEMENT le titre d’un chapitre existant, et `chapters` est UNIQUE(subject_id, level, title) — sans suppression préalable, l’INSERT tomberait dans son ON CONFLICT DO NOTHING et ses quatre leçons échoueraient sur une clé étrangère absente, la migration s’arrêtant à mi-parcours. ⚠️ CE QUI EST PERDU : les 4 leçons « Exercices types » de la 146 (aucun quiz en base) et les 40 questions des 4 leçons « L’essentiel du cours ». ⚠️ LES 008 ET 146 SONT REJOUABLES. Les cours ne contiennent aucun bloc de code délimité par des accents graves : le contenu est écrit dans des littéraux de gabarit JavaScript, où l’accent grave fermerait la chaîne — les extraits sont donnés en ligne. ⚠️ LES EXTRAITS SQL DES COURS SONT ÉCRITS EN GRAS ET SANS POINT-VIRGULE, à dessein : une première version de cette migration a échoué le 20/08/2026 dans l’éditeur Supabase sur « 42P01 : la relation eleve n’existe pas », alors que le fichier était sain (`node _ASSOCIE/verifie-chaines.mjs` le découpe selon les règles de Postgres — 12 instructions, zéro « eleve » hors chaîne). C’est le seul module du dépôt dont les cours citent de vraies requêtes : écrites en début de ligne avec leur point-virgule, il suffit qu’un maillon de la chaîne rompe le littéral qui porte le cours pour qu’elles deviennent des instructions réelles — et comme elles sont valides, l’erreur désigne une table fantôme au lieu de la vraie cause. L’éditeur jouant le script dans une transaction, un échec n’applique rien.',
+  },
+  {
+    id: '255',
+    fichier: '255_contenu_maths_tle.sql',
+    feature:
+      'Maths Tle : le programme officiel sur les TROIS matières — 19 fiches de spécialité (algèbre et géométrie · analyse · probabilités), 12 de mathématiques expertes (nombres complexes · arithmétique · graphes et matrices) et 11 de mathématiques complémentaires (analyse · probabilités et statistique), 336 questions',
+    siAbsente:
+      'La spécialité maths de Terminale n’a que CINQ chapitres pour QUINZE sections au BO : manquent EN ENTIER la géométrie dans l’espace, la combinatoire, le raisonnement par récurrence, les limites de suites, la dérivation des composées, les fonctions trigonométriques, le calcul intégral et toute la chaîne probabiliste. C’est l’écart le plus grave du dépôt (audit du 07/08/2026, priorité n° 1) : une spécialité à coefficient 16 et 4 heures d’épreuve, couverte à un tiers. Les deux options ne valent guère mieux : 3 chapitres en expertes, 4 en complémentaires.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Algèbre et géométrie',
+    },
+    decision:
+      'TROIS MATIÈRES, UNE SEULE MIGRATION. La maquette de référence range les 8 chapitres sous un dossier unique « Maths Tle », dont 5 relèvent des options ; l’app sépare `maths`, `maths-expertes` et `maths-complementaires` depuis l’origine, chacune cochable dans « Ma classe ». Les fusionner montrerait à un élève de spécialité seule un programme qu’il ne suit pas, et contredirait la règle « un dossier ne montre QUE son programme » — les fiches d’option restent donc dans leur matière, et le préfixe « Option mathématiques expertes : … » disparaît des en-têtes. ⚠️ LE MÉNAGE EST INDISPENSABLE côté spécialité : deux fiches neuves (« Limites de fonctions », « Primitives et équations différentielles ») portent EXACTEMENT le titre d’un chapitre existant, et le filtre level = Tle est tout aussi nécessaire — `maths` existe sur SEPT niveaux. ⚠️ APOSTROPHE TYPOGRAPHIQUE côté complémentaires : le titre « Suites et modèles d’évolution » porte le U+2019 de la 219 ; écrit droit, le DELETE ne trouverait rien sans rien signaler (piège de la 249). ⚠️ CE QUI EST PERDU : les 12 leçons « Exercices types » des 139 et 149 (aucun quiz en base) et les questions des leçons « L’essentiel du cours ». ⚠️ LES 008, 139 ET 149 SONT REJOUABLES, et la 219 est un fichier GÉNÉRÉ donc rejouable aussi.',
+  },
+  {
+    id: '256',
+    fichier: '256_contenu_hggsp_tle.sql',
+    feature:
+      'HGGSP Tle (spécialité) : le programme officiel — 24 fiches rangées sous les 6 thèmes du BO (nouveaux espaces de conquête · faire la guerre, faire la paix · histoire et mémoires · patrimoine · environnement · enjeu de la connaissance), 192 questions',
+    siAbsente:
+      'La spécialité HGGSP de Terminale n’a que QUATRE chapitres composites, hérités des migrations 008, 054, 075 et 147 (« Environnement : exploiter, préserver », « Guerres et paix », « L’enjeu de la connaissance », « Le patrimoine »), là où le programme en compte SIX. Deux thèmes entiers n’ont AUCUNE entrée : « De nouveaux espaces de conquête » (droit de la mer, conquête spatiale, câbles sous-marins, stratégie maritime chinoise) et « Histoire et mémoires » (guerre d’Algérie, responsabilités de 1914, génocide des Juifs et des Tsiganes, jugement des crimes de masse au Rwanda et dans les Balkans). Un tiers d’une spécialité à coefficient 16 est hors d’atteinte.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'De nouveaux espaces de conquête',
+    },
+    decision:
+      'TERMINALE SEULE : la Première garde ses 4 fiches composites — il lui manque le thème « Analyser les dynamiques des puissances internationales », c’est un chantier à part. Le ménage est donc borné à level = Tle, sans quoi il emporterait les deux leçons génériques du niveau 1re, qui portent les mêmes titres. AUCUNE COLLISION DE TITRE cette fois : les 24 fiches neuves ont été comparées une à une aux 4 chapitres composites, aucune ne reprend leur intitulé — le ménage relève de la règle « un dossier ne montre QUE son programme », pas d’une contrainte d’unicité. La garde `theme IS NULL` rend le rejeu inoffensif : les composites sont antérieures à la 234 et n’ont jamais eu d’axe, les fiches neuves en portent un dès l’INSERT. ⚠️ CE QUI EST PERDU : les 4 leçons « Exercices types » de la 147 (2 exercices type bac corrigés chacune, aucun quiz en base) et les 40 questions des 4 leçons « L’essentiel du cours ». ⚠️ LES 008, 054, 075 ET 147 SONT REJOUABLES : les recoller ferait revenir les 4 fiches composites en doublon.',
+  },
+  {
+    id: '257',
+    fichier: '257_hlp_tle_chapitres.sql',
+    feature:
+      'HLP Tle rangé sous ses 6 chapitres : les 18 fiches de la 232 reçoivent le thème du programme (éducation et émancipation · expressions de la sensibilité · métamorphoses du moi · création, continuités et ruptures · histoire et violence · l’humain et ses limites)',
+    siAbsente:
+      'La page HLP de Terminale aligne 19 lignes à plat au lieu d’afficher les six chapitres du programme. Les 18 fiches sont pourtant là, dans le bon ordre depuis la 232 : il ne manque que la colonne `theme` qui les coiffe.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Les métamorphoses du moi',
+    },
+    decision:
+      'ÉCRITURE PURE, aucune suppression — c’est le geste de la 248 (enseignement scientifique), pas celui des 243/251/256. LES SIX THÈMES DEVIENNENT LES CHAPITRES, ET NON LES DEUX SEMESTRES : le BO découpe l’année en deux semestres de trois thèmes, mais deux blocs de neuf fiches n’aideraient personne — c’est aussi le découpage de la maquette. ⚠️ LA FICHE « MÉTHODE DE L’ÉPREUVE » RESTE À `theme IS NULL`, délibérément : elle ne relève d’aucune entrée du BO, la 232 l’a renvoyée en position 90, et l’épreuve de la 237 la désigne comme son chapitre de rattachement. Vérifié dans le code avant d’écrire : `groupChaptersByTheme` la rend dans un groupe SANS en-tête à sa place d’apparition, et `ChapterList` ne lui fait pas consommer de numéro — les six chapitres restent numérotés 1 à 6. ⚠️ LES 18 TITRES ONT ÉTÉ EXTRAITS DE LA BASE, PAS RECOPIÉS (apostrophes typographiques et guillemets français de la 232, un fichier généré) : une apostrophe droite ne ferait pas échouer l’UPDATE, elle ne trouverait pas la ligne EN SILENCE — piège de la 249, d’où le filet de fin de fichier.',
+  },
+  {
+    id: '258',
+    fichier: '258_contenu_enseignement_scientifique_1re.sql',
+    feature:
+      'Enseignement scientifique 1re : les 22 fiches du programme rangées sous leurs 5 chapitres (matière · Soleil · Terre · son et musique · mathématiques) — 176 questions',
+    siAbsente:
+      'L’enseignement scientifique de Première garde ses 4 fiches de synthèse, qui résument tout le programme en quatre cours — et la partie MATHÉMATIQUES, entrée dans la matière à la rentrée 2023 pour les élèves sans spécialité maths, n’existe nulle part. Un élève qui révise les cristaux, la loi de Wien, l’albédo, Ératosthène, la radiochronologie, la gamme tempérée, l’échantillonnage d’un son, le taux d’évolution ou le nombre dérivé ne trouve rien. Rien ne casse : le tiers mathématique du programme est simplement absent.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Son et musique, porteurs d’informations',
+    },
+    decision:
+      'PREMIÈRE SEULE : le ménage est borné à level = 1re — la Terminale de la même matière est déjà rangée (228 + 248) et ne bouge pas. LE MÉNAGE VISE `theme IS NULL`, PAS LES TITRES, et c’est un choix : le chapitre « Le Soleil, source d’énergie » porte en base une apostrophe DROITE (relevé caractère par caractère le 20/08/2026) là où le contenu récent porte l’apostrophe typographique — un DELETE par titre ne trouverait pas la ligne EN SILENCE (piège de la 249) et laisserait une fiche composite en tête du dossier. Le critère « pas de chapitre de programme » vise exactement les mêmes quatre lignes sans dépendre d’un caractère, et il est sûr au rejeu : les 22 fiches neuves portent leur chapitre dès l’INSERT, le ménage tourne avant les insertions. LE DÉCOUPAGE EST CELUI DE LA MAQUETTE : quatre thèmes du BO plus les mathématiques ; le « projet expérimental et numérique » n’est pas un chapitre de cours mais un travail d’année, sans fiche à réviser — même arbitrage qu’en Terminale (248). ⚠️ CE QUI EST PERDU : les 4 leçons « Exercices types » (aucun quiz en base) et les 40 questions des 4 leçons « L’essentiel du cours ». ⚠️ LES 008 ET 142 SONT REJOUABLES : les recoller ferait revenir les 4 composites en doublon.',
+  },
+  {
+    id: '259',
+    fichier: '259_contenu_francais_1re.sql',
+    feature:
+      'Français 1re : les 18 fiches des quatre objets d’étude du bac (poésie, littérature d’idées, roman, théâtre) et les 10 fiches de grammaire du BO — 224 questions, et le dossier passe à trois rayons',
+    siAbsente:
+      'Le français de Première garde ses 5 fiches composites : AUCUNE œuvre au programme n’a sa fiche — ni les Cahiers de Douai, ni Manon Lescaut, ni La Peau de chagrin, ni Colette, ni Le Menteur. Un élève qui prépare son oral ou sa dissertation ne trouve rien, et la question de grammaire, qui vaut 2 points sur 20 à l’oral, n’a aucune entrée. Rien ne casse : la matière la plus lourde du bac de 1re est simplement vide.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'discipline',
+      valeur: 'grammaire',
+    },
+    decision:
+      'LE DOSSIER PREND TROIS RAYONS, et c’est le vrai changement : la colonne `chapters.discipline` (migration 247), jusque-là réservée aux deux disciplines de l’histoire-géo, porte désormais aussi « programme » / « fiches » / « grammaire » pour le français. Le besoin est identique — couper une liste que personne ne parcourt en entier — et le mécanisme aussi (`disciplinesOf` → `modesFor`, testés) : la page rend un onglet par rayon, avec son propre compte et son propre « Reprendre ». Une colonne `section` en doublon n’aurait rien réglé de plus, d’où le choix d’élargir celle qui existe (commentaires mis à jour dans lib/subject-template.ts). LE MÉNAGE VISE `theme IS NULL` : la fiche de synthèse neuve « La poésie du XIXe au XXIe siècle » porte le titre EXACT de l’ancien chapitre composite, et `chapters` est UNIQUE(subject_id, level, title) — sans le ménage joué avant, l’INSERT tomberait dans le ON CONFLICT DO NOTHING et la leçon échouerait sur une clé étrangère absente. PREMIÈRE SEULE : le français existe sur six niveaux, tous bâtis sur le même modèle de cinq composites. ⚠️ CE QUI EST PERDU : les 5 leçons « Exercices types » et les 50 questions des 5 leçons « L’essentiel du cours ». ⚠️ LES 008 ET 142 SONT REJOUABLES.',
+  },
+  {
+    id: '260',
+    fichier: '260_contenu_francais_1re_anciens.sql',
+    feature:
+      'Français 1re : les 30 fiches du chapitre « Anciens programmes » (Phèdre, Figaro, Les Fleurs du mal, Gargantua, Olympe de Gouges…) — 240 questions',
+    siAbsente:
+      'Le rayon Programme du français s’arrête aux 18 fiches des quatre objets d’étude en cours. Les œuvres des programmes précédents — celles que gardent les descriptifs d’oral, les devoirs et les concours blancs — n’ont pas de fiche.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Anciens programmes',
+    },
+    decision:
+      'SÉPARÉE DE LA 259 POUR UNE RAISON DE TAILLE : les 58 fiches réunies produisaient 339 Ko, au-delà des ~300 Ko que l’éditeur SQL de Supabase tient sans devenir poussif, et un script à moitié collé est pire qu’un script absent. La coupe suit la seule ligne qui ait un sens : les objets d’étude au programme d’un côté, les œuvres sorties du programme de l’autre. ⚠️ ORDRE : LA 259 D’ABORD — c’est elle qui pose les colonnes `theme` et `discipline` et qui fait le ménage ; cette migration n’écrit que des fiches neuves. Les positions démarrent à 19 (`positionDepart`), derrière les 18 fiches des quatre objets d’étude : repartir de 1 mêlerait les deux migrations dans un ordre indéfini, la page matière triant par position.',
+  },
+  {
+    id: '261',
+    fichier: '261_contenu_francais_fiches_a.sql',
+    feature:
+      'Français 1re, rayon « Fiches de lecture » (1/5) : 52 fiches, de « Art » de Yasmina Reza à Cyrano de Bergerac — 312 questions',
+    siAbsente:
+      'Le troisième rayon du dossier de français reste vide : un élève qui cherche la fiche d’une œuvre précise pour un devoir, une dissertation ou une lecture cursive ne trouve rien. L’onglet « Fiches » n’apparaît même pas, faute de chapitre portant `discipline = fiches`.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'discipline',
+      valeur: 'fiches',
+    },
+    decision:
+      'FORMAT COURT ASSUMÉ, différent de celui du rayon Programme : l’histoire, les personnages, ce qu’il faut retenir, une phrase à citer, et six questions — on vient chercher une fiche, on ne la révise pas pour l’oral. LES TITRES PORTENT L’AUTEUR (« Manon Lescaut, abbé Prévost ») comme dans la maquette, ce qui n’est pas décoratif : `chapters` est UNIQUE(subject_id, level, title), et c’est ce qui permet à une même œuvre d’exister dans le rayon Programme (titre nu) et dans le rayon Fiches. CINQ MIGRATIONS (261 → 265) par tranches alphabétiques : réunies, les 260 fiches feraient près d’un mégaoctet, quand l’éditeur SQL de Supabase devient poussif au-delà de ~300 Ko ; chaque tranche pèse ~205 Ko. Les positions se suivent d’un module à l’autre (100 → 359) pour que l’ordre alphabétique de la maquette soit celui de la page. ⚠️ ORDRE : LA 259 D’ABORD (colonnes `theme` et `discipline`, ménage des composites). ⚠️ UNE ŒUVRE DE LA MAQUETTE MANQUE : « Le Gora, Georges Courteline » — aucune œuvre de Courteline ne porte ce titre, erreur d’attribution probable de la source ; écrire la fiche reviendrait à inventer une œuvre.',
+  },
+  {
+    id: '262',
+    fichier: '262_contenu_francais_fiches_b.sql',
+    feature:
+      'Français 1re, fiches de lecture (2/5) : 52 fiches, d’Eugénie Grandet à La Curée — 312 questions',
+    siAbsente:
+      'Le rayon « Fiches » s’arrête à Cyrano : les œuvres d’Eugénie Grandet à La Curée n’ont pas de fiche.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'title',
+      valeur: 'Germinal, Émile Zola',
+    },
+    decision:
+      'Deuxième tranche alphabétique. Positions 152 → 203, derrière celles de la 261. Aucun ménage : il est joué par la 259, à exécuter avant.',
+  },
+  {
+    id: '263',
+    fichier: '263_contenu_francais_fiches_c.sql',
+    feature:
+      'Français 1re, fiches de lecture (3/5) : 52 fiches, de La Ferme des animaux au Tartuffe — 312 questions',
+    siAbsente:
+      'Le rayon « Fiches » n’a pas les œuvres de La Ferme des animaux au Tartuffe — dont La Peste, Le Cid, Le Père Goriot ou Le Rouge et le Noir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'title',
+      valeur: 'La Peste, Albert Camus',
+    },
+    decision:
+      'Troisième tranche alphabétique. Positions 204 → 255. Aucun ménage : il est joué par la 259, à exécuter avant.',
+  },
+  {
+    id: '264',
+    fichier: '264_contenu_francais_fiches_d.sql',
+    feature:
+      'Français 1re, fiches de lecture (4/5) : 52 fiches, du Voyage d’Urien aux Mémoires d’Hadrien — 312 questions',
+    siAbsente:
+      'Le rayon « Fiches » n’a pas les œuvres du Voyage d’Urien aux Mémoires d’Hadrien — dont Les Liaisons dangereuses, Les Misérables ou Madame Bovary.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'title',
+      valeur: 'Madame Bovary, Gustave Flaubert',
+    },
+    decision:
+      'Quatrième tranche alphabétique. Positions 256 → 307. Aucun ménage : il est joué par la 259, à exécuter avant.',
+  },
+  {
+    id: '265',
+    fichier: '265_contenu_francais_fiches_e.sql',
+    feature:
+      'Français 1re, fiches de lecture (5/5) : 52 fiches, des Mémoires d’outre-tombe à Zazie dans le métro — 312 questions',
+    siAbsente:
+      'Le rayon « Fiches » s’arrête aux Mémoires d’Hadrien : la fin de l’alphabet manque, dont Rhinocéros, Une Vie, Voyage au bout de la nuit et Zazie dans le métro.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'title',
+      valeur: 'Zazie dans le métro, Raymond Queneau',
+    },
+    decision:
+      'Dernière tranche alphabétique. Positions 308 → 359. Aucun ménage : il est joué par la 259, à exécuter avant. Avec elle, le rayon « Fiches » compte 260 fiches et 1 560 questions.',
+  },
+  {
+    id: '266',
+    fichier: '266_contenu_anglais_1re_programme.sql',
+    feature:
+      'Anglais 1re rendu à son programme de LANGUE : les 24 fiches de grammaire rangées sous leurs 4 chapitres (Le groupe nominal · Le groupe verbal · Les temps · La phrase) — 192 questions —, et les 4 axes culturels du seed 008 retirés du niveau 1re',
+    siAbsente:
+      'L’anglais de Première n’a QUE ses 4 axes culturels — « Identités et échanges », « Espace privé et espace public », « Art et pouvoir », « Citoyenneté et mondes virtuels » — et pas une seule fiche de langue : un élève qui bloque sur le present perfect, les modaux, la voix passive ou le discours indirect ne trouve rien à réviser, alors que la Terminale, elle, est servie depuis la 243.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '6c812d1e-3b57-5c8f-8d6c-edc60516985a',
+    },
+    decision:
+      'SONDE PAR ID, ET NON PAR TITRE OU PAR THÈME : les 24 fiches de 1re portent EXACTEMENT les titres et les chapitres de celles de Terminale (mêmes règles de grammaire), si bien qu’un `eq(title, …)` ou un `eq(theme, …)` répondrait « vivante » grâce à la Terminale seule — un faux vert. L’UUID sondé est celui de la fiche « Les déterminants » DE PREMIÈRE, dérivé de `anglais|1re|Les déterminants` : il n’existe qu’après cette migration. LE CONTENU EST CELUI DE LA TERMINALE, importé et non recopié (`scripts/contenu/anglais-1re.mjs` importe `anglais-tle.mjs`) : les programmes de LV sont écrits pour le CYCLE TERMINAL, la grammaire y est la même, et une correction de règle vaudra pour les deux niveaux. LE MÉNAGE VISE `theme IS NULL` AU NIVEAU 1re, pas les titres : deux des quatre axes portent une apostrophe, et rien ne garantit que la base porte la même que le fichier (piège de la 249) ; le critère « pas de chapitre de programme » vise exactement ces quatre lignes, antérieures à la colonne `theme`, et ne peut jamais mordre sur les 24 fiches neuves, qui en portent un dès l’INSERT. ⚠️ CE QUI EST PERDU : les cours, cartes mentales et quiz des 4 axes de 1re (migrations 043, 067, 132) — mêmes pertes qu’en Terminale avec la 243. ⚠️ LES 008 ET 132 SONT REJOUABLES : les recoller ferait revenir les 4 axes. Si l’on veut un jour leur rendre une place, ce sera un RAYON à eux (`chapters.discipline`, comme le français de 1re), pas la tête du dossier.',
+  },
+  {
+    id: '267',
+    fichier: '267_contenu_espagnol_1re_programme.sql',
+    feature:
+      'Espagnol 1re rendu à son programme de LANGUE : les 34 fiches de grammaire rangées sous leurs 4 chapitres (La phrase · Le groupe nominal · Le groupe verbal · Les temps) — 272 questions —, et les 3 fiches maison du seed 220 retirées du niveau 1re',
+    siAbsente:
+      'L’espagnol de Première n’a QUE les 3 fiches maison de la migration 220 — « Les temps du passé », « Ser, estar et les tournures essentielles », « Le monde hispanique aujourd’hui » : un élève qui bloque sur la négation, l’enclise des pronoms, cuyo, l’apocope, le subjonctif ou la concordance ne trouve rien à réviser, alors que la Terminale est servie depuis les 231 et 244.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'e50c16f0-fd80-5177-b3aa-c857f7ad50a8',
+    },
+    decision:
+      'MÊME MONTAGE QUE LA 266, POUR LA MÊME RAISON : les 34 titres et les 4 chapitres de 1re sont EXACTEMENT ceux de la Terminale, donc un `eq(title, …)` ou un `eq(theme, …)` répondrait « vivante » grâce à la Terminale seule — un faux vert. L’UUID sondé est celui de la fiche « Les questions » DE PREMIÈRE, dérivé de `espagnol|1re|Les questions`. LE CONTENU EST IMPORTÉ, PAS RECOPIÉ (`scripts/contenu/espagnol-1re.mjs` importe `espagnol-tle.mjs`) : les programmes de LV sont écrits pour le CYCLE TERMINAL, la grammaire y est la même, et une correction faite une fois vaut pour les deux niveaux. ⚠️ TROIS MODULES PORTENT LE SLUG `espagnol` (220, 231, 267) : générer avec `--slugs espagnol` les fusionnerait et réécrirait deux migrations déjà exécutées — toujours `--modules espagnol-1re`. LE MÉNAGE VISE `theme IS NULL` AU NIVEAU 1re : « Le monde hispanique aujourd’hui » porte une apostrophe, dont rien ne garantit la forme en base (piège de la 249). LA FICHE CULTURELLE PART AUSSI, comme en Terminale avec la 244 : une fiche unique qui prétend tenir tous les axes d’une année n’est pas un chapitre du programme. ⚠️ LA 220 EST REJOUABLE : la recoller ferait revenir les 3 fiches. La 2de, elle, garde les siennes — le ménage est borné à `level = 1re`.',
+  },
+  {
+    id: '268',
+    fichier: '268_contenu_ses_1re_programme.sql',
+    feature:
+      'SES 1re (spécialité) : les 23 fiches du programme rangées sous leurs 7 chapitres (marché · monnaie et financement · socialisation · liens sociaux · déviance · vote et opinion publique · regards croisés) — 184 questions —, et les 4 fiches composites retirées du niveau 1re',
+    siAbsente:
+      'La spécialité SES de Première n’a que 4 fiches composites — « Le marché et ses défaillances », « La monnaie et le financement », « Socialisation et groupes sociaux », « L’opinion publique ». La moitié des questionnements du programme n’a aucune entrée : marchés imparfaitement concurrentiels, financement des agents, création monétaire, liens sociaux, déviance et contrôle social, vote, protection sociale, entreprise et gouvernance.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '9d54ed6e-8234-52d8-8672-caa4a6dea667',
+    },
+    decision:
+      'SONDE PAR ID (fiche « Qu’est-ce qu’un marché ? » de 1re, dérivé de `ses|1re|Qu’est-ce qu’un marché ?`) : le titre porte une apostrophe typographique, et une sonde par titre dépendrait de la forme exacte stockée. LE DÉCOUPAGE EST CELUI DE LA MAQUETTE — 7 chapitres, ni les 3 parties du BO (trois en-têtes pour 23 fiches ne rangeraient presque rien) ni les 12 questionnements (des sections d’une seule fiche). ⚠️ LES FICHES « (suite) » DE LA MAQUETTE ONT ÉTÉ RENOMMÉES : la source découpe quatre questionnements longs en deux pages dont la seconde s’appelle « … (suite) » — un titre qui ne dit rien dans une liste de fiches, alors que `chapters` est UNIQUE(subject_id, level, title). Le compte de fiches et l’ordre du programme sont inchangés. LE MÉNAGE VISE `theme IS NULL` AU NIVEAU 1re, pas les titres (« L’opinion publique » porte une apostrophe). ⚠️ CE QUI EST PERDU : les cours et les quiz des 4 fiches composites, adossés à un découpage que les 23 fiches recouvrent. La Terminale a reçu son programme avec la 253, la 2de garde ses fiches.',
+  },
+  {
+    id: '269',
+    fichier: '269_contenu_svt_1re_programme.sql',
+    feature:
+      'SVT 1re (spécialité) : les 21 fiches du programme rangées sous leurs 4 chapitres (patrimoine génétique · dynamique interne de la Terre · enjeux contemporains de la planète · corps humain et santé) — 168 questions —, et les 4 fiches composites retirées du niveau 1re',
+    siAbsente:
+      'La spécialité SVT de Première n’a que 4 fiches composites — « Expression du patrimoine génétique », « La dynamique interne de la Terre », « Écosystèmes et services », « Variation génétique et santé ». La réplication de l’ADN, la mitose et la méiose, la sismologie, les trois types de frontières de plaques, la cancérisation, l’immunité innée, l’immunité adaptative et la vaccination n’ont aucune entrée : l’essentiel de l’année, et le socle de la Terminale.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'de8ed94b-796f-5073-b843-116097058972',
+    },
+    decision:
+      'SONDE PAR ID (fiche « La réplication de l’ADN » de 1re, dérivé de `svt|1re|La réplication de l’ADN`) : le titre porte une apostrophe typographique, et une sonde par titre dépendrait de la forme exacte stockée. LE DÉCOUPAGE EST CELUI DES 4 THÈMES DU BO, qui coïncident ici avec les chapitres du cahier — à la différence des SES, aucun arbitrage n’était nécessaire. ⚠️ POINT À CONNAÎTRE : « La dynamique interne de la Terre » existait en base comme TITRE de fiche et revient ici comme THÈME de sept fiches ; la fiche part, le chapitre reste. LE MÉNAGE VISE `theme IS NULL` AU NIVEAU 1re, jamais les titres (piège de l’apostrophe, cf. 249). ⚠️ CE QUI EST PERDU : les cours et les quiz des 4 fiches composites. Les autres niveaux ne bougent pas : la Terminale a reçu son programme avec la 233, rangée sous ses chapitres par la 251.',
+  },
+  {
+    id: '270',
+    fichier: '270_contenu_physique_chimie_1re.sql',
+    feature:
+      'Physique-chimie 1re (spécialité) : les 22 fiches du programme rangées sous leurs 6 chapitres (mouvements et interactions · lumière, images et couleurs · énergie · constitution et transformations de la matière · structure de la matière · propriétés physico-chimiques) — 176 questions —, et les 5 fiches composites retirées du niveau 1re',
+    siAbsente:
+      'La spécialité de Première n’a que 5 fiches composites héritées des migrations écrites à la main (037 → 143) — « Suivi d’une transformation chimique », « Structure des entités chimiques », « Mouvement et interactions », « L’énergie mécanique », « Ondes mécaniques ». Le dosage par titrage, la relation de conjugaison, le champ électrique, la représentation de Lewis, l’électronégativité, la nomenclature, la synthèse organique et les combustions n’ont aucune entrée : la moitié du programme, et l’essentiel de ce qui se joue en travaux pratiques.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '4db5d1ee-5647-5dd3-9e48-619d3a3908f6',
+    },
+    decision:
+      'SONDE PAR ID (fiche « La statique des fluides » de 1re, dérivé de `physique-chimie|1re|La statique des fluides`), comme les 266 à 269 : une sonde par titre dépendrait de la forme exacte des apostrophes stockées. LE DÉCOUPAGE EST CELUI DE LA MAQUETTE — 6 chapitres, là où le BO en compte 4 : la maquette scinde la chimie en trois blocs qui suivent les trois moments de l’année (quantité de matière et suivi de réaction · structure et cohésion · chimie organique) et sort l’optique des ondes. Six en-têtes pour 22 fiches rangent mieux que quatre, et c’est ce découpage que l’élève a sur son cahier. ⚠️ PAS DE LATEX dans le contenu : le composant de rendu ne le connaît pas — les formules sont écrites en texte (« p = F / S », « E = U / d »). LE MÉNAGE VISE `theme IS NULL` AU NIVEAU 1re : deux des cinq titres portent une apostrophe. ⚠️ CE QUI EST PERDU : les cours et les quiz des 5 fiches composites. Les six autres niveaux ne bougent pas ; la Terminale a reçu son programme avec la 252.',
+  },
+  {
+    id: '271',
+    fichier: '271_contenu_maths_1re.sql',
+    feature:
+      'Maths 1re (spécialité) : les 11 fiches du programme rangées sous leurs 4 chapitres (algèbre · analyse · géométrie · probabilités et statistiques) — 88 questions —, et les 5 fiches héritées retirées du niveau 1re',
+    siAbsente:
+      'La spécialité de Première n’a que 5 fiches alignées à plat, sans chapitre — « Suites numériques », « Second degré », « Dérivation », « Produit scalaire », « Probabilités conditionnelles ». La fonction exponentielle, les fonctions trigonométriques, l’étude des variations et des courbes, la géométrie repérée et les variables aléatoires n’ont aucune entrée : cinq des onze fiches du programme, dont l’exponentielle, qui commande toute la Terminale.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'e6b74138-8a5a-5b0b-8d07-3e2b40009735',
+    },
+    decision:
+      'SONDE PAR ID (fiche « Fonction exponentielle » de 1re, dérivé de `maths|1re|Fonction exponentielle`) : elle n’existe qu’après cette migration, alors qu’une sonde par thème (« Analyse ») pourrait un jour répondre grâce à un autre niveau. ⚠️ UNE COLLISION DE TITRE VOULUE : la fiche « Dérivation » existe DÉJÀ en base au niveau 1re, sans thème, et revient dans ce module. Le ménage tournant AVANT les insertions, l’ancienne ligne part d’abord et la neuve prend sa place — sans lui, l’INSERT tomberait sur son ON CONFLICT DO NOTHING, la fiche neuve ne serait jamais posée et sa leçon échouerait sur une clé étrangère absente. Au rejeu, la « Dérivation » neuve porte le thème « Analyse » et n’est pas visée par le ménage. ⚠️ PAS DE LATEX : les formules sont écrites en texte (« x² », « √n », « u(n+1) = u(n) × q »), comme dans `maths-tle.mjs`. ⚠️ DEUX MODULES PORTENT LE SLUG `maths` (255 Tle, 271 1re) : toujours `--modules maths-1re`. La Terminale ne bouge pas.',
+  },
+  {
+    id: '272',
+    fichier: '272_contenu_si_1re.sql',
+    feature:
+      'Sciences de l’ingénieur 1re : les 23 fiches du programme rangées sous leurs 6 chapitres (analyse du besoin · statique du solide indéformable · théorie des mécanismes · cinématique · transfert de l’information · électrocinétique) — 184 questions —, et les 3 fiches composites du seed 219 retirées du niveau 1re',
+    siAbsente:
+      'La spécialité Sciences de l’ingénieur de Première n’a que 3 fiches composites héritées de la migration 219 — « Analyser un système », « Énergie et mécanique », « Information, capteurs et programmation ». Le SysML, la modélisation des actions, le principe fondamental de la statique, la cinématique du point, les opérateurs logiques, l’algèbre de Boole, la simplification des expressions logiques, les réseaux de données et les composants électriques n’ont aucune entrée : tout ce que l’élève manipule en travaux pratiques.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'e21baaf4-ca31-5110-8d2b-e4dd335cbafa',
+    },
+    decision:
+      'SONDE PAR ID (fiche « Le SysML » de 1re, dérivé de `si|1re|Le SysML`). LE DÉCOUPAGE EST CELUI DE LA MAQUETTE — 6 chapitres suivant la chaîne du système (le besoin, les actions mécaniques, l’énergie, le mouvement, l’information, le circuit qui la porte). Le programme officiel s’organise, lui, autour de quatre COMPÉTENCES (analyser, modéliser, expérimenter, concevoir) : on ne range pas des fiches sous des verbes. ⚠️ DEUX MODULES PORTENT LE SLUG `si` (219 via `si.mjs`, 272 via `si-1re.mjs`) — mais la 219 est générée par `--modules snt,hlp,llcer-anglais,si,maths-complementaires`, donc par FICHIER : l’ajout ne la touche pas (vérifié identique à l’octet près). ⚠️ LA 219 EST REJOUABLE : la recoller ferait revenir les 3 fiches composites en doublon. LE MÉNAGE VISE `theme IS NULL` AU NIVEAU 1re. La Terminale garde les fiches de la 219, faute de programme écrit pour elle.',
+  },
+  {
+    id: '273',
+    fichier: '273_contenu_nsi_1re.sql',
+    feature:
+      'NSI 1re (spécialité) : les 19 fiches du programme rangées sous leurs 6 chapitres (au cœur de l’ordinateur · l’ordinateur de bureau · réseaux · interagir sur le web · génie logiciel · algorithmique et programmation) — 152 questions —, et les 4 fiches composites retirées du niveau 1re',
+    siAbsente:
+      'La spécialité NSI de Première n’a que 4 fiches composites — « Types de données et représentation », « Python : bases de la programmation », « Tableaux et dictionnaires », « Le web : HTML, CSS, HTTP ». L’architecture machine, les systèmes d’exploitation, les protocoles réseau, le bit alterné, la complexité, les algorithmes gloutons et l’apprentissage n’ont aucune entrée : la moitié des thèmes du programme, et ceux qui fondent la Terminale.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '53b26f6c-f960-5e34-adc7-f3714b4fff47',
+    },
+    decision:
+      'SONDE PAR ID (fiche « Une machine à calculer : le bit » de 1re). ⚠️ RÈGLE APPRISE SUR LA 254, APPLIQUÉE ICI : jamais d’extrait SQL exécutable dans un cours de NSI — le contenu voyage dans des littéraux SQL échappés, et une rupture de littéral ferait repartir le texte à l’exécution, produisant une erreur qui parle d’une table fantôme. Aucune ligne du module ne commence par un mot-clé SQL nu ; le lexeur `_ASSOCIE/verifie-chaines.mjs` le confirme. ⚠️ UN PIÈGE D’ÉCRITURE RENCONTRÉ ET CORRIGÉ : un backquote dans un cours (« renommer une image en .txt ») rompait le littéral de gabarit JavaScript du module — les extensions et le code s’écrivent désormais entre guillemets français. LE DÉCOUPAGE EST CELUI DE LA MAQUETTE (6 chapitres). LE MÉNAGE VISE `theme IS NULL` AU NIVEAU 1re. La Terminale a reçu son programme avec la 254.',
+  },
+  {
+    id: '274',
+    fichier: '274_contenu_hlp_1re.sql',
+    feature:
+      'HLP 1re : les 19 fiches du programme rangées sous leurs 6 chapitres (l’art de la parole · l’autorité de la parole · les séductions de la parole · découverte du monde · décrire, figurer, imaginer · l’homme et l’animal) — 152 questions —, et les 3 fiches héritées retirées du niveau 1re',
+    siAbsente:
+      'La spécialité HLP de Première n’a que 3 fiches — « Les pouvoirs de la parole », « Les représentations du monde », « Lire, analyser, écrire ». Les deux premières résument chacune un SEMESTRE entier en une fiche ; la troisième est une fiche de méthode. La rhétorique, le mythe, le discours amoureux, la découverte de l’autre, la perspective, l’encyclopédie et la question animale n’ont aucune entrée propre.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'dc33abee-1469-56af-9ba1-7ce5a63ab276',
+    },
+    decision:
+      'SONDE PAR ID (fiche « Qu’est-ce que la rhétorique ? » de 1re) : le titre porte deux apostrophes typographiques, une sonde par titre dépendrait de leur forme exacte en base. ⚠️ TROISIÈME MODULE DU SLUG `hlp` (219 via `hlp.mjs`, 232 via `hlp-tle.mjs`, 274 via `hlp-1re.mjs`) — la 219 étant générée par `--modules snt,hlp,llcer-anglais,si,maths-complementaires`, donc par FICHIER, l’ajout ne la touche pas (vérifié identique à l’octet près, comme la 232). ⚠️ LA FICHE DE MÉTHODE « Lire, analyser, écrire » PART AUSSI : ce n’est pas un chapitre du programme mais un mode d’emploi de l’épreuve, et un dossier de matière ne montre que son programme. Arbitrage différent de la 257, qui avait laissé « Méthode de l’épreuve » HORS chapitre en Terminale parce qu’une annale la visait ; aucune annale ne vise celle de 1re. ⚠️ LA 219 EST REJOUABLE : la recoller ferait revenir les 3 fiches en doublon.',
+  },
+  {
+    id: '275',
+    fichier: '275_contenu_hggsp_1re.sql',
+    feature:
+      'HGGSP 1re : les 25 fiches du programme rangées sous ses 5 thèmes (la démocratie · les puissances internationales · les frontières · s’informer · États et religions) — 200 questions —, et les 4 fiches composites retirées du niveau 1re',
+    siAbsente:
+      'La spécialité HGGSP de Première n’a que 4 fiches composites, chacune résumant un thème entier du BO, et le thème 2 (les puissances internationales) n’a AUCUNE entrée. Surtout, les JALONS du programme — Athènes, Tocqueville, le Chili de 1973, le Portugal et l’Espagne de 1974-1982, l’Empire ottoman, l’affaire Dreyfus, la sécularisation turque — n’existent nulle part, alors que l’épreuve porte précisément sur eux.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'aebabe0c-6a7d-5b05-93fa-a0661d8e1ab8',
+    },
+    decision:
+      'SONDE PAR ID (fiche « Une démocratie directe mais limitée : être citoyen à Athènes au Ve siècle » de 1re) : le titre porte deux-points et apostrophe, une sonde par titre dépendrait de leur forme exacte. LE DÉCOUPAGE EST CELUI DU BO — 5 thèmes, qui sont aussi les 5 chapitres de la maquette : contrairement aux SES (268) et à la physique-chimie (270), aucun arbitrage n’était nécessaire, les intitulés officiels étant ceux du cahier et chaque thème comptant de 3 à 7 fiches. LES FICHES SUIVENT LES JALONS DU PROGRAMME, un par fiche, ce qui est exactement la maille de l’épreuve. LE MÉNAGE VISE `theme IS NULL` AU NIVEAU 1re, jamais les titres composites (deux-points et apostrophes, piège de la 249). ⚠️ DEUX MODULES PORTENT LE SLUG `hggsp` (256 Tle, 275 1re) : toujours `--modules hggsp-1re`. La Terminale ne bouge pas.',
+  },
+  {
+    id: '276',
+    fichier: '276_contenu_allemand_1re.sql',
+    feature:
+      'Allemand 1re : les 36 fiches du programme de langue rangées sous leurs 5 chapitres (la phrase · le groupe nominal · les groupes prépositionnels · le groupe verbal · les temps) — 288 questions —, et les 3 fiches héritées retirées du niveau 1re',
+    siAbsente:
+      'L’allemand de Première n’a que les 3 fiches du bloc lycée de la 218 — « Raconter au passé », « Le datif et les prépositions », « L’Allemagne d’aujourd’hui » —, les mêmes qu’en 2de et qu’en Terminale avant la 249. La déclinaison de l’adjectif épithète, la place du verbe dans la subordonnée, nicht/kein, le passif, le génitif, les verbes à préverbe séparable et le subjonctif II n’ont aucune entrée.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '72b1d366-a38c-5b17-b988-95c1126e18a3',
+    },
+    decision:
+      'SONDE PAR ID (fiche « Le subjonctif II présent » de 1re). LE CONTENU EST IMPORTÉ DE LA TERMINALE, comme l’anglais (266) et l’espagnol (267) : les programmes de LV sont écrits pour le CYCLE TERMINAL, la grammaire y est la même, et `allemand-1re.mjs` republie les 36 fiches de la 249 sur le niveau 1re sans les recopier — une correction de règle faite une fois vaut pour les deux niveaux. Aucune table d’axes à recopier ici, contrairement à l’anglais et à l’espagnol : `allemand-tle.mjs` porte déjà son chapitre sur chaque fiche. LE MÉNAGE VISE `theme IS NULL` AU NIVEAU 1re et non les titres : « L’Allemagne d’aujourd’hui » porte deux apostrophes typographiques (piège relevé dans la 249), un DELETE par titre pourrait ne rien trouver EN SILENCE. La fiche de civilisation part avec les deux autres — décision de la 249 et de la 244. ⚠️ TROISIÈME MODULE DU SLUG `allemand` (218, 249, 276) : toujours `--modules allemand-1re`. La 2de garde ses 3 fiches. ⚠️ LA 218 EST REJOUABLE : la recoller ferait revenir les 3 fiches au niveau 1re.',
+  },
+  {
+    id: '277',
+    fichier: '277_contenu_emc_1re.sql',
+    feature:
+      'EMC 1re : les 12 fiches du programme « Cohésion et diversité dans une société démocratique » rangées sous ses 2 thèmes (les valeurs et les principes de la République à l’épreuve de la cohésion sociale · la République et la Nation) — 96 questions —, et les 3 fiches du socle lycée retirées du niveau 1re',
+    siAbsente:
+      'L’EMC de Première n’a que les 3 fiches du socle lycée de la 216 — « La liberté d’expression et ses limites », « Démocratie et État de droit », « Enjeux du numérique et de l’information » —, écrites pour la 2de, la 1re et la Tle à la fois. Deux d’entre elles relèvent, dans le programme de 2024, de la SECONDE. La fraternité, la loi de 1905, la loi Pleven, la décentralisation, le droit du sol et la sécurité nationale n’ont aucune entrée.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '367f457f-4a36-501c-9939-6cda87bc1606',
+    },
+    decision:
+      'SONDE PAR ID (fiche « Laïcité et pluralisme » de 1re). LE TEXTE QUI FAIT FOI EST LE PROGRAMME D’EMC DU BO N° 24 DU 13 JUIN 2024, applicable à TOUS les niveaux à la rentrée 2026-2027 — celle des élèves d’aujourd’hui : la Première y a pour thématique « Cohésion et diversité dans une société démocratique » et pour chapitres ses deux thèmes de 9 heures. LE DÉCOUPAGE 7 + 5 N’AJOUTE RIEN AU PROGRAMME : il sépare en deux fiches révisables ce que le BO écrit en deux contenus d’enseignement sous une même notion (les inégalités sous « solidarité et fraternité », le handicap sous « discriminations et société inclusive »). LES 3 FICHES DU SOCLE PARTENT AU SEUL NIVEAU 1re, décision prise en 250 pour la Terminale ; la 2de les garde, rien ne viendrait les remplacer. LE MÉNAGE VISE `theme IS NULL` (deux des trois titres portent une apostrophe typographique). ⚠️ TROISIÈME MODULE DU SLUG `emc` (216, 230, 277) : toujours `--modules emc-1re`. ⚠️ LA 216 EST REJOUABLE : la recoller ferait revenir les 3 fiches au niveau 1re. ⚠️ CONSÉQUENCE À TRAITER : la Terminale (230 + 250) suit encore le programme de 2019 — le BO de 2024 y installe « La vie démocratique : débat, délibération et prise de décision ».',
+  },
+  {
+    id: '278',
+    fichier: '278_matieres_hors_dossier_1re.sql',
+    feature:
+      'Les dossiers de 1re GÉNÉRALE ne montrent plus que les matières dont l’app tient le programme : EPS, arts plastiques, musique, latin, grec et LLCER anglais quittent ce niveau (les fiches inatteignables du latin, du grec et de LLCER partent avec)',
+    siAbsente:
+      'La 1re générale affiche six dossiers dont le contenu n’est que 3 fiches passe-partout, identiques de la 6e à la Terminale — le contraire de la règle « un dossier de matière ne montre que son programme ».',
+    sonde: null,
+    decision:
+      '⚠️ EXÉCUTER LA 241 D’ABORD : elle réécrit ENTIÈREMENT le tableau `levels` de l’EPS, des arts plastiques et de la musique ; passée après la 278, elle ramènerait les trois matières en 1re en silence. La 278 refuse de tourner tant que la 241 n’est pas là (garde sur `CP` dans les niveaux de l’histoire-géo). NON SONDABLE À LA CLÉ ANON : cette migration RETIRE des niveaux, aucune sonde d’existence ne le dit — vérifier à la main que `subjects.levels` de `sport` ne contient plus `1re` (mais bien `1re techno`). ⚠️ DEUX FAITS ASSUMÉS, ÉCRITS DANS L’EN-TÊTE DU FICHIER : l’EPS est OBLIGATOIRE en 1re (2 h/sem) et LLCER anglais est une SPÉCIALITÉ de 1re (4 h) — leur retrait est une décision de PRODUIT (on ne révise pas l’EPS, l’app ne tient aucun de ces deux programmes), pas une correction de programme. La 1re TECHNO garde l’EPS, les arts et la musique : sans elles, sa grille — faite du seul tronc commun — tomberait sous les dix matières exigées par `lib/subject-catalogue.test.ts`. Les deux gardes de ce test portent l’exception, commentée. RETOUR EN ARRIÈRE : remettre `1re` dans `levels`, et rejouer 219/220 pour les fiches du latin, du grec et de LLCER.',
+  },
+  {
+    id: '313',
+    fichier: '313_temps_paliers_jeux.sql',
+    feature:
+      'Temps de bouclage d’un palier de jeu et classement de rapidité (« Top 5 % des joueurs »)',
+    siAbsente:
+      'La carte d’un jeu affiche le chrono gardé en local mais AUCUN pourcentage : le classement demande la distribution de tous les joueurs, elle n’existe nulle part ailleurs. Le reste de l’échelle de paliers (étoiles, déblocage, records de score) marche sans elle — l’appel est toléré, jamais bloquant.',
+    sonde: { type: 'table', table: 'game_palier_times' },
+    decision:
+      'À exécuter après la 312. Dépend de `game_catalog` (238) : la RPC `record_palier_time` refuse tout jeu absent du catalogue, sans quoi un client fabriquerait des `game_id` inédits pour se classer premier d’un jeu dont il serait le seul joueur.',
+  },
+  {
+    id: '314',
+    fichier: '314_cote_ultime.sql',
+    feature:
+      'Épreuve ultime : cote de maîtrise (absolue, tous âges confondus) et classements mondial + par classe',
+    siAbsente:
+      'L’épreuve ultime se joue et affiche le niveau atteint, mais AUCUNE cote ni classement : ce sont les seuls chiffres qui demandent la distribution de tous les joueurs. Sans elle, un élève ne peut pas se comparer hors de sa classe — la raison d’être de cette épreuve.',
+    sonde: { type: 'table', table: 'game_ultime_cotes' },
+    decision:
+      'À exécuter après la 313. Dépend de `game_catalog` (238) et de `profiles.grade_level` (classement par classe). La formule de la cote (100 + 60 × moyenne des 3 meilleurs niveaux) est un MIROIR de lib/jeux/ultime.coteFor : toute évolution doit toucher les deux, comme lib/trophy-road.ts ↔ apply_game_trophies.',
   },
 ] as const
 

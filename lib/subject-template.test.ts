@@ -11,13 +11,20 @@ import {
   examBannerOnTop,
   flashcardsBadge,
   flashcardsMeta,
+  catalogIsStale,
+  chapterUnit,
+  chaptersAreNumbered,
+  disciplinesOf,
   groupChaptersByTheme,
+  matchChapters,
   minutesLabel,
   modeFromParam,
   modesFor,
   openGroupIndex,
   quizBadge,
+  searchKey,
   quizMeta,
+  tabId,
   resumeCta,
   subjectProgress,
   type ChapterRow,
@@ -254,6 +261,7 @@ const row = (
   examHint: null,
   minutes: null,
   theme,
+  discipline: null,
 })
 
 describe('groupChaptersByTheme', () => {
@@ -295,6 +303,195 @@ describe('groupChaptersByTheme', () => {
       row('b', null, 2),
     ])
     expect(groups.map((g) => g.theme)).toEqual(['Axe 1', null])
+  })
+})
+
+describe('disciplinesOf', () => {
+  test('aucune discipline sur une matière ordinaire', () => {
+    expect(disciplinesOf([{ discipline: null }, { discipline: null }])).toEqual(
+      [],
+    )
+  })
+
+  test('une seule discipline ne se filtre pas', () => {
+    expect(
+      disciplinesOf([{ discipline: 'histoire' }, { discipline: 'histoire' }]),
+    ).toEqual([])
+  })
+
+  test('deux disciplines, dans l’ordre du programme', () => {
+    expect(
+      disciplinesOf([
+        { discipline: 'histoire' },
+        { discipline: 'histoire' },
+        { discipline: 'geographie' },
+        { discipline: 'geographie' },
+      ]),
+    ).toEqual(['histoire', 'geographie'])
+  })
+
+  test('un chapitre sans discipline ne crée pas de groupe', () => {
+    expect(
+      disciplinesOf([
+        { discipline: 'histoire' },
+        { discipline: null },
+        { discipline: 'geographie' },
+      ]),
+    ).toEqual(['histoire', 'geographie'])
+  })
+})
+
+describe('modesFor et tabId — les matières à deux disciplines', () => {
+  test('sans discipline : un onglet Programme, comme avant', () => {
+    const tabs = modesFor('3e')
+    expect(tabs.map((t) => t.label)).toEqual([
+      'Programme',
+      'Mode de jeu',
+      'Annales',
+    ])
+    expect(tabs.every((t) => t.discipline === undefined)).toBe(true)
+  })
+
+  test('deux disciplines : Programme laisse place à un onglet par discipline', () => {
+    const tabs = modesFor('Tle', ['histoire', 'geographie'])
+    expect(tabs.map((t) => t.label)).toEqual([
+      'Histoire',
+      'Géographie',
+      'Mode de jeu',
+      'Annales',
+    ])
+    expect(tabs.map(tabId)).toEqual([
+      'programme:histoire',
+      'programme:geographie',
+      'jeu',
+      'annales',
+    ])
+  })
+
+  test('une seule discipline ne dédouble rien', () => {
+    expect(modesFor('Tle', ['histoire']).map((t) => t.label)).toEqual([
+      'Programme',
+      'Mode de jeu',
+      'Annales',
+    ])
+  })
+
+  test('l’identifiant complet ouvre son onglet', () => {
+    const tabs = modesFor('Tle', ['histoire', 'geographie'])
+    expect(modeFromParam('programme:geographie', tabs)).toBe(
+      'programme:geographie',
+    )
+  })
+
+  test('une clé seule ouvre le premier onglet qui la porte', () => {
+    const tabs = modesFor('Tle', ['histoire', 'geographie'])
+    expect(modeFromParam('programme', tabs)).toBe('programme:histoire')
+  })
+
+  test('les anciennes clés de format restent valides', () => {
+    const tabs = modesFor('Tle', ['histoire', 'geographie'])
+    expect(modeFromParam('boss', tabs)).toBe('jeu')
+    expect(modeFromParam('erreurs', tabs)).toBe('programme:histoire')
+  })
+
+  test('une discipline inconnue n’ouvre rien', () => {
+    const tabs = modesFor('Tle', ['histoire', 'geographie'])
+    expect(modeFromParam('programme:svt', tabs)).toBeUndefined()
+  })
+})
+
+describe('modesFor — les trois rayons du français', () => {
+  test('programme, fiches et grammaire font trois onglets, dans l’ordre', () => {
+    const tabs = modesFor('1re', ['programme', 'fiches', 'grammaire'])
+    expect(tabs.map((t) => t.label)).toEqual([
+      'Programme',
+      'Fiches',
+      'Grammaire',
+      'Mode de jeu',
+      'Annales',
+    ])
+    expect(tabs.map(tabId)).toEqual([
+      'programme:programme',
+      'programme:fiches',
+      'programme:grammaire',
+      'jeu',
+      'annales',
+    ])
+  })
+
+  test('l’ordre des onglets suit celui des chapitres, pas l’alphabet', () => {
+    const chapitres = [
+      { discipline: 'programme' },
+      { discipline: 'programme' },
+      { discipline: 'fiches' },
+      { discipline: 'grammaire' },
+    ]
+    expect(disciplinesOf(chapitres)).toEqual([
+      'programme',
+      'fiches',
+      'grammaire',
+    ])
+  })
+
+  test('un lien ancien vers ?onglet=programme ouvre le rayon Programme', () => {
+    const tabs = modesFor('1re', ['programme', 'fiches', 'grammaire'])
+    expect(modeFromParam('programme', tabs)).toBe('programme:programme')
+    expect(modeFromParam('programme:fiches', tabs)).toBe('programme:fiches')
+  })
+})
+
+describe('chapterUnit', () => {
+  test('une matière à plat compte ses lignes en chapitres', () => {
+    expect(chapterUnit([row('a', null, 1), row('b', null, 2)])).toBe('chapitre')
+  })
+
+  test('une matière rangée compte ses lignes en fiches', () => {
+    expect(chapterUnit([row('a', 'Le groupe verbal', 1)])).toBe('fiche')
+  })
+
+  test('un seul chapitre rangé suffit à changer le mot', () => {
+    expect(chapterUnit([row('a', null, 1), row('b', 'Les temps', 2)])).toBe(
+      'fiche',
+    )
+  })
+
+  test('une matière vide reste comptée en chapitres', () => {
+    expect(chapterUnit([])).toBe('chapitre')
+  })
+})
+
+// Le défaut du 20/08/2026 : après la migration 249, le cache de 300 s servait
+// les 3 fiches d'allemand supprimées, aucune ne survivait au filtre des
+// fantômes, et la page annonçait « arrive bientôt » sur un dossier de 36 fiches.
+describe('catalogIsStale', () => {
+  const ids = (...v: string[]) => v.map((id) => ({ id }))
+
+  test('un cache qui ignore un chapitre existant est périmé', () => {
+    expect(catalogIsStale(ids('vieux'), ids('neuf1', 'neuf2'))).toBe(true)
+  })
+
+  test('un cache qui garde un mort en trop n’est pas périmé (le filtre suffit)', () => {
+    expect(catalogIsStale(ids('a', 'b', 'mort'), ids('a', 'b'))).toBe(false)
+  })
+
+  test('deux listes identiques ne déclenchent rien', () => {
+    expect(catalogIsStale(ids('a', 'b'), ids('a', 'b'))).toBe(false)
+  })
+
+  test('une base vide ne fait pas passer le cache pour périmé', () => {
+    expect(catalogIsStale(ids('a'), [])).toBe(false)
+  })
+})
+
+describe('chaptersAreNumbered', () => {
+  test('la philosophie ne numérote pas ses notions', () => {
+    expect(chaptersAreNumbered('philosophie')).toBe(false)
+  })
+
+  test('les autres matières gardent leur numérotation', () => {
+    for (const slug of ['maths', 'histoire-geo', 'anglais', 'svt']) {
+      expect(chaptersAreNumbered(slug)).toBe(true)
+    }
   })
 })
 
@@ -392,5 +589,55 @@ describe('carteMeta', () => {
 
   test('« Vue d’ensemble » quand la carte est accessible', () => {
     expect(carteMeta(false)).toBe('Vue d’ensemble')
+  })
+})
+
+describe('searchKey', () => {
+  test('efface accents, casse et ponctuation', () => {
+    expect(searchKey('« Le Bateau ivre », Arthur RIMBAUD')).toBe(
+      'le bateau ivre arthur rimbaud',
+    )
+    expect(searchKey('À l’ombre des jeunes filles en fleurs')).toBe(
+      'a l ombre des jeunes filles en fleurs',
+    )
+  })
+
+  test('défait les ligatures que l’Unicode ne décompose pas', () => {
+    // « cœur » n'est pas un « o » accentué : sans ce passage, l'élève qui tape
+    // « coeur » ne trouve rien.
+    expect(searchKey('Un cœur simple')).toBe('un coeur simple')
+    expect(searchKey('Ex æquo')).toBe('ex aequo')
+  })
+})
+
+describe('matchChapters', () => {
+  const fiche = (title: string, theme: string | null = 'Fiches de lecture') => ({
+    title,
+    theme,
+  })
+  const rayon = [
+    fiche('« Art », Yasmina Reza'),
+    fiche('« Le Bateau ivre », Arthur Rimbaud'),
+    fiche('« Un cœur simple », Gustave Flaubert'),
+    fiche('Les mots de liaison', 'Grammaire'),
+  ]
+
+  test('une recherche vide rend la liste entière', () => {
+    expect(matchChapters(rayon, '')).toEqual(rayon)
+    expect(matchChapters(rayon, '   ')).toEqual(rayon)
+  })
+
+  test('tous les mots tapés doivent se retrouver, dans n’importe quel ordre', () => {
+    expect(matchChapters(rayon, 'rimbaud bateau')).toEqual([rayon[1]])
+    expect(matchChapters(rayon, 'bateau reza')).toEqual([])
+  })
+
+  test('cherche aussi dans le chapitre qui coiffe la ligne', () => {
+    expect(matchChapters(rayon, 'grammaire')).toEqual([rayon[3]])
+  })
+
+  test('trouve à l’accent et à la ligature près', () => {
+    expect(matchChapters(rayon, 'coeur')).toEqual([rayon[2]])
+    expect(matchChapters(rayon, 'CŒUR')).toEqual([rayon[2]])
   })
 })

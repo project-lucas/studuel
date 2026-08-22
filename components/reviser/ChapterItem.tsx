@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
-import { Check, ChevronRight, Clock3, Crown, Timer } from 'lucide-react'
+import { Check, Clock3, Crown, Plus, Timer } from 'lucide-react'
+import SupportChips from '@/components/reviser/SupportChips'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -9,14 +9,27 @@ import {
   STATUS_LABELS,
   minutesLabel,
   type ChapterRow,
+  type SupportChip,
 } from '@/lib/subject-template'
 
 // Une SEULE entrée par chapitre : numéro + titre, durée estimée, couronnes
-// gagnées, état. Le clic ouvre le chapitre (son premier cours).
+// gagnées, état. Le clic DÉPLIE la fiche et découvre ses supports dessous.
 //
-// `resumeLabel` : le chapitre à reprendre porte le CTA jaune (« Reprendre » /
-// « Commencer »). Il y en a toujours exactement un tant qu'il reste quelque
-// chose à faire — cf. `resumeCta`.
+// AVANT, il ouvrait une page : un rendu serveur entier, un écran de chargement,
+// puis cinq tuiles — et un retour en arrière pour qui s'était trompé de fiche.
+// Trois gestes et deux écrans pour choisir « Quiz ». Les tuiles sont maintenant
+// DANS la liste : on tape la fiche, elles se dépliENT, on tape ce qu'on veut.
+// La page de chapitre existe toujours (liens profonds, pied de cours) ; elle
+// n'est simplement plus le passage obligé.
+//
+// `resumeLabel` : la fiche à reprendre garde son repère jaune — mais sur le
+// « + », pas sur un bouton-texte. C'est le même geste que partout ailleurs dans
+// la liste ; seule la couleur dit « c'est ici qu'on reprend ».
+//
+// `rank` : non nul quand la liste est rangée sous les chapitres du programme
+// (colonne `theme`). La ligne n'est alors plus un chapitre mais une FICHE de
+// celui qui la coiffe : elle prend son numéro DANS le chapitre et laisse le mot
+// « Chapitre » à l'en-tête du groupe, seul endroit où il est vrai.
 //
 // Les couronnes ne s'affichent qu'à partir de la première GAGNÉE : trois
 // couronnes éteintes sur chacune des 28 lignes, c'est un mur d'échecs pour
@@ -24,22 +37,53 @@ import {
 export default function ChapterItem({
   chapter,
   resumeLabel = null,
+  rank = null,
+  numbered = true,
+  open = false,
+  supports = null,
+  loading = false,
+  onToggle,
 }: {
   chapter: ChapterRow
   resumeLabel?: string | null
+  rank?: number | null
+  /**
+   * Faux pour une matière sans ordre imposé (la philosophie et ses notions) :
+   * le titre s'écrit alors nu, sans « Chapitre N · » — cf.
+   * `chaptersAreNumbered`.
+   */
+  numbered?: boolean
+  /** La fiche est dépliée : ses supports sont montrés dessous. */
+  open?: boolean
+  /** Les supports chargés, ou null tant qu'on ne les a jamais demandés. */
+  supports?: SupportChip[] | null
+  loading?: boolean
+  onToggle: () => void
 }) {
   const started = chapter.status !== 'non_commence'
+  const panneau = `fiche-${chapter.id}`
 
   return (
-    <Link
-      href={chapter.href}
-      onClick={() => sfx.tap()}
+    <div
       className={cn(
-        'flex items-center gap-3 rounded-2xl border bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]',
+        'rounded-2xl border bg-card shadow-sm transition-shadow',
+        open ? 'shadow-md' : null,
+        resumeLabel ? 'border-highlight ring-2 ring-highlight/40' : null,
+      )}
+    >
+    <button
+      type="button"
+      onClick={() => {
+        sfx.tap()
+        onToggle()
+      }}
+      aria-expanded={open}
+      aria-controls={panneau}
+      className={cn(
+        'flex w-full cursor-pointer items-center gap-3 rounded-2xl text-left transition-transform active:scale-[0.99]',
         // Une ligne encore vierge n'a rien à raconter : elle se fait discrète
         // pour laisser respirer celles qui portent un vrai avancement.
         started ? 'p-4' : 'px-4 py-3',
-        resumeLabel ? 'border-highlight ring-2 ring-highlight/40' : null,
       )}
     >
       {/* Numéro du chapitre */}
@@ -56,7 +100,7 @@ export default function ChapterItem({
         {chapter.status === 'complete' ? (
           <Check className="size-5.5" strokeWidth={3} />
         ) : (
-          chapter.position
+          (rank ?? chapter.position)
         )}
       </span>
 
@@ -75,7 +119,8 @@ export default function ChapterItem({
           </span>
         ) : null}
         <span className="block font-semibold text-balance">
-          Chapitre {chapter.position} · {chapter.title}
+          {rank === null && numbered ? `Chapitre ${chapter.position} · ` : ''}
+          {chapter.title}
         </span>
         <span className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-semibold text-muted-foreground">
           {chapter.minutes !== null ? (
@@ -109,16 +154,87 @@ export default function ChapterItem({
         </span>
       </span>
 
-      {resumeLabel ? (
-        <span className="font-heading shrink-0 rounded-full border-b-4 border-b-black/20 bg-highlight px-4 py-2 text-sm font-bold text-foreground">
-          {resumeLabel}
-        </span>
-      ) : (
-        <ChevronRight
-          className="size-4 shrink-0 text-muted-foreground"
-          aria-hidden="true"
-        />
-      )}
-    </Link>
+      {/* LE « + » : la même cible sur toutes les lignes, qui pivote en croix
+          une fois dépliée. Il remplace le bouton « Commencer » — un bouton-texte
+          promettait une page, celui-ci promet ce qu'il fait : ouvrir la fiche
+          sur place. La fiche à reprendre le porte en JAUNE : le repère de
+          reprise survit au changement de geste. */}
+      <span
+        aria-hidden="true"
+        className={cn(
+          'grid size-10 shrink-0 place-items-center rounded-full transition-all duration-200',
+          open ? 'rotate-45' : null,
+          resumeLabel
+            ? 'border-b-4 border-b-black/20 bg-highlight text-foreground'
+            : 'bg-primary/10 text-primary',
+        )}
+      >
+        <Plus className="size-5" strokeWidth={3} />
+      </span>
+    </button>
+
+    {open ? (
+      /* LE DÉPLIÉ, À MÊME LA FICHE. Pas de bandeau teinté : un bloc beige
+         dans un bloc blanc fait deux cartes empilées là où il n'y a qu'une
+         fiche. Les supports prennent TOUTE la largeur de la carte — c'est ce
+         qui donne à chaque icône la place de respirer — et un filet d'un pixel
+         suffit à les séparer du titre. L'ouverture est ANIMÉE (200 ms) pour que
+         la liste ne saute pas. */
+      <div
+        id={panneau}
+        className="animate-in fade-in slide-in-from-top-2 mx-3 mb-3 border-t border-black/5 pt-2.5 duration-200 motion-reduce:animate-none"
+      >
+        {loading || supports === null ? (
+          <SupportsSquelette />
+        ) : supports.length === 0 ? (
+          <p className="py-2 text-center text-xs font-semibold text-muted-foreground">
+            Cette fiche n’a pas encore de contenu.
+          </p>
+        ) : (
+          /* `fiche` : le cours en tête, les autres en raccourcis dessous. Ni
+             `grid` (cinq tuiles carrées poussaient la fiche suivante à un écran
+             de distance) ni `row` (cinq pastilles égales qu'il fallait relire
+             en entier pour retrouver par où commencer). */
+          <SupportChips
+            chips={supports}
+            layout="fiche"
+            label={`Supports de ${chapter.title}`}
+          />
+        )}
+      </div>
+    ) : null}
+    </div>
+  )
+}
+
+/**
+ * L'attente, en tuiles grises à la place exacte des vraies.
+ *
+ * Un simple tourniquet aurait fait sauter la liste deux fois : une fois pour
+ * l'ouvrir, une fois quand les tuiles arrivent. Ici la place est réservée du
+ * premier rendu — c'est la même grille, aux mêmes dimensions.
+ */
+function SupportsSquelette() {
+  // La FORME de ce qui arrive, pas un tourniquet : cinq colonnes à la place
+  // exacte des vraies. Réservée dès le premier rendu, la liste ne saute pas
+  // quand les icônes arrivent.
+  return (
+    <div
+      className="flex flex-col gap-2.5"
+      role="status"
+      aria-label="Chargement des supports"
+    >
+      <span className="grid grid-cols-5 gap-1.5">
+        {[0, 1, 2, 3, 4].map((i) => (
+          <span
+            key={i}
+            className="flex h-[68px] animate-pulse flex-col items-center justify-center gap-1.5 motion-reduce:animate-none"
+          >
+            <span className="size-11 rounded-2xl bg-muted" />
+            <span className="h-2 w-10 rounded-full bg-muted" />
+          </span>
+        ))}
+      </span>
+    </div>
   )
 }

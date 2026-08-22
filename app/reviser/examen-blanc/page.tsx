@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { contentLevelFor } from '@/lib/grades'
 import { CircleUser, GraduationCap } from 'lucide-react'
 import {
   Card,
@@ -117,7 +118,7 @@ export default async function ExamenBlancPage({
       supabase
         .from('quizzes')
         .select('id, subject, lesson_id')
-        .eq('grade_level', grade),
+        .eq('grade_level', contentLevelFor(grade)),
       supabase
         .from('exam_blanc_sessions')
         .select('score, total')

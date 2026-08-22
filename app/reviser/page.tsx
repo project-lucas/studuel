@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { contentLevelFor } from '@/lib/grades'
 import { redirect } from 'next/navigation'
 import { CircleUser, GraduationCap, TriangleAlert } from 'lucide-react'
 import {
@@ -285,7 +286,7 @@ export default async function ReviserPage() {
     const { data } = await supabase
       .from('chapters')
       .select('id, subject_id, level, title, position')
-      .eq('level', grade)
+      .eq('level', contentLevelFor(grade))
       .order('position', { ascending: true })
       .returns<typeof cachedChapters>()
     levelChapters = data ?? []

@@ -132,8 +132,11 @@ export function cohortLabel(grade: GradeLevel | string | null | undefined): stri
   const g = String(grade ?? '').trim()
   if (!g) return 'des élèves'
   // « Tle » ne se lit pas à voix haute, contrairement à tous les autres niveaux
-  // qui s'écrivent comme ils se disent.
+  // qui s'écrivent comme ils se disent. La voie technologique se compare à
+  // elle-même : un Tle techno ne suit pas les mêmes épreuves qu'un Tle général,
+  // le ranger dans « les Terminales » comparerait deux populations différentes.
   if (g === 'Tle') return 'des Terminales'
+  if (g === 'Tle techno') return 'des Terminales techno'
   return `des ${g}`
 }
 

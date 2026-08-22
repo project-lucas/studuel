@@ -144,12 +144,14 @@ export function epreuveOf(id: string | null | undefined): Epreuve {
 /**
  * L'épreuve que Marcel propose par défaut selon la classe. On ne devine pas au
  * hasard : un 3e passe le brevet, un 1re l'oral de français, un terminale le
- * grand oral. Tout le monde peut choisir autre chose.
+ * grand oral. Les deux voies du lycée passent les mêmes épreuves — la techno a
+ * son oral de français en 1re et son grand oral en Tle, comme la générale.
+ * Tout le monde peut choisir autre chose.
  */
 export function epreuveParDefaut(niveau: string | null | undefined): EpreuveId {
   if (niveau === '3e') return 'brevet'
-  if (niveau === '1re') return 'francais'
-  if (niveau === 'Tle') return 'grand-oral'
+  if (niveau === '1re' || niveau === '1re techno') return 'francais'
+  if (niveau === 'Tle' || niveau === 'Tle techno') return 'grand-oral'
   return 'libre'
 }
 

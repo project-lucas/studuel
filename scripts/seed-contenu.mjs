@@ -177,6 +177,10 @@ for (const mod of modules) {
         // (colonne `chapters.theme`, migration 234). Se déclare sur le bloc, ou
         // sur le chapitre quand un même bloc en couvre plusieurs.
         const axe = ch.axe ?? bloc.axe ?? null
+        // `rayon` = la colonne `chapters.discipline` : l'onglet du dossier où la
+        // fiche se range (« programme », « fiches », « grammaire » en français).
+        // Se déclare sur le bloc, ou sur le chapitre.
+        const rayon = ch.rayon ?? bloc.rayon ?? null
         chapitres.push({
           id: idCh,
           slug: mod.slug,
@@ -184,6 +188,7 @@ for (const mod of modules) {
           titre: ch.titre,
           position: depart + i,
           axe,
+          rayon,
         })
         lecons.push({ id: idLe, chapitre: idCh, titre: ch.lecon.titre, cours: ch.lecon.cours })
         quiz.push({
@@ -302,23 +307,27 @@ if (menages.length) {
 // et la seule garantie qu'on ait qu'un fichier généré dit bien ce qu'il fait
 // tomberait. Vérifié : 216 → 233 se régénèrent à l'identique.
 const avecAxes = chapitres.some((c) => c.axe)
+// `rayon` (colonne `chapters.discipline`, migration 247) suit exactement la même
+// règle que l'axe : la colonne n'est ÉCRITE que si un module la déclare, sans
+// quoi les migrations déjà exécutées ne se régénéreraient plus à l'identique.
+const avecRayons = chapitres.some((c) => c.rayon)
+const colonnes = (prefixe = '') =>
+  `${avecAxes ? `, ${prefixe}theme` : ''}${avecRayons ? `, ${prefixe}discipline` : ''}`
 
 w('-- 1. Chapitres -------------------------------------------------------------')
 w('-- Jointure sur le SLUG (et non le nom) : c’est la clé stable de `subjects`.')
-w(
-  `INSERT INTO public.chapters (id, subject_id, level, title, position${avecAxes ? ', theme' : ''})`,
-)
-w(`SELECT v.id, s.id, v.level, v.title, v.position${avecAxes ? ', v.theme' : ''}`)
+w(`INSERT INTO public.chapters (id, subject_id, level, title, position${colonnes()})`)
+w(`SELECT v.id, s.id, v.level, v.title, v.position${colonnes('v.')}`)
 w('  FROM (VALUES')
 w(
   chapitres
     .map(
       (c) =>
-        `    (${q(c.id)}::uuid, ${q(c.slug)}, ${q(c.niveau)}, ${q(c.titre)}, ${c.position}${avecAxes ? `, ${c.axe ? q(c.axe) : 'NULL'}` : ''})`,
+        `    (${q(c.id)}::uuid, ${q(c.slug)}, ${q(c.niveau)}, ${q(c.titre)}, ${c.position}${avecAxes ? `, ${c.axe ? q(c.axe) : 'NULL'}` : ''}${avecRayons ? `, ${c.rayon ? q(c.rayon) : 'NULL'}` : ''})`,
     )
     .join(',\n'),
 )
-w(`  ) AS v(id, slug, level, title, position${avecAxes ? ', theme' : ''})`)
+w(`  ) AS v(id, slug, level, title, position${colonnes()})`)
 w('  JOIN public.subjects s ON s.slug = v.slug')
 w('-- ON CONFLICT NU : `chapters` porte aussi UNIQUE(subject_id, level, title).')
 w('ON CONFLICT DO NOTHING;')
@@ -344,6 +353,28 @@ if (avecAxes) {
   )
   w('  ) AS v(id, theme)')
   w(' WHERE c.id = v.id AND c.theme IS DISTINCT FROM v.theme;')
+  w()
+}
+
+// Même geste pour le RAYON du dossier (`chapters.discipline`, migration 247) :
+// « histoire » / « geographie » pour l'histoire-géo, « programme » / « fiches »
+// / « grammaire » pour le français. C'est lui qui donne les onglets de la page
+// matière (cf. `disciplinesOf`, lib/subject-template.ts) : sans lui, les 300
+// fiches du français s'empilent dans une seule liste.
+if (avecRayons) {
+  w('-- 1 ter. Rayons du dossier -------------------------------------------------')
+  w('-- `chapters.discipline` (migration 247) : le rayon de la matière auquel la')
+  w('-- fiche appartient. La page matière en fait un onglet par rayon.')
+  w('UPDATE public.chapters c SET discipline = v.discipline')
+  w('  FROM (VALUES')
+  w(
+    chapitres
+      .filter((c) => c.rayon)
+      .map((c) => `    (${q(c.id)}::uuid, ${q(c.rayon)})`)
+      .join(',\n'),
+  )
+  w('  ) AS v(id, discipline)')
+  w(' WHERE c.id = v.id AND c.discipline IS DISTINCT FROM v.discipline;')
   w()
 }
 

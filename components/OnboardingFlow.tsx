@@ -14,12 +14,17 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { subjectIcon } from '@/lib/subject-style'
 import { saveOnboarding } from '@/app/onboarding/actions'
-import { GRADE_LEVELS, type Subject } from '@/lib/types'
+import { type Subject } from '@/lib/types'
+import { GRADE_CYCLES, GRADE_SHORT_LABELS } from '@/lib/grades'
 
+// Les années qui se terminent par une épreuve nationale — la voie
+// technologique passe les mêmes que la voie générale (cf. lib/annales).
 const GRADE_HINTS: Record<string, string> = {
   '3e': 'Année du brevet',
   '1re': 'Bac de français',
+  '1re techno': 'Bac de français',
   Tle: 'Année du bac',
+  'Tle techno': 'Année du bac',
 }
 
 const GOALS = [
@@ -107,41 +112,52 @@ export default function OnboardingFlow({
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-4">
-            <div className="grid grid-cols-2 gap-2.5">
-              {GRADE_LEVELS.map((g) => (
-                <button
-                  key={g}
-                  type="button"
-                  aria-pressed={grade === g}
-                  onClick={() => chooseGrade(g)}
-                  className={cn(
-                    'relative flex min-h-15 flex-col justify-center rounded-2xl border px-4 py-3 text-left transition-all active:scale-[0.98]',
-                    grade === g
-                      ? 'border-primary bg-primary text-primary-foreground shadow-md shadow-primary/25'
-                      : 'border-border bg-card shadow-sm hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md',
-                  )}
-                >
-                  {grade === g ? (
-                    <span className="absolute top-2.5 right-2.5 flex size-5 items-center justify-center rounded-full bg-primary-foreground/20">
-                      <Check className="size-3" strokeWidth={3.2} />
-                    </span>
-                  ) : null}
-                  <span className="font-heading text-xl leading-none font-bold">{g}</span>
-                  {GRADE_HINTS[g] ? (
-                    <span
+            {/* Groupé par cycle : sur quatorze cartes à plat, un élève de CE1
+                défile tout le lycée avant de se voir. */}
+            {GRADE_CYCLES.map((cycle) => (
+              <div key={cycle.id} className="flex flex-col gap-2">
+                <h3 className="text-xs font-extrabold tracking-wide text-muted-foreground uppercase">
+                  {cycle.label}
+                </h3>
+                <div className="grid grid-cols-2 gap-2.5">
+                  {cycle.grades.map((g) => (
+                    <button
+                      key={g}
+                      type="button"
+                      aria-pressed={grade === g}
+                      onClick={() => chooseGrade(g)}
                       className={cn(
-                        'mt-1.5 inline-block w-fit rounded-full px-2 py-0.5 text-[10px] font-semibold',
+                        'relative flex min-h-15 flex-col justify-center rounded-2xl border px-4 py-3 text-left transition-all active:scale-[0.98]',
                         grade === g
-                          ? 'bg-primary-foreground/15 text-primary-foreground/90'
-                          : 'bg-highlight/20 text-foreground/70',
+                          ? 'border-primary bg-primary text-primary-foreground shadow-md shadow-primary/25'
+                          : 'border-border bg-card shadow-sm hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md',
                       )}
                     >
-                      {GRADE_HINTS[g]}
-                    </span>
-                  ) : null}
-                </button>
-              ))}
-            </div>
+                      {grade === g ? (
+                        <span className="absolute top-2.5 right-2.5 flex size-5 items-center justify-center rounded-full bg-primary-foreground/20">
+                          <Check className="size-3" strokeWidth={3.2} />
+                        </span>
+                      ) : null}
+                      <span className="font-heading text-xl leading-none font-bold">
+                        {GRADE_SHORT_LABELS[g]}
+                      </span>
+                      {GRADE_HINTS[g] ? (
+                        <span
+                          className={cn(
+                            'mt-1.5 inline-block w-fit rounded-full px-2 py-0.5 text-[10px] font-semibold',
+                            grade === g
+                              ? 'bg-primary-foreground/15 text-primary-foreground/90'
+                              : 'bg-highlight/20 text-foreground/70',
+                          )}
+                        >
+                          {GRADE_HINTS[g]}
+                        </span>
+                      ) : null}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
             <Button className="self-end" disabled={!grade} onClick={() => setStep(2)}>
               Continuer
             </Button>

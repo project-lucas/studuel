@@ -21,9 +21,16 @@ import type { SubjectProgress } from '@/lib/subject-template'
 export default function SubjectStickyBar({
   name,
   progress,
+  gardien = null,
 }: {
   name: string
   progress: SubjectProgress
+  /**
+   * L'écusson du gardien, repris ici en petit. Sans lui, l'anneau s'évaporerait
+   * dès qu'on descend dans la liste des chapitres — c'est-à-dire pendant tout
+   * le travail qui le remplit.
+   */
+  gardien?: React.ReactNode
 }) {
   const sentinel = useRef<HTMLDivElement>(null)
   const [stuck, setStuck] = useState(false)
@@ -67,6 +74,7 @@ export default function SubjectStickyBar({
           <span className="font-heading min-w-0 flex-1 truncate font-bold">
             {name}
           </span>
+          {gardien}
           <span className="flex shrink-0 items-center gap-2">
             <span
               className="h-1.5 w-16 overflow-hidden rounded-full bg-muted"

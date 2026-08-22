@@ -1,5 +1,6 @@
 import type { Subject } from '@/lib/types'
 import { GRADE_LEVELS } from '@/lib/types'
+import { GRADE_SHORT_LABELS } from '@/lib/grades'
 
 // Parcours d'accueil « façon Duolingo » (page /bienvenue) — direction fidèle au
 // design handoff Studuel : 14 écrans, on qualifie l'élève, on l'accroche avec
@@ -233,16 +234,10 @@ export function isDailyGoalMinutes(n: unknown): n is DailyGoalMinutes {
   return typeof n === 'number' && DAILY_GOAL_MINUTES.includes(n as DailyGoalMinutes)
 }
 
-// Étiquettes d'affichage des classes (exposants du design).
-export const GRADE_LABELS: Record<string, string> = {
-  '6e': '6ᵉ',
-  '5e': '5ᵉ',
-  '4e': '4ᵉ',
-  '3e': '3ᵉ',
-  '2de': '2ⁿᵈᵉ',
-  '1re': '1ʳᵉ',
-  Tle: 'Terminale',
-}
+// Étiquettes d'affichage des classes (exposants du design). Elles vivent
+// désormais dans lib/grades, avec la liste des classes qu'elles nomment — deux
+// listes séparées, c'est une classe ajoutée d'un côté et pas de l'autre.
+export const GRADE_LABELS: Record<string, string> = GRADE_SHORT_LABELS
 
 // --- Conversions & scoring --------------------------------------------------
 

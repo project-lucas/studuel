@@ -1,6 +1,7 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
+import { contentLevelFor } from '@/lib/grades'
 import { redirect } from 'next/navigation'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
@@ -51,7 +52,7 @@ export async function fetchPlacementQuestions(
         'subject, is_free, grade_level, quiz_questions(question, options, correct_index, position)',
       )
       .eq('is_free', true)
-      .eq('grade_level', safeGrade)
+      .eq('grade_level', contentLevelFor(safeGrade))
       .limit(8)
 
     fromDb = (data ?? [])

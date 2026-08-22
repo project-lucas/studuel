@@ -3,6 +3,12 @@
 // /defi/jeux/[jeu] ne fasse qu'orchestrer, et surtout pour que la cohérence
 // « tout jeu implémenté a bien un builder » soit TESTABLE (pools.test.ts).
 import type { ModeQuestion } from '@/lib/defi-modes'
+import { DEFAULT_PALIER } from '@/lib/jeux/paliers'
+import {
+  ULTIME,
+  ULTIME_PREPARED_LEVELS,
+  bankTierFor,
+} from '@/lib/jeux/ultime'
 import { buildCapitalesPool } from '@/lib/jeux/capitales'
 import { buildOrthographePool } from '@/lib/jeux/orthographe'
 import { buildConjugaisonPool } from '@/lib/jeux/conjugaison-eclair'
@@ -38,13 +44,15 @@ import { buildAnatomiePool, type OrganRound } from '@/lib/jeux/anatomie'
 // pleine partie. C'est exactement ce que `formats.ts` interdit.
 export const POOL_BUILDERS: Record<
   string,
-  (seed: string, count: number) => ModeQuestion[]
+  (seed: string, count: number, tier: number) => ModeQuestion[]
 > = {
   capitales: (seed, count) => buildCapitalesPool(seed, count),
   orthographe: (seed, count) => buildOrthographePool(seed, count),
-  'conjugaison-eclair': (seed, count) => buildConjugaisonPool(seed, count),
+  'conjugaison-eclair': (seed, count, tier) =>
+    buildConjugaisonPool(seed, count, tier),
   'chasse-faute': (seed, count) => buildChasseFautePool(seed, count),
-  'calcul-mental': (seed, count) => buildCalculMentalPool(seed, count),
+  'calcul-mental': (seed, count, tier) =>
+    buildCalculMentalPool(seed, count, tier),
   'suite-logique': (seed, count) => buildSuiteLogiquePool(seed, count),
   'traduction-flash': (seed, count) => buildTraductionFlashPool(seed, count),
   'faux-amis': (seed, count) => buildFauxAmisPool(seed, count),
@@ -60,9 +68,45 @@ export function buildSalonPool(
   id: string,
   seed: string,
   count: number,
+  tier: number = DEFAULT_PALIER,
 ): ModeQuestion[] | null {
   const builder = POOL_BUILDERS[id]
-  return builder ? builder(seed, count) : null
+  return builder ? builder(seed, count, tier) : null
+}
+
+/**
+ * La banque de l'ÉPREUVE ULTIME : un paquet de questions PAR NIVEAU, chacun à sa
+ * difficulté (lib/jeux/ultime).
+ *
+ * Une épreuve sans fin ne peut pas se servir d'un pool à plat : la difficulté y
+ * change EN COURS DE PARTIE, et le navigateur ne peut pas fabriquer la suite
+ * (les banques sont déterministes mais tirées côté serveur). On prépare donc
+ * d'avance les trente premiers niveaux ; au-delà, la table re-sert le dernier
+ * paquet pendant que le chrono, lui, continue de fondre.
+ *
+ * Renvoie null si le jeu n'a pas de banque générative — c'est exactement la
+ * raison pour laquelle tous les jeux n'ont pas d'épreuve ultime.
+ */
+export function buildUltimePool(
+  id: string,
+  seed: string,
+  levels: number = ULTIME_PREPARED_LEVELS,
+): ModeQuestion[][] | null {
+  const builder = POOL_BUILDERS[id]
+  if (!builder) return null
+  const paquets: ModeQuestion[][] = []
+  for (let level = 0; level < levels; level++) {
+    // Une question de marge par niveau : une réponse en retard ne doit jamais
+    // tomber sur un paquet vide.
+    const questions = builder(
+      `${seed}:n${level}`,
+      ULTIME.perLevel + 1,
+      bankTierFor(level),
+    )
+    if (questions.length === 0) return null
+    paquets.push(questions)
+  }
+  return paquets
 }
 
 // ------------------------------------------------------- jeux de remise en ordre

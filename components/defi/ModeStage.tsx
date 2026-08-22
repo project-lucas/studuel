@@ -30,6 +30,7 @@ export default function ModeStage({
   tone = 'light',
   theme,
   onExit,
+  backLabel,
   headerRight,
   children,
 }: {
@@ -46,12 +47,21 @@ export default function ModeStage({
    */
   theme?: string
   onExit: () => void
+  /**
+   * Ce que dit la flèche retour. Par défaut « Retour à l'Arène », qui était vrai
+   * tant que toutes les scènes s'ouvraient depuis l'arène ; une table de jeu de
+   * salon s'ouvre désormais depuis la carte des paliers de son jeu, et sa flèche
+   * y revient — le libellé doit dire où elle mène, sans quoi le lecteur d'écran
+   * annonce une destination fausse.
+   */
+  backLabel?: string
   /** Emplacement optionnel à droite du titre (score, adversaire compact…). */
   headerRight?: ReactNode
   children: ReactNode
 }) {
   const dark = tone === 'dark'
   const themed = !dark && !!theme
+  const back = backLabel ?? 'Retour à l’Arène'
   return (
     // data-no-swipe : une partie en cours ne doit jamais changer d'onglet sur un
     // balayage (on quitte par la croix ou les boutons explicites du mode).
@@ -86,8 +96,8 @@ export default function ModeStage({
             sfx.back()
             onExit()
           }}
-          aria-label="Retour à l’Arène"
-          title="Retour à l’Arène"
+          aria-label={back}
+          title={back}
           className={cn(
             'flex size-9 shrink-0 items-center justify-center rounded-full transition-transform active:scale-90',
             dark

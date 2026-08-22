@@ -18,6 +18,10 @@ import { AUTO_ADVANCE_MS } from '@/lib/juice'
 import type { ModeQuestion } from '@/lib/defi-modes'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { readGameBest, writeGameBest } from '@/lib/jeux/records'
+import { usePalierRun } from '@/lib/jeux/use-palier-run'
+import type { PalierRun } from '@/lib/jeux/paliers'
+import { hasTimeRecord } from '@/lib/jeux/palier-format'
+import { useUltimeRun } from '@/lib/jeux/use-ultime-run'
 import { useGameReport } from '@/lib/jeux/use-game-report'
 import type { GameGhost } from '@/lib/jeux/ghost-server'
 import {
@@ -51,13 +55,28 @@ const URGENT_FROM = 3
  */
 export default function GameTable({
   format,
+  palier,
   pool,
+  levels,
   name,
   subject,
   subjectEmoji,
   ghost,
 }: {
   format: GameFormat
+  /**
+   * Palier joué et plancher de classe (lib/jeux/paliers), ou null pour un jeu
+   * hors échelle — le « Programme » d'une matière, dont la difficulté est le
+   * programme et non un réglage.
+   */
+  palier: PalierRun | null
+  /**
+   * La banque de l'ÉPREUVE ULTIME : un paquet de questions PAR NIVEAU
+   * (lib/jeux/pools.buildUltimePool). Sa présence fait basculer la table en mode
+   * ultime — la difficulté change alors EN COURS DE PARTIE, ce qu'un pool à plat
+   * ne sait pas faire.
+   */
+  levels?: ModeQuestion[][] | null
   pool: ModeQuestion[]
   name: string
   subject: string
@@ -78,6 +97,21 @@ export default function GameTable({
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
   // XP, série et trophées : un seul compte rendu partagé par les quatre tables.
+  // Les étoiles du palier, rangées dans la progression locale du jeu.
+  const {
+    outcome: palierOutcome,
+    standing: palierStanding,
+    record: recordPalier,
+    reset: resetPalier,
+  } = usePalierRun(format.id, palier)
+  // L'épreuve ultime : sa place se calcule côté serveur (une cote n'a de sens
+  // que comparée aux autres). Inerte quand la table ne joue pas l'épreuve.
+  const isUltime = format.params.mechanic === 'ultime'
+  const {
+    result: ultimeResult,
+    record: recordUltime,
+    reset: resetUltime,
+  } = useUltimeRun(format.id, isUltime)
   const { saved, awardedXp, trophies, report, reset } = useGameReport(
     subject,
     format.id,
@@ -96,6 +130,10 @@ export default function GameTable({
   // `selected` (en retard d'un rendu) et compteraient deux réponses.
   const lockRef = useRef(false)
   const finishedRef = useRef(false)
+  // Le CHRONO DE BOUCLAGE : posé au lancement réel de la partie (après le
+  // décompte 3·2·1, qui ne doit compter pour personne) et lu à l'arrivée. C'est
+  // lui qui alimente le record de temps et le classement de rapidité du palier.
+  const startedAtRef = useRef(0)
 
   useEffect(() => {
     runRef.current = run
@@ -109,7 +147,18 @@ export default function GameTable({
     load()
   }, [format.id])
 
-  const question = pool.length > 0 ? pool[qIndex % pool.length] : null
+  // La question courante. En épreuve ultime, elle se prend dans le paquet du
+  // NIVEAU atteint (`run.step`) à l'index des bonnes réponses déjà données dans
+  // ce niveau (`run.inWave`) — la moindre erreur arrêtant la partie, les deux se
+  // suivent exactement. Passé le dernier paquet préparé, on re-sert le plus dur ;
+  // le chrono, lui, continue de fondre.
+  const question = levels?.length
+    ? (levels[Math.min(run.step, levels.length - 1)]?.[
+        run.inWave % Math.max(1, levels[Math.min(run.step, levels.length - 1)].length)
+      ] ?? null)
+    : pool.length > 0
+      ? pool[qIndex % pool.length]
+      : null
   const perQuestion = questionSeconds(format, run)
   // Le chrono global (le sprint en a un, les autres non) : c'est le moteur qui
   // le dit, pour que le composant n'ait aucune règle de jeu en dur.
@@ -147,11 +196,24 @@ export default function GameTable({
       if (writeGameBest(format.id, final.score)) setIsRecord(true)
       setBest(Math.max(prev, final.score))
 
+      // Les étoiles se comptent ici, au même endroit que le record : c'est le
+      // seul moment où l'on tient la partie TERMINÉE, donc son taux de réussite
+      // ET son temps. Un chrono jamais parti (partie quittée avant le GO) vaut
+      // null plutôt que la durée écoulée depuis l'époque Unix.
+      const elapsed = startedAtRef.current
+        ? Date.now() - startedAtRef.current
+        : null
+      recordPalier(final, hasTimeRecord(format) ? elapsed : null)
+      // L'épreuve ultime ne compte pas d'étoiles : elle rend une COTE. Les deux
+      // appels coexistent sans se gêner — `recordPalier` est inerte hors
+      // échelle, `recordUltime` l'est hors épreuve.
+      recordUltime(final, elapsed)
+
       // Pas de file de révision ici — un jeu de salon pioche dans sa propre
       // banque (capitales, faux amis…), pas dans le programme de l'élève.
       report(final)
     },
-    [audio, format.id, report],
+    [audio, format, recordPalier, recordUltime, report],
   )
 
   // Applique une transition du moteur et enchaîne (ou termine).
@@ -252,13 +314,16 @@ export default function GameTable({
     setSelected(null)
     setRevealed(false)
     reset()
+    resetPalier()
+    resetUltime()
+    startedAtRef.current = Date.now()
     setIsRecord(false)
     setQIndex((n) => n + 1) // on repart ailleurs dans la banque
     globalLeftRef.current = sprintSeconds
     setGlobalLeft(sprintSeconds)
     armQuestion(fresh)
     setPhase('playing')
-  }, [format, sprintSeconds, armQuestion, reset])
+  }, [format, sprintSeconds, armQuestion, reset, resetPalier, resetUltime])
 
   // Décompte 3 · 2 · 1 · GO — la respiration qui sépare « je lis la règle » de
   // « je joue ». Chaque jeu la sonne dans son propre timbre.
@@ -279,7 +344,15 @@ export default function GameTable({
     setPhase('countdown')
   }
 
-  const exit = () => router.push('/defi')
+  // Retour : on remonte d'UN cran, sur la carte des paliers du jeu — c'est de là
+  // qu'on est venu. Renvoyer à l'arène faisait retraverser toute la feuille des
+  // modes pour rejouer le palier d'à côté. Un jeu hors échelle (le
+  // « Programme ») n'a pas de carte : lui rentre bien à l'arène.
+  // L'épreuve ultime compte AUSSI : on y arrive par la carte du jeu, même si
+  // elle n'appartient pas à l'échelle des paliers.
+  const surLaCarte = palier !== null || isUltime
+  const backHref = surLaCarte ? `/defi/jeux/${format.id}` : '/defi'
+  const exit = () => router.push(backHref)
 
   // --------------------------------------------------------------------- rendu
   return (
@@ -288,6 +361,7 @@ export default function GameTable({
       Icon={MECHANIC_ICON[format.params.mechanic]}
       theme={format.theme}
       onExit={exit}
+      backLabel={surLaCarte ? 'Retour aux paliers' : undefined}
       headerRight={
         <span className="shrink-0 rounded-full bg-[color:var(--jeu-accent)]/12 px-2.5 py-1 text-[11px] font-bold text-[color:var(--jeu-accent)]">
           <span aria-hidden="true">{subjectEmoji}</span> {subject}
@@ -308,6 +382,10 @@ export default function GameTable({
         ) : phase === 'done' ? (
           <GameOutcome
             format={format}
+            palier={palier?.level ?? null}
+            palierOutcome={palierOutcome}
+            palierStanding={palierStanding}
+            ultime={ultimeResult}
             run={run}
             best={best}
             isRecord={isRecord}

@@ -2,8 +2,11 @@
 //
 // Découpage : les 16 fiches du programme officiel, regroupées par le programme
 // en 6 chapitres (Science climat et société · Le futur des énergies × 2 ·
-// Une histoire du vivant × 3). La page matière affiche une liste plate : c'est
-// l'ORDRE qui porte le regroupement d'origine, comme pour histoire-geo-tle.
+// Une histoire du vivant × 3). Ce module ne pose que l'ORDRE : le chapitre qui
+// coiffe chaque fiche (`chapters.theme`) est écrit par la MIGRATION 248, à la
+// main, comme pour l'anglais (243) et l'espagnol (244). Ne pas y ajouter d'`axe`
+// ici — la 228 est un fichier généré, et elle doit rester reproductible à
+// l'octet près depuis ce module.
 //
 // Cette matière est bicéphale — physique-chimie, SVT, histoire des sciences et
 // numérique dans un même programme. Chaque cours reste donc ancré sur des

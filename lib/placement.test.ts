@@ -40,3 +40,41 @@ describe('ensurePlacement', () => {
     expect(out).toHaveLength(PLACEMENT_SIZE)
   })
 })
+
+describe('fallbackPlacement — une banque par cycle', () => {
+  it('sert au primaire des questions de primaire, pas de collège', () => {
+    // Le défaut réel : un CP recevait « 15 % de 80 » et la prise de la Bastille.
+    for (const g of ['CP', 'CE1', 'CE2', 'CM1', 'CM2']) {
+      const ids = fallbackPlacement(g).map((q) => q.id)
+      expect(ids.every((id) => id.startsWith('fb-pri-')), g).toBe(true)
+    }
+  })
+
+  it('sert au collège ses questions, à la 3e comme à la 6e', () => {
+    for (const g of ['6e', '5e', '4e', '3e']) {
+      expect(fallbackPlacement(g).every((q) => q.id.startsWith('fb-col-')), g).toBe(
+        true,
+      )
+    }
+  })
+
+  it('sert au lycée ses questions, voie technologique comprise', () => {
+    for (const g of ['2de', '1re', '1re techno', 'Tle', 'Tle techno']) {
+      expect(fallbackPlacement(g).every((q) => q.id.startsWith('fb-lyc-')), g).toBe(
+        true,
+      )
+    }
+  })
+
+  it('retombe sur le collège sans classe connue', () => {
+    expect(fallbackPlacement(null)[0].id).toContain('fb-col-')
+  })
+
+  it('donne toujours de quoi remplir le test', () => {
+    for (const g of ['CP', '3e', 'Tle techno', null]) {
+      expect(fallbackPlacement(g).length, String(g)).toBeGreaterThanOrEqual(
+        PLACEMENT_SIZE,
+      )
+    }
+  })
+})

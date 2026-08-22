@@ -6,18 +6,20 @@ import { buildRoster, trophyMap } from '@/lib/defi/roster'
 import { buildSubjectLadders } from '@/lib/subject-rank'
 import { buildDuelBoard, type DuelSubject } from '@/lib/defi/duel-board'
 
-// LA RANGÉE DE COMBAT après la fusion : [Modes] [COMBAT] [roulette de matières].
+// LA BARRE D'ACTION : [MODES] [COMBAT] [MATIÈRE], plus sa ligne d'information.
 //
 // Ce que ces tests gardent :
-//   1. COMBAT LANCE (un lien), il n'ouvre plus d'écran de sélection, et il dit
-//      sur quoi il part — sa destination dépend d'un objet voisin, la taire en
-//      ferait une loterie ;
+//   1. COMBAT LANCE (un lien), il n'ouvre pas d'écran de sélection, et son
+//      étiquette dit sur quoi il part — sa destination dépend d'un objet
+//      voisin, la taire en ferait une loterie ;
 //   2. il n'est JAMAIS mort : sans classé ouvert, il replie sur un jeu de la
 //      matière et le nomme ;
-//   3. la roulette et la Route des trophées partagent le même choix — c'est
-//      toute la raison du contexte ;
-//   4. rien de ce qui a quitté le pixel faute de place n'a disparu des lecteurs
-//      d'écran (le pourquoi du jour, l'objectif de clan).
+//   3. le mot COMBAT est SEUL sur la plaque — la matière et le compteur de clan
+//      vivent sur la ligne d'information, au-dessus, plus dans le bouton ;
+//   4. la plaque Matière, la ligne d'information et la Route des trophées
+//      partagent le même choix — c'est toute la raison du contexte ;
+//   5. rien de ce qui a quitté le pixel n'a disparu des lecteurs d'écran (le
+//      pourquoi du jour, l'objectif de clan).
 
 vi.mock('@/lib/sounds', () => ({
   sfx: { battle: vi.fn(), tap: vi.fn(), back: vi.fn() },
@@ -44,7 +46,8 @@ vi.mock('next/image', () => ({
 }))
 
 import CombatButton from '@/components/defi/CombatButton'
-import SubjectDial from '@/components/defi/SubjectDial'
+import CombatMeta from '@/components/defi/CombatMeta'
+import SubjectPlate from '@/components/defi/SubjectPlate'
 import TrophyRoadSheet from '@/components/defi/TrophyRoadSheet'
 import DuelSubjectProvider from '@/components/defi/DuelSubjectProvider'
 
@@ -77,13 +80,24 @@ function renderRow(
 ) {
   return render(
     <DuelSubjectProvider board={board} initialSlug={initialSlug}>
+      <CombatMeta goal={props.goal} onlineFriendName={props.onlineFriendName} />
       <CombatButton {...props} />
-      <SubjectDial />
+      <SubjectPlate />
     </DuelSubjectProvider>,
   )
 }
 
 const combat = () => screen.getByRole('link', { name: /^Combat —/ })
+
+/** Ouvre la feuille de sélection et choisit une matière par son nom. */
+async function pick(user: ReturnType<typeof userEvent.setup>, name: string) {
+  await user.click(screen.getByRole('button', { name: /^Matière du duel :/ }))
+  await user.click(
+    within(screen.getByRole('dialog')).getByRole('button', {
+      name: new RegExp(`^${name}`),
+    }),
+  )
+}
 
 // La matière choisie SURVIT à la session (localStorage) : sans ce ménage, le
 // choix d'un test s'imposerait au suivant.
@@ -96,8 +110,9 @@ describe('le bouton COMBAT', () => {
     renderRow(boardWith([], ['maths']))
 
     expect(combat()).toHaveAttribute('href', '/defi/programme/maths')
-    // Le pixel ne porte QUE la matière ; l'étiquette dit ce qui se lance.
-    expect(within(combat()).getByText('Maths')).toBeInTheDocument()
+    // Le pixel ne porte QUE le mot ; l'étiquette dit ce qui se lance.
+    expect(combat()).toHaveTextContent(/^COMBAT$/)
+    expect(within(combat()).queryByText('Maths')).not.toBeInTheDocument()
     expect(combat().getAttribute('aria-label')).toContain(
       'Duel classé en Maths',
     )
@@ -113,12 +128,12 @@ describe('le bouton COMBAT', () => {
     expect(cta.getAttribute('aria-label')).toContain('en Maths')
   })
 
-  it('garde la matière sur la sous-ligne même quand un ami est en ligne', () => {
+  it('reste au seul mot COMBAT même quand un ami est en ligne', () => {
     renderRow(boardWith([], ['maths']), { onlineFriendName: 'Emma' })
 
-    // La sous-ligne appartient à la matière : la présence se dit par le point
-    // vert et la pulsation, et son nom reste pour les lecteurs d'écran.
-    expect(within(combat()).getByText('Maths')).toBeInTheDocument()
+    // La présence se dit par le point vert de la ligne d'information et par la
+    // pulsation de la plaque ; le nom de l'ami reste aux lecteurs d'écran.
+    expect(combat()).toHaveTextContent(/^COMBAT$/)
     expect(combat().getAttribute('aria-label')).toContain('Emma est en ligne')
     expect(combat().getAttribute('aria-label')).toContain(
       'Duel classé en Maths',
@@ -135,7 +150,9 @@ describe('le bouton COMBAT', () => {
     const label = combat().getAttribute('aria-label') ?? ''
     expect(label).toContain('Contrôle dans 3 jours')
     expect(label).toContain('30 points sur 50')
+    // Le compteur a QUITTÉ le bouton : il vit sur la ligne d'information.
     expect(screen.getByText(/30\/50 pts · \d+ j/)).toBeInTheDocument()
+    expect(combat()).toHaveTextContent(/^COMBAT$/)
   })
 
   it('n’invente aucun compteur sans semaine de clan', () => {
@@ -145,21 +162,39 @@ describe('le bouton COMBAT', () => {
   })
 })
 
-describe('la roulette de matières', () => {
+describe('la plaque Matière', () => {
   it('change la matière — et donc la destination du bouton', async () => {
     const user = userEvent.setup()
-    // Espagnol est ouvert mais n'a pas de banque : son classé reste fermé, donc
-    // la destination change de nature en même temps que de matière.
+    // Anglais n'a pas de banque de questions : son classé reste fermé, donc la
+    // destination change de nature en même temps que de matière.
     renderRow(boardWith([], ['maths']))
 
     expect(combat()).toHaveAttribute('href', '/defi/programme/maths')
 
-    await user.click(screen.getByRole('button', { name: /Matière suivante/ }))
+    await pick(user, 'Anglais')
 
     expect(combat()).not.toHaveAttribute('href', '/defi/programme/maths')
     expect(
-      screen.getByRole('button', { name: /^Matière du duel : /i }),
+      screen.getByRole('button', { name: /^Matière du duel : Anglais/ }),
     ).toBeInTheDocument()
+  })
+
+  it('montre tout le plateau d’un coup — une matière, un tap', async () => {
+    const user = userEvent.setup()
+    const board = boardWith([], [])
+    renderRow(board, {}, 'anglais')
+
+    // Ce que la roulette à tambour, qui n'affichait qu'un cran, ne pouvait pas
+    // faire : aller d'Anglais à SVT demandait six crans, il faut un tap.
+    await user.click(screen.getByRole('button', { name: /^Matière du duel :/ }))
+    const dialog = screen.getByRole('dialog')
+    for (const entry of board) {
+      expect(
+        within(dialog).getByRole('button', {
+          name: new RegExp(`^${entry.subject}`),
+        }),
+      ).toBeInTheDocument()
+    }
   })
 
   it('range les matières par ordre alphabétique', () => {
@@ -177,25 +212,31 @@ describe('la roulette de matières', () => {
     ])
   })
 
-  it('boucle : reculer depuis la première matière mène à la dernière', async () => {
+  it('nomme la matière courante sur la ligne d’information, jamais sur le bouton', async () => {
     const user = userEvent.setup()
     const board = boardWith([], [])
-    renderRow(board, {}, board[0].slug)
+    const last = board[board.length - 1].subject
+    renderRow(board, {}, 'maths')
 
-    await user.click(screen.getByRole('button', { name: /Matière précédente/ }))
+    // Deux occurrences attendues : la pastille de la ligne d'information, et la
+    // région vivante qui annonce le changement aux lecteurs d'écran.
+    expect(screen.getAllByText('Maths').length).toBeGreaterThan(0)
+    expect(within(combat()).queryByText('Maths')).not.toBeInTheDocument()
 
-    expect(
-      screen.getByRole('button', { name: /^Matière du duel :/ }),
-    ).toHaveAccessibleName(new RegExp(board[board.length - 1].subject))
+    await pick(user, last)
+
+    expect(screen.getAllByText(last).length).toBeGreaterThan(0)
+    expect(combat()).toHaveTextContent(/^COMBAT$/)
+    expect(combat().getAttribute('aria-label')).toContain(`en ${last}`)
   })
 
   it('rouvre sur la matière de la session précédente, pas sur celle du serveur', async () => {
     const user = userEvent.setup()
     const board = boardWith([], [])
 
-    // Séance 1 : l'élève quitte « Maths » pour la matière suivante.
+    // Séance 1 : l'élève quitte « Maths » pour une autre matière.
     const first = renderRow(board, {}, 'maths')
-    await user.click(screen.getByRole('button', { name: /Matière suivante/ }))
+    await pick(user, 'Anglais')
     const chosen = screen
       .getByRole('button', { name: /^Matière du duel :/ })
       .getAttribute('aria-label')

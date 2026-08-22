@@ -21,18 +21,20 @@ import { cn } from '@/lib/utils'
 
 /** Aperçu selon la catégorie : pastille couleur, mini-avatar, objet ou fond. */
 function TileArt({ item, config }: { item: AvatarItem; config: AvatarConfig }) {
-  // Coiffures et tenues : l'avatar ACTUEL portant cette option — l'élève voit
-  // exactement ce que ça donne (même approche que l'ancien éditeur). Mémoïsé :
-  // on ne régénère pas les SVG à chaque re-rendu de la grille.
+  // Coiffures : l'avatar ACTUEL portant cette coupe — l'élève voit exactement
+  // ce que ça donne, et une coiffure ne se devine pas d'une pastille. Les hauts,
+  // eux, sont une COULEUR (Open Peeps n'a qu'une silhouette) : une pastille les
+  // dit mieux qu'un avatar dont le col occupe six pixels. Mémoïsé : on ne
+  // régénère pas les SVG à chaque re-rendu de la grille.
   const thumb = useMemo(() => {
-    if (item.category !== 'hair_style' && item.category !== 'outfit') return null
+    if (item.category !== 'hair_style') return null
     // Sans la bannière ni l'équipement : seul l'item de la vignette compte.
     return avatarDataUri({ ...applyItem(config, item), equipment: '' }, 96)
   }, [item, config])
 
   switch (item.category) {
     case 'body_skin':
-    case 'hair_color':
+    case 'outfit':
       return (
         <span
           className="size-10 rounded-full border border-black/10 shadow-inner"
@@ -41,7 +43,6 @@ function TileArt({ item, config }: { item: AvatarItem; config: AvatarConfig }) {
         />
       )
     case 'hair_style':
-    case 'outfit':
       // eslint-disable-next-line @next/next/no-img-element
       return <img src={thumb ?? undefined} alt="" aria-hidden="true" className="size-full object-contain" />
     case 'equipment':

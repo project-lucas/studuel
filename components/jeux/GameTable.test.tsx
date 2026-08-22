@@ -65,6 +65,9 @@ const POOL: ModeQuestion[] = Array.from({ length: 6 }, (_, i) => ({
 
 const PROPS = {
   format: FORMAT,
+  // Palier de référence, plancher au plus bas : la table range ses étoiles
+  // comme en vrai (le stockage local est simulé par l'environnement de test).
+  palier: { level: 3, floor: 1 } as const,
   pool: POOL,
   name: 'Chasse à la faute',
   subject: 'Français',

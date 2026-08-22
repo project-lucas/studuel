@@ -1,5 +1,6 @@
 import { unstable_cache } from 'next/cache'
 import { createClient } from '@supabase/supabase-js'
+import { contentLevelFor } from '@/lib/grades'
 import {
   CHAPTER_COLUMNS,
   LESSON_COLUMNS,
@@ -17,6 +18,14 @@ import {
 // PRÉREQUIS : migration 026 (lecture anon du catalogue). Tant qu'elle n'est
 // pas exécutée, ces fonctions renvoient [] — les pages retombent alors sur
 // leur requête authentifiée classique (repli prévu à chaque appel).
+//
+// LA CLASSE QUI ENTRE N'EST PAS TOUJOURS LE NIVEAU QU'ON INTERROGE. Les
+// fonctions ci-dessous reçoivent la CLASSE de l'élève et la replient sur le
+// niveau où vit son contenu (`contentLevelFor`) : la voie technologique
+// partage le contenu de la voie générale et n'en a pas de copie. Le repli se
+// fait ICI, dans le corps de la fonction plutôt que chez l'appelant, parce
+// qu'un appelant qui l'oublie ne casse rien de visible — il rend simplement
+// une classe entière vide.
 
 const CATALOG_TTL_SECONDS = 300
 
@@ -48,7 +57,7 @@ export const getGradeChaptersCached = unstable_cache(
     const { data } = await anonClient()
       .from('chapters')
       .select('id, subject_id, level, title, position')
-      .eq('level', grade)
+      .eq('level', contentLevelFor(grade))
       .order('position', { ascending: true })
       .returns<Chapter[]>()
     return data ?? []
@@ -164,7 +173,7 @@ export const getGradeQuizzesCached = unstable_cache(
     const { data } = await anonClient()
       .from('quizzes')
       .select('id, subject, lesson_id')
-      .in('grade_level', [grade, horsNiveau])
+      .in('grade_level', [contentLevelFor(grade), horsNiveau])
       .returns<{ id: string; subject: string; lesson_id: string | null }[]>()
     return data ?? []
   },
@@ -181,18 +190,32 @@ export type CatalogChapter = Chapter & {
   lessons: (Lesson & { quizzes: { id: string }[] })[]
 }
 
-export const getProgrammeCached = unstable_cache(
-  async (subjectId: string, grade: string): Promise<CatalogChapter[]> => {
-    const { data } = await anonClient()
-      .from('chapters')
-      .select(`${CHAPTER_COLUMNS}, lessons(${LESSON_COLUMNS}, quizzes(id))`)
-      .eq('subject_id', subjectId)
-      .eq('level', grade)
-      .order('position', { ascending: true })
-      .order('position', { ascending: true, referencedTable: 'lessons' })
-      .returns<CatalogChapter[]>()
-    return data ?? []
-  },
-  ['catalog-programme'],
-  { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
-)
+/**
+ * La lecture du programme, SANS cache.
+ *
+ * Sert de recours quand on a la PREUVE que le cache est périmé : une migration
+ * de contenu vient de passer, et le catalogue de 300 s ne connaît pas les
+ * chapitres qui existent maintenant. Voir `catalogIsStale`
+ * (lib/subject-template.ts) et son appel dans la page matière — c'est le seul
+ * endroit qui doit s'en servir, une lecture non mémoïsée à chaque navigation
+ * annulerait tout le bénéfice du cache.
+ */
+export async function getProgrammeFresh(
+  subjectId: string,
+  grade: string,
+): Promise<CatalogChapter[]> {
+  const { data } = await anonClient()
+    .from('chapters')
+    .select(`${CHAPTER_COLUMNS}, lessons(${LESSON_COLUMNS}, quizzes(id))`)
+    .eq('subject_id', subjectId)
+    .eq('level', contentLevelFor(grade))
+    .order('position', { ascending: true })
+    .order('position', { ascending: true, referencedTable: 'lessons' })
+    .returns<CatalogChapter[]>()
+  return data ?? []
+}
+
+export const getProgrammeCached = unstable_cache(getProgrammeFresh, ['catalog-programme'], {
+  revalidate: CATALOG_TTL_SECONDS,
+  tags: ['catalog'],
+})

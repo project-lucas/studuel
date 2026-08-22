@@ -1,3 +1,5 @@
+import { contentLevelFor } from '@/lib/grades'
+
 // Repérer les matières SANS contenu : celles qui n'ont aucun chapitre au niveau
 // de l'élève. La migration 193 a ajouté des matières du programme officiel sans
 // contenu (allemand, arts-plastiques, grec, musique, sport, emc, hlp,
@@ -51,12 +53,22 @@ export function emptySubjectCount<T extends { id: string }>(
 // `fixed_level ?? niveau de l'élève` — exactement la règle qu'applique déjà
 // `app/reviser/[subject]/page.tsx` pour lire le programme.
 
-/** Le niveau où vit VRAIMENT le contenu d'une matière, pour un élève de `level`. */
+/**
+ * Le niveau où vit VRAIMENT le contenu d'une matière, pour un élève de `level`.
+ *
+ * Deux replis se composent ici, dans cet ordre :
+ *  1. la matière HORS-NIVEAU impose le sien (`fixed_level`, la culture générale) ;
+ *  2. sinon, la classe de l'élève — repliée sur son niveau général si elle
+ *     relève de la voie technologique, dont le tronc commun n'est pas dupliqué
+ *     en base (`contentLevelFor`, lib/grades). Sans ce second repli, un
+ *     1re techno verrait TOUTES ses matières déclarées vides et affichées
+ *     « Bientôt », alors que le contenu de 1re est là.
+ */
 export function contentLevelOf(
   subject: { fixed_level?: string | null },
   level: string,
 ): string {
-  return subject.fixed_level ?? level
+  return subject.fixed_level ?? contentLevelFor(level)
 }
 
 /** Couple (matière, niveau) ayant au moins un chapitre — cf. lib/catalog. */

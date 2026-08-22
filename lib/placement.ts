@@ -1,3 +1,5 @@
+import { cycleOf, type GradeCycle } from '@/lib/grades'
+
 // Mini-quiz de placement (écran 10 de l'onboarding). Les questions viennent en
 // priorité des quiz GRATUITS en base (lisibles par un visiteur via RLS), avec
 // une banque de repli ici pour garantir un test même sans contenu gratuit pour
@@ -13,6 +15,49 @@ export type PlacementQuestion = {
 }
 
 export const PLACEMENT_SIZE = 5
+
+// Repli PRIMAIRE. Il n'existait pas : un CP recevait les questions de collège
+// (pourcentages, pluriel de « cheval », prise de la Bastille). Cinq échecs
+// d'affilée au tout premier écran de jeu, et un placement faux par-dessus.
+// Ces questions tiennent du CP au CM2 — le placement ne classe pas l'élève dans
+// son année, il cale seulement un point de départ.
+const FALLBACK_PRIMAIRE: PlacementQuestion[] = [
+  {
+    id: 'fb-pri-1',
+    subject: 'Maths',
+    question: 'Combien font 7 + 5 ?',
+    options: ['11', '12', '13', '10'],
+    correctIndex: 1,
+  },
+  {
+    id: 'fb-pri-2',
+    subject: 'Maths',
+    question: 'Combien font 4 × 3 ?',
+    options: ['7', '12', '9', '15'],
+    correctIndex: 1,
+  },
+  {
+    id: 'fb-pri-3',
+    subject: 'Français',
+    question: 'Quel est le pluriel de « un chat » ?',
+    options: ['des chats', 'des chates', 'des chat', 'des chatz'],
+    correctIndex: 0,
+  },
+  {
+    id: 'fb-pri-4',
+    subject: 'Français',
+    question: 'Dans « le chien court », quel mot est le verbe ?',
+    options: ['le', 'chien', 'court', 'aucun'],
+    correctIndex: 2,
+  },
+  {
+    id: 'fb-pri-5',
+    subject: 'Sciences',
+    question: 'Quel animal pond des œufs ?',
+    options: ['le chat', 'la poule', 'le chien', 'la vache'],
+    correctIndex: 1,
+  },
+]
 
 const FALLBACK_COLLEGE: PlacementQuestion[] = [
   {
@@ -90,10 +135,17 @@ const FALLBACK_LYCEE: PlacementQuestion[] = [
   },
 ]
 
-const LYCEE_GRADES = new Set(['2de', '1re', 'Tle'])
+// Une banque par cycle. Le cycle se lit dans lib/grades : redéclarer les classes
+// de lycée ici, c'est la liste qu'on oublie de mettre à jour — c'est exactement
+// ce qui a envoyé le primaire sur les questions de collège.
+const BANQUES: Record<GradeCycle, PlacementQuestion[]> = {
+  primaire: FALLBACK_PRIMAIRE,
+  college: FALLBACK_COLLEGE,
+  lycee: FALLBACK_LYCEE,
+}
 
 export function fallbackPlacement(grade: string | null): PlacementQuestion[] {
-  return grade && LYCEE_GRADES.has(grade) ? FALLBACK_LYCEE : FALLBACK_COLLEGE
+  return BANQUES[cycleOf(grade)]
 }
 
 // Complète une liste de questions (issues de la base) jusqu'à PLACEMENT_SIZE en

@@ -1,7 +1,9 @@
 // Histoire-géographie — Terminale : les chapitres 7 à 11 du programme fourni.
 //
 // ⚠️ PARTIEL, ET C'EST VOLONTAIRE. Les captures transmises couvrent les
-// chapitres 7 → 11 ; les chapitres 1 à 6 manquent encore. D'où le trou de
+// chapitres 7 → 11 ; les chapitres 1 à 6 manquaient encore — ils ont été écrits
+// depuis, dans `histoire-tle-1-6.mjs` (migration 246), qui occupe exactement la
+// place réservée ci-dessous et pose au passage l'axe de ces 13 fiches-ci. D'où le trou de
 // numérotation : les 5 chapitres déjà en base occupent les positions 1 à 5, et
 // ce bloc démarre à 26 — les positions 6 à 25 sont RÉSERVÉES aux chapitres 1
 // à 6 à venir. Conséquence pratique : cette migration peut être exécutée telle

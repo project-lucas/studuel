@@ -19,7 +19,8 @@ import {
   type ProfileSummary,
   type ProfileStatInputs,
 } from '@/lib/profile-stats'
-import { schoolLevelForGrade } from '@/lib/clan'
+import { activeSchoolId } from '@/lib/clan'
+import { readRowTolerant } from '@/lib/profile-read'
 import { parseGradeStandings, type GradeStandings } from '@/lib/percentile'
 
 // Tout ce dont la carte + la modale de profil ont besoin, sérialisable.
@@ -81,13 +82,25 @@ export async function getProfileData(): Promise<ProfileData | null> {
     { data: standingsRow },
   ] = await Promise.all([
     supabase.rpc('profile_stats'),
-    supabase
-      .from('profiles')
-      .select(
-        'full_name, grade_level, avatar, college_school_id, lycee_school_id',
-      )
-      .eq('id', user.id)
-      .maybeSingle(),
+    // Lecture TOLÉRANTE : `primaire_school_id` n'existe qu'après la migration
+    // 242. Dans un `select` ordinaire, une colonne absente fait échouer TOUTE
+    // la requête — le pseudo, la classe et l'avatar disparaîtraient avec elle.
+    // Le lecteur tolérant réessaie sans la colonne fautive (cf. lib/profile-read).
+    readRowTolerant<{
+      full_name: string | null
+      grade_level: string | null
+      avatar: unknown
+      primaire_school_id: string | null
+      college_school_id: string | null
+      lycee_school_id: string | null
+    }>(supabase, 'profiles', 'id', user.id, [
+      'full_name',
+      'grade_level',
+      'avatar',
+      'primaire_school_id',
+      'college_school_id',
+      'lycee_school_id',
+    ]).then((data) => ({ data })),
     // Colonnes de la migration 200 isolées : si elle n'est pas encore passée,
     // seule cette lecture échoue (le reste du profil s'affiche quand même).
     supabase
@@ -137,8 +150,7 @@ export async function getProfileData(): Promise<ProfileData | null> {
 
   // École courante (nom seulement) selon la classe.
   const gradeLevel = base?.grade_level ? str(base.grade_level) : null
-  const isLycee = schoolLevelForGrade(gradeLevel) === 'lycee'
-  const schoolId = isLycee ? base?.lycee_school_id : base?.college_school_id
+  const schoolId = activeSchoolId(base, gradeLevel)
   let schoolName: string | null = null
   if (schoolId) {
     const { data: school } = await supabase

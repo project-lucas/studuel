@@ -34,16 +34,23 @@ export function examsForProfile(
     })
   }
 
-  // 1re : le bac de français (écrit + oral, même programme).
-  if (grade === '1re') {
+  // 1re, générale comme technologique : le bac de français (écrit + oral).
+  if (grade === '1re' || grade === '1re techno') {
     const subject = bySlug.get('francais')
     return subject
       ? [{ label: 'Bac de français — écrit & oral', subject }]
       : []
   }
 
-  // Tle : philosophie (tronc commun) + les spécialités choisies à l'onboarding.
-  if (grade === 'Tle') {
+  // Tle : philosophie (tronc commun des deux voies) + les enseignements de
+  // spécialité choisis à l'onboarding.
+  //
+  // Les spécialités se lisent AU NIVEAU DE L'ÉLÈVE (`grade`), pas au niveau
+  // « Tle » en dur : un Tle techno n'a pas les spécialités de la voie générale,
+  // et les lui lister lui promettrait des épreuves qu'il ne passera jamais.
+  // Tant que la série (STMG, STI2D…) n'est pas demandée à l'onboarding, il
+  // n'aura donc que la philosophie — ce qui est vrai, sinon complet.
+  if (grade === 'Tle' || grade === 'Tle techno') {
     const exams: ExamSubject[] = []
     const philo = bySlug.get('philosophie')
     if (philo) exams.push({ label: 'Bac — Philosophie', subject: philo })
@@ -51,7 +58,7 @@ export function examsForProfile(
     for (const s of subjects) {
       if (
         s.category === 'specialite' &&
-        s.levels.includes('Tle') &&
+        s.levels.includes(grade) &&
         isSelected(s.slug)
       ) {
         exams.push({ label: `Bac — Spécialité ${s.name}`, subject: s })
@@ -60,7 +67,7 @@ export function examsForProfile(
     return exams
   }
 
-  // 6e, 5e, 4e, 2de : pas d'examen officiel cette année.
+  // Primaire, 6e, 5e, 4e, 2de : pas d'examen officiel cette année.
   return []
 }
 

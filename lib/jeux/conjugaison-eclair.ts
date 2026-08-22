@@ -4,6 +4,7 @@
 // oublié, terminaison bricolée). Générateur déterministe comme les capitales.
 import { seededRng, type ModeQuestion } from '@/lib/defi-modes'
 import { shuffleWith } from '@/lib/jeux/shuffle'
+import { DEFAULT_PALIER, PALIERS, type PalierLevel } from '@/lib/jeux/paliers'
 
 // La forme juste et ses trois sosies fautifs, avec l'énoncé et l'astuce.
 export type ConjugationItem = {
@@ -235,9 +236,67 @@ export const CONJUGATIONS: ConjugationItem[] = [
   },
 ]
 
-export function buildConjugaisonPool(seed: string, count = 30): ModeQuestion[] {
-  const rng = seededRng(`conjugaison:${seed}`)
-  const pool = shuffleWith(rng, CONJUGATIONS).slice(
+// ------------------------------------------------------------- les paliers
+// La banque est graduée par le TEMPS demandé, pas par le verbe : « qu'il
+// prenne » au subjonctif piège un lycéen là où « ils vont » au présent ne
+// piège plus personne dès la 6e.
+//
+// Elle est graduée par ORDRE et non par filtre : vingt-quatre formes ne
+// suffisent pas à remplir cinq banques étanches, et un palier haut réduit à
+// cinq questions re-servirait la même trois fois dans la partie — exactement ce
+// que `lib/jeux/pools` interdit. On sert donc d'abord les temps du palier, puis
+// les autres : la partie commence toujours à la bonne difficulté, et elle a de
+// quoi tenir jusqu'au bout.
+
+/** Le rang de difficulté d'un temps : 1 courant, 2 récit, 3 piège. */
+export function tenseTier(tense: string): 1 | 2 | 3 {
+  if (tense === 'présent' || tense === 'futur simple') return 1
+  if (tense === 'imparfait' || tense === 'passé composé') return 2
+  return 3
+}
+
+/** Ce que la banque sert à chaque palier — affiché sur la carte du jeu. */
+export const CONJUGAISON_TIER_BRIEF: Record<PalierLevel, string> = {
+  1: 'Présent et futur — les temps du quotidien',
+  2: 'Présent, futur, imparfait',
+  3: 'Tous les temps, mélangés',
+  4: 'Passé composé, conditionnel et subjonctif d’abord',
+  5: 'Subjonctif, conditionnel, passé simple — les temps qui piègent',
+}
+
+/**
+ * Les groupes de temps servis à ce palier, dans l'ordre. Chaque groupe est
+ * mélangé, les groupes s'enchaînent : le premier donne le ton de la partie.
+ */
+const TIER_ORDER: Record<PalierLevel, readonly (readonly number[])[]> = {
+  1: [[1], [2], [3]],
+  2: [[1, 2], [3]],
+  3: [[1, 2, 3]],
+  4: [[2, 3], [1]],
+  5: [[3], [2], [1]],
+}
+
+function orderedForLevel(rng: () => number, tier: number): ConjugationItem[] {
+  // La banque est FINIE : au-delà du dernier palier (épreuve ultime), il n'y a
+  // rien de plus dur à servir. On reste donc sur l'ordre le plus exigeant
+  // plutôt que d'inventer un cran qui n'existe pas — et c'est précisément
+  // pourquoi ce jeu n'a pas encore d'épreuve ultime (cf. ULTIME_GAMES).
+  const level = Math.min(PALIERS.length, Math.max(1, Math.round(tier))) as PalierLevel
+  return TIER_ORDER[level].flatMap((group) =>
+    shuffleWith(
+      rng,
+      CONJUGATIONS.filter((c) => group.includes(tenseTier(c.tense))),
+    ),
+  )
+}
+
+export function buildConjugaisonPool(
+  seed: string,
+  count = 30,
+  tier: number = DEFAULT_PALIER,
+): ModeQuestion[] {
+  const rng = seededRng(`conjugaison:${tier}:${seed}`)
+  const pool = orderedForLevel(rng, tier).slice(
     0,
     Math.min(count, CONJUGATIONS.length),
   )

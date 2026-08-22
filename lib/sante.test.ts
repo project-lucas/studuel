@@ -19,7 +19,7 @@ describe('MIGRATIONS_SANTE — le catalogue colle au dépôt', () => {
     }
   })
 
-  it('couvre TOUTES les migrations suivies (187 → 189, puis 192 → la dernière), sans trou', () => {
+  it('couvre TOUTES les migrations du dépôt (187 → 189, puis 192 et au-delà)', () => {
     // La dette : 188 puis 192 → 213. Un numéro qui manque ici est une migration
     // que ni /admin/sante ni la sonde CLI ne surveillent — exactement le trou
     // silencieux que ce module existe pour fermer. La 209 est la reprise du
@@ -28,22 +28,21 @@ describe('MIGRATIONS_SANTE — le catalogue colle au dépôt', () => {
     // un nombre écrit à la main : une migration ajoutée sans entrée ici fait
     // passer ce test au rouge (c'est ce qui était arrivé à la 213).
     const ids = MIGRATIONS_SANTE.map((m) => m.id).sort()
-    const derniere = Math.max(
-      ...readdirSync(path.join(ROOT, 'supabase'))
-        .map((f) => Number(f.slice(0, 3)))
-        .filter((n) => Number.isFinite(n) && n >= 192),
-    )
+    // La liste attendue se lit sur les FICHIERS présents, et non sur la plage
+    // 192→dernière : une migration écrite puis ABANDONNÉE (la 235, les six axes
+    // d'anglais, remplacée par la 243) laisse un trou de numérotation qui est
+    // volontaire. Ce qui doit rester vrai, c'est qu'aucun fichier du dépôt
+    // n'échappe à la surveillance.
+    const duDepot = readdirSync(path.join(ROOT, 'supabase'))
+      .map((f) => Number(f.slice(0, 3)))
+      .filter((n) => Number.isFinite(n) && n >= 192)
+      .map(String)
     // 187 et 189 ont rejoint le catalogue le 01/08/2026 : elles étaient
     // sondables (term_grades, avatar_items) et pourtant hors surveillance —
     // l'audit du 31/07 relevait justement que « leur état réel est inconnu ».
     // 190 et 191 restent dehors : ce sont des seeds de contenu déjà en base
     // (leurs matières répondent), pas de la dette.
-    const attendues = [
-      '187',
-      '188',
-      '189',
-      ...Array.from({ length: derniere - 191 }, (_, i) => String(192 + i)),
-    ].sort()
+    const attendues = ['187', '188', '189', ...duDepot].sort()
     expect(ids).toEqual(attendues)
   })
 

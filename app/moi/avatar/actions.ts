@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
-import { normalizeAvatarConfig } from '@/lib/avatar'
+import { applyFreeAvatarField, normalizeAvatarConfig } from '@/lib/avatar'
 import {
   applyItem,
   fallbackCatalog,
@@ -110,6 +110,47 @@ export async function equipAvatarItemAction(
     .eq('id', userId)
   if (error) {
     console.error('[vestiaire] équipement non enregistré:', error.message)
+    return { ok: false }
+  }
+  for (const path of AVATAR_PATHS) revalidatePath(path)
+  return { ok: true }
+}
+
+// Règle un champ LIBRE de l'avatar : expression, lunettes, barbe, fond. Ces
+// quatre-là ne passent pas par le catalogue — ils n'ont ni prix ni condition,
+// parce qu'ils ne sont pas des cosmétiques à collectionner mais les traits par
+// lesquels un élève se reconnaît.
+//
+// La validation reste ENTIÈRE côté serveur, comme pour un item : la clé doit
+// être un champ libre déclaré et la valeur doit appartenir à sa liste fermée,
+// sans quoi `applyFreeAvatarField` rend la config inchangée et on n'écrit rien.
+// Aucune porte de service n'est ouverte ici : les champs vendus (peau,
+// coiffure, couleur de cheveux, haut) sont refusés par cette action.
+export async function setAvatarFieldAction(
+  key: string,
+  value: string,
+): Promise<{ ok: boolean }> {
+  const { supabase, userId } = await requireUser()
+  if (!userId || typeof key !== 'string' || typeof value !== 'string')
+    return { ok: false }
+
+  const { data: row } = await supabase
+    .from('profiles')
+    .select('avatar')
+    .eq('id', userId)
+    .maybeSingle()
+
+  const current = normalizeAvatarConfig(row?.avatar)
+  const next = applyFreeAvatarField(current, key, value)
+  // Clé ou valeur refusée : rien à écrire, et surtout pas un succès menteur.
+  if (next === current) return { ok: false }
+
+  const { error } = await supabase
+    .from('profiles')
+    .update({ avatar: next })
+    .eq('id', userId)
+  if (error) {
+    console.error('[vestiaire] réglage non enregistré:', error.message)
     return { ok: false }
   }
   for (const path of AVATAR_PATHS) revalidatePath(path)

@@ -15,12 +15,19 @@ import {
   BANNER_KEYS,
   EQUIPMENT_KEYS,
   type AvatarConfig,
+  type FreeAvatarFieldKey,
 } from '@/lib/avatar'
 
+// Les catégories que le vestiaire sait rendre. La table `avatar_items` en
+// accepte une de plus — `hair_color` — et c'est volontaire : Open Peeps dessine
+// les cheveux à l'encre noire et ne sait pas les teindre (cf. l'en-tête de
+// lib/avatar.ts). La retirer d'ici suffit à ce que `normalizeCatalog` IGNORE
+// toute ligne restée dans cette catégorie ; on ne l'a pas retirée de la
+// contrainte SQL parce que supprimer les lignes effacerait par cascade les
+// achats des élèves. La migration 240 les a reconverties en coiffures.
 export const AVATAR_ITEM_CATEGORIES = [
   'body_skin',
   'hair_style',
-  'hair_color',
   'outfit',
   'equipment',
   'banner',
@@ -52,33 +59,116 @@ export type ItemState = 'equipped' | 'owned' | 'buyable' | 'locked'
 
 // --- Onglets de l'écran -------------------------------------------------------
 
+// Six onglets, et non plus quatre. Les deux nouveaux (« Visage », « Détails »)
+// portent les champs LIBRES — l'expression, les lunettes, la barbe, le fond.
+// Ils n'ont pas de prix parce qu'ils ne sont pas des cosmétiques : ce sont les
+// traits par lesquels un élève se reconnaît. Le catalogue payant reste ce qui
+// se collectionne (peau rare, coiffures, couleurs, hauts, objets, bannières).
 export const STUDIO_TABS = [
-  { id: 'corps', label: 'Corps', categories: ['body_skin', 'hair_style', 'hair_color'] },
-  { id: 'tenue', label: 'Tenue', categories: ['outfit'] },
-  { id: 'equipement', label: 'Équipement', categories: ['equipment'] },
-  { id: 'banniere', label: 'Bannière', categories: ['banner'] },
+  { id: 'visage', label: 'Visage', categories: ['body_skin'], freeFields: ['face'] },
+  { id: 'coiffure', label: 'Coiffure', categories: ['hair_style'], freeFields: [] },
+  { id: 'details', label: 'Détails', categories: [], freeFields: ['accessories', 'facialHair'] },
+  { id: 'tenue', label: 'Tenue', categories: ['outfit'], freeFields: [] },
+  { id: 'objet', label: 'Objet', categories: ['equipment'], freeFields: [] },
+  { id: 'fond', label: 'Fond', categories: ['banner'], freeFields: ['backgroundColor'] },
 ] as const satisfies readonly {
   id: string
   label: string
   categories: readonly AvatarItemCategory[]
+  freeFields: readonly FreeAvatarFieldKey[]
 }[]
 
 export type StudioTabId = (typeof STUDIO_TABS)[number]['id']
 
 export const CATEGORY_LABELS: Record<AvatarItemCategory, string> = {
   body_skin: 'Peau',
-  hair_style: 'Coiffure',
-  hair_color: 'Couleur de cheveux',
-  outfit: 'Hauts',
+  hair_style: 'Coiffure et couvre-chef',
+  outfit: 'Couleur du haut',
   equipment: 'Accessoire porté',
-  banner: 'Fond du profil',
+  banner: 'Bannière du profil',
+}
+
+// --- Champs libres : libellés FR ----------------------------------------------
+// Les valeurs d'Open Peeps sont des identifiants anglais opaques (`smileLOL`,
+// `glasses3`, `moustache7`). Un vestiaire qui les afficherait tels quels
+// demanderait à un élève de 6e de choisir entre `full2` et `full3`. Chaque
+// option porte donc son nom français ici, à un seul endroit.
+
+export const FREE_FIELD_LABELS: Record<FreeAvatarFieldKey, string> = {
+  face: 'Expression',
+  accessories: 'Lunettes',
+  facialHair: 'Barbe',
+  backgroundColor: 'Fond de l’avatar',
+}
+
+/** Ce que dit le bouton « aucun » de chaque champ libre qui l'accepte. */
+export const FREE_FIELD_NONE_LABELS: Partial<Record<FreeAvatarFieldKey, string>> = {
+  accessories: 'Sans',
+  facialHair: 'Imberbe',
+  backgroundColor: 'Sans fond',
+}
+
+const FREE_OPTION_LABELS: Record<string, string> = {
+  // Expressions
+  'face:smile': 'Sourire',
+  'face:smileBig': 'Grand sourire',
+  'face:smileLOL': 'Fou rire',
+  'face:smileTeethGap': 'Sourire malin',
+  'face:cheeky': 'Espiègle',
+  'face:lovingGrin1': 'Ravi',
+  'face:lovingGrin2': 'Aux anges',
+  'face:cute': 'Tout mignon',
+  'face:awe': 'Émerveillé',
+  'face:calm': 'Serein',
+  'face:blank': 'Neutre',
+  'face:serious': 'Sérieux',
+  'face:solemn': 'Grave',
+  'face:driven': 'Déterminé',
+  'face:explaining': 'En train d’expliquer',
+  'face:eyesClosed': 'Yeux fermés',
+  'face:suspicious': 'Sceptique',
+  'face:tired': 'Fatigué',
+  // Lunettes
+  'accessories:glasses': 'Rondes',
+  'accessories:glasses2': 'Carrées',
+  'accessories:glasses3': 'Fines',
+  'accessories:glasses4': 'Épaisses',
+  'accessories:glasses5': 'Papillon',
+  'accessories:sunglasses': 'Solaires',
+  'accessories:sunglasses2': 'Solaires aviateur',
+  'accessories:eyepatch': 'Cache-œil',
+  // Barbe
+  'facialHair:chin': 'Bouc au menton',
+  'facialHair:goatee1': 'Bouc',
+  'facialHair:goatee2': 'Bouc large',
+  'facialHair:moustache1': 'Moustache fine',
+  'facialHair:moustache2': 'Moustache classique',
+  'facialHair:moustache3': 'Moustache épaisse',
+  'facialHair:moustache7': 'Moustache guidon',
+  'facialHair:moustache9': 'Moustache chevron',
+  'facialHair:full': 'Barbe courte',
+  'facialHair:full2': 'Barbe pleine',
+  'facialHair:full3': 'Barbe longue',
+  'facialHair:full4': 'Barbe de bûcheron',
+}
+
+/** Le nom FR d'une option de champ libre (l'identifiant brut en dernier repli). */
+export function freeOptionLabel(field: FreeAvatarFieldKey, value: string): string {
+  return FREE_OPTION_LABELS[`${field}:${value}`] ?? value
 }
 
 // --- Mapping asset_key → config -----------------------------------------------
-// body_skin / hair_color : hex DiceBear. hair_style : valeur `top`.
-// outfit : `clothing|clothesColor`. equipment / banner : slug maison.
+// body_skin / outfit : hex DiceBear. hair_style : valeur `head`
+// (coiffure OU couvre-chef, Open Peeps n'a qu'une couche). equipment / banner :
+// slug maison.
+//
+// L'outfit était `clothing|clothesColor` du temps d'avataaars, qui portait neuf
+// COUPES de vêtement. Open Peeps n'en a qu'une, colorée : la tenue se réduit
+// donc à sa couleur, et la variété a déménagé côté coiffures (47 têtes contre
+// 22, voile et turban compris). Migration 240 : les ids des items ne bougent
+// pas, leurs asset_key et leurs noms sont réécrits.
 
-const optionsOf = (key: 'skinColor' | 'top' | 'hairColor' | 'clothing' | 'clothesColor') =>
+const optionsOf = (key: 'skinColor' | 'head' | 'clothingColor') =>
   AVATAR_FIELDS.find((f) => f.key === key)?.options ?? []
 
 /** L'asset_key est-il valide pour sa catégorie ? (garde contre un seed dérivant) */
@@ -87,16 +177,9 @@ export function isValidAssetKey(category: AvatarItemCategory, assetKey: string):
     case 'body_skin':
       return optionsOf('skinColor').includes(assetKey)
     case 'hair_style':
-      return optionsOf('top').includes(assetKey)
-    case 'hair_color':
-      return optionsOf('hairColor').includes(assetKey)
-    case 'outfit': {
-      const [clothing, color] = assetKey.split('|')
-      return (
-        optionsOf('clothing').includes(clothing ?? '') &&
-        optionsOf('clothesColor').includes(color ?? '')
-      )
-    }
+      return optionsOf('head').includes(assetKey)
+    case 'outfit':
+      return optionsOf('clothingColor').includes(assetKey)
     case 'equipment':
       return (EQUIPMENT_KEYS as readonly string[]).includes(assetKey)
     case 'banner':
@@ -113,14 +196,9 @@ export function applyItem(cfg: AvatarConfig, item: AvatarItem): AvatarConfig {
     case 'body_skin':
       return { ...cfg, skinColor: item.assetKey }
     case 'hair_style':
-      return { ...cfg, top: item.assetKey }
-    case 'hair_color':
-      // La couleur de barbe suit la couleur des cheveux (convention 082).
-      return { ...cfg, hairColor: item.assetKey, facialHairColor: item.assetKey }
-    case 'outfit': {
-      const [clothing, color] = item.assetKey.split('|')
-      return { ...cfg, clothing: clothing ?? cfg.clothing, clothesColor: color ?? cfg.clothesColor }
-    }
+      return { ...cfg, head: item.assetKey }
+    case 'outfit':
+      return { ...cfg, clothingColor: item.assetKey }
     case 'equipment':
       return { ...cfg, equipment: cfg.equipment === item.assetKey ? '' : item.assetKey }
     case 'banner':
@@ -134,11 +212,9 @@ export function isItemEquipped(cfg: AvatarConfig, item: AvatarItem): boolean {
     case 'body_skin':
       return cfg.skinColor === item.assetKey
     case 'hair_style':
-      return cfg.top === item.assetKey
-    case 'hair_color':
-      return cfg.hairColor === item.assetKey
+      return cfg.head === item.assetKey
     case 'outfit':
-      return `${cfg.clothing}|${cfg.clothesColor}` === item.assetKey
+      return cfg.clothingColor === item.assetKey
     case 'equipment':
       return cfg.equipment !== '' && cfg.equipment === item.assetKey
     case 'banner':
@@ -260,7 +336,6 @@ export function catalogByCategory(
 const FALLBACK_NAMES: Partial<Record<AvatarItemCategory, string>> = {
   body_skin: 'Teinte',
   hair_style: 'Coiffure',
-  hair_color: 'Couleur',
   outfit: 'Tenue',
 }
 
@@ -282,13 +357,11 @@ export function fallbackCatalog(): AvatarItem[] {
   })
 
   const skins = optionsOf('skinColor').map((v, i) => free('body_skin', v, i))
-  const tops = optionsOf('top').map((v, i) => free('hair_style', v, i))
-  const hairs = optionsOf('hairColor').map((v, i) => free('hair_color', v, i))
-  // Tenues : chaque coupe dans la couleur violette de la marque.
-  const outfits = optionsOf('clothing').map((v, i) => free('outfit', `${v}|7c4dff`, i))
+  const tops = optionsOf('head').map((v, i) => free('hair_style', v, i))
+  const outfits = optionsOf('clothingColor').map((v, i) => free('outfit', v, i))
   // Les slugs maison servent de nom lisible en repli.
   const slugName = (v: string) => v.replaceAll('-', ' ')
   const equipments = EQUIPMENT_KEYS.map((v, i) => free('equipment', v, i, slugName(v)))
   const banners = BANNER_KEYS.map((v, i) => free('banner', v, i, slugName(v)))
-  return [...skins, ...tops, ...hairs, ...outfits, ...equipments, ...banners]
+  return [...skins, ...tops, ...outfits, ...equipments, ...banners]
 }

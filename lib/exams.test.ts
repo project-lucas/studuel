@@ -117,6 +117,44 @@ describe('examsForProfile', () => {
       'Bac — Spécialité NSI',
     ])
   })
+
+  // --- La voie technologique passe le même bac -----------------------------
+
+  it('1re techno → le bac de français, comme la 1re générale', () => {
+    const exams = examsForProfile('1re techno', null, brevetCatalog)
+    expect(exams.map((e) => e.label)).toEqual(['Bac de français — écrit & oral'])
+  })
+
+  it('Tle techno → la philosophie, sans les spécialités de la voie générale', () => {
+    // Le piège : lire les spécialités au niveau « Tle » en dur promettrait à un
+    // STMG les épreuves de spé NSI ou Maths de la voie générale.
+    const technoCatalog: Subject[] = [
+      subj('philosophie', 'Philosophie', 'tronc_commun', ['Tle', 'Tle techno']),
+      subj('maths', 'Maths', 'specialite', ['1re', 'Tle']),
+      subj('nsi', 'NSI', 'specialite', ['Tle']),
+    ]
+    const exams = examsForProfile('Tle techno', null, technoCatalog)
+    expect(exams.map((e) => e.label)).toEqual(['Bac — Philosophie'])
+  })
+
+  it('Tle techno → ses spécialités le jour où elles seront déclarées', () => {
+    // Le mécanisme est déjà là : une spé qui déclare « Tle techno » sort.
+    const technoCatalog: Subject[] = [
+      subj('philosophie', 'Philosophie', 'tronc_commun', ['Tle', 'Tle techno']),
+      subj('management', 'Management', 'specialite', ['Tle techno']),
+    ]
+    const exams = examsForProfile('Tle techno', null, technoCatalog)
+    expect(exams.map((e) => e.label)).toEqual([
+      'Bac — Philosophie',
+      'Bac — Spécialité Management',
+    ])
+  })
+
+  it('le primaire n’a aucun examen officiel', () => {
+    for (const grade of ['CP', 'CE1', 'CE2', 'CM1', 'CM2']) {
+      expect(examsForProfile(grade, null, brevetCatalog), grade).toEqual([])
+    }
+  })
 })
 
 describe('examPriorityHint', () => {

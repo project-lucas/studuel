@@ -24,6 +24,7 @@ import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { signOut } from '@/app/login/actions'
 import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
+import { gradeLabel } from '@/lib/grades'
 
 export const metadata = { title: 'Mon compte — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -87,7 +88,7 @@ export default async function ComptePage() {
           </p>
           <p className="text-muted-foreground">
             {profile?.grade_level
-              ? `Classe : ${profile.grade_level} · Objectif : ${profile.daily_goal ?? 1} session${(profile.daily_goal ?? 1) > 1 ? 's' : ''}/jour`
+              ? `Classe : ${gradeLabel(profile.grade_level) ?? profile.grade_level} · Objectif : ${profile.daily_goal ?? 1} session${(profile.daily_goal ?? 1) > 1 ? 's' : ''}/jour`
               : 'Classe non renseignée'}{' '}
             —{' '}
             <Link

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { contentLevelFor } from '@/lib/grades'
 import { Zap, GraduationCap } from 'lucide-react'
 import {
   Card,
@@ -114,7 +115,7 @@ export default async function DuelRapidePage({
     const { data: quizzes } = await supabase
       .from('quizzes')
       .select('id, subject')
-      .eq('grade_level', grade)
+      .eq('grade_level', contentLevelFor(grade))
     const picked = shuffle(quizzes ?? []).slice(0, QUIZ_SAMPLE)
 
     if (picked.length > 0) {

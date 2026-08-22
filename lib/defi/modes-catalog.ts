@@ -112,10 +112,12 @@ export function gameScene(id: string): string | undefined {
 }
 
 /**
- * Les jeux d'une matière, en billets. Un jeu construit mène DROIT à sa table de
- * jeu (`/defi/jeux/{id}`) — plus d'écran intermédiaire : on tape, on joue. Un
- * jeu pas encore construit n'a pas de lien (le billet affiche « Bientôt »).
- * Matière inconnue → [].
+ * Les jeux d'une matière, en billets. Un jeu construit mène à sa CARTE
+ * (`/defi/jeux/{id}`) : l'échelle de ses cinq paliers de difficulté, où l'on
+ * choisit son niveau avant de jouer (la partie vit sur `/{id}/{palier}`). Ce
+ * détour a remplacé l'entrée directe dans la partie le jour où un même jeu a
+ * cessé de servir la même feuille à un 6e et à un Terminale. Un jeu pas encore
+ * construit n'a pas de lien (le billet affiche « Bientôt »). Matière inconnue → [].
  */
 export function subjectGameTickets(subject: string): ModeTicket[] {
   const salon = SALONS.find((s) => s.subject === subject)

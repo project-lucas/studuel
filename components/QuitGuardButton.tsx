@@ -89,17 +89,27 @@ export default function QuitGuardButton({
                     setOpen(false)
                   }}
                 />
+                {/* LA MASCOTTE, pas la flamme. La flamme est le signe de la
+                    SÉRIE dans toute l'app (et seulement d'elle, cf. la charte) :
+                    la voir surgir au moment de quitter laissait croire qu'on
+                    perdait sa série, alors qu'on ne perd que la session en
+                    cours. Le dessin dit la vraie chose — quelqu'un qui te
+                    regarde partir. Détouré depuis l'original 4000×4000 par
+                    scripts/mascotte-quitter.mjs (le fond y était PEINT). */}
                 <Image
-                  src="/images/mascotte/flamme-affamee.webp"
+                  src="/images/mascotte/quitte-deja.webp"
                   alt=""
-                  width={96}
-                  height={96}
-                  className="mx-auto size-24 object-contain"
+                  width={512}
+                  height={512}
+                  sizes="128px"
+                  className="mx-auto size-32 object-contain"
                 />
-                <h2 className="font-heading mt-2 text-2xl font-bold text-foreground">
+                <h2 className="font-heading mt-1 text-2xl font-bold text-balance text-foreground">
                   {title}
                 </h2>
-                <p className="mt-2 text-sm text-muted-foreground">{body}</p>
+                <p className="mt-2 text-sm text-pretty text-muted-foreground">
+                  {body}
+                </p>
 
                 <Button
                   size="lg"

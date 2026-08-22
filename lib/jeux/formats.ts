@@ -35,6 +35,17 @@ export type GameMechanic =
    * catalogue un geste que rien d'autre ne fait.
    */
   | 'ordre'
+  /**
+   * L'ÉPREUVE ULTIME : une seule vie, aucune fin. La difficulté monte tant qu'on
+   * ne se trompe pas, et la première erreur arrête tout. C'est la seule
+   * mécanique SANS victoire possible — on ne la gagne pas, on y monte.
+   *
+   * Elle existe pour une raison précise : les cinq paliers ont un plafond (trois
+   * étoiles, et c'est fini), donc rien n'y sépare les meilleurs. Sans plafond,
+   * un élève de 6e peut y dépasser un lycéen — et le prouver, puisque tout le
+   * monde y joue exactement la même épreuve (lib/jeux/ultime).
+   */
+  | 'ultime'
 
 // --------------------------------------------------------------- les paramètres
 
@@ -109,6 +120,17 @@ export type OrdreParams = {
   itemsPerBoard: number
 }
 
+export type UltimeParams = {
+  /** Bonnes réponses d'affilée pour franchir un niveau. */
+  perLevel: number
+  /** Chrono par question au premier niveau. */
+  startSeconds: number
+  /** Secondes retirées au chrono à chaque niveau franchi. */
+  decaySeconds: number
+  /** Plancher du chrono : en dessous, ce n'est plus une épreuve mais une loterie. */
+  minSeconds: number
+}
+
 export type MechanicParams =
   | { mechanic: 'sprint'; sprint: SprintParams }
   | { mechanic: 'vies'; vies: ViesParams }
@@ -116,6 +138,7 @@ export type MechanicParams =
   | { mechanic: 'expedition'; expedition: ExpeditionParams }
   | { mechanic: 'ascension'; ascension: AscensionParams }
   | { mechanic: 'ordre'; ordre: OrdreParams }
+  | { mechanic: 'ultime'; ultime: UltimeParams }
 
 // ------------------------------------------------------------------- la robe
 // Un thème = une classe `.jeu-<theme>` dans globals.css qui pose les variables
@@ -200,6 +223,11 @@ export const MIN_WAVE_SECONDS = 2
 /** Chrono par question de la vague `index` (0-based) d'un format à paliers. */
 export function waveSeconds(p: PaliersParams, index: number): number {
   return Math.max(MIN_WAVE_SECONDS, p.startSeconds - p.stepSeconds * index)
+}
+
+/** Chrono par question au niveau `level` (0-based) d'une épreuve ultime. */
+export function ultimeSeconds(p: UltimeParams, level: number): number {
+  return Math.max(p.minSeconds, p.startSeconds - p.decaySeconds * level)
 }
 
 // ------------------------------------------------------------------ catalogue
@@ -632,6 +660,8 @@ export function formatTeaser(format: GameFormat): string {
       return p.ordre.globalSeconds !== null
         ? `${p.ordre.globalSeconds} s chrono`
         : `${p.ordre.boards} ${format.lexicon.steps}`
+    case 'ultime':
+      return 'Une seule vie'
   }
 }
 
@@ -658,6 +688,8 @@ export function announcedSteps(format: GameFormat): number | null {
       return p.paliers.waves
     case 'ascension':
       return p.ascension.floors
+    // L'épreuve ultime n'a AUCUN nombre d'étapes à annoncer : c'est tout son
+    // sujet. Promettre « 10 niveaux » lui mettrait le plafond qu'elle refuse.
     default:
       return null
   }
@@ -691,5 +723,10 @@ export function poolSizeFor(format: GameFormat): number {
       // Ici l'unité est le TABLEAU, pas la question : on en prépare autant que
       // la partie peut en consommer, chrono compris.
       return p.ordre.boards ?? Math.ceil((p.ordre.globalSeconds ?? 60) / 12) + 3
+    case 'ultime':
+      // Une épreuve sans fin ne se sert pas d'un pool à plat : sa banque est
+      // préparée NIVEAU PAR NIVEAU (lib/jeux/pools.buildUltimePool), chacun à sa
+      // difficulté. Cette valeur n'est là que pour les appelants génériques.
+      return p.ultime.perLevel
   }
 }

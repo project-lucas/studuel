@@ -209,6 +209,19 @@ function Progression({
           </Tag>
         </div>
       )
+
+    // Ultime : le niveau atteint, SANS dénominateur — c'est tout son sujet. Un
+    // cœur unique dit la règle mieux qu'une phrase : il n'y en a qu'un, et il
+    // ne se remplace pas.
+    case 'ultime':
+      return (
+        <div className="flex items-center gap-2.5">
+          <Hearts left={run.lives ?? 0} total={1} />
+          <Tag>
+            {l.step} {run.step + 1}
+          </Tag>
+        </div>
+      )
   }
 }
 

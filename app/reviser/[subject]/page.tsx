@@ -6,12 +6,14 @@ import { getCurrentUser } from '@/lib/supabase/user'
 import {
   getSubjectsCached,
   getProgrammeCached,
+  getProgrammeFresh,
   type CatalogChapter,
 } from '@/lib/catalog'
-import { getUserTierFor } from '@/lib/subscription'
-import { canOpenChapter } from '@/lib/gems'
-import { fetchGems, fetchUnlockedChapters } from '@/lib/gems-access'
+import { contentLevelOf } from '@/lib/subject-visibility'
+import { fetchGems } from '@/lib/gems-access'
+import { fetchGardienCard } from '@/lib/traque-server'
 import {
+  catalogIsStale,
   chapterValue,
   chapterStatus,
   countWords,
@@ -21,15 +23,14 @@ import {
   modeFromParam,
   modesFor,
   resumeCta,
+  disciplinesOf,
   subjectProgress,
   type ChapterExamHint,
   type ChapterRow,
+  type SubjectProgress,
   type SubjectTemplateData,
-  type TrainingRow,
 } from '@/lib/subject-template'
-import { buildChapterSupports, type SupportLesson } from '@/lib/chapter-supports'
 import { EXAM_PAPER_COLUMNS, parseExamPapers } from '@/lib/exam-papers'
-import { mindMapFromLessons } from '@/lib/mind-map-auto'
 import { getReviewItems } from '@/lib/srs'
 import { parseGradeStandings } from '@/lib/percentile'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
@@ -53,13 +54,6 @@ import {
 export const dynamic = 'force-dynamic'
 
 // Mélange (Fisher-Yates) — pour varier le pool du boss d'une visite à l'autre.
-// Quiz de secours d'un chapitre : celui de la PREMIÈRE leçon qui en a un.
-// Même règle (et même déterminisme) que `pickLessonQuiz` côté page de leçon —
-// ici on n'a que l'id à afficher dans la tuile.
-function quizDuChapitre(chapter: CatalogChapter): string | undefined {
-  return chapter.lessons.find((l) => l.quizzes[0]?.id)?.quizzes[0]?.id
-}
-
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
@@ -129,10 +123,12 @@ export default async function SubjectPage({
   const grade = profile?.grade_level
   if (!grade) redirect('/onboarding')
 
-  // Niveau de lecture des chapitres : la classe de l'élève, SAUF pour une
-  // matière hors-niveau (ex. Culture générale) dont les thèmes vivent à un
-  // niveau fixe (subject.fixed_level = « tous »).
-  const level = subject.fixed_level ?? grade
+  // Niveau de LECTURE des chapitres — deux replis, et la règle vit en lib
+  // (`contentLevelOf`) plutôt que recopiée ici : une matière hors-niveau
+  // (ex. Culture générale) lit ses thèmes à son niveau fixe (« tous »), et la
+  // voie technologique lit le contenu de son niveau général, qui n'est pas
+  // dupliqué en base.
+  const level = contentLevelOf(subject, grade)
 
   // Programme de la matière (chapitres → leçons → quiz), servi par le cache
   // serveur, avec le même repli authentifié.
@@ -159,29 +155,23 @@ export default async function SubjectPage({
   // - quiz_questions (colonnes complètes) → compte de cartes/questions par
   //   quiz, rattachement des items SRS de la matière ET pool de l'onglet Boss ;
   // - review_items (file du jour) → bloc « À revoir » et « X à revoir ».
-  // Tier + chapitres débloqués à la gemme : pour l'état « Débloquer » des
-  // cartes mentales dans l'onglet Cartes.
   // Gemmes + série 🔥 : pour l'économie affichée en haut à droite du header —
   // la série est la MÊME série dérivée que la flamme de l'accueil Réviser
   // (mêmes quatre tables d'activité, même fenêtre), une seule vérité.
-  // xp_events (défis relevés) : clés « leçon:jour » posées par recordLessonDefi
-  // — tolère une base sans la migration 192 (repli : rien de relevé).
   const cutoff = activityCutoff()
   const [
     { data: completions },
     { data: sessions },
     { data: questions },
     reviewItems,
-    tier,
-    unlockedChapters,
     gems,
     { data: testDays },
     { data: studyDays },
     { data: challengeDays },
-    { data: defiEvents },
     { data: standingsRow },
     { data: themeRows },
     { data: paperRows },
+    gardien,
   ] =
     await Promise.all([
       supabase
@@ -209,8 +199,6 @@ export default async function SubjectPage({
             .returns<QuizQuestion[]>()
         : Promise.resolve({ data: [] as QuizQuestion[] }),
       getReviewItems(supabase, user.id),
-      getUserTierFor(supabase, user.id),
-      fetchUnlockedChapters(supabase, user.id),
       fetchGems(supabase, user.id),
       supabase
         .from('test_sessions')
@@ -230,26 +218,23 @@ export default async function SubjectPage({
         .eq('user_id', user.id)
         .gte('created_at', cutoff)
         .returns<{ created_at: string }[]>(),
-      supabase
-        .from('xp_events')
-        .select('source_key')
-        .eq('user_id', user.id)
-        .eq('source', 'defi')
-        .returns<{ source_key: string | null }[]>(),
       // Classements par niveau (223) : on ne garde ici que la matière ouverte.
       // RPC SECURITY DEFINER — la RLS de `profiles` interdit toute jointure.
       supabase.rpc('my_grade_standings'),
-      // Axes du programme (migration 234), dans un select ISOLÉ et toléré :
-      // tant que la migration n'est pas exécutée, PostgREST répond « column
-      // chapters.theme does not exist », `data` arrive à null et la liste reste
-      // à plat. La colonne n'est donc PAS dans CHAPTER_COLUMNS, où son absence
-      // casserait tout Réviser d'un coup.
+      // Axes du programme (migration 234) et discipline (migration 247), dans
+      // un select ISOLÉ et toléré : tant que les migrations ne sont pas
+      // exécutées, PostgREST répond « column chapters.theme does not exist »,
+      // `data` arrive à null et la liste reste à plat, avec un seul onglet
+      // Programme. Ces colonnes ne sont donc PAS dans CHAPTER_COLUMNS, où leur
+      // absence casserait tout Réviser d'un coup.
       supabase
         .from('chapters')
-        .select('id, theme')
+        .select('id, theme, discipline')
         .eq('subject_id', subject.id)
         .eq('level', level)
-        .returns<{ id: string; theme: string | null }[]>(),
+        .returns<
+          { id: string; theme: string | null; discipline: string | null }[]
+        >(),
       // Annales (migrations 236/237), dans un select ISOLÉ et toléré pour la
       // même raison que l'axe juste au-dessus : tant que la table n'existe pas,
       // PostgREST répond « relation does not exist », `data` arrive à null et
@@ -261,6 +246,14 @@ export default async function SubjectPage({
         .select(EXAM_PAPER_COLUMNS)
         .eq('subject_id', subject.id)
         .eq('level', level),
+      // La jauge du gardien de CETTE matière (« La Traque », migration 212) :
+      // c'est elle que l'écusson d'angle affiche, et elle se remplit avec les
+      // gestes faits sur cette page. Tolérée : sans la 212 elle rend null, la
+      // page perd son écusson et rien d'autre.
+      fetchGardienCard(supabase, user.id, {
+        name: subject.name,
+        slug: subject.slug,
+      }),
     ])
 
   // Série 🔥 du header : jours (clés UTC) avec au moins une session, toutes
@@ -274,13 +267,6 @@ export default async function SubjectPage({
     ].map((r) => String(r.created_at).slice(0, 10)),
   )
   const streak = computeStreak(activityDays)
-
-  // Leçons dont le défi a déjà été relevé (clé « leçon:jour »).
-  const defiAttempted = new Set(
-    (defiEvents ?? []).flatMap((e) =>
-      e.source_key ? [e.source_key.split(':')[0]] : [],
-    ),
-  )
 
   // Meilleur essai par quiz (ratio ET score/total, pour le libellé « 7/10 »).
   const bestByQuiz = new Map<string, { score: number; total: number; ratio: number }>()
@@ -304,12 +290,10 @@ export default async function SubjectPage({
   // Notions faibles de CETTE matière dans la file SRS du jour : items marqués
   // de la matière par les players, plus les questions rattachées à ses quiz
   // (chaque item compté une seule fois).
-  const dueByQuiz = new Map<string, number>()
   let weakCount = 0
   for (const item of reviewItems) {
     const quizId =
       item.item_kind === 'question' ? quizByQuestion.get(item.item_id) : undefined
-    if (quizId) dueByQuiz.set(quizId, (dueByQuiz.get(quizId) ?? 0) + 1)
     if (quizId || item.subject === subject.slug) weakCount += 1
   }
 
@@ -338,6 +322,50 @@ export default async function SubjectPage({
     }
   }
 
+  // REPLI SI LA 247 N'EST PAS ENCORE JOUÉE. Le select ci-dessus demande `theme`
+  // ET `discipline` : une seule colonne absente le fait échouer en entier, et
+  // l'app perdrait AUSSI le regroupement par chapitre, qui, lui, fonctionne.
+  // On redemande donc le seul axe — une requête de plus, mais uniquement dans
+  // le cas dégradé, et jamais une fois la migration exécutée.
+  let chapterMeta = themeRows
+  if (chapterMeta === null) {
+    const { data } = await supabase
+      .from('chapters')
+      .select('id, theme')
+      .eq('subject_id', subject.id)
+      .eq('level', level)
+      .returns<{ id: string; theme: string | null }[]>()
+    chapterMeta = data?.map((r) => ({ ...r, discipline: null })) ?? null
+  }
+
+  // LE CATALOGUE PEUT AVOIR CINQ MINUTES DE RETARD. `getProgrammeCached` sert le
+  // programme depuis un cache de 300 s : un chapitre SUPPRIMÉ en base y survit
+  // jusqu'à l'expiration, et la page continue de l'afficher. C'est ce qui est
+  // arrivé à l'anglais de Terminale le 19/08/2026 — les 4 chapitres hors
+  // programme effacés par la migration 243 sont revenus en « Autres chapitres »,
+  // sans axe puisqu'ils n'existaient plus pour le porter.
+  // Le select des axes, lui, est FRAIS et porte sur la même table, la même
+  // matière et le même niveau : un chapitre absent de sa réponse n'est plus en
+  // base. On s'en sert pour écarter les fantômes — sauf quand ce select a
+  // échoué (colonne `theme` pas encore créée : `themeRows` arrive à `null`), où
+  // il ne prouve rien et où le cache reste seul juge.
+  // Mais un cache périmé ne se contente pas de GARDER des morts : il peut aussi
+  // IGNORER des vivants. L'allemand de Terminale l'a montré le 20/08/2026 — la
+  // migration 249 a supprimé les 3 fiches d'avant et posé 36 fiches neuves, le
+  // cache servait encore les 3 disparues, aucune ne survivait au filtre, et la
+  // page annonçait « arrive bientôt » sur un dossier plein. Quand le select
+  // frais connaît un chapitre que le cache ignore, filtrer ne suffit donc plus :
+  // on relit le programme SANS cache. Une requête de plus, seulement pendant les
+  // 300 s qui suivent une migration de contenu.
+  if (chapterMeta !== null) {
+    if (catalogIsStale(catalog, chapterMeta)) {
+      catalog = await getProgrammeFresh(subject.id, level)
+    } else {
+      const vivants = new Set(chapterMeta.map((r) => r.id))
+      catalog = catalog.filter((c) => vivants.has(c.id))
+    }
+  }
+
   // Vue « Programme » : une seule entrée par chapitre, avec couronnes et état.
   const values = catalog.map((chapter) =>
     chapterValue({
@@ -350,9 +378,12 @@ export default async function SubjectPage({
       lessonDone: chapter.lessons.some((l) => completed.has(l.id)),
     }),
   )
-  // Axe du programme, quand la base le porte (migration 234).
+  // Axe du programme (234) et discipline (247), quand la base les porte.
   const themeById = new Map(
-    (themeRows ?? []).map((r) => [r.id, r.theme?.trim() || null]),
+    (chapterMeta ?? []).map((r) => [r.id, r.theme?.trim() || null]),
+  )
+  const disciplineById = new Map(
+    (chapterMeta ?? []).map((r) => [r.id, r.discipline?.trim() || null]),
   )
 
   const chapters: ChapterRow[] = catalog.map((chapter, i) => ({
@@ -376,58 +407,8 @@ export default async function SubjectPage({
       ),
     }),
     theme: themeById.get(chapter.id) ?? null,
+    discipline: disciplineById.get(chapter.id) ?? null,
   }))
-
-  // Onglet « Mode de jeu » : un chapitre par ligne, ses cinq formats en
-  // pastilles. Les quiz/flashcards/défis dérivent du quiz de chaque leçon (avec
-  // le repli sur le quiz du chapitre : 564 leçons pour 295 quiz, cf.
-  // lib/lesson-quiz) ; la carte mentale est portée par le chapitre. Le CHOIX du
-  // support à proposer vit dans lib/chapter-supports, partagé avec le pied de
-  // cours pour que les deux écrans ne racontent jamais deux histoires.
-  const training: TrainingRow[] = catalog
-    .map((chapter) => {
-      const lessons: SupportLesson[] = chapter.lessons.map((l) => {
-        const ownQuizId = l.quizzes[0]?.id ?? null
-        const quizId = ownQuizId ?? quizDuChapitre(chapter) ?? null
-        return {
-          id: l.id,
-          title: l.title,
-          quizId,
-          questionCount: quizId ? (questionCountByQuiz.get(quizId) ?? 0) : 0,
-          dueCount: quizId ? (dueByQuiz.get(quizId) ?? 0) : 0,
-          best: ownQuizId ? (bestByQuiz.get(ownQuizId) ?? null) : null,
-          defiAttempted: defiAttempted.has(l.id),
-          ownQuiz: ownQuizId !== null,
-        }
-      })
-      // La carte s'affiche aussi quand elle est DÉRIVABLE du cours (cf.
-      // lib/mind-map-auto) : sans cela, presque aucun chapitre n'en avait.
-      const carteAvailable =
-        Boolean(chapter.has_mind_map) ||
-        mindMapFromLessons(chapter.title, chapter.lessons) !== null
-      return {
-        chapterId: chapter.id,
-        position: chapter.position,
-        title: chapter.title,
-        chips: buildChapterSupports({
-          subjectSlug: subject.slug,
-          chapterId: chapter.id,
-          lessons,
-          carte: {
-            available: carteAvailable,
-            locked: !canOpenChapter(tier, chapter.id, unlockedChapters),
-          },
-          // Notions de CE chapitre dans la file du jour — la tuile « Mes
-          // erreurs » n'apparaît que s'il y en a. Même rattachement que
-          // `weakCount` : un item compte pour le quiz auquel il appartient.
-          erreurs: chapter.lessons.reduce((sum, l) => {
-            const quizId = l.quizzes[0]?.id
-            return sum + (quizId ? (dueByQuiz.get(quizId) ?? 0) : 0)
-          }, 0),
-        }),
-      }
-    })
-    .filter((row) => row.chips.length > 0)
 
   const progress = subjectProgress(values)
 
@@ -463,27 +444,46 @@ export default async function SubjectPage({
   const subjectStanding =
     standings.maitrise.find((m) => m.subject === subject.name)?.standing ?? null
 
+  // La progression de chaque discipline, pour les matières qui en réunissent
+  // deux : l'onglet « Géographie » compte ses fiches, pas celles du dossier.
+  // Calculée ici, où les VALEURS d'avancement (0..1) existent encore — un
+  // pourcentage est une moyenne, elle ne se recompose pas depuis des statuts.
+  const progressByDiscipline: Record<string, SubjectProgress> = {}
+  for (const discipline of disciplinesOf(chapters)) {
+    progressByDiscipline[discipline] = subjectProgress(
+      values.filter(
+        (_, i) => disciplineById.get(catalog[i].id) === discipline,
+      ),
+    )
+  }
+
   const data: SubjectTemplateData = {
     subject: { slug: subject.slug, name: subject.name, color: subject.color },
     grade,
     gradeLevel: standings.grade,
     standing: subjectStanding,
     progress,
+    progressByDiscipline,
     resume: resumeCta(chapters),
     examOnTop: examBannerOnTop(progress.pct, daysToExam),
     weakCount,
     gems,
     streak,
     chapters,
-    training,
     bossPool,
+    gardien,
     papers: parseExamPapers(paperRows),
   }
 
-  // Onglet demandé dans l'URL (`?onglet=boss` depuis la feuille Modes de jeu) —
-  // les anciennes clés de format restent valides, toute valeur inconnue
-  // retombe sur Programme.
-  const initialMode = modeFromParam(onglet, modesFor(standings.grade))
+  // Onglet demandé dans l'URL (`?onglet=boss` depuis la feuille Modes de jeu,
+  // `?onglet=programme:geographie` depuis un lien partagé) — les anciennes clés
+  // de format restent valides, toute valeur inconnue retombe sur le programme.
+  // Les disciplines entrent dans le calcul : sans elles, l'onglet Géographie
+  // n'existerait pas encore au moment de résoudre le paramètre.
+  const initialMode = modeFromParam(
+    onglet,
+    modesFor(standings.grade, disciplinesOf(chapters)),
+  )
 
   return (
     <>

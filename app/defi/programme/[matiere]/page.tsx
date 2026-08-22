@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import { contentLevelFor } from '@/lib/grades'
 import GameTable from '@/components/jeux/GameTable'
 import { SALONS } from '@/lib/jeux/catalog'
 import {
@@ -76,7 +77,7 @@ export default async function ProgrammePage({
   const { data: allQuizzes } = await supabase
     .from('quizzes')
     .select('id, subject, lesson_id')
-    .eq('grade_level', grade)
+    .eq('grade_level', contentLevelFor(grade))
 
   // Le nom de matière des quiz n'est pas garanti identique à celui du catalogue
   // de salons — on rapproche par SLUG, comme `salonSubjectFor` le fait dans
@@ -177,6 +178,9 @@ export default async function ProgrammePage({
       return (
         <GameTable
           format={PROGRAMME_FORMAT}
+          // Hors échelle de paliers : la difficulté du « Programme » est celle
+          // du programme de la classe, pas un réglage qu'on choisit avant de jouer.
+          palier={null}
           pool={moteurPool.slice(0, size)}
           name={PROGRAMME_NAME}
           subject={subject}
@@ -254,6 +258,7 @@ export default async function ProgrammePage({
   return (
     <GameTable
       format={PROGRAMME_FORMAT}
+      palier={null}
       pool={pool.slice(0, size)}
       name={PROGRAMME_NAME}
       subject={subject}

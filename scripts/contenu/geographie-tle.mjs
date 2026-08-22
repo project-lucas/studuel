@@ -13,7 +13,9 @@
 // la position d'une ligne existante : la place se réserve d'avance ou plus du
 // tout.
 //
-// ⚠️ DOUBLON CONNU, laissé en place : « Mers et océans dans la mondialisation »
+// ⚠️ DOUBLON CONNU, RÉGLÉ DEPUIS par la migration 246 (`histoire-tle-1-6.mjs`),
+// qui supprime les 5 chapitres hérités — les deux doublons compris — et pose
+// l'axe des 20 fiches ci-dessous. Le constat d'origine : « Mers et océans dans la mondialisation »
 // et « L'Union européenne dans la mondialisation » (positions 4 et 5) sont deux
 // fiches de synthèse que les chapitres 1 et 3 ci-dessous recouvrent. On ne les
 // supprime PAS : elles ont été posées par une migration ancienne, idempotente

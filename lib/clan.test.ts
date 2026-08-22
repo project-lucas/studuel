@@ -10,27 +10,38 @@ import {
 } from '@/lib/clan'
 
 describe('schoolLevelForGrade', () => {
+  it('CP→CM2 = école primaire', () => {
+    // Le clan d'un CM1 est son ÉCOLE. Tant que le primaire n'existait pas,
+    // ces classes retombaient sur « collège » — et l'app lui proposait de
+    // chercher son collège.
+    for (const g of ['CP', 'CE1', 'CE2', 'CM1', 'CM2']) {
+      expect(schoolLevelForGrade(g), g).toBe('primaire')
+    }
+  })
   it('6e→3e = collège', () => {
     for (const g of ['6e', '5e', '4e', '3e']) {
       expect(schoolLevelForGrade(g)).toBe('college')
     }
   })
-  it('2de, 1re, Tle = lycée', () => {
-    for (const g of ['2de', '1re', 'Tle']) {
-      expect(schoolLevelForGrade(g)).toBe('lycee')
+  it('2de, 1re, Tle = lycée — voie technologique comprise', () => {
+    // Un 1re techno est au lycée : il partage l'établissement, donc le clan.
+    for (const g of ['2de', '1re', '1re techno', 'Tle', 'Tle techno']) {
+      expect(schoolLevelForGrade(g), g).toBe('lycee')
     }
   })
   it('classe inconnue / nulle → collège par défaut', () => {
     expect(schoolLevelForGrade(null)).toBe('college')
-    expect(schoolLevelForGrade('CP')).toBe('college')
+    expect(schoolLevelForGrade('MPSI')).toBe('college')
   })
 })
 
 describe('isSchoolLevel', () => {
-  it('ne reconnaît que college/lycee', () => {
+  it('reconnaît les trois cycles, et rien d’autre', () => {
+    expect(isSchoolLevel('primaire')).toBe(true)
     expect(isSchoolLevel('college')).toBe(true)
     expect(isSchoolLevel('lycee')).toBe(true)
-    expect(isSchoolLevel('primaire')).toBe(false)
+    expect(isSchoolLevel('fac')).toBe(false)
+    expect(isSchoolLevel(null)).toBe(false)
   })
 })
 
@@ -46,7 +57,7 @@ describe('normalizeSchool', () => {
   it('rejette id/nom vide ou niveau invalide', () => {
     expect(normalizeSchool({ id: '', name: 'X', level: 'college' })).toBeNull()
     expect(normalizeSchool({ id: 'a', name: ' ', level: 'college' })).toBeNull()
-    expect(normalizeSchool({ id: 'a', name: 'X', level: 'primaire' })).toBeNull()
+    expect(normalizeSchool({ id: 'a', name: 'X', level: 'fac' })).toBeNull()
     expect(normalizeSchool(null)).toBeNull()
   })
 })

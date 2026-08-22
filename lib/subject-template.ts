@@ -1,4 +1,4 @@
-// Logique pure du template générique de page matière (/reviser/[matiereSlug]).
+﻿// Logique pure du template générique de page matière (/reviser/[matiereSlug]).
 // Tout ce que la page calcule à partir des données Supabase vit ici : statut et
 // couronnes d'un chapitre, progression globale de la matière, libellés d'état
 // des contenus. Aucune logique spécifique à une matière : ajouter une matière =
@@ -8,6 +8,7 @@ import { isExamYear } from '@/lib/annales'
 import { LESSON_FLOOR } from '@/lib/mastery'
 import type { ExamProximity } from '@/lib/next-exam'
 import type { ModeQuestion } from '@/lib/defi-modes'
+import type { TraqueCard } from '@/lib/traque'
 import type { ExamPaper } from '@/lib/exam-papers'
 import type { Standing } from '@/lib/percentile'
 
@@ -31,7 +32,81 @@ export type ModeKey = 'programme' | 'jeu' | 'annales'
  */
 export type ModeIcon = 'manette'
 
-export type ModeTab = { key: ModeKey; label: string; icon?: ModeIcon }
+export type ModeTab = {
+  key: ModeKey
+  label: string
+  icon?: ModeIcon
+  /**
+   * Discipline filtrée par cet onglet, quand la matière en réunit plusieurs
+   * (« histoire » / « geographie »). `undefined` = l'onglet montre tout.
+   */
+  discipline?: string
+}
+
+// ---------------------------------------------------------------------------
+// Les matières dont le dossier a PLUSIEURS RAYONS.
+//
+// « Histoire-Géo » n'est pas une matière, c'en est DEUX dans un seul dossier —
+// deux cours, deux professeurs parfois, deux épreuves. Depuis que le programme
+// est rangé (colonne `theme`), la page aligne 15 chapitres dont l'élève ne
+// cherche jamais que la moitié. La colonne `chapters.discipline` (migration 247)
+// permet de couper la liste : l'onglet « Programme » se dédouble en « Histoire »
+// et « Géographie », et chacun ne montre que les siens.
+//
+// LE FRANÇAIS A ÉLARGI CETTE COLONNE, et c'est assumé : ses trois rayons ne sont
+// pas trois disciplines mais trois USAGES du même dossier — le « programme »
+// (les quatre objets d'étude et leurs œuvres au bac), les « fiches » (le rayon
+// des fiches de lecture, plus de deux cent cinquante œuvres qu'on vient chercher
+// une par une, jamais dans l'ordre) et la « grammaire » (les points de langue
+// interrogés à l'oral). Le besoin est exactement le même que pour l'histoire-géo
+// — couper une liste que personne ne parcourt en entier — et le mécanisme aussi,
+// jusqu'au compte du header et au CTA « Reprendre » recalculés par rayon. Une
+// colonne `section` en doublon de celle-ci n'aurait rien réglé de plus.
+//
+// Le nom affiché est ici, pas en base : la base stocke une clé stable et sans
+// accent, l'app décide comment l'écrire à l'élève.
+
+export const DISCIPLINE_LABELS: Record<string, string> = {
+  histoire: 'Histoire',
+  geographie: 'Géographie',
+  programme: 'Programme',
+  fiches: 'Fiches',
+  grammaire: 'Grammaire',
+}
+
+export function disciplineLabel(discipline: string): string {
+  return DISCIPLINE_LABELS[discipline] ?? discipline
+}
+
+/**
+ * Les disciplines présentes dans une matière, DANS L'ORDRE DU PROGRAMME (celui
+ * d'apparition des chapitres), sans doublon et sans les chapitres qui n'en
+ * portent pas.
+ *
+ * Renvoie un tableau VIDE quand il n'y en a qu'une (ou aucune) : une seule
+ * discipline ne se filtre pas, ce serait un onglet unique renommé.
+ */
+export function disciplinesOf(
+  chapters: { discipline?: string | null }[],
+): string[] {
+  const found: string[] = []
+  for (const chapter of chapters) {
+    const discipline = chapter.discipline || null
+    if (discipline && !found.includes(discipline)) found.push(discipline)
+  }
+  return found.length > 1 ? found : []
+}
+
+/**
+ * L'identifiant d'un onglet, tel qu'il circule dans l'état du composant et
+ * dans l'URL : « programme », « jeu », ou « programme:geographie ».
+ *
+ * Une clé seule ne suffit plus depuis que deux onglets peuvent partager la même
+ * (les deux disciplines sont deux onglets « programme »).
+ */
+export function tabId(tab: { key: ModeKey; discipline?: string }): string {
+  return tab.discipline ? `${tab.key}:${tab.discipline}` : tab.key
+}
 
 /**
  * Les onglets de la matière, selon la classe.
@@ -45,14 +120,27 @@ export type ModeTab = { key: ModeKey; label: string; icon?: ModeIcon }
  * le bandeau « À revoir » en tête du programme, et le CHAPITRE porte ses
  * propres erreurs dans ses tuiles — là où on décide quoi travailler.
  */
-export function modesFor(grade: string | null | undefined): ModeTab[] {
-  const tabs: ModeTab[] = [
-    // « Programme » plutôt que « Chapitres » : c'est le mot de l'élève et celui
-    // du BO — la liste ne dit pas un type d'objet, elle dit l'année à couvrir.
-    { key: 'programme', label: 'Programme' },
-    // La manette : c'est l'onglet qui se JOUE (boss, jeux de l'arène, défis).
-    { key: 'jeu', label: 'Mode de jeu', icon: 'manette' },
-  ]
+export function modesFor(
+  grade: string | null | undefined,
+  disciplines: string[] = [],
+): ModeTab[] {
+  const tabs: ModeTab[] =
+    disciplines.length > 1
+      ? // Un dossier à plusieurs rayons n'a pas UNE liste : l'histoire-géo en a
+        // deux (deux disciplines), le français trois (le programme, les fiches
+        // de lecture, la grammaire). L'onglet « Programme » laisse donc place à
+        // un onglet par rayon, dans l'ordre où les chapitres se présentent.
+        disciplines.map((discipline) => ({
+          key: 'programme' as const,
+          label: disciplineLabel(discipline),
+          discipline,
+        }))
+      : // « Programme » plutôt que « Chapitres » : c'est le mot de l'élève et
+        // celui du BO — la liste ne dit pas un type d'objet, elle dit l'année
+        // à couvrir.
+        [{ key: 'programme', label: 'Programme' }]
+  // La manette : c'est l'onglet qui se JOUE (boss, jeux de l'arène, défis).
+  tabs.push({ key: 'jeu', label: 'Mode de jeu', icon: 'manette' })
   if (isExamYear(grade)) tabs.push({ key: 'annales', label: 'Annales' })
   return tabs
 }
@@ -73,16 +161,33 @@ const LEGACY_MODE_ALIASES: Record<string, ModeKey> = {
   boss: 'jeu',
 }
 
+/**
+ * L'onglet à ouvrir d'après `?onglet=…`, rendu sous forme d'IDENTIFIANT
+ * (« jeu », « programme:geographie »).
+ *
+ * Trois formes acceptées : l'identifiant complet, une clé seule (`programme`
+ * sur une matière à deux disciplines ouvre la première d'entre elles), et les
+ * anciennes clés de format déjà partagées dans des liens.
+ * `undefined` = le premier onglet, c'est-à-dire le programme.
+ */
 export function modeFromParam(
   raw: string | undefined,
   modes: ModeTab[],
-): ModeKey | undefined {
+): string | undefined {
   if (!raw) return undefined
-  const key = modes.some((m) => m.key === raw)
+  // 1. l'identifiant complet, tel que la barre d'onglets l'écrit.
+  const exact = modes.find((m) => tabId(m) === raw)
+  if (exact) return tabId(exact)
+  // 2. une clé seule : on ouvre le PREMIER onglet qui la porte — sur une
+  //    matière à deux disciplines, `?onglet=programme` ouvre l'histoire.
+  const key = (['programme', 'jeu', 'annales'] as ModeKey[]).includes(
+    raw as ModeKey,
+  )
     ? (raw as ModeKey)
     : LEGACY_MODE_ALIASES[raw]
   // Un onglet que cette classe n'a pas (annales en 4e) ne s'ouvre pas.
-  return key && modes.some((m) => m.key === key) ? key : undefined
+  const tab = key ? modes.find((m) => m.key === key) : undefined
+  return tab ? tabId(tab) : undefined
 }
 
 // ---------------------------------------------------------------------------
@@ -256,15 +361,23 @@ export type ChapterRow = {
   minutes: number | null
   /** Axe / thème du programme (migration 234), `null` si la base ne l'a pas. */
   theme: string | null
+  /**
+   * Discipline du chapitre (migration 247) dans une matière qui en réunit
+   * plusieurs, `null` sinon. C'est elle que filtrent les onglets Histoire /
+   * Géographie.
+   */
+  discipline: string | null
 }
 
 // ---------------------------------------------------------------------------
 // Regroupement par axe du programme.
 //
 // 28 chapitres à plat, c'est une liste qu'on ne relit pas. Les programmes sont
-// déjà écrits en axes (les 8 axes d'anglais Tle, les thèmes d'histoire…) : on
-// leur rend leurs sections. Sans la colonne `theme` en base, un seul groupe
-// anonyme — l'affichage à plat d'avant, sans régression.
+// déjà écrits en sections (les 4 chapitres de langue de l'anglais Tle, les
+// thèmes d'histoire…) : on leur rend leurs sections. Le groupe porte alors le
+// mot « chapitre » (« Chapitre 2 · Le groupe verbal ») et ses lignes deviennent
+// des fiches — cf. `chapterUnit`. Sans la colonne `theme` en base, un seul
+// groupe anonyme : l'affichage à plat d'avant, sans régression.
 
 export type ChapterGroup = {
   /** `null` = groupe implicite, rendu sans en-tête (aucun thème en base). */
@@ -295,6 +408,73 @@ export function groupChaptersByTheme(chapters: ChapterRow[]): ChapterGroup[] {
   return groups
 }
 
+/**
+ * Le mot qui nomme UNE LIGNE de la liste du programme.
+ *
+ * Sans thème en base, une ligne EST un chapitre : « 0/28 chapitres ». Mais dès
+ * que le programme est rangé (colonne `theme`, migration 234), ce sont les
+ * GROUPES qui portent les chapitres du programme — « Chapitre 2 · Le groupe
+ * verbal » — et chaque ligne dessous n'en est qu'une fiche. Continuer à compter
+ * « 24 chapitres » en tête de page contredirait alors les « Chapitre 1 à 4 »
+ * affichés juste en dessous.
+ */
+export function chapterUnit(
+  chapters: { theme: string | null }[],
+): 'chapitre' | 'fiche' {
+  return chapters.some((c) => c.theme) ? 'fiche' : 'chapitre'
+}
+
+/**
+ * LE CATALOGUE EN CACHE EST-IL PÉRIMÉ ?
+ *
+ * La page matière lit le programme dans un cache serveur de 300 s, puis relit
+ * FRAÎCHEMENT les axes des mêmes chapitres (une requête légère). Les deux
+ * listes portent sur la même table, la même matière et le même niveau : les
+ * comparer suffit à savoir ce que vaut le cache.
+ *
+ * - un chapitre du cache absent de la liste fraîche = un FANTÔME, supprimé en
+ *   base ; on le retire de l'affichage ;
+ * - un chapitre de la liste fraîche absent du cache = le cache ne connaît pas
+ *   un chapitre qui EXISTE : il est périmé, et le filtrer ne suffit plus. C'est
+ *   ce qui est arrivé à l'allemand de Terminale le 20/08/2026 : la migration
+ *   249 a supprimé les 3 fiches d'avant et posé 36 fiches neuves ; le cache
+ *   servait encore les 3 disparues, aucune ne survivait au filtre, et la page
+ *   annonçait « Le programme d'Allemand en Tle arrive bientôt » sur un dossier
+ *   plein. Dans ce cas la page relit le programme sans cache (`getProgrammeFresh`).
+ *
+ * Le second cas est le seul qui coûte une requête de plus, et il ne dure que le
+ * temps du TTL après une migration de contenu.
+ */
+export function catalogIsStale(
+  cached: { id: string }[],
+  fresh: { id: string }[],
+): boolean {
+  const connus = new Set(cached.map((c) => c.id))
+  return fresh.some((c) => !connus.has(c.id))
+}
+
+/**
+ * Les matières dont la liste NE SE NUMÉROTE PAS.
+ *
+ * « Chapitre 1 · La conscience », « Chapitre 2 · L'inconscient » : en
+ * philosophie, ce numéro est un mensonge. Le programme est une LISTE DE
+ * NOTIONS, sans ordre imposé — chaque professeur les traite dans l'ordre qu'il
+ * veut, et l'élève qui commence par « Le devoir » n'est pas en retard de sept
+ * chapitres. Le numéro laisse pourtant croire à une progression, et il occupe
+ * la place que la notion devrait avoir : c'est elle qu'on doit lire d'abord.
+ *
+ * La liste reste dans l'ordre où la base la sert (les notions du BO), et la
+ * pastille de gauche garde son chiffre — c'est un repère de position dans
+ * l'écran et le porte-drapeau de l'état « terminé », pas une promesse d'ordre.
+ * Seul le préfixe du titre s'en va.
+ */
+const MATIERES_SANS_ORDRE = new Set(['philosophie'])
+
+/** La ligne doit-elle s'annoncer « Chapitre N · … » ? */
+export function chaptersAreNumbered(slug: string): boolean {
+  return !MATIERES_SANS_ORDRE.has(slug)
+}
+
 /** Le groupe à ouvrir à l'arrivée : celui qui porte le chapitre à reprendre. */
 export function openGroupIndex(
   groups: ChapterGroup[],
@@ -308,7 +488,66 @@ export function openGroupIndex(
 }
 
 // ---------------------------------------------------------------------------
-// Onglet « S'entraîner » : un chapitre par ligne, ses formats en pastilles.
+// LA RECHERCHE DANS LA LISTE.
+//
+// Le rayon des fiches de lecture du français aligne 260 œuvres sous un seul
+// chapitre : personne ne descend jusqu'à « Zazie dans le métro » à la molette.
+// Et on ne vient jamais y lire la liste — on vient chercher UNE œuvre, celle
+// que le professeur a donnée. Un champ de recherche remplace ce scroll.
+//
+// Il n'apparaît qu'au-delà de `SEARCH_MIN_CHAPTERS` lignes : sur les six
+// chapitres d'un dossier de physique, il n'y a rien à chercher, et le champ ne
+// serait qu'une case de plus avant la liste.
+
+/** À partir de combien de lignes la liste mérite son champ de recherche. */
+export const SEARCH_MIN_CHAPTERS = 12
+
+/**
+ * Forme comparable d'un texte : sans accent, sans casse, sans ponctuation.
+ *
+ * L'élève tape « cœur simple » ou « coeur simple », « Art » ou « art », jamais
+ * « « Un cœur simple », Trois Contes, Gustave Flaubert ». Les ligatures sont
+ * défaites AVANT la décomposition Unicode, qui ne les touche pas (œ n'est pas
+ * un o accentué), et tout ce qui n'est ni lettre ni chiffre devient une espace
+ * — c'est ce qui fait tomber les guillemets et les apostrophes des titres.
+ */
+export function searchKey(text: string): string {
+  return text
+    .replace(/œ/gi, 'oe')
+    .replace(/æ/gi, 'ae')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+}
+
+/**
+ * Les lignes qui répondent à une recherche.
+ *
+ * Chaque mot tapé doit se retrouver dans le titre OU dans le chapitre qui la
+ * coiffe — « rimbaud bateau » trouve « Le Bateau ivre », Arthur Rimbaud, et
+ * « lecture » ramène tout le chapitre « Fiches de lecture ». Une recherche vide
+ * rend la liste entière : le champ ne cache jamais rien tant qu'il est vide.
+ */
+export function matchChapters<T extends { title: string; theme: string | null }>(
+  chapters: T[],
+  query: string,
+): T[] {
+  const mots = searchKey(query).split(' ').filter(Boolean)
+  if (mots.length === 0) return chapters
+  return chapters.filter((c) => {
+    const foin = searchKey(`${c.title} ${c.theme ?? ''}`)
+    return mots.every((mot) => foin.includes(mot))
+  })
+}
+
+// ---------------------------------------------------------------------------
+// Les formats d'un chapitre, en pastilles (Cours, Quiz, Flashcards, Carte
+// mentale, Défi, Mes erreurs). Ils se posent LÀ OÙ on choisit quoi travailler :
+// dans le chapitre et en pied de cours. L'onglet « Mode de jeu » en a porté une
+// liste, chapitre par chapitre — c'était le Programme redit une deuxième fois,
+// et elle a été retirée.
 
 export type SupportKind =
   | 'cours'
@@ -327,7 +566,7 @@ export type SupportChip = {
    * Version COURTE de l'état, pour la pastille posée sous l'icône des tuiles
    * carrées (« 7/10 », « --/10 », « 4 à revoir »). `null` = rien à dire : la
    * tuile porte alors juste son icône, ou la coche si c'est fait. Le `meta`
-   * long, lui, sert la liste de l'onglet « S'entraîner », qui a la place.
+   * long, lui, sert les tuiles en pleine largeur, qui ont la place.
    */
   badge: string | null
   href: string
@@ -341,16 +580,14 @@ export const SUPPORT_LABELS: Record<SupportKind, string> = {
   cours: 'Cours',
   quiz: 'Quiz',
   flashcards: 'Flashcards',
-  carte: 'Carte mentale',
+  // « Fiches » et non « Carte mentale » : c'est le mot que l'élève emploie pour
+  // les fiches de révision d'un chapitre — celui qu'il dit à voix haute quand
+  // il demande « t'as les fiches ? ». SEULE SOURCE du nom : il change ici pour
+  // l'écran de chapitre, le pied de cours, l'onglet Mode de jeu et la fiche
+  // dépliée à la fois. La page, elle, garde son titre propre.
+  carte: 'Fiches',
   defi: 'Défi',
   erreurs: 'Mes erreurs',
-}
-
-export type TrainingRow = {
-  chapterId: string
-  position: number
-  title: string
-  chips: SupportChip[]
 }
 
 // ---------------------------------------------------------------------------
@@ -440,6 +677,12 @@ export type SubjectTemplateData = {
    */
   standing: Standing | null
   progress: SubjectProgress
+  /**
+   * La progression de CHAQUE discipline, pour les matières qui en réunissent
+   * deux : le header d'un onglet « Géographie » qui compterait les 53 fiches du
+   * dossier mentirait sur ce que l'onglet montre. Vide partout ailleurs.
+   */
+  progressByDiscipline: Record<string, SubjectProgress>
   /** Le chapitre mis en avant (« Reprendre » / « Commencer »), s'il en reste. */
   resume: ResumeCta | null
   /** Le bandeau « Examen blanc » a-t-il gagné sa place en tête de page ? */
@@ -450,11 +693,15 @@ export type SubjectTemplateData = {
   gems: number
   streak: number
   chapters: ChapterRow[]
-  /** Onglet « S'entraîner » : un chapitre par ligne, ses formats en pastilles. */
-  training: TrainingRow[]
   // Onglet « Boss » : pool de questions 100 % matière pour affronter le boss
   // de la matière (le même de la 6e à la Terminale — bossForSubject côté client).
   bossPool: ModeQuestion[]
+  /**
+   * La carte du gardien de la matière — sa jauge de traque (migration 212).
+   * `null` quand elle est illisible : la page n'affiche alors pas d'écusson et
+   * le billet du gardien garde sa forme d'avant, toujours ouverte.
+   */
+  gardien: TraqueCard | null
   /**
    * Annales de la matière à ce niveau (migrations 236/237). Vide tant que les
    * migrations ne sont pas jouées : l'onglet retombe alors sur l'épreuve

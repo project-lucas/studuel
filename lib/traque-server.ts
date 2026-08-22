@@ -265,6 +265,39 @@ export async function fetchGauges(
 }
 
 /**
+ * La carte du gardien d'UNE matière — celle de sa page.
+ *
+ * Distincte de `fetchTraqueBoard` sur un point : le plateau de l'arène ÉCARTE
+ * les matières qui retombent sur Nox (le filet de sécurité), pour ne pas
+ * afficher dix fois la même carte. Ici on veut la carte de CETTE matière quoi
+ * qu'il arrive : sa page montre déjà son gardien, et un dossier sans écusson
+ * pendant que le voisin en a un se lirait comme un bug.
+ *
+ * Renvoie null quand les jauges sont illisibles (migration 212 pas exécutée,
+ * visiteur) : la page matière n'affiche alors pas d'écusson, et le billet du
+ * gardien garde sa forme d'avant. Rien ne casse.
+ */
+export async function fetchGardienCard(
+  supabase: SupabaseClient,
+  userId: string,
+  subject: { name: string; slug: string },
+  dayKey: string = toDayKey(new Date()),
+  nowMs: number = Date.now(),
+): Promise<TraqueCard | null> {
+  const gauges = await fetchGauges(supabase, userId)
+  if (gauges === null) return null
+  const boss = bossForSubject(subject.name)
+  return traqueCard(
+    gauges.get(boss.id) ?? emptyGauge(boss.id),
+    boss,
+    subject.name,
+    dayKey,
+    nowMs,
+    subject.slug,
+  )
+}
+
+/**
  * La feuille Boss, prête à afficher : une carte par matière suivie par l'élève,
  * triée (ce qui se joue maintenant d'abord). Les matières sans gardien
  * identifiable retombent sur Nox — on les écarte plutôt que d'afficher dix

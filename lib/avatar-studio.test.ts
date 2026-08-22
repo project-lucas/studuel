@@ -32,21 +32,20 @@ describe('applyItem', () => {
     expect(DEFAULT_AVATAR.skinColor).toBe('edb98a')
   })
 
-  it('décompose une tenue en coupe + couleur', () => {
+  it('la tenue est une couleur de haut', () => {
     const next = applyItem(
       DEFAULT_AVATAR,
-      item({ category: 'outfit', assetKey: 'hoodie|5199e4' }),
+      item({ category: 'outfit', assetKey: '5199e4' }),
     )
-    expect(next.clothing).toBe('hoodie')
-    expect(next.clothesColor).toBe('5199e4')
+    expect(next.clothingColor).toBe('5199e4')
   })
 
-  it('aligne la couleur de barbe sur la couleur de cheveux', () => {
+  it('la coiffure porte aussi les couvre-chefs', () => {
     const next = applyItem(
       DEFAULT_AVATAR,
-      item({ category: 'hair_color', assetKey: '2c1b18' }),
+      item({ category: 'hair_style', assetKey: 'hijab' }),
     )
-    expect(next.facialHairColor).toBe('2c1b18')
+    expect(next.head).toBe('hijab')
   })
 
   it("retire l'équipement déjà porté (toggle)", () => {
@@ -133,6 +132,10 @@ describe('normalizeCatalog', () => {
       row({ id: 'bad-cat', category: 'chapeau' }),
       row({ id: 'bad-key', asset_key: 'zzzzzz' }),
       row({ id: 'bad-outfit', category: 'outfit', asset_key: 'hoodie|zz' }),
+      row({ id: 'bad-head', category: 'hair_style', asset_key: 'shortFlat' }),
+      // Open Peeps ne sait pas teindre les cheveux : la catégorie a été retirée
+      // du vestiaire, ses lignes restées en base doivent être ignorées.
+      row({ id: 'chev-roux', category: 'hair_color', asset_key: 'c93305' }),
     ])
     expect(items.map((i) => i.id)).toEqual(['ok'])
   })
@@ -162,11 +165,11 @@ describe('normalizeCatalog', () => {
 })
 
 describe('fallbackCatalog', () => {
-  it('couvre les 6 catégories, tout gratuit', () => {
+  it('couvre les 5 catégories, tout gratuit', () => {
     const catalog = fallbackCatalog()
     expect(catalog.length).toBeGreaterThan(0)
     expect(catalog.every(isFreeItem)).toBe(true)
-    for (const cat of ['body_skin', 'hair_style', 'hair_color', 'outfit', 'equipment', 'banner'] as const)
+    for (const cat of ['body_skin', 'hair_style', 'outfit', 'equipment', 'banner'] as const)
       expect(catalogByCategory(catalog, cat).length).toBeGreaterThan(0)
   })
 

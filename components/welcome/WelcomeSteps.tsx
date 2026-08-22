@@ -2,7 +2,8 @@
 
 import type { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
-import { GRADE_LEVELS, type Subject } from '@/lib/types'
+import { type Subject } from '@/lib/types'
+import { GRADE_CYCLES } from '@/lib/grades'
 import {
   DAILY_GOALS,
   GOALS,
@@ -309,17 +310,29 @@ export function GradeStep({
         subtitle="Pour te proposer le bon programme."
       />
       <div className="pt-6">
-        <OptionGroup
-          label="Tu es en quelle classe"
-          className="grid grid-cols-2 gap-[11px]"
-        >
-          {GRADE_LEVELS.map((g) => (
-            <GradeCell
-              key={g}
-              label={GRADE_LABELS[g] ?? g}
-              selected={answers.grade === g}
-              onPick={() => onPick(g)}
-            />
+        {/* Groupé par cycle. À sept classes, une grille à plat se lisait ; à
+            quatorze — le primaire et la voie technologique sont arrivés — elle
+            ne dit plus rien de la structure, et un CE1 doit parcourir tout le
+            lycée pour se trouver. Un seul OptionGroup enveloppe les trois
+            blocs : il retrouve ses radios en profondeur, la navigation au
+            clavier continue donc de traverser les cycles d'une traite. */}
+        <OptionGroup label="Tu es en quelle classe" className="flex flex-col gap-5">
+          {GRADE_CYCLES.map((cycle) => (
+            <div key={cycle.id} className="flex flex-col gap-[11px]">
+              <h3 className="text-xs font-extrabold tracking-wide text-muted-foreground uppercase">
+                {cycle.label}
+              </h3>
+              <div className="grid grid-cols-2 gap-[11px]">
+                {cycle.grades.map((g) => (
+                  <GradeCell
+                    key={g}
+                    label={GRADE_LABELS[g] ?? g}
+                    selected={answers.grade === g}
+                    onPick={() => onPick(g)}
+                  />
+                ))}
+              </div>
+            </div>
           ))}
         </OptionGroup>
       </div>

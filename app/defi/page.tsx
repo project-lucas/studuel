@@ -1,9 +1,12 @@
 import { redirect } from 'next/navigation'
+import { contentLevelFor } from '@/lib/grades'
 import { PREMIUM_TIERS } from '@/lib/gems'
 import type { Tier } from '@/lib/subscription'
 import ModesSheet from '@/components/defi/ModesSheet'
 import CombatButton from '@/components/defi/CombatButton'
-import SubjectDial from '@/components/defi/SubjectDial'
+import SubjectPlate from '@/components/defi/SubjectPlate'
+import CombatMeta from '@/components/defi/CombatMeta'
+import ArenaActionBar from '@/components/defi/ArenaActionBar'
 import TrophyRoadSheet from '@/components/defi/TrophyRoadSheet'
 import DuelSubjectProvider from '@/components/defi/DuelSubjectProvider'
 import { buildDuelBoard } from '@/lib/defi/duel-board'
@@ -82,6 +85,7 @@ import { toDayKey } from '@/lib/streak'
 import {
   normalizeRanking,
   normalizeSchool,
+  activeSchoolId,
   schoolLevelForGrade,
   rankHeadline,
   ordinalFr,
@@ -132,6 +136,7 @@ type DefiProfileRow = {
   full_name: string | null
   grade_level: string | null
   trophies: number | null
+  primaire_school_id: string | null
   college_school_id: string | null
   lycee_school_id: string | null
   // Depuis que l'arène est la page d'accueil de l'app (app/page.tsx), c'est ici
@@ -312,6 +317,7 @@ export default async function DefiPage() {
         'full_name',
         'grade_level',
         'trophies',
+        'primaire_school_id',
         'college_school_id',
         'lycee_school_id',
         'profile_type',
@@ -379,10 +385,7 @@ export default async function DefiPage() {
     const firstName = String(profile.full_name ?? '').split(' ')[0] || 'Moi'
     heroName = firstName
     const level = schoolLevelForGrade(profile.grade_level ?? null)
-    const schoolId =
-      level === 'college'
-        ? profile.college_school_id
-        : profile.lycee_school_id
+    const schoolId = activeSchoolId(profile, profile.grade_level ?? null)
 
     // --- VAGUE 2 : ce qui dépend VRAIMENT du cycle et de l'école -------------
     // Quatre requêtes, pas quinze. Chacune reste tolérante à l'absence de sa
@@ -428,7 +431,7 @@ export default async function DefiPage() {
           ? supabase
               .from('quizzes')
               .select('subject')
-              .eq('grade_level', profile.grade_level)
+              .eq('grade_level', contentLevelFor(profile.grade_level))
           : Promise.resolve({ data: null }),
         // Chapitres de la classe (cache serveur, gratuit) : ils rattachent une
         // maîtrise de chapitre à SA matière, donc disent quelles matières sont
@@ -924,28 +927,36 @@ export default async function DefiPage() {
                 la tuile Boss du rail gauche, les quêtes dans la tuile Quêtes —
                 chacune a déjà sa porte, et sa pastille pour dire ce qui attend. */}
 
-            {/* LA RANGÉE DE COMBAT, façon home Clash Royale : COMBAT en or au
-                centre, encadré par ses deux satellites carrés et sombres. Une
-                seule ligne, un seul objet brillant.
+            {/* LA BARRE D'ACTION, façon home Clash Royale : COMBAT en or au
+                centre, encadré par ses deux plaques sombres. Une seule ligne, un
+                seul objet brillant — et depuis cette passe, une seule FAMILLE de
+                formes : trois plaques rectangulaires de même hauteur, de même
+                rayon et de même ombre portée. Ce qui distingue le centre est sa
+                couleur et sa largeur, jamais sa profondeur.
+
+                Au-dessus, la ligne d'information (CombatMeta) porte ce qui
+                vivait DANS le bouton : la matière courante, la contribution de
+                clan et sa jauge. Elle est calée sur la largeur exacte du bouton
+                — elle documente celui-là, pas la barre entière — et ne porte
+                aucun relief : sur cet écran, le biseau dit « ceci se touche ».
 
                 Le flanc droit ne mène plus à la Route des trophées (partie dans
-                le HUD) mais porte la ROULETTE DE MATIÈRES. C'est le seul objet
-                dont le bouton central a besoin : COMBAT lance le duel de la
-                matière affichée, et rien d'autre sur cette ligne ne demande à
-                être lu. Le module de rang qui occupait la hauteur juste au-dessus
-                a disparu du même geste — il disait, avec un blason, ce que la
-                Route dit avec des chiffres.
-
-                Modes garde le flanc gauche et ses modes fun de l'Arène. */}
-            <div className="flex items-stretch gap-2">
-              <ModesSheet todayKey={todayKey} liveDuel={!!user} />
-              <CombatButton
-                reason={duelReason}
-                onlineFriendName={onlineFriendName}
-                goal={goal}
-              />
-              <SubjectDial />
-            </div>
+                le HUD) : il porte la MATIÈRE, et un tap ouvre la feuille de
+                sélection. Modes garde le flanc gauche. */}
+            <ArenaActionBar
+              meta={
+                <CombatMeta goal={goal} onlineFriendName={onlineFriendName} />
+              }
+              left={<ModesSheet todayKey={todayKey} liveDuel={!!user} />}
+              center={
+                <CombatButton
+                  reason={duelReason}
+                  onlineFriendName={onlineFriendName}
+                  goal={goal}
+                />
+              }
+              right={<SubjectPlate />}
+            />
           </div>
         </div>
       </DuelSubjectProvider>

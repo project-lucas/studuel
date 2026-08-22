@@ -76,12 +76,33 @@ describe('vignettes de matières', () => {
     }
   })
 
+  it('les matières qui EMPRUNTENT un dessin pointent un fichier réel', () => {
+    // Maths expertes, SNT, HLP… n'ont pas de dessin en propre : elles portent
+    // celui de leur grande sœur (cf. VIGNETTE_ALIASES). L'alias doit désigner
+    // une matière RÉELLEMENT illustrée, sinon il ne fait que déplacer le trou.
+    for (const [slug, attendu] of [
+      ['maths-expertes', 'maths'],
+      ['maths-complementaires', 'maths'],
+      ['snt', 'nsi'],
+      ['si', 'technologie'],
+      ['sciences-technologie', 'technologie'],
+      ['hlp', 'philosophie'],
+      ['llcer-anglais', 'anglais'],
+      ['finances-personnelles', 'economie'],
+    ]) {
+      const v = subjectVignette(slug)
+      expect(v, `${slug} : vignette non déclarée`).toBe(
+        `/images/matieres/vignettes/${attendu}.webp`,
+      )
+      expect(assetExists(v!), `${slug} : ${v} absent du disque`).toBe(true)
+    }
+  })
+
   it('ne déclare pas de vignette pour une matière qui n’en a pas', () => {
-    // Repli médaillon assumé — cf. docs/nano-banana-prompts.md (P3). EMC est
-    // passée illustrée avec le lot v3 ; ces trois-là attendent toujours leur
-    // dessin.
-    expect(subjectVignette('finances-personnelles')).toBeUndefined()
-    expect(subjectVignette('maths-expertes')).toBeUndefined()
+    // Repli médaillon assumé — cf. docs/nano-banana-prompts.md (P3). Le Grand
+    // oral est la dernière matière sans dessin : aucune sœur ne peut lui en
+    // prêter un (ce n'est ni une matière de lettres ni une science).
+    expect(subjectVignette('grand-oral')).toBeUndefined()
     expect(subjectVignette('slug-inconnu')).toBeUndefined()
   })
 

@@ -1,6 +1,7 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
+import { isSchoolLevel } from '@/lib/clan'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
@@ -270,7 +271,10 @@ export async function searchSchools(
   level: string,
 ): Promise<import('@/lib/clan').School[]> {
   const q = typeof query === 'string' ? query.trim() : ''
-  if (q.length < 2 || (level !== 'college' && level !== 'lycee')) return []
+  // `isSchoolLevel` plutôt que deux comparaisons en dur : le jour où un
+  // troisième cycle est apparu (l'école primaire), la liste écrite ici l'aurait
+  // silencieusement refusé — la recherche d'école ne renvoyant jamais rien.
+  if (q.length < 2 || !isSchoolLevel(level)) return []
   const supabase = await createClient()
   const user = await getCurrentUser()
   if (!user) return []

@@ -1980,6 +1980,20 @@ a:active > .arena-menu-row {
 .rev-tile:hover {
   background: oklch(0.955 0.032 85);
 }
+/* La barre de recherche d'un chapitre (ChapterList) : elle se déplie SOUS
+   l'en-tête, dans le bloc. Elle descend de quelques pixels en apparaissant —
+   assez pour qu'on la voie sortir de la ligne du titre, trop court pour qu'on
+   attende. Pas d'animation de hauteur : la liste dessous ne doit pas trembler
+   à chaque image. */
+@keyframes rev-search-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+.rev-search-in {
+  animation: rev-search-in 0.2s var(--ease) backwards;
+}
 
 /* --- Onglet Moi : cartes « jouet » sur fond crème (maquette de Lucas, ---------
    2026-07-11, v2). Bandeau violet en carte arrondie avec la grande flamme de
@@ -1995,8 +2009,14 @@ a:active > .arena-menu-row {
 .moi-braise {
   background: oklch(0.85 0.17 88 / 0.85);
 }
+/* LE FOND DE L'ONGLET, C'EST LE CRÈME DE L'APP — plus une nuance à lui.
+   `oklch(0.945 0.018 55)` était sensiblement plus clair que `--background`
+   (#ede7d6) : /moi était le seul onglet dont le fond tirait vers le blanc, et
+   c'est ce qui faisait lire ses cartes blanches comme des rectangles posés sur
+   du vide plutôt que comme des objets posés sur une table. Une teinte locale ne
+   se justifie que si elle DIT quelque chose ; celle-ci ne disait rien. */
 .moi-bg {
-  background: oklch(0.945 0.018 55);
+  background: var(--background);
 }
 /* Halo ambré derrière la flamme de niveau. */
 .moi-glow {
@@ -2008,17 +2028,20 @@ a:active > .arena-menu-row {
 .moi-track {
   background: oklch(0.93 0.022 50);
 }
-/* La carte « jouet » : liseré violet léger + socle d'ombre dure violette. */
+/* La carte « jouet » : liseré violet léger + socle d'ombre dure violette.
+   Recalée sur la teinte de la marque (295) comme la carte de joueur : le liseré
+   tirait sur le magenta (305) et, sous une carte de joueur devenue franchement
+   violette, il se lisait comme une TROISIÈME couleur sur le même écran. */
 .moi-card {
-  border: 2px solid oklch(0.62 0.14 305 / 0.35);
+  border: 2px solid oklch(0.62 0.14 296 / 0.32);
   box-shadow:
-    0 5px 0 oklch(0.45 0.2 305 / 0.4),
-    0 16px 24px -16px oklch(0.4 0.18 310 / 0.3);
+    0 5px 0 oklch(0.45 0.19 295 / 0.34),
+    0 16px 24px -16px oklch(0.4 0.18 296 / 0.28);
 }
 /* Jeton de jour validé (carte « 7 jours ») : violet vif, halo assorti. */
 .moi-token-done {
-  background: linear-gradient(160deg, oklch(0.62 0.24 312), oklch(0.48 0.26 308));
-  box-shadow: 0 0 0 3px oklch(0.62 0.24 315 / 0.3);
+  background: linear-gradient(160deg, oklch(0.6 0.23 300), oklch(0.47 0.24 295));
+  box-shadow: 0 0 0 3px oklch(0.6 0.23 300 / 0.3);
 }
 /* --- Onglet Moi v8 : le PANNEAU d'identité -----------------------------------
    L'écran était une pile de six cartes blanches de même taille, de même rayon,
@@ -2092,6 +2115,118 @@ a:active > .arena-menu-row {
     animation: none;
     stroke-dasharray: none;
   }
+}
+
+/* --- Onglet Moi v9 : LA CARTE DE JOUEUR --------------------------------------
+   Le panneau d'identité (v8) était une surface violette qui portait un avatar
+   et trois chiffres. La carte porte en plus une BANNIÈRE illustrée choisie par
+   l'élève : le fond violet ne peut donc plus être le sujet, il devient le
+   socle sur lequel la bannière est posée. Même dégradé que `.moi-panneau`,
+   simplement plus sombre en bas — c'est sous cette partie-là que vivent le
+   pseudo, les couronnes et le panneau d'édition, tous en blanc. */
+/* UN SEUL VIOLET, DU BORD HAUT JUSQU'À LA PLAQUE (v10).
+   La carte affichait DEUX violets superposés, et la couture entre eux était
+   visible en travers de l'écran :
+
+     • la bannière peignait son dégradé de repli `#4c1d95 → #7c3aed`
+       (lib/profile-banners) — un violet BLEUTÉ, teinte ≈ 293 ;
+     • la carte peignait le sien, teinte 314 — un violet MAGENTA.
+
+   Deux familles de couleur, séparées par un voile noir. Aucun dégradé, aussi
+   soigné soit-il, ne rattrape ça : ce n'était pas un problème de dosage mais
+   d'empilement. Le repli de la bannière est donc supprimé côté carte
+   (`withGradient={false}`) et c'est CE dégradé-ci, et lui seul, qui court du
+   bord haut de l'écran jusqu'à la plaque blanche.
+
+   Il est calé sur la teinte de la marque (`--primary` #7a3fe0 ≈ 295) au lieu du
+   314 magenta, et il est MONOTONE — clair en haut, profond en bas, une seule
+   source de lumière en haut à gauche. C'est ce qui le rend insensible à la
+   hauteur de la carte : quelle que soit la tranche qu'on en voie (elle change
+   avec le nombre de matières et l'ouverture du panneau d'édition), elle a
+   toujours un dessus plus clair que son dessous. Un dégradé qui remonte au
+   milieu, lui, finit toujours par montrer une bande. */
+.moi-carte {
+  background:
+    radial-gradient(105% 62% at 14% -6%, oklch(0.58 0.22 301 / 0.7), transparent 62%),
+    radial-gradient(58% 26% at 22% 33%, oklch(0.56 0.21 299 / 0.38), transparent 72%),
+    linear-gradient(
+      180deg,
+      oklch(0.45 0.21 297) 0%,
+      oklch(0.38 0.19 295) 52%,
+      oklch(0.28 0.13 293) 100%
+    );
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 0.18),
+    0 18px 34px -22px oklch(0.4 0.18 296 / 0.75);
+}
+
+/* LE PIED DE LA CARTE DE JOUEUR — la plaque blanche des chiffres, ENCASTRÉE
+   dans le violet plutôt que posée dessus. Une simple bande blanche collée sous
+   la carte se lisait comme une seconde carte empilée, c'est-à-dire exactement
+   ce que la fusion vient de supprimer. L'ombre interne du haut la creuse d'un
+   cran et le filet clair fait la lèvre du logement : la carte n'a plus qu'un
+   seul volume, à deux matières. */
+.moi-carte-socle {
+  box-shadow:
+    inset 0 8px 12px -6px oklch(0.24 0.12 294 / 0.55),
+    inset 0 1px 0 oklch(1 0 0 / 0.6);
+}
+
+/* LES PASTILLES D'ICÔNE DE « MES CHIFFRES » (components/moi/ChiffreCell.tsx).
+   Trois teintes, pas six : la flamme pour la série, le violet pour le travail,
+   l'or pour l'arène — exactement les familles que le bloc raconte déjà. Elles
+   sont dérivées des tokens (règle du projet : pas de hex en dur hors la flamme
+   de série), et le fond est un lavis très clair : la plaque doit rester blanche
+   et lisible, la couleur ne sert qu'à donner une porte d'entrée à l'œil. */
+.moi-chiffre-pastille {
+  transition: transform 0.12s ease;
+}
+.moi-chiffre-pastille--travail {
+  background: color-mix(in oklch, var(--primary), white 88%);
+  color: var(--primary);
+}
+/* L'or pur (#f5b722) est illisible en encre sur blanc à 16 px : on l'assombrit
+   pour le trait et on ne garde le jaune franc que dans le fond. */
+.moi-chiffre-pastille--arene {
+  background: color-mix(in oklch, var(--highlight), white 84%);
+  color: color-mix(in oklch, var(--highlight), black 38%);
+}
+/* La série ne porte pas d'icône de trait mais l'image de la flamme : la
+   pastille n'est là que pour lui donner son halo ambré. */
+.moi-chiffre-pastille--serie {
+  background: color-mix(in oklch, var(--highlight), white 82%);
+}
+/* Série à zéro : le halo s'éteint avec la flamme. */
+.moi-chiffre-pastille--eteinte {
+  background: var(--muted);
+}
+
+/* La seule cellule cliquable du bloc (les notes). Au repos elle ne se distingue
+   pas des cinq autres — une cellule surlignée en permanence au milieu de
+   chiffres aurait fait lire les cinq autres comme éteintes. */
+.moi-chiffre-bouton:hover {
+  background: color-mix(in oklch, var(--primary), white 95%);
+}
+.moi-chiffre-bouton:hover .moi-chiffre-pastille {
+  transform: scale(1.08);
+}
+
+/* Une ligne de la liste des couronnes. Pas de fond au repos : la carte blanche
+   qui la porte suffit, et huit lignes teintées feraient un tableau rayé. */
+.moi-couronne-ligne:hover {
+  background: oklch(0.965 0.02 300);
+}
+.moi-couronne-ligne:active {
+  background: oklch(0.945 0.03 300);
+}
+
+/* La jauge d'une couronne GAGNÉE : violet plein, la couleur de l'action et de
+   la marque. Le métal, lui, est déjà dit par la couronne à gauche — le répéter
+   dans la barre (une barre bronze, une barre or…) aurait donné quatre couleurs
+   de jauge pour une seule idée, et deux d'entre elles se seraient confondues
+   avec le jaune de la récompense. */
+.moi-couronne-jauge {
+  background: linear-gradient(90deg, oklch(0.6 0.23 300), oklch(0.5 0.24 295));
 }
 
 /* La bande « matière du moment » : le seul bloc de l'écran qui sort du cadre et
@@ -2838,17 +2973,158 @@ a:active > .arena-menu-row {
   color: var(--foreground);
 }
 
-/* Effet « tuile de flanc » : les deux carrés qui ENCADRENT le bouton de combat
-   (Classé à gauche, Modes à droite), façon home Clash Royale. Navy-violet
-   profond, liseré violet clair, ombre dure — volontairement SOMBRE et sans or :
-   l'or n'appartient qu'au bouton du milieu, sinon la rangée n'a plus de roi. */
-.arena-flank {
-  background: linear-gradient(180deg, #3a2a6e 0%, #241b47 100%);
-  border: 2px solid rgba(205, 180, 247, 0.55);
+/* =============================================================================
+   LA BARRE D'ACTION DE L'ARÈNE — [MODES] [COMBAT] [MATIÈRE]
+
+   UNE SEULE FAMILLE DE GÉOMÉTRIE. Avant, la rangée mélangeait trois grammaires
+   dans trois cadres : une gemme ronde à gauche, un tambour cylindrique à
+   droite, une plaque dorée chargée de pastilles au centre. Trois objets ronds
+   dans trois boîtes, plus deux chevrons, plus deux cartouches — l'œil ne
+   pouvait pas décider où était le bouton. Les trois sont désormais la MÊME
+   plaque biseautée : même rayon, même contour, même ombre portée, donc la même
+   élévation perçue. Ce qui distingue COMBAT n'est plus une profondeur ni une
+   forme, c'est sa couleur et sa largeur — les deux seules variables qu'un œil
+   lit sans les analyser.
+
+   L'or reste le roi et devient EXCLUSIF : il n'y a plus un gramme de doré
+   ailleurs sur l'écran d'action (les liserés or des gemmes et des médaillons
+   sont partis avec eux). Un seul objet doré = un seul appel.
+   ========================================================================== */
+
+/* LE BISEAU COMMUN — le mixin que portent les trois plaques, sans exception.
+   Contour d'encre dehors, filet de lumière en haut, creux d'ombre en bas,
+   ombre dure + ombre douce dessous. Seul le remplissage change d'une plaque à
+   l'autre : c'est la règle qui rend la rangée lisible comme une seule pièce. */
+.arena-plate {
+  border-radius: 20px;
+  border: 3px solid #1e1638;
   box-shadow:
-    0 4px 0 #171030,
-    0 8px 16px rgba(23, 16, 48, 0.5);
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.35),
+    0 4px 0 #1e1638,
+    0 6px 12px rgba(0, 0, 0, 0.45);
+  transition:
+    transform 0.1s var(--ease),
+    box-shadow 0.1s var(--ease);
+}
+
+/* Les deux flancs : la surface sombre translucide du design system. Translucide
+   et non opaque — le décor de l'arène passe dessous, donc les plaques
+   appartiennent à l'écran au lieu d'être posées dessus. */
+.arena-plate--dark {
+  background: rgba(45, 28, 74, 0.82);
   color: #faf6ef;
+}
+
+/* Le centre : le SEUL doré saturé de tout l'écran. */
+.arena-plate--gold {
+  background: linear-gradient(180deg, #ffd66b 0%, #e8a020 100%);
+}
+
+/* L'enfoncement au tap : la plaque descend de 3 px et son ombre portée se
+   réduit d'autant — le doigt écrase l'objet, il ne le fait pas glisser. */
+.arena-plate--press:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.35),
+    0 1px 0 #1e1638;
+}
+@media (prefers-reduced-motion: reduce) {
+  .arena-plate {
+    transition: none;
+  }
+}
+
+/* LA LARGEUR DES DEUX FLANCS. En CSS et non en classe utilitaire parce qu'elle
+   a un repli : sous 360 px, deux flancs de 92 px mangent 57 % de la largeur, et
+   il ne reste plus assez au centre pour que le mot COMBAT tienne. Ils se
+   resserrent alors à 76 px et rendent la place au roi. */
+.arena-plate-flank {
+  width: 92px;
+}
+@media (max-width: 359px) {
+  .arena-plate-flank {
+    width: 76px;
+  }
+}
+
+/* Le mot sous l'icône des deux flancs. DANS la plaque, jamais dessous ni à
+   cheval sur le bord : un libellé qui déborde de son cadre casse la plaque en
+   deux objets, et la paire de flancs cesse d'encadrer quoi que ce soit. */
+.arena-plate-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgba(250, 246, 239, 0.9);
+  text-shadow: 0 1px 0 rgba(12, 7, 32, 0.7);
+}
+
+/* La pastille de verrou, dans l'angle haut-droit du flanc Matière. Huit pixels,
+   en or DÉSATURÉ : c'est un signal, pas une récompense — le doré saturé reste
+   la propriété exclusive du bouton COMBAT. */
+.arena-plate-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #c9922e;
+  box-shadow: 0 0 0 2px #1e1638;
+}
+
+/* LE MOT « COMBAT », et rien d'autre sur la plaque. Blanc cerné d'ambre brûlé :
+   sur un dégradé qui passe du jaune clair à l'orange, aucune encre unie ne
+   garde le même contraste en haut et en bas de la lettre — le contour, lui,
+   tient sur toute la hauteur. `paint-order` est indispensable : sans lui le
+   cerne se peint PAR-DESSUS le remplissage et mange la moitié du trait, ce qui
+   épaissit les lettres jusqu'à les coller entre elles à 360 px de large. */
+.combat-word {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1;
+  color: #ffffff;
+  -webkit-text-stroke: 2px #8a4a00;
+  paint-order: stroke fill;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Sous 360 px, le mot descend d'un cran avec les flancs. Le TEST de la refonte
+   est « lisible à 360 px » : à cette largeur exacte, COMBAT tient encore en
+   26 px (105,5 px de lettres pour 106 px de place utile, la plaque n'ayant que
+   4 px de marge intérieure — un bouton d'un seul mot n'a rien à border). En
+   dessous, il déborderait et `overflow: hidden` le trancherait ; mieux vaut un
+   mot entier plus petit qu'un mot coupé. */
+@media (max-width: 359px) {
+  .combat-word {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* LA LIGNE D'INFORMATION, au-dessus de la barre. Elle porte ce qui vivait DANS
+   le bouton (la matière, la contribution de clan, sa jauge). Aucun biseau,
+   aucun contour, aucune ombre portée : le relief est le langage des CONTRÔLES
+   sur cet écran, et cette ligne ne se touche pas. Lui donner du volume aurait
+   ajouté un quatrième bouton apparent au-dessus des trois vrais. */
+.combat-meta-pill {
+  background: rgba(45, 28, 74, 0.82);
+  border-radius: 14px;
+  color: #faf6ef;
+}
+.combat-meta-note {
+  color: rgba(250, 246, 239, 0.68);
+  /* Le compteur tombe sur l'illustration de l'arène, dont la valeur change d'un
+     pixel à l'autre : sans ce halo d'encre, il disparaissait sur les zones
+     claires du décor. La couleur, elle, reste celle du texte secondaire. */
+  text-shadow: 0 1px 3px rgba(12, 7, 32, 0.9);
+}
+/* La jauge de clan : or DÉSATURÉ. Le doré saturé du bouton, repris ici,
+   aurait fait deux appels à l'action sur la même colonne. */
+.combat-meta-bar {
+  background: rgba(0, 0, 0, 0.35);
+}
+.combat-meta-bar > span {
+  background: #c9922e;
 }
 
 /* Les plaques pressables « Olympe » écrasent leur ombre dure au tap. */
@@ -2874,11 +3150,6 @@ a:active > .arena-menu-row {
     0 0 0 3px var(--foreground),
     inset 0 2px 0 rgba(255, 255, 255, 0.3),
     0 0 0 0 var(--foreground);
-}
-.arena-flank.olympe-press:active {
-  box-shadow:
-    0 0 0 0 #171030,
-    0 2px 8px rgba(23, 16, 48, 0.5);
 }
 
 /* Halo battant de la pastille Studuel+ (components/defi/PremiumPill).
@@ -3555,6 +3826,85 @@ a:active > .arena-menu-row {
 /* La table de jeu : le fond du thème + son halo d'ambiance en haut de scène.
    Le halo est en `background-image` (pas un pseudo-élément) pour ne pas gêner
    l'empilement des éléments de jeu. */
+/* --- Robes des MATIÈRES ---------------------------------------------------
+   Mêmes quatre variables, même mécanique que les robes de jeu ci-dessus — mais
+   accordées à la couleur de la MATIÈRE (`subjects.color`), pour la session de
+   quiz. Un quiz est le même geste qu'un jeu de salon (une question, quatre
+   réponses, un verdict) : il portait pourtant un violet plein pendant que les
+   jeux se jouaient sur une table claire, si bien que les deux écrans ne se
+   ressemblaient pas du tout. Le quiz d'anglais porte désormais le bleu de
+   l'anglais, celui de maths son violet — on prolonge le monde du dossier
+   jusque dans la session.
+
+   Elles posent les mêmes `--jeu-*` que les robes de jeu, exprès : `AnswerBoard`
+   et `.jeu-table` marchent dessus sans une ligne à changer. */
+
+.robe-blue {
+  --jeu-accent: oklch(0.62 0.15 237);
+  --jeu-ink: oklch(0.99 0.01 237);
+  --jeu-surface: oklch(0.965 0.02 235);
+  --jeu-glow: oklch(0.8 0.12 235 / 0.3);
+}
+.robe-red {
+  --jeu-accent: oklch(0.6 0.2 16);
+  --jeu-ink: oklch(0.99 0.01 16);
+  --jeu-surface: oklch(0.965 0.02 18);
+  --jeu-glow: oklch(0.8 0.13 18 / 0.3);
+}
+.robe-orange {
+  --jeu-accent: oklch(0.66 0.18 47);
+  --jeu-ink: oklch(0.99 0.01 47);
+  --jeu-surface: oklch(0.965 0.025 60);
+  --jeu-glow: oklch(0.82 0.14 60 / 0.3);
+}
+.robe-green {
+  --jeu-accent: oklch(0.62 0.14 162);
+  --jeu-ink: oklch(0.99 0.01 162);
+  --jeu-surface: oklch(0.965 0.02 162);
+  --jeu-glow: oklch(0.82 0.11 162 / 0.28);
+}
+.robe-purple {
+  --jeu-accent: oklch(0.56 0.2 292);
+  --jeu-ink: oklch(0.99 0.01 292);
+  --jeu-surface: oklch(0.965 0.022 292);
+  --jeu-glow: oklch(0.8 0.13 292 / 0.3);
+}
+.robe-indigo {
+  --jeu-accent: oklch(0.54 0.2 277);
+  --jeu-ink: oklch(0.99 0.01 277);
+  --jeu-surface: oklch(0.965 0.022 277);
+  --jeu-glow: oklch(0.8 0.13 277 / 0.3);
+}
+.robe-teal {
+  --jeu-accent: oklch(0.62 0.12 182);
+  --jeu-ink: oklch(0.99 0.01 182);
+  --jeu-surface: oklch(0.965 0.02 182);
+  --jeu-glow: oklch(0.82 0.1 182 / 0.28);
+}
+.robe-pink {
+  --jeu-accent: oklch(0.62 0.2 354);
+  --jeu-ink: oklch(0.99 0.01 354);
+  --jeu-surface: oklch(0.965 0.022 354);
+  --jeu-glow: oklch(0.82 0.13 354 / 0.3);
+}
+.robe-yellow {
+  /* Le jaune est le seul accent assez clair pour réclamer une encre SOMBRE :
+     du blanc dessus tomberait sous le seuil de lisibilité. */
+  --jeu-accent: oklch(0.72 0.16 86);
+  --jeu-ink: oklch(0.25 0.05 80);
+  --jeu-surface: oklch(0.97 0.03 90);
+  --jeu-glow: oklch(0.87 0.15 88 / 0.32);
+}
+.robe-slate {
+  /* Un gris pur donnait une table ANÉMIQUE à côté des autres matières : assez
+     de chroma pour qu'elle ait un ton, pas assez pour qu'elle cesse d'être
+     l'ardoise. */
+  --jeu-accent: oklch(0.52 0.06 257);
+  --jeu-ink: oklch(0.99 0.005 257);
+  --jeu-surface: oklch(0.96 0.018 257);
+  --jeu-glow: oklch(0.8 0.06 257 / 0.3);
+}
+
 .jeu-table {
   background-color: var(--jeu-surface);
   background-image: radial-gradient(
@@ -4141,3 +4491,5 @@ a:active > .arena-menu-row {
     transition-duration: 0.01ms !important;
   }
 }
+
+

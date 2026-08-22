@@ -9,8 +9,27 @@ export type Quiz = {
   is_free: boolean
 }
 
-// Classes proposées à l'onboarding.
-export const GRADE_LEVELS = ['6e', '5e', '4e', '3e', '2de', '1re', 'Tle'] as const
+// Classes proposées à l'onboarding, du CP à la Terminale, dans l'ordre
+// scolaire. Le lycée se dédouble au cycle terminal : la voie GÉNÉRALE et la
+// voie TECHNOLOGIQUE ne suivent ni les mêmes matières ni les mêmes programmes,
+// et sont donc deux classes distinctes ici. Leur regroupement par cycle et
+// l'endroit où vit leur contenu se lisent dans `lib/grades.ts`.
+export const GRADE_LEVELS = [
+  'CP',
+  'CE1',
+  'CE2',
+  'CM1',
+  'CM2',
+  '6e',
+  '5e',
+  '4e',
+  '3e',
+  '2de',
+  '1re',
+  '1re techno',
+  'Tle',
+  'Tle techno',
+] as const
 export type GradeLevel = (typeof GRADE_LEVELS)[number]
 
 // Réviser : matières → chapitres → leçons (migration 008).

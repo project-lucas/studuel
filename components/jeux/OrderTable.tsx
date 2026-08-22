@@ -15,6 +15,9 @@ import { MECHANIC_ICON } from '@/components/jeux/icons'
 import { gameSfx, sfx, buzz } from '@/lib/sounds'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { readGameBest, writeGameBest } from '@/lib/jeux/records'
+import { usePalierRun } from '@/lib/jeux/use-palier-run'
+import type { PalierRun } from '@/lib/jeux/paliers'
+import { hasTimeRecord } from '@/lib/jeux/palier-format'
 import { useGameReport } from '@/lib/jeux/use-game-report'
 import type { GameGhost } from '@/lib/jeux/ghost-server'
 import { isNextInOrder, type OrderBoard as Board } from '@/lib/jeux/ordering'
@@ -44,6 +47,7 @@ const BOARD_PAUSE_MS = 1100
  */
 export default function OrderTable({
   format,
+  palier,
   boards,
   name,
   subject,
@@ -51,6 +55,12 @@ export default function OrderTable({
   ghost,
 }: {
   format: GameFormat
+  /**
+   * Palier joué et plancher de classe (lib/jeux/paliers), ou null pour un jeu
+   * hors échelle — le « Programme » d'une matière, dont la difficulté est le
+   * programme et non un réglage.
+   */
+  palier: PalierRun | null
   boards: Board[]
   name: string
   subject: string
@@ -73,6 +83,13 @@ export default function OrderTable({
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
   // XP, série et trophées : un seul compte rendu partagé par les quatre tables.
+  // Les étoiles du palier, rangées dans la progression locale du jeu.
+  const {
+    outcome: palierOutcome,
+    standing: palierStanding,
+    record: recordPalier,
+    reset: resetPalier,
+  } = usePalierRun(format.id, palier)
   const { saved, awardedXp, trophies, report, reset } = useGameReport(
     subject,
     format.id,
@@ -85,6 +102,10 @@ export default function OrderTable({
   // suivant tant qu'il n'est pas affiché.
   const lockRef = useRef(false)
   const finishedRef = useRef(false)
+  // Le CHRONO DE BOUCLAGE : posé au lancement réel de la partie (après le
+  // décompte 3·2·1, qui ne doit compter pour personne) et lu à l'arrivée. C'est
+  // lui qui alimente le record de temps et le classement de rapidité du palier.
+  const startedAtRef = useRef(0)
 
   useEffect(() => {
     runRef.current = run
@@ -113,9 +134,20 @@ export default function OrderTable({
       if (writeGameBest(format.id, final.score)) setIsRecord(true)
       setBest(Math.max(prev, final.score))
 
+      // Les étoiles se comptent ici, au même endroit que le record : c'est le
+      // seul moment où l'on tient la partie TERMINÉE, donc son taux de réussite
+      // ET son temps. Un chrono jamais parti (partie quittée avant le GO) vaut
+      // null plutôt que la durée écoulée depuis l'époque Unix.
+      recordPalier(
+        final,
+        hasTimeRecord(format) && startedAtRef.current
+          ? Date.now() - startedAtRef.current
+          : null,
+      )
+
       report(final)
     },
-    [audio, format.id, report],
+    [audio, format, recordPalier, report],
   )
 
   // -------------------------------------------------------------- une tuile
@@ -196,12 +228,14 @@ export default function OrderTable({
     setPlaced([])
     setRejected(null)
     reset()
+    resetPalier()
+    startedAtRef.current = Date.now()
     setIsRecord(false)
     setBoardIndex((n) => n + 1) // un autre tableau d'une partie à l'autre
     globalLeftRef.current = seconds
     setGlobalLeft(seconds)
     setPhase('playing')
-  }, [format, seconds, reset])
+  }, [format, seconds, reset, resetPalier])
 
   useEffect(() => {
     if (phase !== 'countdown') return
@@ -220,7 +254,12 @@ export default function OrderTable({
     setPhase('countdown')
   }
 
-  const exit = () => router.push('/defi')
+  // Retour : on remonte d'UN cran, sur la carte des paliers du jeu — c'est de là
+  // qu'on est venu. Renvoyer à l'arène faisait retraverser toute la feuille des
+  // modes pour rejouer le palier d'à côté. Un jeu hors échelle (le
+  // « Programme ») n'a pas de carte : lui rentre bien à l'arène.
+  const backHref = palier ? `/defi/jeux/${format.id}` : '/defi'
+  const exit = () => router.push(backHref)
 
   return (
     <ModeStage
@@ -228,6 +267,7 @@ export default function OrderTable({
       Icon={MECHANIC_ICON[format.params.mechanic]}
       theme={format.theme}
       onExit={exit}
+      backLabel={palier ? 'Retour aux paliers' : undefined}
       headerRight={
         <span className="shrink-0 rounded-full bg-[color:var(--jeu-accent)]/12 px-2.5 py-1 text-[11px] font-bold text-[color:var(--jeu-accent)]">
           <span aria-hidden="true">{subjectEmoji}</span> {subject}
@@ -248,6 +288,9 @@ export default function OrderTable({
         ) : phase === 'done' ? (
           <GameOutcome
             format={format}
+            palier={palier?.level ?? null}
+            palierOutcome={palierOutcome}
+            palierStanding={palierStanding}
             run={run}
             best={best}
             isRecord={isRecord}

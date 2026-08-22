@@ -181,7 +181,9 @@ describe('parseAnswers / serializeAnswers', () => {
         profileType: 'robot',
         source: 'tiktok',
         goal: 'piratage',
-        grade: 'CP',
+        // « CP » a longtemps servi de classe bidon ici — elle existe désormais
+        // pour de bon. Le référentiel s'arrête à la Terminale : la prépa n'y est pas.
+        grade: 'MPSI',
         subjects: ['maths', 42, ''],
         dailyGoalMinutes: 7,
         placement: { correct: 'x', total: 5 },

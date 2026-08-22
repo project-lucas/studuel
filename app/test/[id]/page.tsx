@@ -34,7 +34,10 @@ export default async function QuizPage({
     lesson:
       | {
           id: string
-          chapter: { id: string; subject: { slug: string } | null } | null
+          chapter: {
+            id: string
+            subject: { slug: string; color: string } | null
+          } | null
         }
       | null
   }
@@ -43,7 +46,7 @@ export default async function QuizPage({
     supabase
       .from('quizzes')
       .select(
-        'id, title, subject, grade_level, chapter, is_free, lesson:lessons(id, chapter:chapters(id, subject:subjects(slug)))',
+        'id, title, subject, grade_level, chapter, is_free, lesson:lessons(id, chapter:chapters(id, subject:subjects(slug, color)))',
       )
       .eq('id', id)
       .single<QuizRow>(),
@@ -115,6 +118,10 @@ export default async function QuizPage({
           title={quiz.title}
           questions={shuffledQuestions}
           subject={quiz.subject}
+          // La ROBE de la session : la couleur du dossier d'où vient le quiz.
+          // Absente pour un quiz détaché de toute matière — le player retombe
+          // alors sur le violet de l'app.
+          subjectColor={quiz.lesson?.chapter?.subject?.color ?? null}
           gradeLevel={quiz.grade_level}
           backHref={backHref}
         />

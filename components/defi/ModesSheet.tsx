@@ -6,6 +6,7 @@ import { createPortal } from 'react-dom'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { Gamepad2, Swords, X } from 'lucide-react'
 import ModeTicketCard from '@/components/defi/ModeTicket'
+import { FLANK_CLASS } from '@/components/defi/ArenaActionBar'
 import SubjectRoulette from '@/components/defi/SubjectRoulette'
 import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
@@ -86,17 +87,16 @@ export default function ModesSheet({
 
   return (
     <>
-      {/* Le déclencheur : TUILE DE FLANC, jumelle de la roulette qui tient
-          l'autre bord — même largeur, même robe `.arena-flank`, même rayon, et
-          la même grammaire interne : UN OBJET ROND centré, puis ce qui le
-          nomme. À gauche une gemme violette (la robe des commandes du HUD), à
-          droite un médaillon pastel (le visage d'une matière) : deux cœurs
-          différents dans le même cadre, ce qui dit d'un coup d'œil que l'un
-          ouvre un écran et que l'autre porte un choix.
+      {/* Le déclencheur : PLAQUE DE FLANC, jumelle de celle qui tient l'autre
+          bord — même largeur, même biseau, même rayon, même ombre portée, et la
+          même grammaire interne : une icône de 30 px, puis le mot qui nomme la
+          plaque. Deux jumelles encadrent ; deux accessoires dépareillés, non.
 
-          Sombre exprès : dans la rangée, seul l'or de COMBAT appelle. La liste
-          des modes (Blitz · Chrono · Survie) ne tient pas dans 4,75 rem — elle
-          vit dans l'`aria-label` et l'infobulle. */}
+          Sombre exprès : dans la barre, seul l'or de COMBAT appelle. La gemme
+          violette ronde qui occupait ce cadre est partie avec le reste des
+          formes rondes — une icône nue sur la plaque suffit, et elle laisse à la
+          plaque son rôle de bouton. La liste des modes (Blitz · Chrono · Survie)
+          ne tient pas dans 92 px : elle vit dans l'`aria-label` et l'infobulle. */}
       <button
         type="button"
         onClick={() => {
@@ -106,17 +106,10 @@ export default function ModesSheet({
         aria-haspopup="dialog"
         aria-label="Modes de jeu — jeux par matière, Blitz, Chrono, Survie et boss"
         title="Modes de jeu — Blitz, Chrono, Survie, Boss"
-        className="arena-flank olympe-press flex w-[4.75rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-2xl px-1 py-2 focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+        className={`arena-plate arena-plate--dark arena-plate--press ${FLANK_CLASS} flex cursor-pointer flex-col items-center justify-center gap-1.5 focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:outline-none`}
       >
-        <span
-          className="olympe-gem grid size-9 shrink-0 place-items-center rounded-full"
-          aria-hidden="true"
-        >
-          <Gamepad2 className="size-[18px]" strokeWidth={2.6} />
-        </span>
-        <span className="font-heading text-[0.62rem] leading-none font-extrabold tracking-wide uppercase">
-          Modes
-        </span>
+        <Gamepad2 size={30} strokeWidth={2.3} aria-hidden="true" />
+        <span className="arena-plate-label font-heading uppercase">Modes</span>
       </button>
 
       {typeof document !== 'undefined'

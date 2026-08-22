@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { contentLevelFor } from '@/lib/grades'
 import { Zap, GraduationCap } from 'lucide-react'
 import {
   Card,
@@ -175,11 +176,11 @@ export default async function DefiJouerPage({
     supabase
       .from('quizzes')
       .select('id, subject, lesson_id, grade_level')
-      .in('grade_level', [grade, HORS_NIVEAU]),
+      .in('grade_level', [contentLevelFor(grade), HORS_NIVEAU]),
     supabase
       .from('flashcard_decks')
       .select('id, subject')
-      .eq('grade_level', grade)
+      .eq('grade_level', contentLevelFor(grade))
       .eq('is_free', true),
     // Fantômes des amis (duels asynchrones) — [] tant que la migration 023
     // n'est pas passée ou qu'aucun ami n'a joué de duel.

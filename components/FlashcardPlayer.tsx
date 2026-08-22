@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import {
   RotateCcw,
@@ -27,7 +27,17 @@ import type { DeckCard } from '@/lib/types'
 
 // Bouton muet partagé (préférence localStorage).
 export function SoundToggle() {
-  const [on, setOn] = useState(() => isSoundOn())
+  // La préférence vit dans le stockage local, que le rendu SERVEUR ne voit pas :
+  // il produisait « Activer le son » pendant que le client produisait « Couper
+  // le son », et React jetait une erreur d'hydratation sur l'écran de quiz à
+  // chaque ouverture. On part donc de la valeur du rendu serveur (`isSoundOn`
+  // renvoie `false` sans `window`) et on la corrige une fois monté — le même
+  // remède que les records des jeux, à l'échelle d'un seul booléen.
+  const [on, setOn] = useState(false)
+  useEffect(() => {
+    const lire = () => setOn(isSoundOn())
+    lire()
+  }, [])
   return (
     <button
       type="button"

@@ -3,8 +3,13 @@ import { readFileSync, readdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { GRADE_LEVELS, HORS_NIVEAU, type SubjectCategory } from '@/lib/types'
-import { hasSubjectIcon, hasSubjectTheme } from '@/lib/subject-style'
+import {
+  hasSubjectIcon,
+  hasSubjectTheme,
+  hasSubjectVignette,
+} from '@/lib/subject-style'
 import { programmeGroups } from '@/lib/subject-groups'
+import { cycleOf, isTechno } from '@/lib/grades'
 
 // Garde du CATALOGUE DES MATIÈRES.
 //
@@ -39,10 +44,14 @@ const ROW = new RegExp(
   'g',
 )
 
+// Les niveaux dont le nom contient une espace (« 1re techno ») s'écrivent
+// GUILLEMETÉS dans un littéral de tableau Postgres : '{1re,"1re techno"}'.
+// Sans ce nettoyage, le test verrait un niveau nommé `"1re techno"`, guillemets
+// compris, et le déclarerait inconnu — pour une raison purement typographique.
 const parseLevels = (raw: string): string[] =>
   raw
     .split(',')
-    .map((l) => l.trim())
+    .map((l) => l.trim().replace(/^"|"$/g, ''))
     .filter(Boolean)
 
 function migrationFiles(): string[] {
@@ -140,23 +149,52 @@ describe('le parseur de migrations lit bien quelque chose', () => {
 })
 
 describe('chaque classe a un programme complet', () => {
+  // Le primaire n'a que les NEUF enseignements de son socle (français, maths,
+  // langue vivante, EPS, arts plastiques, éducation musicale, EMC, histoire-géo,
+  // sciences et technologie) — pas dix. Compter pareil qu'au collège
+  // obligerait à inventer une matière qui n'existe pas à l'école.
+  const minimumFor = (grade: string) => (cycleOf(grade) === 'primaire' ? 9 : 10)
+
   for (const grade of GRADE_LEVELS) {
-    it(`${grade} propose au moins 10 matières au programme`, () => {
+    it(`${grade} propose au moins ${minimumFor(grade)} matières au programme`, () => {
       const ofLevel = programme.filter((s) => s.levels.includes(grade))
       expect(
         ofLevel.length,
         `${grade} : ${ofLevel.map((s) => s.slug).join(', ')}`,
-      ).toBeGreaterThanOrEqual(10)
+      ).toBeGreaterThanOrEqual(minimumFor(grade))
     })
   }
 
   it('donne à chaque classe les fondamentaux qu’un élève attend', () => {
     // Le cas exact remonté : « je clique sur 6e, il n'y a pas sport ».
-    const socle = ['francais', 'maths', 'histoire-geo', 'anglais', 'svt', 'sport', 'emc']
+    //
+    // Le socle se lit PAR CYCLE, parce qu'il n'est pas le même partout. Un CP
+    // n'a pas de SVT : sa science s'appelle « Sciences et technologie », et elle
+    // se sépare en SVT / physique-chimie / technologie seulement au collège.
+    // Exiger « svt » au primaire aurait forcé une matière fantôme au catalogue.
+    const COMMUN = ['maths', 'histoire-geo', 'anglais', 'sport', 'emc']
+    const socleFor = (grade: string) =>
+      cycleOf(grade) === 'primaire'
+        ? [...COMMUN, 'francais', 'sciences-technologie']
+        : [...COMMUN, 'francais', 'svt']
+
     for (const grade of GRADE_LEVELS) {
-      for (const slug of socle) {
-        // Le français s'arrête en 1re (philosophie prend le relais en Tle).
-        if (slug === 'francais' && grade === 'Tle') continue
+      for (const slug of socleFor(grade)) {
+        // Le français s'arrête en 1re (la philosophie prend le relais en Tle),
+        // dans les deux voies.
+        if (slug === 'francais' && (grade === 'Tle' || grade === 'Tle techno')) continue
+        // La voie techno n'a pas les spécialités scientifiques de la générale.
+        if (slug === 'svt' && isTechno(grade)) continue
+        // L'EPS N'EST PAS DANS LES DOSSIERS DE 1re GÉNÉRALE (migration 278).
+        // Ce n'est PAS une erreur de catalogue et ce n'est pas non plus une
+        // correction de programme : l'EPS reste obligatoire en première, 2 h par
+        // semaine. C'est une décision de produit (Lucas, 21/08/2026) — on ne
+        // révise pas l'EPS, et sa carte n'a jamais porté que 3 fiches
+        // passe-partout identiques du CP à la Terminale. La 1re TECHNO la garde :
+        // son programme dans l'app n'est fait que du tronc commun, et sans elle
+        // la classe tomberait sous les dix matières exigées plus haut.
+        // Remettre « 1re » dans `subjects.levels` suffit à revenir en arrière.
+        if (slug === 'sport' && grade === '1re') continue
         expect(
           catalogue.get(slug)?.levels,
           `« ${slug} » absent de la classe ${grade}`,
@@ -165,18 +203,57 @@ describe('chaque classe a un programme complet', () => {
     }
   })
 
-  it('ouvre les arts et la musique à toutes les classes', () => {
-    for (const slug of ['arts-plastiques', 'musique']) {
-      expect(catalogue.get(slug)?.levels).toEqual([...GRADE_LEVELS])
+  it('donne aux deux Terminales leur philosophie', () => {
+    // Le français s'arrêtant en 1re, une Terminale sans philosophie n'aurait
+    // plus AUCUNE matière de lettres — dans la voie techno comme dans l'autre.
+    for (const grade of ['Tle', 'Tle techno']) {
+      expect(catalogue.get('philosophie')?.levels, grade).toContain(grade)
     }
   })
 
-  it('garde les matières de lycée hors du collège', () => {
+  it('ne donne PAS à la voie techno les spécialités de la voie générale', () => {
+    // Les spécialités de la voie technologique dépendent de la série (STMG,
+    // STI2D, ST2S…), que le profil ne demande pas encore. Les afficher en
+    // attendant reviendrait à proposer à un STMG la spé NSI de la générale.
+    for (const slug of ['ses', 'nsi', 'hggsp', 'hlp', 'llcer-anglais', 'si', 'svt']) {
+      const levels = catalogue.get(slug)?.levels ?? []
+      expect(levels, slug).not.toContain('1re techno')
+      expect(levels, slug).not.toContain('Tle techno')
+    }
+  })
+
+  it('ouvre les arts et la musique à toutes les classes, sauf la 1re générale', () => {
+    // L'exception vient de la migration 278 : en première générale, arts
+    // plastiques et musique sont des enseignements OPTIONNELS dont l'app ne
+    // tient aucun programme — leur dossier n'avait que 3 fiches passe-partout,
+    // les mêmes qu'en 6e. Elles restent proposées partout ailleurs, 1re TECHNO
+    // comprise (voir le commentaire sur l'EPS plus haut : ce sont les seules
+    // matières d'expression de sa grille).
+    const attendus = GRADE_LEVELS.filter((g) => g !== '1re')
+    for (const slug of ['arts-plastiques', 'musique']) {
+      expect(catalogue.get(slug)?.levels, slug).toEqual([...attendus])
+    }
+  })
+
+  it('garde les matières de lycée hors du collège ET du primaire', () => {
     for (const slug of ['philosophie', 'ses', 'nsi', 'hggsp', 'snt', 'hlp', 'si']) {
       const levels = catalogue.get(slug)?.levels ?? []
-      expect(levels, slug).not.toContain('6e')
-      expect(levels, slug).not.toContain('3e')
+      for (const grade of ['CP', 'CM2', '6e', '3e']) {
+        expect(levels, `${slug} en ${grade}`).not.toContain(grade)
+      }
     }
+  })
+
+  it('garde « Sciences et technologie » au primaire, et elle seule', () => {
+    // Au collège, elle ferait doublon avec SVT, physique-chimie et technologie,
+    // qui ont chacune leur programme et leurs chapitres.
+    expect(catalogue.get('sciences-technologie')?.levels).toEqual([
+      'CP',
+      'CE1',
+      'CE2',
+      'CM1',
+      'CM2',
+    ])
   })
 })
 
@@ -217,6 +294,27 @@ describe('chaque matière est affichable', () => {
   it('a son icône, jamais le repli générique', () => {
     for (const s of all) {
       expect(hasSubjectIcon(s.slug), `${s.slug} sans icône`).toBe(true)
+    }
+  })
+
+  // Les matières dont AUCUN dessin n'existe (ni en propre, ni emprunté à une
+  // matière sœur). Elles gardent le médaillon d'icône, qui reste une sortie
+  // propre — mais la liste doit rester courte et explicite : c'est la liste de
+  // travail du prochain lot d'illustrations.
+  const SANS_DESSIN = new Set(['grand-oral'])
+
+  it('a son illustration — ou figure dans la liste de celles qui manquent', () => {
+    for (const s of all) {
+      if (SANS_DESSIN.has(s.slug)) continue
+      expect(hasSubjectVignette(s.slug), `${s.slug} sans illustration`).toBe(true)
+    }
+  })
+
+  it('ne garde pas dans la liste des manquantes une matière déjà illustrée', () => {
+    // Sans ce garde, la liste ci-dessus survivrait à la livraison du dessin et
+    // la matière resterait au médaillon sans que personne ne le voie.
+    for (const slug of SANS_DESSIN) {
+      expect(hasSubjectVignette(slug), `${slug} a son illustration`).toBe(false)
     }
   })
 })

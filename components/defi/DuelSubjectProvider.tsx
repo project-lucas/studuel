@@ -21,27 +21,25 @@ import {
 /**
  * LA MATIÈRE COURANTE DE L'ARÈNE — un seul état, partagé par tout l'écran.
  *
- * Trois objets en dépendent et doivent toujours parler de la même matière : la
- * roulette (qui la choisit), le bouton COMBAT (qui la lance) et la Route des
- * trophées (qui la raconte). Ils vivent dans trois branches différentes du
- * rendu — le HUD flottant pour la Route, la rangée du bas pour les deux
- * autres — donc aucun parent commun ne pouvait tenir l'état sans le faire
- * descendre à travers des composants qui n'en ont que faire. D'où un contexte,
- * et non du prop drilling.
+ * Quatre objets en dépendent et doivent toujours parler de la même matière : la
+ * plaque Matière (qui la choisit), la ligne d'information (qui la nomme), le
+ * bouton COMBAT (qui la lance) et la Route des trophées (qui la raconte). Ils
+ * vivent dans des branches différentes du rendu — le HUD flottant pour la
+ * Route, la barre du bas pour les trois autres — donc aucun parent commun ne
+ * pouvait tenir l'état sans le faire descendre à travers des composants qui
+ * n'en ont que faire. D'où un contexte, et non du prop drilling.
  *
- * C'est aussi ce qui rend le geste juste : faire tourner la roulette sur Maths
- * met la Route sur Maths. L'écran précédent avait DEUX sélecteurs de matière
- * (le module classé, l'espace duel) qui s'ignoraient — on choisissait deux fois
- * la même chose, sans jamais savoir laquelle comptait.
+ * C'est aussi ce qui rend le geste juste : choisir Maths sur la plaque met la
+ * Route sur Maths. L'écran précédent avait DEUX sélecteurs de matière (le
+ * module classé, l'espace duel) qui s'ignoraient — on choisissait deux fois la
+ * même chose, sans jamais savoir laquelle comptait.
  */
 type DuelSubjectValue = {
   board: DuelSubject[]
   index: number
   active: DuelSubject | null
-  /** Va à une matière précise (tap direct sur un cran). */
+  /** Va à une matière précise (tap sur une ligne de la feuille). */
   select: (index: number) => void
-  /** Avance ou recule d'un cran, EN BOUCLE — c'est une roulette, pas une liste. */
-  step: (delta: number) => void
 }
 
 const DuelSubjectContext = createContext<DuelSubjectValue | null>(null)
@@ -108,8 +106,8 @@ export default function DuelSubjectProvider({
     Math.max(0, board.length - 1),
   )
 
-  // Un seul point d'écriture pour les deux gestes : la roulette de l'arène et
-  // celle de la Route des trophées y passent toutes les deux.
+  // Un seul point d'écriture pour les deux gestes : la feuille de la barre
+  // d'action et la roulette de la Route des trophées y passent toutes les deux.
   const goTo = useCallback(
     (next: number) => {
       setChosen(next)
@@ -125,19 +123,9 @@ export default function DuelSubjectProvider({
     [board.length, goTo],
   )
 
-  const step = useCallback(
-    (delta: number) => {
-      if (board.length === 0) return
-      // Modulo positif : reculer depuis la première matière ramène à la
-      // dernière. `%` seul rendrait un index négatif en JavaScript.
-      goTo((index + delta + board.length) % board.length)
-    },
-    [board.length, goTo, index],
-  )
-
   const value = useMemo<DuelSubjectValue>(
-    () => ({ board, index, active: board[index] ?? null, select, step }),
-    [board, index, select, step],
+    () => ({ board, index, active: board[index] ?? null, select }),
+    [board, index, select],
   )
 
   return (

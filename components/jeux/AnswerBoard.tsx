@@ -5,8 +5,15 @@ import { cn } from '@/lib/utils'
 import type { GameLayout } from '@/lib/jeux/formats'
 
 /**
- * Le plateau de réponses d'un jeu de salon, dans la disposition que son format
- * demande. Trois dispositions, parce que trois façons de LIRE :
+ * Le plateau de réponses PARTAGÉ par les jeux de salon et les sessions de quiz,
+ * dans la disposition que le format demande.
+ *
+ * Il est né dans les jeux ; le quiz avait le sien, qui virait à l'APLAT vert ou
+ * rouge saturé là où celui-ci teinte et cerne. Deux grammaires du même verdict
+ * dans la même app, selon la porte par laquelle on entrait. Depuis le 22/08 il
+ * n'y en a plus qu'une — et ce qu'on corrige ici profite aux deux écrans.
+ *
+ * Trois dispositions, parce que trois façons de LIRE :
  *
  * - `grille` : 2×2, réponses courtes (une capitale, un résultat, un symbole) —
  *   le regard balaye les quatre cases d'un coup ;

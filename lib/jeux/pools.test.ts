@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { ULTIME } from './ultime'
 import {
   COUNTDOWN_BUILDERS,
   ORDER_BUILDERS,
@@ -6,6 +7,7 @@ import {
   ZONE_BUILDERS,
   buildOrderPool,
   buildSalonPool,
+  buildUltimePool,
   buildZonePool,
   idsWithPool,
   poolKind,
@@ -206,5 +208,35 @@ describe('buildOrderPool', () => {
   it('renvoie null pour un id sans banque de tableaux', () => {
     expect(buildOrderPool('capitales', 'x', 3)).toBeNull()
     expect(buildOrderPool('nimporte-quoi', 'x', 3)).toBeNull()
+  })
+})
+
+describe('buildUltimePool', () => {
+  it('prépare un paquet par niveau, chacun jouable', () => {
+    const levels = buildUltimePool('calcul-mental', 'graine', 8)
+    expect(levels).not.toBeNull()
+    expect(levels).toHaveLength(8)
+    for (const paquet of levels ?? []) {
+      // Une question de marge par niveau : une réponse en retard ne doit jamais
+      // tomber sur un paquet vide.
+      expect(paquet.length).toBeGreaterThanOrEqual(ULTIME.perLevel)
+      for (const q of paquet) expect(q.options.length).toBeGreaterThan(1)
+    }
+  })
+
+  it('sert une banque DIFFÉRENTE à chaque niveau — c’est la montée', () => {
+    const levels = buildUltimePool('calcul-mental', 'graine', 6) ?? []
+    const signatures = levels.map((p) => p.map((q) => q.prompt).join('|'))
+    expect(new Set(signatures).size).toBe(signatures.length)
+  })
+
+  it('est déterministe à graine fixée', () => {
+    expect(buildUltimePool('calcul-mental', 'g', 4)).toEqual(
+      buildUltimePool('calcul-mental', 'g', 4),
+    )
+  })
+
+  it('rend null pour un jeu sans banque générative', () => {
+    expect(buildUltimePool('jeu-inexistant', 'g', 3)).toBeNull()
   })
 })

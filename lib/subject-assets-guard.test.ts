@@ -14,18 +14,24 @@ const source = readFileSync(path.join(ROOT, 'lib', 'subject-style.ts'), 'utf8')
 const publicPath = (webPath: string): string =>
   path.join(ROOT, 'public', webPath.replace(/^\//, ''))
 
+// Les commentaires `//` sont RETIRÉS avant toute lecture de slug : un commentaire
+// français en fin de liste (« le Grand oral n'a ni l'un ni l'autre ») met des
+// apostrophes au milieu du bloc, et la garde y lisait deux faux slugs — « a ni l »,
+// « autre : il garde le médaillon d » — donc deux vignettes manquantes imaginaires.
+const sansCommentaires = (bloc: string): string => bloc.replace(/\/\/.*/g, '')
+
 // Slugs de VIGNETTE_SLUGS = [ '...', '...' ] → public/images/matieres/vignettes/<slug>.webp
 function vignetteSlugs(): string[] {
   const block = source.match(/const VIGNETTE_SLUGS[\s\S]*?=\s*\[([\s\S]*?)\]/)
   if (!block) return []
-  return [...block[1].matchAll(/'([^']+)'/g)].map((m) => m[1])
+  return [...sansCommentaires(block[1]).matchAll(/'([^']+)'/g)].map((m) => m[1])
 }
 
 // Chemins de SUBJECT_DECORS = { slug: '/images/...' }
 function decorPaths(): string[] {
   const block = source.match(/const SUBJECT_DECORS[^{]*\{([\s\S]*?)\}/)
   if (!block) return []
-  return [...block[1].matchAll(/'(\/[^']+)'/g)].map((m) => m[1])
+  return [...sansCommentaires(block[1]).matchAll(/'(\/[^']+)'/g)].map((m) => m[1])
 }
 
 describe('assets de matière référencés par subject-style', () => {

@@ -1,14 +1,23 @@
 // Anglais — Terminale : LA GRAMMAIRE (24 fiches).
 //
-// Ce module s'AJOUTE aux 4 chapitres thématiques déjà en base (« Faire société :
-// unité et pluralité », « Environnements en mutation », « Art et débats
-// d'idées », « Innovations et responsabilité ») — ce sont les axes du programme
-// de LV, ils restent. La grammaire vient derrière, d'où `positionDepart: 5`.
+// ⚠️ CE FICHIER A GÉNÉRÉ LA MIGRATION 226, DÉJÀ EXÉCUTÉE : le régénérer doit
+// produire le SQL du dépôt à l'octet près, donc ni `positionDepart` ni les
+// titres ne se retouchent ici. L'état de la matière est désormais celui que
+// pose la migration 243, écrite à la main par-dessus (voir plus bas).
+//
+// Ce module s'ajoutait à l'époque aux 4 chapitres thématiques posés par la
+// migration 008 (« Faire société : unité et pluralité », « Environnements en
+// mutation », « Art et débats d'idées », « Innovations et responsabilité »),
+// donnés pour « les axes du programme de LV ». Vérification faite au BO, aucun
+// des quatre n'est au programme de terminale — deux appartiennent à la
+// spécialité « Anglais, monde contemporain ». La migration 243 les SUPPRIME et
+// ramène ces 24 fiches aux positions 1 à 24 : le `positionDepart: 5` ci-dessous
+// n'est donc plus l'état de la base, seulement celui que la 226 a écrit.
 //
 // Découpage repris tel quel du programme fourni : 4 chapitres (groupe nominal,
-// groupe verbal, les temps, la phrase) éclatés en leurs 24 fiches. La page
-// matière affiche une liste PLATE de chapitres : c'est donc l'ordre qui porte
-// le regroupement, et il est conservé.
+// groupe verbal, les temps, la phrase) éclatés en leurs 24 fiches. Ce sont ces
+// quatre chapitres que la 243 réinscrit dans `chapters.theme`, pour que la page
+// matière les range au lieu d'aligner les 24 fiches à plat.
 //
 // Règle du dépôt : les énoncés interrogent l'anglais EN FRANÇAIS, comme partout
 // ailleurs dans l'app. Les exemples, eux, sont en anglais.

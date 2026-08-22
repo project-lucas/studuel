@@ -21,6 +21,16 @@ function sub(
 }
 
 describe('usesTrackGroups', () => {
+  it('ne sous-groupe ni au primaire ni dans la voie technologique', () => {
+    // La techno a des spécialités, mais elles dépendent de sa série (STMG,
+    // STI2D…) que le profil ne demande pas encore : le catalogue ne lui en
+    // déclare aucune. La sous-grouper afficherait « Tronc commun » seul,
+    // au-dessus de deux sections vides.
+    for (const g of ['CP', 'CM2', '1re techno', 'Tle techno']) {
+      expect(usesTrackGroups(g), g).toBe(false)
+    }
+  })
+
   it('ne sous-groupe qu’en 1re et Terminale (pas de spécialités avant)', () => {
     for (const g of ['1re', 'Tle']) expect(usesTrackGroups(g)).toBe(true)
     for (const g of ['6e', '5e', '4e', '3e', '2de']) {

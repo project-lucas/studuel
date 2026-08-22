@@ -1,7 +1,9 @@
 // Les années à examen — et ce que l'examen s'appelle.
 //
-// Trois classes finissent sur une épreuve nationale : la 3e (brevet), la 1re
-// (épreuves anticipées du bac) et la Terminale (bac). Pour ces élèves, réviser
+// Cinq classes finissent sur une épreuve nationale : la 3e (brevet), les deux
+// Premières (épreuves anticipées du bac — le français se passe en fin de 1re
+// dans la voie générale COMME dans la voie technologique) et les deux
+// Terminales (bac). Pour ces élèves, réviser
 // ne veut pas dire la même chose : le programme n'est plus une fin, c'est une
 // préparation. L'onglet « Annales » n'apparaît que là — proposer des sujets
 // d'examen à un 5e serait du bruit.
@@ -21,14 +23,23 @@ export type ExamYear = {
   label: string
 }
 
+const BAC_ANTICIPE: ExamYear = {
+  key: 'bac-anticipe',
+  short: 'Bac de français',
+  label: 'les épreuves anticipées du bac',
+}
+
+const BAC: ExamYear = { key: 'bac', short: 'Bac', label: 'le bac' }
+
 const EXAM_YEARS: Record<string, ExamYear> = {
   '3e': { key: 'brevet', short: 'Brevet', label: 'le brevet' },
-  '1re': {
-    key: 'bac-anticipe',
-    short: 'Bac de français',
-    label: 'les épreuves anticipées du bac',
-  },
-  Tle: { key: 'bac', short: 'Bac', label: 'le bac' },
+  '1re': BAC_ANTICIPE,
+  // La voie technologique passe les MÊMES épreuves anticipées et le MÊME bac,
+  // aux mêmes dates. L'oublier ici priverait ces élèves de l'onglet Annales
+  // l'année précise où il leur sert le plus.
+  '1re techno': BAC_ANTICIPE,
+  Tle: BAC,
+  'Tle techno': BAC,
 }
 
 /** L'examen qui attend l'élève cette année, `null` s'il n'y en a pas. */

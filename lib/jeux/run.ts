@@ -11,10 +11,12 @@
 // - expedition : parcours fini, aucune mort — l'exactitude fait le score ;
 // - ascension  : on monte d'un étage, une erreur en fait redescendre ;
 // - ordre      : on repose les tuiles d'un tableau, l'erreur ne fait pas avancer.
+// - ultime     : une seule vie, aucune fin — on monte tant qu'on ne se trompe pas.
 //
 // Les composants ne calculent RIEN : ils affichent l'état et rejouent les
 // événements. Tout est testé dans run.test.ts.
 import {
+  ultimeSeconds,
   waveSeconds,
   type GameFormat,
   type PaliersParams,
@@ -85,7 +87,11 @@ export function startRun(format: GameFormat): GameRun {
         ? p.paliers.lives
         : p.mechanic === 'ordre'
           ? p.ordre.lives
-          : null
+          : // L'épreuve ultime a UNE vie, et c'est sa règle entière : elle
+            // s'affiche donc comme telle dans le HUD, jamais à blanc.
+            p.mechanic === 'ultime'
+            ? 1
+            : null
   return {
     status: 'playing',
     score: 0,
@@ -121,6 +127,8 @@ export function questionSeconds(
       // Un chrono par TUILE n'aurait aucun sens : c'est le tableau entier qu'on
       // reconstitue. La pression, quand il y en a, vient du chrono global.
       return null
+    case 'ultime':
+      return ultimeSeconds(p.ultime, run.step)
   }
 }
 
@@ -150,6 +158,8 @@ export function runTarget(format: GameFormat): number | null {
       return p.paliers.waves
     case 'ordre':
       return p.ordre.boards
+    // L'ultime n'a pas d'objectif : afficher « 7 / ? » n'apprend rien, et
+    // afficher un nombre lui mettrait le plafond qu'elle refuse.
     default:
       return null
   }
@@ -178,6 +188,7 @@ export function runAchieved(format: GameFormat, run: GameRun): number {
     case 'ascension':
     case 'paliers':
     case 'ordre':
+    case 'ultime':
       return run.step
     default:
       return run.answered
@@ -326,6 +337,29 @@ export function answer(
           p.ordre.boards !== null && boards >= p.ordre.boards
             ? 'won'
             : 'playing',
+      }
+    }
+
+    // --- ultime : une seule vie, aucune fin ---------------------------------
+    // La première erreur arrête tout, sans discussion : c'est ce qui fait qu'un
+    // niveau atteint VEUT DIRE quelque chose, et donc qu'il se classe. On ne
+    // rend jamais 'won' — cette épreuve ne se gagne pas, on y monte.
+    case 'ultime': {
+      if (!input.good) {
+        return { ...base, lives: 0, status: 'lost' }
+      }
+      const inLevel = run.inWave + 1
+      if (inLevel < p.ultime.perLevel) {
+        return { ...base, score: base.score + gained, inWave: inLevel }
+      }
+      // Niveau franchi : la prime grandit avec l'étage, comme les vagues.
+      const nextLevel = run.step + 1
+      return {
+        ...base,
+        score: base.score + gained + WAVE_BONUS * nextLevel,
+        step: nextLevel,
+        inWave: 0,
+        stepJustCleared: true,
       }
     }
 

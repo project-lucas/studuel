@@ -16,13 +16,20 @@ import type { Subject, SubjectCategory } from '@/lib/types'
 
 /**
  * Les classes où l'on sous-groupe le programme en tronc commun / spécialités /
- * options : la 1re et la Terminale UNIQUEMENT.
+ * options : la 1re et la Terminale GÉNÉRALES, uniquement.
  *
  * En seconde, il n'y a pas encore de spécialités dans le système français —
  * tout le monde suit le même tronc commun. Afficher une section « Spécialités »
  * en 2de était donc une erreur : les matières comme Maths ou SVT (marquées
  * `specialite` parce qu'elles LE deviennent au cycle terminal) s'y retrouvaient
  * rangées à tort. On traite donc la 2de comme le collège — une grille unique.
+ *
+ * LA VOIE TECHNOLOGIQUE Y ÉCHAPPE AUSSI, et c'est délibéré. Elle a bien des
+ * spécialités, mais elles dépendent de sa SÉRIE (STMG, STI2D, ST2S…) — que le
+ * profil ne demande pas encore — et le catalogue ne lui en déclare donc aucune
+ * (migration 241). Le sous-groupage lui donnerait un titre « Tronc commun »
+ * seul au-dessus de sa grille, et deux sections vides : un rangement qui ne
+ * range rien. Le primaire, lui, n'a jamais eu de spécialités.
  */
 export function usesTrackGroups(grade: string): boolean {
   return grade === '1re' || grade === 'Tle'

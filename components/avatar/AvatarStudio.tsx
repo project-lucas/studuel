@@ -3,7 +3,11 @@
 import { useEffect, useRef, useState, useTransition } from 'react'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import type { AvatarConfig } from '@/lib/avatar'
+import {
+  applyFreeAvatarField,
+  type AvatarConfig,
+  type FreeAvatarFieldKey,
+} from '@/lib/avatar'
 import {
   STUDIO_TABS,
   applyItem,
@@ -15,6 +19,7 @@ import {
 import {
   equipAvatarItemAction,
   purchaseAvatarItemAction,
+  setAvatarFieldAction,
 } from '@/app/moi/avatar/actions'
 import AvatarPreview from '@/components/avatar/AvatarPreview'
 import ItemGrid from '@/components/avatar/ItemGrid'
@@ -91,6 +96,26 @@ export default function AvatarStudio({
       if (!ok) {
         setConfig(prev)
         toast('Impossible d’équiper cet objet pour le moment.', 'error')
+      }
+    })
+  }
+
+  // Un champ libre (expression, lunettes, barbe, fond) : même geste optimiste
+  // que l'équipement, sans caisse. Re-taper l'option déjà portée ne fait rien —
+  // ce serait un aller-retour serveur pour zéro changement.
+  const pickFree = (field: FreeAvatarFieldKey, value: string) => {
+    if (config[field] === value) return
+    sfx.tap()
+    const prev = config
+    const next = applyFreeAvatarField(prev, field, value)
+    if (next === prev) return
+    setConfig(next)
+    setPopKey((k) => k + 1)
+    startTransition(async () => {
+      const { ok } = await setAvatarFieldAction(field, value)
+      if (!ok) {
+        setConfig(prev)
+        toast('Impossible d’enregistrer ce réglage pour le moment.', 'error')
       }
     })
   }
@@ -211,10 +236,12 @@ export default function AvatarStudio({
         >
           <ItemGrid
             categories={active.categories}
+            freeFields={active.freeFields}
             catalog={catalog}
             config={config}
             ownedIds={ownedIds}
             onTap={onTapItem}
+            onPickFree={pickFree}
           />
         </div>
       </div>

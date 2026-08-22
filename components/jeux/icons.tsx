@@ -3,6 +3,7 @@ import {
   Compass,
   Gauge,
   Heart,
+  Infinity as InfinityIcon,
   MoveUp,
   Rocket,
   type LucideIcon,
@@ -22,4 +23,7 @@ export const MECHANIC_ICON: Record<GameMechanic, LucideIcon> = {
   expedition: Compass,
   ascension: MoveUp,
   ordre: ArrowDownUp,
+  // L'infini plutôt qu'une tête de mort : ce qui définit l'épreuve ultime,
+  // c'est l'absence de plafond, pas la mort — elle est la conséquence.
+  ultime: InfinityIcon,
 }

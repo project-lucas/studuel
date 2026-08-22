@@ -1,16 +1,31 @@
 'use client'
 
-import { useRef, useState, useTransition } from 'react'
-import { GraduationCap } from 'lucide-react'
+import { useId, useState, useTransition } from 'react'
+import { ChevronDown, GraduationCap } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
-import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
+import { type GradeLevel } from '@/lib/types'
+import { GRADE_CYCLES, GRADE_SHORT_LABELS, isGradeLevel } from '@/lib/grades'
 import { saveGradeLevel } from '@/app/moi/actions'
 
 // -----------------------------------------------------------------------------
-// « Ma classe » : change d'année scolaire (6e → Tle) depuis l'onglet Moi.
+// « Ma classe » : change d'année scolaire (CP → Terminale) depuis l'onglet Moi.
 // Le niveau pilote le contenu filtré par niveau (Réviser, Défi, examen blanc).
-// Sauvegarde immédiate au tap, mise à jour optimiste + repli si l'action échoue.
+// Sauvegarde immédiate au choix, mise à jour optimiste + repli si l'action échoue.
+//
+// POURQUOI UNE LISTE DÉROULANTE, ET PLUS UNE RANGÉE DE PASTILLES.
+// Les pastilles marchaient à SEPT classes : une ligne et demie, tout visible,
+// un tap. À QUATORZE — le primaire et la voie technologique sont arrivés — la
+// rangée devient un pavé de quatre lignes qui pousse le reste de la page vers
+// le bas, pour un réglage qu'on touche une fois par an. Le déroulé rend cet
+// espace et, surtout, il peut GROUPER : Primaire / Collège / Lycée. Quatorze
+// pastilles à plat ne disent rien de la structure ; trois groupes nommés se
+// parcourent d'un coup d'œil.
+//
+// `<select>` natif plutôt qu'un menu maison : sur téléphone il ouvre le
+// sélecteur du système (grande cible, molette, saisie au clavier), et il donne
+// gratuitement ce qu'un menu maison redemande d'écrire — navigation au clavier,
+// annonce du groupe par le lecteur d'écran, fermeture au retour arrière.
 // -----------------------------------------------------------------------------
 export default function GradeSelector({
   current,
@@ -20,7 +35,7 @@ export default function GradeSelector({
   const [selected, setSelected] = useState<GradeLevel | null>(current)
   const [syncedCurrent, setSyncedCurrent] = useState(current)
   const [pending, startTransition] = useTransition()
-  const btnRefs = useRef<(HTMLButtonElement | null)[]>([])
+  const selectId = useId()
 
   // Le serveur reste la source de vérité : saveGradeLevel revalide la page, qui
   // se re-rend avec un `current` frais. Si l'enregistrement a échoué (RLS, GRANT,
@@ -34,30 +49,17 @@ export default function GradeSelector({
     setSelected(current)
   }
 
-  function choose(grade: GradeLevel) {
-    if (grade === selected || pending) return
+  function choose(value: string) {
+    // Garde-fou : une valeur hors référentiel (extension de navigateur, option
+    // forcée) ne doit pas partir en base. L'action la refuserait de toute façon,
+    // mais l'affichage optimiste, lui, aurait déjà changé de classe.
+    if (!isGradeLevel(value) || value === selected || pending) return
     sfx.tap()
-    setSelected(grade) // optimiste ; resynchronisé par l'effet ci-dessus
+    setSelected(value) // optimiste ; resynchronisé par l'ajustement ci-dessus
     startTransition(async () => {
-      await saveGradeLevel(grade)
+      await saveGradeLevel(value)
     })
   }
-
-  // Navigation clavier attendue d'un radiogroup : flèches pour changer d'option
-  // (un seul arrêt Tab pour le groupe via le tabIndex « roving » plus bas).
-  function onKeyDown(e: React.KeyboardEvent, index: number) {
-    const forward = e.key === 'ArrowRight' || e.key === 'ArrowDown'
-    const backward = e.key === 'ArrowLeft' || e.key === 'ArrowUp'
-    if (!forward && !backward) return
-    e.preventDefault()
-    const delta = forward ? 1 : -1
-    const next = (index + delta + GRADE_LEVELS.length) % GRADE_LEVELS.length
-    btnRefs.current[next]?.focus()
-    choose(GRADE_LEVELS[next])
-  }
-
-  // Index qui reçoit le focus au Tab : la classe sélectionnée, ou la 1re par défaut.
-  const focusIndex = selected ? GRADE_LEVELS.indexOf(selected) : 0
 
   return (
     <section
@@ -70,7 +72,7 @@ export default function GradeSelector({
         </span>
         <div>
           <h2 className="font-heading text-base font-bold text-foreground">
-            Ma classe
+            <label htmlFor={selectId}>Ma classe</label>
           </h2>
           <p className="text-xs text-muted-foreground">
             Change d&apos;année pour adapter tout ton contenu.
@@ -78,37 +80,43 @@ export default function GradeSelector({
         </div>
       </div>
 
-      <div
-        role="radiogroup"
-        aria-label="Choisir ma classe"
-        className="mt-3 flex flex-wrap gap-2"
-      >
-        {GRADE_LEVELS.map((grade, index) => {
-          const active = grade === selected
-          return (
-            <button
-              key={grade}
-              ref={(el) => {
-                btnRefs.current[index] = el
-              }}
-              type="button"
-              role="radio"
-              aria-checked={active}
-              tabIndex={index === focusIndex ? 0 : -1}
-              disabled={pending}
-              onClick={() => choose(grade)}
-              onKeyDown={(e) => onKeyDown(e, index)}
-              className={cn(
-                'min-w-12 rounded-full px-3.5 py-2 text-sm font-bold transition-all active:scale-90 disabled:opacity-60',
-                active
-                  ? 'bg-primary text-primary-foreground shadow-sm'
-                  : 'bg-muted text-muted-foreground hover:text-foreground',
-              )}
-            >
-              {grade}
-            </button>
-          )
-        })}
+      <div className="relative mt-3">
+        <select
+          id={selectId}
+          value={selected ?? ''}
+          disabled={pending}
+          onChange={(e) => choose(e.target.value)}
+          className={cn(
+            // `appearance-none` retire le chevron du système, remplacé par le
+            // nôtre juste en dessous — sinon les deux flèches se superposent.
+            'font-heading w-full appearance-none rounded-2xl bg-muted py-3 pr-11 pl-4',
+            'text-base font-bold text-foreground transition-colors',
+            'focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none',
+            'disabled:opacity-60',
+          )}
+        >
+          {/* Aucune classe enregistrée : sans cette option vide, le déroulé
+              afficherait « CP » comme s'il avait été choisi. */}
+          {selected === null && (
+            <option value="" disabled>
+              Choisis ta classe
+            </option>
+          )}
+          {GRADE_CYCLES.map((cycle) => (
+            <optgroup key={cycle.id} label={cycle.label}>
+              {cycle.grades.map((grade) => (
+                <option key={grade} value={grade}>
+                  {GRADE_SHORT_LABELS[grade]}
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+        <ChevronDown
+          className="pointer-events-none absolute top-1/2 right-4 size-4.5 -translate-y-1/2 text-muted-foreground"
+          strokeWidth={2.4}
+          aria-hidden="true"
+        />
       </div>
     </section>
   )

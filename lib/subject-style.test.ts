@@ -119,8 +119,19 @@ describe('subjectVignette', () => {
     )
   })
 
-  it('undefined pour un slug sans vignette générée', () => {
-    // Maths expertes n'a pas (encore) d'illustration dédiée → repli médaillon.
-    expect(subjectVignette('maths-expertes')).toBeUndefined()
+  it('prête le dessin de la grande sœur aux matières sans le leur', () => {
+    // Maths expertes n'a pas d'illustration dédiée, mais ce SONT des maths :
+    // elle porte le dessin des maths plutôt qu'un médaillon nu.
+    expect(subjectVignette('maths-expertes')).toBe(
+      '/images/matieres/vignettes/maths.webp',
+    )
+    expect(subjectVignette('hlp')).toBe(
+      '/images/matieres/vignettes/philosophie.webp',
+    )
+  })
+
+  it('undefined pour un slug sans vignette ni sœur illustrée', () => {
+    expect(subjectVignette('grand-oral')).toBeUndefined()
+    expect(subjectVignette('matiere-fantome')).toBeUndefined()
   })
 })

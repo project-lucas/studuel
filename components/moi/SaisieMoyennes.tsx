@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useTransition } from 'react'
-import { Plus } from 'lucide-react'
 import BottomSheet from '@/components/carnet/BottomSheet'
 import { Button } from '@/components/ui/button'
 import { sfx } from '@/lib/sounds'
@@ -104,55 +103,5 @@ export function SaisieMoyennesSheet({
         </Button>
       </div>
     </BottomSheet>
-  )
-}
-
-/**
- * Le contenu de la tuile « Moyenne générale » quand aucune note n'est connue.
- *
- * Un appel à l'action, PAS un mur : les deux autres preuves restent pleines à
- * côté. L'ancien écran bloquait un tiers de la page sur « Ajoute tes moyennes
- * pour voir ta trajectoire » — une demande de saisie avant tout retour.
- */
-export default function AjouterMoyennes({
-  terms,
-  disabled = false,
-}: {
-  terms: readonly TermPoint[]
-  /** La migration 187 n'est pas passée : la saisie n'a nulle part où aller. */
-  disabled?: boolean
-}) {
-  const [open, setOpen] = useState(false)
-
-  // Ce bouton vit sur le violet du panneau d'identité, à la place du chiffre
-  // manquant : son encre est donc blanche, pas la couleur de marque — laquelle
-  // disparaîtrait sur son propre fond.
-  if (disabled) {
-    return (
-      <span className="text-[13px] leading-tight font-bold text-white/70">
-        Bientôt
-      </span>
-    )
-  }
-
-  return (
-    <>
-      <button
-        type="button"
-        onClick={() => {
-          sfx.tap()
-          setOpen(true)
-        }}
-        className="flex cursor-pointer items-center gap-1 rounded-full bg-white/20 px-3 py-1.5 text-xs leading-tight font-extrabold text-white ring-1 ring-white/30 transition-transform active:scale-95"
-      >
-        <Plus className="size-3.5" strokeWidth={3} aria-hidden="true" />
-        Ajouter
-      </button>
-      <SaisieMoyennesSheet
-        open={open}
-        onClose={() => setOpen(false)}
-        terms={terms}
-      />
-    </>
   )
 }

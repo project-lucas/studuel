@@ -1,9 +1,14 @@
 import { Flame } from 'lucide-react'
 import BackButton from '@/components/BackButton'
 import SubjectIcon from '@/components/SubjectIcon'
-import GemIcon from '@/components/ui/GemIcon'
+import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { cn } from '@/lib/utils'
-import { subjectTheme, subjectDecor, GRID_PATTERN } from '@/lib/subject-style'
+import {
+  subjectTheme,
+  subjectDecor,
+  subjectVignette,
+  GRID_PATTERN,
+} from '@/lib/subject-style'
 import type { SubjectProgress } from '@/lib/subject-template'
 
 // Header de la page matière : retour, icône + nom (depuis la base), niveau,
@@ -18,6 +23,9 @@ export default function SubjectHeader({
   gems,
   streak,
   standing = null,
+  gardien = null,
+  unit = 'chapitre',
+  discipline = null,
   children,
 }: {
   subject: { slug: string; name: string; color: string }
@@ -31,10 +39,29 @@ export default function SubjectHeader({
    * cohorte de la matière est trop petite pour qu'un pourcentage soit honnête.
    */
   standing?: React.ReactNode
+  /**
+   * L'écusson du gardien de la matière (anneau de traque). Posé à GAUCHE des
+   * monnaies : la jauge se remplit avec le travail de la page, elle doit se lire
+   * sans changer d'onglet. `null` quand la traque est illisible.
+   */
+  gardien?: React.ReactNode
+  /**
+   * Le mot qui nomme une ligne du programme — « chapitre » à plat, « fiche »
+   * quand la matière est rangée sous les chapitres du programme, où le mot
+   * « chapitre » appartient alors aux quatre en-têtes de la liste (`chapterUnit`).
+   */
+  unit?: 'chapitre' | 'fiche'
+  /**
+   * Discipline ouverte (« Géographie ») dans une matière qui en réunit deux :
+   * la ligne de programme dit alors ce que la barre compte, sans quoi elle
+   * annoncerait le dossier entier au-dessus d'une demi-liste.
+   */
+  discipline?: string | null
   children?: React.ReactNode // barre d'onglets, rendue dans le monde coloré
 }) {
   const theme = subjectTheme(subject.color)
   const decor = subjectDecor(subject.slug)
+  const vignette = subjectVignette(subject.slug)
 
   return (
     <header
@@ -66,11 +93,16 @@ export default function SubjectHeader({
           {/* Économie : 💎 puis 🔥. La flamme reste le SEUL dégradé ambre→orange
               autorisé hors tokens (série uniquement, cf. design system). */}
           <div className="flex items-center gap-2">
+            {gardien}
             <span
               className="inline-flex items-center gap-1.5 rounded-full bg-black/25 px-3 py-1.5 text-sm font-bold tabular-nums backdrop-blur-sm"
               aria-label={`${gems} gemmes`}
             >
-              <GemIcon className="size-4" aria-hidden="true" />
+              {/* L'ILLUSTRATION, pas le pictogramme : ici la gemme est un
+                  solde qu'on regarde, pas un signe dans une phrase — et la
+                  pastille sombre lui donne le fond neutre qu'elle réclame
+                  (cf. la doctrine de MonnaieIcon). */}
+              <CristalIcon className="size-5" />
               {gems}
             </span>
             <span
@@ -91,25 +123,52 @@ export default function SubjectHeader({
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <span className="relative flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white/15 shadow-[inset_0_-2px_3px_rgba(0,0,0,0.25)]">
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-x-2 top-1 h-5 rounded-full bg-gradient-to-b from-white/40 to-transparent"
-            />
-            <SubjectIcon
-              slug={subject.slug}
-              className="size-7 drop-shadow-[0_1.5px_1px_rgba(0,0,0,0.35)]"
-              strokeWidth={2.25}
-              aria-hidden="true"
-            />
+          {/* LE MÉDAILLON DE LA MATIÈRE : son illustration, la même que sur sa
+              carte de l'accueil Réviser — l'élève reconnaît son dossier à son
+              dessin, pas à un pictogramme de trait blanc que six matières
+              partagent (trois langues portaient le même). Le dessin est posé
+              sur une plaque CRÈME et non sur le verre translucide d'avant :
+              ces illustrations sont dessinées pour un fond clair, et sur le
+              bandeau saturé leurs couleurs se seraient éteintes. */}
+          <span
+            className={cn(
+              'relative flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-[0_4px_10px_rgba(0,0,0,0.2)] ring-1 ring-black/10',
+              vignette ? 'bg-background' : cn('arena-tile', theme.arena),
+            )}
+          >
+            {vignette ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={vignette}
+                alt=""
+                aria-hidden="true"
+                width={320}
+                height={320}
+                // Le héros de l'écran : rien à différer, il est déjà à l'image.
+                className="size-13 object-contain"
+              />
+            ) : (
+              <>
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-x-2 top-1 h-5 rounded-full bg-gradient-to-b from-white/40 to-transparent"
+                />
+                <SubjectIcon
+                  slug={subject.slug}
+                  className="size-7 drop-shadow-[0_1.5px_1px_rgba(0,0,0,0.35)]"
+                  strokeWidth={2.25}
+                  aria-hidden="true"
+                />
+              </>
+            )}
           </span>
           <div className="min-w-0 flex-1">
             <h1 className="font-heading text-3xl font-bold md:text-4xl">
               {subject.name}
             </h1>
             <p className="text-sm font-medium opacity-70">
-              Programme de {grade} · {progress.done}/{progress.total} chapitres
-              · {progress.pct}%
+              {discipline ?? 'Programme'} de {grade} ·{' '}
+              {progress.done}/{progress.total} {unit}s · {progress.pct}%
             </p>
             {/* Sous la ligne de programme, qui dit où l'élève en est DANS la
                 matière : celle-ci dit où il se situe PAR RAPPORT aux autres.
@@ -122,7 +181,7 @@ export default function SubjectHeader({
         <div
           className="mt-3 h-2 w-full overflow-hidden rounded-full bg-black/25"
           role="progressbar"
-          aria-label={`${subject.name} — ${progress.done} chapitres sur ${progress.total}, ${progress.pct}% travaillé`}
+          aria-label={`${discipline ?? subject.name} — ${progress.done} ${unit}s sur ${progress.total}, ${progress.pct}% travaillé`}
           aria-valuemin={0}
           aria-valuemax={100}
           aria-valuenow={progress.pct}

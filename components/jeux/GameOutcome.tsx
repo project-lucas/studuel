@@ -1,6 +1,16 @@
 'use client'
 
-import { Ghost, RotateCcw, Trophy, Zap } from 'lucide-react'
+import Link from 'next/link'
+import {
+  Ghost,
+  Infinity as InfinityIcon,
+  Map,
+  RotateCcw,
+  Timer,
+  Trophy,
+  Unlock,
+  Zap,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { XP_RULES } from '@/lib/xp'
@@ -9,6 +19,21 @@ import { runAchieved, runTarget, type GameRun } from '@/lib/jeux/run'
 import type { GameTrophyOutcome } from '@/app/defi/actions'
 import { trophyBand } from '@/lib/trophy-road'
 import type { GameGhost } from '@/lib/jeux/ghost-server'
+import PalierStars from '@/components/jeux/PalierStars'
+import {
+  formatDuration,
+  nextStarAccuracy,
+  palierDef,
+  type PalierLevel,
+  type PalierOutcome,
+} from '@/lib/jeux/paliers'
+import {
+  speedLabelFor,
+  type PalierTimeStanding,
+} from '@/lib/jeux/palier-standing'
+import { coteTitle, nextCoteTitle } from '@/lib/jeux/ultime'
+import { gradeLabel, worldLabel } from '@/lib/jeux/ultime-standing'
+import type { UltimeResult } from '@/lib/jeux/use-ultime-run'
 
 /**
  * L'écran de fin d'un jeu de salon. Il raconte la partie DANS LA LANGUE DU JEU
@@ -21,6 +46,10 @@ import type { GameGhost } from '@/lib/jeux/ghost-server'
  */
 export default function GameOutcome({
   format,
+  palier,
+  palierOutcome,
+  palierStanding,
+  ultime,
   run,
   best,
   isRecord,
@@ -31,6 +60,21 @@ export default function GameOutcome({
   onReplay,
 }: {
   format: GameFormat
+  /** Le palier joué, ou null pour un jeu hors échelle (le « Programme »). */
+  palier: PalierLevel | null
+  /** Étoiles décrochées et palier ouvert par CETTE partie (null tant que rien n'est rangé). */
+  palierOutcome: PalierOutcome | null
+  /**
+   * Ma place au chrono sur ce palier (null en attente du serveur, ou quand il
+   * n'y a rien à en dire : partie perdue, migration 313 pas passée).
+   */
+  palierStanding: PalierTimeStanding | null
+  /**
+   * Résultat d'une ÉPREUVE ULTIME, quand c'est elle qu'on vient de jouer : le
+   * niveau atteint, et la cote qu'il donne. Remplace alors le bloc des étoiles —
+   * l'épreuve n'en a pas, elle a un classement.
+   */
+  ultime?: UltimeResult | null
   run: GameRun
   /** Meilleur score local sur ce jeu (0 s'il n'y en a pas encore). */
   best: number
@@ -93,6 +137,17 @@ export default function GameOutcome({
         ) : null}
       </div>
 
+      {ultime ? (
+        <UltimeResultBlock gameId={format.id} result={ultime} />
+      ) : (
+        <PalierResult
+          gameId={format.id}
+          level={palier}
+          outcome={palierOutcome}
+          standing={palierStanding}
+        />
+      )}
+
       <p className="font-mono text-5xl font-extrabold tabular-nums">
         {run.score}
       </p>
@@ -130,6 +185,189 @@ export default function GameOutcome({
         <RotateCcw className="size-4" aria-hidden="true" /> Rejouer
       </Button>
     </div>
+  )
+}
+
+/**
+ * LE RÉSULTAT DE L'ÉPREUVE ULTIME : le niveau atteint, la cote, et les deux
+ * classements.
+ *
+ * L'ordre n'est pas décoratif. Le NIVEAU d'abord, parce qu'il est immédiat et
+ * qu'il appartient au joueur. La COTE ensuite, parce qu'elle résume tout ce
+ * qu'il a fait sur ce jeu. Les CLASSEMENTS en dernier — le mondial avant celui
+ * de la classe, parce que c'est le mondial qui donne son sens à l'épreuve : un
+ * 6e y dépasse un Terminale, et c'est cette phrase-là qu'il vient chercher.
+ *
+ * Rien ne s'affiche qui ne soit vrai : sans serveur (migration 314 absente,
+ * réseau coupé), il reste le niveau atteint, et c'est déjà une nouvelle.
+ */
+function UltimeResultBlock({
+  gameId,
+  result,
+}: {
+  gameId: string
+  result: UltimeResult
+}) {
+  const { standing } = result
+  const world = worldLabel(standing)
+  const grade = gradeLabel(standing)
+  const next = standing ? nextCoteTitle(standing.cote) : null
+
+  return (
+    <section className="w-full space-y-3" aria-label="Résultat de l’épreuve ultime">
+      <p className="font-heading flex items-center justify-center gap-2 text-sm font-extrabold tracking-wide uppercase">
+        <InfinityIcon className="size-4" aria-hidden="true" />
+        Niveau {result.level + 1} atteint
+      </p>
+
+      {standing ? (
+        <div className="space-y-2 rounded-2xl bg-card px-4 py-3 shadow-sm">
+          <p className="flex items-baseline justify-center gap-2">
+            <span className="font-mono text-3xl font-extrabold tabular-nums">
+              {standing.cote}
+            </span>
+            <span className="font-heading text-sm font-extrabold text-primary uppercase">
+              {coteTitle(standing.cote)}
+            </span>
+          </p>
+          <p className="text-[11px] text-muted-foreground">
+            Ta cote sur ce jeu — la moyenne de tes 3 meilleures épreuves.
+          </p>
+
+          {/* Le mondial en premier : c'est lui qui compare tout le monde. */}
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+            {world ? (
+              <span className="font-heading rounded-full bg-primary px-3 py-1 text-[11px] font-extrabold text-primary-foreground uppercase">
+                {world}
+              </span>
+            ) : null}
+            {grade ? (
+              <span className="rounded-full bg-highlight/20 px-3 py-1 text-[11px] font-bold">
+                {grade}
+              </span>
+            ) : null}
+          </div>
+
+          {next ? (
+            <p className="text-xs text-muted-foreground">
+              Encore {next.from - standing.cote} points de cote pour devenir{' '}
+              <span className="font-bold text-foreground">{next.name}</span>.
+            </p>
+          ) : null}
+        </div>
+      ) : (
+        <p className="text-xs text-muted-foreground">
+          Classement indisponible pour l’instant — ton niveau, lui, est bien
+          celui-là.
+        </p>
+      )}
+
+      <Link
+        href={`/defi/jeux/${gameId}`}
+        className="inline-flex cursor-pointer items-center gap-1.5 text-xs font-bold text-primary underline-offset-4 transition-colors duration-200 hover:underline focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:outline-none"
+      >
+        <Map className="size-3.5" aria-hidden="true" />
+        Voir la carte du jeu
+      </Link>
+    </section>
+  )
+}
+
+/**
+ * LES ÉTOILES DU PALIER — la vraie nouvelle de l'écran de fin.
+ *
+ * Le score dit combien on a fait ; les étoiles disent OÙ ON EN EST. Elles sont
+ * placées au-dessus du score parce que ce sont elles qui ouvrent le palier
+ * suivant, donc elles qui donnent une raison de relancer.
+ *
+ * Quand il en manque, on annonce le seuil exact à viser plutôt qu'un
+ * encouragement creux : « 80 % de réussite » se joue, « courage » non.
+ */
+function PalierResult({
+  gameId,
+  level,
+  outcome,
+  standing,
+}: {
+  gameId: string
+  level: PalierLevel | null
+  outcome: PalierOutcome | null
+  standing: PalierTimeStanding | null
+}) {
+  if (level === null) return null
+  const def = palierDef(level)
+  const stars = outcome?.stars ?? 0
+  const gained = outcome?.gained ?? 0
+  const target = nextStarAccuracy(stars)
+  const speed = speedLabelFor(standing)
+
+  return (
+    <section className="w-full space-y-2" aria-label="Étoiles du palier">
+      <PalierStars stars={stars} size="lg" className="justify-center" />
+
+      <p className="text-sm font-bold">
+        Palier {level} · {def.name}
+        {gained > 0 ? (
+          <span className="text-highlight">
+            {' '}
+            +{gained} étoile{gained > 1 ? 's' : ''} !
+          </span>
+        ) : null}
+      </p>
+
+      {/* Le CHRONO de bouclage, et la place qu'il donne. Il n'apparaît que sur
+          une partie gagnée : une partie perdue n'a pas de temps comparable, et
+          en afficher un ferait du plus vite abandonné le meilleur chrono du
+          jeu. Le pourcentage arrive après (aller-retour serveur) ; sans lui, le
+          chrono se tient très bien tout seul. */}
+      {outcome && outcome.timeMs !== null ? (
+        <p className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm">
+          <span className="flex items-center gap-1.5 font-mono font-bold tabular-nums">
+            <Timer className="size-4" aria-hidden="true" />
+            {formatDuration(outcome.timeMs)}
+          </span>
+          {outcome.isBestTime ? (
+            <span className="font-heading rounded-full bg-highlight px-2 py-0.5 text-[10px] font-extrabold tracking-wide text-foreground uppercase">
+              Meilleur temps
+            </span>
+          ) : null}
+          {speed ? (
+            <span className="font-bold text-primary">{speed}</span>
+          ) : null}
+        </p>
+      ) : null}
+
+      {outcome?.unlocked ? (
+        <Link
+          href={`/defi/jeux/${gameId}`}
+          className="font-heading flex w-full cursor-pointer items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-extrabold text-primary-foreground shadow-md transition-colors duration-200 hover:brightness-110 focus-visible:ring-4 focus-visible:ring-primary/50 focus-visible:outline-none"
+        >
+          <Unlock className="size-4" aria-hidden="true" />
+          Palier {outcome.unlocked} · {palierDef(outcome.unlocked).name} ouvert !
+        </Link>
+      ) : (
+        <>
+          {target !== null ? (
+            <p className="text-xs text-muted-foreground">
+              {stars === 0
+                ? `Vise ${Math.round(target * 100)} % de bonnes réponses pour ta première étoile.`
+                : `Termine la partie avec ${Math.round(target * 100)} % de réussite pour l’étoile suivante.`}
+            </p>
+          ) : (
+            <p className="text-xs text-muted-foreground">
+              Palier maîtrisé — il ne reste que ton propre record à battre.
+            </p>
+          )}
+          <Link
+            href={`/defi/jeux/${gameId}`}
+            className="inline-flex cursor-pointer items-center gap-1.5 text-xs font-bold text-primary underline-offset-4 transition-colors duration-200 hover:underline focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:outline-none"
+          >
+            <Map className="size-3.5" aria-hidden="true" />
+            Voir la carte des paliers
+          </Link>
+        </>
+      )}
+    </section>
   )
 }
 

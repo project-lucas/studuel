@@ -15,6 +15,8 @@ import { SoundToggle } from '@/components/FlashcardPlayer'
 import BackButton from '@/components/BackButton'
 import QuitGuardButton from '@/components/QuitGuardButton'
 import ProgressRing from '@/components/ProgressRing'
+import AnswerBoard from '@/components/jeux/AnswerBoard'
+import { subjectRobe } from '@/lib/subject-style'
 import BossApparition from '@/components/defi/BossApparition'
 import QuizFeedbackMascotte from '@/components/QuizFeedbackMascotte'
 import { feedbackTitle, reactionSrc } from '@/lib/quiz-feedback'
@@ -35,6 +37,7 @@ export default function QuizPlayer({
   title,
   questions: allQuestions,
   subject = null,
+  subjectColor = null,
   backHref = '/reviser',
   record = true,
   gradeLevel = null,
@@ -43,6 +46,12 @@ export default function QuizPlayer({
   title: string
   questions: QuizQuestion[]
   subject?: string | null
+  /**
+   * Couleur de la matière (`subjects.color`) — elle donne sa ROBE à la session,
+   * comme chaque jeu de salon porte la sienne. Absente (quiz personnel, quiz
+   * détaché) : repli sur le violet de l'app.
+   */
+  subjectColor?: string | null
   backHref?: string
   // `false` pour un quiz PERSONNEL (bibliothèque) : on ne l'enregistre pas comme
   // une session de catalogue (quiz_id absent de `quizzes` → violerait la FK) et
@@ -52,6 +61,11 @@ export default function QuizPlayer({
   // un Terminale qui prépare le bac). Absente pour un quiz personnel.
   gradeLevel?: string | null
 }) {
+  // LA ROBE DE LA SESSION : la couleur de la matière, posée en variables
+  // `--jeu-*` (globals.css). Les mêmes que celles des jeux de salon — c'est ce
+  // qui fait qu'un quiz et une partie se ressemblent enfin.
+  const robe = subjectRobe(subjectColor)
+
   // Le paquet EN COURS. Il vaut le quiz complet, sauf après « Revoir mes
   // erreurs », où il ne contient plus que les questions ratées.
   const [questions, setQuestions] = useState<QuizQuestion[]>(allQuestions)
@@ -232,18 +246,24 @@ export default function QuizPlayer({
           />
         ) : null}
 
-        {/* Volet score, aux couleurs du quiz */}
-        <div className="bg-primary px-4 pt-16 pb-10 text-primary-foreground md:px-8 md:pt-12">
+        {/* Volet score, dans la robe de la matière — même table que l'écran de
+            fin d'un jeu de salon. */}
+        <div
+          className={cn(
+            robe,
+            'jeu-table px-4 pt-16 pb-10 text-foreground md:px-8 md:pt-12',
+          )}
+        >
           <div className="mx-auto w-full max-w-xl">
             <BackButton
               fallback={backHref}
               label="Quitter le quiz"
-              className="mb-4 bg-white/15 text-primary-foreground shadow-none"
+              className="mb-4"
             >
               <X className="size-5" aria-hidden="true" />
             </BackButton>
 
-            <div className="rounded-3xl bg-black/15 p-6 text-center">
+            <div className="rounded-3xl bg-card p-6 text-center shadow-sm ring-1 ring-black/5">
               <h1 className="font-heading text-xl font-bold">Score du quiz</h1>
               <p className="mt-3 font-mono text-6xl font-bold tabular-nums">
                 {score}
@@ -450,7 +470,10 @@ export default function QuizPlayer({
     <div
       key="quiz-session"
       data-no-swipe
-      className="-mx-4 -mt-16 flex min-h-svh flex-col bg-primary px-4 pt-16 pb-24 text-primary-foreground md:-mx-8 md:-mt-10 md:px-8 md:pt-12"
+      className={cn(
+        robe,
+        'jeu-table -mx-4 -mt-16 flex min-h-svh flex-col px-4 pt-16 pb-24 text-foreground md:-mx-8 md:-mt-10 md:px-8 md:pt-12',
+      )}
       // La feuille de la mascotte se pose PAR-DESSUS le bas de l'écran : sans
       // cette marge, la dernière réponse disparaîtrait sous elle. Elle tient
       // compte de la mascotte, qui dépasse du panneau de toute sa moitié haute.
@@ -463,7 +486,7 @@ export default function QuizPlayer({
           <QuitGuardButton
             fallback={backHref}
             label="Quitter le quiz"
-            className="bg-white/15 text-primary-foreground shadow-none"
+            className="shadow-sm"
           >
             <X className="size-5" aria-hidden="true" />
           </QuitGuardButton>
@@ -478,7 +501,7 @@ export default function QuizPlayer({
             n'annonce que les CHANGEMENTS d'une région déjà présente. Si elle
             apparaissait en même temps que son texte, l'annonce serait ratée. */}
         <div className="flex min-h-7 justify-center" aria-live="polite">
-          <ComboBadge streak={streak} variant="arene" />
+          <ComboBadge streak={streak} variant="clair" />
         </div>
 
         {/* Anneau de progression : « Question N/10 » */}
@@ -488,11 +511,13 @@ export default function QuizPlayer({
             size={104}
             strokeWidth={7}
             label={`Question ${index + 1} sur ${questions.length}`}
-            trackClassName="stroke-black/25"
-            fillClassName="stroke-highlight"
+            trackClassName="stroke-black/10"
+            fillClassName="stroke-[color:var(--jeu-accent)]"
           >
-            <span className="flex size-[82px] flex-col items-center justify-center rounded-full bg-black/20 text-center">
-              <span className="text-xs font-medium opacity-80">Question</span>
+            <span className="flex size-[82px] flex-col items-center justify-center rounded-full bg-card text-center shadow-sm">
+              <span className="text-xs font-medium text-muted-foreground">
+                Question
+              </span>
               <span className="font-mono text-lg font-bold tabular-nums">
                 {index + 1}/{questions.length}
               </span>
@@ -501,7 +526,7 @@ export default function QuizPlayer({
         </div>
 
         {/* La question */}
-        <div className="rounded-3xl bg-card px-5 pt-14 pb-8 text-center shadow-md">
+        <div className="rounded-3xl bg-card px-5 pt-14 pb-8 text-center shadow-md ring-1 ring-black/5">
           <p className="font-heading text-lg font-bold text-balance text-foreground">
             {question.question}
           </p>
@@ -512,36 +537,22 @@ export default function QuizPlayer({
           ) : null}
         </div>
 
-        {/* Les réponses : au tap, on révèle juste/faux + la bonne réponse. */}
-        <div className="mt-5 flex flex-col gap-3" role="group" aria-label="Réponses">
-          {question.options.map((option, i) => {
-            const isTheAnswer = i === question.correct_index
-            const isMyPick = i === selected
-            return (
-              <button
-                key={i}
-                type="button"
-                onClick={() => choose(i)}
-                disabled={answered}
-                className={cn(
-                  'flex items-center justify-between gap-3 rounded-2xl px-5 py-4 text-left text-sm font-semibold shadow-md transition-all',
-                  !answered &&
-                    'bg-card text-foreground hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98]',
-                  // Après réponse : la bonne en vert, le mauvais choix en rouge.
-                  answered && isTheAnswer && 'bg-success text-white',
-                  answered && !isTheAnswer && isMyPick && 'bg-destructive text-white',
-                  answered && !isTheAnswer && !isMyPick && 'bg-card text-foreground opacity-50',
-                )}
-              >
-                <span className="min-w-0">{option}</span>
-                {answered && isTheAnswer ? (
-                  <CircleCheck className="size-5 shrink-0" aria-hidden="true" />
-                ) : answered && isMyPick ? (
-                  <CircleX className="size-5 shrink-0" aria-hidden="true" />
-                ) : null}
-              </button>
-            )
-          })}
+        {/* LES RÉPONSES — le plateau des jeux de salon, à l'identique.
+            Le quiz avait le sien : des pastilles qui viraient à l'APLAT vert ou
+            rouge saturé, quand la table de jeu, elle, teinte la bonne réponse et
+            la cerne. Deux grammaires du même verdict, dans la même app. C'est
+            désormais un seul composant : ce qu'on corrige d'un côté profite à
+            l'autre, et un élève n'a plus à réapprendre à lire un écran de
+            questions selon la porte par laquelle il est entré. */}
+        <div className="mt-5" role="group" aria-label="Réponses">
+          <AnswerBoard
+            options={question.options}
+            correctIndex={question.correct_index}
+            selected={selected}
+            revealed={answered}
+            layout="liste"
+            onAnswer={choose}
+          />
         </div>
 
         {/* Feedback + explication + bouton pour continuer. La feuille porte
@@ -558,11 +569,6 @@ export default function QuizPlayer({
           ctaLabel={isLast ? 'Voir mon score' : 'Continuer'}
           onContinue={advance}
         />
-        {answered ? null : (
-          <p className="mt-auto pt-6 text-center text-xs font-medium opacity-70">
-            Touche une réponse — le résultat s&apos;affiche aussitôt.
-          </p>
-        )}
       </div>
     </div>
   )

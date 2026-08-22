@@ -11,6 +11,7 @@ import {
   Crown,
   Drama,
   Dumbbell,
+  FlaskConical,
   Globe,
   Infinity,
   Landmark,
@@ -18,6 +19,7 @@ import {
   Leaf,
   Lightbulb,
   LineChart,
+  Mic,
   Microscope,
   Music,
   Palette,
@@ -63,6 +65,9 @@ const SUBJECT_ICONS: Record<string, LucideIcon> = {
   'llcer-anglais': Drama,
   si: Cog,
   'maths-complementaires': Sigma,
+  // Matières ajoutées par la migration 241 (primaire + voie technologique).
+  'sciences-technologie': FlaskConical,
+  'grand-oral': Mic,
   // Matières « culture » (hors-programme). L'ancien dossier unique
   // 'culture-generale' garde son icône tant que la migration 190 (éclatement en
   // matières séparées) n'est pas exécutée.
@@ -194,6 +199,21 @@ export function subjectTheme(color: string): SubjectTheme {
 }
 
 /**
+ * La ROBE d'une matière : le nom de la classe CSS qui pose ses quatre variables
+ * `--jeu-*` (globals.css). C'est ce qui habille la SESSION DE QUIZ, exactement
+ * comme chaque jeu de salon porte la sienne — un quiz est le même geste qu'un
+ * jeu (une question, des réponses, un verdict), il doit donc se jouer dans le
+ * même écrin.
+ *
+ * Repli sur le violet de l'app quand la couleur est inconnue ou absente : un
+ * quiz personnel, ou détaché de toute matière, garde une table cohérente.
+ */
+export function subjectRobe(color: string | null | undefined): string {
+  const c = String(color ?? '').trim()
+  return c && c in THEMES ? `robe-${c}` : 'robe-purple'
+}
+
+/**
  * Cette couleur a-t-elle VRAIMENT un thème ? `subjectTheme` retombe en silence
  * sur le bleu, donc une couleur mal orthographiée dans une migration passe
  * inaperçue — la matière s'affiche simplement dans la mauvaise teinte. Sert au
@@ -317,15 +337,46 @@ const VIGNETTE_SLUGS: string[] = [
   'sport',
   'svt',
   'technologie',
-  // Manque encore : finances-personnelles, maths-expertes,
-  // maths-complementaires (aucun dessin dans les lots v2 ni v3 — sources dans
-  // assets-sources/, hors dépôt). Elles gardent le médaillon d'icône.
+  // Les matières absentes de cette liste passent par VIGNETTE_ALIASES quand une
+  // matière sœur peut leur prêter son dessin. Seul le Grand oral n'a ni l'un ni
+  // l'autre : il garde le médaillon d'icône (cf. lib/subject-catalogue.test.ts,
+  // qui tient la liste à jour).
 ]
 
+// Les matières qui EMPRUNTENT l'illustration d'une autre. Ce ne sont pas des
+// à-peu-près : ce sont les mêmes études sous un autre nom de bulletin. Maths
+// expertes et maths complémentaires SONT des maths ; SNT est l'informatique de
+// seconde ; « Sciences et technologie » est la technologie du primaire ;
+// « Humanités, littérature et philosophie » est la philosophie ; LLCER anglais
+// est de l'anglais ; les finances personnelles sont de l'économie. Leur donner
+// le dessin de leur grande sœur vaut mieux qu'un médaillon nu au milieu de
+// vingt-quatre matières illustrées — et évite d'inventer un dessin de plus.
+const VIGNETTE_ALIASES: Record<string, string> = {
+  'maths-expertes': 'maths',
+  'maths-complementaires': 'maths',
+  snt: 'nsi',
+  si: 'technologie',
+  'sciences-technologie': 'technologie',
+  hlp: 'philosophie',
+  'llcer-anglais': 'anglais',
+  'finances-personnelles': 'economie',
+}
+
 export function subjectVignette(slug: string): string | undefined {
-  return VIGNETTE_SLUGS.includes(slug)
-    ? `/images/matieres/vignettes/${slug}.webp`
+  const source = VIGNETTE_ALIASES[slug] ?? slug
+  return VIGNETTE_SLUGS.includes(source)
+    ? `/images/matieres/vignettes/${source}.webp`
     : undefined
+}
+
+/**
+ * Cette matière a-t-elle son illustration ? Sert au garde-fou du catalogue
+ * (lib/subject-catalogue.test.ts) : sans lui, une matière ajoutée par une
+ * migration retombe en silence sur le médaillon d'icône, et c'est un dossier
+ * qui n'a plus l'air d'appartenir au même jeu que ses voisins.
+ */
+export function hasSubjectVignette(slug: string): boolean {
+  return subjectVignette(slug) !== undefined
 }
 
 // Motif grille léger pour les headers colorés.

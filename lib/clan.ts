@@ -1,32 +1,76 @@
+import { cycleOf, type GradeCycle } from '@/lib/grades'
+
 // -----------------------------------------------------------------------------
 // « Écoles = clans » — chaque élève appartient à une école qui fait office de
-// clan ; le classement du Défi se décline par école. Un élève a une école de
-// COLLÈGE et/ou de LYCÉE ; le clan ACTIF est celui de son cycle courant (dérivé
-// de sa classe). Données dans schools + profiles.college_school_id /
-// lycee_school_id (migration 159). Logique pure et testable (convention projet).
+// clan ; le classement du Défi se décline par école. Un élève a une école par
+// cycle traversé (ÉCOLE primaire, COLLÈGE, LYCÉE) ; le clan ACTIF est celui de
+// son cycle courant, dérivé de sa classe. Données dans schools +
+// profiles.primaire_school_id / college_school_id / lycee_school_id
+// (migrations 159 puis 242). Logique pure et testable (convention projet).
 // -----------------------------------------------------------------------------
 
-export type SchoolLevel = 'college' | 'lycee'
+// L'école d'un élève est celle de son CYCLE — un cycle, un établissement, un
+// clan. Les deux notions n'en font donc qu'une : `SchoolLevel` est exactement
+// `GradeCycle` (lib/grades), et `schoolLevelForGrade` n'est qu'un autre nom de
+// `cycleOf`. Elles ont vécu séparément, avec chacune sa liste de classes en
+// dur — et c'est la deuxième qui a été oubliée quand le primaire est arrivé :
+// un élève de CP se retrouvait dans un clan de COLLÈGE, à qui l'app disait
+// « ton collège devient ton clan ».
+export type SchoolLevel = GradeCycle
 
-export const SCHOOL_LEVELS: readonly SchoolLevel[] = ['college', 'lycee']
+export const SCHOOL_LEVELS: readonly SchoolLevel[] = ['primaire', 'college', 'lycee']
 
 export const SCHOOL_LEVEL_LABEL: Record<SchoolLevel, string> = {
+  primaire: 'École',
   college: 'Collège',
   lycee: 'Lycée',
 }
 
-// Classes de lycée (2de, 1re, Tle) ; tout le reste (collège 6e→3e, ou inconnu)
-// retombe côté collège, cycle d'entrée.
-const LYCEE_GRADES = new Set(['2de', '1re', 'Tle'])
-
-// Le cycle (donc le clan) correspondant à une classe. Par défaut collège.
+/**
+ * Le cycle (donc le clan) correspondant à une classe. Par défaut collège —
+ * cf. `cycleOf`, qui porte cette règle et son repli.
+ */
 export function schoolLevelForGrade(grade: string | null | undefined): SchoolLevel {
-  if (typeof grade !== 'string') return 'college'
-  return LYCEE_GRADES.has(grade) ? 'lycee' : 'college'
+  return cycleOf(grade)
 }
 
 export function isSchoolLevel(v: unknown): v is SchoolLevel {
-  return v === 'college' || v === 'lycee'
+  return v === 'primaire' || v === 'college' || v === 'lycee'
+}
+
+/** La colonne de `profiles` qui porte l'école de ce cycle (migrations 159, 242). */
+export const SCHOOL_ID_COLUMN = {
+  primaire: 'primaire_school_id',
+  college: 'college_school_id',
+  lycee: 'lycee_school_id',
+} as const satisfies Record<SchoolLevel, string>
+
+/** Les trois colonnes, pour un `select` qui les veut toutes. */
+export const SCHOOL_ID_COLUMNS = [
+  'primaire_school_id',
+  'college_school_id',
+  'lycee_school_id',
+] as const
+
+type SchoolIdColumns = Partial<
+  Record<(typeof SCHOOL_ID_COLUMN)[SchoolLevel], string | null | undefined>
+>
+
+/**
+ * L'école ACTIVE d'un profil : celle du cycle de sa classe.
+ *
+ * Le calcul s'écrivait à trois endroits sous la forme
+ * `cycle === 'college' ? college_school_id : lycee_school_id` — un ternaire qui
+ * dit « collège ou lycée » et n'a plus de sens à trois cycles : il envoyait un
+ * CM1 chercher son LYCÉE. Une fonction, un seul endroit à corriger le jour où
+ * un quatrième cycle arrive.
+ */
+export function activeSchoolId(
+  profile: SchoolIdColumns | null | undefined,
+  grade: string | null | undefined,
+): string | null {
+  if (!profile) return null
+  return profile[SCHOOL_ID_COLUMN[schoolLevelForGrade(grade)]] ?? null
 }
 
 export type School = {

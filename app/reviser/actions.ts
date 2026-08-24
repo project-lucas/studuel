@@ -5,6 +5,7 @@ import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { toDayKey } from '@/lib/streak'
+import type { EtatBilan } from '@/lib/quiz-bilan'
 import {
   reviewAfterAnswer,
   sanitizeReviewAnswers,
@@ -107,7 +108,13 @@ const UUID_RE =
 
 export async function recordReviewAnswers(
   answers: ReviewAnswer[],
-): Promise<{ saved: boolean }> {
+  /**
+   * Les identifiants du QUIZ ENTIER, quand l'appelant veut le bilan en retour.
+   * Sans eux, la fonction se comporte exactement comme avant : elle enregistre
+   * et ne rend que `saved`.
+   */
+  scopeIds?: readonly string[],
+): Promise<{ saved: boolean; etats?: EtatBilan[] }> {
   const supabase = await createClient()
   const user = await getCurrentUser()
   if (!user) return { saved: false }
@@ -115,7 +122,9 @@ export async function recordReviewAnswers(
   // Assainissement : formes valides seulement, dernière réponse par item,
   // volume borné (une session ne dépasse jamais quelques dizaines d'items).
   const clean = sanitizeReviewAnswers(answers)
-  if (clean.length === 0) return { saved: true }
+  if (clean.length === 0) {
+    return { saved: true, etats: await lireEtatsBilan(supabase, user.id, scopeIds) }
+  }
 
   // État actuel des items touchés. Toutes les colonnes du moteur sont
   // nécessaires : `due_at` dit si l'item était RÉELLEMENT à revoir (un succès
@@ -154,7 +163,40 @@ export async function recordReviewAnswers(
   }
 
   revalidatePath('/reviser')
-  return { saved: true }
+  // Le bilan est relu APRÈS l'écriture : c'est le seul moment où l'état reflète
+  // la session qui vient de se terminer. Le relire avant afficherait à l'élève
+  // l'avancement d'hier.
+  return {
+    saved: true,
+    etats: await lireEtatsBilan(supabase, user.id, scopeIds),
+  }
+}
+
+/**
+ * Les états des questions d'un quiz, réduits à ce dont le bilan de fin a besoin
+ * (`lib/quiz-bilan`). Rend `undefined` si l'appelant n'a pas demandé de bilan —
+ * et un tableau VIDE plutôt qu'une erreur si la lecture échoue : un bilan
+ * manquant se traduit par « 0 % », jamais par un écran de fin cassé.
+ */
+async function lireEtatsBilan(
+  supabase: Awaited<ReturnType<typeof createClient>>,
+  userId: string,
+  scopeIds: readonly string[] | undefined,
+): Promise<EtatBilan[] | undefined> {
+  if (!scopeIds || scopeIds.length === 0) return undefined
+  const { data, error } = await supabase
+    .from('review_items')
+    .select('box, times_seen')
+    .eq('user_id', userId)
+    .in('item_id', [...scopeIds].slice(0, 500))
+  if (error) {
+    console.error('[srs] bilan de fin illisible:', error.message)
+    return []
+  }
+  return (data ?? []).map((r) => ({
+    box: Number(r.box ?? 1),
+    timesSeen: Number(r.times_seen ?? 0),
+  }))
 }
 
 // Fin d'une session « À revoir » (/reviser/revoir) : enregistre les réponses,

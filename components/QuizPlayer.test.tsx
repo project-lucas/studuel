@@ -325,8 +325,8 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
     await user.click(screen.getByRole('button', { name: '5' })) // faux
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
     return {
-      revoir: screen.getByRole('button', { name: /Revoir mes 1 erreur/ }),
-      refaire: screen.getByRole('button', { name: /Refaire/ }),
+      revoir: screen.getByRole('button', { name: /À revoir/ }),
+      refaire: screen.getByRole('button', { name: /Continuer/ }),
     }
   }
 
@@ -357,21 +357,121 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
     expect(revoir.parentElement?.className).not.toContain('flex-col')
   })
 
-  it('donne à chacun sa couleur, texte en blanc', async () => {
+  it('donne à chacun sa couleur — et PLUS DE ROUGE sur « À revoir »', async () => {
     const { revoir, refaire } = await jusquAuBout(userEvent.setup())
-    // Les erreurs prennent le corail des pastilles ratées, assombri pour que
-    // le blanc y passe le seuil AA (3,34:1 → 4,94:1 mesurés).
-    expect(revoir.className).toContain('var(--destructive)')
+    // Le corail se lisait comme un avertissement : on évitait le bouton, alors
+    // que les questions ratées sont le seul contenu utile qui reste. Il prend
+    // le VERT du succès.
+    expect(revoir.className).toContain('var(--success)')
+    expect(revoir.className).not.toContain('var(--destructive)')
     expect(revoir.className).toContain('text-white')
-    // « Refaire » prend le violet de l'action, et son encre dédiée.
-    expect(refaire.className).toContain('bg-primary')
-    expect(refaire.className).toContain('text-primary-foreground')
+    // « Continuer » garde le violet, en version claire, avec l'encre marine.
+    expect(refaire.className).toContain('var(--primary)')
+    expect(refaire.className).toContain('text-foreground')
     // Deux robes distinctes : c'est ce qui les rend reconnaissables d'un coup.
     expect(revoir.className).not.toBe(refaire.className)
   })
 
-  it('dit « Refaire » en un seul mot', async () => {
+  it('dit « Continuer » et « À revoir », courts et sur une ligne', async () => {
+    const { revoir, refaire } = await jusquAuBout(userEvent.setup())
+    expect(refaire.textContent?.trim()).toBe('Continuer')
+    // Le compte des erreurs passe en PASTILLE, à côté du libellé : celui-ci ne
+    // s'allonge plus avec lui (« Revoir mes 5 erreurs » repassait sur deux
+    // lignes dès qu'on était à l'étroit).
+    expect(revoir.textContent).toContain('À revoir')
+    expect(revoir.textContent).toContain('1')
+    expect(revoir.textContent).not.toContain('erreur')
+  })
+
+  it('FIGE le chrono au bilan — il ne doit pas grimper sous les yeux', async () => {
+    // Le hook `useWorkTimer` continue de compter (l'élève qui lit la correction
+    // travaille encore, et ces minutes vont au total du profil). Mais le chiffre
+    // AFFICHÉ annonce « le temps que tu viens de faire » : s'il continue de
+    // monter sur l'écran de score, il ne veut plus rien dire.
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        record={true}
+      />,
+    )
+    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await user.click(screen.getByRole('button', { name: 'Continuer' }))
+    await user.click(screen.getByRole('button', { name: '4' }))
+    await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
+
+    const chrono = screen.getByTitle(/Temps de révision/)
+    const avant = chrono.textContent
+    // Une bonne seconde de plus passe sur l'écran de score : le hook a eu le
+    // temps de faire au moins un tic, donc de trahir une valeur non figée.
+    await act(async () => {
+      await new Promise((r) => setTimeout(r, 1300))
+    })
+    expect(chrono.textContent).toBe(avant)
+  })
+
+  it('CUMULE le temps quand on rejoue ses erreurs', async () => {
+    // Refaire ses erreurs est du travail EN PLUS, pas du travail à la place :
+    // le second bilan doit annoncer au moins autant que le premier. Il repartait
+    // de zéro, et les minutes du quiz d'avant avaient l'air perdues — alors que
+    // le total du profil, lui, les avait bien comptées.
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        record={true}
+      />,
+    )
+    // Une bonne, une mauvaise : il reste une erreur à rejouer.
+    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await user.click(screen.getByRole('button', { name: 'Continuer' }))
+    await user.click(screen.getByRole('button', { name: '5' }))
+    await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
+
+    const secondesDe = (t: string | null) =>
+      Number(/\+(\d+)s/.exec(t ?? '')?.[1] ?? -1)
+    const premier = secondesDe(screen.getByTitle(/Temps de révision/).textContent)
+
+    // On repart sur l'erreur, après une seconde de lecture de la correction.
+    await act(async () => {
+      await new Promise((r) => setTimeout(r, 1300))
+    })
+    await user.click(screen.getByRole('button', { name: /À revoir/ }))
+    await user.click(screen.getByRole('button', { name: '4' }))
+    await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
+
+    const second = secondesDe(screen.getByTitle(/Temps de révision/).textContent)
+    expect(second).toBeGreaterThan(premier)
+  })
+
+  it('sont plus petits qu’avant — une pilule, pas une plaque', async () => {
     const { refaire } = await jusquAuBout(userEvent.setup())
-    expect(refaire.textContent?.trim()).toBe('Refaire')
+    expect(refaire.className).toContain('h-11')
+    // Le coin plein vient de `.quiz-pilule` (border-radius: 999px) ET de la
+    // base du Button : les deux disent la même chose, aucune ne contredit.
+    expect(refaire.className).toContain('rounded-full')
+  })
+
+  it('portent le traitement du bouton DUEL, pas le socle plat de la maison', async () => {
+    // `.btn-chunky` pose UN trait sombre sous le bouton ; sous une carte claire
+    // il se lit comme une ombre portée mal découpée. `.quiz-pilule` reprend la
+    // plaque de l'arène : contour, dégradé, reflet interne, puis la tranche.
+    const { revoir, refaire } = await jusquAuBout(userEvent.setup())
+    for (const bouton of [revoir, refaire]) {
+      expect(bouton.className).toContain('quiz-pilule')
+      // Le socle de la maison est neutralisé : deux profondeurs superposées
+      // donneraient deux tranches de couleurs différentes.
+      expect(bouton.className).toContain('[--btn-edge:transparent]')
+      expect(bouton.className).not.toContain('shadow-md')
+      // Chaque pilule porte ses trois teintes — sans elles, `.quiz-pilule`
+      // n'aurait ni fond ni contour.
+      expect(bouton.className).toContain('--pilule-haut')
+      expect(bouton.className).toContain('--pilule-bas')
+      expect(bouton.className).toContain('--pilule-bord')
+    }
   })
 })

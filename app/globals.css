@@ -4742,3 +4742,58 @@ a:active > .arena-menu-row {
     inset 0 -3px 0 rgba(0, 0, 0, 0.28),
     0 1px 0 #1e1638;
 }
+
+/* ---------------------------------------------------------------------------
+   LA PILULE DE FIN DE QUIZ — le traitement du bouton DUEL, en petit.
+
+   Les deux reprises de l'écran de score ont d'abord porté le socle standard de
+   `.btn-chunky` : un simple trait sombre sous le bouton. Posé sous une carte
+   claire, ce trait ne se lit pas comme une tranche mais comme une ombre portée
+   mal découpée — plat, et sans rapport avec le reste du bouton.
+
+   Le bouton Duel de l'arène (`.arena-plate`) résout exactement le même problème,
+   et bien : la profondeur n'y vient pas d'UN trait, elle vient de QUATRE choses
+   qui se répondent — un contour foncé qui ferme la forme, un dégradé haut→bas
+   qui donne le volume, un reflet interne en haut, une ombre interne en bas, et
+   seulement ensuite la tranche pleine. C'est ce faisceau qu'on reprend ici, à
+   l'échelle d'une pilule.
+
+   Les trois teintes sont passées en variables par le composant : la pilule ne
+   connaît que sa géométrie, jamais sa couleur — c'est ce qui lui permet d'être
+   verte d'un côté et lavande de l'autre sans dupliquer la règle.
+   --------------------------------------------------------------------------- */
+.quiz-pilule {
+  border-radius: 999px;
+  border: 2px solid var(--pilule-bord);
+  background: linear-gradient(
+    180deg,
+    var(--pilule-haut) 0%,
+    var(--pilule-bas) 100%
+  );
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.16),
+    0 3px 0 var(--pilule-bord),
+    0 5px 10px rgba(0, 0, 0, 0.16);
+  transition:
+    transform 0.1s var(--ease),
+    box-shadow 0.1s var(--ease);
+}
+
+/* L'enfoncement : la pilule descend de la hauteur de sa tranche, et la tranche
+   disparaît sous elle. Le reflet et l'ombre interne RESTENT — c'est ce qui fait
+   qu'elle a l'air enfoncée plutôt qu'aplatie. */
+.quiz-pilule:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.16),
+    0 0 0 var(--pilule-bord),
+    0 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-pilule {
+    transition: none;
+  }
+}

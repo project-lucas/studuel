@@ -12,7 +12,6 @@ import {
 import { Button } from '@/components/ui/button'
 import PageHeader from '@/components/PageHeader'
 import QuizPlayer from '@/components/QuizPlayer'
-import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
 import { getUserTier, canAccessPremiumTests } from '@/lib/subscription'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
@@ -139,8 +138,9 @@ export default async function QuizPage({
   if (!error && questions && questions.length > 0) {
     return (
       <>
-        {/* Le temps passé sur un quiz compte comme temps de révision. */}
-        <WorkTimer />
+        {/* Le chrono de travail vit DANS le player depuis qu'il affiche le
+            temps gagné en fin de quiz : deux montages du même hook compteraient
+            les secondes en double. */}
         <QuizPlayer
           quizId={quiz.id}
           title={quiz.title}

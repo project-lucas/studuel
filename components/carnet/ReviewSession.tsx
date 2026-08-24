@@ -2,16 +2,15 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { X } from 'lucide-react'
+import { AlertTriangle, RefreshCw, X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
-import type {
-  CourseQuestionType,
-  QuestionContent,
-} from '@/lib/carnet-cours'
+import type { CourseQuestionType, QuestionContent } from '@/lib/carnet-cours'
 import {
+  avancerSession,
   endReviewSession,
   recordAttempt,
   startReviewSession,
+  type AttemptResult,
 } from '@/app/reviser/cours/actions'
 import QuestionPlayer, {
   type PlayerResult,
@@ -23,10 +22,25 @@ export type PlayableQuestion = {
   content: QuestionContent
 }
 
+/** Dit l'échéance en français, sans jargon d'intervalle. */
+function prochainTexte(jours: number): string {
+  if (jours <= 0) return 'revue tout à l’heure'
+  if (jours === 1) return 'revue demain'
+  if (jours < 30) return `revue dans ${jours} jours`
+  const mois = Math.round(jours / 30)
+  return mois <= 1 ? 'revue dans un mois' : `revue dans ${mois} mois`
+}
+
 /**
- * Une session de révision : une question par écran, correction immédiate,
- * puis bilan. Les tentatives sont enregistrées au fil de l'eau
- * (carnet_review_attempts) pour nourrir l'onglet Résultats.
+ * Une session de révision : une question par écran, correction immédiate, puis
+ * bilan. Trois choses que l'ancienne version ne faisait pas :
+ *
+ *   • elle DIT ce que le moteur a décidé (« revue dans 12 jours ») — sans quoi
+ *     la répétition espacée travaille sans que l'élève la voie jamais ;
+ *   • elle SURVIT à la fermeture de l'onglet (l'avancement est enregistré à
+ *     chaque réponse, il ne vivait que dans ce composant) ;
+ *   • elle propose de REJOUER LES ERREURS à la fin, au lieu de laisser la
+ *     boucle ouverte au moment précis où elle devrait se refermer.
  */
 export default function ReviewSession({
   courseId,
@@ -36,63 +50,99 @@ export default function ReviewSession({
   questions,
   backHref,
   backLabel,
+  repriseIndex = 0,
+  repriseJustes = 0,
+  repriseSessionId = null,
+  planifie = true,
 }: {
-  /** null = session transverse (« À revoir » multi-cours) : les tentatives
-   *  sont enregistrées hors session, le serveur re-corrige de toute façon. */
+  /** null = session transverse (« À revoir » multi-cours). */
   courseId: string | null
   chapterId: string | null
   courseTitle: string
   /** « Tout le cours » ou le titre du chapitre révisé. */
   scopeLabel: string
   questions: PlayableQuestion[]
-  /** Destination du bouton retour (défaut : l'écran du cours). */
   backHref?: string
   backLabel?: string
+  /** Reprise d'une session interrompue : où elle s'était arrêtée. */
+  repriseIndex?: number
+  repriseJustes?: number
+  repriseSessionId?: string | null
+  /** Faux en entraînement / examen : les échéances ne bougent pas. */
+  planifie?: boolean
 }) {
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(
+    Math.min(Math.max(0, repriseIndex), Math.max(0, questions.length - 1)),
+  )
   const [answered, setAnswered] = useState(false)
-  const [correctCount, setCorrectCount] = useState(0)
+  const [retour, setRetour] = useState<AttemptResult | null>(null)
+  const [correctCount, setCorrectCount] = useState(repriseJustes)
   const [finished, setFinished] = useState(false)
-  const sessionIdRef = useRef<string | null>(null)
+  // Les questions ratées de CETTE session : la matière du « rejouer mes erreurs ».
+  const [rates, setRates] = useState<PlayableQuestion[]>([])
+  // La file jouée — remplacée par les erreurs quand on les rejoue.
+  const [file, setFile] = useState<PlayableQuestion[]>(questions)
+  const [tourErreurs, setTourErreurs] = useState(false)
+
+  const sessionIdRef = useRef<string | null>(repriseSessionId)
   const endedRef = useRef(false)
 
   const exitHref = backHref ?? `/reviser/cours/${courseId}`
   const exitLabel = backLabel ?? 'Retour au cours'
 
-  // Ouvre la session côté serveur, une seule fois (sessions liées à UN cours ;
-  // la session transverse enregistre ses tentatives sans en ouvrir).
+  // Ouvre la session côté serveur, une seule fois — sauf reprise, où elle est
+  // déjà ouverte. La file est transmise pour que la reprise rejoue LA MÊME
+  // sélection (les échéances auront bougé entre-temps).
   useEffect(() => {
-    if (courseId === null) return
+    if (sessionIdRef.current !== null) return
     let cancelled = false
-    startReviewSession(courseId, chapterId).then((res) => {
+    startReviewSession(
+      courseId,
+      chapterId,
+      questions.map((q) => q.id),
+    ).then((res) => {
       if (!cancelled && res.ok && res.id) sessionIdRef.current = res.id
     })
     return () => {
       cancelled = true
     }
+    // `questions` est stable pour un rendu de page donné (calculée au serveur).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseId, chapterId])
 
-  const total = questions.length
-  const current = questions[index]
+  const total = file.length
+  const current = file[index]
 
   const onAnswered = (result: PlayerResult) => {
     if (answered || !current) return
     setAnswered(true)
     if (result.correct) setCorrectCount((n) => n + 1)
-    // Enregistrement en arrière-plan : ne bloque jamais l'élève. Session
-    // encore en cours d'ouverture → la tentative est enregistrée hors session
-    // plutôt que perdue (le serveur re-corrige de toute façon).
+    else setRates((liste) => [...liste, current])
+
+    // Enregistrement en arrière-plan : ne bloque jamais l'élève. Le serveur
+    // re-corrige, planifie la carte et rend son échéance — qu'on affiche.
     void recordAttempt(
       sessionIdRef.current,
       current.id,
-      result.correct,
+      result.verdict,
       result.given,
-    )
+      planifie,
+    ).then((res) => {
+      if (res.ok) setRetour(res)
+    })
   }
 
   const next = () => {
     sfx.tap()
-    if (index + 1 >= total) {
+    const suivant = index + 1
+    // L'avancement est poussé au serveur : c'est ce qui rend la session
+    // reprenable. Sans attendre — un aller-retour ne doit pas retenir l'élève.
+    if (sessionIdRef.current && !tourErreurs) {
+      void avancerSession(sessionIdRef.current, suivant, correctCount)
+    }
+    setRetour(null)
+
+    if (suivant >= total) {
       setFinished(true)
       if (!endedRef.current && sessionIdRef.current) {
         endedRef.current = true
@@ -101,15 +151,27 @@ export default function ReviewSession({
       sfx.complete()
       return
     }
-    setIndex((i) => i + 1)
+    setIndex(suivant)
     setAnswered(false)
+  }
+
+  const rejouerErreurs = () => {
+    sfx.tap()
+    setFile(rates)
+    setRates([])
+    setIndex(0)
+    setAnswered(false)
+    setRetour(null)
+    setCorrectCount(0)
+    setFinished(false)
+    setTourErreurs(true)
   }
 
   if (total === 0) {
     return (
       <div className="mx-auto w-full max-w-md">
         <p className="rounded-2xl bg-muted/40 px-3 py-4 text-center text-sm text-muted-foreground">
-          Aucune question complète à réviser ici pour l’instant.
+          Rien à réviser ici pour l’instant — tout est à jour. 🎉
         </p>
         <Link
           href={exitHref}
@@ -130,7 +192,7 @@ export default function ReviewSession({
             {pct >= 80 ? '🏆' : pct >= 50 ? '💪' : '📚'}
           </p>
           <h1 className="font-heading mt-2 text-xl font-extrabold text-foreground">
-            Session terminée !
+            {tourErreurs ? 'Erreurs rejouées !' : 'Session terminée !'}
           </h1>
           <p className="mt-1 text-sm font-semibold text-muted-foreground">
             {scopeLabel} · {courseTitle}
@@ -141,18 +203,21 @@ export default function ReviewSession({
           <p className="text-xs font-bold text-muted-foreground">
             bonnes réponses ({pct} %)
           </p>
+
           <div className="mt-5 flex flex-col gap-2">
-            <button
-              type="button"
-              onClick={() => {
-                sfx.tap()
-                // Nouvelle session sur la même sélection.
-                window.location.reload()
-              }}
-              className="font-heading cursor-pointer rounded-2xl bg-primary px-4 py-3 text-sm font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px"
-            >
-              Rejouer
-            </button>
+            {/* LA porte de sortie utile : refermer la boucle sur ce qui a raté,
+                tout de suite, pendant que c'est encore frais. */}
+            {rates.length > 0 ? (
+              <button
+                type="button"
+                onClick={rejouerErreurs}
+                className="font-heading flex cursor-pointer items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px"
+              >
+                <RefreshCw className="size-4" aria-hidden="true" />
+                Rejouer mes {rates.length} erreur
+                {rates.length > 1 ? 's' : ''}
+              </button>
+            ) : null}
             <Link
               href={exitHref}
               onClick={() => sfx.tap()}
@@ -199,7 +264,7 @@ export default function ReviewSession({
       </div>
 
       <p className="mb-2 px-1 text-[11px] font-bold text-muted-foreground">
-        {scopeLabel} · {courseTitle}
+        {tourErreurs ? 'Tes erreurs' : scopeLabel} · {courseTitle}
       </p>
 
       {/* La question du moment — `key` remonte un joueur neuf à chaque pas. */}
@@ -211,6 +276,32 @@ export default function ReviewSession({
           onAnswered={onAnswered}
         />
       </div>
+
+      {/* Ce que le moteur a décidé. Sans ce bandeau, la répétition espacée
+          travaille dans le dos de l'élève : il ne sait jamais qu'une carte
+          qu'il maîtrise ne reviendra pas avant trois semaines. */}
+      {answered && retour ? (
+        <div className="mt-3 flex flex-col gap-2">
+          {retour.presque && retour.orthographe ? (
+            <p className="rounded-2xl bg-highlight/25 px-3 py-2 text-center text-xs font-bold text-foreground">
+              Presque ! L’orthographe exacte :{' '}
+              <span className="font-extrabold">{retour.orthographe}</span>
+            </p>
+          ) : null}
+          {retour.sangsue ? (
+            <p className="flex items-center gap-2 rounded-2xl bg-destructive/10 px-3 py-2 text-xs font-bold text-destructive">
+              <AlertTriangle className="size-4 shrink-0" aria-hidden="true" />
+              Cette carte te résiste depuis longtemps — elle gagnerait à être
+              réécrite plus simplement.
+            </p>
+          ) : null}
+          {planifie ? (
+            <p className="text-center text-[11px] font-bold text-muted-foreground">
+              {prochainTexte(retour.prochainJours)}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
 
       {answered ? (
         <button

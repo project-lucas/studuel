@@ -12,6 +12,12 @@ export type CourseQuestionType =
   | 'vrai_faux'
   | 'texte_a_trous'
   | 'reponse_libre'
+  // Ajoutés par la migration 316 : cinq types ne couvraient ni l'appariement
+  // (vocabulaire, dates/événements), ni la chronologie, ni le calcul — trois
+  // exercices que tous les concurrents proposent.
+  | 'appariement'
+  | 'remise_en_ordre'
+  | 'numerique'
 
 export const QUESTION_TYPES: readonly CourseQuestionType[] = [
   'qcm',
@@ -19,6 +25,9 @@ export const QUESTION_TYPES: readonly CourseQuestionType[] = [
   'vrai_faux',
   'texte_a_trous',
   'reponse_libre',
+  'appariement',
+  'remise_en_ordre',
+  'numerique',
 ]
 
 export const TYPE_LABEL: Record<CourseQuestionType, string> = {
@@ -27,6 +36,9 @@ export const TYPE_LABEL: Record<CourseQuestionType, string> = {
   vrai_faux: 'Vrai / Faux',
   texte_a_trous: 'Texte à trous',
   reponse_libre: 'Réponse libre',
+  appariement: 'Appariement',
+  remise_en_ordre: 'Remise en ordre',
+  numerique: 'Réponse chiffrée',
 }
 
 export function isQuestionType(v: unknown): v is CourseQuestionType {
@@ -44,6 +56,12 @@ export const MAX_FEEDBACK_LEN = 500
 export const MAX_FLASHCARD_FACE_LEN = 1_000
 export const MAX_TROUS_LEN = 2_000
 export const MAX_LIBRE_ANSWERS = 8
+/** Appariement : en dessous de 2 paires il n'y a rien à relier. */
+export const MIN_PAIRES = 2
+export const MAX_PAIRES = 8
+/** Remise en ordre : moins de 3 éléments se devine à pile ou face. */
+export const MIN_ELEMENTS_ORDRE = 3
+export const MAX_ELEMENTS_ORDRE = 8
 /** Profondeur max de l'arbre de chapitres (1 = racine, 2 = sous-dossier…). */
 export const MAX_CHAPTER_DEPTH = 3
 
@@ -68,12 +86,31 @@ export type VraiFauxContent = {
 export type TrousContent = { texte: string }
 export type LibreContent = { enonce: string; reponses: string[] }
 
+/** Appariement : relier chaque terme de gauche à celui de droite. */
+export type PaireAppariement = { gauche: string; droite: string }
+export type AppariementContent = {
+  enonce: string
+  paires: PaireAppariement[]
+}
+/** Remise en ordre : `elements` est DANS le bon ordre (on mélange à l'écran). */
+export type OrdreContent = { enonce: string; elements: string[] }
+/** Réponse chiffrée, avec sa tolérance et son unité facultative. */
+export type NumeriqueContent = {
+  enonce: string
+  valeur: number
+  tolerance: number
+  unite: string | null
+}
+
 export type QuestionContent =
   | QcmContent
   | FlashcardContent
   | VraiFauxContent
   | TrousContent
   | LibreContent
+  | AppariementContent
+  | OrdreContent
+  | NumeriqueContent
 
 export type CourseQuestion = {
   id: string
@@ -227,6 +264,52 @@ export function normalizeLibre(raw: unknown): LibreContent {
   }
 }
 
+export function normalizeAppariement(raw: unknown): AppariementContent {
+  const o = (raw ?? {}) as Record<string, unknown>
+  const brutes = Array.isArray(o.paires) ? o.paires : []
+  const paires = brutes
+    .map((x) => {
+      if (!x || typeof x !== 'object') return null
+      const px = x as Record<string, unknown>
+      const gauche = str(px.gauche).trim().slice(0, MAX_CHOICE_LEN)
+      const droite = str(px.droite).trim().slice(0, MAX_CHOICE_LEN)
+      if (gauche.length === 0 || droite.length === 0) return null
+      return { gauche, droite }
+    })
+    .filter((x): x is PaireAppariement => x !== null)
+    .slice(0, MAX_PAIRES)
+  return {
+    enonce: str(o.enonce).trim().slice(0, MAX_ENONCE_LEN),
+    paires,
+  }
+}
+
+export function normalizeOrdre(raw: unknown): OrdreContent {
+  const o = (raw ?? {}) as Record<string, unknown>
+  const elements = (Array.isArray(o.elements) ? o.elements : [])
+    .map((x) => str(x).trim().slice(0, MAX_CHOICE_LEN))
+    .filter((x) => x.length > 0)
+    .slice(0, MAX_ELEMENTS_ORDRE)
+  return {
+    enonce: str(o.enonce).trim().slice(0, MAX_ENONCE_LEN),
+    elements,
+  }
+}
+
+export function normalizeNumerique(raw: unknown): NumeriqueContent {
+  const o = (raw ?? {}) as Record<string, unknown>
+  const valeur = Number(o.valeur)
+  // Une tolérance NÉGATIVE rendrait toute réponse fausse, y compris la bonne :
+  // on la ramène à zéro (égalité stricte), jamais à l'absurde.
+  const tol = Number(o.tolerance)
+  return {
+    enonce: str(o.enonce).trim().slice(0, MAX_ENONCE_LEN),
+    valeur: Number.isFinite(valeur) ? valeur : 0,
+    tolerance: Number.isFinite(tol) && tol > 0 ? tol : 0,
+    unite: optionalText(o.unite, 20),
+  }
+}
+
 export function normalizeQuestionContent(
   type: CourseQuestionType,
   raw: unknown,
@@ -235,6 +318,9 @@ export function normalizeQuestionContent(
   if (type === 'flashcard') return normalizeFlashcard(raw)
   if (type === 'vrai_faux') return normalizeVraiFaux(raw)
   if (type === 'texte_a_trous') return normalizeTrous(raw)
+  if (type === 'appariement') return normalizeAppariement(raw)
+  if (type === 'remise_en_ordre') return normalizeOrdre(raw)
+  if (type === 'numerique') return normalizeNumerique(raw)
   return normalizeLibre(raw)
 }
 
@@ -256,6 +342,19 @@ export function emptyQuestionContent(
   }
   if (type === 'vrai_faux') return { enonce: '', reponse: true, feedback: null }
   if (type === 'texte_a_trous') return { texte: '' }
+  if (type === 'appariement') {
+    return {
+      enonce: '',
+      paires: [
+        { gauche: '', droite: '' },
+        { gauche: '', droite: '' },
+      ],
+    }
+  }
+  if (type === 'remise_en_ordre') return { enonce: '', elements: ['', '', ''] }
+  if (type === 'numerique') {
+    return { enonce: '', valeur: 0, tolerance: 0, unite: null }
+  }
   return { enonce: '', reponses: [] }
 }
 
@@ -284,6 +383,18 @@ export function isQuestionReady(
       (s) => s.type === 'trou',
     )
   }
+  if (type === 'appariement') {
+    const c = content as AppariementContent
+    return c.paires.length >= MIN_PAIRES
+  }
+  if (type === 'remise_en_ordre') {
+    const c = content as OrdreContent
+    return c.elements.length >= MIN_ELEMENTS_ORDRE
+  }
+  if (type === 'numerique') {
+    const c = content as NumeriqueContent
+    return c.enonce.length > 0 && Number.isFinite(c.valeur)
+  }
   const c = content as LibreContent
   return c.enonce.length > 0 && c.reponses.length > 0
 }
@@ -301,7 +412,23 @@ export function questionSummary(
     const texte = (content as TrousContent).texte
     return texte.length > 0 ? texte.replace(/\[([^\]]*)\]/g, '___') : 'Texte vide'
   }
-  const enonce = (content as QcmContent | VraiFauxContent | LibreContent).enonce
+  if (type === 'appariement') {
+    const c = content as AppariementContent
+    if (c.enonce.length > 0) return c.enonce
+    return c.paires.length > 0
+      ? `Relier : ${c.paires.map((x) => x.gauche).join(', ')}`
+      : 'Appariement vide'
+  }
+  if (type === 'remise_en_ordre') {
+    const c = content as OrdreContent
+    if (c.enonce.length > 0) return c.enonce
+    return c.elements.length > 0
+      ? `Remettre en ordre : ${c.elements.join(', ')}`
+      : 'Remise en ordre vide'
+  }
+  const enonce = (
+    content as QcmContent | VraiFauxContent | LibreContent | NumeriqueContent
+  ).enonce
   return enonce.length > 0 ? enonce : 'Question vide'
 }
 
@@ -405,6 +532,55 @@ export function gradeLibre(content: LibreContent, answer: string): boolean {
   const got = canonicalAnswer(answer)
   if (got.length === 0) return false
   return content.reponses.some((r) => canonicalAnswer(r) === got)
+}
+
+/**
+ * Appariement : vrai si CHAQUE terme de gauche est relié à sa droite. `liens`
+ * associe l'index de gauche à l'index de droite tel qu'affiché à l'élève ;
+ * l'appelant transmet aussi l'ordre mélangé pour qu'on retrouve la vérité.
+ */
+export function gradeAppariement(
+  content: AppariementContent,
+  /** Pour chaque paire (index d'origine à gauche), l'index d'origine choisi à droite. */
+  liens: readonly number[],
+): boolean {
+  const n = content.paires.length
+  if (n < MIN_PAIRES) return false
+  if (liens.length !== n) return false
+  return liens.every((droite, gauche) => droite === gauche)
+}
+
+/**
+ * Remise en ordre : vrai si la suite proposée est l'ordre d'origine.
+ * `ordre` contient les index d'origine, dans l'ordre où l'élève les a posés.
+ */
+export function gradeOrdre(
+  content: OrdreContent,
+  ordre: readonly number[],
+): boolean {
+  const n = content.elements.length
+  if (n < MIN_ELEMENTS_ORDRE) return false
+  if (ordre.length !== n) return false
+  return ordre.every((valeur, i) => valeur === i)
+}
+
+/**
+ * Réponse chiffrée : vraie à la tolérance près. Une tolérance de 0 veut dire
+ * égalité stricte — et non « tout est faux ».
+ */
+export function gradeNumerique(
+  content: NumeriqueContent,
+  reponse: number,
+): boolean {
+  if (!Number.isFinite(reponse)) return false
+  // La tolérance est INCLUSIVE, et l'arithmétique flottante ne doit pas
+  // décider à sa place. Deux cas, tous deux réels :
+  //   • tolérance nulle : 0,1 + 0,2 ne vaut pas exactement 0,3 ;
+  //   • pile à la borne : |3,15 − 3,14| vaut 0,010000000000000231, donc
+  //     « > 0,01 » — l'élève qui répond juste à la tolérance près verrait faux.
+  // L'epsilon est ajouté à la marge (et non substitué), pour couvrir les deux.
+  const marge = Math.max(0, content.tolerance) + 1e-9
+  return Math.abs(reponse - content.valeur) <= marge
 }
 
 // --- Arbre de chapitres ---------------------------------------------------------

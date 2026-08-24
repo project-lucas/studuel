@@ -19,9 +19,9 @@ export type CourseShelfItem = {
   icon: string | null
   color: string | null
   questionCount: number
-  /** Questions dues aujourd'hui (moteur « à revoir », lib/carnet-revoir). */
+  /** Cartes dues aujourd'hui (planificateur, lib/carnet/planification). */
   dueCount: number
-  /** Couronnes de maîtrise (0 → 3), depuis les tentatives. */
+  /** Couronnes de maîtrise (0 → 3), sur les cartes ACQUISES. */
   crowns: 0 | 1 | 2 | 3
 }
 

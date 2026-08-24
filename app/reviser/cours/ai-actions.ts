@@ -7,6 +7,7 @@ import {
   isQuestionReady,
   isQuestionType,
   normalizeQuestionContent,
+  questionSummary,
   MAX_FEEDBACK_LEN,
 } from '@/lib/carnet-cours'
 
@@ -18,8 +19,19 @@ import {
 // Sans clé : { ok:false, unavailable:true } → message clair côté UI.
 
 const AI_DEFAULT_MODEL = 'gpt-4o-mini'
-const MAX_AI_QUESTIONS = 15
-const MAX_THEME_LEN = 500
+const MAX_AI_QUESTIONS = 25
+/**
+ * La carte du carnet promet « COLLE TON COURS ». Elle mentait : le champ était
+ * borné à 500 caractères — de quoi écrire un thème, pas coller un cours. La
+ * borne monte à ce que vaut vraiment un chapitre de manuel. Au-delà, on rogne
+ * plutôt que de refuser : mieux vaut des questions sur les 12 000 premiers
+ * caractères qu'un message d'erreur.
+ */
+const MAX_THEME_LEN = 12_000
+/** Un feedback porte sur UNE question : la borne d'origine y reste bonne. */
+const MAX_FEEDBACK_SOURCE_LEN = 500
+/** Taille maximale d'une photo de cours (data URL base64). */
+const MAX_IMAGE_LEN = 4_000_000
 
 type AiResult = {
   ok: boolean
@@ -103,23 +115,46 @@ Réponds UNIQUEMENT avec un tableau JSON, sans texte autour. Chaque élément es
 - Réponse libre : {"type":"reponse_libre","content":{"enonce":"…","reponses":["réponse acceptée","variante"]}}
 Questions factuelles, adaptées au niveau demandé, une seule bonne réponse par QCM sauf mention contraire.`
 
+/** Une question PROPOSÉE par l'IA, pas encore écrite en base. */
+export type QuestionProposee = {
+  type: string
+  content: unknown
+  /** Le résumé montré dans l'écran de validation. */
+  apercu: string
+}
+
+export type PropositionResult = AiResult & {
+  questions?: QuestionProposee[]
+}
+
+/** La source du contenu : du texte collé, ou la photo d'un cours. */
+export type SourceIa =
+  | { kind: 'texte'; texte: string }
+  | { kind: 'image'; dataUrl: string }
+
 /**
- * Génère `count` questions sur `theme` et les insère dans le cours (au niveau
- * racine ou dans `chapterId`). `style` oriente le mélange de types.
+ * PROPOSE des questions — sans rien écrire.
+ *
+ * L'ancienne version insérait directement en base. La carte du carnet promet
+ * pourtant « l'IA rédige, TU VALIDES » : l'élève ne validait jamais rien, et
+ * découvrait dans son cours des questions qu'il n'avait pas relues (dont
+ * certaines fausses — un modèle se trompe). La validation n'est pas un confort,
+ * c'est ce qui empêche le carnet d'enseigner des erreurs.
+ *
+ * Deux sources possibles : du texte (thème OU cours collé en entier), ou une
+ * PHOTO du cours — parce que le cours d'un élève est une photo dans son
+ * téléphone, et que le carnet n'avait aucune porte pour ça.
  */
-export async function generateCourseQuestions(
+export async function proposerQuestions(
   courseId: string,
-  chapterId: string | null,
-  theme: string,
+  source: SourceIa,
   count: number,
   style: 'qcm' | 'flashcard' | 'mixte',
-): Promise<AiResult> {
+  niveau?: string,
+): Promise<PropositionResult> {
   const { supabase, userId } = await requireUserId()
   if (!userId || typeof courseId !== 'string') return { ok: false }
 
-  const cleanTheme =
-    typeof theme === 'string' ? theme.trim().slice(0, MAX_THEME_LEN) : ''
-  if (cleanTheme.length === 0) return { ok: false }
   const n = Math.min(
     MAX_AI_QUESTIONS,
     Math.max(1, Number.isFinite(count) ? Math.floor(count) : 5),
@@ -134,18 +169,32 @@ export async function generateCourseQuestions(
     .maybeSingle()
   if (!course) return { ok: false }
 
-  // Chapitre cible : il doit appartenir AU MÊME cours. `moveQuestion` fait déjà
-  // ce contrôle ; sans lui ici, un appel forgé rattacherait sa question au
-  // chapitre d'un autre élève (la policy ne contrôle que `course_id`), qui
-  // l'emporterait dans sa corbeille en supprimant son chapitre.
-  if (chapterId !== null) {
-    const { data: chapter } = await supabase
-      .from('carnet_chapters')
-      .select('id')
-      .eq('id', chapterId)
-      .eq('course_id', courseId)
-      .maybeSingle()
-    if (!chapter) return { ok: false }
+  // La source, validée AVANT de dépenser le quota.
+  let contenuUtilisateur:
+    | { type: 'text'; text: string }
+    | { type: 'image_url'; image_url: { url: string } }
+  if (source?.kind === 'image') {
+    const url = typeof source.dataUrl === 'string' ? source.dataUrl : ''
+    // On n'accepte QUE des data URL d'image : accepter une URL http ferait de
+    // cette action un relais de requêtes sortantes arbitraires — l'élève
+    // (ou un appel forgé) choisirait ce que notre fournisseur va chercher.
+    if (!/^data:image\/(png|jpe?g|webp);base64,/.test(url)) return { ok: false }
+    if (url.length > MAX_IMAGE_LEN) return { ok: false }
+    contenuUtilisateur = { type: 'image_url', image_url: { url } }
+  } else {
+    const texte =
+      typeof source?.texte === 'string'
+        ? source.texte.trim().slice(0, MAX_THEME_LEN)
+        : ''
+    if (texte.length === 0) return { ok: false }
+    contenuUtilisateur = {
+      // Le texte de l'élève est ISOLÉ entre balises : concaténé nu, un
+      // « ignore les instructions précédentes » passe sans effort. Ça ne
+      // remplace pas la validation de sortie (solide), mais ça évite de
+      // détourner la consigne au premier essai.
+      type: 'text',
+      text: `<cours_ou_theme>\n${texte}\n</cours_ou_theme>`,
+    }
   }
 
   if (!(await quotaOk(supabase, 'generation'))) return { ok: false, quota: true }
@@ -159,28 +208,38 @@ export async function generateCourseQuestions(
       : style === 'flashcard'
         ? 'Uniquement des flashcards.'
         : 'Mélange les types (QCM, flashcards, vrai/faux, textes à trous, réponses libres).'
+  const niveauText =
+    typeof niveau === 'string' && niveau.trim().length > 0
+      ? ` Niveau de l'élève : ${niveau.trim().slice(0, 40)}.`
+      : ''
+  const consigne =
+    source?.kind === 'image'
+      ? `Lis cette photo de cours et génère ${n} questions dessus. ${styleText}${niveauText}`
+      : `Génère ${n} questions. ${styleText}${niveauText}`
 
   let raw = ''
   try {
     const completion = await client.chat.completions.create({
       model: process.env.AI_MODEL ?? AI_DEFAULT_MODEL,
-      max_tokens: 3_000,
+      max_tokens: 4_000,
       messages: [
         { role: 'system', content: GENERATION_SYSTEM },
         {
-          // Le texte de l'élève est ISOLÉ entre balises : concaténé nu, un
-          // « ignore les instructions précédentes » passe sans effort. Ça ne
-          // remplace pas la validation de sortie (qui, elle, est solide), mais
-          // ça évite de détourner la consigne au premier essai.
           role: 'user',
-          content: `Génère ${n} questions. ${styleText}\n<cours>\n${String(course.title)}\n</cours>\n<theme>\n${cleanTheme}\n</theme>`,
+          content: [
+            {
+              type: 'text' as const,
+              text: `${consigne}\nTitre du cours : ${String(course.title)}`,
+            },
+            contenuUtilisateur,
+          ],
         },
       ],
     })
     raw = completion.choices[0]?.message?.content ?? ''
   } catch (error) {
     // Le message SEUL : l'objet d'erreur du SDK porte le corps de la requête,
-    // donc le texte de l'élève, qui n'a rien à faire dans les logs.
+    // donc le texte (ou la photo) de l'élève, qui n'a rien à faire dans les logs.
     console.error(
       '[carnet-ia] appel du modèle impossible:',
       error instanceof Error ? error.message : 'inconnu',
@@ -192,6 +251,61 @@ export async function generateCourseQuestions(
   if (!items) {
     console.error('[carnet-ia] réponse du modèle illisible')
     return { ok: false }
+  }
+
+  // Chaque item est validé par la normalisation ; on ne garde que les questions
+  // COMPLÈTES (jouables). En proposer une incomplète à la validation ferait
+  // perdre du temps à l'élève pour rien.
+  const questions: QuestionProposee[] = []
+  for (const item of items.slice(0, n)) {
+    if (!item || typeof item !== 'object') continue
+    const o = item as Record<string, unknown>
+    if (!isQuestionType(o.type)) continue
+    const content = normalizeQuestionContent(o.type, o.content)
+    if (!isQuestionReady(o.type, content)) continue
+    questions.push({
+      type: o.type,
+      content,
+      apercu: questionSummary(o.type, content),
+    })
+  }
+  if (questions.length === 0) return { ok: false }
+
+  return { ok: true, questions }
+}
+
+/**
+ * Écrit les questions que l'élève a GARDÉES dans l'écran de validation.
+ * Elles repassent par la normalisation : ce qui revient du client n'est jamais
+ * cru sur parole, même si c'est nous qui le lui avons envoyé.
+ */
+export async function enregistrerQuestionsValidees(
+  courseId: string,
+  chapterId: string | null,
+  questions: readonly { type: string; content: unknown }[],
+): Promise<AiResult> {
+  const { supabase, userId } = await requireUserId()
+  if (!userId || typeof courseId !== 'string') return { ok: false }
+
+  const { data: course } = await supabase
+    .from('carnet_courses')
+    .select('id')
+    .eq('id', courseId)
+    .eq('owner_id', userId)
+    .maybeSingle()
+  if (!course) return { ok: false }
+
+  // Chapitre cible : il doit appartenir AU MÊME cours (la policy ne contrôle
+  // que `course_id` — sans ce test, un appel forgé accrocherait sa question au
+  // chapitre d'un autre élève, qui l'emporterait en supprimant le sien).
+  if (chapterId !== null) {
+    const { data: chapter } = await supabase
+      .from('carnet_chapters')
+      .select('id')
+      .eq('id', chapterId)
+      .eq('course_id', courseId)
+      .maybeSingle()
+    if (!chapter) return { ok: false }
   }
 
   // Position de départ : à la suite du conteneur cible.
@@ -209,19 +323,18 @@ export async function generateCourseQuestions(
   let position =
     posRows && posRows.length > 0 ? Number(posRows[0].position) + 1 : 0
 
-  // Chaque item est validé par la normalisation ; on ne garde que les
-  // questions complètes (jouables) parmi les `n` demandées.
   const inserts: Record<string, unknown>[] = []
-  for (const item of items.slice(0, n)) {
-    if (!item || typeof item !== 'object') continue
-    const o = item as Record<string, unknown>
-    if (!isQuestionType(o.type)) continue
-    const content = normalizeQuestionContent(o.type, o.content)
-    if (!isQuestionReady(o.type, content)) continue
+  for (const q of (Array.isArray(questions) ? questions : []).slice(
+    0,
+    MAX_AI_QUESTIONS,
+  )) {
+    if (!q || !isQuestionType(q.type)) continue
+    const content = normalizeQuestionContent(q.type, q.content)
+    if (!isQuestionReady(q.type, content)) continue
     inserts.push({
       course_id: courseId,
       chapter_id: chapterId,
-      type: o.type,
+      type: q.type,
       position: position++,
       content,
     })
@@ -251,7 +364,9 @@ export async function generateQuestionFeedback(
   if (!userId) return { ok: false }
 
   const cleanEnonce =
-    typeof enonce === 'string' ? enonce.trim().slice(0, MAX_THEME_LEN) : ''
+    typeof enonce === 'string'
+      ? enonce.trim().slice(0, MAX_FEEDBACK_SOURCE_LEN)
+      : ''
   const cleanReponse =
     typeof bonneReponse === 'string'
       ? bonneReponse.trim().slice(0, MAX_THEME_LEN)

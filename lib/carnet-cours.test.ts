@@ -1,20 +1,27 @@
 import { describe, expect, test } from 'vitest'
 import {
+  MAX_PAIRES,
   buildCourseTree,
   canMoveChapter,
   canonicalAnswer,
   chapterDepth,
   computeCourseStats,
   emptyQuestionContent,
+  gradeAppariement,
   gradeLibre,
+  gradeNumerique,
+  gradeOrdre,
   gradeQcm,
   gradeTrous,
   gradeVraiFaux,
   isQuestionReady,
   isQuestionType,
+  normalizeAppariement,
   normalizeCourseColor,
   normalizeCourseIcon,
   normalizeDescription,
+  normalizeNumerique,
+  normalizeOrdre,
   normalizeQcm,
   normalizeQuestionContent,
   normalizeTitle,
@@ -450,5 +457,162 @@ describe('sessionQuestions', () => {
     expect(
       sessionQuestions(chapters, [...questions, draft], null).map((q) => q.id),
     ).not.toContain('brouillon')
+  })
+})
+
+// --- Les trois types ajoutés par la migration 316 -----------------------------
+
+describe('normalizeAppariement', () => {
+  test('garde les paires complètes et jette les demi-paires', () => {
+    const c = normalizeAppariement({
+      enonce: 'Relie',
+      paires: [
+        { gauche: 'dog', droite: 'chien' },
+        { gauche: 'cat', droite: '' },
+        { gauche: '', droite: 'oiseau' },
+      ],
+    })
+    expect(c.paires).toEqual([{ gauche: 'dog', droite: 'chien' }])
+  })
+
+  test('borne le nombre de paires', () => {
+    const paires = Array.from({ length: MAX_PAIRES + 4 }, (_, i) => ({
+      gauche: `g${i}`,
+      droite: `d${i}`,
+    }))
+    expect(normalizeAppariement({ paires }).paires).toHaveLength(MAX_PAIRES)
+  })
+
+  test('une entrée n’importe quoi ne casse pas', () => {
+    expect(normalizeAppariement(null).paires).toEqual([])
+    expect(normalizeAppariement({ paires: 'oui' }).paires).toEqual([])
+  })
+})
+
+describe('normalizeOrdre', () => {
+  test('garde l’ordre d’écriture (c’est LE bon ordre)', () => {
+    const c = normalizeOrdre({ elements: ['1914', '1918', '1939'] })
+    expect(c.elements).toEqual(['1914', '1918', '1939'])
+  })
+
+  test('jette les éléments vides', () => {
+    expect(normalizeOrdre({ elements: ['a', '', '  ', 'b'] }).elements).toEqual([
+      'a',
+      'b',
+    ])
+  })
+})
+
+describe('normalizeNumerique', () => {
+  test('lit une valeur et une tolérance', () => {
+    const c = normalizeNumerique({ enonce: 'π ?', valeur: 3.14, tolerance: 0.01 })
+    expect(c.valeur).toBeCloseTo(3.14)
+    expect(c.tolerance).toBeCloseTo(0.01)
+  })
+
+  test('une tolérance négative devient zéro, jamais l’absurde', () => {
+    // Une tolérance négative rendrait TOUTE réponse fausse, la bonne comprise.
+    expect(normalizeNumerique({ valeur: 5, tolerance: -3 }).tolerance).toBe(0)
+  })
+
+  test('une valeur illisible retombe à zéro', () => {
+    expect(normalizeNumerique({ valeur: 'beaucoup' }).valeur).toBe(0)
+  })
+})
+
+describe('isQuestionReady — les nouveaux types', () => {
+  test('un appariement demande au moins deux paires', () => {
+    const une = normalizeAppariement({ paires: [{ gauche: 'a', droite: 'b' }] })
+    expect(isQuestionReady('appariement', une)).toBe(false)
+    const deux = normalizeAppariement({
+      paires: [
+        { gauche: 'a', droite: 'b' },
+        { gauche: 'c', droite: 'd' },
+      ],
+    })
+    expect(isQuestionReady('appariement', deux)).toBe(true)
+  })
+
+  test('une remise en ordre demande au moins trois éléments', () => {
+    expect(
+      isQuestionReady('remise_en_ordre', normalizeOrdre({ elements: ['a', 'b'] })),
+    ).toBe(false)
+    expect(
+      isQuestionReady(
+        'remise_en_ordre',
+        normalizeOrdre({ elements: ['a', 'b', 'c'] }),
+      ),
+    ).toBe(true)
+  })
+
+  test('une question chiffrée demande un énoncé', () => {
+    expect(
+      isQuestionReady('numerique', normalizeNumerique({ valeur: 3 })),
+    ).toBe(false)
+    expect(
+      isQuestionReady('numerique', normalizeNumerique({ enonce: '1+1 ?', valeur: 2 })),
+    ).toBe(true)
+  })
+})
+
+describe('gradeAppariement', () => {
+  const c = normalizeAppariement({
+    paires: [
+      { gauche: 'dog', droite: 'chien' },
+      { gauche: 'cat', droite: 'chat' },
+    ],
+  })
+
+  test('tout bien relié = juste', () => {
+    expect(gradeAppariement(c, [0, 1])).toBe(true)
+  })
+
+  test('un lien croisé = faux', () => {
+    expect(gradeAppariement(c, [1, 0])).toBe(false)
+  })
+
+  test('un nombre de liens qui ne colle pas = faux', () => {
+    expect(gradeAppariement(c, [0])).toBe(false)
+  })
+})
+
+describe('gradeOrdre', () => {
+  const c = normalizeOrdre({ elements: ['1914', '1918', '1939'] })
+
+  test('le bon ordre = juste', () => {
+    expect(gradeOrdre(c, [0, 1, 2])).toBe(true)
+  })
+
+  test('un ordre inversé = faux', () => {
+    expect(gradeOrdre(c, [2, 1, 0])).toBe(false)
+  })
+
+  test('une suite incomplète = faux', () => {
+    expect(gradeOrdre(c, [0, 1])).toBe(false)
+  })
+})
+
+describe('gradeNumerique', () => {
+  test('la valeur exacte est juste', () => {
+    const c = normalizeNumerique({ enonce: 'x', valeur: 42, tolerance: 0 })
+    expect(gradeNumerique(c, 42)).toBe(true)
+  })
+
+  test('la tolérance est respectée, dans les deux sens', () => {
+    const c = normalizeNumerique({ enonce: 'π', valeur: 3.14, tolerance: 0.01 })
+    expect(gradeNumerique(c, 3.15)).toBe(true)
+    expect(gradeNumerique(c, 3.13)).toBe(true)
+    expect(gradeNumerique(c, 3.2)).toBe(false)
+  })
+
+  test('l’arithmétique flottante ne fait pas rater une bonne réponse', () => {
+    // 0,1 + 0,2 ne vaut pas exactement 0,3 en flottant.
+    const c = normalizeNumerique({ enonce: 'somme', valeur: 0.3, tolerance: 0 })
+    expect(gradeNumerique(c, 0.1 + 0.2)).toBe(true)
+  })
+
+  test('une réponse illisible est fausse', () => {
+    const c = normalizeNumerique({ enonce: 'x', valeur: 1 })
+    expect(gradeNumerique(c, Number.NaN)).toBe(false)
   })
 })

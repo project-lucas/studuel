@@ -1147,6 +1147,39 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'À exécuter après la 313. Dépend de `game_catalog` (238) et de `profiles.grade_level` (classement par classe). La formule de la cote (100 + 60 × moyenne des 3 meilleurs niveaux) est un MIROIR de lib/jeux/ultime.coteFor : toute évolution doit toucher les deux, comme lib/trophy-road.ts ↔ apply_game_trophies.',
   },
+  {
+    id: '315',
+    fichier: '315_carnet_moteur_v2.sql',
+    feature:
+      'Le moteur de révision v2 de Mon carnet : état par carte (échéance, aisance, rechutes, sangsues), plafonds quotidiens par cours, tolérance orthographique et sessions reprenables',
+    siAbsente:
+      'Le carnet CONTINUE DE MARCHER — c’est le parti pris du code : sans la table, chaque carte est lue comme neuve, donc due, et l’app se comporte comme avant (tout est à revoir, tout le temps). Mais rien n’est mémorisé d’une session à l’autre : aucune échéance ne tient, les couronnes restent à zéro, les plafonds ne s’appliquent pas et une session interrompue repart du début.',
+    sonde: { type: 'table', table: 'carnet_question_states' },
+    decision:
+      'À exécuter après la 314. Dépend de la 186 (carnet_courses, carnet_questions, carnet_review_sessions). Elle REND `carnet_review_sessions.course_id` FACULTATIF pour que la session transverse (« À revoir », tous cours confondus) puisse enfin ouvrir une ligne — c’est la seule modification destructrice du lot, et elle ne fait qu’assouplir une contrainte. Le code retombe silencieusement sur des états neufs tant qu’elle n’est pas passée (code PostgREST 42P01 ignoré), comme le quota IA face à la 198 : déployer avant d’exécuter ne casse rien.',
+  },
+  {
+    id: '316',
+    fichier: '316_carnet_personnalisation.sql',
+    feature:
+      'Carnet personnalisable : étiquettes transverses, date de contrôle, rattachement à une matière, trois types de question de plus (appariement, remise en ordre, réponse chiffrée) et bucket d’images',
+    siAbsente:
+      'Le carnet marche, en retrait : la feuille « Comment tu veux réviser ? » ne propose aucune étiquette (la liste est lue en isolation et revient vide), l’onglet Paramètres n’enregistre ni la date du contrôle ni la matière, et les trois nouveaux types sont REFUSÉS PAR LA CONTRAINTE de la 186 — les créer échoue en base. Le dossier d’une matière n’affiche aucun cours du carnet.',
+    sonde: { type: 'table', table: 'carnet_tags' },
+    decision:
+      'À exécuter après la 315. Dépend de la 186 et de la 008 (subjects). Elle REMPLACE la contrainte CHECK de `carnet_questions.type` (recherchée par son texte, pas par son nom : la 186 la laissait anonyme) — c’est la seule opération qui touche à l’existant, et elle ne fait qu’élargir la liste. Le bucket `carnet-medias` est PRIVÉ et rangé par élève : les policies s’appuient sur le premier segment du chemin (`<user_id>/…`), donc tout téléversement doit respecter ce préfixe.',
+  },
+  {
+    id: '317',
+    fichier: '317_carnet_dans_le_monde.sql',
+    feature:
+      'La série (flamme) compte les sessions de Mon carnet',
+    siAbsente:
+      'Réviser une heure sur son carnet ne compte PAS dans la série : l’élève voit sa flamme s’éteindre le soir même d’une vraie séance de travail. L’XP, elle, est versée sans cette migration (elle passe par `wallet_award_xp`, migration 192).',
+    sonde: null,
+    decision:
+      'À exécuter après la 315 (elle rend `carnet_review_sessions.course_id` facultatif, ce qui permet enfin à la session transverse d’exister — et donc d’être comptée). REDÉFINIT `current_streak` : c’est un MIROIR EXACT de la version de la 170, à une cinquième source près (`carnet_review_sessions.started_at`). Toute évolution de la 170 doit être reportée ici, sinon la dernière exécutée gagne. NON SONDABLE À LA CLÉ ANON : une fonction redéfinie ne se distingue pas de l’ancienne par son existence — vérifier à la main qu’une session de carnet seule dans la journée allume bien la flamme.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

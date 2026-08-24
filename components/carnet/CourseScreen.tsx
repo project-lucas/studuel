@@ -11,13 +11,14 @@ import {
   Pencil,
   Play,
   Plus,
+  Rows3,
+  Search,
   Sparkles,
   Trash2,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
-  buildCourseTree,
   COURSE_COLORS,
   COURSE_ICONS,
   normalizeCourseColor,
@@ -34,9 +35,17 @@ import {
   deleteCourse,
   updateCourse,
 } from '@/app/reviser/cours/actions'
-import { generateCourseQuestions } from '@/app/reviser/cours/ai-actions'
 import BottomSheet from '@/components/carnet/BottomSheet'
 import CourseTree from '@/components/carnet/CourseTree'
+import SaisieRapide from '@/components/carnet/SaisieRapide'
+import GenerationIaSheet from '@/components/carnet/GenerationIaSheet'
+import ReglagesRevision, {
+  type CourseReglages,
+  type MatiereChoix,
+} from '@/components/carnet/ReglagesRevision'
+import SessionOptionsSheet, {
+  type EtiquetteChoix,
+} from '@/components/carnet/SessionOptionsSheet'
 import {
   COURSE_DOT,
   COURSE_ICON,
@@ -307,11 +316,19 @@ export default function CourseScreen({
   chapters,
   questions,
   stats,
+  etiquettes = [],
+  reglages,
+  matieres = [],
 }: {
   course: CourseHeader
   chapters: CourseChapter[]
   questions: CourseQuestionRow[]
   stats: CourseStats
+  /** Les étiquettes de l'élève, proposées comme portée de session. */
+  etiquettes?: EtiquetteChoix[]
+  /** Les réglages de révision du cours (migrations 315 / 316). */
+  reglages: CourseReglages
+  matieres?: MatiereChoix[]
 }) {
   const router = useRouter()
   const params = useSearchParams()
@@ -324,20 +341,24 @@ export default function CourseScreen({
   // Conteneur cible de la création (racine par défaut, chapitre via son menu).
   const [createTarget, setCreateTarget] = useState<string | null>(null)
   const [typePickerOpen, setTypePickerOpen] = useState(false)
+  const [saisieOpen, setSaisieOpen] = useState(false)
+  const [recherche, setRecherche] = useState('')
   // `?ia=1` : le cours vient d'être créé depuis « Cours généré par l'IA » du
   // carnet — la feuille de génération s'ouvre d'emblée, sinon l'élève retombe
   // sur un cours vide sans savoir par où on lui avait promis de commencer.
   const [aiOpen, setAiOpen] = useState(params.get('ia') === '1')
-  const [aiTheme, setAiTheme] = useState('')
-  const [aiCount, setAiCount] = useState(5)
-  const [aiStyle, setAiStyle] = useState<'qcm' | 'flashcard' | 'mixte'>('mixte')
-  const [aiMessage, setAiMessage] = useState<string | null>(null)
   const [pending, startTransition] = useTransition()
 
   const Icon = COURSE_ICON[normalizeCourseIcon(course.icon)]
   const tint = COURSE_TINT[normalizeCourseColor(course.color)]
   const readyCount = questions.filter((q) => q.ready).length
-  const tree = buildCourseTree(chapters, questions)
+  // La recherche porte sur le RÉSUMÉ déjà calculé côté serveur : pas besoin du
+  // contenu complet des questions pour retrouver « celle sur Verdun ».
+  const trouvees = (() => {
+    const q = recherche.trim().toLowerCase()
+    if (q.length === 0) return []
+    return questions.filter((x) => x.summary.toLowerCase().includes(q))
+  })()
 
   const commitTitle = () => {
     setEditingTitle(false)
@@ -373,32 +394,6 @@ export default function CourseScreen({
     })
   }
 
-  const runAi = () => {
-    if (pending || aiTheme.trim().length === 0) return
-    setAiMessage(null)
-    startTransition(async () => {
-      const res = await generateCourseQuestions(
-        course.id,
-        createTarget,
-        aiTheme,
-        aiCount,
-        aiStyle,
-      )
-      if (res.ok) {
-        setAiOpen(false)
-        setAiTheme('')
-        router.refresh()
-      } else if (res.unavailable) {
-        setAiMessage('Génération indisponible pour le moment (service IA non configuré).')
-      } else if (res.quota) {
-        setAiMessage(
-          'Tu as atteint ta limite de générations pour aujourd’hui. Elle repart demain.',
-        )
-      } else {
-        setAiMessage('La génération a échoué. Réessaie dans un instant.')
-      }
-    })
-  }
 
   return (
     <div className="relative mx-auto w-full max-w-md pb-28">
@@ -430,6 +425,28 @@ export default function CourseScreen({
         <div className="flex items-start gap-3">
           {/* La pastille EST la commande de personnalisation : on touche
               l'icône du cours pour la changer, là où on la regarde. */}
+          {/* EN PREMIER, parce que c'est le geste qui décide si un cours se
+              remplit ou reste vide : plusieurs cartes d'affilée, ou une liste
+              collée, sans jamais changer de page. */}
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              setCreateOpen(false)
+              setSaisieOpen(true)
+            }}
+            className="flex cursor-pointer items-center gap-3 rounded-2xl bg-primary px-4 py-3 text-left text-sm font-bold text-primary-foreground shadow-sm hover:brightness-105"
+          >
+            <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-white/20">
+              <Rows3 className="size-4" aria-hidden="true" />
+            </span>
+            <span className="min-w-0">
+              <span className="block">Plusieurs cartes d’un coup</span>
+              <span className="block text-[11px] font-semibold opacity-80">
+                À la suite, ou en collant ta liste
+              </span>
+            </span>
+          </button>
           <button
             type="button"
             onClick={() => {
@@ -562,24 +579,92 @@ export default function CourseScreen({
                 {questions.length}
               </span>
             </div>
-            <CourseTree
-              courseId={course.id}
-              chapters={chapters}
-              questions={questions}
-              onAddQuestion={(chapterId) => {
-                setCreateTarget(chapterId)
-                setTypePickerOpen(true)
-              }}
-              onAddChapter={addChapter}
-              onEditQuestion={(id) =>
-                router.push(`/reviser/cours/${course.id}/question/${id}`)
-              }
-            />
+            {/* La recherche : au-delà d'une vingtaine de questions, retrouver
+                « celle sur Verdun » demandait de déplier tout l'arbre et de
+                lire à l'œil. Tant qu'elle est vide, l'arbre est intact. */}
+            {questions.length > 8 ? (
+              <div className="relative mb-2">
+                <Search
+                  className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground"
+                  aria-hidden="true"
+                />
+                <input
+                  type="search"
+                  value={recherche}
+                  onChange={(e) => setRecherche(e.target.value)}
+                  placeholder="Chercher dans ce cours…"
+                  aria-label="Chercher une question dans ce cours"
+                  className="min-h-11 w-full rounded-2xl border border-black/10 bg-white pr-3 pl-9 text-sm font-semibold text-foreground outline-none placeholder:text-muted-foreground/60 focus:ring-2 focus:ring-primary/40"
+                />
+              </div>
+            ) : null}
+
+            {recherche.trim().length > 0 ? (
+              trouvees.length === 0 ? (
+                <p className="rounded-2xl bg-muted/40 px-3 py-4 text-center text-sm text-muted-foreground">
+                  Aucune question ne contient «&nbsp;{recherche.trim()}&nbsp;».
+                </p>
+              ) : (
+                <ul className="flex flex-col gap-1.5">
+                  {trouvees.map((q) => {
+                    const TypeIcon = TYPE_ICON[q.type]
+                    return (
+                      <li key={q.id}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            sfx.tap()
+                            router.push(
+                              `/reviser/cours/${course.id}/question/${q.id}`,
+                            )
+                          }}
+                          className="flex w-full cursor-pointer items-center gap-3 rounded-2xl bg-muted/40 px-3 py-2.5 text-left transition hover:bg-muted/70"
+                        >
+                          <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                            <TypeIcon
+                              className="size-4"
+                              strokeWidth={2.2}
+                              aria-hidden="true"
+                            />
+                          </span>
+                          <span className="min-w-0 flex-1">
+                            <span className="line-clamp-2 text-xs leading-snug font-semibold text-foreground">
+                              {q.summary}
+                            </span>
+                            <span className="text-[10px] font-bold text-muted-foreground">
+                              {TYPE_LABEL[q.type]}
+                              {q.ready ? '' : ' · brouillon'}
+                            </span>
+                          </span>
+                        </button>
+                      </li>
+                    )
+                  })}
+                </ul>
+              )
+            ) : (
+              <CourseTree
+                courseId={course.id}
+                chapters={chapters}
+                questions={questions}
+                onAddQuestion={(chapterId) => {
+                  setCreateTarget(chapterId)
+                  setTypePickerOpen(true)
+                }}
+                onAddChapter={addChapter}
+                onEditQuestion={(id) =>
+                  router.push(`/reviser/cours/${course.id}/question/${id}`)
+                }
+              />
+            )}
           </>
         ) : tab === 'resultats' ? (
           <ResultsPanel stats={stats} />
         ) : (
-          <SettingsPanel course={course} />
+          <div className="flex flex-col gap-6">
+            <ReglagesRevision reglages={reglages} matieres={matieres} />
+            <SettingsPanel course={course} />
+          </div>
         )}
       </section>
 
@@ -621,46 +706,16 @@ export default function CourseScreen({
       </BottomSheet>
 
       {/* Feuille « Réviser » : tout le cours ou un chapitre. */}
-      <BottomSheet
+      {/* « Comment tu veux réviser ? » — remplace un menu à DEUX entrées
+          (tout le cours / un chapitre), seule « personnalisation » qu'offrait
+          le carnet. */}
+      <SessionOptionsSheet
+        courseId={course.id}
+        chapters={chapters}
+        etiquettes={etiquettes}
         open={reviseOpen}
         onClose={() => setReviseOpen(false)}
-        title="Réviser"
-      >
-        <ul className="flex flex-col gap-1.5">
-          <li>
-            <Link
-              href={`/reviser/cours/${course.id}/reviser`}
-              onClick={() => {
-                sfx.tap()
-                setReviseOpen(false)
-              }}
-              className="font-heading flex items-center justify-between gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-extrabold text-primary-foreground"
-            >
-              Tout le cours
-              <span className="rounded-full bg-white/20 px-2 py-0.5 text-[11px] tabular-nums">
-                {readyCount}
-              </span>
-            </Link>
-          </li>
-          {tree.chapters.map((c) => (
-            <li key={c.id}>
-              <Link
-                href={`/reviser/cours/${course.id}/reviser?chapitre=${c.id}`}
-                onClick={() => {
-                  sfx.tap()
-                  setReviseOpen(false)
-                }}
-                className="flex items-center justify-between gap-2 rounded-2xl bg-muted/60 px-4 py-3 text-sm font-bold text-foreground hover:bg-muted"
-              >
-                <span className="line-clamp-1">{c.title}</span>
-                <span className="rounded-full bg-foreground/5 px-2 py-0.5 text-[11px] font-extrabold text-muted-foreground tabular-nums">
-                  {c.totalQuestions}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </BottomSheet>
+      />
 
       {/* Feuille de création (bouton « + »). */}
       <BottomSheet
@@ -686,7 +741,6 @@ export default function CourseScreen({
             onClick={() => {
               sfx.tap()
               setCreateOpen(false)
-              setAiMessage(null)
               setAiOpen(true)
             }}
             className="flex cursor-pointer items-center gap-3 rounded-2xl bg-muted/60 px-4 py-3 text-sm font-bold text-foreground hover:bg-muted"
@@ -712,6 +766,14 @@ export default function CourseScreen({
               l'import existe, il reprend sa place — en marchant. */}
         </div>
       </BottomSheet>
+
+      {/* Saisie en rafale / import collé. */}
+      <SaisieRapide
+        courseId={course.id}
+        chapterId={createTarget}
+        open={saisieOpen}
+        onClose={() => setSaisieOpen(false)}
+      />
 
       {/* Feuille du choix de type de question. */}
       <BottomSheet
@@ -744,100 +806,15 @@ export default function CourseScreen({
         </ul>
       </BottomSheet>
 
-      {/* Feuille de génération IA. */}
-      <BottomSheet
+      {/* Génération IA — formulaire ET écran de validation, dans son propre
+          composant : les questions ne sont plus écrites en base tant que
+          l'élève ne les a pas relues. */}
+      <GenerationIaSheet
+        courseId={course.id}
+        chapterId={createTarget}
         open={aiOpen}
         onClose={() => setAiOpen(false)}
-        title="Générer des questions avec l’IA"
-      >
-        <div className="flex flex-col gap-3">
-          <div>
-            <label
-              htmlFor="ia-theme"
-              className="mb-1 block text-xs font-bold text-muted-foreground"
-            >
-              Sur quel thème ?
-            </label>
-            <textarea
-              id="ia-theme"
-              value={aiTheme}
-              onChange={(e) => setAiTheme(e.target.value)}
-              rows={3}
-              maxLength={500}
-              placeholder="Ex. : le présent simple en anglais, la Révolution française, les fractions…"
-              className="w-full rounded-2xl border border-black/10 bg-white px-3 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/40 focus:outline-none"
-            />
-          </div>
-          <div className="flex items-center gap-2">
-            <label
-              htmlFor="ia-count"
-              className="text-xs font-bold text-muted-foreground"
-            >
-              Nombre
-            </label>
-            <select
-              id="ia-count"
-              value={aiCount}
-              onChange={(e) => setAiCount(Number(e.target.value))}
-              className="rounded-xl border border-black/10 bg-white px-2 py-1.5 text-sm font-bold text-foreground"
-            >
-              {[5, 10, 15].map((n) => (
-                <option key={n} value={n}>
-                  {n}
-                </option>
-              ))}
-            </select>
-            <div
-              role="group"
-              aria-label="Types de questions"
-              className="ml-auto flex gap-1"
-            >
-              {(
-                [
-                  ['mixte', 'Mélange'],
-                  ['qcm', 'QCM'],
-                  ['flashcard', 'Flashcards'],
-                ] as const
-              ).map(([id, label]) => (
-                <button
-                  key={id}
-                  type="button"
-                  aria-pressed={aiStyle === id}
-                  onClick={() => {
-                    sfx.tap()
-                    setAiStyle(id)
-                  }}
-                  className={cn(
-                    'cursor-pointer rounded-full px-2.5 py-1.5 text-[11px] font-extrabold transition-colors',
-                    aiStyle === id
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-muted/60 text-muted-foreground',
-                  )}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </div>
-          {aiMessage ? (
-            <p
-              role="alert"
-              className="rounded-2xl bg-destructive/10 px-3 py-2 text-xs font-semibold text-destructive"
-            >
-              {aiMessage}
-            </p>
-          ) : null}
-          <button
-            type="button"
-            disabled={pending || aiTheme.trim().length === 0}
-            onClick={runAi}
-            className="font-heading flex cursor-pointer items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-50"
-          >
-            <Sparkles className="size-4" aria-hidden="true" />
-            {pending ? 'Génération en cours…' : 'Générer'}
-          </button>
-        </div>
-      </BottomSheet>
+      />
     </div>
   )
 }

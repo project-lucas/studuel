@@ -2,15 +2,18 @@
 // cours, icône par type de question. Pur mapping UI (les identifiants stockés
 // vivent dans lib/carnet-cours.ts).
 import {
+  ArrowUpDown,
   BookOpen,
   Calculator,
   Dumbbell,
   FlaskConical,
   Folder,
   Globe,
+  Hash,
   Landmark,
   Languages,
   Layers,
+  Link2,
   ListChecks,
   Music,
   Palette,
@@ -66,6 +69,9 @@ export const TYPE_ICON: Record<CourseQuestionType, LucideIcon> = {
   flashcard: Layers,
   vrai_faux: ToggleLeft,
   texte_a_trous: TextCursorInput,
+  appariement: Link2,
+  remise_en_ordre: ArrowUpDown,
+  numerique: Hash,
   reponse_libre: PenLine,
 }
 

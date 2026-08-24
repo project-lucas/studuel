@@ -21,6 +21,7 @@ import CoursesShelf, {
 } from '@/components/carnet/CoursesShelf'
 import CarnetFab from '@/components/carnet/CarnetFab'
 import CarnetAiCard from '@/components/carnet/CarnetAiCard'
+import RevoirBand from '@/components/carnet/RevoirBand'
 import CarnetTile from '@/components/carnet/CarnetTile'
 import SerieBar from '@/components/reviser/SerieBar'
 import MarcelFab from '@/components/reviser/MarcelFab'
@@ -61,10 +62,13 @@ import {
   normalizeQuestionContent,
 } from '@/lib/carnet-cours'
 import {
-  crownsForCourse,
-  revoirSummary,
-  type RevoirAttempt,
-} from '@/lib/carnet-revoir'
+  bilanCours,
+  couronnes,
+  estDue,
+  etatInitial,
+  type CardState,
+} from '@/lib/carnet/planification'
+import { rowToState } from '@/lib/carnet/etats-server'
 import { examHeroUrgency, type SubjectExamHint } from '@/lib/next-exam'
 import type { Subject } from '@/lib/types'
 
@@ -139,7 +143,7 @@ export default async function ReviserPage() {
     { data: challengeDays },
     { data: courseRows },
     { data: courseQuestionRows },
-    { data: carnetAttemptRows },
+    { data: carnetStateRows },
     { data: controleRows },
     { data: sessionRows },
     cachedSubjects,
@@ -192,14 +196,18 @@ export default async function ReviserPage() {
       .from('carnet_questions')
       .select('id, course_id, type, content')
       .limit(2_000),
-    // Tentatives de révision du carnet : elles nourrissent le héros « À revoir
+    // ÉTAT de chaque carte (migration 315) : il nourrit le héros « À revoir
     // aujourd'hui », les badges par cours et les couronnes de maîtrise.
+    // Avant, cette page relisait les 4 000 DERNIÈRES TENTATIVES et rejouait la
+    // règle d'échéance sur chacune, à chaque affichage — un coût qui grandissait
+    // indéfiniment avec l'usage. L'échéance se LIT maintenant.
     supabase
-      .from('carnet_review_attempts')
-      .select('question_id, is_correct, answered_at')
+      .from('carnet_question_states')
+      .select(
+        'question_id, phase, step, interval_days, ease, streak, reps, lapses, is_leech, due_at, last_seen_at',
+      )
       .eq('user_id', user.id)
-      .order('answered_at', { ascending: false })
-      .limit(4_000),
+      .limit(2_000),
     // Contrôles + plans de préparation (migration 203) : les deux tables sont
     // lues en isolation — si 203 n'est pas passée, `error` non nul et data null,
     // sans casser le reste de la page (le client Supabase ne lève pas).
@@ -555,28 +563,31 @@ export default async function ReviserPage() {
     else playableByCourse.set(courseId, [id])
   }
 
-  const carnetAttempts: RevoirAttempt[] = (carnetAttemptRows ?? []).map((a) => ({
-    questionId: String(a.question_id),
-    isCorrect: a.is_correct === true,
-    answeredAt: String(a.answered_at ?? ''),
-  }))
-
-  // Le bilan « à revoir aujourd'hui » (moteur SRS du carnet, pur et testé).
-  const revoir = revoirSummary(playableQuestions, carnetAttempts, today)
-
-  // Questions maîtrisées par cours (dernier essai juste) → couronnes.
-  const lastByQuestion = new Map<string, RevoirAttempt>()
-  for (const a of carnetAttempts) {
-    const prev = lastByQuestion.get(a.questionId)
-    if (!prev || a.answeredAt > prev.answeredAt) lastByQuestion.set(a.questionId, a)
+  const nowIso = new Date().toISOString()
+  // Les états lus, indexés par question. Une carte sans ligne n'a jamais été
+  // vue : état neuf, donc due.
+  const etatsCarnet = new Map<string, CardState>()
+  for (const row of carnetStateRows ?? []) {
+    etatsCarnet.set(
+      String(row.question_id),
+      rowToState(row as Parameters<typeof rowToState>[0], nowIso),
+    )
   }
+  const etatDe = (qid: string): CardState =>
+    etatsCarnet.get(qid) ?? etatInitial(nowIso)
+
+  // Le total dû, tous cours confondus : c'est le chiffre du héros « À revoir ».
+  const dueTotal = playableQuestions.filter((q) =>
+    estDue(etatDe(q.id), nowIso),
+  ).length
 
   const courseItems: CourseShelfItem[] = (courseRows ?? []).map((r) => {
     const id = String(r.id)
     const playable = playableByCourse.get(id) ?? []
-    const mastered = playable.filter(
-      (qid) => lastByQuestion.get(qid)?.isCorrect === true,
-    ).length
+    const bilan = bilanCours(
+      playable.map((qid) => ({ id: qid, state: etatDe(qid) })),
+      nowIso,
+    )
     return {
       id,
       title: String(r.title ?? 'Sans titre'),
@@ -584,8 +595,11 @@ export default async function ReviserPage() {
       icon: r.icon ? String(r.icon) : null,
       color: r.color ? String(r.color) : null,
       questionCount: playable.length,
-      dueCount: revoir.dueByCourse.get(id) ?? 0,
-      crowns: crownsForCourse(mastered, playable.length),
+      dueCount: bilan.dues,
+      // Les couronnes se comptent désormais sur les cartes ACQUISES (intervalle
+      // ≥ 21 jours), et non sur « dernier essai juste » : une carte devinée une
+      // fois ne vaut pas une carte sue depuis deux mois.
+      crowns: couronnes(bilan),
     }
   })
 
@@ -682,6 +696,9 @@ export default async function ReviserPage() {
             {/* Créer, de partout dans la liste : le « + » flottant (il ne vit
                 que dans ce volet, le panneau inactif étant `hidden`). */}
             <CarnetFab />
+            {/* Ce que la journée réclame, en une bande — et le seul lien de
+                l'app vers la session transverse, restée orpheline. */}
+            <RevoirBand dues={dueTotal} />
             {/* « Mes cours » — LE bloc du carnet, en tableau de bord :
                 couronnes, badges « à revoir », ▶ direct, brouillons repliés. */}
             <CoursesShelf items={courseItems} />

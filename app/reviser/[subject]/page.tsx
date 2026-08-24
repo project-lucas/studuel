@@ -1,5 +1,6 @@
 import { notFound, redirect } from 'next/navigation'
 import SubjectTemplate from '@/components/reviser/SubjectTemplate'
+import CarnetDeLaMatiere from '@/components/carnet/CarnetDeLaMatiere'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
@@ -485,11 +486,69 @@ export default async function SubjectPage({
     modesFor(standings.grade, disciplinesOf(chapters)),
   )
 
+  // Les cours du CARNET rattachés à cette matière (migration 316) : le carnet
+  // cesse d'être une île, ses cours se posent à côté du programme officiel.
+  // Lectures ISOLÉES — sans la 316 la colonne manque, la liste est vide, et le
+  // dossier de la matière est exactement ce qu'il était.
+  const { data: carnetRows } = await supabase
+    .from('carnet_courses')
+    .select('id, title, icon, color, subject_id')
+    .eq('owner_id', user.id)
+    .eq('subject_id', subject.id)
+    .limit(20)
+
+  const carnetIds = (carnetRows ?? []).map((c) => String(c.id))
+  const [{ data: carnetQuestions }, { data: carnetEtats }] = await Promise.all([
+    carnetIds.length > 0
+      ? supabase
+          .from('carnet_questions')
+          .select('id, course_id')
+          .in('course_id', carnetIds)
+      : Promise.resolve({ data: [] as { id: string; course_id: string }[] }),
+    carnetIds.length > 0
+      ? supabase
+          .from('carnet_question_states')
+          .select('question_id, due_at')
+          .eq('user_id', user.id)
+      : Promise.resolve({ data: [] as { question_id: string; due_at: string }[] }),
+  ])
+
+  // `new Date()` et non `Date.now()` : la règle de pureté de React refuse le
+  // second dans un rendu de composant serveur (le premier est déjà utilisé
+  // ainsi partout ailleurs dans le carnet).
+  const maintenant = Date.parse(new Date().toISOString())
+  // Une carte SANS état n'a jamais été vue : elle est due.
+  const echeanceDe = new Map(
+    (carnetEtats ?? []).map((e) => [String(e.question_id), String(e.due_at)]),
+  )
+  const compteurs = new Map<string, { total: number; dues: number }>()
+  for (const q of carnetQuestions ?? []) {
+    const cid = String(q.course_id)
+    const c = compteurs.get(cid) ?? { total: 0, dues: 0 }
+    c.total += 1
+    const due = echeanceDe.get(String(q.id))
+    if (!due || Date.parse(due) <= maintenant) c.dues += 1
+    compteurs.set(cid, c)
+  }
+
+  const coursDuCarnet = (carnetRows ?? []).map((c) => {
+    const compte = compteurs.get(String(c.id)) ?? { total: 0, dues: 0 }
+    return {
+      id: String(c.id),
+      title: String(c.title ?? 'Sans titre'),
+      icon: c.icon ? String(c.icon) : null,
+      color: c.color ? String(c.color) : null,
+      questionCount: compte.total,
+      dueCount: compte.dues,
+    }
+  })
+
   return (
     <>
       <SubjectMasteryCelebration
         entries={[{ slug: subject.slug, name: subject.name, pct: progress.pct }]}
       />
+      <CarnetDeLaMatiere cours={coursDuCarnet} matiere={subject.name} />
       <SubjectTemplate data={data} initialMode={initialMode} />
     </>
   )

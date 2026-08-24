@@ -1180,6 +1180,17 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'À exécuter après la 315 (elle rend `carnet_review_sessions.course_id` facultatif, ce qui permet enfin à la session transverse d’exister — et donc d’être comptée). REDÉFINIT `current_streak` : c’est un MIROIR EXACT de la version de la 170, à une cinquième source près (`carnet_review_sessions.started_at`). Toute évolution de la 170 doit être reportée ici, sinon la dernière exécutée gagne. NON SONDABLE À LA CLÉ ANON : une fonction redéfinie ne se distingue pas de l’ancienne par son existence — vérifier à la main qu’une session de carnet seule dans la journée allume bien la flamme.',
   },
+  {
+    id: '318',
+    fichier: '318_dictees.sql',
+    feature:
+      'Le mode DICTÉE du français : catalogue de dictées, leurs segments, et les tentatives notées sur 20',
+    siAbsente:
+      'La carte « Les dictées » de l’onglet Mode de jeu mène à une liste VIDE (« Aucune dictée pour l’instant ») et aucune session n’est jouable. Le reste du dossier de français est intact — la lecture des dictées est isolée.',
+    sonde: { type: 'table', table: 'dictees' },
+    decision:
+      'Indépendante des autres migrations du carnet (315 → 317) : elle ne touche à aucune table existante, elle en crée trois. Elle INSÈRE aussi une première dictée (« L’Homme foudroyé ») avec ses six segments — une liste vide donnerait un onglet mort dont on ne saurait pas si c’est le contenu ou le code qui manque. Rejouable : les segments sont supprimés puis réinsérés, la dictée est protégée par ON CONFLICT sur son slug. PAS DE FICHIERS AUDIO : la synthèse vocale du navigateur lit le texte du segment (`components/francais/dictee/LecteurDictee`) ; la colonne `audio_url` attend un enregistrement humain sans qu’une migration soit nécessaire.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

@@ -8,6 +8,7 @@ import SubjectStickyBar from '@/components/reviser/SubjectStickyBar'
 import ModeTabs from '@/components/reviser/ModeTabs'
 import ChapterList from '@/components/reviser/ChapterList'
 import TrainingPanel from '@/components/reviser/TrainingPanel'
+import CarteDictee from '@/components/francais/dictee/CarteDictee'
 import ReviewBanner from '@/components/reviser/ReviewBanner'
 import ExamBanner from '@/components/reviser/ExamBanner'
 import AnnalesPanel from '@/components/reviser/AnnalesPanel'
@@ -68,6 +69,10 @@ export default function SubjectTemplate({
   // la barre collante, par la bulle de l'onglet et par le billet : quatre
   // lectures indépendantes de la même jauge finiraient par se contredire.
   const gardien = gardienVue(data.gardien)
+  // Le dossier de français — le seul à porter les dictées. On teste le SLUG et
+  // non le nom affiché : celui-ci change avec la classe (« Français », « Français
+  // 1re »), le slug non.
+  const estFrancais = data.subject.slug === 'francais'
   const ongletJeu = modes.find((m) => m.key === 'jeu')
   const jeuId = ongletJeu ? tabId(ongletJeu) : null
   // Taper l'écusson mène là où le gardien se combat, quel que soit l'onglet ouvert.
@@ -170,11 +175,18 @@ export default function SubjectTemplate({
             // le gardien de la matière (le rendez-vous), puis les jeux de
             // l'arène (on joue tout de suite). Rien dessous : la liste des
             // chapitres et de leurs formats y redisait le Programme.
-            <TrainingPanel
-              subject={data.subject}
-              bossPool={data.bossPool}
-              gardien={gardien}
-            />
+            <div className="flex flex-col gap-3">
+              {/* LES DICTÉES — français seulement. Une dictée d'histoire-géo
+                  n'existe pas, et une carte grisée « bientôt » dans les autres
+                  dossiers serait une porte qui ne s'ouvre pas : le projet a
+                  déjà refusé ça ailleurs (menu de création du carnet). */}
+              {estFrancais ? <CarteDictee /> : null}
+              <TrainingPanel
+                subject={data.subject}
+                bossPool={data.bossPool}
+                gardien={gardien}
+              />
+            </div>
           )}
         </div>
       </div>

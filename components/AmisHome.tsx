@@ -865,14 +865,16 @@ export default function AmisHome({
           Masqué sans clan ou tant que la migration n'est pas passée. */}
       {clanBoard ? <TeamChestCard board={clanBoard} today={today} /> : null}
 
-      {/* 4. Mon équipe — le classement aux trophées, façon liste de clan. */}
-      <ClassementArena
-        ranking={ranking}
-        onlineFriendIds={onlineFriendIds}
-        myFriendCode={myFriendCode}
-        squadName={squadName}
-        canRenameSquad={canRenameSquad}
-      />
+      {/* 4. L'ÉTABLISSEMENT — podium + ta ligne (portée en sélecteur, liste
+          complète à la demande).
+
+          IL PASSE DEVANT « Mon équipe ». Le classement du lycée est peuplé dès
+          le premier jour : il y a toujours des camarades devant et derrière, donc
+          toujours quelque chose à regarder. « Mon équipe », lui, est vide tant
+          qu'on n'a ajouté personne — et il ouvrait l'onglet sur « En solo pour
+          l'instant », c'est-à-dire sur un vide, à l'endroit qui décide si on
+          reste. Le plein d'abord, l'invitation ensuite. */}
+      <GeoRankingSection school={school} schoolDemo={schoolDemo} />
 
       {/* 5. Parrainage — compacté en une ligne (on le fait une fois, il n'a
           plus le droit d'écraser le quotidien). */}
@@ -910,9 +912,17 @@ export default function AmisHome({
         squadName={squadName}
       />
 
-      {/* 6. Le collège, réduit à un podium + ta ligne (portée en sélecteur,
-          liste complète à la demande). */}
-      <GeoRankingSection school={school} schoolDemo={schoolDemo} />
+      {/* 6. Mon équipe — le classement aux trophées, façon liste de clan.
+          Descendu sous le classement de l'établissement : voir d'abord où l'on
+          se situe dans son lycée donne une raison de se constituer une équipe,
+          l'inverse demandait d'en avoir déjà une. */}
+      <ClassementArena
+        ranking={ranking}
+        onlineFriendIds={onlineFriendIds}
+        myFriendCode={myFriendCode}
+        squadName={squadName}
+        canRenameSquad={canRenameSquad}
+      />
     </div>
   )
 }

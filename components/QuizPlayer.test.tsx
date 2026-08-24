@@ -14,7 +14,16 @@ import { AUTO_ADVANCE_MS } from '@/lib/juice'
 // mais on mocke leurs MODULES pour ne pas importer de code serveur dans jsdom.
 
 vi.mock('@/lib/sounds', () => ({
-  sfx: { complete: vi.fn(), correctCombo: vi.fn(), wrong: vi.fn() },
+  // `tap` compris : c'est le son de la SÉLECTION d'une réponse, depuis que
+  // choisir et valider sont deux gestes. Sans lui dans le mock, le clic sur une
+  // option lève une TypeError et la sélection n'a jamais lieu — le symptôme
+  // ressemble alors à un bug d'interface, pas à un mock incomplet.
+  sfx: {
+    complete: vi.fn(),
+    correctCombo: vi.fn(),
+    tap: vi.fn(),
+    wrong: vi.fn(),
+  },
   buzz: vi.fn(),
   // Le composant Button (ui/button) joue press() à chaque clic.
   press: vi.fn(),
@@ -43,6 +52,20 @@ vi.mock('@/components/ProgressRing', () => ({
 }))
 
 import QuizPlayer from '@/components/QuizPlayer'
+
+/**
+ * Répondre à une question : choisir une option, PUIS valider.
+ *
+ * Le tap corrigeait autrefois d'un seul geste. Depuis le bouton « Valider », la
+ * sélection est un brouillon révocable — tous les tests passent donc par ici.
+ */
+const repondre = async (
+  user: ReturnType<typeof userEvent.setup>,
+  option: string,
+) => {
+  await user.click(screen.getByRole('button', { name: option }))
+  await user.click(screen.getByRole('button', { name: 'Valider' }))
+}
 
 // Chaque question porte une explication : autoAdvanceDelay renvoie alors null,
 // donc AUCUN enchaînement automatique — l'avancement est piloté au clic, sans
@@ -79,11 +102,11 @@ describe('QuizPlayer — l’écran de fin ne ment pas', () => {
     )
 
     // Q1 : bonne réponse, puis « Continuer ».
-    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await repondre(user, 'Paris')
     await user.click(screen.getByRole('button', { name: 'Continuer' }))
 
     // Q2 : MAUVAISE réponse (on tape '5' alors que la réponse est '4').
-    await user.click(screen.getByRole('button', { name: '5' }))
+    await repondre(user, '5')
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
 
     // L'écran de fin doit compter EXACTEMENT 1 bonne réponse sur 2 — pas 2/2
@@ -105,9 +128,9 @@ describe('QuizPlayer — l’écran de fin ne ment pas', () => {
       />,
     )
 
-    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await repondre(user, 'Paris')
     await user.click(screen.getByRole('button', { name: 'Continuer' }))
-    await user.click(screen.getByRole('button', { name: '4' }))
+    await repondre(user, '4')
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
 
     expect(screen.getByLabelText('2 bonnes réponses sur 2')).toBeInTheDocument()
@@ -131,7 +154,7 @@ describe('QuizPlayer — feuille de la mascotte (toutes matières)', () => {
       />,
     )
 
-    await user.click(screen.getByRole('button', { name: 'Lyon' }))
+    await repondre(user, 'Lyon')
 
     // La feuille annonce la bonne réponse — l'ancien bandeau, jamais.
     expect(screen.getByText(/La bonne réponse/)).toBeInTheDocument()
@@ -153,7 +176,7 @@ describe('QuizPlayer — feuille de la mascotte (toutes matières)', () => {
         />,
       )
 
-      await user.click(screen.getByRole('button', { name: 'Lyon' }))
+      await repondre(user, 'Lyon')
 
       expect(screen.getByText(/La bonne réponse/)).toBeInTheDocument()
       expect(screen.queryByText('❌ Pas tout à fait…')).not.toBeInTheDocument()
@@ -177,7 +200,7 @@ describe('QuizPlayer — feuille de la mascotte (toutes matières)', () => {
       />,
     )
 
-    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await repondre(user, 'Paris')
     // Horloge réelle : les animations de la feuille (rAF) rendent les faux
     // minuteurs instables ici, et l'attente reste courte (AUTO_ADVANCE_MS).
     await act(async () => {
@@ -207,17 +230,24 @@ describe('QuizPlayer — feuille de la mascotte (toutes matières)', () => {
       />,
     )
     // L'image est décorative (aria-hidden) : le titre porte le sens, pas elle.
-    const src = () => container.querySelector('img')?.getAttribute('src')
+    // La mascotte de la FEUILLE de retour, pas celle qui pose la question :
+    // depuis que Marcel attend à côté de l'énoncé, `querySelector('img')`
+    // ramenait sa tête. On vise donc les réactions, qui sont les seules à
+    // porter un verdict.
+    const src = () =>
+      container
+        .querySelector('img[src*="reaction-"]')
+        ?.getAttribute('src')
 
-    await user.click(screen.getByRole('button', { name: 'Lyon' })) // faux
+    await repondre(user, 'Lyon') // faux
     expect(src()).toBe('/images/mascotte/reaction-mauvaise-1.webp')
 
     await user.click(screen.getByRole('button', { name: 'Continuer' }))
-    await user.click(screen.getByRole('button', { name: '5' })) // faux
+    await repondre(user, '5') // faux
     expect(src()).toBe('/images/mascotte/reaction-mauvaise-2.webp')
 
     await user.click(screen.getByRole('button', { name: 'Continuer' }))
-    await user.click(screen.getByRole('button', { name: 'Paris' })) // juste
+    await repondre(user, 'Paris') // juste
     // Retour au premier rang du bon côté : la série d'erreurs est bien tombée.
     expect(src()).toBe('/images/mascotte/reaction-bonne-1.webp')
   })
@@ -256,7 +286,7 @@ describe('QuizPlayer — la séance d’entraînement', () => {
       />,
     )
     // La session tient en UNE question : le bouton final sort tout de suite.
-    await user.click(screen.getByRole('button', { name: '4' }))
+    await repondre(user, '4')
     expect(
       screen.getByRole('button', { name: 'Voir mon score' }),
     ).toBeInTheDocument()
@@ -277,7 +307,7 @@ describe('QuizPlayer — la séance d’entraînement', () => {
         deck={[TROIS[2]]}
       />,
     )
-    await user.click(screen.getByRole('button', { name: '4' }))
+    await repondre(user, '4')
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
 
     // Pas de note…
@@ -295,9 +325,9 @@ describe('QuizPlayer — la séance d’entraînement', () => {
     render(
       <QuizPlayer quizId="quiz-test" title="Test" questions={QUESTIONS} deck={QUESTIONS} />,
     )
-    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await repondre(user, 'Paris')
     await user.click(screen.getByRole('button', { name: 'Continuer' }))
-    await user.click(screen.getByRole('button', { name: '4' }))
+    await repondre(user, '4')
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
 
     expect(recordTestSession).toHaveBeenCalledWith('quiz-test', 2, 2)
@@ -314,15 +344,217 @@ describe('QuizPlayer — la séance d’entraînement', () => {
 //   2. les deux étaient étirés en `w-full`, deux barres pleines qui pesaient
 //      autant que le score au-dessus.
 
+// L'écran de question, refondu à la Duolingo : l'app s'efface, la progression
+// passe en barre horizontale en haut, les réponses tombent sous le pouce.
+describe('QuizPlayer — l’écran de question', () => {
+  const rendreQuestion = () =>
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        record={false}
+      />,
+    )
+
+  it('montre la progression en BARRE, plus en anneau', () => {
+    rendreQuestion()
+    const barre = screen.getByRole('progressbar', {
+      name: /Question 1 sur 2/,
+    })
+    // Une barre, pas un cercle : elle se lit sans être regardée et rend au
+    // contenu la hauteur que l'anneau prenait au milieu de l'écran.
+    expect(barre.className).toContain('rounded-full')
+    expect(barre.className).toContain('flex-1')
+    expect(barre.tagName).toBe('DIV')
+  })
+
+  it('la remplit vers la droite à mesure des réponses', async () => {
+    const user = userEvent.setup()
+    rendreQuestion()
+    const largeur = () =>
+      (
+        screen.getByRole('progressbar').firstElementChild as HTMLElement
+      ).style.width
+
+    expect(largeur()).toBe('0%')
+    await repondre(user, 'Paris')
+    // Une réponse donnée sur deux questions : la barre est à la moitié.
+    expect(largeur()).toBe('50%')
+  })
+
+  it('garde « Valider » ÉTEINT tant que rien n’est coché', async () => {
+    const user = userEvent.setup()
+    rendreQuestion()
+    const valider = () => screen.getByRole('button', { name: 'Valider' })
+    expect(valider()).toBeDisabled()
+    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    expect(valider()).toBeEnabled()
+  })
+
+  it('ne corrige RIEN tant qu’on n’a pas validé', async () => {
+    // Un doigt qui ripe coûtait la question, sans recours : le tap corrigeait
+    // d'un seul geste. La sélection est maintenant un brouillon.
+    const user = userEvent.setup()
+    rendreQuestion()
+    await user.click(screen.getByRole('button', { name: 'Lyon' }))
+    expect(screen.queryByText(/La bonne réponse/)).not.toBeInTheDocument()
+  })
+
+  it('laisse CHANGER d’avis avant de valider', async () => {
+    const user = userEvent.setup()
+    rendreQuestion()
+    await user.click(screen.getByRole('button', { name: 'Lyon' }))
+    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await user.click(screen.getByRole('button', { name: 'Valider' }))
+    // C'est le SECOND choix qui compte : la feuille félicite.
+    expect(screen.queryByText(/La bonne réponse/)).not.toBeInTheDocument()
+    expect(
+      screen.getByRole('button', { name: 'Continuer' }),
+    ).toBeInTheDocument()
+  })
+
+  it('« Je ne sais pas » compte la question ratée et montre la réponse', async () => {
+    // Un aveu, pas un abandon : le proposer évite le clic au hasard, qui
+    // apprendrait à la répétition espacée que la carte est sue.
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        record={false}
+      />,
+    )
+    await user.click(screen.getByRole('button', { name: 'Je ne sais pas' }))
+    expect(screen.getByText(/La bonne réponse/)).toBeInTheDocument()
+
+    await user.click(screen.getByRole('button', { name: 'Continuer' }))
+    await repondre(user, '4')
+    await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
+    // 1 sur 2 : la question passée est bien comptée fausse.
+    expect(screen.getByLabelText('1 bonne réponse sur 2')).toBeInTheDocument()
+  })
+
+  it('montre l’ILLUSTRATION de la matière — l’écran n’était que teinté', () => {
+    const { container } = render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        subjectColor="red"
+        subjectSlug="allemand"
+        record={false}
+      />,
+    )
+    const vignette = container.querySelector('img[src*="vignettes"]')
+    expect(vignette).not.toBeNull()
+  })
+
+  it('n’invente pas d’illustration pour un quiz sans matière', () => {
+    const { container } = rendreQuestion()
+    expect(container.querySelector('img[src*="vignettes"]')).toBeNull()
+  })
+
+  it('« Je ne sais pas » est une PLAQUE, pas un texte nu', async () => {
+    // Il n'avait ni contour ni fond : rien ne disait qu'on pouvait le toucher,
+    // et sa zone tactile s'arrêtait aux lettres.
+    rendreQuestion()
+    const bouton = screen.getByRole('button', { name: 'Je ne sais pas' })
+    expect(bouton.className).toContain('quiz-plaque')
+    expect(bouton.className).toContain('--plaque-bord')
+  })
+
+  it('« Valider » reste une plaque même ÉTEINT', async () => {
+    // Un bouton désactivé doit rester reconnaissable comme bouton : c'est sa
+    // saturation qui tombe, pas sa forme.
+    const user = userEvent.setup()
+    rendreQuestion()
+    const valider = () => screen.getByRole('button', { name: 'Valider' })
+    expect(valider()).toBeDisabled()
+    expect(valider().className).toContain('quiz-plaque')
+    expect(valider().className).toContain('--plaque-bord')
+    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    // Allumé : la robe change, la plaque reste.
+    expect(valider().className).toContain('quiz-plaque')
+    expect(valider().className).toContain('var(--success)')
+  })
+
+  it('« Valider » et « Continuer » ont la MÊME plaque et la même hauteur', async () => {
+    // Chez Duolingo ce bouton ne bouge jamais : seuls son libellé et sa couleur
+    // changent. Ici il avait sa propre géométrie dans la feuille de retour —
+    // rayon, contour et hauteur différents — et sautait de quelques pixels à
+    // l'instant où l'élève y pose déjà le pouce.
+    const user = userEvent.setup()
+    rendreQuestion()
+
+    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    const valider = screen.getByRole('button', { name: 'Valider' })
+    const formeValider = ['quiz-plaque', 'h-13', 'w-full'].filter((c) =>
+      valider.className.includes(c),
+    )
+    expect(formeValider).toHaveLength(3)
+
+    await user.click(valider)
+    const continuer = screen.getByRole('button', { name: 'Continuer' })
+    for (const classe of formeValider) {
+      expect(continuer.className, classe).toContain(classe)
+    }
+  })
+
+  it('fait poser la question par Marcel, dans une bulle', () => {
+    const { container } = rendreQuestion()
+    // Sa tête, celle de la nav : neutre et attentive. Surtout PAS une réaction
+    // du jeu de dix — ce sont toutes des verdicts (pouce levé, grimace), et en
+    // montrer une avant la réponse approuverait ou plaindrait d'avance.
+    const mascotte = container.querySelector('img[src*="marcel"]')
+    expect(mascotte).not.toBeNull()
+    const src = mascotte?.getAttribute('src') ?? ''
+    expect(src).not.toContain('reaction-')
+  })
+
+  it('teinte le fond à la MATIÈRE, pas seulement le liseré', () => {
+    const { container } = render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        subjectColor="red"
+        record={false}
+      />,
+    )
+    const table = container.querySelector('.quiz-fond')
+    expect(table).not.toBeNull()
+    // La robe de la matière est bien celle demandée : sans elle, `--jeu-accent`
+    // retomberait sur le violet et toutes les matières se ressembleraient.
+    expect(table?.className).toContain('robe-red')
+  })
+
+  it('ancre les réponses en BAS de la colonne', () => {
+    rendreQuestion()
+    const plateau = screen.getByRole('group', { name: 'Réponses' })
+    // `shrink-0` en fin de colonne flex : les réponses restent collées au bas
+    // quelle que soit la hauteur de l'écran, au lieu de flotter au milieu avec
+    // un vide sous elles.
+    expect(plateau.className).toContain('shrink-0')
+    // Et elles viennent APRÈS la question dans l'ordre du document.
+    const question = screen.getByText('Capitale de la France ?')
+    expect(
+      question.compareDocumentPosition(plateau) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy()
+  })
+})
+
 describe('QuizPlayer — les reprises de l’écran de fin', () => {
   /** Joue la session de 2 questions avec UNE erreur, et rend les 2 boutons. */
   const jusquAuBout = async (user: ReturnType<typeof userEvent.setup>) => {
     render(
       <QuizPlayer quizId="quiz-test" title="Test" questions={QUESTIONS} record={false} />,
     )
-    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await repondre(user, 'Paris')
     await user.click(screen.getByRole('button', { name: 'Continuer' }))
-    await user.click(screen.getByRole('button', { name: '5' })) // faux
+    await repondre(user, '5') // faux
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
     return {
       revoir: screen.getByRole('button', { name: /À revoir/ }),
@@ -397,9 +629,9 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
         record={true}
       />,
     )
-    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await repondre(user, 'Paris')
     await user.click(screen.getByRole('button', { name: 'Continuer' }))
-    await user.click(screen.getByRole('button', { name: '4' }))
+    await repondre(user, '4')
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
 
     const chrono = screen.getByTitle(/Temps de révision/)
@@ -427,9 +659,9 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
       />,
     )
     // Une bonne, une mauvaise : il reste une erreur à rejouer.
-    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await repondre(user, 'Paris')
     await user.click(screen.getByRole('button', { name: 'Continuer' }))
-    await user.click(screen.getByRole('button', { name: '5' }))
+    await repondre(user, '5')
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
 
     const secondesDe = (t: string | null) =>
@@ -441,7 +673,7 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
       await new Promise((r) => setTimeout(r, 1300))
     })
     await user.click(screen.getByRole('button', { name: /À revoir/ }))
-    await user.click(screen.getByRole('button', { name: '4' }))
+    await repondre(user, '4')
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
 
     const second = secondesDe(screen.getByTitle(/Temps de révision/).textContent)

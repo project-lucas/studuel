@@ -33,6 +33,7 @@ export default function AnswerBoard({
   revealed,
   layout,
   onAnswer,
+  verrouillerAuChoix = true,
 }: {
   options: string[]
   correctIndex: number
@@ -42,6 +43,15 @@ export default function AnswerBoard({
   revealed: boolean
   layout: GameLayout
   onAnswer: (index: number) => void
+  /**
+   * Le premier tap FIGE-t-il la réponse ?
+   *
+   * Vrai pour les jeux de salon, où le geste EST la réponse : on joue vite, et
+   * pouvoir se raviser retirerait au chrono tout son sel. Faux pour le quiz
+   * depuis qu'il a un bouton « Valider » — la sélection y est un brouillon, et
+   * un brouillon qu'on ne peut pas corriger n'est pas un brouillon.
+   */
+  verrouillerAuChoix?: boolean
 }) {
   const grid = layout === 'grille'
   const duo = layout === 'duo'
@@ -66,7 +76,7 @@ export default function AnswerBoard({
           <button
             key={i}
             type="button"
-            disabled={revealed || selected !== null}
+            disabled={revealed || (verrouillerAuChoix && selected !== null)}
             onClick={() => onAnswer(i)}
             className={cn(
               'relative flex items-center gap-2 rounded-2xl border-2 bg-card font-semibold transition-all',
@@ -76,12 +86,29 @@ export default function AnswerBoard({
                 'min-h-28 justify-center px-4 py-6 text-center text-xl sm:min-h-32 sm:text-2xl',
               layout === 'liste' &&
                 'min-h-14 justify-between px-4 py-3 text-left text-sm',
-              // Repos : liseré dans la couleur du jeu, très discret.
+              // REPOS : la plaque a une ÉPAISSEUR.
+              // Le liseré était `--jeu-accent` à 25 % d'opacité, avec une ombre
+              // douce : sur un fond clair et un accent pâle, il devenait
+              // invisible. Les réponses se lisaient alors comme de simples
+              // cartes blanches — la même surface que l'énoncé posé au-dessus,
+              // et rien qui dise « touche-moi ».
+              //
+              // C'est le même remède que sur les plaques de l'arène et les
+              // pilules de fin de quiz : un contour net, et une tranche pleine
+              // sous le bouton. Elle s'enfonce au tap, ce qui donne le retour
+              // tactile que `scale` seul ne donnait pas.
               !revealed &&
                 selected === null && [
-                  'border-[color:var(--jeu-accent)]/25 shadow-sm',
-                  'hover:border-[color:var(--jeu-accent)]/70 hover:shadow-md active:scale-[0.98]',
+                  'border-black/10 shadow-[0_4px_0_0_rgba(0,0,0,0.07)]',
+                  'hover:border-[color:var(--jeu-accent)]/60',
+                  'active:translate-y-[3px] active:shadow-[0_1px_0_0_rgba(0,0,0,0.07)]',
                 ],
+              // CHOISIE, pas encore corrigée : le brouillon de l'élève. Sans
+              // cet état, appuyer sur « Valider » se ferait à l'aveugle — rien
+              // à l'écran ne disait ce qui allait être validé.
+              !revealed &&
+                isSelected &&
+                'border-[color:var(--jeu-accent)] bg-[color:var(--jeu-accent)]/10 shadow-[0_4px_0_0_color-mix(in_oklab,var(--jeu-accent),black_18%)]',
               showGood && 'border-success bg-success/10 text-success',
               showBad && 'border-destructive bg-destructive/10 text-destructive',
               faded && 'opacity-45',

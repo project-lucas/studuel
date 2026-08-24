@@ -12,15 +12,23 @@ import { missedQuestions, canRetryMissed } from '@/lib/quiz-retry'
 import { verdictFor, verdictSrc } from '@/lib/verdict'
 import ComboBadge from '@/components/ComboBadge'
 import { sessionXp } from '@/lib/xp'
-import { bilanDuQuiz, formatDureeGain, type EtatBilan } from '@/lib/quiz-bilan'
+import {
+  bilanDuQuiz,
+  formatDureeGain,
+  formatDureeTotale,
+  type EtatBilan,
+} from '@/lib/quiz-bilan'
+import {
+  preparerCelebration,
+  type Celebration,
+} from '@/lib/serie-celebration'
+import SerieCelebration from '@/components/quiz/SerieCelebration'
 import BilanCartes from '@/components/quiz/BilanCartes'
 import { useWorkTimer } from '@/components/useWorkTimer'
-import { SoundToggle } from '@/components/FlashcardPlayer'
 import BackButton from '@/components/BackButton'
 import QuitGuardButton from '@/components/QuitGuardButton'
-import ProgressRing from '@/components/ProgressRing'
 import AnswerBoard from '@/components/jeux/AnswerBoard'
-import { subjectRobe } from '@/lib/subject-style'
+import { subjectRobe, subjectVignette } from '@/lib/subject-style'
 import { layoutForQuestion } from '@/lib/quiz-layout'
 import BossApparition from '@/components/defi/BossApparition'
 import QuizFeedbackMascotte from '@/components/QuizFeedbackMascotte'
@@ -48,6 +56,13 @@ import type { QuizQuestion } from '@/lib/types'
  * haut→bas, reflet interne, puis seulement la tranche. On neutralise donc le
  * socle de la maison (`--btn-edge` / `--btn-depth`) pour ne garder que celui-là.
  */
+/**
+ * La réponse d'une question passée sans que l'élève en propose une
+ * (« Je ne sais pas »). Jamais égale à un index d'option, donc toujours comptée
+ * ratée — par le score, par `missedQuestions` et par la répétition espacée.
+ */
+const SANS_REPONSE = -1
+
 const PILULE_REPRISE =
   'quiz-pilule h-11 min-w-32 gap-1.5 px-5 text-sm font-extrabold whitespace-nowrap ' +
   '[--btn-edge:transparent] [--btn-depth:0px] hover:brightness-[1.04]'
@@ -95,6 +110,8 @@ export default function QuizPlayer({
   deck = null,
   subject = null,
   subjectColor = null,
+  subjectSlug = null,
+  tempsTotalSecondes = 0,
   backHref = '/reviser',
   record = true,
   gradeLevel = null,
@@ -121,6 +138,14 @@ export default function QuizPlayer({
    * détaché) : repli sur le violet de l'app.
    */
   subjectColor?: string | null
+  /**
+   * Identifiant de la matière (`subjects.slug`) — il donne son ILLUSTRATION
+   * (`subjectVignette`). Sans elle, l'écran n'a que sa teinte de fond : la
+   * matière se devine, elle ne se voit pas.
+   */
+  subjectSlug?: string | null
+  /** Temps de révision DÉJÀ accumulé (`profiles.work_seconds`), en secondes. */
+  tempsTotalSecondes?: number
   backHref?: string
   // `false` pour un quiz PERSONNEL (bibliothèque) : on ne l'enregistre pas comme
   // une session de catalogue (quiz_id absent de `quizzes` → violerait la FK) et
@@ -134,6 +159,8 @@ export default function QuizPlayer({
   // `--jeu-*` (globals.css). Les mêmes que celles des jeux de salon — c'est ce
   // qui fait qu'un quiz et une partie se ressemblent enfin.
   const robe = subjectRobe(subjectColor)
+  // L'illustration du dossier de la matière — absente pour un quiz détaché.
+  const vignette = subjectSlug ? subjectVignette(subjectSlug) : undefined
 
   // Le paquet EN COURS. Il vaut le quiz complet, sauf après « Revoir mes
   // erreurs », où il ne contient plus que les questions ratées.
@@ -144,6 +171,10 @@ export default function QuizPlayer({
   // Choix de l'élève, question par question — la correction se lit dedans.
   const [choices, setChoices] = useState<number[]>([])
   const [selected, setSelected] = useState<number | null>(null)
+  // LA CORRECTION EST-ELLE DÉVOILÉE ? Auparavant, choisir ET corriger étaient
+  // le même geste : `answered` valait `selected !== null`. Depuis le bouton
+  // « Valider », ce sont deux temps — on choisit (révocable), puis on valide.
+  const [valide, setValide] = useState(false)
   // Bonnes réponses d'affilée (remise à zéro à la première erreur).
   const [streak, setStreak] = useState(0)
   // Le miroir : erreurs d'affilée, remises à zéro à la première bonne réponse.
@@ -158,6 +189,10 @@ export default function QuizPlayer({
   // Les états du moteur APRÈS la session : la matière des trois chiffres de
   // fin (réussite / avancement / ancrage).
   const [etatsBilan, setEtatsBilan] = useState<EtatBilan[] | null>(null)
+  // La fête de série, quand cette session est la PREMIÈRE du jour. Elle se pose
+  // par-dessus tout, avant même l'écran de score : c'est le moment où la case
+  // du jour se remplit, et il ne doit pas passer derrière un bilan chiffré.
+  const [celebration, setCelebration] = useState<Celebration | null>(null)
   // Le temps de révision de CETTE session. Le hook est monté ici plutôt que via
   // le `<WorkTimer />` de la page : c'est le même compteur, la même écriture
   // vers /api/work-time — mais sa valeur devient AFFICHABLE, et on ne peut pas
@@ -231,6 +266,16 @@ export default function QuizPlayer({
         .then((r) => {
           setSaved(r.saved)
           setApparition(r.apparition)
+          // L'état de la série lu AVANT l'écriture : c'est lui qui sait si la
+          // case du jour était encore vide, donc s'il y a quelque chose à
+          // remplir à l'écran.
+          if (r.serieAvant) {
+            const fete = preparerCelebration(
+              r.serieAvant.semaine,
+              r.serieAvant.serie,
+            )
+            if (fete.celebrer) setCelebration(fete)
+          }
         })
         .catch(() => setSaved(false))
     }
@@ -253,10 +298,25 @@ export default function QuizPlayer({
   // Répondre : on révèle tout de suite le résultat (juste/faux, bonne réponse,
   // explication) et on attend un tap « Continuer » pour avancer.
   const choose = (optionIndex: number) => {
-    if (selected !== null || lockedRef.current) return
-    lockedRef.current = true
+    // Une SÉLECTION, plus une réponse : elle se change tant qu'on n'a pas
+    // validé. Plus de verrou anti-double-tap ici — c'est `valider` qui le porte
+    // désormais, puisque c'est lui qui écrit.
+    if (valide) return
+    sfx.tap()
     setSelected(optionIndex)
-    const good = optionIndex === question.correct_index
+  }
+
+  /**
+   * Corrige. `choix` vaut `null` pour « Je ne sais pas » : la question est
+   * comptée ratée, et la bonne réponse dévoilée sans en désigner une comme
+   * « la tienne » — l'élève n'en a proposé aucune.
+   */
+  const valider = (choix: number | null) => {
+    if (valide || lockedRef.current) return
+    lockedRef.current = true
+    setSelected(choix)
+    setValide(true)
+    const good = choix === question.correct_index
     // Série en cours : la récompense MONTE tant qu'on enchaîne, et retombe net
     // à la première erreur. C'est ce qui donne envie de continuer.
     const nextStreak = good ? streak + 1 : 0
@@ -283,14 +343,17 @@ export default function QuizPlayer({
     // la session lit alors `choices[i]` face à la mauvaise question (score,
     // pastilles de correction et « Revoir mes erreurs » faussés). `choose()` et
     // `finish()` avaient déjà leur verrou, pas celui-ci.
-    if (selected === null || advancingRef.current) return
+    if (!valide || advancingRef.current) return
     advancingRef.current = true
-    const next = [...choices, selected]
+    // `SANS_REPONSE` pour « Je ne sais pas » : jamais égal à `correct_index`,
+    // donc compté raté par le score comme par `missedQuestions`.
+    const next = [...choices, selected ?? SANS_REPONSE]
     setChoices(next)
     setSelected(null)
     if (next.length >= questions.length) finish(next)
     else {
       setIndex((i) => i + 1)
+      setValide(false)
       lockedRef.current = false
     }
   }
@@ -316,6 +379,7 @@ export default function QuizPlayer({
     setIndex(0)
     setChoices([])
     setSelected(null)
+    setValide(false)
     setStreak(0)
     setBest(0)
     setFinished(false)
@@ -353,6 +417,20 @@ export default function QuizPlayer({
       justes: score,
       posees: questions.length,
     })
+
+    // LA FÊTE DE SÉRIE PASSE DEVANT LE BILAN. Elle est montée par-dessus tout
+    // (position fixe) tant que l'élève ne l'a pas refermée : le score l'attend
+    // derrière. L'ordre compte — voir « 3/8 » puis une fête sonne comme une
+    // consolation ; voir la série se remplir puis son score, c'est la journée
+    // qui commence bien.
+    if (celebration) {
+      return (
+        <SerieCelebration
+          celebration={celebration}
+          onContinue={() => setCelebration(null)}
+        />
+      )
+    }
 
     return (
       // `key` explicite : sans elle, le démontage de l'écran de question (et
@@ -647,7 +725,7 @@ export default function QuizPlayer({
   // ---------------------------------------------------------------------------
   // Écran de question : plein écran, feedback immédiat à la réponse.
   // ---------------------------------------------------------------------------
-  const answered = selected !== null
+  const answered = valide
   const isCorrect = selected === question.correct_index
   const isLast = index + 1 >= questions.length
   // Série en cours DANS LE SENS de la réponse qu'on vient de donner : c'est elle
@@ -663,7 +741,9 @@ export default function QuizPlayer({
       data-no-swipe
       className={cn(
         robe,
-        'jeu-table -mx-4 -mt-16 flex min-h-svh flex-col px-4 pt-16 pb-24 text-foreground md:-mx-8 md:-mt-10 md:px-8 md:pt-12',
+        // `quiz-fond` par-dessus `jeu-table` : le lavis de la matière, assez
+        // dense pour qu'un quiz d'allemand ne ressemble pas à un quiz de maths.
+        'jeu-table quiz-fond flex min-h-svh flex-col px-4 pt-3 pb-4 text-foreground md:px-8',
       )}
       // La feuille de la mascotte se pose PAR-DESSUS le bas de l'écran : sans
       // cette marge, la dernière réponse disparaîtrait sous elle. Elle tient
@@ -673,16 +753,86 @@ export default function QuizPlayer({
       style={answered ? { paddingBottom: '21rem' } : undefined}
     >
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
-        <div className="flex items-center justify-between">
+        {/* LA RANGÉE DU HAUT : quitter · progression · son.
+            L'anneau « Question 4/8 » vivait au MILIEU de l'écran, entre le
+            compteur et la question, et poussait tout le reste vers le bas. Une
+            barre qui se remplit vers la droite dit la même chose en une ligne,
+            se lit sans être regardée, et rend au contenu la hauteur qu'elle
+            occupait. */}
+        <div className="flex shrink-0 items-center gap-2.5">
           <QuitGuardButton
             fallback={backHref}
             label="Quitter le quiz"
-            className="shadow-sm"
+            className="shrink-0 shadow-sm"
           >
             <X className="size-5" aria-hidden="true" />
           </QuitGuardButton>
           <span className="sr-only">{title}</span>
-          <SoundToggle />
+
+          {/* LA BARRE — plus courte, et à la COULEUR DE LA MATIÈRE.
+              Elle courait d'un bord à l'autre, en gris : sur un fond déjà pâle,
+              elle disparaissait, et rien ne disait de quelle matière on
+              révisait. Le rail passe en teinte foncée du fond (elle se voit
+              même vide) et la jauge prend `--jeu-accent`, la couleur du dossier.
+              Elle raccourcit pour laisser sa place au chrono. */}
+          <div
+            role="progressbar"
+            aria-valuemin={0}
+            aria-valuemax={questions.length}
+            aria-valuenow={index + (valide ? 1 : 0)}
+            aria-label={`Question ${index + 1} sur ${questions.length}`}
+            className="h-4 min-w-0 flex-1 overflow-hidden rounded-full bg-black/12 ring-1 ring-black/5 ring-inset"
+          >
+            <div
+              className="h-full rounded-full bg-[color:var(--jeu-accent)] transition-[width] duration-300 ease-out"
+              style={{
+                width: `${((index + (valide ? 1 : 0)) / questions.length) * 100}%`,
+              }}
+            >
+              {/* Le reflet : la jauge a la même épaisseur que les plaques, elle
+                  en prend le biseau. Sans lui, un aplat sur un aplat. */}
+              <span
+                aria-hidden="true"
+                className="block h-1/2 rounded-full bg-white/30"
+              />
+            </div>
+          </div>
+
+          {/* LE CHRONO DE RÉVISION, à la place du bouton son.
+              Le temps travaillé était compté en silence et ne se voyait qu'en
+              fin de quiz. Ici il TOURNE : le total du profil plus la session en
+              cours, seconde par seconde. C'est le seul chiffre de l'écran qui
+              monte quoi qu'il arrive — même sur une mauvaise réponse.
+
+              IL EST DE LA MÊME FAMILLE QUE LES PLAQUES. C'était une pastille
+              plate à liseré gris, posée à côté d'objets qui ont tous un contour,
+              un dégradé et une tranche : elle avait l'air d'appartenir à une
+              autre application. Même traitement, en pilule — mais tranche plus
+              fine et pas d'enfoncement au tap : ce n'est pas un bouton, c'est un
+              compteur, et rien ne doit laisser croire qu'on peut le presser.
+
+              Le cadran est un JETON à la couleur de la matière : il donne au
+              chrono le seul point de couleur saturée du bandeau, et sépare
+              l'icône du nombre au lieu de les laisser flotter côte à côte.
+
+              ⚠️ Le bouton de coupure du son quitte donc cet écran. Comme le
+              bandeau du haut est masqué pendant la session, il n'y a plus de
+              moyen de couper le son SANS sortir du quiz. Arbitrage assumé. */}
+          <span
+            className="quiz-plaque quiz-plaque--ronde quiz-plaque--compteur h-9 shrink-0 gap-1.5 pr-3 pl-1 [--plaque-bas:color-mix(in_oklab,var(--card),black_5%)] [--plaque-bord:color-mix(in_oklab,var(--jeu-accent),black_26%)] [--plaque-haut:var(--card)]"
+            title="Ton temps de révision total"
+          >
+            <span
+              aria-hidden="true"
+              className="flex size-7 items-center justify-center rounded-full bg-[color:var(--jeu-accent)] text-white shadow-[inset_0_-2px_0_rgba(0,0,0,0.18)]"
+            >
+              <Clock className="size-4" strokeWidth={2.6} />
+            </span>
+            <span className="font-heading text-sm font-extrabold text-foreground tabular-nums">
+              {formatDureeTotale(tempsTotalSecondes + secondesTravail)}
+            </span>
+            <span className="sr-only">de révision au total</span>
+          </span>
         </div>
 
         {/* Badge de SÉRIE : n'apparaît qu'à partir de 2 bonnes réponses
@@ -691,56 +841,124 @@ export default function QuizPlayer({
         {/* La région `aria-live` reste TOUJOURS montée : un lecteur d'écran
             n'annonce que les CHANGEMENTS d'une région déjà présente. Si elle
             apparaissait en même temps que son texte, l'annonce serait ratée. */}
-        <div className="flex min-h-7 justify-center" aria-live="polite">
+        <div className="mt-2 flex min-h-7 shrink-0 justify-center" aria-live="polite">
           <ComboBadge streak={streak} variant="clair" />
         </div>
 
-        {/* Anneau de progression : « Question N/10 » */}
-        <div className="z-10 -mb-10 flex justify-center">
-          <ProgressRing
-            value={(index + (selected !== null ? 1 : 0)) / questions.length}
-            size={104}
-            strokeWidth={7}
-            label={`Question ${index + 1} sur ${questions.length}`}
-            trackClassName="stroke-black/10"
-            fillClassName="stroke-[color:var(--jeu-accent)]"
-          >
-            <span className="flex size-[82px] flex-col items-center justify-center rounded-full bg-card text-center shadow-sm">
-              <span className="text-xs font-medium text-muted-foreground">
-                Question
-              </span>
-              <span className="font-mono text-lg font-bold tabular-nums">
-                {index + 1}/{questions.length}
-              </span>
-            </span>
-          </ProgressRing>
+        {/* LA CONSIGNE, puis L'ÉNONCÉ — en haut, l'un sous l'autre.
+            Précédemment l'énoncé était centré dans la hauteur libre : il
+            creusait DEUX vides, un au-dessus de lui et un entre lui et les
+            réponses, et l'écran n'était plus qu'une carte blanche flottant dans
+            du bleu pâle. Le vide se rassemble maintenant en UN seul endroit,
+            sous l'énoncé, là où il sert de respiration avant les réponses.
+
+            Et l'énoncé quitte sa CARTE : une boîte blanche au-dessus de boîtes
+            blanches, c'était trois fois la même surface pour trois rôles
+            différents. Posé à même le fond, en grand, il n'a plus besoin d'un
+            cadre pour se distinguer — ce sont les réponses qui en portent un. */}
+        <div className="mt-4 shrink-0">
+          <p className="mb-2.5 text-xs font-extrabold tracking-wide text-foreground/45 uppercase">
+            {question.kind === 'true_false'
+              ? 'Vrai ou faux ?'
+              : 'Choisis la bonne réponse'}
+          </p>
+
+          {/* MARCEL POSE LA QUESTION.
+              L'écran était muet pendant qu'on cherchait, puis la mascotte
+              surgissait en pleine page une fois la réponse donnée : bavarde au
+              moment où l'on veut passer à la suite, absente au moment où l'on
+              hésite. Le voir attendre à côté de l'énoncé, c'est la même voix du
+              début à la fin — et c'est le rôle du hibou chez Duolingo.
+
+              Sa TÊTE, celle de la nav : un visage déjà connu, neutre et
+              attentif. Surtout pas une réaction du jeu de dix — elles sont
+              toutes des verdicts (pouce levé, grimace), et en montrer une avant
+              la réponse reviendrait à approuver ou plaindre d'avance.
+
+              La BULLE est ce qui distingue l'énoncé des plaques de réponse : sa
+              pointe dit « ceci est dit », là où trois rectangles blancs
+              identiques ne disaient rien du tout. */}
+          <div className="flex items-start gap-2.5">
+            <Image
+              src="/images/nav/marcel.webp"
+              alt=""
+              aria-hidden="true"
+              width={256}
+              height={256}
+              sizes="64px"
+              priority
+              className="size-16 shrink-0 rounded-full"
+            />
+            <div className="relative min-w-0 flex-1 rounded-3xl border-2 border-black/10 bg-card px-4 py-3.5">
+              <p className="font-heading text-lg leading-snug font-extrabold text-balance text-foreground">
+                {question.question}
+              </p>
+              {/* La pointe, côté mascotte. Deux bords seulement, tournés à 45° :
+                  le carré emprunte au cadre de la bulle son trait et son fond,
+                  donc il suit toute retouche sans qu'on y pense. */}
+              <span
+                aria-hidden="true"
+                className="absolute top-6 -left-[9px] size-4 rotate-45 border-b-2 border-l-2 border-black/10 bg-card"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* La question */}
-        <div className="rounded-3xl bg-card px-5 pt-14 pb-8 text-center shadow-md ring-1 ring-black/5">
-          <p className="font-heading text-lg font-bold text-balance text-foreground">
-            {question.question}
-          </p>
-          {question.kind === 'true_false' ? (
-            <p className="mt-1 text-xs font-semibold text-muted-foreground">
-              Vrai ou faux ?
-            </p>
+        {/* L'ILLUSTRATION DE LA MATIÈRE, dans la respiration.
+            L'écran n'avait que sa teinte de fond : la matière s'y devinait sans
+            jamais se voir, et le grand vide entre l'énoncé et les réponses ne
+            servait à rien. La vignette du dossier — le drapeau allemand, la
+            fiole de chimie — y tient les deux rôles : elle donne sa couleur à
+            l'écran et occupe le creux.
+
+            En retrait (opacité, halo diffus) : c'est un DÉCOR. À pleine
+            saturation elle entrerait en concurrence avec les plaques de
+            réponse, qui sont, elles, ce qu'il faut regarder. */}
+        <div
+          className="relative flex min-h-3 flex-1 items-center justify-center"
+          aria-hidden="true"
+        >
+          {vignette ? (
+            <>
+              <span
+                className="absolute size-40 rounded-full blur-2xl"
+                style={{
+                  background:
+                    'radial-gradient(circle, var(--jeu-glow), transparent 70%)',
+                }}
+              />
+              <Image
+                src={vignette}
+                alt=""
+                width={320}
+                height={320}
+                sizes="128px"
+                className="relative h-auto w-32 max-w-full opacity-70 drop-shadow-sm"
+              />
+            </>
           ) : null}
         </div>
 
-        {/* LES RÉPONSES — le plateau des jeux de salon, à l'identique.
-            Le quiz avait le sien : des pastilles qui viraient à l'APLAT vert ou
-            rouge saturé, quand la table de jeu, elle, teinte la bonne réponse et
-            la cerne. Deux grammaires du même verdict, dans la même app. C'est
-            désormais un seul composant : ce qu'on corrige d'un côté profite à
-            l'autre, et un élève n'a plus à réapprendre à lire un écran de
-            questions selon la porte par laquelle il est entré. */}
-        <div className="mt-5" role="group" aria-label="Réponses">
+        {/* LES RÉPONSES, ANCRÉES EN BAS — au plus près du pouce.
+            Elles suivaient la question dans le flux : sur un écran haut, elles
+            se retrouvaient au milieu, hors de portée de la main qui tient le
+            téléphone, avec un vide inutile en dessous. `shrink-0` en fin de
+            colonne flex les colle au bas, quelle que soit la taille de l'écran.
+
+            Le plateau lui-même est celui des jeux de salon, à l'identique : le
+            quiz avait le sien, avec des pastilles qui viraient à l'APLAT vert ou
+            rouge saturé là où la table de jeu teinte et cerne. Deux grammaires
+            du même verdict dans la même app — c'est désormais un seul composant. */}
+        <div className="shrink-0" role="group" aria-label="Réponses">
           <AnswerBoard
             options={question.options}
             correctIndex={question.correct_index}
             selected={selected}
             revealed={answered}
+            // Le quiz a un bouton « Valider » : la sélection y est un
+            // brouillon, et un brouillon qu'on ne peut pas corriger n'en est
+            // pas un. Les jeux de salon gardent le verrou au premier tap.
+            verrouillerAuChoix={false}
             // La disposition suit la FORME de la question, plus « liste » pour
             // tout le monde : un vrai/faux s'ouvre en deux grandes plaques,
             // quatre dates se rangent en damier, une définition garde ses
@@ -749,6 +967,62 @@ export default function QuizPlayer({
             onAnswer={choose}
           />
         </div>
+
+        {/* La respiration du BAS : elle remonte les réponses vers le centre au
+            lieu de les coller au bord, maintenant qu'un bouton occupe le bas. */}
+        <div className="min-h-3 flex-1" aria-hidden="true" />
+
+        {/* VALIDER, et « Je ne sais pas » dessous.
+            Le tap sur une réponse corrigeait immédiatement : un doigt qui
+            ripe coûtait la question, sans recours. Le geste se dédouble — on
+            choisit, puis on valide — et le bouton reste ÉTEINT tant que rien
+            n'est coché, ce qui dit sans un mot ce qu'il attend.
+
+            « Je ne sais pas » n'est pas un abandon mais un aveu : il compte la
+            question ratée (donc la reprogramme) et montre la bonne réponse. Le
+            proposer, c'est éviter le clic au hasard — qui, lui, apprend à la
+            répétition espacée que la carte est sue. */}
+        {!answered ? (
+          <div className="mt-3 flex shrink-0 flex-col gap-2.5">
+            <button
+              type="button"
+              disabled={selected === null}
+              onClick={() => valider(selected)}
+              className={cn(
+                'quiz-plaque h-13 w-full text-base font-extrabold tracking-wide uppercase',
+                selected === null
+                  ? // ÉTEINT — mais toujours une PLAQUE. Il était plat, sans
+                    // contour ni tranche : un aplat beige qui ne ressemblait
+                    // plus à un bouton du tout. Un bouton désactivé doit rester
+                    // reconnaissable comme bouton, sinon on ne comprend pas ce
+                    // qu'on attend de nous. C'est sa SATURATION qui tombe, pas
+                    // sa forme.
+                    // ÉTEINT, mais PAS INCOLORE. Il était gris sur fond pâle :
+                    // le texte blanc s'y perdait et le contour n'existait pas.
+                    // Il garde la teinte de la matière, très désaturée, avec un
+                    // contour franc — on voit un bouton, on voit qu'il attend.
+                    'cursor-not-allowed text-foreground/45 [--plaque-bas:color-mix(in_oklab,var(--jeu-accent),white_74%)] [--plaque-bord:color-mix(in_oklab,var(--jeu-accent),black_28%)] [--plaque-haut:color-mix(in_oklab,var(--jeu-accent),white_82%)]'
+                  : 'text-white [--plaque-bas:color-mix(in_oklab,var(--success),black_14%)] [--plaque-bord:color-mix(in_oklab,var(--success),black_50%)] [--plaque-haut:color-mix(in_oklab,var(--success),white_14%)]',
+              )}
+            >
+              Valider
+            </button>
+
+            {/* « JE NE SAIS PAS » EST UN BOUTON, DONC IL A DES CONTOURS.
+                C'était un texte gris posé sur le fond : rien ne disait qu'on
+                pouvait le toucher, et sa zone tactile s'arrêtait aux lettres.
+                Même plaque que « Valider », en robe claire — c'est le rang qui
+                les distingue (la couleur, la saturation), pas la présence ou
+                l'absence de bouton. */}
+            <button
+              type="button"
+              onClick={() => valider(null)}
+              className="quiz-plaque h-12 w-full cursor-pointer text-sm font-extrabold text-foreground/75 [--plaque-bas:color-mix(in_oklab,var(--card),black_7%)] [--plaque-bord:color-mix(in_oklab,var(--jeu-accent),black_34%)] [--plaque-haut:var(--card)]"
+            >
+              Je ne sais pas
+            </button>
+          </div>
+        ) : null}
 
         {/* Feedback + explication + bouton pour continuer. La feuille porte
             désormais TOUT le retour après réponse, pour toutes les matières :

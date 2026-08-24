@@ -115,3 +115,20 @@ export function formatDureeGain(secondes: number): string {
   const heures = Math.floor(minutes / 60)
   return `+${heures}h${String(minutes % 60).padStart(2, '0')}`
 }
+
+/**
+ * Le temps de révision TOTAL, écrit court : « 2 h 14 », « 47 min », « 12 s ».
+ *
+ * Différent de `formatDureeGain` : celui-ci annonce un gain (« +2m16 »), celui-là
+ * un cumul. Un total ne se préfixe pas d'un « + » — il ne s'ajoute à rien, il
+ * EST la somme.
+ */
+export function formatDureeTotale(secondes: number): string {
+  const s = Math.max(0, Math.floor(Number(secondes) || 0))
+  if (s < 60) return `${s} s`
+  const minutes = Math.floor(s / 60)
+  if (minutes < 60) return `${minutes} min`
+  const heures = Math.floor(minutes / 60)
+  // Les minutes sur deux chiffres : « 2 h 04 » et non « 2 h 4 ».
+  return `${heures} h ${String(minutes % 60).padStart(2, '0')}`
+}

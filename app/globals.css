@@ -4797,3 +4797,111 @@ a:active > .arena-menu-row {
     transition: none;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   LE FOND D'UNE SESSION DE QUIZ — la matière, en vrai.
+
+   `.jeu-table` peint déjà `--jeu-surface`, mais cette variable est calibrée
+   pour les jeux de salon : 0.965 de clarté et 0.02 de chroma, c'est-à-dire à
+   deux doigts du blanc. Résultat, un quiz d'allemand et un quiz de maths ont
+   rigoureusement le même fond bleu pâle — la robe est branchée, elle ne se voit
+   pas.
+
+   On ne touche PAS à `--jeu-surface` : elle est partagée avec les treize jeux,
+   qui posent dessus des plateaux colorés et n'ont pas besoin de plus. On
+   superpose ici un lavis tiré de `--jeu-accent`, dense en haut, dissous à
+   mi-hauteur. La matière se reconnaît dès l'ouverture, et les plaques de
+   réponse gardent le fond clair qu'il leur faut pour rester lisibles.
+   --------------------------------------------------------------------------- */
+.quiz-fond {
+  background-color: var(--jeu-surface);
+  background-image:
+    /* Le halo du haut, comme sur la table de jeu — mais plus franc. */
+    radial-gradient(
+      115% 45% at 50% -6%,
+      color-mix(in oklab, var(--jeu-accent), transparent 62%),
+      transparent 72%
+    ),
+    /* Le lavis : il descend jusqu'à la respiration, jamais jusqu'aux réponses. */
+      linear-gradient(
+        180deg,
+        color-mix(in oklab, var(--jeu-accent), white 84%) 0%,
+        var(--jeu-surface) 58%
+      );
+}
+
+/* ---------------------------------------------------------------------------
+   LA PLAQUE DU QUIZ — le bouton DUEL de l'arène, en barre.
+
+   `.quiz-pilule` (l'écran de score) reprenait déjà l'idée ; les boutons de la
+   session en avaient besoin plus encore, et plus franchement. « Valider »
+   désactivé était un aplat beige sans contour ni tranche — il ne ressemblait
+   même plus à un bouton — et « Je ne sais pas » n'était qu'un texte gris posé
+   sur le fond, dont la zone tactile s'arrêtait aux lettres.
+
+   Mêmes quatre couches que `.arena-plate`, et dans le même ordre : contour
+   foncé qui ferme la forme, dégradé haut→bas pour le volume, reflet interne en
+   haut, ombre interne en bas, puis la tranche pleine. La différence avec la
+   plaque d'arène tient à l'échelle (contour de 2 px et non 3, rayon de barre)
+   et au fait que les trois teintes viennent d'en ligne : la plaque ne connaît
+   que sa géométrie, jamais sa couleur.
+   --------------------------------------------------------------------------- */
+.quiz-plaque {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  border: 2px solid var(--plaque-bord);
+  background: linear-gradient(
+    180deg,
+    var(--plaque-haut) 0%,
+    var(--plaque-bas) 100%
+  );
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.14),
+    0 4px 0 var(--plaque-bord),
+    0 6px 12px rgba(0, 0, 0, 0.14);
+  transition:
+    transform 0.1s var(--ease),
+    box-shadow 0.1s var(--ease);
+  /* Supprime le délai de 300 ms au double-tap : c'est ce retard, pas
+     l'animation, qui fait « site web » au lieu d'« app ». */
+  touch-action: manipulation;
+}
+
+/* L'enfoncement : la plaque descend de sa tranche, qui disparaît sous elle. Le
+   reflet et l'ombre interne RESTENT — c'est ce qui donne « enfoncé » plutôt
+   qu'« aplati ». Un bouton désactivé, lui, n'a rien à enfoncer. */
+.quiz-plaque:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.14),
+    0 0 0 var(--plaque-bord),
+    0 1px 3px rgba(0, 0, 0, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-plaque {
+    transition: none;
+  }
+}
+
+/* La MÊME plaque, en pilule — pour les objets courts (le chrono du quiz).
+   Un modificateur plutôt qu'une classe de plus : la géométrie ne change que
+   d'un rayon, tout le reste (contour, dégradé, biseau, tranche) est identique. */
+.quiz-plaque--ronde {
+  border-radius: 999px;
+}
+
+/* Le chrono ne s'enfonce pas : ce n'est pas un bouton, c'est un compteur. Sa
+   tranche est plus fine, juste assez pour qu'il appartienne à la même famille
+   d'objets que les plaques sans se faire passer pour cliquable. */
+.quiz-plaque--compteur {
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.08),
+    0 2px 0 var(--plaque-bord),
+    0 3px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,5 +1,6 @@
 'use client'
 
+import type { CSSProperties } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 
 /**
@@ -124,8 +125,14 @@ export default function QuizFeedbackMascotte({
               paddingBottom: 'env(safe-area-inset-bottom)',
             }}
           >
+            {/* `px-4 md:px-8` — EXACTEMENT la gouttière de la colonne du quiz
+                (QuizPlayer). C'était `px-5` : un quart de rem d'écart, invisible
+                isolément, mais qui faisait sauter le bouton de quelques pixels
+                au moment précis où il change de rôle (« Valider » → « Continuer »).
+                Chez Duolingo ce bouton ne bouge JAMAIS : seuls son libellé et sa
+                couleur changent. */}
             <div
-              className="mx-auto w-full max-w-xl px-5 md:px-8"
+              className="mx-auto w-full max-w-xl px-4 md:px-8"
               style={{ paddingTop: '0.9rem', paddingBottom: '1rem' }}
             >
               <div role="status">
@@ -162,21 +169,28 @@ export default function QuizFeedbackMascotte({
                 ) : null}
               </div>
 
+              {/* LE MÊME BOUTON QUE « VALIDER », À LA COULEUR PRÈS.
+                  Il avait sa propre géométrie : rayon de 16 px contre 18, pas de
+                  contour, une tranche posée à la main, et une hauteur déduite du
+                  padding. Trois écarts minuscules qui, mis bout à bout,
+                  déplaçaient et redimensionnaient le bouton à l'instant où
+                  l'élève y pose déjà le pouce.
+
+                  Il porte donc `.quiz-plaque` et la MÊME hauteur (`h-13`) : même
+                  largeur, même place, même forme. Seule la ROBE change — verte
+                  quand c'est juste, corail quand ça ne l'est pas — et c'est
+                  exactement ce qu'on veut qu'on remarque. */}
               <button
                 type="button"
                 onClick={onContinue}
-                className="font-heading w-full cursor-pointer"
-                style={{
-                  marginTop: '1rem',
-                  padding: '0.9rem 1rem',
-                  borderRadius: '1rem',
-                  border: 0,
-                  background: teinte,
-                  color: '#fff',
-                  fontSize: '1rem',
-                  fontWeight: 800,
-                  boxShadow: `0 4px 0 0 color-mix(in oklch, ${teinte}, black 30%)`,
-                }}
+                className="quiz-plaque font-heading mt-4 h-13 w-full cursor-pointer text-base font-extrabold tracking-wide text-white uppercase"
+                style={
+                  {
+                    '--plaque-haut': `color-mix(in oklch, ${teinte}, white 14%)`,
+                    '--plaque-bas': `color-mix(in oklch, ${teinte}, black 14%)`,
+                    '--plaque-bord': `color-mix(in oklch, ${teinte}, black 50%)`,
+                  } as CSSProperties
+                }
               >
                 {ctaLabel}
               </button>

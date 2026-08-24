@@ -3,6 +3,7 @@ import {
   BOX_ANCRAGE,
   bilanDuQuiz,
   formatDureeGain,
+  formatDureeTotale,
   type EtatBilan,
 } from '@/lib/quiz-bilan'
 
@@ -122,5 +123,28 @@ describe('formatDureeGain', () => {
   it('ne rend jamais de valeur négative ni NaN', () => {
     expect(formatDureeGain(-10)).toBe('+0s')
     expect(formatDureeGain(Number.NaN)).toBe('+0s')
+  })
+})
+
+describe('formatDureeTotale', () => {
+  it('n’a PAS de « + » — un total ne s’ajoute à rien', () => {
+    // C'est ce qui le distingue de `formatDureeGain` : l'un annonce un gain,
+    // l'autre une somme.
+    expect(formatDureeTotale(3840)).not.toContain('+')
+  })
+
+  it('écrit les secondes, puis les minutes, puis les heures', () => {
+    expect(formatDureeTotale(12)).toBe('12 s')
+    expect(formatDureeTotale(47 * 60)).toBe('47 min')
+    expect(formatDureeTotale(2 * 3600 + 14 * 60)).toBe('2 h 14')
+  })
+
+  it('met les minutes sur deux chiffres', () => {
+    expect(formatDureeTotale(3600 + 4 * 60)).toBe('1 h 04')
+  })
+
+  it('ne rend jamais de valeur négative ni NaN', () => {
+    expect(formatDureeTotale(-10)).toBe('0 s')
+    expect(formatDureeTotale(Number.NaN)).toBe('0 s')
   })
 })

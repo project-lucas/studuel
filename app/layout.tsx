@@ -26,6 +26,7 @@ import Toaster from "@/components/Toaster";
 import SplashScreen from "@/components/SplashScreen";
 // Capteur « le premier écran est peint » : autorise le rideau à lever.
 import AppReadyBeacon from "@/components/AppReadyBeacon";
+import { estPleinEcran } from "@/lib/quiz-chrome";
 import { shouldShowSplash, tipOfDay } from "@/lib/splash";
 import { getCurrentUser } from "@/lib/supabase/user";
 import { headers } from "next/headers";
@@ -76,6 +77,10 @@ export default async function RootLayout({
   // `x-pathname` est posé par proxy.ts (même mécanique que TopHudLoader).
   const pathname = (await headers()).get("x-pathname") ?? "";
   const showSplash = shouldShowSplash(pathname, Boolean(user));
+  // PLEIN ÉCRAN : une session de quiz fait disparaître le bandeau du haut et la
+  // barre d'onglets. Pendant l'exercice, l'app s'efface — cf. `lib/quiz-chrome`
+  // pour les trois raisons (distraction, compteurs figés, place du pouce).
+  const pleinEcran = estPleinEcran(pathname);
 
   return (
     <html
@@ -102,10 +107,12 @@ export default async function RootLayout({
               page). */}
           <Suspense
             fallback={
-              <header className="fixed inset-x-0 top-0 z-50 h-14 border-b bg-card/85 backdrop-blur-md md:hidden" />
+              pleinEcran ? null : (
+                <header className="fixed inset-x-0 top-0 z-50 h-14 border-b bg-card/85 backdrop-blur-md md:hidden" />
+              )
             }
           >
-            <TopHudLoader />
+            {pleinEcran ? null : <TopHudLoader />}
             {/* Dans la MÊME frontière que le bandeau : React ne révèle une
                 frontière que lorsque tous ses enfants sont prêts, donc cette
                 balise se monte à l'instant précis où la première vraie
@@ -113,6 +120,7 @@ export default async function RootLayout({
                 l'écran de chargement à s'ouvrir. */}
             <AppReadyBeacon />
           </Suspense>
+          {pleinEcran ? null : (
           <Navigation
             userLabel={userLabel}
             // Pastille du Coffre streamée : la barre ne l'attend pas.
@@ -130,11 +138,20 @@ export default async function RootLayout({
               </Suspense>
             }
           />
+          )}
           {user ? <DailyLoginReward /> : null}
           {/* min-w-0 : sans lui, l'item flex refuse de rétrécir sous la
               largeur intrinsèque de son contenu et la page déborde sur mobile. */}
-          <main className="min-w-0 flex-1 px-4 pt-16 pb-24 md:px-8 md:py-10">
-            <div className="mx-auto w-full max-w-4xl">
+          <main
+            className={
+              pleinEcran
+                ? 'min-w-0 flex-1'
+                : 'min-w-0 flex-1 px-4 pt-16 pb-24 md:px-8 md:py-10'
+            }
+          >
+            <div
+              className={pleinEcran ? 'w-full' : 'mx-auto w-full max-w-4xl'}
+            >
               <SwipeTabs>{children}</SwipeTabs>
             </div>
           </main>

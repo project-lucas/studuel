@@ -134,6 +134,17 @@ export default async function QuizPage({
     questions: shuffledQuestions,
   })
 
+  // Le temps de révision total, pour le compteur du haut. Lecture ISOLÉE :
+  // s'il manque, le compteur repart de la seule session en cours plutôt que de
+  // priver l'écran de son chrono.
+  // La RLS de `profiles` limite déjà à sa propre ligne : pas besoin de
+  // connaître l'identifiant ici, `maybeSingle()` suffit.
+  const { data: profilTemps } = await supabase
+    .from('profiles')
+    .select('work_seconds')
+    .maybeSingle()
+  const tempsTotal = Number(profilTemps?.work_seconds ?? 0)
+
   // Le player occupe tout l'écran (template) : pas de PageHeader autour.
   if (!error && questions && questions.length > 0) {
     return (
@@ -153,6 +164,13 @@ export default async function QuizPage({
           // Absente pour un quiz détaché de toute matière — le player retombe
           // alors sur le violet de l'app.
           subjectColor={quiz.lesson?.chapter?.subject?.color ?? null}
+          // Le SLUG, pour l'illustration de la matière : la couleur seule
+          // laissait l'écran sans identité (« ça manque de couleur, c'est
+          // plat »). Absent pour un quiz détaché de toute matière.
+          subjectSlug={quiz.lesson?.chapter?.subject?.slug ?? null}
+          // Le temps de révision DÉJÀ accumulé (profiles.work_seconds) : le
+          // chrono de la session s'y ajoute à l'écran, en direct.
+          tempsTotalSecondes={tempsTotal}
           gradeLevel={quiz.grade_level}
           backHref={backHref}
         />

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Plus } from 'lucide-react'
+import Image from 'next/image'
 import { useReducedMotion } from 'framer-motion'
 import { sfx } from '@/lib/sounds'
 
@@ -15,6 +15,14 @@ import { sfx } from '@/lib/sounds'
  * (jeton rond de 44 px) — mais en OR, la couleur du gain, sur un décor où tout
  * le reste est verre de nuit : c'est le seul objet doré du HUD, donc le premier
  * que l'œil trouve.
+ *
+ * ELLE PORTE UNE ÉTOILE DESSINÉE, plus les deux lettres « S+ ». Le sigle était
+ * du TEXTE composé — une capitale et un signe plus de la police des titres —
+ * dans un HUD où tout le reste est illustré. Il détonnait pour dire une chose
+ * que le dessin dit mieux : l'or domine (l'abonnement est une récompense, et
+ * dans la charte c'est le jaune qui porte ce rôle), la gemme violette au centre
+ * signe la marque sans en faire un bouton d'action. Le nom du produit reste
+ * dans l'`aria-label` et l'infobulle, où il se traduit et se corrige.
  *
  * Elle n'est rendue QUE pour les non-abonnés (décision côté page) : rien à
  * vendre à qui a déjà payé, et un bouton qui ne mène nulle part est pire que
@@ -40,13 +48,15 @@ export default function PremiumPill() {
           className="premium-pill-halo pointer-events-none absolute inset-0 rounded-full"
         />
       )}
-      <span
+      <Image
+        src="/images/defi/icones/premium-v2.webp"
+        alt=""
         aria-hidden="true"
-        className="font-heading relative flex items-baseline text-[0.95rem] leading-none font-extrabold"
-      >
-        S
-        <Plus className="size-3" strokeWidth={3.4} />
-      </span>
+        width={256}
+        height={256}
+        sizes="32px"
+        className="relative size-8 object-contain"
+      />
     </Link>
   )
 }

@@ -16,6 +16,15 @@ import WorkTimer from '@/components/WorkTimer'
 import { createClient } from '@/lib/supabase/server'
 import { getUserTier, canAccessPremiumTests } from '@/lib/subscription'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
+import { getCurrentUser } from '@/lib/supabase/user'
+import { drawQuizSession } from '@/lib/questions/server-draw'
+import { loadQuestionStates } from '@/lib/questions/server'
+import {
+  ENTRAINEMENT_MINIMUM,
+  ENTRAINEMENT_TAILLE,
+  veutEntrainement,
+} from '@/lib/quiz-session'
+import type { SupabaseClient } from '@supabase/supabase-js'
 import type { Quiz, QuizQuestion } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
@@ -107,6 +116,25 @@ export default async function QuizPage({
     return { ...q, options: p.options, correct_index: p.correctIndex }
   })
 
+  // LA SÉANCE D'ENTRAÎNEMENT, au deuxième passage et au-delà.
+  //
+  // Le quiz alimentait la répétition espacée sans jamais la consulter : on
+  // reprenait les mêmes N questions dans le même ordre, y compris celles
+  // acquises depuis longtemps. Le moteur (`lib/questions`) sait composer mieux
+  // — encore fallait-il l'appeler. Cf. `lib/quiz-session` pour la règle.
+  //
+  // Tout ce bloc est FACULTATIF : sans utilisateur, sans état en base (la
+  // migration 239 pas encore passée) ou sur un tirage trop maigre, `deck` reste
+  // nul et la page se comporte exactement comme avant.
+  const deck = await composerSeance({
+    supabase,
+    quizId: quiz.id,
+    chapterId: quiz.lesson?.chapter?.id ?? null,
+    subjectSlug: quiz.lesson?.chapter?.subject?.slug ?? null,
+    level: quiz.grade_level ?? null,
+    questions: shuffledQuestions,
+  })
+
   // Le player occupe tout l'écran (template) : pas de PageHeader autour.
   if (!error && questions && questions.length > 0) {
     return (
@@ -117,6 +145,9 @@ export default async function QuizPage({
           quizId={quiz.id}
           title={quiz.title}
           questions={shuffledQuestions}
+          // Le paquet servi, quand le moteur en a composé un plus court que le
+          // quiz (deuxième passage et au-delà). Nul : le quiz entier.
+          deck={deck}
           subject={quiz.subject}
           // La ROBE de la session : la couleur du dossier d'où vient le quiz.
           // Absente pour un quiz détaché de toute matière — le player retombe
@@ -152,4 +183,92 @@ export default async function QuizPage({
       </Card>
     </div>
   )
+}
+
+/**
+ * Le paquet réellement servi, quand l'élève repasse un quiz qu'il a déjà bouclé.
+ *
+ * Rend `null` — et la page ressert alors le quiz entier — dans tous les cas où
+ * le moteur n'a rien de mieux à proposer : premier passage, quiz trop court,
+ * visiteur non connecté, état de répétition espacée absent de la base (la
+ * migration 239 n'est pas passée), tirage sous le seuil. C'est un CHEMIN EN
+ * PLUS, jamais un passage obligé : le quiz doit rester jouable même si tout ce
+ * bloc échoue.
+ */
+async function composerSeance({
+  supabase,
+  quizId,
+  chapterId,
+  subjectSlug,
+  level,
+  questions,
+}: {
+  supabase: SupabaseClient
+  quizId: string
+  chapterId: string | null
+  subjectSlug: string | null
+  level: string | null
+  questions: QuizQuestion[]
+}): Promise<QuizQuestion[] | null> {
+  const user = await getCurrentUser()
+  if (!user) return null
+
+  // Une session enregistrée = l'évaluation est passée. `head: true` : on ne
+  // veut que le compte, pas les lignes.
+  const { count, error } = await supabase
+    .from('test_sessions')
+    .select('id', { count: 'exact', head: true })
+    .eq('user_id', user.id)
+    .eq('quiz_id', quizId)
+  if (error) return null
+
+  if (!veutEntrainement({ dejaPasse: (count ?? 0) > 0, total: questions.length }))
+    return null
+
+  // LE MOTEUR A-T-IL VRAIMENT UNE MÉMOIRE À LIRE ?
+  //
+  // `loadQuestionStates` avale ses erreurs et rend une table vide : tant que la
+  // migration 239 n'est pas passée, les colonnes du moteur (`box`, `due_at`,
+  // `last_seen_at`) n'existent pas et TOUTES les questions passent pour
+  // inédites. Le tirage réussirait quand même — il servirait 5 questions sur 8
+  // au hasard, sans note à la clé. Un raccourci muet, pas un entraînement.
+  //
+  // Or un élève qui a déjà bouclé ce quiz a forcément laissé des états
+  // derrière lui. Aucun état = le moteur est aveugle : on ressert le quiz
+  // entier, qui reste la meilleure réponse. C'est une lecture de plus, sur un
+  // chemin rare, contre une dégradation silencieuse.
+  const etats = await loadQuestionStates(
+    supabase,
+    user.id,
+    questions.map((q) => q.id),
+  )
+  if (etats.size === 0) return null
+
+  const drawn = await drawQuizSession({
+    supabase,
+    userId: user.id,
+    quizId,
+    chapterId,
+    pool: questions.map((q) => ({
+      questionId: q.id,
+      chapterId,
+      // La matière d'une question est son SLUG, jamais son nom affiché — même
+      // identité que dans `question_scope` (cf. `lib/questions/server`), sans
+      // quoi les deux chemins de tirage désigneraient deux matières.
+      subjectId: subjectSlug,
+      level,
+    })),
+    count: ENTRAINEMENT_TAILLE,
+  })
+  if (drawn.length < ENTRAINEMENT_MINIMUM) return null
+
+  // On rejoue l'ordre décidé par le moteur : `drawSession` mélange son résultat
+  // en dernier geste, justement pour que l'élève ne lise pas les paquets
+  // (échues, inédites, au sort) dans l'ordre où ils ont été composés.
+  const parId = new Map(questions.map((q) => [q.id, q]))
+  const seance = drawn.flatMap((ref) => {
+    const q = parId.get(ref.questionId)
+    return q ? [q] : []
+  })
+  return seance.length >= ENTRAINEMENT_MINIMUM ? seance : null
 }

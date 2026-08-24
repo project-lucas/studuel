@@ -130,6 +130,56 @@ export async function drawChapterSession({
   })
 }
 
+/**
+ * La session d'entraînement d'UN QUIZ — le vivier est celui du quiz lui-même.
+ *
+ * Pourquoi le quiz et non le chapitre, alors que `drawChapterSession` existe
+ * juste au-dessus : la maîtrise d'un chapitre s'agrège PAR QUIZ
+ * (`lib/mastery`), et le bouton « Quiz » d'une fiche promet les questions de
+ * CETTE fiche. Servir sous son nom les questions de la leçon d'à côté
+ * fausserait la comptabilité et trahirait ce que l'élève a demandé.
+ *
+ * Le vivier arrive tout fait par l'appelant : la page a déjà lu les questions
+ * du quiz pour composer l'évaluation, et la vue `question_scope` (migration
+ * 239) ne sait pas découper par quiz. Une lecture de moins, et surtout un
+ * chemin qui reste debout tant que la 239 n'est pas passée.
+ *
+ * La fenêtre anti-répétition, elle, reste celle du CHAPITRE : une question
+ * revue il y a dix minutes dans le jeu « Programme » ne doit pas revenir ici
+ * parce qu'on a changé de porte d'entrée.
+ */
+export async function drawQuizSession({
+  supabase,
+  userId,
+  quizId,
+  chapterId,
+  pool,
+  count,
+  now = Date.now(),
+}: {
+  supabase: SupabaseClient
+  userId: string
+  quizId: string
+  /** Le chapitre du quiz, s'il en a un — sert la fenêtre glissante. */
+  chapterId: string | null
+  pool: QuestionRef[]
+  count: number
+  now?: number
+}): Promise<QuestionRef[]> {
+  const recent = chapterId
+    ? await loadRecentlySeen(supabase, userId, { chapterId })
+    : []
+  return compose({
+    supabase,
+    userId,
+    pool,
+    count,
+    recent,
+    now,
+    seed: `quiz:${quizId}#${now}`,
+  })
+}
+
 /** La session d'une matière entière — ce que sert le jeu « Programme ». */
 export async function drawSubjectSession({
   supabase,

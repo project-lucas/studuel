@@ -68,7 +68,7 @@ export default function SeasonBanner({
             ? ` ${claimable} récompense${claimable > 1 ? 's' : ''} à réclamer.`
             : ''
         } Ouvrir le Pass de saison`}
-        className="olympe-glass olympe-press relative mx-auto flex w-full max-w-80 cursor-pointer items-center gap-2.5 rounded-full px-3 py-1.5 text-[0.68rem] font-extrabold focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+        className="olympe-glass olympe-glass--sculpte olympe-press relative mx-auto flex w-full max-w-80 cursor-pointer items-center gap-2.5 rounded-full px-3 py-1.5 text-[0.68rem] font-extrabold focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
         <span className="flex shrink-0 items-center gap-1.5">
           <Crown

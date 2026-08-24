@@ -1,30 +1,46 @@
 'use client'
 
 import { useState } from 'react'
+import { Trophy } from 'lucide-react'
 import ProfileModal from '@/components/defi/ProfileModal'
+import RankBadge from '@/components/defi/RankBadge'
+import { rankFor, DIVISION_SPAN } from '@/lib/rank'
 import { walletLevelInfo } from '@/lib/wallet'
 import type { ProfileData } from '@/app/defi/profile-actions'
 import { sfx } from '@/lib/sounds'
 
 /**
- * La pastille NIVEAU du HUD, en haut-gauche de l'arène — verre de nuit + or,
- * le matériau commun de TOUT le HUD de l'arène (bandeau, rang, jetons) hérité
- * de l'écran de chargement. C'est la SEULE lecture du
- * niveau sur cet écran (le bandeau TopHud replie sa pastille sur /defi, le
- * socle du personnage ne porte que le prénom) : disque de niveau + « Niveau X »
- * + barre d'XP au format « 750 / 1 000 XP ». Le remplissage de la barre est le
- * MÊME ratio que le libellé (xp cumulée / seuil du prochain niveau) — barre et
- * chiffres racontent la même histoire, fini l'anneau à 38 % sous un libellé qui
- * se lisait 75 %. Un tap ouvre la modale de profil (stats, badges, bannières).
+ * LA PLAQUE D'IDENTITÉ du HUD, en haut-gauche de l'arène : qui je suis, où j'en
+ * suis. Disque de niveau, blason de palier, trophées de la division, une jauge.
+ * Un tap ouvre la modale de profil (stats, badges, bannières).
+ *
+ * ELLE EN ÉTAIT DEUX, ET C'ÉTAIT LE DÉFAUT. La pastille de niveau portait sa
+ * barre d'XP ; la cartouche de rang, empilée 8 px dessous, portait la sienne.
+ * Deux progressions côte à côte se disputent la même lecture — on ne sait plus
+ * laquelle compte.
+ *
+ * ET CHAQUE BARRE RÉPÉTAIT SON PROPRE CHIFFRE : « 63 / 500 » écrit sous une
+ * barre remplie à 63/500, « 2 625 / 2 800 XP » sous une barre remplie d'autant.
+ * Deux fois la même information, deux fois. Il ne reste donc qu'UNE jauge, et
+ * c'est celle du RANG : sur l'écran du jeu, ce sont les trophées qui bougent, et
+ * c'est le palier qui décide de ce qui s'ouvre. L'XP n'a pas disparu — elle est
+ * dans l'étiquette lue à voix haute et dans la modale, qui est faite pour ça.
+ *
+ * Le matériau reste le verre de nuit SCULPTÉ, commun à tout le HUD de l'arène.
  */
-export default function ProfileChip({ data }: { data: ProfileData }) {
+export default function ProfileChip({
+  data,
+  trophies,
+}: {
+  data: ProfileData
+  /** Total de trophées — il donne le palier et la position dans la division. */
+  trophies: number
+}) {
   const [open, setOpen] = useState(false)
   const info = walletLevelInfo(data.summary.totalXp)
-  const pct =
-    info.nextAt > 0
-      ? Math.min(100, Math.round((info.currentXp / info.nextAt) * 100))
-      : 100
   const xpLabel = `${info.currentXp.toLocaleString('fr-FR')} / ${info.nextAt.toLocaleString('fr-FR')} XP`
+  const rank = rankFor(trophies)
+  const hasDivision = rank.ceiling !== null
 
   return (
     <>
@@ -35,36 +51,61 @@ export default function ProfileChip({ data }: { data: ProfileData }) {
           setOpen(true)
         }}
         aria-haspopup="dialog"
-        aria-label={`Niveau ${info.level}, ${xpLabel} — voir mes stats et badges`}
-        className="olympe-glass olympe-press flex cursor-pointer items-center gap-2 rounded-full py-1.5 pr-3 pl-1.5 text-left focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+        aria-label={`Niveau ${info.level}, ${xpLabel} — rang ${rank.label}, ${rank.inDivision} trophées sur ${DIVISION_SPAN} dans la division, ${trophies} au total. Voir mes stats et badges`}
+        className="olympe-glass olympe-glass--sculpte olympe-press flex cursor-pointer items-center gap-2 rounded-[18px] py-1.5 pr-3 pl-1.5 text-left focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
         {/* Le disque de niveau : violet marque, liseré or — même vocabulaire
-            que l'écusson du bandeau sur les autres écrans. */}
+            que l'écusson du bandeau sur les autres écrans. Il porte le NIVEAU
+            en chiffre ; le blason à sa droite porte le PALIER. Deux échelles,
+            deux objets, et on ne les confond pas. */}
         <span
           className="font-heading grid size-8 shrink-0 place-items-center rounded-full bg-primary text-xs font-extrabold text-primary-foreground ring-2 ring-highlight/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]"
           aria-hidden="true"
         >
           {info.level}
         </span>
+
+        <RankBadge
+          rank={rank}
+          size={34}
+          hideDivision
+          className="shrink-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.35)]"
+        />
+
         <span className="flex flex-col gap-[3px]">
-          <span className="font-heading text-xs leading-none font-extrabold text-[#faf6ef]">
-            Niveau {info.level}
+          <span className="text-[0.62rem] leading-tight font-extrabold tracking-wider text-highlight uppercase">
+            {rank.label}
           </span>
-          {/* Gouttière creusée dans le verre (même grammaire que la barre de
-              l'écran de chargement) : l'or n'est plus posé sur du crème, il
-              brille dans une rainure sombre. */}
-          <span
-            className="h-1.5 w-24 overflow-hidden rounded-full bg-black/40 ring-1 ring-white/15 ring-inset"
-            aria-hidden="true"
-          >
-            <span
-              className="block h-full rounded-full bg-highlight shadow-[0_0_8px_color-mix(in_oklch,var(--highlight),transparent_45%)]"
-              style={{ width: `${pct}%` }}
+          <span className="font-heading flex items-center gap-1 text-sm leading-none font-extrabold text-[#faf6ef]">
+            {hasDivision ? (
+              <>
+                {rank.inDivision}
+                <span className="text-[0.65rem] text-white/65">
+                  / {DIVISION_SPAN}
+                </span>
+              </>
+            ) : (
+              trophies.toLocaleString('fr-FR')
+            )}
+            <Trophy
+              className="size-3.5 shrink-0 text-highlight"
+              strokeWidth={2.6}
+              aria-hidden="true"
             />
           </span>
-          <span className="text-[0.6rem] leading-none font-bold tracking-wide text-white/70">
-            {xpLabel}
-          </span>
+          {/* LA jauge — violette, celle du rang. Creusée dans le verre, comme
+              la barre de l'écran de chargement. */}
+          {hasDivision ? (
+            <span
+              className="h-1.5 w-24 overflow-hidden rounded-full bg-black/40 ring-1 ring-white/15 ring-inset"
+              aria-hidden="true"
+            >
+              <span
+                className="block h-full rounded-full bg-[color-mix(in_oklch,var(--primary),white_30%)]"
+                style={{ width: `${Math.round(rank.progress * 100)}%` }}
+              />
+            </span>
+          ) : null}
         </span>
       </button>
 

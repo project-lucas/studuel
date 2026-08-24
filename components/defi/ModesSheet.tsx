@@ -3,8 +3,10 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { createPortal } from 'react-dom'
+import Image from 'next/image'
+import { plaqueClaire } from '@/lib/defi/plaque-claire'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { Gamepad2, Swords, X } from 'lucide-react'
+import { Swords, X } from 'lucide-react'
 import ModeTicketCard from '@/components/defi/ModeTicket'
 import { FLANK_CLASS } from '@/components/defi/ArenaActionBar'
 import SubjectRoulette from '@/components/defi/SubjectRoulette'
@@ -106,10 +108,41 @@ export default function ModesSheet({
         aria-haspopup="dialog"
         aria-label="Modes de jeu — jeux par matière, Blitz, Chrono, Survie et boss"
         title="Modes de jeu — Blitz, Chrono, Survie, Boss"
-        className={`arena-plate arena-plate--dark arena-plate--press ${FLANK_CLASS} flex cursor-pointer flex-col items-center justify-center gap-1.5 focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:outline-none`}
+        className={`arena-plate arena-plate--clair arena-plate--press ${FLANK_CLASS} flex cursor-pointer flex-col items-center justify-center focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:outline-none`}
+        // Un seul fond, le MÊME que le flanc d'en face et fabriqué au même
+        // endroit : la pierre violette claire. Deux plaques qui encadrent un
+        // bouton doivent être jumelles — la moindre nuance entre elles se lit
+        // comme une différence de rang.
+        style={{ background: plaqueClaire() }}
       >
-        <Gamepad2 size={30} strokeWidth={2.3} aria-hidden="true" />
-        <span className="arena-plate-label font-heading uppercase">Modes</span>
+        {/* L'ICÔNE SEULE, EN GRAND — le mot « Modes » a été retiré.
+            Il occupait le tiers bas d'une plaque de 92 px pour redire ce que le
+            dessin montre déjà, et forçait l'illustration à tenir dans 36 px, où
+            elle n'était plus qu'une tache. Sans lui elle passe à 56 px et
+            redevient lisible d'un coup d'œil.
+
+            RIEN N'EST PERDU POUR QUI NE VOIT PAS : l'`aria-label` du bouton
+            porte la phrase entière (« Modes de jeu — jeux par matière, Blitz,
+            Chrono, Survie et boss »), et le `title` la rend au survol. Le mot
+            n'a disparu que du pixel.
+
+            ELLE A SON MÉDAILLON, comme le flanc voisin. Je l'avais d'abord
+            posée à même la plaque, en pensant qu'une icône peinte pour un fond
+            sombre s'en passerait. À l'écran, la manette est VIOLETTE sur une
+            plaque VIOLETTE : elle disparaissait. Le disque crème règle le cas,
+            et il le règle pour de bon — toutes les illustrations du jeu sont
+            peintes pour un fond clair, aucune ne tient sur le violet de
+            l'arène. Les deux flancs partagent donc la même construction :
+            plaque = cadre, médaillon = scène, illustration = sujet. */}
+        <Image
+          src="/images/defi/icones/modes-v2.webp"
+          alt=""
+          aria-hidden="true"
+          width={256}
+          height={256}
+          sizes="64px"
+          className="size-16 object-contain"
+        />
       </button>
 
       {typeof document !== 'undefined'
@@ -172,9 +205,18 @@ export default function ModesSheet({
                     ) : null}
 
                     <div className="defi-modes-banner flex w-full max-w-md items-center justify-center gap-2 rounded-2xl px-5 py-2.5">
-                      <Gamepad2
-                        className="size-6 text-highlight"
+                      {/* La MÊME icône que sur la plaque qui ouvre cette
+                          feuille : c'est ce qui rattache l'écran au geste qui
+                          l'a fait venir. Deux dessins différents pour la même
+                          chose obligeraient l'élève à réapprendre où il est. */}
+                      <Image
+                        src="/images/defi/icones/modes-v2.webp"
+                        alt=""
                         aria-hidden="true"
+                        width={256}
+                        height={256}
+                        sizes="32px"
+                        className="size-8 object-contain"
                       />
                       <h2 className="font-heading text-center text-2xl font-extrabold tracking-wide text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                         Modes de jeu

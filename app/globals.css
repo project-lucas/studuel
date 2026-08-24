@@ -1618,7 +1618,7 @@ a:active > .arena-menu-row {
 }
 .abg-flame {
   position: absolute;
-  width: 26%;
+  width: 18%;
   aspect-ratio: 1;
   border-radius: 50%;
   transform: translate(-50%, -50%);
@@ -1626,48 +1626,42 @@ a:active > .arena-menu-row {
   will-change: opacity, transform;
   animation: abg-flame-flicker 2.4s ease-in-out infinite;
 }
-/* Braseros violets : les deux vasques au sol, à gauche et à droite. */
-.abg-flame--violet {
+/* DEUX FOYERS, ET DEUX SEULEMENT : les vasques peintes au sol, de part et
+   d'autre du podium.
+
+   Il y en avait quatre. Les deux dorées étaient calées à `top: 36%` — la
+   HAUTEUR DE LA TÊTE de la mascotte : elles lui allumaient le visage sans
+   qu'aucune source ne le justifie dans le décor. Les deux violettes, aux
+   angles bas, n'éclairaient rien de peint non plus. Un halo qui ne prolonge
+   pas une flamme dessinée ne se lit pas comme une lumière, mais comme une
+   tache.
+
+   Les positions viennent du décor lui-même, pas de l'œil : les vasques y sont
+   à 18 % et 84 % de la largeur, aux deux tiers de la hauteur.
+
+   DISCRÈTES MAIS VISIBLES : le halo est plus petit qu'avant (18 % contre 26 %)
+   et son opacité plafonne à 0,55 au lieu de 0,92 — il réchauffe la vasque sans
+   éclabousser le sol. C'est une braise, pas un projecteur. */
+.abg-flame--braise {
+  width: 18%;
   background: radial-gradient(
     circle,
-    rgba(214, 158, 255, 0.9) 0%,
-    rgba(168, 85, 247, 0.55) 34%,
-    rgba(123, 79, 216, 0.22) 60%,
+    rgba(255, 214, 138, 0.7) 0%,
+    rgba(251, 146, 60, 0.42) 32%,
+    rgba(234, 88, 12, 0.16) 58%,
     transparent 72%
   );
 }
-.abg-flame--gold {
-  width: 17%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 236, 179, 0.92) 0%,
-    rgba(249, 178, 51, 0.55) 36%,
-    rgba(217, 119, 6, 0.2) 62%,
-    transparent 74%
-  );
-}
-.abg-flame--vl {
-  left: 9%;
-  top: 80%;
+.abg-flame--braise-g {
+  left: 18%;
+  top: 66%;
   animation-duration: 2.6s;
 }
-.abg-flame--vr {
-  left: 88%;
-  top: 80%;
+.abg-flame--braise-d {
+  left: 84%;
+  top: 66%;
   animation-duration: 2.1s;
   animation-delay: -0.9s;
-}
-.abg-flame--gl {
-  left: 19%;
-  top: 36%;
-  animation-duration: 1.9s;
-  animation-delay: -0.5s;
-}
-.abg-flame--gr {
-  left: 81%;
-  top: 36%;
-  animation-duration: 2.3s;
-  animation-delay: -1.4s;
 }
 
 /* Poussière de lumière ambiante : petits points dorés qui montent lentement
@@ -3024,6 +3018,39 @@ a:active > .arena-menu-row {
   background: linear-gradient(180deg, #ffd66b 0%, #e8a020 100%);
 }
 
+/* La MÊME plaque, en CLAIR : les deux flancs de la barre d'action.
+   Elles étaient violettes, avec l'illustration posée sur un médaillon crème au
+   milieu. Deux fonds pour un seul objet : l'œil lisait un cadre, un disque, puis
+   un dessin — trois épaisseurs pour dire une chose. Et l'illustration, coincée
+   dans le disque, ne pouvait pas dépasser la moitié de la plaque.
+
+   Un seul fond, clair, et le dessin occupe toute la place. La COULEUR vient
+   d'en ligne : le crème neutre pour Modes, le pastel de la matière pour l'autre
+   — qui change donc de teinte à chaque cran de la roulette, ce qui rend le
+   défilement visible avant même qu'on ait lu l'illustration.
+
+   Le biseau et l'ombre de `.arena-plate` fonctionnent tels quels sur du clair :
+   le liseré blanc du haut se lit comme un reflet, l'ombre interne du bas comme
+   une épaisseur. Rien à retoucher.
+
+   ⚠️ CE QUE ÇA COÛTE, et c'est assumé : la rangée reposait sur un contraste
+   sombre-or-sombre, où le bouton doré était le seul objet lumineux. Trois
+   plaques claires affaiblissent cette hiérarchie. Ce qui la tient désormais,
+   c'est la SATURATION — l'or reste la seule couleur pleine de la rangée, les
+   deux flancs étant des pastels — et le cerne d'encre qui les sépare. */
+.arena-plate--clair {
+  color: #24304f;
+}
+
+/* La MÊME plaque, en rouge : « Annuler » pendant la recherche d'adversaire.
+   Elle prend rigoureusement la place du bouton DUEL — même hauteur, même
+   largeur, même rayon, même ombre — parce qu'elle le REMPLACE le temps du
+   rideau. Un bouton d'annulation posé ailleurs, dans une autre forme, obligerait
+   le pouce à chercher : ici il retombe exactement où il vient de frapper. */
+.arena-plate--rouge {
+  background: linear-gradient(180deg, #ff7d7d 0%, #d3323d 100%);
+}
+
 /* L'enfoncement au tap : la plaque descend de 3 px et son ombre portée se
    réduit d'autant — le doigt écrase l'objet, il ne le fait pas glisser. */
 .arena-plate--press:active {
@@ -3080,6 +3107,10 @@ a:active > .arena-menu-row {
    tient sur toute la hauteur. `paint-order` est indispensable : sans lui le
    cerne se peint PAR-DESSUS le remplissage et mange la moitié du trait, ce qui
    épaissit les lettres jusqu'à les coller entre elles à 360 px de large. */
+.combat-word--rouge {
+  -webkit-text-stroke-color: #7d1420;
+}
+
 .combat-word {
   font-size: 26px;
   font-weight: 800;
@@ -4496,3 +4527,218 @@ a:active > .arena-menu-row {
 }
 
 
+
+/* --- L'ÉCRAN DE RECHERCHE D'ADVERSAIRE ---------------------------------------
+   Le bandeau et le bouton du rideau qui précède un duel (MatchmakingOverlay).
+
+   Ils reprennent la GRAMMAIRE des plaques de l'arène (`.arena-plate`) : bordure
+   sombre épaisse, liseré clair en haut, tranche de 4-6 px en bas, et un texte
+   CERNÉ plutôt que coloré. Le cerne n'est pas un effet — c'est ce qui rend un
+   titre lisible sur une illustration : aucune encre unie ne garde le même
+   contraste au-dessus d'une torche et au-dessus d'un ciel violet, le contour si.
+   `paint-order: stroke fill` est indispensable, comme sur `.combat-word` : sans
+   lui le cerne se peint PAR-DESSUS le remplissage et mange la moitié du trait.
+
+   Les hex en dur suivent la dérogation déjà actée pour l'arène (cf. les plaques
+   ci-dessus) : sur un décor entièrement violet, les rôles sémantiques de la
+   charte ne ressortent pas, et ces valeurs sont celles du monde de l'arène. */
+
+.recherche-plaque {
+  border-radius: 18px;
+  border: 3px solid #17102b;
+  background: linear-gradient(180deg, #3b3552 0%, #221c33 100%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.45),
+    0 5px 0 #17102b,
+    0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Le titre : l'AMBRE de l'arène, cerné d'encre. Il se casse volontiers sur deux
+   lignes (`text-wrap: balance`) plutôt que de rétrécir — un titre de jeu se lit
+   gros, quitte à prendre deux lignes. */
+.recherche-titre {
+  font-size: clamp(26px, 7.5vw, 36px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.5px;
+  text-wrap: balance;
+  color: #ffb020;
+  -webkit-text-stroke: 3px #17102b;
+  paint-order: stroke fill;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.45);
+}
+
+/* La loupe DÉBORDE de la plaque, sur son flanc gauche : c'est ce débordement
+   qui fait l'objet posé sur la bannière plutôt que rangé dedans. */
+.recherche-loupe {
+  filter: drop-shadow(0 3px 0 #17102b) drop-shadow(0 6px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* LES TROIS POINTS de « Recherche d'adversaire ». Ils s'allument l'un après
+   l'autre — « . », « .. », « ... » — puis repartent de zéro.
+
+   DEUX CHOSES COMMANDENT CETTE IMPLÉMENTATION.
+
+   1. LES TROIS POINTS SONT TOUJOURS LÀ, et seule leur OPACITÉ change. Ajouter
+      puis retirer des caractères ferait respirer la largeur du titre à chaque
+      tiers de seconde — et comme il se casse sur deux lignes, un point de plus
+      peut même déplacer le retour à la ligne. Le texte danserait. Réservés en
+      place, ils ne coûtent aucun décalage.
+
+   2. C'EST DU CSS, PAS UN ÉTAT REACT. Un compteur qui avance trois fois par
+      seconde re-rendrait tout le rideau — décor compris — pendant que l'app
+      charge la route du duel. L'animation vit dans le compositeur, le composant
+      ne sait même pas qu'elle existe. */
+
+.recherche-points span {
+  animation: recherche-point 1.2s steps(1, end) infinite;
+}
+
+/* Le premier point ne clignote pas : il est le repère fixe à partir duquel les
+   deux autres s'ajoutent. Sans lui, le cycle passerait par un état vide et se
+   lirait comme un clignotement, pas comme un décompte. */
+.recherche-points span:nth-child(1) {
+  animation: none;
+}
+.recherche-points span:nth-child(2) {
+  animation-delay: 0s;
+}
+.recherche-points span:nth-child(3) {
+  animation-delay: 0s;
+  animation-name: recherche-point-tardif;
+}
+
+@keyframes recherche-point {
+  0%,
+  33% {
+    opacity: 0;
+  }
+  34%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes recherche-point-tardif {
+  0%,
+  66% {
+    opacity: 0;
+  }
+  67%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Sans animation : les trois points restent affichés. Une ellipse figée dit la
+   même chose qu'une ellipse animée — l'attente — sans rien faire bouger. */
+@media (prefers-reduced-motion: reduce) {
+  .recherche-points span {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* --- LA LUEUR DU BOUTON DUEL (façon Clash Royale) ----------------------------
+   Le bouton portait `.attract-sheen` : une bande de lumière qui TRAVERSAIT la
+   plaque en boucle. Deux défauts, et le second est le vrai :
+
+     · elle passe SUR le mot, qu'elle éclaircit une fois par cycle — l'œil
+       accroche le reflet au lieu du texte ;
+     · elle traite la plaque comme une surface à polir, alors que l'objet à
+       désigner est le BOUTON ENTIER. Chez Clash Royale, rien ne traverse le
+       bouton : c'est son POURTOUR qui respire.
+
+   D'où le déplacement du halo à l'extérieur. Il est posé en `box-shadow`
+   diffuse et non en pseudo-élément : une ombre ne crée pas de boîte, donc elle
+   ne peut ni rogner le contenu, ni intercepter un tap, ni forcer un
+   `overflow: hidden` qui trancherait le biseau de la plaque.
+
+   Le cycle est LENT (2,6 s) et l'amplitude faible : une pulsation rapide se lit
+   comme une alerte. Ici, l'objet respire — il ne clignote pas. */
+@keyframes duel-lueur {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(255, 214, 107, 0),
+      0 0 14px 2px rgba(255, 198, 74, 0.35);
+  }
+  50% {
+    box-shadow:
+      0 0 0 6px rgba(255, 214, 107, 0.12),
+      0 0 26px 8px rgba(255, 198, 74, 0.55);
+  }
+}
+
+.duel-lueur {
+  animation: duel-lueur 2.6s ease-in-out infinite;
+}
+
+/* La lueur est une INVITATION, pas une information : elle n'a rien à dire à qui
+   règle son système sur « moins d'animations ». La plaque garde son or et son
+   biseau, qui suffisent à la désigner. */
+@media (prefers-reduced-motion: reduce) {
+  .duel-lueur {
+    animation: none;
+  }
+}
+
+/* LA MATIÈRE, sous le mot DUEL, DANS la plaque.
+   Encre brûlée sur l'or, comme le cerne du mot au-dessus — pas de blanc : deux
+   blancs superposés se seraient disputé le premier rang, alors que celui du
+   dessous doit clairement venir en second. Assez petit pour ne pas rivaliser,
+   assez gras pour rester lisible sur un dégradé. */
+.combat-sous-mot {
+  margin-top: 1px;
+  max-width: 92%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  color: #7c4a06;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* --- LE VERRE SCULPTÉ (arène) ------------------------------------------------
+   Le HUD de l'arène tenait DEUX lois de matière à la fois :
+
+     · les plaques et les orbes (`.olympe-gold`, `.arena-plate`) — 3 px d'encre
+       marine, tranche dure, aplat plein : des OBJETS dessinés ;
+     · les pastilles (`.olympe-glass`) — 1 px translucide, ombre floue, flou
+       d'arrière-plan : du VERRE d'interface.
+
+   Tant que les icônes étaient des pictogrammes de trait, les deux cohabitaient.
+   Depuis que le HUD porte des illustrations au cerne épais, l'écart saute aux
+   yeux : la moitié des objets appartient au dessin, l'autre à l'interface.
+
+   Ce modificateur donne au verre le TRAIT des plaques, sans lui retirer sa
+   translucidité — qui reste utile au-dessus d'un décor peint. C'est le trait
+   qui dit à quel monde appartient un objet, pas la matière de son fond.
+
+   IL EST RÉSERVÉ À L'ARÈNE. `.olympe-glass` sert aussi au bandeau de toutes les
+   autres pages, posé sur du crème : un cerne de 3 px y ferait un objet lourd
+   dans un monde qui ne l'est pas. L'arène est déjà, par la charte, un monde à
+   part — c'est là que la dérogation a sa place, et nulle part ailleurs. */
+.olympe-glass--sculpte {
+  border: 3px solid #1e1638;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.28),
+    0 4px 0 #1e1638,
+    0 6px 14px rgba(0, 0, 0, 0.45);
+}
+
+/* L'enfoncement suit la même règle que les plaques : l'objet descend de 3 px et
+   sa tranche disparaît d'autant. */
+.olympe-glass--sculpte.olympe-press:active,
+.olympe-glass--sculpte.defi2-press:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.28),
+    0 1px 0 #1e1638;
+}

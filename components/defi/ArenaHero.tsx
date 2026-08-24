@@ -6,8 +6,6 @@ import { sfx } from '@/lib/sounds'
 import type { Boss } from '@/lib/bosses'
 
 interface ArenaHeroProps {
-  /** Prénom affiché sous le podium — absent pour le visiteur (chip masqué). */
-  name?: string | null
   /**
    * Le gardien DÉBUSQUÉ (La Traque) : sa silhouette se pose sur l'île, derrière
    * le personnage, et la lumière du sol vire à l'écarlate. Null quand aucun
@@ -23,8 +21,6 @@ interface ArenaHeroProps {
  * que l'image ne peut pas faire :
  *
  *   · la PORTE du vestiaire, posée sur le podium peint (un tap → /moi/avatar) ;
- *   · le PRÉNOM du joueur, sous le podium — niveau et XP vivent uniquement dans
- *     le ProfileChip du HUD, jamais en double ici ;
  *   · le gardien de La Traque, qui surgit en surimpression quand il est
  *     débusqué ;
  *   · les étincelles d'or qui dérivent sur la scène.
@@ -32,7 +28,7 @@ interface ArenaHeroProps {
  * Le personnage dessiné (perso-1) et son socle de marbre SVG vivaient ici : ils
  * doublaient la mascotte peinte, deux personnages sur deux podiums.
  */
-export default function ArenaHero({ name, boss }: ArenaHeroProps) {
+export default function ArenaHero({ boss }: ArenaHeroProps) {
   return (
     <div className="relative flex flex-col items-center">
       {/* Étincelles d'or qui dérivent autour de la scène. */}
@@ -117,27 +113,12 @@ export default function ArenaHero({ name, boss }: ArenaHeroProps) {
         className="olympe-press relative z-[2] block h-[150px] w-[150px] cursor-pointer rounded-full focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       />
 
-      {/* L'identité vit SUR le socle : le prénom seul (niveau + XP dans le
-          ProfileChip du HUD, jamais en double ici). */}
-      {name ? (
-        <p
-          className="relative z-[3] -mt-4 inline-flex items-center gap-1.5 rounded-full border-[1.5px] border-highlight/80 bg-foreground px-3 py-1 shadow-[0_4px_12px_rgba(23,16,48,0.5)]"
-          aria-label={name}
-        >
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            className="shrink-0 fill-highlight"
-            aria-hidden="true"
-          >
-            <path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.4-6.3 4.4L8 13.8 2 9.2h7.6z" />
-          </svg>
-          <span className="font-heading text-[0.65rem] font-extrabold text-white">
-            {name}
-          </span>
-        </p>
-      ) : null}
+      {/* PLUS DE PASTILLE DE PRÉNOM SUR LE SOCLE.
+          Elle disait « Lucas » à quelqu'un qui sait comment il s'appelle, juste
+          sous un personnage qu'il a lui-même habillé — et elle se posait entre
+          le socle et la barre d'action, dans le seul couloir vertical que
+          l'écran gardait libre. Le prénom vit dans le ProfileChip du HUD, en
+          haut, où il sert à identifier le COMPTE. */}
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { verdictFor } from './verdict'
+import { verdictFor, verdictPalier, verdictSrc } from './verdict'
 
 describe('verdictFor', () => {
   it('garde les mêmes seuils dans les deux cycles', () => {
@@ -43,6 +43,43 @@ describe('verdictFor', () => {
         expect(v.emoji.length).toBeGreaterThan(0)
         expect(v.message.length).toBeGreaterThan(0)
       }
+    }
+  })
+})
+
+// L'ILLUSTRATION DE FIN DE QUIZ.
+//
+// Ce que ces tests gardent : le dessin et le message basculent au MÊME seuil.
+// Un écran qui félicite d'un côté et console de l'autre est pire que pas de
+// dessin du tout — d'où les seuils écrits une seule fois (`verdictPalier`).
+
+describe('verdictSrc — la mascotte de l’écran de fin', () => {
+  it('réserve le dessin du sans-faute au sans-faute', () => {
+    expect(verdictSrc(1)).toContain('reaction-bonne-5')
+    // 9/10 reste « bien » : le rang 5 ne se brade pas.
+    expect(verdictSrc(0.9)).not.toContain('reaction-bonne-5')
+  })
+
+  it('passe au dessin d’erreur seulement sous la moitié', () => {
+    expect(verdictSrc(0.5)).toContain('reaction-bonne')
+    expect(verdictSrc(0.49)).toContain('reaction-mauvaise')
+  })
+
+  it('bascule aux mêmes seuils que le message', () => {
+    for (const ratio of [0, 0.3, 0.49, 0.5, 0.79, 0.8, 0.99, 1]) {
+      const palier = verdictPalier(ratio)
+      // Le message du palier et le dessin viennent de la même décision.
+      expect(verdictFor(ratio, '3e')).toBe(verdictFor(ratio, '3e'))
+      expect(verdictSrc(ratio)).toBe(verdictSrc(ratio))
+      expect(['parfait', 'bien', 'moyen', 'faible']).toContain(palier)
+    }
+  })
+
+  it('ne pointe que vers des illustrations qui existent', () => {
+    for (const ratio of [0, 0.5, 0.8, 1]) {
+      expect(verdictSrc(ratio)).toMatch(
+        /^\/images\/mascotte\/reaction-(bonne|mauvaise)-[1-5]\.webp$/,
+      )
     }
   })
 })

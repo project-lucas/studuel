@@ -222,3 +222,156 @@ describe('QuizPlayer — feuille de la mascotte (toutes matières)', () => {
     expect(src()).toBe('/images/mascotte/reaction-bonne-1.webp')
   })
 })
+
+// LA SÉANCE D'ENTRAÎNEMENT (`deck`).
+//
+// L'invariant qui porte tout : un paquet plus court que le quiz est PARTIEL,
+// donc il ne s'enregistre pas comme une note. Sans ça, une séance de 2
+// questions réussies ferait passer un chapitre à 100 % de maîtrise — c'est
+// exactement le piège que `lib/mastery` documente pour le rejeu des erreurs, et
+// le tirage adaptatif emprunte le même chemin.
+
+const TROIS: QuizQuestion[] = [
+  ...QUESTIONS,
+  {
+    id: 'q3',
+    question: 'Combien de côtés a un carré ?',
+    options: ['4', '3'],
+    correct_index: 0,
+    explanation: 'Quatre côtés.',
+    kind: 'qcm',
+  },
+] as unknown as QuizQuestion[]
+
+describe('QuizPlayer — la séance d’entraînement', () => {
+  it('ne sert que les questions du paquet, pas le quiz entier', async () => {
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={TROIS}
+        deck={[TROIS[2]]}
+        record={false}
+      />,
+    )
+    // La session tient en UNE question : le bouton final sort tout de suite.
+    await user.click(screen.getByRole('button', { name: '4' }))
+    expect(
+      screen.getByRole('button', { name: 'Voir mon score' }),
+    ).toBeInTheDocument()
+  })
+
+  it('n’enregistre pas de note quand le paquet est plus court que le quiz', async () => {
+    const { recordTestSession } = await import('@/app/test/actions')
+    const { recordReviewAnswers } = await import('@/app/reviser/actions')
+    vi.mocked(recordTestSession).mockClear()
+    vi.mocked(recordReviewAnswers).mockClear()
+
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={TROIS}
+        deck={[TROIS[2]]}
+      />,
+    )
+    await user.click(screen.getByRole('button', { name: '4' }))
+    await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
+
+    // Pas de note…
+    expect(recordTestSession).not.toHaveBeenCalled()
+    // … mais la répétition espacée est bien nourrie : c'est tout l'intérêt.
+    expect(recordReviewAnswers).toHaveBeenCalled()
+    expect(screen.getByText(/Séance d.entraînement/)).toBeInTheDocument()
+  })
+
+  it('enregistre la note quand le paquet EST le quiz entier', async () => {
+    const { recordTestSession } = await import('@/app/test/actions')
+    vi.mocked(recordTestSession).mockClear()
+
+    const user = userEvent.setup()
+    render(
+      <QuizPlayer quizId="quiz-test" title="Test" questions={QUESTIONS} deck={QUESTIONS} />,
+    )
+    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await user.click(screen.getByRole('button', { name: 'Continuer' }))
+    await user.click(screen.getByRole('button', { name: '4' }))
+    await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
+
+    expect(recordTestSession).toHaveBeenCalledWith('quiz-test', 2, 2)
+  })
+})
+
+// LES DEUX REPRISES DE L'ÉCRAN DE FIN.
+//
+// Deux défauts vus le 23/08/2026 sur la même rangée :
+//   1. le second bouton portait `text-primary-foreground` — du BLANC hérité du
+//      temps où le volet du score était sombre. Depuis qu'il porte la robe
+//      CLAIRE de la matière, ce blanc s'écrivait sur du crème : le bouton était
+//      rendu, cliquable, et lisible par personne ;
+//   2. les deux étaient étirés en `w-full`, deux barres pleines qui pesaient
+//      autant que le score au-dessus.
+
+describe('QuizPlayer — les reprises de l’écran de fin', () => {
+  /** Joue la session de 2 questions avec UNE erreur, et rend les 2 boutons. */
+  const jusquAuBout = async (user: ReturnType<typeof userEvent.setup>) => {
+    render(
+      <QuizPlayer quizId="quiz-test" title="Test" questions={QUESTIONS} record={false} />,
+    )
+    await user.click(screen.getByRole('button', { name: 'Paris' }))
+    await user.click(screen.getByRole('button', { name: 'Continuer' }))
+    await user.click(screen.getByRole('button', { name: '5' })) // faux
+    await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
+    return {
+      revoir: screen.getByRole('button', { name: /Revoir mes 1 erreur/ }),
+      refaire: screen.getByRole('button', { name: /Refaire/ }),
+    }
+  }
+
+  it('ne pose jamais une encre claire sans plaque pleine dessous', async () => {
+    // LE DÉFAUT D'ORIGINE : le bouton portait `text-primary-foreground` (du
+    // blanc) SANS fond à lui, donc écrit à même le volet clair de la matière —
+    // rendu, cliquable, et lisible par personne. Le blanc est revenu depuis,
+    // mais sur une plaque violette pleine : c'est le COUPLE encre + fond qu'il
+    // faut garder soudé, pas l'encre seule qu'il faut interdire.
+    const { revoir, refaire } = await jusquAuBout(userEvent.setup())
+    for (const bouton of [revoir, refaire]) {
+      const encreClaire = /text-white|text-primary-foreground/.test(bouton.className)
+      const plaquePleine = /bg-primary|bg-\[color-mix/.test(bouton.className)
+      expect(encreClaire && !plaquePleine).toBe(false)
+    }
+  })
+
+  it('ne les étire pas sur toute la largeur', async () => {
+    const { revoir, refaire } = await jusquAuBout(userEvent.setup())
+    expect(revoir.className).not.toContain('w-full')
+    expect(refaire.className).not.toContain('w-full')
+  })
+
+  it('les pose CÔTE À CÔTE, sur une seule rangée', async () => {
+    const { revoir, refaire } = await jusquAuBout(userEvent.setup())
+    // Même parent, en ligne : la rangée ne doit jamais repasser en colonne.
+    expect(revoir.parentElement).toBe(refaire.parentElement)
+    expect(revoir.parentElement?.className).not.toContain('flex-col')
+  })
+
+  it('donne à chacun sa couleur, texte en blanc', async () => {
+    const { revoir, refaire } = await jusquAuBout(userEvent.setup())
+    // Les erreurs prennent le corail des pastilles ratées, assombri pour que
+    // le blanc y passe le seuil AA (3,34:1 → 4,94:1 mesurés).
+    expect(revoir.className).toContain('var(--destructive)')
+    expect(revoir.className).toContain('text-white')
+    // « Refaire » prend le violet de l'action, et son encre dédiée.
+    expect(refaire.className).toContain('bg-primary')
+    expect(refaire.className).toContain('text-primary-foreground')
+    // Deux robes distinctes : c'est ce qui les rend reconnaissables d'un coup.
+    expect(revoir.className).not.toBe(refaire.className)
+  })
+
+  it('dit « Refaire » en un seul mot', async () => {
+    const { refaire } = await jusquAuBout(userEvent.setup())
+    expect(refaire.textContent?.trim()).toBe('Refaire')
+  })
+})

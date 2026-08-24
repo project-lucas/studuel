@@ -7,6 +7,8 @@ import { Check, Lock } from 'lucide-react'
 import SheetShell from '@/components/defi/SheetShell'
 import { FLANK_CLASS } from '@/components/defi/ArenaActionBar'
 import { useDuelSubject } from '@/components/defi/DuelSubjectProvider'
+import { plaqueClaire } from '@/lib/defi/plaque-claire'
+import Image from 'next/image'
 import SubjectIcon from '@/components/SubjectIcon'
 import { sfx } from '@/lib/sounds'
 
@@ -25,13 +27,102 @@ import { sfx } from '@/lib/sounds'
  * geste est plus court dans le pire cas comme dans le meilleur, et le flanc
  * redevient une plaque comme ses deux voisines.
  *
- * IL MONTRE LA MATIÈRE ACTIVE, pas un cadenas générique : l'icône de trait de
- * la matière (`subjectIcon`, la même que partout dans l'app) et non sa vignette
- * illustrée — celle-ci est dessinée pour le crème des cartes de Réviser, et sur
- * une plaque sombre ses contours d'encre se confondent avec le fond. Le verrou
- * du classé se dit par une pastille de 8 px dans l'angle, qui ne mange pas
- * l'icône.
+ * IL MONTRE LA MATIÈRE ACTIVE — en ILLUSTRATION, sur un médaillon pastel.
+ *
+ * Il a longtemps porté l'icône de trait (`SubjectIcon`), et pour une raison
+ * juste : la vignette illustrée est dessinée pour le crème des cartes de
+ * Réviser, et posée telle quelle sur une plaque sombre, son cerne d'encre se
+ * confond avec le fond. Mais la conclusion était trop courte — ce n'est pas la
+ * vignette qu'il fallait écarter, c'est le fond sombre sous elle.
+ *
+ * D'où le MÉDAILLON : un disque du pastel de la matière (`entry.pastel`, dont
+ * la doc dit déjà « une vignette est dessinée pour un fond clair »), et la
+ * vignette dessus. Elle retrouve exactement les conditions pour lesquelles elle
+ * a été peinte, et la matière a enfin le même visage ici que dans Réviser — une
+ * matière, un seul visage dans toute l'app. Repli sur l'icône de trait quand le
+ * dessin n'existe pas encore.
+ *
+ * LES DEUX TRIANGLES, au-dessus et en dessous, changent de matière sans ouvrir
+ * la feuille. Ils ne la remplacent pas : la feuille reste le chemin court pour
+ * aller d'Anglais à SVT, les triangles servent au voisinage immédiat — le geste
+ * qu'on fait sans réfléchir quand on s'est trompé d'un cran.
+ *
+ * Le verrou du classé se dit par une pastille de 8 px dans l'angle, qui ne
+ * mange pas l'illustration.
  */
+/**
+ * UN DES DEUX TRIANGLES qui font défiler les matières.
+ *
+ * Dessiné en SVG et non en bordures CSS : il porte un CERNE d'encre, comme tout
+ * objet de l'arène, et l'astuce des bordures ne sait pas cerner un triangle.
+ *
+ * ELLES SE POSENT SUR LA PLAQUE, aux deux bords, et non au-dessus et en dessous.
+ * Flottant dehors, elles se détachaient sur l'illustration de l'arène — un fond
+ * peint, clair par endroits — où un petit triangle doré se perd. Ramenées sur le
+ * violet de la plaque, elles ont enfin un fond uni et sombre derrière elles :
+ * c'est le contraste qui les rend visibles, pas leur taille.
+ *
+ * LA CIBLE EST PLUS GRANDE QUE LE DESSIN, et c'est délibéré. Le triangle fait
+ * 18 px de large — bien en dessous des 44 px recommandés au doigt. Sa boîte
+ * tapable couvre toute la largeur du flanc (92 px) sur 26 px de haut. En
+ * contrepartie, les deux bandes du haut et du bas cessent d'ouvrir la feuille :
+ * c'est le prix de deux commandes sur une plaque de 92 px, et il est payé là où
+ * le doigt vise le moins — le centre, qui porte l'illustration, reste à la
+ * feuille.
+ */
+function Fleche({
+  direction,
+  onClick,
+}: {
+  direction: 'haut' | 'bas'
+  onClick: () => void
+}) {
+  const haut = direction === 'haut'
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={haut ? 'Matière précédente' : 'Matière suivante'}
+      // LA POINTE SORT DU CADRE. La bande déborde de 8 px au-delà de la plaque
+      // (`-top-2` / `-bottom-2`) : le triangle a donc un pied sur le violet et
+      // la tête dehors. C'est ce débordement qui en fait une COMMANDE posée sur
+      // l'objet plutôt qu'une gravure dedans — et il libère du même coup la
+      // place qu'il prenait au médaillon.
+      //
+      // Rien ne le rogne : ni la plaque ni le conteneur du flanc ne portent
+      // `overflow-hidden`. Si l'un des deux venait à en recevoir un, les deux
+      // pointes seraient tranchées net.
+      //
+      // La bande fait 34 px de haut sur les 92 px de large du flanc : c'est la
+      // cible du doigt, et elle est bien plus grande que le dessin qu'elle
+      // porte.
+      className={`absolute left-0 z-10 flex h-[34px] w-full cursor-pointer justify-center focus-visible:outline-none ${
+        haut ? '-top-2 items-start' : '-bottom-2 items-end'
+      }`}
+    >
+      <svg
+        viewBox="0 0 24 16"
+        // 22 × 15 px. Il a pu grandir de moitié parce que la bande est sortie
+        // de la plaque : posé à −8 px du bord, le triangle occupe −8 → 7 en
+        // coordonnées de plaque, quand le médaillon commence à 16. Sept pixels
+        // de jeu, là où la version précédente en cherchait un seul.
+        className={`h-[15px] w-[22px] transition-transform active:scale-90 ${
+          haut ? '' : 'rotate-180'
+        }`}
+        aria-hidden="true"
+      >
+        <path
+          d="M12 1.6 22.4 14.4H1.6z"
+          fill="#ffd66b"
+          stroke="#1e1638"
+          strokeWidth="3"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
+  )
+}
+
 export default function SubjectPlate() {
   const { board, index, active, select } = useDuelSubject()
   const [open, setOpen] = useState(false)
@@ -41,32 +132,76 @@ export default function SubjectPlate() {
 
   const locked = !active.unlocked
 
+  /** Le voisin, en tournant en rond : après la dernière matière vient la première. */
+  const voisin = (pas: number) => {
+    sfx.tap()
+    select((index + pas + board.length) % board.length)
+  }
+
   return (
     <>
-      <button
-        type="button"
-        onClick={() => {
-          sfx.tap()
-          setOpen(true)
-        }}
-        aria-haspopup="dialog"
-        aria-label={`Matière du duel : ${active.subject}, ${active.trophies} trophées${
-          locked ? ' — pas encore ouverte au classé' : ''
-        }. Appuie pour en choisir une autre.`}
-        title={`${active.subject} — ${active.rank.label}`}
-        className={`arena-plate arena-plate--dark arena-plate--press ${FLANK_CLASS} relative flex cursor-pointer flex-col items-center justify-center gap-1.5 focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:outline-none`}
-      >
-        <SubjectIcon slug={active.slug} size={30} strokeWidth={2.3} aria-hidden="true" />
-        <span className="arena-plate-label font-heading uppercase">Matière</span>
+      {/* Le flanc devient un CONTENEUR : la plaque le remplit, les deux
+          triangles se posent juste au-dessus et juste en dessous. La largeur
+          reste celle de `FLANK_CLASS` — elle n'a fait que remonter d'un cran. */}
+      <div className={`${FLANK_CLASS} relative`}>
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            setOpen(true)
+          }}
+          aria-haspopup="dialog"
+          aria-label={`Matière du duel : ${active.subject}, ${active.trophies} trophées${
+            locked ? ' — pas encore ouverte au classé' : ''
+          }. Appuie pour en choisir une autre.`}
+          title={`${active.subject} — ${active.rank.label}`}
+          className="arena-plate arena-plate--clair arena-plate--press relative flex h-full w-full cursor-pointer flex-col items-center justify-center focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:outline-none"
+          // LA PLAQUE PORTE LA COULEUR DE LA MATIÈRE, et il n'y a plus de
+          // médaillon. Le disque pastel existait pour rendre la vignette
+          // lisible sur un fond violet ; en donnant ce pastel à la plaque
+          // ENTIÈRE, le problème disparaît et l'illustration récupère la place
+          // que le disque lui prenait — 56 px sur une plaque de 86, contre 64
+          // aujourd'hui.
+          //
+          // Le dégradé se fabrique hors du CSS (la teinte change à chaque
+          // matière, une classe ne peut pas la connaître) et hors d'ici : les
+          // deux flancs doivent baisser du même cran, sinon la rangée se
+          // déséquilibre au premier réglage. Cf. `lib/defi/plaque-claire`.
+          style={{ background: plaqueClaire() }}
+        >
+          {active.vignette ? (
+            <Image
+              src={active.vignette}
+              alt=""
+              aria-hidden="true"
+              width={128}
+              height={128}
+              sizes="64px"
+              className="size-16 object-contain"
+            />
+          ) : (
+            <SubjectIcon
+              slug={active.slug}
+              size={40}
+              strokeWidth={2.3}
+              aria-hidden="true"
+            />
+          )}
 
-        {/* La pastille de verrou : elle dit que la matière AFFICHÉE n'est pas
-            ouverte au classé, donc que COMBAT repliera sur un jeu. Un point qui
-            s'allumerait dès qu'une matière quelconque est fermée serait allumé
-            en permanence — c'est-à-dire muet. */}
-        {locked ? (
-          <span className="arena-plate-dot absolute top-2 right-2" aria-hidden="true" />
-        ) : null}
-      </button>
+          {/* La pastille de verrou : elle dit que la matière AFFICHÉE n'est pas
+              ouverte au classé, donc que DUEL repliera sur un jeu. Un point qui
+              s'allumerait dès qu'une matière quelconque est fermée serait allumé
+              en permanence — c'est-à-dire muet. */}
+          {locked ? (
+            <span className="arena-plate-dot absolute top-2 right-2" aria-hidden="true" />
+          ) : null}
+        </button>
+
+        {/* Après la plaque dans l'arbre : elles se posent dessus sans dépendre
+            du seul empilement, qui se casse au premier contexte créé. */}
+        <Fleche direction="haut" onClick={() => voisin(-1)} />
+        <Fleche direction="bas" onClick={() => voisin(1)} />
+      </div>
 
       {typeof document !== 'undefined'
         ? createPortal(

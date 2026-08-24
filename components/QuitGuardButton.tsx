@@ -118,17 +118,25 @@ export default function QuitGuardButton({
                 >
                   Continuer à apprendre
                 </Button>
-                <button
-                  type="button"
+                {/* « Quitter » est un VRAI BOUTON, pas un mot posé sous le
+                    CTA. Réduit à son texte, il ne se donnait ni la taille ni
+                    la matière des autres boutons de l'app : on hésitait à
+                    savoir où appuyer, et la cible tactile ne faisait que la
+                    largeur du mot au lieu de toute la modale.
+                    La hiérarchie tient à la ROBE, pas à la forme : le violet
+                    plein garde l'action qu'on veut voir choisie, le corail
+                    doux (`destructive`) porte celle qui coûte. */}
+                <Button
+                  variant="destructive"
+                  size="lg"
+                  className="mt-3 w-full rounded-full font-bold"
                   onClick={() => {
-                    sfx.tap()
                     setOpen(false)
                     leave()
                   }}
-                  className="mt-3 w-full py-2 text-sm font-bold text-destructive transition-opacity hover:opacity-80"
                 >
                   Quitter
-                </button>
+                </Button>
               </div>
             </div>,
             document.body,

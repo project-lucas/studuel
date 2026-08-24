@@ -66,6 +66,12 @@ export default function ChapterList({
   // qui n'y est pas suit la règle par défaut (seul le chapitre à reprendre est
   // ouvert à l'arrivée).
   const [deplies, setDeplies] = useState<Record<string, boolean>>({})
+  // LE CHAPITRE QUE L'ÉLÈVE VIENT D'OUVRIR, s'il y en a un. Distinct de
+  // `deplies` : plusieurs blocs peuvent rester dépliés, mais un seul est celui
+  // qu'on vient de désigner du doigt — c'est lui qui tient le projecteur.
+  // Nul à l'arrivée : la page ne s'ouvre pas déjà atténuée sous prétexte que le
+  // chapitre à reprendre est déplié par défaut.
+  const [chapitre, setChapitre] = useState<string | null>(null)
 
   // LA FICHE DÉPLIÉE, et ses supports.
   //
@@ -97,6 +103,13 @@ export default function ChapterList({
     },
     [fiche, supports, subjectSlug],
   )
+
+  // Plier / déplier un chapitre. Déplier le met SOUS LE PROJECTEUR (les autres
+  // blocs reculent) ; le replier rend la page à tout le monde.
+  const basculerChapitre = useCallback((cle: string, deplie: boolean) => {
+    setDeplies((d) => ({ ...d, [cle]: !deplie }))
+    setChapitre((c) => (deplie ? (c === cle ? null : c) : cle))
+  }, [])
 
   // Les groupes de RÉFÉRENCE : ceux du programme entier, recherche ou pas.
   // C'est d'eux que viennent le numéro du chapitre et le rang d'une fiche — une
@@ -173,15 +186,22 @@ export default function ChapterList({
   // n'y sont plus des chapitres mais des FICHES, numérotées dans leur chapitre
   // (1, 2, 3…) et non dans la matière — sans quoi « Chapitre 2 · Le groupe
   // verbal » s'ouvrirait sur une fiche numérotée 4.
-  // LE PROJECTEUR. Dès qu'une fiche est ouverte, tout le reste de la liste
-  // recule d'un cran : les fiches voisines, et les autres chapitres avec leur
-  // en-tête. Ce qu'on vient de déplier tient la page.
+  // LE PROJECTEUR. Dès qu'on déplie quelque chose, tout le reste de la liste
+  // recule d'un cran — au chapitre comme à la fiche, c'est le même geste et la
+  // même réponse : ouvrir un chapitre efface les autres chapitres, ouvrir une
+  // fiche efface en plus les fiches voisines. Ce qu'on vient de déplier tient
+  // la page.
   //
   // Ce n'est PAS une désactivation : rien n'est mis hors d'atteinte, on peut
-  // taper directement une autre fiche pour y sauter. L'atténuation reste douce
-  // (la moitié) pour que les titres restent lisibles — un contenu qu'on peut
-  // encore atteindre doit rester déchiffrable.
+  // taper directement un autre chapitre pour y sauter. L'atténuation reste
+  // douce (la moitié) pour que les titres restent lisibles — un contenu qu'on
+  // peut encore atteindre doit rester déchiffrable.
+  //
+  // Sous recherche, personne ne recule : les résultats sont éparpillés dans
+  // plusieurs blocs, et en atténuer certains reviendrait à cacher une partie de
+  // ce qu'on vient de trouver.
   const focus = fiche !== null
+  const focusChapitre = cherche ? null : chapitre
   const EFFACE = 'opacity-50'
 
   const list = (rows: ChapterRow[], ranged: boolean) => (
@@ -320,17 +340,23 @@ export default function ChapterList({
         const deplie =
           cherche || porteLaBarre || (deplies[cle] ?? i === defaut)
         const done = group.chapters.filter((c) => c.status === 'complete').length
-        // Le chapitre qui abrite la fiche ouverte garde sa netteté : il dit OÙ
-        // l'on est. Les autres reculent avec leur en-tête, sinon quatre titres
-        // en gras continueraient de tirer l'œil pendant qu'on travaille.
+        // Le chapitre EN AVANT garde sa netteté : il dit OÙ l'on est. Les
+        // autres reculent avec leur en-tête, sinon quatre titres en gras
+        // continueraient de tirer l'œil pendant qu'on travaille.
+        //
+        // Une fiche ouverte l'emporte sur le dernier chapitre déplié : c'est
+        // elle qu'on est en train de lire, et son chapitre d'accueil n'est pas
+        // forcément celui qu'on a ouvert en dernier.
         const abriteLaFiche = group.chapters.some((c) => c.id === fiche)
+        const enAvant = focus ? abriteLaFiche : cle === focusChapitre
+        const efface = (focus || focusChapitre !== null) && !enAvant
         return (
           <div
             key={cle}
             className={cn(
               'rounded-2xl border bg-card/60 px-3 py-2 transition-opacity duration-200',
               deplie ? 'pb-3' : null,
-              focus && !abriteLaFiche ? EFFACE : null,
+              efface ? EFFACE : null,
             )}
           >
             <div className="flex items-center gap-2">
@@ -339,7 +365,7 @@ export default function ChapterList({
                   actions dans la même cible se marchent dessus. */}
               <button
                 type="button"
-                onClick={() => setDeplies((d) => ({ ...d, [cle]: !deplie }))}
+                onClick={() => basculerChapitre(cle, deplie)}
                 aria-expanded={deplie}
                 aria-controls={`bloc-${cle}`}
                 className="min-w-0 flex-1 cursor-pointer py-1.5 text-left"
@@ -396,7 +422,7 @@ export default function ChapterList({
                 type="button"
                 aria-hidden="true"
                 tabIndex={-1}
-                onClick={() => setDeplies((d) => ({ ...d, [cle]: !deplie }))}
+                onClick={() => basculerChapitre(cle, deplie)}
                 className="-mr-1 flex size-8 shrink-0 items-center justify-center rounded-full"
               >
                 <ChevronDown

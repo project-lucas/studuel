@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Settings, LogIn, Plus } from 'lucide-react'
+import { Settings, LogIn } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { CristalIcon, EcuIcon } from '@/components/ui/MonnaieIcon'
 import { GEM_COST_CHAPTER } from '@/lib/gems'
@@ -279,19 +279,14 @@ export default function TopHud({
                 open={openPurse === 'ecu'}
                 onToggle={() => togglePurse('ecu')}
                 label={`${coins} écus — à quoi sert cette monnaie`}
-                plusLabel="Aller à la boutique pour gagner des écus"
+                plusLabel="Obtenir des écus"
                 value={coins}
                 icon={<EcuIcon className="size-5" />}
                 dark={dark}
                 className={
                   dark
-                    ? 'olympe-glass text-highlight'
+                    ? 'olympe-glass olympe-glass--sculpte text-highlight'
                     : 'bg-card/90 text-foreground shadow-lg ring-1 ring-black/10 backdrop-blur-md'
-                }
-                plusClassName={
-                  dark
-                    ? 'bg-highlight text-foreground'
-                    : 'bg-highlight/25 text-foreground'
                 }
               />
               {/* LA MONNAIE QUI CÈDE. Le bandeau ne peut pas tenir, sur un
@@ -316,7 +311,7 @@ export default function TopHud({
                   open={openPurse === 'cristal'}
                   onToggle={() => togglePurse('cristal')}
                   label={`${gems} cristaux — à quoi sert cette monnaie`}
-                  plusLabel="Aller à la boutique pour gagner des cristaux"
+                  plusLabel="Obtenir des cristaux"
                   value={gems}
                   icon={<CristalIcon className="size-5" />}
                   dark={dark}
@@ -326,11 +321,6 @@ export default function TopHud({
                       ? 'olympe-glass text-[#d8c9ff]'
                       : 'bg-card/85 text-primary shadow-lg ring-1 ring-black/5 backdrop-blur-md',
                   )}
-                  plusClassName={
-                    dark
-                      ? 'bg-white/18 text-[#faf6ef]'
-                      : 'bg-primary/15 text-primary'
-                  }
                 />
               ) : null}
             </div>
@@ -405,7 +395,6 @@ function ResourcePill({
   icon,
   dark,
   className,
-  plusClassName,
 }: {
   /** Le nom de la monnaie, écrit dans SA couleur en tête de la bulle. */
   name: string
@@ -421,8 +410,6 @@ function ResourcePill({
   dark: boolean
   /** Robe de la pastille (verre de nuit sur l'arène, crème ailleurs). */
   className: string
-  /** Robe du disque « + ». */
-  plusClassName: string
 }) {
   const panelId = `bourse-${name.toLowerCase()}`
 
@@ -440,28 +427,11 @@ function ResourcePill({
           aria-expanded={open}
           aria-controls={panelId}
           aria-label={label}
-          className="flex min-h-11 items-center gap-1.5 rounded-l-full py-1.5 pr-1 pl-3 transition active:scale-95"
+          className="flex min-h-11 items-center gap-1.5 rounded-full py-1.5 pr-3.5 pl-3 transition active:scale-95"
         >
           {icon}
           {value.toLocaleString('fr-FR')}
         </button>
-        {/* Le « + » est son propre lien : sa zone tactile déborde largement du
-            petit disque pour rester attrapable au pouce. */}
-        <Link
-          href="/tresor?volet=boutique"
-          aria-label={plusLabel}
-          className="flex min-h-11 items-center pr-2 pl-1.5 transition active:scale-95"
-        >
-          <span
-            className={cn(
-              'grid size-5 shrink-0 place-items-center rounded-full',
-              plusClassName,
-            )}
-            aria-hidden="true"
-          >
-            <Plus className="size-3.5" strokeWidth={3.2} />
-          </span>
-        </Link>
       </div>
 
       {/* La bulle : ancrée sous la pastille, avec sa pointe. Elle sort du flux
@@ -472,7 +442,7 @@ function ResourcePill({
           className={cn(
             'absolute top-full right-0 z-10 mt-2 w-60 rounded-2xl p-3 text-left font-sans text-xs leading-relaxed shadow-xl',
             dark
-              ? 'olympe-glass text-[#ece5f7]'
+              ? 'olympe-glass olympe-glass--sculpte text-[#ece5f7]'
               : 'bg-card text-foreground/80 ring-1 ring-black/10 backdrop-blur-md',
           )}
         >
@@ -495,6 +465,22 @@ function ResourcePill({
             {name}
           </p>
           <p>{description}</p>
+          {/* LE CHEMIN VERS LA BOUTIQUE, en toutes lettres.
+              Il était porté par un petit disque « + » collé au compteur : le
+              dernier pictogramme de trait du bandeau, et un second objet dans
+              une pastille qui n'a qu'une chose à dire — un nombre. Descendu
+              ici, il est nommé au lieu d'être deviné, et le compteur redevient
+              un compteur. Un tap de plus, pour une action qui n'est pas
+              quotidienne. */}
+          <Link
+            href="/tresor?volet=boutique"
+            className={cn(
+              'font-heading mt-2 inline-flex min-h-11 items-center gap-1 text-xs font-extrabold',
+              nameClassName,
+            )}
+          >
+            {plusLabel} →
+          </Link>
         </div>
       ) : null}
     </div>

@@ -134,7 +134,11 @@ describe('duelTarget', () => {
     })
   })
 
-  it('replie sur un jeu de la matière — nommé — quand le classé est fermé', () => {
+  it('lance QUAND MÊME le duel de la matière si le classé n’est pas ouvert', () => {
+    // Le défaut vu le 23/08/2026 : on choisissait une matière sur la roulette,
+    // on tapait le bouton central, et on tombait dans un jeu de salon. Le
+    // verrou `unlocked` ne garde que le CLASSEMENT, jamais la route du duel :
+    // `/defi/programme/[matiere]` apparie un adversaire pour n'importe qui.
     const rows: never[] = []
     const roster = buildRoster(trophyMap(rows), READY)
     // Aucune matière débloquée : le cas d'un compte du jour de l'inscription.
@@ -142,19 +146,41 @@ describe('duelTarget', () => {
     const maths = board.find((e) => e.slug === 'maths')!
     const target = duelTarget(maths)
 
+    expect(target?.href).toBe('/defi/programme/maths')
+    // Les trophées ne comptent pas encore : le bouton ne dit donc pas
+    // « Duel classé », il nomme le programme.
     expect(target?.isRanked).toBe(false)
-    expect(target?.href).toMatch(/^\/defi\/jeux\//)
-    // Le bouton ne dira jamais « Duel classé » sur un jeu de salon.
     expect(target?.label).not.toBe(RANKED_LABEL)
-    expect(maths.games.some((g) => g.name === target?.label)).toBe(true)
   })
 
-  it('pousse vers le jeu le moins travaillé de la matière', () => {
+  it('ne replie sur un jeu de salon que sans programme jouable', () => {
+    // La SVT n'est pas dans `READY` : son programme n'a pas de route dans cette
+    // classe. C'est le seul cas où le repli garde son sens — sans lui, l'arène
+    // aurait un bouton mort au centre de l'écran.
+    const rows: never[] = []
+    const roster = buildRoster(trophyMap(rows), READY)
+    const board = buildDuelBoard(roster, ladderFor(roster, rows, []))
+    const svt = board.find((e) => e.slug === 'svt')!
+    const target = duelTarget(svt)
+
+    expect(target?.isRanked).toBe(false)
+    expect(target?.href).toMatch(/^\/defi\/jeux\//)
+    expect(target?.label).not.toBe(RANKED_LABEL)
+    expect(svt.games.some((g) => g.name === target?.label)).toBe(true)
+  })
+
+  it('pousse vers le jeu le moins travaillé, quand c’est un salon qui se lance', () => {
     const rows = [
       { subject: 'maths', gameId: 'calcul-mental', trophies: 890 },
       { subject: 'maths', gameId: 'compte-est-bon', trophies: 350 },
     ]
-    const roster = buildRoster(trophyMap(rows))
+    // Les maths hors du programme jouable : sans duel de matière à lancer,
+    // c'est bien le repli qui arbitre, et lui seul — sinon ce test mesurerait
+    // le duel et non le choix du salon. Elles gardent leurs TROIS jeux, dont un
+    // jamais touché, ce qui est tout l'objet de l'arbitrage.
+    const roster = buildRoster(trophyMap(rows), {
+      programmeReady: new Set(['histoire-geo']),
+    })
     const board = buildDuelBoard(roster)
     const maths = board.find((e) => e.slug === 'maths')!
     const target = duelTarget(maths)!

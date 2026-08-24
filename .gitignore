@@ -78,3 +78,9 @@ next-env.d.ts
 #   serie quizz/     → public/images/mascotte/reaction-{bonne,mauvaise}-{1..5}.webp
 #                      (régénérables : node scripts/serie-quizz.mjs)
 /public/images/serie quizz/
+
+#   defi/icones/*.png → public/images/defi/icones/*-v2.webp (scripts/defi-icones.mjs)
+#   defi/search/      → public/images/defi/loupe.webp       (scripts/loupe-recherche.mjs)
+# Mêmes raisons que ci-dessus : originaux 2000×2000, jamais servis, ~10 Mo.
+/public/images/defi/icones/*.png
+/public/images/defi/search/

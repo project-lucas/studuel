@@ -6,23 +6,30 @@ import { buildRoster, trophyMap } from '@/lib/defi/roster'
 import { buildSubjectLadders } from '@/lib/subject-rank'
 import { buildDuelBoard, type DuelSubject } from '@/lib/defi/duel-board'
 
-// LA BARRE D'ACTION : [MODES] [COMBAT] [MATIÈRE], plus sa ligne d'information.
+// LA BARRE D'ACTION : [MODES] [DUEL] [MATIÈRE].
 //
 // Ce que ces tests gardent :
-//   1. COMBAT LANCE (un lien), il n'ouvre pas d'écran de sélection, et son
-//      étiquette dit sur quoi il part — sa destination dépend d'un objet
-//      voisin, la taire en ferait une loterie ;
+//   1. DUEL ouvre la RECHERCHE D'ADVERSAIRE (un bouton, plus un lien) : il ne
+//      navigue plus lui-même, le rideau s'en charge. Son étiquette dit sur quoi
+//      il part — sa destination dépend d'un objet voisin, la taire en ferait
+//      une loterie ;
 //   2. il n'est JAMAIS mort : sans classé ouvert, il replie sur un jeu de la
 //      matière et le nomme ;
-//   3. le mot COMBAT est SEUL sur la plaque — la matière et le compteur de clan
+//   3. le mot DUEL est SEUL sur la plaque — la matière et le compteur de clan
 //      vivent sur la ligne d'information, au-dessus, plus dans le bouton ;
-//   4. la plaque Matière, la ligne d'information et la Route des trophées
-//      partagent le même choix — c'est toute la raison du contexte ;
+//   4. la plaque Matière, le bouton et la Route des trophées partagent le même
+//      choix de matière — c'est toute la raison du contexte ;
 //   5. rien de ce qui a quitté le pixel n'a disparu des lecteurs d'écran (le
 //      pourquoi du jour, l'objectif de clan).
 
 vi.mock('@/lib/sounds', () => ({
   sfx: { battle: vi.fn(), tap: vi.fn(), back: vi.fn() },
+}))
+// Le rideau de recherche precharge puis pousse la route : sans routeur mocke,
+// il jette des l'ouverture dans jsdom.
+const push = vi.fn()
+vi.mock('next/navigation', () => ({
+  useRouter: () => ({ push, prefetch: vi.fn(), back: vi.fn(), replace: vi.fn() }),
 }))
 vi.mock('next/link', () => ({
   default: ({
@@ -38,17 +45,25 @@ vi.mock('next/link', () => ({
     </a>
   ),
 }))
+// Le mock transmet TOUTES les propriétés, `className` comprise : sans ça, un
+// test sur l'apparence d'une image passerait à côté de son sujet — il
+// mesurerait le mock, pas le composant.
 vi.mock('next/image', () => ({
-  default: ({ src, alt }: { src: string; alt: string }) => (
+  default: ({
+    src,
+    alt,
+    ...reste
+  }: { src: string; alt: string } & React.ImgHTMLAttributes<HTMLImageElement>) => (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={alt} />
+    <img src={src} alt={alt} {...reste} />
   ),
 }))
 
 import CombatButton from '@/components/defi/CombatButton'
-import CombatMeta from '@/components/defi/CombatMeta'
 import SubjectPlate from '@/components/defi/SubjectPlate'
 import TrophyRoadSheet from '@/components/defi/TrophyRoadSheet'
+import ArenaActionBar from '@/components/defi/ArenaActionBar'
+import ModesSheet from '@/components/defi/ModesSheet'
 import DuelSubjectProvider from '@/components/defi/DuelSubjectProvider'
 
 const READY = { programmeReady: new Set(['maths', 'histoire-geo']) }
@@ -80,14 +95,13 @@ function renderRow(
 ) {
   return render(
     <DuelSubjectProvider board={board} initialSlug={initialSlug}>
-      <CombatMeta goal={props.goal} onlineFriendName={props.onlineFriendName} />
       <CombatButton {...props} />
       <SubjectPlate />
     </DuelSubjectProvider>,
   )
 }
 
-const combat = () => screen.getByRole('link', { name: /^Combat —/ })
+const combat = () => screen.getByRole('button', { name: /^Duel —/ })
 
 /** Ouvre la feuille de sélection et choisit une matière par son nom. */
 async function pick(user: ReturnType<typeof userEvent.setup>, name: string) {
@@ -102,38 +116,111 @@ async function pick(user: ReturnType<typeof userEvent.setup>, name: string) {
 // La matière choisie SURVIT à la session (localStorage) : sans ce ménage, le
 // choix d'un test s'imposerait au suivant.
 beforeEach(() => {
+  push.mockClear()
   window.localStorage.clear()
 })
 
 describe('le bouton COMBAT', () => {
-  it('lance le duel classé de la matière choisie, sans écran intermédiaire', () => {
+  it('annonce le duel classé de la matière choisie', () => {
     renderRow(boardWith([], ['maths']))
 
-    expect(combat()).toHaveAttribute('href', '/defi/programme/maths')
-    // Le pixel ne porte QUE le mot ; l'étiquette dit ce qui se lance.
-    expect(combat()).toHaveTextContent(/^COMBAT$/)
-    expect(within(combat()).queryByText('Maths')).not.toBeInTheDocument()
+    // Le bouton porte DEUX rangs : le mot, puis sa destination.
+    expect(within(combat()).getByText('DUEL')).toBeInTheDocument()
+    expect(within(combat()).getByText('Maths')).toBeInTheDocument()
     expect(combat().getAttribute('aria-label')).toContain(
       'Duel classé en Maths',
     )
   })
 
-  it('replie sur un jeu de la matière — et le nomme — quand le classé est fermé', () => {
+  it('ouvre la RECHERCHE D’ADVERSAIRE au lieu de naviguer', async () => {
+    const user = userEvent.setup()
+    renderRow(boardWith([], ['maths']))
+
+    await user.click(combat())
+
+    // Le rideau prend l'écran, et il dit dans quelle matière il cherche.
+    const rideau = screen.getByRole('dialog', {
+      name: /Recherche d’un adversaire en Maths/,
+    })
+    expect(within(rideau).getByText(/Recherche d’adversaire/)).toBeInTheDocument()
+    // L'attente n'est plus chiffrée : elle est dite par les trois points
+    // animés du titre, toujours présents et allumés l'un après l'autre.
+    expect(within(rideau).queryByText(/Délai estimé/)).toBeNull()
+    expect(rideau.querySelectorAll('.recherche-points span')).toHaveLength(3)
+    // La navigation n'a PAS eu lieu au clic : c'est le rideau qui la déclenche,
+    // une fois la mise en scène jouée.
+    expect(push).not.toHaveBeenCalled()
+  })
+
+  it('pose « Annuler » sur l’empreinte exacte du bouton DUEL', async () => {
+    // Le pouce vient de frapper là : c'est la seule place où l'annulation ne se
+    // cherche pas. La rangée doit donc PARTAGER la géométrie de la barre
+    // d'action, pas la recopier — les deux flancs portent la classe exportée
+    // par `ArenaActionBar`, dont c'est toute la raison d'être.
+    //
+    // On rend ici la VRAIE composition (le bouton dans sa barre) : comparé à un
+    // bouton rendu tout seul, comme dans les autres tests de ce fichier, la
+    // comparaison des deux rangées ne prouverait rien.
+    const user = userEvent.setup()
+    render(
+      <DuelSubjectProvider board={boardWith([], ['maths'])} initialSlug="maths">
+        <ArenaActionBar
+          left={<span />}
+          center={<CombatButton />}
+          right={<span />}
+        />
+      </DuelSubjectProvider>,
+    )
+
+    const rangeeDuel = combat().parentElement as HTMLElement
+    await user.click(combat())
+    const annuler = screen.getByRole('button', { name: 'Annuler' })
+    const rangeeAnnuler = annuler.parentElement as HTMLElement
+
+    // Les trois classes qui portent toute la géométrie de la rangée.
+    for (const classe of ['h-[92px]', 'items-stretch', 'gap-3']) {
+      expect(rangeeDuel.className).toContain(classe)
+      expect(rangeeAnnuler.className).toContain(classe)
+    }
+    // Même largeur : un centre étiré entre deux flancs de largeur fixe.
+    expect(annuler.className).toContain('flex-1')
+    expect(rangeeAnnuler.querySelectorAll('.arena-plate-flank')).toHaveLength(2)
+    // Même famille de plaque, et le mot au même gabarit typographique.
+    expect(annuler.className).toContain('arena-plate')
+    expect(annuler.querySelector('.combat-word')).not.toBeNull()
+  })
+
+  it('rend la main quand on annule la recherche', async () => {
+    const user = userEvent.setup()
+    renderRow(boardWith([], ['maths']))
+
+    await user.click(combat())
+    await user.click(screen.getByRole('button', { name: 'Annuler' }))
+
+    expect(screen.queryByRole('dialog', { name: /Recherche/ })).toBeNull()
+    expect(push).not.toHaveBeenCalled()
+    // Le bouton est de nouveau là : on n'a rien perdu en passant par le rideau.
+    expect(combat()).toBeInTheDocument()
+  })
+
+  it('ne promet pas le classé quand les trophées ne comptent pas encore', () => {
+    // Le bouton part QUAND MÊME sur le duel de la matière (cf. duelTarget) :
+    // ce qui change sans `unlocked`, c'est le nom, pas la destination.
     renderRow(boardWith([], []))
 
     const cta = combat()
-    expect(cta.getAttribute('href')).toMatch(/^\/defi\/jeux\//)
-    // Il ne promet jamais le classé quand ce n'est pas le classé.
     expect(cta.getAttribute('aria-label')).not.toContain('Duel classé')
     expect(cta.getAttribute('aria-label')).toContain('en Maths')
   })
 
-  it('reste au seul mot COMBAT même quand un ami est en ligne', () => {
+  it('reste au seul mot DUEL même quand un ami est en ligne', () => {
     renderRow(boardWith([], ['maths']), { onlineFriendName: 'Emma' })
 
-    // La présence se dit par le point vert de la ligne d'information et par la
-    // pulsation de la plaque ; le nom de l'ami reste aux lecteurs d'écran.
-    expect(combat()).toHaveTextContent(/^COMBAT$/)
+    // La présence se dit par la PULSATION de la plaque ; le nom de l'ami reste
+    // aux lecteurs d'écran. Le pixel, lui, ne gagne pas un troisième rang :
+    // deux lignes sur un bouton, c'est déjà la limite.
+    expect(within(combat()).getByText('DUEL')).toBeInTheDocument()
+    expect(within(combat()).queryByText(/Emma/)).toBeNull()
     expect(combat().getAttribute('aria-label')).toContain('Emma est en ligne')
     expect(combat().getAttribute('aria-label')).toContain(
       'Duel classé en Maths',
@@ -150,9 +237,11 @@ describe('le bouton COMBAT', () => {
     const label = combat().getAttribute('aria-label') ?? ''
     expect(label).toContain('Contrôle dans 3 jours')
     expect(label).toContain('30 points sur 50')
-    // Le compteur a QUITTÉ le bouton : il vit sur la ligne d'information.
-    expect(screen.getByText(/30\/50 pts · \d+ j/)).toBeInTheDocument()
-    expect(combat()).toHaveTextContent(/^COMBAT$/)
+    // LA JAUGE DE CLAN A QUITTÉ L'ÉCRAN. Elle vivait sur la ligne
+    // d'information, qui flottait entre le socle et la barre et passait pour
+    // un quatrième bouton. Elle n'est plus dessinée nulle part ici — mais elle
+    // reste dite, en toutes lettres, à qui écoute la page.
+    expect(screen.queryByText(/pts ·/)).toBeNull()
   })
 
   it('n’invente aucun compteur sans semaine de clan', () => {
@@ -169,11 +258,14 @@ describe('la plaque Matière', () => {
     // destination change de nature en même temps que de matière.
     renderRow(boardWith([], ['maths']))
 
-    expect(combat()).toHaveAttribute('href', '/defi/programme/maths')
+    expect(combat().getAttribute('aria-label')).toContain('en Maths')
 
     await pick(user, 'Anglais')
 
-    expect(combat()).not.toHaveAttribute('href', '/defi/programme/maths')
+    // La destination a suivi la plaque : elle se lit dans l'étiquette, le
+    // bouton ne portant plus de `href` depuis qu'il ouvre le rideau.
+    expect(combat().getAttribute('aria-label')).toContain('en Anglais')
+    expect(combat().getAttribute('aria-label')).not.toContain('en Maths')
     expect(
       screen.getByRole('button', { name: /^Matière du duel : Anglais/ }),
     ).toBeInTheDocument()
@@ -197,6 +289,69 @@ describe('la plaque Matière', () => {
     }
   })
 
+  it('porte l’illustration « Modes », et non un pictogramme de trait', () => {
+    // `renderRow` ne monte pas le flanc gauche : on rend ModesSheet lui-même,
+    // sinon le test chercherait une plaque absente de l'arbre.
+    render(<ModesSheet todayKey="2026-08-23" />)
+
+    const plaque = screen.getByRole('button', { name: /^Modes de jeu/ })
+    const dessin = plaque.querySelector('img')
+    expect(dessin?.getAttribute('src')).toContain('/images/defi/icones/modes-v2')
+    // UN SEUL FOND, ET L'ILLUSTRATION DESSUS. Trois états successifs ont été
+    // essayés : posée sur la plaque violette elle disparaissait (violet sur
+    // violet) ; sur un médaillon crème elle se lisait, mais l'œil comptait
+    // trois épaisseurs — cadre, disque, dessin — et le disque lui volait la
+    // moitié de la plaque. La plaque est désormais claire elle-même : plus de
+    // disque, et le dessin passe de 48 à 64 px.
+    expect(dessin?.className).toContain('size-16')
+    expect(dessin?.parentElement?.className).toContain('arena-plate--clair')
+    // Un seul fond, donc : la plaque le porte, rien d'autre.
+    expect(dessin?.parentElement?.getAttribute('style')).toMatch(/background/)
+    // Le mot a QUITTÉ le pixel — mais pas l'étiquette lue à voix haute.
+    expect(within(plaque).queryByText(/^Modes$/)).toBeNull()
+    expect(plaque.getAttribute('aria-label')).toMatch(/Modes de jeu/)
+  })
+
+  it('montre la matière en ILLUSTRATION, sur son médaillon pastel', () => {
+    renderRow(boardWith([], ['maths']))
+
+    const plaque = screen.getByRole('button', { name: /^Matière du duel :/ })
+    const dessin = plaque.querySelector('img')
+    // La vignette, la MÊME que dans Réviser : une matière, un seul visage.
+    expect(dessin?.getAttribute('src')).toContain('/images/matieres/vignettes/')
+    // LA PLAQUE PORTE LE PASTEL DE LA MATIÈRE — un seul fond, et il change à
+    // chaque cran de la roulette. C'est ce qui rend le défilement visible
+    // avant même qu'on ait reconnu l'illustration.
+    expect(plaque.className).toContain('arena-plate--clair')
+    expect(plaque.getAttribute('style')).toMatch(/linear-gradient/)
+    // Même masse que l'icône Modes : cf. son jumeau plus haut.
+    expect(dessin?.className).toContain('size-16')
+    // Le mot a QUITTÉ le pixel — mais pas l'étiquette lue à voix haute.
+    expect(within(plaque).queryByText(/^Matière$/)).toBeNull()
+    expect(plaque.getAttribute('aria-label')).toMatch(/Matière du duel/)
+  })
+
+  it('fait défiler les matières par les deux triangles, en tournant en rond', async () => {
+    const user = userEvent.setup()
+    const board = boardWith([], [])
+    renderRow(board, {}, board[0].slug)
+
+    const nom = () =>
+      screen
+        .getByRole('button', { name: /^Matière du duel :/ })
+        .getAttribute('aria-label')
+
+    expect(nom()).toContain(board[0].subject)
+
+    await user.click(screen.getByRole('button', { name: 'Matière suivante' }))
+    expect(nom()).toContain(board[1].subject)
+
+    // Et on reboucle : depuis la PREMIÈRE, « précédente » mène à la dernière.
+    await user.click(screen.getByRole('button', { name: 'Matière précédente' }))
+    await user.click(screen.getByRole('button', { name: 'Matière précédente' }))
+    expect(nom()).toContain(board[board.length - 1].subject)
+  })
+
   it('range les matières par ordre alphabétique', () => {
     const board = boardWith([], [])
     renderRow(board)
@@ -212,22 +367,22 @@ describe('la plaque Matière', () => {
     ])
   })
 
-  it('nomme la matière courante sur la ligne d’information, jamais sur le bouton', async () => {
+  it('nomme la matière courante DANS le bouton, et la met à jour', async () => {
+    // L'inverse était vrai : la matière vivait sur une ligne d'information
+    // au-dessus, et le bouton n'avait droit qu'à un mot. Cette ligne flottait
+    // entre le socle du personnage et la barre, avec un fond sombre qui la
+    // faisait ressembler à un quatrième bouton — d'où sa rentrée ici.
     const user = userEvent.setup()
-    const board = boardWith([], [])
+    const board = boardWith([], ['maths'])
     const last = board[board.length - 1].subject
-    renderRow(board, {}, 'maths')
+    renderRow(board)
 
-    // Deux occurrences attendues : la pastille de la ligne d'information, et la
-    // région vivante qui annonce le changement aux lecteurs d'écran.
-    expect(screen.getAllByText('Maths').length).toBeGreaterThan(0)
-    expect(within(combat()).queryByText('Maths')).not.toBeInTheDocument()
+    expect(within(combat()).getByText('Maths')).toBeInTheDocument()
 
     await pick(user, last)
 
-    expect(screen.getAllByText(last).length).toBeGreaterThan(0)
-    expect(combat()).toHaveTextContent(/^COMBAT$/)
-    expect(combat().getAttribute('aria-label')).toContain(`en ${last}`)
+    expect(within(combat()).getByText(last)).toBeInTheDocument()
+    expect(within(combat()).queryByText('Maths')).toBeNull()
   })
 
   it('rouvre sur la matière de la session précédente, pas sur celle du serveur', async () => {

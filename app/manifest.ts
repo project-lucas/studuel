@@ -16,14 +16,25 @@ export default function manifest(): MetadataRoute.Manifest {
     display: "standalone",
     // `background_color` = fond du splash SYSTÈME (celui que l'OS affiche
     // pendant le lancement, avant le moindre pixel de l'app). Il doit donc
-    // s'accorder au HAUT de notre propre écran de chargement — violet profond
-    // de public/images/splash.webp une fois son voile de lecture appliqué — et
-    // NON au crème de l'app : sinon le lancement enchaîne deux rideaux, crème
-    // puis violet, avec une coupure franche entre les deux. L'élève doit voir
-    // un seul rideau, du tap sur l'icône jusqu'au hub.
+    // s'accorder au HAUT de notre propre écran de chargement — et NON au crème
+    // de l'app : sinon le lancement enchaîne deux rideaux, crème puis violet,
+    // avec une coupure franche entre les deux. L'élève doit voir un seul
+    // rideau, du tap sur l'icône jusqu'au hub.
+    //
+    // LA VALEUR EST MESURÉE, PAS ESTIMÉE. Elle valait #2e1d52, réglée à l'œil
+    // sur « le violet profond de splash.webp » — mais le haut de cet écran
+    // n'est pas la couleur brute de l'image : le voile de lecture
+    // (`.splash-veil`, globals.css) la recouvre à 55 % d'un rgba(28,12,61).
+    //   haut de splash.webp .......... #31265e
+    //   sous le voile à 55 % ......... #25184c   ← ce qu'on voit vraiment
+    // L'écart avec #2e1d52 était visible : le rideau système s'éclaircissait
+    // d'un cran au moment où le nôtre prenait la main, et ce sursaut est
+    // exactement ce qui faisait lire DEUX écrans là où il n'y en a qu'un.
+    // À resynchroniser si l'illustration ou le voile changent.
+    //
     // (Contrepartie assumée : un compte non connecté part sur /bienvenue en
     // crème, avec une transition moins douce — cas rare pour une app installée.)
-    background_color: "#2e1d52",
+    background_color: "#25184c",
     // Barre de statut : valeur figée du token --primary de globals.css (le
     // manifest ne peut pas lire les variables CSS). À resynchroniser à la main
     // si le violet de marque change.

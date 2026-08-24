@@ -369,3 +369,64 @@ describe('ChapterList — recherche', () => {
     expect(screen.getByText('« Art », Yasmina Reza')).toBeTruthy()
   })
 })
+
+// LE PROJECTEUR, AU NIVEAU DU CHAPITRE.
+//
+// Ce qu'il garde : déplier un chapitre efface les autres, exactement comme
+// ouvrir une fiche efface ses voisines — un seul geste, une seule réponse. Et
+// il ne s'allume que sur un clic : la page ne s'ouvre pas déjà atténuée sous
+// prétexte qu'un chapitre est déplié par défaut.
+
+const EFFACE = 'opacity-50'
+
+/** Le bloc d'un chapitre, atteint par son titre. */
+const bloc = (titre: string) =>
+  screen.getByText(titre).closest('[class*="bg-card/60"]') as HTMLElement
+
+const rendre = () =>
+  render(
+    <ChapterList
+      chapters={anglais}
+      resume={null}
+      subjectSlug="anglais"
+      subjectName="Anglais"
+      grade="Terminale"
+    />,
+  )
+
+describe('ChapterList — le projecteur sur le chapitre', () => {
+  it('n’efface rien à l’arrivée', () => {
+    rendre()
+    expect(bloc('Le groupe nominal').className).not.toContain(EFFACE)
+    expect(bloc('Le groupe verbal').className).not.toContain(EFFACE)
+    expect(bloc('La phrase').className).not.toContain(EFFACE)
+  })
+
+  it('déplier un chapitre efface les autres', async () => {
+    const user = userEvent.setup()
+    rendre()
+    await user.click(screen.getByText('Le groupe verbal'))
+    expect(bloc('Le groupe verbal').className).not.toContain(EFFACE)
+    expect(bloc('Le groupe nominal').className).toContain(EFFACE)
+    expect(bloc('La phrase').className).toContain(EFFACE)
+  })
+
+  it('le replier rend la page à tout le monde', async () => {
+    const user = userEvent.setup()
+    rendre()
+    await user.click(screen.getByText('Le groupe verbal'))
+    await user.click(screen.getByText('Le groupe verbal'))
+    expect(bloc('Le groupe nominal').className).not.toContain(EFFACE)
+    expect(bloc('Le groupe verbal').className).not.toContain(EFFACE)
+    expect(bloc('La phrase').className).not.toContain(EFFACE)
+  })
+
+  it('le projecteur passe au dernier chapitre ouvert', async () => {
+    const user = userEvent.setup()
+    rendre()
+    await user.click(screen.getByText('Le groupe verbal'))
+    await user.click(screen.getByText('La phrase'))
+    expect(bloc('La phrase').className).not.toContain(EFFACE)
+    expect(bloc('Le groupe verbal').className).toContain(EFFACE)
+  })
+})

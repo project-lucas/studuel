@@ -5,7 +5,6 @@ import type { Tier } from '@/lib/subscription'
 import ModesSheet from '@/components/defi/ModesSheet'
 import CombatButton from '@/components/defi/CombatButton'
 import SubjectPlate from '@/components/defi/SubjectPlate'
-import CombatMeta from '@/components/defi/CombatMeta'
 import ArenaActionBar from '@/components/defi/ArenaActionBar'
 import TrophyRoadSheet from '@/components/defi/TrophyRoadSheet'
 import DuelSubjectProvider from '@/components/defi/DuelSubjectProvider'
@@ -26,7 +25,6 @@ import ArenaHud, {
   type RailTile,
 } from '@/components/defi/ArenaHud'
 import ArenaHero from '@/components/defi/ArenaHero'
-import RankCard from '@/components/defi/RankCard'
 import {
   buildSubjectLadders,
   defaultSubject,
@@ -47,7 +45,6 @@ import {
   Crown,
   Gift,
   // Aliasé : `School` est déjà le TYPE d'une école (lib/clan) dans ce fichier.
-  School as SchoolIcon,
 } from 'lucide-react'
 import {
   MOCK_LEAGUE,
@@ -265,8 +262,6 @@ export default async function DefiPage() {
   let clanWeek: ClanWeekBoard | null = null
   let clanReward: { weekKey: string; label: string } | null = null
   let season: SeasonState | null = null
-  // Identité du socle : le prénom vit SOUS le personnage, plus dans le HUD.
-  let heroName: string | null = null
   // LA TRAQUE (212) : une jauge par matière, remplie en révisant. Vide tant que
   // la migration n'est pas passée — la tuile Boss affiche alors une carte
   // d'invitation à réviser, jamais une erreur.
@@ -382,8 +377,9 @@ export default async function DefiPage() {
     friendRequests = mapFriendsOverview(
       Array.isArray(overviewRes.data) ? overviewRes.data : [],
     ).incoming.length
+    // Le prénom ne sert plus au socle (la pastille en est partie) mais reste
+    // nécessaire aux classements, où il identifie la ligne de l'élève.
     const firstName = String(profile.full_name ?? '').split(' ')[0] || 'Moi'
-    heroName = firstName
     const level = schoolLevelForGrade(profile.grade_level ?? null)
     const schoolId = activeSchoolId(profile, profile.grade_level ?? null)
 
@@ -639,8 +635,7 @@ export default async function DefiPage() {
       // portaient le même dessin — on ne savait plus laquelle ouvrait quoi.
       id: 'classements',
       label: 'Classements',
-      image: '/images/defi/icones/classement.webp',
-      imageIsTile: true,
+      image: '/images/defi/icones/classement-v2.webp',
       sub: rankingPreview,
       sheetTitle: 'Classements',
       sheetContent: <RankingTabs boards={boards} clanLabel={clanLabel} />,
@@ -651,8 +646,7 @@ export default async function DefiPage() {
       // comme un doublon).
       id: 'ligue',
       label: 'Ligue',
-      image: '/images/defi/icones/ligues.webp',
-      imageIsTile: true,
+      image: '/images/defi/icones/ligues-v2.webp',
       sub: leaguePreview,
       sheetTitle: league.name,
       sheetContent: <WeeklyLeague league={league} isDemo={leagueIsDemo} />,
@@ -664,7 +658,7 @@ export default async function DefiPage() {
       // Amis, Gift pour le coffre) — un dessin, un sens.
       id: 'tournoi',
       label: 'Tournoi des écoles',
-      icon: <SchoolIcon className={ORB_ICON} strokeWidth={ORB_STROKE} />,
+      image: '/images/defi/icones/tournoi-v2.webp',
       dividerBefore: true,
       sheetTitle: 'Tournoi des écoles',
       sheetContent: (
@@ -721,8 +715,7 @@ export default async function DefiPage() {
       // porte d'entrée plutôt qu'un réglage qui n'existe pas encore pour lui.
       id: 'reglages',
       label: user ? 'Paramètres' : 'Se connecter',
-      image: '/images/defi/icones/reglages.webp',
-      imageIsTile: true,
+      image: '/images/defi/icones/reglages-v2.webp',
       dividerBefore: true,
       href: user ? '/compte' : '/login',
     },
@@ -740,8 +733,7 @@ export default async function DefiPage() {
         friendRequests > 0
           ? `Amis — ${friendRequests} demande${friendRequests > 1 ? 's' : ''} en attente`
           : 'Amis',
-      image: '/images/defi/icones/amis.webp',
-      imageIsTile: true,
+      image: '/images/defi/icones/amis-v2.webp',
       badge: friendRequests > 0 ? String(friendRequests) : undefined,
       badgeTone: 'alert',
       href: '/amis',
@@ -776,8 +768,7 @@ export default async function DefiPage() {
           {
             id: 'quetes',
             label: `Quêtes du jour — ${doneCount(questViewList)} sur ${questViewList.length} faites`,
-            image: '/images/defi/icones/quetes.webp',
-            imageIsTile: true,
+            image: '/images/defi/icones/quetes-v2.webp',
             badge: questBadge ? String(questBadge.count) : undefined,
             badgeTone: questBadge?.tone,
             sheetTitle: 'Quêtes du jour',
@@ -807,8 +798,7 @@ export default async function DefiPage() {
             // contraste qui fait l'événement — d'où deux illustrations, et pas
             // une seule : le buste (posé sur la tuile ambre de l'urgence) ou le
             // médaillon, qui porte déjà son propre cadre.
-            image: traqueFeatured?.boss.image ?? '/images/defi/icones/boss.webp',
-            imageIsTile: !traqueFeatured,
+            image: traqueFeatured?.boss.image ?? '/images/defi/icones/boss-v2.webp',
             family: traqueFeatured ? ('amber' as const) : undefined,
             badge: traqueReady > 0 ? String(traqueReady) : undefined,
             badgeTone: 'alert' as const,
@@ -903,13 +893,14 @@ export default async function DefiPage() {
             // Elle a absorbé le module de rang qui occupait la hauteur au-dessus
             // du CTA — les deux lisaient les mêmes compteurs.
             roadSlot={<TrophyRoadSheet key="road" />}
-            profileSlot={profileData ? <ProfileChip data={profileData} /> : null}
-            // key : élément serveur rendu dans la colonne du HUD client — sans
-            // clé, React (SSR) le signale comme enfant de liste anonyme.
-            rankSlot={<RankCard key="rank" trophies={trophies} />}
+            profileSlot={
+              profileData ? (
+                <ProfileChip data={profileData} trophies={trophies} />
+              ) : null
+            }
             seasonSlot={seasonBand}
           >
-            <ArenaHero name={heroName} boss={traqueFeatured?.boss ?? null} />
+            <ArenaHero boss={traqueFeatured?.boss ?? null} />
           </ArenaHud>
 
           {/* Le GROUPE d'action du bas : CTA duel + ligne CLASSÉ / MODES, soudés
@@ -934,19 +925,15 @@ export default async function DefiPage() {
                 rayon et de même ombre portée. Ce qui distingue le centre est sa
                 couleur et sa largeur, jamais sa profondeur.
 
-                Au-dessus, la ligne d'information (CombatMeta) porte ce qui
-                vivait DANS le bouton : la matière courante, la contribution de
-                clan et sa jauge. Elle est calée sur la largeur exacte du bouton
-                — elle documente celui-là, pas la barre entière — et ne porte
-                aucun relief : sur cet écran, le biseau dit « ceci se touche ».
+                La matière courante est RENTRÉE dans le bouton, en second rang
+                sous le mot. La ligne d'information qui la portait au-dessus
+                flottait entre le socle et la barre, et son fond sombre la
+                faisait passer pour un quatrième bouton.
 
                 Le flanc droit ne mène plus à la Route des trophées (partie dans
                 le HUD) : il porte la MATIÈRE, et un tap ouvre la feuille de
                 sélection. Modes garde le flanc gauche. */}
             <ArenaActionBar
-              meta={
-                <CombatMeta goal={goal} onlineFriendName={onlineFriendName} />
-              }
               left={<ModesSheet todayKey={todayKey} liveDuel={!!user} />}
               center={
                 <CombatButton

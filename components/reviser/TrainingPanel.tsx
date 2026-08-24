@@ -6,11 +6,21 @@ import { BossFace } from '@/components/reviser/BossArena'
 import GardienBadge from '@/components/reviser/GardienBadge'
 import SubjectBossPanel from '@/components/reviser/SubjectBossPanel'
 import SubjectGames from '@/components/reviser/SubjectGames'
+import NiveauOrthographe from '@/components/francais/NiveauOrthographe'
+import NiveauOrthographeCarte from '@/components/francais/NiveauOrthographeCarte'
 import { sfx } from '@/lib/sounds'
 import { bossForSubject } from '@/lib/bosses'
 import GemIcon from '@/components/ui/GemIcon'
 import { peutAffronter, type GardienVue } from '@/lib/reviser/gardien'
 import type { ModeQuestion } from '@/lib/defi-modes'
+
+/**
+ * Le slug de la matière qui porte le test de niveau en orthographe.
+ *
+ * Une constante et non un `subject.slug === 'francais'` semé dans le JSX : le
+ * jour où l'anglais aura le sien, c'est ici qu'on regardera.
+ */
+const MATIERE_TEST_NIVEAU = 'francais'
 
 /**
  * L'onglet « Mode de jeu » : tout ce qui se JOUE dans la matière, à un seul
@@ -51,11 +61,18 @@ export default function TrainingPanel({
   gardien: GardienVue
 }) {
   const [fighting, setFighting] = useState(false)
+  // Le test de niveau prend le panneau entier, comme le combat de boss : neuf
+  // questions sans correction ne se lisent pas dans une carte de trois lignes.
+  const [testNiveau, setTestNiveau] = useState(false)
   // La carte porte son propre gardien ; on ne retombe sur le catalogue que
   // lorsque la traque est illisible (migration 212 absente), cas où le billet
   // garde sa forme d'avant.
   const boss = gardien.boss ?? bossForSubject(subject.slug)
   const ouvert = gardien.etat === 'absent' || peutAffronter(gardien)
+
+  if (testNiveau) {
+    return <NiveauOrthographe onClose={() => setTestNiveau(false)} />
+  }
 
   if (fighting) {
     return (
@@ -132,6 +149,14 @@ export default function TrainingPanel({
           </span>
         </div>
       )}
+
+      {/* LE TEST DE NIVEAU, en tête des jeux et non dedans : ce n'est pas un
+          jeu, c'est la mesure qui dit lesquels valent la peine. Il se passe une
+          fois puis se refait de loin en loin — d'où la carte sobre, qui ne
+          réclame pas l'attention chaque jour comme un billet de mode de jeu. */}
+      {subject.slug === MATIERE_TEST_NIVEAU ? (
+        <NiveauOrthographeCarte onOpen={() => setTestNiveau(true)} />
+      ) : null}
 
       <SubjectGames subject={subject} />
     </>

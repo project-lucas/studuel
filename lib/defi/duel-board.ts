@@ -149,27 +149,39 @@ export function rankedBlockedReason(entry: DuelSubject): string | null {
 }
 
 /**
- * Ce que lance COMBAT sur cette matière — le duel classé quand il est ouvert,
- * sinon le jeu de la matière qui rapporte le plus.
+ * Ce que lance DUEL sur cette matière — LE DUEL DE LA MATIÈRE, toujours, dès
+ * lors que son programme est jouable dans la classe de l'élève.
  *
- * LE REPLI N'EST PAS UN LOT DE CONSOLATION, c'est la condition pour que l'arène
- * ait un appel à l'action le jour de l'inscription. Un compte neuf n'a terminé
- * aucun chapitre, donc aucune matière n'est ouverte au classé : un bouton qui
- * ne fait que dire « termine un chapitre » laisserait l'écran d'accueil du jeu
- * sans jeu. Les salons, eux, sont jouables tout de suite et se jouent contre un
- * fantôme réel (lib/jeux/ghost-server) — c'est bien un duel dans la matière
- * choisie, et le bouton le NOMME au lieu de laisser croire au classé.
+ * CE QUI A CHANGÉ, ET POURQUOI. Le duel ne partait sur le programme de la
+ * matière que si le CLASSÉ y était ouvert (`unlocked`, un chapitre terminé) ;
+ * sinon il basculait sur le jeu de salon le plus rentable. Résultat vu à
+ * l'usage : on choisissait « Français » sur la roulette, on tapait le bouton de
+ * combat, et on tombait sur une Chasse à la faute. Le bouton central de l'arène
+ * ne tenait pas sa promesse — il envoyait dans un mode de jeu, pas en duel dans
+ * la matière demandée.
+ *
+ * Le verrou `unlocked` n'a jamais gardé la ROUTE, seulement le classement :
+ * `/defi/programme/[matiere]` apparie un adversaire (fantôme d'ami, joueur à
+ * portée de trophées, ou entraîneur calibré) pour n'importe qui. Il ne
+ * commande donc plus la destination, seulement le NOM de ce qui se joue :
+ * « Duel classé » quand les trophées comptent, le nom du programme sinon.
+ *
+ * LE REPLI RESTE — mais à sa vraie place : quand la matière n'a PAS de
+ * programme jouable dans cette classe (`programmeHref` nul, cf. `lib/defi/
+ * roster`). Là, un jeu de salon est bien la seule chose à lancer, et c'est
+ * toujours ce qui évite d'avoir un écran d'accueil sans jeu le jour de
+ * l'inscription. Ce qui a disparu, c'est le détour quand le duel existait.
  *
  * À gain égal, le compteur le plus bas gagne : on pousse vers ce qui n'a jamais
  * été travaillé, exactement comme `bestNextGame` sur la Route.
  */
 export function duelTarget(entry: DuelSubject): DuelTarget | null {
   const programme = rankedGame(entry)
-  if (entry.unlocked && programme?.href) {
+  if (programme?.href) {
     return {
       href: programme.href,
-      label: RANKED_LABEL,
-      isRanked: true,
+      label: entry.unlocked ? RANKED_LABEL : programme.name,
+      isRanked: entry.unlocked,
       nextWin: programme.nextWin,
     }
   }

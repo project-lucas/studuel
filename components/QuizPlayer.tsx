@@ -2,13 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { recordTestSession } from '@/app/test/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import { sfx, buzz } from '@/lib/sounds'
 import { bestStreak, COMBO_HOT } from '@/lib/juice'
 import { missedQuestions, canRetryMissed } from '@/lib/quiz-retry'
-import { verdictFor } from '@/lib/verdict'
+import { verdictFor, verdictSrc } from '@/lib/verdict'
 import ComboBadge from '@/components/ComboBadge'
 import { sessionXp } from '@/lib/xp'
 import { SoundToggle } from '@/components/FlashcardPlayer'
@@ -17,6 +18,7 @@ import QuitGuardButton from '@/components/QuitGuardButton'
 import ProgressRing from '@/components/ProgressRing'
 import AnswerBoard from '@/components/jeux/AnswerBoard'
 import { subjectRobe } from '@/lib/subject-style'
+import { layoutForQuestion } from '@/lib/quiz-layout'
 import BossApparition from '@/components/defi/BossApparition'
 import QuizFeedbackMascotte from '@/components/QuizFeedbackMascotte'
 import { feedbackTitle, reactionSrc } from '@/lib/quiz-feedback'
@@ -25,6 +27,40 @@ import { CircleCheck, CircleX, RotateCcw, ArrowLeft, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import type { QuizQuestion } from '@/lib/types'
+
+/**
+ * LA FORME des deux boutons de reprise de l'écran de fin — commune aux deux,
+ * seule la ROBE les distingue.
+ *
+ * `max-w-52` les empêche de s'étirer sur un large écran ; `flex-1` leur donne
+ * la même part sur un étroit. `h-auto` + `whitespace-normal` laissent le
+ * libellé passer sur deux lignes plutôt que déborder — `size="lg"` fige sinon
+ * la hauteur à 44 px et rogne la seconde.
+ */
+const PLAQUE_REPRISE =
+  'h-auto min-h-11 max-w-52 flex-1 rounded-full px-4 py-2.5 text-center leading-tight whitespace-normal shadow-md'
+
+/**
+ * « Revoir mes erreurs » : le CORAIL, celui des pastilles ratées juste
+ * au-dessus. Le bouton et les pastilles qu'il propose de reprendre portent la
+ * même couleur — « les rouges, on les refait » se lit sans une ligne de texte.
+ *
+ * ASSOMBRI DE 15 %. Le corail de la charte (`--destructive`, #f1566c) est fait
+ * pour ÉCRIRE une alerte sur du crème, pas pour porter du blanc : mesuré, le
+ * blanc dessus ne donne que 3,34:1, sous le seuil AA de 4,5:1 pour du texte de
+ * cette taille. Un cran de noir le remonte à 4,94:1 sans changer sa teinte —
+ * c'est déjà l'idiome de la maison pour le socle des boutons (`.btn-chunky`
+ * mélange `black 30%`), pas une couleur inventée à côté de la palette.
+ */
+const ROBE_ERREURS =
+  'bg-[color-mix(in_oklch,var(--destructive),black_15%)] text-white hover:bg-[color-mix(in_oklch,var(--destructive),black_25%)]'
+
+/**
+ * « Refaire » : le VIOLET, couleur de l'action dans toute l'app. Il porte le
+ * blanc sans retouche (5,81:1 mesuré) — c'est même la paire pour laquelle le
+ * token `--primary-foreground` existe.
+ */
+const ROBE_REFAIRE = 'bg-primary text-primary-foreground hover:bg-primary/90'
 
 // Session de quiz (template « structure des cours ») : à chaque réponse, l'élève
 // voit tout de suite si c'est juste ou faux, la bonne réponse et l'explication,
@@ -36,6 +72,7 @@ export default function QuizPlayer({
   quizId,
   title,
   questions: allQuestions,
+  deck = null,
   subject = null,
   subjectColor = null,
   backHref = '/reviser',
@@ -45,6 +82,18 @@ export default function QuizPlayer({
   quizId: string
   title: string
   questions: QuizQuestion[]
+  /**
+   * Le paquet RÉELLEMENT SERVI, quand il est plus court que le quiz : la
+   * session d'entraînement composée par le moteur de sélection pour un élève
+   * qui a déjà passé ce quiz une fois (cf. `app/test/[id]/page.tsx`).
+   *
+   * `questions` reste le quiz ENTIER — c'est lui qui donne le dénominateur.
+   * Une session plus courte est donc `isPartial`, exactement comme un rejeu des
+   * erreurs : elle ne recompte pas dans la maîtrise du chapitre, mais elle
+   * nourrit la répétition espacée. Tout le mécanisme existait déjà ; il ne lui
+   * manquait qu'une seconde façon d'être déclenché.
+   */
+  deck?: QuizQuestion[] | null
   subject?: string | null
   /**
    * Couleur de la matière (`subjects.color`) — elle donne sa ROBE à la session,
@@ -68,7 +117,9 @@ export default function QuizPlayer({
 
   // Le paquet EN COURS. Il vaut le quiz complet, sauf après « Revoir mes
   // erreurs », où il ne contient plus que les questions ratées.
-  const [questions, setQuestions] = useState<QuizQuestion[]>(allQuestions)
+  const [questions, setQuestions] = useState<QuizQuestion[]>(
+    deck && deck.length > 0 ? deck : allQuestions,
+  )
   const [index, setIndex] = useState(0)
   // Choix de l'élève, question par question — la correction se lit dedans.
   const [choices, setChoices] = useState<number[]>([])
@@ -229,6 +280,9 @@ export default function QuizPlayer({
     const ratio = questions.length > 0 ? score / questions.length : 0
     const missed = missedQuestions(questions, choices)
     const v = verdictFor(ratio, gradeLevel)
+    // Y a-t-il des erreurs à revoir ? La réponse commande le LIBELLÉ comme la
+    // robe des deux boutons de reprise : calculée une fois, pas trois.
+    const peutRevoir = canRetryMissed(questions.length, missed.length)
 
     return (
       // `key` explicite : sans elle, le démontage de l'écran de question (et
@@ -267,10 +321,17 @@ export default function QuizPlayer({
               <h1 className="font-heading text-xl font-bold">Score du quiz</h1>
               <p className="mt-3 font-mono text-6xl font-bold tabular-nums">
                 {score}
-                <span className="text-2xl opacity-60"> / {questions.length}</span>
+                <span className="text-2xl text-muted-foreground">
+                  {' '}
+                  / {questions.length}
+                </span>
               </p>
 
-              {/* Une pastille par question : vert = juste, rouge = faux */}
+              {/* Une pastille par question. PLEINE = juste, ÉVIDÉE = ratée : la
+                  couleur ne doit pas être le seul porteur de l'information —
+                  un garçon sur douze ne distingue pas le vert du rouge, et
+                  cette app s'adresse d'abord à des collégiens. La forme le dit
+                  aussi, sans rien coûter en place. */}
               <div
                 className="mt-5 flex flex-wrap justify-center gap-1.5"
                 aria-label={`${score} bonne${score > 1 ? 's' : ''} réponse${score > 1 ? 's' : ''} sur ${questions.length}`}
@@ -283,7 +344,7 @@ export default function QuizPlayer({
                       'h-2.5 w-5 rounded-full',
                       choices[i] === q.correct_index
                         ? 'bg-success'
-                        : 'bg-destructive',
+                        : 'border-2 border-destructive bg-destructive/20',
                     )}
                   />
                 ))}
@@ -302,8 +363,13 @@ export default function QuizPlayer({
                   n'écrit RIEN — ni session, ni SRS (`finish` sort avant
                   `recordReviewAnswers`). Promettre « tes erreurs sont
                   reprogrammées » y serait donc un mensonge pur. */}
+              {/* `opacity-80` sur ce paragraphe le rendait GRIS PÂLE sur la
+                  carte blanche — sous le seuil de contraste, et illisible pour
+                  qui lit son téléphone au soleil. Le rôle « texte secondaire »
+                  a son token, calibré pour rester lisible. Même correction sur
+                  les trois lignes discrètes de ce panneau. */}
               {isPartial ? (
-                <p className="mt-4 text-sm opacity-80">
+                <p className="mt-4 text-sm text-pretty text-muted-foreground">
                   {record
                     ? "Séance d'entraînement : elle ne recompte pas dans ton score du quiz, mais tes erreurs sont bien reprogrammées."
                     : "Séance d'entraînement sur tes erreurs."}
@@ -311,25 +377,59 @@ export default function QuizPlayer({
               ) : null}
 
               {best >= COMBO_HOT ? (
-                <p className="mt-2 text-sm font-semibold opacity-90">
+                <p className="mt-2 text-sm font-semibold text-foreground">
                   🔥 Meilleure série : {best} d&apos;affilée
                 </p>
               ) : null}
 
-              {/* La mascotte réagit au score */}
-              <div className="mt-5 flex items-center gap-3 rounded-2xl bg-white/10 p-4 text-left">
-                <span className="text-4xl leading-none" aria-hidden="true">
-                  {v.emoji}
-                </span>
-                <p className="text-sm font-semibold">{v.message}</p>
+              {/* LA MASCOTTE RÉAGIT AU SCORE — en dessin, plus en emoji.
+                  L'emoji était rendu par la police du système (donc différent
+                  sur chaque téléphone) alors que la mascotte a déjà ses dix
+                  illustrations, montrées à chaque question dans la feuille de
+                  retour. L'écran de fin était le seul endroit où elle
+                  disparaissait, juste au moment où on le regarde le plus
+                  longtemps.
+
+                  `bg-white/10` était l'autre survivance du volet SOMBRE : sur
+                  une carte blanche, l'encadré n'existait tout simplement pas. */}
+              <div className="mt-8 flex flex-col items-center">
+                {/* LE CADRAGE. Le canevas des réactions est en 500×360 — large
+                    et haut pour contenir les poses bras écartés sans rien
+                    couper — donc la mascotte n'en occupe qu'une partie. Posée
+                    en vignette de 64 px, sa TÊTE tombait à une quinzaine de
+                    pixels : on ne voyait plus qui c'était. C'est la largeur du
+                    CADRE qu'il faut caler, jamais celle du personnage — même
+                    piège que dans la feuille de retour, et même remède : on
+                    donne au cadre la place qu'il réclame.
+
+                    ELLE SORT DE LA BULLE. Dans le flux avec une marge basse
+                    négative : c'est l'image qui décide de combien la bulle la
+                    recouvre, sans qu'aucun des deux n'ait à connaître la
+                    hauteur de l'autre. Le buste se coupe derrière le bord, la
+                    ligne d'épaules affleure — la mascotte a l'air de parler
+                    depuis la bulle au lieu d'y être rangée. */}
+                <Image
+                  src={verdictSrc(ratio)}
+                  alt=""
+                  aria-hidden="true"
+                  width={500}
+                  height={360}
+                  sizes="160px"
+                  className="relative z-10 -mb-8 h-auto w-40 max-w-full"
+                />
+                <div className="w-full rounded-2xl bg-muted px-4 pt-11 pb-4">
+                  <p className="text-sm font-semibold text-balance text-foreground">
+                    {v.message}
+                  </p>
+                </div>
               </div>
 
               {saved === true ? (
-                <p className="mt-3 text-xs opacity-80">
+                <p className="mt-3 text-xs text-muted-foreground">
                   ✓ Session enregistrée — ta série continue 🔥
                 </p>
               ) : saved === false ? (
-                <p className="mt-3 text-xs opacity-80">
+                <p className="mt-3 text-xs text-muted-foreground">
                   <Link href="/login" className="underline underline-offset-4">
                     Connecte-toi
                   </Link>{' '}
@@ -338,40 +438,47 @@ export default function QuizPlayer({
               ) : null}
             </div>
 
-            {/* « Revoir mes erreurs » d'abord : refaire les 8 questions déjà
-                sues pour retravailler les 2 ratées, personne ne le fait — et
-                les 2 ratées sont pourtant le seul contenu utile de la session. */}
-            {canRetryMissed(questions.length, missed.length) ? (
+            {/* LES REPRISES : DEUX PLAQUES PLEINES, CÔTE À CÔTE.
+                Elles étaient empilées et étirées d'un bord à l'autre — deux
+                barres qui pesaient autant que le score au-dessus, et dont la
+                seconde était écrite en BLANC sur le volet clair de la matière,
+                donc rendue, cliquable, et lisible par personne.
+
+                Même robe pour les deux : ce sont deux reprises de même rang,
+                l'ordre suffit à les distinguer (les erreurs à gauche, la place
+                où l'œil arrive). `items-stretch` leur donne la même hauteur
+                même quand un libellé passe sur deux lignes, ce qui arrive dès
+                qu'on est à l'étroit — d'où `whitespace-normal` et la hauteur
+                libre, la hauteur fixe de `size="lg"` rognerait la 2e ligne. */}
+            <div className="mt-5 flex items-stretch justify-center gap-3">
+              {/* « Revoir mes erreurs » en premier : refaire les 8 questions
+                  déjà sues pour retravailler les 2 ratées, personne ne le fait
+                  — et les 2 ratées sont pourtant le seul contenu utile de la
+                  session. */}
+              {peutRevoir ? (
+                <Button
+                  onClick={() => replay(missed)}
+                  className={cn(PLAQUE_REPRISE, ROBE_ERREURS)}
+                  size="lg"
+                >
+                  <RotateCcw className="size-4" /> Revoir mes {missed.length}{' '}
+                  erreur{missed.length > 1 ? 's' : ''}
+                </Button>
+              ) : null}
+
+              {/* UN SEUL MOT. « Refaire le quiz entier » passait sur deux
+                  lignes dès qu'on était à l'étroit, à côté d'un voisin qui
+                  tenait sur une : deux plaques de hauteurs différentes pour
+                  deux gestes de même rang. Et « entier » ne disait rien que la
+                  place du bouton ne dise déjà. */}
               <Button
-                onClick={() => replay(missed)}
-                className="mt-4 w-full rounded-full bg-card text-foreground shadow-md hover:bg-card/90"
+                onClick={restart}
+                className={cn(PLAQUE_REPRISE, ROBE_REFAIRE)}
                 size="lg"
               >
-                <RotateCcw className="size-4" /> Revoir mes {missed.length}{' '}
-                erreur{missed.length > 1 ? 's' : ''}
+                <RotateCcw className="size-4" /> Refaire
               </Button>
-            ) : null}
-
-            <Button
-              onClick={restart}
-              variant={
-                canRetryMissed(questions.length, missed.length)
-                  ? 'ghost'
-                  : 'default'
-              }
-              className={cn(
-                'mt-2 w-full rounded-full',
-                canRetryMissed(questions.length, missed.length)
-                  ? 'text-primary-foreground hover:bg-white/10'
-                  : 'bg-card text-foreground shadow-md hover:bg-card/90',
-              )}
-              size="lg"
-            >
-              <RotateCcw className="size-4" />{' '}
-              {questions.length === allQuestions.length
-                ? 'Recommencer'
-                : 'Refaire le quiz entier'}
-            </Button>
+            </div>
           </div>
         </div>
 
@@ -550,7 +657,11 @@ export default function QuizPlayer({
             correctIndex={question.correct_index}
             selected={selected}
             revealed={answered}
-            layout="liste"
+            // La disposition suit la FORME de la question, plus « liste » pour
+            // tout le monde : un vrai/faux s'ouvre en deux grandes plaques,
+            // quatre dates se rangent en damier, une définition garde ses
+            // lignes pleine largeur. Cf. `lib/quiz-layout`.
+            layout={layoutForQuestion(question)}
             onAnswer={choose}
           />
         </div>

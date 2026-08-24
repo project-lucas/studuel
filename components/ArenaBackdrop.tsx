@@ -31,7 +31,7 @@ import AnimatedBackground from '@/components/background/AnimatedBackground'
  * `?arena=dawn|morning|noon|afternoon|evening|night` pour forcer une plage
  * (ignoré en production).
  */
-export default function ArenaBackdrop() {
+export default function ArenaBackdrop({ anime = true }: { anime?: boolean } = {}) {
   const [period, setPeriod] = useState<ArenaPeriod | null>(null)
 
   useEffect(() => {
@@ -99,8 +99,18 @@ export default function ArenaBackdrop() {
           (bannières, feuilles sur canvas, torches, poussière dorée) — montée
           après les voiles pour rester bien lisible. Sans imageUrl : le décor
           horaire est déjà peint par les couches .arena-img ci-dessus. */}
-      <ArenaSky period={period} />
-      <AnimatedBackground />
+      {/* Les couches VIVANTES sont facultatives. Le rideau de recherche
+          d'adversaire remonte ce décor par-dessus le HUD pour le masquer
+          (cf. MatchmakingOverlay) : il n'a besoin que de l'illustration. Faire
+          tourner un SECOND ciel et un SECOND canvas de particules coûterait des
+          images par seconde exactement au moment où l'app charge la route du
+          duel — c'est-à-dire au pire moment possible. */}
+      {anime ? (
+        <>
+          <ArenaSky period={period} />
+          <AnimatedBackground />
+        </>
+      ) : null}
     </>
   )
 }

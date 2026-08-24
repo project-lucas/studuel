@@ -127,7 +127,6 @@ interface ArenaHudProps {
   /** Pastille niveau + XP, calée dans l'ANGLE haut-gauche (façon Clash Royale). */
   profileSlot?: ReactNode
   /** Cartouche de rang, JUSTE SOUS la pastille de niveau (même colonne). */
-  rankSlot?: ReactNode
   /** Bandeau de saison — la bande du haut, centrée entre niveau et pièces. */
   seasonSlot?: ReactNode
   /** Le centre de la scène (la scène du héros, calée en bas). */
@@ -163,7 +162,6 @@ export default function ArenaHud({
   premiumSlot,
   roadSlot,
   profileSlot,
-  rankSlot,
   seasonSlot,
   children,
 }: ArenaHudProps) {
@@ -253,28 +251,23 @@ export default function ArenaHud({
         {profileSlot}
       </div>
 
-      {/* RANGÉE 2, à gauche : la cartouche de rang, calée juste sous la
-          pastille de niveau — en face de la barrette de boutons de l'angle
-          droit (même hauteur, comme la bannière de nom face aux boutons chez
-          Clash Royale). */}
-      <div className="fixed top-16 left-3 z-40 md:top-[4.5rem] md:left-56">
-        {rankSlot}
-      </div>
-
-      {/* RANGÉE 3 : le bandeau de SAISON, pleine largeur. `absolute` (et non
-          `fixed`) pour rester dans la colonne de l'arène. Il occupait le cran
-          juste sous les monnaies ; ce cran appartient désormais à la barrette
-          de boutons, il descend donc d'une rangée — sans rien perdre, il reste
-          la bande qui traverse l'écran. */}
+      {/* LA SAISON REJOINT LA COLONNE DE GAUCHE, sous le rang.
+          Elle traversait l'écran en pleine largeur, à mi-hauteur : le SEUL
+          objet posé au-dessus du podium, là où le regard doit trouver la
+          mascotte. Et le plus plat de tous — une barrette fine et une jauge,
+          par-dessus une illustration peinte.
+          Chez Clash Royale, le Pass tient le bloc du coin ; rien ne flotte
+          au-dessus de l'arène. Elle prend donc le troisième cran de la colonne
+          d'identité (niveau, rang, saison) et la scène redevient libre. */}
       {seasonSlot ? (
-        <div className="absolute inset-x-0 top-0 z-30 mt-[4.75rem] md:mt-[7.75rem]">
+        <div className="fixed top-[4.25rem] left-3 z-40 w-[14.5rem] md:top-[5.25rem] md:left-56 md:w-64">
           {seasonSlot}
         </div>
       ) : null}
 
       {/* RANGÉE 4 : le rail des missions, qui descend le long de la scène. */}
       {leftTiles.length > 0 ? (
-        <div className="fixed top-[10.5rem] left-3.5 z-40 flex flex-col gap-4 md:top-44 md:left-[14.125rem]">
+        <div className="fixed top-[9rem] left-3.5 z-40 flex flex-col gap-4 md:top-[10rem] md:left-[14.125rem]">
           {leftTiles.map((tile) => (
             <RailTileFace key={tile.id} tile={tile} onOpen={openSheet} />
           ))}
@@ -324,7 +317,7 @@ export default function ArenaHud({
                   }`
             }
             title="Menu de l'arène"
-            className="olympe-glass defi2-press relative grid size-11 cursor-pointer place-items-center rounded-full focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+            className="olympe-glass olympe-glass--sculpte defi2-press relative grid size-11 cursor-pointer place-items-center rounded-full focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
           >
             <motion.span
               className="col-start-1 row-start-1 grid place-items-center"
@@ -384,7 +377,7 @@ export default function ArenaHud({
           {menuOpen ? (
             <motion.ul
               key="menu"
-              className="olympe-glass arena-menu max-h-[calc(100dvh-12rem)] w-[15.5rem] overflow-y-auto"
+              className="olympe-glass olympe-glass--sculpte arena-menu max-h-[calc(100dvh-12rem)] w-[15.5rem] overflow-y-auto"
               variants={listVariants}
               initial="closed"
               animate="open"
@@ -484,7 +477,7 @@ function RailTileFace({
               corner ? 'size-11' : 'size-[52px]',
             )
           : corner
-            ? 'hud-face olympe-glass relative grid size-11 place-items-center rounded-full text-[#faf6ef]'
+            ? 'hud-face olympe-glass olympe-glass--sculpte relative grid size-11 place-items-center rounded-full text-[#faf6ef]'
             : `hud-face rail-tile rail-tile-${family} size-[52px]`
       }
     >

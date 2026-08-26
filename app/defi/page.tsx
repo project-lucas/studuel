@@ -30,9 +30,10 @@ import {
   defaultSubject,
   type SubjectLadder,
 } from '@/lib/subject-rank'
-import { getSubjectPeaks } from '@/lib/subject-rank-server'
 import { unlockedSubjectSlugs } from '@/lib/subject-unlock'
 import { getChapterMastery } from '@/lib/mastery'
+import { fetchAreneVague1 } from '@/lib/arene-vague1'
+import { reviewQueue } from '@/lib/srs'
 import WeeklyLeague from '@/components/defi/WeeklyLeague'
 import LeaguePromotionWatch from '@/components/defi/LeaguePromotionWatch'
 import RankingTabs from '@/components/defi/RankingTabs'
@@ -54,7 +55,6 @@ import {
 } from '@/lib/defi/mock-data'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
-import { readRowTolerant } from '@/lib/profile-read'
 import {
   avatarEmojiFor,
   buildLiveSessions,
@@ -77,13 +77,13 @@ import {
 import { subjectsWithContentAt } from '@/lib/subject-visibility'
 import { normalizeRankedHistory } from '@/lib/defi/history'
 import { normalizeTournamentBoard, type TournamentBoard } from '@/lib/tournament'
-import { getReviewItems, reviewQueue } from '@/lib/srs'
 import { toDayKey } from '@/lib/streak'
 import {
   normalizeRanking,
   normalizeSchool,
   activeSchoolId,
   schoolLevelForGrade,
+  type SchoolLevel,
   rankHeadline,
   ordinalFr,
   type Ranking,
@@ -98,16 +98,13 @@ import {
   trackView,
   type SeasonState,
 } from '@/lib/saison'
-import { fetchSeasonState } from '@/lib/saison-server'
 import SeasonTrack from '@/components/defi/SeasonTrack'
 import SeasonBanner from '@/components/defi/SeasonBanner'
 import {
-  fetchClanWeekBoard,
-  hasClaimedClanWeek,
   lastWeekKey,
 } from '@/lib/clan-week-server'
 import { fetchQuestViews, fetchClaimedQuestIds } from '@/lib/quests-server'
-import { buildTraqueBoard, fetchGauges } from '@/lib/traque-server'
+import { buildTraqueBoard } from '@/lib/traque-server'
 import { doneCount, type QuestView } from '@/lib/quests'
 import { resolveCurrentChapter } from '@/lib/chapitre-courant-server'
 import { reasonLabel } from '@/lib/chapitre-courant'
@@ -129,21 +126,6 @@ export const dynamic = 'force-dynamic'
 // Les colonnes du profil qu'utilise l'arène, toutes migrations confondues :
 // trophies (079), college/lycee_school_id (159). Absentes → `undefined`, et
 // l'écran dégrade comme avant (0 trophée, pas d'école).
-type DefiProfileRow = {
-  full_name: string | null
-  grade_level: string | null
-  trophies: number | null
-  primaire_school_id: string | null
-  college_school_id: string | null
-  lycee_school_id: string | null
-  // Depuis que l'arène est la page d'accueil de l'app (app/page.tsx), c'est ici
-  // qu'atterrissent les comptes PARENT : il faut les router vers leur espace.
-  profile_type: string | null
-  // Palier d'abonnement : décide de la pastille Studuel+ du HUD (on ne propose
-  // pas de s'abonner à qui l'est déjà).
-  subscription_tier: string | null
-}
-
 // Icône d'une entrée du menu burger. UNE seule famille (Lucide), UNE seule
 // taille, UNE seule graisse : c'est la régularité qui fait le menu propre. Les
 // objets illustrés (coupe, coffre) reviendront plus tard, mais tous ensemble —
@@ -287,7 +269,26 @@ export default async function DefiPage() {
     // Le profil lui-même tenait en deux requêtes sur la même ligne, pour isoler
     // les colonnes de migrations tardives (trophies de la 079, les school_id de
     // la 159). `readRowTolerant` assure la même tolérance en une seule.
-    const [
+    // La vague 1 tient désormais en UNE lecture groupée (`arene_accueil`,
+    // migration 322) au lieu de vingt. La latence était déjà bonne — elles
+    // étaient parallélisées — mais le NOMBRE ne l'était pas : à cent mille
+    // élèves, ~180 pages/s au pic, cette seule page aurait demandé ~4 500
+    // requêtes/s à la base. `lib/arene-vague1.ts` porte le détail et le repli
+    // sur les vingt lectures tant que la 322 n'est pas exécutée.
+    //
+    // Restent à côté : les quêtes (chaîne de lecture propre), le catalogue
+    // (cache serveur, gratuit) et la maîtrise (son propre agrégat depuis la
+    // 321).
+    const [vague1, questRes, claimedRes, catalogSubjects, quizMastery] =
+      await Promise.all([
+        fetchAreneVague1(supabase, user.id, todayKey, previousWeek),
+        fetchQuestViews(supabase, user.id, todayKey),
+        fetchClaimedQuestIds(supabase, user.id, todayKey),
+        getSubjectsCached(),
+        getChapterMastery(supabase, user.id),
+      ])
+
+    const {
       profile,
       natRes,
       friendsRes,
@@ -295,74 +296,15 @@ export default async function DefiPage() {
       leagueRes,
       matchesRes,
       reviews,
-      questRes,
-      claimedRes,
       weekRes,
       lastWeekRes,
       alreadyClaimed,
       seasonRes,
       gaugesRes,
-      catalogSubjects,
       overviewRes,
       gameTrophyRes,
       subjectPeaks,
-      quizMastery,
-    ] = await Promise.all([
-      readRowTolerant<DefiProfileRow>(supabase, 'profiles', 'id', user.id, [
-        'full_name',
-        'grade_level',
-        'trophies',
-        'primaire_school_id',
-        'college_school_id',
-        'lycee_school_id',
-        'profile_type',
-        'subscription_tier',
-      ]),
-      supabase.rpc('national_ranking'),
-      supabase.rpc('friends_trophies'),
-      // « En direct » : amis actifs dans les 20 dernières minutes (migration
-      // 160) — alimente le chip de présence au-dessus du CTA duel.
-      supabase.rpc('friends_live'),
-      supabase.rpc('league_standings'),
-      // Historique des matchs classés (migration 079) — les 20 derniers.
-      supabase
-        .from('ranked_matches')
-        .select('id, won, delta, trophies, opponent, created_at')
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false })
-        .limit(20),
-      // File « À revoir » (SRS + Revanche) pour le pont pédagogique.
-      getReviewItems(supabase, user.id),
-      fetchQuestViews(supabase, user.id, todayKey),
-      fetchClaimedQuestIds(supabase, user.id, todayKey),
-      fetchClanWeekBoard(supabase),
-      fetchClanWeekBoard(supabase, previousWeek),
-      hasClaimedClanWeek(supabase, user.id, previousWeek),
-      fetchSeasonState(supabase, todayKey),
-      // Jauges de traque (212) : une par gardien déjà rencontré. Ne dépend pas
-      // de la classe — elle part avec le profil, pas dans une vague à elle.
-      fetchGauges(supabase, user.id),
-      // Catalogue des matières : servi par le cache serveur, donc gratuit.
-      getSubjectsCached(),
-      // Amitiés (migration 019) : seules les demandes REÇUES nous intéressent
-      // ici — elles font la pastille du jeton Amis. RPC absente → data null →
-      // aucune pastille, jamais d'erreur.
-      supabase.rpc('friends_overview'),
-      // Compteurs de la Route des trophées (migration 238). Select isolé et
-      // toléré : tant que la 238 n'est pas passée, `data` est null et le roster
-      // s'affiche à zéro — l'arène ne casse pas pour autant.
-      supabase
-        .from('game_trophies')
-        .select('subject_slug, game_id, trophies')
-        .eq('user_id', user.id),
-      // Pics par matière (238) : le record du ladder de chaque matière.
-      getSubjectPeaks(supabase, user.id),
-      // Maîtrise par chapitre — ici pour UNE raison : dire quelles matières
-      // sont ouvertes au duel classé (un chapitre terminé suffit, cf.
-      // lib/subject-unlock). Elle part dans CETTE vague et pas dans une à elle :
-      // elle ne dépend ni du cycle ni de l'école.
-      getChapterMastery(supabase, user.id),
-    ])
+    } = vague1
 
     // L'arène est désormais la page d'accueil de l'app : un compte PARENT y
     // atterrit au lancement. Il n'a ni classe, ni trophées, ni quêtes — son
@@ -380,7 +322,13 @@ export default async function DefiPage() {
     // Le prénom ne sert plus au socle (la pastille en est partie) mais reste
     // nécessaire aux classements, où il identifie la ligne de l'élève.
     const firstName = String(profile.full_name ?? '').split(' ')[0] || 'Moi'
-    const level = schoolLevelForGrade(profile.grade_level ?? null)
+    // Le cycle vient de la base quand la 322 est là (elle le calcule au moment
+    // où elle lit le profil) : c'est lui qui obligeait à une SECONDE vague,
+    // pour une donnée que Postgres avait déjà sous la main. Repli sur la règle
+    // TypeScript, qui reste la référence — un test vérifie que le CASE SQL en
+    // est le miroir exact (lib/clan-level.test.ts).
+    const level = (vague1.level as SchoolLevel | null)
+      ?? schoolLevelForGrade(profile.grade_level ?? null)
     const schoolId = activeSchoolId(profile, profile.grade_level ?? null)
 
     // --- VAGUE 2 : ce qui dépend VRAIMENT du cycle et de l'école -------------
@@ -395,7 +343,9 @@ export default async function DefiPage() {
       gradeQuizRes,
       gradeChapters,
     ] = await Promise.all([
-        supabase.rpc('clan_ranking', { p_level: level }),
+        // Déjà servis par la lecture groupée quand la 322 est passée : on ne
+        // repart pas les chercher. Sinon, le chemin d'avant.
+        vague1.clanRes ?? supabase.rpc('clan_ranking', { p_level: level }),
         schoolId
           ? supabase
               .from('schools')
@@ -404,7 +354,8 @@ export default async function DefiPage() {
               .maybeSingle()
           : Promise.resolve({ data: null }),
         // Tournoi des écoles (migration 162) — null tant qu'elle n'est pas là.
-        supabase.rpc('school_tournament_standings', { p_level: level }),
+        vague1.tournamentRes
+          ?? supabase.rpc('school_tournament_standings', { p_level: level }),
         // Chapitre courant : dépend de la classe (migration 203).
         profile.grade_level
           ? resolveCurrentChapter(

@@ -1730,6 +1730,22 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'Rien ne se voit — la maîtrise reste juste, et les couronnes avec elle : `lib/mastery-inputs.ts` retombe sur l’ancienne lecture complète. Mais chaque affichage de /defi, /reviser, /moi ou Marcel continue de transférer TOUT l’historique de sessions de l’élève (une ligne par session jouée depuis son inscription) pour n’en tirer qu’un maximum par quiz. Invisible sur un compte neuf, premier poste de charge de la base sur des comptes qui ont deux ans.',
     sonde: { type: 'rpc', fn: 'mastery_inputs', args: {} },
   },
+  {
+    id: '322',
+    fichier: '322_arene_accueil.sql',
+    feature:
+      'L’arène en UN aller-retour : `arene_accueil()` groupe les vingt lectures de la vague 1 de /defi, et calcule le cycle scolaire en base pour supprimer la seconde vague',
+    siAbsente:
+      'Rien ne se voit — `lib/arene-vague1.ts` refait les vingt lectures d’avant, et l’arène est identique. Mais /defi, page d’ACCUEIL de l’app, redemande ~20 requêtes Postgres par affichage au lieu d’une : à cent mille élèves et ~180 pages/s au pic, ce sont ~4 500 requêtes/s pour cette seule page.',
+    // Deux arguments, et ils sont OBLIGATOIRES pour la sonde : une RPC appelée
+    // avec de MAUVAIS arguments répond PGRST202 exactement comme une RPC
+    // absente — on la croirait éteinte pour toujours.
+    sonde: {
+      type: 'rpc',
+      fn: 'arene_accueil',
+      args: { p_today: '2026-01-01', p_prev_week: '2025-12-25' },
+    },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

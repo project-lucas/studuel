@@ -1,8 +1,9 @@
 'use client'
 
-import { useSyncExternalStore } from 'react'
+import { useEffect, useRef, useSyncExternalStore } from 'react'
 import { CheckCircle2, AlertCircle, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { sfx } from '@/lib/sounds'
 import {
   dismissToast,
   getServerToasts,
@@ -24,6 +25,32 @@ const KIND_STYLE: Record<ToastKind, string> = {
  */
 export default function Toaster() {
   const toasts = useSyncExternalStore(subscribeToasts, getToasts, getServerToasts)
+
+  // Le son des toasts est joué ICI, et non dans `toast()`.
+  //
+  // POURQUOI PAS DANS `toast()` : `lib/toast.ts` est un store pur, importé par
+  // ses tests en environnement Node. Lui faire appeler WebAudio y traînerait
+  // tout `lib/sounds` — et surtout, `toast()` peut être appelé par du code qui
+  // ne s'affichera jamais (file pleine, TOAST_MAX). Le son doit suivre ce que
+  // l'élève VOIT, pas ce que le code a demandé.
+  //
+  // On ne sonne que pour les toasts NOUVEAUX (`id` jamais vu). Sans ce garde,
+  // le moindre re-rendu du Toaster rejouerait toute la file — trois pilules à
+  // l'écran feraient trois bips à chaque frappe de touche ailleurs dans l'app.
+  const dejaSonnes = useRef(new Set<number>())
+  useEffect(() => {
+    for (const t of toasts) {
+      if (dejaSonnes.current.has(t.id)) continue
+      dejaSonnes.current.add(t.id)
+      sfx.notice(t.kind)
+    }
+    // La file est bornée à TOAST_MAX : on oublie les ids sortis, sinon
+    // l'ensemble grossit pendant toute la session pour rien.
+    const vivants = new Set(toasts.map((t) => t.id))
+    for (const id of dejaSonnes.current) {
+      if (!vivants.has(id)) dejaSonnes.current.delete(id)
+    }
+  }, [toasts])
 
   if (toasts.length === 0) return null
 

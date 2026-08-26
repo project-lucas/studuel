@@ -1,19 +1,17 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Link from 'next/link'
 import {
   RotateCcw,
   ArrowLeft,
   Check,
   Undo2,
-  Volume2,
-  VolumeX,
   X,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { sfx, buzz, isSoundOn, setSoundOn } from '@/lib/sounds'
+import { sfx, buzz } from '@/lib/sounds'
 import ComboBadge from '@/components/ComboBadge'
 import ConfettiRain from '@/components/ConfettiRain'
 import QuitGuardButton from '@/components/QuitGuardButton'
@@ -22,37 +20,9 @@ import { sessionXp } from '@/lib/xp'
 import { deckProgress } from '@/lib/flashcards'
 import { recordStudySession } from '@/app/studio/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
+import SoundToggle from '@/components/ui/SoundToggle'
 import type { ReviewAnswer } from '@/lib/srs'
 import type { DeckCard } from '@/lib/types'
-
-// Bouton muet partagé (préférence localStorage).
-export function SoundToggle() {
-  // La préférence vit dans le stockage local, que le rendu SERVEUR ne voit pas :
-  // il produisait « Activer le son » pendant que le client produisait « Couper
-  // le son », et React jetait une erreur d'hydratation sur l'écran de quiz à
-  // chaque ouverture. On part donc de la valeur du rendu serveur (`isSoundOn`
-  // renvoie `false` sans `window`) et on la corrige une fois monté — le même
-  // remède que les records des jeux, à l'échelle d'un seul booléen.
-  const [on, setOn] = useState(false)
-  useEffect(() => {
-    const lire = () => setOn(isSoundOn())
-    lire()
-  }, [])
-  return (
-    <button
-      type="button"
-      aria-label={on ? 'Couper le son' : 'Activer le son'}
-      title={on ? 'Couper le son' : 'Activer le son'}
-      onClick={() => {
-        setSoundOn(!on)
-        setOn(!on)
-      }}
-      className="text-muted-foreground transition-colors hover:text-foreground"
-    >
-      {on ? <Volume2 className="size-4" /> : <VolumeX className="size-4" />}
-    </button>
-  )
-}
 
 // Boucle façon Wooflash : une carte marquée « À revoir » revient en fin de
 // pile — la session se termine quand tout est su.

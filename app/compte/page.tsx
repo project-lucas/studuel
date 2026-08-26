@@ -16,6 +16,7 @@ import {
   CardFooter,
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import SoundToggle from '@/components/ui/SoundToggle'
 import PageHeader from '@/components/PageHeader'
 import BackButton from '@/components/BackButton'
 import NotificationsOptIn from '@/components/NotificationsOptIn'
@@ -135,6 +136,16 @@ export default async function ComptePage() {
           de compte, pas un indicateur de progrès). Pilote tout le contenu. */}
       <div className="mx-auto mt-4 w-full max-w-md">
         <GradeSelector current={gradeLevel} />
+      </div>
+
+      {/* Sons et vibrations. L'interrupteur n'existait QUE dans l'en-tête d'une
+          session de flashcards : pour couper le son de l'app en cours ou en
+          bibliothèque, il fallait ouvrir un paquet de cartes pour aller chercher
+          le bouton dedans. Sur une app qui sonne à chaque tap, c'était le
+          réglage le plus demandé et le plus caché. Sa place est ici, avec les
+          autres réglages de compte. */}
+      <div className="mx-auto mt-4 w-full max-w-md">
+        <SoundToggle variant="reglage" />
       </div>
 
       <NotificationsOptIn />

@@ -45,7 +45,7 @@ vi.mock('next/link', () => ({
 }))
 vi.mock('@/components/QuitGuardButton', () => ({ default: () => null }))
 vi.mock('@/components/BackButton', () => ({ default: () => null }))
-vi.mock('@/components/FlashcardPlayer', () => ({ SoundToggle: () => null }))
+vi.mock('@/components/ui/SoundToggle', () => ({ default: () => null }))
 vi.mock('@/components/ComboBadge', () => ({ default: () => null }))
 vi.mock('@/components/ProgressRing', () => ({
   default: ({ children }: { children?: React.ReactNode }) => <div>{children}</div>,

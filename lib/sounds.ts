@@ -19,6 +19,8 @@ import { pressBuzz, pressTones, type PressIntent } from '@/lib/press'
 import {
   battleTones,
   edgeBumpTones,
+  noticeKoTones,
+  noticeOkTones,
   openTones,
   swipeTones,
 } from '@/lib/ui-audio'
@@ -32,6 +34,40 @@ export function isSoundOn(): boolean {
 
 export function setSoundOn(on: boolean): void {
   window.localStorage.setItem(STORAGE_KEY, on ? 'on' : 'off')
+  for (const l of soundListeners) l()
+}
+
+// L'interrupteur est maintenant à PLUSIEURS endroits (l'en-tête d'une session
+// de flashcards, la page Compte). Sans ce petit canal, couper le son sur l'un
+// laissait l'autre afficher un haut-parleur allumé jusqu'au prochain montage :
+// deux interrupteurs qui se contredisent sur le même réglage, c'est un réglage
+// auquel on cesse de faire confiance.
+//
+// Un Set d'abonnés plutôt qu'un contexte React : `setSoundOn` est appelé depuis
+// du code non-React (rien pour l'instant, mais c'est un module utilitaire), et
+// un provider de plus dans le layout pour un booléen serait cher payé.
+type SoundListener = () => void
+const soundListeners = new Set<SoundListener>()
+
+/** Contrat `useSyncExternalStore` : prévient quand la préférence change. */
+export function subscribeSound(listener: SoundListener): () => void {
+  soundListeners.add(listener)
+  // Un autre ONGLET peut aussi avoir changé le réglage : le même compte, le
+  // même localStorage, deux fenêtres ouvertes. C'est fréquent sur un ordinateur
+  // familial, et l'événement `storage` est fait exactement pour ça.
+  const surStorage = (e: StorageEvent) => {
+    if (e.key === null || e.key === STORAGE_KEY) listener()
+  }
+  window.addEventListener('storage', surStorage)
+  return () => {
+    soundListeners.delete(listener)
+    window.removeEventListener('storage', surStorage)
+  }
+}
+
+/** Snapshot serveur : le rendu SSR ne voit aucun localStorage. */
+export function getSoundOnServer(): boolean {
+  return false
 }
 
 let ctx: AudioContext | null = null
@@ -126,6 +162,19 @@ export const sfx = {
   // Rebond d'extrémité (rubber-band) au bout d'une liste (cf. ScrollEdgeSound).
   edgeBump() {
     playTones(edgeBumpTones())
+  },
+  // Le toast qui apparaît (cf. components/Toaster). Le canal de retour GLOBAL
+  // de l'app — « Enregistré », « Il te manque 45 pièces » — était le seul
+  // endroit muet d'une interface où tout le reste parle, et il s'affiche
+  // au-dessus de la barre d'onglets : loin de l'endroit qu'on regarde après
+  // avoir tapé un bouton. Sans son, un refus pouvait naître et mourir (3,2 s)
+  // hors du champ de vision.
+  //
+  // Le refus NE VIBRE PAS. On y a pensé, et c'est une erreur : l'haptique de
+  // l'app dit « ton geste est passé » (clic, ouverture, Battle). La faire dire
+  // aussi « ton geste est refusé » lui retirerait tout sens.
+  notice(kind: 'success' | 'error') {
+    playTones(kind === 'error' ? noticeKoTones() : noticeOkTones())
   },
   // « MATCH CLASSÉ » — le bouton central de l'arène, et le SEUL son épique de
   // l'app : cuivres + coup grave + un rumble haptique plus appuyé que le reste.

@@ -24,7 +24,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
-import { SoundToggle } from '@/components/FlashcardPlayer'
+import SoundToggle from '@/components/ui/SoundToggle'
 import StreakMascot from '@/components/StreakMascot'
 import DefiTimer from '@/components/DefiTimer'
 import BlitzMode from '@/components/BlitzMode'

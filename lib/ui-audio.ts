@@ -87,3 +87,58 @@ export function battleTones(): ToneSpec[] {
     { freq: 65.41, at: 0.1, dur: 0.36, wave: 'sine', peak: 0.055 },
   ]
 }
+
+// ------------------------------------------------------------------ le toast
+// LE TROU DU SOUND DESIGN. `lib/toast.ts` est le canal de retour GLOBAL de
+// l'app — « Enregistré ✓ », « Il te manque 45 pièces », « L'achat n'a pas
+// abouti » — et il était intégralement MUET. Tout le reste de l'interface
+// parle : le tap, l'ouverture, le balayage, le rebond de liste. Le seul endroit
+// où l'app dit quelque chose d'important était le seul endroit sans son.
+//
+// Le problème est aggravé par la position du toast : une pilule au-dessus de la
+// barre d'onglets, c'est-à-dire LOIN de l'endroit qu'on regarde quand on vient
+// de taper un bouton en haut de l'écran. Sans son, un refus pouvait apparaître
+// et disparaître (3,2 s) sans jamais entrer dans le champ de vision.
+//
+// DEUX CONTRAINTES DE DESSIN, et elles tirent en sens inverse :
+//
+//  1. Ces sons se répètent. Un toast n'est pas un événement de jeu : il peut
+//     tomber trois fois de suite pendant qu'on tâtonne dans un formulaire. Ils
+//     sont donc les plus DISCRETS de l'app — pics à la moitié de ce que
+//     s'autorise un clic de bouton.
+//  2. Ils doivent rester distincts de ce qui existe déjà. La confirmation ne
+//     peut pas emprunter la montée de `openTones` (« ça s'ouvre ») ni le
+//     tintement de `coin` (« tu as gagné ») ; le refus ne peut pas emprunter le
+//     buzz de `wrong()`, qui appartient aux mauvaises réponses de quiz — sanctionner
+//     une saisie ratée du même bruit qu'une erreur de cours ferait passer un
+//     formulaire pour un contrôle.
+
+/** Plafond des sons de toast : la moitié de ce que s'autorise un clic. */
+export const NOTICE_MAX_PEAK = 0.03
+
+/**
+ * Confirmation : deux notes proches qui montent d'un ton, très courtes. Un
+ * acquiescement, pas une fanfare — « c'est noté », et on passe à autre chose.
+ */
+export function noticeOkTones(): ToneSpec[] {
+  return [
+    { freq: 784.0, at: 0, dur: 0.05, wave: 'sine', peak: 0.022 }, // sol
+    { freq: 880.0, at: 0.045, dur: 0.09, wave: 'sine', peak: 0.026 }, // la
+  ]
+}
+
+/**
+ * Refus : la même note frappée DEUX FOIS, sans monter ni descendre. C'est le
+ * « toc-toc » d'une porte qui ne s'ouvre pas.
+ *
+ * Pourquoi pas une descente : l'app en a déjà une, et elle veut dire « on
+ * recule » (`press('back')`, la croix d'une pop-up). Un refus n'est pas un retour —
+ * on n'a pas bougé, justement. L'absence de mouvement mélodique DIT ça mieux
+ * qu'un intervalle.
+ */
+export function noticeKoTones(): ToneSpec[] {
+  return [
+    { freq: 311.13, at: 0, dur: 0.055, wave: 'triangle', peak: 0.026 },
+    { freq: 311.13, at: 0.085, dur: 0.075, wave: 'triangle', peak: 0.024 },
+  ]
+}

@@ -1,31 +1,48 @@
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
-import { Clock, ExternalLink, HeartHandshake, MonitorPlay } from 'lucide-react'
+import { Suspense } from 'react'
+import { HeartHandshake } from 'lucide-react'
 import ChildReport from '@/components/parents/ChildReport'
+import ConseilsPanel, {
+  type ParentVideo,
+} from '@/components/parents/ConseilsPanel'
 import LinkChildForm from '@/components/parents/LinkChildForm'
+import ParentsSpaces from '@/components/parents/ParentsSpaces'
+import ReglagesEnfant from '@/components/parents/ReglagesEnfant'
+import { getSubjectsCached } from '@/lib/catalog'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
-import { computeStreak, weekProgress } from '@/lib/streak'
+import { computeStreak, toDayKey, weekProgress } from '@/lib/streak'
 import { GRID_PATTERN } from '@/lib/subject-style'
 import { childDisplayNames, type ChildDashboard } from '@/lib/parents'
+import {
+  clampParentPrefs,
+  DEFAULT_PARENT_PREFS,
+  type ParentPrefs,
+} from '@/lib/parents-suivi'
 
 export const metadata = { title: 'Espace parents — Studuel' }
 export const dynamic = 'force-dynamic'
 
-// Espace parents : le suivi réel de l'enfant (temps, régularité, matières),
-// le « Programme » — des vidéos préparées par le coach (gérées dans /admin) —
-// et un rappel du rôle du parent.
-type ParentVideo = {
-  id: string
-  title: string
-  description: string | null
-  url: string
-  theme: string
-  duration: string | null
-  position: number
-}
+// L'espace parents, en trois volets (cf. components/parents/ParentsSpaces) :
+//   Suivi     — ce que fait l'enfant, et ce qui l'attend (contrôles, objectif,
+//               tendance, matières).
+//   Conseils  — ce que le parent peut faire : les fiches écrites, et les vidéos
+//               du coach quand il y en a.
+//   Réglages  — l'objectif hebdomadaire, l'alerte d'inactivité, la liaison.
+//
+// L'écran était auparavant un seul rouleau où ces trois contenus se
+// succédaient : le formulaire de liaison passait devant le tableau de bord
+// chez un parent qui avait déjà lié son enfant, et le suivi repoussait les
+// conseils hors de l'écran.
 
 type ChildRow = { child_id: string; full_name: string | null }
+
+type PrefsRow = {
+  child_id: string
+  weekly_goal_minutes: number
+  alert_after_days: number
+}
 
 export default async function ParentsPage() {
   const supabase = await createClient()
@@ -62,11 +79,11 @@ export default async function ParentsPage() {
   // une carte d'erreur (où le tableau de bord est justement absent).
   const displayNames = childDisplayNames(children.map((c) => c.full_name))
 
-  const reports: {
-    childId: string
-    displayName: string
-    dashboard: ChildDashboard | null
-  }[] = await Promise.all(
+  // Le catalogue (slug → nom de matière), les vidéos et les réglages se
+  // chargent EN PARALLÈLE des tableaux de bord : ce sont trois lectures
+  // indépendantes, les enchaîner n'ajoutait que de l'attente.
+  const [reports, subjects, videosResult, prefsResult] = await Promise.all([
+    Promise.all(
       children.map(async (child, i) => {
         const { data, error } = await supabase.rpc('child_dashboard', {
           p_child: child.child_id,
@@ -82,19 +99,48 @@ export default async function ParentsPage() {
           dashboard: (data as ChildDashboard | null) ?? null,
         }
       }),
-    )
+    ),
+    getSubjectsCached(),
+    // Vidéos du coach (tolère une base sans la migration 029). Bornée : le
+    // programme est une liste éditoriale — au-delà de 50 entrées, c'est le
+    // contenu qu'il faut trier.
+    supabase
+      .from('parent_videos')
+      .select('id, title, description, url, theme, duration, position')
+      .order('position', { ascending: true })
+      .limit(50)
+      .returns<ParentVideo[]>(),
+    // Réglages du parent (migration 319). Absente = la table n'existe pas
+    // encore : on tombe sur les valeurs par défaut, et le volet Réglages le
+    // dit plutôt que d'offrir un formulaire qui ne mènerait nulle part.
+    supabase
+      .from('parent_prefs')
+      .select('child_id, weekly_goal_minutes, alert_after_days')
+      .eq('parent_id', user.id)
+      .returns<PrefsRow[]>(),
+  ])
 
-  // Vidéos du coach (tolère une base sans la migration 029). Bornée : c'était
-  // la seule requête sans limite de la page, et le programme est une liste
-  // éditoriale — au-delà de 50 entrées, c'est le contenu qu'il faut trier.
-  const { data: videos } = await supabase
-    .from('parent_videos')
-    .select('id, title, description, url, theme, duration, position')
-    .order('position', { ascending: true })
-    .limit(50)
-    .returns<ParentVideo[]>()
+  const videos = videosResult.data ?? []
+  const prefsDisponibles = !prefsResult.error
+  if (prefsResult.error) {
+    console.error('[parents] réglages:', prefsResult.error.message)
+  }
+  const prefsByChild = new Map<string, ParentPrefs>(
+    (prefsResult.data ?? []).map((row) => [
+      row.child_id,
+      clampParentPrefs({
+        weeklyGoalMinutes: row.weekly_goal_minutes,
+        alertAfterDays: row.alert_after_days,
+      }),
+    ]),
+  )
+
+  const subjectNames = Object.fromEntries(
+    subjects.map((s) => [s.slug, s.name]),
+  ) as Record<string, string>
 
   const now = new Date()
+  const today = toDayKey(now)
 
   return (
     <div className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
@@ -118,161 +164,152 @@ export default async function ParentsPage() {
       </header>
 
       <div className="mx-auto w-full max-w-2xl px-4 py-8 md:px-8">
-      {/* Suivi de l'enfant */}
-      <section className="mb-8">
-        {listePerdue ? (
-          <div
-            role="alert"
-            className="bg-card border-destructive/40 mb-4 rounded-2xl border p-5 shadow-sm"
-          >
-            <h3 className="mb-1 font-semibold">Suivi momentanément indisponible</h3>
-            <p className="text-muted-foreground text-sm">
-              Nous n&apos;avons pas pu charger vos enfants liés. Rien n&apos;est
-              perdu : réessayez dans un moment en rechargeant la page.
-            </p>
-          </div>
-        ) : null}
+        {/* `useSearchParams` (le volet actif vit dans l'URL) impose une
+            frontière Suspense sur une page rendue au serveur. */}
+        <Suspense fallback={null}>
+          <ParentsSpaces
+            suivi={
+              <section>
+                {listePerdue ? (
+                  <div
+                    role="alert"
+                    className="bg-card border-destructive/40 mb-4 rounded-2xl border p-5 shadow-sm"
+                  >
+                    <h3 className="mb-1 font-semibold">
+                      Suivi momentanément indisponible
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      Nous n&apos;avons pas pu charger vos enfants liés. Rien
+                      n&apos;est perdu : réessayez dans un moment en rechargeant
+                      la page.
+                    </p>
+                  </div>
+                ) : null}
 
-        {reports.map(({ childId, displayName, dashboard }) => {
-          if (!dashboard) {
-            return (
-              <div
-                key={childId}
-                role="alert"
-                className="bg-card border-destructive/40 mb-4 rounded-2xl border p-5 shadow-sm"
-              >
-                <h3 className="mb-1 font-semibold">
-                  {displayName} : données indisponibles
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Le lien avec son compte est toujours actif — seul le détail
-                  n&apos;a pas pu être chargé. Réessayez en rechargeant la page.
-                </p>
-              </div>
-            )
-          }
-          const activeDays = new Set(dashboard.active_days)
-          const streak = computeStreak(activeDays, now)
-          const week = weekProgress(activeDays, now)
-          return (
-            <ChildReport
-              key={childId}
-              childId={childId}
-              displayName={displayName}
-              dashboard={dashboard}
-              streak={streak}
-              week={week}
-            />
-          )
-        })}
+                {reports.length === 0 && !listePerdue ? (
+                  <div className="bg-card rounded-2xl border p-5 shadow-sm">
+                    <h3 className="font-heading mb-1 text-lg font-semibold">
+                      Aucun enfant lié pour l&apos;instant
+                    </h3>
+                    <p className="text-muted-foreground mb-4 text-sm">
+                      Saisissez le code affiché dans l&apos;application de votre
+                      enfant : son temps de travail, ses contrôles à venir et
+                      ses résultats par matière apparaîtront ici.
+                    </p>
+                    <LinkChildForm />
+                  </div>
+                ) : null}
 
-        {/* Toujours proposer de lier un (autre) enfant. */}
-        <div className="bg-card rounded-2xl border p-5 shadow-sm">
-          <h3 className="mb-1 font-semibold">
-            {reports.length === 0
-              ? 'Lier le compte de votre enfant'
-              : 'Lier un autre enfant'}
-          </h3>
-          <p className="text-muted-foreground mb-4 text-sm">
-            Saisissez le code de votre enfant pour suivre ses progrès ici.
-          </p>
-          <LinkChildForm />
-        </div>
-      </section>
-
-      {/* Programme : vidéos du coach */}
-      <section className="mb-8">
-        <h2 className="font-heading mb-1 flex items-center gap-2 text-lg font-semibold">
-          <span className="bg-primary text-primary-foreground flex size-8 items-center justify-center rounded-xl">
-            <MonitorPlay className="size-4" aria-hidden="true" />
-          </span>
-          Le programme
-        </h2>
-        <p className="text-muted-foreground mb-4 text-sm">
-          Une sélection de vidéos courtes, préparée pour vous par le coach
-          scolaire.
-        </p>
-
-        {(videos ?? []).length === 0 ? (
-          <p className="text-muted-foreground rounded-2xl border border-dashed p-6 text-center text-sm">
-            Les premières vidéos du programme arrivent bientôt.
-          </p>
-        ) : (
-          <ul className="flex flex-col gap-3">
-            {(videos ?? []).map((video, i) => (
-              <li key={video.id}>
-                <a
-                  href={video.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-card hover:border-primary/50 flex items-start gap-4 rounded-2xl border p-4 shadow-sm transition-colors"
-                >
-                  <span className="bg-accent text-accent-foreground font-heading flex size-10 shrink-0 items-center justify-center rounded-xl font-bold">
-                    {i + 1}
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block text-balance font-semibold">
-                      {video.title}
-                    </span>
-                    {video.description ? (
-                      <span className="text-muted-foreground mt-0.5 block text-sm">
-                        {video.description}
-                      </span>
-                    ) : null}
-                    <span className="text-muted-foreground mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium">
-                      <span className="bg-muted rounded-full px-2 py-0.5">
-                        {video.theme}
-                      </span>
-                      {video.duration ? (
-                        <span className="flex items-center gap-1">
-                          <Clock className="size-3" aria-hidden="true" />
-                          {video.duration}
-                        </span>
-                      ) : null}
-                    </span>
-                  </span>
-                  <ExternalLink
-                    className="text-muted-foreground mt-1 size-4 shrink-0"
-                    aria-hidden="true"
+                {reports.map(({ childId, displayName, dashboard }) => {
+                  if (!dashboard) {
+                    return (
+                      <div
+                        key={childId}
+                        role="alert"
+                        className="bg-card border-destructive/40 mb-4 rounded-2xl border p-5 shadow-sm"
+                      >
+                        <h3 className="mb-1 font-semibold">
+                          {displayName} : données indisponibles
+                        </h3>
+                        <p className="text-muted-foreground text-sm">
+                          Le lien avec son compte est toujours actif — seul le
+                          détail n&apos;a pas pu être chargé. Réessayez en
+                          rechargeant la page.
+                        </p>
+                      </div>
+                    )
+                  }
+                  const activeDays = new Set(dashboard.active_days)
+                  return (
+                    <ChildReport
+                      key={childId}
+                      childId={childId}
+                      displayName={displayName}
+                      dashboard={dashboard}
+                      streak={computeStreak(activeDays, now)}
+                      week={weekProgress(activeDays, now)}
+                      prefs={prefsByChild.get(childId) ?? DEFAULT_PARENT_PREFS}
+                      subjectNames={subjectNames}
+                      today={today}
+                      reglagesHref="/parents?volet=reglages"
+                    />
+                  )
+                })}
+              </section>
+            }
+            conseils={<ConseilsPanel videos={videos} />}
+            reglages={
+              <div className="flex flex-col gap-4">
+                {reports.map(({ childId, displayName }) => (
+                  <ReglagesEnfant
+                    key={childId}
+                    childId={childId}
+                    childName={displayName}
+                    prefs={prefsByChild.get(childId) ?? DEFAULT_PARENT_PREFS}
+                    disponible={prefsDisponibles}
                   />
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+                ))}
 
-      {/* Rappel du rôle du parent */}
-      <section className="bg-card rounded-2xl border p-4 shadow-sm">
-        <h2 className="font-heading mb-2 flex items-center gap-2 font-semibold">
-          <HeartHandshake className="text-primary size-5" aria-hidden="true" />
-          Votre rôle en trois gestes
-        </h2>
-        <ul className="text-muted-foreground list-inside space-y-1 text-sm">
-          <li>
-            <strong className="text-foreground">Un cadre</strong> : un moment
-            calme et régulier pour les sessions, plutôt court que long.
-          </li>
-          <li>
-            <strong className="text-foreground">Des encouragements</strong> :
-            valorisez la série de jours travaillés, pas seulement les notes.
-          </li>
-          <li>
-            <strong className="text-foreground">De l&apos;autonomie</strong> :
-            laissez votre enfant chercher avant d&apos;aider — c&apos;est là
-            qu&apos;il apprend.
-          </li>
-        </ul>
-        <p className="text-muted-foreground mt-3 text-xs">
-          Retour à l&apos;application :{' '}
-          <Link
-            href="/reviser"
-            className="text-primary font-medium underline underline-offset-4"
-          >
-            espace élève
-          </Link>
-        </p>
-      </section>
+                <section className="bg-card rounded-2xl border p-5 shadow-sm">
+                  <h3 className="mb-1 font-semibold">
+                    {reports.length === 0
+                      ? 'Lier le compte de votre enfant'
+                      : 'Lier un autre enfant'}
+                  </h3>
+                  <p className="text-muted-foreground mb-4 text-sm">
+                    Saisissez le code de votre enfant pour suivre ses progrès
+                    ici.
+                  </p>
+                  <LinkChildForm />
+                </section>
+
+                {/* Rappel du rôle du parent : il ferme le volet des réglages
+                    plutôt que le suivi, parce que c'est de la doctrine et non
+                    un chiffre — sa place est là où l'on décide, pas là où l'on
+                    consulte. */}
+                <section className="bg-card rounded-2xl border p-5 shadow-sm">
+                  <h2 className="font-heading mb-2 flex items-center gap-2 font-semibold">
+                    <HeartHandshake
+                      className="text-primary size-5"
+                      aria-hidden="true"
+                    />
+                    Votre rôle en trois gestes
+                  </h2>
+                  <ul className="text-muted-foreground list-inside space-y-1 text-sm">
+                    <li>
+                      <strong className="text-foreground">Un cadre</strong> : un
+                      moment calme et régulier pour les sessions, plutôt court
+                      que long.
+                    </li>
+                    <li>
+                      <strong className="text-foreground">
+                        Des encouragements
+                      </strong>{' '}
+                      : valorisez la série de jours travaillés, pas seulement
+                      les notes.
+                    </li>
+                    <li>
+                      <strong className="text-foreground">
+                        De l&apos;autonomie
+                      </strong>{' '}
+                      : laissez votre enfant chercher avant d&apos;aider —
+                      c&apos;est là qu&apos;il apprend.
+                    </li>
+                  </ul>
+                  <p className="text-muted-foreground mt-3 text-xs">
+                    Retour à l&apos;application :{' '}
+                    <Link
+                      href="/reviser"
+                      className="text-primary font-medium underline underline-offset-4"
+                    >
+                      espace élève
+                    </Link>
+                  </p>
+                </section>
+              </div>
+            }
+          />
+        </Suspense>
       </div>
     </div>
   )

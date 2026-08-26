@@ -1,68 +1,169 @@
-import { CalendarClock, Clock, Flame, Gauge, Trophy } from 'lucide-react'
+import { CalendarClock, Clock, Flame, Gauge, TriangleAlert, Trophy } from 'lucide-react'
+import { GRADE_SHORT_LABELS } from '@/lib/grades'
+import { isGradeLevel } from '@/lib/grades'
 import { workLevel } from '@/lib/work-level'
 import {
   averageDailySeconds,
   formatWorkDuration,
-  hasJudgeableSubject,
   parentHeadline,
   scorePercent,
   strongestSubject,
-  subjectStateLabel,
-  weakestSubjects,
   type ChildDashboard,
 } from '@/lib/parents'
-import UnlinkChildButton from '@/components/parents/UnlinkChildButton'
+import {
+  controleViews,
+  inactivityAlert,
+  subjectRows,
+  weekTrend,
+  type ParentPrefs,
+} from '@/lib/parents-suivi'
+import ControlesAVenir from '@/components/parents/ControlesAVenir'
+import MatieresSuivi from '@/components/parents/MatieresSuivi'
+import ObjectifSemaine from '@/components/parents/ObjectifSemaine'
+import TendanceSemaines from '@/components/parents/TendanceSemaines'
 
 type WeekDay = { done: boolean; isToday: boolean; isFuture: boolean }
 
 type Props = {
   childId: string
-  // Déjà désambiguïsé par childDisplayNames() : deux enfants sans prénom ne
-  // doivent pas afficher la même carte (cf. lib/parents.ts).
+  /**
+   * Déjà désambiguïsé par childDisplayNames() : deux enfants sans prénom ne
+   * doivent pas afficher la même carte (cf. lib/parents.ts).
+   */
   displayName: string
   dashboard: ChildDashboard
   streak: number
   week: WeekDay[]
+  prefs: ParentPrefs
+  /** slug → nom lisible, pour nommer la matière d'un contrôle. */
+  subjectNames: Readonly<Record<string, string>>
+  /** Clé UTC du jour (calculée une fois par la page, jamais par bloc). */
+  today: string
+  /** Lien vers le volet Réglages de cet enfant. */
+  reglagesHref: string
 }
 
 const DAY_LABELS = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
 
+/**
+ * La carte de suivi d'un enfant.
+ *
+ * L'ORDRE DES BLOCS EST L'ORDRE DES QUESTIONS. Un parent ouvre cet écran avec
+ * une hiérarchie précise en tête, et la carte la suit :
+ *
+ *   1. Y a-t-il un problème ?     → l'alerte d'inactivité, quand elle existe
+ *   2. Qu'est-ce qui est prévu ?  → les contrôles à venir
+ *   3. Est-ce qu'il en fait assez ? → l'objectif de la semaine
+ *   4. Combien, et à quel rythme ? → les temps, la série, la semaine
+ *   5. Ça monte ou ça descend ?   → la tendance sur 4 semaines
+ *   6. Sur quoi peut-on l'aider ? → le détail par matière
+ *
+ * Les chiffres bruts (les temps, le score) passent APRÈS l'agenda et
+ * l'objectif : ils décrivent, ils ne se décident pas. Ils étaient en tête
+ * jusqu'ici, ce qui donnait un tableau de bord qu'on lit et qu'on referme.
+ *
+ * TOLÉRANCE À LA MIGRATION 319. Objectif, tendance et contrôles ne s'affichent
+ * que si la RPC les a renvoyés. Tant qu'elle n'est pas passée, la carte est
+ * exactement celle d'avant — pas une carte trouée de zéros, qu'un parent
+ * prendrait pour de vrais zéros.
+ */
 export default function ChildReport({
   childId,
   displayName,
   dashboard,
   streak,
   week,
+  prefs,
+  subjectNames,
+  today,
+  reglagesHref,
 }: Props) {
   const level = workLevel(dashboard.work_seconds)
-  const weak = weakestSubjects(dashboard.per_subject)
   const strong = strongestSubject(dashboard.per_subject)
   const avgPct = scorePercent(dashboard.avg_ratio)
-  const name = displayName
   const avgDaily = averageDailySeconds(
     dashboard.week_seconds,
     dashboard.week_active_days,
   )
+  const joursActifs = week.filter((d) => d.done).length
+
+  // Les trois blocs de la 319. `undefined` = migration pas encore passée : on
+  // se tait. `[]` = migration passée et rien à montrer : on le dit.
+  const trend = dashboard.weeks ? weekTrend(dashboard.weeks) : null
+  const controles = dashboard.controles
+    ? controleViews(dashboard.controles, subjectNames, today)
+    : null
+  const alerte = inactivityAlert(
+    dashboard.last_activity,
+    prefs.alertAfterDays,
+    today,
+  )
+  const grade =
+    dashboard.grade_level && isGradeLevel(dashboard.grade_level)
+      ? GRADE_SHORT_LABELS[dashboard.grade_level]
+      : null
 
   return (
-    <article className="bg-card mb-6 rounded-2xl border p-5 shadow-sm">
-      <header className="mb-4 flex items-start justify-between gap-3">
-        <div>
-          <h3 className="font-heading text-lg font-semibold">{name}</h3>
-          <p className="text-muted-foreground text-sm">
-            {/* Le 3e argument est EXACTEMENT ce que compte la grille « Cette
-                semaine » plus bas : les deux ne peuvent plus se contredire. */}
-            {parentHeadline(
-              dashboard.sessions_7,
-              streak,
-              week.filter((d) => d.done).length,
-            )}
-          </p>
+    <article
+      className="bg-card mb-6 rounded-2xl border p-5 shadow-sm"
+      aria-labelledby={`enfant-${childId}`}
+    >
+      <header className="mb-4">
+        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+          <h3 id={`enfant-${childId}`} className="font-heading text-lg font-semibold">
+            {displayName}
+          </h3>
+          {grade ? (
+            <span className="bg-primary/10 text-primary rounded-full px-2 py-0.5 text-[11px] font-bold">
+              {grade}
+            </span>
+          ) : null}
         </div>
-        <UnlinkChildButton childId={childId} childName={name} />
+        <p className="text-muted-foreground mt-0.5 text-sm">
+          {/* Le 3e argument est EXACTEMENT ce que compte la grille « Cette
+              semaine » plus bas : les deux ne peuvent pas se contredire. */}
+          {parentHeadline(dashboard.sessions_7, streak, joursActifs)}
+        </p>
       </header>
 
-      {/* Les trois temps mis en avant : total, cette semaine, moyenne/jour */}
+      {/* 1. L'alerte, quand il y en a une. Elle passe avant tout le reste :
+             c'est la seule raison pour laquelle un parent doit agir AUJOURD'HUI. */}
+      {alerte ? (
+        <p
+          role="status"
+          className="border-destructive/35 bg-destructive/[0.05] mb-4 flex items-start gap-2.5 rounded-xl border p-3 text-sm"
+        >
+          <TriangleAlert
+            className="text-destructive mt-0.5 size-4 shrink-0"
+            strokeWidth={2.4}
+            aria-hidden="true"
+          />
+          <span>
+            <span className="font-semibold">{alerte.message}</span>{' '}
+            <span className="text-muted-foreground">
+              Un mot d’encouragement suffit souvent à relancer la série.
+            </span>
+          </span>
+        </p>
+      ) : null}
+
+      {/* 2. Ce qui est prévu. */}
+      {controles ? (
+        <ControlesAVenir controles={controles} childName={displayName} />
+      ) : null}
+
+      {/* 3. Le repère du parent. */}
+      {dashboard.weeks ? (
+        <div className="mb-5">
+          <ObjectifSemaine
+            weekSeconds={dashboard.week_seconds}
+            goalMinutes={prefs.weeklyGoalMinutes}
+            reglagesHref={reglagesHref}
+          />
+        </div>
+      ) : null}
+
+      {/* 4. Les temps. */}
       <div className="mb-4 grid grid-cols-3 gap-3">
         <BigStat
           icon={<Clock className="size-4" aria-hidden="true" />}
@@ -88,7 +189,6 @@ export default function ChildReport({
         />
       </div>
 
-      {/* Série + réussite, en second plan */}
       <div className="mb-5 grid grid-cols-2 gap-3">
         <Stat
           icon={<Flame className="size-4" aria-hidden="true" />}
@@ -100,9 +200,9 @@ export default function ChildReport({
             « À revoir » et les examens blancs (test_sessions à quiz_id nul),
             que le score par matière, lui, ne juge pas.
             La valeur suit `avg_ratio` et NON le nombre d'exercices : un élève
-            n'ayant fait que des exercices non notés par matière (file « À
-            revoir », examen blanc) affichait « 0 % » sur 30 exercices — soit
-            le pire contresens possible sur un écran de suivi. */}
+            n'ayant fait que des exercices non notés par matière affichait
+            « 0 % » sur 30 exercices — le pire contresens possible sur un écran
+            de suivi. */}
         <Stat
           icon={<Trophy className="size-4" aria-hidden="true" />}
           label="Score moyen"
@@ -111,7 +211,6 @@ export default function ChildReport({
         />
       </div>
 
-      {/* Régularité de la semaine */}
       <section className="mb-5">
         <h4 className="text-muted-foreground mb-2 text-xs font-medium tracking-wide uppercase">
           Cette semaine
@@ -136,48 +235,19 @@ export default function ChildReport({
         </div>
       </section>
 
-      {/* Matières à renforcer */}
-      <section>
-        <h4 className="text-muted-foreground mb-2 text-xs font-medium tracking-wide uppercase">
-          Matières à renforcer
-        </h4>
-        {weak.length === 0 ? (
-          <p className="text-muted-foreground text-sm">
-            {hasJudgeableSubject(dashboard.per_subject)
-              ? 'Aucune matière en difficulté — tout est au vert.'
-              : 'Pas encore assez de quiz par matière pour les évaluer.'}
-          </p>
-        ) : (
-          <ul className="flex flex-col gap-2">
-            {weak.map((s) => {
-              const pct = scorePercent(s.ratio)
-              return (
-                <li key={s.subject} className="flex items-center gap-3">
-                  <span className="w-28 shrink-0 truncate text-sm font-medium">
-                    {s.subject}
-                  </span>
-                  <span className="bg-muted h-2 flex-1 overflow-hidden rounded-full">
-                    <span
-                      className="bg-primary block h-full rounded-full"
-                      style={{ width: `${pct}%` }}
-                    />
-                  </span>
-                  <span className="text-muted-foreground w-24 shrink-0 text-right text-xs">
-                    {subjectStateLabel(s.ratio)}
-                  </span>
-                </li>
-              )
-            })}
-          </ul>
-        )}
-        {strong ? (
-          <p className="text-muted-foreground mt-3 text-sm">
-            Point fort :{' '}
-            <span className="text-foreground font-medium">{strong.subject}</span>{' '}
-            ({scorePercent(strong.ratio)} %) — à valoriser.
-          </p>
-        ) : null}
-      </section>
+      {/* 5. La pente. */}
+      {trend ? <TendanceSemaines trend={trend} today={today} /> : null}
+
+      {/* 6. Le détail. */}
+      <MatieresSuivi rows={subjectRows(dashboard.per_subject)} />
+
+      {strong ? (
+        <p className="text-muted-foreground mt-3 text-sm">
+          Point fort :{' '}
+          <span className="text-foreground font-medium">{strong.subject}</span> (
+          {scorePercent(strong.ratio)} %) — à valoriser.
+        </p>
+      ) : null}
     </article>
   )
 }

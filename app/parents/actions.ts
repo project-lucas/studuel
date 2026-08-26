@@ -3,6 +3,12 @@
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
+import { clampParentPrefs } from '@/lib/parents-suivi'
+
+export type ParentPrefsState = {
+  error: string | null
+  message?: string | null
+}
 
 export type LinkChildState = {
   error: string | null
@@ -79,4 +85,53 @@ export async function unlinkChild(
   }
   revalidatePath('/parents')
   return null
+}
+
+// Enregistrer les réglages du parent pour UN enfant : objectif hebdomadaire et
+// seuil d'alerte d'inactivité (migration 319).
+//
+// Les bornes sont appliquées ici ET dans la RPC : côté serveur d'app pour que
+// le parent lise un message en français, côté base parce qu'une Server Action
+// n'est pas une frontière de confiance.
+export async function saveParentPrefs(
+  _prev: ParentPrefsState,
+  formData: FormData,
+): Promise<ParentPrefsState> {
+  const childId = formData.get('childId')
+  if (typeof childId !== 'string' || childId.length === 0) {
+    return { error: 'Enfant introuvable.' }
+  }
+
+  const prefs = clampParentPrefs({
+    weeklyGoalMinutes: Number(formData.get('goalMinutes')),
+    alertAfterDays: Number(formData.get('alertDays')),
+  })
+
+  const supabase = await createClient()
+  const user = await getCurrentUser()
+  if (!user) return { error: 'Votre session a expiré — reconnectez-vous.' }
+
+  const { data, error } = await supabase.rpc('set_parent_prefs', {
+    p_child: childId,
+    p_goal_minutes: prefs.weeklyGoalMinutes,
+    p_alert_days: prefs.alertAfterDays,
+  })
+  if (error) {
+    // PGRST202 = migration 319 pas encore passée. Le dire plutôt que de laisser
+    // le parent croire que ses réglages sont enregistrés alors qu'ils sont
+    // perdus à chaque rechargement.
+    console.error('set_parent_prefs', error)
+    return {
+      error:
+        error.code === 'PGRST202'
+          ? 'Les réglages ne sont pas encore disponibles sur ce compte.'
+          : 'Vos réglages n’ont pas pu être enregistrés. Réessayez dans un moment.',
+    }
+  }
+  if (data === false) {
+    return { error: 'Ce compte n’est plus lié à votre espace.' }
+  }
+
+  revalidatePath('/parents')
+  return { error: null, message: 'Réglages enregistrés.' }
 }

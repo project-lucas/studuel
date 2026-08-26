@@ -17,7 +17,35 @@ export type SubjectScore = {
   attempts: number
 }
 
+/**
+ * Une semaine civile (lundi → dimanche) du journal de temps. Migration 319.
+ * `start` est la clé UTC du LUNDI.
+ */
+export type WeekPoint = {
+  start: string
+  seconds: number
+  active_days: number
+}
+
+/**
+ * Un contrôle déclaré par l'élève depuis Réviser (table `controles`, 203),
+ * rendu au parent par `child_dashboard` depuis la migration 319.
+ */
+export type ChildControle = {
+  id: string
+  subject_slug: string
+  chapters: { id?: string; title?: string }[]
+  /** Clé UTC ; la RPC ne rend jamais les contrôles sans date. */
+  exam_date: string
+}
+
 // Miroir exact du JSON renvoyé par la fonction SQL child_dashboard.
+//
+// Les cinq dernières clés sont OPTIONNELLES : elles n'existent que depuis la
+// migration 319, et le code doit tourner sur une base où elle n'est pas encore
+// passée. Elles sont donc `?` et non `| null` — l'écran teste leur PRÉSENCE
+// pour décider s'il affiche le bloc, là où un `null` obligatoire l'aurait
+// forcé à afficher un bloc vide qu'on ne saurait pas distinguer d'un vrai zéro.
 export type ChildDashboard = {
   full_name: string | null
   work_seconds: number
@@ -28,6 +56,14 @@ export type ChildDashboard = {
   sessions_7: number
   avg_ratio: number | null
   per_subject: SubjectScore[]
+  /** Classe de l'enfant ('3e', 'Tle'…). Migration 319. */
+  grade_level?: string | null
+  /** Les 4 dernières semaines civiles, de la plus ancienne à celle en cours. */
+  weeks?: WeekPoint[]
+  /** Contrôles à venir et non notés, du plus proche au plus lointain (max 5). */
+  controles?: ChildControle[]
+  /** Clé UTC du dernier jour d'activité, toutes sources confondues. */
+  last_activity?: string | null
 }
 
 // Une matière n'est jugée « faible » qu'avec assez de tentatives, pour éviter

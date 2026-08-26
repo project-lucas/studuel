@@ -1191,10 +1191,29 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'Indépendante des autres migrations du carnet (315 → 317) : elle ne touche à aucune table existante, elle en crée trois. Elle INSÈRE aussi une première dictée (« L’Homme foudroyé ») avec ses six segments — une liste vide donnerait un onglet mort dont on ne saurait pas si c’est le contenu ou le code qui manque. Rejouable : les segments sont supprimés puis réinsérés, la dictée est protégée par ON CONFLICT sur son slug. PAS DE FICHIERS AUDIO : la synthèse vocale du navigateur lit le texte du segment (`components/francais/dictee/LecteurDictee`) ; la colonne `audio_url` attend un enregistrement humain sans qu’une migration soit nécessaire.',
   },
+  {
+    id: '319',
+    fichier: '319_espace_parents_v2.sql',
+    feature:
+      'Espace parents v2 : les contrôles à venir, la tendance sur 4 semaines, et les réglages du parent (objectif hebdomadaire, seuil d’alerte)',
+    siAbsente:
+      'Le volet Suivi se TAIT sur ces trois blocs — pas de contrôles à venir, pas de courbe des 4 semaines, pas de jauge d’objectif — et le volet Réglages affiche « pas encore actifs sur ce compte ». Le reste de la carte (temps, série, score par matière) est intact : le repli est volontaire, un « 0 min cette semaine » faux serait pire qu’un bloc absent.',
+    sonde: { type: 'table', table: 'parent_prefs' },
+    decision:
+      'REDÉFINIT `child_dashboard` : miroir EXACT de la 199 (mêmes CTE, même bornage à la classe courante) augmenté de quatre clés — toute évolution de la 199 doit être reportée ici, sinon la dernière exécutée gagne. Les contrôles passent par cette fonction SECURITY DEFINER et NON par une policy sur `controles` : le lien parent↔enfant est vérifié à un seul endroit. Sûre à exécuter avant ou après le déploiement (le code déployé avant ignore les nouvelles clés, celui d’après tolère leur absence).',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */
 export type Verdict = 'vivante' | 'eteinte' | 'non-sondable'
+
+/**
+ * « permission denied for table … » — la relation EXISTE, la clé anon n'y a
+ * simplement pas accès. Postgres (et donc PostgREST) rend ce code AVANT de
+ * regarder la moindre policy RLS : c'est le GRANT qui manque, pas la table.
+ * À distinguer absolument de 42P01 / PGRST205, qui disent « relation absente ».
+ */
+export const PERMISSION_DENIED = '42501'
 
 /**
  * Interprète le retour Supabase d'une sonde. `rows` ne sert qu'aux sondes de
@@ -1210,6 +1229,27 @@ export function interpreterSonde(
     // PGRST202 = « fonction introuvable ». Tout AUTRE retour (y compris une
     // erreur « not authenticated ») prouve que la fonction est déployée.
     return erreur?.code === 'PGRST202' ? 'eteinte' : 'vivante'
+  }
+  // 42501 = « permission denied ». La relation EXISTE — on n'a simplement pas
+  // le droit de la lire à la clé anon.
+  //
+  // C'EST LA CORRECTION DU 26/08/2026, ET ELLE COMPTE. Toute erreur était
+  // jusqu'ici lue comme « éteinte », si bien que la sonde déclarait mortes
+  // exactement les migrations dont les tables sont les mieux protégées :
+  // `push_send_log` (journal d'envoi), `ai_call_attempts` (quota IA) et
+  // `subscription_interest` (intentions de paiement) n'accordent aucun GRANT à
+  // `anon` — par conception, et c'est très bien ainsi. Les trois étaient en
+  // base depuis des semaines et la sonde les donnait éteintes ; l'audit qui
+  // s'appuyait dessus en a tiré deux priorités « P0 » imaginaires, dont une
+  // fuite d'argent inexistante.
+  //
+  // Un instrument qui se trompe SUR LES SUJETS SENSIBLES est pire qu'une
+  // absence d'instrument : il donne la confiance en prime de l'erreur.
+  if (erreur?.code === PERMISSION_DENIED) {
+    // Nuance sur la sonde 'ligne' : elle ne demande pas « la table existe-t-elle »
+    // mais « cette ligne y est-elle ». Un accès refusé ne répond pas à cette
+    // question-là — on ne voit rien, donc on ne conclut rien.
+    return sonde.type === 'ligne' ? 'non-sondable' : 'vivante'
   }
   if (erreur) return 'eteinte'
   if (sonde.type === 'ligne') return rows > 0 ? 'vivante' : 'eteinte'

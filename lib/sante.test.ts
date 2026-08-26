@@ -5,6 +5,7 @@ import path from 'node:path'
 import {
   MIGRATIONS_SANTE,
   interpreterSonde,
+  PERMISSION_DENIED,
   restantes,
   type Verdict,
 } from '@/lib/sante'
@@ -125,5 +126,42 @@ describe('restantes', () => {
     // …les vivantes sortent.
     expect(ids).not.toContain('188')
     expect(ids).not.toContain('192')
+  })
+})
+
+describe('interpreterSonde — « accès refusé » n’est pas « absente »', () => {
+  // Le bug du 26/08/2026. Toute erreur était lue comme « éteinte », si bien que
+  // la sonde déclarait mortes précisément les migrations dont les tables sont
+  // les mieux protégées — celles qui n'accordent AUCUN GRANT à `anon`, par
+  // conception : journal d'envoi push, quota d'appels IA, intentions de
+  // paiement. Les trois étaient en base depuis des semaines.
+  it('rend « vivante » sur un 42501 : la table est là, on n’y a pas accès', () => {
+    const sonde = { type: 'table', table: 'ai_call_attempts' } as const
+    expect(interpreterSonde(sonde, { code: PERMISSION_DENIED }, 0)).toBe('vivante')
+  })
+
+  it('rend « vivante » sur un 42501 de colonne', () => {
+    const sonde = { type: 'colonne', table: 'push_send_log', colonne: 'sent_on' } as const
+    expect(interpreterSonde(sonde, { code: PERMISSION_DENIED }, 0)).toBe('vivante')
+  })
+
+  it('distingue toujours 42501 de 42P01 (relation absente)', () => {
+    const sonde = { type: 'table', table: 'parent_prefs' } as const
+    expect(interpreterSonde(sonde, { code: '42P01' }, 0)).toBe('eteinte')
+    expect(interpreterSonde(sonde, { code: 'PGRST205' }, 0)).toBe('eteinte')
+  })
+
+  it('rend « non-sondable » sur une sonde de LIGNE refusée', () => {
+    // La sonde 'ligne' ne demande pas « la table existe » mais « cette ligne y
+    // est ». Un accès refusé ne répond pas à cette question : on ne conclut pas.
+    const sonde = {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'theme',
+      valeur: 'Internet',
+    } as const
+    expect(interpreterSonde(sonde, { code: PERMISSION_DENIED }, 0)).toBe(
+      'non-sondable',
+    )
   })
 })

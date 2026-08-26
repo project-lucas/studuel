@@ -36,13 +36,13 @@ import {
 import { subjectsWithContentAt } from '@/lib/subject-visibility'
 import { readRowTolerant } from '@/lib/profile-read'
 import { getChapterMastery, chapterState } from '@/lib/mastery'
+import { fetchJoursActifs } from '@/lib/jours-actifs'
 import { getChapitresVus } from '@/lib/chapitres-vus'
 import { progressionMatiere, type ChapitreProgression } from '@/lib/progression'
 import {
   toDayKey,
   computeStreak,
   weekProgress,
-  activityCutoff,
 } from '@/lib/streak'
 import {
   rowsToControles,
@@ -135,12 +135,10 @@ export default async function ReviserPage() {
     profile,
     mastery,
     // Journées d'activité (tous types confondus) pour la flamme de série du
-    // header — même définition que sur l'onglet Moi. On récupère au passage les
-    // colonnes qui alimentent l'XP du header (score, cartes, xp du défi).
-    { data: testDays },
-    { data: studyDays },
-    { data: lessonDays },
-    { data: challengeDays },
+    // header — même définition que sur l'onglet Moi. UNE lecture agrégée
+    // (migration 323) au lieu de quatre : la page transférait des milliers de
+    // lignes sur 400 jours pour n'en tirer qu'un ensemble d'au plus 400 dates.
+    activityDays,
     { data: courseRows },
     { data: courseQuestionRows },
     { data: carnetStateRows },
@@ -158,29 +156,7 @@ export default async function ReviserPage() {
       'tutorial_completed',
     ]),
     getChapterMastery(supabase, user.id),
-    // Fenêtre glissante : ces requêtes ne servent qu'à la série et à la
-    // semaine — inutile de retransférer tout l'historique d'un élève assidu
-    // (400 jours couvrent toute série affichable).
-    supabase
-      .from('test_sessions')
-      .select('created_at, score')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('study_sessions')
-      .select('created_at, cards_count')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('lesson_completions')
-      .select('created_at')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
-    supabase
-      .from('challenge_sessions')
-      .select('created_at, xp')
-      .eq('user_id', user.id)
-      .gte('created_at', activityCutoff()),
+    fetchJoursActifs(supabase, user.id),
     // Cours de Mon carnet (carnet_courses, migration 186) : l'étagère des
     // cours façon Wooflash — échec isolé (migration pas passée) → bloc vide.
     supabase
@@ -324,14 +300,6 @@ export default async function ReviserPage() {
   }
 
   // Série vivante pour la flamme du header.
-  const activityDays = new Set(
-    [
-      ...(testDays ?? []),
-      ...(studyDays ?? []),
-      ...(lessonDays ?? []),
-      ...(challengeDays ?? []),
-    ].map((s) => String(s.created_at).slice(0, 10)),
-  )
   const streak = computeStreak(activityDays)
   const week = weekProgress(activityDays)
 

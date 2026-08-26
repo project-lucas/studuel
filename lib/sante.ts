@@ -1746,6 +1746,19 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       args: { p_today: '2026-01-01', p_prev_week: '2025-12-25' },
     },
   },
+  {
+    id: '323',
+    fichier: '323_jours_actifs.sql',
+    feature:
+      'La série se calcule en base : `jours_actifs()` rend l’ensemble des jours travaillés au lieu d’une ligne par session',
+    siAbsente:
+      'Rien ne se voit — `lib/jours-actifs.ts` refait les quatre lectures d’avant (allégées des colonnes que plus rien ne consommait). Mais /reviser continue de transférer une ligne par SESSION JOUÉE sur 400 jours, sur les quatre tables d’activité, pour n’en tirer qu’un ensemble d’au plus 400 dates. Le rapport empire à chaque session que l’élève joue.',
+    sonde: {
+      type: 'rpc',
+      fn: 'jours_actifs',
+      args: { p_since: '2025-01-01T00:00:00Z' },
+    },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

@@ -2,7 +2,7 @@ import { readdirSync, readFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
-import { policiesNonEnveloppees } from './rls-guard'
+import { policiesNonEnveloppees, revokesIncomplets } from './rls-guard'
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -169,6 +169,107 @@ describe('cliquet RLS — aucune policy nue dans un fichier neuf', () => {
       'Ces fichiers sont dans la liste d’héritage mais n’ont plus de policy ' +
         'nue : soit une migration DÉJÀ EXÉCUTÉE a été éditée (interdit), soit ' +
         'la liste est à mettre à jour.',
+    ).toEqual([])
+  })
+})
+
+describe('revokesIncomplets — le piège du REVOKE FROM PUBLIC', () => {
+  it('signale le REVOKE exact que la 320 avait écrit', () => {
+    // La faute réelle, mesurée en production : après exécution, un appel
+    // ANONYME à la fonction répondait HTTP 200. Supabase accorde EXECUTE à
+    // `anon` et `authenticated` par des GRANT NOMMÉS — `REVOKE … FROM PUBLIC`
+    // ne retire que le privilège du pseudo-rôle PUBLIC et n'y touche pas.
+    const r = revokesIncomplets(
+      'REVOKE ALL ON FUNCTION public.optimiser_une_policy(OID) FROM PUBLIC;',
+    )
+    expect(r).toHaveLength(1)
+    expect(r[0].fonction).toBe('optimiser_une_policy')
+    expect(r[0].manquants).toEqual(['anon', 'authenticated'])
+  })
+
+  it('laisse passer un REVOKE qui ferme les trois', () => {
+    expect(
+      revokesIncomplets(
+        'REVOKE ALL ON FUNCTION public.f() FROM PUBLIC, anon, authenticated;',
+      ),
+    ).toEqual([])
+  })
+
+  it('signale un REVOKE qui n’oublie qu’un seul rôle', () => {
+    const r = revokesIncomplets(
+      'REVOKE ALL ON FUNCTION public.f() FROM PUBLIC, anon;',
+    )
+    expect(r[0].manquants).toEqual(['authenticated'])
+  })
+
+  it('ne se laisse pas berner par le `public.` du nom de la fonction', () => {
+    // Sans frontières de mot, le schéma qualifié ferait croire que le rôle
+    // PUBLIC est visé — et ce REVOKE, qui vise un rôle nommé, serait signalé
+    // à tort.
+    expect(revokesIncomplets('REVOKE ALL ON FUNCTION public.f() FROM service_role;'))
+      .toEqual([])
+  })
+
+  it('ignore un fichier sans REVOKE', () => {
+    expect(revokesIncomplets('GRANT EXECUTE ON FUNCTION public.f() TO anon;')).toEqual([])
+  })
+})
+
+describe('cliquet REVOKE — aucun fichier neuf ne ferme à moitié', () => {
+  // 27 fichiers, 56 REVOKE incomplets — tous DÉJÀ EXÉCUTÉS, tous intouchables.
+  //
+  // CE QU'ILS RISQUENT, EXACTEMENT — et la nuance est le cœur du sujet. Ces
+  // fonctions sont bien appelables par un visiteur anonyme (mesuré : HTTP 200
+  // sur `coach_buy_tokens`, `coach_ask_allowed`, `my_grade_standings`). Mais
+  // elles se défendent toutes SEULES, par leur première ligne :
+  //
+  //     IF v_user IS NULL THEN RETURN 'refuse'; END IF;
+  //     IF NOT public.is_admin() THEN RAISE EXCEPTION …
+  //
+  // Un appel anonyme est donc refusé par la fonction, pas par le privilège. Le
+  // REVOKE incomplet est une ceinture qui manque là où les bretelles tiennent :
+  // à corriger, jamais dans l'urgence.
+  //
+  // LES TROIS FONCTIONS DE LA 320 ÉTAIENT L'EXCEPTION, et c'est ce qui rendait
+  // la faille réelle : ce sont des outils de DDL, elles n'ont AUCUN utilisateur
+  // à vérifier, donc aucune garde interne. Rien n'arrêtait un appelant
+  // anonyme — la 324 les ferme.
+  //
+  // Ce cliquet n'a donc pas pour but de résorber les 27 : il empêche qu'un
+  // fichier NEUF réintroduise le piège, là où la garde interne pourrait, elle
+  // aussi, manquer.
+  const HERITAGE_REVOKE = new Set([
+    '045_push.sql', '155_series_amis.sql', '161_ligue_hebdo.sql',
+    '164_durcissement_social.sql', '170_borne_serie.sql',
+    '181_cartes_mentales_acces.sql', '183_gemmes_parrainage_squad.sql',
+    '184_fiches_revision_acces.sql', '189_avatar_vestiaire.sql',
+    '192_economie_progression.sql', '195_push_send_log.sql',
+    '198_quota_ia_carnet.sql', '200_profil_defi.sql', '201_profile_stats.sql',
+    '204_clan_hebdo.sql', '205_quetes_journalieres.sql', '206_retention.sql',
+    '207_saison_pass.sql', '209_reprise_hardening_192_207.sql',
+    '212_traque_boss.sql', '213_traque_defaite_fenetre.sql',
+    '215_marcel_jetons.sql', '221_abonnements_v0.sql', '222_oral_echelle.sql',
+    '223_percentile_niveau.sql', '317_carnet_dans_le_monde.sql',
+    '320_rls_initplan_permanent.sql',
+  ])
+
+  it('aucun REVOKE incomplet hors héritage', () => {
+    const neufs: string[] = []
+    for (const f of readdirSync(path.join(ROOT, 'supabase'))) {
+      if (!f.endsWith('.sql') || HERITAGE_REVOKE.has(f)) continue
+      const r = revokesIncomplets(
+        readFileSync(path.join(ROOT, 'supabase', f), 'utf8'),
+      )
+      for (const x of r) neufs.push(`${f} → ${x.fonction} (oublie ${x.manquants.join(', ')})`)
+    }
+    expect(
+      neufs,
+      [
+        'REVOKE incomplet : sur ce projet, « FROM PUBLIC » seul ne ferme RIEN.',
+        ...neufs,
+        '',
+        'Écris : REVOKE ALL ON FUNCTION … FROM PUBLIC, anon, authenticated;',
+      ].join('\n'),
     ).toEqual([])
   })
 })

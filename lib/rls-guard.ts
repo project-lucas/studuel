@@ -93,3 +93,87 @@ function tableDeLaPolicy(instruction: string): string {
   const m = instruction.match(/\bon\s+(?:public\.)?("[^"]+"|[\w]+)/i)
   return m ? m[1].replace(/"/g, '') : '(table illisible)'
 }
+
+// -----------------------------------------------------------------------------
+// LE PIÈGE DU REVOKE — découvert le 26/08/2026, en production.
+//
+// La migration 320 crée trois fonctions d'exploitation qui exécutent du DDL en
+// SECURITY DEFINER, et croyait les fermer avec :
+//
+//     REVOKE ALL ON FUNCTION public.optimiser_une_policy(OID) FROM PUBLIC;
+//
+// Ça ne suffit pas. Supabase accorde `EXECUTE` sur les fonctions du schéma
+// `public` aux rôles `anon` et `authenticated` par des GRANT EXPLICITES (ses
+// `ALTER DEFAULT PRIVILEGES`), et `REVOKE … FROM PUBLIC` ne retire que le
+// privilège du pseudo-rôle PUBLIC — il ne touche pas à un GRANT nommé.
+//
+// Résultat mesuré après exécution : un appel ANONYME à la fonction répondait
+// HTTP 200. Le pire des deux mondes, puisque la ligne de REVOKE donnait
+// l'illusion que la question était traitée.
+//
+// D'où ce garde-fou. Il ne juge pas s'il FAUT révoquer — c'est une décision de
+// conception. Il vérifie seulement qu'un REVOKE écrit avec l'intention de
+// fermer une fonction ferme bien les trois rôles, et pas un seul.
+// -----------------------------------------------------------------------------
+
+/** Les rôles que Supabase expose à l'API REST. */
+export const ROLES_API = ['anon', 'authenticated'] as const
+
+const INSTRUCTION_REVOKE = /revoke\s+[\s\S]*?on\s+function[\s\S]*?;/gi
+
+export type RevokeIncomplet = {
+  /** La fonction visée, telle qu'écrite. */
+  fonction: string
+  /** Les rôles API que ce REVOKE oublie. */
+  manquants: string[]
+}
+
+/**
+ * Les `REVOKE … ON FUNCTION` qui ne ferment que PUBLIC.
+ *
+ * Un REVOKE qui ne cite AUCUN des trois (ni PUBLIC ni les rôles API) n'est pas
+ * signalé : il vise un rôle nommé pour une raison qui le regarde. On ne
+ * signale que le cas précis du piège — PUBLIC seul, sans `anon` ni
+ * `authenticated`.
+ */
+export function revokesIncomplets(sql: string): RevokeIncomplet[] {
+  const incomplets: RevokeIncomplet[] = []
+
+  // Les COMMENTAIRES sont retirés d'abord, et ce n'est pas un détail : la
+  // migration 324 cite en exemple la ligne fautive qu'elle répare. Un
+  // détecteur qui lit les commentaires signale la documentation de la faute
+  // comme étant la faute — et rend impossible d'expliquer un piège sans le
+  // déclencher.
+  for (const instruction of sansCommentaires(sql).match(INSTRUCTION_REVOKE) ?? []) {
+    const cible = instruction.slice(instruction.toLowerCase().lastIndexOf('from'))
+    // Les frontieres de mot comptent : sans elles, le `public.` du nom
+    // qualifie de la fonction ferait croire que le role PUBLIC est vise.
+    if (!/\bpublic\b/i.test(cible)) continue
+
+    const manquants = ROLES_API.filter(
+      // String.raw, parce que `\b` dans un litteral JS ordinaire est le
+      // caractere d'EFFACEMENT, pas une frontiere de mot. Ecrit sans lui, ce
+      // garde-fou cherchait des caracteres de controle et ne trouvait jamais
+      // rien : il aurait passe au vert sur la faute qu'il existe pour attraper.
+      (role) => !new RegExp(String.raw`\b${role}\b`, 'i').test(cible),
+    )
+    if (manquants.length === 0) continue
+
+    const nom = instruction.match(/on\s+function\s+(?:public\.)?([\w]+)/i)
+    incomplets.push({
+      fonction: nom ? nom[1] : '(fonction illisible)',
+      manquants,
+    })
+  }
+
+  return incomplets
+}
+
+/**
+ * Retire les commentaires SQL — lignes `--` et blocs. Sans quoi un fichier qui
+ * DOCUMENTE une faute (« voici ce qu'il ne faut pas écrire ») serait signalé
+ * comme la commettant.
+ */
+function sansCommentaires(sql: string): string {
+  return sql.replace(/\/\*[\s\S]*?\*\//g, ' ').replace(/--[^\n]*/g, ' ')
+}

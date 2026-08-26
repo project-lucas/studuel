@@ -1759,6 +1759,21 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       args: { p_since: '2025-01-01T00:00:00Z' },
     },
   },
+  {
+    id: '324',
+    fichier: '324_revoquer_outils_rls.sql',
+    feature:
+      'CORRECTIF DE SÉCURITÉ : ferme réellement les trois outils de DDL créés par la 320, que `REVOKE … FROM PUBLIC` laissait appelables par un visiteur ANONYME',
+    siAbsente:
+      '⚠️ `optimiser_une_policy`, `optimiser_policies_rls` et `rls_initplan_auto` répondent HTTP 200 à un appel non authentifié. Pas d’élévation de privilège — elles ne changent que la FORME d’une expression de policy — mais un DÉNI DE SERVICE : chaque appel prend un verrou de niveau ALTER, et le rattrapage en prend un sur les ~130 policies de la base. Appelée en boucle, elle bloque les écritures de toute l’application.',
+    // NON SONDABLE : avant comme après, un appel anon rend quelque chose (200
+    // puis 42501), et `interpreterSonde` traite les deux comme « vivante » sur
+    // une sonde RPC. La vérification est la requête `has_function_privilege`
+    // laissée en pied du fichier — elle doit rendre trois lignes à `false`.
+    sonde: null,
+    decision:
+      'À EXÉCUTER DÈS QUE POSSIBLE, et avant de laisser la 320 en place sur une base publique. La règle qu’elle établit vaut pour toute fonction future : sur ce projet, `REVOKE … FROM PUBLIC` ne ferme RIEN — Supabase accorde EXECUTE à `anon` et `authenticated` par des GRANT nommés. Il faut écrire `FROM PUBLIC, anon, authenticated`. Un test du dépôt (lib/rls-guard.test.ts) le vérifie désormais sur chaque migration neuve.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

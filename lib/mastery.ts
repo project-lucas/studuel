@@ -3,6 +3,7 @@ import {
   getQuizLessonPairsCached,
   getLessonChapterPairsCached,
 } from '@/lib/catalog'
+import { masteryInputs } from '@/lib/mastery-inputs'
 
 // Progression par chapitre :
 // - quiz terminé → meilleur score (0..1), seul moyen de dépasser 30 %
@@ -92,51 +93,31 @@ export async function getChapterMastery(
 ): Promise<ChapterMastery> {
   const mastery: ChapterMastery = new Map()
 
-  // user_id explicite : la RLS le garantit aujourd'hui, mais la couche sociale
-  // ouvrira la lecture croisée des sessions — la maîtrise reste personnelle.
+  // UNE SEULE VAGUE : l'historique personnel de l'élève et la charpente du
+  // catalogue partent ensemble. Cette dernière est en cache serveur (identique
+  // pour tous), là où la fonction enchaînait autrefois trois allers-retours en
+  // série — les quiz joués, puis leurs leçons, puis leurs chapitres — au beau
+  // milieu du chargement de Réviser et du Défi.
   //
-  // UNE SEULE VAGUE : l'historique personnel de l'élève ET la charpente du
-  // catalogue partent ensemble. Cette dernière est mise en cache serveur
-  // (identique pour tous), là où la fonction enchaînait auparavant trois
-  // allers-retours en série — les quiz joués, puis leurs leçons, puis leurs
-  // chapitres — au beau milieu du chargement de Réviser et du Défi.
-  const [
-    { data: sessions, error: sessErr },
-    { data: completions, error: compErr },
-    quizLessonPairs,
-    lessonChapterPairs,
-  ] = await Promise.all([
-    supabase
-      .from('test_sessions')
-      .select('quiz_id, score, total')
-      .eq('user_id', userId)
-      .returns<{ quiz_id: string | null; score: number; total: number }[]>(),
-    supabase
-      .from('lesson_completions')
-      .select('lesson_id')
-      .eq('user_id', userId)
-      .returns<{ lesson_id: string }[]>(),
+  // ET L'HISTORIQUE S'AGRÈGE EN BASE (migration 321). C'était la lecture la
+  // plus coûteuse du projet : `test_sessions` SANS LIMITE — une ligne par
+  // session jouée depuis l'inscription — pour n'en tirer qu'un `max` par quiz.
+  // Le détail du pourquoi est dans `lib/mastery-inputs.ts` ; ce qu'il faut
+  // savoir ici, c'est que le repli sur l'ancienne lecture y est assuré tant que
+  // la 321 n'est pas exécutée, et que la RLS reste seule maîtresse du
+  // périmètre (la RPC est SECURITY INVOKER).
+  const [inputs, quizLessonPairs, lessonChapterPairs] = await Promise.all([
+    masteryInputs(supabase, userId),
     getQuizLessonPairsCached(),
     getLessonChapterPairsCached(),
   ])
-  // Journaliser une vraie panne : sans ça, une erreur Supabase transitoire est
-  // indiscernable d'« élève sans historique » et fait retomber toute la maîtrise
-  // (et donc les couronnes) à zéro en silence.
-  if (sessErr) console.error('[mastery] scores indisponibles:', sessErr.message)
-  if (compErr) console.error('[mastery] leçons terminées indisponibles:', compErr.message)
 
-  // Meilleur score par quiz.
-  const bestByQuiz = new Map<string, number>()
-  for (const s of sessions ?? []) {
-    if (!s.quiz_id || s.total <= 0) continue
-    const ratio = Math.min(s.score / s.total, 1)
-    bestByQuiz.set(s.quiz_id, Math.max(bestByQuiz.get(s.quiz_id) ?? 0, ratio))
-  }
+  const bestByQuiz = inputs.bestByQuiz
 
   // Quiz → leçon → chapitre, lus dans la charpente déjà en main.
   let quizLessons = new Map(quizLessonPairs)
   let chapterByLesson = new Map(lessonChapterPairs)
-  const completedLessons = new Set((completions ?? []).map((c) => c.lesson_id))
+  const completedLessons = inputs.completedLessons
 
   if (bestByQuiz.size === 0 && completedLessons.size === 0) return mastery
 

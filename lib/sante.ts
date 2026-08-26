@@ -1721,6 +1721,15 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'À REJOUER APRÈS CHAQUE LOT tant que l’event trigger n’est pas posé : `CREATE EVENT TRIGGER` exige le superutilisateur, que Supabase n’accorde pas toujours au rôle `postgres`. La migration RATTRAPE cet échec et réussit quand même — lis le NOTICE qu’elle affiche. S’il dit « Déclencheur NON posé », ajoute `SELECT public.optimiser_policies_rls();` en dernière ligne de chaque migration qui crée une policy. Le garde-fou côté dépôt (`lib/rls-guard.ts`), lui, marche dans tous les cas.',
   },
+  {
+    id: '321',
+    fichier: '321_mastery_agrege.sql',
+    feature:
+      'La maîtrise s’agrège en base : `mastery_inputs()` rend un meilleur score par quiz JOUÉ au lieu d’une ligne par session jouée',
+    siAbsente:
+      'Rien ne se voit — la maîtrise reste juste, et les couronnes avec elle : `lib/mastery-inputs.ts` retombe sur l’ancienne lecture complète. Mais chaque affichage de /defi, /reviser, /moi ou Marcel continue de transférer TOUT l’historique de sessions de l’élève (une ligne par session jouée depuis son inscription) pour n’en tirer qu’un maximum par quiz. Invisible sur un compte neuf, premier poste de charge de la base sur des comptes qui ont deux ans.',
+    sonde: { type: 'rpc', fn: 'mastery_inputs', args: {} },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

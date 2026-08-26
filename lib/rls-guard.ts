@@ -1,0 +1,95 @@
+// Le garde-fou des policies RLS : détecter un appel d'auth « nu » dans un
+// CREATE POLICY, avant qu'il n'atteigne la base.
+//
+// POURQUOI CE MODULE EXISTE. Écrite nue dans une policy, `auth.uid()` est
+// traitée par Postgres comme un filtre dépendant de la ligne : il la RÉÉVALUE
+// pour chaque ligne examinée, et le planificateur ne peut plus se servir de
+// l'index sur `user_id`, faute de constante à comparer. Enveloppée en
+// `(SELECT auth.uid())`, elle devient un InitPlan : évaluée UNE fois avant le
+// parcours, elle redonne l'index. La valeur rendue est identique — c'est le
+// PLANIFICATEUR qui change d'avis, pas la logique.
+//
+// L'écart ne coûte rien sur mille lignes et devient mortel sur `test_sessions`,
+// qui prendra ~3 M de lignes PAR JOUR à cent mille élèves.
+//
+// La migration 208 avait réparé l'existant, mais sans rien installer de
+// permanent : tout ce qui a été écrit après elle est reparti nu — 102 policies
+// nues contre 13 enveloppées au 26/08/2026. La 320 pose le mécanisme côté base
+// (un event trigger, et un rattrapage appelable si les droits manquent) ; ce
+// module-ci pose le garde-fou côté DÉPÔT. Les deux sont utiles et ne se
+// remplacent pas : la base répare ce qui existe, le test empêche d'écrire la
+// faute une fois de plus.
+//
+// CE QU'IL NE FAUT SURTOUT PAS SIGNALER : `auth.uid()` dans un CORPS DE
+// FONCTION (`v_user UUID := auth.uid();`). Là, l'appel est déjà évalué une
+// seule fois, dans une variable — c'est la forme optimale, et la signaler
+// ferait de ce garde-fou une machine à faux positifs qu'on finirait par
+// désactiver. Seules les policies sont examinées.
+
+/** Les appels d'auth concernés : tous STABLE et sans argument. */
+export const AUTH_FNS = ['uid', 'jwt', 'role', 'email'] as const
+
+/** `(SELECT auth.uid())` — la forme voulue, avec ou sans alias ni espaces. */
+const ENVELOPPEE = /\(\s*select\s+auth\.(?:uid|jwt|role|email)\s*\(\s*\)(?:\s+as\s+\w+)?\s*\)/gi
+
+/** `auth.uid()` — la forme à proscrire dans une policy. */
+const NUE = /auth\.(?:uid|jwt|role|email)\s*\(\s*\)/i
+
+/**
+ * Les instructions `CREATE POLICY`, une par entrée.
+ *
+ * Découpage au point-virgule : une expression de policy n'en contient pas
+ * (elle n'a ni bloc ni instruction imbriquée), et les rares apostrophes qu'on
+ * y trouve encadrent des littéraux courts. C'est volontairement plus simple
+ * qu'un analyseur SQL — ce garde-fou doit rester lisible par quiconque le voit
+ * échouer, sinon il sera contourné plutôt que compris.
+ */
+const INSTRUCTION_POLICY = /create\s+policy\b[\s\S]*?;/gi
+
+export type PolicyNue = {
+  /** Nom de la policy, tel qu'écrit. */
+  nom: string
+  /** Table visée, sans le schéma. */
+  table: string
+  /** L'appel fautif, pour que le message d'erreur montre quoi corriger. */
+  extrait: string
+}
+
+/**
+ * Les policies d'un fichier SQL qui appellent l'auth sans l'envelopper.
+ *
+ * Une instruction est jugée SUR CE QU'IL RESTE une fois toutes les formes
+ * correctes retirées : c'est le même raisonnement que la migration 208, qui
+ * déballe avant de réemballer. Une policy qui mélangerait les deux formes —
+ * `(SELECT auth.uid())` ici, `auth.uid()` là — est donc bien signalée, alors
+ * qu'une simple recherche de `(SELECT auth.` l'aurait crue propre.
+ */
+export function policiesNonEnveloppees(sql: string): PolicyNue[] {
+  const nues: PolicyNue[] = []
+
+  for (const instruction of sql.match(INSTRUCTION_POLICY) ?? []) {
+    const reste = instruction.replace(ENVELOPPEE, '')
+    const faute = reste.match(NUE)
+    if (!faute) continue
+
+    nues.push({
+      nom: nomDeLaPolicy(instruction),
+      table: tableDeLaPolicy(instruction),
+      extrait: faute[0],
+    })
+  }
+
+  return nues
+}
+
+function nomDeLaPolicy(instruction: string): string {
+  // Le nom peut être un identifiant nu ou une chaîne entre guillemets doubles
+  // (« exam_papers lisibles par les comptes connectés » en est un).
+  const m = instruction.match(/create\s+policy\s+(?:if\s+not\s+exists\s+)?("[^"]+"|[\w]+)/i)
+  return m ? m[1].replace(/"/g, '') : '(nom illisible)'
+}
+
+function tableDeLaPolicy(instruction: string): string {
+  const m = instruction.match(/\bon\s+(?:public\.)?("[^"]+"|[\w]+)/i)
+  return m ? m[1].replace(/"/g, '') : '(table illisible)'
+}

@@ -1705,6 +1705,22 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'REDÉFINIT `child_dashboard` : miroir EXACT de la 199 (mêmes CTE, même bornage à la classe courante) augmenté de quatre clés — toute évolution de la 199 doit être reportée ici, sinon la dernière exécutée gagne. Les contrôles passent par cette fonction SECURITY DEFINER et NON par une policy sur `controles` : le lien parent↔enfant est vérifié à un seul endroit. Sûre à exécuter avant ou après le déploiement (le code déployé avant ignore les nouvelles clés, celui d’après tolère leur absence).',
   },
+  {
+    id: '320',
+    fichier: '320_rls_initplan_permanent.sql',
+    feature:
+      'L’optimisation RLS rendue PERMANENTE : `optimiser_policies_rls()` appelable, rattrapage immédiat des policies nues, et un event trigger qui enveloppe toute policy à sa création',
+    siAbsente:
+      'Rien ne casse et rien ne se voit — c’est tout le problème. Les policies écrites depuis la 208 gardent `auth.uid()` nu : Postgres réévalue la fonction UNE FOIS PAR LIGNE examinée et renonce à l’index sur `user_id`. Invisible sur une table de mille lignes, mortel sur `test_sessions`, qui prendra ~3 M de lignes par jour à cent mille élèves. Au 26/08/2026 : 100 policies nues contre 13 enveloppées.',
+    // NON SONDABLE À LA CLÉ ANON, et volontairement. Cette migration ne crée
+    // que des fonctions d'exploitation, dont l'EXECUTE est justement RÉVOQUÉ
+    // pour tout le monde — les sonder reviendrait à demander si une porte
+    // fermée à clé est bien fermée. La vérification se fait à la main, avec la
+    // requête laissée en pied du fichier SQL (elle doit rendre 0 ligne).
+    sonde: null,
+    decision:
+      'À REJOUER APRÈS CHAQUE LOT tant que l’event trigger n’est pas posé : `CREATE EVENT TRIGGER` exige le superutilisateur, que Supabase n’accorde pas toujours au rôle `postgres`. La migration RATTRAPE cet échec et réussit quand même — lis le NOTICE qu’elle affiche. S’il dit « Déclencheur NON posé », ajoute `SELECT public.optimiser_policies_rls();` en dernière ligne de chaque migration qui crée une policy. Le garde-fou côté dépôt (`lib/rls-guard.ts`), lui, marche dans tous les cas.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

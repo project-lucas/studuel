@@ -481,12 +481,14 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'Les 17 épreuves de la session 2026 (brevet, épreuves anticipées de 1re, bac), avec durée, coefficient, barème partie par partie et les chapitres que chacune mobilise',
     siAbsente:
       'La table des annales reste vide : l’élève de 3e sait que le brevet arrive sans jamais voir à quoi il ressemble — combien de temps, combien de parties, quel barème, quels chapitres tombent où.',
-    sonde: {
-      type: 'ligne',
-      table: 'exam_papers',
-      colonne: 'session',
-      valeur: '2026',
-    },
+    // NON SONDABLE À LA CLÉ ANON, et ce n'était pas vu. La sonde cherchait ici
+    // une LIGNE (une épreuve de la session 2026), mais `exam_papers` (policy de la 236) n'ouvre son SELECT
+    // qu'au rôle `authenticated` : à la clé anon la requête réussit et rend
+    // TOUJOURS zéro ligne, migration exécutée ou non. La sonde criait donc au
+    // loup en permanence — le second visage du bug du 26/08, après le 42501 :
+    // là c'était le GRANT qui manquait, ici c'est la policy RLS qui filtre.
+    // Une sonde qui ne PEUT pas être vraie doit valoir `null`, pas « éteinte ».
+    sonde: null,
     decision:
       'Ce que la migration apporte est la STRUCTURE OFFICIELLE des épreuves, pas les énoncés des sujets tombés : ceux-là demandent un relevé aux sujets officiels, session par session, et viendront dans d’autres fichiers de `scripts/annales/`. Le modèle est prévu pour — les colonnes `session` et `center` distinguent déjà « 2026 » de « 2025 · Amérique du Nord ». ⚠️ LE GRAND ORAL N’Y EST PAS : il vaut coefficient 10 et se prépare sur les DEUX spécialités à la fois, il n’appartient donc à aucune matière alors que `exam_papers` en exige une. Le rattacher arbitrairement à l’une des deux mentirait sur ce qu’il est.',
   },
@@ -519,12 +521,14 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'Le catalogue du vestiaire réécrit pour le moteur Open Peeps : 30 coiffures et couvre-chefs (voile, turban, tresses, locks, twists, afro, bantu knots, bonnet, casquette) au lieu de 6, 8 teintes de peau, la tenue devenue couleur de haut',
     siAbsente:
       'Le vestiaire retombe sur son catalogue de repli embarqué (`fallbackCatalog`) : toutes les options s’affichent et se portent, mais GRATUITEMENT — plus de prix, plus de cadenas, plus de déblocages à mériter. L’avatar lui-même se rend correctement (le moteur vit dans lib/avatar.ts, pas en base) ; c’est l’économie du vestiaire qui s’éteint. Rien ne casse à l’écran.',
-    sonde: {
-      type: 'ligne',
-      table: 'avatar_items',
-      colonne: 'asset_key',
-      valeur: 'hijab',
-    },
+    // NON SONDABLE À LA CLÉ ANON, et ce n'était pas vu. La sonde cherchait ici
+    // une LIGNE (la pièce « hijab »), mais `avatar_items` (policy de la 189) n'ouvre son SELECT
+    // qu'au rôle `authenticated` : à la clé anon la requête réussit et rend
+    // TOUJOURS zéro ligne, migration exécutée ou non. La sonde criait donc au
+    // loup en permanence — le second visage du bug du 26/08, après le 42501 :
+    // là c'était le GRANT qui manquait, ici c'est la policy RLS qui filtre.
+    // Une sonde qui ne PEUT pas être vraie doit valoir `null`, pas « éteinte ».
+    sonde: null,
     decision:
       'Le moteur de rendu passe d’avataaars (22 coiffures, aucune texture de cheveux, ni voile ni tresses) à Open Peeps. Les IDS DES ITEMS NE CHANGENT PAS : un élève qui avait acheté `coif-locks` le possède toujours, seul son `asset_key` est réécrit — `user_avatar_items` n’est jamais touchée, et rien n’est supprimé (on ne rembourse pas en effaçant). CE QUI SE PERD, ET C’EST ASSUMÉ : la coiffure et la couleur de haut de chaque élève repartent du défaut (aucune valeur d’avataaars n’a d’équivalent), tandis que la PEAU et la COULEUR DE CHEVEUX traversent, les palettes ayant été alignées hex pour hex dans lib/avatar.ts. La catégorie `outfit` ne porte plus une coupe de vêtement mais une COULEUR : Open Peeps n’a qu’une silhouette, la variété a déménagé côté coiffures. La catégorie `hair_color` DISPARAÎT — Open Peeps peint la chevelure et les contours du visage d’un même tracé noir, une teinte y serait invisible ; ses sept articles deviennent des coiffures de même prix, ids et possessions inchangés. Le voile, le turban, les tresses et l’afro sont GRATUITS — ce ne sont pas des cosmétiques, ce sont des têtes.',
   },
@@ -1124,6 +1128,505 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     sonde: null,
     decision:
       '⚠️ EXÉCUTER LA 241 D’ABORD : elle réécrit ENTIÈREMENT le tableau `levels` de l’EPS, des arts plastiques et de la musique ; passée après la 278, elle ramènerait les trois matières en 1re en silence. La 278 refuse de tourner tant que la 241 n’est pas là (garde sur `CP` dans les niveaux de l’histoire-géo). NON SONDABLE À LA CLÉ ANON : cette migration RETIRE des niveaux, aucune sonde d’existence ne le dit — vérifier à la main que `subjects.levels` de `sport` ne contient plus `1re` (mais bien `1re techno`). ⚠️ DEUX FAITS ASSUMÉS, ÉCRITS DANS L’EN-TÊTE DU FICHIER : l’EPS est OBLIGATOIRE en 1re (2 h/sem) et LLCER anglais est une SPÉCIALITÉ de 1re (4 h) — leur retrait est une décision de PRODUIT (on ne révise pas l’EPS, l’app ne tient aucun de ces deux programmes), pas une correction de programme. La 1re TECHNO garde l’EPS, les arts et la musique : sans elles, sa grille — faite du seul tronc commun — tomberait sous les dix matières exigées par `lib/subject-catalogue.test.ts`. Les deux gardes de ce test portent l’exception, commentée. RETOUR EN ARRIÈRE : remettre `1re` dans `levels`, et rejouer 219/220 pour les fiches du latin, du grec et de LLCER.',
+  },
+  // ---------------------------------------------------------------------------
+  // LES 34 SEEDS DE PROGRAMME DU COLLÈGE ET DE LA SECONDE (279 → 312).
+  //
+  // Ajoutés au catalogue le 26/08/2026, et il était temps : ils en étaient
+  // absents depuis leur écriture, donc NI la sonde CLI NI /admin/sante ne les
+  // regardaient. Le jour où on les y a mis, sept se sont révélées ÉTEINTES —
+  // toute la Cinquième (307 → 312) et la SES de Seconde (280). Un élève de 5e
+  // ouvrait donc maths sur 5 chapitres au lieu de 26, anglais sur 5 au lieu de
+  // 41, SVT sur 5 au lieu de 31, et personne ne pouvait le savoir : c'est
+  // exactement le trou silencieux que ce module existe pour fermer.
+  //
+  // TOUTES SONDÉES PAR UUID, jamais par titre. « Les questions » (espagnol),
+  // « Les noms » (anglais) et « Mélanges et corps purs » (physique-chimie)
+  // existent à l'identique sur trois niveaux : un titre ne distingue pas la 5e
+  // de la 4e. Les UUID de ces fichiers sont dérivés du CONTENU (SHA-1) — donc
+  // stables au rejeu, et propres à une seule migration.
+  //
+  // Elles sont toutes GÉNÉRÉES par scripts/seed-contenu.mjs, idempotentes
+  // (UUID stables + ON CONFLICT DO NOTHING) et autoportantes : chacune pose
+  // elle-même en ADD COLUMN IF NOT EXISTS les colonnes dont elle dépend
+  // (`chapters.theme` de la 234, `chapters.discipline` de la 247). Aucune ne
+  // demande de décision, aucune n'a d'ordre imposé entre elles.
+  // ---------------------------------------------------------------------------
+  {
+    id: '279',
+    fichier: '279_contenu_histoire_geo_2de.sql',
+    feature:
+      'Histoire-géo 2de : les 40 fiches du programme (320 questions) sous 13 chapitres, dans ses deux onglets (Histoire / Géographie)',
+    siAbsente:
+      'Le dossier Histoire-géo de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 40 fiches du programme (320 questions) manquent, à commencer par « Les grandes périodes de l’histoire ». Les thèmes officiels (Des mobilités humaines généralisées · La Méditerranée antique : les empreintes grecques et romaines…) n’apparaissent nulle part. Le dossier reste aussi sur UN seul rayon : c’est `chapters.discipline` qui le dédouble en Histoire et en Géographie, et sans ces lignes il n’y a rien à dédoubler.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '26155276-3b14-553d-97de-85e5d4e5a28a',
+    },
+  },
+  {
+    id: '280',
+    fichier: '280_contenu_ses_2de.sql',
+    feature:
+      'SES 2de : les 23 fiches du programme officiel sous 6 chapitres (184 questions)',
+    siAbsente:
+      'Le dossier SES de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 23 fiches du programme (184 questions) manquent, à commencer par « Les principes de base de l’économie ». Les thèmes officiels (Comment crée-t-on des richesses et comment les mesure-t-on ? · Comment devenons-nous des acteurs sociaux ?…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '94c8df39-d7f9-5d49-a14f-2309759f8404',
+    },
+  },
+  {
+    id: '281',
+    fichier: '281_contenu_snt_2de.sql',
+    feature:
+      'SNT 2de : les 23 fiches du programme officiel sous 7 chapitres (184 questions)',
+    siAbsente:
+      'Le dossier SNT de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 23 fiches du programme (184 questions) manquent, à commencer par « Internet : le réseau des réseaux ». Les thèmes officiels (Cartographier · Commander…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '8c9d248b-fa2d-5956-885f-076c440901c9',
+    },
+  },
+  {
+    id: '282',
+    fichier: '282_contenu_maths_2de.sql',
+    feature:
+      'Maths 2de : les 20 fiches du programme officiel sous 4 chapitres (160 questions)',
+    siAbsente:
+      'Le dossier Maths de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 20 fiches du programme (160 questions) manquent, à commencer par « Ensemble des nombres réels et intervalles ». Les thèmes officiels (Fonctions · Géométrie…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'fab3ca92-b4d6-53e0-b06b-eb3174505645',
+    },
+  },
+  {
+    id: '283',
+    fichier: '283_contenu_francais_2de.sql',
+    feature:
+      'Français 2de : les 24 fiches du programme officiel sous 4 chapitres (192 questions)',
+    siAbsente:
+      'Le dossier Français de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 24 fiches du programme (192 questions) manquent, à commencer par « Repères : de la poésie médiévale aux Lumières ». Les thèmes officiels (La littérature d’idées et la presse du XIXe siècle au XXIe siècle · La poésie du Moyen Âge au XVIIIe siècle…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '84370f35-aba7-51fd-91e9-cf10e3556e73',
+    },
+  },
+  {
+    id: '284',
+    fichier: '284_contenu_emc_2de.sql',
+    feature:
+      'EMC 2de : les 10 fiches du programme officiel sous 3 chapitres (80 questions)',
+    siAbsente:
+      'Le dossier EMC de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 10 fiches du programme (80 questions) manquent, à commencer par « Qu’est-ce que l’État de droit ? ». Les thèmes officiels (Droit et responsabilité : la protection de l’environnement et la sauvegarde de la biodiversité · Libertés et responsabilité : l’information…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'c3ba5e5b-b29c-50b5-b5cb-9e66d44134ba',
+    },
+  },
+  {
+    id: '285',
+    fichier: '285_contenu_svt_2de.sql',
+    feature:
+      'SVT 2de : les 19 fiches du programme officiel sous 6 chapitres (152 questions)',
+    siAbsente:
+      'Le dossier SVT de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 19 fiches du programme (152 questions) manquent, à commencer par « Les êtres vivants pluricellulaires et la spécialisation des cellules ». Les thèmes officiels (Biodiversité, résultat et étape de l’évolution · Géosciences et compréhension des paysages…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'e505ae5b-c90a-53a9-91b9-e31835363b55',
+    },
+  },
+  {
+    id: '286',
+    fichier: '286_contenu_anglais_2de.sql',
+    feature:
+      'Anglais 2de : les 24 fiches du programme de LANGUE (grammaire, conjugaison, lexique) sous 4 chapitres, 192 questions',
+    siAbsente:
+      'Le dossier Anglais de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 24 fiches du programme (192 questions) manquent, à commencer par « Les déterminants ». Les thèmes officiels (La phrase · Le groupe nominal…) n’apparaissent nulle part. Le dossier garde ses quelques fiches de culture et de civilisation, sans grammaire : un élève qui cherche un point de langue précis avant un contrôle n’a rien à ouvrir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '16e9c918-98a3-5e99-a22f-d8e693511c64',
+    },
+  },
+  {
+    id: '287',
+    fichier: '287_contenu_espagnol_2de.sql',
+    feature:
+      'Espagnol 2de : les 34 fiches du programme de LANGUE (grammaire, conjugaison, lexique) sous 4 chapitres, 272 questions',
+    siAbsente:
+      'Le dossier Espagnol de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 34 fiches du programme (272 questions) manquent, à commencer par « Les questions ». Les thèmes officiels (La phrase · Le groupe nominal…) n’apparaissent nulle part. Le dossier garde ses quelques fiches de culture et de civilisation, sans grammaire : un élève qui cherche un point de langue précis avant un contrôle n’a rien à ouvrir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '00c82ee7-60a1-546f-a17c-161399cf400b',
+    },
+  },
+  {
+    id: '288',
+    fichier: '288_contenu_allemand_2de.sql',
+    feature:
+      'Allemand 2de : les 36 fiches du programme de LANGUE (grammaire, conjugaison, lexique) sous 5 chapitres, 288 questions',
+    siAbsente:
+      'Le dossier Allemand de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 36 fiches du programme (288 questions) manquent, à commencer par « La ponctuation ». Les thèmes officiels (La phrase · Le groupe nominal…) n’apparaissent nulle part. Le dossier garde ses quelques fiches de culture et de civilisation, sans grammaire : un élève qui cherche un point de langue précis avant un contrôle n’a rien à ouvrir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '890d4c78-95a3-54aa-a1ea-179146d5a587',
+    },
+  },
+  {
+    id: '289',
+    fichier: '289_contenu_physique_chimie_2de.sql',
+    feature:
+      'Physique-chimie 2de : les 23 fiches du programme officiel sous 4 chapitres (184 questions)',
+    siAbsente:
+      'Le dossier Physique-chimie de 2de reste sur les quelques chapitres génériques hérités du premier jeu de données : les 23 fiches du programme (184 questions) manquent, à commencer par « Corps purs et mélanges ». Les thèmes officiels (Constitution et transformation de la matière · Mouvements et interactions…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '0f4c7b7f-4cd7-5f83-a328-7ed3dfa8af40',
+    },
+  },
+  {
+    id: '290',
+    fichier: '290_contenu_francais_3e.sql',
+    feature:
+      'Français 3e : les 18 fiches du programme officiel sous 6 chapitres (144 questions)',
+    siAbsente:
+      'Le dossier Français de 3e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 18 fiches du programme (144 questions) manquent, à commencer par « L’autoportrait ». Les thèmes officiels (Agir sur le monde — Agir dans la cité : individu et pouvoir · Outils d’analyse littéraire…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '258f7c2b-56fe-5aae-8e30-33ac35f44de1',
+    },
+  },
+  {
+    id: '291',
+    fichier: '291_contenu_histoire_3e.sql',
+    feature:
+      'Histoire-géo 3e : les 14 fiches du programme (112 questions) sous 3 chapitres, dans l\'onglet Histoire',
+    siAbsente:
+      'Le dossier Histoire-géo de 3e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 14 fiches du programme (112 questions) manquent, à commencer par « La Première Guerre mondiale : vers une guerre totale ». Les thèmes officiels (Françaises et Français dans une République repensée · Le monde depuis 1945…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '6583dbde-d239-5bcb-a891-6ab8836842bd',
+    },
+  },
+  {
+    id: '292',
+    fichier: '292_contenu_svt_3e.sql',
+    feature:
+      'SVT 3e : les 31 fiches du programme officiel sous 14 chapitres (248 questions)',
+    siAbsente:
+      'Le dossier SVT de 3e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 31 fiches du programme (248 questions) manquent, à commencer par « La Terre et le système solaire ». Les thèmes officiels (Alimentation et digestion · Diversité et stabilité génétique des êtres vivants…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '704037d9-6f2a-5ac4-8824-00e4cff12d6e',
+    },
+  },
+  {
+    id: '293',
+    fichier: '293_contenu_geographie_3e.sql',
+    feature:
+      'Histoire-géo 3e : les 12 fiches du programme (96 questions) sous 3 chapitres, dans l\'onglet Géographie',
+    siAbsente:
+      'Le dossier Histoire-géo de 3e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 12 fiches du programme (96 questions) manquent, à commencer par « Les aires urbaines en France ». Les thèmes officiels (Dynamiques territoriales de la France contemporaine · La France et l’Union européenne…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '2a360b9e-58d4-5d2c-99aa-1ed25cbbb4c8',
+    },
+  },
+  {
+    id: '294',
+    fichier: '294_contenu_maths_3e.sql',
+    feature:
+      'Maths 3e : les 14 fiches du programme officiel sous 3 chapitres (112 questions)',
+    siAbsente:
+      'Le dossier Maths de 3e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 14 fiches du programme (112 questions) manquent, à commencer par « Puissances d’un nombre et écriture scientifique ». Les thèmes officiels (Espace et géométrie · Nombres et calculs…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '0f21911f-5b9f-5109-8ad8-c82a8479ea99',
+    },
+  },
+  {
+    id: '295',
+    fichier: '295_contenu_physique_chimie_3e.sql',
+    feature:
+      'Physique-chimie 3e : les 31 fiches du programme officiel sous 7 chapitres (248 questions)',
+    siAbsente:
+      'Le dossier Physique-chimie de 3e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 31 fiches du programme (248 questions) manquent, à commencer par « Mélanges et corps purs ». Les thèmes officiels (Les circuits électriques · Les signaux…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '3aacaf01-3572-52e7-9ce8-44f95f590b6e',
+    },
+  },
+  {
+    id: '296',
+    fichier: '296_contenu_technologie_3e.sql',
+    feature:
+      'Technologie 3e : les 23 fiches du programme officiel sous 8 chapitres (184 questions)',
+    siAbsente:
+      'Le dossier Technologie de 3e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 23 fiches du programme (184 questions) manquent, à commencer par « Les OST ». Les thèmes officiels (Fabrication/réalisation d’un objet technique · Gérer un projet technique…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '7b9cf9f2-dd75-52e8-b501-e03af97cdc28',
+    },
+  },
+  {
+    id: '297',
+    fichier: '297_contenu_espagnol_3e.sql',
+    feature:
+      'Espagnol 3e : les 34 fiches du programme de LANGUE (grammaire, conjugaison, lexique) sous 4 chapitres, 272 questions',
+    siAbsente:
+      'Le dossier Espagnol de 3e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 34 fiches du programme (272 questions) manquent, à commencer par « Les questions ». Les thèmes officiels (La phrase · Le groupe nominal…) n’apparaissent nulle part. Le dossier garde ses quelques fiches de culture et de civilisation, sans grammaire : un élève qui cherche un point de langue précis avant un contrôle n’a rien à ouvrir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '17ff294f-2c5c-50d8-acf6-59ab06a050ab',
+    },
+  },
+  {
+    id: '298',
+    fichier: '298_contenu_anglais_3e.sql',
+    feature:
+      'Anglais 3e : les 41 fiches du programme de LANGUE (grammaire, conjugaison, lexique) sous 4 chapitres, 328 questions',
+    siAbsente:
+      'Le dossier Anglais de 3e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 41 fiches du programme (328 questions) manquent, à commencer par « Les noms ». Les thèmes officiels (La phrase · Le groupe nominal…) n’apparaissent nulle part. Le dossier garde ses quelques fiches de culture et de civilisation, sans grammaire : un élève qui cherche un point de langue précis avant un contrôle n’a rien à ouvrir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'a87e8d79-456a-56fe-9c4c-29ce2316a257',
+    },
+  },
+  {
+    id: '299',
+    fichier: '299_contenu_allemand_3e.sql',
+    feature:
+      'Allemand 3e : les 36 fiches du programme de LANGUE (grammaire, conjugaison, lexique) sous 5 chapitres, 288 questions',
+    siAbsente:
+      'Le dossier Allemand de 3e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 36 fiches du programme (288 questions) manquent, à commencer par « La ponctuation ». Les thèmes officiels (La phrase · Le groupe nominal…) n’apparaissent nulle part. Le dossier garde ses quelques fiches de culture et de civilisation, sans grammaire : un élève qui cherche un point de langue précis avant un contrôle n’a rien à ouvrir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'd4002fe0-91d7-56ae-b36b-981cef0e2b98',
+    },
+  },
+  {
+    id: '300',
+    fichier: '300_contenu_francais_4e.sql',
+    feature:
+      'Français 4e : les 18 fiches du programme officiel sous 5 chapitres (144 questions)',
+    siAbsente:
+      'Le dossier Français de 4e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 18 fiches du programme (144 questions) manquent, à commencer par « La poésie lyrique et amoureuse de l’Antiquité à nos jours ». Les thèmes officiels (Agir sur le monde — Informer, s’informer, déformer ? · Questionnements complémentaires — La ville, lieu de tous les possibles ?…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'a5ca98d8-8b8f-5cfa-b1e9-d855937fa78f',
+    },
+  },
+  {
+    id: '301',
+    fichier: '301_contenu_maths_4e.sql',
+    feature:
+      'Maths 4e : les 36 fiches du programme officiel sous 5 chapitres (288 questions)',
+    siAbsente:
+      'Le dossier Maths de 4e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 36 fiches du programme (288 questions) manquent, à commencer par « Multiplier et diviser des nombres relatifs ». Les thèmes officiels (Cours de l’ancien programme · Espace et géométrie…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'bbc8df26-d175-58d1-affb-8efd8a429819',
+    },
+  },
+  {
+    id: '302',
+    fichier: '302_contenu_physique_chimie_4e.sql',
+    feature:
+      'Physique-chimie 4e : les 31 fiches du programme officiel sous 7 chapitres (248 questions)',
+    siAbsente:
+      'Le dossier Physique-chimie de 4e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 31 fiches du programme (248 questions) manquent, à commencer par « Mélanges et corps purs ». Les thèmes officiels (Les circuits électriques · Les signaux…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'e7ee89b1-0355-514c-b695-7f9784c42cc1',
+    },
+  },
+  {
+    id: '303',
+    fichier: '303_contenu_svt_4e.sql',
+    feature:
+      'SVT 4e : les 31 fiches du programme officiel sous 14 chapitres (248 questions)',
+    siAbsente:
+      'Le dossier SVT de 4e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 31 fiches du programme (248 questions) manquent, à commencer par « La Terre et le système solaire ». Les thèmes officiels (Alimentation et digestion · Diversité et stabilité génétique des êtres vivants…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '609ba61d-3349-5905-9f12-36f64a2ab0fa',
+    },
+  },
+  {
+    id: '304',
+    fichier: '304_contenu_anglais_4e.sql',
+    feature:
+      'Anglais 4e : les 41 fiches du programme de LANGUE (grammaire, conjugaison, lexique) sous 4 chapitres, 328 questions',
+    siAbsente:
+      'Le dossier Anglais de 4e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 41 fiches du programme (328 questions) manquent, à commencer par « Les noms ». Les thèmes officiels (La phrase · Le groupe nominal…) n’apparaissent nulle part. Le dossier garde ses quelques fiches de culture et de civilisation, sans grammaire : un élève qui cherche un point de langue précis avant un contrôle n’a rien à ouvrir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '63a4aa8d-ba12-548f-b8be-114e11d012de',
+    },
+  },
+  {
+    id: '305',
+    fichier: '305_contenu_espagnol_4e.sql',
+    feature:
+      'Espagnol 4e : les 34 fiches du programme de LANGUE (grammaire, conjugaison, lexique) sous 4 chapitres, 272 questions',
+    siAbsente:
+      'Le dossier Espagnol de 4e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 34 fiches du programme (272 questions) manquent, à commencer par « Les questions ». Les thèmes officiels (La phrase · Le groupe nominal…) n’apparaissent nulle part. Le dossier garde ses quelques fiches de culture et de civilisation, sans grammaire : un élève qui cherche un point de langue précis avant un contrôle n’a rien à ouvrir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '8dc9c965-f57b-5d15-9ba5-2b48bb578de9',
+    },
+  },
+  {
+    id: '306',
+    fichier: '306_contenu_histoire_geo_5e.sql',
+    feature:
+      'Histoire-géo 5e : les 21 fiches du programme (168 questions) sous 6 chapitres, dans ses deux onglets (Histoire / Géographie)',
+    siAbsente:
+      'Le dossier Histoire-géo de 5e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 21 fiches du programme (168 questions) manquent, à commencer par « Empire et civilisation arabo-musulmans ». Les thèmes officiels (Chrétientés et islam (VIe-XIIIe siècles), des mondes en contact · Des ressources limitées, à gérer et à renouveler…) n’apparaissent nulle part. Le dossier reste aussi sur UN seul rayon : c’est `chapters.discipline` qui le dédouble en Histoire et en Géographie, et sans ces lignes il n’y a rien à dédoubler.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'a84a4b01-c102-5366-ad58-5feb28ac9c50',
+    },
+  },
+  {
+    id: '307',
+    fichier: '307_contenu_francais_5e.sql',
+    feature:
+      'Français 5e : les 13 fiches du programme officiel sous 5 chapitres (104 questions)',
+    siAbsente:
+      'Le dossier Français de 5e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 13 fiches du programme (104 questions) manquent, à commencer par « Les grandes découvertes ». Les thèmes officiels (Agir sur le monde — Héros / héroïnes et héroïsme · Questionnements complémentaires — L’être humain est-il maître de la nature ?…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '8f784bec-0277-5d05-b70e-7d47fb81e7bc',
+    },
+  },
+  {
+    id: '308',
+    fichier: '308_contenu_maths_5e.sql',
+    feature:
+      'Maths 5e : les 26 fiches du programme officiel sous 4 chapitres (208 questions)',
+    siAbsente:
+      'Le dossier Maths de 5e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 26 fiches du programme (208 questions) manquent, à commencer par « Passer d’une écriture décimale à une écriture fractionnaire ». Les thèmes officiels (Cours de l’ancien programme · Espace et géométrie…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '5e261956-9f14-5c71-af61-e6c3c4bf7470',
+    },
+  },
+  {
+    id: '309',
+    fichier: '309_contenu_physique_chimie_5e.sql',
+    feature:
+      'Physique-chimie 5e : les 31 fiches du programme officiel sous 7 chapitres (248 questions)',
+    siAbsente:
+      'Le dossier Physique-chimie de 5e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 31 fiches du programme (248 questions) manquent, à commencer par « Mélanges et corps purs ». Les thèmes officiels (Les circuits électriques · Les signaux…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '8bfc7fdd-cb95-55ad-9c0a-a1734702ab1d',
+    },
+  },
+  {
+    id: '310',
+    fichier: '310_contenu_svt_5e.sql',
+    feature:
+      'SVT 5e : les 31 fiches du programme officiel sous 14 chapitres (248 questions)',
+    siAbsente:
+      'Le dossier SVT de 5e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 31 fiches du programme (248 questions) manquent, à commencer par « La Terre et le système solaire ». Les thèmes officiels (Alimentation et digestion · Diversité et stabilité génétique des êtres vivants…) n’apparaissent nulle part.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '0cee6f77-031d-5b08-90df-57494e474572',
+    },
+  },
+  {
+    id: '311',
+    fichier: '311_contenu_anglais_5e.sql',
+    feature:
+      'Anglais 5e : les 41 fiches du programme de LANGUE (grammaire, conjugaison, lexique) sous 4 chapitres, 328 questions',
+    siAbsente:
+      'Le dossier Anglais de 5e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 41 fiches du programme (328 questions) manquent, à commencer par « Les noms ». Les thèmes officiels (La phrase · Le groupe nominal…) n’apparaissent nulle part. Le dossier garde ses quelques fiches de culture et de civilisation, sans grammaire : un élève qui cherche un point de langue précis avant un contrôle n’a rien à ouvrir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '95f5a069-6fbd-5984-a10f-853c99fba68a',
+    },
+  },
+  {
+    id: '312',
+    fichier: '312_contenu_espagnol_5e.sql',
+    feature:
+      'Espagnol 5e : les 34 fiches du programme de LANGUE (grammaire, conjugaison, lexique) sous 4 chapitres, 272 questions',
+    siAbsente:
+      'Le dossier Espagnol de 5e reste sur les quelques chapitres génériques hérités du premier jeu de données : les 34 fiches du programme (272 questions) manquent, à commencer par « Les questions ». Les thèmes officiels (La phrase · Le groupe nominal…) n’apparaissent nulle part. Le dossier garde ses quelques fiches de culture et de civilisation, sans grammaire : un élève qui cherche un point de langue précis avant un contrôle n’a rien à ouvrir.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '4b107bff-cc5f-50d3-8c67-6a9e54606d90',
+    },
   },
   {
     id: '313',

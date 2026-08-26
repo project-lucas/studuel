@@ -58,7 +58,7 @@ export async function openDailyChest(): Promise<ChestResult> {
   }
 
   const coins = await currentCoins(supabase, user.id)
-  revalidatePath('/coffre')
+  revalidatePath('/tresor')
   return { status: 'opened', reward: drawn, coins }
 }
 
@@ -135,7 +135,7 @@ async function openDailyChestLegacy(
   }
 
   const coins = await currentCoins(supabase, userId)
-  revalidatePath('/coffre')
+  revalidatePath('/tresor')
   // opened === false = déjà ouvert aujourd'hui (ON CONFLICT DO NOTHING).
   return opened === true
     ? { status: 'opened', reward, coins }
@@ -165,21 +165,36 @@ export async function claimLoginReward(): Promise<LoginRewardResult> {
 
   const r = data as { claimed?: boolean; coins?: number; streak?: number } | null
   if (!r?.claimed) return none
-  revalidatePath('/coffre')
+  revalidatePath('/tresor')
   return { claimed: true, coins: r.coins ?? 0, streak: r.streak ?? 1 }
 }
 
-export type PurchaseResult = { bought: boolean; coins: number }
+// `raison` accompagne les REFUS. Sans elle, un refus se résumait à
+// `{bought:false, coins:0}` — et l'écran, qui ne peut que comparer ce solde au
+// prix, annonçait « il te manque 120 pièces » à un élève dont la session avait
+// simplement expiré. Le renvoyer compter ses pièces alors qu'il faut le
+// reconnecter, c'est une impasse.
+export type PurchaseResult = {
+  bought: boolean
+  coins: number
+  raison?: 'anonyme' | 'article-inconnu' | 'panne'
+}
 
 // Achète un article : le prix vient du CATALOGUE (jamais du client), le débit
 // et l'enregistrement sont atomiques côté SQL (buy_shop_item).
 export async function buyShopItem(itemId: string): Promise<PurchaseResult> {
   const supabase = await createClient()
   const user = await getCurrentUser()
-  if (!user) return { bought: false, coins: 0 }
+  if (!user) return { bought: false, coins: 0, raison: 'anonyme' }
 
   const item = SHOP_CATALOG.find((i) => i.id === itemId)
-  if (!item) return { bought: false, coins: await currentCoins(supabase, user.id) }
+  if (!item) {
+    return {
+      bought: false,
+      coins: await currentCoins(supabase, user.id),
+      raison: 'article-inconnu',
+    }
+  }
 
   const { data: bought, error } = await supabase.rpc('buy_shop_item', {
     p_item_id: item.id,
@@ -187,11 +202,15 @@ export async function buyShopItem(itemId: string): Promise<PurchaseResult> {
   })
   if (error) {
     console.error('[tresor] achat impossible:', error.message)
-    return { bought: false, coins: await currentCoins(supabase, user.id) }
+    return {
+      bought: false,
+      coins: await currentCoins(supabase, user.id),
+      raison: 'panne',
+    }
   }
 
   const coins = await currentCoins(supabase, user.id)
-  revalidatePath('/coffre')
+  revalidatePath('/tresor')
   return { bought: bought === true, coins }
 }
 

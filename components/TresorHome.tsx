@@ -7,6 +7,13 @@ import { CristalIcon, EcuIcon } from '@/components/ui/MonnaieIcon'
 import CoinIcon from '@/components/ui/CoinIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { toast } from '@/lib/toast'
+import {
+  coinsManquants,
+  issueAchat,
+  messageAchat,
+  prochainArticle,
+} from '@/lib/tresor-achat'
 import {
   type ShopItem,
   type CollectItem,
@@ -177,6 +184,7 @@ function ShelfCard({
   onBuy: (item: ShopItem) => void
 }) {
   const affordable = coins >= item.price
+  const manque = coinsManquants(coins, item.price)
   return (
     <div className="flex w-40 shrink-0 snap-start flex-col items-center rounded-2xl bg-card p-3 text-center ring-1 ring-foreground/10">
       <span className="text-3xl" aria-hidden="true">
@@ -193,20 +201,34 @@ function ShelfCard({
           <Check className="size-3.5" aria-hidden="true" /> Obtenu
         </span>
       ) : (
-        <button
-          type="button"
-          disabled={!affordable}
-          onClick={() => onBuy(item)}
-          aria-label={`Acheter ${item.name} pour ${item.price} pièces`}
-          className={cn(
-            'mt-2 flex cursor-pointer items-center gap-1 rounded-full px-3 py-1.5 font-mono text-xs font-extrabold tabular-nums transition active:translate-y-px',
-            affordable
-              ? 'bg-primary/10 text-primary hover:bg-primary/15'
-              : 'bg-muted text-muted-foreground/70',
-          )}
-        >
-          <CoinIcon className="size-3.5" strokeWidth={2.2} /> {item.price}
-        </button>
+        <>
+          <button
+            type="button"
+            disabled={!affordable}
+            onClick={() => onBuy(item)}
+            aria-label={
+              affordable
+                ? `Acheter ${item.name} pour ${item.price} pièces`
+                : `${item.name} coûte ${item.price} pièces — il t’en manque ${manque}`
+            }
+            className={cn(
+              'mt-2 flex items-center gap-1 rounded-full px-3 py-1.5 font-mono text-xs font-extrabold tabular-nums transition active:translate-y-px',
+              affordable
+                ? 'bg-primary/10 text-primary hover:bg-primary/15 cursor-pointer'
+                : 'bg-muted text-muted-foreground/70',
+            )}
+          >
+            <CoinIcon className="size-3.5" strokeWidth={2.2} /> {item.price}
+          </button>
+          {/* CE QUI MANQUE, écrit noir sur blanc. Un bouton gris désactivé ne
+              dit rien : ni de combien on est loin, ni si on est loin. Le
+              chiffre transforme un mur en objectif — et la ligne est TOUJOURS
+              réservée (min-h) pour que les cartes d'un même rayon gardent la
+              même hauteur. */}
+          <span className="mt-1 min-h-3.5 text-[10px] leading-none font-bold text-muted-foreground/80">
+            {affordable ? '' : `il t’en manque ${manque}`}
+          </span>
+        </>
       )}
     </div>
   )
@@ -376,20 +398,59 @@ export default function TresorHome({
     return { status: 'opened', reward: res.reward }
   }
 
+  // L'achat, et surtout CE QU'ON EN DIT.
+  //
+  // Le refus était muet : le serveur pouvait très bien répondre « non »
+  // (bourse réellement vide, article déjà pris dans un autre onglet, RPC en
+  // panne) et l'écran ne bougeait pas d'un pixel. Un élève qui tape un bouton
+  // qui ne fait rien n'en déduit pas « refusé », il en déduit « cassé ».
+  //
+  // On resynchronise AUSSI la bourse sur chaque réponse du serveur, y compris
+  // sur un refus : c'est justement quand le client s'est trompé de solde qu'il
+  // a le plus besoin du vrai.
   const onBuy = async (item: ShopItem) => {
-    if (coins < item.price) return
-    sfx.coin()
     if (!live) {
+      // Démo (visiteur) : la bourse est locale, on ne ment pas sur le refus.
+      if (coins < item.price) {
+        toast(
+          messageAchat('trop-cher', item.name, coinsManquants(coins, item.price))
+            .texte,
+          'error',
+        )
+        return
+      }
+      sfx.coin()
       setBalance(coins - item.price)
       markOwned(item.id)
+      toast(messageAchat('achete', item.name).texte)
       return
     }
+
     const res = await buyShopItem(item.id).catch(() => null)
-    if (res?.bought) {
-      setBalance(res.coins)
+    if (res && Number.isFinite(res.coins)) setBalance(res.coins)
+
+    const issue = issueAchat({
+      reponse: res,
+      prix: item.price,
+      possedeDeja: Boolean(item.owned),
+    })
+    if (issue === 'achete') {
+      sfx.coin()
+      markOwned(item.id)
+    } else if (issue === 'deja') {
       markOwned(item.id)
     }
+
+    const { texte, ton } = messageAchat(
+      issue,
+      item.name,
+      coinsManquants(res?.coins ?? coins, item.price),
+    )
+    toast(texte, ton)
   }
+
+  // Le cap : ce qu'il peut s'offrir tout de suite, ou ce qu'il vise ensuite.
+  const cap = prochainArticle(items, coins)
 
   const boosts = items.filter((i) => i.kind === 'boost' || i.kind === 'flamme')
   const companions = items.filter(
@@ -451,6 +512,34 @@ export default function TresorHome({
             </span>
           </Link>
         </div>
+
+        {/* LE CAP. Une boutique dont tous les prix dépassent la bourse est un
+            musée : l'élève ne sait ni ce qui est à sa portée, ni ce qu'il vise.
+            Une ligne suffit à répondre aux deux — et, quand il est court, à
+            dire où l'on remplit la bourse. Le coffre du jour est juste dessous,
+            c'est donc le rappel le moins coûteux à suivre. */}
+        {cap ? (
+          <p className="px-1 text-xs font-medium text-muted-foreground">
+            {cap.accessible ? (
+              <>
+                Tu peux t’offrir{' '}
+                <span className="font-bold text-foreground">
+                  {cap.article.name}
+                </span>{' '}
+                dès maintenant.
+              </>
+            ) : (
+              <>
+                Encore{' '}
+                <span className="font-bold text-foreground tabular-nums">
+                  {coinsManquants(coins, cap.article.price)} pièces
+                </span>{' '}
+                pour {cap.article.name} — le coffre du jour et les quêtes du
+                Défi en donnent.
+              </>
+            )}
+          </p>
+        ) : null}
       </div>
 
       {/* 1. Le coffre du jour, en tête : la boucle quotidienne d'abord. */}
@@ -476,9 +565,29 @@ export default function TresorHome({
         </div>
       ) : null}
 
-      {/* 4. Rayon Fonds & skins (payés en pièces, lib/coffre). */}
+      {/* 4. Rayon Fonds & skins (lib/coffre) — VITRINE, et rien d'autre.
+             Ce rayon n'a jamais eu de caisse : aucun de ses articles n'est
+             branché sur `buy_shop_item`, et aucun ne change quoi que ce soit à
+             l'écran une fois « acheté ». Il affichait pourtant une pastille de
+             prix identique à celle des vrais rayons — un bouton qui ne répond
+             pas, ce qui est pire que pas de bouton du tout. On garde le rayon
+             (les prix donnent un cap à qui économise) mais on dit ce qu'il
+             est : un aperçu. Le jour où la caisse existe, la pastille redevient
+             un `ShelfCard`. */}
       <section aria-label="Fonds et skins" className="flex flex-col gap-2">
-        <ShelfTitle>🎨 Fonds & skins</ShelfTitle>
+        <ShelfTitle
+          aside={
+            <span className="text-[11px] font-bold text-muted-foreground">
+              aperçu
+            </span>
+          }
+        >
+          🎨 Fonds & skins
+        </ShelfTitle>
+        <p className="-mt-1 px-1 text-[11px] font-medium text-muted-foreground">
+          Pas encore en rayon — les prix sont là pour que tu saches quoi mettre
+          de côté.
+        </p>
         <div className="-mx-4 flex snap-x gap-2.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {PERSO_CATALOG.map((p) => (
             <div
@@ -495,14 +604,9 @@ export default function TresorHome({
               <p className="mt-0.5 line-clamp-3 min-h-11 text-[11px] leading-snug font-medium text-muted-foreground">
                 {p.desc}
               </p>
-              <span
-                className={cn(
-                  'mt-2 flex items-center gap-1 rounded-full px-3 py-1.5 font-mono text-xs font-extrabold tabular-nums',
-                  p.available
-                    ? 'bg-highlight/40 text-foreground'
-                    : 'bg-muted text-muted-foreground/70',
-                )}
-              >
+              {/* Pas de pastille teintée « prête à taper » : le prix se lit
+                  comme une étiquette de vitrine, pas comme une caisse. */}
+              <span className="mt-2 flex items-center gap-1 rounded-full bg-muted px-3 py-1.5 font-mono text-xs font-extrabold tabular-nums text-muted-foreground">
                 {p.available ? (
                   <>
                     <CoinIcon className="size-3.5" strokeWidth={2.2} />{' '}

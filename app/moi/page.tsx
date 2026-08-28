@@ -18,8 +18,11 @@ import HistoriqueTravail from '@/components/moi/HistoriqueTravail'
 import HabitudesCard, { type LeverState } from '@/components/moi/HabitudesCard'
 import TuileMoyenne from '@/components/moi/TuileMoyenne'
 import TrajectoryCard from '@/components/moi/TrajectoryCard'
+import EffortParMatiere from '@/components/moi/EffortParMatiere'
 import StandingLine from '@/components/StandingLine'
 import { parseGradeStandings } from '@/lib/percentile'
+import { buildEffort } from '@/lib/effort'
+import { weightsForGrade } from '@/lib/exam-weights'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { readRowTolerant } from '@/lib/profile-read'
@@ -67,6 +70,16 @@ import type { Habit, HabitLog, CommuteSlot } from '@/lib/types'
 
 export const metadata = { title: 'Moi — Studuel' }
 export const dynamic = 'force-dynamic'
+
+/**
+ * FENÊTRE DU DIAGRAMME D'EFFORT, en jours.
+ *
+ * Trente, et pas le cumul depuis l'inscription : un total « depuis toujours »
+ * ment sur le présent. Un élève qui a bachoté les maths en septembre passerait
+ * pour un matheux jusqu'en juin, alors que le diagramme est là pour dire ce
+ * qu'il fait EN CE MOMENT — c'est la seule lecture sur laquelle il peut agir.
+ */
+const EFFORT_JOURS = 30
 
 // Les colonnes du profil que cet écran affiche, toutes migrations confondues.
 type MoiProfileRow = {
@@ -173,6 +186,7 @@ export default async function MoiPage() {
     { data: storedLogs },
     { data: workDays, error: workError },
     { data: standingsRow },
+    { data: effortRows, error: effortError },
     subjects,
     mastery,
     chapitresVus,
@@ -246,6 +260,17 @@ export default async function MoiPage() {
     // Place de l'élève dans sa cohorte (223) : RPC SECURITY DEFINER, jamais une
     // jointure — la RLS de `profiles` ne laisserait voir que sa propre ligne.
     supabase.rpc('my_grade_standings'),
+    // L'EFFORT PAR MATIÈRE (325) : l'agrégat descend en base, comme la maîtrise
+    // (321). `test_sessions` est la table qui grossit le plus vite du projet —
+    // en lire les lignes pour n'en tirer qu'une somme par matière la ferait
+    // transférer entière à chaque ouverture de /moi.
+    //
+    // TOLÉRÉE, et l'erreur est GARDÉE : tant que la 325 n'est pas exécutée,
+    // PostgREST répond « function does not exist », et la carte disparaît au
+    // lieu d'annoncer « tu n'as rien travaillé » à un élève assidu. C'est le
+    // mode de panne n°1 du projet (cf. lib/sante.ts) : mieux vaut une carte
+    // absente qu'une carte qui ment.
+    supabase.rpc('effort_by_subject', { p_days: EFFORT_JOURS }),
     // --- Ce qu'il faut pour DÉCERNER les couronnes ---------------------------
     // Le catalogue est en cache serveur (identique pour tous), la maîtrise et
     // les chapitres déclarés sont personnels. Aucun des trois n'a besoin du
@@ -403,12 +428,65 @@ export default async function MoiPage() {
     ? (grade as GradeLevel)
     : null
   const gradeLabel = gradeLevel ? GRADE_FULL_LABELS[gradeLevel] : null
+
+  // --- Preuve n°4 : OÙ va le travail ---------------------------------------
+  // Le diagramme ne dit pas « combien » (la carte de joueur le fait déjà) mais
+  // « au bon endroit ou non ». Il compare, ligne par ligne, la part de travail
+  // reçue par une matière au poids qu'elle a à l'épreuve — l'écart entre les
+  // deux est tout son propos (cf. lib/effort.ts).
+  //
+  // La carte disparaît si la 325 n'est pas passée : `effortError` porte alors
+  // « function does not exist », et un diagramme à zéro contredirait le cumul
+  // affiché juste au-dessus.
+  const effortDisponible = !isMissingSchemaObject(effortError)
+
+  // LA MOYENNE PAR MATIÈRE, sur 20, pondérée par les coefficients saisis. C'est
+  // la troisième dimension du diagramme, et celle qui lui donne son tranchant :
+  // le travail dit un CHOIX, la moyenne dit un BESOIN. Les notes sont déjà
+  // lues plus haut pour la moyenne générale (`schoolGrades`) — aucune requête
+  // de plus, seulement un regroupement par slug.
+  const parMoyenne = new Map<string, { points: number; coef: number }>()
+  for (const g of schoolGrades) {
+    if (!(g.outOf > 0) || !(g.coefficient > 0)) continue
+    const cumul = parMoyenne.get(g.subject) ?? { points: 0, coef: 0 }
+    // Ramené sur 20 : un contrôle sur 40 et une interro sur 10 ne se moyennent
+    // pas tels quels.
+    cumul.points += (g.score / g.outOf) * 20 * g.coefficient
+    cumul.coef += g.coefficient
+    parMoyenne.set(g.subject, cumul)
+  }
+  const moyennesParMatiere: Record<string, number | null> = {}
+  for (const [slug, { points, coef }] of parMoyenne) {
+    if (coef > 0) moyennesParMatiere[slug] = points / coef
+  }
+
+  const effort = buildEffort({
+    // ⚠️ La RPC nomme sa colonne `subject_slug`, pas `slug` — lire `r.slug`
+    // rendait `undefined`, et le diagramme affichait une matière nommée
+    // « undefined ». Le mapping se fait ICI, une fois.
+    effort: (
+      (effortRows ?? []) as {
+        subject_slug: string
+        questions: number
+        lessons: number
+      }[]
+    ).map((r) => ({
+      slug: String(r.subject_slug),
+      questions: Number(r.questions) || 0,
+      lessons: Number(r.lessons) || 0,
+    })),
+    subjects: suivies.map((s) => ({ slug: s.slug, name: s.name })),
+    // Les poids viennent du NIVEAU, et les spécialités des matières suivies :
+    // en terminale, c'est le profil de l'élève qui dit laquelle pèse 16.
+    weights: weightsForGrade(profile?.grade_level ?? '', suivies),
+    moyennes: moyennesParMatiere,
+  })
   const level = workLevel(secondesTotal)
   const standings = parseGradeStandings(standingsRow)
 
   return (
     <div>
-      <WorldBackdrop className="moi-bg" />
+      <WorldBackdrop className="tab-bg" />
 
       {/* LE RYTHME DE LA PAGE. La carte porte tout ce qui dit QUI EST cet élève
           et CE QU'IL A GAGNÉ ; le rythme et les habitudes reprennent ensuite
@@ -491,6 +569,17 @@ export default async function MoiPage() {
               />
             }
           />
+        ) : null}
+
+        {/* OÙ VA LE TRAVAIL — juste après la carte, et AVANT le rythme.
+            L'ordre est le raisonnement : la carte dit ce que l'élève a gagné,
+            ce bloc dit s'il le gagne au bon endroit, le rythme dit à quelle
+            cadence. Le « où » avant le « quand » : c'est sur le premier qu'il
+            peut agir dès aujourd'hui. */}
+        {effortDisponible ? (
+          <div className="mt-7">
+            <EffortParMatiere diagram={effort} jours={EFFORT_JOURS} />
+          </div>
         ) : null}
 
         {rythmeDisponible ? (

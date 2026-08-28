@@ -1774,6 +1774,17 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'À EXÉCUTER DÈS QUE POSSIBLE, et avant de laisser la 320 en place sur une base publique. La règle qu’elle établit vaut pour toute fonction future : sur ce projet, `REVOKE … FROM PUBLIC` ne ferme RIEN — Supabase accorde EXECUTE à `anon` et `authenticated` par des GRANT nommés. Il faut écrire `FROM PUBLIC, anon, authenticated`. Un test du dépôt (lib/rls-guard.test.ts) le vérifie désormais sur chaque migration neuve.',
   },
+  {
+    id: '325',
+    fichier: '325_effort_par_matiere.sql',
+    feature:
+      'Le diagramme « Ton travail » de /moi : `effort_by_subject(p_days)` agrège en base le volume de révision par matière (questions de quiz + leçons lues) sur une fenêtre glissante',
+    siAbsente:
+      'La carte « Ton travail » DISPARAÎT de /moi — et c’est voulu : un diagramme à zéro contredirait le temps cumulé affiché juste au-dessus, et annoncerait « tu n’as rien travaillé » à un élève assidu. Le reste de l’onglet est intact.',
+    sonde: { type: 'rpc', fn: 'effort_by_subject', args: { p_days: 30 } },
+    decision:
+      'À EXÉCUTER pour allumer le diagramme. Rien d’autre n’en dépend. Attention à la contrepartie assumée du calcul : il ne compte QUE les quiz et les leçons — `study_sessions` (les flashcards) et `challenge_sessions` (le Défi) n’ont aucun rattachement fiable à une matière, la première n’ayant qu’un nom en texte libre et la seconde rien du tout. Le jour où l’une des deux en gagne un, elle s’ajoute à la fonction sans toucher au reste.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

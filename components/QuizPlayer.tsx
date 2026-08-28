@@ -743,7 +743,7 @@ export default function QuizPlayer({
         robe,
         // `quiz-fond` par-dessus `jeu-table` : le lavis de la matière, assez
         // dense pour qu'un quiz d'allemand ne ressemble pas à un quiz de maths.
-        'jeu-table quiz-fond flex min-h-svh flex-col px-4 pt-3 pb-4 text-foreground md:px-8',
+        'jeu-table quiz-fond relative flex min-h-svh flex-col overflow-hidden px-4 pt-3 pb-4 text-foreground md:px-8',
       )}
       // La feuille de la mascotte se pose PAR-DESSUS le bas de l'écran : sans
       // cette marge, la dernière réponse disparaîtrait sous elle. Elle tient
@@ -752,7 +752,47 @@ export default function QuizPlayer({
       // QuizFeedbackMascotte.
       style={answered ? { paddingBottom: '21rem' } : undefined}
     >
-      <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
+      {/* L'ILLUSTRATION DE LA MATIÈRE, DANS L'ANGLE.
+          Elle occupait le creux entre l'énoncé et les réponses, au CENTRE de
+          l'écran — c'est-à-dire sur l'axe du regard, exactement là où l'œil
+          descend de la question vers les plaques. Un décor posé sur ce chemin
+          n'est plus un décor : il se fait lire comme un élément de l'exercice
+          (« le drapeau fait-il partie de la question ? »), et il repoussait les
+          réponses vers le bas.
+
+          Dans l'angle, elle rend cette hauteur au contenu et garde son seul
+          vrai rôle : dire de quelle matière on révise, du coin de l'œil. Elle
+          déborde des deux bords et passe SOUS tout le reste (`-z-0` contre la
+          colonne en `z-10`) — un motif d'angle, comme le blason d'une faction
+          dans un jeu, pas un objet de plus à regarder.
+
+          Très en retrait (opacité basse, halo diffus) : à sa saturation
+          d'avant, posée derrière le bouton « quitter » et l'énoncé, elle
+          salissait les deux. */}
+      {vignette ? (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -top-10 -left-14 -z-0 select-none md:-top-4 md:-left-6"
+        >
+          <span
+            className="absolute inset-0 m-auto size-52 rounded-full blur-3xl"
+            style={{
+              background:
+                'radial-gradient(circle, var(--jeu-glow), transparent 70%)',
+            }}
+          />
+          <Image
+            src={vignette}
+            alt=""
+            width={320}
+            height={320}
+            sizes="176px"
+            className="relative h-auto w-48 opacity-30 drop-shadow-sm md:w-44 md:opacity-45"
+          />
+        </div>
+      ) : null}
+
+      <div className="relative z-10 mx-auto flex w-full max-w-xl flex-1 flex-col">
         {/* LA RANGÉE DU HAUT : quitter · progression · son.
             L'anneau « Question 4/8 » vivait au MILIEU de l'écran, entre le
             compteur et la question, et poussait tout le reste vers le bas. Une
@@ -904,40 +944,10 @@ export default function QuizPlayer({
           </div>
         </div>
 
-        {/* L'ILLUSTRATION DE LA MATIÈRE, dans la respiration.
-            L'écran n'avait que sa teinte de fond : la matière s'y devinait sans
-            jamais se voir, et le grand vide entre l'énoncé et les réponses ne
-            servait à rien. La vignette du dossier — le drapeau allemand, la
-            fiole de chimie — y tient les deux rôles : elle donne sa couleur à
-            l'écran et occupe le creux.
-
-            En retrait (opacité, halo diffus) : c'est un DÉCOR. À pleine
-            saturation elle entrerait en concurrence avec les plaques de
-            réponse, qui sont, elles, ce qu'il faut regarder. */}
-        <div
-          className="relative flex min-h-3 flex-1 items-center justify-center"
-          aria-hidden="true"
-        >
-          {vignette ? (
-            <>
-              <span
-                className="absolute size-40 rounded-full blur-2xl"
-                style={{
-                  background:
-                    'radial-gradient(circle, var(--jeu-glow), transparent 70%)',
-                }}
-              />
-              <Image
-                src={vignette}
-                alt=""
-                width={320}
-                height={320}
-                sizes="128px"
-                className="relative h-auto w-32 max-w-full opacity-70 drop-shadow-sm"
-              />
-            </>
-          ) : null}
-        </div>
+        {/* LA RESPIRATION avant les réponses. Elle ne porte plus rien depuis
+            que l'illustration est passée dans l'angle : c'est du vide, et c'est
+            son rôle — séparer ce qu'on lit de ce qu'on tape. */}
+        <div className="min-h-3 flex-1" aria-hidden="true" />
 
         {/* LES RÉPONSES, ANCRÉES EN BAS — au plus près du pouce.
             Elles suivaient la question dans le flux : sur un écran haut, elles

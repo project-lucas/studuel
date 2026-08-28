@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { X } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
+import { verrouillerDefilement } from '@/lib/scroll-lock'
 
 /**
  * Feuille montante (bottom sheet) du carnet : voile sombre + panneau blanc
@@ -36,11 +37,10 @@ export default function BottomSheet({
       if (e.key === 'Escape') onClose()
     }
     window.addEventListener('keydown', onKey)
-    const prevOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
+    const libererDefilement = verrouillerDefilement()
     return () => {
       window.removeEventListener('keydown', onKey)
-      document.body.style.overflow = prevOverflow
+      libererDefilement()
     }
   }, [open, onClose])
 

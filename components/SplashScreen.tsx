@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { onAppReady } from '@/lib/app-ready'
+import { verrouillerDefilement } from '@/lib/scroll-lock'
 import {
   SPLASH_READY_CAP_MS,
   formatSplashPercent,
@@ -135,10 +136,9 @@ export default function SplashScreen({ tip }: Props) {
   // Pas de défilement derrière l'écran de chargement.
   useEffect(() => {
     if (unmounted) return
-    const previous = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
+    const libererDefilement = verrouillerDefilement()
     return () => {
-      document.body.style.overflow = previous
+      libererDefilement()
     }
   }, [unmounted])
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, type RefObject } from 'react'
 import { nextDialogFocus } from '@/lib/dialog-focus'
+import { verrouillerDefilement } from '@/lib/scroll-lock'
 
 // Comportement commun des modales maison. Deux hooks composables :
 //
@@ -126,11 +127,10 @@ export function useDialog(
       if (e.key === 'Escape') onClose()
     }
     window.addEventListener('keydown', onKey)
-    const previous = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
+    const libererDefilement = verrouillerDefilement()
     return () => {
       window.removeEventListener('keydown', onKey)
-      document.body.style.overflow = previous
+      libererDefilement()
     }
   }, [onClose])
 

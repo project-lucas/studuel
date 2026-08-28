@@ -18,6 +18,7 @@ import {
   type DuelSubject,
 } from '@/lib/defi/duel-board'
 import { subjectRankFor, SUBJECT_DIVISION_SPAN } from '@/lib/subject-rank'
+import { verrouillerDefilement } from '@/lib/scroll-lock'
 
 /**
  * LA ROUTE DES TROPHÉES — où j'en suis, matière par matière, et pourquoi.
@@ -52,11 +53,10 @@ export default function TrophyRoadSheet() {
       if (e.key === 'Escape') setOpen(false)
     }
     window.addEventListener('keydown', onKey)
-    const prevOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
+    const libererDefilement = verrouillerDefilement()
     return () => {
       window.removeEventListener('keydown', onKey)
-      document.body.style.overflow = prevOverflow
+      libererDefilement()
     }
   }, [open])
 

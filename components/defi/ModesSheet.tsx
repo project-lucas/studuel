@@ -12,6 +12,7 @@ import { FLANK_CLASS } from '@/components/defi/ArenaActionBar'
 import SubjectRoulette from '@/components/defi/SubjectRoulette'
 import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
+import { verrouillerDefilement } from '@/lib/scroll-lock'
 import { useRecords } from '@/lib/jeux/use-records'
 import {
   ROULETTE_SUBJECTS,
@@ -75,11 +76,10 @@ export default function ModesSheet({
       if (e.key === 'Escape') setOpen(false)
     }
     window.addEventListener('keydown', onKey)
-    const prevOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
+    const libererDefilement = verrouillerDefilement()
     return () => {
       window.removeEventListener('keydown', onKey)
-      document.body.style.overflow = prevOverflow
+      libererDefilement()
     }
   }, [open])
 

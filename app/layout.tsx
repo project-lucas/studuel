@@ -26,6 +26,9 @@ import Toaster from "@/components/Toaster";
 import SplashScreen from "@/components/SplashScreen";
 // Capteur « le premier écran est peint » : autorise le rideau à lever.
 import AppReadyBeacon from "@/components/AppReadyBeacon";
+// Gabarit de page : marges de lecture, ou plein écran. Client, pour suivre la
+// navigation — cf. son en-tête.
+import AppMain from "@/components/AppMain";
 import { estPleinEcran } from "@/lib/quiz-chrome";
 import { shouldShowSplash, tipOfDay } from "@/lib/splash";
 import { getCurrentUser } from "@/lib/supabase/user";
@@ -80,6 +83,14 @@ export default async function RootLayout({
   // PLEIN ÉCRAN : une session de quiz fait disparaître le bandeau du haut et la
   // barre d'onglets. Pendant l'exercice, l'app s'efface — cf. `lib/quiz-chrome`
   // pour les trois raisons (distraction, compteurs figés, place du pouce).
+  //
+  // ⚠️ CE VERDICT NE SERT PLUS QU'AU SQUELETTE DU BANDEAU, ci-dessous. Il ne
+  // décide plus de l'affichage : ce layout est serveur et n'est PAS re-rendu
+  // lors d'une navigation client, donc son verdict reste figé sur la page
+  // d'entrée dans l'app. Le masquage est passé dans `Navigation`, `TopHud` et
+  // `AppMain`, tous clients, qui le réévaluent à chaque changement de route.
+  // Le squelette, lui, n'apparaît qu'au rendu initial : le décider ici est
+  // exact, et évite d'envoyer une barre grise sur un quiz ouvert par URL.
   const pleinEcran = estPleinEcran(pathname);
 
   return (
@@ -112,7 +123,10 @@ export default async function RootLayout({
               )
             }
           >
-            {pleinEcran ? null : <TopHudLoader />}
+            {/* Toujours monté : c'est TopHud (client) qui se masque selon la
+                route. Le sauter ici le supprimerait pour toute la session,
+                ce layout n'étant pas re-rendu en navigation client. */}
+            <TopHudLoader />
             {/* Dans la MÊME frontière que le bandeau : React ne révèle une
                 frontière que lorsque tous ses enfants sont prêts, donc cette
                 balise se monte à l'instant précis où la première vraie
@@ -120,7 +134,8 @@ export default async function RootLayout({
                 l'écran de chargement à s'ouvrir. */}
             <AppReadyBeacon />
           </Suspense>
-          {pleinEcran ? null : (
+          {/* Idem : la barre se masque elle-même (client) sur les routes sans
+              chrome, au lieu d'être absente du rendu serveur. */}
           <Navigation
             userLabel={userLabel}
             // Pastille du Coffre streamée : la barre ne l'attend pas.
@@ -138,23 +153,10 @@ export default async function RootLayout({
               </Suspense>
             }
           />
-          )}
           {user ? <DailyLoginReward /> : null}
-          {/* min-w-0 : sans lui, l'item flex refuse de rétrécir sous la
-              largeur intrinsèque de son contenu et la page déborde sur mobile. */}
-          <main
-            className={
-              pleinEcran
-                ? 'min-w-0 flex-1'
-                : 'min-w-0 flex-1 px-4 pt-16 pb-24 md:px-8 md:py-10'
-            }
-          >
-            <div
-              className={pleinEcran ? 'w-full' : 'mx-auto w-full max-w-4xl'}
-            >
-              <SwipeTabs>{children}</SwipeTabs>
-            </div>
-          </main>
+          <AppMain>
+            <SwipeTabs>{children}</SwipeTabs>
+          </AppMain>
         </div>
         <Toaster />
       </body>

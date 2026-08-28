@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { estPleinEcran } from '@/lib/quiz-chrome'
+import { estChromeMasque, estOnboarding, estPleinEcran } from '@/lib/quiz-chrome'
 
 describe('estPleinEcran', () => {
   it('masque le chrome sur une session de quiz ouverte', () => {
@@ -48,5 +48,44 @@ describe('estPleinEcran', () => {
     expect(estPleinEcran('')).toBe(false)
     expect(estPleinEcran(undefined as unknown as string)).toBe(false)
     expect(estPleinEcran(null as unknown as string)).toBe(false)
+  })
+})
+
+describe('estChromeMasque', () => {
+  it('masque le chrome sur une session de quiz — le cas du 2026-08-28', () => {
+    // Le défaut n'était pas dans ce verdict mais dans l'endroit où il était
+    // rendu (layout racine, serveur, non re-rendu en navigation client). Ce
+    // test fige le contrat que lisent désormais Navigation, TopHud et AppMain.
+    expect(estChromeMasque('/test/abc-123')).toBe(true)
+    expect(estChromeMasque('/reviser/francais/dictee/demo')).toBe(true)
+  })
+
+  it('masque le chrome sur le parcours d’accueil', () => {
+    expect(estOnboarding('/bienvenue')).toBe(true)
+    expect(estOnboarding('/bienvenue/3')).toBe(true)
+    expect(estChromeMasque('/bienvenue')).toBe(true)
+    expect(estChromeMasque('/bienvenue/3')).toBe(true)
+  })
+
+  it('ne se laisse pas prendre par une route qui COMMENCE pareil', () => {
+    expect(estOnboarding('/bienvenue-parents')).toBe(false)
+    expect(estChromeMasque('/bienvenue-parents')).toBe(false)
+  })
+
+  it('le garde partout ailleurs', () => {
+    for (const route of ['/', '/defi', '/reviser', '/reviser/emc', '/moi', '/test']) {
+      expect(estChromeMasque(route), route).toBe(false)
+    }
+  })
+
+  it('ignore la chaîne de requête', () => {
+    expect(estChromeMasque('/bienvenue?etape=2')).toBe(true)
+    expect(estChromeMasque('/test/abc-123?rejeu=1')).toBe(true)
+  })
+
+  it('garde le chrome quand le chemin est absent ou illisible', () => {
+    expect(estChromeMasque('')).toBe(false)
+    expect(estChromeMasque(undefined as unknown as string)).toBe(false)
+    expect(estChromeMasque(null as unknown as string)).toBe(false)
   })
 })

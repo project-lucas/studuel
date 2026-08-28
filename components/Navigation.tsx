@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import type { ReactNode } from 'react'
 import { CircleUser } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { estChromeMasque } from '@/lib/quiz-chrome'
 import { sfx } from '@/lib/sounds'
 import { NAV_TABS, type NavIconName } from '@/lib/nav-tabs'
 import amisIcone from '@/public/images/nav/amis.webp'
@@ -92,8 +93,12 @@ export default function Navigation({
 }) {
   const pathname = usePathname()
 
-  // Parcours d'accueil plein écran (façon Duolingo) : aucune barre de nav.
-  if (pathname === '/bienvenue' || pathname.startsWith('/bienvenue/')) return null
+  // Routes sans chrome : parcours d'accueil (façon Duolingo) ET sessions plein
+  // écran (quiz, dictée). Le verdict est pris ICI, sur `usePathname()`, et non
+  // dans le layout racine : celui-ci est serveur et n'est pas re-rendu lors
+  // d'une navigation client, si bien qu'un quiz ouvert depuis un `<Link>`
+  // gardait la barre d'onglets — laquelle recouvrait le bouton « Valider ».
+  if (estChromeMasque(pathname)) return null
 
   const isActive = (path: string) =>
     pathname === path || pathname.startsWith(`${path}/`)

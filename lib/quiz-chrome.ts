@@ -53,11 +53,21 @@ const PREFIXES_PLEIN_ECRAN = [
 ] as const
 
 /**
- * Cette route masque-t-elle le bandeau du haut et la barre d'onglets ?
+ * Cette route s'ouvre-t-elle en plein écran ?
  *
- * `pathname` vient de l'en-tête `x-pathname` posé par `proxy.ts` — même
- * mécanique que `shouldShowSplash`. Absent ou vide, on garde le chrome : mieux
- * vaut une barre en trop qu'un élève enfermé sans navigation.
+ * ⚠️ CE VERDICT SE PREND CÔTÉ CLIENT, sur `usePathname()`. Le layout racine
+ * est SERVEUR et il n'est **pas re-rendu lors d'une navigation client** : un
+ * verdict pris là-haut sur `x-pathname` reste figé sur la page par laquelle
+ * l'élève est ENTRÉ dans l'app. C'est exactement ce qui s'est vu le
+ * 2026-08-28 — quiz ouvert depuis la fiche d'un chapitre (donc par un
+ * `<Link>`), avec bandeau, barre d'onglets, marges `pt-16 pb-24` et
+ * `max-w-4xl` : le vert ne remplissait pas l'écran et « Valider » passait sous
+ * la barre du bas. Rendu par une URL tapée à la main, le même écran était
+ * juste. Le même piège est documenté dans `lib/top-hud-routes.ts` depuis
+ * `/bienvenue`, il n'avait simplement jamais été étendu ici.
+ *
+ * Absent ou vide, on garde le chrome : mieux vaut une barre en trop qu'un
+ * élève enfermé sans navigation.
  */
 export function estPleinEcran(pathname: string): boolean {
   const p = typeof pathname === 'string' ? pathname : ''
@@ -70,4 +80,25 @@ export function estPleinEcran(pathname: string): boolean {
       // finale, ce qui empêche « /tests-blancs » de passer pour « /test/ ».
       chemin.startsWith(prefixe) && chemin.length > prefixe.length,
   )
+}
+
+/**
+ * Le PARCOURS D'ACCUEIL (`/bienvenue`), lui aussi sans chrome — mais pour une
+ * autre raison que le quiz, et il se traite séparément : l'onboarding garde
+ * les marges de lecture du gabarit, seuls le bandeau et la barre d'onglets
+ * disparaissent.
+ */
+export function estOnboarding(pathname: string): boolean {
+  const p = typeof pathname === 'string' ? pathname : ''
+  const chemin = p.split('?')[0]
+  return chemin === '/bienvenue' || chemin.startsWith('/bienvenue/')
+}
+
+/**
+ * Les deux réunis : les routes où le CHROME de l'app (bandeau du haut + barre
+ * d'onglets) ne s'affiche pas. C'est le verdict que lisent `Navigation` et
+ * `TopHud`, tous deux clients — donc réévalué à chaque navigation.
+ */
+export function estChromeMasque(pathname: string): boolean {
+  return estPleinEcran(pathname) || estOnboarding(pathname)
 }

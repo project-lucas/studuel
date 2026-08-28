@@ -1,21 +1,35 @@
 // Où le bandeau du haut (TopHud) doit rester invisible — logique pure, partagée
 // par le chargeur serveur et le composant client.
 //
-// Deux gardes, deux rôles :
-//   - côté SERVEUR (TopHudLoader), elle évite de payer l'authentification + 5
-//     requêtes Supabase pour un bandeau qui ne s'affichera pas ;
-//   - côté CLIENT (TopHud), elle reste indispensable : le layout racine n'est
-//     PAS re-rendu lors d'une navigation client, donc un élève qui arrive sur
-//     /bienvenue depuis une autre page garde le bandeau déjà monté.
+// DEUX VERDICTS, ET IL NE FAUT PAS LES CONFONDRE.
+//
+//   - `isHudHidden` dit s'il faut MASQUER le bandeau. Il est lu par le
+//     composant CLIENT, donc réévalué à chaque navigation. C'est le seul qui
+//     décide de l'affichage.
+//
+//   - `isHudDataSkipped` dit si le chargeur SERVEUR peut se dispenser de
+//     l'authentification et des 5 requêtes Supabase. Il est volontairement
+//     PLUS ÉTROIT, et ce n'est pas une négligence : le layout racine n'étant
+//     pas re-rendu en navigation client, un bandeau sauté au rendu initial
+//     n'existe pour le reste de la session. Économiser les requêtes sur une
+//     route revient donc à dire « on ne reviendra pas de cette route sans
+//     recharger la page ». Vrai de l'onboarding, qui se termine par une
+//     redirection serveur. FAUX du quiz, qu'on quitte par un bouton — d'où
+//     `/test/` présent dans le premier verdict et absent du second.
 
-/** Parcours plein écran (façon Duolingo) : aucun bandeau. */
-const HIDDEN_PREFIXES = ['/bienvenue'] as const
+import { estChromeMasque, estOnboarding } from '@/lib/quiz-chrome'
 
 /** Le bandeau du haut doit-il être masqué sur ce chemin ? */
 export function isHudHidden(pathname: string): boolean {
-  return HIDDEN_PREFIXES.some(
-    (p) => pathname === p || pathname.startsWith(`${p}/`),
-  )
+  return estChromeMasque(pathname)
+}
+
+/**
+ * Le chargeur serveur peut-il sauter ses requêtes ? Voir l'avertissement en
+ * tête de fichier avant d'ajouter une route ici.
+ */
+export function isHudDataSkipped(pathname: string): boolean {
+  return estOnboarding(pathname)
 }
 
 /**

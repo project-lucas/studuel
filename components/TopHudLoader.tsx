@@ -4,7 +4,7 @@ import { getCurrentUser } from '@/lib/supabase/user'
 import { computeXp, levelFor } from '@/lib/xp'
 import { walletLevelInfo } from '@/lib/wallet'
 import { activityCutoff } from '@/lib/streak'
-import { isHudHidden } from '@/lib/top-hud-routes'
+import { isHudDataSkipped } from '@/lib/top-hud-routes'
 import { fetchGems } from '@/lib/gems-access'
 import TopHud from './TopHud'
 
@@ -42,11 +42,14 @@ async function fetchStreak(
  * pas encore passée (discipline colonnes tardives du projet).
  */
 export default async function TopHudLoader() {
-  // Parcours plein écran : on sort AVANT toute requête (le `x-pathname` est
-  // posé par proxy.ts). TopHud garde sa propre garde côté client, indispensable
-  // en navigation client où ce layout n'est pas re-rendu.
+  // Onboarding : on sort AVANT toute requête (le `x-pathname` est posé par
+  // proxy.ts). Le verdict est ici PLUS ÉTROIT que celui de l'affichage — cf.
+  // l'avertissement en tête de `lib/top-hud-routes.ts` : sauter les requêtes
+  // revient à supprimer le bandeau pour toute la session, puisque ce layout
+  // n'est pas re-rendu en navigation client. Le masquage du quiz, lui, se fait
+  // côté client dans TopHud.
   const pathname = (await headers()).get('x-pathname') ?? ''
-  if (isHudHidden(pathname)) return null
+  if (isHudDataSkipped(pathname)) return null
 
   const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
 

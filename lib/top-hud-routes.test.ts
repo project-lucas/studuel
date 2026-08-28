@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import {
   isHudAccountHidden,
+  isHudDataSkipped,
   isHudHidden,
   isHudLevelHidden,
   isHudOverDarkScene,
@@ -63,5 +64,21 @@ describe('isHudOverDarkScene', () => {
 
   it('ne confond pas une route qui commence par le même mot', () => {
     expect(isHudOverDarkScene('/defis-du-mois')).toBe(false)
+  })
+})
+
+describe('isHudDataSkipped', () => {
+  it('autorise le saut des requêtes sur l’onboarding', () => {
+    expect(isHudDataSkipped('/bienvenue')).toBe(true)
+    expect(isHudDataSkipped('/bienvenue/3')).toBe(true)
+  })
+
+  it('le REFUSE sur une session de quiz, même si le bandeau y est masqué', () => {
+    // Le chargeur est SERVEUR et le layout racine n'est pas re-rendu en
+    // navigation client : sauter les requêtes ici supprimerait le bandeau pour
+    // toute la session, y compris après la sortie du quiz. C'est le sens de
+    // l'écart entre les deux verdicts — ne pas « simplifier » en les fusionnant.
+    expect(isHudHidden('/test/abc-123')).toBe(true)
+    expect(isHudDataSkipped('/test/abc-123')).toBe(false)
   })
 })

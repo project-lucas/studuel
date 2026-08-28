@@ -70,8 +70,16 @@ export const MINUTES_PAR_LECON = 6
  */
 export const ECART_SIGNIFICATIF = 0.1
 
-/** Plancher de l'échelle des pistes : en dessous, les barres seraient des traits. */
-const ECHELLE_MIN = 0.25
+/**
+ * PLANCHER DE L'ÉCHELLE. Il valait 0,25 — calibré pour les barres, où une piste
+ * trop courte donne un trait. Sur la TOILE, ce plancher était un désastre : un
+ * élève à dix-sept matières a des parts d'environ 6 %, donc un polygone
+ * réduit à une tache au centre d'anneaux vides. Ce qu'on lit sur un radar est
+ * une comparaison RELATIVE entre branches : l'échelle doit donc coller à la
+ * plus grande valeur, pour que la branche dominante touche presque le bord.
+ * Le plancher ne sert plus qu'à éviter une division par zéro.
+ */
+const ECHELLE_MIN = 0.05
 /** Pas d'arrondi de l'échelle, pour qu'elle ne saute pas à chaque session. */
 const ECHELLE_PAS = 0.05
 
@@ -207,12 +215,24 @@ export function buildEffort({
   const nomDe = new Map(subjects.map((s) => [s.slug, s.name]))
   const parSlug = new Map(effort.map((e) => [e.slug, e]))
 
-  // ENTRENT TOUTES, TRAVAILLÉES OU NON : les matières de l'épreuve, et celles
-  // où l'élève a saisi une note. Les deux pour la même raison — une matière
-  // d'examen jamais ouverte et une matière à 6/20 jamais rouverte sont
-  // exactement ce que cet écran doit faire remonter. Les taire serait le
-  // mensonge le plus coûteux du bloc.
-  for (const slug of [...Object.keys(weights), ...Object.keys(moyennes)]) {
+  // TOUTES LES MATIÈRES DE L'ÉLÈVE ENTRENT, TRAVAILLÉES OU NON.
+  //
+  // Un premier jet ne retenait que les matières travaillées, celles de
+  // l'épreuve et celles où une note était saisie : un élève de 1re qui avait
+  // ouvert trois dossiers voyait une toile à quatre branches, et croyait à un
+  // bug. Or c'est l'inverse qui fait la valeur du bloc — une matière ABSENTE de
+  // son travail est exactement ce qu'il doit voir. Un creux à zéro dit quelque
+  // chose ; une branche manquante ne dit rien.
+  //
+  // Le périmètre est donc celui de `subjects`, c'est-à-dire les matières que
+  // l'élève suit — le même que celui de son onglet Réviser. C'est à l'appelant
+  // de le borner : lui passer le catalogue entier dessinerait trente-trois
+  // branches dont trente à zéro.
+  for (const slug of [
+    ...subjects.map((s) => s.slug),
+    ...Object.keys(weights),
+    ...Object.keys(moyennes),
+  ]) {
     if (!parSlug.has(slug)) parSlug.set(slug, { slug, questions: 0, lessons: 0 })
   }
 
@@ -306,9 +326,12 @@ export function dureeLabel(minutes: number): string {
 // ⚠️ CE QU'UN RADAR NE SAIT PAS FAIRE, et comment on le contourne ici. Trois
 // défauts lui sont intrinsèques, ils ne se corrigent pas, ils se BORNENT :
 //
-//   1. IL DEVIENT ILLISIBLE PASSÉ SIX AXES — d'où `RADAR_AXES_MAX`. Les
-//      matières qui ne tiennent pas restent listées dessous, en barres : rien
-//      n'est caché, mais rien n'est entassé non plus.
+//   1. IL SE DENSIFIE VITE. Un premier jet plafonnait à six axes et renvoyait
+//      le reste dans une liste dessous — c'était trahir la promesse du bloc :
+//      l'élève vient y voir TOUTES ses matières d'un coup, pas les six que le
+//      graphique veut bien porter. Le plafond est levé ; la lisibilité se règle
+//      là où elle doit l'être, dans le DESSIN (taille de police et longueur des
+//      noms adaptées au nombre de branches, cf. components/moi/EffortRadar.tsx).
 //
 //   2. L'AIRE DU POLYGONE N'EST PAS UNE MESURE : elle change si l'on permute
 //      deux axes. C'est pourquoi l'ordre ci-dessous est FIGÉ et déterministe
@@ -327,9 +350,11 @@ export function dureeLabel(minutes: number): string {
 // l'appelant retombe sur les barres, qui n'ont pas ce plancher.
 // -----------------------------------------------------------------------------
 
-/** Au-delà, les axes se marchent dessus et les étiquettes se chevauchent. */
-export const RADAR_AXES_MAX = 6
-/** En dessous, un radar n'a pas de forme. */
+/**
+ * En dessous, un radar n'a pas de forme : deux points font un segment, un point
+ * fait une tache. C'est le SEUL plancher — il n'y a volontairement pas de
+ * plafond, toutes les matières de l'élève doivent tenir sur la toile.
+ */
 export const RADAR_AXES_MIN = 3
 
 /**
@@ -343,7 +368,7 @@ export function radarAxes(diagram: EffortDiagram): EffortRow[] {
   const axes: EffortRow[] = []
   const vus = new Set<string>()
   const pousser = (r: EffortRow) => {
-    if (vus.has(r.slug) || axes.length >= RADAR_AXES_MAX) return
+    if (vus.has(r.slug)) return
     vus.add(r.slug)
     axes.push(r)
   }
@@ -360,7 +385,8 @@ export function radarAxes(diagram: EffortDiagram): EffortRow[] {
   for (const r of diagram.autres) {
     if (r.verdict === 'en_retard') pousser(r)
   }
-  // Puis les plus travaillées, pour que la toile ait une forme.
+  // Puis TOUTES les autres, y compris à zéro : une matière que l'élève suit
+  // sans jamais l'ouvrir est une information, pas un vide à masquer.
   for (const r of diagram.autres) pousser(r)
 
   return axes.length >= RADAR_AXES_MIN ? axes : []

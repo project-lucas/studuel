@@ -1,6 +1,5 @@
-import { dureeLabel, type EffortDiagram, type EffortRow } from '@/lib/effort'
+import { dureeLabel, type EffortDiagram } from '@/lib/effort'
 import { radarAxes } from '@/lib/effort'
-import { cn } from '@/lib/utils'
 
 // -----------------------------------------------------------------------------
 // LA TOILE — le diagramme d'effort en radar.
@@ -30,9 +29,14 @@ import { cn } from '@/lib/utils'
 // sans lire une ligne de tableau.
 // -----------------------------------------------------------------------------
 
-/** Repère de dessin. Le SVG s'adapte, ces valeurs ne sont que des proportions. */
-const R = 100
-const CENTRE = 150
+/**
+ * Repère de dessin. La toile est plus LARGE que haute : les noms posés à gauche
+ * et à droite débordent horizontalement bien plus que ceux du haut et du bas ne
+ * débordent verticalement. Un carré obligerait à rétrécir le rayon pour les
+ * loger.
+ */
+const CX = 190
+const CY = 126
 /** Anneaux de graduation — quatre, comme sur un radar de bulletin. */
 const ANNEAUX = [0.25, 0.5, 0.75, 1]
 
@@ -40,9 +44,62 @@ const ANNEAUX = [0.25, 0.5, 0.75, 1]
 function pointSur(index: number, total: number, rayon: number) {
   const angle = (-90 + (index * 360) / total) * (Math.PI / 180)
   return {
-    x: CENTRE + Math.cos(angle) * rayon,
-    y: CENTRE + Math.sin(angle) * rayon,
+    x: CX + Math.cos(angle) * rayon,
+    y: CY + Math.sin(angle) * rayon,
+    cos: Math.cos(angle),
+    sin: Math.sin(angle),
   }
+}
+
+/**
+ * LE NOM AU BOUT DU RAYON, coupé en deux lignes s'il est long.
+ *
+ * « Physique-Chimie » ou « Ens. scientifique » posés d'un bloc à gauche de la
+ * toile la repousseraient hors du cadre. On coupe donc au dernier séparateur
+ * avant la limite — jamais au milieu d'un mot, qui rendrait le nom illisible.
+ */
+function couper(nom: string, limite: number, lignesMax: number): string[] {
+  if (nom.length <= limite) return [nom]
+  if (lignesMax === 1) {
+    // Une seule ligne autorisée : on coupe au dernier mot entier qui tient,
+    // avec une ellipse. Tronquer au caractère près donnerait « Physique-Chim ».
+    const mot = nom.lastIndexOf(' ', limite)
+    return [(mot > 3 ? nom.slice(0, mot) : nom.slice(0, limite - 1)) + '…']
+  }
+  const coupe = Math.max(nom.lastIndexOf(' ', limite), nom.lastIndexOf('-', limite))
+  if (coupe <= 0) return [nom]
+  const tete = nom.slice(0, nom[coupe] === '-' ? coupe + 1 : coupe)
+  return [tete, nom.slice(coupe + 1)]
+}
+
+/**
+ * LA TYPOGRAPHIE S'ADAPTE AU NOMBRE DE BRANCHES, et c'est ce qui remplace le
+ * plafond d'axes qu'on avait d'abord posé.
+ *
+ * À six branches, l'écart angulaire est de 60° : les noms ont toute la place,
+ * deux lignes comprises. À quinze, il tombe à 24° et deux étiquettes voisines
+ * se chevauchent — la réponse n'est pas d'en cacher neuf, c'est de réduire le
+ * corps, d'interdire la seconde ligne et de raccourcir les noms.
+ *
+ * La NOTE, elle, ne disparaît jamais quand la matière est sous la moyenne :
+ * c'est la seule information de ce graphique qui appelle un geste immédiat, et
+ * elle survit à toutes les densités.
+ */
+function reglages(n: number) {
+  // LA DEUXIÈME LIGNE RESTE AUTORISÉE MÊME À DOUZE BRANCHES, et c'est le
+  // réglage qui a demandé une mesure plutôt qu'une intuition. La contrainte
+  // n'est pas horizontale — les étiquettes latérales ont une centaine de
+  // pixels — mais VERTICALE, entre deux étiquettes voisines du même côté. À
+  // douze axes le pas est de 30°, soit environ 40 px entre deux pointes : deux
+  // lignes de dix pixels y tiennent largement. Un premier réglage interdisait
+  // la seconde ligne dès huit branches et rendait « Histoire-… », « Arts… »,
+  // « Ens.… » — des noms tronqués n'apprennent rien, alors que le bloc entier
+  // existe pour se lire d'un coup d'œil.
+  if (n <= 7) return { corps: 11, limite: 14, lignes: 2, rayon: 92, notes: 'toutes' as const }
+  if (n <= 12) return { corps: 10, limite: 13, lignes: 2, rayon: 84, notes: 'toutes' as const }
+  // Au-delà, le pas tombe sous 25° : la note ne s'affiche plus que là où elle
+  // appelle un geste, c'est-à-dire sous la moyenne.
+  return { corps: 9, limite: 12, lignes: 2, rayon: 76, notes: 'retards' as const }
 }
 
 const polygone = (points: { x: number; y: number }[]) =>
@@ -57,6 +114,8 @@ export default function EffortRadar({ diagram }: { diagram: EffortDiagram }) {
   if (axes.length === 0) return null
 
   const n = axes.length
+  const reg = reglages(n)
+  const R = reg.rayon
   const rayonDe = (v: number) =>
     diagram.scale > 0 ? Math.min(1, v / diagram.scale) * R : 0
 
@@ -72,8 +131,8 @@ export default function EffortRadar({ diagram }: { diagram: EffortDiagram }) {
   return (
     <figure className="mt-3">
       <svg
-        viewBox="0 0 300 300"
-        className="mx-auto block h-auto w-full max-w-[320px]"
+        viewBox="0 0 380 272"
+        className="mx-auto block h-auto w-full max-w-[380px]"
         role="img"
         // LA TOILE EST DÉCORATIVE POUR UN LECTEUR D'ÉCRAN : elle ne dit rien
         // que la liste des matières, juste dessous, ne dise en toutes lettres.
@@ -99,8 +158,8 @@ export default function EffortRadar({ diagram }: { diagram: EffortDiagram }) {
           return (
             <line
               key={a.slug}
-              x1={CENTRE}
-              y1={CENTRE}
+              x1={CX}
+              y1={CY}
               x2={p.x}
               y2={p.y}
               className="stroke-black/10"
@@ -112,34 +171,96 @@ export default function EffortRadar({ diagram }: { diagram: EffortDiagram }) {
         {/* LE BARÈME, en pointillé doré — la forme à atteindre. Dessiné AVANT
             l'effort : c'est le fond de la comparaison, pas son sujet. */}
         {barème ? (
-          <polygon
-            points={polygone(barème)}
-            className="fill-none stroke-[color:var(--highlight)]"
-            strokeWidth={2}
-            strokeDasharray="5 4"
-            strokeLinejoin="round"
-          />
+          <g>
+            {/* L'OR SUR CRÈME MANQUE DE CONTRASTE, et c'est le trait le plus
+                important du graphique : il porte toute la comparaison. Un
+                liseré sombre dessous le détache du fond sans changer sa
+                couleur — deux tracés, le même pointillé. */}
+            <polygon
+              points={polygone(barème)}
+              className="fill-none stroke-[color:var(--foreground)]/25"
+              strokeWidth={4}
+              strokeDasharray="5 4"
+              strokeLinejoin="round"
+            />
+            <polygon
+              points={polygone(barème)}
+              className="fill-none stroke-[color:var(--highlight)]"
+              strokeWidth={2.5}
+              strokeDasharray="5 4"
+              strokeLinejoin="round"
+            />
+          </g>
         ) : null}
 
-        {/* LE NUMÉRO DE CHAQUE SOMMET. Sans lui, les étiquettes numérotées du
-            dessous pointeraient vers rien — c'est le seul texte du SVG, et il
-            n'a que deux caractères : aucun risque de débordement, contrairement
-            à « Physique-Chimie » posé autour d'un hexagone de 320 px. */}
+        {/* LE NOM AU BOUT DU RAYON — et non plus un numéro renvoyant à une
+            légende posée dessous. Le premier jet numérotait les sommets 1 à 6 et
+            listait les noms en grille sous la toile : l'œil devait faire un
+            aller-retour permanent entre le dessin et sa légende pour savoir de
+            quelle matière parlait chaque pointe. Un radar qu'il faut DÉCODER a
+            perdu sa raison d'être, qui était de se lire en une seconde. */}
         {axes.map((a, i) => {
-          const p = pointSur(i, n, R + 16)
+          const p = pointSur(i, n, R + 14)
+          // L'ancrage suit l'angle : à droite de la toile le texte part vers la
+          // droite, à gauche il finit à gauche, en haut et en bas il se centre.
+          const ancre =
+            Math.abs(p.cos) < 0.25 ? 'middle' : p.cos > 0 ? 'start' : 'end'
+          const lignes = couper(a.name, reg.limite, reg.lignes)
+          const montreNote =
+            a.moyenne !== null &&
+            (reg.notes === 'toutes' || a.verdict === 'en_retard')
+          // Le bloc de texte est remonté de sa hauteur quand il est au-dessus
+          // du centre : sans ça, un nom sur deux lignes au sommet nord
+          // chevaucherait la toile.
+          const pas = reg.corps + 1
+          const hauteur = lignes.length * pas + (montreNote ? pas : 0)
+          const y = p.y + (p.sin < -0.3 ? -hauteur + 8 : p.sin > 0.3 ? 4 : -2)
           return (
             <text
-              key={`n-${a.slug}`}
+              key={`l-${a.slug}`}
               x={p.x}
-              y={p.y}
-              textAnchor="middle"
-              dominantBaseline="central"
-              className="fill-foreground/45 text-[13px] font-bold"
+              y={y}
+              textAnchor={ancre}
+              className="fill-foreground font-bold"
+              style={{ fontSize: reg.corps }}
             >
-              {i + 1}
+              {lignes.map((ligne, j) => (
+                <tspan key={ligne + j} x={p.x} dy={j === 0 ? 0 : pas}>
+                  {ligne}
+                </tspan>
+              ))}
+              {/* LA MOYENNE SOUS LE NOM : c'est le seul chiffre vérifiable du
+                  graphique — le travail est estimé, le barème est un barème, la
+                  note est un fait. En corail sous 10, c'est elle qui doit sauter
+                  aux yeux avant toute considération de répartition. */}
+              {montreNote ? (
+                <tspan
+                  x={p.x}
+                  dy={pas}
+                  className={
+                    a.verdict === 'en_retard'
+                      ? 'fill-destructive font-extrabold'
+                      : 'fill-foreground/55 font-semibold'
+                  }
+                  style={{ fontSize: reg.corps }}
+                >
+                  {noteLabel(a.moyenne ?? 0)}
+                </tspan>
+              ) : null}
             </text>
           )
         })}
+
+        {/* LA SEULE GRADUATION CHIFFRÉE, sur l'anneau extérieur. Quatre
+            graduations ne se lisent jamais ; aucune, et l'on ne sait plus ce que
+            vaut un rayon. Une suffit à donner l'échelle. */}
+        <text
+          x={CX + 4}
+          y={CY - R + 2}
+          className="fill-foreground/35 text-[9px] font-bold"
+        >
+          {Math.round(diagram.scale * 100)} %
+        </text>
 
         {/* L'EFFORT, plein */}
         <polygon
@@ -150,73 +271,58 @@ export default function EffortRadar({ diagram }: { diagram: EffortDiagram }) {
         />
         {axes.map((a, i) => {
           const p = effort[i]
+          const retard = a.verdict === 'en_retard'
           return (
-            <circle
-              key={a.slug}
-              cx={p.x}
-              cy={p.y}
-              r={a.verdict === 'en_retard' ? 5 : 3.5}
-              className={
-                a.verdict === 'en_retard'
-                  ? 'fill-[color:var(--destructive)]'
-                  : 'fill-[color:var(--primary)]'
-              }
-            />
+            <g key={a.slug}>
+              {/* LE HALO DU RETARD. Un point corail de 5 px se perdait sur la
+                  toile — or c'est LA découverte que cet écran doit provoquer.
+                  L'anneau le fait sortir sans changer la forme du polygone. */}
+              {retard ? (
+                <circle
+                  cx={p.x}
+                  cy={p.y}
+                  r={9}
+                  className="fill-[color:var(--destructive)]/20"
+                />
+              ) : null}
+              <circle
+                cx={p.x}
+                cy={p.y}
+                r={retard ? 5.5 : 3.5}
+                className={
+                  retard
+                    ? 'fill-[color:var(--destructive)]'
+                    : 'fill-[color:var(--primary)]'
+                }
+              />
+            </g>
           )
         })}
       </svg>
 
-      {/* LES ÉTIQUETTES SONT DU HTML, PAS DU <text> SVG. Un nom de matière peut
-          faire deux lignes (« Physique-Chimie »), porter sa note dessous, et
-          doit rester à la taille de police de l'élève : tout cela, le SVG le
-          fait mal. Posées en grille sous la toile, elles restent lisibles à
-          toutes les largeurs — et sur un téléphone, des étiquettes autour d'un
-          hexagone de 320 px seraient de toute façon illisibles. */}
-      <figcaption className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 sm:grid-cols-3">
-        {axes.map((a, i) => (
-          <Etiquette key={a.slug} row={a} index={i} />
-        ))}
+      {/* PLUS DE GRILLE D'ÉTIQUETTES SOUS LA TOILE : les noms sont désormais au
+          bout de leur rayon. Il reste la version LUE — ce que la toile dit par
+          une distance, dit ici en toutes lettres. Un polygone décrit point par
+          point serait du bruit ; une phrase par matière est de l'accès. */}
+      <figcaption className="sr-only">
+        <ul>
+          {axes.map((a) => (
+            <li key={a.slug}>
+              {`${a.name} : ${dureeLabel(a.minutes)} de révision, ${Math.round(
+                a.share * 100,
+              )} % de ton travail`}
+              {a.weight !== null
+                ? `, pèse ${Math.round(a.weight * 100)} % de ton épreuve`
+                : ''}
+              {a.moyenne !== null ? `, moyenne ${noteLabel(a.moyenne)}` : ''}
+              {a.verdict === 'en_retard' ? ', sous la moyenne' : ''}
+            </li>
+          ))}
+        </ul>
       </figcaption>
 
       <Legende barème={barème !== null} />
     </figure>
-  )
-}
-
-function Etiquette({ row, index }: { row: EffortRow; index: number }) {
-  return (
-    <span className="flex min-w-0 items-baseline gap-1.5 text-[11px] leading-tight">
-      {/* Le numéro relie l'étiquette à son sommet : sans lui, six noms sous un
-          hexagone ne se rattachent à rien. Il suit le sens horaire depuis le
-          haut, comme les axes. */}
-      <span
-        aria-hidden="true"
-        className="grid size-4 shrink-0 place-items-center rounded-full bg-black/8 text-[9px] font-extrabold tabular-nums"
-      >
-        {index + 1}
-      </span>
-      <span className="min-w-0 flex-1 truncate font-bold" title={row.name}>
-        {row.name}
-      </span>
-      {row.moyenne !== null ? (
-        <span
-          className={cn(
-            'shrink-0 font-extrabold tabular-nums',
-            row.verdict === 'en_retard' ? 'text-destructive' : 'text-foreground/60',
-          )}
-        >
-          {noteLabel(row.moyenne)}
-        </span>
-      ) : (
-        <span className="shrink-0 text-muted-foreground tabular-nums">
-          {dureeLabel(row.minutes)}
-        </span>
-      )}
-      {/* Ce que la toile dit par une distance, dit ici en toutes lettres. */}
-      <span className="sr-only">
-        {`, ${dureeLabel(row.minutes)} de révision, ${Math.round(row.share * 100)} % de ton travail`}
-      </span>
-    </span>
   )
 }
 

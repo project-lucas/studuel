@@ -15,7 +15,6 @@ import CouronnesMatieres from '@/components/moi/CouronnesMatieres'
 import CouronnesRangee from '@/components/moi/CouronnesRangee'
 import MesChiffres from '@/components/moi/MesChiffres'
 import HistoriqueTravail from '@/components/moi/HistoriqueTravail'
-import HabitudesCard, { type LeverState } from '@/components/moi/HabitudesCard'
 import TuileMoyenne from '@/components/moi/TuileMoyenne'
 import TrajectoryCard from '@/components/moi/TrajectoryCard'
 import EffortParMatiere from '@/components/moi/EffortParMatiere'
@@ -50,7 +49,6 @@ import { bilanMoyenne } from '@/lib/moi/moyenne'
 import { PLANIFIER_CATALOG_ID } from '@/lib/habits'
 import {
   DRIVER_WINDOW_DAYS,
-  LEVERS,
   computeCapacite,
   computeDriverScores,
   computePlafond,
@@ -62,7 +60,7 @@ import {
   normalizeTermGrades,
 } from '@/lib/trajectoire-bac'
 import { workLevel } from '@/lib/work-level'
-import { bilanHabitudes, meilleureSerie } from '@/lib/moi/habitudes'
+import { meilleureSerie } from '@/lib/moi/habitudes'
 import type { ChapitreProgression } from '@/lib/progression'
 import { GRADE_LEVELS, type GradeLevel, type Subject } from '@/lib/types'
 import { GRADE_FULL_LABELS } from '@/lib/grades'
@@ -392,34 +390,15 @@ export default async function MoiPage() {
   const listeCouronnes = couronnes([...parMatiere.values()])
   const bilan = bilanCouronnes(listeCouronnes)
 
-  // --- Les leviers du jour --------------------------------------------------
-  const habitByCatalog = new Map(activeHabits.map((h) => [h.catalog_id, h.id]))
-  const faitAujourdhui = new Set(
-    logs.filter((l) => l.completed && l.date === today).map((l) => l.habit_id),
-  )
-  const levers: LeverState[] = LEVERS.map((l) => {
-    const habitId = habitByCatalog.get(l.catalogId)
-    return {
-      catalogId: l.catalogId,
-      label: l.label,
-      driverKey: l.driverKey,
-      doneToday: habitId !== undefined && faitAujourdhui.has(habitId),
-    }
-  })
-
-  // --- Le résumé des habitudes ---------------------------------------------
-  // Aucune requête de plus : `activeHabits` et `logs` sont déjà en main.
-  const bilans = bilanHabitudes(
-    activeHabits.map((h) => ({
-      id: h.id,
-      catalogId: h.catalog_id,
-      titre: h.habit_catalog?.title ?? 'Habitude',
-      icone: h.habit_catalog?.icon ?? '✅',
-      raison: h.habit_catalog?.rationale ?? '',
-    })),
-    logs,
-    today,
-  )
+  // ⚠️ LA CARTE « MES HABITUDES » A QUITTÉ CET ONGLET, et avec elle les deux
+  // calculs qui ne servaient qu'à son affichage : les LEVIERS du jour (fait /
+  // pas fait, par catalogue) et le BILAN par habitude. Ils ne coûtaient aucune
+  // requête — `activeHabits` et `logs` sont lus de toute façon pour la
+  // trajectoire — mais les garder aurait laissé du code mort à maintenir.
+  //
+  // Les habitudes elles-mêmes ne disparaissent pas : /moi/habitudes reste leur
+  // écran, entier, et les mêmes `activeHabits` continuent d'alimenter les
+  // moteurs de capacité et de plafond ci-dessus.
 
   // --- Identité -------------------------------------------------------------
   const gradeLevel: GradeLevel | null = GRADE_LEVELS.includes(
@@ -439,6 +418,11 @@ export default async function MoiPage() {
   // « function does not exist », et un diagramme à zéro contredirait le cumul
   // affiché juste au-dessus.
   const effortDisponible = !isMissingSchemaObject(effortError)
+  const matieresDuDiagramme =
+    selected.length > 0
+      ? suivies
+      : suivies.filter((s) => s.levels.includes(profile?.grade_level ?? ''))
+
 
   // LA MOYENNE PAR MATIÈRE, sur 20, pondérée par les coefficients saisis. C'est
   // la troisième dimension du diagramme, et celle qui lui donne son tranchant :
@@ -475,7 +459,15 @@ export default async function MoiPage() {
       questions: Number(r.questions) || 0,
       lessons: Number(r.lessons) || 0,
     })),
-    subjects: suivies.map((s) => ({ slug: s.slug, name: s.name })),
+    // TOUTES SES MATIÈRES ONT UNE BRANCHE, travaillées ou non — une matière
+    // qu'il suit sans jamais l'ouvrir est ce que la toile doit lui montrer.
+    //
+    // Le périmètre est BORNÉ ici, et il doit l'être : `suivies` vaut le
+    // catalogue ENTIER quand l'élève n'a coché aucune matière à l'onboarding
+    // (une trentaine), ce qui dessinerait une toile illisible dont presque
+    // toutes les branches seraient à zéro. Sans choix explicite, on retombe
+    // donc sur les matières de SA CLASSE.
+    subjects: matieresDuDiagramme.map((s) => ({ slug: s.slug, name: s.name })),
     // Les poids viennent du NIVEAU, et les spécialités des matières suivies :
     // en terminale, c'est le profil de l'élève qui dit laquelle pèse 16.
     weights: weightsForGrade(profile?.grade_level ?? '', suivies),
@@ -591,10 +583,6 @@ export default async function MoiPage() {
             />
           </div>
         ) : null}
-
-        <div className="mt-7">
-          <HabitudesCard levers={levers} today={today} bilans={bilans} />
-        </div>
 
         {/* La trajectoire ne s'affiche QUE s'il y a de quoi projeter. Sans
             notes, elle occupait un tiers de l'écran pour demander une saisie —

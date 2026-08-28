@@ -3,7 +3,6 @@ import {
   buildEffort,
   dureeLabel,
   radarAxes,
-  RADAR_AXES_MAX,
   type EffortInput,
 } from '@/lib/effort'
 import { weightsForGrade, weightsAreComparable } from '@/lib/exam-weights'
@@ -125,7 +124,12 @@ describe('buildEffort — les régimes', () => {
     })
     expect(d.regime).toBe('simple')
     expect(d.exam).toEqual([])
-    expect(d.autres).toHaveLength(2)
+    // TOUTES les matières suivies ont leur ligne, travaillées ou non : une
+    // matière absente du travail est précisément ce que l'élève doit voir.
+    expect(d.autres).toHaveLength(CATALOGUE.length)
+    expect(d.autres.filter((r) => r.minutes === 0)).toHaveLength(
+      CATALOGUE.length - 2,
+    )
     expect(d.phrase).toBeNull()
   })
 })
@@ -155,6 +159,7 @@ describe('buildEffort — les bords', () => {
       subjects: CATALOGUE,
       weights: {},
     })
+    // Elle est en tête : c'est la seule travaillée, le tri est par effort.
     expect(d.autres[0].name).toBe('matiere-fantome')
   })
 })
@@ -172,13 +177,18 @@ describe('buildEffort — l’échelle des pistes', () => {
     expect(d.scale).toBeGreaterThanOrEqual(maxWeight)
   })
 
-  it('ne descend pas sous son plancher — sinon les barres seraient des traits', () => {
+  it('COLLE à la plus grande valeur, pour que la branche dominante touche le bord', () => {
+    // Vingt matières travaillées à égalité : chacune vaut 1/26 avec les six du
+    // catalogue à zéro. Une échelle figée à 25 % réduirait la toile à une tache
+    // au centre d'anneaux vides — c'est ce qui se voyait à dix-sept branches.
     const d = buildEffort({
       effort: Array.from({ length: 20 }, (_, i) => q(`m${i}`, 10)),
       subjects: CATALOGUE,
       weights: {},
     })
-    expect(d.scale).toBe(0.25)
+    const maxShare = Math.max(...d.autres.map((r) => r.share))
+    expect(d.scale).toBeGreaterThanOrEqual(maxShare)
+    expect(d.scale).toBeLessThan(maxShare + 0.05)
   })
 })
 
@@ -278,7 +288,7 @@ describe('radarAxes — la sélection des axes', () => {
     const axes = radarAxes(d).map((r) => r.slug)
     // Français et maths pèsent 100 : ils ouvrent la toile malgré 1 question.
     expect(axes.slice(0, 2).sort()).toEqual(['francais', 'maths'])
-    expect(axes).toHaveLength(5)
+    expect(axes).toHaveLength(CATALOGUE.length)
   })
 
   it('fait monter un RETARD hors épreuve sur la toile', () => {
@@ -293,19 +303,29 @@ describe('radarAxes — la sélection des axes', () => {
     expect(radarAxes(d).map((r) => r.slug)).toContain('physique-chimie')
   })
 
-  it('ne dépasse jamais six axes — au-delà ils se marchent dessus', () => {
+  it('porte TOUTES les matières de l’élève, sans plafond', () => {
+    // Le bloc promet à l'élève de voir ses matières d'un coup : en renvoyer une
+    // partie dans une liste dessous trahirait la promesse. La lisibilité se
+    // règle dans le dessin (police et noms adaptés au nombre de branches), pas
+    // en amputant les données.
     const d = buildEffort({
       effort: Array.from({ length: 12 }, (_, i) => q(`m${i}`, 10 * (i + 1))),
       subjects: CATALOGUE,
       weights: {},
     })
-    expect(radarAxes(d)).toHaveLength(RADAR_AXES_MAX)
+    // Douze matières travaillées + les six suivies : dix-huit branches.
+    expect(radarAxes(d)).toHaveLength(12 + CATALOGUE.length)
   })
 
   it('rend un tableau VIDE sous trois axes : deux points ne font pas un polygone', () => {
+    // Un élève qui ne suit que deux matières (ou un profil incomplet) : pas de
+    // toile, l'appelant retombe sur les barres, qui n'ont pas ce plancher.
     const d = buildEffort({
       effort: [q('maths', 10), q('anglais', 10)],
-      subjects: CATALOGUE,
+      subjects: [
+        { slug: 'maths', name: 'Maths' },
+        { slug: 'anglais', name: 'Anglais' },
+      ],
       weights: {},
     })
     expect(radarAxes(d)).toEqual([])

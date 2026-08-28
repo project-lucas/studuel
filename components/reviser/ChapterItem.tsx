@@ -1,7 +1,9 @@
 'use client'
 
+import Image from 'next/image'
 import { Check, Clock3, Crown, Plus, Timer } from 'lucide-react'
 import SupportChips from '@/components/reviser/SupportChips'
+import { numeroIllustre } from '@/components/reviser/numeros'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -38,7 +40,6 @@ export default function ChapterItem({
   chapter,
   resumeLabel = null,
   rank = null,
-  numbered = true,
   open = false,
   supports = null,
   loading = false,
@@ -47,12 +48,6 @@ export default function ChapterItem({
   chapter: ChapterRow
   resumeLabel?: string | null
   rank?: number | null
-  /**
-   * Faux pour une matière sans ordre imposé (la philosophie et ses notions) :
-   * le titre s'écrit alors nu, sans « Chapitre N · » — cf.
-   * `chaptersAreNumbered`.
-   */
-  numbered?: boolean
   /** La fiche est dépliée : ses supports sont montrés dessous. */
   open?: boolean
   /** Les supports chargés, ou null tant qu'on ne les a jamais demandés. */
@@ -62,6 +57,10 @@ export default function ChapterItem({
 }) {
   const started = chapter.status !== 'non_commence'
   const panneau = `fiche-${chapter.id}`
+  // Le rang affiché : celui du programme quand la liste est rangée sous ses
+  // chapitres, sinon la position dans la matière.
+  const numero = rank ?? chapter.position
+  const numeroPeint = numeroIllustre(numero)
 
   return (
     <div
@@ -86,23 +85,63 @@ export default function ChapterItem({
         started ? 'p-4' : 'px-4 py-3',
       )}
     >
-      {/* Numéro du chapitre */}
-      <span
-        className={cn(
-          'font-heading flex shrink-0 items-center justify-center rounded-xl font-bold',
-          started ? 'size-11 text-lg' : 'size-9 text-base',
-          chapter.status === 'complete'
-            ? 'bg-primary text-primary-foreground'
-            : 'bg-primary/10 text-primary',
-        )}
-        aria-hidden="true"
-      >
-        {chapter.status === 'complete' ? (
+      {/* LE NUMÉRO DE LA FICHE — peint, et non plus écrit dans une pastille.
+          Le chiffre vivait en Baloo 2 au centre d'un carré violet pâle. La
+          pastille était là pour lui donner de la présence, comme elle le
+          faisait pour les pictogrammes de support : un caractère de 16 px sur
+          fond crème ne pèse rien. Le nombre dessiné, lui, porte son contour et
+          ses couleurs — la pastille n'ajoutait plus qu'une seconde forme muette
+          par-dessus, et le rapetissait au passage.
+
+          LA CASE, ELLE, RESTE — vide, mais de largeur fixe. Un « 12 » peint est
+          une fois et demie plus large qu'un « 1 » : c'est le comportement normal
+          d'un nombre, mais posé tel quel il décalerait le titre d'une ligne à
+          l'autre. La case garde donc les dimensions d'avant et le nombre s'y
+          centre, si bien que tous les titres de la liste restent alignés.
+
+          LA FICHE TERMINÉE garde SA pastille pleine : ce n'est plus un numéro
+          qu'elle affiche mais une coche — un état, pas un rang. */}
+      {chapter.status === 'complete' ? (
+        <span
+          className={cn(
+            'flex shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground',
+            started ? 'size-11' : 'size-9',
+          )}
+          aria-hidden="true"
+        >
           <Check className="size-5.5" strokeWidth={3} />
-        ) : (
-          (rank ?? chapter.position)
-        )}
-      </span>
+        </span>
+      ) : numeroPeint ? (
+        <span
+          className={cn(
+            'flex shrink-0 items-center justify-center',
+            started ? 'size-11' : 'size-9',
+          )}
+          aria-hidden="true"
+        >
+          <Image
+            src={numeroPeint}
+            alt=""
+            sizes="44px"
+            className={cn(
+              'h-auto w-auto max-w-full',
+              started ? 'max-h-9' : 'max-h-7',
+            )}
+          />
+        </span>
+      ) : (
+        /* Au-delà de la série dessinée (cf. components/reviser/numeros.ts) :
+           le chiffre écrit, dans sa pastille, exactement comme avant. */
+        <span
+          className={cn(
+            'font-heading flex shrink-0 items-center justify-center rounded-xl bg-primary/10 font-bold text-primary',
+            started ? 'size-11 text-lg' : 'size-9 text-base',
+          )}
+          aria-hidden="true"
+        >
+          {numero}
+        </span>
+      )}
 
       <span className="min-w-0 flex-1">
         {chapter.examHint ? (
@@ -118,10 +157,15 @@ export default function ChapterItem({
             {chapter.examHint.label}
           </span>
         ) : null}
-        <span className="block font-semibold text-balance">
-          {rank === null && numbered ? `Chapitre ${chapter.position} · ` : ''}
-          {chapter.title}
-        </span>
+        {/* LE TITRE, NU. Il portait « Chapitre 3 · » en préfixe sur les listes
+            à plat. Ce numéro promettait un ORDRE que personne ne suit : le
+            professeur traite le programme dans la progression qu'il choisit, et
+            l'élève qui commence par le dernier chapitre n'est pas en retard de
+            sept. Il volait en plus la place du titre, seul mot qui dise ce
+            qu'on va réviser. La règle valait déjà pour la philosophie, dont le
+            programme est une liste de notions ; elle vaut en fait pour toutes
+            les matières. */}
+        <span className="block font-semibold text-balance">{chapter.title}</span>
         <span className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-xs font-semibold text-muted-foreground">
           {chapter.minutes !== null ? (
             <span className="inline-flex items-center gap-1">

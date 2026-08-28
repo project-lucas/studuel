@@ -15,7 +15,6 @@ import AnnalesPanel from '@/components/reviser/AnnalesPanel'
 import AiFab from '@/components/reviser/AiFab'
 import {
   chapterUnit,
-  chaptersAreNumbered,
   disciplineLabel,
   disciplinesOf,
   modesFor,
@@ -91,8 +90,6 @@ export default function SubjectTemplate({
         progress={progress}
         unit={unit}
         discipline={active.discipline ? disciplineLabel(active.discipline) : null}
-        gems={data.gems}
-        streak={data.streak}
         gardien={ecusson}
         standing={
           data.standing ? (
@@ -160,7 +157,6 @@ export default function SubjectTemplate({
                     : data.subject.name
                 }
                 grade={data.grade}
-                numbered={chaptersAreNumbered(data.subject.slug)}
               />
               {!exam && !data.examOnTop ? (
                 <div className="mt-6">

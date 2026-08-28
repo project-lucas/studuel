@@ -454,27 +454,24 @@ export function catalogIsStale(
 }
 
 /**
- * Les matières dont la liste NE SE NUMÉROTE PAS.
+ * ⚠️ IL N'Y A PLUS DE NUMÉRO DE CHAPITRE, ET C'EST DÉFINITIF.
  *
- * « Chapitre 1 · La conscience », « Chapitre 2 · L'inconscient » : en
- * philosophie, ce numéro est un mensonge. Le programme est une LISTE DE
- * NOTIONS, sans ordre imposé — chaque professeur les traite dans l'ordre qu'il
- * veut, et l'élève qui commence par « Le devoir » n'est pas en retard de sept
- * chapitres. Le numéro laisse pourtant croire à une progression, et il occupe
- * la place que la notion devrait avoir : c'est elle qu'on doit lire d'abord.
+ * `MATIERES_SANS_ORDRE` / `chaptersAreNumbered` vivaient ici : la philosophie
+ * était la seule matière à ne pas annoncer « Chapitre 1 · La conscience »,
+ * parce que son programme est une LISTE DE NOTIONS sans ordre imposé. Le
+ * raisonnement était juste — et il valait pour toutes les autres : chaque
+ * professeur traite son programme dans la progression qu'il choisit, l'élève
+ * qui commence par le dernier chapitre n'est pas en retard de sept, et le
+ * numéro occupait la place du TITRE, seul mot qui dise ce qu'on va réviser.
  *
- * La liste reste dans l'ordre où la base la sert (les notions du BO), et la
- * pastille de gauche garde son chiffre — c'est un repère de position dans
- * l'écran et le porte-drapeau de l'état « terminé », pas une promesse d'ordre.
- * Seul le préfixe du titre s'en va.
+ * L'exception a donc été généralisée le 2026-08-28 : plus de surtitre
+ * « CHAPITRE 2 » sur les groupes, plus de préfixe « Chapitre 3 · » sur les
+ * listes à plat, et plus de liste d'exceptions à tenir à jour.
+ *
+ * Ce qui RESTE : le rang de la fiche DANS son chapitre (la pastille de gauche,
+ * `ChapterList` → `rangParFiche`). Il situe une ligne à l'écran et porte l'état
+ * « terminé » ; il ne promet aucun parcours.
  */
-const MATIERES_SANS_ORDRE = new Set(['philosophie'])
-
-/** La ligne doit-elle s'annoncer « Chapitre N · … » ? */
-export function chaptersAreNumbered(slug: string): boolean {
-  return !MATIERES_SANS_ORDRE.has(slug)
-}
-
 /** Le groupe à ouvrir à l'arrivée : celui qui porte le chapitre à reprendre. */
 export function openGroupIndex(
   groups: ChapterGroup[],
@@ -688,10 +685,6 @@ export type SubjectTemplateData = {
   /** Le bandeau « Examen blanc » a-t-il gagné sa place en tête de page ? */
   examOnTop: boolean
   weakCount: number
-  // Économie affichée en haut à droite du header : solde de gemmes 💎 et
-  // série 🔥 (la même série dérivée que la flamme de l'accueil Réviser).
-  gems: number
-  streak: number
   chapters: ChapterRow[]
   // Onglet « Boss » : pool de questions 100 % matière pour affronter le boss
   // de la matière (le même de la 6e à la Terminale — bossForSubject côté client).

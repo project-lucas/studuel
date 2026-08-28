@@ -1,7 +1,5 @@
-import { Flame } from 'lucide-react'
 import BackButton from '@/components/BackButton'
 import SubjectIcon from '@/components/SubjectIcon'
-import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { cn } from '@/lib/utils'
 import {
   subjectTheme,
@@ -12,16 +10,16 @@ import {
 import type { SubjectProgress } from '@/lib/subject-template'
 
 // Header de la page matière : retour, icône + nom (depuis la base), niveau,
-// progression globale « X/Y chapitres · Z% » + barre, et l'économie en haut à
-// droite — solde de gemmes 💎 et série 🔥 (jours consécutifs avec au moins une
-// session, la même flamme que l'accueil Réviser). Le décor d'arène de la
-// matière habille le fond quand il existe, sinon la tuile colorée du thème.
+// progression globale « X/Y chapitres · Z% » + barre, et l'écusson du gardien en
+// haut à droite. Le décor d'arène de la matière habille le fond quand il existe,
+// sinon la tuile colorée du thème.
+//
+// Il portait aussi le solde de gemmes et la série : c'était un doublon du
+// bandeau du haut, retiré le 2026-08-28 (cf. le bloc de l'écusson plus bas).
 export default function SubjectHeader({
   subject,
   grade,
   progress,
-  gems,
-  streak,
   standing = null,
   gardien = null,
   unit = 'chapitre',
@@ -31,8 +29,6 @@ export default function SubjectHeader({
   subject: { slug: string; name: string; color: string }
   grade: string
   progress: SubjectProgress
-  gems: number
-  streak: number
   /**
    * Place de l'élève dans cette matière parmi son niveau (« Top 8 % des 3e »).
    * `null` tant qu'il n'a pas passé assez de quiz pour être classé, ou que la
@@ -90,37 +86,18 @@ export default function SubjectHeader({
         <div className="mb-4 flex items-start justify-between gap-3">
           <BackButton fallback="/reviser" label="Retour aux matières" />
 
-          {/* Économie : 💎 puis 🔥. La flamme reste le SEUL dégradé ambre→orange
-              autorisé hors tokens (série uniquement, cf. design system). */}
-          <div className="flex items-center gap-2">
-            {gardien}
-            <span
-              className="inline-flex items-center gap-1.5 rounded-full bg-black/25 px-3 py-1.5 text-sm font-bold tabular-nums backdrop-blur-sm"
-              aria-label={`${gems} gemmes`}
-            >
-              {/* L'ILLUSTRATION, pas le pictogramme : ici la gemme est un
-                  solde qu'on regarde, pas un signe dans une phrase — et la
-                  pastille sombre lui donne le fond neutre qu'elle réclame
-                  (cf. la doctrine de MonnaieIcon). */}
-              <CristalIcon className="size-5" />
-              {gems}
-            </span>
-            <span
-              className="inline-flex items-center gap-1 rounded-full bg-black/25 px-3 py-1.5 text-sm font-bold tabular-nums backdrop-blur-sm"
-              aria-label={`Série de ${streak} jour${streak > 1 ? 's' : ''}`}
-            >
-              <Flame
-                className={cn(
-                  'size-4',
-                  streak > 0
-                    ? 'fill-orange-500 text-amber-400'
-                    : 'text-white/50',
-                )}
-                aria-hidden="true"
-              />
-              {streak}
-            </span>
-          </div>
+          {/* ⚠️ NI GEMMES NI SÉRIE ICI — c'était un DOUBLON du bandeau du haut.
+              Le header portait le solde de gemmes et la flamme dans deux
+              pastilles sombres. Mais `TopHud` affiche déjà les deux, à quelques
+              pixels au-dessus et sur toutes les pages de l'app : l'élève lisait
+              « 75 💎 · 1 🔥 » deux fois dans le même regard, dans deux habillages
+              différents (verre sombre ici, pastilles crème là-haut), ce qui
+              donnait à croire à deux compteurs distincts. Un solde ne se dit
+              qu'à un seul endroit.
+
+              L'écusson du GARDIEN reste : lui n'est nulle part ailleurs, et sa
+              jauge se remplit avec le travail de CETTE page. */}
+          <div className="flex items-center gap-2">{gardien}</div>
         </div>
         <div className="flex items-center gap-4">
           {/* LE MÉDAILLON DE LA MATIÈRE : son illustration, la même que sur sa

@@ -13,7 +13,6 @@ import {
   flashcardsMeta,
   catalogIsStale,
   chapterUnit,
-  chaptersAreNumbered,
   disciplinesOf,
   groupChaptersByTheme,
   matchChapters,
@@ -480,18 +479,6 @@ describe('catalogIsStale', () => {
 
   test('une base vide ne fait pas passer le cache pour périmé', () => {
     expect(catalogIsStale(ids('a'), [])).toBe(false)
-  })
-})
-
-describe('chaptersAreNumbered', () => {
-  test('la philosophie ne numérote pas ses notions', () => {
-    expect(chaptersAreNumbered('philosophie')).toBe(false)
-  })
-
-  test('les autres matières gardent leur numérotation', () => {
-    for (const slug of ['maths', 'histoire-geo', 'anglais', 'svt']) {
-      expect(chaptersAreNumbered(slug)).toBe(true)
-    }
   })
 })
 

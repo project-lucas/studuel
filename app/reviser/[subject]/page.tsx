@@ -11,7 +11,6 @@ import {
   type CatalogChapter,
 } from '@/lib/catalog'
 import { contentLevelOf } from '@/lib/subject-visibility'
-import { fetchGems } from '@/lib/gems-access'
 import { fetchGardienCard } from '@/lib/traque-server'
 import {
   catalogIsStale,
@@ -44,7 +43,7 @@ import {
 } from '@/lib/next-exam'
 import { controlesToExams, mergeExamSources } from '@/lib/controle-exams'
 import { daysBetween, rowsToControles, type ControleRow } from '@/lib/prep-plan'
-import { activityCutoff, computeStreak, toDayKey } from '@/lib/streak'
+import { toDayKey } from '@/lib/streak'
 import {
   CHAPTER_COLUMNS,
   LESSON_COLUMNS,
@@ -156,19 +155,19 @@ export default async function SubjectPage({
   // - quiz_questions (colonnes complètes) → compte de cartes/questions par
   //   quiz, rattachement des items SRS de la matière ET pool de l'onglet Boss ;
   // - review_items (file du jour) → bloc « À revoir » et « X à revoir ».
-  // Gemmes + série 🔥 : pour l'économie affichée en haut à droite du header —
-  // la série est la MÊME série dérivée que la flamme de l'accueil Réviser
-  // (mêmes quatre tables d'activité, même fenêtre), une seule vérité.
-  const cutoff = activityCutoff()
+  //
+  // ⚠️ NI GEMMES NI SÉRIE : elles étaient lues ici pour deux pastilles du
+  // header qui DOUBLONNAIENT le bandeau du haut (`TopHud`, présent sur toutes
+  // les pages). En retirant l'affichage, on retire aussi ce qui le nourrissait —
+  // `fetchGems` et les TROIS lectures d'activité sur 400 jours
+  // (test_sessions, study_sessions, challenge_sessions) qui ne servaient qu'à
+  // dériver la flamme. Quatre requêtes de moins à chaque ouverture d'une
+  // matière, pour deux nombres déjà affichés trois centimètres plus haut.
   const [
     { data: completions },
     { data: sessions },
     { data: questions },
     reviewItems,
-    gems,
-    { data: testDays },
-    { data: studyDays },
-    { data: challengeDays },
     { data: standingsRow },
     { data: themeRows },
     { data: paperRows },
@@ -200,25 +199,6 @@ export default async function SubjectPage({
             .returns<QuizQuestion[]>()
         : Promise.resolve({ data: [] as QuizQuestion[] }),
       getReviewItems(supabase, user.id),
-      fetchGems(supabase, user.id),
-      supabase
-        .from('test_sessions')
-        .select('created_at')
-        .eq('user_id', user.id)
-        .gte('created_at', cutoff)
-        .returns<{ created_at: string }[]>(),
-      supabase
-        .from('study_sessions')
-        .select('created_at')
-        .eq('user_id', user.id)
-        .gte('created_at', cutoff)
-        .returns<{ created_at: string }[]>(),
-      supabase
-        .from('challenge_sessions')
-        .select('created_at')
-        .eq('user_id', user.id)
-        .gte('created_at', cutoff)
-        .returns<{ created_at: string }[]>(),
       // Classements par niveau (223) : on ne garde ici que la matière ouverte.
       // RPC SECURITY DEFINER — la RLS de `profiles` interdit toute jointure.
       supabase.rpc('my_grade_standings'),
@@ -256,18 +236,6 @@ export default async function SubjectPage({
         slug: subject.slug,
       }),
     ])
-
-  // Série 🔥 du header : jours (clés UTC) avec au moins une session, toutes
-  // activités confondues — même calcul que la flamme de l'accueil Réviser.
-  const activityDays = new Set(
-    [
-      ...(testDays ?? []),
-      ...(studyDays ?? []),
-      ...(challengeDays ?? []),
-      ...(completions ?? []),
-    ].map((r) => String(r.created_at).slice(0, 10)),
-  )
-  const streak = computeStreak(activityDays)
 
   // Meilleur essai par quiz (ratio ET score/total, pour le libellé « 7/10 »).
   const bestByQuiz = new Map<string, { score: number; total: number; ratio: number }>()
@@ -468,8 +436,6 @@ export default async function SubjectPage({
     resume: resumeCta(chapters),
     examOnTop: examBannerOnTop(progress.pct, daysToExam),
     weakCount,
-    gems,
-    streak,
     chapters,
     bossPool,
     gardien,

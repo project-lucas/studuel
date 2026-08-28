@@ -3,7 +3,7 @@
 import { useCallback, useMemo, useState, useTransition } from 'react'
 import { ChevronDown, Search, X } from 'lucide-react'
 import ChapterItem from '@/components/reviser/ChapterItem'
-import ChapterProgressRing from '@/components/reviser/ChapterProgressRing'
+import ChapterProgressBar from '@/components/reviser/ChapterProgressBar'
 import { chapterSupports } from '@/app/reviser/[subject]/supports-actions'
 import { cn } from '@/lib/utils'
 import {
@@ -41,7 +41,6 @@ export default function ChapterList({
   subjectSlug,
   subjectName,
   grade,
-  numbered = true,
 }: {
   chapters: ChapterRow[]
   /** Le chapitre mis en avant (« Reprendre » / « Commencer »), s'il en reste. */
@@ -50,12 +49,6 @@ export default function ChapterList({
   subjectSlug: string
   subjectName: string
   grade: string
-  /**
-   * Faux quand la matière n'a pas d'ordre imposé (`chaptersAreNumbered`) : ses
-   * lignes portent leur titre nu. Sans effet sur une liste rangée par thème,
-   * qui ne numérote déjà plus ses fiches.
-   */
-  numbered?: boolean
 }) {
   const [query, setQuery] = useState('')
   // La barre est REPLIÉE par défaut, réduite à sa loupe : déployée en
@@ -117,22 +110,23 @@ export default function ChapterList({
   // pas « 1 » parce qu'elle arrive en tête des résultats.
   const entiers = useMemo(() => groupChaptersByTheme(chapters), [chapters])
 
-  // Le numéro affiché compte les chapitres du PROGRAMME, donc les seuls groupes
-  // qui en portent un : un groupe sans titre (des chapitres que la base n'a pas
-  // rangés) ne consomme pas de numéro, sans quoi « Le groupe nominal », premier
-  // chapitre du programme, s'annoncerait « Chapitre 2 » parce qu'il vient
-  // derrière lui. Calculé d'un bloc AVANT le rendu — un compteur incrémenté
-  // dans le `map` serait une mutation pendant le rendu.
+  // Le RANG DE CHAQUE FICHE dans son chapitre (1, 2, 3…) — c'est lui que porte
+  // la pastille de gauche. Calculé d'un bloc AVANT le rendu : un compteur
+  // incrémenté dans le `map` serait une mutation pendant le rendu.
+  //
+  // Les CHAPITRES, eux, ne sont plus numérotés. Le surtitre « CHAPITRE 2 »
+  // promettait un ordre que personne ne suit : chaque professeur traite le
+  // programme dans la progression qu'il choisit. C'était déjà la règle en
+  // philosophie ; elle vaut pour toutes les matières. Le rang de la fiche
+  // reste : dans un chapitre ouvert, il situe la ligne à l'écran, il ne promet
+  // pas un parcours.
   const reperes = useMemo(() => {
-    const numeroParTheme = new Map<string, number>()
     const rangParFiche = new Map<string, number>()
-    let numero = 0
     for (const groupe of entiers) {
       if (!groupe.theme) continue
-      numeroParTheme.set(groupe.theme, ++numero)
       groupe.chapters.forEach((c, i) => rangParFiche.set(c.id, i + 1))
     }
-    return { numeroParTheme, rangParFiche }
+    return { rangParFiche }
   }, [entiers])
 
   const cherche = query.trim().length > 0
@@ -217,7 +211,6 @@ export default function ChapterList({
           <ChapterItem
             chapter={chapter}
             rank={ranged ? (reperes.rangParFiche.get(chapter.id) ?? null) : null}
-            numbered={numbered}
             resumeLabel={resume?.chapterId === chapter.id ? resume.label : null}
             open={fiche === chapter.id}
             supports={supports[chapter.id] ?? null}
@@ -323,12 +316,6 @@ export default function ChapterList({
     )
   }
 
-  // « CHAPITRE 1 » au-dessus d'un titre quand la matière n'a QU'UN chapitre —
-  // le rayon des fiches de lecture du français — ne numérote rien : il n'y a
-  // pas de chapitre 2. C'est une ligne de plus à lire pour zéro information.
-  // Le numéro revient dès qu'il y a une suite à situer.
-  const numerote = entiers.filter((g) => g.theme).length > 1
-
   return (
     <div className="mt-4 flex flex-col gap-3">
       {groups.map((group, i) => {
@@ -371,44 +358,37 @@ export default function ChapterList({
                 className="min-w-0 flex-1 cursor-pointer py-1.5 text-left"
               >
                 <span className="block min-w-0">
-                  {/* Le groupe EST le chapitre du programme : c'est lui qui porte
-                      le numéro que l'élève lit sur le cahier de son professeur. */}
-                  {group.theme && numerote ? (
-                    <span className="text-primary block text-xs font-extrabold tracking-wide uppercase">
-                      Chapitre {reperes.numeroParTheme.get(group.theme) ?? 0}
-                    </span>
-                  ) : null}
+                  {/* Le titre du chapitre, SEUL. Il portait un surtitre violet
+                      « CHAPITRE 2 » — cf. le calcul des repères plus haut pour
+                      la raison de son retrait. */}
                   <span className="font-heading block font-bold text-balance">
                     {group.theme ?? 'Autres chapitres'}
                   </span>
-                  {/* Sous recherche, le compte porte sur ce qui est MONTRÉ :
-                      « 0/3 fiches » sur trois résultats parlerait d'un autre
-                      chapitre que celui qu'on a sous les yeux. Et le bloc qui
-                      porte la barre sans avoir de résultat ne compte rien du
-                      tout : « 0 fiche » sous le titre, alors que le bilan
-                      juste dessous annonce les trouvailles des autres blocs,
-                      se lit comme un échec. */}
-                  {cherche && group.chapters.length === 0 ? null : (
-                    <span className="text-xs font-semibold text-muted-foreground tabular-nums">
-                      {cherche ? '' : `${done}/`}
-                      {group.chapters.length}{' '}
-                      {group.theme ? 'fiche' : 'chapitre'}
-                      {group.chapters.length > 1 ? 's' : ''}
-                    </span>
+                  {/* SOUS RECHERCHE, PAS DE JAUGE — juste le compte des
+                      résultats. `group.chapters` n'y contient que les
+                      trouvailles : une jauge remplie sur trois résultats
+                      parlerait d'un autre chapitre que celui affiché. Et le
+                      bloc qui porte la barre de recherche sans avoir de
+                      résultat ne compte rien du tout : « 0 fiche » sous le
+                      titre, alors que le bilan juste dessous annonce les
+                      trouvailles des autres blocs, se lirait comme un échec. */}
+                  {cherche ? (
+                    group.chapters.length === 0 ? null : (
+                      <span className="text-xs font-semibold text-muted-foreground tabular-nums">
+                        {group.chapters.length}{' '}
+                        {group.theme ? 'fiche' : 'chapitre'}
+                        {group.chapters.length > 1 ? 's' : ''}
+                      </span>
+                    )
+                  ) : (
+                    <ChapterProgressBar
+                      done={done}
+                      total={group.chapters.length}
+                      unit={group.theme ? 'fiche' : 'chapitre'}
+                    />
                   )}
                 </span>
               </button>
-              {/* L'ANNEAU D'AVANCEMENT du chapitre, dans l'espace vide à
-                  droite du titre. Pas sous recherche : `group.chapters` n'y
-                  contient que les résultats, et un anneau qui compterait les
-                  trouvailles parlerait d'un autre chapitre que celui affiché —
-                  c'est exactement pour ça que le compte texte s'efface aussi. */}
-              {cherche ? null : (
-                <ChapterProgressRing
-                  done={done}
-                  total={group.chapters.length}
-                />
-              )}
               {/* La loupe ne sort que sur un bloc unique (`cherchable`) : elle
                   cherche dans toute la liste, et posée sur l'un des cinq
                   chapitres d'un programme, elle laisserait croire qu'elle ne

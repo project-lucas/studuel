@@ -7,13 +7,11 @@ import { SEARCH_MIN_CHAPTERS, type ChapterRow } from '@/lib/subject-template'
 // LA LISTE DU PROGRAMME, RANGÉE SOUS SES CHAPITRES.
 //
 // Ce que ces tests gardent :
-//   1. le numéro affiché est celui du chapitre DU PROGRAMME — il compte les
-//      groupes titrés, et un groupe sans titre n'en consomme pas. C'est le
-//      défaut vu le 19/08/2026 : « Le groupe nominal », premier chapitre
-//      d'anglais Tle, s'annonçait « Chapitre 2 » parce qu'un groupe fantôme le
-//      précédait ;
+//   1. AUCUN chapitre ne s'annonce « Chapitre N » — ni en surtitre du groupe,
+//      ni en préfixe du titre sur une liste à plat. Le numéro promettait un
+//      ordre que le professeur ne suit pas, et volait la place du titre ;
 //   2. dans un groupe titré, la ligne est une FICHE : elle porte son titre nu
-//      et son rang DANS le chapitre, pas « Chapitre 20 · … » ;
+//      et son rang DANS le chapitre ;
 //   3. sans aucun thème en base, rien ne change de l'affichage à plat d'avant.
 
 const row = (
@@ -42,7 +40,7 @@ const anglais = [
 ]
 
 describe('ChapterList', () => {
-  it('numérote les chapitres du programme dans l’ordre', () => {
+  it('n’annonce AUCUN numéro de chapitre', () => {
     render(
       <ChapterList
         chapters={anglais}
@@ -52,13 +50,14 @@ describe('ChapterList', () => {
         grade="Terminale"
       />,
     )
-    expect(screen.getByText('Chapitre 1')).toBeTruthy()
-    expect(screen.getByText('Chapitre 2')).toBeTruthy()
-    expect(screen.getByText('Chapitre 3')).toBeTruthy()
-    expect(screen.queryByText('Chapitre 4')).toBeNull()
+    // Les titres du programme sont là…
+    expect(screen.getByText('Le groupe nominal')).toBeTruthy()
+    expect(screen.getByText('Le groupe verbal')).toBeTruthy()
+    // … et rien ne les numérote.
+    expect(screen.queryByText(/^Chapitre \d/)).toBeNull()
   })
 
-  it('un groupe sans titre ne consomme pas de numéro', () => {
+  it('un groupe sans titre ne disparaît pas en silence', () => {
     render(
       <ChapterList
         chapters={[row('z', 'Un chapitre non rangé', null, 0), ...anglais]}
@@ -68,11 +67,9 @@ describe('ChapterList', () => {
         grade="Terminale"
       />,
     )
-    // Le groupe fantôme est bien là (il ne disparaît pas en silence)…
+    // Les chapitres que la base n'a pas rangés gardent leur bloc à eux.
     expect(screen.getByText('Autres chapitres')).toBeTruthy()
-    // … mais le premier chapitre du programme reste le chapitre 1.
-    const nominal = screen.getByText('Le groupe nominal').closest('button')
-    expect(within(nominal as HTMLElement).getByText('Chapitre 1')).toBeTruthy()
+    expect(screen.getByText('Le groupe nominal')).toBeTruthy()
   })
 
   it('compte les lignes d’un chapitre en fiches, pas en chapitres', () => {
@@ -103,7 +100,7 @@ describe('ChapterList', () => {
     expect(screen.queryByText(/Chapitre 1 · Les déterminants/)).toBeNull()
   })
 
-  it('sans thème en base, la liste reste plate et garde ses numéros', () => {
+  it('sans thème en base, la liste reste plate — et sans numéro', () => {
     render(
       <ChapterList
         chapters={[
@@ -117,30 +114,10 @@ describe('ChapterList', () => {
       />,
     )
     expect(screen.queryByText('Autres chapitres')).toBeNull()
-    expect(screen.getByText(/Chapitre 1 · Nombres et calculs/)).toBeTruthy()
+    expect(screen.getByText('Nombres et calculs')).toBeTruthy()
+    expect(screen.queryByText(/Chapitre 1 · /)).toBeNull()
   })
 
-  // La philosophie n'a pas d'ordre : ses notions se traitent dans celui que
-  // choisit le professeur. « Chapitre 8 · Le devoir » laisserait croire à une
-  // progression, et volerait la vedette à la notion — cf. `chaptersAreNumbered`.
-  it('une matière sans ordre imposé ne numérote pas ses lignes', () => {
-    render(
-      <ChapterList
-        chapters={[
-          row('a', 'La conscience', null, 1),
-          row('b', 'L’inconscient', null, 2),
-        ]}
-        resume={null}
-        subjectSlug="anglais"
-        subjectName="Philosophie"
-        grade="Terminale"
-        numbered={false}
-      />,
-    )
-    expect(screen.getByText('La conscience')).toBeTruthy()
-    expect(screen.queryByText(/Chapitre 1 · La conscience/)).toBeNull()
-    expect(screen.queryByText(/Chapitre 2 · /)).toBeNull()
-  })
 })
 
 // LA RECHERCHE DANS LA LISTE.
@@ -178,7 +155,7 @@ describe('ChapterList — recherche', () => {
     expect(screen.queryByRole('button', { name: /Rechercher/ })).toBeNull()
   })
 
-  it('un seul chapitre ne s’annonce pas « Chapitre 1 »', () => {
+  it('un chapitre unique porte son titre, sans numéro', () => {
     render(
       <ChapterList
         chapters={fiches}
@@ -188,10 +165,8 @@ describe('ChapterList — recherche', () => {
         grade="1re"
       />,
     )
-    // Le titre du chapitre reste, son numéro s'en va : il n'y a pas de suite
-    // à situer, « Chapitre 1 » ne numérote rien.
     expect(screen.getByText('Fiches de lecture')).toBeTruthy()
-    expect(screen.queryByText('Chapitre 1')).toBeNull()
+    expect(screen.queryByText(/^Chapitre \d/)).toBeNull()
   })
 
   it('la loupe déplie la recherche sans replier le chapitre', async () => {
@@ -327,7 +302,12 @@ describe('ChapterList — recherche', () => {
       .getByText('« Un cœur simple », Gustave Flaubert')
       .closest('button')
     // Troisième fiche du chapitre : elle reste la 3, pas la 1re du résultat.
-    expect(within(ligne as HTMLElement).getByText('3')).toBeTruthy()
+    // Le rang est un NOMBRE PEINT depuis `components/reviser/numeros.ts` : il
+    // ne s'assertait plus par son texte, mais par le dessin choisi.
+    const rang = within(ligne as HTMLElement).getByRole('presentation', {
+      hidden: true,
+    })
+    expect(rang.getAttribute('src')).toContain('/3.webp')
   })
 
   it('le dit quand rien ne correspond, puis rend la liste une fois refermée', async () => {

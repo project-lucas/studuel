@@ -1941,9 +1941,6 @@ a:active > .arena-menu-row {
   background: oklch(0.68 0.23 322 / 0.45);
   filter: blur(20px);
 }
-.rev-bg {
-  background: oklch(0.945 0.018 55);
-}
 .rev-chip {
   color: oklch(0.47 0.26 310);
 }
@@ -2006,14 +2003,60 @@ a:active > .arena-menu-row {
 .moi-braise {
   background: oklch(0.85 0.17 88 / 0.85);
 }
-/* LE FOND DE L'ONGLET, C'EST LE CRÈME DE L'APP — plus une nuance à lui.
-   `oklch(0.945 0.018 55)` était sensiblement plus clair que `--background`
-   (#ede7d6) : /moi était le seul onglet dont le fond tirait vers le blanc, et
-   c'est ce qui faisait lire ses cartes blanches comme des rectangles posés sur
-   du vide plutôt que comme des objets posés sur une table. Une teinte locale ne
-   se justifie que si elle DIT quelque chose ; celle-ci ne disait rien. */
-.moi-bg {
-  background: var(--background);
+/* LE FOND DES ONGLETS DE LISTE : une feuille de papier quadrillé.
+   Réviser, Boutique, Amis et Moi sont des piles de cartes opaques. Un décor
+   dessiné y est invisible — essayé le 2026-08-27 sur Amis avec une étagère à
+   trophées peinte : les cartes couvraient l'étagère, le seul morceau qui
+   dépassait se lisait comme un débris, et la guirlande du haut passait derrière
+   le titre de la page. La règle qui vaut pour toute la barre d'onglets : on met
+   un décor là où l'on pose un héros (l'arène), et un MUR là où du contenu
+   défile.
+
+   Le quadrillage plutôt qu'un aplat : il dit « école » d'un seul motif, il
+   donne au crème une matière qui manquait, et il ne dispute rien au contenu.
+   En CSS et pas en image — un motif régulier se répète sans couture par
+   construction, ne coûte pas une requête, et ne se recadre jamais mal.
+
+   28px : le carreau reste lisible sans que la page ait l'air d'un cahier de
+   maths. Les lignes empruntent au violet de la marque plutôt qu'à un gris —
+   c'est ce qui les fait appartenir à l'app et non à un fond de papeterie.
+
+   Le halo du haut évite la seule chose qu'un quadrillage nu fait mal : un
+   aplat parfaitement uniforme sur toute la hauteur, qui donne à l'écran l'air
+   d'attendre un fond plutôt que d'en avoir un.
+
+   UNE SEULE CLASSE POUR LES QUATRE ONGLETS, et pas une nuance par onglet. Elle
+   remplace `.rev-bg` et `.moi-bg`, qui ne s'accordaient d'ailleurs plus :
+   Réviser était resté sur un crème plus clair que `--background`, si bien qu'il
+   était le seul onglet dont le fond tirait vers le blanc — ce qui faisait lire
+   ses cartes blanches comme des rectangles posés sur du vide plutôt que comme
+   des objets posés sur une table. /moi avait déjà été ramené au crème de l'app
+   pour cette raison. La règle qui vaut pour la suite : **une teinte locale ne
+   se justifie que si elle DIT quelque chose** — quatre variantes d'un même
+   crème ne disent rien, elles se remarquent seulement quand on passe d'un
+   onglet à l'autre, et toujours comme un défaut. */
+.tab-bg {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(
+      130% 55% at 50% 0%,
+      color-mix(in oklch, var(--highlight), transparent 88%),
+      transparent 70%
+    ),
+    linear-gradient(
+      to right,
+      color-mix(in oklch, var(--primary), transparent 90%) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklch, var(--primary), transparent 90%) 1px,
+      transparent 1px
+    );
+  background-size:
+    100% 100%,
+    28px 28px,
+    28px 28px;
 }
 /* Halo ambré derrière la flamme de niveau. */
 .moi-glow {
@@ -3488,6 +3531,27 @@ a:active > .arena-menu-row {
   transition:
     transform 0.15s var(--ease),
     box-shadow 0.15s var(--ease);
+
+  /* SA PROPRE COUCHE DE COMPOSITION — sinon il saccade au scroll rapide.
+     Ce bouton cumule tout ce qui rend une rastérisation chère : il est `fixed`,
+     il découpe son contenu en disque (`overflow:hidden` + rayon plein), il
+     contient une image agrandie de 40 %, et il porte une ombre à deux couches.
+     Sans promotion, Chrome le redessine à CHAQUE image du défilement, avec le
+     reste de la page — au doigt lent ça ne se voit pas, au scroll rapide il
+     traîne derrière le contenu.
+
+     `will-change: transform` n'est pas abusif ici : le bouton anime déjà son
+     `transform` au survol et à l'appui, on ne fait que le déclarer. Il est posé
+     sur le FAB LUI-MÊME et jamais sur un ancêtre — un transform sur un ancêtre
+     ferait de lui le containing block des descendants `position: fixed`, ce qui
+     décalerait le bouton et les fonds plein écran (même piège que le conteneur
+     de balayage, cf. SwipeTabs).
+
+     `contain: paint` dit à Chrome ce qui est déjà vrai — rien ne déborde du
+     disque — et lui évite d'inspecter la zone autour. */
+  will-change: transform;
+  contain: paint;
+  backface-visibility: hidden;
 }
 .coach-fab:hover {
   transform: translateY(-2px);
@@ -4905,3 +4969,6 @@ a:active > .arena-menu-row {
     0 2px 0 var(--plaque-bord),
     0 3px 6px rgba(0, 0, 0, 0.1);
 }
+
+
+

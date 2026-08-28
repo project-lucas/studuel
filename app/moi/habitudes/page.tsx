@@ -201,7 +201,7 @@ export default async function HabitudesPage() {
 
   return (
     <div>
-      <WorldBackdrop className="moi-bg" />
+      <WorldBackdrop className="tab-bg" />
       <RetourHeader />
 
       <div className="flex flex-col gap-4">

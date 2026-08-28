@@ -1,4 +1,5 @@
 import TabHeader from '@/components/TabHeader'
+import WorldBackdrop from '@/components/WorldBackdrop'
 import AmisHome from '@/components/AmisHome'
 import OralListenCard from '@/components/amis/OralListenCard'
 import { createClient } from '@/lib/supabase/server'
@@ -204,6 +205,11 @@ export default async function AmisPage() {
 
   return (
     <div>
+      {/* Le fond de l'onglet. Porté sur <body> par WorldBackdrop (et pas posé
+          ici en `fixed`) : le conteneur de balayage applique un transform
+          pendant le geste, ce qui recadrerait un fond fixé dans la page. */}
+      <WorldBackdrop className="tab-bg" />
+
       <TabHeader
         title="Amis"
         subtitle="Ton équipe, ton école et vos classements."

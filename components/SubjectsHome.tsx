@@ -551,7 +551,7 @@ export default function SubjectsHome({
   return (
     <section aria-label="Tes matières">
       {/* Fond crème pleine page, derrière tout le contenu de l'onglet. */}
-      <WorldBackdrop className="rev-bg" />
+      <WorldBackdrop className="tab-bg" />
 
       {/* Plus de carte d'identité : les blocs d'action (série/semaine,
           contrôles, reprise) arrivent directement, puis la grille des matières. */}

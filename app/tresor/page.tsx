@@ -1,4 +1,5 @@
 import TabHeader from '@/components/TabHeader'
+import WorldBackdrop from '@/components/WorldBackdrop'
 import TresorSpaces from '@/components/TresorSpaces'
 import PremiumHome from '@/components/PremiumHome'
 import TresorHome from '@/components/TresorHome'
@@ -86,6 +87,11 @@ export default async function TresorPage() {
 
   return (
     <div>
+      {/* Le fond de l'onglet. Porté sur <body> par WorldBackdrop (et pas posé
+          ici en `fixed`) : le conteneur de balayage applique un transform
+          pendant le geste, ce qui recadrerait un fond fixé dans la page. */}
+      <WorldBackdrop className="tab-bg" />
+
       <TabHeader
         title="Boutique"
         subtitle="Ton coffre du jour, tes pièces, et tout ce qu’elles ouvrent."

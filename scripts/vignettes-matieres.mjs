@@ -7,12 +7,13 @@
  *   node scripts/vignettes-matieres.mjs
  *
  * PLUSIEURS LOTS, UNE SEULE PLANCHE. Les dessins n'arrivent pas tous en même
- * temps : le lot v3 en refait dix-sept, sept restent au dessin v2. On les passe
- * malgré tout dans le MÊME générateur, en une seule fournée — la trame calibre
- * sur la moyenne du lot traité, donc régénérer les dix-sept seuls leur donnerait
- * une taille perçue étrangère à celle de leurs sept voisines. SRC_DIRS est
- * ordonné du plus récent au plus ancien : le premier dossier qui contient le
- * fichier gagne.
+ * temps : le v3 en a refait dix-sept, le v4 achève les six derniers restés au
+ * dessin v2 — celui où l'objet est posé sur une chemise de classeur jaune. On
+ * les passe malgré tout dans le MÊME générateur, en une seule fournée : la
+ * trame calibre sur la moyenne du lot traité, donc régénérer les six seuls leur
+ * donnerait une taille perçue étrangère à celle de leurs dix-huit voisines.
+ * SRC_DIRS est ordonné du plus récent au plus ancien : le premier dossier qui
+ * contient le fichier gagne.
  *
  * POURQUOI CE SCRIPT EXISTE
  *
@@ -45,9 +46,13 @@ import { planDuLot } from './lib/trame.mjs'
 import { detourerFondPeint } from './lib/fond-peint.mjs'
 
 const SRC_DIRS = [
+  'assets-sources/vignette v4',
   'assets-sources/vignette v3/Copie de Copie de .webp (8)',
   'assets-sources/vignettes-v2',
 ]
+
+/** Nom lisible d'un lot, pour le compte rendu à l'écran. */
+const NOM_DU_LOT = ['v4', 'v3', 'v2']
 const DEST_DIR = 'public/images/matieres/vignettes'
 
 /** Côté de la toile finale. */
@@ -68,18 +73,22 @@ const SIZE = 320
 const ORIGINAUX = {
   allemand: ['allemand'],
   anglais: ['anglais'],
-  'arts-plastiques': ['art plastique'],
+  'arts-plastiques': ['ART PLASTIQUES', 'art plastique'],
   economie: ['ECONOMIE', 'économie'],
   emc: ['EMC'],
   'enseignement-scientifique': ['enseignement scientifique'],
-  entrepreneuriat: ['entreprenariat'],
+  // Trois orthographes, une seule matière : le dessin v3 est déposé sous
+  // 'Entrepreunariat', le v2 sous 'entreprenariat'. Sans le premier nom, la
+  // fusée du v3 restait invisible et la matière gardait sa chemise v2 —
+  // l'échec était SILENCIEUX, puisqu'un original était bien trouvé.
+  entrepreneuriat: ['Entrepreunariat', 'entreprenariat'],
   espagnol: ['espagnol'],
   'figures-historiques': ['figures historiques'],
-  fiscalite: ['fiscalité'],
+  fiscalite: ['FISCALITE', 'fiscalité'],
   francais: ['français'],
   grec: ['GREC', 'grec'],
   hggsp: ['HGGSP', 'hggsp'],
-  'histoire-geo': ['histoire géo'],
+  'histoire-geo': ['HISTOIRE', 'histoire géo'],
   latin: ['LATIN', 'latin'],
   maths: ['math', 'mathématiques'],
   musique: ['musique'],
@@ -87,9 +96,13 @@ const ORIGINAUX = {
   philosophie: ['philosophie'],
   'physique-chimie': ['physique-chimie', 'physique chimie'],
   ses: ['ses', 'SES'],
-  sport: ['sport'],
+  sport: ['SPORT', 'sport'],
   svt: ['svt'],
-  technologie: ['technologie'],
+  // Le dessin du lot v4 est livré sous « SCIENCE INGE » : c'est bien la
+  // vignette de la TECHNOLOGIE (engrenages, clé à molette, boulons), et elle
+  // habille aussi `si` (Sciences de l'ingénieur) et `sciences-technologie`
+  // par VIGNETTE_ALIASES — d'où le nom de son fichier.
+  technologie: ['SCIENCE INGE', 'technologie'],
 }
 
 /**
@@ -127,7 +140,7 @@ const dessins = {}
 const lotDe = {}
 for (const [slug, noms] of Object.entries(ORIGINAUX)) {
   const { chemin, dir } = await source(noms)
-  lotDe[slug] = SRC_DIRS.indexOf(dir) === 0 ? 'v3' : 'v2'
+  lotDe[slug] = NOM_DU_LOT[SRC_DIRS.indexOf(dir)] ?? '??'
   dessins[slug] = await sharp(await detourerFondPeint(chemin))
     .trim({ threshold: 2 })
     .png()

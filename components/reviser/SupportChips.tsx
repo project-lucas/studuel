@@ -1,33 +1,84 @@
 'use client'
 
+import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
-import {
-  BookOpen,
-  Check,
-  Layers,
-  ListChecks,
-  FileText,
-  Swords,
-  Undo2,
-} from 'lucide-react'
+import { Check } from 'lucide-react'
 import GemIcon from '@/components/ui/GemIcon'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import type { SupportChip, SupportKind } from '@/lib/subject-template'
+import coursIcone from '@/public/images/supports/cours.webp'
+import quizIcone from '@/public/images/supports/quiz.webp'
+import flashcardsIcone from '@/public/images/supports/flashcards.webp'
+import carteIcone from '@/public/images/supports/carte.webp'
+import defiIcone from '@/public/images/supports/defi.webp'
+import erreursIcone from '@/public/images/supports/erreurs.webp'
 
-const ICONS: Record<SupportKind, typeof ListChecks> = {
-  cours: BookOpen,
-  quiz: ListChecks,
-  flashcards: Layers,
-  // Une FEUILLE, pas un graphe de nœuds : ce support est la fiche de révision
-  // du chapitre. Le pictogramme de carte mentale promettait un schéma à
-  // ramifications, ce que l'élève n'appelle pas une fiche.
-  carte: FileText,
-  defi: Swords,
-  // La flèche qui revient : on repasse sur ce qu'on a raté.
-  erreurs: Undo2,
+/**
+ * L'ILLUSTRATION DE CHAQUE SUPPORT — du même atelier que la barre d'onglets et
+ * les vignettes de matières : objet peint, contour prune épais, violet et or.
+ *
+ * Ces six-là étaient des pictogrammes **Lucide** (`BookOpen`, `ListChecks`,
+ * `Layers`, `FileText`, `Swords`, `Undo2`). Or cette rangée EST l'offre du
+ * produit, et elle est rendue à quatre endroits : c'est, après la barre
+ * d'onglets, ce que l'élève voit le plus. Une bibliothèque gratuite installée en
+ * une commande, c'est une identité que n'importe qui recopie en trois minutes.
+ * Le chrome système du fichier (la coche, la gemme) reste en trait : personne ne
+ * reconnaît une app à son pictogramme de validation, et un dessin à 12 px ne se
+ * lirait pas.
+ *
+ * LE DÉFI PORTE LES ÉPÉES DE SON ONGLET — c'est le même dessin, repris et non
+ * redessiné (`scripts/supports-icones.mjs`) : le support mène au Défi, un
+ * cousin y aurait brouillé le lien.
+ *
+ * LES DESSINS SONT IMPORTÉS, PAS DÉSIGNÉS PAR LEUR CHEMIN, pour la même raison
+ * que dans `components/Navigation.tsx` : un chemin littéral est une URL STABLE,
+ * donc remplacer le fichier laisserait l'optimiseur d'images de Next et le cache
+ * des navigateurs servir l'ANCIEN dessin — on croirait l'intégration ratée.
+ * L'import statique donne une URL à empreinte de contenu.
+ */
+const ICONES: Record<SupportKind, StaticImageData> = {
+  cours: coursIcone,
+  quiz: quizIcone,
+  flashcards: flashcardsIcone,
+  // `carte` est le support « Fiches » — le nom de clé est un héritage de la
+  // carte mentale d'avant, le dessin est bien une fiche.
+  carte: carteIcone,
+  defi: defiIcone,
+  erreurs: erreursIcone,
 }
+
+/**
+ * PLUS DE PASTILLE SOUS L'ILLUSTRATION — et c'est le corollaire du passage au
+ * dessin, pas un choix de goût.
+ *
+ * Le disque teinté (`bg-primary/10`, `bg-muted` quand c'était verrouillé)
+ * existait pour porter un PICTOGRAMME DE TRAIT : monochrome, sans silhouette
+ * propre, un glyphe n'a ni présence ni couleur d'état sans contenant. Une
+ * illustration a déjà tout cela — son contour prune, ses couleurs, sa forme.
+ * Le disque n'ajoutait donc plus qu'une SECONDE forme, muette, par-dessus une
+ * première qui parle, et rétrécissait le dessin à 32 px dans un cercle de 44.
+ * C'est le défaut que ce fichier dénonce déjà plus bas : « une carte dans une
+ * carte dans une carte, l'œil ne hiérarchise plus rien ».
+ *
+ * Le dessin est donc posé à même le fond et prend toute la place — exactement
+ * ce que fait la barre d'onglets, où les six illustrations reposent sur le
+ * socle crème. L'état ne se perd pas : « fait » et « verrouillé » sont dits par
+ * les pastilles de COIN (coche, gemme), qui étaient déjà là et qui, elles,
+ * portent une information.
+ *
+ * Le Cours perd au passage son disque violet plein, qui disait « commence par
+ * là ». L'ordre le dit toujours : il est premier de la rangée, et c'est déjà
+ * l'argument retenu pour le rendu « fiche » (cf. FicheSupports).
+ */
+
+/**
+ * Un support VERROUILLÉ se voyait à son pictogramme grisé (`text-foreground/40`)
+ * — un réglage de couleur de texte, qui n'a plus de prise sur une illustration.
+ * Le dessin est donc désaturé et affaibli : même signal, sur un objet peint.
+ */
+const VERROUILLE = 'opacity-45 grayscale'
 
 /**
  * Les supports d'un chapitre, en boutons cliquables.
@@ -69,7 +120,7 @@ export default function SupportChips({
       )}
     >
       {chips.map((chip, i) => {
-        const Icon = ICONS[chip.kind]
+        const icone = ICONES[chip.kind]
         const alone = centerLast && i === chips.length - 1
         return (
           <li
@@ -95,16 +146,19 @@ export default function SupportChips({
                   elle se lit comme une étiquette posée dessus. */}
               <span className={cn('relative', isGrid ? 'mb-2' : null)}>
                 <span
-                  className={cn(
-                    'flex shrink-0 items-center justify-center',
-                    isGrid ? 'size-16 rounded-2xl' : 'size-8 rounded-xl',
-                    chip.done
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-primary/10 text-primary',
-                  )}
+                  className="flex shrink-0 items-center justify-center"
                   aria-hidden="true"
                 >
-                  <Icon className={isGrid ? 'size-8' : 'size-4'} strokeWidth={2.2} />
+                  <Image
+                    src={icone}
+                    alt=""
+                    sizes={isGrid ? '64px' : '32px'}
+                    className={cn(
+                      'h-auto',
+                      isGrid ? 'w-16' : 'w-8',
+                      chip.locked ? VERROUILLE : null,
+                    )}
+                  />
                 </span>
 
                 {isGrid && (chip.done || chip.badge) ? (
@@ -203,10 +257,7 @@ function FicheSupports({
  * l'œil ne hiérarchise plus rien.
  */
 function Raccourci({ chip }: { chip: SupportChip }) {
-  const Icon = ICONS[chip.kind]
-  // Le cours porte l'icône PLEINE dès le départ : première de la rangée et
-  // seule en violet franc, elle dit par où commencer sans un mot de plus.
-  const entree = chip.kind === 'cours'
+  const icone = ICONES[chip.kind]
   return (
     <Link
       href={chip.href}
@@ -214,18 +265,13 @@ function Raccourci({ chip }: { chip: SupportChip }) {
       className="flex min-h-[68px] cursor-pointer flex-col items-center gap-1.5 rounded-2xl px-0.5 py-2 text-center transition-colors duration-200 hover:bg-muted/50 focus-visible:ring-4 focus-visible:ring-primary/40 focus-visible:outline-none"
     >
       <span className="relative">
-        <span
-          className={cn(
-            'grid size-11 place-items-center rounded-2xl transition-colors duration-200',
-            chip.done || entree
-              ? 'bg-primary text-primary-foreground'
-              : chip.locked
-                ? 'bg-muted text-foreground/40'
-                : 'bg-primary/10 text-primary',
-          )}
-          aria-hidden="true"
-        >
-          <Icon className="size-5" strokeWidth={2.2} />
+        <span className="grid size-11 place-items-center" aria-hidden="true">
+          <Image
+            src={icone}
+            alt=""
+            sizes="44px"
+            className={cn('h-auto w-11', chip.locked ? VERROUILLE : null)}
+          />
         </span>
         {/* L'état en COIN, pas en couleur seule : « fait » ne se voyait qu'à un
             liseré violet qu'on ne remarquait pas. */}

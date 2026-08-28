@@ -69,500 +69,523 @@ PAS dans le prompt (ça embrouille le modèle).
 
 ## À produire — par priorité
 
-### P0-bis · Accueil Défi « façon Clash Royale » (2026-07-29 — remplace P0 sur `/defi`)
+**État vérifié le 2026-08-27**, fichier par fichier, contre `lib/bosses.ts`,
+`VIGNETTE_SLUGS` (`lib/subject-style.ts`), `GAME_SCENE_IDS`
+(`lib/defi/modes-catalog.ts`), `lib/jeux/catalog.ts` et `lib/profile-banners.ts`.
+Les lots qui étaient listés ici et qui sont depuis tombés (mascotte au podium,
+socle) ont été retirés : l'arène est passée au fond unique à la mascotte, ils
+n'ont plus de destinataire.
 
-Décision : l'accueil du Défi copie la **grammaire** de l'écran d'accueil de Clash
-Royale, avec notre mascotte. P0 (colisée) reste valable pour les décors de
-match, mais **plus pour l'accueil**.
-
-**Les 4 règles du décor CR** (à ne jamais casser, c'est ce qui fait tout) :
-
-1. **Trois plans + un vrai plan au sol.** Ciel → architecture → sol qui fuit,
-   caméra très légèrement au-dessus. Sans plan au sol, le héros est collé sur
-   un poster.
-2. **L'axe central est CLAIR — clair en valeur, pas délavé en couleur.** Le
-   décor reste franchement saturé ; ce qui détache le héros, c'est qu'il est
-   **sombre** et que le fond ne contient **aucun noir ni ombre profonde**. Ne
-   jamais écrire « desaturated » : le modèle lave alors toute l'image (erreur
-   commise le 29/07, cf. les pièges de la section A).
-3. **Les bords restent riches mais peu contrastés** — c'est là que se posent les
-   boutons ronds. Bords chargés = UI illisible.
-4. **Guirlandes en diagonale en haut** : elles masquent la couture avec le
-   bandeau d'UI et referment le cadre. **45 % du bas = sol vide** (la scène du
-   socle, des slots et du CTA).
-
-Monde retenu : **cour d'académie** (école-château). Palette : **ciel bleu**
-(seul emprunt à CR, il fait énormément pour l'effet « jeu ») + le reste en
-crème & violet + or.
-
-Ordre de production : fond → mascotte → socle → 6 pictos ronds → 3 ressources →
-4 coffres. **15 générations.**
-
-#### A · Le fond — **LIVRÉ le 2026-07-29** : l'académie flottante, 6 heures
-
-Le monde retenu n'est pas une cour au sol mais une **île flottante portant
-l'académie**, en **six variantes horaires** branchées sur `lib/arena-background.ts`
-(aube 5h, matin 8h, midi 12h, après-midi 15h, soirée 18h, nuit 21h). Le bas de
-l'image est une pelouse ouverte : c'est le socle du personnage.
-
-Dépôt : `public/images/arene/arena-{dawn,morning,noon,afternoon,evening,night}.webp`,
-1080×1920, 53 à 72 Ko pièce.
-
-**Le prompt de base** (une seule génération, puis les six heures en dérivent) :
-
-> Highly detailed cartoon splash art background for a playful mobile quiz
-> battle game for teenagers, painterly stylized 3D-cartoon look like a premium
-> mobile game home screen, bold chunky shapes, thick clean outlines, glossy
-> airbrushed shading, brilliant midday sunlight. Scene: a floating grassy
-> island carrying a fantasy school-academy, drifting in a rich sky, seen
-> head-on from a slightly elevated camera on the exact center axis. A deep
-> saturated periwinkle sky with big crisp white volumetric clouds and a warm
-> golden sun glow, a few small distant floating rocks. On the exact vertical
-> center axis: a symmetrical academy building with warm cream stone walls, tall
-> arched windows, deep violet pointed roofs and turrets, a golden clock above
-> the entrance — softened only by a light warm atmospheric haze, but fully
-> saturated. On the right edge of the island, a thin waterfall pours off the
-> rim and dissolves into mist below. The lower half is one single continuous
-> open lawn of lush vivid emerald green, sunlit, with only a few tiny purple
-> flowers and drifting petals — completely free of objects, props and
-> characters, it is an empty stage. Colour treatment: rich, vivid, highly
-> saturated colours throughout, punchy premium mobile-game key art colour. The
-> background is high-key: every value stays in the light-to-mid range, there is
-> no black, no deep shadow, no dark corner; the darkest tone is a soft mid-tone.
-> Depth comes from atmospheric haze and softness, not from darkening. Shadows
-> are coloured — warm violet on cream stone, deep emerald on grass — never grey.
-> Full-bleed vertical composition filling the entire canvas edge to edge, no
-> frame, no border, no white margins, no letterboxing. No characters. No text,
-> no letters, no numbers, no words, no logo, no watermark.
-
-**Les six heures** : image de base en référence, format 9:16, et un seul bloc —
-verrouillage + heure + fermeture — collé d'un coup. **Toujours repartir de
-l'image de base**, jamais de la variante précédente, sinon l'île se déforme de
-proche en proche.
-
-Verrouillage : « Keep the exact same art style, composition, camera angle,
-island shape, academy building, turret placement, waterfall, foreground lawn and
-framing as the reference image. Change only the time of day, the sky, the
-lighting and the colour temperature. »
-
-Fermeture : « The foreground lawn stays bright, clean and clearly lit at all
-times — it must never go dark, grey, olive or muddy. It is the brightest surface
-in the lower half of the image. Keep the lower half as one single continuous
-open lawn, completely free of objects, props and characters. Full-bleed vertical
-composition edge to edge, no frame, no border, no white margins, no
-letterboxing. No characters. No text, no letters, no numbers, no words, no logo,
-no watermark. »
-
-| Heure | Le cœur de la variante |
-|---|---|
-| Aube | blue hour, deep blue-violet sky with a few stars still visible, only a narrow rose-apricot band at the horizon, no sun disc, thick white mist wrapping the island, every window lit amber, cool mint-teal lawn |
-| Matin | clean saturated sky-blue, big crisp cumulus, bright sun high on the left, lush emerald lawn with dew, short cool-violet shadows falling right, a few birds |
-| Midi | deep periwinkle sky, brilliant white clouds, golden sun glow with bloom directly above, stone almost white on top surfaces, short tight shadows underneath |
-| Après-midi | warm cornflower sky fading to creamy gold, clouds underlit peach, low golden sun on the right, honey-cream stone, long violet shadows sweeping right to left |
-| Soirée | violet-to-magenta-to-gold vertical gradient, clouds rimmed in molten gold, sun sinking behind the island, windows blazing amber, fireflies rising |
-| Nuit | indigo-to-teal sky with stars and milky way, a medium moon low and clearly OFF-CENTRE (loin de l'horloge), lanterns along the paths, luminous teal-emerald lawn under silver moonlight |
-
-**Trois pièges payés cher sur ce lot** (2026-07-29) :
-
-1. **Saturation ≠ valeur.** Demander « pale, sun-washed, desaturated » a lavé
-   toute l'image. Clash Royale n'est pas délavé : son fond est **clair en
-   valeur** et **saturé en couleur**. La bonne consigne est « rich saturated
-   colours, but high-key: no black, no deep shadow, the darkest tone is a
-   mid-tone ».
-2. **Aucun mot en CAPITALES dans un prompt d'image.** Les étiquettes de
-   structure (`TOP:`, `LOWER HALF:`) ont été **écrites en dur dans l'image**.
-   Tout en prose minuscule.
-3. **Le sol s'assombrit dès qu'on change l'heure.** Sans la phrase « the
-   foreground lawn stays bright… it is the brightest surface in the lower half »,
-   la nuit et l'aube rendent une pelouse gris-olive — et un personnage sombre y
-   disparaît.
-
-**Reskins saisonniers** (comme CR change d'habillage chaque mois) : même méthode
-que les heures — image de base en référence + « change ONLY the season dressing
-and the lighting to: … ». Le layout (île + bâtiment + horloge + cascade + pelouse)
-ne bouge jamais. À produire ×6 heures, ou seulement sur midi si le budget serre.
-
-| Saison | À demander |
-|---|---|
-| Rentrée | golden early-autumn light, orange and red leaves drifting, small pumpkins on the lawn |
-| Hiver | soft snow on the roofs and lawn, pale cold blue sky, warm yellow light in the windows |
-| Printemps | cherry blossom trees on the island, pink petals in the air, fresh green lawn |
-| Examens | dramatic late-afternoon golden light, long shadows, torches lit on the facade |
-
-#### B · La mascotte plein pied — format **3:4**
-
-**Joindre la mascotte du splash en référence.** Sans elle, le visage dérive.
-
-> Full body character render of the SAME boy character as the reference image —
-> keep his exact face, hairstyle, round glasses, skin tone and outfit strictly
-> identical. Highly detailed vibrant cartoon mascot for a playful mobile quiz
-> battle game, painterly stylized 3D-cartoon look, bold chunky shapes, thick
-> clean outlines, soft airbrushed shading. Pose: standing tall and heroic in a
-> confident hero idle, three-quarter view turned slightly to his left, both
-> fists planted firmly on his hips with elbows out wide, chest out, chin
-> slightly up, warm confident smile, feet apart and solidly planted. Seen from
-> a slightly LOW camera angle so he looks tall and imposing. Head to toe fully
-> visible, with a little empty space above the hair and below the shoes.
-> Lighting: bright neutral midday key light from the upper front, soft warm
-> bounce light from below, a subtle golden rim light on the shoulders and hair
-> to separate him from the background. Proportions: stylized mobile-game hero —
-> slightly large head, wide shoulders, sturdy readable silhouette that still
-> reads clearly at small size. Isolated on a plain flat neutral grey
-> background, centered, no ground shadow, no podium, no props, no scenery, no
-> text, no watermark.
-
-Détourer, exporter en PNG 2× → webp. Fichier : `public/images/defi/mascotte-podium.webp`.
-
-**Poses supplémentaires** (optionnel, pour `PersonnageAnime`) : même prompt,
-image validée en référence + « keep the exact same character and art style,
-change ONLY the pose to: … » → *victory: both arms raised, fists clenched,
-laughing* / *thinking: one hand on the chin, eyebrow raised, looking up*.
-
-#### C · Le socle — format **1:1**
-
-> Game asset: a sturdy stylized podium platform for a playful mobile quiz
-> game, seen from a slightly elevated three-quarter front angle. Carved cream
-> stone base with a warm wood top surface and deep violet trim, rounded golden
-> metal plates on the corners, a wide horizontal recessed empty slot across the
-> front face (a groove meant to hold a progress bar), a small golden star
-> emblem set into the left end of that groove. Painterly stylized 3D-cartoon
-> look, bold chunky shapes, thick clean outlines, soft airbrushed shading,
-> bright midday lighting, glossy highlights on the metal. Colours: cream,
-> vivid purple, golden yellow, soft navy outlines. Isolated on a plain flat
-> neutral grey background, centered, no text, no numbers, no watermark.
-
-**Le bouton « Combattre » ne se génère pas** — biseau, dégradé jaune, ombre
-portée et état pressé se font en CSS, sinon il ne peut pas s'animer ni changer
-de libellé. Recette : dégradé `#FDD24B → #F5B722`, liseré interne blanc à 40 %
-en haut, bordure basse `#C8890B` de 4 px, ombre portée dure de 6 px, radius
-20 px, `translateY(3px)` au `:active`.
-
-#### D · Les 6 pictos ronds — format **1:1**, un par génération
-
-L'**anneau doré se fait en CSS**, pas dans l'image : chez CR tous les anneaux
-sont rigoureusement identiques, et un générateur les fera tous différents. On ne
-génère que le contenu.
-
-Base commune :
-
-> Game UI icon: **[SUJET]**. Painterly stylized 3D-cartoon look for a playful
-> mobile quiz game, bold chunky rounded shapes, thick clean outlines, soft
-> airbrushed shading, bright top-front lighting, glossy highlights. Slight
-> three-quarter angle, tilted a few degrees, ONE single compact object that
-> stays readable at 64 pixels. Colours: cream, vivid purple, golden yellow,
-> soft navy outlines. Isolated on a plain flat white background, centered with
-> even margins. No circle frame, no ring, no badge, no border, no background
-> scenery, no text, no numbers, no watermark.
-
-| Fichier | `[SUJET]` |
-|---|---|
-| `pictos/amis` | two friendly rounded character busts side by side, one violet and one cream, shoulders overlapping |
-| `pictos/classement` | a three-step victory podium with a small golden trophy cup on the tallest step |
-| `pictos/coffre` | a small closed treasure chest, warm wood with golden bands and a violet lock |
-| `pictos/boutique` | a rounded shopping bag in violet with a golden handle and a purple gem tucked inside |
-| `pictos/quetes` | a rolled-open parchment scroll with a violet wax seal and three golden checkmarks |
-| `pictos/profil` | a heraldic shield crest in violet and gold with two crossed golden quills |
-
-#### E · Les 3 ressources du bandeau — format **1:1**
-
-Même prompt de base que D. Le cadre biseauté du compteur se fait en CSS.
-
-| Fichier | `[SUJET]` |
-|---|---|
-| `ressources/xp` | a glowing sunny-yellow five-pointed star medallion with an embossed golden rim and a soft radiant halo |
-| `ressources/pieces` | a small stack of three thick golden coins, each embossed with a tiny star, bright specular highlights |
-| `ressources/cristal` | a single faceted brilliant-cut violet gemstone glowing softly from within, a few tiny sparkles around it |
-
-Le trophée existe déjà (`public/images/defi/trophy-cup.webp`) — ne pas le refaire.
-
-#### F · Les 4 coffres — format **1:1**
-
-> Game reward asset: a closed treasure chest for a playful mobile quiz game,
-> seen from a three-quarter front angle, slightly tilted, lid closed, sitting
-> flat. **[MATIÈRE]**. Painterly stylized 3D-cartoon look, bold chunky rounded
-> shapes, thick clean outlines, soft airbrushed shading, bright top-front
-> lighting, glossy highlights, chunky readable silhouette. Isolated on a plain
-> flat white background, centered, no ground shadow, no text, no numbers, no
-> watermark.
-
-| Fichier | `[MATIÈRE]` |
-|---|---|
-| `coffres/bois` | warm brown wood planks with simple dark iron bands and a small iron latch, humble and plain |
-| `coffres/argent` | pale wood with polished silver bands, silver corner plates and a silver padlock, faint cool shine |
-| `coffres/or` | rich violet wood with thick polished golden bands, ornate golden corners and a golden star lock, warm glow around it |
-| `coffres/legendaire` | dark violet wood with elaborate golden filigree, a large glowing purple gem set in the lid, golden sparkles and soft rainbow light escaping from the seams |
-
-### P0-ter · La rangée de combat — 3 plaques de bouton (2026-08-02)
-
-**Le constat de Lucas** : depuis que l'arène est une illustration peinte, les
-trois boutons du bas (Classé · DUEL 90 s · Modes) détonnent. Et c'est mérité :
-ce sont des **dégradés CSS** (`.olympe-gold`, `.arena-flank` dans globals.css)
-— du plat, aux bords nets, posé sur du peint. Clash Royale ne fait jamais ça :
-ses boutons sont des OBJETS dessinés, avec matière, biseau et reflet.
-
-On commande donc trois **plaques**, dans le style exact du décor.
-
-#### La règle qui commande tout : la plaque, pas le bouton
-
-L'image ne porte **ni texte ni chiffre** — le libellé reste rendu par l'app, et
-il le doit : « DUEL 90 s » change de sous-ligne (raison du chapitre, ami en
-ligne), porte une barre de progression et une échéance, et doit rester lisible
-par un lecteur d'écran. Un mot gravé dans l'image serait aussi un mot qu'on ne
-peut plus traduire ni corriger — sans compter que ces modèles écrivent mal (cf.
-le piège « jamais de CAPITALES » plus bas).
-
-L'ICÔNE, elle, est peinte dans la plaque : c'est elle qui fait tout l'effet
-« objet de jeu », et elle ne change jamais. Le libellé se pose dessous, dans une
-bande volontairement lisse réservée pour lui.
-
-#### Géométrie mesurée (à respecter, sinon rien ne s'aligne)
-
-| Plaque | Taille à l'écran | Format Higgsfield | Export |
+| Lot | Quoi | Générations | Pourquoi celui-là d'abord |
 |---|---|---|---|
-| Classé (flanc gauche) | 72 × 72 px, fixe | **1:1** | 216×216 webp |
-| Modes (flanc droit) | 72 × 72 px, fixe | **1:1** | 216×216 webp |
-| DUEL 90 s (centre) | hauteur 64 px, **largeur VARIABLE** (~180 à 260 px) | **3:2** | 3 morceaux, cf. ci-dessous |
+| **L1** | **Avatars** — le nouveau système | **46** | c'est le visage de l'élève dans toute l'app, et le seul endroit encore rendu par un générateur tiers |
+| **L1-bis** | ~~L'habillage des onglets~~ | **1** | **abandonné** — les fonds dessinés sont invisibles sous les cartes ; seul le correctif du fond `/defi` survit |
+| **L2** | Les trous visibles | 24 | des écrans finis qui affichent un emoji, un aplat violet ou un dessin d’un autre lot |
+| **L3** | L'économie (coffres, cartes, boosters) | 18 | tout ce qui s'achète est encore un emoji système |
+| **L4** | L'icône de l'app | 1 | la seule image vue avant d'ouvrir l'app |
+| **L5** | **Les icônes de produit** — sortir de Lucide | 9 | le vocabulaire du produit est dessiné par une bibliothèque gratuite : un concurrent a la même rangée en trois minutes |
 
-⚠️ **Le centre s'étire.** C'est le piège de ce lot : le bouton du milieu prend
-toute la place que lui laissent ses deux flancs, donc sa largeur change d'un
-téléphone à l'autre. Une image peinte étirée à 140 % se déforme visiblement —
-les gemmes deviennent des olives. La plaque doit donc être **découpable en
-trois** (9-slice) : les ornements confinés aux DEUX EXTRÉMITÉS, et tout le
-milieu en dégradé lisse, sans rivet ni gravure. Le milieu s'étire sans que
-personne ne le voie ; les caps ne s'étirent jamais.
+**Total : 99 générations.** Lire L1-bis avant de commander le moindre fond : il
+a coûté deux campagnes et il dit à quelle condition un décor sert à quelque
+chose.
 
-#### A · « Classé » — plaque carrée sombre, trophée peint
+---
 
-Joindre `public/images/arene/arena-mascotte.webp` en référence.
+## L1 · Les avatars — on quitte DiceBear
 
-> Match the exact art style of the reference image. Highly detailed painterly
-> 3D-cartoon mobile game UI element for a premium fantasy quiz-battle game:
-> ONE single square button plate with strongly rounded corners, seen perfectly
-> head-on, flat orthographic view. Material: polished deep violet stone with a
-> carved bevelled edge, a thin warm golden rim running around the outline, a
-> soft glossy highlight along the top edge and a deeper violet at the bottom,
-> thick clean dark ink outline all around the plate. Embossed in the UPPER
-> HALF of the plate, a small golden laurel-wreath victory trophy, glossy and
-> warmly lit, carved in relief. The LOWER THIRD of the plate is a smooth clean
-> uninterrupted surface with no ornament, no carving and no detail. Tiny golden
-> laurel sprigs in the two upper corners only. The plate is isolated and
-> centered on a plain flat white background with generous empty margin all
-> around. No text, no letters, no numbers, no words, no logo, no watermark, no
-> UI mockup, no screen, no phone frame, no drop shadow on the background.
+**Décision du 2026-08-27.** L'avatar est aujourd'hui un SVG généré par DiceBear
+(collection Open Peeps) : trait plat de banque d'illustrations, cheveux
+toujours noirs (impossible à teindre, cf. l'en-tête de `lib/avatar.ts`), et
+surtout **aucun rapport visuel avec le reste du jeu** — les boss, la mascotte et
+les arènes sont peints, l'élève est un pictogramme.
 
-#### B · « Modes » — même plaque, borne d'arcade peinte
+Le remplaçant n'est pas un meilleur générateur, c'est un **roster** : l'élève ne
+construit plus un bonhomme pièce par pièce, il **choisit un personnage** dans une
+galerie, comme dans Brawl Stars. Ce qui change tout pour la production : un
+avatar = **une image entière**, donc un prompt. Aucune couche à caler au pixel.
 
-Même prompt que A, en remplaçant la phrase de l'icône par :
+Ce qu'on perd, assumé : « je me fabrique moi-même ». Ce qu'on récupère : la
+diversité passe par le **casting** (12 élèves gratuits couvrant peaux, textures
+de cheveux, voile, turban, locks, lunettes) au lieu de passer par des menus, et
+la personnalisation se déplace sur le **cadre** et la **bannière** — qui, eux,
+se gagnent.
 
-> Embossed in the UPPER HALF of the plate, a small glossy game controller with
-> a golden d-pad and two violet gem buttons, carved in relief.
+### Le contrat technique (à brancher après réception)
 
-**Générer B en donnant A en référence** (« same plate, same material, same
-lighting, only the embossed icon changes ») : c'est ce qui garantit que les deux
-flancs soient jumeaux. Deux générations indépendantes donnent deux cousins, et
-côte à côte l'écart se voit immédiatement.
+- Fichiers : `public/images/avatars/<id>.webp`, **512×512**, fond transparent.
+- Un `lib/avatars.ts` sur le modèle de `lib/bosses.ts` : liste **fermée**, id +
+  nom FR + palier de déblocage. L'action serveur valide contre cette liste.
+- `profiles.avatar` (JSONB) garde trois champs : `character`, `frame`, `banner`.
+  `normalizeAvatarConfig` replie toute ancienne config Open Peeps sur
+  `eleve-01` — personne ne perd son compte, tout le monde change de tête.
+- `AvatarRender` cesse d'appeler DiceBear : bannière → portrait → cadre.
+- Les dépendances `@dicebear/core` et `@dicebear/collection` sortent du
+  `package.json`.
 
-#### C · « DUEL 90 s » — plaque d'or, découpable en trois
+### La règle qui commande tout le lot : **le cadrage est identique sur les 32**
 
-> Match the exact art style of the reference image. Highly detailed painterly
-> 3D-cartoon mobile game UI element for a premium fantasy quiz-battle game: ONE
-> single wide horizontal button plate with strongly rounded corners, seen
-> perfectly head-on, flat orthographic view, filling the frame horizontally.
-> Material: polished warm gold, bright buttery highlight along the top edge,
-> deep amber and bronze at the bottom edge, a carved bevelled rim, thick clean
-> dark ink outline all around the plate, a subtle warm glow spilling just
-> around the plate. At the LEFT END and at the RIGHT END, symmetrically, a
-> small round violet gem set in a golden laurel mount. The ENTIRE MIDDLE of the
-> plate is one smooth uninterrupted polished gold gradient — completely free of
-> ornament, rivets, engraving, gems and detail of any kind. The plate is
-> isolated and centered on a plain flat white background with generous empty
-> margin all around. No text, no letters, no numbers, no words, no logo, no
-> watermark, no UI mockup, no screen, no phone frame.
+Un roster se regarde **en grille**. Si une tête est plus grosse, plus haute ou
+plus proche que sa voisine, la galerie a l'air cassée — et aucune retouche CSS
+ne rattrape ça. Le prompt maître fige donc la caméra, la hauteur du visage dans
+le cadre et la ligne des yeux, et **les 31 autres se génèrent avec le premier en
+image de référence.**
 
-#### Pièges de ce lot
+### Prompt maître — le buste (format **1:1**)
 
-- **Ne jamais écrire « button » seul.** Le mot fait dessiner une *maquette
-  d'interface* — un écran de téléphone entier avec le bouton dedans. Dire
-  « game UI element: ONE single plate », et fermer par « no UI mockup, no
-  screen, no phone frame ».
-- **Ne pas demander d'ombre portée.** Elle arrive collée au fond blanc et
-  survit au détourage sous forme de halo gris. Le relief vient du biseau et de
-  l'ombre dure du CSS (`0 4px 0`), qui existe déjà.
-- **Le milieu du centre reste NU.** À la moindre gravure au milieu, la plaque
-  n'est plus découpable et tout le lot est à refaire.
-- Les trois plaques se jugent **ensemble et à la taille réelle** (72 px !), pas
-  en grand sur l'écran du générateur : un biseau magnifique à 1024 px devient
-  une bouillie grise à 72.
+**Le fichier est carré, la forme vue ne l'est pas.** L'avatar est rogné par un
+**disque** dans la barre d'onglets (`.nav-cadre-*`, avec sa couronne de laurier)
+et par un carré arrondi sur la carte de profil. Un cercle inscrit dans un carré
+**jette 21 % de l'image — les quatre coins**. Le prompt doit donc tenir tout ce
+qui compte dans le disque central : tête bien centrée, rien dans les angles, et
+des épaules dont on accepte qu'elles soient coupées en courbe. La phrase
+« keep the four corners empty… everything that matters inside the central
+circle » ci-dessous est là pour ça, et ne se retire pas.
 
-#### Après réception
+**Joindre `public/images/mascotte/reaction-bonne-1.webp` en image de référence.**
+Ce n'est pas facultatif : c'est la règle d'or de tout ce dossier, et le premier
+essai d'`eleve-01` (2026-08-27) l'a payée. Sans référence, le modèle rend un
+**sticker vectoriel** — proportions réalistes, petits yeux, sourcils fins,
+dégradé doux, aucune texture — propre, mais d'une autre famille que Marcel.
+Cette réaction-là est le meilleur repère possible : c'est **déjà un buste sur
+fond blanc**, exactement le cadrage d'un avatar.
 
-1. Détourer (fond blanc peint — même piège que les vignettes, le détourage vit
-   dans `scripts/lib/fond-peint.mjs`).
-2. `public/images/defi/boutons/{classe,modes,duel}.webp`.
-3. Câblage : les deux flancs remplacent `.arena-flank` par un
-   `background-image` ; le centre passe en `border-image` avec un `slice`
-   horizontal (caps figés, milieu étiré) — c'est le 9-slice CSS, aucune
-   librairie. Les libellés, l'or du texte et l'ombre pressée (`.olympe-press`)
-   ne bougent pas.
+Les trois écarts constatés, et ce que le prompt corrige :
 
-### P0 · Arène v2 — le fond du Défi (l'écran le plus vu du jeu)
+| | Marcel | Le premier essai |
+|---|---|---|
+| Proportions | **tête énorme** (chibi), gros yeux, sourcils épais | proportions réalistes, petits yeux |
+| Ombres | **cel-shading à bords durs** + texture tissée sur les vêtements | dégradé doux, aucune texture |
+| Lumière | **liseré violet-lavande** en haut des cheveux | aucune |
 
-Les 6 variantes actuelles (`public/images/arene/arena-*.webp`) sont cohérentes
-et jolies, mais la scène est **déserte** : un escalier sans personne, aucun
-sens de l'échelle. Une arène sans public n'est pas une arène — et c'est l'écran
-que l'élève ouvre le plus souvent. La v2 garde toute l'identité (marbre blanc +
-or, bannières violettes, médaillon aux plumes croisées en bas) et ajoute la
-**vie** et la **démesure**.
+> Character portrait bust for a playful mobile quiz game for teenagers, in the
+> exact art style of the reference image — match its line work, shading,
+> proportions and colour treatment precisely. Stylized cartoon illustration
+> with thick dark navy ink outlines of varying weight, cel shading with
+> hard-edged shadow shapes, a subtle woven fabric texture on the clothing, and
+> a violet-lavender rim light along the top of the hair. Chibi mobile-game
+> proportions: an oversized head, a small rounded body, large expressive eyes
+> with bold thick eyebrows, a tiny nose and a small warm smile. Framing: head
+> and shoulders only, at eye level, turned very slightly to their left. The
+> bust fills the whole frame: the hair and shoulders reach the left and right
+> edges, the top of the hair sits just below the top edge, the shoulders are
+> cut off by the bottom edge, and there is no empty margin anywhere around the
+> character. The character is centred exactly on the vertical axis. The head is
+> about as wide as the shoulders.
+> The image will be cropped to a circle, so keep the four corners empty and
+> keep everything that matters inside the central circle. Muted warm palette —
+> cream, warm brown, deep navy, with violet accents. Isolated on a plain flat
+> white background, centered, no ground shadow, no props, no frame, no border,
+> no badge, no text, no letters, no logo, no watermark. It is a drawn cartoon
+> illustration, not a flat vector sticker, not a soft airbrushed portrait, not
+> a 3D render. The character is: … (la ligne du tableau)
 
-Ce que la v2 change :
+**Deux formulations qui n'ont PAS suffi au 2e essai (2026-08-27), à ne pas
+remettre telles quelles** :
 
-- **le public** : les gradins du colisée remplis d'une foule en silhouettes
-  minuscules, floues et colorées, qui agite des fanions — vivante mais
-  illisible (aucun visage, aucun détail net) ;
-- **l'échelle** : deux statues colossales de savants couronnés de laurier
-  tenant des plumes d'or géantes encadrent l'escalier ; l'arène flotte
-  au-dessus d'une mer de nuages ;
-- **la lumière** : rayons volumétriques visibles à travers l'arche, poussière
-  dorée en suspension.
+- « the head filling about two thirds of the frame width » → rendu à ~45 %, avec
+  une large marge vide et un sujet décentré. Un pourcentage ne se mesure pas :
+  il faut décrire des **contacts avec les bords** (« the hair and shoulders
+  reach the left and right edges… no empty margin anywhere »).
+- « chibi proportions: an oversized head » → visage encore trop réaliste. La
+  consigne qui mord est un **rapport entre deux choses visibles dans l'image** :
+  « the head is about as wide as the shoulders ».
 
-Contraintes de composition — **l'UI vit par-dessus** :
+**Ce qui a été retiré du premier jet, et pourquoi** : « painterly stylized
+3D-cartoon look like premium mobile game key art » et « glossy airbrushed
+shading » décrivaient Clash Royale, pas notre trait — Marcel est **encré et
+cel-shadé**, pas rendu en 3D. Et « colours: cream, vivid purple, sunny yellow »
+appelait la palette de l'**interface**, alors que les personnages vivent dans
+une gamme **sourde** (brun chaud, marine, crème) où le violet n'est qu'un
+accent. Ne pas les réintroduire.
 
-- format **9:16** (à cocher dans Higgsfield), livré en 1080×1920 ;
-- le **cinquième haut** = ciel seul (le HUD blanc s'y pose) ;
-- le **médaillon du bas** reste net, vide et peu chargé (le CTA Duel 90 s s'y
-  pose) ;
-- les éléments clés tiennent dans les **70 % centraux** de la largeur (le
-  recadrage `cover` rogne les bords sur téléphone étroit) ;
-- parchemins et bannières **vierges** — aucun texte nulle part (la variante
-  morning actuelle a des parchemins griffonnés : à ne pas reproduire).
+**Verrouillage pour les 31 suivants** — non plus Marcel en référence, mais
+**`eleve-01` une fois validé** : c'est lui qui devient l'étalon du roster.
 
-**Chemin de production** : générer d'abord **`afternoon`** (la plage la plus
-vue, après les cours). Une fois validée, générer les 5 autres avec l'image
-validée en référence + la mention « match the EXACT composition and every
-architectural element of the reference image; change ONLY the sky, the
-lighting and the mood ». Sans cette référence, les variantes divergent.
+> Keep the exact same art style, line work, cel shading, chibi proportions,
+> head size, framing, camera angle, eye line, lighting, palette and background
+> as the reference image. Change only the character. The character is: …
+> (la ligne du tableau)
 
-Dépôt : **mêmes noms de fichiers** (`arena-dawn.webp` … `arena-night.webp`)
-→ aucun changement de code. Poids visé **< 100 Ko** par variante.
+### Le casting — 32 portraits
 
-**Prompt maître (afternoon)** :
+**Palier « Toi » — 12, gratuits.** Ce ne sont pas des cosmétiques : c'est la
+condition pour qu'un élève sur deux se reconnaisse. Même règle que le voile et
+les tresses dans l'ancien vestiaire — **jamais payants**.
 
-> Highly detailed vibrant cartoon splash art scene for a playful mobile quiz
-> battle game for teenagers, rich painterly shading, bold chunky shapes with
-> thick clean outlines, dramatic cinematic lighting, glowing atmospheric
-> depth, rich saturated colors, premium mobile-game arena background,
-> vertical portrait composition. A majestic white-marble arena of knowledge
-> floating above a sea of soft volumetric clouds: a grand marble staircase
-> with gold inlays climbs toward a radiant triumphal arch with a small golden
-> throne far behind it; two COLOSSAL marble statues of laurel-crowned
-> scholars holding giant golden quills flank the staircase on both sides,
-> so tall their heads reach the upper third of the image; behind them the
-> curved stone tiers of a colosseum are FILLED WITH A CHEERING CROWD rendered
-> as tiny blurry colorful silhouettes waving small pennants — lively and
-> festive, no faces, no readable details; violet banners with a golden
-> crossed-quills emblem hang along the pillars; golden laurel wreaths and
-> floating golden dust particles in the air; warm late-afternoon golden-hour
-> sunlight streams through the arch in visible volumetric rays. At the very
-> bottom, a clean circular marble medallion engraved with a golden laurel
-> wreath and crossed quills, left empty like a stage. The top fifth of the
-> image is open sky with soft clouds. The artwork is FULL-BLEED and fills the
-> ENTIRE canvas edge to edge — no frame, no border, no letterboxing. All
-> banners and scrolls are BLANK — no text, no letters, no numbers, no logo,
+| Id | Le personnage (à coller après « The character is: ») |
+|---|---|
+| `eleve-01` | a cheerful teenage girl with light skin, freckles, warm chestnut hair in a high ponytail, wearing a cream hoodie |
+| `eleve-02` | a friendly teenage boy with light skin, short tousled blond hair, wearing a purple crew-neck sweater |
+| `eleve-03` | a calm teenage girl with light-olive skin and long straight black hair with a blunt fringe, wearing a mustard-yellow shirt |
+| `eleve-04` | a grinning teenage boy with medium-brown skin and short curly dark hair, wearing a teal zip jacket |
+| `eleve-05` | a confident teenage girl with deep-brown skin and neat cornrows gathered at the back, small gold hoop earrings, wearing a coral top |
+| `eleve-06` | a beaming teenage boy with deep-brown skin and a full round afro, wearing a purple varsity jacket |
+| `eleve-07` | a warm teenage girl wearing a soft violet hijab framing her face, medium skin, wearing a cream tunic |
+| `eleve-08` | a serene teenage boy wearing a neat navy turban, medium-brown skin, short dark beard, wearing a cream shirt |
+| `eleve-09` | a joyful teenage girl with deep-brown skin and shoulder-length locs tied back with a yellow band, wearing a green top |
+| `eleve-10` | a bookish teenage boy with pale skin, ginger hair and round glasses, wearing a striped cream and purple sweater |
+| `eleve-11` | a playful teenage girl with medium skin and a short pixie cut dyed lavender, square glasses, wearing a denim jacket |
+| `eleve-12` | a laughing teenage boy with medium-brown skin, a closely shaved head and braces on his teeth, wearing a yellow t-shirt |
+
+**Palier « Clubs » — 8, débloqués par la progression** (niveau, série, chapitres
+maîtrisés). Le même élève, mais dans ce qu'il aime : c'est le palier qui
+récompense le travail sans passer par la caisse.
+
+| Id | Le personnage |
+|---|---|
+| `club-sciences` | a teenage scientist in a cream lab coat with safety goggles pushed up on the forehead, a small violet chemical stain on the collar |
+| `club-sport` | a teenage athlete with a yellow sweatband, damp hair, wearing a purple sports jersey, mid-laugh after a match |
+| `club-arts` | a teenage artist wearing a violet beret, a paint smudge on one cheek, a paintbrush tucked behind the ear |
+| `club-musique` | a teenage musician wearing large golden over-ear headphones around the neck, a guitar strap over one shoulder |
+| `club-code` | a teenage coder in a dark purple hoodie with the hood up, faint cyan screen glow on the face, a tiny pixel motif on the chest |
+| `club-lettres` | a teenage reader wrapped in a long cream scarf, holding the top edge of a closed book against the chest |
+| `club-explorateur` | a teenage explorer in a khaki cap with binoculars hanging around the neck, a small leaf caught in the hair |
+| `club-debat` | a teenage debater in a smart violet blazer, chin slightly raised, a small golden microphone at the bottom edge |
+
+**Palier « Héros » — 8, boutique et rangs.** Le costume complet. C'est ce que
+l'élève regarde en se disant « je veux celui-là ».
+
+| Id | Le personnage |
+|---|---|
+| `hero-astronaute` | a teenage astronaut in a cream and purple spacesuit, helmet visor tipped open, tiny golden stars reflected in the glass |
+| `hero-chevaliere` | a teenage knight girl in ornate cream and gold plate armour, helmet under the arm at the bottom edge, a violet plume |
+| `hero-ninja` | a teenage ninja in a deep violet hood and mask, only the eyes and brow visible, a golden headband knot |
+| `hero-magicienne` | a teenage sorceress in a starry violet pointed hat, small golden runes floating close around the shoulders |
+| `hero-detective` | a teenage detective in a cream trench coat and a checked cap, one eyebrow raised, a magnifying glass at the bottom edge |
+| `hero-pilote` | a teenage pilot in a leather aviator cap and goggles on the forehead, a cream fur-lined collar, a golden wing pin |
+| `hero-samourai` | a teenage samurai in lacquered violet and gold shoulder armour, hair in a top knot, a calm steady gaze |
+| `hero-pirate` | a teenage pirate in a violet tricorn hat with a golden trim, a red bandana underneath, a cheeky grin |
+
+**Palier « Légendaires » — 4, rang Maître et fin de saison.** Ils ne sont pas
+humains : c'est ce qui doit se voir d'un coup d'œil dans un classement.
+
+| Id | Le personnage |
+|---|---|
+| `legend-dragon` | a small friendly cartoon dragon scholar with emerald scales, tiny golden spectacles perched on the snout, a cream academic collar |
+| `legend-robot` | a rounded cream and violet student robot with one large glowing golden eye-screen showing a gentle smile, a small antenna |
+| `legend-phenix` | a noble cartoon phoenix with amber and gold plumage, a warm ember glow around the crest, calm golden eyes |
+| `legend-esprit` | a luminous spirit of knowledge, a translucent violet hooded figure with two calm glowing golden eyes and drifting page-fragments |
+
+### Les 6 cadres — format **1:1**, centre vide
+
+Un cadre par palier de rang (`lib/rank.ts` en déclare exactement six). Il se
+superpose au portrait : **le centre doit être entièrement transparent**, sinon
+il masque le visage.
+
+> Game asset: an ornate circular avatar frame ring for a playful mobile quiz
+> game, seen perfectly flat and head-on. It is a ring only — the entire centre
+> is empty, there is no portrait, no face, no character, no fill inside the
+> ring. Painterly stylized 3D-cartoon look, bold chunky shapes, thick clean
+> dark-indigo outlines, glossy airbrushed shading, soft inner glow. A small
+> decorative crest sits at the bottom of the ring on the vertical centre axis,
+> and two small symmetrical flourishes at the upper left and upper right. The
+> ring material is: … (la ligne du tableau). Perfectly centred and symmetrical,
+> isolated on a plain flat white background, no text, no numbers, no letters,
 > no watermark.
 
-**Les 5 relights** (l'image validée en référence + « change ONLY the sky, the
-lighting and the mood to: … ») :
-
-| Fichier | Lumière à demander |
+| Id | La matière du cadre |
 |---|---|
-| `arena-dawn` | pale pink-and-gold sunrise, thin morning mist drifting between the columns, long soft shadows, a few lanterns still glowing |
-| `arena-morning` | crisp clear blue sky, fresh bright sunlight, sharp clean light on the marble, a few tiny birds far away in the sky |
-| `arena-noon` | sun at its zenith, dazzling white marble, almost no shadows, deep saturated blue sky |
-| `arena-evening` | blazing orange-and-violet sunset, the torches become the main light source, golden fireflies drifting over the stairs |
-| `arena-night` | deep indigo starry sky, a big glowing full moon framed inside the arch, violet flames and soft blue wisps as the main lights, the crowd now a scatter of tiny warm lantern dots in the dark tiers |
+| `bronze` | warm hammered bronze with darker patina in the recesses, a single small amber gem in the bottom crest |
+| `argent` | polished pale silver with cool blue-grey shading, a single small clear gem in the bottom crest |
+| `or` | bright polished gold with warm honey shading and crisp specular highlights, a small amber gem |
+| `platine` | cool white platinum with faint violet iridescence, two small pale-blue gems |
+| `diamant` | translucent crystal facets with pale cyan and violet refractions, a bright faceted gem in the crest, a soft outer glow |
+| `maitre` | radiant molten gold with violet flame licking along the outer edge, a small crown replacing the bottom crest, a strong golden aura |
 
-### P1 · 9 illustrations de boss manquantes
+**Le piège de ce sous-lot** : le mot « frame » suffit rarement — le modèle
+dessine un cadre **avec un portrait dedans**. La phrase « it is a ring only —
+the entire centre is empty, there is no portrait, no face » est ce qui l'évite,
+et il faut la garder telle quelle. Après réception, vérifier le trou central en
+posant l'image sur un aplat de couleur.
 
-`lib/bosses.ts` déclare **17** boss ; 8 tournent encore sur leur emoji de repli.
-Le boss de la semaine passe sur **tous** les élèves à tour de rôle : un trou ici
-se voit une semaine entière.
+### Les 8 bannières de profil — format **16:9**, recadrées en bandeau
+
+Elles sont **déjà déclarées** dans `lib/profile-banners.ts` avec leurs clés et
+leurs dégradés de repli — les fichiers `public/banners/*.webp` n'ont simplement
+jamais existé. Rien à brancher : dès que le fichier est là, il s'affiche (la
+carte de profil les charge en image de fond CSS, un fichier manquant ne peint
+rien).
+
+Générer en 16:9 puis recadrer en **1024×384** : le bandeau fait 128 px de haut
+sur toute la largeur de la carte.
+
+Style « scène », avec une contrainte propre au format : **le tiers gauche
+accueille l'avatar et le pseudo**. Ajouter à chaque prompt :
+
+> The left third of the image stays calm and uncluttered — same rich
+> atmosphere, but no object and no character there; it is where a portrait and
+> a name will be laid over the artwork.
+
+| Clé | Rareté | La scène |
+|---|---|---|
+| `arene-crepuscule` | commune | the floating academy island seen from far away at dusk, violet and magenta sky, warm lit windows, drifting petals |
+| `cour-recre` | commune | a sunlit school courtyard from a low angle, cream stone arcades, a basketball hoop, confetti-like leaves in a fresh blue sky |
+| `flamme-serie` | rare | a river of amber and orange flame curling across a deep indigo field, rising embers and sparks, warm glow |
+| `podium-or` | rare | a golden victory podium under falling golden confetti and streamers, warm spotlights sweeping a violet arena |
+| `cosmos` | rare | a deep indigo nebula with constellations drawn between the stars, a small ringed planet on the right, drifting stardust |
+| `vitrail` | rare | a huge cathedral stained-glass window in violet, gold and deep blue, warm light shafts pouring through the coloured panes |
+| `couronne-royale` | légendaire | a golden crown floating above a violet velvet field, golden light rays radiating behind it, floating gold particles |
+| `dragon-savoir` | légendaire | a majestic emerald dragon coiled around a giant glowing book, deep forest-green and gold, magical motes in the air |
+
+### L'ordre de production de L1 (et le seul test qui compte)
+
+1. **`eleve-01` seul, avec Marcel en image de référence.** Ne rien générer
+   d'autre tant qu'il n'est pas validé — et le valider sur la **ressemblance de
+   famille** avec Marcel (proportions chibi, encrage, cel-shading), pas sur le
+   fait qu'il soit joli.
+2. **Le test des 40 px** — c'est la taille de l'avatar dans le bandeau du haut,
+   là où il est vu le plus souvent. Réduire le portrait à 40 px de côté : si le
+   visage devient une tache, le cadrage est trop large, régénérer avec un visage
+   plus grand dans le cadre. Ce test se fait **avant** les 31 autres, jamais
+   après.
+3. Les 11 autres élèves, puis les clubs, les héros, les légendaires.
+4. **La planche de contrôle** : les 32 côte à côte en grille de 4 colonnes. Toute
+   tête visiblement plus grosse ou plus haute que ses voisines se régénère —
+   c'est le seul défaut qu'on ne pourra pas rattraper ensuite.
+5. Les 6 cadres, puis les 8 bannières.
+
+---
+
+## L1-bis · L'habillage de l'app — ABANDONNÉ, et pourquoi
+
+**Ne rien générer pour ce lot.** Il a été spécifié, produit en deux campagnes,
+essayé à l'écran et retiré le 2026-08-27. Ce qui suit est ce qu'il a coûté et ce
+qu'il a appris — c'est la seule chose qui vaut d'être gardée.
+
+### L'intention de départ, qui était juste
+
+Un seul onglet sur cinq avait un décor : `/defi` a sa scène peinte, `/moi` et
+`/reviser` étaient un aplat crème, `/tresor` et `/amis` n'avaient rien. Le
+diagnostic tenait. Et la règle posée au départ était la bonne :
+
+> **On met un décor là où l'on pose un héros, et un MUR là où du contenu
+> défile.**
+
+C'est ce que fait Clash Royale : une scène peinte sur l'accueil et la bataille,
+une texture répétée derrière les cartes et la boutique.
+
+### Les deux campagnes, et ce qui les a tuées
+
+**1re campagne — « une académie, cinq salles ».** Colonnes cannelées,
+chapiteaux dorés, tentures, laurier, strictement symétrique, vu de face. Rendu :
+un **foyer d'opéra**. Froid, adulte, sans rapport avec un gamin en veste de
+tweed. La leçon : *une façade symétrique vue de face est un plan d'architecte,
+c'est formel par construction* — et chacun des mots ci-dessus dit « palais ».
+
+**2e campagne — « le bazar de Marcel ».** Bureau encombré, caisses,
+tableau de liège, étagère à trophées, asymétrie, guirlande d'ampoules. Le
+concept, lui, marchait : ça respirait. Deux dérives corrigées en une passe (tout
+était parti en **sépia**, sans violet ni encre marine ; et deux caméras
+différentes cohabitaient). Le résultat était **beau — isolé.**
+
+**Puis on l'a posé sur l'écran, et il a disparu.** Les cartes de `/amis`
+couvraient l'étagère, les coupes et le miroir ; le seul morceau qui dépassait de
+derrière une carte se lisait comme un **débris**. La guirlande, seule partie
+entièrement visible, passait **derrière le titre de la page** et le rendait
+moins lisible. Et la moitié basse, dessinée pour être recouverte, restait vide
+parce que le contenu s'arrêtait avant.
+
+### La leçon, qui vaut pour tout décor à venir
+
+**La règle avait été écrite, puis pas tenue.** On a spécifié un mur, et produit
+une scène. Sur un écran fait de cartes opaques, un décor dessiné n'est pas
+« discret » : il est **invisible par endroits et parasite par d'autres** — et
+les deux au même moment.
+
+Avant de commander un fond, poser la question dans cet ordre :
+1. **Qu'est-ce qui se pose par-dessus ?** Une pile de cartes → mur. Un héros
+   seul au centre → scène.
+2. **Que reste-t-il de visible ?** Si la réponse est « des bouts », c'est raté :
+   un fragment d'objet reconnaissable se lit comme un bug, pas comme un décor.
+
+Corollaire : `/defi` reste **le seul écran de l'app qui mérite un fond
+dessiné**, parce qu'il est le seul où rien ne recouvre le centre.
+
+### Ce qui a été retenu à la place — 0 génération
+
+Le fond des quatre onglets de liste est une **feuille de papier quadrillé** :
+crème de la marque, carreau de 28 px, lignes empruntées au violet plutôt qu'à un
+gris, et un halo ambré très léger en haut pour que l'aplat ne soit pas
+parfaitement uniforme.
+
+Tout en CSS (`.tab-bg` dans `app/globals.css`) : un motif régulier se répète
+sans couture par construction, ne coûte **aucune requête**, ne se recadre jamais
+mal, et suit le viewport. Il dit « école » d'un seul motif sans rien disputer au
+contenu.
+
+L'ironie utile : ce quadrillage était le **tiers bas** de l'illustration
+abandonnée — la seule partie qui fonctionnait à l'écran.
+
+### Le correctif du fond `/defi` — 1 génération, lui, reste valable
+
+La scène actuelle est bonne et n'est pas à refaire. Elle viole seulement la
+règle du haut : elle est riche exactement là où l'UI se pose — nuages violets
+contrastés derrière le bandeau, colonnes sombres et détaillées le long des deux
+bords, là où vivent les boutons Quêtes, Boss, Menu et Trophées.
+
+Image actuelle en référence, format **9:16** :
+
+> Keep the exact same scene, character, podium, columns, braziers, laurel,
+> floor inlay and art style as the reference image. Change only the lighting
+> and the level of detail in two places. First, the top third of the image:
+> keep the violet sky, but make it calm and even, much lighter in value, with
+> no contrasted cloud shapes and no dark areas — it must stay quiet, because a
+> heads-up display sits over it. Second, the left and right vertical edges over
+> their full height: keep the columns and the hangings, but light them clearly
+> and flatten their detail, with no deep shadow and no dark corner — round
+> buttons sit over them. All the remaining detail, contrast and warm glow
+> concentrates in the central stage and on the floor. High-key throughout:
+> there is no black anywhere, the darkest tone is a soft mid-tone. Full-bleed
+> vertical composition edge to edge, no frame, no border, no letterboxing. No
+> text, no letters, no numbers, no logo, no watermark.
+
+---
+
+## L2 · Les trous visibles — 24 générations
+
+Des écrans terminés qui affichent aujourd'hui un emoji de repli, un médaillon
+d'initiales ou un aplat violet.
+
+### L2-a · 5 fichiers de boss
+
+`lib/bosses.ts` déclare **17** boss. Quatre ne sont pas complets. Le boss de la
+semaine passe sur **tous** les élèves à tour de rôle : un trou se voit une
+semaine entière.
 
 Deux fichiers par boss : le **buste** (carré détouré, style « vignette »,
 `public/images/boss/<id>.webp`) et la **scène** 16:9 (style « scène »,
 `public/images/boss/<id>-scene.webp`).
 
-| Id | Manque | Matière | Sujet (après le style maître) |
+| Id | Manque | Matière | Le sujet (après le style maître) |
 |---|---|---|---|
 | `nox` | buste | *repli* | A hooded shadow figure with two calm glowing violet eyes, star-dust cloak, midnight-blue background — mysterious, never frightening. |
-| `chronos` | buste + scène | Histoire | An imposing but cartoonish time-keeper wearing a toga made of clock faces, holding an hourglass sceptre, sand and roman numerals swirling around, deep amber-and-bronze background. |
-| `mitochondrix` | buste + scène | SVT | A grinning cartoon cell-creature shaped like a mitochondrion, green energy arcs pulsing along its folds, microscopic teal-and-lime background with floating organelles. |
-| `bugzilla` | buste + scène | NSI | A friendly-menacing pixel-art beetle made of glitching code blocks, magenta error sparks, dark violet screen-glow background with falling green characters. |
-| `mecatron` | buste + scène | Technologie | A chunky retro robot boss with one big glowing amber eye and gear-shoulders, steam venting, slate-and-copper workshop background. |
-| `sphinx` | buste + scène | Philosophie | A serene cartoon sphinx with a cream marble face and violet eyes, floating question marks carved in stone, dusk-pink desert background. |
-| `nova` | buste + scène | Physique-Chimie | A radiant star-being with a molten golden core and swirling plasma arms, deep indigo cosmic background with bursting light. |
+| `mecatron` | buste **+ scène** | Technologie | A chunky retro robot boss with one big glowing amber eye and gear-shoulders, steam venting, slate-and-copper workshop background. |
 | `coach-turbo` | buste | Sport | A cartoon coach blowing a whistle, turbo jetpack on the back and a stopwatch in hand, lime-and-orange stadium energy. |
-| `delta` | scène | Maths | A geometric guardian built from luminous triangles and rulers, violet-and-gold grid background with floating equation shapes (SHAPES ONLY, no readable symbols). |
+| `delta` | scène | Maths | A geometric guardian built from luminous triangles and rulers, violet-and-gold grid background with floating equation shapes (shapes only, no readable symbols). |
 
 > **Commencer par `nox`** : c'est le boss de **repli**, affiché dès qu'une
-> matière n'a pas son gardien. C'est le buste le plus rentable des neuf.
+> matière n'a pas son gardien. Sa scène existe déjà — c'est le buste le plus
+> rentable des cinq fichiers.
 
-### P2 · 8 scènes de jeux de salon
+### L2-b · 9 scènes de jeux de salon
 
-Chaque jeu de la roulette est vendu par sa scène. Ces 8 jeux sont **jouables**
-mais s'affichent encore sur la robe unie violette.
-
+Ces neuf jeux sont **jouables** et s'affichent encore sur la robe unie violette.
 Format 16:9 → `public/images/defi/jeux/<id>-scene.webp`, puis ajouter l'id à
-`GAME_SCENE_IDS` dans `lib/defi/modes-catalog.ts` (sans ça, l'image déposée
-n'est jamais affichée).
+`GAME_SCENE_IDS` (`lib/defi/modes-catalog.ts`) — **sans ça, l'image déposée
+n'est jamais affichée.**
 
 **Lien de famille** : les jeux d'une même matière partagent leur ambiance, comme
 une collection.
 
-| Id | Jeu | Matière | Sujet (après le style maître) |
+| Id | Jeu | Matière | Le sujet (après le style maître) |
 |---|---|---|---|
 | `suite-logique` | Suite logique | Maths | A mystical violet crystal orb floating above an open geometric grimoire, glowing shapes rising in a sequence, deep indigo-and-gold arcane background. |
-| `compte-est-bon` | Le compte est bon | Maths | Six glowing golden number-plates orbiting a big target ring, arithmetic sparks, deep navy-and-gold game-show background (SHAPES ONLY, no readable digits). |
+| `compte-est-bon` | Le compte est bon | Maths | Six glowing golden number-plates orbiting a big target ring, arithmetic sparks, deep navy-and-gold game-show background (shapes only, no readable digits). |
 | `faux-amis` | Faux amis | Anglais | Two theatre masks face to face, one royal blue and one pop red, ribbons and confetti swirling, deep blue stage background with warm spotlights. |
-| `phrase-en-vrac` | Phrase en vrac | Anglais | Blank wooden word-tiles tumbling into a neat line on a slate-blue desk, royal blue and pop red highlights, chalky classroom glow (tiles are BLANK). |
+| `phrase-en-vrac` | Phrase en vrac | Anglais | Blank wooden word-tiles tumbling into a neat line on a slate-blue desk, royal blue and pop red highlights, chalky classroom glow (tiles are blank). |
 | `falsos-amigos` | Falsos amigos | Espagnol | A shimmering desert mirage with a scarlet flamenco fan half-dissolving into hot air, sunflower-yellow dunes, wavy heat haze. |
+| `anatomie-express` | Anatomie express | SVT | A glowing anatomical figure of light standing on a mint-green platform, softly pulsing organs shown as warm light shapes, teal medical-lab background. |
 | `classe-moi-ca` | Classe-moi ça | SVT | Three cartoon animals (a mammal, a reptile, an amphibian) perched on floating mint-green jungle platforms, teal canopy background with fireflies. |
-| `chasse-elements` | Chasse aux éléments | Physique-Chimie | Glowing laboratory vials on a rack, each holding a different neon-green liquid, dark teal lab background with bubbling condensers (labels are BLANK). |
-| `bonne-unite` | La bonne unité | Physique-Chimie | A precision workshop bench with a glowing caliper, a balance scale and a stopwatch, dark slate-and-neon-green background (all dials are BLANK). |
+| `chasse-elements` | Chasse aux éléments | Physique-Chimie | Glowing laboratory vials on a rack, each holding a different neon-green liquid, dark teal lab background with bubbling condensers (labels are blank). |
+| `bonne-unite` | La bonne unité | Physique-Chimie | A precision workshop bench with a glowing caliper, a balance scale and a stopwatch, dark slate-and-neon-green background (all dials are blank). |
 
-### P3 · 9 vignettes de matières
+> `pointe-carte` a **déjà sa scène** mais pas son jeu (carte muette cliquable) —
+> ne rien générer de plus tant que le jeu n'existe pas.
 
-Ces matières s'affichent avec le médaillon d'initiales de repli. Style
-« vignette », carré détouré **320×320** →
+### L2-c · 10 vignettes de matières
+
+Ces matières s'affichent avec le médaillon d'initiales de repli, ou empruntent
+le dessin d'une matière sœur. Style « vignette », carré détouré **320×320** →
 `public/images/matieres/vignettes/<slug>.webp`, puis ajouter le slug à
-`VIGNETTE_SLUGS` dans `lib/subject-style.ts`.
+`VIGNETTE_SLUGS` (`lib/subject-style.ts`).
 
-Six d'entre elles arrivent avec la **migration 193** (catalogue complet 6e→Tle).
-
-| Slug | Matière | Objet principal (après le style maître) |
+| Slug | Matière | L'objet principal (après le style maître) |
 |---|---|---|
-| `emc` | EMC | A cream-and-violet balance scale with a small tricolour ribbon and a golden speech bubble. |
 | `snt` | SNT | A turquoise smartphone with a purple wifi arc above it and small floating pixel squares. |
 | `hlp` | HLP | An open cream book with a violet thinking-statue head rising from its pages, golden light rays. |
 | `llcer-anglais` | LLCER Anglais | Two theatre masks in indigo and coral in front of an open book, small yellow stars. |
 | `si` | Sciences de l'ingénieur | A big blue gear meshed with a purple drawing compass and a small yellow lightbulb. |
 | `maths-complementaires` | Maths complémentaires | A soft violet division sign and a gentle rising curve on a sky-blue grid card, small golden dots. |
 | `maths-expertes` | Maths expertes | A glowing purple infinity symbol intertwined with a golden spiral and small floating polyhedra. |
-| `enseignement-scientifique` | Ens. scientifique | A teal telescope pointing at a coral-pink ringed planet with small yellow stars. |
 | `finances-personnelles` | Finances personnelles | A friendly coral piggy bank with golden coins arcing into its slot and a small violet wallet. |
+| `culture-generale` | Culture générale | A violet globe wearing a golden graduation cap, a small open book and a turquoise question mark orbiting it. |
+| `grand-oral` | Grand oral | A golden standing microphone in front of a violet speech bubble, small yellow sparkles rising. |
+| `sciences-technologie` | Sciences et technologie | A turquoise microscope beside a purple gear and a small yellow lightning bolt. |
 
-### P4 · les deux jeux encore « Bientôt »
-
-À produire **seulement quand le jeu sera construit** — une belle scène sur un
-billet « Bientôt » promet ce qui n'existe pas.
-
-| Id | Jeu | Ce qu'il attend |
-|---|---|---|
-| `pointe-carte` | Pointe la carte | Scène **déjà faite** ; il manque le jeu (carte muette cliquable). |
-| `anatomie-express` | Anatomie express | Scène + silhouette anatomique interactive. |
+> Le **Grand oral** est le seul slug qui n'a aujourd'hui ni vignette ni alias
+> (cf. `lib/subject-catalogue.test.ts`, qui tient la liste à jour).
 
 ---
 
-### P5 · l'icône de l'app (le logo)
+## L3 · L'économie — 18 générations
+
+Tout ce qui s'achète, s'ouvre ou se collectionne est encore rendu par un
+**emoji système** (`lib/tresor.ts`). Un emoji ne se possède pas : il a la même
+tête sur toutes les apps du téléphone. C'est le lot qui fait le plus pour la
+sensation de butin — donc juste après L1 et L2.
+
+### L3-a · 4 coffres — format **1:1**
+
+Style « vignette », mais volume assumé : un coffre doit avoir l'air lourd.
+
+> Game asset: a closed treasure chest for a playful mobile quiz game, seen from
+> a slightly elevated three-quarter front angle, lid shut. Painterly stylized
+> 3D-cartoon look, bold chunky shapes, thick clean dark-indigo outlines, glossy
+> airbrushed shading, bright key light from the upper front, a soft coloured
+> glow escaping from the seam of the lid. The chest is: … (la ligne du tableau).
+> Isolated on a plain flat white background, centered, no ground shadow, no
+> text, no numbers, no watermark.
+
+| Id | Le coffre |
+|---|---|
+| `commun` | plain warm wood with simple iron bands and a small iron clasp, a faint cream glow at the seam |
+| `rare` | polished blue-lacquered wood with silver corners and a silver clasp, a cool blue glow at the seam |
+| `epique` | deep violet lacquer with ornate golden filigree, a violet gem on the clasp, a bright violet glow |
+| `legendaire` | radiant gold with molten light in every crack, a large amber gem on the clasp, golden particles rising around it |
+
+### L3-b · 3 boosters — format **1:1**
+
+Les objets de la boutique (`SHOP_CATALOG`). Même prompt « vignette ».
+
+| Id | Nom dans l'app | L'objet |
+|---|---|---|
+| `freeze` | Gel de série | A small flame frozen inside a pale-blue ice cube, frost crystals radiating from the corners. |
+| `double` | Double XP · 24 h | A golden lightning bolt splitting into two identical bolts, a small violet clock face behind them. |
+| `indice` | Indice | A warm yellow lightbulb with a small violet question mark glowing inside the glass. |
+
+### L3-c · 8 cartes à collectionner — format **1:1**
+
+`COLLECTION_CARDS` — huit savants, aujourd'hui huit emojis (🍎, ⚗️, 📐…). Ce
+sont des **portraits**, donc **le même cadrage que les avatars du L1** : les
+générer juste après le roster, avec `eleve-01` en image de référence, et ils
+entreront dans les mêmes cadres.
+
+| Id | Nom | Le personnage |
+|---|---|---|
+| `c1` | Newton | a cartoon Isaac Newton with a long curly grey wig, a small red apple floating just above the hair |
+| `c2` | Curie | a cartoon Marie Curie with dark hair in a bun, a cream lab coat, a faint green glow held between the hands |
+| `c3` | Pythagore | a cartoon Pythagoras with a white beard and a cream toga, a golden triangle glowing beside the head |
+| `c4` | Ada Lovelace | a cartoon Ada Lovelace with dark ringlets and a violet Victorian dress, small golden punched-card motifs floating around |
+| `c5` | Einstein | a cartoon Albert Einstein with wild white hair and a moustache, a cream sweater, a small violet spiral galaxy behind |
+| `c6` | Champollion | a cartoon Champollion with dark curly hair and a beard, a cream scholar coat, golden hieroglyph shapes floating (shapes only, no readable writing) |
+| `c7` | Darwin | a cartoon Charles Darwin with a long white beard and a brown coat, a small green tortoise on his shoulder |
+| `c8` | Hypatie | a cartoon Hypatia with dark hair bound in a cream headband and a violet robe, a golden armillary sphere beside her |
+
+### L3-d · 3 skins de flamme — format **1:1**
+
+La série a déjà ses six paliers (`public/images/serie/`). Il manque les skins
+**vendus** en boutique ou tirés au coffre. Reprendre la flamme du palier
+« Rayonnante » en image de référence et ne changer **que** la couleur du feu.
+
+| Id | Nom | Le feu |
+|---|---|---|
+| `flame-blue` | Flamme azur | cool azure and cyan flame with a white-hot core, pale blue sparks |
+| `flame-rainbow` | Flamme arc-en-ciel | a flame shading smoothly from magenta at the base through violet, cyan and gold at the tip, iridescent sparks |
+| `flame-braise` | Braise (butin de coffre) | a deep ember-red flame low and glowing, dark charcoal at the base, orange embers drifting up |
+
+---
+
+## L4 · L'icône de l'app — 1 génération
 
 **Ce qui cloche dans la version actuelle** (deux crayons croisés + étoile sur
 fond violet rayonnant) :
@@ -574,8 +597,7 @@ fond violet rayonnant) :
   les rayons) : à 48 px sur un écran d'accueil, tout fusionne en tache ;
 - l'étoile blanche au centre **coupe le X** exactement au point qui porte le
   sens (« deux crayons qui se croisent ») ;
-- rien ne relie l'icône au monde du jeu (la mascotte, les boss) : posée à côté
-  de l'écran de chargement, elle a l'air de venir d'une autre app.
+- rien ne relie l'icône au monde du jeu.
 
 **Ce qui marche et qu'on garde** : le violet + jaune des deux crayons. Ce n'est
 pas une incohérence — c'est exactement le code de l'app (violet = marque, jaune
@@ -585,7 +607,7 @@ du jeu** : Stud + **duel**. C'est la bonne idée, mal exécutée.
 > Flat 2D vector app icon for a playful mobile learning game for teenagers, two
 > chunky rounded pencils crossed in an X like duelling swords, the left pencil
 > vivid purple (#7A3FE0), the right pencil sunny yellow (#F5B722), both with
-> natural wood tips and matching-tone erasers (NO red, NO coral anywhere), one
+> natural wood tips and matching-tone erasers (no red, no coral anywhere), one
 > single small warm spark where the two pencils meet, thick dark indigo outline
 > (#2A1150) around every shape, deep purple background with a soft radial glow
 > only (no rays, no starburst, no confetti), bold silhouette readable at 48
@@ -606,8 +628,138 @@ Livrer `public/icons/icon-192.png` et `icon-512.png` (les deux entrées de
 **Piste alternative, si le X ne passe jamais les 48 px** : la tête de la
 mascotte de `public/images/splash.webp`, cadrée serré façon Duolingo ou Brawl
 Stars. Un visage se reconnaît à n'importe quelle taille là où deux objets
-croisés ne le font pas, et ça raccroche l'icône à l'écran de chargement.
+croisés ne le font pas.
 
+---
+
+## L5 · Les icônes de produit — 9 générations
+
+### Le raisonnement, avant la liste
+
+Un concurrent ne nous copie pas par notre croix de fermeture. Personne ne
+reconnaît une app à son chevron, son engrenage ou sa flèche de retour : ce sont
+des **panneaux de signalisation**, ils gagnent à ressembler à ceux de tout le
+monde, et les redessiner coûterait de la lisibilité à 16 px sans rien rapporter.
+
+Ce qui se reconnaît — et donc ce qui se copie — c'est le **vocabulaire du
+produit** : les quelques objets que l'élève voit dix fois par séance et qui
+NOMMENT ce qu'on lui propose. « Cours · Quiz · Flashcards · Fiches · Défi » :
+cette rangée EST l'offre de Studuel. Elle est aujourd'hui dessinée par
+**Lucide** (`BookOpen`, `ListChecks`, `Layers`, `FileText`, `Swords`) — une
+bibliothèque gratuite, installée en une commande. N'importe qui sort la même
+rangée en trois minutes.
+
+D'où la règle de partage, qui tient tout ce lot :
+
+| | Reste en trait (Lucide) | Passe au dessin |
+|---|---|---|
+| Quoi | chrome système : croix, chevrons, engrenage, retour, coche, loupe, plus | vocabulaire produit : les supports, les tuiles de Marcel |
+| Pourquoi | signalisation — la banalité est une qualité | identité — c'est ce qu'on nous prendrait |
+| Combien | ~169 fichiers, **on n'y touche pas** | **9 dessins** |
+
+Neuf dessins, pas cent soixante-neuf : la différenciation se joue sur une
+poignée d'objets vus tout le temps, pas sur l'inventaire.
+
+### L5-a · Les 6 supports — 5 générations, 1 reprise
+
+`components/reviser/SupportChips.tsx`. Rendus à **quatre endroits** (écran de
+chapitre, pied de cours, onglet « Mode de jeu », sous une fiche dépliée) : c'est
+la rangée la plus vue de l'app après la barre d'onglets.
+
+**`defi` ne se génère pas.** Le support « Défi » mène au Défi : il doit porter
+les **épées croisées de son onglet** (`public/images/nav/defi.webp`). Un second
+dessin ferait un cousin là où il faut une reprise — exactement le raisonnement
+de la tête de Marcel dans la barre d'onglets.
+
+| Kind | Libellé | Aujourd'hui | L'objet à dessiner (après le prompt maître) |
+|---|---|---|---|
+| `cours` | Cours | `BookOpen` | An open notebook seen at a three-quarter angle, its pages cream with a few soft violet ruled lines, and a golden ribbon bookmark falling from the spine. |
+| `quiz` | Quiz | `ListChecks` | A rounded violet speech bubble tilted slightly, with one big bold golden question mark inside it and two small golden sparkles at its corner. |
+| `flashcards` | Flashcards | `Layers` | Three rounded cards fanned out like a hand of cards, the front one cream with a violet folded corner, the two behind in violet and gold. |
+| `carte` | Fiches | `FileText` | A single cream index card with a folded top-right corner and three short violet ruled lines, held by a golden paperclip at its top-left. |
+| `erreurs` | Revoir mes erreurs | `Undo2` | A chunky violet eraser tilted on its side, with a thick golden circular arrow looping around it. |
+| `defi` | Défi | `Swords` | **aucune génération** — reprendre `public/images/nav/defi.webp`. |
+
+> **LE PIÈGE DE CE LOT : trois papiers dans la même rangée.** Cours, Flashcards
+> et Fiches sont tous les trois « du papier crème ». À 40 px, côte à côte, ils
+> deviendront une bouillie si on les laisse se ressembler. Ce qui les sépare
+> n'est PAS la couleur, c'est la **silhouette** — et elle est écrite dans les
+> lignes ci-dessus, à ne pas diluer : un **bloc épais relié** (cahier), un
+> **éventail** (cartes), une **feuille unique à trombone** (fiche). Vérifier les
+> trois en grille avant de valider, jamais un par un.
+
+### L5-b · Les 4 tuiles de Marcel — 4 générations
+
+`components/marcel/MarcelHub.tsx`. Quatre tuiles icône / mot / explication,
+elles aussi du vocabulaire produit — et elles aussi en Lucide.
+
+| Kind | Tuile | Aujourd'hui | L'objet à dessiner |
+|---|---|---|---|
+| `methode` | Méthode | `GraduationCap` | A golden drawing compass and ruler crossed over a small cream card, tracing a violet dotted path — the tools of a method, not a diploma. |
+| `oral` | Oral | `Mic` | A rounded retro microphone in violet with a golden grille and stand, and two small golden sound arcs on its right. |
+| `entrainement` | Entraînement | `Timer` | A chunky golden stopwatch tilted slightly, its crown and ring in violet, with one small violet motion arc behind it. |
+| `progres` | Progrès | `BarChart3` | Three rounded bars rising left to right — violet, violet, gold — with a small golden arrow curving up over the tallest. |
+
+> **Méthode ne prend PAS la toque de diplômé.** `GraduationCap` dit
+> « diplôme », or la tuile dit « comment s'y prendre ». C'est la leçon de la
+> barre d'onglets, à rejouer ici : une icône échoue d'abord sur le **sens**, pas
+> sur le style — écrire la phrase que la tuile doit faire dire avant de
+> commander le dessin.
+
+### Le prompt maître de ce lot — l'icône, pas la vignette
+
+Ce sont des **icônes** : vues à 40 px dans un disque, pas à 100 px sur une
+carte. Elles appartiennent donc à la famille de la **barre d'onglets**, pas à
+celle des vignettes de matières. **Joindre `public/images/nav/reviser.webp` en
+image de référence.** Format **1:1**.
+
+> Flat cartoon app icon of ONE single object for a playful mobile learning app
+> for teenagers. Match the exact art style of the reference image — its outline
+> weight, shading and colour treatment. Bold rounded chunky shapes with a thick
+> uniform dark plum-purple outline all around the object, flat cel shading with
+> one darker tone and one glossy cream highlight sweep, no gradients, no
+> texture, no drop shadow. Restricted palette: dark plum purple, royal violet,
+> golden yellow, warm cream. The object is seen from the front, tilted slightly,
+> simple and READABLE AT VERY SMALL SIZE: few parts, big shapes, no thin lines,
+> no small details, no scattered confetti. It fills the frame and reaches the
+> left and right edges with no empty margin. Isolated on a plain flat white
+> background, square composition, centered.
+> NO folder, no binder, no card frame, no border, no background objects, no
+> text, no letters, no numbers, no logo, no watermark.
+> The object is: … (la colonne du tableau)
+
+La différence avec le prompt des vignettes tient en une phrase — `READABLE AT
+VERY SMALL SIZE: few parts, big shapes, no thin lines` — et elle n'est pas
+cosmétique : les vignettes de matières sont vues six fois plus grandes, elles
+peuvent porter un motif grec ou une trame de tissu. Ici, tout détail sous 3 px
+devient une salissure.
+
+### Après réception — le script, et surtout la trame
+
+Fichiers : `public/images/supports/<kind>.webp` et
+`public/images/marcel/<kind>.webp`, **256×256**, fond transparent (même taille
+que la barre d'onglets, servie à 40-48 px).
+
+1. Déposer les originaux dans `assets-sources/supports/` et
+   `assets-sources/marcel-tuiles/`.
+2. Écrire `scripts/supports-icones.mjs` **sur le modèle de
+   `scripts/nav-icones.mjs`** — il ne s'agit pas de convertir en WebP, mais de
+   passer les six (puis les quatre) par `scripts/lib/trame.mjs`.
+
+   **C'est le point à ne pas sauter, et il a déjà coûté une campagne.** Les six
+   icônes de la barre d'onglets venaient de lots différents et occupaient leur
+   canevas de 82 % à 96 %, avec une surface d'encre allant du simple au tiers en
+   plus : côte à côte, elles semblaient de tailles différentes — ce qu'on lit
+   comme un bug d'alignement, pas comme un parti pris. **Égaliser les boîtes ne
+   suffit pas : l'œil compare des taches d'encre.** Une rangée de supports mal
+   calibrée serait pire qu'une rangée de Lucide, qui a au moins l'avantage
+   d'être régulière.
+3. Remplacer les `Record<SupportKind, LucideIcon>` par des imports statiques
+   d'images (`import coursIcone from '@/public/images/supports/cours.webp'`) —
+   **jamais un chemin littéral** : l'URL à empreinte de contenu est ce qui évite
+   qu'un remplacement de dessin reste invisible derrière le cache de Next et des
+   navigateurs. Même raison que dans `components/Navigation.tsx`.
+4. `npm test`, puis regarder la rangée **en grille**, les trois papiers ensemble.
 ---
 
 ## Checklist technique
@@ -615,13 +767,18 @@ croisés ne le font pas, et ça raccroche l'icône à l'écran de chargement.
 1. Générer → détourer → **WebP**. Garder les sources hors dépôt
    (`assets-sources/`, gitignoré).
 2. Tailles : vignettes de matières **320×320** ; bustes de boss **512×512** ;
-   scènes 16:9 **1536×864**. Poids visé **< 100 Ko** par scène, **< 60 Ko** par
-   objet détouré.
+   avatars, cadres, coffres, cartes **512×512** ; bannières de profil
+   **1024×384** ; scènes 16:9 **1536×864**. Poids visé **< 100 Ko** par scène,
+   **< 60 Ko** par objet détouré, **< 40 Ko** par avatar (ils s'affichent par
+   32 dans la galerie).
 3. **Déposer le fichier ne suffit pas** — chaque famille a sa liste à compléter,
    sinon l'image reste invisible :
    - vignette de matière → `VIGNETTE_SLUGS` (`lib/subject-style.ts`) ;
    - scène de jeu → `GAME_SCENE_IDS` (`lib/defi/modes-catalog.ts`) ;
-   - boss → champs `image` / `scene` du catalogue de `lib/bosses.ts`.
+   - boss → champs `image` / `scene` du catalogue de `lib/bosses.ts` ;
+   - avatar, cadre → `lib/avatars.ts` (le fichier à créer avec le lot L1).
+   Seule exception : les **bannières de profil**, déjà déclarées dans
+   `lib/profile-banners.ts` — le fichier déposé s'affiche tout seul.
 4. Lancer `npm test` après chaque dépôt : des gardes comparent les listes
    déclarées aux fichiers réellement présents.
 5. Accessibilité : toujours un `alt` descriptif ; jamais d'information portée
@@ -636,11 +793,11 @@ croisés ne le font pas, et ça raccroche l'icône à l'écran de chargement.
 | Lot | Contenu | Où |
 |---|---|---|
 | Mascotte & logo | identité « Toque & Gland » | `public/images/logo app/`, `mascotte/` |
-| Boss (DA v2) | 15 bustes + 15 scènes sur 17 | `public/images/boss/` |
+| Boss (DA v2) | 14 bustes + 15 scènes sur 17 | `public/images/boss/` |
 | Blasons de rang | 6 paliers (Bronze → Maître) | `public/images/defi/ranks/` |
 | Modes de l'Arène | 5 affiches + 5 scènes 16:9 | `public/images/defi/modes/` |
 | Jeux de salon | 9 scènes 16:9 | `public/images/defi/jeux/` |
-| Vignettes de matières | 22 objets détourés | `public/images/matieres/vignettes/` |
+| Vignettes de matières | 24 objets détourés — lot **complet** depuis le v4 | `public/images/matieres/vignettes/` |
 | Arènes horaires | 6 variantes du colisée | `public/images/arene/` |
 | Barre d'onglets | 6 icônes, une par onglet | `public/images/nav/` |
 | Débrief d'habitudes | icônes-boutons | `public/images/debrief/` |

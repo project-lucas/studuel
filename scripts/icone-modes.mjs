@@ -1,6 +1,6 @@
 /**
  * Fabrique L'ICÔNE « MODES » du flanc gauche de la barre d'action :
- *   public/images/defi/icones/mode de jeu 2.png  (original 2000×2000, fond PEINT)
+ *   assets-sources/defi-icones-lot1/mode de jeu 2.png  (original 2000×2000, fond PEINT)
  *     → public/images/defi/icones/modes-v2.webp  (256×256, fond transparent)
  *
  * La « 2 » est la version RETENUE : la manette seule ne disait que « jouer »,
@@ -32,7 +32,7 @@
 import sharp from 'sharp'
 import { detourerFondPeint } from './lib/fond-peint.mjs'
 
-const SRC = 'public/images/defi/icones/mode de jeu 2.png'
+const SRC = 'assets-sources/defi-icones-lot1/mode de jeu 2.png'
 /**
  * LE NOM PORTE SA VERSION, et ce n'est pas de la coquetterie.
  *

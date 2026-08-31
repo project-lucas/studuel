@@ -1,6 +1,6 @@
 /**
  * Fabrique LA LOUPE de l'écran de recherche d'adversaire :
- *   public/images/defi/search/v1.png   (original 2000×2000, fond blanc PEINT)
+ *   assets-sources/defi-search/v1.png   (original 2000×2000, fond blanc PEINT)
  *     → public/images/defi/loupe.webp   (256×256, fond transparent)
  *
  *   node scripts/loupe-recherche.mjs
@@ -41,7 +41,7 @@
 import sharp from 'sharp'
 import { detourerFondPeint } from './lib/fond-peint.mjs'
 
-const SRC = 'public/images/defi/search/v1.png'
+const SRC = 'assets-sources/defi-search/v1.png'
 const DEST = 'public/images/defi/loupe.webp'
 
 /** Côté de la toile finale : 256 px pour un dessin servi autour de 72. */

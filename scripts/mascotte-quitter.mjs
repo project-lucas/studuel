@@ -1,6 +1,6 @@
 /**
  * Fabrique L'ILLUSTRATION DE LA MODALE « Tu nous quittes déjà ? » :
- *   public/images/mascotte/tu nous quittes deja.png   (original 4000x4000)
+ *   assets-sources/mascotte/tu nous quittes deja.png   (original 4000x4000)
  *     → public/images/mascotte/quitte-deja.webp       (512x512, fond transparent)
  *
  *   node scripts/mascotte-quitter.mjs
@@ -26,7 +26,7 @@
 import sharp from 'sharp'
 import { detourerFondPeint } from './lib/fond-peint.mjs'
 
-const SRC = 'public/images/mascotte/tu nous quittes deja.png'
+const SRC = 'assets-sources/mascotte/tu nous quittes deja.png'
 const DEST = 'public/images/mascotte/quitte-deja.webp'
 
 /** Côté de la toile finale : 512 px pour un dessin servi autour de 144. */

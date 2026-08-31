@@ -54,33 +54,25 @@ next-env.d.ts
 # sources brutes des vignettes matières (converties en webp dans public/images/matieres/vignettes/)
 /assets-sources/
 
-# sources brutes déposées dans public/ (PNG 4K des générateurs d'images) : elles
-# ne sont JAMAIS servies — seules leurs conversions webp le sont — et pèsent des
-# dizaines de Mo qui partiraient dans le dépôt et dans chaque déploiement.
-#   fond écran/      → public/images/arene/arena-*.webp + defi/arene-finale.webp
-#   écran chargement/ → public/images/splash.webp
-/public/images/defi/fond écran/
-/public/images/écran chargement/
-#   mascotte/*.png   → public/images/mascotte/reaction-{bonne,mauvaise}.webp
-/public/images/mascotte/*.png
-
-# Sources d'illustration LOURDES, jamais servies par l'app : elles partaient
-# dans chaque déploiement pour rien (19,6 Mo à elles trois, et zéro référence
-# dans tout le dépôt). Le rendu final vit à côté en .webp.
-/public/images/logo app/
-/public/images/serie quizz/
-/public/images/écran chargement/
-/public/images/defi/modes/match v*.png
-
-# doublon local des icônes PWA (identiques à /public/icons/, seul chemin servi
-# et référencé par app/manifest.ts)
-/public/LOGO/
-#   serie quizz/     → public/images/mascotte/reaction-{bonne,mauvaise}-{1..5}.webp
-#                      (régénérables : node scripts/serie-quizz.mjs)
-/public/images/serie quizz/
-
-#   defi/icones/*.png → public/images/defi/icones/*-v2.webp (scripts/defi-icones.mjs)
-#   defi/search/      → public/images/defi/loupe.webp       (scripts/loupe-recherche.mjs)
-# Mêmes raisons que ci-dessus : originaux 2000×2000, jamais servis, ~10 Mo.
-/public/images/defi/icones/*.png
-/public/images/defi/search/
+# LES SOURCES 4K NE VIVENT PLUS DANS public/ (rangées le 31/08/2026).
+#
+# Elles y étaient déposées puis masquées ici, une règle par dossier — sept au
+# total, ajoutées au fil des lots. Le masquage tenait le dépôt propre mais ne
+# réglait pas le fond : `public/` est servi TEL QUEL par Next, donc chaque
+# source 4K y était publiquement accessible en local, et il suffisait d'oublier
+# une ligne ici pour en expédier 20 Mo en production. Le dossier pesait 285 Mo
+# pour 9 Mo réellement servis.
+#
+# Elles sont maintenant dans `assets-sources/` (déjà ignoré, deux lignes plus
+# haut), où six autres générateurs rangeaient déjà les leurs. `public/` ne
+# contient plus que ce qui est servi, et cette liste n'a plus à être tenue.
+#
+#   assets-sources/serie-quizz/       → images/mascotte/reaction-*-{1..5}.webp
+#   assets-sources/mascotte/          → images/mascotte/quitte-deja.webp
+#   assets-sources/defi-icones-lot1/  → images/defi/icones/*-v2.webp
+#   assets-sources/defi-search/       → images/defi/loupe.webp
+#   assets-sources/arene-fonds/       → images/arene/arena-*.webp
+#   assets-sources/splash/            → images/splash.webp
+#
+# Un test du dépôt (lib/public-poids.test.ts) refuse désormais toute source
+# lourde qui reviendrait dans public/.

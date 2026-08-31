@@ -1,6 +1,6 @@
 /**
  * Fabrique LES ICÔNES FLOTTANTES de l'arène :
- *   public/images/defi/icones/<source>.png  (originaux 2000×2000, fond PEINT)
+ *   assets-sources/defi-icones-lot1/<source>.png  (originaux 2000×2000, fond PEINT)
  *     → public/images/defi/icones/<cible>-v2.webp  (256×256, fond transparent)
  *
  *   node scripts/defi-icones.mjs
@@ -31,6 +31,9 @@ import path from 'node:path'
 import sharp from 'sharp'
 import { detourerFondPeint } from './lib/fond-peint.mjs'
 
+// Les SOURCES 4K vivent hors de `public/` (elles n'ont rien à y faire : Next
+// sert ce dossier tel quel). Seuls les webp générés y sont écrits.
+const SOURCES = 'assets-sources/defi-icones-lot1'
 const DOSSIER = 'public/images/defi/icones'
 
 /**
@@ -61,7 +64,7 @@ const SIZE = 256
 const MARGE = 0.04
 
 const cote = Math.round(SIZE * (1 - 2 * MARGE))
-const fichiers = await readdir(DOSSIER)
+const fichiers = await readdir(SOURCES)
 
 for (const [source, cible] of Object.entries(LOT)) {
   const src = fichiers.find((f) => f === `${source}.png`)
@@ -70,7 +73,7 @@ for (const [source, cible] of Object.entries(LOT)) {
     continue
   }
 
-  const dessin = await sharp(await detourerFondPeint(path.join(DOSSIER, src)))
+  const dessin = await sharp(await detourerFondPeint(path.join(SOURCES, src)))
     .trim({ threshold: 2 })
     .png()
     .toBuffer()

@@ -1,6 +1,6 @@
 /**
  * Fabrique les 10 réactions de série du quiz :
- *   public/images/serie quizz/{1..5}{+,-}.png  (sources 4000x4000, LOCALES)
+ *   assets-sources/serie-quizz/{1..5}{+,-}.png  (sources 4000x4000, hors public/)
  *     → public/images/mascotte/reaction-{bonne,mauvaise}-{1..5}.webp  (500x360, servies)
  *
  *   node scripts/serie-quizz.mjs
@@ -32,7 +32,7 @@ import sharp from 'sharp'
 import { mkdir, readdir } from 'node:fs/promises'
 import path from 'node:path'
 
-const SRC = 'public/images/serie quizz'
+const SRC = 'assets-sources/serie-quizz'
 const DEST = 'public/images/mascotte'
 const WORK = 1024 // résolution de travail du masque
 

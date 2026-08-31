@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { Ear, Check, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -187,7 +188,19 @@ export default function OralListenCard({
   return (
     <section className={cn('px-4', className)}>
       <h2 className="font-heading mx-0.5 mb-1.5 flex items-center gap-1.5 text-[15px] font-extrabold">
-        <Ear className="text-primary size-4" aria-hidden="true" />
+        {/* Le micro dessiné en TÊTE de section, pas sur les boutons : le
+            titre est vu une fois et porte l'identité, alors qu'un bouton
+            « Je l'écoute » a besoin d'un pictogramme lisible à 14 px — c'est
+            le partage posé par L5 (identité au dessin, signalisation au
+            trait). L'oreille de Lucide reste donc sur l'action. */}
+        <Image
+          src="/images/amis/oral.webp"
+          alt=""
+          aria-hidden="true"
+          width={64}
+          height={64}
+          className="size-6 shrink-0 select-none object-contain"
+        />
         On te demande d’écouter
       </h2>
       <ul className="flex flex-col gap-2">

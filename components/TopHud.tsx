@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Settings, LogIn } from 'lucide-react'
+import { LogIn } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { CristalIcon, EcuIcon } from '@/components/ui/MonnaieIcon'
 import { GEM_COST_CHAPTER } from '@/lib/gems'
@@ -341,9 +342,24 @@ export default function TopHud({
       {/* Réglages du compte — pastille ronde flottante à l'extrême droite. Ce
           n'est PAS l'entrée « profil de jeu » (avatar, stats, badges) : celle-ci
           est la carte joueur en haut à gauche de l'arène. Pour lever la
-          confusion des deux entrées jumelles, on affiche ici un engrenage
-          (réglages du compte : /compte), pas une silhouette qui se lisait comme
-          un second bouton profil. Visiteur non connecté → icône « entrer ». */}
+          confusion des deux entrées jumelles, on montre ici les RÉGLAGES
+          (/compte), pas une silhouette qui se lisait comme un second bouton
+          profil. Visiteur non connecté → icône « entrer ».
+
+          L'ENGRENAGE DESSINÉ REMPLACE L'ENGRENAGE LUCIDE (31/08/2026). C'est le
+          dernier trait de contour de tout le bandeau : la flamme, les pièces,
+          les gemmes et les cinq onglets du bas sont déjà des illustrations. Un
+          pictogramme au trait posé au milieu d'eux se lisait comme un élément
+          d'une autre application.
+
+          L'ÉTAT ACTIF NE PEUT PLUS PASSER PAR LA COULEUR : une illustration
+          porte la sienne. La barre d'onglets résout ça en désaturant les
+          onglets inactifs — mais cette convention suppose un GROUPE dont un
+          membre est toujours actif. Ce bouton-ci est SEUL, et on n'est presque
+          jamais sur /compte : le reprendre tel quel afficherait l'illustration
+          délavée en permanence, c'est-à-dire tout le temps sauf une fois. Elle
+          garde donc ses pleines couleurs, et l'état actif se marque par un
+          anneau — la même bague que porte déjà l'écusson de niveau. */}
       {accountHidden ? null : (
         <Link
           href={accountHref}
@@ -352,21 +368,45 @@ export default function TopHud({
           }
           title={userLabel ? 'Réglages du compte' : 'Se connecter'}
           className={cn(
-            'pointer-events-auto flex size-10 shrink-0 items-center justify-center rounded-full transition active:scale-95',
-            pillSurface,
+            // PAS DE PASTILLE SOUS L'ILLUSTRATION (31/08/2026). Les deux autres
+            // éléments du bandeau (niveau, monnaies) portent un fond de verre
+            // parce qu'ils affichent du TEXTE, qui a besoin d'un socle pour
+            // rester lisible sur n'importe quel décor. Le dessin, lui, porte son
+            // propre contour marine : le disque crème ne le détachait pas, il
+            // l'enfermait — on lisait un bouton posé sur un rond blanc, pas une
+            // icône. Le rond parti, le dessin peut occuper toute la case.
+            'pointer-events-auto flex size-11 shrink-0 items-center justify-center rounded-full transition active:scale-95',
             connected ? '' : 'ml-auto',
-            dark
-              ? accountActive
-                ? 'text-highlight'
-                : 'text-[#faf6ef]'
-              : accountActive
-                ? 'text-primary'
-                : 'text-foreground',
+            // L'anneau d'écran courant, seule marque qui reste sans pastille.
+            // Il ne paraît que sur /compte, donc jamais en même temps que le
+            // disque qu'on vient d'enlever. Il marche pour les DEUX contenus —
+            // le dessin comme le pictogramme du visiteur — là où une couleur de
+            // texte ne pouvait rien sur une illustration.
+            accountActive && 'ring-2 ring-highlight',
+            // Ne sert plus qu'au pictogramme « entrer » du visiteur : une
+            // illustration ne prend pas `currentColor`.
+            dark ? 'text-[#faf6ef]' : 'text-foreground',
           )}
         >
           {userLabel ? (
-            <Settings className="size-6" strokeWidth={2.1} aria-hidden="true" />
+            <Image
+              src="/images/defi/icones/reglages-v2.webp"
+              alt=""
+              aria-hidden="true"
+              // 80 = deux fois la case servie (size-10 = 40 px), de quoi rester
+              // net sur les écrans à densité double.
+              width={80}
+              height={80}
+              // 40 px de dessin dans 44 px de zone tactile : l'illustration
+              // remplit la case (elle en occupait 32 sur 40 tant qu'il fallait
+              // laisser voir la pastille), et le lien garde les 44 px qui font
+              // la cible minimale au doigt.
+              className="size-10 select-none object-contain"
+            />
           ) : (
+            // Le visiteur garde un pictogramme : « entrer » n'a pas
+            // d'illustration, et en inventer une pour ce seul cas ferait un
+            // dessin orphelin dans tout le jeu d'icônes.
             <LogIn className="size-6" strokeWidth={2.1} aria-hidden="true" />
           )}
         </Link>

@@ -84,8 +84,9 @@ n'ont plus de destinataire.
 | **L3** | L'économie (coffres, cartes, boosters) | 18 | tout ce qui s'achète est encore un emoji système |
 | **L4** | L'icône de l'app | 1 | la seule image vue avant d'ouvrir l'app |
 | **L5** | **Les icônes de produit** — sortir de Lucide | 9 | le vocabulaire du produit est dessiné par une bibliothèque gratuite : un concurrent a la même rangée en trois minutes |
+| **L6** | **L'onglet Amis** | 8 | le seul onglet sans une seule illustration ; et le podium est la scène que L1-bis cherchait au mauvais endroit |
 
-**Total : 99 générations.** Lire L1-bis avant de commander le moindre fond : il
+**Total : 107 générations.** Lire L1-bis avant de commander le moindre fond : il
 a coûté deux campagnes et il dit à quelle condition un décor sert à quelque
 chose.
 
@@ -760,6 +761,167 @@ que la barre d'onglets, servie à 40-48 px).
    qu'un remplacement de dessin reste invisible derrière le cache de Next et des
    navigateurs. Même raison que dans `components/Navigation.tsx`.
 4. `npm test`, puis regarder la rangée **en grille**, les trois papiers ensemble.
+---
+
+## L6 · L'onglet Amis — 8 générations
+
+### Ce qu'on NE fait pas, et il faut le lire d'abord
+
+La demande de départ était **« un grand fond avec la mascotte qui prend la pose,
+or, argent, bronze »**. Telle quelle, c'est **exactement la campagne L1-bis**,
+produite deux fois et retirée le 2026-08-27 — sur `/amis` précisément, où les
+cartes couvraient l'étagère, les coupes et le miroir.
+
+La règle qui en est sortie tient en une phrase : **on met un décor là où l'on
+pose un héros, et un MUR là où du contenu défile.** `/amis` est un empilement de
+cartes opaques du haut au bas de l'écran : un fond dessiné y serait invisible
+sous les cartes et parasite entre elles, les deux au même moment.
+
+**Mais l'intuition était bonne.** Ce qui manque à cet onglet, ce n'est pas un
+fond : c'est **une scène bornée**, une zone que rien ne recouvre parce qu'elle
+fait partie de la carte. D'où le déplacement : le podium n'est pas derrière
+l'écran, il est **dans le bloc du classement**, en bandeau de tête.
+
+### Deux économies avant de commander quoi que ce soit
+
+**Les blasons de rang existent déjà.** `public/images/defi/ranks/{bronze,
+argent, or, platine, diamant, maitre}.webp` sont produits et servis depuis le
+2026-07-19 — `components/defi/RankBadge.tsx` les affiche. Or `AmisHome` rend
+`tier.emoji` (médaille système) à deux endroits. **Zéro génération à commander :
+il y a un composant à brancher.** C'est l'amélioration la moins chère du lot.
+
+**Les avatars des amis ne sont pas de ce lot.** Les huit animaux
+(`GHOST_AVATARS`, `lib/social.ts`) sont des emoji, mais **L1** refait déjà tout
+le système d'avatar en roster de 32 portraits. Les redessiner ici produirait un
+jeu concurrent. Le jour où L1 arrive, ces huit lignes tombent d'elles-mêmes.
+
+**Le coffre d'équipe non plus** : `TeamChestCard` prendra le coffre `epique` de
+**L3-a**. Un coffre collectif n'a pas besoin d'un dessin propre — c'est le même
+objet, ouvert par plusieurs.
+
+### Le lot, donc
+
+| Id | Où | Format | Ce que ça remplace |
+|---|---|---|---|
+| `podium` | tête du bloc « classement de l'école » | **3:1** | rien — zone à créer |
+| `solo` | état vide « En solo pour l'instant » | 1:1 | un texte gris seul |
+| `parrainage` | carte « Invite un ami, +30 gemmes » | 1:1 | un aplat violet |
+| `oral-ecoute` | `OralListenCard`, en tête d'onglet | 1:1 | une icône Lucide |
+| `echelle-*` (×4) | segments « Échelle du classement » | 1:1 | quatre onglets de texte nu |
+
+### L6-a · Le podium — la pièce maîtresse, format **3:1**
+
+**LE PODIUM EST UN DÉCOR, PAS UN CASTING.** Les trois premiers du classement
+sont de VRAIS élèves : l'app pose leurs avatars sur les marches. Si le dessin
+contient déjà trois personnages, il ment — et il ment différemment chaque
+semaine. On dessine donc **la scène vide** : trois marches, la lumière, les
+lauriers. Les têtes viennent du produit.
+
+C'est aussi ce qui rend le dessin réutilisable : classement d'école, de
+département, de région, national — quatre écrans, une image.
+
+> Game asset: an empty three-step winners podium for a playful mobile learning
+> app for teenagers, seen straight from the front, slightly below eye level.
+> The centre step is the tallest and glows warm gold, the left step is silver,
+> the right step is bronze. Painterly stylized 3D-cartoon look, bold chunky
+> shapes, thick clean dark-indigo outlines, glossy airbrushed shading, warm
+> spotlights from above with soft light beams and floating golden dust. A
+> laurel wreath motif is carved on the front face of the centre step. The
+> podium sits on a deep violet stage floor that fades to darkness at the far
+> left and far right edges. THE STEPS ARE EMPTY — no characters, no figures, no
+> trophies, no cups standing on them. Wide horizontal composition, the podium
+> centred and occupying the middle half of the frame. No text, no numbers, no
+> watermark.
+
+**Le piège à surveiller sur celui-ci** : les modèles ajoutent des personnages
+sur un podium par réflexe. Si la première sortie en contient, relancer en
+insistant — « an EMPTY podium, a stage with nobody on it ». Ne pas détourer :
+cette image garde son fond, c'est un bandeau plein.
+
+### L6-b · La mascotte en solo — format **1:1**
+
+**VOICI où la mascotte qui prend la pose a sa place.** Pas en fond d'écran, mais
+dans le **vide** : l'élève sans ami voit aujourd'hui « En solo pour l'instant »
+en gris sur blanc. Un état vide est le seul endroit d'une interface où un dessin
+ne recouvre rien et n'est recouvert par rien — il EST le contenu.
+
+> Game asset: the app mascot — a cheerful teenage boy with dark tousled hair,
+> round glasses and a warm brown tweed jacket — standing alone on a small
+> podium step, one hand raised in a friendly wave, the other holding a blank
+> pennant flag, smiling and looking straight at the viewer. Painterly stylized
+> 3D-cartoon look, bold chunky shapes, thick clean dark-indigo outlines, glossy
+> airbrushed shading, warm rim light from the upper left. A few small golden
+> confetti shapes float around him. Isolated on a plain flat white background,
+> centered, full body, no ground shadow, no text, no watermark.
+
+**Joindre la mascotte existante en référence** (`public/images/mascotte/`) avec
+`match the exact art style and the exact character design of the reference
+image`. C'est le même personnage que partout ailleurs : il ne doit pas changer
+de visage en changeant d'onglet.
+
+### L6-c · Le parrainage — format **1:1**
+
+La carte « Invite un ami : vous gagnez chacun 30 gemmes ». Le mot qui compte est
+**chacun** : le dessin doit montrer une réciprocité, pas un cadeau à sens unique.
+
+> Game asset: two hands doing a high-five, seen from the side, with a large
+> glowing violet gem crystal floating in the space between the palms and small
+> golden sparks radiating outward. Painterly stylized 3D-cartoon look, bold
+> chunky shapes, thick clean dark-indigo outlines, glossy airbrushed shading,
+> bright key light from the upper front. Isolated on a plain flat white
+> background, centered, no ground shadow, no text, no watermark.
+
+### L6-d · L'écoute de l'oral — format **1:1**
+
+`OralListenCard` est placée **au-dessus de tous les classements**, et pour une
+raison écrite dans le code : c'est le seul usage social du produit qui ne soit
+pas une comparaison — quelqu'un attend quelque chose de toi. Elle mérite mieux
+qu'un pictogramme au trait.
+
+> Game asset: a warm wooden desk microphone with a soft violet foam windscreen,
+> seen from a three-quarter front angle, with two curved golden sound waves
+> radiating from it and a small glowing amber notification dot at the tip.
+> Painterly stylized 3D-cartoon look, bold chunky shapes, thick clean
+> dark-indigo outlines, glossy airbrushed shading, bright key light from the
+> upper front. Isolated on a plain flat white background, centered, no ground
+> shadow, no text, no watermark.
+
+### L6-e · L'échelle du classement — 4 emblèmes, format **1:1**
+
+Quatre segments aujourd'hui rendus en texte nu : **Lycée · Département · Région
+· National**. C'est une échelle — elle doit se lire comme une montée, donc
+partager une forme commune (l'écusson) et ne varier que par ce qu'il contient.
+
+**À faire en dernier, et c'est discutable.** Un sélecteur de portée est de la
+*signalisation* au sens de L5 : la banalité y est une qualité. On les commande
+parce qu'ils sont quatre et qu'ils forment une progression visible — pas parce
+qu'un concurrent nous les prendrait.
+
+> Game asset: a heraldic shield emblem for a playful mobile learning app, seen
+> straight from the front, with a thin golden rim and a deep violet field.
+> Inside the shield: … (la ligne du tableau). Painterly stylized 3D-cartoon
+> look, bold chunky shapes, thick clean dark-indigo outlines, glossy airbrushed
+> shading, bright key light from the upper front. Isolated on a plain flat
+> white background, centered, no ground shadow, no text, no letters, no
+> watermark.
+
+| Id | Dans l'écusson |
+|---|---|
+| `echelle-lycee` | a simple school building with a clock on its facade and two small flags |
+| `echelle-departement` | three small rooftops side by side above a winding road |
+| `echelle-region` | a range of rolling hills with a river cutting through them |
+| `echelle-national` | a stylized globe with meridian lines and a laurel branch curving beneath it |
+
+### Le contrat technique de ce lot
+
+- `podium` : `public/images/amis/podium.webp`, **1536×512**, fond CONSERVÉ.
+- Les six autres : `public/images/amis/<id>.webp`, **512×512**, fond
+  transparent (détourage via `scripts/lib/fond-peint.mjs`, comme partout).
+- Les sources 4K vont dans `assets-sources/amis/`, **jamais dans `public/`**
+  (cf. `lib/public-poids.test.ts`, qui refuse désormais l'inverse).
+- Aucun de ces fichiers n'est référencé tant que le code n'est pas branché :
+  générer d'abord, câbler ensuite, une pièce à la fois.
+
 ---
 
 ## Checklist technique

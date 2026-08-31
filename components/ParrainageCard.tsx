@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 import { useState } from 'react'
 import { Check, ChevronDown, Copy, Share2 } from 'lucide-react'
 import GemIcon from '@/components/ui/GemIcon'
@@ -77,12 +79,19 @@ export default function ParrainageCard({
         aria-expanded={open}
         className="flex w-full cursor-pointer items-center gap-3 p-3.5 text-left"
       >
-        <span
+        {/* LE CHECK, PAS LA GEMME. La carte dit « vous gagnez CHACUN 30
+            gemmes » : le mot qui porte l'offre est la réciprocité, pas la
+            monnaie — laquelle est déjà affichée en chiffres à droite. Deux
+            mains qui se tapent disent le partage ; une gemme seule répétait le
+            montant. */}
+        <Image
+          src="/images/amis/parrainage.webp"
+          alt=""
           aria-hidden="true"
-          className="bg-primary/10 flex size-10 shrink-0 items-center justify-center rounded-2xl"
-        >
-          <GemIcon className="text-primary size-5" aria-hidden="true" />
-        </span>
+          width={96}
+          height={96}
+          className="size-11 shrink-0 select-none object-contain"
+        />
         <span className="min-w-0 flex-1">
           <span className="font-heading block truncate text-sm font-extrabold">
             Invite un ami

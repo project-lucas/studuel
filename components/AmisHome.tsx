@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useTransition } from 'react'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import {
   Swords,
@@ -422,9 +423,33 @@ function ClassementArena({
         <>
           {/* Résumé : ta place, ton palier, et l'objectif juste devant. */}
           <div className="mb-2 flex items-center gap-3 rounded-2xl bg-muted/50 p-3">
-            <span aria-hidden="true" className="text-3xl">
-              {myRankTier.tier.emoji}
-            </span>
+            {/* DEUX DESSINS POUR DEUX SITUATIONS, et c'est la même case.
+                Sans ami, il n'y a pas de rang à montrer — « Bronze IV » sur un
+                classement d'une personne ne mesure rien. On y met donc la
+                mascotte, qui dit l'état vide et invite à le quitter. Dès qu'un
+                ami arrive, la case reprend son rôle et affiche le BLASON du
+                palier — le webp existait depuis juillet (lib/rank.ts le
+                déclare, RankBadge l'affiche), cet écran se contentait de son
+                emoji de repli. */}
+            {friendCount > 0 ? (
+              <Image
+                src={myRankTier.tier.image}
+                alt=""
+                aria-hidden="true"
+                width={96}
+                height={96}
+                className="size-12 shrink-0 select-none object-contain"
+              />
+            ) : (
+              <Image
+                src="/images/amis/solo.webp"
+                alt=""
+                aria-hidden="true"
+                width={128}
+                height={128}
+                className="size-14 shrink-0 select-none object-contain"
+              />
+            )}
             <div className="min-w-0 flex-1">
               <p className="font-heading font-bold text-foreground">
                 {friendCount > 0
@@ -654,7 +679,15 @@ function GeoRankingSection({
         <ScopeBoard board={board} scope={scope} demo={demo} />
       ) : (
         <div className="rounded-2xl bg-card p-4 ring-1 ring-foreground/10">
-          {/* Le podium : trois marches, le 1er au centre et plus grand. */}
+          {/* Le podium : trois marches, le 1er au centre et plus grand.
+
+              LES MARCHES SONT DESSINÉES, LES TÊTES VIENNENT DES DONNÉES. Le
+              bandeau est un DÉCOR VIDE (or au centre, argent à gauche, bronze
+              à droite) : les trois premiers sont de vrais élèves, et une
+              illustration qui les contiendrait mentirait — différemment chaque
+              semaine. Le dessin se pose donc SOUS la rangée, dans le même
+              ordre que `ordered` ([2e, 1er, 3e]), si bien que chacun surplombe
+              sa marche sans qu'aucun calage au pixel soit nécessaire. */}
           <div className="flex items-end justify-center gap-5">
             {ordered.map((m) => {
               const rank = board.mates.indexOf(m) + 1
@@ -684,6 +717,18 @@ function GeoRankingSection({
               )
             })}
           </div>
+
+          <Image
+            src="/images/amis/podium.webp"
+            alt=""
+            aria-hidden="true"
+            width={1536}
+            height={512}
+            // `-mt-1` colle la rangée aux marches : sans ce chevauchement léger,
+            // le podium se lisait comme une image POSÉE SOUS la liste plutôt
+            // que comme le sol sur lequel les trois se tiennent.
+            className="pointer-events-none -mt-1 w-full select-none"
+          />
 
           {/* Ma ligne, toujours visible — c'est elle qu'on vient vérifier. */}
           {me ? (

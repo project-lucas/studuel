@@ -71,7 +71,44 @@ node scripts/seed-contenu.mjs --num 309 --modules physique-chimie-5e            
 node scripts/seed-contenu.mjs --num 310 --modules svt-5e                           > supabase/310_contenu_svt_5e.sql
 node scripts/seed-contenu.mjs --num 311 --modules anglais-5e                       > supabase/311_contenu_anglais_5e.sql
 node scripts/seed-contenu.mjs --num 312 --modules espagnol-5e                      > supabase/312_contenu_espagnol_5e.sql
+node scripts/seed-contenu.mjs --num 326 --modules physique-chimie-6e               > supabase/326_contenu_physique_chimie_6e.sql
+node scripts/seed-contenu.mjs --num 327 --modules svt-6e                           > supabase/327_contenu_svt_6e.sql
+node scripts/seed-contenu.mjs --num 328 --modules francais-6e                      > supabase/328_contenu_francais_6e.sql
+node scripts/seed-contenu.mjs --num 329 --modules maths-6e                         > supabase/329_contenu_maths_6e.sql
+node scripts/seed-contenu.mjs --num 330 --modules histoire-geo-6e                  > supabase/330_contenu_histoire_geo_6e.sql
 ```
+
+## La campagne de Sixième (326 → 330)
+
+La classe d'ENTRÉE du produit était la plus pauvre du collège : 377 questions,
+contre 1 758 en 4e — et **2 chapitres** de physique-chimie contre 31. Cinq
+migrations lui rendent son programme.
+
+| Migration | Matière | Chapitres → fiches | Questions |
+|---|---|---|---|
+| **326** | Physique-chimie | 2 génériques → **4 chapitres, 10 fiches** | 80 |
+| **327** | SVT | 5 génériques → **3 chapitres, 9 fiches** | 72 |
+| **328** | Français | 5 génériques → **3 chapitres, 10 fiches** | 80 |
+| **329** | Maths | 5 génériques → **6 chapitres, 22 fiches** | 176 |
+| **330** | Histoire-géo | 5 génériques → **7 chapitres, 30 fiches, 2 ONGLETS** | 240 |
+
+**AUCUN IMPORT, ET C'EST LE BO QUI LE COMMANDE.** La campagne de 5e/4e/3e
+importait la physique-chimie, les SVT et les langues d'un niveau à l'autre,
+parce que le BO écrit le **cycle 4** d'un seul bloc. La 6e n'entre pas dans ce
+partage : elle appartient au **CYCLE 3**, avec l'école élémentaire. Son
+programme de sciences ne suit ni le même découpage ni le même niveau
+d'exigence — importer le cycle 4 aurait mis la génétique et les équations
+chimiques devant des élèves de onze ans. Les cinq modules sont donc **écrits**.
+
+**LA 6e OUVRE SES DEUX ONGLETS D'UN SEUL COUP**, comme la 5e :
+`histoire-geo-6e.mjs` porte deux blocs et deux rayons (20 fiches d'histoire en
+positions 1 → 20, 10 de géographie en 21 → 30).
+
+⚠️ **UNE COLLISION DE TITRE**, traitée par `theme IS NULL` comme les trois de la
+campagne de 5e : la fiche neuve **« Habiter les littoraux »** porte exactement
+le titre d'un chapitre hérité de la 008, or `chapters` impose
+`UNIQUE(subject_id, level, title)`. Le ménage tournant avant les insertions,
+l'ancien est parti quand le neuf arrive.
 
 ## Les campagnes de Cinquième (306 → 312) et de Quatrième (300 → 305)
 

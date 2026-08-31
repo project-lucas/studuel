@@ -1799,6 +1799,101 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'À EXÉCUTER pour allumer le diagramme. Rien d’autre n’en dépend. Attention à la contrepartie assumée du calcul : il ne compte QUE les quiz et les leçons — `study_sessions` (les flashcards) et `challenge_sessions` (le Défi) n’ont aucun rattachement fiable à une matière, la première n’ayant qu’un nom en texte libre et la seconde rien du tout. Le jour où l’une des deux en gagne un, elle s’ajoute à la fonction sans toucher au reste.',
   },
+  {
+    id: '326',
+    fichier: '326_contenu_physique_chimie_6e.sql',
+    feature:
+      'Physique-chimie 6e : les 10 fiches du programme sous leurs 4 chapitres (80 questions)',
+    siAbsente:
+      'La physique-chimie de 6e reste à DEUX fiches héritées de la 008 (« États et changements d’état », « Sources et formes d’énergie ») : c’est la matière la plus pauvre de l’app, dans la classe qui accueille les nouveaux collégiens. Mélanges, trajectoire, vitesse, conversions d’énergie et transmission d’un signal restent introuvables.',
+    // Sonde par UUID et non par titre : les seeds de contenu dérivent leurs
+    // identifiants du contenu (SHA-1), donc un UUID présent prouve que CE lot
+    // précis est passé — un titre pourrait venir d'un autre niveau.
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '0b0d579c-326a-57ff-a214-05f4f1be73dd',
+    },
+    decision:
+      'À EXÉCUTER pour remplir la SIXIÈME, la classe d’entrée du produit et la plus pauvre du collège. Les cinq migrations 326 → 330 sont indépendantes : chacune traite une matière et peut se coller seule.',
+  },
+  {
+    id: '327',
+    fichier: '327_contenu_svt_6e.sql',
+    feature:
+      'SVT 6e : les 9 fiches du programme sous leurs 3 chapitres (72 questions)',
+    siAbsente:
+      'Les SVT de 6e restent à 5 titres très larges hérités de la 008, sans découpage. La cellule, la classification, l’évolution, les besoins vitaux des organes, la conservation des aliments et la reproduction humaine n’ont aucune fiche propre.',
+    // Sonde par UUID et non par titre : les seeds de contenu dérivent leurs
+    // identifiants du contenu (SHA-1), donc un UUID présent prouve que CE lot
+    // précis est passé — un titre pourrait venir d'un autre niveau.
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'b71f99c4-65f3-5068-976e-9d874d5122ad',
+    },
+    decision:
+      'À EXÉCUTER pour remplir la SIXIÈME, la classe d’entrée du produit et la plus pauvre du collège. Les cinq migrations 326 → 330 sont indépendantes : chacune traite une matière et peut se coller seule.',
+  },
+  {
+    id: '328',
+    fichier: '328_contenu_francais_6e.sql',
+    feature:
+      'Français 6e : les 10 fiches du programme sous leurs 3 questionnements (80 questions)',
+    siAbsente:
+      'Le français de 6e reste aux 5 fiches de la 008. Un élève qui prépare un contrôle sur les récits de création, sur Molière ou sur la poésie du programme ne trouve rien.',
+    // Sonde par UUID et non par titre : les seeds de contenu dérivent leurs
+    // identifiants du contenu (SHA-1), donc un UUID présent prouve que CE lot
+    // précis est passé — un titre pourrait venir d'un autre niveau.
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '8f69c9d1-7cdd-5e7e-b37d-ff57ba7a4e4b',
+    },
+    decision:
+      'À EXÉCUTER pour remplir la SIXIÈME, la classe d’entrée du produit et la plus pauvre du collège. Les cinq migrations 326 → 330 sont indépendantes : chacune traite une matière et peut se coller seule.',
+  },
+  {
+    id: '329',
+    fichier: '329_contenu_maths_6e.sql',
+    feature:
+      'Maths 6e : les 22 fiches du programme sous leurs 6 chapitres (176 questions)',
+    siAbsente:
+      'Les maths de 6e restent à 5 titres très larges, dans la matière la plus travaillée du collège. Division euclidienne, symétrie axiale, somme des angles, durées, statistiques, probabilités et algorithmique n’ont aucune fiche.',
+    // Sonde par UUID et non par titre : les seeds de contenu dérivent leurs
+    // identifiants du contenu (SHA-1), donc un UUID présent prouve que CE lot
+    // précis est passé — un titre pourrait venir d'un autre niveau.
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '59a20ff1-b14d-5cb2-a8fc-7d4a02e3294f',
+    },
+    decision:
+      'À EXÉCUTER pour remplir la SIXIÈME, la classe d’entrée du produit et la plus pauvre du collège. Les cinq migrations 326 → 330 sont indépendantes : chacune traite une matière et peut se coller seule.',
+  },
+  {
+    id: '330',
+    fichier: '330_contenu_histoire_geo_6e.sql',
+    feature:
+      'Histoire-géo 6e : les 30 fiches du programme sous 7 chapitres et DEUX rayons (240 questions)',
+    siAbsente:
+      'L’histoire-géo de 6e reste à 5 fiches pour DEUX disciplines et une année entière, et le dossier n’a qu’un seul onglet. Néolithique, démocratie athénienne, naissance du judaïsme, romanisation, espaces de faible densité et répartition de la population mondiale sont absents.',
+    // Sonde par UUID et non par titre : les seeds de contenu dérivent leurs
+    // identifiants du contenu (SHA-1), donc un UUID présent prouve que CE lot
+    // précis est passé — un titre pourrait venir d'un autre niveau.
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '6673b42e-c53c-5b4f-934a-5036903c6dc9',
+    },
+    decision:
+      'À EXÉCUTER pour remplir la SIXIÈME, la classe d’entrée du produit et la plus pauvre du collège. Les cinq migrations 326 → 330 sont indépendantes : chacune traite une matière et peut se coller seule.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

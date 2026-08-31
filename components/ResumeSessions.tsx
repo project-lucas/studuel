@@ -131,29 +131,40 @@ function LeadCard({ item }: { item: ResumeItem }) {
         className="rev-card group flex items-center gap-3.5 rounded-[1.75rem] bg-primary p-3.5 text-primary-foreground ring-1 ring-black/5 transition-transform hover:-translate-y-0.5 active:scale-[0.99]"
       >
         {/* La vignette peinte de la matière, en grand : à cette taille elle
-            identifie la session avant même la lecture du titre. */}
-        {vignette ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={vignette}
-            alt=""
-            aria-hidden="true"
-            width={320}
-            height={320}
-            className="pointer-events-none size-14 shrink-0 select-none object-contain transition-transform duration-200 group-hover:scale-105"
-          />
-        ) : (
-          <span
-            aria-hidden="true"
-            className="grid size-14 shrink-0 place-items-center rounded-2xl bg-white/15 ring-1 ring-white/20"
-          >
-            <SubjectIcon
-              slug={item.subject.slug}
-              className="size-7 text-primary-foreground"
-              strokeWidth={2.25}
+            identifie la session avant même la lecture du titre.
+
+            Sur un CONTRÔLE, elle frémit toutes les cinq secondes (`.rev-vibre`,
+            globals.css) : c'est la seule carte de l'écran qui porte une
+            échéance, et rien d'autre ne l'en distinguait au premier coup d'œil.
+            Le conteneur porte la secousse, l'image garde son grossissement au
+            survol — deux animations de `transform` sur un même élément se
+            chassent l'une l'autre. */}
+        <span
+          aria-hidden="true"
+          className={cn(
+            'grid size-14 shrink-0 place-items-center',
+            item.kind === 'controle' && 'rev-vibre',
+          )}
+        >
+          {vignette ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={vignette}
+              alt=""
+              width={320}
+              height={320}
+              className="pointer-events-none size-14 select-none object-contain transition-transform duration-200 group-hover:scale-105"
             />
-          </span>
-        )}
+          ) : (
+            <span className="grid size-14 place-items-center rounded-2xl bg-white/15 ring-1 ring-white/20">
+              <SubjectIcon
+                slug={item.subject.slug}
+                className="size-7 text-primary-foreground"
+                strokeWidth={2.25}
+              />
+            </span>
+          )}
+        </span>
 
         <span className="flex min-w-0 flex-1 flex-col gap-1">
           <span

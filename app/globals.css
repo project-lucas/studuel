@@ -1989,6 +1989,86 @@ a:active > .arena-menu-row {
   animation: rev-search-in 0.2s var(--ease) backwards;
 }
 
+/* --- La vignette du prochain contrôle FRÉMIT, par à-coups ---------------------
+   Quand l'élève annonce un contrôle, sa session vient se poser en tête de « On
+   s'y remet ? ». La carte est déjà violette et déjà en premier — mais l'écran
+   en compte plusieurs, et rien n'y bouge : elle se fond dans la pile.
+
+   POURQUOI PAR À-COUPS, ET PAS EN CONTINU. Un mouvement permanent cesse d'être
+   un signal au bout de quelques secondes : l'œil s'y habitue, puis l'ignore
+   (et sur un écran de révision, il agace bien avant d'attirer). Ce qui rappelle
+   l'attention, c'est le RETOUR du mouvement après un silence. D'où une secousse
+   très brève — 0,45 s — suivie de près de trois secondes d'immobilité totale.
+
+   La mécanique tient dans les pourcentages : toute la vibration est comprimée
+   dans les 14 premiers % du cycle, et de 14 % à 100 % la vignette ne bouge plus
+   d'un pixel. Le cycle dure 3,2 s, la secousse en occupe donc moins d'un demi.
+
+   ⚠️ LE PIÈGE, SI TU CHANGES LA DURÉE (31/08/2026). Les pourcentages ci-dessous
+   sont RELATIFS à la durée du cycle : raccourcir `.rev-vibre` sans les
+   recalculer accélère aussi la SECOUSSE, alors qu'on ne voulait toucher qu'à
+   l'écart entre deux. C'est l'erreur commise ici même — le cycle est passé de
+   5 s à 4,5 s et la vibration a gagné 1,4 Hz au passage, sans que personne
+   l'ait demandé.
+
+   La règle : la secousse dure 0,45 s EN ABSOLU — cinq allers-retours, soit
+   5,6 Hz (mesuré au pas de 10 ms sur la feuille servie ; l'estimation « 6,7 Hz »
+   d'une version précédente de ce commentaire était fausse). Pour changer le rythme,
+   ne touche QUE la durée dans `.rev-vibre`, puis remets les pourcentages à
+   l'échelle — chacun vaut `ms ÷ durée_du_cycle`. Les six instants, en absolu :
+   50, 125, 200, 275, 350 et 400 ms, retour au repos à 450 ms.
+
+   L'amplitude est délibérément minuscule (1,5 px, 3°) et l'oscillation
+   s'amortit comme une vraie vibration — celle d'un téléphone posé sur une
+   table, pas un objet qu'on agite. À 56 px de côté, c'est perceptible du coin
+   de l'œil sans jamais rendre l'image floue ni gêner la lecture du titre.
+
+   Portée par un CONTENEUR, jamais par l'image : celle-ci garde son propre
+   `scale` au survol. Deux animations de `transform` sur le même élément se
+   remplacent l'une l'autre — la vignette aurait cessé de grandir sous le
+   curseur, ou sauté d'un état à l'autre. */
+@keyframes rev-vibre {
+  0%,
+  14.1%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  1.6% {
+    transform: translateX(-1.5px) rotate(-3deg);
+  }
+  3.9% {
+    transform: translateX(1.5px) rotate(3deg);
+  }
+  6.25% {
+    transform: translateX(-1.2px) rotate(-2.2deg);
+  }
+  8.6% {
+    transform: translateX(1.2px) rotate(2.2deg);
+  }
+  10.9% {
+    transform: translateX(-0.6px) rotate(-1deg);
+  }
+  12.5% {
+    transform: translateX(0.6px) rotate(1deg);
+  }
+}
+.rev-vibre {
+  animation: rev-vibre 3.2s ease-in-out infinite;
+  /* Le frémissement ne doit pas retarder le premier regard : on laisse la
+     carte arriver et se lire, PUIS on rappelle l'échéance. */
+  animation-delay: 1.2s;
+  /* La rotation pivote autour du centre de la vignette, pas d'un coin. */
+  transform-origin: center;
+}
+/* Un élève qui a demandé moins d'animations n'a pas demandé moins
+   d'information : la carte reste en tête de liste et garde son étiquette
+   d'échéance. C'est le mouvement qu'on retire, pas le signal. */
+@media (prefers-reduced-motion: reduce) {
+  .rev-vibre {
+    animation: none;
+  }
+}
+
 /* --- Onglet Moi : cartes « jouet » sur fond crème (maquette de Lucas, ---------
    2026-07-11, v2). Bandeau violet en carte arrondie avec la grande flamme de
    niveau à cheval sur son bord, cartes blanches épaisses : liseré violet et

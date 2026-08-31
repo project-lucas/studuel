@@ -42,7 +42,10 @@ export default async function SantePage() {
         return
       }
       const s = m.sonde
-      if (s.type === 'rpc') {
+      // Les deux sondes de fonction s'exécutent de la même façon — c'est leur
+      // LECTURE qui diffère, et `interpreterSonde` s'en charge : 'rpc' attend
+      // que la fonction réponde, 'rpc-ferme' attend qu'elle refuse.
+      if (s.type === 'rpc' || s.type === 'rpc-ferme') {
         const { error } = await supabase.rpc(s.fn, s.args)
         verdicts.set(m.id, interpreterSonde(s, error, 0))
         return

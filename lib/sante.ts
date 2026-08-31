@@ -22,6 +22,17 @@ export type Sonde =
   | { type: 'ligne'; table: string; colonne: string; valeur: string }
   /** La RPC existe (PGRST202 = absente ; tout autre retour = présente). */
   | { type: 'rpc'; fn: string; args: Record<string, unknown> }
+  /**
+   * La RPC est FERMÉE à la clé anon — la sonde à l'envers, pour les migrations
+   * qui ne font que révoquer un droit.
+   *
+   * Une migration de REVOKE ne crée ni table ni colonne ni fonction : il n'y a
+   * rien à observer, et c'est pourquoi la 324 est restée marquée « non
+   * sondable » alors même que son effet est parfaitement mesurable. Ce qu'elle
+   * change, c'est la RÉPONSE : un appel anonyme qui rendait 200 doit désormais
+   * être refusé. On mesure donc une porte qui ne s'ouvre plus.
+   */
+  | { type: 'rpc-ferme'; fn: string; args: Record<string, unknown> }
 
 export type MigrationSante = {
   /** Numéro de la migration ('188'). */
@@ -1766,11 +1777,14 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'CORRECTIF DE SÉCURITÉ : ferme réellement les trois outils de DDL créés par la 320, que `REVOKE … FROM PUBLIC` laissait appelables par un visiteur ANONYME',
     siAbsente:
       '⚠️ `optimiser_une_policy`, `optimiser_policies_rls` et `rls_initplan_auto` répondent HTTP 200 à un appel non authentifié. Pas d’élévation de privilège — elles ne changent que la FORME d’une expression de policy — mais un DÉNI DE SERVICE : chaque appel prend un verrou de niveau ALTER, et le rattrapage en prend un sur les ~130 policies de la base. Appelée en boucle, elle bloque les écritures de toute l’application.',
-    // NON SONDABLE : avant comme après, un appel anon rend quelque chose (200
-    // puis 42501), et `interpreterSonde` traite les deux comme « vivante » sur
-    // une sonde RPC. La vérification est la requête `has_function_privilege`
-    // laissée en pied du fichier — elle doit rendre trois lignes à `false`.
-    sonde: null,
+    // SONDÉE À L'ENVERS (31/08/2026). Elle a longtemps été marquée non
+    // sondable, au motif qu'un appel anon rend quelque chose avant comme après
+    // (200 puis 42501) et qu'une sonde 'rpc' lit les deux comme « vivante ».
+    // C'est vrai de la sonde 'rpc' — pas du fait lui-même : 200 et 42501 disent
+    // exactement le contraire l'un de l'autre. D'où 'rpc-ferme', qui les
+    // distingue. On sonde `optimiser_policies_rls`, la plus dangereuse des
+    // trois : elle prend un verrou ALTER sur les ~130 policies d'un seul appel.
+    sonde: { type: 'rpc-ferme', fn: 'optimiser_policies_rls', args: {} },
     decision:
       'À EXÉCUTER DÈS QUE POSSIBLE, et avant de laisser la 320 en place sur une base publique. La règle qu’elle établit vaut pour toute fonction future : sur ce projet, `REVOKE … FROM PUBLIC` ne ferme RIEN — Supabase accorde EXECUTE à `anon` et `authenticated` par des GRANT nommés. Il faut écrire `FROM PUBLIC, anon, authenticated`. Un test du dépôt (lib/rls-guard.test.ts) le vérifie désormais sur chaque migration neuve.',
   },
@@ -1808,6 +1822,16 @@ export function interpreterSonde(
   erreur: { code?: string; message?: string } | null,
   rows: number,
 ): Verdict {
+  if (sonde.type === 'rpc-ferme') {
+    // L'INVERSE de la sonde 'rpc' : ici, une réponse est un ÉCHEC.
+    //   42501    = la fonction existe, l'accès anon est fermé → migration passée
+    //   PGRST202 = elle n'est pas exposée du tout → fermée aussi (la migration
+    //              qui la crée n'a pas tourné : sans fonction, pas de porte)
+    //   pas d'erreur = un VISITEUR l'exécute → migration NON passée
+    return erreur?.code === PERMISSION_DENIED || erreur?.code === 'PGRST202'
+      ? 'vivante'
+      : 'eteinte'
+  }
   if (sonde.type === 'rpc') {
     // PGRST202 = « fonction introuvable ». Tout AUTRE retour (y compris une
     // erreur « not authenticated ») prouve que la fonction est déployée.

@@ -86,6 +86,47 @@ describe('interpreterSonde', () => {
     expect(interpreterSonde(sonde, null, 1)).toBe('vivante')
   })
 
+  it('RPC FERMÉE : un refus prouve la migration, une réponse la dément', () => {
+    // La sonde des migrations de REVOKE (324). Elle se lit à l'ENVERS des
+    // autres : ici, une fonction qui répond est le symptôme du problème.
+    const sonde = {
+      type: 'rpc-ferme',
+      fn: 'optimiser_policies_rls',
+      args: {},
+    } as const
+
+    // 42501 : la fonction existe, l'accès anon est fermé — la 324 a tourné.
+    expect(interpreterSonde(sonde, { code: PERMISSION_DENIED }, 0)).toBe(
+      'vivante',
+    )
+    // PGRST202 : pas exposée du tout — fermée aussi (la 320 qui la crée n'a
+    // pas tourné, donc il n'y a pas de porte à fermer).
+    expect(interpreterSonde(sonde, { code: 'PGRST202' }, 0)).toBe('vivante')
+    // AUCUNE erreur = un visiteur anonyme l'exécute. C'est très exactement le
+    // trou que la 324 vient boucher : la sonde doit le crier, pas l'absoudre.
+    expect(interpreterSonde(sonde, null, 0)).toBe('eteinte')
+  })
+
+  it('la sonde RPC ordinaire et la fermée lisent le MÊME retour à l’envers', () => {
+    // Le piège qui a laissé la 324 « non sondable » : sur une sonde 'rpc',
+    // 200 et 42501 rendent tous deux « vivante », donc on ne pouvait pas
+    // distinguer une porte ouverte d'une porte fermée. Les deux types de sonde
+    // doivent diverger sur ces deux retours-là — sinon 'rpc-ferme' ne sert à
+    // rien et on est revenu au point de départ.
+    const ouverte = { type: 'rpc', fn: 'f', args: {} } as const
+    const fermee = { type: 'rpc-ferme', fn: 'f', args: {} } as const
+
+    expect(interpreterSonde(ouverte, null, 0)).toBe('vivante')
+    expect(interpreterSonde(fermee, null, 0)).toBe('eteinte')
+
+    expect(interpreterSonde(ouverte, { code: PERMISSION_DENIED }, 0)).toBe(
+      'vivante',
+    )
+    expect(interpreterSonde(fermee, { code: PERMISSION_DENIED }, 0)).toBe(
+      'vivante',
+    )
+  })
+
   it('RPC : PGRST202 = éteinte, « not authenticated » = vivante', () => {
     const sonde = { type: 'rpc', fn: 'profile_stats', args: {} } as const
     expect(interpreterSonde(sonde, { code: 'PGRST202' }, 0)).toBe('eteinte')

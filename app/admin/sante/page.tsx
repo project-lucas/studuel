@@ -52,7 +52,11 @@ export default async function SantePage() {
       }
       const colonne = s.type === 'table' ? '*' : s.colonne
       let query = supabase.from(s.table).select(colonne).limit(1)
-      if (s.type === 'ligne') query = query.eq(s.colonne, s.valeur)
+      // 'ligne' et 'ligne-absente' se LISENT de la même façon — c'est leur
+      // interprétation qui s'oppose, et `interpreterSonde` s'en charge.
+      if (s.type === 'ligne' || s.type === 'ligne-absente') {
+        query = query.eq(s.colonne, s.valeur)
+      }
       const { data, error } = await query
       verdicts.set(m.id, interpreterSonde(s, error, data?.length ?? 0))
     }),

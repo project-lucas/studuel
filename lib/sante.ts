@@ -23,6 +23,17 @@ export type Sonde =
   /** La RPC existe (PGRST202 = absente ; tout autre retour = présente). */
   | { type: 'rpc'; fn: string; args: Record<string, unknown> }
   /**
+   * La ligne a DISPARU — la sonde à l'envers, pour les migrations qui
+   * SUPPRIMENT.
+   *
+   * Une migration de ménage ne crée rien : elle retire. Une sonde 'ligne'
+   * ordinaire y répondrait « absente » avant comme après, donc ne dirait rien.
+   * Ici l'absence est justement la PREUVE que la migration a tourné — à
+   * condition de viser une ligne qu'aucune autre migration ne retire, sans quoi
+   * on mesurerait le travail du voisin.
+   */
+  | { type: 'ligne-absente'; table: string; colonne: string; valeur: string }
+  /**
    * La RPC est FERMÉE à la clé anon — la sonde à l'envers, pour les migrations
    * qui ne font que révoquer un droit.
    *
@@ -294,7 +305,8 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     feature: 'Contenu EMC + Sport (42 chapitres, 336 questions)',
     siAbsente:
       'EMC et Sport restent des coquilles cliquables : l’élève ouvre la matière et voit un programme vide, à tous les niveaux.',
-    sonde: { type: 'ligne', table: 'chapters', colonne: 'title', valeur: 'Le respect d’autrui' },
+// SONDE CORRIGÉE (31/08/2026) — voir le commentaire de la sonde CLI.
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: '0c717a05-a7e7-58a0-8224-5a96565ad8fd' },
   },
   {
     id: '217',
@@ -1894,6 +1906,166 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'À EXÉCUTER pour remplir la SIXIÈME, la classe d’entrée du produit et la plus pauvre du collège. Les cinq migrations 326 → 330 sont indépendantes : chacune traite une matière et peut se coller seule.',
   },
+  {
+    id: '331',
+    fichier: '331_lecons_exercices_vides.sql',
+    feature:
+      'Retire les 31 leçons « Exercices types » sans quiz — des coquilles qui invitaient à lancer un quiz inexistant',
+    siAbsente:
+      '31 leçons de l’app s’ouvrent sur « Les exercices corrigés arrivent bientôt. Lance le quiz pour tester ce que tu sais déjà ! » — et il n’y a aucun quiz. Le trou frappe APRÈS l’effort, au moment précis où l’app promettait un exercice : c’est le mode de départ le plus grave du produit, parce qu’il se lit comme un bug et non comme un manque.',
+    // SONDÉE À L'ENVERS. La migration ne crée rien : elle retire. C'est donc
+    // l'ABSENCE de la ligne qui prouve son passage — d'où le type
+    // 'ligne-absente', symétrique de 'rpc-ferme'.
+    // LA CIBLE EST UNE LEÇON DE LATIN, et ce n'est pas indifférent : le latin
+    // est la seule matière de ce lot qu'AUCUNE autre migration ne réécrit. Une
+    // cible en histoire-géo 4e ou en anglais 6e disparaîtrait aussi avec les
+    // migrations 332 et 333 — la sonde mesurerait alors leur travail, pas le
+    // sien, et se déclarerait verte sans que la 331 ait tourné.
+    sonde: {
+      type: 'ligne-absente',
+      table: 'lessons',
+      colonne: 'id',
+      valeur: '499c0024-64c6-45d2-94a4-078a5fc94e7b',
+    },
+    decision:
+      'À EXÉCUTER EN PREMIER de tout le lot : c’est le plus grave par unité et le moins cher — aucune écriture de contenu, une suppression bornée par trois conditions. Les migrations 332 à 335 en retirent 18 d’elles-mêmes (histoire-géo 4e, anglais 6e, technologie 5e et 4e sont réécrites) ; la 331 traite le reste, dont le latin et les SES, qui n’ont pas de réécriture prévue.',
+  },
+  {
+    id: '332',
+    fichier: '332_contenu_histoire_geo_4e.sql',
+    feature:
+      'Histoire-géo 4e : les 18 fiches du programme sous 6 thèmes et DEUX rayons (144 questions)',
+    siAbsente:
+      'L’histoire-géo de 4e reste à 5 chapitres hérités pour DEUX disciplines et une année entière, et le dossier n’a qu’un seul onglet. Avec l’anglais de 6e, c’est l’un des deux seuls points du tronc commun à cumuler maigreur et leçons sans quiz. Traite négrière, Terreur, révolution industrielle, conquête du droit de vote, Troisième République, migrations et maritimisation sont absents.',
+    // Sonde par UUID : les seeds dérivent leurs identifiants du contenu (SHA-1),
+    // donc un UUID présent prouve que CE lot précis est passé.
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '2b7b7129-b680-5559-83f6-c675d1f5476b',
+    },
+    decision:
+      'À EXÉCUTER : c’est, avec la 333, l’un des deux points les plus dangereux de l’onglet Réviser. Écrite et non importée — chaque niveau d’histoire-géo a sa période, la 4e couvrant le XVIIIe et le XIXe siècle.',
+  },
+  {
+    id: '333',
+    fichier: '333_contenu_anglais_6e.sql',
+    feature:
+      'Anglais 6e : les 21 fiches du programme de langue sous 4 chapitres (168 questions)',
+    siAbsente:
+      'L’anglais de 6e reste à 5 fiches héritées, dont cinq leçons sans quiz. Un élève qui révise le pluriel, les articles, le génitif, BE, HAVE GOT, DO, CAN, le présent simple, le prétérit, les irréguliers ou le comparatif ne trouve rien.',
+    // Sonde par UUID : les seeds dérivent leurs identifiants du contenu (SHA-1),
+    // donc un UUID présent prouve que CE lot précis est passé.
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'c371d142-8ced-5f94-9a25-77ab3f83fd24',
+    },
+    decision:
+      'À EXÉCUTER : l’autre point noir du tronc commun. ÉCRITE et non importée de la 4e, contrairement à toutes les autres langues du dépôt : le BO rédige les LV pour le cycle 4, or la 6e relève du cycle 3 et vise le niveau A1. Les 41 fiches de 4e portent le present perfect, la voix passive et le discours indirect — devant un élève de onze ans, ce n’est pas de l’avance, c’est un mur.',
+  },
+  {
+    id: '334',
+    fichier: '334_contenu_technologie_5e.sql',
+    feature:
+      'Technologie 5e : les 23 fiches du cycle 4, importées de la 3e (184 questions)',
+    siAbsente:
+      'La technologie de 5e reste à 4 chapitres hérités, dont quatre leçons sans quiz. Objets techniques, matériaux, chaînes d’information et d’énergie, programmation et démarche de projet sont quasi absents.',
+    // Sonde par UUID : les seeds dérivent leurs identifiants du contenu (SHA-1),
+    // donc un UUID présent prouve que CE lot précis est passé.
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '2b1f010f-4475-5bca-919e-9727c3cb6f78',
+    },
+    decision:
+      'À EXÉCUTER. IMPORT légitime : le BO écrit la technologie pour le CYCLE 4 entier, comme la physique-chimie (309) et les SVT (310) — mêmes thèmes, approfondis d’année en année. Une correction dans technologie-3e.mjs vaut désormais pour les trois niveaux.',
+  },
+  {
+    id: '335',
+    fichier: '335_contenu_technologie_4e.sql',
+    feature:
+      'Technologie 4e : les 23 fiches du cycle 4, importées de la 3e (184 questions)',
+    siAbsente:
+      'La technologie de 4e reste à 4 chapitres hérités, dont quatre leçons sans quiz — même situation exactement que la 5e.',
+    // Sonde par UUID : les seeds dérivent leurs identifiants du contenu (SHA-1),
+    // donc un UUID présent prouve que CE lot précis est passé.
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'e33eca5c-3ece-585f-876a-056ccad5051c',
+    },
+    decision:
+      'À EXÉCUTER, avec la 334 dont elle est le jumeau. Même import depuis la 3e, même justification par le cycle 4.',
+  },
+  {
+    id: '336',
+    fichier: '336_contenu_technologie_6e.sql',
+    feature:
+      'Technologie 6e : les 10 fiches du cycle 3 sous 4 chapitres (80 questions)',
+    siAbsente:
+      'La technologie de 6e reste à DEUX chapitres et 20 questions — après la physique-chimie, la matière la plus pauvre du collège. Besoin, fonction d’usage, matériaux, croquis, chaîne d’information et programmation sont quasi absents.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'beb5b557-794c-5051-802f-05a3546b457e',
+    },
+    decision:
+      'À EXÉCUTER. ÉCRITE et non importée de la 3e, contrairement à la 5e (334) et à la 4e (335) : le BO écrit la technologie pour le CYCLE 4, dont la 6e ne fait pas partie. La frontière avec la physique-chimie de 6e (326) est tenue : la 326 traite le SIGNAL, ce module traite l’OBJET qui le produit.',
+  },
+  {
+    id: '337',
+    fichier: '337_contenu_emc_6e.sql',
+    feature:
+      'EMC 6e : les 8 fiches du cycle 3 sous 3 chapitres (64 questions)',
+    siAbsente:
+      'L’EMC de 6e reste à TROIS chapitres pour une année. Harcèlement, laïcité, devise de la République, différence entre règle et loi et engagement sont absents — alors que le lycée a reçu ses programmes (230, 277, 284).',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'ac90145b-f5e8-5758-a693-20adf8c54b69',
+    },
+    decision:
+      'À EXÉCUTER. Séparée du cycle 4 (338) : le programme d’EMC est écrit par cycle, et la 6e aborde les mêmes notions à partir de l’expérience immédiate de l’élève — la classe, la cour — là où le cycle 4 les reprend au niveau du droit et des institutions.',
+  },
+  {
+    id: '338',
+    fichier: '338_contenu_emc_cycle4.sql',
+    feature:
+      'EMC cycle 4 : 10 fiches × 3 niveaux (5e, 4e, 3e), 240 questions',
+    siAbsente:
+      'L’EMC de 5e, 4e et 3e reste à TROIS chapitres, les mêmes pour les trois niveaux. Discriminations, limites de la liberté d’expression, vie privée, justice des mineurs, citoyenneté européenne, droit de vote, médias et défense sont absents.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '4d703636-b623-5a04-829c-557edfffd09f',
+    },
+    decision:
+      'À EXÉCUTER. UN SEUL MODULE POUR TROIS NIVEAUX : le BO écrit l’EMC par cycle, les mêmes notions s’y approfondissant sans changer de découpage. ⚠️ Son ménage porte sur un IN (5e, 4e, 3e) : il ne doit border ni la 6e (337) ni le lycée (230, 277, 284), déjà traités.',
+  },
+  {
+    id: '339',
+    fichier: '339_contenu_sport_college.sql',
+    feature:
+      'EPS collège : 8 fiches × 4 niveaux (6e à 3e), 256 questions',
+    siAbsente:
+      'L’EPS n’a que TROIS chapitres au collège, pour quatre années. Champs d’apprentissage, échauffement, corps à l’effort, hygiène de vie, rôles sociaux, règles et premiers secours sont absents.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '66d97fde-f6ce-5200-9dd5-c10705d91966',
+    },
+    decision:
+      'À EXÉCUTER en dernier du lot : c’est la matière dont le manque pèse le moins sur la semaine d’un élève. UN SEUL MODULE POUR QUATRE NIVEAUX, seule exception du dépôt — et c’est le BO qui l’autorise : les quatre champs d’apprentissage sont identiques de la 6e à la 3e, ce qui varie étant le niveau d’exigence dans la PRATIQUE, donc ce qui ne se révise pas sur écran. Le module ne couvre volontairement que ce qui est évaluable à l’écrit.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */
@@ -1917,6 +2089,15 @@ export function interpreterSonde(
   erreur: { code?: string; message?: string } | null,
   rows: number,
 ): Verdict {
+  if (sonde.type === 'ligne-absente') {
+    // L'INVERSE de la sonde 'ligne' : ici, trouver la ligne est un ÉCHEC.
+    //   lecture refusée (42501) → on ne voit rien, donc on ne conclut rien
+    //   aucune ligne             → elle a été supprimée : migration passée
+    //   une ligne                → elle est toujours là : migration NON passée
+    if (erreur?.code === PERMISSION_DENIED) return 'non-sondable'
+    if (erreur) return 'non-sondable'
+    return rows === 0 ? 'vivante' : 'eteinte'
+  }
   if (sonde.type === 'rpc-ferme') {
     // L'INVERSE de la sonde 'rpc' : ici, une réponse est un ÉCHEC.
     //   42501    = la fonction existe, l'accès anon est fermé → migration passée

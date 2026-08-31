@@ -86,6 +86,40 @@ describe('interpreterSonde', () => {
     expect(interpreterSonde(sonde, null, 1)).toBe('vivante')
   })
 
+  it('LIGNE ABSENTE : la disparition prouve la migration de ménage', () => {
+    // La sonde des migrations qui SUPPRIMENT (331). Elle se lit à l'envers de
+    // la sonde 'ligne' : trouver la ligne est ici un échec.
+    const sonde = {
+      type: 'ligne-absente',
+      table: 'lessons',
+      colonne: 'id',
+      valeur: '499c0024-64c6-45d2-94a4-078a5fc94e7b',
+    } as const
+
+    // Aucune ligne : le ménage a bien eu lieu.
+    expect(interpreterSonde(sonde, null, 0)).toBe('vivante')
+    // La ligne est encore là : la migration n'a pas tourné.
+    expect(interpreterSonde(sonde, null, 1)).toBe('eteinte')
+    // Lecture refusée : on ne voit rien, donc on ne conclut rien — surtout pas
+    // « c'est supprimé », qui serait la conclusion dangereuse.
+    expect(interpreterSonde(sonde, { code: PERMISSION_DENIED }, 0)).toBe(
+      'non-sondable',
+    )
+  })
+
+  it('les deux sondes de ligne lisent le MÊME retour à l’envers', () => {
+    // Sans cette opposition, 'ligne-absente' ne servirait à rien : c'est elle
+    // qui permet de mesurer une migration qui ne crée rien.
+    const presente = { type: 'ligne', table: 'lessons', colonne: 'id', valeur: 'x' } as const
+    const absente = { type: 'ligne-absente', table: 'lessons', colonne: 'id', valeur: 'x' } as const
+
+    expect(interpreterSonde(presente, null, 1)).toBe('vivante')
+    expect(interpreterSonde(absente, null, 1)).toBe('eteinte')
+
+    expect(interpreterSonde(presente, null, 0)).toBe('eteinte')
+    expect(interpreterSonde(absente, null, 0)).toBe('vivante')
+  })
+
   it('RPC FERMÉE : un refus prouve la migration, une réponse la dément', () => {
     // La sonde des migrations de REVOKE (324). Elle se lit à l'ENVERS des
     // autres : ici, une fonction qui répond est le symptôme du problème.

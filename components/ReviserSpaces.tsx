@@ -10,9 +10,10 @@ type SpaceId = 'reviser' | 'carnet'
 /**
  * L'onglet Réviser en deux espaces : « Mes matières » (la mission, le
  * programme) et « Mon carnet » (les cours façon Wooflash). Plus de segmented
- * control en tête — l'entrée du carnet est une tuile dédiée (CarnetTile) dans
- * le flux, et le volet carnet s'ouvre avec sa propre barre de retour. Les deux
- * volets restent montés (attribut `hidden`) pour conserver leur état.
+ * control en tête — l'entrée du carnet est un bouton libellé (CarnetButton)
+ * posé sur la ligne du titre « Réviser », et le volet carnet s'ouvre avec sa
+ * propre barre de retour. Les deux volets restent montés (attribut `hidden`)
+ * pour conserver leur état.
  *
  * L'espace actif vit dans l'URL (`?espace=carnet`), seule source de vérité :
  * lien partageable, bon volet conservé au retour d'un chapitre. Le tap passe

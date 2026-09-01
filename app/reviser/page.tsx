@@ -22,7 +22,7 @@ import CoursesShelf, {
 import CarnetFab from '@/components/carnet/CarnetFab'
 import CarnetAiCard from '@/components/carnet/CarnetAiCard'
 import RevoirBand from '@/components/carnet/RevoirBand'
-import CarnetTile from '@/components/carnet/CarnetTile'
+import CarnetButton from '@/components/carnet/CarnetButton'
 import SerieBar from '@/components/reviser/SerieBar'
 import MarcelFab from '@/components/reviser/MarcelFab'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
@@ -579,7 +579,22 @@ export default async function ReviserPage() {
 
   return (
     <div className="flex flex-col gap-3">
-      <TabHeader title="Réviser" />
+      <TabHeader
+        title="Réviser"
+        action={
+          /* LA porte du carnet, sur la ligne du titre : la seule commande de
+             l'accueil visible sans défiler, juste au-dessus du « + Contrôle »
+             de la carte de série. Elle était un bouton-icône muet perdu entre
+             le crayon et la loupe, à mi-hauteur de page. */
+          <CarnetButton
+            coursesCount={courseItems.length}
+            questionsCount={courseItems.reduce(
+              (sum, c) => sum + c.questionCount,
+              0,
+            )}
+          />
+        }
+      />
       {/* Tour guidé post-onboarding (spotlights sur la nav + bulles). */}
       <TourGuide etatEnBase={profile.tutorial_completed} />
       {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
@@ -610,18 +625,6 @@ export default async function ReviserPage() {
               progressBySlug={progressBySlug}
               examBySubject={examBySubject}
               emptySlugs={emptySlugs}
-              carnetSlot={
-                /* La porte d'entrée du carnet : un bouton-icône collé à la
-                   loupe de la rangée de commandes (l'ancienne tuile pleine
-                   largeur vivait sous le pli). */
-                <CarnetTile
-                  coursesCount={courseItems.length}
-                  questionsCount={courseItems.reduce(
-                    (sum, c) => sum + c.questionCount,
-                    0,
-                  )}
-                />
-              }
               topSlot={
                 /* DEUX blocs avant les matières, plus cinq. L'accueil empilait
                    la mission du jour, la ligne des contrôles, la boucle

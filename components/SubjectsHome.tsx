@@ -477,7 +477,6 @@ export default function SubjectsHome({
   examBySubject = {},
   emptySlugs = EMPTY_SLUGS,
   topSlot,
-  carnetSlot,
 }: {
   subjects: Subject[]
   selected: string[] | null
@@ -495,9 +494,6 @@ export default function SubjectsHome({
   // Blocs insérés au-dessus de la grille des matières (série/semaine, contrôles,
   // reprise…) — rendus côté serveur et passés en enfant.
   topSlot?: React.ReactNode
-  // L'entrée « Mon carnet » (bouton-icône rond), rendue collée à la loupe du
-  // bandeau « Ton programme » — rendue côté serveur et passée en enfant.
-  carnetSlot?: React.ReactNode
 }) {
   const [editing, setEditing] = useState(false)
   const [picked, setPicked] = useState<Set<string>>(
@@ -588,7 +584,6 @@ export default function SubjectsHome({
                 <Pencil className="size-4.5" strokeWidth={2.4} aria-hidden="true" />
               </button>
             )}
-            {carnetSlot}
             <ProgramSearch subjects={subjects} />
           </div>
         </div>

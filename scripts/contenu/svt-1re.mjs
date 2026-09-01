@@ -132,29 +132,39 @@ DELETE FROM public.chapters c
           axe: 'Transmission, variation et expression du patrimoine génétique',
           lecon: {
             titre: 'Mitose et méiose',
-            cours: `Toutes les cellules d’un organisme dérivent d’une cellule unique par **divisions successives**. Deux types de division coexistent, aux conséquences génétiques opposées.
+            cours: `Toutes les cellules d'un organisme dérivent d'une seule, par divisions successives. Deux divisions coexistent, aux conséquences génétiques opposées.
 
 ## Le cycle cellulaire
-Il alterne **interphase** et **mitose**. L’interphase comprend trois phases : G1 (croissance), **S** (réplication de l’ADN, où chaque chromosome passe d’une à deux chromatides) et G2 (préparation).
+| La phase | Ce qui s'y passe |
+| **G1** | Croissance de la cellule |
+| **S** | **Réplication** de l'ADN : chaque chromosome passe d'une à deux chromatides |
+| **G2** | Préparation à la division |
+| **Mitose** | La division elle-même |
 
-## La mitose : conformité
-Une cellule mère donne **deux cellules filles génétiquement identiques** entre elles et à la cellule mère. Quatre phases :
-- **prophase** : les chromosomes se condensent, l’enveloppe nucléaire disparaît ;
-- **métaphase** : les chromosomes s’alignent à l’équateur ;
-- **anaphase** : les deux chromatides de chaque chromosome se séparent et migrent aux pôles ;
-- **télophase** : deux noyaux se reforment, puis la cytodiérèse sépare les cytoplasmes.
+Les trois premières forment l'**interphase**.
 
-La mitose assure la croissance, le renouvellement des tissus et la reproduction asexuée.
+## La mitose : la conformité
+Une cellule mère donne **deux cellules filles génétiquement identiques** entre elles et à la cellule mère.
 
-## La méiose : diversité
-Deux divisions successives à partir d’une cellule à 2n chromosomes donnent **quatre cellules haploïdes** (n).
-- **Méiose I**, dite réductionnelle : les chromosomes **homologues** s’apparient (bivalents) puis se séparent. C’est ici que se produisent le **brassage interchromosomique** (répartition aléatoire des homologues) et le **brassage intrachromosomique** (crossing-over, échanges entre chromatides homologues).
-- **Méiose II**, dite équationnelle : elle sépare les chromatides, comme une mitose.
+| La phase | Ce qui se passe |
+| **Prophase** | Les chromosomes se condensent, l'enveloppe nucléaire disparaît |
+| **Métaphase** | Les chromosomes s'alignent à l'équateur |
+| **Anaphase** | Les deux chromatides de chaque chromosome migrent aux pôles |
+| **Télophase** | Deux noyaux se reforment, puis la cytodiérèse sépare les cytoplasmes |
 
-> Le nombre de combinaisons chromosomiques possibles chez l’humain, par le seul brassage interchromosomique, est de 2 puissance 23, soit plus de 8 millions — avant même le crossing-over et la fécondation.
+> Elle assure la croissance, le renouvellement des tissus et la reproduction asexuée.
 
-## Contrôle du cycle
-Des **points de contrôle** vérifient l’intégrité de l’ADN et le bon attachement des chromosomes. Leur défaillance ouvre la voie à des anomalies : c’est un des mécanismes de la cancérisation.`,
+## La méiose : la diversité
+Deux divisions successives à partir d'une cellule à 2n chromosomes donnent **quatre cellules haploïdes** (n).
+
+| La division | Son nom | Ce qu'elle sépare | Le brassage produit |
+| **Méiose I** | Réductionnelle | Les chromosomes **homologues** | **Interchromosomique** (répartition aléatoire) et **intrachromosomique** (crossing-over) |
+| **Méiose II** | Équationnelle | Les **chromatides**, comme une mitose | Aucun |
+
+> Chez l'humain, le seul brassage interchromosomique offre 2 puissance 23 combinaisons, soit plus de 8 millions — avant même le crossing-over et la fécondation.
+
+## Le contrôle du cycle
+Des **points de contrôle** vérifient l'intégrité de l'ADN et l'attachement des chromosomes. Leur défaillance ouvre la voie aux anomalies : c'est l'un des mécanismes de la cancérisation.`,
           },
           questions: [
             ['Que produit une mitose ?', ['Deux cellules filles génétiquement identiques à la cellule mère', 'Quatre cellules haploïdes', 'Deux cellules haploïdes', 'Une cellule à 4n chromosomes'], 0, 'La mitose est une division conforme : elle assure la stabilité génétique.'],
@@ -172,24 +182,35 @@ Des **points de contrôle** vérifient l’intégrité de l’ADN et le bon atta
           axe: 'Transmission, variation et expression du patrimoine génétique',
           lecon: {
             titre: 'Un mécanisme semi-conservatif',
-            cours: `Avant chaque division, la cellule doit **copier l’intégralité de son ADN**. Ce mécanisme, d’une fidélité remarquable, n’est pourtant pas infaillible — et c’est de là que naît une part de la diversité du vivant.
+            cours: `Avant chaque division, la cellule copie tout son ADN. Le mécanisme est d'une fidélité remarquable — mais pas infaillible, et c'est de là que naît une part de la diversité du vivant.
 
 ## Le principe semi-conservatif
-Chaque molécule d’ADN fille est formée d’un **brin parental** conservé et d’un **brin néoformé**. Meselson et Stahl l’ont démontré en 1958 par une expérience de marquage à l’azote lourd, dont le résultat excluait les hypothèses conservative et dispersive.
+Chaque molécule d'ADN fille est formée d'un **brin parental** conservé et d'un **brin néoformé**.
+
+| L'hypothèse | Ce qu'elle prévoyait | Le verdict de Meselson et Stahl (1958) |
+| **Conservative** | Une molécule intacte, une entièrement neuve | Écartée |
+| **Dispersive** | Des fragments anciens et neufs mêlés | Écartée |
+| **Semi-conservative** | Un brin ancien, un brin neuf | **Confirmée** |
 
 ## Le déroulement
-- L’**ADN hélicase** ouvre la double hélice et forme un **œil de réplication** bordé de deux **fourches**.
-- L’**ADN polymérase** synthétise le brin complémentaire en respectant l’**appariement** A-T et C-G.
-- La synthèse est **orientée** : la polymérase ne travaille que dans un sens, ce qui explique qu’un brin soit copié en continu et l’autre par fragments.
-- Chez les eucaryotes, la réplication démarre en **de nombreuses origines simultanées** — sans quoi copier 3 milliards de paires de bases prendrait des semaines.
+| L'acteur | Son rôle |
+| **ADN hélicase** | Ouvre la double hélice et forme un **œil de réplication** bordé de deux **fourches** |
+| **ADN polymérase** | Synthétise le brin complémentaire en respectant l'appariement A-T et C-G |
+
+La synthèse est **orientée** : la polymérase ne travaille que dans un sens, d'où un brin copié en continu et l'autre par fragments. Chez les eucaryotes, la réplication démarre en **de nombreuses origines simultanées**.
+
+> Sans ces origines multiples, copier 3 milliards de paires de bases prendrait des semaines.
 
 ## La fidélité, et ses limites
-L’ADN polymérase corrige la plupart de ses erreurs. Des systèmes de **réparation** interviennent ensuite. Il subsiste néanmoins environ une erreur non corrigée pour un milliard de nucléotides copiés : c’est une **mutation**.
+La polymérase corrige la plupart de ses erreurs, des systèmes de **réparation** interviennent ensuite. Il subsiste environ **une erreur par milliard de nucléotides** copiés : c'est une **mutation**.
 
 > Une fidélité totale interdirait toute évolution ; une fidélité médiocre rendrait la vie impossible. Le vivant fonctionne sur ce compromis.
 
 ## Les agents mutagènes
-Les rayons **UV** (qui soudent deux bases voisines), les **radiations ionisantes** et certains agents chimiques (benzène, goudrons du tabac) augmentent fortement le taux de mutation en endommageant l’ADN ou en gênant sa réplication.`,
+| L'agent | Son effet sur l'ADN |
+| **Rayons UV** | Soudent deux bases voisines |
+| **Radiations ionisantes** | Cassent les brins |
+| **Agents chimiques** (benzène, goudrons du tabac) | Endommagent les bases ou gênent la réplication |`,
           },
           questions: [
             ['Que signifie « réplication semi-conservative » ?', ['Chaque molécule fille garde un brin parental et un brin néoformé', 'Une molécule fille est ancienne, l’autre entièrement neuve', 'Les deux molécules filles sont entièrement neuves', 'Les brins parentaux se fragmentent au hasard'], 0, 'C’est ce que l’expérience de Meselson et Stahl a établi.'],
@@ -207,27 +228,40 @@ Les rayons **UV** (qui soudent deux bases voisines), les **radiations ionisantes
           axe: 'Transmission, variation et expression du patrimoine génétique',
           lecon: {
             titre: 'De l’ADN à la protéine',
-            cours: `Un gène est une portion d’ADN qui porte l’information nécessaire à la fabrication d’une **protéine**. Le passage de l’une à l’autre se fait en deux étapes.
+            cours: `Un gène est une portion d'ADN qui porte l'information nécessaire à la fabrication d'une protéine. Le passage de l'une à l'autre se fait en deux étapes.
+
+## Les deux étapes
+| L'étape | Le lieu | Ce qui est produit |
+| **Transcription** | Le **noyau** | Un ARN pré-messager |
+| **Maturation** | Le noyau | Un ARN messager |
+| **Traduction** | Le **cytoplasme** | Une protéine |
 
 ## La transcription
-Dans le **noyau**, l’**ARN polymérase** copie le brin transcrit du gène en une molécule d’**ARN pré-messager**. L’ARN diffère de l’ADN par trois traits : il est simple brin, son sucre est le ribose, et l’**uracile** y remplace la thymine.
+L'**ARN polymérase** copie le brin transcrit du gène en **ARN pré-messager**.
+
+| L'ADN | L'ARN |
+| Double brin | **Simple** brin |
+| Désoxyribose | **Ribose** |
+| Thymine (T) | **Uracile** (U) |
 
 ## La maturation
-Chez les eucaryotes, le pré-messager subit un **épissage** : les **introns** (séquences non codantes) sont excisés, les **exons** raboutés. L’**épissage alternatif** permet à un même gène de produire plusieurs ARN messagers différents, donc plusieurs protéines — c’est une des raisons pour lesquelles l’humain fabrique bien plus de protéines qu’il n’a de gènes.
+Le pré-messager subit un **épissage** : les **introns**, non codants, sont excisés ; les **exons** sont raboutés.
+
+> L'**épissage alternatif** permet à un même gène de produire plusieurs ARN messagers, donc plusieurs protéines — une des raisons pour lesquelles l'humain fabrique bien plus de protéines qu'il n'a de gènes.
 
 ## La traduction
-L’ARN messager gagne le **cytoplasme**, où le **ribosome** le lit par groupes de trois nucléotides, les **codons**. À chaque codon correspond un acide aminé, apporté par un **ARN de transfert**. Les acides aminés s’enchaînent en une chaîne polypeptidique jusqu’au **codon stop**.
+Le **ribosome** lit l'ARN messager par groupes de trois nucléotides, les **codons**. À chaque codon correspond un acide aminé, apporté par un **ARN de transfert**. La chaîne s'allonge jusqu'au **codon stop**.
 
 ## Le code génétique
-Il a trois propriétés à connaître :
-- **universel** : le même chez presque tous les êtres vivants, ce qui rend possible le génie génétique ;
-- **redondant** : 64 codons pour 20 acides aminés, donc plusieurs codons synonymes ;
-- **non ambigu** : un codon donné ne correspond jamais qu’à un seul acide aminé.
+| Sa propriété | Ce qu'elle signifie | Sa conséquence |
+| **Universel** | Le même chez presque tous les vivants | Rend possible le génie génétique |
+| **Redondant** | 64 codons pour 20 acides aminés | Des codons synonymes |
+| **Non ambigu** | Un codon ne code qu'un acide aminé | Pas d'ambiguïté de lecture |
 
-> La redondance explique qu’une mutation ponctuelle puisse être **silencieuse** : si le codon modifié reste synonyme, la protéine est inchangée.
+> La redondance explique qu'une mutation ponctuelle puisse être **silencieuse** : si le codon modifié reste synonyme, la protéine est inchangée.
 
-## Du phénotype moléculaire au phénotype macroscopique
-La protéine produite détermine une fonction cellulaire, qui se traduit à l’échelle de l’organisme. Le phénotype résulte toutefois de l’interaction entre le **génotype** et l’**environnement**.`,
+## Du gène à l'individu
+La protéine détermine une fonction cellulaire, qui se traduit à l'échelle de l'organisme. Mais le phénotype résulte de l'interaction entre le **génotype** et l'**environnement**.`,
           },
           questions: [
             ['Où se déroule la transcription chez les eucaryotes ?', ['Dans le noyau', 'Dans le cytoplasme', 'Dans le ribosome', 'Dans la mitochondrie uniquement'], 0, 'L’ARN messager rejoint ensuite le cytoplasme pour être traduit.'],
@@ -245,28 +279,34 @@ La protéine produite détermine une fonction cellulaire, qui se traduit à l’
           axe: 'Transmission, variation et expression du patrimoine génétique',
           lecon: {
             titre: 'Source de diversité, source de maladie',
-            cours: `Une **mutation** est une modification de la séquence des nucléotides de l’ADN. Elle est le point de départ de toute la diversité génétique — et, parfois, d’une maladie.
+            cours: `Une mutation est une modification de la séquence des nucléotides. Elle est le point de départ de toute la diversité génétique — et parfois d'une maladie.
 
-## Les types de mutation
-- **Substitution** : un nucléotide est remplacé par un autre.
-- **Délétion** : un ou plusieurs nucléotides sont perdus.
-- **Insertion** ou **addition** : un ou plusieurs nucléotides sont ajoutés.
+## Les trois types
+| Le type | Ce qui change |
+| **Substitution** | Un nucléotide est remplacé par un autre |
+| **Délétion** | Un ou plusieurs nucléotides sont perdus |
+| **Insertion** | Un ou plusieurs nucléotides sont ajoutés |
 
-Délétions et insertions non multiples de trois provoquent un **décalage du cadre de lecture** : toute la suite de la protéine est modifiée, et les conséquences sont en général bien plus graves qu’une substitution.
+> Délétions et insertions non multiples de trois provoquent un **décalage du cadre de lecture** : toute la suite de la protéine est modifiée. Les conséquences sont bien plus graves qu'une substitution.
 
 ## Les conséquences sur la protéine
-- **Silencieuse** : le codon modifié reste synonyme, la protéine est inchangée.
-- **Faux-sens** : un acide aminé est remplacé — la protéine peut rester fonctionnelle, être moins efficace, ou perdre sa fonction.
-- **Non-sens** : un codon stop apparaît prématurément, la protéine est tronquée et le plus souvent inactive.
+| La mutation | Ce qu'elle produit | La protéine |
+| **Silencieuse** | Un codon synonyme | Inchangée |
+| **Faux-sens** | Un acide aminé remplacé | Fonctionnelle, moins efficace, ou inactive |
+| **Non-sens** | Un codon stop prématuré | Tronquée, le plus souvent inactive |
 
 ## Somatique ou germinale
-- Une mutation **somatique** touche une cellule du corps : elle n’est transmise qu’aux cellules filles de cette cellule et disparaît avec l’individu. C’est le point de départ des cancers.
-- Une mutation **germinale**, dans une cellule de la lignée reproductrice, est **transmissible à la descendance**. Seules celles-là comptent pour l’évolution.
+| Le type | La cellule touchée | Sa transmission |
+| **Somatique** | Une cellule du corps | Aux seules cellules filles ; disparaît avec l'individu. Point de départ des cancers |
+| **Germinale** | Une cellule de la lignée reproductrice | **À la descendance**. Seule celle-là compte pour l'évolution |
 
 ## La diversité des allèles
-Les mutations accumulées au fil des générations créent les **allèles**, versions différentes d’un même gène. Leur fréquence dans une population évolue sous l’effet de la **sélection naturelle**, de la **dérive génétique** (hasard, surtout efficace dans les petites populations) et des **migrations**.
+Les mutations accumulées créent les **allèles**, versions différentes d'un même gène. Leur fréquence évolue sous trois forces :
+- la **sélection naturelle**, qui favorise les allèles avantageux ;
+- la **dérive génétique**, effet du hasard, surtout efficace dans les petites populations ;
+- les **migrations**, qui font circuler les allèles entre populations.
 
-> Une mutation n’est ni bonne ni mauvaise en soi : c’est l’environnement qui décide si l’allèle qu’elle produit sera avantageux. La drépanocytose protège du paludisme là où il sévit.`,
+> Une mutation n'est ni bonne ni mauvaise en soi : c'est l'environnement qui décide. L'allèle de la drépanocytose protège du paludisme là où il sévit.`,
           },
           questions: [
             ['Quels sont les trois grands types de mutation ponctuelle ?', ['Substitution, délétion, insertion', 'Transcription, traduction, réplication', 'Mitose, méiose, fécondation', 'Duplication, translocation, fusion'], 0, 'Ils modifient la séquence de nucléotides de manières différentes.'],
@@ -284,27 +324,34 @@ Les mutations accumulées au fil des générations créent les **allèles**, ver
           axe: 'Transmission, variation et expression du patrimoine génétique',
           lecon: {
             titre: 'Ce que l’ADN garde en mémoire',
-            cours: `Comparer les génomes de populations actuelles et d’individus fossiles permet de **reconstituer l’histoire du peuplement** — origines, migrations, métissages, adaptations.
+            cours: `Comparer les génomes de populations actuelles et d'individus fossiles permet de reconstituer l'histoire du peuplement.
 
 ## La méthode
-On compare des **marqueurs génétiques** : mutations neutres accumulées au fil du temps. Deux populations qui partagent beaucoup de marqueurs ont divergé récemment ; deux populations très différentes ont divergé plus tôt. Le taux de mutation servant d’**horloge moléculaire**, on peut dater les séparations.
+On compare des **marqueurs génétiques**, mutations neutres accumulées au fil du temps.
 
-Deux marqueurs particuliers :
-- l’**ADN mitochondrial**, transmis uniquement par la mère, qui trace la lignée maternelle ;
-- le **chromosome Y**, transmis de père en fils, qui trace la lignée paternelle.
+| L'observation | Ce qu'elle indique |
+| Deux populations partagent beaucoup de marqueurs | Elles ont divergé **récemment** |
+| Deux populations très différentes | Elles ont divergé **tôt** |
 
-## Ce que l’on sait
-- **Homo sapiens** est apparu en Afrique il y a environ 300 000 ans ; toutes les populations actuelles hors d’Afrique descendent de sorties beaucoup plus récentes.
-- La diversité génétique est **maximale en Afrique** : c’est un argument majeur en faveur de cette origine.
-- L’ADN fossile a révélé des **métissages** avec d’autres espèces du genre *Homo* : les populations non africaines portent quelques pour cent d’ADN de **Néandertal**, et certaines populations d’Asie et d’Océanie de l’ADN de **Denisova**.
+Le taux de mutation sert d'**horloge moléculaire** : on peut dater les séparations.
 
-## Adaptations récentes
-Certains allèles ont été sélectionnés depuis le Néolithique :
-- la **persistance de la lactase** à l’âge adulte, dans les populations d’éleveurs ;
-- des variants facilitant la vie en **haute altitude** chez les Tibétains ;
-- des allèles de résistance à certaines maladies infectieuses.
+| Le marqueur | Sa transmission | La lignée tracée |
+| **ADN mitochondrial** | Uniquement par la mère | Maternelle |
+| **Chromosome Y** | De père en fils | Paternelle |
 
-> Conclusion forte du programme : la **variabilité entre individus d’une même population dépasse la variabilité moyenne entre populations**. La notion biologique de « race » humaine n’a aucun fondement génétique.`,
+## Ce que l'on sait
+| Le fait | Le détail |
+| L'origine | *Homo sapiens* apparaît en **Afrique** il y a environ 300 000 ans |
+| La diversité | Elle est **maximale en Afrique** : argument majeur en faveur de cette origine |
+| Les métissages | Les populations non africaines portent quelques pour cent d'ADN de **Néandertal** ; certaines populations d'Asie et d'Océanie, de l'ADN de **Denisova** |
+
+## Des adaptations récentes
+| L'allèle sélectionné | La population concernée |
+| Persistance de la **lactase** à l'âge adulte | Populations d'éleveurs |
+| Variants facilitant la vie en **haute altitude** | Tibétains |
+| Résistances à certaines maladies infectieuses | Diverses |
+
+> Conclusion forte du programme : la variabilité entre individus d'une même population **dépasse** la variabilité moyenne entre populations. La notion biologique de « race » humaine n'a aucun fondement génétique.`,
           },
           questions: [
             ['Que trace l’ADN mitochondrial ?', ['La lignée maternelle', 'La lignée paternelle', 'Les deux lignées', 'Aucune lignée'], 0, 'Il est transmis uniquement par la mère.'],
@@ -322,25 +369,34 @@ Certains allèles ont été sélectionnés depuis le Néolithique :
           axe: 'Transmission, variation et expression du patrimoine génétique',
           lecon: {
             titre: 'Des catalyseurs biologiques spécifiques',
-            cours: `Le **métabolisme** est l’ensemble des réactions chimiques d’une cellule. Presque toutes seraient trop lentes à température corporelle sans **enzymes**.
+            cours: `Le métabolisme est l'ensemble des réactions chimiques d'une cellule. Presque toutes seraient trop lentes à température corporelle sans enzymes.
 
-## Ce qu’est une enzyme
-Une enzyme est une **protéine catalytique** : elle accélère une réaction sans être consommée ni modifiée, et sans changer le bilan de la réaction. Le fait qu’elle soit une protéine relie directement le métabolisme au génome — un gène muté peut donner une enzyme inefficace, et bloquer une voie métabolique entière.
+## Ce qu'est une enzyme
+Une **protéine catalytique** : elle accélère une réaction sans être consommée ni modifiée, et sans changer le bilan de la réaction.
+
+> Comme c'est une protéine, elle est codée par un gène : un gène muté peut donner une enzyme inefficace et bloquer une voie métabolique entière.
 
 ## La double spécificité
-- **Spécificité de substrat** : chaque enzyme ne reconnaît qu’un substrat, ou une famille de substrats très proches. Le **site actif** a une forme complémentaire de celle du substrat — c’est le modèle clé-serrure, aujourd’hui affiné par l’ajustement induit.
-- **Spécificité d’action** : elle ne catalyse qu’un seul type de réaction.
+| La spécificité | Ce qu'elle signifie | Le modèle |
+| De **substrat** | L'enzyme ne reconnaît qu'un substrat, ou une famille très proche | Le **site actif** est complémentaire du substrat : clé-serrure, affiné en ajustement induit |
+| D'**action** | Elle ne catalyse qu'un seul type de réaction | — |
 
 ## Le complexe enzyme-substrat
-Le substrat se fixe au site actif, la réaction s’effectue, les produits sont libérés et l’enzyme, intacte, recommence. Une seule molécule d’enzyme peut ainsi traiter des milliers de substrats par seconde.
+1. Le substrat se fixe au **site actif**.
+2. La réaction s'effectue.
+3. Les produits sont libérés.
+4. L'enzyme, intacte, recommence.
 
-## Ce qui fait varier l’activité enzymatique
-- La **température** : l’activité augmente puis chute brutalement quand la protéine se **dénature**.
-- Le **pH** : chaque enzyme a un optimum — la pepsine travaille en milieu très acide, l’amylase salivaire à pH neutre.
-- La **concentration en substrat** : l’activité croît puis atteint un **plateau de saturation**, tous les sites actifs étant occupés.
-- La présence d’**inhibiteurs**, qui bloquent le site actif ou déforment l’enzyme. De nombreux médicaments et poisons agissent ainsi.
+> Une seule molécule d'enzyme peut traiter des milliers de substrats par seconde.
 
-> Le contrôle génétique du métabolisme se voit dans les maladies métaboliques : la phénylcétonurie résulte d’une enzyme déficiente qui interrompt la dégradation d’un acide aminé.`,
+## Ce qui fait varier l'activité
+| Le facteur | Son effet |
+| **Température** | L'activité augmente, puis chute brutalement quand la protéine se **dénature** |
+| **pH** | Chaque enzyme a son optimum : la pepsine en milieu très acide, l'amylase salivaire à pH neutre |
+| **Concentration en substrat** | L'activité croît, puis atteint un **plateau de saturation** |
+| **Inhibiteurs** | Ils bloquent le site actif ou déforment l'enzyme — de nombreux médicaments et poisons agissent ainsi |
+
+> Le contrôle génétique du métabolisme se lit dans les maladies métaboliques : la phénylcétonurie résulte d'une enzyme déficiente qui interrompt la dégradation d'un acide aminé.`,
           },
           questions: [
             ['Qu’est-ce qu’une enzyme ?', ['Une protéine qui catalyse une réaction sans être consommée', 'Un glucide énergétique', 'Un lipide membranaire', 'Une molécule d’ARN structurale'], 0, 'Elle accélère la réaction sans en modifier le bilan.'],
@@ -360,21 +416,35 @@ Le substrat se fixe au site actif, la réaction s’effectue, les produits sont 
           axe: 'La dynamique interne de la Terre',
           lecon: {
             titre: 'Deux croûtes, deux mondes',
-            cours: `La courbe **hypsométrique** — qui représente la répartition des altitudes du globe — n’a pas une forme quelconque : elle présente **deux maxima**, l’un vers 0 à 1 000 mètres, l’autre vers −4 000 à −5 000 mètres. Cette bimodalité est le premier indice d’une différence de nature entre continents et océans.
+            cours: `La courbe hypsométrique, qui représente la répartition des altitudes du globe, présente deux maxima. Cette bimodalité est le premier indice d'une différence de nature.
+
+## Deux maxima
+| Le maximum | L'altitude | Ce qu'il correspond |
+| Le premier | De 0 à 1 000 m | Les **continents** |
+| Le second | De −4 000 à −5 000 m | Les **fonds océaniques** |
 
 ## Deux croûtes de composition différente
-- La **croûte continentale** est faite de roches de type **granitique**, riches en silice et en aluminium, de densité voisine de 2,7, épaisses de 30 km en moyenne et jusqu’à 70 km sous les chaînes de montagnes. Certaines ont plus de 4 milliards d’années.
-- La **croûte océanique** est faite de **basaltes** et de **gabbros**, riches en fer et magnésium, de densité voisine de 2,9, épaisse de 7 km seulement. Aucune n’a plus de 200 millions d’années.
+| Le caractère | Croûte **continentale** | Croûte **océanique** |
+| Roches | Type **granitique** | **Basaltes** et **gabbros** |
+| Riche en | Silice, aluminium | Fer, magnésium |
+| Densité | Environ 2,7 | Environ 2,9 |
+| Épaisseur | 30 km, jusqu'à 70 km sous les chaînes | 7 km seulement |
+| Âge maximal | Plus de 4 milliards d'années | Moins de 200 millions d'années |
 
-> Le contraste d’âge est décisif : la croûte océanique est **renouvelée en permanence**, la croûte continentale est **conservée**.
+> Le contraste d'âge est décisif : la croûte océanique est **renouvelée en permanence**, la croûte continentale est **conservée**.
 
-## L’isostasie
-Les blocs crustaux flottent sur le **manteau** ductile, comme des icebergs sur l’eau : c’est l’**équilibre isostatique**. Un bloc léger et épais (continent) flotte haut, un bloc dense et mince (océan) flotte bas. Une chaîne de montagnes possède une **racine crustale** profonde, qui explique pourquoi elle s’élève.
+## L'isostasie
+Les blocs crustaux flottent sur le **manteau** ductile, comme des icebergs sur l'eau.
 
-Une conséquence observable : après la fonte d’une calotte glaciaire, le continent allégé **remonte** — la Scandinavie s’élève encore de près d’un centimètre par an.
+| Le bloc | Son comportement |
+| Léger et épais (continent) | Il flotte **haut** |
+| Dense et mince (océan) | Il flotte **bas** |
+| Une chaîne de montagnes | Elle possède une **racine crustale** profonde, qui explique son altitude |
+
+> Après la fonte d'une calotte glaciaire, le continent allégé remonte : la Scandinavie s'élève encore de près d'un centimètre par an.
 
 ## Les indices de terrain
-Les roches, leur âge et leur densité se mesurent : forages océaniques, sondages sismiques, gravimétrie. C’est la convergence de ces mesures qui a rendu la tectonique des plaques indiscutable.`,
+Roches, âges et densités se mesurent : forages océaniques, sondages sismiques, gravimétrie. C'est la convergence de ces mesures qui a rendu la tectonique des plaques indiscutable.`,
           },
           questions: [
             ['Que montre la courbe hypsométrique du globe terrestre ?', ['Deux maxima d’altitude, correspondant aux continents et aux océans', 'Une répartition uniforme des altitudes', 'Un maximum unique proche du niveau de la mer', 'Trois maxima distincts'], 0, 'Cette bimodalité traduit deux types de croûte de nature différente.'],
@@ -392,26 +462,31 @@ Les roches, leur âge et leur densité se mesurent : forages océaniques, sondag
           axe: 'La dynamique interne de la Terre',
           lecon: {
             titre: 'Les ondes qui révèlent l’intérieur du globe',
-            cours: `Personne n’a jamais vu l’intérieur de la Terre : le forage le plus profond n’atteint que 12 km, sur 6 371 km de rayon. C’est l’étude des **ondes sismiques** qui a permis de le cartographier.
+            cours: `Personne n'a jamais vu l'intérieur de la Terre : le forage le plus profond atteint 12 km, sur 6 371 km de rayon. Ce sont les ondes sismiques qui l'ont cartographié.
 
-## Les ondes sismiques
-- Les **ondes P** (primaires) sont des ondes de compression : les plus rapides, elles traversent solides **et** liquides.
-- Les **ondes S** (secondaires) sont des ondes de cisaillement : plus lentes, elles ne se propagent **que dans les solides**.
+## Les deux ondes
+| L'onde | Sa nature | Sa vitesse | Ce qu'elle traverse |
+| **P** (primaire) | Compression | La plus rapide | Solides **et** liquides |
+| **S** (secondaire) | Cisaillement | Plus lente | **Solides uniquement** |
 
-La vitesse d’une onde dépend de la **rigidité** et de la **densité** du milieu traversé. Une variation brutale de vitesse signale donc une **discontinuité**.
+La vitesse dépend de la **rigidité** et de la **densité** du milieu : une variation brutale signale une **discontinuité**.
 
 ## Les discontinuités majeures
-- Le **Moho** (Mohorovičić, 1909) sépare la **croûte** du **manteau** : les ondes y accélèrent nettement. Il est à 30 km sous les continents, 7 km sous les océans.
-- La **discontinuité de Gutenberg**, vers 2 900 km, sépare le manteau du **noyau externe**. Les ondes S y disparaissent : le noyau externe est donc **liquide**.
-- La **discontinuité de Lehmann**, vers 5 100 km, sépare le noyau externe du **noyau interne** (la graine), solide.
+| La discontinuité | Sa profondeur | Ce qu'elle sépare | L'indice |
+| **Moho** (1909) | 30 km sous les continents, 7 km sous les océans | Croûte et **manteau** | Les ondes accélèrent nettement |
+| **Gutenberg** | Environ 2 900 km | Manteau et **noyau externe** | Les ondes S **disparaissent** : le noyau externe est liquide |
+| **Lehmann** | Environ 5 100 km | Noyau externe et **graine** | La graine est solide |
 
-> La **zone d’ombre** observée à la surface, entre 103° et 143° de l’épicentre, s’explique par la réfraction des ondes P à l’entrée du noyau et par l’extinction des ondes S. C’est elle qui a révélé le noyau liquide.
+> La **zone d'ombre**, entre 103° et 143° de l'épicentre, s'explique par la réfraction des ondes P à l'entrée du noyau et l'extinction des ondes S. C'est elle qui a révélé le noyau liquide.
 
-## Deux découpages qu’il ne faut pas confondre
-- Un découpage **chimique** : croûte / manteau / noyau.
-- Un découpage **mécanique** : la **lithosphère**, rigide (croûte + partie supérieure du manteau, environ 100 km), repose sur l’**asthénosphère**, ductile, où les ondes ralentissent — c’est la LVZ, *low velocity zone*.
+## Deux découpages à ne pas confondre
+| Le découpage | Ses couches | Son critère |
+| **Chimique** | Croûte / manteau / noyau | La **composition** |
+| **Mécanique** | **Lithosphère** rigide (croûte + manteau supérieur, environ 100 km) sur **asthénosphère** ductile | Le **comportement** |
 
-C’est ce second découpage qui compte pour la tectonique : ce sont des plaques **lithosphériques** qui se déplacent sur l’asthénosphère.`,
+L'asthénosphère se repère au ralentissement des ondes : c'est la LVZ, *low velocity zone*.
+
+> C'est le découpage mécanique qui compte pour la tectonique : ce sont des plaques **lithosphériques** qui se déplacent sur l'asthénosphère.`,
           },
           questions: [
             ['Quelle onde sismique ne se propage pas dans les liquides ?', ['L’onde S', 'L’onde P', 'Les deux', 'Aucune des deux'], 0, 'Son absence au-delà de 103° a révélé que le noyau externe est liquide.'],
@@ -429,27 +504,33 @@ C’est ce second découpage qui compte pour la tectonique : ce sont des plaques
           axe: 'La dynamique interne de la Terre',
           lecon: {
             titre: 'La chaleur interne, moteur de la tectonique',
-            cours: `La Terre perd en permanence de la chaleur vers l’espace. C’est cette évacuation qui **met en mouvement** son manteau et, avec lui, ses plaques.
+            cours: `La Terre perd en permanence de la chaleur vers l'espace. C'est cette évacuation qui met en mouvement son manteau, et avec lui ses plaques.
 
-## L’origine de la chaleur
-- Environ 80 % provient de la **radioactivité naturelle** des roches (uranium, thorium, potassium 40) ;
-- le reste est la **chaleur résiduelle** de l’accrétion de la planète et de la différenciation du noyau.
+## L'origine de la chaleur
+| La source | Sa part |
+| **Radioactivité naturelle** des roches (uranium, thorium, potassium 40) | Environ 80 % |
+| **Chaleur résiduelle** de l'accrétion et de la différenciation du noyau | Le reste |
 
 ## Deux modes de transfert
-- La **conduction** transfère la chaleur de proche en proche, sans déplacement de matière. Elle domine dans la **lithosphère**, rigide. C’est un mode **lent et peu efficace** : la roche est un mauvais conducteur.
-- La **convection** transfère la chaleur par **déplacement de matière** : le matériau chaud, moins dense, monte ; refroidi en surface, il devient plus dense et redescend. Elle domine dans le **manteau ductile** et évacue l’essentiel de la chaleur interne.
+| Le mode | Son principe | Où il domine | Son efficacité |
+| **Conduction** | De proche en proche, **sans** déplacement de matière | La **lithosphère** rigide | Faible : la roche est un mauvais conducteur |
+| **Convection** | **Par déplacement de matière** : le chaud monte, le froid redescend | Le **manteau ductile** | Élevée : elle évacue l'essentiel de la chaleur |
 
-> Le manteau est **solide** et pourtant il flue : à ces températures et sur des millions d’années, il se déforme comme un solide ductile, à quelques centimètres par an.
+> Le manteau est **solide** et pourtant il flue : à ces températures et sur des millions d'années, il se déforme comme un solide ductile, à quelques centimètres par an.
 
 ## Le flux géothermique
-C’est la puissance thermique évacuée par unité de surface. Il n’est pas uniforme :
-- **élevé** au niveau des **dorsales océaniques**, où le matériel chaud remonte ;
-- **faible** sur les **vieux boucliers continentaux** et sur la lithosphère océanique âgée, refroidie et épaissie.
+Puissance thermique évacuée par unité de surface. Il n'est pas uniforme :
 
-Cette carte du flux dessine, à elle seule, les frontières de plaques.
+| La zone | Son flux | Pourquoi |
+| **Dorsales océaniques** | **Élevé** | Le matériel chaud remonte |
+| Vieux boucliers continentaux, lithosphère océanique âgée | **Faible** | Refroidie et épaissie |
+
+> La carte du flux dessine, à elle seule, les frontières de plaques.
 
 ## Le lien avec la tectonique
-La convection mantellique est le **moteur** des mouvements de plaques ; s’y ajoute la traction de la plaque plongeante à la subduction, dont on estime aujourd’hui qu’elle contribue fortement au mouvement. La lithosphère océanique, en s’éloignant de la dorsale, se refroidit, s’épaissit et devient plus dense — jusqu’à devenir plus dense que l’asthénosphère, ce qui rend sa plongée possible.`,
+La convection mantellique est le **moteur**. S'y ajoute la **traction de la plaque plongeante** à la subduction, dont on estime aujourd'hui la contribution importante.
+
+En s'éloignant de la dorsale, la lithosphère océanique se refroidit, s'épaissit et gagne en densité — jusqu'à dépasser celle de l'asthénosphère, ce qui rend sa plongée possible.`,
           },
           questions: [
             ['Quelle est la principale source de la chaleur interne de la Terre ?', ['La radioactivité naturelle des roches', 'Le rayonnement solaire', 'Les marées océaniques', 'Les impacts de météorites'], 0, 'Elle fournit environ 80 % du flux, le reste étant la chaleur résiduelle.'],
@@ -467,21 +548,30 @@ La convection mantellique est le **moteur** des mouvements de plaques ; s’y aj
           axe: 'La dynamique interne de la Terre',
           lecon: {
             titre: 'De Wegener aux GPS',
-            cours: `L’idée que les continents se déplacent a mis un demi-siècle à s’imposer. L’histoire de cette acceptation fait partie du programme.
+            cours: `L'idée que les continents se déplacent a mis un demi-siècle à s'imposer. L'histoire de cette acceptation fait partie du programme.
 
 ## Wegener, 1912
-Il propose la **dérive des continents** en s’appuyant sur quatre séries d’arguments : le **tracé des côtes** de part et d’autre de l’Atlantique, la continuité des **structures géologiques**, la répartition de **fossiles** identiques sur des continents aujourd’hui séparés (*Mesosaurus*, *Glossopteris*), et les traces d’une **glaciation** commune au Carbonifère. Son hypothèse est rejetée, faute de mécanisme plausible : on ne voyait pas comment un continent pourrait « labourer » un plancher océanique rigide.
+Il propose la **dérive des continents** sur quatre séries d'arguments :
+
+| L'argument | Ce qu'il montre |
+| Le **tracé des côtes** | Elles s'emboîtent de part et d'autre de l'Atlantique |
+| Les **structures géologiques** | Elles se prolongent d'un continent à l'autre |
+| Les **fossiles** | *Mesosaurus* et *Glossopteris* sur des continents aujourd'hui séparés |
+| La **glaciation** du Carbonifère | Ses traces sont communes à plusieurs continents |
+
+> Son hypothèse est rejetée faute de mécanisme : on ne voyait pas comment un continent pourrait labourer un plancher océanique rigide.
 
 ## Les preuves décisives
-- **Hess** (1962) propose l’**expansion des fonds océaniques** : la croûte se crée à la dorsale et disparaît dans les fosses.
-- **Vine et Matthews** (1963) : les **anomalies magnétiques** du plancher océanique forment des bandes **symétriques** de part et d’autre de la dorsale, enregistrant les inversions du champ magnétique terrestre. C’est un enregistreur naturel de l’expansion.
-- Les **forages** montrent que l’âge des sédiments à la base de la série croît régulièrement avec la distance à la dorsale.
-- Les **points chauds** alignent des volcans d’âge croissant, comme la chaîne d’Hawaï, qui donne le sens et la vitesse du déplacement de la plaque.
+| La preuve | Sa date | Ce qu'elle établit |
+| L'**expansion des fonds océaniques** de Hess | 1962 | La croûte se crée à la dorsale et disparaît dans les fosses |
+| Les **anomalies magnétiques** de Vine et Matthews | 1963 | Des bandes **symétriques** de part et d'autre de la dorsale, enregistrant les inversions du champ magnétique |
+| Les **forages** | Années 1960-1970 | L'âge des sédiments basaux croît avec la distance à la dorsale |
+| Les **points chauds** | — | La chaîne d'Hawaï aligne des volcans d'âge croissant : sens et vitesse du déplacement |
 
 ## La mesure directe
 Depuis les années 1990, le **GPS** mesure les déplacements en temps réel : quelques centimètres par an, cohérents avec les vitesses déduites des anomalies magnétiques. La discussion est close.
 
-> Une plaque **lithosphérique** est délimitée par des frontières marquées par la **sismicité** et le **volcanisme** — leur carte dessine les plaques bien plus nettement que la carte des continents.`,
+> Une plaque **lithosphérique** est délimitée par des frontières marquées par la **sismicité** et le **volcanisme** : leur carte dessine les plaques bien mieux que celle des continents.`,
           },
           questions: [
             ['Quel argument N’A PAS été utilisé par Wegener en 1912 ?', ['Les anomalies magnétiques du plancher océanique', 'La forme complémentaire des côtes', 'La répartition de fossiles identiques', 'Les traces d’une glaciation commune'], 0, 'Elles n’ont été découvertes qu’en 1963, par Vine et Matthews.'],
@@ -499,28 +589,32 @@ Depuis les années 1990, le **GPS** mesure les déplacements en temps réel : qu
           axe: 'La dynamique interne de la Terre',
           lecon: {
             titre: 'Les dorsales, usines à croûte océanique',
-            cours: `Une **dorsale** est une chaîne de montagnes sous-marine longue de 60 000 km, où deux plaques s’**écartent** et où naît la croûte océanique.
+            cours: `Une dorsale est une chaîne de montagnes sous-marine longue de 60 000 km, où deux plaques s'écartent et où naît la croûte océanique.
 
-## Ce qui s’y passe
-L’écartement provoque une **décompression** du manteau qui remonte. Sans apport de chaleur, cette seule baisse de pression suffit à faire fondre partiellement la **péridotite** : c’est la **fusion partielle par décompression adiabatique**, mécanisme à connaître précisément.
+## Le mécanisme de fusion
+L'écartement provoque une **décompression** du manteau qui remonte. Sans aucun apport de chaleur, cette seule baisse de pression suffit à faire fondre partiellement la **péridotite**.
 
-Le magma produit, **basaltique**, alimente une chambre magmatique. Il donne :
-- des **gabbros** en profondeur, quand il refroidit lentement et cristallise entièrement (structure grenue) ;
-- des **basaltes** en surface, quand il est refroidi brutalement par l’eau de mer (structure microlitique, coussins ou *pillow lavas*).
+> C'est la **fusion partielle par décompression adiabatique** — mécanisme à connaître précisément.
 
-Deux roches, un seul magma : c’est la **vitesse de refroidissement** qui fait la différence de texture.
+## Un magma, deux roches
+| La roche | Où elle se forme | Son refroidissement | Sa structure |
+| **Gabbro** | En profondeur | Lent, cristallisation entière | **Grenue** |
+| **Basalte** | En surface | Brutal, au contact de l'eau de mer | **Microlitique**, en coussins (*pillow lavas*) |
 
-## Dorsales rapides, dorsales lentes
-- Une dorsale **rapide** (Pacifique est, jusqu’à 15 cm/an) a un profil bombé, sans rift marqué.
-- Une dorsale **lente** (Atlantique, 2 à 3 cm/an) présente un **rift** axial profond, encadré de reliefs escarpés.
+> Deux roches, un seul magma basaltique : c'est la **vitesse de refroidissement** qui fait la différence.
+
+## Dorsales rapides et dorsales lentes
+| Le type | Sa vitesse | Son profil |
+| **Rapide** (Pacifique est) | Jusqu'à 15 cm/an | Bombé, sans rift marqué |
+| **Lente** (Atlantique) | 2 à 3 cm/an | **Rift** axial profond, reliefs escarpés |
 
 ## Les indices en surface
-- Une **sismicité superficielle** et de faible magnitude ;
-- des **failles normales**, signature de l’extension ;
-- un **flux géothermique** très élevé ;
-- des **sources hydrothermales** (fumeurs noirs), où l’eau de mer circule dans la croûte fissurée, s’enrichit en métaux et ressort à plus de 300 °C — abritant des écosystèmes indépendants de la lumière solaire.
+- Une **sismicité superficielle** et de faible magnitude.
+- Des **failles normales**, signature de l'extension.
+- Un **flux géothermique** très élevé.
+- Des **sources hydrothermales** — les fumeurs noirs : l'eau de mer circule dans la croûte fissurée, s'enrichit en métaux et ressort à plus de 300 °C, abritant des écosystèmes indépendants de la lumière.
 
-> À mesure qu’elle s’éloigne, la lithosphère océanique se refroidit, s’épaissit par accrétion du manteau à sa base, et gagne en densité : elle devient à terme subductible.`,
+> En s'éloignant, la lithosphère océanique se refroidit, s'épaissit par accrétion du manteau à sa base et gagne en densité : elle devient à terme subductible.`,
           },
           questions: [
             ['Quel mécanisme produit le magma au niveau des dorsales ?', ['La fusion partielle de la péridotite par décompression', 'Un apport de chaleur venu du noyau', 'La fusion de la croûte continentale', 'La cristallisation du basalte'], 0, 'C’est la baisse de pression, et non une hausse de température, qui déclenche la fusion.'],
@@ -538,26 +632,38 @@ Deux roches, un seul magma : c’est la **vitesse de refroidissement** qui fait 
           axe: 'La dynamique interne de la Terre',
           lecon: {
             titre: 'Quand une lithosphère plonge',
-            cours: `La **subduction** est la plongée d’une lithosphère océanique **dense et froide** sous une autre plaque. C’est le lieu des séismes les plus puissants et du volcanisme le plus explosif.
+            cours: `La subduction est la plongée d'une lithosphère océanique dense et froide sous une autre plaque. C'est le lieu des séismes les plus puissants et du volcanisme le plus explosif.
 
 ## Pourquoi elle plonge
-En vieillissant, la lithosphère océanique se refroidit et s’épaissit ; sa densité moyenne finit par **dépasser** celle de l’asthénosphère sous-jacente. Elle devient alors gravitairement instable et plonge. La lithosphère continentale, trop peu dense, ne subduit pas — d’où la conservation des continents.
+En vieillissant, la lithosphère océanique se refroidit et s'épaissit ; sa densité moyenne finit par **dépasser** celle de l'asthénosphère. Elle devient instable et plonge.
+
+> La lithosphère continentale, trop peu dense, ne subduit pas. D'où la conservation des continents.
 
 ## Les marqueurs de surface
-- Une **fosse océanique**, la plus profonde de la planète étant celle des Mariannes (près de 11 000 m) ;
-- un **prisme d’accrétion**, empilement de sédiments raclés sur la plaque plongeante ;
-- une **anomalie thermique négative** : la plaque plongeante est froide ;
-- un **arc volcanique**, insulaire (Japon, Antilles) ou continental (Andes), situé à environ 100-150 km au-dessus du plan de subduction.
+| Le marqueur | Le détail |
+| **Fosse océanique** | Celle des Mariannes approche 11 000 m |
+| **Prisme d'accrétion** | Sédiments raclés sur la plaque plongeante |
+| **Anomalie thermique négative** | La plaque plongeante est froide |
+| **Arc volcanique** | Insulaire (Japon, Antilles) ou continental (Andes), à 100-150 km au-dessus du plan de subduction |
 
 ## Le plan de Wadati-Benioff
-Les foyers sismiques se répartissent sur un **plan incliné** qui matérialise la plaque plongeante, depuis la surface jusqu’à 700 km de profondeur environ. C’est la preuve directe de la plongée.
+Les foyers sismiques se répartissent sur un **plan incliné** qui matérialise la plaque plongeante, de la surface jusqu'à environ 700 km. C'est la preuve directe de la plongée.
 
-## Le magmatisme : le rôle de l’eau
-Contre-intuitif, et régulièrement demandé : ce n’est **pas la fusion de la plaque plongeante** qui produit le magma. En s’enfonçant, la croûte océanique hydratée subit des **transformations métamorphiques** qui **libèrent son eau**. Cette eau monte dans le manteau sus-jacent et **abaisse sa température de fusion** : c’est la **fusion partielle par hydratation**.
+## Le magmatisme : le rôle de l'eau
+Contre-intuitif, et régulièrement demandé : ce n'est **pas la fusion de la plaque plongeante** qui produit le magma.
 
-Le magma produit, plus riche en silice et en eau, est **visqueux** : il piège les gaz, d’où un volcanisme **explosif** (nuées ardentes, dômes, panaches). Refroidi en profondeur, il donne des **granodiorites** ; en surface, des **andésites** et des **rhyolites**.
+1. La croûte océanique hydratée s'enfonce.
+2. Des **transformations métamorphiques** libèrent son eau.
+3. Cette eau monte dans le manteau sus-jacent.
+4. Elle **abaisse sa température de fusion** : c'est la **fusion partielle par hydratation**.
 
-> La subduction est le principal mécanisme de **production de croûte continentale** : c’est là que se fabrique, aujourd’hui encore, du matériau continental neuf.`,
+| La roche produite | Où elle refroidit |
+| **Granodiorites** | En profondeur |
+| **Andésites**, **rhyolites** | En surface |
+
+Le magma, riche en silice et en eau, est **visqueux** : il piège les gaz, d'où un volcanisme **explosif** — nuées ardentes, dômes, panaches.
+
+> La subduction est le principal mécanisme de **production de croûte continentale** : c'est là que se fabrique, aujourd'hui encore, du matériau continental neuf.`,
           },
           questions: [
             ['Pourquoi une lithosphère océanique âgée plonge-t-elle en subduction ?', ['Parce que sa densité dépasse celle de l’asthénosphère', 'Parce qu’elle est plus chaude', 'Parce qu’elle est poussée par la dorsale seule', 'Parce qu’elle est plus fine'], 0, 'Le refroidissement l’épaissit et l’alourdit jusqu’à l’instabilité.'],
@@ -575,27 +681,40 @@ Le magma produit, plus riche en silice et en eau, est **visqueux** : il piège l
           axe: 'La dynamique interne de la Terre',
           lecon: {
             titre: 'La naissance et la disparition des chaînes de montagnes',
-            cours: `Quand la lithosphère océanique qui séparait deux continents a été entièrement subduite, les deux blocs continentaux entrent en **collision**. Aucun ne peut plonger : la croûte s’**épaissit**.
+            cours: `Quand la lithosphère océanique qui séparait deux continents a été entièrement subduite, les deux blocs entrent en collision. Aucun ne peut plonger : la croûte s'épaissit.
 
 ## Les marqueurs de la collision
-- Des **plis** de toutes tailles, du pli d’échantillon au pli kilométrique ;
-- des **failles inverses** et des **chevauchements**, qui empilent les unités ;
-- des **nappes de charriage**, déplacement de terrains sur des dizaines de kilomètres ;
-- une **racine crustale** profonde, jusqu’à 70 km, qui soutient le relief par isostasie.
+| Le marqueur | Ce qu'il montre |
+| **Plis** | Un raccourcissement, du pli d'échantillon au pli kilométrique |
+| **Failles inverses** et **chevauchements** | L'empilement des unités |
+| **Nappes de charriage** | Des terrains déplacés sur des dizaines de kilomètres |
+| **Racine crustale** jusqu'à 70 km | Elle soutient le relief par isostasie |
 
-## Les témoins d’un océan disparu
-Une chaîne de collision conserve des **restes de l’ancien domaine océanique** :
-- des **ophiolites** — fragments de lithosphère océanique (péridotites, gabbros, basaltes) charriés en altitude. En trouver au sommet d’une montagne est la preuve qu’un océan existait là ;
-- des **marges passives** fossilisées, reconnaissables à leurs blocs basculés et à leurs failles normales, témoins de l’ouverture initiale de l’océan.
+## Les témoins d'un océan disparu
+| Le témoin | Ce qu'il prouve |
+| **Ophiolites** — péridotites, gabbros, basaltes charriés en altitude | Un océan existait là |
+| **Marges passives fossilisées** — blocs basculés, failles normales | L'ouverture initiale de cet océan |
 
 ## Le métamorphisme
-L’enfouissement soumet les roches à des conditions nouvelles de **pression** et de **température** : sans fondre, elles changent de minéralogie. Les minéraux formés (glaucophane, disthène, sillimanite, grenat) sont des **marqueurs** qui permettent de reconstituer le trajet pression-température subi, donc l’histoire de la chaîne.
+L'enfouissement soumet les roches à des conditions nouvelles de **pression** et de **température** : sans fondre, elles changent de minéralogie.
+
+Glaucophane, disthène, sillimanite, grenat sont des **marqueurs** : ils permettent de reconstituer le trajet pression-température subi, donc l'histoire de la chaîne.
 
 ## Le cycle de Wilson
-Ouverture d’un rift, océanisation, subduction, collision, puis érosion — les chaînes anciennes (Massif central, Appalaches) ne sont plus que des reliefs usés, alors que les Alpes et l’Himalaya s’élèvent encore.
+1. Ouverture d'un **rift**.
+2. **Océanisation**.
+3. **Subduction**.
+4. **Collision**.
+5. **Érosion**.
 
-## Le devenir d’une chaîne
-Deux processus la font disparaître : l’**érosion**, qui la rabote et exporte ses sédiments vers les bassins, et le **rééquilibrage isostatique**, qui fait remonter la racine à mesure que le sommet s’allège. C’est ce second processus qui amène en surface les roches métamorphiques formées à 30 km de profondeur.`,
+> Les chaînes anciennes — Massif central, Appalaches — ne sont plus que des reliefs usés, quand les Alpes et l'Himalaya s'élèvent encore.
+
+## Le devenir d'une chaîne
+| Le processus | Son effet |
+| **Érosion** | Elle rabote le relief et exporte les sédiments vers les bassins |
+| **Rééquilibrage isostatique** | La racine remonte à mesure que le sommet s'allège |
+
+> C'est ce second processus qui amène en surface les roches métamorphiques formées à 30 km de profondeur.`,
           },
           questions: [
             ['Que sont les ophiolites ?', ['Des fragments de lithosphère océanique charriés dans une chaîne de montagnes', 'Des roches volcaniques de subduction', 'Des sédiments de fond de fosse', 'Des minéraux du manteau profond'], 0, 'Leur présence en altitude prouve la disparition d’un ancien océan.'],
@@ -615,24 +734,38 @@ Deux processus la font disparaître : l’**érosion**, qui la rabote et exporte
           axe: 'Les enjeux contemporains de la planète',
           lecon: {
             titre: 'Structure et fonctionnement d’un écosystème',
-            cours: `Un **écosystème** est l’ensemble formé par une **biocénose** (les êtres vivants d’un milieu) et son **biotope** (le milieu physico-chimique), ainsi que par toutes les **interactions** qui les relient.
+            cours: `Un écosystème, c'est une biocénose, un biotope, et tout ce qui les relie.
+
+## La définition
+| Le terme | Ce qu'il désigne |
+| **Biocénose** | Les êtres vivants d'un milieu |
+| **Biotope** | Le milieu physico-chimique |
+| **Écosystème** | Les deux, plus toutes leurs **interactions** |
 
 ## Les interactions entre êtres vivants
-- **Prédation** : l’un se nourrit de l’autre.
-- **Compétition** : deux populations exploitent la même ressource limitée.
-- **Mutualisme** : les deux partenaires en tirent bénéfice — les **mycorhizes** entre champignons et racines, la pollinisation, les nodosités à *Rhizobium* des légumineuses.
-- **Parasitisme** et **commensalisme** complètent le tableau.
+| L'interaction | Le bilan pour chacun | Un exemple |
+| **Prédation** | L'un se nourrit de l'autre | Renard et lapin |
+| **Compétition** | Même ressource limitée | Deux plantes pour la lumière |
+| **Mutualisme** | Les deux y gagnent | **Mycorhizes**, pollinisation, nodosités à *Rhizobium* |
+| **Parasitisme** | L'un gagne, l'autre perd | Tique |
+| **Commensalisme** | L'un gagne, l'autre est indifférent | Épiphytes |
 
-## Le flux d’énergie
-L’énergie entre dans l’écosystème par la **photosynthèse** des **producteurs primaires**, qui transforment l’énergie lumineuse en matière organique. Elle circule ensuite le long des **réseaux trophiques**, mais elle se **dégrade** à chaque niveau : seule une petite part (de l’ordre de 10 %) de l’énergie d’un niveau passe au suivant, le reste étant dissipé en chaleur et consommé par la respiration.
+## Le flux d'énergie
+L'énergie entre par la **photosynthèse** des **producteurs primaires**, puis circule le long des **réseaux trophiques**. Elle se **dégrade** à chaque niveau : de l'ordre de **10 %** seulement passe au niveau suivant, le reste étant dissipé en chaleur et consommé par la respiration.
 
-> C’est pourquoi les chaînes alimentaires comptent rarement plus de quatre ou cinq maillons, et pourquoi les prédateurs supérieurs sont peu nombreux.
+> C'est pourquoi les chaînes alimentaires comptent rarement plus de quatre ou cinq maillons, et pourquoi les grands prédateurs sont peu nombreux.
 
 ## Le cycle de la matière
-À l’inverse de l’énergie, la matière **circule en boucle** : les **décomposeurs** (bactéries, champignons, faune du sol) minéralisent la matière organique morte et rendent au milieu les éléments (azote, phosphore, carbone) que les producteurs primaires réutilisent. Un écosystème est donc **ouvert pour l’énergie**, largement **fermé pour la matière**.
+À l'inverse de l'énergie, la matière **circule en boucle** : les **décomposeurs** — bactéries, champignons, faune du sol — minéralisent la matière organique morte et rendent au milieu l'azote, le phosphore et le carbone que les producteurs réutilisent.
+
+| L'écosystème est… | Pour quoi |
+| **Ouvert** | L'énergie |
+| Largement **fermé** | La matière |
 
 ## Une dynamique permanente
-Un écosystème n’est jamais figé. Il subit des **perturbations** — incendie, tempête, maladie, activité humaine — et se reconstruit par **succession écologique**, du stade pionnier au stade mature. Sa **résilience** est sa capacité à retrouver un fonctionnement comparable après perturbation ; elle n’est pas illimitée, et au-delà d’un certain seuil l’écosystème bascule vers un autre état.`,
+Un écosystème subit des **perturbations** — incendie, tempête, maladie, activité humaine — et se reconstruit par **succession écologique**, du stade pionnier au stade mature.
+
+> Sa **résilience** est sa capacité à retrouver un fonctionnement comparable. Elle n'est pas illimitée : au-delà d'un seuil, l'écosystème bascule vers un autre état.`,
           },
           questions: [
             ['De quoi est composé un écosystème ?', ['D’une biocénose, d’un biotope et de leurs interactions', 'Des seuls animaux d’un milieu', 'Du seul milieu physico-chimique', 'D’une population unique et de son territoire'], 0, 'Les interactions font partie intégrante de la définition.'],
@@ -650,28 +783,36 @@ Un écosystème n’est jamais figé. Il subit des **perturbations** — incendi
           axe: 'Les enjeux contemporains de la planète',
           lecon: {
             titre: 'Ce que les écosystèmes nous rendent',
-            cours: `Les **services écosystémiques** sont les bénéfices que les sociétés humaines tirent du fonctionnement des écosystèmes. Le Millennium Ecosystem Assessment en distingue trois grandes catégories.
+            cours: `Les services écosystémiques sont les bénéfices que les sociétés humaines tirent du fonctionnement des écosystèmes.
 
 ## Les trois catégories
-- Les services d’**approvisionnement** : nourriture, bois, fibres, eau douce, molécules médicinales.
-- Les services de **régulation** : pollinisation, épuration de l’eau, régulation du climat par le stockage du carbone, protection contre l’érosion et les crues, limitation des maladies.
-- Les services **culturels** : loisirs, tourisme, valeur esthétique, spirituelle et patrimoniale.
+| La catégorie | Ce qu'elle recouvre |
+| **Approvisionnement** | Nourriture, bois, fibres, eau douce, molécules médicinales |
+| **Régulation** | Pollinisation, épuration de l'eau, stockage du carbone, protection contre l'érosion et les crues |
+| **Culturels** | Loisirs, tourisme, valeur esthétique, spirituelle et patrimoniale |
 
-> La pollinisation par les insectes conditionne à elle seule une part très importante des cultures destinées à l’alimentation humaine — un service qu’aucune technique ne remplace à ce coût.
+> La pollinisation par les insectes conditionne à elle seule une part très importante des cultures alimentaires — un service qu'aucune technique ne remplace à ce coût.
 
-## Les pressions exercées par les activités humaines
-- La **destruction et la fragmentation des habitats** (agriculture, urbanisation, déforestation), première cause d’érosion de la biodiversité ;
-- la **surexploitation** des ressources (pêche, chasse, bois) ;
-- les **pollutions** (nitrates, pesticides, plastiques) et l’**eutrophisation** des milieux aquatiques ;
-- les **espèces exotiques envahissantes**, introduites volontairement ou non ;
-- le **changement climatique**, qui déplace les aires de répartition plus vite que les espèces ne peuvent suivre.
+## Les pressions humaines
+| La pression | Son effet |
+| **Destruction et fragmentation des habitats** | Première cause d'érosion de la biodiversité |
+| **Surexploitation** | Pêche, chasse, bois |
+| **Pollutions** | Nitrates, pesticides, plastiques ; **eutrophisation** des milieux aquatiques |
+| **Espèces exotiques envahissantes** | Introduites volontairement ou non |
+| **Changement climatique** | Il déplace les aires de répartition plus vite que les espèces ne suivent |
 
 ## Gérer, pas seulement protéger
-La gestion d’un écosystème suppose des **choix** entre services concurrents : maximiser la production de bois réduit la biodiversité forestière ; une digue protège des crues mais supprime une zone humide. Une décision de gestion repose donc sur trois piliers : un **état scientifique** des connaissances, une **évaluation** des coûts et des bénéfices, et un **débat social** sur ce que l’on veut préserver.
+La gestion suppose des **choix entre services concurrents** :
+
+| L'objectif | Ce qu'il coûte |
+| Maximiser la production de bois | Une biodiversité forestière réduite |
+| Construire une digue contre les crues | La suppression d'une zone humide |
+
+Une décision repose sur trois piliers : un **état scientifique** des connaissances, une **évaluation** des coûts et des bénéfices, un **débat social** sur ce que l'on veut préserver.
 
 Les outils existent : aires protégées, corridors écologiques (trames verte et bleue), restauration de zones humides, agroécologie, quotas de pêche, paiements pour services environnementaux.
 
-> Le programme insiste sur un point : la science établit les faits et éclaire les conséquences des options, elle ne décide pas à la place de la société.`,
+> Le programme insiste : la science établit les faits et éclaire les conséquences des options, elle ne décide pas à la place de la société.`,
           },
           questions: [
             ['À quelle catégorie appartient le service de pollinisation ?', ['Les services de régulation', 'Les services d’approvisionnement', 'Les services culturels', 'Les services de production'], 0, 'Il régule le fonctionnement des cultures sans fournir directement un bien.'],
@@ -691,26 +832,34 @@ Les outils existent : aires protégées, corridors écologiques (trames verte et
           axe: 'Corps humain et santé',
           lecon: {
             titre: 'Quand une mutation devient une maladie',
-            cours: `Une **maladie génétique** résulte d’une modification de l’ADN qui altère une protéine et, par elle, une fonction de l’organisme.
+            cours: `Une maladie génétique résulte d'une modification de l'ADN qui altère une protéine et, par elle, une fonction de l'organisme.
 
 ## Les modes de transmission
-- **Autosomique récessive** : la maladie ne s’exprime que chez l’homozygote. Les parents, hétérozygotes, sont **porteurs sains**. La mucoviscidose et la drépanocytose en relèvent.
-- **Autosomique dominante** : un seul allèle muté suffit. Un parent atteint transmet la maladie à la moitié de ses enfants en moyenne (chorée de Huntington).
-- **Liée à l’X** : le gène est porté par le chromosome X. Les garçons, qui n’en ont qu’un, sont beaucoup plus souvent atteints (hémophilie, daltonisme, myopathie de Duchenne).
+| Le mode | Qui exprime la maladie | Un exemple |
+| **Autosomique récessive** | Seul l'**homozygote** ; les parents sont **porteurs sains** | Mucoviscidose, drépanocytose |
+| **Autosomique dominante** | Un seul allèle muté suffit ; un parent atteint transmet à la moitié de ses enfants | Chorée de Huntington |
+| **Liée à l'X** | Surtout les garçons, qui n'ont qu'un X | Hémophilie, daltonisme, myopathie de Duchenne |
 
 ## Lire un arbre généalogique
-C’est l’exercice classique de l’année. Deux repères suffisent le plus souvent :
-- deux parents **non atteints** ayant un enfant atteint : l’allèle est **récessif** ;
-- une maladie récessive touchant surtout les garçons : le gène est vraisemblablement **porté par l’X**.
+C'est l'exercice classique de l'année. Deux repères suffisent le plus souvent :
 
-## Maladies monogéniques et maladies multifactorielles
-- Les maladies **monogéniques** dépendent d’un seul gène : leur transmission suit les lois de Mendel.
-- La plupart des maladies fréquentes (diabète de type 2, hypertension, obésité, nombreux cancers) sont **multifactorielles** : plusieurs gènes de **prédisposition** interagissent avec l’**environnement** et le mode de vie. Porter un allèle de prédisposition n’est pas être malade ; c’est avoir une probabilité plus élevée de le devenir.
+| L'observation | La conclusion |
+| Deux parents **non atteints** ont un enfant atteint | L'allèle est **récessif** |
+| Une maladie récessive touche surtout les garçons | Le gène est vraisemblablement **porté par l'X** |
+
+## Monogénique ou multifactorielle
+| Le type | Ce qui la détermine | Sa transmission |
+| **Monogénique** | Un seul gène | Elle suit les lois de Mendel |
+| **Multifactorielle** | Plusieurs gènes de **prédisposition** et l'**environnement** | Diabète de type 2, hypertension, obésité, nombreux cancers |
+
+> Porter un allèle de prédisposition n'est pas être malade : c'est avoir une probabilité plus élevée de le devenir.
 
 ## Diagnostic et thérapies
-Le **séquençage** permet de repérer une mutation avant l’apparition des symptômes. Les pistes thérapeutiques comprennent la **thérapie génique** (apporter une version fonctionnelle du gène) et l’**édition du génome** par CRISPR-Cas9, dont l’usage sur les cellules germinales pose des questions éthiques que la loi encadre strictement.
+Le **séquençage** repère une mutation avant l'apparition des symptômes. Deux pistes thérapeutiques :
+- la **thérapie génique**, qui apporte une version fonctionnelle du gène ;
+- l'**édition du génome** par CRISPR-Cas9.
 
-> La distinction entre soigner un individu (cellules somatiques) et modifier la descendance (cellules germinales) est au cœur du débat bioéthique.`,
+> La distinction entre soigner un individu (cellules **somatiques**) et modifier sa descendance (cellules **germinales**) est au cœur du débat bioéthique, et la loi l'encadre strictement.`,
           },
           questions: [
             ['Qu’est-ce qu’un porteur sain ?', ['Un individu hétérozygote qui ne développe pas la maladie mais peut la transmettre', 'Un individu guéri d’une maladie génétique', 'Un individu sans aucune mutation', 'Un individu atteint mais sans symptôme visible'], 0, 'Il n’existe que pour les maladies récessives.'],
@@ -728,28 +877,34 @@ Le **séquençage** permet de repérer une mutation avant l’apparition des sym
           axe: 'Corps humain et santé',
           lecon: {
             titre: 'Une cellule qui échappe au contrôle',
-            cours: `Un **cancer** naît d’une cellule de l’organisme qui prolifère sans contrôle. Le processus est **progressif** et **multi-étapes** : il faut l’accumulation de plusieurs mutations dans une même lignée cellulaire.
+            cours: `Un cancer naît d'une cellule de l'organisme qui prolifère sans contrôle. Le processus est progressif : il faut plusieurs mutations accumulées dans une même lignée cellulaire.
 
 ## Les gènes en cause
-- Les **proto-oncogènes** favorisent la division cellulaire. Mutés, ils deviennent des **oncogènes** hyperactifs : c’est l’accélérateur bloqué.
-- Les **gènes suppresseurs de tumeurs** freinent la division et déclenchent la réparation ou l’**apoptose** (mort cellulaire programmée). Leur perte de fonction, c’est le frein qui lâche. Le gène **p53**, « gardien du génome », est muté dans une grande part des cancers humains.
-- Les gènes de **réparation de l’ADN** : leur défaillance accélère l’accumulation des autres mutations.
+| Le gène | Son rôle normal | Ce que fait la mutation | L'image |
+| **Proto-oncogène** | Favoriser la division | Il devient un **oncogène** hyperactif | L'accélérateur bloqué |
+| **Gène suppresseur de tumeur** | Freiner la division, déclencher réparation ou **apoptose** | Perte de fonction | Le frein qui lâche |
+| Gène de **réparation de l'ADN** | Corriger les erreurs | Les autres mutations s'accumulent plus vite | Le correcteur en panne |
 
-## Les étapes
-1. **Initiation** : une première mutation dans une cellule.
-2. **Promotion** : accumulation d’autres mutations, prolifération d’un clone.
-3. **Progression** : la tumeur devient maligne, recrute des vaisseaux (**angiogenèse**) et devient invasive.
-4. **Métastases** : des cellules migrent par le sang ou la lymphe et colonisent d’autres organes.
+> Le gène **p53**, « gardien du génome », est muté dans une grande part des cancers humains.
+
+## Les quatre étapes
+1. **Initiation** — une première mutation dans une cellule.
+2. **Promotion** — d'autres mutations s'accumulent, un clone prolifère.
+3. **Progression** — la tumeur devient maligne, recrute des vaisseaux (**angiogenèse**), devient invasive.
+4. **Métastases** — des cellules migrent par le sang ou la lymphe et colonisent d'autres organes.
 
 ## Les facteurs de risque
-- **Environnementaux** : tabac (première cause évitable), alcool, UV, amiante, particules fines, certains virus (papillomavirus, hépatites B et C).
-- **Génétiques** : prédispositions héritées, comme les mutations *BRCA1* et *BRCA2* pour les cancers du sein et de l’ovaire.
-- **Comportementaux** : alimentation, sédentarité, surpoids.
+| Le type | Des exemples |
+| **Environnementaux** | Tabac (première cause évitable), alcool, UV, amiante, particules fines, papillomavirus, hépatites B et C |
+| **Génétiques** | Prédispositions héritées, comme *BRCA1* et *BRCA2* |
+| **Comportementaux** | Alimentation, sédentarité, surpoids |
 
-> Un facteur de risque n’est pas une cause suffisante : il augmente une probabilité. Et l’immense majorité des mutations impliquées sont **somatiques**, donc non transmissibles — ce qui se transmet, dans les formes familiales, est une **prédisposition**.
+> Un facteur de risque n'est pas une cause suffisante : il augmente une probabilité. Et l'immense majorité des mutations impliquées sont **somatiques**, donc non transmissibles — ce qui se transmet dans les formes familiales est une **prédisposition**.
 
 ## Prévention et traitements
-La **prévention primaire** (ne pas fumer, se protéger du soleil, vaccination contre le papillomavirus) et le **dépistage** précoce restent les leviers les plus efficaces. Les traitements combinent chirurgie, radiothérapie, chimiothérapie, thérapies ciblées et **immunothérapies**, qui réactivent le système immunitaire contre la tumeur.`,
+La **prévention primaire** — ne pas fumer, se protéger du soleil, vaccination contre le papillomavirus — et le **dépistage** précoce restent les leviers les plus efficaces.
+
+Les traitements combinent chirurgie, radiothérapie, chimiothérapie, thérapies ciblées et **immunothérapies**, qui réactivent le système immunitaire contre la tumeur.`,
           },
           questions: [
             ['Qu’est-ce qu’un oncogène ?', ['Un proto-oncogène muté devenu hyperactif, qui stimule la division cellulaire', 'Un gène qui freine la division cellulaire', 'Un gène de réparation de l’ADN', 'Un gène viral uniquement'], 0, 'C’est l’accélérateur de la prolifération resté bloqué.'],
@@ -767,30 +922,39 @@ La **prévention primaire** (ne pas fumer, se protéger du soleil, vaccination c
           axe: 'Corps humain et santé',
           lecon: {
             titre: 'La sélection naturelle observée en direct',
-            cours: `Un **antibiotique** est une molécule qui tue les bactéries ou bloque leur multiplication. Il n’a **aucun effet sur les virus** — d’où l’inutilité d’en prescrire contre une grippe ou un rhume.
+            cours: `Un antibiotique tue les bactéries ou bloque leur multiplication. Il n'a aucun effet sur les virus — d'où l'inutilité d'en prescrire contre une grippe ou un rhume.
 
-## D’où vient la résistance
-Une bactérie devient résistante par **mutation spontanée** de son génome ou par **transfert de gènes**. Ce second mécanisme est propre au monde bactérien et explique la vitesse de la diffusion :
-- par **conjugaison**, échange de **plasmides** entre deux bactéries, même d’espèces différentes ;
-- par **transformation**, capture d’ADN libre dans le milieu ;
-- par **transduction**, transport de gènes par un virus bactériophage.
+## D'où vient la résistance
+| L'origine | Le mécanisme |
+| **Mutation spontanée** | Le génome bactérien change au hasard |
+| **Conjugaison** | Échange de **plasmides** entre deux bactéries, même d'espèces différentes |
+| **Transformation** | Capture d'ADN libre dans le milieu |
+| **Transduction** | Transport de gènes par un virus bactériophage |
 
-## Le rôle de l’antibiotique
-Point capital, et souvent mal formulé en devoir : l’antibiotique **ne crée pas** la résistance. La mutation préexiste, au hasard, dans une population immense. L’antibiotique **sélectionne** les rares bactéries qui la portent, en éliminant toutes les autres — donc en leur laissant la place et les ressources.
+> Les trois derniers sont des **transferts de gènes**, propres au monde bactérien : ils expliquent la vitesse de la diffusion.
 
-> C’est un exemple de **sélection naturelle** observable en quelques jours, sur un organisme dont les générations se succèdent en vingt minutes.
+## Le rôle exact de l'antibiotique
+Point capital, souvent mal formulé en devoir : l'antibiotique **ne crée pas** la résistance.
+
+1. La mutation **préexiste**, au hasard, dans une population immense.
+2. L'antibiotique élimine toutes les bactéries sensibles.
+3. Les rares résistantes ont désormais la place et les ressources.
+4. Elles se multiplient et deviennent majoritaires.
+
+> C'est un exemple de **sélection naturelle** observable en quelques jours, sur un organisme dont les générations se succèdent en vingt minutes.
 
 ## Ce qui accélère le phénomène
-- La **surprescription** et l’usage contre des infections virales ;
-- l’**arrêt prématuré** d’un traitement, qui laisse survivre les bactéries les moins sensibles ;
-- l’usage **massif en élevage**, longtemps comme facteur de croissance ;
-- la **transmission** des souches résistantes, notamment en milieu hospitalier.
+- La **surprescription**, et l'usage contre des infections virales.
+- L'**arrêt prématuré** d'un traitement, qui laisse survivre les bactéries les moins sensibles.
+- L'usage **massif en élevage**, longtemps comme facteur de croissance.
+- La **transmission** des souches résistantes, notamment à l'hôpital.
 
 ## Comment lutter
-- Le **bon usage** : prescrire seulement quand c’est nécessaire, respecter la durée ;
-- l’**antibiogramme**, qui teste in vitro la sensibilité de la souche et cible l’antibiotique efficace ;
-- l’**hygiène** et l’isolement des patients porteurs ;
-- la **recherche** de nouvelles molécules et d’alternatives (phagothérapie), sachant qu’aucune ne dispense du bon usage.`,
+| Le levier | Ce qu'il fait |
+| Le **bon usage** | Prescrire seulement quand c'est nécessaire, respecter la durée |
+| L'**antibiogramme** | Teste in vitro la sensibilité de la souche et cible la molécule efficace |
+| L'**hygiène** | Isolement des patients porteurs, lavage des mains |
+| La **recherche** | Nouvelles molécules, phagothérapie — sans dispenser du bon usage |`,
           },
           questions: [
             ['Un antibiotique est-il efficace contre un virus ?', ['Non, il n’agit que sur les bactéries', 'Oui, sur tous les virus', 'Oui, mais seulement à forte dose', 'Uniquement sur les virus respiratoires'], 0, 'Le prescrire contre une grippe est inutile et favorise les résistances.'],
@@ -808,27 +972,35 @@ Point capital, et souvent mal formulé en devoir : l’antibiotique **ne crée p
           axe: 'Corps humain et santé',
           lecon: {
             titre: 'La première ligne de défense',
-            cours: `L’**immunité innée** est présente dès la naissance, commune à tous les animaux, **immédiate** et **non spécifique** : elle réagit de la même manière quel que soit l’intrus, sans mémoire de rencontres antérieures.
+            cours: `L'immunité innée est présente dès la naissance, commune à tous les animaux, immédiate et non spécifique : elle réagit de la même façon quel que soit l'intrus, sans mémoire.
 
 ## Les barrières
-La peau, les muqueuses, le mucus, les cils, l’acidité gastrique et le microbiote constituent une première frontière mécanique et chimique.
+Peau, muqueuses, mucus, cils, acidité gastrique et microbiote forment une première frontière mécanique et chimique.
 
 ## La réaction inflammatoire aiguë
-C’est la réponse stéréotypée à une lésion ou à une infection. Ses **quatre signes cardinaux**, décrits dès l’Antiquité :
-- **rougeur** et **chaleur**, dues à la vasodilatation locale ;
-- **gonflement** (œdème), dû à l’augmentation de la perméabilité des vaisseaux ;
-- **douleur**, due aux médiateurs qui stimulent les terminaisons nerveuses.
+| Le signe cardinal | Sa cause |
+| **Rougeur** et **chaleur** | La vasodilatation locale |
+| **Gonflement** (œdème) | L'augmentation de la perméabilité des vaisseaux |
+| **Douleur** | Les médiateurs qui stimulent les terminaisons nerveuses |
 
 ## Le déroulement
-Les **cellules sentinelles** (macrophages, cellules dendritiques, mastocytes) résident dans les tissus. Elles reconnaissent les micro-organismes grâce à des **récepteurs** qui détectent des motifs moléculaires **communs à des familles entières** d’agents infectieux — c’est ce qui explique le caractère non spécifique de la réponse.
+Les **cellules sentinelles** — macrophages, cellules dendritiques, mastocytes — résident dans les tissus. Leurs **récepteurs** détectent des motifs moléculaires **communs à des familles entières** d'agents infectieux : d'où le caractère non spécifique de la réponse.
 
-Elles libèrent alors des **médiateurs de l’inflammation** (histamine, prostaglandines, cytokines) qui provoquent la vasodilatation et attirent sur place les **phagocytes**. La **phagocytose** se déroule en quatre temps : adhésion, ingestion, digestion dans le phagolysosome, élimination des débris.
+Elles libèrent des **médiateurs de l'inflammation** — histamine, prostaglandines, cytokines — qui provoquent la vasodilatation et attirent les **phagocytes**.
 
-## Le lien avec l’immunité adaptative
-La cellule dendritique qui a phagocyté un agent infectieux migre vers un **ganglion lymphatique** et y présente des fragments de l’intrus : elle devient **cellule présentatrice de l’antigène**. C’est ce geste qui **déclenche** l’immunité adaptative. Les deux systèmes ne sont donc pas indépendants : l’inné commande l’adaptatif.
+| Le temps de la phagocytose | Ce qui se passe |
+| **Adhésion** | Le phagocyte se lie au microbe |
+| **Ingestion** | Il l'englobe dans une vésicule |
+| **Digestion** | Les enzymes du phagolysosome le détruisent |
+| **Élimination** | Les débris sont rejetés |
+
+## Le lien avec l'immunité adaptative
+La cellule dendritique qui a phagocyté migre vers un **ganglion lymphatique** et y présente des fragments de l'intrus : elle devient **cellule présentatrice de l'antigène**.
+
+> C'est ce geste qui **déclenche** l'immunité adaptative. Les deux systèmes ne sont pas indépendants : l'inné commande l'adaptatif.
 
 ## Les anti-inflammatoires
-L’aspirine, l’ibuprofène et les corticoïdes réduisent la réaction inflammatoire. Utiles quand elle est excessive ou douloureuse, ils affaiblissent aussi une défense utile : d’où la prudence lors de certaines infections.`,
+Aspirine, ibuprofène et corticoïdes réduisent la réaction inflammatoire. Utiles quand elle est excessive ou douloureuse, ils affaiblissent aussi une défense utile — d'où la prudence lors de certaines infections.`,
           },
           questions: [
             ['Quelles sont les caractéristiques de l’immunité innée ?', ['Immédiate, non spécifique et sans mémoire', 'Lente, spécifique et avec mémoire', 'Immédiate, spécifique et avec mémoire', 'Lente, non spécifique et avec mémoire'], 0, 'Elle est présente dès la naissance et commune à tous les animaux.'],
@@ -846,22 +1018,34 @@ L’aspirine, l’ibuprofène et les corticoïdes réduisent la réaction inflam
           axe: 'Corps humain et santé',
           lecon: {
             titre: 'Une réponse spécifique et une mémoire',
-            cours: `L’**immunité adaptative** prend le relais de l’immunité innée quand celle-ci ne suffit pas. Elle est **spécifique** d’un antigène donné, **lente à se mettre en place** (plusieurs jours), et elle laisse une **mémoire**.
+            cours: `L'immunité adaptative prend le relais quand l'innée ne suffit pas. Spécifique, lente à se mettre en place, et dotée d'une mémoire.
 
-## L’antigène et sa reconnaissance
-Un **antigène** est une molécule reconnue comme étrangère. Chaque **lymphocyte** possède un récepteur d’un seul type ; le répertoire immunitaire compte des milliards de spécificités différentes, engendrées **avant toute rencontre** avec un antigène. La rencontre ne crée donc rien : elle **sélectionne** le clone qui possédait déjà le bon récepteur, puis le fait proliférer — c’est la **sélection clonale**.
+## La sélection clonale
+Un **antigène** est une molécule reconnue comme étrangère. Chaque **lymphocyte** possède un récepteur d'un seul type, et le répertoire compte des milliards de spécificités, engendrées **avant toute rencontre**.
+
+> La rencontre ne crée rien : elle **sélectionne** le clone qui possédait déjà le bon récepteur, puis le fait proliférer.
 
 ## Les deux voies
-- La **réponse humorale**, portée par les **lymphocytes B**. Sélectionnés puis différenciés en **plasmocytes**, ils sécrètent des **anticorps** qui se fixent sur l’antigène et forment des **complexes immuns**, neutralisés puis éliminés par phagocytose. Un anticorps agit dans les **liquides** de l’organisme : il n’entre pas dans les cellules.
-- La **réponse cellulaire**, portée par les **lymphocytes T cytotoxiques (LT8)**. Ils reconnaissent les cellules **infectées** ou anormales et provoquent leur destruction. C’est la seule voie efficace contre un agent installé **à l’intérieur** des cellules — virus, cellule cancéreuse.
+| La voie | Sa cellule | Son arme | Contre quoi |
+| **Humorale** | **Lymphocyte B**, différencié en **plasmocyte** | Les **anticorps**, qui forment des **complexes immuns** éliminés par phagocytose | Les agents **dans les liquides** de l'organisme |
+| **Cellulaire** | **Lymphocyte T cytotoxique (LT8)** | La destruction de la cellule cible | Les agents **à l'intérieur** des cellules : virus, cellule cancéreuse |
 
-## Le chef d’orchestre
-Le **lymphocyte T auxiliaire (LT4)** est activé par la cellule présentatrice de l’antigène et sécrète des **interleukines** qui amplifient et coordonnent les deux voies. Sa destruction par le **VIH** désorganise l’ensemble de la réponse adaptative : c’est le mécanisme du sida.
+> Un anticorps n'entre jamais dans une cellule. C'est pourquoi la voie cellulaire est indispensable.
+
+## Le chef d'orchestre
+Le **lymphocyte T auxiliaire (LT4)** est activé par la cellule présentatrice de l'antigène et sécrète des **interleukines** qui amplifient et coordonnent les deux voies.
+
+> Sa destruction par le **VIH** désorganise toute la réponse adaptative : c'est le mécanisme du sida.
 
 ## La mémoire immunitaire
-Après la réponse, des **lymphocytes mémoire** persistent. Lors d’un second contact, la réponse est **plus rapide, plus intense et plus efficace** : l’infection est souvent stoppée avant tout symptôme. C’est le fondement de la vaccination.
+Des **lymphocytes mémoire** persistent après la réponse. Au second contact, la réponse est **plus rapide, plus intense, plus efficace** : l'infection est souvent stoppée avant tout symptôme. C'est le fondement de la vaccination.
 
-> À retenir : l’immunité innée est immédiate et non spécifique ; l’adaptative est lente, spécifique et dotée de mémoire. Les deux sont indispensables et coopèrent.`,
+## Le tableau à retenir
+| Le critère | Immunité **innée** | Immunité **adaptative** |
+| Délai | Immédiate | Plusieurs jours |
+| Spécificité | Non spécifique | **Spécifique** d'un antigène |
+| Mémoire | Aucune | **Oui** |
+| Présence | Dès la naissance | Se construit au fil des rencontres |`,
           },
           questions: [
             ['Quelles cellules produisent les anticorps ?', ['Les plasmocytes, issus des lymphocytes B', 'Les lymphocytes T cytotoxiques', 'Les macrophages', 'Les cellules dendritiques'], 0, 'Ils sont la forme différenciée et sécrétrice du lymphocyte B.'],
@@ -879,25 +1063,34 @@ Après la réponse, des **lymphocytes mémoire** persistent. Lors d’un second 
           axe: 'Corps humain et santé',
           lecon: {
             titre: 'Utiliser le système immunitaire comme traitement',
-            cours: `La médecine sait aujourd’hui **provoquer** ou **emprunter** une réponse immunitaire. Deux stratégies à ne pas confondre.
+            cours: `La médecine sait aujourd'hui provoquer ou emprunter une réponse immunitaire. Deux stratégies à ne pas confondre.
 
 ## La vaccination : une immunité active
-Le vaccin présente à l’organisme un antigène **inoffensif** — agent inactivé, atténué, fragment protéique, ou ARN messager codant un antigène. Le système immunitaire monte alors une réponse adaptative **complète**, et surtout constitue une **mémoire** sans avoir subi la maladie.
+Le vaccin présente un antigène **inoffensif** — agent inactivé, atténué, fragment protéique, ou ARN messager codant un antigène. Le système immunitaire monte une réponse adaptative complète et constitue une **mémoire**, sans avoir subi la maladie.
 
-Le **rappel** n’est pas une redondance : il sollicite les lymphocytes mémoire et produit une réponse secondaire qui augmente durablement la protection.
+| L'élément | Son rôle |
+| Le **rappel** | Il sollicite les lymphocytes mémoire et produit une réponse secondaire qui renforce durablement la protection |
+| L'**adjuvant** | Il stimule l'immunité innée au point d'injection, condition d'une bonne réponse adaptative |
 
-Les **adjuvants** stimulent l’immunité innée au point d’injection, condition d’une bonne réponse adaptative.
+## L'immunité collective
+Au-delà d'un certain taux de couverture, la chaîne de transmission se rompt : les personnes qui ne peuvent pas être vaccinées — nourrissons, immunodéprimés — sont protégées par les autres.
 
-## L’immunité collective
-Au-delà d’un certain taux de couverture vaccinale, la chaîne de transmission se rompt : les personnes qui ne peuvent pas être vaccinées — nourrissons, immunodéprimés — sont protégées par les autres. Ce seuil dépend de la contagiosité de la maladie ; il est très élevé pour la rougeole. La vaccination a une **dimension collective**, pas seulement individuelle.
+> Ce seuil dépend de la contagiosité : il est très élevé pour la rougeole. La vaccination a donc une dimension **collective**, pas seulement individuelle.
 
-## La sérothérapie : une immunité passive
-On injecte directement des **anticorps** déjà formés. La protection est **immédiate** mais **brève** et **sans mémoire** — les anticorps se dégradent. Elle est réservée à l’urgence (morsure suspectée de rage, tétanos chez un non-vacciné).
-
-> La distinction est classique en devoir : le vaccin fait travailler le système immunitaire (lent, durable, mémoire) ; le sérum le remplace (immédiat, bref, sans mémoire).
+## Vaccin ou sérum : la distinction classique
+| Le critère | **Vaccination** | **Sérothérapie** |
+| Ce qu'on injecte | Un **antigène** inoffensif | Des **anticorps** déjà formés |
+| Le système immunitaire | Il **travaille** | Il est **remplacé** |
+| Le délai | Lent | **Immédiat** |
+| La durée | Durable | **Brève** |
+| La mémoire | **Oui** | Aucune |
+| L'usage | Prévention | Urgence : morsure suspectée de rage, tétanos chez un non-vacciné |
 
 ## Les immunothérapies antitumorales
-Elles réactivent la réponse immunitaire contre les cellules cancéreuses : **anticorps monoclonaux** dirigés contre une cible de la tumeur, **inhibiteurs de points de contrôle** qui lèvent le frein exercé par la tumeur sur les lymphocytes T, thérapies cellulaires **CAR-T** où les lymphocytes d’un patient sont modifiés en laboratoire avant d’être réinjectés.`,
+| La technique | Son principe |
+| **Anticorps monoclonaux** | Dirigés contre une cible de la tumeur |
+| **Inhibiteurs de points de contrôle** | Ils lèvent le frein que la tumeur exerce sur les lymphocytes T |
+| Thérapies cellulaires **CAR-T** | Les lymphocytes du patient sont modifiés en laboratoire, puis réinjectés |`,
           },
           questions: [
             ['Sur quoi repose l’efficacité de la vaccination ?', ['La constitution d’une mémoire immunitaire', 'L’injection d’anticorps déjà formés', 'La destruction directe de l’agent infectieux', 'Le renforcement de la barrière cutanée'], 0, 'La réponse secondaire, plus rapide et plus intense, stoppe l’infection précocement.'],

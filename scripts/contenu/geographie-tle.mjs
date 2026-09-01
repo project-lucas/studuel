@@ -50,23 +50,42 @@ existants, sans rien supprimer.`,
           titre: 'Mers et océans : vecteurs essentiels de la mondialisation',
           lecon: {
             titre: 'La mondialisation passe par la mer',
-            cours: `Un chiffre suffit à poser le décor : environ **80 % du commerce mondial en volume** voyage par la mer. La mondialisation n'est pas d'abord numérique, elle est maritime.
+            cours: `Un chiffre suffit à poser le décor : environ **80 % du commerce mondial en volume** voyage par la mer. La mondialisation n’est pas d’abord numérique — elle est **maritime**.
 
 ## La révolution du conteneur
-Inventé par **Malcom McLean en 1956**, le conteneur standardise le transport : la même boîte passe du camion au train et au navire sans être ouverte. Le coût du transport s'effondre, ce qui rend rentable de produire à 15 000 km du consommateur. On compte les flux en **EVP** (équivalent vingt pieds) ; les plus grands porte-conteneurs en transportent aujourd'hui plus de **20 000**.
+Inventé par **Malcom McLean en 1956**, le conteneur standardise le transport : la même boîte passe du camion au train et au navire **sans être ouverte**.
 
-> Sans conteneurisation, pas de division internationale du travail : c'est une innovation logistique qui a rendu possible l'atelier du monde.
+| Ce qui change | La conséquence |
+| Le coût du transport s’effondre | Il devient rentable de produire à 15 000 km du consommateur |
+| Le temps d’escale s’effondre | Un navire passe sa vie en mer, plus à quai |
+| L’unité de compte devient l’**EVP** | Les plus grands porte-conteneurs en portent plus de **20 000** |
+
+> Sans conteneurisation, pas de division internationale du travail : c’est une **innovation logistique** qui a rendu possible l’atelier du monde.
 
 ## Les routes et les points de passage
-Les flux se concentrent sur quelques **routes** reliant les trois grandes façades maritimes — Asie orientale, Europe du Nord-Ouest (**Northern Range**, de Hambourg au Havre), Amérique du Nord. Ils passent par des **points de passage obligés** : canal de **Suez**, canal de **Panama**, détroits de **Malacca**, d'**Ormuz**, de **Gibraltar**, du **Bosphore**. Un incident y bloque le commerce mondial — l'échouage de l'*Ever Given* dans le canal de Suez en 2021 l'a rappelé en six jours.
+Les flux relient trois grandes façades maritimes : **Asie orientale**, **Europe du Nord-Ouest** (la *Northern Range*, de Hambourg au Havre), **Amérique du Nord**. Ils passent par des **points de passage obligés**.
+
+| Passage | Ce qu’il relie |
+| Canal de **Suez** | Europe et Asie |
+| Canal de **Panama** | Atlantique et Pacifique |
+| Détroit de **Malacca** | Océan Indien et mer de Chine |
+| Détroit d’**Ormuz** | Le golfe arabo-persique et le monde |
+| **Gibraltar**, **Bosphore** | L’entrée et la sortie de la Méditerranée |
+
+Un incident y bloque le commerce mondial : l’échouage de l’*Ever Given* dans le canal de Suez, en 2021, l’a rappelé en **six jours**.
 
 ## Les hubs
-Les ports mondiaux ne sont pas de simples quais : ce sont des **hubs** où les cargaisons sont éclatées vers des navires plus petits (*transbordement*). **Shanghai**, **Singapour**, **Ningbo**, **Shenzhen** dominent le classement ; les premiers ports européens (Rotterdam, Anvers) sont loin derrière en tonnage.
+Les ports mondiaux ne sont pas de simples quais : ce sont des **hubs** où les cargaisons sont éclatées vers des navires plus petits — le **transbordement**.
 
-## Ce que la mer transporte d'autre
-- **99 % des données** mondiales circulent par des **câbles sous-marins**, pas par satellite ;
-- la mer fournit des **ressources** : pêche, hydrocarbures offshore, minerais ;
-- la **convention de Montego Bay (1982)** attribue à chaque État une **zone économique exclusive (ZEE)** de **200 milles marins** où il exploite seul les ressources.`,
+| Rang mondial | Ports dominants |
+| Tête du classement | **Shanghai**, **Singapour**, **Ningbo**, **Shenzhen** |
+| Premiers européens | Rotterdam, Anvers — loin derrière en tonnage |
+
+## Ce que la mer transporte d’autre
+| Flux ou ressource | Le fait à retenir |
+| Les **données** | **99 %** circulent par des câbles sous-marins, pas par satellite |
+| Les **ressources** | Pêche, hydrocarbures offshore, minerais |
+| Le **droit** | La convention de **Montego Bay** (1982) attribue à chaque État une **ZEE** de **200 milles marins** |`,
           },
           questions: [
             ['Quelle part du commerce mondial en volume passe par la mer ?', ['Environ 80 %', 'Environ 30 %', 'Environ 50 %', 'Environ 95 %'], 0, 'La mondialisation des marchandises est d’abord un fait maritime.'],
@@ -83,20 +102,25 @@ Les ports mondiaux ne sont pas de simples quais : ce sont des **hubs** où les c
           titre: 'Des enjeux géostratégiques qui se déplacent vers les mers et les océans',
           lecon: {
             titre: 'La mer, terrain de rivalités',
-            cours: `Plus les échanges dépendent de la mer, plus la mer devient un espace de puissance. C'est la **maritimisation** des enjeux stratégiques.
+            cours: `Plus les échanges dépendent de la mer, plus la mer devient un espace de **puissance**. C’est la **maritimisation** des enjeux stratégiques.
 
 ## Contrôler les routes
-Une marine de guerre sert d'abord à garantir la liberté de circulation de ses navires marchands. Les **États-Unis** conservent la première marine hauturière (une dizaine de porte-avions à propulsion nucléaire) et un réseau mondial de bases. La **Chine** a construit en vingt ans la première flotte du monde **en nombre de bâtiments**, ouvert une base à **Djibouti** (2017) et sécurise ses approvisionnements par des ports acquis ou financés (**routes de la soie maritimes**).
+Une marine de guerre sert d’abord à garantir la liberté de circulation de ses navires marchands.
+
+| Puissance | Ses moyens | Sa stratégie |
+| **États-Unis** | Première marine hauturière, une dizaine de porte-avions nucléaires | Un réseau mondial de bases |
+| **Chine** | Première flotte du monde **en nombre de bâtiments** | Base à **Djibouti** (2017), ports acquis ou financés : les **routes de la soie maritimes** |
 
 ## Les zones de tension
-- **Mer de Chine méridionale** : Pékin y revendique la quasi-totalité de l'espace (« ligne en neuf traits »), construit des îlots artificiels militarisés dans les **Spratleys** et les **Paracels**, et ignore la sentence arbitrale de **2016** qui lui a donné tort.
-- **Arctique** : la fonte de la banquise ouvre la **route maritime du Nord** et l'accès à des ressources ; Russie, Canada, États-Unis, Danemark et Norvège y déposent des demandes d'extension de plateau continental.
-- **Piraterie** : golfe d'Aden, puis surtout **golfe de Guinée**, devenu la première zone d'attaques.
+| Zone | Ce qui s’y joue |
+| **Mer de Chine méridionale** | Pékin revendique la quasi-totalité de l’espace (« ligne en neuf traits »), militarise des îlots artificiels aux **Spratleys** et **Paracels**, et ignore la sentence arbitrale de **2016** qui lui a donné tort |
+| **Arctique** | La fonte ouvre la **route maritime du Nord** et l’accès aux ressources ; Russie, Canada, États-Unis, Danemark et Norvège y déposent des demandes |
+| **Piraterie** | Golfe d’Aden, puis surtout **golfe de Guinée**, devenu la première zone d’attaques |
 
-## L'appropriation des espaces
-La ZEE fait de chaque île un enjeu : un rocher habitable ouvre 200 milles de droits. Les États déposent auprès de l'ONU des demandes d'**extension du plateau continental** au-delà de 200 milles, sur critère géologique. La mer, longtemps espace de liberté, se **territorialise**.
+## L’appropriation des espaces
+La ZEE fait de chaque île un enjeu : un rocher habitable ouvre **200 milles** de droits exclusifs. Les États déposent auprès de l’ONU des demandes d’**extension du plateau continental** au-delà de 200 milles, sur critère géologique.
 
-> Retiens la logique : la mondialisation a rendu les États dépendants de flux qu'ils ne contrôlent pas — d'où le retour des marines de guerre, des bases et des contentieux de souveraineté.`,
+> La mer, longtemps espace de **liberté**, se **territorialise**. Retiens la logique du chapitre : la mondialisation a rendu les États dépendants de flux qu’ils ne contrôlent pas — d’où le retour des marines de guerre, des bases et des contentieux de souveraineté.`,
           },
           questions: [
             ['Que désigne la maritimisation ?', ['Le report vers la mer des enjeux économiques et stratégiques', 'La montée du niveau des océans', 'L’augmentation de la pêche industrielle', 'La construction de ports artificiels'], 0, 'Les échanges dépendant de la mer, la puissance s’y déplace aussi.'],
@@ -113,21 +137,36 @@ La ZEE fait de chaque île un enjeu : un rocher habitable ouvre 200 milles de dr
           titre: 'Le détroit de Malacca et le golfe arabo-persique : des points de passage au cœur de la mondialisation',
           lecon: {
             titre: 'Deux goulets, un monde suspendu',
-            cours: `Deux espaces resserrés portent une part démesurée du commerce mondial. Les étudier, c'est comprendre ce qu'est une **vulnérabilité stratégique**.
+            cours: `Deux espaces resserrés portent une part démesurée du commerce mondial. Les étudier, c’est comprendre ce qu’est une **vulnérabilité stratégique**.
+
+## Les deux goulets, en chiffres
+| | Détroit de **Malacca** | Détroit d’**Ormuz** |
+| Ce qu’il relie | Océan Indien et mer de Chine | Le golfe arabo-persique et le monde |
+| Largeur minimale | **2,7 km** | environ 50 km |
+| Trafic | 90 000 à 100 000 navires par an | environ **20 millions de barils par jour** |
+| Part mondiale | environ un **quart** du commerce maritime | environ un **cinquième** du pétrole consommé |
 
 ## Le détroit de Malacca
-Long d'environ **900 km** entre la Malaisie et Sumatra, large de **2,7 km** en son point le plus étroit, il relie l'océan Indien à la mer de Chine. Il voit passer environ **90 000 à 100 000 navires par an**, soit de l'ordre du **quart du commerce maritime mondial** et une part majeure du pétrole destiné à l'Asie orientale.
+Long d’environ **900 km** entre la Malaisie et Sumatra. **Singapour**, à sa sortie, en a tiré sa fortune : premier port de transbordement mondial, raffinage, place financière.
 
-**Singapour**, à sa sortie, en a tiré sa fortune : port de transbordement de premier rang mondial, raffinage, place financière.
+> On appelle **dilemme de Malacca** la dépendance chinoise à ce goulet : environ **80 %** de ses importations d’hydrocarbures y transitent, sous surveillance de marines qui ne sont pas la sienne.
 
-> On appelle **dilemme de Malacca** la dépendance chinoise à ce goulet : environ 80 % de ses importations d'hydrocarbures y transitent, sous surveillance de marines qui ne sont pas la sienne. D'où les contournements cherchés — oléoducs vers la Birmanie et le Pakistan, projets de canal de Kra, routes terrestres.
+| Le contournement cherché | Son état |
+| Oléoducs vers la Birmanie et le Pakistan | En service, capacité limitée |
+| Projet de canal de **Kra** en Thaïlande | Jamais engagé |
+| Routes terrestres eurasiatiques | En développement, coûteuses |
 
 ## Le golfe arabo-persique
-Il concentre une part majeure des réserves mondiales de pétrole et de gaz (Arabie saoudite, Iran, Irak, Émirats, Koweït, Qatar). Sa sortie, le **détroit d'Ormuz**, large de 50 km, voit passer de l'ordre de **20 millions de barils par jour** — environ un cinquième de la consommation mondiale de pétrole.
+Il concentre une part majeure des réserves mondiales de pétrole et de gaz : Arabie saoudite, Iran, Irak, Émirats, Koweït, Qatar.
 
-L'**Iran**, riverain, a menacé plusieurs fois de le fermer ; les États-Unis y maintiennent une flotte permanente (Ve flotte à Bahreïn) et la France une base à Abou Dabi. Le détroit est donc à la fois une artère et un levier de pression.
+| Acteur | Sa présence |
+| **Iran** | Riverain ; a menacé plusieurs fois de fermer le détroit |
+| **États-Unis** | Ve flotte basée à Bahreïn |
+| **France** | Base militaire à Abou Dabi |
 
-## Ce qu'il faut en retenir
+Le détroit est donc à la fois une **artère** et un **levier de pression**.
+
+## Ce qu’il faut en retenir
 Ces deux passages illustrent la même chose : la mondialisation a **concentré** ses flux sur quelques kilomètres carrés. Efficacité maximale, **résilience minimale**.`,
           },
           questions: [
@@ -145,24 +184,35 @@ Ces deux passages illustrent la même chose : la mondialisation a **concentré**
           titre: 'Mers et océans en devenir',
           lecon: {
             titre: 'Exploiter, protéger, gouverner',
-            cours: `L'océan est en même temps la plus grande réserve de ressources de la planète, sa principale poubelle et son plus vaste espace mal gouverné.
+            cours: `L’océan est en même temps la plus grande réserve de ressources de la planète, sa principale poubelle, et son plus vaste espace **mal gouverné**.
 
 ## La pression sur les ressources vivantes
-Environ **35 % des stocks de poissons** sont surexploités et la majorité du reste est exploitée au maximum. La pêche industrielle (chaluts de fond, navires-usines), la pêche illégale et les subventions publiques entretiennent la surpêche. L'**aquaculture** fournit désormais près de la moitié du poisson consommé, avec ses propres impacts (intrants, maladies, farines).
+| Fait | Chiffre |
+| Stocks de poissons surexploités | environ **35 %** |
+| Le reste | Exploité au maximum de son rendement |
+| Part de l’**aquaculture** dans le poisson consommé | Près de la moitié |
+
+Les causes : pêche industrielle (chaluts de fond, navires-usines), pêche illégale, subventions publiques. L’aquaculture a ses propres impacts : intrants, maladies, farines de poisson.
 
 ## Les pollutions
-- **Plastiques** : de l'ordre de **8 à 10 millions de tonnes** rejoignent l'océan chaque année, s'accumulant dans les gyres (le « continent de plastique » du Pacifique nord) puis se fragmentant en microplastiques ;
-- **eutrophisation** par les engrais, marées vertes, zones mortes ;
-- **acidification** : l'océan absorbe environ un quart du CO₂ émis, son pH baisse, ce qui fragilise coraux et coquillages ;
-- **réchauffement** : blanchissement des coraux, déplacement des espèces, montée du niveau marin.
+| Pollution | Le mécanisme | L’effet |
+| **Plastiques** | 8 à 10 millions de tonnes par an | Gyres, puis microplastiques dans la chaîne alimentaire |
+| **Eutrophisation** | Engrais agricoles | Marées vertes, zones mortes |
+| **Acidification** | L’océan absorbe un quart du CO₂ émis | Le pH baisse : coraux et coquillages fragilisés |
+| **Réchauffement** | Excès de chaleur stocké | Blanchissement des coraux, montée du niveau marin |
 
 ## Les nouvelles convoitises
-Le fond des océans contient des **nodules polymétalliques** (nickel, cobalt, manganèse) et des terres rares, dont l'exploitation est réclamée par les industriels des batteries et contestée par les scientifiques. Les **énergies marines** se développent : éolien posé et flottant, hydrolien, marémoteur.
+Le fond des océans contient des **nodules polymétalliques** — nickel, cobalt, manganèse — et des terres rares. Leur exploitation est réclamée par les industriels des batteries et contestée par les scientifiques, faute de connaître les écosystèmes concernés.
+
+Les **énergies marines** se développent en parallèle : éolien posé et flottant, hydrolien, marémoteur.
 
 ## La gouvernance en construction
-- L'**Autorité internationale des fonds marins (AIFM)** délivre les permis d'exploration au-delà des ZEE ;
-- le **traité BBNJ**, adopté à l'ONU en **2023**, permet enfin de créer des aires protégées en **haute mer** — 60 % de l'océan qui n'appartenait à personne ;
-- l'objectif international est de protéger **30 % des espaces marins d'ici 2030**, alors que le taux réellement protégé reste très inférieur, et souvent sans contrôle effectif (« parcs de papier »).`,
+| Instrument | Date | Ce qu’il permet |
+| **AIFM** | En place | Délivre les permis d’exploration au-delà des ZEE |
+| Traité **BBNJ** | **2023** | Créer des aires protégées en **haute mer** |
+| Objectif international | 2030 | Protéger **30 %** des espaces marins |
+
+> Le traité BBNJ comble un vide considérable : **60 %** de l’océan n’appartenait à personne, donc personne ne pouvait y interdire quoi que ce soit. Reste le contrôle effectif — beaucoup d’aires protégées existantes sont des « **parcs de papier** ».`,
           },
           questions: [
             ['Quelle part des stocks de poissons est surexploitée ?', ['Environ 35 %', 'Environ 5 %', 'Environ 60 %', 'Environ 90 %'], 0, 'L’essentiel du reste est exploité à son maximum : les marges sont nulles.'],
@@ -179,23 +229,33 @@ Le fond des océans contient des **nodules polymétalliques** (nickel, cobalt, m
           titre: 'La France : une puissance maritime ?',
           lecon: {
             titre: 'Le deuxième domaine du monde, et ses angles morts',
-            cours: `La France possède le **deuxième espace maritime du monde** — environ **10,2 millions de km²** de ZEE, derrière les États-Unis. Une puissance… incomplète.
+            cours: `La France possède le **deuxième espace maritime du monde** — environ **10,2 millions de km²** de ZEE, derrière les États-Unis. Une puissance… incomplète, et c’est cette nuance que le bac attend.
 
-## Une ZEE d'outre-mer
-**Plus de 96 %** de cette ZEE vient des **territoires ultramarins** : Polynésie française, Nouvelle-Calédonie, Terres australes, Clipperton, Wallis-et-Futuna, Saint-Pierre-et-Miquelon, La Réunion, Mayotte, Antilles, Guyane. La France est présente dans **tous les océans** — un atout qu'aucun autre pays européen n'a. Les demandes d'extension du plateau continental portent le domaine total au-delà de 11 millions de km².
+## Une ZEE d’outre-mer
+> **Plus de 96 %** de cette ZEE vient des territoires **ultramarins**. Sans eux, la France serait une puissance maritime moyenne : la carte de l’Hexagone ne dit rien de son domaine.
+
+| Océan | Territoires |
+| Pacifique | Polynésie française, Nouvelle-Calédonie, Wallis-et-Futuna, Clipperton |
+| Indien | La Réunion, Mayotte, Terres australes |
+| Atlantique | Antilles, Guyane, Saint-Pierre-et-Miquelon |
+
+La France est présente dans **tous les océans** — un atout qu’aucun autre pays européen n’a. Les demandes d’extension du plateau continental portent le domaine au-delà de 11 millions de km².
 
 ## Les atouts
-- Une **marine nationale** de premier plan : porte-avions à propulsion nucléaire *Charles de Gaulle*, sous-marins nucléaires, présence permanente dans l'Indo-Pacifique ;
-- un armateur mondial : **CMA CGM**, parmi les trois premiers transporteurs de conteneurs ;
-- une recherche océanographique reconnue (**Ifremer**) ;
-- des industries : construction navale (Saint-Nazaire), offshore, câbles sous-marins (Alcatel Submarine Networks).
+| Domaine | L’atout |
+| Militaire | Porte-avions nucléaire *Charles de Gaulle*, sous-marins nucléaires, présence permanente en Indo-Pacifique |
+| Économique | **CMA CGM**, parmi les trois premiers transporteurs de conteneurs |
+| Scientifique | **Ifremer**, recherche océanographique reconnue |
+| Industriel | Construction navale (Saint-Nazaire), offshore, câbles sous-marins |
 
 ## Les faiblesses
-- Les **ports** français décrochent : Le Havre et Marseille traitent des volumes très inférieurs à Rotterdam ou Anvers, faute d'arrière-pays connecté et de fiabilité logistique ;
-- la **flotte de commerce** sous pavillon français est modeste ;
-- l'immensité de la ZEE est **difficile à surveiller** : pêche illégale en Guyane, orpaillage, trafics, moyens dispersés sur trois océans.
+| Faiblesse | Ce qu’elle coûte |
+| Les **ports** décrochent | Le Havre et Marseille loin derrière Rotterdam et Anvers : arrière-pays mal connecté, fiabilité insuffisante |
+| La **flotte de commerce** sous pavillon français | Modeste au regard du domaine |
+| La **surveillance** de la ZEE | Pêche illégale en Guyane, orpaillage, trafics : des moyens dispersés sur trois océans |
 
-> Conclusion nuancée, celle qu'attend le bac : la France est une **puissance maritime par son domaine et sa marine**, mais pas par son économie portuaire. Le potentiel est réel, l'exploitation partielle.`,
+## La conclusion attendue
+La France est une **puissance maritime par son domaine et par sa marine**, mais **pas par son économie portuaire**. Le potentiel est réel, l’exploitation partielle — et c’est exactement ce déséquilibre qu’une copie doit démontrer, pas trancher.`,
           },
           questions: [
             ['Quel rang mondial occupe la ZEE française ?', ['Le 2e', 'Le 1er', 'Le 5e', 'Le 10e'], 0, 'Environ 10,2 millions de km², derrière les États-Unis.'],
@@ -214,25 +274,34 @@ Le fond des océans contient des **nodules polymétalliques** (nickel, cobalt, m
           titre: 'Des territoires inégalement intégrés dans la mondialisation',
           lecon: {
             titre: 'Centres, périphéries et angles morts',
-            cours: `La mondialisation ne met pas le monde à plat : elle **hiérarchise**. Certains territoires en sont les moteurs, d'autres les fournisseurs, d'autres encore les oubliés.
+            cours: `La mondialisation ne met pas le monde à plat : elle **hiérarchise**. Certains territoires en sont les moteurs, d’autres les fournisseurs, d’autres encore les oubliés.
 
 ## Une lecture centre / périphérie
-- Les **centres d'impulsion** — Amérique du Nord, Europe occidentale, Asie orientale — concentrent capitaux, décisions, innovation. C'est l'**archipel mégalopolitain mondial** : un chapelet de métropoles mieux reliées entre elles qu'à leur propre arrière-pays.
-- Les **périphéries intégrées** fournissent main-d'œuvre et matières premières et captent une partie de la valeur : pays émergents, ateliers d'Asie du Sud-Est, pays pétroliers.
-- Les **périphéries en marge** restent à l'écart : la plupart des **46 pays les moins avancés (PMA)**, souvent enclavés, en conflit, ou dépendants d'un seul produit.
+| Type de territoire | Ce qu’il concentre | Exemples |
+| **Centres d’impulsion** | Capitaux, décisions, innovation | Amérique du Nord, Europe occidentale, Asie orientale |
+| **Périphéries intégrées** | Main-d’œuvre, matières premières ; une part de la valeur | Pays émergents, ateliers d’Asie du Sud-Est, pays pétroliers |
+| **Périphéries en marge** | Rien, ou presque | La plupart des **46 PMA**, souvent enclavés ou en conflit |
 
-> Le vieux couple **Nord / Sud** ne suffit plus : la Chine est le premier exportateur mondial, et des fractures profondes traversent chaque pays, du Nord comme du Sud.
+Les centres forment l’**archipel mégalopolitain mondial** : un chapelet de métropoles **mieux reliées entre elles qu’à leur propre arrière-pays**.
 
-## Ce qui fait qu'un territoire s'intègre
-- une **façade maritime** équipée et un arrière-pays connecté ;
-- des **métropoles** dotées de services de haut niveau ;
-- une **stabilité** politique et juridique attirant les **IDE** (investissements directs étrangers) ;
-- une main-d'œuvre formée.
+> Le vieux couple **Nord / Sud** ne suffit plus : la Chine est le premier exportateur mondial, et des fractures profondes traversent chaque pays — du Nord comme du Sud.
 
-À l'inverse, l'**enclavement** (pays sans littoral), l'instabilité et la dépendance à une seule ressource marginalisent.
+## Ce qui fait qu’un territoire s’intègre
+| Facteur d’intégration | Facteur de marginalisation |
+| Une façade maritime équipée | L’**enclavement** : pas de littoral |
+| Des métropoles à services de haut niveau | Un tissu urbain sans fonctions de commandement |
+| Une stabilité attirant les **IDE** | L’instabilité politique ou juridique |
+| Une main-d’œuvre formée | La dépendance à une seule ressource |
 
-## Mesurer l'intégration
-On croise plusieurs indicateurs : PIB par habitant, **IDH**, part dans le commerce mondial, stock d'IDE, connectivité (trafic aérien, bande passante). Aucun ne suffit seul — l'IDH d'un pays pétrolier peut masquer de très fortes inégalités internes.`,
+## Mesurer l’intégration
+| Indicateur | Ce qu’il montre | Sa limite |
+| PIB par habitant | La richesse produite | Il ignore la répartition |
+| **IDH** | Santé, éducation, revenu | Il moyenne les inégalités internes |
+| Part dans le commerce mondial | L’ouverture | Elle peut n’être que d’exportation brute |
+| Stock d’**IDE** | L’attractivité | Il peut refléter un statut fiscal |
+| Connectivité | Trafic aérien, bande passante | Elle mesure les flux, pas la valeur |
+
+Aucun ne suffit seul : l’IDH d’un pays pétrolier peut masquer de très fortes inégalités internes.`,
           },
           questions: [
             ['Que désigne l’archipel mégalopolitain mondial ?', ['Le réseau des grandes métropoles mieux reliées entre elles qu’à leur arrière-pays', 'Un ensemble d’îles très peuplées', 'Les pays du G7', 'Les grands ports mondiaux'], 0, 'L’image dit l’essentiel : des îlots de richesse reliés par-dessus les territoires.'],
@@ -249,22 +318,31 @@ On croise plusieurs indicateurs : PIB par habitant, **IDH**, part dans le commer
           titre: 'La hiérarchie des centres de décision mondiaux',
           lecon: {
             titre: 'Où se décide le monde',
-            cours: `Le pouvoir économique mondial n'est pas dilué : il tient dans quelques dizaines de kilomètres carrés de bureaux.
+            cours: `Le pouvoir économique mondial n’est pas dilué : il tient dans quelques dizaines de kilomètres carrés de bureaux.
 
 ## Les villes mondiales
-Une **ville mondiale** ne se définit pas par sa taille mais par ses **fonctions de commandement** : sièges de firmes transnationales, place boursière, banques, services aux entreprises, universités, médias, culture. Le classement du **GaWC** place au sommet **New York** et **Londres**, suivies de **Tokyo**, **Paris**, **Hong Kong**, **Singapour**, **Shanghai**, **Dubaï**.
+Une **ville mondiale** ne se définit pas par sa **taille** mais par ses **fonctions de commandement** : sièges de firmes transnationales, place boursière, banques, services aux entreprises, universités, médias, culture.
 
-Leur cœur est le **CBD** (*central business district*), où se concentrent les tours de bureaux : Manhattan, la City et Canary Wharf, La Défense, Pudong.
+| Rang selon le **GaWC** | Villes |
+| Au sommet | **New York**, **Londres** |
+| Juste après | **Tokyo**, **Paris**, **Hong Kong**, **Singapour**, **Shanghai**, **Dubaï** |
+
+Leur cœur est le **CBD** — *central business district* : Manhattan, la City et Canary Wharf, La Défense, Pudong.
 
 ## Les autres lieux de pouvoir
-- **Institutions internationales** : ONU à New York, FMI et Banque mondiale à Washington, OMC et OMS à Genève, institutions européennes à Bruxelles, Strasbourg et Luxembourg.
-- **Places financières** : les bourses de New York (NYSE, Nasdaq), Shanghai, Tokyo, Londres.
-- **Paradis fiscaux**, qui captent une part considérable des profits déclarés.
+| Type de lieu | Exemples |
+| Institutions internationales | ONU à New York, FMI et Banque mondiale à Washington, OMC et OMS à Genève, UE à Bruxelles et Strasbourg |
+| Places financières | NYSE et Nasdaq, Shanghai, Tokyo, Londres |
+| **Paradis fiscaux** | Ils captent une part considérable des profits déclarés |
 
 ## Une hiérarchie mouvante
-La montée de l'Asie déplace le centre de gravité : Shanghai, Shenzhen, Singapour et Dubaï gagnent des rangs ; le **Brexit** a fait migrer une partie de l'activité financière de Londres vers Francfort, Amsterdam et Paris. Rien n'est acquis : une ville mondiale se maintient par ses infrastructures, son droit, ses talents et sa stabilité.
+| Mouvement | Ce qu’il produit |
+| La montée de l’Asie | Shanghai, Shenzhen, Singapour et Dubaï gagnent des rangs |
+| Le **Brexit** | Une partie de l’activité financière quitte Londres pour Francfort, Amsterdam et Paris |
 
-> Deux notions à ne pas confondre : la **hiérarchie** (qui commande à qui) et le **réseau** (qui est relié à qui). Une métropole peut être très peuplée et faiblement connectée — c'est le cas de plusieurs mégapoles du Sud.`,
+Rien n’est acquis : une ville mondiale se maintient par ses **infrastructures**, son **droit**, ses **talents** et sa **stabilité**.
+
+> Deux notions à ne jamais confondre : la **hiérarchie** — qui commande à qui — et le **réseau** — qui est relié à qui. Une métropole peut être très peuplée et faiblement connectée : c’est le cas de plusieurs mégapoles du Sud.`,
           },
           questions: [
             ['Qu’est-ce qui définit une ville mondiale ?', ['Ses fonctions de commandement', 'Sa population totale', 'Sa superficie', 'Son ancienneté'], 0, 'Sièges sociaux, finance, services aux entreprises, médias, universités.'],
@@ -284,20 +362,29 @@ La montée de l'Asie déplace le centre de gravité : Shanghai, Shenzhen, Singap
             cours: `La France pèse environ **1 % de la population mondiale** et se classe autour du **7e rang** pour le PIB. Son influence dépasse pourtant largement ce poids — mais très inégalement selon les domaines et les territoires.
 
 ## Les leviers du rayonnement
-- **Politique et militaire** : membre permanent du Conseil de sécurité de l'ONU avec droit de veto, puissance nucléaire, capacité de projection, second réseau diplomatique du monde ;
-- **linguistique et culturel** : la **francophonie** (plus de 320 millions de locuteurs, **OIF**), les lycées français, l'Institut français, l'Alliance française ;
-- **économique** : des firmes transnationales de premier plan (luxe, aéronautique, énergie, agroalimentaire) ;
-- **touristique** : première destination mondiale par le nombre de visiteurs, autour de **90 à 100 millions** par an — mais des recettes inférieures à celles de l'Espagne ou des États-Unis, car les séjours y sont plus courts.
+| Domaine | L’atout | Le chiffre |
+| Politique et militaire | Membre permanent du Conseil de sécurité, droit de veto, puissance nucléaire | Second réseau diplomatique du monde |
+| Linguistique et culturel | La **francophonie**, l’OIF, les lycées français, l’Institut français | Plus de **320 millions** de locuteurs |
+| Économique | Firmes transnationales de premier plan | Luxe, aéronautique, énergie, agroalimentaire |
+| Touristique | Première destination mondiale | **90 à 100 millions** de visiteurs par an |
 
-## Une attractivité très inégale à l'intérieur
-L'**Île-de-France** capte la majorité des sièges sociaux, des IDE et des emplois métropolitains supérieurs. Autour, quelques métropoles tirent leur épingle du jeu (Lyon, Toulouse, Bordeaux, Nantes, Montpellier, Rennes). À l'écart : les anciens bassins industriels du Nord et de l'Est, la « diagonale des faibles densités », une partie des outre-mer.
+> Le tourisme illustre bien la nuance du chapitre : la France est première **en nombre de visiteurs**, mais ses **recettes** restent inférieures à celles de l’Espagne ou des États-Unis — les séjours y sont plus courts. Un record de fréquentation n’est pas un record de puissance.
+
+## Une attractivité très inégale à l’intérieur
+| Territoire | Sa situation |
+| **Île-de-France** | Capte la majorité des sièges sociaux, des IDE et des emplois métropolitains supérieurs |
+| Quelques métropoles | Lyon, Toulouse, Bordeaux, Nantes, Montpellier, Rennes tirent leur épingle du jeu |
+| Les anciens bassins industriels | Nord et Est : reconversion inachevée |
+| La « **diagonale des faibles densités** » | Du Nord-Est au Sud-Ouest : déprise |
+| Une partie des outre-mer | Éloignement, étroitesse du marché |
 
 ## Les fragilités
-- Un **déficit commercial** structurel et une perte de parts de marché à l'exportation ;
-- une **désindustrialisation** marquée (la part de l'industrie dans le PIB a fortement reculé depuis les années 1980) ;
-- une image d'attractivité pénalisée par la fiscalité et la complexité administrative, malgré de bons classements récents pour les IDE en Europe.
+| Fragilité | Ce qu’elle traduit |
+| **Déficit commercial** structurel | Perte de parts de marché à l’exportation |
+| **Désindustrialisation** | La part de l’industrie dans le PIB recule depuis les années 1980 |
+| Image d’attractivité | Fiscalité et complexité administrative, malgré de bons classements récents pour les IDE |
 
-> La formule à retenir : la France a une **influence globale**, une **économie moyenne** et un **territoire inégalement branché** sur la mondialisation.`,
+> La formule à retenir : la France a une **influence globale**, une **économie moyenne**, et un **territoire inégalement branché** sur la mondialisation.`,
           },
           questions: [
             ['Quel siège la France occupe-t-elle à l’ONU ?', ['Un siège permanent au Conseil de sécurité', 'La présidence de l’Assemblée générale', 'Un siège tournant', 'La direction du Secrétariat'], 0, 'Avec droit de veto — un levier majeur pour une puissance moyenne.'],
@@ -314,26 +401,33 @@ L'**Île-de-France** capte la majorité des sièges sociaux, des IDE et des empl
           titre: 'Coopérations économiques et tentatives de régulation',
           lecon: {
             titre: 'Gouverner un monde sans gouvernement',
-            cours: `Les échanges sont mondiaux, les États restent nationaux. Toute la difficulté de la **gouvernance économique mondiale** tient dans cet écart.
+            cours: `Les échanges sont **mondiaux**, les États restent **nationaux**. Toute la difficulté de la gouvernance économique mondiale tient dans cet écart.
 
 ## Les institutions mondiales
-- L'**OMC** (créée en **1995**, successeur du GATT) fixe les règles du commerce et arbitre les litiges. Elle est aujourd'hui **paralysée** : le cycle de Doha n'a jamais abouti et son organe d'appel est bloqué depuis 2019, faute de nominations.
-- Le **FMI** prête aux États en crise, sous conditions ; la **Banque mondiale** finance le développement.
-- Le **G7** et le **G20** sont des forums informels : ils orientent, mais ne décident rien de contraignant.
+| Institution | Créée | Ce qu’elle fait | Son état |
+| **OMC** | 1995, successeur du GATT | Fixe les règles du commerce, arbitre les litiges | **Paralysée** : cycle de Doha inabouti, organe d’appel bloqué depuis 2019 |
+| **FMI** | 1944 | Prête aux États en crise, sous conditions | Actif, contesté sur ses conditionnalités |
+| **Banque mondiale** | 1944 | Finance le développement | Actif |
+| **G7 / G20** | 1975 / 2008 | Forums informels | Ils orientent, ne décident rien de contraignant |
 
 ## Les intégrations régionales
-Plus efficaces parce que plus resserrées :
-- **Union européenne** — la plus poussée : marché unique, monnaie, politiques communes ;
-- **ACEUM** (ex-ALENA) en Amérique du Nord, **Mercosur** en Amérique du Sud, **ASEAN** en Asie du Sud-Est, **Union africaine** et sa zone de libre-échange **ZLECAf**, **RCEP** en Asie-Pacifique.
+Plus efficaces, parce que plus resserrées.
 
-Ces ensembles vont du simple accord de libre-échange à l'union économique et monétaire.
+| Ensemble | Où | Degré d’intégration |
+| **Union européenne** | Europe | Le plus poussé : marché unique, monnaie, politiques communes |
+| **ACEUM** (ex-ALENA) | Amérique du Nord | Libre-échange |
+| **Mercosur** | Amérique du Sud | Union douanière imparfaite |
+| **ASEAN** | Asie du Sud-Est | Coopération et libre-échange |
+| **ZLECAf** | Afrique | Zone de libre-échange continentale, en construction |
+| **RCEP** | Asie-Pacifique | Le plus grand accord commercial du monde |
 
 ## Réguler autre chose que le commerce
-- **Climat** : les **COP**, avec l'**Accord de Paris (2015)** — engagements volontaires, sans sanction ;
-- **fiscalité** : accord de l'**OCDE (2021)** sur un impôt minimum mondial de **15 %** sur les bénéfices des multinationales, pour freiner l'évasion vers les paradis fiscaux ;
-- **travail** : les conventions de l'OIT, peu contraignantes.
+| Domaine | L’instrument | Sa force contraignante |
+| Climat | Les **COP**, Accord de Paris (2015) | Engagements volontaires, sans sanction |
+| Fiscalité | Accord **OCDE** (2021) : impôt minimum mondial de **15 %** | Contraignant s’il est transposé |
+| Travail | Conventions de l’**OIT** | Faible |
 
-> Le point commun de ces dispositifs : ils reposent sur le **consentement** des États. D'où leur fragilité — et le retour, ces dernières années, des mesures unilatérales.`,
+> Le point commun de tous ces dispositifs : ils reposent sur le **consentement** des États. D’où leur fragilité — et le retour, ces dernières années, des mesures **unilatérales**.`,
           },
           questions: [
             ['En quelle année l’OMC a-t-elle été créée ?', ['1995', '1947', '1971', '2001'], 0, 'Elle succède au GATT de 1947.'],
@@ -350,24 +444,29 @@ Ces ensembles vont du simple accord de libre-échange à l'union économique et 
           titre: 'La mondialisation et ses limites',
           lecon: {
             titre: 'Contestations, ruptures et recompositions',
-            cours: `Depuis une quinzaine d'années, la mondialisation ne progresse plus mécaniquement : elle est contestée, et elle se réorganise.
+            cours: `Depuis une quinzaine d’années, la mondialisation ne progresse plus mécaniquement : elle est **contestée**, et elle se **réorganise**.
 
-## Ce qu'on lui reproche
-- Des **inégalités** : les gains ont surtout profité aux classes moyennes émergentes et aux plus riches, moins aux classes populaires des pays développés ;
-- le **dumping social et environnemental** : produire là où le droit du travail et les normes sont les plus faibles ;
-- les **délocalisations** et la désindustrialisation de régions entières ;
-- l'**empreinte écologique** du transport et de la consommation de masse ;
-- l'**uniformisation culturelle**, contestée depuis les mouvements altermondialistes (Seattle, 1999).
+## Ce qu’on lui reproche
+| Reproche | Ce qu’il vise |
+| Les **inégalités** | Les gains ont profité aux classes moyennes émergentes et aux plus riches, moins aux classes populaires du Nord |
+| Le **dumping social et environnemental** | Produire là où le droit du travail et les normes sont les plus faibles |
+| Les **délocalisations** | La désindustrialisation de régions entières |
+| L’**empreinte écologique** | Transport de masse et consommation de masse |
+| L’**uniformisation culturelle** | Contestée depuis les mouvements altermondialistes — Seattle, 1999 |
 
 ## Les chocs révélateurs
-La **crise de 2008** a montré la contagion financière ; la **pandémie de Covid-19 (2020)** a coupé net des chaînes de valeur étirées à l'extrême — masques, médicaments, semi-conducteurs. La **guerre en Ukraine (2022)** a rappelé qu'une dépendance énergétique est une vulnérabilité politique.
+| Choc | Ce qu’il a révélé |
+| Crise de **2008** | La contagion financière : un défaut américain devient une crise mondiale |
+| Pandémie de **Covid-19** (2020) | Des chaînes de valeur étirées à l’extrême : masques, médicaments, semi-conducteurs |
+| Guerre en **Ukraine** (2022) | Une dépendance énergétique est une vulnérabilité politique |
 
 ## Le retour du politique
-- **Guerre commerciale** entre les États-Unis et la Chine depuis 2018 : droits de douane, contrôle des exportations de technologies ;
-- **relocalisations** et politiques industrielles (Inflation Reduction Act américain, plans européens sur les semi-conducteurs et les batteries) ;
-- **souveraineté** devenue un mot d'ordre : alimentaire, industrielle, numérique.
+| Mesure | Exemple |
+| **Guerre commerciale** | États-Unis contre Chine depuis 2018 : droits de douane, contrôle des exportations de technologies |
+| **Relocalisations** | *Inflation Reduction Act* américain, plans européens sur les semi-conducteurs et les batteries |
+| **Souveraineté** | Devenue un mot d’ordre : alimentaire, industrielle, numérique |
 
-> Le mot juste n'est pas « démondialisation » mais **recomposition** : le commerce mondial ne s'effondre pas, il se **régionalise** et se politise. On parle de *friend-shoring* — produire chez des partenaires jugés fiables plutôt qu'au moins cher.`,
+> Le mot juste n’est pas « démondialisation » mais **recomposition** : le commerce mondial ne s’effondre pas, il se **régionalise** et se **politise**. On parle de *friend-shoring* — produire chez des partenaires jugés fiables, plutôt qu’au moins cher.`,
           },
           questions: [
             ['Quel événement de 1999 marque l’essor du mouvement altermondialiste ?', ['La contestation du sommet de l’OMC à Seattle', 'La crise asiatique', 'La création de l’euro', 'Le sommet de Rio'], 0, 'Le slogan « le monde n’est pas une marchandise » y devient visible.'],
@@ -384,23 +483,37 @@ La **crise de 2008** a montré la contagion financière ; la **pandémie de Covi
           titre: 'La Russie et l’Asie du Sud-Est : entre inégale intégration dans la mondialisation, coopérations et tensions',
           lecon: {
             titre: 'Deux modèles opposés d’insertion mondiale',
-            cours: `Deux espaces, deux façons contraires d'entrer dans la mondialisation : par la **rente** pour la Russie, par l'**atelier** pour l'Asie du Sud-Est.
+            cours: `Deux espaces, deux façons **contraires** d’entrer dans la mondialisation : par la **rente** pour la Russie, par l’**atelier** pour l’Asie du Sud-Est.
+
+## Deux modèles opposés
+| | Russie | Asie du Sud-Est |
+| Ce qu’elle exporte | Des **ressources** : gaz, pétrole, blé, métaux, engrais | Du **travail industriel** : textile, électronique, assemblage |
+| Ce qui l’a intégrée | La demande énergétique mondiale | Les **IDE** et la sous-traitance |
+| Sa vulnérabilité | Les **sanctions** et le cours des matières premières | La dépendance aux donneurs d’ordre |
+| Sa tendance actuelle | Réorientation forcée vers l’Asie | Capte les **relocalisations** hors de Chine |
 
 ## La Russie : une puissance de rente
-Premier pays du monde par la superficie, la Russie tire l'essentiel de ses devises des **hydrocarbures et des matières premières** — gaz, pétrole, blé, métaux, engrais. Cette rente finance l'État et l'armée, mais son économie reste **peu diversifiée** et son PIB est comparable à celui d'un grand pays européen.
+Premier pays du monde par la superficie, elle tire l’essentiel de ses devises des hydrocarbures et des matières premières. Cette rente finance l’État et l’armée, mais l’économie reste **peu diversifiée** : son PIB est comparable à celui d’un grand pays européen.
 
-Son intégration est **sélective** : très forte sur l'énergie, faible sur l'industrie manufacturière et les services. Les **sanctions occidentales**, engagées après l'annexion de la Crimée en **2014** puis massivement à partir de **2022**, l'ont poussée à réorienter ses exportations vers l'**Asie** — Chine et Inde en particulier — souvent avec de fortes décotes. Elle conserve des leviers : arme nucléaire, siège au Conseil de sécurité, influence en Afrique et au Moyen-Orient.
+| Date | L’événement | L’effet |
+| **2014** | Annexion de la Crimée | Premières sanctions occidentales |
+| **2022** | Invasion de l’Ukraine | Sanctions massives, réorientation vers la Chine et l’Inde, souvent avec de **fortes décotes** |
 
-## L'Asie du Sud-Est : l'atelier qui monte
-L'**ASEAN**, créée en **1967**, réunit **10 États** et plus de **650 millions d'habitants**. La région s'est insérée par les **investissements étrangers** et la sous-traitance industrielle : textile, électronique, assemblage. Elle bénéficie de sa position sur les grandes routes maritimes (Malacca) et d'une main-d'œuvre nombreuse.
+Elle conserve des leviers : arme nucléaire, siège au Conseil de sécurité, influence en Afrique et au Moyen-Orient.
 
-Elle profite aujourd'hui du **report des chaînes de production** hors de Chine (Vietnam, Indonésie, Malaisie).
+## L’Asie du Sud-Est : l’atelier qui monte
+| Fait | Chiffre |
+| L’**ASEAN**, créée en | **1967** |
+| Nombre d’États membres | **10** |
+| Population | Plus de **650 millions** d’habitants |
+
+Elle bénéficie de sa position sur les grandes routes maritimes — Malacca — et d’une main-d’œuvre nombreuse. Le Vietnam, l’Indonésie et la Malaisie profitent aujourd’hui du report des chaînes de production hors de Chine.
 
 ## Coopérations et tensions
-- **Coopérations** : ASEAN, accords de libre-échange, **RCEP** (le plus grand accord commercial du monde), partenariats avec la Chine et le Japon ;
-- **tensions** : contentieux en **mer de Chine méridionale** entre Pékin et plusieurs membres de l'ASEAN, dépendance à la Chine, très fortes **inégalités internes** — Singapour figure parmi les pays les plus riches du monde, le Laos et le Cambodge parmi les plus pauvres de la région.
-
-> Contraste à retenir : la Russie exporte des **ressources** et subit les sanctions ; l'Asie du Sud-Est exporte du **travail industriel** et capte les relocalisations.`,
+| Coopérations | Tensions |
+| ASEAN, accords de libre-échange | Contentieux en **mer de Chine méridionale** entre Pékin et plusieurs membres |
+| **RCEP**, le plus grand accord commercial du monde | Dépendance économique à la Chine |
+| Partenariats avec la Chine et le Japon | **Inégalités internes** : Singapour parmi les plus riches du monde, le Laos et le Cambodge parmi les plus pauvres |`,
           },
           questions: [
             ['De quoi la Russie tire-t-elle l’essentiel de ses devises ?', ['Des hydrocarbures et des matières premières', 'De l’industrie automobile', 'Des services financiers', 'Du tourisme'], 0, 'Une économie de rente, peu diversifiée.'],
@@ -419,22 +532,33 @@ Elle profite aujourd'hui du **report des chaînes de production** hors de Chine 
           titre: 'L’Union européenne : la puissance dans la diversité',
           lecon: {
             titre: 'Un géant commercial, un nain politique ?',
-            cours: `L'Union européenne réunit **27 États** et environ **450 millions d'habitants**. Elle est une puissance d'un genre inédit : très forte là où elle est unie, faible là où elle ne l'est pas.
+            cours: `L’Union européenne réunit **27 États** et environ **450 millions d’habitants**. Elle est une puissance d’un genre inédit : très forte là où elle est **unie**, faible là où elle ne l’est pas.
 
 ## Ce qui fait sa force
-- Le **marché unique** : libre circulation des marchandises, des services, des capitaux et des personnes — le plus vaste espace économique intégré du monde ;
-- la **première puissance commerciale** mondiale prise dans son ensemble ;
-- l'**euro**, monnaie de 20 États et deuxième monnaie de réserve mondiale ;
-- des **politiques communes** : PAC, politique de concurrence (qui sanctionne les géants du numérique), politique commerciale négociée d'une seule voix ;
-- un pouvoir **normatif** considérable : le **RGPD** sur les données, les normes environnementales et sanitaires s'imposent de fait aux entreprises du monde entier qui veulent vendre en Europe. C'est l'« **effet Bruxelles** ».
+| Atout | Ce qu’il produit |
+| Le **marché unique** | Le plus vaste espace économique intégré du monde |
+| La **première puissance commerciale** mondiale | Prise dans son ensemble |
+| L’**euro** | Monnaie de 20 États, deuxième monnaie de réserve mondiale |
+| Des **politiques communes** | PAC, concurrence (qui sanctionne les géants du numérique), commerce négocié d’une seule voix |
+| Un pouvoir **normatif** | Le RGPD, les normes environnementales et sanitaires |
+
+> C’est l’« **effet Bruxelles** » : une entreprise qui veut vendre en Europe applique les normes européennes **partout**, parce qu’il coûte moins cher de produire une seule version. L’UE légifère ainsi bien au-delà de ses frontières, sans aucune armée.
 
 ## Ce qui fait sa faiblesse
-- Pas d'**armée commune** ; la défense repose largement sur l'**OTAN** ;
-- la politique étrangère (**PESC**) se décide à l'**unanimité** : un seul État peut bloquer ;
-- une **diversité** considérable — 24 langues officielles, des niveaux de richesse allant du simple au sextuple, des cultures politiques opposées sur la dette, l'énergie ou les migrations ;
-- une dépendance technologique et longtemps énergétique.
+| Faiblesse | Sa conséquence |
+| Pas d’**armée commune** | La défense repose largement sur l’**OTAN** |
+| La **PESC** se décide à l’**unanimité** | Un seul État peut bloquer la politique étrangère |
+| Une **diversité** considérable | 24 langues officielles, richesses du simple au sextuple, cultures politiques opposées |
+| Dépendances | Technologique, et longtemps énergétique |
 
-> La formule classique — « géant économique, nain politique » — est aujourd'hui à nuancer : la réponse commune à la pandémie (plan de relance emprunté en commun, 2020) et le soutien coordonné à l'Ukraine ont montré une capacité d'action qu'on ne lui prêtait plus.`,
+## La formule à nuancer
+« Géant économique, nain politique » : la formule classique est aujourd’hui à discuter, pas à réciter.
+
+| L’épreuve | Ce qu’elle a montré |
+| La pandémie (2020) | Un plan de relance **emprunté en commun** — un pas fédéral inédit |
+| L’Ukraine (depuis 2022) | Un soutien coordonné, des sanctions communes, un début de politique de défense |
+
+Une capacité d’action qu’on ne lui prêtait plus.`,
           },
           questions: [
             ['Combien d’États membres compte l’Union européenne ?', ['27', '25', '28', '30'], 0, 'Vingt-sept depuis la sortie du Royaume-Uni.'],
@@ -451,24 +575,27 @@ Elle profite aujourd'hui du **report des chaînes de production** hors de Chine 
           titre: 'Des défis à relever qui fragilisent l’UE',
           lecon: {
             titre: 'Quinze ans de crises',
-            cours: `Depuis 2008, l'Union avance de crise en crise. Chacune l'a fragilisée — et, à chaque fois, l'a aussi obligée à se doter d'outils nouveaux.
+            cours: `Depuis 2008, l’Union avance de crise en crise. Chacune l’a fragilisée — et, à chaque fois, l’a aussi **obligée à se doter d’outils nouveaux**.
 
-## La crise de la dette (2010-2015)
-Déclenchée par la **Grèce**, elle révèle qu'une monnaie unique sans budget commun est instable. Réponses : mécanisme européen de stabilité, intervention de la **BCE** (« *whatever it takes* », 2012), règles budgétaires renforcées. Coût politique : austérité, ressentiment durable dans les pays du Sud.
+## Les cinq crises
+| Crise | Dates | Ce qu’elle révèle | L’outil qui en sort |
+| La **dette** | 2010-2015 | Une monnaie unique sans budget commun est instable | MES, BCE, règles budgétaires |
+| Les **migrations** | 2015 | Le règlement de Dublin est inapplicable | Frontex renforcée, pacte de 2024 |
+| Le **Brexit** | 2016-2020 | L’adhésion est réversible | Rien — mais l’adhésion remonte ailleurs |
+| L’**État de droit** | Depuis 2017 | Un membre peut s’éloigner des valeurs signées | Article 7, conditionnalité budgétaire |
+| L’**Ukraine** | Depuis 2022 | La dépendance énergétique est une vulnérabilité | Sanctions communes, dossier de l’élargissement rouvert |
 
-## La crise migratoire (2015)
-Plus d'un million d'arrivées en une année, principalement de Syriens. Le **règlement de Dublin**, qui fait peser la demande d'asile sur le pays d'entrée, fait porter la charge à la Grèce et à l'Italie. Les désaccords sur la répartition n'ont jamais été vraiment surmontés ; **Frontex** est renforcée, un pacte sur la migration et l'asile adopté en 2024.
+## La crise de la dette
+Déclenchée par la **Grèce**. Réponses : mécanisme européen de stabilité, intervention de la **BCE** — « *whatever it takes* », 2012 — et règles budgétaires renforcées. Coût politique : austérité et ressentiment durable dans les pays du Sud.
 
-## Le Brexit (2016-2020)
-Le référendum du **23 juin 2016** (51,9 % pour la sortie) aboutit à la sortie effective le **31 janvier 2020**. Premier retrait de l'histoire de la construction européenne : l'Union perd un membre majeur, mais l'adhésion à l'UE remonte dans les autres États.
+## La crise migratoire
+Plus d’**un million** d’arrivées en 2015, principalement de Syriens. Le **règlement de Dublin** fait peser la demande d’asile sur le **pays d’entrée** — donc sur la Grèce et l’Italie. Les désaccords sur la répartition n’ont jamais été vraiment surmontés.
 
-## L'État de droit
-La **Pologne** et la **Hongrie** ont été visées par la procédure de l'**article 7** et par la conditionnalité budgétaire : indépendance de la justice, liberté des médias, droits des minorités. Question de fond : que faire d'un membre qui s'éloigne des valeurs qu'il a signées ?
+## Le Brexit
+Référendum du **23 juin 2016** : **51,9 %** pour la sortie ; retrait effectif le **31 janvier 2020**. Premier retrait de l’histoire de la construction européenne. L’Union perd un membre majeur — mais le soutien à l’adhésion **remonte** dans les autres États.
 
-## La guerre en Ukraine (depuis 2022)
-Elle a révélé la dépendance au **gaz russe**, provoqué une crise énergétique et inflationniste, poussé à l'accueil de millions de réfugiés, relancé les questions de défense et rouvert le dossier de l'**élargissement** (statut de candidat pour l'Ukraine et la Moldavie).
-
-> Deux limites structurelles reviennent à chaque crise : un **budget minuscule** (environ 1 % du revenu national brut de l'Union) et des décisions **lentes**, prises à 27.`,
+## Deux limites structurelles
+> Elles reviennent à **chaque** crise : un **budget minuscule** — environ 1 % du revenu national brut de l’Union — et des décisions **lentes**, prises à 27. Aucune réforme n’a encore traité ni l’une ni l’autre.`,
           },
           questions: [
             ['Quel pays déclenche la crise de la dette en 2010 ?', ['La Grèce', 'L’Espagne', 'L’Italie', 'L’Irlande'], 0, 'Elle révèle l’instabilité d’une monnaie unique sans budget commun.'],
@@ -485,23 +612,32 @@ Elle a révélé la dépendance au **gaz russe**, provoqué une crise énergéti
           titre: 'L’Union européenne : entre inégalités territoriales et concurrence mondiale',
           lecon: {
             titre: 'Une mégalopole, des périphéries, deux rivaux',
-            cours: `L'Union est un espace **très inégal** à l'intérieur, et **pris en tenaille** à l'extérieur entre les États-Unis et la Chine.
+            cours: `L’Union est un espace **très inégal à l’intérieur**, et **pris en tenaille à l’extérieur** entre les États-Unis et la Chine.
 
 ## Un cœur et des marges
-La richesse se concentre sur une **dorsale** allant du sud de l'Angleterre à l'Italie du Nord, par le Benelux, la vallée du Rhin et la Suisse : la **mégalopole européenne**. Elle rassemble les grandes métropoles, les ports du Northern Range et les régions industrielles les plus productives.
+La richesse se concentre sur une **dorsale** allant du sud de l’Angleterre à l’Italie du Nord, par le Benelux, la vallée du Rhin et la Suisse : la **mégalopole européenne**. Elle rassemble les grandes métropoles, les ports du Northern Range et les régions industrielles les plus productives.
 
-Autour : des périphéries plus pauvres — Europe du Sud, Europe centrale et orientale, régions rurales, anciens bassins industriels. Les écarts sont considérables : le PIB par habitant du **Luxembourg** est plusieurs fois supérieur à celui de la **Bulgarie**. Les **régions ultrapériphériques** (dont les DROM français) cumulent éloignement et étroitesse de marché.
+| Type d’espace | Sa situation |
+| La **dorsale** | Métropoles, ports, industrie productive |
+| Europe du Sud, Europe centrale et orientale | Rattrapage engagé, revenus encore inférieurs |
+| Régions rurales et anciens bassins industriels | Déprise, reconversion difficile |
+| **Régions ultrapériphériques** (dont les DROM) | Éloignement et étroitesse du marché |
 
-## L'outil : la politique de cohésion
-Environ **un tiers du budget** européen y est consacré, via le **FEDER**, le **FSE+** et le Fonds de cohésion. Objectif : réduire les écarts en finançant infrastructures, formation, innovation. Bilan : réel rattrapage des pays d'Europe centrale depuis 2004, mais creusement des écarts **à l'intérieur** de chaque pays, entre métropoles et espaces en marge.
+Les écarts sont considérables : le PIB par habitant du **Luxembourg** est plusieurs fois supérieur à celui de la **Bulgarie**.
+
+## L’outil : la politique de cohésion
+Environ **un tiers du budget** européen, via le **FEDER**, le **FSE+** et le Fonds de cohésion. Objectif : réduire les écarts en finançant infrastructures, formation et innovation.
+
+> Bilan en demi-teinte : rattrapage **réel** des pays d’Europe centrale depuis 2004 — mais creusement des écarts **à l’intérieur** de chaque pays, entre métropoles et espaces en marge. La cohésion entre États a progressé, la cohésion entre territoires non.
 
 ## La concurrence externe
-- Les **États-Unis** attirent les investissements avec l'**Inflation Reduction Act** (2022), massif système de subventions industrielles ;
-- la **Chine** exporte massivement véhicules électriques, panneaux solaires et batteries, avec un soutien public de long terme ;
-- l'UE répond par des plans sur les **semi-conducteurs**, les **batteries** et les matières premières critiques, et par des instruments de défense commerciale.
+| Rival | Son instrument |
+| **États-Unis** | L’*Inflation Reduction Act* (2022) : subventions industrielles massives |
+| **Chine** | Exportations de véhicules électriques, panneaux solaires et batteries, soutenues sur le long terme |
+| La réponse européenne | Plans sur les semi-conducteurs, les batteries et les matières premières critiques ; instruments de défense commerciale |
 
 ## La concurrence interne
-Elle existe aussi entre membres : **dumping fiscal** (Irlande, Luxembourg), **travailleurs détachés**, concurrence pour attirer les sièges sociaux. C'est l'une des critiques récurrentes adressées au marché unique.`,
+Elle existe aussi **entre membres** : dumping fiscal (Irlande, Luxembourg), travailleurs détachés, course aux sièges sociaux. C’est l’une des critiques récurrentes adressées au marché unique — un espace commun peut aussi organiser la concurrence de ses membres entre eux.`,
           },
           questions: [
             ['Comment appelle-t-on la dorsale la plus riche de l’Europe ?', ['La mégalopole européenne', 'La Northern Range', 'L’arc atlantique', 'La banane verte'], 0, 'Du sud de l’Angleterre à l’Italie du Nord, par le Benelux et la vallée du Rhin.'],
@@ -518,29 +654,35 @@ Elle existe aussi entre membres : **dumping fiscal** (Irlande, Luxembourg), **tr
           titre: 'Les transports, outils d’ouverture, de cohésion et de compétitivité de l’UE',
           lecon: {
             titre: 'Relier pour unir',
-            cours: `Un marché unique sans réseaux n'est qu'une déclaration. Les transports sont l'infrastructure matérielle de l'intégration européenne.
+            cours: `Un marché unique sans réseaux n’est qu’une déclaration. Les transports sont l’**infrastructure matérielle** de l’intégration européenne.
 
 ## Le réseau transeuropéen (RTE-T)
-L'UE finance et coordonne des **corridors** prioritaires reliant les grandes régions économiques : Rhin-Alpes, Atlantique, Mer du Nord-Méditerranée… L'objectif est triple :
-- **ouverture** sur le monde par les grands ports et aéroports ;
-- **cohésion** en désenclavant les périphéries ;
-- **compétitivité** par la fluidité et la baisse des coûts.
+L’UE finance et coordonne des **corridors** prioritaires — Rhin-Alpes, Atlantique, Mer du Nord-Méditerranée — avec un objectif triple.
+
+| Objectif | Ce qu’il vise |
+| **Ouverture** | Relier l’Union au monde par les grands ports et aéroports |
+| **Cohésion** | Désenclaver les périphéries |
+| **Compétitivité** | Fluidifier et faire baisser les coûts |
 
 ## Les infrastructures emblématiques
-- Les **ports du Northern Range** (Rotterdam, Anvers, Hambourg, Le Havre), portes d'entrée des marchandises ;
-- les **grands axes fluviaux** : Rhin, Danube, canal Seine-Nord Europe en construction ;
-- les **tunnels alpins** : tunnel de base du **Saint-Gothard** (le plus long du monde), liaison **Lyon-Turin** en chantier ;
-- le réseau de **lignes à grande vitesse**, dense en France, en Espagne et en Allemagne, quasi absent à l'est ;
-- les **hubs aéroportuaires** : Francfort, Amsterdam-Schiphol, Paris-CDG, Madrid.
+| Type | Exemples |
+| Ports du **Northern Range** | Rotterdam, Anvers, Hambourg, Le Havre |
+| Axes fluviaux | Rhin, Danube, canal Seine-Nord Europe en construction |
+| Tunnels alpins | **Saint-Gothard** (le plus long du monde), **Lyon-Turin** en chantier |
+| Lignes à grande vitesse | Denses en France, en Espagne et en Allemagne ; quasi absentes à l’est |
+| Hubs aéroportuaires | Francfort, Amsterdam-Schiphol, Paris-CDG, Madrid |
 
 ## Circulation des personnes
-L'**espace Schengen** supprime les contrôles aux frontières intérieures ; **Erasmus+** fait circuler chaque année des centaines de milliers d'étudiants. La mobilité est l'un des acquis les plus concrets de l'Union pour les citoyens.
+L’espace **Schengen** supprime les contrôles aux frontières intérieures ; **Erasmus+** fait circuler chaque année des centaines de milliers d’étudiants.
+
+> La mobilité est l’acquis européen le plus **concret** pour les citoyens — celui qui se perd le plus vite quand une crise rétablit les frontières, comme en 2015 et en 2020.
 
 ## Les limites
-- Le réseau reste **inégal** : les périphéries orientales et méridionales sont moins bien desservies ;
-- le **fret ferroviaire** stagne face à la route, malgré l'objectif de **report modal** ;
-- le transport représente une part importante des émissions de CO₂ de l'Union, ce qui met en tension l'objectif de fluidité et l'objectif climatique ;
-- les grands projets sont **lents et coûteux** (le Lyon-Turin est débattu depuis les années 1990).`,
+| Limite | Ce qu’elle révèle |
+| Un réseau **inégal** | Périphéries orientales et méridionales moins bien desservies |
+| Le **fret ferroviaire** stagne | Le report modal vers le rail reste un objectif, pas un fait |
+| Le poids climatique du transport | L’objectif de fluidité entre en tension avec l’objectif climatique |
+| Des projets **lents et coûteux** | Le Lyon-Turin est débattu depuis les années 1990 |`,
           },
           questions: [
             ['Que désigne le RTE-T ?', ['Le réseau transeuropéen de transport', 'Le régime des taxes européennes', 'Le registre des transporteurs', 'Le tarif extérieur commun'], 0, 'Il coordonne des corridors prioritaires entre régions économiques.'],
@@ -557,22 +699,29 @@ L'**espace Schengen** supprime les contrôles aux frontières intérieures ; **E
           titre: 'La France et ses territoires transfrontaliers',
           lecon: {
             titre: 'Vivre d’un côté, travailler de l’autre',
-            cours: `La France a des frontières terrestres avec **huit pays** (Belgique, Luxembourg, Allemagne, Suisse, Italie, Espagne, Andorre, Monaco), sans compter la frontière avec le Brésil et le Suriname en Guyane. Ces marges ne sont plus des lignes de séparation, mais des **espaces de vie**.
+            cours: `La France a des frontières terrestres avec **huit pays** — Belgique, Luxembourg, Allemagne, Suisse, Italie, Espagne, Andorre, Monaco — sans compter le Brésil et le Suriname en Guyane. Ces marges ne sont plus des lignes de séparation, mais des **espaces de vie**.
 
 ## Le travail frontalier
-Plus de **400 000 personnes** résidant en France travaillent dans un pays voisin — vers la **Suisse** (Genève, Bâle), le **Luxembourg**, la **Belgique**, l'**Allemagne**, **Monaco**. Le moteur est l'**écart de salaires** : un même emploi peut être payé bien davantage de l'autre côté, tandis que le logement reste moins cher côté français.
+| Fait | Chiffre |
+| Résidents de France travaillant chez un voisin | Plus de **400 000** |
+| Principales destinations | Suisse (Genève, Bâle), Luxembourg, Belgique, Allemagne, Monaco |
+
+Le moteur est l’**écart de salaires** : un même emploi peut être payé bien davantage de l’autre côté, tandis que le logement reste moins cher côté français.
 
 ## Les effets sur le territoire
-- **Positifs** : revenus élevés injectés dans l'économie locale, dynamisme démographique, chômage plus faible ;
-- **négatifs** : flambée des prix du logement près des frontières, congestion routière aux heures de pointe, pénurie de main-d'œuvre côté français (les hôpitaux et les entreprises perdent leurs salariés au profit du voisin), fiscalité complexe.
+| Effets positifs | Effets négatifs |
+| Revenus élevés injectés dans l’économie locale | Flambée des prix du logement près des frontières |
+| Dynamisme démographique | Congestion routière aux heures de pointe |
+| Chômage plus faible | **Pénurie de main-d’œuvre** côté français : hôpitaux et entreprises perdent leurs salariés |
+| | Fiscalité complexe |
 
 ## Des espaces institués
-Des structures organisent cette vie commune :
-- les **eurométropoles** et agglomérations transfrontalières : **Lille**-Courtrai-Tournai, **Strasbourg**-Kehl, **Bâle**-Saint-Louis, Genève-Annemasse ;
-- les **GECT** (groupements européens de coopération territoriale), qui permettent à des collectivités de deux pays de gérer ensemble un équipement — hôpital, tramway, zone d'activité ;
-- le programme européen **Interreg**, qui finance ces coopérations.
+| Outil | Ce qu’il permet | Exemples |
+| **Eurométropoles** | Gérer ensemble une agglomération à cheval | Lille-Courtrai-Tournai, Strasbourg-Kehl, Bâle-Saint-Louis, Genève-Annemasse |
+| **GECT** | À des collectivités de deux pays de gérer un équipement commun | Un hôpital, un tramway, une zone d’activité |
+| **Interreg** | Financer ces coopérations | Programme européen |
 
-> Ce que ces territoires prouvent : l'intégration européenne se mesure moins dans les traités que dans un **tramway qui traverse le Rhin** ou un hôpital utilisé par deux nationalités.`,
+> Ce que ces territoires prouvent : l’intégration européenne se mesure moins dans les traités que dans un **tramway qui traverse le Rhin** ou un hôpital utilisé par deux nationalités.`,
           },
           questions: [
             ['Avec combien de pays la France a-t-elle une frontière terrestre en Europe ?', ['Huit', 'Cinq', 'Trois', 'Dix'], 0, 'Sans compter le Brésil et le Suriname, frontaliers de la Guyane.'],
@@ -591,27 +740,40 @@ Des structures organisent cette vie commune :
           titre: 'Les lignes de force du territoire français',
           lecon: {
             titre: 'Ce qui structure la France',
-            cours: `Derrière la diversité des paysages, quelques **lignes de force** organisent le territoire français. Les repérer, c'est savoir lire n'importe quelle carte de France.
+            cours: `Derrière la diversité des paysages, quelques **lignes de force** organisent le territoire français. Les repérer, c’est savoir lire n’importe quelle carte de France.
 
 ## La macrocéphalie parisienne
-L'**Île-de-France** rassemble environ **19 % de la population** et produit près de **31 % du PIB** national. Elle concentre les sièges sociaux, la recherche, les hubs aériens et ferroviaires. Aucun autre pays européen comparable ne connaît un tel écart entre sa capitale et ses autres villes.
+| Indicateur | Part de l’Île-de-France |
+| Population | environ **19 %** |
+| PIB national | près de **31 %** |
 
-## La métropolisation
-La croissance se concentre dans une quinzaine de grandes aires urbaines : Lyon, Marseille-Aix, Toulouse, Bordeaux, Lille, Nantes, Montpellier, Rennes, Strasbourg… Elles captent les emplois qualifiés, les étudiants, les investissements. Autour d'elles s'étend un vaste **périurbain**, produit de la voiture et du coût du logement.
+Elle concentre les sièges sociaux, la recherche, les hubs aériens et ferroviaires.
 
-## La diagonale des faibles densités
-Des Ardennes au sud du Massif central et jusqu'aux Landes court une bande de faible densité, vieillissement et déprise — longtemps appelée « diagonale du vide », terme trompeur : ces espaces ne sont pas vides, ils sont **peu denses** et souvent en difficulté d'accès aux services.
+> Aucun autre grand pays européen ne connaît un tel écart entre sa capitale et ses autres villes : l’Allemagne et l’Italie ont plusieurs pôles de rang comparable. C’est une **singularité française**, pas une norme.
 
-## La littoralisation
-Population et activités se déplacent vers les côtes, surtout **atlantique** et **méditerranéenne** : héliotropisme, tourisme, retraites, activités portuaires. Cette attractivité crée ses tensions — prix du foncier, artificialisation, risque de submersion.
+## Les cinq lignes de force
+| Ligne de force | Ce qu’elle décrit |
+| **Métropolisation** | Une quinzaine de grandes aires urbaines captent emplois qualifiés, étudiants et investissements |
+| **Périurbanisation** | Un vaste anneau autour d’elles, produit de la voiture et du coût du logement |
+| **Diagonale des faibles densités** | Des Ardennes aux Landes : vieillissement, déprise, éloignement des services |
+| **Littoralisation** | Population et activités se déplacent vers les côtes atlantique et méditerranéenne |
+| **Axes et façades** | Vallées du Rhône et de la Seine, sillon lorrain, arc atlantique |
 
-## Les axes et les façades
-- Axes majeurs : **vallée du Rhône** (Paris-Lyon-Marseille), **vallée de la Seine** (Paris-Rouen-Le Havre), sillon lorrain, arc atlantique ;
-- **façades maritimes** : Manche-mer du Nord, Atlantique, Méditerranée ;
-- **frontières dynamiques** à l'est et au nord (voir les territoires transfrontaliers).
+> Le terme « diagonale du **vide** » est trompeur : ces espaces ne sont pas vides, ils sont **peu denses** — et souvent en difficulté d’accès aux services, ce qui n’est pas la même chose.
+
+## La littoralisation et ses tensions
+| Ce qui attire | Ce que cela produit |
+| Héliotropisme, tourisme, retraites | Flambée du prix du foncier |
+| Activités portuaires | Artificialisation des sols |
+| Cadre de vie | Exposition au risque de submersion |
 
 ## Les outre-mer
-Éloignés, insulaires pour la plupart, dans trois océans : forte croissance démographique aux Antilles et en Guyane pour partie, chômage élevé, dépendance aux importations, mais atouts majeurs (ZEE, biodiversité, spatial en Guyane).`,
+Éloignés, insulaires pour la plupart, répartis dans trois océans.
+
+| Contraintes | Atouts |
+| Chômage élevé | Une **ZEE** de rang mondial |
+| Dépendance aux importations | Une biodiversité exceptionnelle |
+| Éloignement du marché métropolitain | Le spatial en Guyane |`,
           },
           questions: [
             ['Quelle part du PIB français produit l’Île-de-France ?', ['Environ 31 %', 'Environ 15 %', 'Environ 50 %', 'Environ 20 %'], 0, 'Pour environ 19 % de la population : une macrocéphalie sans équivalent proche en Europe.'],
@@ -631,22 +793,29 @@ Population et activités se déplacent vers les côtes, surtout **atlantique** e
             cours: `Depuis dix ans, la carte administrative et les dynamiques sociales du territoire français ont été profondément retouchées.
 
 ## Les réformes institutionnelles
-- **2014, loi MAPTAM** : création du statut de **métropole** — 21 aujourd'hui, dont les métropoles à statut particulier du Grand Paris, de Lyon et d'Aix-Marseille ;
-- **2015-2016** : les régions métropolitaines passent de **22 à 13**, avec des ensembles vastes (Nouvelle-Aquitaine, Occitanie, Grand Est) censés atteindre une taille européenne. La réforme reste contestée : identités mal reconnues, éloignement des centres de décision ;
-- montée en puissance des **intercommunalités**, qui exercent aujourd'hui l'essentiel des compétences d'aménagement du quotidien.
+| Date | La réforme | Ce qu’elle change |
+| **2014** | Loi MAPTAM | Crée le statut de **métropole** — 21 aujourd’hui, dont Grand Paris, Lyon et Aix-Marseille à statut particulier |
+| **2015-2016** | Fusion des régions | De **22 à 13** régions métropolitaines |
+| En continu | Montée des **intercommunalités** | Elles exercent l’essentiel des compétences d’aménagement du quotidien |
+
+La fusion des régions reste contestée : ensembles très vastes, identités mal reconnues, éloignement des centres de décision.
 
 ## Les recompositions sociales et spatiales
-- Les **métropoles** concentrent les emplois qualifiés, et connaissent une forte **gentrification** de leurs centres : les ménages modestes sont repoussés vers le périurbain lointain ;
-- les **villes moyennes** ont vu leurs centres se dévitaliser (commerces vacants), d'où les programmes « Action cœur de ville » ;
-- les anciens **bassins industriels** (Nord, Lorraine, Saint-Étienne) reconvertissent leurs friches, avec des réussites inégales ;
-- certains espaces ruraux se **repeuplent** (néoruraux, télétravail accéléré depuis 2020), d'autres continuent de se vider.
+| Type d’espace | La dynamique |
+| Les **métropoles** | Emplois qualifiés, mais **gentrification** des centres : les ménages modestes sont repoussés vers le périurbain lointain |
+| Les **villes moyennes** | Centres dévitalisés, commerces vacants — d’où « Action cœur de ville » |
+| Les anciens **bassins industriels** | Nord, Lorraine, Saint-Étienne : reconversion des friches, réussites inégales |
+| Les espaces **ruraux** | Certains se repeuplent (néoruraux, télétravail depuis 2020), d’autres continuent de se vider |
 
-## L'aménagement aujourd'hui
-L'**ANCT** (Agence nationale de la cohésion des territoires, 2020) pilote les politiques de rééquilibrage. Deux impératifs récents pèsent sur tous les projets :
-- le **ZAN** (zéro artificialisation nette), qui vise à stopper l'étalement urbain ;
-- l'**accès aux services** : santé (déserts médicaux), transports, numérique (plan très haut débit).
+## L’aménagement aujourd’hui
+L’**ANCT** — Agence nationale de la cohésion des territoires, 2020 — pilote les politiques de rééquilibrage. Deux impératifs récents pèsent sur tous les projets :
 
-> Le fil conducteur : depuis les années 1960, l'aménagement est passé d'une logique de **rééquilibrage volontariste** (« Paris et le désert français ») à une logique de **compétitivité des métropoles** — puis, depuis peu, à un retour de la question des territoires laissés de côté.`,
+| Impératif | Ce qu’il impose |
+| Le **ZAN** (zéro artificialisation nette) | Stopper l’étalement urbain |
+| L’**accès aux services** | Santé (déserts médicaux), transports, numérique |
+
+## Le fil conducteur
+> Depuis les années 1960, l’aménagement est passé d’une logique de **rééquilibrage volontariste** — « Paris et le désert français » — à une logique de **compétitivité des métropoles**. Puis, depuis peu, à un retour de la question des **territoires laissés de côté**. Trois doctrines successives, sur le même territoire.`,
           },
           questions: [
             ['De combien de régions métropolitaines la France est-elle passée en 2016 ?', ['De 22 à 13', 'De 26 à 18', 'De 13 à 22', 'De 20 à 15'], 0, 'Des ensembles plus vastes, censés atteindre une taille européenne.'],
@@ -665,27 +834,37 @@ L'**ANCT** (Agence nationale de la cohésion des territoires, 2020) pilote les p
             titre: 'Ancrée en Europe, présente partout',
             cours: `La France est à la fois profondément **européanisée** et présente sur tous les continents. Les deux dimensions se renforcent — et se contredisent parfois.
 
-## L'ancrage européen
-- Membre **fondateur** de la CECA (1951) et de la CEE (1957), de la zone **euro** et de l'espace **Schengen** ;
-- environ **60 % de son commerce extérieur** se fait avec les autres États membres de l'UE : l'Allemagne est de très loin son premier partenaire ;
-- ses régions frontalières vivent au rythme du voisin (travail frontalier, eurométropoles) ;
-- ses agriculteurs sont les premiers bénéficiaires de la **PAC** en volume.
+## L’ancrage européen
+| Fait | Chiffre ou date |
+| Membre **fondateur** | CECA (1951), CEE (1957) |
+| Zone euro et espace Schengen | Membre |
+| Part du commerce extérieur réalisée dans l’UE | environ **60 %** |
+| Premier partenaire commercial | L’**Allemagne**, de très loin |
+| PAC | La France en est la première bénéficiaire en volume |
 
 ## La présence mondiale
-- Un **domaine maritime** de rang mondial et des territoires dans trois océans ;
-- des **forces prépositionnées** et des bases (Djibouti, Émirats arabes unis, Antilles, Pacifique) ;
-- un **réseau diplomatique et culturel** au deuxième rang mondial ;
-- des **firmes transnationales** de premier plan et un **tourisme** international record.
+| Levier | Ce qu’il représente |
+| Le **domaine maritime** | De rang mondial, dans trois océans |
+| Les **forces prépositionnées** | Djibouti, Émirats arabes unis, Antilles, Pacifique |
+| Le réseau **diplomatique et culturel** | Deuxième rang mondial |
+| Les **firmes transnationales** | Luxe, aéronautique, énergie |
 
-## Les portes d'entrée du territoire
-Les flux passent par des **interfaces** : hubs aériens (**Roissy-CDG**), ports (Le Havre, Marseille-Fos, Dunkerque), tunnel sous la Manche, gares de LGV internationales. Ces nœuds font de quelques points du territoire les vrais points de contact avec le monde.
+## Les portes d’entrée du territoire
+Les flux passent par quelques **interfaces** — et ce sont elles, plus que les frontières, qui font le contact avec le monde.
 
-## Les limites de l'intégration
-- Un **déficit commercial** persistant et des parts de marché en recul, y compris en Europe ;
-- une dépendance à des chaînes de valeur extérieures (électronique, médicaments) mise en lumière depuis 2020 ;
-- des **inégalités internes** : quelques métropoles et façades sont branchées sur le monde, d'autres territoires en sont largement déconnectés.
+| Interface | Exemples |
+| Hubs aériens | **Roissy-CDG** |
+| Ports | Le Havre, Marseille-Fos, Dunkerque |
+| Liaisons fixes | Tunnel sous la Manche |
+| Gares LGV internationales | Lille-Europe, Paris-Nord |
 
-> À retenir : la France est intégrée **à l'Europe par ses échanges** et **au monde par son histoire, son domaine et sa diplomatie** — mais la mondialisation ne touche pas tous ses territoires de la même façon.`,
+## Les limites de l’intégration
+| Limite | Ce qu’elle traduit |
+| **Déficit commercial** persistant | Des parts de marché en recul, y compris en Europe |
+| Dépendance à des chaînes extérieures | Électronique, médicaments — révélée depuis 2020 |
+| **Inégalités internes** | Quelques métropoles et façades sont branchées sur le monde, d’autres territoires en sont déconnectés |
+
+> À retenir : la France est intégrée **à l’Europe par ses échanges** et **au monde par son histoire, son domaine et sa diplomatie**. Mais la mondialisation ne touche pas tous ses territoires de la même façon — et c’est cette inégalité qui fait le sujet.`,
           },
           questions: [
             ['Quelle part du commerce extérieur français se fait avec l’Union européenne ?', ['Environ 60 %', 'Environ 20 %', 'Environ 90 %', 'Environ 35 %'], 0, 'L’Allemagne est de très loin le premier partenaire commercial.'],
@@ -702,25 +881,32 @@ Les flux passent par des **interfaces** : hubs aériens (**Roissy-CDG**), ports 
           titre: 'La région Occitanie, entre attractivité, concurrence et inégalité',
           lecon: {
             titre: 'Une région qui gagne des habitants, et des écarts',
-            cours: `L'Occitanie est née en **2016** de la fusion de **Midi-Pyrénées** et du **Languedoc-Roussillon**. Avec environ **6 millions d'habitants** et **13 départements**, elle s'étend des Pyrénées au Massif central, de la Méditerranée à la Garonne.
+            cours: `L’Occitanie est née en **2016** de la fusion de **Midi-Pyrénées** et du **Languedoc-Roussillon**. Environ **6 millions d’habitants**, **13 départements**, des Pyrénées au Massif central et de la Méditerranée à la Garonne.
 
-## L'attractivité
-C'est l'une des régions **les plus attractives de France** : de l'ordre de **+50 000 habitants par an**, l'essentiel venant du **solde migratoire** — héliotropisme, cadre de vie, littoral, coût du logement encore inférieur à celui de la région Sud. Les arrivées se concentrent sur **Toulouse**, **Montpellier** et la bande littorale.
+## L’attractivité
+| Fait | Chiffre |
+| Croissance annuelle | de l’ordre de **+50 000 habitants** |
+| D’où elle vient | Essentiellement du **solde migratoire** |
+| Où elle se concentre | Toulouse, Montpellier, la bande littorale |
+
+Les moteurs : héliotropisme, cadre de vie, littoral, et un coût du logement encore inférieur à celui de la région Sud.
 
 ## Deux moteurs métropolitains
-- **Toulouse** : capitale mondiale de l'**aéronautique** (Airbus et ses sous-traitants), spatial (CNES), recherche et université. C'est le premier pôle industriel de la région et l'un des plus dynamiques de France.
-- **Montpellier** : santé, biotechnologies, numérique, université ; une croissance démographique parmi les plus fortes du pays.
+| Métropole | Ses spécialisations | Son rang |
+| **Toulouse** | **Aéronautique** (Airbus et ses sous-traitants), spatial (CNES), recherche | Premier pôle industriel de la région |
+| **Montpellier** | Santé, biotechnologies, numérique, université | Une des plus fortes croissances démographiques de France |
 
-S'y ajoutent la **viticulture** (premier vignoble de France en surface), le **tourisme** (littoral, Pyrénées, patrimoine), l'agroalimentaire et les énergies renouvelables.
+S’y ajoutent la **viticulture** — premier vignoble de France en surface —, le **tourisme** (littoral, Pyrénées, patrimoine), l’agroalimentaire et les énergies renouvelables.
 
 ## Les inégalités internes
-Le revers de l'attractivité :
-- un **chômage** durablement supérieur à la moyenne nationale, surtout sur le littoral languedocien ;
-- de forts contrastes entre les deux métropoles et les départements ruraux — **Lozère**, **Aveyron**, **Gers**, **Ariège** — peu denses, vieillissants, éloignés des services ;
-- une opposition **littoral / arrière-pays** : le premier se sature et voit ses prix flamber, le second peine à retenir ses jeunes ;
-- des enjeux d'**accessibilité** : la LGV vers Toulouse est attendue de longue date ; les liaisons est-ouest restent lentes.
+| Le contraste | Ce qu’il oppose |
+| Chômage | Durablement supérieur à la moyenne nationale, surtout sur le littoral languedocien |
+| Métropoles / départements ruraux | Lozère, Aveyron, Gers, Ariège : peu denses, vieillissants, éloignés des services |
+| **Littoral / arrière-pays** | Le premier se sature et voit ses prix flamber ; le second peine à retenir ses jeunes |
+| Accessibilité | La LGV vers Toulouse est attendue de longue date ; les liaisons est-ouest restent lentes |
 
-> L'Occitanie est un cas d'école : une région **attractive** n'est pas pour autant une région **homogène**. Croissance démographique et chômage élevé y coexistent — parce qu'on y vient pour le cadre de vie autant que pour l'emploi.`,
+## Le cas d’école
+> Une région **attractive** n’est pas pour autant une région **homogène**. Croissance démographique et chômage élevé y coexistent — parce qu’on y vient pour le **cadre de vie** autant que pour l’emploi. C’est exactement le raisonnement qu’un sujet de bac attend sur l’Occitanie.`,
           },
           questions: [
             ['De quelle fusion l’Occitanie est-elle née en 2016 ?', ['Midi-Pyrénées et Languedoc-Roussillon', 'Aquitaine et Midi-Pyrénées', 'Provence et Languedoc', 'Auvergne et Rhône-Alpes'], 0, 'Treize départements, des Pyrénées au Massif central.'],

@@ -168,40 +168,52 @@ DELETE FROM public.chapters c
           axe: 'Appareils en réseaux',
           lecon: {
             titre: 'Ce qui se passe entre le clic et l’écran',
-            cours: `Un appareil connecté superpose plusieurs couches : du circuit électronique jusqu’à l’application, chacune ne connaît que sa voisine immédiate.
+            cours: `Un appareil connecté superpose plusieurs couches : du circuit électronique jusqu’à l’application, **chacune ne connaît que sa voisine immédiate**.
 
 ## Le matériel
-Le **processeur** exécute les instructions ; la **mémoire vive** stocke ce qui est en cours d’exécution et disparaît à l’extinction ; le **stockage** persistant conserve les données ; les **périphériques** assurent les entrées-sorties. Sur un objet connecté, tout cela tient dans un **système sur puce**.
+| Élément | Son rôle |
+| Le **processeur** | Il exécute les instructions |
+| La **mémoire vive** | Ce qui est en cours d’exécution — elle **disparaît** à l’extinction |
+| Le **stockage** | Il conserve les données de façon persistante |
+| Les **périphériques** | Les entrées-sorties |
 
-## Le système d’exploitation
-Il est l’intermédiaire obligé entre les programmes et le matériel. Ses quatre fonctions :
-- **ordonnancer** les processus : donner à chacun son tour de processeur, ce qui crée l’illusion du parallélisme ;
-- **gérer la mémoire** : allouer, libérer, isoler les processus les uns des autres ;
-- **gérer le système de fichiers** ;
-- **gérer les droits** : chaque fichier a un propriétaire et des permissions (lecture, écriture, exécution).
+Sur un objet connecté, tout cela tient dans un **système sur puce**.
 
-Un **processus** est un programme en cours d’exécution, avec son espace mémoire propre. Deux processus qui s’attendent mutuellement produisent un **interblocage** (*deadlock*) : chacun détient la ressource que l’autre demande.
+## Les quatre fonctions du système d’exploitation
+| Fonction | Ce qu’elle fait |
+| **Ordonnancer** | Donner à chaque processus son tour de processeur — d’où l’illusion du parallélisme |
+| **Gérer la mémoire** | Allouer, libérer, **isoler** les processus les uns des autres |
+| **Gérer les fichiers** | L’arborescence et son accès |
+| **Gérer les droits** | Chaque fichier a un propriétaire et des permissions : lecture, écriture, exécution |
 
-## Le modèle en couches d’un réseau
-Le modèle **TCP/IP** en compte quatre :
-1. **accès réseau** : la transmission physique et locale (Ethernet, Wi-Fi) ;
-2. **Internet** : l’**adressage** et le **routage** des paquets (protocole **IP**) ;
-3. **transport** : la remise des données entre applications (**TCP** ou **UDP**) ;
-4. **application** : HTTP, DNS, SMTP.
+Un **processus** est un programme en cours d’exécution, avec son espace mémoire propre.
+
+> Deux processus qui s’attendent mutuellement produisent un **interblocage** : chacun détient la ressource que l’autre demande.
+
+## Le modèle TCP/IP en quatre couches
+| Couche | Ce dont elle s’occupe | Exemples |
+| 4. **Application** | Le service rendu | HTTP, DNS, SMTP |
+| 3. **Transport** | La remise entre applications | TCP, UDP |
+| 2. **Internet** | L’**adressage** et le **routage** | IP |
+| 1. **Accès réseau** | La transmission physique et locale | Ethernet, Wi-Fi |
 
 Chaque couche **encapsule** les données de la couche supérieure en y ajoutant son en-tête. À l’arrivée, on retire les en-têtes dans l’ordre inverse.
 
 ## Le routage
-Internet transporte des **paquets** indépendants, chacun trouvant sa route de proche en proche. Les **routeurs** consultent une table de routage et transmettent au voisin le plus proche de la destination.
+Internet transporte des **paquets indépendants**, chacun trouvant sa route de proche en proche. Les routeurs consultent une table et transmettent au voisin le plus proche de la destination.
 
-- **RIP** choisit la route au plus petit nombre de sauts, avec une limite à 15 : simple, mais aveugle au débit ;
-- **OSPF** attribue un coût à chaque lien (lié au débit) et calcule le plus court chemin par l’algorithme de **Dijkstra** : plus efficace, plus complexe.
+| Protocole | Son critère | Sa limite |
+| **RIP** | Le plus petit **nombre de sauts** | Plafond de 15 sauts, **aveugle au débit** |
+| **OSPF** | Un **coût** par lien, plus court chemin par **Dijkstra** | Plus efficace, plus complexe |
 
-## TCP et UDP
-- **TCP** établit une connexion, numérote les segments, retransmet ce qui manque et remet les données dans l’ordre : **fiable**, mais plus lent ;
-- **UDP** envoie sans garantie ni accusé de réception : **rapide**, adapté au direct vidéo ou au jeu en ligne, où une donnée en retard ne sert plus à rien.
+## TCP ou UDP
+| | **TCP** | **UDP** |
+| La connexion | Établie | Aucune |
+| Les pertes | Détectées et **retransmises** | Ignorées |
+| L’ordre | Rétabli | Non garanti |
+| L’usage | Web, courriel, transfert | Direct vidéo, jeu en ligne |
 
-> Le protocole ne décide pas de ce qu’on transporte, mais de ce qui se passe quand un paquet se perd. C’est la seule différence qui compte pour choisir entre TCP et UDP.`,
+> Le protocole ne décide pas de ce qu’on transporte, mais de **ce qui se passe quand un paquet se perd**. C’est la seule différence qui compte pour choisir.`,
           },
           questions: [
             ['Combien de couches compte le modèle TCP/IP ?', ['Quatre', 'Sept', 'Trois', 'Cinq'], 0, 'Accès réseau, Internet, transport et application. Le modèle OSI, lui, en compte sept.'],
@@ -219,38 +231,55 @@ Internet transporte des **paquets** indépendants, chacun trouvant sa route de p
           axe: 'Appareils en réseaux',
           lecon: {
             titre: 'Chiffrer, signer, authentifier',
-            cours: `La sécurité d’un échange repose sur trois garanties distinctes : la **confidentialité** (personne d’autre ne lit), l’**intégrité** (rien n’a été modifié), l’**authenticité** (l’interlocuteur est bien celui qu’il prétend être).
+            cours: `La sécurité d’un échange repose sur **trois garanties distinctes**, qu’il ne faut jamais confondre.
 
-## Le chiffrement symétrique
-Une **même clé** sert à chiffrer et à déchiffrer (AES). Rapide et adapté à de gros volumes, mais il pose le **problème de l’échange de clé** : comment transmettre la clé sans qu’elle soit interceptée ?
+## Les trois garanties
+| Garantie | Ce qu’elle promet | Ce qui l’assure |
+| **Confidentialité** | Personne d’autre ne lit | Le chiffrement |
+| **Intégrité** | Rien n’a été modifié | Le hachage |
+| **Authenticité** | L’interlocuteur est bien celui qu’il prétend | La signature et le certificat |
 
-## Le chiffrement asymétrique
-Chaque personne détient une **paire de clés** :
-- la **clé publique**, diffusée à tous : elle sert à **chiffrer** un message qui lui est destiné ;
-- la **clé privée**, gardée secrète : elle seule permet de **déchiffrer**.
+## Symétrique ou asymétrique
+| | **Symétrique** (AES) | **Asymétrique** (RSA) |
+| Les clés | **Une seule**, partagée | Une **paire** : publique et privée |
+| La vitesse | Rapide, adapté aux gros volumes | Bien plus lent |
+| Le problème | Comment **transmettre la clé** sans qu’elle soit interceptée | Résolu : la clé publique se diffuse |
 
-Le problème de l’échange disparaît. En contrepartie, le calcul est bien plus lent. D’où l’usage réel : l’asymétrique sert à **échanger une clé de session symétrique**, et tout le reste de la communication est symétrique. C’est ce que fait **HTTPS** à chaque connexion.
+> D’où l’usage réel : l’asymétrique sert à **échanger une clé de session** symétrique, et tout le reste de la communication est symétrique. C’est exactement ce que fait **HTTPS** à chaque connexion.
 
-## La signature numérique
-Le mécanisme est **inversé** : l’émetteur chiffre avec sa **clé privée** l’empreinte du message ; n’importe qui peut la vérifier avec sa **clé publique**. Cela ne protège rien du regard, mais prouve l’**origine** et l’**intégrité**.
+## Chiffrer ou signer — le point à ne pas rater
+| L’émetteur utilise… | Le résultat |
+| La **clé publique** du destinataire | **Confidentialité** : lui seul peut déchiffrer |
+| Sa propre **clé privée** | **Signature** : tous vérifient l’origine et l’intégrité |
+
+La signature ne protège rien du regard : elle **prouve** qui a écrit.
 
 ## Les fonctions de hachage
-Une fonction de hachage (SHA-256) transforme un message de taille quelconque en une **empreinte** de taille fixe. Elle est **à sens unique** (impossible de remonter au message) et la moindre modification change entièrement l’empreinte. Elle sert à vérifier l’intégrité et à stocker les mots de passe — jamais en clair, et toujours avec un **sel** aléatoire pour empêcher les attaques par dictionnaire précalculé.
+SHA-256 transforme un message de taille quelconque en une **empreinte de taille fixe**.
 
-## Le certificat et les autorités de certification
-Rien n’empêche un attaquant de publier une clé publique en se faisant passer pour un autre. Un **certificat** lie une clé publique à une identité et il est **signé** par une **autorité de certification** en laquelle le navigateur a confiance. Le cadenas de la barre d’adresse ne dit qu’une chose : la chaîne de certificats remonte à une autorité connue.
+| Propriété | Sa conséquence |
+| **À sens unique** | Impossible de remonter au message |
+| **Effet d’avalanche** | La moindre modification change **entièrement** l’empreinte |
+
+Elle sert à vérifier l’intégrité et à stocker les mots de passe — jamais en clair, et toujours avec un **sel** aléatoire pour empêcher les attaques par dictionnaire précalculé.
+
+## Certificats et autorités
+Rien n’empêche un attaquant de publier une clé publique en se faisant passer pour un autre. Un **certificat** lie une clé publique à une identité, et il est **signé** par une **autorité de certification** en laquelle le navigateur a confiance.
+
+> Le cadenas de la barre d’adresse ne dit qu’une chose : la chaîne de certificats **remonte à une autorité connue**.
 
 ## Les attaques au programme
-- l’**homme du milieu** : l’attaquant s’intercale et relaie les messages en les lisant ;
-- l’**hameçonnage** : obtenir des identifiants par une fausse page ;
-- le **déni de service distribué** : saturer un serveur de requêtes ;
-- l’**injection SQL** : voir le chapitre sur les bases de données ;
-- les **rançongiciels**, qui chiffrent les données de la victime.
+| Attaque | Son principe |
+| L’**homme du milieu** | L’attaquant s’intercale et relaie les messages en les lisant |
+| L’**hameçonnage** | Obtenir des identifiants par une fausse page |
+| Le **déni de service distribué** | Saturer un serveur de requêtes |
+| L’**injection SQL** | Détourner une requête par les données saisies |
+| Les **rançongiciels** | Chiffrer les données de la victime |
 
-## Les protections d’un réseau
-Pare-feu (filtrage des ports), VPN (tunnel chiffré), segmentation du réseau, mises à jour, authentification à plusieurs facteurs. Le maillon le plus faible reste l’utilisateur : la majorité des intrusions commencent par un courriel.
+## Les protections
+Pare-feu (filtrage des ports), VPN (tunnel chiffré), segmentation du réseau, mises à jour, authentification à plusieurs facteurs.
 
-> Chiffrer avec la clé publique = confidentialité. Chiffrer avec la clé privée = signature. C’est la seule chose à ne pas confondre dans ce chapitre.`,
+> Le maillon le plus faible reste l’utilisateur : la majorité des intrusions commencent par un **courriel**.`,
           },
           questions: [
             ['Dans un chiffrement asymétrique, quelle clé sert à chiffrer un message destiné à quelqu’un ?', ['Sa clé publique', 'Sa clé privée', 'Une clé partagée à l’avance', 'La clé du serveur'], 0, 'Seule sa clé privée permettra ensuite de le déchiffrer.'],
@@ -269,33 +298,43 @@ Pare-feu (filtrage des ports), VPN (tunnel chiffré), segmentation du réseau, m
           axe: 'Structures de données',
           lecon: {
             titre: 'Choisir la bonne boîte pour la bonne opération',
-            cours: `Une structure de données se choisit d’après les **opérations** qu’on va lui demander, jamais d’après ce qu’elle contient. Le programme distingue le **type abstrait** — ce qu’une structure promet — de son **implémentation** — la façon dont la promesse est tenue.
+            cours: `Une structure de données se choisit d’après les **opérations** qu’on va lui demander, jamais d’après ce qu’elle contient.
 
-## Le type abstrait
-Un type abstrait de données définit un **jeu d’opérations** et leur comportement, sans dire comment elles sont réalisées. Une **pile** promet d’empiler, de dépiler et de tester si elle est vide ; qu’elle repose sur une liste ou sur un tableau ne regarde pas celui qui l’utilise. C’est le principe d’**encapsulation** appliqué aux données.
+## Type abstrait et implémentation
+| | **Type abstrait** | **Implémentation** |
+| Il définit | Un jeu d’**opérations** et leur comportement | La façon dont la promesse est tenue |
+| Exemple | Une **pile** promet d’empiler, dépiler, tester le vide | Un tableau ou une liste chaînée |
+| Qui le voit | L’utilisateur | Seulement l’auteur de la structure |
 
-## La pile (LIFO)
-Dernier entré, premier sorti. Opérations : **empiler**, **dépiler**, **sommet**, **est_vide**. Usages : évaluation d’une expression, vérification du bon parenthésage, historique de navigation, et surtout la **pile d’appels** d’un programme récursif.
+C’est le principe d’**encapsulation** appliqué aux données.
 
-## La file (FIFO)
-Premier entré, premier sorti. Opérations : **enfiler**, **défiler**, **est_vide**. Usages : file d’attente, tampon d’impression, ordonnancement des tâches, et le **parcours en largeur** d’un graphe ou d’un arbre.
+## Pile et file
+| | **Pile** (LIFO) | **File** (FIFO) |
+| La règle | Dernier entré, **premier sorti** | Premier entré, **premier sorti** |
+| Les opérations | empiler, dépiler, sommet, est_vide | enfiler, défiler, est_vide |
+| Les usages | Parenthésage, historique, **pile d’appels** d’un programme récursif | File d’attente, tampon d’impression, **parcours en largeur** |
 
-## La liste chaînée
-Chaque **maillon** contient une valeur et une référence vers le suivant. Insérer ou supprimer en tête coûte un temps **constant**, mais accéder au i-ième élément demande de parcourir la chaîne : coût **linéaire**. C’est l’inverse du tableau.
+## Tableau ou liste chaînée — l’arbitrage
+| Opération | **Tableau** (liste Python) | **Liste chaînée** |
+| Accès au i-ième élément | **Constant** | **Linéaire** : il faut parcourir |
+| Insertion en tête | Coûteuse : tout décaler | **Constante** |
 
-## Le tableau (liste Python)
-Accès direct à l’indice i en temps **constant**, mais insertion en début coûteuse, puisqu’il faut décaler tout le reste.
+Dans une liste chaînée, chaque **maillon** contient une valeur et une **référence vers le suivant**.
 
 ## Le dictionnaire
-Il associe une **clé** à une **valeur**. Grâce au **hachage**, la recherche, l’insertion et la suppression se font en temps **constant en moyenne**. C’est la structure à choisir dès qu’on cherche « la valeur associée à » plutôt que « le i-ième élément ».
+Il associe une **clé** à une **valeur**. Grâce au **hachage**, recherche, insertion et suppression se font en temps **constant en moyenne**.
 
-## Choisir
-- beaucoup d’accès par indice → **tableau** ;
-- beaucoup d’insertions et suppressions aux extrémités → **liste chaînée**, **pile** ou **file** ;
-- recherche par identifiant → **dictionnaire** ;
-- relation hiérarchique → **arbre** ; relation quelconque → **graphe**.
+> C’est la structure à choisir dès qu’on cherche « la valeur **associée à** » plutôt que « le **i-ième** élément ».
 
-> Une structure de données mal choisie ne rend pas un programme faux : elle le rend lent, et sur des données réelles c’est la même chose.`,
+## Le tableau de décision
+| Ce dont le programme a besoin | La structure |
+| Beaucoup d’accès par indice | Le **tableau** |
+| Insertions et suppressions aux extrémités | **Liste chaînée**, **pile** ou **file** |
+| Recherche par identifiant | Le **dictionnaire** |
+| Une relation **hiérarchique** | L’**arbre** |
+| Une relation quelconque | Le **graphe** |
+
+> Une structure mal choisie ne rend pas un programme faux : elle le rend **lent** — et sur des données réelles, c’est la même chose.`,
           },
           questions: [
             ['Qu’est-ce qu’un type abstrait de données ?', ['Un jeu d’opérations défini indépendamment de son implémentation', 'Une classe Python sans attribut', 'Un tableau de taille variable', 'Une donnée non typée'], 0, 'C’est le principe d’encapsulation appliqué aux structures de données.'],
@@ -313,32 +352,45 @@ Il associe une **clé** à une **valeur**. Grâce au **hachage**, la recherche, 
           axe: 'Structures de données',
           lecon: {
             titre: 'Ranger les données avec ce qui sait les manipuler',
-            cours: `La programmation orientée objet regroupe dans une même entité les **données** et les **opérations** qui les concernent. C’est d’abord une façon d’organiser un programme, pas une technique de calcul.
+            cours: `La programmation orientée objet regroupe dans une même entité les **données** et les **opérations** qui les concernent. C’est d’abord une façon d’**organiser** un programme.
 
 ## Classe et instance
-Une **classe** est un modèle : elle décrit des **attributs** (les données) et des **méthodes** (les fonctions qui agissent dessus). Une **instance** est un objet construit sur ce modèle. La classe Compte décrit ce qu’est un compte ; mon compte est une instance.
+| | **Classe** | **Instance** |
+| Ce que c’est | Un **modèle** | Un objet construit sur ce modèle |
+| Ce qu’elle décrit | Des **attributs** (données) et des **méthodes** (fonctions) | Des valeurs concrètes |
+| Exemple | Ce qu’est un compte bancaire | **Mon** compte |
 
-## Le constructeur
-En Python, la méthode spéciale **__init__** est appelée à la création. Le paramètre **self** désigne l’instance en cours : il permet à une méthode de lire et de modifier les attributs de l’objet sur lequel elle est appelée. Écrire un attribut sans self, c’est créer une variable locale qui disparaîtra à la fin de la méthode — l’erreur la plus fréquente des débutants.
+## Le constructeur et self
+La méthode spéciale d’initialisation est appelée à la création de l’objet. Le paramètre **self** désigne l’instance en cours : il permet à une méthode de lire et modifier les attributs de l’objet sur lequel elle est appelée.
 
-## Attribut d’instance, attribut de classe
-Un attribut d’instance appartient à un objet ; un **attribut de classe** est partagé par tous les objets de la classe (un compteur d’instances, une constante).
+> Écrire un attribut **sans self**, c’est créer une variable **locale** qui disparaîtra à la fin de la méthode. C’est l’erreur la plus fréquente du chapitre.
+
+## Où vit l’attribut
+| Type d’attribut | À qui il appartient |
+| D’**instance** | À **un** objet |
+| De **classe** | Partagé par **tous** les objets : un compteur d’instances, une constante |
 
 ## L’encapsulation
-Les attributs ne devraient pas être manipulés directement de l’extérieur : on passe par des **méthodes d’accès** (*getters*) et de **modification** (*setters*), qui peuvent vérifier la validité de ce qu’on écrit. Python ne l’impose pas — un attribut préfixé d’un souligné signale par **convention** qu’il est interne. La discipline vient du programmeur, pas du langage.
+Les attributs ne devraient pas être manipulés directement de l’extérieur : on passe par des **méthodes d’accès** et de **modification**, qui peuvent **vérifier la validité** de ce qu’on écrit.
 
-L’intérêt : on peut changer la représentation interne d’une classe sans casser le code qui l’utilise, tant que les méthodes gardent le même comportement. C’est ce qui rend un programme modifiable.
+Python ne l’impose pas : un attribut préfixé d’un souligné signale par **convention** qu’il est interne. La discipline vient du programmeur, pas du langage.
 
-## L’héritage
-Une classe peut **hériter** d’une autre : elle en reprend attributs et méthodes, et peut en ajouter ou en **redéfinir**. La relation exprime un « est un » : un CompteEpargne **est un** Compte. Quand la relation est un « a un » (une voiture a un moteur), il faut préférer la **composition** — un attribut qui est lui-même un objet.
+> L’intérêt : on peut **changer la représentation interne** d’une classe sans casser le code qui l’utilise, tant que les méthodes gardent le même comportement. C’est ce qui rend un programme modifiable.
+
+## Héritage ou composition
+| Relation | Le mécanisme | L’exemple |
+| « **est un** » | L’**héritage** : la classe reprend attributs et méthodes, en ajoute, en **redéfinit** | Un compte épargne **est un** compte |
+| « **a un** » | La **composition** : un attribut qui est lui-même un objet | Une voiture **a un** moteur |
 
 ## Le polymorphisme
-Deux classes différentes peuvent proposer une méthode de même nom, chacune avec son propre code. Le même appel produit alors un comportement adapté au type réel de l’objet, sans que l’appelant ait besoin de le savoir. C’est ce qui permet d’écrire un traitement unique pour une collection d’objets hétérogènes.
+Deux classes différentes peuvent proposer une méthode de **même nom**, chacune avec son propre code. Le même appel produit alors un comportement adapté au **type réel** de l’objet, sans que l’appelant ait besoin de le savoir.
+
+> C’est ce qui permet d’écrire un traitement **unique** pour une collection d’objets hétérogènes.
 
 ## Le lien avec les structures de données
-La POO est la façon naturelle d’implémenter un type abstrait : une classe Pile expose empiler et dépiler, et cache le tableau ou la liste chaînée qui les réalise. Changer l’implémentation ne change rien pour l’utilisateur.
+La POO est la façon naturelle d’implémenter un type abstrait : une classe Pile expose empiler et dépiler, et **cache** le tableau ou la liste chaînée qui les réalise.
 
-> Une classe bien conçue se juge à ce qu’elle **cache**, pas à ce qu’elle expose. C’est le critère qui distingue un objet d’un simple regroupement de variables.`,
+> Une classe bien conçue se juge à ce qu’elle **cache**, pas à ce qu’elle expose.`,
           },
           questions: [
             ['Quelle est la différence entre une classe et une instance ?', ['La classe est le modèle, l’instance un objet construit sur ce modèle', 'La classe contient les données, l’instance les méthodes', 'Il n’y a aucune différence', 'L’instance est une classe sans méthode'], 0, 'La classe Compte décrit ce qu’est un compte ; mon compte est une instance.'],
@@ -356,37 +408,49 @@ La POO est la façon naturelle d’implémenter un type abstrait : une classe Pi
           axe: 'Structures de données',
           lecon: {
             titre: 'Diviser l’ensemble à chaque nœud',
-            cours: `Un **arbre** organise des données par une relation hiérarchique. Sa force est qu’à chaque nœud, on écarte une partie de l’ensemble sans l’examiner.
+            cours: `Un **arbre** organise des données par une relation hiérarchique. Sa force : à chaque nœud, on **écarte** une partie de l’ensemble sans l’examiner.
 
 ## Le vocabulaire
-- la **racine** est l’unique nœud sans parent ;
-- une **feuille** est un nœud sans enfant ;
-- la **taille** est le nombre de nœuds ;
-- la **hauteur** est la longueur du plus long chemin de la racine à une feuille (par convention, un arbre réduit à sa racine a une hauteur de 0, un arbre vide de −1) ;
-- un **sous-arbre** est l’arbre formé par un nœud et sa descendance.
+| Terme | Sa définition |
+| La **racine** | L’unique nœud sans parent |
+| Une **feuille** | Un nœud sans enfant |
+| La **taille** | Le nombre de nœuds |
+| La **hauteur** | Le plus long chemin racine-feuille — 0 pour un arbre réduit à sa racine, −1 pour un arbre vide |
+| Un **sous-arbre** | Un nœud et toute sa descendance |
 
 ## L’arbre binaire
-Chaque nœud a **au plus deux** enfants, gauche et droit. Un arbre binaire de hauteur h contient **au plus 2^(h+1) − 1** nœuds. Inversement, un arbre binaire à n nœuds a une hauteur d’au moins log₂(n) : c’est cette borne qui fonde toute l’efficacité des arbres.
+Chaque nœud a **au plus deux** enfants.
 
-Sa définition est naturellement **récursive** : un arbre binaire est soit vide, soit un nœud portant une valeur et deux arbres binaires.
+| Relation | Ce qu’elle dit |
+| Un arbre de hauteur h contient au plus **2^(h+1) − 1** nœuds | La croissance est exponentielle en hauteur |
+| Un arbre à n nœuds a une hauteur d’au moins **log₂(n)** | C’est la borne qui fonde toute l’efficacité des arbres |
+
+Sa définition est naturellement **récursive** : un arbre binaire est soit **vide**, soit un nœud portant une valeur et **deux** arbres binaires.
 
 ## L’arbre binaire de recherche
-Un **ABR** ajoute une contrainte d’ordre : pour tout nœud, **toutes** les valeurs du sous-arbre gauche lui sont inférieures, et **toutes** celles du sous-arbre droit lui sont supérieures.
+Contrainte d’ordre : pour tout nœud, **toutes** les valeurs du sous-arbre gauche lui sont inférieures, **toutes** celles du sous-arbre droit lui sont supérieures.
 
-Rechercher une valeur revient alors à descendre : comparer, choisir un côté, recommencer. Le coût est proportionnel à la **hauteur**, donc **logarithmique** si l’arbre est équilibré. Mais si l’on insère des valeurs déjà triées, l’arbre **dégénère en peigne** : la hauteur devient n et la recherche redevient linéaire. C’est le piège classique du chapitre — et la raison d’être des arbres équilibrés.
+Rechercher revient à descendre : comparer, choisir un côté, recommencer.
 
-## Les parcours
-- **infixe** (gauche, nœud, droite) : sur un ABR, il produit les valeurs **triées** ;
-- **préfixe** (nœud, gauche, droite) : sert à copier ou sérialiser un arbre ;
-- **suffixe** (gauche, droite, nœud) : sert à libérer ou évaluer une expression ;
-- **en largeur** : niveau par niveau, à l’aide d’une **file**.
+| L’arbre est… | Sa hauteur | Le coût d’une recherche |
+| **Équilibré** | environ log₂(n) | **Logarithmique** |
+| Dégénéré en **peigne** (valeurs insérées déjà triées) | **n** | **Linéaire** — tout l’intérêt disparaît |
 
-Les trois premiers s’écrivent naturellement de façon **récursive** ; le dernier est itératif.
+> C’est le piège classique du chapitre, et la raison d’être des arbres équilibrés.
+
+## Les quatre parcours
+| Parcours | L’ordre | Son usage |
+| **Infixe** | gauche, nœud, droite | Sur un ABR, il produit les valeurs **triées** |
+| **Préfixe** | nœud, gauche, droite | Copier ou sérialiser un arbre |
+| **Suffixe** | gauche, droite, nœud | Libérer, ou évaluer une expression |
+| **En largeur** | Niveau par niveau | Il utilise une **file** |
+
+Les trois premiers s’écrivent naturellement de façon **récursive** ; le dernier est **itératif**.
 
 ## À quoi servent les arbres
 Systèmes de fichiers, arborescence d’un document, arbres de décision en apprentissage automatique, index de bases de données, compression de Huffman, arbres syntaxiques d’un compilateur.
 
-> Retenir la chaîne : hauteur logarithmique → recherche logarithmique. Tout l’intérêt d’un arbre disparaît dès qu’il n’est plus équilibré.`,
+> Retenir la chaîne : **hauteur logarithmique → recherche logarithmique**.`,
           },
           questions: [
             ['Qu’est-ce que la hauteur d’un arbre ?', ['La longueur du plus long chemin de la racine à une feuille', 'Le nombre total de nœuds', 'Le nombre de feuilles', 'Le nombre d’enfants de la racine'], 0, 'La taille, elle, compte les nœuds.'],
@@ -404,33 +468,40 @@ Systèmes de fichiers, arborescence d’un document, arbres de décision en appr
           axe: 'Structures de données',
           lecon: {
             titre: 'Modéliser une relation quelconque',
-            cours: `Un **graphe** décrit des objets — les **sommets** — reliés par des **arêtes**. Contrairement à l’arbre, aucune hiérarchie n’est imposée, et les cycles sont permis.
+            cours: `Un **graphe** décrit des objets — les **sommets** — reliés par des **arêtes**. Contrairement à l’arbre, aucune hiérarchie n’est imposée et les **cycles** sont permis.
 
 ## Le vocabulaire
-- **orienté** ou **non orienté**, selon que la relation a un sens (« suit sur un réseau social ») ou non (« est ami avec ») ;
-- **pondéré** quand chaque arête porte une valeur (distance, coût, débit) ;
-- le **degré** d’un sommet est son nombre de voisins ;
-- un **chemin** est une suite d’arêtes consécutives, un **cycle** un chemin qui revient à son point de départ ;
-- un graphe est **connexe** si tout sommet est atteignable depuis tout autre.
+| Terme | Sa définition |
+| **Orienté** ou non | Selon que la relation a un sens : « suit » contre « est ami avec » |
+| **Pondéré** | Chaque arête porte une valeur : distance, coût, débit |
+| Le **degré** | Le nombre de voisins d’un sommet |
+| Un **chemin**, un **cycle** | Une suite d’arêtes ; un chemin qui revient à son départ |
+| **Connexe** | Tout sommet est atteignable depuis tout autre |
 
 ## Les deux représentations
-**Matrice d’adjacence** : un tableau n × n où la case (i, j) vaut 1 s’il existe une arête de i vers j. Test d’adjacence en temps **constant**, mais occupation mémoire en **n²** — inadaptée à un graphe **creux** (peu d’arêtes).
-
-**Liste d’adjacence** : à chaque sommet, la liste de ses voisins. Occupation proportionnelle au nombre d’arêtes, parcours des voisins immédiat, mais test d’adjacence plus coûteux. C’est la représentation à choisir dès que le graphe est grand et creux — le cas de presque tous les graphes réels.
+| | **Matrice d’adjacence** | **Liste d’adjacence** |
+| La forme | Un tableau n × n, la case (i, j) vaut 1 s’il y a une arête | À chaque sommet, la liste de ses voisins |
+| Test d’adjacence | **Constant** | Plus coûteux |
+| Mémoire | En **n²** | Proportionnelle au nombre d’**arêtes** |
+| Quand la choisir | Graphe **dense** et petit | Graphe **grand et creux** — presque tous les graphes réels |
 
 ## Les deux parcours
-- **en largeur** (BFS) : on visite tous les voisins avant d’aller plus loin, à l’aide d’une **file**. Sur un graphe **non pondéré**, il donne le **plus court chemin** en nombre d’arêtes ;
-- **en profondeur** (DFS) : on s’enfonce le plus loin possible avant de revenir, à l’aide d’une **pile** ou par récursivité. Il sert à détecter les **cycles**, à trouver les composantes connexes et à faire un tri topologique.
+| | **En largeur** (BFS) | **En profondeur** (DFS) |
+| La structure | Une **file** | Une **pile**, ou la récursivité |
+| Sa marche | Tous les voisins avant d’aller plus loin | S’enfoncer au plus loin, puis revenir |
+| Son usage | Le **plus court chemin** en nombre d’arêtes, sur graphe **non pondéré** | Détecter les **cycles**, les composantes connexes, le tri topologique |
 
-Dans les deux cas, il faut **marquer les sommets visités** : sans cela, le moindre cycle fait boucler le programme indéfiniment. C’est l’erreur la plus fréquente à l’écrit.
+> Dans les deux cas, il faut **marquer les sommets visités**. Sans cela, le moindre cycle fait boucler le programme indéfiniment — l’erreur la plus fréquente à l’écrit.
 
 ## Le plus court chemin pondéré
-BFS ne suffit plus dès que les arêtes portent des poids. **Dijkstra** traite ce cas en choisissant à chaque étape le sommet non traité le plus proche — à condition que tous les poids soient **positifs**. C’est l’algorithme du GPS et du protocole de routage OSPF.
+BFS ne suffit plus dès que les arêtes portent des poids. **Dijkstra** choisit à chaque étape le sommet non traité **le plus proche** — à condition que tous les poids soient **positifs**.
+
+> C’est l’algorithme du GPS et du protocole de routage OSPF.
 
 ## Les usages
 Réseaux sociaux, cartographie et itinéraires, routage réseau, ordonnancement de tâches, moteurs de recherche, résolution de jeux.
 
-> Le choix de la représentation décide de la complexité du programme avant même que le premier algorithme soit écrit : matrice pour un graphe dense et petit, listes pour tout le reste.`,
+> Le choix de la **représentation** décide de la complexité du programme **avant** que le premier algorithme soit écrit.`,
           },
           questions: [
             ['Quelle représentation d’un graphe convient à un grand graphe creux ?', ['La liste d’adjacence', 'La matrice d’adjacence', 'Un arbre binaire', 'Un dictionnaire de matrices'], 0, 'La matrice occupe une mémoire en n² quel que soit le nombre d’arêtes.'],
@@ -452,32 +523,34 @@ Réseaux sociaux, cartographie et itinéraires, routage réseau, ordonnancement 
             cours: `Avant toute requête, il faut décider **quelles tables** existent et **comment** elles se répondent. Une base mal modélisée produit des données fausses, quelle que soit la qualité du code au-dessus.
 
 ## Pourquoi pas un seul grand tableau
-Stocker tout dans une seule table crée trois anomalies :
-- **redondance** : la même information est répétée à chaque ligne ;
-- **anomalie de mise à jour** : corriger une adresse oblige à la corriger partout, et une occurrence oubliée rend la base incohérente ;
-- **anomalie d’insertion et de suppression** : on ne peut pas enregistrer un professeur qui n’a pas encore de classe, et supprimer la dernière ligne d’un élève efface aussi les informations de sa classe.
+| Anomalie | Ce qu’elle produit |
+| **Redondance** | La même information répétée à chaque ligne |
+| Anomalie de **mise à jour** | Corriger une adresse oblige à la corriger **partout** ; un oubli rend la base incohérente |
+| Anomalie d’**insertion** | On ne peut pas enregistrer un professeur qui n’a pas encore de classe |
+| Anomalie de **suppression** | Effacer la dernière ligne d’un élève efface aussi les informations de sa classe |
 
 ## Le modèle relationnel
-Proposé par **Codd** en 1970, il repose sur des **relations** — des tables — composées d’**attributs** (les colonnes) et d’**enregistrements** (les lignes). Chaque attribut a un **domaine** : un type de valeurs admissibles.
+Proposé par **Codd** en **1970** : des **relations** — les tables — composées d’**attributs** (colonnes) et d’**enregistrements** (lignes). Chaque attribut a un **domaine**, le type de valeurs admissibles.
 
-## Le schéma relationnel
-Il énumère les tables, leurs attributs et leurs contraintes. On l’écrit sous la forme :
+Le **schéma relationnel** énumère tables, attributs et contraintes. On l’écrit ainsi, le gras marquant la clé primaire et le dièse une clé étrangère :
 
 eleve(**id**, nom, prenom, date_naissance, #classe_id)
 
-où le gras marque la clé primaire et le dièse une clé étrangère.
-
 ## Les contraintes d’intégrité
-- **clé primaire** : un attribut (ou un groupe) qui identifie **de façon unique** chaque enregistrement. Elle ne peut être ni nulle ni dupliquée ;
-- **clé étrangère** : un attribut qui **référence** la clé primaire d’une autre table. C’est elle qui relie les tables entre elles ;
-- **intégrité référentielle** : une clé étrangère doit pointer vers un enregistrement qui existe. Elle interdit d’inscrire un élève dans une classe inexistante ;
-- **contrainte de domaine** : une note doit être comprise entre 0 et 20 ;
-- **unicité** : deux comptes ne peuvent pas partager la même adresse électronique.
+| Contrainte | Ce qu’elle impose |
+| **Clé primaire** | Elle identifie **de façon unique** chaque enregistrement : ni nulle, ni dupliquée |
+| **Clé étrangère** | Elle **référence** la clé primaire d’une autre table — c’est elle qui relie |
+| Intégrité **référentielle** | Une clé étrangère doit pointer vers un enregistrement **existant** |
+| Contrainte de **domaine** | Une note comprise entre 0 et 20 |
+| **Unicité** | Deux comptes ne partagent pas la même adresse électronique |
 
 ## Les relations entre tables
-- **un à plusieurs** : une classe compte plusieurs élèves, un élève appartient à une classe. La clé étrangère se place du côté « plusieurs » ;
-- **plusieurs à plusieurs** : un élève suit plusieurs matières, une matière est suivie par plusieurs élèves. Elle **exige une table intermédiaire** (dite table de jonction) portant les deux clés étrangères — c’est le point le plus souvent manqué à l’écrit ;
-- **un à un** : rare, souvent réductible à une seule table.
+| Cardinalité | Comment on la réalise |
+| **Un à plusieurs** | La clé étrangère se place du côté « **plusieurs** » : un élève porte l’identifiant de sa classe |
+| **Plusieurs à plusieurs** | Elle **exige une table de jonction** portant les deux clés étrangères |
+| **Un à un** | Rare, souvent réductible à une seule table |
+
+> La table de jonction est le point le plus souvent manqué à l’écrit : un élève suit plusieurs matières **et** une matière est suivie par plusieurs élèves — aucune des deux tables ne peut porter la clé de l’autre.
 
 > Modéliser, c’est décider où l’information est écrite **une seule fois**. Chaque duplication est une incohérence future.`,
           },
@@ -500,33 +573,50 @@ où le gras marque la clé primaire et le dièse une clé étrangère.
             cours: `Une fois le modèle décidé, il faut **créer** les tables, choisir les types, poser les contraintes — et savoir comment les données seront réellement rangées.
 
 ## Les types de données
-Chaque colonne reçoit un type : **INTEGER**, **REAL** (ou FLOAT), **TEXT** (ou VARCHAR), **DATE**, **BOOLEAN**. Le type est une **contrainte** : il interdit d’écrire une chaîne dans une colonne numérique, et il conditionne les opérations possibles — additionner deux nombres écrits comme du texte n’a pas de sens.
+| Type | Ce qu’il accueille |
+| **INTEGER** | Les entiers |
+| **REAL** (ou FLOAT) | Les décimaux |
+| **TEXT** (ou VARCHAR) | Les chaînes |
+| **DATE** | Les dates |
+| **BOOLEAN** | Vrai ou faux |
 
-## La création d’une table
-En SQL, la commande **CREATE TABLE** énumère les colonnes, leur type et leurs contraintes :
+> Le type est une **contrainte** : il interdit d’écrire une chaîne dans une colonne numérique, et il conditionne les opérations possibles. Additionner deux nombres stockés en TEXT n’a pas de sens.
 
+## Créer une table
 **CREATE TABLE** eleve (id **INTEGER PRIMARY KEY**, nom **TEXT NOT NULL**, classe_id **INTEGER REFERENCES** classe(id))
 
-Les mots-clés à connaître : **PRIMARY KEY**, **NOT NULL**, **UNIQUE**, **DEFAULT**, **CHECK**, **REFERENCES** (ou FOREIGN KEY).
+| Mot-clé | Ce qu’il impose |
+| **PRIMARY KEY** | Identifiant unique, jamais nul |
+| **NOT NULL** | La valeur est obligatoire |
+| **UNIQUE** | Pas deux fois la même valeur |
+| **DEFAULT** | Une valeur par défaut si rien n’est fourni |
+| **CHECK** | Une condition à respecter |
+| **REFERENCES** | Une clé étrangère vers une autre table |
 
-## La valeur NULL
-NULL n’est **ni zéro ni la chaîne vide** : c’est l’absence de valeur. Toute comparaison avec NULL renvoie « inconnu », y compris NULL = NULL. On teste donc avec **IS NULL** et **IS NOT NULL**, jamais avec l’égalité — piège récurrent des sujets.
+## Le piège NULL
+NULL n’est **ni zéro ni la chaîne vide** : c’est l’**absence** de valeur. Toute comparaison avec NULL renvoie « inconnu » — y compris NULL = NULL.
+
+> On teste avec **IS NULL** et **IS NOT NULL**, **jamais** avec l’égalité. Piège récurrent des sujets.
 
 ## La normalisation
-Décomposer les tables pour éliminer la redondance. Le programme s’en tient à l’essentiel : chaque information est stockée **une seule fois**, et chaque table décrit **une seule entité**. Une table qui mêle élève et classe est à découper.
+Décomposer les tables pour éliminer la redondance. Le programme s’en tient à l’essentiel : chaque information stockée **une seule fois**, chaque table décrivant **une seule entité**. Une table qui mêle élève et classe est à découper.
 
 ## Les index
-Un **index** est une structure auxiliaire (souvent un arbre équilibré) qui accélère la recherche sur une colonne. Il fait passer une recherche d’un coût linéaire à un coût logarithmique. Son prix : de l’espace disque, et un ralentissement des insertions, puisque l’index doit être tenu à jour. On indexe donc les colonnes très souvent interrogées, pas toutes.
+Un **index** est une structure auxiliaire — souvent un arbre équilibré — qui accélère la recherche sur une colonne.
 
-La clé primaire est indexée automatiquement.
+| Ce qu’il apporte | Ce qu’il coûte |
+| La recherche passe d’un coût **linéaire** à **logarithmique** | De l’espace disque |
+| — | Un **ralentissement des insertions** : l’index doit être tenu à jour |
+
+> On indexe les colonnes **très souvent interrogées**, pas toutes. La clé primaire est indexée automatiquement.
 
 ## Les vues
-Une **vue** est une requête enregistrée sous un nom, utilisable comme une table. Elle sert à simplifier des requêtes complexes et à **restreindre l’accès** : on donne accès à une vue qui ne montre que certaines colonnes plutôt qu’à la table entière.
+Une **vue** est une requête enregistrée sous un nom, utilisable comme une table. Elle simplifie les requêtes complexes et **restreint l’accès** : on donne accès à une vue qui ne montre que certaines colonnes plutôt qu’à la table entière.
 
 ## Les droits
-Un SGBD gère des utilisateurs et des permissions : **GRANT** attribue un droit (SELECT, INSERT, UPDATE, DELETE), **REVOKE** le retire. Le principe de moindre privilège s’applique : une application qui ne fait que lire ne doit disposer que du droit de lecture.
+**GRANT** attribue un droit — SELECT, INSERT, UPDATE, DELETE — et **REVOKE** le retire. Le principe de **moindre privilège** s’applique : une application qui ne fait que lire ne doit disposer que du droit de lecture.
 
-> Un schéma sans contraintes n’est pas un schéma : c’est un tableur. Ce sont les contraintes qui empêchent une base d’accumuler des données fausses.`,
+> Un schéma **sans contraintes** n’est pas un schéma : c’est un tableur. Ce sont les contraintes qui empêchent une base d’accumuler des données fausses.`,
           },
           questions: [
             ['Que signifie NULL dans une base de données ?', ['L’absence de valeur', 'La valeur zéro', 'Une chaîne vide', 'Une erreur de saisie'], 0, 'Toute comparaison avec NULL renvoie « inconnu », y compris NULL = NULL.'],
@@ -546,34 +636,45 @@ Un SGBD gère des utilisateurs et des permissions : **GRANT** attribue un droit 
             titre: 'Le programme qui garde la base cohérente',
             cours: `Une base de données n’est pas un fichier : c’est un fichier **plus un programme** qui en contrôle tous les accès. Ce programme est le **SGBD**.
 
-## Ce que le SGBD prend en charge
-- l’**exécution des requêtes** et leur optimisation (choisir le meilleur plan d’exécution) ;
-- le **contrôle des accès concurrents** : plusieurs clients écrivent en même temps sans se corrompre ;
-- la **gestion des droits** par utilisateur ;
-- la **persistance** et la **reprise après panne** ;
-- le **respect des contraintes d’intégrité**, qu’aucune application ne peut contourner.
+## Ce qu’il prend en charge
+| Fonction | Ce qu’elle garantit |
+| L’**exécution des requêtes** | Et leur optimisation : choisir le meilleur plan |
+| Le **contrôle des accès concurrents** | Plusieurs clients écrivent sans se corrompre |
+| La **gestion des droits** | Par utilisateur |
+| La **persistance** | Et la reprise après panne |
+| Le respect des **contraintes** | Qu’aucune application ne peut contourner |
 
-Le dernier point est décisif : mettre les vérifications dans le SGBD plutôt que dans le code applicatif garantit qu’elles s’appliquent **à tous les clients**, présents et futurs.
+> Le dernier point est décisif : une vérification placée dans le SGBD s’applique **à tous les clients**, présents et futurs.
 
 ## La transaction
-Une **transaction** est un ensemble d’opérations traitées comme un **tout indivisible**. L’exemple canonique est le virement : débiter un compte et créditer l’autre doivent réussir ensemble ou échouer ensemble. En SQL, on ouvre la transaction, puis on la valide par **COMMIT** ou on l’annule par **ROLLBACK**.
+Un ensemble d’opérations traitées comme un **tout indivisible**. L’exemple canonique est le virement : débiter un compte et créditer l’autre doivent réussir **ensemble** ou échouer ensemble.
+
+On ouvre la transaction, puis on la valide par **COMMIT** ou on l’annule par **ROLLBACK**.
 
 ## Les propriétés ACID
-- **Atomicité** : tout ou rien ;
-- **Cohérence** : la base passe d’un état valide à un autre état valide, contraintes respectées ;
-- **Isolation** : deux transactions simultanées se déroulent comme si elles étaient successives ;
-- **Durabilité** : une fois validée, une transaction survit à une panne — c’est le rôle du **journal** des transactions, écrit avant les données elles-mêmes.
+| Propriété | Ce qu’elle promet |
+| **Atomicité** | Tout ou rien |
+| **Cohérence** | La base passe d’un état valide à un autre état valide |
+| **Isolation** | Deux transactions simultanées se déroulent comme si elles étaient **successives** |
+| **Durabilité** | Une transaction validée survit à une panne — c’est le rôle du **journal**, écrit **avant** les données |
 
 ## Les accès concurrents
-Sans isolation, deux clients qui lisent puis modifient la même ligne peuvent écraser mutuellement leur travail. Le SGBD emploie des **verrous** ou un mécanisme de versions. Deux transactions qui s’attendent produisent un **interblocage**, que le SGBD détecte et résout en annulant l’une d’elles.
+Sans isolation, deux clients qui lisent puis modifient la même ligne peuvent **écraser mutuellement** leur travail. Le SGBD emploie des **verrous** ou un mécanisme de **versions**. Deux transactions qui s’attendent produisent un **interblocage**, que le SGBD détecte et résout en annulant l’une d’elles.
 
 ## L’architecture client-serveur
-Le SGBD est un **serveur** ; les applications sont des **clients** qui lui envoient des requêtes par le réseau. Les avantages : centralisation de la donnée, un seul point de sauvegarde, cohérence garantie, accès simultané de plusieurs applications. La contrepartie : le serveur est un point de défaillance unique et une cible.
+| Avantage | Contrepartie |
+| Centralisation de la donnée | Le serveur est un **point de défaillance unique** |
+| Un seul point de sauvegarde | Et une **cible** |
+| Cohérence garantie, accès simultané de plusieurs applications | — |
 
 ## Quelques SGBD
-**PostgreSQL** et **MySQL** (serveurs, multi-utilisateurs), **SQLite** (embarqué, sans serveur, dans les téléphones et les navigateurs), **Oracle** et **SQL Server** (propriétaires). Les bases dites **NoSQL** renoncent à une partie du modèle relationnel pour gagner en volume et en répartition.
+| SGBD | Son profil |
+| **PostgreSQL**, **MySQL** | Serveurs, multi-utilisateurs |
+| **SQLite** | **Embarqué**, sans serveur : téléphones, navigateurs |
+| **Oracle**, **SQL Server** | Propriétaires |
+| Les bases **NoSQL** | Elles renoncent à une partie du modèle relationnel pour gagner en volume et en répartition |
 
-> Une contrainte écrite dans l’application protège cette application. Une contrainte écrite dans le SGBD protège la base — donc toutes les applications, y compris celles que personne n’a encore écrites.`,
+> Une contrainte écrite dans l’**application** protège cette application. Une contrainte écrite dans le **SGBD** protège la base — donc toutes les applications, y compris celles que personne n’a encore écrites.`,
           },
           questions: [
             ['Qu’est-ce qu’une transaction ?', ['Un ensemble d’opérations traité comme un tout indivisible', 'Une requête de lecture', 'Un échange entre deux serveurs', 'Une sauvegarde périodique'], 0, 'Un virement doit débiter et créditer ensemble, ou ne rien faire.'],
@@ -591,55 +692,57 @@ Le SGBD est un **serveur** ; les applications sont des **clients** qui lui envoi
           axe: 'Bases de données',
           lecon: {
             titre: 'Dire ce qu’on veut, pas comment l’obtenir',
-            cours: `SQL est un langage **déclaratif** : on décrit le résultat souhaité, et le SGBD choisit lui-même comment l’obtenir. C’est ce qui le distingue de Python.
+            cours: `SQL est un langage **déclaratif** : on décrit le **résultat souhaité**, et le SGBD choisit lui-même comment l’obtenir. C’est ce qui le distingue de Python.
 
-## Les deux familles de commandes
-- la **définition** des données : CREATE TABLE, ALTER TABLE, DROP TABLE ;
-- la **manipulation** des données : SELECT, INSERT, UPDATE, DELETE.
+## Les deux familles
+| Famille | Ses commandes |
+| **Définition** des données | CREATE TABLE, ALTER TABLE, DROP TABLE |
+| **Manipulation** des données | SELECT, INSERT, UPDATE, DELETE |
 
 ## L’interrogation
-La forme de base :
-
 **SELECT** nom, moyenne **FROM** eleve **WHERE** moyenne >= 15 **ORDER BY** moyenne **DESC**
 
-- **SELECT** choisit les colonnes ; l’étoile les prend toutes, ce qu’il vaut mieux éviter en production ;
-- **FROM** désigne la ou les tables ;
-- **WHERE** filtre les lignes ;
-- **ORDER BY** trie, en ASC (par défaut) ou DESC ;
-- **DISTINCT** élimine les doublons ; **LIMIT** borne le nombre de résultats.
+| Clause | Son rôle |
+| **SELECT** | Choisit les **colonnes** — l’étoile les prend toutes, à éviter en production |
+| **FROM** | Désigne la ou les **tables** |
+| **WHERE** | Filtre les **lignes** |
+| **ORDER BY** | Trie, en ASC (défaut) ou DESC |
+| **DISTINCT**, **LIMIT** | Élimine les doublons ; borne le nombre de résultats |
 
-Dans WHERE : les opérateurs de comparaison, **AND**, **OR**, **NOT**, **BETWEEN**, **IN**, **LIKE** (avec le caractère joker pour-cent), **IS NULL**.
+Dans WHERE : les comparaisons, **AND**, **OR**, **NOT**, **BETWEEN**, **IN**, **LIKE** (avec le joker pour-cent), **IS NULL**.
 
-## L’insertion, la modification, la suppression
-**INSERT INTO** eleve (nom, classe_id) **VALUES** ('Dupont', 3)
+## Écrire dans la base
+| Commande | Sa forme |
+| **INSERT** | INSERT INTO eleve (nom, classe_id) VALUES ('Dupont', 3) |
+| **UPDATE** | UPDATE eleve SET moyenne = 14 WHERE id = 12 |
+| **DELETE** | DELETE FROM eleve WHERE id = 12 |
 
-**UPDATE** eleve **SET** moyenne = 14 **WHERE** id = 12
-
-**DELETE FROM** eleve **WHERE** id = 12
-
-⚠️ UPDATE et DELETE **sans WHERE** s’appliquent à **toutes** les lignes de la table. C’est l’erreur la plus coûteuse du langage.
+> UPDATE et DELETE **sans WHERE** s’appliquent à **toutes** les lignes de la table. C’est l’erreur la plus coûteuse du langage.
 
 ## Les jointures
-Une jointure rassemble les lignes de deux tables reliées par une clé étrangère :
-
 **SELECT** eleve.nom, classe.niveau **FROM** eleve **JOIN** classe **ON** eleve.classe_id = classe.id
 
-- **JOIN** (ou INNER JOIN) ne garde que les lignes ayant une correspondance dans les deux tables ;
-- **LEFT JOIN** garde toutes les lignes de la table de gauche, en complétant par NULL quand la correspondance manque — c’est ce qu’il faut pour lister les élèves **sans** classe.
+| Jointure | Ce qu’elle garde |
+| **JOIN** (INNER) | Seulement les lignes ayant une correspondance **des deux côtés** |
+| **LEFT JOIN** | **Toutes** les lignes de gauche, complétées par NULL — c’est ce qu’il faut pour lister les élèves **sans** classe |
 
-Oublier la condition ON produit un **produit cartésien** : chaque ligne de la première table combinée à chaque ligne de la seconde.
+> Oublier la condition ON produit un **produit cartésien** : chaque ligne de la première table combinée à chaque ligne de la seconde.
 
 ## Les agrégats
 **COUNT**, **SUM**, **AVG**, **MIN**, **MAX** résument un ensemble de lignes en une valeur. Avec **GROUP BY**, le résumé se fait par groupe :
 
 **SELECT** classe_id, **AVG**(moyenne) **FROM** eleve **GROUP BY** classe_id
 
-**HAVING** filtre **après** le regroupement, là où WHERE filtre **avant**. C’est la distinction la plus demandée en évaluation : WHERE porte sur les lignes, HAVING sur les groupes.
+| Clause | Sur quoi elle porte | Quand elle agit |
+| **WHERE** | Les **lignes** | **Avant** le regroupement |
+| **HAVING** | Les **groupes** | **Après** le regroupement |
 
 ## L’injection SQL
-Construire une requête en concaténant une saisie utilisateur permet à un attaquant d’en modifier le sens. La parade n’est ni le filtrage des apostrophes ni la vérification côté navigateur, mais les **requêtes paramétrées**, où la valeur ne peut jamais être interprétée comme du code.
+Construire une requête en **concaténant** une saisie utilisateur permet à un attaquant d’en modifier le sens.
 
-> Ordre logique d’exécution, à connaître : FROM, puis WHERE, puis GROUP BY, puis HAVING, puis SELECT, puis ORDER BY. Il explique à lui seul pourquoi HAVING ne peut pas remplacer WHERE.`,
+> La parade n’est **ni** le filtrage des apostrophes **ni** la vérification côté navigateur, mais les **requêtes paramétrées** — où la valeur ne peut jamais être interprétée comme du code.
+
+> Ordre logique d’exécution : **FROM**, puis **WHERE**, puis **GROUP BY**, puis **HAVING**, puis **SELECT**, puis **ORDER BY**. Il explique à lui seul pourquoi HAVING ne peut pas remplacer WHERE.`,
           },
           questions: [
             ['SQL est un langage…', ['Déclaratif : on décrit le résultat voulu, pas la façon de l’obtenir', 'Impératif, comme Python', 'Fonctionnel', 'Orienté objet'], 0, 'Le SGBD choisit lui-même le plan d’exécution.'],
@@ -662,32 +765,44 @@ Construire une requête en concaténant une saisie utilisateur permet à un atta
 ## ORDER BY
 **SELECT** nom, moyenne **FROM** eleve **ORDER BY** moyenne **DESC**, nom **ASC**
 
-- **ASC** est l’ordre croissant, appliqué par défaut ; **DESC** l’ordre décroissant ;
-- on peut trier sur **plusieurs colonnes** : la seconde départage les ex æquo de la première ;
-- on peut trier sur une colonne **non affichée**, ou sur le résultat d’un calcul ou d’un agrégat.
+| Possibilité | Ce qu’elle permet |
+| **ASC** (défaut) ou **DESC** | Croissant ou décroissant |
+| **Plusieurs colonnes** | La seconde départage les ex æquo de la première |
+| Une colonne **non affichée** | Ou le résultat d’un calcul, ou un agrégat |
 
-Le tri des chaînes suit la **collation** de la base : selon le paramétrage, les majuscules et les accents ne se classent pas de la même façon. Trier un numéro stocké en TEXT le classe alphabétiquement — « 10 » avant « 9 ».
+Le tri des chaînes suit la **collation** de la base : selon le paramétrage, majuscules et accents ne se classent pas pareil.
+
+> Trier un numéro stocké en **TEXT** le classe **alphabétiquement** : « 10 » passe avant « 9 ».
 
 ## LIMIT et OFFSET
 **SELECT** nom **FROM** eleve **ORDER BY** moyenne **DESC LIMIT** 3
 
-**LIMIT** borne le nombre de lignes, **OFFSET** en saute un certain nombre : ensemble, ils réalisent la **pagination**. Un LIMIT sans ORDER BY renvoie des lignes **arbitraires** : rien n’oblige le SGBD à respecter un ordre qu’on ne lui a pas demandé. C’est une erreur silencieuse, donc redoutable.
+**LIMIT** borne le nombre de lignes, **OFFSET** en saute un certain nombre : ensemble ils réalisent la **pagination**.
+
+> Un **LIMIT sans ORDER BY** renvoie des lignes **arbitraires** : rien n’oblige le SGBD à respecter un ordre qu’on ne lui a pas demandé. Erreur **silencieuse**, donc redoutable.
 
 ## Trier un résultat agrégé
 **SELECT** classe_id, **AVG**(moyenne) **AS** moy **FROM** eleve **GROUP BY** classe_id **ORDER BY** moy **DESC**
 
-Le mot-clé **AS** donne un **alias** à une colonne calculée, ce qui permet de la réutiliser dans ORDER BY et rend le résultat lisible.
+Le mot-clé **AS** donne un **alias** à une colonne calculée : on peut la réutiliser dans ORDER BY, et le résultat devient lisible.
 
 ## Trier n’est pas indexer
-ORDER BY ordonne le **résultat d’une requête**, à chaque exécution. Un **index** ordonne durablement une structure auxiliaire. Un tri sur une colonne indexée est bien plus rapide, puisque l’index fournit déjà l’ordre — mais l’index ne change jamais l’ordre de stockage des lignes de la table.
+| | **ORDER BY** | Un **index** |
+| Ce qu’il ordonne | Le **résultat d’une requête** | Une structure **auxiliaire** durable |
+| Sa durée | Le temps de l’exécution | Permanent |
+| Sur les lignes de la table | Aucun effet | Aucun effet non plus |
+
+Un tri sur une colonne indexée est bien plus rapide, puisque l’index fournit déjà l’ordre.
 
 ## Le coût du tri
-Un tri général coûte de l’ordre de n log n comparaisons — c’est la borne théorique des tris par comparaison. Sur de gros volumes, mieux vaut filtrer **avant** de trier, et ne trier que les colonnes nécessaires : trier un million de lignes pour n’en afficher dix est le gaspillage typique.
+Un tri général coûte de l’ordre de **n log n** comparaisons — la borne théorique des tris par comparaison.
+
+> Sur de gros volumes : **filtrer avant de trier**, et ne trier que les colonnes nécessaires. Trier un million de lignes pour n’en afficher dix est le gaspillage typique.
 
 ## Le lien avec l’algorithmique
-Les tris étudiés en NSI (tri par insertion et tri par sélection, en n²) et le tri fusion (en n log n, voir « diviser pour régner ») sont exactement ce que le SGBD implémente sous ORDER BY. La différence : il choisit lui-même l’algorithme selon la taille des données et les index disponibles.
+Les tris étudiés en NSI — insertion et sélection, en n² — et le tri fusion, en n log n, sont exactement ce que le SGBD implémente sous ORDER BY. La différence : il **choisit lui-même** l’algorithme selon la taille des données et les index disponibles.
 
-> Un ORDER BY oublié devant un LIMIT donne un résultat qui a l’air juste et qui ne l’est pas. C’est le bug le plus difficile à repérer dans une requête.`,
+> Un ORDER BY oublié devant un LIMIT donne un résultat qui **a l’air juste** et qui ne l’est pas.`,
           },
           questions: [
             ['Quel est l’ordre de tri appliqué par défaut par ORDER BY ?', ['Croissant (ASC)', 'Décroissant (DESC)', 'Aléatoire', 'L’ordre d’insertion'], 0, 'DESC doit être précisé explicitement.'],
@@ -709,32 +824,41 @@ Les tris étudiés en NSI (tri par insertion et tri par sélection, en n²) et l
             cours: `L’idée fondatrice de l’informatique tient en une phrase : dans la mémoire d’une machine, **un programme et une donnée ont la même nature**.
 
 ## L’architecture de von Neumann
-Elle place dans une **même mémoire** les instructions et les données, adressées de la même façon. C’est ce qui permet à un programme d’en lire, d’en écrire, d’en transformer un autre — et donc l’existence des compilateurs, des interpréteurs, des systèmes d’exploitation… et des virus.
+Elle place dans une **même mémoire** les instructions et les données, adressées de la même façon.
 
-## Compilation et interprétation
-- un **compilateur** traduit **une fois pour toutes** le code source en code exécutable. L’exécution est rapide, les erreurs de type sont détectées avant l’exécution, mais le résultat est lié à une machine (C, Rust) ;
-- un **interpréteur** lit et exécute le code **au fil de la lecture**. Le développement est plus souple et le programme portable, l’exécution plus lente (Python) ;
-- des solutions **mixtes** existent : Java compile vers un code intermédiaire, exécuté par une machine virtuelle.
+> C’est ce qui permet à un programme d’en lire, d’en écrire, d’en transformer un autre — et donc l’existence des compilateurs, des interpréteurs, des systèmes d’exploitation… et des virus.
+
+## Compilation ou interprétation
+| | **Compilateur** | **Interpréteur** |
+| Quand il traduit | **Une fois pour toutes** | **Au fil** de la lecture |
+| L’exécution | Rapide | Plus lente |
+| Les erreurs de type | Détectées **avant** l’exécution | À l’exécution |
+| La portabilité | Le résultat est lié à une machine | Le programme est portable |
+| Exemples | C, Rust | Python |
+
+Des solutions **mixtes** existent : Java compile vers un code intermédiaire, exécuté par une machine virtuelle.
 
 ## La fonction, donnée de première classe
-Dans un langage comme Python, une fonction peut être **stockée dans une variable**, **passée en argument** et **renvoyée** par une autre fonction. C’est ce qui permet d’écrire un tri qui reçoit sa clé de comparaison, ou une interface graphique qui reçoit le traitement à exécuter au clic.
+Dans un langage comme Python, une fonction peut être **stockée** dans une variable, **passée en argument** et **renvoyée** par une autre fonction.
 
-## Ce que le langage garantit
-Le **typage** distingue :
-- **statique** (vérifié à la compilation) ou **dynamique** (à l’exécution) ;
-- **fort** (pas de conversion implicite hasardeuse) ou **faible**.
+> C’est ce qui permet d’écrire un tri qui **reçoit** sa clé de comparaison, ou une interface graphique qui reçoit le traitement à exécuter au clic.
 
-Python est à typage **dynamique et fort** : il n’exige pas de déclarer les types, mais refuse d’additionner un entier et une chaîne. Les **annotations de type** sont facultatives et servent à la documentation et aux outils d’analyse — l’interpréteur ne les vérifie pas.
+## Le typage
+| Distinction | Ce qu’elle oppose |
+| **Statique** ou **dynamique** | Vérifié à la compilation, ou à l’exécution |
+| **Fort** ou **faible** | Pas de conversion implicite hasardeuse, ou bien si |
+
+Python est à typage **dynamique et fort** : il n’exige pas de déclarer les types, mais refuse d’additionner un entier et une chaîne. Les **annotations de type** sont facultatives — l’interpréteur ne les vérifie pas.
 
 ## Les limites théoriques
-Puisqu’un programme peut analyser un programme, on pourrait espérer un programme qui détecte tous les bugs. Turing a montré que non : le **problème de l’arrêt** — décider si un programme quelconque s’arrête sur une entrée donnée — est **indécidable**. Aucun algorithme ne peut le résoudre dans tous les cas.
+Puisqu’un programme peut analyser un programme, on pourrait espérer un programme qui détecte tous les bugs. **Turing** a montré que non : le **problème de l’arrêt** — décider si un programme quelconque s’arrête sur une entrée donnée — est **indécidable**.
 
-Conséquence directe : aucun outil ne prouvera jamais automatiquement qu’un programme quelconque est correct. Tester reste indispensable.
+> Conséquence directe : aucun outil ne prouvera jamais automatiquement qu’un programme quelconque est correct. **Tester reste indispensable.**
 
 ## Données et représentation
-Une même suite de bits ne veut rien dire hors du **type** qu’on lui attribue : elle peut être un entier, un flottant, un caractère ou une instruction. Le type n’est pas dans la donnée, il est dans l’interprétation qu’on en fait.
+Une même suite de bits ne veut rien dire hors du **type** qu’on lui attribue : elle peut être un entier, un flottant, un caractère ou une instruction.
 
-> « Le programme est une donnée » n’est pas une formule : c’est ce qui rend possible tout ce que fait un ordinateur au-delà du calcul.`,
+> Le type n’est pas **dans** la donnée : il est dans l’**interprétation** qu’on en fait.`,
           },
           questions: [
             ['Que postule l’architecture de von Neumann ?', ['Programmes et données partagent la même mémoire', 'Les programmes sont stockés séparément des données', 'Le processeur exécute plusieurs instructions à la fois', 'La mémoire est infinie'], 0, 'C’est ce qui rend possibles compilateurs, systèmes d’exploitation et virus.'],
@@ -752,39 +876,37 @@ Une même suite de bits ne veut rien dire hors du **type** qu’on lui attribue 
           axe: 'Génie logiciel',
           lecon: {
             titre: 'Quatre façons de dire la même chose',
-            cours: `Un **paradigme** est une manière de concevoir un programme. Le programme de Terminale en retient quatre — et demande surtout de savoir **lequel choisir**.
+            cours: `Un **paradigme** est une manière de concevoir un programme. Le programme de Terminale en retient **quatre** — et demande surtout de savoir **lequel choisir**.
+
+## Les quatre paradigmes
+| Paradigme | Le programme est… | Son terrain |
+| **Impératif** | Une suite d’**instructions** qui modifient l’état | Algorithme court, performance critique |
+| **Fonctionnel** | Une **composition de fonctions** | Calcul, transformation de données, tests fiables |
+| **Objet** | Des **objets** qui échangent des messages | Modélisation d’un domaine, code appelé à durer |
+| **Événementiel** | Une **réaction** à des événements | Interface, réseau, temps réel |
 
 ## Impératif
-Le programme est une **suite d’instructions** qui modifient l’**état** de la machine : affectations, boucles, conditions. C’est le paradigme le plus proche de l’exécution réelle. Son point faible : l’état partagé rend le raisonnement difficile dès que le programme grandit.
+Affectations, boucles, conditions : le paradigme le plus proche de l’exécution réelle. Son point faible : l’**état partagé** rend le raisonnement difficile dès que le programme grandit.
 
 ## Fonctionnel
-Le programme est une **composition de fonctions**. Ses principes :
-- **pas d’effet de bord** : une fonction ne modifie rien hors d’elle-même ;
-- **transparence référentielle** : le même appel avec les mêmes arguments donne toujours le même résultat, et peut donc être remplacé par sa valeur ;
-- **immutabilité** : on crée une nouvelle valeur au lieu de modifier l’ancienne ;
-- usage de la **récursivité** plutôt que des boucles.
+| Principe | Ce qu’il impose |
+| **Pas d’effet de bord** | Une fonction ne modifie rien hors d’elle-même |
+| **Transparence référentielle** | Mêmes arguments, même résultat — l’appel peut être remplacé par sa valeur |
+| **Immutabilité** | On crée une nouvelle valeur au lieu de modifier l’ancienne |
+| **Récursivité** | Plutôt que des boucles |
 
-Conséquence pratique : une fonction pure est **facile à tester** (aucun contexte à préparer) et sûre à exécuter en parallèle.
-
-## Objet
-Le programme est un ensemble d’**objets** qui échangent des messages, chacun regroupant données et traitements. Il convient à la modélisation de domaines riches et à la maintenance sur la durée.
+> Conséquence pratique : une fonction pure est **facile à tester** — aucun contexte à préparer — et **sûre** à exécuter en parallèle.
 
 ## Événementiel
-Le programme **réagit** à des événements (clic, message réseau, minuteur) au moyen de **gestionnaires**. Le flot d’exécution n’est plus décidé par le programme mais par ce qui arrive : c’est le paradigme des interfaces graphiques et des serveurs.
+Le programme réagit à des événements — clic, message réseau, minuteur — au moyen de **gestionnaires**. Le flot d’exécution n’est plus décidé par le programme mais par **ce qui arrive**.
 
-## Les paradigmes se mélangent
-Python est **multiparadigme** : il permet les quatre. Un programme réel les combine — une interface événementielle, des objets pour le domaine, des fonctions pures pour les calculs, de l’impératif dans les boucles internes.
-
-## Comment choisir
-- calcul, transformation de données, besoin de tests fiables → **fonctionnel** ;
-- modélisation d’un domaine, code appelé à durer → **objet** ;
-- interface, réseau, temps réel → **événementiel** ;
-- algorithme court, performance critique → **impératif**.
+## Ils se mélangent
+Python est **multiparadigme**. Un programme réel les combine : une interface événementielle, des objets pour le domaine, des fonctions pures pour les calculs, de l’impératif dans les boucles internes.
 
 ## Ce que le paradigme change vraiment
-Il ne change pas ce que la machine calcule — tous sont équivalents en puissance d’expression. Il change ce que le **lecteur** du code peut comprendre sans tout lire, et donc le coût de la modification. C’est un choix d’ingénierie, pas de mathématiques.
+Il ne change **pas** ce que la machine calcule — tous sont équivalents en puissance d’expression. Il change ce que le **lecteur** du code peut comprendre sans tout lire, et donc le **coût de la modification**.
 
-> Un test unitaire est facile à écrire sur une fonction pure et pénible sur du code à état global. Ce seul critère justifie l’essentiel de l’engouement pour le fonctionnel.`,
+> Un test unitaire est facile à écrire sur une **fonction pure** et pénible sur du code à **état global**. Ce seul critère justifie l’essentiel de l’engouement pour le fonctionnel.`,
           },
           questions: [
             ['Qu’est-ce qu’un effet de bord ?', ['Une modification, par une fonction, de quelque chose en dehors d’elle-même', 'Une erreur d’exécution', 'Un retour de valeur inattendu', 'Un appel récursif trop profond'], 0, 'Le paradigme fonctionnel cherche précisément à les éliminer.'],
@@ -802,39 +924,49 @@ Il ne change pas ce que la machine calcule — tous sont équivalents en puissan
           axe: 'Génie logiciel',
           lecon: {
             titre: 'Découper pour pouvoir changer d’avis plus tard',
-            cours: `Un programme d’un seul bloc devient illisible passé quelques centaines de lignes. La **modularité** consiste à le découper en unités qui se comprennent séparément.
+            cours: `Un programme d’un seul bloc devient illisible passé quelques centaines de lignes. La **modularité** consiste à le découper en unités qui se comprennent **séparément**.
 
 ## Les niveaux de découpage
-- la **fonction** : une tâche, un nom, des paramètres, une valeur de retour ;
-- le **module** : un fichier regroupant des fonctions ou des classes cohérentes entre elles ;
-- le **paquet** : un ensemble de modules ;
-- la **bibliothèque** : un paquet destiné à être réutilisé par d’autres programmes.
+| Niveau | Ce qu’il regroupe |
+| La **fonction** | Une tâche, un nom, des paramètres, une valeur de retour |
+| Le **module** | Un fichier de fonctions ou de classes cohérentes |
+| Le **paquet** | Un ensemble de modules |
+| La **bibliothèque** | Un paquet destiné à être **réutilisé** |
 
-## L’interface et l’implémentation
-Un module expose une **interface** — ce qu’il promet — et cache son **implémentation** — la façon dont il tient sa promesse. Celui qui l’utilise ne doit avoir besoin de connaître que la première. C’est ce qui permet de changer l’intérieur sans casser l’extérieur.
+## Interface et implémentation
+Un module expose une **interface** — ce qu’il promet — et cache son **implémentation** — la façon dont il tient sa promesse.
+
+> Celui qui l’utilise ne doit connaître que la première. C’est ce qui permet de **changer l’intérieur sans casser l’extérieur**.
 
 ## Les deux critères d’un bon découpage
-- **forte cohésion** : tout ce qui est dans un module concerne le même sujet ;
-- **faible couplage** : les modules dépendent le moins possible les uns des autres.
+| Critère | Ce qu’il exige |
+| **Forte cohésion** | Tout ce qui est dans un module concerne le **même sujet** |
+| **Faible couplage** | Les modules dépendent le **moins possible** les uns des autres |
 
 Un module qui a besoin de connaître l’intérieur d’un autre est mal découpé : toute modification de l’un obligera à modifier l’autre.
 
-## Les importations en Python
-Trois formes, aux effets différents :
-- importer le module entier, puis préfixer les appels par son nom : la plus lisible ;
-- importer un nom précis depuis un module : commode, mais on perd la trace de l’origine ;
-- importer tout le contenu d’un module dans l’espace courant : à proscrire, car deux modules peuvent définir le même nom, et le second écrase silencieusement le premier.
+## Les trois formes d’importation en Python
+| Forme | Son effet |
+| Importer le **module entier**, puis préfixer les appels | La plus **lisible** |
+| Importer un **nom précis** | Commode, mais on perd la trace de l’origine |
+| Importer **tout le contenu** dans l’espace courant | **À proscrire** : deux modules peuvent définir le même nom, et le second écrase **silencieusement** le premier |
 
 ## La documentation
-Une **docstring** décrit ce que fait une fonction, ses paramètres, sa valeur de retour et ses éventuelles erreurs. Elle est accessible à l’exécution et exploitée par les outils. Une bonne docstring décrit le **contrat**, pas l’algorithme : elle dit ce que la fonction garantit, pas comment elle s’y prend — sinon elle devra être réécrite à chaque modification interne.
+Une **docstring** décrit ce que fait une fonction, ses paramètres, sa valeur de retour et ses erreurs éventuelles.
 
-## Les préconditions et postconditions
-Une **précondition** est ce que l’appelant doit garantir (la liste ne doit pas être vide) ; une **postcondition** ce que la fonction garantit en retour (la liste renvoyée est triée). L’instruction **assert** permet de les vérifier pendant le développement — mais elle n’est pas un mécanisme de gestion d’erreur en production, puisqu’elle peut être désactivée.
+> Une bonne docstring décrit le **contrat**, pas l’algorithme : elle dit ce que la fonction **garantit**, pas comment elle s’y prend — sinon elle devra être réécrite à chaque modification interne.
+
+## Préconditions et postconditions
+| Notion | Qui la garantit |
+| La **précondition** | L’**appelant** : la liste ne doit pas être vide |
+| La **postcondition** | La **fonction** : la liste renvoyée est triée |
+
+L’instruction **assert** permet de les vérifier pendant le développement — mais ce n’est **pas** un mécanisme de gestion d’erreur en production, puisqu’elle peut être désactivée.
 
 ## Réutiliser
-Le premier réflexe devant un besoin courant est de chercher une bibliothèque existante, éprouvée et testée par d’autres. Écrire soi-même un tri, une date ou une fonction de hachage produit presque toujours un code plus lent et moins sûr.
+Le premier réflexe devant un besoin courant est de chercher une **bibliothèque existante**, éprouvée et testée par d’autres. Écrire soi-même un tri, une date ou une fonction de hachage produit presque toujours un code plus lent et moins sûr.
 
-> Le bon test d’un découpage : peut-on expliquer ce que fait un module en une phrase, sans employer le mot « et » ? Si non, il en contient deux.`,
+> Le bon test d’un découpage : peut-on expliquer ce que fait un module **en une phrase, sans employer le mot « et »** ? Si non, il en contient deux.`,
           },
           questions: [
             ['Qu’est-ce que l’interface d’un module ?', ['Ce que le module promet, indépendamment de la façon dont il le réalise', 'Son code source complet', 'Son interface graphique', 'La liste de ses dépendances'], 0, 'Cacher l’implémentation permet de la changer sans casser le code appelant.'],
@@ -855,34 +987,49 @@ Le premier réflexe devant un besoin courant est de chercher une bibliothèque e
             cours: `Le coût d’un programme se joue moins à l’écriture qu’à la **relecture** et à la **modification**. Les bonnes pratiques ne sont pas des règles de politesse : ce sont des économies mesurables.
 
 ## Nommer
-Un nom doit dire **ce que la chose est**, pas ce qu’elle vaut ni comment elle est faite. Une variable nommée nb_eleves_inscrits n’a pas besoin de commentaire ; une variable nommée x en exige un. La règle : plus la portée est large, plus le nom doit être explicite. Un compteur de boucle courte peut s’appeler i.
+Un nom doit dire **ce que la chose est**, pas ce qu’elle vaut ni comment elle est faite.
+
+| Nom | Ce qu’il exige |
+| nb_eleves_inscrits | Aucun commentaire |
+| x | Un commentaire, forcément |
+
+> La règle : **plus la portée est large, plus le nom doit être explicite**. Un compteur de boucle courte peut s’appeler i.
 
 ## Commenter
-Un commentaire ne doit pas **répéter** le code, mais expliquer **pourquoi** il est ainsi. « incrémente i » est inutile ; « on saute le premier enregistrement, qui est l’en-tête du fichier » est indispensable. Un commentaire faux est pire que pas de commentaire : il induit en erreur celui qui lui fait confiance.
+| Commentaire | Son verdict |
+| « incrémente i » | **Inutile** : il répète le code |
+| « on saute le premier enregistrement, qui est l’en-tête » | **Indispensable** : il explique le pourquoi |
 
-## Éviter la duplication
-Deux morceaux de code identiques évolueront séparément : on corrigera un bug dans l’un et pas dans l’autre. Toute duplication est une **dette** à rembourser en factorisant dans une fonction.
+> Un commentaire **faux** est pire que pas de commentaire : il induit en erreur celui qui lui fait confiance.
 
-## Écrire des fonctions courtes
-Une fonction doit faire **une seule chose**. Si son nom contient « et », elle en fait deux. Une fonction longue est difficile à tester, à nommer et à réutiliser.
+## Les deux règles de structure
+| Règle | Ce qu’elle évite |
+| **Pas de duplication** | Deux morceaux identiques évolueront séparément : on corrigera un bug dans l’un et pas dans l’autre |
+| **Fonctions courtes** | Une fonction fait **une seule chose**. Si son nom contient « et », elle en fait deux |
 
 ## Les tests
-Un **test unitaire** vérifie une fonction isolée sur des cas choisis. Il doit couvrir :
-- le **cas nominal** ;
-- les **cas limites** : liste vide, un seul élément, valeur nulle, borne exacte ;
-- les **cas d’erreur** : entrée invalide.
+Un **test unitaire** vérifie une fonction isolée sur des cas choisis.
 
-Un test réussi ne prouve pas qu’un programme est correct : il prouve seulement qu’il n’échoue pas sur les cas testés. Dijkstra le formulait ainsi : les tests montrent la présence de bugs, jamais leur absence.
+| Cas à couvrir | Exemples |
+| Le cas **nominal** | L’usage attendu |
+| Les cas **limites** | Liste vide, un seul élément, valeur nulle, borne exacte |
+| Les cas d’**erreur** | Entrée invalide |
+
+> Dijkstra : les tests montrent la **présence** de bugs, jamais leur **absence**. Un test réussi prouve seulement qu’on n’échoue pas sur les cas testés.
 
 Les tests servent aussi de **filet** : ils permettent de modifier le code sans crainte, ce qui rend la **refactorisation** possible.
 
 ## La gestion de versions
-Un outil comme **git** enregistre l’historique des modifications, permet de revenir en arrière, de travailler à plusieurs sur le même fichier et de retrouver **quand** et **pourquoi** une ligne a changé. Chaque enregistrement doit être **petit** et porter un message qui explique l’intention.
+**git** enregistre l’historique, permet de revenir en arrière, de travailler à plusieurs sur le même fichier et de retrouver **quand** et **pourquoi** une ligne a changé.
+
+> Chaque enregistrement doit être **petit** et porter un message qui explique l’**intention**.
 
 ## La spécification
-Avant d’écrire, il faut savoir ce que le programme doit faire — et ce qu’il ne doit pas faire. Un programme conforme à une mauvaise spécification est un programme raté, même sans aucun bug.
+Avant d’écrire, il faut savoir ce que le programme doit faire — **et ce qu’il ne doit pas faire**.
 
-> La question à se poser avant de valider une modification : « quelqu’un qui découvre ce fichier comprendra-t-il en une minute ce qu’il fait ? » Si non, ce n’est pas fini.`,
+> Un programme conforme à une **mauvaise spécification** est un programme raté, même sans aucun bug.
+
+> La question avant de valider une modification : « quelqu’un qui découvre ce fichier comprendra-t-il en une minute ce qu’il fait ? » Si non, ce n’est pas fini.`,
           },
           questions: [
             ['Que doit expliquer un bon commentaire ?', ['Pourquoi le code est ainsi, et non ce qu’il fait', 'Ce que fait chaque ligne', 'L’auteur et la date', 'La complexité de l’algorithme'], 0, 'Un commentaire qui répète le code devient faux dès la première modification.'],
@@ -900,44 +1047,46 @@ Avant d’écrire, il faut savoir ce que le programme doit faire — et ce qu’
           axe: 'Génie logiciel',
           lecon: {
             titre: 'Trouver la cause, pas seulement le symptôme',
-            cours: `Corriger un programme est une **enquête** : le message d’erreur signale l’endroit où le problème est devenu visible, presque jamais celui où il a été introduit.
+            cours: `Corriger un programme est une **enquête** : le message d’erreur signale l’endroit où le problème est devenu **visible**, presque jamais celui où il a été **introduit**.
 
 ## Les trois familles d’erreurs
-- **erreur de syntaxe** : le code ne peut pas être lu. Détectée avant toute exécution, c’est la plus facile ;
-- **erreur d’exécution** : le programme s’arrête en cours de route (division par zéro, indice hors bornes, fichier absent). Elle est bruyante, donc repérable ;
-- **erreur de logique** : le programme s’exécute sans broncher et donne un **résultat faux**. C’est la plus dangereuse, parce que rien ne la signale.
+| Famille | Quand elle se manifeste | Sa dangerosité |
+| De **syntaxe** | Avant toute exécution : le code ne peut pas être lu | La plus **facile** |
+| D’**exécution** | Le programme s’arrête en route : division par zéro, indice hors bornes, fichier absent | Bruyante, donc repérable |
+| De **logique** | Jamais : le programme s’exécute et donne un **résultat faux** | La plus **dangereuse** |
 
-## La méthode
-1. **reproduire** l’erreur de façon fiable, et si possible avec le plus petit cas d’entrée possible ;
-2. **localiser** : encadrer la zone où l’état devient incorrect ;
-3. **comprendre** la cause, et non seulement le symptôme ;
-4. **corriger** ;
-5. **ajouter un test** qui échouait avant la correction : c’est ce qui empêche le bug de revenir.
+## La méthode en cinq temps
+1. **Reproduire** l’erreur de façon fiable, avec le plus **petit** cas d’entrée possible ;
+2. **Localiser** : encadrer la zone où l’état devient incorrect ;
+3. **Comprendre** la cause, et non seulement le symptôme ;
+4. **Corriger** ;
+5. **Ajouter un test** qui échouait avant la correction.
 
-L’étape 5 est celle qu’on saute, et c’est celle qui distingue une correction d’un rafistolage.
+> L’étape 5 est celle qu’on saute — et c’est elle qui distingue une **correction** d’un **rafistolage**.
 
 ## Les outils
-- l’**affichage** de valeurs intermédiaires : rudimentaire mais efficace ;
-- le **débogueur** : points d’arrêt, exécution pas à pas, inspection des variables ;
-- les **assertions**, qui font échouer le programme au moment exact où une hypothèse est violée, plutôt que dix lignes plus loin ;
-- la **journalisation**, qui garde une trace en production, là où le débogueur n’est pas disponible.
+| Outil | Ce qu’il donne |
+| L’**affichage** de valeurs intermédiaires | Rudimentaire mais efficace |
+| Le **débogueur** | Points d’arrêt, pas à pas, inspection des variables |
+| Les **assertions** | Elles font échouer **au moment exact** où une hypothèse est violée, pas dix lignes plus loin |
+| La **journalisation** | Une trace en production, là où le débogueur n’existe pas |
 
 ## Les exceptions
-Une **exception** signale une situation anormale. On la **traite** au niveau où l’on sait quoi faire :
+Une **exception** signale une situation anormale. On la traite **au niveau où l’on sait quoi faire** : essayer d’ouvrir le fichier, et s’il est absent, avertir l’utilisateur et proposer un autre chemin.
 
-essayer d’ouvrir le fichier, et si le fichier est absent, avertir l’utilisateur et proposer un autre chemin.
+| Erreur opposée | Ce qu’elle produit |
+| **Tout attraper** sans rien en faire | Les bugs sont **masqués** au lieu d’être traités |
+| **Ne rien attraper** | Le programme tombe sur une cause pourtant prévisible |
 
-Deux erreurs opposées à éviter : **attraper toutes les exceptions** sans rien en faire, ce qui masque les bugs au lieu de les traiter ; et **ne rien attraper**, ce qui fait tomber le programme sur une cause prévisible.
-
-Une exception ne doit pas servir de contrôle de flux ordinaire : elle signale l’exceptionnel.
+> Une exception ne doit pas servir de **contrôle de flux ordinaire** : elle signale l’exceptionnel.
 
 ## Les bugs les plus fréquents
-Les erreurs de **borne** (le fameux décalage d’un rang), la confusion entre affectation et comparaison, la modification d’une liste **pendant** son parcours, les effets de bord non voulus sur un argument mutable, et l’oubli d’un cas limite (collection vide).
+Les erreurs de **borne** (le décalage d’un rang), la confusion entre affectation et comparaison, la modification d’une liste **pendant** son parcours, les effets de bord sur un argument mutable, l’oubli du cas **collection vide**.
 
 ## La complexité comme bug
-Un programme correct mais trop lent est inutilisable. Estimer la **complexité** avant de coder évite de découvrir sur des données réelles qu’un algorithme quadratique ne passera jamais à l’échelle.
+Un programme **correct mais trop lent** est inutilisable. Estimer la complexité **avant** de coder évite de découvrir sur des données réelles qu’un algorithme quadratique ne passera jamais à l’échelle.
 
-> Un bug n’est jamais « bizarre » : il est la conséquence exacte de ce qui est écrit. Le moment où l’on cesse de trouver l’ordinateur capricieux est celui où l’on commence à déboguer vraiment.`,
+> Un bug n’est jamais « bizarre » : il est la **conséquence exacte** de ce qui est écrit. Cesser de trouver l’ordinateur capricieux, c’est commencer à déboguer vraiment.`,
           },
           questions: [
             ['Quelle famille d’erreurs est la plus dangereuse ?', ['L’erreur de logique, car le programme s’exécute et donne un résultat faux', 'L’erreur de syntaxe', 'L’erreur d’exécution', 'Toutes sont équivalentes'], 0, 'Rien ne la signale : ni l’interpréteur, ni un arrêt du programme.'],
@@ -956,37 +1105,43 @@ Un programme correct mais trop lent est inutilisable. Estimer la **complexité**
           axe: 'Algorithmique',
           lecon: {
             titre: 'Une fonction qui s’appelle elle-même, et qui s’arrête',
-            cours: `Un algorithme est **récursif** quand il résout un problème en s’appelant lui-même sur un cas plus petit. Sa correction repose entièrement sur deux éléments.
+            cours: `Un algorithme est **récursif** quand il résout un problème en s’appelant lui-même sur un cas plus petit. Sa correction repose **entièrement** sur deux éléments.
 
 ## Les deux composants obligatoires
-- le **cas de base** : la situation où la fonction renvoie une valeur **sans** se rappeler. Sans lui, la récursion ne s’arrête jamais ;
-- l’**appel récursif** sur un cas **strictement plus proche** du cas de base. Sans cette décroissance, le cas de base n’est jamais atteint.
+| Composant | Ce qu’il garantit | S’il manque |
+| Le **cas de base** | Une valeur renvoyée **sans** rappel | La récursion ne s’arrête jamais |
+| L’appel sur un cas **strictement plus petit** | On se rapproche du cas de base | Le cas de base n’est jamais atteint |
 
-Oublier l’un des deux produit une **récursion infinie**, qui se termine par un dépassement de la pile d’appels.
+Dans les deux cas : **récursion infinie**, qui se termine par un dépassement de la pile d’appels.
 
 ## La pile d’appels
-Chaque appel en cours occupe une **place** en mémoire, où sont conservés ses paramètres et l’endroit où reprendre. Les appels s’**empilent** ; ils se dépilent dans l’ordre inverse, du plus profond au plus superficiel. C’est pourquoi la profondeur de récursion est **limitée** : Python la borne par défaut autour de mille appels.
+Chaque appel en cours occupe une **place** en mémoire : ses paramètres et l’endroit où reprendre. Les appels s’**empilent**, puis se dépilent du plus profond au plus superficiel.
 
-Conséquence : une récursion sur une liste d’un million d’éléments échouera, là où une boucle passera sans difficulté.
+> La profondeur est donc **limitée** : Python la borne par défaut autour de **mille** appels. Une récursion sur une liste d’un million d’éléments échouera là où une boucle passe sans difficulté.
 
 ## Écrire une fonction récursive
-La démarche est toujours la même :
-1. identifier le **cas de base** et sa valeur ;
-2. supposer que la fonction **fonctionne déjà** pour le cas plus petit — c’est l’acte de foi qui rend la récursivité écrivable ;
-3. écrire comment combiner ce résultat avec le cas courant.
+1. Identifier le **cas de base** et sa valeur ;
+2. **Supposer que la fonction fonctionne déjà** pour le cas plus petit — l’acte de foi qui rend la récursivité écrivable ;
+3. Écrire comment **combiner** ce résultat avec le cas courant.
 
-Exemples classiques : factorielle, somme des éléments d’une liste, puissance, inversion d’une chaîne, tours de Hanoï, parcours d’arbre.
+Exemples classiques : factorielle, somme d’une liste, puissance, inversion d’une chaîne, tours de Hanoï, parcours d’arbre.
 
 ## Récursivité et arbres
-Les structures **récursives par définition** — un arbre est un nœud et deux arbres — se traitent naturellement par récursivité. Un parcours d’arbre écrit en récursif tient en trois lignes, là où sa version itérative exige de gérer explicitement une pile.
+Les structures **récursives par définition** — un arbre est un nœud et deux arbres — se traitent naturellement par récursivité.
+
+> Un parcours d’arbre écrit en récursif tient en **trois lignes** ; sa version itérative exige de gérer explicitement une pile.
 
 ## Le piège de la double récursion
-La suite de Fibonacci écrite naïvement rappelle deux fois la fonction à chaque niveau : le nombre d’appels **double** à chaque rang et le coût devient exponentiel. Calculer le trentième terme demande plus d’un million d’appels, dont l’immense majorité recalcule ce qui a déjà été calculé. La solution — mémoriser les résultats — est l’objet de la fiche sur la programmation dynamique.
+La suite de Fibonacci écrite naïvement rappelle **deux fois** la fonction à chaque niveau : le nombre d’appels **double** à chaque rang, le coût devient **exponentiel**.
 
-## Récursif ou itératif ?
-Ils ont la même puissance : toute fonction récursive peut être réécrite avec une boucle et une pile explicite. Le choix est une question de **lisibilité** — récursif pour les structures récursives, itératif quand la profondeur est grande ou la performance critique.
+> Calculer le trentième terme demande plus d’un **million** d’appels, dont l’immense majorité recalcule ce qui l’a déjà été. La solution — mémoriser — est l’objet de la programmation dynamique.
 
-> La question à se poser devant une fonction récursive : « sur quel argument décroît-elle, et jusqu’où ? » Si la réponse n’est pas immédiate, la fonction est fausse.`,
+## Récursif ou itératif
+| | **Récursif** | **Itératif** |
+| Puissance | Identique | Identique |
+| Quand le choisir | Structures **récursives**, code court | Grande **profondeur**, performance critique |
+
+> La question devant une fonction récursive : « sur quel argument **décroît**-elle, et jusqu’où ? » Si la réponse n’est pas immédiate, la fonction est fausse.`,
           },
           questions: [
             ['Quels sont les deux composants obligatoires d’un algorithme récursif ?', ['Un cas de base et un appel sur un cas strictement plus proche de ce cas', 'Une boucle et une condition', 'Deux appels récursifs', 'Une pile et une file'], 0, 'Oublier l’un des deux produit une récursion infinie.'],
@@ -1004,39 +1159,50 @@ Ils ont la même puissance : toute fonction récursive peut être réécrite ave
           axe: 'Algorithmique',
           lecon: {
             titre: 'Couper en deux, résoudre, recoller',
-            cours: `**Diviser pour régner** est une stratégie en trois temps : **diviser** le problème en sous-problèmes de même nature, les **résoudre** récursivement, puis **combiner** leurs solutions.
+            cours: `**Diviser pour régner** est une stratégie en trois temps : **diviser** le problème en sous-problèmes de même nature, les **résoudre** récursivement, **combiner** leurs solutions.
 
 ## Les trois étapes
-1. **diviser** : découper l’entrée en parties, généralement deux moitiés ;
-2. **régner** : résoudre chaque partie par un appel récursif, jusqu’au cas de base ;
-3. **combiner** : reconstruire la solution globale à partir des solutions partielles.
+| Étape | Ce qu’elle fait |
+| **Diviser** | Découper l’entrée en parties, généralement deux moitiés |
+| **Régner** | Résoudre chaque partie par un appel récursif, jusqu’au cas de base |
+| **Combiner** | Reconstruire la solution globale |
 
-C’est la troisième étape qui distingue les algorithmes entre eux : elle est triviale pour la recherche dichotomique, coûteuse pour le tri fusion.
+> C’est la **troisième** étape qui distingue les algorithmes : triviale pour la recherche dichotomique, **coûteuse** pour le tri fusion.
 
 ## La recherche dichotomique
-Sur un tableau **trié**, on compare la valeur cherchée à l’élément **du milieu** : on écarte alors la moitié du tableau à chaque comparaison. Le coût est **logarithmique** — environ 20 comparaisons pour un million d’éléments, contre un million dans le pire cas d’une recherche séquentielle.
+Sur un tableau **trié**, on compare la valeur cherchée à l’élément **du milieu** : chaque comparaison écarte **la moitié** du tableau.
 
-La condition est absolue : le tableau **doit** être trié. Appliquée à un tableau non trié, la recherche dichotomique ne signale rien, elle renvoie simplement un résultat faux.
+| Méthode | Comparaisons pour un million d’éléments |
+| Recherche **séquentielle** | jusqu’à **1 000 000** |
+| Recherche **dichotomique** | environ **20** |
+
+> La condition est absolue : le tableau **doit** être trié. Sur un tableau non trié, la dichotomie ne signale rien — elle renvoie simplement un résultat **faux**.
 
 ## Le tri fusion
-- **diviser** : couper le tableau en deux moitiés ;
-- **régner** : trier chaque moitié récursivement ;
-- **combiner** : **fusionner** les deux moitiés triées en parcourant les deux en parallèle et en prenant à chaque étape le plus petit élément disponible.
+| Étape | Ce qu’elle fait |
+| Diviser | Couper le tableau en deux moitiés |
+| Régner | Trier chaque moitié récursivement |
+| Combiner | **Fusionner** les deux moitiés triées en prenant à chaque étape le plus petit élément disponible |
 
-Coût : **n log n** dans **tous** les cas — log n niveaux de découpage, et n opérations de fusion à chaque niveau. C’est la borne optimale des tris par comparaison.
+| Sa qualité | Son défaut |
+| **n log n** dans **tous** les cas — la borne optimale des tris par comparaison | Un tableau **auxiliaire** : mémoire proportionnelle à n |
+| **Stable** : deux éléments égaux gardent leur ordre | — |
+| Performance indépendante des données | — |
 
-Son défaut : il utilise un tableau auxiliaire, donc une mémoire supplémentaire proportionnelle à n. Sa qualité : il est **stable** (deux éléments égaux gardent leur ordre d’origine) et sa performance ne dépend pas des données.
+## L’ordre de grandeur qui décide
+| Tri | Coût | Pour un million d’éléments |
+| Insertion, sélection | **n²** | environ **10¹²** opérations |
+| Fusion | **n log n** | environ **2 × 10⁷** opérations |
 
-## La comparaison avec les tris quadratiques
-Le tri par insertion et le tri par sélection coûtent n² : pour un million d’éléments, cela représente 10¹² opérations contre 2 × 10⁷ pour le tri fusion. À l’échelle de données réelles, ce n’est pas une nuance mais la différence entre « instantané » et « impossible ».
+> Ce n’est pas une nuance, mais la différence entre « instantané » et « impossible ».
 
 ## Les autres exemples
-L’exponentiation rapide (élever au carré plutôt que multiplier n fois), le tri rapide, la multiplication de Karatsuba, l’enveloppe convexe, la transformée de Fourier rapide.
+Exponentiation rapide (élever au carré plutôt que multiplier n fois), tri rapide, multiplication de Karatsuba, enveloppe convexe, transformée de Fourier rapide.
 
 ## Quand la stratégie ne s’applique pas
-Il faut que les sous-problèmes soient **indépendants**. Quand ils se recouvrent — quand les mêmes sous-problèmes reviennent plusieurs fois —, diviser pour régner recalcule inutilement, et c’est la **programmation dynamique** qui prend le relais.
+Il faut que les sous-problèmes soient **indépendants**. Quand ils se **recouvrent**, diviser pour régner recalcule inutilement — et c’est la **programmation dynamique** qui prend le relais.
 
-> Retenir la mécanique du logarithme : diviser la taille par deux à chaque étape, c’est atteindre 1 en log₂(n) étapes. Tout le chapitre en découle.`,
+> Retenir la mécanique du logarithme : diviser la taille par deux à chaque étape, c’est atteindre 1 en **log₂(n)** étapes. Tout le chapitre en découle.`,
           },
           questions: [
             ['Quelles sont les trois étapes de la stratégie « diviser pour régner » ?', ['Diviser, régner, combiner', 'Trier, chercher, fusionner', 'Découper, tester, corriger', 'Lire, calculer, écrire'], 0, 'C’est l’étape de combinaison qui distingue les algorithmes entre eux.'],
@@ -1057,32 +1223,44 @@ Il faut que les sous-problèmes soient **indépendants**. Quand ils se recouvren
             cours: `La **programmation dynamique** s’applique aux problèmes dont les sous-problèmes **se recouvrent** : les mêmes calculs y reviennent un grand nombre de fois. L’idée est de les **mémoriser**.
 
 ## Les deux conditions
-- **sous-structure optimale** : la solution optimale du problème se construit à partir des solutions optimales de ses sous-problèmes ;
-- **chevauchement des sous-problèmes** : les mêmes sous-problèmes réapparaissent.
+| Condition | Ce qu’elle signifie |
+| **Sous-structure optimale** | La solution optimale se construit à partir des solutions optimales des sous-problèmes |
+| **Chevauchement** des sous-problèmes | Les mêmes sous-problèmes **réapparaissent** |
 
-Si la première condition seule est vérifiée, diviser pour régner suffit. C’est la **seconde** qui justifie la programmation dynamique.
+> Si la première seule est vérifiée, **diviser pour régner** suffit. C’est la **seconde** qui justifie la programmation dynamique.
 
 ## Les deux façons de faire
-- **descendante** (mémoïsation) : on garde l’écriture récursive naturelle, et on **range** chaque résultat dans un dictionnaire avant de le renvoyer. À chaque appel, on regarde d’abord si la réponse est déjà connue. Le code change à peine, le coût s’effondre ;
-- **ascendante** (tabulation) : on **remplit un tableau** des plus petits sous-problèmes vers les plus grands, sans récursivité. Plus rapide et sans risque de dépassement de pile, mais il faut déterminer soi-même le bon ordre de remplissage.
+| | **Descendante** (mémoïsation) | **Ascendante** (tabulation) |
+| L’écriture | On garde la récursivité naturelle | On **remplit un tableau**, sans récursivité |
+| Le mécanisme | Ranger chaque résultat dans un dictionnaire avant de le renvoyer | Aller des plus petits sous-problèmes vers les plus grands |
+| L’avantage | Le code change à peine | Plus rapide, **aucun risque** de dépassement de pile |
+| La contrainte | La pile reste limitée | Il faut déterminer soi-même le bon **ordre de remplissage** |
 
 ## L’exemple de Fibonacci
-La version naïve recalcule le même terme des milliers de fois : son coût est **exponentiel**. Avec mémoïsation, chaque terme n’est calculé **qu’une fois** : le coût devient **linéaire**. Le trentième terme passe de plus d’un million d’appels à trente.
+| Version | Coût | Appels pour le 30ᵉ terme |
+| Naïve | **Exponentiel** | plus d’un **million** |
+| Avec mémoïsation | **Linéaire** | **trente** |
 
-C’est l’illustration la plus nette du chapitre : le même algorithme, plus un dictionnaire, change de classe de complexité.
+> Le même algorithme, plus un dictionnaire, **change de classe de complexité**. C’est l’illustration la plus nette du chapitre.
 
 ## Le rendu de monnaie
-Rendre une somme avec le moins de pièces possible. L’algorithme **glouton** — prendre à chaque étape la plus grosse pièce possible — donne l’optimum avec le système européen, mais **échoue** sur d’autres systèmes : avec des pièces de 1, 3 et 4, rendre 6 donne 4 + 1 + 1 (trois pièces) au lieu de 3 + 3 (deux pièces).
+Rendre une somme avec le moins de pièces possible.
 
-La programmation dynamique, elle, donne toujours l’optimum : on calcule le nombre minimal de pièces pour **chaque** somme de 0 jusqu’à la somme visée, en réutilisant les résultats précédents.
+| Méthode | Son résultat |
+| L’algorithme **glouton** | Optimal avec le système européen, mais **il échoue** ailleurs |
+| La programmation dynamique | **Toujours** l’optimum |
 
-## Le sac à dos et l’alignement de séquences
-Le **problème du sac à dos** — choisir des objets de valeurs et de poids donnés sans dépasser une capacité — et l’**alignement de séquences** en bio-informatique se traitent de la même façon, par un tableau à deux dimensions.
+> Avec des pièces de 1, 3 et 4, rendre 6 : le glouton donne 4 + 1 + 1 (**trois** pièces) au lieu de 3 + 3 (**deux**).
+
+La méthode dynamique calcule le nombre minimal de pièces pour **chaque** somme de 0 jusqu’à la somme visée, en réutilisant les résultats précédents.
+
+## Deux autres problèmes classiques
+Le **sac à dos** — choisir des objets de valeurs et de poids donnés sans dépasser une capacité — et l’**alignement de séquences** en bio-informatique se traitent de la même façon, par un tableau **à deux dimensions**.
 
 ## Le compromis
-On échange de la **mémoire** contre du **temps**. Un tableau de taille n coûte de la place, mais évite un nombre exponentiel de recalculs. Sur des tailles réalistes, l’échange est presque toujours favorable.
+On échange de la **mémoire** contre du **temps**. Un tableau de taille n coûte de la place, mais évite un nombre **exponentiel** de recalculs.
 
-> Le signal qui doit faire penser à la programmation dynamique : dans l’arbre des appels récursifs, le même argument revient plusieurs fois. Dès qu’on le repère, un dictionnaire suffit.`,
+> Le signal à repérer : dans l’arbre des appels récursifs, **le même argument revient plusieurs fois**. Dès qu’on le voit, un dictionnaire suffit.`,
           },
           questions: [
             ['Quelles sont les deux conditions d’application de la programmation dynamique ?', ['Sous-structure optimale et chevauchement des sous-problèmes', 'Données triées et taille connue', 'Récursivité et cas de base', 'Indépendance des sous-problèmes'], 0, 'C’est le chevauchement qui la distingue de « diviser pour régner ».'],
@@ -1102,38 +1280,43 @@ On échange de la **mémoire** contre du **temps**. Un tableau de taille n coût
             titre: 'Retrouver un motif dans un texte, sans tout relire',
             cours: `Chercher un **motif** de longueur m dans un **texte** de longueur n est l’opération la plus fréquente de l’informatique : chaque recherche dans un document, chaque filtre, chaque analyse de séquence génétique la met en jeu.
 
+## Les trois algorithmes
+| Algorithme | Son coût | Son idée |
+| **Naïf** | jusqu’à **m × n** | Décaler d’un cran à chaque échec |
+| **Boyer-Moore-Horspool** | m × n en pire cas, très rapide en pratique | Comparer **de droite à gauche**, sauter d’un bloc |
+| **Knuth-Morris-Pratt** | **n + m**, garanti | Ne **jamais revenir en arrière** dans le texte |
+
 ## L’algorithme naïf
-On aligne le motif sur la première position du texte, on compare caractère par caractère, et au moindre désaccord on décale le motif **d’un cran** et on recommence depuis le début du motif.
+On aligne le motif sur la première position, on compare caractère par caractère, et au moindre désaccord on décale **d’un cran** en repartant du début du motif.
 
-- **coût** : jusqu’à m × n comparaisons dans le pire cas ;
-- **pire cas** typique : un texte fait de la même lettre répétée et un motif presque identique — chaque alignement va presque au bout avant d’échouer ;
-- **avantage** : il ne demande aucun prétraitement et tient en cinq lignes.
+| Avantage | Pire cas |
+| Aucun prétraitement, cinq lignes de code | Un texte fait d’une lettre répétée et un motif presque identique : chaque alignement va **presque au bout** avant d’échouer |
 
-## Ce que le naïf gaspille
-À chaque échec, il **oublie tout** ce qu’il vient d’apprendre. Or les caractères déjà comparés renseignent : si les six premiers caractères du motif ont été reconnus avant l’échec, on sait déjà ce que contient cette portion du texte, et certains décalages sont impossibles.
+> Ce qu’il gaspille : à chaque échec, il **oublie tout** ce qu’il vient d’apprendre. Or les caractères déjà comparés renseignent — certains décalages sont **impossibles**.
 
 ## Boyer-Moore-Horspool
-Il apporte deux idées :
-- comparer le motif **de droite à gauche** ;
-- en cas d’échec, décaler d’après le caractère du texte qui a provoqué l’échec, grâce à une **table de décalage** calculée sur le motif avant la recherche.
+| Idée | Ce qu’elle permet |
+| Comparer le motif **de droite à gauche** | L’échec survient plus tôt |
+| Une **table de décalage** calculée sur le motif | En cas d’échec, on décale d’après le caractère fautif du texte |
 
-Si ce caractère **n’apparaît pas** dans le motif, on peut décaler d’un coup de la **longueur entière** du motif : des positions sont écartées **sans jamais être examinées**. C’est ce qui le rend, en pratique, souvent plus rapide que tous les autres sur du texte naturel — d’autant plus rapide que le motif est long.
-
-En pire cas théorique, son coût reste cependant en m × n.
+> Si ce caractère **n’apparaît pas** dans le motif, on décale d’un coup de la **longueur entière** du motif : des positions sont écartées **sans jamais être examinées**. D’où sa rapidité sur du texte naturel — d’autant plus grande que le motif est long.
 
 ## Knuth-Morris-Pratt
-Il précalcule, pour chaque préfixe du motif, la **longueur du plus long préfixe qui est aussi un suffixe**. Cette table permet, en cas d’échec, de reprendre au bon endroit **sans jamais revenir en arrière dans le texte**. Le coût est **n + m** dans **tous** les cas — donc **linéaire**, garanti.
+Il précalcule, pour chaque préfixe du motif, la **longueur du plus long préfixe qui est aussi un suffixe**. Cette table permet, en cas d’échec, de reprendre au bon endroit sans jamais reculer dans le texte.
+
+> Coût **n + m** dans **tous** les cas : linéaire, **garanti**.
 
 ## Le prétraitement
-Les deux algorithmes efficaces partagent le même principe : **investir** un calcul sur le motif (en m opérations) pour économiser ensuite sur le texte. Ce n’est rentable que si le texte est bien plus long que le motif — ce qui est le cas usuel.
+Les deux algorithmes efficaces partagent le même principe : **investir** un calcul sur le motif — en m opérations — pour économiser ensuite sur le texte. Rentable dès que le texte est bien plus long que le motif, ce qui est le cas usuel.
 
 ## Choisir
-- motif court, texte court, code à écrire vite → **naïf** ;
-- texte naturel, motif long, recherche unique → **Boyer-Moore** ;
-- garantie de performance nécessaire, motif très répétitif → **Knuth-Morris-Pratt** ;
-- recherches très nombreuses dans un texte **fixe** → construire un **index** une fois pour toutes, plutôt que de relire le texte à chaque recherche.
+| La situation | L’algorithme |
+| Motif court, texte court, code à écrire vite | Le **naïf** |
+| Texte naturel, motif long, recherche unique | **Boyer-Moore** |
+| Garantie de performance, motif très répétitif | **Knuth-Morris-Pratt** |
+| Recherches nombreuses dans un texte **fixe** | Construire un **index** une fois pour toutes |
 
-> Le fil commun de tout le chapitre d’algorithmique : ne pas refaire ce qui a déjà été fait. Diviser pour régner évite de tout examiner, la programmation dynamique évite de recalculer, la recherche de motif évite de recomparer.`,
+> Le fil commun de tout le chapitre d’algorithmique : **ne pas refaire ce qui a déjà été fait**. Diviser pour régner évite de tout examiner, la programmation dynamique évite de recalculer, la recherche de motif évite de recomparer.`,
           },
           questions: [
             ['Quel est le coût de l’algorithme naïf de recherche de sous-chaîne dans le pire cas ?', ['m × n comparaisons', 'n comparaisons', 'log n comparaisons', 'm + n comparaisons'], 0, 'Chaque alignement peut aller presque au bout du motif avant d’échouer.'],

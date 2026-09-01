@@ -159,21 +159,30 @@ DELETE FROM public.chapters c
             cours: `« Liberté, Égalité, Fraternité » : le troisième terme est longtemps resté le moins juridique des trois. Il ne l'est plus.
 
 ## Un projet social inscrit dans les textes
-L'**article 1er de la Constitution** de 1958 dispose que la France est une République « indivisible, **laïque**, **démocratique** et **sociale** ». Le mot *sociale* engage : la Nation porte un projet qui suppose à la fois de **lutter contre les inégalités** et de **tisser des liens** entre citoyens.
+L'**article 1er de la Constitution** de 1958 dispose que la France est une République « indivisible, **laïque**, **démocratique** et **sociale** ».
 
-## Fraternité et solidarité : deux mots, deux registres
-- La **fraternité** est une **valeur** : elle relève du lien moral entre les membres d'une même communauté politique. On ne peut l'imposer.
-- La **solidarité** en est la traduction **organisée** : impôts, cotisations, prestations, services publics. On peut, elle, l'exiger.
+> Le mot *sociale* engage : la Nation porte un projet qui suppose à la fois de **lutter contre les inégalités** et de **tisser des liens** entre citoyens.
 
-## Assurance ou assistance ?
-La protection sociale française, bâtie à partir de **1945** (Sécurité sociale), combine deux logiques :
-- une logique d'**assurance** : on cotise, on est couvert (chômage, retraite, maladie) ;
-- une logique d'**assistance** : on reçoit sans avoir cotisé, parce qu'on en a besoin (RSA, allocations, fonds sociaux des établissements scolaires).
+## Fraternité et solidarité
+| Le mot | Ce qu'il est | Peut-on l'exiger |
+| **Fraternité** | Une **valeur** : le lien moral entre membres d'une même communauté politique | **Non**, on ne l'impose pas |
+| **Solidarité** | Sa traduction **organisée** : impôts, cotisations, prestations, services publics | **Oui** |
 
-La solidarité passe aussi par des gestes **volontaires** — don du sang, dons aux associations, bénévolat — qui ne remplacent pas l'impôt mais complètent ce qu'il finance.
+## Assurance ou assistance
+La protection sociale, bâtie à partir de **1945**, combine deux logiques.
+
+| La logique | Son principe | Ses exemples |
+| **Assurance** | On **cotise**, on est couvert | Chômage, retraite, maladie |
+| **Assistance** | On reçoit **sans avoir cotisé**, parce qu'on en a besoin | RSA, allocations, fonds sociaux des établissements |
+
+S'y ajoutent des gestes **volontaires** — don du sang, dons aux associations, bénévolat — qui ne remplacent pas l'impôt mais complètent ce qu'il finance.
 
 ## La fraternité devient un principe constitutionnel
-Par sa décision du **6 juillet 2018**, le **Conseil constitutionnel** a reconnu au principe de fraternité une **valeur constitutionnelle** et en a tiré la « liberté d'aider autrui, dans un but humanitaire, sans considération de la régularité de son séjour ». Le « délit de solidarité » a ainsi été limité : l'aide au séjour désintéressée ne peut plus être punie.
+| L'élément | Le détail |
+| La décision | Conseil constitutionnel, **6 juillet 2018** |
+| Ce qu'elle reconnaît | Au principe de fraternité une **valeur constitutionnelle** |
+| Ce qu'elle en tire | La « liberté d'aider autrui, dans un but humanitaire, sans considération de la régularité de son séjour » |
+| Son effet | Le « délit de solidarité » est limité : l'aide au séjour désintéressée ne peut plus être punie |
 
 > À retenir pour une copie : la fraternité n'est plus seulement un mot sur un fronton, c'est une norme dont un juge peut se servir pour écarter une loi.`,
           },
@@ -193,24 +202,26 @@ Par sa décision du **6 juillet 2018**, le **Conseil constitutionnel** a reconnu
           axe: 'Les valeurs et les principes de la République à l’épreuve de la cohésion sociale',
           lecon: {
             titre: 'Quand l’écart menace le lien',
-            cours: `Le programme pose la question sans détour : les **inégalités économiques et sociales peuvent présenter un danger pour la cohésion sociale et la démocratie**. Pourquoi ?
+            cours: `Le programme pose la question sans détour : les inégalités économiques et sociales peuvent présenter un danger pour la cohésion sociale et la démocratie. Pourquoi ?
 
 ## Mesurer avant de juger
-- Le **seuil de pauvreté** monétaire est fixé, en France comme dans l'Union européenne, à **60 % du niveau de vie médian**. Environ **9 millions** de personnes vivent en dessous, soit près de **15 %** de la population.
-- Le **niveau de vie médian** partage la population en deux moitiés : il n'est pas la moyenne, que quelques très hauts revenus suffiraient à tirer vers le haut.
-- La pauvreté n'est pas que monétaire : logement, santé, mobilité, accès au numérique en font partie (on parle de **pauvreté en conditions de vie**).
+| La notion | Sa définition | L'ordre de grandeur en France |
+| Le **seuil de pauvreté** monétaire | **60 %** du niveau de vie médian | Environ **9 millions** de personnes en dessous, près de **15 %** |
+| Le **niveau de vie médian** | Il partage la population en deux moitiés | Ce n'est **pas** la moyenne, que quelques très hauts revenus tireraient vers le haut |
+| La **pauvreté en conditions de vie** | Logement, santé, mobilité, accès au numérique | Elle ne se réduit pas au revenu |
 
 ## Pourquoi c'est un problème politique
-Une société très inégalitaire fragilise trois choses :
-- l'**égalité des chances** : à l'école, l'origine sociale pèse fortement sur les résultats ;
-- la **confiance** dans les institutions et dans les autres ;
-- la **participation** : l'abstention est nettement plus élevée dans les milieux populaires, ce qui déforme la représentation.
+| Ce qui est fragilisé | Comment |
+| L'**égalité des chances** | À l'école, l'origine sociale pèse fortement sur les résultats |
+| La **confiance** | Dans les institutions et dans les autres |
+| La **participation** | L'abstention est nettement plus élevée dans les milieux populaires, ce qui déforme la représentation |
 
 ## Ce que fait l'État
-- La **redistribution** (impôts progressifs, prestations sociales) réduit d'environ un tiers les écarts de revenus avant transferts.
-- Les **minima sociaux** et la **prime d'activité** soutiennent les bas revenus.
-- La **politique de la ville** et l'**Agence nationale de la cohésion des territoires (ANCT)**, créée en 2020, agissent contre les inégalités **territoriales** : quartiers prioritaires, ruralité, accès aux services publics.
-- La **loi SRU (2000)** impose aux communes concernées un quota de **logements sociaux** (25 % dans les zones tendues) : c'est un outil de **mixité sociale**.
+| L'outil | Son effet |
+| La **redistribution** — impôts progressifs, prestations | Elle réduit d'environ un **tiers** les écarts de revenus avant transferts |
+| Les **minima sociaux** et la **prime d'activité** | Ils soutiennent les bas revenus |
+| La **politique de la ville** et l'**ANCT** (2020) | Elles agissent sur les inégalités **territoriales** : quartiers prioritaires, ruralité, services publics |
+| La **loi SRU** (2000) | Un quota de **logements sociaux** — 25 % en zone tendue : un outil de **mixité sociale** |
 
 > Nuance attendue dans une copie : réduire les inégalités n'est pas supprimer les différences. La République garantit l'**égalité des droits**, et cherche à corriger les inégalités qui empêchent d'en user réellement.`,
           },
@@ -230,28 +241,41 @@ Une société très inégalitaire fragilise trois choses :
           axe: 'Les valeurs et les principes de la République à l’épreuve de la cohésion sociale',
           lecon: {
             titre: 'Un principe, des lois, et une réalité qui résiste',
-            cours: `L'égalité femmes-hommes montre comment un **principe**, porté par des mobilisations et des politiques volontaristes, transforme lentement une société — et où il se heurte encore à des résistances.
+            cours: `L'égalité femmes-hommes montre comment un principe transforme lentement une société — et où il se heurte encore à des résistances.
 
 ## Une conquête juridique par étapes
-- **1944** : droit de vote et d'éligibilité des femmes (premier vote en 1945).
-- **1965** : les femmes mariées peuvent travailler et ouvrir un compte bancaire sans l'autorisation de leur mari.
-- **1972** : loi posant l'égalité de rémunération « à travail de valeur égale ».
-- **1975** : loi Veil sur l'**IVG** (définitive en 1979).
-- **1983** : loi Roudy sur l'égalité professionnelle.
-- **1999-2000** : révision constitutionnelle et lois sur la **parité** en politique.
-- **2019** : **index de l'égalité professionnelle**, obligatoire dans les entreprises d'au moins 50 salariés.
-- **4 mars 2024** : la **liberté garantie** de recourir à l'IVG est inscrite dans la **Constitution** (article 34).
+| La date | L'avancée |
+| **1944** | Droit de vote et d'éligibilité des femmes ; premier vote en 1945 |
+| **1965** | Les femmes mariées peuvent travailler et ouvrir un compte sans l'autorisation de leur mari |
+| **1972** | Égalité de rémunération « à travail de valeur égale » |
+| **1975** | Loi Veil sur l'**IVG**, définitive en 1979 |
+| **1983** | Loi Roudy sur l'égalité professionnelle |
+| **1999-2000** | Révision constitutionnelle et lois sur la **parité** en politique |
+| **2019** | **Index de l'égalité professionnelle**, obligatoire dès 50 salariés |
+| **4 mars 2024** | La **liberté garantie** de recourir à l'IVG entre dans la **Constitution** |
 
 ## Ce que disent les chiffres
-L'écart de revenu salarial entre femmes et hommes reste de l'ordre de **20 %** tous temps de travail confondus, et d'environ **4 %** à poste et temps de travail comparables. L'écart s'explique largement par le **temps partiel**, la **ségrégation professionnelle** (des métiers très féminins, souvent moins rémunérés) et le **plafond de verre**.
+| L'écart de revenu salarial | Sa valeur |
+| Tous temps de travail confondus | Environ **20 %** |
+| À poste et temps de travail comparables | Environ **4 %** |
+
+| La cause de l'écart | Ce qu'elle recouvre |
+| Le **temps partiel** | Très majoritairement féminin |
+| La **ségrégation professionnelle** | Des métiers très féminins, souvent moins rémunérés |
+| Le **plafond de verre** | L'accès aux postes de direction |
 
 ## Les causes, et l'école
-Stéréotypes et préjugés se forment tôt : la **représentation genrée des formations** oriente les choix bien avant le marché du travail. D'où les actions sur l'orientation, dans les filières scientifiques et techniques notamment.
+Stéréotypes et préjugés se forment tôt : la **représentation genrée des formations** oriente les choix bien avant le marché du travail.
+
+> D'où les actions sur l'orientation, dans les filières scientifiques et techniques notamment.
 
 ## Violences sexistes et sexuelles
-Elles portent atteinte à la cohésion d'une société démocratique. Repères : le **3919** (écoute, gratuit, 24 h/24), la **Convention d'Istanbul** (2011, ratifiée par la France en 2014), les dispositifs de protection (ordonnance de protection, bracelet anti-rapprochement).
+| Le repère | Ce qu'il est |
+| Le **3919** | Écoute, gratuit, 24 h/24 |
+| La **Convention d'Istanbul** | 2011, ratifiée par la France en 2014 |
+| Les dispositifs de protection | Ordonnance de protection, bracelet anti-rapprochement |
 
-> Point de méthode : distinguer l'**égalité en droit** (acquise depuis longtemps) de l'**égalité réelle** (encore inachevée). C'est l'écart entre les deux que le programme demande d'examiner.`,
+> Point de méthode : distinguer l'**égalité en droit**, acquise depuis longtemps, de l'**égalité réelle**, encore inachevée. C'est l'écart entre les deux que le programme demande d'examiner.`,
           },
           questions: [
             ['En quelle année les femmes obtiennent-elles le droit de vote en France ?', ['1944', '1936', '1946', '1965'], 0, 'Ordonnance de 1944 ; premier vote effectif en 1945.'],
@@ -269,29 +293,37 @@ Elles portent atteinte à la cohésion d'une société démocratique. Repères :
           axe: 'Les valeurs et les principes de la République à l’épreuve de la cohésion sociale',
           lecon: {
             titre: 'Ce que le droit appelle une discrimination',
-            cours: `Une discrimination n'est pas un simple sentiment d'injustice : c'est une **notion juridique**, définie et sanctionnée.
+            cours: `Une discrimination n'est pas un simple sentiment d'injustice : c'est une notion juridique, définie et sanctionnée.
 
 ## La définition du Code pénal
-L'**article 225-1** définit la discrimination comme toute distinction opérée entre des personnes **à raison d'un critère prohibé** : origine, sexe, situation de famille, apparence physique, état de santé, **handicap**, âge, opinions politiques, activités syndicales, appartenance vraie ou supposée à une ethnie, une nation, une race ou une **religion**, **orientation sexuelle** ou identité de genre, lieu de résidence… Le droit français compte aujourd'hui plus de **vingt-cinq critères**.
+L'**article 225-1** définit la discrimination comme toute distinction entre personnes **à raison d'un critère prohibé**. Le droit français en compte plus de **vingt-cinq** : origine, sexe, situation de famille, apparence physique, état de santé, **handicap**, âge, opinions politiques, activités syndicales, appartenance vraie ou supposée à une ethnie ou une **religion**, **orientation sexuelle**, identité de genre, lieu de résidence…
 
-Encore faut-il que la distinction porte sur une **situation visée par la loi** : refus d'embauche, licenciement, refus de fourniture d'un bien ou d'un service, refus de louer un logement. Les peines vont jusqu'à **3 ans d'emprisonnement et 45 000 € d'amende**.
+| La condition | Ce qu'elle exige |
+| Un **critère prohibé** | Parmi ceux que la loi énumère |
+| Une **situation visée par la loi** | Refus d'embauche, licenciement, refus de fourniture d'un bien ou d'un service, refus de louer |
 
-## Discrimination directe, discrimination indirecte
-- **Directe** : le critère est explicitement utilisé (« nous ne prenons pas de femmes »).
-- **Indirecte** : une règle apparemment neutre défavorise en fait un groupe (un critère de taille pour un métier où elle n'est pas nécessaire).
+Les peines vont jusqu'à **3 ans d'emprisonnement et 45 000 € d'amende**.
+
+## Directe ou indirecte
+| Le type | Son mécanisme | Un exemple |
+| **Directe** | Le critère est explicitement utilisé | « Nous ne prenons pas de femmes » |
+| **Indirecte** | Une règle apparemment neutre défavorise en fait un groupe | Un critère de taille pour un métier où elle n'est pas nécessaire |
 
 ## Ressenti et preuve
-Les discriminations sont **ressenties** bien plus souvent qu'elles ne sont **prouvées** : la victime connait rarement la vraie raison d'un refus. D'où deux outils :
-- le **testing**, qui compare deux candidatures identiques ne différant que par le critère suspecté — admis comme mode de preuve ;
-- l'**aménagement de la charge de la preuve** : la victime présente des éléments de fait, c'est ensuite au défendeur de prouver que sa décision était justifiée.
+Les discriminations sont **ressenties** bien plus souvent qu'elles ne sont **prouvées** : la victime connaît rarement la vraie raison d'un refus.
+
+| L'outil | Ce qu'il permet |
+| Le **testing** | Comparer deux candidatures identiques ne différant que par le critère suspecté — admis comme mode de preuve |
+| L'**aménagement de la charge de la preuve** | La victime présente des éléments de fait ; c'est ensuite au défendeur de prouver que sa décision était justifiée |
 
 ## Qui agit
-- Le **Défenseur des droits**, autorité constitutionnelle indépendante créée en **2011**, peut être saisi gratuitement par toute personne.
-- La **DILCRAH** coordonne l'action interministérielle contre le racisme, l'antisémitisme et la haine anti-LGBT.
-- La **CNCDH** remet chaque année un rapport sur le racisme.
-- Des **associations** habilitées peuvent se porter partie civile.
+| L'acteur | Son rôle |
+| Le **Défenseur des droits** | Autorité constitutionnelle indépendante créée en 2011, saisissable gratuitement par toute personne |
+| La **DILCRAH** | Elle coordonne l'action contre le racisme, l'antisémitisme et la haine anti-LGBT |
+| La **CNCDH** | Elle remet chaque année un rapport sur le racisme |
+| Les **associations habilitées** | Elles peuvent se porter partie civile |
 
-> Attention au sens du mot « discriminer » dans une copie : distinguer devient discriminer seulement quand la distinction repose sur un critère interdit, dans une situation visée par la loi.`,
+> Attention au sens du mot dans une copie : distinguer devient **discriminer** seulement quand la distinction repose sur un critère interdit, dans une situation visée par la loi.`,
           },
           questions: [
             ['Quel article du Code pénal définit la discrimination ?', ['L’article 225-1', 'L’article 1er', 'L’article 434-3', 'L’article 121-1'], 0, 'Il énumère les critères prohibés, aujourd’hui plus de vingt-cinq.'],
@@ -309,23 +341,36 @@ Les discriminations sont **ressenties** bien plus souvent qu'elles ne sont **pro
           axe: 'Les valeurs et les principes de la République à l’épreuve de la cohésion sociale',
           lecon: {
             titre: 'Adapter la société, pas seulement la personne',
-            cours: `La conception d'une **société inclusive** ajoute au principe d'égalité un **impératif de solidarité** : ce n'est plus à la personne de s'adapter seule, c'est à la société de lever les obstacles.
+            cours: `La société inclusive ajoute au principe d'égalité un impératif de solidarité : ce n'est plus à la personne de s'adapter seule, c'est à la société de lever les obstacles.
 
 ## Deux façons de voir le handicap
-- L'approche **médicale** : le handicap est une déficience individuelle qu'il faut compenser.
-- L'approche **sociale**, retenue aujourd'hui : le handicap nait de la rencontre entre une déficience et un **environnement inadapté** (marches, information illisible, préjugés). Un fauteuil ne handicape pas dans un bâtiment accessible.
+| L'approche | Où elle situe le handicap | Ce qu'elle demande |
+| **Médicale** | Une déficience **individuelle** | La compenser |
+| **Sociale**, retenue aujourd'hui | La **rencontre** entre une déficience et un environnement inadapté | Adapter l'environnement |
+
+> Un fauteuil ne handicape pas dans un bâtiment accessible.
 
 ## La loi du 11 février 2005
-Loi « pour l'égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées ». Elle donne une définition légale du handicap et pose trois piliers :
-- l'**accessibilité généralisée** (bâtiments, transports, écoles, information) ;
-- la **compensation** (prestation de compensation du handicap, **AAH**) ;
-- un **guichet unique** par département, la **MDPH** (maison départementale des personnes handicapées).
+« Pour l'égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées ». Elle donne une définition légale du handicap et pose trois piliers.
+
+| Le pilier | Son contenu |
+| L'**accessibilité généralisée** | Bâtiments, transports, écoles, information |
+| La **compensation** | Prestation de compensation du handicap, **AAH** |
+| Le **guichet unique** | La **MDPH**, une par département |
 
 ## À l'école
-La loi de 2005 pose le principe de la scolarisation en **milieu ordinaire**, dans l'établissement le plus proche du domicile. Outils : le **PPS** (projet personnalisé de scolarisation), les **AESH** (accompagnants), les **Ulis** (unités localisées pour l'inclusion scolaire), les aménagements d'examens (temps majoré, secrétaire, matériel adapté).
+Le principe : la scolarisation en **milieu ordinaire**, dans l'établissement le plus proche du domicile.
+
+| L'outil | Ce qu'il apporte |
+| Le **PPS** | Le projet personnalisé de scolarisation |
+| Les **AESH** | Des accompagnants |
+| Les **Ulis** | Des unités localisées pour l'inclusion scolaire |
+| Les **aménagements d'examens** | Temps majoré, secrétaire, matériel adapté |
 
 ## Au travail
-La loi de **1987** impose aux employeurs d'au moins 20 salariés une **obligation d'emploi de 6 %** de travailleurs handicapés ; à défaut, une contribution est due. L'employeur doit prévoir des **aménagements raisonnables** du poste.
+| L'obligation | Son contenu |
+| Loi de **1987** | **6 %** de travailleurs handicapés dès 20 salariés ; à défaut, une contribution est due |
+| Les **aménagements raisonnables** | L'employeur doit adapter le poste |
 
 ## Le cadre international
 La **Convention de l'ONU relative aux droits des personnes handicapées** (2006), ratifiée par la France en **2010**, consacre le droit à la vie autonome et à l'inclusion.
@@ -348,23 +393,31 @@ La **Convention de l'ONU relative aux droits des personnes handicapées** (2006)
           axe: 'Les valeurs et les principes de la République à l’épreuve de la cohésion sociale',
           lecon: {
             titre: 'Ce que la loi punit, et pourquoi',
-            cours: `Le racisme, l'**antisémitisme**, l'**antitsiganisme**, la **xénophobie** et la **haine anti-LGBT** ne sont pas des opinions comme les autres : ils portent atteinte à la cohésion d'une société démocratique, et la loi les **punit**.
+            cours: `Racisme, antisémitisme, antitsiganisme, xénophobie et haine anti-LGBT ne sont pas des opinions comme les autres : la loi les punit.
 
 ## Trois lois repères
-- **Loi du 1er juillet 1972**, dite **loi Pleven** : elle punit la **provocation à la haine**, la **diffamation** et l'**injure** à caractère raciste, et permet aux associations de se porter partie civile. C'est le premier texte à sortir ces propos du champ de la simple liberté d'expression.
-- **Loi du 13 juillet 1990**, dite **loi Gayssot** : elle punit la **contestation de crimes contre l'humanité** (négationnisme) et aggrave le dispositif de 1972.
-- **Loi du 30 décembre 2004** : elle étend la répression des injures et diffamations aux motifs **sexistes**, **homophobes** et liés au **handicap**, et crée la HALDE (remplacée en 2011 par le Défenseur des droits).
+| La loi | Sa date | Ce qu'elle apporte |
+| Loi **Pleven** | 1er juillet **1972** | Elle punit la **provocation à la haine**, la **diffamation** et l'**injure** à caractère raciste, et permet aux associations de se porter partie civile |
+| Loi **Gayssot** | 13 juillet **1990** | Elle punit la **contestation de crimes contre l'humanité** et aggrave le dispositif de 1972 |
+| Loi du 30 décembre **2004** | 2004 | Elle étend la répression aux motifs **sexistes**, **homophobes** et liés au **handicap** ; elle crée la HALDE, remplacée en 2011 par le Défenseur des droits |
+
+> La loi de 1972 est le premier texte à sortir ces propos du champ de la simple liberté d'expression.
 
 ## L'aggravation par mobile
-Quand une infraction (violences, dégradation, harcèlement) est commise **à raison** de l'origine, de la religion, de l'orientation sexuelle ou du handicap de la victime, le **mobile discriminatoire** est une **circonstance aggravante** : la peine encourue est alourdie.
+Quand une infraction — violences, dégradation, harcèlement — est commise **à raison** de l'origine, de la religion, de l'orientation sexuelle ou du handicap de la victime, le **mobile discriminatoire** est une **circonstance aggravante** : la peine encourue est alourdie.
 
-## Où passe la limite avec la liberté d'expression
-La liberté d'expression est un principe constitutionnel — mais **critiquer une idée** n'est pas **attaquer une personne ou un groupe** pour ce qu'il est. L'**abus** de la liberté d'expression est défini par la loi de **1881** sur la presse, complétée par les lois de 1972, 1990 et 2004.
+## Où passe la limite
+| Ce qui est permis | Ce qui est puni |
+| **Critiquer une idée**, une doctrine, une religion | **Attaquer une personne ou un groupe** pour ce qu'il est |
+
+L'**abus** de la liberté d'expression est défini par la loi de **1881** sur la presse, complétée par celles de 1972, 1990 et 2004.
 
 ## Signaler
-La plateforme **PHAROS** permet de signaler des contenus illicites en ligne ; les plateformes ont l'obligation de retirer promptement les contenus manifestement illicites qui leur sont notifiés.
+| Le dispositif | Ce qu'il fait |
+| La plateforme **PHAROS** | Elle recueille les signalements de contenus illicites en ligne |
+| L'obligation des plateformes | Retirer promptement les contenus manifestement illicites qui leur sont notifiés |
 
-> Piège fréquent : la loi ne punit pas le fait de *penser*, mais des **actes de langage** publics — provoquer, injurier, diffamer, nier un crime contre l'humanité.`,
+> Piège fréquent : la loi ne punit pas le fait de **penser**, mais des **actes de langage publics** — provoquer, injurier, diffamer, nier un crime contre l'humanité.`,
           },
           questions: [
             ['Que punit la loi Pleven du 1er juillet 1972 ?', ['La provocation à la haine, la diffamation et l’injure racistes', 'Le négationnisme', 'Les discriminations à l’embauche', 'Les fausses nouvelles'], 0, 'Elle permet aussi aux associations de se porter partie civile.'],
@@ -382,26 +435,34 @@ La plateforme **PHAROS** permet de signaler des contenus illicites en ligne ; le
           axe: 'Les valeurs et les principes de la République à l’épreuve de la cohésion sociale',
           lecon: {
             titre: 'Ce que la laïcité rend possible',
-            cours: `La laïcité n'est pas une opinion sur les religions : c'est un **principe d'organisation** qui vise à rendre possible la **coexistence pacifique** d'individus et de groupes dont les options philosophiques ou religieuses restent différentes.
+            cours: `La laïcité n'est pas une opinion sur les religions : c'est un principe d'organisation qui rend possible la coexistence pacifique de convictions différentes.
 
 ## La loi du 9 décembre 1905
-- **Article 1er** : la République « assure la **liberté de conscience** » et « garantit le **libre exercice des cultes** ».
-- **Article 2** : elle « **ne reconnait, ne salarie ni ne subventionne** aucun culte ».
-Deux faces d'un même principe : une **liberté** garantie, une **neutralité** de l'État.
+| L'article | Ce qu'il pose | Ce qu'il garantit |
+| **Article 1er** | La République « assure la **liberté de conscience** » et « garantit le **libre exercice des cultes** » | Une **liberté** |
+| **Article 2** | Elle « **ne reconnaît, ne salarie ni ne subventionne** aucun culte » | Une **neutralité** de l'État |
 
 ## Trois exigences indissociables
-1. La **liberté de conscience** : croire, ne pas croire, changer de conviction.
-2. La **neutralité** de l'État et de ses agents : un service public ne prend pas parti.
-3. L'**égalité** : aucune conviction n'ouvre de privilège ni ne justifie de discrimination.
+| L'exigence | Son contenu |
+| La **liberté de conscience** | Croire, ne pas croire, changer de conviction |
+| La **neutralité** | De l'État et de ses agents : un service public ne prend pas parti |
+| L'**égalité** | Aucune conviction n'ouvre de privilège ni ne justifie de discrimination |
 
 ## L'arbitrage de l'État
-Les **articles 27 et 28** de la loi de 1905 encadrent la **police des cultes** (sonneries, manifestations extérieures, emblèmes dans les lieux publics). Loin d'être hostile aux religions, cet arbitrage crée les conditions du **pluralisme** : personne n'impose sa croyance dans l'espace commun.
+Les **articles 27 et 28** de la loi de 1905 encadrent la **police des cultes** : sonneries, manifestations extérieures, emblèmes dans les lieux publics.
+
+> Loin d'être hostile aux religions, cet arbitrage crée les conditions du **pluralisme** : personne n'impose sa croyance dans l'espace commun.
 
 ## À l'école
-La **loi du 15 mars 2004** interdit aux élèves, dans les écoles, collèges et lycées publics, le port de **signes ou tenues manifestant ostensiblement une appartenance religieuse**. Les agents publics, eux, sont soumis à une **stricte neutralité**. La **Charte de la laïcité à l'école** (2013) rassemble ces règles.
+| La règle | À qui elle s'applique |
+| La **loi du 15 mars 2004** interdit les signes ou tenues manifestant **ostensiblement** une appartenance religieuse | Aux **élèves** des écoles, collèges et lycées publics |
+| La **stricte neutralité** | Aux **agents publics** |
+| La **Charte de la laïcité à l'école** (2013) | Elle rassemble ces règles |
 
 ## Et en Europe
-La **Cour européenne des droits de l'homme** reconnait que des **restrictions à la liberté de manifester sa religion** sont possibles lorsqu'elles sont prévues par la loi, poursuivent un but légitime et restent proportionnées (marge nationale d'appréciation). La laïcité française n'est donc pas le seul modèle possible en Europe.
+La **Cour européenne des droits de l'homme** admet des restrictions à la liberté de manifester sa religion lorsqu'elles sont prévues par la loi, poursuivent un but légitime et restent proportionnées.
+
+> La laïcité française n'est donc pas le seul modèle possible en Europe.
 
 > Distinction utile : la laïcité oblige l'**État** à la neutralité ; elle n'impose pas la neutralité aux **citoyens**, libres de manifester leurs convictions dans les limites de l'ordre public.`,
           },
@@ -423,25 +484,35 @@ La **Cour européenne des droits de l'homme** reconnait que des **restrictions �
           axe: 'La République et la Nation',
           lecon: {
             titre: 'Une seule Nation, des territoires divers',
-            cours: `L'**article 1er de la Constitution** tient ensemble deux affirmations qui pourraient sembler contradictoires : la République est « **indivisible** » et « son organisation est **décentralisée** » (ajout de la révision de **2003**).
+            cours: `L'article 1er de la Constitution tient ensemble deux affirmations qui pourraient sembler contradictoires : la République est indivisible, et son organisation est décentralisée.
 
 ## Ce que veut dire « indivisible »
-- Il n'existe qu'**un seul peuple français** : le Conseil constitutionnel a censuré, en **1991**, la mention d'un « peuple corse, composante du peuple français ».
-- La **loi est la même pour tous** sur tout le territoire, et l'État conserve les fonctions régaliennes (défense, justice, monnaie, police, diplomatie).
-- Les collectivités n'ont **pas de pouvoir législatif propre** : elles administrent, elles ne légifèrent pas.
+| L'affirmation | Sa portée |
+| Il n'existe qu'**un seul peuple français** | Le Conseil constitutionnel a censuré en **1991** la mention d'un « peuple corse, composante du peuple français » |
+| La **loi est la même pour tous** | Partout sur le territoire |
+| L'État conserve les fonctions **régaliennes** | Défense, justice, monnaie, police, diplomatie |
+| Les collectivités n'ont **pas de pouvoir législatif** | Elles administrent, elles ne légifèrent pas |
 
 ## Ce que veut dire « décentralisée »
-La **décentralisation** transfère des compétences de l'État à des **collectivités territoriales** dotées de la **personnalité juridique**, d'un **budget** et d'organes **élus**. Elle repose sur la **libre administration** (article 72) et sur le principe de **subsidiarité** : la décision au niveau le plus adapté.
+La décentralisation transfère des compétences à des collectivités dotées de la **personnalité juridique**, d'un **budget** et d'organes **élus**.
 
-## Ne pas confondre
-- **Décentralisation** : l'État transfère des compétences à des collectivités **élues** (commune, département, région).
-- **Déconcentration** : l'État garde ses compétences mais les confie à ses **représentants locaux** (le **préfet**), qui exercent le **contrôle de légalité** des actes des collectivités.
-- **Fédéralisme** : les entités disposent d'un pouvoir **législatif** propre — ce n'est pas le cas en France.
+| Le principe | Son article | Son contenu |
+| La **libre administration** | Article 72 | Les collectivités s'administrent librement par des conseils élus |
+| La **subsidiarité** | Article 72 | La décision au niveau le plus adapté |
+
+L'ajout de « décentralisée » à l'article 1er date de la révision de **2003**.
+
+## Trois notions à ne pas confondre
+| La notion | Qui exerce | Le pouvoir transféré |
+| **Décentralisation** | Des collectivités **élues** — commune, département, région | Des compétences **administratives** |
+| **Déconcentration** | Les représentants locaux de l'État, le **préfet** | Aucun : l'État garde ses compétences ; le préfet exerce le **contrôle de légalité** |
+| **Fédéralisme** | Des entités fédérées | Un pouvoir **législatif** propre — ce n'est pas le cas en France |
 
 ## Qui fait quoi
-- **Commune** : école primaire, urbanisme, état civil, action sociale de proximité.
-- **Département** : collèges, action sociale (RSA, protection de l'enfance), routes départementales.
-- **Région** : lycées, formation professionnelle, transports régionaux, développement économique.
+| La collectivité | Ses compétences principales |
+| **Commune** | École primaire, urbanisme, état civil, action sociale de proximité |
+| **Département** | Collèges, action sociale (RSA, protection de l'enfance), routes départementales |
+| **Région** | Lycées, formation professionnelle, transports régionaux, développement économique |
 
 > Formule à retenir : la France est un **État unitaire décentralisé**, pas un État fédéral.`,
           },
@@ -464,17 +535,24 @@ La **décentralisation** transfère des compétences de l'État à des **collect
             cours: `Depuis 1982, la République a transféré aux collectivités une part croissante de ce que l'État faisait seul — sans jamais renoncer à l'unité de la Nation.
 
 ## Les grandes étapes
-- **Loi Defferre du 2 mars 1982** : « acte I ». Le préfet perd la tutelle *a priori* sur les actes des collectivités (remplacée par le **contrôle de légalité** *a posteriori*), la région devient une collectivité de plein exercice (élections régionales à partir de 1986).
-- **2003-2004** : « acte II ». La décentralisation entre dans la **Constitution** (art. 1er et 72), avec l'**autonomie financière**, le **référendum local**, le **droit de pétition** et l'**expérimentation** ; de nouveaux transferts suivent (routes nationales, personnels techniques des collèges et lycées).
-- **Loi MAPTAM (2014)** : métropoles. **Loi NOTRe (2015)** : compétences clarifiées, régions passées de 22 à **13** en métropole.
+| La date | Le texte | Ce qu'il change |
+| **2 mars 1982** | Loi **Defferre**, « acte I » | Le préfet perd la tutelle *a priori*, remplacée par le **contrôle de légalité** *a posteriori* ; la région devient une collectivité de plein exercice |
+| **2003-2004** | « Acte II » | La décentralisation entre dans la **Constitution** : autonomie financière, référendum local, droit de pétition, expérimentation ; transferts des routes nationales et des personnels techniques |
+| **2014** | Loi **MAPTAM** | Les métropoles |
+| **2015** | Loi **NOTRe** | Compétences clarifiées ; les régions passent de 22 à **13** en métropole |
 
 ## L'outre-mer : une unité qui admet des statuts différents
-- **Article 73** : les départements et régions d'outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte) appliquent les lois de la République, avec des **adaptations** possibles.
-- **Article 74** : les collectivités d'outre-mer (Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Wallis-et-Futuna) ont un **statut particulier** défini par une loi organique, avec une part d'autonomie.
-- La **Nouvelle-Calédonie** relève d'un **titre XIII** propre, issu de l'accord de Nouméa (1998) : citoyenneté calédonienne, « lois du pays », transferts de compétences.
+| L'article | Les territoires | Leur régime |
+| **73** | Guadeloupe, Martinique, Guyane, La Réunion, Mayotte | Les lois de la République, avec des **adaptations** possibles |
+| **74** | Polynésie française, Saint-Barthélemy, Saint-Martin, Saint-Pierre-et-Miquelon, Wallis-et-Futuna | Un **statut particulier** par loi organique, avec une part d'autonomie |
+| Titre **XIII** | Nouvelle-Calédonie | Accord de Nouméa (1998) : citoyenneté calédonienne, « lois du pays », transferts de compétences |
 
 ## Les langues régionales
-L'**article 75-1**, ajouté en **2008**, dispose que « les langues régionales appartiennent au **patrimoine de la France** ». La langue de la République reste le **français** (article 2). Reconnaitre une diversité culturelle n'entame donc pas l'unité juridique : c'est exactement l'équilibre que cherche le programme.
+| L'article | Ce qu'il dispose |
+| **Article 2** | La langue de la République est le **français** |
+| **Article 75-1**, ajouté en **2008** | « Les langues régionales appartiennent au **patrimoine de la France** » |
+
+> Reconnaître une diversité culturelle n'entame pas l'unité juridique : c'est exactement l'équilibre que cherche le programme.
 
 > Idée directrice : l'unité de la Nation n'exige pas l'uniformité des territoires ; elle exige que la loi commune s'applique partout, y compris quand elle s'adapte.`,
           },
@@ -494,24 +572,36 @@ L'**article 75-1**, ajouté en **2008**, dispose que « les langues régionales 
           axe: 'La République et la Nation',
           lecon: {
             titre: 'Une communauté nationale ouverte',
-            cours: `Dans la République française, la **communauté nationale** n'est pas fermée sur une origine : elle est **ouverte**, marquée par la possibilité d'**acquérir** la nationalité.
+            cours: `Dans la République française, la communauté nationale n'est pas fermée sur une origine : elle est ouverte, marquée par la possibilité d'acquérir la nationalité.
 
-## Nationalité et citoyenneté : deux notions distinctes
-- La **nationalité** est un lien juridique entre une personne et un État.
-- La **citoyenneté** ajoute des **droits politiques** (voter, être élu) et des devoirs. En France, elle est en principe attachée à la nationalité — avec une exception notable : les citoyens de l'Union européenne résidant en France votent aux élections **municipales** et **européennes**.
+## Deux notions distinctes
+| La notion | Ce qu'elle est |
+| La **nationalité** | Un lien **juridique** entre une personne et un État |
+| La **citoyenneté** | Elle y ajoute des **droits politiques** : voter, être élu |
 
-## Comment devient-on français ?
-- **Droit du sang** : est français l'enfant dont **au moins un parent** est français, où qu'il naisse.
-- **Droit du sol** : l'enfant né en France de parents étrangers devient français **à 18 ans**, s'il y réside depuis l'âge de 11 ans (au moins 5 ans, continus ou non) ; l'acquisition peut être anticipée à 16 ou 13 ans. Le **double droit du sol** rend français dès la naissance l'enfant né en France dont un parent y est lui-même né.
-- **Naturalisation** : par décret, après en principe **5 ans** de résidence régulière, sous conditions d'intégration (connaissance de la langue, des droits et devoirs, adhésion aux valeurs de la République).
-- **Par mariage** : par déclaration, après **4 ans** de vie commune.
+> En France, la citoyenneté est en principe attachée à la nationalité — avec une exception : les citoyens de l'Union résidant en France votent aux élections **municipales** et **européennes**.
+
+## Comment devient-on français
+| La voie | Sa condition |
+| **Droit du sang** | Au moins un **parent français**, où que l'enfant naisse |
+| **Droit du sol** | Né en France de parents étrangers, français **à 18 ans** s'il y réside depuis ses 11 ans (5 ans au moins) ; anticipation possible à 16 ou 13 ans |
+| **Double droit du sol** | Né en France d'un parent lui-même né en France : français **dès la naissance** |
+| **Naturalisation** | Par décret, après en principe **5 ans** de résidence régulière, sous conditions d'intégration : langue, droits et devoirs, valeurs de la République |
+| **Par mariage** | Par déclaration, après **4 ans** de vie commune |
 
 La cérémonie d'accueil dans la citoyenneté française remet la **charte des droits et devoirs du citoyen français**.
 
 ## La citoyenneté européenne
-Instituée par le traité de **Maastricht (1992)**, elle **complète** la citoyenneté nationale sans la remplacer. Elle donne : la libre circulation et le séjour dans l'Union, le droit de vote et d'éligibilité aux **municipales** et **européennes** dans l'État de résidence, la **protection consulaire** de tout État membre, le droit de pétition au Parlement européen et l'**initiative citoyenne européenne** (un million de signatures dans un quart des États).
+Instituée par le traité de **Maastricht** (1992), elle **complète** la citoyenneté nationale sans la remplacer.
 
-> À ne pas confondre : *nationalité* (lien juridique), *citoyenneté* (droits politiques), *identité* (sentiment d'appartenance). Le programme travaille les deux premières.`,
+| Le droit | Son contenu |
+| **Libre circulation et séjour** | Dans toute l'Union |
+| **Vote et éligibilité** | Aux municipales et aux européennes, dans l'État de résidence |
+| **Protection consulaire** | Par tout État membre |
+| **Pétition** | Au Parlement européen |
+| **Initiative citoyenne européenne** | Un million de signatures dans un quart des États |
+
+> À ne pas confondre : la **nationalité** (lien juridique), la **citoyenneté** (droits politiques), l'**identité** (sentiment d'appartenance). Le programme travaille les deux premières.`,
           },
           questions: [
             ['Sur quoi repose le droit du sang ?', ['La nationalité d’au moins un parent', 'Le lieu de naissance', 'La durée de résidence', 'Le mariage'], 0, 'L’enfant est français où qu’il naisse.'],
@@ -529,26 +619,45 @@ Instituée par le traité de **Maastricht (1992)**, elle **complète** la citoye
           axe: 'La République et la Nation',
           lecon: {
             titre: 'Ce dont une nation choisit de se souvenir',
-            cours: `Les **questions mémorielles** nourrissent une réflexion sur l'identité de la Nation : elles sont tantôt le **ferment de son unité**, tantôt un **champ d'affrontements** idéologiques et politiques.
+            cours: `Les questions mémorielles nourrissent une réflexion sur l'identité de la Nation : tantôt ferment de son unité, tantôt champ d'affrontements.
 
-## Mémoire et histoire ne sont pas la même chose
-- La **mémoire** est un rapport **vécu**, sélectif et affectif au passé ; elle appartient à des groupes.
-- L'**histoire** est une **démarche critique**, fondée sur des sources et le débat scientifique.
-Une commémoration n'est donc pas un cours d'histoire : elle **choisit** ce qu'elle rappelle.
+## Mémoire et histoire
+| La notion | Sa nature | Qui la porte |
+| La **mémoire** | Un rapport **vécu**, sélectif et affectif au passé | Des groupes |
+| L'**histoire** | Une démarche **critique**, fondée sur des sources et le débat scientifique | Une communauté savante |
+
+> Une commémoration n'est pas un cours d'histoire : elle **choisit** ce qu'elle rappelle.
 
 ## Les commémorations françaises
-**11 novembre** (armistice de 1918, et hommage à tous les morts pour la France), **8 mai** (victoire de 1945), **27 janvier** (journée internationale à la mémoire des victimes de la Shoah), **10 mai** (mémoire de la traite, de l'esclavage et de leurs abolitions), **18 juin** (appel du général de Gaulle). Le **Panthéon** honore par ses panthéonisations une certaine idée du mérite national.
+| La date | Ce qu'elle rappelle |
+| **11 novembre** | L'armistice de 1918, et tous les morts pour la France |
+| **8 mai** | La victoire de 1945 |
+| **27 janvier** | Les victimes de la Shoah |
+| **10 mai** | La traite, l'esclavage et leurs abolitions |
+| **18 juin** | L'appel du général de Gaulle |
+
+Le **Panthéon** honore par ses panthéonisations une certaine idée du mérite national.
 
 ## Les lois dites mémorielles
-- **1990**, loi Gayssot : punit la contestation des crimes contre l'humanité.
-- **2001**, loi Taubira : reconnait la **traite et l'esclavage** comme **crime contre l'humanité**.
-Elles font débat : des historiens rappellent qu'il n'appartient pas au législateur d'écrire l'histoire. Le **Conseil constitutionnel** a d'ailleurs censuré en **2012** la loi pénalisant la négation du génocide arménien, au nom de la **liberté d'expression**.
+| La loi | Sa date | Ce qu'elle établit |
+| Loi **Gayssot** | 1990 | Elle punit la contestation des crimes contre l'humanité |
+| Loi **Taubira** | 2001 | Elle reconnaît la **traite et l'esclavage** comme **crime contre l'humanité** |
+
+Elles font débat : des historiens rappellent qu'il n'appartient pas au législateur d'écrire l'histoire.
+
+> Le **Conseil constitutionnel** a censuré en **2012** la loi pénalisant la négation du génocide arménien, au nom de la **liberté d'expression**.
 
 ## Le « devoir de mémoire », et ses limites
-La formule dit une exigence morale envers les victimes. Elle est discutée : trop large, elle fige le passé en obligation ; refusée, elle laisse le champ libre à l'oubli. Le recueil **Portraits de France** (2021) illustre une autre voie : rendre visibles des figures d'origine étrangère ayant compté dans l'histoire nationale.
+| L'objection | Son argument |
+| Contre la formule | Trop large, elle fige le passé en obligation |
+| Pour la formule | La refuser laisse le champ libre à l'oubli |
+
+Le recueil **Portraits de France** (2021) illustre une autre voie : rendre visibles des figures d'origine étrangère ayant compté dans l'histoire nationale.
 
 ## Le patriotisme constitutionnel
-Cette notion (associée au philosophe **Jürgen Habermas**) désigne l'attachement des citoyens non à une origine commune, mais aux **principes fondateurs** de la République et de la démocratie — et le souci de les voir respectés et **mieux réalisés**. C'est un patriotisme **par adhésion**, ouvert à qui adhère.
+Associée au philosophe **Jürgen Habermas**, la notion désigne l'attachement des citoyens non à une origine commune, mais aux **principes fondateurs** de la République et de la démocratie — et le souci de les voir mieux réalisés.
+
+> C'est un patriotisme **par adhésion**, ouvert à qui adhère.
 
 > Bon réflexe de copie : distinguer ce qui relève du **droit** (les lois mémorielles), de la **science** (le travail des historiens) et de la **politique** (les commémorations).`,
           },
@@ -568,25 +677,40 @@ Cette notion (associée au philosophe **Jürgen Habermas**) désigne l'attacheme
           axe: 'La République et la Nation',
           lecon: {
             titre: 'Protéger la Nation, et s’y engager',
-            cours: `La communauté nationale se matérialise aussi par l'existence d'une **défense nationale**, aujourd'hui confrontée à des **enjeux renouvelés**.
+            cours: `La communauté nationale se matérialise aussi par l'existence d'une défense nationale, aujourd'hui confrontée à des enjeux renouvelés.
 
 ## De la « défense » à la « sécurité nationale »
-Le **Livre blanc sur la défense et la sécurité nationale de 2008** introduit la notion de **sécurité nationale** : la protection de la population ne se joue plus seulement face à une armée étrangère, mais aussi face au **terrorisme**, aux **cyberattaques**, aux crises sanitaires, aux catastrophes majeures et aux atteintes aux **infrastructures critiques** (énergie, eau, santé, transports).
+Le **Livre blanc de 2008** introduit la notion de **sécurité nationale** : la protection de la population ne se joue plus seulement face à une armée étrangère.
 
-## Les menaces d'aujourd'hui
-- Le **terrorisme**, auquel répondent le plan **Vigipirate** et l'opération **Sentinelle**.
-- La **cybersécurité** : l'**ANSSI** protège l'État et les opérateurs d'importance vitale.
-- Les **guerres hybrides** : combinaison d'actions militaires, économiques, cyber et **informationnelles** (désinformation, manipulation de l'information, ingérences électorales) menées sous le seuil de la guerre déclarée. Savoir vérifier une information relève ainsi de la défense.
+| La menace nouvelle | Ce qu'elle vise |
+| Le **terrorisme** | La population civile |
+| Les **cyberattaques** | Les systèmes d'information |
+| Les crises **sanitaires** | La santé publique |
+| Les atteintes aux **infrastructures critiques** | Énergie, eau, santé, transports |
+
+## Les réponses
+| La menace | Le dispositif |
+| Terrorisme | Le plan **Vigipirate**, l'opération **Sentinelle** |
+| Cyberattaques | L'**ANSSI**, qui protège l'État et les opérateurs d'importance vitale |
+| **Guerres hybrides** | Actions militaires, économiques, cyber et **informationnelles** menées sous le seuil de la guerre déclarée |
+
+> Désinformation, manipulation de l'information, ingérences électorales en font partie : savoir vérifier une information relève ainsi de la défense.
 
 ## Une défense européenne
-La France agit dans l'**OTAN** et dans l'Union européenne. L'**article 42-7 du traité sur l'Union européenne** prévoit une **clause d'assistance mutuelle** : si un État membre est agressé, les autres lui doivent aide et assistance. Elle a été invoquée pour la première fois par la France après les attentats du **13 novembre 2015**.
+| Le cadre | Ce qu'il prévoit |
+| L'**OTAN** | La défense collective de l'Alliance |
+| L'**article 42-7** du traité sur l'Union européenne | Une **clause d'assistance mutuelle** entre États membres |
+
+Elle a été invoquée pour la première fois par la France après les attentats du **13 novembre 2015**.
 
 ## S'engager, aujourd'hui
 Depuis la **suspension de la conscription en 1997**, le lien armée-Nation passe par :
-- le **recensement à 16 ans** et la **journée défense et citoyenneté (JDC)**, obligatoire ;
-- le **service national universel (SNU)**, qui vise l'engagement des jeunes et la cohésion nationale ;
-- la **réserve opérationnelle** et la réserve citoyenne ;
-- des parcours de formation : **service militaire volontaire**, **cadets de la République**, **classes de défense et de sécurité globales**, lycées labellisés.
+
+| Le dispositif | Ce qu'il est |
+| Le **recensement à 16 ans** et la **JDC** | Obligatoires |
+| Le **service national universel** | Il vise l'engagement des jeunes et la cohésion nationale |
+| La **réserve opérationnelle** et la réserve citoyenne | Un engagement volontaire |
+| Les parcours de formation | Service militaire volontaire, cadets de la République, classes de défense, lycées labellisés |
 
 > À retenir : la défense n'est plus l'affaire des seuls militaires. La « sécurité nationale » associe l'État, les entreprises, les collectivités — et les citoyens.`,
           },

@@ -115,29 +115,42 @@ DELETE FROM public.chapters c
           axe: 'Décrire les états et la constitution de la matière à l’échelle macroscopique',
           lecon: {
             titre: 'Trois états, une seule matière',
-            cours: `Tout ce qui nous entoure est fait de **matière** : l’eau, l’air, le bois, ton corps. La matière occupe de la place et possède une **masse**.
+            cours: `Tout ce qui nous entoure est fait de matière : elle occupe de la place et possède une masse. Elle se présente sous trois états.
 
 ## Les trois états
-- **Solide** : forme propre, volume propre. Un glaçon garde sa forme si on le change de récipient.
-- **Liquide** : volume propre, mais **pas** de forme propre. L’eau prend la forme du verre et sa surface libre reste **horizontale**.
-- **Gaz** : ni forme ni volume propres. Un gaz occupe **tout** l’espace disponible.
+| L’état | Sa forme | Son volume | Exemple |
+| **Solide** | **Propre** | **Propre** | Un glaçon garde sa forme dans n’importe quel récipient |
+| **Liquide** | **Aucune** | **Propre** | L’eau prend la forme du verre ; sa surface libre reste **horizontale** |
+| **Gaz** | **Aucune** | **Aucun** | Il occupe **tout** l’espace disponible |
 
 ## Les changements d’état
-Ils portent chacun un nom, qu’il faut connaître dans les deux sens :
-- solide → liquide : **fusion** ; liquide → solide : **solidification**
-- liquide → gaz : **vaporisation** ; gaz → liquide : **liquéfaction**
-- solide → gaz directement : **sublimation**
+| Le passage | Son nom |
+| Solide → liquide | **Fusion** |
+| Liquide → solide | **Solidification** |
+| Liquide → gaz | **Vaporisation** |
+| Gaz → liquide | **Liquéfaction** |
+| Solide → gaz **directement** | **Sublimation** |
+
+~ Solidification ← Solide → Fusion → Liquide → Vaporisation → Gaz
 
 ## La température ne bouge pas pendant le changement
-Pendant qu’un glaçon fond, la température reste bloquée à **0 °C** tant qu’il reste de la glace. L’eau pure bout à **100 °C** sous la pression normale. Ces deux valeurs sont des repères.
+= L’eau pure fond à 0 °C · L’eau pure bout à 100 °C
 
-> Un changement d’état ne change PAS la matière : la glace, l’eau liquide et la vapeur sont toutes de l’eau.
+!> Pendant qu’un glaçon fond, la température reste **bloquée à 0 °C** tant qu’il reste de la glace. Chauffer plus fort ne la fait pas monter : l’énergie sert à faire fondre.
 
-## La masse se conserve
-Quand 100 g de glace fondent, on obtient **100 g** d’eau liquide. Le **volume**, lui, change : la glace occupe plus de place que l’eau — c’est pourquoi une bouteille pleine peut éclater au congélateur.
+> Un changement d’état ne change **pas la matière** : la glace, l’eau liquide et la vapeur sont toutes de l’eau.
+
+## La masse se conserve, le volume non
+| La grandeur | Ce qu’elle devient |
+| La **masse** | 100 g de glace donnent **100 g** d’eau |
+| Le **volume** | Il **change** : la glace occupe **plus** de place |
+
+!> C’est pourquoi une bouteille pleine peut **éclater** au congélateur.
 
 ## Solide compact, solide divisé
-Un caillou est un solide **compact**. Le sable ou la farine sont des solides **divisés** : ils s’écoulent comme un liquide, mais chaque grain garde sa forme.`,
+| Le solide | Son comportement |
+| **Compact** | Un caillou : un seul bloc |
+| **Divisé** | Le sable, la farine : ils s’écoulent comme un liquide, mais **chaque grain garde sa forme** |`,
           },
           questions: [
             ['Quel état a un volume propre mais pas de forme propre ?', ['Le liquide', 'Le solide', 'Le gaz', 'Aucun'], 0, 'Un liquide prend la forme de son récipient.'],
@@ -155,33 +168,41 @@ Un caillou est un solide **compact**. Le sable ou la farine sont des solides **d
           axe: 'Décrire les états et la constitution de la matière à l’échelle macroscopique',
           lecon: {
             titre: 'Mesurer pour reconnaître',
-            cours: `Pour décrire un échantillon de matière, on mesure des **grandeurs**. Chaque grandeur a son instrument et son **unité**.
+            cours: `Pour décrire un échantillon de matière, on mesure des grandeurs. Chacune a son instrument et son unité.
+
+## Les trois grandeurs
+| La grandeur | Son instrument | Son unité |
+| La **masse** | La **balance** | Le **kilogramme (kg)** |
+| Le **volume** | L’**éprouvette graduée** | Le **litre (L)** |
+| La **température** | Le **thermomètre** | Le **degré Celsius (°C)** |
 
 ## La masse
-La masse se mesure avec une **balance**, en **kilogrammes (kg)** ou en **grammes (g)**.
-1 kg = 1 000 g ; 1 g = 1 000 mg.
-La masse ne dépend **pas** du lieu : un objet de 2 kg a la même masse sur la Lune.
+= 1 kg = 1 000 g · 1 g = 1 000 mg
+
+!> La masse ne dépend **pas du lieu** : un objet de 2 kg a la même masse sur la Lune.
 
 ## Le volume
-Le volume est la place occupée. On le mesure avec une **éprouvette graduée**, en **litres (L)** ou en **millilitres (mL)**.
-1 L = 1 000 mL et **1 mL = 1 cm³**.
-On lit le niveau **au bas du ménisque**, l’œil à la hauteur de la graduation.
+= 1 L = 1 000 mL · 1 mL = 1 cm³
 
-## La température
-Elle se mesure avec un **thermomètre**, en **degrés Celsius (°C)**. Elle indique si un corps est chaud ou froid, pas la quantité de matière.
+~ Poser l’éprouvette à plat → se placer à hauteur de la graduation → lire au BAS du ménisque
 
 ## Reconnaître un corps pur
-Chaque matière a des **températures de changement d’état** qui lui sont propres : l’eau pure fond à 0 °C, l’alcool bien plus bas. Mesurer ces températures permet donc d’**identifier** une substance.
+Chaque matière a des **températures de changement d’état** qui lui sont propres : l’eau pure fond à 0 °C, l’alcool bien plus bas.
+
+> Mesurer ces températures permet donc d’**identifier** une substance. C’est une carte d’identité.
 
 ## L’air a une masse
-On le montre en pesant un ballon gonflé puis dégonflé : le ballon gonflé est **plus lourd**. Un litre d’air pèse environ **1,2 g**. L’air est de la matière, même s’il est invisible.
+~ Peser un ballon dégonflé → le gonfler → le repeser → il est PLUS LOURD
+
+= Un litre d’air pèse environ 1,2 g
 
 > Invisible ne veut pas dire immatériel.
 
-## Le vocabulaire à ne pas confondre
-- **Masse** : la quantité de matière, en kg.
-- **Volume** : la place occupée, en L.
-- **Poids** : l’attraction de la Terre — ce n’est PAS la masse.`,
+## Trois mots à ne pas confondre
+| Le mot | Ce qu’il désigne | Son unité |
+| La **masse** | La quantité de matière | Le kg |
+| Le **volume** | La place occupée | Le L |
+| Le **poids** | L’attraction de la Terre | Ce n’est **pas** la masse |`,
           },
           questions: [
             ['Avec quel instrument mesure-t-on une masse ?', ['Une balance', 'Une éprouvette graduée', 'Un thermomètre', 'Un chronomètre'], 0, 'Le résultat s’exprime en kg ou en g.'],
@@ -199,28 +220,35 @@ On le montre en pesant un ballon gonflé puis dégonflé : le ballon gonflé est
           axe: 'Décrire les états et la constitution de la matière à l’échelle macroscopique',
           lecon: {
             titre: 'Ce qui se mélange, ce qui se sépare',
-            cours: `Un **corps pur** ne contient qu’une seule substance. Un **mélange** en contient plusieurs.
+            cours: `Un corps pur ne contient qu’une seule substance. Un mélange en contient plusieurs — et il y a deux façons de mélanger.
 
 ## Deux familles de mélanges
-- **Homogène** : on ne distingue pas les constituants, même à la loupe. Eau + sel, eau + sirop, l’air.
-- **Hétérogène** : on distingue au moins deux constituants. Eau + huile, eau + sable, le jus d’orange avec pulpe.
+| Le mélange | Ce qu’on voit | Exemples |
+| **Homogène** | On ne distingue **pas** les constituants, même à la loupe | Eau + sel, eau + sirop, l’air |
+| **Hétérogène** | On distingue au moins deux constituants | Eau + huile, eau + sable, jus d’orange avec pulpe |
 
-## Dissolution
-Quand du sel disparaît dans l’eau, il ne s’évapore pas : il se **dissout**. Le sel est le **soluté**, l’eau le **solvant**, l’ensemble une **solution**.
-La masse se conserve : 100 g d’eau + 5 g de sel donnent **105 g** de solution.
+## La dissolution
+~ Le soluté (le sel) + le solvant (l’eau) → la solution
+
+!> Le sel qui « disparaît » ne s’évapore pas : il se **dissout**. La masse le prouve.
+
+= 100 g d’eau + 5 g de sel = 105 g de solution
 
 ## La saturation
-Au-delà d’une certaine quantité, le solvant ne peut plus rien dissoudre : la solution est **saturée** et le surplus reste au fond.
+Au-delà d’une certaine quantité, le solvant ne peut plus rien dissoudre : la solution est **saturée**, et le surplus reste au fond.
 
 ## Séparer les constituants
-- **Décantation** : on laisse reposer, le plus lourd tombe au fond, puis on transvase doucement.
-- **Filtration** : on retient les particules solides avec un filtre. Le liquide qui passe s’appelle le **filtrat**.
-- **Évaporation** : on chauffe pour faire partir le solvant et récupérer le soluté (c’est ainsi qu’on récolte le sel des marais salants).
+| La technique | Ce qu’elle fait | Ce qu’on obtient |
+| La **décantation** | On laisse reposer, le plus lourd tombe, on transvase doucement | Deux couches séparées |
+| La **filtration** | Un filtre retient les particules solides | Le liquide qui passe est le **filtrat** |
+| L’**évaporation** | On chauffe pour faire partir le solvant | On récupère le **soluté** — c’est le sel des marais salants |
 
-> La filtration ne sépare PAS un mélange homogène : l’eau salée filtrée reste salée.
+!> **La filtration ne sépare PAS un mélange homogène.** De l’eau salée filtrée reste salée : le sel est dissous, pas en morceaux.
 
 ## L’air est un mélange
-L’air est un mélange homogène de gaz : environ **78 % de diazote**, **21 % de dioxygène** et 1 % d’autres gaz.`,
+= 78 % de diazote · 21 % de dioxygène · 1 % d’autres gaz
+
+C’est un mélange **homogène** de gaz.`,
           },
           questions: [
             ['Comment appelle-t-on un mélange dont on ne distingue pas les constituants ?', ['Homogène', 'Hétérogène', 'Pur', 'Saturé'], 0, 'L’eau salée en est un exemple.'],
@@ -242,33 +270,40 @@ L’air est un mélange homogène de gaz : environ **78 % de diazote**, **21 % d
           axe: 'Observer et décrire les différents types de mouvements',
           lecon: {
             titre: 'Décrire un mouvement, c’est d’abord choisir d’où on regarde',
-            cours: `## Le mouvement dépend du point de vue
-Un passager assis dans un train est **immobile par rapport au train**, et **en mouvement par rapport au quai**. On doit donc toujours préciser le **référentiel** : l’objet par rapport auquel on décrit le mouvement.
+            cours: `Dire « la voiture bouge » sans dire par rapport à quoi, c’est une phrase incomplète.
 
-> Dire « la voiture bouge » sans dire par rapport à quoi, c’est une phrase incomplète.
+## Le mouvement dépend du point de vue
+Un passager assis dans un train est **immobile par rapport au train**, et **en mouvement par rapport au quai**.
+
+= Le référentiel : l’objet par rapport auquel on décrit le mouvement
+
+!> Il faut **toujours** le préciser. Sans référentiel, la question « est-ce que ça bouge ? » n’a pas de réponse.
 
 ## La trajectoire
 La **trajectoire** est la ligne décrite par un point de l’objet au cours du temps.
-- **rectiligne** : une ligne droite (une bille sur une table lisse) ;
-- **circulaire** : un cercle (une nacelle de grande roue, la valve d’une roue de vélo) ;
-- **curviligne** : une courbe quelconque (un ballon lancé).
+
+| La trajectoire | Sa forme | Exemple |
+| **Rectiligne** | Une ligne droite | Une bille sur une table lisse |
+| **Circulaire** | Un cercle | Une nacelle de grande roue, la valve d’une roue de vélo |
+| **Curviligne** | Une courbe quelconque | Un ballon lancé |
 
 ## La vitesse moyenne
-Elle se calcule en divisant la distance parcourue par la durée du parcours :
-**v = d ÷ t**
-Si un cycliste parcourt 30 km en 2 h : v = 30 ÷ 2 = **15 km/h**.
+= v = d ÷ t
+
+= 30 km en 2 h → v = 30 ÷ 2 = 15 km/h
 
 ## Les unités, et le piège
-La vitesse s’exprime en **km/h** ou en **m/s**. La distance et la durée doivent être dans les **mêmes unités** que la vitesse demandée : pour des m/s, il faut des mètres et des secondes.
-Pour passer de km/h à m/s, on divise par 3,6 : 36 km/h = **10 m/s**.
+!> La distance et la durée doivent être dans les **mêmes unités** que la vitesse demandée : pour des **m/s**, il faut des **mètres** et des **secondes**.
+
+= Pour passer de km/h à m/s : diviser par 3,6 · 36 km/h = 10 m/s
 
 ## Les deux autres formules
-De v = d ÷ t on tire :
-- **d = v × t** (distance parcourue) ;
-- **t = d ÷ v** (durée du trajet).
+| On cherche | La formule |
+| La **distance** | d = v × t |
+| La **durée** | t = d ÷ v |
 
 ## Moyenne ne veut pas dire constante
-Une vitesse moyenne de 15 km/h ne dit pas que le cycliste roulait à 15 km/h à chaque instant : il a pu s’arrêter, puis accélérer.`,
+!> Une vitesse moyenne de 15 km/h ne dit **pas** que le cycliste roulait à 15 km/h à chaque instant : il a pu s’arrêter, puis accélérer.`,
           },
           questions: [
             ['Que faut-il préciser pour décrire un mouvement ?', ['Le référentiel, c’est-à-dire par rapport à quoi on l’observe', 'La couleur de l’objet', 'La masse de l’objet', 'Rien de particulier'], 0, 'Un passager est immobile dans le train, en mouvement pour le quai.'],
@@ -286,26 +321,35 @@ Une vitesse moyenne de 15 km/h ne dit pas que le cycliste roulait à 15 km/h à 
           axe: 'Observer et décrire les différents types de mouvements',
           lecon: {
             titre: 'Uniforme, accéléré, ralenti',
-            cours: `Décrire un mouvement demande deux choses : sa **trajectoire** (la forme du chemin) et l’évolution de sa **vitesse**.
+            cours: `Décrire un mouvement demande deux choses : la forme du chemin, et l’évolution de la vitesse.
 
 ## Les trois cas
-- **Uniforme** : la vitesse ne change pas. Un escalator, un tapis roulant.
-- **Accéléré** : la vitesse augmente. Une bille qui dévale une pente, une voiture qui démarre.
-- **Ralenti** (ou décéléré) : la vitesse diminue. Un vélo qui freine, une balle lancée vers le haut.
+| Le mouvement | Sa vitesse | Exemple |
+| **Uniforme** | Elle ne **change pas** | Un escalator, un tapis roulant |
+| **Accéléré** | Elle **augmente** | Une bille qui dévale une pente, une voiture qui démarre |
+| **Ralenti** (décéléré) | Elle **diminue** | Un vélo qui freine, une balle lancée vers le haut |
 
-## Le mouvement rectiligne uniforme
-C’est le cas le plus simple : trajectoire droite **et** vitesse constante. Les deux mots disent deux choses différentes — un mouvement peut être **circulaire uniforme** (une nacelle de grande roue) ou **rectiligne accéléré** (une voiture qui démarre tout droit).
+## Deux mots pour deux choses
+!> **Trajectoire** et **vitesse** sont indépendantes. Un mouvement peut être **circulaire uniforme** (une nacelle de grande roue) ou **rectiligne accéléré** (une voiture qui démarre tout droit).
+
+Le **rectiligne uniforme** est le cas le plus simple : chemin droit **et** vitesse constante.
 
 ## Lire une chronophotographie
-Une **chronophotographie** prend des photos à intervalles de temps **réguliers**. On lit alors le mouvement dans l’espacement des positions :
-- écarts **égaux** → mouvement **uniforme** ;
-- écarts qui **s’agrandissent** → mouvement **accéléré** ;
-- écarts qui **se resserrent** → mouvement **ralenti**.
+Une **chronophotographie** prend des photos à intervalles de temps **réguliers**.
 
-> C’est l’espacement qui parle, parce que la durée entre deux images est toujours la même.
+| Les écarts entre positions | Le mouvement est… |
+| **Égaux** | **Uniforme** |
+| Ils **s’agrandissent** | **Accéléré** |
+| Ils **se resserrent** | **Ralenti** |
+
+~ Photos à intervalles réguliers → mesurer les écarts → lire le mouvement
+
+> C’est l’**espacement** qui parle, parce que la durée entre deux images est toujours la même.
 
 ## Pourquoi ça compte
-La distance de freinage d’un véhicule augmente très vite avec la vitesse. Comprendre qu’un mouvement ralenti ne s’arrête pas instantanément, c’est comprendre pourquoi on ne traverse pas devant une voiture qui freine.`,
+La **distance de freinage** d’un véhicule augmente très vite avec la vitesse.
+
+!> Un mouvement ralenti **ne s’arrête pas instantanément**. C’est exactement la raison pour laquelle on ne traverse pas devant une voiture qui freine.`,
           },
           questions: [
             ['Comment appelle-t-on un mouvement dont la vitesse ne change pas ?', ['Uniforme', 'Accéléré', 'Ralenti', 'Rectiligne'], 0, 'Le mot « rectiligne » décrit la trajectoire, pas la vitesse.'],
@@ -327,29 +371,34 @@ La distance de freinage d’un véhicule augmente très vite avec la vitesse. Co
           axe: 'Identifier différentes sources d’énergie et connaître quelques conversions',
           lecon: {
             titre: 'L’énergie, ce qui permet d’agir',
-            cours: `Posséder de l’**énergie**, c’est pouvoir **mettre en mouvement**, **chauffer**, **éclairer** ou **déformer**. Tout appareil qui fonctionne consomme de l’énergie.
+            cours: `Posséder de l’énergie, c’est pouvoir mettre en mouvement, chauffer, éclairer ou déformer.
 
 ## Les principales formes
-- **Cinétique** : celle d’un objet en mouvement. Elle augmente avec la masse et **beaucoup** avec la vitesse.
-- **De position** : celle d’un objet en hauteur, qui peut tomber (l’eau d’un barrage).
-- **Thermique** : liée à la température d’un corps.
-- **Électrique** : celle qui circule dans les fils.
-- **Lumineuse** : celle transportée par la lumière.
-- **Chimique** : stockée dans les aliments, le bois, l’essence, une pile.
-- **Nucléaire** : contenue dans le noyau des atomes.
+| La forme | À quoi elle est liée |
+| **Cinétique** | Le **mouvement** — elle augmente avec la masse, et **beaucoup** avec la vitesse |
+| **De position** | La **hauteur** : l’eau d’un barrage |
+| **Thermique** | La **température** |
+| **Électrique** | Ce qui circule dans les fils |
+| **Lumineuse** | Transportée par la lumière |
+| **Chimique** | Stockée dans les aliments, le bois, l’essence, une pile |
+| **Nucléaire** | Le noyau des atomes |
 
 ## Les sources d’énergie
-On les classe en deux familles :
-- **Renouvelables** : le Soleil, le vent, l’eau, la biomasse, la géothermie. Elles se reconstituent à l’échelle humaine.
-- **Non renouvelables** : le charbon, le pétrole, le gaz naturel (les **énergies fossiles**) et l’uranium. Leurs réserves s’épuisent.
+| La famille | Sa définition | Ses membres |
+| **Renouvelables** | Elles se reconstituent à l’échelle humaine | Soleil, vent, eau, biomasse, géothermie |
+| **Non renouvelables** | Leurs réserves s’épuisent | Charbon, pétrole, gaz naturel (les **fossiles**), uranium |
 
 ## L’unité
-L’énergie se mesure en **joules (J)**. Pour l’électricité domestique, on utilise le **kilowattheure (kWh)**, qui figure sur les factures.
+= L’énergie se mesure en joules (J)
 
-> Le Soleil est la source d’origine de presque toutes les autres : le vent, la pluie, les plantes et même le pétrole en descendent.
+Pour l’électricité domestique, on utilise le **kilowattheure (kWh)** — celui qui figure sur les factures.
+
+> Le **Soleil** est la source d’origine de presque toutes les autres : le vent, la pluie, les plantes et même le pétrole en descendent.
 
 ## Une chaîne d’énergie
-On la représente par des flèches : **source → convertisseur → utilisation**. Une lampe de poche : pile (chimique) → ampoule → lumière et chaleur.`,
+~ Source → convertisseur → utilisation
+
+~ Pile (chimique) → ampoule → lumière et chaleur`,
           },
           questions: [
             ['Quelle forme d’énergie possède un objet en mouvement ?', ['L’énergie cinétique', 'L’énergie de position', 'L’énergie chimique', 'L’énergie thermique'], 0, 'Elle augmente avec la masse et la vitesse.'],
@@ -367,28 +416,36 @@ On la représente par des flèches : **source → convertisseur → utilisation*
           axe: 'Identifier différentes sources d’énergie et connaître quelques conversions',
           lecon: {
             titre: 'L’énergie ne se perd pas, elle change de forme',
-            cours: `## Le principe
-L’énergie ne se crée pas et ne disparaît pas : elle se **convertit** d’une forme à une autre, ou se **transfère** d’un objet à un autre. C’est la **conservation de l’énergie**.
+            cours: `L’énergie ne se crée pas et ne disparaît pas. Elle change de forme — et une partie s’échappe toujours en chaleur.
+
+## Le principe
+= La conservation de l’énergie : elle se convertit, ou se transfère, mais ne se perd jamais
 
 ## Les convertisseurs
-Un **convertisseur** transforme une forme d’énergie en une autre :
-- une **pile** : chimique → électrique ;
-- une **lampe** : électrique → lumineuse (et thermique) ;
-- un **moteur électrique** : électrique → cinétique ;
-- un **panneau solaire** : lumineuse → électrique ;
-- une **éolienne** : cinétique (du vent) → électrique ;
-- un **barrage** : de position → cinétique → électrique.
+| Le convertisseur | De quoi | Vers quoi |
+| Une **pile** | Chimique | Électrique |
+| Une **lampe** | Électrique | Lumineuse (et thermique) |
+| Un **moteur électrique** | Électrique | Cinétique |
+| Un **panneau solaire** | Lumineuse | Électrique |
+| Une **éolienne** | Cinétique (du vent) | Électrique |
+| Un **barrage** | De position | Cinétique, puis électrique |
 
 ## Les pertes
-Aucune conversion n’est parfaite : une partie de l’énergie part toujours en **chaleur**, souvent inutile. Une ampoule à filament transformait environ 5 % de l’électricité en lumière et 95 % en chaleur — c’est pourquoi elle brûlait les doigts, et pourquoi on l’a remplacée par la LED.
+!> **Aucune conversion n’est parfaite** : une partie de l’énergie part toujours en **chaleur**, souvent inutile.
 
-> L’énergie « perdue » n’est pas détruite : elle est dispersée sous une forme qu’on ne peut plus utiliser.
+~ Ampoule à filament : 5 % en lumière → 95 % en chaleur → remplacée par la LED
+
+C’est pourquoi une ampoule à filament brûlait les doigts.
+
+> L’énergie « perdue » n’est pas détruite : elle est **dispersée** sous une forme qu’on ne peut plus utiliser.
 
 ## Le rendement
-Le **rendement** compare l’énergie utile à l’énergie consommée. Plus il est élevé, moins on gaspille.
+Le **rendement** compare l’énergie **utile** à l’énergie **consommée**. Plus il est élevé, moins on gaspille.
 
 ## Économiser l’énergie
-Isoler un logement, éteindre les appareils en veille, préférer les transports en commun, choisir des appareils à bon rendement : chaque geste réduit la quantité d’énergie à produire.`,
+~ Isoler un logement → éteindre les veilles → préférer les transports en commun → choisir des appareils à bon rendement
+
+Chaque geste réduit la quantité d’énergie à produire.`,
           },
           questions: [
             ['Que devient l’énergie lors d’une conversion ?', ['Elle change de forme sans disparaître', 'Elle est détruite', 'Elle est créée', 'Elle reste identique'], 0, 'C’est le principe de conservation de l’énergie.'],
@@ -406,30 +463,36 @@ Isoler un logement, éteindre les appareils en veille, préférer les transports
           axe: 'Identifier différentes sources d’énergie et connaître quelques conversions',
           lecon: {
             titre: 'Produire de l’électricité, et en consommer moins',
-            cours: `## Produire de l’électricité
-La plupart des centrales fonctionnent sur le même principe : faire tourner une **turbine** qui entraîne un **alternateur**, lequel produit l’électricité. Ce qui change, c’est ce qui fait tourner la turbine.
-- **Thermique à flamme** : on brûle du charbon, du gaz ou du fioul pour produire de la vapeur.
-- **Nucléaire** : la chaleur vient de la fission de l’uranium.
-- **Hydraulique** : c’est l’eau d’un barrage qui pousse la turbine.
-- **Éolienne** : c’est le vent.
-- **Photovoltaïque** : exception — le panneau produit l’électricité **directement**, sans turbine.
+            cours: `La plupart des centrales fonctionnent sur le même principe. Ce qui change, c’est ce qui fait tourner la turbine.
+
+## Le principe commun
+~ Quelque chose fait tourner une TURBINE → la turbine entraîne un ALTERNATEUR → l’alternateur produit l’électricité
+
+## Ce qui fait tourner la turbine
+| La centrale | Ce qui entraîne la turbine |
+| **Thermique à flamme** | De la vapeur, produite en brûlant charbon, gaz ou fioul |
+| **Nucléaire** | De la vapeur, chauffée par la **fission** de l’uranium |
+| **Hydraulique** | L’eau d’un **barrage** |
+| **Éolienne** | Le **vent** |
+
+!> Le **photovoltaïque** est l’**exception** : le panneau produit l’électricité **directement**, sans turbine ni alternateur.
 
 ## Les impacts
-- Les centrales **thermiques à flamme** rejettent du **dioxyde de carbone**, principal gaz à effet de serre.
-- Le **nucléaire** n’en rejette presque pas mais produit des **déchets radioactifs** à stocker très longtemps.
-- Les **renouvelables** ont peu d’impact en fonctionnement, mais dépendent de la météo et occupent de l’espace.
+| La source | Son inconvénient principal |
+| **Thermique à flamme** | Elle rejette du **dioxyde de carbone**, principal gaz à effet de serre |
+| **Nucléaire** | Presque pas de CO₂, mais des **déchets radioactifs** à stocker très longtemps |
+| **Renouvelables** | Peu d’impact en fonctionnement, mais elles dépendent de la **météo** et occupent de l’espace |
 
 ## Le mix énergétique
-Aucune source ne convient à tout : on combine plusieurs moyens de production. C’est le **mix énergétique** d’un pays.
+> Aucune source ne convient à tout : on **combine** plusieurs moyens de production. C’est le **mix énergétique** d’un pays.
 
 ## Réduire sa consommation
-La meilleure énergie est celle qu’on ne consomme pas :
-- **isoler** les bâtiments — c’est le premier poste de consommation ;
-- éteindre les **veilles** des appareils ;
-- lire l’**étiquette énergie** avant d’acheter ;
-- privilégier le train, le vélo et la marche.
+1. **Isoler** les bâtiments — c’est le premier poste de consommation ;
+2. éteindre les **veilles** des appareils ;
+3. lire l’**étiquette énergie** avant d’acheter ;
+4. privilégier le train, le vélo et la marche.
 
-> Économiser l’énergie ne dépend pas seulement de la technique : c’est aussi une suite de choix quotidiens.`,
+> La meilleure énergie est celle qu’on ne consomme pas.`,
           },
           questions: [
             ['Quel élément produit l’électricité dans la plupart des centrales ?', ['L’alternateur, entraîné par une turbine', 'La chaudière', 'Le condenseur', 'Le transformateur'], 0, 'Seul le photovoltaïque s’en passe.'],
@@ -451,27 +514,39 @@ La meilleure énergie est celle qu’on ne consomme pas :
           axe: 'Identifier un signal et une information',
           lecon: {
             titre: 'Lumière et son : deux façons de transporter un message',
-            cours: `Un **signal** transporte une **information** d’un émetteur vers un récepteur.
+            cours: `La lumière traverse le vide, le son non. Toute la différence entre voir et entendre tient là.
 
 ## Le signal lumineux
 La lumière se propage en **ligne droite** dans un milieu transparent et homogène.
-- **Sources primaires** : elles produisent leur propre lumière (le Soleil, une lampe, une flamme).
-- **Objets diffusants** : ils ne font que renvoyer la lumière reçue (la Lune, un mur, ce cahier).
-On voit un objet quand la lumière qu’il émet ou diffuse **entre dans notre œil**.
-Sa vitesse est d’environ **300 000 km/s** — la plus grande vitesse connue.
+
+| La source | Ce qu’elle fait | Exemples |
+| **Primaire** | Elle **produit** sa propre lumière | Le Soleil, une lampe, une flamme |
+| **Diffusante** | Elle **renvoie** la lumière reçue | La Lune, un mur, ce cahier |
+
+!> On voit un objet quand la lumière qu’il émet ou diffuse **entre dans notre œil**. La Lune n’éclaire pas : elle renvoie.
+
+= Vitesse de la lumière : environ 300 000 km/s
 
 ## L’ombre
-Un objet opaque placé sur le trajet de la lumière crée une **ombre propre** (sa face non éclairée) et une **ombre portée** (sur le sol ou l’écran). C’est la propagation rectiligne qui l’explique.
+| L’ombre | Où elle est |
+| L’**ombre propre** | La face non éclairée de l’objet |
+| L’**ombre portée** | Sur le sol ou l’écran |
+
+C’est la **propagation rectiligne** qui l’explique.
 
 ## Le signal sonore
 Le son est produit par un objet qui **vibre**. Il se propage dans l’air, mais aussi dans l’eau et les solides.
-**Le son ne se propage PAS dans le vide** : il lui faut un milieu matériel. La lumière, elle, traverse le vide — c’est pourquoi on voit le Soleil sans entendre les explosions qui s’y produisent.
-Sa vitesse dans l’air est d’environ **340 m/s**, soit près d’un million de fois moins que la lumière.
 
-> C’est pourquoi on voit l’éclair AVANT d’entendre le tonnerre.
+!> **Le son ne se propage PAS dans le vide** : il lui faut un milieu matériel. La lumière, elle, traverse le vide — c’est pourquoi on voit le Soleil sans entendre les explosions qui s’y produisent.
+
+= Vitesse du son dans l’air : environ 340 m/s
+
+Soit près d’un million de fois moins que la lumière.
+
+> C’est pourquoi on **voit l’éclair avant d’entendre le tonnerre**.
 
 ## Le danger du bruit
-Un son trop fort ou trop long **détruit** les cellules de l’oreille interne, qui **ne se régénèrent pas**. La perte est définitive : on protège ses oreilles ou on les perd.`,
+!> Un son trop fort ou trop long **détruit** les cellules de l’oreille interne, et **elles ne se régénèrent pas**. La perte est **définitive**.`,
           },
           questions: [
             ['Comment la lumière se propage-t-elle dans un milieu transparent et homogène ?', ['En ligne droite', 'En cercle', 'En zigzag', 'Elle ne se propage pas'], 0, 'C’est ce qui explique les ombres.'],
@@ -489,28 +564,41 @@ Un son trop fort ou trop long **détruit** les cellules de l’oreille interne, 
           axe: 'Identifier un signal et une information',
           lecon: {
             titre: 'De la fumée au fil de verre',
-            cours: `## La chaîne de transmission
-Toute transmission suit le même schéma : **émetteur → canal → récepteur**. L’émetteur code l’information en signal, le canal la transporte, le récepteur la décode.
+            cours: `Émetteur, canal, récepteur : toute transmission suit le même schéma, du signal de fumée à la fibre optique.
+
+## La chaîne de transmission
+~ Émetteur (il code) → canal (il transporte) → récepteur (il décode)
 
 ## Une longue histoire
-Signaux de fumée, tambours, pigeons voyageurs, sémaphores, télégraphe, téléphone, radio, satellites, fibre optique : chaque progrès a augmenté la **vitesse**, la **distance** et la **quantité** d’information transmise.
+~ Signaux de fumée → tambours → pigeons voyageurs → sémaphores → télégraphe → téléphone → radio → satellites → fibre optique
+
+Chaque progrès a augmenté la **vitesse**, la **distance** et la **quantité** d’information transmise.
 
 ## Les supports d’aujourd’hui
-- **Le câble électrique** : l’information circule sous forme de courant.
-- **Les ondes** (radio, wifi, téléphonie) : elles se propagent dans l’air et le vide, sans fil.
-- **La fibre optique** : l’information voyage sous forme de **lumière** dans un fil de verre très fin. C’est le support le plus rapide et celui qui transporte le plus de données.
+| Le support | Sous quelle forme voyage l’information |
+| Le **câble électrique** | Un **courant** |
+| Les **ondes** — radio, wifi, téléphonie | Elles se propagent dans l’air et le vide, **sans fil** |
+| La **fibre optique** | De la **lumière**, dans un fil de verre très fin |
+
+> La fibre est le support le plus rapide, et celui qui transporte le plus de données.
 
 ## Le signal numérique
-Un ordinateur ne comprend que deux états, notés **0** et **1** : c’est le **binaire**. Un texte, une image, un son sont d’abord **convertis** en une suite de 0 et de 1, transmis, puis reconvertis à l’arrivée.
-L’unité de quantité d’information est l’**octet** (o), avec ses multiples : **ko**, **Mo**, **Go**.
+= Le binaire : deux états seulement, 0 et 1
 
-> Une photo, une chanson et un message ne diffèrent, pour le réseau, que par le nombre de 0 et de 1.
+~ Un texte, une image, un son → convertis en 0 et 1 → transmis → reconvertis à l’arrivée
+
+| L’unité | Ses multiples |
+| L’**octet** (o) | **ko**, **Mo**, **Go** |
+
+> Une photo, une chanson et un message ne diffèrent, pour le réseau, que par le **nombre** de 0 et de 1.
 
 ## Le stockage
-On conserve l’information sur un disque dur, une clé USB, une carte mémoire ou un serveur distant (le « cloud » — qui est en réalité l’ordinateur de quelqu’un d’autre).
+Disque dur, clé USB, carte mémoire, ou serveur distant — le « cloud ».
+
+!> Le « cloud » n’est pas un nuage : c’est l’**ordinateur de quelqu’un d’autre**.
 
 ## Un usage responsable
-Une information transmise peut être **copiée**, **conservée** et **rediffusée** sans qu’on le sache. Ce qu’on publie échappe vite à son auteur.`,
+!> Une information transmise peut être **copiée**, **conservée** et **rediffusée** sans qu’on le sache. Ce qu’on publie **échappe vite à son auteur**.`,
           },
           questions: [
             ['Quel est le schéma d’une transmission d’information ?', ['Émetteur → canal → récepteur', 'Récepteur → émetteur', 'Canal → émetteur → canal', 'Source → turbine → alternateur'], 0, 'L’émetteur code, le récepteur décode.'],

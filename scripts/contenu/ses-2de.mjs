@@ -120,21 +120,42 @@ DELETE FROM public.chapters c
           axe: 'Comment les économistes, les sociologues et les politistes raisonnent-ils et travaillent-ils ?',
           lecon: {
             titre: 'Des besoins illimités, des ressources qui ne le sont pas',
-            cours: `L’économie commence par un constat simple : nos besoins sont sans limite, les ressources disponibles ne le sont pas. Toute la discipline découle de cette **rareté**.
+            cours: `L'économie commence par un constat simple : nos besoins sont sans limite, les ressources disponibles ne le sont pas. Toute la discipline découle de cette rareté.
 
-## Choisir, c’est renoncer
-Comme les ressources sont rares, tout choix a un **coût d’opportunité** : ce à quoi on renonce en choisissant. Une heure passée à réviser est une heure qui n’est pas passée à travailler, et réciproquement. Les agents économiques sont supposés comparer les avantages et les coûts avant de décider.
+## Choisir, c'est renoncer
+| La notion | Sa définition |
+| La **rareté** | Les ressources sont limitées face à des besoins illimités |
+| Le **coût d'opportunité** | Ce à quoi on renonce en choisissant |
+
+> Une heure passée à réviser est une heure qui n'est pas passée à travailler, et réciproquement.
 
 ## Les agents et le circuit
-Les **ménages** consomment et fournissent du travail ; les **entreprises** produisent ; les **administrations publiques** produisent des services non marchands et redistribuent ; les banques financent ; le reste du monde échange. Ces agents sont reliés par des flux réels (biens, services, travail) et des flux monétaires qui vont en sens inverse : c’est le **circuit économique**.
+| L'agent | Son rôle |
+| Les **ménages** | Ils consomment et fournissent du travail |
+| Les **entreprises** | Elles produisent |
+| Les **administrations publiques** | Elles produisent des services non marchands et redistribuent |
+| Les **banques** | Elles financent |
+| Le **reste du monde** | Il échange |
 
-> Une économie, ce n’est pas une addition de décisions isolées : c’est un système où la dépense de l’un est le revenu de l’autre.
+Ces agents sont reliés par des **flux réels** — biens, services, travail — et des **flux monétaires** qui vont en sens inverse : c'est le **circuit économique**.
+
+> Une économie n'est pas une addition de décisions isolées : c'est un système où la dépense de l'un est le revenu de l'autre.
 
 ## Les trois grandes questions
-Que produire ? Comment produire ? Pour qui produire ? Selon les sociétés, la réponse vient du **marché**, de l’**État**, ou d’une combinaison des deux — c’est le cas de toutes les économies réelles, dites **mixtes**.
+| La question | Qui y répond |
+| **Que** produire ? | Le **marché**, l'**État**, ou les deux |
+| **Comment** produire ? | Idem |
+| **Pour qui** produire ? | Idem |
 
-## Comment travaille l’économiste
-Il construit des **modèles**, c’est-à-dire des représentations simplifiées de la réalité, formule des hypothèses, puis les confronte à des données statistiques. Il ne peut presque jamais faire d’expérience en laboratoire : il compare des situations, des pays et des périodes.`,
+Toutes les économies réelles sont **mixtes** : elles combinent les deux.
+
+## Comment travaille l'économiste
+| L'étape | Ce qu'elle est |
+| Le **modèle** | Une représentation simplifiée de la réalité |
+| Les **hypothèses** | Ce que le modèle suppose |
+| La **confrontation aux données** | Statistiques, comparaisons entre pays et périodes |
+
+> Il ne peut presque jamais faire d'expérience en laboratoire : il compare.`,
           },
           questions: [
             ['Qu’est-ce que la rareté en économie ?', ['Le fait que les ressources soient limitées face à des besoins illimités', 'La cherté d’un produit de luxe', 'La faiblesse de la production agricole', 'L’absence de concurrence'], 0, 'C’est le point de départ de toute la discipline.'],
@@ -152,21 +173,34 @@ Il construit des **modèles**, c’est-à-dire des représentations simplifiées
           axe: 'Comment les économistes, les sociologues et les politistes raisonnent-ils et travaillent-ils ?',
           lecon: {
             titre: 'Ce que la société fait à nos choix',
-            cours: `La sociologie part d’une idée dérangeante : ce que nous croyons choisir librement — nos goûts, nos amis, notre métier — dépend largement de notre position dans la société.
+            cours: `La sociologie part d'une idée dérangeante : ce que nous croyons choisir librement — nos goûts, nos amis, notre métier — dépend largement de notre position dans la société.
 
-## L’objet
-Le sociologue étudie les **faits sociaux** : des manières d’agir, de penser et de sentir extérieures à l’individu et dotées d’un pouvoir de contrainte, selon la formule d’**Émile Durkheim**. Le suicide, en apparence l’acte le plus intime, varie régulièrement selon la religion, le statut familial ou la période : c’est bien un fait social.
+## L'objet
+Le sociologue étudie les **faits sociaux** : des manières d'agir, de penser et de sentir **extérieures** à l'individu et dotées d'un **pouvoir de contrainte**, selon la formule d'**Émile Durkheim**.
+
+> Le suicide, en apparence l'acte le plus intime, varie régulièrement selon la religion, le statut familial ou la période : c'est bien un fait social.
 
 ## Les grands regards
-**Durkheim** insiste sur la contrainte sociale et l’intégration ; **Max Weber** part du sens que les individus donnent à leur action ; **Pierre Bourdieu** montre comment les héritages culturels reproduisent les positions sociales. Deux approches se répondent : le **holisme**, qui explique par le tout, et l’**individualisme méthodologique**, qui explique par l’agrégation des actions individuelles.
+| L'auteur | Ce qu'il met au centre |
+| **Durkheim** | La contrainte sociale et l'**intégration** |
+| **Max Weber** | Le **sens** que les individus donnent à leur action |
+| **Pierre Bourdieu** | Les héritages culturels qui **reproduisent** les positions sociales |
 
-> Rompre avec les prénotions, c’est refuser d’expliquer un fait social par « les gens sont comme ça ».
+| L'approche | Son principe |
+| Le **holisme** | Expliquer par le tout |
+| L'**individualisme méthodologique** | Expliquer par l'agrégation des actions individuelles |
+
+> Rompre avec les prénotions, c'est refuser d'expliquer un fait social par « les gens sont comme ça ».
 
 ## La méthode
-Le sociologue **rompt avec le sens commun**, construit son objet, puis recueille des données. Les **méthodes quantitatives** (questionnaires, statistiques publiques, enquêtes de l’Insee) mesurent et comparent. Les **méthodes qualitatives** (entretiens, observation, parfois participante) comprennent les logiques d’action.
+| Le type de méthode | Ses outils | Ce qu'elle permet |
+| **Quantitative** | Questionnaires, statistiques publiques, enquêtes de l'Insee | **Mesurer** et comparer |
+| **Qualitative** | Entretiens, observation, parfois participante | **Comprendre** les logiques d'action |
 
 ## Un exemple
-Deux élèves aux résultats identiques ne choisissent pas la même orientation selon le métier de leurs parents. Corrélation n’est pas causalité : il faut identifier les mécanismes — information disponible, coût perçu des études, autocensure, conseils reçus.`,
+Deux élèves aux résultats identiques ne choisissent pas la même orientation selon le métier de leurs parents.
+
+> Corrélation n'est pas causalité : il faut identifier les mécanismes — information disponible, coût perçu des études, autocensure, conseils reçus.`,
           },
           questions: [
             ['Comment Durkheim définit-il un fait social ?', ['Une manière d’agir extérieure à l’individu et qui exerce une contrainte', 'Une opinion partagée par la majorité', 'Un événement historique marquant', 'Une décision politique'], 0, 'Le fait social se reconnaît à sa régularité et à sa contrainte.'],
@@ -184,21 +218,43 @@ Deux élèves aux résultats identiques ne choisissent pas la même orientation 
           axe: 'Comment les économistes, les sociologues et les politistes raisonnent-ils et travaillent-ils ?',
           lecon: {
             titre: 'Qui décide, comment, et avec quelle légitimité',
-            cours: `La science politique étudie le **pouvoir** : comment il s’acquiert, s’exerce, se conteste. Elle observe les institutions, mais aussi les comportements — voter, militer, manifester, s’abstenir.
+            cours: `La science politique étudie le pouvoir : comment il s'acquiert, s'exerce, se conteste. Elle observe les institutions, mais aussi les comportements.
 
 ## Le pouvoir et sa légitimité
-Le pouvoir est la capacité d’obtenir d’autrui un comportement qu’il n’aurait pas eu spontanément. **Max Weber** distingue trois types de **domination légitime** : traditionnelle (la coutume, l’hérédité), charismatique (les qualités exceptionnelles prêtées à une personne), et **légale-rationnelle** (la règle écrite, la compétence, le concours) — la forme dominante dans les États modernes.
+Le pouvoir est la capacité d'obtenir d'autrui un comportement qu'il n'aurait pas eu spontanément.
 
-## L’État
-Weber le définit comme la communauté humaine qui revendique avec succès le **monopole de la violence physique légitime** sur un territoire donné. Il suppose un territoire, une population, une administration et une souveraineté.
+| Le type de **domination légitime** selon Weber | Ce qui la fonde |
+| **Traditionnelle** | La coutume, l'hérédité |
+| **Charismatique** | Les qualités exceptionnelles prêtées à une personne |
+| **Légale-rationnelle** | La règle écrite, la compétence, le concours |
 
-> Obéir à un chef parce qu’il est né chef, parce qu’il fascine, ou parce que la loi l’a désigné : trois mondes politiques différents.
+> La troisième est la forme dominante dans les États modernes.
+
+> Obéir à un chef parce qu'il est né chef, parce qu'il fascine, ou parce que la loi l'a désigné : trois mondes politiques différents.
+
+## L'État
+Weber le définit comme la communauté humaine qui revendique avec succès le **monopole de la violence physique légitime** sur un territoire donné.
+
+| Son élément constitutif | Ce qu'il apporte |
+| Un **territoire** | Une aire d'exercice |
+| Une **population** | Des sujets ou des citoyens |
+| Une **administration** | La continuité de l'action |
+| La **souveraineté** | Aucune autorité supérieure |
 
 ## Les objets du politiste
-Les institutions et la Constitution, les partis, les élections et la **sociologie électorale**, l’opinion publique et les sondages, les mobilisations, les politiques publiques. Un même vote s’explique par des variables lourdes — âge, diplôme, profession, territoire, religion — et par la conjoncture.
+| L'objet | Ce qu'il étudie |
+| Les institutions et la Constitution | Les règles du jeu |
+| Les partis, les élections | La **sociologie électorale** |
+| L'opinion publique et les sondages | Ce que pensent les gouvernés |
+| Les mobilisations | La contestation |
+| Les politiques publiques | Ce que l'État fait effectivement |
+
+> Un même vote s'explique par des **variables lourdes** — âge, diplôme, profession, territoire, religion — et par la conjoncture.
 
 ## La méthode
-Comme le sociologue, le politiste croise enquêtes quantitatives (résultats électoraux, sondages, panels) et travail qualitatif (entretiens avec des élus, observation de campagnes, archives). Il se méfie des sondages lus comme des prédictions : ce sont des estimations, assorties d’une marge d’erreur.`,
+Enquêtes quantitatives (résultats électoraux, sondages, panels) et travail qualitatif (entretiens avec des élus, observation de campagnes, archives).
+
+> Le politiste se méfie des sondages lus comme des prédictions : ce sont des **estimations**, assorties d'une marge d'erreur.`,
           },
           questions: [
             ['Comment Weber définit-il l’État ?', ['La communauté qui détient le monopole de la violence physique légitime sur un territoire', 'L’ensemble des fonctionnaires', 'Le gouvernement en exercice', 'La nation'], 0, 'Territoire, population, administration et souveraineté.'],
@@ -220,21 +276,34 @@ Comme le sociologue, le politiste croise enquêtes quantitatives (résultats él
           axe: 'Comment crée-t-on des richesses et comment les mesure-t-on ?',
           lecon: {
             titre: 'Qui produit, et dans quel but',
-            cours: `Produire, ce n’est pas seulement fabriquer des objets dans une usine. C’est combiner des ressources pour créer des biens ou des services — et cela se fait dans des organisations très différentes.
+            cours: `Produire, ce n'est pas seulement fabriquer des objets dans une usine. C'est combiner des ressources pour créer des biens ou des services.
 
 ## Trois types de producteurs
-Les **entreprises privées** produisent des biens et services **marchands**, vendus à un prix couvrant au moins le coût de production, dans le but de faire du **profit**. Les **administrations publiques** produisent des services **non marchands**, gratuits ou quasi gratuits, financés par l’impôt : école, justice, police, une grande partie de la santé. Les **associations** et organisations à but non lucratif produisent aussi, sans redistribuer de bénéfices.
+| Le producteur | Ce qu'il produit | Son but |
+| Les **entreprises privées** | Des biens et services **marchands** | Le **profit** |
+| Les **administrations publiques** | Des services **non marchands**, financés par l'impôt | Le service : école, justice, police, santé |
+| Les **associations** | Biens et services, sans redistribuer de bénéfices | Un projet |
 
 ## Marchand et non marchand
-Le critère retenu par la comptabilité nationale est simple : un service est non marchand quand il est fourni gratuitement ou à un prix inférieur à la moitié de son coût de production.
+| Le critère de la comptabilité nationale | Sa règle |
+| Un service est **non marchand** | S'il est fourni gratuitement, ou à un prix inférieur à la **moitié** de son coût de production |
 
-> L’heure de cours d’un professeur n’a pas de prix de marché. Elle est pourtant une production, et elle est comptée dans le PIB.
+> L'heure de cours d'un professeur n'a pas de prix de marché. Elle est pourtant une production, et elle est comptée dans le PIB.
 
 ## La diversité des entreprises
-Par la **taille** : microentreprises, PME, entreprises de taille intermédiaire, grandes entreprises. Par le **secteur** : primaire (agriculture, mines), secondaire (industrie, construction), tertiaire (services). Par le **statut juridique** : entreprise individuelle, société, coopérative. Les très petites entreprises sont les plus nombreuses ; les grandes concentrent l’essentiel du chiffre d’affaires.
+| Le critère | Les catégories |
+| La **taille** | Microentreprises, PME, ETI, grandes entreprises |
+| Le **secteur** | Primaire (agriculture, mines), secondaire (industrie, construction), tertiaire (services) |
+| Le **statut juridique** | Entreprise individuelle, société, coopérative |
 
-## L’économie sociale et solidaire
-Coopératives, mutuelles, associations, fondations : elles emploient environ un salarié privé sur dix en France. Leur particularité est la gouvernance — une personne, une voix dans les coopératives — et la limitation du partage des bénéfices.`,
+> Les très petites entreprises sont les plus **nombreuses** ; les grandes concentrent l'essentiel du **chiffre d'affaires**.
+
+## L'économie sociale et solidaire
+| Le trait | Son contenu |
+| Ses formes | Coopératives, mutuelles, associations, fondations |
+| Son poids | Environ un salarié privé sur dix en France |
+| Sa **gouvernance** | Une personne, une voix dans les coopératives |
+| Ses bénéfices | Leur partage est limité |`,
           },
           questions: [
             ['Quel est le but principal d’une entreprise privée ?', ['Réaliser un profit en vendant sa production', 'Fournir un service gratuit', 'Redistribuer les revenus', 'Employer le plus de personnes possible'], 0, 'Elle produit des biens et services marchands.'],
@@ -252,21 +321,41 @@ Coopératives, mutuelles, associations, fondations : elles emploient environ un 
           axe: 'Comment crée-t-on des richesses et comment les mesure-t-on ?',
           lecon: {
             titre: 'Travail, capital, et la manière de les combiner',
-            cours: `Toute production suppose des **facteurs de production** : ce que l’on met en œuvre pour produire. On en distingue traditionnellement deux, auxquels s’ajoutent des ressources naturelles de plus en plus contraintes.
+            cours: `Toute production suppose des facteurs de production : ce que l'on met en œuvre pour produire.
 
-## Le travail
-C’est l’activité humaine, physique et intellectuelle, mise au service de la production. On le mesure en nombre d’actifs occupés ou en heures travaillées. Sa qualité dépend de la formation, de l’expérience et de la santé : c’est le **capital humain**.
+## Les deux facteurs
+| Le facteur | Ce qu'il est | Comment on le mesure |
+| Le **travail** | L'activité humaine, physique et intellectuelle | Nombre d'actifs occupés, ou heures travaillées |
+| Le **capital** | Les moyens matériels et immatériels | Voir ci-dessous |
 
-## Le capital
-Le **capital fixe** est l’ensemble des biens durables utilisés plus d’un an : machines, bâtiments, logiciels, véhicules. Il s’use et se déprécie, d’où l’amortissement. Le **capital circulant** — matières premières, énergie, consommations intermédiaires — est détruit ou transformé au cours de la production.
+La qualité du travail dépend de la formation, de l'expérience et de la santé : c'est le **capital humain**.
 
-> Une entreprise ne choisit pas seulement combien produire : elle choisit avec quoi. Remplacer des heures de travail par une machine est une décision économique.
+## Deux sortes de capital
+| Le capital | Sa durée d'usage | Ses exemples |
+| **Fixe** | Plus d'un an ; il s'use, d'où l'amortissement | Machines, bâtiments, logiciels, véhicules |
+| **Circulant** | Détruit ou transformé au cours de la production | Matières premières, énergie, consommations intermédiaires |
+
+> Une entreprise ne choisit pas seulement combien produire : elle choisit **avec quoi**. Remplacer des heures de travail par une machine est une décision économique.
 
 ## Combiner les facteurs
-La **combinaison productive** peut être plus **intensive en travail** ou plus **intensive en capital**. Elle dépend du coût relatif des facteurs, de la technologie disponible et de la nature du produit. Une même production peut se faire de plusieurs façons : c’est ce qu’on appelle la **substituabilité** des facteurs ; quand ils doivent aller ensemble, ils sont **complémentaires**.
+| La combinaison | Son caractère |
+| Intensive en **travail** | Beaucoup de main-d'œuvre, peu de machines |
+| Intensive en **capital** | L'inverse |
+
+Elle dépend du coût relatif des facteurs, de la technologie disponible et de la nature du produit.
+
+| La relation entre facteurs | Ce qu'elle signifie |
+| **Substituabilité** | On peut remplacer l'un par l'autre |
+| **Complémentarité** | Ils doivent aller ensemble |
 
 ## La productivité
-La **productivité du travail** rapporte la production à la quantité de travail utilisée (par tête ou par heure). Elle augmente grâce au progrès technique, à la formation, à l’organisation du travail et à la division des tâches. Ses gains permettent de baisser les prix, d’augmenter les salaires, les profits, ou de réduire le temps de travail.`,
+La **productivité du travail** rapporte la production à la quantité de travail utilisée, par tête ou par heure.
+
+| Ce qui la fait augmenter | Ce que ses gains permettent |
+| Le progrès technique | Baisser les prix |
+| La formation | Augmenter les salaires |
+| L'organisation du travail | Augmenter les profits |
+| La division des tâches | Réduire le temps de travail |`,
           },
           questions: [
             ['Quels sont les deux principaux facteurs de production ?', ['Le travail et le capital', 'Le capital et la monnaie', 'Le travail et la terre uniquement', 'Le profit et le salaire'], 0, 'Auxquels s’ajoutent des ressources naturelles.'],
@@ -284,23 +373,39 @@ La **productivité du travail** rapporte la production à la quantité de travai
           axe: 'Comment crée-t-on des richesses et comment les mesure-t-on ?',
           lecon: {
             titre: 'Chiffre d’affaires n’est pas richesse créée',
-            cours: `Une entreprise qui vend pour un million d’euros n’a pas créé un million de richesse : elle a acheté à d’autres une partie de ce qu’elle vend. La richesse qu’elle crée vraiment s’appelle la **valeur ajoutée**.
+            cours: `Une entreprise qui vend pour un million d'euros n'a pas créé un million de richesse : elle a acheté à d'autres une partie de ce qu'elle vend.
 
-## Du chiffre d’affaires à la valeur ajoutée
-Le **chiffre d’affaires** est le total des ventes. Les **consommations intermédiaires** sont les biens et services achetés à d’autres entreprises et détruits ou transformés dans la production : matières premières, énergie, transport, services d’entretien.
-
-**Valeur ajoutée = chiffre d’affaires − consommations intermédiaires.**
+## Du chiffre d'affaires à la valeur ajoutée
+| La grandeur | Sa définition |
+| Le **chiffre d'affaires** | Le total des ventes |
+| Les **consommations intermédiaires** | Les biens et services achetés à d'autres et détruits ou transformés : matières premières, énergie, transport, entretien |
+| La **valeur ajoutée** | Chiffre d'affaires − consommations intermédiaires |
 
 ## Un exemple chiffré
-Une boulangerie vend pour 300 000 euros de pain par an. Elle achète 90 000 euros de farine, de levure et d’énergie. Sa valeur ajoutée est de 210 000 euros : c’est ce que son travail et ses machines ont ajouté à ce qu’elle a acheté.
+| Le poste | Le montant |
+| Ventes de pain | 300 000 € |
+| Farine, levure, énergie | − 90 000 € |
+| **Valeur ajoutée** | **210 000 €** |
 
-> Additionner les chiffres d’affaires de toutes les entreprises compterait la farine plusieurs fois. Additionner les valeurs ajoutées, non.
+> C'est ce que le travail et les machines de la boulangerie ont ajouté à ce qu'elle a acheté.
+
+> Additionner les chiffres d'affaires de toutes les entreprises compterait la farine plusieurs fois. Additionner les valeurs ajoutées, non.
 
 ## Le partage de la valeur ajoutée
-Elle se répartit entre les **salaires et cotisations** versés aux salariés, les **impôts** liés à la production, les **intérêts** versés aux prêteurs, les **dividendes** versés aux propriétaires, et ce qui reste pour **investir** — l’autofinancement. Ce partage est un enjeu de conflit permanent.
+| Le bénéficiaire | Ce qu'il reçoit |
+| Les **salariés** | Salaires et cotisations |
+| L'**État** | Les impôts liés à la production |
+| Les **prêteurs** | Les intérêts |
+| Les **propriétaires** | Les dividendes |
+| L'**entreprise** | Ce qui reste pour investir : l'autofinancement |
+
+> Ce partage est un enjeu de conflit permanent.
 
 ## Pourquoi cet indicateur compte
-La valeur ajoutée sert à mesurer la contribution réelle de chaque entreprise à la production nationale. Sa somme, pour toutes les unités productives d’un pays, est la base du calcul du **PIB**. La TVA, elle, porte son nom : c’est une taxe assise sur cette valeur ajoutée.`,
+| Son usage | Ce qu'il permet |
+| Mesurer la contribution réelle de chaque entreprise | Sans double compte |
+| Calculer le **PIB** | En sommant toutes les valeurs ajoutées d'un pays |
+| Asseoir la **TVA** | La taxe porte son nom, et son assiette |`,
           },
           questions: [
             ['Comment calcule-t-on la valeur ajoutée d’une entreprise ?', ['Chiffre d’affaires moins consommations intermédiaires', 'Chiffre d’affaires moins salaires', 'Bénéfice moins impôts', 'Ventes moins investissements'], 0, 'C’est la richesse réellement créée par l’entreprise.'],
@@ -318,21 +423,37 @@ La valeur ajoutée sert à mesurer la contribution réelle de chaque entreprise 
           axe: 'Comment crée-t-on des richesses et comment les mesure-t-on ?',
           lecon: {
             titre: 'Ce que le PIB compte, et ce qu’il oublie',
-            cours: `Le **produit intérieur brut** est l’indicateur le plus utilisé au monde pour mesurer l’activité d’un pays. C’est aussi l’un des plus critiqués, et pour de bonnes raisons.
+            cours: `Le produit intérieur brut est l'indicateur le plus utilisé au monde pour mesurer l'activité d'un pays. C'est aussi l'un des plus critiqués.
 
 ## La définition
-Le PIB est la **somme des valeurs ajoutées** produites par toutes les unités résidentes d’un territoire pendant un an, à laquelle on ajoute la TVA et les droits de douane. Intérieur : ce qui est produit sur le territoire, quelle que soit la nationalité du producteur.
+Le PIB est la **somme des valeurs ajoutées** produites par toutes les unités résidentes d'un territoire pendant un an, plus la TVA et les droits de douane.
 
-## PIB en volume et par habitant
-Le **PIB en valeur** est mesuré aux prix courants ; il augmente quand les prix augmentent. Le **PIB en volume** neutralise l’inflation : c’est lui qui sert à mesurer la croissance. Le **PIB par habitant** rapporte la production à la population, ce qui permet des comparaisons entre pays — sans rien dire de la répartition.
+> **Intérieur** : ce qui est produit **sur le territoire**, quelle que soit la nationalité du producteur.
 
-> Un accident de la route, une marée noire, une nuit d’hôpital augmentent le PIB. Le travail d’un parent au foyer ne l’augmente pas.
+## Trois façons de le lire
+| Le PIB | Ce qu'il mesure | Son usage |
+| En **valeur** | Aux prix courants | Il augmente quand les prix augmentent |
+| En **volume** | Inflation neutralisée | C'est lui qui mesure la **croissance** |
+| **Par habitant** | Rapporté à la population | Il permet de comparer les pays — sans rien dire de la répartition |
 
-## Ce qu’il ne compte pas
-Le **travail domestique** et le bénévolat, l’économie **informelle** et illégale, la dégradation de l’environnement, l’épuisement des ressources, les inégalités, la santé, le temps libre. Le PIB mesure une activité, pas un bien-être.
+## Ce qu'il ne compte pas
+| L'oubli | Ce qu'il masque |
+| Le **travail domestique** et le bénévolat | Une production réelle, non rémunérée |
+| L'économie **informelle** et illégale | Une part de l'activité |
+| La dégradation de l'**environnement** | Elle n'est pas déduite |
+| L'épuisement des **ressources** | Le capital naturel consommé |
+| Les **inégalités**, la santé, le temps libre | Le bien-être |
+
+> Un accident de la route, une marée noire, une nuit d'hôpital **augmentent** le PIB. Le travail d'un parent au foyer ne l'augmente pas.
 
 ## Les indicateurs complémentaires
-L’**IDH** ajoute santé et éducation ; l’**empreinte écologique** mesure la pression sur la biosphère ; l’indice de Gini mesure les inégalités ; des indicateurs de bien-être ou d’espérance de vie en bonne santé complètent le tableau. Aucun ne remplace le PIB : ils se lisent ensemble.`,
+| L'indicateur | Ce qu'il ajoute |
+| L'**IDH** | Santé et éducation |
+| L'**empreinte écologique** | La pression sur la biosphère |
+| L'indice de **Gini** | Les inégalités |
+| L'espérance de vie **en bonne santé** | La qualité des années vécues |
+
+> Aucun ne remplace le PIB : ils se lisent **ensemble**.`,
           },
           questions: [
             ['Comment se calcule le PIB ?', ['Par la somme des valeurs ajoutées des unités résidentes', 'Par la somme des chiffres d’affaires', 'Par la somme des salaires', 'Par le total des exportations'], 0, 'On y ajoute la TVA et les droits de douane.'],
@@ -350,21 +471,40 @@ L’**IDH** ajoute santé et éducation ; l’**empreinte écologique** mesure l
           axe: 'Comment crée-t-on des richesses et comment les mesure-t-on ?',
           lecon: {
             titre: 'Deux siècles à peine, et pas pour tout le monde',
-            cours: `À l’échelle de l’histoire humaine, la croissance économique est une nouveauté. Pendant des millénaires, la production a stagné ou progressé très lentement. Ce n’est plus le cas depuis le XIXe siècle.
+            cours: `À l'échelle de l'histoire humaine, la croissance économique est une nouveauté. Pendant des millénaires, la production a stagné ou progressé très lentement.
 
-## Définir la croissance
-La **croissance économique** est l’augmentation durable de la production, mesurée par la variation du **PIB en volume**. Elle se distingue de l’**expansion**, hausse de courte durée, et du **développement**, qui inclut les transformations sociales et l’amélioration des conditions de vie.
+## Trois mots à distinguer
+| Le mot | Sa définition |
+| La **croissance** | L'augmentation **durable** de la production, mesurée par le PIB en volume |
+| L'**expansion** | Une hausse de **courte durée** |
+| Le **développement** | Elle inclut les transformations sociales et l'amélioration des conditions de vie |
 
 ## Un phénomène récent
-Elle démarre avec la **révolution industrielle**, en Angleterre à la fin du XVIIIe siècle, puis se diffuse. Les **Trente Glorieuses** (1945-1975) constituent en France une période exceptionnelle, avec des taux annuels autour de 5 %. Depuis, la croissance des pays anciennement industrialisés est plus faible.
+| La période | Son rythme |
+| Avant le XIXe siècle | Une production quasi stagnante |
+| La **révolution industrielle**, dès la fin du XVIIIe en Angleterre | Le démarrage |
+| Les **Trente Glorieuses**, 1945-1975 | Environ **5 %** par an en France |
+| Depuis 1975 | Une croissance nettement plus faible dans les pays anciennement industrialisés |
 
-> Un taux de 2 % par an double la production en trente-cinq ans. La croissance est une affaire d’intérêts composés.
+> Un taux de 2 % par an double la production en trente-cinq ans. La croissance est une affaire d'intérêts composés.
 
 ## Inégal
-La croissance n’a pas concerné toutes les régions au même moment. L’Europe et l’Amérique du Nord d’abord, le Japon ensuite, puis les **pays émergents** — Chine, Inde, Brésil, Asie du Sud-Est — depuis quelques décennies. Une partie de l’Afrique subsaharienne reste à l’écart, ce qui creuse les écarts de niveau de vie.
+| La région | Son moment de décollage |
+| Europe, Amérique du Nord | Le XIXe siècle |
+| **Japon** | Fin du XIXe, puis après 1945 |
+| Pays **émergents** — Chine, Inde, Brésil, Asie du Sud-Est | Les dernières décennies |
+| Une partie de l'**Afrique subsaharienne** | Encore à l'écart |
 
 ## Irrégulier
-Les **fluctuations économiques** alternent phases d’expansion et de **récession** — deux trimestres consécutifs de recul du PIB — voire de **dépression**, comme après 1929. Crises pétrolières de 1973 et 1979, crise financière de 2008, crise sanitaire de 2020 : le rythme n’est jamais régulier.`,
+| Le terme | Sa définition |
+| Les **fluctuations** | L'alternance d'expansion et de ralentissement |
+| La **récession** | Deux trimestres consécutifs de recul du PIB |
+| La **dépression** | Un recul durable et profond, comme après 1929 |
+
+| Le choc | Sa date |
+| Chocs pétroliers | 1973 et 1979 |
+| Crise financière | 2008 |
+| Crise sanitaire | 2020 |`,
           },
           questions: [
             ['Comment mesure-t-on la croissance économique ?', ['Par la variation du PIB en volume', 'Par la variation des prix', 'Par le nombre d’emplois créés', 'Par la hausse des exportations'], 0, 'En volume, pour neutraliser l’inflation.'],
@@ -382,21 +522,38 @@ Les **fluctuations économiques** alternent phases d’expansion et de **récess
           axe: 'Comment crée-t-on des richesses et comment les mesure-t-on ?',
           lecon: {
             titre: 'Produire toujours plus sur une planète finie',
-            cours: `La croissance suppose de mobiliser des ressources et de rejeter des déchets. Or la planète est finie : c’est le cœur du débat écologique contemporain.
+            cours: `La croissance suppose de mobiliser des ressources et de rejeter des déchets. Or la planète est finie : c'est le cœur du débat écologique contemporain.
 
 ## Le constat
-Épuisement des **ressources non renouvelables** (pétrole, gaz, métaux), surexploitation des renouvelables (poissons, forêts, eau), **pollutions**, effondrement de la **biodiversité** et **réchauffement climatique** dû aux gaz à effet de serre. Le rapport Meadows, dès 1972, alertait sur les limites de la croissance.
+| Le problème | Sa forme |
+| L'épuisement des ressources **non renouvelables** | Pétrole, gaz, métaux |
+| La surexploitation des **renouvelables** | Poissons, forêts, eau |
+| Les **pollutions** | Air, eau, sols |
+| L'effondrement de la **biodiversité** | Extinctions accélérées |
+| Le **réchauffement climatique** | Dû aux gaz à effet de serre |
+
+Le rapport Meadows, dès **1972**, alertait sur les limites de la croissance.
 
 ## Externalités et biens communs
-Une **externalité négative** est un effet non payé qu’une activité impose à autrui : une usine qui pollue une rivière n’en supporte pas le coût. L’atmosphère et les océans sont des **biens communs**, que chacun a intérêt à surexploiter et personne à préserver seul : la seule loi du marché ne suffit donc pas.
+| La notion | Sa définition | Son exemple |
+| L'**externalité négative** | Un effet non payé qu'une activité impose à autrui | Une usine qui pollue une rivière sans en supporter le coût |
+| Le **bien commun** | Chacun a intérêt à le surexploiter, personne à le préserver seul | L'atmosphère, les océans |
 
-> Un prix qui ne compte pas la pollution est un prix qui ment sur ce que coûte le produit.
+> Un prix qui ne compte pas la pollution est un prix qui ment sur ce que coûte le produit. La seule loi du marché ne suffit donc pas.
 
 ## Les réponses possibles
-Réglementer (normes, interdictions, quotas), **taxer** les pollutions selon le principe pollueur-payeur, créer des **marchés de quotas d’émission**, subventionner les alternatives, informer et labelliser. En Europe, le marché carbone et les normes d’émission relèvent de cette panoplie.
+| L'instrument | Son principe |
+| **Réglementer** | Normes, interdictions, quotas |
+| **Taxer** | Le principe **pollueur-payeur** |
+| Créer un **marché de quotas** | Plafonner les émissions et laisser s'échanger les droits |
+| **Subventionner** les alternatives | Rendre le propre plus compétitif |
+| **Informer**, labelliser | Éclairer le choix du consommateur |
 
 ## Trois positions dans le débat
-La **croissance verte** parie sur le découplage entre production et pression environnementale grâce au progrès technique. Le **développement durable**, défini en 1987 comme celui qui répond aux besoins présents sans compromettre ceux des générations futures, cherche l’équilibre. La **décroissance** conteste la possibilité même d’un découplage suffisant.`,
+| La position | Son pari |
+| La **croissance verte** | Un **découplage** entre production et pression environnementale, grâce au progrès technique |
+| Le **développement durable** | Défini en 1987 : répondre aux besoins présents sans compromettre ceux des générations futures |
+| La **décroissance** | Elle conteste la possibilité même d'un découplage suffisant |`,
           },
           questions: [
             ['Qu’est-ce qu’une externalité négative ?', ['Un effet non payé qu’une activité impose à autrui', 'Une taxe sur la pollution', 'Un coût de production élevé', 'Une importation polluante'], 0, 'La pollution d’une rivière par une usine en est l’exemple type.'],
@@ -417,21 +574,46 @@ La **croissance verte** parie sur le découplage entre production et pression en
           axe: 'Comment se forment les prix sur un marché ?',
           lecon: {
             titre: 'Un lieu, pas forcément une place',
-            cours: `Un **marché** n’est pas d’abord un endroit : c’est la rencontre d’une **offre** et d’une **demande** qui aboutit à un échange et à un prix. Il peut tenir sur une place de village comme dans un réseau informatique mondial.
+            cours: `Un marché n'est pas d'abord un endroit : c'est la rencontre d'une offre et d'une demande qui aboutit à un échange et à un prix.
 
-## L’échange marchand
-Il suppose trois conditions : des **droits de propriété** clairement définis et protégés, une **monnaie** qui sert d’unité de compte et de moyen de paiement, et des **institutions** — contrats, tribunaux, normes — qui garantissent que la parole donnée sera tenue. Sans confiance, pas d’échange.
+## Les conditions de l'échange marchand
+| La condition | Ce qu'elle assure |
+| Des **droits de propriété** définis et protégés | On sait qui vend quoi |
+| Une **monnaie** | Unité de compte et moyen de paiement |
+| Des **institutions** — contrats, tribunaux, normes | La parole donnée sera tenue |
+
+> Sans confiance, pas d'échange.
 
 ## Une grande diversité
-Marchés de **biens et services**, marché du **travail**, marchés **financiers**, marché des changes, marchés de matières premières. Marchés **physiques** ou **dématérialisés** — les plateformes en ligne mettent en relation des millions d’offreurs et de demandeurs sans lieu commun.
+| Le marché | Ce qui s'y échange |
+| Des **biens et services** | Produits de consommation, prestations |
+| Du **travail** | La force de travail contre un salaire |
+| **Financier** | Actions, obligations |
+| Des **changes** | Les monnaies entre elles |
+| Des **matières premières** | Pétrole, blé, métaux |
 
-> Une plateforme de covoiturage ne transporte personne : elle crée un marché là où il n’y en avait pas.
+| Sa forme | Son support |
+| **Physique** | Une halle, une place, une salle de marché |
+| **Dématérialisé** | Une plateforme en ligne, sans lieu commun |
+
+> Une plateforme de covoiturage ne transporte personne : elle crée un marché là où il n'y en avait pas.
 
 ## Les structures de marché
-La **concurrence parfaite** suppose de nombreux offreurs et demandeurs, des produits homogènes, une information parfaite, la libre entrée et sortie. C’est un modèle théorique. La réalité connaît le **monopole** (un seul offreur), l’**oligopole** (quelques-uns), la **concurrence monopolistique** (des produits différenciés par la marque ou la qualité).
+| La structure | Le nombre d'offreurs | Le produit |
+| **Concurrence parfaite** | Très nombreux | Homogène ; information parfaite, libre entrée et sortie |
+| **Monopole** | Un seul | — |
+| **Oligopole** | Quelques-uns | — |
+| **Concurrence monopolistique** | Nombreux | **Différencié** par la marque ou la qualité |
+
+La concurrence parfaite est un modèle **théorique**.
 
 ## Encadrer les marchés
-Les États et l’Union européenne surveillent la **concurrence** : interdiction des ententes sur les prix, contrôle des concentrations, sanction des abus de position dominante. Certaines activités sont réglementées, d’autres soustraites au marché — on ne vend légalement ni organes, ni voix électorales.`,
+| Ce que surveillent États et Union européenne | Ce qui est sanctionné |
+| Les **ententes** sur les prix | Un accord entre concurrents |
+| Les **concentrations** | Un rachat qui réduit trop la concurrence |
+| Les **abus de position dominante** | L'usage d'un pouvoir de marché pour évincer |
+
+> Certaines activités sont soustraites au marché : on ne vend légalement ni organes, ni voix électorales.`,
           },
           questions: [
             ['Qu’est-ce qu’un marché en économie ?', ['La rencontre d’une offre et d’une demande aboutissant à un prix', 'Un lieu physique de vente', 'Un magasin', 'Une entreprise en situation de monopole'], 0, 'Il peut être totalement dématérialisé.'],
@@ -449,21 +631,41 @@ Les États et l’Union européenne surveillent la **concurrence** : interdictio
           axe: 'Comment se forment les prix sur un marché ?',
           lecon: {
             titre: 'Le prix qui met tout le monde d’accord',
-            cours: `Sur un marché concurrentiel, le prix n’est décidé par personne en particulier : il résulte de la confrontation entre ce que les vendeurs veulent vendre et ce que les acheteurs veulent acheter.
+            cours: `Sur un marché concurrentiel, le prix n'est décidé par personne en particulier : il résulte de la confrontation entre ce que les vendeurs veulent vendre et ce que les acheteurs veulent acheter.
 
 ## Les deux courbes
-La **demande** diminue quand le prix augmente : la courbe est décroissante. L’**offre** augmente quand le prix augmente, car produire devient plus rentable : la courbe est croissante. Ce sont des quantités souhaitées à chaque prix, pas des quantités échangées.
+| La courbe | Son sens | Pourquoi |
+| La **demande** | **Décroissante** | Elle diminue quand le prix augmente |
+| L'**offre** | **Croissante** | Produire devient plus rentable quand le prix monte |
 
-## L’équilibre
-Le **prix d’équilibre** est celui pour lequel la quantité offerte égale la quantité demandée. Au-dessus, l’offre excède la demande : les invendus s’accumulent et poussent le prix à la baisse. En dessous, la demande excède l’offre : la pénurie pousse le prix à la hausse. Le marché est dit **autorégulateur**.
+> Ce sont des quantités **souhaitées** à chaque prix, pas des quantités échangées.
 
-> Le prix n’est pas seulement un montant : c’est une information. Il dit aux producteurs où produire et aux consommateurs à quoi renoncer.
+## L'équilibre
+| La situation | Ce qui se passe | L'effet sur le prix |
+| Prix **au-dessus** de l'équilibre | L'offre excède la demande : invendus | Il **baisse** |
+| Prix **au-dessous** | La demande excède l'offre : pénurie | Il **monte** |
+| Prix d'**équilibre** | Quantité offerte = quantité demandée | Il se stabilise |
+
+Le marché est dit **autorégulateur**.
+
+> Le prix n'est pas seulement un montant : c'est une **information**. Il dit aux producteurs où produire et aux consommateurs à quoi renoncer.
 
 ## Ce qui déplace les courbes
-Un changement de prix fait se **déplacer le long** de la courbe. En revanche, une hausse du revenu, une mode, un produit substituable moins cher **déplacent la courbe de demande** ; un progrès technique, une baisse du coût des matières premières ou une taxe **déplacent la courbe d’offre**. À la clé, un nouvel équilibre.
+| Le changement | Son effet |
+| Le **prix** lui-même | On se **déplace le long** de la courbe |
+| Hausse du revenu, mode, substitut moins cher | La **courbe de demande** se déplace |
+| Progrès technique, baisse du coût des matières, taxe | La **courbe d'offre** se déplace |
 
-## L’élasticité
-L’**élasticité-prix de la demande** mesure la sensibilité des quantités demandées au prix. Elle est faible pour les produits de première nécessité — on achète du pain même s’il augmente — et forte pour les biens facilement remplaçables. Elle explique pourquoi une taxe sur le tabac rapporte beaucoup et fait peu baisser la consommation à court terme.`,
+À la clé, un nouvel équilibre.
+
+## L'élasticité
+L'**élasticité-prix de la demande** mesure la sensibilité des quantités demandées au prix.
+
+| Le bien | Son élasticité | Ce qui se passe si le prix monte |
+| De première nécessité, comme le pain | **Faible** | On achète presque autant |
+| Facilement remplaçable | **Forte** | On se reporte sur autre chose |
+
+> Elle explique pourquoi une taxe sur le tabac rapporte beaucoup et fait peu baisser la consommation à court terme.`,
           },
           questions: [
             ['Comment évolue la demande quand le prix augmente ?', ['Elle diminue', 'Elle augmente', 'Elle reste constante', 'Elle devient nulle'], 0, 'La courbe de demande est décroissante.'],
@@ -481,21 +683,39 @@ L’**élasticité-prix de la demande** mesure la sensibilité des quantités de
           axe: 'Comment se forment les prix sur un marché ?',
           lecon: {
             titre: 'Quand le prix ne dit pas toute la vérité',
-            cours: `Le marché coordonne efficacement des millions de décisions — mais pas toujours. Face aux dégâts environnementaux, il produit des résultats que personne n’a voulus : c’est une **défaillance de marché**.
+            cours: `Le marché coordonne efficacement des millions de décisions — mais pas toujours. Face aux dégâts environnementaux, il produit des résultats que personne n'a voulus.
 
 ## Le problème
-Une entreprise qui rejette du dioxyde de carbone ne paie pas le coût du réchauffement qu’elle contribue à provoquer. Ce coût est supporté par tous : c’est une **externalité négative**. Le prix du produit est donc trop bas, la quantité produite trop élevée.
+| L'étape du raisonnement | Ce qui se passe |
+| Une entreprise rejette du dioxyde de carbone | Elle ne paie pas le coût du réchauffement |
+| Ce coût est supporté par tous | C'est une **externalité négative** |
+| Le prix du produit est donc **trop bas** | La quantité produite est **trop élevée** |
+
+C'est une **défaillance de marché**.
 
 ## Trois instruments
-La **réglementation** interdit ou plafonne : normes d’émission, interdiction de certains pesticides, zones à faibles émissions. La **taxation** renchérit le comportement polluant selon le principe **pollueur-payeur** : taxe carbone, malus automobile. Le **marché de quotas** fixe un plafond d’émissions et laisse les entreprises s’échanger des droits, le prix du quota s’établissant par le marché lui-même.
+| L'instrument | Son principe | Un exemple |
+| La **réglementation** | Interdire ou plafonner | Normes d'émission, pesticides interdits, zones à faibles émissions |
+| La **taxation** | Renchérir le comportement polluant, selon le **pollueur-payeur** | Taxe carbone, malus automobile |
+| Le **marché de quotas** | Fixer un plafond et laisser s'échanger les droits | Le marché carbone européen |
 
-> Réglementer, c’est interdire ; taxer, c’est renchérir ; échanger des quotas, c’est fixer la quantité et laisser le prix suivre.
+> Réglementer, c'est interdire ; taxer, c'est renchérir ; échanger des quotas, c'est fixer la quantité et laisser le prix suivre.
 
 ## Comparer les instruments
-La réglementation est simple à comprendre mais peu souple et coûteuse à contrôler. La taxe est efficace et rapporte des recettes, mais son incidence peut être **régressive** — elle pèse plus lourd sur les ménages modestes. Le marché de quotas garantit un plafond mais suppose un prix suffisant et une allocation initiale équitable.
+| L'instrument | Sa force | Sa faiblesse |
+| **Réglementation** | Simple à comprendre | Peu souple, coûteuse à contrôler |
+| **Taxe** | Efficace, et elle rapporte des recettes | Son incidence peut être **régressive** : elle pèse plus lourd sur les ménages modestes |
+| **Quotas** | Le plafond d'émissions est garanti | Il faut un prix suffisant et une allocation initiale équitable |
 
-## L’acceptabilité
-Une politique environnementale efficace n’est pas nécessairement acceptée : le mouvement des gilets jaunes de 2018 est né en partie d’une hausse des taxes sur les carburants. D’où l’importance des compensations, des alternatives disponibles et de l’affectation visible des recettes.`,
+## L'acceptabilité
+Une politique environnementale efficace n'est pas nécessairement acceptée.
+
+> Le mouvement des gilets jaunes de 2018 est né en partie d'une hausse des taxes sur les carburants.
+
+| Le levier d'acceptabilité | Son rôle |
+| Les **compensations** | Protéger les ménages modestes |
+| Les **alternatives disponibles** | Rendre le changement possible |
+| L'**affectation visible** des recettes | Montrer à quoi sert la taxe |`,
           },
           questions: [
             ['Qu’est-ce qu’une défaillance de marché ?', ['Une situation où le marché aboutit à un résultat collectivement inefficace', 'Une faillite d’entreprise', 'Un krach boursier', 'Une pénurie temporaire'], 0, 'Les externalités en sont l’exemple central.'],
@@ -517,21 +737,41 @@ Une politique environnementale efficace n’est pas nécessairement acceptée : 
           axe: 'Comment devenons-nous des acteurs sociaux ?',
           lecon: {
             titre: 'Apprendre à vivre en société, sans s’en apercevoir',
-            cours: `Personne ne naît en sachant dire bonjour, tenir une fourchette ou baisser la voix dans une bibliothèque. Ces manières de faire s’apprennent : c’est la **socialisation**.
+            cours: `Personne ne naît en sachant dire bonjour, tenir une fourchette ou baisser la voix dans une bibliothèque. Ces manières de faire s'apprennent : c'est la socialisation.
 
 ## La définition
-La socialisation est le processus par lequel un individu **intériorise** les normes, les valeurs et les rôles de la société où il vit. Une **norme** est une règle de comportement ; une **valeur** est un idéal partagé qui justifie les normes ; un **rôle** est l’ensemble des comportements attendus d’une position sociale.
+La socialisation est le processus par lequel un individu **intériorise** les normes, les valeurs et les rôles de la société où il vit.
+
+| Le terme | Sa définition |
+| Une **norme** | Une règle de comportement |
+| Une **valeur** | Un idéal partagé qui justifie les normes |
+| Un **rôle** | L'ensemble des comportements attendus d'une position sociale |
 
 ## Deux temps
-La **socialisation primaire**, dans l’enfance, est la plus intense et la plus durable : elle façonne la langue, les manières, les goûts, les repères moraux. La **socialisation secondaire**, à l’âge adulte, se poursuit dans le monde professionnel, le couple, les associations, les partis ; elle peut compléter la première ou entrer en tension avec elle.
+| La socialisation | Quand | Ce qu'elle façonne |
+| **Primaire** | L'enfance | La langue, les manières, les goûts, les repères moraux — la plus intense et la plus durable |
+| **Secondaire** | L'âge adulte | Le monde professionnel, le couple, les associations, les partis |
 
-> Ce qui est intériorisé cesse d’être ressenti comme une contrainte : on ne se force pas à dire bonjour, on le fait.
+La seconde peut compléter la première, ou entrer en tension avec elle.
+
+> Ce qui est intériorisé cesse d'être ressenti comme une contrainte : on ne se force pas à dire bonjour, on le fait.
 
 ## Les instances de socialisation
-La **famille**, l’**école**, les **groupes de pairs**, les **médias**, le travail, les institutions religieuses ou sportives. Elles peuvent transmettre des messages convergents ou contradictoires ; l’individu n’est pas un réceptacle passif, il compose.
+| L'instance | Son moment fort |
+| La **famille** | L'enfance |
+| L'**école** | L'enfance et l'adolescence |
+| Les **groupes de pairs** | L'adolescence |
+| Les **médias** | Tous les âges |
+| Le **travail**, les institutions religieuses ou sportives | L'âge adulte |
+
+> Elles peuvent transmettre des messages convergents ou contradictoires. L'individu n'est pas un réceptacle passif : il compose.
 
 ## Deux modes de transmission
-L’**inculcation explicite** — on énonce la règle, on récompense, on sanctionne — et l’**imprégnation implicite**, par imitation et exposition répétée. La seconde est souvent la plus puissante, parce qu’elle ne se voit pas.`,
+| Le mode | Comment il opère |
+| L'**inculcation explicite** | On énonce la règle, on récompense, on sanctionne |
+| L'**imprégnation implicite** | Par imitation et exposition répétée |
+
+> La seconde est souvent la plus puissante, parce qu'elle ne se voit pas.`,
           },
           questions: [
             ['Qu’est-ce que la socialisation ?', ['Le processus d’intériorisation des normes, valeurs et rôles d’une société', 'L’intégration dans un groupe d’amis', 'L’apprentissage d’un métier', 'La participation à la vie associative'], 0, 'Elle est continue, mais son moment le plus décisif est l’enfance.'],
@@ -549,21 +789,33 @@ L’**inculcation explicite** — on énonce la règle, on récompense, on sanct
           axe: 'Comment devenons-nous des acteurs sociaux ?',
           lecon: {
             titre: 'Qui je suis dépend aussi d’où je viens',
-            cours: `L’**identité sociale** est la manière dont un individu se définit et est défini par les autres à partir de ses appartenances : famille, milieu, âge, sexe, métier, région, croyances.
+            cours: `L'identité sociale est la manière dont un individu se définit, et est défini par les autres, à partir de ses appartenances.
 
 ## Une construction, pas un donné
-L’identité n’est ni figée ni entièrement choisie. Elle se construit dans l’interaction : je me perçois aussi à travers le regard des autres. Les **groupes d’appartenance** sont ceux auxquels on appartient effectivement ; les **groupes de référence** sont ceux auxquels on aspire et dont on adopte les manières.
+L'identité n'est ni figée ni entièrement choisie : elle se construit dans l'**interaction**, à travers le regard des autres.
+
+| Le groupe | Ce qu'il est |
+| D'**appartenance** | Celui auquel on appartient effectivement |
+| De **référence** | Celui auquel on aspire, et dont on adopte les manières |
 
 ## Le poids de la trajectoire
-La socialisation transmet des dispositions durables — goûts, façons de parler, rapport à l’école, ambitions. Bourdieu parle d’**habitus** : un ensemble de dispositions incorporées qui orientent les pratiques sans que l’individu ait besoin d’y penser. C’est ainsi que se reproduisent en partie les positions sociales.
+La socialisation transmet des dispositions durables : goûts, façons de parler, rapport à l'école, ambitions.
 
-> Deux élèves aux notes identiques ne demandent pas la même orientation : l’un se sent à sa place en prépa, l’autre pas.
+> Bourdieu parle d'**habitus** : un ensemble de dispositions incorporées qui orientent les pratiques sans que l'individu ait besoin d'y penser. C'est ainsi que se reproduisent en partie les positions sociales.
+
+> Deux élèves aux notes identiques ne demandent pas la même orientation : l'un se sent à sa place en prépa, l'autre pas.
 
 ## Identités multiples
-Chacun cumule plusieurs appartenances : être à la fois lycéenne, sportive, fille d’artisan, habitante d’une petite ville. Elles peuvent se renforcer ou entrer en **conflit de rôles**, par exemple entre exigences professionnelles et familiales.
+Chacun cumule plusieurs appartenances : lycéenne, sportive, fille d'artisan, habitante d'une petite ville.
+
+| La combinaison | Son effet |
+| Des appartenances qui se **renforcent** | Une identité cohérente |
+| Des appartenances qui s'**opposent** | Un **conflit de rôles** — entre exigences professionnelles et familiales, par exemple |
 
 ## Les identités changent
-Une **socialisation anticipatrice** prépare à un rôle futur en en adoptant d’avance les codes. Une **resocialisation** transforme profondément l’identité : entrée à l’armée, conversion religieuse, immigration, changement radical de milieu professionnel.`,
+| Le processus | Ce qu'il fait | Un exemple |
+| La **socialisation anticipatrice** | On adopte d'avance les codes d'un rôle futur | Un étudiant qui prend les manières du métier visé |
+| La **resocialisation** | Elle transforme profondément l'identité | Entrée à l'armée, conversion, immigration, changement radical de milieu professionnel |`,
           },
           questions: [
             ['Qu’est-ce que l’identité sociale ?', ['La manière dont un individu se définit et est défini par ses appartenances', 'Le numéro de sécurité sociale', 'La personnalité psychologique', 'La nationalité'], 0, 'Elle se construit dans l’interaction avec les autres.'],
@@ -581,21 +833,42 @@ Une **socialisation anticipatrice** prépare à un rôle futur en en adoptant d�
           axe: 'Comment devenons-nous des acteurs sociaux ?',
           lecon: {
             titre: 'On ne socialise pas tout le monde de la même façon',
-            cours: `La socialisation n’est pas uniforme : elle **différencie**. Selon le sexe attribué à la naissance et selon le milieu social, les enfants ne reçoivent ni les mêmes attentes, ni les mêmes encouragements.
+            cours: `La socialisation n'est pas uniforme : elle différencie. Selon le sexe attribué à la naissance et selon le milieu social, les enfants ne reçoivent ni les mêmes attentes, ni les mêmes encouragements.
 
 ## Le genre
-Le **sexe** renvoie aux caractéristiques biologiques, le **genre** aux rôles et attributs socialement associés au masculin et au féminin. Dès la naissance, couleurs, jouets, vocabulaire, tolérance à l’agitation ou à l’émotion diffèrent. L’école, les manuels, les médias et les pairs prolongent cette différenciation.
+| Le terme | Ce qu'il désigne |
+| Le **sexe** | Les caractéristiques biologiques |
+| Le **genre** | Les rôles et attributs socialement associés au masculin et au féminin |
+
+| Le vecteur | Ce qu'il différencie |
+| Couleurs, jouets, vocabulaire | Dès la naissance |
+| La tolérance à l'agitation ou à l'émotion | Selon le sexe de l'enfant |
+| École, manuels, médias, pairs | Ils prolongent la différenciation |
 
 ## Ses effets
-Elle se lit dans les **choix d’orientation** — les filles sont majoritaires dans les filières littéraires et de santé, très minoritaires en informatique et dans les spécialités scientifiques les plus techniques —, dans la répartition du **travail domestique**, et dans les carrières. Ces écarts varient selon les époques et les pays, ce qui prouve qu’ils ne sont pas naturels.
+| Le domaine | L'écart observé |
+| L'**orientation** | Les filles majoritaires en filières littéraires et de santé, très minoritaires en informatique |
+| Le **travail domestique** | Une répartition inégale |
+| Les **carrières** | Progression et rémunération différentes |
 
-> Si le partage des tâches était biologique, il serait le même partout. Il ne l’est pas.
+> Ces écarts varient selon les époques et les pays, ce qui prouve qu'ils ne sont pas naturels. Si le partage des tâches était biologique, il serait le même partout.
 
 ## Le milieu social
-Les pratiques éducatives diffèrent selon la position sociale : rapport au langage, à la lecture, aux loisirs, à l’autorité, à l’école. Les familles de cadres transmettent souvent une familiarité avec la culture scolaire — ce que Bourdieu appelle le **capital culturel** — qui avantage leurs enfants sans qu’aucune règle ne le prévoie.
+| La pratique éducative | Ce qui varie selon la position sociale |
+| Le rapport au **langage** | Vocabulaire, formes de l'échange |
+| Le rapport à la **lecture** | Présence et usage des livres |
+| Les **loisirs** | Culturels, sportifs, encadrés ou non |
+| Le rapport à l'**autorité** et à l'**école** | Confiance ou distance |
+
+> Les familles de cadres transmettent souvent une familiarité avec la culture scolaire — le **capital culturel** de Bourdieu — qui avantage leurs enfants sans qu'aucune règle ne le prévoie.
 
 ## Ce que cela produit
-Des inégalités de réussite scolaire à niveau de compétences comparable, des pratiques culturelles distinctes, des aspirations différentes. La socialisation différenciée est l’un des mécanismes centraux de la **reproduction sociale** — mais elle n’est jamais totale : la mobilité existe.`,
+| L'effet | Sa forme |
+| Des inégalités de **réussite scolaire** | À niveau de compétences comparable |
+| Des **pratiques culturelles** distinctes | Sorties, lectures, écoutes |
+| Des **aspirations** différentes | Des horizons perçus comme accessibles ou non |
+
+> La socialisation différenciée est l'un des mécanismes centraux de la **reproduction sociale** — mais elle n'est jamais totale : la mobilité existe.`,
           },
           questions: [
             ['Quelle différence entre sexe et genre ?', ['Le sexe est biologique, le genre est une construction sociale', 'Ce sont deux synonymes', 'Le genre est juridique', 'Le sexe est déclaratif'], 0, 'Le genre désigne les rôles associés au masculin et au féminin.'],
@@ -617,21 +890,44 @@ Des inégalités de réussite scolaire à niveau de compétences comparable, des
           axe: 'Comment s’organise la vie politique ?',
           lecon: {
             titre: 'Ce qui fait qu’un régime est démocratique',
-            cours: `Une démocratie ne se reconnaît pas seulement à la tenue d’élections : plusieurs conditions doivent être réunies pour que le pouvoir vienne réellement des citoyens et reste limité.
+            cours: `Une démocratie ne se reconnaît pas seulement à la tenue d'élections : plusieurs conditions doivent être réunies.
 
 ## Les critères
-Souveraineté du peuple, **élections libres, régulières et pluralistes**, **suffrage universel**, **séparation des pouvoirs**, garantie des **libertés fondamentales** — expression, presse, réunion, association —, **État de droit** où chacun, y compris les gouvernants, est soumis à la loi, et respect des minorités.
+| Le critère | Son contenu |
+| La **souveraineté du peuple** | Le pouvoir vient des citoyens |
+| Des **élections** libres, régulières, pluralistes | Au **suffrage universel** |
+| La **séparation des pouvoirs** | Exécutif, législatif, judiciaire distincts |
+| Les **libertés fondamentales** | Expression, presse, réunion, association |
+| L'**État de droit** | Chacun, gouvernants compris, soumis à la loi |
+| Le respect des **minorités** | La majorité ne peut pas tout |
 
-## Directe, représentative, participative
-La démocratie **directe** fait décider les citoyens eux-mêmes ; elle subsiste par le **référendum** et dans certains cantons suisses. La démocratie **représentative** confie la décision à des élus : c’est la forme dominante. La démocratie **participative** ajoute consultations, budgets participatifs, conventions citoyennes tirées au sort.
+## Trois formes
+| La forme | Qui décide | Ses exemples |
+| **Directe** | Les citoyens eux-mêmes | Le référendum, certains cantons suisses |
+| **Représentative** | Des élus | La forme dominante |
+| **Participative** | Les citoyens, entre deux élections | Consultations, budgets participatifs, conventions citoyennes tirées au sort |
 
-> Élire, ce n’est pas seulement désigner : c’est aussi pouvoir renvoyer. Une élection sans alternance possible n’est pas une élection.
+> Élire, ce n'est pas seulement désigner : c'est aussi pouvoir renvoyer. Une élection sans alternance possible n'est pas une élection.
 
 ## Les contre-pouvoirs
-Justice indépendante, Parlement, presse libre, syndicats, associations, autorités indépendantes, Cour constitutionnelle. Ils empêchent la concentration du pouvoir. Leur affaiblissement est le signal des **régimes hybrides**, qui gardent les élections en vidant les libertés.
+| Le contre-pouvoir | Ce qu'il empêche |
+| Justice indépendante | L'impunité |
+| Parlement | La décision solitaire |
+| Presse libre | Le secret |
+| Syndicats, associations | La confiscation du débat |
+| Autorités indépendantes, Cour constitutionnelle | L'abus de la majorité |
+
+> Leur affaiblissement est le signal des **régimes hybrides**, qui gardent les élections en vidant les libertés.
 
 ## Les fragilités
-Abstention, défiance envers les partis et les élus, désinformation, financement opaque des campagnes, inégalité d’accès à la parole publique. La démocratie est un régime qui doit être entretenu, non un état acquis.`,
+| La fragilité | Son effet |
+| L'**abstention** | Une représentation déformée |
+| La **défiance** envers les partis et les élus | Une légitimité affaiblie |
+| La **désinformation** | Un débat faussé |
+| Le financement opaque des campagnes | Une influence invisible |
+| L'inégalité d'accès à la parole publique | Des voix qu'on n'entend pas |
+
+> La démocratie est un régime qui doit être entretenu, non un état acquis.`,
           },
           questions: [
             ['Quels critères définissent un régime démocratique ?', ['Élections libres, séparation des pouvoirs, libertés fondamentales et État de droit', 'La seule tenue d’élections', 'Un parti unique fort', 'Un référendum annuel'], 0, 'Les élections seules ne suffisent pas.'],
@@ -649,21 +945,34 @@ Abstention, défiance envers les partis et les élus, désinformation, financeme
           axe: 'Comment s’organise la vie politique ?',
           lecon: {
             titre: 'Un exécutif à deux têtes, un Parlement à deux chambres',
-            cours: `La **Ve République**, née de la Constitution du **4 octobre 1958**, a été conçue pour donner à l’exécutif une stabilité que la IVe n’avait pas. Elle organise les pouvoirs autour d’un président fort.
+            cours: `La Ve République, née de la Constitution du 4 octobre 1958, a été conçue pour donner à l'exécutif une stabilité que la IVe n'avait pas.
 
-## L’exécutif
-Le **président de la République** est élu au suffrage universel direct depuis la réforme de **1962**, pour cinq ans depuis le **quinquennat** de 2000. Il nomme le Premier ministre, préside le conseil des ministres, peut dissoudre l’Assemblée nationale, recourir au référendum, et dispose de pouvoirs exceptionnels. Le **gouvernement**, dirigé par le Premier ministre, détermine et conduit la politique de la nation et est responsable devant l’Assemblée.
+## L'exécutif à deux têtes
+| L'autorité | Sa désignation | Ses pouvoirs |
+| Le **président de la République** | Élu au **suffrage universel direct** depuis 1962, pour cinq ans depuis le **quinquennat** de 2000 | Nommer le Premier ministre, présider le conseil des ministres, **dissoudre** l'Assemblée, recourir au référendum, pouvoirs exceptionnels |
+| Le **gouvernement**, dirigé par le Premier ministre | Nommé | Déterminer et conduire la politique de la nation ; il est **responsable devant l'Assemblée** |
 
 ## Le législatif
-Le Parlement comprend l’**Assemblée nationale** — 577 députés élus pour cinq ans au scrutin uninominal majoritaire à deux tours — et le **Sénat** — 348 sénateurs élus au suffrage indirect par de grands électeurs, pour six ans. Le Parlement vote la loi, le budget, et contrôle le gouvernement. En cas de désaccord persistant, l’Assemblée a le dernier mot.
+| La chambre | Ses membres | Leur élection |
+| L'**Assemblée nationale** | 577 députés | Scrutin uninominal majoritaire à deux tours, pour cinq ans |
+| Le **Sénat** | 348 sénateurs | Suffrage **indirect**, par de grands électeurs, pour six ans |
 
-> Le président n’est pas responsable devant le Parlement ; le gouvernement, si. Toute la mécanique du régime tient dans cette dissymétrie.
+Le Parlement vote la loi et le budget, et contrôle le gouvernement. En cas de désaccord persistant, l'Assemblée a le dernier mot.
+
+> Le président n'est pas responsable devant le Parlement ; le gouvernement, si. Toute la mécanique du régime tient dans cette dissymétrie.
 
 ## Le judiciaire et le Conseil constitutionnel
-L’autorité judiciaire est indépendante. Le **Conseil constitutionnel** contrôle la conformité des lois à la Constitution, avant leur promulgation ou, depuis 2008, par la **question prioritaire de constitutionnalité** soulevée par un justiciable.
+| L'institution | Son rôle |
+| L'autorité **judiciaire** | Indépendante |
+| Le **Conseil constitutionnel** | Il contrôle la conformité des lois à la Constitution, avant promulgation ou, depuis **2008**, par la **question prioritaire de constitutionnalité** |
 
 ## Un régime original
-Ni pleinement présidentiel ni pleinement parlementaire, il est dit **semi-présidentiel**. La **cohabitation** — président et majorité parlementaire de camps opposés — s’est produite trois fois avant que le quinquennat et l’inversion du calendrier électoral ne la rendent plus improbable.`,
+Ni pleinement présidentiel ni pleinement parlementaire : il est dit **semi-présidentiel**.
+
+| La **cohabitation** | Ce qu'elle est |
+| Sa définition | Président et majorité parlementaire de camps opposés |
+| Sa fréquence | Trois fois |
+| Aujourd'hui | Le quinquennat et l'inversion du calendrier électoral la rendent plus improbable |`,
           },
           questions: [
             ['De quand date la Constitution de la Ve République ?', ['Du 4 octobre 1958', 'Du 27 octobre 1946', 'Du 14 juillet 1958', 'Du 28 septembre 1962'], 0, 'Elle est adoptée par référendum.'],
@@ -681,21 +990,30 @@ Ni pleinement présidentiel ni pleinement parlementaire, il est dit **semi-prés
           axe: 'Comment s’organise la vie politique ?',
           lecon: {
             titre: 'Les mêmes voix, des résultats différents',
-            cours: `Un mode de scrutin n’est jamais neutre : avec exactement les mêmes bulletins, deux règles de décompte différentes donnent deux assemblées différentes.
+            cours: `Un mode de scrutin n'est jamais neutre : avec exactement les mêmes bulletins, deux règles de décompte donnent deux assemblées différentes.
 
-## Les scrutins majoritaires
-Est élu celui qui obtient le plus de voix, en un tour ou en deux. Le scrutin **uninominal majoritaire à deux tours** est utilisé pour les législatives et la présidentielle françaises. Avantages : majorité claire, stabilité gouvernementale, lien personnel entre l’élu et sa circonscription. Inconvénient : de nombreuses voix ne sont pas représentées, et les petits partis nationaux sont écrasés.
+## Les deux grands modes
+| Le critère | **Majoritaire** | **Proportionnel** |
+| Le principe | Est élu celui qui a le plus de voix, en un ou deux tours | Les sièges suivent le pourcentage de voix de chaque liste |
+| En France | Législatives, présidentielle | Européennes ; partiellement régionales et municipales |
+| Son avantage | Majorité claire, stabilité, lien élu-circonscription | Représentation **fidèle** de la diversité des opinions |
+| Son inconvénient | Beaucoup de voix non représentées, petits partis écrasés | Difficulté à dégager une majorité, coalitions, instabilité |
 
-## Le scrutin proportionnel
-Les sièges sont répartis en fonction du pourcentage de voix obtenu par chaque liste. Il est utilisé en France pour les élections européennes et, partiellement, pour les régionales et municipales. Avantage : la représentation fidèle de la diversité des opinions. Inconvénient : la difficulté à dégager une majorité, d’où des coalitions et parfois de l’instabilité.
-
-> Le majoritaire fabrique des gouvernements ; le proportionnel fabrique des représentations. Aucun ne fait les deux à la fois.
+> Le majoritaire fabrique des **gouvernements** ; le proportionnel fabrique des **représentations**. Aucun ne fait les deux à la fois.
 
 ## Les systèmes mixtes
-Beaucoup de pays combinent les deux : l’Allemagne élit une moitié de ses députés au scrutin majoritaire, l’autre à la proportionnelle. Les scrutins de liste français aux municipales et régionales combinent prime majoritaire et répartition proportionnelle.
+| Le pays ou le scrutin | Sa combinaison |
+| L'**Allemagne** | Une moitié des députés au majoritaire, l'autre à la proportionnelle |
+| Les municipales et régionales françaises | Prime majoritaire **et** répartition proportionnelle |
 
 ## Le poids des règles annexes
-Le **seuil** minimal pour obtenir des sièges, le **découpage** des circonscriptions, l’ordre des candidats sur une liste, les règles de **parité** pèsent autant que le mode de scrutin lui-même. Le découpage peut être manipulé pour avantager un camp — le fameux charcutage électoral.`,
+| La règle | Son effet |
+| Le **seuil** minimal pour obtenir des sièges | Il exclut les petites listes |
+| Le **découpage** des circonscriptions | Il peut être manipulé — le « charcutage électoral » |
+| L'ordre des candidats sur une liste | Il décide qui est réellement élu |
+| Les règles de **parité** | Elles modifient la composition de l'assemblée |
+
+> Elles pèsent autant que le mode de scrutin lui-même.`,
           },
           questions: [
             ['Quel mode de scrutin est utilisé pour les élections législatives françaises ?', ['Le scrutin uninominal majoritaire à deux tours', 'La proportionnelle intégrale', 'Le scrutin de liste à un tour', 'Le vote préférentiel'], 0, 'Une circonscription, un siège.'],
@@ -713,21 +1031,44 @@ Le **seuil** minimal pour obtenir des sièges, le **découpage** des circonscrip
           axe: 'Comment s’organise la vie politique ?',
           lecon: {
             titre: 'Voter, oui, mais pas seulement',
-            cours: `La vie politique ne se limite ni aux élus ni aux jours d’élection. Partis, syndicats, associations, médias et citoyens ordinaires y participent en permanence.
+            cours: `La vie politique ne se limite ni aux élus ni aux jours d'élection.
 
 ## Les partis politiques
-Ils ont quatre fonctions : **sélectionner** des candidats, **élaborer** des programmes, **mobiliser** les électeurs, **structurer** le débat public. En France, ils sont financés en partie sur fonds publics, en fonction des résultats électoraux et du respect de la parité, et leurs comptes sont contrôlés.
+| Sa fonction | Ce qu'elle fait |
+| **Sélectionner** | Des candidats |
+| **Élaborer** | Des programmes |
+| **Mobiliser** | Les électeurs |
+| **Structurer** | Le débat public |
 
-## Les groupes d’intérêt
-Syndicats de salariés et organisations patronales, ordres professionnels, ONG, associations d’usagers : ils défendent des intérêts particuliers auprès des pouvoirs publics. Le **lobbying** est désormais encadré par un registre des représentants d’intérêts.
+En France, ils sont financés en partie sur fonds publics, selon leurs résultats électoraux et le respect de la **parité**, et leurs comptes sont contrôlés.
+
+## Les groupes d'intérêt
+| Le groupe | Ce qu'il défend |
+| Syndicats de salariés, organisations patronales | Des intérêts professionnels |
+| Ordres professionnels | Une profession réglementée |
+| ONG, associations d'usagers | Une cause, des usagers |
+
+Le **lobbying** est désormais encadré par un registre des représentants d'intérêts.
 
 > Une démocratie sans corps intermédiaires laisse face à face un pouvoir seul et des individus isolés.
 
-## Les médias et l’opinion
-Les médias informent, hiérarchisent l’information et donnent la parole. Leur rôle s’est transformé avec les réseaux sociaux : diffusion accélérée, mais aussi **désinformation**, bulles de filtre et concurrence des sources. Les sondages nourrissent le débat sans le décider.
+## Les médias et l'opinion
+| Leur rôle | Sa transformation par les réseaux sociaux |
+| Informer | Une diffusion accélérée |
+| Hiérarchiser | Des bulles de filtre |
+| Donner la parole | Une concurrence des sources, et la **désinformation** |
+
+Les sondages nourrissent le débat sans le décider.
 
 ## Les citoyens
-Voter, adhérer, militer, pétitionner, manifester, boycotter, s’engager dans une association, participer à une consultation locale : la **participation politique** est bien plus large que le seul bulletin. L’**abstention**, qui progresse surtout chez les jeunes et les moins diplômés, est elle aussi un comportement politique — parfois indifférence, parfois protestation.`,
+| La forme de participation | Son intensité |
+| **Voter** | Ponctuelle |
+| Adhérer, militer | Durable |
+| Pétitionner, manifester, boycotter | Ciblée |
+| S'engager dans une association | Locale et continue |
+| Participer à une consultation locale | Institutionnelle |
+
+> L'**abstention**, qui progresse surtout chez les jeunes et les moins diplômés, est elle aussi un comportement politique : parfois indifférence, parfois protestation.`,
           },
           questions: [
             ['Quelles sont les fonctions d’un parti politique ?', ['Sélectionner des candidats, élaborer un programme, mobiliser et structurer le débat', 'Gérer les services publics', 'Contrôler les élections', 'Rédiger les lois'], 0, 'Il fait le lien entre la société et les institutions.'],
@@ -749,21 +1090,36 @@ Voter, adhérer, militer, pétitionner, manifester, boycotter, s’engager dans 
           axe: 'Quelles relations entre le diplôme, l’emploi et le salaire ?',
           lecon: {
             titre: 'Se former, c’est investir',
-            cours: `Faire des études coûte du temps, de l’argent et un salaire auquel on renonce. En économie, on analyse cette dépense comme un **investissement** dont on attend un rendement.
+            cours: `Faire des études coûte du temps, de l'argent et un salaire auquel on renonce. En économie, on analyse cette dépense comme un investissement.
 
 ## Le capital humain
-La théorie du **capital humain**, formulée par **Gary Becker**, considère les connaissances, les compétences et la santé comme un capital qui rend le travail plus productif. On l’accumule par la formation initiale, l’expérience, la formation continue.
+La théorie du **capital humain**, formulée par **Gary Becker**, considère les connaissances, les compétences et la santé comme un capital qui rend le travail plus productif.
+
+| Comment on l'accumule | Quand |
+| La **formation initiale** | Avant l'entrée dans l'emploi |
+| L'**expérience** | En travaillant |
+| La **formation continue** | Tout au long de la carrière |
 
 ## Un calcul coût-avantage
-Les **coûts** sont directs (frais de scolarité, logement, matériel) et indirects — le **coût d’opportunité**, c’est-à-dire les salaires non perçus pendant les études. Les **avantages** sont un salaire plus élevé, un risque de chômage plus faible, de meilleures conditions de travail, une carrière plus ascendante.
+| Les **coûts** | Les **avantages** |
+| Directs : frais de scolarité, logement, matériel | Un salaire plus élevé |
+| Indirects : le **coût d'opportunité**, les salaires non perçus | Un risque de chômage plus faible |
+| — | De meilleures conditions de travail |
+| — | Une carrière plus ascendante |
 
-> On ne compare pas seulement un diplôme à un autre : on compare des années d’études à des années de salaire.
+> On ne compare pas seulement un diplôme à un autre : on compare des années d'études à des années de salaire.
 
 ## Qualification et compétences
-La **qualification** désigne l’ensemble des savoirs et savoir-faire reconnus, souvent par un diplôme ou une convention collective. Elle ne se confond pas avec le poste occupé : on peut être **déclassé**, c’est-à-dire occuper un emploi moins qualifié que son diplôme.
+| La notion | Sa définition |
+| La **qualification** | L'ensemble des savoirs et savoir-faire reconnus, par un diplôme ou une convention collective |
+| Le **déclassement** | Occuper un emploi **moins qualifié** que son diplôme |
 
 ## Le rôle du signal
-Une autre lecture, la théorie du **signal**, souligne que le diplôme informe l’employeur sur des qualités difficiles à observer — persévérance, capacité d’apprentissage — même s’il n’a pas directement enseigné le métier. Les deux mécanismes coexistent dans la réalité du marché du travail.`,
+| La théorie | Ce qu'elle affirme |
+| Le **capital humain** | La formation rend réellement plus productif |
+| Le **signal** | Le diplôme **informe** l'employeur sur des qualités difficiles à observer — persévérance, capacité d'apprentissage |
+
+> Les deux mécanismes coexistent dans la réalité du marché du travail.`,
           },
           questions: [
             ['Qu’est-ce que le capital humain ?', ['L’ensemble des connaissances, compétences et de la santé qui rendent le travail productif', 'Le nombre de salariés', 'Le capital détenu par les ménages', 'La masse salariale d’une entreprise'], 0, 'Notion formulée notamment par Gary Becker.'],
@@ -781,21 +1137,35 @@ Une autre lecture, la théorie du **signal**, souligne que le diplôme informe l
           axe: 'Quelles relations entre le diplôme, l’emploi et le salaire ?',
           lecon: {
             titre: 'Pourquoi le chômage frappe d’abord les moins diplômés',
-            cours: `Le **chômage** ne se répartit pas au hasard. En France comme ailleurs, le taux de chômage des non-diplômés est plusieurs fois supérieur à celui des diplômés du supérieur.
+            cours: `Le chômage ne se répartit pas au hasard : le taux de chômage des non-diplômés est plusieurs fois supérieur à celui des diplômés du supérieur.
 
 ## Définir et mesurer
-Au sens du **Bureau international du travail**, est chômeur celui qui est sans emploi, disponible et à la recherche active d’un emploi. Le **taux de chômage** rapporte le nombre de chômeurs à la **population active** — actifs occupés plus chômeurs — et non à la population totale.
+| La notion | Sa définition |
+| Un **chômeur** au sens du BIT | Sans emploi, **disponible**, et à la **recherche active** d'un emploi |
+| La **population active** | Actifs occupés **plus** chômeurs |
+| Le **taux de chômage** | Chômeurs rapportés à la population **active** — et non à la population totale |
 
 ## Le chômage structurel lié à la qualification
-Une partie du chômage vient d’une **inadéquation** entre les qualifications offertes par les demandeurs d’emploi et celles recherchées par les entreprises. Le progrès technique, la numérisation et l’automatisation détruisent surtout des emplois **routiniers** peu qualifiés, tout en créant des emplois plus qualifiés ailleurs.
+| Le mécanisme | Son effet |
+| L'**inadéquation** entre qualifications offertes et recherchées | Des postes non pourvus et des chômeurs en même temps |
+| Progrès technique, numérisation, automatisation | Ils détruisent surtout des emplois **routiniers** peu qualifiés |
+| La création d'emplois plus qualifiés | Elle ne bénéficie pas aux mêmes personnes |
 
-> Une économie peut créer des emplois et laisser sur le bord de la route ceux qui n’ont pas la qualification qu’elle demande.
+> Une économie peut créer des emplois et laisser sur le bord de la route ceux qui n'ont pas la qualification qu'elle demande.
 
 ## Les autres causes
-Le chômage **conjoncturel** vient d’une demande insuffisante en période de ralentissement. S’y ajoutent le **chômage frictionnel**, lié au temps de recherche entre deux emplois, et les effets d’un coût du travail élevé au voisinage du salaire minimum pour les emplois les moins productifs.
+| Le type de chômage | Son origine |
+| **Conjoncturel** | Une demande insuffisante en période de ralentissement |
+| **Frictionnel** | Le temps de recherche entre deux emplois |
+| Lié au **coût du travail** | Au voisinage du salaire minimum, pour les emplois les moins productifs |
 
 ## Les politiques
-Formation initiale et continue, apprentissage, accompagnement personnalisé, **allègements de cotisations** sur les bas salaires, aides à la mobilité. À l’inverse, les politiques de soutien à la demande visent le chômage conjoncturel. Les deux ne traitent pas le même problème.`,
+| La politique | Le chômage qu'elle vise |
+| Formation initiale et continue, apprentissage, accompagnement | **Structurel** |
+| **Allègements de cotisations** sur les bas salaires, aides à la mobilité | Structurel |
+| Soutien à la demande | **Conjoncturel** |
+
+> Les deux ne traitent pas le même problème.`,
           },
           questions: [
             ['Qui est chômeur au sens du Bureau international du travail ?', ['Une personne sans emploi, disponible et en recherche active', 'Toute personne inscrite à France Travail', 'Toute personne sans revenu', 'Toute personne en formation'], 0, 'Trois conditions cumulatives.'],
@@ -813,21 +1183,40 @@ Formation initiale et continue, apprentissage, accompagnement personnalisé, **a
           axe: 'Quelles relations entre le diplôme, l’emploi et le salaire ?',
           lecon: {
             titre: 'Ce qui explique un bulletin de paie',
-            cours: `Le salaire n’est pas un chiffre arbitraire. Il dépend de la productivité attendue, de la rareté de la qualification, des règles collectives et du rapport de force sur le marché du travail.
+            cours: `Le salaire n'est pas un chiffre arbitraire : il dépend de la productivité attendue, de la rareté de la qualification, des règles collectives et du rapport de force.
 
 ## Le rendement du diplôme
-Plus le niveau de diplôme est élevé, plus le salaire moyen l’est aussi. Les écarts se creusent au fil de la carrière : un diplômé du supérieur bénéficie non seulement d’un salaire de départ plus élevé, mais aussi d’une progression plus rapide.
+| L'effet | Sa forme |
+| Le salaire de **départ** | Il croît avec le niveau de diplôme |
+| La **progression** | Elle est plus rapide pour les diplômés du supérieur |
+| L'écart | Il se **creuse** au fil de la carrière |
 
-## L’expérience et l’ancienneté
-L’**expérience** accroît la productivité et la valeur sur le marché du travail ; l’**ancienneté** est souvent rémunérée par les conventions collectives. Les courbes de salaire selon l’âge montent fortement en début de carrière, puis s’aplatissent. Cet effet est plus marqué pour les cadres que pour les ouvriers.
+## L'expérience et l'ancienneté
+| La notion | Ce qu'elle apporte |
+| L'**expérience** | Elle accroît la productivité et la valeur sur le marché |
+| L'**ancienneté** | Elle est souvent rémunérée par les conventions collectives |
 
-> Deux personnes de même diplôme ne gagnent pas la même chose : le secteur, la taille de l’entreprise et la région comptent aussi.
+| La courbe salaire-âge | Sa forme |
+| En début de carrière | Elle monte fortement |
+| Ensuite | Elle s'aplatit |
+| Selon la catégorie | L'effet est plus marqué pour les cadres que pour les ouvriers |
+
+> Deux personnes de même diplôme ne gagnent pas la même chose : le secteur, la taille de l'entreprise et la région comptent aussi.
 
 ## Les règles collectives
-Le **salaire minimum** fixe un plancher légal ; les **conventions collectives** définissent des grilles par branche ; la négociation d’entreprise ajuste. La loi impose l’égalité de rémunération entre les femmes et les hommes pour un même travail, sans que l’écart ait disparu.
+| La règle | Son niveau |
+| Le **salaire minimum** | Un plancher **légal** |
+| Les **conventions collectives** | Des grilles par **branche** |
+| La négociation d'entreprise | L'ajustement local |
+| L'égalité de rémunération femmes-hommes | Imposée par la loi pour un même travail — sans que l'écart ait disparu |
 
 ## Les autres déterminants
-Le secteur d’activité, la taille de l’entreprise — les grandes paient en moyenne davantage —, la région, le statut public ou privé, le temps de travail, et le pouvoir de négociation individuel ou syndical. Le salaire est aussi le résultat d’un rapport de force.`,
+| Le facteur | Son sens |
+| Le **secteur** d'activité | Certains paient structurellement plus |
+| La **taille** de l'entreprise | Les grandes paient en moyenne davantage |
+| La **région** | Coût de la vie et tension du marché local |
+| Le statut public ou privé, le temps de travail | Des grilles différentes |
+| Le **pouvoir de négociation**, individuel ou syndical | Le salaire est aussi un rapport de force |`,
           },
           questions: [
             ['Quelle relation observe-t-on entre diplôme et salaire ?', ['Le salaire moyen augmente avec le niveau de diplôme', 'Le salaire est indépendant du diplôme', 'Le salaire baisse avec le diplôme', 'La relation n’existe qu’en début de carrière'], 0, 'Et l’écart se creuse au fil de la carrière.'],
@@ -845,21 +1234,43 @@ Le secteur d’activité, la taille de l’entreprise — les grandes paient en 
           axe: 'Quelles relations entre le diplôme, l’emploi et le salaire ?',
           lecon: {
             titre: 'À diplôme égal, des carrières inégales',
-            cours: `Le diplôme explique beaucoup, mais pas tout. À niveau de formation identique, les carrières diffèrent selon le sexe et selon le milieu d’origine.
+            cours: `Le diplôme explique beaucoup, mais pas tout. À niveau de formation identique, les carrières diffèrent selon le sexe et selon le milieu d'origine.
 
 ## Les écarts de salaire entre femmes et hommes
-En France, l’écart de salaire moyen entre femmes et hommes reste de l’ordre de 14 % en équivalent temps plein, et d’environ 4 % à poste et profil comparables. Trois mécanismes se combinent : le **temps partiel**, très féminin ; la **ségrégation professionnelle**, les femmes étant concentrées dans des métiers moins rémunérés ; et les **interruptions de carrière** liées aux enfants.
+| La mesure | Son ordre de grandeur |
+| En équivalent temps plein | Environ **14 %** |
+| À poste et profil comparables | Environ **4 %** |
+
+| Le mécanisme | Son contenu |
+| Le **temps partiel** | Très majoritairement féminin |
+| La **ségrégation professionnelle** | Les femmes sont concentrées dans des métiers moins rémunérés |
+| Les **interruptions de carrière** | Liées aux enfants |
 
 ## Le plafond de verre
-Les femmes accèdent moins souvent aux postes de direction, malgré une réussite scolaire supérieure en moyenne. On parle de **plafond de verre** : un obstacle qui ne figure dans aucun règlement mais qui produit des effets mesurables. Des lois sur la parité dans les conseils d’administration et l’index d’égalité professionnelle tentent d’y remédier.
+Les femmes accèdent moins souvent aux postes de direction, malgré une réussite scolaire en moyenne supérieure.
 
-> Un obstacle invisible reste un obstacle : il se mesure à ce qu’il empêche.
+> Le **plafond de verre** est un obstacle qui ne figure dans aucun règlement mais produit des effets mesurables. Un obstacle invisible reste un obstacle : il se mesure à ce qu'il empêche.
 
-## L’origine sociale
-À diplôme égal, les enfants de cadres accèdent plus souvent aux positions les plus élevées : réseaux familiaux, information sur les filières, aisance dans les codes des entretiens, aide financière permettant des stages non rémunérés ou une mobilité. Ces ressources ne figurent sur aucun CV.
+| Le remède tenté | Son objet |
+| Les lois sur la **parité** dans les conseils d'administration | Les instances dirigeantes |
+| L'**index d'égalité professionnelle** | La transparence des écarts |
+
+## L'origine sociale
+À diplôme égal, les enfants de cadres accèdent plus souvent aux positions les plus élevées.
+
+| La ressource | Ce qu'elle apporte |
+| Les **réseaux familiaux** | Des stages, des contacts, des recommandations |
+| L'**information** sur les filières | Des choix mieux orientés |
+| L'aisance dans les **codes** des entretiens | Un avantage à performance égale |
+| L'**aide financière** | Stages non rémunérés, mobilité possible |
+
+> Ces ressources ne figurent sur aucun CV.
 
 ## Mobilité et reproduction
-La **mobilité sociale** existe : beaucoup d’enfants occupent une position différente de celle de leurs parents, notamment par la hausse générale du niveau de diplôme. Mais la **reproduction** reste forte aux deux extrémités de l’échelle, et les discriminations à l’embauche, mesurées par des tests, s’ajoutent aux inégalités de ressources.`,
+| Le constat | Son contenu |
+| La **mobilité sociale** existe | Beaucoup d'enfants occupent une position différente de celle de leurs parents, notamment par la hausse du niveau de diplôme |
+| La **reproduction** reste forte | Surtout aux deux extrémités de l'échelle |
+| Les **discriminations à l'embauche** | Mesurées par des tests, elles s'ajoutent aux inégalités de ressources |`,
           },
           questions: [
             ['Quel est approximativement l’écart de salaire entre femmes et hommes en équivalent temps plein en France ?', ['Environ 14 %', 'Environ 40 %', 'Environ 2 %', 'Il n’y a plus d’écart'], 0, 'Il se réduit à environ 4 % à poste et profil comparables.'],

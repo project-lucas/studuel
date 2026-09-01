@@ -145,21 +145,43 @@ DELETE FROM public.chapters c
           axe: 'Une longue histoire de la matière',
           lecon: {
             titre: 'Les éléments chimiques, fabriqués par les étoiles',
-            cours: `Tous les atomes qui composent votre corps ont été fabriqués ailleurs, et avant vous : dans les trois premières minutes de l’Univers pour les plus légers, au cœur des étoiles pour tous les autres.
+            cours: `Tous les atomes qui composent votre corps ont été fabriqués **ailleurs**, et **avant vous** : dans les trois premières minutes de l’Univers pour les plus légers, au cœur des étoiles pour tous les autres.
 
 ## Un élément, c’est un numéro atomique
-Un **élément chimique** est défini par son **numéro atomique Z**, c’est-à-dire son nombre de protons : tout noyau à 6 protons est du carbone, quel que soit son nombre de neutrons. Deux noyaux de même Z mais de nombres de neutrons différents sont des **isotopes** (carbone 12 et carbone 14). L’élément se conserve au cours des transformations chimiques : brûler du carbone ne le détruit pas, il se retrouve dans le CO2.
+Un **élément chimique** est défini par son **numéro atomique Z** — son nombre de **protons**. Tout noyau à 6 protons est du carbone, quel que soit son nombre de neutrons.
 
-## Trois fabriques successives
-- **La nucléosynthèse primordiale**, dans les trois premières minutes après le Big Bang (il y a **13,8 milliards d’années**) : elle ne produit que l’hydrogène et l’hélium.
-- **La nucléosynthèse stellaire** : par **fusion**, les étoiles assemblent des noyaux légers en noyaux plus lourds, jusqu’au **fer**. Au-delà du fer, la fusion consomme de l’énergie au lieu d’en libérer : elle s’arrête là.
-- **Les explosions d’étoiles** (supernovae, fusions d’astres compacts) : elles forment les éléments plus lourds que le fer — l’or, l’uranium — et dispersent le tout dans l’espace.
+| Notion | Sa définition |
+| **Élément** | Même nombre de **protons** |
+| **Isotopes** | Même Z, **nombre de neutrons différent** — carbone 12 et carbone 14 |
+| La **conservation** | L’élément se conserve dans une transformation chimique : brûler du carbone ne le détruit pas, il passe dans le CO2 |
+
+## Les trois fabriques successives
+| Fabrique | Quand | Ce qu’elle produit |
+| **Nucléosynthèse primordiale** | Les 3 premières minutes après le Big Bang, il y a **13,8 milliards d’années** | **Hydrogène** et **hélium** seulement |
+| **Nucléosynthèse stellaire** | Pendant la vie de l’étoile | Par **fusion**, jusqu’au **fer** |
+| **Explosions d’étoiles** | Supernovae, fusions d’astres compacts | Les éléments **plus lourds que le fer** — or, uranium |
+
+> Pourquoi le fer arrête tout : **au-delà du fer, la fusion consomme de l’énergie** au lieu d’en libérer. L’étoile ne peut plus s’en servir pour tenir.
 
 ## Des abondances très inégales
-Dans l’Univers, **92 % des atomes sont de l’hydrogène** et près de 8 % de l’hélium : tout le reste pèse moins de 1 %. Sur Terre, la croûte est faite surtout d’**oxygène** (≈ 47 % en masse) et de **silicium** (≈ 28 %). Dans le corps humain, quatre éléments — **O, C, H, N** — font plus de 99 % de la masse. Trois inventaires, trois classements différents : la matière s’est triée en se rassemblant.
+| Inventaire | Les éléments dominants |
+| Dans l’**Univers** | **92 %** des atomes sont de l’**hydrogène**, près de 8 % d’hélium — tout le reste pèse **moins de 1 %** |
+| Dans la **croûte terrestre** | **Oxygène** (environ 47 % en masse) et **silicium** (environ 28 %) |
+| Dans le **corps humain** | **O, C, H, N** font plus de **99 %** de la masse |
+
+> Trois inventaires, **trois classements différents** : la matière s’est **triée** en se rassemblant.
 
 ## Un chronomètre dans le noyau
-Certains noyaux sont **radioactifs** : ils se désintègrent spontanément, au hasard, mais à un rythme statistique fixe. La **demi-vie** (ou période) est la durée au bout de laquelle la moitié des noyaux d’un échantillon s’est désintégrée. Au bout de deux demi-vies il en reste le quart, au bout de trois le huitième : N = N0 × (1/2)^(t/T). Ni la température, ni la pression, ni la chimie ne modifient cette durée. C’est ce qui en fait une horloge — et c’est de là que viendra l’âge de la Terre.`,
+Certains noyaux sont **radioactifs** : ils se désintègrent spontanément, **au hasard**, mais à un rythme statistique fixe.
+
+La **demi-vie** T est la durée au bout de laquelle **la moitié** des noyaux s’est désintégrée : N = N0 × (1/2)^(t/T).
+
+| Temps écoulé | Noyaux restants |
+| 1 demi-vie | la **moitié** |
+| 2 demi-vies | le **quart** |
+| 3 demi-vies | le **huitième** |
+
+> Ni la température, ni la pression, ni la chimie ne modifient cette durée. C’est ce qui en fait une **horloge** — et c’est de là que viendra l’âge de la Terre.`,
           },
           questions: [
             ['Qu’est-ce qui définit un élément chimique ?', ['Son nombre de protons (numéro atomique Z)', 'Son nombre de neutrons', 'Son nombre total de nucléons', 'Sa masse volumique'], 0, 'Deux noyaux de même Z sont le même élément, même si leurs nombres de neutrons diffèrent : ce sont des isotopes.'],
@@ -177,22 +199,42 @@ Certains noyaux sont **radioactifs** : ils se désintègrent spontanément, au h
           axe: 'Une longue histoire de la matière',
           lecon: {
             titre: 'Quand la matière s’organise en réseau',
-            cours: `Un cristal, ce n’est pas une pierre précieuse : c’est un **empilement ordonné et périodique** d’atomes, d’ions ou de molécules. Le sel de table en est un, le sable aussi, et l’os également.
+            cours: `Un cristal, ce n’est **pas une pierre précieuse** : c’est un **empilement ordonné et périodique** d’atomes, d’ions ou de molécules. Le sel de table en est un, le sable aussi, et l’os également.
 
 ## Cristallin ou amorphe
-Dans un solide **cristallin**, le motif se répète à l’identique dans les trois directions de l’espace : on parle d’**ordre à longue distance**. Dans un solide **amorphe** — le verre, l’obsidienne —, les atomes sont figés en désordre, comme un liquide arrêté net. Une même espèce chimique peut donner les deux : le dioxyde de silicium donne le quartz (cristallin) ou le verre (amorphe), selon la vitesse de refroidissement.
+| | **Cristallin** | **Amorphe** |
+| L’organisation | Le motif se répète **à l’identique** dans les trois directions | Les atomes sont **figés en désordre** |
+| L’image | Un **ordre à longue distance** | Un **liquide arrêté net** |
+| L’exemple | Le **quartz** | Le **verre**, l’obsidienne |
+
+> Une **même espèce chimique** peut donner les deux : le dioxyde de silicium donne le quartz **ou** le verre, selon la **vitesse de refroidissement**.
 
 ## Maille, motif, compacité
-La **maille** est le plus petit volume qui, répété par translation, reconstruit tout le cristal. Deux exemples au programme :
-- **maille cubique simple** : un atome à chaque sommet, soit 8 × 1/8 = **1 atome par maille**, compacité ≈ **0,52** ;
-- **maille cubique à faces centrées** : sommets et centres des faces, soit 8 × 1/8 + 6 × 1/2 = **4 atomes par maille**, compacité ≈ **0,74**, l’empilement le plus dense.
-De la maille se déduit la **masse volumique** : ρ = (masse des atomes de la maille) / (volume de la maille).
+La **maille** est le plus petit volume qui, répété par translation, reconstruit tout le cristal.
+
+| Maille | Le compte des atomes | Compacité |
+| **Cubique simple** | 8 × 1/8 = **1 atome** | environ **0,52** |
+| **Cubique à faces centrées** | 8 × 1/8 + 6 × 1/2 = **4 atomes** | environ **0,74** — l’empilement le plus dense |
+
+> De la maille se déduit la **masse volumique** : ρ = (masse des atomes de la maille) / (volume de la maille).
 
 ## Les cristaux des roches
-Une roche est un **assemblage de cristaux**, et leur taille raconte son histoire : un refroidissement **lent**, en profondeur, laisse le temps aux cristaux de grossir — c’est le **granite**, entièrement cristallisé et à gros grains (quartz, feldspaths, micas). Un refroidissement **rapide**, en surface, ne le permet pas : le **basalte** montre de petits cristaux noyés dans un verre. Même magma, deux textures.
+Une roche est un **assemblage de cristaux** — et leur **taille raconte son histoire**.
+
+| Roche | Son refroidissement | Sa texture |
+| **Granite** | **Lent**, en profondeur | Entièrement cristallisé, **gros grains** : quartz, feldspaths, micas |
+| **Basalte** | **Rapide**, en surface | **Petits cristaux** noyés dans un **verre** |
+
+> Même magma, **deux textures**. La vitesse de refroidissement est la seule variable.
 
 ## Les cristaux du vivant
-Les êtres vivants fabriquent eux aussi des cristaux : **carbonate de calcium** (CaCO3) des coquilles de mollusques et des tests d’oursins, **phosphate de calcium** de l’os et de l’émail dentaire. Ces biominéraux se déposent sur une trame organique, ce qui leur donne des propriétés que le minéral seul n’a pas — la nacre résiste bien mieux à la fracture que l’aragonite pure.`,
+| Biominéral | Où on le trouve |
+| **Carbonate de calcium** (CaCO3) | Coquilles de mollusques, tests d’oursins |
+| **Phosphate de calcium** | L’**os** et l’**émail** dentaire |
+
+Ces cristaux se déposent sur une **trame organique**.
+
+> C’est ce qui leur donne des propriétés que le minéral seul n’a pas : la **nacre résiste bien mieux à la fracture** que l’aragonite pure.`,
           },
           questions: [
             ['Qu’est-ce qui caractérise un solide cristallin ?', ['Un empilement ordonné et périodique de son motif', 'Une absence totale d’organisation', 'Une parfaite transparence', 'Une origine forcément minérale'], 0, 'C’est l’ordre à longue distance qui définit le cristal, pas son aspect ni sa provenance.'],
@@ -210,22 +252,43 @@ Les êtres vivants fabriquent eux aussi des cristaux : **carbonate de calcium** 
           axe: 'Une longue histoire de la matière',
           lecon: {
             titre: 'La cellule, plus petite unité capable de vivre',
-            cours: `Après l’atome et le cristal, le programme monte d’un cran : la matière du vivant s’organise elle aussi, mais en une structure capable de se maintenir et de se reproduire.
+            cours: `Après l’atome et le cristal, le programme monte d’un cran : la matière du vivant s’organise elle aussi — mais en une structure capable de **se maintenir** et de **se reproduire**.
 
 ## Une théorie née du microscope
-La **théorie cellulaire** s’est construite en deux temps : Schleiden et Schwann affirment vers 1838 que tous les êtres vivants sont constitués de cellules ; Virchow ajoute en 1855 que **toute cellule provient d’une cellule** préexistante. Autrement dit, la lignée cellulaire est ininterrompue depuis les origines de la vie.
+| Date | Qui | Ce qu’il établit |
+| vers **1838** | Schleiden et Schwann | Tous les êtres vivants sont **constitués de cellules** |
+| **1855** | Virchow | **Toute cellule provient d’une cellule** préexistante |
+
+> Autrement dit : la **lignée cellulaire est ininterrompue** depuis les origines de la vie.
 
 ## Des ordres de grandeur à connaître
-Une cellule animale mesure **10 à 100 micromètres** (µm), une bactérie environ **1 µm**, la membrane plasmique environ **7,5 nanomètres**. Le microscope optique ne sépare pas deux points plus proches que **0,2 µm** : il montre la cellule, jamais sa membrane — il a fallu le microscope électronique pour cela.
+| Objet | Sa taille |
+| Une cellule **animale** | **10 à 100 µm** |
+| Une **bactérie** | environ **1 µm** |
+| La **membrane** plasmique | environ **7,5 nm** |
+| Le pouvoir de résolution du microscope **optique** | **0,2 µm** |
+
+> Le microscope optique montre la **cellule**, jamais sa **membrane** : il a fallu le microscope **électronique** pour cela.
 
 ## La membrane, une frontière qui se forme toute seule
-La membrane est une **bicouche de phospholipides**. Ces molécules sont **amphiphiles** : une tête **hydrophile** tournée vers l’eau, deux queues **hydrophobes** qui la fuient. Placées dans l’eau, elles s’organisent spontanément en bicouche, sans qu’aucune information ne le commande. La membrane délimite un **milieu intérieur** distinct du milieu extérieur et contrôle les échanges : c’est la condition première d’une cellule.
+La membrane est une **bicouche de phospholipides**, molécules **amphiphiles**.
 
-## Le métabolisme, l’activité chimique de la cellule
-L’ensemble des réactions chimiques d’une cellule forme son **métabolisme**. Deux grands types :
-- l’**autotrophie** — la cellule fabrique sa matière organique à partir de matière minérale et d’une source d’énergie, comme la cellule chlorophyllienne par photosynthèse ;
-- l’**hétérotrophie** — la cellule prélève sa matière organique dans son milieu, puis la dégrade par **respiration** (avec dioxygène) ou par **fermentation** (sans).
-Ce métabolisme dépend du **patrimoine génétique** (les enzymes disponibles) et des **conditions du milieu** (lumière, dioxygène, nutriments).`,
+| Partie de la molécule | Son comportement dans l’eau |
+| La **tête hydrophile** | Elle se tourne **vers l’eau** |
+| Les deux **queues hydrophobes** | Elles la **fuient** |
+
+> Placées dans l’eau, elles s’organisent **spontanément** en bicouche — **sans qu’aucune information ne le commande**. C’est la propriété la plus contre-intuitive du chapitre.
+
+La membrane délimite un **milieu intérieur** distinct de l’extérieur et **contrôle les échanges** : c’est la condition première d’une cellule.
+
+## Le métabolisme
+L’ensemble des réactions chimiques d’une cellule.
+
+| Type | Ce que la cellule fait | Exemple |
+| **Autotrophie** | Elle **fabrique** sa matière organique à partir de minéral et d’une source d’énergie | La cellule chlorophyllienne, par **photosynthèse** |
+| **Hétérotrophie** | Elle **prélève** sa matière organique dans le milieu | Puis la dégrade par **respiration** (avec O2) ou **fermentation** (sans) |
+
+> Le métabolisme dépend de **deux** choses : le **patrimoine génétique** — les enzymes disponibles — et les **conditions du milieu** : lumière, dioxygène, nutriments.`,
           },
           questions: [
             ['Qu’affirme la théorie cellulaire complétée par Virchow en 1855 ?', ['Toute cellule provient d’une cellule préexistante', 'Les cellules naissent spontanément de la matière inerte', 'Seuls les animaux sont formés de cellules', 'Une cellule peut vivre sans membrane'], 0, 'C’est la fin de la génération spontanée : la continuité du vivant est cellulaire.'],
@@ -246,24 +309,38 @@ Ce métabolisme dépend du **patrimoine génétique** (les enzymes disponibles) 
           axe: 'Le Soleil, notre source d’énergie',
           lecon: {
             titre: 'Une étoile qui perd de la masse pour nous éclairer',
-            cours: `Le Soleil rayonne **3,8 × 10^26 watts** depuis 4,6 milliards d’années. Cette puissance n’a rien de chimique : aucune combustion ne tiendrait plus de quelques milliers d’années.
+            cours: `Le Soleil rayonne **3,8 × 10^26 watts** depuis 4,6 milliards d’années. Cette puissance n’a **rien de chimique** : aucune combustion ne tiendrait plus de quelques milliers d’années.
 
 ## La fusion, et la masse qui manque
-Au cœur du Soleil, à environ **15 millions de degrés**, quatre noyaux d’hydrogène fusionnent en un noyau d’hélium. Or l’hélium formé est **moins massif** que les quatre noyaux de départ : cette masse manquante est convertie en énergie selon la relation d’Einstein **E = m × c²**, avec c = 3,0 × 10^8 m/s. Le Soleil perd ainsi environ **4 millions de tonnes par seconde** — une paille pour un astre de 2 × 10^30 kg.
+Au cœur du Soleil, à environ **15 millions de degrés**, **quatre** noyaux d’hydrogène fusionnent en **un** noyau d’hélium.
 
-## La loi de Wien : la couleur dit la température
-Tout corps chaud émet un rayonnement dont la longueur d’onde du maximum d’émission dépend **seulement** de sa température :
-**λmax × T = 2,9 × 10^-3 m·K**
-La surface du Soleil est à **5 800 K** : λmax ≈ 500 nm, en plein milieu du visible (vert-jaune). Une étoile plus froide (3 000 K) émet surtout dans le rouge et l’infrarouge, une étoile plus chaude (10 000 K) dans le bleu. La couleur d’une étoile est un thermomètre.
+> L’hélium formé est **moins massif** que les quatre noyaux de départ. Cette masse manquante devient de l’énergie : **E = m × c²**, avec c = 3,0 × 10^8 m/s.
 
-## La loi de Stefan : la puissance par mètre carré
-La puissance rayonnée par unité de surface croît comme la **puissance quatrième** de la température :
-**P/S = σ × T⁴**, avec σ = 5,67 × 10^-8 W·m^-2·K^-4.
-Doubler la température multiplie donc la puissance émise par **16**.
+| Grandeur | Sa valeur |
+| Masse perdue par le Soleil | environ **4 millions de tonnes par seconde** |
+| Masse totale du Soleil | 2 × 10^30 kg |
+
+Une paille, donc, à l’échelle de l’astre.
+
+## Les deux lois du rayonnement
+| Loi | Sa formule | Ce qu’elle donne |
+| **Wien** | λmax × T = **2,9 × 10^-3** m·K | La **couleur** dit la **température** |
+| **Stefan** | P/S = **σ × T⁴**, σ = 5,67 × 10^-8 | La **puissance** par mètre carré |
+
+| Température de surface | Où se situe le maximum d’émission |
+| **3 000 K** | Rouge et infrarouge |
+| **5 800 K** — le Soleil | λmax environ **500 nm** : le **vert-jaune**, en plein visible |
+| **10 000 K** | Le bleu |
+
+> Stefan est une puissance **quatrième** : **doubler la température multiplie la puissance émise par 16**.
 
 ## Ce qui arrive jusqu’à nous
-À la distance de la Terre (150 millions de km), la puissance solaire reçue par mètre carré face au Soleil vaut **1 360 W/m²** : c’est la **constante solaire**. Elle ne dépend que de la distance — elle décroît comme 1/d².
-Cette puissance ne se répartit pas également : plus la latitude est élevée, plus les rayons arrivent **inclinés** et étalent la même énergie sur une plus grande surface. La puissance reçue par mètre carré de sol est proportionnelle au **cosinus de l’angle d’incidence**. C’est cette inégalité, et elle seule, qui crée les zones climatiques et les saisons.`,
+À 150 millions de km, la puissance reçue par mètre carré **face au Soleil** vaut **1 360 W/m²** : c’est la **constante solaire**. Elle ne dépend que de la distance, et décroît comme 1/d².
+
+## Pourquoi il fait plus chaud à l’équateur
+Cette puissance ne se répartit **pas également** : plus la latitude est élevée, plus les rayons arrivent **inclinés** et étalent la **même énergie** sur une **plus grande surface**.
+
+> La puissance reçue par mètre carré de sol est proportionnelle au **cosinus de l’angle d’incidence**. C’est cette inégalité, **et elle seule**, qui crée les **zones climatiques** et les **saisons**.`,
           },
           questions: [
             ['Quelle réaction produit l’énergie du Soleil ?', ['La fusion de l’hydrogène en hélium', 'La fission de l’uranium', 'La combustion du carbone', 'La désintégration du potassium'], 0, 'La masse perdue au cours de la fusion est convertie en énergie selon E = mc².'],
@@ -281,20 +358,45 @@ Cette puissance ne se répartit pas également : plus la latitude est élevée, 
           axe: 'Le Soleil, notre source d’énergie',
           lecon: {
             titre: 'Ce que la Terre reçoit, renvoie et garde',
-            cours: `La Terre ne se réchauffe ni ne se refroidit tant qu’elle **renvoie vers l’espace exactement autant d’énergie qu’elle en reçoit**. Tout le sujet du climat tient dans cette égalité, et dans le petit écart qui s’y est glissé.
+            cours: `La Terre ne se réchauffe ni ne se refroidit tant qu’elle **renvoie vers l’espace exactement autant d’énergie qu’elle en reçoit**. Tout le sujet du climat tient dans cette égalité — et dans le petit écart qui s’y est glissé.
 
 ## Des 1 360 aux 340 watts
-La Terre intercepte le rayonnement solaire sur un **disque** (π R²) mais le répartit sur une **sphère** (4 π R²), quatre fois plus grande, en tournant sur elle-même. La puissance moyenne reçue par mètre carré vaut donc 1 360 / 4 = **340 W/m²**.
+La Terre **intercepte** le rayonnement sur un **disque** (π R²) mais le **répartit** sur une **sphère** (4 π R²), quatre fois plus grande, en tournant sur elle-même.
 
-## L’albédo : la part renvoyée sans être absorbée
-Environ **30 %** de cette puissance est réfléchie directement vers l’espace par les nuages, l’atmosphère, la neige et les surfaces claires : c’est l’**albédo** terrestre, soit **100 W/m²** perdus d’emblée. Restent **240 W/m²** réellement absorbés. L’albédo dépend des surfaces : proche de 0,9 pour la neige fraîche, de 0,1 pour l’océan — fondre la banquise, c’est baisser l’albédo, donc absorber davantage. C’est une **rétroaction positive**.
+> Puissance moyenne reçue : 1 360 / 4 = **340 W/m²**.
+
+## Le bilan en trois nombres
+| Flux | Sa valeur | Ce qu’il devient |
+| Reçu en moyenne | **340 W/m²** | — |
+| Réfléchi — l’**albédo**, environ **30 %** | **100 W/m²** | Renvoyé **sans être absorbé** |
+| Réellement **absorbé** | **240 W/m²** | Il chauffe le système |
+
+| Surface | Son albédo |
+| **Neige fraîche** | proche de **0,9** |
+| **Océan** | environ **0,1** |
+
+> Fondre la banquise, c’est **baisser l’albédo**, donc **absorber davantage**, donc réchauffer encore : c’est une **rétroaction positive**.
 
 ## Le rayonnement de la Terre et l’effet de serre
-À 288 K, la Terre rayonne à son tour, mais dans l’**infrarouge** (loi de Wien : λmax ≈ 10 µm). Une partie de cet infrarouge est **absorbée par les gaz à effet de serre** — vapeur d’eau, **CO2**, méthane, protoxyde d’azote — qui la réémettent dans toutes les directions, donc en partie vers le sol. Le sol reçoit ainsi deux apports : le Soleil et l’atmosphère.
-Sans effet de serre, la température moyenne de surface serait de **−18 °C**. Elle est de **+15 °C** : l’effet de serre naturel vaut **33 °C**, et il est la condition de l’eau liquide.
+À 288 K, la Terre rayonne à son tour — mais dans l’**infrarouge** : loi de Wien, λmax environ **10 µm**.
+
+| Étape | Ce qui se passe |
+| Les **gaz à effet de serre** absorbent cet infrarouge | Vapeur d’eau, **CO2**, méthane, protoxyde d’azote |
+| Ils le **réémettent dans toutes les directions** | Donc en partie **vers le sol** |
+| Le sol reçoit **deux** apports | Le Soleil **et** l’atmosphère |
+
+| Sans effet de serre | Avec effet de serre |
+| **−18 °C** | **+15 °C** |
+
+> L’effet de serre **naturel** vaut **33 °C** — et il est la condition de l’**eau liquide**.
 
 ## Le déséquilibre actuel
-Depuis l’ère industrielle, la teneur en CO2 est passée d’environ **280 ppm** à plus de **420 ppm**. L’atmosphère renvoie davantage d’infrarouge vers le sol : la Terre émet vers l’espace un peu moins qu’elle n’absorbe, avec un excédent de l’ordre de **1 W/m²**. Cet écart minuscule, accumulé sur toute la surface et sur des décennies, est le réchauffement climatique.`,
+| Grandeur | Sa valeur |
+| Teneur en CO2, ère préindustrielle | environ **280 ppm** |
+| Teneur actuelle | plus de **420 ppm** |
+| Excédent d’énergie | de l’ordre de **1 W/m²** |
+
+> Cet écart **minuscule**, accumulé sur toute la surface et sur des décennies, **est** le réchauffement climatique.`,
           },
           questions: [
             ['Pourquoi la puissance solaire moyenne reçue par la Terre est-elle de 340 W/m² et non de 1 360 ?', ['Parce que l’énergie interceptée par un disque se répartit sur une sphère quatre fois plus grande', 'Parce que l’atmosphère en absorbe les trois quarts', 'Parce que le Soleil ne brille que la moitié du temps', 'Parce que l’albédo vaut 75 %'], 0, 'π R² d’interception pour 4 π R² de surface : le rapport est exactement 4.'],
@@ -312,20 +414,41 @@ Depuis l’ère industrielle, la teneur en CO2 est passée d’environ **280 ppm
           axe: 'Le Soleil, notre source d’énergie',
           lecon: {
             titre: 'Comment la lumière devient de la matière',
-            cours: `La photosynthèse est la seule porte d’entrée notable de l’énergie solaire dans la matière vivante. Tout ce que nous mangeons, brûlons ou respirons en dépend.
+            cours: `La photosynthèse est la **seule porte d’entrée notable** de l’énergie solaire dans la matière vivante. Tout ce que nous mangeons, brûlons ou respirons en dépend.
 
-## Une équation à connaître
-**6 CO2 + 6 H2O → C6H12O6 + 6 O2**, en présence de lumière et de **chlorophylle**.
-Du minéral (dioxyde de carbone et eau) devient de l’organique (glucose), et du **dioxygène** est libéré comme sous-produit. L’énergie lumineuse est stockée dans les liaisons chimiques de la matière organique.
+## L’équation à connaître
+**6 CO2 + 6 H2O → C6H12O6 + 6 O2**, en présence de **lumière** et de **chlorophylle**
+
+| Ce qui entre | Ce qui sort |
+| Du **minéral** : dioxyde de carbone et eau | De l’**organique** : le glucose |
+| De l’**énergie lumineuse** | Du **dioxygène**, sous-produit |
+
+> L’énergie lumineuse est **stockée dans les liaisons chimiques** de la matière organique. C’est là tout le mécanisme.
 
 ## Où et grâce à quoi
-La réaction a lieu dans les **chloroplastes** des cellules végétales. Les **pigments chlorophylliens** absorbent surtout le **bleu** et le **rouge**, et réfléchissent le **vert** : c’est pourquoi les feuilles sont vertes. Une chromatographie sépare ces pigments (chlorophylles a et b, caroténoïdes) ; un spectre d’action superposé au spectre d’absorption montre que l’activité photosynthétique suit exactement les longueurs d’onde absorbées.
+La réaction a lieu dans les **chloroplastes**.
+
+| Couleur | Ce que les pigments en font |
+| **Bleu** et **rouge** | **Absorbés** |
+| **Vert** | **Réfléchi** — d’où la couleur des feuilles |
+
+> Une **chromatographie** sépare les pigments — chlorophylles a et b, caroténoïdes. Superposer le **spectre d’action** au **spectre d’absorption** montre que l’activité suit **exactement** les longueurs d’onde absorbées.
 
 ## Un rendement très faible
-Sur toute l’énergie solaire reçue par une plante, **moins de 1 %** finit stockée en matière organique. Ce rendement dérisoire alimente pourtant toute la biosphère : la **production primaire** de la planète est de l’ordre de **100 milliards de tonnes de carbone par an**, à parts à peu près égales entre continents et océans (phytoplancton).
+| Grandeur | Sa valeur |
+| Part de l’énergie solaire **stockée** en matière organique | **moins de 1 %** |
+| **Production primaire** de la planète | de l’ordre de **100 milliards de tonnes de carbone par an** |
+| Sa répartition | À parts à peu près **égales** entre continents et océans (phytoplancton) |
+
+> Ce rendement dérisoire alimente pourtant **toute la biosphère**.
 
 ## Le stock : biomasse, fossiles, biocarburants
-La matière organique produite forme la **biomasse**, utilisable comme aliment ou comme combustible. Enfouie et transformée pendant des dizaines de millions d’années, elle donne les **combustibles fossiles** — le charbon vient surtout des forêts du **Carbonifère** (il y a environ 350 millions d’années), le pétrole du plancton marin. Brûler un litre d’essence, c’est libérer en quelques secondes une énergie solaire captée il y a des millions d’années : le stock se consomme infiniment plus vite qu’il ne se reconstitue.`,
+| Forme | Son origine |
+| La **biomasse** | La matière organique produite, aliment ou combustible |
+| Le **charbon** | Surtout les forêts du **Carbonifère**, il y a environ **350 millions d’années** |
+| Le **pétrole** | Le **plancton marin** enfoui |
+
+> Brûler un litre d’essence, c’est libérer en quelques **secondes** une énergie solaire captée il y a des **millions d’années** : le stock se consomme **infiniment plus vite** qu’il ne se reconstitue.`,
           },
           questions: [
             ['Quelle est l’équation bilan de la photosynthèse ?', ['6 CO2 + 6 H2O → C6H12O6 + 6 O2', 'C6H12O6 + 6 O2 → 6 CO2 + 6 H2O', '2 H2 + O2 → 2 H2O', 'CO2 + CaO → CaCO3'], 0, 'La seconde équation est celle de la respiration, exactement l’inverse.'],
@@ -343,22 +466,37 @@ La matière organique produite forme la **biomasse**, utilisable comme aliment o
           axe: 'Le Soleil, notre source d’énergie',
           lecon: {
             titre: 'Tenir 37 °C, quoi qu’il arrive dehors',
-            cours: `L’être humain est **homéotherme** : sa température interne reste voisine de **37 °C**, que l’air soit à −10 °C ou à 40 °C. Cette constance a un coût énergétique permanent.
+            cours: `L’être humain est **homéotherme** : sa température interne reste voisine de **37 °C**, que l’air soit à −10 °C ou à 40 °C. Cette constance a un **coût énergétique permanent**.
 
 ## Le corps, un convertisseur d’énergie
-Les aliments apportent de l’énergie chimique ; la **respiration cellulaire** la libère. Une part sert au travail des muscles et au fonctionnement des organes, **tout le reste finit en chaleur**. Au repos, le **métabolisme de base** dissipe environ **100 watts** — l’équivalent d’une vieille ampoule —, soit de l’ordre de **2 000 kcal par jour**, c’est-à-dire près de **8 400 kJ** (1 kcal = 4,18 kJ). À l’effort, cette puissance peut être multipliée par dix.
+Les aliments apportent de l’énergie chimique ; la **respiration cellulaire** la libère. Une part sert aux muscles et aux organes — **tout le reste finit en chaleur**.
+
+| Situation | La puissance dissipée |
+| Au **repos** — métabolisme de base | environ **100 watts**, l’équivalent d’une vieille ampoule |
+| Sur une journée | de l’ordre de **2 000 kcal**, soit près de **8 400 kJ** (1 kcal = 4,18 kJ) |
+| À l’**effort** | Jusqu’à **dix fois** plus |
 
 ## Quatre voies pour évacuer la chaleur
-- le **rayonnement** infrarouge émis par la peau ;
-- la **convection** avec l’air (le vent l’amplifie) ;
-- la **conduction** avec les objets touchés (d’où le danger de l’eau froide, bien plus conductrice que l’air) ;
-- l’**évaporation** de la sueur, qui prélève environ **2 400 kJ par litre** évaporé — la seule voie qui fonctionne encore quand l’air est plus chaud que la peau.
+| Voie | Son mécanisme | Sa particularité |
+| Le **rayonnement** | Infrarouge émis par la peau | Permanent |
+| La **convection** | Échange avec l’air | Le **vent** l’amplifie |
+| La **conduction** | Contact avec les objets | D’où le danger de l’**eau froide**, bien plus conductrice que l’air |
+| L’**évaporation** de la sueur | Elle prélève environ **2 400 kJ par litre** | La **seule** voie qui fonctionne quand l’air est **plus chaud que la peau** |
 
 ## La régulation
-La température est surveillée par l’**hypothalamus**, qui compare l’information des thermorécepteurs à une valeur de consigne et déclenche les réponses. Contre le froid : **vasoconstriction** des vaisseaux de la peau (moins de sang en surface, moins de pertes), **frissons** (contractions musculaires productrices de chaleur), horripilation. Contre le chaud : **vasodilatation** et **sudation**.
+L’**hypothalamus** compare l’information des thermorécepteurs à une **valeur de consigne** et déclenche les réponses.
+
+| Contre le **froid** | Contre le **chaud** |
+| **Vasoconstriction** : moins de sang en surface, moins de pertes | **Vasodilatation** |
+| **Frissons** : des contractions musculaires qui produisent de la chaleur | **Sudation** |
+| Horripilation | — |
 
 ## Quand le bilan est rompu
-Si les pertes dépassent durablement la production, la température interne chute : **hypothermie** en dessous de 35 °C, avec confusion puis arrêt cardiaque. Si l’évacuation ne suffit plus — effort intense, chaleur humide qui empêche l’évaporation —, c’est l’**hyperthermie**, le coup de chaleur. La fièvre, elle, n’est pas une panne : c’est la valeur de consigne qui est délibérément relevée par l’organisme.`,
+| Situation | Ce qui se passe |
+| Les **pertes dépassent** durablement la production | **Hypothermie** en dessous de **35 °C** : confusion, puis arrêt cardiaque |
+| L’**évacuation ne suffit plus** — effort intense, chaleur **humide** | **Hyperthermie**, le coup de chaleur |
+
+> La **fièvre** n’est **pas une panne** : c’est la **valeur de consigne** elle-même qui est **délibérément relevée** par l’organisme.`,
           },
           questions: [
             ['Quelle est la puissance thermique dissipée par un adulte au repos ?', ['Environ 100 W', 'Environ 10 W', 'Environ 1 000 W', 'Environ 5 W'], 0, 'Soit de l’ordre de 2 000 kcal par jour, près de 8 400 kJ.'],
@@ -379,21 +517,52 @@ Si les pertes dépassent durablement la production, la température interne chut
           axe: 'La Terre, un astre singulier',
           lecon: {
             titre: 'Mesurer une planète avec une ombre et un angle',
-            cours: `La sphéricité de la Terre n’est pas une découverte moderne : elle est établie depuis l’Antiquité grecque, et sa **taille** a été mesurée avec une précision remarquable trois siècles avant notre ère.
+            cours: `La sphéricité de la Terre n’est **pas** une découverte moderne : elle est établie depuis l’Antiquité grecque, et sa **taille** a été mesurée avec une précision remarquable **trois siècles avant notre ère**.
 
-## Les indices anciens
-Trois observations suffisaient : l’**ombre circulaire** de la Terre sur la Lune lors des éclipses, la **disparition des navires par la coque** avant le mât à l’horizon, et le fait qu’une **étoile change de hauteur** dans le ciel quand on se déplace vers le nord ou le sud. La troisième est la plus féconde : elle rend la Terre **mesurable**.
+## Les trois indices anciens
+| Observation | Ce qu’elle prouve |
+| L’**ombre circulaire** de la Terre sur la Lune, lors des éclipses | La Terre est ronde |
+| Les navires disparaissent **par la coque** avant le mât | La surface est **courbe** |
+| Une **étoile change de hauteur** quand on se déplace vers le nord ou le sud | La Terre est **mesurable** |
+
+> La troisième est la plus féconde : c’est elle qui transforme une forme en un **nombre**.
 
 ## Ératosthène, vers 240 avant J.-C.
-Le jour du solstice d’été, le Soleil est au zénith à **Syène** (Assouan) : un puits y est éclairé jusqu’au fond. Au même instant à **Alexandrie**, un gnomon fait une ombre correspondant à un angle de **7,2°**, soit **1/50 de 360°**. Les deux villes étant distantes d’environ **5 000 stades**, la circonférence terrestre vaut 50 × 5 000 = 250 000 stades, soit environ **40 000 km**. La valeur moderne est de 40 075 km à l’équateur.
+| Étape | La donnée |
+| Au solstice, à **Syène** (Assouan) | Le Soleil est **au zénith** : un puits est éclairé jusqu’au fond |
+| Au même instant, à **Alexandrie** | Un gnomon fait une ombre de **7,2°**, soit **1/50 de 360°** |
+| Distance entre les villes | environ **5 000 stades** |
+| Le calcul | 50 × 5 000 = **250 000 stades**, soit environ **40 000 km** |
+
+> La valeur moderne est de **40 075 km** à l’équateur. L’erreur est de quelques pour cent, avec un bâton et une ombre.
 
 ## Repérage et distances
-Un point de la surface se repère par sa **latitude** (angle depuis l’équateur, de −90° à +90°, mesurée sur un **méridien**) et sa **longitude** (angle depuis le méridien de Greenwich, de −180° à +180°). La longueur d’un arc de méridien se calcule par **L = R × α**, l’angle α étant exprimé en **radians** : un degré de latitude vaut environ **111 km**, une minute d’arc vaut **1 852 m**, c’est-à-dire un **mille marin**.
-En 1791, le **mètre** a d’ailleurs été défini comme la dix-millionième partie du quart du méridien terrestre : d’où les 40 000 km de tour de Terre, qui ne sont pas une coïncidence.
+| Coordonnée | Ce qu’elle mesure | Sa plage |
+| La **latitude** | L’angle depuis l’**équateur**, sur un méridien | −90° à +90° |
+| La **longitude** | L’angle depuis le méridien de **Greenwich** | −180° à +180° |
+
+La longueur d’un arc de méridien vaut **L = R × α**, l’angle étant en **radians**.
+
+| Équivalence | Sa valeur |
+| Un **degré** de latitude | environ **111 km** |
+| Une **minute** d’arc | **1 852 m**, soit un **mille marin** |
+
+> En **1791**, le **mètre** a été défini comme la dix-millionième partie du **quart du méridien**. Les 40 000 km de tour de Terre ne sont donc **pas une coïncidence**.
 
 ## Ni tout à fait ronde, ni tout à fait plate
-La rotation aplatit légèrement la Terre aux pôles : le rayon équatorial vaut **6 378 km**, le rayon polaire **6 357 km**, soit 21 km d’écart. C’est un **ellipsoïde**, mais l’écart reste inférieur à 0,4 % du rayon.
-Sur cette sphère, le plus court chemin entre deux points n’est pas la ligne droite d’une carte : c’est l’arc de **grand cercle**, ou **orthodromie**. La **loxodromie**, trajet à cap constant, est plus simple à suivre mais plus longue — d’où les trajectoires d’avion qui semblent remonter vers le nord sur un planisphère.`,
+| Rayon | Sa valeur |
+| **Équatorial** | **6 378 km** |
+| **Polaire** | **6 357 km** |
+| L’écart | **21 km**, soit moins de **0,4 %** |
+
+C’est un **ellipsoïde**, aplati par la rotation.
+
+## Le plus court chemin
+| Trajet | Sa nature |
+| L’**orthodromie** | L’arc de **grand cercle** : le **plus court** |
+| La **loxodromie** | Le trajet à **cap constant** : plus simple à suivre, mais **plus long** |
+
+> D’où les trajectoires d’avion qui **semblent remonter vers le nord** sur un planisphère : elles sont pourtant les plus courtes.`,
           },
           questions: [
             ['Comment Ératosthène a-t-il mesuré la circonférence de la Terre ?', ['En comparant l’ombre d’un gnomon à Alexandrie et un puits éclairé à Syène', 'En faisant le tour de la Méditerranée en bateau', 'En mesurant la durée d’une éclipse de Lune', 'En observant la chute des corps'], 0, 'L’angle de 7,2° vaut 1/50 de tour : la distance entre les deux villes vaut donc 1/50 de la circonférence.'],
@@ -411,22 +580,37 @@ Sur cette sphère, le plus court chemin entre deux points n’est pas la ligne d
           axe: 'La Terre, un astre singulier',
           lecon: {
             titre: 'Quatre siècles pour arriver à 4,54 milliards d’années',
-            cours: `L’âge de la Terre est un cas d’école : une même question, des réponses successives qui varient d’un facteur **un million**, et à chaque fois une méthode défendable avec les connaissances du moment.
+            cours: `L’âge de la Terre est un **cas d’école** : une même question, des réponses successives qui varient d’un facteur **un million** — et à chaque fois une méthode **défendable** avec les connaissances du moment.
 
-## Les premières estimations
-- **Ussher (1650)** date la Création de 4004 av. J.-C. par l’addition des générations bibliques : quelques milliers d’années.
-- **Buffon (1778)** chauffe des boulets de fer de tailles différentes, mesure leur temps de refroidissement, extrapole à la taille de la Terre : il annonce publiquement **75 000 ans**, et note dans ses manuscrits des durées bien plus longues.
-- Les **géologues du XIXe siècle** (Hutton, Lyell) opposent l’épaisseur des séries sédimentaires et la lenteur de l’érosion : il faut des centaines de millions d’années.
-- **Lord Kelvin (1862)** reprend le calcul de refroidissement avec la thermodynamique et obtient **20 à 100 millions d’années** — un résultat impeccable, mais faux.
+## Les estimations successives
+| Auteur, date | Sa méthode | Son résultat |
+| **Ussher**, 1650 | L’addition des **générations bibliques** | Quelques **milliers** d’années |
+| **Buffon**, 1778 | Le **refroidissement** de boulets de fer, extrapolé | **75 000 ans** annoncés — bien plus dans ses manuscrits |
+| **Hutton**, **Lyell**, XIXe siècle | L’épaisseur des séries **sédimentaires** et la lenteur de l’érosion | Des **centaines de millions** d’années |
+| **Lord Kelvin**, 1862 | La thermodynamique du refroidissement | **20 à 100 millions** d’années |
 
 ## Pourquoi Kelvin s’est trompé
-Son modèle supposait une Terre qui se refroidit sans **aucune source de chaleur interne** et sans **convection** du manteau. Or la **radioactivité**, découverte par Becquerel en **1896**, chauffe l’intérieur du globe en permanence. Une hypothèse manquante suffit à fausser un raisonnement rigoureux : c’est la leçon épistémologique du chapitre.
+Son modèle supposait une Terre qui se refroidit **sans aucune source de chaleur interne** et **sans convection** du manteau.
+
+> Or la **radioactivité**, découverte par Becquerel en **1896**, chauffe l’intérieur du globe **en permanence**. Une **hypothèse manquante** suffit à fausser un raisonnement rigoureux : c’est la leçon épistémologique du chapitre.
 
 ## La radiochronologie
-La radioactivité fournit l’horloge qui manquait. La **demi-vie** d’un isotope étant constante, le rapport entre l’isotope **père** restant et l’isotope **fils** accumulé donne l’âge de fermeture du système. Chaque couple a son domaine : **carbone 14** (demi-vie 5 730 ans) pour l’archéologie, **potassium-argon**, **rubidium-strontium**, **uranium-plomb** (demi-vies de l’ordre du milliard d’années) pour les temps géologiques.
+La radioactivité fournit l’horloge qui manquait : la **demi-vie** étant constante, le rapport entre l’isotope **père** restant et l’isotope **fils** accumulé donne l’âge de fermeture du système.
+
+| Couple | Demi-vie | Son domaine |
+| **Carbone 14** | **5 730 ans** | L’archéologie |
+| **Potassium-argon** | Longue | Les temps géologiques |
+| **Rubidium-strontium** | Longue | Idem |
+| **Uranium-plomb** | De l’ordre du **milliard d’années** | Les plus vieux objets |
 
 ## 4,54 milliards d’années
-En **1953**, Clair Patterson date des **météorites** par la méthode uranium-plomb et obtient **4,55 milliards d’années**, valeur toujours admise (4,54 Ga). Pourquoi des météorites et non des roches terrestres ? Parce que la **tectonique des plaques** recycle sans cesse la croûte : les plus vieilles roches connues ont environ **4 milliards d’années** (gneiss d’Acasta) et les plus vieux cristaux de zircon **4,4 milliards**. La Terre a effacé ses propres archives ; les météorites, elles, n’ont pas bougé depuis la formation du système solaire.`,
+En **1953**, **Clair Patterson** date des **météorites** par uranium-plomb : **4,55 milliards d’années**. La valeur admise aujourd’hui est **4,54 Ga**.
+
+| Pourquoi des météorites | L’âge des roches terrestres |
+| La **tectonique des plaques recycle** sans cesse la croûte | Les plus vieilles roches : environ **4 milliards d’années** (gneiss d’Acasta) |
+| Les météorites **n’ont pas bougé** depuis la formation du système solaire | Les plus vieux **zircons** : **4,4 milliards** |
+
+> **La Terre a effacé ses propres archives.** C’est ailleurs qu’il a fallu aller les chercher.`,
           },
           questions: [
             ['Quelle expérience Buffon a-t-il menée pour estimer l’âge de la Terre ?', ['Le refroidissement de boulets de fer de tailles croissantes', 'La mesure de l’épaisseur des sédiments', 'Le comptage des générations bibliques', 'La datation de météorites'], 0, 'Il extrapole ensuite à la taille de la Terre et publie 75 000 ans.'],
@@ -444,20 +628,47 @@ En **1953**, Clair Patterson date des **météorites** par la méthode uranium-p
           axe: 'La Terre, un astre singulier',
           lecon: {
             titre: 'Du géocentrisme aux exoplanètes',
-            cours: `Situer la Terre dans l’Univers, c’est d’abord une histoire de modèles successifs, chacun jugé sur sa capacité à **rendre compte des observations**.
+            cours: `Situer la Terre dans l’Univers, c’est d’abord une histoire de **modèles successifs**, chacun jugé sur sa capacité à **rendre compte des observations**.
 
 ## Deux modèles en concurrence
-Le modèle **géocentrique** de Ptolémée (IIe siècle) place la Terre immobile au centre et rend compte du mouvement des planètes au prix d’**épicycles** de plus en plus nombreux. Le modèle **héliocentrique**, proposé par Copernic en **1543**, met le Soleil au centre : il explique d’un coup le mouvement rétrograde apparent des planètes.
-Les preuves viennent ensuite : **Galilée** (1610) observe à la lunette les **quatre satellites de Jupiter** — tout ne tourne donc pas autour de la Terre — et les **phases de Vénus**, incompatibles avec Ptolémée. **Kepler** énonce que les orbites sont des **ellipses** dont le Soleil occupe un foyer. **Newton** (1687) en donne la cause avec la **gravitation universelle** : F = G × m × M / d².
+| | **Géocentrisme** (Ptolémée, IIe s.) | **Héliocentrisme** (Copernic, **1543**) |
+| Au centre | La **Terre**, immobile | Le **Soleil** |
+| Le mouvement rétrograde des planètes | Expliqué par des **épicycles** de plus en plus nombreux | Expliqué **d’un coup**, par la composition des mouvements |
+
+## Les preuves et les lois
+| Qui | Ce qu’il apporte |
+| **Galilée**, 1610 | Les **quatre satellites de Jupiter** — tout ne tourne donc pas autour de la Terre — et les **phases de Vénus**, incompatibles avec Ptolémée |
+| **Kepler** | Les orbites sont des **ellipses** dont le Soleil occupe un **foyer** |
+| **Newton**, 1687 | La **cause** : la gravitation universelle, F = G × m × M / d² |
 
 ## Des distances qui changent d’unité
-Dans le système solaire on compte en **unités astronomiques** : 1 UA = distance Terre-Soleil ≈ **150 millions de km**, parcourue par la lumière en **8 minutes**. Au-delà, on compte en **années-lumière** : 1 al ≈ 9,5 × 10^12 km. L’étoile la plus proche est à 4,2 al, la Voie lactée mesure environ **100 000 al** de diamètre, et l’Univers observable environ 13,8 milliards d’années-lumière de rayon apparent. Regarder loin, c’est regarder tôt : la lumière met du temps.
+| Unité | Sa valeur | Son domaine |
+| L’**unité astronomique** | distance Terre-Soleil, environ **150 millions de km** — la lumière met **8 minutes** | Le système solaire |
+| L’**année-lumière** | environ **9,5 × 10^12 km** | Les étoiles et au-delà |
+
+| Objet | Sa distance ou sa taille |
+| L’étoile la plus proche | **4,2 al** |
+| La **Voie lactée** | environ **100 000 al** de diamètre |
+| L’Univers observable | environ **13,8 milliards** d’années-lumière |
+
+> **Regarder loin, c’est regarder tôt** : la lumière met du temps.
 
 ## Une planète dans une zone étroite
-La Terre est une **planète tellurique** (rocheuse, dense, petite), comme Mercure, Vénus et Mars, par opposition aux **planètes géantes** gazeuses et glacées. Sa singularité tient à trois conditions réunies : une **distance** au Soleil qui place sa température dans la **zone d’habitabilité**, là où l’eau peut rester **liquide** ; une **masse** suffisante pour retenir une atmosphère ; un **champ magnétique** qui dévie le vent solaire.
+La Terre est une **planète tellurique** — rocheuse, dense, petite — comme Mercure, Vénus et Mars, par opposition aux **planètes géantes** gazeuses et glacées.
+
+| Condition | Ce qu’elle apporte |
+| Une **distance** dans la **zone d’habitabilité** | L’eau peut rester **liquide** |
+| Une **masse** suffisante | Elle **retient une atmosphère** |
+| Un **champ magnétique** | Il **dévie le vent solaire** |
 
 ## Ailleurs ?
-Depuis 1995 et la première détection autour d’une étoile de type solaire, plus de **5 000 exoplanètes** ont été confirmées. Deux méthodes principales : la méthode des **transits** (la luminosité de l’étoile baisse légèrement, périodiquement, quand la planète passe devant) et celle des **vitesses radiales** (l’étoile est légèrement entraînée par la planète). Certaines se trouvent dans la zone d’habitabilité de leur étoile — condition nécessaire, pas suffisante.`,
+Depuis **1995** et la première détection autour d’une étoile de type solaire, plus de **5 000 exoplanètes** ont été confirmées.
+
+| Méthode | Son principe |
+| Les **transits** | La luminosité de l’étoile **baisse périodiquement** quand la planète passe devant |
+| Les **vitesses radiales** | L’étoile est **légèrement entraînée** par la planète |
+
+> Certaines sont dans la zone d’habitabilité de leur étoile : **condition nécessaire, pas suffisante**.`,
           },
           questions: [
             ['Qui propose le modèle héliocentrique en 1543 ?', ['Copernic', 'Ptolémée', 'Galilée', 'Newton'], 0, 'Galilée l’appuiera par ses observations, Kepler le corrigera avec les ellipses, Newton l’expliquera.'],
@@ -478,29 +689,54 @@ Depuis 1995 et la première détection autour d’une étoile de type solaire, p
           axe: 'Son et musique, porteurs d’informations',
           lecon: {
             titre: 'Une onde qui a besoin de matière',
-            cours: `Un son est une **onde mécanique** : la vibration d’une source met en mouvement les particules du milieu, de proche en proche. Sans matière, pas de son — dans le vide, la cloche sonne pour personne.
+            cours: `Un son est une **onde mécanique** : la vibration d’une source met en mouvement les particules du milieu, de proche en proche.
+
+> **Sans matière, pas de son** — dans le vide, la cloche sonne pour personne.
 
 ## Une onde longitudinale
-Les particules d’air vibrent **dans la direction de propagation**, créant une succession de **compressions** et de **dilatations**. Elles oscillent autour de leur position : c’est l’**énergie** qui se déplace, pas la matière.
+Les particules d’air vibrent **dans la direction de propagation**, créant une succession de **compressions** et de **dilatations**.
 
-## Célérité, période, fréquence
-La célérité du son dépend du **milieu** et de sa température :
-- **340 m/s** dans l’air à 20 °C ;
-- **1 500 m/s** dans l’eau ;
-- environ **5 000 m/s** dans l’acier.
-Un son pur est caractérisé par sa **période T** (en secondes) et sa **fréquence f = 1/T** (en hertz). La **longueur d’onde** vaut **λ = v × T = v / f** : elle est la distance parcourue pendant une période. Un la3 à 440 Hz a ainsi dans l’air une longueur d’onde de 340/440 ≈ 0,77 m.
+> Elles **oscillent autour de leur position** : c’est l’**énergie** qui se déplace, **pas la matière**.
+
+## La célérité dépend du milieu
+| Milieu | Célérité |
+| L’**air** à 20 °C | **340 m/s** |
+| L’**eau** | **1 500 m/s** |
+| L’**acier** | environ **5 000 m/s** |
+
+## Période, fréquence, longueur d’onde
+| Grandeur | Sa définition | Son unité |
+| La **période T** | La durée d’un cycle | la seconde |
+| La **fréquence f = 1/T** | Le nombre de cycles par seconde | le **hertz** |
+| La **longueur d’onde λ = v × T = v/f** | La distance parcourue pendant une période | le mètre |
+
+> Un **la3** à **440 Hz** a dans l’air une longueur d’onde de 340/440, soit environ **0,77 m**.
 
 ## Ce que l’oreille entend
-Le domaine audible humain s’étend d’environ **20 Hz à 20 000 Hz**. En dessous ce sont les **infrasons**, au-dessus les **ultrasons** — utilisés par les chauves-souris, l’échographie et les sonars.
-Trois caractéristiques d’un son musical :
-- la **hauteur**, donnée par la **fréquence fondamentale** (aigu = fréquence élevée) ;
-- le **timbre**, donné par les **harmoniques**, ces fréquences multiples du fondamental qui distinguent une flûte d’un violon jouant la même note ;
-- l’**intensité**, liée à l’amplitude.
+| Domaine | Ses fréquences | Ses usages |
+| Les **infrasons** | en dessous de **20 Hz** | — |
+| L’**audible** | **20 Hz à 20 000 Hz** | — |
+| Les **ultrasons** | au-dessus de 20 kHz | Chauves-souris, échographie, sonars |
+
+| Caractéristique d’un son musical | Ce qui la détermine |
+| La **hauteur** | La **fréquence fondamentale** — aigu = fréquence élevée |
+| Le **timbre** | Les **harmoniques** : ils distinguent une flûte d’un violon **sur la même note** |
+| L’**intensité** | L’amplitude |
 
 ## Le décibel, une échelle qui trompe
-L’intensité sonore I se mesure en W/m², mais l’oreille répond de façon **logarithmique**. On définit donc le **niveau d’intensité sonore** :
-**L = 10 × log(I / I0)**, avec I0 = 10^-12 W/m², seuil d’audibilité.
-Conséquence à retenir : **+10 dB, c’est une intensité multipliée par 10**, et **doubler l’intensité n’ajoute que 3 dB**. Deux machines identiques à 80 dB ne font pas 160 dB, mais 83. Le seuil de risque est fixé à **85 dB** pour une exposition prolongée, le seuil de douleur autour de **120 dB**.`,
+L’oreille répond de façon **logarithmique**. D’où le niveau d’intensité sonore :
+
+**L = 10 × log(I / I0)**, avec I0 = 10^-12 W/m², seuil d’audibilité
+
+| Ce qu’on fait | L’effet en décibels |
+| **Multiplier** l’intensité par **10** | **+10 dB** |
+| **Doubler** l’intensité | **+3 dB** seulement |
+
+> Deux machines identiques à 80 dB ne font **pas** 160 dB, mais **83**.
+
+| Seuil | Sa valeur |
+| Risque en exposition prolongée | **85 dB** |
+| Douleur | environ **120 dB** |`,
           },
           questions: [
             ['Pourquoi le son ne se propage-t-il pas dans le vide ?', ['C’est une onde mécanique : il lui faut un milieu matériel', 'Parce que la lumière y va trop vite', 'Parce que la température y est trop basse', 'Parce qu’il n’y a pas de gravité'], 0, 'Contrairement à la lumière, onde électromagnétique, qui traverse le vide.'],
@@ -521,20 +757,41 @@ Conséquence à retenir : **+10 dB, c’est une intensité multipliée par 10**,
             cours: `« La musique est un exercice d’arithmétique secret », écrivait Leibniz. Le programme le prend au mot : une gamme est une **suite de rapports de fréquences**.
 
 ## Pythagore et le monocorde
-Sur une corde tendue, la fréquence du son émis est **inversement proportionnelle à la longueur** de la corde qui vibre. Diviser la longueur par deux double la fréquence. L’école pythagoricienne constate que les intervalles jugés **consonants** correspondent à des **rapports de nombres entiers simples** :
-- **octave** : rapport de fréquences **2/1** ;
-- **quinte** : **3/2** ;
-- **quarte** : **4/3**.
-Deux notes séparées d’une octave portent d’ailleurs le même nom : le la3 vaut **440 Hz**, le la4 **880 Hz**, le la2 **220 Hz**.
+Sur une corde tendue, la fréquence est **inversement proportionnelle à la longueur** qui vibre : diviser la longueur par deux **double** la fréquence.
+
+| Intervalle consonant | Son rapport de fréquences |
+| L’**octave** | **2/1** |
+| La **quinte** | **3/2** |
+| La **quarte** | **4/3** |
+
+> Les intervalles jugés **consonants** correspondent à des **rapports de nombres entiers simples**. C’est la découverte fondatrice.
+
+| Note | Sa fréquence |
+| la2 | **220 Hz** |
+| **la3** | **440 Hz** |
+| la4 | **880 Hz** |
+
+Deux notes séparées d’une octave portent d’ailleurs le **même nom**.
 
 ## La gamme de Pythagore
-On construit la gamme en empilant des **quintes** (× 3/2), puis en ramenant chaque note obtenue dans l’octave de départ (en divisant par 2 autant de fois qu’il le faut). Le procédé donne sept notes, puis douze.
+On empile des **quintes** (× 3/2), puis on ramène chaque note dans l’octave de départ en divisant par 2 autant de fois qu’il le faut. Le procédé donne sept notes, puis douze.
 
 ## Le comma, ou l’impossibilité arithmétique
-Le problème est qu’aucune puissance de 3/2 n’est jamais égale à une puissance de 2. Douze quintes donnent (3/2)^12 ≈ **129,7**, tandis que sept octaves donnent 2^7 = **128** : l’écart, environ 1,4 %, s’appelle le **comma pythagoricien**. La gamme ne se referme pas sur elle-même, et un instrument accordé ainsi sonne faux dès qu’on change de tonalité.
+| Empilement | Sa valeur |
+| **Douze quintes** : (3/2)^12 | environ **129,7** |
+| **Sept octaves** : 2^7 | **128** |
+
+> L’écart, environ **1,4 %**, s’appelle le **comma pythagoricien**. Aucune puissance de 3/2 n’est jamais égale à une puissance de 2 : **la gamme ne se referme pas sur elle-même**, et un instrument ainsi accordé sonne faux dès qu’on change de tonalité.
 
 ## La gamme tempérée
-La solution, généralisée à l’époque de Bach, consiste à répartir l’erreur : l’octave est divisée en **douze demi-tons rigoureusement égaux**, chacun de rapport **2^(1/12) ≈ 1,059**. Douze demi-tons redonnent exactement l’octave, puisque (2^(1/12))^12 = 2. Aucun intervalle n’est plus parfaitement juste — la quinte tempérée vaut 1,498 au lieu de 1,5 —, mais **toutes les tonalités deviennent également jouables**. C’est un compromis assumé entre la pureté arithmétique et la liberté musicale.`,
+Généralisée à l’époque de Bach : l’octave est divisée en **douze demi-tons rigoureusement égaux**, de rapport **2^(1/12), soit environ 1,059**.
+
+| Ce qu’on perd | Ce qu’on gagne |
+| Aucun intervalle n’est **parfaitement juste** — la quinte tempérée vaut **1,498** au lieu de 1,5 | **Toutes les tonalités** deviennent également jouables |
+
+Douze demi-tons redonnent **exactement** l’octave, puisque (2^(1/12))^12 = 2.
+
+> C’est un **compromis assumé** entre la pureté arithmétique et la liberté musicale.`,
           },
           questions: [
             ['Quel est le rapport de fréquences d’une octave ?', ['2', '3/2', '4/3', '1,059'], 0, 'Le la3 à 440 Hz donne un la4 à 880 Hz.'],
@@ -552,24 +809,52 @@ La solution, généralisée à l’époque de Bach, consiste à répartir l’er
           axe: 'Son et musique, porteurs d’informations',
           lecon: {
             titre: 'De l’onde continue à la suite de nombres',
-            cours: `Un microphone transforme une onde sonore en **signal électrique analogique** : une tension qui varie continûment. Pour être stockée et transmise, cette variation doit devenir une **suite de nombres**.
+            cours: `Un microphone transforme une onde sonore en **signal analogique** : une tension qui varie **continûment**. Pour être stockée et transmise, cette variation doit devenir une **suite de nombres**.
 
-## Échantillonner : découper le temps
-On relève la valeur du signal à intervalles réguliers. La **fréquence d’échantillonnage fe** est le nombre de relevés par seconde. Le **critère de Shannon-Nyquist** impose **fe ≥ 2 × fmax** : pour reconstituer sans erreur un son contenant des fréquences jusqu’à 20 kHz, il faut échantillonner à plus de 40 kHz. C’est exactement pourquoi le CD audio utilise **44,1 kHz**. Un échantillonnage trop lent produit un **repliement de spectre** : des fréquences inventées, absentes du son d’origine.
+## Les deux opérations
+| Opération | Ce qu’elle découpe | Le paramètre |
+| **Échantillonner** | Le **temps** | La **fréquence d’échantillonnage** fe |
+| **Quantifier** | L’**amplitude** | La **résolution**, en bits |
 
-## Quantifier : découper l’amplitude
-Chaque valeur relevée est arrondie au niveau le plus proche parmi ceux que permet la **résolution**, exprimée en **bits**. Avec n bits, on dispose de **2^n niveaux** : 8 bits donnent 256 niveaux, **16 bits** en donnent **65 536**. Plus la résolution est fine, plus le **bruit de quantification** est faible.
+## Échantillonner
+Le **critère de Shannon-Nyquist** impose **fe supérieure ou égale à 2 × fmax**.
+
+> Pour reconstituer un son allant jusqu’à **20 kHz**, il faut échantillonner à **plus de 40 kHz** : c’est exactement pourquoi le CD audio utilise **44,1 kHz**.
+
+> Un échantillonnage trop lent produit un **repliement de spectre** : des fréquences **inventées**, absentes du son d’origine.
+
+## Quantifier
+Avec n bits, on dispose de **2^n niveaux**.
+
+| Résolution | Nombre de niveaux |
+| **8 bits** | **256** |
+| **16 bits** | **65 536** |
+
+> Plus la résolution est fine, plus le **bruit de quantification** est faible.
 
 ## Calculer une taille de fichier
-La taille d’un enregistrement non compressé vaut :
-**taille = fe × n × durée × nombre de voies**.
-Une seconde de CD audio stéréo : 44 100 × 16 × 2 = **1 411 200 bits**, soit environ **1,4 Mbit** ou **176 ko**. Une chanson de trois minutes pèse ainsi une trentaine de mégaoctets — d’où la nécessité de compresser.
+**taille = fe × n × durée × nombre de voies**
+
+| Une seconde de CD audio stéréo | Le calcul |
+| 44 100 × 16 × 2 | **1 411 200 bits** |
+| Soit | environ **1,4 Mbit**, ou **176 ko** |
+
+> Une chanson de trois minutes pèse ainsi une **trentaine de mégaoctets** — d’où la nécessité de compresser.
 
 ## Compresser
-La **compression sans perte** (FLAC, ZIP) code l’information plus efficacement : le fichier d’origine est restitué **à l’identique**, pour un gain modeste. La **compression avec perte** (MP3, AAC) supprime ce que l’oreille ne perçoit pas ou peu — sons masqués par un son plus fort, fréquences extrêmes — et divise la taille par **dix** environ. Le fichier d’origine n’est alors **pas récupérable** : c’est le prix du streaming.
+| Type | Ce qu’elle fait | Le gain | Le fichier d’origine |
+| **Sans perte** — FLAC, ZIP | Code l’information plus efficacement | **Modeste** | Restitué **à l’identique** |
+| **Avec perte** — MP3, AAC | Supprime ce que l’oreille ne perçoit pas : sons **masqués**, fréquences extrêmes | Divise par **dix** environ | **Non récupérable** |
+
+> C’est le prix du streaming.
 
 ## Pourquoi le numérique
-Un signal analogique se dégrade à chaque copie et à chaque transmission. Une suite de 0 et de 1 se **régénère** exactement, se corrige (codes détecteurs d’erreurs), se duplique sans perte et se traite par calcul. C’est ce qui a fait basculer toute la chaîne du son.`,
+| L’analogique | Le numérique |
+| Se **dégrade** à chaque copie et transmission | Se **régénère** exactement |
+| Aucune correction possible | Se **corrige** — codes détecteurs d’erreurs |
+| — | Se **duplique** sans perte et se **traite par calcul** |
+
+> C’est ce qui a fait basculer **toute la chaîne du son**.`,
           },
           questions: [
             ['Qu’impose le critère de Shannon-Nyquist ?', ['Échantillonner à au moins deux fois la fréquence maximale du signal', 'Échantillonner à la fréquence maximale du signal', 'Quantifier sur au moins 16 bits', 'Compresser avant de transmettre'], 0, 'D’où les 44,1 kHz du CD audio pour des sons allant jusqu’à 20 kHz.'],
@@ -587,21 +872,46 @@ Un signal analogique se dégrade à chaque copie et à chaque transmission. Une 
           axe: 'Son et musique, porteurs d’informations',
           lecon: {
             titre: 'De la vibration de l’air au message nerveux',
-            cours: `L’oreille est un convertisseur : elle transforme une variation de pression de l’air en **message nerveux**, puis le cerveau en fait une perception — une note, une voix, une musique.
+            cours: `L’oreille est un **convertisseur** : elle transforme une variation de pression de l’air en **message nerveux** — puis le cerveau en fait une **perception**.
 
 ## Trois étages
-- L’**oreille externe** (pavillon, conduit auditif) capte et canalise les sons jusqu’au **tympan**, qu’ils font vibrer.
-- L’**oreille moyenne** contient la chaîne des trois **osselets** — marteau, enclume, **étrier**, le plus petit os du corps. Elle **amplifie** la vibration et l’adapte, en concentrant la force du grand tympan sur la petite fenêtre ovale.
-- L’**oreille interne** abrite la **cochlée**, un tube enroulé rempli de liquide où siège l’**organe de Corti** et ses **cellules ciliées**.
+| Étage | Ses éléments | Son rôle |
+| **Externe** | Pavillon, conduit auditif, **tympan** | **Capter** et canaliser ; le tympan vibre |
+| **Moyenne** | Les trois **osselets** : marteau, enclume, **étrier** | **Amplifier** et adapter |
+| **Interne** | La **cochlée**, l’**organe de Corti**, les **cellules ciliées** | **Coder** en message nerveux |
+
+> L’oreille moyenne concentre la force du **grand tympan** sur la **petite fenêtre ovale** : c’est là qu’est l’amplification. L’étrier est le **plus petit os du corps**.
 
 ## Le codage dans la cochlée
-La cochlée réalise une véritable **analyse en fréquences** : sa membrane basilaire, rigide et étroite à la base, souple et large au sommet, entre en résonance à un endroit différent selon la fréquence — les **aigus** à l’entrée, les **graves** au fond. C’est la **tonotopie**. La cellule ciliée excitée à cet endroit précis convertit la déformation en **message nerveux** : la **hauteur** du son est donc codée par la **position** des cellules stimulées, et l’**intensité** par la **fréquence des potentiels d’action** et le nombre de fibres recrutées.
+La membrane basilaire est **rigide et étroite à la base**, **souple et large au sommet** : elle entre en résonance à un **endroit différent selon la fréquence**.
+
+| Fréquence | Où elle résonne |
+| Les **aigus** | À l’**entrée** de la cochlée |
+| Les **graves** | Au **fond** |
+
+C’est la **tonotopie**.
+
+| Ce qui est codé | Comment |
+| La **hauteur** | Par la **position** des cellules stimulées |
+| L’**intensité** | Par la **fréquence des potentiels d’action** et le nombre de fibres recrutées |
 
 ## Jusqu’au cerveau
-Le message circule par le **nerf auditif** jusqu’aux **aires auditives** du cortex temporal, où il est comparé, identifié, associé à la mémoire et aux émotions. La perception n’est pas la mesure : le cerveau reconstruit, comble les manques et se laisse tromper — c’est ce qui rend possibles les illusions auditives.
+Le message circule par le **nerf auditif** jusqu’aux **aires auditives** du cortex **temporal**, où il est comparé, identifié, associé à la mémoire et aux émotions.
+
+> La **perception n’est pas la mesure** : le cerveau **reconstruit**, comble les manques et se laisse tromper — c’est ce qui rend possibles les **illusions auditives**.
 
 ## Des lésions irréversibles
-Les cellules ciliées de l’oreille interne **ne se régénèrent pas**. Un traumatisme sonore — concert, casque poussé, explosion — les détruit définitivement : la perte est **irréversible**. Les signes d’alerte sont les **acouphènes** (sifflements) et l’impression d’oreilles cotonneuses. Le risque dépend à la fois du **niveau** et de la **durée** : au-delà de **85 dB**, il croît vite, et chaque tranche de +3 dB divise par deux la durée d’exposition tolérable.`,
+Les cellules ciliées **ne se régénèrent pas**.
+
+| Signe d’alerte | Ce qu’il indique |
+| Les **acouphènes** — sifflements | Une atteinte en cours |
+| L’impression d’oreilles **cotonneuses** | Une fatigue auditive |
+
+| Le risque dépend de… | La règle |
+| Le **niveau** | Au-delà de **85 dB**, il croît vite |
+| La **durée** | Chaque **+3 dB divise par deux** la durée d’exposition tolérable |
+
+> Un traumatisme sonore — concert, casque poussé, explosion — détruit ces cellules **définitivement**.`,
           },
           questions: [
             ['Quel est le rôle de la chaîne des osselets ?', ['Amplifier et transmettre la vibration du tympan à l’oreille interne', 'Analyser les fréquences du son', 'Convertir la vibration en message nerveux', 'Protéger le conduit auditif'], 0, 'Marteau, enclume et étrier concentrent la force du tympan sur la fenêtre ovale.'],
@@ -624,25 +934,50 @@ Les cellules ciliées de l’oreille interne **ne se régénèrent pas**. Un tra
           axe: 'Mathématiques',
           lecon: {
             titre: 'Proportions, pourcentages et évolutions',
-            cours: `Un chiffre seul ne dit rien : c’est le **rapport** qu’il entretient avec un autre qui l’informe. Ce premier chapitre outille la lecture des données que le reste du programme manipule.
+            cours: `Un chiffre **seul** ne dit rien : c’est le **rapport** qu’il entretient avec un autre qui l’informe.
 
 ## Proportion et pourcentage
-La **proportion** d’une sous-population A dans une population E est le quotient p = effectif(A) / effectif(E), compris entre 0 et 1. Multipliée par 100, elle s’exprime en **pourcentage**. Attention aux proportions **emboîtées** : si 40 % des élèves sont en 1re et si 25 % d’entre eux prennent l’option théâtre, la proportion d’élèves de 1re option théâtre dans l’établissement vaut 0,40 × 0,25 = **0,10**, soit 10 %. Les proportions successives se **multiplient**, elles ne s’additionnent pas.
+La **proportion** de A dans E vaut effectif(A) / effectif(E), entre 0 et 1. Multipliée par 100, elle s’exprime en **pourcentage**.
+
+| Situation | Le calcul |
+| 40 % des élèves sont en 1re | 0,40 |
+| 25 % d’entre eux prennent l’option théâtre | 0,25 |
+| Leur part dans l’établissement | 0,40 × **0,25** = **0,10**, soit **10 %** |
+
+> Les proportions **emboîtées se multiplient** — elles ne s’additionnent **jamais**.
 
 ## Taux d’évolution et coefficient multiplicateur
-Pour une grandeur passant de V1 à V2 :
-**t = (V2 − V1) / V1** — le taux d’évolution, souvent donné en pourcentage ;
-**CM = 1 + t** — le coefficient multiplicateur, tel que V2 = V1 × CM.
-Une hausse de 20 % correspond à CM = 1,20 ; une baisse de 20 % à CM = 0,80.
+| Grandeur | Sa formule |
+| Le **taux d’évolution** | t = (V2 − V1) / V1 |
+| Le **coefficient multiplicateur** | **CM = 1 + t**, tel que V2 = V1 × CM |
+
+| Évolution | Son CM |
+| Hausse de **20 %** | **1,20** |
+| Baisse de **20 %** | **0,80** |
 
 ## Évolutions successives : on multiplie
-Deux évolutions qui s’enchaînent se composent en **multipliant les coefficients** : CM global = CM1 × CM2. Une hausse de 20 % suivie d’une baisse de 20 % donne 1,20 × 0,80 = **0,96**, soit une baisse finale de **4 %** — et non un retour au point de départ. C’est l’erreur la plus fréquente du chapitre.
+CM global = CM1 × CM2.
+
+| L’enchaînement | Le calcul | Le résultat |
+| +20 % puis −20 % | 1,20 × 0,80 | **0,96**, soit une **baisse de 4 %** |
+
+> **Ce n’est pas un retour au point de départ.** C’est l’erreur la plus fréquente du chapitre.
 
 ## Évolution réciproque
-Pour annuler une évolution, on applique le coefficient **inverse** : après une hausse de 25 % (CM = 1,25), il faut multiplier par 1/1,25 = 0,80, soit une **baisse de 20 %**.
+Pour **annuler** une évolution, on applique le coefficient **inverse**.
+
+> Après une hausse de **25 %** (CM = 1,25), il faut multiplier par 1/1,25 = **0,80** — soit une **baisse de 20 %**, et non de 25 %.
 
 ## Point de pourcentage et indice
-Passer de 8 % à 10 % de chômage, c’est une hausse de **2 points de pourcentage**, mais de **25 %** en valeur relative : les deux formulations sont justes et ne disent pas la même chose. Enfin, un **indice base 100** rapporte chaque valeur à celle d’une année de référence : indice = 100 × V / V(référence). Un indice de 112 signifie « +12 % depuis l’année de base ».`,
+| Formulation | Ce qu’elle dit | Passer de 8 % à 10 % |
+| En **points de pourcentage** | La différence **absolue** | **+2 points** |
+| En **valeur relative** | Le taux d’évolution | **+25 %** |
+
+> Les deux formulations sont **justes** et ne disent **pas la même chose**.
+
+Un **indice base 100** rapporte chaque valeur à une année de référence : indice = 100 × V / V(référence).
+
+> Un indice de **112** signifie « **+12 % depuis l’année de base** ».`,
           },
           questions: [
             ['Une grandeur passe de 200 à 250. Quel est le taux d’évolution ?', ['+25 %', '+50 %', '+20 %', '+2,5 %'], 0, 't = (250 − 200)/200 = 0,25, soit +25 %.'],
@@ -660,22 +995,41 @@ Passer de 8 % à 10 % de chômage, c’est une hausse de **2 points de pourcenta
           axe: 'Mathématiques',
           lecon: {
             titre: 'Du hasard aux fréquences stables',
-            cours: `Un phénomène est **aléatoire** quand on connaît l’ensemble de ses résultats possibles sans pouvoir prévoir lequel se produira. L’imprévisible individuel devient pourtant régulier en grand nombre : c’est tout l’objet de ce chapitre.
+            cours: `Un phénomène est **aléatoire** quand on connaît l’**ensemble des résultats possibles** sans pouvoir prévoir **lequel** se produira. L’imprévisible individuel devient pourtant **régulier en grand nombre**.
 
-## Vocabulaire
-Une **expérience aléatoire** a plusieurs **issues** possibles, dont l’ensemble forme l’**univers**. Un **événement** est un ensemble d’issues. La **probabilité** d’un événement est un nombre entre **0** (impossible) et **1** (certain), et la somme des probabilités de toutes les issues vaut 1.
-En situation d’**équiprobabilité**, P(A) = (nombre d’issues favorables) / (nombre d’issues possibles). Avec un dé équilibré, P(obtenir un nombre pair) = 3/6 = 0,5.
+## Le vocabulaire
+| Terme | Sa définition |
+| L’**expérience aléatoire** | Elle a plusieurs **issues** possibles |
+| L’**univers** | L’ensemble des issues |
+| Un **événement** | Un ensemble d’issues |
+| La **probabilité** | Un nombre entre **0** (impossible) et **1** (certain) |
+
+La somme des probabilités de **toutes** les issues vaut **1**.
+
+En **équiprobabilité** : P(A) = nombre d’issues **favorables** / nombre d’issues **possibles**. Avec un dé équilibré, P(pair) = 3/6 = **0,5**.
 
 ## Fréquence n’est pas probabilité
-La **fréquence** d’un événement se mesure **après coup**, sur des données : f = (nombre de réalisations) / (nombre d’essais). La probabilité, elle, est un modèle posé **avant**. Les deux se rejoignent quand l’échantillon grandit : c’est la **loi des grands nombres**. Quand n augmente, la fréquence observée se rapproche de la probabilité, et les fréquences observées sur des échantillons différents se resserrent.
+| | La **fréquence** | La **probabilité** |
+| Quand on l’obtient | **Après coup**, sur des données | **Avant**, comme un modèle |
+| Sa formule | réalisations / essais | Posée par hypothèse |
+
+> Les deux **se rejoignent** quand l’échantillon grandit : c’est la **loi des grands nombres**.
 
 ## Fluctuation d’échantillonnage
-Deux échantillons de même taille tirés de la même population ne donnent pas la même fréquence : cet écart, normal, s’appelle la **fluctuation d’échantillonnage**. Il **diminue** quand la taille de l’échantillon augmente — en 1/√n, ce qui signifie qu’il faut multiplier la taille par **100** pour diviser l’incertitude par **10**.
-Pour une proportion p et un échantillon de taille n assez grand, environ 95 % des échantillons donnent une fréquence dans l’**intervalle de fluctuation** [p − 1/√n ; p + 1/√n].
+Deux échantillons de **même taille**, tirés de la **même population**, ne donnent **pas** la même fréquence. Cet écart est **normal**.
+
+| Ce qu’on augmente | Ce qui se passe |
+| La taille n de l’échantillon | La fluctuation **diminue**, en **1/√n** |
+| Multiplier n par **100** | Diviser l’incertitude par **10** seulement |
+
+Pour une proportion p et un n assez grand, environ **95 %** des échantillons donnent une fréquence dans l’**intervalle de fluctuation** [p − 1/√n ; p + 1/√n].
 
 ## Simuler pour comprendre
-Un tableur ou un programme permet de **simuler** des milliers de tirages en quelques secondes, et de voir se stabiliser une fréquence qu’aucun raisonnement simple ne donnerait. C’est la méthode retenue par le programme : on observe la régularité avant d’en écrire la loi.
-Un piège à connaître : le hasard n’a **pas de mémoire**. Après cinq « pile » consécutifs, la probabilité du prochain lancer reste 1/2.`,
+Un tableur ou un programme simule des **milliers** de tirages en quelques secondes, et l’on **voit se stabiliser** une fréquence qu’aucun raisonnement simple ne donnerait.
+
+> C’est la méthode retenue par le programme : **observer la régularité avant d’en écrire la loi**.
+
+> Un piège à connaître : le hasard **n’a pas de mémoire**. Après cinq « pile » consécutifs, la probabilité du prochain lancer reste **1/2**.`,
           },
           questions: [
             ['Entre quelles valeurs une probabilité est-elle comprise ?', ['Entre 0 et 1', 'Entre −1 et 1', 'Entre 0 et 100', 'Entre 1 et 10'], 0, '0 pour un événement impossible, 1 pour un événement certain.'],
@@ -693,25 +1047,37 @@ Un piège à connaître : le hasard n’a **pas de mémoire**. Après cinq « pi
           axe: 'Mathématiques',
           lecon: {
             titre: 'Ajouter toujours la même chose',
-            cours: `Une évolution est **linéaire** quand la grandeur augmente ou diminue d’une **quantité constante** à chaque étape. Le modèle mathématique correspondant est la **suite arithmétique**.
+            cours: `Une évolution est **linéaire** quand la grandeur augmente ou diminue d’une **quantité constante** à chaque étape. Le modèle correspondant est la **suite arithmétique**.
 
 ## Définition
-Une suite (u) est **arithmétique de raison r** si, pour tout entier n :
-**u(n+1) = u(n) + r**.
-La raison r est ce que l’on ajoute à chaque pas — négative, la suite décroît. On la retrouve par soustraction de deux termes consécutifs : r = u(n+1) − u(n).
+Une suite est **arithmétique de raison r** si **u(n+1) = u(n) + r**.
+
+| Comment retrouver r | Ce qu’il signifie |
+| Par **soustraction** : r = u(n+1) − u(n) | Ce que l’on **ajoute** à chaque pas |
+| r **négatif** | La suite **décroît** |
 
 ## Forme explicite
-Pour calculer un terme lointain sans passer par tous les autres :
-**u(n) = u(0) + n × r**, si la suite commence au rang 0 ;
-**u(n) = u(1) + (n − 1) × r**, si elle commence au rang 1.
-Exemple : un abonnement de 15 € par mois avec 40 € de frais d’inscription donne u(n) = 40 + 15 n. Au bout de deux ans, u(24) = 40 + 360 = 400 €.
+| Si la suite commence au rang… | Sa formule |
+| **0** | u(n) = u(0) + **n × r** |
+| **1** | u(n) = u(1) + **(n − 1) × r** |
+
+> Un abonnement de **15 € par mois** avec **40 €** de frais d’inscription : u(n) = 40 + 15 n. Au bout de deux ans, u(24) = 40 + 360 = **400 €**.
 
 ## Reconnaître une suite arithmétique
-Le test est toujours le même : calculer les **différences** entre termes consécutifs. Constantes, la suite est arithmétique. La suite 3, 7, 11, 15 est arithmétique de raison 4 ; la suite 3, 6, 12, 24 ne l’est pas — ses différences valent 3, 6, 12 —, elle est géométrique.
+Le test est toujours le même : calculer les **différences** entre termes consécutifs.
+
+| Suite | Ses différences | Sa nature |
+| 3, 7, 11, 15 | **4, 4, 4** | **Arithmétique** de raison 4 |
+| 3, 6, 12, 24 | 3, 6, 12 | **Géométrique**, pas arithmétique |
 
 ## Représentation et somme
-Les points d’une suite arithmétique sont **alignés** : c’est la signature graphique de la croissance linéaire. Sur un tableur, la formule d’une cellule reprend la précédente augmentée de r.
-Enfin, la somme des n premiers entiers est **1 + 2 + … + n = n (n + 1) / 2**, résultat qu’on attribue au jeune Gauss additionnant 1 à 100 : cinquante paires valant 101, soit 5 050.`,
+> Les points d’une suite arithmétique sont **alignés** : c’est la **signature graphique** de la croissance linéaire.
+
+Sur un tableur, la formule d’une cellule reprend la précédente **augmentée de r**.
+
+La somme des n premiers entiers vaut **n (n + 1) / 2**.
+
+> Le jeune **Gauss** additionnant 1 à 100 : **cinquante paires valant 101**, soit **5 050**. La formule se retrouve, elle ne s’apprend pas.`,
           },
           questions: [
             ['Comment définit-on une suite arithmétique de raison r ?', ['u(n+1) = u(n) + r', 'u(n+1) = u(n) × r', 'u(n+1) = r × n', 'u(n+1) = u(n)^r'], 0, 'On ajoute toujours la même quantité : c’est la croissance linéaire.'],
@@ -729,26 +1095,45 @@ Enfin, la somme des n premiers entiers est **1 + 2 + … + n = n (n + 1) / 2**, 
           axe: 'Mathématiques',
           lecon: {
             titre: 'La droite, version continue de la suite arithmétique',
-            cours: `La suite arithmétique décrit une évolution par **pas entiers** ; la **fonction affine** décrit la même croissance mais de façon **continue**, pour toute valeur de la variable.
+            cours: `La suite arithmétique décrit une évolution **par pas entiers** ; la **fonction affine** décrit la même croissance de façon **continue**, pour **toute** valeur de la variable.
 
 ## Définition et vocabulaire
-Une fonction **affine** s’écrit **f(x) = a x + b**, où :
-- **a** est le **coefficient directeur** — ce que gagne f quand x augmente de 1 ;
-- **b** est l’**ordonnée à l’origine** — la valeur f(0), point de départ.
-Si b = 0, la fonction est **linéaire** : elle traduit une situation de **proportionnalité**. Si a = 0, elle est **constante**.
+**f(x) = a x + b**
 
-## La représentation graphique est une droite
-Elle est **croissante** si a > 0, **décroissante** si a < 0. Deux points suffisent à la tracer : (0 ; b) et un autre, par exemple (1 ; a + b).
+| Coefficient | Son nom | Ce qu’il représente |
+| **a** | Le **coefficient directeur** | Ce que gagne f quand x augmente de 1 |
+| **b** | L’**ordonnée à l’origine** | La valeur f(0), le point de départ |
+
+| Cas particulier | Ce qu’il donne |
+| **b = 0** | Fonction **linéaire** : une **proportionnalité** |
+| **a = 0** | Fonction **constante** |
+
+## La représentation est une droite
+| Signe de a | La droite |
+| **a > 0** | **Croissante** |
+| **a < 0** | **Décroissante** |
+
+Deux points suffisent à la tracer : (0 ; b) et (1 ; a + b).
+
 Le coefficient directeur se lit comme un **taux d’accroissement** :
-**a = (f(x2) − f(x1)) / (x2 − x1)**.
-Ce quotient est **le même quels que soient les deux points choisis** : c’est la définition même d’une droite, et c’est ce qui distingue le linéaire de tout le reste.
+
+**a = (f(x2) − f(x1)) / (x2 − x1)**
+
+> Ce quotient est **le même quels que soient les deux points choisis**. C’est la **définition** d’une droite — et ce qui distingue le linéaire de tout le reste.
 
 ## Le lien avec la suite arithmétique
-Une suite arithmétique u(n) = u(0) + n r est exactement la restriction aux entiers de la fonction affine f(x) = r x + u(0). La **raison** de la suite est le **coefficient directeur** de la fonction : même croissance, deux écritures selon que le temps se compte par pas ou en continu.
+| Objet | Son écriture |
+| La **suite** | u(n) = u(0) + n r |
+| La **fonction** | f(x) = r x + u(0) |
+
+> La **raison** de la suite **est** le **coefficient directeur** de la fonction : même croissance, deux écritures selon que le temps se compte **par pas** ou **en continu**.
 
 ## Modéliser
-Prenons un forfait téléphonique : 10 € fixes plus 0,05 € par minute. Le coût s’écrit f(x) = 0,05 x + 10, avec x en minutes. Résoudre f(x) = 25 revient à chercher au bout de combien de minutes la facture atteint 25 € : 0,05 x = 15, donc x = **300 minutes**.
-Attention : un modèle affine n’est valable que sur un **intervalle**. Extrapoler une droite hors de son domaine de validité — une croissance de population, une fonte de glacier — est une faute classique de lecture de données.`,
+Un forfait : **10 €** fixes plus **0,05 €** par minute, soit f(x) = 0,05 x + 10.
+
+> Résoudre f(x) = 25 : 0,05 x = 15, donc x = **300 minutes**.
+
+> Attention : un modèle affine n’est valable que sur un **intervalle**. Extrapoler une droite **hors de son domaine de validité** — une croissance de population, une fonte de glacier — est une faute classique de lecture de données.`,
           },
           questions: [
             ['Quelle est la forme générale d’une fonction affine ?', ['f(x) = a x + b', 'f(x) = a x²', 'f(x) = a / x', 'f(x) = a^x'], 0, 'a est le coefficient directeur, b l’ordonnée à l’origine.'],
@@ -766,29 +1151,42 @@ Attention : un modèle affine n’est valable que sur un **intervalle**. Extrapo
           axe: 'Mathématiques',
           lecon: {
             titre: 'Multiplier toujours par le même nombre',
-            cours: `Une évolution est **exponentielle** quand la grandeur est multipliée par un **facteur constant** à chaque étape — et non augmentée d’une quantité constante. C’est le modèle de l’intérêt composé, d’une population, d’une épidémie ou d’une décroissance radioactive.
+            cours: `Une évolution est **exponentielle** quand la grandeur est **multipliée** par un facteur constant à chaque étape — et **non augmentée** d’une quantité constante.
 
 ## Définition
-Une suite (u) est **géométrique de raison q** (q > 0) si, pour tout entier n :
-**u(n+1) = q × u(n)**.
-La raison se retrouve en **divisant** deux termes consécutifs : q = u(n+1) / u(n). Le lien avec le chapitre sur l’information chiffrée est direct : **q est le coefficient multiplicateur** d’un taux d’évolution constant t, avec **q = 1 + t**.
+Une suite est **géométrique de raison q** (q > 0) si **u(n+1) = q × u(n)**.
+
+| Comment retrouver q | Le lien avec l’information chiffrée |
+| Par **division** : q = u(n+1) / u(n) | **q est le coefficient multiplicateur** : **q = 1 + t** |
 
 ## Forme explicite
-**u(n) = u(0) × q^n**.
-Un capital de 1 000 € placé à 4 % par an donne u(n) = 1 000 × 1,04^n. Au bout de 10 ans : 1 000 × 1,04^10 ≈ **1 480 €** — et non 1 400 €, car les intérêts produisent eux-mêmes des intérêts.
+**u(n) = u(0) × q^n**
+
+> Un capital de **1 000 €** placé à **4 %** par an : u(n) = 1 000 × 1,04^n. Au bout de 10 ans, environ **1 480 €** — et **non 1 400 €**, car les intérêts produisent eux-mêmes des intérêts.
 
 ## Croissante, décroissante
-- **q > 1** : la suite croît, de plus en plus vite ;
-- **0 < q < 1** : la suite décroît vers 0 sans jamais l’atteindre ;
-- **q = 1** : la suite est constante.
-Une population qui perd 15 % par an suit une suite géométrique de raison 0,85.
+| La raison q | Le comportement |
+| **q > 1** | La suite **croît**, de plus en plus vite |
+| **0 < q < 1** | Elle **décroît vers 0** sans jamais l’atteindre |
+| **q = 1** | Elle est **constante** |
+
+Une population qui perd **15 %** par an suit une suite géométrique de raison **0,85**.
 
 ## Temps de doublement, demi-vie
-Une croissance exponentielle possède un **temps de doublement constant** : la durée nécessaire pour multiplier la grandeur par 2 est la même au début qu’à la fin. Symétriquement, une décroissance exponentielle a une **demi-vie** constante — exactement la propriété qui sert à dater les roches au chapitre 1.
-Une règle utile : pour un taux annuel de t %, le temps de doublement vaut approximativement **70 / t** années. À 4 % l’an, il faut environ 17,5 ans.
+| Type de croissance | Sa constante |
+| Exponentielle **croissante** | Un **temps de doublement constant** |
+| Exponentielle **décroissante** | Une **demi-vie** constante |
+
+> La durée pour multiplier par 2 est **la même au début qu’à la fin**. C’est exactement la propriété qui sert à **dater les roches**.
+
+> Règle utile : pour un taux annuel de t %, le temps de doublement vaut environ **70 / t** années. À 4 % l’an, environ **17,5 ans**.
 
 ## Linéaire ou exponentiel ?
-Le test est simple : différences constantes → **arithmétique** ; **quotients** constants → **géométrique**. La distinction n’a rien de scolaire. Une croissance exponentielle finit **toujours** par dépasser n’importe quelle croissance linéaire, même très rapide au départ : c’est ce que l’intuition refuse, et ce que le graphique montre.`,
+| Ce qui est constant | Le modèle |
+| Les **différences** | **Arithmétique** |
+| Les **quotients** | **Géométrique** |
+
+> Une croissance exponentielle finit **toujours** par dépasser n’importe quelle croissance linéaire, même très rapide au départ. C’est ce que l’intuition refuse, et ce que le graphique montre.`,
           },
           questions: [
             ['Comment définit-on une suite géométrique de raison q ?', ['u(n+1) = q × u(n)', 'u(n+1) = u(n) + q', 'u(n+1) = q^n', 'u(n+1) = u(n) / n'], 0, 'On multiplie toujours par le même nombre : c’est la croissance exponentielle.'],
@@ -806,27 +1204,37 @@ Le test est simple : différences constantes → **arithmétique** ; **quotients
           axe: 'Mathématiques',
           lecon: {
             titre: 'La courbe qui s’envole, version continue',
-            cours: `Comme la fonction affine prolongeait la suite arithmétique, la **fonction exponentielle** prolonge la suite géométrique : elle décrit la même croissance, mais pour **toute** valeur de la variable, et non plus seulement aux rangs entiers.
+            cours: `Comme la fonction affine prolongeait la suite arithmétique, la **fonction exponentielle** prolonge la **suite géométrique** : même croissance, mais pour **toute** valeur de la variable.
 
 ## Définition
-Pour un réel **q > 0**, la fonction exponentielle de base q est **f(x) = k × q^x**, où k = f(0) est la valeur initiale.
-La suite géométrique u(n) = u(0) × q^n en est exactement la restriction aux entiers : mêmes points, mais la fonction relie les intervalles.
+Pour un réel **q > 0** : **f(x) = k × q^x**, où **k = f(0)** est la valeur initiale.
+
+> La suite géométrique en est exactement la **restriction aux entiers** : mêmes points, mais la fonction **relie les intervalles**.
 
 ## Propriétés
-- La fonction est **toujours strictement positive** : une exponentielle ne s’annule jamais et ne devient jamais négative.
-- Elle est **croissante si q > 1**, **décroissante si 0 < q < 1**.
-- Sa propriété fondamentale est **q^(a+b) = q^a × q^b** : additionner les durées revient à multiplier les facteurs. C’est cela, exactement, qu’on appelle une croissance exponentielle.
-- Sa courbe est **concave vers le haut** quand q > 1 : elle part lentement, puis s’envole.
+| Propriété | Ce qu’elle dit |
+| Elle est **toujours strictement positive** | Une exponentielle ne s’**annule jamais** et ne devient jamais négative |
+| **q > 1** | Croissante |
+| **0 < q < 1** | Décroissante |
+| **q^(a+b) = q^a × q^b** | **Additionner les durées revient à multiplier les facteurs** |
+| Sa courbe, pour q > 1 | Elle part **lentement**, puis **s’envole** |
+
+> La propriété fondamentale est la quatrième : c’est **cela**, exactement, qu’on appelle une croissance exponentielle.
 
 ## Lire un graphique
-Deux repères permettent d’identifier un modèle exponentiel :
-- le **temps de doublement** (ou la demi-vie) est **constant** : si la grandeur double en 5 ans entre 2000 et 2005, elle double encore en 5 ans entre 2020 et 2025 ;
-- en **échelle logarithmique** sur l’axe vertical, une exponentielle devient une **droite**. C’est pourquoi les graphiques d’épidémie ou de croissance économique sont souvent tracés ainsi : la droite se lit, la courbe se subit.
+| Repère | Ce qu’il révèle |
+| Le **temps de doublement est constant** | Si la grandeur double en 5 ans entre 2000 et 2005, elle double encore en 5 ans entre 2020 et 2025 |
+| En **échelle logarithmique** verticale | Une exponentielle devient une **droite** |
+
+> C’est pourquoi les graphiques d’épidémie ou de croissance économique sont souvent tracés ainsi : **la droite se lit, la courbe se subit**.
 
 ## Modéliser
-Décroissance radioactive : N(t) = N0 × 0,5^(t/T), avec T la demi-vie — la formule du chapitre 1, désormais reconnue comme une exponentielle.
-Croissance d’un placement : C(t) = C0 × 1,04^t.
-Refroidissement, dilution, absorption de la lumière dans l’eau : tous suivent le même modèle. Ce que le programme veut faire percevoir tient en une phrase : **un pourcentage constant d’évolution ne produit jamais une droite**.`,
+| Phénomène | Son modèle |
+| Décroissance **radioactive** | N(t) = N0 × 0,5^(t/T), avec T la demi-vie |
+| Croissance d’un **placement** | C(t) = C0 × 1,04^t |
+| **Refroidissement**, dilution, absorption de la lumière dans l’eau | Le même modèle |
+
+> Ce que le programme veut faire percevoir tient en une phrase : **un pourcentage constant d’évolution ne produit jamais une droite**.`,
           },
           questions: [
             ['Quelle est la forme d’une fonction exponentielle de base q ?', ['f(x) = k × q^x', 'f(x) = k × x^q', 'f(x) = k x + q', 'f(x) = k / x^q'], 0, 'La variable est à l’exposant : c’est ce qui distingue exponentielle et fonction puissance.'],
@@ -844,29 +1252,46 @@ Refroidissement, dilution, absorption de la lumière dans l’eau : tous suivent
           axe: 'Mathématiques',
           lecon: {
             titre: 'La pente en un point',
-            cours: `Jusqu’ici, les variations se mesuraient **entre deux instants**. Ce chapitre demande une vitesse **à un instant précis** — celle qu’affiche le compteur d’une voiture, et non la vitesse moyenne du trajet.
+            cours: `Jusqu’ici, les variations se mesuraient **entre deux instants**. Ce chapitre demande une vitesse **à un instant précis** — celle qu’affiche le **compteur** d’une voiture, et non la vitesse moyenne du trajet.
 
 ## Le taux de variation moyen
-Pour une fonction f et deux réels a et b distincts :
-**taux de variation moyen = (f(b) − f(a)) / (b − a)**.
-C’est le **coefficient directeur de la sécante**, la droite qui joint les points d’abscisses a et b. Pour une fonction affine, ce taux est constant ; pour toute autre fonction, il dépend des deux points choisis.
+**(f(b) − f(a)) / (b − a)**
+
+C’est le **coefficient directeur de la sécante**, la droite qui joint les points d’abscisses a et b.
+
+| Type de fonction | Ce taux |
+| **Affine** | Il est **constant** |
+| Toute autre | Il **dépend des deux points** choisis |
 
 ## Passer à l’instantané
-On rapproche b de a. En écrivant b = a + h, le taux devient **(f(a + h) − f(a)) / h**, et l’on regarde ce qu’il devient quand **h tend vers 0**. Quand ce quotient se rapproche d’un nombre unique, ce nombre est le **nombre dérivé de f en a**, noté **f’(a)**.
-Exemple avec f(x) = x² en a = 3 : ((3+h)² − 9)/h = (6h + h²)/h = **6 + h**, qui tend vers **6**. Donc f’(3) = 6.
+En écrivant b = a + h, le taux devient **(f(a + h) − f(a)) / h**. On regarde ce qu’il devient quand **h tend vers 0**.
 
-## L’interprétation graphique : la tangente
-Quand h tend vers 0, la sécante pivote et vient se confondre avec la **tangente** à la courbe au point d’abscisse a. Le nombre dérivé **f’(a) est le coefficient directeur de cette tangente**. Son équation s’écrit :
-**y = f’(a) (x − a) + f(a)**.
-Lire un nombre dérivé sur un graphique, c’est donc lire la pente de la tangente : on repère deux points de la tangente et l’on calcule « ce que l’on monte divisé par ce que l’on avance ».
+> Quand ce quotient se rapproche d’un **nombre unique**, ce nombre est le **nombre dérivé de f en a**, noté **f’(a)**.
+
+| Exemple avec f(x) = x², en a = 3 | Le calcul |
+| Le quotient | ((3+h)² − 9)/h = (6h + h²)/h |
+| Simplifié | **6 + h** |
+| Quand h tend vers 0 | **f’(3) = 6** |
+
+## L’interprétation graphique
+Quand h tend vers 0, la **sécante pivote** et vient se confondre avec la **tangente**.
+
+> **f’(a) est le coefficient directeur de la tangente** au point d’abscisse a. Son équation : **y = f’(a) (x − a) + f(a)**.
+
+Lire un nombre dérivé sur un graphique, c’est lire la **pente de la tangente** : deux points, puis « ce que l’on monte divisé par ce que l’on avance ».
 
 ## Ce que le signe indique
-- **f’(a) > 0** : la fonction croît au voisinage de a — la tangente monte ;
-- **f’(a) < 0** : elle décroît ;
-- **f’(a) = 0** : la tangente est **horizontale**, ce qui signale souvent un maximum ou un minimum.
+| Signe de f’(a) | Ce qui se passe en a |
+| **Positif** | La fonction **croît** — la tangente monte |
+| **Négatif** | Elle **décroît** |
+| **Nul** | La tangente est **horizontale** : souvent un maximum ou un minimum |
 
 ## En physique
-Si x(t) est la position d’un mobile, x’(t) est sa **vitesse instantanée** ; si v(t) est la vitesse, v’(t) est son **accélération**. Le nombre dérivé n’est pas un objet purement mathématique : c’est la mesure de ce qui change **maintenant**.`,
+| La fonction | Sa dérivée |
+| La **position** x(t) | La **vitesse instantanée** |
+| La **vitesse** v(t) | L’**accélération** |
+
+> Le nombre dérivé n’est pas un objet purement mathématique : c’est la mesure de **ce qui change maintenant**.`,
           },
           questions: [
             ['Que vaut le taux de variation moyen de f entre a et b ?', ['(f(b) − f(a)) / (b − a)', '(f(b) + f(a)) / (b + a)', 'f(b) − f(a)', '(b − a) / (f(b) − f(a))'], 0, 'C’est le coefficient directeur de la sécante qui joint les deux points.'],
@@ -884,37 +1309,50 @@ Si x(t) est la position d’un mobile, x’(t) est sa **vitesse instantanée** ;
           axe: 'Mathématiques',
           lecon: {
             titre: 'Du signe de la dérivée au tableau de variation',
-            cours: `Le nombre dérivé décrit un **point**. En le calculant en tout point, on obtient une **fonction** — et cette fonction raconte à elle seule les variations de la première sur tout un intervalle.
+            cours: `Le nombre dérivé décrit un **point**. En le calculant en **tout** point, on obtient une **fonction** — et cette fonction raconte à elle seule les variations de la première sur tout un intervalle.
 
-## La fonction dérivée
-La **fonction dérivée** f’ associe à chaque x le nombre dérivé f’(x). Les formules à connaître :
-- f(x) = k (constante) → **f’(x) = 0**
-- f(x) = x → **f’(x) = 1**
-- f(x) = a x + b → **f’(x) = a**
-- f(x) = x² → **f’(x) = 2 x**
-- f(x) = x³ → **f’(x) = 3 x²**
-- f(x) = 1/x → **f’(x) = −1/x²**
+## Les formules à connaître
+| f(x) | f’(x) |
+| k, constante | **0** |
+| x | **1** |
+| a x + b | **a** |
+| x² | **2 x** |
+| x³ | **3 x²** |
+| 1/x | **−1/x²** |
 
 Et les deux règles d’usage : **(u + v)’ = u’ + v’** et **(k u)’ = k u’**.
-Exemple : f(x) = 3x² − 5x + 2 donne f’(x) = 6x − 5.
+
+> Exemple : f(x) = 3x² − 5x + 2 donne **f’(x) = 6x − 5**.
 
 ## Le théorème central
-Sur un intervalle :
-- si **f’(x) > 0**, alors f est **croissante** ;
-- si **f’(x) < 0**, alors f est **décroissante** ;
-- si **f’(x) = 0** sur tout l’intervalle, f est **constante**.
-Étudier les variations d’une fonction se ramène donc à **étudier le signe de sa dérivée** — un problème de signe, souvent celui d’une expression affine ou d’un produit.
+| Sur un intervalle, si… | Alors f est… |
+| **f’(x) > 0** | **Croissante** |
+| **f’(x) < 0** | **Décroissante** |
+| **f’(x) = 0** partout | **Constante** |
 
-## Le tableau de variation
-La méthode est toujours la même, et elle se rédige :
-1. calculer f’(x) ;
-2. résoudre f’(x) = 0 et étudier le signe de f’ ;
-3. dresser le tableau : x, signe de f’, flèches de variation de f ;
-4. calculer les valeurs de f aux bornes et aux points où f’ s’annule.
+> Étudier les variations d’une fonction se ramène donc à **étudier le signe de sa dérivée** — un problème de signe, souvent celui d’une expression affine ou d’un produit.
+
+## La méthode du tableau de variation
+1. Calculer **f’(x)** ;
+2. Résoudre **f’(x) = 0** et étudier le **signe** de f’ ;
+3. Dresser le tableau : x, signe de f’, **flèches** de variation de f ;
+4. Calculer les **valeurs** de f aux bornes et là où f’ s’annule.
 
 ## Extremums
-Un **extremum local** apparaît là où la dérivée s’**annule en changeant de signe** : de + à −, c’est un **maximum** ; de − à +, un **minimum**. L’annulation seule ne suffit pas — f(x) = x³ a une dérivée nulle en 0 sans y présenter d’extremum, la fonction continuant de croître.
-Exemple complet : f(x) = −2x² + 8x + 3 donne f’(x) = −4x + 8, qui s’annule en x = 2 et passe du positif au négatif. La fonction croît jusqu’à 2, décroît ensuite : elle atteint son **maximum en x = 2**, avec f(2) = 11. C’est ainsi que se résolvent les problèmes d’optimisation — la boîte de volume maximal, le bénéfice le plus élevé, la surface la plus grande à clôture donnée.`,
+| Le signe de f’ passe… | L’extremum est un… |
+| De **+ à −** | **Maximum** |
+| De **− à +** | **Minimum** |
+
+> L’**annulation seule ne suffit pas** : f(x) = x³ a une dérivée nulle en 0 **sans** y présenter d’extremum — la fonction continue de croître.
+
+## Un exemple complet
+| Étape | Le résultat |
+| La fonction | f(x) = −2x² + 8x + 3 |
+| Sa dérivée | f’(x) = −4x + 8 |
+| Elle s’annule | En **x = 2**, en passant du **positif au négatif** |
+| Conclusion | **Maximum en x = 2**, avec **f(2) = 11** |
+
+> C’est ainsi que se résolvent les problèmes d’**optimisation** : la boîte de volume maximal, le bénéfice le plus élevé, la plus grande surface à clôture donnée.`,
           },
           questions: [
             ['Quelle est la dérivée de f(x) = x² ?', ['f’(x) = 2x', 'f’(x) = x', 'f’(x) = x³/3', 'f’(x) = 2'], 0, 'Et la dérivée de x³ est 3x².'],

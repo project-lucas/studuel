@@ -106,19 +106,40 @@ Boire avant, pendant et après. En cas de forte chaleur, réduire l'intensité, 
           titre: 'Effort, endurance et santé',
           lecon: {
             titre: 'Connaître son effort : FC, VMA, filières',
-            cours: `Progresser suppose de savoir **à quelle intensité** on travaille.
+            cours: `Progresser suppose de savoir à quelle intensité on travaille.
 
 ## La fréquence cardiaque
-Elle se mesure en battements par minute (bpm). La **FC maximale** s'estime par la formule « 220 – âge ». On travaille l'endurance entre **60 et 80 %** de la FC max, un effort où l'on peut encore parler.
+| Le repère | Sa valeur |
+| L'unité | Battements par minute (bpm) |
+| La **FC maximale** estimée | 220 − âge |
+| La zone d'**endurance** | **60 à 80 %** de la FC max |
+
+> Dans la zone d'endurance, on peut encore parler : c'est le test le plus simple.
 
 ## La VMA
-La **vitesse maximale aérobie** est la vitesse à partir de laquelle on consomme le maximum d'oxygène. Elle se mesure par un test progressif (Luc Léger, VAMEVAL). Elle sert à calibrer les séances : 60 % de VMA pour l'endurance, 100 % et plus pour le fractionné.
+| Le point | Son contenu |
+| Sa définition | La **vitesse maximale aérobie** : celle à partir de laquelle on consomme le maximum d'oxygène |
+| Comment la mesurer | Un test progressif : Luc Léger, VAMEVAL |
+| À quoi elle sert | Calibrer les séances |
+
+| Le travail | Le pourcentage de VMA |
+| **Endurance** | Environ 60 % |
+| **Fractionné** | 100 % et plus |
 
 ## Les trois filières énergétiques
-**Anaérobie alactique** : très courte (0-10 s), très intense (sprint, saut). **Anaérobie lactique** : 10 s à 2 min, production d'acide lactique (400 m). **Aérobie** : au-delà, avec oxygène (course longue).
+| La filière | Sa durée | Son intensité | Un exemple |
+| **Anaérobie alactique** | 0 à 10 s | Maximale | Sprint, saut |
+| **Anaérobie lactique** | 10 s à 2 min | Très élevée, production d'acide lactique | Le 400 m |
+| **Aérobie** | Au-delà | Modérée, avec oxygène | Course longue |
 
 ## Les effets de l'entraînement
-Le cœur devient plus gros et plus efficace, la FC de repos baisse, la récupération s'accélère, l'endurance augmente. Les bénéfices apparaissent dès 2 à 3 séances hebdomadaires régulières.`,
+| L'effet | Sa manifestation |
+| Le **cœur** | Plus gros et plus efficace |
+| La FC de **repos** | Elle **baisse** |
+| La **récupération** | Elle s'accélère |
+| L'**endurance** | Elle augmente |
+
+> Les bénéfices apparaissent dès **deux à trois séances hebdomadaires** régulières.`,
           },
           questions: [
             ['Comment estime-t-on simplement la fréquence cardiaque maximale ?', ['220 moins l’âge', '180 moins l’âge', 'Le poids fois 3', 'La taille moins 100'], 0, 'C’est une estimation rapide, utile pour calibrer une séance.'],
@@ -137,17 +158,38 @@ Le cœur devient plus gros et plus efficace, la FC de repos baisse, la récupér
             titre: 'Arbitre, coach, observateur',
             cours: `En EPS, on n'est pas seulement pratiquant : on tient aussi des rôles qui font vivre l'activité.
 
+## Les quatre rôles
+| Le rôle | Ce qu'il apporte au groupe |
+| L'**arbitre** | Il fait respecter la règle |
+| L'**observateur** | Il fournit des données |
+| Le **coach** | Il conseille |
+| Le **juge** | Il évalue une prestation |
+
 ## L'arbitre
-Il connaît le règlement, se place pour voir, siffle clairement et **assume** sa décision. Une erreur d'arbitrage arrive : ce qui compte, c'est la constance et l'impartialité. Arbitrer apprend aussi à mieux jouer, en comprenant les règles de l'intérieur.
+| L'exigence | Son contenu |
+| Connaître le **règlement** | Sans hésiter |
+| Se **placer** | Pour voir l'action |
+| Siffler **clairement** | Et assumer sa décision |
+
+> Une erreur d'arbitrage arrive : ce qui compte, c'est la **constance** et l'**impartialité**. Arbitrer apprend aussi à mieux jouer, en comprenant les règles de l'intérieur.
 
 ## L'observateur
-Il relève des données concrètes : nombre de passes réussies, zones de tir, temps de possession. Ces relevés transforment une impression (« on a mal joué ») en fait mesurable (« 7 ballons perdus sur 12 en zone centrale »).
+| Ce qu'il relève | Ce que cela transforme |
+| Nombre de passes réussies, zones de tir, temps de possession | Une impression — « on a mal joué » — devient un **fait mesurable** : « 7 ballons perdus sur 12 en zone centrale » |
 
 ## Le coach
-Il conseille un camarade ou une équipe : rappeler une consigne, encourager, proposer un changement. Un bon conseil est **court, précis et positif**.
+| Le bon conseil | Ses trois qualités |
+| Rappeler une consigne, encourager, proposer un changement | **Court**, **précis**, **positif** |
 
 ## Le juge
-En gymnastique, en danse ou en acrosport, il évalue selon des critères annoncés : difficulté, exécution, composition. Juger oblige à expliciter ce qui fait la qualité d'une prestation.`,
+En gymnastique, en danse ou en acrosport, il évalue selon des critères **annoncés**.
+
+| Le critère | Ce qu'il mesure |
+| La **difficulté** | Le niveau des éléments tentés |
+| L'**exécution** | La qualité de leur réalisation |
+| La **composition** | L'organisation de l'ensemble |
+
+> Juger oblige à expliciter ce qui fait la qualité d'une prestation.`,
           },
           questions: [
             ['Que fait un observateur en EPS ?', ['Il relève des données concrètes sur le jeu', 'Il encourage seulement', 'Il arbitre', 'Il note les élèves'], 0, 'Les relevés transforment une impression en fait mesurable.'],
@@ -164,21 +206,21 @@ En gymnastique, en danse ou en acrosport, il évalue selon des critères annonc�
           titre: 'Les quatre champs d’apprentissage',
           lecon: {
             titre: 'Ce qu’on apprend selon l’activité',
-            cours: `Les programmes d'EPS classent les activités en **quatre champs d'apprentissage**, chacun avec un problème à résoudre différent.
+            cours: `Les programmes d'EPS classent les activités en quatre champs d'apprentissage, chacun avec un problème à résoudre différent.
 
-## Champ 1 — Performance mesurée
-Course, saut, lancer, natation de vitesse. Le problème : produire sa **meilleure performance** à un moment donné, en gérant l'allure et l'effort.
+## Les quatre champs
+| Le champ | Ses activités | Le problème à résoudre |
+| **1. Performance mesurée** | Course, saut, lancer, natation de vitesse | Produire sa **meilleure performance** à un moment donné, en gérant l'allure et l'effort |
+| **2. Milieu incertain** | Escalade, course d'orientation, activités nautiques | **Adapter ses déplacements** à un environnement changeant qu'on ne maîtrise pas |
+| **3. Prestation artistique** | Danse, gymnastique, acrosport, arts du cirque | **S'exprimer devant un public**, et être jugé sur une prestation composée |
+| **4. Opposition** | Sports collectifs, raquettes, sports de combat | **Prendre le dessus** sur un adversaire qui cherche exactement l'inverse |
 
-## Champ 2 — Milieu incertain
-Escalade, course d'orientation, activités nautiques. Le problème : **adapter ses déplacements** à un environnement qui change et qu'on ne maîtrise pas.
+## Ce que le classement change
+| Ce qui varie d'un champ à l'autre | Ce qui ne varie pas |
+| La **nature du problème** | Les qualités physiques travaillées |
+| Les critères d'évaluation | L'exigence d'engagement |
 
-## Champ 3 — Prestation artistique
-Danse, gymnastique, acrosport, arts du cirque. Le problème : **s'exprimer devant un public** et être jugé sur une prestation composée.
-
-## Champ 4 — Opposition
-Sports collectifs, raquettes, sports de combat. Le problème : **prendre le dessus sur un adversaire** qui cherche exactement l'inverse.
-
-Une même qualité physique se travaille dans plusieurs champs ; ce qui change, c'est la nature du problème à résoudre.`,
+> Une même qualité physique se travaille dans plusieurs champs. Ce qui change, c'est le problème à résoudre.`,
           },
           questions: [
             ['La course d’orientation relève de quel champ d’apprentissage ?', ['Adapter ses déplacements à un milieu incertain', 'Produire une performance mesurée', 'Réaliser une prestation artistique', 'Conduire un affrontement'], 0, 'Le milieu change et n’est pas maîtrisé : c’est le champ 2.'],
@@ -200,19 +242,40 @@ Une même qualité physique se travaille dans plusieurs champs ; ce qui change, 
           titre: 'S’entraîner et planifier',
           lecon: {
             titre: 'Construire un programme d’entraînement',
-            cours: `S'entraîner, ce n'est pas répéter : c'est organiser une **charge** dans le temps.
+            cours: `S’entraîner, ce n’est pas répéter : c’est organiser une **charge** dans le temps. Et une charge se règle sur quatre boutons, pas un seul.
 
 ## Les paramètres de la charge
-**Volume** (durée, distance, nombre de répétitions), **intensité** (% de VMA ou de charge maximale), **densité** (rapport effort/récupération), **fréquence** (séances par semaine). Modifier un seul paramètre à la fois permet de savoir ce qui produit l'effet.
+| Paramètre | Ce qu’il règle | Comment il se mesure |
+| Volume | La quantité de travail | Durée, distance, nombre de répétitions |
+| Intensité | La difficulté du travail | Pourcentage de VMA ou de charge maximale |
+| Densité | Le rapport effort / repos | Temps de récupération entre les séries |
+| Fréquence | Le retour du stimulus | Nombre de séances par semaine |
+
+> Ne modifier **qu’un seul paramètre à la fois**. Deux changements simultanés rendent l’effet illisible : on ne sait plus lequel des deux a produit le progrès — ni lequel a produit la blessure.
 
 ## La surcompensation
-Après un effort, l'organisme récupère puis dépasse son niveau initial : c'est la **surcompensation**. Reprendre trop tôt épuise ; reprendre trop tard perd le bénéfice. C'est la récupération qui fait progresser, pas l'effort seul.
+C’est le mécanisme qui explique pourquoi on progresse. Il se déroule en trois temps, et la séance suivante doit tomber au bon moment :
+
+1. **L’effort** fatigue : le niveau descend sous le niveau de départ.
+2. **La récupération** répare : le niveau remonte.
+3. **La surcompensation** dépasse : l’organisme reconstruit un peu au-dessus, par anticipation.
+
+Reprendre trop tôt, pendant la phase 1, épuise sans construire. Reprendre trop tard laisse le bénéfice retomber. C’est donc la récupération qui fait progresser, jamais l’effort seul.
 
 ## La progressivité et la spécificité
-Augmenter la charge par paliers (5 à 10 % par semaine). Et travailler ce que l'on veut améliorer : un nageur ne progresse pas en course à pied autant qu'en nageant.
+Deux règles suffisent à écrire un programme correct. **Progressivité** : augmenter la charge par paliers de 5 à 10 % par semaine, pas davantage. **Spécificité** : on progresse dans ce que l’on travaille — un nageur ne gagne pas en natation ce qu’il gagne en course à pied.
 
 ## Le surentraînement
-Fatigue persistante, sommeil dégradé, FC de repos élevée, baisse de performance, irritabilité. La réponse n'est pas d'en faire plus, mais de récupérer.`,
+Ses signes se lisent au repos, pas à l’effort — c’est ce qui le rend difficile à repérer à temps.
+
+| Signe | Ce qu’on observe |
+| Fatigue | Elle persiste après une nuit complète |
+| Sommeil | Endormissement long, réveils nocturnes |
+| Fréquence cardiaque de repos | Élevée de plusieurs battements |
+| Performance | Elle stagne ou baisse malgré le travail |
+| Humeur | Irritabilité, perte de motivation |
+
+La réponse n’est jamais d’en faire plus : c’est de récupérer.`,
           },
           questions: [
             ['Qu’est-ce que la surcompensation ?', ['Le dépassement du niveau initial après récupération', 'Un excès d’entraînement', 'Un supplément alimentaire', 'Une compensation de blessure'], 0, 'C’est ce qui rend la récupération aussi importante que l’effort.'],
@@ -229,19 +292,31 @@ Fatigue persistante, sommeil dégradé, FC de repos élevée, baisse de performa
           titre: 'Alimentation, sommeil et performance',
           lecon: {
             titre: 'Ce qui se joue en dehors du terrain',
-            cours: `La performance se construit autant hors séance que pendant.
+            cours: `La performance se construit autant hors séance que pendant. Trois leviers, et aucun ne se rattrape par l’entraînement : l’assiette, le timing, le sommeil.
 
 ## Les nutriments
-Les **glucides** sont le carburant principal de l'effort (pâtes, riz, pain, fruits). Les **protéines** réparent et construisent le muscle (viande, poisson, œufs, légumineuses). Les **lipides** fournissent une énergie de longue durée. Aucun n'est à supprimer.
+| Nutriment | Son rôle | Où on le trouve |
+| Glucides | Le carburant principal de l’effort | Pâtes, riz, pain, fruits |
+| Protéines | Réparent et construisent le muscle | Viande, poisson, œufs, légumineuses |
+| Lipides | Une énergie de longue durée | Huiles, oléagineux, poissons gras |
 
-## Autour de l'effort
-Repas complet 3 heures avant. Hydratation régulière par petites quantités : une perte de 2 % du poids en eau réduit déjà nettement la performance. Après l'effort, glucides et protéines dans les deux heures favorisent la récupération.
+Aucun des trois n’est à supprimer : un régime qui retire une famille entière retire aussi une fonction.
+
+## Autour de l’effort
+Le quoi compte, le quand aussi.
+
+| Moment | Ce qu’on fait | Pourquoi |
+| 3 h avant | Repas complet, digestible | Les réserves sont pleines, la digestion est finie |
+| Pendant | Boire régulièrement, par petites quantités | −2 % du poids en eau, et la performance chute déjà |
+| Dans les 2 h après | Glucides et protéines | La fenêtre où le muscle reconstitue et répare |
+
+> On boit **avant** d’avoir soif : la soif est déjà un signe de déshydratation installée.
 
 ## Le sommeil
-C'est pendant le sommeil profond que se produit la réparation tissulaire et la sécrétion d'hormone de croissance. Un adolescent a besoin de **8 à 9 heures**. Les écrans le soir retardent l'endormissement en freinant la mélatonine.
+C’est pendant le sommeil profond que se produisent la réparation tissulaire et la sécrétion d’hormone de croissance — autrement dit, l’entraînement ne devient du progrès que la nuit. Un adolescent a besoin de **8 à 9 heures**. Les écrans le soir retardent l’endormissement en freinant la sécrétion de mélatonine : la dette de sommeil se paie en performance et en blessures.
 
 ## Les fausses solutions
-Boissons énergisantes, compléments miracles, régimes drastiques : rien ne remplace la régularité. Le dopage, lui, est interdit et dangereux — il triche avec le corps avant de tricher avec les autres.`,
+Boissons énergisantes, compléments miracles, régimes drastiques : rien ne remplace la régularité, et tout promet de la remplacer. Le **dopage**, lui, est interdit et dangereux — il triche avec le corps avant de tricher avec les autres.`,
           },
           questions: [
             ['Quel nutriment est le carburant principal de l’effort ?', ['Les glucides', 'Les protéines', 'Les lipides', 'Les vitamines'], 0, 'Pâtes, riz, pain, fruits : ils alimentent le muscle en glucose.'],
@@ -258,19 +333,28 @@ Boissons énergisantes, compléments miracles, régimes drastiques : rien ne rem
           titre: 'Sport, société et valeurs',
           lecon: {
             titre: 'Le sport comme fait social',
-            cours: `Le sport n'est pas seulement une pratique : c'est une institution, une économie et un discours.
+            cours: `Le sport n’est pas seulement une pratique : c’est une institution, une économie et un discours. Le regarder comme un fait social, c’est refuser de croire qu’il est neutre.
 
-## L'olympisme
-Rénovés par **Pierre de Coubertin** en 1894, les Jeux olympiques modernes portent des valeurs affichées : excellence, amitié, respect. Ils sont aussi une scène politique — 1936 à Berlin, 1968 à Mexico, les boycotts de 1980 et 1984.
+## L’olympisme
+Rénovés par **Pierre de Coubertin** en 1894, les Jeux modernes affichent des valeurs — excellence, amitié, respect. Ils sont aussi, et depuis toujours, une scène politique.
 
-## L'égalité femmes-hommes
-Exclues des premiers Jeux modernes, les femmes ont conquis les épreuves une à une ; la parité des athlètes a été atteinte aux Jeux de Paris 2024. Les écarts demeurent : médiatisation, salaires, accès aux responsabilités.
+| Date | L’événement | Ce qu’il révèle |
+| 1894 | Rénovation des Jeux par Coubertin | Un idéal de paix par le sport |
+| 1936 | Jeux de Berlin | Une vitrine offerte au régime nazi |
+| 1968 | Poing levé de Mexico | Le podium comme tribune politique |
+| 1980 et 1984 | Boycotts croisés | La guerre froide jusque dans le stade |
+| 2024 | Jeux de Paris | Parité atteinte parmi les athlètes |
+
+## L’égalité femmes-hommes
+Exclues des premiers Jeux modernes, les femmes ont conquis les épreuves une à une jusqu’à la parité des athlètes à Paris en 2024. L’égalité des places n’est pourtant pas celle des moyens : **médiatisation**, **salaires** et **accès aux responsabilités** restent très inégaux — on compte encore très peu de femmes à la tête des fédérations.
 
 ## Le dopage
-Il fausse la compétition, met la santé en danger et détruit la confiance. L'**AMA** (Agence mondiale antidopage) fixe la liste des produits interdits ; les contrôles peuvent avoir lieu hors compétition.
+Il fausse la compétition, met la santé en danger et détruit la confiance du public — les trois à la fois, ce qui explique la sévérité du dispositif. L’**AMA** (Agence mondiale antidopage) fixe la liste des produits et méthodes interdits ; les contrôles peuvent avoir lieu **hors compétition**, à l’entraînement comme au domicile.
+
+> Le dopage n’est pas d’abord une faute morale individuelle : c’est le symptôme d’un système où la performance vaut plus que la santé de celui qui la produit.
 
 ## Sport et santé publique
-La sédentarité est un facteur de risque majeur. L'OMS recommande au moins **60 minutes** d'activité physique par jour pour un adolescent. L'activité physique adaptée est aujourd'hui prescrite comme un soin.`,
+La sédentarité est aujourd’hui un facteur de risque majeur, au même titre que le tabac ou l’alimentation. L’OMS recommande au moins **60 minutes** d’activité physique par jour pour un adolescent. Depuis 2016, l’**activité physique adaptée** peut être prescrite par un médecin comme un soin, pour les maladies chroniques.`,
           },
           questions: [
             ['Qui a rénové les Jeux olympiques modernes ?', ['Pierre de Coubertin', 'Jules Rimet', 'Jesse Owens', 'Alice Milliat'], 0, 'Il fonde le Comité international olympique en 1894.'],

@@ -106,30 +106,47 @@ chapters et lessons sont ON DELETE CASCADE).`,
           titre: 'La conservation des génomes : stabilité génétique et évolution clonale',
           lecon: {
             titre: 'Copier sans se tromper (ou presque)',
-            cours: `Un organisme pluricellulaire part d'UNE cellule. Toutes les autres en descendent par mitose, et portent en principe le même génome. Ce « en principe » est tout le sujet.
+            cours: `Un organisme pluricellulaire part d’**une** cellule. Toutes les autres en descendent par mitose et portent **en principe** le même génome. Ce « en principe » est tout le sujet.
 
 ## Le cycle cellulaire
-La vie d'une cellule alterne **interphase** et **mitose**.
-- **G1** : la cellule grandit, chaque chromosome est à **une** chromatide ;
-- **S** : la **réplication** de l'ADN double chaque chromosome (deux chromatides sœurs identiques) ;
-- **G2** : contrôles avant division ;
-- **mitose** : les chromatides sœurs se séparent, chaque cellule fille reçoit un lot complet.
+| Phase | Ce qui s’y passe | État des chromosomes |
+| **G1** | La cellule grandit | Une chromatide chacun |
+| **S** | La **réplication** de l’ADN | Deux chromatides sœurs identiques |
+| **G2** | Contrôles avant division | Deux chromatides |
+| **Mitose** | Les chromatides sœurs se séparent | Une chromatide dans chaque cellule fille |
 
-Le résultat : deux cellules **génétiquement identiques** entre elles et à la cellule mère. C'est ce qu'on appelle un **clone**.
+Le résultat : deux cellules **génétiquement identiques** entre elles et à la cellule mère — un **clone**.
 
 ## La réplication est semi-conservative
-Chaque brin d'ADN sert de **matrice** : l'ADN polymérase place en face de chaque nucléotide son complémentaire (A-T, G-C). Chaque molécule fille contient donc **un brin ancien et un brin neuf** — c'est l'expérience de **Meselson et Stahl** (1958) qui l'a montré.
+Chaque brin sert de **matrice** : l’ADN polymérase place en face de chaque nucléotide son complémentaire (A-T, G-C). Chaque molécule fille contient donc **un brin ancien et un brin neuf** — c’est ce qu’a montré l’expérience de **Meselson et Stahl** (1958).
 
-> La complémentarité des bases est ce qui rend l'information copiable : l'ADN porte deux fois la même information, une fois sur chaque brin.
+> La complémentarité des bases est ce qui rend l’information **copiable** : l’ADN porte deux fois la même information, une fois sur chaque brin.
 
 ## Une fidélité très haute, jamais parfaite
-L'ADN polymérase se trompe environ une fois sur 10⁵ nucléotides, mais elle **relit** son propre travail, et des systèmes de **réparation** corrigent derrière elle. Le taux d'erreur final tombe vers **une sur 10⁹**. Ce qui échappe devient une **mutation**.
+| Étape | Taux d’erreur |
+| L’ADN polymérase seule | environ 1 sur 10⁵ |
+| Après sa **relecture** | Bien plus bas |
+| Après les systèmes de **réparation** | environ **1 sur 10⁹** |
+
+Ce qui échappe devient une **mutation**.
 
 ## Mutations somatiques et évolution clonale
-Une mutation qui survient dans une cellule **somatique** n'est pas transmise à la descendance de l'individu — mais elle l'est à toutes les cellules filles de cette cellule. Il se forme un **clone** de cellules mutées au sein de l'organisme. Si les mutations touchent des gènes du contrôle du cycle cellulaire, ce clone prolifère : c'est le mécanisme de la **cancérisation**, une évolution clonale à l'intérieur d'un même corps.
+Une mutation survenue dans une cellule **somatique** n’est pas transmise à la descendance de l’individu — mais elle l’est à **toutes les cellules filles** de cette cellule.
+
+| Ce qui se forme | Ce qui se passe ensuite |
+| Un **clone** de cellules mutées | Il coexiste avec le reste de l’organisme |
+| Si les mutations touchent le contrôle du cycle cellulaire | Le clone prolifère : c’est la **cancérisation** |
+
+Un cancer est donc une **évolution clonale** à l’intérieur d’un même corps.
 
 ## La reproduction asexuée
-Bouturage, marcottage, stolons chez les plantes ; scissiparité chez les bactéries ; parthénogenèse chez le puceron. Tous produisent des individus **génétiquement identiques** au parent. Avantage : coloniser vite un milieu favorable. Coût : aucune diversité nouvelle, donc une population fragile face à un changement.`,
+| Mécanisme | Exemples |
+| Bouturage, marcottage, stolons | Les plantes |
+| Scissiparité | Les bactéries |
+| Parthénogenèse | Le puceron |
+
+| Avantage | Coût |
+| Coloniser vite un milieu favorable | Aucune diversité nouvelle : la population est fragile face à un changement |`,
           },
           questions: [
             ['À quel moment du cycle cellulaire l’ADN est-il répliqué ?', ['En phase S', 'En phase G1', 'En phase G2', 'Pendant l’anaphase'], 0, 'La phase S de l’interphase double chaque chromosome, qui passe à deux chromatides.'],
@@ -146,31 +163,41 @@ Bouturage, marcottage, stolons chez les plantes ; scissiparité chez les bactér
           titre: 'Le brassage des génomes à chaque génération : la reproduction sexuée des eucaryotes',
           lecon: {
             titre: 'Méiose et fécondation : la machine à mélanger',
-            cours: `La reproduction sexuée ne se contente pas de transmettre : elle **rebat les cartes** à chaque génération. Deux mécanismes s'enchaînent — la méiose, puis la fécondation.
+            cours: `La reproduction sexuée ne se contente pas de transmettre : elle **rebat les cartes** à chaque génération. Deux mécanismes s’enchaînent — la méiose, puis la fécondation.
 
 ## Le cycle de développement
-Une cellule **diploïde** (2n chromosomes) subit une **méiose** qui produit quatre cellules **haploïdes** (n chromosomes) : les gamètes. La **fécondation** rétablit la diploïdie. Chez l'espèce humaine, 2n = 46 et n = 23.
+| Étape | Ce qui se passe | Chez l’humain |
+| Méiose | 2n devient n : quatre gamètes haploïdes | 46 devient 23 |
+| Fécondation | n + n redevient 2n | 23 + 23 font 46 |
 
 ## La méiose : deux divisions
-- **Division réductionnelle (I)** : les chromosomes homologues s'apparient (bivalents), puis se séparent. On passe de 2n à n.
-- **Division équationnelle (II)** : les chromatides sœurs se séparent, comme dans une mitose.
+| Division | Ce qui se sépare | Le résultat |
+| **I, réductionnelle** | Les chromosomes **homologues** | On passe de 2n à n |
+| **II, équationnelle** | Les **chromatides sœurs** | Comme une mitose |
 
-## Le brassage interchromosomique
-À l'anaphase I, **chaque paire d'homologues se répartit indépendamment des autres**. Pour 23 paires, cela donne **2²³**, soit plus de 8 millions de combinaisons de gamètes possibles — rien qu'avec ce brassage.
+## Les trois brassages
+| Brassage | Quand | Combien de possibilités |
+| **Interchromosomique** | Anaphase I : chaque paire se répartit indépendamment | **2²³**, soit plus de 8 millions de gamètes |
+| **Intrachromosomique** | Prophase I : les **crossing-over** échangent des portions | Innombrables |
+| La **fécondation** | Rencontre au hasard de deux gamètes | Plus de **2⁴⁶** combinaisons par couple |
 
-## Le brassage intrachromosomique
-En prophase I, des **crossing-over** échangent des portions entre chromatides d'homologues. Deux gènes portés par le même chromosome (**gènes liés**) peuvent ainsi être recombinés. Un croisement-test le révèle : les phénotypes **recombinés** sont MINORITAIRES pour des gènes liés, alors qu'ils seraient à 25 % chacun (équirépartition) pour des gènes indépendants.
+## Lire un croisement-test
+> Le tableau qui tranche entre gènes liés et gènes indépendants — c’est l’exercice le plus fréquent au bac.
 
-> Gènes indépendants → 4 phénotypes en proportions égales. Gènes liés → 2 phénotypes parentaux majoritaires + 2 recombinés minoritaires.
+| Les gènes sont… | Les phénotypes obtenus |
+| **Indépendants** | Quatre phénotypes en proportions **égales**, 25 % chacun |
+| **Liés** | Deux phénotypes **parentaux majoritaires** + deux **recombinés minoritaires** |
 
-## La fécondation, troisième brassage
-La rencontre d'un gamète mâle et d'un gamète femelle **pris au hasard** multiplie les possibles : plus de 2⁴⁶ combinaisons pour un couple humain, avant même de compter les crossing-over.
+Les recombinés minoritaires sont la signature du crossing-over : plus ils sont rares, plus les deux gènes sont proches sur le chromosome.
 
 ## Quand la méiose dérape
-- **Non-disjonction** d'une paire (division I) ou de deux chromatides (division II) : le gamète porte un chromosome en trop ou en moins → **trisomie 21**, monosomie.
-- **Crossing-over inégal** entre chromatides mal alignées : une chromatide gagne un segment, l'autre le perd. Une **duplication génique** est née ; les copies mutent ensuite indépendamment et forment une **famille multigénique** (les gènes des globines, par exemple).
+| L’accident | Le mécanisme | Le résultat |
+| **Non-disjonction** | Une paire ne se sépare pas (division I) ou deux chromatides (division II) | Un gamète avec un chromosome en trop ou en moins : **trisomie 21**, monosomie |
+| **Crossing-over inégal** | Chromatides mal alignées : l’une gagne un segment, l’autre le perd | Une **duplication génique** |
 
-Ces accidents sont des erreurs à l'échelle de l'individu, mais une **source d'innovation** à l'échelle de l'évolution.`,
+Les copies dupliquées mutent ensuite indépendamment et forment une **famille multigénique** — les gènes des globines, par exemple.
+
+> Ces accidents sont des **erreurs** à l’échelle de l’individu, et une **source d’innovation** à l’échelle de l’évolution. C’est la même chose vue à deux échelles de temps.`,
           },
           questions: [
             ['Combien de cellules haploïdes une méiose produit-elle à partir d’une cellule diploïde ?', ['Quatre', 'Deux', 'Une', 'Huit'], 0, 'Deux divisions successives : la réductionnelle puis l’équationnelle.'],
@@ -187,30 +214,46 @@ Ces accidents sont des erreurs à l'échelle de l'individu, mais une **source d'
           titre: 'Mécanismes de diversification des êtres vivants',
           lecon: {
             titre: 'Diversifier autrement que par les gènes',
-            cours: `La méiose et la fécondation ne sont pas les seules sources de nouveauté. Le vivant se diversifie aussi par des mécanismes **génétiques mais non sexués**, et même par des mécanismes **sans aucune modification du génome**.
+            cours: `La méiose et la fécondation ne sont pas les seules sources de nouveauté. Le vivant se diversifie aussi par des mécanismes **génétiques mais non sexués** — et même **sans aucune modification du génome**.
+
+## Les quatre voies
+| Voie | Le génome change ? | Exemple |
+| **Transfert horizontal** | Oui | La résistance aux antibiotiques chez les bactéries |
+| **Hybridation et polyploïdisation** | Oui | Le blé tendre |
+| **Symbiose** | **Non** | Lichens, mycorhizes, microbiote |
+| **Transmission culturelle** | **Non** | Les techniques des chimpanzés |
 
 ## Les transferts horizontaux de gènes
-Un gène passe d'un organisme à un autre **sans reproduction**. Fréquent chez les bactéries (conjugaison, transformation, transduction par des virus) : c'est ainsi que se propage la **résistance aux antibiotiques**. Chez les eucaryotes, des **virus** ont inséré des séquences dans nos génomes — le gène de la **syncytine**, indispensable au placenta des mammifères, est d'origine virale.
+Un gène passe d’un organisme à un autre **sans reproduction** : conjugaison, transformation, transduction par des virus.
+
+Chez les eucaryotes, des **virus** ont inséré des séquences dans nos génomes — le gène de la **syncytine**, indispensable au placenta des mammifères, est d’origine virale.
 
 ## Hybridation et polyploïdisation
-Deux espèces proches se croisent : l'hybride est souvent stérile (le mulet). Mais si son stock chromosomique **double** (polyploïdisation), la méiose redevient possible et une **espèce nouvelle** apparaît en une génération. Le **blé tendre** est ainsi le produit de deux hybridations-polyploïdisations successives entre graminées sauvages.
+| Étape | Ce qui se passe |
+| Deux espèces proches se croisent | L’hybride est souvent **stérile** : le mulet |
+| Son stock chromosomique **double** | La méiose redevient possible |
+| Résultat | Une **espèce nouvelle en une génération** |
+
+Le **blé tendre** est le produit de deux hybridations-polyploïdisations successives entre graminées sauvages.
 
 ## Les associations et symbioses
-Deux organismes s'associent durablement, chacun tirant bénéfice de l'autre : le phénotype de l'ensemble est plus performant que la somme.
-- **lichens** : champignon + algue verte ou cyanobactérie ;
-- **mycorhizes** : champignon + racines (plus de 80 % des plantes) ;
-- **nodosités** : bactéries Rhizobium + légumineuses, qui fixent le diazote de l'air ;
-- **microbiote intestinal** : des bactéries qui digèrent ce que nous ne savons pas digérer.
+| Symbiose | Les partenaires | Ce qu’elle apporte |
+| **Lichen** | Champignon + algue ou cyanobactérie | Coloniser la roche nue |
+| **Mycorhize** | Champignon + racines | Plus de 80 % des plantes en dépendent |
+| **Nodosité** | Rhizobium + légumineuse | Fixer le diazote de l’air |
+| **Microbiote intestinal** | Bactéries + hôte | Digérer ce que l’hôte ne sait pas digérer |
 
-> La symbiose ne change pas le génome des partenaires : elle change ce qu'ils sont capables de faire.
+> La symbiose ne change pas le **génome** des partenaires : elle change ce qu’ils sont **capables de faire**. C’est une diversification du phénotype sans mutation.
 
-## La diversification NON génétique : les comportements
-Certains comportements se transmettent par **apprentissage**, d'un individu à l'autre, sans passer par l'ADN.
-- les **mésanges** anglaises ont appris à percer les capsules des bouteilles de lait, et le comportement s'est propagé de proche en proche ;
-- les **chimpanzés** de Gombe pêchent les termites avec une brindille ; ceux d'autres populations cassent les noix avec une enclume de pierre. Les techniques diffèrent d'un groupe à l'autre : ce sont des **traditions**, donc une forme de **culture**.
-- le chant des **oiseaux** comporte des « dialectes » régionaux appris des adultes.
+## La diversification par la culture
+Certains comportements se transmettent par **apprentissage**, d’un individu à l’autre, sans passer par l’ADN.
 
-Ces transmissions culturelles créent de la **diversité entre populations** d'une même espèce, et peuvent modifier la pression de sélection qui s'exerce ensuite sur les gènes.`,
+| Exemple | Ce qu’il montre |
+| Les **mésanges** anglaises perçant les capsules des bouteilles de lait | Un comportement se propage de proche en proche |
+| Les **chimpanzés** de Gombe pêchant les termites à la brindille | Les techniques diffèrent d’un groupe à l’autre : ce sont des **traditions** |
+| Les « dialectes » du chant des **oiseaux** | Ils s’apprennent des adultes |
+
+Ces transmissions créent de la **diversité entre populations** d’une même espèce — et peuvent modifier la pression de sélection qui s’exercera ensuite sur les gènes.`,
           },
           questions: [
             ['Qu’est-ce qu’un transfert horizontal de gènes ?', ['Le passage d’un gène d’un organisme à un autre sans reproduction', 'La transmission d’un gène du parent à l’enfant', 'Un crossing-over', 'Une duplication génique'], 0, 'Il est très fréquent chez les bactéries : conjugaison, transformation, transduction.'],
@@ -227,31 +270,45 @@ Ces transmissions culturelles créent de la **diversité entre populations** d'u
           titre: 'De la diversification des êtres vivants à l’évolution de la biodiversité',
           lecon: {
             titre: 'Sélection, dérive, spéciation',
-            cours: `La diversification fournit la matière ; l'évolution trie. Deux forces principales font varier la fréquence des allèles dans une population : la **sélection naturelle** et la **dérive génétique**.
+            cours: `La diversification fournit la matière ; l’évolution **trie**. Deux forces font varier la fréquence des allèles dans une population : la **sélection naturelle** et la **dérive génétique**.
 
 ## Le modèle de Hardy-Weinberg
-Dans une population **idéale** — grande, sans migration, sans mutation, sans sélection, à croisements au hasard — les fréquences alléliques **ne changent pas** d'une génération à l'autre. Si p et q sont les fréquences des allèles A et a, les génotypes se répartissent en p², 2pq et q².
+Dans une population **idéale** — grande, sans migration, sans mutation, sans sélection, à croisements au hasard — les fréquences alléliques **ne changent pas**. Si p et q sont les fréquences des allèles A et a, les génotypes se répartissent en p², 2pq et q².
 
-Ce modèle n'existe nulle part : c'est son intérêt. Il sert de **référence nulle**. Un écart mesuré entre les fréquences observées et les fréquences attendues signale qu'une force évolutive est à l'œuvre.
+> Ce modèle n’existe **nulle part** : c’est précisément son intérêt. Il sert de **référence nulle**, et tout écart mesuré entre fréquences observées et attendues signale qu’une force évolutive est à l’œuvre.
 
-## La sélection naturelle
-Les individus porteurs d'un phénotype qui **augmente le succès reproducteur** dans un milieu donné laissent plus de descendants. Leurs allèles deviennent plus fréquents.
-- la **phalène du bouleau** : la forme sombre, rare avant l'industrialisation, devient majoritaire sur les troncs noircis de suie, puis régresse après les lois anti-pollution ;
-- la **résistance aux antibiotiques** : l'antibiotique ne crée pas la résistance, il sélectionne les bactéries qui la portaient déjà.
+## Les deux forces
+| | Sélection naturelle | Dérive génétique |
+| Le moteur | Un avantage reproductif | Le **hasard** de l’échantillonnage des gamètes |
+| Ce qui l’amplifie | Une pression forte | Une population de **petit effectif** |
+| Le résultat | Les allèles avantageux se répandent | Un allèle peut disparaître **sans désavantage** |
 
-> La sélection n'est ni un projet ni un progrès : elle est un tri, relatif à un milieu qui peut changer.
+## Deux exemples de sélection
+| Cas | Ce qui se passe |
+| La **phalène du bouleau** | La forme sombre, rare, devient majoritaire sur les troncs noircis de suie — puis régresse après les lois anti-pollution |
+| La **résistance aux antibiotiques** | L’antibiotique ne **crée** pas la résistance : il sélectionne les bactéries qui la portaient déjà |
 
-## La dérive génétique
-Dans une population **de petit effectif**, les fréquences alléliques varient **au hasard** de l'échantillonnage des gamètes. Un allèle peut disparaître ou devenir unique (fixation) sans avoir le moindre avantage. Deux populations isolées dérivent chacune de son côté : leurs patrimoines génétiques s'éloignent.
+> La sélection n’est ni un projet ni un progrès : c’est un **tri**, relatif à un milieu qui peut changer — et qui change.
 
-## L'espèce et ses limites
-Le critère le plus courant est l'**interfécondité** : deux individus appartiennent à la même espèce s'ils peuvent se reproduire entre eux et donner des descendants **fertiles**. Ce critère est inapplicable aux fossiles, aux organismes asexués et aux populations qui s'hybrident parfois. On combine donc plusieurs critères — morphologique, écologique, génétique, phylogénétique.
+## L’espèce et ses limites
+Le critère le plus courant est l’**interfécondité** : même espèce si les descendants sont **fertiles**.
+
+| Ce critère échoue pour… | Pourquoi |
+| Les **fossiles** | On ne peut pas les croiser |
+| Les organismes **asexués** | Il n’y a pas de reproduction sexuée |
+| Les populations qui s’**hybrident** parfois | La frontière est poreuse |
+
+On combine donc plusieurs critères : morphologique, écologique, génétique, phylogénétique.
 
 ## La spéciation
-Quand deux populations cessent d'échanger des gènes (**isolement géographique**, décalage des périodes de reproduction, comportements de parade incompatibles), sélection et dérive les font diverger. Au-delà d'un certain écart, les descendants hybrides ne sont plus viables ou plus fertiles : **une espèce est devenue deux**.
+| Étape | Ce qui se passe |
+| 1. **Isolement** | Géographique, décalage des périodes de reproduction, parades incompatibles |
+| 2. **Divergence** | Sélection et dérive agissent séparément sur chaque population |
+| 3. **Isolement reproductif** | Les hybrides ne sont plus viables ou plus fertiles |
+| 4. Résultat | **Une espèce est devenue deux** |
 
 ## Une biodiversité qui bouge
-Les **crises biologiques** (cinq grandes extinctions, dont celle de la fin du Crétacé) éliminent massivement, puis les groupes survivants se diversifient dans les niches libérées. La biodiversité actuelle n'est qu'un **état** de la biosphère, pas son point d'arrivée.`,
+Les **crises biologiques** éliminent massivement, puis les groupes survivants se diversifient dans les niches libérées. La biodiversité actuelle n’est qu’un **état** de la biosphère, pas son point d’arrivée.`,
           },
           questions: [
             ['À quoi sert le modèle de Hardy-Weinberg ?', ['De référence nulle : tout écart signale une force évolutive', 'À prouver que les espèces ne changent pas', 'À dater les roches', 'À calculer le nombre de gamètes'], 0, 'Il décrit une population idéale où les fréquences alléliques resteraient stables.'],
@@ -270,27 +327,31 @@ Les **crises biologiques** (cinq grandes extinctions, dont celle de la fin du Cr
           titre: 'La chronologie relative : décrypter le temps des roches par l’observation',
           lecon: {
             titre: 'Lire l’ordre des événements sans compter les années',
-            cours: `Avant de savoir DATER, les géologues ont su ORDONNER. La chronologie relative répond à une seule question : qu'est-ce qui est arrivé avant quoi ? Elle repose sur des principes d'observation, applicables sur le terrain sans aucun instrument.
+            cours: `Avant de savoir **dater**, les géologues ont su **ordonner**. La chronologie relative répond à une seule question : qu’est-ce qui est arrivé avant quoi ? Elle repose sur des principes d’observation, applicables sur le terrain sans aucun instrument.
 
-## Le principe de superposition
-Dans une série sédimentaire **non déformée**, une couche est plus récente que celle qu'elle recouvre. Simple — mais il faut d'abord vérifier que la série n'a pas été **renversée** par une déformation (des figures sédimentaires, comme les rides de courant ou le granoclassement, indiquent le haut d'origine).
+## Les cinq principes
+| Principe | Ce qu’il énonce | Le piège |
+| **Superposition** | Une couche est plus récente que celle qu’elle recouvre | Vérifier que la série n’a pas été **renversée** |
+| **Recoupement** | Ce qui recoupe est **postérieur** | Une faille, un filon, une surface d’érosion |
+| **Inclusion** | Ce qui est inclus est **antérieur** | Un galet, une enclave, un cristal |
+| **Continuité** | Une même couche a le même âge sur toute son extension | Même si elle **change de faciès** |
+| **Identité paléontologique** | Même assemblage de fossiles, même âge | Encore faut-il un bon fossile |
 
-## Le principe de recoupement
-Toute structure qui en **recoupe** une autre lui est postérieure : une faille est plus récente que les couches qu'elle décale, un filon de granite plus récent que la roche qu'il traverse, une surface d'érosion plus récente que tout ce qu'elle tronque.
+## Comment savoir si une série est renversée
+Des **figures sédimentaires** indiquent le haut d’origine : rides de courant, granoclassement, fentes de dessiccation. Sans elles, le principe de superposition peut donner l’ordre exactement à l’envers.
 
-## Le principe d'inclusion
-Un objet **inclus** dans une roche est plus ancien qu'elle : un galet dans un conglomérat, une enclave dans un granite, un cristal dans une lave.
+## Le bon fossile stratigraphique
+| Critère | Pourquoi |
+| **Large répartition** géographique | Pour corréler des coupes éloignées |
+| **Courte durée** d’existence | Pour découper finement le temps |
+| **Abondance** | Pour avoir une chance de le trouver |
 
-## Le principe de continuité
-Une même couche, suivie latéralement, a **le même âge** sur toute son extension — même si elle change de faciès (un calcaire de plateforme et une marne de bassin peuvent être contemporains).
+Ammonites, trilobites et foraminifères remplissent ce cahier des charges.
 
-## Le principe d'identité paléontologique
-Deux couches contenant le **même assemblage de fossiles** ont le même âge. Les meilleurs repères sont les **fossiles stratigraphiques** : une espèce à **large répartition géographique**, à **courte durée d'existence** et **abondante**. Ammonites, trilobites, foraminifères remplissent ce cahier des charges.
+> Une espèce qui a vécu 200 millions d’années est un **mauvais** fossile stratigraphique : elle ne découpe rien. Le cœlacanthe ne date aucune couche.
 
-> Une espèce qui a vécu 200 millions d'années est un mauvais fossile stratigraphique : elle ne découpe rien.
-
-## De l'échelle locale à l'échelle mondiale
-En croisant ces principes de coupe en coupe, les géologues du XIXᵉ siècle ont construit l'**échelle stratigraphique** — ères, périodes, étages — bien avant de pouvoir y mettre des dates. La radiochronologie n'a fait ensuite que la **calibrer** en millions d'années.`,
+## De l’échelle locale à l’échelle mondiale
+En croisant ces principes de coupe en coupe, les géologues du XIXe siècle ont construit l’**échelle stratigraphique** — ères, périodes, étages — **bien avant** de pouvoir y mettre des dates. La radiochronologie n’a fait ensuite que la **calibrer** en millions d’années.`,
           },
           questions: [
             ['Que dit le principe de superposition ?', ['Dans une série non déformée, une couche est plus récente que celle qu’elle recouvre', 'Un objet inclus est plus récent', 'Une faille est plus ancienne que les couches', 'Deux couches ont toujours le même âge'], 0, 'La restriction « non déformée » est essentielle : une série peut être renversée.'],
@@ -307,34 +368,43 @@ En croisant ces principes de coupe en coupe, les géologues du XIXᵉ siècle on
           titre: 'La chronologie absolue : décrypter le temps des roches par des mesures',
           lecon: {
             titre: 'Des horloges dans les cristaux',
-            cours: `La chronologie relative ordonne, la chronologie **absolue** compte. Elle repose sur une propriété physique indifférente au milieu : la **désintégration radioactive**.
+            cours: `La chronologie relative **ordonne**, la chronologie absolue **compte**. Elle repose sur une propriété physique indifférente au milieu : la **désintégration radioactive**.
 
 ## Une loi de décroissance
-Un isotope radioactif (l'élément **père**) se désintègre spontanément en un isotope **fils**. Le nombre d'atomes pères diminue selon une loi **exponentielle** : à chaque **demi-vie**, il reste la moitié des pères. La vitesse ne dépend ni de la température, ni de la pression, ni de la chimie — c'est ce qui en fait une horloge fiable.
+Un isotope **père** se désintègre spontanément en un isotope **fils**. À chaque **demi-vie**, il reste la moitié des pères.
 
-## Ce qu'on mesure
-On mesure le **rapport** entre l'isotope fils accumulé et l'isotope père restant. Plus le fils est abondant, plus la roche est vieille. Deux conditions doivent être remplies :
-- le **système est fermé** depuis la fermeture (rien n'est entré ni sorti) ;
-- on connaît la quantité initiale de fils, ou on sait s'en affranchir (droite **isochrone**).
+> La vitesse ne dépend **ni de la température, ni de la pression, ni de la chimie**. C’est exactement ce qui en fait une horloge fiable — et ce qui la distingue de tout autre indice géologique.
+
+## Ce qu’on mesure, et à quelles conditions
+On mesure le **rapport** fils accumulé sur père restant. Deux conditions doivent être remplies :
+
+| Condition | Ce qu’elle exige |
+| Le système est **fermé** | Rien n’est entré ni sorti depuis la fermeture |
+| La quantité **initiale de fils** est connue | Ou l’on s’en affranchit par une droite **isochrone** |
 
 ## Choisir le bon couple
-La demi-vie doit être du même ordre que l'âge cherché.
+La demi-vie doit être **du même ordre** que l’âge cherché.
 
-- **Carbone 14 → azote 14**, demi-vie **5 730 ans** : matière organique récente, moins de 50 000 ans.
-- **Potassium 40 → argon 40**, demi-vie **1,3 milliard d'années** : roches volcaniques.
-- **Rubidium 87 → strontium 87**, demi-vie **48,8 milliards d'années** : roches magmatiques anciennes.
-- **Uranium → plomb**, demi-vie de l'ordre de **4,5 milliards d'années** : zircons, les plus vieilles roches connues.
+| Couple | Demi-vie | Ce qu’il date |
+| Carbone 14 → azote 14 | **5 730 ans** | Matière organique de moins de 50 000 ans |
+| Potassium 40 → argon 40 | **1,3 milliard d’années** | Roches volcaniques |
+| Rubidium 87 → strontium 87 | **48,8 milliards d’années** | Roches magmatiques anciennes |
+| Uranium → plomb | environ **4,5 milliards d’années** | Zircons, les plus vieilles roches connues |
 
-> Dater du bois de 3 000 ans au rubidium-strontium n'aurait aucun sens : la quantité de fils produite serait indétectable. Dater une roche de 3 milliards d'années au carbone 14 non plus : il ne resterait plus un seul atome père.
+> Dater du bois de 3 000 ans au rubidium-strontium n’aurait aucun sens : la quantité de fils produite serait indétectable. Dater une roche de 3 milliards d’années au carbone 14 non plus : il ne resterait plus **un seul** atome père.
 
-## Ce que l'horloge date exactement
-Elle date la **fermeture du système**, pas « la roche » en général :
-- pour une roche magmatique, la **cristallisation** ;
-- pour un minéral métamorphique, le passage sous sa **température de fermeture** ;
-- au carbone 14, la **mort** de l'organisme, qui cesse alors d'échanger du carbone avec l'atmosphère.
+## Ce que l’horloge date exactement
+Elle date la **fermeture du système**, pas « la roche » en général.
+
+| Objet | Ce qui est daté |
+| Une roche magmatique | Sa **cristallisation** |
+| Un minéral métamorphique | Son passage sous sa **température de fermeture** |
+| Un reste organique, au carbone 14 | La **mort** de l’organisme, qui cesse d’échanger du carbone |
 
 ## Le croisement des deux chronologies
-Une datation absolue posée sur une coulée volcanique **encadre** toutes les couches sédimentaires que la chronologie relative situe au-dessus et en dessous. C'est en superposant les deux approches que l'on obtient l'échelle des temps géologiques actuelle, et l'âge de la Terre : **4,57 milliards d'années**, obtenu sur des météorites au couple uranium-plomb.`,
+Une datation absolue posée sur une coulée volcanique **encadre** toutes les couches que la chronologie relative situe au-dessus et en dessous.
+
+C’est en superposant les deux approches qu’on obtient l’échelle des temps géologiques — et l’âge de la Terre : **4,57 milliards d’années**, obtenu sur des météorites au couple uranium-plomb.`,
           },
           questions: [
             ['Que signifie la demi-vie d’un isotope radioactif ?', ['La durée au bout de laquelle la moitié des atomes pères s’est désintégrée', 'La durée de vie totale de l’isotope', 'La moitié de l’âge de la roche', 'Le temps de refroidissement du magma'], 0, 'La décroissance est exponentielle : il reste 1/4 après deux demi-vies.'],
@@ -351,29 +421,45 @@ Une datation absolue posée sur une coulée volcanique **encadre** toutes les co
           titre: 'Formation et disparition des océans : témoins d’un passé mouvementé de la Terre',
           lecon: {
             titre: 'Le cycle de Wilson, lu dans les Alpes',
-            cours: `Un océan naît, s'ouvre, se referme, et une chaîne de montagnes le remplace. Ce scénario s'appelle le **cycle de Wilson**, et les Alpes en gardent toutes les pièces.
+            cours: `Un océan naît, s’ouvre, se referme, et une chaîne de montagnes le remplace. Ce scénario s’appelle le **cycle de Wilson**, et les Alpes en gardent **toutes** les pièces.
 
-## 1. Le rifting : fracturer un continent
-La lithosphère continentale s'amincit et se casse. Il se forme un **rift** : des failles **normales**, des **blocs basculés**, des bassins où s'accumulent des sédiments détritiques, un volcanisme de fissure. Le fossé rhénan et le rift est-africain en sont des exemples actuels.
+## Les cinq étapes
+| Étape | Ce qui se passe | Le témoin dans les Alpes |
+| 1. **Rifting** | La lithosphère continentale s’amincit et se casse | Failles normales, **blocs basculés** |
+| 2. **Ouverture** | La mer entre, une dorsale produit de la lithosphère océanique | **Marges passives** fossiles |
+| 3. **Expansion** | La croûte océanique s’étend | Les **ophiolites** |
+| 4. **Subduction** | La lithosphère océanique plonge | Métamorphisme **HP-BT** |
+| 5. **Collision** | Les deux continents se percutent | Nappes, racine crustale |
 
-## 2. L'ouverture océanique
-La fracture s'élargit, la mer entre, et une **dorsale** se met à produire de la lithosphère océanique. Les anciennes bordures du rift deviennent des **marges passives** : blocs basculés fossilisés sous une épaisse pile de sédiments. On en trouve dans les Alpes franco-italiennes, à des kilomètres de tout océan.
+## 1. Le rifting
+Failles **normales**, blocs basculés, bassins où s’accumulent des sédiments détritiques, volcanisme de fissure. Le fossé rhénan et le rift est-africain en sont les exemples actuels.
 
-## 3. Les témoins de la croûte océanique disparue
-Une **ophiolite** est un fragment de lithosphère océanique charrié sur un continent. Sa séquence est reconnaissable de bas en haut : **péridotites** (manteau), **gabbros** (magma refroidi lentement en profondeur), **basaltes en coussins** (pillow-lavas, refroidis sous l'eau), sédiments marins profonds (radiolarites). Le Chenaillet, dans les Hautes-Alpes, en est un exemple presque intact.
+## 3. Reconnaître une ophiolite
+Une **ophiolite** est un fragment de lithosphère océanique charrié sur un continent. Sa séquence se lit de bas en haut :
 
-## 4. La subduction : refermer l'océan
-La lithosphère océanique, en refroidissant, **s'épaissit et se densifie** ; au-delà d'environ 30 millions d'années elle devient plus dense que l'asthénosphère et plonge. Elle emporte de l'eau : la déshydratation des minéraux hydratés **abaisse la température de fusion** du manteau sus-jacent, d'où le magmatisme d'arc. Les roches de la plaque plongeante subissent un **métamorphisme HP-BT** : on y trouve du **glaucophane**, puis des **éclogites** à grenat et jadéite.
+| Étage | Roche | Ce qu’elle était |
+| Bas | **Péridotites** | Le manteau |
+| | **Gabbros** | Le magma refroidi lentement en profondeur |
+| | **Basaltes en coussins** (pillow-lavas) | La lave refroidie sous l’eau |
+| Haut | **Radiolarites** | Des sédiments marins profonds |
 
-> Les métagabbros à glaucophane des Alpes sont la preuve qu'une lithosphère océanique y est descendue à plusieurs dizaines de kilomètres, puis remontée.
+Le Chenaillet, dans les Hautes-Alpes, en offre un exemple presque intact.
+
+## 4. La subduction
+| Le mécanisme | Sa conséquence |
+| La lithosphère océanique refroidit et s’**épaissit** | Au-delà d’environ 30 Ma, elle devient plus dense que l’asthénosphère |
+| Elle **plonge** en emportant de l’eau | La déshydratation abaisse la température de fusion du manteau : magmatisme d’arc |
+| Elle subit un métamorphisme **HP-BT** | Apparition du **glaucophane**, puis des **éclogites** à grenat et jadéite |
+
+> Les métagabbros à glaucophane des Alpes sont la **preuve** qu’une lithosphère océanique y est descendue à plusieurs dizaines de kilomètres — puis remontée.
 
 ## 5. La collision
-L'océan refermé, les deux continents se percutent. Il en résulte :
-- un **épaississement crustal** (plis, failles inverses, chevauchements, nappes de charriage) ;
-- une **racine crustale** sous la chaîne (jusqu'à 70 km de croûte) ;
-- un relief, qui l'**érosion** rabote aussitôt.
+| Ce qui se forme | Ce qui l’explique |
+| Plis, failles inverses, chevauchements, **nappes de charriage** | L’épaississement crustal |
+| Une **racine crustale** jusqu’à 70 km | La croûte s’enfonce comme un iceberg |
+| Un relief que l’**érosion** rabote aussitôt | L’isostasie fait remonter la chaîne à mesure |
 
-L'isostasie fait remonter la chaîne à mesure qu'elle est érodée : c'est pourquoi on trouve aujourd'hui en surface des roches formées à 30 km de profondeur.`,
+C’est pourquoi on trouve aujourd’hui **en surface** des roches formées à 30 km de profondeur.`,
           },
           questions: [
             ['Quelles structures caractérisent la phase de rifting ?', ['Des failles normales et des blocs basculés', 'Des failles inverses et des chevauchements', 'Des nappes de charriage', 'Des éclogites'], 0, 'Le rifting est une phase d’EXTENSION : la lithosphère s’amincit et se casse.'],
@@ -392,34 +478,40 @@ L'isostasie fait remonter la chaîne à mesure qu'elle est érodée : c'est pour
           titre: 'Organisation fonctionnelle des plantes à fleurs et adaptation à leurs milieux de vie',
           lecon: {
             titre: 'Vivre fixé entre deux milieux',
-            cours: `Une plante ne peut ni fuir la sécheresse, ni chercher son repas, ni échapper à un herbivore. Toute son organisation découle de cette contrainte : la **vie fixée**.
+            cours: `Une plante ne peut ni fuir la sécheresse, ni chercher son repas, ni échapper à un herbivore. **Toute** son organisation découle de cette contrainte : la **vie fixée**.
 
 ## Une double interface
-La plante vit à cheval sur deux milieux qu'elle doit exploiter simultanément.
-- **Le sol** lui fournit l'eau et les ions minéraux. Les **racines**, prolongées par des **poils absorbants**, développent une surface d'échange considérable — plusieurs centaines de m² pour un plant de blé. Les **mycorhizes**, symbiose avec un champignon, décuplent encore cette surface et améliorent l'accès au phosphore.
-- **L'atmosphère** lui fournit le CO₂ et la lumière. Les **feuilles**, larges et minces, offrent une surface d'interception maximale pour une masse minimale.
+| Milieu | Ce qu’il fournit | L’organe | Son adaptation |
+| Le **sol** | Eau et ions minéraux | Les **racines** | Poils absorbants : plusieurs centaines de m² pour un plant de blé |
+| Le sol | Phosphore | Les **mycorhizes** | Symbiose avec un champignon, qui décuple la surface |
+| L’**atmosphère** | CO₂ et lumière | Les **feuilles** | Larges et minces : surface maximale, masse minimale |
 
 ## Les stomates : le compromis permanent
-Les échanges gazeux passent par les **stomates**, des ouvertures encadrées de deux cellules de garde, surtout présentes sur la face inférieure des feuilles. Ils posent un dilemme :
-- ouverts, ils laissent entrer le CO₂ **et** sortir la vapeur d'eau (transpiration) ;
-- fermés, ils économisent l'eau **et** arrêtent la photosynthèse.
+Les échanges gazeux passent par les **stomates**, encadrés de deux cellules de garde, surtout sur la face inférieure des feuilles.
 
-La plante les ouvre et les ferme selon la lumière, l'humidité et son état hydrique.
+| Stomates | Ce qui entre | Ce qui sort | Le coût |
+| **Ouverts** | Le CO₂ | La vapeur d’eau | La transpiration |
+| **Fermés** | Rien | Rien | La photosynthèse s’arrête |
+
+> Il n’existe **aucune** position gagnante : la plante arbitre en permanence entre se nourrir et ne pas se dessécher, selon la lumière, l’humidité et son état hydrique.
 
 ## La circulation interne
-Deux réseaux conducteurs relient les organes.
-- Le **xylème** monte la **sève brute** (eau + ions) des racines aux feuilles. Le moteur n'est pas une pompe : c'est la **transpiration** foliaire qui tire la colonne d'eau, maintenue par la cohésion des molécules.
-- Le **phloème** distribue la **sève élaborée** (riche en saccharose) des feuilles vers les organes consommateurs ou de réserve — dans **les deux sens**, selon les besoins.
+| Réseau | Ce qu’il transporte | D’où vers où | Le moteur |
+| **Xylème** | La sève **brute** : eau et ions | Racines vers feuilles | La **transpiration** tire la colonne d’eau |
+| **Phloème** | La sève **élaborée** : saccharose | Feuilles vers organes consommateurs, **dans les deux sens** | Un gradient de pression |
+
+Il n’y a **aucune pompe** : c’est l’évaporation au sommet qui tire l’eau depuis le bas, la cohésion des molécules maintenant la colonne.
 
 ## Résister sans bouger
-- **Froid** : perte des feuilles, bourgeons protégés par des écailles, formes de vie souterraines (bulbes, rhizomes), antigels cellulaires.
-- **Sécheresse** : cuticule épaisse et cireuse, feuilles réduites en épines, stomates enfoncés, réserves d'eau (plantes grasses), racines profondes.
-- **Herbivores** : épines, poils urticants, silice dans les feuilles, et surtout des **métabolites secondaires** toxiques ou répulsifs (alcaloïdes comme la nicotine et la caféine, tanins, latex).
+| Contrainte | Les adaptations |
+| **Froid** | Perte des feuilles, bourgeons à écailles, bulbes et rhizomes, antigels cellulaires |
+| **Sécheresse** | Cuticule cireuse, feuilles en épines, stomates enfoncés, réserves d’eau, racines profondes |
+| **Herbivores** | Épines, poils urticants, silice — et surtout des **métabolites secondaires** : alcaloïdes, tanins, latex |
 
-> Une plante attaquée peut émettre des composés volatils qui alertent ses voisines — et parfois attirent les prédateurs de l'herbivore.
+> Une plante attaquée peut émettre des composés **volatils** qui alertent ses voisines — et parfois attirent les prédateurs de l’herbivore. Fixée, elle communique quand même.
 
-## Un développement modulaire et continu
-Contrairement à un animal, une plante croît toute sa vie grâce à ses **méristèmes**, et son architecture s'ajuste au milieu : une plante à l'ombre s'allonge vers la lumière, une plante isolée s'étale.`,
+## Un développement modulaire
+Contrairement à un animal, une plante croît **toute sa vie** grâce à ses **méristèmes**, et son architecture s’ajuste au milieu : à l’ombre elle s’allonge vers la lumière, isolée elle s’étale.`,
           },
           questions: [
             ['Quelle contrainte majeure explique l’organisation d’une plante à fleurs ?', ['La vie fixée : elle ne peut ni fuir ni chercher ses ressources', 'Sa petite taille', 'Son absence de cellules', 'Sa reproduction asexuée obligatoire'], 0, 'Elle doit tout prélever sur place, dans le sol et dans l’atmosphère.'],
@@ -436,32 +528,51 @@ Contrairement à un animal, une plante croît toute sa vie grâce à ses **méri
           titre: 'La plante, productrice de la matière organique grâce à la photosynthèse',
           lecon: {
             titre: 'De la lumière au sucre',
-            cours: `La photosynthèse produit l'essentiel de la matière organique de la biosphère. Son bilan tient en une ligne : **6 CO₂ + 6 H₂O + lumière → C₆H₁₂O₆ + 6 O₂**. Le détail est plus intéressant.
+            cours: `La photosynthèse produit l’essentiel de la matière organique de la biosphère. Son bilan tient en une ligne — **6 CO₂ + 6 H₂O + lumière donne C₆H₁₂O₆ + 6 O₂** — et le détail est plus intéressant que le bilan.
 
-## Le chloroplaste, l'usine
-C'est un organite à **double membrane**, contenant un système de sacs aplatis (**thylakoïdes**) empilés en granums, baignant dans un liquide, le **stroma**. Deux compartiments, deux étapes.
+## Le chloroplaste, l’usine
+| Compartiment | Ce qu’il contient | La phase qui s’y déroule |
+| Les **thylakoïdes** | Les pigments, empilés en granums | La phase **photochimique** |
+| Le **stroma** | Les enzymes, dont la RuBisCO | La phase **non photochimique** |
 
-## Les pigments et le spectre d'action
-Les thylakoïdes portent des pigments : **chlorophylles a et b** (vert), **caroténoïdes** (jaune-orangé). Une **chromatographie** les sépare. Un **spectre d'absorption** montre qu'ils absorbent surtout le **bleu** et le **rouge**, et réfléchissent le vert — d'où la couleur des feuilles. Le **spectre d'action** (efficacité photosynthétique selon la longueur d'onde) se superpose au spectre d'absorption : c'est la preuve que ce sont bien ces pigments qui captent l'énergie utilisée.
+## Les pigments et le spectre d’action
+| Pigment | Couleur | Ce qu’il absorbe |
+| Chlorophylles a et b | Vert | Le **bleu** et le **rouge** |
+| Caroténoïdes | Jaune-orangé | Le bleu |
 
-## Phase photochimique (dans les thylakoïdes, à la lumière)
-L'énergie lumineuse captée sert à :
-- **oxyder l'eau** (photolyse) : 2 H₂O → 4 H⁺ + 4 e⁻ + O₂. **Le dioxygène rejeté vient de l'eau, pas du CO₂** ;
-- produire des transporteurs réduits (**RH₂**) et de l'**ATP**.
+Les feuilles sont vertes parce que le vert est la couleur **réfléchie**, celle qu’aucun pigment n’absorbe.
 
-## Phase non photochimique (dans le stroma, à l'obscurité possible)
-Le **cycle de Calvin** utilise l'ATP et les RH₂ pour **réduire le CO₂** et fabriquer des trioses phosphates, précurseurs du glucose. L'enzyme clé est la **RuBisCO**, qui fixe le CO₂ sur un sucre à 5 carbones. C'est probablement la protéine la plus abondante de la biosphère.
+> Le **spectre d’action** — l’efficacité photosynthétique selon la longueur d’onde — se superpose au **spectre d’absorption**. C’est la preuve que ce sont bien ces pigments qui captent l’énergie utilisée, et non d’autres molécules.
 
-> Les deux phases sont couplées : sans lumière, plus d'ATP ni de RH₂, et le cycle de Calvin s'arrête en quelques secondes.
+## Les deux phases
+| | Phase **photochimique** | Phase **non photochimique** |
+| Où | Thylakoïdes | Stroma |
+| Lumière | **Indispensable** | Non requise directement |
+| Ce qui s’y passe | Photolyse de l’eau, production d’ATP et de RH₂ | Le **cycle de Calvin** réduit le CO₂ |
+| Ce qui en sort | O₂, ATP, RH₂ | Trioses phosphates, précurseurs du glucose |
+
+La photolyse s’écrit : 2 H₂O donne 4 H⁺ + 4 e⁻ + O₂.
+
+> **Le dioxygène rejeté vient de l’eau, pas du CO₂.** C’est le contresens le plus fréquent, et il se corrige d’une phrase.
+
+L’enzyme clé du cycle de Calvin est la **RuBisCO**, qui fixe le CO₂ sur un sucre à 5 carbones : c’est probablement la protéine la plus abondante de la biosphère.
+
+Les deux phases sont **couplées** : sans lumière, plus d’ATP ni de RH₂, et le cycle de Calvin s’arrête en quelques secondes.
 
 ## Que devient le glucose
-- **polymérisé en amidon** : réserve dans les graines, tubercules, racines ;
-- **polymérisé en cellulose** : la paroi des cellules, donc la charpente de la plante ;
-- **exporté** par le phloème vers les organes non chlorophylliens ;
-- **respiré** par la plante elle-même pour produire son ATP.
+| Destination | Sous quelle forme | À quoi cela sert |
+| Réserve | **Amidon** | Graines, tubercules, racines |
+| Structure | **Cellulose** | La paroi des cellules, donc la charpente |
+| Export | Saccharose, par le phloème | Les organes non chlorophylliens |
+| Consommation | Respiration | L’ATP de la plante elle-même |
 
 ## Métabolites primaires et secondaires
-Les **primaires** (glucides, lipides, protides) servent la croissance et le fonctionnement. Les **secondaires** — alcaloïdes, tanins, terpènes, pigments floraux, molécules odorantes — ne sont pas indispensables à la survie individuelle mais servent la **défense**, l'**attraction des pollinisateurs** et la **compétition**. Ce sont eux qui font l'intérêt des plantes pour la pharmacie, la parfumerie et l'alimentation.`,
+| | Primaires | Secondaires |
+| Exemples | Glucides, lipides, protides | Alcaloïdes, tanins, terpènes, pigments floraux |
+| À quoi ils servent | Croissance et fonctionnement | Défense, attraction des pollinisateurs, compétition |
+| Indispensables ? | Oui | Non à l’individu — mais décisifs pour l’espèce |
+
+Ce sont les **secondaires** qui font l’intérêt des plantes pour la pharmacie, la parfumerie et l’alimentation.`,
           },
           questions: [
             ['D’où provient le dioxygène rejeté par la photosynthèse ?', ['De l’eau, oxydée lors de la photolyse', 'Du dioxyde de carbone', 'Du glucose', 'De l’air absorbé par les stomates'], 0, 'C’est la photolyse de l’eau dans les thylakoïdes qui libère l’O₂.'],
@@ -478,37 +589,55 @@ Les **primaires** (glucides, lipides, protides) servent la croissance et le fonc
           titre: 'Reproduction de la plante entre vie fixée et mobilité',
           lecon: {
             titre: 'Faire voyager ce qui ne peut pas bouger',
-            cours: `Une plante fixée doit résoudre deux problèmes de mobilité : faire se rencontrer des gamètes qui ne peuvent pas se déplacer, et disperser sa descendance loin d'elle. Elle sous-traite les deux.
+            cours: `Une plante fixée doit résoudre **deux** problèmes de mobilité : faire se rencontrer des gamètes qui ne peuvent pas se déplacer, et disperser sa descendance loin d’elle. Elle sous-traite les deux.
 
-## La fleur, un organe de reproduction condensé
-De l'extérieur vers l'intérieur, quatre verticilles :
-- **sépales** (calice) : protection du bouton ;
-- **pétales** (corolle) : attraction visuelle ;
-- **étamines** : organes mâles, produisant le **pollen** (gamétophyte mâle) ;
-- **pistil** (carpelles) : organe femelle, avec le **stigmate**, le style et l'**ovaire** contenant les **ovules**.
+## La fleur, un organe condensé
+| Verticille | Son rôle |
+| **Sépales** (calice) | Protéger le bouton |
+| **Pétales** (corolle) | Attirer visuellement |
+| **Étamines** | Produire le **pollen**, gamétophyte mâle |
+| **Pistil** (carpelles) | Stigmate, style et **ovaire** contenant les ovules |
 
-## La pollinisation
-Le pollen doit atteindre le stigmate d'une autre fleur. Deux stratégies.
-- **Anémogamie** (par le vent) : pollen léger, produit en énormes quantités, fleurs discrètes sans pétales voyants ni nectar. Graminées, conifères, noisetier. Beaucoup de gaspillage — d'où les allergies.
-- **Zoogamie** (par les animaux) : pollen lourd et collant, produit en petite quantité, fleurs voyantes, odorantes, offrant **nectar** et pollen en récompense. Beaucoup plus économe.
+## Les deux pollinisations
+| | **Anémogamie** — le vent | **Zoogamie** — les animaux |
+| Le pollen | Léger, en énormes quantités | Lourd et collant, en petite quantité |
+| La fleur | Discrète, sans pétales voyants ni nectar | Voyante, odorante, avec **nectar** |
+| Exemples | Graminées, conifères, noisetier | La grande majorité des plantes à fleurs |
+| Le bilan | Beaucoup de gaspillage — d’où les allergies | Beaucoup plus économe |
 
-## La coévolution plante-pollinisateur
-Chaque partenaire exerce une pression de sélection sur l'autre, et les deux lignées évoluent conjointement. L'exemple canonique : l'orchidée malgache *Angraecum sesquipedale*, dont l'éperon nectarifère mesure 30 cm. Darwin en déduisit en 1862 l'existence d'un papillon à trompe aussi longue ; il fut découvert quarante ans plus tard.
+## La coévolution
+Chaque partenaire exerce une pression de sélection sur l’autre, et les deux lignées évoluent conjointement.
 
-> La coévolution ne suppose aucune intention : c'est un ajustement réciproque par sélection naturelle, sur des millions d'années.
+> L’exemple canonique : l’orchidée malgache *Angraecum sesquipedale*, dont l’éperon nectarifère mesure **30 cm**. Darwin en déduisit en 1862 l’existence d’un papillon à trompe aussi longue. Il fut découvert **quarante ans plus tard**.
 
-## Éviter l'autofécondation
-L'**allofécondation** (fécondation croisée) brasse davantage. Les plantes y parviennent par des dispositifs variés : maturation décalée des étamines et du pistil, séparation des sexes sur des pieds différents (dioécie), incompatibilités biochimiques entre pollen et stigmate de la même plante.
+La coévolution ne suppose **aucune intention** : c’est un ajustement réciproque par sélection naturelle, sur des millions d’années.
+
+## Éviter l’autofécondation
+| Le dispositif | Comment il agit |
+| Maturation décalée | Étamines et pistil ne sont pas mûrs en même temps |
+| **Dioécie** | Les sexes sont sur des pieds différents |
+| Incompatibilité biochimique | Le stigmate rejette le pollen de la même plante |
+
+L’allofécondation brasse davantage : c’est tout l’enjeu.
 
 ## De la fleur au fruit
-Après fécondation, l'**ovule devient la graine** (embryon + réserves) et l'**ovaire devient le fruit**. Le fruit est un dispositif de **dissémination** :
-- fruits charnus et sucrés → mangés, graines rejetées loin (zoochorie) ;
-- fruits ailés ou plumeux → emportés par le vent (anémochorie) : samare de l'érable, akène du pissenlit ;
-- crochets → accrochés au pelage ;
-- flottaison → dispersion par l'eau (noix de coco).
+| Ce qui devient… | … quoi |
+| L’**ovule** | La **graine** : embryon + réserves |
+| L’**ovaire** | Le **fruit** |
+
+| Mode de dissémination | Le dispositif | Exemple |
+| **Zoochorie** | Fruit charnu et sucré, mangé | Cerise, mûre |
+| **Anémochorie** | Fruit ailé ou plumeux | Samare de l’érable, akène du pissenlit |
+| Épizoochorie | Crochets accrochés au pelage | Bardane |
+| Hydrochorie | Flottaison | Noix de coco |
 
 ## La multiplication végétative
-En parallèle, la plante se reproduit **sans sexe** : stolons du fraisier, rhizomes du bambou, tubercules de la pomme de terre, drageons du peuplier. Rapide et sûre pour occuper un milieu favorable, mais elle produit un **clone** sans diversité nouvelle. Les deux modes coexistent souvent chez la même espèce : la reproduction sexuée pour l'innovation et la dispersion lointaine, la multiplication végétative pour l'occupation locale.`,
+Stolons du fraisier, rhizomes du bambou, tubercules de la pomme de terre, drageons du peuplier.
+
+| Avantage | Limite |
+| Rapide et sûre pour occuper un milieu favorable | Produit un **clone**, sans diversité nouvelle |
+
+Les deux modes coexistent souvent chez la même espèce : le sexué pour l’innovation et la dispersion lointaine, le végétatif pour l’occupation locale.`,
           },
           questions: [
             ['Quel verticille de la fleur produit le pollen ?', ['Les étamines', 'Les pétales', 'Les sépales', 'Le pistil'], 0, 'Le pistil, lui, contient les ovules dans son ovaire.'],
@@ -525,28 +654,46 @@ En parallèle, la plante se reproduit **sans sexe** : stolons du fraisier, rhizo
           titre: 'La domestication des plantes',
           lecon: {
             titre: 'Dix mille ans de sélection humaine',
-            cours: `Aucune plante de nos champs n'existe à l'état sauvage sous sa forme actuelle. Toutes sont le produit d'une **sélection artificielle** commencée au Néolithique.
+            cours: `Aucune plante de nos champs n’existe à l’état sauvage sous sa forme actuelle. Toutes sont le produit d’une **sélection artificielle** commencée au Néolithique.
 
-## Le point de départ : le Néolithique
-Il y a environ **10 000 ans**, au Proche-Orient, en Chine, en Mésoamérique et ailleurs indépendamment, des groupes humains cessent de seulement récolter : ils **sèment** ce qu'ils ont récolté. Le geste suffit à enclencher une sélection.
+## Le point de départ
+Il y a environ **10 000 ans**, au Proche-Orient, en Chine, en Mésoamérique — **indépendamment** — des groupes humains cessent de seulement récolter : ils **sèment** ce qu’ils ont récolté. Le geste suffit à enclencher une sélection.
 
-## Ce que l'humain sélectionne
-Sans le savoir d'abord, en choisissant les graines à ressemer : les plantes dont les épis **ne se désarticulent pas** (celles qui perdent leurs graines au sol ne sont pas récoltées), aux grains **gros**, à **germination simultanée**, sans amertume. Résultat : des plantes plus productives mais **incapables de se disséminer seules** — elles dépendent désormais de nous, comme nous d'elles.
+## Ce que l’humain sélectionne, sans le savoir
+| Le caractère retenu | Pourquoi il est retenu |
+| Épis qui **ne se désarticulent pas** | Ceux qui perdent leurs graines au sol ne sont pas récoltés |
+| Grains **gros** | Ils sont préférés à la récolte |
+| **Germination simultanée** | Elle permet une récolte unique |
+| Absence d’amertume | Elle rend la plante comestible |
 
-## L'exemple du maïs
-La **téosinte** mexicaine porte une dizaine de grains durs sur un épi minuscule et cassant. Le maïs actuel porte des centaines de grains tendres sur un épi solide enveloppé de bractées. Quelques milliers d'années de sélection sur un très petit nombre de gènes ont suffi.
+> Résultat : des plantes plus productives mais **incapables de se disséminer seules**. Elles dépendent désormais de nous — comme nous d’elles.
 
-> La domestication a des effets génétiques mesurables : la diversité génétique des plantes cultivées est très inférieure à celle de leurs ancêtres sauvages. C'est un **goulot d'étranglement**.
+## L’exemple du maïs
+| | La **téosinte** sauvage | Le maïs actuel |
+| Grains par épi | Une dizaine, durs | Des centaines, tendres |
+| L’épi | Minuscule et cassant | Solide, enveloppé de bractées |
+
+Quelques milliers d’années de sélection sur un **très petit nombre de gènes** ont suffi.
 
 ## Les techniques de sélection
-- **Sélection massale** : ressemer les graines des meilleurs pieds. Technique du Néolithique jusqu'au XIXᵉ siècle.
-- **Sélection généalogique** : suivre des lignées, contrôler les croisements (Vilmorin, XIXᵉ siècle).
-- **Hybridation** : croiser deux lignées pures pour obtenir des hybrides **F1**, souvent plus vigoureux et homogènes que leurs parents (**vigueur hybride** ou hétérosis). Mais la F2 perd cette homogénéité : l'agriculteur doit **racheter des semences** chaque année.
-- **Mutagenèse** : provoquer des mutations au hasard (rayons, agents chimiques) puis trier.
-- **Transgenèse** : introduire un gène précis, éventuellement d'une autre espèce (maïs Bt, riz doré enrichi en précurseur de vitamine A). Les OGM font l'objet d'un encadrement réglementaire et d'un débat public sur leurs effets écologiques, sanitaires et économiques.
+| Technique | Le principe | Sa limite |
+| **Sélection massale** | Ressemer les graines des meilleurs pieds | Lente, imprécise |
+| **Sélection généalogique** | Suivre des lignées, contrôler les croisements | Longue |
+| **Hybridation F1** | Croiser deux lignées pures : **vigueur hybride** | La F2 perd l’homogénéité : il faut **racheter** des semences |
+| **Mutagenèse** | Provoquer des mutations au hasard, puis trier | Aveugle |
+| **Transgenèse** | Introduire un gène précis | Encadrement réglementaire, débat public |
 
-## Le revers : l'érosion de la biodiversité cultivée
-Quelques variétés très performantes remplacent partout les variétés locales. Une population génétiquement uniforme est **vulnérable** : un seul parasite adapté peut la ravager (le mildiou de la pomme de terre en Irlande, 1845). D'où les **banques de semences** — la réserve mondiale du Svalbard, en Norvège, conserve près d'un million d'échantillons — et le maintien de **variétés paysannes** et d'apparentés sauvages, réservoirs d'allèles pour les sélections futures.`,
+Maïs Bt, riz doré enrichi en précurseur de vitamine A : les OGM font l’objet d’un débat sur leurs effets écologiques, sanitaires et économiques.
+
+## Le revers : l’érosion génétique
+> La diversité génétique des plantes cultivées est **très inférieure** à celle de leurs ancêtres sauvages : la domestication est un **goulot d’étranglement**.
+
+Une population uniforme est **vulnérable** : un seul parasite adapté peut la ravager — le mildiou de la pomme de terre en Irlande, 1845.
+
+| La parade | Ce qu’elle conserve |
+| Les **banques de semences** | Le Svalbard conserve près d’un million d’échantillons |
+| Les **variétés paysannes** | Des allèles pour les sélections futures |
+| Les apparentés **sauvages** | Le réservoir d’origine |`,
           },
           questions: [
             ['Quand la domestication des plantes a-t-elle commencé ?', ['Il y a environ 10 000 ans, au Néolithique', 'Il y a environ 500 ans', 'Au XIXᵉ siècle', 'Il y a environ 100 000 ans'], 0, 'Elle est apparue indépendamment dans plusieurs foyers : Proche-Orient, Chine, Mésoamérique.'],
@@ -565,34 +712,46 @@ Quelques variétés très performantes remplacent partout les variétés locales
           titre: 'Comprendre les variations climatiques',
           lecon: {
             titre: 'Ce qui fait bouger le thermostat terrestre',
-            cours: `Le climat de la Terre n'a jamais été stable. Il a connu des périodes plus chaudes qu'aujourd'hui et des glaciations où la glace descendait jusqu'aux latitudes moyennes. Comprendre ces variations passées, c'est se donner les moyens de lire celle qui est en cours.
+            cours: `Le climat de la Terre n’a **jamais** été stable. Comprendre les variations passées, c’est se donner les moyens de lire celle qui est en cours.
 
 ## Le bilan radiatif
-La Terre reçoit du Soleil environ **340 W/m²** en moyenne. Elle en renvoie une partie directement (**albédo**, environ 30 %) et absorbe le reste. Pour rester à température constante, elle doit réémettre autant d'énergie qu'elle en absorbe, sous forme de **rayonnement infrarouge**.
+| Flux | Valeur |
+| Reçu du Soleil | environ **340 W/m²** |
+| Renvoyé directement (**albédo**) | environ **30 %** |
+| Absorbé, puis réémis en infrarouge | Le reste |
 
-## L'effet de serre
-Certains gaz de l'atmosphère — **vapeur d'eau**, **CO₂**, **méthane**, **protoxyde d'azote** — absorbent le rayonnement infrarouge émis par le sol et le réémettent en partie vers le bas. Sans eux, la température moyenne de surface serait d'environ **−18 °C** au lieu de **+15 °C**. L'effet de serre n'est donc pas une anomalie : c'est son **renforcement** qui pose problème.
+## L’effet de serre
+Vapeur d’eau, **CO₂**, méthane et protoxyde d’azote absorbent l’infrarouge émis par le sol et le réémettent en partie **vers le bas**.
 
-## Les forçages à l'échelle des centaines de milliers d'années
-Les **paramètres orbitaux de Milankovitch** modifient la répartition de l'énergie solaire reçue, sans changer le total :
-- l'**excentricité** de l'orbite, cycle d'environ **100 000 ans** ;
-- l'**obliquité** de l'axe de rotation (entre 22° et 24,5°), cycle d'environ **41 000 ans** ;
-- la **précession** des équinoxes, cycle d'environ **21 000 ans**.
+| Sans effet de serre | Avec |
+| environ **−18 °C** | environ **+15 °C** |
 
-Leur effet direct est faible. Ce sont les **rétroactions** qui l'amplifient.
+> L’effet de serre n’est donc **pas** une anomalie : c’est son **renforcement** qui pose problème. Confondre les deux est l’erreur qui ruine une copie.
+
+## Les paramètres de Milankovitch
+Ils modifient la **répartition** de l’énergie reçue, sans changer le total.
+
+| Paramètre | Ce qu’il fait varier | Sa période |
+| **Excentricité** | La forme de l’orbite | environ 100 000 ans |
+| **Obliquité** | L’inclinaison de l’axe, entre 22° et 24,5° | environ 41 000 ans |
+| **Précession** | L’orientation de l’axe | environ 21 000 ans |
 
 ## Les rétroactions
-- **Rétroaction positive de l'albédo** : il fait plus froid → la glace s'étend → l'albédo augmente → il fait encore plus froid. Le mécanisme fonctionne aussi à l'envers, dans un réchauffement.
-- **Rétroaction positive du CO₂** : un océan plus froid dissout davantage de CO₂ → l'effet de serre faiblit → il fait encore plus froid.
-- **Rétroaction de la vapeur d'eau** : plus il fait chaud, plus l'atmosphère en contient, et la vapeur d'eau est elle-même un gaz à effet de serre.
+| Rétroaction | Le mécanisme | Son effet |
+| **Albédo** | Il fait plus froid, la glace s’étend, l’albédo augmente | Elle **amplifie**, dans les deux sens |
+| **CO₂ océanique** | Un océan froid dissout plus de CO₂, l’effet de serre faiblit | Elle amplifie |
+| **Vapeur d’eau** | Plus il fait chaud, plus l’air en contient — et c’est un gaz à effet de serre | Elle amplifie |
 
-> Sans rétroactions, les cycles de Milankovitch ne suffiraient pas à produire des glaciations. Ils **déclenchent**, les rétroactions **amplifient**.
+> Sans rétroactions, les cycles de Milankovitch ne suffiraient **pas** à produire des glaciations. Ils **déclenchent**, les rétroactions **amplifient** : c’est la clé du chapitre.
 
-## Les forçages à l'échelle des millions d'années
-- la **tectonique des plaques** : position des continents, ouverture ou fermeture de passages océaniques, surrection de chaînes ;
-- l'**altération des silicates** des chaînes jeunes, qui consomme du CO₂ atmosphérique (la surrection de l'Himalaya a probablement contribué au refroidissement du Cénozoïque) ;
-- le **volcanisme**, qui en émet ;
-- l'**enfouissement de matière organique**, qui soustrait du carbone à l'atmosphère — ce sont les combustibles fossiles que nous rebrûlons aujourd'hui en quelques siècles.`,
+## Les forçages à l’échelle des millions d’années
+| Forçage | Son effet sur le CO₂ ou la température |
+| La **tectonique** | Position des continents, passages océaniques, chaînes |
+| L’**altération des silicates** des chaînes jeunes | Elle **consomme** du CO₂ — la surrection de l’Himalaya a refroidi le Cénozoïque |
+| Le **volcanisme** | Il en **émet** |
+| L’**enfouissement** de matière organique | Il soustrait du carbone à l’atmosphère |
+
+Ce carbone enfoui, ce sont les **combustibles fossiles** — que nous rebrûlons aujourd’hui en quelques siècles.`,
           },
           questions: [
             ['Quelle serait la température moyenne de surface sans effet de serre ?', ['Environ −18 °C', 'Environ 0 °C', 'Environ +15 °C', 'Environ +30 °C'], 0, 'L’effet de serre naturel apporte donc plus de 30 °C : c’est son renforcement qui pose problème.'],
@@ -609,29 +768,33 @@ Leur effet direct est faible. Ce sont les **rétroactions** qui l'amplifient.
           titre: 'Les méthodes d’observation du climat passé',
           lecon: {
             titre: 'Les archives naturelles du climat',
-            cours: `Il n'y a pas de thermomètre avant le XVIIᵉ siècle, ni de réseau mondial de mesures avant le XIXᵉ. Pour tout le reste, on lit des **indices indirects** — les paléoclimatologues les appellent des **proxies**. Chacun a sa résolution et sa portée.
+            cours: `Il n’y a pas de thermomètre avant le XVIIe siècle, ni de réseau mondial de mesures avant le XIXe. Pour tout le reste, on lit des indices indirects — des *proxies*. Chacun a sa résolution et sa portée.
+
+## Le tableau des archives
+| Archive | Ce qu’elle donne | Résolution | Portée |
+| **Carottes de glace** | Composition de l’air **et** température | Annuelle à décennale | environ 800 000 ans |
+| **Foraminifères** marins | Température et **volume des glaces** | Millénaire | Des dizaines de millions d’années |
+| **Pollens** | La végétation, donc le climat local | Décennale | Des dizaines de milliers d’années |
+| **Cernes des arbres** | Année favorable ou non | **Annuelle** | Quelques milliers d’années |
+| Moraines, terrasses | L’extension passée des glaciers | Grossière | Variable |
+| Archives historiques | Vendanges, gel des rivières, tableaux | Annuelle | Quelques siècles |
 
 ## Les carottes de glace
-En Antarctique et au Groenland, la neige s'accumule sans fondre, année après année. Une carotte de plusieurs kilomètres remonte le temps. Deux informations distinctes en sortent :
-- les **bulles d'air** piégées sont des **échantillons de l'atmosphère ancienne** : on y mesure directement les teneurs en CO₂ et en méthane. La carotte EPICA Dome C couvre environ **800 000 ans** ;
-- le rapport isotopique de l'eau (**δ18O**, δD) dépend de la température au moment de la précipitation : une glace pauvre en isotopes lourds s'est déposée par temps froid.
+Deux informations **distinctes** sortent de la même carotte :
 
-> C'est la seule archive qui donne à la fois la température ET la composition de l'atmosphère au même instant. C'est elle qui montre que CO₂ et température varient de concert depuis 800 000 ans.
+| Ce qu’on mesure | Ce que cela donne |
+| Les **bulles d’air** piégées | Un échantillon **direct** de l’atmosphère ancienne : CO₂, méthane |
+| Le rapport isotopique de l’eau (**δ18O**, δD) | La **température** au moment de la précipitation |
 
-## Les foraminifères des sédiments marins
-Ces micro-organismes fabriquent un test calcaire dont le **δ18O** dépend à la fois de la température de l'eau et du **volume des glaces** (les glaces piègent préférentiellement l'isotope léger, enrichissant l'océan en isotope lourd). Les sédiments océaniques donnent ainsi un enregistrement continu sur des **dizaines de millions d'années**.
+> C’est la **seule** archive qui donne à la fois la température et la composition de l’atmosphère **au même instant**. C’est elle qui montre que CO₂ et température varient de concert depuis 800 000 ans — et cet argument-là ne se remplace par aucun autre.
 
-## Les pollens
-Chaque espèce végétale a un pollen reconnaissable et des exigences climatiques connues. Un sondage dans une tourbière donne, couche par couche, la **composition de la végétation** — donc le climat local. Portée : quelques dizaines de milliers d'années.
-
-## Les cernes des arbres (dendrochronologie)
-Un cerne large signe une année favorable, un cerne étroit une année froide ou sèche. La résolution est **annuelle**, la meilleure de toutes, mais la portée se limite à quelques milliers d'années en croisant les bois anciens.
-
-## Les indices géomorphologiques et historiques
-Moraines et stries glaciaires marquent l'extension passée des glaciers. Anciennes lignes de rivage, terrasses, dépôts. Et pour les derniers siècles : registres de vendanges, chroniques de gel des rivières, tableaux.
+## Les foraminifères
+Leur test calcaire porte un **δ18O** qui dépend de deux choses à la fois : la température de l’eau **et** le volume des glaces — les glaces piègent préférentiellement l’isotope léger, enrichissant l’océan en isotope lourd. C’est ce qui rend l’interprétation délicate, et l’enregistrement précieux.
 
 ## Modéliser pour comprendre
-Les modèles climatiques sont d'abord **testés sur le passé** : s'ils reproduisent les climats reconstitués par les proxies, on peut leur accorder du crédit pour l'avenir. C'est le principal argument de fiabilité des projections.`,
+Les modèles climatiques sont d’abord **testés sur le passé** : s’ils reproduisent les climats reconstitués par les proxies, on peut leur accorder du crédit pour l’avenir.
+
+C’est le principal **argument de fiabilité** des projections — et il repose entièrement sur la qualité des archives naturelles.`,
           },
           questions: [
             ['Que contiennent les bulles d’air piégées dans une carotte de glace ?', ['Un échantillon direct de l’atmosphère ancienne', 'De l’eau de fonte', 'Des pollens fossiles', 'Du carbone 14'], 0, 'On y mesure directement les teneurs passées en CO₂ et en méthane.'],
@@ -648,35 +811,50 @@ Les modèles climatiques sont d'abord **testés sur le passé** : s'ils reprodui
           titre: 'Comprendre les conséquences du réchauffement climatique et les possibilités d’actions',
           lecon: {
             titre: 'Ce qui vient, et ce sur quoi on peut agir',
-            cours: `Le réchauffement en cours se distingue des variations passées par sa **vitesse** et par sa **cause** : les activités humaines. Le CO₂ atmosphérique est passé d'environ **280 ppm** avant l'ère industrielle à plus de **420 ppm** aujourd'hui — une valeur jamais atteinte depuis au moins 800 000 ans.
+            cours: `Le réchauffement en cours se distingue des variations passées par sa **vitesse** et par sa **cause** : les activités humaines.
 
-## Ce qui est déjà observé
-- une hausse de la température moyenne mondiale d'environ **1,1 à 1,2 °C** depuis 1850-1900 ;
-- une élévation du niveau marin d'environ **20 cm** depuis 1900, qui s'accélère ;
-- un recul généralisé des glaciers et de la banquise arctique en été ;
-- une **acidification** de l'océan : il a absorbé environ un quart du CO₂ émis, ce qui abaisse son pH.
+| Grandeur | Avant l’ère industrielle | Aujourd’hui |
+| CO₂ atmosphérique | environ **280 ppm** | plus de **420 ppm** |
+| Température moyenne | Référence 1850-1900 | **+1,1 à 1,2 °C** |
+| Niveau marin | Référence 1900 | environ **+20 cm**, et cela s’accélère |
+
+Cette valeur de CO₂ n’a jamais été atteinte depuis au moins **800 000 ans**.
 
 ## Les mécanismes de la montée des eaux
-Deux causes, souvent confondues :
-- la **dilatation thermique** de l'eau de mer qui se réchauffe ;
-- la **fonte des glaces continentales** (calottes du Groenland et de l'Antarctique, glaciers de montagne). La fonte de la **banquise**, elle, ne fait pas monter le niveau : elle flotte déjà.
+| Cause | Ce qui se passe |
+| **Dilatation thermique** | L’eau de mer se réchauffe et occupe plus de volume |
+| Fonte des **glaces continentales** | Calottes du Groenland et de l’Antarctique, glaciers de montagne |
+
+> La fonte de la **banquise** ne fait **pas** monter le niveau : elle flotte déjà, donc elle déplace déjà son volume. C’est le piège classique de l’exercice.
 
 ## Les scénarios du GIEC
-Le **GIEC** ne fait pas de recherche : il **évalue** l'ensemble de la littérature scientifique publiée. Il projette plusieurs scénarios d'émissions, du plus sobre au plus émetteur. Selon le scénario, le réchauffement attendu en 2100 va d'environ **+1,5 °C** à plus de **+4 °C** par rapport à l'ère préindustrielle. L'écart entre ces trajectoires dépend des **décisions prises maintenant**.
+Le **GIEC** ne fait pas de recherche : il **évalue** l’ensemble de la littérature scientifique publiée.
+
+| Scénario d’émissions | Réchauffement projeté en 2100 |
+| Sobre, baisse rapide | environ **+1,5 °C** |
+| Intermédiaire | environ +2,5 °C |
+| Fortement émetteur | plus de **+4 °C** |
+
+L’écart entre ces trajectoires dépend des **décisions prises maintenant** — pas de l’incertitude scientifique.
 
 ## Les conséquences attendues
-- **Écosystèmes** : déplacement des aires de répartition vers les pôles et l'altitude, désynchronisation entre espèces (une fleur qui s'ouvre avant l'arrivée de son pollinisateur), blanchissement des coraux.
-- **Ressources** : rendements agricoles affectés, stress hydrique, fonte des glaciers qui alimentent de grands fleuves.
-- **Sociétés** : événements extrêmes plus intenses, submersion de zones littorales densément peuplées, déplacements de population, inégalité entre pays face aux impacts.
+| Domaine | Ce qui est projeté |
+| **Écosystèmes** | Déplacement des aires vers les pôles et l’altitude, **désynchronisation** entre espèces, blanchissement des coraux |
+| **Ressources** | Rendements agricoles affectés, stress hydrique, fonte des glaciers alimentant les grands fleuves |
+| **Sociétés** | Événements extrêmes plus intenses, submersion des littoraux peuplés, déplacements de population |
+
+La désynchronisation est un exemple parlant : une fleur qui s’ouvre avant l’arrivée de son pollinisateur, et les deux espèces en pâtissent sans qu’aucune n’ait disparu.
 
 ## Agir : deux leviers distincts
-- **L'atténuation** réduit les émissions à la source : sobriété, efficacité énergétique, électricité décarbonée, transports, rénovation des bâtiments, changement des régimes alimentaires. Elle agit sur la CAUSE.
-- **L'adaptation** limite les dommages du réchauffement déjà engagé : digues, végétalisation des villes, variétés cultivées résistantes à la sécheresse, systèmes d'alerte. Elle agit sur les CONSÉQUENCES.
+| | **Atténuation** | **Adaptation** |
+| Sur quoi elle agit | La **cause** | Les **conséquences** |
+| Ce qu’elle fait | Réduire les émissions à la source | Limiter les dommages du réchauffement déjà engagé |
+| Exemples | Sobriété, efficacité, électricité décarbonée, rénovation | Digues, végétalisation des villes, variétés résistantes, alertes |
 
-> Les deux sont nécessaires : une part du réchauffement est déjà inévitable, mais son ampleur finale reste ouverte.
+> Les deux sont nécessaires : une part du réchauffement est **déjà inévitable**, mais son ampleur finale reste ouverte.
 
 ## Les puits de carbone
-Forêts, sols et océan absorbent aujourd'hui environ la moitié de nos émissions. Les préserver et les renforcer (reforestation, agriculture stockant du carbone dans les sols) fait partie de l'atténuation — mais ne remplace pas la baisse des émissions : un puits saturé ne stocke plus.`,
+Forêts, sols et océan absorbent aujourd’hui environ **la moitié** de nos émissions. Les préserver et les renforcer fait partie de l’atténuation — mais **ne remplace pas** la baisse des émissions : un puits saturé ne stocke plus.`,
           },
           questions: [
             ['De combien la teneur atmosphérique en CO₂ est-elle passée depuis l’ère préindustrielle ?', ['D’environ 280 ppm à plus de 420 ppm', 'D’environ 100 ppm à 200 ppm', 'D’environ 1 000 ppm à 420 ppm', 'Elle n’a pas changé'], 0, 'Une valeur jamais atteinte depuis au moins 800 000 ans, d’après les carottes de glace.'],
@@ -695,31 +873,41 @@ Forêts, sols et océan absorbent aujourd'hui environ la moitié de nos émissio
           titre: 'Les réflexes',
           lecon: {
             titre: 'Le circuit le plus court du corps',
-            cours: `Un réflexe est une réponse **motrice involontaire, rapide et stéréotypée** à une stimulation. Le réflexe myotatique — celui du tendon rotulien — est le modèle d'étude, parce que son circuit est le plus simple possible.
+            cours: `Un réflexe est une réponse motrice **involontaire, rapide et stéréotypée**. Le réflexe myotatique — celui du tendon rotulien — est le modèle d’étude, parce que son circuit est le plus simple possible.
 
-## Le réflexe myotatique
-Un coup sur le tendon rotulien **étire** brièvement le muscle extenseur de la jambe. Le muscle se **contracte** en retour, et la jambe se détend. Cette réponse maintient en permanence la **posture** : chaque fois qu'un muscle est étiré par le poids du corps, il se contracte juste ce qu'il faut.
+## L’arc réflexe : cinq éléments
+| Rang | Élément | Sa nature |
+| 1 | Le **récepteur** | Le **fuseau neuromusculaire**, sensible à l’étirement |
+| 2 | Le nerf **sensitif** | La fibre Ia, vers la moelle |
+| 3 | Le **centre nerveux** | La **moelle épinière** — pas le cerveau |
+| 4 | Le nerf **moteur** | Le motoneurone |
+| 5 | L’**effecteur** | Le muscle, qui se contracte |
 
-## L'arc réflexe : cinq éléments
-1. le **récepteur** : le **fuseau neuromusculaire**, sensible à l'étirement, logé dans le muscle ;
-2. le **nerf sensitif** (fibre Ia) qui conduit le message vers la moelle épinière ;
-3. le **centre nerveux** : la **moelle épinière**. C'est un centre intégrateur — le cerveau n'intervient pas, ce qui explique la rapidité ;
-4. le **nerf moteur** (motoneurone), dont le corps cellulaire est dans la substance grise de la moelle ;
-5. l'**effecteur** : le muscle, qui se contracte.
+> Le réflexe myotatique est **monosynaptique** : **une seule** synapse sépare le neurone sensitif du motoneurone. C’est pourquoi il est si rapide — et pourquoi le cerveau n’a pas le temps d’intervenir.
 
-> Le réflexe myotatique est **monosynaptique** : une seule synapse sépare le neurone sensitif du motoneurone. C'est pourquoi il est si rapide.
+Sa fonction réelle : maintenir la **posture**. Chaque fois qu’un muscle est étiré par le poids du corps, il se contracte juste ce qu’il faut.
 
-## Le message nerveux
-Le long d'une fibre, l'information circule sous forme de **potentiels d'action**, tous **identiques** (loi du tout ou rien). L'intensité du stimulus n'est donc pas codée par l'amplitude du signal mais par sa **fréquence** : plus le muscle est étiré, plus les potentiels d'action sont rapprochés. C'est un **codage en fréquence**.
+## Le codage du message nerveux
+| Niveau | Ce qui varie | Ce qui ne varie **pas** |
+| Le long d’une fibre | La **fréquence** des potentiels d’action | Leur amplitude : loi du **tout ou rien** |
+| À la synapse | La **concentration** de neurotransmetteur libéré | La nature du neurotransmetteur |
+
+Plus le muscle est étiré, plus les potentiels d’action sont rapprochés : c’est un **codage en fréquence**, et il se lit directement sur un enregistrement.
 
 ## La synapse
-À la jonction entre deux neurones, ou entre un neurone et un muscle, le message change de nature : il devient **chimique**. L'arrivée des potentiels d'action provoque l'exocytose de **neurotransmetteurs** (l'**acétylcholine** à la jonction neuromusculaire) dans la fente synaptique. Ils se fixent sur les récepteurs de la cellule suivante. Ici aussi, le codage est en **concentration** de neurotransmetteur libéré, elle-même fonction de la fréquence des potentiels d'action reçus.
+À la jonction entre deux neurones, ou entre neurone et muscle, le message **change de nature** : il devient **chimique**. L’arrivée des potentiels d’action provoque l’exocytose de neurotransmetteurs — l’**acétylcholine** à la jonction neuromusculaire — qui se fixent sur les récepteurs de la cellule suivante.
 
-## L'intégration par le motoneurone
-Un motoneurone reçoit des milliers de synapses, les unes **excitatrices**, les autres **inhibitrices**. Il **somme** ces messages : il n'émet un potentiel d'action que si le bilan dépasse un seuil. Le réflexe myotatique n'est donc pas un automatisme aveugle : il est modulable, notamment par des commandes venues du cerveau.
+## L’intégration par le motoneurone
+Un motoneurone reçoit des **milliers** de synapses.
 
-## Explorer le réflexe : l'électromyogramme
-L'**EMG** enregistre l'activité électrique du muscle. En mesurant le délai entre la stimulation et la réponse, on estime la **vitesse de conduction** du message et on localise une lésion éventuelle : le réflexe est un outil de **diagnostic** neurologique courant.`,
+| Type de synapse | Son effet |
+| **Excitatrice** | Elle rapproche du seuil |
+| **Inhibitrice** | Elle en éloigne |
+
+Il **somme** ces messages et n’émet un potentiel d’action que si le bilan dépasse un seuil. Le réflexe n’est donc pas un automatisme aveugle : il est **modulable**, notamment par des commandes venues du cerveau.
+
+## Explorer le réflexe
+L’**électromyogramme** enregistre l’activité électrique du muscle. Le délai entre stimulation et réponse donne la **vitesse de conduction** et permet de localiser une lésion : le réflexe est un outil de **diagnostic** neurologique courant.`,
           },
           questions: [
             ['Quel récepteur déclenche le réflexe myotatique ?', ['Le fuseau neuromusculaire, sensible à l’étirement', 'Le corpuscule tactile de la peau', 'Le motoneurone', 'La synapse neuromusculaire'], 0, 'Il est logé dans le muscle lui-même et détecte sa mise en tension.'],
@@ -736,34 +924,46 @@ L'**EMG** enregistre l'activité électrique du muscle. En mesurant le délai en
           titre: 'Cerveau et mouvement volontaire',
           lecon: {
             titre: 'De l’intention au geste',
-            cours: `Un mouvement volontaire n'est pas un réflexe : il est **décidé**, planifié, et modifiable en cours d'exécution. Son organisation se lit aujourd'hui directement, par imagerie.
+            cours: `Un mouvement volontaire n’est pas un réflexe : il est **décidé**, planifié, et modifiable en cours d’exécution.
 
 ## Le cortex moteur primaire
-Situé sur la **circonvolution frontale ascendante**, juste devant le sillon central, il commande les mouvements volontaires. Sa **cartographie** est somatotopique : chaque zone du cortex commande une partie précise du corps, et les régions voisines du corps sont représentées côte à côte.
+Situé sur la circonvolution frontale ascendante, juste devant le sillon central. Sa cartographie est **somatotopique** : chaque zone commande une partie précise du corps, et les régions voisines du corps sont représentées côte à côte.
 
-La surface corticale attribuée à un organe n'est pas proportionnelle à sa taille mais à la **finesse de son contrôle** : la main, la langue et les lèvres occupent une place démesurée. Cette représentation déformée s'appelle l'**homonculus moteur**.
+> La surface corticale attribuée à un organe n’est **pas** proportionnelle à sa taille, mais à la **finesse de son contrôle**. La main, la langue et les lèvres occupent une place démesurée : c’est l’**homonculus moteur**, cette représentation déformée du corps.
 
 ## Le trajet de la commande
-Les axones des neurones corticaux descendent en un faisceau, le **faisceau corticospinal** (ou pyramidal). Il **croise la ligne médiane** au niveau du bulbe rachidien : **l'hémisphère gauche commande le côté droit du corps**, et réciproquement. Le faisceau rejoint les motoneurones de la moelle épinière, qui sont la **voie finale commune** — le réflexe et le mouvement volontaire passent tous deux par eux.
+| Étape | Ce qui se passe |
+| Le cortex moteur émet | Les axones forment le **faisceau corticospinal** |
+| Au niveau du **bulbe rachidien** | Le faisceau **croise la ligne médiane** |
+| Dans la moelle | Il rejoint les **motoneurones** |
+
+D’où la règle : **l’hémisphère gauche commande le côté droit**, et réciproquement. Les motoneurones sont la **voie finale commune** — réflexe et mouvement volontaire y passent tous deux.
 
 ## Ce que révèlent les lésions
-- Une lésion du cortex moteur gauche (**AVC**, tumeur, traumatisme) paralyse le côté **droit** : c'est une **hémiplégie controlatérale**.
-- Une section de la moelle épinière abolit toute commande volontaire **en dessous** du niveau lésé, mais les réflexes médullaires, dont le circuit est plus bas, peuvent persister.
+| La lésion | Sa conséquence |
+| Cortex moteur **gauche** (AVC, tumeur) | **Hémiplégie** du côté **droit** : controlatérale |
+| Section de la **moelle** | Plus de commande volontaire **sous** le niveau lésé — mais les réflexes médullaires peuvent persister |
 
-## Les autres acteurs du mouvement
-Le cortex moteur ne travaille jamais seul :
-- les **aires prémotrices et associatives** planifient le geste et intègrent les informations sensorielles ;
-- le **cervelet** ajuste la coordination, l'équilibre et la précision ;
-- les **noyaux gris centraux** interviennent dans l'initiation et l'automatisation des mouvements — leur atteinte est en cause dans la maladie de Parkinson.
+## Les autres acteurs
+| Structure | Son rôle | Ce que son atteinte provoque |
+| Aires **prémotrices** | Planifier le geste | Difficulté à organiser une séquence |
+| **Cervelet** | Coordination, équilibre, précision | Gestes imprécis, démarche instable |
+| **Noyaux gris centraux** | Initiation et automatisation | Maladie de **Parkinson** |
 
 ## La plasticité cérébrale
-Le cerveau n'est pas câblé une fois pour toutes.
-- **Plasticité de développement** : les cartes corticales se mettent en place et s'affinent pendant l'enfance ; les connexions inutilisées sont élaguées.
-- **Plasticité d'apprentissage** : l'entraînement d'un geste **agrandit** la zone corticale qui le commande — la représentation des doigts de la main gauche est étendue chez un violoniste.
-- **Plasticité de réparation** : après un AVC, des régions voisines peuvent prendre en charge tout ou partie de la fonction perdue. C'est le fondement de la **rééducation** : la récupération n'est pas passive, elle se travaille, et d'autant mieux qu'elle commence tôt.
+| Type | Quand | Exemple |
+| De **développement** | Enfance | Les cartes s’affinent, les connexions inutiles sont élaguées |
+| D’**apprentissage** | Toute la vie | La zone des doigts de la main gauche est **agrandie** chez un violoniste |
+| De **réparation** | Après une lésion | Des régions voisines reprennent tout ou partie de la fonction |
+
+> C’est le fondement de la **rééducation** : la récupération n’est pas passive, elle se **travaille** — et d’autant mieux qu’elle commence tôt.
 
 ## Voir le cerveau au travail
-L'**IRM anatomique** montre les structures ; l'**IRMf** montre les régions **actives**, en détectant l'afflux de sang oxygéné qui accompagne l'activité neuronale. C'est elle qui a permis de cartographier les aires motrices chez le sujet vivant, sans lésion.`,
+| Technique | Ce qu’elle montre |
+| **IRM anatomique** | Les structures |
+| **IRMf** | Les régions **actives**, par l’afflux de sang oxygéné |
+
+C’est l’IRMf qui a permis de cartographier les aires motrices chez le sujet **vivant**, sans attendre une lésion.`,
           },
           questions: [
             ['Où se situe le cortex moteur primaire ?', ['Sur la circonvolution frontale ascendante, devant le sillon central', 'Dans le lobe occipital', 'Dans le cervelet', 'Dans la moelle épinière'], 0, 'Sa cartographie y est somatotopique : chaque zone commande une partie du corps.'],
@@ -782,33 +982,34 @@ L'**IRM anatomique** montre les structures ; l'**IRMf** montre les régions **ac
             titre: 'Ce qui l’abîme, ce qui le protège',
             cours: `Le cerveau est protégé par le crâne, les méninges et le liquide cérébrospinal. Cela ne suffit pas : ses neurones se renouvellent très peu, et une lésion est le plus souvent **définitive**.
 
-## Les traumatismes
-Chocs sportifs, accidents de la route, chutes. Un traumatisme crânien peut provoquer une **commotion**, une hémorragie, un œdème. Les **commotions répétées** (rugby, boxe, football américain) sont associées à des atteintes cognitives durables. La prévention est simple et efficace : **casque**, ceinture, protocoles de sortie du terrain.
-
-## Les accidents vasculaires cérébraux
-Un **AVC** prive brutalement une région du cerveau d'oxygène, par obstruction (ischémie) ou par rupture (hémorragie) d'un vaisseau. Les neurones privés d'oxygène meurent en quelques minutes. La prise en charge est une **urgence absolue** : plus elle est rapide, plus la zone sauvée est grande.
-
-## Les maladies neurodégénératives
-Alzheimer, Parkinson, sclérose en plaques : des neurones ou leur gaine de myéline sont détruits progressivement. L'âge est le principal facteur de risque, mais l'activité physique, l'activité intellectuelle et la vie sociale sont associées à une **réserve cognitive** qui retarde l'apparition des symptômes.
+## Les atteintes et leur prévention
+| Atteinte | Le mécanisme | La prévention |
+| **Traumatisme crânien** | Commotion, hémorragie, œdème | Casque, ceinture, protocoles de sortie du terrain |
+| Commotions **répétées** | Rugby, boxe, football américain | Atteintes cognitives durables documentées |
+| **AVC** | Obstruction (ischémie) ou rupture d’un vaisseau | **Urgence absolue** : plus la prise en charge est rapide, plus la zone sauvée est grande |
+| Maladies **neurodégénératives** | Destruction progressive des neurones ou de la myéline | Activité physique, intellectuelle et sociale : la **réserve cognitive** retarde les symptômes |
 
 ## Les substances psychoactives
-Toutes agissent au niveau des **synapses** : elles miment un neurotransmetteur, bloquent sa recapture ou empêchent sa fixation.
+Toutes agissent au niveau des **synapses** : elles miment un neurotransmetteur, bloquent sa recapture, ou empêchent sa fixation.
 
-Le **système de récompense** (aire tegmentale ventrale, noyau accumbens, cortex préfrontal) utilise la **dopamine** : il valorise normalement ce qui est utile à la survie — manger, boire, se reproduire, apprendre. Les drogues **court-circuitent** ce système en provoquant une libération de dopamine sans rapport avec un besoin réel.
+Le **système de récompense** — aire tegmentale ventrale, noyau accumbens, cortex préfrontal — utilise la **dopamine**. Il valorise normalement ce qui est utile à la survie : manger, boire, se reproduire, apprendre.
 
-L'usage répété entraîne :
-- une **tolérance** : le cerveau réduit le nombre de récepteurs, il faut augmenter les doses ;
-- une **dépendance** : le manque devient la motivation principale ;
-- une **altération du cortex préfrontal**, siège du contrôle de soi et de l'évaluation des risques.
+> Les drogues **court-circuitent** ce système : elles provoquent une libération de dopamine **sans rapport avec un besoin réel**. C’est cette dissociation qui fonde la dépendance.
 
-> L'adolescence est une période de **maturation** du cortex préfrontal, qui se poursuit jusque vers 25 ans. C'est ce qui rend un cerveau adolescent particulièrement vulnérable aux effets durables des substances.
+| L’usage répété entraîne | Ce qui se passe |
+| Une **tolérance** | Le cerveau réduit le nombre de récepteurs : il faut augmenter les doses |
+| Une **dépendance** | Le manque devient la motivation principale |
+| Une **altération du cortex préfrontal** | Siège du contrôle de soi et de l’évaluation des risques |
 
-## Cas particuliers
-- **Alcool** : toxique direct pour les neurones ; consommation massive ponctuelle et consommation chronique sont toutes deux délétères. Pendant la grossesse, il traverse le placenta.
-- **Cannabis** : son principe actif, le THC, agit sur les récepteurs endocannabinoïdes ; consommé à l'adolescence, il est associé à des troubles de la mémoire et de l'attention et à un risque accru de troubles psychotiques chez les sujets prédisposés.
+> L’adolescence est une période de **maturation** du cortex préfrontal, qui se poursuit jusque vers **25 ans**. C’est ce qui rend un cerveau adolescent particulièrement vulnérable aux effets durables des substances.
+
+## Deux cas particuliers
+| Substance | Ce qui est documenté |
+| **Alcool** | Toxique direct ; consommation massive ponctuelle et chronique toutes deux délétères ; traverse le placenta |
+| **Cannabis** | Le THC agit sur les récepteurs endocannabinoïdes ; à l’adolescence, troubles de la mémoire et de l’attention, risque psychotique accru chez les sujets prédisposés |
 
 ## Le sommeil
-Il consolide les apprentissages de la journée et permet l'élimination des déchets métaboliques du cerveau. La privation chronique de sommeil dégrade attention, mémoire et humeur : le protéger est une mesure d'hygiène cérébrale à part entière.`,
+Il **consolide** les apprentissages de la journée et permet l’**élimination des déchets** métaboliques du cerveau. La privation chronique dégrade attention, mémoire et humeur : le protéger est une mesure d’hygiène cérébrale à part entière.`,
           },
           questions: [
             ['Pourquoi une lésion cérébrale est-elle souvent définitive ?', ['Les neurones se renouvellent très peu', 'Le crâne empêche toute réparation', 'Le sang n’y circule pas', 'Les neurones ne communiquent plus entre eux'], 0, 'Seule la plasticité, via des régions voisines, permet une récupération partielle.'],
@@ -827,32 +1028,51 @@ Il consolide les apprentissages de la journée et permet l'élimination des déc
           titre: 'La cellule musculaire : une structure spécialisée permettant son propre raccourcissement',
           lecon: {
             titre: 'Le sarcomère, moteur du mouvement',
-            cours: `Un muscle strié squelettique se raccourcit parce que **chacune de ses cellules** se raccourcit. Toute l'organisation de la fibre musculaire est au service de ce geste unique.
+            cours: `Un muscle se raccourcit parce que **chacune de ses cellules** se raccourcit. Toute l’organisation de la fibre musculaire est au service de ce geste unique.
 
-## De l'organe à la molécule
-Un **muscle** est fait de faisceaux, chaque faisceau de **fibres musculaires** — les cellules. Une fibre est une cellule géante, **allongée** (jusqu'à plusieurs centimètres) et **plurinucléée** (elle provient de la fusion de plusieurs cellules). Elle est remplie de **myofibrilles** parallèles, elles-mêmes faites de **sarcomères** mis bout à bout.
+## De l’organe à la molécule
+| Niveau | Ce que c’est |
+| Le **muscle** | Des faisceaux |
+| Le **faisceau** | Des **fibres musculaires**, les cellules |
+| La **fibre** | Une cellule géante, **allongée** et **plurinucléée** — née de la fusion de plusieurs cellules |
+| La **myofibrille** | Une file de **sarcomères** mis bout à bout |
 
 ## Le sarcomère, unité contractile
-Un sarcomère est délimité par deux **stries Z**. Entre elles s'interpénètrent deux jeux de filaments :
-- des **filaments fins d'actine**, ancrés sur les stries Z ;
-- des **filaments épais de myosine**, au centre.
+Délimité par deux **stries Z**, il contient deux jeux de filaments qui s’interpénètrent.
 
-C'est cette alternance régulière qui donne au muscle son aspect **strié** au microscope.
+| Filament | Sa protéine | Où il est ancré |
+| **Fin** | L’**actine** | Sur les stries Z |
+| **Épais** | La **myosine** | Au centre |
 
-## Le mécanisme : le glissement des filaments
-Lors de la contraction, les filaments **ne raccourcissent pas** : ils **glissent** les uns sur les autres. Les têtes de myosine se fixent sur l'actine, pivotent en tirant le filament fin vers le centre, se détachent, se replacent et recommencent. Les stries Z se rapprochent, le sarcomère raccourcit — et la somme de milliers de sarcomères en série produit le raccourcissement du muscle entier.
+C’est cette alternance régulière qui donne au muscle son aspect **strié** au microscope.
 
-> Le sarcomère raccourcit, ses filaments non. C'est l'erreur la plus fréquente au bac : parler d'un « raccourcissement de l'actine » est faux.
+## Le mécanisme : le glissement
+Les têtes de myosine se fixent sur l’actine, **pivotent** en tirant le filament fin vers le centre, se détachent, se replacent et recommencent. Les stries Z se rapprochent.
+
+> Les filaments **ne raccourcissent pas** : ils **glissent**. C’est l’erreur la plus fréquente au bac — parler d’un « raccourcissement de l’actine » est faux, et se voit immédiatement.
 
 ## Ce que le cycle exige
-- de l'**ATP** : sa fixation sur la tête de myosine provoque son **détachement** de l'actine, et son hydrolyse **réarme** la tête. Sans ATP, les têtes restent accrochées — c'est la rigidité cadavérique ;
-- des **ions calcium** : au repos, un complexe protéique masque les sites de fixation sur l'actine. Le Ca²⁺ le déplace et **libère** les sites. Sans calcium, pas de fixation possible.
+| Élément | Son rôle exact | Sans lui |
+| L’**ATP** | Sa fixation **détache** la tête de l’actine ; son hydrolyse la **réarme** | Les têtes restent accrochées : c’est la rigidité cadavérique |
+| Le **calcium** | Il déplace le complexe qui masque les sites de fixation sur l’actine | Aucune fixation possible |
 
 ## Du nerf au calcium
-La commande arrive par le **motoneurone**. À la **jonction neuromusculaire**, il libère de l'**acétylcholine**, qui déclenche un potentiel d'action sur la membrane de la fibre. Ce signal se propage jusqu'au **réticulum sarcoplasmique**, réservoir interne de calcium, qui libère ses ions Ca²⁺ dans la cellule. La contraction commence. Quand la commande cesse, le calcium est **repompé** — activement, donc en consommant de l'ATP — et la fibre se relâche.
+1. Le **motoneurone** libère de l’**acétylcholine** à la jonction neuromusculaire.
+2. Un potentiel d’action se propage sur la membrane de la fibre.
+3. Le **réticulum sarcoplasmique**, réservoir interne, libère ses ions **Ca²⁺**.
+4. La contraction commence.
+5. Quand la commande cesse, le calcium est **repompé activement** — donc en consommant de l’ATP — et la fibre se relâche.
 
-## L'unité motrice
-Un motoneurone et l'ensemble des fibres qu'il innerve forment une **unité motrice**. Elles se contractent toutes ensemble. Une unité motrice de l'œil ne compte que quelques fibres — d'où la finesse du contrôle ; une unité motrice du mollet en compte plus d'un millier — d'où la puissance. La force développée par un muscle dépend du **nombre d'unités motrices recrutées** et de la **fréquence** des messages qu'elles reçoivent.`,
+Le relâchement coûte de l’énergie autant que la contraction : c’est contre-intuitif, et c’est exact.
+
+## L’unité motrice
+Un motoneurone et **toutes** les fibres qu’il innerve : elles se contractent ensemble.
+
+| Muscle | Fibres par unité motrice | Ce que cela donne |
+| L’œil | Quelques-unes | La **finesse** du contrôle |
+| Le mollet | Plus d’un millier | La **puissance** |
+
+La force développée dépend du **nombre d’unités motrices recrutées** et de la **fréquence** des messages reçus.`,
           },
           questions: [
             ['Qu’est-ce qu’une fibre musculaire ?', ['Une cellule géante, allongée et plurinucléée', 'Un faisceau de plusieurs cellules', 'Un filament de myosine', 'Un tendon'], 0, 'Elle provient de la fusion de plusieurs cellules, d’où ses nombreux noyaux.'],
@@ -869,33 +1089,44 @@ Un motoneurone et l'ensemble des fibres qu'il innerve forment une **unité motri
           titre: 'Origine de l’énergie (ATP) nécessaire à la contraction de la cellule musculaire',
           lecon: {
             titre: 'Trois voies pour régénérer l’ATP',
-            cours: `L'ATP est la **seule** molécule directement utilisable par la myosine. Or la fibre musculaire n'en contient qu'une réserve dérisoire : de quoi tenir **2 à 3 secondes** d'effort intense. Tout l'enjeu est donc de la **régénérer** en permanence, aussi vite qu'elle est consommée.
+            cours: `L’ATP est la **seule** molécule directement utilisable par la myosine. Or la fibre n’en contient qu’une réserve dérisoire : de quoi tenir **2 à 3 secondes** d’effort intense. Tout l’enjeu est de la **régénérer** aussi vite qu’elle est consommée.
 
-## Voie 1 — La phosphocréatine (anaérobie alactique)
-La fibre stocke de la **phosphocréatine**, qui cède directement son groupement phosphate à l'ADP : ADP + phosphocréatine → ATP + créatine. C'est **immédiat**, sans oxygène et sans déchet acide, mais la réserve est épuisée en **une dizaine de secondes**. C'est la voie du sprint sur 100 m, de l'haltérophilie, du saut.
+## Les trois voies
+| Voie | Oxygène ? | Rendement | Durée d’efficacité | Effort typique |
+| **Phosphocréatine** | Non | Immédiat, sans déchet | environ **10 secondes** | 100 m, haltérophilie, saut |
+| **Fermentation lactique** | Non | **2 ATP** par glucose | 30 s à 2 min | 400 m, 800 m |
+| **Respiration cellulaire** | **Oui** | **30 à 36 ATP** par glucose | Illimitée | Endurance |
 
-## Voie 2 — La fermentation lactique (anaérobie lactique)
-Le glucose est dégradé par la **glycolyse** dans le cytoplasme, sans oxygène, jusqu'au pyruvate, transformé en **lactate**. Rendement : **2 ATP par glucose**. C'est peu, mais rapide, et cela ne dépend pas de l'apport en O₂. La voie domine entre environ **30 secondes et 2 minutes** d'effort intense — le 400 m, le 800 m. L'accumulation de lactate et de protons accompagne la fatigue et limite la poursuite de l'effort.
+## Voie 1 — la phosphocréatine
+ADP + phosphocréatine donne ATP + créatine. Direct, sans oxygène et sans déchet acide — mais la réserve est épuisée en une dizaine de secondes.
 
-## Voie 3 — La respiration cellulaire (aérobie)
-En présence de dioxygène, la dégradation se poursuit dans la **mitochondrie** :
-- la **glycolyse** (cytoplasme) donne le pyruvate ;
-- le **cycle de Krebs** (matrice mitochondriale) l'oxyde complètement en CO₂ en réduisant des transporteurs ;
-- la **chaîne respiratoire** (membrane interne) réoxyde ces transporteurs en réduisant l'O₂ en eau, et couple cette oxydation à la synthèse massive d'ATP.
+## Voie 2 — la fermentation lactique
+La **glycolyse** dégrade le glucose dans le cytoplasme jusqu’au pyruvate, transformé en **lactate**. Peu rentable, mais rapide et indépendante de l’apport en O₂. L’accumulation de lactate et de protons accompagne la fatigue et limite la poursuite de l’effort.
 
-Bilan : de l'ordre de **30 à 36 ATP par glucose**, soit une quinzaine de fois plus que la fermentation. Les lipides peuvent aussi y être dégradés, ce qui donne une réserve énergétique presque illimitée. C'est la voie de l'endurance, au-delà de quelques minutes.
+## Voie 3 — la respiration cellulaire
+| Étape | Où | Ce qu’elle produit |
+| **Glycolyse** | Cytoplasme | Le pyruvate |
+| **Cycle de Krebs** | Matrice mitochondriale | CO₂ et transporteurs réduits |
+| **Chaîne respiratoire** | Membrane interne | L’essentiel de l’ATP, en réduisant l’O₂ en eau |
 
-> Les trois voies ne se succèdent pas comme des interrupteurs : elles fonctionnent **simultanément**, et c'est leur contribution relative qui change au cours de l'effort.
+Les **lipides** peuvent aussi y être dégradés, ce qui donne une réserve énergétique presque illimitée.
 
-## Ce que l'entraînement modifie
-- l'endurance augmente le **nombre de mitochondries** par fibre, la **densité capillaire** et la capacité de transport de l'O₂ (VO₂ max) ;
-- la musculation augmente la **section des fibres** et les réserves de phosphocréatine et de glycogène.
+> Les trois voies ne se succèdent **pas** comme des interrupteurs : elles fonctionnent **simultanément**, et c’est leur **contribution relative** qui change au cours de l’effort. C’est la nuance qui distingue une bonne copie.
+
+## Ce que l’entraînement modifie
+| Entraînement | Ce qu’il augmente |
+| **Endurance** | Nombre de mitochondries, densité capillaire, VO₂ max |
+| **Musculation** | Section des fibres, réserves de phosphocréatine et de glycogène |
 
 ## Fibres lentes et fibres rapides
-- **Fibres de type I** (lentes) : riches en mitochondries et en myoglobine, très vascularisées, rouges, résistantes à la fatigue — le marathonien ;
-- **Fibres de type II** (rapides) : pauvres en mitochondries, riches en enzymes glycolytiques, puissantes mais fatigables — le sprinteur.
+| | Type I, **lentes** | Type II, **rapides** |
+| Mitochondries | Nombreuses | Peu |
+| Myoglobine, vascularisation | Riches — fibres rouges | Pauvres — fibres blanches |
+| Enzymes dominantes | Respiratoires | Glycolytiques |
+| Qualité | Résistantes à la fatigue | Puissantes mais fatigables |
+| Athlète type | Le marathonien | Le sprinteur |
 
-La proportion des deux types est en partie génétique, en partie modelée par l'entraînement.`,
+La proportion des deux types est en partie **génétique**, en partie modelée par l’entraînement.`,
           },
           questions: [
             ['Combien de temps la réserve d’ATP d’une fibre musculaire permet-elle de tenir ?', ['2 à 3 secondes d’effort intense', 'Environ 2 minutes', 'Environ 10 minutes', 'Plusieurs heures'], 0, 'D’où la nécessité de la régénérer en permanence par trois voies métaboliques.'],
@@ -912,29 +1143,37 @@ La proportion des deux types est en partie génétique, en partie modelée par l
           titre: 'Le contrôle des flux de glucose, source essentielle d’énergie des cellules musculaires',
           lecon: {
             titre: 'Tenir la glycémie à 1 g/L',
-            cours: `Le muscle consomme du glucose, parfois brutalement. Pourtant la **glycémie** — la concentration de glucose dans le sang — reste remarquablement stable autour de **1 g/L**, à jeun comme après un repas. Cette stabilité est le résultat d'une régulation active : c'est un exemple d'**homéostasie**.
+            cours: `Le muscle consomme du glucose, parfois brutalement. Pourtant la **glycémie** reste remarquablement stable autour de **1 g/L**, à jeun comme après un repas. C’est un exemple d’**homéostasie** : une stabilité obtenue par régulation active.
 
 ## Les stocks de glucose
-Le glucose est stocké sous forme de **glycogène**, un polymère ramifié.
-- Le **glycogène musculaire** ne sert **qu'au muscle lui-même** : la fibre musculaire ne possède pas l'enzyme qui permettrait de relibérer du glucose dans le sang.
-- Le **glycogène hépatique** (le foie) est, lui, **mobilisable pour tout l'organisme**. C'est le foie qui régule la glycémie.
-- Les **tissus adipeux** stockent l'excédent sous forme de lipides.
+| Stock | Sous quelle forme | Mobilisable pour… |
+| Glycogène **musculaire** | Polymère de glucose | **Le muscle seul** — la fibre n’a pas l’enzyme pour relibérer du glucose dans le sang |
+| Glycogène **hépatique** | Idem | **Tout l’organisme** : c’est le foie qui régule la glycémie |
+| Tissus **adipeux** | Lipides | L’excédent, à long terme |
 
 ## Les capteurs et les messagers
-Les **îlots de Langerhans** du **pancréas** détectent la glycémie et sécrètent deux hormones antagonistes.
-- Les **cellules β** libèrent l'**insuline** quand la glycémie s'élève. Seule hormone **hypoglycémiante** de l'organisme, elle fait entrer le glucose dans les cellules (en faisant migrer les transporteurs **GLUT4** vers la membrane des cellules musculaires et adipeuses) et stimule le stockage en glycogène et en lipides.
-- Les **cellules α** libèrent le **glucagon** quand la glycémie baisse. Hormone **hyperglycémiante**, elle déclenche dans le foie l'hydrolyse du glycogène et la fabrication de glucose à partir d'autres molécules.
+Les **îlots de Langerhans** du pancréas détectent la glycémie et sécrètent deux hormones **antagonistes**.
 
-> Le pancréas est à la fois **capteur** et **émetteur** : il mesure la glycémie et y répond. Le foie est l'**effecteur** principal, le muscle un gros consommateur.
+| Cellules | Hormone | Quand | Effet |
+| **β** | **Insuline** | La glycémie **monte** | Seule hormone **hypoglycémiante** : elle fait entrer le glucose (transporteurs **GLUT4**) et stimule le stockage |
+| **α** | **Glucagon** | La glycémie **baisse** | **Hyperglycémiante** : hydrolyse du glycogène hépatique, fabrication de glucose |
 
-## Pendant l'effort
-La consommation musculaire de glucose augmente fortement. La glycémie tend à baisser, l'insuline chute, le glucagon monte, le foie déstocke. Le muscle, lui, puise d'abord dans son **propre** glycogène. Notons une particularité : à l'effort, la contraction musculaire fait migrer les GLUT4 vers la membrane **même sans insuline** — c'est un des mécanismes par lesquels l'activité physique améliore le contrôle glycémique.
+> Le pancréas est à la fois **capteur** et **émetteur** : il mesure et il répond. Le **foie** est l’effecteur principal, le **muscle** un gros consommateur. Distinguer ces trois rôles est la clé de tout schéma fonctionnel.
 
-## Quand la régulation échoue : les diabètes
-- **Diabète de type 1** : destruction **auto-immune** des cellules β. Il n'y a plus d'insuline du tout. Apparition souvent précoce, brutale ; traitement par insuline à vie.
-- **Diabète de type 2** : les cellules deviennent **insulinorésistantes** — l'insuline est présente mais ne produit plus son effet ; le pancréas compense d'abord en sécrétant davantage, puis s'épuise. Apparition plus tardive, progressive, favorisée par la sédentarité, le surpoids et des prédispositions génétiques. La première ligne de traitement est le **mode de vie** : activité physique et alimentation.
+## Pendant l’effort
+La consommation musculaire augmente, la glycémie tend à baisser, l’insuline chute, le glucagon monte, le foie déstocke. Le muscle, lui, puise d’abord dans son **propre** glycogène.
 
-Dans les deux cas, l'hyperglycémie chronique abîme à long terme les petits vaisseaux : rétine, reins, nerfs, cœur. C'est ce qui fait la gravité de la maladie, bien plus que le symptôme immédiat.`,
+Particularité importante : à l’effort, la **contraction** fait migrer les GLUT4 vers la membrane **même sans insuline**. C’est un des mécanismes par lesquels l’activité physique améliore le contrôle glycémique.
+
+## Quand la régulation échoue
+| | Diabète de **type 1** | Diabète de **type 2** |
+| Le mécanisme | Destruction **auto-immune** des cellules β | **Insulinorésistance** : l’insuline est là, sans effet |
+| L’insuline | Absente | Présente, puis le pancréas s’épuise |
+| L’apparition | Souvent précoce, brutale | Plus tardive, progressive |
+| Les facteurs | Auto-immunité | Sédentarité, surpoids, prédispositions |
+| Le traitement | Insuline à vie | D’abord le **mode de vie** : activité physique, alimentation |
+
+Dans les deux cas, l’hyperglycémie chronique abîme les **petits vaisseaux** : rétine, reins, nerfs, cœur. C’est ce qui fait la gravité de la maladie — bien plus que le symptôme immédiat.`,
           },
           questions: [
             ['Autour de quelle valeur la glycémie est-elle régulée ?', ['Environ 1 g/L', 'Environ 0,1 g/L', 'Environ 5 g/L', 'Environ 10 g/L'], 0, 'Cette stabilité, à jeun comme après un repas, est un exemple d’homéostasie.'],
@@ -953,43 +1192,48 @@ Dans les deux cas, l'hyperglycémie chronique abîme à long terme les petits va
           titre: 'L’adaptabilité de l’organisme face aux perturbations de l’environnement',
           lecon: {
             titre: 'La réponse au stress, en deux temps',
-            cours: `Le stress n'est pas une faiblesse : c'est une **réponse adaptative**, sélectionnée parce qu'elle permet de faire face à une perturbation. Elle se déploie en deux phases, portées par deux systèmes distincts.
+            cours: `Le stress n’est pas une faiblesse : c’est une **réponse adaptative**, sélectionnée parce qu’elle permet de faire face. Elle se déploie en **deux temps**, portés par deux systèmes distincts.
 
-## Phase 1 — La réponse rapide : le système nerveux sympathique
-Face à un agent stressant, l'**hypothalamus** active le **système nerveux sympathique**. Les fibres sympathiques stimulent directement les organes, et commandent la **médullosurrénale** (partie centrale de la glande surrénale), qui déverse dans le sang de l'**adrénaline** et de la noradrénaline.
+## Les deux phases
+| | Phase 1 — **rapide** | Phase 2 — **lente** |
+| Le système | Nerveux **sympathique** | Axe **corticotrope** |
+| Le délai | Quelques **secondes** | Quelques dizaines de **minutes** |
+| Les messagers | **Adrénaline**, noradrénaline | **CRH**, **ACTH**, **cortisol** |
+| La glande | Médullosurrénale | Corticosurrénale |
+| Ce qu’elle permet | Agir tout de suite | **Tenir** dans la durée |
 
-Effets, en quelques secondes :
-- **fréquence cardiaque** et **pression artérielle** augmentent ;
-- les **bronches** se dilatent, la ventilation s'accélère ;
-- le sang est **redistribué** vers les muscles et le cerveau, au détriment de la digestion et de la peau ;
-- la **glycémie** monte (glycogénolyse hépatique) ;
-- les **pupilles** se dilatent, la vigilance augmente.
+## Phase 1 : combat ou fuite
+| Effet | Ce qu’il prépare |
+| Fréquence cardiaque et pression **augmentent** | Irriguer les muscles |
+| Les **bronches** se dilatent | Augmenter les échanges gazeux |
+| Le sang est **redistribué** vers muscles et cerveau | Au détriment de la digestion et de la peau |
+| La **glycémie** monte | Fournir le carburant |
+| Les **pupilles** se dilatent | Augmenter la vigilance |
 
-C'est la préparation à l'action — ce que Cannon a appelé la réponse de « **combat ou fuite** ».
+C’est ce que Cannon a appelé la réponse de « **combat ou fuite** ».
 
-## Phase 2 — La réponse lente : l'axe corticotrope
-Si la perturbation persiste, un second circuit prend le relais, plus lent (quelques dizaines de minutes) mais plus durable. C'est une **cascade hormonale** à trois étages :
-1. l'**hypothalamus** libère la **CRH** ;
-2. l'**hypophyse** antérieure répond en libérant l'**ACTH** dans le sang ;
-3. la **corticosurrénale** (partie périphérique de la surrénale) répond en libérant le **cortisol**.
+## Phase 2 : la cascade hormonale
+1. L’**hypothalamus** libère la **CRH**.
+2. L’**hypophyse** antérieure répond en libérant l’**ACTH** dans le sang.
+3. La **corticosurrénale** répond en libérant le **cortisol**.
 
-Le **cortisol** maintient la disponibilité énergétique dans la durée : il stimule la production de glucose à partir d'acides aminés (néoglucogenèse), mobilise les lipides, et modère la réponse immunitaire et inflammatoire.
+Le cortisol maintient la disponibilité énergétique dans la durée : néoglucogenèse, mobilisation des lipides, modération de la réponse immunitaire.
 
 ## Le rétrocontrôle négatif
-Le cortisol circulant **freine** la sécrétion de CRH par l'hypothalamus et d'ACTH par l'hypophyse. C'est un **rétrocontrôle négatif** : le système s'auto-limite et revient à son état de base une fois la perturbation passée. C'est cette boucle qui fait du stress une réponse **résolutive**.
+Le cortisol circulant **freine** la sécrétion de CRH et d’ACTH.
 
-> Un système sans rétrocontrôle s'emballerait. C'est précisément ce qui se détraque dans le stress chronique.
+> C’est cette boucle qui fait du stress une réponse **résolutive** : le système s’auto-limite et revient à son état de base. Un système sans rétrocontrôle s’emballerait — et c’est exactement ce qui se détraque dans le stress chronique.
 
-## Le syndrome général d'adaptation
-Hans Selye a décrit dès 1936 trois phases successives :
-- **alarme** : mobilisation rapide, sympathique ;
-- **résistance** : plateau soutenu par le cortisol, l'organisme tient ;
-- **épuisement** : si l'agent stressant persiste trop longtemps, les capacités d'adaptation sont dépassées.
+## Le syndrome général d’adaptation
+**Hans Selye**, dès 1936, décrit trois phases.
 
-Les deux premières phases sont **bénéfiques** : elles augmentent les chances de faire face. Le problème commence à la troisième.
+| Phase | Ce qui s’y passe | Bénéfique ? |
+| **Alarme** | Mobilisation rapide, sympathique | Oui |
+| **Résistance** | Plateau soutenu par le cortisol | Oui |
+| **Épuisement** | Les capacités d’adaptation sont dépassées | **Non** |
 
 ## Une réponse variable
-Face au même événement, les réactions diffèrent selon l'histoire de la personne, son sentiment de contrôle sur la situation, son entourage et sa préparation. Le stress ne dépend pas seulement de l'agent stressant, mais de l'**évaluation** que l'individu en fait.`,
+Face au même événement, les réactions diffèrent selon l’histoire de la personne, son **sentiment de contrôle**, son entourage et sa préparation. Le stress ne dépend pas seulement de l’agent stressant, mais de l’**évaluation** que l’individu en fait.`,
           },
           questions: [
             ['Quelle hormone est libérée par la médullosurrénale lors de la réponse rapide au stress ?', ['L’adrénaline', 'Le cortisol', 'L’insuline', 'La CRH'], 0, 'Elle prépare l’organisme à l’action en quelques secondes.'],
@@ -1006,32 +1250,43 @@ Face au même événement, les réactions diffèrent selon l'histoire de la pers
           titre: 'L’organisme débordé dans ses capacités d’adaptation',
           lecon: {
             titre: 'Quand le stress ne s’arrête plus',
-            cours: `Une réponse au stress efficace est une réponse qui **s'arrête**. Le problème n'est pas le stress aigu, c'est le stress **chronique** : une exposition prolongée qui empêche le retour à l'état de base.
+            cours: `Une réponse au stress efficace est une réponse **qui s’arrête**. Le problème n’est pas le stress aigu, c’est le stress **chronique** : une exposition prolongée qui empêche le retour à l’état de base.
 
-## L'échec du rétrocontrôle
-Sous exposition prolongée, la boucle de rétrocontrôle se **désensibilise** : les récepteurs au cortisol de l'hypothalamus et de l'hypophyse deviennent moins sensibles, le frein fonctionne mal, et le cortisol reste **durablement élevé**. Ce qui était une réponse adaptative devient une agression permanente.
+## L’échec du rétrocontrôle
+Sous exposition prolongée, les récepteurs au cortisol de l’hypothalamus et de l’hypophyse se **désensibilisent** : le frein fonctionne mal, et le cortisol reste **durablement élevé**.
 
-## Les conséquences sur l'organisme
-- **Système cardiovasculaire** : hypertension durable, athérosclérose, risque accru d'infarctus et d'AVC.
-- **Système immunitaire** : le cortisol est immunosuppresseur. Une exposition chronique augmente la sensibilité aux infections et retarde la cicatrisation.
-- **Métabolisme** : hyperglycémie chronique, stockage des graisses au niveau abdominal, résistance à l'insuline — un terrain de diabète de type 2.
-- **Cerveau** : l'**hippocampe**, riche en récepteurs au cortisol, est particulièrement vulnérable. Une exposition prolongée y réduit le volume et altère la **mémoire**. Or l'hippocampe participe justement au rétrocontrôle : son atteinte aggrave le déséquilibre. C'est un **cercle vicieux**.
-- **Sommeil et humeur** : insomnies, irritabilité, anxiété, dépression.
+> Ce qui était une réponse adaptative devient une **agression permanente**. Le mécanisme n’a pas changé : c’est sa durée qui le retourne.
 
-## L'épuisement professionnel
-Le **burn-out** associe un épuisement émotionnel et physique, un détachement vis-à-vis du travail et un sentiment de perte d'efficacité. Il ne relève pas d'une fragilité individuelle : les facteurs organisationnels — charge de travail, absence d'autonomie, manque de reconnaissance, conflits de valeurs — sont déterminants. C'est une des raisons pour lesquelles la prévention se joue autant sur l'organisation du travail que sur l'individu.
+## Les conséquences
+| Système | Ce qui se dégrade |
+| **Cardiovasculaire** | Hypertension durable, athérosclérose, risque d’infarctus et d’AVC |
+| **Immunitaire** | Le cortisol est immunosuppresseur : plus d’infections, cicatrisation retardée |
+| **Métabolique** | Hyperglycémie chronique, graisse abdominale, insulinorésistance — terrain de diabète de type 2 |
+| **Cérébral** | L’**hippocampe**, riche en récepteurs au cortisol, perd du volume : la mémoire s’altère |
+| **Sommeil et humeur** | Insomnies, irritabilité, anxiété, dépression |
 
-> Le déterminant le plus documenté n'est pas la quantité de contraintes, mais le **sentiment de contrôle** sur ce qui arrive. Une forte exigence assortie d'une faible latitude de décision est la combinaison la plus délétère.
+> L’atteinte de l’hippocampe crée un **cercle vicieux** : il participe lui-même au rétrocontrôle. Son atteinte aggrave donc le déséquilibre qui l’a causée.
+
+## L’épuisement professionnel
+Le **burn-out** associe trois dimensions : épuisement émotionnel et physique, détachement vis-à-vis du travail, sentiment de perte d’efficacité.
+
+| Ce qui le cause | Ce qui ne le cause pas |
+| Charge de travail, absence d’autonomie, manque de reconnaissance, conflits de valeurs | Une prétendue fragilité individuelle |
+
+> Le déterminant le mieux documenté n’est pas la **quantité** de contraintes, mais le **sentiment de contrôle** : une forte exigence assortie d’une faible latitude de décision est la combinaison la plus délétère.
 
 ## Les leviers de résilience
-- l'**activité physique** régulière, qui abaisse le niveau de cortisol de base et améliore le sommeil ;
-- le **sommeil**, condition de la récupération de l'axe corticotrope ;
-- le **soutien social** : la qualité des liens est un des facteurs protecteurs les mieux établis ;
-- les techniques de **régulation émotionnelle** (relaxation, respiration, méditation de pleine conscience), dont l'effet sur les marqueurs biologiques du stress est mesurable ;
-- une **prise en charge médicale** quand les symptômes s'installent : le stress chronique est un problème de santé, qui se traite.
+| Levier | Ce qu’il produit |
+| **Activité physique** régulière | Abaisse le cortisol de base, améliore le sommeil |
+| **Sommeil** | Condition de la récupération de l’axe corticotrope |
+| **Soutien social** | L’un des facteurs protecteurs les mieux établis |
+| **Régulation émotionnelle** | Relaxation, respiration, pleine conscience : effets mesurables sur les marqueurs biologiques |
+| **Prise en charge médicale** | Le stress chronique est un problème de santé, et il se traite |
 
-## Ce qu'il faut retenir de la logique d'ensemble
-La réponse au stress est un système **régulé**, avec des capteurs, des messagers, des effecteurs et une boucle de retour. Comme toute régulation biologique, elle a un **domaine de fonctionnement** : efficace à l'intérieur, délétère au-delà. Le corps humain n'est pas conçu pour un état d'alerte permanent.`,
+## La logique d’ensemble
+La réponse au stress est un système **régulé** : capteurs, messagers, effecteurs, boucle de retour. Comme toute régulation biologique, elle a un **domaine de fonctionnement** — efficace à l’intérieur, délétère au-delà.
+
+Le corps humain n’est pas conçu pour un état d’alerte permanent.`,
           },
           questions: [
             ['Que devient le rétrocontrôle négatif en cas de stress chronique ?', ['Il se désensibilise et le cortisol reste durablement élevé', 'Il devient plus efficace', 'Il disparaît immédiatement', 'Il est remplacé par un rétrocontrôle positif'], 0, 'Les récepteurs au cortisol deviennent moins sensibles : le frein fonctionne mal.'],

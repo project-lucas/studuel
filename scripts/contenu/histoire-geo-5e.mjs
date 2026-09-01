@@ -147,28 +147,45 @@ DELETE FROM public.chapters c
           axe: 'Chrétientés et islam (VIe-XIIIe siècles), des mondes en contact',
           lecon: {
             titre: 'Naissance d’une religion, naissance d’un empire',
-            cours: `## La naissance de l’islam
-L’**islam** naît au **VIIe siècle** dans la péninsule Arabique. **Muhammad** (Mahomet), marchand de **La Mecque**, prêche à partir de 610 une religion **monothéiste** — un seul dieu, **Allah**.
+            cours: `En un siècle, une religion née dans le désert d’Arabie devient l’empire le plus vaste du monde — et le passeur des savoirs de l’Antiquité.
 
-Chassé de La Mecque, il rejoint **Médine** en **622** : c’est l’**Hégire**, point de départ du calendrier musulman. Il revient prendre La Mecque en 630 et meurt en 632.
+## La naissance de l’islam
+@ 610 — Muhammad, marchand de La Mecque, commence à prêcher un dieu unique, Allah
+@ 622 — L’Hégire : chassé de La Mecque, il rejoint Médine. C’est l’an 1 du calendrier musulman
+@ 630 — Il revient prendre La Mecque
+@ 632 — Mort de Muhammad
 
-Le livre sacré est le **Coran** ; les pratiques du croyant reposent sur les **cinq piliers** : la profession de foi, les cinq prières quotidiennes, l’aumône, le jeûne du ramadan, le pèlerinage à La Mecque.
+Le livre sacré est le **Coran**.
+
+## Les cinq piliers
+~ La profession de foi → Les cinq prières quotidiennes → L’aumône → Le jeûne du ramadan → Le pèlerinage à La Mecque
 
 ## Un empire en un siècle
-Après la mort de Muhammad, les **califes** — ses successeurs — conquièrent un immense territoire : Arabie, Syrie, Égypte, Perse, Afrique du Nord, Espagne (al-Andalus). En 750, l’empire va de l’**Indus** aux **Pyrénées**.
+Après la mort de Muhammad, les **califes** — ses successeurs — conquièrent Arabie, Syrie, Égypte, Perse, Afrique du Nord et Espagne (**al-Andalus**).
 
-Deux grandes dynasties : les **Omeyyades** (capitale **Damas**), puis les **Abbassides** à partir de 750 (capitale **Bagdad**).
+@ 750 — L’empire va de l’Indus aux Pyrénées
+
+| La dynastie | Sa capitale | Depuis |
+| Les **Omeyyades** | **Damas** | |
+| Les **Abbassides** | **Bagdad** | 750 |
 
 ## Une civilisation brillante
-- **Bagdad** compte peut-être un million d’habitants au IXe siècle : mosquées, souks, palais, hôpitaux.
-- La **Maison de la Sagesse** y traduit et prolonge les savoirs grecs, perses et indiens.
-- **Al-Khwarizmi** fonde l’algèbre ; **Avicenne** écrit un canon de médecine lu en Europe pendant cinq siècles ; l’astronomie, l’optique et la chimie progressent.
-- Les **chiffres dits arabes**, venus d’Inde, et le **papier**, venu de Chine, se diffusent vers l’Occident par cet empire.
+| Le lieu ou l’homme | Son apport |
+| **Bagdad** | Peut-être un million d’habitants au IXe siècle |
+| La **Maison de la Sagesse** | Elle traduit et prolonge les savoirs grecs, perses et indiens |
+| **Al-Khwarizmi** | Il fonde l’**algèbre** |
+| **Avicenne** | Un canon de médecine lu en Europe pendant cinq siècles |
+
+~ Les chiffres, venus d’Inde → l’empire arabo-musulman → l’Europe
+
+Le **papier**, venu de Chine, suit le même chemin.
 
 > L’empire arabo-musulman n’est pas seulement un conquérant : c’est un **passeur**, qui transmet à l’Europe médiévale des savoirs qu’elle avait perdus.
 
 ## Une société diverse
-Musulmans, chrétiens et juifs y cohabitent. Les **dhimmis** — chrétiens et juifs — conservent leur religion contre un impôt spécifique, avec un statut inférieur mais protégé.`,
+Musulmans, chrétiens et juifs cohabitent. Les **dhimmis** — chrétiens et juifs — conservent leur religion contre un impôt spécifique.
+
+!> Leur statut est **inférieur mais protégé** : ce n’est ni l’égalité, ni la persécution. Le raccourci dans un sens ou dans l’autre est faux.`,
           },
           questions: [
             ['En quelle année a lieu l’Hégire ?', ['622', '610', '630', '750'], 0, 'Le départ de Muhammad vers Médine ouvre le calendrier musulman.'],
@@ -186,28 +203,46 @@ Musulmans, chrétiens et juifs y cohabitent. Les **dhimmis** — chrétiens et j
           axe: 'Chrétientés et islam (VIe-XIIIe siècles), des mondes en contact',
           lecon: {
             titre: 'L’Empire romain d’Orient, mille ans de plus',
-            cours: `## L’héritier de Rome
-En **395**, l’Empire romain se divise. La partie occidentale s’effondre en 476 ; la partie **orientale** survit **mille ans de plus**. On l’appelle **Empire byzantin**, du nom de sa capitale, **Constantinople** — l’ancienne Byzance, fondée par Constantin en 330, l’actuelle Istanbul.
+            cours: `L’Empire romain d’Occident tombe en 476. Sa moitié orientale, elle, tient mille ans de plus.
 
-Ses habitants, eux, se disent **Romains**.
+## L’héritier de Rome
+@ 330 — Constantin fonde Constantinople, l’ancienne Byzance
+@ 395 — L’Empire romain se divise en deux
+@ 476 — Chute de l’Empire d’Occident
+@ 1453 — Chute de Constantinople : fin de l’Empire byzantin
+
+!> On les appelle « Byzantins », mais eux se disent **Romains**. Le mot « byzantin » a été forgé bien plus tard, par des historiens occidentaux.
 
 ## Constantinople
-Une position exceptionnelle : sur le **Bosphore**, entre l’Europe et l’Asie, à la charnière des routes commerciales de la Méditerranée et de la mer Noire. Protégée par une triple muraille, elle résiste à tous les sièges jusqu’en 1204.
+| Son atout | Le détail |
+| Sa **position** | Sur le **Bosphore**, entre l’Europe et l’Asie |
+| Ses **routes** | À la charnière de la Méditerranée et de la mer Noire |
+| Ses **murailles** | Triples : elle résiste à tous les sièges jusqu’en 1204 |
+| Sa **taille** | Plusieurs centaines de milliers d’habitants, quand Paris en a quelques dizaines de milliers |
 
-Elle compte plusieurs centaines de milliers d’habitants, quand Paris en a quelques dizaines de milliers. On y trouve **Sainte-Sophie**, l’**hippodrome**, le **palais impérial**, des marchés où se croisent Vénitiens, Arabes, Slaves et Scandinaves.
+On y trouve **Sainte-Sophie**, l’**hippodrome**, le **palais impérial**, et des marchés où se croisent Vénitiens, Arabes, Slaves et Scandinaves.
 
 ## L’empereur
-Le **basileus** cumule tous les pouvoirs : chef politique, chef militaire, chef de l’Église — il nomme le **patriarche**. Il est considéré comme le représentant de Dieu sur terre, et son pouvoir est dit **théocratique**.
+Le **basileus** cumule tout : chef politique, chef militaire, chef de l’Église — il nomme le **patriarche**. Son pouvoir est dit **théocratique** : il représente Dieu sur terre.
 
-**Justinien** (527-565) tente de reconquérir l’Occident, fait rédiger le **Code justinien** — qui rassemble tout le droit romain — et fait construire **Sainte-Sophie**.
+| **Justinien** (527-565) | Ce qu’il fait |
+| La reconquête | Il tente de reprendre l’Occident |
+| Le **Code justinien** | Il rassemble tout le droit romain |
+| **Sainte-Sophie** | Il la fait construire |
 
 ## Le christianisme orthodoxe
-Byzance est chrétienne, mais s’éloigne peu à peu de Rome : langue **grecque** contre latin, mariage des prêtres autorisé, refus de l’autorité du pape. La rupture est consommée en **1054** : c’est le **schisme**, qui sépare l’**Église orthodoxe** de l’**Église catholique**.
+| Byzance | Rome |
+| Langue **grecque** | Langue **latine** |
+| Mariage des prêtres autorisé | Célibat |
+| Refus de l’autorité du pape | Autorité du pape |
+
+@ 1054 — Le schisme sépare l’Église orthodoxe de l’Église catholique
 
 Les **icônes** — images peintes du Christ et des saints — occupent une place centrale dans la piété orthodoxe.
 
 ## La fin
-Affaibli par les Turcs, pillé par les croisés en **1204**, l’empire tombe le **29 mai 1453** : Constantinople est prise par les **Ottomans** de Mehmed II. Sainte-Sophie devient une mosquée.`,
+@ 1204 — La quatrième croisade pille Constantinople
+@ 29 mai 1453 — Mehmed II et les Ottomans prennent la ville ; Sainte-Sophie devient une mosquée`,
           },
           questions: [
             ['Quelle est la capitale de l’Empire byzantin ?', ['Constantinople', 'Rome', 'Athènes', 'Damas'], 0, 'L’ancienne Byzance, l’actuelle Istanbul.'],
@@ -225,27 +260,43 @@ Affaibli par les Turcs, pillé par les croisés en **1204**, l’empire tombe le
           axe: 'Chrétientés et islam (VIe-XIIIe siècles), des mondes en contact',
           lecon: {
             titre: 'Charlemagne et la renaissance d’un empire d’Occident',
-            cours: `## Des Mérovingiens aux Carolingiens
-Après la chute de Rome, la Gaule est gouvernée par les **Mérovingiens**, dont **Clovis**, premier roi franc **baptisé** vers 496. Leur pouvoir s’affaiblit ; en **751**, **Pépin le Bref** les écarte et fonde la dynastie **carolingienne**, avec l’appui du **pape**.
+            cours: `Trois siècles après la chute de Rome, l’Occident se redonne un empereur. Il ne durera qu’une génération.
+
+## Des Mérovingiens aux Carolingiens
+@ Vers 496 — Baptême de Clovis, premier roi franc chrétien
+@ 751 — Pépin le Bref écarte les Mérovingiens et fonde la dynastie carolingienne, avec l’appui du pape
+@ 768-814 — Règne de Charlemagne
+@ 25 décembre 800 — Charlemagne est couronné empereur à Rome par le pape Léon III
+@ 843 — Le traité de Verdun partage l’empire en trois
 
 ## Charlemagne
-Fils de Pépin, **Charlemagne** règne de **768 à 814**. Il mène plus de cinquante campagnes militaires — Saxons, Lombards, Avars — et double l’étendue du royaume : France, Allemagne, Italie du Nord, Catalogne.
+Il mène plus de **cinquante** campagnes militaires — Saxons, Lombards, Avars — et **double** l’étendue du royaume : France, Allemagne, Italie du Nord, Catalogne.
 
-Le **25 décembre 800**, il est couronné **empereur** à Rome par le pape Léon III. L’Occident retrouve un empereur pour la première fois depuis 476.
+> L’Occident retrouve un empereur pour la première fois depuis **476**.
 
 ## Gouverner un empire immense
-- La capitale est **Aix-la-Chapelle**.
-- L’empire est divisé en **comtés**, dirigés par des **comtes**.
-- Les **missi dominici** — « envoyés du maître » — parcourent l’empire par deux, un laïc et un religieux, pour contrôler les comtes.
-- Les **capitulaires** sont les lois écrites de l’empereur.
+| L’outil | Sa fonction |
+| **Aix-la-Chapelle** | La capitale |
+| Les **comtés** et les **comtes** | Le découpage administratif |
+| Les ***missi dominici*** | Les « envoyés du maître », par deux — un laïc et un religieux — pour **contrôler les comtes** |
+| Les **capitulaires** | Les lois écrites de l’empereur |
 
 ## La renaissance carolingienne
-Charlemagne fait ouvrir des **écoles** dans les monastères et les cathédrales, fait venir des savants comme **Alcuin**, et fait copier les textes antiques dans les **scriptoria**. Une écriture nouvelle, plus lisible, apparaît : la **minuscule caroline** — l’ancêtre de nos minuscules.
+~ Ouvrir des écoles dans les monastères → faire venir des savants comme Alcuin → copier les textes antiques dans les scriptoria
+
+Une écriture nouvelle, plus lisible, apparaît : la **minuscule caroline** — l’ancêtre de nos minuscules.
 
 > Beaucoup de textes latins ne nous sont parvenus que par ces copies carolingiennes.
 
 ## Le partage
-À la mort de **Louis le Pieux**, ses trois fils se déchirent. Le **traité de Verdun (843)** partage l’empire en trois : la **Francie occidentale** (future France), la **Francie orientale** (future Allemagne) et la **Lotharingie** entre les deux. L’unité de l’Occident est rompue pour mille ans.`,
+À la mort de **Louis le Pieux**, ses trois fils se déchirent.
+
+| La part | Ce qu’elle deviendra |
+| La **Francie occidentale** | La France |
+| La **Francie orientale** | L’Allemagne |
+| La **Lotharingie** | Une longue bande entre les deux |
+
+!> L’unité de l’Occident est rompue pour **mille ans**. Le traité de Verdun n’est pas un détail administratif : c’est la naissance de la carte de l’Europe.`,
           },
           questions: [
             ['Qui fonde la dynastie carolingienne en 751 ?', ['Pépin le Bref', 'Clovis', 'Charlemagne', 'Louis le Pieux'], 0, 'Il écarte les Mérovingiens avec l’appui du pape.'],
@@ -263,30 +314,45 @@ Charlemagne fait ouvrir des **écoles** dans les monastères et les cathédrales
           axe: 'Chrétientés et islam (VIe-XIIIe siècles), des mondes en contact',
           lecon: {
             titre: 'Guerres, commerces et échanges de savoirs',
-            cours: `Au Moyen Âge, la Méditerranée met en présence **trois civilisations** : la **chrétienté latine** (Occident catholique), la **chrétienté orthodoxe** (Byzance) et le monde **musulman**. Elles s’affrontent, mais elles échangent tout autant.
+            cours: `La Méditerranée médiévale est à la fois une frontière et un pont. Les mêmes routes portent les armées et les livres.
+
+## Trois civilisations en présence
+| La civilisation | Son centre |
+| La **chrétienté latine** | L’Occident catholique, Rome |
+| La **chrétienté orthodoxe** | Byzance, Constantinople |
+| Le monde **musulman** | Damas, puis Bagdad, Le Caire, Cordoue |
 
 ## Les affrontements : les croisades
-En **1095**, le pape **Urbain II** appelle les chrétiens d’Occident à reprendre **Jérusalem**. Huit croisades suivent, entre 1095 et 1270.
-- La **première croisade** prend Jérusalem en **1099** et fonde des **États latins d’Orient**.
-- **Saladin** reprend Jérusalem en **1187**.
-- La **quatrième croisade** détourne son chemin et pille **Constantinople** en **1204** — des chrétiens contre des chrétiens.
-- Le dernier bastion latin, Saint-Jean-d’Acre, tombe en 1291.
+@ 1095 — Le pape Urbain II appelle à reprendre Jérusalem
+@ 1099 — La première croisade prend Jérusalem et fonde les États latins d’Orient
+@ 1187 — Saladin reprend Jérusalem
+@ 1204 — La quatrième croisade pille Constantinople : des chrétiens contre des chrétiens
+@ 1291 — Chute de Saint-Jean-d’Acre, dernier bastion latin
+@ 1492 — La Reconquista s’achève par la prise de Grenade
 
-En Espagne, la **Reconquista** chrétienne progresse du nord vers le sud, de 722 à la prise de **Grenade en 1492**.
+Huit croisades se succèdent entre 1095 et 1270.
 
 ## Les échanges commerciaux
-Malgré les guerres, le commerce ne s’arrête jamais. **Venise**, **Gênes** et **Pise** installent des **comptoirs** dans tout le bassin. On échange :
-- venus d’Orient : **soie**, **épices**, sucre, parfums, papier, porcelaine ;
-- venus d’Occident : draps de laine, bois, métaux, esclaves.
+Malgré les guerres, le commerce ne s’arrête **jamais**. **Venise**, **Gênes** et **Pise** installent des **comptoirs** dans tout le bassin.
 
-Les marchands italiens inventent des instruments qui font naître la banque moderne : **lettre de change**, comptabilité en partie double, assurance maritime.
+| Venus d’Orient | Venus d’Occident |
+| **Soie**, **épices**, sucre, parfums | Draps de laine, bois |
+| Papier, porcelaine | Métaux, esclaves |
+
+Les marchands italiens inventent les instruments de la banque moderne : **lettre de change**, comptabilité en partie double, assurance maritime.
 
 ## Les échanges culturels
-- **Al-Andalus** et la **Sicile** sont des lieux de traduction : à **Tolède**, chrétiens, juifs et musulmans traduisent en latin les textes grecs conservés en arabe — Aristote, Euclide, Ptolémée.
-- L’Occident reçoit ainsi la **numération** indo-arabe, le **zéro**, l’**algèbre**, la **médecine** d’Avicenne, la boussole et le papier.
-- L’architecture, l’art des jardins, le vocabulaire (algèbre, alcool, chiffre, amiral, sucre) gardent la trace de ces contacts.
+~ Les textes grecs → conservés et traduits en arabe → retraduits en latin à Tolède → l’Occident les redécouvre
 
-> La Méditerranée médiévale est à la fois une **frontière** et un **pont** : les mêmes routes portent les armées et les livres.`,
+À **Tolède** et en **Sicile**, chrétiens, juifs et musulmans traduisent ensemble Aristote, Euclide, Ptolémée.
+
+| Ce que l’Occident reçoit | |
+| La **numération** indo-arabe et le **zéro** | L’**algèbre** |
+| La **médecine** d’Avicenne | La boussole, le papier |
+
+Le vocabulaire en garde la trace : *algèbre*, *alcool*, *chiffre*, *amiral*, *sucre*.
+
+> La Méditerranée médiévale est à la fois une **frontière** et un **pont**.`,
           },
           questions: [
             ['Quelles trois civilisations se côtoient en Méditerranée au Moyen Âge ?', ['La chrétienté latine, la chrétienté orthodoxe et le monde musulman', 'Rome, Byzance et la Chine', 'Les Francs, les Vikings et les Arabes', 'L’Espagne, l’Italie et l’Égypte'], 0, 'Elles s’affrontent et échangent en même temps.'],
@@ -304,36 +370,49 @@ Les marchands italiens inventent des instruments qui font naître la banque mode
           axe: 'Société, Église et pouvoir politique dans l’occident féodal (XIe-XVe siècles)',
           lecon: {
             titre: 'La seigneurie, cadre de vie de neuf personnes sur dix',
-            cours: `## Une société à trois ordres
-Les clercs médiévaux la décrivent en trois groupes : ceux qui **prient** (*oratores*, le clergé), ceux qui **combattent** (*bellatores*, les seigneurs), et ceux qui **travaillent** (*laboratores*, les paysans). Ces derniers représentent environ **90 %** de la population.
+            cours: `Neuf Européens sur dix vivent dans une seigneurie. Elle n’est pas un décor : c’est leur monde entier.
+
+## Une société à trois ordres
+| L’ordre | Son nom latin | Sa fonction | Sa part |
+| Le **clergé** | *oratores* | Ceux qui **prient** | |
+| Les **seigneurs** | *bellatores* | Ceux qui **combattent** | |
+| Les **paysans** | *laboratores* | Ceux qui **travaillent** | Environ **90 %** |
 
 ## La seigneurie
-C’est le grand domaine d’un seigneur, divisé en deux parties :
-- la **réserve**, exploitée directement pour le seigneur ;
-- les **tenures**, parcelles concédées aux paysans contre des redevances.
+| Sa partie | Qui l’exploite |
+| La **réserve** | Directement pour le seigneur |
+| Les **tenures** | Les paysans, contre des redevances |
 
 Le seigneur y détient le **ban** : le droit de commander, de juger et de punir.
 
 ## Les paysans
-- Les **vilains** sont libres : ils peuvent quitter la seigneurie, se marier, transmettre leur bien.
-- Les **serfs** sont attachés à la terre et doivent des obligations supplémentaires.
+| Le paysan | Sa condition |
+| Le **vilain** | **Libre** : il peut partir, se marier, transmettre son bien |
+| Le **serf** | **Attaché à la terre**, avec des obligations supplémentaires |
 
-Ils versent au seigneur :
-- le **cens** (redevance en argent) et le **champart** (part de la récolte) ;
-- la **corvée** : des journées de travail gratuit sur la réserve ;
-- les **banalités** : taxes pour l’usage obligatoire du **moulin**, du **four** et du **pressoir** du seigneur ;
-- et à l’Église, la **dîme** — environ un dixième de la récolte.
+## Ce qu’ils versent
+| La redevance | À qui | Ce que c’est |
+| Le **cens** | Au seigneur | Une redevance en argent |
+| Le **champart** | Au seigneur | Une part de la récolte |
+| La **corvée** | Au seigneur | Des journées de travail gratuit sur la réserve |
+| Les **banalités** | Au seigneur | Des taxes pour le **moulin**, le **four** et le **pressoir**, d’usage obligatoire |
+| La **dîme** | À l’**Église** | Environ un dixième de la récolte |
 
 ## Les progrès agricoles des XIe-XIIIe siècles
-**Charrue** à versoir, **collier d’épaule** pour le cheval, **moulins** à eau et à vent, **assolement triennal**, **défrichements**. Les rendements augmentent, la population de l’Europe **double** entre 1000 et 1300.
+~ Charrue à versoir → collier d’épaule → moulins à eau et à vent → assolement triennal → défrichements
 
-## Le seigneur et son château
-Le **château fort** — d’abord une motte de terre et de bois, puis une forteresse de pierre — protège, surveille et affirme le pouvoir. Le seigneur vit de la guerre, de la chasse et des redevances.
+= Résultat : la population de l’Europe DOUBLE entre 1000 et 1300
 
-## Les liens féodaux
-Le **vassal** prête **hommage** à son **suzerain** et lui doit aide et conseil ; en échange, il reçoit un **fief**, le plus souvent une terre. Ces liens d’homme à homme structurent tout l’Occident féodal.
+## Le château et les liens féodaux
+Le **château fort** — d’abord motte de terre et de bois, puis forteresse de pierre — protège, surveille et affirme le pouvoir.
 
-> La crise du XIVe siècle — famines, **peste noire** (1347-1352), guerre de Cent Ans — emporte un tiers de la population européenne et ébranle durablement ce système.`,
+~ Le vassal prête hommage → il doit aide et conseil au suzerain → il reçoit un fief, le plus souvent une terre
+
+## La crise du XIVe siècle
+@ 1347-1352 — La peste noire
+@ 1337-1453 — La guerre de Cent Ans
+
+!> Famines, peste et guerre emportent **un tiers** de la population européenne et ébranlent durablement tout le système seigneurial.`,
           },
           questions: [
             ['Quels sont les trois ordres de la société médiévale ?', ['Ceux qui prient, ceux qui combattent, ceux qui travaillent', 'Les nobles, les bourgeois, les esclaves', 'Le roi, les seigneurs, les serfs', 'Les clercs, les marchands, les artisans'], 0, 'Les paysans représentent environ 90 % de la population.'],
@@ -351,28 +430,36 @@ Le **vassal** prête **hommage** à son **suzerain** et lui doit aide et conseil
           axe: 'Société, Église et pouvoir politique dans l’occident féodal (XIe-XVe siècles)',
           lecon: {
             titre: 'Une institution présente du berceau à la tombe',
-            cours: `Au Moyen Âge, l’**Église catholique** encadre la vie entière des Occidentaux. Presque tous sont **baptisés** ; être chrétien n’est pas un choix, c’est une condition.
+            cours: `Au Moyen Âge, être chrétien n’est pas un choix : c’est une condition. L’Église encadre la vie entière.
 
 ## Les sacrements et le calendrier
-Les **sept sacrements** — baptême, confirmation, eucharistie, pénitence, mariage, ordre, extrême-onction — jalonnent l’existence de la naissance à la mort.
+Les **sept sacrements** jalonnent l’existence : baptême, confirmation, eucharistie, pénitence, mariage, ordre, extrême-onction.
 
-L’Église rythme aussi le **temps** : les cloches sonnent les heures, le **dimanche** est chômé, l’année suit les fêtes (Noël, Pâques, la Toussaint) et le calendrier des saints. Le carême impose ses jeûnes.
+~ Les cloches sonnent les heures → le dimanche est chômé → l’année suit Noël, Pâques, la Toussaint → le carême impose ses jeûnes
 
 ## Deux clergés
-- Le **clergé séculier** vit « dans le siècle », au contact des fidèles : le **curé** de la paroisse, l’**évêque** du diocèse, le **pape** à Rome.
-- Le **clergé régulier** vit selon une **règle**, à l’écart du monde : les **moines** dans les **monastères** — Cluny, Cîteaux —, partagés entre prière et travail (*ora et labora*). Au XIIIe siècle apparaissent les **ordres mendiants** (franciscains, dominicains), qui prêchent dans les villes et vivent d’aumônes.
+| Le clergé | Où il vit | Qui le compose |
+| **Séculier** | « Dans le siècle », au contact des fidèles | Le **curé** de la paroisse, l’**évêque** du diocèse, le **pape** |
+| **Régulier** | Selon une **règle**, à l’écart du monde | Les **moines** des monastères — Cluny, Cîteaux |
+
+La devise des moines : *ora et labora*, prier et travailler. Au XIIIe siècle apparaissent les **ordres mendiants** — franciscains, dominicains —, qui prêchent dans les villes et vivent d’aumônes.
 
 ## Une puissance matérielle
-L’Église est le premier **propriétaire foncier** d’Occident. Elle perçoit la **dîme**, gère des domaines, et emploie des milliers de personnes. Elle assure aussi ce qu’aucun autre pouvoir n’assure : l’**hôpital**, l’**école**, l’**aumône** aux pauvres, l’accueil des pèlerins.
+L’Église est le **premier propriétaire foncier** d’Occident. Elle perçoit la **dîme** et gère des domaines.
+
+> Elle assure aussi ce qu’aucun autre pouvoir n’assure : l’**hôpital**, l’**école**, l’**aumône** aux pauvres, l’accueil des pèlerins.
 
 ## L’art au service de la foi
-- L’**art roman** (XIe-XIIe) : voûtes en plein cintre, murs épais, petites ouvertures, églises sombres et massives.
-- L’**art gothique** (à partir du XIIe) : croisée d’ogives, arcs-boutants, murs allégés, immenses **vitraux**. Les cathédrales montent vers la lumière — Chartres, Reims, Amiens, Notre-Dame de Paris.
+| Le style | Son époque | Ses traits |
+| **Roman** | XIe-XIIe | Voûtes en **plein cintre**, murs épais, petites ouvertures, églises sombres et massives |
+| **Gothique** | À partir du XIIe | **Croisée d’ogives**, **arcs-boutants**, murs allégés, immenses **vitraux** |
 
-Sculptures, vitraux et fresques **racontent** la Bible à une population qui ne sait pas lire.
+Chartres, Reims, Amiens, Notre-Dame de Paris.
+
+> Sculptures, vitraux et fresques **racontent** la Bible à une population qui ne sait pas lire. L’église est un livre pour ceux qui ne lisent pas.
 
 ## Encadrer et exclure
-L’Église combat les **hérésies** — les cathares au XIIIe siècle —, crée l’**Inquisition**, et peut prononcer l’**excommunication**, qui exclut un fidèle de la communauté. Contre un roi, cette arme est redoutable.`,
+!> L’Église combat les **hérésies** — les cathares au XIIIe siècle —, crée l’**Inquisition**, et peut prononcer l’**excommunication**, qui exclut un fidèle de la communauté. Contre un roi, cette arme est redoutable.`,
           },
           questions: [
             ['Combien y a-t-il de sacrements dans l’Église médiévale ?', ['Sept', 'Cinq', 'Trois', 'Dix'], 0, 'Du baptême à l’extrême-onction, ils jalonnent toute la vie.'],
@@ -390,27 +477,40 @@ L’Église combat les **hérésies** — les cathares au XIIIe siècle —, cr�
           axe: 'Société, Église et pouvoir politique dans l’occident féodal (XIe-XVe siècles)',
           lecon: {
             titre: 'Les villes renaissent, et avec elles une société nouvelle',
-            cours: `## Une renaissance urbaine
-Entre le **XIe et le XIIIe siècle**, l’Occident se couvre de villes. Trois causes se combinent :
-- les **progrès agricoles** dégagent des surplus, qui nourrissent des non-paysans ;
-- la population **double** entre 1000 et 1300 ;
-- le **commerce** reprend, à courte et à longue distance.
+            cours: `Entre le XIe et le XIIIe siècle, l’Occident se couvre de villes. Y habiter ne change pas seulement de décor : cela change de statut.
+
+## Une renaissance urbaine
+| La cause | Son effet |
+| Les **progrès agricoles** | Des surplus nourrissent des non-paysans |
+| La **population** | Elle **double** entre 1000 et 1300 |
+| Le **commerce** | Il reprend, à courte et à longue distance |
 
 ## Les lieux du commerce
-- Les **foires de Champagne** (Troyes, Provins) réunissent chaque année marchands du Nord et du Sud.
-- Les villes **flamandes** (Bruges, Gand, Ypres) vivent du **drap** ; les villes **italiennes** (Venise, Gênes, Florence) du commerce méditerranéen et de la **banque**.
-- La **Hanse** germanique domine le commerce de la mer du Nord et de la Baltique.
+| Le lieu | Sa spécialité |
+| Les **foires de Champagne** — Troyes, Provins | Elles réunissent marchands du Nord et du Sud |
+| Les villes **flamandes** — Bruges, Gand, Ypres | Le **drap** |
+| Les villes **italiennes** — Venise, Gênes, Florence | Le commerce méditerranéen et la **banque** |
+| La **Hanse** germanique | La mer du Nord et la Baltique |
 
 ## Le paysage urbain
-Des **remparts**, des rues étroites, des maisons à colombages, un **beffroi** ou une **halle**, une **place du marché**, une **cathédrale**. La ville est sale, dense, exposée aux **incendies** et aux **épidémies** — mais elle attire.
+Des **remparts**, des rues étroites, des maisons à colombages, un **beffroi** ou une **halle**, une **place du marché**, une **cathédrale**.
+
+!> La ville est sale, dense, exposée aux **incendies** et aux **épidémies** — et pourtant elle attire sans discontinuer.
 
 ## Une société nouvelle
-- Les **bourgeois** — habitants du bourg — sont marchands et artisans. Les plus riches dominent la vie politique.
-- Les **métiers** s’organisent en **corporations** (ou guildes), qui fixent les règles, la qualité, les prix et l’apprentissage : apprenti, compagnon, maître.
-- Les **universités** apparaissent (Bologne, Paris, Oxford) et forment juristes, médecins et théologiens.
+| Le groupe | Ce qu’il est |
+| Les **bourgeois** | Les habitants du bourg : marchands et artisans. Les plus riches dominent la vie politique |
+| Les **corporations** (ou guildes) | Elles fixent règles, qualité, prix et apprentissage |
+| Les **universités** | Bologne, Paris, Oxford : juristes, médecins, théologiens |
+
+~ Apprenti → compagnon → maître
 
 ## La liberté urbaine
-Les villes obtiennent des **chartes de franchises** : le droit de s’administrer, de rendre la justice, de lever des impôts. Elles élisent des **échevins** ou des **consuls**. D’où le dicton : « **L’air de la ville rend libre** » — un serf qui y vivait un an et un jour sans être réclamé devenait libre.
+Les villes obtiennent des **chartes de franchises** : le droit de s’administrer, de rendre la justice, de lever des impôts. Elles élisent des **échevins** ou des **consuls**.
+
+= « L’air de la ville rend libre »
+
+Un serf qui y vivait **un an et un jour** sans être réclamé devenait libre.
 
 > La ville médiévale n’est pas seulement un lieu : c’est un **statut**. Y habiter change ce qu’on est.
 
@@ -433,24 +533,38 @@ Riches marchands contre artisans, maîtres contre compagnons, ville contre seign
           axe: 'Société, Église et pouvoir politique dans l’occident féodal (XIe-XVe siècles)',
           lecon: {
             titre: 'Comment un petit roi devient un grand État',
-            cours: `## Un point de départ modeste
-En **987**, **Hugues Capet** est élu roi des Francs. Son domaine se limite à une étroite bande autour de **Paris** et d’Orléans ; plusieurs de ses vassaux — le duc de Normandie, le comte de Flandre — sont bien plus puissants que lui.
+            cours: `En 987, le roi de France ne possède qu’une bande de terre autour de Paris. En trois siècles, ses descendants bâtissent l’État le plus puissant d’Occident.
 
-En trois siècles, ses descendants font de ce petit royaume le plus puissant État d’Occident.
+## Un point de départ modeste
+@ 987 — Hugues Capet est élu roi des Francs
+@ 1180-1223 — Philippe Auguste triple le domaine royal
+@ 1214 — Victoire de Bouvines
+@ 1226-1270 — Saint Louis
+@ 1285-1314 — Philippe le Bel ; premiers États généraux en 1302
+@ 1337-1453 — La guerre de Cent Ans
+@ 1429 — Jeanne d’Arc fait sacrer Charles VII à Reims
 
-## Les moyens de l’affirmation
-- L’**hérédité** : les Capétiens font élire leur fils de leur vivant, jusqu’à ce que la couronne devienne héréditaire de fait.
-- Le **sacre** à **Reims** : le roi y est oint d’une huile sainte, ce qui le rend « roi par la grâce de Dieu ». Son pouvoir n’est plus seulement féodal, il devient **sacré**.
-- L’**agrandissement du domaine** : par mariage, par héritage, par confiscation ou par la guerre.
-- La **construction d’un État** : des agents royaux — **baillis** au nord, **sénéchaux** au sud —, un **Parlement** qui rend la justice, une **Chambre des comptes**, un impôt permanent, une armée permanente.
+!> Plusieurs vassaux d’Hugues Capet — le duc de Normandie, le comte de Flandre — sont **bien plus puissants que lui**. Le roi n’est d’abord qu’un seigneur parmi d’autres.
+
+## Les quatre moyens de l’affirmation
+| Le moyen | Comment |
+| L’**hérédité** | Les Capétiens font élire leur fils de leur vivant, jusqu’à ce que la couronne devienne héréditaire de fait |
+| Le **sacre** à **Reims** | Le roi y est oint d’une huile sainte : il devient roi **par la grâce de Dieu** |
+| L’**agrandissement du domaine** | Mariage, héritage, confiscation, guerre |
+| La **construction d’un État** | **Baillis** au nord, **sénéchaux** au sud, **Parlement**, **Chambre des comptes**, impôt et armée permanents |
+
+> Le sacre change la nature du pouvoir royal : il n’est plus seulement féodal, il devient **sacré**. Un vassal peut défier un seigneur ; défier un oint de Dieu est autre chose.
 
 ## Trois règnes décisifs
-- **Philippe Auguste** (1180-1223) triple le domaine royal, reprend la Normandie au roi d’Angleterre et l’emporte à **Bouvines** en 1214.
-- **Saint Louis** (1226-1270) rend la justice — l’image du roi sous son chêne — et impose la monnaie royale dans tout le royaume.
-- **Philippe le Bel** (1285-1314) s’oppose au pape, réunit les premiers **États généraux** en 1302 et s’entoure de juristes, les **légistes**.
+| Le roi | Ce qu’il fait |
+| **Philippe Auguste** | Il triple le domaine, reprend la Normandie au roi d’Angleterre, l’emporte à **Bouvines** |
+| **Saint Louis** | Il rend la justice — l’image du roi sous son chêne — et impose la monnaie royale |
+| **Philippe le Bel** | Il s’oppose au pape, réunit les premiers **États généraux**, s’entoure de juristes, les **légistes** |
 
-## La guerre de Cent Ans (1337-1453)
-À l’extinction des Capétiens directs, les **Valois** montent sur le trône ; le roi d’Angleterre revendique la couronne. La guerre dure plus d’un siècle : défaites de Crécy et d’Azincourt, traité de Troyes, puis le sursaut porté par **Jeanne d’Arc**, qui fait sacrer **Charles VII** à Reims en **1429**. Les Anglais sont chassés en 1453.
+## La guerre de Cent Ans
+~ Extinction des Capétiens directs → les Valois montent sur le trône → le roi d’Angleterre revendique la couronne → 116 ans de guerre
+
+Défaites de **Crécy** et d’**Azincourt**, traité de Troyes, puis le sursaut porté par **Jeanne d’Arc**. Les Anglais sont chassés en 1453.
 
 > Le royaume sort de la guerre avec une **armée permanente**, un **impôt permanent** et un sentiment national naissant : l’État moderne est en place.`,
           },
@@ -470,29 +584,45 @@ En trois siècles, ses descendants font de ce petit royaume le plus puissant Ét
           axe: 'Transformations de l’Europe et ouverture sur le monde aux XVIe et XVIIe siècles',
           lecon: {
             titre: 'Quand l’Europe change la carte du monde',
-            cours: `## Pourquoi partir ?
-- **Économique** : la prise de Constantinople par les Ottomans (1453) gêne les routes terrestres vers l’Asie ; l’Europe veut atteindre directement les **épices**, la soie et l’**or**.
-- **Religieux** : évangéliser, et prolonger l’esprit de croisade.
-- **Politique** : la rivalité entre le **Portugal** et l’**Espagne**.
-- **Technique** : la **caravelle**, la **boussole**, l’**astrolabe**, le **portulan**, le gouvernail d’étambot, et l’idée — admise chez les savants — que la Terre est **ronde**.
+            cours: `En quarante ans, l’Europe passe d’un monde borné par la Méditerranée à une carte qui fait le tour de la Terre.
+
+## Pourquoi partir
+| La raison | Le détail |
+| **Économique** | La prise de Constantinople (1453) gêne les routes vers l’Asie : on veut atteindre directement **épices**, soie et **or** |
+| **Religieuse** | Évangéliser, prolonger l’esprit de croisade |
+| **Politique** | La rivalité entre le **Portugal** et l’**Espagne** |
+| **Technique** | La **caravelle**, la **boussole**, l’**astrolabe**, le **portulan**, le gouvernail d’étambot |
+
+!> Les savants savaient **déjà** que la Terre est ronde. Ce n’est pas une découverte de Colomb : ce qu’on ignorait, c’était sa **taille** — et l’existence d’un continent au milieu.
 
 ## Les grandes expéditions
-- **1488** : **Bartolomeu Dias** franchit le cap de Bonne-Espérance.
-- **1492** : **Christophe Colomb**, financé par l’Espagne, atteint l’Amérique en cherchant les Indes — il mourra convaincu d’avoir touché l’Asie.
-- **1498** : **Vasco de Gama** atteint l’Inde par la mer.
-- **1519-1522** : l’expédition de **Magellan**, achevée par Elcano, réalise le premier **tour du monde**. Sur cinq navires et 237 hommes, un navire et 18 hommes reviennent.
+@ 1488 — Bartolomeu Dias franchit le cap de Bonne-Espérance
+@ 1492 — Christophe Colomb atteint l’Amérique en cherchant les Indes
+@ 1494 — Le traité de Tordesillas partage le monde entre Portugal et Espagne
+@ 1498 — Vasco de Gama atteint l’Inde par la mer
+@ 1519-1522 — L’expédition de Magellan réalise le premier tour du monde
 
-Le **traité de Tordesillas** (1494) partage le monde à découvrir entre Portugal et Espagne.
+= Partis à 5 navires et 237 hommes, ils reviennent à 1 navire et 18 hommes
+
+Colomb mourra convaincu d’avoir touché l’Asie.
 
 ## La conquête de l’Amérique
-Les **conquistadors** détruisent en quelques années deux grands empires : **Cortés** celui des **Aztèques** (Mexique, 1521), **Pizarro** celui des **Incas** (Pérou, 1533). Leur supériorité tient aux armes à feu, aux chevaux, aux alliances avec des peuples soumis — et surtout aux **maladies** européennes (variole, rougeole), qui déciment des populations sans immunité.
+| Le conquistador | L’empire détruit | La date |
+| **Cortés** | Les **Aztèques**, au Mexique | 1521 |
+| **Pizarro** | Les **Incas**, au Pérou | 1533 |
+
+| Leur supériorité | |
+| Les **armes à feu** et les **chevaux** | |
+| Les **alliances** avec des peuples soumis | |
+| Et surtout les **maladies** — variole, rougeole | Contre lesquelles ces populations n’ont aucune immunité |
 
 ## Les conséquences
-- Un **effondrement démographique** amérindien : peut-être 80 à 90 % en un siècle.
-- La **traite atlantique** : des millions d’Africains déportés vers les plantations d’Amérique.
-- L’**échange colombien** : maïs, pomme de terre, tomate, cacao, tabac vers l’Europe ; blé, canne à sucre, chevaux, bovins vers l’Amérique.
-- L’afflux d’**or** et d’**argent** (Potosí) provoque une inflation durable en Europe.
-- Le **centre de gravité** économique se déplace de la Méditerranée vers l’**Atlantique**.
+| La conséquence | Son ampleur |
+| L’**effondrement démographique** amérindien | Peut-être **80 à 90 %** en un siècle |
+| La **traite atlantique** | Des millions d’Africains déportés vers les plantations |
+| L’**échange colombien** | Maïs, pomme de terre, tomate, cacao, tabac vers l’Europe ; blé, canne à sucre, chevaux, bovins vers l’Amérique |
+| L’afflux d’**or** et d’**argent** (Potosí) | Une inflation durable en Europe |
+| Le déplacement du **centre de gravité** | De la Méditerranée vers l’**Atlantique** |
 
 > « Découverte » est un mot européen : ces terres étaient habitées, peuplées et organisées depuis des millénaires.`,
           },
@@ -512,33 +642,42 @@ Les **conquistadors** détruisent en quelques années deux grands empires : **Co
           axe: 'Transformations de l’Europe et ouverture sur le monde aux XVIe et XVIIe siècles',
           lecon: {
             titre: 'Deux empires face à face au XVIe siècle',
-            cours: `Au XVIe siècle, deux souverains dominent le monde connu et s’affrontent en Méditerranée.
+            cours: `Deux empires « universels » se disputent le même monde — et découvrent en même temps que ce monde vient de s’agrandir démesurément.
 
 ## Charles Quint (1500-1558)
-Par une série d’héritages, il réunit sur sa tête :
-- l’**Espagne** et ses possessions italiennes ;
-- les **Pays-Bas** et la Franche-Comté ;
-- les territoires **autrichiens** des Habsbourg ;
-- l’**Empire** (il est élu empereur en 1519) ;
-- l’**Amérique** espagnole, dont l’or et l’argent affluent.
+Par une série d’**héritages**, il réunit sur sa tête :
 
-D’où sa formule : dans son empire, « **le soleil ne se couche jamais** ».
+| Le territoire | |
+| L’**Espagne** et ses possessions italiennes | |
+| Les **Pays-Bas** et la Franche-Comté | |
+| Les terres **autrichiennes** des Habsbourg | |
+| L’**Empire** | Il est élu empereur en 1519 |
+| L’**Amérique** espagnole | Dont l’or et l’argent affluent |
 
-Ses difficultés sont à la mesure de son étendue : la **France** de **François Ier** l’encercle et le combat (Marignan, Pavie) ; la **Réforme protestante** déchire l’Allemagne ; les Ottomans le menacent à l’est. Épuisé, il **abdique** en 1556 et partage son empire entre son fils **Philippe II** (Espagne) et son frère **Ferdinand** (Autriche).
+= « Le soleil ne se couche jamais » sur son empire
+
+## Ses difficultés
+| L’adversaire | Le problème |
+| La **France** de **François Ier** | Elle l’encercle et le combat — Marignan, Pavie |
+| La **Réforme protestante** | Elle déchire l’Allemagne |
+| Les **Ottomans** | Ils le menacent à l’est |
+
+@ 1556 — Épuisé, Charles Quint abdique et partage son empire entre son fils Philippe II (Espagne) et son frère Ferdinand (Autriche)
 
 ## Soliman le Magnifique (1494-1566)
 Sultan **ottoman** de 1520 à 1566, il porte l’empire à son apogée : Balkans, Hongrie, Égypte, Syrie, Irak, Afrique du Nord, contrôle des lieux saints de l’islam.
-- Il assiège **Vienne** en 1529 — sans la prendre.
-- Sa flotte domine la Méditerranée orientale.
-- On l’appelle en turc **Kanuni**, « le législateur » : il réorganise le droit de l’empire.
-- **Istanbul** devient une capitale magnifique, où l’architecte **Sinan** bâtit les grandes mosquées.
+
+@ 1529 — Il assiège Vienne, sans la prendre
+@ 1571 — La bataille navale de Lépante arrête l’expansion ottomane en Méditerranée occidentale
+
+| Son surnom | Ce qu’il dit |
+| « Le Magnifique », en Occident | Sa splendeur |
+| ***Kanuni***, « le législateur », en turc | Il réorganise le **droit** de l’empire |
+
+**Istanbul** devient une capitale magnifique, où l’architecte **Sinan** bâtit les grandes mosquées.
 
 ## Un affrontement… et des alliances
-La rivalité est constante en Méditerranée. Mais **François Ier**, pour desserrer l’étau de Charles Quint, s’allie avec **Soliman** — une alliance entre un roi très chrétien et un sultan musulman qui scandalise l’Europe et montre que la politique l’emporte sur la religion.
-
-En **1571**, la bataille navale de **Lépante** arrête l’expansion ottomane en Méditerranée occidentale.
-
-> Deux empires « universels » se disputent le même monde — et découvrent en même temps que ce monde vient de s’agrandir démesurément.`,
+!> **François Ier s’allie avec Soliman** pour desserrer l’étau de Charles Quint. Une alliance entre un roi « très chrétien » et un sultan musulman scandalise l’Europe — et montre que la **politique** l’emporte sur la religion.`,
           },
           questions: [
             ['Quels territoires Charles Quint réunit-il ?', ['L’Espagne, les Pays-Bas, l’Autriche, l’Empire et l’Amérique espagnole', 'La France et l’Angleterre', 'L’Italie et la Grèce', 'La Hongrie et les Balkans'], 0, 'D’où la formule : « le soleil ne se couche jamais » sur son empire.'],
@@ -556,38 +695,46 @@ En **1571**, la bataille navale de **Lépante** arrête l’expansion ottomane e
           axe: 'Transformations de l’Europe et ouverture sur le monde aux XVIe et XVIIe siècles',
           lecon: {
             titre: 'L’homme au centre, et l’imprimerie pour le dire',
-            cours: `## Qu’est-ce que l’humanisme ?
-Un mouvement intellectuel né en **Italie** au XVe siècle et diffusé dans toute l’Europe au XVIe. Il place l’**être humain** et sa **raison** au centre de la réflexion, sans rompre avec la foi.
+            cours: `L’humanisme replace l’être humain et sa raison au centre. L’imprimerie fait le reste.
 
-Ses principes :
-- **retourner aux textes antiques** dans leur langue d’origine — grec, latin, hébreu ;
-- **critiquer** les sources plutôt que répéter l’autorité ;
-- croire en l’**éducation** : on ne naît pas homme accompli, on le devient ;
-- s’intéresser à **tous** les domaines du savoir.
+## Qu’est-ce que l’humanisme
+Un mouvement intellectuel né en **Italie** au XVe siècle, diffusé dans toute l’Europe au XVIe. Il place l’**être humain** et sa **raison** au centre — **sans rompre avec la foi**.
+
+| Son principe | Ce qu’il implique |
+| **Retourner aux textes antiques** | Dans leur langue d’origine : grec, latin, hébreu |
+| **Critiquer** les sources | Plutôt que répéter l’autorité |
+| Croire en l’**éducation** | On ne naît pas homme accompli, on le devient |
+| S’intéresser à **tout** | Le savoir n’a pas de frontières |
 
 ## Les grandes figures
-- **Érasme** (Rotterdam), l’« prince des humanistes », qui édite le Nouveau Testament en grec et écrit *L’Éloge de la folie* ;
-- **Thomas More** (Angleterre) et son *Utopie* ;
-- **Rabelais**, **Montaigne**, **Guillaume Budé** en France ;
-- **Léonard de Vinci**, à la fois peintre, ingénieur et anatomiste, figure de l’« homme universel ».
+| L’humaniste | Son œuvre |
+| **Érasme** de Rotterdam | Le Nouveau Testament en grec, *L’Éloge de la folie* |
+| **Thomas More** | *Utopie* |
+| **Rabelais**, **Montaigne**, **Guillaume Budé** | En France |
+| **Léonard de Vinci** | Peintre, ingénieur et anatomiste : l’« homme universel » |
 
 ## L’imprimerie, l’accélérateur
-Vers **1450**, **Gutenberg** met au point à Mayence l’impression à **caractères mobiles** métalliques. Les conséquences sont immenses :
-- un livre coûte **beaucoup moins cher** et se produit en centaines d’exemplaires ;
-- les idées circulent **vite** et **loin** ;
-- l’**alphabétisation** progresse ;
-- l’Église perd le contrôle de la diffusion des textes — ce qui pèsera lourd pendant la Réforme.
+@ Vers 1450 — Gutenberg met au point à Mayence l’impression à caractères mobiles métalliques
 
-> On estime à plus de vingt millions le nombre de livres imprimés en Europe avant 1500. Aucun pouvoir ne peut plus surveiller ce que les gens lisent.
+| La conséquence | Son ampleur |
+| Le **prix** du livre | Il s’effondre ; on produit par centaines d’exemplaires |
+| La **circulation** des idées | Vite, et loin |
+| L’**alphabétisation** | Elle progresse |
+| Le **contrôle** de l’Église | Il lui échappe |
+
+= Plus de vingt millions de livres imprimés en Europe avant 1500
+
+> Aucun pouvoir ne peut plus surveiller ce que les gens lisent. C’est ce qui pèsera le plus lourd pendant la Réforme.
 
 ## La Renaissance artistique
-- La **perspective**, l’**anatomie**, le **retour aux modèles antiques** ;
-- des **mécènes** — les Médicis à Florence, les papes à Rome, François Ier en France ;
-- **Léonard de Vinci**, **Michel-Ange**, **Raphaël**, **Botticelli** ;
-- en France, les **châteaux de la Loire** (Chambord) et l’arrivée d’artistes italiens.
+La **perspective**, l’**anatomie**, le retour aux modèles antiques. Des **mécènes** : les **Médicis** à Florence, les papes à Rome, François Ier en France. **Léonard de Vinci**, **Michel-Ange**, **Raphaël**, **Botticelli**. En France, les **châteaux de la Loire** — Chambord.
 
 ## Les sciences
-**Copernic** affirme en 1543 que la Terre tourne autour du Soleil (**héliocentrisme**) ; **Vésale** fonde l’anatomie moderne ; **Ambroise Paré** transforme la chirurgie. Le monde se met à s’observer avant de se raconter.`,
+@ 1543 — Copernic affirme que la Terre tourne autour du Soleil : l’héliocentrisme
+
+**Vésale** fonde l’anatomie moderne ; **Ambroise Paré** transforme la chirurgie.
+
+> Le monde se met à **s’observer** avant de se raconter.`,
           },
           questions: [
             ['Qu’est-ce que l’humanisme ?', ['Un mouvement qui place l’être humain et sa raison au centre de la réflexion', 'Un rejet de toute religion', 'Une doctrine politique républicaine', 'Un courant artistique uniquement'], 0, 'Il ne rompt pas avec la foi.'],
@@ -605,27 +752,46 @@ Vers **1450**, **Gutenberg** met au point à Mayence l’impression à **caract�
           axe: 'Transformations de l’Europe et ouverture sur le monde aux XVIe et XVIIe siècles',
           lecon: {
             titre: 'La Réforme et les guerres qu’elle entraîne',
-            cours: `## Les critiques adressées à l’Église
-Au début du XVIe siècle, beaucoup reprochent à l’Église sa richesse, l’ignorance d’une partie du clergé, le cumul des charges — et surtout le commerce des **indulgences** : la remise des peines contre de l’argent.
+            cours: `Une critique religieuse devient en quelques années une fracture européenne, puis trente-six ans de guerre civile en France.
+
+## Les critiques adressées à l’Église
+Richesse, ignorance d’une partie du clergé, cumul des charges — et surtout le commerce des **indulgences** : la remise des peines contre de l’argent.
 
 ## Luther
-En **1517**, le moine allemand **Martin Luther** publie ses **95 thèses** contre les indulgences. Il affirme que le salut vient de la **foi seule**, que la **Bible** est la seule autorité, et qu’elle doit être lue par tous — il la traduit en allemand.
+@ 1517 — Martin Luther publie ses 95 thèses contre les indulgences
+@ 1521 — Il est excommunié, et protégé par des princes allemands
 
-**Excommunié** en 1521, il est protégé par des princes allemands. Le **protestantisme** est né. Les luthériens rejettent le culte des saints, ne gardent que deux sacrements (baptême et eucharistie) et autorisent le mariage des pasteurs.
+| Ce qu’il affirme | |
+| Le salut vient de la **foi seule** | |
+| La **Bible** est la seule autorité | Il la traduit en allemand pour que tous la lisent |
+
+Les luthériens rejettent le culte des saints, ne gardent que **deux** sacrements — baptême et eucharistie — et autorisent le mariage des pasteurs.
 
 ## Calvin
-**Jean Calvin**, réfugié à **Genève**, développe une seconde branche : la **prédestination** — Dieu a choisi d’avance ceux qui seront sauvés —, une organisation stricte de la cité, un culte dépouillé. Le **calvinisme** gagne la France, l’Écosse, les Pays-Bas.
+Réfugié à **Genève**, **Jean Calvin** développe une seconde branche.
+
+| Sa doctrine | Ce qu’elle dit |
+| La **prédestination** | Dieu a choisi d’avance ceux qui seront sauvés |
+| L’organisation | Une cité strictement réglée |
+| Le culte | Dépouillé |
+
+Le **calvinisme** gagne la France, l’Écosse, les Pays-Bas.
 
 ## La réaction catholique
-Le **concile de Trente** (1545-1563) réaffirme les dogmes catholiques, réforme la formation des prêtres, crée les séminaires. Les **jésuites**, fondés par Ignace de Loyola, se consacrent à l’enseignement et aux missions. L’**Index** liste les livres interdits.
+@ 1545-1563 — Le concile de Trente réaffirme les dogmes et crée les séminaires
 
-## Les guerres de Religion en France (1562-1598)
-Catholiques et **huguenots** (protestants français) s’affrontent pendant trente-six ans.
-- **1572** : le **massacre de la Saint-Barthélemy** — plusieurs milliers de protestants tués à Paris et en province.
-- **1589** : **Henri de Navarre**, protestant, devient roi sous le nom d’**Henri IV**. Pour pacifier le royaume, il se convertit au catholicisme en 1593.
-- **1598** : l’**édit de Nantes** accorde aux protestants la liberté de conscience, un culte encadré et des places de sûreté.
+Les **jésuites**, fondés par Ignace de Loyola, se consacrent à l’enseignement et aux missions. L’**Index** liste les livres interdits.
 
-> L’édit de Nantes ne proclame pas la tolérance moderne : il organise une **coexistence** pour arrêter la guerre. Louis XIV le révoquera en 1685.`,
+## Les guerres de Religion en France
+@ 1562 — Début des guerres de Religion
+@ 1572 — Le massacre de la Saint-Barthélemy : des milliers de protestants tués à Paris et en province
+@ 1589 — Henri de Navarre, protestant, devient roi sous le nom d’Henri IV
+@ 1593 — Il se convertit au catholicisme pour pacifier le royaume
+@ 1598 — L’édit de Nantes accorde aux protestants liberté de conscience, culte encadré et places de sûreté
+
+Les protestants français s’appellent les **huguenots**.
+
+!> **L’édit de Nantes ne proclame pas la tolérance moderne** : il organise une **coexistence** pour arrêter la guerre. Louis XIV le révoquera en 1685.`,
           },
           questions: [
             ['Que dénonce Luther en 1517 dans ses 95 thèses ?', ['Le commerce des indulgences', 'Le célibat des prêtres uniquement', 'L’existence du pape', 'La traduction de la Bible'], 0, 'Il affirme que le salut vient de la foi seule.'],
@@ -643,28 +809,35 @@ Catholiques et **huguenots** (protestants français) s’affrontent pendant tren
           axe: 'Transformations de l’Europe et ouverture sur le monde aux XVIe et XVIIe siècles',
           lecon: {
             titre: 'Louis XIV, ou l’État concentré dans un homme',
-            cours: `## Qu’est-ce que la monarchie absolue ?
-Un régime où le roi détient **tous les pouvoirs** — législatif, exécutif, judiciaire — sans avoir de comptes à rendre à personne, sinon à Dieu. C’est la théorie du **droit divin** : le roi tient son pouvoir de Dieu seul.
+            cours: `La monarchie absolue concentre tous les pouvoirs dans un seul homme. Absolu ne veut pourtant pas dire arbitraire.
 
-Absolu ne signifie pas arbitraire : le roi reste tenu par les **lois fondamentales** du royaume et par les coutumes.
+## Qu’est-ce que la monarchie absolue
+Un régime où le roi détient **tous les pouvoirs** — législatif, exécutif, judiciaire — sans comptes à rendre à personne, sinon à Dieu. C’est la théorie du **droit divin**.
+
+!> **Absolu ne signifie pas arbitraire.** Le roi reste tenu par les **lois fondamentales** du royaume et par les coutumes. Il ne peut ni changer l’ordre de succession, ni aliéner le domaine royal.
 
 ## La construction
-- **Henri IV** (1589-1610) restaure le royaume après les guerres de Religion ; son ministre **Sully** relève les finances.
-- **Louis XIII** et son ministre le cardinal de **Richelieu** (1624-1642) abattent les places fortes protestantes, soumettent les grands nobles et créent les **intendants**, agents du roi dans les provinces.
-- **Mazarin** poursuit pendant la minorité de Louis XIV et affronte la révolte de la **Fronde** (1648-1653) — dont le jeune roi gardera un souvenir durable.
+@ 1589-1610 — Henri IV restaure le royaume ; son ministre Sully relève les finances
+@ 1624-1642 — Richelieu abat les places fortes protestantes et crée les intendants
+@ 1648-1653 — La Fronde, révolte dont le jeune Louis XIV gardera un souvenir durable
+@ 1661 — À la mort de Mazarin, Louis XIV décide de gouverner seul
+@ 1682 — La cour est fixée à Versailles
+@ 1685 — Révocation de l’édit de Nantes
 
-## Louis XIV (1643-1715)
-À la mort de Mazarin en **1661**, il décide de gouverner **seul**, sans Premier ministre. Son règne personnel dure cinquante-quatre ans, le plus long de l’histoire de France.
+Le règne personnel de Louis XIV dure **cinquante-quatre ans**, le plus long de l’histoire de France.
 
-Ses instruments :
-- **Versailles**, où la cour est fixée en 1682 : la noblesse y est domestiquée par l’**étiquette** ;
-- l’image : le **Roi-Soleil**, les portraits, les fêtes, les académies, les artistes pensionnés ;
-- **Colbert** et le **mercantilisme** : manufactures royales, marine, colonies, protectionnisme ;
-- une **armée permanente** de plusieurs centaines de milliers d’hommes, **Vauban** et ses forteresses ;
-- l’**unité religieuse** : la **révocation de l’édit de Nantes** en 1685 chasse du royaume des dizaines de milliers de protestants — un désastre économique autant qu’humain.
+## Ses instruments
+| L’instrument | Ce qu’il fait |
+| **Versailles** et l’**étiquette** | La noblesse y est domestiquée |
+| L’**image** : le **Roi-Soleil** | Portraits, fêtes, académies, artistes pensionnés |
+| **Colbert** et le **mercantilisme** | Manufactures royales, marine, colonies, protectionnisme |
+| L’**armée permanente** | Plusieurs centaines de milliers d’hommes ; **Vauban** et ses forteresses |
+| L’**unité religieuse** | La révocation de l’édit de Nantes |
+
+!> La révocation de l’édit de Nantes chasse du royaume **des dizaines de milliers de protestants** — souvent artisans et commerçants qualifiés. C’est un désastre économique autant qu’humain.
 
 ## Les limites
-Guerres incessantes et coûteuses, famines de 1693 et 1709, finances épuisées, contestations. Le modèle absolutiste, imité dans toute l’Europe, laisse à la mort du roi un royaume affaibli.
+Guerres incessantes et coûteuses, famines de **1693** et **1709**, finances épuisées, contestations. Le modèle absolutiste, imité dans toute l’Europe, laisse à la mort du roi un royaume affaibli.
 
 > « L’État, c’est moi » : la formule lui est attribuée sans preuve, mais elle résume exactement ce que Versailles donnait à voir.`,
           },
@@ -694,32 +867,38 @@ Guerres incessantes et coûteuses, famines de 1693 et 1709, finances épuisées,
           axe: 'La question démographique et l’inégal développement',
           lecon: {
             titre: 'Répondre aux besoins d’aujourd’hui sans sacrifier demain',
-            cours: `## La définition
-Le **développement durable** est « un développement qui répond aux besoins du présent **sans compromettre** la capacité des générations futures à répondre aux leurs ». La formule vient du **rapport Brundtland** (1987).
+            cours: `Répondre aux besoins d’aujourd’hui sans compromettre ceux de demain : la formule tient en une phrase, et engage tout.
+
+## La définition
+Un développement qui répond aux besoins du présent **sans compromettre** la capacité des générations futures à répondre aux leurs. La formule vient du **rapport Brundtland**, en 1987.
 
 ## Les trois piliers
-- **Économique** : produire des richesses et créer des emplois.
-- **Social** : répondre aux besoins de tous — santé, éducation, logement, équité.
-- **Environnemental** : préserver les ressources, la biodiversité et le climat.
+| Le pilier | Ce qu’il demande |
+| **Économique** | Produire des richesses, créer des emplois |
+| **Social** | Santé, éducation, logement, équité pour tous |
+| **Environnemental** | Préserver ressources, biodiversité et climat |
 
-Un projet n’est durable que s’il satisfait les **trois** à la fois. Les croiser deux à deux donne trois exigences : **viable** (économie + environnement), **équitable** (économie + social), **vivable** (social + environnement).
+!> Un projet n’est durable que s’il satisfait les **trois à la fois**. Croisés deux à deux, ils donnent trois exigences : **viable** (économie + environnement), **équitable** (économie + social), **vivable** (social + environnement).
 
 ## D’où vient la notion
-- **1972** : premier sommet de la Terre à Stockholm.
-- **1987** : rapport Brundtland, qui fixe la définition.
-- **1992** : sommet de **Rio**, qui popularise le terme et lance les Agendas 21.
-- **2015** : l’ONU adopte les **17 objectifs de développement durable (ODD)** à atteindre en 2030 — pauvreté, faim, santé, éducation, égalité, eau, énergie, climat.
-- **2015** : l’**accord de Paris** engage les États à limiter le réchauffement bien en dessous de 2 °C.
+@ 1972 — Premier sommet de la Terre, à Stockholm
+@ 1987 — Rapport Brundtland : la définition
+@ 1992 — Sommet de Rio : le terme se popularise, les Agendas 21 sont lancés
+@ 2015 — L’ONU adopte les 17 objectifs de développement durable, à atteindre en 2030
+@ 2015 — L’accord de Paris engage à limiter le réchauffement bien en dessous de 2 °C
 
 ## Mesurer le développement
-- Le **PIB par habitant** mesure la richesse produite, mais rien d’autre.
-- L’**IDH** (indice de développement humain), entre 0 et 1, combine **richesse**, **espérance de vie** et **niveau d’éducation**. Il donne une image plus juste des conditions de vie.
-- L’**empreinte écologique** mesure la surface nécessaire pour produire ce qu’une population consomme et absorber ses déchets.
+| L’indicateur | Ce qu’il mesure | Sa limite |
+| Le **PIB par habitant** | La richesse produite | Rien d’autre |
+| L’**IDH**, entre 0 et 1 | **Richesse** + **espérance de vie** + **éducation** | Il ignore les inégalités internes |
+| L’**empreinte écologique** | La surface nécessaire pour produire ce qu’on consomme et absorber ses déchets | |
 
 > Si toute l’humanité vivait comme un Français moyen, il faudrait près de **trois planètes**. Le développement durable est né de ce constat.
 
 ## À toutes les échelles
-Un tri sélectif dans un collège, une piste cyclable dans une ville, un accord climatique mondial : le développement durable se joue du **local** au **mondial**, et les deux échelles se répondent.`,
+~ Un tri sélectif dans un collège → une piste cyclable dans une ville → un accord climatique mondial
+
+Le développement durable se joue du **local** au **mondial**, et les deux échelles se répondent.`,
           },
           questions: [
             ['Comment définit-on le développement durable ?', ['Un développement qui répond aux besoins du présent sans compromettre ceux des générations futures', 'Un développement qui dure longtemps', 'Une croissance économique rapide', 'Un développement sans industrie'], 0, 'La définition vient du rapport Brundtland de 1987.'],
@@ -737,35 +916,43 @@ Un tri sélectif dans un collège, une piste cyclable dans une ville, un accord 
           axe: 'La question démographique et l’inégal développement',
           lecon: {
             titre: 'Huit milliards d’humains, très inégalement répartis',
-            cours: `## Une croissance sans précédent
-La population mondiale est passée de **1 milliard** vers 1800 à **8 milliards** en 2022. Elle devrait atteindre environ **10 milliards** vers 2060 avant de se stabiliser.
+            cours: `Huit milliards d’humains — mais deux mondes démographiques, qui n’appellent pas les mêmes politiques.
+
+## Une croissance sans précédent
+@ Vers 1800 — 1 milliard d’humains
+@ 2022 — 8 milliards
+@ Vers 2060 — Environ 10 milliards, puis une stabilisation
 
 ## Comment on la mesure
-- **Taux de natalité** : naissances pour 1 000 habitants par an.
-- **Taux de mortalité** : décès pour 1 000 habitants par an.
-- **Accroissement naturel** = natalité − mortalité.
-- **Fécondité** : nombre moyen d’enfants par femme. Le **seuil de renouvellement** est de **2,1**.
-- **Espérance de vie** à la naissance.
+| L’indicateur | Sa définition |
+| **Taux de natalité** | Naissances pour 1 000 habitants par an |
+| **Taux de mortalité** | Décès pour 1 000 habitants par an |
+| **Accroissement naturel** | Natalité − mortalité |
+| **Fécondité** | Enfants par femme ; seuil de renouvellement : **2,1** |
+| **Espérance de vie** | À la naissance |
 
 ## La transition démographique
-Le modèle qui explique cette explosion, en trois temps :
-1. **Avant** : forte natalité, forte mortalité — la population stagne.
-2. **Pendant** : la mortalité **chute** (médecine, vaccins, eau potable, alimentation) alors que la natalité reste élevée — la population **explose**.
-3. **Après** : la natalité baisse à son tour (scolarisation des filles, contraception, urbanisation, coût de l’enfant) — la population se stabilise.
+| La phase | La natalité | La mortalité | La population |
+| **1. Avant** | Forte | Forte | Elle **stagne** |
+| **2. Pendant** | Forte | Elle **chute** | Elle **explose** |
+| **3. Après** | Elle baisse à son tour | Faible | Elle se **stabilise** |
 
-L’Europe a achevé sa transition ; l’**Afrique subsaharienne** est encore en pleine phase 2.
+En phase 2, la mortalité recule grâce à la médecine, aux vaccins, à l’eau potable et à l’alimentation. En phase 3, la natalité baisse avec la scolarisation des filles, la contraception, l’urbanisation et le coût de l’enfant.
+
+!> L’Europe a **achevé** sa transition ; l’**Afrique subsaharienne** est encore en pleine **phase 2**. C’est ce décalage qui explique l’essentiel des différences actuelles.
 
 ## Une répartition très inégale
-- L’**Asie** concentre près de **60 %** de l’humanité — l’**Inde** et la **Chine** dépassent chacune 1,4 milliard d’habitants.
-- Les grands **foyers de peuplement** : Asie du Sud et de l’Est, Europe, nord-est de l’Amérique du Nord, golfe de Guinée.
-- Les **vides humains** : déserts chauds et froids, hautes montagnes, forêts denses.
-- La **densité** (habitants par km²) mesure cette répartition.
+| Le fait | Le chiffre |
+| L’**Asie** | Près de **60 %** de l’humanité |
+| L’**Inde** et la **Chine** | Plus de 1,4 milliard d’habitants chacune |
+
+Les grands **foyers de peuplement** : Asie du Sud et de l’Est, Europe, nord-est de l’Amérique du Nord, golfe de Guinée. Les **vides humains** : déserts chauds et froids, hautes montagnes, forêts denses.
 
 ## Les effets
-- Nourrir, loger, scolariser, soigner une population qui croît vite ;
-- une **urbanisation** rapide et souvent mal maîtrisée ;
-- une pression accrue sur l’eau, les sols et l’énergie ;
-- au Nord, le problème inverse : le **vieillissement** et le financement des retraites.
+| Au Sud | Au Nord |
+| Nourrir, loger, scolariser, soigner une population qui croît vite | Le **vieillissement** et le financement des retraites |
+| Une **urbanisation** rapide, souvent mal maîtrisée | |
+| Une pression accrue sur l’eau, les sols, l’énergie | |
 
 > Deux mondes coexistent : l’un doit gérer une jeunesse nombreuse, l’autre une population qui vieillit. Ce ne sont pas les mêmes politiques.`,
           },
@@ -785,32 +972,47 @@ L’Europe a achevé sa transition ; l’**Afrique subsaharienne** est encore en
           axe: 'La question démographique et l’inégal développement',
           lecon: {
             titre: 'Des inégalités entre les pays, et à l’intérieur de chacun',
-            cours: `## Mesurer le développement
-- Le **PIB par habitant** : la richesse produite rapportée à la population.
-- L’**IDH** : richesse, santé et éducation combinés, entre 0 et 1. La Norvège dépasse 0,95 ; plusieurs pays d’Afrique subsaharienne restent sous 0,45.
-- Le **seuil de pauvreté extrême**, fixé par la Banque mondiale, concerne encore environ **700 millions** de personnes.
+            cours: `Il y a des pauvres dans les pays riches et des très riches dans les pays pauvres. C’est pourquoi la carte des États ne suffit jamais.
+
+## Mesurer le développement
+| L’indicateur | Ce qu’il dit |
+| Le **PIB par habitant** | La richesse produite rapportée à la population |
+| L’**IDH** | Richesse, santé et éducation combinés, entre 0 et 1 |
+| Le **seuil de pauvreté extrême** | Fixé par la Banque mondiale |
+
+= La Norvège dépasse 0,95 d’IDH · plusieurs pays d’Afrique subsaharienne restent sous 0,45
+
+= Environ 700 millions de personnes vivent encore en pauvreté extrême
 
 ## Les inégalités entre les pays
-- Les **pays développés** (Amérique du Nord, Europe, Japon, Australie) : IDH élevé, économie tertiarisée, population vieillissante.
-- Les **pays émergents** (Chine, Inde, Brésil, Afrique du Sud) : croissance rapide, industrialisation, mais fortes inégalités internes.
-- Les **PMA** (pays les moins avancés), une cinquantaine, surtout en Afrique : IDH faible, économie peu diversifiée, forte dépendance à l’aide.
+| Le groupe | Ses traits |
+| Les pays **développés** — Amérique du Nord, Europe, Japon, Australie | IDH élevé, économie tertiarisée, population vieillissante |
+| Les pays **émergents** — Chine, Inde, Brésil, Afrique du Sud | Croissance rapide, industrialisation, **fortes inégalités internes** |
+| Les **PMA** — une cinquantaine, surtout en Afrique | IDH faible, économie peu diversifiée, dépendance à l’aide |
 
-L’ancienne opposition « **Nord/Sud** » reste commode mais devient insuffisante : elle ne dit rien de la Chine ni des inégalités internes.
+!> L’ancienne opposition « **Nord/Sud** » reste commode, mais elle ne dit rien de la Chine, ni des inégalités **à l’intérieur** de chaque pays.
 
 ## Les inégalités à l’intérieur des pays
-Elles sont parfois plus fortes que les écarts entre pays :
-- **bidonvilles** et quartiers d’affaires dans la même ville ;
-- **villes** contre **campagnes** isolées ;
-- littoraux dynamiques contre intérieurs délaissés ;
-- inégalités entre **hommes et femmes**, entre générations.
+| L’opposition | |
+| **Bidonvilles** et quartiers d’affaires | Dans la même ville |
+| **Villes** et **campagnes** isolées | |
+| Littoraux dynamiques et intérieurs délaissés | |
+| Entre **hommes et femmes**, entre générations | |
 
-> Il y a des pauvres dans les pays riches et des très riches dans les pays pauvres : c’est pourquoi la carte des États ne suffit jamais à décrire la pauvreté.
+> Il y a des pauvres dans les pays riches et des très riches dans les pays pauvres.
 
 ## Ce qui réduit les écarts
-La **scolarisation**, en particulier des filles ; l’**accès aux soins** et à l’eau potable ; les **microcrédits** ; les **transferts** des migrants vers leur pays d’origine, supérieurs à l’aide publique au développement ; l’**aide** internationale et les **ONG**.
+| Le levier | |
+| La **scolarisation**, en particulier des filles | |
+| L’**accès aux soins** et à l’eau potable | |
+| Les **microcrédits** | |
+| Les **transferts** des migrants vers leur pays | **Supérieurs à l’aide publique au développement** |
+| L’**aide** internationale et les **ONG** | |
 
 ## Les progrès réels
-En trente ans, l’extrême pauvreté a fortement reculé, l’espérance de vie mondiale a augmenté et la scolarisation a progressé partout. Les inégalités demeurent, mais le monde de 2020 n’est pas celui de 1990.`,
+En trente ans, l’extrême pauvreté a fortement reculé, l’espérance de vie mondiale a augmenté et la scolarisation a progressé partout.
+
+> Les inégalités demeurent, mais le monde de 2020 n’est pas celui de 1990.`,
           },
           questions: [
             ['Que combine l’IDH ?', ['La richesse, la santé et l’éducation', 'Le PIB et la superficie', 'La population et les ressources', 'Le taux de chômage et l’inflation'], 0, 'Il donne une image plus juste que le seul PIB.'],
@@ -828,31 +1030,40 @@ En trente ans, l’extrême pauvreté a fortement reculé, l’espérance de vie
           axe: 'Des ressources limitées, à gérer et à renouveler',
           lecon: {
             titre: 'Assez de nourriture, mal répartie',
-            cours: `## Le paradoxe
-La planète produit **assez** de nourriture pour tous — et pourtant, environ **800 millions** de personnes souffrent de la **faim**, tandis que plus de deux milliards sont en surpoids. Le problème n’est pas seulement la quantité produite : c’est l’**accès**.
+            cours: `La planète produit assez de nourriture pour tous. Le problème n’est pas la quantité produite : c’est l’accès.
+
+## Le paradoxe
+= Environ 800 millions de personnes souffrent de la faim
+
+= Plus de 2 milliards sont en surpoids
 
 ## Le vocabulaire
-- **Sous-nutrition** : ne pas manger assez de calories.
-- **Malnutrition** : mal manger — carences en protéines, en vitamines, en fer.
-- **Insécurité alimentaire** : ne pas être sûr de manger à sa faim demain.
-- **Sécurité alimentaire** : l’accès de tous, à tout moment, à une nourriture suffisante et saine.
+| Le mot | Ce qu’il désigne |
+| **Sous-nutrition** | Ne pas manger assez de **calories** |
+| **Malnutrition** | **Mal** manger : carences en protéines, vitamines, fer |
+| **Insécurité alimentaire** | Ne pas être sûr de manger à sa faim demain |
+| **Sécurité alimentaire** | L’accès de tous, à tout moment, à une nourriture suffisante et saine |
 
 ## Les causes de la faim
-Pauvreté, conflits armés, sécheresses et catastrophes, absence de routes et de stockage, spéculation sur les prix, dépendance aux importations.
+~ Pauvreté → conflits armés → sécheresses et catastrophes → absence de routes et de stockage → spéculation sur les prix
 
 ## Deux modèles agricoles
-- L’agriculture **vivrière** : produire pour se nourrir, avec peu de moyens, des rendements faibles, très exposée aux aléas. Elle fait vivre une grande partie de l’Afrique et de l’Asie du Sud.
-- L’agriculture **productiviste** et **commerciale** : mécanisation, intrants, irrigation, sélection, rendements élevés, production destinée au marché mondial.
+| Le modèle | Ses moyens | Ses rendements |
+| **Vivrière** | Peu de moyens ; produire pour se nourrir | Faibles, très exposés aux aléas |
+| **Productiviste et commerciale** | Mécanisation, intrants, irrigation, sélection | Élevés, pour le marché mondial |
 
-La **révolution verte** (années 1960-1980) a fortement augmenté les rendements en Asie — au prix d’une forte consommation d’eau et d’intrants.
+La **révolution verte** des années 1960-1980 a fortement augmenté les rendements en Asie — au prix d’une forte consommation d’eau et d’intrants.
 
 ## Nourrir sans épuiser
-- L’agriculture occupe **la moitié** des terres habitables et consomme **70 %** de l’eau douce prélevée.
-- Elle contribue fortement aux **émissions de gaz à effet de serre** et à la **déforestation**.
-- Environ **un tiers** de la nourriture produite est **perdue ou gaspillée**.
+| Le fait | Le chiffre |
+| Les terres occupées par l’agriculture | **La moitié** des terres habitables |
+| L’eau douce prélevée par l’agriculture | **70 %** |
+| La nourriture perdue ou gaspillée | Environ **un tiers** |
+
+L’agriculture contribue aussi fortement aux émissions de gaz à effet de serre et à la déforestation.
 
 ## Les pistes
-**Agroécologie**, agriculture biologique, circuits courts, réduction du gaspillage, limitation de la consommation de viande (très coûteuse en terres et en eau), amélioration du stockage et des transports dans les pays du Sud, sécurisation du foncier pour les paysans.
+**Agroécologie**, agriculture biologique, circuits courts, réduction du gaspillage, limitation de la consommation de viande, amélioration du stockage et des transports au Sud, sécurisation du foncier pour les paysans.
 
 > Nourrir 10 milliards d’humains en 2060 est possible ; le faire **sans épuiser les sols, l’eau et le climat** est le vrai défi.`,
           },
@@ -872,36 +1083,49 @@ La **révolution verte** (années 1960-1980) a fortement augmenté les rendement
           axe: 'Des ressources limitées, à gérer et à renouveler',
           lecon: {
             titre: 'Beaucoup d’eau, très peu disponible',
-            cours: `## Une ressource rare, en réalité
-L’eau couvre 71 % de la planète, mais :
-- **97,5 %** est **salée** ;
-- sur les 2,5 % d’eau douce, l’essentiel est pris dans les **glaces** et les nappes profondes ;
-- moins de **1 %** de l’eau douce est **facilement accessible** — rivières, lacs, nappes superficielles.
+            cours: `L’eau couvre les trois quarts de la planète. Moins de 1 % de l’eau douce est facilement accessible.
+
+## Une ressource rare, en réalité
+~ 100 % de l’eau → 97,5 % salée → 2,5 % douce → dont l’essentiel pris dans les glaces et les nappes profondes
+
+= Moins de 1 % de l’eau douce est facilement accessible
 
 ## Une répartition très inégale
-Neuf pays concentrent 60 % des réserves d’eau douce. À l’inverse, le Proche-Orient, le Sahel et l’Asie centrale manquent structurellement d’eau.
-- **Stress hydrique** : moins de 1 700 m³ par habitant et par an.
-- **Pénurie** : moins de 1 000 m³.
+Neuf pays concentrent **60 %** des réserves d’eau douce. À l’inverse, le Proche-Orient, le Sahel et l’Asie centrale en manquent structurellement.
 
-Environ **2 milliards** de personnes n’ont pas d’accès sûr à l’eau potable ; l’eau insalubre reste l’une des premières causes de mortalité infantile.
+| Le seuil | Le volume par habitant et par an |
+| **Stress hydrique** | Moins de **1 700 m³** |
+| **Pénurie** | Moins de **1 000 m³** |
+
+= Environ 2 milliards de personnes n’ont pas d’accès sûr à l’eau potable
+
+!> L’eau insalubre reste l’une des **premières causes de mortalité infantile** dans le monde.
 
 ## Qui consomme quoi
-- **Agriculture : environ 70 %** des prélèvements (irrigation) ;
-- **industrie : 20 %** ;
-- **usages domestiques : 10 %**.
+| L’usage | Sa part des prélèvements |
+| L’**agriculture** (irrigation) | **70 %** |
+| L’**industrie** | **20 %** |
+| Les **usages domestiques** | **10 %** |
 
 Un habitant d’Amérique du Nord consomme plusieurs centaines de litres par jour ; un habitant du Sahel, parfois moins de vingt.
 
 ## L’eau virtuelle
-C’est l’eau nécessaire pour **produire** un bien : environ 15 000 litres pour un kilo de bœuf, 2 700 pour un tee-shirt en coton, 140 pour une tasse de café. Importer un produit, c’est importer l’eau qui a servi à le faire.
+C’est l’eau nécessaire pour **produire** un bien.
+
+| Le produit | Son eau virtuelle |
+| 1 kg de bœuf | ≈ **15 000 litres** |
+| 1 tee-shirt en coton | ≈ 2 700 litres |
+| 1 tasse de café | ≈ 140 litres |
+
+> Importer un produit, c’est importer l’eau qui a servi à le faire.
 
 ## Les pressions
-Surexploitation des nappes, **pollution** agricole et industrielle, assèchement de la **mer d’Aral**, fonte des glaciers qui alimentent les grands fleuves d’Asie, conflits d’usage entre pays riverains d’un même fleuve (Nil, Jourdain, Tigre et Euphrate).
+Surexploitation des nappes, **pollution** agricole et industrielle, assèchement de la **mer d’Aral**, fonte des glaciers qui alimentent les grands fleuves d’Asie, conflits entre pays riverains d’un même fleuve — Nil, Jourdain, Tigre et Euphrate.
 
 ## Les solutions
-Économiser (**goutte-à-goutte**, réparation des fuites, tarification), **recycler** les eaux usées, **dessaler** l’eau de mer (coûteux et énergivore), protéger les nappes et les zones humides, et coopérer entre États riverains.
+**Économiser** (goutte-à-goutte, réparation des fuites, tarification), **recycler** les eaux usées, **dessaler** l’eau de mer — coûteux et énergivore —, protéger nappes et zones humides, coopérer entre États riverains.
 
-> L’eau ne manque pas partout ; elle manque là où l’on en a besoin, au moment où l’on en a besoin. C’est un problème de **gestion** autant que de stock.`,
+> L’eau ne manque pas partout ; elle manque **là où l’on en a besoin, au moment où l’on en a besoin**. C’est un problème de gestion autant que de stock.`,
           },
           questions: [
             ['Quelle part de l’eau de la planète est douce ?', ['2,5 %', '30 %', '10 %', '50 %'], 0, 'Et l’essentiel de cette eau douce est pris dans les glaces.'],
@@ -919,34 +1143,41 @@ Surexploitation des nappes, **pollution** agricole et industrielle, assèchement
           axe: 'Des ressources limitées, à gérer et à renouveler',
           lecon: {
             titre: 'Consommer plus, émettre moins : l’équation du siècle',
-            cours: `## Une consommation qui explose
-La consommation mondiale d’énergie a été **multipliée par plus de dix** en un siècle, sous l’effet de la croissance démographique, de l’industrialisation et de l’élévation du niveau de vie. Elle reste très inégale : un Nord-Américain consomme plusieurs dizaines de fois plus qu’un habitant du Sahel.
+            cours: `Consommer plus d’énergie et en émettre moins : c’est l’équation la plus difficile du siècle.
+
+## Une consommation qui explose
+= La consommation mondiale d’énergie a été multipliée par plus de dix en un siècle
+
+Croissance démographique, industrialisation, élévation du niveau de vie. Un Nord-Américain consomme plusieurs dizaines de fois plus qu’un habitant du Sahel.
 
 ## Deux familles d’énergies
-**Non renouvelables** — leurs stocks sont limités :
-- **pétrole** (transports, plastiques), **charbon** (électricité, sidérurgie), **gaz naturel** ;
-- **uranium** pour le nucléaire.
-Les énergies fossiles représentent encore environ **80 %** du mix mondial.
-
-**Renouvelables** — elles se reconstituent à l’échelle humaine :
-- **hydraulique** (la première d’entre elles), **éolien**, **solaire**, **géothermie**, **biomasse**.
+| La famille | Ses membres | Sa part du mix mondial |
+| **Non renouvelables** | **Pétrole**, **charbon**, **gaz naturel**, **uranium** | Les fossiles pèsent encore ≈ **80 %** |
+| **Renouvelables** | **Hydraulique** (la première), **éolien**, **solaire**, **géothermie**, **biomasse** | Le reste, en croissance |
 
 ## Les problèmes posés
-- Les **réserves** de fossiles sont finies, et concentrées dans quelques régions (Moyen-Orient, Russie, États-Unis), ce qui crée des **dépendances** et des tensions géopolitiques.
-- La combustion des fossiles émet du **CO₂** : c’est la première cause du **réchauffement climatique**.
-- Le nucléaire n’émet presque pas de CO₂ mais pose la question des **déchets** et du **risque d’accident** (Tchernobyl 1986, Fukushima 2011).
-- Les renouvelables sont **intermittentes** (le vent, le soleil), demandent de l’espace et des matériaux rares.
+| L’énergie | Son problème |
+| Les **fossiles** | Réserves finies, concentrées (Moyen-Orient, Russie, États-Unis) : **dépendances** et tensions géopolitiques |
+| Les **fossiles**, encore | Leur combustion émet du **CO₂** : première cause du réchauffement |
+| Le **nucléaire** | Presque pas de CO₂, mais les **déchets** et le **risque d’accident** |
+| Les **renouvelables** | **Intermittentes**, gourmandes en espace et en matériaux rares |
+
+@ 1986 — Tchernobyl
+@ 2011 — Fukushima
 
 ## La transition énergétique
-Elle repose sur trois leviers, dans cet ordre :
-1. **Sobriété** : consommer moins — isolation, transports collectifs, limitation des usages.
-2. **Efficacité** : consommer mieux — appareils à meilleur rendement, réseaux intelligents.
-3. **Substitution** : remplacer les fossiles par des énergies décarbonées.
+Trois leviers, **dans cet ordre** :
+
+1. **Sobriété** : consommer moins — isolation, transports collectifs, limitation des usages ;
+2. **efficacité** : consommer mieux — meilleurs rendements, réseaux intelligents ;
+3. **substitution** : remplacer les fossiles par des énergies décarbonées.
 
 > La première énergie propre est celle qu’on ne consomme pas : aucune source, même renouvelable, n’est sans impact.
 
 ## Les inégalités d’accès
-Environ **700 millions** de personnes n’ont toujours pas accès à l’électricité, principalement en Afrique subsaharienne. Le développement de ces pays passe par l’énergie — d’où l’enjeu de leur donner accès directement aux renouvelables.`,
+= Environ 700 millions de personnes n’ont toujours pas accès à l’électricité
+
+Principalement en Afrique subsaharienne. Leur développement passe par l’énergie — d’où l’enjeu de leur donner accès **directement** aux renouvelables, sans passer par l’étape fossile.`,
           },
           questions: [
             ['Quelle part du mix énergétique mondial les énergies fossiles représentent-elles encore ?', ['Environ 80 %', 'Environ 30 %', 'Environ 50 %', 'Environ 10 %'], 0, 'Pétrole, charbon et gaz dominent toujours.'],
@@ -964,36 +1195,49 @@ Environ **700 millions** de personnes n’ont toujours pas accès à l’électr
           axe: 'Prévenir les risques, s’adapter au changement global',
           lecon: {
             titre: 'Un climat qui se dérègle, des sociétés qui doivent s’adapter',
-            cours: `## De quoi parle-t-on ?
-Le **changement global** désigne l’ensemble des transformations que les activités humaines font subir à la planète : **réchauffement climatique**, perte de **biodiversité**, dégradation des sols, pollutions, urbanisation massive. Le climat en est la composante la plus visible.
+            cours: `L’effet de serre est naturel et indispensable. Ce sont les activités humaines qui le renforcent.
+
+## De quoi parle-t-on
+Le **changement global** désigne l’ensemble des transformations que les activités humaines font subir à la planète : réchauffement, perte de **biodiversité**, dégradation des sols, pollutions, urbanisation massive.
 
 ## Le mécanisme
-L’**effet de serre** est naturel et indispensable : sans lui, la Terre serait à −18 °C. Mais les activités humaines — combustion des énergies fossiles, déforestation, agriculture, industrie — **renforcent** cet effet en émettant du **CO₂**, du **méthane** et d’autres gaz.
+!> **Sans effet de serre, la Terre serait à −18 °C.** Le problème n’est pas l’effet de serre : c’est son **renforcement** par les émissions humaines.
 
-Résultat : une hausse de la température moyenne mondiale d’environ **+1,2 °C** depuis l’ère préindustrielle, et une accélération nette depuis les années 1980.
+~ Combustion des fossiles, déforestation, agriculture, industrie → émissions de CO₂ et de méthane → effet de serre renforcé → réchauffement
+
+= Environ +1,2 °C depuis l’ère préindustrielle, avec une accélération nette depuis les années 1980
 
 ## Les effets déjà mesurables
-- **Fonte** des glaciers et de la banquise ;
-- **hausse du niveau des mers** (dilatation de l’eau et fonte des glaces continentales) ;
-- multiplication des **événements extrêmes** : canicules, sécheresses, incendies, pluies diluviennes, cyclones plus intenses ;
-- déplacement des **espèces** et des zones de culture ;
-- acidification des océans et blanchissement des coraux.
+| L’effet | |
+| **Fonte** des glaciers et de la banquise | |
+| **Hausse du niveau des mers** | Dilatation de l’eau **et** fonte des glaces continentales |
+| **Événements extrêmes** | Canicules, sécheresses, incendies, pluies diluviennes, cyclones plus intenses |
+| Déplacement des **espèces** | Et des zones de culture |
+| **Acidification** des océans | Blanchissement des coraux |
 
 ## Des effets très inégaux
-Ceux qui émettent le moins subissent souvent le plus :
-- les **États insulaires** du Pacifique, menacés de submersion ;
-- le **Sahel**, où la sécheresse s’aggrave ;
-- les grands **deltas** densément peuplés (Bangladesh, Nil, Mékong) ;
-- les régions **polaires**, qui se réchauffent deux à trois fois plus vite que la moyenne.
+| La région | Ce qu’elle subit |
+| Les **États insulaires** du Pacifique | Menacés de submersion |
+| Le **Sahel** | La sécheresse s’aggrave |
+| Les grands **deltas** — Bangladesh, Nil, Mékong | Densément peuplés et exposés |
+| Les régions **polaires** | Elles se réchauffent **deux à trois fois** plus vite que la moyenne |
+
+!> Ceux qui émettent le **moins** subissent souvent le **plus**. C’est le cœur du problème de justice climatique.
 
 ## Deux réponses complémentaires
-- **L’atténuation** : réduire les émissions — transition énergétique, sobriété, reforestation, transports.
-- **L’adaptation** : vivre avec les effets déjà inévitables — digues, îlots de fraîcheur en ville, cultures résistantes à la sécheresse, systèmes d’alerte.
+| La réponse | Ce qu’elle vise |
+| L’**atténuation** | **Réduire les émissions** : transition énergétique, sobriété, reforestation, transports |
+| L’**adaptation** | **Vivre avec** les effets déjà inévitables : digues, îlots de fraîcheur, cultures résistantes, alertes |
 
 > Atténuer et s’adapter ne s’opposent pas : on n’évitera pas tout, et on ne s’adaptera pas à tout. Il faut les deux.
 
 ## La gouvernance mondiale
-**GIEC** pour l’expertise scientifique, **COP** annuelles pour la négociation, **accord de Paris** (2015) pour l’engagement. La difficulté : le climat est un bien commun, et chaque État est tenté d’attendre l’effort des autres.`,
+| L’instance | Son rôle |
+| Le **GIEC** | L’expertise scientifique |
+| Les **COP** | La négociation annuelle |
+| L’**accord de Paris** (2015) | L’engagement des États |
+
+La difficulté : le climat est un **bien commun**, et chaque État est tenté d’attendre l’effort des autres.`,
           },
           questions: [
             ['Qu’est-ce que le changement global ?', ['L’ensemble des transformations que les activités humaines font subir à la planète', 'Le seul réchauffement climatique', 'Un cycle naturel du climat', 'La mondialisation économique'], 0, 'Climat, biodiversité, sols et pollutions y sont liés.'],
@@ -1011,28 +1255,39 @@ Ceux qui émettent le moins subissent souvent le plus :
           axe: 'Prévenir les risques, s’adapter au changement global',
           lecon: {
             titre: 'Quand le danger vient de ce que l’on a construit',
-            cours: `## Le vocabulaire du risque
-- L’**aléa** : l’événement dangereux possible (une explosion, une fuite de produit toxique).
-- La **vulnérabilité** : la fragilité de ce qui est exposé — population, bâtiments, activités.
-- Le **risque** = **aléa × vulnérabilité**. Sans population exposée, un aléa n’est pas un risque.
-- La **catastrophe** : la réalisation du risque.
+            cours: `Un aléa sans population exposée n’est pas un risque. C’est toute la logique de la prévention.
+
+## Le vocabulaire du risque
+| Le mot | Ce qu’il désigne |
+| L’**aléa** | L’événement dangereux **possible** |
+| La **vulnérabilité** | La fragilité de ce qui est exposé : population, bâtiments, activités |
+| Le **risque** | **Aléa × vulnérabilité** |
+| La **catastrophe** | La réalisation du risque |
+
+= Risque = aléa × vulnérabilité
+
+!> **Sans population exposée, un aléa n’est pas un risque.** Une explosion en plein désert n’est pas une catastrophe.
 
 ## Les risques technologiques
-- **Industriel** : explosion, incendie, fuite de gaz ou de produits chimiques. Exemples : **Bhopal** (Inde, 1984, plusieurs milliers de morts), **AZF** à Toulouse (2001), Lubrizol à Rouen (2019).
-- **Nucléaire** : **Tchernobyl** (1986), **Fukushima** (2011) — ce dernier déclenché par un séisme et un tsunami, ce qui montre que les risques naturels et technologiques se combinent.
-- **Transport de matières dangereuses** : routes, voies ferrées, canalisations.
-- **Marées noires** : Erika (1999), Prestige (2002), Deepwater Horizon (2010).
-- **Rupture de barrage**, risque numérique et cyberattaques sur les réseaux vitaux.
+| Le type | Ses exemples |
+| **Industriel** | **Bhopal** (Inde, 1984, plusieurs milliers de morts), **AZF** à Toulouse (2001), Lubrizol à Rouen (2019) |
+| **Nucléaire** | **Tchernobyl** (1986), **Fukushima** (2011) |
+| **Transport de matières dangereuses** | Routes, voies ferrées, canalisations |
+| **Marées noires** | Erika (1999), Prestige (2002), Deepwater Horizon (2010) |
+| **Rupture de barrage**, **cyberattaques** | Sur les réseaux vitaux |
+
+> Fukushima a été déclenché par un séisme et un tsunami : les risques **naturels** et **technologiques** se combinent.
 
 ## Une inégalité mondiale
-Les mêmes usines n’ont pas les mêmes normes selon les pays. Dans les pays pauvres, les installations dangereuses côtoient souvent des quartiers d’habitation denses, et les moyens de secours sont limités : à aléa égal, la **vulnérabilité** y est bien plus grande.
+!> Les mêmes usines n’ont **pas les mêmes normes** selon les pays. Dans les pays pauvres, les installations dangereuses côtoient des quartiers denses et les secours sont limités : à aléa égal, la **vulnérabilité** y est bien plus grande.
 
 ## La prévention
-- **Connaître** : cartographier les zones exposées.
-- **Réglementer** : normes de sécurité, autorisations, contrôles, directive **Seveso** en Europe pour les sites les plus dangereux.
-- **Aménager** : les **PPRT** (plans de prévention des risques technologiques) interdisent ou encadrent la construction autour des sites.
-- **Informer et former** : exercices d’évacuation, sirènes, consignes, éducation aux risques.
-- **Prévoir les secours** : plans d’urgence, moyens dimensionnés à l’avance.
+| L’action | Ce qu’elle fait |
+| **Connaître** | Cartographier les zones exposées |
+| **Réglementer** | Normes, autorisations, contrôles, directive **Seveso** en Europe |
+| **Aménager** | Les **PPRT** interdisent ou encadrent la construction autour des sites |
+| **Informer et former** | Exercices d’évacuation, sirènes, consignes |
+| **Prévoir les secours** | Plans d’urgence dimensionnés à l’avance |
 
 > On ne supprime pas un aléa industriel : on réduit la **vulnérabilité**. C’est tout le sens de l’aménagement autour des sites classés.
 

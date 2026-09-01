@@ -131,28 +131,52 @@ DELETE FROM public.chapters c
           axe: 'Analyse du besoin',
           lecon: {
             titre: 'Du besoin au produit',
-            cours: `Un **projet** est un ensemble d’activités coordonnées, mené une seule fois, pour atteindre un objectif défini dans un délai et un budget donnés. Il se distingue d’une activité de production, qui se répète à l’identique.
+            cours: `Un projet est un ensemble d'activités coordonnées, mené une seule fois, pour atteindre un objectif défini dans un délai et un budget donnés.
+
+> Il se distingue d'une activité de production, qui se répète à l'identique.
 
 ## Le triangle du projet
-Trois contraintes se tiennent : le **coût**, le **délai** et la **qualité** (ou périmètre). On ne peut en améliorer une sans peser sur les deux autres — réduire le délai coûte plus cher ou dégrade la qualité. Savoir le formuler est déjà une compétence d’ingénieur.
+| La contrainte | Ce qu'elle mesure |
+| **Coût** | Le budget engagé |
+| **Délai** | Le temps disponible |
+| **Qualité** (ou périmètre) | Ce que le produit doit faire |
+
+> On ne peut en améliorer une sans peser sur les deux autres : réduire le délai coûte plus cher, ou dégrade la qualité.
 
 ## Le cycle de vie
-Quatre phases se succèdent : **conception**, **planification**, **réalisation**, **terminaison**. Chacune se clôt par un **jalon** — une décision de poursuivre, de corriger ou d’arrêter.
+| La phase | Ce qu'elle produit |
+| **Conception** | Des solutions techniques comparées |
+| **Planification** | Un ordonnancement des tâches |
+| **Réalisation** | Le produit |
+| **Terminaison** | La livraison et le retour d'expérience |
+
+Chacune se clôt par un **jalon** : une décision de poursuivre, de corriger ou d'arrêter.
 
 ## Exprimer le besoin
-Un projet commence par une **analyse du besoin**, qui répond à trois questions : à qui le produit rend-il service ? sur quoi agit-il ? dans quel but ?
+L'analyse du besoin répond à trois questions :
+1. À **qui** le produit rend-il service ?
+2. Sur **quoi** agit-il ?
+3. Dans quel **but** ?
 
-Le besoin est ensuite formalisé dans un **cahier des charges fonctionnel**, qui décrit les **fonctions** attendues et non les solutions techniques.
+Le besoin est formalisé dans un **cahier des charges fonctionnel**.
 
-- La **fonction principale** justifie l’existence du produit ;
-- les **fonctions contraintes** expriment les limites imposées par le milieu extérieur (normes, encombrement, température, coût).
+| La fonction | Ce qu'elle exprime |
+| **Principale** | Ce qui justifie l'existence du produit |
+| **Contrainte** | Les limites imposées par le milieu extérieur : normes, encombrement, température, coût |
 
-Chaque fonction reçoit un **critère**, un **niveau** attendu et une **flexibilité**. « Résister à une charge de 150 kg, tolérance ±10 % » est une exigence exploitable ; « être solide » ne l’est pas.
+Chaque fonction reçoit un **critère**, un **niveau** et une **flexibilité**.
 
-> Le cahier des charges dit **ce qu’il faut faire**, jamais **comment le faire**. Écrire « utiliser un moteur pas à pas » y est une faute : c’est une solution, pas un besoin — et elle interdit d’avance toute autre piste.
+| L'exigence | Est-elle exploitable |
+| « Résister à une charge de 150 kg, tolérance ±10 % » | **Oui** |
+| « Être solide » | **Non** |
 
-## Écarts et validation
-La démarche de l’ingénieur se lit dans trois écarts : entre le **cahier des charges** et le **modèle**, entre le **modèle** et le **réel mesuré**, entre le **réel** et le **cahier des charges**. Les analyser, c’est valider — ou corriger — le produit comme le modèle.`,
+> Le cahier des charges dit **ce qu'il faut faire**, jamais **comment**. Écrire « utiliser un moteur pas à pas » y est une faute : c'est une solution, et elle interdit d'avance toute autre piste.
+
+## Les trois écarts
+| L'écart | Entre quoi et quoi | Ce qu'il valide |
+| 1 | Cahier des charges et **modèle** | La pertinence du modèle |
+| 2 | Modèle et **réel mesuré** | La justesse des hypothèses |
+| 3 | Réel et **cahier des charges** | La conformité du produit |`,
           },
           questions: [
             ['Quelles sont les trois contraintes du triangle du projet ?', ['Le coût, le délai et la qualité', 'Le besoin, la solution et le client', 'L’étude, la production et la vente', 'La conception, la réalisation et la validation'], 0, 'Améliorer l’une pèse toujours sur les deux autres.'],
@@ -170,30 +194,39 @@ La démarche de l’ingénieur se lit dans trois écarts : entre le **cahier des
           axe: 'Analyse du besoin',
           lecon: {
             titre: 'Des idées aux solutions techniques',
-            cours: `La **conception** transforme un besoin en solutions techniques comparables. C’est la phase où l’essentiel du coût final se décide, alors que presque rien n’a encore été dépensé.
+            cours: `La conception transforme un besoin en solutions techniques comparables. C'est la phase où l'essentiel du coût final se décide, alors que presque rien n'a encore été dépensé.
 
-## Du besoin aux fonctions
-On part du cahier des charges fonctionnel et l’on **décompose** : chaque fonction de service se décline en **fonctions techniques**, puis en **solutions constructives**. Un même besoin admet toujours plusieurs solutions — c’est l’objet de la phase que de les faire apparaître.
+## Du besoin aux solutions
+| Le niveau | Ce qu'il décrit |
+| **Fonction de service** | Ce que le produit doit rendre à l'utilisateur |
+| **Fonction technique** | Comment le système s'y prend |
+| **Solution constructive** | La pièce, le composant, le programme retenu |
 
-## La recherche de solutions
-Deux temps à ne pas mélanger :
-- la **divergence** : produire le plus grand nombre d’idées possible, sans juger. Brainstorming, analogies, méthode des combinaisons.
-- la **convergence** : évaluer et retenir. C’est seulement ici qu’on écarte.
+> Un même besoin admet toujours plusieurs solutions. C'est l'objet de la phase que de les faire apparaître.
 
-Juger pendant la divergence tue les idées fragiles, dont sortent souvent les meilleures solutions.
+## Les deux temps de la recherche
+| Le temps | Ce qu'on fait | Ce qui est interdit |
+| **Divergence** | Produire le plus d'idées possible : brainstorming, analogies, combinaisons | **Juger** |
+| **Convergence** | Évaluer et retenir | Rouvrir la liste |
+
+> Juger pendant la divergence tue les idées fragiles — dont sortent souvent les meilleures solutions.
 
 ## Comparer les solutions
-Les outils sont simples et attendus en devoir :
-- le **tableau multicritère**, où chaque critère reçoit un **poids** et chaque solution une note ; le total pondéré classe les solutions ;
-- le **diagramme d’aide à la décision**, qui visualise le compromis entre deux critères ;
-- le **prototypage rapide**, qui permet d’éprouver une solution avant de s’engager.
+| L'outil | Ce qu'il apporte |
+| **Tableau multicritère** | Chaque critère reçoit un **poids**, chaque solution une note ; le total pondéré classe |
+| **Diagramme d'aide à la décision** | Il visualise le compromis entre deux critères |
+| **Prototypage rapide** | Il éprouve une solution avant de s'engager |
 
-> Le tableau multicritère n’est pas un oracle : il rend le choix **explicite et discutable**. Changer les poids change le classement — et c’est précisément ce qu’il faut savoir montrer.
+> Le tableau multicritère n'est pas un oracle : il rend le choix **explicite et discutable**. Changer les poids change le classement — et c'est précisément ce qu'il faut savoir montrer.
 
 ## Modéliser avant de construire
-La **maquette numérique** (CAO) permet de vérifier l’encombrement, les interférences entre pièces et les montages avant toute fabrication. La **simulation** vérifie le comportement : résistance mécanique, échauffement, consommation.
+| L'outil | Ce qu'il vérifie |
+| **Maquette numérique** (CAO) | Encombrement, interférences entre pièces, montages |
+| **Simulation** | Résistance mécanique, échauffement, consommation |
 
-Chaque simulation repose sur des **hypothèses simplificatrices** — solide indéformable, frottements négligés, régime permanent. Les nommer fait partie du travail : un résultat de simulation sans hypothèses n’a aucune valeur.`,
+Chaque simulation repose sur des **hypothèses simplificatrices** : solide indéformable, frottements négligés, régime permanent.
+
+> Les nommer fait partie du travail : un résultat de simulation sans hypothèses n'a aucune valeur.`,
           },
           questions: [
             ['Que produit la phase de conception ?', ['Des solutions techniques répondant au besoin', 'Le planning détaillé du projet', 'Le produit fini', 'Le bilan financier'], 0, 'Elle décline les fonctions en solutions constructives.'],
@@ -211,29 +244,40 @@ Chaque simulation repose sur des **hypothèses simplificatrices** — solide ind
           axe: 'Analyse du besoin',
           lecon: {
             titre: 'Tâches, antériorités et chemin critique',
-            cours: `**Planifier**, c’est répondre à trois questions : quelles tâches, dans quel ordre, avec quelles ressources.
+            cours: `Planifier, c'est répondre à trois questions : quelles tâches, dans quel ordre, avec quelles ressources.
 
 ## Découper le travail
-On décompose le projet en **tâches** élémentaires, chacune caractérisée par une **durée**, des **ressources** et des **antériorités** — les tâches qui doivent être terminées avant qu’elle commence.
+Chaque **tâche** élémentaire est caractérisée par :
 
-## Le diagramme de Gantt
-Chaque tâche y est un **rectangle horizontal**, dont la longueur est proportionnelle à sa durée. Il se lit d’un coup d’œil, montre les tâches **simultanées** et sert de tableau de bord pendant toute la réalisation. C’est l’outil de suivi.
+| Le caractère | Ce qu'il précise |
+| **Durée** | Le temps nécessaire |
+| **Ressources** | Machines, opérateurs, matière |
+| **Antériorités** | Les tâches à terminer avant qu'elle commence |
 
-## Le réseau PERT et le chemin critique
-Le **PERT** représente les tâches et leurs enchaînements sous forme de réseau. On y calcule, pour chaque tâche :
-- sa **date au plus tôt**, en parcourant le réseau du début vers la fin ;
-- sa **date au plus tard**, en le parcourant de la fin vers le début ;
-- sa **marge**, différence des deux.
+## Les deux outils
+| L'outil | Sa forme | À quoi il sert |
+| **Diagramme de Gantt** | Un rectangle horizontal par tâche, de longueur proportionnelle à sa durée | **Suivre** : il montre les tâches simultanées, c'est le tableau de bord |
+| **Réseau PERT** | Un réseau de tâches et d'enchaînements | **Calculer** : dates au plus tôt et au plus tard, marges |
 
-Le **chemin critique** est la suite des tâches de **marge nulle**. Sa longueur donne la **durée minimale** du projet, et tout retard sur l’une de ses tâches retarde **le projet entier**.
+## Le chemin critique
+| La date ou la marge | Comment on l'obtient |
+| **Au plus tôt** | En parcourant le réseau du début vers la fin |
+| **Au plus tard** | En le parcourant de la fin vers le début |
+| **Marge** | La différence des deux |
 
-> C’est l’enseignement central du chapitre : accélérer une tâche qui n’est pas sur le chemin critique ne fait gagner **aucun jour** au projet. On ne renforce que ce qui est critique.
+Le **chemin critique** est la suite des tâches de **marge nulle**. Sa longueur donne la **durée minimale** du projet.
 
-## Ressources et coûts
-Une tâche peut être limitée non par sa logique mais par la **disponibilité** d’une ressource — une machine, un opérateur. Le lissage des ressources consiste à décaler les tâches disposant d’une marge pour éviter les pics de charge.
+> Enseignement central du chapitre : accélérer une tâche qui n'est **pas** sur le chemin critique ne fait gagner **aucun jour** au projet. On ne renforce que ce qui est critique.
+
+Tout retard sur une tâche critique retarde le projet entier.
+
+## Ressources et lissage
+Une tâche peut être limitée non par sa logique, mais par la **disponibilité** d'une machine ou d'un opérateur. Le **lissage** consiste à décaler les tâches disposant d'une marge, pour éviter les pics de charge.
 
 ## Suivre et corriger
-Pendant la réalisation, on compare l’**avancement réel** au prévisionnel. Un retard sur une tâche à marge se résorbe ; un retard sur le chemin critique impose un arbitrage : ajouter des moyens, réduire le périmètre, ou accepter le décalage.`,
+| Le retard porte sur… | La conséquence |
+| Une tâche **à marge** | Il se résorbe |
+| Une tâche **critique** | Il impose un arbitrage : ajouter des moyens, réduire le périmètre, ou accepter le décalage |`,
           },
           questions: [
             ['Qu’est-ce que le chemin critique d’un projet ?', ['La suite des tâches de marge nulle, qui fixe la durée minimale du projet', 'La tâche la plus coûteuse', 'La tâche la plus longue', 'La suite des tâches les plus risquées'], 0, 'Tout retard sur l’une d’elles retarde le projet entier.'],
@@ -251,32 +295,43 @@ Pendant la réalisation, on compare l’**avancement réel** au prévisionnel. U
           axe: 'Analyse du besoin',
           lecon: {
             titre: 'Fabriquer, valider, clore',
-            cours: `La **réalisation** met en œuvre ce que la conception a décidé et ce que la planification a ordonné. La **terminaison** clôt le projet — et c’est la phase que l’on bâcle le plus souvent.
+            cours: `La réalisation met en œuvre ce que la conception a décidé et ce que la planification a ordonné. La terminaison clôt le projet — et c'est la phase que l'on bâcle le plus souvent.
 
 ## Réaliser
-On fabrique, on assemble, on programme, on intègre. Trois exigences accompagnent le travail :
-- le **suivi d’avancement**, comparant le réel au prévisionnel ;
-- la **gestion des modifications** : toute évolution du besoin en cours de route doit être tracée, chiffrée et validée, sinon le projet dérive sans qu’on sache pourquoi ;
-- la **traçabilité** des versions, des pièces et des essais.
+| L'exigence | Ce qu'elle impose |
+| **Suivi d'avancement** | Comparer le réel au prévisionnel |
+| **Gestion des modifications** | Toute évolution du besoin doit être **tracée, chiffrée et validée** |
+| **Traçabilité** | Versions, pièces, essais |
+
+> Sans gestion des modifications, le projet dérive sans qu'on sache pourquoi.
 
 ## Vérifier et valider
-Deux mots que l’on confond, et qui ne disent pas la même chose :
-- **vérifier**, c’est s’assurer que le produit est conforme aux **spécifications** — a-t-on bien construit le produit ?
-- **valider**, c’est s’assurer qu’il répond au **besoin réel** de l’utilisateur — a-t-on construit le bon produit ?
+Deux mots que l'on confond, et qui ne disent pas la même chose.
 
-Un produit peut être parfaitement vérifié et rester invalide, s’il répond à une spécification qui traduisait mal le besoin.
+| Le mot | La question | Le référentiel |
+| **Vérifier** | A-t-on **bien construit** le produit ? | Les **spécifications** |
+| **Valider** | A-t-on construit le **bon** produit ? | Le **besoin réel** de l'utilisateur |
+
+> Un produit peut être parfaitement vérifié et rester invalide, s'il répond à une spécification qui traduisait mal le besoin.
 
 ## Les essais
-On mesure les **performances réelles** et on les compare aux niveaux du cahier des charges. L’écart obtenu est analysé : vient-il du produit, du protocole de mesure, ou d’une hypothèse trop grossière du modèle ? Cette question est le cœur du raisonnement attendu en SI.
+On mesure les performances réelles et on les compare aux niveaux du cahier des charges. L'écart obtenu s'analyse :
+
+| L'origine possible de l'écart | Ce qu'il faut examiner |
+| Le **produit** | Une fabrication non conforme |
+| Le **protocole de mesure** | L'instrument, les conditions |
+| Une **hypothèse du modèle** | Trop grossière |
+
+> Cette question est le cœur du raisonnement attendu en SI.
 
 ## Terminer
-La terminaison comprend :
-- la **livraison** et la **recette** avec le client ;
-- la **documentation** : notice d’utilisation, plan de maintenance, dossier technique ;
-- le **bilan** — écarts de coût et de délai, difficultés rencontrées, **retour d’expérience** pour les projets suivants ;
-- la dissolution de l’équipe et l’archivage.
+| L'étape | Ce qu'elle comprend |
+| **Livraison** et **recette** | La réception avec le client |
+| **Documentation** | Notice, plan de maintenance, dossier technique |
+| **Bilan** | Écarts de coût et de délai, difficultés, **retour d'expérience** |
+| **Clôture** | Dissolution de l'équipe, archivage |
 
-> Sans retour d’expérience, chaque nouveau projet recommence les erreurs du précédent. C’est la seule phase dont le bénéfice ne va pas au projet en cours, mais aux suivants — et c’est pour cela qu’elle est si souvent sacrifiée.`,
+> Sans retour d'expérience, chaque nouveau projet recommence les erreurs du précédent. C'est la seule phase dont le bénéfice ne va pas au projet en cours, mais aux suivants — et c'est pour cela qu'elle est si souvent sacrifiée.`,
           },
           questions: [
             ['Quelle est la différence entre vérifier et valider ?', ['Vérifier : conforme aux spécifications ; valider : répond au besoin réel', 'Ce sont deux synonymes', 'Vérifier concerne le coût, valider la qualité', 'Vérifier se fait après la livraison'], 0, '« A-t-on bien construit le produit ? » contre « a-t-on construit le bon produit ? ».'],
@@ -294,32 +349,30 @@ La terminaison comprend :
           axe: 'Analyse du besoin',
           lecon: {
             titre: 'Décrire un système en diagrammes',
-            cours: `Le **SysML** (*Systems Modeling Language*) est un langage **graphique** de description des systèmes. Il sert de langue commune entre le client, le mécanicien, l’électronicien et l’informaticien — chacun y lit la même chose.
+            cours: `Le SysML est un langage graphique de description des systèmes. Il sert de langue commune entre le client, le mécanicien, l'électronicien et l'informaticien.
 
-## Trois familles de diagrammes
-Ils répondent à trois questions différentes, et les confondre est l’erreur classique du chapitre.
+## Les trois familles de diagrammes
+Elles répondent à trois questions différentes. Les confondre est l'erreur classique du chapitre.
 
-**Le besoin — à quoi le système doit-il répondre ?**
-- **Diagramme des exigences** (*requirement*) : l’arbre des exigences, chacune identifiée, formulée et vérifiable. Il porte la traçabilité du cahier des charges.
-- **Diagramme des cas d’utilisation** (*use case*) : les **acteurs** extérieurs et les services que le système leur rend.
-
-**La structure — de quoi est-il fait ?**
-- **Diagramme de définition de blocs** (*block definition*) : la décomposition en blocs et leurs relations de composition.
-- **Diagramme de blocs internes** (*internal block*) : les **flux** échangés entre blocs — matière, énergie, information — et les ports par lesquels ils passent.
-
-**Le comportement — que fait-il ?**
-- **Diagramme d’états** (*state machine*) : les états successifs du système et les **transitions** qui les font changer, chacune déclenchée par un **événement** et éventuellement soumise à une **condition de garde**.
-- **Diagramme de séquence** : les échanges de messages entre acteurs et système **dans le temps**.
+| La question | Le diagramme | Ce qu'il montre |
+| **Le besoin** : à quoi le système doit-il répondre ? | **Exigences** (*requirement*) | L'arbre des exigences, chacune identifiée, formulée et **vérifiable** |
+| | **Cas d'utilisation** (*use case*) | Les **acteurs** extérieurs et les services rendus |
+| **La structure** : de quoi est-il fait ? | **Définition de blocs** (*block definition*) | La décomposition en blocs et leurs compositions |
+| | **Blocs internes** (*internal block*) | Les **flux** échangés — matière, énergie, information — et leurs ports |
+| **Le comportement** : que fait-il ? | **États** (*state machine*) | Les états successifs et les **transitions**, déclenchées par un événement, parfois soumises à une **garde** |
+| | **Séquence** | Les échanges de messages **dans le temps** |
 
 ## La chaîne fonctionnelle
-Le SysML sert à décrire une structure qu’on retrouve dans presque tout système :
-- la **chaîne d’information** : acquérir (capteur), traiter (calculateur), communiquer ;
-- la **chaîne d’énergie** : alimenter, distribuer (préactionneur), convertir (actionneur), transmettre (réducteur, courroie) et agir.
+| La chaîne | Ses maillons |
+| **Information** | Acquérir (capteur) → traiter (calculateur) → communiquer |
+| **Énergie** | Alimenter → distribuer (préactionneur) → convertir (actionneur) → transmettre (réducteur, courroie) → agir |
 
-> La chaîne d’information **commande** la chaîne d’énergie, et la mesure lui revient par le capteur : c’est le bouclage, la structure du **système asservi**.
+> La chaîne d'information **commande** la chaîne d'énergie, et la mesure lui revient par le capteur : c'est le bouclage, la structure du **système asservi**.
 
 ## Pourquoi modéliser
-Un modèle n’est jamais la réalité : il en retient ce qui est utile à la question posée. Un même système reçoit donc plusieurs modèles selon ce que l’on cherche à prévoir.`,
+Un modèle n'est jamais la réalité : il en retient ce qui est utile à la question posée.
+
+> Un même système reçoit donc plusieurs modèles, selon ce que l'on cherche à prévoir.`,
           },
           questions: [
             ['Que décrit un diagramme de cas d’utilisation ?', ['Les acteurs extérieurs et les services que le système leur rend', 'La structure interne du système', 'Les états successifs du système', 'Le planning du projet'], 0, 'Il répond à la question du besoin, pas à celle de la structure.'],
@@ -339,37 +392,43 @@ Un modèle n’est jamais la réalité : il en retient ce qui est utile à la qu
           axe: 'Statique du solide indéformable',
           lecon: {
             titre: 'L’outil de base de la mécanique',
-            cours: `Toute action mécanique se représente par un **vecteur**. Manipuler des vecteurs n’est donc pas un préalable mathématique : c’est le langage même de la statique.
+            cours: `Toute action mécanique se représente par un vecteur. Manipuler des vecteurs n'est pas un préalable mathématique : c'est le langage même de la statique.
 
 ## Un vecteur, quatre caractéristiques
-- Son **point d’application** ;
-- sa **direction** (la droite qui le porte) ;
-- son **sens** ;
-- sa **norme** (ou intensité), en newtons pour une force.
+| La caractéristique | Ce qu'elle précise |
+| **Point d'application** | Où la force s'exerce |
+| **Direction** | La droite qui la porte |
+| **Sens** | Vers où elle pousse |
+| **Norme** (intensité) | Combien : en newtons pour une force |
 
-Deux vecteurs ne sont égaux que si les trois dernières coïncident.
+> Deux vecteurs ne sont égaux que si direction, sens et norme coïncident.
 
 ## Repères
-Un **repère orthonormé direct** est défini par une origine et des vecteurs de base perpendiculaires, de norme 1, orientés selon la règle de la main droite. En mécanique, on choisit le repère qui **simplifie le calcul** : souvent, un axe le long du plan incliné plutôt qu’à l’horizontale.
+Un **repère orthonormé direct** est défini par une origine et des vecteurs de base perpendiculaires, de norme 1, orientés selon la règle de la main droite.
 
-Un même vecteur a des **coordonnées différentes** dans deux repères — mais c’est le même vecteur. Changer de repère est un choix de commodité, jamais un changement de physique.
+> On choisit le repère qui **simplifie le calcul** : souvent un axe le long du plan incliné, plutôt qu'à l'horizontale.
+
+Un même vecteur a des coordonnées différentes dans deux repères — mais c'est le même vecteur. Changer de repère est un choix de commodité, jamais un changement de physique.
 
 ## Opérations
-- **Somme** : par la relation de Chasles ou par le parallélogramme ; en coordonnées, on additionne composante par composante.
-- **Produit par un réel** : la norme est multipliée, le sens s’inverse si le réel est négatif.
-- **Norme** dans le plan : ||u|| = √(x² + y²).
+| L'opération | Comment |
+| **Somme** | Relation de Chasles, ou parallélogramme ; en coordonnées, composante par composante |
+| **Produit par un réel** | La norme est multipliée ; le sens s'inverse si le réel est négatif |
+| **Norme** dans le plan | Racine carrée de (x² + y²) |
 
-## Projection
-Projeter un vecteur sur un axe est le geste le plus employé de la statique. Pour un vecteur de norme F faisant un angle α avec l’axe :
+## La projection
+Le geste le plus employé de la statique. Pour un vecteur de norme F faisant un angle α avec l'axe :
 
-composante sur l’axe = F × cos α
+composante sur l'axe = F × cos α
+
 composante perpendiculaire = F × sin α
 
-> L’erreur la plus fréquente est d’intervertir sinus et cosinus. Le repère de contrôle : la composante **le long** de l’axe fait intervenir le **cosinus** de l’angle **avec cet axe**.
+> L'erreur la plus fréquente est d'intervertir sinus et cosinus. Le repère de contrôle : la composante **le long** de l'axe fait intervenir le **cosinus** de l'angle avec cet axe.
 
-## Produit scalaire et produit vectoriel
-- Le **produit scalaire** donne un nombre : u · v = ||u|| ||v|| cos α, nul si les vecteurs sont perpendiculaires. Il sert au calcul du travail d’une force.
-- Le **produit vectoriel** donne un vecteur perpendiculaire aux deux, de norme ||u|| ||v|| sin α. Il sert au calcul des **moments**.`,
+## Les deux produits
+| Le produit | Ce qu'il donne | Sa formule | À quoi il sert |
+| **Scalaire** | Un **nombre** | norme de u × norme de v × cos α ; nul si les vecteurs sont perpendiculaires | Le **travail** d'une force |
+| **Vectoriel** | Un **vecteur** perpendiculaire aux deux | de norme : norme de u × norme de v × sin α | Les **moments** |`,
           },
           questions: [
             ['Quelles sont les quatre caractéristiques d’un vecteur force ?', ['Point d’application, direction, sens et norme', 'Masse, vitesse, accélération et temps', 'Longueur, largeur, hauteur et masse', 'Origine, extrémité, couleur et unité'], 0, 'Deux vecteurs sont égaux si direction, sens et norme coïncident.'],
@@ -387,37 +446,43 @@ composante perpendiculaire = F × sin α
           axe: 'Statique du solide indéformable',
           lecon: {
             titre: 'Forces, moments et liaisons',
-            cours: `Une **action mécanique** est ce qui déforme un solide, le met en mouvement ou l’en empêche. On la modélise pour pouvoir la calculer.
+            cours: `Une action mécanique est ce qui déforme un solide, le met en mouvement ou l'en empêche. On la modélise pour pouvoir la calculer.
 
 ## Deux familles
-- Les actions **à distance** s’exercent sans contact : le **poids** en est l’exemple universel. Il s’applique au **centre de gravité** et vaut P = m × g.
-- Les actions **de contact** s’exercent par une surface : appui, liaison, frottement, pression d’un fluide.
+| La famille | Comment elle s'exerce | L'exemple |
+| **À distance** | Sans contact | Le **poids** : appliqué au centre de gravité, P = m × g |
+| **De contact** | Par une surface | Appui, liaison, frottement, pression d'un fluide |
 
-Une action **répartie** sur une surface peut être remplacée par une force unique équivalente, appliquée au point où la répartition s’équilibre — commodité constante en statique.
+> Une action **répartie** sur une surface peut être remplacée par une force unique équivalente, appliquée au point où la répartition s'équilibre.
 
 ## La force
-Une force se modélise par un vecteur, en **newtons**. Son effet dépend de son point d’application autant que de son intensité : pousser une porte près de la poignée ou près des gonds n’a pas le même résultat.
+Un vecteur, en **newtons**. Son effet dépend de son point d'application autant que de son intensité.
+
+> Pousser une porte près de la poignée ou près des gonds n'a pas le même résultat.
 
 ## Le moment
-Le **moment** mesure l’aptitude d’une force à faire **tourner** un solide autour d’un point ou d’un axe. Pour une force perpendiculaire au bras de levier :
+Le **moment** mesure l'aptitude d'une force à faire **tourner** un solide autour d'un point ou d'un axe. Pour une force perpendiculaire au bras de levier :
 
 M = F × d
 
-en newtons-mètres (N·m), où d est la **distance perpendiculaire** entre la droite d’action de la force et le point considéré — le **bras de levier**.
+en newtons-mètres (N·m), où d est la **distance perpendiculaire** entre la droite d'action et le point considéré : le **bras de levier**.
 
-> Deux conséquences pratiques : une force dont la droite d’action **passe par le point** a un moment **nul**, quelle que soit son intensité ; et allonger le bras de levier permet d’obtenir un grand moment avec une petite force — c’est le principe de la clé, du levier et de la brouette.
-
-Le moment est **signé** : positif s’il tend à faire tourner dans le sens direct, négatif dans l’autre.
+| Le cas | Le moment |
+| La droite d'action **passe par le point** | **Nul**, quelle que soit l'intensité |
+| Le bras de levier est **allongé** | Grand moment avec une petite force : la clé, le levier, la brouette |
+| Rotation dans le sens **direct** | Compté **positivement** |
+| Rotation dans l'autre sens | Compté **négativement** |
 
 ## Les liaisons mécaniques
-Une **liaison** entre deux pièces supprime certains mouvements relatifs et en autorise d’autres. On la caractérise par ses **degrés de liberté** — au maximum six dans l’espace : trois translations, trois rotations.
+Une liaison supprime certains mouvements relatifs et en autorise d'autres. On la caractérise par ses **degrés de liberté** — six au maximum dans l'espace : trois translations, trois rotations.
 
-- **Encastrement** : 0 degré de liberté ; il transmet toutes les forces et tous les moments.
-- **Pivot** : 1 rotation autorisée ; c’est la liaison du roulement à billes.
-- **Glissière** : 1 translation autorisée.
-- **Ponctuelle** : 5 degrés de liberté ; elle ne transmet qu’une force perpendiculaire au contact.
+| La liaison | Ses degrés de liberté | Ce qu'elle transmet |
+| **Encastrement** | 0 | Toutes les forces et tous les moments |
+| **Pivot** | 1 rotation | C'est la liaison du roulement à billes |
+| **Glissière** | 1 translation | — |
+| **Ponctuelle** | 5 | Une seule force, perpendiculaire au contact |
 
-Une liaison **parfaite** est supposée sans jeu et sans frottement : c’est une hypothèse de modélisation, à nommer comme telle.`,
+> Une liaison **parfaite** est supposée sans jeu et sans frottement : c'est une hypothèse de modélisation, à nommer comme telle.`,
           },
           questions: [
             ['Quelle est l’unité d’un moment ?', ['Le newton-mètre', 'Le newton', 'Le joule', 'Le pascal'], 0, 'Il mesure l’aptitude d’une force à faire tourner un solide.'],
@@ -435,30 +500,45 @@ Une liaison **parfaite** est supposée sans jeu et sans frottement : c’est une
           axe: 'Statique du solide indéformable',
           lecon: {
             titre: 'Isoler, inventorier, représenter',
-            cours: `Résoudre un problème de statique commence toujours par le même geste : **isoler** un solide. Tant que cette étape n’est pas faite proprement, aucun calcul n’a de sens.
+            cours: `Résoudre un problème de statique commence toujours par le même geste : isoler un solide. Tant que cette étape n'est pas faite proprement, aucun calcul n'a de sens.
 
 ## Isoler
-**Isoler** un solide, c’est le séparer par la pensée de tout ce qui l’entoure, et remplacer chaque élément retiré par l’**action** qu’il exerçait sur lui. Le solide isolé se note clairement, et le **bilan des actions extérieures** s’écrit sous forme de liste : pour chacune, son point d’application, sa direction, son sens et son intensité, connus ou inconnus.
+Isoler un solide, c'est le séparer par la pensée de tout ce qui l'entoure, et remplacer chaque élément retiré par l'**action** qu'il exerçait sur lui.
 
-> Une action **intérieure** au solide isolé ne figure JAMAIS dans le bilan. C’est l’erreur qui fausse le plus de copies : on ne compte que ce qui traverse la frontière de l’isolement.
+Le **bilan des actions extérieures** s'écrit en liste. Pour chacune :
+
+| Ce qu'on précise | Connu ou inconnu |
+| Point d'application | Souvent connu |
+| Direction | Parfois imposée par la liaison |
+| Sens | Parfois supposé |
+| Intensité | Souvent l'inconnue |
+
+> Une action **intérieure** au solide isolé ne figure **jamais** dans le bilan. C'est l'erreur qui fausse le plus de copies : on ne compte que ce qui traverse la frontière de l'isolement.
 
 ## Le torseur des actions
-La représentation complète d’une action mécanique en un point comporte **deux vecteurs** :
-- la **résultante**, somme des forces ;
-- le **moment résultant** au point choisi.
+La représentation complète d'une action en un point comporte **deux vecteurs** :
 
-C’est ce couple que l’on appelle **torseur d’action mécanique**. Écrire une action, c’est donner ses six composantes dans l’espace (trois de force, trois de moment) — trois seulement dans un problème plan (deux de force, un de moment).
+| Le vecteur | Ce qu'il représente |
+| **Résultante** | La somme des forces |
+| **Moment résultant** | Au point choisi |
 
-Un torseur se **transporte** d’un point à un autre : la résultante ne change pas, mais le moment, si — puisque le bras de levier change.
+| Le problème | Le nombre de composantes |
+| Dans l'**espace** | 6 : trois de force, trois de moment |
+| Dans le **plan** | 3 : deux de force, un de moment |
+
+> Un torseur se **transporte** d'un point à un autre : la résultante ne change pas, mais le moment, si — puisque le bras de levier change.
 
 ## Représenter graphiquement
-Sur un schéma, chaque action est tracée en son point d’application, avec une longueur proportionnelle à son intensité et une échelle indiquée. Les inconnues sont tracées avec un sens **supposé** : si le calcul donne une valeur négative, c’est que le sens réel est l’inverse — et cela ne rend pas la solution fausse.
+Chaque action est tracée en son point d'application, avec une longueur proportionnelle à son intensité et une **échelle indiquée**.
 
-## Les cas particuliers utiles
-- Un solide soumis à **deux forces** en équilibre : elles ont la même droite d’action, des sens opposés et la même intensité.
-- Un solide soumis à **trois forces** non parallèles en équilibre : leurs droites d’action sont **concourantes** et la somme vectorielle est nulle — le triangle des forces se ferme.
+> Les inconnues sont tracées avec un sens **supposé**. Si le calcul donne une valeur négative, le sens réel est l'inverse — et la solution n'en est pas fausse.
 
-Ces deux propriétés permettent souvent de résoudre graphiquement, sans écrire une seule équation.`,
+## Deux cas particuliers utiles
+| Le solide en équilibre | La propriété |
+| Soumis à **deux forces** | Même droite d'action, sens opposés, même intensité |
+| Soumis à **trois forces** non parallèles | Droites d'action **concourantes**, somme vectorielle nulle : le triangle des forces se ferme |
+
+> Ces deux propriétés permettent souvent de résoudre **graphiquement**, sans écrire une seule équation.`,
           },
           questions: [
             ['Que signifie « isoler un solide » ?', ['Le séparer de son environnement et remplacer chaque élément retiré par son action', 'Le poser sur un support isolant', 'Le retirer du système', 'Négliger son poids'], 0, 'C’est le geste préalable à tout calcul de statique.'],
@@ -476,37 +556,47 @@ Ces deux propriétés permettent souvent de résoudre graphiquement, sans écrir
           axe: 'Statique du solide indéformable',
           lecon: {
             titre: 'Deux conditions d’équilibre',
-            cours: `Un solide est en **équilibre** dans un référentiel galiléen si, et seulement si, deux conditions sont réunies **simultanément**.
+            cours: `Un solide est en équilibre dans un référentiel galiléen si, et seulement si, deux conditions sont réunies simultanément.
 
 ## Les deux conditions
-1. La **somme vectorielle** des actions extérieures est **nulle** — le solide ne translate pas.
-2. La **somme des moments** de ces actions, calculés **en un même point**, est **nulle** — le solide ne tourne pas.
+| La condition | Ce qu'elle interdit |
+| La **somme vectorielle** des actions extérieures est nulle | La **translation** |
+| La **somme des moments**, calculés en un même point, est nulle | La **rotation** |
 
-> Les deux sont nécessaires : deux forces égales et opposées mais non alignées ont une somme nulle et forment pourtant un **couple**, qui fait tourner le solide. Vérifier la seule première condition ne prouve rien.
+> Les deux sont nécessaires : deux forces égales et opposées mais **non alignées** ont une somme nulle et forment pourtant un **couple**, qui fait tourner le solide.
 
 ## En projection
 Dans un problème plan, ces deux conditions donnent **trois équations scalaires** :
-- somme des composantes sur x = 0 ;
-- somme des composantes sur y = 0 ;
-- somme des moments en un point = 0.
+1. Somme des composantes sur x = 0.
+2. Somme des composantes sur y = 0.
+3. Somme des moments en un point = 0.
 
-Trois équations, donc au plus **trois inconnues** résolubles. Si le problème en comporte davantage, il est dit **hyperstatique** et exige des hypothèses supplémentaires.
+| Le nombre d'inconnues | Le problème |
+| Au plus **3** | Résoluble |
+| Davantage | **Hyperstatique** : il exige des hypothèses supplémentaires |
 
-## La méthode, dans l’ordre
-1. **Isoler** le solide.
-2. Faire le **bilan** des actions extérieures.
-3. Choisir un **repère** commode.
-4. Choisir le **point de calcul des moments** — et c’est le choix qui décide de la difficulté : le prendre là où passent le plus d’inconnues les élimine, puisque leur moment y est nul.
-5. Écrire les trois équations, résoudre, **vérifier l’homogénéité** et la vraisemblance des résultats.
+## La méthode, dans l'ordre
+| L'étape | Le point d'attention |
+| 1. **Isoler** le solide | Rien de ce qui est intérieur |
+| 2. Faire le **bilan** des actions extérieures | Point, direction, sens, intensité |
+| 3. Choisir un **repère** commode | Souvent un axe le long du plan incliné |
+| 4. Choisir le **point de calcul des moments** | Le prendre là où passent le plus d'inconnues : leur moment y est nul |
+| 5. Écrire, résoudre, **vérifier** | Homogénéité et vraisemblance |
+
+> C'est le choix du point de calcul qui décide de la difficulté d'un exercice.
 
 ## Le frottement
-Tant que le solide ne glisse pas, la composante tangentielle T de l’action de contact s’ajuste d’elle-même pour équilibrer les autres actions, jusqu’à la limite :
+Tant que le solide ne glisse pas, la composante tangentielle T de l'action de contact s'ajuste d'elle-même, jusqu'à la limite :
 
 T ≤ f × N
 
 où N est la composante normale et f le **coefficient de frottement**. Au-delà, le glissement commence.
 
-L’**adhérence** est ce qui empêche le glissement ; le **frottement** est ce qui s’oppose au glissement en cours. Une pièce sur un plan incliné reste immobile tant que l’angle du plan reste inférieur à l’**angle d’adhérence**.`,
+| Le mot | Ce qu'il désigne |
+| **Adhérence** | Ce qui empêche le glissement |
+| **Frottement** | Ce qui s'oppose au glissement **en cours** |
+
+> Une pièce sur un plan incliné reste immobile tant que l'angle du plan reste inférieur à l'**angle d'adhérence**.`,
           },
           questions: [
             ['Quelles sont les deux conditions d’équilibre d’un solide ?', ['Somme des forces nulle et somme des moments nulle en un même point', 'Somme des forces nulle seulement', 'Somme des moments nulle seulement', 'Vitesse nulle et accélération nulle'], 0, 'Les deux sont nécessaires et doivent être vérifiées simultanément.'],
@@ -526,38 +616,50 @@ L’**adhérence** est ce qui empêche le glissement ; le **frottement** est ce 
           axe: 'Théorie des mécanismes',
           lecon: {
             titre: 'Rendement d’une chaîne d’énergie',
-            cours: `Un système technique **transforme** de l’énergie : électrique en mécanique dans un moteur, mécanique en électrique dans une génératrice, chimique en électrique dans une batterie.
+            cours: `Un système technique transforme de l'énergie : électrique en mécanique dans un moteur, mécanique en électrique dans une génératrice, chimique en électrique dans une batterie.
 
 ## Énergie et puissance
-La **puissance** est un débit d’énergie : l’énergie transférée par unité de temps.
+La **puissance** est un débit d'énergie :
 
 P = E / Δt, donc E = P × Δt
 
-L’énergie s’exprime en **joules**, la puissance en **watts**. Le **kilowattheure**, unité des factures, vaut 3,6 × 10⁶ J.
+| La grandeur | Son unité |
+| Énergie E | **Joule** (J) |
+| Puissance P | **Watt** (W) |
+
+> Le kilowattheure, unité des factures, vaut 3,6 × 10⁶ J.
 
 ## Les expressions à connaître
-- **Électrique** : P = U × I ; en courant continu, la puissance dissipée par une résistance vaut P = R × I².
-- **Mécanique en translation** : P = F × v, produit d’une force par une vitesse.
-- **Mécanique en rotation** : P = C × ω, produit d’un **couple** (en N·m) par une **vitesse angulaire** (en rad/s).
+| Le domaine | La formule | Les unités |
+| **Électrique** | P = U × I | V et A |
+| Électrique, dissipation | P = R × I² | Ω et A |
+| **Mécanique en translation** | P = F × v | N et m/s |
+| **Mécanique en rotation** | P = C × ω | N·m et rad/s |
 
-> Le passage entre tours par minute et radians par seconde est un calcul de conversion demandé à chaque devoir : ω = 2π × N / 60, où N est en tours par minute.
+La conversion demandée à chaque devoir :
+
+ω = 2π × N / 60, où N est en tours par minute
 
 ## Le rendement
-Aucune conversion n’est parfaite. Le **rendement** est le rapport de la puissance utile à la puissance absorbée :
-
 η = P(utile) / P(absorbée)
 
-Il est **toujours inférieur à 1** : la différence part en pertes — effet Joule dans les bobinages, frottements dans les paliers, échauffement, bruit.
+Toujours **inférieur à 1**. La différence part en pertes : effet Joule dans les bobinages, frottements dans les paliers, échauffement, bruit.
 
-## Rendement d’une chaîne
+## Le rendement d'une chaîne
 Les rendements des maillons successifs se **multiplient** :
 
 η(total) = η1 × η2 × η3
 
-Trois maillons à 90 % donnent 0,90 × 0,90 × 0,90 ≈ 0,73, soit 73 % seulement. C’est le résultat contre-intuitif du chapitre : une chaîne longue perd beaucoup, même si chaque maillon est bon.
+| Les maillons | Le rendement total |
+| Trois maillons à 90 % | 0,90 × 0,90 × 0,90 ≈ **73 %** |
+| Trois maillons à 80 % | ≈ **51 %** |
+
+> C'est le résultat contre-intuitif du chapitre : une chaîne longue perd beaucoup, même si chaque maillon est bon.
 
 ## Conséquences de conception
-Améliorer le rendement d’un système, c’est d’abord **réduire le nombre de conversions**, puis agir sur le maillon **le plus mauvais** — un maillon à 50 % plafonne tout le reste, quel que soit le soin apporté aux autres.`,
+| Le levier | Pourquoi |
+| **Réduire le nombre de conversions** | Chaque conversion multiplie par un facteur inférieur à 1 |
+| Agir sur le maillon **le plus mauvais** | Un maillon à 50 % plafonne tout le reste, quel que soit le soin apporté aux autres |`,
           },
           questions: [
             ['Quelle relation lie puissance et énergie ?', ['P = E / Δt', 'P = E × Δt', 'E = P / Δt', 'P = E + Δt'], 0, 'La puissance est un débit d’énergie, en watts.'],
@@ -577,35 +679,45 @@ Améliorer le rendement d’un système, c’est d’abord **réduire le nombre 
           axe: 'Cinématique',
           lecon: {
             titre: 'Position, vitesse, accélération',
-            cours: `La **cinématique** décrit les mouvements **sans se préoccuper de leurs causes**. C’est la différence avec la dynamique, qui les explique par les forces.
+            cours: `La cinématique décrit les mouvements sans se préoccuper de leurs causes. C'est la différence avec la dynamique, qui les explique par les forces.
 
 ## Les trois grandeurs
-- La **position** est repérée par un vecteur depuis l’origine du repère.
-- La **vitesse** est la variation de la position par unité de temps ; son vecteur est **tangent à la trajectoire**, orienté dans le sens du mouvement, en m/s.
-- L’**accélération** est la variation du **vecteur** vitesse ; en m/s².
+| La grandeur | Ce qu'elle est | Son unité |
+| **Position** | Un vecteur depuis l'origine du repère | m |
+| **Vitesse** | La variation de position par unité de temps ; **tangente à la trajectoire** | m/s |
+| **Accélération** | La variation du **vecteur** vitesse | m/s² |
 
-> Point capital : le vecteur vitesse peut changer par sa **valeur** ou par sa **direction**. Un mobile qui tourne à vitesse constante accélère, au sens de la mécanique.
+> Le vecteur vitesse peut changer par sa **valeur** ou par sa **direction**. Un mobile qui tourne à vitesse constante accélère, au sens de la mécanique.
 
 ## Le mouvement de rotation
-Pour un point situé à la distance R de l’axe, tournant à la vitesse angulaire ω (en rad/s) :
+Pour un point situé à la distance R de l'axe, tournant à la vitesse angulaire ω :
 
 v = ω × R
 
-Tous les points d’un solide en rotation ont la **même** vitesse angulaire, mais des vitesses linéaires **différentes** : plus le point est loin de l’axe, plus il va vite. C’est pourquoi l’extrémité d’une pale se déplace bien plus vite que sa base.
+| Ce qui est commun à tous les points d'un solide en rotation | Ce qui diffère |
+| La **vitesse angulaire** ω | La **vitesse linéaire** v, proportionnelle à la distance à l'axe |
 
-L’accélération d’un point en mouvement circulaire uniforme est dirigée **vers le centre** et vaut a = v² / R.
+> C'est pourquoi l'extrémité d'une pale se déplace bien plus vite que sa base.
 
-## Les mouvements de base
-- **Rectiligne uniforme** : vitesse constante en valeur et en direction, accélération nulle, x = v × t + x0.
-- **Rectiligne uniformément varié** : accélération constante, la vitesse varie linéairement, la position quadratiquement.
-- **Circulaire uniforme** : valeur de la vitesse constante, accélération centripète non nulle.
+L'accélération d'un point en mouvement circulaire uniforme est dirigée **vers le centre** et vaut a = v² / R.
+
+## Les trois mouvements de base
+| Le mouvement | La vitesse | L'accélération |
+| **Rectiligne uniforme** | Constante en valeur et direction | **Nulle** ; x = v × t + x0 |
+| **Rectiligne uniformément varié** | Elle varie linéairement | **Constante** ; la position varie quadratiquement |
+| **Circulaire uniforme** | Constante en valeur | **Centripète**, non nulle |
 
 ## Transmission de mouvement
-Deux roues dentées ou deux poulies en prise ont la **même vitesse linéaire au contact**, donc des vitesses angulaires inversement proportionnelles à leurs rayons. C’est le **rapport de réduction** :
+Deux roues dentées ou deux poulies en prise ont la **même vitesse linéaire au contact**, donc des vitesses angulaires inversement proportionnelles à leurs rayons :
 
 ω(sortie) / ω(entrée) = R(entrée) / R(sortie)
 
-Un réducteur diminue la vitesse et **augmente le couple** dans la même proportion — la puissance, elle, se conserve aux pertes près. C’est la raison d’être de toute boîte de vitesses.`,
+| Ce que fait un réducteur | Dans quelle proportion |
+| Il **diminue** la vitesse | Le rapport de réduction |
+| Il **augmente** le couple | La même |
+| La **puissance** | Elle se conserve, aux pertes près |
+
+> C'est la raison d'être de toute boîte de vitesses.`,
           },
           questions: [
             ['Qu’étudie la cinématique ?', ['Les mouvements sans se préoccuper de leurs causes', 'Les forces qui provoquent les mouvements', 'L’énergie des systèmes', 'Les déformations des solides'], 0, 'C’est la dynamique qui relie mouvements et forces.'],
@@ -625,26 +737,42 @@ Un réducteur diminue la vitesse et **augmente le couple** dans la même proport
           axe: 'Transfert de l’information',
           lecon: {
             titre: 'Analogique, numérique, logique',
-            cours: `Un **signal** est la grandeur physique qui porte une information : une tension, un courant, une onde lumineuse ou radio.
+            cours: `Un signal est la grandeur physique qui porte une information : une tension, un courant, une onde lumineuse ou radio.
 
 ## Trois natures de signal
-- **Analogique** : il varie **continûment** et peut prendre une infinité de valeurs. La tension délivrée par un microphone en est un.
-- **Numérique** : il ne prend qu’un nombre **fini** de valeurs, codées en binaire.
-- **Logique** : cas particulier du numérique à **deux** états seulement, 0 et 1, correspondant à deux plages de tension.
+| La nature | Ses valeurs | Un exemple |
+| **Analogique** | Une **infinité**, variation continue | La tension d'un microphone |
+| **Numérique** | Un nombre **fini**, codées en binaire | Un fichier audio |
+| **Logique** | **Deux** seulement, 0 et 1 | Un interrupteur, un capteur de présence |
 
-## De l’analogique au numérique
-La conversion se fait en trois étapes :
-1. l’**échantillonnage** : on prélève la valeur du signal à intervalles réguliers. La **fréquence d’échantillonnage** doit être au moins **double** de la plus haute fréquence du signal, faute de quoi l’information est irrémédiablement perdue ;
-2. la **quantification** : chaque échantillon est arrondi à la valeur la plus proche parmi celles disponibles. Le nombre de valeurs dépend de la **résolution** — n bits donnent 2 puissance n niveaux ;
-3. le **codage** : chaque niveau est écrit en binaire.
+## De l'analogique au numérique
+| L'étape | Ce qu'elle fait | Sa contrainte |
+| **Échantillonnage** | Prélever la valeur à intervalles réguliers | La fréquence doit être au moins **double** de la plus haute fréquence du signal |
+| **Quantification** | Arrondir chaque échantillon à la valeur disponible la plus proche | La **résolution** : n bits donnent 2 puissance n niveaux |
+| **Codage** | Écrire chaque niveau en binaire | — |
 
-> Deux conséquences : plus la fréquence d’échantillonnage et la résolution sont élevées, plus la copie est fidèle — et plus le fichier est lourd. Tout le débat de la compression tient dans cet arbitrage.
+> Si la fréquence d'échantillonnage est trop basse, l'information est **irrémédiablement** perdue.
 
-## Pourquoi le numérique s’est imposé
-Un signal analogique se dégrade à chaque copie et à chaque transmission, et le bruit accumulé ne s’enlève plus. Une suite de 0 et de 1 se **régénère exactement** : tant que le bruit ne dépasse pas le seuil de décision, le signal reconstruit est identique à l’original. Il se corrige en outre par des **codes détecteurs et correcteurs d’erreurs**.
+| Ce qu'on augmente | Le gain | Le coût |
+| Fréquence d'échantillonnage et résolution | Une copie plus fidèle | Un fichier plus lourd |
 
-## Caractériser un signal
-Un signal périodique se décrit par sa **période**, sa **fréquence** (f = 1 / T), son **amplitude** et, pour un signal logique, son **rapport cyclique** — la fraction de la période pendant laquelle il vaut 1. C’est ce dernier que l’on fait varier en **MLI** (modulation de largeur d’impulsion) pour régler la puissance envoyée à un moteur ou l’intensité d’une LED.`,
+> Tout le débat de la compression tient dans cet arbitrage.
+
+## Pourquoi le numérique s'est imposé
+| Le signal | Ce qu'il devient après copies et transmissions |
+| **Analogique** | Il se **dégrade** : le bruit accumulé ne s'enlève plus |
+| **Numérique** | Il se **régénère exactement**, tant que le bruit ne dépasse pas le seuil de décision |
+
+Il se corrige en outre par des **codes détecteurs et correcteurs d'erreurs**.
+
+## Caractériser un signal périodique
+| La grandeur | Sa définition |
+| **Période** T | La durée d'un motif |
+| **Fréquence** f | f = 1 / T |
+| **Amplitude** | L'écart entre les valeurs extrêmes |
+| **Rapport cyclique** | La fraction de la période pendant laquelle un signal logique vaut 1 |
+
+> C'est le rapport cyclique que l'on fait varier en **MLI** — modulation de largeur d'impulsion — pour régler la puissance envoyée à un moteur ou l'intensité d'une LED.`,
           },
           questions: [
             ['Qu’est-ce qu’un signal logique ?', ['Un signal numérique à deux états seulement', 'Un signal qui varie continûment', 'Un signal sans bruit', 'Un signal de fréquence fixe'], 0, '0 et 1, correspondant à deux plages de tension.'],
@@ -662,30 +790,40 @@ Un signal périodique se décrit par sa **période**, sa **fréquence** (f = 1 /
           axe: 'Transfert de l’information',
           lecon: {
             titre: 'Binaire, hexadécimal et codage des caractères',
-            cours: `Toute information traitée par un système numérique est une suite de **bits**. Ce qu’elle représente dépend entièrement de la **convention** de codage choisie.
+            cours: `Toute information traitée par un système numérique est une suite de bits. Ce qu'elle représente dépend entièrement de la convention de codage choisie.
 
-## Les bases
-- **Binaire** (base 2) : chiffres 0 et 1. C’est la seule base que le circuit connaît réellement.
-- **Décimal** (base 10) : notre notation usuelle.
-- **Hexadécimal** (base 16) : chiffres 0 à 9 puis A à F. Il sert d’**abréviation** du binaire, un chiffre hexadécimal valant exactement **quatre bits**.
+## Les trois bases
+| La base | Ses chiffres | À quoi elle sert |
+| **Binaire** (2) | 0 et 1 | La seule que le circuit connaît réellement |
+| **Décimal** (10) | 0 à 9 | Notre notation usuelle |
+| **Hexadécimal** (16) | 0 à 9 puis A à F | Une **abréviation** du binaire : un chiffre vaut exactement **quatre bits** |
 
-Conversion binaire → décimal : chaque bit vaut son poids, puissance de 2 croissante de droite à gauche. 1011 vaut 8 + 0 + 2 + 1 = 11.
-
-Conversion décimal → binaire : divisions successives par 2, les restes lus **de bas en haut**.
+## Les conversions
+| Le sens | La méthode | Un exemple |
+| Binaire → décimal | Chaque bit vaut son poids, puissance de 2 croissante de droite à gauche | 1011 = 8 + 0 + 2 + 1 = **11** |
+| Décimal → binaire | Divisions successives par 2, restes lus **de bas en haut** | — |
 
 ## Les unités
-- 1 **octet** (byte) = 8 bits, et permet 256 valeurs (0 à 255).
-- Un mot de n bits code 2 puissance n valeurs différentes : c’est la relation à savoir manier dans les deux sens.
+| L'unité | Sa valeur | Ce qu'elle code |
+| 1 **bit** | Un chiffre binaire | 2 valeurs |
+| 1 **octet** | 8 bits | **256** valeurs, de 0 à 255 |
+| Un mot de n bits | — | **2 puissance n** valeurs |
+
+> Cette dernière relation est à savoir manier dans les deux sens.
 
 ## Coder autre chose que des nombres
-- Les **caractères** : le code **ASCII** sur 7 bits, insuffisant pour les langues accentuées, remplacé par **Unicode** et son encodage **UTF-8**, à longueur variable, qui couvre tous les alphabets.
-- Les **images** : une image matricielle est un tableau de **pixels**, chacun codé par ses composantes rouge, verte et bleue — souvent un octet par composante, soit plus de 16 millions de couleurs.
-- Les **entiers signés** : un bit sert au signe, ou l’on emploie le complément à deux.
+| Ce qu'on code | Le codage | Sa limite |
+| Les **caractères** | **ASCII** sur 7 bits | Insuffisant pour les langues accentuées |
+| | **Unicode**, encodé en **UTF-8** | Longueur variable, couvre tous les alphabets |
+| Les **images** | Un tableau de **pixels**, chacun par ses composantes rouge, verte, bleue | Un octet par composante donne plus de 16 millions de couleurs |
+| Les **entiers signés** | Un bit de signe, ou le complément à deux | — |
 
-> Le même mot binaire 01000001 vaut 65 en entier, la lettre A en ASCII, ou une nuance de gris dans une image. **Rien dans le mot lui-même ne dit ce qu’il représente** : c’est la convention, portée par le programme, qui l’interprète.
+> Le même mot 01000001 vaut 65 en entier, la lettre A en ASCII, ou une nuance de gris dans une image. **Rien dans le mot ne dit ce qu'il représente** : c'est la convention, portée par le programme, qui l'interprète.
 
 ## Détecter les erreurs
-Un **bit de parité** ajouté à chaque mot permet de détecter un nombre impair d’erreurs de transmission — sans les corriger. Les codes correcteurs, plus élaborés, retrouvent la valeur exacte au prix de bits supplémentaires.`,
+| Le procédé | Ce qu'il permet |
+| **Bit de parité** | **Détecter** un nombre impair d'erreurs — sans les corriger |
+| **Codes correcteurs** | **Retrouver** la valeur exacte, au prix de bits supplémentaires |`,
           },
           questions: [
             ['Combien de valeurs différentes un octet peut-il coder ?', ['256', '8', '128', '512'], 0, 'Huit bits, donc 2 puissance 8 combinaisons.'],
@@ -703,36 +841,52 @@ Un **bit de parité** ajouté à chaque mot permet de détecter un nombre impair
           axe: 'Transfert de l’information',
           lecon: {
             titre: 'NON, ET, OU',
-            cours: `Trois opérateurs suffisent à construire toute fonction logique. Chacun se définit par une **table de vérité**, qui donne la sortie pour chaque combinaison d’entrées.
+            cours: `Trois opérateurs suffisent à construire toute fonction logique. Chacun se définit par une table de vérité.
 
 ## NON (NOT)
-Un seul opérande : la sortie est l’**inverse** de l’entrée. On la note avec une barre au-dessus, ou par le mot NON.
+Un seul opérande : la sortie est l'**inverse** de l'entrée.
 
-- entrée 0 → sortie 1
-- entrée 1 → sortie 0
+| Entrée | Sortie |
+| 0 | 1 |
+| 1 | 0 |
 
 ## ET (AND)
-La sortie vaut 1 **si et seulement si toutes** les entrées valent 1. On la note par un point, comme une multiplication — et ce n’est pas un hasard : 0 × 1 = 0, 1 × 1 = 1.
+La sortie vaut 1 **si et seulement si toutes** les entrées valent 1. On la note par un point, comme une multiplication — et ce n'est pas un hasard.
 
-Table pour deux entrées : 00 → 0, 01 → 0, 10 → 0, **11 → 1**.
+| a | b | a ET b |
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | **1** |
 
-Usage typique : une sécurité qui exige **plusieurs** conditions simultanées — la presse ne démarre que si les deux mains sont sur les boutons.
+> Usage typique : une sécurité qui exige **plusieurs** conditions simultanées — la presse ne démarre que si les deux mains sont sur les boutons.
 
 ## OU (OR)
-La sortie vaut 1 **dès qu’au moins une** entrée vaut 1. On la note par un signe plus.
+La sortie vaut 1 **dès qu'au moins une** entrée vaut 1. On la note par un signe plus.
 
-Table : 00 → 0, 01 → 1, 10 → 1, **11 → 1**.
+| a | b | a OU b |
+| 0 | 0 | 0 |
+| 0 | 1 | **1** |
+| 1 | 0 | **1** |
+| 1 | 1 | **1** |
 
-> Attention : c’est un OU **inclusif**. « 1 OU 1 » vaut 1, à la différence du « ou » exclusif du langage courant (fromage ou dessert).
+> C'est un OU **inclusif** : « 1 OU 1 » vaut 1, à la différence du « ou » exclusif du langage courant — fromage ou dessert.
 
-Usage typique : une alarme déclenchée par **n’importe lequel** des capteurs.
+Usage typique : une alarme déclenchée par **n'importe lequel** des capteurs.
 
 ## Les opérateurs dérivés
-- **NON-ET** (NAND) et **NON-OU** (NOR) : la sortie du ET ou du OU, inversée. Ils sont dits **universels** : avec des NAND seuls, on reconstruit NON, ET, OU — et donc n’importe quelle fonction logique. C’est pourquoi l’industrie les fabrique en masse.
-- **OU EXCLUSIF** (XOR) : la sortie vaut 1 si les entrées sont **différentes**. Il détecte les changements et sert dans les additionneurs et les codes correcteurs.
+| L'opérateur | Sa définition | Sa particularité |
+| **NON-ET** (NAND) | La sortie du ET, inversée | **Universel** : avec des NAND seuls on reconstruit NON, ET, OU — donc toute fonction. L'industrie les fabrique en masse |
+| **NON-OU** (NOR) | La sortie du OU, inversée | Universel également |
+| **OU EXCLUSIF** (XOR) | 1 si les entrées sont **différentes** | Il détecte les changements : additionneurs, codes correcteurs |
 
-## Combien de lignes dans une table ?
-Une fonction à n entrées a une table de **2 puissance n** lignes : 4 pour deux entrées, 8 pour trois, 16 pour quatre. Les écrire dans l’ordre binaire croissant évite d’en oublier.`,
+## Combien de lignes dans une table
+| Le nombre d'entrées | Le nombre de lignes |
+| 2 | 4 |
+| 3 | 8 |
+| 4 | 16 |
+
+Une fonction à n entrées a **2 puissance n** lignes. Les écrire dans l'ordre binaire croissant évite d'en oublier.`,
           },
           questions: [
             ['Quand la sortie d’un opérateur ET vaut-elle 1 ?', ['Seulement si toutes les entrées valent 1', 'Si au moins une entrée vaut 1', 'Si les entrées sont différentes', 'Si toutes les entrées valent 0'], 0, 'C’est l’opérateur des conditions simultanées.'],
@@ -750,33 +904,43 @@ Une fonction à n entrées a une table de **2 puissance n** lignes : 4 pour deux
           axe: 'Transfert de l’information',
           lecon: {
             titre: 'Du cahier des charges au logigramme',
-            cours: `Une **porte logique** est le composant électronique qui réalise un opérateur. Les associer permet de construire n’importe quelle fonction.
+            cours: `Une porte logique est le composant électronique qui réalise un opérateur. Les associer permet de construire n'importe quelle fonction.
 
 ## Le logigramme
-C’est le schéma d’un montage de portes : les entrées à gauche, les portes au centre, la sortie à droite. Chaque porte a son **symbole normalisé**, et le sens de lecture est toujours le même.
+Le schéma d'un montage de portes : entrées à gauche, portes au centre, sortie à droite. Chaque porte a son **symbole normalisé**, et le sens de lecture est toujours le même.
 
 ## Les trois représentations
-Une même fonction logique s’exprime de trois façons **équivalentes** :
-- la **table de vérité**, exhaustive ;
-- l’**équation logique**, algébrique ;
-- le **logigramme**, graphique.
+| La représentation | Sa forme | Son intérêt |
+| **Table de vérité** | Un tableau | **Exhaustive** : elle ne ment pas |
+| **Équation logique** | Algébrique | Elle se **simplifie** |
+| **Logigramme** | Graphique | Il se **câble** |
 
-Savoir passer de l’une à l’autre **dans les deux sens** est la compétence centrale du chapitre.
+> Savoir passer de l'une à l'autre **dans les deux sens** est la compétence centrale du chapitre.
 
-## De la table à l’équation
-Deux méthodes, au choix :
-- **somme de produits** : on retient les lignes où la sortie vaut **1**, on écrit pour chacune le produit des entrées (complémentées si elles valent 0), et l’on additionne ces produits ;
-- **produit de sommes** : on part des lignes où la sortie vaut 0.
+## De la table à l'équation
+| La méthode | On part des lignes où la sortie vaut… | Ce qu'on écrit |
+| **Somme de produits** | **1** | Pour chaque ligne, le produit des entrées, complémentées si elles valent 0 ; puis on additionne |
+| **Produit de sommes** | **0** | La construction duale |
 
-La première est la plus employée, parce qu’il y a en général moins de 1 que de 0 — et parce qu’elle se lit directement.
+> La première est la plus employée : il y a en général moins de 1 que de 0, et elle se lit directement.
 
-## De l’équation au logigramme
-Chaque opération devient une porte, en respectant les **priorités** : le complément d’abord, puis le ET, puis le OU. Une équation mal parenthésée donne un montage faux même si l’algèbre était juste.
+## De l'équation au logigramme
+Chaque opération devient une porte, en respectant les **priorités** :
+
+| L'ordre | L'opérateur |
+| 1 | Le **complément** |
+| 2 | Le **ET** |
+| 3 | Le **OU** |
+
+> Une équation mal parenthésée donne un montage faux, même si l'algèbre était juste.
 
 ## Analyser un montage existant
-Le chemin inverse : nommer les sorties intermédiaires porte par porte, écrire l’équation de chacune, remonter jusqu’à la sortie finale, puis dresser la table de vérité pour vérifier. C’est la méthode à appliquer quand un énoncé fournit un logigramme sans explication.
+1. Nommer les sorties intermédiaires, porte par porte.
+2. Écrire l'équation de chacune.
+3. Remonter jusqu'à la sortie finale.
+4. Dresser la table de vérité pour **vérifier**.
 
-> Retenir qu’un même comportement admet **plusieurs logigrammes** : le plus simple n’est pas toujours le plus lisible, et le moins coûteux dépend des portes réellement disponibles dans le boîtier utilisé.`,
+> Un même comportement admet **plusieurs logigrammes** : le plus simple n'est pas toujours le plus lisible, et le moins coûteux dépend des portes réellement disponibles dans le boîtier utilisé.`,
           },
           questions: [
             ['Quelles sont les trois représentations équivalentes d’une fonction logique ?', ['Table de vérité, équation logique et logigramme', 'Schéma, plan et notice', 'Diagramme d’états, de blocs et de séquence', 'Binaire, décimal et hexadécimal'], 0, 'Savoir passer de l’une à l’autre est la compétence centrale.'],
@@ -794,39 +958,46 @@ Le chemin inverse : nommer les sorties intermédiaires porte par porte, écrire 
           axe: 'Transfert de l’information',
           lecon: {
             titre: 'Les règles du calcul logique',
-            cours: `L’**algèbre de Boole** manipule des variables ne prenant que deux valeurs, 0 et 1. Elle donne les règles qui permettent de **transformer** une équation logique sans changer la fonction qu’elle décrit.
+            cours: `L'algèbre de Boole manipule des variables ne prenant que deux valeurs. Elle donne les règles qui transforment une équation logique sans changer la fonction décrite.
 
 ## Les propriétés de base
 Avec le point pour le ET et le plus pour le OU :
-- **Éléments neutres** : a . 1 = a et a + 0 = a
-- **Éléments absorbants** : a . 0 = 0 et a + 1 = 1
-- **Idempotence** : a . a = a et a + a = a
-- **Complémentarité** : a . complément de a = 0 et a + complément de a = 1
-- **Involution** : le complément du complément de a vaut a
 
-> Les deux dernières colonnes sont celles qui font disparaître des termes entiers dans une simplification. « a + complément de a = 1 » est la règle qui simplifie le plus.
+| La propriété | Avec le ET | Avec le OU |
+| **Élément neutre** | a . 1 = a | a + 0 = a |
+| **Élément absorbant** | a . 0 = 0 | a + 1 = 1 |
+| **Idempotence** | a . a = a | a + a = a |
+| **Complémentarité** | a . complément de a = 0 | a + complément de a = **1** |
+| **Involution** | Le complément du complément de a vaut a | — |
+
+> « a + complément de a = 1 » est la règle qui simplifie le plus : elle fait disparaître des termes entiers.
 
 ## Les propriétés structurelles
-- **Commutativité** : a . b = b . a et a + b = b + a
-- **Associativité** : (a . b) . c = a . (b . c)
-- **Distributivité**, et c’est ici que l’algèbre de Boole s’écarte de l’algèbre ordinaire : le ET est distributif sur le OU **comme en arithmétique**, mais le **OU est aussi distributif sur le ET** :
+| La propriété | Son énoncé |
+| **Commutativité** | a . b = b . a et a + b = b + a |
+| **Associativité** | (a . b) . c = a . (b . c) |
+| **Distributivité du ET sur le OU** | a . (b + c) = a . b + a . c — comme en arithmétique |
+| **Distributivité du OU sur le ET** | a + (b . c) = (a + b) . (a + c) — **impossible** avec des nombres |
 
-a + (b . c) = (a + b) . (a + c)
-
-Cette seconde égalité serait fausse avec des nombres. C’est le piège du chapitre.
+> Cette dernière égalité est le piège du chapitre : elle serait fausse en algèbre ordinaire.
 
 ## Les lois de De Morgan
 Les deux relations les plus utiles de tout le programme :
 
 le complément de (a . b) = complément de a + complément de b
+
 le complément de (a + b) = complément de a . complément de b
 
-Autrement dit : **on complémente chaque terme et on échange les opérateurs**. Elles servent à transformer un montage pour n’employer qu’un seul type de porte — un montage tout en NON-ET, par exemple.
+> En un mot : **on complémente chaque terme et on échange les opérateurs**.
 
-## Le théorème d’absorption
-a + (a . b) = a et a . (a + b) = a
+Elles servent à transformer un montage pour n'employer qu'un seul type de porte — un montage tout en NON-ET, par exemple.
 
-Il élimine des termes entiers sans calcul, et c’est souvent lui qui fait passer d’une équation à cinq termes à une équation à deux.`,
+## Le théorème d'absorption
+| L'expression | Se réduit à |
+| a + (a . b) | a |
+| a . (a + b) | a |
+
+> Il élimine des termes entiers sans calcul, et c'est souvent lui qui fait passer d'une équation à cinq termes à une équation à deux.`,
           },
           questions: [
             ['Que vaut a + complément de a ?', ['1', '0', 'a', 'Le complément de a'], 0, 'C’est la règle de complémentarité, qui simplifie le plus souvent.'],
@@ -844,31 +1015,51 @@ Il élimine des termes entiers sans calcul, et c’est souvent lui qui fait pass
           axe: 'Transfert de l’information',
           lecon: {
             titre: 'Moins de portes, moins de coût',
-            cours: `**Simplifier** une expression logique, c’est trouver une écriture équivalente employant **moins de termes et moins de variables**. L’enjeu est concret : moins de portes, donc moins de composants, moins de place, moins de consommation, moins de pannes possibles et un coût plus bas.
+            cours: `Simplifier une expression logique, c'est trouver une écriture équivalente employant moins de termes et moins de variables.
 
-## Simplifier par l’algèbre
-On applique les règles de Boole, dans un ordre qui n’est pas indifférent :
-1. supprimer les compléments doubles ;
-2. appliquer De Morgan pour faire descendre les compléments sur les variables ;
-3. **factoriser** les termes qui partagent une variable ;
-4. faire apparaître « x + complément de x = 1 » pour éliminer une variable entière ;
-5. appliquer l’absorption.
+## L'enjeu
+| Ce qu'on gagne | Pourquoi |
+| Moins de **portes** | Moins de composants, moins de place |
+| Moins de **consommation** | Moins de circuits alimentés |
+| Moins de **pannes possibles** | Moins de points de défaillance |
+| Un **coût** plus bas | Moins de matière et de câblage |
 
-La difficulté est qu’aucune méthode ne garantit qu’on est arrivé au plus simple : on peut toujours avoir manqué une factorisation.
+## Simplifier par l'algèbre
+| L'étape | Ce qu'on applique |
+| 1 | Supprimer les **compléments doubles** |
+| 2 | **De Morgan**, pour faire descendre les compléments sur les variables |
+| 3 | **Factoriser** les termes qui partagent une variable |
+| 4 | Faire apparaître « x + complément de x = 1 » pour éliminer une variable entière |
+| 5 | Appliquer l'**absorption** |
+
+> La difficulté : aucune méthode ne garantit qu'on est arrivé au plus simple. On peut toujours avoir manqué une factorisation.
 
 ## Le tableau de Karnaugh
-D’où l’intérêt de cette méthode **graphique**, systématique et sans risque d’oubli.
+D'où l'intérêt de cette méthode **graphique**, systématique et sans risque d'oubli.
 
-- On dresse un tableau à 2 puissance n cases, une par ligne de la table de vérité, et l’on y reporte les sorties.
-- Les cases voisines ne diffèrent que par **une seule variable** : c’est la propriété qui fait tout fonctionner, et c’est pourquoi les en-têtes suivent un **code de Gray** (00, 01, **11**, 10) et non l’ordre binaire naturel.
-- On regroupe les 1 en **paquets rectangulaires** dont la taille est une **puissance de 2** — 1, 2, 4, 8 cases —, aussi **grands** que possible, quitte à ce qu’ils se **chevauchent**.
-- Le tableau se referme sur lui-même : les cases des bords **gauche et droit** sont voisines, comme celles du haut et du bas.
-- Chaque groupe donne un terme où l’on ne garde que les variables **constantes** dans le groupe. Un groupe deux fois plus grand élimine une variable de plus.
+| La règle | Son contenu |
+| **Le tableau** | 2 puissance n cases, une par ligne de la table de vérité |
+| **Le voisinage** | Deux cases voisines ne diffèrent que par **une seule variable** |
+| **Les en-têtes** | En **code de Gray** — 00, 01, **11**, 10 — et non en binaire naturel |
+| **Les groupes** | Des rectangles de **1, 2, 4 ou 8** cases, aussi **grands** que possible, quitte à se chevaucher |
+| **Les bords** | Le tableau se referme : gauche et droite sont voisines, haut et bas aussi |
+| **La lecture** | Chaque groupe donne un terme où l'on ne garde que les variables **constantes** dans le groupe |
 
-> Deux erreurs classiques : écrire les en-têtes en binaire naturel (les voisinages sont alors faux), et former de petits groupes alors qu’un plus grand était possible — le résultat reste juste, mais il n’est pas simplifié.
+> Un groupe deux fois plus grand élimine une variable de plus.
+
+## Deux erreurs classiques
+| L'erreur | Sa conséquence |
+| Écrire les en-têtes en **binaire naturel** | Les voisinages sont faux, la simplification est fausse |
+| Former de **petits groupes** alors qu'un plus grand était possible | Le résultat reste juste, mais il n'est pas simplifié |
 
 ## Les cas indifférents
-Certaines combinaisons d’entrées **ne peuvent pas se produire** dans le système réel. On les note φ dans le tableau et on les utilise **librement** : les inclure dans un groupe s’il agrandit ce groupe, les ignorer sinon. Elles sont un cadeau pour la simplification.`,
+Certaines combinaisons d'entrées **ne peuvent pas se produire** dans le système réel. On les note φ et on les utilise **librement** :
+
+| La décision | Quand |
+| Les **inclure** dans un groupe | S'ils l'agrandissent |
+| Les **ignorer** | Sinon |
+
+> Ce sont un cadeau pour la simplification.`,
           },
           questions: [
             ['Pourquoi simplifie-t-on une expression logique ?', ['Pour réduire le nombre de portes, donc le coût et la consommation', 'Pour changer la fonction réalisée', 'Pour augmenter la vitesse du signal', 'Pour éviter les tables de vérité'], 0, 'Moins de composants, moins de place, moins de pannes possibles.'],
@@ -886,30 +1077,37 @@ Certaines combinaisons d’entrées **ne peuvent pas se produire** dans le syst�
           axe: 'Transfert de l’information',
           lecon: {
             titre: 'Intégrité, confidentialité, disponibilité',
-            cours: `Sécuriser une transmission, c’est répondre à trois exigences distinctes — et une solution qui traite l’une ne traite pas forcément les autres.
+            cours: `Sécuriser une transmission, c'est répondre à trois exigences distinctes — et une solution qui traite l'une ne traite pas forcément les autres.
 
-## Les trois exigences
-- L’**intégrité** : le message reçu est identique à celui qui a été émis.
-- La **confidentialité** : seul le destinataire peut le lire.
-- La **disponibilité** : le service reste accessible quand on en a besoin.
+## Les exigences
+| L'exigence | Ce qu'elle garantit |
+| **Intégrité** | Le message reçu est identique à celui qui a été émis |
+| **Confidentialité** | Seul le destinataire peut le lire |
+| **Disponibilité** | Le service reste accessible quand on en a besoin |
+| **Authentification** | Le destinataire est sûr de l'identité de l'émetteur |
+| **Non-répudiation** | L'émetteur ne peut nier avoir envoyé le message |
 
-S’y ajoutent l’**authentification** — le destinataire est sûr de l’identité de l’émetteur — et la **non-répudiation**, qui empêche l’émetteur de nier avoir envoyé le message.
-
-## Protéger l’intégrité
-- Le **bit de parité** détecte un nombre impair d’erreurs, sans les corriger.
-- La **somme de contrôle** et le **CRC** détectent des altérations plus complexes.
-- Les **codes correcteurs** ajoutent assez de redondance pour retrouver la valeur exacte, ce qui est indispensable quand aucune retransmission n’est possible — une sonde spatiale, un disque optique rayé.
-- La **fonction de hachage** produit une **empreinte** de taille fixe : la moindre modification du message change entièrement l’empreinte, ce qui rend l’altération détectable.
+## Protéger l'intégrité
+| Le procédé | Ce qu'il fait |
+| **Bit de parité** | Détecte un nombre impair d'erreurs, sans les corriger |
+| **Somme de contrôle**, **CRC** | Détectent des altérations plus complexes |
+| **Codes correcteurs** | **Retrouvent** la valeur exacte : indispensables quand aucune retransmission n'est possible — sonde spatiale, disque optique rayé |
+| **Fonction de hachage** | Produit une **empreinte** de taille fixe ; la moindre modification la change entièrement |
 
 ## Protéger la confidentialité
-- Le **chiffrement symétrique** emploie la **même clé** pour chiffrer et déchiffrer : rapide, mais il faut transmettre la clé, et c’est là toute la difficulté.
-- Le **chiffrement asymétrique** emploie une **clé publique** pour chiffrer et une **clé privée**, jamais transmise, pour déchiffrer. Plus lent, il résout le problème de l’échange de clés.
-- En pratique on **combine** les deux : l’asymétrique sert à transmettre une clé symétrique de session, qui chiffre ensuite le trafic. C’est ce que fait HTTPS.
+| Le chiffrement | Ses clés | Sa vitesse | Sa difficulté |
+| **Symétrique** | La **même** pour chiffrer et déchiffrer | Rapide | Il faut **transmettre la clé** |
+| **Asymétrique** | Clé **publique** pour chiffrer, clé **privée** jamais transmise pour déchiffrer | Lent | Aucune : il résout l'échange de clés |
+
+> En pratique on **combine** : l'asymétrique transmet une clé symétrique de session, qui chiffre ensuite le trafic. C'est ce que fait HTTPS.
 
 ## La signature numérique
-Elle inverse l’usage des clés : l’émetteur chiffre l’empreinte du message avec sa **clé privée**, et chacun peut la vérifier avec sa **clé publique**. Elle apporte l’authentification et la non-répudiation, mais **pas** la confidentialité — le message, lui, peut rester en clair.
+Elle **inverse** l'usage des clés : l'émetteur chiffre l'empreinte du message avec sa **clé privée**, et chacun la vérifie avec sa **clé publique**.
 
-> À retenir : le chiffrement protège le **contenu**, la signature garantit l’**origine**. Ce ne sont pas les mêmes besoins, et une bonne conception dit lequel elle vise.`,
+| Ce qu'elle apporte | Ce qu'elle n'apporte pas |
+| Authentification et non-répudiation | La **confidentialité** : le message peut rester en clair |
+
+> À retenir : le chiffrement protège le **contenu**, la signature garantit l'**origine**. Ce ne sont pas les mêmes besoins, et une bonne conception dit lequel elle vise.`,
           },
           questions: [
             ['Quelles sont les trois exigences fondamentales de la sécurité d’une transmission ?', ['Intégrité, confidentialité et disponibilité', 'Vitesse, coût et fiabilité', 'Chiffrement, hachage et compression', 'Émission, transport et réception'], 0, 'Authentification et non-répudiation viennent s’y ajouter.'],
@@ -927,36 +1125,45 @@ Elle inverse l’usage des clés : l’émetteur chiffre l’empreinte du messag
           axe: 'Transfert de l’information',
           lecon: {
             titre: 'Adresses, protocoles et topologies',
-            cours: `Un **réseau** relie des équipements pour qu’ils échangent des données. Le faire fonctionner suppose des règles communes : les **protocoles**.
+            cours: `Un réseau relie des équipements pour qu'ils échangent des données. Le faire fonctionner suppose des règles communes : les protocoles.
 
 ## Les échelles
-- **PAN** : quelques mètres, autour d’une personne (Bluetooth).
-- **LAN** : un bâtiment, un atelier (Ethernet, Wi-Fi).
-- **WAN** : une étendue géographique large — Internet en est le cas extrême.
+| Le sigle | Son étendue | Une technologie |
+| **PAN** | Quelques mètres, autour d'une personne | Bluetooth |
+| **LAN** | Un bâtiment, un atelier | Ethernet, Wi-Fi |
+| **WAN** | Une étendue géographique large | Internet |
 
 ## Les topologies
-- **Bus** : un support unique partagé ; simple et peu coûteux, mais une coupure prive tout le monde.
-- **Étoile** : tous les équipements reliés à un nœud central ; la panne d’une branche n’affecte qu’elle, celle du centre affecte tout. C’est la topologie dominante.
-- **Anneau** et **maillée** : la seconde multiplie les chemins, donc la robustesse, au prix du câblage.
+| La topologie | Son principe | Sa faiblesse |
+| **Bus** | Un support unique partagé | Une coupure prive tout le monde |
+| **Étoile** | Tous reliés à un nœud central | La panne du **centre** affecte tout ; c'est la topologie dominante |
+| **Anneau** | Une boucle | Une rupture peut isoler |
+| **Maillée** | Plusieurs chemins | Coûteuse en câblage, mais très robuste |
 
 ## Adresser
-- L’**adresse MAC** est physique, unique et attribuée à la carte réseau en usine.
-- L’**adresse IP** est logique, attribuée par le réseau, et peut changer — elle situe la machine dans le réseau, comme une adresse postale.
-- Le **masque de sous-réseau** sépare, dans l’adresse IP, la partie qui désigne le **réseau** de celle qui désigne la **machine**. C’est lui qui permet de savoir si deux machines peuvent se parler directement ou doivent passer par un routeur.
-- Le **port** désigne l’**application** destinataire sur la machine.
+| L'adresse | Sa nature | Ce qu'elle désigne |
+| **MAC** | Physique, attribuée en usine, **unique** | La carte réseau |
+| **IP** | Logique, attribuée par le réseau, peut changer | La machine **dans le réseau** |
+| **Masque de sous-réseau** | Un découpage | Ce qui, dans l'IP, désigne le **réseau** et ce qui désigne la **machine** |
+| **Port** | Un numéro | L'**application** destinataire sur la machine |
 
-## Les protocoles
-Ils sont organisés **en couches**, chacune ne s’occupant que de son problème :
-- **Ethernet / Wi-Fi** : l’accès au support physique ;
-- **IP** : l’adressage et le **routage**, de proche en proche, sans garantie de livraison ;
-- **TCP** : la connexion fiable — accusés de réception, retransmission des paquets perdus, remise **dans l’ordre** ;
-- **UDP** : sans connexion ni garantie, mais rapide, ce qui convient à la voix et à la vidéo en direct, où un paquet retransmis arriverait trop tard pour servir ;
-- **HTTP, FTP, MQTT** : les applications. MQTT, léger et fondé sur la publication-abonnement, est devenu le protocole de référence des objets connectés.
+> C'est le masque qui permet de savoir si deux machines se parlent directement ou doivent passer par un routeur.
 
-> La logique du découpage en couches : chacune peut changer sans que les autres soient réécrites. C’est ce qui a permis au Wi-Fi de remplacer le câble sans toucher à HTTP.
+## Les protocoles, en couches
+| La couche | Le protocole | Ce dont il s'occupe |
+| Accès au support | **Ethernet / Wi-Fi** | Le média physique |
+| Réseau | **IP** | Adressage et **routage**, sans garantie de livraison |
+| Transport | **TCP** | Connexion **fiable** : accusés de réception, retransmission, remise dans l'ordre |
+| Transport | **UDP** | Sans connexion ni garantie, mais **rapide** : voix et vidéo en direct |
+| Application | **HTTP, FTP, MQTT** | Le service rendu ; MQTT, léger et fondé sur publication-abonnement, est la référence des objets connectés |
+
+> La logique du découpage : chaque couche peut changer sans que les autres soient réécrites. C'est ce qui a permis au Wi-Fi de remplacer le câble sans toucher à HTTP.
 
 ## Les équipements
-Le **commutateur** (*switch*) distribue les trames dans un réseau local d’après l’adresse MAC ; le **routeur** relie des réseaux différents et choisit le chemin d’après l’adresse IP ; le **point d’accès** raccorde les équipements sans fil.`,
+| L'équipement | Ce qu'il fait | D'après quelle adresse |
+| **Commutateur** (*switch*) | Distribue les trames dans un réseau local | **MAC** |
+| **Routeur** | Relie des réseaux différents, choisit le chemin | **IP** |
+| **Point d'accès** | Raccorde les équipements sans fil | — |`,
           },
           questions: [
             ['Quelle différence entre une adresse MAC et une adresse IP ?', ['La MAC est physique et fixe, l’IP est logique et attribuée par le réseau', 'La MAC est attribuée par le réseau, l’IP par le constructeur', 'Elles sont identiques', 'La MAC désigne l’application, l’IP la machine'], 0, 'L’adresse IP situe la machine dans le réseau, comme une adresse postale.'],
@@ -976,29 +1183,35 @@ Le **commutateur** (*switch*) distribue les trames dans un réseau local d’apr
           axe: 'Électrocinétique',
           lecon: {
             titre: 'Lois des mailles et des nœuds',
-            cours: `Un **circuit électrique** est un ensemble de dipôles reliés de façon à laisser circuler un courant. Deux lois suffisent à l’analyser entièrement.
+            cours: `Un circuit électrique est un ensemble de dipôles reliés de façon à laisser circuler un courant. Deux lois suffisent à l'analyser entièrement.
 
-## Les grandeurs
-- L’**intensité** I, en ampères, est le débit de charges ; elle se mesure avec un ampèremètre placé **en série**.
-- La **tension** U, en volts, est la différence de potentiel entre deux points ; elle se mesure avec un voltmètre placé **en dérivation**.
+## Les deux grandeurs
+| La grandeur | Ce qu'elle mesure | Son unité | Son appareil, et son branchement |
+| **Intensité** I | Le débit de charges | Ampère (A) | Ampèremètre, **en série** |
+| **Tension** U | La différence de potentiel | Volt (V) | Voltmètre, **en dérivation** |
 
-Une tension se représente par une **flèche** entre deux points ; une intensité, par une flèche **sur le fil**. Le sens conventionnel du courant va du **plus** vers le **moins** à l’extérieur du générateur.
+Une tension se représente par une flèche **entre deux points**, une intensité par une flèche **sur le fil**. Le sens conventionnel du courant va du plus vers le moins à l'extérieur du générateur.
 
-## La loi des nœuds
-En un **nœud** — un point où se rejoignent au moins trois fils —, la somme des intensités entrantes est égale à la somme des intensités sortantes. C’est la conservation de la charge : rien ne s’accumule dans un fil.
-
-## La loi des mailles
-Le long d’une **maille** — un parcours fermé —, la somme algébrique des tensions est **nulle**. C’est la conservation de l’énergie : en revenant au point de départ, on est revenu au même potentiel.
+## Les deux lois
+| La loi | Son énoncé | Ce qu'elle traduit |
+| **Des nœuds** | La somme des intensités entrantes égale la somme des sortantes | La conservation de la **charge** : rien ne s'accumule dans un fil |
+| **Des mailles** | Le long d'un parcours fermé, la somme algébrique des tensions est **nulle** | La conservation de l'**énergie** : on revient au même potentiel |
 
 ## Série et dérivation
-- En **série**, l’intensité est **la même** partout et les tensions **s’additionnent**. Les résistances s’additionnent : R = R1 + R2. Une coupure arrête tout le circuit.
-- En **dérivation**, la tension est **la même** aux bornes de chaque branche et les intensités **s’additionnent**. Les inverses des résistances s’additionnent. Une branche peut être coupée sans que les autres cessent de fonctionner — c’est pourquoi les installations domestiques sont câblées ainsi.
+| Le point | En **série** | En **dérivation** |
+| L'intensité | **La même** partout | Elle **s'additionne** |
+| La tension | Elle **s'additionne** | **La même** aux bornes de chaque branche |
+| Les résistances | R = R1 + R2 | Les **inverses** s'additionnent |
+| Une coupure | Elle arrête **tout** | Elle n'affecte que sa branche |
+
+> C'est pourquoi les installations domestiques sont câblées en dérivation.
 
 ## Deux montages à connaître
-- Le **pont diviseur de tension** : deux résistances en série partagent la tension proportionnellement à leur valeur. C’est le montage qui adapte un signal de capteur à l’entrée d’un microcontrôleur.
-- Le **pont diviseur de courant**, son équivalent en dérivation.
+| Le montage | Ce qu'il fait | Son usage |
+| **Pont diviseur de tension** | Deux résistances en série partagent la tension proportionnellement à leur valeur | Adapter un signal de capteur à l'entrée d'un microcontrôleur |
+| **Pont diviseur de courant** | L'équivalent en dérivation | — |
 
-> Erreur récurrente : brancher un ampèremètre en dérivation. Sa résistance étant presque nulle, il court-circuite le dipôle — l’appareil, ou le circuit, y passe.`,
+> Erreur récurrente : brancher un ampèremètre **en dérivation**. Sa résistance étant presque nulle, il court-circuite le dipôle — l'appareil, ou le circuit, y passe.`,
           },
           questions: [
             ['Comment se branche un ampèremètre ?', ['En série dans la branche à mesurer', 'En dérivation aux bornes du dipôle', 'À la place du générateur', 'Peu importe'], 0, 'En dérivation, sa résistance quasi nulle court-circuiterait le dipôle.'],
@@ -1016,39 +1229,48 @@ Le long d’une **maille** — un parcours fermé —, la somme algébrique des 
           axe: 'Électrocinétique',
           lecon: {
             titre: 'Trois dipôles, trois comportements',
-            cours: `## Le générateur
-Il fournit l’énergie électrique au circuit. Un générateur **réel** se modélise par une force électromotrice E en série avec une **résistance interne** r :
+            cours: `Trois dipôles, trois comportements à ne pas confondre.
+
+## Le générateur
+Un générateur **réel** se modélise par une force électromotrice E en série avec une **résistance interne** r :
 
 U = E − r × I
 
-Plus le courant appelé est fort, plus la tension délivrée **chute**. C’est pourquoi les phares d’une voiture faiblissent au démarrage : le démarreur appelle un courant énorme.
+> Plus le courant appelé est fort, plus la tension délivrée **chute**. C'est pourquoi les phares d'une voiture faiblissent au démarrage : le démarreur appelle un courant énorme.
 
-Un générateur de **tension** idéal maintient U constante quel que soit I ; un générateur de **courant** idéal maintient I constante.
+| Le générateur idéal | Ce qu'il maintient constant |
+| De **tension** | U, quel que soit I |
+| De **courant** | I, quelle que soit U |
 
 ## La résistance
-Un conducteur ohmique obéit à la **loi d’Ohm** :
+U = R × I, en ohms
 
-U = R × I
+La puissance qu'elle dissipe est intégralement **thermique** : P = U × I = R × I².
 
-en ohms. La puissance qu’il dissipe est intégralement thermique : P = U × I = R × I².
+| L'usage | L'exemple |
+| **Limiter** un courant | La résistance en série d'une LED, sans laquelle elle grille |
+| **Fixer** une tension | Le pont diviseur |
+| **Convertir** un signal | La résistance de mesure |
 
-Ses usages : limiter un courant (la résistance en série d’une LED, sans laquelle elle grille), fixer une tension (pont diviseur), et convertir un signal (résistance de mesure).
-
-La résistance d’un fil dépend de sa longueur, de sa section et du matériau ; celle d’une **thermistance** varie avec la température, ce qui en fait un capteur.
+La résistance d'un fil dépend de sa **longueur**, de sa **section** et du **matériau**. Celle d'une **thermistance** varie avec la température : c'est un capteur.
 
 ## Le condensateur
-Il **stocke** des charges sur deux armatures séparées par un isolant. Sa **capacité** C, en **farads**, relie la charge à la tension :
+Il **stocke** des charges sur deux armatures séparées par un isolant.
 
-Q = C × U
+Q = C × U, avec C en **farads**
 
-L’énergie stockée vaut E = ½ × C × U².
+Énergie stockée : E = ½ × C × U²
 
-Son comportement est celui d’un dipôle à **mémoire** :
-- il ne laisse **pas** passer le courant continu en régime établi ;
-- la tension à ses bornes ne peut **pas** varier brusquement — c’est sa propriété la plus utile ;
-- sa charge et sa décharge à travers une résistance suivent une loi exponentielle de **constante de temps τ = R × C**. Le régime est établi à environ 99 % au bout de **5 τ**.
+| Son comportement | Ce qu'il implique |
+| Il ne laisse **pas** passer le continu en régime établi | Il bloque une composante continue |
+| La **tension** à ses bornes ne peut varier brusquement | C'est sa propriété la plus utile |
+| Charge et décharge en exponentielle | Constante de temps **τ = R × C** ; régime établi à 99 % au bout de **5 τ** |
 
-> Trois usages qui découlent directement de là : **filtrer** (lisser une tension redressée), **temporiser** (créer un délai), **découpler** (absorber les appels de courant brefs d’un circuit numérique).`,
+## Trois usages qui en découlent
+| L'usage | Ce qu'il exploite |
+| **Filtrer** | Lisser une tension redressée |
+| **Temporiser** | Créer un délai calibré par τ |
+| **Découpler** | Absorber les appels de courant brefs d'un circuit numérique |`,
           },
           questions: [
             ['Quelle relation modélise un générateur réel ?', ['U = E − r × I', 'U = E + r × I', 'U = R × I', 'U = E × I'], 0, 'r est la résistance interne : la tension chute quand le courant augmente.'],
@@ -1066,28 +1288,43 @@ Son comportement est celui d’un dipôle à **mémoire** :
           axe: 'Électrocinétique',
           lecon: {
             titre: 'Bobine, redressement et commutation',
-            cours: `## L’inductance
-Une **bobine** est un enroulement de fil qui stocke l’énergie sous forme **magnétique**. Son **inductance** L s’exprime en **henrys**, et l’énergie stockée vaut E = ½ × L × I².
+            cours: `Trois composants de plus, dont deux non linéaires — et l'un d'eux a rendu l'électronique moderne possible.
 
-Son comportement est le **symétrique** de celui du condensateur :
-- le **courant** qui la traverse ne peut **pas** varier brusquement ;
-- en régime continu établi, elle se comporte comme un simple **fil**.
+## L'inductance
+Une **bobine** stocke l'énergie sous forme **magnétique**. Son inductance L s'exprime en **henrys** :
 
-Conséquence pratique décisive : couper brutalement le courant dans une bobine — un relais, un moteur — provoque une **surtension** capable de détruire le transistor qui commandait le circuit. D’où la **diode de roue libre**, montée en inverse aux bornes de la bobine, qui offre au courant un chemin pour s’éteindre.
+E = ½ × L × I²
+
+Son comportement est le **symétrique** de celui du condensateur.
+
+| Le composant | Ce qui ne peut varier brusquement | Son comportement en continu établi |
+| **Condensateur** | La **tension** à ses bornes | Un interrupteur ouvert |
+| **Bobine** | Le **courant** qui la traverse | Un simple **fil** |
+
+> Conséquence décisive : couper brutalement le courant dans une bobine — relais, moteur — provoque une **surtension** capable de détruire le transistor de commande. D'où la **diode de roue libre**, montée en inverse à ses bornes, qui offre au courant un chemin pour s'éteindre.
 
 ## La diode
-C’est un composant **non linéaire** qui ne laisse passer le courant que dans **un seul sens** :
-- en **direct**, elle conduit dès que la tension à ses bornes dépasse une **tension de seuil** — environ 0,7 V pour une diode au silicium ;
-- en **inverse**, elle bloque.
+Un composant **non linéaire** qui ne laisse passer le courant que dans un seul sens.
 
-Ses usages : **redresser** un courant alternatif, **protéger** contre une inversion de polarité, et, pour la **LED**, émettre de la lumière. Une LED se branche toujours avec une résistance en série.
+| Le sens | Son comportement |
+| **Direct** | Elle conduit dès que la tension dépasse la **tension de seuil** — environ 0,7 V au silicium |
+| **Inverse** | Elle **bloque** |
+
+| L'usage | Ce qu'il exploite |
+| **Redresser** | Le sens unique |
+| **Protéger** | Contre une inversion de polarité |
+| La **LED** | Elle émet de la lumière — toujours avec une résistance en série |
 
 ## Le transistor
-C’est le composant qui a rendu l’électronique moderne possible. Un courant ou une tension **faible** sur une électrode de commande contrôle un courant **fort** entre les deux autres. Deux usages, à ne pas confondre :
-- en **commutation**, il fonctionne en tout ou rien : bloqué (interrupteur ouvert) ou saturé (interrupteur fermé). C’est le régime de toute l’électronique **numérique** et de la commande de puissance — un microcontrôleur qui ne délivre que quelques milliampères peut ainsi piloter un moteur.
-- en **amplification**, il fonctionne en régime linéaire : le signal de sortie reproduit celui d’entrée, en plus grand.
+Un courant ou une tension **faible** sur une électrode de commande contrôle un courant **fort** entre les deux autres.
 
-> Ce qu’il faut retenir de tout le chapitre : un transistor **ne fournit pas** l’énergie, il la **module**. La puissance vient toujours de l’alimentation ; le transistor ne fait qu’ouvrir et fermer le robinet.`,
+| Le régime | Son fonctionnement | Où on l'emploie |
+| **Commutation** | Tout ou rien : bloqué (interrupteur ouvert) ou saturé (fermé) | Toute l'électronique **numérique**, et la commande de puissance |
+| **Amplification** | Régime linéaire : la sortie reproduit l'entrée, en plus grand | L'électronique **analogique** |
+
+> Un microcontrôleur qui ne délivre que quelques milliampères peut ainsi piloter un moteur.
+
+> Ce qu'il faut retenir : un transistor **ne fournit pas** l'énergie, il la **module**. La puissance vient toujours de l'alimentation ; le transistor ne fait qu'ouvrir et fermer le robinet.`,
           },
           questions: [
             ['Quelle grandeur ne peut pas varier brusquement dans une bobine ?', ['Le courant qui la traverse', 'La tension à ses bornes', 'Sa résistance', 'Son inductance'], 0, 'C’est le comportement symétrique de celui du condensateur.'],
@@ -1105,28 +1342,41 @@ C’est le composant qui a rendu l’électronique moderne possible. Un courant 
           axe: 'Électrocinétique',
           lecon: {
             titre: 'Mesurer, simuler, comparer',
-            cours: `Étudier un circuit, c’est confronter trois sources : le **calcul**, la **simulation** et la **mesure**. Aucune ne remplace les deux autres.
+            cours: `Étudier un circuit, c'est confronter trois sources : le calcul, la simulation et la mesure. Aucune ne remplace les deux autres.
 
 ## Les appareils de mesure
-- Le **multimètre** mesure tension (en dérivation), intensité (en série) et résistance (hors tension, composant isolé). Il donne une valeur **moyenne ou efficace**, jamais l’allure d’un signal.
-- L’**oscilloscope** montre la **forme du signal en fonction du temps**. C’est le seul appareil qui révèle une allure — un signal carré, une déformation, un temps de montée, un rebond de contact. Ses réglages essentiels : la **base de temps** (en s/div) et la **sensibilité verticale** (en V/div).
-- Le **générateur de fonctions** fournit des signaux d’essai calibrés : sinusoïdal, carré, triangulaire, de fréquence et d’amplitude réglables.
+| L'appareil | Ce qu'il donne | Ce qu'il ne donne pas |
+| **Multimètre** | Tension (en dérivation), intensité (en série), résistance (hors tension) | L'**allure** d'un signal |
+| **Oscilloscope** | La **forme du signal en fonction du temps** | Une valeur unique commode |
+| **Générateur de fonctions** | Des signaux d'essai calibrés : sinusoïdal, carré, triangulaire | — |
+
+> Seul l'oscilloscope révèle une allure : un signal carré déformé, un temps de montée, un rebond de contact.
+
+| Le réglage de l'oscilloscope | Son unité |
+| **Base de temps** | s/div |
+| **Sensibilité verticale** | V/div |
 
 ## Lire un oscillogramme
-On compte les **divisions** et on multiplie par le calibre. Une période occupant 4 divisions à 2 ms/div fait 8 ms, soit une fréquence de 125 Hz. Une amplitude de 3 divisions à 5 V/div fait 15 V.
+On compte les **divisions** et on multiplie par le calibre.
+
+| La lecture | Le calibre | Le résultat |
+| Une période sur 4 divisions | 2 ms/div | 8 ms, soit **125 Hz** |
+| Une amplitude de 3 divisions | 5 V/div | **15 V** |
 
 ## La simulation
-Un simulateur de circuit calcule tensions et courants à partir de **modèles** de composants. Elle permet d’essayer sans risque, de faire varier un paramètre en quelques secondes et d’observer des points inaccessibles à la mesure.
+Un simulateur calcule tensions et courants à partir de **modèles** de composants. Il permet d'essayer sans risque, de faire varier un paramètre en quelques secondes, d'observer des points inaccessibles à la mesure.
 
-Ses limites doivent être dites : elle ne connaît que les phénomènes **modélisés**. Les résistances de contact, les capacités parasites, l’échauffement, les tolérances de fabrication et les perturbations électromagnétiques n’y figurent pas — sauf si on les y met.
+> Sa limite doit être dite : il ne connaît que les phénomènes **modélisés**. Résistances de contact, capacités parasites, échauffement, tolérances de fabrication et perturbations électromagnétiques n'y figurent pas — sauf si on les y met.
 
-## L’analyse des écarts
-C’est le raisonnement central de la démarche de l’ingénieur, et ce que l’épreuve attend :
-- écart **calcul / simulation** : une erreur de modèle ou d’hypothèse ;
-- écart **simulation / mesure** : un phénomène réel non modélisé, ou un composant hors tolérance ;
-- écart **mesure / cahier des charges** : le produit ne répond pas au besoin, et il faut décider quoi corriger.
+## L'analyse des écarts
+C'est le raisonnement central de la démarche de l'ingénieur, et ce que l'épreuve attend.
 
-> Un écart n’est pas un échec : c’est une information. Ce qui serait une faute, c’est de ne pas le mesurer, ou de l’expliquer sans l’avoir cherché.`,
+| L'écart | Ce qu'il révèle |
+| Calcul / **simulation** | Une erreur de modèle ou d'hypothèse |
+| Simulation / **mesure** | Un phénomène réel non modélisé, ou un composant hors tolérance |
+| Mesure / **cahier des charges** | Le produit ne répond pas au besoin : il faut décider quoi corriger |
+
+> Un écart n'est pas un échec : c'est une information. Ce qui serait une faute, c'est de ne pas le mesurer, ou de l'expliquer sans l'avoir cherché.`,
           },
           questions: [
             ['Quel appareil montre la forme d’un signal en fonction du temps ?', ['L’oscilloscope', 'Le multimètre', 'L’ampèremètre', 'Le générateur de fonctions'], 0, 'Le multimètre ne donne qu’une valeur, jamais une allure.'],

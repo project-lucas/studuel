@@ -99,31 +99,47 @@ DELETE FROM public.chapters c
           axe: 'Respecter autrui',
           lecon: {
             titre: 'Quand la différence de traitement devient un délit',
-            cours: `## La définition juridique
-Une **discrimination** est une différence de traitement **défavorable**, fondée sur un **critère interdit par la loi**, dans un domaine que la loi protège — emploi, logement, école, santé, accès à un service.
+            cours: `Une discrimination est une différence de traitement défavorable, fondée sur un critère interdit par la loi, dans un domaine que la loi protège.
+
+## Les trois conditions
+| La condition | Ce qu'elle exige |
+| Un traitement **défavorable** | Un refus, une exclusion, un désavantage |
+| Un **critère interdit** | Parmi la vingtaine que la loi énumère |
+| Un **domaine protégé** | Emploi, logement, école, santé, accès à un service |
+
+> Les trois doivent être réunies. C'est ce qui distingue la discrimination d'une simple différence.
 
 ## Les critères interdits
-La loi française en compte plus de **vingt**, parmi lesquels : l’**origine**, le **sexe**, l’**âge**, le **handicap**, la **religion**, l’**orientation sexuelle**, l’**état de santé**, l’apparence physique, la situation de famille, les opinions politiques, l’appartenance syndicale, le lieu de résidence.
+| Le domaine du critère | Les critères |
+| La **personne** | Origine, sexe, âge, apparence physique, handicap, état de santé |
+| Ses **convictions** | Religion, opinions politiques, appartenance syndicale |
+| Sa **vie** | Orientation sexuelle, situation de famille, lieu de résidence |
 
-## Ce qui n’en est pas une
-Toute différence n’est pas une discrimination. Refuser un emploi à quelqu’un qui n’a pas les compétences requises est légitime : le critère est **pertinent**. Le refuser à cause de son nom ne l’est pas.
+## Discrimination ou différence légitime
+| La situation | Le verdict | Pourquoi |
+| Refuser un emploi faute de **compétences** | Légitime | Le critère est **pertinent** pour le poste |
+| Refuser un emploi à cause du **nom** | **Discrimination** | Le critère est interdit |
 
-## Directe et indirecte
-- **Directe** : la différence est explicite — « on ne loue pas à des étudiants ».
-- **Indirecte** : une règle apparemment neutre défavorise en fait un groupe — un critère de taille minimale sans lien avec le poste écarte surtout les femmes.
+## Directe ou indirecte
+| Sa forme | Sa définition | Un exemple |
+| **Directe** | La différence est explicite | « On ne loue pas à des étudiants » |
+| **Indirecte** | Une règle neutre défavorise en fait un groupe | Une taille minimale sans lien avec le poste, qui écarte surtout les femmes |
 
 ## Les sanctions
-La discrimination est un **délit** : jusqu’à **3 ans de prison et 45 000 € d’amende**, davantage pour un service public.
+| L'auteur | La peine encourue |
+| Un particulier, une entreprise | Jusqu'à **3 ans de prison** et **45 000 €** d'amende |
+| Un **service public** | Des peines aggravées |
 
-> Le droit ne demande pas ce que la personne a voulu faire, mais ce qu’elle a fait. On peut discriminer sans se penser raciste ou sexiste — le résultat suffit à qualifier l’acte.
+> Le droit ne demande pas ce que la personne a **voulu** faire, mais ce qu'elle a **fait**. On peut discriminer sans se penser raciste ou sexiste : le résultat suffit à qualifier l'acte.
 
 ## Comment agir
-- Le **Défenseur des droits**, autorité indépendante, peut être saisi **gratuitement** par toute personne.
-- Le **testing** — comparer deux candidatures identiques sauf sur un critère — est une preuve admise par la justice.
-- Associations, inspection du travail, plainte.
+| Le recours | Ce qu'il permet |
+| Le **Défenseur des droits** | Autorité indépendante, saisie **gratuite** par toute personne |
+| Le **testing** | Comparer deux candidatures identiques sauf sur un critère ; preuve admise en justice |
+| Associations, inspection du travail, plainte | Accompagner et poursuivre |
 
-## À l’école
-Refuser à un élève une sortie, un stage ou un rôle à cause de son origine, de sa religion ou de son handicap est une discrimination, et le droit s’y applique comme ailleurs.`,
+## À l'école
+> Refuser à un élève une sortie, un stage ou un rôle à cause de son origine, de sa religion ou de son handicap est une discrimination : le droit s'y applique comme ailleurs.`,
           },
           questions: [
             ['Qu’est-ce qu’une discrimination au sens de la loi ?', ['Une différence de traitement défavorable fondée sur un critère interdit', 'Toute différence entre personnes', 'Une insulte', 'Une opinion'], 0, 'Dans un domaine protégé par la loi.'],
@@ -141,30 +157,38 @@ Refuser à un élève une sortie, un stage ou un rôle à cause de son origine, 
           axe: 'Respecter autrui',
           lecon: {
             titre: 'Tout dire n’est pas tout permettre',
-            cours: `## Le principe
-La **liberté d’expression** est garantie par la **Déclaration de 1789** (article 11) et par la loi du **29 juillet 1881** sur la liberté de la presse. Elle permet de penser, dire, écrire, publier, critiquer — y compris le pouvoir, les religions et les idées.
+            cours: `La liberté d'expression permet de penser, dire, écrire, publier et critiquer — mais la loi punit certains actes de parole.
 
-## Ce qu’elle protège vraiment
-Elle ne protège pas seulement ce qui plaît. Une opinion consensuelle n’a besoin d’aucune protection : la liberté d’expression existe précisément pour ce qui **dérange**, choque ou heurte.
+## Ses fondements
+| Le texte | Ce qu'il pose |
+| La **Déclaration de 1789**, article 11 | La libre communication des pensées et des opinions |
+| La loi du **29 juillet 1881** | La liberté de la presse et ses limites |
+
+> Une opinion consensuelle n'a besoin d'aucune protection. La liberté d'expression existe précisément pour ce qui **dérange**.
 
 ## Les limites, qui sont des délits
-La loi ne punit pas les opinions, mais des **actes de parole** qui portent atteinte à autrui :
-- l’**injure** et la **diffamation** (affirmer un fait faux qui porte atteinte à l’honneur) ;
-- la **provocation à la haine** ou à la violence en raison de l’origine, la religion, le sexe, l’orientation sexuelle, le handicap ;
-- l’**apologie du terrorisme** ;
-- la **négation de crimes contre l’humanité** ;
-- le **harcèlement** et les **menaces**.
+| Le délit | Ce qu'il vise |
+| L'**injure** | Une expression outrageante, sans fait précis |
+| La **diffamation** | Un fait faux qui porte atteinte à l'honneur |
+| La **provocation à la haine** ou à la violence | En raison de l'origine, la religion, le sexe, l'orientation sexuelle, le handicap |
+| L'**apologie du terrorisme** | La présentation favorable d'un acte terroriste |
+| La **négation de crimes contre l'humanité** | La contestation de crimes jugés |
+| Le **harcèlement** et les **menaces** | L'atteinte répétée ou l'intimidation |
 
-> On peut critiquer une religion, une idée, un parti — c’est protégé. On ne peut pas appeler à s’en prendre à des **personnes** — c’est un délit. La frontière n’est pas entre le poli et l’impoli : elle est entre l’idée et la personne.
+## Où passe la frontière
+| Ce qui est **protégé** | Ce qui est **puni** |
+| Critiquer une religion, une idée, un parti | Appeler à s'en prendre à des **personnes** |
+
+> La frontière n'est pas entre le poli et l'impoli : elle est entre l'**idée** et la **personne**.
 
 ## En ligne
-La loi s’applique **exactement de la même façon** sur internet. Un message posté est un écrit public : il est traçable par l’adresse IP, et le fait d’être derrière un pseudonyme ne protège de rien.
+| L'idée reçue | La réalité |
+| « Sur internet, la loi ne s'applique pas » | Elle s'applique **exactement** de la même façon |
+| « Mon pseudonyme me protège » | Le message est traçable par l'**adresse IP** |
+| « Ce n'est qu'un partage » | Publier, partager, retweeter, c'est **diffuser** : le partage d'un contenu illicite engage aussi celui qui partage |
 
-## Le droit à l’image et la vie privée
-Photographier ou filmer quelqu’un et diffuser l’image **sans son accord** est interdit, même si l’image n’est pas insultante.
-
-## La responsabilité
-Publier, partager, retweeter, c’est **diffuser**. Le partage d’un contenu illicite engage aussi celui qui partage.`,
+## Le droit à l'image
+> Photographier ou filmer quelqu'un et diffuser l'image **sans son accord** est interdit, même si l'image n'est pas insultante.`,
           },
           questions: [
             ['Quels textes garantissent la liberté d’expression en France ?', ['La Déclaration de 1789 et la loi de 1881', 'La Constitution de 1958 seule', 'Le Code civil', 'La loi de 1905'], 0, 'Article 11 de la Déclaration.'],
@@ -182,28 +206,43 @@ Publier, partager, retweeter, c’est **diffuser**. Le partage d’un contenu il
           axe: 'Respecter autrui',
           lecon: {
             titre: 'Ce que le réseau garde de vous',
-            cours: `## Le droit
-L’**article 9 du Code civil** protège la vie privée : « Chacun a droit au respect de sa vie privée. » Il couvre le domicile, la santé, la vie sentimentale, les convictions, l’image.
+            cours: `L'article 9 du Code civil protège la vie privée : le domicile, la santé, la vie sentimentale, les convictions, l'image.
 
-## L’identité numérique
-C’est l’ensemble des traces qu’on laisse en ligne : ce qu’on **publie** volontairement, mais aussi ce que **d’autres publient** sur nous, et ce que les services **enregistrent** sans qu’on le voie — recherches, position, temps passé, achats.
+## L'identité numérique, en trois couches
+| La couche | Son contenu |
+| Ce qu'on **publie** | Volontairement : photos, messages, profils |
+| Ce que **d'autres publient** | Sur nous, sans qu'on l'ait choisi |
+| Ce que les services **enregistrent** | Sans qu'on le voie : recherches, position, temps passé, achats |
 
-## Les traces qu’on ne choisit pas
-Un site connaît l’adresse IP, l’appareil, l’heure, la page d’où l’on vient. Les **cookies** suivent la navigation d’un site à l’autre pour construire un **profil publicitaire**. C’est le modèle économique de la plupart des services « gratuits ».
+## Les traces qu'on ne choisit pas
+| La trace | Ce qu'elle révèle |
+| L'**adresse IP**, l'appareil, l'heure | D'où et quand on se connecte |
+| La page d'où l'on vient | Le parcours de navigation |
+| Les **cookies** | Le suivi d'un site à l'autre, pour construire un **profil publicitaire** |
 
-> Quand un service est gratuit, ce n’est pas un cadeau : ce qui est vendu, c’est l’attention et le profil de l’utilisateur.
+> Quand un service est gratuit, ce n'est pas un cadeau : ce qui est vendu, c'est l'attention et le profil de l'utilisateur.
 
-## Le RGPD
-Le **Règlement général sur la protection des données** (2018) donne des droits à chacun : savoir quelles données sont détenues, y **accéder**, les **corriger**, les **effacer** (droit à l’oubli), s’opposer à leur usage. En France, la **CNIL** veille à leur application et peut être saisie.
+## Le RGPD, les droits de chacun
+| Le droit | Ce qu'il permet |
+| **Accès** | Savoir quelles données sont détenues, et les consulter |
+| **Rectification** | Les corriger |
+| **Effacement** | Le « droit à l'oubli » |
+| **Opposition** | Refuser un usage des données |
 
-## L’âge
-Le consentement autonome au traitement des données est fixé à **15 ans** en France ; en dessous, l’accord d’un parent est requis.
+| Le repère | Sa valeur |
+| Le règlement | Le **RGPD**, entré en application en **2018** |
+| L'autorité française | La **CNIL**, qui peut être saisie |
+| L'âge du consentement autonome en France | **15 ans** ; en dessous, l'accord d'un parent |
 
 ## La permanence
-Ce qui est publié est **copiable** et **archivé**. Supprimer un message ne supprime pas les captures d’écran qu’il a produites. Une publication de collège peut ressortir dix ans plus tard, devant un employeur.
+| Ce qu'on croit | Ce qui se passe |
+| « Je peux supprimer » | Le contenu est **copiable** et **archivé** ; supprimer ne supprime pas les captures d'écran |
+| « C'était il y a longtemps » | Une publication de collège peut ressortir dix ans plus tard, devant un employeur |
 
 ## Les réflexes
-Réglages de confidentialité, mots de passe distincts, réfléchir avant de publier une photo d’autrui, ne jamais diffuser une image intime — c’est un délit lourdement puni.`,
+Réglages de confidentialité, mots de passe distincts, réfléchir avant de publier une photo d'autrui.
+
+> Ne jamais diffuser une image intime : c'est un délit lourdement puni.`,
           },
           questions: [
             ['Quel article protège la vie privée en France ?', ['L’article 9 du Code civil', 'L’article 1 de la Constitution', 'La loi de 1881', 'La loi de 1905'], 0, '« Chacun a droit au respect de sa vie privée. »'],
@@ -223,30 +262,43 @@ Réglages de confidentialité, mots de passe distincts, réfléchir avant de pub
           axe: 'Les valeurs et principes de la République',
           lecon: {
             titre: 'Un principe d’organisation, pas une croyance',
-            cours: `## Les trois piliers
-1. La **liberté de conscience** : croire, ne pas croire, changer, pratiquer ou non.
-2. La **séparation** de l’État et des religions : l’État ne reconnaît, ne salarie ni ne subventionne aucun culte.
-3. L’**égalité** de tous les citoyens devant la loi, quelle que soit leur croyance.
+            cours: `La laïcité n'est pas une croyance : c'est un principe d'organisation de l'État.
+
+## Les trois piliers
+| Le pilier | Ce qu'il garantit |
+| La **liberté de conscience** | Croire, ne pas croire, changer, pratiquer ou non |
+| La **séparation** | L'État ne reconnaît, ne salarie ni ne subventionne aucun culte |
+| L'**égalité** | Tous les citoyens égaux devant la loi, quelle que soit leur croyance |
 
 ## La loi de 1905
-La **séparation des Églises et de l’État** en pose les termes. Elle garantit **à la fois** le libre exercice des cultes **et** la neutralité de l’État : ce sont les deux faces du même texte, et on en oublie souvent la première.
+| Ce qu'elle garantit | Est-ce ce dont on se souvient |
+| Le **libre exercice des cultes** | Rarement — c'est pourtant la première face du texte |
+| La **neutralité de l'État** | Oui, presque toujours |
 
-## Ce que la laïcité n’est pas
-- Ce n’est pas l’**athéisme** d’État : l’État n’a pas d’opinion sur Dieu.
-- Ce n’est pas l’effacement des religions de l’espace public : on peut porter un signe religieux dans la rue, exprimer sa foi, se réunir.
-- Ce n’est pas une exception française honteuse : c’est un mode d’organisation qui vise l’égalité.
+> Ce sont les deux faces du même texte.
 
-> La laïcité ne protège pas la République **contre** les religions. Elle protège chaque croyant du pouvoir des autres croyances — et l’incroyant de toutes.
+## Ce que la laïcité n'est pas
+| L'idée fausse | La réalité |
+| L'**athéisme** d'État | L'État n'a pas d'opinion sur Dieu |
+| L'effacement des religions de l'espace public | On peut porter un signe religieux dans la rue, exprimer sa foi, se réunir |
+| Une exception française honteuse | Un mode d'organisation qui vise l'**égalité** |
 
-## Où s’applique la neutralité
-- Les **agents publics** — enseignants, policiers, employés de mairie — sont neutres **dans l’exercice de leurs fonctions**. Pas dans leur vie privée.
-- Les **usagers** d’un service public sont libres, sauf exception prévue par la loi.
+> La laïcité ne protège pas la République **contre** les religions. Elle protège chaque croyant du pouvoir des autres croyances — et l'incroyant de toutes.
 
-## Le cas de l’école publique
-La loi du **15 mars 2004** interdit les signes religieux **ostensibles** aux élèves des écoles, collèges et lycées publics. Elle ne s’applique ni à l’université, ni à la rue, ni aux établissements privés sous contrat.
+## Qui doit la neutralité
+| La personne | Son obligation |
+| Les **agents publics** — enseignants, policiers, employés de mairie | Neutres **dans l'exercice de leurs fonctions**, pas dans leur vie privée |
+| Les **usagers** d'un service public | **Libres**, sauf exception prévue par la loi |
 
-## Les exceptions territoriales
-En **Alsace-Moselle**, allemandes en 1905, le **Concordat** est toujours en vigueur : certains cultes y sont reconnus et des enseignements religieux organisés. La laïcité française n’est donc pas parfaitement uniforme.`,
+## Le cas de l'école publique
+| Le lieu | La loi du 15 mars 2004 s'y applique |
+| École, collège, lycée **publics** | **Oui** : signes religieux ostensibles interdits aux élèves |
+| Université | Non |
+| La rue | Non |
+| Établissements privés sous contrat | Non |
+
+## L'exception territoriale
+> En **Alsace-Moselle**, allemandes en 1905, le **Concordat** est toujours en vigueur : certains cultes y sont reconnus et des enseignements religieux organisés. La laïcité française n'est donc pas parfaitement uniforme.`,
           },
           questions: [
             ['Quels sont les trois piliers de la laïcité ?', ['Liberté de conscience, séparation État-religions, égalité devant la loi', 'Interdiction, neutralité, sanction', 'Athéisme, tolérance, silence', 'Foi, tradition, ordre'], 0, 'Ils tiennent ensemble.'],
@@ -309,34 +361,42 @@ Le **juge** tranche, le **procureur** représente la société et poursuit, l’
           axe: 'Les valeurs et principes de la République',
           lecon: {
             titre: 'Ce qu’être citoyen veut dire',
-            cours: `## Nationalité et citoyenneté
-La **nationalité** est le lien juridique avec un État. La **citoyenneté** ajoute la participation à la vie politique : voter, être élu, exercer certaines fonctions.
+            cours: `La nationalité est un lien juridique avec un État ; la citoyenneté y ajoute la participation à la vie politique.
+
+## Les deux notions
+| La notion | Ce qu'elle désigne |
+| La **nationalité** | Le lien juridique avec un État |
+| La **citoyenneté** | Voter, être élu, exercer certaines fonctions |
 
 ## Comment on devient français
-- par **filiation** : au moins un parent français ;
-- par **naissance et résidence** : né en France de parents étrangers, on devient français à 18 ans sous condition de résidence — c’est le **droit du sol**, dans sa forme française ;
-- par **naturalisation** : après plusieurs années de résidence, un examen de langue et de connaissance des valeurs ;
-- par **mariage**, sous conditions.
+| La voie | Sa condition |
+| La **filiation** | Au moins un parent français |
+| La **naissance et la résidence** | Né en France de parents étrangers, on devient français à **18 ans** sous condition de résidence — le **droit du sol** |
+| La **naturalisation** | Plusieurs années de résidence, un examen de langue et de connaissance des valeurs |
+| Le **mariage** | Sous conditions |
 
-## Les droits du citoyen
-- **politiques** : voter, être élu, adhérer à un parti ;
-- **civils** : liberté d’expression, de circulation, de propriété, de réunion ;
-- **sociaux** : éducation, santé, protection sociale.
+## Droits et devoirs
+| Les droits | Les devoirs |
+| **Politiques** : voter, être élu, adhérer à un parti | Respecter la **loi** |
+| **Civils** : expression, circulation, propriété, réunion | **Payer l'impôt** |
+| **Sociaux** : éducation, santé, protection sociale | Être **juré** si l'on est tiré au sort |
+| | Se faire **recenser** à 16 ans et suivre la **JDC** |
 
-## Les devoirs
-Respecter la loi, **payer l’impôt**, être juré si l’on est tiré au sort, participer à la **Journée défense et citoyenneté**, se faire recenser à 16 ans.
-
-> Les droits ne sont pas la contrepartie des devoirs : ils existent d’abord. Mais aucun ne tiendrait si personne ne remplissait les seconds — l’école, l’hôpital et la justice sont payés par l’impôt.
+> Les droits ne sont pas la contrepartie des devoirs : ils existent d'abord. Mais aucun ne tiendrait si personne ne remplissait les seconds — l'école, l'hôpital et la justice sont payés par l'impôt.
 
 ## La citoyenneté européenne
-Tout ressortissant d’un État membre de l’**Union européenne** est aussi **citoyen européen**. Elle **s’ajoute** à la citoyenneté nationale, elle ne la remplace pas. Elle donne :
-- la **libre circulation** et le droit de s’installer dans un autre État membre ;
-- le droit de voter et d’être candidat aux élections **municipales** et **européennes** dans le pays où l’on réside ;
-- la **protection consulaire** de n’importe quel État membre hors d’Europe ;
-- le droit de pétition devant le Parlement européen.
+Elle **s'ajoute** à la citoyenneté nationale, elle ne la remplace pas.
 
-## Le recensement et la JDC
-À **16 ans**, le recensement est obligatoire ; il ouvre la **Journée défense et citoyenneté**, elle-même nécessaire pour s’inscrire au baccalauréat ou au permis de conduire.`,
+| Le droit | Ce qu'il permet |
+| La **libre circulation** | S'installer dans un autre État membre |
+| Le **vote local et européen** | Élections **municipales** et **européennes** dans le pays de résidence |
+| La **protection consulaire** | Celle de n'importe quel État membre, hors d'Europe |
+| Le droit de **pétition** | Devant le Parlement européen |
+
+## Le parcours à 16 ans
+| L'étape | Sa conséquence |
+| Le **recensement** en mairie ou en ligne | Obligatoire |
+| La **Journée défense et citoyenneté** | Son attestation est exigée pour le **baccalauréat** et le **permis de conduire** |`,
           },
           questions: [
             ['Quelle différence entre nationalité et citoyenneté ?', ['La citoyenneté ajoute la participation à la vie politique', 'Aucune', 'La nationalité s’acquiert à 18 ans', 'La citoyenneté est européenne uniquement'], 0, 'Voter, être élu, exercer certaines fonctions.'],
@@ -400,32 +460,47 @@ Ne pas voter est un droit, mais ce n’est pas un vote : le résultat est calcul
           axe: 'Construire une culture civique',
           lecon: {
             titre: 'Vérifier avant de croire, et avant de partager',
-            cours: `## L’information et le reste
-Une **information** est un fait **vérifié**, **sourcé**, **daté**, publié par quelqu’un qui en assume la responsabilité. Ce n’est ni une opinion, ni une rumeur, ni une publicité.
+            cours: `Une information est un fait vérifié, sourcé, daté, publié par quelqu'un qui en assume la responsabilité.
 
-## Qui produit l’information
-Le **journaliste** enquête, recoupe **au moins deux sources indépendantes**, et signe. Il engage la responsabilité de son média. Un compte anonyme qui relaie ne fait rien de tout cela.
+## L'information et le reste
+| Le contenu | Ce qui le caractérise |
+| Une **information** | Un fait **vérifié**, **sourcé**, **daté**, **signé** |
+| Une **opinion** | Un jugement, qui n'a pas à être vrai |
+| Une **rumeur** | Sans source identifiable |
+| Une **publicité** | Un message payé pour convaincre |
+
+## Qui produit l'information
+| L'acteur | Ce qu'il fait |
+| Le **journaliste** | Il enquête, recoupe **au moins deux sources indépendantes**, et **signe** |
+| Son **média** | Il engage sa responsabilité |
+| Un compte anonyme qui relaie | Rien de tout cela |
 
 ## Les infox
-Une **infox** (*fake news*) est une fausse information **diffusée volontairement**. Elle circule vite parce qu’elle est **faite pour** : elle vise l’émotion — la peur, la colère, l’indignation — et l’émotion fait partager avant de réfléchir.
+Une **infox** est une fausse information **diffusée volontairement**. Elle circule vite parce qu'elle est **faite pour** : elle vise l'émotion — la peur, la colère, l'indignation — et l'émotion fait partager avant de réfléchir.
 
-> Un contenu qui vous met immédiatement en colère mérite une vérification immédiate. C’est précisément l’effet recherché.
+> Un contenu qui vous met immédiatement en colère mérite une vérification immédiate. C'est précisément l'effet recherché.
 
-## Les cinq questions à se poser
-1. **Qui** publie ? Le site est-il identifiable (mentions légales) ?
-2. **Quand** ? Une vraie photo peut illustrer un faux propos si elle a dix ans.
-3. **D’où** vient l’info ? Remonte-t-on à une source première ?
-4. **D’autres médias** sérieux la reprennent-ils ?
-5. **Pourquoi** me la montre-t-on ? Qui a intérêt à ce que j’y croie ?
+## Les cinq questions
+| La question | Ce qu'elle vérifie |
+| **Qui** publie ? | Le site est-il identifiable — mentions légales ? |
+| **Quand** ? | Une vraie photo peut illustrer un faux propos si elle a dix ans |
+| **D'où** vient l'info ? | Remonte-t-on à une source première ? |
+| **D'autres médias** sérieux la reprennent-ils ? | Le recoupement |
+| **Pourquoi** me la montre-t-on ? | Qui a intérêt à ce que j'y croie ? |
 
 ## Les outils
-Recherche d’**image inversée**, sites de **fact-checking**, consultation des mentions légales, comparaison de plusieurs médias.
+Recherche d'**image inversée**, sites de **fact-checking**, mentions légales, comparaison de plusieurs médias.
 
 ## La bulle de filtre
-Les algorithmes montrent ce qui **retient** l’attention, donc ce qui ressemble à ce qu’on a déjà aimé. On finit par ne voir que ce qui confirme ses idées : c’est la **bulle de filtre**. En sortir demande d’aller chercher volontairement d’autres sources.
+| L'étape | Ce qui se passe |
+| 1 | L'algorithme montre ce qui **retient** l'attention |
+| 2 | Donc ce qui ressemble à ce qu'on a déjà aimé |
+| 3 | On finit par ne voir que ce qui **confirme** ses idées |
+
+> En sortir demande d'aller chercher volontairement d'autres sources.
 
 ## La responsabilité
-Partager une infox, même de bonne foi, c’est la diffuser. Le premier réflexe utile n’est pas de démentir : c’est de **ne pas relayer**.`,
+> Partager une infox, même de bonne foi, c'est la diffuser. Le premier réflexe utile n'est pas de démentir : c'est de **ne pas relayer**.`,
           },
           questions: [
             ['Qu’est-ce qu’une information au sens journalistique ?', ['Un fait vérifié, sourcé, daté et assumé', 'Une opinion partagée', 'Un message viral', 'Une publicité'], 0, 'Le journaliste recoupe au moins deux sources indépendantes.'],
@@ -443,31 +518,43 @@ Partager une infox, même de bonne foi, c’est la diffuser. Le premier réflexe
           axe: 'Construire une culture civique',
           lecon: {
             titre: 'Faire quelque chose du monde où l’on vit',
-            cours: `## Les formes de l’engagement
-- **Associatif** : bénévolat dans une association loi 1901 — social, sportif, culturel, humanitaire, environnemental.
-- **Syndical** : défendre des droits collectifs au travail.
-- **Politique** : parti, campagne, mandat.
-- **Citoyen** : pétition, manifestation, boycott, participation à un conseil de quartier.
-- **Scolaire** : délégué, éco-délégué, CVC, association sportive, journal du collège.
-- **Service civique** : à partir de **16 ans**, une mission d’intérêt général indemnisée, de 6 à 12 mois.
+            cours: `S'engager, c'est donner du temps à une cause collective — et la solidarité française en a fait un système.
+
+## Les formes de l'engagement
+| La forme | Ce qu'elle recouvre |
+| **Associatif** | Bénévolat en association loi 1901 : social, sportif, culturel, humanitaire, environnemental |
+| **Syndical** | Défendre des droits collectifs au travail |
+| **Politique** | Parti, campagne, mandat |
+| **Citoyen** | Pétition, manifestation, boycott, conseil de quartier |
+| **Scolaire** | Délégué, éco-délégué, CVC, association sportive, journal du collège |
+| **Service civique** | Dès **16 ans** : une mission d'intérêt général indemnisée, de 6 à 12 mois |
 
 ## La solidarité organisée
-La France a bâti un système où le risque est **mutualisé** : la **Sécurité sociale** (1945), l’assurance chômage, les retraites, les aides au logement. Chacun cotise selon ses moyens et reçoit selon ses besoins.
-Ce n’est pas de la charité : c’est un **droit**, financé par les cotisations et l’impôt.
+| Le dispositif | Ce qu'il couvre |
+| La **Sécurité sociale**, créée en **1945** | La maladie, la famille, les accidents du travail |
+| L'**assurance chômage** | La perte d'emploi |
+| Les **retraites** | La vieillesse |
+| Les **aides au logement** | Le coût du logement |
 
-> Payer l’impôt est un acte de solidarité, même quand on ne le vit pas ainsi : c’est ce qui paie l’école qu’on fréquente et l’hôpital qu’on espère ne pas fréquenter.
+Chacun cotise **selon ses moyens** et reçoit **selon ses besoins**. Ce n'est pas de la charité : c'est un **droit**, financé par les cotisations et l'impôt.
+
+> Payer l'impôt est un acte de solidarité, même quand on ne le vit pas ainsi : c'est ce qui paie l'école qu'on fréquente et l'hôpital qu'on espère ne pas fréquenter.
 
 ## La solidarité de proximité
-Associations d’aide alimentaire, maraudes, aide aux devoirs, visites aux personnes isolées, dons du sang. Elles complètent le système public là où il n’atteint pas.
+Aide alimentaire, maraudes, aide aux devoirs, visites aux personnes isolées, don du sang : elles complètent le système public là où il n'atteint pas.
 
 ## Le bénévolat en France
-Environ **20 millions** de personnes donnent du temps à une association. C’est l’une des formes d’engagement les plus répandues, et la plus accessible avant 18 ans.
+| Le repère | Sa valeur |
+| Les bénévoles | Environ **20 millions** de personnes |
+| Son accessibilité | La forme d'engagement la plus ouverte avant 18 ans |
 
-## Ce que l’engagement demande
-Du **temps**, de la **régularité**, et l’acceptation que les résultats soient lents et partagés. On ne s’engage pas pour être remercié.
+## Ce que l'engagement demande
+Du **temps**, de la **régularité**, et l'acceptation que les résultats soient lents et partagés.
 
-## Et à l’échelle du monde
-ONG, aide au développement, action humanitaire. Les **17 objectifs de développement durable** de l’ONU (2015) fixent un cap commun à l’horizon 2030.`,
+> On ne s'engage pas pour être remercié.
+
+## À l'échelle du monde
+ONG, aide au développement, action humanitaire, et les **17 objectifs de développement durable** de l'ONU, fixés en **2015** pour l'horizon **2030**.`,
           },
           questions: [
             ['À partir de quel âge peut-on faire un service civique ?', ['16 ans', '18 ans', '14 ans', '21 ans'], 0, 'Une mission d’intérêt général de 6 à 12 mois, indemnisée.'],
@@ -485,32 +572,41 @@ ONG, aide au développement, action humanitaire. Les **17 objectifs de développ
           axe: 'Construire une culture civique',
           lecon: {
             titre: 'Qui protège, et contre quoi',
-            cours: `## La défense, une affaire de tous
-Depuis la suspension du **service militaire** en 1997, la défense repose sur une **armée professionnelle** — mais elle reste une affaire nationale : c’est le sens du **parcours de citoyenneté**.
+            cours: `Depuis la suspension du service militaire en 1997, la défense repose sur une armée professionnelle — mais elle reste une affaire nationale.
 
 ## Le parcours de citoyenneté
-1. L’**enseignement de défense**, au collège et au lycée.
-2. Le **recensement** obligatoire à **16 ans**, en mairie ou en ligne.
-3. La **Journée défense et citoyenneté** (JDC), entre 16 et 18 ans. Son attestation est exigée pour s’inscrire au **baccalauréat**, au **permis de conduire** et aux concours publics.
+| L'étape | Le moment |
+| L'**enseignement de défense** | Au collège et au lycée |
+| Le **recensement** obligatoire | À **16 ans**, en mairie ou en ligne |
+| La **Journée défense et citoyenneté** | Entre 16 et 18 ans |
+
+> L'attestation de JDC est exigée pour s'inscrire au **baccalauréat**, au **permis de conduire** et aux concours publics.
 
 ## Les armées
-**Terre**, **Marine nationale**, **Armée de l’air et de l’espace**, plus la **Gendarmerie nationale**. Leurs missions : protéger le territoire et la population, défendre les intérêts français, participer à des opérations internationales, secourir en cas de catastrophe.
+| La force | Son milieu |
+| L'**armée de Terre** | Le sol |
+| La **Marine nationale** | La mer |
+| L'**Armée de l'air et de l'espace** | L'air et l'espace |
+| La **Gendarmerie nationale** | La sécurité du territoire |
+
+Leurs missions : protéger le territoire et la population, défendre les intérêts français, participer à des opérations internationales, secourir en cas de catastrophe.
 
 ## Une défense élargie
-La défense ne se limite plus au militaire. Elle couvre aussi :
-- la **cyberdéfense** : protéger réseaux, hôpitaux, administrations des attaques informatiques ;
-- la **sécurité civile** : pompiers, secours, gestion des crises et catastrophes ;
-- la **sécurité économique** et l’approvisionnement (énergie, santé, alimentation) ;
-- la **lutte antiterroriste**.
+| Le domaine | Ce qu'il protège |
+| La **cyberdéfense** | Réseaux, hôpitaux, administrations, face aux attaques informatiques |
+| La **sécurité civile** | Pompiers, secours, gestion des crises et catastrophes |
+| La **sécurité économique** | L'approvisionnement en énergie, santé, alimentation |
+| La **lutte antiterroriste** | La population face aux attaques |
 
-> Une attaque contre un hôpital n’a plus besoin d’une armée : un logiciel suffit. C’est pourquoi la défense s’est déplacée vers des terrains sans frontière.
+> Une attaque contre un hôpital n'a plus besoin d'une armée : un logiciel suffit. C'est pourquoi la défense s'est déplacée vers des terrains sans frontière.
 
 ## Les cadres collectifs
-- L’**OTAN** : alliance militaire fondée en 1949 ; une attaque contre un membre engage les autres.
-- L’**Union européenne** développe une politique de sécurité et de défense commune.
-- L’**ONU** mène des opérations de maintien de la paix, les « casques bleus ».
+| L'organisation | Son rôle |
+| L'**OTAN**, fondée en **1949** | Une alliance militaire : une attaque contre un membre engage les autres |
+| L'**Union européenne** | Une politique de sécurité et de défense commune |
+| L'**ONU** | Les opérations de maintien de la paix, les « casques bleus » |
 
-## S’engager
+## S'engager
 Réserve opérationnelle, cadets de la défense, préparations militaires, service civique, sapeur-pompier volontaire : plusieurs voies existent avant et après 18 ans.`,
           },
           questions: [

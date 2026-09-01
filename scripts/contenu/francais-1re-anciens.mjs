@@ -65,14 +65,31 @@ derrière les 18 fiches des quatre objets d'étude.`,
             cours: `Tragédie en **cinq actes et en vers**, créée en **1677**. Parcours souvent associé : **passion et tragédie**.
 
 ## L’intrigue
-**Thésée**, roi d’Athènes, est réputé mort. Son épouse **Phèdre**, fille de Minos et de Pasiphaé, avoue alors à sa nourrice **Œnone** l’amour coupable qu’elle éprouve pour **Hippolyte**, le fils que Thésée a eu d’une Amazone. Hippolyte, lui, aime **Aricie**, princesse d’une famille ennemie. Phèdre déclare sa flamme à Hippolyte, qui la repousse avec horreur.
-Thésée reparaît : il n’était pas mort. Œnone, pour sauver sa maîtresse, accuse Hippolyte d’avoir voulu séduire Phèdre. Thésée maudit son fils et appelle sur lui la vengeance de **Neptune**. Un monstre marin surgi des flots tue Hippolyte ; **Théramène** en fait le récit. Phèdre, après avoir avoué la vérité, meurt empoisonnée.
+| Étape | Ce qui se passe |
+| Le point de départ | **Thésée**, roi d’Athènes, est **réputé mort** |
+| L’aveu | **Phèdre**, fille de Minos et de Pasiphaé, avoue à sa nourrice **Œnone** son amour pour **Hippolyte**, fils de Thésée et d’une Amazone |
+| L’obstacle | Hippolyte aime **Aricie**, princesse d’une famille ennemie |
+| La déclaration | Phèdre se déclare ; Hippolyte la **repousse avec horreur** |
+| Le retour | **Thésée reparaît** : il n’était pas mort |
+| La calomnie | Œnone accuse Hippolyte d’avoir voulu séduire Phèdre |
+| La vengeance | Thésée appelle **Neptune** ; un monstre marin tue Hippolyte — **Théramène** en fait le récit |
+| La fin | Phèdre avoue la vérité et **meurt empoisonnée** |
 
 ## La fatalité
-Phèdre est petite-fille du **Soleil** et fille de Pasiphaé : le sang, les dieux et l’hérédité pèsent sur elle. **Vénus** la persécute — « C’est Vénus tout entière à sa proie attachée ». Racine peint la passion comme une **maladie subie**, non comme un choix : la culpabilité et l’innocence y sont inséparables, ce que la lecture janséniste de la pièce a souligné.
+| Ce qui pèse sur Phèdre | Ce que cela produit |
+| Elle est **petite-fille du Soleil** et fille de **Pasiphaé** | Le **sang** et l’**hérédité** la condamnent |
+| **Vénus** la persécute | « C’est **Vénus tout entière à sa proie attachée** » |
+
+> Racine peint la passion comme une **maladie subie**, non comme un choix : **culpabilité et innocence y sont inséparables**. C’est ce qu’a souligné la lecture **janséniste** de la pièce.
 
 ## L’art racinien
-Unité de lieu, de temps et d’action ; **bienséance** (la mort d’Hippolyte est racontée, jamais montrée) ; alexandrins d’une simplicité extrême, avec un vocabulaire restreint mais des images fixes (le feu, le sang, le jour, l’ombre). Les grandes scènes sont des **aveux** : à Œnone, à Hippolyte, à Thésée. La pièce avance par la parole qui échappe.`,
+| Règle ou procédé | Sa mise en œuvre |
+| Les **trois unités** | Lieu, temps, action |
+| La **bienséance** | La mort d’Hippolyte est **racontée**, jamais montrée |
+| Le **vers** | Alexandrins d’une simplicité extrême, **vocabulaire restreint** |
+| Les **images fixes** | Le feu, le sang, le jour, l’ombre |
+
+> Les grandes scènes sont des **aveux** : à Œnone, à Hippolyte, à Thésée. **La pièce avance par la parole qui échappe.**`,
           },
           questions: [
             ['De qui Phèdre est-elle amoureuse ?', ['D’Hippolyte, le fils de son époux Thésée', 'De Thésée', 'De Théramène', 'D’Aricie'], 0, 'Cet amour est coupable, et il est le nœud de la tragédie.'],
@@ -90,20 +107,37 @@ Unité de lieu, de temps et d’action ; **bienséance** (la mort d’Hippolyte 
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Beaumarchais, 1784 — la folle journée d’un valet',
-            cours: `*La Folle Journée ou Le Mariage de Figaro*, comédie en **cinq actes**, créée en **1784** après trois ans d’interdiction par Louis XVI. Parcours souvent associé : **la comédie du valet**.
+            cours: `*La Folle Journée ou Le Mariage de Figaro*, comédie en **cinq actes**, créée en **1784** — après **trois ans d’interdiction** par Louis XVI. Parcours souvent associé : **la comédie du valet**.
 
 ## L’intrigue
-Au château d’Aguas-Frescas, **Figaro**, valet du **comte Almaviva**, doit épouser **Suzanne**, camériste de la comtesse. Mais le comte, lassé de son mariage, veut faire valoir sur Suzanne un « droit du seigneur » qu’il a pourtant aboli. Toute la journée, Figaro, Suzanne et la **comtesse Rosine** déjouent ses manœuvres : billets truqués, rendez-vous piégé, déguisements dans le jardin. S’y ajoutent le page **Chérubin**, amoureux de toutes les femmes du château, et un procès burlesque où **Marceline**, qui réclamait Figaro en mariage, découvre qu’elle est **sa mère**.
-Le soir, dans le jardin, le comte courtise sa propre femme déguisée en Suzanne. Démasqué, il demande pardon. Le mariage a lieu.
+| Élément | Ce qu’il met en jeu |
+| Le mariage | **Figaro**, valet du **comte Almaviva**, doit épouser **Suzanne**, camériste de la comtesse |
+| L’obstacle | Le comte veut faire valoir sur Suzanne un « **droit du seigneur** » qu’il a pourtant **aboli** lui-même |
+| La riposte | Figaro, Suzanne et la **comtesse Rosine** déjouent ses manœuvres : billets truqués, rendez-vous piégé, déguisements |
+| Le contretemps | **Chérubin**, page amoureux de toutes les femmes du château |
+| Le procès burlesque | **Marceline**, qui réclamait Figaro en mariage, découvre qu’elle est **sa mère** |
+| Le dénouement | Dans le jardin, le comte **courtise sa propre femme** déguisée en Suzanne ; démasqué, il demande pardon |
+
+Le mariage a lieu.
 
 ## Le valet devient maître du jeu
-Figaro n’est pas un valet de comédie ordinaire : il **conduit** l’intrigue, raisonne, écrit, argumente. Son **monologue de l’acte V** est un des textes politiques les plus célèbres du siècle : il y reproche au comte de s’être « donné la peine de naître, et rien de plus », et dresse le bilan d’une vie d’homme sans naissance ni protection.
+Figaro n’est pas un valet de comédie ordinaire : il **conduit** l’intrigue, raisonne, écrit, argumente.
+
+> Son **monologue de l’acte V** est un des textes politiques les plus célèbres du siècle. Il reproche au comte de s’être « **donné la peine de naître, et rien de plus** ».
 
 ## Un texte politique
-Privilèges, censure, justice vénale, condition des femmes (la tirade de Marceline) : la pièce attaque tout l’édifice de l’Ancien Régime, cinq ans avant 1789. Louis XVI l’avait bien vu — « il faudrait détruire la Bastille pour que la représentation de cette pièce ne fût pas une inconséquence dangereuse ».
+| Ce qui est attaqué | Comment |
+| Les **privilèges** | Par le monologue et le renversement des rôles |
+| La **censure** | Figaro l’a subie comme auteur |
+| La **justice vénale** | Le procès de l’acte III |
+| La condition des **femmes** | La tirade de **Marceline** |
+
+> Cinq ans avant **1789**. Louis XVI l’avait bien vu : « il faudrait détruire la Bastille pour que la représentation de cette pièce ne fût pas une inconséquence dangereuse ».
 
 ## Le rythme
-Cinq actes, une seule journée, des dizaines de rebondissements : quiproquos, cachettes (le fauteuil, le cabinet, les marronniers), déguisements. Beaumarchais mêle **comique de situation** et **satire**, et donne à chaque personnage une langue propre.`,
+**Cinq actes, une seule journée**, des dizaines de rebondissements : quiproquos, cachettes — le fauteuil, le cabinet, les marronniers —, déguisements.
+
+> Beaumarchais mêle **comique de situation** et **satire**, et donne à **chaque personnage une langue propre**.`,
           },
           questions: [
             ['Qui Figaro veut-il épouser ?', ['Suzanne, camériste de la comtesse', 'Marceline', 'La comtesse Rosine', 'Fanchette'], 0, 'Le comte veut faire valoir sur elle un droit qu’il avait pourtant aboli.'],
@@ -121,25 +155,45 @@ Cinq actes, une seule journée, des dizaines de rebondissements : quiproquos, ca
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Beaumarchais — ce que dit le valet quand il parle seul',
-            cours: `Cette seconde partie prend la pièce par son **parcours** : la comédie du valet. Le type est ancien ; ce que Beaumarchais en fait est neuf.
+            cours: `Cette seconde partie prend la pièce par son **parcours** : la **comédie du valet**. Le type est ancien ; **ce que Beaumarchais en fait est neuf**.
 
 ## Une histoire du valet de théâtre
-Chez **Plaute** et **Molière**, le valet est un adjuvant : il sert la ruse du maître ou de l’amoureux (Scapin, Sganarelle, Dubois). Chez **Marivaux**, il commence à parler d’égal à égal, notamment dans *L’Île des esclaves*. Chez Beaumarchais, il **prend la place du protagoniste** : c’est lui qui a le titre, l’initiative, le monologue et la dernière chanson.
+| Auteur | La place du valet |
+| **Plaute**, **Molière** | Un **adjuvant** : il sert la ruse du maître ou de l’amoureux — Scapin, Sganarelle, Dubois |
+| **Marivaux** | Il parle **d’égal à égal** — *L’Île des esclaves* |
+| **Beaumarchais** | Il **prend la place du protagoniste** : le titre, l’initiative, le monologue, la dernière chanson |
 
 ## Le monologue de l’acte V
-Seul dans le noir, Figaro fait le bilan d’une vie : enfant trouvé, chirurgien, auteur dramatique censuré, journaliste interdit, joueur, banquier ruiné, barbier. Le morceau est unique par sa **longueur** (le plus long monologue du théâtre français classique), par son **ton** — de la colère à la mélancolie — et par son objet : la **naissance**, seule différence entre lui et le comte.
+Seul dans le noir, Figaro fait le **bilan d’une vie** : enfant trouvé, chirurgien, auteur dramatique censuré, journaliste interdit, joueur, banquier ruiné, barbier.
+
+| Ce qui le rend unique | Le détail |
+| Sa **longueur** | Le plus long monologue du théâtre français classique |
+| Son **ton** | De la **colère** à la **mélancolie** |
+| Son **objet** | La **naissance** — seule différence entre lui et le comte |
 
 ## L’égalité en actes, pas en discours
-La pièce ne se contente pas d’affirmer l’égalité, elle la **met en scène** : Suzanne mène le comte par le bout du nez, la comtesse s’allie à sa servante contre son mari, Marceline dénonce le sort réservé aux femmes séduites puis abandonnées. Le renversement est social et il est aussi **féminin** : ce sont les femmes qui organisent le piège final.
+| Qui agit | Contre qui |
+| **Suzanne** | Elle mène le comte par le bout du nez |
+| La **comtesse** | Elle s’allie **à sa servante** contre son mari |
+| **Marceline** | Elle dénonce le sort des femmes séduites puis abandonnées |
+
+> Le renversement est **social** — et il est aussi **féminin** : ce sont **les femmes qui organisent le piège final**.
 
 ## Les procédés du comique
-**Quiproquos** en cascade, **cachettes** (le fauteuil de l’acte I, le cabinet de l’acte II, les marronniers de l’acte V), **déguisements**, **apartés**, **jeu sur les objets** (le ruban, l’épingle, le billet). Beaumarchais accélère sans cesse : l’acte V, dans l’obscurité du jardin, est un chef-d’œuvre de mécanique théâtrale.
+| Procédé | Où il opère |
+| Les **quiproquos** en cascade | Tout l’acte V |
+| Les **cachettes** | Le fauteuil (I), le cabinet (II), les marronniers (V) |
+| Les **déguisements** et les **apartés** | Le jardin, la nuit |
+| Le **jeu sur les objets** | Le ruban, l’épingle, le billet |
+
+> Beaumarchais **accélère sans cesse** : l’acte V, dans l’obscurité du jardin, est un **chef-d’œuvre de mécanique théâtrale**.
 
 ## Les axes de dissertation
-- **Le rire peut-il être une arme politique ?**
-- **Le valet est-il vraiment libre à la fin de la pièce ?** Il se marie, mais reste au service du comte.
-- **La comédie peut-elle changer la société ?** Beaumarchais l’a cru, et la Révolution a suivi de peu.
-- **Qui mène réellement l’intrigue ?** Figaro échoue souvent ; ce sont Suzanne et la comtesse qui gagnent.`,
+| Question | Ce que la pièce permet de répondre |
+| Le rire peut-il être une **arme politique** ? | La Révolution a suivi de peu |
+| Le valet est-il **vraiment libre** à la fin ? | Il se marie — mais **reste au service du comte** |
+| La comédie peut-elle **changer la société** ? | Beaumarchais l’a cru |
+| Qui mène **réellement** l’intrigue ? | Figaro **échoue souvent** : ce sont **Suzanne et la comtesse** qui gagnent |`,
           },
           questions: [
             ['Quelle est la nouveauté du personnage de Figaro par rapport aux valets de Molière ?', ['Il devient le protagoniste, avec le titre et l’initiative', 'Il est plus comique', 'Il ne parle jamais de sa condition', 'Il est le confident du maître seulement'], 0, 'Chez Molière, le valet sert la ruse d’un autre ; ici, il conduit la pièce.'],
@@ -160,17 +214,36 @@ La pièce ne se contente pas d’affirmer l’égalité, elle la **met en scène
             cours: `Pièce en **deux actes** de **Samuel Beckett**, créée en anglais en 1961 (*Happy Days*) et en français en **1963**. Parcours souvent associé : **un théâtre de la condition humaine**.
 
 ## Le dispositif
-**Winnie**, une femme d’une cinquantaine d’années, est **enterrée jusqu’à la taille** dans un mamelon de terre desséchée, sous une lumière aveuglante. Elle parle presque sans arrêt. Derrière le mamelon, son mari **Willie** rampe, lit son journal, répond par monosyllabes ou ne répond pas.
-**Acte II** : Winnie est enterrée **jusqu’au cou**. Elle ne peut plus bouger la tête, ni atteindre son sac. Elle continue de parler.
+| Acte | La situation de Winnie |
+| **Acte I** | **Enterrée jusqu’à la taille** dans un mamelon de terre desséchée, sous une lumière aveuglante |
+| **Acte II** | **Enterrée jusqu’au cou** : elle ne peut plus bouger la tête, ni atteindre son sac |
+
+Elle parle **presque sans arrêt**. Derrière le mamelon, son mari **Willie** rampe, lit son journal, répond par monosyllabes — ou ne répond pas.
 
 ## Ce qui remplace l’intrigue
-Rien n’arrive. La pièce est faite de **rituels** : la sonnerie qui réveille, la prière, la brosse à dents, le peigne, le revolver dans le sac, les citations à moitié oubliées de la littérature anglaise, l’espoir que Willie réponde. Winnie répète : « Encore un jour divin », « Oh, le beau jour que ça aura été ». Cette formule, prononcée depuis la terre qui l’engloutit, est le cœur ironique du texte.
+**Rien n’arrive.** La pièce est faite de **rituels**.
+
+| Rituel | Ce qu’il occupe |
+| La **sonnerie** qui réveille | Elle règle le jour |
+| La **prière**, la brosse à dents, le peigne | Le temps |
+| Le **revolver** dans le sac | Une possibilité jamais choisie |
+| Les **citations** à moitié oubliées | La mémoire qui s’effrite |
+| L’espoir que **Willie réponde** | L’adresse à l’autre |
+
+> Winnie répète : « Encore un jour divin », « **Oh, le beau jour que ça aura été** ». Cette formule, prononcée **depuis la terre qui l’engloutit**, est le cœur ironique du texte.
 
 ## Comique et tragique
-La situation est atroce, le jeu est **comique** : Beckett vient du burlesque, il commande des gestes précis, des ratés, des pauses. C’est le rire qui rend la pièce supportable et, en même temps, la rend plus cruelle. Le spectateur rit d’une femme qui disparaît.
+| La situation | Le jeu |
+| **Atroce** | **Comique** : Beckett vient du burlesque — gestes précis, ratés, pauses |
+
+> C’est le rire qui rend la pièce **supportable** — et, en même temps, **plus cruelle**. Le spectateur **rit d’une femme qui disparaît**.
 
 ## Ce que la pièce dit
-La condition humaine y est réduite à ses données minimales : un corps qui se dégrade, un temps qui n’avance pas, un langage qui tourne à vide et qui pourtant tient debout. Winnie n’est pas une héroïne : elle est **quelqu’un qui continue**. C’est là que la pièce est bouleversante — la parole comme seule preuve d’existence.`,
+| Ce qui reste | Ce qui se défait |
+| Une **voix** | Un **corps** qui se dégrade |
+| Un **langage** qui tourne à vide et **tient debout** | Un **temps** qui n’avance pas |
+
+> Winnie n’est pas une héroïne : elle est **quelqu’un qui continue**. C’est là que la pièce est bouleversante — la **parole comme seule preuve d’existence**.`,
           },
           questions: [
             ['Dans quelle situation Winnie se trouve-t-elle à l’acte I ?', ['Enterrée jusqu’à la taille dans un mamelon de terre', 'Assise sur un banc', 'Enfermée dans une chambre', 'Debout sur une scène nue'], 0, 'À l’acte II, elle est enterrée jusqu’au cou.'],
@@ -188,25 +261,45 @@ La condition humaine y est réduite à ses données minimales : un corps qui se 
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Beckett — le théâtre quand il ne reste que la parole',
-            cours: `Cette seconde partie travaille le **parcours** : un théâtre de la condition humaine. La pièce est un cas limite — elle enlève au théâtre presque tout ce qui le définissait.
+            cours: `Cette seconde partie travaille le **parcours** : un théâtre de la condition humaine. La pièce est un **cas limite** : elle **enlève au théâtre presque tout ce qui le définissait**.
 
 ## Ce que Beckett retire
-Pas d’**intrigue** : rien ne se noue ni ne se dénoue. Pas de **personnage** au sens psychologique : on ignore le passé de Winnie, sa profession, son histoire. Pas d’**espace** vraisemblable : un mamelon, une lumière crue, un ciel vide. Pas de **temps** : la sonnerie règle un jour qui recommence. Ce qui reste — et c’est le sujet — c’est une **voix** qui refuse de s’arrêter.
+| Ce qui disparaît | Ce qu’il en reste |
+| L’**intrigue** | Rien ne se noue ni ne se dénoue |
+| Le **personnage** psychologique | On ignore le passé de Winnie, sa profession, son histoire |
+| L’**espace** vraisemblable | Un mamelon, une lumière crue, un ciel vide |
+| Le **temps** | Une sonnerie règle un jour qui **recommence** |
+
+> Ce qui reste — **et c’est le sujet** — c’est une **voix qui refuse de s’arrêter**.
 
 ## Le corps et le langage
-Le mouvement de la pièce est simple et implacable : le **corps** disparaît, le **langage** continue. À l’acte II, Winnie ne peut plus utiliser ses mains, ses objets, ses rituels ; il ne lui reste que la parole et le souvenir. La pièce démontre ainsi que l’humain tient moins à ce qu’il peut faire qu’à ce qu’il peut encore dire — et qu’il tient à cela jusqu’au bout.
+Le mouvement de la pièce est simple et implacable : le **corps disparaît**, le **langage continue**.
+
+> À l’acte II, Winnie ne peut plus utiliser ses mains, ses objets, ses rituels : il ne lui reste que la **parole** et le **souvenir**.
+
+> La pièce démontre que l’humain tient **moins à ce qu’il peut faire qu’à ce qu’il peut encore dire** — et qu’il y tient **jusqu’au bout**.
 
 ## L’optimisme comme héroïsme
-« Encore un jour divin. » Winnie s’accroche aux petites choses : une brosse à dents dont l’inscription s’efface, un souvenir de bal, une citation à moitié perdue. Ce n’est ni de la naïveté ni de l’aveuglement : c’est une **stratégie de survie**, et la pièce la traite avec un mélange de tendresse et d’ironie qui interdit de trancher.
+« Encore un jour divin. »
+
+| Ce à quoi elle s’accroche | Son état |
+| Une **brosse à dents** | Dont l’inscription **s’efface** |
+| Un souvenir de **bal** | Incomplet |
+| Une **citation** | À moitié perdue |
+
+> Ce n’est **ni naïveté ni aveuglement** : c’est une **stratégie de survie**. La pièce la traite avec un mélange de **tendresse et d’ironie** qui **interdit de trancher**.
 
 ## Le rôle des didascalies
-Beckett écrit des indications d’une précision extrême : durée exacte des pauses, direction du regard, gestes comptés. Le texte est aussi une **partition de mise en scène**, et il refuse au metteur en scène la liberté d’interpréter — ce qui a valu à l’auteur plusieurs procès célèbres.
+Beckett écrit des indications d’une **précision extrême** : durée exacte des pauses, direction du regard, gestes **comptés**.
+
+> Le texte est aussi une **partition de mise en scène** — et il **refuse au metteur en scène la liberté d’interpréter**, ce qui a valu à l’auteur plusieurs **procès célèbres**.
 
 ## Les axes de dissertation
-- **Peut-on faire du théâtre sans action ?** La pièce répond que la parole est l’action.
-- **Le rire est-il compatible avec le désespoir ?** Chez Beckett, ils sont indissociables.
-- **Winnie est-elle courageuse ou aveugle ?** Le texte ne tranche pas, et c’est ce qui le rend fort.
-- **Que reste-t-il de l’humain quand tout est ôté ?** Une voix, une adresse à l’autre, un rituel.`,
+| Question | La réponse de la pièce |
+| Peut-on faire du théâtre **sans action** ? | **La parole est l’action** |
+| Le rire est-il compatible avec le **désespoir** ? | Chez Beckett, ils sont **indissociables** |
+| Winnie est-elle **courageuse ou aveugle** ? | Le texte **ne tranche pas** — et c’est ce qui le rend fort |
+| Que reste-t-il de l’humain quand tout est ôté ? | Une **voix**, une **adresse à l’autre**, un **rituel** |`,
           },
           questions: [
             ['Que reste-t-il à Winnie à l’acte II ?', ['La parole et le souvenir', 'Ses objets', 'La possibilité de bouger', 'La compagnie de Willie'], 0, 'Le corps disparaît, le langage continue : c’est le mouvement de la pièce.'],
@@ -224,19 +317,42 @@ Beckett écrit des indications d’une précision extrême : durée exacte des p
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Montaigne — « Des Cannibales », « Des Coches »',
-            cours: `Les *Essais* de **Michel de Montaigne** paraissent à partir de **1580** et sont augmentés jusqu’à sa mort (1592). Le programme retient les chapitres **« Des Cannibales »** (I, 31) et **« Des Coches »** (III, 6), avec le parcours : **notre monde vient d’en trouver un autre**.
+            cours: `Les *Essais* de **Michel de Montaigne** paraissent à partir de **1580** et sont augmentés jusqu’à sa mort (**1592**). Le programme retient **« Des Cannibales »** (I, 31) et **« Des Coches »** (III, 6), avec le parcours : **notre monde vient d’en trouver un autre**.
 
 ## Un genre inventé
-« Essai » veut dire **tentative**, pesée, mise à l’épreuve. Montaigne n’écrit pas un traité : il pense en avançant, se contredit, revient, cite, digresse. « Je ne peins pas l’être, je peins le passage. » Le sujet du livre, dit-il dès l’avis au lecteur, c’est **lui-même** — mais un lui-même qui sert d’instrument pour examiner l’homme en général.
+« Essai » veut dire **tentative**, pesée, mise à l’épreuve.
+
+| Ce que Montaigne ne fait pas | Ce qu’il fait |
+| Un **traité** | Il **pense en avançant** |
+| Une démonstration close | Il se **contredit**, revient, cite, **digresse** |
+
+> « Je ne peins pas l’être, je peins le **passage**. »
+
+Le sujet du livre, dit-il dès l’avis au lecteur, c’est **lui-même** — mais un lui-même qui sert d’**instrument** pour examiner l’homme en général.
 
 ## Des Cannibales
-Montaigne a rencontré à Rouen des **Tupinambas** du Brésil, amenés en France. Il compare leurs mœurs aux nôtres et renverse le jugement : ils pratiquent l’anthropophagie rituelle sur un ennemi mort, quand les Européens torturent des vivants au nom de la religion. « **Chacun appelle barbarie ce qui n’est pas de son usage.** » Le mot **barbare** cesse de désigner l’autre : il désigne le jugement de celui qui le prononce.
+Montaigne a rencontré à **Rouen** des **Tupinambas** du Brésil, amenés en France.
+
+| Chez « eux » | Chez « nous » |
+| L’**anthropophagie rituelle** sur un ennemi **mort** | La **torture de vivants**, au nom de la religion |
+
+> « **Chacun appelle barbarie ce qui n’est pas de son usage.** »
+
+Le mot **barbare** cesse de désigner l’autre : il désigne le **jugement de celui qui le prononce**.
 
 ## Des Coches
-Le chapitre glisse des dépenses somptuaires des princes à la **conquête du Nouveau Monde**. Montaigne y dénonce sans détour la destruction des civilisations américaines : « tant de villes rasées, tant de nations exterminées ». Il souligne l’écart entre la supériorité technique des conquérants et leur infériorité morale, et regrette que cette rencontre, qui aurait pu être un échange, ait été un massacre.
+Le chapitre glisse des dépenses somptuaires des princes à la **conquête du Nouveau Monde**.
+
+| Ce qu’il dénonce | La formule |
+| La destruction des civilisations américaines | « **tant de villes rasées, tant de nations exterminées** » |
+| L’écart entre **supériorité technique** et **infériorité morale** | Les conquérants ont gagné par les armes, non par la valeur |
+
+> Il regrette que cette rencontre, **qui aurait pu être un échange**, ait été un **massacre**.
 
 ## L’écriture
-Phrase longue, mobile, nourrie de **citations antiques**, d’**anecdotes** et de comparaisons concrètes. L’ironie y est constante mais douce ; le « je » sert à relativiser plutôt qu’à s’exposer. C’est le premier grand texte européen à retourner le regard ethnographique contre l’Europe elle-même.`,
+Phrase **longue et mobile**, nourrie de **citations antiques**, d’**anecdotes** et de comparaisons concrètes. L’ironie y est constante mais **douce** ; le « je » sert à **relativiser** plutôt qu’à s’exposer.
+
+> C’est le **premier grand texte européen à retourner le regard ethnographique contre l’Europe elle-même**.`,
           },
           questions: [
             ['Que signifie le mot « essai » chez Montaigne ?', ['Une tentative, une mise à l’épreuve de la pensée', 'Un traité systématique', 'Une autobiographie complète', 'Un discours de circonstance'], 0, '« Je ne peins pas l’être, je peins le passage. »'],
@@ -254,25 +370,38 @@ Phrase longue, mobile, nourrie de **citations antiques**, d’**anecdotes** et d
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Montaigne — le relativisme et ses limites',
-            cours: `Cette seconde partie prend les *Essais* par leur **parcours** : notre monde vient d’en trouver un autre. La formule est de Montaigne lui-même, dans « Des Coches ».
+            cours: `Cette seconde partie prend les *Essais* par leur **parcours** : notre monde vient d’en trouver un autre. La formule est **de Montaigne lui-même**, dans « Des Coches ».
 
 ## Le choc de la découverte
-En 1492, l’Europe apprend qu’il existe un continent que ni la Bible, ni Aristote, ni Ptolémée n’avaient prévu. Ce fait seul ébranle l’autorité des **Anciens** : si l’on a pu ignorer un monde entier, que vaut le reste de nos certitudes ? Montaigne en tire une **méthode** : le doute, non par scepticisme paresseux, mais comme discipline de la pensée. Sa devise est une question : « **Que sais-je ?** »
+En **1492**, l’Europe apprend qu’il existe un continent que **ni la Bible, ni Aristote, ni Ptolémée** n’avaient prévu.
+
+> Ce fait seul **ébranle l’autorité des Anciens** : si l’on a pu ignorer **un monde entier**, que vaut le reste de nos certitudes ?
+
+Montaigne en tire une **méthode** : le **doute** — non par scepticisme paresseux, mais comme **discipline de la pensée**. Sa devise est une question : « **Que sais-je ?** »
 
 ## Le relativisme culturel
-Montaigne applique le doute aux **coutumes**. Ce que nous appelons nature n’est souvent que l’habitude, et ce que nous appelons barbarie n’est que l’usage d’un autre. Attention cependant : il ne dit pas que tout se vaut. Il juge — il condamne fermement la torture, l’avidité, la cruauté des conquérants. Le relativisme est chez lui un **instrument critique**, pas une démission morale.
+| Ce qu’il déplace | Ce qu’il ne fait pas |
+| Ce que nous appelons **nature** n’est souvent que l’**habitude** | Il ne dit **pas que tout se vaut** |
+| Ce que nous appelons **barbarie** n’est que l’**usage d’un autre** | Il **juge** : il condamne fermement la **torture**, l’**avidité**, la **cruauté** des conquérants |
+
+> Le relativisme est chez lui un **instrument critique**, **pas une démission morale**. C’est la nuance qui manque à la plupart des copies.
 
 ## Le mythe du bon sauvage, avant Rousseau
-La description des Tupinambas — société sans commerce, sans écriture, sans magistrature, sans propriété — est idéalisée, et Montaigne le sait à demi. Elle sert d’**utopie critique** : elle rend visibles, par contraste, les vices de la société française déchirée par les **guerres de religion**. C’est un miroir tendu à l’Europe, pas une ethnographie.
+La description des Tupinambas — société **sans commerce, sans écriture, sans magistrature, sans propriété** — est **idéalisée**, et Montaigne le sait à demi.
+
+> Elle sert d’**utopie critique** : elle rend visibles, **par contraste**, les vices d’une France déchirée par les **guerres de religion**. C’est un **miroir tendu à l’Europe**, pas une ethnographie.
 
 ## L’écriture comme mouvement
-Digressions assumées, ajouts d’une édition à l’autre (les fameuses « allongeails »), refus de conclure : la forme dit la thèse. Une pensée honnête est une pensée qui **bouge**.
+Digressions **assumées**, ajouts d’une édition à l’autre — les fameuses « **allongeails** » —, **refus de conclure**.
+
+> La **forme dit la thèse** : une pensée honnête est une pensée qui **bouge**.
 
 ## Les axes de dissertation
-- **La rencontre de l’autre nous apprend-elle davantage sur lui ou sur nous ?**
-- **Le relativisme empêche-t-il de juger ?** Chez Montaigne, non : il déplace le tribunal.
-- **L’essai est-il un genre argumentatif ?** Oui, mais qui persuade en montrant la pensée au travail.
-- **Peut-on écrire sur soi sans vanité ?** L’avis au lecteur pose la question dès la première page.`,
+| Question | Ce que l’œuvre permet |
+| La rencontre de l’autre nous apprend-elle davantage **sur lui ou sur nous** ? | Le texte penche nettement vers « **sur nous** » |
+| Le relativisme **empêche-t-il de juger** ? | Chez Montaigne, **non** : il **déplace le tribunal** |
+| L’essai est-il un genre **argumentatif** ? | Oui — mais il persuade **en montrant la pensée au travail** |
+| Peut-on écrire sur soi **sans vanité** ? | L’avis au lecteur pose la question **dès la première page** |`,
           },
           questions: [
             ['Quelle est la devise de Montaigne ?', ['« Que sais-je ? »', '« Je pense donc je suis »', '« Connais-toi toi-même »', '« Rien de trop »'], 0, 'Le doute y est une discipline de la pensée, non une paresse.'],
@@ -290,19 +419,41 @@ Digressions assumées, ajouts d’une édition à l’autre (les fameuses « all
           axe: 'Anciens programmes',
           lecon: {
             titre: 'La Fontaine, livres VII à XI — plaire pour instruire',
-            cours: `Le programme retient les **livres VII à XI** des *Fables* de **Jean de La Fontaine**, publiés à partir de **1678** (le premier recueil, livres I à VI, datait de 1668). Parcours souvent associé : **imagination et pensée au XVIIe siècle**.
+            cours: `Le programme retient les **livres VII à XI** des *Fables* de **Jean de La Fontaine**, publiés à partir de **1678** — le premier recueil, livres I à VI, datait de **1668**. Parcours souvent associé : **imagination et pensée au XVIIe siècle**.
 
 ## Une forme brève et savante
-La fable emprunte à **Ésope** et à **Phèdre**, mais La Fontaine en fait un art : **vers libres** — alternance d’alexandrins et d’octosyllabes qui épouse le rythme du récit —, dialogues, changements de ton, chute nette. Le principe est annoncé : « **Une morale nue apporte de l’ennui : le conte fait passer le précepte avec lui.** »
+La fable emprunte à **Ésope** et à **Phèdre**, mais La Fontaine en fait un art.
+
+| Procédé | Son effet |
+| Les **vers libres** | Alexandrins et octosyllabes alternés : le mètre **épouse le rythme du récit** |
+| Les **dialogues** | La fable devient une petite scène |
+| Les **changements de ton** | Du burlesque au grave |
+| La **chute** | Nette, souvent en un vers |
+
+> Le principe est annoncé : « **Une morale nue apporte de l’ennui : le conte fait passer le précepte avec lui.** »
 
 ## Ce que contiennent les livres VII à XI
-Le second recueil est plus sombre, plus philosophique, souvent adressé à la cour. On y trouve « Les Animaux malades de la peste », « Le Coche et la Mouche », « La Laitière et le Pot au lait », « Le Curé et le Mort », « Le Savetier et le Financier », « Les Deux Pigeons », « Le Paysan du Danube », « Le Songe d’un habitant du Mogol », « Les Obsèques de la Lionne », « Le Chat, la Belette et le petit Lapin », « Le Loup et les Bergers ».
+Le second recueil est **plus sombre**, plus philosophique, souvent adressé à la cour.
+
+« Les Animaux malades de la peste », « Le Coche et la Mouche », « La Laitière et le Pot au lait », « Le Curé et le Mort », « Le Savetier et le Financier », « Les Deux Pigeons », « Le Paysan du Danube », « Le Songe d’un habitant du Mogol », « Les Obsèques de la Lionne », « Le Chat, la Belette et le petit Lapin », « Le Loup et les Bergers ».
 
 ## Une satire de la cour
-Le lion est le roi, la cour est un théâtre d’hypocrisie, la justice se règle sur la force. « Selon que vous serez puissant ou misérable, les jugements de cour vous rendront blanc ou noir » (« Les Animaux malades de la peste »). L’apologue permet de dire, sous le masque animal, ce qu’un sujet de Louis XIV ne pouvait dire en son nom.
+| L’animal | Ce qu’il représente |
+| Le **lion** | Le **roi** |
+| La **cour** | Un théâtre d’**hypocrisie** |
+| La **justice** | Elle se règle sur la **force** |
+
+> « **Selon que vous serez puissant ou misérable, les jugements de cour vous rendront blanc ou noir.** » (« Les Animaux malades de la peste »)
+
+L’apologue permet de dire, **sous le masque animal**, ce qu’un sujet de Louis XIV **ne pouvait pas dire en son nom**.
 
 ## La morale
-Elle est parfois explicite, en tête ou en fin de fable ; parfois absente, ironique, ou contredite par le récit. Le lecteur doit **conclure lui-même** — c’est la part de liberté que La Fontaine ménage, et l’une des raisons pour lesquelles ses fables ne vieillissent pas.`,
+| Où elle se trouve | Ce que cela implique |
+| En **tête** ou en **fin** de fable | Explicite |
+| **Absente**, ou **ironique** | Le lecteur doit **conclure lui-même** |
+| **Contredite par le récit** | La fable devient un **piège à lecture rapide** |
+
+> C’est cette **part de liberté** ménagée au lecteur qui fait que ces fables **ne vieillissent pas**.`,
           },
           questions: [
             ['Quels livres des Fables le programme retient-il ?', ['Les livres VII à XI', 'Les livres I à VI', 'Le livre XII seul', 'Tous les livres'], 0, 'Le second recueil, plus sombre et plus philosophique que le premier.'],
@@ -320,19 +471,37 @@ Elle est parfois explicite, en tête ou en fin de fable ; parfois absente, ironi
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Montesquieu, 1721 — deux Persans à Paris',
-            cours: `Roman épistolaire publié anonymement à Amsterdam en **1721** par **Montesquieu**. Parcours souvent associé : **le regard éloigné**.
+            cours: `Roman **épistolaire** publié **anonymement** à Amsterdam en **1721** par **Montesquieu**. Parcours souvent associé : **le regard éloigné**.
 
 ## Le dispositif
-Deux Persans, **Usbek** et **Rica**, quittent Ispahan et voyagent en Europe. Ils écrivent à leurs amis, à leurs eunuques, à leurs femmes restées au sérail — **161 lettres** au total, croisées, écrites par une quinzaine de correspondants. Ils découvrent Paris, la cour de Louis XIV puis la Régence, la mode, la religion, les académies, les cafés, les femmes libres de leurs mouvements.
+| Élément | Le détail |
+| Les voyageurs | **Usbek** et **Rica**, deux Persans partis d’**Ispahan** |
+| La forme | **161 lettres** croisées, d’une quinzaine de correspondants |
+| Les destinataires | Leurs amis, leurs **eunuques**, leurs femmes restées au sérail |
+| Ce qu’ils découvrent | Paris, la cour de Louis XIV puis la **Régence**, la mode, la religion, les académies, les cafés, les femmes libres de leurs mouvements |
 
 ## Le regard éloigné
-Le procédé est simple et redoutable : faire décrire nos usages par quelqu’un qui ne les comprend pas. Le roi devient « un grand magicien » qui fait croire que le papier est de l’argent ; le pape, « un autre magicien » qui fait croire que trois ne font qu’un. Rica raconte l’effet produit quand on apprend qu’il est persan : « **Ah ! ah ! Monsieur est Persan ? C’est une chose bien extraordinaire ! Comment peut-on être Persan ?** »
+Le procédé est simple et **redoutable** : faire décrire **nos** usages par quelqu’un qui **ne les comprend pas**.
+
+| Ce qui est décrit | Comment il apparaît |
+| Le **roi** | « Un grand **magicien** » qui fait croire que le **papier est de l’argent** |
+| Le **pape** | « Un autre magicien » qui fait croire que **trois ne font qu’un** |
+
+> Et la formule la plus célèbre du livre, quand on apprend que Rica est persan : « **Ah ! ah ! Monsieur est Persan ? C’est une chose bien extraordinaire ! Comment peut-on être Persan ?** »
 
 ## Deux voix, deux tons
-**Rica** est jeune, gai, moqueur : il fait le portrait satirique de la société française. **Usbek** est grave : il réfléchit sur les lois, la justice, la religion, le despotisme — et c’est lui qui, sans le voir, incarne le despote dans sa propre maison.
+| | **Rica** | **Usbek** |
+| Son âge et son ton | Jeune, **gai, moqueur** | **Grave** |
+| Ce qu’il fait | Le **portrait satirique** de la société française | Il réfléchit sur les **lois**, la justice, la religion, le **despotisme** |
+
+> Et c’est **Usbek** qui, **sans le voir**, incarne le despote **dans sa propre maison**.
 
 ## Le sérail, l’autre roman
-Pendant que les deux voyageurs philosophent sur la liberté, les femmes d’Usbek se révoltent à Ispahan. La dernière lettre est celle de **Roxane**, qui révèle qu’elle a trahi, qu’elle s’est empoisonnée et qu’elle n’a jamais aimé son maître. La leçon est cinglante : le penseur de la liberté était un tyran chez lui. Le roman fait ainsi tenir ensemble **satire** et **tragédie**.`,
+Pendant que les deux voyageurs **philosophent sur la liberté**, les femmes d’Usbek **se révoltent** à Ispahan.
+
+> La **dernière lettre** est celle de **Roxane** : elle révèle qu’elle a trahi, qu’elle s’est **empoisonnée**, et qu’elle **n’a jamais aimé** son maître.
+
+> La leçon est cinglante : **le penseur de la liberté était un tyran chez lui**. Le roman fait ainsi tenir ensemble **satire** et **tragédie**.`,
           },
           questions: [
             ['Qui sont Usbek et Rica ?', ['Deux Persans qui voyagent en Europe et écrivent des lettres', 'Deux philosophes français', 'Deux marchands vénitiens', 'Deux frères espagnols'], 0, 'Rica est moqueur, Usbek grave : deux tons pour deux fonctions.'],
@@ -350,25 +519,50 @@ Pendant que les deux voyageurs philosophent sur la liberté, les femmes d’Usbe
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Montesquieu — la fiction au service de la critique',
-            cours: `Cette seconde partie prend l’œuvre par son **parcours** : le regard éloigné. Le procédé est devenu un classique de l’argumentation indirecte ; les *Lettres persanes* en sont le modèle.
+            cours: `Cette seconde partie prend l’œuvre par son **parcours** : le **regard éloigné**. Le procédé est devenu un classique de l’argumentation indirecte ; les *Lettres persanes* en sont **le modèle**.
 
 ## Pourquoi le détour est efficace
-Attaquer de front la monarchie, l’Église ou la justice, en 1721, expose à la censure et à la Bastille. Le détour par l’étranger permet trois choses : **échapper à la censure** (l’auteur peut désavouer ses personnages), **dépayser le lecteur** (l’habitude ne protège plus les institutions) et **faire rire** — or ce dont on rit cesse d’être sacré.
+Attaquer de front la monarchie, l’Église ou la justice, en **1721**, expose à la **censure** et à la **Bastille**.
+
+| Ce que le détour permet | Comment |
+| **Échapper à la censure** | L’auteur peut **désavouer ses personnages** |
+| **Dépayser** le lecteur | L’**habitude ne protège plus** les institutions |
+| **Faire rire** | Or **ce dont on rit cesse d’être sacré** |
 
 ## Ce qui est visé
-La **monarchie absolue** et la vanité de la cour ; l’**Église**, ses querelles théologiques et son intolérance ; la **justice** ; la **mode** et l’inconstance parisienne ; la **démographie** et l’économie (Usbek s’interroge sur la dépopulation) ; le **fanatisme** religieux, dénoncé dans plusieurs lettres célèbres.
+| Cible | Ce qui est dénoncé |
+| La **monarchie absolue** | La vanité de la cour |
+| L’**Église** | Ses querelles théologiques, son **intolérance** |
+| La **justice** | Sa lenteur et sa vénalité |
+| La **mode** | L’inconstance parisienne |
+| La **démographie** et l’économie | Usbek s’interroge sur la dépopulation |
+| Le **fanatisme** religieux | Plusieurs lettres célèbres |
 
 ## L’apologue des Troglodytes
-Les lettres XI à XIV forment un récit inséré : un peuple égoïste s’autodétruit, une petite communauté vertueuse prospère, puis demande un roi parce que la vertu est trop exigeante. C’est un **conte politique** au cœur du roman : il pose la question qui occupera Montesquieu toute sa vie et donnera *De l’esprit des lois* (1748) — quelles institutions rendent la liberté possible ?
+Les lettres **XI à XIV** forment un **récit inséré**.
+
+| Étape | Ce qui arrive |
+| Un peuple **égoïste** | Il **s’autodétruit** |
+| Une petite communauté **vertueuse** | Elle **prospère** |
+| La suite | Elle **demande un roi**, parce que la vertu est **trop exigeante** |
+
+> C’est un **conte politique** au cœur du roman. Il pose la question qui occupera Montesquieu toute sa vie et donnera *De l’esprit des lois* (**1748**) : **quelles institutions rendent la liberté possible ?**
 
 ## Le sérail comme laboratoire du despotisme
-Le sérail n’est pas un décor exotique : c’est un **modèle réduit** du pouvoir absolu. Surveillance, eunuques, punitions, obéissance obtenue par la peur — et effondrement final. Montesquieu y montre que le despotisme, faute de lois, ne peut se maintenir que par la terreur et finit par s’écrouler.
+Le sérail n’est **pas un décor exotique** : c’est un **modèle réduit** du pouvoir absolu.
+
+| Le mécanisme | Sa fin |
+| Surveillance, **eunuques**, punitions | L’obéissance obtenue par la **peur** |
+| Aucune **loi** | L’**effondrement final** |
+
+> Montesquieu y montre que le despotisme, **faute de lois**, ne peut se maintenir que par la **terreur** — et **finit par s’écrouler**.
 
 ## Les axes de dissertation
-- **Le rire est-il une arme efficace contre le pouvoir ?**
-- **La fiction sert-elle mieux la critique que le traité ?** Comparer avec *De l’esprit des lois*.
-- **Le regard étranger est-il vraiment neutre ?** Usbek juge, et il est lui-même jugé.
-- **Peut-on dénoncer le despotisme et l’exercer ?** La contradiction d’Usbek est la trouvaille du livre.`,
+| Question | Ce que l’œuvre permet |
+| Le rire est-il une **arme efficace** contre le pouvoir ? | Toute la satire y répond |
+| La fiction sert-elle **mieux** la critique que le traité ? | Comparer avec *De l’esprit des lois* |
+| Le regard étranger est-il **neutre** ? | **Non** : Usbek juge — et il est lui-même jugé |
+| Peut-on **dénoncer** le despotisme et l’**exercer** ? | La contradiction d’Usbek est **la trouvaille du livre** |`,
           },
           questions: [
             ['Pourquoi Montesquieu choisit-il la fiction du regard étranger ?', ['Pour échapper à la censure, dépayser le lecteur et faire rire', 'Parce qu’il a voyagé en Perse', 'Pour imiter les contes orientaux à la mode uniquement', 'Pour écrire un traité de géographie'], 0, 'Ce dont on rit cesse d’être sacré : le détour est une stratégie.'],
@@ -386,21 +580,43 @@ Le sérail n’est pas un décor exotique : c’est un **modèle réduit** du po
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Madame de Lafayette, 1678 — le premier roman d’analyse',
-            cours: `Publié **anonymement** en **1678**, le roman de **Marie-Madeleine de Lafayette** est considéré comme le premier grand roman d’analyse française. Parcours souvent associé : **individu, morale et société**.
+            cours: `Publié **anonymement** en **1678**, le roman de **Marie-Madeleine de Lafayette** est considéré comme le **premier grand roman d’analyse** française. Parcours souvent associé : **individu, morale et société**.
 
 ## Le cadre
-La cour de **Henri II**, en **1558-1559**, reconstituée avec une précision d’historienne : bals, tournois, intrigues, mariages politiques. Cette cour n’est pas un décor mais un **système** : on y est observé en permanence, on y calcule, on y ment. Le roman s’ouvre sur une formule qui donne le ton : « La magnificence et la galanterie n’ont jamais paru en France avec tant d’éclat. »
+La cour de **Henri II**, en **1558-1559**, reconstituée avec une **précision d’historienne** : bals, tournois, intrigues, mariages politiques.
+
+> Cette cour n’est **pas un décor** mais un **système** : on y est **observé en permanence**, on y **calcule**, on y **ment**.
+
+Le roman s’ouvre sur une formule qui donne le ton : « La magnificence et la galanterie n’ont jamais paru en France avec tant d’éclat. »
 
 ## L’intrigue
-**Mademoiselle de Chartres**, seize ans, est présentée à la cour par sa mère, femme d’une rigueur morale absolue. Elle épouse sans amour le **prince de Clèves**, qui l’aime passionnément. Puis elle rencontre le **duc de Nemours** : c’est le coup de foudre, réciproque et silencieux.
-Sa mère, mourante, l’avertit du danger. La princesse lutte. Vient la scène inouïe de l’**aveu** : elle avoue à son mari qu’elle aime un autre homme, sans le nommer, et lui demande de la retirer de la cour. Nemours, caché, entend tout. Rongé par la jalousie, le prince de Clèves tombe malade et **meurt**, croyant sa femme coupable.
-Libre enfin, la princesse **refuse** d’épouser Nemours : elle invoque son devoir envers le mort et, surtout, la certitude que la passion de Nemours ne durerait pas. Elle se retire entre un couvent et sa maison, et meurt jeune.
+| Étape | Ce qui se passe |
+| Le mariage | **Mademoiselle de Chartres**, seize ans, épouse **sans amour** le prince de Clèves, qui l’aime passionnément |
+| La rencontre | Le **duc de Nemours** : coup de foudre **réciproque et silencieux** |
+| L’avertissement | Sa mère, mourante, la met en garde |
+| L’**aveu** | Elle avoue **à son mari** qu’elle aime un autre homme — **sans le nommer** — et demande à quitter la cour |
+| Le témoin | **Nemours, caché, entend tout** |
+| La mort | Rongé par la jalousie, le prince de Clèves **meurt**, croyant sa femme coupable |
+| Le refus | Libre, la princesse **refuse** d’épouser Nemours |
+
+Elle se retire entre un couvent et sa maison, et **meurt jeune**.
 
 ## Ce que le roman invente
-L’action extérieure compte moins que les **mouvements intérieurs** : hésitations, rougeurs, silences, calculs. Le narrateur entre dans les consciences et **analyse**. Le style est sobre, la phrase claire, le vocabulaire restreint : c’est le classicisme, qui juge que la vérité se dit sans ornement.
+| L’action extérieure | Les mouvements intérieurs |
+| Elle compte **moins** | Hésitations, **rougeurs**, silences, calculs |
+
+> Le narrateur **entre dans les consciences** et **analyse**. Le style est **sobre**, la phrase claire, le vocabulaire restreint : c’est le **classicisme**, qui juge que **la vérité se dit sans ornement**.
 
 ## Le refus final
-Il a fait scandale dès 1678 et fait toujours débat : orgueil ? sagesse ? peur ? liberté ? Le texte laisse les quatre lectures ouvertes — et c’est ce qui en fait un des sujets de dissertation les plus fréquents du programme.`,
+Ses deux raisons : le **devoir envers le mort** et la **certitude que la passion de Nemours ne durerait pas**.
+
+| Lecture possible | Ce qu’elle voit |
+| L’**orgueil** | Elle ne veut pas être quittée |
+| La **sagesse** | Elle connaît la nature du désir |
+| La **peur** | Du monde et de la cour |
+| La **liberté** | Elle choisit de ne dépendre de personne |
+
+> Le texte **laisse les quatre lectures ouvertes** — et c’est ce qui en fait un des **sujets de dissertation les plus fréquents** du programme. Il a fait scandale **dès 1678**.`,
           },
           questions: [
             ['En quelle année et comment le roman paraît-il ?', ['En 1678, de façon anonyme', 'En 1678, signé par son autrice', 'En 1731, anonyme', 'En 1700, signé'], 0, 'L’anonymat protégeait une femme de lettres et alimentait la curiosité.'],
@@ -418,23 +634,43 @@ Il a fait scandale dès 1678 et fait toujours débat : orgueil ? sagesse ? peur 
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Stendhal, 1830 — l’ascension et la chute de Julien Sorel',
-            cours: `Sous-titré **« Chronique de 1830 »**, le roman de **Stendhal** paraît la même année que la révolution de Juillet. Parcours souvent associé : **le personnage de roman, esthétiques et valeurs**.
+            cours: `Sous-titré « **Chronique de 1830** », le roman de **Stendhal** paraît **l’année même** de la révolution de Juillet. Parcours souvent associé : **le personnage de roman, esthétiques et valeurs**.
 
 ## Le titre
-Deux couleurs, deux carrières possibles pour un jeune homme sans naissance : le **rouge** de l’uniforme militaire, ouvert sous l’Empire, et le **noir** de la soutane, seule voie d’ascension sous la Restauration. Julien est né trop tard : il aurait été officier sous Napoléon, il sera séminariste.
+| Couleur | La carrière | Sous quel régime |
+| Le **rouge** | L’**uniforme militaire** | L’**Empire** |
+| Le **noir** | La **soutane** | La **Restauration** |
+
+> Julien est **né trop tard** : il aurait été **officier sous Napoléon**, il sera **séminariste**.
 
 ## Livre premier — la province
-**Julien Sorel**, fils d’un charpentier de **Verrières**, méprisé par son père, nourri de la lecture du *Mémorial de Sainte-Hélène*, devient précepteur des enfants de **M. de Rênal**, le maire. Par ambition autant que par orgueil de classe, il séduit **Madame de Rênal** — et l’aime réellement. L’affaire s’ébruite : il part au **séminaire de Besançon**, où l’abbé **Pirard** le protège dans un milieu d’espionnage et d’hypocrisie.
+| Étape | Ce qui se passe |
+| L’origine | **Julien Sorel**, fils d’un charpentier de **Verrières**, **méprisé par son père**, nourri du *Mémorial de Sainte-Hélène* |
+| L’entrée dans le monde | Précepteur des enfants de **M. de Rênal**, le maire |
+| La liaison | Il séduit **Madame de Rênal** par **ambition et orgueil de classe** — et il l’aime réellement |
+| La fuite | L’affaire s’ébruite : le **séminaire de Besançon**, où l’abbé **Pirard** le protège |
 
 ## Livre second — Paris
-Secrétaire du **marquis de La Mole**, Julien découvre l’aristocratie parisienne. **Mathilde de La Mole**, orgueilleuse et romanesque, s’éprend de lui ; leur relation est un duel d’amour-propre. Enceinte, elle obtient de son père un titre et un régiment pour Julien : la réussite est là.
-Tout s’effondre par une **lettre** de Madame de Rênal, dictée par son confesseur, qui dénonce Julien comme un séducteur ambitieux. Julien retourne à Verrières et tire sur elle **pendant la messe**.
+| Étape | Ce qui se passe |
+| La place | Secrétaire du **marquis de La Mole** |
+| L’amour | **Mathilde de La Mole**, orgueilleuse et romanesque : leur relation est un **duel d’amour-propre** |
+| La réussite | Enceinte, elle obtient de son père un **titre** et un **régiment** pour Julien |
+| L’effondrement | Une **lettre** de Madame de Rênal, **dictée par son confesseur**, le dénonce |
+| Le geste | Julien retourne à Verrières et **tire sur elle pendant la messe** |
 
 ## Le dénouement
-Madame de Rênal survit ; Julien, emprisonné, refuse de se défendre. Devant le jury, il **accuse la société** de condamner en lui un paysan qui a osé sortir de sa classe. Il est guillotiné. Mathilde ensevelit sa tête ; Madame de Rênal meurt **trois jours** après lui.
+| Personnage | Sa fin |
+| Madame de Rênal | Elle **survit** — puis meurt **trois jours** après Julien |
+| **Julien** | Emprisonné, il **refuse de se défendre** ; devant le jury, il **accuse la société** de condamner en lui **un paysan qui a osé sortir de sa classe**. Il est **guillotiné** |
+| **Mathilde** | Elle **ensevelit sa tête** |
 
 ## Ce que le roman met en place
-Le **héros ambitieux** de tout le XIXe siècle, l’ironie stendhalienne, la focalisation interne serrée qui suit les calculs du personnage, et la fameuse définition : « Un roman est un miroir que l’on promène le long d’un chemin. »`,
+| Apport | Ce qu’il devient |
+| Le **héros ambitieux** | Le modèle de tout le XIXe siècle |
+| L’**ironie** stendhalienne | Une voix narrative à distance |
+| La **focalisation interne serrée** | On suit les **calculs** du personnage |
+
+> Et la définition restée célèbre : « **Un roman est un miroir que l’on promène le long d’un chemin.** »`,
           },
           questions: [
             ['Que désignent le rouge et le noir du titre ?', ['L’armée et l’Église, les deux voies d’ascension possibles', 'La passion et la mort', 'La révolution et la monarchie', 'Le sang et l’encre'], 0, 'Julien aurait été officier sous Napoléon ; sous la Restauration, il ne reste que la soutane.'],
@@ -455,22 +691,41 @@ Le **héros ambitieux** de tout le XIXe siècle, l’ironie stendhalienne, la fo
             cours: `Cette seconde partie prend le roman par son **parcours** : le personnage de roman, esthétiques et valeurs. Deux questions le résument : **comment** un personnage est-il construit, et **quelles valeurs** porte-t-il ?
 
 ## Un héros ni bon ni mauvais
-Julien ment, calcule, séduit par ambition, trahit, tire sur une femme qu’il aime. Il est aussi courageux, loyal envers Pirard, sincère avec Fouqué, capable d’une grandeur que personne autour de lui n’atteint. Le roman refuse de trancher : il crée un personnage **ambivalent**, dont on épouse le point de vue sans l’approuver. C’est une révolution esthétique.
+| Ce qu’il fait de condamnable | Ce qui le grandit |
+| Il **ment**, calcule, séduit par ambition | Il est **courageux** |
+| Il **trahit** | Il est **loyal** envers Pirard, **sincère** avec Fouqué |
+| Il **tire sur une femme qu’il aime** | Il atteint une **grandeur** que personne autour de lui n’atteint |
+
+> Le roman **refuse de trancher** : il crée un personnage **ambivalent**, dont on **épouse le point de vue sans l’approuver**. C’est une **révolution esthétique**.
 
 ## L’ironie stendhalienne
-Le narrateur commente, s’amuse, prend ses distances, s’adresse au lecteur. Il dit d’un personnage exactement le contraire de ce qu’il montre. Cette **voix ironique** permet la satire : la province vénale de Verrières, l’hypocrisie du séminaire, l’ennui doré du faubourg Saint-Germain.
+Le narrateur **commente**, s’amuse, prend ses distances, s’adresse au lecteur — et dit d’un personnage **exactement le contraire de ce qu’il montre**.
+
+| Cible de la satire | Ce qui est visé |
+| **Verrières** | La province **vénale** |
+| Le **séminaire** | L’**hypocrisie** |
+| Le faubourg **Saint-Germain** | L’**ennui doré** |
 
 ## Le roman comme chronique politique
-1830, c’est la **Restauration** finissante : noblesse revenue, cléricalisme, congrégation, mépris pour les talents sans naissance. Le roman montre une société bloquée où l’**énergie** individuelle n’a plus d’issue légitime. Le crime de Julien n’est pas seulement passionnel : il est le geste d’un homme à qui l’on retire, d’un coup, la place qu’il avait arrachée.
+**1830**, c’est la **Restauration finissante** : noblesse revenue, cléricalisme, congrégation, **mépris pour les talents sans naissance**.
+
+> Le roman montre une **société bloquée** où l’**énergie individuelle n’a plus d’issue légitime**.
+
+> Le crime de Julien n’est **pas seulement passionnel** : c’est le geste d’un homme à qui l’on **retire d’un coup la place qu’il avait arrachée**.
 
 ## L’écriture
-Phrase sèche, refus du « beau style », rapidité, **discours indirect libre** qui fait entendre la pensée du personnage dans le récit. Stendhal disait lire le Code civil pour se corriger du lyrisme.
+| Trait | Son effet |
+| Phrase **sèche**, refus du « beau style » | La **rapidité** |
+| Le **discours indirect libre** | Il fait entendre la **pensée du personnage dans le récit** |
+
+> Stendhal disait lire le **Code civil** pour se corriger du lyrisme.
 
 ## Les axes de dissertation
-- **Un personnage de roman doit-il être un modèle ?** Julien prouve que non.
-- **Le roman doit-il peindre la société de son temps ?** Le sous-titre y répond, mais le roman excède la chronique.
-- **Peut-on s’attacher à un personnage immoral ?** La focalisation interne fait précisément cela.
-- **L’ambition est-elle une valeur ?** Le roman la montre comme une énergie que la société gâche.`,
+| Question | Ce que Julien démontre |
+| Un personnage doit-il être un **modèle** ? | **Non** |
+| Le roman doit-il **peindre son temps** ? | Le sous-titre y répond — mais le roman **excède la chronique** |
+| Peut-on s’attacher à un personnage **immoral** ? | La **focalisation interne** fait précisément cela |
+| L’**ambition** est-elle une valeur ? | Une **énergie que la société gâche** |`,
           },
           questions: [
             ['Comment le roman construit-il le personnage de Julien ?', ['Comme un être ambivalent, dont on épouse le point de vue sans l’approuver', 'Comme un héros exemplaire', 'Comme un pur criminel', 'Comme un narrateur ironique'], 0, 'Ce refus de trancher est une révolution esthétique.'],
@@ -491,16 +746,40 @@ Phrase sèche, refus du « beau style », rapidité, **discours indirect libre**
             cours: `Publié en **1951** par **Marguerite Yourcenar**, le livre est un roman qui a la forme d’une **longue lettre** : l’empereur **Hadrien**, malade et proche de la mort, écrit à son petit-fils adoptif **Marc Aurèle**, alors adolescent.
 
 ## La forme
-Six sections, dont les titres sont latins : *Animula vagula blandula* (« petite âme vagabonde et charmante », premiers mots du poème d’Hadrien mourant), *Varius multiplex multiformis*, *Tellus stabilita*, *Saeculum aureum*, *Disciplina augusta*, *Patientia*. Le récit est **rétrospectif** : Hadrien reprend sa vie, du soldat au prince, de la conquête à la paix, du bonheur au deuil.
+Six sections, aux titres **latins**.
+
+| Titre | Ce qu’il annonce |
+| *Animula vagula blandula* | « Petite âme vagabonde et charmante » : les **premiers mots du poème d’Hadrien mourant** |
+| *Varius multiplex multiformis* | La jeunesse et ses visages |
+| *Tellus stabilita* | La terre pacifiée |
+| *Saeculum aureum* | Le siècle d’or — et **Antinoüs** |
+| *Disciplina augusta* | L’ordre impérial |
+| *Patientia* | La maladie et la mort |
+
+> Le récit est **rétrospectif** : Hadrien reprend sa vie, du soldat au prince, de la conquête à la paix, du bonheur au deuil.
 
 ## L’histoire
-Hadrien (76-138) succède à Trajan, arrête l’expansion militaire, consolide les frontières (le mur en Bretagne), voyage sans relâche dans l’Empire, restaure Athènes, construit la Villa Adriana et le Panthéon. Il aime **Antinoüs**, un jeune Bithynien qui se noie dans le Nil en 130 — mort peut-être volontaire, jamais élucidée. Hadrien le divinise, fonde une ville en son nom, et ne s’en console pas. La fin du livre est celle d’un corps qui lâche et d’un esprit qui refuse de mentir sur ce qu’il a été.
+| Fait | Sa portée |
+| Hadrien (**76-138**) succède à **Trajan** | Il **arrête l’expansion** militaire |
+| Il **consolide les frontières** | Le **mur** en Bretagne |
+| Il **voyage sans relâche** | Il restaure Athènes, construit la **Villa Adriana** et le **Panthéon** |
+| Il aime **Antinoüs** | Jeune Bithynien **noyé dans le Nil en 130** — mort peut-être volontaire, **jamais élucidée** |
+| Il le **divinise** | Il fonde une ville en son nom — et **ne s’en console pas** |
+
+> La fin du livre est celle d’un **corps qui lâche** et d’un **esprit qui refuse de mentir** sur ce qu’il a été.
 
 ## Le pari du livre
-Écrire à la **première personne** la conscience d’un homme mort depuis dix-huit siècles, en s’appuyant sur des sources historiques réelles. Yourcenar a mis presque trente ans à y parvenir. Elle formule sa méthode dans les *Carnets de notes* qui accompagnent le roman : « Un pied dans l’érudition, l’autre dans la magie. »
+Écrire à la **première personne** la conscience d’un homme **mort depuis dix-huit siècles**, en s’appuyant sur des **sources historiques réelles**.
+
+> Yourcenar a mis **près de trente ans** à y parvenir. Sa méthode, formulée dans les *Carnets de notes* qui accompagnent le roman : « **Un pied dans l’érudition, l’autre dans la magie.** »
 
 ## Le style
-Phrase ample, latine de rythme, aphoristique. Le récit alterne les **grandes fresques** (guerres, voyages, réformes) et les **notations intimes** (le goût de l’eau, la fatigue, le sommeil, les chevaux). Le livre est autant une méditation sur le pouvoir, l’art, le corps et la mort qu’un roman historique.`,
+| Trait | Son effet |
+| Phrase **ample**, de rythme **latin**, **aphoristique** | La gravité |
+| Les **grandes fresques** | Guerres, voyages, réformes |
+| Les **notations intimes** | Le goût de l’eau, la fatigue, le sommeil, les chevaux |
+
+> Le livre est autant une **méditation** sur le pouvoir, l’art, le corps et la mort **qu’un roman historique**.`,
           },
           questions: [
             ['Quelle est la forme du livre ?', ['Une longue lettre d’Hadrien à Marc Aurèle', 'Un journal intime tenu au jour le jour', 'Un dialogue entre deux empereurs', 'Un récit à la troisième personne'], 0, 'Le récit est rétrospectif : un mourant reprend sa vie.'],
@@ -518,22 +797,37 @@ Phrase ample, latine de rythme, aphoristique. Le récit alterne les **grandes fr
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Une fiche notion : quand le roman se retourne contre lui-même',
-            cours: `On appelle **Nouveau Roman** un ensemble d’auteurs publiés dans les années **1950-1970**, la plupart aux **Éditions de Minuit** : **Alain Robbe-Grillet**, **Nathalie Sarraute**, **Michel Butor**, **Claude Simon**, **Robert Pinget**, **Marguerite Duras**. Ce n’est pas une école organisée mais un **air de famille** et un refus commun.
+            cours: `On appelle **Nouveau Roman** un ensemble d’auteurs publiés dans les années **1950-1970**, la plupart aux **Éditions de Minuit** : **Robbe-Grillet**, **Sarraute**, **Butor**, **Claude Simon**, **Pinget**, **Duras**.
+
+> Ce n’est **pas une école organisée** mais un **air de famille** et un **refus commun**.
 
 ## Ce qui est refusé
-- Le **personnage** : plus de nom parfois, plus de portrait, plus de biographie. Sarraute parle d’un « **ère du soupçon** » (1956) : le lecteur ne croit plus au personnage comme à une personne.
-- L’**intrigue** : plus de chronologie claire, plus de dénouement. Le récit tourne, répète, se contredit.
-- La **psychologie** : les motivations expliquées disparaissent au profit des sensations, des objets, des tropismes.
-- L’**auteur omniscient** : personne ne domine plus le récit.
+| Ce qui disparaît | Ce que cela signifie |
+| Le **personnage** | Plus de nom parfois, plus de portrait, plus de biographie |
+| L’**intrigue** | Plus de chronologie claire, plus de dénouement : le récit **tourne, répète, se contredit** |
+| La **psychologie** | Les motivations expliquées cèdent aux **sensations**, aux **objets**, aux **tropismes** |
+| L’**auteur omniscient** | Personne ne **domine plus** le récit |
+
+> Sarraute parle d’une « **ère du soupçon** » (**1956**) : le lecteur **ne croit plus au personnage comme à une personne**.
 
 ## Ce qui est mis à la place
-La **description**, portée à un degré inédit — chez Robbe-Grillet, une tomate, une gomme, une jalousie de fenêtre occupent des pages, décrites géométriquement, sans métaphore ; d’où le nom d’« **école du regard** ». La **répétition** et la **variation** deviennent des principes de composition (Simon, Butor). Le **lecteur** est appelé à faire le travail : reconstituer, hésiter, accepter de ne pas savoir.
+| Élément | Sa forme |
+| La **description** | Portée à un degré inédit : chez Robbe-Grillet, une tomate, une gomme, une jalousie de fenêtre occupent des pages — **géométriquement, sans métaphore** |
+| La **répétition** et la **variation** | Des principes de composition : Simon, Butor |
+| Le **lecteur** | Il **fait le travail** : reconstituer, hésiter, **accepter de ne pas savoir** |
+
+D’où le nom d’« **école du regard** ».
 
 ## Trois textes à connaître
-*L’Ère du soupçon* de Sarraute (**1956**) et *Pour un nouveau roman* de Robbe-Grillet (**1963**) sont les manifestes ; *La Modification* de Butor (**1957**), écrit à la **deuxième personne du pluriel**, en est l’exemple le plus célèbre.
+| Texte | Sa date | Son statut |
+| *L’Ère du soupçon*, Sarraute | **1956** | Manifeste |
+| *Pour un nouveau roman*, Robbe-Grillet | **1963** | Manifeste |
+| *La Modification*, Butor | **1957** | L’exemple le plus célèbre — écrit à la **deuxième personne du pluriel** |
 
-## Ce qu’il faut en retenir pour une dissertation
-Le Nouveau Roman ne détruit pas le roman : il déplace la question. Puisque le personnage classique était une **convention**, la montrer comme telle est encore une façon de dire le réel — un réel fait d’objets, de perceptions et d’incertitude, tel que le XXe siècle l’a rendu. C’est une esthétique, et c’est aussi une **vision du monde**.`,
+## En dissertation
+> Le Nouveau Roman **ne détruit pas le roman** : il **déplace la question**. Puisque le personnage classique était une **convention**, la **montrer comme telle** est encore une façon de dire le réel.
+
+> Un réel fait d’**objets**, de **perceptions** et d’**incertitude** — tel que le XXe siècle l’a rendu. C’est une **esthétique**, et c’est aussi une **vision du monde**.`,
           },
           questions: [
             ['Quelle maison d’édition est associée au Nouveau Roman ?', ['Les Éditions de Minuit', 'Gallimard', 'Le Seuil', 'Flammarion'], 0, 'Jérôme Lindon y publie Robbe-Grillet, Simon, Pinget, Duras.'],
@@ -551,26 +845,33 @@ Le Nouveau Roman ne détruit pas le roman : il déplace la question. Puisque le 
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Hugo, 1856 — les Mémoires d’une âme',
-            cours: `Recueil publié en **1856**, pendant l’exil de **Victor Hugo** à Guernesey. Le programme retient les **livres I à IV**. Parcours associé : **les Mémoires d’une âme**.
+            cours: `Recueil publié en **1856**, pendant l’**exil** de **Victor Hugo** à Guernesey. Le programme retient les **livres I à IV**. Parcours associé : **les Mémoires d’une âme**.
 
 ## L’architecture
-Six livres, répartis en deux ensembles séparés par une date : **Autrefois** (livres I-III : *Aurore*, *L’Âme en fleur*, *Les Luttes et les Rêves*) et **Aujourd’hui** (livres IV-VI : *Pauca meae*, *En marche*, *Au bord de l’infini*). Entre les deux, la mort de **Léopoldine**, la fille aînée du poète, noyée à Villequier en **1843** à dix-neuf ans, quelques mois après son mariage.
-La préface donne la clé : « Ce livre doit être lu comme on lirait le livre d’un mort. » Et surtout : « **Quand je vous parle de moi, je vous parle de vous.** Ah ! insensé, qui crois que je ne suis pas toi ! »
+| Ensemble | Ses livres |
+| **Autrefois** | I *Aurore*, II *L’Âme en fleur*, III *Les Luttes et les Rêves* |
+| **Aujourd’hui** | IV *Pauca meae*, V *En marche*, VI *Au bord de l’infini* |
 
-## Livre I — Aurore
-L’enfance, l’école, la nature, la jeunesse littéraire, la bataille romantique. « Réponse à un acte d’accusation » y raconte, sur un ton épique et drôle, la révolution du vocabulaire poétique : « Je mis un bonnet rouge au vieux dictionnaire. »
+> Entre les deux : la mort de **Léopoldine**, fille aînée du poète, **noyée à Villequier en 1843**, à **dix-neuf ans**, quelques mois après son mariage.
 
-## Livre II — L’Âme en fleur
-L’amour, la sensualité, la nature complice. Poèmes courts, souvent chantants.
+La préface donne la clé : « Ce livre doit être lu comme on lirait le livre d’un mort. » Et surtout : « **Quand je vous parle de moi, je vous parle de vous. Ah ! insensé, qui crois que je ne suis pas toi !** »
 
-## Livre III — Les Luttes et les Rêves
-La misère, l’injustice, l’enfance exploitée (« Melancholia » et les enfants à l’usine), la révolte, le doute. Hugo y est déjà le poète social des *Misérables*.
+## Les quatre livres au programme
+| Livre | Ce qu’il contient | Le texte-phare |
+| **I — Aurore** | L’enfance, l’école, la nature, la **bataille romantique** | « Réponse à un acte d’accusation » : « Je mis un **bonnet rouge** au vieux dictionnaire » |
+| **II — L’Âme en fleur** | L’amour, la sensualité, la nature complice | Poèmes courts, souvent chantants |
+| **III — Les Luttes et les Rêves** | La misère, l’injustice, l’**enfance exploitée**, la révolte, le doute | « Melancholia » et les enfants à l’usine |
+| **IV — Pauca meae** | Le **livre du deuil** | « **Demain, dès l’aube…** », « À Villequier », « Elle avait pris ce pli… » |
 
-## Livre IV — Pauca meae
-Le livre du deuil. « **Demain, dès l’aube…** », « À Villequier », « Elle avait pris ce pli… » : la douleur y passe du récit intime à la question adressée à Dieu. C’est le cœur émotionnel du recueil et le plus souvent étudié à l’oral.
+Dans le livre III, Hugo est **déjà** le poète social des *Misérables*.
+
+> Dans *Pauca meae*, la douleur passe du **récit intime** à la **question adressée à Dieu**. C’est le **cœur émotionnel** du recueil, et le plus souvent étudié à l’oral.
 
 ## Ce que veut dire « Mémoires d’une âme »
-Le recueil n’est pas une autobiographie de faits mais le **récit d’une vie intérieure** : joie, amour, révolte, deuil, foi. Et Hugo en fait aussitôt un livre **universel** — le « je » y est offert au lecteur comme un miroir.`,
+| Ce que le recueil n’est pas | Ce qu’il est |
+| Une autobiographie **de faits** | Le récit d’une **vie intérieure** : joie, amour, révolte, deuil, foi |
+
+> Et Hugo en fait aussitôt un livre **universel** : le « je » y est **offert au lecteur comme un miroir**.`,
           },
           questions: [
             ['Comment le recueil est-il organisé ?', ['En deux ensembles, Autrefois et Aujourd’hui, séparés par la mort de Léopoldine', 'En quatre saisons', 'Par ordre chronologique de composition', 'En trois parties égales'], 0, 'Six livres au total ; le programme retient les quatre premiers.'],
@@ -588,26 +889,32 @@ Le recueil n’est pas une autobiographie de faits mais le **récit d’une vie 
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Baudelaire, 1857 — le recueil et son procès',
-            cours: `Publié en **1857**, *Les Fleurs du mal* de **Charles Baudelaire** est condamné la même année pour outrage à la morale publique : **six pièces** sont retranchées. Une seconde édition, augmentée et réorganisée, paraît en **1861**. Parcours associé : **alchimie poétique : la boue et l’or**.
+            cours: `Publié en **1857**, *Les Fleurs du mal* de **Charles Baudelaire** est **condamné la même année** pour outrage à la morale publique : **six pièces** sont retranchées. Une seconde édition, augmentée et réorganisée, paraît en **1861**. Parcours : **alchimie poétique, la boue et l’or**.
 
-## L’architecture
-Six sections, qui dessinent un itinéraire :
-1. **Spleen et Idéal** — la plus longue : la tension entre l’élévation (l’art, la beauté, l’amour) et l’enlisement (l’ennui, l’angoisse, le temps).
-2. **Tableaux parisiens** (ajoutée en 1861) — la ville moderne, ses foules, ses vieillards, ses mendiantes, ses cygnes exilés.
-3. **Le Vin** — l’ivresse comme échappatoire.
-4. **Fleurs du mal** — la transgression, la volupté, la damnation.
-5. **Révolte** — le blasphème.
-6. **La Mort** — le dernier voyage, seul espoir : « Au fond de l’Inconnu pour trouver du **nouveau** ! »
+## L’architecture : un itinéraire
+| Section | Ce qu’elle met en jeu |
+| 1. **Spleen et Idéal** | La plus longue : la tension entre l’**élévation** (art, beauté, amour) et l’**enlisement** (ennui, angoisse, temps) |
+| 2. **Tableaux parisiens** — ajoutée en 1861 | La **ville moderne** : foules, vieillards, mendiantes, cygnes exilés |
+| 3. **Le Vin** | L’**ivresse** comme échappatoire |
+| 4. **Fleurs du mal** | La **transgression**, la volupté, la damnation |
+| 5. **Révolte** | Le **blasphème** |
+| 6. **La Mort** | Le dernier voyage, **seul espoir** |
+
+> Le dernier vers du recueil : « **Au fond de l’Inconnu pour trouver du nouveau !** »
 
 ## Les poèmes à connaître
 « Au lecteur », « L’Albatros », « Correspondances », « La Vie antérieure », « Parfum exotique », « Harmonie du soir », « L’Invitation au voyage », les quatre « Spleen », « Une Charogne », « Le Cygne », « À une passante », « Le Voyage ».
 
 ## Deux notions
-- Le **spleen** : angoisse sans objet, ennui métaphysique, temps qui écrase. « Quand le ciel bas et lourd pèse comme un couvercle… »
-- Les **correspondances** : le monde est « une forêt de symboles » ; les parfums, les couleurs et les sons se répondent. Le poète est celui qui déchiffre ce langage.
+| Notion | Sa définition | Sa formule |
+| Le **spleen** | Angoisse **sans objet**, ennui métaphysique, temps qui écrase | « Quand le ciel bas et lourd pèse comme un **couvercle**… » |
+| Les **correspondances** | Le monde est « une **forêt de symboles** » : parfums, couleurs et sons **se répondent** | Le poète est celui qui **déchiffre** ce langage |
 
 ## La forme
-Baudelaire reste **classique** de facture — sonnets, alexandrins, rimes régulières — et **révolutionnaire** de matière : il fait entrer dans le poème la charogne, la vieillesse, la ville sale, la prostituée. C’est ce contraste qui a fait scandale, et c’est lui qui fonde la modernité poétique.`,
+| Baudelaire reste… | Baudelaire est… |
+| **Classique de facture** : sonnets, alexandrins, rimes régulières | **Révolutionnaire de matière** : la charogne, la vieillesse, la ville sale, la prostituée |
+
+> C’est **ce contraste** qui a fait scandale — et c’est **lui** qui fonde la **modernité poétique**.`,
           },
           questions: [
             ['Que se passe-t-il lors de la publication du recueil en 1857 ?', ['Il est condamné et six pièces sont retranchées', 'Il obtient un prix littéraire', 'Il passe inaperçu', 'Il est interdit en totalité'], 0, 'Une seconde édition augmentée paraît en 1861.'],
@@ -625,25 +932,45 @@ Baudelaire reste **classique** de facture — sonnets, alexandrins, rimes régul
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Baudelaire — extraire l’or de la boue',
-            cours: `Cette seconde partie prend le recueil par son **parcours** : alchimie poétique, la boue et l’or. La formule vient de Baudelaire lui-même, dans un projet d’épilogue : « **Tu m’as donné ta boue et j’en ai fait de l’or.** »
+            cours: `Cette seconde partie prend le recueil par son **parcours** : **alchimie poétique, la boue et l’or**. La formule vient de Baudelaire lui-même, dans un projet d’épilogue : « **Tu m’as donné ta boue et j’en ai fait de l’or.** »
 
 ## Ce que veut dire l’alchimie
-L’alchimiste transformait le plomb en or. Le poète fait la même opération sur la **matière du monde** : ce qui est laid, banal, malade ou immoral devient beau **par le travail du langage**. La beauté n’est donc pas dans l’objet, elle est dans la **forme** que le poète lui donne. C’est le renversement décisif de la poésie moderne.
+| L’alchimiste | Le poète |
+| Il transforme le **plomb en or** | Il transforme la **matière du monde** |
+| — | Ce qui est **laid, banal, malade ou immoral** devient beau **par le travail du langage** |
+
+> La beauté n’est **pas dans l’objet** : elle est dans la **forme** que le poète lui donne. C’est le **renversement décisif** de la poésie moderne.
 
 ## Le poème matriciel : « Une Charogne »
-Un couple découvre en promenade un cadavre d’animal en décomposition, décrit avec une précision insoutenable — et le poème s’achève sur une promesse d’immortalité à la femme aimée : la pourriture attend le corps, mais le poète aura « gardé la forme et l’essence divine » de ses amours décomposées. Le sujet le plus repoussant produit l’un des plus beaux poèmes du recueil : la démonstration est faite.
+| Étape du poème | Ce qu’elle fait |
+| La découverte, en promenade | Un cadavre d’animal **en décomposition**, décrit avec une précision **insoutenable** |
+| La chute | Une **promesse d’immortalité** à la femme aimée |
+
+> La pourriture attend le corps — mais le poète aura « gardé la **forme et l’essence divine** » de ses amours décomposées.
+
+> **Le sujet le plus repoussant produit l’un des plus beaux poèmes du recueil** : la démonstration est faite.
 
 ## La ville comme matière
-Dans les *Tableaux parisiens*, la boue est urbaine : travaux, poussière, foules, vieillards, aveugles, mendiantes rousses, cygnes échappés d’une ménagerie. Baudelaire invente le regard du **flâneur**, celui qui trouve la beauté dans le passage — « À une passante » : une inconnue croisée une seconde, aimée, perdue à jamais.
+Dans les *Tableaux parisiens*, la boue est **urbaine** : travaux, poussière, foules, vieillards, aveugles, mendiantes rousses, cygnes échappés d’une ménagerie.
 
-## Le double postulation
-« Il y a dans tout homme, à toute heure, deux postulations simultanées, l’une vers Dieu, l’autre vers Satan. » Le recueil ne choisit pas : spleen **et** idéal, boue **et** or, damnation **et** élévation. C’est cette tension, jamais résolue, qui structure le livre.
+> Baudelaire invente le regard du **flâneur** : celui qui trouve la beauté **dans le passage**. « À une passante » : une inconnue croisée **une seconde**, aimée, **perdue à jamais**.
+
+## La double postulation
+« Il y a dans tout homme, à toute heure, **deux postulations simultanées**, l’une vers Dieu, l’autre vers Satan. »
+
+| Le recueil ne choisit pas |
+| Spleen **et** idéal |
+| Boue **et** or |
+| Damnation **et** élévation |
+
+> C’est cette **tension jamais résolue** qui **structure le livre**.
 
 ## Les axes de dissertation
-- **La poésie doit-elle chercher le beau sujet ?** Le recueil répond non.
-- **Le poète est-il un alchimiste ou un simple observateur ?**
-- **La modernité est-elle une esthétique de la laideur ?** Non : une esthétique de la transformation.
-- **Le mal est-il un thème ou une méthode ?** Chez Baudelaire, les deux.`,
+| Question | La réponse du recueil |
+| La poésie doit-elle chercher le **beau sujet** ? | **Non** |
+| Le poète est-il un **alchimiste** ou un simple observateur ? | Un alchimiste : il **transforme** |
+| La modernité est-elle une esthétique de la **laideur** ? | **Non** : une esthétique de la **transformation** |
+| Le mal est-il un **thème** ou une **méthode** ? | Chez Baudelaire, **les deux** |`,
           },
           questions: [
             ['Quelle formule de Baudelaire résume le parcours ?', ['« Tu m’as donné ta boue et j’en ai fait de l’or »', '« Je est un autre »', '« La poésie doit être faite par tous »', '« Il faut être absolument moderne »'], 0, 'Elle vient d’un projet d’épilogue pour le recueil.'],
@@ -661,22 +988,46 @@ Dans les *Tableaux parisiens*, la boue est urbaine : travaux, poussière, foules
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Apollinaire, 1913 — la tradition et l’invention',
-            cours: `Recueil publié en **1913** par **Guillaume Apollinaire**, il rassemble des poèmes écrits sur quinze ans. Parcours associé : **modernité poétique ?** — avec un point d’interrogation, qui est tout le sujet.
+            cours: `Recueil publié en **1913** par **Guillaume Apollinaire**, il rassemble des poèmes écrits sur **quinze ans**. Parcours : **modernité poétique ?** — avec un **point d’interrogation**, qui est tout le sujet.
 
 ## Un geste célèbre
-Sur les épreuves, Apollinaire **supprime toute la ponctuation** : « le rythme même et la coupe des vers, voilà la véritable ponctuation ». Le vers devient ambigu, plusieurs lectures deviennent possibles, et le lecteur doit choisir où respirer.
+Sur les épreuves, Apollinaire **supprime toute la ponctuation**.
+
+> « Le **rythme même et la coupe des vers**, voilà la véritable ponctuation. »
+
+| Ce que cela produit | Pour le lecteur |
+| Le vers devient **ambigu** | Plusieurs lectures deviennent possibles |
+| — | Il doit **choisir où respirer** |
 
 ## L’ordre du recueil
-Il n’est ni chronologique ni thématique. Le recueil s’ouvre sur « **Zone** », écrit en dernier, et se ferme sur « Vendémiaire ». Entre les deux : « Le Pont Mirabeau », « La Chanson du mal-aimé », « Les Colchiques », « Marie », « Nuit rhénane », « Automne malade », « La Loreley », « Rhénanes ». Le désordre est un choix : il fait entendre des échos plutôt qu’une progression.
+Il n’est **ni chronologique ni thématique**.
+
+| Position | Le poème |
+| **Ouverture** | « **Zone** » — écrit **en dernier** |
+| **Clôture** | « Vendémiaire » |
+| Entre les deux | « Le Pont Mirabeau », « La Chanson du mal-aimé », « Les Colchiques », « Marie », « Nuit rhénane », « Automne malade », « La Loreley », « Rhénanes » |
+
+> Le **désordre est un choix** : il fait entendre des **échos** plutôt qu’une progression.
 
 ## Zone
-Le poème inaugural mêle tout : l’aube parisienne, les affiches, les prospectus, la tour Eiffel « bergère », les hangars de Port-Aviation, l’émigration, la religion de l’enfance, les souvenirs de voyage, l’amour perdu. Il commence par « **À la fin tu es las de ce monde ancien** » et finit sur « **Soleil cou coupé** ». Le « je » y devient « tu » : le poète se parle à lui-même.
+Le poème inaugural **mêle tout** : l’aube parisienne, les affiches, les prospectus, la tour Eiffel « **bergère** », les hangars de Port-Aviation, l’émigration, la religion de l’enfance, les voyages, l’amour perdu.
+
+| Le premier vers | Le dernier |
+| « **À la fin tu es las de ce monde ancien** » | « **Soleil cou coupé** » |
+
+> Le « je » y devient « **tu** » : **le poète se parle à lui-même**.
 
 ## Modernité et tradition
-Apollinaire fait entrer dans le poème l’**aviation**, la publicité, la ville industrielle, le cinéma naissant — et en même temps il écrit des chansons, des complaintes, des mythes rhénans, des vers d’une régularité parfaite (« Sous le pont Mirabeau coule la Seine »). C’est là toute la question du parcours : la modernité n’est pas la table rase, elle est un **alliage**.
+| Ce qu’il fait entrer | Ce qu’il conserve |
+| L’**aviation**, la publicité, la ville industrielle, le cinéma naissant | Des **chansons**, des complaintes, des **mythes rhénans** |
+| — | Des vers d’une régularité parfaite : « Sous le pont Mirabeau coule la Seine » |
+
+> Toute la question du parcours est là : la modernité n’est **pas la table rase** — elle est un **alliage**.
 
 ## Le titre
-*Alcools* : ce qui enivre, ce qui brûle, ce qui distille. Le recueil est fait de vies et de villes distillées en poèmes courts, et l’ivresse y est aussi bien joie que douleur d’amour.`,
+*Alcools* : ce qui **enivre**, ce qui **brûle**, ce qui **distille**.
+
+> Le recueil est fait de **vies et de villes distillées** en poèmes courts — et l’ivresse y est aussi bien **joie** que **douleur d’amour**.`,
           },
           questions: [
             ['Quelle décision Apollinaire prend-il sur les épreuves du recueil ?', ['Supprimer toute la ponctuation', 'Renoncer aux rimes', 'Classer les poèmes par date', 'Ajouter des illustrations'], 0, '« Le rythme même et la coupe des vers, voilà la véritable ponctuation. »'],
@@ -694,23 +1045,31 @@ Apollinaire fait entrer dans le poème l’**aviation**, la publicité, la ville
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Une fiche notion : ce qui fait qu’un poème est moderne',
-            cours: `Cette fiche accompagne l’étude d’*Alcools* et, plus largement, la question du parcours « modernité poétique ? ». « Moderne » n’y désigne pas « récent » : c’est une **manière de traiter le langage**.
+            cours: `Cette fiche accompagne l’étude d’*Alcools* et la question « **modernité poétique ?** ». « Moderne » n’y désigne **pas** « récent » : c’est une **manière de traiter le langage**.
 
 ## Trois ruptures fondatrices
-1. **Baudelaire** (1857) fait entrer dans le poème la ville, la laideur, le transitoire : le beau sujet cesse d’exister.
-2. **Rimbaud** (1871) réclame que le poète se fasse « **voyant** » par « un long, immense et raisonné dérèglement de tous les sens », et que la poésie soit « **en avant** ».
-3. **Mallarmé** déplace tout du côté du **langage** : « Ce n’est point avec des idées que l’on fait des vers, c’est avec des mots. » Le poème ne transmet plus un message, il crée un objet verbal.
+| Auteur, date | Ce qu’il change | Sa formule |
+| **Baudelaire**, 1857 | La ville, la laideur, le transitoire entrent dans le poème | **Le beau sujet cesse d’exister** |
+| **Rimbaud**, 1871 | Le poète doit se faire « **voyant** » | Par « un long, immense et raisonné **dérèglement de tous les sens** » ; la poésie doit être « **en avant** » |
+| **Mallarmé** | Tout se déplace du côté du **langage** | « Ce n’est point avec des **idées** que l’on fait des vers, c’est avec des **mots** » |
+
+> Chez Mallarmé, le poème **ne transmet plus un message** : il **crée un objet verbal**.
 
 ## Ce qui change concrètement
-- La **forme** : abandon progressif du vers régulier, poème en prose, vers libre, disparition de la ponctuation, calligrammes.
-- Le **sujet** : plus rien n’est indigne du poème, ni un urinoir, ni un prospectus, ni une gare.
-- L’**image** : la métaphore cesse de comparer deux choses connues pour rapprocher deux réalités éloignées — ce que les surréalistes systématiseront après 1920.
-- Le **lecteur** : il devient actif, il doit choisir un sens là où le poème en propose plusieurs.
+| Élément | Ce qu’il devient |
+| La **forme** | Abandon du vers régulier, **poème en prose**, **vers libre**, disparition de la ponctuation, **calligrammes** |
+| Le **sujet** | **Plus rien n’est indigne** du poème : ni un urinoir, ni un prospectus, ni une gare |
+| L’**image** | La métaphore cesse de comparer deux choses connues : elle **rapproche deux réalités éloignées** — les surréalistes le systématiseront après 1920 |
+| Le **lecteur** | Il devient **actif** : il doit **choisir un sens** là où le poème en propose plusieurs |
 
 ## Le risque, et la question du programme
-À force de travailler la langue, le poème peut devenir **hermétique** : il perd le lecteur qu’il voulait libérer. La question « modernité poétique ? » invite précisément à peser ce risque — et à observer que les modernes les plus radicaux, Apollinaire compris, ont continué d’écrire des chansons que tout le monde retient par cœur.
+> À force de travailler la langue, le poème peut devenir **hermétique** : il **perd le lecteur qu’il voulait libérer**.
 
-> À retenir : est moderne un poème qui prend le **langage** pour sujet autant que pour outil.`,
+La question « modernité poétique **?** » invite précisément à **peser ce risque**.
+
+> Et à observer que les modernes les plus radicaux, **Apollinaire compris**, ont continué d’écrire des **chansons que tout le monde retient par cœur**.
+
+> À retenir : est **moderne** un poème qui prend le **langage pour sujet autant que pour outil**.`,
           },
           questions: [
             ['Que signifie « moderne » appliqué à la poésie ?', ['Une manière de traiter le langage, pas une simple date', 'Un poème écrit après 1900', 'Un poème sans rime', 'Un poème engagé'], 0, 'Le mot désigne une esthétique, pas une chronologie.'],
@@ -728,19 +1087,43 @@ Apollinaire fait entrer dans le poème l’**aviation**, la publicité, la ville
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Molière, 1673 — la dernière pièce, et la plus théâtrale',
-            cours: `**Comédie-ballet** en trois actes, créée en **1673**. Molière meurt le soir de la **quatrième représentation**, après avoir joué Argan. Parcours associé : **spectacle et comédie**.
+            cours: `**Comédie-ballet** en trois actes, créée en **1673**. Molière meurt le soir de la **quatrième représentation**, après avoir joué **Argan**. Parcours associé : **spectacle et comédie**.
 
 ## L’intrigue
-**Argan**, riche bourgeois obsédé par sa santé, veut marier sa fille **Angélique** à **Thomas Diafoirus**, fils de médecin, pour avoir un médecin dans la famille. Angélique aime **Cléante**. La servante **Toinette** et le frère d’Argan, **Béralde**, s’allient pour ouvrir les yeux du malade : ils lui font jouer la comédie de sa propre mort. **Béline**, la seconde épouse, se réjouit devant le corps ; Angélique pleure. Argan comprend enfin. La pièce s’achève sur une **cérémonie burlesque** où Argan est reçu médecin en latin de fantaisie : « Dignus, dignus est intrare… »
+| Étape | Ce qui se passe |
+| Le projet d’Argan | Marier sa fille **Angélique** à **Thomas Diafoirus**, fils de médecin — **pour avoir un médecin dans la famille** |
+| L’obstacle | Angélique aime **Cléante** |
+| Le stratagème | **Toinette**, la servante, et **Béralde**, le frère, font jouer à Argan la **comédie de sa propre mort** |
+| L’épreuve de vérité | **Béline**, la seconde épouse, **se réjouit** devant le corps ; **Angélique pleure** |
+| Le dénouement | Argan comprend ; une **cérémonie burlesque** le reçoit médecin en latin de fantaisie : « Dignus, dignus est intrare… » |
 
 ## Une comédie-ballet
-Prologue chanté, trois **intermèdes** dansés, musique de **Marc-Antoine Charpentier** : la pièce est un spectacle total, écrit pour la cour. Le théâtre y est présent à tous les niveaux — Cléante et Angélique se déclarent leur amour dans un **opéra improvisé** devant Argan, Toinette se déguise en médecin de passage, Argan joue le mort. Jouer un rôle est le moyen d’accéder à la vérité.
+Prologue chanté, **trois intermèdes** dansés, musique de **Marc-Antoine Charpentier** : un **spectacle total**, écrit pour la cour.
+
+| Le théâtre dans le théâtre | Qui joue |
+| Un **opéra improvisé** devant Argan | Cléante et Angélique s’y déclarent leur amour |
+| Un **déguisement** en médecin de passage | Toinette |
+| Le **mort joué** | Argan lui-même |
+
+> **Jouer un rôle est le moyen d’accéder à la vérité.** C’est le cœur du parcours.
 
 ## La satire de la médecine
-Purgon, Diafoirus père et fils, Fleurant : latin creux, saignées, lavements, autorité et jargon. Béralde formule la critique : la nature guérit, les médecins font des cérémonies. Ce n’est pas la médecine comme science qui est visée, mais la **médecine comme pouvoir** — celle qui parle une langue que le patient ne comprend pas.
+| Le personnage | Ce qu’il incarne |
+| **Purgon** | L’autorité et la menace |
+| **Diafoirus** père et fils | Le **latin creux** et le pédantisme |
+| **Fleurant** | Saignées et lavements |
+
+> **Béralde** formule la critique : la **nature guérit**, les médecins **font des cérémonies**.
+
+> Ce n’est **pas la médecine comme science** qui est visée, mais la **médecine comme pouvoir** — celle qui parle une **langue que le patient ne comprend pas**.
 
 ## Les personnages
-**Argan** : égoïste, crédule, tyrannique et terrifié par la mort. **Toinette** : l’intelligence pratique, l’insolence, le moteur de l’action. **Béline** : l’hypocrite intéressée. **Béralde** : la voix de la raison. **Thomas Diafoirus** : le pédant récitant son compliment appris par cœur.`,
+| Personnage | Ce qu’il est |
+| **Argan** | Égoïste, crédule, tyrannique — et **terrifié par la mort** |
+| **Toinette** | L’intelligence pratique, l’insolence : le **moteur de l’action** |
+| **Béline** | L’**hypocrite intéressée** |
+| **Béralde** | La **voix de la raison** |
+| **Thomas Diafoirus** | Le pédant **récitant son compliment appris par cœur** |`,
           },
           questions: [
             ['De quoi Argan est-il malade ?', ['De rien : il est un malade imaginaire', 'D’une maladie pulmonaire', 'De la peste', 'D’une blessure ancienne'], 0, 'Sa maladie est une obsession, entretenue par les médecins qui en vivent.'],
@@ -761,15 +1144,36 @@ Purgon, Diafoirus père et fils, Fleurant : latin creux, saignées, lavements, a
             cours: `Comédie en **trois actes et en prose**, créée en **1737**. Parcours associé : **théâtre et stratagème**.
 
 ## L’intrigue
-**Dorante**, jeune homme ruiné, aime en secret **Araminte**, une riche veuve. Son ancien valet **Dubois**, désormais au service d’Araminte, lui obtient la place d’**intendant** et conduit toute l’opération : « Nous sommes convenus de nos faits. »
-Dubois révèle « en confidence » à Araminte que Dorante est fou d’amour pour elle depuis qu’il l’a aperçue à l’Opéra. La confidence est vraie, mais elle est **fabriquée** : elle installe l’idée. Suivent le **portrait** d’Araminte trouvé chez Dorante, la fausse lettre, la jalousie de **Marton**, la pression de **Madame Argante** et du **comte Dorimont**, qui veulent marier Araminte à un grand nom.
-Araminte se défend, s’interroge, teste Dorante en lui dictant une lettre qui annonce son propre mariage — scène cruelle et magnifique. À la fin, elle avoue. Elle épousera Dorante, sans fortune ni titre.
+| Étape | Ce qui se passe |
+| Le point de départ | **Dorante**, jeune homme **ruiné**, aime en secret **Araminte**, une riche veuve |
+| L’organisateur | **Dubois**, son ancien valet, désormais au service d’Araminte, lui obtient la place d’**intendant** |
+| Le premier coup | Dubois révèle « en confidence » à Araminte que Dorante est **fou d’amour** pour elle depuis l’Opéra |
+| Les suivants | Le **portrait** d’Araminte trouvé chez Dorante, la **fausse lettre**, la jalousie de **Marton** |
+| La pression | **Madame Argante** et le **comte Dorimont** veulent marier Araminte à un **grand nom** |
+| L’épreuve | Araminte **dicte à Dorante une lettre** annonçant son propre mariage — scène cruelle et magnifique |
+| La fin | Elle avoue. Elle épousera Dorante, **sans fortune ni titre** |
+
+> Dubois annonce la couleur dès le début : « **Nous sommes convenus de nos faits.** »
 
 ## Le stratagème
-Tout le théâtre de Marivaux tient dans cette question : peut-on **provoquer** un sentiment sans le fabriquer de toutes pièces ? Dubois ne ment presque jamais : il choisit **quand** et **comment** la vérité est dite. L’amour d’Araminte existait peut-être déjà ; le stratagème le rend **visible à elle-même**.
+> La confidence initiale est **vraie** — mais elle est **fabriquée** : elle **installe l’idée**.
+
+Tout le théâtre de Marivaux tient dans cette question : peut-on **provoquer** un sentiment sans le fabriquer de toutes pièces ?
+
+| Ce que Dubois ne fait pas | Ce qu’il fait |
+| Il **ne ment presque jamais** | Il choisit **quand** et **comment** la vérité est dite |
+
+> L’amour d’Araminte **existait peut-être déjà** ; le stratagème le rend **visible à elle-même**.
 
 ## Le marivaudage
-Ce n’est pas du bavardage galant : c’est une **langue de l’aveu retardé**. Les personnages parlent pour ne pas dire, se contredisent, se surveillent. Les répliques sont brèves, les silences décisifs, et chaque mot pèse socialement — car ici l’argent et le rang sont partout : Araminte épouse un homme sans fortune, ce qui est un scandale de comédie.`,
+Ce n’est **pas du bavardage galant** : c’est une **langue de l’aveu retardé**.
+
+| Trait | Son effet |
+| Les personnages **parlent pour ne pas dire** | Ils se contredisent, se surveillent |
+| Les répliques **brèves** | Les **silences** deviennent décisifs |
+| Chaque mot **pèse socialement** | L’argent et le rang sont **partout** |
+
+> Araminte épouse un homme **sans fortune** : c’est un **scandale de comédie**.`,
           },
           questions: [
             ['Qui organise le stratagème de la pièce ?', ['Dubois, l’ancien valet de Dorante', 'Marton', 'Madame Argante', 'Le comte Dorimont'], 0, '« Nous sommes convenus de nos faits » : il conduit toute l’opération.'],
@@ -787,28 +1191,47 @@ Ce n’est pas du bavardage galant : c’est une **langue de l’aveu retardé**
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Marivaux — le stratagème est-il une manipulation ?',
-            cours: `Cette seconde partie prend la pièce par son **parcours** : théâtre et stratagème. La question morale est au centre — et le texte se garde d’y répondre.
+            cours: `Cette seconde partie prend la pièce par son **parcours** : théâtre et stratagème. La **question morale** est au centre — et le texte **se garde d’y répondre**.
 
 ## Une machine parfaitement réglée
-Dubois n’improvise pas. Chaque acte apporte sa révélation : la confidence initiale, puis le portrait, puis la fausse lettre, puis la scène du jardin. Le rythme est celui d’une **mécanique**, et le spectateur, mis dans la confidence dès la première scène, jouit de voir le piège se refermer — c’est l’**ironie dramatique**.
+Dubois **n’improvise pas**.
 
-## Manipuler ou révéler ?
-Deux lectures s’affrontent, et toutes deux se défendent :
-- **Manipulation** : Araminte est trompée, surveillée, poussée. Dubois exploite sa générosité et sa curiosité ; Dorante accepte de mentir par omission pendant trois actes.
-- **Révélation** : rien n’est inventé — Dorante l’aime vraiment, et Araminte l’aime déjà sans se l’avouer. Le stratagème ne crée pas le sentiment, il **lève les obstacles** que la société et l’amour-propre avaient posés.
-La pièce donne des arguments aux deux camps : c’est ce qui en fait un excellent sujet de dissertation.
+| Acte | Sa révélation |
+| I | La **confidence** initiale |
+| II | Le **portrait**, puis la **fausse lettre** |
+| III | La scène du **jardin** |
+
+> Le rythme est celui d’une **mécanique**. Le spectateur, mis dans la confidence **dès la première scène**, jouit de voir le piège se refermer : c’est l’**ironie dramatique**.
+
+## Manipuler ou révéler
+| **Manipulation** | **Révélation** |
+| Araminte est **trompée**, surveillée, poussée | **Rien n’est inventé** : Dorante l’aime vraiment |
+| Dubois exploite sa générosité et sa curiosité | Araminte l’aime **déjà**, sans se l’avouer |
+| Dorante **ment par omission** pendant trois actes | Le stratagème **lève les obstacles** posés par la société et l’amour-propre |
+
+> La pièce **donne des arguments aux deux camps** : c’est ce qui en fait un excellent sujet de dissertation.
 
 ## L’argent, partout
-Araminte est riche, Dorante ne l’est pas, Marton espère une dot, Madame Argante veut un titre pour sa fille, le comte apporte un procès en dot. Chez Marivaux, l’amour n’est jamais hors du **système social** : la difficulté n’est pas de s’aimer, c’est de pouvoir le dire quand tout l’ordre social s’y oppose.
+| Personnage | Son intérêt |
+| **Araminte** | Elle est **riche** |
+| **Dorante** | Il ne l’est **pas** |
+| **Marton** | Elle espère une **dot** |
+| **Madame Argante** | Elle veut un **titre** pour sa fille |
+| Le **comte** | Il apporte un **procès** en dot |
+
+> Chez Marivaux, l’amour n’est **jamais hors du système social** : la difficulté n’est pas de **s’aimer**, c’est de **pouvoir le dire** quand tout l’ordre social s’y oppose.
 
 ## Le valet metteur en scène
-Dubois occupe la place de l’**auteur** : il distribue les rôles, choisit les entrées, ménage ses effets, et commente. Le théâtre y parle donc de lui-même — le parcours « théâtre et stratagème » invite précisément à voir dans le stratagème une **image du théâtre**.
+Dubois occupe la place de l’**auteur** : il **distribue les rôles**, choisit les entrées, ménage ses effets, et **commente**.
+
+> Le théâtre y parle donc **de lui-même** : le parcours invite précisément à voir dans le **stratagème une image du théâtre**.
 
 ## Les axes de dissertation
-- **Peut-on faire naître l’amour par la ruse ?**
-- **Araminte est-elle victime ou actrice de son propre bonheur ?** Elle mène l’acte III.
-- **Le théâtre est-il par nature un art du stratagème ?**
-- **La comédie de Marivaux est-elle sociale ou psychologique ?** Elle est les deux, et l’un par l’autre.`,
+| Question | Ce que la pièce permet |
+| Peut-on faire **naître l’amour par la ruse** ? | Toute la pièce en débat |
+| Araminte est-elle **victime ou actrice** ? | Elle **mène l’acte III** |
+| Le théâtre est-il par nature un **art du stratagème** ? | Dubois en est la preuve |
+| La comédie est-elle **sociale ou psychologique** ? | **Les deux — et l’une par l’autre** |`,
           },
           questions: [
             ['Quelle position occupe Dubois dans la pièce ?', ['Celle d’un metteur en scène qui distribue les rôles et ménage ses effets', 'Celle d’un simple confident', 'Celle du rival de Dorante', 'Celle du narrateur'], 0, 'Le stratagème devient ainsi une image du théâtre lui-même.'],
@@ -826,22 +1249,41 @@ Dubois occupe la place de l’**auteur** : il distribue les rôles, choisit les 
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Lagarce, 1990 — revenir pour dire, et ne rien dire',
-            cours: `Pièce écrite en **1990** par **Jean-Luc Lagarce**, alors atteint du sida, dont il mourra en 1995. Elle est aujourd’hui l’une des pièces contemporaines les plus jouées en France. Parcours associé : **crise personnelle, crise familiale**.
+            cours: `Pièce écrite en **1990** par **Jean-Luc Lagarce**, alors atteint du sida, dont il mourra en **1995**. C’est aujourd’hui l’une des pièces contemporaines les plus jouées en France. Parcours : **crise personnelle, crise familiale**.
 
 ## La situation
-**Louis**, trente-quatre ans, revient dans sa famille après **douze ans** d’absence pour annoncer sa mort prochaine. Il le dit au spectateur dès le **prologue** : « Plus tard, l’année d’après — j’allais mourir à mon tour. » Le reste de la pièce est l’histoire d’un aveu qui n’aura pas lieu.
+**Louis**, **trente-quatre ans**, revient dans sa famille après **douze ans** d’absence pour **annoncer sa mort prochaine**.
+
+> Il le dit au spectateur **dès le prologue** : « Plus tard, l’année d’après — j’allais mourir à mon tour. »
+
+> Le reste de la pièce est **l’histoire d’un aveu qui n’aura pas lieu**.
 
 ## Les personnages
-**La Mère**, qui parle beaucoup et organise le dimanche comme si de rien n’était. **Antoine**, le frère cadet, resté au pays, colérique, blessé, qui reproche à Louis son départ et son silence. **Suzanne**, la sœur, qui ne connaît son frère que par les « petits mots » qu’il envoyait. **Catherine**, la belle-sœur, qui ne l’a jamais vu et qui parle avec une politesse gênée. **Louis**, qui écoute.
+| Personnage | Ce qu’il fait |
+| **La Mère** | Elle **parle beaucoup** et organise le dimanche **comme si de rien n’était** |
+| **Antoine**, le frère cadet | Resté au pays : colérique, blessé, il reproche à Louis son **départ** et son **silence** |
+| **Suzanne**, la sœur | Elle ne connaît son frère que par les « **petits mots** » qu’il envoyait |
+| **Catherine**, la belle-sœur | Elle ne l’a **jamais vu** : elle parle avec une **politesse gênée** |
+| **Louis** | Il **écoute** |
 
 ## La structure
-Un **prologue**, deux parties séparées par un **intermède**, un **épilogue**. Il ne se passe rien : on déjeune, on se dispute, on évoque le passé, quelqu’un propose une promenade en voiture. À la fin, Louis repart **sans avoir rien dit**. L’épilogue raconte, au conditionnel, un cri qu’il n’a jamais poussé.
+Un **prologue**, deux parties séparées par un **intermède**, un **épilogue**.
+
+> **Il ne se passe rien** : on déjeune, on se dispute, on évoque le passé, quelqu’un propose une promenade en voiture.
+
+> À la fin, Louis **repart sans avoir rien dit**. L’épilogue raconte, **au conditionnel**, un **cri qu’il n’a jamais poussé**.
 
 ## La langue
-C’est la marque de Lagarce : phrases reprises, corrigées, réajustées en direct — « c’est ce que je voulais dire, ce n’est pas ce que je voulais dire ». La parole avance en **tâtonnant**, se rature, cherche le mot juste et le manque. Cette langue dit exactement le sujet : dans cette famille, on parle sans arrêt **pour ne pas dire** l’essentiel.
+C’est la marque de Lagarce : phrases **reprises, corrigées, réajustées en direct** — « c’est ce que je voulais dire, ce n’est pas ce que je voulais dire ».
+
+> La parole avance **en tâtonnant**, se rature, **cherche le mot juste et le manque**.
+
+> Cette langue **dit exactement le sujet** : dans cette famille, **on parle sans arrêt pour ne pas dire l’essentiel**.
 
 ## Le titre
-« Juste la fin du monde » : la fin du monde, mais « juste » — l’immense catastrophe individuelle réduite à une phrase minimisée, et jamais prononcée.`,
+« Juste la fin du monde » : la fin du monde — mais « **juste** ».
+
+> L’**immense catastrophe individuelle** réduite à une phrase **minimisée** — et **jamais prononcée**.`,
           },
           questions: [
             ['Pourquoi Louis revient-il dans sa famille ?', ['Pour annoncer sa mort prochaine', 'Pour demander de l’argent', 'Pour assister à un mariage', 'Pour vendre la maison'], 0, 'Le prologue l’annonce au spectateur : « J’allais mourir à mon tour. »'],
@@ -859,25 +1301,51 @@ C’est la marque de Lagarce : phrases reprises, corrigées, réajustées en dir
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Lagarce — quand la famille empêche de parler',
-            cours: `Cette seconde partie prend la pièce par son **parcours** : crise personnelle, crise familiale. Les deux crises n’en font qu’une, et le texte montre comment.
+            cours: `Cette seconde partie prend la pièce par son **parcours** : crise personnelle, crise familiale. **Les deux crises n’en font qu’une** — et le texte montre comment.
 
 ## La crise personnelle
-Louis sait qu’il va mourir. Il a préparé son annonce, il l’a répétée — il le dit lui-même. Mais annoncer sa mort, c’est aussi demander quelque chose : de l’attention, du pardon, de l’amour. Or Louis est celui qui est **parti**, celui qui envoie des « petits mots », celui qui n’a jamais rien demandé. Le silence final n’est donc pas un accident : il est le prolongement logique d’une vie tenue à distance.
+Louis **sait** qu’il va mourir. Il a **préparé** son annonce, il l’a **répétée** : il le dit lui-même.
+
+> Mais annoncer sa mort, c’est aussi **demander quelque chose** : de l’attention, du pardon, de l’amour.
+
+| Ce que Louis est | Ce que cela empêche |
+| Celui qui est **parti** | Il ne peut plus **revenir demander** |
+| Celui qui envoie des « **petits mots** » | Il n’a **jamais rien demandé** |
+
+> Le silence final n’est **pas un accident** : il est le **prolongement logique d’une vie tenue à distance**.
 
 ## La crise familiale
-Chacun règle ses comptes dès qu’il ouvre la bouche. **Antoine** reproche à Louis d’avoir été le préféré, celui qui a pu partir, celui qui écrit ; il crie et se déclare « brutal » parce que c’est la place qu’on lui a laissée. **Suzanne** reproche à Louis son absence et son mystère. **La Mère** rejoue le dimanche d’autrefois pour empêcher que le pire arrive. Personne n’écoute vraiment.
+Chacun **règle ses comptes** dès qu’il ouvre la bouche.
+
+| Personnage | Son reproche |
+| **Antoine** | Louis a été le **préféré**, celui qui a **pu partir**, celui qui écrit. Il crie et se déclare « **brutal** » — parce que c’est **la place qu’on lui a laissée** |
+| **Suzanne** | L’**absence** et le **mystère** |
+| **La Mère** | Elle **rejoue le dimanche d’autrefois** pour empêcher que le pire arrive |
+
+> **Personne n’écoute vraiment.**
 
 ## La parole comme obstacle
-La pièce est bavarde et le silence y est central. Les monologues coexistent plus qu’ils ne dialoguent ; les phrases se reprennent (« ce que je veux dire, ce que je voulais dire ») sans jamais atteindre leur objet. Chez Lagarce, la langue **échoue en parlant** — et c’est cet échec qui émeut.
+| Le paradoxe | Comment il s’écrit |
+| La pièce est **bavarde** | Et le **silence** y est central |
+| Les **monologues coexistent** plus qu’ils ne dialoguent | Les phrases **se reprennent** sans atteindre leur objet |
+
+> Chez Lagarce, la langue **échoue en parlant** — et **c’est cet échec qui émeut**.
 
 ## Une tragédie contemporaine
-On peut lire la pièce comme une tragédie : un destin connu d’avance (le prologue), une **unité de lieu** (la maison) et de temps (un dimanche), un héros qui ne peut échapper à ce qu’il est. Ce qui manque, c’est le geste : ici, la catastrophe est un **non-événement**.
+| L’élément tragique | Sa présence dans la pièce |
+| Un **destin connu d’avance** | Le **prologue** |
+| L’**unité de lieu** | La maison |
+| L’**unité de temps** | Un dimanche |
+| Un héros qui **ne peut échapper à ce qu’il est** | Louis |
+
+> Ce qui manque, c’est le **geste** : ici, **la catastrophe est un non-événement**.
 
 ## Les axes de dissertation
-- **La famille est-elle un lieu de parole ou d’empêchement ?**
-- **Le théâtre peut-il représenter ce qui ne se dit pas ?** Lagarce répond oui : par la reprise et le silence.
-- **Louis est-il lâche ?** Ou protège-t-il les siens ? Le texte refuse de trancher.
-- **Peut-on parler de tragédie moderne ?** Destin annoncé, unités respectées, catastrophe intérieure.`,
+| Question | Ce que la pièce permet |
+| La famille est-elle un lieu de **parole** ou d’**empêchement** ? | Le texte penche nettement |
+| Le théâtre peut-il représenter **ce qui ne se dit pas** ? | **Oui** : par la **reprise** et le **silence** |
+| Louis est-il **lâche** — ou protège-t-il les siens ? | Le texte **refuse de trancher** |
+| Peut-on parler de **tragédie moderne** ? | Destin annoncé, unités respectées, **catastrophe intérieure** |`,
           },
           questions: [
             ['Pourquoi Louis ne parvient-il pas à parler ?', ['Annoncer sa mort reviendrait à demander quelque chose, ce qu’il n’a jamais fait', 'Sa famille l’en empêche physiquement', 'Il change d’avis dès le prologue', 'Il ne trouve pas le bon moment matériel'], 0, 'Le silence final prolonge une vie tenue à distance.'],
@@ -895,19 +1363,38 @@ On peut lire la pièce comme une tragédie : un destin connu d’avance (le prol
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Rabelais, 1534 — un géant, et tout le savoir de son siècle',
-            cours: `Publié en **1534** sous le pseudonyme d’**Alcofribas Nasier** (anagramme de François Rabelais), *Gargantua* est le second livre écrit par Rabelais, mais il raconte la vie du **père** de Pantagruel. Parcours associé : **rire et savoir**.
+            cours: `Publié en **1534** sous le pseudonyme d’**Alcofribas Nasier** — anagramme de François Rabelais —, *Gargantua* est le **second livre écrit** par Rabelais, mais il raconte la vie du **père** de Pantagruel. Parcours : **rire et savoir**.
 
 ## Le prologue et la « substantifique moelle »
-Rabelais compare son livre aux **Silènes** : des boîtes grotesques qui contenaient des drogues précieuses. Il invite le lecteur à faire comme le chien avec l’os : briser la coquille pour en tirer la **substantifique moelle**. Autrement dit : sous la farce, cherchez le sens. Mais il ajoute aussitôt que tout cela n’était peut-être qu’un jeu — l’ambiguïté est constante et volontaire.
+Rabelais compare son livre aux **Silènes** : des boîtes **grotesques** qui contenaient des **drogues précieuses**.
+
+> Il invite le lecteur à faire comme le **chien avec l’os** : **briser la coquille** pour en tirer la **substantifique moelle**.
+
+> Autrement dit : **sous la farce, cherchez le sens**. Mais il ajoute aussitôt que tout cela n’était **peut-être qu’un jeu** — l’**ambiguïté est constante et volontaire**.
 
 ## Le récit
-- **La naissance** : Gargamelle, après un repas de tripes, accouche par l’**oreille**. L’enfant crie « À boire ! ».
-- **Les deux éducations** : d’abord les précepteurs sorbonnards, **Thubal Holoferne** et Jobelin Bridé, qui lui font apprendre par cœur des livres inutiles pendant des dizaines d’années ; puis l’humaniste **Ponocrates**, qui réforme tout — journée réglée, exercice physique, lectures commentées, hygiène, observation directe, apprentissage par le plaisir.
-- **La guerre picrocholine** : une querelle de marchands de fouaces déclenche une guerre absurde ; **Picrochole**, roi voisin, se rêve empereur du monde. **Frère Jean des Entommeures**, moine truculent et efficace, défend l’abbaye à coups de bâton de croix.
-- **L’abbaye de Thélème** : Gargantua l’offre à Frère Jean. Anti-monastère, mixte, riche, belle, sans horloge ni contrainte, avec une seule règle : « **Fais ce que voudras.** »
+| Épisode | Ce qui s’y passe |
+| La **naissance** | Gargamelle, après un repas de **tripes**, accouche par l’**oreille**. L’enfant crie « **À boire !** » |
+| Les **deux éducations** | Voir ci-dessous |
+| La **guerre picrocholine** | Une querelle de **marchands de fouaces** déclenche une guerre absurde ; **Picrochole** se rêve **empereur du monde** |
+| **Frère Jean des Entommeures** | Moine truculent et efficace, il défend l’abbaye **à coups de bâton de croix** |
+| L’**abbaye de Thélème** | Gargantua l’offre à Frère Jean |
+
+## Les deux éducations
+| | Les **sorbonnards** | L’**humaniste Ponocrates** |
+| Les maîtres | **Thubal Holoferne**, Jobelin Bridé | Ponocrates |
+| La méthode | Apprendre **par cœur** des livres inutiles, pendant des **dizaines d’années** | Journée **réglée**, exercice physique, lectures **commentées**, hygiène, **observation directe** |
+| Le ressort | La contrainte | L’**apprentissage par le plaisir** |
+
+## Thélème
+Anti-monastère : **mixte**, riche, beau, **sans horloge ni contrainte**.
+
+> Une seule règle : « **Fais ce que voudras.** »
 
 ## Le rire
-Gigantisme, énumérations vertigineuses, listes de jeux, obscénités, latin de cuisine, noms parlants. Le rire est chez Rabelais une **méthode** : il désacralise l’autorité, la scolastique, la guerre de conquête, la religion formaliste — et il rend joyeux le savoir humaniste.`,
+Gigantisme, **énumérations vertigineuses**, listes de jeux, obscénités, **latin de cuisine**, noms parlants.
+
+> Le rire est chez Rabelais une **méthode** : il **désacralise** l’autorité, la scolastique, la guerre de conquête, la religion formaliste — et il rend le **savoir humaniste joyeux**.`,
           },
           questions: [
             ['Sous quel pseudonyme Rabelais publie-t-il ?', ['Alcofribas Nasier, anagramme de son nom', 'Maître Janotus', 'Ponocrates', 'Frère Jean'], 0, 'La prudence s’imposait face à la Sorbonne.'],
@@ -925,28 +1412,48 @@ Gigantisme, énumérations vertigineuses, listes de jeux, obscénités, latin de
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Rabelais — pourquoi le savoir a besoin du rire',
-            cours: `Cette seconde partie prend l’œuvre par son **parcours** : rire et savoir. Le lien entre les deux n’est pas décoratif — c’est la thèse même du livre.
+            cours: `Cette seconde partie prend l’œuvre par son **parcours** : rire et savoir. Le lien entre les deux n’est **pas décoratif** — c’est la **thèse même du livre**.
 
 ## L’humanisme en actes
-Le programme d’éducation de Ponocrates est un **manifeste** : contre l’apprentissage par cœur, l’observation ; contre le mépris du corps, la gymnastique et la natation ; contre le latin scolastique, les langues anciennes lues dans le texte ; contre la répétition, la conversation et le commentaire. C’est le rêve humaniste — l’homme complet, savant et sain, capable de juger par lui-même.
+Le programme de **Ponocrates** est un **manifeste**.
+
+| Contre quoi | Ce qu’il propose |
+| L’apprentissage **par cœur** | L’**observation** |
+| Le **mépris du corps** | La gymnastique et la **natation** |
+| Le **latin scolastique** | Les langues anciennes **lues dans le texte** |
+| La **répétition** | La **conversation** et le commentaire |
+
+> C’est le **rêve humaniste** : l’homme **complet**, savant et sain, **capable de juger par lui-même**.
 
 ## Ce que vise la satire
-- La **Sorbonne** et sa scolastique : Janotus de Bragmardo, venu réclamer les cloches, prononce un discours d’ivrogne bourré de fausse logique.
-- La **guerre de conquête** : Picrochole partage le monde avant d’avoir gagné une bataille ; ses conseillers flattent, Grandgousier plaide pour la paix — page rarement égalée sur la responsabilité du prince.
-- La **religion formaliste** : les moines qui prient sans agir, opposés à Frère Jean qui agit.
-- La **justice** et les procédures, ailleurs dans l’œuvre.
+| Cible | L’épisode |
+| La **Sorbonne** et sa scolastique | **Janotus de Bragmardo**, venu réclamer les cloches, prononce un discours d’ivrogne bourré de **fausse logique** |
+| La **guerre de conquête** | **Picrochole** partage le monde **avant d’avoir gagné une bataille** ; ses conseillers flattent, **Grandgousier plaide pour la paix** |
+| La **religion formaliste** | Les moines qui **prient sans agir**, opposés à **Frère Jean qui agit** |
+| La **justice** et les procédures | Ailleurs dans l’œuvre |
+
+> La page de Grandgousier sur la **responsabilité du prince** est rarement égalée dans le siècle.
 
 ## Le rire comme instrument
-Rabelais rit **par le corps** (nourriture, boisson, sexe, excréments) : c’est ce que Bakhtine a appelé le rire **carnavalesque**, celui qui renverse les hiérarchies le temps d’une fête. Ce rire n’est pas une récréation entre deux leçons : il **détruit l’autorité** — on ne discute pas une croyance dont on rit, on s’en libère. Et il rend le savoir désirable au lieu de le rendre respectable.
+Rabelais rit **par le corps** : nourriture, boisson, sexe, excréments. C’est ce que **Bakhtine** a appelé le rire **carnavalesque**, celui qui **renverse les hiérarchies** le temps d’une fête.
+
+| Ce que le rire n’est pas | Ce qu’il fait |
+| Une **récréation** entre deux leçons | Il **détruit l’autorité** |
+| — | **On ne discute pas une croyance dont on rit : on s’en libère** |
+
+> Et il rend le savoir **désirable** au lieu de le rendre **respectable**.
 
 ## Thélème, utopie et limites
-« Fais ce que voudras » suppose des gens « bien nés, bien instruits », capables de vouloir le bien. C’est donc une utopie **élitiste** : la liberté y est le fruit de l’éducation, pas un droit. Ce point est le meilleur angle de dissertation sur l’œuvre.
+« Fais ce que voudras » suppose des gens « **bien nés, bien instruits** », **capables de vouloir le bien**.
+
+> C’est donc une utopie **élitiste** : la liberté y est le **fruit de l’éducation**, **pas un droit**. C’est le meilleur angle de dissertation sur l’œuvre.
 
 ## Les axes de dissertation
-- **Le rire empêche-t-il de penser, ou permet-il de penser ?**
-- **Peut-on tout dire en riant ?** Rabelais a été censuré ; le rire l’a aussi protégé.
-- **Thélème est-elle une utopie enviable ?**
-- **Faut-il chercher un sens caché à toute œuvre comique ?** Le prologue pose la question et la laisse ouverte.`,
+| Question | Ce que l’œuvre permet |
+| Le rire **empêche-t-il** de penser, ou **permet-il** de penser ? | Rabelais tranche pour la seconde |
+| Peut-on **tout dire en riant** ? | Il a été **censuré** — mais le rire l’a aussi **protégé** |
+| Thélème est-elle une utopie **enviable** ? | Sa clause d’entrée pose problème |
+| Faut-il chercher un **sens caché** à toute œuvre comique ? | Le **prologue** pose la question **et la laisse ouverte** |`,
           },
           questions: [
             ['Que propose le programme d’éducation de Ponocrates ?', ['Observation, exercice physique, lectures commentées, hygiène', 'Apprentissage par cœur et répétition', 'Retraite silencieuse au monastère', 'Formation militaire exclusive'], 0, 'C’est le manifeste humaniste de l’homme complet, savant et sain.'],
@@ -964,21 +1471,36 @@ Rabelais rit **par le corps** (nourriture, boisson, sexe, excréments) : c’est
           axe: 'Anciens programmes',
           lecon: {
             titre: 'La Bruyère, 1688 — la société vue comme un théâtre',
-            cours: `Publiés en **1688** et augmentés jusqu’en 1696, *Les Caractères ou les Mœurs de ce siècle* de **Jean de La Bruyère** se présentent d’abord comme une traduction de Théophraste, avant de devenir une œuvre autonome. Le programme retient les **livres V à X**. Parcours associé : **la comédie sociale**.
+            cours: `Publiés en **1688** et augmentés jusqu’en **1696**, *Les Caractères ou les Mœurs de ce siècle* de **Jean de La Bruyère** se présentent d’abord comme une **traduction de Théophraste**, avant de devenir une œuvre autonome. Le programme retient les **livres V à X**. Parcours : **la comédie sociale**.
 
 ## La forme
-Ni traité, ni roman : des **remarques**. Maximes brèves, portraits, dialogues, anecdotes, réflexions d’une page. Le livre se lit dans le désordre et se compose pourtant : chaque remarque éclaire la précédente. La Bruyère revendique le fragment — « Tout est dit, et l’on vient trop tard » — et l’art de la **brièveté frappante**.
+Ni traité, ni roman : des **remarques**.
 
-## Les livres au programme
-**V. De la société et de la conversation** — les fâcheux, les bavards, les vaniteux du langage.
-**VI. Des biens de fortune** — l’argent, les partisans, les financiers enrichis. Le portrait de **Giton** (le riche) et de **Phédon** (le pauvre) montre que le corps même dit la condition sociale.
-**VII. De la ville** — la bourgeoisie qui singe la cour.
-**VIII. De la cour** — le chef-d’œuvre du livre : « L’on s’élève à la cour, mais on n’y monte pas. » La cour est un **pays étranger** aux mœurs codées.
-**IX. Des grands** — les puissants, leur mépris, leur inutilité.
-**X. Du souverain ou de la république** — le pouvoir, la guerre, et l’image saisissante des paysans « animaux farouches » qui deviennent des hommes quand ils se lèvent.
+| Forme employée | Son usage |
+| La **maxime brève** | Frapper |
+| Le **portrait** | Montrer |
+| Le **dialogue**, l’**anecdote** | Faire entendre |
+| La **réflexion** d’une page | Développer |
+
+> Le livre se **lit dans le désordre** et se **compose** pourtant : chaque remarque éclaire la précédente.
+
+La Bruyère **revendique le fragment** — « **Tout est dit, et l’on vient trop tard** » — et l’art de la **brièveté frappante**.
+
+## Les six livres au programme
+| Livre | Son objet | Ce qu’on y retient |
+| **V. De la société et de la conversation** | Les fâcheux, les bavards, les **vaniteux du langage** | La parole comme parade |
+| **VI. Des biens de fortune** | L’argent, les partisans, les financiers enrichis | **Giton** le riche et **Phédon** le pauvre : **le corps même dit la condition sociale** |
+| **VII. De la ville** | La **bourgeoisie qui singe la cour** | L’imitation ridicule |
+| **VIII. De la cour** | Le **chef-d’œuvre du livre** | « L’on **s’élève** à la cour, mais on n’y **monte** pas » |
+| **IX. Des grands** | Les puissants | Leur mépris, leur **inutilité** |
+| **X. Du souverain ou de la république** | Le pouvoir, la guerre | Les paysans « **animaux farouches** » qui **deviennent des hommes quand ils se lèvent** |
+
+> La cour est décrite comme un **pays étranger**, aux **mœurs codées** — c’est le regard de l’ethnographe avant l’heure.
 
 ## La méthode
-La Bruyère **montre** au lieu de démontrer : un geste, un vêtement, une manière de parler suffisent à faire un caractère. Il nomme ses figures par des noms grecs (Giton, Phédon, Ménalque) pour se protéger, mais la cour de Louis XIV s’y reconnaissait — des « clés » circulaient pour identifier les modèles.`,
+La Bruyère **montre** au lieu de **démontrer** : un **geste**, un **vêtement**, une **manière de parler** suffisent à faire un caractère.
+
+> Il nomme ses figures par des **noms grecs** — Giton, Phédon, Ménalque — **pour se protéger**. Mais la cour de Louis XIV **s’y reconnaissait** : des « **clés** » circulaient pour identifier les modèles.`,
           },
           questions: [
             ['Quelle forme prennent Les Caractères ?', ['Des remarques brèves : maximes, portraits, anecdotes', 'Un traité systématique', 'Un roman à intrigue', 'Un recueil de lettres'], 0, 'Le livre se lit dans le désordre et se compose pourtant.'],
@@ -996,23 +1518,37 @@ La Bruyère **montre** au lieu de démontrer : un geste, un vêtement, une mani�
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Olympe de Gouges, 1791 — réécrire la Déclaration pour y mettre les femmes',
-            cours: `Publiée en **septembre 1791**, la *Déclaration des droits de la femme et de la citoyenne* d’**Olympe de Gouges** est la réponse directe à la **Déclaration des droits de l’homme et du citoyen** de 1789, dont les femmes étaient absentes. Parcours associé : **écrire et combattre pour l’égalité**.
+            cours: `Publiée en **septembre 1791**, la *Déclaration des droits de la femme et de la citoyenne* d’**Olympe de Gouges** répond **directement** à la Déclaration de **1789**, dont les femmes étaient **absentes**. Parcours : **écrire et combattre pour l’égalité**.
 
 ## La structure
-- Une **dédicace** à la reine **Marie-Antoinette**, qu’elle appelle à soutenir la cause des femmes.
-- Un **préambule** calqué sur celui de 1789, où les « mères, filles, sœurs, représentantes de la nation » demandent à être constituées en Assemblée.
-- **Dix-sept articles**, dans l’ordre exact de la Déclaration de 1789, réécrits pour y inclure les femmes.
-- Un **postambule** au ton tout différent : « **Femme, réveille-toi ; le tocsin de la raison se fait entendre dans tout l’univers ; reconnais tes droits.** »
-- Un projet de **contrat social entre l’homme et la femme**, qui règle mariage, biens et enfants naturels.
+| Partie | Son contenu et son ton |
+| La **dédicace** | À la reine **Marie-Antoinette**, appelée à soutenir la cause des femmes |
+| Le **préambule** | **Calqué** sur celui de 1789 : les « mères, filles, sœurs, représentantes de la nation » demandent à être constituées en Assemblée |
+| Les **dix-sept articles** | Dans l’**ordre exact** de 1789, réécrits pour y **inclure les femmes** |
+| Le **postambule** | Un ton **tout différent** : « **Femme, réveille-toi ; le tocsin de la raison se fait entendre dans tout l’univers ; reconnais tes droits** » |
+| Le **contrat social** entre l’homme et la femme | Il règle mariage, biens et **enfants naturels** |
 
 ## L’article le plus célèbre
-**Article X** : « **La femme a le droit de monter sur l’échafaud ; elle doit avoir également celui de monter à la tribune.** » L’argument est imparable : la loi punit les femmes comme des citoyennes, elle doit donc les représenter comme telles. La phrase est devenue tragiquement prophétique — Olympe de Gouges est **guillotinée le 3 novembre 1793**.
+**Article X** : « **La femme a le droit de monter sur l’échafaud ; elle doit avoir également celui de monter à la tribune.** »
+
+> L’argument est **imparable** : la **loi punit** les femmes **comme des citoyennes**, elle doit donc les **représenter** comme telles.
+
+> La phrase est devenue **tragiquement prophétique** : Olympe de Gouges est **guillotinée le 3 novembre 1793**.
 
 ## La stratégie d’écriture
-Le **pastiche** est l’arme principale : reprendre mot pour mot le texte fondateur en y ajoutant « et la citoyenne » rend l’oubli visible, sans avoir à le démontrer. Le postambule change de registre — apostrophe, exclamation, ironie, appel direct — parce que la loi ne suffit pas : il faut aussi convaincre les femmes elles-mêmes.
+| Arme | Ce qu’elle produit |
+| Le **pastiche** | Reprendre **mot pour mot** le texte fondateur en ajoutant « et la citoyenne » **rend l’oubli visible sans avoir à le démontrer** |
+| Le **changement de registre** au postambule | Apostrophe, exclamation, ironie, **appel direct** |
+
+> Pourquoi ce changement : **la loi ne suffit pas** — il faut aussi **convaincre les femmes elles-mêmes**.
 
 ## Qui elle était
-Née Marie Gouze à Montauban en 1748, autrice de théâtre, abolitionniste (*L’Esclavage des Noirs*), révolutionnaire modérée, girondine. Sa Déclaration n’a eu aucun effet légal immédiat : les femmes n’obtiendront le droit de vote en France qu’en **1944**.`,
+| Fait | Le détail |
+| Née | **Marie Gouze**, à **Montauban**, en **1748** |
+| Autrice | De **théâtre** — *L’Esclavage des Noirs*, texte **abolitionniste** |
+| En politique | Révolutionnaire **modérée**, **girondine** |
+
+> Sa Déclaration n’a eu **aucun effet légal immédiat** : les femmes n’obtiendront le **droit de vote** en France qu’en **1944** — cent cinquante-trois ans plus tard.`,
           },
           questions: [
             ['À quel texte la Déclaration d’Olympe de Gouges répond-elle ?', ['À la Déclaration des droits de l’homme et du citoyen de 1789', 'Au Code civil', 'Au Contrat social de Rousseau', 'À la Constitution de 1791 seule'], 0, 'Les femmes en étaient absentes : le pastiche rend cet oubli visible.'],
@@ -1030,27 +1566,47 @@ Née Marie Gouze à Montauban en 1748, autrice de théâtre, abolitionniste (*L�
           axe: 'Anciens programmes',
           lecon: {
             titre: 'Olympe de Gouges — écrire, c’est déjà combattre',
-            cours: `Cette seconde partie prend le texte par son **parcours** : écrire et combattre pour l’égalité. La question est celle de l’**efficacité** d’un texte — que peut faire une déclaration sans pouvoir ?
+            cours: `Cette seconde partie prend le texte par son **parcours** : écrire et combattre pour l’égalité. La question est celle de l’**efficacité** : **que peut faire une déclaration sans pouvoir ?**
 
 ## Le pastiche comme arme
-Reprendre la forme du texte adverse est plus efficace que le réfuter. En calquant préambule, articles et numérotation, Olympe de Gouges oblige le lecteur à faire lui-même la comparaison : l’ajout minuscule de « et la citoyenne » rend l’exclusion criante. C’est une **démonstration par la forme** — le fond n’a presque pas besoin d’être plaidé.
+Reprendre la **forme du texte adverse** est plus efficace que le **réfuter**.
+
+| Ce qu’Olympe de Gouges calque | L’effet |
+| Le **préambule** | Le lecteur reconnaît immédiatement le modèle |
+| Les **articles** et leur **numérotation** | Il fait **lui-même la comparaison** |
+| L’ajout de « **et la citoyenne** » | Il rend l’**exclusion criante** |
+
+> C’est une **démonstration par la forme** : le fond n’a **presque pas besoin d’être plaidé**.
 
 ## Trois registres, trois publics
-- Le registre **juridique** des articles vise les législateurs : il parle leur langue, il est donc irréfutable dans ses termes.
-- Le registre **polémique** du postambule vise les femmes : apostrophes, questions, impératifs, ironie mordante contre celles qui se contentent des « avantages » de la séduction.
-- Le registre **didactique** du contrat social propose des solutions concrètes : biens communs, reconnaissance des enfants naturels, droit de nommer le père.
+| Registre | Où il se trouve | À qui il parle |
+| **Juridique** | Les **dix-sept articles** | Aux **législateurs** : il parle leur langue, donc il est **irréfutable dans ses termes** |
+| **Polémique** | Le **postambule** | Aux **femmes** : apostrophes, questions, impératifs, **ironie mordante** contre celles qui se contentent des « avantages » de la séduction |
+| **Didactique** | Le **contrat social** | À tous : des **solutions concrètes** — biens communs, reconnaissance des **enfants naturels**, droit de **nommer le père** |
 
 ## Ce que le texte demande vraiment
-L’égalité **politique** (voter, être élue, participer à la loi), l’égalité **civile** (propriété, héritage, mariage), l’égalité **d’expression** (parler en public, publier), et la reconnaissance des femmes comme **sujets de droit** et non comme protégées. C’est un programme complet, et il ne sera réalisé qu’au XXe siècle.
+| Égalité | Ce qu’elle recouvre |
+| **Politique** | Voter, être élue, participer à la loi |
+| **Civile** | Propriété, héritage, mariage |
+| D’**expression** | Parler en public, publier |
+| De **statut** | Être **sujet de droit**, et non **protégée** |
+
+> C’est un **programme complet** — et il ne sera réalisé qu’**au XXe siècle**.
 
 ## Les contradictions et les limites
-Le texte s’adresse à une reine que la Révolution jugera ; il conserve un vocabulaire de la « nature » et de la « sensibilité » féminine ; il vise d’abord les femmes instruites. Ces tensions ne l’affaiblissent pas comme document : elles le **situent** dans son époque, et un bon devoir les mentionne.
+| Tension | Ce qu’elle révèle |
+| Le texte s’adresse à une **reine** | Que la Révolution **jugera** |
+| Il conserve un vocabulaire de la « **nature** » et de la « **sensibilité** » féminine | Il pense encore avec les catégories de son temps |
+| Il vise d’abord les **femmes instruites** | Sa portée sociale est limitée |
+
+> Ces tensions ne l’affaiblissent **pas comme document** : elles le **situent** dans son époque. **Un bon devoir les mentionne.**
 
 ## Les axes de dissertation
-- **Un texte peut-il changer la loi ?** Pas directement : il change ce qui peut être dit.
-- **La forme du pastiche est-elle plus efficace que l’argumentation directe ?**
-- **Faut-il être entendu de son temps pour avoir raison ?** Le texte, ignoré en 1791, est aujourd’hui au programme du bac.
-- **L’écriture est-elle un combat ?** Le prix payé par l’autrice répond.`,
+| Question | Ce que le texte permet de répondre |
+| Un texte peut-il **changer la loi** ? | **Pas directement** : il change **ce qui peut être dit** |
+| Le **pastiche** est-il plus efficace que l’argumentation directe ? | Ici, manifestement oui |
+| Faut-il être **entendu de son temps** pour avoir raison ? | Ignoré en **1791**, le texte est aujourd’hui **au programme du bac** |
+| L’écriture est-elle un **combat** ? | Le **prix payé par l’autrice** répond |`,
           },
           questions: [
             ['Pourquoi le pastiche de la Déclaration de 1789 est-il efficace ?', ['Il rend l’exclusion visible sans avoir à la démontrer', 'Il flatte les législateurs', 'Il simplifie le droit', 'Il évite la censure'], 0, 'C’est une démonstration par la forme : le lecteur fait lui-même la comparaison.'],

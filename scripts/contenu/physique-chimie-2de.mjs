@@ -144,24 +144,46 @@ DELETE FROM public.chapters c
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'Une seule espèce, ou plusieurs',
-            cours: `Toute matière est faite d’**espèces chimiques**. Selon qu’il y en a une seule ou plusieurs, on parle de corps pur ou de mélange.
+            cours: `Toute matière est faite d'espèces chimiques. Selon qu'il y en a une seule ou plusieurs, on parle de corps pur ou de mélange.
 
-## Corps pur
-Un **corps pur** ne contient qu’une seule espèce chimique : le fer, le dioxygène, l’eau distillée, le saccharose. Il possède des **températures de changement d’état** bien définies : sous la pression atmosphérique normale, l’eau pure fond à 0 °C et bout à 100 °C, et sa température reste **constante** pendant tout le changement d’état.
+## Corps pur ou mélange
+| Le cas | Sa définition | Ses exemples |
+| **Corps pur** | Une **seule** espèce chimique | Fer, dioxygène, eau distillée, saccharose |
+| Mélange **homogène** | Plusieurs espèces, une **seule phase** visible | Eau salée, air, alliage |
+| Mélange **hétérogène** | Plusieurs phases distinguables | Eau et huile, jus avec pulpe, brouillard |
 
-## Mélange
-Un **mélange** contient au moins deux espèces chimiques. Il est **homogène** si l’on ne distingue pas ses constituants à l’œil nu, même après repos (eau salée, air, alliage), et **hétérogène** si on les distingue (eau et huile, jus avec pulpe, brouillard).
+> Le repérage est visuel, mais le critère est physique : un mélange homogène ne comporte qu'une seule phase.
 
-> Le repérage est visuel, mais le critère est physique : un mélange homogène ne comporte qu’une seule phase.
+## Le comportement d'un corps pur
+| Le changement d'état de l'eau pure | Sa température, sous 1 013 hPa |
+| Fusion | **0 °C** |
+| Ébullition | **100 °C** |
+
+> Pendant tout le changement d'état, la température d'un corps pur reste **constante**.
 
 ## Séparer un mélange
-La **décantation** sépare par différence de densité après repos ; la **filtration** retient les particules solides ; la **centrifugation** accélère la décantation ; la **distillation** sépare des liquides par différence de température d’ébullition ; l’**évaporation** récupère un solide dissous.
+| La technique | Son principe |
+| La **décantation** | Différence de densité, après repos |
+| La **filtration** | Elle retient les particules solides |
+| La **centrifugation** | Elle accélère la décantation |
+| La **distillation** | Différence de température d'ébullition |
+| L'**évaporation** | Elle récupère un solide dissous |
 
 ## Densité et masse volumique
-La **masse volumique** est le quotient de la masse par le volume : ρ = m / V, en kg·m⁻³ ou en g·cm⁻³. La **densité** d’un liquide ou d’un solide est le rapport de sa masse volumique à celle de l’eau (1,00 g·cm⁻³) : c’est un nombre sans unité. Un corps de densité inférieure à 1 flotte sur l’eau.
+| La grandeur | Sa formule | Son unité |
+| **Masse volumique** ρ | m / V | kg·m⁻³ ou g·cm⁻³ |
+| **Densité** | Masse volumique rapportée à celle de l'eau (1,00 g·cm⁻³) | **Sans unité** |
+
+> Un corps de densité inférieure à 1 flotte sur l'eau.
 
 ## Identifier un corps pur
-Températures de fusion et d’ébullition, masse volumique, indice de réfraction : ce sont des **grandeurs caractéristiques**. Elles ne dépendent pas de la quantité de matière prélevée, ce qui en fait des cartes d’identité.`,
+| La grandeur caractéristique | Ce qu'elle vaut |
+| Température de **fusion** | Propre à l'espèce |
+| Température d'**ébullition** | Propre à l'espèce |
+| **Masse volumique** | Propre à l'espèce |
+| **Indice de réfraction** | Propre à l'espèce |
+
+> Elles ne dépendent pas de la quantité prélevée : ce sont des **cartes d'identité**.`,
           },
           questions: [
             ['Qu’est-ce qu’un corps pur ?', ['Une matière constituée d’une seule espèce chimique', 'Une matière sans impureté visible', 'Un mélange homogène', 'Une matière solide'], 0, 'Il possède des températures de changement d’état bien définies.'],
@@ -179,27 +201,48 @@ Températures de fusion et d’ébullition, masse volumique, indice de réfracti
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'Dire combien il y en a dans combien',
-            cours: `Décrire un mélange, c’est indiquer la **proportion** de chacun de ses constituants. Plusieurs grandeurs le permettent.
+            cours: `Décrire un mélange, c'est indiquer la proportion de chacun de ses constituants.
 
-## Solution, soluté, solvant
-Une **solution** est un mélange homogène liquide. Le **solvant** est l’espèce majoritaire (souvent l’eau : la solution est dite **aqueuse**), le **soluté** l’espèce dissoute. Une solution est **saturée** quand elle ne peut plus dissoudre de soluté.
+## Le vocabulaire de la solution
+| Le terme | Sa définition |
+| Une **solution** | Un mélange homogène liquide |
+| Le **solvant** | L'espèce majoritaire — l'eau : la solution est **aqueuse** |
+| Le **soluté** | L'espèce dissoute |
+| Une solution **saturée** | Elle ne peut plus dissoudre de soluté |
 
 ## La concentration en masse
-La **concentration en masse** est le quotient de la masse de soluté par le volume de solution : t = m / V, en g·L⁻¹. Attention, V est le volume de la SOLUTION obtenue, pas celui du solvant ajouté.
+t = m / V, en g·L⁻¹
 
-> Un litre d’eau plus 20 g de sel ne fait pas exactement un litre de solution : c’est pourquoi on complète jusqu’au trait de jauge, on ne mesure pas le solvant à part.
+> Attention : V est le volume de la **solution obtenue**, et non celui du solvant ajouté.
+
+> Un litre d'eau plus 20 g de sel ne fait pas exactement un litre de solution : c'est pourquoi on complète jusqu'au trait de jauge.
 
 ## Préparer une solution
-Par **dissolution** d’un solide : peser la masse voulue, l’introduire dans une **fiole jaugée**, dissoudre, compléter jusqu’au trait de jauge, homogénéiser. Par **dilution** d’une solution mère : prélever un volume précis à la **pipette jaugée**, l’introduire dans une fiole jaugée, compléter. La dilution conserve la quantité de soluté, donc t₁ × V₁ = t₂ × V₂.
+| La méthode | Les étapes |
+| Par **dissolution** | Peser la masse voulue, l'introduire dans une **fiole jaugée**, dissoudre, compléter au trait de jauge, homogénéiser |
+| Par **dilution** | Prélever un volume précis à la **pipette jaugée**, l'introduire dans une fiole jaugée, compléter |
+
+La dilution **conserve la quantité de soluté** :
+
+t₁ × V₁ = t₂ × V₂
 
 ## Le facteur de dilution
-Il vaut F = V₂ / V₁ = t₁ / t₂. Diluer dix fois, c’est prélever 10,0 mL de solution mère et compléter à 100,0 mL.
+F = V₂ / V₁ = t₁ / t₂
+
+> Diluer dix fois : prélever 10,0 mL de solution mère et compléter à 100,0 mL.
 
 ## Doser par étalonnage
-Pour déterminer une concentration inconnue, on prépare une **gamme d’étalons** de concentrations connues, on mesure une grandeur qui varie avec la concentration — l’**absorbance** au spectrophotomètre pour une solution colorée —, on trace la courbe d’étalonnage, puis on y reporte la mesure faite sur la solution inconnue.
+| L'étape | Ce qu'on fait |
+| 1 | Préparer une **gamme d'étalons** de concentrations connues |
+| 2 | Mesurer une grandeur qui varie avec la concentration — l'**absorbance**, pour une solution colorée |
+| 3 | Tracer la **courbe d'étalonnage** |
+| 4 | Y reporter la mesure faite sur la solution inconnue |
 
-## Composition d’un mélange gazeux
-Pour l’air, on donne des **proportions en volume** : environ 78 % de diazote, 21 % de dioxygène, 1 % d’autres gaz dont l’argon et le dioxyde de carbone.`,
+## Composition d'un mélange gazeux
+| Le gaz de l'air | Sa proportion en volume |
+| **Diazote** | Environ 78 % |
+| **Dioxygène** | Environ 21 % |
+| Autres, dont argon et dioxyde de carbone | Environ 1 % |`,
           },
           questions: [
             ['Dans une solution, quelle espèce appelle-t-on le solvant ?', ['L’espèce majoritaire, dans laquelle se dissout le soluté', 'L’espèce dissoute', 'L’espèce colorée', 'L’espèce solide'], 0, 'Quand c’est l’eau, la solution est dite aqueuse.'],
@@ -217,24 +260,47 @@ Pour l’air, on donne des **proportions en volume** : environ 78 % de diazote, 
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'Reconnaître ce qu’on a dans le tube',
-            cours: `Identifier une espèce chimique, c’est comparer ce qu’on observe à des données de référence.
+            cours: `Identifier une espèce chimique, c'est comparer ce qu'on observe à des données de référence.
 
 ## Les tests caractéristiques
-Le **dioxygène** rallume une bûchette incandescente. Le **dioxyde de carbone** trouble l’eau de chaux. Le **dihydrogène** produit une détonation à l’approche d’une flamme. L’**eau** fait passer le sulfate de cuivre anhydre du blanc au bleu. Les **ions** se repèrent par précipitation avec la soude : précipité bleu pour l’ion cuivre II, rouille pour le fer III, vert pour le fer II, blanc pour le zinc ou l’aluminium ; l’ion chlorure donne un précipité blanc qui noircit à la lumière avec le nitrate d’argent.
+| L'espèce | Le test | Le résultat |
+| **Dioxygène** | Une bûchette incandescente | Elle se **rallume** |
+| **Dioxyde de carbone** | L'eau de chaux | Elle se **trouble** |
+| **Dihydrogène** | Une flamme approchée | Une **détonation** |
+| **Eau** | Le sulfate de cuivre anhydre | Il passe du blanc au **bleu** |
+
+| L'ion | Le réactif | Le précipité |
+| Cuivre II | Soude | **Bleu** |
+| Fer III | Soude | **Rouille** |
+| Fer II | Soude | **Vert** |
+| Zinc ou aluminium | Soude | **Blanc** |
+| Chlorure | Nitrate d'argent | **Blanc**, qui noircit à la lumière |
 
 ## La chromatographie sur couche mince
-On dépose l’échantillon et des références sur une plaque, on laisse migrer un **éluant** par capillarité, puis on révèle. Deux dépôts qui montent à la même hauteur correspondent à la même espèce. On calcule le **rapport frontal** : Rf = distance parcourue par la tache / distance parcourue par le front d’éluant. Rf est compris entre 0 et 1 et caractérise l’espèce dans un couple support-éluant donné.
+| L'étape | Ce qu'on fait |
+| 1 | Déposer l'échantillon et des références sur la plaque |
+| 2 | Laisser migrer l'**éluant** par capillarité |
+| 3 | Révéler |
+| 4 | Comparer les hauteurs |
 
-> Une chromatographie répond à deux questions : combien y a-t-il d’espèces, et l’une d’elles est-elle identique à une référence ?
+Rf = distance parcourue par la tache / distance parcourue par le front d'éluant
+
+Rf est compris entre 0 et 1, et caractérise l'espèce dans un couple support-éluant donné.
+
+> Une chromatographie répond à deux questions : combien y a-t-il d'espèces, et l'une d'elles est-elle identique à une référence ?
 
 ## Les grandeurs physiques
-Température de fusion, température d’ébullition, **masse volumique**, **indice de réfraction** : on les mesure et on les compare à une table. Le **banc Kofler** donne la température de fusion d’un solide.
+| La grandeur | Son instrument |
+| Température de **fusion** | Le **banc Kofler** |
+| Température d'**ébullition** | Un montage de distillation |
+| **Masse volumique** | Balance et éprouvette |
+| **Indice de réfraction** | Le réfractomètre |
 
 ## Les spectres
-Le **spectre d’absorption UV-visible** d’une solution colorée présente un maximum caractéristique de l’espèce dissoute : c’est aussi un outil d’identification, en plus du dosage.
+Le **spectre d'absorption UV-visible** d'une solution colorée présente un maximum caractéristique de l'espèce dissoute : un outil d'identification, en plus du dosage.
 
 ## La démarche
-Une seule mesure suffit rarement : on croise plusieurs indices concordants. Et l’on n’oublie jamais que toute mesure porte une **incertitude** — deux valeurs très proches ne prouvent pas l’identité, elles la rendent probable.`,
+> Une seule mesure suffit rarement : on **croise** plusieurs indices concordants. Et toute mesure porte une **incertitude** — deux valeurs très proches ne prouvent pas l'identité, elles la rendent probable.`,
           },
           questions: [
             ['Quel gaz rallume une bûchette incandescente ?', ['Le dioxygène', 'Le dioxyde de carbone', 'Le dihydrogène', 'Le diazote'], 0, 'Le dioxyde de carbone, lui, trouble l’eau de chaux.'],
@@ -252,27 +318,52 @@ Une seule mesure suffit rarement : on croise plusieurs indices concordants. Et l
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'Ce qu’il y a dans le noyau, et pourquoi ça compte',
-            cours: `Un **atome** est constitué d’un **noyau** central, chargé positivement, autour duquel se répartissent des **électrons** chargés négativement.
+            cours: `Un atome est constitué d'un noyau central, chargé positivement, autour duquel se répartissent des électrons chargés négativement.
 
 ## Composition du noyau
-Le noyau contient des **nucléons** : les **protons**, de charge +e, et les **neutrons**, neutres. Le **numéro atomique** Z est le nombre de protons ; le **nombre de masse** A est le nombre total de nucléons. Le nombre de neutrons vaut donc A − Z. On note un noyau par son symbole précédé de A en haut et Z en bas.
+| La particule | Sa charge | Sa localisation |
+| **Proton** | +e | Le noyau |
+| **Neutron** | Neutre | Le noyau |
+| **Électron** | −e | Autour du noyau |
 
-## L’atome est neutre
-Un atome possède autant d’électrons que de protons : sa charge totale est nulle. La charge élémentaire vaut e = 1,6 × 10⁻¹⁹ C.
+| Le nombre | Ce qu'il compte |
+| **Z**, numéro atomique | Les **protons** |
+| **A**, nombre de masse | Le total des **nucléons** |
+| **A − Z** | Les neutrons |
+
+## L'atome est neutre
+Autant d'électrons que de protons : la charge totale est nulle. La charge élémentaire vaut e = 1,6 × 10⁻¹⁹ C.
 
 ## Une structure lacunaire
-Le noyau mesure environ 10⁻¹⁵ m, l’atome environ 10⁻¹⁰ m : le rapport est de 100 000. L’atome est donc essentiellement **vide**. Pourtant, presque toute sa masse est dans le noyau, un nucléon étant environ 1 800 fois plus massif qu’un électron.
+| L'objet | Sa taille |
+| Le **noyau** | Environ 10⁻¹⁵ m |
+| L'**atome** | Environ 10⁻¹⁰ m |
+| Le rapport | **100 000** |
 
-> Si le noyau avait la taille d’une bille au centre d’un stade, les électrons occuperaient les gradins : c’est cela, une structure lacunaire.
+L'atome est donc essentiellement **vide** — et pourtant presque toute sa masse est dans le noyau : un nucléon est environ **1 800 fois** plus massif qu'un électron.
+
+> Si le noyau avait la taille d'une bille au centre d'un stade, les électrons occuperaient les gradins.
 
 ## Éléments et isotopes
-Un **élément chimique** est défini par son seul numéro atomique Z. Deux noyaux de même Z mais de A différents sont des **isotopes** : carbone 12 et carbone 14 ont tous deux 6 protons, mais 6 et 8 neutrons. Les isotopes ont les mêmes propriétés chimiques, car celles-ci dépendent des électrons.
+| La notion | Sa définition |
+| Un **élément chimique** | Défini par son seul **Z** |
+| Des **isotopes** | Même Z, A différents |
+
+| L'isotope | Ses protons | Ses neutrons |
+| Carbone 12 | 6 | 6 |
+| Carbone 14 | 6 | 8 |
+
+> Les isotopes ont les **mêmes propriétés chimiques** : celles-ci dépendent des électrons.
 
 ## Les ions
-Un atome qui perd des électrons devient un **cation** (charge positive), un atome qui en gagne devient un **anion** (charge négative). Le noyau, lui, n’est pas modifié : c’est toujours le même élément.
+| L'ion | Ce qui a changé | Sa charge |
+| **Cation** | L'atome a **perdu** des électrons | Positive |
+| **Anion** | Il en a **gagné** | Négative |
 
-## La masse d’un atome
-Elle se calcule en additionnant les masses des nucléons et des électrons ; en pratique, m ≈ A × masse d’un nucléon, l’apport des électrons étant négligeable.`,
+> Le noyau n'est pas modifié : c'est toujours le même élément.
+
+## La masse d'un atome
+En pratique : m ≈ A × masse d'un nucléon, l'apport des électrons étant négligeable.`,
           },
           questions: [
             ['Que désigne le numéro atomique Z ?', ['Le nombre de protons du noyau', 'Le nombre de nucléons', 'Le nombre de neutrons', 'Le nombre d’électrons de la couche externe'], 0, 'Il définit l’élément chimique.'],
@@ -290,24 +381,44 @@ Elle se calcule en additionnant les masses des nucléons et des électrons ; en 
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'Ranger les électrons pour prévoir la chimie',
-            cours: `Les électrons d’un atome ne sont pas placés au hasard : ils occupent des **sous-couches**, remplies dans un ordre précis.
+            cours: `Les électrons d'un atome ne sont pas placés au hasard : ils occupent des sous-couches, remplies dans un ordre précis.
 
 ## Les sous-couches
-On les note 1s, 2s, 2p, 3s, 3p, 4s… Une sous-couche s accueille au maximum **2** électrons, une sous-couche p au maximum **6**. Le remplissage se fait par énergie croissante : 1s, puis 2s, 2p, puis 3s, 3p, puis 4s. Pour les 18 premiers éléments, l’ordre est simple à retenir.
+| La sous-couche | Son nombre maximal d'électrons |
+| **s** | 2 |
+| **p** | 6 |
+
+L'ordre de remplissage, par énergie croissante : **1s, 2s, 2p, 3s, 3p, 4s**.
 
 ## Écrire une configuration
-On place les Z électrons dans cet ordre. Exemples : hydrogène (Z = 1) 1s¹ ; carbone (Z = 6) 1s² 2s² 2p² ; oxygène (Z = 8) 1s² 2s² 2p⁴ ; sodium (Z = 11) 1s² 2s² 2p⁶ 3s¹ ; chlore (Z = 17) 1s² 2s² 2p⁶ 3s² 3p⁵.
+| L'élément | Son Z | Sa configuration |
+| Hydrogène | 1 | 1s¹ |
+| Carbone | 6 | 1s² 2s² 2p² |
+| Oxygène | 8 | 1s² 2s² 2p⁴ |
+| Sodium | 11 | 1s² 2s² 2p⁶ 3s¹ |
+| Chlore | 17 | 1s² 2s² 2p⁶ 3s² 3p⁵ |
 
 ## Les électrons de valence
-Ce sont les électrons de la **couche externe**, celle de plus grand numéro. Ils sont les seuls à intervenir dans les réactions chimiques : deux éléments qui en ont le même nombre ont des propriétés voisines.
+Ce sont les électrons de la **couche externe**, celle de plus grand numéro.
 
-> Toute la chimie d’un élément tient dans sa couche externe : le reste des électrons ne fait que compléter le tableau.
+> Ils sont les seuls à intervenir dans les réactions chimiques : deux éléments qui en ont le même nombre ont des propriétés voisines.
+
+> Toute la chimie d'un élément tient dans sa couche externe : le reste des électrons ne fait que compléter le tableau.
 
 ## Le tableau périodique
-Mendeleïev l’a construit en classant les éléments par masse croissante et par propriétés voisines ; on le range aujourd’hui par **numéro atomique croissant**. Une **ligne** (période) correspond à une couche externe de même numéro ; une **colonne** (famille) rassemble des éléments ayant le **même nombre d’électrons de valence**, donc des propriétés chimiques semblables.
+| Le classement | Son critère |
+| Celui de **Mendeleïev** | Masse croissante, et propriétés voisines |
+| Le classement actuel | **Numéro atomique** croissant |
+
+| L'axe | Ce qu'il rassemble |
+| Une **ligne** (période) | Des éléments dont la couche externe porte le même numéro |
+| Une **colonne** (famille) | Des éléments de **même nombre d'électrons de valence** |
 
 ## Les grandes familles
-La première colonne rassemble les **alcalins**, très réactifs, qui perdent facilement un électron. L’avant-dernière colonne rassemble les **halogènes**, qui en gagnent facilement un. La dernière colonne rassemble les **gaz nobles**, dont la couche externe est saturée : ils sont chimiquement inertes.`,
+| La colonne | La famille | Sa réactivité |
+| La première | Les **alcalins** | Très réactifs : ils perdent facilement un électron |
+| L'avant-dernière | Les **halogènes** | Ils en gagnent facilement un |
+| La dernière | Les **gaz nobles** | Couche externe saturée : chimiquement **inertes** |`,
           },
           questions: [
             ['Combien d’électrons au maximum une sous-couche s peut-elle contenir ?', ['2', '6', '8', '10'], 0, 'Une sous-couche p en contient au maximum 6.'],
@@ -325,24 +436,50 @@ La première colonne rassemble les **alcalins**, très réactifs, qui perdent fa
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'Pourquoi les atomes s’associent',
-            cours: `Un atome isolé n’est presque jamais stable. Pour le devenir, il gagne, perd ou partage des électrons.
+            cours: `Un atome isolé n'est presque jamais stable. Pour le devenir, il gagne, perd ou partage des électrons.
 
-## Les règles du duet et de l’octet
-Un atome tend à acquérir la configuration électronique du **gaz noble** le plus proche : deux électrons sur la couche externe pour les éléments légers (**règle du duet**, hélium), huit pour les autres (**règle de l’octet**, néon, argon).
+## Les règles du duet et de l'octet
+| La règle | Le modèle visé | Les électrons externes |
+| Le **duet** | L'hélium | **2** |
+| L'**octet** | Le néon, l'argon | **8** |
+
+Un atome tend à acquérir la configuration du **gaz noble le plus proche**.
 
 ## Les ions monoatomiques
-Le sodium (1s² 2s² 2p⁶ 3s¹) perd son unique électron externe et donne Na⁺, qui a la configuration du néon. Le chlore (…3s² 3p⁵) en gagne un et donne Cl⁻, qui a celle de l’argon. Le magnésium donne Mg²⁺, l’oxygène O²⁻. La charge d’un ion se lit ainsi directement dans la colonne du tableau périodique.
+| L'atome | Ce qu'il fait | L'ion formé | Sa configuration |
+| Sodium | Il perd 1 électron | Na⁺ | Celle du néon |
+| Magnésium | Il en perd 2 | Mg²⁺ | Celle du néon |
+| Oxygène | Il en gagne 2 | O²⁻ | Celle du néon |
+| Chlore | Il en gagne 1 | Cl⁻ | Celle de l'argon |
 
-> Perdre ou gagner : l’atome choisit toujours le chemin le plus court vers l’octet.
+> La charge d'un ion se lit directement dans la **colonne** du tableau périodique.
+
+> Perdre ou gagner : l'atome choisit toujours le chemin le plus court vers l'octet.
 
 ## La liaison covalente
-Deux atomes peuvent aussi **partager** un doublet d’électrons : c’est la **liaison covalente**. Chaque atome apporte un électron, et compte le doublet partagé comme lui appartenant. Le nombre de liaisons qu’un atome forme est fixé par le nombre d’électrons qui lui manquent : quatre pour le carbone, trois pour l’azote, deux pour l’oxygène, une pour l’hydrogène et les halogènes.
+Deux atomes **partagent** un doublet d'électrons. Chaque atome apporte un électron, et compte le doublet comme lui appartenant.
+
+| L'atome | Ses liaisons covalentes |
+| **Carbone** | 4 |
+| **Azote** | 3 |
+| **Oxygène** | 2 |
+| **Hydrogène** et **halogènes** | 1 |
+
+Le nombre de liaisons est fixé par le nombre d'électrons qui **manquent** pour l'octet.
 
 ## Les schémas de Lewis
-On y représente les **doublets liants** (les liaisons, par un tiret) et les **doublets non liants** (les paires d’électrons non partagées). Le schéma de Lewis de l’eau montre deux liaisons O–H et deux doublets non liants sur l’oxygène.
+| Le doublet | Ce qu'il représente | Sa notation |
+| **Liant** | Une liaison | Un tiret entre les atomes |
+| **Non liant** | Une paire non partagée | Un tiret sur l'atome |
+
+> Le schéma de Lewis de l'eau montre deux liaisons O–H et **deux doublets non liants** sur l'oxygène.
 
 ## Les molécules
-Une **molécule** est un ensemble d’atomes liés par des liaisons covalentes, électriquement neutre. Sa formule brute donne la nature et le nombre des atomes ; sa formule développée ou semi-développée montre l’enchaînement des liaisons.`,
+Une molécule est un ensemble d'atomes liés par des liaisons covalentes, électriquement **neutre**.
+
+| La formule | Ce qu'elle donne |
+| **Brute** | La nature et le nombre des atomes |
+| **Développée** ou semi-développée | L'enchaînement des liaisons |`,
           },
           questions: [
             ['Que dit la règle de l’octet ?', ['Un atome tend à avoir huit électrons sur sa couche externe', 'Un atome tend à avoir huit protons', 'Un atome perd toujours huit électrons', 'Un atome forme huit liaisons'], 0, 'La règle du duet vise deux électrons, pour les éléments légers.'],
@@ -360,24 +497,41 @@ Une **molécule** est un ensemble d’atomes liés par des liaisons covalentes, 
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'La mole, ou comment peser des atomes',
-            cours: `Une goutte d’eau contient un nombre inimaginable de molécules. Pour les compter, les chimistes utilisent un paquet de taille fixe : la **mole**.
+            cours: `Une goutte d'eau contient un nombre inimaginable de molécules. Pour les compter, les chimistes utilisent un paquet de taille fixe : la mole.
 
-## La mole et la constante d’Avogadro
-Une **mole** contient exactement N_A entités, avec N_A = 6,02 × 10²³ mol⁻¹, la **constante d’Avogadro**. La **quantité de matière** n, en moles, se relie au nombre d’entités N par : n = N / N_A.
+## La mole
+| Le point | Sa valeur |
+| La **constante d'Avogadro** | N_A = 6,02 × 10²³ mol⁻¹ |
+| La relation | n = N / N_A |
 
-> La mole n’est pas une masse ni un volume : c’est un COMPTE, comme la douzaine — simplement beaucoup plus grand.
+> La mole n'est ni une masse ni un volume : c'est un **compte**, comme la douzaine — simplement beaucoup plus grand.
 
 ## La masse molaire
-La **masse molaire** M est la masse d’une mole d’entités, en g·mol⁻¹. Elle se lit dans le tableau périodique pour un atome (M(H) = 1,0 ; M(C) = 12,0 ; M(O) = 16,0) et s’additionne pour une molécule : M(H₂O) = 2 × 1,0 + 16,0 = 18,0 g·mol⁻¹.
+| L'atome | Sa masse molaire, en g·mol⁻¹ |
+| H | 1,0 |
+| C | 12,0 |
+| N | 14,0 |
+| O | 16,0 |
+
+Pour une molécule, on additionne : M(H₂O) = 2 × 1,0 + 16,0 = **18,0 g·mol⁻¹**.
 
 ## Les relations à connaître
-De la masse à la quantité : n = m / M. Du volume d’un liquide à la masse : m = ρ × V. Pour un gaz, avec le **volume molaire** V_m (24,0 L·mol⁻¹ à 20 °C sous 1 013 hPa) : n = V / V_m. Pour une solution, la **concentration en quantité de matière** vaut c = n / V, en mol·L⁻¹, et se relie à la concentration en masse par t = c × M.
+| On part de… | La relation | L'unité de la constante |
+| Une **masse** | n = m / M | M en g·mol⁻¹ |
+| Un **volume de liquide** | m = ρ × V, puis n = m / M | ρ en g·mL⁻¹ |
+| Un **gaz** | n = V / V_m | V_m = 24,0 L·mol⁻¹ à 20 °C sous 1 013 hPa |
+| Une **solution** | c = n / V | c en mol·L⁻¹ |
+
+La concentration en masse s'en déduit : t = c × M.
 
 ## Un exemple
-Quelle quantité de matière dans 9,0 g d’eau ? n = m / M = 9,0 / 18,0 = 0,50 mol, soit 0,50 × 6,02 × 10²³ ≈ 3,0 × 10²³ molécules.
+| L'étape | Le calcul |
+| La donnée | 9,0 g d'eau |
+| La quantité | n = 9,0 / 18,0 = **0,50 mol** |
+| Le nombre de molécules | 0,50 × 6,02 × 10²³ ≈ **3,0 × 10²³** |
 
 ## Les chiffres significatifs
-Un résultat ne peut pas être plus précis que la donnée la moins précise : on garde le même nombre de **chiffres significatifs** que la donnée la plus pauvre, et l’on soigne les unités à chaque étape.`,
+> Un résultat ne peut pas être plus précis que la donnée la moins précise : on garde le même nombre de **chiffres significatifs** que la donnée la plus pauvre — et l'on soigne les unités à chaque étape.`,
           },
           questions: [
             ['Que vaut la constante d’Avogadro ?', ['6,02 × 10²³ mol⁻¹', '1,6 × 10⁻¹⁹ mol⁻¹', '9,81 mol⁻¹', '3,0 × 10⁸ mol⁻¹'], 0, 'C’est le nombre d’entités contenues dans une mole.'],
@@ -395,24 +549,43 @@ Un résultat ne peut pas être plus précis que la donnée la moins précise : o
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'Ce qui change, et ce qui ne change pas',
-            cours: `Un **changement d’état** est une transformation **physique** : les molécules restent les mêmes, seule leur organisation change.
+            cours: `Un changement d'état est une transformation physique : les molécules restent les mêmes, seule leur organisation change.
 
 ## Les six changements
-De solide à liquide : la **fusion** ; l’inverse, la **solidification**. De liquide à gaz : la **vaporisation** ; l’inverse, la **liquéfaction**. De solide à gaz directement : la **sublimation** ; l’inverse, la **condensation** (dite aussi condensation solide).
+| De… | À… | Le nom |
+| Solide | Liquide | **Fusion** |
+| Liquide | Solide | **Solidification** |
+| Liquide | Gaz | **Vaporisation** |
+| Gaz | Liquide | **Liquéfaction** |
+| Solide | Gaz | **Sublimation** |
+| Gaz | Solide | **Condensation** |
 
 ## Trois états, trois organisations
-Dans un **solide**, les entités sont ordonnées et fixes ; dans un **liquide**, désordonnées mais liées et en contact ; dans un **gaz**, très éloignées, désordonnées et en mouvement rapide. Un solide a une forme propre, un liquide prend celle de son récipient, un gaz occupe tout le volume disponible.
+| L'état | L'organisation des entités | La forme |
+| **Solide** | Ordonnées et **fixes** | Propre |
+| **Liquide** | Désordonnées, mais liées et en contact | Celle du récipient |
+| **Gaz** | Très éloignées, en mouvement rapide | Tout le volume disponible |
 
 ## Le palier de température
-Pour un **corps pur**, la température reste **constante** pendant tout le changement d’état, sous pression donnée : c’est le **palier**. La courbe de température en fonction du temps le montre clairement. Un mélange, lui, ne présente pas de palier net — et c’est un moyen de distinguer un corps pur d’un mélange.
+| Le corps | Son comportement pendant le changement d'état |
+| Un **corps pur** | La température reste **constante** : c'est le **palier** |
+| Un **mélange** | Pas de palier net |
 
-> Chauffer pendant un palier ne fait pas monter la température : l’énergie apportée sert à défaire les interactions entre entités, pas à les agiter davantage.
+> C'est un moyen de distinguer un corps pur d'un mélange.
 
-## L’aspect énergétique
-Fusion, vaporisation et sublimation sont **endothermiques** : elles absorbent de l’énergie. Solidification, liquéfaction et condensation sont **exothermiques** : elles en libèrent. C’est pourquoi la transpiration rafraîchit — l’eau qui se vaporise prélève de l’énergie sur la peau.
+> Chauffer pendant un palier ne fait pas monter la température : l'énergie apportée sert à **défaire les interactions** entre entités, pas à les agiter davantage.
 
-## L’effet de la pression
-Les températures de changement d’état dépendent de la **pression**. L’eau bout à 100 °C sous 1 013 hPa, mais à environ 70 °C au sommet de l’Everest, où la pression est bien plus faible.`,
+## L'aspect énergétique
+| Le changement | Son bilan |
+| Fusion, vaporisation, sublimation | **Endothermiques** : ils absorbent de l'énergie |
+| Solidification, liquéfaction, condensation | **Exothermiques** : ils en libèrent |
+
+> C'est pourquoi la transpiration rafraîchit : l'eau qui se vaporise prélève de l'énergie sur la peau.
+
+## L'effet de la pression
+| Le lieu | La pression | La température d'ébullition de l'eau |
+| Au niveau de la mer | 1 013 hPa | **100 °C** |
+| Au sommet de l'Everest | Bien plus faible | Environ **70 °C** |`,
           },
           questions: [
             ['Comment appelle-t-on le passage de l’état solide à l’état gazeux ?', ['La sublimation', 'La fusion', 'La vaporisation', 'La liquéfaction'], 0, 'Le passage inverse est la condensation solide.'],
@@ -430,27 +603,50 @@ Les températures de changement d’état dépendent de la **pression**. L’eau
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'Équilibrer, puis suivre ce qui disparaît',
-            cours: `Lors d’une **transformation chimique**, des espèces disparaissent — les **réactifs** — et d’autres se forment — les **produits**.
+            cours: `Lors d'une transformation chimique, des espèces disparaissent — les réactifs — et d'autres se forment — les produits.
 
-## L’équation de réaction
-On écrit les réactifs à gauche, les produits à droite, séparés par une flèche. Les **nombres stœchiométriques** placés devant les formules assurent la **conservation des éléments** et de la **charge électrique** : autant d’atomes de chaque élément de part et d’autre. Exemple : CH₄ + 2 O₂ donne CO₂ + 2 H₂O.
+## L'équation de réaction
+On écrit les réactifs à gauche, les produits à droite, séparés par une flèche.
 
-> Équilibrer une équation, ce n’est pas un jeu d’écriture : c’est traduire que rien ne se perd et que rien ne se crée, ni atome, ni charge.
+| Ce qui doit se conserver | Ce que cela impose |
+| Les **éléments** | Autant d'atomes de chaque élément de part et d'autre |
+| La **charge électrique** | Le total des charges est identique des deux côtés |
 
-## Ce que l’équation dit, et ne dit pas
-Elle donne les **proportions** dans lesquelles les espèces réagissent, pas les quantités réellement engagées ni la vitesse de la réaction.
+CH₄ + 2 O₂ donne CO₂ + 2 H₂O
 
-## Le tableau d’avancement
-On note x l’**avancement** de la réaction, en moles. Pour chaque espèce, la quantité à l’instant t vaut la quantité initiale diminuée (réactif) ou augmentée (produit) du produit de x par son nombre stœchiométrique. Trois lignes suffisent : état initial, état intermédiaire, état final.
+> Équilibrer une équation, ce n'est pas un jeu d'écriture : c'est traduire que rien ne se perd et que rien ne se crée, ni atome, ni charge.
+
+## Ce que l'équation dit, et ne dit pas
+| Elle donne | Elle ne donne pas |
+| Les **proportions** dans lesquelles les espèces réagissent | Les quantités réellement engagées |
+| — | La **vitesse** de la réaction |
+
+## Le tableau d'avancement
+| L'espèce | Sa quantité à l'avancement x |
+| Un **réactif** | n(initial) − coefficient × x |
+| Un **produit** | n(initial) + coefficient × x |
+
+Trois lignes suffisent : état initial, état intermédiaire, état final.
 
 ## Le réactif limitant
-La réaction s’arrête quand un réactif est entièrement consommé : c’est le **réactif limitant**. L’avancement maximal x_max est la plus petite valeur qui annule la quantité d’un réactif. Si tous les réactifs disparaissent en même temps, le mélange est dit **stœchiométrique**.
+| La notion | Sa définition |
+| Le **réactif limitant** | Le premier entièrement consommé |
+| L'avancement maximal **x_max** | La plus petite valeur qui annule la quantité d'un réactif |
+| Un mélange **stœchiométrique** | Tous les réactifs disparaissent en même temps |
 
 ## Un exemple
-Pour CH₄ + 2 O₂, avec 1,0 mol de méthane et 1,0 mol de dioxygène : le dioxygène s’annule pour x = 0,50 mol, le méthane pour x = 1,0 mol. Le limitant est donc le dioxygène, et x_max = 0,50 mol.
+Avec CH₄ + 2 O₂, 1,0 mol de méthane et 1,0 mol de dioxygène :
 
-## Le rôle de l’énergie
-Une réaction qui libère de l’énergie sous forme thermique est **exothermique** (combustion), une réaction qui en absorbe est **endothermique**.`,
+| Le réactif | La valeur de x qui l'annule |
+| Le dioxygène | **0,50 mol** |
+| Le méthane | 1,0 mol |
+
+Le limitant est donc le **dioxygène**, et x_max = 0,50 mol.
+
+## Le rôle de l'énergie
+| La réaction | Son bilan thermique |
+| **Exothermique** | Elle **libère** de l'énergie — une combustion |
+| **Endothermique** | Elle en **absorbe** |`,
           },
           questions: [
             ['Que garantit l’équilibrage d’une équation de réaction ?', ['La conservation des éléments et de la charge électrique', 'La conservation du volume', 'La conservation de la température', 'L’égalité des masses molaires'], 0, 'Autant d’atomes de chaque élément de part et d’autre.'],
@@ -468,24 +664,42 @@ Une réaction qui libère de l’énergie sous forme thermique est **exothermiqu
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'Fabriquer au laboratoire ce que la nature produit',
-            cours: `Une **synthèse** consiste à fabriquer une espèce chimique à partir d’autres espèces. Elle peut reproduire une molécule existant dans la nature.
+            cours: `Une synthèse consiste à fabriquer une espèce chimique à partir d'autres espèces. Elle peut reproduire une molécule existant dans la nature.
 
 ## Pourquoi synthétiser
-Parce que l’extraction naturelle est parfois insuffisante (quantité disponible, coût, saisonnalité), destructrice pour un milieu, ou beaucoup plus chère. Une molécule synthétisée est **identique** à la molécule naturelle si sa structure est la même : le corps ne fait aucune différence entre une vanilline extraite de la gousse et une vanilline de synthèse.
+| La raison | Son contenu |
+| La **quantité** disponible | L'extraction naturelle ne suffit pas |
+| Le **coût** | L'extraction est bien plus chère |
+| La **saisonnalité** | La ressource n'est pas toujours disponible |
+| L'**impact** | L'extraction détruirait un milieu |
 
-> « Naturel » n’est pas un synonyme d’« inoffensif », et « de synthèse » n’est pas un synonyme de « dangereux » : ce qui compte est la molécule, sa dose et son usage.
+> Une molécule synthétisée est **identique** à la molécule naturelle si sa structure est la même : le corps ne fait aucune différence entre une vanilline extraite de la gousse et une vanilline de synthèse.
 
-## Les trois étapes d’un protocole
-La **transformation** : on mélange les réactifs, souvent en chauffant à reflux — un montage qui condense les vapeurs et les renvoie dans le ballon, ce qui permet de chauffer sans rien perdre. La **séparation** : filtration, décantation à l’ampoule, extraction par un solvant, recristallisation. L’**identification** : chromatographie sur couche mince, mesure de la température de fusion, spectres.
+> « Naturel » n'est pas synonyme d'« inoffensif », et « de synthèse » n'est pas synonyme de « dangereux » : ce qui compte est la molécule, sa dose et son usage.
+
+## Les trois étapes d'un protocole
+| L'étape | Ce qu'on fait | Son outil |
+| La **transformation** | Mélanger les réactifs, souvent en **chauffant à reflux** | Le réfrigérant condense les vapeurs et les renvoie : on chauffe sans rien perdre |
+| La **séparation** | Isoler le produit | Filtration, décantation à l'ampoule, extraction, recristallisation |
+| L'**identification** | Vérifier ce qu'on a obtenu | Chromatographie, température de fusion, spectres |
 
 ## Le rendement
-Le **rendement** est le rapport de la quantité de produit réellement obtenue à la quantité maximale attendue d’après l’équation et le réactif limitant. Il est toujours inférieur à 1 : pertes lors des transferts, réaction incomplète, réactions secondaires.
+Rendement = quantité obtenue / quantité maximale attendue
+
+| La cause de perte | Son effet |
+| Les **transferts** | Il reste toujours du produit dans la verrerie |
+| Une réaction **incomplète** | Tout le réactif n'a pas réagi |
+| Des réactions **secondaires** | Une partie part ailleurs |
+
+Il est donc toujours inférieur à 1.
 
 ## Extraction par solvant
-Elle repose sur la différence de **solubilité** de l’espèce dans deux liquides **non miscibles**. On agite, on laisse décanter, on récupère la phase contenant l’espèce voulue.
+Elle repose sur la différence de **solubilité** de l'espèce dans deux liquides **non miscibles** : on agite, on laisse décanter, on récupère la bonne phase.
 
 ## La sécurité
-Pictogrammes de danger, mentions H et P, port des équipements de protection, hotte aspirante, tri des déchets : un protocole de synthèse comprend toujours son volet sécurité.`,
+Pictogrammes de danger, mentions H et P, équipements de protection, hotte aspirante, tri des déchets.
+
+> Un protocole de synthèse comprend toujours son volet sécurité.`,
           },
           questions: [
             ['Une molécule de synthèse diffère-t-elle de la même molécule naturelle ?', ['Non, si sa structure est identique', 'Oui, toujours', 'Oui, elle est moins pure par nature', 'Oui, elle a une masse molaire différente'], 0, 'L’organisme ne fait aucune différence.'],
@@ -503,24 +717,48 @@ Pictogrammes de danger, mentions H et P, port des équipements de protection, ho
           axe: 'Constitution et transformation de la matière',
           lecon: {
             titre: 'Quand c’est le noyau qui change',
-            cours: `Une **réaction nucléaire** modifie le **noyau** des atomes, contrairement à une réaction chimique, qui ne concerne que les électrons.
+            cours: `Une réaction nucléaire modifie le noyau des atomes, contrairement à une réaction chimique, qui ne concerne que les électrons.
 
 ## Le critère
-Dans une réaction chimique, les éléments se conservent : on retrouve les mêmes atomes autrement liés. Dans une réaction nucléaire, un élément se **transforme** en un autre, et l’énergie mise en jeu est de l’ordre du million de fois plus grande.
+| Le type de réaction | Ce qui change | L'ordre de grandeur de l'énergie |
+| **Chimique** | Les liaisons entre atomes ; les éléments se **conservent** | L'électronvolt |
+| **Nucléaire** | Le **noyau** : un élément se transforme en un autre | Le million d'électronvolts |
 
 ## Les lois de conservation
-Deux lois, dites **lois de Soddy**, gouvernent l’écriture : conservation du **nombre de nucléons** A et conservation du **nombre de charge** Z. Elles suffisent à compléter n’importe quelle équation nucléaire.
+Les **lois de Soddy** suffisent à compléter n'importe quelle équation nucléaire :
+
+| Ce qui se conserve | Le symbole |
+| Le nombre de **nucléons** | A |
+| Le nombre de **charge** | Z |
 
 ## La radioactivité
-Un noyau instable se désintègre spontanément. La radioactivité **α** émet un noyau d’hélium (A diminue de 4, Z de 2). La radioactivité **β⁻** émet un électron : un neutron se transforme en proton, donc Z augmente de 1 à A constant. La radioactivité **β⁺** émet un positon : Z diminue de 1. Le rayonnement **γ** accompagne les précédentes : c’est un rayonnement électromagnétique très énergétique émis par un noyau qui se désexcite.
+| Le type | Ce qui est émis | L'effet sur A | L'effet sur Z |
+| **α** | Un noyau d'hélium | −4 | −2 |
+| **β⁻** | Un électron ; un neutron devient proton | inchangé | **+1** |
+| **β⁺** | Un positon | inchangé | **−1** |
+| **γ** | Un rayonnement électromagnétique très énergétique | inchangé | inchangé |
 
-> La désintégration d’un noyau donné est imprévisible ; c’est à l’échelle d’un très grand nombre de noyaux qu’une loi statistique apparaît.
+Le rayonnement γ accompagne les précédents : c'est un noyau qui se désexcite.
+
+> La désintégration d'un noyau donné est **imprévisible** ; c'est à l'échelle d'un très grand nombre de noyaux qu'une loi statistique apparaît.
 
 ## Fission et fusion
-La **fission** casse un noyau lourd, comme l’uranium 235, en deux noyaux plus légers sous l’impact d’un neutron : c’est le principe des centrales nucléaires. La **fusion** unit deux noyaux légers, comme des isotopes de l’hydrogène : c’est la source d’énergie des étoiles, dont le Soleil.
+| La réaction | Son principe | Où elle se produit |
+| La **fission** | Un noyau **lourd** — uranium 235 — se casse en deux, sous l'impact d'un neutron | Les centrales nucléaires |
+| La **fusion** | Deux noyaux **légers** s'unissent — isotopes de l'hydrogène | Les étoiles, dont le Soleil |
 
 ## Applications et risques
-Datation au carbone 14, imagerie médicale, radiothérapie, production d’électricité — et, en regard, gestion des déchets radioactifs, radioprotection, risque d’accident. Les choix énergétiques mêlent physique, économie et politique.`,
+| L'application | Son domaine |
+| Datation au **carbone 14** | Archéologie |
+| Imagerie et **radiothérapie** | Médecine |
+| Production d'électricité | Énergie |
+
+| Le risque | Sa gestion |
+| Les **déchets radioactifs** | Stockage de très longue durée |
+| L'exposition | La **radioprotection** |
+| L'accident | Sûreté et confinement |
+
+> Les choix énergétiques mêlent physique, économie et politique.`,
           },
           questions: [
             ['Qu’est-ce qui distingue une réaction nucléaire d’une réaction chimique ?', ['Elle modifie le noyau et transforme un élément en un autre', 'Elle ne concerne que les électrons', 'Elle libère moins d’énergie', 'Elle conserve la charge des ions'], 0, 'L’énergie mise en jeu est de l’ordre du million de fois plus grande.'],
@@ -541,24 +779,42 @@ Datation au carbone 14, imagerie médicale, radiothérapie, production d’élec
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Il n’y a pas de mouvement sans référentiel',
-            cours: `Dire qu’un objet bouge n’a aucun sens tant qu’on n’a pas dit **par rapport à quoi**.
+            cours: `Dire qu'un objet bouge n'a aucun sens tant qu'on n'a pas dit par rapport à quoi.
 
 ## Le référentiel
-Un **référentiel** est un objet de référence, auquel on associe un repère d’espace et une horloge. Un passager assis dans un train est **immobile** dans le référentiel du train, et **en mouvement** dans le référentiel du sol : les deux descriptions sont également justes. C’est la **relativité du mouvement**.
+Un **référentiel** est un objet de référence, auquel on associe un repère d'espace et une horloge.
 
-> Un mouvement n’est ni vrai ni faux : il est relatif au référentiel choisi. Le premier réflexe, en mécanique, est de dire lequel on prend.
+| Le passager assis dans un train | Son état |
+| Dans le référentiel du **train** | **Immobile** |
+| Dans le référentiel du **sol** | **En mouvement** |
+
+> Les deux descriptions sont également justes : c'est la **relativité du mouvement**. Le premier réflexe, en mécanique, est de dire quel référentiel on prend.
 
 ## Les référentiels usuels
-Le référentiel **terrestre**, lié au sol, sert aux mouvements du quotidien. Le référentiel **géocentrique**, lié au centre de la Terre, sert au mouvement des satellites. Le référentiel **héliocentrique**, lié au centre du Soleil, sert au mouvement des planètes.
+| Le référentiel | Son centre | Son usage |
+| **Terrestre** | Le sol | Les mouvements du quotidien |
+| **Géocentrique** | Le centre de la Terre | Les satellites |
+| **Héliocentrique** | Le centre du Soleil | Les planètes |
 
 ## Trajectoire
-La **trajectoire** d’un point est l’ensemble des positions successives qu’il occupe dans un référentiel donné. Elle change avec le référentiel : la valve d’une roue de vélo décrit un cercle pour le cycliste et une **cycloïde** — une courbe en arches — pour un observateur au bord de la route.
+La **trajectoire** est l'ensemble des positions successives d'un point, dans un référentiel donné.
+
+| L'observateur | La trajectoire de la valve d'une roue de vélo |
+| Le **cycliste** | Un **cercle** |
+| Un piéton au bord de la route | Une **cycloïde**, une courbe en arches |
 
 ## Décrire un mouvement
-Un mouvement est **rectiligne** si la trajectoire est une droite, **circulaire** si c’est un cercle, **curviligne** sinon. Il est **uniforme** si la valeur de la vitesse est constante, **accéléré** si elle augmente, **ralenti** ou décéléré si elle diminue. On combine les deux mots : rectiligne uniforme, circulaire uniforme, rectiligne accéléré.
+| Le critère | Les valeurs |
+| La **trajectoire** | Rectiligne, circulaire, curviligne |
+| La **vitesse** | Uniforme (constante), accéléré, ralenti |
 
-## La vitesse moyenne
-Elle vaut v = d / Δt, en m·s⁻¹ dans le système international. Pour convertir, 1 m·s⁻¹ = 3,6 km·h⁻¹. La **vitesse instantanée** est celle mesurée sur un intervalle de temps très court, celui de deux positions successives d’un enregistrement.`,
+On combine les deux mots : rectiligne uniforme, circulaire uniforme, rectiligne accéléré.
+
+## La vitesse
+| La grandeur | Sa formule ou sa définition |
+| La vitesse **moyenne** | v = d / Δt, en m·s⁻¹ |
+| La conversion | 1 m·s⁻¹ = 3,6 km·h⁻¹ |
+| La vitesse **instantanée** | Mesurée sur un intervalle très court, entre deux positions successives d'un enregistrement |`,
           },
           questions: [
             ['Qu’est-ce qu’un référentiel ?', ['Un objet de référence, muni d’un repère et d’une horloge', 'La trajectoire d’un objet', 'La vitesse d’un mobile', 'Un système d’unités'], 0, 'Sans lui, décrire un mouvement n’a pas de sens.'],
@@ -576,24 +832,40 @@ Elle vaut v = d / Δt, en m·s⁻¹ dans le système international. Pour convert
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Une flèche qui dit tout du mouvement',
-            cours: `La vitesse d’un point n’est pas seulement un nombre : c’est un **vecteur**, qui porte quatre informations.
+            cours: `La vitesse d'un point n'est pas seulement un nombre : c'est un vecteur, qui porte quatre informations.
 
 ## Les quatre caractéristiques
-Le **point d’application** (la position du mobile), la **direction** (celle de la tangente à la trajectoire), le **sens** (celui du mouvement) et la **valeur** — ou norme —, en m·s⁻¹, représentée par la longueur de la flèche selon une **échelle** choisie.
+| La caractéristique | Ce qu'elle est |
+| Le **point d'application** | La position du mobile |
+| La **direction** | Celle de la **tangente** à la trajectoire |
+| Le **sens** | Celui du mouvement |
+| La **valeur** | En m·s⁻¹, représentée par la longueur de la flèche, à une **échelle** choisie |
 
-> La direction du vecteur vitesse est toujours tangente à la trajectoire : c’est ce qui rend visible qu’un mouvement circulaire uniforme n’a rien d’un mouvement « sans changement ».
+> La direction du vecteur vitesse est toujours tangente à la trajectoire : c'est ce qui rend visible qu'un mouvement circulaire uniforme n'a rien d'un mouvement « sans changement ».
 
 ## Le construire depuis un enregistrement
-À partir d’une chronophotographie ou d’un pointage vidéo, on estime la vitesse au point M_i par la distance entre les points voisins divisée par la durée écoulée : v_i ≈ M_(i−1)M_(i+1) / (2 × τ), où τ est l’intervalle de temps entre deux positions. On trace ensuite la flèche à l’échelle, tangente à la trajectoire.
+| L'étape | Le geste |
+| 1 | Repérer les positions M(i−1), M(i), M(i+1) |
+| 2 | Calculer v(i) ≈ distance M(i−1)M(i+1) divisée par 2τ, où τ est l'intervalle entre deux positions |
+| 3 | Tracer la flèche à l'échelle, **tangente** à la trajectoire |
 
 ## La variation du vecteur vitesse
-Le vecteur variation de vitesse est la **différence** entre le vecteur vitesse final et le vecteur vitesse initial. Graphiquement, on reporte les deux vecteurs à partir d’un même point : la variation est le vecteur qui joint l’extrémité du premier à celle du second.
+C'est la **différence** entre le vecteur vitesse final et le vecteur vitesse initial.
+
+| L'étape graphique | Le geste |
+| 1 | Reporter les deux vecteurs à partir d'un **même point** |
+| 2 | Tracer le vecteur qui joint l'extrémité du premier à celle du second |
 
 ## Ce que la variation révèle
-Le vecteur vitesse peut changer de **valeur**, de **direction**, ou des deux. Dans un mouvement rectiligne uniforme, il ne change pas : la variation est nulle. Dans un mouvement **circulaire uniforme**, la valeur est constante mais la direction change en permanence : la variation n’est PAS nulle, et elle pointe vers l’intérieur du cercle.
+| Le mouvement | Ce qui change | La variation |
+| **Rectiligne uniforme** | Rien | **Nulle** |
+| Rectiligne accéléré | La valeur | Dans le sens du mouvement |
+| **Circulaire uniforme** | La **direction** seule | **Non nulle**, dirigée vers le **centre** |
 
 ## Le lien avec les forces
-Le vecteur variation de vitesse a le même sens que la **somme des forces** appliquées au système. C’est cette correspondance qui fait de l’étude du vecteur vitesse le point d’entrée de toute la mécanique.`,
+> Le vecteur variation de vitesse a le **même sens** que la somme des forces appliquées au système.
+
+C'est cette correspondance qui fait de l'étude du vecteur vitesse le point d'entrée de toute la mécanique.`,
           },
           questions: [
             ['Quelles sont les quatre caractéristiques d’un vecteur vitesse ?', ['Point d’application, direction, sens et valeur', 'Masse, vitesse, temps et distance', 'Origine, longueur, couleur et échelle', 'Position, trajectoire, durée et accélération'], 0, 'La longueur de la flèche représente la valeur, à l’échelle.'],
@@ -611,24 +883,47 @@ Le vecteur variation de vitesse a le même sens que la **somme des forces** appl
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Représenter ce qui agit sur un système',
-            cours: `Une **action mécanique** est ce qui peut mettre en mouvement, arrêter, dévier ou déformer un objet. On la modélise par une **force**.
+            cours: `Une action mécanique est ce qui peut mettre en mouvement, arrêter, dévier ou déformer un objet. On la modélise par une force.
 
 ## Système et actions
-La première étape est de définir le **système** étudié — l’objet dont on parle — puis d’inventorier ce qui agit sur lui. Les actions de **contact** (support, fil, ressort, frottements, air) supposent un contact matériel ; les actions **à distance** (pesanteur, magnétisme, électrostatique) s’exercent sans contact.
+| L'étape | Ce qu'on fait |
+| 1 | Définir le **système** étudié |
+| 2 | Inventorier ce qui agit sur lui |
+
+| Le type d'action | Sa condition | Ses exemples |
+| De **contact** | Un contact matériel | Support, fil, ressort, frottements, air |
+| À **distance** | Aucun contact | Pesanteur, magnétisme, électrostatique |
 
 ## La force, un vecteur
-Une force se représente par un vecteur, avec un point d’application, une direction, un sens et une valeur en **newtons** (N). Un **diagramme objet-interaction** aide à n’en oublier aucune : le système au centre, les acteurs autour, une double flèche par interaction.
+| Sa caractéristique | Son unité |
+| Point d'application, direction, sens | — |
+| **Valeur** | Le **newton** (N) |
+
+Un **diagramme objet-interaction** aide à n'en oublier aucune : le système au centre, les acteurs autour, une double flèche par interaction.
 
 ## Le poids
-Le **poids** est l’action de la Terre sur un objet : P = m × g, avec m en kilogrammes et g ≈ 9,8 N·kg⁻¹ à la surface de la Terre. Il est vertical, dirigé vers le bas, appliqué au centre de gravité. La **masse** est une propriété de l’objet, identique partout ; le **poids** dépend du lieu — sur la Lune, g vaut environ 1,6 N·kg⁻¹.
+P = m × g, avec g ≈ 9,8 N·kg⁻¹ à la surface de la Terre
+
+| La grandeur | Son unité | Ce dont elle dépend |
+| La **masse** | kg | L'objet seul : identique partout |
+| Le **poids** | N | Le **lieu** : sur la Lune, g ≈ 1,6 N·kg⁻¹ |
+
+Le poids est vertical, dirigé vers le bas, appliqué au **centre de gravité**.
 
 > Un astronaute a la même masse sur la Lune et sur Terre, mais un poids six fois plus faible : masse et poids ne sont pas des synonymes.
 
 ## La gravitation
-Deux corps de masses m_A et m_B, séparés d’une distance d, s’attirent avec une force de valeur F = G × m_A × m_B / d², avec G ≈ 6,67 × 10⁻¹¹ dans les unités du système international. Cette force est **attractive**, de même valeur pour les deux corps et de sens opposés. Elle décroît comme le carré de la distance : doubler la distance divise la force par quatre.
+F = G × m(A) × m(B) / d², avec G ≈ 6,67 × 10⁻¹¹ dans les unités du système international
+
+| La propriété | Son contenu |
+| Elle est **attractive** | Toujours |
+| Elle est **réciproque** | Même valeur pour les deux corps, sens opposés |
+| Elle décroît en 1/d² | Doubler la distance divise la force par **quatre** |
 
 ## Le principe des actions réciproques
-Si A exerce une force sur B, alors B exerce sur A une force de même direction, de même valeur et de sens opposé. Les deux forces ne s’appliquent pas au même objet : elles ne se compensent donc jamais entre elles.`,
+Si A exerce une force sur B, B exerce sur A une force de même direction, de même valeur, de sens opposé.
+
+> Les deux forces ne s'appliquent **pas au même objet** : elles ne se compensent donc jamais entre elles.`,
           },
           questions: [
             ['Comment modélise-t-on une action mécanique ?', ['Par une force, représentée par un vecteur', 'Par une distance', 'Par une masse', 'Par une durée'], 0, 'Point d’application, direction, sens et valeur en newtons.'],
@@ -646,24 +941,38 @@ Si A exerce une force sur B, alors B exerce sur A une force de même direction, 
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Ce qui se passe quand les forces se compensent',
-            cours: `Le **principe d’inertie**, énoncé par Galilée puis par Newton, relie les forces appliquées à un système et l’évolution de son vecteur vitesse.
+            cours: `Le principe d'inertie, énoncé par Galilée puis par Newton, relie les forces appliquées à un système et l'évolution de son vecteur vitesse.
 
-## L’énoncé
-Dans un référentiel galiléen, si les forces qui s’exercent sur un système se **compensent** — leur somme est nulle —, alors le vecteur vitesse de ce système ne varie pas : le système est **immobile** ou animé d’un mouvement **rectiligne uniforme**. La réciproque est vraie : un vecteur vitesse constant implique des forces qui se compensent.
+## L'énoncé
+| La condition | La conséquence |
+| Les forces se **compensent** — leur somme est nulle | Le vecteur vitesse **ne varie pas** : le système est immobile, ou en mouvement rectiligne uniforme |
+| La réciproque | Un vecteur vitesse constant implique des forces qui se compensent |
 
-> L’erreur la plus tenace en mécanique consiste à croire qu’il faut une force pour ENTRETENIR un mouvement. Il en faut une pour le CHANGER.
+Le tout dans un **référentiel galiléen** — le référentiel terrestre en est une bonne approximation pour les expériences de courte durée.
 
-## Un référentiel galiléen
-C’est un référentiel dans lequel le principe s’applique. Le référentiel terrestre en est une bonne approximation pour les expériences de courte durée.
+> L'erreur la plus tenace en mécanique consiste à croire qu'il faut une force pour **entretenir** un mouvement. Il en faut une pour le **changer**.
 
 ## La contraposée, plus utile en pratique
-Si le vecteur vitesse **varie** — en valeur, en direction, ou les deux —, alors les forces ne se compensent pas, et la somme des forces a le même sens que la variation du vecteur vitesse. C’est ce raisonnement qu’on applique à un enregistrement de mouvement.
+| L'observation | La conclusion |
+| Le vecteur vitesse **varie** — en valeur, en direction, ou les deux | Les forces **ne se compensent pas** |
+| Le sens de cette variation | Celui de la **somme des forces** |
+
+C'est ce raisonnement qu'on applique à un enregistrement de mouvement.
 
 ## Trois exemples
-Une voiture qui roule à vitesse constante en ligne droite : le moteur compense exactement les frottements, la somme des forces est nulle. Une pierre lâchée sans vitesse : seul le poids agit, la vitesse augmente vers le bas. Un palet sur coussin d’air, presque sans frottement : lancé, il conserve sa vitesse et sa direction.
+| La situation | Le bilan des forces | Le mouvement |
+| Une voiture à vitesse constante en ligne droite | Le moteur compense exactement les frottements : somme **nulle** | Rectiligne uniforme |
+| Une pierre lâchée sans vitesse | Seul le **poids** agit | La vitesse augmente vers le bas |
+| Un palet sur coussin d'air, lancé | Presque aucun frottement | Il conserve sa vitesse et sa direction |
 
 ## Chute libre
-Un corps en **chute libre** n’est soumis qu’à son poids. Tous les corps y tombent avec la même variation de vitesse, quelle que soit leur masse : une plume et une bille tombent ensemble dans un tube où l’on a fait le vide. Dans l’air, c’est la résistance de l’air, et non la masse, qui les sépare.`,
+Un corps en **chute libre** n'est soumis qu'à son poids.
+
+| Le milieu | Ce qui se passe |
+| Dans le **vide** | Une plume et une bille tombent **ensemble** |
+| Dans l'**air** | La résistance de l'air les sépare — et non la masse |
+
+> Tous les corps en chute libre subissent la même variation de vitesse, quelle que soit leur masse.`,
           },
           questions: [
             ['Que dit le principe d’inertie ?', ['Si les forces se compensent, le vecteur vitesse ne varie pas', 'Une force est nécessaire pour maintenir un mouvement', 'Tout corps finit par s’arrêter', 'La vitesse est proportionnelle à la force'], 0, 'Le système est immobile ou en mouvement rectiligne uniforme.'],
@@ -684,24 +993,42 @@ Un corps en **chute libre** n’est soumis qu’à son poids. Tous les corps y t
           axe: 'Ondes et signaux',
           lecon: {
             titre: 'Ce qui vibre, ce qui transporte, ce qui reçoit',
-            cours: `Un **son** naît d’un objet qui **vibre**, se propage dans un **milieu matériel**, et est reçu par un détecteur — l’oreille ou un microphone.
+            cours: `Un son naît d'un objet qui vibre, se propage dans un milieu matériel, et est reçu par un détecteur.
 
-## L’émission
-La source sonore vibre : corde, membrane, colonne d’air, cordes vocales. Cette vibration met en mouvement les molécules du milieu voisin.
+## La chaîne du son
+| L'étape | Ce qui se passe | Des exemples |
+| L'**émission** | Une source **vibre** | Corde, membrane, colonne d'air, cordes vocales |
+| La **propagation** | De proche en proche, dans un milieu **matériel** | Air, eau, acier |
+| La **réception** | Un détecteur convertit la vibration | L'oreille, un microphone |
 
 ## La propagation
-Le son est une **onde mécanique** : il se propage de proche en proche par compressions et dilatations successives du milieu, SANS transport de matière. Chaque molécule oscille autour de sa position d’équilibre et transmet la perturbation à sa voisine.
+Le son est une **onde mécanique** : compressions et dilatations successives du milieu, **sans transport de matière**. Chaque molécule oscille autour de sa position d'équilibre et transmet la perturbation à sa voisine.
 
-> Le son ne se propage PAS dans le vide : sans matière, aucune vibration à transmettre. C’est ce qui rend les explosions bruyantes des films de l’espace physiquement impossibles.
+> Le son ne se propage **pas** dans le vide : sans matière, aucune vibration à transmettre. C'est ce qui rend les explosions bruyantes des films de l'espace physiquement impossibles.
 
 ## La célérité
-La vitesse de propagation, ou **célérité**, dépend du milieu : environ **340 m·s⁻¹** dans l’air à 20 °C, **1 500 m·s⁻¹** dans l’eau, plus de **5 000 m·s⁻¹** dans l’acier. Elle est d’autant plus grande que le milieu est dense et rigide. On la calcule par v = d / Δt.
+| Le milieu | La célérité |
+| L'**air** à 20 °C | Environ **340 m·s⁻¹** |
+| L'**eau** | Environ **1 500 m·s⁻¹** |
+| L'**acier** | Plus de **5 000 m·s⁻¹** |
+
+> Elle est d'autant plus grande que le milieu est dense et rigide. On la calcule par v = d / Δt.
 
 ## Mesurer une distance avec un son
-La méthode de l’**écho** : on mesure la durée aller-retour d’un signal et l’on divise par deux — d = v × Δt / 2. C’est le principe du **sonar** et de l’**échographie**, qui utilise des **ultrasons**.
+La méthode de l'**écho** : on mesure la durée aller-retour et l'on divise par deux.
+
+d = v × Δt / 2
+
+| L'application | Son domaine |
+| Le **sonar** | La mer |
+| L'**échographie**, par **ultrasons** | La médecine |
 
 ## Le retard
-Deux détecteurs placés à des distances différentes reçoivent le même signal avec un **retard** : Δt = (d₂ − d₁) / v. C’est ainsi qu’on localise une source sonore, et que l’on estime la distance d’un orage en comptant les secondes entre l’éclair et le tonnerre — la lumière, elle, arrive presque instantanément.`,
+Δt = (d₂ − d₁) / v
+
+| L'usage | Ce qu'il permet |
+| Deux détecteurs à des distances différentes | **Localiser** une source sonore |
+| Compter les secondes entre l'éclair et le tonnerre | Estimer la distance d'un orage — la lumière arrive presque instantanément |`,
           },
           questions: [
             ['Qu’est-ce qui produit un son ?', ['Un objet qui vibre', 'Un objet chaud', 'Un objet chargé électriquement', 'Un objet en chute libre'], 0, 'La vibration met en mouvement les molécules voisines.'],
@@ -719,27 +1046,57 @@ Deux détecteurs placés à des distances différentes reçoivent le même signa
           axe: 'Ondes et signaux',
           lecon: {
             titre: 'De la grandeur physique à la sensation',
-            cours: `Un son se décrit par des grandeurs **physiques** mesurables, auxquelles correspondent des sensations **perçues** par l’oreille.
+            cours: `Un son se décrit par des grandeurs physiques mesurables, auxquelles correspondent des sensations perçues par l'oreille.
+
+## Grandeur physique et sensation
+| La grandeur physique | La sensation perçue |
+| La **fréquence** | La **hauteur** : grave ou aigu |
+| L'**intensité** | La force du son |
+| La **forme du signal** | Le **timbre** |
 
 ## Période et fréquence
-Un son **périodique** se répète identique à lui-même au bout d’une durée T, la **période**, en secondes. La **fréquence** f est le nombre de périodes par seconde : f = 1 / T, en **hertz** (Hz). Un signal de période 2,0 ms a une fréquence de 500 Hz.
+| La grandeur | Sa définition | Son unité |
+| La **période** T | La durée d'un motif | Seconde |
+| La **fréquence** f | f = 1 / T | **Hertz** (Hz) |
+
+Un signal de période 2,0 ms a une fréquence de **500 Hz**.
 
 ## Hauteur
-La **hauteur** est la sensation liée à la **fréquence** : plus la fréquence est grande, plus le son est perçu comme **aigu**. L’oreille humaine perçoit environ de **20 Hz à 20 000 Hz** : en dessous, les **infrasons** ; au-dessus, les **ultrasons**, que perçoivent certains animaux.
+| Le domaine | Sa fréquence | Qui l'entend |
+| Les **infrasons** | Moins de 20 Hz | Certains animaux |
+| Le domaine **audible** | De **20 Hz à 20 000 Hz** | L'oreille humaine |
+| Les **ultrasons** | Plus de 20 000 Hz | Chauve-souris, dauphins |
+
+Plus la fréquence est grande, plus le son est perçu comme **aigu**.
 
 ## Timbre
-Deux instruments jouant la même note à la même intensité restent reconnaissables : c’est le **timbre**, lié à la forme du signal et à la présence d’**harmoniques**, des fréquences multiples de la fréquence fondamentale.
+Deux instruments jouant la même note à la même intensité restent reconnaissables : c'est le **timbre**, lié à la forme du signal et à la présence d'**harmoniques**, fréquences multiples du fondamental.
 
 ## Intensité et niveau sonore
-L’**intensité sonore** I se mesure en W·m⁻². Comme l’oreille répond sur une échelle immense, on utilise le **niveau d’intensité sonore** L, en **décibels** (dB). L’échelle est **logarithmique** : ajouter 10 dB correspond à multiplier l’intensité par 10, et le son est perçu environ deux fois plus fort.
+| La grandeur | Son symbole | Son unité |
+| L'**intensité sonore** | I | W·m⁻² |
+| Le **niveau d'intensité sonore** | L | **Décibel** (dB) |
 
-> Deux sources identiques côte à côte n’ajoutent que 3 dB : les décibels ne s’additionnent pas comme des nombres ordinaires.
+L'échelle est **logarithmique** :
+
+| L'opération | Son effet |
+| **+10 dB** | L'intensité est multipliée par **10** ; le son paraît deux fois plus fort |
+| Deux sources identiques côte à côte | **+3 dB** seulement |
+
+> Les décibels ne s'additionnent pas comme des nombres ordinaires.
 
 ## Quelques repères
-0 dB est le seuil d’audibilité, une conversation vaut environ 60 dB, une rue passante 80 dB, un concert 100 dB, et le **seuil de douleur** se situe vers 120 dB.
+| La situation | Son niveau |
+| Seuil d'audibilité | **0 dB** |
+| Conversation | Environ 60 dB |
+| Rue passante | 80 dB |
+| Concert | 100 dB |
+| **Seuil de douleur** | Vers **120 dB** |
 
 ## Protéger son audition
-L’exposition prolongée à des niveaux élevés détruit **définitivement** les cellules ciliées de l’oreille interne, qui ne se régénèrent pas. Les acouphènes et la perte d’audition sont irréversibles. D’où l’intérêt des protections auditives, des pauses et de la distance aux enceintes.`,
+> L'exposition prolongée à des niveaux élevés détruit **définitivement** les cellules ciliées de l'oreille interne : elles ne se régénèrent pas. Acouphènes et perte d'audition sont **irréversibles**.
+
+D'où l'intérêt des protections auditives, des pauses, et de la distance aux enceintes.`,
           },
           questions: [
             ['Quelle relation lie période et fréquence ?', ['f = 1 / T', 'f = T', 'f = T²', 'f = 2 × T'], 0, 'La fréquence s’exprime en hertz.'],
@@ -757,24 +1114,42 @@ L’exposition prolongée à des niveaux élevés détruit **définitivement** l
           axe: 'Ondes et signaux',
           lecon: {
             titre: 'Deux lois pour lire n’importe quel circuit',
-            cours: `Dans un circuit électrique, deux grandeurs se mesurent : l’**intensité** du courant et la **tension** aux bornes des dipôles.
+            cours: `Dans un circuit électrique, deux grandeurs se mesurent : l'intensité du courant et la tension aux bornes des dipôles.
 
 ## Les deux grandeurs
-L’**intensité** I traduit le débit de charges électriques ; elle se mesure en **ampères** (A) avec un **ampèremètre**, branché en **série**, car il faut que le courant le traverse. La **tension** U traduit la différence d’état électrique entre deux points ; elle se mesure en **volts** (V) avec un **voltmètre**, branché en **dérivation** aux bornes du dipôle.
+| La grandeur | Ce qu'elle traduit | Son unité | Son appareil, et son branchement |
+| L'**intensité** I | Le débit de charges | Ampère (A) | **Ampèremètre**, en **série** |
+| La **tension** U | La différence d'état électrique entre deux points | Volt (V) | **Voltmètre**, en **dérivation** |
 
-> Se tromper de branchement n’est pas une erreur de forme : un ampèremètre monté en dérivation court-circuite le dipôle et peut être détruit.
+> Se tromper de branchement n'est pas une erreur de forme : un ampèremètre monté en dérivation court-circuite le dipôle et peut être détruit.
 
 ## Les deux montages
-En **série**, les dipôles sont montés les uns à la suite des autres sur une seule boucle. En **dérivation**, le circuit comporte plusieurs branches partant de deux **nœuds** communs.
+| Le montage | Sa structure |
+| En **série** | Les dipôles se suivent sur une **seule boucle** |
+| En **dérivation** | Plusieurs branches, partant de deux **nœuds** communs |
 
 ## La loi des nœuds
-La somme des intensités des courants qui **arrivent** à un nœud est égale à la somme de celles qui en **repartent**. Elle traduit la conservation de la charge électrique : rien ne s’accumule au nœud. Dans un circuit série, l’intensité est donc la **même** partout.
+La somme des intensités qui **arrivent** à un nœud égale la somme de celles qui en **repartent**.
+
+> Elle traduit la conservation de la charge : rien ne s'accumule au nœud. Dans un circuit série, l'intensité est donc la **même partout**.
 
 ## La loi des mailles
-Dans une **maille** — une boucle fermée du circuit —, la somme algébrique des tensions est nulle. En pratique, dans un circuit série, la tension du générateur est la somme des tensions aux bornes des récepteurs ; en dérivation, les branches placées entre les deux mêmes nœuds ont la **même** tension.
+Dans une **maille**, la somme algébrique des tensions est nulle.
+
+| Le montage | Ce qui en découle |
+| En **série** | La tension du générateur est la **somme** des tensions aux bornes des récepteurs |
+| En **dérivation** | Les branches entre deux mêmes nœuds ont la **même** tension |
 
 ## Un exemple
-Deux lampes en dérivation sous 6,0 V : chacune reçoit 6,0 V. Si la première est traversée par 0,20 A et la seconde par 0,30 A, le générateur débite 0,50 A. Retirer une lampe ne modifie pas la tension de l’autre — c’est pourquoi l’éclairage domestique est câblé en dérivation.`,
+Deux lampes en dérivation sous 6,0 V.
+
+| Le point | Sa valeur |
+| Tension aux bornes de chaque lampe | **6,0 V** |
+| Intensité dans la première | 0,20 A |
+| Intensité dans la seconde | 0,30 A |
+| Intensité débitée par le générateur | **0,50 A** |
+
+> Retirer une lampe ne modifie pas la tension de l'autre : c'est pourquoi l'éclairage domestique est câblé en dérivation.`,
           },
           questions: [
             ['Comment branche-t-on un ampèremètre ?', ['En série, pour être traversé par le courant', 'En dérivation aux bornes du dipôle', 'À la place du générateur', 'Entre deux nœuds'], 0, 'Le voltmètre, lui, se branche en dérivation.'],
@@ -792,27 +1167,53 @@ Deux lampes en dérivation sous 6,0 V : chacune reçoit 6,0 V. Si la première e
           axe: 'Ondes et signaux',
           lecon: {
             titre: 'Une droite, une pente, une résistance',
-            cours: `Un **conducteur ohmique** — ou résistor — est un dipôle qui s’oppose au passage du courant de façon régulière.
+            cours: `Un conducteur ohmique — ou résistor — est un dipôle qui s'oppose au passage du courant de façon régulière.
 
-## L’énoncé
-La **loi d’Ohm** relie la tension à ses bornes et l’intensité qui le traverse : U = R × I, avec U en volts, I en ampères et R en **ohms** (Ω). La tension et l’intensité sont **proportionnelles**.
+## L'énoncé
+U = R × I
+
+| La grandeur | Son unité |
+| U | Volt (V) |
+| I | Ampère (A) |
+| R | **Ohm** (Ω) |
+
+La tension et l'intensité sont **proportionnelles**.
 
 ## La caractéristique
-Si l’on trace U en fonction de I pour un conducteur ohmique, on obtient une **droite passant par l’origine**, dont le **coefficient directeur** est la résistance R. Une lampe, elle, ne donne pas une droite : sa résistance augmente avec la température, elle n’est pas ohmique.
+| Le dipôle | L'allure de U en fonction de I |
+| Un **conducteur ohmique** | Une **droite passant par l'origine**, de coefficient directeur R |
+| Une **lampe** | Une courbe : sa résistance augmente avec la température — elle n'est pas ohmique |
 
-> Deux vérifications d’un coup : la droite dit que le dipôle est ohmique, sa pente donne la valeur de la résistance.
+> Deux vérifications d'un coup : la droite dit que le dipôle est ohmique, sa pente donne la valeur de la résistance.
 
 ## Ce dont dépend la résistance
-De la nature du matériau, de la longueur du fil (elle augmente avec elle) et de sa section (elle diminue quand la section augmente). Un **code de couleurs** à quatre anneaux donne la valeur d’un résistor et sa tolérance ; un **ohmmètre** la mesure directement, hors circuit.
+| Le facteur | Son effet |
+| La **nature** du matériau | Propre à chacun |
+| La **longueur** du fil | La résistance **augmente** avec elle |
+| La **section** | Elle **diminue** quand la section augmente |
 
-## L’effet Joule
-Un conducteur parcouru par un courant s’**échauffe** : c’est l’**effet Joule**. Il est recherché dans un radiateur, un grille-pain ou une bouilloire, et subi ailleurs — c’est lui qui limite la puissance des composants électroniques et impose leur refroidissement.
+| L'outil | Ce qu'il donne |
+| Le **code de couleurs** à quatre anneaux | La valeur et la tolérance |
+| L'**ohmmètre** | La mesure directe, **hors circuit** |
+
+## L'effet Joule
+Un conducteur parcouru par un courant s'**échauffe**.
+
+| Où il est… | Ses exemples |
+| **Recherché** | Radiateur, grille-pain, bouilloire |
+| **Subi** | Composants électroniques, qu'il faut refroidir |
 
 ## Puissance et énergie
-La **puissance** électrique vaut P = U × I, en **watts**. Pour un conducteur ohmique, elle s’écrit aussi P = R × I². L’**énergie** consommée vaut E = P × Δt, en joules si Δt est en secondes — ou en kilowattheures pour la facturation, avec 1 kWh = 3,6 × 10⁶ J.
+| La grandeur | Sa formule | Son unité |
+| **Puissance** | P = U × I, ou P = R × I² pour un conducteur ohmique | Watt (W) |
+| **Énergie** | E = P × Δt | Joule (J), ou **kilowattheure** |
+
+1 kWh = 3,6 × 10⁶ J
 
 ## La sécurité
-La loi d’Ohm explique le danger électrique : à tension donnée, l’intensité qui traverse le corps dépend de sa résistance, elle-même très diminuée par l’humidité. D’où l’interdiction absolue de manipuler un appareil électrique les mains mouillées.`,
+> À tension donnée, l'intensité qui traverse le corps dépend de sa **résistance** — elle-même très diminuée par l'humidité.
+
+D'où l'interdiction absolue de manipuler un appareil électrique les mains mouillées.`,
           },
           questions: [
             ['Quelle est l’expression de la loi d’Ohm ?', ['U = R × I', 'U = I / R', 'R = U × I', 'I = U × R'], 0, 'Avec U en volts, I en ampères, R en ohms.'],
@@ -833,27 +1234,51 @@ La loi d’Ohm explique le danger électrique : à tension donnée, l’intensit
           axe: 'Vision et image',
           lecon: {
             titre: 'Des rayons droits, et un blanc qui n’est pas une couleur',
-            cours: `La lumière se propage en **ligne droite** dans un milieu **transparent et homogène** : c’est le principe de propagation rectiligne, que l’on modélise par des **rayons lumineux**.
+            cours: `La lumière se propage en ligne droite dans un milieu transparent et homogène : on la modélise par des rayons lumineux.
 
 ## Ce que la propagation rectiligne explique
-Les **ombres** nettes derrière un objet opaque éclairé par une source ponctuelle, la formation des images dans une chambre noire, les **éclipses** de Soleil et de Lune, et le fonctionnement d’un viseur.
+| Le phénomène | Son mécanisme |
+| Les **ombres** nettes | Un objet opaque intercepte les rayons |
+| La **chambre noire** | Chaque point de l'objet envoie un rayon à travers le trou |
+| Les **éclipses** | Un astre entre dans l'ombre d'un autre |
+| Le **viseur** | On aligne l'œil, la mire et la cible |
 
 ## La vitesse de la lumière
-Dans le vide, elle vaut c = **3,00 × 10⁸ m·s⁻¹** — près d’un milliard de kilomètres par heure. Elle est plus faible dans un milieu matériel. Sur les distances astronomiques, on compte en **années-lumière** : une année-lumière est la distance parcourue par la lumière en un an, environ 9,5 × 10¹⁵ m.
+| Le repère | Sa valeur |
+| Dans le **vide** | c = **3,00 × 10⁸ m·s⁻¹** |
+| Dans un milieu matériel | Plus faible |
+| Une **année-lumière** | Environ 9,5 × 10¹⁵ m |
 
-> Voir loin, c’est voir tôt : le Soleil que nous observons est celui d’il y a huit minutes, et une étoile à mille années-lumière nous montre son passé.
+> Voir loin, c'est voir tôt : le Soleil que nous observons est celui d'il y a huit minutes, et une étoile à mille années-lumière nous montre son passé.
 
 ## Sources primaires et objets diffusants
-Une **source primaire** produit sa propre lumière (Soleil, lampe, écran, flamme). Un **objet diffusant** renvoie dans toutes les directions la lumière qu’il reçoit (la Lune, une page, un mur) : sans éclairage, il est invisible.
+| Le type | Ce qu'il fait | Ses exemples |
+| Source **primaire** | Elle **produit** sa lumière | Soleil, lampe, écran, flamme |
+| Objet **diffusant** | Il **renvoie** dans toutes les directions la lumière reçue | La Lune, une page, un mur |
+
+Sans éclairage, un objet diffusant est invisible.
 
 ## La lumière blanche est composite
-Un **prisme** — ou un réseau — **disperse** la lumière blanche et fait apparaître un **spectre continu**, du rouge au violet. Newton l’a montré en recombinant ce spectre pour retrouver du blanc : le blanc n’est pas une couleur simple, c’est une **superposition**.
+Un **prisme** ou un réseau **disperse** la lumière blanche et fait apparaître un **spectre continu**, du rouge au violet.
 
-## Longueur d’onde et couleur
-À chaque **radiation** correspond une **longueur d’onde** λ, en nanomètres. Le domaine visible s’étend d’environ **400 nm** (violet) à **800 nm** (rouge). En dessous, les **ultraviolets** ; au-dessus, les **infrarouges**, invisibles pour l’œil. Une lumière **monochromatique** ne contient qu’une seule radiation, un laser par exemple ; une lumière **polychromatique** en contient plusieurs.
+> Newton l'a montré en **recombinant** ce spectre pour retrouver du blanc : le blanc n'est pas une couleur simple, c'est une **superposition**.
+
+## Longueur d'onde et couleur
+| Le domaine | Sa longueur d'onde |
+| **Ultraviolets** | Moins de 400 nm |
+| **Visible** | De **400 nm** (violet) à **800 nm** (rouge) |
+| **Infrarouges** | Plus de 800 nm |
+
+| La lumière | Ce qu'elle contient |
+| **Monochromatique** | Une seule radiation — un laser |
+| **Polychromatique** | Plusieurs |
 
 ## Les spectres
-Un solide chaud donne un **spectre continu** dont l’aspect dépend de la température ; un gaz chaud à basse pression donne un **spectre de raies d’émission**, propre à chaque élément. C’est ainsi qu’on identifie la composition d’une étoile sans y aller.`,
+| La source | Son spectre |
+| Un solide **chaud** | **Continu**, son aspect dépend de la température |
+| Un gaz chaud à basse pression | Un spectre de **raies d'émission**, propre à chaque élément |
+
+> C'est ainsi qu'on identifie la composition d'une étoile sans y aller.`,
           },
           questions: [
             ['Dans quel type de milieu la lumière se propage-t-elle en ligne droite ?', ['Un milieu transparent et homogène', 'Un milieu opaque', 'Un milieu quelconque', 'Uniquement dans le vide'], 0, 'C’est le principe de propagation rectiligne.'],
@@ -871,27 +1296,55 @@ Un solide chaud donne un **spectre continu** dont l’aspect dépend de la temp�
           axe: 'Vision et image',
           lecon: {
             titre: 'Ce qui arrive à un rayon qui change de milieu',
-            cours: `Quand un rayon lumineux rencontre la surface séparant deux milieux transparents, une partie **rebondit** et une partie **traverse** en changeant de direction.
+            cours: `Quand un rayon lumineux rencontre la surface séparant deux milieux transparents, une partie rebondit et une partie traverse en changeant de direction.
 
 ## Le vocabulaire
-Le rayon **incident** arrive sur la surface au **point d’incidence** ; la **normale** est la droite perpendiculaire à la surface en ce point. Tous les angles se mesurent **par rapport à la normale**, jamais par rapport à la surface — c’est l’erreur la plus fréquente.
+| Le terme | Ce qu'il désigne |
+| Le rayon **incident** | Celui qui arrive |
+| Le **point d'incidence** | Où il touche la surface |
+| La **normale** | La perpendiculaire à la surface en ce point |
+
+> Tous les angles se mesurent **par rapport à la normale**, jamais par rapport à la surface. C'est l'erreur la plus fréquente.
 
 ## La réflexion
-Le rayon **réfléchi** repart dans le même milieu. Loi : l’angle de réflexion est **égal** à l’angle d’incidence, et le rayon réfléchi appartient au plan d’incidence. Sur une surface polie, la réflexion est **spéculaire** (miroir) ; sur une surface rugueuse, elle est **diffuse** — c’est elle qui rend les objets visibles de partout.
+| La loi | Son énoncé |
+| L'angle | L'angle de réflexion est **égal** à l'angle d'incidence |
+| Le plan | Le rayon réfléchi appartient au plan d'incidence |
+
+| La surface | Le type de réflexion | Son effet |
+| **Polie** | **Spéculaire** | Un miroir |
+| **Rugueuse** | **Diffuse** | Elle rend les objets visibles de partout |
 
 ## La réfraction
-Le rayon **réfracté** passe dans le second milieu en changeant de direction. La **loi de Snell-Descartes** s’écrit : n₁ × sin i₁ = n₂ × sin i₂, où n est l’**indice de réfraction** du milieu, un nombre sans unité supérieur ou égal à 1 (1,00 pour l’air, 1,33 pour l’eau, environ 1,5 pour le verre).
+La **loi de Snell-Descartes** :
 
-> En passant dans un milieu plus réfringent, le rayon se rapproche de la normale ; en en sortant, il s’en écarte.
+n₁ × sin i₁ = n₂ × sin i₂
+
+| Le milieu | Son indice n |
+| Air | 1,00 |
+| Eau | 1,33 |
+| Verre | Environ 1,5 |
+
+L'indice est un nombre sans unité, supérieur ou égal à 1.
+
+> En passant dans un milieu **plus réfringent**, le rayon se **rapproche** de la normale ; en en sortant, il s'en écarte.
 
 ## Ce que la réfraction explique
-Le bâton qui semble brisé à la surface de l’eau, la profondeur d’une piscine qui paraît plus faible qu’elle n’est, les mirages, et le fonctionnement des lentilles et des fibres optiques.
+Le bâton qui semble brisé à la surface de l'eau, la profondeur d'une piscine qui paraît plus faible, les mirages, les lentilles et les fibres optiques.
 
 ## La réflexion totale
-En passant d’un milieu plus réfringent à un milieu moins réfringent, au-delà d’un **angle limite** il n’y a plus de rayon réfracté : toute la lumière est réfléchie. C’est le principe de la **fibre optique**, qui guide la lumière sur des kilomètres.
+| La condition | Ce qui se passe |
+| Passage d'un milieu **plus** réfringent vers un milieu **moins** réfringent | Au-delà d'un **angle limite**, plus aucun rayon réfracté |
+| Toute la lumière | Elle est **réfléchie** |
+
+> C'est le principe de la **fibre optique**, qui guide la lumière sur des kilomètres.
 
 ## Le prisme
-L’indice de réfraction **dépend de la longueur d’onde** : le violet est plus dévié que le rouge. Un prisme sépare donc les radiations d’une lumière blanche : c’est la **dispersion**. Le même phénomène, dans des gouttes d’eau, produit l’**arc-en-ciel**.`,
+L'indice de réfraction **dépend de la longueur d'onde** : le **violet** est plus dévié que le rouge.
+
+| Le phénomène | Où on l'observe |
+| La **dispersion** | Un prisme sépare les radiations de la lumière blanche |
+| L'**arc-en-ciel** | Le même phénomène dans des gouttes d'eau |`,
           },
           questions: [
             ['Par rapport à quoi mesure-t-on les angles en optique ?', ['Par rapport à la normale à la surface', 'Par rapport à la surface elle-même', 'Par rapport au rayon réfléchi', 'Par rapport à l’horizontale'], 0, 'C’est l’erreur la plus fréquente en exercice.'],
@@ -909,24 +1362,47 @@ L’indice de réfraction **dépend de la longueur d’onde** : le violet est pl
           axe: 'Vision et image',
           lecon: {
             titre: 'Un morceau de verre qui rassemble la lumière',
-            cours: `Une **lentille convergente** est plus épaisse au centre qu’aux bords. Elle fait converger un faisceau de lumière parallèle.
+            cours: `Une lentille convergente est plus épaisse au centre qu'aux bords. Elle fait converger un faisceau de lumière parallèle.
 
 ## Le vocabulaire
-Le **centre optique** O est le point de la lentille par lequel un rayon passe sans être dévié. L’**axe optique** est la droite passant par O et perpendiculaire à la lentille. Le **foyer image** F′ est le point où convergent les rayons arrivant parallèlement à l’axe. Le **foyer objet** F est symétrique de F′ par rapport à O. La **distance focale** f′ = OF′ se mesure en mètres.
+| Le terme | Sa définition |
+| Le **centre optique** O | Le point par lequel un rayon passe **sans être dévié** |
+| L'**axe optique** | La droite par O, perpendiculaire à la lentille |
+| Le **foyer image** F′ | Où convergent les rayons arrivant parallèlement à l'axe |
+| Le **foyer objet** F | Symétrique de F′ par rapport à O |
+| La **distance focale** f′ | La longueur OF′, en mètres |
 
 ## La vergence
-La **vergence** C est l’inverse de la distance focale : C = 1 / f′, en **dioptries** (δ), avec f′ en mètres. Une lentille de 5 δ a une distance focale de 0,20 m. Plus la vergence est grande, plus la lentille est **convergente**, donc bombée. La vergence d’une lentille divergente est négative.
+C = 1 / f′, en **dioptries** (δ), avec f′ en mètres
 
-> Les corrections optiques sont exprimées en dioptries : le « +2 » d’une paire de lunettes de lecture est une vergence.
+| La lentille | Sa vergence |
+| De distance focale 0,20 m | **5 δ** |
+| Fortement bombée | Grande vergence, très convergente |
+| **Divergente** | Vergence **négative** |
+
+> Les corrections optiques sont exprimées en dioptries : le « +2 » d'une paire de lunettes de lecture est une vergence.
 
 ## Les trois rayons particuliers
-Un rayon passant par le **centre optique** n’est pas dévié. Un rayon **parallèle à l’axe** repart en passant par F′. Un rayon passant par **F** repart parallèle à l’axe. Deux d’entre eux suffisent à construire une image.
+| Le rayon incident | Ce qu'il devient |
+| Passant par **O** | Non dévié |
+| **Parallèle à l'axe** | Il repart par **F′** |
+| Passant par **F** | Il repart **parallèle à l'axe** |
 
-## L’œil et son modèle
-On modélise l’œil par une lentille convergente (le **cristallin**), un diaphragme (l’**iris** et sa **pupille**) et un écran (la **rétine**). L’**accommodation** est la déformation du cristallin qui permet de garder une image nette sur la rétine quand l’objet se rapproche.
+Deux d'entre eux suffisent à construire une image.
+
+## L'œil et son modèle
+| L'élément de l'œil | Son équivalent optique |
+| Le **cristallin** | Une lentille convergente |
+| L'**iris** et la **pupille** | Un diaphragme |
+| La **rétine** | Un écran |
+
+L'**accommodation** est la déformation du cristallin qui garde l'image nette quand l'objet se rapproche.
 
 ## Les défauts courants
-La **myopie** : l’image se forme en avant de la rétine, on corrige par une lentille **divergente**. L’**hypermétropie** : l’image se formerait en arrière, on corrige par une lentille **convergente**. La **presbytie** : le cristallin perd en souplesse avec l’âge, l’accommodation de près devient difficile.`,
+| Le défaut | Où se forme l'image | La correction |
+| **Myopie** | **En avant** de la rétine | Une lentille **divergente** |
+| **Hypermétropie** | En **arrière** | Une lentille **convergente** |
+| **Presbytie** | Le cristallin perd sa souplesse avec l'âge | Une correction de près |`,
           },
           questions: [
             ['Comment reconnaît-on une lentille convergente ?', ['Elle est plus épaisse au centre qu’aux bords', 'Elle est plus fine au centre', 'Elle est plane', 'Elle est teintée'], 0, 'Elle fait converger un faisceau parallèle.'],
@@ -944,24 +1420,48 @@ La **myopie** : l’image se forme en avant de la rétine, on corrige par une le
           axe: 'Vision et image',
           lecon: {
             titre: 'Tracer, mesurer, vérifier par le calcul',
-            cours: `Construire l’image d’un objet à travers une lentille convergente, c’est suivre deux rayons particuliers et repérer leur point de rencontre.
+            cours: `Construire l'image d'un objet à travers une lentille convergente, c'est suivre deux rayons particuliers et repérer leur point de rencontre.
 
 ## La méthode
-On place l’objet AB perpendiculairement à l’axe optique, A sur l’axe. Depuis B, on trace deux des trois rayons particuliers : le rayon passant par O, non dévié ; le rayon parallèle à l’axe, qui repart par F′ ; le rayon passant par F, qui repart parallèle à l’axe. Leur intersection donne B′, image de B. A′ se trouve sur l’axe, à la verticale de B′.
+| L'étape | Le geste |
+| 1 | Placer AB **perpendiculairement** à l'axe, A sur l'axe |
+| 2 | Depuis B, tracer le rayon passant par **O** : non dévié |
+| 3 | Tracer le rayon **parallèle à l'axe** : il repart par F′ |
+| 4 | Leur intersection donne **B′** |
+| 5 | A′ est sur l'axe, à la verticale de B′ |
 
 ## Image réelle, image virtuelle
-Si l’objet est **au-delà** du foyer objet F, l’image est **réelle** (on peut la recueillir sur un écran) et **renversée**. Si l’objet est **entre F et la lentille**, les rayons émergents divergent : l’image est **virtuelle**, droite et agrandie — c’est le fonctionnement de la **loupe**.
+| La position de l'objet | L'image | Son sens | Où on la voit |
+| **Au-delà** de F | **Réelle** | Renversée | Sur un écran |
+| **Entre F et la lentille** | **Virtuelle** | Droite, agrandie | À travers la lentille — c'est la **loupe** |
 
-> Une image réelle se projette, une image virtuelle se regarde : la première existe sur un écran, la seconde seulement pour l’œil placé derrière la lentille.
+> Une image réelle se **projette**, une image virtuelle se **regarde**.
 
 ## Les relations de conjugaison
-Avec les mesures algébriques comptées depuis O sur l’axe orienté : 1/OA′ − 1/OA = 1/OF′. Le **grandissement** vaut γ = A′B′/AB = OA′/OA. Un grandissement négatif signale une image renversée ; sa valeur absolue supérieure à 1 signale une image agrandie.
+Avec les mesures algébriques comptées depuis O :
+
+1/OA′ − 1/OA = 1/OF′
+
+γ = A′B′/AB = OA′/OA
+
+| La valeur de γ | Ce qu'elle dit |
+| **Négative** | L'image est **renversée** |
+| Valeur absolue supérieure à 1 | L'image est **agrandie** |
 
 ## Un exemple
-Objet à 30 cm d’une lentille de distance focale 10 cm : l’image se forme à 15 cm de l’autre côté, avec un grandissement de −0,5. Elle est donc réelle, renversée et deux fois plus petite.
+| La donnée | Sa valeur |
+| Objet à | 30 cm de la lentille |
+| Distance focale | 10 cm |
+| Position de l'image | **15 cm** de l'autre côté |
+| Grandissement | **−0,5** |
+
+L'image est donc réelle, renversée et deux fois plus petite.
 
 ## Les applications
-L’**appareil photo** et l’**œil** forment une image réelle renversée sur un capteur ou sur la rétine — le cerveau la redresse. Le **vidéoprojecteur** forme une image réelle agrandie. La **loupe** et l’**oculaire** d’un microscope donnent une image virtuelle agrandie.`,
+| L'instrument | L'image formée |
+| L'**appareil photo**, l'**œil** | Réelle et renversée, sur un capteur ou sur la rétine — le cerveau la redresse |
+| Le **vidéoprojecteur** | Réelle et agrandie |
+| La **loupe**, l'**oculaire** de microscope | **Virtuelle** et agrandie |`,
           },
           questions: [
             ['Combien de rayons particuliers suffisent à construire une image ?', ['Deux', 'Un seul', 'Trois obligatoirement', 'Quatre'], 0, 'Le troisième sert de vérification.'],

@@ -154,24 +154,55 @@ DELETE FROM public.chapters c
           axe: 'La poésie du XIXe au XXIe siècle',
           lecon: {
             titre: 'L’objet d’étude : ce qu’on attend de vous',
-            cours: `Deux siècles de poésie, trois œuvres au choix du professeur, une épreuve : l’explication linéaire à l’oral et, à l’écrit, le commentaire ou la dissertation. Cette fiche pose le cadre commun aux trois œuvres du programme.
+            cours: `Deux siècles de poésie, **trois œuvres** au choix du professeur, une épreuve : l’**explication linéaire** à l’oral et, à l’écrit, le **commentaire** ou la **dissertation**.
 
 ## Ce que le programme demande
-L’objet d’étude s’appelle « La poésie du XIXe siècle au XXIe siècle ». On y étudie une œuvre intégrale et son **parcours associé** — un fil de lecture, formulé par le programme, qui oriente la dissertation. L’élève doit savoir : situer l’œuvre, en connaître la structure, en citer une dizaine de textes, et rattacher chacun au parcours.
+On étudie une **œuvre intégrale** et son **parcours associé** — un fil de lecture, formulé par le programme, qui oriente la dissertation.
+
+| Ce qu’il faut savoir faire | Le détail |
+| **Situer** l’œuvre | Auteur, date, contexte |
+| Connaître sa **structure** | Sections, progression |
+| **Citer** une dizaine de textes | De mémoire, avec précision |
+| Rattacher chacun au **parcours** | C’est ce qui fait la dissertation |
 
 ## Le vers et la prose
-- Le **vers régulier** se compte en syllabes : octosyllabe (8), décasyllabe (10), **alexandrin** (12). Le **e muet** compte devant consonne, s’élide devant voyelle ou en fin de vers.
-- La **césure** coupe l’alexandrin en deux **hémistiches** ; l’**enjambement**, le **rejet** et le **contre-rejet** brisent la coïncidence entre vers et phrase — et cette rupture fait sens.
-- Les **rimes** se classent par disposition (plates AABB, croisées ABAB, embrassées ABBA) et par richesse (pauvres, suffisantes, riches).
-- Le **sonnet** (deux quatrains, deux tercets) reste la forme reine du XIXe ; le **poème en prose** (Baudelaire, Rimbaud) et le **vers libre** (Apollinaire, puis tout le XXe) l’abandonnent sans abandonner le rythme.
+| Vers | Son nombre de syllabes |
+| L’**octosyllabe** | 8 |
+| Le **décasyllabe** | 10 |
+| L’**alexandrin** | **12** |
+
+> Le **e muet** compte devant consonne, s’**élide** devant voyelle ou en fin de vers.
+
+| Notion | Ce qu’elle désigne |
+| La **césure** | Elle coupe l’alexandrin en deux **hémistiches** |
+| L’**enjambement**, le **rejet**, le **contre-rejet** | Ils brisent la coïncidence entre vers et phrase |
+
+> Cette rupture **fait sens** : elle n’est jamais un accident métrique.
+
+| Rimes, par disposition | Rimes, par richesse |
+| **Plates** AABB | **Pauvres** : un son commun |
+| **Croisées** ABAB | **Suffisantes** : deux |
+| **Embrassées** ABBA | **Riches** : trois ou plus |
+
+| Forme | Son époque |
+| Le **sonnet** — deux quatrains, deux tercets | La forme reine du XIXe |
+| Le **poème en prose** | Baudelaire, Rimbaud |
+| Le **vers libre** | Apollinaire, puis tout le XXe |
+
+> Le vers libre abandonne le mètre, **jamais le rythme**.
 
 ## Trois moments à situer
-Le **romantisme** fait du poète une conscience qui dit le moi et le monde (Hugo, Lamartine). Le **symbolisme** et la modernité cherchent, avec Baudelaire puis Rimbaud et Mallarmé, à faire du poème une expérience de langage plutôt qu’un message. Le **XXe et le XXIe siècle** élargissent encore : le poème se fait atelier (Ponge), cri, ou traversée intime du monde naturel (Dorion).
+| Moment | Ce que devient le poète |
+| Le **romantisme** — Hugo, Lamartine | Une **conscience** qui dit le moi et le monde |
+| Le **symbolisme** et la modernité — Baudelaire, Rimbaud, Mallarmé | Le poème devient une **expérience de langage**, non un message |
+| Les **XXe et XXIe siècles** | Le poème se fait **atelier** (Ponge), cri, ou traversée intime du monde naturel (Dorion) |
 
-## Les figures qu’on doit savoir nommer
-Comparaison et **métaphore**, **personnification**, **oxymore**, **anaphore**, **allitération** et **assonance**, **synesthésie** — les correspondances entre les sens, cœur du programme baudelairien. Nommer ne suffit jamais : à l’oral, une figure repérée doit être suivie d’un effet et d’une interprétation.
+## Les figures à savoir nommer
+Comparaison et **métaphore**, **personnification**, **oxymore**, **anaphore**, **allitération** et **assonance**, **synesthésie** — les correspondances entre les sens, cœur du programme baudelairien.
 
-> La règle d’or de l’explication linéaire : suivre le mouvement du texte, du premier vers au dernier, sans plan thématique plaqué.`,
+> **Nommer ne suffit jamais** : à l’oral, une figure repérée doit être suivie d’un **effet** et d’une **interprétation**.
+
+> La règle d’or de l’explication linéaire : **suivre le mouvement du texte**, du premier vers au dernier, sans plan thématique plaqué.`,
           },
           questions: [
             ['Combien de syllabes compte un alexandrin ?', ['12', '10', '8', '14'], 0, 'L’octosyllabe en compte 8, le décasyllabe 10 : ce sont les trois mètres à connaître.'],
@@ -189,21 +220,42 @@ Comparaison et **métaphore**, **personnification**, **oxymore**, **anaphore**, 
           axe: 'La poésie du XIXe au XXIe siècle',
           lecon: {
             titre: 'Rimbaud, 1870 — vingt-deux poèmes écrits à seize ans',
-            cours: `Parcours associé : **émancipations créatrices**. Tout, dans ce recueil, tient dans cette formule : un adolescent quitte sa ville, sa mère et les formes reçues, et le poème est le lieu où il s’en libère.
+            cours: `Parcours associé : **émancipations créatrices**. Tout tient dans cette formule : un adolescent quitte sa ville, sa mère et les formes reçues — et le poème est le lieu où il s’en libère.
 
 ## Ce que sont les « Cahiers de Douai »
-Ce n’est pas un recueil composé par son auteur, mais **vingt-deux poèmes** recopiés par Arthur Rimbaud, âgé de **quinze et seize ans**, chez son ami Paul Demeny à **Douai**, en **1870**, en deux liasses. Le titre est posthume — on parle aussi des « Cahiers de Douai » ou du « recueil Demeny ». Cette origine explique l’absence de progression narrative : ce sont des textes de fugue, écrits pendant les mois où Rimbaud s’échappe de Charleville.
+| Fait | Le détail |
+| Ce n’est **pas** un recueil composé par l’auteur | **Vingt-deux poèmes** recopiés à la main |
+| L’âge de Rimbaud | **Quinze et seize ans** |
+| Le lieu et la date | Chez son ami **Paul Demeny**, à **Douai**, en **1870** |
+| La forme | **Deux liasses** |
+| Le titre | **Posthume** — on dit aussi « recueil Demeny » |
+
+> Cette origine explique l’**absence de progression narrative** : ce sont des **textes de fugue**, écrits pendant les mois où Rimbaud s’échappe de Charleville.
 
 ## Trois veines
-- **La fugue et la sensation** : « Sensation », « Ma Bohème », « Au Cabaret-Vert », « Roman ». Le corps marche, mange, regarde ; la nature remplace la maison ; le poète se dit « bohémien », les poings dans ses poches crevées.
-- **La satire politique et sociale** : « Le Forgeron », « Rages de Césars », « Le Mal », « Le Dormeur du val ». Rimbaud écrit pendant la **guerre franco-prussienne** et la chute du Second Empire : le pouvoir, l’Église et l’armée y sont attaqués frontalement.
-- **La provocation et le corps** : « Vénus Anadyomène », « Les Reparties de Nina », « À la Musique ». La beauté conventionnelle est retournée en laideur crue, le sonnet servant à dire l’exact contraire de ce qu’il célébrait.
+| Veine | Ses textes | Ce qu’elle fait |
+| La **fugue** et la **sensation** | « Sensation », « Ma Bohème », « Au Cabaret-Vert », « Roman » | Le corps marche, mange, regarde ; la nature remplace la maison |
+| La **satire** politique et sociale | « Le Forgeron », « Rages de Césars », « Le Mal », « Le Dormeur du val » | Le pouvoir, l’Église et l’armée attaqués **frontalement** |
+| La **provocation** et le corps | « Vénus Anadyomène », « Les Reparties de Nina », « À la Musique » | La beauté conventionnelle **retournée en laideur crue** |
+
+Rimbaud écrit pendant la **guerre franco-prussienne** et la chute du Second Empire : le contexte est dans les textes.
 
 ## Le travail de la forme
-Rimbaud maîtrise le vers classique **et** le maltraite : sonnets réguliers, alexandrins impeccables, mais enjambements violents, rejets, ruptures de registre, mots familiers ou triviaux dans un moule noble. « Le Dormeur du val » en est le modèle : treize vers de nature riante, puis la chute — « Il a deux trous rouges au côté droit ».
+| Ce qu’il maîtrise | Ce qu’il maltraite |
+| Sonnets réguliers, alexandrins impeccables | **Enjambements violents**, rejets |
+| — | **Ruptures de registre** : mots familiers ou triviaux dans un moule noble |
 
-## Ce qu’il faut pouvoir dire en dissertation
-Que l’émancipation est **triple** : celle de l’adolescent contre sa famille et sa province, celle du citoyen contre l’ordre impérial et clérical, celle du poète contre les formes héritées. Et qu’elle passe par la **sensation** : le monde est d’abord touché, senti, mangé, avant d’être pensé.`,
+> « Le Dormeur du val » en est le modèle : **treize vers** de nature riante, puis la chute — « Il a **deux trous rouges** au côté droit ».
+
+## En dissertation
+L’émancipation est **triple** :
+
+| Contre quoi | De qui |
+| La famille et la province | L’**adolescent** |
+| L’ordre impérial et clérical | Le **citoyen** |
+| Les formes héritées | Le **poète** |
+
+> Et elle passe par la **sensation** : le monde est d’abord **touché, senti, mangé** — avant d’être pensé.`,
           },
           questions: [
             ['Combien de poèmes composent les Cahiers de Douai ?', ['22', '12', '50', '30'], 0, 'Recopiés en deux liasses chez Paul Demeny, à Douai, en 1870.'],
@@ -221,22 +273,46 @@ Que l’émancipation est **triple** : celle de l’adolescent contre sa famille
           axe: 'La poésie du XIXe au XXIe siècle',
           lecon: {
             titre: 'Ponge, 1952 — le poème montré en chantier',
-            cours: `Parcours associé : **dans l’atelier du poète**. L’œuvre est unique en son genre : au lieu de livrer des poèmes finis, Francis Ponge publie les **brouillons** eux-mêmes, datés, repris, contredits.
+            cours: `Parcours associé : **dans l’atelier du poète**. L’œuvre est unique en son genre : au lieu de livrer des poèmes **finis**, Francis Ponge publie les **brouillons** eux-mêmes — datés, repris, contredits.
 
 ## Un livre de carnets
-*La rage de l’expression* rassemble sept ensembles écrits entre **1938 et 1944**, publiés en **1952** : « Berges de la Loire », « Le Carnet du bois de pins », « La Mounine », « L’Œillet », « La Guêpe », « Le Mimosa », « Notes prises pour un oiseau ». Chacun est un **journal d’écriture** : on y voit le poète recommencer, rayer, dater ses séances, avouer ses échecs.
+| Fait | Le détail |
+| Période d’écriture | **1938-1944** |
+| Publication | **1952** |
+| Composition | **Sept** ensembles |
+
+« Berges de la Loire », « Le Carnet du bois de pins », « La Mounine », « L’Œillet », « La Guêpe », « Le Mimosa », « Notes prises pour un oiseau ».
+
+> Chacun est un **journal d’écriture** : on y voit le poète **recommencer**, rayer, **dater ses séances**, avouer ses échecs.
 
 ## Le parti pris des choses, poursuivi
-Ponge choisit des objets modestes — un pin, un œillet, une guêpe, une branche de mimosa — et cherche à les dire **sans les humaniser ni les symboliser**. C’est le refus du lyrisme romantique : la chose n’est pas un miroir des sentiments du poète, elle est un défi posé au langage.
+Ponge choisit des objets **modestes** — un pin, un œillet, une guêpe, une branche de mimosa — et cherche à les dire **sans les humaniser ni les symboliser**.
+
+| Le lyrisme romantique | Ponge |
+| La chose est un **miroir** des sentiments du poète | La chose est un **défi posé au langage** |
 
 ## Ce que veut dire « rage »
-Le mot dit l’acharnement : la langue ne rend jamais l’objet, et il faut donc reprendre. « Berges de la Loire » ouvre par une déclaration de méthode — se tenir devant l’objet et se laisser corriger par lui plutôt que par la rhétorique. L’échec est ainsi **intégré à l’œuvre** : c’est le sujet, pas l’accident.
+Le mot dit l’**acharnement** : la langue ne rend **jamais** l’objet, il faut donc reprendre.
+
+> « Berges de la Loire » ouvre par une déclaration de méthode : se tenir **devant l’objet** et se laisser corriger **par lui**, plutôt que par la rhétorique.
+
+> L’**échec est intégré à l’œuvre** : c’est le **sujet**, pas l’accident.
 
 ## L’écriture
-Le texte joue de l’**étymologie** et du **dictionnaire** (Ponge écrit avec le Littré ouvert), des **jeux sonores**, des définitions successives et des néologismes. La prose y côtoie le vers, la note brute côtoie la phrase travaillée. On y trouve peu de « je » sentimental et beaucoup de **je** technicien : un ouvrier au travail.
+| Outil | Son usage |
+| L’**étymologie** et le **dictionnaire** | Ponge écrit avec le **Littré ouvert** |
+| Les **jeux sonores** | Le mot travaillé pour lui-même |
+| Les **définitions successives** | Aucune n’est la bonne |
+| Les **néologismes** | Quand la langue manque |
 
-## Ce qu’il faut pouvoir dire en dissertation
-Que l’œuvre déplace l’idée même de poème : le poème n’est plus un résultat mais un **processus**, et le lecteur est mis à la place du poète, dans l’atelier, devant l’objet qui résiste. Et que ce déplacement est une leçon de **modestie** — nommer une guêpe correctement est plus difficile que chanter ses états d’âme.`,
+La prose y côtoie le vers, la note brute la phrase travaillée.
+
+> On y trouve peu de « je » **sentimental** et beaucoup de « je » **technicien** : un **ouvrier au travail**.
+
+## En dissertation
+> L’œuvre déplace l’idée même de poème : le poème n’est plus un **résultat** mais un **processus** — et le lecteur est mis à la place du poète, dans l’atelier, **devant l’objet qui résiste**.
+
+> C’est aussi une leçon de **modestie** : nommer une guêpe correctement est plus difficile que chanter ses états d’âme.`,
           },
           questions: [
             ['Quelle est la particularité de La rage de l’expression ?', ['Elle publie les brouillons et les reprises du poète', 'Elle ne contient que des sonnets', 'Elle raconte la vie de l’auteur', 'Elle est écrite en vers réguliers'], 0, 'Le livre est fait de carnets datés : on voit le poème se chercher.'],
@@ -254,27 +330,51 @@ Que l’œuvre déplace l’idée même de poème : le poème n’est plus un r�
           axe: 'La poésie du XIXe au XXIe siècle',
           lecon: {
             titre: 'Hélène Dorion, 2021 — la forêt comme miroir intime',
-            cours: `Parcours associé : **la poésie, la nature, l’intime**. Publié en **2021**, le recueil de la poétesse québécoise **Hélène Dorion** est la première œuvre d’une autrice vivante inscrite au programme du bac de français.
+            cours: `Parcours associé : **la poésie, la nature, l’intime**. Publié en **2021**, le recueil de la poétesse québécoise **Hélène Dorion** est la **première œuvre d’une autrice vivante** inscrite au programme du bac de français.
 
 ## La composition
-Quatre sections, précédées d’un poème liminaire :
-1. **L’écorce incertaine** — la forêt comme corps et comme mémoire ;
-2. **Une chute de galets** — la fragilité, la perte, le deuil ;
-3. **Mes forêts sont de longues traînées de temps** — le temps, l’enfance, la filiation ;
-4. **Le bruissement du temps** — l’écoute, la présence au monde, l’apaisement.
-Des **citations** en exergue (Rilke, Char, des scientifiques) ouvrent les sections : le recueil dialogue avec d’autres voix.
+Quatre sections, précédées d’un poème liminaire.
+
+| Section | Son motif |
+| **L’écorce incertaine** | La forêt comme **corps** et comme mémoire |
+| **Une chute de galets** | La fragilité, la perte, le **deuil** |
+| **Mes forêts sont de longues traînées de temps** | Le temps, l’enfance, la **filiation** |
+| **Le bruissement du temps** | L’écoute, la présence au monde, l’**apaisement** |
+
+> Des **citations en exergue** — Rilke, Char, des scientifiques — ouvrent les sections : le recueil **dialogue** avec d’autres voix.
 
 ## La forêt n’est pas un décor
-Elle est un **double du sujet** : l’arbre a des racines, des cernes, une écorce, il tombe et repousse — autant de mots qui disent aussi une vie humaine. Le titre le dit avec un possessif : **mes** forêts. Le paysage est intérieur autant qu’extérieur, et c’est en le décrivant que le « je » se dit.
+Elle est un **double du sujet**.
+
+| Le mot de l’arbre | Ce qu’il dit aussi de l’humain |
+| Les **racines** | L’origine, la filiation |
+| Les **cernes** | Le temps accumulé |
+| L’**écorce** | La protection, la blessure |
+| Tomber et repousser | La perte et le recommencement |
+
+> Le titre le dit avec un **possessif** : *mes* forêts. Le paysage est **intérieur autant qu’extérieur**, et c’est en le décrivant que le « je » se dit.
 
 ## Une écriture du dépouillement
-**Vers libres**, absence quasi totale de ponctuation, poèmes courts, blancs typographiques nombreux : le silence fait partie du texte. Les anaphores (« mes forêts sont… ») donnent une pulsation d’incantation. La langue est simple, concrète, sans effet rare — la difficulté est ailleurs, dans la densité des images.
+| Procédé | Son effet |
+| **Vers libres**, poèmes courts | Une lecture qui respire |
+| Absence quasi totale de **ponctuation** | Le sens reste ouvert |
+| **Blancs typographiques** nombreux | Le **silence fait partie du texte** |
+| Les **anaphores** — « mes forêts sont… » | Une pulsation d’**incantation** |
+
+> La langue est **simple, concrète, sans effet rare** : la difficulté est ailleurs, dans la **densité des images**.
 
 ## Les thèmes du parcours
-L’**intime** : le deuil du père, l’enfance, le corps qui vieillit. La **nature** : l’arbre, la lumière, l’eau, la neige, l’oiseau. Et leur point de contact : l’**écologie**, non comme discours militant mais comme conscience que l’on appartient au vivant — quand la forêt brûle, c’est nous que la perte atteint.
+| Thème | Ce qu’il recouvre |
+| L’**intime** | Le deuil du père, l’enfance, le corps qui vieillit |
+| La **nature** | L’arbre, la lumière, l’eau, la neige, l’oiseau |
+| L’**écologie** | Non comme discours militant, mais comme **conscience d’appartenir au vivant** |
 
-## Ce qu’il faut pouvoir dire en dissertation
-Que le recueil refuse la séparation entre le sujet et le monde : le poème ne décrit pas la nature vue par un moi, il montre un moi **fait de** nature. C’est en cela qu’il renouvelle le lyrisme sans le refuser, contrairement à Ponge.`,
+> Quand la forêt brûle, c’est **nous** que la perte atteint.
+
+## En dissertation
+> Le recueil **refuse la séparation** entre le sujet et le monde : le poème ne décrit pas la nature **vue par** un moi, il montre un moi **fait de** nature.
+
+> C’est en cela qu’il **renouvelle le lyrisme sans le refuser** — contrairement à Ponge. La comparaison est le meilleur angle de dissertation.`,
           },
           questions: [
             ['En quelle année Mes forêts a-t-il été publié ?', ['2021', '1998', '2010', '1952'], 0, 'C’est la première œuvre d’une autrice vivante inscrite au programme du bac de français.'],
@@ -295,26 +395,35 @@ Que le recueil refuse la séparation entre le sujet et le monde : le poème ne d
           axe: 'La littérature d’idées du XVIe au XVIIIe siècle',
           lecon: {
             titre: 'L’objet d’étude : convaincre, persuader, délibérer',
-            cours: `Trois siècles pendant lesquels la littérature sert à penser : l’humanisme, l’âge classique, les Lumières. L’objet d’étude ne demande pas d’apprendre une histoire des idées, mais de savoir **comment un texte agit sur son lecteur**.
+            cours: `Trois siècles pendant lesquels la littérature sert à **penser** : l’humanisme, l’âge classique, les Lumières. L’objet d’étude ne demande pas une histoire des idées, mais de savoir **comment un texte agit sur son lecteur**.
 
-## Convaincre, persuader, délibérer
-- **Convaincre** s’adresse à la raison : thèse, arguments, exemples, connecteurs logiques.
-- **Persuader** s’adresse aux émotions et à l’imagination : récit, image, ironie, apostrophe, rythme.
-- **Délibérer** pèse le pour et le contre, souvent par le **dialogue**, sans trancher d’avance.
-Un même texte fait presque toujours les trois : l’analyse consiste à repérer lequel domine et pourquoi.
+## Les trois visées
+| Visée | À quoi elle s’adresse | Ses moyens |
+| **Convaincre** | À la **raison** | Thèse, arguments, exemples, connecteurs logiques |
+| **Persuader** | Aux **émotions** et à l’imagination | Récit, image, ironie, apostrophe, rythme |
+| **Délibérer** | Au **jugement** | Le pour et le contre, souvent par **dialogue**, sans trancher d’avance |
 
-## L’argumentation directe et indirecte
-L’**essai**, le **discours**, la **lettre ouverte**, l’**article** défendent une thèse à découvert. La **fable**, le **conte philosophique**, l’**apologue**, l’**utopie**, la **lettre fictive** la défendent par le détour de la fiction — plus efficace contre la censure, et souvent plus mémorable. Le **regard étranger** (le Persan, le Huron, la Péruvienne) est le procédé maître de l’argumentation indirecte : ce que l’habitude rend invisible devient absurde vu du dehors.
+> Un même texte fait presque toujours **les trois** : l’analyse consiste à repérer **laquelle domine, et pourquoi**.
+
+## Argumentation directe ou indirecte
+| | **Directe** | **Indirecte** |
+| Les formes | Essai, **discours**, lettre ouverte, article | **Fable**, conte philosophique, **apologue**, utopie, lettre fictive |
+| Son avantage | La clarté | Elle **échappe à la censure** et se retient mieux |
+
+> Le **regard étranger** — le Persan, le Huron, la Péruvienne — est le procédé maître de l’argumentation indirecte : **ce que l’habitude rend invisible devient absurde vu du dehors**.
 
 ## Trois moments
-- **L’humanisme (XVIe)** : confiance dans l’étude et dans les Anciens, mais examen critique de tout — Montaigne, Rabelais, La Boétie.
-- **L’âge classique (XVIIe)** : le moraliste observe l’homme en société ; la forme est brève et ciselée — La Rochefoucauld, La Bruyère, La Fontaine.
-- **Les Lumières (XVIIIe)** : la raison contre les préjugés, la tolérance, l’égalité, la diffusion des savoirs — Montesquieu, Voltaire, Diderot, Fontenelle, Olympe de Gouges.
+| Moment | Sa posture | Ses auteurs |
+| L’**humanisme** (XVIe) | Confiance dans l’étude et les Anciens, **examen critique de tout** | Montaigne, Rabelais, La Boétie |
+| L’**âge classique** (XVIIe) | Le moraliste observe l’homme **en société** ; la forme est **brève et ciselée** | La Rochefoucauld, La Bruyère, La Fontaine |
+| Les **Lumières** (XVIIIe) | La raison contre les **préjugés** : tolérance, égalité, diffusion des savoirs | Montesquieu, Voltaire, Diderot, Fontenelle, Olympe de Gouges |
 
 ## Les outils à savoir nommer
-**Ironie** et **antiphrase**, **hyperbole**, **question rhétorique**, **antithèse**, **gradation**, **modalisateurs**, **connecteurs logiques**, **lexique péjoratif ou mélioratif**. À l’oral, chaque outil repéré doit être rattaché à une **visée** : ridiculiser, émouvoir, faire douter, faire agir.
+**Ironie** et **antiphrase**, **hyperbole**, **question rhétorique**, **antithèse**, **gradation**, **modalisateurs**, **connecteurs logiques**, lexique **péjoratif** ou **mélioratif**.
 
-> Un texte d’idées se lit toujours en se demandant : contre qui écrit-il, et pour convaincre qui ?`,
+> À l’oral, chaque outil repéré doit être rattaché à une **visée** : ridiculiser, émouvoir, faire douter, faire agir.
+
+> Un texte d’idées se lit toujours en se demandant : **contre qui** écrit-il, et **pour convaincre qui** ?`,
           },
           questions: [
             ['À quoi s’adresse une argumentation qui vise à convaincre ?', ['À la raison du lecteur', 'À ses émotions', 'À son imagination', 'À sa mémoire'], 0, 'Persuader s’adresse aux émotions ; délibérer pèse le pour et le contre.'],
@@ -332,24 +441,41 @@ L’**essai**, le **discours**, la **lettre ouverte**, l’**article** défenden
           axe: 'La littérature d’idées du XVIe au XVIIIe siècle',
           lecon: {
             titre: 'La Boétie, vers 1548 — pourquoi obéit-on ?',
-            cours: `Parcours associé : **peut-on se libérer de la servitude ?** Le *Discours de la servitude volontaire*, aussi appelé *Contr’un*, est écrit par **Étienne de La Boétie** vers **1548**, alors qu’il n’a pas vingt ans, et publié après sa mort.
+            cours: `Parcours associé : **peut-on se libérer de la servitude ?** Le *Discours de la servitude volontaire*, aussi appelé *Contr’un*, est écrit par **Étienne de La Boétie** vers **1548** — il n’a pas **vingt ans** — et publié **après sa mort**.
 
 ## Le renversement de départ
-La question habituelle est : comment le tyran tient-il le peuple ? La Boétie la retourne : **comment le peuple tient-il le tyran ?** Un homme seul ne peut rien contre des millions ; s’il domine, c’est que les dominés lui **donnent** leur force. La domination n’est donc pas subie, elle est **consentie** — d’où le paradoxe du titre : une servitude *volontaire*.
+| La question habituelle | La question de La Boétie |
+| Comment le **tyran** tient-il le peuple ? | Comment le **peuple** tient-il le tyran ? |
+
+> Un homme seul ne peut rien contre des millions. S’il domine, c’est que les dominés lui **donnent** leur force.
+
+> La domination n’est donc **pas subie**, elle est **consentie** — d’où le paradoxe du titre : une servitude *volontaire*.
 
 ## La conséquence, immédiate et désarmante
-Puisque personne ne vous force à servir, il suffit de cesser : « **Soyez résolus de ne servir plus, et vous voilà libres.** » Pas de bataille, pas d’armes : un simple retrait du consentement. Le tyran, écrit La Boétie, tombe comme un colosse dont on a retiré le socle.
+« **Soyez résolus de ne servir plus, et vous voilà libres.** »
+
+| Ce qu’il ne faut pas | Ce qu’il suffit de faire |
+| Ni bataille, ni armes | **Retirer son consentement** |
+
+> Le tyran, écrit La Boétie, tombe comme un **colosse dont on a retiré le socle**.
 
 ## Les trois ressorts de l’obéissance
-1. **L’habitude** : on naît sous le joug, on croit qu’il est naturel. « La première raison de la servitude volontaire, c’est la coutume. »
-2. **Le divertissement** : jeux, théâtres, fêtes, distributions de blé — le pouvoir amuse ceux qu’il dépouille. La Boétie cite les Romains, mais chacun peut actualiser.
-3. **La chaîne des complices** : « cinq ou six » profitent du tyran, six cents en profitent à leur tour, six mille ensuite — une **pyramide d’intérêts** qui fait tenir l’édifice sans que le tyran ait à agir.
+| Ressort | Comment il agit |
+| L’**habitude** | On naît sous le joug, on le croit **naturel** : « la première raison de la servitude volontaire, c’est la **coutume** » |
+| Le **divertissement** | Jeux, théâtres, fêtes, distributions de blé : le pouvoir **amuse ceux qu’il dépouille** |
+| La **chaîne des complices** | « Cinq ou six » profitent du tyran, six cents en profitent à leur tour, six mille ensuite |
+
+> La troisième est la plus redoutable : une **pyramide d’intérêts** fait tenir l’édifice **sans que le tyran ait à agir**.
 
 ## L’écriture
-Un texte court, oral, brûlant : **apostrophes** au lecteur, **questions rhétoriques**, **exclamations**, **métaphores** frappantes (le colosse, la chaîne, le feu). L’érudition antique (Xerxès, les Spartiates, Ulysse) sert la démonstration, jamais l’ornement. C’est un discours d’humaniste : la liberté est **naturelle**, la servitude est **acquise**.
+Un texte **court, oral, brûlant** : **apostrophes** au lecteur, **questions rhétoriques**, exclamations, **métaphores** frappantes — le colosse, la chaîne, le feu.
 
-## Ce qu’il faut pouvoir dire en dissertation
-Que l’œuvre déplace la responsabilité politique du tyran vers le peuple, et que cette audace la rendra utilisable par tous les camps — protestants au XVIe siècle, révolutionnaires ensuite, anarchistes et théoriciens de la désobéissance civile au XXe. La Boétie était l’ami intime de **Montaigne**, qui lui consacre le chapitre « De l’amitié » des *Essais*.`,
+> L’érudition antique (Xerxès, les Spartiates, Ulysse) sert la **démonstration**, jamais l’ornement. C’est un discours d’humaniste : la **liberté est naturelle**, la **servitude est acquise**.
+
+## En dissertation
+> L’œuvre déplace la **responsabilité politique** du tyran vers le peuple. Cette audace la rendra utilisable par **tous les camps** : protestants au XVIe, révolutionnaires ensuite, anarchistes et théoriciens de la **désobéissance civile** au XXe.
+
+La Boétie était l’ami intime de **Montaigne**, qui lui consacre le chapitre « De l’amitié » des *Essais*.`,
           },
           questions: [
             ['Quelle question centrale le Discours de la servitude volontaire pose-t-il ?', ['Pourquoi les peuples consentent-ils à obéir à un seul homme ?', 'Comment un roi doit-il gouverner ?', 'Faut-il tuer le tyran ?', 'Quelle est la meilleure constitution ?'], 0, 'Le renversement est là : ce n’est pas le tyran qui tient le peuple, c’est le peuple qui le porte.'],
@@ -367,22 +493,47 @@ Que l’œuvre déplace la responsabilité politique du tyran vers le peuple, et
           axe: 'La littérature d’idées du XVIe au XVIIIe siècle',
           lecon: {
             titre: 'Fontenelle, 1686 — six soirs pour comprendre le ciel',
-            cours: `Parcours associé : **peut-on rendre la science accessible ?** Publié en **1686**, l’ouvrage de **Bernard Le Bouyer de Fontenelle** invente presque la vulgarisation scientifique moderne.
+            cours: `Parcours associé : **peut-on rendre la science accessible ?** Publié en **1686**, l’ouvrage de **Bernard Le Bouyer de Fontenelle** invente presque la **vulgarisation scientifique** moderne.
 
-## Un dispositif : le dialogue nocturne
-Un philosophe séjourne chez une **marquise**. Chaque soir, dans le parc du château, ils regardent le ciel et conversent : **six soirs**, six leçons. Le lecteur, comme la marquise, part de zéro. Le choix du **dialogue** n’est pas décoratif : il permet les objections, les résistances, les images — et il rend visible le chemin de la compréhension, pas seulement son résultat.
+## Le dispositif
+Un philosophe séjourne chez une **marquise**. Chaque soir, dans le parc du château, ils regardent le ciel et conversent : **six soirs**, **six leçons**.
+
+| Ce que le dialogue permet | Pourquoi c’est décisif |
+| Les **objections** de la marquise | Elles sont celles du **lecteur** |
+| Les **résistances** et les images | La compréhension progresse par étapes |
+| — | Il rend visible le **chemin**, pas seulement le **résultat** |
+
+> Le lecteur, comme la marquise, **part de zéro**.
 
 ## Ce qui est enseigné
-Le **système de Copernic** — la Terre tourne autour du Soleil et sur elle-même —, la taille de l’univers, la nature des planètes, puis l’hypothèse audacieuse : les autres mondes pourraient être **habités**. La Lune, les planètes, les étoiles fixes considérées comme autant de soleils : Fontenelle expose la pluralité des mondes en la présentant comme une **conjecture raisonnable**, jamais comme un dogme.
+| Notion | Ce qu’elle bouscule |
+| Le **système de Copernic** | La Terre tourne autour du Soleil **et** sur elle-même |
+| La **taille** de l’univers | Elle dépasse l’imagination |
+| La nature des **planètes** | Des mondes, pas des points lumineux |
+| La **pluralité des mondes habités** | Les étoiles fixes vues comme autant de **soleils** |
+
+> Fontenelle la présente comme une **conjecture raisonnable**, **jamais comme un dogme**. La prudence est une méthode.
 
 ## Les images qui font tout
-La comparaison célèbre du **spectacle d’opéra** : le spectateur voit les effets, le philosophe cherche les machines et les cordes cachées derrière le décor. La Terre est un vaisseau, l’univers une horloge, les habitants d’autres mondes des voisins qu’on n’a pas encore visités. Chaque notion difficile est rendue par une **analogie prise dans le monde mondain** de la marquise.
+| Image | Ce qu’elle explique |
+| Le **spectacle d’opéra** | Le spectateur voit les **effets** ; le philosophe cherche les **machines et les cordes** derrière le décor |
+| La Terre comme **vaisseau** | Le mouvement qu’on ne sent pas |
+| L’univers comme **horloge** | Un mécanisme réglé |
+| Les autres mondes comme **voisins** | Qu’on n’a pas encore visités |
+
+> Chaque notion difficile est rendue par une **analogie prise dans le monde mondain** de la marquise.
 
 ## Le ton
-**Galanterie**, esprit, humour, compliments à l’interlocutrice : Fontenelle écrit d’abord pour un public **mondain, largement féminin**, exclu du latin et des académies. Le badinage est une stratégie de diffusion, pas une faiblesse — et il a une portée politique : il suppose que la science n’est pas réservée aux savants.
+**Galanterie**, esprit, humour, compliments à l’interlocutrice : Fontenelle écrit pour un public **mondain, largement féminin**, exclu du latin et des académies.
 
-## Ce qu’il faut pouvoir dire en dissertation
-Que l’œuvre est prise dans une tension : rendre accessible, c’est simplifier, et simplifier, c’est risquer de déformer. Fontenelle y répond par le dialogue, qui laisse la marquise poser les objections du lecteur, et par la **prudence** — il présente des hypothèses, il n’assène pas de vérités. L’ouvrage annonce les Lumières : diffuser les savoirs est déjà une manière de combattre les préjugés.`,
+> Le badinage est une **stratégie de diffusion**, pas une faiblesse — et il a une portée **politique** : il suppose que la science **n’est pas réservée aux savants**.
+
+## En dissertation
+| La tension de l’œuvre | La réponse de Fontenelle |
+| Rendre accessible, c’est **simplifier** | Le **dialogue** : la marquise pose les objections |
+| Simplifier, c’est risquer de **déformer** | La **prudence** : des hypothèses, pas des vérités assénées |
+
+> L’ouvrage annonce les Lumières : **diffuser les savoirs est déjà une manière de combattre les préjugés**.`,
           },
           questions: [
             ['Quelle forme littéraire Fontenelle choisit-il ?', ['Le dialogue, sur six soirs', 'Le traité en chapitres numérotés', 'La lettre ouverte', 'Le conte philosophique'], 0, 'Le dialogue rend visible le chemin de la compréhension, objections comprises.'],
@@ -400,22 +551,48 @@ Que l’œuvre est prise dans une tension : rendre accessible, c’est simplifie
           axe: 'La littérature d’idées du XVIe au XVIIIe siècle',
           lecon: {
             titre: 'Françoise de Graffigny, 1747 — une étrangère juge la France',
-            cours: `Le parcours associé tourne autour du **regard éloigné** et de la **découverte de soi** (l’intitulé exact figure sur le descriptif de votre professeur). Le roman épistolaire de **Françoise de Graffigny** paraît en **1747**, dans une version augmentée en **1752** ; il fut l’un des plus grands succès du siècle.
+            cours: `Le parcours tourne autour du **regard éloigné** et de la **découverte de soi**. Le roman épistolaire de **Françoise de Graffigny** paraît en **1747**, augmenté en **1752** : l’un des plus grands succès du siècle.
 
 ## L’histoire
-**Zilia**, jeune Inca promise à **Aza**, est enlevée par les conquistadors espagnols le jour même de leurs noces, puis capturée en mer par des Français. Recueillie par le chevalier **Déterville**, elle arrive en France, dont elle ignore tout : la langue, les usages, la religion, la place des femmes. Elle écrit à Aza sans relâche — d’abord sur des **quipus**, ces cordelettes nouées qui servaient d’écriture aux Incas, puis, quand elle les a épuisés, en **français**, qu’elle a appris.
+| Étape | Ce qui arrive à Zilia |
+| Le début | Jeune Inca promise à **Aza**, elle est enlevée par les **conquistadors** le jour de ses noces |
+| En mer | Capturée par des **Français** |
+| En France | Recueillie par le chevalier **Déterville** ; elle ignore tout — langue, usages, religion, place des femmes |
+| Elle écrit | D’abord sur des **quipus**, cordelettes nouées des Incas ; puis, épuisés, **en français**, qu’elle a appris |
 
 ## Le regard étranger comme arme
-Ne rien comprendre permet de tout décrire sans l’excuse de l’habitude : les miroirs, les carrosses, les rites religieux, la politesse mondaine deviennent des énigmes, donc des absurdités. Graffigny attaque ainsi la **superficialité** de la société française, l’hypocrisie religieuse, la vanité — et surtout l’**éducation des femmes**, réduite à des ornements et privée de savoir, qu’elle dénonce dans une lettre restée célèbre.
+Ne rien comprendre permet de **tout décrire sans l’excuse de l’habitude**.
+
+| L’objet devenu énigme | Ce qu’il dévoile |
+| Les **miroirs**, les carrosses | La vanité |
+| Les rites **religieux** | L’hypocrisie |
+| La **politesse mondaine** | La superficialité |
+| L’**éducation des femmes** | Réduite à des ornements, **privée de savoir** |
+
+> La lettre sur l’éducation des femmes est restée célèbre : c’est la charge la plus directe du livre.
 
 ## Une héroïne qui apprend
-Le roman est aussi un **récit d’apprentissage** : Zilia passe de l’incompréhension totale à la maîtrise de la langue, puis à l’analyse critique. Écrire, pour elle, c’est d’abord survivre, ensuite comprendre, enfin exister par soi-même.
+Le roman est aussi un **récit d’apprentissage**.
+
+| Étape | Ce qu’écrire devient |
+| D’abord | **Survivre** |
+| Ensuite | **Comprendre** |
+| Enfin | **Exister par soi-même** |
 
 ## Un dénouement sans mariage
-Aza, retrouvé, s’est converti et va épouser une Espagnole. Déterville aime Zilia et espère. Or Zilia refuse **les deux** : ni l’amant perdu, ni le mari disponible. Elle choisit l’**amitié**, l’étude et la retraite dans la maison que Déterville lui a offerte. Ce refus du mariage — impensable dans le roman de l’époque, où l’héroïne finit mariée ou morte — est le geste le plus radical du livre.
+| Prétendant | Ce qui se passe |
+| **Aza**, retrouvé | Converti, il va épouser une Espagnole |
+| **Déterville** | Il aime Zilia et espère |
+| **Zilia** | Elle refuse **les deux** |
 
-## Ce qu’il faut pouvoir dire en dissertation
-Que la forme épistolaire fait tenir ensemble les deux visées : la **satire** de la société d’accueil et la **construction d’un sujet** féminin autonome. Le roman ne se contente pas de critiquer la condition des femmes, il montre une femme qui, page après page, s’en sort par le langage.`,
+Elle choisit l’**amitié**, l’**étude** et la retraite dans la maison offerte par Déterville.
+
+> Ce refus du mariage est **impensable** dans le roman de l’époque, où l’héroïne finit **mariée ou morte**. C’est le geste le plus radical du livre.
+
+## En dissertation
+> La forme **épistolaire** fait tenir ensemble les deux visées : la **satire** de la société d’accueil et la **construction d’un sujet féminin autonome**.
+
+> Le roman ne se contente pas de **critiquer** la condition des femmes : il **montre une femme qui, page après page, s’en sort par le langage**.`,
           },
           questions: [
             ['Qui est Zilia ?', ['Une jeune Inca enlevée par les Espagnols puis conduite en France', 'Une aristocrate française en voyage au Pérou', 'Une religieuse espagnole', 'Une servante de Déterville'], 0, 'Son ignorance des usages français est le moteur du regard critique.'],
@@ -436,27 +613,47 @@ Que la forme épistolaire fait tenir ensemble les deux visées : la **satire** d
           axe: 'Le roman et le récit du Moyen Âge au XXIe siècle',
           lecon: {
             titre: 'L’objet d’étude : qui raconte, et d’où ?',
-            cours: `Le roman est le genre qui a le plus changé : né en vers au Moyen Âge, il devient au XIXe siècle la forme dominante, puis se retourne contre lui-même au XXe. L’objet d’étude demande de savoir analyser un **récit**, pas seulement d’en résumer l’histoire.
+            cours: `Le roman est le genre qui a le **plus changé** : né en vers au Moyen Âge, forme dominante au XIXe, il se retourne contre lui-même au XXe. L’objet d’étude demande d’analyser un **récit** — pas d’en résumer l’histoire.
 
-## Les questions du narrateur
-- **Qui raconte ?** Narrateur **interne** (« je », personnage du récit), **externe** ou **omniscient** (il sait tout, entre dans les consciences).
-- **Depuis quel point de vue ?** La **focalisation** interne fait voir par les yeux d’un personnage, la focalisation zéro donne un savoir total, la focalisation externe filme du dehors sans jamais entrer dans les têtes.
-- **Quand ?** Récit **rétrospectif** (on raconte après coup, comme Des Grieux), **simultané**, ou récit **enchâssé** — un récit dans le récit, dispositif qui installe une distance et pose la question de la fiabilité du témoin.
+## Les trois questions du narrateur
+| Question | Les réponses possibles |
+| **Qui raconte ?** | Narrateur **interne** (« je », personnage), **externe**, ou **omniscient** (il entre dans les consciences) |
+| **Depuis quel point de vue ?** | Focalisation **interne** (par les yeux d’un personnage), **zéro** (savoir total), **externe** (on filme du dehors) |
+| **Quand ?** | Récit **rétrospectif** (après coup, comme Des Grieux), **simultané**, ou **enchâssé** |
+
+> Le récit **enchâssé** — un récit dans le récit — installe une distance et pose la question de la **fiabilité du témoin**.
 
 ## Le temps du récit
-**Sommaire** (on résume vingt ans en trois lignes), **scène** (le temps du récit épouse celui de l’histoire), **ellipse** (on saute), **pause** (description). L’**analepse** revient en arrière, la **prolepse** annonce. Comparer le temps de l’histoire et celui du récit, c’est déjà interpréter : ce qu’un roman étire, il le juge important.
+| Procédé | Ce qu’il fait |
+| Le **sommaire** | Vingt ans en trois lignes |
+| La **scène** | Le temps du récit **épouse** celui de l’histoire |
+| L’**ellipse** | On saute |
+| La **pause** | La description arrête l’action |
+| L’**analepse** | Retour en arrière |
+| La **prolepse** | Annonce de l’avenir |
+
+> Comparer le temps de l’**histoire** et celui du **récit**, c’est déjà interpréter : **ce qu’un roman étire, il le juge important**.
 
 ## Les grandes étapes
-- **Moyen Âge** : le roman est en vers, chevaleresque et courtois (Chrétien de Troyes).
-- **XVIIe** : le roman d’analyse naît avec *La Princesse de Clèves*.
-- **XVIIIe** : mémoires et lettres fictives donnent l’illusion du vrai (*Manon Lescaut*, *Les Liaisons dangereuses*).
-- **XIXe** : le **réalisme** (Balzac, Stendhal, Flaubert) puis le **naturalisme** (Zola) font du roman une science de la société.
-- **XXe-XXIe** : le récit se fragmente, le personnage se défait (Proust, Céline, le Nouveau Roman), l’autobiographie et le **récit intime** reviennent (Colette, Duras, Ernaux).
+| Époque | Ce que devient le roman |
+| **Moyen Âge** | En **vers**, chevaleresque et courtois — Chrétien de Troyes |
+| **XVIIe** | Le roman d’**analyse** : *La Princesse de Clèves* |
+| **XVIIIe** | **Mémoires** et **lettres fictives** donnent l’illusion du vrai — *Manon Lescaut*, *Les Liaisons dangereuses* |
+| **XIXe** | Le **réalisme** (Balzac, Stendhal, Flaubert) puis le **naturalisme** (Zola) : une science de la société |
+| **XXe-XXIe** | Le récit se **fragmente**, le personnage se défait (Proust, Céline, Nouveau Roman) ; le **récit intime** revient (Colette, Duras, Ernaux) |
 
 ## Le personnage
-Héros, antihéros, personnage **en marge** : le roman a très tôt cherché ses figures hors des normes — criminels, courtisanes, déclassés — parce qu’elles rendent visible ce que la société veut ignorer. Un personnage se lit par ses actes, ses paroles, son portrait, son nom, et par la manière dont le narrateur en parle.
+Héros, **antihéros**, personnage **en marge** : le roman a très tôt cherché ses figures **hors des normes** — criminels, courtisanes, déclassés.
 
-> Une dissertation sur le roman ne juge jamais un personnage moralement : elle demande ce que le récit fait de lui.`,
+> Pourquoi ? Parce qu’elles **rendent visible ce que la société veut ignorer**.
+
+| On lit un personnage par… | Exemple |
+| Ses **actes** | Ce qu’il fait, pas ce qu’il dit faire |
+| Ses **paroles** | Registre, adresse, silences |
+| Son **portrait** et son **nom** | Le choix n’est jamais neutre |
+| La manière dont le **narrateur** en parle | C’est là que se cache le jugement |
+
+> Une dissertation sur le roman **ne juge jamais un personnage moralement** : elle demande **ce que le récit fait de lui**.`,
           },
           questions: [
             ['Qu’est-ce qu’une focalisation interne ?', ['Le récit fait voir par les yeux d’un personnage', 'Le narrateur sait tout de tous les personnages', 'Le narrateur filme de l’extérieur sans entrer dans les consciences', 'Le récit est raconté après coup'], 0, 'La focalisation zéro donne un savoir total, la focalisation externe reste au-dehors.'],
@@ -474,23 +671,35 @@ Héros, antihéros, personnage **en marge** : le roman a très tôt cherché ses
           axe: 'Le roman et le récit du Moyen Âge au XXIe siècle',
           lecon: {
             titre: 'Prévost, 1731 — la passion racontée par celui qui l’a subie',
-            cours: `Parcours associé : **personnages en marge, plaisirs du romanesque**. Le titre complet dit déjà le dispositif : *Histoire du chevalier Des Grieux et de Manon Lescaut*, publiée en **1731** par l’**abbé Prévost** comme septième tome des *Mémoires et aventures d’un homme de qualité*.
+            cours: `Parcours associé : **personnages en marge, plaisirs du romanesque**. Le titre complet dit déjà le dispositif : *Histoire du chevalier Des Grieux et de Manon Lescaut*, publiée en **1731** par l’**abbé Prévost**.
 
 ## Un récit dans un récit
-Le narrateur premier, le **marquis de Renoncour**, croise à Pacy un convoi de filles qu’on déporte en Amérique, et parmi elles Manon. Deux ans plus tard, il retrouve **Des Grieux** à Calais et recueille son récit. Tout le roman est donc la **parole de Des Grieux**, à la première personne, après coup : nous ne voyons Manon que par les yeux de l’homme qui l’aime et qui se justifie.
+| Étape | Ce qui se passe |
+| Le narrateur premier, le **marquis de Renoncour** | Il croise à Pacy un convoi de filles qu’on **déporte en Amérique** — parmi elles, Manon |
+| Deux ans plus tard, à Calais | Il retrouve **Des Grieux** et recueille son récit |
+
+> Tout le roman est donc **la parole de Des Grieux**, à la première personne, **après coup**. Nous ne voyons Manon que **par les yeux de l’homme qui l’aime et qui se justifie**. C’est le point à ne jamais oublier.
 
 ## L’intrigue, par étapes
-1. **Amiens** : Des Grieux, dix-sept ans, promis à l’ordre de Malte, rencontre Manon qu’on envoie au couvent. Coup de foudre, fuite à Paris.
-2. **Paris** : la misère arrive vite. Manon accepte la protection de **M. de B…** ; Des Grieux, trahi, est ramené par sa famille et entre à **Saint-Sulpice**.
-3. **Le retour** : Manon vient l’arracher à sa vocation le jour de sa thèse en Sorbonne. Vie de jeu et d’expédients avec **Lescaut**, le frère.
-4. **La chute** : escroquerie de **G… M…**, arrestation, **Saint-Lazare** pour Des Grieux, l’**Hôpital** pour Manon, évasion, mort de Lescaut, seconde affaire G… M… fils.
-5. **La Louisiane** : Manon est déportée, Des Grieux la suit. Au **Nouvel Orléans**, ils vivent enfin en paix, jusqu’au duel avec Synnelet qui les jette dans le désert, où **Manon meurt**. Des Grieux l’enterre de ses mains.
+| Lieu | Ce qui arrive |
+| **Amiens** | Des Grieux, **dix-sept ans**, promis à l’ordre de Malte, rencontre Manon qu’on envoie au couvent. Coup de foudre, fuite |
+| **Paris** | La misère arrive vite ; Manon accepte la protection de **M. de B…** ; Des Grieux, trahi, entre à **Saint-Sulpice** |
+| Le **retour** | Manon vient l’arracher à sa vocation **le jour de sa thèse**. Vie de jeu avec **Lescaut**, le frère |
+| La **chute** | Escroquerie de **G… M…**, arrestation : **Saint-Lazare** pour lui, l’**Hôpital** pour elle ; évasion, mort de Lescaut |
+| La **Louisiane** | Manon déportée, Des Grieux la suit ; la paix enfin, puis le duel avec Synnelet, la fuite au désert, la **mort de Manon** |
+
+Des Grieux l’enterre **de ses mains**.
 
 ## Les personnages
-**Des Grieux** : noble, brillant, sincère — et menteur, tricheur, voleur, presque assassin. Il raconte lui-même sa déchéance en la présentant comme une fatalité. **Manon** : jamais analysée de l’intérieur, insaisissable, tendre et infidèle, incapable de supporter la pauvreté. **Tiberge** : l’ami fidèle, la voix de la morale, toujours écouté et jamais suivi.
+| Personnage | Ce qu’il est |
+| **Des Grieux** | Noble, brillant, sincère — **et** menteur, tricheur, voleur, presque assassin. Il raconte sa déchéance en la présentant comme une **fatalité** |
+| **Manon** | **Jamais analysée de l’intérieur** : insaisissable, tendre et infidèle, incapable de supporter la pauvreté |
+| **Tiberge** | L’ami fidèle, la voix de la morale — **toujours écouté, jamais suivi** |
 
 ## Le romanesque
-Le lecteur du XVIIIe siècle y trouve tout ce qu’un roman peut donner : coups de théâtre, évasions, duels, déguisements, larmes, exil, mort au désert. C’est le « plaisir du romanesque » du parcours : le récit tient par cette accélération constante, qui ne laisse jamais le temps de juger.`,
+Coups de théâtre, évasions, duels, déguisements, larmes, exil, mort au désert.
+
+> C’est le « plaisir du romanesque » du parcours : le récit tient par une **accélération constante** — qui ne laisse **jamais le temps de juger**.`,
           },
           questions: [
             ['Qui raconte l’histoire de Des Grieux et Manon ?', ['Des Grieux lui-même, à un narrateur qui rapporte son récit', 'Manon, dans son journal', 'Un narrateur omniscient', 'Tiberge, après leur mort'], 0, 'Le marquis de Renoncour recueille le récit : nous ne voyons Manon que par les yeux de Des Grieux.'],
@@ -508,21 +717,37 @@ Le lecteur du XVIIIe siècle y trouve tout ce qu’un roman peut donner : coups 
           axe: 'Le roman et le récit du Moyen Âge au XXIe siècle',
           lecon: {
             titre: 'Balzac, 1831 — le talisman qui rétrécit à chaque désir',
-            cours: `Parcours associé : **les romans de l’énergie : création et destruction**. Publié en **1831**, *La Peau de chagrin* ouvre les **Études philosophiques** de *La Comédie humaine*. Cette première partie en donne l’histoire et la structure.
+            cours: `Parcours associé : **les romans de l’énergie : création et destruction**. Publié en **1831**, *La Peau de chagrin* ouvre les **Études philosophiques** de *La Comédie humaine*.
 
 ## Trois parties, un mécanisme
-1. **Le Talisman** — Un jeune homme ruiné, **Raphaël de Valentin**, perd son dernier napoléon au jeu et se dirige vers la Seine pour s’y noyer. Pour attendre la nuit, il entre chez un **antiquaire**. Le vieillard lui montre une **peau d’onagre** portant une inscription orientale : elle exaucera tous ses souhaits, mais **rétrécira à chaque vœu**, et la vie de son possesseur avec elle. Raphaël la saisit et souhaite aussitôt un banquet — qu’il trouve en sortant, offert par ses amis.
-2. **La Femme sans cœur** — Récit rétrospectif : Raphaël raconte sa vie d’étudiant pauvre, son travail acharné, son amour pour la comtesse **Fœdora**, belle, riche et incapable d’aimer, puis sa ruine et son désespoir.
-3. **L’Agonie** — Devenu immensément riche, Raphaël s’aperçoit que chaque désir raccourcit la peau. Il tente de ne plus rien vouloir : régime, silence, campagne, science. Savants et médecins échouent à étirer le talisman. **Pauline**, qui l’aime depuis toujours, réapparaît ; en la désirant, il meurt dans ses bras.
+| Partie | Ce qui s’y passe |
+| **Le Talisman** | **Raphaël de Valentin**, ruiné, perd son dernier napoléon au jeu et va se noyer. Il entre chez un **antiquaire** qui lui montre une **peau d’onagre** |
+| **La Femme sans cœur** | Récit **rétrospectif** : l’étudiant pauvre, le travail acharné, l’amour pour **Fœdora**, la ruine |
+| **L’Agonie** | Devenu riche, Raphaël voit la peau rétrécir. Il tente de **ne plus rien vouloir**. **Pauline** réapparaît : en la désirant, il meurt |
+
+## Le pacte
+La peau **exauce tous les souhaits** — mais elle **rétrécit à chaque vœu**, et la vie de son possesseur avec elle.
+
+> Raphaël la saisit et souhaite aussitôt un banquet, qu’il trouve en sortant, offert par ses amis. Le piège est refermé **dans la même page**.
 
 ## Les personnages
-**Raphaël de Valentin** : l’intelligence et l’ambition, brûlées par l’envie de vivre. **Fœdora** : « la femme sans cœur », figure de la société parisienne, séduisante et vide. **Pauline** : l’amour désintéressé, longtemps ignoré parce que pauvre. L’**antiquaire** : le vieillard qui a survécu en ne désirant rien, contre-modèle exact de Raphaël. **Rastignac** : l’ami cynique, qui enseigne l’art de réussir.
+| Personnage | Ce qu’il représente |
+| **Raphaël de Valentin** | L’intelligence et l’ambition, **brûlées par l’envie de vivre** |
+| **Fœdora** | « La femme sans cœur » : la société parisienne, **séduisante et vide** |
+| **Pauline** | L’amour désintéressé — **longtemps ignoré parce que pauvre** |
+| L’**antiquaire** | Le vieillard qui a survécu **en ne désirant rien** : le contre-modèle exact |
+| **Rastignac** | L’ami cynique, qui enseigne l’art de réussir |
 
 ## Le pacte fantastique
-Le talisman est emprunté au conte, mais Balzac l’installe dans un Paris minutieusement décrit — la maison de jeu du Palais-Royal, le magasin d’antiquités, l’orgie chez Taillefer, les salles de rédaction. C’est le **réalisme fantastique** : un objet impossible dans un monde parfaitement documenté, ce qui rend la fable d’autant plus dure.
+| L’élément impossible | Le monde qui l’entoure |
+| Le **talisman**, emprunté au conte | Un Paris **minutieusement décrit** : la maison de jeu du Palais-Royal, le magasin d’antiquités, l’orgie chez Taillefer, les salles de rédaction |
+
+> C’est le **réalisme fantastique** : un objet impossible dans un monde **parfaitement documenté** — ce qui rend la fable **d’autant plus dure**.
 
 ## L’inscription de la peau
-Le texte gravé donne la loi du roman : posséder tout, à condition de ne plus rien vouloir — « Si tu me possèdes, tu posséderas tout, mais ta vie m’appartiendra. » Vouloir, c’est vivre ; vivre, c’est se consumer.`,
+« Si tu me possèdes, tu posséderas tout, mais ta vie m’appartiendra. »
+
+> **Vouloir, c’est vivre ; vivre, c’est se consumer.** Toute la loi du roman tient dans cette phrase gravée.`,
           },
           questions: [
             ['Que fait la peau de chagrin à chaque souhait exaucé ?', ['Elle rétrécit, et la vie de son possesseur avec elle', 'Elle change de couleur', 'Elle devient plus grande', 'Elle disparaît une journée'], 0, 'Vouloir, c’est vivre ; vivre, c’est se consumer : c’est la loi du roman.'],
@@ -540,27 +765,49 @@ Le texte gravé donne la loi du roman : posséder tout, à condition de ne plus 
           axe: 'Le roman et le récit du Moyen Âge au XXIe siècle',
           lecon: {
             titre: 'Balzac — l’énergie qui crée est celle qui détruit',
-            cours: `Cette seconde partie prend le roman par son **parcours** : *les romans de l’énergie : création et destruction*. Le mot « énergie » n’est pas une image chez Balzac, c’est une **loi physique** appliquée à l’homme.
+            cours: `Cette seconde partie prend le roman par son **parcours** : *les romans de l’énergie*. Le mot « énergie » n’est pas une image chez Balzac : c’est une **loi physique appliquée à l’homme**.
 
 ## La thèse du roman
-Balzac la formule par la bouche de l’antiquaire : deux verbes usent la vie — **VOULOIR** et **POUVOIR** —, un seul la conserve — **SAVOIR**. Le désir dépense l’être ; la pensée, si elle reste contemplation, l’économise. Raphaël l’apprend trop tard : il a passé sa jeunesse à travailler dans une mansarde (savoir), puis a tout misé sur le désir (vouloir), et il meurt de n’avoir pas pu s’empêcher de désirer.
+Balzac la formule par la bouche de l’antiquaire.
+
+| Verbe | Son effet sur la vie |
+| **VOULOIR** | Il **brûle** |
+| **POUVOIR** | Il **détruit** |
+| **SAVOIR** | Il **conserve** |
+
+> « Vouloir nous brûle et Pouvoir nous détruit ; mais SAVOIR laisse notre faible organisation dans un perpétuel état de calme. »
+
+Raphaël l’apprend **trop tard** : jeunesse passée à travailler dans une mansarde (**savoir**), puis tout misé sur le désir (**vouloir**) — il meurt de n’avoir pas pu **s’empêcher de désirer**.
 
 ## Une même énergie, deux effets
-La force qui pousse Raphaël à écrire une *Théorie de la volonté* dans le dénuement est celle qui le jette dans l’orgie, le jeu, la passion pour Fœdora. Le roman ne condamne pas l’énergie, il montre qu’elle ne se divise pas : le génie et la ruine ont la **même source**. C’est vrai des personnages, mais aussi de la société de 1830 — spéculation, arrivisme, journalisme, révolution industrielle : une époque qui se brûle à sa propre vitesse.
+| La même force pousse Raphaël… | Vers |
+| À écrire une *Théorie de la volonté* dans le dénuement | La **création** |
+| À l’orgie, au jeu, à la passion pour Fœdora | La **destruction** |
+
+> Le roman **ne condamne pas l’énergie** : il montre qu’elle **ne se divise pas**. Le génie et la ruine ont la **même source**.
+
+C’est vrai des personnages — et de la société de **1830** : spéculation, arrivisme, journalisme, révolution industrielle. **Une époque qui se brûle à sa propre vitesse.**
 
 ## Le fantastique au service du réel
-La peau permet de **rendre visible** un processus invisible : l’usure de la vie par le désir. Chaque mesure de la peau au crayon, chaque expertise scientifique ratée (le physicien, le chimiste, le mécanicien) est une tentative de la science pour nier la loi — et un échec. Balzac fait ainsi de la science moderne un personnage impuissant.
+La peau **rend visible un processus invisible** : l’usure de la vie par le désir.
+
+| Tentative | Son issue |
+| Mesurer la peau au crayon | Elle rétrécit quand même |
+| Le physicien, le chimiste, le mécanicien | **Tous échouent** à l’étirer |
+
+> Balzac fait de la **science moderne** un personnage **impuissant**.
 
 ## Le style
-Descriptions **saturées** (l’inventaire du magasin d’antiquités passe en revue tous les âges du monde), **hyperboles**, énumérations vertigineuses, discours philosophiques insérés dans l’action, alternance entre scènes de foule et solitude. Le roman avance par contrastes : l’orgie et la mansarde, Fœdora et Pauline, Paris et l’Auvergne.
+Descriptions **saturées** — l’inventaire du magasin d’antiquités passe en revue **tous les âges du monde** —, **hyperboles**, énumérations vertigineuses, discours philosophiques insérés dans l’action.
+
+> Le roman avance par **contrastes** : l’orgie et la mansarde, Fœdora et Pauline, Paris et l’Auvergne.
 
 ## Les axes de dissertation
-- **Le désir est-il une force de vie ou de mort ?** Le roman refuse de choisir : il est les deux.
-- **La science peut-elle contre le destin ?** L’échec des savants dit non.
-- **Le personnage balzacien est-il libre ?** Raphaël choisit la peau, puis ne peut plus rien choisir.
-- **Que devient l’artiste dans une société de l’argent ?** La *Théorie de la volonté* n’intéresse personne ; le banquet, si.
-
-> Une citation à retenir : « Vouloir nous brûle et Pouvoir nous détruit ; mais SAVOIR laisse notre faible organisation dans un perpétuel état de calme. »`,
+| Question | Ce que le roman répond |
+| Le désir est-il une force de **vie** ou de **mort** ? | Il **refuse de choisir** : il est les deux |
+| La science peut-elle contre le destin ? | L’échec des savants dit **non** |
+| Le personnage balzacien est-il **libre** ? | Raphaël **choisit** la peau, puis ne peut **plus rien** choisir |
+| Que devient l’artiste dans une société de l’argent ? | La *Théorie de la volonté* n’intéresse personne ; le **banquet**, si |`,
           },
           questions: [
             ['Quels deux verbes usent la vie selon l’antiquaire ?', ['Vouloir et Pouvoir', 'Aimer et Haïr', 'Savoir et Comprendre', 'Créer et Détruire'], 0, 'Seul SAVOIR laisse l’homme en repos, dit-il : c’est la thèse du roman.'],
@@ -578,25 +825,46 @@ Descriptions **saturées** (l’inventaire du magasin d’antiquités passe en r
           axe: 'Le roman et le récit du Moyen Âge au XXIe siècle',
           lecon: {
             titre: 'Colette — deux livres réunis, une même attention au monde',
-            cours: `Parcours associé : **la célébration du monde**. Le volume au programme réunit deux textes que quinze ans séparent : *Les Vrilles de la vigne* (**1908**) et *Sido* (**1930**).
+            cours: `Parcours associé : **la célébration du monde**. Le volume réunit **deux textes que quinze ans séparent** : *Les Vrilles de la vigne* (**1908**) et *Sido* (**1930**).
 
-## Sido : le portrait d’un monde par sa mère
-*Sido* n’est ni un roman ni une autobiographie suivie : c’est un **récit de mémoire** en trois parties.
-1. **Sido** — la mère, Sidonie Landoy, au centre de la maison et du jardin de Saint-Sauveur-en-Puisaye. Elle guette les orages, sauve les chenilles, connaît chaque plante, refuse de quitter son jardin même pour voir sa fille.
-2. **Le Capitaine** — le père, ancien militaire amputé, poète sans œuvre : à sa mort, on découvre que ses volumes reliés sont **blancs**, sauf la dédicace à sa femme.
-3. **Les Sauvages** — les frères et la sœur, êtres silencieux, indépendants, à peine domestiqués par la vie de famille.
+## Sido : trois parties, trois figures
+| Partie | Qui elle porte | Ce qu’on retient |
+| **Sido** | La mère, **Sidonie Landoy** | Elle guette les orages, **sauve les chenilles**, connaît chaque plante, **refuse de quitter son jardin** même pour voir sa fille |
+| **Le Capitaine** | Le père, ancien militaire amputé | **Poète sans œuvre** : à sa mort, on découvre que ses volumes reliés sont **blancs**, sauf la dédicace à sa femme |
+| **Les Sauvages** | Les frères et la sœur | Silencieux, indépendants, **à peine domestiqués** par la vie de famille |
 
-## Les Vrilles de la vigne : un recueil de textes courts
-Vingt textes brefs, écrits pour la presse, sans intrigue commune : le rossignol pris dans les vrilles de la vigne qui chante pour ne plus se laisser attacher, des dialogues avec la chienne **Toby-Chien** et la chatte **Kiki-la-Doucette**, des souvenirs d’enfance (« Nuit blanche », « Jour gris », « Le Dernier Feu »), des chroniques sur les femmes, la scène, le maquillage. La forme est libre : conte, chronique, poème en prose, dialogue.
+> Ce n’est **ni un roman ni une autobiographie suivie** : c’est un **récit de mémoire**.
+
+## Les Vrilles de la vigne : vingt textes brefs
+Écrits pour la presse, **sans intrigue commune**.
+
+| Type de texte | Exemples |
+| Le texte **liminaire** | Le **rossignol** pris dans les vrilles, qui **chante pour ne plus se laisser attacher** |
+| Les **dialogues d’animaux** | La chienne **Toby-Chien**, la chatte **Kiki-la-Doucette** |
+| Les **souvenirs d’enfance** | « Nuit blanche », « Jour gris », « Le Dernier Feu » |
+| Les **chroniques** | Les femmes, la scène, le maquillage |
+
+La forme est **libre** : conte, chronique, poème en prose, dialogue.
 
 ## La figure de Sido
-Elle est le personnage central des deux livres, et une **manière de voir** plus qu’une personne : attention aux signes du temps, refus des convenances, indifférence à la religion et à l’argent, culte du vivant. C’est elle qui apprend à sa fille à regarder — et c’est ce regard qui deviendra un style.
+Elle est le personnage central des **deux** livres — et une **manière de voir** plus qu’une personne.
+
+| Ce qu’elle est | Ce qu’elle transmet |
+| Attentive aux **signes du temps** | L’art de **regarder** |
+| Indifférente aux convenances, à la religion, à l’argent | Une liberté |
+| Vouée au **culte du vivant** | Le respect de ce qui pousse et de ce qui rampe |
+
+> C’est elle qui apprend à sa fille à **regarder** — et **ce regard deviendra un style**.
 
 ## Une écriture des sens
-Colette écrit par **sensations** : odeurs (la pluie sur la poussière, le chocolat, les feuilles chaudes), couleurs, textures, bruits. Les **notations concrètes** l’emportent toujours sur l’abstraction, les phrases sont amples, souvent rythmées par des énumérations, et l’animal y a le même statut que l’humain.
+Colette écrit par **sensations** : odeurs (la pluie sur la poussière, le chocolat, les feuilles chaudes), couleurs, textures, bruits.
 
-## Ce qu’il faut savoir situer
-Colette (1873-1954), première femme à recevoir des funérailles nationales en France, écrit *Sido* à cinquante-sept ans, longtemps après la mort de sa mère : le livre est un **acte de mémoire**, écrit du côté de la perte, ce qui explique sa lumière — on ne célèbre bien que ce qu’on n’a plus.`,
+> Les **notations concrètes** l’emportent toujours sur l’abstraction ; les phrases sont amples, rythmées par des **énumérations** — et l’**animal y a le même statut que l’humain**.
+
+## Situer l’œuvre
+Colette (**1873-1954**), **première femme à recevoir des funérailles nationales** en France, écrit *Sido* à **cinquante-sept ans**, longtemps après la mort de sa mère.
+
+> Le livre est un **acte de mémoire**, écrit **du côté de la perte** — ce qui explique sa lumière : **on ne célèbre bien que ce qu’on n’a plus**.`,
           },
           questions: [
             ['De quelles années datent les deux textes réunis dans le volume ?', ['1908 pour Les Vrilles de la vigne, 1930 pour Sido', '1930 pour les deux', '1900 et 1910', '1920 et 1940'], 0, 'Quinze ans les séparent : ce sont deux moments d’écriture très différents.'],
@@ -614,27 +882,44 @@ Colette (1873-1954), première femme à recevoir des funérailles nationales en 
           axe: 'Le roman et le récit du Moyen Âge au XXIe siècle',
           lecon: {
             titre: 'Colette — comment on célèbre sans embellir',
-            cours: `Cette seconde partie travaille le **parcours** : la célébration du monde. Le mot est piégé — célébrer n’est ni décrire, ni idéaliser, et l’œuvre de Colette permet de le montrer précisément.
+            cours: `Cette seconde partie travaille le **parcours** : la **célébration du monde**. Le mot est piégé — célébrer n’est **ni décrire, ni idéaliser**.
 
 ## Célébrer, c’est nommer
-La célébration passe chez Colette par la **précision** : ce n’est pas « une fleur », c’est un souci, une pivoine, un pied d’angélique ; ce n’est pas « le printemps », c’est l’odeur exacte de la première pluie sur la poussière chaude. L’émerveillement naît de l’exactitude, pas de l’effusion. C’est un lyrisme sans grandiloquence, ancré dans le concret.
+| Ce que Colette **n’écrit pas** | Ce qu’elle écrit |
+| « Une fleur » | Un **souci**, une **pivoine**, un pied d’**angélique** |
+| « Le printemps » | L’odeur **exacte** de la première pluie sur la poussière chaude |
+
+> L’émerveillement naît de l’**exactitude**, pas de l’effusion. C’est un **lyrisme sans grandiloquence**, ancré dans le concret.
 
 ## Ce que la célébration ne cache pas
-Le monde célébré est aussi celui de la perte : la mère morte, l’enfance enfuie, la maison vendue, le père sans œuvre, les frères devenus silencieux. Dans *Les Vrilles de la vigne*, plusieurs textes disent l’insomnie, la tristesse, la séparation. La lumière du livre tient à cette **tension** : on écrit du côté de la perte, et c’est pour cela qu’on regarde si bien.
+| Ce qui est célébré | Ce qui est perdu |
+| Le jardin, la maison, les saisons | La **mère morte**, l’enfance enfuie, la maison **vendue** |
+| Le père | **Sans œuvre** |
+| Les frères | Devenus **silencieux** |
+
+Dans *Les Vrilles de la vigne*, plusieurs textes disent l’**insomnie**, la tristesse, la séparation.
+
+> La lumière du livre tient à cette **tension** : on écrit **du côté de la perte**, et **c’est pour cela qu’on regarde si bien**.
 
 ## La place de l’animal et du végétal
-Le chat, la chienne, l’araignée, le chèvrefeuille, la vigne : le vivant non humain n’est pas un décor mais une **société**. Sido sauve une chenille, refuse de tuer, parle à ses plantes ; Colette prête la parole à ses bêtes. Le geste est écologique avant la lettre : il n’y a pas d’un côté l’humain et de l’autre la nature.
+Le chat, la chienne, l’araignée, le chèvrefeuille, la vigne : le vivant non humain n’est **pas un décor** mais une **société**.
+
+> Sido **sauve une chenille**, refuse de tuer, parle à ses plantes ; Colette **prête la parole à ses bêtes**. Le geste est **écologique avant la lettre** : il n’y a pas d’un côté l’humain, de l’autre la nature.
 
 ## Une femme qui écrit
-Le parcours croise une question du programme : la place des femmes. Colette écrit d’abord sous le nom de son mari **Willy**, monte sur scène au music-hall pour vivre, divorce, publie sous son seul nom. *Les Vrilles de la vigne* est justement le premier livre signé « Colette » seule : le rossignol du texte liminaire, qui chante pour ne plus être ligoté, est une **figure d’émancipation**.
+| Étape | Ce qu’elle marque |
+| Elle publie d’abord sous le nom de son mari, **Willy** | L’effacement |
+| Elle monte sur scène au **music-hall** pour vivre | Le scandale et l’autonomie |
+| Elle **divorce** et publie sous son seul nom | *Les Vrilles de la vigne* est le **premier livre signé « Colette » seule** |
+
+> Le **rossignol** du texte liminaire, qui chante **pour ne plus être ligoté**, est une **figure d’émancipation** — et elle est autobiographique.
 
 ## Les axes de dissertation
-- **Célébrer le monde, est-ce l’embellir ?** Non : la précision remplace l’idéalisation.
-- **L’écriture du souvenir est-elle fidèle ?** Colette compose, sélectionne, invente : le vrai y est de l’ordre de la sensation, pas du document.
-- **Le regard de l’enfant ou celui de l’adulte ?** Les deux se superposent constamment, et c’est cette double focale qui donne l’émotion.
-- **En quoi cette œuvre est-elle un art poétique ?** Elle montre que le style naît d’une manière de regarder héritée de la mère.
-
-> À citer : « Un jardin, une mère, une enfance : Colette ne raconte pas ce qu’elle a vécu, elle rend sensible ce qu’elle a appris à voir. »`,
+| Question | La réponse de l’œuvre |
+| Célébrer le monde, est-ce l’**embellir** ? | **Non** : la précision remplace l’idéalisation |
+| L’écriture du souvenir est-elle **fidèle** ? | Colette **compose, sélectionne, invente** : le vrai y est de l’ordre de la **sensation**, pas du document |
+| Le regard de l’**enfant** ou de l’**adulte** ? | **Les deux se superposent** — et c’est cette double focale qui donne l’émotion |
+| En quoi est-ce un **art poétique** ? | Le style **naît d’une manière de regarder héritée de la mère** |`,
           },
           questions: [
             ['Par quel moyen la célébration s’exprime-t-elle chez Colette ?', ['Par la précision des noms et des sensations', 'Par l’exagération lyrique', 'Par la description abstraite', 'Par le refus de décrire'], 0, 'L’émerveillement naît de l’exactitude, jamais de l’effusion.'],
@@ -655,26 +940,47 @@ Le parcours croise une question du programme : la place des femmes. Colette écr
           axe: 'Le théâtre du XVIIe au XXIe siècle',
           lecon: {
             titre: 'L’objet d’étude : un texte fait pour être joué',
-            cours: `Une pièce n’est pas un roman en dialogues : c’est une **partition**. L’objet d’étude demande de lire le texte en imaginant la scène — voix, corps, espace, silences.
+            cours: `Une pièce n’est **pas un roman en dialogues** : c’est une **partition**. L’objet d’étude demande de lire le texte **en imaginant la scène** — voix, corps, espace, silences.
 
 ## Le texte et ce qui l’entoure
-- Les **répliques**, et leurs formes : la **tirade** (longue prise de parole), le **monologue** (seul en scène, il dit ce qu’on cache), la **stichomythie** (répliques très brèves qui s’enchaînent, signe de tension), l’**aparté** (dit au public, pas à l’interlocuteur).
-- Les **didascalies** : indications de l’auteur sur le lieu, le ton, les gestes. Chez Sarraute, elles deviennent le cœur du texte ; chez Corneille, elles sont presque absentes.
-- La **double énonciation** : tout ce qu’un personnage dit à un autre est en même temps dit au public. Elle rend possible l’ironie dramatique — le spectateur en sait plus que le personnage.
+| Forme de parole | Ce qu’elle signale |
+| La **tirade** | Une longue prise de parole : domination, plaidoyer |
+| Le **monologue** | Seul en scène : il **dit ce qu’on cache** |
+| La **stichomythie** | Répliques très brèves qui s’enchaînent : **tension** |
+| L’**aparté** | Dit **au public**, pas à l’interlocuteur |
+
+| Élément | Son statut |
+| Les **didascalies** | Indications de lieu, ton, gestes — **le cœur du texte** chez Sarraute, **presque absentes** chez Corneille |
+| La **double énonciation** | Ce qu’un personnage dit à un autre est **en même temps dit au public** |
+
+> C’est la double énonciation qui rend possible l’**ironie dramatique** : le spectateur **en sait plus** que le personnage.
 
 ## Les genres
-La **tragédie** classique met en scène des personnages de haut rang, une fatalité, et se termine par la mort ; elle obéit aux **trois unités** (action, lieu, temps) et à la **bienséance**. La **comédie** vise à corriger les mœurs en faisant rire — comique de mots, de gestes, de situation, de caractère, de répétition. Le **drame romantique** (Hugo, Musset) refuse les règles, mêle registres et tons. Le théâtre du **XXe siècle** démonte tout : plus d’intrigue chez Beckett, plus de personnage chez Sarraute, la parole elle-même devient l’action.
+| Genre | Ses règles ou son geste |
+| La **tragédie** classique | Personnages de haut rang, **fatalité**, mort ; les **trois unités** — action, lieu, temps — et la **bienséance** |
+| La **comédie** | Corriger les mœurs en faisant rire : comique de **mots, gestes, situation, caractère, répétition** |
+| Le **drame romantique** — Hugo, Musset | Il **refuse les règles**, mêle registres et tons |
+| Le théâtre du **XXe** | Plus d’**intrigue** chez Beckett, plus de **personnage** chez Sarraute : **la parole devient l’action** |
 
 ## La structure
-Exposition, nœud, péripéties, **coup de théâtre**, dénouement. Un **quiproquo** repose sur un malentendu, une **scène d’aveu** fait basculer l’intrigue, un **dénouement** se juge à ce qu’il laisse ouvert ou refermé.
+Exposition, nœud, péripéties, **coup de théâtre**, dénouement.
+
+| Ressort | Ce qu’il fait |
+| Le **quiproquo** | Un malentendu qui relance l’action |
+| La **scène d’aveu** | Elle fait basculer l’intrigue |
+| Le **dénouement** | Il se juge à ce qu’il laisse **ouvert ou refermé** |
 
 ## Les registres
-**Comique**, **tragique**, **pathétique**, **lyrique**, **ironique**, **polémique** : une même pièce en mêle presque toujours plusieurs, et l’analyse consiste à repérer les **basculements** — le moment exact où le rire devient grinçant.
+**Comique**, **tragique**, **pathétique**, **lyrique**, **ironique**, **polémique**.
+
+> Une même pièce en mêle presque toujours plusieurs : l’analyse consiste à repérer les **basculements** — le **moment exact** où le rire devient grinçant.
 
 ## La mise en scène compte
-Une pièce n’existe pleinement que jouée : décor, costumes, rythme, jeu des corps. À l’oral comme à l’écrit, mentionner un choix de mise en scène possible — un ton, un silence, un déplacement — est toujours valorisé, à condition de le justifier par le texte.
+Décor, costumes, rythme, jeu des corps : une pièce **n’existe pleinement que jouée**.
 
-> Question à se poser sur toute scène : qui a le pouvoir de la parole, et qui le perd ?`,
+> À l’oral comme à l’écrit, mentionner un **choix de mise en scène possible** — un ton, un silence, un déplacement — est toujours valorisé, **à condition de le justifier par le texte**.
+
+> Question à se poser sur toute scène : **qui a le pouvoir de la parole, et qui le perd ?**`,
           },
           questions: [
             ['Qu’est-ce que la double énonciation au théâtre ?', ['Une réplique s’adresse à la fois au personnage et au public', 'Un personnage parle deux fois de suite', 'Deux personnages disent la même chose', 'Le narrateur commente le dialogue'], 0, 'Elle rend possible l’ironie dramatique, quand le spectateur en sait plus que le personnage.'],
@@ -692,20 +998,44 @@ Une pièce n’existe pleinement que jouée : décor, costumes, rythme, jeu des 
           axe: 'Le théâtre du XVIIe au XXIe siècle',
           lecon: {
             titre: 'Corneille, 1644 — mentir pour exister',
-            cours: `Parcours associé : **mensonge et comédie**. Comédie en **cinq actes et en vers**, créée en **1644**, adaptée d’une pièce espagnole de Juan Ruiz de Alarcón, *La Verdad sospechosa*. Corneille, l’auteur du *Cid*, y prouve qu’il sait aussi faire rire.
+            cours: `Parcours associé : **mensonge et comédie**. Comédie en **cinq actes et en vers**, créée en **1644**, adaptée d’une pièce espagnole de Juan Ruiz de Alarcón, *La Verdad sospechosa*.
+
+> **Corneille**, l’auteur du *Cid*, y prouve qu’il sait aussi faire **rire**.
 
 ## L’intrigue
-**Dorante** arrive de Poitiers à Paris, où il vient d’abandonner le droit pour se faire homme du monde. Aux Tuileries, il rencontre deux jeunes femmes, **Clarice** et **Lucrèce**, et se lance aussitôt : il se présente comme un héros couvert de gloire, revenu d’Allemagne après quatre ans de guerre. Son valet **Cliton**, stupéfait, tente de suivre.
-Le mensonge appelle le mensonge. Dorante invente une fête somptueuse offerte sur la Seine, puis, pour échapper au mariage que lui prépare son père **Géronte**, se dit déjà marié à Poitiers, avec une histoire complète de séduction, de nuit surprise et de grossesse. Surtout, il commet une **erreur d’identité** : il croit que celle qu’il aime, Clarice, s’appelle Lucrèce — quiproquo qui gouverne toute la pièce et manque de le faire tuer en duel par **Alcippe**, l’amoureux de Clarice.
+| Étape | Ce que Dorante invente |
+| L’arrivée | Il vient de **Poitiers**, abandonne le droit pour se faire homme du monde |
+| Aux **Tuileries** | Il se présente comme un **héros de guerre** revenu d’Allemagne après quatre ans |
+| Puis | Une **fête somptueuse** offerte sur la Seine |
+| Face au mariage préparé par son père **Géronte** | Il se dit **déjà marié** à Poitiers : séduction, nuit surprise, grossesse |
+
+> Le mensonge **appelle le mensonge**. Son valet **Cliton**, stupéfait, tente de suivre.
+
+## L’erreur qui gouverne tout
+Dorante croit que celle qu’il aime, **Clarice**, s’appelle **Lucrèce**.
+
+> Ce **quiproquo de noms** gouverne toute la pièce — et manque de le faire **tuer en duel** par **Alcippe**, l’amoureux de Clarice.
 
 ## Le dénouement
-Démasqué par son père, humilié, Dorante retombe sur ses pieds : puisqu’il aime, en réalité, la femme qui s’appelle bien **Lucrèce**, il l’épouse. La comédie s’achève sur un mariage — mais sur un menteur ni puni, ni corrigé.
+Démasqué par son père, humilié, Dorante **retombe sur ses pieds** : puisqu’il aime en réalité la femme qui s’appelle **bien Lucrèce**, il l’épouse.
+
+> La comédie s’achève sur un mariage — mais sur un menteur **ni puni, ni corrigé**. C’est le point le plus discuté de la pièce.
 
 ## Les personnages
-**Dorante** : jeune, brillant, inventif, jamais pris de court ; ses mensonges sont des improvisations d’artiste. **Cliton** : le valet lucide, qui commente et sert de relais au spectateur. **Géronte** : le père noble, dont l’honneur est blessé — c’est lui qui apporte la seule gravité de la pièce. **Clarice** et **Lucrèce** : les deux jeunes femmes que le quiproquo échange.
+| Personnage | Son rôle |
+| **Dorante** | Jeune, brillant, **jamais pris de court** : ses mensonges sont des **improvisations d’artiste** |
+| **Cliton** | Le valet lucide : il commente et sert de **relais au spectateur** |
+| **Géronte** | Le père noble, dont l’**honneur est blessé** — la seule gravité de la pièce |
+| **Clarice** et **Lucrèce** | Les deux jeunes femmes que le quiproquo **échange** |
 
 ## Le comique
-De **situation** (le quiproquo des noms), de **caractère** (le menteur qui se prend à son propre piège), de **mots** (les tirades d’invention, virtuoses, hyperboliques), de **répétition** (chaque mensonge en exige un nouveau). Le rythme de la pièce vient de cette **fuite en avant** : Dorante ne ment jamais deux fois de la même manière, il improvise, et le spectateur admire autant qu’il rit.`,
+| Type | Où il opère |
+| De **situation** | Le quiproquo des noms |
+| De **caractère** | Le menteur **pris à son propre piège** |
+| De **mots** | Les tirades d’invention, **virtuoses et hyperboliques** |
+| De **répétition** | Chaque mensonge en **exige un nouveau** |
+
+> Le rythme vient de cette **fuite en avant** : Dorante ne ment **jamais deux fois de la même manière** — le spectateur **admire autant qu’il rit**.`,
           },
           questions: [
             ['De quelle ville Dorante arrive-t-il au début de la pièce ?', ['Poitiers', 'Lyon', 'Rouen', 'Bordeaux'], 0, 'Il vient d’abandonner le droit pour se faire homme du monde à Paris.'],
@@ -723,23 +1053,40 @@ De **situation** (le quiproquo des noms), de **caractère** (le menteur qui se p
           axe: 'Le théâtre du XVIIe au XXIe siècle',
           lecon: {
             titre: 'Musset, 1834 — un jeu qui tue',
-            cours: `Parcours associé : **les jeux du cœur et de la parole**. Publié en **1834** dans *Un spectacle dans un fauteuil*, ce **proverbe** en trois actes n’était pas destiné à la scène : Musset l’écrit après l’échec de sa première pièce, pour être lu.
+            cours: `Parcours associé : **les jeux du cœur et de la parole**. Publié en **1834** dans *Un spectacle dans un fauteuil*, ce **proverbe** en trois actes n’était **pas destiné à la scène** : Musset l’écrit après l’échec de sa première pièce, **pour être lu**.
 
 ## L’intrigue
-**Perdican**, revenu docteur de Paris, et sa cousine **Camille**, sortie du couvent, doivent se marier : le **baron**, père de l’un et oncle de l’autre, a tout arrangé. Mais Camille, marquée par les confidences amères des religieuses, refuse : elle craint l’infidélité des hommes et veut retourner au couvent.
-Blessé, Perdican fait la cour à **Rosette**, une jeune paysanne sœur de lait de Camille, et annonce qu’il l’épousera. Camille, jalouse, tend un piège : elle cache Rosette pour lui faire entendre les aveux de Perdican. Le stratagème se retourne, les deux orgueils s’affrontent et, au moment où Camille et Perdican s’avouent enfin leur amour, un cri retentit : **Rosette**, qui a tout entendu, est **morte**.
+| Étape | Ce qui se passe |
+| Le projet | **Perdican**, docteur revenu de Paris, doit épouser sa cousine **Camille**, sortie du couvent : le **baron** a tout arrangé |
+| Le refus | Marquée par les confidences amères des religieuses, Camille craint l’**infidélité des hommes** et veut retourner au couvent |
+| La riposte | Blessé, Perdican courtise **Rosette**, jeune paysanne et sœur de lait de Camille, et annonce qu’il l’épousera |
+| Le piège | Camille **cache Rosette** pour lui faire entendre les aveux de Perdican |
+| Le retournement | Les deux orgueils s’affrontent ; au moment de l’aveu, un cri : **Rosette est morte** |
 
 ## Le dénouement
-Camille dit alors les derniers mots de la pièce : « Elle est morte. Adieu, Perdican ! » L’amour est reconnu au moment exact où il devient impossible. Aucun mariage, aucune réconciliation : un badinage a fait une victime, et elle est **innocente**.
+« Elle est morte. Adieu, Perdican ! »
+
+> L’amour est **reconnu au moment exact où il devient impossible**. Aucun mariage, aucune réconciliation : un **badinage a fait une victime** — et elle est **innocente**.
 
 ## Les personnages
-**Perdican** : sincère et cruel, il défend l’amour humain contre le renoncement, dans une tirade célèbre (« On est souvent trompé en amour, souvent blessé et souvent malheureux ; mais on aime »). **Camille** : intelligente, orgueilleuse, terrifiée par ce qu’on lui a appris. **Rosette** : la seule qui ne joue pas, et la seule qui meurt. **Le baron**, **maître Blazius**, **maître Bridaine**, **dame Pluche** : figures grotesques, ivrognes ou ridicules, qui forment un **chœur comique** face à la tragédie des jeunes gens.
+| Personnage | Ce qu’il est |
+| **Perdican** | Sincère **et** cruel : il défend l’amour humain contre le renoncement — « On est souvent trompé en amour, souvent blessé et souvent malheureux ; **mais on aime** » |
+| **Camille** | Intelligente, orgueilleuse, **terrifiée par ce qu’on lui a appris** |
+| **Rosette** | La seule qui **ne joue pas** — et la seule qui **meurt** |
+| Le **baron**, **Blazius**, **Bridaine**, **dame Pluche** | Figures grotesques : un **chœur comique** face à la tragédie des jeunes gens |
 
 ## Le mélange des registres
-C’est la marque du drame romantique : le comique des adultes ridicules, le **lyrique** des déclarations, le **tragique** du dénouement. Ce mélange n’est pas un ornement — il fait sentir que le drame naît d’un jeu, et que personne ne l’a vu venir.
+| Registre | Qui le porte |
+| **Comique** | Les adultes ridicules |
+| **Lyrique** | Les déclarations des jeunes gens |
+| **Tragique** | Le dénouement |
+
+> Ce mélange, marque du **drame romantique**, n’est pas un ornement : il fait sentir que **le drame naît d’un jeu**, et que **personne ne l’a vu venir**.
 
 ## Le titre
-« Badiner » signifie plaisanter, jouer avec les mots. Le proverbe qui donne son titre à la pièce en énonce la morale par avance : la parole amoureuse n’est jamais un jeu sans conséquence.`,
+« **Badiner** » signifie plaisanter, jouer avec les mots.
+
+> Le proverbe énonce la morale **par avance** : la **parole amoureuse n’est jamais un jeu sans conséquence**.`,
           },
           questions: [
             ['Quel genre théâtral Musset revendique-t-il pour cette pièce ?', ['Le proverbe', 'La tragédie classique', 'La farce', 'Le vaudeville'], 0, 'Publié dans Un spectacle dans un fauteuil, le texte était d’abord destiné à la lecture.'],
@@ -757,22 +1104,45 @@ C’est la marque du drame romantique : le comique des adultes ridicules, le **l
           axe: 'Le théâtre du XVIIe au XXIe siècle',
           lecon: {
             titre: 'Sarraute, 1982 — une amitié détruite par une intonation',
-            cours: `Parcours associé : **théâtre et dispute**. Écrite en **1982** par **Nathalie Sarraute**, alors âgée de quatre-vingt-deux ans, la pièce dure une heure et ne compte, pour l’essentiel, que **deux personnages sans nom** : **H1** et **H2**.
+            cours: `Parcours associé : **théâtre et dispute**. Écrite en **1982** par **Nathalie Sarraute**, alors âgée de **quatre-vingt-deux ans**, la pièce dure une heure et ne compte, pour l’essentiel, que **deux personnages sans nom** : **H1** et **H2**.
 
 ## Le point de départ, minuscule
-H1 vient demander à H2 pourquoi il ne le voit plus. La réponse met longtemps à venir, et elle est dérisoire : un jour, H1 lui a dit « **C’est bien… ça** », avec une certaine **suspension** dans la voix, un accent de condescendance. Rien d’autre. Toute la pièce consiste à faire exister ce presque-rien, à le rejouer, à le mesurer, à le contester.
+H1 vient demander à H2 pourquoi il ne le voit plus. La réponse met longtemps à venir — et elle est **dérisoire**.
 
-## Ce que Sarraute appelle les tropismes
-L’autrice a donné ce nom, emprunté à la biologie, aux **mouvements intérieurs infimes** — attraction, recul, méfiance — qui précèdent la parole et que la conversation polie recouvre. Son théâtre les fait remonter à la surface : sous la banalité des mots, une lutte réelle. La pièce n’a donc **ni intrigue, ni décor, ni psychologie** au sens classique : elle a une pression qui monte.
+> Un jour, H1 lui a dit « **C’est bien… ça** », avec une certaine **suspension** dans la voix, un accent de **condescendance**. **Rien d’autre.**
+
+Toute la pièce consiste à **faire exister ce presque-rien** : le rejouer, le mesurer, le contester.
+
+## Les tropismes
+Sarraute a donné ce nom, emprunté à la **biologie**, aux **mouvements intérieurs infimes** — attraction, recul, méfiance — qui **précèdent la parole** et que la conversation polie recouvre.
+
+| Ce que la pièce n’a pas | Ce qu’elle a |
+| Ni **intrigue**, ni **décor** | Une **pression qui monte** |
+| Ni **psychologie** au sens classique | Une **lutte réelle sous la banalité des mots** |
 
 ## La mécanique de la dispute
-Les deux hommes rejouent la scène, s’accusent, se réconcilient, repartent. On appelle des **témoins** imaginaires — un couple de voisins qui juge —, on invoque la vie réussie de l’un et la vie « ratée » de l’autre, on découvre que la vraie blessure est là : l’écart social et la condescendance. La dispute avance par **reprises**, **répétitions**, phrases inachevées, points de suspension. Le dénouement ne tranche pas : « c’est ça… », « oui… » — la rupture est consommée sans qu’aucun fait ne l’explique.
+| Étape | Ce qui se joue |
+| Les deux hommes **rejouent la scène** | Ils s’accusent, se réconcilient, repartent |
+| On appelle des **témoins imaginaires** | Un couple de voisins qui **juge** |
+| On invoque la vie **réussie** de l’un, la vie « **ratée** » de l’autre | La vraie blessure apparaît : l’**écart social** et la **condescendance** |
+| Le dénouement | « C’est ça… », « oui… » : la **rupture est consommée sans qu’aucun fait ne l’explique** |
+
+La dispute avance par **reprises**, **répétitions**, phrases **inachevées**, points de suspension.
 
 ## L’écriture
-Didascalies rares mais décisives, **suspension** permanente, syntaxe orale, absence de noms propres. Le texte demande au comédien un travail sur le **souffle** et le **silence** : ce sont les blancs qui portent le sens. C’est un théâtre où le langage n’accompagne pas l’action — il **est** l’action.
+| Trait | Son effet |
+| Didascalies **rares mais décisives** | Elles portent le ton |
+| **Suspension** permanente, syntaxe **orale** | Rien ne se dit d’un bloc |
+| **Absence de noms propres** | Les personnages sont des **positions**, pas des individus |
 
-## Ce qu’il faut pouvoir dire en dissertation
-Que la pièce prend au sérieux ce que la vie sociale traite comme négligeable, et qu’elle démontre la **violence du langage ordinaire** : une intonation suffit à classer quelqu’un, à l’humilier, à briser vingt ans d’amitié. Le titre le dit : on se sépare « pour un oui ou pour un non » — c’est-à-dire pour rien, c’est-à-dire pour tout.`,
+> Le texte demande au comédien un travail sur le **souffle** et le **silence** : **ce sont les blancs qui portent le sens**.
+
+> C’est un théâtre où le langage **n’accompagne pas l’action** — il **est** l’action.
+
+## En dissertation
+> La pièce **prend au sérieux ce que la vie sociale traite comme négligeable**, et démontre la **violence du langage ordinaire** : une **intonation** suffit à classer quelqu’un, à l’humilier, à briser **vingt ans d’amitié**.
+
+> Le titre le dit : on se sépare « pour un oui ou pour un non » — c’est-à-dire **pour rien**, c’est-à-dire **pour tout**.`,
           },
           questions: [
             ['Combien de personnages principaux la pièce compte-t-elle ?', ['Deux, nommés H1 et H2', 'Trois', 'Un seul', 'Quatre'], 0, 'Des voisins interviennent brièvement, mais l’essentiel est un face-à-face.'],
@@ -801,29 +1171,38 @@ Que la pièce prend au sérieux ce que la vie sociale traite comme négligeable,
           axe: 'La phrase complexe',
           lecon: {
             titre: 'Compter les verbes conjugués, et rien d’autre',
-            cours: `Tout le programme de grammaire de première part de là : savoir découper une phrase. La méthode tient en une opération — **compter les verbes conjugués**.
+            cours: `Tout le programme de grammaire part de là : savoir **découper** une phrase. La méthode tient en une opération — **compter les verbes conjugués**.
 
 ## La proposition
-Une **proposition** est un ensemble organisé autour d’**un verbe conjugué**. Une phrase à un seul verbe conjugué est une **phrase simple** ; une phrase à deux verbes conjugués ou plus est une **phrase complexe**.
-- *Le jour se lève.* → un verbe conjugué → phrase **simple**.
-- *Le jour se lève, les oiseaux chantent.* → deux verbes conjugués → phrase **complexe**.
+Une **proposition** est un ensemble organisé autour d’**un verbe conjugué**.
 
-## Attention aux pièges
-- Les **temps composés** comptent pour **un seul** verbe : « il **avait chanté** » = un verbe conjugué.
-- L’**infinitif** et le **participe** ne sont pas conjugués : « Il sort **acheter** du pain » reste une phrase simple.
-- Une phrase peut être **averbale** : « Quelle horreur ! »
-- Une proposition peut avoir un sujet inversé ou sous-entendu : « Sors ! »
+| Nombre de verbes conjugués | Le type de phrase | Exemple |
+| **Un** | Phrase **simple** | Le jour se lève. |
+| **Deux ou plus** | Phrase **complexe** | Le jour se lève, les oiseaux chantent. |
+
+## Les quatre pièges
+| Piège | Ce qu’il faut savoir |
+| Les **temps composés** | « il avait chanté » = **un seul** verbe conjugué |
+| L’**infinitif** et le **participe** | Non conjugués : « Il sort **acheter** du pain » reste une phrase **simple** |
+| La phrase **averbale** | « Quelle horreur ! » : aucune proposition |
+| Le sujet **inversé** ou **sous-entendu** | « Sors ! » est bien une proposition |
 
 ## Les trois relations possibles
-Entre deux propositions, il n’existe que trois liens :
-1. la **juxtaposition** — un signe de ponctuation (virgule, point-virgule, deux-points) ;
-2. la **coordination** — une conjonction de coordination (*mais, ou, et, donc, or, ni, car*) ou un adverbe de liaison (*puis, cependant, ainsi*) ;
-3. la **subordination** — une proposition dépend d’une autre, introduite par un pronom relatif, une conjonction de subordination ou un mot interrogatif.
+Entre deux propositions, il n’existe que **trois** liens.
+
+| Relation | Ce qui la marque | Le rang |
+| La **juxtaposition** | Un signe de ponctuation : virgule, point-virgule, deux-points | **Égalité** |
+| La **coordination** | Une conjonction (*mais, ou, et, donc, or, ni, car*) ou un adverbe de liaison | **Égalité** |
+| La **subordination** | Un pronom relatif, une conjonction de subordination, un mot interrogatif | **Dépendance** |
 
 ## Le vocabulaire de la subordination
-La proposition qui commande s’appelle la **principale**, celle qui dépend la **subordonnée**. Une subordonnée peut elle-même en contenir une autre : on parle alors d’**enchâssement**. La proposition qui n’a aucun lien de dépendance et forme à elle seule la phrase est dite **indépendante**.
+| Terme | Ce qu’il désigne |
+| La **principale** | La proposition qui **commande** |
+| La **subordonnée** | Celle qui **dépend** |
+| L’**enchâssement** | Une subordonnée qui en contient elle-même une autre |
+| L’**indépendante** | Aucun lien de dépendance : elle forme la phrase à elle seule |
 
-> Méthode à l’oral : soulignez les verbes conjugués, encadrez les mots subordonnants, puis nommez. L’analyse suit toujours cet ordre.`,
+> Méthode à l’oral : **souligner les verbes conjugués**, **encadrer les mots subordonnants**, **puis nommer**. L’analyse suit toujours cet ordre.`,
           },
           questions: [
             ['Qu’est-ce qui définit une proposition ?', ['Un ensemble organisé autour d’un verbe conjugué', 'Un groupe de mots séparé par une virgule', 'Un sujet et un complément', 'Une phrase entre deux points'], 0, 'C’est le nombre de verbes conjugués qui distingue phrase simple et phrase complexe.'],
@@ -841,25 +1220,34 @@ La proposition qui commande s’appelle la **principale**, celle qui dépend la 
           axe: 'La phrase complexe',
           lecon: {
             titre: 'Deux propositions à égalité',
-            cours: `Juxtaposition et coordination ont un point commun décisif : les propositions y sont **de même rang**. Aucune ne dépend de l’autre, chacune pourrait exister seule.
+            cours: `Juxtaposition et coordination ont un point commun décisif : les propositions y sont **de même rang**. Aucune ne dépend de l’autre, **chacune pourrait exister seule**.
 
-## La juxtaposition
-Les propositions sont reliées par un simple **signe de ponctuation** : virgule, point-virgule, deux-points.
-*Le vent tombait, la mer se calmait, le jour finissait.*
-Le lien logique n’est pas exprimé : c’est au lecteur de le reconstituer. C’est pourquoi la juxtaposition produit un effet de **rapidité**, d’**accumulation** ou de **brutalité** — les rapports restant implicites, le texte va plus vite que l’explication.
+## Les deux constructions
+| | **Juxtaposition** | **Coordination** |
+| Ce qui relie | Un **signe de ponctuation** | Une **conjonction** ou un **adverbe de liaison** |
+| Le lien logique | **Implicite** — au lecteur de le reconstituer | **Explicite** : opposition, cause, conséquence… |
+| L’effet | **Rapidité**, accumulation, brutalité | Un **raisonnement construit** |
+| L’exemple | Le vent tombait, la mer se calmait, le jour finissait. | Il pleuvait, **mais** nous sommes sortis. |
 
-## La coordination
-Les propositions sont reliées par une **conjonction de coordination** — *mais, ou, et, donc, or, ni, car* — ou par un **adverbe de liaison** (*puis, ensuite, cependant, pourtant, ainsi, en effet*).
-*Il pleuvait, mais nous sommes sortis.*
-Ici le rapport est **explicite** : opposition, cause, conséquence, addition, alternative. La coordination construit un raisonnement ; la juxtaposition le suggère.
+Les conjonctions : *mais, ou, et, donc, or, ni, car*. Les adverbes de liaison : *puis, ensuite, cependant, pourtant, ainsi, en effet*.
 
-## Attention à trois pièges
-- La conjonction **car** coordonne (elle relie deux propositions de même rang) tandis que **parce que** subordonne. C’est la distinction la plus demandée à l’oral.
-- Un **adverbe de liaison** peut se déplacer dans la proposition (« nous sommes, cependant, sortis »), pas une conjonction de coordination.
-- **Et** peut relier des mots, des groupes ou des propositions : seule la troisième situation intéresse l’analyse des propositions.
+> La coordination **construit** un raisonnement ; la juxtaposition le **suggère**.
+
+## Trois pièges
+| Piège | La règle |
+| *car* contre *parce que* | **car coordonne** (même rang), **parce que subordonne** — la distinction la plus demandée à l’oral |
+| L’**adverbe de liaison** | Il **se déplace** dans la proposition (« nous sommes, cependant, sortis ») ; pas une conjonction |
+| Le mot *et* | Il relie des mots, des groupes **ou** des propositions : seule la troisième situation concerne l’analyse |
 
 ## Ce qu’on en dit à l’oral
-Ne jamais s’arrêter à l’étiquette. Une accumulation de propositions juxtaposées dans un récit **accélère** l’action ; dans une description, elle **entasse** les détails ; dans un discours, elle peut marquer l’**émotion** qui bouscule la syntaxe. La coordination adversative (*mais*, *pourtant*) marque au contraire un **raisonnement contrôlé**.`,
+Ne jamais s’arrêter à l’étiquette.
+
+| Le contexte | Ce que produit la juxtaposition |
+| Dans un **récit** | Elle **accélère** l’action |
+| Dans une **description** | Elle **entasse** les détails |
+| Dans un **discours** | Elle marque l’**émotion** qui bouscule la syntaxe |
+
+> La **coordination adversative** — *mais*, *pourtant* — marque au contraire un **raisonnement contrôlé**.`,
           },
           questions: [
             ['Qu’est-ce qui relie deux propositions juxtaposées ?', ['Un signe de ponctuation', 'Une conjonction de coordination', 'Un pronom relatif', 'Une conjonction de subordination'], 0, 'Virgule, point-virgule ou deux-points : le lien logique reste implicite.'],
@@ -877,24 +1265,39 @@ Ne jamais s’arrêter à l’étiquette. Une accumulation de propositions juxta
           axe: 'La phrase complexe',
           lecon: {
             titre: 'Elle complète un nom, comme un adjectif',
-            cours: `La **subordonnée relative** est introduite par un **pronom relatif** et complète un nom ou un pronom, appelé son **antécédent**. Elle occupe la fonction de **complément de l’antécédent** — autrement dit, elle fait le travail d’un adjectif.
+            cours: `La **subordonnée relative** est introduite par un **pronom relatif** et complète un **nom** ou un pronom, appelé son **antécédent**.
+
+> Elle occupe la fonction de **complément de l’antécédent** — autrement dit, elle fait le **travail d’un adjectif**.
 
 ## Les pronoms relatifs
-- **Simples** : *qui, que, quoi, dont, où*.
-- **Composés** : *lequel, laquelle, lesquels, auquel, duquel*…
-Le pronom relatif a une **double fonction** : il relie les deux propositions **et** occupe une fonction dans la subordonnée. C’est ce qu’on doit dire à l’oral.
-*L’homme **qui** parle est mon père.* → « qui » est sujet de « parle ».
-*Le livre **que** je lis est ancien.* → « que » est COD de « lis ».
-*La ville **dont** je viens.* → « dont » est complément du verbe « viens » (venir **de**).
-*Le jour **où** nous sommes partis.* → « où » est complément circonstanciel de temps.
+| Type | Les formes |
+| **Simples** | *qui, que, quoi, dont, où* |
+| **Composés** | *lequel, laquelle, lesquels, auquel, duquel*… |
+
+Le pronom relatif a une **double fonction** : il **relie** les deux propositions **et** occupe une **fonction dans la subordonnée**.
+
+## La fonction du relatif — ce qu’il faut dire à l’oral
+| L’exemple | Le relatif | Sa fonction |
+| L’homme **qui** parle est mon père | qui | **Sujet** de « parle » |
+| Le livre **que** je lis est ancien | que | **COD** de « lis » |
+| La ville **dont** je viens | dont | Complément du verbe « venir **de** » |
+| Le jour **où** nous sommes partis | où | Complément circonstanciel de **temps** |
 
 ## Déterminative ou explicative
-- La relative **déterminative** (ou restrictive) restreint le sens de l’antécédent, elle est **indispensable** : *Les élèves **qui ont fini** peuvent sortir* (les autres restent).
-- La relative **explicative** (ou appositive) ajoute une information, elle est **détachée par des virgules** et supprimable : *Les élèves, **qui ont fini**, peuvent sortir* (tous ont fini).
-La virgule change le sens de la phrase : c’est un exemple d’analyse très apprécié à l’oral.
+| | **Déterminative** (restrictive) | **Explicative** (appositive) |
+| Ce qu’elle fait | Elle **restreint** le sens de l’antécédent | Elle **ajoute** une information |
+| Sa ponctuation | **Aucune virgule** | **Détachée par des virgules** |
+| Peut-on la supprimer ? | **Non**, elle est indispensable | **Oui** |
+| L’exemple | Les élèves qui ont fini peuvent sortir : **les autres restent** | Les élèves, qui ont fini, peuvent sortir : **tous ont fini** |
+
+> **La virgule change le sens de la phrase.** C’est un exemple d’analyse très apprécié à l’oral.
 
 ## Effets dans un texte
-La relative **allonge** la phrase et permet d’enchâsser les informations : elle produit la période classique (Bossuet, Proust). Elle peut **caractériser** un personnage sans le décrire directement, **retarder** l’information principale, ou **accumuler** les précisions jusqu’au vertige.`,
+| Effet | Ce qu’il produit |
+| Elle **allonge** la phrase | Elle permet d’**enchâsser** les informations : c’est la **période classique** — Bossuet, Proust |
+| Elle **caractérise** | Un personnage décrit **indirectement** |
+| Elle **retarde** | L’information principale arrive plus tard |
+| Elle **accumule** | Les précisions, jusqu’au vertige |`,
           },
           questions: [
             ['Que complète une subordonnée relative ?', ['Un nom ou un pronom, appelé antécédent', 'Un verbe', 'Toute la proposition principale', 'Un adjectif'], 0, 'Elle fait le travail d’un adjectif : c’est un complément de l’antécédent.'],
@@ -912,31 +1315,39 @@ La relative **allonge** la phrase et permet d’enchâsser les informations : el
           axe: 'La phrase complexe',
           lecon: {
             titre: 'Elle complète un verbe, comme un COD',
-            cours: `La **complétive** est introduite par la conjonction de subordination **que** (parfois **ce que**, **à ce que**) et complète le plus souvent un **verbe** : elle en est le **COD**. On la reconnaît au fait qu’on peut la remplacer par « **quelque chose** ».
+            cours: `La **complétive** est introduite par la conjonction de subordination **que** — parfois **ce que**, **à ce que** — et complète le plus souvent un **verbe**, dont elle est le **COD**.
 
-## L’identification
-*Je crois **que tu as raison**.* → Je crois quelque chose → complétive, **COD** de « crois ».
-Elle peut aussi être :
-- **sujet** : *Qu’il soit venu m’étonne.*
-- **attribut** : *Mon espoir est qu’il revienne.*
-- **complément de l’adjectif** : *Je suis certain qu’il viendra.*
-- **complément du nom** : *L’idée qu’il parte me déplaît.*
+> On la reconnaît au fait qu’on peut la remplacer par « **quelque chose** ».
+
+## Ses fonctions possibles
+| Fonction | L’exemple |
+| **COD** | Je crois **que tu as raison** — je crois **quelque chose** |
+| **Sujet** | **Qu’il soit venu** m’étonne |
+| **Attribut** | Mon espoir est **qu’il revienne** |
+| Complément de l’**adjectif** | Je suis certain **qu’il viendra** |
+| Complément du **nom** | L’idée **qu’il parte** me déplaît |
 
 ## Le piège du mot « que »
-« Que » a plusieurs valeurs, et c’est la confusion la plus fréquente à l’oral :
-- **pronom relatif** — il a un **antécédent** et une fonction : *le livre **que** je lis* ;
-- **conjonction de subordination** — il n’a **ni antécédent ni fonction**, il ne fait qu’introduire : *je crois **que** tu mens* ;
-- **adverbe exclamatif ou interrogatif** : *Que c’est beau !*
-Test simple : cherchez un antécédent. S’il n’y en a pas, ce n’est pas un relatif.
+| Valeur de « que » | Ce qui le caractérise | L’exemple |
+| **Pronom relatif** | Il a un **antécédent** et une **fonction** | le livre **que** je lis |
+| **Conjonction de subordination** | **Ni antécédent, ni fonction** : il ne fait qu’introduire | je crois **que** tu mens |
+| **Adverbe** exclamatif ou interrogatif | Il porte l’intensité | **Que** c’est beau ! |
+
+> Test simple : **cherchez un antécédent**. S’il n’y en a pas, ce n’est **pas** un relatif.
 
 ## Le mode dans la complétive
-- **Indicatif** après les verbes de déclaration, d’opinion, de perception : *je sais qu’il vient*.
-- **Subjonctif** après les verbes de volonté, de sentiment, de doute, et après les tournures impersonnelles : *je veux qu’il vienne*, *il faut qu’il vienne*, *je crains qu’il ne vienne*.
-- La **négation** ou l’**interrogation** peuvent faire basculer au subjonctif : *je ne crois pas qu’il vienne*.
-Ce basculement est un excellent point d’analyse : il dit le **degré de certitude** de celui qui parle.
+| Après quoi | Le mode | L’exemple |
+| Verbes de **déclaration**, d’**opinion**, de **perception** | **Indicatif** | je sais **qu’il vient** |
+| Verbes de **volonté**, de **sentiment**, de **doute** | **Subjonctif** | je veux **qu’il vienne** |
+| Tournures **impersonnelles** | **Subjonctif** | il faut **qu’il vienne** |
+| La **négation** ou l’**interrogation** | Elles font basculer au **subjonctif** | je ne crois pas **qu’il vienne** |
+
+> Ce basculement est un excellent point d’analyse : il dit le **degré de certitude de celui qui parle**.
 
 ## L’interrogative indirecte
-*Je me demande **s’il viendra*** est une subordonnée **interrogative indirecte**, pas une complétive ordinaire : elle est introduite par *si* ou un mot interrogatif. Elle occupe pourtant la même fonction de COD.`,
+« Je me demande **s’il viendra** » est une subordonnée **interrogative indirecte**, introduite par *si* ou un mot interrogatif.
+
+> Ce n’est **pas** une complétive ordinaire — mais elle occupe la **même fonction de COD**.`,
           },
           questions: [
             ['Quelle est la fonction la plus fréquente d’une complétive ?', ['COD du verbe de la principale', 'Complément circonstanciel', 'Complément de l’antécédent', 'Apposition'], 0, 'Test : on peut la remplacer par « quelque chose ».'],
@@ -954,26 +1365,39 @@ Ce basculement est un excellent point d’analyse : il dit le **degré de certit
           axe: 'La phrase complexe',
           lecon: {
             titre: 'Elles complètent la phrase entière',
-            cours: `La **circonstancielle** complète non pas un mot mais la **proposition principale** tout entière. Elle est **déplaçable** et souvent **supprimable** — c’est le test qui la distingue de la complétive, qui, elle, ne bouge pas.
+            cours: `La **circonstancielle** complète non pas un mot, mais la **proposition principale tout entière**.
+
+> Elle est **déplaçable** et souvent **supprimable** : c’est le test qui la distingue de la **complétive**, qui, elle, **ne bouge pas**.
 
 ## Les principaux rapports
-- **Temps** : *quand, lorsque, dès que, avant que, après que, tandis que*. Mode : indicatif, sauf *avant que* (+ subjonctif).
-- **Cause** : *parce que, puisque, comme, étant donné que*. Indicatif.
-- **Conséquence** : *si bien que, de sorte que, au point que, tellement… que*. Indicatif.
-- **But** : *pour que, afin que, de peur que*. **Subjonctif** toujours — le but n’est pas réalisé au moment où l’on parle.
-- **Concession / opposition** : *bien que, quoique* (+ subjonctif), *alors que, tandis que* (+ indicatif).
-- **Condition / hypothèse** : *si, à condition que, pourvu que, à moins que*.
-- **Comparaison** : *comme, ainsi que, de même que, plus… que*.
+| Rapport | Ses conjonctions | Le mode |
+| **Temps** | quand, lorsque, dès que, après que, tandis que | Indicatif — sauf **avant que** : subjonctif |
+| **Cause** | parce que, puisque, comme, étant donné que | Indicatif |
+| **Conséquence** | si bien que, de sorte que, au point que, tellement… que | Indicatif |
+| **But** | pour que, afin que, de peur que | **Subjonctif toujours** |
+| **Concession / opposition** | bien que, quoique / alors que, tandis que | Subjonctif / indicatif |
+| **Condition** | si, à condition que, pourvu que, à moins que | Voir ci-dessous |
+| **Comparaison** | comme, ainsi que, de même que, plus… que | Indicatif |
+
+> Le **but** est au subjonctif parce qu’il **n’est pas réalisé** au moment où l’on parle. La règle se comprend, elle ne s’apprend pas.
 
 ## Le système hypothétique avec « si »
-Trois constructions à connaître, et le mode se joue dans la **principale** :
-1. *Si tu viens, je serai content* → présent + futur : **potentiel**, la chose est possible.
-2. *Si tu venais, je serais content* → imparfait + conditionnel présent : **irréel du présent**.
-3. *Si tu étais venu, j’aurais été content* → plus-que-parfait + conditionnel passé : **irréel du passé**.
-Après *si* de condition, **jamais de futur ni de conditionnel**.
+| La construction | Ce qu’elle exprime |
+| Présent + **futur** — Si tu viens, je serai content | Le **potentiel** : la chose est possible |
+| Imparfait + **conditionnel présent** — Si tu venais, je serais content | L’**irréel du présent** |
+| Plus-que-parfait + **conditionnel passé** — Si tu étais venu, j’aurais été content | L’**irréel du passé** |
+
+> Après le *si* de condition : **jamais de futur ni de conditionnel**. Le mode se joue dans la **principale**.
 
 ## Ce qu’il faut dire à l’oral
-Nommer le rapport, puis l’interpréter : une accumulation de **circonstancielles de cause** installe un raisonnement ; une **concessive** (« bien que ») montre un locuteur qui anticipe l’objection ; une **hypothétique** à l’irréel du passé exprime le **regret**. C’est cette seconde étape qui rapporte les points.`,
+Nommer le rapport, **puis l’interpréter**.
+
+| L’observation | Son interprétation |
+| Une accumulation de **causales** | Un **raisonnement** qui s’installe |
+| Une **concessive** — « bien que » | Un locuteur qui **anticipe l’objection** |
+| Une **hypothétique** à l’irréel du passé | Le **regret** |
+
+> C’est cette **seconde étape** qui rapporte les points.`,
           },
           questions: [
             ['Qu’est-ce qui distingue une circonstancielle d’une complétive ?', ['Elle est déplaçable et souvent supprimable', 'Elle est introduite par « que »', 'Elle complète un nom', 'Elle est toujours en fin de phrase'], 0, 'La complétive, COD du verbe, ne peut pas se déplacer.'],
@@ -991,26 +1415,40 @@ Nommer le rapport, puis l’interpréter : une accumulation de **circonstanciell
           axe: 'L’interrogation et la négation',
           lecon: {
             titre: 'Sur quoi porte la question ?',
-            cours: `L’interrogation est au programme de première parce qu’elle **met en scène celui qui parle** : poser une question, ce n’est pas seulement ignorer, c’est solliciter, feindre, accuser ou faire réfléchir.
+            cours: `L’interrogation est au programme parce qu’elle **met en scène celui qui parle** : poser une question, ce n’est pas seulement ignorer — c’est **solliciter, feindre, accuser ou faire réfléchir**.
 
 ## Totale ou partielle
-- L’interrogation **totale** porte sur **toute la phrase**. La réponse attendue est **oui / non / si**. *Viens-tu ?*
-- L’interrogation **partielle** porte sur **un élément** de la phrase. Elle est introduite par un **mot interrogatif** — *qui, que, quoi, où, quand, comment, pourquoi, combien, quel* — et appelle une information précise. *Quand viens-tu ?*
+| | **Totale** | **Partielle** |
+| Sur quoi elle porte | **Toute la phrase** | **Un élément** de la phrase |
+| La réponse attendue | **oui / non / si** | Une **information précise** |
+| Ce qui l’introduit | Rien de particulier | Un **mot interrogatif** : qui, que, quoi, où, quand, comment, pourquoi, combien, quel |
+| L’exemple | Viens-tu ? | **Quand** viens-tu ? |
 
 ## Les trois niveaux de langue
-Une même question totale se formule de trois façons, et le choix est **signifiant** :
-1. **Intonation seule** (oral, familier) : *Tu viens ?*
-2. **« Est-ce que »** (courant) : *Est-ce que tu viens ?*
-3. **Inversion sujet-verbe** (soutenu) : *Viens-tu ?* ou, avec un sujet nominal, l’**inversion complexe** : *Pierre viendra-t-il ?*
-Dans un texte littéraire, l’inversion signale un registre soutenu ou une distance ; l’intonation seule, la vivacité de l’oral.
+Une même question totale se formule de **trois** façons — et le choix est **signifiant**.
+
+| Construction | Son niveau | L’exemple |
+| **Intonation seule** | Oral, familier | Tu viens ? |
+| « **Est-ce que** » | Courant | Est-ce que tu viens ? |
+| **Inversion** sujet-verbe | Soutenu | Viens-tu ? |
+| **Inversion complexe** (sujet nominal) | Soutenu | Pierre viendra-t-il ? |
+
+> Dans un texte littéraire, l’**inversion** signale un registre soutenu ou une **distance** ; l’**intonation seule**, la **vivacité de l’oral**.
 
 ## Les fausses questions
-- La **question rhétorique** n’attend pas de réponse : elle affirme. *Qui ne le sait pas ?* = tout le monde le sait. C’est une arme majeure de l’argumentation.
-- La **question oratoire** relance le discours et guide l’auditeur.
-- La **délibération** est une question qu’on se pose à soi-même : *Que faire ?* Elle est fréquente dans le monologue théâtral, où elle donne à voir l’hésitation.
+| Type | Ce qu’il fait | L’exemple |
+| La question **rhétorique** | Elle **n’attend pas de réponse** : elle **affirme** | « Qui ne le sait pas ? » = tout le monde le sait |
+| La question **oratoire** | Elle **relance** le discours et guide l’auditeur | — |
+| La **délibération** | Une question qu’on se pose **à soi-même** | « Que faire ? » |
+
+> La question rhétorique est une **arme majeure de l’argumentation**. La délibération est fréquente dans le **monologue théâtral**, où elle **donne à voir l’hésitation**.
 
 ## À l’oral du bac
-Repérez d’abord le **type** (totale / partielle), puis la **construction** (intonation, « est-ce que », inversion), puis la **valeur** : vraie question, question rhétorique, délibération. C’est la troisième étape qui montre ce que vous savez lire.`,
+1. Repérer le **type** — totale ou partielle ;
+2. Repérer la **construction** — intonation, « est-ce que », inversion ;
+3. Nommer la **valeur** — vraie question, question rhétorique, délibération.
+
+> C’est la **troisième étape** qui montre ce que vous savez lire.`,
           },
           questions: [
             ['Sur quoi porte une interrogation totale ?', ['Sur toute la phrase, avec une réponse oui / non', 'Sur un seul élément de la phrase', 'Sur le sujet uniquement', 'Sur le complément'], 0, 'L’interrogation partielle, elle, appelle une information précise.'],
@@ -1028,29 +1466,36 @@ Repérez d’abord le **type** (totale / partielle), puis la **construction** (i
           axe: 'L’interrogation et la négation',
           lecon: {
             titre: 'La question rapportée change de forme',
-            cours: `L’**interrogation directe** est posée telle quelle, avec un **point d’interrogation**. L’**interrogation indirecte** est **rapportée** à l’intérieur d’une phrase, dans une subordonnée, et **perd** tous les signes de la question.
+            cours: `L’**interrogation directe** est posée telle quelle, avec un **point d’interrogation**. L’**interrogation indirecte** est **rapportée** dans une subordonnée — et **perd tous les signes de la question**.
 
 ## Les trois transformations
-Passer du direct à l’indirect suppose trois changements :
-1. **Plus de point d’interrogation** ni d’inversion du sujet.
-*Viendra-t-il ?* → *Je demande **s’il viendra**.*
-2. **Changement des mots interrogatifs** :
-- *est-ce que* → **si**
-- *qu’est-ce qui* → **ce qui**
-- *qu’est-ce que / que* → **ce que**
-*Qu’est-ce que tu veux ?* → *Je demande **ce que** tu veux.*
-Les autres mots restent : *où, quand, comment, pourquoi, combien, qui, quel*.
-3. **Concordance des temps et des personnes** si le verbe introducteur est au passé.
-*Il m’a demandé : « Où vas-tu ? »* → *Il m’a demandé **où j’allais**.*
+| Transformation | Ce qui change | L’exemple |
+| 1. La **ponctuation et l’ordre** | Plus de **point d’interrogation**, plus d’**inversion** | Viendra-t-il ? → Je demande **s’il viendra**. |
+| 2. Les **mots interrogatifs** | Certains sont remplacés | Voir le tableau ci-dessous |
+| 3. La **concordance** | Temps **et** personnes, si le verbe introducteur est au passé | « Où vas-tu ? » → Il m’a demandé **où j’allais**. |
+
+| Au direct | À l’indirect |
+| *est-ce que* | **si** |
+| *qu’est-ce qui* | **ce qui** |
+| *qu’est-ce que*, *que* | **ce que** |
+| *où, quand, comment, pourquoi, combien, qui, quel* | **inchangés** |
 
 ## La fonction
-L’interrogative indirecte est une **subordonnée** qui occupe le plus souvent la fonction de **COD** du verbe introducteur (*demander, savoir, se demander, ignorer, chercher*). C’est le rappel attendu à l’oral.
+L’interrogative indirecte est une **subordonnée**, le plus souvent **COD** du verbe introducteur — *demander, savoir, se demander, ignorer, chercher*.
+
+> C’est le rappel attendu à l’oral : nommer la **nature** et la **fonction**.
 
 ## L’erreur à ne pas commettre
-Ne jamais garder l’inversion ni « est-ce que » dans l’indirect : *« Je me demande où est-ce qu’il va »* est fautif. On dit : *Je me demande où il va*.
+> Ne **jamais** garder l’inversion ni « est-ce que » dans l’indirect. « Je me demande **où est-ce qu’il va** » est **fautif** : on dit « Je me demande **où il va** ».
 
-## Ce que cela apporte à l’analyse d’un texte
-Le passage du direct à l’indirect **efface la voix** du personnage : le discours rapporté indirect place le narrateur entre le lecteur et la parole. Un romancier qui rapporte indirectement les questions d’un personnage prend de la **distance**, parfois de l’**ironie** ; le discours direct, lui, met la question en scène. Comparer les deux dans un même extrait est un excellent réflexe d’oral.`,
+## Ce que cela apporte à l’analyse
+| Discours | Ce qu’il fait |
+| **Direct** | Il **met la question en scène** : on entend le personnage |
+| **Indirect** | Il **efface la voix** : le narrateur se place **entre le lecteur et la parole** |
+
+> Un romancier qui rapporte **indirectement** les questions d’un personnage prend de la **distance**, parfois de l’**ironie**.
+
+> Comparer les deux dans un même extrait est un excellent réflexe d’oral.`,
           },
           questions: [
             ['Que perd une interrogation lorsqu’elle devient indirecte ?', ['Le point d’interrogation et l’inversion du sujet', 'Son sujet', 'Son verbe', 'Son mot interrogatif toujours'], 0, 'Elle devient une subordonnée intégrée à la phrase.'],
@@ -1068,21 +1513,32 @@ Le passage du direct à l’indirect **efface la voix** du personnage : le disco
           axe: 'L’interrogation et la négation',
           lecon: {
             titre: 'Dire non, et de combien',
-            cours: `En français, la négation est le plus souvent **en deux parties** : un adverbe **ne** et un second terme (*pas, plus, jamais, rien, personne, aucun, nul, guère*). Le programme demande de savoir la **classer** et d’en mesurer la **portée**.
+            cours: `En français, la négation est le plus souvent **en deux parties** : l’adverbe **ne** et un second terme — *pas, plus, jamais, rien, personne, aucun, nul, guère*.
+
+> Le programme demande de savoir la **classer** et d’en mesurer la **portée**.
 
 ## Totale ou partielle
-- La négation **totale** porte sur toute la phrase : *Il **ne** vient **pas**.*
-- La négation **partielle** ne nie qu’un élément et laisse le reste debout : *Il **ne** vient **jamais** le lundi* (il vient les autres jours) ; *Il **ne** vient pas **seul***.
-Repérer la portée exacte est souvent la question posée à l’oral.
+| | **Totale** | **Partielle** |
+| Sur quoi elle porte | **Toute** la phrase | **Un seul élément** — le reste tient debout |
+| L’exemple | Il **ne** vient **pas**. | Il **ne** vient **jamais le lundi** : il vient les autres jours |
 
-## Les formes
-- **Négation exceptive** (restriction) : *ne… que*. Attention, elle n’est **pas une négation** : *Je n’ai que dix euros* signifie « j’ai seulement dix euros ». C’est un piège classique.
-- **Négation lexicale** : le sens négatif est dans le **mot**, pas dans la construction — *impossible*, *malheureux*, *inhumain*, *refuser*, *sans*, *ignorer*.
-- **Ne explétif** : il ne nie rien, il accompagne certaines subordonnées — *Je crains qu’il **ne** vienne* (= je crains qu’il vienne).
-- **Négation à un seul terme** : à l’oral courant, le « ne » tombe (*je viens pas*) ; en langue littéraire, certains verbes admettent « ne » seul (*je ne saurais dire*, *si je ne me trompe*).
+> Repérer la **portée exacte** est souvent la question posée à l’oral.
+
+## Les formes particulières
+| Forme | Ce qu’elle est | L’exemple |
+| La **négation exceptive** — *ne… que* | **Ce n’est PAS une négation** : c’est une **restriction** | « Je n’ai que dix euros » = j’ai **seulement** dix euros |
+| La **négation lexicale** | Le sens négatif est **dans le mot** | impossible, malheureux, inhumain, refuser, sans, ignorer |
+| Le **ne** explétif | Il **ne nie rien** | « Je crains qu’il **ne** vienne » = je crains qu’il vienne |
+| La négation **à un seul terme** | Le « ne » tombe à l’oral, ou subsiste seul en langue littéraire | « je viens pas » ; « je **ne** saurais dire » |
+
+> L’exceptive *ne… que* est le **piège classique** : elle a la **forme** d’une négation et le **sens** d’une restriction.
 
 ## Ce qu’on en fait dans un texte
-Une accumulation de négations peut peindre le **vide**, le **manque**, le **refus** ou l’**enfermement** : le portrait d’un personnage « qui ne dit rien, ne demande rien, n’attend plus personne » se construit entièrement par soustraction. La négation exceptive (*ne… que*) resserre au contraire l’attention sur **une seule chose** — procédé d’insistance. Et un texte polémique multiplie les négations lexicales pour disqualifier sans avoir l’air de nier.`,
+| Procédé | L’effet |
+| Une **accumulation** de négations | Elle peint le **vide**, le manque, le refus, l’enfermement |
+| Un portrait **par soustraction** | « Il ne dit rien, ne demande rien, n’attend plus personne » |
+| La **négation exceptive** | Elle **resserre** l’attention sur **une seule chose** : une insistance |
+| Les **négations lexicales** en série | Un texte polémique **disqualifie sans avoir l’air de nier** |`,
           },
           questions: [
             ['De quoi la négation française se compose-t-elle le plus souvent ?', ['De deux éléments : « ne » et un second terme', 'D’un seul adverbe', 'D’un préfixe', 'D’une inversion du sujet'], 0, '« Ne… pas », « ne… jamais », « ne… rien », « ne… personne ».'],
@@ -1100,27 +1556,34 @@ Une accumulation de négations peut peindre le **vide**, le **manque**, le **ref
           axe: 'La question de grammaire à l’oral',
           lecon: {
             titre: 'Deux points en cinq minutes, si l’on suit l’ordre',
-            cours: `À l’oral du bac de français, après l’explication linéaire, l’examinateur pose une **question de grammaire** sur une phrase du texte : elle vaut **2 points sur 20**. Elle se prépare, et elle se gagne — à condition de suivre toujours la même méthode.
+            cours: `À l’oral du bac, après l’explication linéaire, l’examinateur pose une **question de grammaire** sur une phrase du texte : elle vaut **2 points sur 20**.
+
+> Elle se **prépare**, et elle se **gagne** — à condition de suivre **toujours la même méthode**.
 
 ## Les quatre étapes
-1. **Relire la phrase à voix haute**, en entier. On perd des points en analysant un fragment.
-2. **Identifier** : compter les verbes conjugués, repérer les mots subordonnants, délimiter les propositions. Le dire à voix haute : « Cette phrase compte trois verbes conjugués, donc trois propositions. »
-3. **Nommer précisément** : nature (relative, complétive, circonstancielle de cause…), fonction (COD, complément de l’antécédent, complément de phrase), et pour un pronom relatif sa **double fonction**.
-4. **Interpréter** : que produit cette construction **dans ce texte** ? C’est l’étape que les candidats oublient, et c’est elle qui fait la différence entre 1 et 2 points.
+| Étape | Ce qu’on fait | L’erreur à éviter |
+| 1. **Relire** la phrase à voix haute | En **entier** | Analyser un **fragment** fait perdre des points |
+| 2. **Identifier** | Compter les verbes conjugués, repérer les subordonnants, délimiter les propositions | Se lancer sans compter |
+| 3. **Nommer** précisément | Nature, fonction — et pour un relatif, sa **double fonction** | Rester vague |
+| 4. **Interpréter** | Que produit cette construction **dans ce texte** ? | **C’est l’étape qu’on oublie** — et celle qui fait la différence entre 1 et 2 points |
+
+À l’étape 2, dire à voix haute : « Cette phrase compte **trois verbes conjugués**, donc **trois propositions**. »
 
 ## Les questions les plus fréquentes
-- « Analysez la phrase suivante » (découpage complet en propositions).
-- « Analysez la négation dans cette phrase » (totale / partielle, portée).
-- « Transformez cette phrase interrogative » (direct → indirect, ou changement de registre).
-- « Quelle est la fonction de la proposition subordonnée ? »
-- « Quel est le mode employé et pourquoi ? »
+| La consigne | Ce qu’elle attend |
+| « Analysez la phrase suivante » | Un **découpage complet** en propositions |
+| « Analysez la négation » | **Totale ou partielle**, et sa **portée** |
+| « Transformez cette phrase interrogative » | Direct → indirect, ou changement de **registre** |
+| « Quelle est la fonction de la subordonnée ? » | Nature **puis** fonction |
+| « Quel est le mode employé, et pourquoi ? » | La **valeur** du subjonctif ou de l’indicatif |
 
 ## Trois conseils
-- **Ne pas paniquer devant une phrase longue** : le nombre de verbes conjugués donne toujours le squelette.
-- **Employer le métalangage exact** : dire « subordonnée conjonctive complétive COD » vaut mieux que « une subordonnée avec que ».
-- **Ne jamais inventer** : mieux vaut analyser correctement deux propositions sur trois que produire une étiquette fausse pour tout.
+| Conseil | Pourquoi |
+| Ne pas paniquer devant une phrase **longue** | Le **nombre de verbes conjugués** donne toujours le squelette |
+| Employer le **métalangage exact** | « Subordonnée conjonctive complétive COD » vaut mieux que « une subordonnée avec que » |
+| **Ne jamais inventer** | Mieux vaut **deux propositions justes sur trois** qu’une étiquette fausse pour tout |
 
-> La grammaire n’est pas une épreuve à part : elle sert l’explication. Une subordonnée de cause dans un plaidoyer, une négation totale dans un aveu — c’est la même lecture, poursuivie par d’autres moyens.`,
+> La grammaire n’est **pas une épreuve à part** : elle **sert l’explication**. Une subordonnée de cause dans un plaidoyer, une négation totale dans un aveu — c’est la **même lecture, poursuivie par d’autres moyens**.`,
           },
           questions: [
             ['Combien de points vaut la question de grammaire à l’oral du bac ?', ['2 points sur 20', '5 points sur 20', '1 point sur 20', '4 points sur 20'], 0, 'Elle est posée après l’explication linéaire, sur une phrase du texte.'],
@@ -1138,29 +1601,43 @@ Une accumulation de négations peut peindre le **vide**, le **manque**, le **ref
           axe: 'La question de grammaire à l’oral',
           lecon: {
             titre: 'Le minimum vital, sans lequel rien ne tient',
-            cours: `Toutes les questions de grammaire supposent le même socle : savoir distinguer la **nature** (ce qu’un mot **est**) de la **fonction** (le rôle qu’il **joue** dans la phrase). Un même mot change de fonction, jamais de nature.
+            cours: `Toutes les questions de grammaire supposent le même socle : distinguer la **nature** — ce qu’un mot **est** — de la **fonction** — le **rôle qu’il joue** dans la phrase.
+
+> Un même mot **change de fonction**, **jamais de nature**.
 
 ## Les natures
-Nom, déterminant, adjectif qualificatif, pronom, verbe, adverbe, préposition, conjonction (de coordination ou de subordination), interjection. Ce sont des **classes grammaticales** : elles s’apprennent une fois pour toutes.
+Nom, déterminant, adjectif qualificatif, pronom, verbe, adverbe, préposition, conjonction (de coordination ou de subordination), interjection.
+
+> Ce sont des **classes grammaticales** : elles s’apprennent **une fois pour toutes**.
 
 ## Les fonctions essentielles
-- **Sujet** : celui dont on dit quelque chose. Test : « c’est… qui ».
-- **COD** : complète le verbe sans préposition. Test : « qui ? quoi ? » après le verbe.
-- **COI** : complète le verbe avec préposition. Test : « à qui ? de quoi ? ».
-- **Attribut du sujet** : après un verbe d’état (*être, sembler, paraître, devenir, rester, demeurer, avoir l’air*). Il **qualifie le sujet**, on ne peut pas le supprimer.
-- **Complément circonstanciel** : temps, lieu, manière, cause, but, moyen… **Déplaçable** et souvent supprimable.
-- **Épithète** : adjectif accolé au nom, sans verbe (*une nuit **noire***).
-- **Apposition** : détachée par une virgule, elle désigne la même réalité que le nom (*Paris, **capitale de la France***).
-- **Complément du nom** : introduit par une préposition (*le livre **de Pierre***).
-- **Complément de l’antécédent** : c’est la fonction d’une subordonnée relative.
+| Fonction | Ce qu’elle est | Le test |
+| **Sujet** | Ce dont on dit quelque chose | « c’est… qui » |
+| **COD** | Il complète le verbe **sans préposition** | « qui ? quoi ? » après le verbe |
+| **COI** | Il complète le verbe **avec préposition** | « à qui ? de quoi ? » |
+| **Attribut du sujet** | Il **qualifie le sujet**, après un verbe d’état | On ne peut **pas** le supprimer |
+| **Complément circonstanciel** | Temps, lieu, manière, cause, but, moyen | **Déplaçable**, souvent supprimable |
+| **Épithète** | Adjectif **accolé** au nom, sans verbe | une nuit **noire** |
+| **Apposition** | **Détachée** par une virgule, elle désigne la même réalité | Paris, **capitale de la France** |
+| **Complément du nom** | Introduit par une **préposition** | le livre **de Pierre** |
+| **Complément de l’antécédent** | La fonction d’une subordonnée **relative** | — |
+
+Les verbes d’état : *être, sembler, paraître, devenir, rester, demeurer, avoir l’air*.
 
 ## Le piège épithète / attribut
-*Une femme **heureuse*** → épithète, pas de verbe d’état.
-*Cette femme est **heureuse*** → attribut du sujet, après « est ».
-La différence est constamment demandée.
+| L’exemple | La fonction | Pourquoi |
+| Une femme **heureuse** | **Épithète** | Pas de verbe d’état |
+| Cette femme **est heureuse** | **Attribut du sujet** | Après « est » |
+
+> La différence est **constamment demandée**.
 
 ## L’usage littéraire
-Nommer une fonction n’a d’intérêt que si l’on en tire quelque chose : une **accumulation d’épithètes** alourdit ou enrichit une description ; une **apposition** ralentit la phrase et met en relief ; un **complément circonstanciel placé en tête** installe un cadre avant l’action. La grammaire décrit ce que le style fait.`,
+| Observation | Ce qu’elle produit |
+| Une **accumulation d’épithètes** | Elle alourdit — ou enrichit — une description |
+| Une **apposition** | Elle **ralentit** la phrase et met en relief |
+| Un **complément circonstanciel en tête** | Il **installe un cadre** avant l’action |
+
+> Nommer une fonction n’a d’intérêt que si l’on en **tire quelque chose** : la grammaire **décrit ce que le style fait**.`,
           },
           questions: [
             ['Quelle différence y a-t-il entre nature et fonction ?', ['La nature est ce qu’un mot est, la fonction le rôle qu’il joue', 'Ce sont deux mots pour la même chose', 'La nature dépend de la phrase, la fonction non', 'La fonction concerne seulement les verbes'], 0, 'Un mot change de fonction selon la phrase, jamais de classe grammaticale.'],

@@ -16,19 +16,32 @@ export default {
           titre: 'Les temps du passé',
           lecon: {
             titre: 'Pretérito, imperfecto, perfecto',
-            cours: `L'espagnol distingue trois passés, et le choix entre eux dépend de la **manière de voir** l'action, pas seulement du moment.
+            cours: `L’espagnol distingue trois passés. Le choix ne dépend pas du moment de l’action, mais de la **manière de la voir** : achevée, en cours, ou encore reliée à aujourd’hui.
 
-## Le pretérito indefinido
-Action **achevée**, coupée du présent, souvent datée : *Ayer comí paella*. Formes régulières : *-é, -aste, -ó, -amos, -asteis, -aron* (verbes en -ar) ; *-í, -iste, -ió, -imos, -isteis, -ieron* (verbes en -er/-ir).
+## Les trois passés en un coup d’œil
+| Temps | Ce qu’il exprime | Marqueurs | Exemple |
+| **Indefinido** | Action achevée, coupée du présent | *ayer, en 1998, el año pasado* | *Ayer comí paella* |
+| **Imperfecto** | Description, habitude, action en cours | *siempre, todos los días, mientras* | *Cuando era pequeño, jugaba al fútbol* |
+| **Perfecto** | Passé relié au présent | *hoy, esta semana, ya, todavía no* | *Hoy he estudiado mucho* |
 
-## L'imperfecto
-**Description**, habitude, action en cours dans le passé : *Cuando era pequeño, jugaba al fútbol*. Terminaisons : *-aba, -abas, -aba…* (-ar) et *-ía, -ías, -ía…* (-er/-ir). Trois irréguliers seulement : *ser* (era), *ir* (iba), *ver* (veía).
+## Les terminaisons
+| Temps | Verbes en -ar | Verbes en -er / -ir |
+| Indefinido | -é, -aste, -ó, -amos, -asteis, -aron | -í, -iste, -ió, -imos, -isteis, -ieron |
+| Imperfecto | -aba, -abas, -aba, -ábamos, -abais, -aban | -ía, -ías, -ía, -íamos, -íais, -ían |
+| Perfecto | *haber* au présent + participe passé | *haber* au présent + participe passé |
 
-## Le pretérito perfecto
-Passé **relié au présent**, avec des marqueurs comme *hoy, esta semana, ya, todavía no* : *Hoy he estudiado mucho*. Formation : *haber* au présent + participe passé.
+> L’imparfait espagnol n’a que **trois irréguliers**, en tout et pour tout : *ser* (*era*), *ir* (*iba*), *ver* (*veía*). C’est le temps le plus sûr de la langue.
 
-## Le contraste
-Dans un récit, l'imparfait plante le décor et le passé simple fait avancer l'action : *Llovía cuando salí de casa*. C'est ce contraste, plus que les terminaisons, que l'épreuve évalue.`,
+## Le contraste, c’est là que se joue la note
+Dans un récit, les deux temps ne se concurrencent pas : ils se répartissent le travail.
+
+1. L’**imperfecto** plante le décor : ce qui durait, ce qui était en cours.
+2. L’**indefinido** fait avancer l’action : ce qui survient et rompt le décor.
+
+*Llovía cuando salí de casa* — il pleuvait (décor) quand je suis sorti (événement). Inverser les deux temps produit une phrase grammaticalement correcte mais qui raconte autre chose.
+
+## Le piège du perfecto
+Le français emploie le passé composé partout ; l’espagnol le réserve à ce qui touche encore au présent. *Ayer he comido* est une faute : *ayer* coupe du présent, donc *ayer comí*.`,
           },
           questions: [
             ['Quel temps s’emploie pour une description dans le passé ?', ['El imperfecto', 'El pretérito indefinido', 'El pretérito perfecto', 'El futuro'], 0, 'Il plante le décor, exprime l’habitude et la durée.'],
@@ -45,19 +58,35 @@ Dans un récit, l'imparfait plante le décor et le passé simple fait avancer l'
           titre: 'Ser, estar et les tournures essentielles',
           lecon: {
             titre: 'Deux verbes « être », et tout change',
-            cours: `L'erreur la plus visible d'un francophone en espagnol tient à un seul choix : *ser* ou *estar*.
+            cours: `L’erreur la plus visible d’un francophone en espagnol tient à un seul choix : *ser* ou *estar*. Le français n’a qu’un verbe « être » ; l’espagnol en a deux, et ils ne disent pas la même chose.
 
-## Ser
-Identité, origine, profession, caractéristique **essentielle**, heure et date : *Es francés*, *Soy profesora*, *Son las tres*, *El hielo es frío*.
+## Ser ou estar ?
+| | **Ser** | **Estar** |
+| Ce qu’il exprime | Ce que la chose **est** | Ce dans quoi elle **se trouve** |
+| Emplois | Identité, origine, profession, matière | État passager, localisation, humeur |
+| Le temps | L’heure et la date | Le résultat d’un changement |
+| Exemples | *Es francés*, *Soy profesora*, *Son las tres* | *Está cansado*, *Madrid está en España* |
 
-## Estar
-État **passager**, localisation, résultat d'un changement, humeur : *Está cansado*, *Madrid está en España*, *La sopa está fría*.
+*El hielo es frío* (la glace est froide : c’est sa nature) mais *La sopa está fría* (la soupe est froide : elle a refroidi).
 
 ## Le sens change avec le verbe
-*Ser listo* (être malin) / *estar listo* (être prêt). *Ser aburrido* (être ennuyeux) / *estar aburrido* (s'ennuyer). *Ser rico* (être riche) / *estar rico* (être délicieux). Ce ne sont pas des nuances : ce sont des sens différents.
+Ce ne sont pas des nuances de style : ce sont des sens différents.
+
+| Avec *ser* | Avec *estar* |
+| *ser listo* : être malin | *estar listo* : être prêt |
+| *ser aburrido* : être ennuyeux | *estar aburrido* : s’ennuyer |
+| *ser rico* : être riche | *estar rico* : être délicieux |
+| *ser malo* : être méchant | *estar malo* : être malade |
+
+> Le réflexe qui tranche : se demander si l’on décrit **ce qu’est** le sujet, ou **comment il va**. Le premier appelle *ser*, le second *estar*.
 
 ## Trois tournures à maîtriser
-**Gustar** se construit à l'envers du français : *Me gusta el cine* (le cinéma me plaît), *Me gustan las películas*. **Hay** (il y a) est invariable : *Hay dos libros*. **Hace** sert au temps qui passe : *Hace dos años que estudio español*.`,
+| Tournure | Sa construction | Exemple |
+| **Gustar** | À l’envers du français : la chose plaît à quelqu’un | *Me gusta el cine*, *Me gustan las películas* |
+| **Hay** | Invariable, jamais au pluriel | *Hay dos libros* |
+| **Hace** | Le temps écoulé | *Hace dos años que estudio español* |
+
+Le piège de *gustar* : le verbe s’accorde avec **ce qui plaît**, pas avec la personne. *Me gustan* si la chose est au pluriel.`,
           },
           questions: [
             ['Quel verbe employer pour la localisation ?', ['Estar', 'Ser', 'Haber', 'Tener'], 0, '*Madrid está en España*.'],
@@ -74,19 +103,35 @@ Identité, origine, profession, caractéristique **essentielle**, heure et date 
           titre: 'Le monde hispanique aujourd’hui',
           lecon: {
             titre: 'Repères pour les axes du programme',
-            cours: `L'épreuve du bac s'appuie sur des **axes thématiques** : identités, mémoire, citoyenneté, innovation. Quelques repères servent partout.
+            cours: `L’épreuve s’appuie sur des **axes thématiques** — identités, mémoire, citoyenneté, innovation. Quelques repères servent dans presque tous les sujets.
 
 ## Un espace immense
-L'espagnol est parlé par plus de 500 millions de personnes dans une vingtaine de pays. C'est la deuxième langue maternelle du monde. Les variantes (voseo argentin, seseo andalou et américain, vocabulaire mexicain) ne sont pas des fautes : ce sont des normes régionales.
+L’espagnol est parlé par plus de **500 millions** de personnes, dans une vingtaine de pays : c’est la **deuxième langue maternelle du monde**.
+
+| Variante | Où | Ce qu’elle change |
+| *Voseo* | Argentine, Uruguay, Amérique centrale | *vos* remplace *tú* : *vos tenés* |
+| *Seseo* | Andalousie, toute l’Amérique | *z* et *c* se prononcent *s* |
+| Lexique mexicain | Mexique | *carro* pour *coche*, *platicar* pour *hablar* |
+
+> Ces variantes ne sont pas des fautes : ce sont des **normes régionales**. Les traiter comme des écarts est un contresens sur ce qu’est une langue mondiale.
 
 ## Mémoire et démocratie
-La **guerra civil** (1936-1939) puis le franquisme jusqu'en 1975 ; la **transición** vers la démocratie et la Constitution de 1978. En Amérique latine, les dictatures des années 1970 (Chili, Argentine) et le travail de mémoire des *Madres de Plaza de Mayo*.
+| Date | En Espagne | En Amérique latine |
+| 1936-1939 | La *guerra civil* | |
+| 1939-1975 | Le franquisme | |
+| 1973-1990 | | Dictature de Pinochet au Chili |
+| 1976-1983 | | Dictature argentine, *Madres de Plaza de Mayo* |
+| 1975-1978 | La *transición*, Constitution de 1978 | |
 
 ## Créations
-**Cervantes** et *Don Quijote* ; **Lorca** et le théâtre ; **Picasso** et *Guernica* ; **Frida Kahlo** ; le **réalisme magique** de García Márquez ; le cinéma d'Almodóvar et de Guillermo del Toro.
+| Domaine | Références |
+| Littérature | **Cervantes** et *Don Quijote* ; **Lorca** au théâtre |
+| Peinture | **Picasso** et *Guernica* ; **Frida Kahlo** |
+| Roman contemporain | Le **réalisme magique** de García Márquez |
+| Cinéma | **Almodóvar**, **Guillermo del Toro** |
 
 ## Enjeux contemporains
-Migrations et frontières, plurilinguisme (catalan, basque, galicien, langues amérindiennes), inégalités, écologie amazonienne, poids économique et culturel du monde hispanophone aux États-Unis.`,
+Migrations et frontières ; plurilinguisme (catalan, basque, galicien, langues amérindiennes) ; inégalités ; écologie amazonienne ; et le poids économique et culturel du monde hispanophone **aux États-Unis**, où l’espagnol est la deuxième langue parlée.`,
           },
           questions: [
             ['Combien de personnes parlent espagnol dans le monde environ ?', ['Plus de 500 millions', '100 millions', '2 milliards', '50 millions'], 0, 'Deuxième langue maternelle du monde.'],

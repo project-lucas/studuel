@@ -126,26 +126,45 @@ DELETE FROM public.chapters c
           axe: 'Se chercher, se construire — Dire l’amour',
           lecon: {
             titre: 'Vingt-cinq siècles pour dire « je t’aime »',
-            cours: `La poésie **lyrique** est celle qui exprime les **sentiments personnels** du poète. Son nom vient de la **lyre**, l’instrument dont s’accompagnaient les poètes grecs : à l’origine, la poésie lyrique se **chantait**.
+            cours: `Dire l’amour, c’est presque toujours dire aussi le temps. Les deux thèmes sont inséparables depuis Ronsard.
+
+## Le mot
+= Lyrique vient de la LYRE, l’instrument des poètes grecs
+
+À l’origine, la poésie lyrique se **chantait**. Elle exprime les **sentiments personnels** du poète.
 
 ## Les grandes étapes
-- **Antiquité** : **Sappho**, au VIe siècle avant J.-C., dit le trouble amoureux ; **Ovide** écrit *L’Art d’aimer*.
-- **Moyen Âge** : les **troubadours** inventent l’**amour courtois** — le poète sert une dame inaccessible, et cette souffrance l’élève.
-- **XVIe siècle** : la **Pléiade**. **Ronsard** (« Mignonne, allons voir si la rose… ») et **Louise Labé** reprennent le **sonnet** de Pétrarque et joignent l’amour au thème du **temps qui passe**.
-- **XIXe siècle** : le **romantisme**. **Lamartine**, **Hugo**, **Musset** font de la nature le miroir du sentiment.
-- **XXe siècle** : **Apollinaire** (« Le Pont Mirabeau »), **Éluard** (« Liberté »), **Aragon** (« Les Yeux d’Elsa ») renouvellent la forme sans abandonner le sentiment.
+@ VIe siècle av. J.-C. — Sappho dit le trouble amoureux ; plus tard, Ovide écrit L’Art d’aimer
+@ Moyen Âge — Les troubadours inventent l’amour courtois
+@ XVIe siècle — La Pléiade : Ronsard, Louise Labé, et le sonnet venu de Pétrarque
+@ XIXe siècle — Le romantisme : Lamartine, Hugo, Musset
+@ XXe siècle — Apollinaire, Éluard, Aragon renouvellent la forme
+
+| Le poète | Son vers célèbre |
+| **Ronsard** | « Mignonne, allons voir si la rose… » |
+| **Apollinaire** | « Le Pont Mirabeau » |
+| **Éluard** | « Liberté » |
+| **Aragon** | « Les Yeux d’Elsa » |
+
+Dans l’**amour courtois**, le poète sert une dame inaccessible, et cette souffrance l’élève.
 
 ## Les marques du lyrisme
-- la **première personne** : « je », « mon », « mes » ;
-- l’**apostrophe** à l’être aimé ou à la nature : « Ô temps, suspends ton vol ! » ;
-- la **ponctuation expressive** : exclamations, interrogations, points de suspension ;
-- le **champ lexical** du sentiment ;
-- les **images** — comparaison et métaphore.
+| La marque | Exemple |
+| La **première personne** | *je*, *mon*, *mes* |
+| L’**apostrophe** | « Ô temps, suspends ton vol ! » |
+| La **ponctuation expressive** | Exclamations, interrogations, points de suspension |
+| Le **champ lexical** du sentiment | |
+| Les **images** | Comparaison et métaphore |
 
 ## Les formes
-Le **sonnet** (14 vers : deux quatrains, deux tercets), l’**ode**, l’**élégie** (poème de la plainte), la **ballade**, et depuis le XIXe siècle le **vers libre** et le **poème en prose**.
+| La forme | Ce qu’elle est |
+| Le **sonnet** | **14 vers** : deux quatrains, deux tercets |
+| L’**ode** | Un poème de célébration |
+| L’**élégie** | Le poème de la **plainte** |
+| La **ballade** | |
+| Le **vers libre**, le **poème en prose** | Depuis le XIXe siècle |
 
-> Dire l’amour, c’est presque toujours dire aussi le **temps** : la beauté qui passe, l’absence, la mort. Les deux thèmes sont inséparables depuis Ronsard.`,
+> La beauté qui passe, l’absence, la mort : le temps est le compagnon obligé du sentiment amoureux en poésie.`,
           },
           questions: [
             ['D’où vient le nom de la poésie lyrique ?', ['De la lyre, l’instrument des poètes grecs', 'Du grec « lyros », qui signifie amour', 'Du nom du poète Lyrios', 'Du mot « lire »'], 0, 'À l’origine, cette poésie se chantait.'],
@@ -163,24 +182,35 @@ Le **sonnet** (14 vers : deux quatrains, deux tercets), l’**ode**, l’**élé
           axe: 'Se chercher, se construire — Dire l’amour',
           lecon: {
             titre: 'Un poème d’amour qui est un poème de deuil',
-            cours: `Publié en **1856** dans *Les Contemplations*, « Demain, dès l’aube… » est l’un des poèmes les plus connus de **Victor Hugo**. Il est écrit à la mémoire de sa fille **Léopoldine**, noyée à 19 ans dans la Seine à Villequier, en septembre 1843.
+            cours: `Pendant onze vers, on croit lire un poème d’amour. Un seul mot, au dernier vers, renverse tout.
+
+## Le contexte
+@ Septembre 1843 — Léopoldine, fille de Victor Hugo, se noie à 19 ans dans la Seine à Villequier
+@ 1856 — Publication des Contemplations, où figure « Demain, dès l’aube… »
 
 ## La forme
-Trois **quatrains** d’**alexandrins** (vers de 12 syllabes), en **rimes croisées** (ABAB). Une forme simple, presque nue.
+= Trois quatrains d’alexandrins, en rimes croisées (ABAB)
+
+Une forme **simple, presque nue**.
 
 ## Le mouvement du poème
-- **Strophe 1** : l’annonce du départ, au **futur**. « Je partirai. Vois-tu, je sais que tu m’attends. » Le poète s’adresse à un « tu » dont on ignore encore l’identité.
-- **Strophe 2** : le voyage, replié sur lui-même. « Je marcherai les yeux fixés sur mes pensées » — le monde extérieur a disparu.
-- **Strophe 3** : l’arrivée, et la **chute**. « Je mettrai sur ta tombe / Un bouquet de houx vert et de bruyère en fleur. »
+| La strophe | Ce qui s’y passe |
+| **1** | L’annonce du départ, au **futur** : « Je partirai. Vois-tu, je sais que tu m’attends. » |
+| **2** | Le voyage, replié : « Je marcherai les yeux fixés sur mes pensées » |
+| **3** | L’arrivée, et la **chute** : « Je mettrai sur ta tombe / Un bouquet de houx vert et de bruyère en fleur. » |
 
-## L’effet de la chute
-Pendant onze vers, le lecteur croit lire un poème d’**amour** : un homme part rejoindre celle qu’il aime. Le mot **« tombe »**, au dernier vers, renverse tout. Le poème doit sa force à ce **retournement final**, préparé par des indices que l’on ne comprend qu’à la relecture : les yeux baissés, le refus de voir l’or du soir, le dos tourné au monde.
+~ On croit lire un poème d’amour → le mot « tombe » tombe → tout se relit autrement
+
+!> Les indices étaient là : les **yeux baissés**, le refus de voir l’or du soir, le dos tourné au monde. On ne les comprend qu’à la **relecture**.
 
 ## Les procédés à relever
-- le **futur** de la certitude, qui rend le voyage inéluctable ;
-- l’**anaphore** du « je » : le poème est entièrement tourné vers un seul geste ;
-- les **négations** de la strophe 2 : « je ne regarderai ni l’or du soir qui tombe / Ni les voiles au loin descendant vers Harfleur » ;
-- l’**antithèse** finale entre le **houx** (persistant, piquant) et la **bruyère en fleur** (fragile, éphémère) : la fidélité et le deuil dans un même bouquet.
+| Le procédé | Son effet |
+| Le **futur** de la certitude | Le voyage devient inéluctable |
+| L’**anaphore** du « je » | Le poème est tourné vers un seul geste |
+| Les **négations** de la strophe 2 | « ni l’or du soir qui tombe / Ni les voiles au loin descendant vers Harfleur » |
+| L’**antithèse** finale | Le **houx** persistant et piquant, la **bruyère en fleur** fragile |
+
+Fidélité et deuil dans un même bouquet.
 
 > Le poème ne dit jamais le mot « fille », ni le mot « mort ». C’est cette **retenue** qui le rend bouleversant.`,
           },
@@ -200,30 +230,41 @@ Pendant onze vers, le lecteur croit lire un poème d’**amour** : un homme part
           axe: 'Se chercher, se construire — Dire l’amour',
           lecon: {
             titre: 'Aimer et renoncer',
-            cours: `## La tragédie classique
-Née au XVIIe siècle sur le modèle grec, elle obéit à des **règles strictes** :
-- la règle des **trois unités** : une seule **action**, en un seul **lieu**, en une seule **journée** ;
-- la **vraisemblance** : rien d’invraisemblable sur scène ;
-- la **bienséance** : ni sang, ni violence, ni mort devant le public — on les **raconte** ;
-- des personnages de **haut rang** (rois, princes), une **fin malheureuse**, et le vers : l’**alexandrin** en rimes plates.
+            cours: `Un héros tragique n’a aucune issue : quel que soit son choix, il perd. C’est ce qui distingue le tragique du dramatique.
 
-Son but, selon Aristote, est la **catharsis** : purger les passions du spectateur par la **terreur** et la **pitié**.
+## Les règles de la tragédie classique
+| La règle | Ce qu’elle impose |
+| Les **trois unités** | Une seule **action**, en un seul **lieu**, en une seule **journée** |
+| La **vraisemblance** | Rien d’invraisemblable sur scène |
+| La **bienséance** | Ni sang, ni violence, ni mort devant le public : on les **raconte** |
+| Le rang | Des personnages **élevés** — rois, princes |
+| La forme | L’**alexandrin** en rimes plates ; une **fin malheureuse** |
+
+= La catharsis : purger les passions du spectateur par la terreur et la pitié
+
+C’est le but assigné par **Aristote**.
 
 ## Bérénice (1670)
-**Jean Racine** met en scène trois personnages et presque aucune action :
-- **Titus**, devenu empereur de Rome, aime **Bérénice**, reine de Palestine ;
-- Rome interdit à son empereur d’épouser une **reine étrangère** ;
-- **Antiochus**, roi de Comagène et ami de Titus, aime lui aussi Bérénice en silence.
+| Le personnage | Sa situation |
+| **Titus** | Devenu empereur de Rome, il aime Bérénice |
+| **Bérénice** | Reine de Palestine — et Rome interdit à son empereur d’épouser une **reine étrangère** |
+| **Antiochus** | Roi de Comagène, ami de Titus, il aime Bérénice en silence |
 
-Titus renonce à Bérénice ; Bérénice, après avoir tout tenté, part ; Antiochus reste seul. Personne ne meurt : la pièce s’achève sur un triple renoncement.
+~ Titus renonce → Bérénice part → Antiochus reste seul
+
+!> **Personne ne meurt.** La pièce s’achève sur un **triple renoncement** — et c’est pourtant une tragédie.
 
 > Racine l’écrit dans sa préface : « Ce n’est point une nécessité qu’il y ait du sang et des morts dans une tragédie ; il suffit que l’action en soit grande. »
 
 ## Le conflit tragique
-Il oppose l’**amour** au **devoir** — la passion personnelle contre la loi de Rome. Le héros tragique n’a **aucune issue** : quel que soit son choix, il perd. C’est ce qui distingue le tragique du dramatique.
+= L’amour contre le devoir
+
+La passion personnelle contre la loi de Rome.
 
 ## Le style de Racine
-Une langue **simple**, un vocabulaire volontairement **restreint**, et une musicalité fondée sur les sonorités. Le vers final de Bérénice — « Hélas ! » — est le plus court sommet d’une pièce entière.`,
+Une langue **simple**, un vocabulaire volontairement **restreint**, une musicalité fondée sur les sonorités.
+
+> Le dernier mot de Bérénice — « Hélas ! » — est le plus court sommet d’une pièce entière.`,
           },
           questions: [
             ['En quoi consiste la règle des trois unités ?', ['Une seule action, un seul lieu, une seule journée', 'Trois actes, trois personnages, trois lieux', 'Trois unités de temps de trois heures', 'Une unité de ton, de style et de genre'], 0, 'C’est la règle centrale du théâtre classique.'],
@@ -241,30 +282,42 @@ Une langue **simple**, un vocabulaire volontairement **restreint**, et une music
           axe: 'Se chercher, se construire — Dire l’amour',
           lecon: {
             titre: 'Rire, mais pour dire quelque chose',
-            cours: `Au XVIIIe siècle, la comédie hérite de **Molière** et se transforme sous l’influence des **Lumières** : elle continue de faire rire, mais elle critique de plus en plus la **société**.
+            cours: `Au XVIIIe siècle, la comédie continue de faire rire — mais elle critique de plus en plus la société.
 
-## Ce que la comédie garde du siècle précédent
-- les **types** : le valet rusé, le barbon, l’amoureux, la coquette ;
-- les **procédés comiques** :
-  - de **mots** (jeux de mots, patois, répétitions),
-  - de **gestes** (chutes, coups de bâton, déguisements),
-  - de **situation** (quiproquo, malentendu, hasard),
-  - de **caractère** (le défaut poussé à l’excès),
-  - de **répétition** (une même réplique qui revient).
-- le **quiproquo** et le **double jeu** comme moteurs de l’intrigue.
+## Ce qu’elle garde de Molière
+| Les **types** | Le valet rusé, le barbon, l’amoureux, la coquette |
+| Le **quiproquo** | Le moteur de l’intrigue |
+| Le **double jeu** | |
+
+| Le comique | Ses moyens |
+| De **mots** | Jeux de mots, patois, répétitions |
+| De **gestes** | Chutes, coups de bâton, déguisements |
+| De **situation** | Quiproquo, malentendu, hasard |
+| De **caractère** | Le défaut poussé à l’excès |
+| De **répétition** | Une même réplique qui revient |
 
 ## Ce qui change au XVIIIe siècle
-- Le **valet** cesse d’être un simple ressort comique : il devient l’égal intellectuel de son maître, et parfois plus lucide que lui — jusqu’au **Figaro** de Beaumarchais, qui reproche ouvertement à son maître de « s’être donné la peine de naître ».
-- La **critique sociale** s’installe : l’inégalité des conditions, le mariage arrangé, le pouvoir des pères.
-- Naît la **comédie sensible** ou « larmoyante », qui mêle rire et émotion, et prépare le **drame**.
+| Le changement | Ce qu’il produit |
+| Le **valet** devient l’égal intellectuel de son maître | Et parfois plus lucide que lui |
+| La **critique sociale** s’installe | Inégalité des conditions, mariage arrangé, pouvoir des pères |
+| Naît la **comédie sensible** | Elle mêle rire et émotion, et prépare le **drame** |
+
+= Figaro reproche à son maître de « s’être donné la peine de naître »
 
 ## Marivaux et le marivaudage
-**Marivaux** (1688-1763) fait de l’amour un **jeu de langage** : ses personnages parlent pour ne pas s’avouer ce qu’ils ressentent, et le spectateur comprend avant eux. On appelle **marivaudage** ce dialogue léger, spirituel, où chaque réplique avance masquée.
+**Marivaux** (1688-1763) fait de l’amour un **jeu de langage**.
 
-> Chez Marivaux, l’obstacle n’est ni le père ni la société : c’est l’**amour-propre** des personnages, qui refusent de reconnaître leur sentiment.
+= Le marivaudage : un dialogue léger et spirituel, où chaque réplique avance masquée
+
+Les personnages parlent **pour ne pas s’avouer** ce qu’ils ressentent, et le spectateur comprend avant eux.
+
+!> Chez Marivaux, l’obstacle n’est **ni le père ni la société** : c’est l’**amour-propre** des personnages, qui refusent de reconnaître leur sentiment.
 
 ## Beaumarchais
-*Le Barbier de Séville* (1775) et *Le Mariage de Figaro* (1784) portent la critique si loin que Louis XVI en interdit d’abord la représentation.`,
+@ 1775 — Le Barbier de Séville
+@ 1784 — Le Mariage de Figaro
+
+La critique va si loin que **Louis XVI** en interdit d’abord la représentation.`,
           },
           questions: [
             ['Quel dramaturge du XVIIe siècle la comédie du XVIIIe prend-elle pour modèle ?', ['Molière', 'Racine', 'Corneille', 'Voltaire'], 0, 'Types et procédés comiques lui sont hérités.'],
@@ -282,24 +335,36 @@ Une langue **simple**, un vocabulaire volontairement **restreint**, et une music
           axe: 'Se chercher, se construire — Dire l’amour',
           lecon: {
             titre: 'Deux déguisements, un même aveu',
-            cours: `Créée en **1730**, la pièce de **Marivaux** est une comédie en **trois actes** et en **prose**.
+            cours: `Deux personnages ont exactement la même idée au même moment : c’est tout le mécanisme de la pièce.
 
 ## L’intrigue
-**Silvia** doit épouser **Dorante**, qu’elle n’a jamais vu. Pour l’observer sans être vue, elle échange son **habit** et son **rôle** avec sa servante **Lisette**.
+@ 1730 — Création du Jeu de l’amour et du hasard, comédie en trois actes et en prose
 
-Mais Dorante a eu **exactement la même idée** : il se présente sous l’habit de son valet **Arlequin**, tandis qu’Arlequin joue le maître.
+~ Silvia échange son habit avec sa servante Lisette → Dorante a eu la MÊME idée et se présente en valet → les quatre personnages sont masqués deux à deux, sans le savoir
 
-Les quatre personnages se retrouvent donc masqués deux à deux, sans le savoir. Silvia (en servante) tombe amoureuse de Dorante (en valet), et réciproquement ; Lisette (en maîtresse) et Arlequin (en maître) se plaisent aussi.
+| Le personnage | Son déguisement |
+| **Silvia** | En servante |
+| **Lisette**, sa servante | En maîtresse |
+| **Dorante** | En valet |
+| **Arlequin**, son valet | En maître |
+
+Silvia (en servante) tombe amoureuse de Dorante (en valet), et réciproquement ; Lisette et Arlequin se plaisent aussi.
 
 ## Le double registre
-Le spectateur, lui, **sait tout** : le père de Silvia, **Monsieur Orgon**, et son frère **Mario** sont dans la confidence et laissent faire. Ce **double registre** — les personnages ignorent ce que le public sait — est le ressort comique principal de la pièce.
+!> Le spectateur, lui, **sait tout**. **Monsieur Orgon**, père de Silvia, et son frère **Mario** sont dans la confidence et laissent faire. Ce **double registre** est le ressort comique principal.
 
 ## Le vrai sujet
-Ce n’est pas le déguisement, c’est l’**épreuve du sentiment** face au **préjugé social**. Silvia et Dorante s’aiment en croyant aimer un domestique : chacun doit choisir entre son cœur et son rang.
-- Dorante cède le premier et révèle son identité par amour ;
-- Silvia, elle, prolonge l’épreuve : elle veut être aimée **pour elle-même**, et l’obtenir jusqu’au bout.
+= L’épreuve du sentiment face au préjugé social
 
-> « Il se fait justice ! » — la pièce s’achève sur la victoire du sentiment, mais l’ordre social n’est pas renversé pour autant : maîtres et valets se marient chacun dans leur condition.
+Silvia et Dorante s’aiment **en croyant aimer un domestique** : chacun doit choisir entre son cœur et son rang.
+
+| Le personnage | Ce qu’il fait |
+| **Dorante** | Il cède le premier et révèle son identité **par amour** |
+| **Silvia** | Elle **prolonge** l’épreuve : elle veut être aimée **pour elle-même** |
+
+= « Il se fait justice ! »
+
+!> La pièce s’achève sur la victoire du sentiment — mais **l’ordre social n’est pas renversé** : maîtres et valets se marient chacun dans leur condition.
 
 ## Les procédés à connaître
 Le **quiproquo** généralisé, l’**ironie dramatique** (le public en sait plus), le **langage** qui trahit le rang malgré l’habit, et l’**aparté** — ces répliques dites au public que les autres personnages n’entendent pas.`,
@@ -320,30 +385,42 @@ Le **quiproquo** généralisé, l’**ironie dramatique** (le public en sait plu
           axe: 'Se chercher, se construire — Dire l’amour',
           lecon: {
             titre: 'Le théâtre romantique brise les règles',
-            cours: `## Le drame romantique
-Théorisé par **Victor Hugo** dans la *Préface de Cromwell* (1827), il rejette en bloc les règles classiques :
-- **fin des trois unités** : l’action se déplace, s’étale sur des années, multiplie les intrigues ;
-- **mélange des genres** : le sublime et le grotesque, le comique et le tragique dans la même scène ;
-- **mélange des registres de langue** : rois et gens du peuple, vers et prose ;
-- des personnages **complexes**, ni tout à fait bons ni tout à fait mauvais ;
-- la **couleur locale** : décors, costumes et détails historiques précis.
+            cours: `Le drame romantique rejette en bloc les règles classiques. Hugo en écrit le manifeste, Musset en donne le chef-d’œuvre.
+
+## Le drame romantique
+@ 1827 — Victor Hugo le théorise dans la Préface de Cromwell
+
+| La règle classique | Ce que le drame en fait |
+| Les **trois unités** | Il les **abolit** : l’action se déplace, s’étale sur des années |
+| La séparation des genres | Il **mélange** le sublime et le grotesque, le comique et le tragique |
+| L’unité de langue | Il mêle rois et gens du peuple, vers et prose |
+| Les personnages tranchés | Il les veut **complexes**, ni bons ni mauvais |
+| Le décor conventionnel | Il exige la **couleur locale** : décors, costumes, détails historiques précis |
 
 ## Lorenzaccio (1834)
-Musset a 24 ans. La pièce compte **cinq actes**, **39 scènes** et une trentaine de personnages — elle est si vaste qu’elle sera jugée injouable et ne sera créée qu’en **1896**, avec Sarah Bernhardt dans le rôle-titre.
+Musset a **24 ans**. La pièce compte **cinq actes**, **39 scènes** et une trentaine de personnages.
+
+@ 1834 — Écriture de la pièce
+@ 1896 — Première création, avec Sarah Bernhardt dans le rôle-titre
+
+!> Elle est jugée **injouable** pendant plus de soixante ans, tant elle ignore les contraintes de la scène de son temps.
 
 ## L’intrigue
-Florence, 1537. **Alexandre de Médicis** est un tyran débauché. Son cousin **Lorenzo**, surnommé par mépris **Lorenzaccio** (« le mauvais Lorenzo »), s’est fait son complice et son entremetteur — mais c’est un **masque** : il prépare depuis des années son assassinat, au nom de la liberté.
+Florence, 1537.
 
-Lorenzo tue effectivement Alexandre. Et **rien ne change** : les Florentins, indifférents, laissent aussitôt élire un autre Médicis, **Côme**. Lorenzo est assassiné à son tour.
+~ Alexandre de Médicis est un tyran → Lorenzo se fait son complice et son entremetteur → c’est un MASQUE : il prépare son assassinat → il le tue → et rien ne change
+
+Les Florentins, indifférents, laissent aussitôt élire un autre Médicis, **Côme**. Lorenzo est assassiné à son tour.
 
 ## Le personnage de Lorenzo
-C’est le sommet de la pièce. À force de jouer le débauché pour approcher le tyran, il l’est **devenu** :
+Surnommé par mépris **Lorenzaccio**, « le mauvais Lorenzo ».
+
 > « Le vice a été pour moi un vêtement ; maintenant il est collé à ma peau. »
 
-Il agit sans plus croire à l’utilité de son acte : il tue **pour rester fidèle** à celui qu’il a été.
+!> À force de jouer le débauché pour approcher le tyran, il l’est **devenu**. Il agit sans plus croire à l’utilité de son acte : il tue **pour rester fidèle** à celui qu’il a été.
 
 ## Ce que la pièce interroge
-L’**engagement** et son inutilité, le rapport entre l’**être** et le **paraître**, et le désenchantement d’une génération née trop tard pour la Révolution — le « **mal du siècle** ».`,
+L’**engagement** et son inutilité, le rapport entre l’**être** et le **paraître**, et le désenchantement d’une génération née trop tard pour la Révolution : le « **mal du siècle** ».`,
           },
           questions: [
             ['Dans quel texte Victor Hugo théorise-t-il le drame romantique ?', ['La Préface de Cromwell', 'Les Contemplations', 'La Préface de Bérénice', 'L’Art poétique'], 0, 'Publiée en 1827.'],
@@ -364,26 +441,45 @@ L’**engagement** et son inutilité, le rapport entre l’**être** et le **par
           axe: 'Vivre en société, participer à la société — Individu et société : confrontations de valeurs ?',
           lecon: {
             titre: 'L’honneur contre l’amour',
-            cours: `## Une tragi-comédie
-Créée en **1637**, la pièce de **Pierre Corneille** est d’abord appelée **tragi-comédie** : elle a la gravité d’une tragédie mais une **fin heureuse**, et son intrigue est plus libre que les règles ne l’autorisent. Corneille la rebaptisera « tragédie » en 1648.
+            cours: `Le dilemme cornélien : choisir entre deux valeurs également hautes, sans pouvoir les concilier.
+
+## Une tragi-comédie
+@ 1637 — Création du Cid
+@ 1648 — Corneille la rebaptise « tragédie »
+
+Elle a la **gravité** d’une tragédie mais une **fin heureuse**, et son intrigue est plus libre que les règles ne l’autorisent.
 
 ## L’intrigue
-**Rodrigue** et **Chimène** s’aiment et vont se marier. Mais le père de Chimène, **Don Gomès**, insulte et gifle le père de Rodrigue, **Don Diègue**, trop vieux pour se venger lui-même.
+| Le personnage | Son lien |
+| **Rodrigue** et **Chimène** | Ils s’aiment et vont se marier |
+| **Don Gomès** | Père de Chimène ; il insulte et gifle Don Diègue |
+| **Don Diègue** | Père de Rodrigue, trop vieux pour se venger lui-même |
 
-Don Diègue demande à son fils de laver l’affront. Rodrigue doit choisir : **venger son père** — et perdre Chimène — ou **renoncer à l’honneur**. Il tue Don Gomès en duel.
+~ L’affront → Rodrigue doit choisir → il tue Don Gomès en duel → Chimène doit réclamer sa mort au roi → Rodrigue vainc les Maures → le roi accorde un délai d’un an
 
-Chimène, à son tour, doit réclamer au roi la mort de celui qu’elle aime. Rodrigue part combattre les **Maures**, revient vainqueur — il est surnommé **le Cid**, « le seigneur » — et le roi accorde un délai d’un an avant le mariage.
+Vainqueur des **Maures**, Rodrigue est surnommé **le Cid**, « le seigneur ».
 
 ## Le dilemme cornélien
-C’est le cœur de la pièce, et la notion à retenir : un personnage doit choisir entre **deux valeurs également hautes**, sans pouvoir les concilier. Quel que soit son choix, il perd quelque chose d’essentiel.
+| Rodrigue peut… | Et alors il perd… |
+| **Venger son père** | **Chimène** |
+| **Renoncer à l’honneur** | Sa **valeur** et son nom |
 
-> « Percé jusques au fond du cœur… » — les **stances** de Rodrigue (acte I, scène 6) sont le monologue où ce déchirement se déploie.
+!> Quel que soit son choix, il perd quelque chose d’essentiel. C’est cela, un dilemme — et non une simple hésitation.
+
+= « Percé jusques au fond du cœur… »
+
+Les **stances** de Rodrigue (acte I, scène 6) sont le monologue où ce déchirement se déploie.
 
 ## Le héros cornélien
-Il se définit par sa **volonté** : il choisit, quoi qu’il en coûte, et **grandit** par son choix. C’est ce qui le distingue du héros racinien, écrasé par une passion qu’il subit.
+| Le héros de Corneille | Le héros de Racine |
+| Il se définit par sa **volonté** | Il est **écrasé** par une passion qu’il subit |
+| Il **choisit**, quoi qu’il en coûte | |
+| Il **grandit** par son choix | |
 
 ## La querelle du Cid
-Le succès fut immense, et la polémique aussi : l’Académie française reprocha à la pièce de violer les unités et la bienséance — Chimène épouserait le meurtrier de son père. Cette querelle contribua à **fixer les règles** du théâtre classique.`,
+L’Académie française reprocha à la pièce de violer les **unités** et la **bienséance** — Chimène épouserait le meurtrier de son père.
+
+> Cette querelle contribua à **fixer les règles** du théâtre classique. Une polémique a fait une doctrine.`,
           },
           questions: [
             ['Pourquoi Le Cid est-il d’abord appelé tragi-comédie ?', ['Il a la gravité d’une tragédie mais une fin heureuse', 'Il alterne scènes comiques et tragiques', 'Il est joué par des comédiens amateurs', 'Il mêle vers et prose'], 0, 'Corneille le rebaptisera « tragédie » en 1648.'],
@@ -401,33 +497,44 @@ Le succès fut immense, et la polémique aussi : l’Académie française reproc
           axe: 'Vivre en société, participer à la société — Individu et société : confrontations de valeurs ?',
           lecon: {
             titre: 'Un récit court qui frappe fort',
-            cours: `## Qu’est-ce qu’une nouvelle ?
-Un **récit bref** en prose, qui se distingue du roman par cinq traits :
-- une intrigue **resserrée**, souvent une seule action ;
-- **peu de personnages**, décrits en quelques traits ;
-- un cadre spatio-temporel **limité** ;
-- un rythme rapide, avec des **ellipses** ;
-- une **chute** — une fin brève et frappante, qui souvent retourne le sens du récit.
+            cours: `Le roman prend son temps, la nouvelle vise. C’est la différence entre un portrait à l’huile et un instantané.
 
-> Le roman prend son temps, la nouvelle vise. C’est la différence entre un portrait à l’huile et un instantané.
+## Ce qui définit une nouvelle
+| Le trait | Face au roman |
+| Une intrigue **resserrée** | Souvent une seule action |
+| **Peu de personnages** | Décrits en quelques traits |
+| Un cadre **limité** | Dans l’espace et dans le temps |
+| Un rythme **rapide** | Avec des **ellipses** |
+| Une **chute** | Une fin brève et frappante, qui souvent retourne le sens |
 
 ## Les grandes étapes du genre
-- **XVIIIe siècle** : le **conte philosophique** de Voltaire (*Candide*, *Micromégas*) utilise le récit bref pour porter une idée.
-- **XIXe siècle**, l’âge d’or : la presse publie des nouvelles chaque semaine.
-  - **Maupassant** — nouvelles réalistes (*La Parure*, *Boule de Suif*) et fantastiques (*Le Horla*) ;
-  - **Mérimée** (*La Vénus d’Ille*), **Balzac**, **Poe** aux États-Unis, **Tchekhov** en Russie.
-- **XXe et XXIe siècles** : Maupassant reste un modèle, mais la nouvelle explore la science-fiction (**Bradbury**), l’absurde (**Buzzati**), le quotidien (**Carver**). En France, **Anna Gavalda** ou **Bernard Werber** en publient encore des recueils à succès.
+@ XVIIIe siècle — Le conte philosophique de Voltaire : Candide, Micromégas
+@ XIXe siècle — L’âge d’or : la presse publie des nouvelles chaque semaine
+@ XXe-XXIe siècles — Science-fiction, absurde, quotidien
+
+| L’auteur | Son domaine |
+| **Maupassant** | Le réalisme (*La Parure*, *Boule de Suif*) et le fantastique (*Le Horla*) |
+| **Mérimée** | *La Vénus d’Ille* |
+| **Poe** | Aux États-Unis |
+| **Tchekhov** | En Russie |
+| **Bradbury**, **Buzzati**, **Carver** | Science-fiction, absurde, quotidien |
+
+En France aujourd’hui : **Anna Gavalda**, **Bernard Werber**.
 
 ## Les registres possibles
-**Réaliste** (peindre le réel tel qu’il est), **fantastique** (l’inexplicable fait irruption), **merveilleux** (le surnaturel est admis), **policier**, **science-fiction**, **absurde**.
+| Le registre | Ce qu’il fait |
+| **Réaliste** | Peindre le réel tel qu’il est |
+| **Fantastique** | L’inexplicable fait irruption |
+| **Merveilleux** | Le surnaturel est admis |
+| **Policier**, **science-fiction**, **absurde** | |
 
 ## La chute
-C’est la signature du genre. Elle peut :
-- **révéler** une information cachée (*La Parure*) ;
-- **retourner** la morale attendue ;
-- **laisser en suspens**, sans réponse.
+| Elle peut… | |
+| **Révéler** une information cachée | *La Parure* |
+| **Retourner** la morale attendue | |
+| **Laisser en suspens** | Sans réponse |
 
-Une bonne chute est toujours **préparée** : à la relecture, les indices étaient là.`,
+!> Une bonne chute est toujours **préparée** : à la relecture, les indices étaient là. Une chute qui sort de nulle part n’est pas une chute, c’est une invraisemblance.`,
           },
           questions: [
             ['Qu’est-ce qui distingue une nouvelle d’un roman ?', ['Sa brièveté, son intrigue resserrée et sa chute', 'Sa forme versifiée', 'Son sujet toujours historique', 'Son absence de personnages'], 0, 'Le roman prend son temps, la nouvelle vise.'],
@@ -448,28 +555,42 @@ Une bonne chute est toujours **préparée** : à la relecture, les indices étai
           axe: 'Regarder le monde, inventer des mondes — La fiction pour interroger le réel',
           lecon: {
             titre: 'Le roman comme enquête sociale',
-            cours: `## Du réalisme au naturalisme
-Le **réalisme** (Balzac, Flaubert, Maupassant) veut peindre le réel **tel qu’il est**, sans idéaliser.
-Le **naturalisme**, fondé par **Émile Zola**, va plus loin : il applique au roman la **méthode scientifique**. Le romancier observe, se documente, expérimente — il traite ses personnages comme un médecin traite un cas, en étudiant l’effet de l’**hérédité** et du **milieu** sur eux.
+            cours: `Zola ne condamne pas Gervaise : il montre comment le milieu défait une femme courageuse.
 
-Zola l’écrit dans *Le Roman expérimental* : le romancier est « un observateur et un expérimentateur ».
+## Du réalisme au naturalisme
+| Le mouvement | Son projet |
+| Le **réalisme** — Balzac, Flaubert, Maupassant | Peindre le réel **tel qu’il est**, sans idéaliser |
+| Le **naturalisme** — **Zola** | Appliquer au roman la **méthode scientifique** |
+
+Le romancier observe, se documente, expérimente. Il étudie l’effet de l’**hérédité** et du **milieu** sur ses personnages.
+
+> Zola l’écrit dans *Le Roman expérimental* : le romancier est « un observateur et un expérimentateur ».
 
 ## Les Rougon-Macquart
-Vingt romans, publiés de 1871 à 1893, qui suivent une même famille sur cinq générations, sous-titrés « **Histoire naturelle et sociale d’une famille sous le Second Empire** ». *L’Assommoir* en est le **septième**, publié en **1877**.
+= 20 romans, de 1871 à 1893, sur cinq générations d’une même famille
+
+Sous-titre : « **Histoire naturelle et sociale d’une famille sous le Second Empire** ».
+
+@ 1877 — L’Assommoir, septième roman du cycle
 
 ## L’Assommoir
-C’est le premier grand roman français consacré au **monde ouvrier**.
-**Gervaise Macquart**, blanchisseuse boiteuse, arrive à Paris. Abandonnée par Lantier, elle épouse **Coupeau**, zingueur. Le couple travaille dur, ouvre une blanchisserie, connaît quelques années heureuses.
+Le premier grand roman français consacré au **monde ouvrier**.
 
-Puis Coupeau tombe d’un toit. Il boit. Gervaise, peu à peu, sombre à son tour : dettes, faim, déchéance, mort dans un réduit sous l’escalier. Leur fille **Nana** deviendra l’héroïne d’un autre roman.
+~ Gervaise arrive à Paris → elle épouse Coupeau → ils ouvrent une blanchisserie → Coupeau tombe d’un toit → il boit → dettes, faim, déchéance → elle meurt dans un réduit sous l’escalier
+
+**Gervaise Macquart** est blanchisseuse et boiteuse. Leur fille **Nana** deviendra l’héroïne d’un autre roman.
 
 ## Le titre
-L’« **assommoir** » est le nom populaire du **débit d’alcool** — la boutique du père Colombe, où l’alambic travaille jour et nuit. Le mot dit tout : ce qui assomme.
+= L’assommoir : le nom populaire du débit d’alcool
+
+La boutique du père Colombe, où l’alambic travaille jour et nuit.
+
+> Le mot dit tout : ce qui **assomme**.
 
 ## Ce qui a fait scandale
-Zola fait entrer dans le roman la **langue du peuple** : argot, familiarités, tournures orales, y compris dans la narration. Le livre fut accusé de complaisance dans la misère ; il fut aussi son plus grand succès de librairie.
+!> Zola fait entrer dans le roman la **langue du peuple** — argot, familiarités, tournures orales — **y compris dans la narration**, et non seulement dans les dialogues. C’est cette audace-là qui choqua.
 
-> Zola ne condamne pas Gervaise : il montre comment le milieu — le taudis, l’alcool, l’épuisement — défait une femme courageuse.`,
+Le livre fut accusé de complaisance dans la misère ; il fut aussi son plus grand succès de librairie.`,
           },
           questions: [
             ['Qui a fondé le naturalisme ?', ['Émile Zola', 'Gustave Flaubert', 'Honoré de Balzac', 'Guy de Maupassant'], 0, 'Il l’expose dans Le Roman expérimental.'],
@@ -487,27 +608,38 @@ Zola fait entrer dans le roman la **langue du peuple** : argot, familiarités, t
           axe: 'Regarder le monde, inventer des mondes — La fiction pour interroger le réel',
           lecon: {
             titre: 'Dix ans de misère pour un bijou faux',
-            cours: `## La nouvelle (1884)
-**Mathilde Loisel**, jolie femme d’un petit employé du ministère, souffre d’être née dans une condition modeste. Invitée à un bal du ministère, elle emprunte une **rivière de diamants** à son amie **Madame Forestier**.
+            cours: `Une faute minuscule, une punition de dix ans, et un dernier mot qui rend tout absurde.
 
-Elle triomphe au bal. Puis, au retour, **elle a perdu la parure**.
+## La nouvelle (1884)
+~ Mathilde emprunte une rivière de diamants → elle triomphe au bal → elle perd la parure → le couple la remplace pour 36 000 francs → dix ans à rembourser → la révélation
 
-Les Loisel la remplacent par une parure identique, achetée **trente-six mille francs** — une somme empruntée de tous côtés. Pendant **dix ans**, le couple s’épuise à rembourser : Mathilde renvoie la bonne, lave, marchande, vieillit prématurément.
+| Le personnage | Qui il est |
+| **Mathilde Loisel** | Jolie femme d’un petit employé du ministère, elle souffre de sa condition modeste |
+| **Madame Forestier** | L’amie à qui elle emprunte la parure |
 
-Un jour, elle croise Madame Forestier, qui ne la reconnaît pas. Mathilde lui avoue tout. Et la chute tombe :
+Pendant **dix ans**, le couple s’épuise : Mathilde renvoie la bonne, lave, marchande, vieillit prématurément.
+
 > « Oh ! ma pauvre Mathilde ! Mais la mienne était fausse. Elle valait au plus cinq cents francs !… »
 
 ## Les procédés
-- Le **narrateur externe**, à la troisième personne, qui rapporte sans commenter.
-- Le **portrait initial** : quelques lignes suffisent à installer l’insatisfaction de Mathilde.
-- L’**ellipse** des dix années, condensées en un paragraphe : la nouvelle accélère là où le roman s’attarderait.
-- La **chute** finale, préparée par des indices — la boîte qui n’est pas d’origine, le bijoutier qui ne reconnaît pas la parure.
+| Le procédé | Son effet |
+| Le **narrateur externe** | Il rapporte **sans commenter** |
+| Le **portrait initial** | Quelques lignes suffisent à installer l’insatisfaction |
+| L’**ellipse** des dix années | Condensées en un paragraphe : la nouvelle accélère là où le roman s’attarderait |
+| La **chute** | Préparée par des indices : la boîte qui n’est pas d’origine, le bijoutier qui ne reconnaît pas la parure |
 
 ## Ce que la nouvelle interroge
-Le poids des **apparences** dans une société où le rang se joue au regard des autres, et la disproportion cruelle entre une faute minuscule et sa punition. Le hasard y remplace la fatalité.
+Le poids des **apparences** dans une société où le rang se joue au regard des autres, et la **disproportion** cruelle entre une faute minuscule et sa punition.
+
+!> Chez Maupassant, ce n’est pas la fatalité qui frappe : c’est le **hasard**. Et le hasard n’a pas de justice à rendre.
 
 ## L’adaptation de Claude Chabrol (2007)
-Réalisée pour la télévision dans la collection *Chez Maupassant*, elle donne à voir ce que le texte suggère : les **décors**, la lumière du bal, la mesquinerie des logements, le visage abîmé de Mathilde. Comparer les deux permet d’observer les **choix d’adaptation** — ce que la caméra ajoute (le corps, le costume, la durée réelle), ce qu’elle perd (le discours du narrateur, l’ellipse instantanée).`,
+Réalisée pour la télévision, dans la collection *Chez Maupassant*.
+
+| Ce que la caméra ajoute | Ce qu’elle perd |
+| Les **décors**, la lumière du bal | Le discours du **narrateur** |
+| La mesquinerie des logements | L’**ellipse instantanée** — dix ans en un paragraphe |
+| Le corps, le costume, la **durée réelle** | |`,
           },
           questions: [
             ['Quel bijou Mathilde emprunte-t-elle ?', ['Une rivière de diamants', 'Un collier de perles', 'Une bague en or', 'Une broche de saphirs'], 0, 'Elle appartient à son amie Madame Forestier.'],
@@ -525,25 +657,34 @@ Réalisée pour la télévision dans la collection *Chez Maupassant*, elle donne
           axe: 'Regarder le monde, inventer des mondes — La fiction pour interroger le réel',
           lecon: {
             titre: 'Quand la maison et la famille s’effondrent ensemble',
-            cours: `## Le fantastique
-Un récit fantastique installe un cadre **réaliste**, puis y fait surgir un événement **inexplicable**. Sa marque est l’**hésitation** : jusqu’au bout, on ne sait pas s’il faut croire au surnaturel ou à une explication rationnelle — folie, rêve, hallucination.
+            cours: `Le fantastique n’est ni le merveilleux ni la science-fiction : sa marque, c’est l’hésitation.
 
-C’est ce qui le distingue du **merveilleux** (où le surnaturel va de soi, comme dans le conte) et de la **science-fiction** (où l’étrange est expliqué par la science).
+## Les trois genres à distinguer
+| Le genre | Le statut du surnaturel |
+| Le **fantastique** | Il **fait irruption** dans un cadre réaliste, et on ne sait jamais s’il faut y croire |
+| Le **merveilleux** | Il **va de soi**, comme dans le conte |
+| La **science-fiction** | Il est **expliqué** par la science |
+
+!> L’**hésitation** est l’essentiel : surnaturel, ou bien folie, rêve, hallucination ? Un récit qui tranche cesse d’être fantastique.
 
 ## La nouvelle (1839)
-Le narrateur, dont on ne saura pas le nom, est appelé au chevet de son ami d’enfance **Roderick Usher**, dernier héritier d’une famille éteinte. Il découvre une **maison** lézardée au bord d’un étang noir, et un ami méconnaissable : hypersensible, terrifié par les sons, les lumières, les odeurs.
+~ Le narrateur est appelé au chevet de Roderick Usher → il découvre une maison lézardée au bord d’un étang noir → Madeline meurt → on l’enferme dans un caveau → elle reparaît, enterrée vivante → elle entraîne son frère dans la mort → la maison se fend et sombre
 
-La sœur jumelle de Roderick, **Madeline**, meurt. Les deux hommes l’enferment dans un caveau de la maison. Des jours durant, Roderick s’enfonce dans la terreur — jusqu’au soir où Madeline, **enterrée vivante**, reparaît en linceul ensanglanté, s’effondre sur son frère et l’entraîne dans la mort. Le narrateur s’enfuit ; derrière lui, la **maison se fend** et sombre dans l’étang.
+| Le personnage | Ce qu’il est |
+| Le **narrateur** | Un ami d’enfance, dont on ne saura pas le nom |
+| **Roderick Usher** | Dernier héritier d’une famille éteinte ; hypersensible, terrifié par les sons, les lumières, les odeurs |
+| **Madeline** | Sa sœur **jumelle** |
 
 ## Les procédés du fantastique chez Poe
-- le **narrateur interne**, témoin, dont on peut douter ;
-- le **cadre** : maison isolée, décrépitude, nuit, tempête ;
-- la **gradation** de l’angoisse, très progressive ;
-- le **lexique** de l’étrange et de la peur ;
-- le **modalisateur** — « il me sembla », « comme si », « peut-être » — qui laisse le doute ouvert ;
-- une **correspondance** constante entre la maison et son habitant : les deux se fissurent ensemble, et s’effondrent au même instant.
+| Le procédé | Son rôle |
+| Le **narrateur interne**, témoin | On peut douter de lui |
+| Le **cadre** | Maison isolée, décrépitude, nuit, tempête |
+| La **gradation** de l’angoisse | Très progressive |
+| Le **lexique** de l’étrange et de la peur | |
+| Le **modalisateur** | « il me sembla », « comme si », « peut-être » : le doute reste ouvert |
+| La **correspondance** maison / habitant | Les deux se fissurent ensemble, et s’effondrent au même instant |
 
-> Le titre est double : la « chute de la maison Usher » désigne autant le bâtiment que la **lignée**. La langue anglaise dit *house* pour les deux.`,
+> Le titre est double : la « chute de la maison Usher » désigne autant le **bâtiment** que la **lignée**. La langue anglaise dit *house* pour les deux.`,
           },
           questions: [
             ['Qu’est-ce qui caractérise le récit fantastique ?', ['L’hésitation entre une explication rationnelle et le surnaturel', 'L’acceptation du surnaturel comme allant de soi', 'L’explication scientifique de l’étrange', 'L’absence de tout événement étrange'], 0, 'C’est ce qui le distingue du merveilleux et de la science-fiction.'],
@@ -564,34 +705,48 @@ La sœur jumelle de Roderick, **Madeline**, meurt. Les deux hommes l’enferment
           axe: 'Agir sur le monde — Informer, s’informer, déformer ?',
           lecon: {
             titre: 'Qui parle, d’où, et pour dire quoi ?',
-            cours: `## Les genres journalistiques
-- La **brève** : quelques lignes, l’essentiel, sans titre développé.
-- L’**article informatif** : il répond aux **cinq questions** — *qui, quoi, quand, où, pourquoi* (et comment).
-- Le **reportage** : le journaliste s’est rendu sur place et raconte ce qu’il a vu.
-- L’**interview** : questions et réponses rapportées.
-- L’**enquête** : une recherche longue, avec recoupement de sources.
-- L’**éditorial**, la **chronique**, la **critique** : des textes d’**opinion**, où l’auteur s’engage.
+            cours: `La première question devant un texte de presse : informe-t-il, ou donne-t-il un avis ?
 
-> La première question à se poser devant un texte de presse : **informe-t-il ou donne-t-il un avis ?** Les deux sont légitimes ; les confondre ne l’est pas.
+## Les genres journalistiques
+| Le genre | Ce qu’il fait |
+| La **brève** | Quelques lignes, l’essentiel |
+| L’**article informatif** | Il répond aux **cinq questions** : qui, quoi, quand, où, pourquoi |
+| Le **reportage** | Le journaliste s’est rendu sur place et raconte ce qu’il a vu |
+| L’**interview** | Questions et réponses rapportées |
+| L’**enquête** | Une recherche longue, avec recoupement de sources |
+| L’**éditorial**, la **chronique**, la **critique** | Des textes d’**opinion**, où l’auteur s’engage |
+
+!> Informer et donner un avis sont **tous deux légitimes**. Les **confondre** ne l’est pas.
 
 ## L’architecture d’un article
-Le **titre** (informatif ou incitatif), le **chapô** (le paragraphe d’introduction en gras), l’**attaque** (première phrase), le corps de l’article, la **chute**. S’y ajoutent l’**intertitre**, la **légende** et le **crédit photo**.
+~ Le titre → le chapô → l’attaque → le corps → la chute
+
+| L’élément | Ce qu’il est |
+| Le **titre** | Informatif ou incitatif |
+| Le **chapô** | Le paragraphe d’introduction, en gras |
+| L’**attaque** | La première phrase |
+| L’**intertitre**, la **légende**, le **crédit photo** | Les repères de lecture |
 
 ## Vérifier une information
-- **La source** : d’où vient l’information ? Est-elle nommée ?
-- **La date** : une image ancienne remise en circulation change de sens.
-- **Le recoupement** : plusieurs médias indépendants la donnent-ils ?
-- **L’auteur** : signé ? par un journaliste identifiable ?
-- **L’image** : une recherche d’image inversée dit souvent d’où elle vient réellement.
+1. La **source** : d’où vient-elle ? est-elle nommée ?
+2. La **date** : une image ancienne remise en circulation change de sens ;
+3. le **recoupement** : plusieurs médias indépendants la donnent-ils ?
+4. l’**auteur** : signé ? par un journaliste identifiable ?
+5. l’**image** : une recherche d’image inversée dit souvent d’où elle vient réellement.
 
 ## Les pièges du numérique
-- Le **titre-appât** (« putaclic ») : un titre spectaculaire qui promet plus que l’article ne donne.
-- La **bulle de filtres** : les algorithmes montrent surtout ce qui confirme ce que l’on pense déjà.
-- L’**infox** (fake news) : une fausse information fabriquée pour tromper — et qui circule d’autant plus vite qu’elle indigne.
-- La **rumeur** : une information non vérifiée que chacun relaie de bonne foi.
+| Le piège | Ce qu’il fait |
+| Le **titre-appât** (« putaclic ») | Il promet plus que l’article ne donne |
+| La **bulle de filtres** | Les algorithmes montrent surtout ce qui **confirme** ce qu’on pense déjà |
+| L’**infox** (fake news) | Une fausse information **fabriquée** pour tromper |
+| La **rumeur** | Une information non vérifiée, relayée **de bonne foi** |
+
+!> Une infox circule d’autant plus vite qu’elle **indigne**. L’émotion est son carburant, pas la vraisemblance.
 
 ## Le rôle de la presse en démocratie
-La **liberté de la presse** est garantie par la loi de **1881**. Elle a des limites : diffamation, injure, incitation à la haine. Un journaliste doit protéger ses **sources** et vérifier ses informations : c’est la **déontologie** du métier.`,
+@ 1881 — La loi garantit la liberté de la presse
+
+Ses limites : diffamation, injure, incitation à la haine. Un journaliste doit protéger ses **sources** et vérifier ses informations : c’est la **déontologie** du métier.`,
           },
           questions: [
             ['À quelles questions un article informatif doit-il répondre ?', ['Qui, quoi, quand, où, pourquoi', 'Comment, combien, pour qui', 'Qui, contre qui, pour quel prix', 'Quand et seulement quand'], 0, 'La règle dite des cinq W.'],
@@ -609,32 +764,41 @@ La **liberté de la presse** est garantie par la loi de **1881**. Elle a des lim
           axe: 'Agir sur le monde — Informer, s’informer, déformer ?',
           lecon: {
             titre: 'Reconnaître un discours qui veut faire penser',
-            cours: `## Qu’est-ce que la propagande ?
-Une communication organisée qui vise non pas à **informer** mais à **faire adhérer** : elle cherche à modifier les opinions et les comportements, en s’adressant à l’**émotion** plutôt qu’au raisonnement.
+            cours: `La propagande ne cherche pas à informer, mais à faire adhérer. Elle s’adresse à l’émotion, jamais au raisonnement.
 
-Elle se distingue de la **publicité** (qui vend un produit) par son objet — politique ou idéologique — et de l’**information** par son refus du contradictoire.
+## Trois discours à distinguer
+| Le discours | Son but |
+| L’**information** | Faire savoir, avec du contradictoire |
+| La **publicité** | Vendre un **produit** |
+| La **propagande** | Faire **adhérer** à une idée politique ou idéologique |
 
 ## Ses procédés
-- La **simplification** : un problème complexe réduit à une formule.
-- La **répétition** : le slogan martelé jusqu’à paraître évident.
-- La **désignation d’un ennemi** : un « eux » responsable de tout, opposé à un « nous ».
-- L’**appel aux émotions** : peur, fierté, colère, pitié.
-- Le **culte du chef** : image héroïsée, plans en contre-plongée, foule en arrière-plan.
-- La **falsification** : chiffres tronqués, photos retouchées ou sorties de leur contexte, témoins fabriqués.
-- L’**argument d’autorité** et l’**effet de masse** : « tout le monde le sait », « des millions y croient ».
+| Le procédé | Comment il agit |
+| La **simplification** | Un problème complexe réduit à une formule |
+| La **répétition** | Le slogan martelé jusqu’à paraître évident |
+| La **désignation d’un ennemi** | Un « eux » responsable de tout, opposé à un « nous » |
+| L’**appel aux émotions** | Peur, fierté, colère, pitié |
+| Le **culte du chef** | Image héroïsée, contre-plongée, foule en arrière-plan |
+| La **falsification** | Chiffres tronqués, photos retouchées ou sorties de leur contexte |
+| L’**argument d’autorité** | « tout le monde le sait », « des millions y croient » |
 
-## Les outils d’analyse d’un document
-- **Nature** : affiche, discours, film, tract, article, publication en ligne ?
-- **Auteur et commanditaire** : qui parle, et pour le compte de qui ?
-- **Date et contexte** : que se passe-t-il au moment où ce document paraît ?
-- **Destinataire** : à qui s’adresse-t-il ?
-- **Message explicite** / **message implicite** : ce qu’il dit, et ce qu’il fait croire sans le dire.
-- **Procédés visuels** : cadrage, couleurs, taille relative des personnages, symboles.
+## Analyser un document
+~ Nature → auteur et commanditaire → date et contexte → destinataire → message explicite → message implicite
+
+| La question | Ce qu’elle cherche |
+| **Nature** | Affiche, discours, film, tract, publication en ligne ? |
+| **Auteur et commanditaire** | Qui parle, et pour le compte de qui ? |
+| **Date et contexte** | Que se passe-t-il au moment où ce document paraît ? |
+| **Procédés visuels** | Cadrage, couleurs, taille relative des personnages, symboles |
+
+!> Distinguer le message **explicite** — ce qu’il dit — du message **implicite** — ce qu’il fait croire **sans le dire**. C’est là que tout se joue.
 
 > Une image ne ment jamais toute seule : c’est le **cadrage**, la **légende** et le **contexte** qui lui font dire ce qu’elle ne montre pas.
 
 ## Les contre-pouvoirs
-La **pluralité** des médias, le **droit de réponse**, les journalistes de vérification des faits, l’éducation aux médias. Face à un document, la question à garder : *qui a intérêt à ce que je le croie ?*`,
+La **pluralité** des médias, le **droit de réponse**, les journalistes de vérification des faits, l’éducation aux médias.
+
+= La question à garder : qui a intérêt à ce que je le croie ?`,
           },
           questions: [
             ['Quel est le but de la propagande ?', ['Faire adhérer à une opinion, pas informer', 'Vendre un produit commercial', 'Divertir le public', 'Enseigner une méthode'], 0, 'Elle s’adresse à l’émotion plutôt qu’au raisonnement.'],
@@ -652,24 +816,28 @@ La **pluralité** des médias, le **droit de réponse**, les journalistes de vé
           axe: 'Agir sur le monde — Informer, s’informer, déformer ?',
           lecon: {
             titre: 'La fiction regarde ceux qui informent',
-            cours: `Depuis que la presse existe, la fiction s’en empare — tantôt pour en dénoncer les compromissions, tantôt pour en faire un héroïsme.
+            cours: `Chez Balzac comme chez Maupassant, le journaliste n’est pas un menteur isolé : c’est le système qui produit le mensonge.
 
 ## Au XIXe siècle : la presse comme machine
-- **Balzac**, *Illusions perdues* (1837-1843) : le jeune **Lucien de Rubempré** monte à Paris, découvre le journalisme, y réussit — et s’y perd. Balzac y décrit un milieu où l’**article se vend**, où l’on démolit une pièce qu’on n’a pas vue, où la critique dépend de qui paie.
-- **Maupassant**, *Bel-Ami* (1885) : **Georges Duroy**, sans talent particulier, gravit tous les échelons d’un journal parisien par les femmes et l’intrigue. Le journal *La Vie française* y est un instrument de **spéculation politique**.
-
-> Chez les deux, le journaliste n’est pas un menteur isolé : c’est le **système** qui produit le mensonge.
+| L’œuvre | Ce qu’elle montre |
+| **Balzac**, *Illusions perdues* (1837-1843) | **Lucien de Rubempré** monte à Paris, réussit dans le journalisme — et s’y perd. L’**article se vend** ; on démolit une pièce qu’on n’a pas vue |
+| **Maupassant**, *Bel-Ami* (1885) | **Georges Duroy**, sans talent, gravit tous les échelons par les femmes et l’intrigue. Le journal est un instrument de **spéculation politique** |
 
 ## Au XXe siècle : le journalisme comme contre-pouvoir
-- **Albert Londres** invente le grand **reportage** : « Notre métier n’est pas de faire plaisir, non plus de faire du tort, il est de porter la plume dans la plaie. »
-- Au cinéma, *Les Hommes du président* (1976) suit deux journalistes du *Washington Post* dévoilant le scandale du **Watergate**, jusqu’à la démission d’un président.
-- *Spotlight* (2015) montre une équipe d’**enquête au long cours** — des mois de vérification avant publication.
+| L’œuvre | Ce qu’elle montre |
+| **Albert Londres** | Il invente le grand **reportage** |
+| *Les Hommes du président* (1976) | Deux journalistes du *Washington Post* et le **Watergate**, jusqu’à la démission d’un président |
+| *Spotlight* (2015) | Une **enquête au long cours** : des mois de vérification avant publication |
 
-## Au XXIe siècle : l’information sous tension
-La fiction s’intéresse aux réseaux sociaux, à la vitesse, à la concurrence de l’attention. Les séries et les films récents interrogent la **frontière** entre informer et faire du spectacle.
+> Albert Londres : « Notre métier n’est pas de faire plaisir, non plus de faire du tort, il est de porter la plume dans la plaie. »
+
+## Au XXIe siècle
+La fiction s’intéresse aux réseaux sociaux, à la vitesse, à la concurrence de l’attention, et interroge la **frontière** entre informer et faire du spectacle.
 
 ## Ce que la fiction apporte
-Elle rend visibles les **conditions** du travail journalistique : les délais, la hiérarchie, les pressions économiques et politiques, le doute avant de publier. Là où un article expose un fait, le roman ou le film montre **comment ce fait a été obtenu** — et ce qu’il a coûté.`,
+!> Là où un article expose un **fait**, le roman ou le film montre **comment ce fait a été obtenu** — et ce qu’il a coûté.
+
+Elle rend visibles les **conditions** du travail journalistique : les délais, la hiérarchie, les pressions économiques et politiques, le doute avant de publier.`,
           },
           questions: [
             ['Quel roman de Balzac décrit le monde du journalisme parisien ?', ['Illusions perdues', 'Le Père Goriot', 'Bel-Ami', 'L’Assommoir'], 0, 'Lucien de Rubempré y réussit puis s’y perd.'],
@@ -690,29 +858,30 @@ Elle rend visibles les **conditions** du travail journalistique : les délais, l
           axe: 'Questionnements complémentaires — La ville, lieu de tous les possibles ?',
           lecon: {
             titre: 'Un décor qui devient un personnage',
-            cours: `Depuis le XIXe siècle, la **ville** n’est plus seulement le lieu où se passe l’histoire : elle en devient l’un des **acteurs**.
+            cours: `Depuis le XIXe siècle, la ville n’est plus le lieu où se passe l’histoire : elle en devient l’un des acteurs.
 
-## Pourquoi le XIXe siècle ?
-Parce que la ville change de nature : l’**exode rural**, la **révolution industrielle** et les **grands travaux d’Haussmann** font de Paris une capitale méconnaissable en trente ans. Le roman prend acte de cette transformation.
+## Pourquoi le XIXe siècle
+~ L’exode rural → la révolution industrielle → les grands travaux d’Haussmann → Paris devient méconnaissable en trente ans
+
+Le roman prend acte de cette transformation.
 
 ## Trois façons de traiter la ville
-**1. La ville comme théâtre de l’ascension sociale.**
-Chez **Balzac**, Paris est un champ de bataille. Rastignac, du haut du Père-Lachaise, lance à la ville son fameux défi : « À nous deux maintenant ! » La ville promet, elle donne — et elle dévore.
+| Le romancier | Sa ville | Ce qu’elle fait |
+| **Balzac** | Un **champ de bataille** | Elle promet, elle donne — et elle **dévore** |
+| **Zola** | Un **milieu qui détermine** | Le quartier explique le destin : *L’Assommoir* se joue dans quelques rues de la Goutte-d’Or |
+| **Hugo** | Un **labyrinthe** | Ruelles, égouts et barricades : on s’y cache, on y fuit, on s’y perd |
 
-**2. La ville comme milieu qui détermine.**
-Chez **Zola**, le quartier, l’immeuble, l’atelier expliquent le destin des personnages : *L’Assommoir* se joue dans quelques rues de la Goutte-d’Or, et l’on n’en sort pas.
-
-**3. La ville comme labyrinthe.**
-Chez **Hugo** (*Les Misérables*), Paris est un dédale de ruelles, d’égouts et de barricades où l’on se cache, où l’on fuit, où l’on se perd.
+= Rastignac, du haut du Père-Lachaise : « À nous deux maintenant ! »
 
 ## Les procédés à repérer
-- la **description** en focalisation interne : la ville vue **par** un personnage, souvent à son arrivée ;
-- la **personnification** : la ville qui « gronde », « dévore », « respire » ;
-- les **champs lexicaux** — la foule, le bruit, la lumière, la boue ;
-- le **contraste** entre quartiers riches et pauvres, souvent à quelques rues d’écart ;
-- le **rythme** des phrases, qui mime l’agitation urbaine.
+| Le procédé | Son effet |
+| La **description en focalisation interne** | La ville vue **par** un personnage, souvent à son arrivée |
+| La **personnification** | La ville « gronde », « dévore », « respire » |
+| Les **champs lexicaux** | La foule, le bruit, la lumière, la boue |
+| Le **contraste** | Quartiers riches et pauvres, souvent à quelques rues d’écart |
+| Le **rythme** des phrases | Il mime l’agitation urbaine |
 
-> Décrire une ville, c’est toujours porter un **jugement** sur elle : le choix de ce qu’on montre — vitrines ou taudis — dit l’intention du romancier.`,
+!> Décrire une ville, c’est toujours porter un **jugement** sur elle. Le choix de ce qu’on montre — vitrines ou taudis — dit l’intention du romancier.`,
           },
           questions: [
             ['Pourquoi la ville devient-elle un sujet de roman au XIXe siècle ?', ['Parce que l’exode rural et l’industrialisation la transforment radicalement', 'Parce que les romanciers y habitent tous', 'Parce que la campagne n’intéresse plus personne', 'Parce que l’imprimerie s’y installe'], 0, 'Les grands travaux d’Haussmann changent Paris en trente ans.'],
@@ -730,27 +899,33 @@ Chez **Hugo** (*Les Misérables*), Paris est un dédale de ruelles, d’égouts 
           axe: 'Questionnements complémentaires — La ville, lieu de tous les possibles ?',
           lecon: {
             titre: 'De la laideur, faire un poème',
-            cours: `Longtemps, la poésie a chanté la nature. Au XIXe siècle, elle entre dans la **ville** — et y trouve une beauté nouvelle, faite de foule, de gaz, de fumée et de solitude.
+            cours: `« Tu m’as donné ta boue et j’en ai fait de l’or. » La poésie entre dans la ville, et y trouve une beauté nouvelle.
 
 ## Baudelaire, l’inventeur
-Dans *Les Fleurs du mal* (1857), la section « **Tableaux parisiens** » fait de Paris un sujet poétique à part entière. Le poète y est un **flâneur** : il marche, observe, capte les visages d’un instant — la passante, la vieille femme, l’aveugle, le cygne échappé.
+@ 1857 — Les Fleurs du mal ; la section « Tableaux parisiens » fait de Paris un sujet poétique à part entière
 
-Sa formule dit tout son projet : « Tu m’as donné ta boue et j’en ai fait de l’or. » La ville laide, sale, moderne devient matière de poésie.
+Le poète y est un **flâneur** : il marche, observe, capte les visages d’un instant — la passante, la vieille femme, l’aveugle, le cygne échappé.
+
+= « Tu m’as donné ta boue et j’en ai fait de l’or »
 
 ## Après lui
-- **Verlaine** : la ville pluvieuse et mélancolique — « Il pleure dans mon cœur / Comme il pleut sur la ville ».
-- **Rimbaud** : la ville rêvée et démesurée des *Illuminations*.
-- **Apollinaire** : « Zone » (1913) ouvre *Alcools* sur un Paris moderne — la tour Eiffel, les affiches, les hangars —, sans ponctuation, dans un vers libre qui suit la marche.
-- **Cendrars**, **Jacques Réda**, **Jacques Prévert** poursuivent, jusqu’à la chanson.
+| Le poète | Sa ville |
+| **Verlaine** | Pluvieuse et mélancolique : « Il pleure dans mon cœur / Comme il pleut sur la ville » |
+| **Rimbaud** | Rêvée et démesurée, dans les *Illuminations* |
+| **Apollinaire** | « Zone » (1913) ouvre *Alcools* sur un Paris moderne — tour Eiffel, affiches, hangars — **sans ponctuation** |
+| **Cendrars**, **Réda**, **Prévert** | Jusqu’à la chanson |
 
 ## Les procédés
-- la **personnification** de la ville ;
-- l’**oxymore** et l’**antithèse**, pour dire la beauté du laid : « soleil noir », « fangeuse grandeur » ;
-- l’**énumération** des choses vues, qui mime le défilé du regard ;
-- la **synesthésie** — mêler les sensations : bruits, odeurs, couleurs ;
-- le passage au **vers libre** et au **poème en prose**, formes assez souples pour épouser le désordre urbain.
+| Le procédé | Ce qu’il permet |
+| La **personnification** | La ville devient un être |
+| L’**oxymore** et l’**antithèse** | Dire la beauté du laid : « soleil noir », « fangeuse grandeur » |
+| L’**énumération** | Elle mime le défilé du regard |
+| La **synesthésie** | Mêler bruits, odeurs et couleurs |
+| Le **vers libre** et le **poème en prose** | Des formes assez souples pour épouser le désordre urbain |
 
-> La poésie de la ville n’embellit pas : elle **transfigure**. Elle regarde ce que personne ne regarde et le rend visible.`,
+!> La poésie de la ville **n’embellit pas** : elle **transfigure**. La distinction est capitale — Baudelaire ne cache pas la boue, il en fait de l’or.
+
+> Elle regarde ce que personne ne regarde, et le rend visible.`,
           },
           questions: [
             ['Quel recueil contient la section « Tableaux parisiens » ?', ['Les Fleurs du mal', 'Alcools', 'Les Contemplations', 'Illuminations'], 0, 'Baudelaire y fait de Paris un sujet poétique.'],
@@ -768,26 +943,36 @@ Sa formule dit tout son projet : « Tu m’as donné ta boue et j’en ai fait d
           axe: 'Questionnements complémentaires — La ville, lieu de tous les possibles ?',
           lecon: {
             titre: 'Le crime a besoin d’une foule',
-            cours: `Le roman policier naît **avec** la grande ville, et pour cause : il faut une foule pour s’y cacher, des quartiers qui s’ignorent, et une **police** organisée pour enquêter.
+            cours: `Le roman policier naît avec la grande ville. Il lui faut une foule pour s’y cacher.
 
 ## Les origines
-- **1841** : Edgar Allan Poe publie « **Double assassinat dans la rue Morgue** », premier récit d’énigme, avec le chevalier **Dupin** — un détective qui résout par la seule **déduction**.
-- **1887** : **Conan Doyle** crée **Sherlock Holmes** dans un Londres de brouillard, de fiacres et de bas-fonds.
-- **1841 également** : Paris se dote d’une police criminelle moderne, dont **Vidocq**, ancien bagnard devenu chef de la Sûreté, inspire les romanciers.
+@ 1841 — Poe publie « Double assassinat dans la rue Morgue », premier récit d’énigme, avec le chevalier Dupin
+@ 1841 — Paris se dote d’une police criminelle moderne ; Vidocq, ancien bagnard devenu chef de la Sûreté, inspire les romanciers
+@ 1887 — Conan Doyle crée Sherlock Holmes dans un Londres de brouillard et de fiacres
+
+Dupin résout par la seule **déduction**.
 
 ## Les grandes figures françaises
-- **Émile Gaboriau** invente le roman judiciaire.
-- **Gaston Leroux** : *Le Mystère de la chambre jaune* (1907), modèle du **crime en chambre close**.
-- **Maurice Leblanc** : **Arsène Lupin**, gentleman-cambrioleur, qui inverse les rôles — le héros est le voleur.
-- **Georges Simenon** : le commissaire **Maigret**, dont les enquêtes tiennent moins à l’indice qu’à l’**atmosphère** d’un quartier, d’un café, d’une pluie sur la Seine.
+| L’auteur | Son héros ou son apport |
+| **Émile Gaboriau** | Il invente le roman judiciaire |
+| **Gaston Leroux** | *Le Mystère de la chambre jaune* (1907), modèle du **crime en chambre close** |
+| **Maurice Leblanc** | **Arsène Lupin**, gentleman-cambrioleur : le héros est le **voleur** |
+| **Georges Simenon** | Le commissaire **Maigret**, dont les enquêtes tiennent moins à l’indice qu’à l’**atmosphère** |
 
 ## Trois sous-genres
-- Le **roman à énigme** : un mystère, des indices, une solution logique (Christie, Leroux).
-- Le **roman noir** : la société est corrompue, le détective désabusé, la ville hostile (Chandler, Manchette).
-- Le **thriller** : le suspense l’emporte sur l’énigme ; on court après le criminel plutôt qu’après la vérité.
+| Le sous-genre | Son ressort | Ses auteurs |
+| Le **roman à énigme** | Un mystère, des indices, une solution **logique** | Christie, Leroux |
+| Le **roman noir** | La société est **corrompue**, le détective désabusé | Chandler, Manchette |
+| Le **thriller** | Le **suspense** l’emporte sur l’énigme : on court après le criminel |
 
 ## Le rôle de la ville
-Elle fournit l’**anonymat** (on disparaît dans la foule), la **variété sociale** (le crime traverse les milieux), les **lieux typiques** (bar, port, gare, terrain vague), et une **atmosphère**. Chez les meilleurs auteurs, changer la ville changerait le roman : Maigret n’existe pas hors de Paris.`,
+| Ce qu’elle fournit | |
+| L’**anonymat** | On disparaît dans la foule |
+| La **variété sociale** | Le crime traverse les milieux |
+| Les **lieux typiques** | Bar, port, gare, terrain vague |
+| Une **atmosphère** | |
+
+!> Chez les meilleurs auteurs, changer la ville changerait le roman. **Maigret n’existe pas hors de Paris.**`,
           },
           questions: [
             ['Quel récit de 1841 est considéré comme le premier roman policier ?', ['« Double assassinat dans la rue Morgue » de Poe', 'Le Mystère de la chambre jaune', 'Une étude en rouge', 'Arsène Lupin gentleman-cambrioleur'], 0, 'Le chevalier Dupin y résout l’énigme par la déduction.'],
@@ -805,30 +990,44 @@ Elle fournit l’**anonymat** (on disparaît dans la foule), la **variété soci
           axe: 'Questionnements complémentaires — La ville, lieu de tous les possibles ?',
           lecon: {
             titre: 'Cadrer la ville, c’est déjà la raconter',
-            cours: `## La photographie
-- **Eugène Atget** photographie systématiquement le vieux Paris avant sa disparition : rues vides, boutiques, cours. Un travail d’**archive** devenu une œuvre.
-- **Robert Doisneau** et **Willy Ronis** saisissent le Paris populaire de l’après-guerre : les enfants, les bistrots, les amoureux. Une ville **habitée**, chaleureuse — et parfois mise en scène, comme le fameux baiser de l’Hôtel de Ville.
-- La photographie **documentaire** contemporaine montre les périphéries, les grands ensembles, les chantiers.
+            cours: `Trois arts, une même leçon : ce qui est hors champ compte autant que ce qui est montré.
 
-**Les notions à connaître** : le **cadrage** (ce qu’on garde, ce qu’on exclut), l’**angle de prise de vue** (plongée, contre-plongée), la **profondeur de champ**, le **noir et blanc** contre la couleur, et l’**instant décisif** cher à Cartier-Bresson.
+## La photographie
+| Le photographe | Ce qu’il montre |
+| **Eugène Atget** | Le vieux Paris **avant sa disparition** : rues vides, boutiques, cours. Une archive devenue œuvre |
+| **Robert Doisneau**, **Willy Ronis** | Le Paris populaire de l’après-guerre : enfants, bistrots, amoureux |
+| Les documentaristes contemporains | Les périphéries, les grands ensembles, les chantiers |
+
+!> Le fameux **baiser de l’Hôtel de Ville** est une photo **mise en scène**. Une image « spontanée » ne l’est pas toujours.
+
+| La notion | Ce qu’elle désigne |
+| Le **cadrage** | Ce qu’on garde, ce qu’on exclut |
+| L’**angle de prise de vue** | Plongée, contre-plongée |
+| La **profondeur de champ** | |
+| L’**instant décisif** | Cher à Cartier-Bresson |
 
 ## Le cinéma
-La ville y est décor, mais aussi **sujet** :
-- *Metropolis* (Fritz Lang, 1927) : la ville verticale, où les ouvriers vivent sous terre et les maîtres au sommet — une image devenue matrice de toute la science-fiction urbaine ;
-- *Blade Runner* (1982) hérite directement de cette vision ;
-- le cinéma français a filmé la banlieue (*La Haine*, 1995) comme il avait filmé les quais et les faubourgs.
+| Le film | Sa ville |
+| *Metropolis* (Fritz Lang, 1927) | La ville **verticale** : ouvriers sous terre, maîtres au sommet |
+| *Blade Runner* (1982) | Il en hérite directement |
+| *La Haine* (1995) | La banlieue, filmée comme on avait filmé les quais et les faubourgs |
 
-**Les notions** : l’**échelle de plan** (plan général pour situer, gros plan pour l’émotion), le **travelling**, le **plan-séquence**, la **bande-son** — le bruit d’une ville est déjà un récit.
+| La notion | Ce qu’elle désigne |
+| L’**échelle de plan** | Plan général pour situer, gros plan pour l’émotion |
+| Le **travelling**, le **plan-séquence** | Le mouvement |
+| La **bande-son** | Le bruit d’une ville est déjà un récit |
 
 ## La bande dessinée
-Elle **construit** la ville case après case :
-- **Hergé** documente Bruxelles, Shanghai, New York ;
-- **Schuiten et Peeters**, dans *Les Cités obscures*, inventent des villes entières, personnages à part entière ;
-- **Tardi** reconstitue le Paris de 1914 rue par rue.
+| L’auteur | Sa ville |
+| **Hergé** | Il documente Bruxelles, Shanghai, New York |
+| **Schuiten et Peeters** | *Les Cités obscures* : des villes inventées, personnages à part entière |
+| **Tardi** | Le Paris de 1914, reconstitué rue par rue |
 
-**Les notions** : la **case** et sa taille, la **planche** comme composition d’ensemble, la **bulle**, le **cartouche** (le texte du narrateur), et le passage d’une case à l’autre — l’**ellipse** que le lecteur comble lui-même.
-
-> Trois arts, une même leçon : ce qui est **hors champ** compte autant que ce qui est montré.`,
+| La notion | Ce qu’elle désigne |
+| La **case** et sa taille | L’unité de lecture |
+| La **planche** | La composition d’ensemble |
+| La **bulle** et le **cartouche** | La parole et le texte du narrateur |
+| L’**ellipse** entre deux cases | Ce que le **lecteur** comble lui-même |`,
           },
           questions: [
             ['Quel photographe a documenté le vieux Paris avant sa disparition ?', ['Eugène Atget', 'Robert Doisneau', 'Willy Ronis', 'Henri Cartier-Bresson'], 0, 'Rues vides, boutiques et cours, dans un travail d’archive.'],

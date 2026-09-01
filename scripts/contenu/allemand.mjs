@@ -12,19 +12,35 @@ export default {
           titre: 'Se présenter et saluer',
           lecon: {
             titre: 'Sich vorstellen — les premiers échanges',
-            cours: `L'allemand distingue nettement le registre familier du registre poli : c'est la première chose à maîtriser.
+            cours: `L’allemand distingue nettement le registre familier du registre poli. C’est la première chose à maîtriser : se tromper de registre s’entend immédiatement.
 
 ## Saluer
-*Hallo* (familier), *Guten Morgen* (le matin), *Guten Tag* (la journée), *Guten Abend* (le soir), *Tschüss* (salut, en partant), *Auf Wiedersehen* (au revoir, poli).
+| Formule | Quand | Registre |
+| *Hallo* | À toute heure | Familier |
+| *Guten Morgen* | Le matin | Neutre |
+| *Guten Tag* | Dans la journée | Neutre à poli |
+| *Guten Abend* | Le soir | Neutre à poli |
+| *Tschüss* | En partant | Familier |
+| *Auf Wiedersehen* | En partant | Poli |
 
 ## Se présenter
-*Ich heiße Anna* (je m'appelle Anna) — ou *Ich bin Anna*. *Wie heißt du ?* (comment t'appelles-tu ?) / *Wie heißen Sie ?* (forme polie). *Ich komme aus Frankreich* (je viens de France). *Ich wohne in Lyon* (j'habite à Lyon). *Ich bin 13 Jahre alt* (j'ai 13 ans — attention : en allemand on **est** vieux, on n'**a** pas des années).
+| Ce que je dis | En allemand |
+| Je m’appelle Anna | *Ich heiße Anna* — ou *Ich bin Anna* |
+| Comment t’appelles-tu ? | *Wie heißt du ?* |
+| Comment vous appelez-vous ? | *Wie heißen Sie ?* |
+| Je viens de France | *Ich komme aus Frankreich* |
+| J’habite à Lyon | *Ich wohne in Lyon* |
+| J’ai 13 ans | *Ich bin 13 Jahre alt* |
+
+> Attention au dernier : en allemand on **est** vieux de treize ans, on n’**a** pas treize ans. *Ich habe 13 Jahre* est une faute de débutant qui s’entend tout de suite.
 
 ## Le vouvoiement
-*du* = tu ; *Sie* (toujours avec une majuscule) = vous de politesse. Se tromper de registre est une faute lourde en allemand : on vouvoie tout adulte inconnu.
+*du* = tu ; *Sie* = vous de politesse, **toujours avec une majuscule**, y compris au milieu d’une phrase. On vouvoie tout adulte inconnu : commerçant, professeur, voisin. Le tutoiement se propose, il ne se prend pas.
 
-## Les nombres et l'alphabet
-*eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn*. L'allemand écrit les nombres à l'envers du français à partir de 21 : *einundzwanzig* = « un-et-vingt ».`,
+## Les nombres
+*eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn.*
+
+À partir de 21, l’allemand énonce les nombres **à l’envers du français** : *einundzwanzig*, littéralement « un-et-vingt ». *Vierundsechzig* = quatre-et-soixante, soit 64.`,
           },
           questions: [
             ['Comment dit-on « je m’appelle Anna » ?', ['Ich heiße Anna', 'Ich bin alt', 'Ich komme Anna', 'Ich wohne Anna'], 0, '*heißen* = s’appeler. On peut aussi dire *Ich bin Anna*.'],
@@ -41,19 +57,30 @@ export default {
           titre: 'Les articles et les trois genres',
           lecon: {
             titre: 'der, die, das — et le cas accusatif',
-            cours: `La grammaire allemande repose sur le **genre** et sur les **cas**. C'est difficile au début, puis très régulier.
+            cours: `La grammaire allemande repose sur le **genre** et sur les **cas**. C’est difficile au début, puis très régulier — bien plus que le français.
 
 ## Trois genres, trois articles
-**der** (masculin), **die** (féminin), **das** (neutre). Au pluriel, l'article défini est **die** pour les trois genres. Le genre ne se devine pas toujours : on apprend le nom **avec** son article (*der Tisch*, *die Lampe*, *das Buch*).
+| Genre | Article défini | Article indéfini | Exemple |
+| Masculin | **der** | *ein* | *der Tisch* (la table) |
+| Féminin | **die** | *eine* | *die Lampe* (la lampe) |
+| Neutre | **das** | *ein* | *das Buch* (le livre) |
+| Pluriel | **die** | pas d’article | *Bücher* (des livres) |
 
-## L'article indéfini
-*ein* (masculin et neutre), *eine* (féminin). Il n'existe pas de pluriel de *ein* : on dit simplement *Bücher* (des livres).
+> Le genre allemand ne suit pas le français : *die Lampe* est féminin, *der Tisch* masculin, *das Mädchen* (la jeune fille) est **neutre**. On n’apprend donc jamais un nom seul : on apprend *der Tisch*, jamais *Tisch*.
 
-## Le nominatif et l'accusatif
-Le **nominatif** est le cas du sujet ; l'**accusatif**, celui du complément d'objet direct. Bonne nouvelle : seul le masculin change. *der* → *den*, *ein* → *einen*. *Der Hund sieht den Mann* : le chien voit l'homme.
+## Le nominatif et l’accusatif
+Le **nominatif** est le cas du sujet, l’**accusatif** celui du complément d’objet direct. Bonne nouvelle : **seul le masculin change**.
+
+| Genre | Nominatif (sujet) | Accusatif (COD) |
+| Masculin | *der* / *ein* | **den** / **einen** |
+| Féminin | *die* / *eine* | *die* / *eine* |
+| Neutre | *das* / *ein* | *das* / *ein* |
+| Pluriel | *die* | *die* |
+
+*Der Hund sieht den Mann* : le chien voit l’homme. *Den Hund sieht der Mann* : c’est l’homme qui voit le chien — le sens a changé, l’ordre des mots non.
 
 ## La majuscule
-Tous les noms communs prennent une **majuscule** en allemand, quelle que soit leur place dans la phrase : *das Haus*, *die Schule*, *der Freund*.`,
+Tous les **noms communs** prennent une majuscule en allemand, quelle que soit leur place : *das Haus*, *die Schule*, *der Freund*. C’est une règle sans exception, et une faute très visible à l’écrit.`,
           },
           questions: [
             ['Quel est l’article défini neutre en allemand ?', ['das', 'der', 'die', 'den'], 0, '*das Buch*, *das Haus*, *das Kind*.'],
@@ -70,19 +97,41 @@ Tous les noms communs prennent une **majuscule** en allemand, quelle que soit le
           titre: 'Le présent et la place du verbe',
           lecon: {
             titre: 'Conjuguer et construire la phrase',
-            cours: `Deux règles suffisent à faire des phrases correctes dès le début.
+            cours: `Deux règles suffisent à construire des phrases correctes dès les premières semaines : une conjugaison, et une place.
 
 ## Le présent régulier
-On retire *-en* à l'infinitif et on ajoute les terminaisons : *ich spiele, du spielst, er/sie/es spielt, wir spielen, ihr spielt, sie/Sie spielen*.
+On retire *-en* à l’infinitif, on ajoute la terminaison.
+
+| Personne | *spielen* (jouer) | Terminaison |
+| ich | *spiele* | -e |
+| du | *spielst* | -st |
+| er / sie / es | *spielt* | -t |
+| wir | *spielen* | -en |
+| ihr | *spielt* | -t |
+| sie / Sie | *spielen* | -en |
 
 ## Les deux verbes indispensables
-**sein** (être) : *ich bin, du bist, er ist, wir sind, ihr seid, sie sind*. **haben** (avoir) : *ich habe, du hast, er hat, wir haben, ihr habt, sie haben*. Tous deux sont irréguliers et servent partout.
+| Personne | *sein* (être) | *haben* (avoir) |
+| ich | *bin* | *habe* |
+| du | *bist* | *hast* |
+| er / sie / es | *ist* | *hat* |
+| wir | *sind* | *haben* |
+| ihr | *seid* | *habt* |
+| sie / Sie | *sind* | *haben* |
 
 ## Le verbe en deuxième position
-Dans une phrase déclarative, le verbe conjugué occupe **toujours la deuxième place**, quel que soit l'élément placé en premier : *Ich gehe heute ins Kino* / *Heute gehe ich ins Kino*. Le sujet passe alors derrière le verbe : c'est l'**inversion**.
+> Dans une phrase déclarative, le verbe conjugué occupe **toujours la deuxième place**. Toujours — quel que soit l’élément placé en tête.
+
+*Ich gehe heute ins Kino.* · *Heute gehe ich ins Kino.* · *Ins Kino gehe ich heute.*
+
+Si un complément passe en première position, le sujet passe **derrière** le verbe : c’est l’**inversion**. Le français ne le fait pas, d’où la faute la plus fréquente en début d’apprentissage.
 
 ## La question
-Question fermée : le verbe passe en première position (*Spielst du Fußball ?*). Question ouverte : mot interrogatif + verbe (*Wann kommst du ?*, *Wo wohnst du ?*, *Warum lernst du Deutsch ?*).`,
+| Type de question | Où va le verbe | Exemple |
+| Fermée (oui / non) | En **première** position | *Spielst du Fußball ?* |
+| Ouverte | Après le mot interrogatif | *Wann kommst du ?* |
+
+Les mots interrogatifs de base : *wer* (qui), *was* (quoi), *wann* (quand), *wo* (où), *wie* (comment), *warum* (pourquoi).`,
           },
           questions: [
             ['Dans une phrase déclarative allemande, le verbe conjugué est…', ['En deuxième position', 'En première position', 'En dernière position', 'Libre'], 0, 'C’est la règle la plus structurante de la syntaxe allemande.'],
@@ -104,19 +153,36 @@ Question fermée : le verbe passe en première position (*Spielst du Fußball ?*
           titre: 'Raconter au passé',
           lecon: {
             titre: 'Perfekt et Präteritum',
-            cours: `L'allemand dispose de deux passés, dont l'emploi dépend surtout du **registre**.
+            cours: `L’allemand dispose de deux passés. Le français choisirait selon le sens ; l’allemand, lui, choisit surtout selon le **registre** — à l’oral ou à l’écrit.
+
+## Les deux passés, en un coup d’œil
+| | Perfekt | Präteritum |
+| Où l’employer | Oral, échanges courants, courriels | Écrit, récit, presse, littérature |
+| Comment il se forme | *haben* ou *sein* + participe passé | Une terminaison sur le radical |
+| Exemple | *Ich habe einen Film gesehen* | *Ich sah einen Film* |
+
+> Le Präteritum survit à l’oral pour **trois familles seulement** : *sein* (*ich war*), *haben* (*ich hatte*) et les modaux (*ich konnte, ich wollte, ich musste*). Partout ailleurs, on parle au Perfekt.
 
 ## Le Perfekt
-C'est le passé de l'oral et des échanges courants. Il se forme avec **haben** ou **sein** conjugué au présent + **participe passé** rejeté en fin de phrase : *Ich habe einen Film gesehen*. *Ich bin nach Berlin gefahren*.
+L’auxiliaire est conjugué au présent en deuxième position, et le **participe passé part en fin de phrase** : *Ich habe gestern mit meinem Bruder einen Film gesehen*. C’est cet éloignement qui déroute — il faut tenir le sens jusqu’au dernier mot.
 
 ## haben ou sein ?
-On emploie **sein** avec les verbes de **mouvement** (*gehen, fahren, kommen, fliegen*) et de **changement d'état** (*aufstehen, einschlafen, sterben*), ainsi qu'avec *sein* et *bleiben*. Tous les autres prennent **haben**.
+| On emploie | Avec quels verbes | Exemples |
+| **sein** | Mouvement d’un lieu à un autre | *gehen, fahren, kommen, fliegen* |
+| **sein** | Changement d’état | *aufstehen, einschlafen, sterben* |
+| **sein** | Les deux exceptions à retenir | *sein* et *bleiben* |
+| **haben** | Tous les autres | *machen, sehen, essen, lesen* |
+
+*Ich bin nach Berlin gefahren* (déplacement) mais *Ich habe das Auto gefahren* (j’ai conduit la voiture) : c’est le sens, pas le verbe, qui tranche.
 
 ## Le participe passé
-Verbes réguliers : **ge- + radical + -t** (*gespielt*, *gelernt*). Verbes forts : **ge- + radical modifié + -en** (*gesehen*, *gefahren*, *geschrieben*). Les verbes en *-ieren* ne prennent pas *ge-* (*studiert*).
+| Type de verbe | Formation | Exemples |
+| Régulier (faible) | ge- + radical + -t | *gespielt*, *gelernt*, *gemacht* |
+| Fort | ge- + radical modifié + -en | *gesehen*, *gefahren*, *geschrieben* |
+| En -ieren | Pas de ge- | *studiert*, *telefoniert* |
 
 ## Le Präteritum
-C'est le passé de l'écrit, du récit et de la presse. À l'oral, il ne survit que pour *sein* (*ich war*), *haben* (*ich hatte*) et les modaux (*ich konnte, ich wollte, ich musste*).`,
+C’est le passé du récit. Verbes faibles : radical + *-te* (*ich spielte*). Verbes forts : le radical change et ne prend aucune terminaison à la 1re et à la 3e personne du singulier (*ich ging*, *er sah*).`,
           },
           questions: [
             ['Quel auxiliaire s’emploie avec les verbes de mouvement au Perfekt ?', ['sein', 'haben', 'werden', 'müssen'], 0, '*Ich bin gefahren*, *ich bin gegangen*.'],
@@ -133,19 +199,31 @@ C'est le passé de l'écrit, du récit et de la presse. À l'oral, il ne survit 
           titre: 'Le datif et les prépositions',
           lecon: {
             titre: 'Maîtriser le troisième cas',
-            cours: `Le datif est le cas du **complément d'attribution** — et celui qu'imposent de nombreuses prépositions.
+            cours: `Le datif est le cas du **complément d’attribution** — et surtout celui qu’imposent de nombreuses prépositions. C’est là que se joue la moitié des fautes.
 
 ## Les articles au datif
-*der* → **dem**, *das* → **dem**, *die* → **der**, pluriel *die* → **den** (+ *-n* au nom : *den Kindern*).
+| Genre | Nominatif | Datif | Remarque |
+| Masculin | *der* | **dem** | |
+| Neutre | *das* | **dem** | Même forme qu’au masculin |
+| Féminin | *die* | **der** | Le piège : *der* devient féminin |
+| Pluriel | *die* | **den** | Et le nom prend un -n : *den Kindern* |
 
 ## Les prépositions toujours suivies du datif
-*aus, bei, mit, nach, seit, von, zu* (et *gegenüber*). Une phrase mnémotechnique les regroupe : « aus-bei-mit-nach-seit-von-zu ». *Ich fahre mit dem Bus*, *Ich komme aus der Schweiz*.
+Sept mots à savoir dans l’ordre, comme une formule : **aus – bei – mit – nach – seit – von – zu** (plus *gegenüber*).
 
-## Les prépositions toujours suivies de l'accusatif
-*durch, für, gegen, ohne, um*. *Ich mache das für dich*.
+*Ich fahre mit dem Bus.* · *Ich komme aus der Schweiz.* · *Seit einem Jahr lerne ich Deutsch.*
+
+## Les prépositions toujours suivies de l’accusatif
+Cinq mots : **durch – für – gegen – ohne – um**. *Ich mache das für dich.* · *Wir gehen durch den Park.*
 
 ## Les prépositions mixtes
-*an, auf, hinter, in, neben, über, unter, vor, zwischen* prennent **l'accusatif s'il y a déplacement** (question *wohin ?*) et **le datif s'il y a localisation** (question *wo ?*). *Ich gehe in die Schule* (j'y vais) / *Ich bin in der Schule* (j'y suis).`,
+Neuf prépositions changent de cas selon le sens : *an, auf, hinter, in, neben, über, unter, vor, zwischen*.
+
+| La question posée | Le cas | Le sens | Exemple |
+| **wohin ?** (vers où ?) | Accusatif | Déplacement, on change de lieu | *Ich gehe in die Schule* |
+| **wo ?** (où ?) | Datif | Localisation, on y est déjà | *Ich bin in der Schule* |
+
+> Le réflexe qui ne trompe pas : poser la question au verbe. Un verbe de mouvement vers un but appelle l’accusatif ; un verbe d’état appelle le datif. *Ich hänge das Bild an die Wand* (je l’accroche) / *Das Bild hängt an der Wand* (il y pend).`,
           },
           questions: [
             ['Quel cas suit obligatoirement la préposition « mit » ?', ['Le datif', 'L’accusatif', 'Le nominatif', 'Le génitif'], 0, 'Elle fait partie du groupe aus-bei-mit-nach-seit-von-zu.'],
@@ -162,19 +240,29 @@ C'est le passé de l'écrit, du récit et de la presse. À l'oral, il ne survit 
           titre: 'L’Allemagne d’aujourd’hui',
           lecon: {
             titre: 'Repères de civilisation',
-            cours: `Parler une langue suppose de connaître le pays qui la parle.
+            cours: `Parler une langue suppose de connaître le pays qui la parle. Quatre entrées suffisent pour le bac : le pays, les dates, les institutions, la vie quotidienne.
 
 ## Le pays
-La **République fédérale d'Allemagne** (*Bundesrepublik Deutschland*) compte environ 84 millions d'habitants et **16 Länder**. Sa capitale est **Berlin** ; sa monnaie, l'euro. C'est la première économie européenne.
+La **République fédérale d’Allemagne** (*Bundesrepublik Deutschland*) compte environ **84 millions** d’habitants et **16 Länder**. Capitale : **Berlin**. Monnaie : l’euro. C’est la **première économie européenne**.
 
 ## Les dates clés
-**1949** : création de la RFA et de la RDA. **1961** : construction du mur de Berlin. **9 novembre 1989** : chute du mur. **3 octobre 1990** : réunification, aujourd'hui fête nationale (*Tag der Deutschen Einheit*).
+| Date | L’événement | Ce qu’il change |
+| 1949 | Création de la RFA et de la RDA | Le pays est coupé en deux |
+| 1961 | Construction du mur de Berlin | La coupure devient un mur |
+| 9 novembre 1989 | Chute du mur | La RDA s’ouvre |
+| 3 octobre 1990 | Réunification | Fête nationale : *Tag der Deutschen Einheit* |
 
 ## Les institutions
-Le **Bundestag** est élu par les citoyens ; le **Bundesrat** représente les Länder. Le **Bundeskanzler** (chancelier) dirige le gouvernement ; le **Bundespräsident** a un rôle largement représentatif. Le fédéralisme donne aux Länder la compétence de l'éducation et de la culture.
+| Institution | Qui la compose | Son rôle |
+| *Bundestag* | Élu par les citoyens | Vote les lois |
+| *Bundesrat* | Représentants des Länder | Le fédéralisme au Parlement |
+| *Bundeskanzler* | Chef du gouvernement | Dirige la politique du pays |
+| *Bundespräsident* | Élu indirectement | Rôle largement représentatif |
+
+> Le **fédéralisme** n’est pas un détail : ce sont les Länder, et non l’État fédéral, qui décident de l’éducation et de la culture. D’où seize systèmes scolaires différents.
 
 ## Traditions et vie quotidienne
-Le *Weihnachtsmarkt* (marché de Noël), l'*Oktoberfest* à Munich, le *Karneval* rhénan, le *Abitur* (équivalent du baccalauréat), et une journée scolaire qui se termine souvent en début d'après-midi.`,
+Le *Weihnachtsmarkt* (marché de Noël), l’*Oktoberfest* à Munich, le *Karneval* rhénan, l’*Abitur* (équivalent du baccalauréat) — et une journée scolaire qui s’achève souvent en début d’après-midi, les activités se tenant hors de l’école.`,
           },
           questions: [
             ['Combien de Länder compte l’Allemagne ?', ['16', '12', '20', '9'], 0, 'Le fédéralisme leur confie notamment l’éducation.'],

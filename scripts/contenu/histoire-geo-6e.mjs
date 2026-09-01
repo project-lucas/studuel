@@ -135,31 +135,40 @@ DELETE FROM public.chapters c
           axe: 'La longue histoire de l’humanité et des migrations',
           lecon: {
             titre: 'Une histoire qui commence en Afrique',
-            cours: `## Le temps très long
-L’histoire de l’humanité commence il y a environ **3 millions d’années**, en **Afrique**. C’est le **Paléolithique**, la période la plus longue de toutes : elle représente plus de **99 %** du temps de l’humanité.
+            cours: `L’histoire de l’humanité commence en Afrique, il y a environ 3 millions d’années. Cette période, le Paléolithique, occupe plus de 99 % du temps humain.
 
-## Les premiers représentants du genre *Homo*
-- ***Homo habilis*** (≈ 2,5 millions d’années) : les premiers outils taillés.
-- ***Homo erectus*** (≈ 1,9 million d’années) : la maîtrise du **feu**, les premières sorties d’Afrique.
-- ***Homo neanderthalensis*** : en Europe, disparu il y a environ 40 000 ans.
-- ***Homo sapiens*** (≈ 300 000 ans) : notre espèce, née en Afrique elle aussi.
+## Les premiers Homo
+@ ≈ 2,5 millions d’années — *Homo habilis* : les premiers outils taillés
+@ ≈ 1,9 million d’années — *Homo erectus* : la maîtrise du feu, les premières sorties d’Afrique
+@ ≈ 300 000 ans — *Homo sapiens*, notre espèce, née en Afrique elle aussi
+@ ≈ 40 000 ans — Disparition d’*Homo neanderthalensis* en Europe
 
-## Ce qui caractérise ces sociétés
-Les humains du Paléolithique sont **chasseurs-cueilleurs** et **nomades** : ils se déplacent au rythme du gibier et des saisons. Ils vivent en petits groupes, dans des abris sous roche ou des campements.
+## Comment ils vivent
+| Leur mode de vie | Ce que cela veut dire |
+| **Chasseurs-cueilleurs** | Ils prélèvent ce que la nature offre, sans rien produire |
+| **Nomades** | Ils se déplacent au rythme du gibier et des saisons |
+| En **petits groupes** | Abris sous roche, campements |
 
-## Les grandes acquisitions
-- La **bipédie**, qui libère les mains ;
-- l’**outil** taillé, d’abord le galet aménagé puis le biface ;
-- le **feu**, qui protège, chauffe, éclaire et permet de cuire ;
-- le **langage** et, plus tard, l’**art**.
+## Les quatre grandes acquisitions
+~ La bipédie (les mains libres) → L’outil taillé → Le feu → Le langage, puis l’art
+
+| L’acquisition | Ce qu’elle change |
+| La **bipédie** | Elle libère les mains |
+| L’**outil taillé** | Du galet aménagé au biface |
+| Le **feu** | Il protège, chauffe, éclaire et cuit |
+| Le **langage** | Il permet de transmettre |
 
 ## L’art pariétal
-Les peintures de **Lascaux** (≈ 18 000 ans) et de **Chauvet** (≈ 36 000 ans) montrent des animaux d’un réalisme saisissant. Elles prouvent une pensée **symbolique** : ces humains ne se contentaient pas de survivre, ils représentaient le monde.
+| La grotte | Son âge |
+| **Chauvet** | ≈ 36 000 ans |
+| **Lascaux** | ≈ 18 000 ans |
+
+Ces peintures d’animaux, d’un réalisme saisissant, prouvent une pensée **symbolique**.
 
 > Une main peinte sur une paroi il y a 30 000 ans est un message : « j’étais là ».
 
 ## Comment on le sait
-L’historien travaille sur des **traces** : outils, ossements, foyers, peintures. L’**archéologie** les met au jour, et des méthodes de datation (dont le **carbone 14**) leur donnent un âge.`,
+L’historien travaille sur des **traces** : outils, ossements, foyers, peintures. L’**archéologie** les met au jour, et le **carbone 14** leur donne un âge.`,
           },
           questions: [
             ['Sur quel continent l’humanité apparaît-elle ?', ['En Afrique', 'En Europe', 'En Asie', 'En Amérique'], 0, 'Homo sapiens y naît également.'],
@@ -177,31 +186,36 @@ L’historien travaille sur des **traces** : outils, ossements, foyers, peinture
           axe: 'La longue histoire de l’humanité et des migrations',
           lecon: {
             titre: 'Peupler la planète',
-            cours: `## Le grand départ
-Depuis l’Afrique, les humains ont peu à peu **peuplé toute la planète**. *Homo erectus* sort le premier ; *Homo sapiens* suit, à partir d’environ **100 000 à 60 000 ans**.
+            cours: `Depuis l’Afrique, les humains ont peuplé toute la planète — non pas en voyageant, mais en glissant de génération en génération.
 
 ## Les grandes étapes
-- **Proche-Orient**, puis **Asie** ;
-- **Europe** : vers 45 000 ans ;
-- **Australie** : vers 50 000 ans, franchissant des bras de mer — donc en **navigant** ;
-- **Amérique** : vers 15 000 à 20 000 ans, par le **détroit de Béring**, alors émergé du fait de la baisse du niveau des mers pendant la glaciation.
+@ ≈ 100 000 à 60 000 ans — *Homo sapiens* sort d’Afrique vers le Proche-Orient, puis l’Asie
+@ ≈ 50 000 ans — L’Australie, atteinte en franchissant des bras de mer : donc en NAVIGUANT
+@ ≈ 45 000 ans — L’Europe
+@ ≈ 20 000 à 15 000 ans — L’Amérique, par le détroit de Béring alors émergé
 
-## Pourquoi partir ?
-- la recherche de **gibier** et de ressources ;
-- les **variations du climat**, qui rendent des régions vivables ou invivables ;
-- l’**augmentation** lente des groupes humains.
-Ces déplacements se comptent en **millénaires** : ce ne sont pas des voyages, mais des glissements de génération en génération.
+!> Le détroit de **Béring** était **à sec** : pendant la glaciation, l’eau piégée dans les glaces avait fait baisser le niveau des mers. Ce n’était pas une traversée, mais un passage à pied.
+
+## Pourquoi partir
+| La cause | Le détail |
+| Le **gibier** et les ressources | On suit ce dont on vit |
+| Les **variations du climat** | Une région devient vivable, une autre non |
+| L’**augmentation** des groupes | Il faut de la place |
+
+> Ces déplacements se comptent en **millénaires**. Personne n’est « parti pour l’Australie » : chaque génération s’installait un peu plus loin.
 
 ## S’adapter à chaque milieu
-Chaque environnement impose ses solutions : vêtements cousus et lampes à graisse dans le froid, habitats légers sous les tropiques, techniques de pêche sur les côtes. L’**adaptation technique** est la marque de l’espèce.
+| Le milieu | La solution technique |
+| Le **froid** | Vêtements cousus, lampes à graisse |
+| Les **tropiques** | Habitats légers |
+| Les **côtes** | Techniques de pêche |
 
 > L’humain n’est pas fait pour un milieu : il fabrique de quoi vivre dans tous.
 
 ## Ce que la génétique a confirmé
-L’étude de l’**ADN** des populations actuelles confirme le scénario africain et retrace les routes du peuplement. Elle établit aussi que les différences génétiques entre groupes humains sont **très faibles** : l’humanité forme une seule espèce, sans races biologiques.
+L’étude de l’**ADN** confirme le scénario africain et retrace les routes du peuplement.
 
-## Migrer, hier et aujourd’hui
-Se déplacer est constitutif de l’histoire humaine. Les causes — climat, ressources, sécurité — n’ont pas fondamentalement changé.`,
+!> Elle établit aussi que les différences génétiques entre groupes humains sont **très faibles** : l’humanité forme **une seule espèce**, sans races biologiques.`,
           },
           questions: [
             ['Par où les humains sont-ils passés pour atteindre l’Amérique ?', ['Le détroit de Béring, alors émergé', 'L’océan Atlantique', 'Le détroit de Gibraltar', 'Le canal de Panama'], 0, 'Le niveau des mers était plus bas pendant la glaciation.'],
@@ -219,31 +233,38 @@ Se déplacer est constitutif de l’histoire humaine. Les causes — climat, res
           axe: 'La longue histoire de l’humanité et des migrations',
           lecon: {
             titre: 'Quand l’humanité se met à produire',
-            cours: `## Le basculement
-Vers **10 000 av. J.-C.**, au **Proche-Orient**, dans la région du **Croissant fertile**, des groupes humains cessent de seulement prélever ce que la nature offre : ils se mettent à **produire** leur nourriture. C’est la **révolution néolithique**, le changement le plus profond de toute l’histoire humaine.
+            cours: `Vers 10 000 av. J.-C., des humains cessent de prélever ce que la nature offre : ils se mettent à produire. C’est le changement le plus profond de toute l’histoire.
+
+## Où et quand
+@ ≈ 10 000 av. J.-C. — Au Proche-Orient, dans le Croissant fertile : la révolution néolithique
+@ 7000 à 3000 av. J.-C. — Le Néolithique gagne l’Europe
+
+Il apparaît aussi **indépendamment** en Chine, en Afrique et en Amérique : plusieurs foyers, sans contact entre eux.
 
 ## Les deux inventions
-- L’**agriculture** : on sème et on récolte (blé, orge, lentilles).
-- L’**élevage** : on domestique des animaux (chèvre, mouton, bœuf, porc).
-On sélectionne, de génération en génération, les plantes et les bêtes les plus utiles : c’est la **domestication**.
+| L’invention | Ce qu’on fait |
+| L’**agriculture** | On sème et on récolte : blé, orge, lentilles |
+| L’**élevage** | On domestique chèvre, mouton, bœuf, porc |
+
+La **domestication** est cette sélection, de génération en génération, des plantes et des bêtes les plus utiles.
 
 ## La sédentarisation
-Produire sa nourriture oblige à **rester sur place** pour surveiller les champs et les troupeaux. Naissent les premiers **villages** permanents, faits de maisons en terre, avec des greniers.
+~ Produire sa nourriture → Rester pour surveiller champs et troupeaux → Premiers villages permanents
+
+Maisons en terre, greniers : on ne repart plus.
 
 ## Les conséquences en chaîne
-- des **surplus** agricoles, donc des réserves ;
-- une **population** qui augmente fortement ;
-- une **spécialisation** des tâches : tous ne cultivent plus, certains deviennent potiers, tisserands, forgerons ;
-- des **inégalités** : ce qui se stocke peut s’accumuler, donc se posséder inégalement ;
-- de nouvelles techniques : **poterie**, **tissage**, pierre **polie**, plus tard les **métaux**.
+| La conséquence | Ce qu’elle entraîne |
+| Des **surplus** | On stocke des réserves |
+| Une **population** en hausse | Plus de nourriture, plus d’humains |
+| Une **spécialisation** | Potiers, tisserands, forgerons |
+| Des **inégalités** | Ce qui se stocke peut s’accumuler |
+| Des **techniques** | Poterie, tissage, pierre polie, puis métaux |
 
 > Tant qu’on ne stocke rien, il n’y a rien à posséder. Le grenier est aussi la naissance de la richesse — et de l’inégalité.
 
-## La diffusion
-Le Néolithique gagne l’Europe entre 7000 et 3000 av. J.-C. Il apparaît aussi **indépendamment** en Chine, en Afrique et en Amérique : plusieurs foyers, sans contact entre eux.
-
 ## Les monuments
-**Dolmens**, **menhirs** et **cromlechs** (Carnac, Stonehenge) témoignent de sociétés capables d’organiser des chantiers collectifs considérables.`,
+**Dolmens**, **menhirs** et **cromlechs** — Carnac, Stonehenge — témoignent de sociétés capables d’organiser des chantiers collectifs considérables.`,
           },
           questions: [
             ['Quand commence la révolution néolithique ?', ['Vers 10 000 av. J.-C.', 'Vers 3 000 av. J.-C.', 'Vers 100 000 av. J.-C.', 'Vers 500 av. J.-C.'], 0, 'Au Proche-Orient, dans le Croissant fertile.'],
@@ -261,29 +282,41 @@ Le Néolithique gagne l’Europe entre 7000 et 3000 av. J.-C. Il apparaît aussi
           axe: 'La longue histoire de l’humanité et des migrations',
           lecon: {
             titre: 'Des villages aux royaumes',
-            cours: `## Naître d’un fleuve
-Vers **3500-3000 av. J.-C.**, les premières **cités** et les premiers **États** apparaissent dans deux vallées fluviales : la **Mésopotamie** (entre le Tigre et l’Euphrate, l’actuel Irak) et l’**Égypte** (vallée du **Nil**).
-Le fleuve donne l’**eau**, des **crues** qui fertilisent les terres, et une **voie de transport**.
+            cours: `Les premiers États naissent au bord de deux fleuves. Ce n’est pas un hasard : l’eau y commande tout, y compris le pouvoir.
+
+## Naître d’un fleuve
+@ ≈ 3500-3000 av. J.-C. — Premières cités et premiers États en Mésopotamie et en Égypte
+@ ≈ 3100 av. J.-C. — Unification de la Haute et de la Basse-Égypte
+@ ≈ 2500 av. J.-C. — Les pyramides de Gizeh
+
+| Le pays | Son fleuve |
+| La **Mésopotamie** (Irak actuel) | Entre le **Tigre** et l’**Euphrate** |
+| L’**Égypte** | La vallée du **Nil** |
+
+Le fleuve donne l’**eau**, des **crues** qui fertilisent, et une **voie de transport**.
 
 ## Ce qui définit un État
-- un **territoire** délimité ;
-- une **population** ;
-- un **pouvoir** qui commande, prélève l’**impôt** et rend la justice ;
-- des **lois** et des **fonctionnaires** — dont les **scribes**.
+| L’élément | Son rôle |
+| Un **territoire** | Délimité |
+| Une **population** | |
+| Un **pouvoir** | Il commande, prélève l’**impôt**, rend la justice |
+| Des **lois** et des **fonctionnaires** | Dont les **scribes** |
 
 ## L’irrigation, moteur du pouvoir
-Creuser et entretenir des **canaux** dépasse les forces d’une famille : il faut organiser le travail de milliers de personnes. Ce besoin d’organisation collective **appelle** un pouvoir central.
+~ Creuser des canaux → Organiser le travail de milliers de personnes → Un pouvoir central devient nécessaire
+
+> Le besoin d’organisation collective n’accompagne pas l’État : il l’**appelle**.
 
 ## La cité mésopotamienne
-Chaque cité (Ur, Uruk, Lagash) a son **roi**, son **dieu** et sa **ziggurat**, temple à degrés qui domine la ville. Les cités se font la guerre puis sont unifiées en empires — celui d’**Akkad**, puis **Babylone**.
+Chaque cité — **Ur**, **Uruk**, **Lagash** — a son **roi**, son **dieu** et sa **ziggurat**, temple à degrés qui domine la ville. Elles se font la guerre, puis sont unifiées en empires : **Akkad**, puis **Babylone**.
 
 ## L’Égypte pharaonique
-Le **pharaon** est un roi **divin**, maître des terres et des hommes. Vers 3100 av. J.-C., la Haute et la Basse-Égypte sont unifiées. Les **pyramides** (Gizeh, ≈ 2500 av. J.-C.) sont des tombeaux, et la mesure du pouvoir royal.
+Le **pharaon** est un roi **divin**, maître des terres et des hommes. Les **pyramides** sont des tombeaux.
 
 > Une pyramide ne dit pas seulement la foi dans l’au-delà : elle dit qu’un homme pouvait mobiliser des dizaines de milliers de bras pendant vingt ans.
 
 ## Une société hiérarchisée
-Au sommet le roi, puis les prêtres, les scribes et les guerriers ; en bas les paysans et les artisans, largement majoritaires, et les esclaves.`,
+~ Le roi → les prêtres, scribes et guerriers → les paysans et artisans (l’immense majorité) → les esclaves`,
           },
           questions: [
             ['Où apparaissent les premiers États ?', ['En Mésopotamie et en Égypte', 'En Grèce et à Rome', 'En Chine et en Inde', 'En Europe du Nord'], 0, 'Dans les vallées du Tigre, de l’Euphrate et du Nil.'],
@@ -301,28 +334,37 @@ Au sommet le roi, puis les prêtres, les scribes et les guerriers ; en bas les p
           axe: 'La longue histoire de l’humanité et des migrations',
           lecon: {
             titre: 'Cités, royaumes et empires',
-            cours: `## Le Croissant fertile
-C’est une bande de terres arquée, allant du golfe Persique à l’Égypte en passant par la Mésopotamie et le Levant. Ses sols et son eau en font le berceau de l’agriculture — et des premiers États.
+            cours: `Cité-État, royaume, empire : trois façons d’organiser le pouvoir, nées au même endroit et souvent l’une après l’autre.
+
+## Le Croissant fertile
+Une bande de terres arquée, du golfe Persique à l’Égypte en passant par la Mésopotamie et le Levant. Ses sols et son eau en font le berceau de l’agriculture — et des premiers États.
 
 ## Trois formes politiques
-- La **cité-État** : une ville et son territoire, gouvernée par un roi (Ur, Uruk, Mari). Elles rivalisent et se combattent.
-- Le **royaume** : un ensemble plus large sous un même roi.
-- L’**empire** : la domination d’un peuple sur de nombreux autres, souvent conquis. Akkad (Sargon, ≈ 2300 av. J.-C.), Babylone, puis l’**Assyrie**.
+| La forme | Ce qu’elle est | Ses exemples |
+| La **cité-État** | Une ville et son territoire, sous un roi | Ur, Uruk, Mari |
+| Le **royaume** | Un ensemble plus large sous un même roi | |
+| L’**empire** | La domination d’un peuple sur beaucoup d’autres | Akkad, Babylone, l’Assyrie |
+
+@ ≈ 2300 av. J.-C. — Sargon fonde l’empire d’Akkad
+@ ≈ 1750 av. J.-C. — Hammurabi fait graver son code à Babylone
 
 ## Le code de Hammurabi
-Vers **1750 av. J.-C.**, le roi de Babylone **Hammurabi** fait graver sur une **stèle** de pierre près de 300 articles de loi. C’est l’un des plus anciens recueils juridiques connus.
-Ce qu’il apporte :
-- la loi est **écrite**, donc la même pour des cas semblables ;
-- elle est **publique**, exposée à la vue de tous ;
-- elle prévoit des **peines** graduées — mais **différentes selon le rang social** de la victime et du coupable.
+Près de **300 articles** de loi gravés sur une **stèle** de pierre : l’un des plus anciens recueils juridiques connus.
 
-> Écrire la loi ne la rend pas égalitaire ; cela la rend **connaissable**. C’est déjà un immense progrès sur l’arbitraire.
+| Ce qu’il apporte | Pourquoi c’est nouveau |
+| La loi est **écrite** | La même pour des cas semblables |
+| La loi est **publique** | Exposée à la vue de tous |
+| Les **peines** sont graduées | Selon la gravité |
+
+!> Mais les peines diffèrent **selon le rang social** de la victime et du coupable. Écrire la loi ne la rend pas égalitaire.
+
+> Écrire la loi la rend **connaissable**. C’est déjà un immense progrès sur l’arbitraire.
 
 ## Le rôle des échanges
-Ces États commercent sur de longues distances : bois du Liban, métaux d’Anatolie, pierres précieuses. Le commerce diffuse aussi les **techniques**, les **écritures** et les **croyances**.
+Bois du Liban, métaux d’Anatolie, pierres précieuses : le commerce circule loin, et diffuse avec lui les **techniques**, les **écritures** et les **croyances**.
 
 ## La fragilité
-Aucun de ces empires ne dure : conquêtes, révoltes, sécheresses et invasions les font tomber les uns après les autres. Ce qui subsiste, ce sont les **inventions** — l’écriture, le droit, l’administration.`,
+Aucun de ces empires ne dure : conquêtes, révoltes, sécheresses, invasions. Ce qui subsiste, ce sont les **inventions** — l’écriture, le droit, l’administration.`,
           },
           questions: [
             ['Qu’est-ce qu’une cité-État ?', ['Une ville et son territoire, gouvernée par un roi', 'Un empire de plusieurs peuples', 'Un village agricole', 'Une région sans pouvoir'], 0, 'Ur, Uruk et Mari en sont des exemples.'],
@@ -340,26 +382,33 @@ Aucun de ces empires ne dure : conquêtes, révoltes, sécheresses et invasions 
           axe: 'La longue histoire de l’humanité et des migrations',
           lecon: {
             titre: 'Le geste qui ouvre l’Histoire',
-            cours: `## La date qui sépare tout
-L’**écriture** apparaît vers **3300 av. J.-C.** en Mésopotamie. Cette invention marque, par convention, la fin de la **Préhistoire** et le début de l’**Histoire** : à partir de là, les sociétés laissent des **textes**.
+            cours: `L’écriture ne sépare pas seulement deux périodes : elle sépare ce dont on garde trace de ce qui se perd.
+
+## La date qui sépare tout
+@ ≈ 3300 av. J.-C. — Invention de l’écriture en Mésopotamie : fin de la Préhistoire, début de l’Histoire
+@ ≈ 1200-1000 av. J.-C. — Les Phéniciens mettent au point l’alphabet
+@ 1822 — Champollion déchiffre les hiéroglyphes grâce à la pierre de Rosette
 
 ## Pourquoi elle est inventée
-Pas pour la littérature : pour **compter**. Les premières tablettes sont des **comptes** — sacs de grain, têtes de bétail, dettes. L’écriture naît d’un besoin d’**administration** et de mémoire économique.
+!> **Pas pour la littérature : pour compter.** Les premières tablettes sont des **comptes** — sacs de grain, têtes de bétail, dettes. L’écriture naît d’un besoin d’administration.
 
-## Le cunéiforme
-En Mésopotamie, on écrit avec un **calame** (roseau taillé) sur de l’**argile** fraîche, en imprimant des signes en forme de coins — d’où le nom **cunéiforme** (du latin *cuneus*, coin). La tablette est ensuite séchée : c’est pourquoi il en subsiste des centaines de milliers.
+## Les trois systèmes
+| Le système | Où | Sur quoi | Comment |
+| **Cunéiforme** | Mésopotamie | Argile fraîche | Un **calame** imprime des signes en forme de coins |
+| **Hiéroglyphes** | Égypte | Murs des temples, **papyrus** | Des signes de **sons** et des signes de **choses** |
+| **Alphabet** | Phénicie | | Une vingtaine de signes pour les **consonnes** |
 
-## Les hiéroglyphes
-En Égypte, on écrit des **hiéroglyphes** (« signes sacrés ») sur les murs des temples et sur le **papyrus**. Le système mêle des signes qui notent des **sons** et d’autres qui notent des **choses**.
-Ils resteront illisibles jusqu’à ce que **Champollion** les déchiffre en **1822**, grâce à la **pierre de Rosette**, qui porte le même texte en trois écritures.
+Le mot cunéiforme vient du latin *cuneus*, « coin ». Les tablettes d’argile séchée se conservent : il en subsiste des centaines de milliers.
 
 ## L’alphabet
-Vers **1200-1000 av. J.-C.**, les **Phéniciens** mettent au point un **alphabet** d’une vingtaine de signes notant uniquement des **consonnes**. Les Grecs y ajoutent les **voyelles**. C’est l’ancêtre direct de notre alphabet.
+Les Phéniciens notent les **consonnes** ; les **Grecs** y ajoutent les **voyelles**. C’est l’ancêtre direct de notre alphabet.
 
 > Passer de plusieurs centaines de signes à une vingtaine, c’est mettre l’écriture à la portée de bien plus de gens.
 
 ## Les scribes
-Écrire est un métier. Le **scribe**, longuement formé, tient les comptes, rédige les lois et les contrats. Il occupe une position sociale élevée : dans ces sociétés, savoir écrire, c’est détenir un pouvoir.`,
+Écrire est un **métier**, et une position sociale élevée. Le scribe, longuement formé, tient les comptes, rédige les lois et les contrats.
+
+> Dans ces sociétés, savoir écrire, c’est détenir un pouvoir.`,
           },
           questions: [
             ['Vers quelle date l’écriture apparaît-elle ?', ['Vers 3300 av. J.-C.', 'Vers 10 000 av. J.-C.', 'Vers 1200 av. J.-C.', 'Vers 500 apr. J.-C.'], 0, 'En Mésopotamie.'],
@@ -379,26 +428,36 @@ Vers **1200-1000 av. J.-C.**, les **Phéniciens** mettent au point un **alphabet
           axe: 'Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique au Ier millénaire avant J.-C.',
           lecon: {
             titre: 'Un monde morcelé, une culture commune',
-            cours: `## Un espace fragmenté
-La Grèce antique n’est pas un État : c’est une poussière de **cités** indépendantes, appelées **polis**. Le relief montagneux et les îles y sont pour beaucoup. Chaque cité a ses lois, sa monnaie, son armée et ses dieux protecteurs.
+            cours: `La Grèce antique n’est pas un pays : c’est une poussière de cités indépendantes, qui se font la guerre tout en se sachant grecques.
 
-## Qu’est-ce qu’une cité ?
-Une cité comprend :
-- une **ville**, souvent bâtie autour d’une **acropole** (la « ville haute », lieu des temples) et d’une **agora** (place publique, marché et lieu de débat) ;
-- un **territoire** rural qui la nourrit ;
-- une **communauté de citoyens**.
+## Un espace fragmenté
+Chaque **cité** — *polis* — a ses lois, sa monnaie, son armée et ses dieux protecteurs. Le relief montagneux et les îles y sont pour beaucoup.
+
+## Ce qu’est une cité
+| Sa partie | Ce qu’on y trouve |
+| L’**acropole** | La « ville haute » : les temples |
+| L’**agora** | La place publique : marché et lieu de débat |
+| Le **territoire** rural | Il nourrit la ville |
+| La **communauté de citoyens** | Elle fait la cité |
+
 Athènes, Sparte, Corinthe, Thèbes en sont les plus connues.
 
-## Ce qui les unit
-Malgré leurs guerres, les Grecs se reconnaissent un même monde :
-- une **langue** commune ;
-- une **religion** commune, avec les dieux de l’**Olympe** ;
-- des **récits fondateurs** partagés : l’*Iliade* et l’*Odyssée*, attribuées à **Homère** (VIIIe siècle av. J.-C.) ;
-- des **sanctuaires** panhelléniques (Delphes) et des **jeux** communs — les **Jeux olympiques**, dont la tradition situe les premiers en **776 av. J.-C.**
+## Ce qui les unit malgré tout
+| Le lien | Le détail |
+| Une **langue** commune | |
+| Une **religion** commune | Les dieux de l’**Olympe** |
+| Des **récits fondateurs** | L’*Iliade* et l’*Odyssée*, attribuées à **Homère** (VIIIe siècle av. J.-C.) |
+| Des **sanctuaires** communs | **Delphes** |
+| Des **jeux** communs | Les **Jeux olympiques** |
+
+@ 776 av. J.-C. — Date traditionnelle des premiers Jeux olympiques
+@ VIIIe-VIe siècle av. J.-C. — Les cités fondent des colonies dans toute la Méditerranée
+@ ≈ 600 av. J.-C. — Fondation de Massalia, l’actuelle Marseille
+
 Ils s’appellent **Hellènes** et nomment **Barbares** ceux qui ne parlent pas leur langue.
 
 ## Les colonies
-Entre le VIIIe et le VIe siècle av. J.-C., manquant de terres, les cités fondent des **colonies** sur tout le pourtour méditerranéen — jusqu’à **Massalia** (Marseille), vers 600 av. J.-C. La cité mère et sa colonie gardent des liens religieux et commerciaux.
+Manquant de terres, les cités fondent des **colonies** sur tout le pourtour méditerranéen. La cité mère et sa colonie gardent des liens religieux et commerciaux.
 
 > Les Grecs se sont installés « comme des grenouilles autour d’une mare », écrivait Platon de cette Méditerranée.
 
@@ -421,29 +480,49 @@ Le mot **politique** vient de *polis*. Notre vocabulaire, notre théâtre, notre
           axe: 'Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique au Ier millénaire avant J.-C.',
           lecon: {
             titre: 'Des dieux à l’image des hommes',
-            cours: `## Une religion polythéiste
-Les Grecs honorent de **nombreux dieux**. Les douze principaux siègent sur le mont **Olympe** :
-**Zeus** (roi des dieux, le ciel), **Héra** (mariage), **Poséidon** (mer), **Athéna** (sagesse, guerre juste), **Apollon** (arts, lumière), **Artémis** (chasse), **Arès** (guerre), **Aphrodite** (amour), **Héphaïstos** (forge), **Hermès** (messager), **Déméter** (agriculture), **Hestia** ou **Dionysos** (vigne, théâtre).
+            cours: `Les dieux grecs ont une forme humaine, des sentiments humains, et des défauts humains. Ce qui les sépare des mortels, ce n’est pas la vertu.
+
+## Une religion polythéiste
+Les douze principaux siègent sur le mont **Olympe**.
+
+| Le dieu | Son domaine |
+| **Zeus** | Roi des dieux, le ciel |
+| **Héra** | Le mariage |
+| **Poséidon** | La mer |
+| **Athéna** | La sagesse, la guerre juste |
+| **Apollon** | Les arts, la lumière |
+| **Artémis** | La chasse |
+| **Arès** | La guerre |
+| **Aphrodite** | L’amour |
+| **Héphaïstos** | La forge |
+| **Hermès** | Le messager |
+| **Déméter** | L’agriculture |
+| **Dionysos** | La vigne, le théâtre |
 
 ## Des dieux très humains
-Ils sont **anthropomorphes** : forme humaine, sentiments humains — jalousie, colère, amour, vengeance. Ils diffèrent des mortels par l’**immortalité** et la **puissance**, non par la vertu.
+Ils sont **anthropomorphes** : forme humaine, sentiments humains — jalousie, colère, amour, vengeance.
+
+!> Ils diffèrent des mortels par l’**immortalité** et la **puissance**, **non par la vertu**. Un dieu grec peut être injuste.
 
 ## Les héros
-Entre dieux et hommes, les **héros** — Héraclès, Thésée, Achille, Ulysse — accomplissent des exploits. Souvent nés d’un dieu et d’une mortelle, ils servent de modèles et fondent des cités.
+Entre dieux et hommes : **Héraclès**, **Thésée**, **Achille**, **Ulysse**. Souvent nés d’un dieu et d’une mortelle, ils accomplissent des exploits, servent de modèles et fondent des cités.
 
 ## Les pratiques
-- Le **sacrifice** d’animaux sur un autel, dont la viande est ensuite partagée.
-- Les **offrandes** et les **libations**.
-- Les **processions** et les **fêtes** civiques : à Athènes, les **Panathénées** en l’honneur d’Athéna.
-- Les **oracles** : à **Delphes**, la Pythie rend les réponses d’Apollon, consultées avant toute grande décision.
+| La pratique | Ce qu’elle est |
+| Le **sacrifice** | Un animal sur un autel, dont la viande est ensuite partagée |
+| Les **offrandes** et **libations** | |
+| Les **fêtes civiques** | À Athènes, les **Panathénées** pour Athéna |
+| Les **oracles** | À **Delphes**, la Pythie rend les réponses d’Apollon |
 
 ## Le temple
-Le **temple** n’est pas un lieu de rassemblement des fidèles : c’est la **maison du dieu**, qui abrite sa statue. Les cérémonies se déroulent **dehors**, devant l’autel. Le **Parthénon**, sur l’acropole d’Athènes, en est le modèle.
+!> Le temple **n’est pas** un lieu de rassemblement des fidèles : c’est la **maison du dieu**, qui abrite sa statue. Les cérémonies se déroulent **dehors**, devant l’autel.
 
-> Religion et cité ne se séparent pas : honorer les dieux, c’est un devoir civique autant qu’un acte de foi.
+Le **Parthénon**, sur l’acropole d’Athènes, en est le modèle.
+
+> Religion et cité ne se séparent pas : honorer les dieux est un devoir civique autant qu’un acte de foi.
 
 ## Les jeux et le théâtre
-Les **Jeux olympiques** sont une fête religieuse en l’honneur de Zeus, avec une **trêve sacrée**. Le **théâtre**, né des fêtes de **Dionysos**, est également un acte religieux et civique.`,
+Les **Jeux olympiques** sont une fête religieuse en l’honneur de Zeus, avec une **trêve sacrée**. Le **théâtre**, né des fêtes de **Dionysos**, est lui aussi un acte religieux et civique.`,
           },
           questions: [
             ['Où siègent les principaux dieux grecs ?', ['Sur le mont Olympe', 'À Delphes', 'Sur l’Acropole', 'Aux Enfers'], 0, 'Ils sont douze.'],
@@ -461,30 +540,43 @@ Les **Jeux olympiques** sont une fête religieuse en l’honneur de Zeus, avec u
           axe: 'Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique au Ier millénaire avant J.-C.',
           lecon: {
             titre: 'Le pouvoir au peuple — mais lequel ?',
-            cours: `## Le mot
-**Démocratie** vient du grec *dêmos* (le peuple) et *kratos* (le pouvoir) : le **pouvoir du peuple**. Athènes en est le premier exemple connu.
+            cours: `Athènes invente la démocratie. Elle invente en même temps le moyen de s’en protéger — et elle en exclut les trois quarts de ses habitants.
 
-## Les étapes
-- **Solon** (vers 594 av. J.-C.) supprime l’**esclavage pour dettes** et classe les citoyens selon leur richesse.
-- **Clisthène** (**508 av. J.-C.**) réorganise la cité en dèmes et donne aux citoyens l’égalité devant la loi : c’est l’**acte de naissance** de la démocratie.
-- **Périclès** (Ve siècle av. J.-C.) porte le régime à son apogée et instaure une **indemnité** (le *misthos*) pour que les plus pauvres puissent siéger.
+## Le mot
+= Démocratie = dêmos (le peuple) + kratos (le pouvoir)
+
+## Les trois étapes
+@ ≈ 594 av. J.-C. — Solon supprime l’esclavage pour dettes
+@ 508 av. J.-C. — Clisthène réorganise la cité : l’acte de naissance de la démocratie
+@ Ve siècle av. J.-C. — Périclès porte le régime à son apogée et crée le misthos
+
+Le **misthos** est une indemnité qui permet aux plus pauvres de siéger.
 
 ## Les institutions
-- L’**Ecclésia** : l’assemblée de **tous** les citoyens, réunie environ 40 fois par an sur la colline de la **Pnyx**. Elle vote les lois, la guerre, la paix.
-- La **Boulè** : conseil de **500** citoyens **tirés au sort**, qui prépare les débats.
-- L’**Héliée** : le tribunal populaire, 6 000 jurés tirés au sort.
-- Les **stratèges** : dix magistrats **élus**, chargés de l’armée. Périclès le fut quinze fois.
+| L’institution | Ce qu’elle est | Son rôle |
+| L’**Ecclésia** | L’assemblée de **tous** les citoyens, ≈ 40 fois par an sur la **Pnyx** | Voter les lois, la guerre, la paix |
+| La **Boulè** | **500** citoyens **tirés au sort** | Préparer les débats |
+| L’**Héliée** | **6 000** jurés tirés au sort | Le tribunal populaire |
+| Les **stratèges** | **10** magistrats **élus** | Commander l’armée |
 
-## Le tirage au sort
-La plupart des charges sont **tirées au sort**, et non élues : pour les Grecs, l’élection favorise les riches et les notables, tandis que le tirage au sort réalise l’**égalité** entre citoyens. Seuls les postes exigeant une compétence technique, comme les stratèges, sont élus.
+Périclès fut stratège quinze fois.
+
+## Pourquoi le tirage au sort
+!> Pour les Grecs, l’**élection favorise les riches** et les notables ; le **tirage au sort** réalise l’égalité entre citoyens. Seuls les postes exigeant une compétence technique — les stratèges — sont élus.
 
 ## L’ostracisme
-L’assemblée peut **bannir** dix ans un citoyen jugé dangereux pour la cité, en écrivant son nom sur un tesson de poterie (*ostrakon*).
+L’assemblée peut **bannir dix ans** un citoyen jugé dangereux, en écrivant son nom sur un tesson de poterie, l’*ostrakon*.
 
 > Athènes invente la démocratie ; elle invente en même temps le moyen de s’en protéger.
 
 ## Une démocratie très étroite
-Sur environ **300 000** habitants, seuls **40 000** sont citoyens : les **femmes**, les **métèques** (étrangers libres) et les **esclaves** — la moitié de la population — en sont exclus. C’est une démocratie **directe** mais **réservée**.`,
+| Sur ≈ 300 000 habitants | |
+| **Citoyens** | ≈ **40 000** |
+| **Femmes** | Exclues |
+| **Métèques** (étrangers libres) | Exclus |
+| **Esclaves** | Environ la moitié de la population, exclus |
+
+C’est une démocratie **directe** mais **réservée**.`,
           },
           questions: [
             ['Que signifie le mot « démocratie » ?', ['Le pouvoir du peuple', 'Le pouvoir des riches', 'Le pouvoir d’un seul', 'Le pouvoir des prêtres'], 0, 'De dêmos, le peuple, et kratos, le pouvoir.'],
@@ -502,27 +594,40 @@ Sur environ **300 000** habitants, seuls **40 000** sont citoyens : les **femmes
           axe: 'Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique au Ier millénaire avant J.-C.',
           lecon: {
             titre: 'Qui est citoyen, qui ne l’est pas',
-            cours: `## Les quatre groupes
-- **Les citoyens** : hommes, de plus de 18 ans, nés de **père citoyen** et, depuis Périclès (451 av. J.-C.), de **mère fille de citoyen**. Environ 40 000.
-- **Les femmes** : libres, mais sans droits politiques. Elles ne votent pas, ne possèdent pas de terres en propre et vivent sous l’autorité d’un tuteur — père, puis mari.
-- **Les métèques** : étrangers libres installés à Athènes, souvent commerçants ou artisans. Ils paient un impôt spécifique, servent dans l’armée, mais ne sont **jamais** citoyens.
-- **Les esclaves** : environ **la moitié** de la population. Prisonniers de guerre, enfants d’esclaves ou achetés, ils sont juridiquement des **biens**. Ils travaillent aux champs, dans les maisons, dans les ateliers, et dans les terribles mines d’argent du **Laurion**.
+            cours: `À Athènes, être citoyen n’est pas d’abord avoir des droits. C’est appartenir, et devoir.
+
+## Les quatre groupes
+| Le groupe | Qui | Sa situation |
+| Les **citoyens** | Hommes de plus de 18 ans, nés de père citoyen | ≈ 40 000. Ils votent |
+| Les **femmes** | Libres | Aucun droit politique, sous l’autorité d’un tuteur |
+| Les **métèques** | Étrangers libres, souvent commerçants ou artisans | Ils paient un impôt, servent à l’armée, **jamais** citoyens |
+| Les **esclaves** | Prisonniers de guerre, enfants d’esclaves, achetés | Environ **la moitié** de la population. Juridiquement des **biens** |
+
+@ 451 av. J.-C. — Périclès exige en plus une mère fille de citoyen
+
+!> Les esclaves travaillent aux champs, dans les maisons, dans les ateliers — et dans les terribles **mines d’argent du Laurion**, dont on ne revenait guère.
 
 ## Devenir citoyen
-Le jeune homme est inscrit dans son dème à 18 ans, puis accomplit l’**éphébie** : deux ans de service militaire au terme desquels il prête serment de défendre la cité.
+~ Inscrit dans son dème à 18 ans → Éphébie : deux ans de service militaire → Serment de défendre la cité
 
 ## Droits et devoirs
-- **Droits** : voter à l’Ecclésia, être tiré au sort, posséder la terre, être jugé par ses pairs.
-- **Devoirs** : servir dans l’**armée** (hoplite ou rameur), payer l’**impôt** pour les plus riches, participer aux **cultes** de la cité.
-La liturgie oblige les plus fortunés à financer une trière ou un chœur de théâtre.
+| Ses droits | Ses devoirs |
+| Voter à l’**Ecclésia** | Servir dans l’**armée** : hoplite ou rameur |
+| Être **tiré au sort** | Payer l’**impôt**, pour les plus riches |
+| **Posséder** la terre | Participer aux **cultes** de la cité |
+| Être **jugé par ses pairs** | La **liturgie** : financer une trière ou un chœur |
 
 > Être citoyen, à Athènes, ce n’est pas d’abord avoir des droits : c’est appartenir et devoir.
 
 ## Les Panathénées
-Cette grande fête annuelle en l’honneur d’Athéna rassemble la cité en une **procession** qui monte à l’acropole. Chaque groupe y a sa place — y compris les métèques : la fête met en scène l’ordre social lui-même.
+Cette grande fête annuelle en l’honneur d’Athéna rassemble la cité en une **procession** qui monte à l’acropole. Chaque groupe y a sa place — métèques compris.
+
+> La fête ne rassemble pas les Athéniens : elle met en scène l’**ordre social** lui-même.
 
 ## Comparer avec aujourd’hui
-La démocratie athénienne est **directe** (on vote soi-même les lois) et **restreinte**. La nôtre est **représentative** (on élit des représentants) et **universelle**. Comparer les deux, c’est mesurer ce qui a été conquis.`,
+| La démocratie athénienne | La nôtre |
+| **Directe** : on vote soi-même les lois | **Représentative** : on élit des représentants |
+| **Restreinte** : un habitant sur sept | **Universelle** |`,
           },
           questions: [
             ['Qui peut être citoyen à Athènes après 451 av. J.-C. ?', ['Un homme de plus de 18 ans né de père citoyen et de mère fille de citoyen', 'Tout homme libre', 'Tout habitant de la cité', 'Tout homme payant l’impôt'], 0, 'C’est la loi de Périclès.'],
@@ -540,27 +645,38 @@ La démocratie athénienne est **directe** (on vote soi-même les lois) et **res
           axe: 'Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique au Ier millénaire avant J.-C.',
           lecon: {
             titre: 'Ce que Rome raconte d’elle-même',
-            cours: `## Le récit fondateur
-Selon la légende, **Romulus** fonde Rome le **21 avril 753 av. J.-C.** Romulus et son frère jumeau **Rémus**, fils du dieu **Mars**, ont été abandonnés sur le Tibre puis allaités par une **louve**. Devenus adultes, ils décident de fonder une ville ; ils se disputent, et Romulus tue Rémus.
+            cours: `Rome se raconte une naissance de dieu et de louve. Le récit ne dit pas ce qui s’est passé : il dit ce que Rome veut être.
+
+## Le récit fondateur
+@ 21 avril 753 av. J.-C. — Date légendaire de la fondation de Rome par Romulus
+
+Romulus et son frère jumeau **Rémus**, fils du dieu **Mars**, abandonnés sur le Tibre puis allaités par une **louve**. Devenus adultes, ils fondent une ville ; ils se disputent, et Romulus tue Rémus.
 
 ## Le lien avec Troie
-**Virgile**, dans l’**Énéide** (Ier siècle av. J.-C.), fait descendre les Romains d’**Énée**, prince troyen ayant fui sa ville en flammes. Rome se rattache ainsi au prestigieux monde grec — et se donne une origine aussi ancienne.
+**Virgile**, dans l’**Énéide** (Ier siècle av. J.-C.), fait descendre les Romains d’**Énée**, prince troyen ayant fui sa ville en flammes.
 
-## Pourquoi ces récits comptent
-Ces mythes ne racontent pas ce qui s’est passé : ils disent ce que Rome **veut être**. Une ville née d’un dieu, protégée par les auspices, destinée à dominer. Ils sont écrits **sept siècles après** les faits supposés, à une époque où Rome domine la Méditerranée et cherche à justifier cette domination.
+!> Ces récits sont écrits **sept siècles après** les faits supposés, à une époque où Rome domine la Méditerranée et cherche à justifier cette domination.
 
 > Un récit fondateur n’est pas un mensonge : c’est un portrait que le présent fait de son passé.
 
 ## Ce que dit l’archéologie
-Les fouilles du **Palatin** montrent des cabanes de bergers dès le **VIIIe siècle av. J.-C.** : la date légendaire n’est pas absurde. Mais Rome n’est alors qu’un village, non une ville fondée d’un coup. La ville se forme **progressivement**, par regroupement de villages sur les collines, et subit l’influence des **Étrusques**, dont elle emprunte les techniques et les insignes du pouvoir.
+Les fouilles du **Palatin** montrent des cabanes de bergers dès le **VIIIe siècle av. J.-C.** : la date légendaire n’est pas absurde.
+
+~ Des villages sur les collines → un regroupement progressif → une ville
+
+Rome n’est alors qu’un village. Elle subit l’influence des **Étrusques**, dont elle emprunte les techniques et les insignes du pouvoir.
 
 ## Les trois périodes
-- La **Royauté** (753-509 av. J.-C.) : sept rois selon la tradition ;
-- la **République** (509-27 av. J.-C.) ;
-- l’**Empire** (27 av. J.-C. - 476 apr. J.-C. en Occident).
+@ 753-509 av. J.-C. — La Royauté : sept rois selon la tradition
+@ 509-27 av. J.-C. — La République
+@ 27 av. J.-C. - 476 apr. J.-C. — L’Empire, en Occident
 
 ## Confronter les sources
-L’historien croise **textes** (Tite-Live, Virgile) et **traces matérielles**. Les premiers disent les croyances d’une époque ; les secondes disent ce qui a été. Les deux sont des sources — mais elles ne répondent pas à la même question.`,
+| La source | Ce qu’elle dit |
+| Les **textes** (Tite-Live, Virgile) | Les croyances d’une époque |
+| Les **traces matérielles** | Ce qui a été |
+
+> Les deux sont des sources — mais elles ne répondent pas à la même question.`,
           },
           questions: [
             ['Quelle date la légende donne-t-elle à la fondation de Rome ?', ['753 av. J.-C.', '509 av. J.-C.', '27 av. J.-C.', '476 apr. J.-C.'], 0, 'Romulus en serait le fondateur.'],
@@ -578,28 +694,37 @@ L’historien croise **textes** (Tite-Live, Virgile) et **traces matérielles**.
           axe: 'Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique au Ier millénaire avant J.-C.',
           lecon: {
             titre: 'Ce que les fouilles nous apprennent',
-            cours: `## Le travail de l’archéologue
-L’**archéologie** étudie les **traces matérielles** laissées par les sociétés : murs, tombes, poteries, ossements, outils. Elle procède par **fouilles** méthodiques, en relevant précisément la position de chaque objet — car c’est le **contexte** qui donne le sens, bien plus que l’objet lui-même.
+            cours: `L’archéologue ne demande pas si la légende est vraie. Il demande ce qui reste dans le sol.
+
+## Le travail de l’archéologue
+L’**archéologie** étudie les **traces matérielles** : murs, tombes, poteries, ossements, outils. Elle procède par **fouilles** méthodiques, en relevant la position exacte de chaque objet.
+
+!> C’est le **contexte** qui donne le sens, bien plus que l’objet. Un objet trouvé hors de sa couche perd presque tout intérêt scientifique — d’où l’extrême lenteur des fouilles.
 
 ## La stratigraphie
-Le sol s’accumule en **couches** successives : les plus profondes sont les plus **anciennes**. Lire ces couches, c’est lire une chronologie. Un objet trouvé hors de sa couche perd presque tout intérêt scientifique — d’où l’extrême lenteur des fouilles.
+~ Les couches profondes = les plus anciennes → les couches superficielles = les plus récentes
+
+Lire ces couches, c’est lire une chronologie.
 
 ## Les méthodes de datation
-- **Relative** : par la stratigraphie, ou par comparaison des styles de poterie ;
-- **Absolue** : par le **carbone 14** (matières organiques), la **dendrochronologie** (cernes des arbres) ou l’étude des monnaies.
+| Le type | Comment |
+| **Relative** | Par la stratigraphie, ou la comparaison des styles de poterie |
+| **Absolue** | Le **carbone 14**, la **dendrochronologie** (cernes des arbres), les monnaies |
 
 ## Ce que l’on a trouvé à Rome
-- Sur le **Palatin** : des trous de poteaux dessinant des **cabanes** du VIIIe siècle av. J.-C. ;
-- au **Forum** : une nécropole, puis un dallage marquant le passage du marécage à un espace public ;
-- des importations grecques et étrusques, preuves d’**échanges** précoces.
+| Le lieu | La trouvaille |
+| Le **Palatin** | Des trous de poteaux dessinant des **cabanes** du VIIIe siècle av. J.-C. |
+| Le **Forum** | Une nécropole, puis un dallage : le marécage devient un espace public |
+| Partout | Des importations grecques et étrusques : des **échanges** précoces |
 
 ## Ce que cela change au récit
-L’archéologie ne confirme ni n’infirme Romulus : elle **déplace la question**. Rome n’est pas née d’un acte fondateur unique, mais d’un **processus** — des villages sur des collines qui se regroupent et deviennent une ville au fil du VIIe siècle.
+L’archéologie ne confirme ni n’infirme Romulus : elle **déplace la question**. Rome n’est pas née d’un acte fondateur unique, mais d’un **processus**, au fil du VIIe siècle.
 
 > L’archéologue ne demande pas « la légende est-elle vraie ? » mais « que reste-t-il dans le sol, et qu’est-ce que cela permet d’affirmer ? »
 
 ## Croiser les sources
-Textes et fouilles se **complètent** : les textes donnent des noms, des intentions, des récits ; les fouilles donnent des dates, des objets, des réalités matérielles. L’histoire se construit en confrontant les deux.`,
+| Les textes donnent | Les fouilles donnent |
+| Des **noms**, des **intentions**, des **récits** | Des **dates**, des **objets**, des réalités matérielles |`,
           },
           questions: [
             ['Qu’étudie l’archéologie ?', ['Les traces matérielles laissées par les sociétés', 'Uniquement les textes anciens', 'Les langues anciennes', 'Les traditions orales'], 0, 'Murs, tombes, poteries, ossements, outils.'],
@@ -617,26 +742,37 @@ Textes et fouilles se **complètent** : les textes donnent des noms, des intenti
           axe: 'Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique au Ier millénaire avant J.-C.',
           lecon: {
             titre: 'SPQR : le sénat et le peuple romain',
-            cours: `## La naissance de la République
-En **509 av. J.-C.**, les Romains chassent leur dernier roi et fondent la **République** (*res publica*, « la chose publique »). Le pouvoir n’appartient plus à un homme mais à la communauté des citoyens.
-La devise **SPQR** — *Senatus PopulusQue Romanus* — signifie « le Sénat et le peuple romain ».
+            cours: `La République romaine remplace un roi par des magistrats élus pour un an. Elle n’en devient pas égalitaire pour autant.
+
+## La naissance de la République
+@ 509 av. J.-C. — Les Romains chassent leur dernier roi et fondent la République
+@ 44 av. J.-C. — Assassinat de César
+@ 27 av. J.-C. — Auguste installe l’Empire
+
+= SPQR = Senatus PopulusQue Romanus, « le Sénat et le peuple romain »
+
+*Res publica* signifie « la chose publique » : le pouvoir n’appartient plus à un homme, mais à la communauté des citoyens.
 
 ## Les institutions
-- Les **comices** : assemblées où les citoyens élisent les magistrats et votent les lois. Mais le vote se fait par **groupes**, pondérés selon la richesse : les plus riches votent en premier et pèsent bien davantage.
-- Les **magistrats**, élus pour **un an** et par **deux** au moins : deux **consuls** (chefs de l’État et de l’armée), des préteurs (justice), des questeurs (finances), des censeurs. La brièveté et la collégialité empêchent la confiscation du pouvoir.
-- Le **Sénat** : environ 300 anciens magistrats, nommés à vie. Officiellement consultatif, il dirige en fait la politique étrangère et les finances.
+| L’institution | Ce qu’elle est | Sa faiblesse ou sa force |
+| Les **comices** | Assemblées qui élisent et votent les lois | Le vote se fait par **groupes pondérés selon la richesse** |
+| Les **magistrats** | Élus pour **un an**, par **deux** au moins : consuls, préteurs, questeurs, censeurs | Brièveté et collégialité empêchent la confiscation du pouvoir |
+| Le **Sénat** | ≈ 300 anciens magistrats, nommés **à vie** | Officiellement consultatif, il dirige en fait |
+
+Les deux **consuls** sont chefs de l’État et de l’armée.
 
 ## Patriciens et plébéiens
-- Les **patriciens** : les grandes familles, longtemps seules à accéder aux magistratures.
-- Les **plébéiens** : le reste des citoyens. Par des révoltes successives, ils obtiennent des **tribuns de la plèbe**, qui peuvent opposer leur **veto**, puis l’accès aux magistratures.
+| Le groupe | Qui | Ce qu’il obtient |
+| Les **patriciens** | Les grandes familles | Longtemps seuls aux magistratures |
+| Les **plébéiens** | Le reste des citoyens | Des **tribuns de la plèbe**, avec droit de **veto**, puis l’accès aux magistratures |
 
 > « Veto » signifie « je m’oppose ». Le mot est resté ; le rapport de force qui l’a imposé aussi.
 
 ## Une république très inégalitaire
-Comme à Athènes, femmes, esclaves et étrangers sont exclus. Et parmi les citoyens, le système de vote favorise ouvertement les riches. La République romaine est **oligarchique** : le pouvoir réel appartient à quelques familles.
+!> Femmes, esclaves et étrangers sont exclus — comme à Athènes. Et **parmi les citoyens**, le système de vote favorise ouvertement les riches : la République romaine est **oligarchique**.
 
 ## La fin
-Les conquêtes enrichissent une minorité, la crise sociale s’aggrave, les généraux s’appuient sur leurs armées. Après la guerre civile et l’assassinat de **César** (44 av. J.-C.), **Auguste** installe l’**Empire** en **27 av. J.-C.**`,
+~ Les conquêtes enrichissent une minorité → la crise sociale s’aggrave → les généraux s’appuient sur leurs armées → guerre civile → l’Empire`,
           },
           questions: [
             ['En quelle année la République romaine est-elle fondée ?', ['509 av. J.-C.', '753 av. J.-C.', '27 av. J.-C.', '44 av. J.-C.'], 0, 'Les Romains chassent leur dernier roi.'],
@@ -654,32 +790,38 @@ Les conquêtes enrichissent une minorité, la crise sociale s’aggrave, les gé
           axe: 'Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique au Ier millénaire avant J.-C.',
           lecon: {
             titre: 'Un livre écrit sur des siècles',
-            cours: `## Ce qu’est la Bible hébraïque
-La **Bible hébraïque** (que les chrétiens appellent **Ancien Testament**) n’est pas un livre mais une **bibliothèque** : une collection de textes — récits, lois, poèmes, prophéties — rédigés et rassemblés entre le **VIIIe et le IIe siècle av. J.-C.**
+            cours: `La Bible hébraïque n’est pas un livre : c’est une bibliothèque, écrite et rassemblée sur six siècles.
+
+## Ce qu’elle est
+Une collection de textes — récits, lois, poèmes, prophéties — rédigés entre le **VIIIe et le IIe siècle av. J.-C.** Les chrétiens l’appellent **Ancien Testament**.
 
 ## Sa composition
-- La **Torah** (les cinq premiers livres, ou Pentateuque) : la Loi, de la création à la mort de Moïse ;
-- les **Prophètes** ;
-- les **Écrits** (Psaumes, Proverbes, Job…).
+| La partie | Son contenu |
+| La **Torah** | Les cinq premiers livres, ou Pentateuque : la Loi, de la Création à la mort de Moïse |
+| Les **Prophètes** | |
+| Les **Écrits** | Psaumes, Proverbes, Job… |
 
 ## Les grands récits
-- La **Création** et le **Déluge** ;
-- **Abraham**, à qui Dieu promet une terre et une descendance : c’est l’**Alliance** ;
-- **Moïse**, qui fait sortir les Hébreux d’Égypte — l’**Exode** — et reçoit les **Dix Commandements** au Sinaï ;
-- **David** et **Salomon**, rois de Jérusalem ; Salomon bâtit le **Temple**.
+~ La Création et le Déluge → Abraham et l’Alliance → Moïse et l’Exode → David et Salomon
+
+| Le personnage | Ce qu’il fait |
+| **Abraham** | Dieu lui promet une terre et une descendance : c’est l’**Alliance** |
+| **Moïse** | Il fait sortir les Hébreux d’Égypte — l’**Exode** — et reçoit les **Dix Commandements** au Sinaï |
+| **David** et **Salomon** | Rois de Jérusalem ; Salomon bâtit le **Temple** |
 
 ## Texte religieux et source historique
-Ces récits sont des textes de **foi**, non des reportages. L’archéologie confirme certains éléments (l’existence du royaume de Juda, les destructions de Jérusalem) et n’en atteste pas d’autres (l’Exode tel qu’il est raconté).
-L’historien traite donc la Bible comme une **source** : elle renseigne avec certitude sur les **croyances** et l’**organisation** de ceux qui l’ont écrite.
+!> Ces récits sont des textes de **foi**, non des reportages. L’archéologie confirme certains éléments — l’existence du royaume de Juda, les destructions de Jérusalem — et n’en atteste pas d’autres, comme l’Exode tel qu’il est raconté.
 
-> Un texte sacré est toujours une source historique — mais sur ceux qui l’écrivent, pas nécessairement sur ce qu’il raconte.
+> Un texte sacré est toujours une source historique — mais sur **ceux qui l’écrivent**, pas nécessairement sur ce qu’il raconte.
 
-## Les événements marquants
-- **587 av. J.-C.** : le roi babylonien **Nabuchodonosor** prend Jérusalem, détruit le Temple et déporte une partie de la population : c’est l’**exil à Babylone**. C’est en exil que beaucoup de textes sont mis par écrit.
-- **515 av. J.-C.** : retour et reconstruction du Temple.
+## Deux dates
+@ 587 av. J.-C. — Nabuchodonosor prend Jérusalem, détruit le Temple et déporte : c’est l’exil à Babylone
+@ 515 av. J.-C. — Retour et reconstruction du Temple
+
+C’est **en exil** que beaucoup de textes sont mis par écrit.
 
 ## L’héritage
-Le judaïsme est le premier **monothéisme** durable. Le christianisme et l’islam s’y rattachent : les trois religions partagent Abraham, d’où l’expression « religions abrahamiques ».`,
+Le judaïsme est le premier **monothéisme** durable. Christianisme et islam s’y rattachent : les trois partagent Abraham, d’où l’expression « religions abrahamiques ».`,
           },
           questions: [
             ['Qu’est-ce que la Bible hébraïque ?', ['Une collection de textes écrits sur plusieurs siècles', 'Un livre unique écrit d’un seul jet', 'Un recueil de lois romaines', 'Un roman grec'], 0, 'Récits, lois, poèmes et prophéties.'],
@@ -697,31 +839,41 @@ Le judaïsme est le premier **monothéisme** durable. Le christianisme et l’is
           axe: 'Récits fondateurs, croyances et citoyenneté dans la Méditerranée antique au Ier millénaire avant J.-C.',
           lecon: {
             titre: 'Croire en un seul Dieu',
-            cours: `## Le monothéisme
-Le **judaïsme** est la religion des **Hébreux**, puis des **Juifs**. Sa singularité dans le monde antique est totale : au milieu de peuples polythéistes, il affirme l’existence d’un **Dieu unique**, sans corps ni image. La **représentation** de Dieu est interdite.
+            cours: `Au milieu de peuples qui honorent des dizaines de dieux, les Hébreux n’en reconnaissent qu’un — et lui interdisent toute image.
+
+## Le monothéisme
+Un **Dieu unique**, sans corps ni image. La **représentation** de Dieu est interdite. Dans le monde antique, cette position est absolument singulière.
 
 ## Le peuple et son histoire
-Les Hébreux forment de petits royaumes au Levant : **Israël** au nord, **Juda** au sud, avec **Jérusalem** pour capitale. Le mot « juif » vient de « Juda ».
-Écrasés par des empires bien plus puissants — assyrien, babylonien, perse, puis romain — ils conservent leur identité par leur **religion** et leur **Livre** plutôt que par un État.
+| Le royaume | Où |
+| **Israël** | Au nord |
+| **Juda** | Au sud, capitale **Jérusalem** |
+
+Le mot « juif » vient de « Juda ». Écrasés par des empires bien plus puissants — assyrien, babylonien, perse, puis romain — ils conservent leur identité par leur **religion** et leur **Livre**, plutôt que par un État.
 
 ## Les pratiques
-- Le **shabbat** : le repos du septième jour ;
-- la **circoncision**, signe de l’Alliance ;
-- les **interdits alimentaires** (la *cacherout*) ;
-- les **fêtes** : Pessah (la sortie d’Égypte), Yom Kippour (le Grand Pardon), Hanoucca ;
-- la **synagogue**, lieu de prière et d’étude, dirigé par un **rabbin**.
+| La pratique | Ce qu’elle est |
+| Le **shabbat** | Le repos du septième jour |
+| La **circoncision** | Le signe de l’Alliance |
+| La ***cacherout*** | Les interdits alimentaires |
+| Les **fêtes** | Pessah (la sortie d’Égypte), Yom Kippour (le Grand Pardon), Hanoucca |
+| La **synagogue** | Lieu de prière et d’étude, dirigé par un **rabbin** |
 
-## Le rôle du Temple, puis son absence
-Le **Temple de Jérusalem** est le centre du culte. Détruit une première fois en 587 av. J.-C., reconstruit, il est **détruit définitivement par les Romains en 70 apr. J.-C.** Il n’en subsiste que le **Mur occidental**.
-Privé de Temple, le judaïsme se réorganise autour de l’**étude des textes** et de la **synagogue** — ce qui lui permet de survivre partout, sans territoire.
+## Le Temple, puis son absence
+@ 587 av. J.-C. — Première destruction du Temple de Jérusalem
+@ 70 apr. J.-C. — Les Romains le détruisent définitivement
+
+Il n’en subsiste que le **Mur occidental**.
+
+~ Privé de Temple → le judaïsme se réorganise autour de l’étude des textes et de la synagogue → il survit partout, sans territoire
 
 > Une religion qui tient dans un livre peut voyager. C’est ce qui a permis au judaïsme de traverser vingt siècles de dispersion.
 
 ## La diaspora
-La **diaspora** est la dispersion des Juifs hors de Judée, autour du bassin méditerranéen puis dans le monde entier. Des communautés vivent à Alexandrie, à Rome, plus tard dans toute l’Europe.
+La **diaspora** est la dispersion des Juifs hors de Judée : Alexandrie, Rome, puis toute l’Europe et le monde entier.
 
 ## L’héritage
-Le judaïsme transmet au monde le monothéisme, une **loi morale** commune (les Dix Commandements) et un rapport à l’écrit qui fait de l’étude un acte religieux.`,
+Le monothéisme, une **loi morale** commune — les Dix Commandements — et un rapport à l’écrit qui fait de l’étude un acte religieux.`,
           },
           questions: [
             ['Qu’est-ce qui distingue le judaïsme dans le monde antique ?', ['La croyance en un Dieu unique, sans image', 'Le culte de nombreux dieux', 'L’absence de textes sacrés', 'Le refus de tout rite'], 0, 'La représentation de Dieu y est interdite.'],
@@ -741,26 +893,40 @@ Le judaïsme transmet au monde le monothéisme, une **loi morale** commune (les 
           axe: 'L’Empire romain dans le monde antique',
           lecon: {
             titre: 'Gouverner un monde',
-            cours: `## De la cité à l’Empire
-En quelques siècles, Rome passe d’une petite cité du Latium à la maîtrise de tout le pourtour **méditerranéen** — qu’elle nomme *Mare Nostrum*, « notre mer ». Les guerres puniques contre **Carthage** (264-146 av. J.-C.), la conquête de la **Grèce**, puis celle de la **Gaule** par **César** (58-51 av. J.-C., victoire d’**Alésia** sur **Vercingétorix** en 52) en sont les étapes majeures.
+            cours: `Rome passe d’une cité du Latium à la maîtrise de toute la Méditerranée, qu’elle finit par appeler « notre mer ».
 
-## Le passage à l’Empire
-Après la guerre civile et l’assassinat de César, son fils adoptif **Octave** devient **Auguste** en **27 av. J.-C.** : c’est le premier **empereur**. L’Empire atteint son extension maximale sous **Trajan** (117 apr. J.-C.), de la Bretagne à la Mésopotamie.
+## Les étapes de la conquête
+@ 264-146 av. J.-C. — Les guerres puniques contre Carthage
+@ 58-51 av. J.-C. — César conquiert la Gaule ; Alésia et la reddition de Vercingétorix en 52
+@ 27 av. J.-C. — Octave devient Auguste : le premier empereur
+@ 117 apr. J.-C. — Sous Trajan, l’Empire atteint son extension maximale, de la Bretagne à la Mésopotamie
+
+Rome nomme la Méditerranée *Mare Nostrum*, « notre mer ».
 
 ## Le pouvoir de l’empereur
-Il concentre tout : chef de l’**armée** (*imperator*), chef de la **religion** (*pontifex maximus*), maître de l’**administration** et de la **justice**. Les institutions républicaines subsistent, mais vidées de leur pouvoir réel.
-Le **culte impérial** — rendre un culte à l’empereur et à Rome — devient un ciment politique dans tout l’Empire.
+| Son titre | Ce qu’il commande |
+| ***Imperator*** | L’**armée** |
+| ***Pontifex maximus*** | La **religion** |
+| Maître de l’État | L’**administration** et la **justice** |
+
+Les institutions républicaines subsistent, mais **vidées de leur pouvoir réel**. Le **culte impérial** — rendre un culte à l’empereur et à Rome — devient un ciment politique.
 
 ## L’armée
-Environ **300 000 à 400 000** hommes. Les **légions**, formées de citoyens, sont stationnées aux frontières le long du **limes**, fortifié (mur d’Hadrien en Bretagne). Les **auxiliaires**, recrutés parmi les peuples conquis, obtiennent la citoyenneté après leur service.
+| Le corps | Qui | Où |
+| Les **légions** | Des **citoyens** | Aux frontières, le long du ***limes*** |
+| Les **auxiliaires** | Recrutés parmi les peuples conquis | Ils obtiennent la citoyenneté après leur service |
+
+= 300 000 à 400 000 hommes
+
+Le *limes* est fortifié : **mur d’Hadrien** en Bretagne.
 
 ## L’administration
-L’Empire est découpé en **provinces**, dirigées par des **gouverneurs** nommés. Un réseau de **routes** — plus de 80 000 km, jalonnés de bornes milliaires — permet de circuler, de commercer et surtout de déplacer les troupes.
+L’Empire est découpé en **provinces**, dirigées par des **gouverneurs** nommés. Plus de **80 000 km** de **routes**, jalonnées de bornes milliaires.
 
-> Les routes romaines n’ont pas été construites pour les marchands : elles ont été construites pour les légions. Le commerce a suivi.
+> Les routes romaines n’ont pas été construites pour les marchands : elles ont été construites pour les **légions**. Le commerce a suivi.
 
 ## La paix romaine
-La *Pax Romana*, du Ier au IIe siècle, est une longue période de stabilité intérieure qui favorise le commerce, les villes et les échanges culturels — imposée et maintenue par la force.`,
+La *Pax Romana*, du Ier au IIe siècle, est une longue période de stabilité intérieure qui favorise le commerce, les villes et les échanges — **imposée et maintenue par la force**.`,
           },
           questions: [
             ['Comment les Romains appelaient-ils la Méditerranée ?', ['Mare Nostrum, « notre mer »', 'Mare Magnum', 'Pax Romana', 'Mare Romanum'], 0, 'Ils en maîtrisaient tout le pourtour.'],
@@ -778,29 +944,40 @@ La *Pax Romana*, du Ier au IIe siècle, est une longue période de stabilité in
           axe: 'L’Empire romain dans le monde antique',
           lecon: {
             titre: 'Devenir romain sans cesser d’être soi',
-            cours: `## Ce qu’est la romanisation
-La **romanisation** est la diffusion du **mode de vie** romain — langue, droit, urbanisme, religion, techniques — dans les provinces conquises. Elle n’est pas seulement imposée : elle est aussi **adoptée**, parce qu’elle ouvre des carrières et un statut.
+            cours: `La romanisation n’est pas seulement imposée : elle est aussi adoptée, parce qu’elle ouvre des carrières.
+
+## Ce qu’est la romanisation
+La diffusion du **mode de vie** romain — langue, droit, urbanisme, religion, techniques — dans les provinces conquises.
 
 ## La ville, instrument principal
-Rome bâtit partout des villes construites sur le même modèle :
-- un **forum** (place publique), un **temple**, des **thermes**, un **théâtre**, un **amphithéâtre**, un **cirque** ;
-- un plan en damier, autour de deux axes, le **cardo** (nord-sud) et le **decumanus** (est-ouest) ;
-- des **aqueducs** amenant l’eau (le **pont du Gard**), un système d’**égouts**.
-En Gaule : Lugdunum (Lyon), Nemausus (Nîmes), Arelate (Arles).
+Rome bâtit partout des villes sur le même modèle.
+
+| L’équipement | Sa fonction |
+| Le **forum** | La place publique |
+| Le **temple** | Le culte |
+| Les **thermes** | Les bains |
+| Le **théâtre**, l’**amphithéâtre**, le **cirque** | Les spectacles |
+| Les **aqueducs** et les **égouts** | L’eau — le **pont du Gard** |
+
+~ Le plan en damier : le cardo (nord-sud) → croise le decumanus (est-ouest)
+
+En Gaule : **Lugdunum** (Lyon), **Nemausus** (Nîmes), **Arelate** (Arles).
 
 ## Le syncrétisme religieux
-Rome n’impose pas ses dieux : elle les **assimile** à ceux des peuples conquis, ou les adopte. Les divinités gauloises sont associées aux romaines ; les cultes orientaux (Isis, Mithra) se diffusent. La seule exigence est le **culte impérial**, marque de loyauté politique.
+Rome n’impose pas ses dieux : elle les **assimile** à ceux des peuples conquis. Les divinités gauloises sont associées aux romaines ; les cultes orientaux — **Isis**, **Mithra** — se diffusent.
 
-> Rome tolère toutes les croyances, à condition qu’elles n’empêchent pas d’honorer l’empereur. C’est ce point précis qui posera problème aux juifs et aux chrétiens.
+!> Une seule exigence : le **culte impérial**, marque de loyauté politique. C’est précisément ce point qui posera problème aux juifs et aux chrétiens.
 
 ## Le latin et le droit
-Le **latin** devient la langue de l’administration et du commerce en Occident ; il donnera le français, l’espagnol, l’italien, le portugais et le roumain. Le **droit romain** structure encore nos codes juridiques.
+Le **latin** devient la langue de l’administration et du commerce en Occident ; il donnera le français, l’espagnol, l’italien, le portugais et le roumain. Le **droit romain** structure encore nos codes.
 
 ## La citoyenneté, moteur de l’intégration
-Accordée progressivement aux élites provinciales, la **citoyenneté romaine** devient un puissant instrument d’adhésion. En **212 apr. J.-C.**, l’**édit de Caracalla** l’étend à **tous les hommes libres** de l’Empire.
+@ 212 apr. J.-C. — L’édit de Caracalla étend la citoyenneté à TOUS les hommes libres de l’Empire
+
+> La citoyenneté est le plus puissant instrument d’adhésion dont Rome dispose : elle transforme un vaincu en participant.
 
 ## Les limites
-La romanisation touche surtout les **villes** et les **élites**. Dans les campagnes, langues et coutumes locales se maintiennent longtemps.`,
+!> La romanisation touche surtout les **villes** et les **élites**. Dans les campagnes, langues et coutumes locales se maintiennent longtemps.`,
           },
           questions: [
             ['Qu’est-ce que la romanisation ?', ['La diffusion du mode de vie romain dans les provinces', 'La conquête militaire des provinces', 'Le déplacement de Romains en province', 'L’interdiction des cultes locaux'], 0, 'Elle est imposée mais aussi adoptée.'],
@@ -818,27 +995,38 @@ La romanisation touche surtout les **villes** et les **élites**. Dans les campa
           axe: 'L’Empire romain dans le monde antique',
           lecon: {
             titre: 'Une naissance en Judée romaine',
-            cours: `## Le contexte
-Au Ier siècle apr. J.-C., la **Judée** est une province romaine, agitée et surveillée. **Jésus de Nazareth**, juif de Galilée, y prêche vers 28-30 apr. J.-C. : il annonce le royaume de Dieu, s’adresse aux humbles, appelle à l’amour du prochain.
-Condamné et **crucifié** à Jérusalem sous le gouverneur **Ponce Pilate**, il est, selon ses disciples, **ressuscité** — c’est ce message qui fonde la nouvelle religion.
+            cours: `Le christianisme naît dans une petite province romaine agitée, et devient en trois siècles la religion d’un empire.
+
+## Le contexte
+@ ≈ 28-30 apr. J.-C. — Jésus de Nazareth prêche en Galilée, puis est crucifié à Jérusalem sous Ponce Pilate
+@ 70-100 apr. J.-C. — Rédaction des Évangiles
+
+Jésus, juif de Galilée, annonce le royaume de Dieu, s’adresse aux humbles, appelle à l’amour du prochain. Il est, selon ses disciples, **ressuscité** — et c’est ce message qui fonde la nouvelle religion.
 
 ## Les sources
-Les **Évangiles** (Matthieu, Marc, Luc, Jean) sont écrits entre **70 et 100 apr. J.-C.**, soit plusieurs décennies après les faits. Ce sont des textes de **foi**, destinés à convaincre.
-Des sources **non chrétiennes** (l’historien juif **Flavius Josèphe**, les Romains **Tacite** et **Suétone**) mentionnent Jésus et les premiers chrétiens : elles confirment l’existence du mouvement, sans en valider le contenu religieux.
+| La source | Ce qu’elle est | Ce qu’elle prouve |
+| Les **Évangiles** (Matthieu, Marc, Luc, Jean) | Des textes de **foi**, écrits des décennies après | Ce que l’on croyait |
+| **Flavius Josèphe**, **Tacite**, **Suétone** | Des auteurs **non chrétiens** | Que le mouvement a existé |
 
 > Deux types de sources, deux usages : les Évangiles disent ce que l’on croyait ; Tacite atteste que l’on y croyait.
 
-## La diffusion
-Les **apôtres**, en particulier **Paul de Tarse**, portent le message hors de Judée. Trois facteurs l’accélèrent :
-- les **routes** et la sécurité de l’Empire ;
-- le **grec**, langue commune de la Méditerranée orientale ;
-- l’ouverture aux **non-juifs**, décision majeure qui fait passer le christianisme d’un mouvement juif à une religion universelle.
+## Pourquoi le message se diffuse vite
+| Le facteur | Son effet |
+| Les **routes** et la sécurité de l’Empire | On circule |
+| Le **grec**, langue commune de l’Orient | On se comprend |
+| L’ouverture aux **non-juifs** | Le christianisme devient universel |
 
-## Le christianisme, une religion nouvelle
-Il hérite du judaïsme le **monothéisme** et la Bible, mais s’en distingue par la foi en **Jésus-Christ**, fils de Dieu, mort et ressuscité. Le **baptême** remplace la circoncision comme rite d’entrée.
+**Paul de Tarse** est le principal artisan de cette diffusion.
+
+!> L’ouverture aux non-juifs est la décision **majeure** : elle fait passer le christianisme d’un mouvement juif à une religion universelle.
+
+## Une religion nouvelle
+| Hérité du judaïsme | Propre au christianisme |
+| Le **monothéisme** | La foi en **Jésus-Christ**, fils de Dieu, mort et ressuscité |
+| La **Bible** | Le **baptême** remplace la circoncision |
 
 ## Les premières communautés
-Elles sont d’abord urbaines, modestes, réunies dans des maisons. Elles partagent un repas (l’**eucharistie**), pratiquent l’entraide et se dotent progressivement de responsables : diacres, prêtres, **évêques**.`,
+Urbaines, modestes, réunies dans des maisons. Elles partagent un repas — l’**eucharistie** —, pratiquent l’entraide, et se dotent de responsables : diacres, prêtres, **évêques**.`,
           },
           questions: [
             ['Où et quand Jésus de Nazareth prêche-t-il ?', ['En Judée romaine, vers 28-30 apr. J.-C.', 'À Rome, au IIe siècle', 'En Grèce, au Ier siècle av. J.-C.', 'En Égypte, vers 100 apr. J.-C.'], 0, 'La Judée est alors une province romaine.'],
@@ -856,29 +1044,40 @@ Elles sont d’abord urbaines, modestes, réunies dans des maisons. Elles partag
           axe: 'L’Empire romain dans le monde antique',
           lecon: {
             titre: 'De la persécution à la religion officielle',
-            cours: `## Pourquoi les chrétiens dérangent
-Rome est tolérante envers les cultes — à une condition : honorer l’**empereur** et les dieux de Rome. Les chrétiens, monothéistes, **refusent** le culte impérial. Ce refus n’est pas lu comme une opinion religieuse mais comme un acte de **déloyauté politique**.
+            cours: `En moins d’un siècle, les persécutés deviennent la religion d’État. Rome n’avait rien vu venir.
+
+## Pourquoi les chrétiens dérangent
+Rome tolère tous les cultes — à une condition : honorer l’**empereur** et les dieux de Rome.
+
+!> Les chrétiens, monothéistes, **refusent** le culte impérial. Ce refus n’est pas lu comme une opinion religieuse mais comme un acte de **déloyauté politique**.
+
 S’y ajoutent des rumeurs nées du secret de leurs réunions, et la méfiance envers un groupe qui se tient à l’écart des fêtes civiques.
 
 ## Les persécutions
-Elles sont **intermittentes**, souvent locales, et non continues :
-- sous **Néron** (**64 apr. J.-C.**), les chrétiens sont accusés de l’incendie de Rome ;
-- au IIIe siècle, sous Dèce puis **Dioclétien** (303-311), les persécutions deviennent générales.
-Les chrétiens tués pour leur foi sont vénérés comme **martyrs** — le mot grec signifie « témoin ». Loin de l’éteindre, ces persécutions renforcent la cohésion des communautés.
+@ 64 apr. J.-C. — Sous Néron, les chrétiens sont accusés de l’incendie de Rome
+@ IIIe siècle — Persécutions générales sous Dèce
+@ 303-311 — Persécution de Dioclétien, la plus violente
+
+Elles sont **intermittentes** et souvent locales, non continues. Les chrétiens tués pour leur foi sont vénérés comme **martyrs** — le mot grec signifie « témoin ».
 
 > Persécuter une croyance en fabrique les héros. Rome l’a expérimenté à ses dépens.
 
 ## Le tournant du IVe siècle
-- **313** : l’**édit de Milan** de **Constantin** accorde la **liberté de culte** à tous, chrétiens compris. Constantin protège l’Église et convoque le concile de **Nicée** (325).
-- **380** : l’**édit de Thessalonique** de **Théodose** fait du christianisme la **religion officielle** de l’Empire. Les cultes païens sont ensuite interdits.
+@ 313 — L’édit de Milan de Constantin accorde la liberté de culte à tous
+@ 325 — Constantin convoque le concile de Nicée
+@ 380 — L’édit de Thessalonique de Théodose fait du christianisme la religion officielle
 
-En moins d’un siècle, les persécutés deviennent la religion d’État.
+Les cultes païens sont ensuite interdits.
 
 ## L’organisation de l’Église
-Le mot **Église** (*ekklesia*) désigne d’abord la communauté. Elle se structure : les **évêques** dirigent les communautés urbaines, l’évêque de **Rome** acquiert une autorité particulière. Les **conciles** réunissent les évêques pour fixer la doctrine.
+| Le terme | Ce qu’il désigne |
+| L’**Église** (*ekklesia*) | D’abord la **communauté** |
+| Les **évêques** | Ils dirigent les communautés urbaines |
+| L’évêque de **Rome** | Il acquiert une autorité particulière |
+| Les **conciles** | Ils réunissent les évêques pour fixer la doctrine |
 
 ## Les traces
-**Catacombes**, premières **basiliques**, sarcophages sculptés, symboles discrets (le poisson, *ichthus*) : l’archéologie chrétienne documente cette transformation.`,
+**Catacombes**, premières **basiliques**, sarcophages sculptés, et le poisson — *ichthus* — comme symbole discret.`,
           },
           questions: [
             ['Pourquoi les chrétiens sont-ils persécutés dans l’Empire ?', ['Ils refusent le culte impérial, lu comme une déloyauté politique', 'Ils refusent de payer l’impôt', 'Ils prennent les armes', 'Ils parlent une autre langue'], 0, 'Rome tolérait les cultes, à cette condition près.'],
@@ -896,28 +1095,48 @@ Le mot **Église** (*ekklesia*) désigne d’abord la communauté. Elle se struc
           axe: 'L’Empire romain dans le monde antique',
           lecon: {
             titre: 'L’autre empire du monde antique',
-            cours: `## Un empire contemporain de Rome
-Pendant que Rome domine la Méditerranée, la **Chine des Han** (**206 av. J.-C. - 220 apr. J.-C.**) règne sur l’Asie orientale. Les deux empires sont comparables par leur taille, leur population et leur durée — et se connaissent à peine.
+            cours: `Pendant que Rome domine la Méditerranée, un empire de taille comparable règne à l’autre bout du continent. Les deux se connaissent à peine.
 
 ## Avant les Han
-En **221 av. J.-C.**, **Qin Shi Huangdi** unifie la Chine et prend le titre de premier empereur. Il unifie l’**écriture**, les **poids et mesures**, la **monnaie**, lance la construction de la **Grande Muraille** et se fait enterrer avec une **armée de terre cuite** de plus de 8 000 statues. Sa dynastie tombe très vite ; les **Han** lui succèdent.
+@ 221 av. J.-C. — Qin Shi Huangdi unifie la Chine et prend le titre de premier empereur
+@ 206 av. J.-C. - 220 apr. J.-C. — La dynastie Han
+@ ≈ 105 apr. J.-C. — Invention du papier
+
+Qin Shi Huangdi unifie l’**écriture**, les **poids et mesures**, la **monnaie**, lance la **Grande Muraille** et se fait enterrer avec une **armée de terre cuite** de plus de **8 000** statues. Sa dynastie tombe très vite.
 
 ## L’organisation
-- L’empereur est le **Fils du Ciel** : il détient le **mandat céleste**, qu’il peut perdre s’il gouverne mal — une catastrophe naturelle ou une révolte peut être lue comme le retrait de ce mandat.
-- L’Empire est administré par des **fonctionnaires lettrés**, recrutés sur **concours** — une invention chinoise sans équivalent à Rome.
-- La pensée de **Confucius** (VIe-Ve siècle av. J.-C.), fondée sur l’ordre social, le respect des aînés et le devoir, structure l’État.
+| L’élément | Ce qu’il est |
+| L’empereur | Le **Fils du Ciel**, détenteur du **mandat céleste** |
+| L’administration | Des **fonctionnaires lettrés** recrutés sur **concours** |
+| La morale d’État | La pensée de **Confucius** : ordre social, respect des aînés, devoir |
+
+!> Le **mandat céleste** peut se **perdre** : une catastrophe naturelle ou une révolte peut être lue comme son retrait. Le pouvoir chinois est absolu, mais jamais garanti.
+
+> Le recrutement des fonctionnaires **sur concours** est une invention chinoise sans aucun équivalent à Rome.
 
 ## Les inventions
-Les Han inventent ou perfectionnent le **papier** (vers 105 apr. J.-C.), la brouette, le gouvernail d’étambot, le sismographe, la fonte du fer, la boussole. Ces techniques mettront des siècles à parvenir en Occident.
+| L’invention | |
+| Le **papier** | Vers 105 apr. J.-C. |
+| La **brouette** | |
+| Le **gouvernail d’étambot** | |
+| Le **sismographe** | |
+| La **fonte du fer**, la **boussole** | |
+
+Ces techniques mettront des siècles à parvenir en Occident.
 
 ## La route de la soie
-Un réseau de pistes caravanières relie la Chine à la Méditerranée, en passant par l’Asie centrale et la Perse. Y circulent la **soie**, les épices, le verre, les métaux — mais aussi les **religions**, les **techniques** et, malheureusement, les **épidémies**.
-Les contacts directs entre Rome et la Chine restent rarissimes : chacun connaît l’autre par ouï-dire.
+~ La Chine → l’Asie centrale → la Perse → la Méditerranée
+
+| Ce qui circule | |
+| Des marchandises | **Soie**, épices, verre, métaux |
+| Des idées | **Religions** et **techniques** |
+| Et aussi | Des **épidémies** |
 
 > Deux empires d’une taille comparable, aux deux bouts du même continent, reliés par une route que presque personne ne parcourait en entier.
 
 ## Deux modèles à comparer
-Rome intègre par la **citoyenneté** et le **droit** ; la Chine par une **administration lettrée** et une **morale** commune. Deux réponses différentes à la même question : comment tenir un empire immense ?`,
+| Rome intègre par… | La Chine intègre par… |
+| La **citoyenneté** et le **droit** | Une **administration lettrée** et une **morale** commune |`,
           },
           questions: [
             ['Quelles sont les dates de la dynastie Han ?', ['206 av. J.-C. - 220 apr. J.-C.', '221-206 av. J.-C.', '27 av. J.-C. - 476 apr. J.-C.', '509-27 av. J.-C.'], 0, 'Elle est contemporaine de Rome.'],
@@ -947,30 +1166,39 @@ Rome intègre par la **citoyenneté** et le **droit** ; la Chine par une **admin
           axe: 'Habiter une métropole',
           lecon: {
             titre: 'Vivre dans une très grande ville',
-            cours: `## Qu’est-ce qu’une métropole ?
-Une **métropole** est une grande ville qui **concentre** les fonctions de commandement : sièges d’entreprises, universités, hôpitaux, musées, aéroports, administrations. Elle **rayonne** bien au-delà de ses limites.
-Le mot vient du grec : la « ville-mère ».
+            cours: `Une métropole ne se mesure pas à ses limites sur la carte, mais à la distance que ses habitants parcourent chaque matin.
+
+## Ce qu’est une métropole
+Une grande ville qui **concentre** les fonctions de commandement — sièges d’entreprises, universités, hôpitaux, musées, aéroports, administrations — et **rayonne** bien au-delà de ses limites. Le mot vient du grec : la « ville-mère ».
 
 ## L’urbanisation du monde
-Depuis **2007**, plus de la **moitié** de l’humanité vit en ville ; la proportion approche les **60 %** aujourd’hui. On compte plus de **30 mégapoles** — des agglomérations de plus de 10 millions d’habitants : Tokyo, Delhi, Shanghai, São Paulo, Mexico, Le Caire, Lagos.
+@ 2007 — Pour la première fois, plus de la moitié de l’humanité vit en ville
+
+= Aujourd’hui : près de 60 % de citadins · plus de 30 mégapoles
+
+Une **mégapole** est une agglomération de plus de **10 millions** d’habitants : Tokyo, Delhi, Shanghai, São Paulo, Mexico, Le Caire, Lagos.
 
 ## L’organisation d’une métropole
-- Le **centre-ville** : commerces, services, patrimoine ; souvent le quartier le plus cher.
-- Le **quartier d’affaires** (CBD) : tours de bureaux — La Défense à Paris, Manhattan à New York.
-- Les **banlieues** : logements, en couronnes successives.
-- Les **périphéries** : zones commerciales, industrielles, aéroports.
+~ Centre-ville → Quartier d’affaires → Banlieues → Périphéries
+
+| La zone | Ce qu’on y trouve |
+| Le **centre-ville** | Commerces, services, patrimoine ; souvent le plus cher |
+| Le **quartier d’affaires** (CBD) | Des tours de bureaux — La Défense, Manhattan |
+| Les **banlieues** | Des logements, en couronnes successives |
+| Les **périphéries** | Zones commerciales, industrielles, aéroports |
+
 L’ensemble forme une **aire urbaine**, souvent bien plus étendue que la commune-centre.
 
 ## Les mobilités quotidiennes
-Beaucoup d’habitants font la **navette** entre leur domicile et leur travail : ce sont les **migrations pendulaires**. Elles saturent les transports aux heures de pointe et façonnent la journée de millions de gens.
+Les **migrations pendulaires** sont les navettes quotidiennes domicile-travail. Elles saturent les transports aux heures de pointe.
 
-> Une métropole ne se mesure pas à ses limites administratives mais à la distance que ses habitants parcourent chaque matin.
+> Une métropole ne se mesure pas à ses limites administratives, mais à la distance que ses habitants parcourent chaque matin.
 
 ## Des inégalités marquées
-Dans une même métropole coexistent des quartiers très riches et des quartiers très pauvres — jusqu’aux **bidonvilles** (*favelas* à Rio, *slums* à Mumbai), où vit environ un citadin sur quatre dans les pays en développement.
+!> Dans une même métropole coexistent des quartiers très riches et des **bidonvilles** — *favelas* à Rio, *slums* à Mumbai. Environ **un citadin sur quatre** y vit dans les pays en développement.
 
-## Les métropoles mondiales
-Quelques-unes — New York, Londres, Tokyo, Paris, Shanghai — commandent l’économie mondiale. On parle de **villes mondiales**.`,
+## Les villes mondiales
+Quelques-unes commandent l’économie mondiale : **New York**, **Londres**, **Tokyo**, **Paris**, **Shanghai**.`,
           },
           questions: [
             ['Qu’est-ce qu’une métropole ?', ['Une grande ville qui concentre les fonctions de commandement', 'Une ville de plus de 10 000 habitants', 'Une capitale d’État', 'Une ville industrielle'], 0, 'Elle rayonne bien au-delà de ses limites.'],
@@ -988,28 +1216,38 @@ Quelques-unes — New York, Londres, Tokyo, Paris, Shanghai — commandent l’�
           axe: 'Habiter une métropole',
           lecon: {
             titre: 'Trop de monde, trop vite',
-            cours: `## Une croissance très inégale
-Les métropoles des pays **développés** croissent lentement et sont anciennes. Celles des pays **en développement** connaissent une croissance **explosive** : Lagos est passée de 300 000 habitants en 1950 à plus de 15 millions aujourd’hui. Les équipements ne suivent pas ce rythme.
+            cours: `Les métropoles du Sud grandissent bien plus vite que leurs équipements. C’est de ce décalage que naissent tous leurs défis.
+
+## Une croissance très inégale
+| Les métropoles… | Leur croissance |
+| Des pays **développés** | Lente, et anciennes |
+| Des pays **en développement** | **Explosive** |
+
+~ Lagos : 300 000 habitants en 1950 → plus de 15 millions aujourd’hui
 
 ## Le défi du logement
-Le manque de logements abordables produit des **bidonvilles** : habitat auto-construit, sans titre de propriété, souvent privé d’eau courante, d’électricité et d’égouts. Environ **un milliard** de personnes y vivent dans le monde.
+Faute de logements abordables, l’habitat auto-construit se multiplie : **bidonvilles** sans titre de propriété, souvent privés d’eau courante, d’électricité et d’égouts.
+
+= Environ un milliard de personnes y vivent dans le monde
 
 ## Le défi des transports
-Embouteillages, temps de trajet démesurés, pollution de l’air. Les réponses : **métro**, **tramway**, bus en site propre, **pistes cyclables**, télétravail, péages urbains.
+| Le problème | Les réponses |
+| Embouteillages, trajets démesurés, pollution | **Métro**, **tramway**, bus en site propre, **pistes cyclables**, télétravail, péages urbains |
 
 ## Le défi de l’environnement
-- **Pollution de l’air** : responsable de millions de décès prématurés chaque année.
-- **Déchets** : leur collecte et leur traitement deviennent un problème majeur.
-- **Îlot de chaleur urbain** : le béton et l’asphalte stockent la chaleur, rendant la ville plusieurs degrés plus chaude que la campagne voisine — un enjeu croissant avec le réchauffement.
-- **Étalement urbain** : la ville grignote les terres agricoles et les milieux naturels.
+| Le problème | Ce qu’il produit |
+| La **pollution de l’air** | Des millions de décès prématurés par an |
+| Les **déchets** | Collecte et traitement deviennent un problème majeur |
+| L’**îlot de chaleur urbain** | Béton et asphalte stockent la chaleur : plusieurs degrés de plus qu’à la campagne |
+| L’**étalement urbain** | La ville grignote terres agricoles et milieux naturels |
 
 ## Le défi des inégalités
-Ségrégation spatiale, quartiers fermés d’un côté, bidonvilles de l’autre : la métropole rassemble sans mélanger.
-
 > Une ville peut concentrer les plus grandes richesses du pays et sa plus grande pauvreté, à quelques centaines de mètres de distance.
 
+Quartiers fermés d’un côté, bidonvilles de l’autre : la métropole rassemble sans mélanger.
+
 ## Les risques
-Beaucoup de métropoles sont exposées : séismes (Tokyo), cyclones (Manille), inondations et **montée du niveau de la mer** (Jakarta, Lagos, Miami). Plus la densité est forte, plus le nombre de personnes exposées est élevé.`,
+!> Plus la densité est forte, plus le **nombre de personnes exposées** est élevé. Séismes à **Tokyo**, cyclones à **Manille**, inondations et **montée du niveau de la mer** à Jakarta, Lagos, Miami.`,
           },
           questions: [
             ['Où la croissance urbaine est-elle la plus rapide ?', ['Dans les pays en développement', 'Dans les pays développés', 'Partout au même rythme', 'Nulle part, elle ralentit'], 0, 'Lagos est passée de 300 000 à plus de 15 millions d’habitants.'],
@@ -1027,33 +1265,45 @@ Beaucoup de métropoles sont exposées : séismes (Tokyo), cyclones (Manille), i
           axe: 'Habiter une métropole',
           lecon: {
             titre: 'Imaginer une ville vivable',
-            cours: `## La question posée
-D’ici **2050**, environ **7 habitants sur 10** vivront en ville. Comment loger, déplacer, nourrir et rafraîchir tout ce monde sans épuiser la planète ?
+            cours: `D’ici 2050, sept habitants sur dix vivront en ville. La question n’est plus de savoir si, mais comment.
 
 ## La ville durable
-Elle cherche à concilier trois exigences :
-- **environnementale** : moins d’énergie, moins de pollution, plus de nature ;
-- **sociale** : logements accessibles, mixité, services pour tous ;
-- **économique** : emplois et activités sur place.
+Elle cherche à concilier trois exigences.
+
+| L’exigence | Ce qu’elle demande |
+| **Environnementale** | Moins d’énergie, moins de pollution, plus de nature |
+| **Sociale** | Logements accessibles, mixité, services pour tous |
+| **Économique** | Des emplois et des activités sur place |
 
 ## Les pistes concrètes
-- **Densifier** plutôt que s’étaler, pour préserver les terres agricoles.
-- **Végétaliser** : parcs, arbres d’alignement, toitures végétales — contre l’îlot de chaleur.
-- **Réhabiliter les friches** industrielles au lieu de construire sur des terrains neufs.
-- **Bâtiments à énergie positive**, qui produisent plus qu’ils ne consomment.
-- **Transports doux** et **ville du quart d’heure** : trouver l’essentiel à quinze minutes à pied ou à vélo de chez soi.
-- **Économie circulaire** : trier, réparer, réutiliser, composter.
+| La piste | Ce qu’elle vise |
+| **Densifier** plutôt que s’étaler | Préserver les terres agricoles |
+| **Végétaliser** : parcs, arbres, toitures | Combattre l’îlot de chaleur |
+| **Réhabiliter les friches** industrielles | Ne pas construire sur du neuf |
+| **Bâtiments à énergie positive** | Produire plus qu’on ne consomme |
+| La **ville du quart d’heure** | Trouver l’essentiel à 15 minutes à pied ou à vélo |
+| L’**économie circulaire** | Trier, réparer, réutiliser, composter |
 
 ## Les écoquartiers
-Des quartiers conçus selon ces principes existent déjà : **Vauban** à Fribourg (Allemagne), **Hammarby** à Stockholm, **BedZED** à Londres, Confluence à Lyon. Ils servent de laboratoires.
+| Le quartier | Où |
+| **Vauban** | Fribourg, Allemagne |
+| **Hammarby** | Stockholm |
+| **BedZED** | Londres |
+| **Confluence** | Lyon |
+
+Ils servent de laboratoires.
 
 ## La ville intelligente
-La **smart city** utilise le numérique pour optimiser l’éclairage, la circulation, la collecte des déchets, la consommation d’eau. Elle pose aussi des questions de **protection des données** et de surveillance : tout ce qui est mesuré peut être suivi.
+La **smart city** utilise le numérique pour optimiser l’éclairage, la circulation, la collecte des déchets, la consommation d’eau.
+
+!> Elle pose aussi une question de **protection des données** : tout ce qui est mesuré peut être **suivi**.
 
 > Une ville n’est pas durable parce qu’elle est équipée de capteurs. Elle l’est parce que ses habitants peuvent y vivre bien, longtemps, sans épuiser ce qui les entoure.
 
 ## Le rôle des habitants
-Les projets réussis associent les habitants dès la conception : **concertation**, budgets participatifs, jardins partagés. Une ville se fait avec ceux qui y vivent, pas seulement pour eux.`,
+Les projets réussis associent les habitants dès la conception : **concertation**, budgets participatifs, jardins partagés.
+
+> Une ville se fait **avec** ceux qui y vivent, pas seulement pour eux.`,
           },
           questions: [
             ['Quelle part de l’humanité vivra en ville en 2050 ?', ['Environ 7 sur 10', 'Environ 3 sur 10', 'Environ 5 sur 10', 'La totalité'], 0, 'La proportion est d’environ 60 % aujourd’hui.'],
@@ -1073,32 +1323,38 @@ Les projets réussis associent les habitants dès la conception : **concertation
           axe: 'Habiter un espace de faible densité',
           lecon: {
             titre: 'Vivre là où c’est difficile',
-            cours: `## La densité
-La **densité de population** est le nombre d’habitants par km². Un espace de **faible densité** en compte peu — moins de 30 hab./km² comme ordre de grandeur. Ces espaces couvrent l’essentiel des terres émergées mais n’abritent qu’une petite part de l’humanité.
+            cours: `Les espaces de faible densité couvrent l’essentiel des terres émergées et n’abritent qu’une petite part de l’humanité. Aucun n’est vide.
+
+## La densité
+La **densité de population** est le nombre d’habitants par km². Un espace de **faible densité** en compte peu — moins de **30 hab./km²** comme ordre de grandeur.
 
 ## Les grandes contraintes
-- Le **froid** : Sibérie, Grand Nord canadien, Groenland. Sols gelés (**permafrost**), nuit polaire, cultures impossibles.
-- La **sécheresse** : Sahara, Australie centrale, Atacama. L’eau commande tout.
-- L’**altitude** : Himalaya, Andes. Air raréfié, pentes fortes, isolement.
-- La **forêt dense** : Amazonie, bassin du Congo. Accès difficile, sols pauvres.
+| La contrainte | Où | Ce qu’elle impose |
+| Le **froid** | Sibérie, Grand Nord canadien, Groenland | Sols gelés (**permafrost**), nuit polaire, cultures impossibles |
+| La **sécheresse** | Sahara, Australie centrale, Atacama | L’eau commande tout |
+| L’**altitude** | Himalaya, Andes | Air raréfié, pentes fortes, isolement |
+| La **forêt dense** | Amazonie, bassin du Congo | Accès difficile, sols pauvres |
 
 ## S’adapter, toujours
-Aucun de ces milieux n’est vide, et les sociétés qui y vivent ont mis au point des solutions précises :
-- **oasis** et puits profonds dans les déserts ; culture en étages ;
-- **cultures en terrasses** dans les montagnes, pour retenir la terre et l’eau ;
-- **nomadisme** pastoral (Touaregs, Mongols, Sames), qui suit les ressources plutôt que de les épuiser ;
-- **maisons sur pilotis** ou sur pieux dans les zones gelées et inondables.
+| La contrainte | La réponse humaine |
+| Le désert | **Oasis**, puits profonds |
+| La montagne | **Cultures en terrasses**, qui retiennent la terre et l’eau |
+| Les ressources rares et mobiles | Le **nomadisme** pastoral : Touaregs, Mongols, Sames |
+| Le gel et les inondations | Maisons **sur pilotis** ou sur pieux |
 
 > Une contrainte n’est jamais un obstacle absolu : c’est un problème auquel une société a répondu, souvent depuis très longtemps.
 
 ## Ce qui change aujourd’hui
-- Le **tourisme** (montagne, désert) apporte des revenus mais fragilise les milieux.
-- L’exploitation des **ressources** (pétrole, minerais, bois) transforme brutalement certaines régions.
-- Le **changement climatique** frappe ces milieux en premier : fonte du permafrost, recul des glaciers, sécheresses aggravées.
-- L’**exode** des jeunes vers les villes se poursuit.
+| Le changement | Son effet |
+| Le **tourisme** | Des revenus, mais des milieux fragilisés |
+| L’exploitation des **ressources** | Pétrole, minerais, bois : des transformations brutales |
+| Le **changement climatique** | Fonte du permafrost, recul des glaciers, sécheresses aggravées |
+| L’**exode** des jeunes | Les villages se vident |
+
+!> Ces milieux sont frappés **les premiers** par le réchauffement, alors qu’ils y contribuent le moins.
 
 ## Contrainte ou atout
-Un même trait peut être l’un ou l’autre selon l’époque : la montagne, longtemps obstacle, est devenue une ressource touristique majeure.`,
+> La montagne, longtemps obstacle, est devenue une ressource touristique majeure. Un même trait change de nature selon l’époque.`,
           },
           questions: [
             ['Comment calcule-t-on la densité de population ?', ['Nombre d’habitants ÷ superficie en km²', 'Nombre d’habitants × superficie', 'Superficie ÷ nombre d’habitants', 'Nombre de logements par habitant'], 0, 'Elle s’exprime en hab./km².'],
@@ -1116,30 +1372,38 @@ Un même trait peut être l’un ou l’autre selon l’époque : la montagne, l
           axe: 'Habiter un espace de faible densité',
           lecon: {
             titre: 'Vivre dans un milieu à protéger',
-            cours: `## Ce qu’est la biodiversité
-La **biodiversité** est la variété du vivant : des espèces, des gènes et des milieux. Certains espaces en concentrent une part exceptionnelle : forêts tropicales, récifs coralliens, mangroves, grandes savanes.
+            cours: `Certains espaces concentrent une part exceptionnelle du vivant. Ils sont peuplés, et c’est souvent ce qui les protège le mieux.
+
+## Ce qu’est la biodiversité
+La variété du vivant : des **espèces**, des **gènes** et des **milieux**.
 
 ## Les hauts lieux
-- L’**Amazonie** : environ 10 % des espèces connues sur Terre.
-- La **Grande Barrière de corail** (Australie) : 1 500 espèces de poissons.
-- Les forêts du **bassin du Congo**, de **Bornéo**, l’île de **Madagascar**, dont 80 % des espèces ne vivent nulle part ailleurs — on dit qu’elles sont **endémiques**.
+| Le lieu | Ce qu’il abrite |
+| L’**Amazonie** | Environ **10 %** des espèces connues sur Terre |
+| La **Grande Barrière de corail** (Australie) | **1 500** espèces de poissons |
+| Le bassin du **Congo**, **Bornéo** | Des forêts denses |
+| **Madagascar** | **80 %** d’espèces **endémiques** — qui ne vivent nulle part ailleurs |
 
 ## Qui y habite
-Ces espaces sont peuplés, souvent depuis des millénaires : peuples autochtones d’Amazonie, communautés forestières du Congo, pêcheurs des récifs. Leurs pratiques — agriculture sur brûlis à petite échelle, chasse réglée par des règles collectives, pêche saisonnière — sont généralement compatibles avec le maintien du milieu.
+Peuples autochtones d’Amazonie, communautés forestières du Congo, pêcheurs des récifs. Leurs pratiques — brûlis à petite échelle, chasse réglée collectivement, pêche saisonnière — sont **compatibles** avec le maintien du milieu.
 
 ## Les menaces
-- La **déforestation** : agriculture industrielle (soja, huile de palme), élevage, exploitation du bois.
-- L’**orpaillage** et les mines, qui polluent les fleuves au mercure.
-- Le **braconnage** et le trafic d’espèces.
-- Le **réchauffement**, qui blanchit et tue les coraux.
+| La menace | Sa cause |
+| La **déforestation** | Soja, huile de palme, élevage, exploitation du bois |
+| L’**orpaillage** et les mines | Ils polluent les fleuves au **mercure** |
+| Le **braconnage** | Le trafic d’espèces |
+| Le **réchauffement** | Il blanchit et tue les coraux |
 
 > Un hectare de forêt tropicale abattu ne se « replante » pas : on peut remettre des arbres, pas remettre l’écosystème qui a mis des millénaires à s’installer.
 
 ## Protéger
-- Les **parcs nationaux** et **réserves naturelles** ;
-- le classement au **patrimoine mondial de l’UNESCO** ;
-- l’**écotourisme**, qui finance la protection en faisant du milieu une ressource économique — à condition de rester à faible impact ;
-- la **reconnaissance des droits des peuples autochtones**, qui se révèle l’un des moyens les plus efficaces : les territoires qu’ils gèrent sont mieux préservés que la moyenne.
+| Le moyen | Ce qu’il fait |
+| Les **parcs nationaux** et **réserves** | Ils interdisent ou encadrent |
+| Le **patrimoine mondial de l’UNESCO** | Il classe et attire l’attention |
+| L’**écotourisme** | Il finance la protection — à condition de rester à faible impact |
+| Les **droits des peuples autochtones** | Les territoires qu’ils gèrent sont **mieux préservés que la moyenne** |
+
+!> C’est le résultat le plus contre-intuitif du chapitre : la meilleure protection n’est pas toujours la mise sous cloche, c’est souvent la **reconnaissance de ceux qui y vivent**.
 
 ## Le dilemme
 Protéger ou développer ? La réponse cherchée est le **développement durable** : permettre aux habitants de vivre correctement sans détruire ce dont ils dépendent.`,
@@ -1160,21 +1424,28 @@ Protéger ou développer ? La réponse cherchée est le **développement durable
           axe: 'Habiter un espace de faible densité',
           lecon: {
             titre: 'Des campagnes qui ne se ressemblent pas',
-            cours: `## Ce qu’est un espace rural
-Un espace **rural** se caractérise par une faible densité, un paysage dominé par les champs, les prés ou les forêts, et un poids important — mais plus jamais exclusif — de l’**agriculture**.
+            cours: `Toutes les campagnes ne se ressemblent pas : certaines gagnent des habitants, d’autres se vident.
+
+## Ce qu’est un espace rural
+Faible densité, paysage dominé par les champs, les prés ou les forêts, et un poids important — mais **plus jamais exclusif** — de l’**agriculture**.
 
 ## Trois visages du rural
-- Les **campagnes périurbaines**, proches des villes : elles **gagnent** des habitants, souvent des ménages qui travaillent en ville et logent à la campagne. On y observe des **migrations pendulaires**.
-- Les **campagnes agricoles productives** : grandes cultures mécanisées, peu d’actifs, forte production (Beauce, Grand Ouest).
-- Les **campagnes en déclin**, souvent en montagne ou éloignées : **exode rural**, vieillissement, fermeture de l’école, du commerce, du cabinet médical.
+| Le type | Ce qui s’y passe |
+| Les campagnes **périurbaines** | Proches des villes, elles **gagnent** des habitants : on travaille en ville, on loge à la campagne |
+| Les campagnes **agricoles productives** | Grandes cultures mécanisées, peu d’actifs, forte production — Beauce, Grand Ouest |
+| Les campagnes **en déclin** | **Exode rural**, vieillissement, fermeture de l’école, du commerce, du médecin |
 
 ## Le recul de l’agriculture dans l’emploi
-En France, les agriculteurs représentent aujourd’hui moins de **2 %** des actifs, contre plus de 30 % en 1950. La production, elle, a fortement augmenté : c’est l’effet de la **mécanisation** et de l’agrandissement des exploitations.
+@ 1950 — Plus de 30 % des actifs français sont agriculteurs
+@ Aujourd’hui — Moins de 2 % des actifs
+
+!> **Et pourtant la production a fortement augmenté.** Moins d’agriculteurs ne veut pas dire moins d’agriculture : c’est l’effet de la **mécanisation** et de l’agrandissement des exploitations.
 
 ## Les difficultés
-- L’**accès aux services** : santé, école, commerces, administration. On parle de **déserts médicaux**.
-- La **dépendance à la voiture**, faute de transports collectifs.
-- Le **manque de connexion** numérique dans certaines zones.
+| La difficulté | Le mot qui la désigne |
+| L’accès aux soins | Les **déserts médicaux** |
+| L’absence de transports collectifs | La **dépendance à la voiture** |
+| La connexion internet | Les zones blanches |
 
 > Dans un espace peu dense, la distance devient une inégalité : le même service existe, mais il est à quarante minutes de route.
 
@@ -1182,7 +1453,9 @@ En France, les agriculteurs représentent aujourd’hui moins de **2 %** des act
 Cadre de vie, prix du logement, espace, lien social, patrimoine, nature. Le **télétravail** a renforcé l’attractivité de certaines campagnes.
 
 ## Les nouvelles fonctions
-Les espaces ruraux ne sont plus seulement productifs : ils sont aussi **résidentiels**, **touristiques** (gîtes, randonnée), **récréatifs**, et producteurs d’**énergie** (éolien, solaire, méthanisation).`,
+~ Productive → résidentielle → touristique → récréative → énergétique
+
+Les espaces ruraux produisent aussi de l’**énergie** : éolien, solaire, méthanisation.`,
           },
           questions: [
             ['Quelle part des actifs les agriculteurs représentent-ils en France aujourd’hui ?', ['Moins de 2 %', 'Environ 10 %', 'Environ 30 %', 'Environ 20 %'], 0, 'Ils étaient plus de 30 % en 1950.'],
@@ -1202,34 +1475,39 @@ Les espaces ruraux ne sont plus seulement productifs : ils sont aussi **résiden
           axe: 'Habiter les littoraux',
           lecon: {
             titre: 'La frange la plus convoitée de la planète',
-            cours: `## Une attraction considérable
-Le **littoral** est la zone de contact entre la terre et la mer. Environ **60 %** de l’humanité vit à moins de **100 km** d’une côte, et les densités y sont bien supérieures à la moyenne mondiale. C’est le processus de **littoralisation**.
+            cours: `Le littoral est une ligne étroite. Six humains sur dix vivent à moins de cent kilomètres d’elle.
+
+## Une attraction considérable
+= Environ 60 % de l’humanité vit à moins de 100 km d’une côte
+
+Ce mouvement de concentration s’appelle la **littoralisation**.
 
 ## Deux grands types de littoraux
-**Le littoral industrialo-portuaire**
-Il est aménagé pour le commerce et l’industrie : **ports en eau profonde**, **terminaux à conteneurs**, raffineries, chantiers, entrepôts. On appelle **ZIP** (zone industrialo-portuaire) cet ensemble.
-Exemples : **Shanghai** (premier port mondial), **Rotterdam**, **Singapour**, **Le Havre**.
-Ils sont les nœuds de la **mondialisation** : environ 80 % des marchandises mondiales voyagent par la mer.
+| Le type | Ses aménagements | Ses exemples |
+| **Industrialo-portuaire** | **Ports en eau profonde**, **terminaux à conteneurs**, raffineries, entrepôts — la **ZIP** | **Shanghai** (premier port mondial), Rotterdam, Singapour, Le Havre |
+| **Touristique** | Hôtels, résidences, marinas, plages équipées, aéroports | Côte d’Azur, Baléares, Cancún, Bali |
 
-**Le littoral touristique**
-Aménagé pour les vacanciers : hôtels, résidences, marinas, plages équipées, aéroports.
-Exemples : la **Côte d’Azur**, les Baléares, Cancún, Bali.
-Il crée des emplois mais souvent **saisonniers**, et provoque une **bétonisation** du rivage.
+= Environ 80 % des marchandises mondiales voyagent par la mer
+
+!> Le littoral touristique crée des emplois, mais souvent **saisonniers**, et provoque une **bétonisation** du rivage.
 
 ## Les autres usages
-Pêche, aquaculture, énergies marines (éolien en mer), extraction de granulats, conservation de la nature. Ces usages **se concurrencent** sur un espace étroit : c’est le principal enjeu d’aménagement.
+Pêche, aquaculture, énergies marines, extraction de granulats, conservation de la nature.
+
+> Ces usages **se concurrencent** sur un espace étroit : c’est le principal enjeu d’aménagement du littoral.
 
 ## Les fragilités
-- **Érosion** du trait de côte, aggravée par les aménagements ;
-- **pollutions** : marées noires, plastiques, rejets urbains et agricoles ;
-- destruction des **milieux** : mangroves, dunes, zones humides ;
-- **montée du niveau de la mer**, qui menace des dizaines de millions de personnes ;
-- **submersion** lors des tempêtes et **cyclones**.
+| La fragilité | Ce qu’elle produit |
+| L’**érosion** du trait de côte | Aggravée par les aménagements eux-mêmes |
+| Les **pollutions** | Marées noires, plastiques, rejets urbains et agricoles |
+| La destruction des **milieux** | Mangroves, dunes, zones humides |
+| La **montée du niveau de la mer** | Des dizaines de millions de personnes menacées |
+| La **submersion** | Tempêtes et cyclones |
 
 > Un littoral est une ligne : ce qu’on y ajoute d’un côté se retire presque toujours de l’autre.
 
 ## Protéger
-Loi Littoral en France, **Conservatoire du littoral**, aires marines protégées, réensablement, restauration des dunes et des mangroves — ces dernières étant les meilleures protections naturelles contre les tempêtes.`,
+Loi Littoral en France, **Conservatoire du littoral**, aires marines protégées, réensablement, restauration des dunes et des **mangroves** — ces dernières étant les meilleures protections naturelles contre les tempêtes.`,
           },
           questions: [
             ['Quelle part de l’humanité vit à moins de 100 km d’une côte ?', ['Environ 60 %', 'Environ 20 %', 'Environ 90 %', 'Environ 40 %'], 0, 'C’est le processus de littoralisation.'],
@@ -1249,35 +1527,43 @@ Loi Littoral en France, **Conservatoire du littoral**, aires marines protégées
           axe: 'Le monde habité',
           lecon: {
             titre: 'Des foyers de peuplement et des vides',
-            cours: `## Un monde très inégalement peuplé
-La Terre compte environ **8 milliards** d’habitants, très inégalement répartis. Les **terres émergées** couvrent 30 % de la planète, et l’**écoumène** — la partie habitée en permanence — n’en représente qu’une fraction.
+            cours: `Huit milliards d’humains, et des vides immenses. La répartition de la population n’a rien d’uniforme.
+
+## Un monde très inégalement peuplé
+= La Terre compte environ 8 milliards d’habitants
+
+Les **terres émergées** couvrent 30 % de la planète, et l’**écoumène** — la partie habitée en permanence — n’en représente qu’une fraction.
 
 ## Les grands foyers de peuplement
-Trois concentrations majeures rassemblent plus de la moitié de l’humanité :
-- l’**Asie du Sud** (Inde, Pakistan, Bangladesh) ;
-- l’**Asie de l’Est** (Chine, Japon, Corées) ;
-- l’**Europe**.
-S’y ajoutent des foyers secondaires : nord-est des États-Unis, golfe de Guinée, vallée du Nil, Brésil littoral, Java.
+| Le foyer | |
+| L’**Asie du Sud** | Inde, Pakistan, Bangladesh |
+| L’**Asie de l’Est** | Chine, Japon, Corées |
+| L’**Europe** | |
+
+Ces trois concentrations rassemblent **plus de la moitié** de l’humanité. S’y ajoutent des foyers secondaires : nord-est des États-Unis, golfe de Guinée, vallée du Nil, Brésil littoral, Java.
 
 ## Les vides
-Les **déserts humains** correspondent aux grandes contraintes :
-- déserts chauds (Sahara, Arabie, Australie centrale) ;
-- déserts froids (Sibérie, Groenland, Antarctique) ;
-- hautes montagnes (Himalaya, Andes) ;
-- forêts denses (Amazonie, Congo).
+| Le désert humain | Ses exemples |
+| **Déserts chauds** | Sahara, Arabie, Australie centrale |
+| **Déserts froids** | Sibérie, Groenland, Antarctique |
+| **Hautes montagnes** | Himalaya, Andes |
+| **Forêts denses** | Amazonie, Congo |
 
 ## Les facteurs de la répartition
-- **Naturels** : climat tempéré, eau disponible, sols fertiles, relief accessible, proximité de la mer.
-- **Historiques** : les foyers anciens (vallées fluviales, berceaux de l’agriculture) sont restés peuplés.
-- **Économiques** : les villes, les ports et les régions industrielles attirent.
+| Le facteur | Ce qu’il apporte |
+| **Naturels** | Climat tempéré, eau, sols fertiles, relief accessible, proximité de la mer |
+| **Historiques** | Les foyers anciens sont restés peuplés |
+| **Économiques** | Villes, ports et régions industrielles attirent |
 
-> La géographie n’explique pas tout : la vallée du Nil est peuplée depuis 5 000 ans, et c’est cette histoire, autant que le fleuve, qui explique sa densité d’aujourd’hui.
+> La géographie n’explique pas tout : la vallée du Nil est peuplée depuis 5 000 ans, et c’est cette **histoire**, autant que le fleuve, qui explique sa densité d’aujourd’hui.
 
 ## Lire une carte de densité
-Une **carte de densité** emploie des **aplats de couleur** : plus la teinte est foncée, plus la densité est forte. Il faut toujours lire la **légende** : deux cartes aux couleurs semblables peuvent utiliser des seuils très différents.
+~ Repérer les aplats de couleur → LIRE LA LÉGENDE → comparer
+
+!> Deux cartes aux couleurs semblables peuvent utiliser des **seuils très différents**. Sans la légende, une carte de densité ne se lit pas.
 
 ## Un phénomène qui bouge
-La répartition évolue : l’**urbanisation** concentre, les **migrations** déplacent, et la croissance démographique est aujourd’hui très inégale selon les régions.`,
+L’**urbanisation** concentre, les **migrations** déplacent, et la croissance démographique est très inégale selon les régions.`,
           },
           questions: [
             ['Combien la Terre compte-t-elle d’habitants ?', ['Environ 8 milliards', 'Environ 5 milliards', 'Environ 10 milliards', 'Environ 1 milliard'], 0, 'Ils sont très inégalement répartis.'],
@@ -1295,31 +1581,45 @@ La répartition évolue : l’**urbanisation** concentre, les **migrations** dé
           axe: 'Le monde habité',
           lecon: {
             titre: 'Naître, mourir, partir',
-            cours: `## Les deux moteurs
-La population d’un territoire varie sous l’effet de deux mouvements :
-- l’**accroissement naturel** = **natalité − mortalité** ;
-- le **solde migratoire** = **entrées − sorties**.
-La somme des deux donne la variation totale.
+            cours: `La population mondiale n’a pas explosé parce qu’on faisait plus d’enfants. Elle a explosé parce qu’on mourait moins.
+
+## Les deux moteurs
+= Accroissement naturel = natalité − mortalité
+
+= Solde migratoire = entrées − sorties
+
+La somme des deux donne la variation totale d’un territoire.
 
 ## Une croissance historique
-1 milliard d’humains vers 1800, 2,5 milliards en 1950, **8 milliards** aujourd’hui. Cette accélération s’explique surtout par l’**effondrement de la mortalité** — médecine, vaccins, eau potable, alimentation — bien avant la baisse de la natalité.
+@ Vers 1800 — 1 milliard d’humains
+@ 1950 — 2,5 milliards
+@ Aujourd’hui — 8 milliards
 
 ## La transition démographique
-C’est le passage d’un régime **ancien** (forte natalité, forte mortalité, population stable) à un régime **moderne** (faible natalité, faible mortalité, population stable à un niveau plus élevé). Entre les deux, la mortalité baisse **avant** la natalité : la population **explose**.
-Tous les pays ne sont pas au même stade — c’est ce décalage qui explique l’essentiel des différences actuelles.
+| Le régime | La natalité | La mortalité | La population |
+| **Ancien** | Forte | Forte | Stable |
+| **En transition** | Forte | **Elle chute** | Elle **explose** |
+| **Moderne** | Faible | Faible | Stable, à un niveau plus élevé |
+
+!> La clé est le **décalage** : la mortalité baisse **avant** la natalité. C’est entre les deux que la population explose — et tous les pays n’en sont pas au même stade.
 
 > La croissance démographique n’est pas venue d’un excès de naissances, mais d’un recul de la mort. Ce n’est pas la même histoire.
 
 ## Aujourd’hui : des situations opposées
-- L’**Afrique subsaharienne** connaît une forte croissance ; sa population pourrait doubler d’ici 2050. Sa population est très **jeune**.
-- L’**Europe**, le **Japon** et de plus en plus la **Chine** voient leur population **vieillir**, voire diminuer. Enjeux : retraites, santé, main-d’œuvre.
+| La région | Sa situation |
+| L’**Afrique subsaharienne** | Forte croissance, population très **jeune** ; elle pourrait doubler d’ici 2050 |
+| L’**Europe**, le **Japon**, de plus en plus la **Chine** | Population qui **vieillit**, voire diminue. Enjeux : retraites, santé, main-d’œuvre |
 
 ## Les migrations
-Environ **280 millions** de personnes vivent hors de leur pays de naissance, soit 3,5 % de l’humanité. Les causes sont économiques, politiques (guerres, persécutions), familiales, et de plus en plus environnementales.
-La majorité des migrations se font **entre pays voisins**, et non des pays pauvres vers les pays riches — c’est l’idée reçue la plus répandue.
+= Environ 280 millions de personnes vivent hors de leur pays de naissance, soit 3,5 % de l’humanité
+
+!> **La majorité des migrations se font entre pays voisins**, et non des pays pauvres vers les pays riches. C’est l’idée reçue la plus répandue du chapitre.
 
 ## Les indicateurs
-**Taux de natalité** et **de mortalité** (pour 1 000 habitants), **indice de fécondité** (enfants par femme ; le seuil de renouvellement est **2,1**), **espérance de vie**.`,
+| L’indicateur | Comment il se compte |
+| **Taux de natalité** et **de mortalité** | Pour 1 000 habitants |
+| **Indice de fécondité** | Enfants par femme ; seuil de renouvellement : **2,1** |
+| **Espérance de vie** | En années |`,
           },
           questions: [
             ['Comment calcule-t-on l’accroissement naturel ?', ['Natalité − mortalité', 'Entrées − sorties', 'Natalité + mortalité', 'Population totale ÷ superficie'], 0, 'Le solde migratoire est entrées moins sorties.'],
@@ -1337,34 +1637,42 @@ La majorité des migrations se font **entre pays voisins**, et non des pays pauv
           axe: 'Le monde habité',
           lecon: {
             titre: 'Toutes les façons d’habiter la Terre',
-            cours: `## Habiter, un verbe large
-**Habiter**, en géographie, ne signifie pas seulement « loger ». C’est **occuper**, **pratiquer**, **aménager** et **se représenter** un espace : y dormir, y travailler, s’y déplacer, s’y divertir, y tenir à quelque chose.
+            cours: `Habiter, en géographie, ce n’est pas seulement loger : c’est occuper, pratiquer, aménager et se représenter un espace.
+
+## Habiter, un verbe large
+~ Y dormir → y travailler → s’y déplacer → s’y divertir → y tenir
 
 ## Les grandes formes d’occupation
-- **L’espace urbain** : forte densité, bâti continu, activités de services. De la petite ville à la mégapole.
-- **L’espace périurbain** : entre ville et campagne, maisons individuelles, dépendance à la ville pour l’emploi.
-- **L’espace rural** : faible densité, agriculture, forêts, villages.
-- **Les espaces de très faible densité** : déserts, hautes montagnes, forêts denses, régions polaires.
+| L’espace | Ses caractères |
+| **Urbain** | Forte densité, bâti continu, services. De la petite ville à la mégapole |
+| **Périurbain** | Entre ville et campagne, maisons individuelles, emploi en ville |
+| **Rural** | Faible densité, agriculture, forêts, villages |
+| De **très faible densité** | Déserts, hautes montagnes, forêts denses, régions polaires |
 
 ## Les formes d’habitat
-- **Groupé** : village dense autour d’une place ou d’une église.
-- **Dispersé** : fermes isolées (bocage de l’Ouest français).
-- **Linéaire** : le long d’une route, d’un fleuve ou d’une côte.
+| La forme | Ce qu’elle est | Où |
+| **Groupé** | Village dense autour d’une place ou d’une église | |
+| **Dispersé** | Fermes isolées | Le bocage de l’Ouest français |
+| **Linéaire** | Le long d’une route, d’un fleuve ou d’une côte | |
+
 Ces formes s’expliquent par l’histoire, l’agriculture pratiquée et le relief.
 
 ## Ce qui relie ces espaces
-Aucun n’est isolé. Ils sont liés par des **réseaux** : routes, voies ferrées, lignes aériennes, câbles numériques, réseaux électriques. La ville dépend des campagnes pour se nourrir ; les campagnes dépendent de la ville pour les services.
+Routes, voies ferrées, lignes aériennes, câbles numériques, réseaux électriques.
 
-> Il n’existe pas d’espace autosuffisant : la géographie est d’abord une affaire de relations.
+~ La ville dépend des campagnes pour se nourrir → les campagnes dépendent de la ville pour les services
+
+> Il n’existe pas d’espace autosuffisant : la géographie est d’abord une affaire de **relations**.
 
 ## Des espaces qui se transforment
-- **Urbanisation** : la ville gagne du terrain.
-- **Périurbanisation** : elle s’étale sur les campagnes proches.
-- **Déprise** : certains espaces se vident et les friches gagnent.
-- **Métropolisation** : les fonctions rares se concentrent dans quelques très grandes villes.
+| Le mot | Ce qu’il désigne |
+| **Urbanisation** | La ville gagne du terrain |
+| **Périurbanisation** | Elle s’étale sur les campagnes proches |
+| **Déprise** | Certains espaces se vident, les friches gagnent |
+| **Métropolisation** | Les fonctions rares se concentrent dans quelques très grandes villes |
 
 ## Habiter demain
-Les enjeux se rejoignent partout : limiter l’étalement, réduire les émissions liées aux déplacements, préserver les terres agricoles, adapter les territoires au changement climatique, et maintenir des services accessibles à tous — y compris là où il y a peu d’habitants.`,
+Limiter l’étalement, réduire les émissions liées aux déplacements, préserver les terres agricoles, adapter les territoires au changement climatique, et **maintenir des services accessibles à tous** — y compris là où il y a peu d’habitants.`,
           },
           questions: [
             ['Que signifie « habiter » en géographie ?', ['Occuper, pratiquer, aménager et se représenter un espace', 'Uniquement y avoir son logement', 'Y être né', 'Y travailler seulement'], 0, 'Le verbe est bien plus large que « loger ».'],

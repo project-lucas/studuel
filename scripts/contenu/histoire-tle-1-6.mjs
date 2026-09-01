@@ -221,21 +221,35 @@ de Terminale, tels que les porte deja l'en-tete de scripts/contenu/geographie-tl
           axe: 'L’impact de la crise de 1929 : déséquilibres économiques et sociaux',
           lecon: {
             titre: 'Les Roaring Twenties, et ce qu’elles cachent',
-            cours: `Les années 1920 américaines sont celles de la prospérité, de la consommation de masse et de la spéculation. Elles portent aussi, dès le départ, les déséquilibres qui feront la crise.
+            cours: `Les années 1920 américaines sont celles de la prospérité, de la consommation de masse et de la spéculation. Elles portent aussi, **dès le départ**, les déséquilibres qui feront la crise.
 
 ## Une économie de la production de masse
-Le **taylorisme** et le **fordisme** (chaîne de montage, standardisation, hauts salaires chez Ford) font chuter les coûts. L’automobile, l’électroménager et la radio se diffusent, soutenus par la **publicité** et surtout par le **crédit à la consommation** : on achète à tempérament ce qu’on ne peut pas payer comptant.
+| L’innovation | Ce qu’elle change |
+| Le **taylorisme** | Décomposer le travail : la productivité bondit |
+| Le **fordisme** | Chaîne de montage, standardisation, hauts salaires |
+| La **publicité** | Elle crée le désir du produit |
+| Le **crédit à la consommation** | On achète à tempérament ce qu’on ne peut pas payer comptant |
+
+Automobile, électroménager et radio se diffusent dans une large part de la société.
 
 ## Les États-Unis, créanciers du monde
-Sortis renforcés de la Grande Guerre, ils prêtent à l’Europe et financent le plan **Dawes** (1924), qui permet à l’Allemagne de payer ses réparations, donc aux Alliés de rembourser Washington. Toute l’économie mondiale dépend de ce circuit de capitaux américains.
+Sortis renforcés de la Grande Guerre, ils prêtent à l’Europe et financent le plan **Dawes** (1924).
 
-> Une prospérité financée à crédit tient tant que la confiance tient : c’est ce fil-là qui casse en 1929.
+| Étape du circuit | Ce qui circule |
+| Les États-Unis prêtent à l’Allemagne | Des capitaux américains |
+| L’Allemagne paie ses **réparations** | Aux Alliés |
+| Les Alliés remboursent Washington | Les mêmes capitaux, revenus |
+
+> Toute l’économie mondiale dépend de ce **circuit unique**. Une prospérité financée à crédit tient tant que la confiance tient : c’est ce fil-là qui casse en 1929.
 
 ## Les déséquilibres
-Les salaires progressent moins vite que la productivité : la consommation ne suit pas la production. L’agriculture est en surproduction et en crise dès le début de la décennie. Surtout, la **spéculation boursière** s’emballe : on achète des actions à crédit (achat sur marge), en pariant sur une hausse continue.
+| Le déséquilibre | Ce qu’il annonce |
+| Les salaires progressent **moins vite** que la productivité | La consommation ne suivra pas la production |
+| L’**agriculture** est en surproduction dès le début de la décennie | Une partie du pays est déjà en crise |
+| La **spéculation** boursière s’emballe | L’achat sur marge parie sur une hausse **continue** |
 
 ## Une prospérité inégale
-Ouvriers agricoles, Noirs du Sud, immigrés récents restent à l’écart. Derrière l’image des « années folles », une partie des Américains ne connaît jamais la prospérité.`,
+Ouvriers agricoles, Noirs du Sud, immigrés récents restent à l’écart. Derrière l’image des « années folles », une partie des Américains ne connaît **jamais** la prospérité.`,
           },
           questions: [
             ['Qu’est-ce que le fordisme ?', ['Une organisation à la chaîne avec standardisation et hauts salaires', 'Un système bancaire', 'Une politique fiscale', 'Un mouvement syndical'], 0, 'Henry Ford paie mieux ses ouvriers pour qu’ils achètent ses voitures.'],
@@ -253,21 +267,39 @@ Ouvriers agricoles, Noirs du Sud, immigrés récents restent à l’écart. Derr
           axe: 'L’impact de la crise de 1929 : déséquilibres économiques et sociaux',
           lecon: {
             titre: 'Du krach de Wall Street à la Grande Dépression',
-            cours: `Une crise boursière new-yorkaise devient, en trois ans, la plus grave crise économique du siècle — et elle devient mondiale parce que le monde vit du crédit américain.
+            cours: `Une crise boursière new-yorkaise devient, en trois ans, la plus grave crise économique du siècle. Et elle devient mondiale pour une raison précise : le monde vit du **crédit américain**.
 
 ## Le krach
-Le **jeudi noir** (24 octobre 1929) puis le mardi 29 voient s’effondrer les cours de Wall Street. Les achats sur marge obligent à vendre pour rembourser : la baisse s’auto-entretient. L’indice perd près de 90 % de sa valeur entre 1929 et 1932.
+| Date | L’événement |
+| **24 octobre 1929** | Le « jeudi noir » : effondrement des cours |
+| 29 octobre 1929 | Le mardi noir |
+| 1929-1932 | L’indice perd près de **90 %** de sa valeur |
 
-## L’enchaînement
-Les banques, engagées en Bourse et incapables de récupérer leurs prêts, font faillite par milliers (**panique bancaire** : chacun veut retirer ses dépôts). Le crédit se ferme, les entreprises licencient, la consommation s’effondre, d’autres entreprises ferment : c’est la **spirale déflationniste**.
+Les achats sur marge obligent à **vendre pour rembourser** : la baisse s’auto-entretient. C’est le mécanisme même qui avait porté la hausse.
 
-> Une crise devient mondiale quand ceux qui prêtaient au monde rapatrient leur argent : c’est ce que font les banques américaines dès 1929.
+## L’enchaînement, étape par étape
+1. Les **banques**, engagées en Bourse, ne récupèrent pas leurs prêts.
+2. **Panique bancaire** : chacun veut retirer ses dépôts, des milliers de banques font faillite.
+3. Le **crédit se ferme**.
+4. Les entreprises **licencient**.
+5. La **consommation s’effondre**, d’autres entreprises ferment.
+6. Retour à l’étape 3 : c’est la **spirale déflationniste**.
 
 ## La contagion mondiale
-Retrait des capitaux américains d’Europe, faillite de la banque autrichienne **Creditanstalt** (1931), chute du commerce international, montée du **protectionnisme** (tarif Hawley-Smoot, 1930), dévaluations en chaîne, abandon de l’étalon-or. L’Allemagne, la plus dépendante des prêts américains, est la plus violemment touchée.
+| Le mécanisme | L’effet |
+| Retrait des capitaux américains d’Europe | L’Europe est asphyxiée |
+| Faillite de la **Creditanstalt** autrichienne (1931) | La panique gagne le continent |
+| **Protectionnisme** : tarif Hawley-Smoot (1930) | Le commerce international s’effondre |
+| Dévaluations en chaîne, abandon de l’étalon-or | Chacun tente de s’en sortir seul |
+
+> Une crise devient mondiale quand ceux qui **prêtaient au monde** rapatrient leur argent. C’est exactement ce que font les banques américaines dès 1929 — et l’Allemagne, la plus dépendante de ces prêts, est la plus violemment touchée.
 
 ## Le coût humain
-Environ 12 à 15 millions de chômeurs aux États-Unis (un quart de la population active), 6 millions en Allemagne en 1932. Faim, expulsions, bidonvilles (« Hoovervilles »), exode des fermiers du Dust Bowl. La crise nourrit partout la contestation des régimes en place.`,
+| Pays | Chômeurs en 1932 |
+| États-Unis | **12 à 15 millions**, soit un quart de la population active |
+| Allemagne | **6 millions** |
+
+Faim, expulsions, bidonvilles surnommés « Hoovervilles », exode des fermiers du Dust Bowl. Partout, la crise nourrit la **contestation des régimes en place**.`,
           },
           questions: [
             ['Quelle date marque le début du krach de Wall Street ?', ['Le 24 octobre 1929', 'Le 3 septembre 1929', 'Le 11 novembre 1929', 'Le 1er janvier 1930'], 0, 'Le « jeudi noir », suivi du mardi 29 octobre.'],
@@ -287,19 +319,40 @@ Environ 12 à 15 millions de chômeurs aux États-Unis (un quart de la populatio
             titre: 'Trois réponses : le New Deal, le Front populaire, l’économie de guerre',
             cours: `Partout, la crise oblige l’État à intervenir dans l’économie. Mais les réponses diffèrent — et certaines conduisent à la démocratie sociale, d’autres à la dictature.
 
-## Le New Deal américain
-Élu en 1932, **Franklin D. Roosevelt** rompt avec le libéralisme classique. Réforme bancaire (Glass-Steagall), dévaluation du dollar, grands travaux (**TVA**, Works Progress Administration), soutien aux prix agricoles, reconnaissance des syndicats (Wagner Act, 1935), **Social Security Act** (1935). L’État devient un acteur économique permanent — c’est l’esprit des théories de **Keynes**.
+## Les trois réponses
+| | **New Deal** américain | **Front populaire** français | **Économie de guerre** nazie |
+| Qui | Roosevelt, à partir de 1933 | Coalition SFIO-radicaux-communistes, 1936 | Hitler, à partir de 1933 |
+| Le moyen | Grands travaux, régulation, droits sociaux | Hausse des salaires, droits sociaux | Grands travaux, autarcie, **réarmement** |
+| Le régime | Démocratie renforcée | Démocratie renforcée | Dictature |
+| Le débouché | L’État régulateur permanent | Des acquis sociaux durables | La **guerre** |
 
-## Le Front populaire français
-La crise arrive plus tard en France mais dure. En 1936, la coalition SFIO-radicaux-communistes gagne les élections ; les grèves avec occupation d’usines débouchent sur les **accords Matignon** : hausse des salaires, **congés payés** (deux semaines), **semaine de 40 heures**, conventions collectives. La relance échoue en partie (dévaluation, fuite des capitaux), mais les acquis sociaux restent.
+## Le New Deal
+**Franklin D. Roosevelt** rompt avec le libéralisme classique.
 
-> Face à la même crise, les démocraties élargissent les droits, les dictatures suppriment les libertés : c’est la comparaison que le chapitre demande de tenir.
+| Mesure | Ce qu’elle fait |
+| Glass-Steagall | Sépare banques de dépôt et d’affaires |
+| Dévaluation du dollar | Relance les exportations |
+| **TVA**, Works Progress Administration | Grands travaux, emplois publics |
+| **Wagner Act** (1935) | Reconnaît les syndicats |
+| **Social Security Act** (1935) | Fonde la protection sociale fédérale |
 
-## L’Allemagne nazie et l’économie de guerre
-Hitler résorbe le chômage par les grands travaux, l’**autarcie** et surtout le **réarmement** massif. Le plan de quatre ans (1936) prépare ouvertement la guerre : l’économie est mise au service de la conquête.
+L’État devient un acteur économique **permanent** — c’est l’esprit des théories de **Keynes**.
+
+## Le Front populaire
+Les grèves avec occupation d’usines débouchent sur les **accords Matignon**.
+
+| Acquis | Portée |
+| Hausse des salaires | Immédiate |
+| **Congés payés** — deux semaines | Durable |
+| Semaine de **40 heures** | Durable |
+| Conventions collectives | Durable |
+
+La relance échoue en partie — dévaluation, fuite des capitaux — mais les **acquis sociaux restent**.
+
+> Face à la **même** crise, les démocraties élargissent les droits, les dictatures suppriment les libertés. C’est la comparaison que le chapitre demande de tenir jusqu’au bout.
 
 ## Le bilan
-Partout, l’État régule davantage. Mais la crise a affaibli les démocraties libérales et fourni aux régimes autoritaires leur meilleur argument.`,
+Partout, l’État régule davantage. Mais la crise a **affaibli** les démocraties libérales et fourni aux régimes autoritaires leur meilleur argument : l’efficacité contre le désordre.`,
           },
           questions: [
             ['Qui lance le New Deal aux États-Unis ?', ['Franklin D. Roosevelt', 'Herbert Hoover', 'Harry Truman', 'Woodrow Wilson'], 0, 'Élu en 1932, il entre en fonction en mars 1933.'],
@@ -320,21 +373,46 @@ Partout, l’État régule davantage. Mais la crise a affaibli les démocraties 
           axe: 'Les régimes totalitaires',
           lecon: {
             titre: 'D’un parti marginal à un État raciste',
-            cours: `En quatorze ans, un petit parti d’extrême droite devient le maître absolu de l’Allemagne. La crise lui donne son public, la légalité lui donne le pouvoir, la terreur le lui conserve.
+            cours: `En quatorze ans, un petit parti d’extrême droite devient le maître absolu de l’Allemagne. La **crise** lui donne son public, la **légalité** lui donne le pouvoir, la **terreur** le lui conserve.
 
 ## La République de Weimar fragilisée
-Née de la défaite, la République de Weimar traîne l’humiliation de Versailles, l’hyperinflation de 1923, et surtout la crise de 1929 : 6 millions de chômeurs en 1932. Le **NSDAP** passe de 2,6 % des voix en 1928 à 37 % en juillet 1932.
+| Le fardeau | Ce qu’il produit |
+| L’humiliation de **Versailles** | Le régime naît de la défaite |
+| L’**hyperinflation** de 1923 | Les classes moyennes ruinées |
+| La crise de **1929** | 6 millions de chômeurs en 1932 |
+
+| Élection | Score du **NSDAP** |
+| 1928 | **2,6 %** |
+| Juillet 1932 | **37 %** |
 
 ## L’accession au pouvoir
-Hitler est nommé **chancelier le 30 janvier 1933** — légalement, par le président Hindenburg. L’incendie du Reichstag (février) sert de prétexte à la suspension des libertés ; les **pleins pouvoirs** (mars 1933) achèvent le processus. Partis et syndicats sont interdits, la « nuit des Longs Couteaux » (1934) élimine les rivaux internes, et à la mort d’Hindenburg, Hitler devient **Reichsführer**.
+| Date | L’étape |
+| **30 janvier 1933** | Hitler nommé **chancelier**, légalement, par Hindenburg |
+| Février 1933 | L’**incendie du Reichstag** sert de prétexte à suspendre les libertés |
+| Mars 1933 | Les **pleins pouvoirs** achèvent le processus |
+| 1933-1934 | Partis et syndicats interdits ; « nuit des Longs Couteaux » |
+| Août 1934 | Mort d’Hindenburg : Hitler devient **Reichsführer** |
 
-> Le nazisme n’a pas pris le pouvoir par un coup d’État : il l’a reçu, puis a détruit de l’intérieur les règles qui le lui avaient donné.
+> Le nazisme n’a **pas** pris le pouvoir par un coup d’État : il l’a **reçu**, puis a détruit de l’intérieur les règles qui le lui avaient donné. C’est ce qui en fait un cas d’étude pour toute démocratie.
 
 ## L’encadrement de la société
-Parti unique, **Gestapo** et SS, camps de concentration dès 1933 (Dachau), **propagande** de Goebbels, embrigadement de la jeunesse (Jeunesses hitlériennes), culture et sport mis au service du régime (**Jeux de Berlin**, 1936).
+| Instrument | Sa fonction |
+| Parti unique | Aucune alternative politique |
+| **Gestapo** et SS | La terreur policière |
+| Camps de concentration dès 1933 (Dachau) | L’élimination des opposants |
+| Propagande de **Goebbels** | Le contrôle de l’information |
+| **Jeunesses hitlériennes** | L’embrigadement de la jeunesse |
+| **Jeux de Berlin** (1936) | La vitrine internationale |
 
 ## L’idéologie raciste
-La « race aryenne », l’**espace vital** (Lebensraum), l’antisémitisme d’État : les **lois de Nuremberg** (1935) excluent les Juifs de la citoyenneté, la **Nuit de Cristal** (novembre 1938) marque le passage à la violence de masse.`,
+| Notion | Ce qu’elle sert |
+| La « race aryenne » | Hiérarchiser l’humanité |
+| L’**espace vital** (*Lebensraum*) | Justifier la conquête à l’est |
+| L’antisémitisme d’État | Désigner un ennemi intérieur |
+
+| Date | L’étape |
+| **1935** | Lois de **Nuremberg** : les Juifs exclus de la citoyenneté |
+| Novembre **1938** | **Nuit de Cristal** : passage à la violence de masse |`,
           },
           questions: [
             ['Quand Hitler devient-il chancelier ?', ['Le 30 janvier 1933', 'En novembre 1923', 'En août 1934', 'En septembre 1939'], 0, 'Il est nommé légalement par le président Hindenburg.'],
@@ -352,21 +430,42 @@ La « race aryenne », l’**espace vital** (Lebensraum), l’antisémitisme d�
           axe: 'Les régimes totalitaires',
           lecon: {
             titre: 'Le premier des totalitarismes, et le moins abouti',
-            cours: `Le fascisme italien précède le nazisme de plus de dix ans et lui sert de modèle. Mais il ne parvient jamais à contrôler la société aussi complètement.
+            cours: `Le fascisme italien **précède** le nazisme de plus de dix ans et lui sert de modèle. Mais il ne parvient jamais à contrôler la société aussi complètement.
 
 ## La prise du pouvoir
-L’Italie sort de la Grande Guerre frustrée (la « **victoire mutilée** »), agitée par les grèves du « biennio rosso ». **Mussolini** fonde les Faisceaux de combat en 1919 ; ses **chemises noires** attaquent socialistes et syndicats. La **marche sur Rome** (octobre 1922) conduit le roi Victor-Emmanuel III à le nommer chef du gouvernement.
+| Date | L’étape |
+| 1919 | La « **victoire mutilée** » : l’Italie sort frustrée de la guerre |
+| 1919-1920 | Le « biennio rosso » : grèves et occupations |
+| 1919 | **Mussolini** fonde les Faisceaux de combat |
+| 1920-1922 | Les **chemises noires** attaquent socialistes et syndicats |
+| Octobre **1922** | La **marche sur Rome** : le roi le nomme chef du gouvernement |
 
 ## La construction de la dictature
-Loi électorale sur mesure (1923), assassinat du député **Matteotti** (1924), lois « fascistissimes » (1925-1926) : parti unique, presse contrôlée, police politique (**OVRA**), tribunal spécial. Mussolini devient le **Duce**.
+| Date | La mesure |
+| 1923 | Loi électorale sur mesure |
+| 1924 | Assassinat du député **Matteotti** |
+| 1925-1926 | Lois « fascistissimes » : parti unique, presse contrôlée, **OVRA**, tribunal spécial |
 
-> Le fascisme invente le vocabulaire et la mise en scène du totalitarisme ; le nazisme en poussera la logique jusqu’au crime de masse.
+Mussolini devient le **Duce**.
 
-## L’encadrement et les limites
-Embrigadement de la jeunesse (Balilla), loisirs organisés (Dopolavoro), culte du chef, corporatisme économique. Mais deux pouvoirs subsistent : la **monarchie**, qui reste en place et destituera Mussolini en 1943, et l’**Église**, avec laquelle il signe les **accords du Latran** (1929).
+> Le fascisme **invente** le vocabulaire et la mise en scène du totalitarisme — le chef, la foule, l’uniforme. Le nazisme en poussera la logique jusqu’au crime de masse.
+
+## L’encadrement, et ses limites
+| Instrument d’encadrement | Ce qui lui résiste |
+| Balilla : la jeunesse | La **monarchie**, qui reste en place |
+| Dopolavoro : les loisirs | L’**Église**, avec laquelle il signe les **accords du Latran** (1929) |
+| Culte du chef, corporatisme | |
+
+C’est le roi Victor-Emmanuel III qui **destituera** Mussolini en 1943 : la persistance de ces deux pouvoirs est ce qui distingue le fascisme italien du nazisme.
 
 ## L’expansion et l’alignement
-Conquête de l’Éthiopie (1935-1936), intervention en Espagne, lois raciales de 1938 imitées de l’Allemagne, puis Axe Rome-Berlin et pacte d’Acier (1939) : l’Italie fasciste finit satellite du Reich.`,
+| Date | L’événement |
+| 1935-1936 | Conquête de l’**Éthiopie** |
+| 1936-1939 | Intervention en Espagne |
+| **1938** | Lois raciales, imitées de l’Allemagne |
+| 1936 puis 1939 | Axe Rome-Berlin, puis pacte d’Acier |
+
+L’Italie fasciste finit **satellite** du Reich.`,
           },
           questions: [
             ['Quel épisode porte Mussolini au pouvoir en 1922 ?', ['La marche sur Rome', 'Le putsch de Munich', 'La révolution d’Octobre', 'Le coup d’État du 2 décembre'], 0, 'Le roi le nomme chef du gouvernement plutôt que de résister.'],
@@ -384,21 +483,38 @@ Conquête de l’Éthiopie (1935-1936), intervention en Espagne, lois raciales d
           axe: 'Les régimes totalitaires',
           lecon: {
             titre: 'De la révolution au pouvoir absolu',
-            cours: `L’URSS est le premier État à se dire socialiste. En vingt ans, la révolution de 1917 devient un système de parti unique, d’économie planifiée et de terreur d’État.
+            cours: `L’URSS est le premier État à se dire socialiste. En vingt ans, la révolution de 1917 devient un système de **parti unique**, d’**économie planifiée** et de **terreur d’État**.
 
 ## Lénine et la révolution
-Février 1917 renverse le tsar ; **octobre 1917** porte les **bolcheviks** au pouvoir. Suivent la guerre civile (1918-1921), le **communisme de guerre**, la Tcheka, puis la **NEP** (1921), retour partiel au marché pour relancer la production. L’URSS est fondée en 1922.
+| Date | L’étape |
+| Février 1917 | Le tsar est renversé |
+| **Octobre 1917** | Les **bolcheviks** prennent le pouvoir |
+| 1918-1921 | Guerre civile, **communisme de guerre**, Tcheka |
+| 1921 | La **NEP** : retour partiel au marché pour relancer la production |
+| 1922 | Fondation de l’URSS |
 
 ## Staline et la « révolution par en haut »
-À la mort de Lénine (1924), **Staline** écarte ses rivaux, dont Trotski. À partir de 1928-1929 : **collectivisation** forcée des terres (kolkhozes, sovkhozes), liquidation des **koulaks**, **plans quinquennaux** et industrialisation à marche forcée. La famine qui en résulte, notamment en Ukraine (**Holodomor**, 1932-1933), fait des millions de morts.
+À la mort de Lénine (1924), **Staline** écarte ses rivaux, dont Trotski. À partir de 1928-1929, il transforme le pays par la contrainte.
 
-> Ce régime ne se contente pas d’obéissance : il exige l’adhésion, et transforme la société tout entière au nom de l’avenir.
+| La mesure | Son effet |
+| **Collectivisation** forcée : kolkhozes, sovkhozes | La paysannerie perd ses terres |
+| Liquidation des **koulaks** | Déportations massives |
+| **Plans quinquennaux** | Industrialisation à marche forcée |
+| La famine qui en résulte, dont l’**Holodomor** ukrainien (1932-1933) | Des millions de morts |
+
+> Ce régime ne se contente pas d’**obéissance** : il exige l’**adhésion**, et prétend transformer la société entière au nom de l’avenir. C’est ce qui le range parmi les totalitarismes.
 
 ## La terreur
-**Grandes purges** de 1936-1938, procès de Moscou, NKVD, **Goulag** : des centaines de milliers d’exécutions et des millions de déportés. L’armée, le parti et l’administration sont décapités à la veille de la guerre.
+| Instrument | Ce qu’il produit |
+| **Grandes purges** de 1936-1938 | Des centaines de milliers d’exécutions |
+| Procès de Moscou | Des aveux publics arrachés |
+| **NKVD** | La police politique |
+| **Goulag** | Des millions de déportés |
+
+L’armée, le parti et l’administration sont **décapités à la veille de la guerre**.
 
 ## L’encadrement des esprits
-Culte de la personnalité, réalisme socialiste, Komsomols, réécriture de l’histoire et des photographies. La société est mobilisée en permanence par le parti unique.`,
+Culte de la personnalité, **réalisme socialiste** imposé aux artistes, Komsomols pour la jeunesse, réécriture de l’histoire — et des photographies, dont on efface les disgraciés. La société est mobilisée en permanence par le parti unique.`,
           },
           questions: [
             ['Quelle révolution porte les bolcheviks au pouvoir ?', ['Celle d’octobre 1917', 'Celle de février 1917', 'Celle de 1905', 'Celle de 1922'], 0, 'Février renverse le tsar, octobre porte Lénine au pouvoir.'],
@@ -416,21 +532,35 @@ Culte de la personnalité, réalisme socialiste, Komsomols, réécriture de l’
           axe: 'Les régimes totalitaires',
           lecon: {
             titre: 'Ce qu’ils ont en commun, ce qui les sépare',
-            cours: `Nazisme, fascisme et stalinisme sont trois régimes différents. Le concept de **totalitarisme** sert à décrire ce qu’ils partagent — sans effacer ce qui les oppose.
+            cours: `Nazisme, fascisme et stalinisme sont trois régimes **différents**. Le concept de **totalitarisme** sert à décrire ce qu’ils partagent — sans effacer ce qui les oppose.
 
 ## Les traits communs
-Un **parti unique** fusionné avec l’État ; un **chef** objet d’un culte ; une **idéologie officielle** qui prétend expliquer le monde entier ; une **propagande** de masse et le contrôle de l’information ; une **police politique** et la terreur ; l’**embrigadement** de la jeunesse et des loisirs ; la volonté de créer un **homme nouveau** et une économie dirigée par l’État.
+| Trait | Ce qu’il implique |
+| Un **parti unique** fusionné avec l’État | Aucune alternative possible |
+| Un **chef** objet d’un culte | Le pouvoir se personnalise |
+| Une **idéologie officielle** | Elle prétend expliquer le monde entier |
+| Une **propagande** de masse | Le monopole de l’information |
+| Une **police politique** | La terreur comme mode de gouvernement |
+| L’**embrigadement** de la jeunesse et des loisirs | Aucun espace privé |
+| Un **homme nouveau** à créer | La société entière est l’objet du projet |
+| Une économie **dirigée** | L’État commande la production |
 
-> Un régime autoritaire exige l’obéissance ; un régime totalitaire exige l’adhésion, et prétend transformer l’individu lui-même.
+> Un régime **autoritaire** exige l’**obéissance** ; un régime **totalitaire** exige l’**adhésion**, et prétend transformer l’individu lui-même. C’est la distinction à poser d’entrée.
 
 ## Les différences
-L’idéologie nazie est **raciale** et vise l’extermination ; l’idéologie soviétique est **de classe** et se dit universaliste ; le fascisme italien est **nationaliste** et reste bridé par la monarchie et l’Église. Les buts diffèrent : conquête d’un espace vital, révolution mondiale, restauration de la grandeur romaine.
+| | Nazisme | Stalinisme | Fascisme italien |
+| L’idéologie | **Raciale** | **De classe** | **Nationaliste** |
+| Sa portée affichée | Hiérarchie des races | Universaliste | La grandeur romaine |
+| Le but | L’espace vital, l’extermination | La révolution mondiale | La restauration nationale |
+| Les contre-pouvoirs subsistants | Aucun | Aucun | **Monarchie** et **Église** |
 
 ## Les usages du concept
-Forgé dans les années 1920-1930, popularisé par Hannah Arendt (1951), le mot **totalitarisme** a été critiqué : il rapproche des régimes que tout n’unit pas, et a servi d’argument politique pendant la guerre froide. Il reste utile pour comparer, à condition de ne pas confondre.
+Forgé dans les années 1920-1930, popularisé par **Hannah Arendt** (1951), le mot a été critiqué : il rapproche des régimes que tout n’unit pas, et il a servi d’argument politique pendant la guerre froide.
+
+Il reste **utile pour comparer**, à condition de ne pas confondre.
 
 ## Les démocraties face à eux
-Divisées, affaiblies par la crise, elles pratiquent l’**apaisement** (accords de Munich, 1938) avant de comprendre que les régimes totalitaires ne se satisfont d’aucune concession.`,
+Divisées, affaiblies par la crise, elles pratiquent l’**apaisement** — accords de **Munich**, 1938 — avant de comprendre que les régimes totalitaires ne se satisfont d’**aucune** concession.`,
           },
           questions: [
             ['Quel trait est commun aux trois régimes totalitaires ?', ['Le parti unique fusionné avec l’État', 'L’idéologie raciale', 'La monarchie maintenue', 'L’économie de marché'], 0, 'Avec le culte du chef, la propagande et la police politique.'],
@@ -451,21 +581,44 @@ Divisées, affaiblies par la crise, elles pratiquent l’**apaisement** (accords
           axe: 'La Seconde Guerre mondiale',
           lecon: {
             titre: 'Six ans, deux basculements, une guerre d’anéantissement',
-            cours: `De 1939 à 1945, la guerre change d’échelle et de nature : elle devient mondiale, industrielle et idéologique — une guerre visant à anéantir l’adversaire, y compris ses civils.
+            cours: `De 1939 à 1945, la guerre change d’**échelle** et de **nature** : elle devient mondiale, industrielle et idéologique — une guerre visant à anéantir l’adversaire, **y compris ses civils**.
 
-## Les victoires de l’Axe (1939-1942)
-Après le **pacte germano-soviétique** (août 1939), l’invasion de la Pologne (1er septembre) déclenche la guerre. La **Blitzkrieg** écrase la Pologne, le Danemark, la Norvège, les Pays-Bas, la Belgique et la France (juin 1940). Restent la bataille d’Angleterre (1940), puis l’invasion de l’URSS (**Barbarossa**, juin 1941) et l’attaque japonaise de **Pearl Harbor** (décembre 1941), qui fait entrer les États-Unis.
+## Les trois phases
+| Phase | Dates | Ce qui la caractérise |
+| Les victoires de l’**Axe** | 1939-1942 | La *Blitzkrieg*, l’Europe conquise |
+| Le **tournant** | 1942-1943 | Stalingrad, El-Alamein, Midway |
+| La **victoire alliée** | 1943-1945 | Débarquements, offensives soviétiques |
 
-## Le tournant (1942-1943)
-**Stalingrad** (février 1943), **El-Alamein**, **Midway** : sur les trois théâtres, l’Axe est arrêté. La supériorité industrielle alliée devient décisive — les États-Unis produisent plus d’armes à eux seuls que toutes les puissances de l’Axe réunies.
+## Les victoires de l’Axe
+| Date | L’événement |
+| Août 1939 | **Pacte germano-soviétique** |
+| 1er septembre 1939 | Invasion de la Pologne : la guerre commence |
+| Mai-juin 1940 | Pays-Bas, Belgique, **France** |
+| 1940 | Bataille d’Angleterre : le premier échec |
+| Juin 1941 | **Barbarossa** : invasion de l’URSS |
+| Décembre 1941 | **Pearl Harbor** : les États-Unis entrent en guerre |
 
-> Cette guerre se gagne autant dans les usines que sur le front : c’est la définition même d’une guerre totale.
+## Le tournant
+| Bataille | Date | Théâtre |
+| **Stalingrad** | Février 1943 | Front de l’Est |
+| **El-Alamein** | Novembre 1942 | Afrique du Nord |
+| **Midway** | Juin 1942 | Pacifique |
 
-## La victoire alliée (1943-1945)
-Débarquements en Sicile (1943), en **Normandie** (6 juin 1944) et en Provence, offensives soviétiques à l’Est, capitulation allemande le **8 mai 1945**. Dans le Pacifique, les bombardements atomiques d’**Hiroshima et Nagasaki** (août 1945) précèdent la capitulation japonaise du 2 septembre.
+Sur les trois théâtres, l’Axe est arrêté la même année.
+
+> La supériorité **industrielle** alliée devient décisive : les États-Unis produisent à eux seuls plus d’armes que toutes les puissances de l’Axe réunies. Cette guerre se gagne autant dans les usines que sur le front — c’est la définition même d’une **guerre totale**.
+
+## La victoire alliée
+| Date | L’événement |
+| Juillet 1943 | Débarquement en Sicile |
+| **6 juin 1944** | Débarquement de **Normandie** |
+| Août 1944 | Débarquement de Provence |
+| **8 mai 1945** | Capitulation allemande |
+| Août 1945 | **Hiroshima** et **Nagasaki** |
+| 2 septembre 1945 | Capitulation japonaise |
 
 ## Un bilan sans précédent
-50 à 60 millions de morts, dont une majorité de **civils** ; villes détruites, économies ruinées, populations déplacées. Le crime de masse y a pris une place centrale.`,
+**50 à 60 millions de morts**, dont une **majorité de civils** — c’est l’inversion par rapport à 1914-1918. Villes détruites, économies ruinées, populations déplacées. Le crime de masse y a pris une place centrale.`,
           },
           questions: [
             ['Quel pacte précède l’invasion de la Pologne ?', ['Le pacte germano-soviétique d’août 1939', 'Le pacte d’Acier', 'Les accords de Munich', 'Le pacte anti-Komintern'], 0, 'Il partage secrètement l’Europe orientale entre Berlin et Moscou.'],
@@ -483,21 +636,40 @@ Débarquements en Sicile (1943), en **Normandie** (6 juin 1944) et en Provence, 
           axe: 'La Seconde Guerre mondiale',
           lecon: {
             titre: 'Vichy, l’Occupation, la Résistance',
-            cours: `En six semaines, la France s’effondre. Pendant quatre ans, deux France s’opposent : celle qui collabore et celle qui résiste.
+            cours: `En six semaines, la France s’effondre. Pendant quatre ans, **deux France** s’opposent : celle qui collabore et celle qui résiste.
 
-## La défaite et la fin de la République
-Offensive allemande le 10 mai 1940, percée de Sedan, exode de millions de civils, armistice du **22 juin 1940**. Le 10 juillet, l’Assemblée vote les pleins pouvoirs à **Pétain** : l’État français remplace la République.
+## La défaite
+| Date | L’étape |
+| 10 mai 1940 | Offensive allemande |
+| Mai 1940 | Percée de **Sedan** |
+| Mai-juin 1940 | **Exode** de millions de civils |
+| **22 juin 1940** | Armistice |
+| 10 juillet 1940 | L’Assemblée vote les pleins pouvoirs à **Pétain** |
+
+L’**État français** remplace la République.
 
 ## Le régime de Vichy
-« Travail, Famille, Patrie » : régime autoritaire, culte du chef, dissolution des syndicats et des partis, **Révolution nationale**, propagande. Il pratique la **collaboration** d’État (entrevue de **Montoire**, octobre 1940), livre des travailleurs (**STO**, 1943), crée la **Milice** (1943) et prend de sa propre initiative des mesures antisémites — **statut des Juifs** dès octobre 1940, **rafle du Vél d’Hiv** (juillet 1942) exécutée par la police française.
+« Travail, Famille, Patrie » : régime autoritaire, culte du chef, dissolution des syndicats et des partis, **Révolution nationale**, propagande.
 
-> Vichy n’a pas seulement subi l’occupant : il a devancé certaines de ses demandes. C’est ce que la France a mis cinquante ans à reconnaître officiellement (discours de Jacques Chirac, 1995).
+| Date | L’acte de Vichy | Ce qu’il révèle |
+| Octobre **1940** | **Statut des Juifs** | Pris **de sa propre initiative** |
+| Octobre 1940 | Entrevue de **Montoire** | La collaboration d’État |
+| Juillet **1942** | **Rafle du Vél d’Hiv** | Exécutée par la **police française** |
+| 1943 | **STO** | La France livre des travailleurs |
+| 1943 | Création de la **Milice** | La répression devient française |
+
+> Vichy n’a pas seulement **subi** l’occupant : il a **devancé** certaines de ses demandes. C’est ce que la France a mis cinquante ans à reconnaître officiellement — discours de Jacques Chirac, 1995.
 
 ## La Résistance
-**Appel du 18 juin 1940** de **de Gaulle** depuis Londres ; réseaux et mouvements en métropole ; **Jean Moulin** unifie la Résistance intérieure et crée le **CNR** (mai 1943), dont le programme prépare l’après-guerre. Les FFI participent aux combats de 1944.
+| Date | L’étape |
+| **18 juin 1940** | Appel de **de Gaulle** depuis Londres |
+| 1940-1942 | Réseaux et mouvements en métropole |
+| Mai **1943** | **Jean Moulin** unifie la Résistance et crée le **CNR** |
+| Mars 1944 | Le **programme du CNR** prépare l’après-guerre |
+| 1944 | Les **FFI** participent aux combats |
 
 ## La Libération
-Débarquements de juin et août 1944, insurrections, libération de Paris (août 1944). Le **GPRF** rétablit la République, épure, nationalise et accorde le **droit de vote aux femmes** (ordonnance d’avril 1944).`,
+Débarquements de juin et août 1944, insurrections, libération de Paris. Le **GPRF** rétablit la République, épure, nationalise — et accorde le **droit de vote aux femmes** par l’ordonnance d’avril 1944.`,
           },
           questions: [
             ['Quand l’armistice est-il signé entre la France et l’Allemagne ?', ['Le 22 juin 1940', 'Le 10 mai 1940', 'Le 3 septembre 1939', 'Le 11 novembre 1942'], 0, 'Il ouvre quatre années d’occupation.'],
@@ -515,21 +687,43 @@ Débarquements de juin et août 1944, insurrections, libération de Paris (août
           axe: 'La Seconde Guerre mondiale',
           lecon: {
             titre: 'Le génocide, et l’invention d’une justice internationale',
-            cours: `La Seconde Guerre mondiale n’est pas seulement plus meurtrière que la précédente : elle est marquée par un projet d’extermination, qui oblige ensuite le monde à inventer un droit nouveau.
+            cours: `La Seconde Guerre mondiale n’est pas seulement plus meurtrière que la précédente : elle est marquée par un **projet d’extermination**, qui oblige ensuite le monde à inventer un droit nouveau.
 
 ## La Shoah
-Le génocide des Juifs d’Europe fait environ **6 millions de morts**. Il se déroule en deux temps : les fusillades de masse des **Einsatzgruppen** à partir de 1941 (Babi Yar), puis la mise à mort industrielle dans les **centres d’extermination** (Chelmno, Belzec, Sobibor, Treblinka, **Auschwitz-Birkenau**), planifiée à la conférence de **Wannsee** (janvier 1942). Ghettos, déportations, travail forcé et sélection en sont les rouages.
+Le génocide des Juifs d’Europe fait environ **6 millions de morts**. Il se déroule en **deux temps**.
+
+| Temps | Méthode | Dates | Lieux |
+| 1 | Fusillades de masse des **Einsatzgruppen** | À partir de 1941 | Babi Yar, l’Est occupé |
+| 2 | Mise à mort **industrielle** | À partir de 1942 | Chelmno, Belzec, Sobibor, Treblinka, **Auschwitz-Birkenau** |
+
+La conférence de **Wannsee** (janvier 1942) en planifie la coordination administrative. Ghettos, déportations, travail forcé et sélection en sont les rouages.
 
 ## Les autres crimes
-Génocide des **Tsiganes** (Porajmos), assassinat des handicapés (programme T4), massacres de prisonniers soviétiques, représailles contre les civils (Oradour-sur-Glane), massacres japonais en Asie, expérimentations médicales.
+| Crime | Victimes |
+| Le **Porajmos** | Les Tsiganes |
+| Le programme **T4** | Les handicapés |
+| Les massacres de prisonniers | Soviétiques, en masse |
+| Les représailles contre les civils | **Oradour-sur-Glane** |
+| Les massacres japonais en Asie | Nankin, travail forcé |
+| Les expérimentations médicales | Détenus des camps |
 
-> Ce ne sont pas des dommages de guerre : ce sont des crimes planifiés, avec une administration, un budget et des horaires.
+> Ce ne sont **pas** des dommages de guerre : ce sont des crimes **planifiés**, avec une administration, un budget et des horaires. C’est ce caractère bureaucratique qui les distingue de toutes les violences antérieures.
 
 ## Juger
-Le procès de **Nuremberg** (1945-1946) juge les principaux dirigeants nazis et forge deux notions nouvelles : **crime contre l’humanité** et **crime contre la paix**. Le procès de Tokyo suit pour le Japon. Le principe est posé : l’obéissance à un ordre ne dédouane pas.
+| Procès | Dates | Ce qu’il forge |
+| **Nuremberg** | 1945-1946 | Les notions de **crime contre l’humanité** et de **crime contre la paix** |
+| Tokyo | 1946-1948 | La même logique pour le Japon |
+
+Le principe posé est décisif : **l’obéissance à un ordre ne dédouane pas**.
 
 ## Prévenir et se souvenir
-Convention de l’ONU sur le **génocide** (1948), Déclaration universelle des droits de l’homme (1948), **imprescriptibilité** des crimes contre l’humanité en France (1964). Mémoire, témoignages, musées et procès tardifs (Barbie, Touvier, Papon) prolongent ce travail jusqu’à aujourd’hui.`,
+| Date | Le texte ou l’acte |
+| **1948** | Convention de l’ONU sur le **génocide** |
+| 1948 | **Déclaration universelle** des droits de l’homme |
+| **1964** | **Imprescriptibilité** des crimes contre l’humanité en France |
+| 1987, 1994, 1998 | Procès Barbie, Touvier, Papon |
+
+Mémoire, témoignages, musées et procès tardifs prolongent ce travail jusqu’à aujourd’hui.`,
           },
           questions: [
             ['Combien de Juifs européens sont assassinés pendant la Shoah ?', ['Environ 6 millions', 'Environ 1 million', 'Environ 3 millions', 'Environ 10 millions'], 0, 'Soit environ les deux tiers des Juifs d’Europe.'],
@@ -552,19 +746,36 @@ Convention de l’ONU sur le **génocide** (1948), Déclaration universelle des 
             titre: 'Un monde à reconstruire, et à réorganiser',
             cours: `En 1945, l’Europe est ruinée et le centre du monde s’est déplacé. Les vainqueurs organisent la paix — et se divisent presque aussitôt.
 
-## Un bilan humain et matériel écrasant
-50 à 60 millions de morts, dont environ 26 millions pour la seule URSS. Villes détruites (Varsovie, Dresde, Hiroshima), infrastructures anéanties, production effondrée, millions de **personnes déplacées** et de réfugiés.
+## Un bilan écrasant
+| Fait | Chiffre |
+| Morts | **50 à 60 millions** |
+| Dont l’URSS seule | environ **26 millions** |
+| Villes détruites | Varsovie, Dresde, Hiroshima |
+| Personnes déplacées | Des millions, réfugiés compris |
 
 ## Les conférences du règlement
-**Yalta** (février 1945) : principe d’élections libres en Europe libérée et zones d’occupation. **Potsdam** (juillet-août 1945) : dénazification, démilitarisation, découpage de l’Allemagne et de Berlin en quatre zones, déplacements de frontières à l’Est. Les désaccords entre Alliés y sont déjà visibles.
+| Conférence | Date | Ce qui y est décidé |
+| **Yalta** | Février 1945 | Élections libres promises, zones d’occupation |
+| **Potsdam** | Juillet-août 1945 | Dénazification, démilitarisation, découpage de l’Allemagne et de Berlin en quatre zones |
 
-> Les vainqueurs s’entendent sur la défaite de l’Allemagne, pas sur ce qu’il faut mettre à la place : la guerre froide naît de ce vide.
+Les désaccords entre Alliés y sont **déjà visibles**.
+
+> Les vainqueurs s’entendent sur la **défaite** de l’Allemagne, pas sur ce qu’il faut mettre à la place. La guerre froide naît exactement de ce vide.
 
 ## Les institutions nouvelles
-L’**ONU** (charte de San Francisco, juin 1945) avec son Conseil de sécurité et ses cinq membres permanents dotés du **droit de veto** ; les accords de **Bretton Woods** (1944) qui créent le **FMI** et la Banque mondiale et fondent le système monétaire sur le dollar ; le **GATT** (1947) pour libéraliser les échanges.
+| Institution | Date | Sa fonction | Sa faiblesse |
+| **ONU** | Juin 1945 | Maintenir la paix | Le **droit de veto** des cinq permanents |
+| **Bretton Woods** : FMI, Banque mondiale | 1944 | Stabiliser les monnaies, financer | Le système repose sur le **dollar** |
+| **GATT** | 1947 | Libéraliser les échanges | Non contraignant |
 
 ## Deux Grands
-Les États-Unis détiennent la moitié de la production mondiale et l’arme atomique ; l’URSS, exsangue mais victorieuse, contrôle l’Europe orientale et jouit d’un immense prestige. L’Europe, elle, est réduite au rang d’enjeu.`,
+| | États-Unis | URSS |
+| L’économie | La **moitié** de la production mondiale | Exsangue, mais victorieuse |
+| L’arme atomique | Oui, seuls jusqu’en 1949 | Non, jusqu’en 1949 |
+| La zone d’influence | Europe de l’Ouest, Japon | Europe orientale |
+| Le prestige | Le libérateur | Le vainqueur de Stalingrad |
+
+L’Europe, elle, est réduite au rang d’**enjeu**.`,
           },
           questions: [
             ['Quel pays subit le plus lourd bilan humain de la guerre ?', ['L’URSS, avec environ 26 millions de morts', 'L’Allemagne', 'La Chine', 'La Pologne'], 0, 'Le front de l’Est est le plus meurtrier du conflit.'],
@@ -582,21 +793,40 @@ Les États-Unis détiennent la moitié de la production mondiale et l’arme ato
           axe: 'La fin de la Seconde Guerre mondiale et les débuts d’un nouvel ordre mondial bipolaire',
           lecon: {
             titre: 'Deux modèles, deux blocs',
-            cours: `Entre 1945 et 1949, les alliés d’hier deviennent adversaires. Le monde s’organise autour de deux modèles qui prétendent chacun valoir pour toute l’humanité.
+            cours: `Entre 1945 et 1949, les alliés d’hier deviennent adversaires. Le monde s’organise autour de **deux modèles** qui prétendent chacun valoir pour toute l’humanité.
 
 ## Deux modèles opposés
-Le modèle **américain** : démocratie libérale, pluralisme, économie de marché, société de consommation, liberté d’entreprendre. Le modèle **soviétique** : parti unique, planification, collectivisation, égalité proclamée, dictature du prolétariat. Chacun se présente comme la seule voie du progrès.
+| | Modèle **américain** | Modèle **soviétique** |
+| Le politique | Démocratie libérale, pluralisme | **Parti unique**, dictature du prolétariat |
+| L’économie | Marché, liberté d’entreprendre | **Planification**, collectivisation |
+| La société | Consommation de masse | Égalité proclamée |
+| Sa prétention | La seule voie du progrès | La seule voie du progrès |
 
-## La rupture (1947)
-La **doctrine Truman** (mars 1947) promet le *containment* — endiguer l’expansion communiste. Le **plan Marshall** (juin 1947) offre une aide massive à la reconstruction européenne ; l’URSS la refuse et l’interdit à ses satellites. En réponse, la **doctrine Jdanov** dénonce l’impérialisme américain et le **Kominform** est créé.
+## La rupture de 1947
+| Date | L’acte | Le camp |
+| Mars 1947 | **Doctrine Truman** : le *containment* | Ouest |
+| Juin 1947 | **Plan Marshall** : aide à la reconstruction | Ouest |
+| Été 1947 | L’URSS **refuse** l’aide et l’interdit à ses satellites | Est |
+| Septembre 1947 | **Doctrine Jdanov**, création du **Kominform** | Est |
 
-> 1947 est l’année où l’on cesse de discuter : chacun organise son camp, en Europe comme ailleurs.
+> 1947 est l’année où l’on cesse de discuter : chacun **organise son camp**, en Europe comme ailleurs. Les partis communistes sont écartés des gouvernements français et italien la même année.
 
 ## Les blocs se structurent
-À l’Ouest : **OTAN** (1949), aide économique, bases militaires. À l’Est : démocraties populaires imposées par les « coups de Prague » et autres, **CAEM** (1949), **pacte de Varsovie** (1955). L’Europe est coupée par ce que Churchill appelle dès 1946 le **rideau de fer**.
+| | À l’Ouest | À l’Est |
+| Militaire | **OTAN** (1949) | **Pacte de Varsovie** (1955) |
+| Économique | Plan Marshall, OECE | **CAEM** (1949) |
+| Politique | Démocraties, élections | Démocraties populaires imposées |
+
+Churchill avait nommé la coupure dès 1946 : le **rideau de fer**.
 
 ## Le premier affrontement
-Le **blocus de Berlin** (juin 1948 - mai 1949) et le pont aérien allié aboutissent à la naissance de deux États allemands, la **RFA** et la **RDA**, en 1949. La même année, l’URSS obtient l’arme atomique et la Chine devient communiste.`,
+| Date | L’événement |
+| Juin 1948 - mai 1949 | **Blocus de Berlin** et **pont aérien** allié |
+| 1949 | Naissance de la **RFA** et de la **RDA** |
+| 1949 | L’URSS obtient l’**arme atomique** |
+| 1949 | La **Chine** devient communiste |
+
+Quatre événements la même année : 1949 ferme la séquence et ouvre la guerre froide mondiale.`,
           },
           questions: [
             ['Qu’est-ce que la doctrine Truman ?', ['La politique d’endiguement du communisme', 'Un plan d’aide économique', 'Une alliance militaire', 'Un programme nucléaire'], 0, 'Énoncée en mars 1947, elle fonde le containment.'],
@@ -617,21 +847,32 @@ Le **blocus de Berlin** (juin 1948 - mai 1949) et le pont aérien allié aboutis
           axe: 'Une nouvelle donne géopolitique : bipolarisation et émergence du tiers-monde',
           lecon: {
             titre: 'Quatre ans pour couper le monde en deux',
-            cours: `Entre la fin de la guerre et 1949, l’alliance des vainqueurs se défait et deux camps se referment. Tout se joue en Europe, mais rien n’y reste.
+            cours: `Entre la fin de la guerre et 1949, l’alliance des vainqueurs se défait et deux camps se referment. Tout se joue en Europe — mais rien n’y reste.
 
 ## De l’alliance à la méfiance
-Dès Potsdam, les Alliés s’opposent sur l’Allemagne, la Pologne et les élections en Europe orientale. Staline installe des régimes communistes à mesure que l’Armée rouge occupe le terrain ; Washington y voit une expansion à endiguer.
+| Le sujet du désaccord | La position soviétique | La position américaine |
+| L’**Allemagne** | Réparations et démantèlement | Reconstruction |
+| La **Pologne** | Un gouvernement ami | Des élections libres |
+| L’Europe orientale | Une zone de sécurité | Une expansion à endiguer |
+
+Staline installe des régimes communistes **à mesure que l’Armée rouge occupe le terrain** : c’est ce lien entre présence militaire et régime politique qui alarme Washington.
 
 ## Les étapes de la rupture
-1946 : discours du **rideau de fer** à Fulton. 1947 : doctrine Truman, plan Marshall, doctrine Jdanov, création du **Kominform**. 1948 : **coup de Prague** en Tchécoslovaquie, rupture avec la Yougoslavie de **Tito**, blocus de Berlin. 1949 : OTAN, CAEM, naissance de la RFA et de la RDA, bombe atomique soviétique, victoire de **Mao** en Chine.
+| Année | Les événements |
+| **1946** | Discours du **rideau de fer** à Fulton |
+| **1947** | Doctrine Truman, plan Marshall, doctrine Jdanov, **Kominform** |
+| **1948** | **Coup de Prague**, rupture avec la Yougoslavie de **Tito**, blocus de Berlin |
+| **1949** | OTAN, CAEM, RFA et RDA, bombe soviétique, victoire de **Mao** |
 
-> En 1949, il n’y a plus d’espace neutre en Europe : chaque pays appartient à un camp, et le monde entier va être sommé de choisir.
+> En 1949, il n’y a **plus d’espace neutre** en Europe : chaque pays appartient à un camp, et le monde entier va être sommé de choisir.
 
 ## Deux camps, deux organisations
-Le bloc de l’Ouest s’organise autour de l’aide économique, de l’OTAN et des bases américaines ; le bloc de l’Est autour du parti unique, du CAEM et de la présence de l’Armée rouge. Les partis communistes occidentaux, très puissants en France et en Italie, sont écartés des gouvernements en 1947.
+| | Ce qui tient le bloc | Ce qui le finance |
+| Ouest | L’OTAN, les bases américaines | L’aide économique |
+| Est | La présence de l’**Armée rouge** | Le CAEM |
 
 ## Une bipolarité mondiale
-Cette division ne reste pas européenne : Corée, Indochine, Proche-Orient, Amérique latine deviennent des terrains d’affrontement indirect. La rivalité prend toutes les formes — militaire, économique, idéologique, sportive, spatiale.`,
+La division ne reste pas européenne : Corée, Indochine, Proche-Orient et Amérique latine deviennent des terrains d’affrontement **indirect**. La rivalité prend toutes les formes — militaire, économique, idéologique, sportive, spatiale.`,
           },
           questions: [
             ['Où Churchill prononce-t-il son discours sur le rideau de fer ?', ['À Fulton, en 1946', 'À Yalta', 'À Potsdam', 'À Londres'], 0, 'Il constate la coupure de l’Europe avant même la rupture officielle.'],
@@ -649,21 +890,43 @@ Cette division ne reste pas européenne : Corée, Indochine, Proche-Orient, Amé
           axe: 'Une nouvelle donne géopolitique : bipolarisation et émergence du tiers-monde',
           lecon: {
             titre: 'Quarante ans de paix armée',
-            cours: `La guerre froide est un affrontement permanent entre deux superpuissances qui ne se combattent jamais directement : l’arme nucléaire rend la guerre totale impossible, et pousse à la guerre par procuration.
+            cours: `La guerre froide est un affrontement **permanent** entre deux superpuissances qui **ne se combattent jamais directement** : l’arme nucléaire rend la guerre totale impossible, et pousse à la guerre par procuration.
 
 ## Les grandes crises
-**Berlin** (blocus 1948-1949, construction du **Mur** en 1961), **Corée** (1950-1953), **Cuba** (octobre 1962, le point le plus dangereux), **Vietnam** (1964-1975), **Afghanistan** (1979-1989). Chaque crise oppose les deux camps sans affrontement direct entre leurs armées.
+| Crise | Dates | Ce qui s’y joue |
+| **Berlin** | 1948-1949, puis 1961 | Le blocus, puis la construction du **Mur** |
+| **Corée** | 1950-1953 | Le premier conflit armé par procuration |
+| **Cuba** | Octobre 1962 | Le point le plus dangereux de toute la période |
+| **Vietnam** | 1964-1975 | L’enlisement américain |
+| **Afghanistan** | 1979-1989 | L’enlisement soviétique |
+
+Aucune de ces crises n’oppose directement les armées américaine et soviétique.
 
 ## L’équilibre de la terreur
-La possession réciproque de l’arme nucléaire aboutit à la **destruction mutuelle assurée** : attaquer, c’est mourir. D’où la course aux armements, la dissuasion, mais aussi les premiers accords de limitation (SALT, 1972) et le « téléphone rouge » après Cuba.
+| Le mécanisme | Sa conséquence |
+| **Destruction mutuelle assurée** | Attaquer, c’est mourir |
+| La course aux armements | Chacun doit rester capable de riposter |
+| Les premiers accords : SALT (1972) | On limite sans désarmer |
+| Le « téléphone rouge » après Cuba | On évite l’accident |
 
-> Le nucléaire ne supprime pas la guerre : il la déplace vers les périphéries, les propagandes et l’espace.
+> Le nucléaire ne **supprime** pas la guerre : il la **déplace** vers les périphéries, les propagandes et l’espace. Le monde est plus sûr au centre, plus dangereux aux marges.
 
 ## Les phases
-Guerre froide « chaude » (1947-1953), **coexistence pacifique** après la mort de Staline, tensions renouvelées (Mur, Cuba), **Détente** (1963-1975, Helsinki 1975), « guerre fraîche » (1979-1985), puis la fin sous **Gorbatchev** (glasnost, perestroïka), la chute du Mur (1989) et la disparition de l’URSS (1991).
+| Phase | Dates | Ce qui la caractérise |
+| Guerre froide « chaude » | 1947-1953 | Crises frontales |
+| **Coexistence pacifique** | 1953-1962 | Après la mort de Staline |
+| Tensions renouvelées | 1961-1962 | Mur de Berlin, Cuba |
+| **Détente** | 1963-1975 | Accords, Helsinki 1975 |
+| « Guerre fraîche » | 1979-1985 | Afghanistan, euromissiles |
+| La fin | 1985-1991 | **Gorbatchev**, chute du Mur, disparition de l’URSS |
 
 ## Une guerre totale par d’autres moyens
-Course à l’espace (Spoutnik 1957, Apollo 11 en 1969), espionnage, propagande, cinéma, sport, aide au développement : tout devient terrain de rivalité.`,
+| Terrain | L’épisode marquant |
+| L’espace | **Spoutnik** (1957), **Apollo 11** (1969) |
+| L’espionnage | Affaires de transfuges, U-2 |
+| La culture | Cinéma, radios internationales |
+| Le sport | Boycotts olympiques de 1980 et 1984 |
+| Le développement | L’aide comme instrument d’influence |`,
           },
           questions: [
             ['Pourquoi les deux superpuissances ne s’affrontent-elles jamais directement ?', ['À cause de l’équilibre de la terreur nucléaire', 'À cause d’un traité de non-agression', 'À cause de l’ONU', 'Par manque de moyens'], 0, 'La destruction mutuelle assurée rend la guerre directe suicidaire.'],
@@ -681,21 +944,36 @@ Course à l’espace (Spoutnik 1957, Apollo 11 en 1969), espionnage, propagande,
           axe: 'Une nouvelle donne géopolitique : bipolarisation et émergence du tiers-monde',
           lecon: {
             titre: 'Le pétrole, Israël, et deux protecteurs rivaux',
-            cours: `Région charnière entre trois continents, riche en pétrole et traversée par le conflit israélo-arabe, le Proche et le Moyen-Orient devient un terrain majeur de la guerre froide.
+            cours: `Région charnière entre trois continents, riche en pétrole et traversée par le conflit israélo-arabe, le Proche et le Moyen-Orient devient un **terrain majeur** de la guerre froide.
 
 ## Un enjeu à trois dimensions
-**Stratégique** : détroits, canal de **Suez**, routes aériennes. **Énergétique** : les deux tiers des réserves mondiales de pétrole. **Politique** : décolonisation, nationalismes arabes, création d’**Israël** (1948).
+| Dimension | Ce qui est en jeu |
+| **Stratégique** | Détroits, canal de **Suez**, routes aériennes |
+| **Énergétique** | Les **deux tiers** des réserves mondiales de pétrole |
+| **Politique** | Décolonisation, nationalismes arabes, création d’**Israël** (1948) |
 
 ## Les conflits israélo-arabes
-Guerre de 1948-1949 après le plan de partage de l’ONU, crise de **Suez** (1956) après la nationalisation du canal par **Nasser**, guerre des **Six Jours** (1967) et occupation de nouveaux territoires, guerre du **Kippour** (1973) suivie du premier **choc pétrolier**, accords de **Camp David** (1978-1979) entre l’Égypte et Israël.
+| Date | Le conflit | Ce qu’il change |
+| 1948-1949 | Première guerre, après le plan de partage de l’ONU | Naissance d’Israël, exode palestinien |
+| **1956** | Crise de **Suez**, après la nationalisation par **Nasser** | Les deux Grands imposent le retrait franco-britannique |
+| **1967** | Guerre des **Six Jours** | Occupation de nouveaux territoires |
+| **1973** | Guerre du **Kippour** | Le premier **choc pétrolier** suit |
+| 1978-1979 | Accords de **Camp David** | Paix séparée entre l’Égypte et Israël |
 
-> Chaque conflit local est doublé d’un affrontement indirect : Washington soutient un camp, Moscou l’autre, et le pétrole sert d’arme.
+> Chaque conflit local est **doublé** d’un affrontement indirect : Washington soutient un camp, Moscou l’autre — et le pétrole sert d’arme à part entière.
 
 ## Les alignements
-Les États-Unis s’appuient sur l’**Arabie saoudite**, l’Iran du chah jusqu’en 1979, puis Israël et l’Égypte après Camp David. L’URSS soutient l’Égypte de Nasser, la Syrie, l’Irak, le Yémen du Sud. Le **non-alignement** est tenté par plusieurs États arabes.
+| Puissance | Ses appuis |
+| **États-Unis** | Arabie saoudite, Iran du chah jusqu’en 1979, puis Israël et Égypte |
+| **URSS** | Égypte de Nasser, Syrie, Irak, Yémen du Sud |
+| Le **non-alignement** | Tenté par plusieurs États arabes, rarement tenu |
 
 ## Les ruptures des années 1970-1980
-Choc pétrolier de 1973 et pouvoir de l’**OPEP**, **révolution iranienne** de 1979 qui installe une république islamique hostile aux deux Grands, guerre Iran-Irak (1980-1988), intervention soviétique en Afghanistan.`,
+| Date | L’événement | Sa portée |
+| 1973 | Choc pétrolier, pouvoir de l’**OPEP** | L’arme énergétique est démontrée |
+| **1979** | **Révolution iranienne** | Une république islamique hostile aux **deux** Grands |
+| 1980-1988 | Guerre Iran-Irak | Un million de morts |
+| 1979-1989 | Intervention soviétique en Afghanistan | L’enlisement de l’URSS |`,
           },
           questions: [
             ['Quelle part des réserves mondiales de pétrole se trouve dans la région ?', ['Environ les deux tiers', 'Environ un dixième', 'Environ un tiers', 'La quasi-totalité'], 0, 'C’est ce qui en fait un enjeu stratégique majeur.'],
@@ -713,21 +991,40 @@ Choc pétrolier de 1973 et pouvoir de l’**OPEP**, **révolution iranienne** de
           axe: 'Une nouvelle donne géopolitique : bipolarisation et émergence du tiers-monde',
           lecon: {
             titre: 'La décolonisation et la naissance du tiers-monde',
-            cours: `En trente ans, les empires coloniaux disparaissent et des dizaines d’États nouveaux apparaissent. Ils cherchent une place entre les deux blocs.
+            cours: `En trente ans, les empires coloniaux disparaissent et des dizaines d’États nouveaux apparaissent. Ils cherchent une place **entre** les deux blocs.
 
 ## Les causes
-Affaiblissement des métropoles par la guerre, participation des colonisés au conflit, montée des mouvements nationalistes formés à l’école coloniale, principes de la charte de l’ONU, hostilité de principe des deux superpuissances à l’ordre colonial.
+| Cause | Ce qu’elle produit |
+| L’**affaiblissement** des métropoles par la guerre | Elles n’ont plus les moyens de tenir |
+| La **participation** des colonisés au conflit | Une légitimité à réclamer des droits |
+| Les mouvements **nationalistes** | Souvent dirigés par des élites formées à l’école coloniale |
+| La charte de l’**ONU** | Le droit des peuples à disposer d’eux-mêmes |
+| L’hostilité des **deux** superpuissances | L’ordre colonial n’a plus de protecteur |
 
 ## Deux voies
-L’indépendance **négociée** : Inde et Pakistan (1947, mais partition sanglante), Afrique britannique et française (1957-1962, dont l’essentiel en 1960, « l’année de l’Afrique »). L’indépendance **arrachée par la guerre** : Indochine (1946-1954, **Diên Biên Phu**), **Algérie** (1954-1962, accords d’Évian), Angola et Mozambique (1975).
+| | Indépendance **négociée** | Indépendance **arrachée** |
+| Exemples | Inde et Pakistan (1947), Afrique britannique et française (1957-1962) | Indochine (1946-1954), **Algérie** (1954-1962), Angola et Mozambique (1975) |
+| Le coût | Parfois lourd malgré tout : la **partition** indienne fait des centaines de milliers de morts | Des guerres longues : **Diên Biên Phu**, accords d’Évian |
 
-> Les nouveaux États obtiennent la souveraineté politique bien avant l’indépendance économique : c’est tout le problème du développement.
+1960 est « l’année de l’Afrique » : dix-sept États accèdent à l’indépendance.
+
+> Les nouveaux États obtiennent la souveraineté **politique** bien avant l’indépendance **économique**. C’est tout le problème du développement — et le cœur du sujet.
 
 ## Le tiers-monde
-Le mot est forgé par Alfred Sauvy en 1952. La conférence de **Bandung** (1955) réunit 29 pays d’Asie et d’Afrique ; le mouvement des **non-alignés** naît à Belgrade (1961) autour de Nehru, Nasser, Tito et Soekarno. Le Nouvel ordre économique international est réclamé à l’ONU dans les années 1970.
+| Date | L’étape |
+| 1952 | **Alfred Sauvy** forge le mot « tiers-monde » |
+| **1955** | Conférence de **Bandung** : 29 pays d’Asie et d’Afrique |
+| **1961** | Mouvement des **non-alignés** à Belgrade : Nehru, Nasser, Tito, Soekarno |
+| Années 1970 | Le Nouvel ordre économique international réclamé à l’ONU |
 
 ## Les difficultés
-Frontières héritées de la colonisation, guerres civiles, dépendance aux matières premières, dette, régimes autoritaires, ingérences des deux Grands (Congo, Angola, Amérique centrale). Le tiers-monde se différencie vite : certains États émergent, d’autres s’enfoncent.`,
+| Obstacle | Sa conséquence |
+| Frontières héritées de la colonisation | Guerres civiles, conflits frontaliers |
+| Dépendance aux **matières premières** | Revenus instables |
+| **Dette** | Perte de marge de manœuvre |
+| Ingérences des deux Grands | Congo, Angola, Amérique centrale |
+
+Le tiers-monde se **différencie** vite : certains États émergent, d’autres s’enfoncent. Le terme lui-même perd son unité.`,
           },
           questions: [
             ['Quand l’Inde et le Pakistan deviennent-ils indépendants ?', ['En 1947', 'En 1954', 'En 1960', 'En 1962'], 0, 'La partition provoque des déplacements massifs et des centaines de milliers de morts.'],
@@ -745,21 +1042,41 @@ Frontières héritées de la colonisation, guerres civiles, dépendance aux mati
           axe: 'Une nouvelle donne géopolitique : bipolarisation et émergence du tiers-monde',
           lecon: {
             titre: 'Une troisième voie, payée très cher',
-            cours: `De 1949 à 1976, **Mao Zedong** cherche à faire de la Chine une grande puissance par la révolution permanente. Le pays gagne son indépendance et sa place internationale ; sa population en paie le prix.
+            cours: `De 1949 à 1976, **Mao Zedong** cherche à faire de la Chine une grande puissance par la **révolution permanente**. Le pays gagne son indépendance et sa place internationale ; sa population en paie le prix.
 
 ## La construction du régime
-Proclamation de la **République populaire** le 1er octobre 1949. Réforme agraire, élimination des « ennemis de classe », parti unique, alignement initial sur l’URSS (traité de 1950) et modèle des plans quinquennaux.
+| Date | L’étape |
+| **1er octobre 1949** | Proclamation de la **République populaire** |
+| 1950-1952 | Réforme agraire, élimination des « ennemis de classe » |
+| 1950 | Traité d’alliance avec l’**URSS** |
+| 1953 | Premier plan quinquennal, sur le modèle soviétique |
 
-## Le Grand Bond en avant (1958-1962)
-Collectivisation totale en **communes populaires**, industrialisation improvisée (« hauts fourneaux de jardin »), objectifs délirants. Résultat : une **famine** qui fait entre 20 et 40 millions de morts, la plus meurtrière du XXe siècle. Mao recule momentanément.
+## Le Grand Bond en avant
+| La mesure | Son résultat |
+| Communes populaires : collectivisation **totale** | La paysannerie perd tout contrôle |
+| « Hauts fourneaux de jardin » | Un acier inutilisable |
+| Objectifs de production irréalistes | Des déclarations mensongères |
+| **La famine de 1959-1961** | **20 à 40 millions de morts** |
 
-> Une utopie appliquée sans contradiction possible : c’est ce qui transforme une erreur économique en catastrophe démographique.
+> Une utopie appliquée **sans contradiction possible** : c’est ce qui transforme une erreur économique en catastrophe démographique. Personne, dans le système, ne pouvait dire que le plan ne marchait pas.
 
-## La Révolution culturelle (1966-1976)
-Pour reprendre la main, Mao lance la jeunesse (**gardes rouges**) contre le parti, l’école et la culture. Persécutions, humiliations publiques, envoi des « intellectuels » à la campagne, destruction du patrimoine. Le pays est paralysé, la production s’effondre.
+## La Révolution culturelle
+Pour reprendre la main après ce recul, Mao lance en 1966 la jeunesse — les **gardes rouges** — contre le parti, l’école et la culture.
+
+| Ce qui est visé | Ce qu’il en résulte |
+| Les cadres du parti | Persécutions, humiliations publiques |
+| Les enseignants et « intellectuels » | Envoi à la campagne |
+| Le patrimoine | Destructions massives |
+| L’économie | Le pays est paralysé, la production s’effondre |
 
 ## La rupture des alliances
-Rupture avec Moscou (1960-1963), bombe atomique chinoise (1964), rapprochement spectaculaire avec Washington : entrée à l’**ONU** en 1971 (au Conseil de sécurité) et visite de **Nixon** à Pékin en 1972. La Chine s’affirme comme une troisième force et un modèle pour une partie du tiers-monde.`,
+| Date | L’événement | Sa portée |
+| 1960-1963 | Rupture avec **Moscou** | Le camp socialiste se divise |
+| 1964 | **Bombe atomique** chinoise | La Chine devient puissance nucléaire |
+| **1971** | Entrée à l’**ONU**, au Conseil de sécurité | La reconnaissance internationale |
+| **1972** | Visite de **Nixon** à Pékin | Le renversement d’alliance |
+
+La Chine s’affirme comme une **troisième force**, et un modèle pour une partie du tiers-monde.`,
           },
           questions: [
             ['Quand la République populaire de Chine est-elle proclamée ?', ['Le 1er octobre 1949', 'En 1945', 'En 1958', 'En 1966'], 0, 'Après la victoire des communistes sur les nationalistes de Tchang Kaï-chek.'],
@@ -777,21 +1094,35 @@ Rupture avec Moscou (1960-1963), bombe atomique chinoise (1964), rapprochement s
           axe: 'Une nouvelle donne géopolitique : bipolarisation et émergence du tiers-monde',
           lecon: {
             titre: 'Une contestation mondiale, à l’Ouest comme à l’Est',
-            cours: `1968 est une année de contestation planétaire : partout, une génération née après la guerre conteste l’autorité, la société de consommation et l’ordre des blocs.
+            cours: `1968 est une année de contestation **planétaire** : partout, une génération née après la guerre conteste l’autorité, la société de consommation et l’ordre des blocs.
 
 ## À l’Ouest
-**Mai 68** en France : révolte étudiante, puis la plus grande grève de l’histoire du pays (près de 9 millions de grévistes), accords de Grenelle, dissolution et large victoire gaulliste aux élections. Aux **États-Unis** : mouvement des droits civiques (assassinat de **Martin Luther King** en avril 1968), opposition à la **guerre du Vietnam**, contestation des campus. En Allemagne, en Italie, au Japon, au Mexique : mêmes mobilisations, parfois durement réprimées (Tlatelolco).
+| Pays | L’événement | Son ampleur |
+| **France** | **Mai 68** | Révolte étudiante, puis près de **9 millions** de grévistes ; accords de Grenelle |
+| **États-Unis** | Droits civiques, anti-guerre | Assassinat de **Martin Luther King** (avril), contestation des campus |
+| Allemagne, Italie, Japon | Mobilisations étudiantes | Durables et parfois violentes |
+| **Mexique** | Manifestations avant les Jeux | Répression de **Tlatelolco** |
+
+En France, la crise s’achève par une dissolution et une **large victoire gaulliste** aux élections : la contestation ne se transforme pas en majorité.
 
 ## À l’Est
-Le **Printemps de Prague** tente « un socialisme à visage humain » avec **Dubcek** ; il est écrasé par les chars du pacte de Varsovie en août 1968. La **doctrine Brejnev** de « souveraineté limitée » justifie l’intervention. En Pologne aussi, la contestation étudiante est réprimée.
+| Pays | L’événement | Son issue |
+| **Tchécoslovaquie** | Le **Printemps de Prague** de **Dubcek** : « un socialisme à visage humain » | **Écrasé par les chars** du pacte de Varsovie en août |
+| Pologne | Contestation étudiante | Réprimée |
 
-> À l’Ouest, on conteste un modèle en pouvant le dire ; à l’Est, la même contestation est écrasée par les chars : 1968 révèle la différence entre les deux systèmes autant que leur crise commune.
+La **doctrine Brejnev** de « souveraineté limitée » justifie l’intervention : un pays socialiste n’a pas le droit de cesser de l’être.
+
+> À l’Ouest, on conteste un modèle **en pouvant le dire** ; à l’Est, la même contestation est **écrasée par les chars**. 1968 révèle la différence entre les deux systèmes autant que leur crise commune.
 
 ## Les causes communes
-Explosion démographique de l’après-guerre, massification scolaire, prospérité qui rend l’autorité traditionnelle insupportable, télévision qui fait circuler les images d’un pays à l’autre.
+| Cause | Ce qu’elle produit |
+| L’explosion démographique de l’après-guerre | Une jeunesse nombreuse |
+| La **massification scolaire** | Des universités surchargées et politisées |
+| La prospérité | Elle rend l’autorité traditionnelle insupportable |
+| La **télévision** | Les images circulent d’un pays à l’autre |
 
 ## Les héritages
-Libéralisation des mœurs, droits des femmes, écologie naissante, transformation des rapports d’autorité — mais aussi, à l’Est, la démonstration que le système ne se réformera pas de l’intérieur.`,
+Libéralisation des mœurs, droits des femmes, écologie naissante, transformation des rapports d’autorité — et, à l’Est, la démonstration que le système **ne se réformera pas de l’intérieur**. Il faudra vingt ans de plus.`,
           },
           questions: [
             ['Combien de grévistes compte le mouvement de mai 1968 en France ?', ['Près de 9 millions', 'Environ 1 million', 'Environ 3 millions', 'Environ 15 millions'], 0, 'C’est la plus grande grève de l’histoire française.'],
@@ -812,21 +1143,39 @@ Libéralisation des mœurs, droits des femmes, écologie naissante, transformati
           axe: 'La France : une nouvelle place dans le monde',
           lecon: {
             titre: 'Un régime qui reconstruit, et qui trébuche sur l’empire',
-            cours: `De 1946 à 1958, la IVe République reconstruit le pays et engage la France dans l’Europe. Elle échoue sur la décolonisation, qui l’emporte.
+            cours: `De 1946 à 1958, la IVe République reconstruit le pays et engage la France dans l’Europe. Elle **échoue sur la décolonisation**, qui l’emporte.
 
 ## Un régime instable
-Constitution de 1946 : le pouvoir appartient à l’Assemblée, le président ne gouverne pas. Résultat : 24 gouvernements en douze ans, des coalitions fragiles, une opinion lassée. Le régime est cependant capable de grandes réformes.
+| Le trait institutionnel | Sa conséquence |
+| Le pouvoir appartient à l’**Assemblée** | Le président ne gouverne pas |
+| Scrutin proportionnel, coalitions fragiles | **24 gouvernements en douze ans** |
+| Aucun moyen de dissoudre efficacement | L’exécutif ne peut trancher |
 
-## La reconstruction et les Trente Glorieuses
-Nationalisations (EDF, Renault, banques), **Sécurité sociale** (1945), plan Monnet, aide Marshall, croissance forte, plein-emploi, hausse du niveau de vie, baby-boom et exode rural.
+Le régime est pourtant capable de **grandes réformes** : c’est le paradoxe à tenir.
 
-> La IVe République a construit l’État social et l’Europe : elle est morte de l’empire.
+## La reconstruction
+| Réforme | Ce qu’elle installe |
+| **Nationalisations** | EDF, Renault, banques |
+| **Sécurité sociale** (1945) | L’État social français |
+| Plan Monnet, aide **Marshall** | La modernisation industrielle |
+| Croissance et plein-emploi | Les **Trente Glorieuses**, le baby-boom, l’exode rural |
 
 ## La construction européenne
-**CECA** (1951) proposée par Robert Schuman et Jean Monnet, échec de la CED (1954), puis **traité de Rome** (1957) créant la **CEE** : la réconciliation franco-allemande devient le moteur de l’Europe.
+| Date | L’étape | Son issue |
+| 1951 | **CECA**, proposée par Schuman et Monnet | Adoptée |
+| 1954 | **CED**, communauté de défense | **Rejetée** par l’Assemblée française |
+| **1957** | **Traité de Rome**, création de la **CEE** | Adoptée |
+
+La réconciliation franco-allemande devient le moteur de l’Europe.
 
 ## La décolonisation qui emporte le régime
-Guerre d’Indochine (1946-1954) achevée à Diên Biên Phu ; indépendance de la Tunisie et du Maroc (1956) ; surtout la **guerre d’Algérie**, commencée en 1954, avec torture, appelés du contingent et société divisée. La crise du **13 mai 1958** à Alger provoque le retour de **de Gaulle** et la fin du régime.`,
+| Date | Le conflit ou l’étape |
+| 1946-1954 | Guerre d’**Indochine**, achevée à **Diên Biên Phu** |
+| 1956 | Indépendance de la Tunisie et du Maroc |
+| **1954-1962** | Guerre d’**Algérie** : torture, appelés du contingent, société divisée |
+| **13 mai 1958** | La crise d’Alger provoque le retour de **de Gaulle** |
+
+> La IVe République a construit l’**État social** et l’**Europe** : elle est morte de l’**empire**. C’est le bilan à trois termes qu’attend une copie.`,
           },
           questions: [
             ['Quelle est la principale faiblesse institutionnelle de la IVe République ?', ['L’instabilité gouvernementale due à la prééminence de l’Assemblée', 'Un président trop puissant', 'L’absence de partis', 'Le suffrage censitaire'], 0, '24 gouvernements se succèdent en douze ans.'],
@@ -844,21 +1193,40 @@ Guerre d’Indochine (1946-1954) achevée à Diên Biên Phu ; indépendance de 
           axe: 'La France : une nouvelle place dans le monde',
           lecon: {
             titre: 'Un exécutif fort et une politique d’indépendance',
-            cours: `Fondée en 1958, la Ve République donne à la France des institutions stables et une politique étrangère d’indépendance. Elle s’achève, pour de Gaulle, en 1969.
+            cours: `Fondée en 1958, la Ve République donne à la France des institutions **stables** et une politique étrangère d’**indépendance**. Elle s’achève, pour de Gaulle, en 1969.
 
 ## De nouvelles institutions
-Constitution du **4 octobre 1958** : un président chef de l’exécutif, qui nomme le Premier ministre, peut dissoudre l’Assemblée et recourir au **référendum**. La révision de **1962**, adoptée par référendum, instaure l’**élection du président au suffrage universel direct** — la clé de voûte du régime.
+| Le pouvoir présidentiel | Ce qu’il permet |
+| Nommer le Premier ministre | L’exécutif a un chef |
+| **Dissoudre** l’Assemblée | Trancher un conflit avec le Parlement |
+| Recourir au **référendum** | S’adresser directement au peuple |
+| Article 16 | Les pouvoirs exceptionnels |
+
+La révision de **1962**, adoptée par référendum, instaure l’**élection du président au suffrage universel direct** : c’est la clé de voûte du régime, et ce qui le distingue de tous les précédents.
 
 ## La fin de la guerre d’Algérie
-Autodétermination annoncée en 1959, putsch des généraux et attentats de l’**OAS**, **accords d’Évian** (mars 1962), indépendance approuvée par référendum, rapatriement de près d’un million de pieds-noirs et drame des **harkis**.
+| Date | L’étape |
+| 1959 | **Autodétermination** annoncée |
+| Avril 1961 | Putsch des généraux |
+| 1961-1962 | Attentats de l’**OAS** |
+| Mars **1962** | **Accords d’Évian** |
+| Juillet 1962 | Indépendance approuvée par référendum |
 
-> Rappelé pour garder l’Algérie française, de Gaulle en organise l’indépendance : c’est ce qui lui permet de tourner la France vers d’autres ambitions.
+Rapatriement de près d’**un million** de pieds-noirs, et drame des **harkis**, largement abandonnés.
+
+> Rappelé pour **garder** l’Algérie française, de Gaulle en organise l’**indépendance**. C’est ce dénouement qui lui permet de tourner la France vers d’autres ambitions.
 
 ## L’indépendance nationale
-Force de frappe **nucléaire** (premier essai en 1960), retrait du commandement intégré de l’**OTAN** (1966), reconnaissance de la Chine populaire (1964), discours de Phnom Penh contre la guerre du Vietnam, double veto à l’entrée du Royaume-Uni dans la CEE, coopération avec l’Allemagne (**traité de l’Élysée**, 1963).
+| Date | L’acte | Ce qu’il affirme |
+| 1960 | Premier essai **nucléaire** | La force de frappe autonome |
+| **1963** | **Traité de l’Élysée** | La coopération avec l’Allemagne |
+| 1964 | Reconnaissance de la **Chine populaire** | L’indépendance diplomatique |
+| 1963 et 1967 | Double **veto** à l’entrée du Royaume-Uni dans la CEE | Une Europe sans tutelle américaine |
+| **1966** | Retrait du commandement intégré de l’**OTAN** | L’indépendance militaire |
+| 1966 | Discours de Phnom Penh | L’opposition à la guerre du Vietnam |
 
 ## La fin
-Modernisation, plein-emploi et croissance n’empêchent pas la crise de **mai 1968**. Le référendum perdu d’avril 1969 entraîne le départ immédiat du général.`,
+Modernisation, plein-emploi et croissance n’empêchent pas la crise de **mai 1968**. Le référendum perdu d’avril **1969** entraîne le départ **immédiat** du général — fidèle à sa conception du lien direct entre le président et le peuple.`,
           },
           questions: [
             ['Quelle révision de 1962 modifie durablement la Ve République ?', ['L’élection du président au suffrage universel direct', 'Le quinquennat', 'La création du Conseil constitutionnel', 'La décentralisation'], 0, 'Adoptée par référendum, elle donne au président une légitimité populaire directe.'],

@@ -138,32 +138,45 @@ DELETE FROM public.chapters c
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Écrire très grand et très petit sans se tromper',
-            cours: `Une **puissance** est une multiplication répétée : a^n (« a puissance n ») vaut a × a × … × a, avec **n facteurs**.
+            cours: `Une puissance est une multiplication répétée : a puissance n vaut a × a × … × a, avec **n facteurs**.
 
 ## Les conventions à connaître
-- a¹ = a
-- a⁰ = **1** (pour tout a non nul)
-- a^(-n) = 1 / a^n — l’exposant négatif signifie « on divise »
+| L'écriture | Sa valeur |
+| a¹ | a |
+| a⁰ | **1**, pour tout a non nul |
+| a⁻ⁿ | 1 / aⁿ : l'exposant négatif signifie « on divise » |
 
-Ainsi 10³ = 1 000 et 10⁻³ = 0,001.
+| L'exemple | Sa valeur |
+| 10³ | 1 000 |
+| 10⁻³ | 0,001 |
 
 ## Les quatre règles de calcul
-- a^m × a^n = a^(m+n) — on **additionne** les exposants
-- a^m ÷ a^n = a^(m−n) — on **soustrait**
-- (a^m)^n = a^(m×n) — on **multiplie**
-- (a × b)^n = a^n × b^n
+| L'opération | La règle | Ce qu'on fait aux exposants |
+| aᵐ × aⁿ | aᵐ⁺ⁿ | On les **additionne** |
+| aᵐ ÷ aⁿ | aᵐ⁻ⁿ | On les **soustrait** |
+| (aᵐ)ⁿ | aᵐˣⁿ | On les **multiplie** |
+| (a × b)ⁿ | aⁿ × bⁿ | On distribue |
 
-> Ces règles ne fonctionnent qu’entre puissances **de même base**. 2³ × 5³ ne se simplifie pas en additionnant les exposants : il faut passer par (2 × 5)³ = 10³.
+> Ces règles ne fonctionnent qu'entre puissances **de même base**. 2³ × 5³ ne se simplifie pas en additionnant les exposants : il faut passer par (2 × 5)³ = 10³.
 
-## L’écriture scientifique
-Tout nombre s’écrit sous la forme **a × 10^n**, où **1 ≤ a < 10** et n est un entier relatif.
-- 45 300 = **4,53 × 10⁴**
-- 0,00072 = **7,2 × 10⁻⁴**
+## L'écriture scientifique
+Tout nombre s'écrit sous la forme **a × 10ⁿ**, où **1 ≤ a < 10** et n est un entier relatif.
 
-La méthode : on place la virgule après le premier chiffre non nul, puis on compte de combien de rangs elle a bougé. Vers la gauche → exposant **positif** ; vers la droite → exposant **négatif**.
+| Le nombre | Son écriture scientifique |
+| 45 300 | **4,53 × 10⁴** |
+| 0,00072 | **7,2 × 10⁻⁴** |
+
+| Le déplacement de la virgule | Le signe de l'exposant |
+| Vers la **gauche** | **Positif** |
+| Vers la **droite** | **Négatif** |
+
+La méthode : placer la virgule après le premier chiffre non nul, puis compter les rangs franchis.
 
 ## À quoi ça sert
-Comparer deux nombres devient immédiat : celui qui a le plus grand exposant est le plus grand (à condition que les deux soient bien en écriture scientifique). Distance Terre-Soleil : 1,5 × 10⁸ km. Taille d’un virus : 1 × 10⁻⁷ m.`,
+| L'usage | Son exemple |
+| **Comparer** | Le plus grand exposant l'emporte, si les deux sont bien en écriture scientifique |
+| Écrire le très **grand** | Distance Terre-Soleil : 1,5 × 10⁸ km |
+| Écrire le très **petit** | Taille d'un virus : 1 × 10⁻⁷ m |`,
           },
           questions: [
             ['Que vaut a⁰ pour a non nul ?', ['1', '0', 'a', 'Cela n’existe pas'], 0, 'C’est une convention qui rend cohérente la règle a^m ÷ a^n = a^(m−n).'],
@@ -181,36 +194,46 @@ Comparer deux nombres devient immédiat : celui qui a le plus grand exposant est
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Décomposer pour simplifier',
-            cours: `Un **nombre premier** est un entier supérieur à 1 qui n’a **que deux diviseurs** : 1 et lui-même.
+            cours: `Un nombre premier est un entier supérieur à 1 qui n'a que deux diviseurs : 1 et lui-même.
 
 ## Les premiers nombres premiers
 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37…
-- **2 est le seul nombre premier pair.**
-- **1 n’est pas premier** : il n’a qu’un seul diviseur.
+
+| Le point d'attention | Sa raison |
+| **2** est le seul premier **pair** | Tous les autres pairs sont divisibles par 2 |
+| **1 n'est pas premier** | Il n'a qu'**un seul** diviseur |
 
 ## Les critères de divisibilité
-- par **2** : le nombre se termine par 0, 2, 4, 6 ou 8 ;
-- par **3** : la somme de ses chiffres est divisible par 3 ;
-- par **5** : il se termine par 0 ou 5 ;
-- par **9** : la somme de ses chiffres est divisible par 9 ;
-- par **10** : il se termine par 0.
+| Le diviseur | Le critère |
+| **2** | Le nombre se termine par 0, 2, 4, 6 ou 8 |
+| **3** | La somme de ses chiffres est divisible par 3 |
+| **5** | Il se termine par 0 ou 5 |
+| **9** | La somme de ses chiffres est divisible par 9 |
+| **10** | Il se termine par 0 |
 
 ## La décomposition en facteurs premiers
-Tout entier supérieur à 1 s’écrit d’**une seule façon** comme produit de nombres premiers. On divise successivement par 2, puis 3, puis 5…
+Tout entier supérieur à 1 s'écrit d'**une seule façon** comme produit de nombres premiers. On divise successivement par 2, puis 3, puis 5…
 
-180 = 2 × 90 = 2 × 2 × 45 = 2 × 2 × 3 × 15 = **2² × 3² × 5**
+| L'étape | Le résultat |
+| 180 | 2 × 90 |
+| 90 | 2 × 45 |
+| 45 | 3 × 15 |
+| 15 | 3 × 5 |
+| **Total** | **2² × 3² × 5** |
 
 ## Rendre une fraction irréductible
-Une fraction est **irréductible** quand son numérateur et son dénominateur n’ont **aucun diviseur commun** autre que 1.
+Une fraction est **irréductible** quand numérateur et dénominateur n'ont **aucun diviseur commun** autre que 1.
 
-Méthode : décomposer les deux, puis simplifier les facteurs communs.
+| L'étape | Le calcul |
+| Décomposer le numérateur | 126 = 2 × 3² × 7 |
+| Décomposer le dénominateur | 180 = 2² × 3² × 5 |
+| Simplifier par les facteurs communs | 2 × 3² = 18 |
+| Le résultat | **7/10** |
 
-126/180 : 126 = 2 × 3² × 7 et 180 = 2² × 3² × 5. On simplifie par 2 × 3² = 18, et il reste **7/10**.
+> Simplifier n'est pas « enlever des chiffres » : c'est **diviser le haut et le bas** par le même nombre.
 
-> Simplifier n’est pas « enlever des chiffres » : c’est diviser le haut ET le bas par le même nombre.
-
-## Pourquoi c’est utile
-Une fraction irréductible est la forme la plus simple d’un quotient : c’est celle qu’attend le brevet, et celle qui rend deux fractions comparables d’un coup d’œil.`,
+## Pourquoi c'est utile
+Une fraction irréductible est la forme la plus simple d'un quotient : c'est celle qu'attend le brevet, et celle qui rend deux fractions comparables d'un coup d'œil.`,
           },
           questions: [
             ['Qu’est-ce qu’un nombre premier ?', ['Un entier supérieur à 1 qui n’a que deux diviseurs : 1 et lui-même', 'Un entier impair', 'Un entier divisible par 2 seulement', 'Le plus petit entier d’une liste'], 0, '1 n’est pas premier : il n’a qu’un seul diviseur.'],
@@ -228,35 +251,49 @@ Une fraction irréductible est la forme la plus simple d’un quotient : c’est
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Développer, factoriser, résoudre',
-            cours: `Le **calcul littéral** manipule des lettres qui représentent des nombres. Trois gestes suffisent au brevet.
+            cours: `Le calcul littéral manipule des lettres qui représentent des nombres. Trois gestes suffisent au brevet.
 
 ## Développer
-On transforme un produit en somme.
-- Simple distributivité : k(a + b) = **ka + kb**
-- Double distributivité : (a + b)(c + d) = **ac + ad + bc + bd**
+On transforme un **produit** en **somme**.
 
-Trois **identités remarquables** à connaître par cœur :
-- (a + b)² = a² + 2ab + b²
-- (a − b)² = a² − 2ab + b²
-- (a + b)(a − b) = a² − b²
+| La règle | Son écriture |
+| Simple distributivité | k(a + b) = **ka + kb** |
+| Double distributivité | (a + b)(c + d) = **ac + ad + bc + bd** |
+
+| L'identité remarquable | Son développement |
+| (a + b)² | a² + **2ab** + b² |
+| (a − b)² | a² − **2ab** + b² |
+| (a + b)(a − b) | a² − b² |
 
 ## Factoriser
-C’est l’opération inverse : on transforme une somme en produit, en repérant un **facteur commun** ou une identité remarquable.
-- 5x + 15 = **5(x + 3)**
-- x² − 9 = x² − 3² = **(x + 3)(x − 3)**
+L'opération inverse : on transforme une **somme** en **produit**.
+
+| L'expression | Sa forme factorisée | Ce qu'on a repéré |
+| 5x + 15 | **5(x + 3)** | Un **facteur commun** |
+| x² − 9 | **(x + 3)(x − 3)** | Une **identité remarquable** |
 
 ## Réduire
-On regroupe les termes de même nature : 3x + 5 + 2x − 1 = **5x + 4**. Attention, 3x et 3x² ne se regroupent jamais.
+On regroupe les termes de même nature.
+
+| L'expression | Sa forme réduite |
+| 3x + 5 + 2x − 1 | **5x + 4** |
+| 3x et 3x² | Ils ne se regroupent **jamais** |
 
 ## Résoudre une équation
-Résoudre, c’est trouver toutes les valeurs de x qui rendent l’égalité vraie. La règle d’or : **ce qu’on fait d’un côté, on le fait de l’autre**.
+> La règle d'or : ce qu'on fait d'un côté, on le fait de l'autre.
 
-4x + 3 = 19 → on retire 3 des deux côtés → 4x = 16 → on divise par 4 → **x = 4**.
+| L'étape | Le calcul |
+| L'équation | 4x + 3 = 19 |
+| Retirer 3 des deux côtés | 4x = 16 |
+| Diviser par 4 | **x = 4** |
 
-## L’équation produit nul
-Si **A × B = 0**, alors **A = 0 ou B = 0**. C’est ce qui permet de résoudre (x − 2)(x + 5) = 0 : les solutions sont **2 et −5**.
+## L'équation produit nul
+Si **A × B = 0**, alors **A = 0 ou B = 0**.
 
-> Toujours **vérifier** sa solution en la remplaçant dans l’équation de départ : c’est un point gratuit au brevet.`,
+| L'équation | Ses solutions |
+| (x − 2)(x + 5) = 0 | **2** et **−5** |
+
+> Toujours **vérifier** sa solution en la remplaçant dans l'équation de départ : c'est un point gratuit au brevet.`,
           },
           questions: [
             ['Que donne le développement de (a + b)² ?', ['a² + 2ab + b²', 'a² + b²', 'a² − 2ab + b²', '2a + 2b'], 0, 'Le double produit 2ab est l’erreur la plus fréquente à l’oubli.'],
@@ -277,30 +314,40 @@ Si **A × B = 0**, alors **A = 0 ou B = 0**. C’est ce qui permet de résoudre 
           axe: 'Organisation et gestion de données – Fonctions',
           lecon: {
             titre: 'Moyenne, médiane, étendue : résumer une série',
-            cours: `Une **série statistique** est une liste de valeurs recueillies sur une population. Trois indicateurs suffisent à la résumer en 3e.
+            cours: `Une série statistique est une liste de valeurs recueillies sur une population. Trois indicateurs suffisent à la résumer en 3e.
+
+## Les trois indicateurs
+| L'indicateur | Ce qu'il mesure | Sa sensibilité aux extrêmes |
+| La **moyenne** | Le niveau moyen | **Forte** |
+| La **médiane** | Le milieu de la série ordonnée | **Aucune** |
+| L'**étendue** | La **dispersion** | Maximale : elle ne dépend que d'eux |
 
 ## La moyenne
 On additionne toutes les valeurs et on divise par leur nombre.
 
-Notes 8, 12, 12, 16, 17 → (8 + 12 + 12 + 16 + 17) ÷ 5 = 65 ÷ 5 = **13**.
+| L'exemple | Le calcul |
+| Notes 8, 12, 12, 16, 17 | (8 + 12 + 12 + 16 + 17) ÷ 5 = 65 ÷ 5 = **13** |
 
-Avec des **effectifs**, on calcule une **moyenne pondérée** : chaque valeur est multipliée par son effectif, et on divise par l’effectif **total**.
+Avec des **effectifs**, on calcule une **moyenne pondérée** : chaque valeur multipliée par son effectif, divisée par l'effectif **total**.
 
 ## La médiane
-C’est la valeur qui **partage la série ordonnée en deux groupes de même effectif** : au moins la moitié des valeurs lui sont inférieures ou égales, au moins la moitié lui sont supérieures ou égales.
-- Il faut **d’abord ranger** les valeurs dans l’ordre croissant.
-- Effectif **impair** : c’est la valeur du milieu.
-- Effectif **pair** : on prend la moyenne des deux valeurs centrales.
+Elle partage la série ordonnée en **deux groupes de même effectif**.
 
-> La médiane résiste aux valeurs extrêmes, pas la moyenne. Un seul salaire très élevé tire la moyenne vers le haut sans bouger la médiane : c’est pour cela que l’on parle du salaire *médian*.
+| L'étape | Ce qu'on fait |
+| 1 | **Ranger** les valeurs dans l'ordre croissant |
+| Effectif **impair** | C'est la valeur du **milieu** |
+| Effectif **pair** | La **moyenne des deux** valeurs centrales |
 
-## L’étendue
-C’est la **différence entre la plus grande et la plus petite valeur**. Elle mesure la dispersion : 17 − 8 = **9**.
+> La médiane résiste aux valeurs extrêmes, pas la moyenne. Un seul salaire très élevé tire la moyenne vers le haut sans bouger la médiane : c'est pour cela qu'on parle du salaire **médian**.
 
-## Lire un tableau d’effectifs
-- **Effectif** d’une valeur : le nombre de fois où elle apparaît.
-- **Fréquence** : effectif ÷ effectif total, souvent donné en pourcentage.
-- La somme des fréquences vaut toujours **1** (ou 100 %).`,
+## L'étendue
+La **différence** entre la plus grande et la plus petite valeur : 17 − 8 = **9**.
+
+## Lire un tableau d'effectifs
+| Le terme | Sa définition |
+| L'**effectif** d'une valeur | Le nombre de fois où elle apparaît |
+| La **fréquence** | Effectif ÷ effectif total, souvent en pourcentage |
+| La somme des fréquences | Toujours **1**, ou 100 % |`,
           },
           questions: [
             ['Comment calcule-t-on la moyenne d’une série ?', ['On additionne les valeurs et on divise par leur nombre', 'On prend la valeur du milieu', 'On soustrait la plus petite valeur à la plus grande', 'On prend la valeur la plus fréquente'], 0, 'Avec des effectifs, chaque valeur est multipliée par son effectif.'],
@@ -318,33 +365,38 @@ C’est la **différence entre la plus grande et la plus petite valeur**. Elle m
           axe: 'Organisation et gestion de données – Fonctions',
           lecon: {
             titre: 'Mesurer la chance qu’un événement se produise',
-            cours: `Une **expérience aléatoire** est une expérience dont on ne peut pas prévoir le résultat : lancer un dé, tirer une carte, faire tourner une roue.
+            cours: `Une expérience aléatoire est une expérience dont on ne peut pas prévoir le résultat.
 
-## Vocabulaire
-- Une **issue** : un résultat possible (obtenir 5 avec un dé).
-- Un **événement** : un ensemble d’issues (« obtenir un nombre pair »).
-- La **probabilité** d’un événement est un nombre compris entre **0 et 1** :
-  - 0 = événement **impossible** ;
-  - 1 = événement **certain**.
+## Le vocabulaire
+| Le terme | Sa définition |
+| Une **issue** | Un résultat possible : obtenir 5 avec un dé |
+| Un **événement** | Un ensemble d'issues : « obtenir un nombre pair » |
+| La **probabilité** | Un nombre entre **0 et 1** |
+
+| La valeur | Ce qu'elle signifie |
+| **0** | Événement **impossible** |
+| **1** | Événement **certain** |
 
 ## Le calcul dans le cas équiprobable
-Quand toutes les issues ont la même chance de se produire :
+Quand toutes les issues ont la même chance :
 
-**P(A) = nombre d’issues favorables ÷ nombre d’issues possibles**
+P(A) = nombre d'issues **favorables** ÷ nombre d'issues **possibles**
 
-Avec un dé à six faces, P(« nombre pair ») = 3/6 = **1/2**.
+| L'exemple | Le calcul |
+| « Nombre pair » avec un dé à six faces | 3/6 = **1/2** |
 
-## L’événement contraire
-L’événement contraire de A, noté « non A », se produit exactement quand A ne se produit pas.
+## L'événement contraire
+P(non A) = 1 − P(A)
 
-**P(non A) = 1 − P(A)**
-
-C’est souvent le chemin le plus court : « au moins un » se calcule presque toujours par le contraire (« aucun »).
+> C'est souvent le chemin le plus court : « **au moins un** » se calcule presque toujours par le contraire, « aucun ».
 
 ## Les expériences à deux épreuves
-On les représente par un **arbre** ou un **tableau à double entrée**. On multiplie les probabilités le long d’une branche, et on additionne les branches qui conviennent.
+| L'outil | Comment on l'utilise |
+| L'**arbre** | On **multiplie** le long d'une branche |
+| Le **tableau à double entrée** | On croise les deux épreuves |
+| Pour un événement | On **additionne** les branches qui conviennent |
 
-> La probabilité ne prédit pas le prochain lancer. Elle dit ce qui se passe **sur un grand nombre** de répétitions : c’est la loi des grands nombres, qui rapproche la fréquence observée de la probabilité théorique.`,
+> La probabilité ne prédit pas le prochain lancer. Elle dit ce qui se passe **sur un grand nombre** de répétitions : c'est la loi des grands nombres, qui rapproche la fréquence observée de la probabilité théorique.`,
           },
           questions: [
             ['Entre quelles valeurs une probabilité est-elle toujours comprise ?', ['Entre 0 et 1', 'Entre −1 et 1', 'Entre 0 et 100', 'Entre 1 et 10'], 0, '0 = impossible, 1 = certain.'],
@@ -362,30 +414,33 @@ On les représente par un **arbre** ou un **tableau à double entrée**. On mult
           axe: 'Organisation et gestion de données – Fonctions',
           lecon: {
             titre: 'Une machine qui transforme un nombre en un autre',
-            cours: `Une **fonction** est un procédé qui, à un nombre, associe **un seul** autre nombre. On note f : x ↦ f(x), lu « à x on associe f de x ».
+            cours: `Une fonction est un procédé qui, à un nombre, associe un seul autre nombre. On note f : x ↦ f(x).
 
 ## Le vocabulaire
-- x est l’**antécédent** ;
-- f(x) est l’**image** de x par f ;
-- « f(3) = 7 » se lit : l’image de 3 est 7, et 3 est **un** antécédent de 7.
+| Le terme | Ce qu'il désigne |
+| x | L'**antécédent** |
+| f(x) | L'**image** de x par f |
+| « f(3) = 7 » | L'image de 3 est 7, et 3 est **un** antécédent de 7 |
 
-> Un nombre a **une seule image**, mais un nombre peut avoir **plusieurs antécédents** — ou aucun. C’est la dissymétrie la plus souvent oubliée.
+> Un nombre a **une seule image**, mais un nombre peut avoir **plusieurs antécédents** — ou aucun. C'est la dissymétrie la plus souvent oubliée.
 
-## Calculer une image
-On remplace x par sa valeur. Pour f(x) = 2x + 5 :
-f(3) = 2 × 3 + 5 = **11**.
+## Les deux calculs
+| Le calcul | Ce qu'on fait | Un exemple avec f(x) = 2x + 5 |
+| Une **image** | On **remplace** x par sa valeur | f(3) = 2 × 3 + 5 = **11** |
+| Un **antécédent** | On **résout une équation** | 2x + 5 = 17 donne x = **6** |
 
-## Chercher un antécédent
-On résout une équation. Chercher l’antécédent de 17 par f, c’est résoudre 2x + 5 = 17, donc x = **6**.
-
-## Les trois représentations d’une fonction
-- Une **formule** : f(x) = 2x + 5.
-- Un **tableau de valeurs** : la ligne du haut donne les antécédents, celle du bas les images.
-- Une **courbe** : chaque point a pour coordonnées (x ; f(x)).
+## Les trois représentations
+| La représentation | Ce qu'elle donne |
+| Une **formule** | f(x) = 2x + 5 |
+| Un **tableau de valeurs** | La ligne du haut : les antécédents ; celle du bas : les images |
+| Une **courbe** | Chaque point a pour coordonnées (x ; f(x)) |
 
 ## Lire un graphique
-- Image de 3 : on part de 3 sur l’axe des abscisses, on monte jusqu’à la courbe, on lit sur l’axe des ordonnées.
-- Antécédent de 7 : on part de 7 sur l’axe des ordonnées, on va horizontalement jusqu’à la courbe, on lit en abscisse — et il peut y en avoir plusieurs.`,
+| Ce qu'on cherche | Le trajet du regard |
+| L'**image** de 3 | Partir de 3 en **abscisse**, monter jusqu'à la courbe, lire en **ordonnée** |
+| L'**antécédent** de 7 | Partir de 7 en **ordonnée**, aller horizontalement jusqu'à la courbe, lire en **abscisse** |
+
+> Il peut y avoir **plusieurs** antécédents : la lecture horizontale peut couper la courbe en plusieurs points.`,
           },
           questions: [
             ['Qu’est-ce qu’une fonction ?', ['Un procédé qui associe à un nombre un seul autre nombre', 'Une égalité entre deux expressions', 'Une suite de nombres ordonnés', 'Un tableau de proportionnalité'], 0, 'À chaque antécédent correspond une image unique.'],
@@ -403,27 +458,39 @@ On résout une équation. Chercher l’antécédent de 17 par f, c’est résoud
           axe: 'Organisation et gestion de données – Fonctions',
           lecon: {
             titre: 'La proportionnalité, écrite comme une fonction',
-            cours: `Une **fonction linéaire** est une fonction de la forme **f(x) = a x**, où a est un nombre fixe appelé **coefficient** (ou coefficient de proportionnalité).
+            cours: `Une fonction linéaire est de la forme f(x) = a x, où a est le coefficient de proportionnalité.
 
 ## Le lien avec la proportionnalité
-Une fonction linéaire traduit exactement une **situation de proportionnalité** : si x double, f(x) double.
-- Le coefficient a se calcule par **a = f(x) ÷ x** (pour x non nul).
-- Une seule valeur non nulle suffit donc à déterminer toute la fonction.
+| Le fait | Sa conséquence |
+| Une fonction linéaire traduit une **situation de proportionnalité** | Si x double, f(x) double |
+| Le coefficient | a = f(x) ÷ x, pour x non nul |
+| Une seule valeur non nulle | Elle suffit à déterminer toute la fonction |
 
 ## La représentation graphique
-C’est une **droite qui passe par l’origine** du repère. C’est la signature graphique de la proportionnalité : si la droite ne passe pas par (0 ; 0), la situation n’est pas proportionnelle.
+| Le trait | Ce qu'il signifie |
+| Une **droite** | La fonction est linéaire ou affine |
+| Elle passe par l'**origine** | La signature de la **proportionnalité** |
+| Elle ne passe **pas** par (0 ; 0) | La situation **n'est pas** proportionnelle |
 
 Le coefficient a est la **pente** : en avançant de 1 vers la droite, on monte de a.
 
 ## Les pourcentages, cas particulier
-- Prendre **t %** d’un nombre, c’est le multiplier par t/100 : la fonction x ↦ 0,2x donne 20 % de x.
-- **Augmenter de 15 %** revient à multiplier par **1,15** ; **diminuer de 15 %** revient à multiplier par **0,85**.
-- Deux augmentations successives ne s’additionnent pas : +10 % puis +10 % donne ×1,1 × 1,1 = ×1,21, soit **+21 %**.
+| L'opération | Le coefficient multiplicateur |
+| Prendre **t %** | t/100 — la fonction x ↦ 0,2x donne 20 % de x |
+| **Augmenter** de 15 % | ×**1,15** |
+| **Diminuer** de 15 % | ×**0,85** |
 
-> Une baisse de 20 % suivie d’une hausse de 20 % ne ramène pas au prix de départ : 0,8 × 1,2 = 0,96, soit −4 %.
+| L'enchaînement | Le calcul | Le résultat |
+| +10 % puis +10 % | 1,1 × 1,1 = 1,21 | **+21 %**, et non +20 % |
+| −20 % puis +20 % | 0,8 × 1,2 = 0,96 | **−4 %**, et non le retour au départ |
+
+> Les pourcentages ne s'additionnent jamais : les **coefficients se multiplient**.
 
 ## Reconnaître une fonction linéaire
-Formule de la forme a x sans terme constant ; tableau où le quotient f(x) ÷ x est constant ; droite passant par l’origine.`,
+| L'indice | Ce qu'on vérifie |
+| La **formule** | De la forme a x, **sans terme constant** |
+| Le **tableau** | Le quotient f(x) ÷ x est **constant** |
+| Le **graphique** | Une droite passant par l'**origine** |`,
           },
           questions: [
             ['Quelle est la forme d’une fonction linéaire ?', ['f(x) = a x', 'f(x) = a x + b avec b non nul', 'f(x) = x²', 'f(x) = a ÷ x'], 0, 'Aucun terme constant : c’est ce qui la distingue de la fonction affine.'],
@@ -441,33 +508,43 @@ Formule de la forme a x sans terme constant ; tableau où le quotient f(x) ÷ x 
           axe: 'Organisation et gestion de données – Fonctions',
           lecon: {
             titre: 'a x + b : la droite qui ne passe plus par l’origine',
-            cours: `Une **fonction affine** est une fonction de la forme **f(x) = a x + b**, où a et b sont deux nombres fixes.
-- **a** est le **coefficient directeur** ;
-- **b** est l’**ordonnée à l’origine** : c’est f(0).
+            cours: `Une fonction affine est de la forme f(x) = a x + b, où a et b sont deux nombres fixes.
+
+| Le coefficient | Son nom | Ce qu'il est |
+| **a** | Le **coefficient directeur** | La pente |
+| **b** | L'**ordonnée à l'origine** | C'est f(0) |
 
 ## Deux cas particuliers
-- Si **b = 0**, la fonction est **linéaire** : toute fonction linéaire est affine, l’inverse est faux.
-- Si **a = 0**, la fonction est **constante** : sa représentation est une droite horizontale.
+| La condition | La fonction | Sa droite |
+| **b = 0** | Elle est **linéaire** | Elle passe par l'origine |
+| **a = 0** | Elle est **constante** | Elle est horizontale |
+
+> Toute fonction linéaire est affine ; l'inverse est faux.
 
 ## La représentation graphique
-C’est **toujours une droite**. Elle coupe l’axe des ordonnées au point (0 ; b).
-- a **positif** → la droite monte ;
-- a **négatif** → la droite descend ;
-- plus |a| est grand, plus la droite est raide.
+| Le signe de a | La droite |
+| **Positif** | Elle **monte** |
+| **Négatif** | Elle **descend** |
+| Plus sa valeur absolue est grande | Plus la droite est **raide** |
+
+Elle coupe l'axe des ordonnées au point (0 ; b).
 
 ## Déterminer a et b à partir de deux points
-Le coefficient directeur se calcule par la variation :
+a = (f(x₂) − f(x₁)) ÷ (x₂ − x₁)
 
-**a = (f(x₂) − f(x₁)) ÷ (x₂ − x₁)**
+| L'étape | Le calcul, avec f(1) = 5 et f(3) = 11 |
+| Calculer a | (11 − 5) ÷ (3 − 1) = **3** |
+| Trouver b | 5 = 3 × 1 + b, donc b = **2** |
+| La fonction | **f(x) = 3x + 2** |
 
-Puis on remplace dans f(x) = a x + b pour trouver b.
-
-Exemple : f(1) = 5 et f(3) = 11 → a = (11 − 5) ÷ (3 − 1) = 3 ; puis 5 = 3 × 1 + b donne b = 2, donc **f(x) = 3x + 2**.
-
-> Une fonction affine n’est PAS une situation de proportionnalité, sauf si b = 0 : le forfait de 15 € plus 2 € par heure ne double pas quand les heures doublent.
+> Une fonction affine n'est **pas** une situation de proportionnalité, sauf si b = 0 : un forfait de 15 € plus 2 € par heure ne double pas quand les heures doublent.
 
 ## Les usages du brevet
-Tarifs à abonnement, distance parcourue avec une avance de départ, comparaison de deux offres — la solution est le **point d’intersection** des deux droites, ou la résolution de l’équation qui les égalise.`,
+| La situation | Ce qu'on cherche |
+| Tarifs à abonnement | Comparer deux offres |
+| Distance avec une avance de départ | Le moment du rattrapage |
+| Deux droites tracées | Leur **point d'intersection** |
+| Deux formules | L'équation qui les égalise |`,
           },
           questions: [
             ['Quelle est la forme d’une fonction affine ?', ['f(x) = a x + b', 'f(x) = a x seulement', 'f(x) = x² + b', 'f(x) = a ÷ (x + b)'], 0, 'a est le coefficient directeur, b l’ordonnée à l’origine.'],
@@ -488,35 +565,44 @@ Tarifs à abonnement, distance parcourue avec une avance de départ, comparaison
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'La surface et le volume du rond parfait',
-            cours: `Deux objets à ne pas confondre :
-- la **sphère** est la **surface** — l’ensemble des points situés à une même distance R du centre, comme la coque d’un ballon ;
-- la **boule** est le **solide plein** — la sphère et tout ce qu’elle contient.
+            cours: `Deux objets à ne pas confondre.
+
+| L'objet | Ce qu'il est | Son image |
+| La **sphère** | La **surface** : les points à distance R du centre | La coque d'un ballon |
+| La **boule** | Le **solide plein** | Le ballon entier |
 
 ## Les deux formules
-- **Aire de la sphère : A = 4 × π × R²**
-- **Volume de la boule : V = (4/3) × π × R³**
+| La grandeur | Sa formule | Son unité |
+| **Aire de la sphère** | A = 4 × π × R² | Une unité **carrée** |
+| **Volume de la boule** | V = (4/3) × π × R³ | Une unité **cube** |
 
-R est le **rayon**. Si l’énoncé donne le **diamètre**, il faut le diviser par 2 avant tout calcul : c’est l’erreur la plus coûteuse du chapitre.
+> Si l'énoncé donne le **diamètre**, il faut le **diviser par 2** avant tout calcul. C'est l'erreur la plus coûteuse du chapitre.
 
 ## Un exemple complet
-Une boule de rayon 3 cm :
-- A = 4 × π × 3² = 36π ≈ **113,1 cm²**
-- V = (4/3) × π × 3³ = 36π ≈ **113,1 cm³**
+| Le calcul, pour R = 3 cm | Le résultat |
+| A = 4 × π × 3² | 36π ≈ **113,1 cm²** |
+| V = (4/3) × π × 3³ | 36π ≈ **113,1 cm³** |
 
-(La coïncidence des deux valeurs n’arrive que pour R = 3 : ce sont deux grandeurs différentes, l’une en cm², l’autre en cm³.)
+> La coïncidence des valeurs n'arrive que pour R = 3 : ce sont deux grandeurs différentes, l'une en cm², l'autre en cm³.
 
-## Les sections d’une sphère
-Toute section d’une sphère par un plan est un **cercle**. Ce cercle est d’autant plus petit que le plan s’éloigne du centre ; quand le plan passe **par le centre**, on obtient un **grand cercle**, de même rayon que la sphère.
+## Les sections d'une sphère
+| La position du plan | La section obtenue |
+| Quelconque | Un **cercle** |
+| **Par le centre** | Un **grand cercle**, de même rayon que la sphère |
+| Plus le plan s'éloigne du centre | Plus le cercle est **petit** |
 
-## Effet d’un agrandissement
-Si on multiplie le rayon par k :
-- l’aire est multipliée par **k²** ;
-- le volume est multiplié par **k³**.
+## Effet d'un agrandissement
+| Si le rayon est multiplié par k | La grandeur est multipliée par |
+| Les **longueurs** | k |
+| L'**aire** | **k²** |
+| Le **volume** | **k³** |
 
-> Doubler le rayon d’un ballon multiplie sa surface par 4 et son volume par 8.
+> Doubler le rayon d'un ballon multiplie sa surface par **4** et son volume par **8**.
 
 ## Les unités
-Une aire s’exprime en unités **carrées** (cm²), un volume en unités **cubes** (cm³). 1 L = 1 dm³, et 1 cm³ = 1 mL.`,
+| L'équivalence | Sa valeur |
+| 1 L | 1 dm³ |
+| 1 cm³ | 1 mL |`,
           },
           questions: [
             ['Quelle est la différence entre une sphère et une boule ?', ['La sphère est la surface, la boule est le solide plein', 'La sphère est pleine, la boule est creuse', 'Ce sont deux mots pour le même objet', 'La sphère est plate, la boule est en volume'], 0, 'La coque du ballon contre le ballon entier.'],
@@ -534,35 +620,34 @@ Une aire s’exprime en unités **carrées** (cm²), un volume en unités **cube
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Ce qu’on voit quand on tranche un solide',
-            cours: `**Couper** un solide par un plan fait apparaître une figure plane appelée **section**. Savoir la reconnaître, c’est savoir passer de l’espace au plan.
+            cours: `Couper un solide par un plan fait apparaître une figure plane appelée section.
 
-## Le pavé droit et le cube
-- Section par un plan **parallèle à une face** : un **rectangle** identique à cette face (un carré pour le cube).
-- Section par un plan **parallèle à une arête** : un **rectangle**.
+## Les sections des solides
+| Le solide | La position du plan | La section |
+| **Pavé droit**, cube | Parallèle à une **face** | Un **rectangle** identique à cette face — un carré pour le cube |
+| Pavé droit | Parallèle à une **arête** | Un rectangle |
+| **Cylindre** | Parallèle à la **base** | Un **disque** de même rayon |
+| Cylindre | Contenant l'**axe** | Un **rectangle** : hauteur et diamètre |
+| **Pyramide** | Parallèle à la base | Un polygone **de même forme** que la base |
+| **Cône** | Parallèle à la base | Un **disque** |
+| **Sphère** | Quelconque | Un **cercle** — un grand cercle si le plan passe par le centre |
 
-## Le cylindre de révolution
-- Plan **parallèle à la base** : un **disque** de même rayon que la base.
-- Plan **contenant l’axe** : un **rectangle**, dont un côté vaut la hauteur et l’autre le diamètre.
+## La réduction dans la pyramide et le cône
+La section parallèle à la base est une **réduction** de la base, de coefficient k égal au rapport des hauteurs.
 
-## La pyramide et le cône
-Section par un plan **parallèle à la base** :
-- pour la pyramide, un polygone **de même forme** que la base ;
-- pour le cône, un **disque**.
-
-Dans les deux cas, la section est une **réduction** de la base : c’est un agrandissement-réduction de coefficient k, égal au rapport des hauteurs. Alors :
-- les longueurs sont multipliées par **k** ;
-- les aires par **k²** ;
-- les volumes par **k³**.
-
-## La sphère
-Toute section d’une sphère est un **cercle** — un **grand cercle** si le plan passe par le centre.
+| La grandeur | Son coefficient |
+| Les **longueurs** | k |
+| Les **aires** | **k²** |
+| Les **volumes** | **k³** |
 
 ## Le rappel des volumes
-- Pavé droit : V = L × l × h
-- Cylindre : V = π × R² × h
-- Pyramide et cône : V = (1/3) × aire de la base × hauteur
+| Le solide | Son volume |
+| **Pavé droit** | L × l × h |
+| **Cylindre** | π × R² × h |
+| **Pyramide** | (1/3) × aire de la base × hauteur |
+| **Cône** | (1/3) × aire de la base × hauteur |
 
-> Le tiers de la pyramide et du cône n’est pas un détail : c’est le facteur que les copies oublient le plus souvent.`,
+> Le **tiers** de la pyramide et du cône n'est pas un détail : c'est le facteur que les copies oublient le plus souvent.`,
           },
           questions: [
             ['Quelle figure obtient-on en coupant un cylindre par un plan parallèle à sa base ?', ['Un disque de même rayon que la base', 'Un rectangle', 'Une ellipse', 'Un triangle'], 0, 'Le plan « recopie » la base.'],
@@ -580,31 +665,37 @@ Toute section d’une sphère est un **cercle** — un **grand cercle** si le pl
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Agrandir ou réduire depuis un point',
-            cours: `Une **homothétie** est une transformation qui **agrandit ou réduit** une figure à partir d’un point fixe appelé **centre**, selon un nombre appelé **rapport** (noté k).
+            cours: `Une homothétie agrandit ou réduit une figure à partir d'un point fixe — le centre — selon un nombre appelé rapport, noté k.
 
 ## La construction
-L’image M′ d’un point M par l’homothétie de centre O et de rapport k est le point de la droite (OM) tel que **OM′ = |k| × OM**.
-- Si **k > 0**, M′ est du **même côté** que M par rapport à O.
-- Si **k < 0**, M′ est de l’**autre côté** : la figure est retournée.
+L'image M′ de M par l'homothétie de centre O et de rapport k est le point de la droite (OM) tel que OM′ = valeur absolue de k, multipliée par OM.
 
-## Ce que l’homothétie conserve
-- l’**alignement**, le **parallélisme**, les **angles** ;
-- la **forme** de la figure : l’image est un agrandissement ou une réduction, jamais une déformation.
+| Le signe de k | La position de M′ |
+| **Positif** | Du **même côté** que M par rapport à O |
+| **Négatif** | De l'**autre côté** : la figure est retournée |
 
-## Ce qu’elle multiplie
-- les **longueurs** par |k| ;
-- les **aires** par **k²** ;
-- les **volumes** par **k³**.
+## Ce qu'elle conserve, ce qu'elle multiplie
+| Elle **conserve** | Elle **multiplie** |
+| L'**alignement** | Les **longueurs** par la valeur absolue de k |
+| Le **parallélisme** | Les **aires** par **k²** |
+| Les **angles** | Les **volumes** par **k³** |
+| La **forme** de la figure | — |
+
+> L'image est un agrandissement ou une réduction, **jamais** une déformation.
 
 ## Trois cas remarquables
-- **k = 1** : la figure ne bouge pas.
-- **k = −1** : c’est une **symétrie centrale** de centre O.
-- **|k| > 1** : agrandissement ; **|k| < 1** : réduction.
+| La valeur de k | La transformation |
+| **k = 1** | La figure ne bouge pas |
+| **k = −1** | Une **symétrie centrale** de centre O |
+| Valeur absolue **supérieure à 1** | Un **agrandissement** |
+| Valeur absolue **inférieure à 1** | Une **réduction** |
 
-> Une homothétie de rapport 3 triple les longueurs mais multiplie l’aire par 9 : c’est la source d’erreur numéro un du chapitre.
+> Une homothétie de rapport 3 triple les longueurs mais multiplie l'aire par **9** : c'est la source d'erreur numéro un du chapitre.
 
 ## Le lien avec Thalès
-Une homothétie de centre O transforme une droite en une **droite parallèle**. C’est exactement la configuration du théorème de Thalès : les deux chapitres décrivent la même situation, l’un par une transformation, l’autre par une égalité de quotients.`,
+Une homothétie de centre O transforme une droite en une **droite parallèle**.
+
+> C'est exactement la configuration du théorème de Thalès : les deux chapitres décrivent la même situation, l'un par une transformation, l'autre par une égalité de quotients.`,
           },
           questions: [
             ['Qu’est-ce qu’une homothétie ?', ['Une transformation qui agrandit ou réduit une figure depuis un point fixe', 'Une rotation autour d’un point', 'Une translation le long d’un vecteur', 'Une symétrie par rapport à une droite'], 0, 'Elle est définie par un centre et un rapport.'],
@@ -622,30 +713,39 @@ Une homothétie de centre O transforme une droite en une **droite parallèle**. 
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Des droites parallèles, des quotients égaux',
-            cours: `Le théorème de **Thalès** relie des longueurs dans une configuration de **droites parallèles coupées par deux sécantes**.
+            cours: `Le théorème de Thalès relie des longueurs dans une configuration de droites parallèles coupées par deux sécantes.
 
 ## La configuration
-Deux droites sécantes en A ; deux points B et M sur la première, C et N sur la seconde. Si **(BC) et (MN) sont parallèles**, alors :
+Deux droites sécantes en A ; B et M sur la première, C et N sur la seconde. Si **(BC) et (MN) sont parallèles** :
 
-**AM / AB = AN / AC = MN / BC**
+AM / AB = AN / AC = MN / BC
 
-Les deux figures possibles sont le **triangle emboîté** (M et N du même côté de A) et le **papillon** (M et N de l’autre côté) — le théorème est le même.
+| La figure | Sa disposition |
+| Le **triangle emboîté** | M et N du **même côté** de A |
+| Le **papillon** | M et N de l'**autre côté** |
+
+> Le théorème est le même dans les deux cas.
 
 ## La méthode en trois temps
-1. **Vérifier** que les points sont alignés et que les droites sont parallèles.
-2. **Écrire** les trois quotients dans le bon ordre : chaque quotient commence par le sommet commun A.
-3. **Résoudre** par le produit en croix, en n’utilisant que les deux quotients dont on connaît trois longueurs.
+| L'étape | Ce qu'on fait |
+| 1 | **Vérifier** l'alignement des points et le **parallélisme** des droites |
+| 2 | **Écrire** les trois quotients dans le bon ordre : chacun commence par le sommet commun A |
+| 3 | **Résoudre** par le produit en croix, avec les deux quotients dont on connaît trois longueurs |
 
-> L’erreur classique est de mélanger un « petit » et un « grand » segment dans le même quotient. Écrire le rapport toujours dans le même sens — petit sur grand — évite la moitié des fautes.
+> L'erreur classique est de mélanger un « petit » et un « grand » segment dans le même quotient. Écrire toujours **petit sur grand** évite la moitié des fautes.
 
-## La réciproque : prouver un parallélisme
-Si les points A, M, B et A, N, C sont alignés **dans le même ordre**, et si **AM / AB = AN / AC**, alors les droites (MN) et (BC) sont **parallèles**.
+## Les deux usages inverses
+| Ce qu'on veut prouver | Ce qu'on utilise | La condition |
+| Les droites sont **parallèles** | La **réciproque** | Les points alignés **dans le même ordre**, et AM / AB = AN / AC |
+| Les droites **ne sont pas** parallèles | La **contraposée** | Les deux quotients sont **différents** |
 
-## La contraposée : prouver un non-parallélisme
-Si les deux quotients sont **différents**, alors les droites **ne sont pas parallèles**. C’est la question type du brevet : on calcule les deux quotients, on les compare, on conclut.
+> C'est la question type du brevet : on calcule les deux quotients, on les compare, on conclut.
 
 ## Le lien avec les agrandissements
-Le rapport commun des quotients est un **coefficient de réduction** : les aires y sont dans le rapport k², les volumes dans le rapport k³.`,
+| Le rapport commun k | Ce qu'il multiplie |
+| Les **longueurs** | k |
+| Les **aires** | k² |
+| Les **volumes** | k³ |`,
           },
           questions: [
             ['Quelle condition rend le théorème de Thalès applicable ?', ['Deux droites parallèles coupées par deux sécantes', 'Un triangle rectangle', 'Deux cercles de même rayon', 'Un quadrilatère quelconque'], 0, 'Le parallélisme est l’hypothèse indispensable.'],
@@ -663,36 +763,45 @@ Le rapport commun des quotients est un **coefficient de réduction** : les aires
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Cosinus, sinus, tangente : relier angles et longueurs',
-            cours: `La **trigonométrie** relie les **angles** d’un triangle rectangle à ses **longueurs** — ce que ni Pythagore ni Thalès ne savent faire.
+            cours: `La trigonométrie relie les angles d'un triangle rectangle à ses longueurs — ce que ni Pythagore ni Thalès ne savent faire.
 
 ## Le vocabulaire, depuis un angle aigu
-Dans un triangle rectangle, pour un angle aigu choisi :
-- l’**hypoténuse** est le côté opposé à l’angle droit (le plus long) ;
-- le côté **adjacent** touche l’angle ;
-- le côté **opposé** lui fait face.
+| Le côté | Sa définition |
+| L'**hypoténuse** | Opposé à l'angle **droit** : le plus long |
+| L'**adjacent** | Il **touche** l'angle choisi |
+| L'**opposé** | Il lui **fait face** |
 
 ## Les trois formules
-- **cos = adjacent ÷ hypoténuse**
-- **sin = opposé ÷ hypoténuse**
-- **tan = opposé ÷ adjacent**
+| Le rapport | Sa formule |
+| **cos** | adjacent ÷ hypoténuse |
+| **sin** | opposé ÷ hypoténuse |
+| **tan** | opposé ÷ adjacent |
 
-Le moyen mnémotechnique : **CAH-SOH-TOA**.
+Le moyen mnémotechnique : **CAH – SOH – TOA**.
 
-## Calculer une longueur
-On repère l’angle connu, on identifie les côtés en jeu, on choisit la formule qui contient **deux données et une inconnue**, puis on résout.
+## Les deux calculs
+| Ce qu'on cherche | La méthode |
+| Une **longueur** | Repérer l'angle connu, identifier les côtés, choisir la formule à **deux données et une inconnue**, résoudre |
+| Un **angle** | Calculer le quotient, puis utiliser **cos⁻¹, sin⁻¹ ou tan⁻¹** |
 
-## Calculer un angle
-On calcule le quotient, puis on utilise les touches **cos⁻¹, sin⁻¹ ou tan⁻¹** de la calculatrice. Vérifier que celle-ci est bien en mode **degrés** (DEG) : en mode radians, tous les résultats sont faux sans que rien ne le signale.
+> Vérifier que la calculatrice est bien en mode **degrés** (DEG) : en radians, tous les résultats sont faux **sans que rien ne le signale**.
 
 ## Les valeurs à connaître
-- cos 0° = 1 ; cos 90° = 0
-- sin 0° = 0 ; sin 90° = 1
-- cos 60° = 0,5 ; sin 30° = 0,5 ; tan 45° = 1
+| L'angle | cos | sin | tan |
+| 0° | 1 | 0 | 0 |
+| 30° | — | **0,5** | — |
+| 45° | — | — | **1** |
+| 60° | **0,5** | — | — |
+| 90° | 0 | 1 | — |
 
-> Le cosinus et le sinus d’un angle aigu sont **toujours compris entre 0 et 1** : un résultat supérieur à 1 signale une erreur de formule ou de côté.
+> Le cosinus et le sinus d'un angle aigu sont **toujours entre 0 et 1** : un résultat supérieur à 1 signale une erreur de formule ou de côté.
 
 ## Avec Pythagore
-Pythagore relie trois **longueurs** (a² + b² = c²), la trigonométrie relie deux longueurs et un **angle**. Une figure se traite souvent avec les deux à la suite.`,
+| Le théorème | Ce qu'il relie |
+| **Pythagore** | Trois **longueurs** : a² + b² = c² |
+| La **trigonométrie** | Deux longueurs et un **angle** |
+
+> Une figure se traite souvent avec les deux à la suite.`,
           },
           questions: [
             ['Que vaut le cosinus d’un angle aigu dans un triangle rectangle ?', ['Adjacent ÷ hypoténuse', 'Opposé ÷ hypoténuse', 'Opposé ÷ adjacent', 'Hypoténuse ÷ adjacent'], 0, 'Le moyen mnémotechnique CAH : Cosinus, Adjacent, Hypoténuse.'],
@@ -710,31 +819,42 @@ Pythagore relie trois **longueurs** (a² + b² = c²), la trigonométrie relie d
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Même forme, taille différente',
-            cours: `Deux triangles sont **semblables** lorsqu’ils ont **la même forme** : leurs angles sont deux à deux égaux, et leurs côtés sont proportionnels.
+            cours: `Deux triangles sont semblables lorsqu'ils ont la même forme : leurs angles sont deux à deux égaux, et leurs côtés proportionnels.
 
 ## Les deux définitions équivalentes
-1. Les **angles** des deux triangles sont **deux à deux de même mesure**.
-2. Les **longueurs des côtés** sont **proportionnelles** : le quotient des côtés homologues est constant, et vaut le **rapport de similitude** k.
+| La définition | Son contenu |
+| Par les **angles** | Ils sont deux à deux de même mesure |
+| Par les **côtés** | Les longueurs sont proportionnelles ; le quotient est le **rapport de similitude** k |
 
-En 3e, on retient surtout le critère le plus rapide : **deux angles égaux suffisent**. Comme la somme des angles d’un triangle vaut 180°, le troisième suit automatiquement.
+> En 3e, on retient le critère le plus rapide : **deux angles égaux suffisent**. La somme des angles valant 180°, le troisième suit automatiquement.
 
 ## Comment rédiger
-On nomme les triangles en respectant l’ordre des sommets homologues : si ABC et DEF sont semblables avec A ↔ D, B ↔ E, C ↔ F, alors :
+On nomme les triangles en respectant l'ordre des **sommets homologues**. Si ABC et DEF sont semblables avec A ↔ D, B ↔ E, C ↔ F :
 
-**AB / DE = AC / DF = BC / EF = k**
+AB / DE = AC / DF = BC / EF = k
 
-> L’ordre des lettres n’est pas décoratif : c’est lui qui dit quel côté correspond à quel autre.
+> L'ordre des lettres n'est pas décoratif : c'est lui qui dit quel côté correspond à quel autre.
 
 ## Ce que le rapport multiplie
-- les longueurs par **k** ;
-- les aires par **k²** ;
-- les volumes (pour des solides semblables) par **k³**.
+| La grandeur | Son coefficient |
+| Les **longueurs** | k |
+| Les **aires** | **k²** |
+| Les **volumes**, pour des solides semblables | **k³** |
 
-## Triangles semblables et triangles égaux
-Deux triangles sont **égaux** (ou isométriques) quand k = 1 : même forme ET même taille. Les triangles égaux sont donc un cas particulier des triangles semblables.
+## Semblables et égaux
+| Les triangles | Leur rapport | Ce qu'ils partagent |
+| **Semblables** | k quelconque | La **forme** |
+| **Égaux** (isométriques) | **k = 1** | La forme **et** la taille |
+
+> Les triangles égaux sont un cas particulier des triangles semblables.
 
 ## Les usages
-Calculer une longueur inaccessible (hauteur d’un arbre par son ombre), démontrer une égalité de rapports, relier une réduction à son modèle. La configuration de Thalès produit d’ailleurs toujours deux triangles semblables.`,
+| L'usage | Son exemple |
+| Calculer une longueur **inaccessible** | La hauteur d'un arbre par son ombre |
+| Démontrer une **égalité de rapports** | Une configuration géométrique |
+| Relier une **réduction** à son modèle | Maquette, plan |
+
+> La configuration de Thalès produit d'ailleurs toujours deux triangles semblables.`,
           },
           questions: [
             ['Quand deux triangles sont-ils semblables ?', ['Quand leurs angles sont deux à deux égaux', 'Quand ils ont la même aire', 'Quand ils ont un côté commun', 'Quand ils sont tous deux rectangles'], 0, 'Leurs côtés sont alors proportionnels.'],

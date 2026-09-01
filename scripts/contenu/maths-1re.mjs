@@ -130,27 +130,37 @@ DELETE FROM public.chapters c
           axe: 'Algèbre',
           lecon: {
             titre: 'Définir, calculer, décrire le comportement',
-            cours: `Une **suite numérique** est une fonction définie sur les entiers naturels : à chaque rang n elle associe un terme u(n). On la note (u) et son terme de rang n, u(n) — jamais u × n.
+            cours: `Une suite numérique est une fonction définie sur les entiers naturels : à chaque rang n elle associe un terme u(n).
+
+> On note la suite (u) et son terme de rang n, u(n) — jamais u × n.
 
 ## Deux façons de définir une suite
-- **Explicite** : u(n) est donné directement en fonction de n. u(n) = 3n − 2 permet de calculer u(100) sans connaître les précédents.
-- **Par récurrence** : on donne le **premier terme** et une relation qui lie u(n+1) à u(n). u(0) = 5 et u(n+1) = 2 × u(n) + 1 obligent à calculer tous les termes intermédiaires.
+| La définition | Ce qu'on donne | Un exemple | Ce qu'elle permet |
+| **Explicite** | u(n) en fonction de n | u(n) = 3n − 2 | Calculer u(100) **sans** les précédents |
+| **Par récurrence** | Le **premier terme** et une relation entre u(n+1) et u(n) | u(0) = 5 et u(n+1) = 2 u(n) + 1 | Décrire un processus **pas à pas** |
 
-> Les deux définitions ne se valent pas à l’usage : la forme explicite donne n’importe quel terme immédiatement, la forme récurrente décrit un processus pas à pas — un capital qui évolue chaque année, une population qui se renouvelle.
+> Les deux ne se valent pas à l'usage : la forme récurrente colle aux situations réelles — un capital qui évolue chaque année, une population qui se renouvelle.
 
 ## Sens de variation
-- (u) est **croissante** si u(n+1) ≥ u(n) pour tout n ; **décroissante** si u(n+1) ≤ u(n).
-- La méthode standard : étudier le **signe de la différence** u(n+1) − u(n).
-- Si tous les termes sont strictement positifs, on peut aussi comparer le **quotient** u(n+1) / u(n) à 1.
-- Si la suite est définie explicitement par u(n) = f(n), le sens de variation de la fonction f sur les réels positifs se transmet à la suite.
+| La méthode | Ce qu'on étudie | Quand l'employer |
+| La **différence** | Le signe de u(n+1) − u(n) | Toujours possible |
+| Le **quotient** | Comparer u(n+1) / u(n) à 1 | Seulement si tous les termes sont **strictement positifs** |
+| La **fonction associée** | Le sens de variation de f, si u(n) = f(n) | Seulement pour une suite explicite |
 
-## Suites majorées, minorées, bornées
-(u) est **majorée** s’il existe un réel M tel que u(n) ≤ M pour tout n ; **minorée** s’il existe m tel que u(n) ≥ m ; **bornée** si elle est les deux à la fois.
+(u) est **croissante** si u(n+1) ≥ u(n) pour tout n, **décroissante** si u(n+1) ≤ u(n).
+
+## Majorée, minorée, bornée
+| Le mot | Sa condition |
+| **Majorée** | Il existe M tel que u(n) ≤ M pour tout n |
+| **Minorée** | Il existe m tel que u(n) ≥ m pour tout n |
+| **Bornée** | Les deux à la fois |
 
 ## Représenter une suite
-Sur un graphique, une suite se représente par des **points isolés** de coordonnées (n ; u(n)) — jamais par une courbe continue, puisque n ne prend que des valeurs entières.
+Une suite se représente par des **points isolés** de coordonnées (n ; u(n)).
 
-Pour une suite définie par récurrence, on trace la courbe de la fonction f et la droite d’équation y = x : le va-et-vient entre les deux, en escalier ou en escargot, donne à voir le comportement des termes.`,
+> Jamais par une courbe continue : n ne prend que des valeurs entières.
+
+Pour une suite définie par récurrence, on trace la courbe de f et la droite d'équation y = x : le va-et-vient entre les deux, en escalier ou en escargot, donne à voir le comportement des termes.`,
           },
           questions: [
             ['Une suite numérique est une fonction définie sur…', ['les entiers naturels', 'les réels', 'les rationnels', 'un intervalle de réels'], 0, 'C’est pourquoi on la représente par des points isolés.'],
@@ -168,39 +178,45 @@ Pour une suite définie par récurrence, on trace la courbe de la fonction f et 
           axe: 'Algèbre',
           lecon: {
             titre: 'Deux modèles, deux croissances',
-            cours: `Deux familles de suites décrivent l’essentiel des évolutions modélisées en Première.
+            cours: `Deux familles de suites décrivent l'essentiel des évolutions modélisées en Première.
 
-## La suite arithmétique
-On passe d’un terme au suivant en **ajoutant** toujours le même nombre, la **raison** r :
+## Les deux modèles face à face
+| Le point | Suite **arithmétique** | Suite **géométrique** |
+| On passe au terme suivant en… | **Ajoutant** la raison r | **Multipliant** par la raison q |
+| Relation de récurrence | u(n+1) = u(n) + r | u(n+1) = u(n) × q |
+| Forme explicite | u(n) = u(0) + n × r | u(n) = u(0) × q puissance n |
+| Croissante si… | r > 0 | q > 1 (avec u(0) > 0) |
+| Décroissante si… | r < 0 | 0 < q < 1 (avec u(0) > 0) |
+| Représentation | Des points **alignés** | Une courbe qui s'emballe |
+| Type de croissance | **Linéaire** | **Exponentielle** |
 
-u(n+1) = u(n) + r
+Plus généralement, pour l'arithmétique : u(n) = u(p) + (n − p) × r.
 
-Forme explicite, à partir du rang 0 : **u(n) = u(0) + n × r**. Plus généralement, u(n) = u(p) + (n − p) × r.
+> La croissance exponentielle finit toujours par dépasser n'importe quelle croissance linéaire.
 
-Elle est **croissante si r > 0**, décroissante si r < 0. Sa représentation graphique est faite de points **alignés** : la croissance est **linéaire**.
+## Les deux sommes
+Somme des entiers, pour une suite arithmétique de raison 1 :
 
-Somme des premiers termes : 1 + 2 + … + n = n × (n + 1) / 2.
+1 + 2 + … + n = n × (n + 1) / 2
 
-## La suite géométrique
-On passe d’un terme au suivant en **multipliant** par un même nombre, la **raison** q :
+Somme des puissances, pour q différent de 1 :
 
-u(n+1) = u(n) × q
-
-Forme explicite : **u(n) = u(0) × q puissance n**.
-
-Pour u(0) > 0 : la suite est **croissante si q > 1**, décroissante si 0 < q < 1, constante si q = 1. La croissance est **exponentielle** — elle finit toujours par dépasser n’importe quelle croissance linéaire.
-
-Somme des premiers termes, pour q ≠ 1 :
-
-1 + q + q² + … + q(n) = (1 − q puissance (n+1)) / (1 − q)
+1 + q + q² + … + q puissance n = (1 − q puissance (n+1)) / (1 − q)
 
 ## Reconnaître laquelle
-- Une **différence** constante entre termes consécutifs : arithmétique.
-- Un **quotient** constant : géométrique.
+| Ce qui est constant entre deux termes consécutifs | La suite est… |
+| La **différence** | **Arithmétique** |
+| Le **quotient** | **Géométrique** |
 
-> Le cas concret le plus utile : une évolution de **t %** par période revient à multiplier par le **coefficient multiplicateur** 1 + t / 100. Une hausse de 5 % par an, c’est une suite géométrique de raison 1,05 ; une baisse de 5 %, de raison 0,95.
+## Le cas concret le plus utile
+Une évolution de **t %** par période revient à multiplier par le **coefficient multiplicateur** 1 + t / 100.
 
-Attention au piège : deux baisses de 10 % ne font pas une baisse de 20 %, mais 0,90 × 0,90 = 0,81, soit une baisse de 19 %.`,
+| L'évolution annuelle | La raison de la suite géométrique |
+| Hausse de 5 % | 1,05 |
+| Baisse de 5 % | 0,95 |
+| Baisse de 10 % | 0,90 |
+
+> Piège classique : deux baisses de 10 % ne font pas une baisse de 20 %. On calcule 0,90 × 0,90 = 0,81, soit une baisse de **19 %**.`,
           },
           questions: [
             ['Comment reconnaît-on une suite géométrique ?', ['Le quotient de deux termes consécutifs est constant', 'La différence de deux termes consécutifs est constante', 'Les termes sont alignés graphiquement', 'La suite est croissante'], 0, 'La différence constante, elle, caractérise une suite arithmétique.'],
@@ -218,33 +234,44 @@ Attention au piège : deux baisses de 10 % ne font pas une baisse de 20 %, mais 
           axe: 'Algèbre',
           lecon: {
             titre: 'Discriminant, racines et signe',
-            cours: `Un **trinôme du second degré** s’écrit f(x) = a x² + b x + c, avec a ≠ 0. Sa courbe est une **parabole**, tournée vers le haut si a > 0, vers le bas si a < 0.
+            cours: `Un trinôme du second degré s'écrit f(x) = a x² + b x + c, avec a différent de 0. Sa courbe est une parabole.
+
+| Le signe de a | La parabole |
+| a > 0 | Tournée vers le **haut** |
+| a < 0 | Tournée vers le **bas** |
 
 ## Le discriminant
 Δ = b² − 4 a c
 
-Il décide de tout :
-- **Δ > 0** : deux racines distinctes, x1 = (−b − √Δ) / (2a) et x2 = (−b + √Δ) / (2a). La parabole coupe l’axe des abscisses en deux points.
-- **Δ = 0** : une racine double, x0 = −b / (2a). La parabole est tangente à l’axe.
-- **Δ < 0** : aucune racine réelle. La parabole ne coupe pas l’axe des abscisses.
+| La valeur de Δ | Les racines | La parabole et l'axe des abscisses |
+| **Δ > 0** | **Deux** racines : x1 = (−b − √Δ) / (2a) et x2 = (−b + √Δ) / (2a) | Elle le coupe en deux points |
+| **Δ = 0** | Une racine **double** : x0 = −b / (2a) | Elle lui est **tangente** |
+| **Δ < 0** | **Aucune** racine réelle | Elle ne le coupe pas |
 
-## Les formes du trinôme
-- **développée** : a x² + b x + c, commode pour lire c (l’ordonnée à l’origine) et calculer Δ ;
-- **factorisée**, quand Δ ≥ 0 : a (x − x1)(x − x2), commode pour lire les racines ;
-- **canonique** : a (x − α)² + β, avec α = −b / (2a) et β = f(α), commode pour lire le **sommet** de la parabole, de coordonnées (α ; β).
+## Les trois formes du trinôme
+| La forme | Son écriture | Ce qu'elle donne à lire |
+| **Développée** | a x² + b x + c | c, l'ordonnée à l'origine ; le calcul de Δ |
+| **Factorisée** (si Δ ≥ 0) | a (x − x1)(x − x2) | Les **racines** |
+| **Canonique** | a (x − α)² + β, avec α = −b / (2a) et β = f(α) | Le **sommet** (α ; β) |
 
-> Choisir la bonne forme selon la question posée fait gagner plus de temps que n’importe quel calcul astucieux.
+> Choisir la bonne forme selon la question posée fait gagner plus de temps que n'importe quel calcul astucieux.
 
-## Signe du trinôme
+## Le signe du trinôme
 La règle tient en une phrase : **le trinôme est du signe de a partout, sauf entre les racines**.
-- Si Δ < 0, il est du signe de a sur tout l’ensemble des réels — il ne s’annule jamais.
-- Si Δ = 0, il est du signe de a partout, et s’annule en x0.
-- Si Δ > 0, il est du signe **opposé** à celui de a strictement entre x1 et x2.
 
-## Variations et extremum
-Le sommet donne l’extremum : si a > 0, f admet un **minimum** en α ; si a < 0, un **maximum**. La parabole est symétrique par rapport à la droite verticale d’équation x = α.
+| Le cas | Le signe |
+| Δ < 0 | Du signe de a sur tout l'ensemble des réels — il ne s'annule jamais |
+| Δ = 0 | Du signe de a partout, nul en x0 |
+| Δ > 0 | Du signe **opposé** à a strictement entre x1 et x2 |
 
-Deux relations utiles : la somme des racines vaut −b / a, leur produit c / a.`,
+## Sommet et symétrie
+| Le signe de a | L'extremum en α |
+| a > 0 | Un **minimum** |
+| a < 0 | Un **maximum** |
+
+La parabole est symétrique par rapport à la droite verticale d'équation x = α.
+
+Deux relations utiles : la **somme** des racines vaut −b / a, leur **produit** c / a.`,
           },
           questions: [
             ['Quelle est l’expression du discriminant ?', ['Δ = b² − 4ac', 'Δ = b² + 4ac', 'Δ = 4ac − b²', 'Δ = b − 4ac'], 0, 'Son signe décide du nombre de racines réelles.'],
@@ -264,39 +291,41 @@ Deux relations utiles : la somme des racines vaut −b / a, leur produit c / a.`
           axe: 'Analyse',
           lecon: {
             titre: 'Nombre dérivé, tangente et formules',
-            cours: `Le **nombre dérivé** de f en a, noté f’(a), est la limite du taux de variation quand h tend vers 0 :
+            cours: `Le nombre dérivé de f en a est la limite du taux de variation quand h tend vers 0. Géométriquement, c'est le coefficient directeur de la tangente.
 
-f’(a) = limite de [f(a + h) − f(a)] / h
+f'(a) = limite de [f(a + h) − f(a)] / h
 
-Il se lit géométriquement : c’est le **coefficient directeur de la tangente** à la courbe au point d’abscisse a.
+## L'équation de la tangente
+y = f'(a) × (x − a) + f(a)
 
-## Équation de la tangente
-y = f’(a) × (x − a) + f(a)
-
-Cette formule tombe à chaque devoir. Elle se retient en la lisant : une droite de coefficient directeur f’(a) qui passe par le point (a ; f(a)).
+> Elle tombe à chaque devoir et se retient en la lisant : une droite de coefficient directeur f'(a) qui passe par le point (a ; f(a)).
 
 ## Les dérivées à connaître
-- f(x) = k (constante) → f’(x) = 0
-- f(x) = x → f’(x) = 1
-- f(x) = x² → f’(x) = 2x
-- f(x) = x puissance n → f’(x) = n × x puissance (n − 1)
-- f(x) = 1 / x → f’(x) = −1 / x²
-- f(x) = √x → f’(x) = 1 / (2√x), pour x > 0
+| La fonction f(x) | Sa dérivée f'(x) | Sur quel domaine |
+| k (constante) | 0 | Les réels |
+| x | 1 | Les réels |
+| x² | 2x | Les réels |
+| x puissance n | n × x puissance (n − 1) | Les réels |
+| 1 / x | −1 / x² | x différent de 0 |
+| √x | 1 / (2√x) | x > 0 |
 
 ## Les opérations
-- (u + v)’ = u’ + v’
-- (k × u)’ = k × u’
-- **(u × v)’ = u’v + uv’** — le produit des dérivées serait faux
-- (1 / v)’ = −v’ / v²
-- **(u / v)’ = (u’v − uv’) / v²** — attention à l’ordre au numérateur, la soustraction n’est pas commutative
+| L'expression | Sa dérivée | Le piège |
+| u + v | u' + v' | — |
+| k × u | k × u' | — |
+| **u × v** | **u'v + uv'** | Le produit des dérivées serait faux |
+| 1 / v | −v' / v² | — |
+| **u / v** | **(u'v − uv') / v²** | L'ordre au numérateur : la soustraction n'est pas commutative |
 
 ## Dérivée et variations
-Le lien fondamental, celui qui donne tout son intérêt à la dérivation :
-- f’ **positive** sur un intervalle : f est **croissante** sur cet intervalle ;
-- f’ **négative** : f est **décroissante** ;
-- f’ qui **s’annule en changeant de signe** : f admet un **extremum local** en ce point.
+C'est le lien qui donne tout son intérêt à la dérivation.
 
-> Attention à la réciproque : f’ peut s’annuler sans qu’il y ait d’extremum. C’est le cas de f(x) = x³ en 0, où la tangente est horizontale mais la fonction reste croissante.`,
+| Le signe de f' sur un intervalle | Le sens de variation de f |
+| **Positive** | f est **croissante** |
+| **Négative** | f est **décroissante** |
+| Elle **s'annule en changeant de signe** | f admet un **extremum local** |
+
+> Attention à la réciproque : f' peut s'annuler **sans** extremum. C'est le cas de f(x) = x³ en 0, où la tangente est horizontale mais la fonction reste croissante.`,
           },
           questions: [
             ['Que représente géométriquement le nombre dérivé f’(a) ?', ['Le coefficient directeur de la tangente au point d’abscisse a', 'L’ordonnée du point d’abscisse a', 'L’aire sous la courbe', 'La limite de la fonction en a'], 0, 'C’est la lecture géométrique de la limite du taux de variation.'],
@@ -314,31 +343,41 @@ Le lien fondamental, celui qui donne tout son intérêt à la dérivation :
           axe: 'Analyse',
           lecon: {
             titre: 'Du tableau de signes au tracé',
-            cours: `Étudier une fonction, c’est suivre un enchaînement fixe. Le respecter fait gagner des points même quand un calcul échoue.
+            cours: `Étudier une fonction, c'est suivre un enchaînement fixe. Le respecter fait gagner des points même quand un calcul échoue.
 
-## La méthode
-1. Déterminer l’**ensemble de définition** : ce qui interdit une valeur, c’est une division par zéro ou une racine carrée d’un nombre négatif.
-2. Calculer **f’(x)**, puis la factoriser autant que possible.
-3. Étudier le **signe de f’(x)** : c’est ici que servent le second degré et les règles de signe d’un produit ou d’un quotient.
-4. Dresser le **tableau de variations**, en y portant les valeurs de f aux bornes et aux extremums.
-5. Conclure : extremums, éventuelles solutions d’une équation, tracé.
+## La méthode en cinq temps
+| L'étape | Ce qu'on fait | Le point d'attention |
+| 1 | **Ensemble de définition** | Ce qui interdit une valeur : division par zéro, racine d'un négatif |
+| 2 | Calculer **f'(x)** | La factoriser autant que possible |
+| 3 | Étudier le **signe de f'(x)** | Second degré, règle des signes d'un produit ou d'un quotient |
+| 4 | Dresser le **tableau de variations** | Y porter les valeurs de f aux bornes et aux extremums |
+| 5 | **Conclure** | Extremums, solutions d'une équation, tracé |
 
-## Extremums
-Un extremum **local** est une valeur maximale ou minimale sur un intervalle autour du point. Un extremum **global** l’est sur tout l’ensemble de définition. Un extremum local n’est pas nécessairement global — un devoir attend souvent la distinction.
+## Local ou global
+| L'extremum | Sur quel domaine |
+| **Local** | Un intervalle autour du point |
+| **Global** | Tout l'ensemble de définition |
+
+> Un extremum local n'est pas nécessairement global : un devoir attend souvent cette distinction.
 
 ## Lecture graphique
-- f(a) se lit en **ordonnée** au point d’abscisse a ;
-- résoudre f(x) = k revient à chercher les **abscisses des points d’intersection** avec la droite horizontale d’équation y = k ;
-- résoudre f(x) > 0 revient à repérer les intervalles où la **courbe est au-dessus** de l’axe des abscisses ;
-- les tangentes **horizontales** signalent les points où f’ s’annule.
+| La question | Ce qu'on lit sur le graphique |
+| f(a) | L'**ordonnée** du point d'abscisse a |
+| f(x) = k | Les **abscisses des intersections** avec la droite y = k |
+| f(x) > 0 | Les intervalles où la **courbe est au-dessus** de l'axe des abscisses |
+| f'(x) = 0 | Les points où la tangente est **horizontale** |
 
 ## Le théorème des valeurs intermédiaires
-Si f est **continue** et **strictement monotone** sur un intervalle [a ; b], et si k est compris entre f(a) et f(b), alors l’équation f(x) = k admet une **unique** solution dans cet intervalle.
+Si f est **continue** et **strictement monotone** sur [a ; b], et si k est compris entre f(a) et f(b), alors f(x) = k admet une **unique** solution dans cet intervalle.
 
-> On l’encadre ensuite par **balayage** à la calculatrice, chiffre après chiffre. Attention : sans stricte monotonie, le théorème garantit l’existence d’une solution mais non son unicité.
+> On l'encadre ensuite par **balayage** à la calculatrice, chiffre après chiffre. Sans stricte monotonie, le théorème garantit l'existence d'une solution, mais non son unicité.
 
 ## Parité et symétries
-Une fonction **paire** vérifie f(−x) = f(x) : sa courbe est symétrique par rapport à l’axe des ordonnées. Une fonction **impaire** vérifie f(−x) = −f(x) : sa courbe est symétrique par rapport à l’origine. Le repérer permet de n’étudier que la moitié du domaine.`,
+| La fonction | Sa relation | La symétrie de sa courbe |
+| **Paire** | f(−x) = f(x) | Par rapport à l'**axe des ordonnées** |
+| **Impaire** | f(−x) = −f(x) | Par rapport à l'**origine** |
+
+Le repérer permet de n'étudier que la moitié du domaine.`,
           },
           questions: [
             ['Quelle est la première étape de l’étude d’une fonction ?', ['Déterminer son ensemble de définition', 'Calculer sa dérivée', 'Tracer sa courbe', 'Chercher ses extremums'], 0, 'Division par zéro et racine d’un négatif sont les deux interdits usuels.'],
@@ -356,41 +395,48 @@ Une fonction **paire** vérifie f(−x) = f(x) : sa courbe est symétrique par r
           axe: 'Analyse',
           lecon: {
             titre: 'La fonction qui est sa propre dérivée',
-            cours: `La **fonction exponentielle**, notée exp ou x → e puissance x, est l’unique fonction dérivable sur l’ensemble des réels telle que :
+            cours: `La fonction exponentielle est l'unique fonction dérivable sur l'ensemble des réels telle que f' = f et f(0) = 1.
 
-f’ = f et f(0) = 1
-
-C’est cette propriété qui la fait apparaître partout où une grandeur varie proportionnellement à elle-même : intérêts composés, désintégration radioactive, croissance d’une population, refroidissement d’un corps.
+> C'est cette propriété qui la fait apparaître partout où une grandeur varie proportionnellement à elle-même : intérêts composés, désintégration radioactive, croissance d'une population, refroidissement d'un corps.
 
 ## Propriétés algébriques
-Pour tous réels a et b :
-- e puissance (a + b) = e puissance a × e puissance b
-- e puissance (−a) = 1 / (e puissance a)
-- e puissance (a − b) = e puissance a / e puissance b
-- (e puissance a) puissance n = e puissance (n × a)
+| L'expression | Sa transformation |
+| e puissance (a + b) | e puissance a × e puissance b |
+| e puissance (−a) | 1 / (e puissance a) |
+| e puissance (a − b) | e puissance a / e puissance b |
+| (e puissance a) puissance n | e puissance (n × a) |
 
-Autrement dit : **l’exponentielle transforme les sommes en produits**. C’est la propriété qui organise tous les calculs du chapitre.
+> En un mot : **l'exponentielle transforme les sommes en produits**. C'est la propriété qui organise tous les calculs du chapitre.
 
 ## Signe, variations, limites
-- e puissance x est **strictement positive** pour tout réel x : l’équation e puissance x = 0 n’a **aucune** solution, et le signe d’un produit contenant une exponentielle ne dépend jamais d’elle.
-- Sa dérivée étant elle-même, donc positive, la fonction est **strictement croissante** sur tout l’ensemble des réels.
-- e puissance 0 = 1 et e ≈ 2,718.
-- Quand x tend vers moins l’infini, e puissance x tend vers 0 ; quand x tend vers plus l’infini, elle tend vers plus l’infini, et **plus vite que n’importe quelle puissance de x**.
+| Le point | Ce qu'il faut savoir |
+| **Signe** | e puissance x est **strictement positive** pour tout réel x |
+| **Équation** e puissance x = 0 | **Aucune** solution |
+| **Variations** | Sa dérivée étant elle-même, donc positive, elle est **strictement croissante** sur les réels |
+| **Valeurs** | e puissance 0 = 1 et e ≈ 2,718 |
+| Limite en **moins l'infini** | Elle tend vers 0 |
+| Limite en **plus l'infini** | Elle tend vers plus l'infini, **plus vite que n'importe quelle puissance de x** |
+
+> Puisqu'elle ne s'annule jamais, le signe d'un produit contenant une exponentielle ne dépend jamais d'elle.
 
 ## Équations et inéquations
 La stricte croissance donne les équivalences :
 
 e puissance a = e puissance b équivaut à a = b
+
 e puissance a < e puissance b équivaut à a < b
 
-Le passage à l’exposant **conserve l’ordre** — contrairement à ce qui se passe quand on multiplie par un nombre négatif.
+> Le passage à l'exposant **conserve l'ordre**, contrairement à la multiplication par un nombre négatif.
 
-## Dérivée composée
-La formule à retenir, et le piège le plus fréquent :
+## La dérivée composée
+(e puissance u)' = u' × e puissance u
 
-(e puissance u)’ = u’ × e puissance u
+| L'expression | Sa dérivée |
+| e puissance (3x) | **3** e puissance (3x) |
+| e puissance (−x) | **−**e puissance (−x) |
+| e puissance (x²) | **2x** e puissance (x²) |
 
-Ainsi la dérivée de e puissance (3x) vaut 3 e puissance (3x), et non e puissance (3x). Oublier le facteur u’ coûte le résultat de tout un exercice.`,
+> Oublier le facteur u' coûte le résultat de tout un exercice. C'est le piège le plus fréquent du chapitre.`,
           },
           questions: [
             ['Quelle propriété caractérise la fonction exponentielle ?', ['Elle est égale à sa propre dérivée et vaut 1 en 0', 'Elle est égale à son inverse', 'Sa dérivée est nulle', 'Elle s’annule en 0'], 0, 'f’ = f et f(0) = 1 la définissent entièrement.'],
@@ -408,39 +454,53 @@ Ainsi la dérivée de e puissance (3x) vaut 3 e puissance (3x), et non e puissan
           axe: 'Analyse',
           lecon: {
             titre: 'Cercle trigonométrique, cosinus et sinus',
-            cours: `Le **cercle trigonométrique** est le cercle de rayon 1 centré à l’origine, orienté dans le sens direct (antihoraire). À tout réel x on associe le point M du cercle obtenu en parcourant une longueur x depuis le point de coordonnées (1 ; 0).
+            cours: `Le cercle trigonométrique est le cercle de rayon 1 centré à l'origine, orienté dans le sens direct. À tout réel x on associe le point M obtenu en parcourant une longueur x depuis le point (1 ; 0).
 
 ## Cosinus et sinus
 Les coordonnées de M sont (cos x ; sin x). Il en découle immédiatement :
-- −1 ≤ cos x ≤ 1 et −1 ≤ sin x ≤ 1 ;
-- **cos² x + sin² x = 1**, qui n’est que le théorème de Pythagore dans un cercle de rayon 1.
+
+| La propriété | Ce qu'elle dit | D'où elle vient |
+| Encadrement | −1 ≤ cos x ≤ 1 et −1 ≤ sin x ≤ 1 | M est sur un cercle de rayon 1 |
+| **Relation fondamentale** | cos² x + sin² x = 1 | Le théorème de Pythagore dans ce cercle |
 
 ## Le radian
-Le **radian** mesure un angle par la longueur d’arc qu’il intercepte sur le cercle de rayon 1. Un tour complet vaut 2π radians, soit 360°. La conversion se fait par proportionnalité : π radians valent 180°.
+Le radian mesure un angle par la longueur d'arc qu'il intercepte sur le cercle de rayon 1.
 
-Les valeurs remarquables à connaître par cœur :
-- cos 0 = 1 et sin 0 = 0
-- cos(π/6) = √3 / 2 et sin(π/6) = 1/2
-- cos(π/4) = sin(π/4) = √2 / 2
-- cos(π/3) = 1/2 et sin(π/3) = √3 / 2
-- cos(π/2) = 0 et sin(π/2) = 1
+| En radians | En degrés |
+| 2π | 360° |
+| π | 180° |
+| π/2 | 90° |
+| π/3 | 60° |
+| π/4 | 45° |
+| π/6 | 30° |
+
+## Les valeurs remarquables
+| x | cos x | sin x |
+| 0 | 1 | 0 |
+| π/6 | √3 / 2 | 1/2 |
+| π/4 | √2 / 2 | √2 / 2 |
+| π/3 | 1/2 | √3 / 2 |
+| π/2 | 0 | 1 |
 
 ## Périodicité et parité
-Les deux fonctions sont **périodiques de période 2π** : cos(x + 2π) = cos x. Il suffit donc de les étudier sur un intervalle de longueur 2π.
+| La fonction | Sa période | Sa parité | La symétrie de sa courbe |
+| **Cosinus** | 2π | **Paire** : cos(−x) = cos x | Par rapport à l'axe des ordonnées |
+| **Sinus** | 2π | **Impaire** : sin(−x) = −sin x | Par rapport à l'origine |
 
-- **cosinus est paire** : cos(−x) = cos x, courbe symétrique par rapport à l’axe des ordonnées ;
-- **sinus est impaire** : sin(−x) = −sin x, courbe symétrique par rapport à l’origine.
+> Périodiques de période 2π : il suffit de les étudier sur un intervalle de longueur 2π.
 
 ## Angles associés
-- cos(π − x) = −cos x et sin(π − x) = sin x
-- cos(π + x) = −cos x et sin(π + x) = −sin x
+| L'angle | Son cosinus | Son sinus |
+| π − x | −cos x | sin x |
+| π + x | −cos x | −sin x |
+| −x | cos x | −sin x |
 
-Le cercle les redonne tous : plutôt que de les apprendre, on les **relit** sur une figure, ce qui évite les erreurs de signe.
+> Plutôt que de les apprendre, on les **relit** sur le cercle : cela évite les erreurs de signe.
 
 ## Dérivées
-(sin x)’ = cos x et (cos x)’ = −sin x
+(sin x)' = cos x et (cos x)' = −sin x
 
-Le signe moins sur la dérivée du cosinus se retrouve sur la courbe : le cosinus décroît là où le sinus est positif.`,
+> Le signe moins se retrouve sur la courbe : le cosinus décroît là où le sinus est positif.`,
           },
           questions: [
             ['Quelles sont les coordonnées du point associé au réel x sur le cercle trigonométrique ?', ['(cos x ; sin x)', '(sin x ; cos x)', '(x ; cos x)', '(1 ; x)'], 0, 'Le cercle a pour rayon 1 et pour centre l’origine.'],
@@ -460,31 +520,37 @@ Le signe moins sur la dérivée du cosinus se retrouve sur la courbe : le cosinu
           axe: 'Géométrie',
           lecon: {
             titre: 'Quatre expressions, une seule notion',
-            cours: `Le **produit scalaire** de deux vecteurs est un **nombre réel**, non un vecteur. C’est la première chose à ne pas confondre.
+            cours: `Le produit scalaire de deux vecteurs est un nombre réel, non un vecteur. C'est la première chose à ne pas confondre.
 
 ## Les quatre expressions
-Selon les données de l’énoncé, on choisit celle qui se calcule :
-1. **Avec les coordonnées**, dans un repère orthonormé : u(x ; y) et v(x’ ; y’) donnent u · v = x x’ + y y’.
-2. **Avec les normes et l’angle** : u · v = ||u|| × ||v|| × cos θ.
-3. **Par projection orthogonale** : on projette l’un des vecteurs sur la direction de l’autre, et l’on multiplie les mesures algébriques.
-4. **Avec les normes seules** : u · v = ½ (||u + v||² − ||u||² − ||v||²).
+| L'expression | Sa formule | Quand l'employer |
+| Par **coordonnées** (repère orthonormé) | u · v = x x' + y y' | On a les coordonnées |
+| Par **normes et angle** | u · v = norme de u × norme de v × cos θ | On a des longueurs et un angle |
+| Par **projection orthogonale** | On projette un vecteur sur la direction de l'autre, puis on multiplie les mesures algébriques | Une figure géométrique |
+| Par **normes seules** | u · v = ½ (norme de (u + v) au carré − norme de u au carré − norme de v au carré) | On n'a que des longueurs |
 
-> Savoir passer de l’une à l’autre est l’essentiel du chapitre : c’est le choix de l’expression, plus que le calcul, qui décide de la difficulté d’un exercice.
+> Savoir passer de l'une à l'autre est l'essentiel du chapitre : c'est le choix de l'expression, plus que le calcul, qui décide de la difficulté.
 
 ## Propriétés
-- **Symétrie** : u · v = v · u
-- **Bilinéarité** : u · (v + w) = u · v + u · w, et (k u) · v = k (u · v)
-- u · u = ||u||², ce qui donne la norme à partir du produit scalaire.
+| La propriété | Son énoncé |
+| **Symétrie** | u · v = v · u |
+| **Bilinéarité** | u · (v + w) = u · v + u · w, et (k u) · v = k (u · v) |
+| **Carré scalaire** | u · u = norme de u au carré |
 
-## L’orthogonalité
-Deux vecteurs **non nuls** sont orthogonaux **si et seulement si** leur produit scalaire est nul. C’est le critère le plus utilisé du chapitre : il transforme une question de géométrie en un calcul.
+## Le critère d'orthogonalité
+Deux vecteurs **non nuls** sont orthogonaux **si et seulement si** leur produit scalaire est nul.
 
-En coordonnées : x x’ + y y’ = 0.
+En coordonnées : x x' + y y' = 0.
+
+> C'est le critère le plus utilisé du chapitre : il transforme une question de géométrie en un calcul.
 
 ## Les applications
-- **Longueurs et angles** : la deuxième expression donne cos θ, donc l’angle.
-- **Théorème d’Al-Kashi** : dans un triangle quelconque, a² = b² + c² − 2 b c cos A. C’est la généralisation du théorème de Pythagore, qu’on retrouve pour A = 90°, puisque cos 90° = 0.
-- **Lieux de points**, ensembles de points vérifiant une relation vectorielle : cercles, droites, médiatrices.`,
+| L'application | Ce qu'elle donne |
+| **Angles** | La deuxième expression donne cos θ, donc l'angle |
+| **Théorème d'Al-Kashi** | a² = b² + c² − 2 b c cos A, dans un triangle quelconque |
+| **Lieux de points** | Cercles, droites, médiatrices définis par une relation vectorielle |
+
+> Al-Kashi généralise Pythagore : pour A = 90°, cos A = 0 et l'on retrouve a² = b² + c².`,
           },
           questions: [
             ['Le produit scalaire de deux vecteurs est…', ['un nombre réel', 'un vecteur', 'un angle', 'une longueur toujours positive'], 0, 'La confusion avec un vecteur est l’erreur d’entrée du chapitre.'],
@@ -502,34 +568,44 @@ En coordonnées : x x’ + y y’ = 0.
           axe: 'Géométrie',
           lecon: {
             titre: 'Droites, cercles et équations',
-            cours: `La géométrie repérée traduit les figures en **équations** : ce qui se démontrait par construction se calcule.
+            cours: `La géométrie repérée traduit les figures en équations : ce qui se démontrait par construction se calcule.
 
-## Droites
-- **Équation cartésienne** : a x + b y + c = 0, avec a et b non tous deux nuls. Un **vecteur directeur** est u(−b ; a) ; un **vecteur normal** est n(a ; b).
-- **Équation réduite** : y = m x + p, où m est le **coefficient directeur** et p l’ordonnée à l’origine. Elle ne convient pas aux droites verticales, d’équation x = k.
+## Les droites
+| L'équation | Son écriture | Ce qu'elle donne |
+| **Cartésienne** | a x + b y + c = 0, a et b non tous deux nuls | Vecteur **directeur** u(−b ; a) ; vecteur **normal** n(a ; b) |
+| **Réduite** | y = m x + p | m, coefficient directeur ; p, ordonnée à l'origine |
 
-Le coefficient directeur d’une droite passant par A(x(A) ; y(A)) et B(x(B) ; y(B)) vaut :
+> L'équation réduite ne convient pas aux droites **verticales**, d'équation x = k.
+
+Coefficient directeur de la droite (AB) :
 
 m = (y(B) − y(A)) / (x(B) − x(A))
 
 ## Parallélisme et orthogonalité
-- Deux droites sont **parallèles** si leurs coefficients directeurs sont égaux, ou si leurs vecteurs directeurs sont **colinéaires** (déterminant nul : x y’ − y x’ = 0).
-- Deux droites sont **perpendiculaires** si le produit de leurs coefficients directeurs vaut **−1**, ou si leurs vecteurs directeurs ont un produit scalaire nul.
+| La relation | Par les coefficients directeurs | Par les vecteurs directeurs |
+| **Parallèles** | m = m' | Colinéaires : x y' − y x' = 0 |
+| **Perpendiculaires** | m × m' = **−1** | Produit scalaire nul |
 
-## Cercles
-Le cercle de centre Ω(a ; b) et de rayon r a pour équation :
+## Les cercles
+Cercle de centre Ω(a ; b) et de rayon r :
 
 (x − a)² + (y − b)² = r²
 
-Une équation développée du type x² + y² + α x + β y + γ = 0 se ramène à cette forme en **complétant les carrés** — la même technique que la forme canonique du second degré. Si le membre obtenu à droite est négatif, l’ensemble est **vide** ; s’il est nul, il se réduit à un point.
+Une équation développée x² + y² + α x + β y + γ = 0 se ramène à cette forme en **complétant les carrés** — la technique de la forme canonique du second degré.
 
-Autre caractérisation utile : le cercle de **diamètre** [AB] est l’ensemble des points M tels que le produit scalaire des vecteurs MA et MB soit nul — c’est-à-dire tels que l’angle en M soit droit.
+| Le membre de droite obtenu | L'ensemble |
+| Strictement **positif** | Un cercle |
+| **Nul** | Un seul **point** |
+| **Négatif** | L'ensemble **vide** |
+
+> Autre caractérisation utile : le cercle de **diamètre** [AB] est l'ensemble des points M tels que les vecteurs MA et MB aient un produit scalaire nul — l'angle en M est droit.
 
 ## Les formules de base
-- Milieu de [AB] : ((x(A) + x(B)) / 2 ; (y(A) + y(B)) / 2)
-- Distance AB = √((x(B) − x(A))² + (y(B) − y(A))²)
+| La grandeur | Sa formule |
+| Milieu de [AB] | ((x(A) + x(B)) / 2 ; (y(A) + y(B)) / 2) |
+| Distance AB | √((x(B) − x(A))² + (y(B) − y(A))²) |
 
-> Beaucoup de problèmes se résolvent en traduisant l’énoncé en équations, puis en résolvant un système — sans figure, ou avec une figure qui ne sert qu’à contrôler la vraisemblance.`,
+> Beaucoup de problèmes se résolvent en traduisant l'énoncé en équations, puis en résolvant un système. La figure ne sert alors qu'à contrôler la vraisemblance.`,
           },
           questions: [
             ['Quel est un vecteur directeur de la droite d’équation a x + b y + c = 0 ?', ['u(−b ; a)', 'u(a ; b)', 'u(b ; a)', 'u(a ; −b)'], 0, 'Le vecteur n(a ; b), lui, est normal à la droite.'],
@@ -549,40 +625,47 @@ Autre caractérisation utile : le cercle de **diamètre** [AB] est l’ensemble 
           axe: 'Probabilité et statistiques',
           lecon: {
             titre: 'Arbre pondéré et probabilités totales',
-            cours: `La **probabilité conditionnelle** de B sachant A, notée P(A)(B), est la probabilité que B se réalise **une fois qu’on sait que A est réalisé**. Pour P(A) ≠ 0 :
+            cours: `La probabilité conditionnelle de B sachant A est la probabilité que B se réalise une fois qu'on sait que A est réalisé.
+
+Pour P(A) différent de 0 :
 
 P(A)(B) = P(A inter B) / P(A)
 
-d’où la relation la plus utilisée du chapitre :
+d'où la relation la plus utilisée du chapitre :
 
 P(A inter B) = P(A) × P(A)(B)
 
-## L’arbre pondéré
-C’est l’outil du chapitre, et trois règles le gouvernent :
-- la somme des probabilités des branches **issues d’un même nœud** vaut 1 ;
-- la probabilité d’un **chemin** est le **produit** des probabilités portées par ses branches ;
-- la probabilité d’un **événement** est la **somme** des probabilités des chemins qui y mènent.
+## L'arbre pondéré
+| La règle | Son énoncé |
+| **Somme** | Les branches issues d'un même nœud ont des probabilités de somme 1 |
+| **Produit** | La probabilité d'un **chemin** est le produit des probabilités de ses branches |
+| **Somme des chemins** | La probabilité d'un **événement** est la somme des chemins qui y mènent |
 
-> Les branches du deuxième niveau portent des probabilités **conditionnelles** : c’est là que se joue la lecture correcte d’un énoncé.
+> Les branches du deuxième niveau portent des probabilités **conditionnelles**. C'est là que se joue la lecture correcte d'un énoncé.
 
 ## La formule des probabilités totales
-Si A et son contraire partitionnent l’univers :
+Si A et son contraire partitionnent l'univers :
 
-P(B) = P(A inter B) + P(A barre inter B) = P(A) × P(A)(B) + P(A barre) × P(A barre)(B)
+P(B) = P(A) × P(A)(B) + P(A barre) × P(A barre)(B)
 
-C’est exactement la troisième règle de l’arbre, écrite en formule.
+> C'est exactement la troisième règle de l'arbre, écrite en formule.
 
-## L’indépendance
-A et B sont **indépendants** si la réalisation de l’un ne change pas la probabilité de l’autre :
+## L'indépendance
+A et B sont indépendants si la réalisation de l'un ne change pas la probabilité de l'autre :
 
 P(A inter B) = P(A) × P(B), ou de façon équivalente P(A)(B) = P(B)
 
-Deux confusions à éviter :
-- indépendants ≠ **incompatibles**. Deux événements incompatibles de probabilités non nulles ne sont jamais indépendants — si l’un se réalise, l’autre devient impossible, donc sa probabilité change ;
-- l’indépendance se **démontre** par le calcul ; elle ne se devine pas à l’intuition.
+| À ne pas confondre | Pourquoi |
+| **Indépendants** et **incompatibles** | Deux événements incompatibles de probabilités non nulles ne sont **jamais** indépendants : si l'un se réalise, l'autre devient impossible |
+| Deviner et démontrer | L'indépendance se **démontre** par le calcul ; elle ne se devine pas |
 
-## Ce qu’il faut savoir inverser
-Beaucoup d’exercices demandent P(B)(A) alors que l’énoncé donne P(A)(B) — un test médical dont on connaît la fiabilité, et dont on cherche la probabilité d’être malade sachant le test positif. On y répond en calculant P(A inter B) et P(B), puis en formant le quotient.`,
+## Ce qu'il faut savoir inverser
+Beaucoup d'exercices donnent P(A)(B) et demandent P(B)(A) : un test médical dont on connaît la fiabilité, et dont on cherche la probabilité d'être malade **sachant** le test positif.
+
+| L'étape | Le calcul |
+| 1 | P(A inter B), par le produit des branches |
+| 2 | P(B), par les probabilités totales |
+| 3 | Le quotient P(A inter B) / P(B) |`,
           },
           questions: [
             ['Quelle est la formule de la probabilité conditionnelle de B sachant A ?', ['P(A inter B) / P(A)', 'P(A inter B) / P(B)', 'P(A) × P(B)', 'P(A) + P(B)'], 0, 'Elle suppose P(A) non nulle.'],
@@ -600,32 +683,46 @@ Beaucoup d’exercices demandent P(B)(A) alors que l’énoncé donne P(A)(B) �
           axe: 'Probabilité et statistiques',
           lecon: {
             titre: 'Espérance, variance, écart type',
-            cours: `Une **variable aléatoire** X associe un **nombre réel** à chaque issue d’une expérience aléatoire. Elle transforme un univers d’issues quelconques en un ensemble de valeurs numériques, sur lesquelles on peut calculer.
+            cours: `Une variable aléatoire X associe un nombre réel à chaque issue d'une expérience aléatoire : elle transforme des issues quelconques en valeurs sur lesquelles on peut calculer.
 
 ## La loi de probabilité
-Donner la **loi de X**, c’est donner toutes ses valeurs possibles et la probabilité de chacune. On la présente en tableau. Contrôle obligatoire : **la somme des probabilités vaut 1**.
+Donner la loi de X, c'est donner toutes ses valeurs possibles et la probabilité de chacune, en tableau.
 
-## L’espérance
+> Contrôle obligatoire : la **somme des probabilités vaut 1**.
+
+## L'espérance
 E(X) = somme des x(i) × P(X = x(i))
 
-C’est la **valeur moyenne** que prendrait X sur un très grand nombre de répétitions. Interprétation à savoir formuler : dans un jeu d’argent, une espérance de gain **positive** est favorable au joueur, **négative** favorable à l’organisateur, **nulle** rend le jeu **équitable**.
+C'est la valeur moyenne que prendrait X sur un très grand nombre de répétitions.
 
-> L’espérance n’est pas forcément une valeur atteignable : l’espérance du lancer d’un dé équilibré vaut 3,5.
+| L'espérance de gain | Le jeu est… |
+| **Positive** | Favorable au **joueur** |
+| **Négative** | Favorable à l'**organisateur** |
+| **Nulle** | **Équitable** |
+
+> L'espérance n'est pas forcément une valeur atteignable : celle du lancer d'un dé équilibré vaut 3,5.
 
 ## Variance et écart type
 V(X) = somme des x(i)² × P(X = x(i)) − [E(X)]²
 
 σ(X) = √(V(X))
 
-La variance mesure la **dispersion** autour de l’espérance ; l’**écart type** la ramène à l’unité de X, ce qui le rend interprétable. Deux variables de même espérance peuvent avoir des écarts types très différents : la même moyenne ne dit rien du risque.
+| La grandeur | Ce qu'elle mesure | Son unité |
+| **Variance** | La dispersion autour de l'espérance | Le carré de celle de X |
+| **Écart type** | La même dispersion, ramenée à l'échelle | Celle de X, donc **interprétable** |
+
+> Deux variables de même espérance peuvent avoir des écarts types très différents : la même moyenne ne dit rien du risque.
 
 ## Les propriétés
-Pour tous réels a et b :
-- E(aX + b) = a E(X) + b
-- V(aX + b) = a² V(X) — le **b disparaît**, car une translation ne change pas la dispersion, et le a est **au carré**.
+| La transformation | L'espérance | La variance |
+| aX + b | a E(X) + b | **a² V(X)** |
 
-## L’échantillonnage
-Si l’on répète n fois la même expérience de façon indépendante, la moyenne des résultats se rapproche de l’espérance quand n grandit : c’est la **loi des grands nombres**. C’est elle qui justifie les simulations, et qui explique pourquoi un casino ne perd pas sur le long terme même s’il perd sur un coup.`,
+> Le b **disparaît** de la variance — une translation ne change pas la dispersion — et le a y est **au carré**.
+
+## L'échantillonnage
+Si l'on répète n fois la même expérience de façon indépendante, la moyenne des résultats se rapproche de l'espérance quand n grandit : c'est la **loi des grands nombres**.
+
+> C'est elle qui justifie les simulations, et qui explique pourquoi un casino ne perd pas sur le long terme même s'il perd sur un coup.`,
           },
           questions: [
             ['Qu’est-ce qu’une variable aléatoire ?', ['Une fonction qui associe un nombre réel à chaque issue d’une expérience aléatoire', 'Un événement de probabilité inconnue', 'Une probabilité qui varie', 'Un tirage au hasard'], 0, 'Elle rend l’univers numérique, donc calculable.'],

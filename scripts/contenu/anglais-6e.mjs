@@ -116,18 +116,20 @@ DELETE FROM public.chapters c
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Ajouter un -s, sauf quand il ne faut pas',
-            cours: `## La règle générale
-On forme le pluriel en ajoutant **-s** : *a cat → two cats*, *a book → three books*.
+            cours: `Le pluriel anglais s’écrit presque toujours avec un -s. Ce sont les « presque » qu’il faut connaître.
+
+## La règle générale
+= a cat → two cats · a book → three books
 
 ## Les cas particuliers
-- Noms en **-s, -ss, -sh, -ch, -x** → on ajoute **-es** : *a bus → buses*, *a box → boxes*, *a watch → watches*.
-- Noms en **consonne + y** → le y devient **-ies** : *a city → cities*, *a baby → babies*.
-  Mais **voyelle + y** garde le y : *a boy → boys*, *a day → days*.
-- Noms en **-f / -fe** → souvent **-ves** : *a knife → knives*, *a leaf → leaves*.
+| Le nom finit par… | On ajoute | Exemples |
+| **-s, -ss, -sh, -ch, -x** | **-es** | *a bus → buses*, *a box → boxes*, *a watch → watches* |
+| **consonne + y** | **-ies** | *a city → cities*, *a baby → babies* |
+| **voyelle + y** | **-s** seulement | *a boy → boys*, *a day → days* |
+| **-f / -fe** | souvent **-ves** | *a knife → knives*, *a leaf → leaves* |
 
-## Les pluriels irréguliers — à savoir par cœur
-| singulier | pluriel |
-|---|---|
+## Les pluriels irréguliers
+| Singulier | Pluriel |
 | a man | **men** |
 | a woman | **women** |
 | a child | **children** |
@@ -139,14 +141,19 @@ On forme le pluriel en ajoutant **-s** : *a cat → two cats*, *a book → three
 Certains ne changent pas : *a sheep → sheep*, *a fish → fish*.
 
 ## Dénombrables et indénombrables
-- **Countable** : on peut les compter, ils ont un pluriel — *an apple, two apples*.
-- **Uncountable** : pas de pluriel, pas de *a/an* — *water*, *money*, *bread*, *information*, *homework*.
-  On dit *some water*, jamais « a water ».
+| Le nom | Ce qu’il accepte | Exemples |
+| **Countable** | Un pluriel, et *a/an* | *an apple, two apples* |
+| **Uncountable** | **Ni pluriel, ni a/an** | *water*, *money*, *bread*, *information*, *homework* |
 
-> Attention : *information* et *homework* sont indénombrables en anglais alors que « des informations » et « des devoirs » se disent au pluriel en français. C’est un piège classique.
+On dit *some water*, **jamais** « a water ».
+
+!> ***Information*** et ***homework*** sont **indénombrables** en anglais, alors que « des informations » et « des devoirs » se disent au **pluriel** en français. C’est le piège classique du chapitre.
 
 ## La prononciation du -s final
-Trois sons : **/s/** après p, t, k, f (*cats*) ; **/z/** après une sonore ou une voyelle (*dogs*) ; **/ɪz/** après un sifflement (*buses*, *watches*).`,
+| Le son | Après quoi | Exemple |
+| **/s/** | p, t, k, f | *cats* |
+| **/z/** | Une sonore ou une voyelle | *dogs* |
+| **/ɪz/** | Un sifflement | *buses*, *watches* |`,
           },
           questions: [
             ['Quel est le pluriel de « a box » ?', ['boxes', 'boxs', 'boxies', 'box'], 0, 'Les noms en -x prennent -es.'],
@@ -164,29 +171,40 @@ Trois sons : **/s/** après p, t, k, f (*cats*) ; **/z/** après une sonore ou u
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Un, une, le, la — et le zéro',
-            cours: `## L’article indéfini : a / an
-Il correspond à « un / une », et ne s’emploie qu’au **singulier dénombrable**.
-- **a** devant un **son** de consonne : *a book*, *a car*, *a university* (on entend « you »).
-- **an** devant un **son** de voyelle : *an apple*, *an orange*, *an hour* (le h ne se prononce pas).
+            cours: `Le choix entre a et an dépend du SON qui suit, pas de la lettre.
 
-> Le choix dépend du **son**, pas de la lettre. *A university* mais *an hour* : c’est le piège du chapitre.
+## L’article indéfini : a / an
+Il correspond à « un / une », et ne s’emploie qu’au **singulier dénombrable**.
+
+| On écrit | Devant | Exemples |
+| **a** | Un **son** de consonne | *a book*, *a car*, *a university* (on entend « you ») |
+| **an** | Un **son** de voyelle | *an apple*, *an orange*, *an hour* (le h ne se prononce pas) |
+
+!> *A university* mais *an hour* : la lettre dit une chose, le son en dit une autre. **C’est toujours le son qui décide.**
 
 ## L’article défini : the
-Il correspond à « le, la, les » et s’emploie au singulier comme au pluriel, pour quelque chose de **précis** ou de **déjà connu**.
-*I have a dog. **The** dog is black.* — d’abord on présente, ensuite on désigne.
+Pour quelque chose de **précis** ou de **déjà connu**, au singulier comme au pluriel.
+
+~ I have A dog. → THE dog is black.
+
+> D’abord on **présente**, ensuite on **désigne**.
 
 Il se prononce **/ðə/** devant une consonne et **/ði/** devant une voyelle.
 
 ## L’article zéro — quand on ne met rien
-C’est la différence la plus visible avec le français. Pas d’article devant :
-- les **généralités** au pluriel : *Cats are independent.* (Les chats sont indépendants.)
-- les **indénombrables** en général : *I like music.*
-- les **pays**, **villes**, **langues** : *France*, *London*, *English*.
-- les **repas**, les **sports**, les **matières** : *at breakfast*, *play tennis*, *study maths*.
-- devant *school, home, work, bed* pris dans leur fonction : *go to school*, *at home*.
+| Devant… | Exemple |
+| Les **généralités** au pluriel | *Cats are independent.* (Les chats sont indépendants) |
+| Les **indénombrables** en général | *I like music.* |
+| Les **pays**, **villes**, **langues** | *France*, *London*, *English* |
+| Les **repas**, **sports**, **matières** | *at breakfast*, *play tennis*, *study maths* |
+| *school, home, work, bed* dans leur fonction | *go to school*, *at home* |
 
-## Exceptions à connaître
-On dit **the** United States, **the** United Kingdom, **the** Netherlands — des noms de pays au pluriel ou contenant un nom commun.`,
+!> C’est la différence la plus visible avec le français, qui met un article partout : « **les** chats », « **la** France », « **le** tennis ».
+
+## Les exceptions à connaître
+= the United States · the United Kingdom · the Netherlands
+
+Des noms de pays au pluriel ou contenant un nom commun.`,
           },
           questions: [
             ['Quel article place-t-on devant « apple » ?', ['an', 'a', 'the seulement', 'aucun'], 0, 'Devant un son de voyelle.'],
@@ -204,33 +222,33 @@ On dit **the** United States, **the** United Kingdom, **the** Netherlands — de
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Ici et là-bas, un et plusieurs',
-            cours: `## Le tableau complet
-|  | proche (ici) | éloigné (là-bas) |
-|---|---|---|
-| **singulier** | **this** | **that** |
-| **pluriel** | **these** | **those** |
+            cours: `Le français dit « ce, cette, ces ». L’anglais demande deux décisions à chaque fois.
 
-*This book is mine.* (ce livre-ci) — *That car is red.* (cette voiture-là)
-*These shoes are new.* (ces chaussures-ci) — *Those birds are big.* (ces oiseaux-là)
+## Le tableau complet
+| | Proche (ici) | Éloigné (là-bas) |
+| **Singulier** | **this** | **that** |
+| **Pluriel** | **these** | **those** |
+
+= This book is mine · That car is red · These shoes are new · Those birds are big
 
 ## Deux critères, pas un
-Le français dit « ce / cette / ces » sans distinguer la distance. L’anglais demande **deux** décisions à chaque fois :
-1. proche ou éloigné ?
-2. singulier ou pluriel ?
+~ Proche ou éloigné ? → Singulier ou pluriel ? → le bon mot
 
 ## La prononciation, le vrai piège
-**this** /ðɪs/ est court, **these** /ðiːz/ est long. C’est le seul indice à l’oral : les confondre change le nombre.
+!> **this** /ðɪs/ est **court**, **these** /ðiːz/ est **long**. C’est le seul indice à l’oral : les confondre change le **nombre**.
 
 ## Les emplois particuliers
-- Au **téléphone** : *Hello, **this** is Tom.* (c’est Tom à l’appareil)
-- Pour **présenter quelqu’un** : *This is my sister.*
-- Dans le **temps** : *this morning* (ce matin), *these days* (ces jours-ci), *that day* (ce jour-là).
+| La situation | Ce qu’on dit |
+| Au **téléphone** | *Hello, **this** is Tom.* (c’est Tom à l’appareil) |
+| Pour **présenter quelqu’un** | *This is my sister.* |
+| Dans le **temps** | *this morning*, *these days*, *that day* |
 
 ## Sans nom derrière
-Les démonstratifs peuvent s’employer seuls, comme pronoms :
-*What’s **this**? — **That**’s my bag.*
+Les démonstratifs peuvent s’employer seuls, comme **pronoms**.
 
-> En français on ajoute souvent « -ci » ou « -là » ; en anglais, l’information est déjà dans le mot.`,
+= What’s this? — That’s my bag.
+
+> En français on ajoute souvent « -ci » ou « -là » ; en anglais, l’information est **déjà dans le mot**.`,
           },
           questions: [
             ['Quel démonstratif pour un objet proche au singulier ?', ['this', 'that', 'these', 'those'], 0, 'Proche + singulier.'],
@@ -248,23 +266,26 @@ Les démonstratifs peuvent s’employer seuls, comme pronoms :
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Le génitif et les possessifs',
-            cours: `## Le génitif : ’s
-Pour dire « le … de … » avec un **possesseur humain** ou animé, l’anglais inverse l’ordre du français :
-*Paul’s bike* = le vélo **de** Paul.
-On lit de droite à gauche : **possesseur + ’s + objet possédé**.
+            cours: `En anglais, le possessif s’accorde avec le POSSESSEUR, pas avec l’objet. C’est l’erreur numéro un des francophones.
 
-Au **pluriel** déjà en -s, on ajoute seulement l’apostrophe : *my parents’ car* (la voiture de mes parents).
-Pour un pluriel irrégulier, on garde ’s : *the children’s room*.
+## Le génitif : ’s
+Pour dire « le … de … » avec un **possesseur humain** ou animé, l’anglais **inverse** l’ordre du français.
+
+= Paul’s bike = le vélo DE Paul
+
+~ Possesseur → ’s → objet possédé
+
+| Le cas | Ce qu’on écrit | Exemple |
+| Pluriel **déjà en -s** | Seulement l’apostrophe | *my parents’ car* |
+| Pluriel **irrégulier** | On garde ’s | *the children’s room* |
 
 ## Pour les choses : of
-Avec un objet inanimé, on préfère **of** :
-*the door **of** the house*, *the end **of** the film*.
+= the door OF the house · the end OF the film
 
 ## Les adjectifs possessifs
-Ils se placent **devant le nom** et ne s’accordent **jamais** avec lui :
+Ils se placent **devant le nom** et ne s’accordent **jamais** avec lui.
 
-| personne | adjectif |
-|---|---|
+| Personne | Adjectif |
 | I | **my** |
 | you | **your** |
 | he | **his** |
@@ -273,16 +294,19 @@ Ils se placent **devant le nom** et ne s’accordent **jamais** avec lui :
 | we | **our** |
 | they | **their** |
 
-*his sister* = sa sœur (à lui) — *her brother* = son frère (à elle).
+!> « Sa voiture » se dit ***his car*** si le possesseur est un garçon, ***her car*** si c’est une fille. Le genre de la voiture ne compte pas — seul compte celui de la personne.
 
-> C’est l’erreur numéro un des francophones : en anglais, le possessif s’accorde avec le **POSSESSEUR**, pas avec l’objet. « Sa voiture » se dit *his car* si c’est un garçon, *her car* si c’est une fille.
+= his sister = sa sœur (à lui) · her brother = son frère (à elle)
 
 ## Les pronoms possessifs
-Ils remplacent le groupe entier, sans nom derrière : **mine, yours, his, hers, ours, theirs**.
-*This book is **mine**.* (= my book)
+Ils remplacent le groupe entier, **sans nom derrière** : **mine, yours, his, hers, ours, theirs**.
+
+= This book is mine (= my book)
 
 ## Le piège its / it’s
-**its** = son, sa (possessif) — **it’s** = *it is*. Deux mots différents.`,
+| L’écriture | Ce que c’est |
+| **its** | Son, sa — le **possessif** |
+| **it’s** | *it is* |`,
           },
           questions: [
             ['Comment dit-on « le vélo de Paul » ?', ['Paul’s bike', 'the bike of Paul', 'bike Paul’s', 'Paul bike'], 0, 'Possesseur + ’s + objet possédé.'],
@@ -300,35 +324,42 @@ Ils remplacent le groupe entier, sans nom derrière : **mine, yours, his, hers, 
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Some, any, much, many',
-            cours: `## Some et any
-- **some** = « du, de la, des », dans les phrases **affirmatives**.
-  *I have **some** money. / There are **some** apples.*
-- **any** dans les phrases **négatives** et **interrogatives**.
-  *I don’t have **any** money. / Do you have **any** apples?*
+            cours: `Some ou any, much ou many : deux paires de choix, et deux critères différents.
 
-**L’exception à connaître** : on emploie **some** dans une question quand on **propose** ou qu’on **demande** quelque chose.
-*Would you like **some** tea?* — *Can I have **some** water?*
+## Some et any
+| Le mot | Dans quelle phrase | Exemple |
+| **some** | **Affirmative** | *I have **some** money.* |
+| **any** | **Négative** et **interrogative** | *I don’t have **any** money. / Do you have **any** apples?* |
+
+!> **L’exception à connaître** : on emploie **some** dans une question quand on **propose** ou qu’on **demande** quelque chose. *Would you like **some** tea?* — *Can I have **some** water?*
 
 ## Much et many
-- **many** + nom **dénombrable** pluriel : *How **many** books?*
-- **much** + nom **indénombrable** : *How **much** money?*
+| Le mot | Avec quoi | Exemple |
+| **many** | Un dénombrable **pluriel** | *How **many** books?* |
+| **much** | Un **indénombrable** | *How **much** money?* |
+
 Tous deux s’emploient surtout en question et en négation.
 
 ## A lot of / lots of
-Dans une phrase **affirmative**, on préfère **a lot of**, qui marche avec les deux :
-*I have **a lot of** friends. / There is **a lot of** water.*
+Dans une phrase **affirmative**, on préfère **a lot of**, qui marche avec les deux.
 
-> On ne dit pas « I have much money » : on dit *a lot of money*. C’est une règle d’usage, pas de grammaire.
+= I have a lot of friends · There is a lot of water
+
+!> On ne dit **pas** « I have much money » : on dit *a lot of money*. C’est une règle d’**usage**, pas de grammaire — et elle se retient telle quelle.
 
 ## Peu et un peu
-- **a few** + dénombrable = quelques (positif) — *a few friends*
-- **few** + dénombrable = peu (négatif) — *few friends*
-- **a little** + indénombrable = un peu — *a little milk*
-- **little** + indénombrable = peu — *little hope*
+| Le mot | Avec quoi | Son sens |
+| **a few** | Dénombrable | Quelques — **positif** |
+| **few** | Dénombrable | Peu — **négatif** |
+| **a little** | Indénombrable | Un peu |
+| **little** | Indénombrable | Peu |
+
+= a few friends · few friends · a little milk · little hope
 
 ## There is / there are
-Pour dire « il y a » : **there is** + singulier ou indénombrable, **there are** + pluriel.
-*There **is** a book. / There **are** two books.*`,
+| La forme | Avec quoi |
+| **there is** | Singulier ou indénombrable |
+| **there are** | Pluriel |`,
           },
           questions: [
             ['Quel mot emploie-t-on dans une phrase affirmative : « J’ai de l’argent » ?', ['I have some money.', 'I have any money.', 'I have much money.', 'I have many money.'], 0, '« Some » en affirmatif.'],
@@ -346,35 +377,43 @@ Pour dire « il y a » : **there is** + singulier ou indénombrable, **there are
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Invariables, et devant le nom',
-            cours: `## Deux règles absolues
-1. L’adjectif se place **DEVANT** le nom : *a **red** car*, *an **old** house*.
-2. L’adjectif est **INVARIABLE** : jamais de -s, jamais de féminin.
-   *a red car / two **red** cars* — pas « reds ».
+            cours: `Deux règles absolues, et l’erreur française consiste à faire l’inverse des deux.
 
-> Ces deux règles couvrent presque tous les emplois, et l’erreur française consiste à faire l’inverse des deux : « une voiture rouge », « des voitures rouges ».
+## Les deux règles
+| La règle | Exemple |
+| L’adjectif se place **DEVANT** le nom | *a **red** car*, *an **old** house* |
+| L’adjectif est **INVARIABLE** | *a red car / two **red** cars* — jamais « reds » |
+
+!> Le français dit « une voiture **rouge** » (après) et « des voitures **rouges** » (accordé). L’anglais fait l’inverse **sur les deux points**.
 
 ## L’ordre des adjectifs
-Quand il y en a plusieurs, l’anglais suit un ordre assez fixe :
-**opinion → taille → âge → forme → couleur → origine → matière**
-*a **beautiful little old round red** Italian **wooden** table.*
+~ opinion → taille → âge → forme → couleur → origine → matière
+
+= a beautiful little old round red Italian wooden table
+
 On en emploie rarement plus de trois à la fois.
 
 ## Après le verbe être
-L’adjectif peut aussi suivre *be*, *look*, *seem*, *feel* :
-*The car **is red**. / She **looks tired**.*
+L’adjectif peut aussi suivre *be*, *look*, *seem*, *feel*.
+
+= The car is red · She looks tired
 
 ## Les adjectifs en -ed et en -ing
-- **-ed** décrit ce qu’on **ressent** : *I am bored.* (je m’ennuie)
-- **-ing** décrit ce qui **provoque** : *The film is boring.* (le film est ennuyeux)
-Confondre les deux donne *I am boring* — « je suis ennuyeux ».
+| La terminaison | Ce qu’elle décrit | Exemple |
+| **-ed** | Ce qu’on **ressent** | *I am bored.* (je m’ennuie) |
+| **-ing** | Ce qui **provoque** | *The film is boring.* (le film est ennuyeux) |
+
+!> Confondre les deux donne *I am boring* — « je suis ennuyeux ». Le contresens est complet.
 
 ## Les adjectifs de nationalité
 Ils prennent une **majuscule** : *French*, *English*, *Spanish*, *Italian*.
-*She is **French**.* (sans article)
+
+= She is French (sans article)
 
 ## Very et too
-- **very** = très (constat) — *It’s very hot.*
-- **too** = trop (excès, problème) — *It’s too hot.*`,
+| Le mot | Son sens | Exemple |
+| **very** | Très — un **constat** | *It’s very hot.* |
+| **too** | Trop — un **excès**, un problème | *It’s too hot.* |`,
           },
           questions: [
             ['Où se place l’adjectif en anglais ?', ['Devant le nom', 'Après le nom', 'À la fin de la phrase', 'Cela dépend de l’adjectif'], 0, 'C’est l’inverse du français.'],
@@ -396,37 +435,41 @@ Ils prennent une **majuscule** : *French*, *English*, *Spanish*, *Italian*.
           axe: 'Le groupe verbal',
           lecon: {
             titre: 'Le verbe le plus utile de l’anglais',
-            cours: `## La conjugaison au présent
-| personne | forme | contraction |
-|---|---|---|
+            cours: `BE se débrouille seul : il n’a besoin de DO ni pour la question, ni pour la négation.
+
+## La conjugaison au présent
+| Personne | Forme | Contraction |
 | I | am | **I’m** |
 | you | are | **you’re** |
 | he / she / it | is | **he’s** |
 | we / you / they | are | **we’re** |
 
 ## Les trois formes
-- **Affirmative** : *I am French.*
-- **Négative** : on ajoute **not** APRÈS be — *I am **not** French* → *I’m not*, *he isn’t*, *they aren’t*.
-- **Interrogative** : on **inverse** be et le sujet — ***Are** you French?*
+| La forme | Comment | Exemple |
+| **Affirmative** | | *I am French.* |
+| **Négative** | **not** APRÈS be | *I’m not*, *he isn’t*, *they aren’t* |
+| **Interrogative** | On **inverse** be et le sujet | ***Are** you French?* |
 
-> BE se débrouille seul : il n’a besoin ni de DO pour la question, ni de DO pour la négation. C’est ce qui le distingue de tous les autres verbes.
+!> C’est ce qui distingue BE de **tous** les autres verbes : il fait sa question et sa négation **tout seul**.
 
 ## Le prétérit
-**was** (I, he, she, it) et **were** (you, we, they).
-*I **was** tired. / They **were** at home.*
-Négatif : *wasn’t*, *weren’t*.
+| Personnes | Forme | Négatif |
+| I, he, she, it | **was** | *wasn’t* |
+| you, we, they | **were** | *weren’t* |
 
 ## Les emplois où le français dit « avoir »
-C’est le piège majeur du chapitre :
-- l’**âge** : *I **am** 12.* (j’ai 12 ans)
-- **faim, soif, froid, chaud, peur** : *I **am** hungry / thirsty / cold / hot / afraid.*
-- la **raison** : *You **are** right / wrong.*
+| En français | En anglais |
+| J’**ai** 12 ans | *I **am** 12* |
+| J’**ai** faim, soif, froid, chaud, peur | *I **am** hungry / thirsty / cold / hot / afraid* |
+| Tu **as** raison, tort | *You **are** right / wrong* |
+
+!> C’est **le** piège du chapitre : là où le français dit « avoir », l’anglais dit **be**.
 
 ## Il y a
-*There **is*** + singulier, *there **are*** + pluriel.
+= there is + singulier · there are + pluriel
 
 ## Be + -ing
-BE sert aussi à construire le présent progressif : *I **am** working.* (voir la fiche sur le présent en BE + -ING).`,
+BE sert aussi à construire le présent progressif : *I **am** working.*`,
           },
           questions: [
             ['Quelle est la forme de BE avec « he » ?', ['is', 'am', 'are', 'be'], 0, 'He / she / it → is.'],
@@ -444,35 +487,38 @@ BE sert aussi à construire le présent progressif : *I **am** working.* (voir l
           axe: 'Le groupe verbal',
           lecon: {
             titre: 'Avoir, à l’anglaise',
-            cours: `## La forme
-**have got** (I, you, we, they) et **has got** (he, she, it).
-*I **have got** a bike. / She **has got** a cat.*
+            cours: `Have got dit la possession, et il se débrouille sans DO — comme BE.
 
-Contractions courantes : *I’ve got*, *you’ve got*, *he’s got*, *she’s got*.
+## La forme
+| Personnes | Forme | Contraction |
+| I, you, we, they | **have got** | *I’ve got*, *you’ve got* |
+| he, she, it | **has got** | *he’s got*, *she’s got* |
 
-> Attention : *he’s* peut être *he is* OU *he has*. C’est le contexte qui tranche — *he’s tired* (is) contre *he’s got a car* (has).
+!> ***he’s*** peut être ***he is*** OU ***he has***. C’est le contexte qui tranche : *he’s tired* (is) contre *he’s got a car* (has).
 
 ## Négation et question
-Elles se construisent **sans DO**, comme avec BE :
-- négatif : *I **haven’t got** a bike. / He **hasn’t got** a cat.*
-- question : ***Have** you **got** a bike? / **Has** she **got** a cat?*
+Elles se construisent **sans DO**, comme avec BE.
+
+| La forme | Exemple |
+| **Négative** | *I **haven’t got** a bike. / He **hasn’t got** a cat.* |
+| **Interrogative** | ***Have** you **got** a bike? / **Has** she **got** a cat?* |
 
 ## Have got ou have ?
-Les deux disent la même chose pour la possession.
-- **have got** : plus courant en anglais **britannique**, surtout à l’oral.
-- **have** seul : plus courant en **américain**, et il se conjugue alors avec **DO** :
-  *Do you **have** a bike? / I don’t **have** a bike.*
-Les deux sont corrects — il faut seulement ne pas les mélanger dans une même phrase.
+| La forme | Où | Comment elle se construit |
+| **have got** | Anglais **britannique**, surtout à l’oral | Sans DO |
+| **have** seul | Anglais **américain** | **Avec DO** : *Do you **have** a bike? / I don’t **have** a bike* |
+
+!> Les deux sont corrects. Ce qu’il ne faut pas, c’est les **mélanger dans une même phrase**.
 
 ## Ce qu’on exprime avec HAVE GOT
-- la **possession** : *I’ve got a phone.*
-- la **famille** : *She’s got two brothers.*
-- la **description** : *He’s got blue eyes and brown hair.*
-- la **maladie** : *I’ve got a headache.*
+| L’emploi | Exemple |
+| La **possession** | *I’ve got a phone.* |
+| La **famille** | *She’s got two brothers.* |
+| La **description** | *He’s got blue eyes and brown hair.* |
+| La **maladie** | *I’ve got a headache.* |
 
 ## Le prétérit
-Il n’y a pas de « had got » courant : au passé, on emploie **had**.
-*I **had** a bike when I was ten.*`,
+> Il n’y a pas de « had got » courant : au passé, on emploie simplement **had**. *I **had** a bike when I was ten.*`,
           },
           questions: [
             ['Quelle forme emploie-t-on avec « she » ?', ['has got', 'have got', 'haves got', 'is got'], 0, 'He / she / it → has got.'],
@@ -490,35 +536,48 @@ Il n’y a pas de « had got » courant : au passé, on emploie **had**.
           axe: 'Le groupe verbal',
           lecon: {
             titre: 'Le mot qui fabrique les questions et les négations',
-            cours: `## À quoi il sert
-Tous les verbes **sauf BE** et les modaux ont besoin de **DO** pour former la question et la négation au présent.
+            cours: `Tous les verbes sauf BE et les modaux ont besoin de DO pour faire une question ou une négation.
+
+## Qui a besoin de DO
+| Le verbe | A-t-il besoin de DO ? |
+| **BE** | **Non** — il s’inverse tout seul |
+| Les **modaux** (can, must, will…) | **Non** |
+| **Tous les autres** | **Oui** |
 
 ## La question
-**Do** + sujet + **verbe à la base verbale** ?
-*Do you **like** pizza? / **Does** he **play** football?*
+= DO + sujet + BASE VERBALE ?
 
-⚠️ Avec *does*, le verbe **perd son -s** : *He plays* → *Does he **play**?* — le -s est déjà passé sur *does*.
+= Do you like pizza? · Does he play football?
+
+!> Avec ***does***, le verbe **perd son -s** : *He plays* devient *Does he **play**?* Le -s est déjà passé sur *does*.
 
 ## La négation
-Sujet + **don’t / doesn’t** + base verbale.
-*I **don’t like** fish. / She **doesn’t speak** French.*
+= Sujet + don’t / doesn’t + BASE VERBALE
+
+= I don’t like fish · She doesn’t speak French
+
 Même règle : *doesn’t speak*, jamais « doesn’t speaks ».
 
-> Le -s de la 3e personne ne se met qu’UNE fois dans la phrase. S’il est sur *does*, il ne peut pas être aussi sur le verbe.
+> Le -s de la 3e personne ne se met qu’**une** fois dans la phrase. S’il est sur *does*, il ne peut pas être aussi sur le verbe.
 
 ## Le prétérit : did
 Une seule forme pour toutes les personnes.
-*Did you **go**? / I **didn’t go**.*
-Et là encore, le verbe revient à la **base verbale** : *didn’t go*, jamais « didn’t went ».
+
+= Did you go? · I didn’t go
+
+!> Là encore, le verbe revient à la **base verbale** : *didn’t go*, **jamais** « didn’t went ».
 
 ## DO, verbe lexical
-*do* est aussi un verbe ordinaire signifiant « faire » — d’où des phrases à deux *do* :
-*What **do** you **do**?* (Que fais-tu dans la vie ?)
-*I **didn’t do** my homework.*
+*do* est aussi un verbe ordinaire signifiant « faire » — d’où des phrases à deux *do*.
+
+| La phrase | Le premier *do* | Le second |
+| *What **do** you **do**?* | L’**auxiliaire** | Le **verbe** « faire » |
+| *I **didn’t do** my homework.* | L’**auxiliaire** | Le **verbe** |
 
 ## Les réponses courtes
-On répond avec l’auxiliaire seul, jamais par *yes* ou *no* tout secs :
-*Do you like tea? — **Yes, I do.** / **No, I don’t.***`,
+On répond avec l’**auxiliaire seul**.
+
+= Do you like tea? — Yes, I do. / No, I don’t.`,
           },
           questions: [
             ['Quels verbes n’ont pas besoin de DO ?', ['BE et les modaux', 'Tous les verbes en -ing', 'Les verbes irréguliers', 'Aucun'], 0, 'Ils forment seuls question et négation.'],
@@ -536,32 +595,34 @@ On répond avec l’auxiliaire seul, jamais par *yes* ou *no* tout secs :
           axe: 'Le groupe verbal',
           lecon: {
             titre: 'Le premier modal',
-            cours: `## Les trois emplois
-- la **capacité** : *I **can** swim.* (je sais nager)
-- la **permission** : ***Can** I go out?* (est-ce que je peux ?)
-- la **demande polie** : ***Can** you help me?*
+            cours: `Les trois règles des modaux s’apprennent une fois — et servent pour can, must, will et should.
 
-## Les règles des modaux — les trois d’un coup
-1. **Jamais de -s** à la 3e personne : *he **can**, she **can*** — jamais « cans ».
-2. Le verbe qui suit est à la **base verbale**, sans *to* : *I can **swim*** — jamais « can to swim ».
-3. **Pas de DO** : la question se fait par **inversion**, la négation avec **not**.
-   ***Can** you swim? / I **cannot** swim* → *I **can’t** swim.*
+## Les trois emplois de CAN
+| L’emploi | Exemple |
+| La **capacité** | *I **can** swim.* (je sais nager) |
+| La **permission** | ***Can** I go out?* |
+| La **demande polie** | ***Can** you help me?* |
 
-> Ces trois règles valent pour TOUS les modaux — can, must, will, should. Les apprendre une fois, c’est les avoir toutes.
+## Les trois règles des modaux
+1. **Jamais de -s** à la 3e personne : *he **can**, she **can*** — jamais « cans » ;
+2. le verbe qui suit est à la **base verbale, sans *to*** : *I can **swim*** — jamais « can to swim » ;
+3. **pas de DO** : la question se fait par **inversion**, la négation avec **not**.
+
+= Can you swim? · I cannot swim → I can’t swim
+
+!> Ces trois règles valent pour **TOUS** les modaux. Les apprendre une fois, c’est les avoir toutes.
 
 ## La négation
-**cannot** s’écrit en un seul mot ; la contraction est **can’t**.
+**cannot** s’écrit en **un seul mot** ; la contraction est **can’t**.
 
 ## Le passé : could
-*I **could** swim when I was five.*
-Négatif : *couldn’t*.
+= I could swim when I was five · couldn’t
 
 ## Poliment
-*Could* sert aussi de forme **polie** au présent : *Could you help me, please?* est plus poli que *Can you…*
+*Could* sert aussi de forme **polie au présent** : *Could you help me, please?* est plus poli que *Can you…*
 
 ## Ce que CAN ne fait pas
-Il n’a pas d’infinitif ni de participe. Pour le futur ou le parfait, on emploie **be able to** :
-*I **will be able to** drive next year.*`,
+!> Il n’a **ni infinitif, ni participe**. Pour le futur ou le parfait, on emploie **be able to** : *I **will be able to** drive next year.*`,
           },
           questions: [
             ['Comment dit-on « Il sait nager » ?', ['He can swim.', 'He cans swim.', 'He can to swim.', 'He can swims.'], 0, 'Pas de -s, pas de « to ».'],
@@ -579,36 +640,34 @@ Il n’a pas d’infinitif ni de participe. Pour le futur ou le parfait, on empl
           axe: 'Le groupe verbal',
           lecon: {
             titre: 'Ce qu’il faut faire, et ce qu’il ne faut pas',
-            cours: `## L’obligation
-**must** + base verbale exprime une obligation, souvent **venue de celui qui parle** :
-*You **must** wear a helmet.*
+            cours: `Mustn’t et don’t have to ne veulent pas dire la même chose. Les confondre fait dire l’inverse de ce qu’on pense.
+
+## L’obligation
+**must** + base verbale, souvent une obligation venue de **celui qui parle**.
+
+= You must wear a helmet
+
 Il suit les trois règles des modaux : pas de -s, pas de *to*, pas de DO.
 
-## L’interdiction
-**mustn’t** = il ne faut **pas**, c’est **interdit**.
-*You **mustn’t** smoke here.*
-
 ## Le piège central du chapitre
-**mustn’t** et **don’t have to** ne veulent PAS dire la même chose :
-- *You **mustn’t** go.* = tu ne dois pas y aller — **c’est interdit**.
-- *You **don’t have to** go.* = tu n’es pas obligé d’y aller — **c’est ton choix**.
+| La forme | Ce qu’elle dit |
+| *You **mustn’t** go.* | Tu ne dois pas y aller — **c’est interdit** |
+| *You **don’t have to** go.* | Tu n’es pas obligé — **c’est ton choix** |
 
-> Confondre les deux fait dire l’inverse de ce qu’on pense. C’est l’erreur à ne pas commettre.
+!> Ce sont deux sens **opposés**. C’est l’erreur à ne pas commettre du chapitre.
 
 ## Must ou have to ?
-- **must** : l’obligation vient du locuteur, elle est personnelle.
-  *I **must** call my grandmother.*
-- **have to** : l’obligation vient de l’**extérieur** — une règle, un horaire, la loi.
-  *I **have to** wear a uniform at school.*
+| La forme | D’où vient l’obligation | Exemple |
+| **must** | Du **locuteur** : elle est personnelle | *I **must** call my grandmother.* |
+| **have to** | De l’**extérieur** : une règle, un horaire, la loi | *I **have to** wear a uniform at school.* |
 
 ## Au passé et au futur
-*must* n’a pas de passé : on emploie **had to**.
-*I **had to** stay at home yesterday.*
-Au futur : *I **will have to** work.*
+!> *must* **n’a pas de passé**. On emploie **had to** : *I **had to** stay at home yesterday.* Au futur : *I **will have to** work.*
 
 ## Should : le conseil
-Plus faible que *must*, **should** donne un conseil :
-*You **should** sleep more.* (tu devrais)`,
+Plus faible que *must*.
+
+= You should sleep more (tu devrais)`,
           },
           questions: [
             ['Comment dit-on « Tu dois porter un casque » ?', ['You must wear a helmet.', 'You must to wear a helmet.', 'You musts wear a helmet.', 'You do must wear a helmet.'], 0, 'Base verbale, sans « to ».'],
@@ -630,35 +689,42 @@ Plus faible que *must*, **should** donne un conseil :
           axe: 'Les temps',
           lecon: {
             titre: 'Les habitudes et ce qui est toujours vrai',
-            cours: `## La forme
+            cours: `Le présent simple dit ce qui est habituel. Sa seule difficulté tient dans un -s.
+
+## La forme
 Base verbale à toutes les personnes, **sauf** à la 3e personne du singulier, qui prend **-s**.
-*I work / you work / **he works** / we work / they work.*
+
+= I work · you work · HE WORKS · we work · they work
 
 ## L’orthographe du -s
-- verbes en **-o, -s, -ss, -sh, -ch, -x** → **-es** : *he go**es***, *she watch**es***, *he do**es***.
-- verbes en **consonne + y** → **-ies** : *he stud**ies***, *she fl**ies***.
-- verbes en **voyelle + y** → simple -s : *he play**s***.
+| Le verbe finit par… | On ajoute | Exemples |
+| **-o, -s, -ss, -sh, -ch, -x** | **-es** | *he go**es***, *she watch**es***, *he do**es*** |
+| **consonne + y** | **-ies** | *he stud**ies***, *she fl**ies*** |
+| **voyelle + y** | **-s** | *he play**s*** |
 
 ## Les emplois
-- une **habitude** : *I go to school every day.*
-- une **vérité générale** : *Water boils at 100 degrees.*
-- un **goût**, un **état** : *She likes chocolate.*
-- un **horaire** : *The train leaves at 8.*
+| L’emploi | Exemple |
+| Une **habitude** | *I go to school every day.* |
+| Une **vérité générale** | *Water boils at 100 degrees.* |
+| Un **goût**, un **état** | *She likes chocolate.* |
+| Un **horaire** | *The train leaves at 8.* |
 
 ## Question et négation
-Avec **DO** — et le verbe perd alors son -s :
-*Do you work? / **Does** he **work**? / He **doesn’t work**.*
+Avec **DO** — et le verbe **perd** alors son -s.
 
-> Le -s de la 3e personne ne se met qu’une fois : sur le verbe OU sur l’auxiliaire, jamais sur les deux.
+= Do you work? · Does he work? · He doesn’t work
+
+!> Le -s de la 3e personne ne se met qu’une fois : sur le **verbe** OU sur l’**auxiliaire**, jamais sur les deux.
 
 ## Les mots qui l’accompagnent
-**always, usually, often, sometimes, never** se placent **avant** le verbe (mais après *be*) :
-*She **often** plays tennis. / He **is** always late.*
-Les expressions de fréquence — *every day*, *twice a week*, *on Mondays* — se placent en fin de phrase.
+| Le mot | Où il se place |
+| **always, usually, often, sometimes, never** | **Avant** le verbe — mais **après** *be* |
+| *every day*, *twice a week*, *on Mondays* | **En fin** de phrase |
+
+= She often plays tennis · He IS always late
 
 ## Ne pas confondre
-Le présent simple dit ce qui est **habituel** ; le présent en BE + -ING dit ce qui se passe **maintenant**.
-*I play tennis* (en général) — *I am playing tennis* (là, maintenant).`,
+= I play tennis (en général) · I am playing tennis (là, maintenant)`,
           },
           questions: [
             ['Quelle personne prend un -s au présent simple ?', ['La 3e personne du singulier', 'Toutes', 'La 1re personne', 'Le pluriel'], 0, 'He / she / it.'],
@@ -676,34 +742,36 @@ Le présent simple dit ce qui est **habituel** ; le présent en BE + -ING dit ce
           axe: 'Les temps',
           lecon: {
             titre: 'Ce qui se passe en ce moment',
-            cours: `## La forme
-**BE** conjugué au présent + verbe en **-ing**.
-*I **am working**. / She **is playing**. / They **are eating**.*
+            cours: `On met -ing sur ce qu’on FAIT, pas sur ce qu’on PENSE ou ce qu’on RESSENT.
+
+## La forme
+= BE conjugué au présent + verbe en -ing
+
+= I am working · She is playing · They are eating
 
 ## L’orthographe du -ing
-- verbe en **-e muet** → on retire le e : *make → mak**ing***, *write → writ**ing***.
-- verbe court en **consonne-voyelle-consonne** → on **double** la consonne finale : *run → ru**nn**ing*, *swim → swi**mm**ing*, *sit → si**tt**ing*.
-- verbe en **-ie** → devient **-ying** : *lie → l**ying***.
+| Le verbe | Ce qui se passe | Exemples |
+| En **-e muet** | On **retire** le e | *make → mak**ing***, *write → writ**ing*** |
+| Court, en **consonne-voyelle-consonne** | On **double** la consonne finale | *run → ru**nn**ing*, *swim → swi**mm**ing*, *sit → si**tt**ing* |
+| En **-ie** | Devient **-ying** | *lie → l**ying*** |
 
 ## Les emplois
-- une action **en cours** au moment où l’on parle : *Look! It **is raining**.*
-- une action **temporaire** : *I **am staying** with my aunt this week.*
-- un **projet** proche déjà organisé : *We **are meeting** at 6.*
-- avec *always*, une **irritation** : *He **is always losing** his keys.*
+| L’emploi | Exemple |
+| Une action **en cours** | *Look! It **is raining**.* |
+| Une action **temporaire** | *I **am staying** with my aunt this week.* |
+| Un **projet** proche déjà organisé | *We **are meeting** at 6.* |
+| Avec *always*, une **irritation** | *He **is always losing** his keys.* |
 
 ## Question et négation
-Sans DO — c’est BE qui travaille :
-*Are you working? / I **am not** working. / She **isn’t** playing.*
+Sans DO — c’est **BE** qui travaille.
+
+= Are you working? · I am not working · She isn’t playing
 
 ## Les verbes qui refusent le -ing
-Les verbes d’**état** ne s’emploient pas à cette forme : *know, like, love, hate, want, need, understand, believe, prefer*.
-On dit *I **know** the answer*, jamais « I am knowing ».
-
-> La règle simple : on met -ing sur ce qu’on FAIT, pas sur ce qu’on PENSE ou ce qu’on RESSENT.
+!> Les verbes d’**état** ne s’emploient **pas** à cette forme : *know, like, love, hate, want, need, understand, believe, prefer*. On dit *I **know** the answer*, jamais « I am knowing ».
 
 ## Le contraste à retenir
-*I **read** books.* — j’en lis en général.
-*I **am reading** a book.* — je suis en train d’en lire un.`,
+= I read books (j’en lis en général) · I am reading a book (je suis en train d’en lire un)`,
           },
           questions: [
             ['Comment se forme le présent en BE + -ING ?', ['BE au présent + verbe en -ing', 'DO + verbe en -ing', 'HAVE + verbe en -ing', 'Verbe en -ing seul'], 0, '« I am working. »'],
@@ -721,35 +789,45 @@ On dit *I **know** the answer*, jamais « I am knowing ».
           axe: 'Les temps',
           lecon: {
             titre: 'Le passé terminé',
-            cours: `## La forme régulière
-On ajoute **-ed** à la base verbale, **à toutes les personnes** :
-*I work**ed**, you work**ed**, he work**ed**…*
+            cours: `Le passé n’est marqué qu’une fois dans la phrase : sur le verbe, ou sur l’auxiliaire. Jamais sur les deux.
+
+## La forme régulière
+On ajoute **-ed**, **à toutes les personnes**.
+
+= I worked · you worked · he worked
 
 ## L’orthographe du -ed
-- verbe en **-e** → seulement **-d** : *like → liked*.
-- **consonne + y** → **-ied** : *study → stud**ied***.
-- verbe court en consonne-voyelle-consonne → on **double** : *stop → sto**pp**ed*.
+| Le verbe | Ce qu’on ajoute | Exemple |
+| En **-e** | **-d** seulement | *like → liked* |
+| **Consonne + y** | **-ied** | *study → stud**ied*** |
+| Court, consonne-voyelle-consonne | On **double** | *stop → sto**pp**ed* |
 
 ## Les verbes irréguliers
-Ils ne prennent pas -ed et changent de forme — il faut les apprendre :
-*go → **went**, have → **had**, see → **saw**, do → **did**, be → **was/were**, eat → **ate**, take → **took**, come → **came**, get → **got**, make → **made**.*
+= go → went · have → had · see → saw · do → did · be → was/were
+
+= eat → ate · take → took · come → came · get → got · make → made
 
 ## Question et négation : avec DID
-*Did you **go**? / I **didn’t go**.*
-⚠️ Après **did** et **didn’t**, le verbe revient à la **base verbale** — jamais « didn’t went ».
+= Did you go? · I didn’t go
 
-> Le passé n’est marqué qu’UNE fois dans la phrase : sur le verbe, ou sur l’auxiliaire. Jamais sur les deux.
+!> Après **did** et **didn’t**, le verbe revient à la **base verbale** — jamais « didn’t went ».
 
 ## Les emplois
-- une action **terminée** à un moment **précis** du passé : *I saw him **yesterday**.*
-- une **suite** d’actions passées : *I got up, had breakfast and left.*
-- une **habitude passée** : *When I was young, I played football.*
+| L’emploi | Exemple |
+| Une action **terminée** à un moment précis | *I saw him **yesterday**.* |
+| Une **suite** d’actions passées | *I got up, had breakfast and left.* |
+| Une **habitude passée** | *When I was young, I played football.* |
 
 ## Les repères de temps
-*yesterday, last week, two days ago, in 2010, when I was young* — ces mots réclament le prétérit.
+= yesterday · last week · two days ago · in 2010 · when I was young
+
+Ces mots **réclament** le prétérit.
 
 ## La prononciation du -ed
-Trois sons : **/t/** après un son sourd (*worked*), **/d/** après un son sonore (*played*), **/ɪd/** après **t** ou **d** (*wanted*, *needed*).`,
+| Le son | Après quoi | Exemple |
+| **/t/** | Un son **sourd** | *worked* |
+| **/d/** | Un son **sonore** | *played* |
+| **/ɪd/** | Un **t** ou un **d** | *wanted*, *needed* |`,
           },
           questions: [
             ['Comment forme-t-on le prétérit d’un verbe régulier ?', ['On ajoute -ed à toutes les personnes', 'On ajoute -s', 'On ajoute -ing', 'On change la voyelle'], 0, 'La forme est la même pour tous.'],
@@ -767,16 +845,17 @@ Trois sons : **/t/** après un son sourd (*worked*), **/d/** après un son sonor
           axe: 'Les temps',
           lecon: {
             titre: 'La liste qu’il faut savoir',
-            cours: `## Trois colonnes
-Un verbe irrégulier s’apprend en **trois formes** :
-**base verbale — prétérit — participe passé**
-*go — went — gone*
+            cours: `Apprendre les verbes irréguliers par familles divise le travail par trois. La liste alphabétique est le plus mauvais ordre possible.
 
-En 6e, les deux premières suffisent pour la plupart des usages ; la troisième servira plus tard.
+## Trois colonnes
+~ Base verbale → prétérit → participe passé
+
+= go — went — gone
+
+En 6e, les deux premières suffisent pour la plupart des usages.
 
 ## Les plus fréquents
-| base | prétérit | participe |
-|---|---|---|
+| Base | Prétérit | Participe |
 | be | was / were | been |
 | have | had | had |
 | do | did | done |
@@ -799,17 +878,16 @@ En 6e, les deux premières suffisent pour la plupart des usages ; la troisième 
 | put | put | put |
 
 ## Des familles pour retenir
-- **Les trois pareils** : *put — put — put*, *cut*, *let*, *cost*, *hit*.
-- **Les deux derniers pareils** : *buy — bought — bought*, *bring*, *think*, *teach*.
-- **-i → -a → -u** : *drink — drank — drunk*, *sing*, *swim*, *begin*.
-
-> Apprendre par familles divise le travail par trois. Une liste alphabétique est le plus mauvais ordre possible.
+| La famille | Le modèle | Les autres |
+| **Les trois pareils** | *put — put — put* | *cut*, *let*, *cost*, *hit* |
+| **Les deux derniers pareils** | *buy — bought — bought* | *bring*, *think*, *teach* |
+| **-i → -a → -u** | *drink — drank — drunk* | *sing*, *swim*, *begin* |
 
 ## Le piège de READ
-*read — read — read* s’écrit pareil aux trois formes mais se **prononce** /riːd/ au présent et /red/ au passé.
+!> *read — read — read* s’écrit **pareil** aux trois formes, mais se **prononce** /riːd/ au présent et **/red/** au passé. Seule l’oreille distingue.
 
 ## Comment les réviser
-Par petits paquets de cinq, à voix haute, et toujours dans l’ordre des trois colonnes.`,
+~ Par paquets de cinq → à voix haute → toujours dans l’ordre des trois colonnes`,
           },
           questions: [
             ['En combien de formes apprend-on un verbe irrégulier ?', ['Trois : base, prétérit, participe passé', 'Deux', 'Une seule', 'Quatre'], 0, 'go — went — gone.'],
@@ -827,35 +905,37 @@ Par petits paquets de cinq, à voix haute, et toujours dans l’ordre des trois 
           axe: 'Les temps',
           lecon: {
             titre: 'Be going to, will et le présent',
-            cours: `## BE GOING TO — l’intention et la preuve
-**be** + **going to** + base verbale.
-*I **am going to** watch a film tonight.*
+            cours: `Going to regarde en arrière ; will décide sur le moment. Toute la différence est là.
 
-Deux emplois :
-- une **intention** déjà décidée : *She **is going to** study medicine.*
-- une **prévision fondée sur un indice visible** : *Look at those clouds — it **is going to** rain.*
+## BE GOING TO — l’intention et la preuve
+= be + going to + base verbale
+
+| L’emploi | Exemple |
+| Une **intention** déjà décidée | *She **is going to** study medicine.* |
+| Une **prévision fondée sur un indice visible** | *Look at those clouds — it **is going to** rain.* |
 
 ## WILL — la décision et la prédiction
-**will** + base verbale, à toutes les personnes. Contraction : **’ll**.
-- une **décision prise à l’instant** : *The phone is ringing — I **’ll** answer it.*
-- une **prédiction**, une opinion : *I think it **will** be sunny.*
-- une **promesse** : *I **will** help you.*
-Négatif : **won’t**.
+**will** + base verbale, à toutes les personnes. Contraction : **’ll**, négatif : **won’t**.
 
-> La différence tient en un mot : **going to** regarde en arrière (une décision déjà prise, un indice déjà là), **will** décide sur le moment.
+| L’emploi | Exemple |
+| Une **décision prise à l’instant** | *The phone is ringing — I**’ll** answer it.* |
+| Une **prédiction**, une opinion | *I think it **will** be sunny.* |
+| Une **promesse** | *I **will** help you.* |
 
-## Le présent en BE + -ING pour le futur
-Il sert aux rendez-vous **organisés** : *I **am meeting** Tom at 6.*
+!> La différence tient en un mot : **going to** s’appuie sur quelque chose de **déjà là** — une décision prise, un nuage visible. **will** ne s’appuie sur rien : il décide maintenant.
 
-## Le présent simple pour les horaires
-Pour les trains, avions, cinémas : *The film **starts** at 8.*
+## Les autres façons de dire le futur
+| La forme | Pour quoi | Exemple |
+| Le présent en **BE + -ING** | Les rendez-vous **organisés** | *I **am meeting** Tom at 6.* |
+| Le **présent simple** | Les **horaires** : trains, avions, cinémas | *The film **starts** at 8.* |
 
 ## Les repères de temps
-*tomorrow, next week, in two days, tonight, soon*.
+= tomorrow · next week · in two days · tonight · soon
 
 ## Question et négation
-*Will you come? / I won’t come.*
-*Are you going to come? / I’m not going to come.*`,
+= Will you come? / I won’t come.
+
+= Are you going to come? / I’m not going to come.`,
           },
           questions: [
             ['Quelle forme exprime une intention déjà décidée ?', ['be going to', 'will', 'le présent simple', 'le prétérit'], 0, '« She is going to study medicine. »'],
@@ -877,9 +957,10 @@ Pour les trains, avions, cinémas : *The film **starts** at 8.*
           axe: 'La phrase',
           lecon: {
             titre: 'Sujet et complément',
-            cours: `## Les deux séries
-| sujet | complément |
-|---|---|
+            cours: `En anglais, le sujet ne peut jamais être omis. Même quand il ne désigne personne.
+
+## Les deux séries
+| Sujet | Complément |
 | **I** | **me** |
 | **you** | **you** |
 | **he** | **him** |
@@ -888,29 +969,30 @@ Pour les trains, avions, cinémas : *The film **starts** at 8.*
 | **we** | **us** |
 | **they** | **them** |
 
-*I* est **toujours** en majuscule, où qu’il soit dans la phrase.
+!> ***I*** est **toujours** en majuscule, où qu’il soit dans la phrase.
 
 ## Où les employer
-- Le pronom **sujet** est devant le verbe : ***She** likes music.*
-- Le pronom **complément** vient après le verbe ou après une préposition : *I know **her**. / Give it to **him**.*
-
-## La règle qui simplifie tout
-En anglais, **le sujet ne peut jamais être omis**. Le français dit « il pleut » et l’anglais aussi : ***It** rains* — mais là où le français peut dire « faut y aller », l’anglais met toujours un sujet.
+| Le pronom | Sa place | Exemple |
+| **Sujet** | Devant le verbe | ***She** likes music.* |
+| **Complément** | Après le verbe ou après une préposition | *I know **her**. / Give it to **him**.* |
 
 ## IT, le pronom à tout faire
-*it* remplace un objet, un animal, mais aussi :
-- le **temps qu’il fait** : *It’s raining.*
-- l’**heure** : *It’s 5 o’clock.*
-- la **distance** : *It’s 3 km.*
+| L’emploi | Exemple |
+| Le **temps qu’il fait** | *It’s raining.* |
+| L’**heure** | *It’s 5 o’clock.* |
+| La **distance** | *It’s 3 km.* |
 
-> Ces phrases n’ont pas de vrai sujet en français (« il pleut » ne parle de personne). L’anglais en réclame un quand même : c’est *it*.
+!> Ces phrases n’ont pas de vrai sujet en français — « il pleut » ne parle de personne. L’anglais en réclame un **quand même** : c’est *it*.
 
 ## THEY, pour les choses aussi
-*they* remplace tous les pluriels, personnes ou objets :
-*The books? **They** are on the table.*
+*they* remplace **tous** les pluriels, personnes ou objets.
+
+= The books? They are on the table.
 
 ## L’ordre de la phrase
-**Sujet + Verbe + Complément** — et cet ordre ne change presque jamais. C’est ce qui rend l’anglais lisible : la position d’un mot dit sa fonction.`,
+~ Sujet → Verbe → Complément
+
+> Cet ordre ne change presque jamais. C’est ce qui rend l’anglais lisible : la **position** d’un mot dit sa **fonction**.`,
           },
           questions: [
             ['Quel est le pronom complément de « he » ?', ['him', 'his', 'he', 'her'], 0, 'I know him.'],
@@ -928,39 +1010,42 @@ En anglais, **le sujet ne peut jamais être omis**. Le français dit « il pleut
           axe: 'La phrase',
           lecon: {
             titre: 'Poser une question',
-            cours: `## Les questions fermées (oui / non)
-Trois cas, et un seul principe : **l’auxiliaire passe devant le sujet**.
-- avec **BE** : ***Are** you happy?*
-- avec un **modal** : ***Can** you swim?*
-- avec **tous les autres verbes** : on fait appel à **DO** — ***Do** you like pizza? / **Does** he play?*
+            cours: `Poser une question, c’est faire passer l’auxiliaire devant le sujet. Un seul principe, trois cas.
+
+## Les questions fermées (oui / non)
+| Le verbe | Ce qu’on met devant | Exemple |
+| **BE** | *be* lui-même | ***Are** you happy?* |
+| Un **modal** | Le modal | ***Can** you swim?* |
+| **Tous les autres** | On appelle **DO** | ***Do** you like pizza? / **Does** he play?* |
 
 ## Les mots interrogatifs
-| mot | sens |
-|---|---|
-| **what** | quoi, que |
-| **who** | qui |
-| **where** | où |
-| **when** | quand |
-| **why** | pourquoi |
-| **how** | comment |
-| **which** | lequel |
-| **whose** | à qui |
+| Le mot | Son sens |
+| **what** | Quoi, que |
+| **who** | Qui |
+| **where** | Où |
+| **when** | Quand |
+| **why** | Pourquoi |
+| **how** | Comment |
+| **which** | Lequel |
+| **whose** | À qui |
 
 ## L’ordre, toujours le même
-**Mot interrogatif + auxiliaire + sujet + verbe**
-*Where **do** you live? / What **is** she doing? / Why **did** he leave?*
+~ Mot interrogatif → auxiliaire → sujet → verbe
 
-> Le mot interrogatif se met devant, mais il ne remplace pas l’auxiliaire. « Where you live? » est incorrect : il manque *do*.
+= Where do you live? · What is she doing? · Why did he leave?
+
+!> Le mot interrogatif se met devant, mais **il ne remplace pas l’auxiliaire**. « Where you live? » est incorrect : il manque *do*.
 
 ## How + adjectif
-*How **old** are you? / How **much** is it? / How **many** books? / How **far** is it? / How **long** does it take?*
+= How old are you? · How much is it? · How many books? · How far is it? · How long does it take?
 
 ## L’exception du sujet
-Quand le mot interrogatif est lui-même le **sujet**, il n’y a **pas** d’auxiliaire :
-***Who** lives here?* — et non « Who does live here? »
+!> Quand le mot interrogatif est **lui-même le sujet**, il n’y a **pas** d’auxiliaire : ***Who** lives here?* — et non « Who does live here? »
 
 ## La réponse courte
-On reprend l’auxiliaire : *Yes, I do. / No, she isn’t. / Yes, they can.*`,
+On reprend l’auxiliaire.
+
+= Yes, I do. / No, she isn’t. / Yes, they can.`,
           },
           questions: [
             ['Comment pose-t-on une question avec BE ?', ['Are you happy?', 'Do you be happy?', 'You are happy?', 'Be you happy?'], 0, 'L’auxiliaire passe devant le sujet.'],
@@ -978,33 +1063,42 @@ On reprend l’auxiliaire : *Yes, I do. / No, she isn’t. / Yes, they can.*`,
           axe: 'La phrase',
           lecon: {
             titre: 'Dire non, une seule fois',
-            cours: `## Le principe
-La négation se forme avec **not**, placé **après l’auxiliaire**.
-- **BE** : *I am **not** French.* → *I’m not*, *he isn’t*, *they aren’t*.
-- **modal** : *I can**not** swim.* → *I can’t swim.*
-- **autres verbes** : on emploie **DO** — *I **do not** like fish* → *I **don’t** like fish. / He **doesn’t** like fish.*
-- **prétérit** : *I **didn’t** go.*
+            cours: `Deux négations en anglais s’annulent. Une seule suffit — et c’est tout le chapitre.
 
-⚠️ Après *doesn’t* et *didn’t*, le verbe revient à la **base verbale**.
+## Le principe
+La négation se forme avec **not**, placé **après l’auxiliaire**.
+
+| Le verbe | La négation | Contraction |
+| **BE** | *I am **not** French* | *I’m not*, *he isn’t*, *they aren’t* |
+| Un **modal** | *I can**not** swim* | *I can’t swim* |
+| **Les autres** | *I **do not** like fish* | *I **don’t** like fish. / He **doesn’t** like fish* |
+| Au **prétérit** | | *I **didn’t** go* |
+
+!> Après *doesn’t* et *didn’t*, le verbe revient à la **base verbale**.
 
 ## Une seule négation par phrase
-C’est la règle qui déroute le plus les francophones : le français dit « je **ne** vois **rien** » avec deux mots négatifs, l’anglais **un seul**.
-*I don’t see **anything**.* ou *I see **nothing**.* — jamais « I don’t see nothing ».
+= I don’t see anything. OU I see nothing. — jamais les deux.
 
-> Deux négations en anglais s’annulent : « I don’t see nothing » signifie littéralement « je ne vois pas rien », donc « je vois quelque chose ».
+!> « I don’t see nothing » signifie littéralement « je ne vois pas rien », **donc « je vois quelque chose »**. Le français dit « je **ne** vois **rien** » avec deux mots ; l’anglais **un seul**.
 
-## Les mots négatifs
-**no, nothing, nobody, never, nowhere** sont **déjà** négatifs : on ne leur ajoute pas *not*.
-*I **never** eat meat.* — et non « I don’t never eat meat ».
+## Les mots déjà négatifs
+= no · nothing · nobody · never · nowhere
+
+On ne leur ajoute **pas** *not*.
+
+= I never eat meat — et non « I don’t never eat meat »
 
 ## No et not
-- **no** + nom : *There is **no** milk.*
-- **not** + le reste : *There is**n’t** any milk.*
+| La forme | Ce qui suit | Exemple |
+| **no** | Un **nom** | *There is **no** milk.* |
+| **not** | Le reste | *There is**n’t** any milk.* |
+
 Les deux phrases sont correctes et disent la même chose.
 
 ## Les contractions
-*isn’t, aren’t, wasn’t, weren’t, don’t, doesn’t, didn’t, can’t, won’t, mustn’t, haven’t, hasn’t.*
-Elles sont normales à l’oral et dans un texte courant ; on les évite dans un écrit très formel.`,
+= isn’t · aren’t · wasn’t · weren’t · don’t · doesn’t · didn’t · can’t · won’t · mustn’t · haven’t · hasn’t
+
+Normales à l’oral et dans un texte courant ; on les évite dans un écrit très formel.`,
           },
           questions: [
             ['Où se place « not » ?', ['Après l’auxiliaire', 'Avant le sujet', 'À la fin de la phrase', 'Avant l’auxiliaire'], 0, '« I am not French. »'],
@@ -1022,34 +1116,41 @@ Elles sont normales à l’oral et dans un texte courant ; on les évite dans un
           axe: 'La phrase',
           lecon: {
             titre: 'Donner un ordre, un conseil, une consigne',
-            cours: `## La forme la plus simple de l’anglais
-L’impératif est la **base verbale**, sans sujet et sans terminaison :
-***Come** here! / **Sit** down. / **Listen** carefully.*
+            cours: `L’impératif est la forme la plus simple de l’anglais : la base verbale, sans sujet et sans terminaison.
+
+## La forme
+= Come here! · Sit down. · Listen carefully.
 
 Il n’y a **qu’une seule forme**, quel que soit le nombre de personnes à qui l’on s’adresse.
 
 ## La négation
-**Don’t** + base verbale :
-***Don’t** touch that! / **Don’t** be late.*
-Même avec *be*, on emploie *don’t* — c’est le seul cas où *be* passe par DO.
+= Don’t + base verbale
+
+= Don’t touch that! · Don’t be late.
+
+!> Même avec ***be***, on emploie ***don’t***. C’est le **seul** cas où *be* passe par DO.
 
 ## L’adoucir
-Un ordre brut est rarement poli. On l’atténue par :
-- **please** : *Sit down, **please**.*
-- une question modale : ***Could you** sit down?*
-- *let’s* pour une proposition collective : ***Let’s** go!* (= let us)
+| Le moyen | Exemple |
+| **please** | *Sit down, **please**.* |
+| Une question **modale** | ***Could you** sit down?* |
+| ***let’s*** pour une proposition collective | ***Let’s** go!* (= let us) |
 
-> En anglais, un impératif nu n’est pas impoli en soi — c’est le contexte qui décide. Mais dans une demande à un adulte ou un inconnu, on ajoute presque toujours *please* ou on passe par *could*.
+> Un impératif nu n’est pas impoli en soi — c’est le contexte qui décide. Mais dans une demande à un adulte ou à un inconnu, on ajoute presque toujours *please*, ou l’on passe par *could*.
 
 ## Où on le rencontre
-Consignes d’exercices (*Read the text. Answer the questions. Fill in the blanks. Match the words.*), recettes, panneaux (*Push, Pull, Keep off the grass*), notices.
+| Le lieu | Exemples |
+| Les **consignes** d’exercices | *Read the text. Answer the questions. Fill in the blanks. Match the words.* |
+| Les **panneaux** | *Push*, *Pull*, *Keep off the grass* |
+| Les **recettes**, les **notices** | |
 
 ## Let’s
-*Let’s* + base verbale propose une action **à faire ensemble** :
-*Let’s play football. / Let’s not argue.*
+*Let’s* + base verbale propose une action **à faire ensemble**.
+
+= Let’s play football. · Let’s not argue.
 
 ## À ne pas confondre
-*Don’t forget* (n’oublie pas) et *Forget it* (laisse tomber) : même verbe, sens opposés.`,
+!> *Don’t forget* (n’oublie pas) et *Forget it* (laisse tomber) : **même verbe, sens opposés**.`,
           },
           questions: [
             ['Comment forme-t-on l’impératif ?', ['La base verbale, sans sujet', 'Le verbe + -s', 'Do + verbe', 'Will + verbe'], 0, '« Come here! »'],
@@ -1067,25 +1168,26 @@ Consignes d’exercices (*Read the text. Answer the questions. Fill in the blank
           axe: 'La phrase',
           lecon: {
             titre: 'Plus grand, le plus grand',
-            cours: `## Le comparatif de supériorité
-Deux constructions, selon la **longueur** de l’adjectif :
-- **adjectif court** (1 syllabe, ou 2 en -y) → **-er than**
-  *tall → tall**er than*** — *He is taller **than** me.*
-- **adjectif long** (2 syllabes et plus) → **more … than**
-  *interesting → **more** interesting **than***
+            cours: `Un adjectif prend -er OU more, jamais les deux. Tout dépend de sa longueur.
+
+## Le comparatif de supériorité
+| L’adjectif | La construction | Exemple |
+| **Court** — 1 syllabe, ou 2 en -y | **-er than** | *He is tall**er than** me.* |
+| **Long** — 2 syllabes et plus | **more … than** | ***more** interesting **than*** |
 
 ## L’orthographe du -er
-- en **-e** → seulement -r : *nice → nicer*
-- **consonne + y** → -ier : *happy → happ**ier***
-- court en consonne-voyelle-consonne → on double : *big → bi**gg**er*
+| L’adjectif | Ce qu’on ajoute | Exemple |
+| En **-e** | **-r** seulement | *nice → nicer* |
+| **Consonne + y** | **-ier** | *happy → happ**ier*** |
+| Court, consonne-voyelle-consonne | On **double** | *big → bi**gg**er* |
 
 ## Le superlatif
-- **court** : **the … -est** — *the tall**est***
-- **long** : **the most …** — *the **most** interesting*
+| L’adjectif | La construction | Exemple |
+| **Court** | **the … -est** | *the tall**est*** |
+| **Long** | **the most …** | *the **most** interesting* |
 
 ## Les irréguliers — à savoir par cœur
-| adjectif | comparatif | superlatif |
-|---|---|---|
+| Adjectif | Comparatif | Superlatif |
 | good | **better** | the best |
 | bad | **worse** | the worst |
 | far | **further / farther** | the furthest |
@@ -1095,12 +1197,13 @@ Deux constructions, selon la **longueur** de l’adjectif :
 > *good → better → the best* est le trio le plus employé de la langue. Il ne se déduit d’aucune règle : il s’apprend.
 
 ## L’égalité et l’infériorité
-- égalité : **as … as** — *She is **as** tall **as** me.*
-- négation : *not **as** tall **as***
-- infériorité : **less … than** — *less expensive than*
+| Le rapport | La construction | Exemple |
+| **Égalité** | **as … as** | *She is **as** tall **as** me.* |
+| Égalité **niée** | *not as … as* | *not **as** tall **as*** |
+| **Infériorité** | **less … than** | *less expensive than* |
 
 ## Le piège
-On ne cumule jamais les deux formes : *more taller* est incorrect. Un adjectif prend **-er** OU **more**, jamais les deux.`,
+!> On ne **cumule jamais** les deux formes : « more taller » est incorrect.`,
           },
           questions: [
             ['Comment forme-t-on le comparatif d’un adjectif court ?', ['adjectif + -er than', 'more + adjectif + than', 'the most + adjectif', 'as + adjectif + as'], 0, '« He is taller than me. »'],

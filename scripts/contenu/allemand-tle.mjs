@@ -131,27 +131,37 @@ DELETE FROM public.chapters c
           axe: 'La phrase',
           lecon: {
             titre: 'La virgule allemande n’est pas une respiration',
-            cours: `En français, la virgule marque souvent une pause de la voix. En allemand, elle marque une **frontière grammaticale** : elle sépare des propositions, et sa présence ou son absence est une règle, pas un choix de style.
+            cours: `En français, la virgule marque souvent une pause de la voix. En allemand, elle marque une **frontière grammaticale** : sa présence ou son absence est une **règle**, pas un choix de style.
 
-## La virgule devant la subordonnée
-Toute subordonnée est séparée de la principale par une virgule, sans exception : *Ich weiß**,** dass er kommt.* / *Er bleibt zu Hause**,** weil er krank ist.* / *Das Buch**,** das ich lese**,** ist spannend.* Quand la subordonnée est enchâssée, elle est encadrée de DEUX virgules.
+## Virgule ou pas
+| Devant… | Virgule ? | Exemple |
+| Une **subordonnée** | **Oui**, toujours | *Ich weiß, dass er kommt* |
+| Une subordonnée **enchâssée** | Oui, des **deux** côtés | *Das Buch, das ich lese, ist spannend* |
+| *und*, *oder* | **Non**, en principe | *Ich lese, ich schreibe und ich lerne* |
+| *aber*, *sondern*, *denn* | **Oui** | *Er ist arm, aber glücklich* |
+| *um… zu*, *ohne… zu*, *statt… zu* | **Oui** | *Ich lerne Deutsch, um in Berlin zu studieren* |
+| *zu* + infinitif simple | Facultative | *Ich versuche zu kommen* |
 
-## Pas de virgule devant und ni oder
-Dans une énumération ou entre deux propositions coordonnées par *und* / *oder*, la virgule est en principe absente : *Ich lese, ich schreibe **und** ich lerne.* Devant *aber*, *sondern* et *denn*, en revanche, elle est obligatoire.
+## Les guillemets et les deux-points
+L’allemand ouvre **en bas** et ferme **en haut** : „…“ — et il emploie les **deux-points** avant le discours direct, là où le français met souvent une virgule.
 
-## Le groupe infinitif
-La virgule est obligatoire devant les groupes introduits par **um… zu**, **ohne… zu**, **(an)statt… zu** : *Ich lerne Deutsch**,** um in Berlin zu studieren.* Devant un simple *zu* + infinitif, elle est facultative.
-
-## Les guillemets
-L'allemand ouvre en bas et ferme en haut : **„…“** — *Er sagt: „Ich komme morgen.“* Noter aussi les **deux-points** avant le discours direct, là où le français emploie souvent une virgule.
+*Er sagt: „Ich komme morgen.“*
 
 ## La majuscule
-Tous les **noms communs** prennent la majuscule, où qu'ils soient dans la phrase : *das Haus*, *die Freiheit*, *beim Essen*. Un adjectif ou un infinitif substantivé la prend aussi : *das Wichtigste*, *das Lesen*.
+| Ce qui prend la majuscule | Exemple |
+| **Tous** les noms communs, où qu’ils soient | *das Haus*, *die Freiheit*, *beim Essen* |
+| Les adjectifs substantivés | *das Wichtigste* |
+| Les infinitifs substantivés | *das Lesen* |
+| Le *Sie* de politesse et ses formes | *Sie*, *Ihnen*, *Ihr* |
 
-> Le *Sie* de politesse et ses formes (*Ihnen*, *Ihr*) gardent la majuscule ; le *sie* qui signifie « elle » ou « ils » ne la prend pas. C'est parfois la seule chose qui les distingue à l'écrit.
+> Le *Sie* de politesse garde la majuscule, le *sie* qui signifie « elle » ou « ils » ne la prend pas. **C’est parfois la seule chose qui les distingue à l’écrit** — et l’oublier change le destinataire de la phrase.
 
 ## Le ß
-*ß* s'écrit après voyelle longue ou diphtongue (*Straße*, *heißen*), *ss* après voyelle brève (*Fluss*, *dass*). En Suisse, *ß* n'existe pas et s'écrit toujours *ss*.`,
+| On écrit | Après quoi | Exemple |
+| **ß** | Voyelle longue ou diphtongue | *Straße*, *heißen* |
+| **ss** | Voyelle brève | *Fluss*, *dass* |
+
+En Suisse, le *ß* n’existe pas : il s’écrit toujours *ss*.`,
           },
           questions: [
             ['Devant une subordonnée introduite par « dass », la virgule est…', ['Obligatoire', 'Facultative', 'Interdite', 'Remplacée par un tiret'], 0, 'La virgule allemande sépare des propositions : *Ich weiß, dass er kommt.*'],
@@ -169,29 +179,43 @@ Tous les **noms communs** prennent la majuscule, où qu'ils soient dans la phras
           axe: 'La phrase',
           lecon: {
             titre: 'Le verbe en deuxième position, et le reste autour',
-            cours: `L'ordre des mots allemand n'est pas libre : il est commandé par la place du verbe conjugué, qui sert de pivot à toute la phrase.
+            cours: `L’ordre des mots allemand n’est **pas** libre : il est commandé par la place du verbe conjugué, qui sert de **pivot** à toute la phrase.
 
 ## La règle V2
-Dans une déclarative, le verbe conjugué occupe **toujours la deuxième place** — non pas le deuxième mot, mais le deuxième **groupe**. *Ich fahre morgen nach Berlin.* / *Morgen fahre ich nach Berlin.* / *Nach Berlin fahre ich morgen.*
+Dans une déclarative, le verbe conjugué occupe **toujours la deuxième place** — non pas le deuxième **mot**, mais le deuxième **groupe**.
 
-## L'inversion
-Dès qu'autre chose que le sujet ouvre la phrase, le sujet passe **derrière le verbe** : *Heute **geht er** ins Kino.* Écrire *Heute er geht…* est la faute la plus repérable d'une copie.
+| Première position | Verbe | Le reste |
+| *Ich* | *fahre* | *morgen nach Berlin* |
+| *Morgen* | *fahre* | *ich nach Berlin* |
+| *Nach Berlin* | *fahre* | *ich morgen* |
 
-## La parenthèse verbale (Satzklammer)
-Quand le verbe est en deux morceaux, le second ferme la phrase, à la toute fin :
-- auxiliaire + participe : *Ich **habe** gestern einen Film **gesehen**.*
-- modal + infinitif : *Ich **muss** heute Abend **arbeiten**.*
-- verbe à préverbe séparable : *Ich **stehe** um sieben Uhr **auf**.*
+> Dès qu’autre chose que le sujet ouvre la phrase, le sujet passe **derrière** le verbe : c’est l’**inversion**. Écrire *Heute er geht…* est la faute la plus repérable d’une copie — elle se voit à la première ligne.
 
-Tout ce qui compte est enfermé entre les deux : c'est cette parenthèse qui oblige à écouter une phrase allemande jusqu'au bout.
+## La parenthèse verbale
+Quand le verbe est en deux morceaux, le second **ferme la phrase**, à la toute fin.
 
-## L'ordre des compléments : TeKaMoLo
-Entre les deux morceaux du verbe, les compléments se rangent dans cet ordre : **Te**mporel → **Ka**usal → **Mo**dal → **Lo**cal. *Ich fahre morgen (Te) wegen der Arbeit (Ka) mit dem Zug (Mo) nach München (Lo).*
+| Type | Ouvrant | Fermant | Exemple |
+| Temps composé | *habe* | Participe | *Ich habe gestern einen Film gesehen* |
+| Modal | *muss* | Infinitif | *Ich muss heute Abend arbeiten* |
+| Préverbe séparable | *stehe* | Préverbe | *Ich stehe um sieben Uhr auf* |
+
+Tout ce qui compte est **enfermé entre les deux**. C’est cette parenthèse qui oblige à écouter une phrase allemande **jusqu’au bout** : la négation, le sens du verbe, tout arrive à la fin.
+
+## L’ordre des compléments : TeKaMoLo
+| Rang | Type | Exemple |
+| **Te** | Temporel | *morgen* |
+| **Ka** | Causal | *wegen der Arbeit* |
+| **Mo** | Modal | *mit dem Zug* |
+| **Lo** | Local | *nach München* |
+
+*Ich fahre morgen wegen der Arbeit mit dem Zug nach München.*
 
 ## Datif avant accusatif — sauf pronom
-*Ich gebe **dem Kind** (datif) **das Buch** (accusatif).* Mais si l'accusatif est un pronom, il passe devant : *Ich gebe **es** dem Kind.*
+| Cas | Ordre | Exemple |
+| Deux groupes nominaux | **Datif** puis accusatif | *Ich gebe dem Kind das Buch* |
+| L’accusatif est un **pronom** | Il **passe devant** | *Ich gebe es dem Kind* |
 
-> Le pronom aime le début de phrase : les pronoms compléments remontent juste après le verbe conjugué.`,
+Le pronom aime le début de phrase : les pronoms compléments remontent juste après le verbe conjugué.`,
           },
           questions: [
             ['Dans une déclarative allemande, le verbe conjugué occupe…', ['La deuxième place', 'La première place', 'La dernière place', 'N’importe quelle place'], 0, 'La deuxième POSITION, c’est-à-dire le deuxième groupe, pas le deuxième mot.'],
@@ -209,30 +233,49 @@ Entre les deux morceaux du verbe, les compléments se rangent dans cet ordre : *
           axe: 'La phrase',
           lecon: {
             titre: 'Question fermée, question ouverte, question indirecte',
-            cours: `Trois façons de poser une question, et trois places différentes pour le verbe.
+            cours: `Trois façons de poser une question, et **trois places différentes** pour le verbe.
 
-## La question fermée
-Le verbe conjugué passe en **première position**, devant le sujet : *Kommst du morgen?* / *Hast du das Buch gelesen?* La réponse est *ja*, *nein* — ou *doch*.
+## Les trois questions
+| Type | Place du verbe | Exemple |
+| **Fermée** | **Première** position | *Kommst du morgen?* |
+| **Ouverte** | Deuxième position, après le mot en w- | *Wann kommst du?* |
+| **Indirecte** | **À la fin** : c’est une subordonnée | *Ich weiß nicht, wann er kommt* |
 
-## La question ouverte
-Elle s'ouvre par un mot en **w-**, et le verbe reste en deuxième position : *Wann kommst du?*
-- **wer** (qui), qui se décline : *wen* (accusatif), *wem* (datif), *wessen* (génitif)
-- **was** (quoi), **warum / wieso / weshalb** (pourquoi), **wie** (comment)
-- **wo** (où, sans mouvement), **wohin** (où, avec mouvement), **woher** (d'où)
-- **welcher / welche / welches** (lequel), **was für ein** (quelle sorte de)
+## Les mots interrogatifs
+| Mot | Sens | Remarque |
+| *wer* | Qui | Il **se décline** : *wen*, *wem*, *wessen* |
+| *was* | Quoi | |
+| *warum, wieso, weshalb* | Pourquoi | Interchangeables |
+| *wie* | Comment | |
+| *wo* | Où, **sans** mouvement | |
+| *wohin* | Où, **avec** mouvement | |
+| *woher* | D’où | |
+| *welcher / welche / welches* | Lequel | Il se décline |
+| *was für ein* | Quelle sorte de | |
 
 ## Doch, la réponse qui contredit
-Face à une question **négative**, *ja* est impossible : on emploie **doch**. — *Du kommst nicht mit?* — *Doch!* (« si ! »). Le français a la même finesse, l'anglais non.
+Face à une question **négative**, *ja* est impossible.
+
+| La question | La réponse qui contredit |
+| *Du kommst nicht mit?* | *Doch!* — « si ! » |
+
+Le français a la même finesse avec « si », l’anglais non.
 
 ## La question indirecte
-Elle devient une **subordonnée** : le verbe conjugué part **à la fin**, et le point d'interrogation disparaît à l'intérieur.
-- avec mot interrogatif : *Ich weiß nicht, **wann** er **kommt**.*
-- sans mot interrogatif : on emploie **ob** (« si ») — *Ich frage mich, **ob** er **kommt**.*
+Le verbe part **à la fin**, et le point d’interrogation disparaît.
 
-> Ne jamais traduire ce *si*-là par *wenn* : *wenn* introduit une condition ou un moment, *ob* une alternative.
+| Avec mot interrogatif | Sans mot interrogatif |
+| *Ich weiß nicht, wann er kommt* | *Ich frage mich, ob er kommt* |
+
+> Ne **jamais** traduire ce « si »-là par *wenn* : *wenn* introduit une **condition** ou un **moment**, *ob* une **alternative**. C’est une faute de sens, pas de forme.
 
 ## wo + préposition
-Pour interroger sur une chose (jamais sur une personne), l'allemand soude *wo(r)-* et la préposition : *Worauf wartest du?* (sur quoi attends-tu ?), *Womit schreibst du?*, *Woran denkst du?* Pour une personne, on garde la préposition : *Auf wen wartest du?*`,
+Pour interroger sur une **chose** — jamais sur une personne — l’allemand soude *wo(r)-* et la préposition.
+
+| Sur une chose | Sur une personne |
+| *Worauf wartest du?* | *Auf wen wartest du?* |
+| *Womit schreibst du?* | *Mit wem sprichst du?* |
+| *Woran denkst du?* | *An wen denkst du?* |`,
           },
           questions: [
             ['Dans une question fermée, où se place le verbe conjugué ?', ['En première position', 'En deuxième position', 'À la fin de la phrase', 'Juste après le sujet'], 0, '*Kommst du morgen?* La réponse attendue est *ja*, *nein* ou *doch*.'],
@@ -250,27 +293,41 @@ Pour interroger sur une chose (jamais sur une personne), l'allemand soude *wo(r)
           axe: 'La phrase',
           lecon: {
             titre: 'Choisir entre nicht et kein, et savoir où le poser',
-            cours: `Deux questions à se poser : **quel mot de négation**, et **à quelle place**. Les deux comptent autant l'une que l'autre.
+            cours: `Deux questions à se poser, et elles comptent autant l’une que l’autre : **quel mot de négation**, et **à quelle place**.
 
-## kein nie un nom
-On emploie **kein** devant un nom précédé de *ein* ou sans article du tout : *Ich habe **ein** Auto* → *Ich habe **kein** Auto.* / *Ich trinke Kaffee* → *Ich trinke **keinen** Kaffee.* *kein* se décline exactement comme *ein*, et possède en plus un pluriel : *keine Freunde*.
+## kein ou nicht
+| On emploie | Quand le nom est… | Exemple |
+| **kein** | Précédé de *ein*, ou **sans article** | *Ich habe kein Auto* · *Ich trinke keinen Kaffee* |
+| **nicht** | Précédé d’un **article défini**, d’un possessif, d’un démonstratif | *Ich kenne den Mann nicht* · *Das ist nicht mein Buch* |
 
-## nicht pour tout le reste
-Dès que le nom est précédé d'un **article défini**, d'un **possessif** ou d'un **démonstratif**, c'est *nicht* : *Ich kenne **den** Mann **nicht**.* / *Das ist **nicht** mein Buch.* On nie aussi avec *nicht* un verbe, un adjectif, un adverbe ou une phrase entière.
+*kein* se décline exactement comme *ein* — et possède **en plus** un pluriel : *keine Freunde*.
+
+On nie aussi avec *nicht* un verbe, un adjectif, un adverbe ou une phrase entière.
 
 ## La place de nicht
-- pour nier TOUTE la phrase, *nicht* va **le plus à droite possible**, mais devant le second morceau du verbe : *Ich habe ihn gestern **nicht** gesehen.*
-- il passe **devant** l'élément qu'il nie s'il ne nie qu'un mot : *Ich fahre **nicht** morgen, sondern heute.*
-- il reste **devant** l'attribut, le complément de lieu directionnel et le préverbe : *Das Buch ist **nicht** interessant.* / *Ich gehe **nicht** ins Kino.*
-- il se place **après** le complément d'objet défini et les compléments de temps : *Ich lese das Buch **nicht**.*
+| Ce qu’on nie | Où va *nicht* | Exemple |
+| Toute la phrase | **Le plus à droite possible**, devant le second morceau du verbe | *Ich habe ihn gestern nicht gesehen* |
+| Un seul mot | **Devant** ce mot | *Ich fahre nicht morgen, sondern heute* |
+| Un attribut | Devant | *Das Buch ist nicht interessant* |
+| Un lieu **directionnel** | Devant | *Ich gehe nicht ins Kino* |
+| Un COD **défini** | **Après** | *Ich lese das Buch nicht* |
 
 ## Les autres mots négatifs
-*nichts* (rien), *niemand* (personne), *nie / niemals* (jamais), *nirgends* (nulle part), *noch nicht* (pas encore), *nicht mehr* (ne… plus), *weder… noch* (ni… ni).
+| Mot | Sens |
+| *nichts* | Rien |
+| *niemand* | Personne |
+| *nie / niemals* | Jamais |
+| *nirgends* | Nulle part |
+| *noch nicht* | Pas encore |
+| *nicht mehr* | Ne… plus |
+| *weder… noch* | Ni… ni |
 
-> Deux négations ne s'additionnent PAS en allemand : contrairement à l'espagnol, une seule suffit — *Ich sehe nichts*, jamais *ich sehe nicht nichts*.
+> Deux négations **ne s’additionnent pas** en allemand : contrairement à l’espagnol, **une seule suffit**. *Ich sehe nichts*, jamais « ich sehe nicht nichts ».
 
 ## sondern après une négation
-Pour rectifier, l'allemand emploie **sondern** et non *aber* : *Er ist **nicht** Deutscher, **sondern** Österreicher.* *aber* oppose sans rectifier : *Er ist nicht reich, **aber** glücklich.*`,
+| Conjonction | Ce qu’elle fait | Exemple |
+| **sondern** | Elle **rectifie** après une négation | *Er ist nicht Deutscher, sondern Österreicher* |
+| **aber** | Elle **oppose** sans rectifier | *Er ist nicht reich, aber glücklich* |`,
           },
           questions: [
             ['Comment nier « Ich habe ein Auto » ?', ['Ich habe kein Auto', 'Ich habe nicht ein Auto', 'Ich habe nicht Auto', 'Ich habe ein Auto nicht'], 0, 'Devant un nom avec *ein* ou sans article, c’est *kein*.'],
@@ -288,29 +345,42 @@ Pour rectifier, l'allemand emploie **sondern** et non *aber* : *Er ist **nicht**
           axe: 'La phrase',
           lecon: {
             titre: 'La conjonction envoie le verbe à la fin',
-            cours: `Une subordonnée allemande se reconnaît à deux signes : une conjonction en tête, et le **verbe conjugué à la toute fin**.
+            cours: `Une subordonnée allemande se reconnaît à **deux** signes : une conjonction en tête, et le **verbe conjugué à la toute fin**.
 
 ## Les conjonctions de subordination
-- **dass** (que), **ob** (si, alternative)
-- **weil / da** (parce que, puisque), **damit** (pour que)
-- **wenn** (si, quand — répétable), **als** (quand, une fois dans le passé)
-- **obwohl** (bien que), **während** (pendant que, alors que)
-- **bevor** (avant que), **nachdem** (après que), **seitdem** (depuis que), **bis** (jusqu'à ce que)
-- **falls** (au cas où), **sodass** (si bien que)
+| Conjonction | Sens |
+| *dass* | Que |
+| *ob* | Si — alternative |
+| *weil*, *da* | Parce que, puisque |
+| *damit* | Pour que |
+| *wenn* | Si ; quand, répétable |
+| *als* | Quand — **une fois** dans le passé |
+| *obwohl* | Bien que |
+| *während* | Pendant que, alors que |
+| *bevor*, *nachdem*, *seitdem*, *bis* | Avant que, après que, depuis que, jusqu’à ce que |
+| *falls* | Au cas où |
+| *sodass* | Si bien que |
 
 ## Le verbe à la fin
-*Ich bleibe zu Hause, **weil** ich krank **bin**.* Quand le verbe est en deux morceaux, c'est le **conjugué** qui ferme la phrase, après le participe ou l'infinitif : *…, weil ich gearbeitet **habe**.* / *…, weil ich arbeiten **muss**.*
+| Cas | Ce qui ferme la phrase | Exemple |
+| Verbe simple | Le verbe conjugué | *…, weil ich krank bin* |
+| Temps composé | L’**auxiliaire** conjugué, après le participe | *…, weil ich gearbeitet habe* |
+| Modal | Le **modal** conjugué, après l’infinitif | *…, weil ich arbeiten muss* |
 
 ## La subordonnée en tête
-Placée devant, la subordonnée occupe **la première position** de la phrase entière : le verbe de la principale suit immédiatement, et le sujet passe derrière. *Weil ich krank bin, **bleibe ich** zu Hause.* Deux verbes se retrouvent alors côte à côte, séparés par la virgule : c'est correct, et c'est même le signe que la construction est juste.
+Placée devant, elle occupe **la première position** de la phrase entière : le verbe de la principale suit **immédiatement**, et le sujet passe derrière.
 
-## weil ou denn
-Les deux traduisent « parce que », mais **denn** est une conjonction de **coordination** : il ne change rien à l'ordre des mots. *Ich bleibe zu Hause, **denn** ich **bin** krank.* / *…, **weil** ich krank **bin**.*
+*Weil ich krank bin, bleibe ich zu Hause.*
 
-## wenn ou als
-**als** pour un fait unique au passé (*Als ich zehn war…*), **wenn** pour le présent, le futur, ou une répétition au passé (*Immer wenn ich ihn sah…*).
+> Deux verbes se retrouvent alors **côte à côte**, séparés par la seule virgule. C’est correct — et c’est même le signe que la construction est juste.
 
-> Piège classique : *wann* ne s'emploie QUE dans une question, directe ou indirecte. « Quand j'étais petit » ne se dit jamais *wann ich klein war*.`,
+## Trois paires à ne pas confondre
+| | Le premier | Le second |
+| **weil / denn** | *weil* : subordination, verbe à la fin | *denn* : **coordination**, ordre inchangé |
+| **wenn / als** | *wenn* : présent, futur, répétition passée | *als* : un fait **unique** au passé |
+| **wenn / wann** | *wenn* : condition ou moment | *wann* : **uniquement** dans une question |
+
+> Piège classique : « quand j’étais petit » ne se dit **jamais** *wann ich klein war*, mais *als ich klein war*.`,
           },
           questions: [
             ['Dans une subordonnée, le verbe conjugué se place…', ['À la fin de la subordonnée', 'En deuxième position', 'Juste après la conjonction', 'En première position'], 0, '*Ich bleibe zu Hause, weil ich krank bin.*'],
@@ -328,34 +398,38 @@ Les deux traduisent « parce que », mais **denn** est une conjonction de **coor
           axe: 'La phrase',
           lecon: {
             titre: 'Le genre vient d’avant, le cas vient d’après',
-            cours: `La relative complète un nom. Le pronom relatif allemand ressemble à l'article défini — et se décline comme lui, à trois formes près.
+            cours: `La relative complète un nom. Le pronom relatif allemand ressemble à l’article défini — et se décline comme lui, à **trois formes près**.
 
 ## La règle en une phrase
-Le pronom relatif prend le **genre et le nombre de l'antécédent**, mais le **cas de sa fonction dans la relative**. C'est tout le raisonnement, et il se fait dans cet ordre.
+> Le pronom prend le **genre et le nombre de l’antécédent**, mais le **cas de sa fonction dans la relative**. C’est tout le raisonnement — et il se fait **dans cet ordre**.
 
-- *Der Mann, **der** dort steht* (masculin, sujet → nominatif)
-- *Der Mann, **den** ich sehe* (masculin, COD → accusatif)
-- *Der Mann, **dem** ich helfe* (masculin, COI → datif, car *helfen* régit le datif)
+| Phrase | Genre, venu d’avant | Cas, venu d’après |
+| *Der Mann, der dort steht* | Masculin | Sujet : nominatif |
+| *Der Mann, den ich sehe* | Masculin | COD : accusatif |
+| *Der Mann, dem ich helfe* | Masculin | COI : datif, car *helfen* régit le datif |
 
 ## Les formes
-- nominatif : *der, die, das* — pluriel *die*
-- accusatif : *den, die, das* — pluriel *die*
-- datif : *dem, der, dem* — pluriel **denen**
-- génitif : **dessen, deren, dessen** — pluriel **deren**
+| Cas | Masculin | Féminin | Neutre | Pluriel |
+| Nominatif | *der* | *die* | *das* | *die* |
+| Accusatif | *den* | *die* | *das* | *die* |
+| Datif | *dem* | *der* | *dem* | *denen* |
+| Génitif | *dessen* | *deren* | *dessen* | *deren* |
 
-Trois formes seulement diffèrent de l'article défini : *dessen*, *deren*, *denen*. Tout le reste, on le connaît déjà.
+Trois formes seulement diffèrent de l’article défini : *dessen*, *deren*, *denen*. Tout le reste est déjà connu.
 
-## Le verbe à la fin
-La relative est une subordonnée : virgules obligatoires, verbe conjugué **en fin de proposition**. *Das Buch, das ich gestern gekauft **habe**, ist teuer.*
-
-## La préposition ne se déplace pas
-Elle reste **devant** le pronom relatif, et c'est elle qui commande le cas : *Der Freund, **mit dem** ich fahre* / *Die Stadt, **in der** ich wohne.*
-
-## Le génitif
-*dessen* et *deren* remplacent un possessif : *Der Mann, **dessen** Auto kaputt ist* (l'homme dont la voiture est en panne). Le nom qui suit n'a **pas d'article**.
+## Les règles de construction
+| Règle | Exemple |
+| Virgules obligatoires, verbe **à la fin** | *Das Buch, das ich gestern gekauft habe, ist teuer* |
+| La **préposition** reste devant le relatif — et commande le cas | *Der Freund, mit dem ich fahre* |
+| Après *dessen* et *deren*, le nom n’a **pas d’article** | *Der Mann, dessen Auto kaputt ist* |
 
 ## was, et non das
-Après *alles, nichts, etwas, viel, wenig*, après un superlatif neutre et après une phrase entière, le relatif est **was** : *Alles, **was** du sagst, ist richtig.* / *Er kam zu spät, **was** mich geärgert hat.*`,
+| Après… | Le relatif est |
+| *alles, nichts, etwas, viel, wenig* | *was* |
+| Un superlatif neutre | *was* |
+| Une **phrase entière** | *was* |
+
+*Alles, was du sagst, ist richtig.* · *Er kam zu spät, was mich geärgert hat.*`,
           },
           questions: [
             ['Le pronom relatif prend son genre de l’antécédent et son cas…', ['De sa fonction dans la relative', 'De la fonction de l’antécédent', 'Du verbe de la principale', 'Il ne prend jamais de cas'], 0, 'C’est le raisonnement en deux temps : genre avant, cas après.'],
@@ -373,32 +447,36 @@ Après *alles, nichts, etwas, viel, wenig*, après un superlatif neutre et aprè
           axe: 'La phrase',
           lecon: {
             titre: 'werden + participe II, et le fameux worden',
-            cours: `Le passif allemand se construit avec **werden**, jamais avec *sein* — c'est la première chose à retenir, parce que le français dit « être construit » et pousse à la faute.
+            cours: `Le passif allemand se construit avec **werden**, **jamais** avec *sein*. C’est la première chose à retenir, parce que le français dit « **être** construit » et pousse directement à la faute.
 
-## Le passif d'action
+## Le passif d’action
 **werden** conjugué + **participe II** rejeté à la fin.
-- présent : *Das Haus **wird** gebaut.* (la maison est en train d'être construite)
-- prétérit : *Das Haus **wurde** gebaut.*
-- parfait : *Das Haus **ist** gebaut **worden**.*
-- futur : *Das Haus **wird** gebaut **werden**.*
 
-## worden, pas geworden
-Au parfait du passif, le participe de *werden* perd son *ge-* : c'est **worden**. *Geworden* est réservé au verbe *werden* employé seul, au sens de « devenir » : *Er ist Arzt geworden.*
+| Temps | Forme | Exemple |
+| Présent | *wird* + participe | *Das Haus wird gebaut* |
+| Prétérit | *wurde* + participe | *Das Haus wurde gebaut* |
+| Parfait | *ist* + participe + *worden* | *Das Haus ist gebaut worden* |
+| Futur | *wird* + participe + *werden* | *Das Haus wird gebaut werden* |
 
-## Le passif d'état
-**sein** + participe II décrit un **résultat**, pas une action : *Das Haus **ist** gebaut* (la maison est construite, elle est là). Confondre les deux, c'est confondre le film et la photo.
+> Au parfait du passif, le participe de *werden* **perd son ge-** : c’est **worden**. *Geworden* est réservé au verbe *werden* employé seul, au sens de « devenir » — *Er ist Arzt geworden*.
 
-## L'agent : von ou durch
-- **von** + datif pour une personne ou une force agissante : *Das Buch wurde **von** Goethe geschrieben.*
-- **durch** + accusatif pour un moyen, un intermédiaire : *Die Stadt wurde **durch** ein Erdbeben zerstört.*
+## Passif d’action ou passif d’état
+| | *werden* + participe | *sein* + participe |
+| Ce qu’il décrit | Une **action** en cours | Un **résultat** acquis |
+| Exemple | *Das Haus wird gebaut* | *Das Haus ist gebaut* |
+| L’image | Le film | La photo |
 
-## Le passif impersonnel
-L'allemand sait mettre au passif un verbe sans COD : *Hier **wird** getanzt* (« ici, on danse »). Le *es* de tête disparaît dès qu'un autre élément ouvre la phrase.
+## L’agent
+| Préposition | Cas | Quand l’employer | Exemple |
+| **von** | Datif | Une personne, une force agissante | *Das Buch wurde von Goethe geschrieben* |
+| **durch** | Accusatif | Un moyen, un intermédiaire | *Die Stadt wurde durch ein Erdbeben zerstört* |
 
-## Avec un modal
-Le modal se conjugue, et le passif passe à l'infinitif : *Die Arbeit **muss** heute gemacht **werden**.*
+## Deux constructions à connaître
+| Construction | Ce qu’elle permet | Exemple |
+| Le passif **impersonnel** | Mettre au passif un verbe **sans COD** | *Hier wird getanzt* — « ici, on danse » |
+| Le passif avec **modal** | Le modal se conjugue, le passif passe à l’infinitif | *Die Arbeit muss heute gemacht werden* |
 
-> Le tour le plus fréquent à l'oral n'est pas le passif mais **man** : *Man baut ein Haus.* Savoir passer de l'un à l'autre est un réflexe payant au bac.`,
+> Le tour le plus fréquent à l’oral n’est pourtant pas le passif, mais **man** : *Man baut ein Haus.* Savoir passer de l’un à l’autre est un réflexe qui paie au bac.`,
           },
           questions: [
             ['Avec quel auxiliaire se construit le passif d’action ?', ['werden', 'sein', 'haben', 'lassen'], 0, '*Das Haus wird gebaut.* C’est *sein* qui donne le passif d’état.'],
@@ -416,32 +494,36 @@ Le modal se conjugue, et le passif passe à l'infinitif : *Die Arbeit **muss** h
           axe: 'La phrase',
           lecon: {
             titre: 'zu + infinitif, et les cas où zu disparaît',
-            cours: `Le groupe infinitif allemand ferme la phrase, et son *zu* obéit à des règles simples mais sans exception.
+            cours: `Le groupe infinitif allemand **ferme la phrase**, et son *zu* obéit à des règles simples mais **sans exception**.
 
 ## La place de zu
-*zu* se place **juste devant l'infinitif**, en fin de groupe : *Ich versuche, pünktlich **zu sein**.* Avec un verbe à préverbe séparable, *zu* s'**intercale** entre le préverbe et le radical, en un seul mot : *ein**zu**kaufen*, *auf**zu**stehen*, *an**zu**rufen*.
+*zu* se place juste **devant l’infinitif**, en fin de groupe : *Ich versuche, pünktlich zu sein*.
 
-## Les verbes qui appellent zu
-*versuchen, beginnen, vergessen, hoffen, versprechen, vorhaben, Lust haben, Zeit haben, es ist wichtig / schwer / möglich*… *Es ist wichtig, Deutsch **zu** lernen.*
+> Avec un verbe à **préverbe séparable**, *zu* s’**intercale** entre le préverbe et le radical, **en un seul mot** : *einzukaufen*, *aufzustehen*, *anzurufen*. C’est le détail qui distingue une copie sûre.
 
-## Les verbes qui refusent zu
-- les six **modaux** : *Ich kann schwimmen.*
-- **sehen, hören, lassen** : *Ich höre ihn kommen.* / *Ich lasse mir die Haare schneiden.*
-- les verbes de mouvement **gehen, fahren, kommen** : *Ich gehe schwimmen.*
-- **bleiben, werden, helfen** (souvent sans *zu*)
+## Avec ou sans zu
+| Les verbes qui **appellent** *zu* | Les verbes qui le **refusent** |
+| *versuchen, beginnen, vergessen* | Les six **modaux** : *Ich kann schwimmen* |
+| *hoffen, versprechen, vorhaben* | *sehen, hören, lassen* : *Ich höre ihn kommen* |
+| *Lust haben, Zeit haben* | Les verbes de mouvement : *Ich gehe schwimmen* |
+| *es ist wichtig / schwer / möglich* | *bleiben, werden, helfen* |
 
-## um… zu : le but
-*Ich lerne Deutsch, **um** in Berlin **zu** studieren.* La virgule est obligatoire. Le sujet des deux propositions doit être **le même** ; sinon, on passe à **damit** : *Ich erkläre es, **damit** du es verstehst.*
+## Les trois groupes à virgule obligatoire
+| Groupe | Ce qu’il exprime | Exemple |
+| **um… zu** | Le **but** | *Ich lerne Deutsch, um in Berlin zu studieren* |
+| **ohne… zu** | La privation | *Er ging weg, ohne etwas zu sagen* |
+| **(an)statt… zu** | La substitution | *Er spielt, statt zu arbeiten* |
 
-## ohne… zu et (an)statt… zu
-*Er ging weg, **ohne** etwas **zu** sagen.* (sans rien dire) / *Er spielt, **statt** **zu** arbeiten.* (au lieu de travailler)
+> *um… zu* exige que les **deux propositions aient le même sujet**. Si le sujet change, il faut passer à **damit** : *Ich erkläre es, damit du es verstehst*.
 
-## sein / haben + zu
-Deux tours brefs, très fréquents à l'écrit :
-- *Die Arbeit **ist** heute **zu** machen.* = elle doit / peut être faite (valeur passive)
-- *Ich **habe** viel **zu** tun.* = j'ai beaucoup à faire (valeur active)
+## sein et haben + zu
+Deux tours brefs, très fréquents à l’écrit.
 
-> Un groupe infinitif n'a jamais de sujet propre : c'est ce qui le distingue d'une subordonnée en *dass*.`,
+| Tour | Sa valeur | Exemple |
+| *sein* + *zu* + infinitif | **Passive** : doit ou peut être fait | *Die Arbeit ist heute zu machen* |
+| *haben* + *zu* + infinitif | **Active** : avoir à faire | *Ich habe viel zu tun* |
+
+Un groupe infinitif n’a **jamais** de sujet propre : c’est ce qui le distingue d’une subordonnée en *dass*.`,
           },
           questions: [
             ['Où se place « zu » avec un verbe à préverbe séparable ?', ['Entre le préverbe et le radical, en un seul mot', 'Devant le préverbe', 'Après l’infinitif', 'Il disparaît'], 0, '*einzukaufen*, *aufzustehen*, *anzurufen*.'],
@@ -460,29 +542,39 @@ Deux tours brefs, très fréquents à l'écrit :
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'der, die, das — ein, eine, ein',
-            cours: `Le déterminant allemand porte à lui seul trois informations : le genre, le nombre et le cas. C'est lui qui fait la grammaire de la phrase, bien plus que la terminaison du nom.
+            cours: `Le déterminant allemand porte à lui seul **trois** informations : le genre, le nombre et le cas. C’est lui qui fait la grammaire de la phrase, bien plus que la terminaison du nom.
 
 ## Trois genres, et aucun hasard à espérer
-**der** (masculin), **die** (féminin), **das** (neutre). Le genre allemand ne recoupe pas le français : *die Sonne* (le soleil) est féminin, *der Mond* (la lune) masculin, *das Mädchen* (la jeune fille) neutre parce que tous les diminutifs en *-chen* et *-lein* le sont. On apprend donc chaque nom **avec son article**.
+| Article | Genre | Le piège français |
+| **der** | Masculin | *der Mond* — la lune |
+| **die** | Féminin | *die Sonne* — le soleil |
+| **das** | Neutre | *das Mädchen* — la jeune fille |
 
-## Quelques repères de genre
-- masculins : jours, mois, saisons, points cardinaux, la plupart des noms en *-er*, *-ling*, *-ismus*
-- féminins : noms en *-ung*, *-heit*, *-keit*, *-schaft*, *-ion*, *-ei*, *-ie*
-- neutres : noms en *-chen*, *-lein*, *-um*, *-ment*, et tout infinitif substantivé (*das Essen*)
+*Mädchen* est neutre parce que **tous** les diminutifs en *-chen* et *-lein* le sont : la grammaire l’emporte sur le sens. On apprend donc chaque nom **avec son article**.
 
-## Le pluriel
-Au pluriel, l'article défini est **die** pour les trois genres : *die Männer*, *die Frauen*, *die Kinder*. C'est la seule simplification que l'allemand accorde.
+## Les repères de genre
+| Genre | Ce qui le signale |
+| **Masculin** | Jours, mois, saisons, points cardinaux ; noms en *-er*, *-ling*, *-ismus* |
+| **Féminin** | Noms en *-ung*, *-heit*, *-keit*, *-schaft*, *-ion*, *-ei*, *-ie* |
+| **Neutre** | Noms en *-chen*, *-lein*, *-um*, *-ment* ; tout **infinitif substantivé** : *das Essen* |
 
-## L'article indéfini
-**ein** (masculin et neutre), **eine** (féminin). Il n'a **pas de pluriel** : *Ich sehe Kinder* (je vois des enfants). Sa négation, *kein*, en a un : *keine Kinder*.
+## Le pluriel et l’indéfini
+| | Défini | Indéfini |
+| Singulier | *der / die / das* | *ein / eine / ein* |
+| **Pluriel** | **die** pour les trois genres | **Aucun** : *Ich sehe Kinder* |
+
+C’est la seule simplification que l’allemand accorde. Et si *ein* n’a pas de pluriel, sa négation *kein* en a un : *keine Kinder*.
 
 ## Le sujet est au nominatif
-Le sujet d'une phrase est toujours au **nominatif** : c'est la forme donnée par le dictionnaire — *der, die, das* / *ein, eine, ein*. *Der Hund schläft.* / *Ein Kind spielt.*
+Le sujet est **toujours** au nominatif — la forme donnée par le dictionnaire.
 
-> Attention à *das* : il est à la fois article neutre (*das Buch*) et démonstratif invariable (*Das ist mein Buch* = ça, c'est mon livre). Dans ce second emploi, il ne s'accorde à rien.
+> Attention à *das* : il est à la fois **article** neutre (*das Buch*) et **démonstratif invariable** (*Das ist mein Buch* — ça, c’est mon livre). Dans ce second emploi, il ne s’accorde à rien du tout.
 
-## L'absence d'article
-Contrairement au français, l'allemand se passe d'article devant les noms de métier après *sein* et *werden* (*Er ist Lehrer*), devant les noms de matière (*Ich trinke Wasser*) et devant la plupart des noms de pays (*Ich fahre nach Deutschland*).`,
+## L’absence d’article
+| Cas | Exemple | Le français dirait |
+| Métier après *sein* ou *werden* | *Er ist Lehrer* | « Il est **un** professeur » — non |
+| Nom de matière | *Ich trinke Wasser* | « de l’eau » |
+| Plupart des noms de pays | *Ich fahre nach Deutschland* | « en Allemagne » |`,
           },
           questions: [
             ['Quel est l’article défini neutre ?', ['das', 'der', 'die', 'den'], 0, '*das Buch*, *das Haus*, *das Kind*.'],
@@ -500,31 +592,40 @@ Contrairement au français, l'allemand se passe d'article devant les noms de mé
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Quatre cas, deux familles de déterminants',
-            cours: `Tout le système allemand tient dans un tableau de quatre cas — et dans le fait que presque tous les déterminants se déclinent de la même façon.
+            cours: `Tout le système allemand tient dans un tableau de **quatre cas** — et dans le fait que presque tous les déterminants se déclinent **de la même façon**.
 
 ## À quoi sert chaque cas
-- **nominatif** : le sujet, et l'attribut après *sein*, *werden*, *bleiben*
-- **accusatif** : le complément d'objet direct, et certaines prépositions
-- **datif** : le complément d'objet second, et beaucoup de prépositions
-- **génitif** : le complément du nom (la possession)
+| Cas | Sa fonction |
+| **Nominatif** | Le sujet, et l’attribut après *sein*, *werden*, *bleiben* |
+| **Accusatif** | Le COD, et certaines prépositions |
+| **Datif** | Le COI, et beaucoup de prépositions |
+| **Génitif** | Le complément du nom : la possession |
 
-## L'article défini
-- masculin : *der* → *den* → *dem* → *des*
-- féminin : *die* → *die* → *der* → *der*
-- neutre : *das* → *das* → *dem* → *des*
-- pluriel : *die* → *die* → **den** → *der*
+## L’article défini
+| Cas | Masculin | Féminin | Neutre | Pluriel |
+| Nominatif | *der* | *die* | *das* | *die* |
+| Accusatif | **den** | *die* | *das* | *die* |
+| Datif | *dem* | *der* | *dem* | **den** |
+| Génitif | *des* | *der* | *des* | *der* |
 
-## L'article indéfini et les possessifs
-*ein* → *einen* → *einem* → *eines* (masculin) ; *eine* → *eine* → *einer* → *einer* (féminin) ; *ein* → *ein* → *einem* → *eines* (neutre). **Se déclinent exactement pareil** : *kein* et tous les possessifs (*mein, dein, sein, ihr, unser, euer, Ihr*), qui eux ont un pluriel : *meine* → *meine* → *meinen* → *meiner*.
+## L’article indéfini
+| Cas | Masculin | Féminin | Neutre |
+| Nominatif | *ein* | *eine* | *ein* |
+| Accusatif | **einen** | *eine* | *ein* |
+| Datif | *einem* | *einer* | *einem* |
+| Génitif | *eines* | *einer* | *eines* |
+
+**Se déclinent exactement pareil** : *kein* et **tous** les possessifs — *mein, dein, sein, ihr, unser, euer, Ihr* — qui, eux, ont un pluriel : *meine, meine, meinen, meiner*.
 
 ## Les déterminants en der-
-*dieser* (ce), *jeder* (chaque, sans pluriel), *welcher* (quel), *mancher*, *solcher*, *aller* prennent les **terminaisons de l'article défini** : *diesen Mann*, *jedem Kind*, *welche Frau*.
+*dieser*, *jeder* (sans pluriel), *welcher*, *mancher*, *solcher*, *aller* prennent les **terminaisons de l’article défini** : *diesen Mann*, *jedem Kind*, *welche Frau*.
 
 ## Les deux marques à ne pas oublier
-- **datif pluriel** : l'article devient *den* ET le nom prend un **-n** : *mit den Kinder**n***, *aus den Länder**n***.
-- **génitif masculin et neutre** : le nom prend **-(e)s** : *das Auto des Vater**s***, *das Ende des Jahr**es***.
+| Cas | Ce qui change en plus | Exemple |
+| **Datif pluriel** | Le **nom** prend un -n | *mit den Kindern*, *aus den Ländern* |
+| **Génitif** masculin et neutre | Le nom prend -(e)s | *das Auto des Vaters* |
 
-> Le raccourci qui fait gagner du temps : le masculin est le seul genre à changer entre nominatif et accusatif. Si un exercice paraît difficile, c'est presque toujours d'un masculin qu'il s'agit.`,
+> Le raccourci qui fait gagner du temps : **le masculin est le seul genre à changer entre nominatif et accusatif**. Si un exercice paraît difficile, c’est presque toujours d’un masculin qu’il s’agit.`,
           },
           questions: [
             ['À quel cas se met le complément d’objet direct ?', ['À l’accusatif', 'Au datif', 'Au nominatif', 'Au génitif'], 0, 'Le datif est celui du complément d’objet second.'],
@@ -542,29 +643,49 @@ Contrairement au français, l'allemand se passe d'article devant les noms de mé
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'ich, mich, mir — et l’ordre des pronoms',
-            cours: `Un pronom personnel remplace un groupe nominal : il en garde le genre et prend le cas de sa nouvelle fonction.
+            cours: `Un pronom personnel remplace un groupe nominal : il en garde le **genre** et prend le **cas de sa nouvelle fonction**.
 
 ## Les trois séries
-- nominatif : *ich, du, er, sie, es, wir, ihr, sie / Sie*
-- accusatif : *mich, dich, **ihn**, sie, es, uns, euch, sie / Sie*
-- datif : *mir, dir, **ihm**, **ihr**, ihm, uns, euch, **ihnen** / Ihnen*
+| Personne | Nominatif | Accusatif | Datif |
+| 1re sing. | *ich* | *mich* | *mir* |
+| 2e sing. | *du* | *dich* | *dir* |
+| 3e masc. | *er* | *ihn* | *ihm* |
+| 3e fém. | *sie* | *sie* | *ihr* |
+| 3e neutre | *es* | *es* | *ihm* |
+| 1re plur. | *wir* | *uns* | *uns* |
+| 2e plur. | *ihr* | *euch* | *euch* |
+| 3e plur. | *sie* | *sie* | *ihnen* |
+| Politesse | *Sie* | *Sie* | *Ihnen* |
 
 ## Le genre grammatical commande
-Un objet masculin se reprend par *er*, un objet féminin par *sie*, même s'il s'agit d'une chose : *Der Tisch? **Er** ist alt.* / *Die Lampe? **Sie** ist neu.* Traduire mécaniquement par *es* est une faute que les correcteurs repèrent immédiatement.
+| L’objet | On le reprend par |
+| *Der Tisch* | *Er ist alt* |
+| *Die Lampe* | *Sie ist neu* |
+| *Das Buch* | *Es ist neu* |
 
-## L'ordre des pronoms
-Deux pronoms compléments se rangent **accusatif avant datif** : *Ich gebe **es dir**.* C'est l'inverse de l'ordre des groupes nominaux (*Ich gebe **dem Kind das Buch***). Règle unique qui couvre les deux : **le pronom passe devant, et l'accusatif pronom passe devant tout**.
+> Traduire mécaniquement une chose par *es* est une faute que les correcteurs repèrent **immédiatement** : en allemand, une table est « il ».
 
-## Leur place dans la phrase
-Les pronoms compléments remontent **juste après le verbe conjugué** — et, en cas d'inversion, ils peuvent même précéder le sujet nominal : *Gestern hat **mich** mein Vater angerufen.*
+## L’ordre des pronoms
+| Ce qu’on a | L’ordre | Exemple |
+| Deux **groupes nominaux** | Datif puis accusatif | *Ich gebe dem Kind das Buch* |
+| Deux **pronoms** | **Accusatif** puis datif | *Ich gebe es dir* |
 
-## Le Sie de politesse
-*Sie* s'écrit toujours avec une **majuscule**, au singulier comme au pluriel, ainsi que ses formes *Ihnen* et *Ihr*. La conjugaison est celle de la 3e personne du pluriel : *Können **Sie** mir helfen?*
+Règle unique qui couvre les deux : **le pronom passe devant, et l’accusatif pronom passe devant tout**.
+
+Leur place : juste **après le verbe conjugué** — et en cas d’inversion, ils peuvent précéder le sujet nominal : *Gestern hat mich mein Vater angerufen*.
+
+## Deux cas particuliers
+| Mot | Ce qu’il est | Ses formes |
+| *Sie* de politesse | **Majuscule** toujours, conjugaison de la 3e du pluriel | *Sie*, *Ihnen*, *Ihr* |
+| *man* | Un pronom **indéfini**, pas personnel | Décliné *einen*, *einem* |
 
 ## es, le pronom à tout faire
-Sujet apparent (*Es regnet*, *Es gibt…*), reprise d'une proposition entière (*Ich weiß **es***), ou simple ouverture de phrase (*Es kommen viele Leute*) — dans ce dernier cas, il disparaît dès qu'un autre élément prend la première place.
+| Emploi | Exemple |
+| Sujet apparent | *Es regnet* · *Es gibt…* |
+| Reprise d’une proposition | *Ich weiß es* |
+| Simple ouverture de phrase | *Es kommen viele Leute* |
 
-> *man* n'est pas un pronom personnel mais un pronom indéfini : il se conjugue à la 3e personne du singulier et se décline *einen* (accusatif), *einem* (datif).`,
+Dans ce dernier cas, *es* **disparaît** dès qu’un autre élément prend la première place.`,
           },
           questions: [
             ['Quel est le pronom accusatif de « er » ?', ['ihn', 'ihm', 'sie', 'es'], 0, '*Ich sehe ihn.* *ihm* est le datif.'],
@@ -582,28 +703,40 @@ Sujet apparent (*Es regnet*, *Es gibt…*), reprise d'une proposition entière (
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'dieser, jener — et le der qui montre du doigt',
-            cours: `Montrer, désigner, insister : l'allemand a trois façons de le faire, de la plus neutre à la plus orale.
+            cours: `Montrer, désigner, insister : l’allemand a trois façons de le faire, de la plus **neutre** à la plus **orale**.
 
-## dieser, diese, dieses
-Le démonstratif de base. Il se décline **comme l'article défini** : *dieser Mann, diesen Mann, diesem Mann, dieses Mannes*. Employé seul, il reprend un élément déjà nommé : *Ich nehme **dieses** hier.*
+## Les trois démonstratifs
+| Forme | Registre | Emploi |
+| **dieser, diese, dieses** | Neutre, écrit et oral | Le démonstratif de base |
+| **jener** | Soutenu, en recul | « Celui-là », plus éloigné — l’oral préfère *dieser… der da* |
+| **der, die, das** accentué | **Oral courant** | Le plus fréquent : « celui-là ! » |
 
-## jener, et son quasi-abandon
-*jener* (celui-là, plus éloigné) appartient à la langue écrite et soutenue. À l'oral, on préfère opposer *dieser… der da* ou employer *der eine… der andere*.
+*dieser* se décline **comme l’article défini** : *dieser Mann, diesen Mann, diesem Mann, dieses Mannes*.
 
-## der, die, das démonstratifs
-C'est la forme la plus courante à l'oral : le même mot que l'article, mais **accentué** et souvent en tête de phrase. — *Kennst du Peter?* — ***Den** kenne ich gut!* Sa déclinaison est celle de l'article défini, à deux exceptions près : **datif pluriel *denen*** et **génitif *dessen / deren***.
+Le *der* démonstratif se décline lui aussi comme l’article, à **deux exceptions** : datif pluriel *denen*, génitif *dessen / deren*.
+
+— *Kennst du Peter?* — *Den kenne ich gut!*
 
 ## dessen et deren
-Ils remplacent un possessif pour éviter une ambiguïté : *Ich traf Paul und **dessen** Bruder* (le frère de Paul, et non le mien). C'est un usage soigné, très apprécié à l'écrit.
+Ils remplacent un possessif **pour lever une ambiguïté**.
 
-## derselbe, der gleiche
-- **derselbe** : le même, identique — *Wir wohnen in **demselben** Haus.* Les deux morceaux se déclinent : *der-* comme l'article, *-selbe* comme un adjectif faible.
-- **der gleiche** : le même, semblable — *Sie hat **das gleiche** Kleid* (un modèle identique, pas le vêtement lui-même).
+| Phrase | Ce qu’elle dit |
+| *Ich traf Paul und seinen Bruder* | Ambigu : le frère de qui ? |
+| *Ich traf Paul und dessen Bruder* | Le frère **de Paul**, sans équivoque |
+
+C’est un usage soigné, très apprécié à l’écrit.
+
+## derselbe ou der gleiche
+| Forme | Ce qu’elle dit | Exemple |
+| **derselbe** | Le même, **identique** — un seul objet | *Wir wohnen in demselben Haus* |
+| **der gleiche** | Le même, **semblable** — deux objets | *Sie hat das gleiche Kleid* |
+
+Dans *derselbe*, les deux morceaux se déclinent : *der-* comme l’article, *-selbe* comme un adjectif faible.
 
 ## das invariable
-*das* peut désigner une situation entière, sans accord : *Das ist mein Bruder.* / ***Das** sind meine Eltern.* Le verbe s'accorde alors avec ce qui suit, jamais avec *das*.
+*das* peut désigner une situation entière, **sans accord** : *Das ist mein Bruder* · *Das sind meine Eltern*. Le verbe s’accorde alors avec ce qui **suit**, jamais avec *das*.
 
-> Ne pas confondre *das* (article ou démonstratif) et *dass* (conjonction « que »). Le test : si l'on peut remplacer par *dieses*, c'est *das* avec un seul s.`,
+> Ne pas confondre *das* et *dass*. Le test est infaillible : si l’on peut remplacer par *dieses*, c’est *das* avec **un seul s**.`,
           },
           questions: [
             ['« dieser » se décline comme…', ['L’article défini', 'L’article indéfini', 'Un adjectif fort', 'Il ne se décline pas'], 0, '*diesen Mann*, *diesem Kind*, *dieser Frau*.'],
@@ -621,30 +754,31 @@ Ils remplacent un possessif pour éviter une ambiguïté : *Ich traf Paul und **
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Cinq façons de faire un pluriel',
-            cours: `Le pluriel allemand ne s'obtient pas en ajoutant un *-s* : il y a **cinq schémas**, et le bon s'apprend avec le mot, comme le genre.
+            cours: `Le pluriel allemand ne s’obtient **pas** en ajoutant un *-s* : il y a **cinq schémas**, et le bon s’apprend avec le mot, comme le genre.
 
-## 1. Le pluriel en -e
-Le plus fréquent chez les masculins, souvent avec **inflexion** (Umlaut) : *der Tag → die Tage*, *der Sohn → die S**ö**hne*, *die Stadt → die St**ä**dte*.
+## Les cinq schémas
+| Schéma | Genre dominant | Inflexion ? | Exemples |
+| **-e** | Masculins | Souvent | *der Tag → die Tage* · *der Sohn → die Söhne* |
+| **-er** | Neutres, quelques masculins | **Toujours** si possible | *das Kind → die Kinder* · *das Buch → die Bücher* |
+| **-(e)n** | Presque tous les **féminins** | **Jamais** | *die Frau → die Frauen* · *die Zeitung → die Zeitungen* |
+| **Aucune** terminaison | Masculins et neutres en -er, -el, -en | Parfois | *der Lehrer → die Lehrer* · *der Vater → die Väter* |
+| **-s** | Emprunts, abréviations | Jamais | *das Auto → die Autos* · *der Park → die Parks* |
 
-## 2. Le pluriel en -er
-Réservé à des masculins et surtout à des neutres, **toujours** avec inflexion quand la voyelle le permet : *das Kind → die Kinder*, *das Buch → die B**ü**cher*, *der Mann → die M**ä**nner*.
-
-## 3. Le pluriel en -(e)n
-Celui de la quasi-totalité des **féminins** : *die Frau → die Frauen*, *die Blume → die Blumen*, *die Zeitung → die Zeitungen*. Jamais d'inflexion dans ce groupe. Les noms en *-in* doublent le n : *die Lehrerin → die Lehrerinnen*.
-
-## 4. Le pluriel sans terminaison
-Les masculins et neutres en *-er*, *-el*, *-en* ne changent pas, ou prennent seulement l'inflexion : *der Lehrer → die Lehrer*, *der Vater → die V**ä**ter*, *das Mädchen → die Mädchen*.
-
-## 5. Le pluriel en -s
-Les mots empruntés et les abréviations : *das Auto → die Autos*, *das Hotel → die Hotels*, *der Park → die Parks*.
+Les noms féminins en *-in* **doublent le n** : *die Lehrerin → die Lehrerinnen*.
 
 ## Le datif pluriel
-Quel que soit le schéma, au datif pluriel le nom prend un **-n** s'il n'en a pas déjà un : *mit den Kinder**n***, *aus den Städte**n*** — sauf les pluriels en *-s* (*mit den Autos*).
+Quel que soit le schéma, le nom prend un **-n** au datif pluriel s’il n’en a pas déjà un.
 
-> Bonne nouvelle : l'article est *die* au nominatif et à l'accusatif pluriel pour les trois genres. Le genre ne compte plus au pluriel.
+| Pluriel | Au datif |
+| *die Kinder* | *mit den Kindern* |
+| *die Städte* | *aus den Städten* |
+| *die Autos* | *mit den Autos* — **exception** : pas de -n après -s |
 
-## Les noms qui n'ont qu'un nombre
-*die Leute* (les gens) n'existe qu'au pluriel ; *die Polizei*, *das Obst*, *die Milch* qu'au singulier. *Eine Brille* est un singulier là où le français dit « des lunettes ».`,
+> Bonne nouvelle : l’article est *die* au nominatif et à l’accusatif pluriel pour **les trois genres**. Le genre ne compte plus au pluriel — c’est le seul endroit où l’allemand simplifie.
+
+## Les noms qui n’ont qu’un nombre
+| Uniquement au pluriel | Uniquement au singulier | Singulier là où le français met un pluriel |
+| *die Leute* — les gens | *die Polizei*, *das Obst*, *die Milch* | *eine Brille* — des lunettes |`,
           },
           questions: [
             ['Quel est le pluriel de « das Buch » ?', ['die Bücher', 'die Buche', 'die Buchs', 'die Buchen'], 0, 'Pluriel en *-er* avec inflexion, typique des neutres.'],
@@ -662,30 +796,39 @@ Quel que soit le schéma, au datif pluriel le nom prend un **-n** s'il n'en a pa
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Après sein, werden et bleiben : rien ne bouge',
-            cours: `C'est la règle la plus reposante de la grammaire allemande : l'adjectif **attribut** ne se décline **jamais**.
+            cours: `C’est la règle la plus **reposante** de la grammaire allemande : l’adjectif **attribut** ne se décline **jamais**.
 
 ## La règle
-Après **sein** (être), **werden** (devenir) et **bleiben** (rester), l'adjectif reste à sa forme nue, quel que soit le genre et le nombre du sujet :
-- *Der Mann ist **alt**.*
-- *Die Frau ist **alt**.*
-- *Das Kind ist **alt**.*
-- *Die Kinder sind **alt**.*
+Après **sein**, **werden** et **bleiben**, l’adjectif reste à sa forme nue.
 
-Aucun *-e*, aucun *-er*, rien. Le français, qui accorde (« vieille », « vieux »), pousse à la faute.
+| Phrase | L’adjectif |
+| *Der Mann ist alt* | *alt* |
+| *Die Frau ist alt* | *alt* |
+| *Das Kind ist alt* | *alt* |
+| *Die Kinder sind alt* | *alt* |
 
-## La différence avec l'épithète
-Dès que l'adjectif se place **devant un nom**, il se décline : *ein **alter** Mann*, *die **alte** Frau*, *das **alte** Kind*. Attribut = après le verbe, invariable ; épithète = devant le nom, déclinée. Savoir dire lequel des deux on a sous les yeux, c'est déjà la moitié du travail.
+Aucun -e, aucun -er, **rien**. Le français, qui accorde (« vieille », « vieux »), pousse directement à la faute.
 
-## L'adverbe aussi est invariable
-L'allemand n'a pas de terminaison d'adverbe (comme le français *-ment*) : le même mot sert d'adjectif et d'adverbe. *Er singt **schön*** (il chante bien) / *Das Lied ist **schön*** (la chanson est belle).
+## Attribut ou épithète
+| | **Attribut** | **Épithète** |
+| Sa place | **Après** le verbe | **Devant** le nom |
+| Se décline-t-il ? | **Jamais** | **Toujours** |
+| Exemple | *Ein Mann ist alt* | *Ein alter Mann ist gekommen* |
+
+> Le même adjectif, deux traitements — tout dépend de sa **place**. Savoir dire lequel des deux on a sous les yeux, c’est déjà la moitié du travail.
+
+## L’adverbe aussi est invariable
+L’allemand n’a **pas** de terminaison d’adverbe comme le *-ment* français : le même mot sert d’adjectif et d’adverbe.
+
+| Emploi | Exemple | Traduction |
+| Adverbe | *Er singt schön* | Il chante **bien** |
+| Adjectif | *Das Lied ist schön* | La chanson est **belle** |
 
 ## Le comparatif attribut
-Il se termine en *-er* — mais c'est la marque du comparatif, pas un accord : *Der Zug ist **schneller** als das Auto.* Idem au superlatif : *Der Zug ist **am schnellsten**.*
+Il se termine en *-er* — mais c’est la marque du **comparatif**, pas un accord : *Der Zug ist schneller als das Auto*. Idem au superlatif : *Der Zug ist am schnellsten*.
 
-## Quelques verbes qui appellent un attribut
-*sein, werden, bleiben, scheinen* (paraître), *finden* (trouver, avec un COD) : *Ich finde das Buch **interessant**.*
-
-> Piège : *ein Mann ist alt* mais *ein alter Mann ist gekommen*. Le même adjectif, deux traitements — tout dépend de sa place.`,
+## Les verbes qui appellent un attribut
+*sein*, *werden*, *bleiben*, *scheinen* (paraître) — et *finden* avec un COD : *Ich finde das Buch interessant*.`,
           },
           questions: [
             ['Après « sein », l’adjectif attribut…', ['Reste invariable', 'S’accorde en genre', 'S’accorde en nombre', 'Prend toujours -e'], 0, '*Der Mann ist alt*, *die Frau ist alt*, *die Kinder sind alt*.'],
@@ -703,36 +846,48 @@ Il se termine en *-er* — mais c'est la marque du comparatif, pas un accord : *
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Faible, mixte, forte : qui porte la marque du cas',
-            cours: `Devant un nom, l'adjectif se décline. La terminaison qu'il prend dépend d'une seule question : **le déterminant porte-t-il déjà la marque du cas ?**
+            cours: `Devant un nom, l’adjectif se décline. La terminaison dépend d’**une seule question** : le déterminant porte-t-il déjà la marque du cas ?
 
 ## Le principe
-La marque du cas doit apparaître **une fois** dans le groupe nominal. Si le déterminant la porte, l'adjectif se contente d'une terminaison faible ; s'il n'y a pas de déterminant, l'adjectif prend la marque à sa place.
+> La marque du cas doit apparaître **une fois** dans le groupe nominal. Si le déterminant la porte, l’adjectif se contente d’une terminaison faible ; s’il ne la porte pas, l’adjectif la prend **à sa place**.
 
-## La déclinaison faible
-Après *der, die, das, dieser, jeder, welcher, alle*… L'adjectif ne prend que **-e** ou **-en** :
-- *der **alte** Mann*, *die **alte** Frau*, *das **alte** Haus* (nominatif)
-- *den **alten** Mann*, *dem **alten** Mann*, *die **alten** Männer*
+## Les trois déclinaisons
+| Déclinaison | Après quoi | Terminaisons de l’adjectif |
+| **Faible** | *der, die, das, dieser, jeder, welcher, alle* | **-e** ou **-en** seulement |
+| **Mixte** | *ein, kein*, les possessifs | -er, -es là où le déterminant ne marque rien ; -e et -en ailleurs |
+| **Forte** | **Aucun** déterminant | Celles de **l’article défini** |
 
-Retenir : **-e** aux trois nominatifs singuliers et à l'accusatif féminin et neutre, **-en** partout ailleurs.
+## La faible, en détail
+| Cas | Masculin | Féminin | Neutre | Pluriel |
+| Nominatif | *der alte* | *die alte* | *das alte* | *die alten* |
+| Accusatif | *den alten* | *die alte* | *das alte* | *die alten* |
+| Datif, génitif | *-en* | *-en* | *-en* | *-en* |
 
-## La déclinaison mixte
-Après *ein, kein* et les possessifs. Ces déterminants ont trois « trous » — masculin nominatif, neutre nominatif et accusatif — où ils ne marquent pas le cas : l'adjectif le fait à leur place.
-- *ein **alter** Mann* (le *-er* que *ein* ne porte pas)
-- *ein **altes** Haus*
-- *eine **alte** Frau*, *einen **alten** Mann*, *meinem **alten** Freund*
+Retenir : **-e** aux trois nominatifs singuliers et à l’accusatif féminin et neutre, **-en** partout ailleurs.
 
-## La déclinaison forte
-Sans déterminant du tout (souvent au pluriel, avec les noms de matière, après un nombre) : l'adjectif prend les terminaisons de **l'article défini**.
-- *kalt**er** Kaffee*, *frisch**e** Milch*, *gut**es** Brot*
-- *mit gut**en** Freunden*, *deutsch**er** Wein*
+## La mixte, et ses trois « trous »
+*ein* ne marque pas le cas à trois endroits — l’adjectif le fait pour lui.
+
+| Groupe | L’adjectif compense |
+| *ein alter Mann* | Le -er que *ein* ne porte pas |
+| *ein altes Haus* | Le -es |
+| *eine alte Frau* | *eine* marquant déjà : terminaison faible |
+
+## La forte
+Sans déterminant — souvent au pluriel, avec les noms de matière, après un nombre.
+
+*kalter Kaffee* · *frische Milch* · *gutes Brot* · *mit guten Freunden*
 
 ## Les irréguliers utiles
-*hoch* perd son *c* devant une terminaison : *ein **hoher** Berg*. *teuer* et *dunkel* perdent leur *e* : *ein **teures** Auto*, *ein **dunkles** Zimmer*.
+| Adjectif | Ce qu’il perd | Exemple |
+| *hoch* | Son c | *ein hoher Berg* |
+| *teuer* | Son e | *ein teures Auto* |
+| *dunkel* | Son e | *ein dunkles Zimmer* |
 
-> La méthode qui marche en devoir : repérer d'abord le cas et le genre du groupe, puis regarder le déterminant. S'il marque déjà le cas → *-e* ou *-en*. S'il ne le marque pas ou n'existe pas → l'adjectif prend la marque.
+> La méthode en devoir : repérer d’abord le **cas et le genre** du groupe, **puis** regarder le déterminant. S’il marque déjà le cas, l’adjectif prend -e ou -en. Sinon, c’est lui qui porte la marque.
 
-## Les adjectifs invariables
-Ceux qui se terminent par *-a* et les adjectifs de couleur empruntés : *ein **rosa** Kleid*, *eine **lila** Bluse*, *ein **prima** Ergebnis*.`,
+## Les invariables
+Ceux en *-a* et les couleurs empruntées : *ein rosa Kleid*, *eine lila Bluse*, *ein prima Ergebnis*.`,
           },
           questions: [
             ['Quand l’adjectif prend-il la déclinaison forte ?', ['Quand aucun déterminant ne porte la marque du cas', 'Après l’article défini', 'Après ein et kein', 'Jamais au pluriel'], 0, '*kalter Kaffee*, *frische Milch* : l’adjectif prend les terminaisons de l’article défini.'],
@@ -750,30 +905,46 @@ Ceux qui se terminent par *-a* et les adjectifs de couleur empruntés : *ein **r
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'sein ou ihr : c’est le possesseur qui décide',
-            cours: `Le possessif allemand pose une difficulté que le français ne prépare pas : il regarde **deux choses à la fois**, le possesseur et l'objet possédé.
-
-## La liste
-*mein* (mon), *dein* (ton), **sein** (son, à lui), **ihr** (son, à elle), *unser* (notre), *euer* (votre), *ihr* (leur), *Ihr* (votre de politesse, avec majuscule).
+            cours: `Le possessif allemand pose une difficulté que le français ne prépare pas : il regarde **deux choses à la fois**.
 
 ## La règle des deux regards
-- Le **radical** dépend du **possesseur** : *sein* si c'est un homme (ou un nom masculin ou neutre), *ihr* si c'est une femme (ou un nom féminin, ou un pluriel).
-- La **terminaison** dépend de l'**objet possédé** : genre, nombre et cas.
+| Ce qui varie | Ce qui le commande |
+| Le **radical** — *sein* ou *ihr* | Le **possesseur** |
+| La **terminaison** | L’**objet possédé** : genre, nombre, cas |
 
-*Peter und **seine** Schwester* (la sœur DE LUI : radical *sein-*, terminaison féminine) / *Anna und **ihr** Bruder* (le frère D'ELLE : radical *ihr-*, terminaison masculine).
+| Phrase | Radical | Terminaison |
+| *Peter und seine Schwester* | *sein-*, car Peter est un homme | *-e*, car *Schwester* est féminin |
+| *Anna und ihr Bruder* | *ihr-*, car Anna est une femme | Rien, car *Bruder* est masculin nominatif |
+
+> Le français dit « **sa** sœur » et « **son** frère » sans jamais regarder qui possède. L’allemand fait exactement l’inverse du français sur le radical, et la même chose sur la terminaison.
+
+## La liste
+| Allemand | Français |
+| *mein* | mon |
+| *dein* | ton |
+| *sein* | son — **à lui** |
+| *ihr* | son — **à elle** |
+| *unser* | notre |
+| *euer* | votre |
+| *ihr* | leur |
+| *Ihr* | votre, de politesse — **majuscule** |
 
 ## La déclinaison
-Exactement celle de *ein* / *kein*, avec en plus un pluriel : *mein, meinen, meinem, meines* — *meine, meine, meiner, meiner* (féminin) — *meine, meine, meinen, meiner* (pluriel).
+Exactement celle de *ein* et *kein*, **avec en plus un pluriel** : *meine, meine, meinen, meiner*.
 
-## euer perd son e
-Devant une terminaison, *euer* devient *eur-* : *eu**re** Mutter*, *eu**ren** Vater*. *unser*, lui, garde le sien : *unsere Mutter*.
+| Déterminant | Ce qu’il devient devant une terminaison |
+| *euer* | *eur-* : *eure Mutter*, *euren Vater* |
+| *unser* | Il **garde** son e : *unsere Mutter* |
 
 ## Le possessif employé seul
-*Wessen Buch ist das?* — *Das ist **meins**.* Employé sans nom, le possessif prend les terminaisons de l'article défini : *meiner, meine, mein(e)s*.
+*Wessen Buch ist das?* — *Das ist meins.* Sans nom, il prend les terminaisons de l’article défini : *meiner, meine, mein(e)s*.
 
-## Ce que l'allemand ne dit pas avec un possessif
-Avec les parties du corps et les vêtements, l'allemand emploie souvent l'article + un datif : *Ich wasche **mir die** Hände* (je me lave les mains), *Er zieht **sich den** Mantel an*.
+## Ce que l’allemand ne dit pas avec un possessif
+Avec les parties du corps et les vêtements, il emploie **l’article + un datif** :
 
-> À l'écrit, *Ihr* avec majuscule = « votre » (politesse) ; *ihr* sans majuscule = « son (à elle) » ou « leur ». La majuscule n'est pas un détail décoratif.`,
+| Allemand | Français |
+| *Ich wasche mir die Hände* | Je me lave **les** mains |
+| *Er zieht sich den Mantel an* | Il met **son** manteau |`,
           },
           questions: [
             ['Comment traduire « Anna et son frère » ?', ['Anna und ihr Bruder', 'Anna und sein Bruder', 'Anna und seinen Bruder', 'Anna und ihre Bruder'], 0, 'Le radical suit le POSSESSEUR (Anna → *ihr-*), la terminaison l’objet possédé (*Bruder*, masculin).'],
@@ -791,26 +962,38 @@ Avec les parties du corps et les vêtements, l'allemand emploie souvent l'articl
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'Peters Auto, das Auto des Vaters, das Auto von Peter',
-            cours: `Le complément du nom se dit de trois façons en allemand, et l'ordre des mots n'est pas le même dans les trois.
+            cours: `Le complément du nom se dit de **trois** façons en allemand — et l’ordre des mots n’est pas le même dans les trois.
 
-## Le génitif saxon avec un nom propre
-Le nom du possesseur passe **devant**, suivi d'un **-s sans apostrophe** : ***Peters** Auto*, ***Annas** Buch*, ***Deutschlands** Hauptstadt*. Aucun article : *Peters Auto* et non *das Peters Auto*. Si le nom se termine déjà par un son sifflant, on met une apostrophe : *Thomas' Auto* — ou l'on tourne autrement.
+## Les trois constructions
+| Construction | Où va le possesseur | Registre | Exemple |
+| **Génitif saxon** | **Devant**, avec -s sans apostrophe | Courant, noms propres | *Peters Auto* |
+| **Génitif ordinaire** | **Derrière**, avec l’article au génitif | Écrit, soigné | *das Auto des Vaters* |
+| *von* **+ datif** | Derrière, avec *von* | Oral, plus relâché | *das Auto von meinem Vater* |
+
+## Le génitif saxon
+Aucun article : *Peters Auto*, jamais « das Peters Auto ». Si le nom se termine déjà par un son sifflant, on met une apostrophe — *Thomas’ Auto* — ou l’on tourne autrement.
 
 ## Le génitif ordinaire
-Le complément passe **derrière** le nom déterminé, avec l'article au génitif :
-- masculin et neutre : *des* + nom en **-(e)s** — *das Auto **des Vaters***, *das Ende **des Jahres***
-- féminin et pluriel : *der*, sans marque sur le nom — *das Haus **der Frau***, *die Bücher **der Kinder***
-
-## von + datif
-La solution de l'oral, et la seule possible sans déterminant : *das Auto **von** meinem Vater*, *ein Freund **von** mir*. Correcte, mais tenue pour plus relâchée à l'écrit — au bac, le génitif ordinaire fait meilleure impression.
-
-## La question
-**Wessen?** (de qui ?) : *Wessen Buch ist das?* — *Das ist Annas Buch.*
+| Genre | L’article | Le nom |
+| Masculin, neutre | *des* | Il prend **-(e)s** : *des Vaters*, *des Jahres* |
+| Féminin, pluriel | *der* | **Aucune** marque : *der Frau*, *der Kinder* |
 
 ## Les prépositions à génitif
-*wegen* (à cause de), *trotz* (malgré), *während* (pendant), *statt* (au lieu de), *innerhalb / außerhalb* (à l'intérieur / à l'extérieur de) : *während **des Sommers***, *trotz **des Regens***. À l'oral, elles glissent souvent au datif — l'écrit, lui, garde le génitif.
+| Préposition | Sens |
+| *wegen* | À cause de |
+| *trotz* | Malgré |
+| *während* | Pendant |
+| *statt* | Au lieu de |
+| *innerhalb / außerhalb* | À l’intérieur / à l’extérieur de |
 
-> Le génitif recule dans l'allemand parlé, mais il reste un marqueur de niveau de langue : c'est exactement le genre de forme qu'un correcteur remarque.`,
+*während des Sommers* · *trotz des Regens*
+
+À l’oral, elles glissent souvent au **datif**. L’écrit, lui, garde le génitif.
+
+> Le génitif recule dans l’allemand parlé — mais il reste un **marqueur de niveau de langue**. C’est exactement le genre de forme qu’un correcteur remarque, dans un sens comme dans l’autre.
+
+## La question
+**Wessen?** — de qui ? *Wessen Buch ist das?* — *Das ist Annas Buch.*`,
           },
           questions: [
             ['Comment dit-on « la voiture de Peter » ?', ['Peters Auto', 'Peter’s Auto', 'das Auto Peters', 'der Peter Auto'], 0, 'Le nom propre passe devant, avec un *-s* sans apostrophe.'],
@@ -828,35 +1011,44 @@ La solution de l'oral, et la seule possible sans déterminant : *das Auto **von*
           axe: 'Le groupe nominal',
           lecon: {
             titre: '-er, als, so… wie',
-            cours: `L'allemand ne connaît pas *plus… que* en deux mots : il ajoute une terminaison à l'adjectif, comme l'anglais.
+            cours: `L’allemand ne connaît pas « plus… que » en deux mots : il ajoute une **terminaison** à l’adjectif, comme l’anglais.
 
 ## La formation
-Adjectif + **-er**, quelle que soit la longueur du mot : *schnell → schnell**er***, *interessant → interessant**er***. Là où le français dirait « plus intéressant », l'allemand n'a qu'un mot.
+Adjectif + **-er**, **quelle que soit la longueur** du mot.
 
-## L'inflexion
-Beaucoup d'adjectifs courts d'une syllabe prennent en plus l'**Umlaut** : *alt → **ä**lter*, *jung → j**ü**nger*, *groß → gr**ö**ßer*, *stark → st**ä**rker*, *kurz → k**ü**rzer*, *warm → w**ä**rmer*.
+| Français | Allemand |
+| plus rapide | *schneller* |
+| plus intéressant | *interessanter* |
 
-## als pour comparer
-Le second terme de la comparaison est introduit par **als** : *Peter ist größer **als** Paul.* Employer *wie* ici est une faute, très courante mais nette.
+Beaucoup d’adjectifs courts prennent en plus l’**Umlaut** : *alt → älter*, *jung → jünger*, *groß → größer*, *stark → stärker*, *kurz → kürzer*, *warm → wärmer*.
 
-## so… wie pour l'égalité
-*Peter ist **so groß wie** Paul* (aussi grand que). Variantes : *nicht so… wie* (pas aussi), *genauso… wie* (exactement aussi), *doppelt so… wie* (deux fois plus).
+## Les trois comparaisons
+| Relation | Structure | Exemple |
+| Supériorité | comparatif + **als** | *Peter ist größer als Paul* |
+| Égalité | **so**… **wie** | *Peter ist so groß wie Paul* |
+| Infériorité | *nicht so*… *wie* | *Peter ist nicht so groß wie Paul* |
 
-## Les irréguliers à connaître par cœur
-- *gut → **besser*** (bon → meilleur)
-- *viel → **mehr*** (beaucoup → plus)
-- *gern → **lieber*** (volontiers → plutôt)
-- *hoch → **höher***, *nah → **näher***
+> Employer *wie* après un comparatif est une faute **très courante et très nette** : c’est **als** après *größer*, *wie* seulement après *so*.
 
-*Ich trinke **lieber** Tee als Kaffee* : c'est ainsi qu'on dit « je préfère ».
+Variantes utiles : *genauso… wie* (exactement aussi), *doppelt so… wie* (deux fois plus).
+
+## Les irréguliers
+| Adjectif ou adverbe | Comparatif | Ce qu’il permet de dire |
+| *gut* | *besser* | Meilleur |
+| *viel* | *mehr* | Plus, en quantité |
+| *gern* | *lieber* | **Préférer** : *Ich trinke lieber Tee als Kaffee* |
+| *hoch* | *höher* | |
+| *nah* | *näher* | |
 
 ## Le comparatif épithète se décline
-Devant un nom, la marque du comparatif s'ajoute AVANT la terminaison de déclinaison : *ein **größeres** Haus*, *mein **älterer** Bruder*. Deux terminaisons l'une derrière l'autre — c'est normal.
+La marque du comparatif s’ajoute **avant** la terminaison de déclinaison : *ein größeres Haus*, *mein älterer Bruder*. Deux terminaisons l’une derrière l’autre — c’est normal, et c’est correct.
 
-## immer + comparatif
-Pour dire « de plus en plus » : *Es wird **immer kälter**.* Et *je… desto / umso* pour « plus… plus » : *Je mehr ich lerne, **desto** besser verstehe ich.*
+## Deux tournures de haut rendement
+| Structure | Sens | Exemple |
+| *immer* + comparatif | De plus en plus | *Es wird immer kälter* |
+| *je*… *desto / umso* | Plus… plus | *Je mehr ich lerne, desto besser verstehe ich* |
 
-> Attention à *mehr* : il traduit « plus » de quantité (*mehr Zeit*), jamais « plus » du comparatif d'un adjectif. « Plus grand » ne se dit pas *mehr groß*.`,
+> Attention à *mehr* : il traduit « plus » de **quantité** (*mehr Zeit*), **jamais** le comparatif d’un adjectif. « Plus grand » ne se dit pas *mehr groß*.`,
           },
           questions: [
             ['Comment forme-t-on le comparatif d’un adjectif long comme « interessant » ?', ['interessanter', 'mehr interessant', 'am interessanten', 'interessant als'], 0, 'Quelle que soit la longueur du mot, c’est la terminaison *-er*.'],
@@ -874,30 +1066,40 @@ Pour dire « de plus en plus » : *Es wird **immer kälter**.* Et *je… desto /
           axe: 'Le groupe nominal',
           lecon: {
             titre: 'am schnellsten ou der schnellste',
-            cours: `Le superlatif allemand a **deux formes**, et le choix entre les deux dépend de la place de l'adjectif.
+            cours: `Le superlatif allemand a **deux formes**, et le choix dépend de la **place** de l’adjectif.
 
-## am + -sten : l'attribut et l'adverbe
-Après *sein*, *werden*, ou pour qualifier un verbe : *Der Zug ist **am schnellsten**.* / *Er läuft **am schnellsten**.* La forme est figée, elle ne se décline pas.
+## Les deux formes
+| Forme | Quand | Se décline ? | Exemple |
+| **am** + *-sten* | Attribut ou adverbe | **Non**, elle est figée | *Der Zug ist am schnellsten* |
+| *der / die / das* + *-ste* | **Épithète**, devant un nom | **Oui** | *der schnellste Zug* |
 
-## der/die/das + -ste : l'épithète
-Devant un nom, avec l'article défini et une terminaison de déclinaison : *der **schnellste** Zug*, *die **schönste** Stadt*, *mit dem **besten** Freund*.
+*Er läuft am schnellsten* (adverbe) · *mit dem besten Freund* (épithète déclinée).
 
 ## Le -e- de liaison
-Après *d, t, s, ß, z, sch*, on intercale un *e* pour pouvoir prononcer : *alt → am **ältesten***, *heiß → am **heißesten***, *kurz → am **kürzesten***.
+Après **d, t, s, ß, z, sch**, on intercale un *e* pour pouvoir prononcer.
 
-## L'inflexion, comme au comparatif
-*alt → älter → am ältesten*, *jung → jünger → am jüngsten*, *groß → größer → am größten* (sans *e* de liaison, exception).
+| Adjectif | Superlatif |
+| *alt* | *am ältesten* |
+| *heiß* | *am heißesten* |
+| *kurz* | *am kürzesten* |
+| *groß* | *am größten* — **exception**, sans e |
 
 ## Les irréguliers
-- *gut → besser → **am besten** / der beste*
-- *viel → mehr → **am meisten***
-- *gern → lieber → **am liebsten***
-- *hoch → höher → **am höchsten***, *nah → näher → **am nächsten***
+| Adjectif | Comparatif | Superlatif |
+| *gut* | *besser* | *am besten*, *der beste* |
+| *viel* | *mehr* | *am meisten* |
+| *gern* | *lieber* | *am liebsten* |
+| *hoch* | *höher* | *am höchsten* |
+| *nah* | *näher* | *am nächsten* |
 
 ## Le complément du superlatif
-On l'introduit par *von* + datif ou *unter* + datif : *Er ist der Größte **von** allen* / ***unter** seinen Freunden*. Pour un lieu, on emploie souvent *in* : *die größte Stadt **in** Deutschland* — ou le génitif : *Deutschlands größte Stadt*.
+| Structure | Exemple |
+| *von* + datif | *Er ist der Größte von allen* |
+| *unter* + datif | *der Größte unter seinen Freunden* |
+| *in* + datif, pour un lieu | *die größte Stadt in Deutschland* |
+| Le génitif | *Deutschlands größte Stadt* |
 
-> Piège d'écrit : *am liebsten* n'est pas « le plus aimé » mais « ce que je préfère par-dessus tout » — *Am liebsten lese ich Krimis.* C'est une tournure de haut rendement dans une expression d'opinion.`,
+> Piège d’écrit : *am liebsten* n’est pas « le plus aimé » mais « **ce que je préfère par-dessus tout** » — *Am liebsten lese ich Krimis.* C’est une tournure de très haut rendement dans une expression d’opinion.`,
           },
           questions: [
             ['Quelle forme du superlatif s’emploie après « sein » ?', ['am + -sten', 'der + -ste', 'mehr + adjectif', 'so + adjectif'], 0, '*Der Zug ist am schnellsten.* La forme en *der/die/das* est réservée à l’épithète.'],
@@ -916,28 +1118,33 @@ On l'introduit par *von* + datif ou *unter* + datif : *Er ist der Größte **von
           axe: 'Les groupes prépositionnels',
           lecon: {
             titre: 'durch, für, gegen, ohne, um',
-            cours: `Cinq prépositions imposent l'accusatif, toujours, sans jamais dépendre du sens : elles s'apprennent en bloc, comme une liste.
+            cours: `Cinq prépositions imposent l’accusatif **toujours**, sans jamais dépendre du sens. Elles s’apprennent en bloc, comme une liste.
 
-## La liste des cinq
-**durch** (à travers, par), **für** (pour), **gegen** (contre, vers — pour une heure approximative), **ohne** (sans), **um** (autour de, à — pour une heure précise). Beaucoup les retiennent dans l'ordre *durch-für-gegen-ohne-um*, qui se scande facilement.
+## Les cinq
+| Préposition | Sens | Exemple |
+| **durch** | À travers, par | *Wir gehen durch den Park* |
+| **für** | Pour | *Das Geschenk ist für meinen Bruder* |
+| **gegen** | Contre ; vers, pour une heure **approximative** | *Ich bin gegen diese Idee* · *gegen acht Uhr* |
+| **ohne** | Sans | *Ich trinke den Kaffee ohne Zucker* |
+| **um** | Autour de ; à, pour une heure **précise** | *um den Tisch* · *um acht Uhr* |
 
-## En emploi
-- *Wir gehen **durch den** Park.* (à travers le parc)
-- *Das Geschenk ist **für meinen** Bruder.*
-- *Ich bin **gegen diese** Idee.* / *Er kommt **gegen acht** Uhr.* (vers huit heures)
-- *Ich trinke den Kaffee **ohne** Zucker.*
-- *Sie sitzen **um den** Tisch.* / *Der Zug fährt **um acht** Uhr ab.*
+Beaucoup les retiennent dans l’ordre **durch-für-gegen-ohne-um**, qui se scande facilement.
+
+> *gegen* et *um* se distinguent sur l’heure : *gegen acht* = vers huit heures, *um acht* = à huit heures pile. Une seule préposition d’écart, et le rendez-vous n’est plus le même.
 
 ## Trois autres, plus rares
-**bis** (jusqu'à) : *bis nächsten Montag* — souvent suivi d'une autre préposition (*bis zum Bahnhof*). **entlang** (le long de), qui se place **après** le nom : *die Straße **entlang***. **wider** (contre, littéraire).
+| Préposition | Sens | Sa particularité |
+| **bis** | Jusqu’à | Souvent suivie d’une autre préposition : *bis zum Bahnhof* |
+| **entlang** | Le long de | Elle se place **après** le nom : *die Straße entlang* |
+| **wider** | Contre | Littéraire |
 
 ## Les contractions
-*durch das → **durchs***, *für das → **fürs***, *um das → **ums***. Elles sont normales à l'écrit courant.
+*durch das → durchs* · *für das → fürs* · *um das → ums*
 
-## ohne se passe d'article
-*ohne* est souvent suivi d'un nom **sans article** : *ohne Geld*, *ohne Auto*, *ohne Probleme*. Et l'expression *ohne mich* garde le pronom à l'accusatif.
+## ohne se passe d’article
+*ohne Geld*, *ohne Auto*, *ohne Probleme* — et l’expression *ohne mich* garde le pronom à l’accusatif.
 
-> Erreur fréquente : traduire « pour » par *für* dans un but. « Pour apprendre » n'est pas *für lernen* mais *um zu lernen* — *für* introduit un groupe nominal, jamais un verbe.`,
+> Erreur fréquente : traduire « pour » par *für* devant un but. « Pour apprendre » n’est **pas** *für lernen* mais *um zu lernen* : *für* introduit un **groupe nominal**, jamais un verbe.`,
           },
           questions: [
             ['Quelles prépositions régissent toujours l’accusatif ?', ['durch, für, gegen, ohne, um', 'aus, bei, mit, nach, von', 'an, auf, in, über, unter', 'wegen, trotz, während'], 0, 'Une liste à apprendre en bloc : elle ne dépend jamais du sens.'],
@@ -955,32 +1162,40 @@ On l'introduit par *von* + datif ou *unter* + datif : *Er ist der Größte **von
           axe: 'Les groupes prépositionnels',
           lecon: {
             titre: 'aus, bei, mit, nach, seit, von, zu',
-            cours: `Sept prépositions imposent le datif dans tous leurs emplois. La suite *aus-bei-mit-nach-seit-von-zu* se retient comme une formule.
+            cours: `Sept prépositions imposent le datif dans **tous** leurs emplois. La suite *aus-bei-mit-nach-seit-von-zu* se retient comme une formule.
 
-## Ce que chacune veut dire
-- **aus** : hors de, en provenance de, en (matière) — *Ich komme **aus der** Schweiz*, *aus Holz*
-- **bei** : chez, près de, lors de — *Ich wohne **bei meinen** Eltern*, *beim Essen*
-- **mit** : avec, en (moyen de transport) — *mit dem Bus*, *mit meiner Schwester*
-- **nach** : après, vers (pays et villes sans article) — *nach dem Film*, *nach Berlin*
-- **seit** : depuis — *seit einem Jahr*
-- **von** : de (origine, appartenance, agent du passif) — *ein Brief **von meinem** Freund*
-- **zu** : chez, vers (personne ou but) — *Ich gehe **zum** Arzt*
+## Les sept
+| Préposition | Sens | Exemple |
+| **aus** | Hors de, en provenance de, en (matière) | *aus der Schweiz*, *aus Holz* |
+| **bei** | Chez, près de, lors de | *bei meinen Eltern*, *beim Essen* |
+| **mit** | Avec, en (moyen de transport) | *mit dem Bus*, *mit meiner Schwester* |
+| **nach** | Après ; vers, pays et villes **sans article** | *nach dem Film*, *nach Berlin* |
+| **seit** | Depuis | *seit einem Jahr* |
+| **von** | De : origine, appartenance, agent du passif | *ein Brief von meinem Freund* |
+| **zu** | Chez, vers — personne ou but | *zum Arzt* |
 
-## Trois de plus
-**gegenüber** (en face de, souvent postposée), **außer** (sauf), **ab** (à partir de).
+Trois de plus : **gegenüber** (en face de, souvent postposée), **außer** (sauf), **ab** (à partir de).
 
 ## Les contractions
-*bei dem → **beim***, *von dem → **vom***, *zu dem → **zum***, *zu der → **zur***. Elles sont obligatoires dans l'usage courant : *zum Bahnhof*, *zur Schule*.
+| Forme pleine | Contractée |
+| *bei dem* | *beim* |
+| *von dem* | *vom* |
+| *zu dem* | *zum* |
+| *zu der* | *zur* |
+
+Elles sont **obligatoires** dans l’usage courant : *zum Bahnhof*, *zur Schule*.
 
 ## nach, zu ou in
-- **nach** + nom de pays ou de ville **sans article** : *nach Deutschland*, *nach Wien*
-- **in** + accusatif si le pays a un article : *in **die** Schweiz*, *in **die** Türkei*
-- **zu** + personne ou bâtiment vu comme un but : *zum Arzt*, *zur Post*
+| On emploie | Devant quoi | Exemple |
+| **nach** | Pays ou ville **sans article** | *nach Deutschland*, *nach Wien* |
+| **in** + accusatif | Pays **avec** article | *in die Schweiz*, *in die Türkei* |
+| **zu** | Personne ou bâtiment vu comme but | *zum Arzt*, *zur Post* |
 
 ## seit et le présent
-Avec *seit*, l'allemand emploie le **présent** là où le français utilise le passé composé… ou plutôt là où il dit « depuis » avec le présent : *Ich lerne **seit** drei Jahren Deutsch* (j'apprends l'allemand depuis trois ans).
+> Avec *seit*, l’allemand emploie le **présent** : *Ich lerne seit drei Jahren Deutsch*. C’est le même piège qu’en anglais avec le present perfect — sauf que l’allemand, lui, fait comme le français.
 
-> *nach Hause* (rentrer à la maison, avec mouvement) et *zu Hause* (être à la maison, sans mouvement) sont deux expressions figées : elles ne suivent pas la règle générale.`,
+## Deux expressions figées
+*nach Hause* (rentrer à la maison, **avec** mouvement) et *zu Hause* (être à la maison, **sans** mouvement) ne suivent pas la règle générale : elles s’apprennent telles quelles.`,
           },
           questions: [
             ['Quelle série de prépositions régit le datif ?', ['aus, bei, mit, nach, seit, von, zu', 'durch, für, gegen, ohne, um', 'wegen, trotz, während, statt', 'an, auf, hinter, in, neben'], 0, 'La formule *aus-bei-mit-nach-seit-von-zu* se retient d’un bloc.'],
@@ -998,32 +1213,34 @@ Avec *seit*, l'allemand emploie le **présent** là où le français utilise le 
           axe: 'Les groupes prépositionnels',
           lecon: {
             titre: 'wo ? datif — wohin ? accusatif',
-            cours: `Neuf prépositions changent de cas selon le sens de la phrase. C'est le point le plus testé de la grammaire allemande, et il tient en une question.
+            cours: `Neuf prépositions **changent de cas** selon le sens de la phrase. C’est le point le plus testé de la grammaire allemande — et il tient en une seule question.
+
+## La question à se poser
+| La question | Ce qu’il y a | Le cas | Exemple |
+| **wohin?** — vers où ? | Un **déplacement** | **Accusatif** | *Ich gehe in die Schule* |
+| **wo?** — où ? | Une **localisation** | **Datif** | *Ich bin in der Schule* |
+
+> Ce n’est **pas** le verbe de mouvement qui décide, mais le **changement de lieu** : *Ich laufe im Park* (je cours à l’intérieur du parc, datif) contre *Ich laufe in den Park* (j’y entre en courant, accusatif). Même verbe, deux cas.
 
 ## Les neuf
 **an** (à, contre), **auf** (sur), **hinter** (derrière), **in** (dans), **neben** (à côté de), **über** (au-dessus de), **unter** (sous), **vor** (devant), **zwischen** (entre).
 
-## La question à se poser
-- **wohin?** (vers où ?) → il y a **déplacement** → **accusatif** : *Ich gehe **in die** Schule.*
-- **wo?** (où ?) → il y a **localisation** → **datif** : *Ich bin **in der** Schule.*
+## Les couples de verbes
+| Action — accusatif | État — datif |
+| *stellen* — poser debout | *stehen* — être debout |
+| *legen* — poser à plat | *liegen* — être couché |
+| *setzen* — asseoir | *sitzen* — être assis |
+| *hängen* (faible) — accrocher | *hängen* (fort) — être accroché |
 
-Ce n'est pas le verbe de mouvement qui décide, mais le changement de lieu : *Ich laufe **im** Park* (je cours à l'intérieur du parc, datif) contre *Ich laufe **in den** Park* (j'entre dans le parc en courant, accusatif).
-
-## Les couples de verbes qui vont avec
-- *stellen* (poser debout, accusatif) / *stehen* (être debout, datif)
-- *legen* (coucher, poser à plat) / *liegen* (être couché)
-- *setzen* (asseoir) / *sitzen* (être assis)
-- *hängen* (accrocher, faible) / *hängen* (être accroché, fort)
-
-*Ich stelle die Flasche **auf den** Tisch* → *Die Flasche steht **auf dem** Tisch.*
+*Ich stelle die Flasche auf den Tisch* devient *Die Flasche steht auf dem Tisch*.
 
 ## Les contractions
-*in das → **ins***, *in dem → **im***, *an das → **ans***, *an dem → **am***, *auf das → **aufs***, *über das → **übers***.
+*in das → ins* · *in dem → im* · *an das → ans* · *an dem → am* · *auf das → aufs* · *über das → übers*
 
 ## Les emplois figés
 Certaines expressions ne relèvent plus du lieu et se retiennent telles quelles : *an einem Montag*, *am Abend*, *im Januar*, *vor drei Jahren*, *über das Thema sprechen*, *auf Deutsch*, *sich auf etwas freuen* (accusatif).
 
-> Le réflexe qui sauve en devoir : trouver le verbe, se demander *wo?* ou *wohin?*, et n'écrire l'article qu'ensuite.`,
+> Le réflexe qui sauve en devoir : trouver le **verbe**, se demander *wo?* ou *wohin?* — et n’écrire l’article qu’**ensuite**.`,
           },
           questions: [
             ['Quel cas suit une préposition mixte en cas de déplacement ?', ['L’accusatif', 'Le datif', 'Le génitif', 'Le nominatif'], 0, 'Question *wohin?* → accusatif. Question *wo?* → datif.'],
@@ -1041,36 +1258,40 @@ Certaines expressions ne relèvent plus du lieu et se retiennent telles quelles 
           axe: 'Les groupes prépositionnels',
           lecon: {
             titre: 'Cinq mots qui ne touchent pas à l’ordre des mots',
-            cours: `Les conjonctions de coordination relient deux éléments de même rang. Leur particularité : elles occupent une **position zéro** et ne comptent pas dans l'ordre des mots.
+            cours: `Les conjonctions de coordination relient deux éléments de **même rang**. Leur particularité : elles occupent une **position zéro** et ne comptent pas dans l’ordre des mots.
 
 ## Les cinq de base
-**und** (et), **aber** (mais), **oder** (ou), **denn** (car), **sondern** (mais au contraire). Après elles, la phrase garde son ordre normal : sujet, verbe en deuxième position.
+| Conjonction | Sens | Virgule devant ? |
+| **und** | Et | Non, en principe |
+| **oder** | Ou | Non |
+| **aber** | Mais | **Oui** |
+| **denn** | Car | **Oui** |
+| **sondern** | Mais au contraire | **Oui** |
 
-*Ich bleibe zu Hause, **denn ich bin** krank.* — le verbe *bin* reste en deuxième position, derrière le sujet.
+Après elles, la phrase garde son ordre normal : sujet, puis verbe en deuxième position.
 
 ## La comparaison qui éclaire tout
-- coordination : *Ich bleibe zu Hause, **denn** ich **bin** krank.*
-- subordination : *Ich bleibe zu Hause, **weil** ich krank **bin**.*
+| Type | Exemple | Où va le verbe |
+| **Coordination** | *Ich bleibe zu Hause, denn ich bin krank* | Deuxième position, rien ne bouge |
+| **Subordination** | *Ich bleibe zu Hause, weil ich krank bin* | **À la fin** |
+| **Adverbe** de liaison | *Es regnet, deshalb bleibe ich zu Hause* | **Inversion** |
 
-Même sens, deux syntaxes. Confondre les deux est l'erreur la plus fréquente en expression écrite.
+> Trois syntaxes pour un **même lien logique**. Les tenir séparées, c’est gagner des points à chaque copie — et les confondre est l’erreur la plus fréquente en expression écrite.
+
+Les adverbes concernés : *deshalb, deswegen, trotzdem, dann, außerdem, sonst*. Ils occupent la **première** position, donc ils provoquent l’inversion.
 
 ## sondern après une négation
-*sondern* ne s'emploie qu'après une négation, pour **rectifier** : *Das ist nicht mein Buch, **sondern** deins.* Sans négation devant, c'est *aber* : *Er ist arm, **aber** glücklich.*
+| Conjonction | Condition | Exemple |
+| **sondern** | Il faut une **négation** devant | *Das ist nicht mein Buch, sondern deins* |
+| **aber** | Sans négation, ou opposition simple | *Er ist arm, aber glücklich* |
 
 ## Les couples corrélatifs
-- **entweder… oder** : ou bien… ou bien
-- **weder… noch** : ni… ni (attention : la phrase est déjà négative, on n'ajoute pas *nicht*)
-- **sowohl… als auch** : aussi bien… que
-- **nicht nur… sondern auch** : non seulement… mais aussi
-- **zwar… aber** : certes… mais
-
-## La virgule
-Obligatoire devant *aber*, *sondern* et *denn* ; absente devant *und* et *oder* quand ils relient deux éléments simples.
-
-## Les adverbes de liaison, faux amis de la coordination
-*deshalb, deswegen, trotzdem, dann, außerdem, sonst* ne sont pas des conjonctions : ils occupent **la première position** et provoquent donc l'inversion. *Es regnet, **deshalb bleibe ich** zu Hause.*
-
-> Trois syntaxes pour un même lien logique : *weil* (verbe à la fin), *denn* (rien ne bouge), *deshalb* (inversion). Les tenir séparées, c'est gagner des points à chaque copie.`,
+| Couple | Sens | Attention |
+| *entweder… oder* | Ou bien… ou bien | |
+| *weder… noch* | Ni… ni | La phrase est **déjà** négative : pas de *nicht* |
+| *sowohl… als auch* | Aussi bien… que | |
+| *nicht nur… sondern auch* | Non seulement… mais aussi | Très valorisé à l’écrit |
+| *zwar… aber* | Certes… mais | Idéal pour concéder |`,
           },
           questions: [
             ['Après « denn », où se place le verbe conjugué ?', ['En deuxième position, comme d’habitude', 'À la fin de la proposition', 'En première position', 'Juste après denn'], 0, '*denn* est une coordination : il ne compte pas dans l’ordre des mots.'],
@@ -1088,28 +1309,40 @@ Obligatoire devant *aber*, *sondern* et *denn* ; absente devant *und* et *oder* 
           axe: 'Les groupes prépositionnels',
           lecon: {
             titre: 'wo, wohin, woher — trois questions, trois constructions',
-            cours: `Dire où l'on est, où l'on va, d'où l'on vient : l'allemand distingue les trois par la préposition ET par le cas.
+            cours: `Dire où l’on est, où l’on va, d’où l’on vient : l’allemand distingue les trois par la **préposition** ET par le **cas**.
 
-## wo ? — la localisation
-Datif avec les prépositions mixtes, ou prépositions à datif : *Ich bin **in der** Stadt*, ***bei** meinen Eltern*, ***an der** Uni*, ***auf dem** Land* (à la campagne).
+## Les trois questions
+| Question | Ce qu’elle demande | Le cas dominant |
+| **wo?** | La localisation | **Datif** |
+| **wohin?** | La destination | **Accusatif** ou *nach* / *zu* |
+| **woher?** | L’origine | **Datif** avec *aus* ou *von* |
 
-## wohin ? — la destination
-- **nach** + pays ou ville sans article : *nach Deutschland*, *nach Hause*
-- **in** + accusatif si le nom a un article : *in **die** Stadt*, *in **die** Türkei*, *ins Kino*
-- **zu** + datif pour une personne ou un but : *zum Arzt*, *zu meiner Tante*
-- **an** + accusatif pour un bord : *ans Meer*, *an die Grenze*
-- **auf** + accusatif pour une surface ou une institution : *auf die Post*, *aufs Land*
+## wohin ? — le tableau qui tranche
+| Préposition | Devant quoi | Exemple |
+| **nach** | Pays ou ville **sans article** | *nach Deutschland*, *nach Hause* |
+| **in** + accusatif | Nom **avec** article | *in die Stadt*, *in die Türkei*, *ins Kino* |
+| **zu** + datif | Une **personne** ou un but | *zum Arzt*, *zu meiner Tante* |
+| **an** + accusatif | Un **bord** | *ans Meer*, *an die Grenze* |
+| **auf** + accusatif | Une surface, une institution | *auf die Post*, *aufs Land* |
 
-## woher ? — l'origine
-**aus** + datif pour sortir d'un lieu ou venir d'un pays : *Ich komme **aus** Frankreich*, *aus dem Haus*. **von** + datif pour un point de départ ou une personne : *Ich komme **von** der Arbeit*, *von meiner Großmutter*.
+## woher ? — l’origine
+| Préposition | Ce qu’elle marque | Exemple |
+| **aus** + datif | Sortir d’un lieu, venir d’un pays | *aus Frankreich*, *aus dem Haus* |
+| **von** + datif | Un point de départ, une personne | *von der Arbeit*, *von meiner Großmutter* |
 
 ## Les expressions figées
-*nach Hause* (rentrer), *zu Hause* (être chez soi), *auf dem Land / aufs Land*, *im Ausland / ins Ausland* (à l'étranger), *in die Schule gehen* / *in der Schule sein*.
+*nach Hause* / *zu Hause* · *aufs Land* / *auf dem Land* · *ins Ausland* / *im Ausland* · *in die Schule gehen* / *in der Schule sein*
+
+Elles se présentent **toujours** par paires : une avec mouvement, une sans.
 
 ## hin et her
-*hin* marque l'éloignement du locuteur, *her* le rapprochement : *Komm **her**!* (viens ici) / *Geh **hin**!* (vas-y). Ils se soudent aux prépositions pour former des préverbes : *hin**ein**gehen* (entrer, vu de l'extérieur), *her**aus**kommen* (sortir, vu de l'intérieur), et se retrouvent dans *wohin* et *woher*, où ils peuvent même se détacher : *Wo gehst du **hin**?*
+| Particule | Ce qu’elle marque | Exemple |
+| **hin** | L’éloignement du locuteur | *Geh hin!* — vas-y |
+| **her** | Le rapprochement | *Komm her!* — viens ici |
 
-> Le français dit « je vais chez le médecin » et « je suis chez le médecin » avec le même mot. L'allemand oblige à choisir : *zum Arzt* / *beim Arzt*.`,
+Elles se soudent aux prépositions pour former des préverbes — *hineingehen* (entrer, vu du dehors), *herauskommen* (sortir, vu du dedans) — et se retrouvent dans *wohin* et *woher*, où elles peuvent même se **détacher** : *Wo gehst du hin?*
+
+> Le français dit « je vais **chez** le médecin » et « je suis **chez** le médecin » avec le même mot. L’allemand oblige à choisir : *zum Arzt* / *beim Arzt*.`,
           },
           questions: [
             ['Quelle question appelle un complément de lieu au datif ?', ['wo?', 'wohin?', 'woher?', 'wann?'], 0, '*wo?* = localisation → datif. *wohin?* = déplacement → accusatif.'],
@@ -1127,34 +1360,42 @@ Datif avec les prépositions mixtes, ou prépositions à datif : *Ich bin **in d
           axe: 'Les groupes prépositionnels',
           lecon: {
             titre: 'am, im, um — et l’accusatif sans préposition',
-            cours: `Le temps se dit de trois façons : avec une préposition, avec un accusatif nu, ou avec un adverbe. Chacune a son terrain.
+            cours: `Le temps se dit de **trois** façons : avec une préposition, avec un accusatif nu, ou avec un adverbe. Chacune a son terrain.
 
-## am, im, um : le trio de base
-- **am** + jours et parties de la journée : *am Montag*, *am Abend*, *am Wochenende*, *am 3. Oktober*
-- **im** + mois, saisons, années avec « année » : *im Januar*, *im Sommer*, *im Jahr 2026*
-- **um** + heure précise : *um acht Uhr*, *um Mitternacht*
+## Le trio de base
+| Préposition | Devant quoi | Exemples |
+| **am** | Jours, parties de la journée, dates | *am Montag*, *am Abend*, *am 3. Oktober* |
+| **im** | Mois, saisons, années | *im Januar*, *im Sommer*, *im Jahr 2026* |
+| **um** | Heure **précise** | *um acht Uhr*, *um Mitternacht* |
 
-Exception à connaître : *in der Nacht* (et non *am*).
+Exception à connaître : *in der Nacht*, et non *am*.
 
-## L'accusatif sans préposition
-Une durée ou une date entière se met à l'**accusatif**, sans préposition : *jeden Tag*, *jedes Jahr*, *letzte Woche*, *nächsten Monat*, *den ganzen Tag*, *diesen Sommer*.
+## L’accusatif sans préposition
+Une durée ou une date entière se met à l’**accusatif**, **sans** préposition.
+
+*jeden Tag* · *jedes Jahr* · *letzte Woche* · *nächsten Monat* · *den ganzen Tag* · *diesen Sommer*
 
 ## Les autres prépositions
-- **seit** + datif : depuis (avec le présent) — *seit drei Jahren*
-- **vor** + datif : il y a — *vor zwei Wochen*
-- **in** + datif : dans (futur) — *in einer Stunde*
-- **bis** : jusqu'à — *bis morgen*, *bis zum Abend*
-- **von… bis** : de… à — *von Montag bis Freitag*
-- **ab** + datif : à partir de — *ab nächster Woche*
-- **während** + génitif : pendant — *während der Ferien*
+| Préposition | Sens | Exemple |
+| **seit** + datif | Depuis, avec le **présent** | *seit drei Jahren* |
+| **vor** + datif | Il y a | *vor zwei Wochen* |
+| **in** + datif | Dans, au futur | *in einer Stunde* |
+| **bis** | Jusqu’à | *bis morgen*, *bis zum Abend* |
+| **von… bis** | De… à | *von Montag bis Freitag* |
+| **ab** + datif | À partir de | *ab nächster Woche* |
+| **während** + génitif | Pendant | *während der Ferien* |
 
 ## Les adverbes
-*morgens, mittags, abends, nachts* (le matin, à midi, le soir, la nuit — de façon habituelle), *montags* (le lundi, tous les lundis), *heute, gestern, morgen, übermorgen, vorgestern*, *immer, oft, manchmal, selten, nie*.
+| Adverbe | Sens |
+| *morgens, mittags, abends, nachts* | Le matin, à midi, le soir, la nuit — **habituellement** |
+| *montags* | Le lundi, tous les lundis |
+| *heute, gestern, morgen, übermorgen, vorgestern* | Les repères du jour |
+| *immer, oft, manchmal, selten, nie* | La fréquence |
 
-> *morgen* = demain, *morgens* = le matin, *am Morgen* = ce matin-là. Un *s* fait toute la différence.
+> Trois mots, trois sens, un seul *s* d’écart : *morgen* = demain · *morgens* = le matin, en général · *am Morgen* = ce matin-là.
 
 ## La place dans la phrase
-Le complément de temps vient **en premier** parmi les compléments (le *Te* de TeKaMoLo), ou ouvre la phrase — auquel cas le sujet passe derrière le verbe : *Nächste Woche **fahre ich** nach Wien.*`,
+Le complément de temps vient **en premier** parmi les compléments — le *Te* de TeKaMoLo — ou **ouvre** la phrase, auquel cas le sujet passe derrière le verbe : *Nächste Woche fahre ich nach Wien.*`,
           },
           questions: [
             ['Comment dit-on « le lundi » (un lundi précis) ?', ['am Montag', 'im Montag', 'um Montag', 'in Montag'], 0, '*am* + jours et parties de la journée.'],
@@ -1173,34 +1414,32 @@ Le complément de temps vient **en premier** parmi les compléments (le *Te* de 
           axe: 'Le groupe verbal',
           lecon: {
             titre: 'sein, haben, werden : trois verbes, six emplois',
-            cours: `Trois verbes portent à eux seuls toute la conjugaison allemande. Chacun mène une double vie : verbe à part entière, et auxiliaire.
+            cours: `Trois verbes portent à eux seuls toute la conjugaison allemande. Chacun mène une **double vie** : verbe à part entière, et auxiliaire.
 
-## sein
-Présent : *ich **bin**, du **bist**, er **ist**, wir **sind**, ihr **seid**, sie **sind***. Prétérit : *ich **war***. Participe : *gewesen*.
-- verbe plein : *Ich bin müde.*
-- auxiliaire du parfait des verbes de mouvement et de changement d'état : *Ich **bin** gefahren.*
-- auxiliaire du passif d'état : *Das Haus **ist** gebaut.*
+## Les trois, et leurs emplois
+| Verbe | Comme verbe plein | Comme auxiliaire |
+| **sein** | Être : *Ich bin müde* | Parfait des verbes de mouvement ; passif **d’état** |
+| **haben** | Avoir : *Ich habe ein Auto* | Parfait de **tous les autres** verbes |
+| **werden** | Devenir : *Er wird Arzt* | **Futur** ; **passif** d’action |
 
-## haben
-Présent : *ich **habe**, du **hast**, er **hat**, wir **haben**, ihr **habt**, sie **haben***. Prétérit : *ich **hatte***. Participe : *gehabt*.
-- verbe plein : *Ich habe ein Auto.*
-- auxiliaire du parfait de tous les autres verbes : *Ich **habe** gearbeitet.*
-
-## werden
-Présent : *ich **werde**, du **wirst**, er **wird**, wir **werden**, ihr **werdet**, sie **werden***. Prétérit : *ich **wurde***. Participe : *geworden* (verbe plein) / *worden* (passif).
-- verbe plein « devenir » : *Er **wird** Arzt.*
-- auxiliaire du futur : *Ich **werde** kommen.*
-- auxiliaire du passif : *Das Haus **wird** gebaut.*
+## Les formes à savoir
+| | Présent (ich) | Prétérit | Participe |
+| *sein* | *bin, bist, ist, sind, seid, sind* | *war* | *gewesen* |
+| *haben* | *habe, hast, hat, haben, habt, haben* | *hatte* | *gehabt* |
+| *werden* | *werde, wirst, wird, werden, werdet, werden* | *wurde* | *geworden* / *worden* au passif |
 
 ## haben ou sein au parfait
-**sein** avec :
-- les verbes de mouvement d'un point à un autre : *gehen, fahren, kommen, fliegen, laufen, reisen*
-- les verbes de changement d'état : *aufstehen, einschlafen, aufwachen, sterben, wachsen*
-- *sein*, *bleiben*, *werden*, *passieren*, *geschehen*
+| On emploie **sein** | Exemples |
+| Verbes de **mouvement** d’un point à un autre | *gehen, fahren, kommen, fliegen, laufen, reisen* |
+| Verbes de **changement d’état** | *aufstehen, einschlafen, aufwachen, sterben, wachsen* |
+| Les quatre à part | *sein*, *bleiben*, *werden*, *passieren* |
 
-**haben** avec tous les autres, y compris les verbes de mouvement employés avec un COD : *Ich **habe** das Auto gefahren.*
+**haben** avec tous les autres — **y compris** un verbe de mouvement employé avec un COD : *Ich habe das Auto gefahren*.
 
-> Faux ami à haute fréquence : *bekommen* signifie « recevoir », jamais « devenir ». « Je deviens » se dit *ich werde*.`,
+> C’est le sens de la phrase qui tranche, pas le verbe lui-même : *Ich bin gefahren* (je me suis déplacé) contre *Ich habe das Auto gefahren* (j’ai conduit la voiture).
+
+## Un faux ami à haute fréquence
+*bekommen* signifie « **recevoir** », jamais « devenir ». « Je deviens » se dit *ich werde*. La confusion produit des contresens complets.`,
           },
           questions: [
             ['Quel auxiliaire s’emploie au parfait avec les verbes de mouvement ?', ['sein', 'haben', 'werden', 'lassen'], 0, '*Ich bin gefahren*, *ich bin gegangen*.'],
@@ -1218,33 +1457,41 @@ Présent : *ich **werde**, du **wirst**, er **wird**, wir **werden**, ihr **werd
           axe: 'Le groupe verbal',
           lecon: {
             titre: 'Trois formes à retenir par verbe',
-            cours: `Un verbe allemand s'apprend par ses **trois temps primitifs** : infinitif, prétérit, participe II. Avec eux, toute la conjugaison se déduit.
+            cours: `Un verbe allemand s’apprend par ses **trois temps primitifs** : infinitif, prétérit, participe II. Avec eux, toute la conjugaison se déduit.
 
-## Les verbes faibles
-Le radical ne change **jamais**. Prétérit en **-te**, participe en **ge- … -t** :
-*machen → machte → gemacht* · *spielen → spielte → gespielt* · *lernen → lernte → gelernt*
+## Les deux grandes familles
+| | **Faibles** | **Forts** |
+| Le radical | Ne change **jamais** | La voyelle **change** — l’*Ablaut* |
+| Prétérit | En **-te** | **Sans terminaison** aux 1re et 3e personnes |
+| Participe | ge- … **-t** | ge- … **-en** |
+| Exemple | *machen → machte → gemacht* | *sprechen → sprach → gesprochen* |
 
-Ils forment la grande majorité des verbes, et tous les verbes nouveaux (*googeln → googelte → gegoogelt*).
+Les faibles forment la grande majorité des verbes — et **tous les verbes nouveaux** : *googeln → googelte → gegoogelt*.
 
-## Les verbes forts
-La voyelle du radical **change** (c'est l'alternance vocalique, ou Ablaut). Prétérit **sans terminaison** aux 1re et 3e personnes, participe en **ge- … -en** :
-*sprechen → sprach → gesprochen* · *fahren → fuhr → gefahren* · *schreiben → schrieb → geschrieben* · *nehmen → nahm → genommen* · *gehen → ging → gegangen*
+## Quelques forts à connaître
+| Infinitif | Prétérit | Participe |
+| *fahren* | *fuhr* | *gefahren* |
+| *schreiben* | *schrieb* | *geschrieben* |
+| *nehmen* | *nahm* | *genommen* |
+| *gehen* | *ging* | *gegangen* |
+| *sprechen* | *sprach* | *gesprochen* |
 
 ## Le changement de voyelle au présent
-Beaucoup de verbes forts modifient aussi leur voyelle aux **2e et 3e personnes du singulier** :
-- *e → i* : *geben → du **gibst**, er **gibt*** · *sprechen → du **sprichst***
-- *e → ie* : *sehen → du **siehst***, *lesen → du **liest***
-- *a → ä* : *fahren → du **fährst***, *schlafen → du **schläfst***
+Beaucoup de verbes forts modifient leur voyelle aux **2e et 3e personnes du singulier seulement**.
 
-Ce changement ne touche que ces deux personnes, et disparaît au pluriel.
+| Changement | Exemples |
+| *e → i* | *geben → du gibst, er gibt* · *sprechen → du sprichst* |
+| *e → ie* | *sehen → du siehst* · *lesen → du liest* |
+| *a → ä* | *fahren → du fährst* · *schlafen → du schläfst* |
 
-## Les verbes mixtes
-Ils changent de radical **et** prennent les terminaisons faibles : *bringen → brachte → gebracht*, *denken → dachte → gedacht*, *kennen → kannte → gekannt*, *wissen → wusste → gewusst*.
+Il disparaît au pluriel : *wir geben*, *ihr gebt*.
 
-## Les verbes en -ieren
-Toujours faibles, et **sans ge-** au participe : *studieren → studierte → studiert*, *telefonieren → telefoniert*.
+## Les cas particuliers
+| Famille | Ce qu’elle fait | Exemples |
+| **Mixtes** | Radical **modifié** + terminaisons **faibles** | *bringen → brachte → gebracht* · *denken → dachte → gedacht* |
+| Verbes en **-ieren** | Faibles, et **sans ge-** au participe | *studieren → studiert* · *telefonieren → telefoniert* |
 
-> Le seul apprentissage qui paie vraiment : les trois formes, dites ensemble, à voix haute. Les reconnaître sur une copie, c'est reconstruire le sens d'un texte à la lecture.`,
+> Le seul apprentissage qui paie vraiment : les **trois formes dites ensemble**, à voix haute. Les reconnaître, c’est reconstruire le sens d’un texte à la lecture — pas seulement réussir un exercice.`,
           },
           questions: [
             ['Qu’appelle-t-on les trois temps primitifs d’un verbe ?', ['Infinitif, prétérit, participe II', 'Présent, futur, passé', 'Infinitif, présent, parfait', 'Radical, préverbe, terminaison'], 0, 'Avec eux, toute la conjugaison se déduit.'],
@@ -1262,32 +1509,47 @@ Toujours faibles, et **sans ge-** au participe : *studieren → studierte → st
           axe: 'Le groupe verbal',
           lecon: {
             titre: 'Six verbes qui changent le sens de la phrase',
-            cours: `Les modaux disent le rapport du sujet à l'action : possibilité, obligation, volonté. Ils se conjuguent à part, et envoient l'infinitif à la fin.
+            cours: `Les modaux disent le **rapport du sujet à l’action** : possibilité, obligation, volonté. Ils se conjuguent à part, et envoient l’infinitif à la fin.
 
 ## Les six, et leurs nuances
-- **können** : pouvoir (capacité) — *Ich kann schwimmen.*
-- **dürfen** : avoir le droit — *Darf ich reinkommen?*
-- **müssen** : devoir (nécessité) — *Ich muss lernen.*
-- **sollen** : devoir (consigne venue d'autrui) — *Ich soll pünktlich sein.*
-- **wollen** : vouloir (volonté ferme) — *Ich will nach Berlin.*
-- **mögen** : aimer, apprécier — *Ich mag Schokolade.* Sa forme au subjonctif II, **möchte**, est la façon polie de dire « je voudrais ».
+| Modal | Ce qu’il exprime | Exemple |
+| **können** | Pouvoir — la **capacité** | *Ich kann schwimmen* |
+| **dürfen** | Avoir le **droit** | *Darf ich reinkommen?* |
+| **müssen** | Devoir — la **nécessité** | *Ich muss lernen* |
+| **sollen** | Devoir — une **consigne venue d’autrui** | *Ich soll pünktlich sein* |
+| **wollen** | Vouloir — la volonté ferme | *Ich will nach Berlin* |
+| **mögen** | Aimer, apprécier | *Ich mag Schokolade* |
+
+*möchte*, subjonctif II de *mögen*, est la façon **polie** de dire « je voudrais » — c’est la forme la plus employée des six.
 
 ## Une conjugaison à part
-Au singulier, la voyelle change et il n'y a **aucune terminaison** aux 1re et 3e personnes : *ich **kann**, du **kannst**, er **kann**, wir **können**, ihr **könnt**, sie **können***. Idem : *ich muss, ich darf, ich will, ich soll* (celui-ci sans changement de voyelle), *ich mag*.
+Au singulier, la voyelle change et il n’y a **aucune terminaison** aux 1re et 3e personnes.
 
-## La place de l'infinitif
-Le modal se conjugue en deuxième position, l'infinitif ferme la phrase : *Ich **muss** heute Abend **arbeiten**.* En subordonnée, tout part à la fin : *…, weil ich arbeiten **muss**.*
+| Personne | *können* |
+| ich | *kann* |
+| du | *kannst* |
+| er / sie / es | *kann* |
+| wir | *können* |
+| ihr | *könnt* |
+| sie / Sie | *können* |
 
-## Le prétérit
-Régulier, sans inflexion : *konnte, durfte, musste, sollte, wollte, mochte*. C'est le passé usuel des modaux, même à l'oral.
+Prétérit régulier, **sans inflexion** : *konnte, durfte, musste, sollte, wollte, mochte*. C’est le passé usuel des modaux, même à l’oral.
 
-## Le double infinitif
-Au parfait, le modal prend la forme de l'**infinitif** et non du participe : *Ich habe arbeiten **müssen*** (et non *gemusst*). Sans infinitif dépendant, en revanche, le participe existe : *Ich habe es **gemusst**.*
+## Deux constructions
+| Cas | Ce qui se passe | Exemple |
+| Principale | Le modal en 2e position, l’infinitif à la fin | *Ich muss heute Abend arbeiten* |
+| Subordonnée | Tout part à la fin | *…, weil ich arbeiten muss* |
+| Parfait avec infinitif | **Double infinitif** : pas de participe | *Ich habe arbeiten müssen* |
+| Parfait sans infinitif | Le participe existe | *Ich habe es gemusst* |
 
 ## Le piège de la négation
-*Ich muss nicht* = « je ne suis pas obligé », et non « je ne dois pas ». L'interdiction se dit **nicht dürfen** : *Du **darfst** hier nicht rauchen.*
+| Structure | Ce qu’elle dit vraiment |
+| *Ich muss nicht* | Je **ne suis pas obligé** |
+| *Ich darf nicht* | Je **n’ai pas le droit** — l’interdiction |
 
-> *sollen* rapporte une consigne extérieure — *Ich soll den Arzt fragen* signifie « on m'a dit de demander au médecin ». C'est un outil précieux pour rapporter un propos sans le prendre à son compte.`,
+> C’est l’un des contresens les plus coûteux : *Du musst nicht rauchen* ne veut **pas** dire « tu ne dois pas fumer », mais « tu n’es pas obligé de fumer ».
+
+Et *sollen* rapporte une consigne **extérieure** : *Ich soll den Arzt fragen* signifie « on m’a dit de demander au médecin ». C’est un outil précieux pour rapporter un propos sans le prendre à son compte.`,
           },
           questions: [
             ['Où se place l’infinitif dépendant d’un modal, dans une principale ?', ['À la fin de la phrase', 'Juste après le modal', 'Devant le sujet', 'En première position'], 0, '*Ich muss heute Abend arbeiten.*'],
@@ -1305,31 +1567,36 @@ Au parfait, le modal prend la forme de l'**infinitif** et non du participe : *Ic
           axe: 'Le groupe verbal',
           lecon: {
             titre: 'Le préverbe part à la fin — sauf quand il ne part pas',
-            cours: `Un même radical peut donner dix verbes différents selon le préverbe qui le précède. Encore faut-il savoir si ce préverbe se détache.
+            cours: `Un même radical peut donner dix verbes différents selon le préverbe qui le précède. Encore faut-il savoir si ce préverbe **se détache**.
 
-## Le test de l'accent
-Le préverbe **séparable** est **accentué** : *ÁN-rufen*, *ÁUF-stehen*, *ÉIN-kaufen*. Le préverbe **inséparable** ne l'est pas : *be-SÚCHEN*, *ver-STÉHEN*. C'est le seul critère fiable, et il s'entend.
+## Le test de l’accent
+| Type | Accentué ? | Exemple |
+| **Séparable** | **Oui**, sur le préverbe | *ÁN-rufen*, *ÁUF-stehen*, *ÉIN-kaufen* |
+| **Inséparable** | Non, sur le radical | *be-SÚCHEN*, *ver-STÉHEN* |
 
-## Les préverbes séparables
-*ab-, an-, auf-, aus-, ein-, mit-, nach-, vor-, zu-, zurück-, weg-, los-, hin-, her-, zusammen-*…
-Dans une principale, le préverbe **se détache et ferme la phrase** : *Ich **stehe** um sieben Uhr **auf**.* / *Er **ruft** seine Mutter **an**.*
+C’est le **seul** critère fiable — et il s’entend.
 
-## Les préverbes inséparables
-*be-, ge-, er-, ver-, zer-, ent-, emp-, miss-*. Ils restent soudés en toute circonstance, et le participe passé **n'a pas de ge-** : *besuchen → besucht*, *verstehen → verstanden*, *erzählen → erzählt*.
+## Les deux listes
+| Séparables | Inséparables |
+| *ab-, an-, auf-, aus-, ein-* | *be-, ge-, er-* |
+| *mit-, nach-, vor-, zu-* | *ver-, zer-, ent-* |
+| *zurück-, weg-, los-, hin-, her-* | *emp-, miss-* |
 
-## Le participe et le zu des séparables
-- participe : le *ge-* s'intercale — *auf**ge**standen*, *ein**ge**kauft*, *an**ge**rufen*
-- infinitif avec *zu* : le *zu* s'intercale aussi, en un seul mot — *auf**zu**stehen*, *ein**zu**kaufen*
-
-## En subordonnée, tout se recolle
-Le verbe conjugué partant à la fin, il rejoint son préverbe : *…, weil er um sieben Uhr **aufsteht**.* Le verbe s'écrit alors en un seul mot.
+## Ce que chacun fait
+| Situation | Séparable | Inséparable |
+| Dans une principale | Le préverbe **ferme la phrase** : *Ich stehe um sieben Uhr auf* | Rien ne bouge : *Ich besuche meine Tante* |
+| Au participe | Le *ge-* **s’intercale** : *aufgestanden* | **Pas de ge-** : *besucht*, *verstanden* |
+| Avec *zu* | Le *zu* s’intercale : *aufzustehen* | *zu* reste devant : *zu besuchen* |
+| En subordonnée | Tout se **recolle** : *…, weil er aufsteht* | Inchangé |
 
 ## Les préverbes à double statut
-*durch-, über-, unter-, um-, wieder-* sont séparables ou non selon le sens :
-- *Ich setze **über*** (je traverse en bateau) — séparable, sens concret
-- *Ich über**setze** den Text* (je traduis) — inséparable, sens figuré
+*durch-, über-, unter-, um-, wieder-* sont séparables ou non **selon le sens**.
 
-> Le sens dépend entièrement du préverbe : *kommen* (venir), *ankommen* (arriver), *bekommen* (recevoir), *mitkommen* (accompagner), *umkommen* (périr). On n'apprend jamais un verbe allemand sans son préverbe.`,
+| Phrase | Statut | Sens |
+| *Ich setze über* | Séparable | Je traverse en bateau — sens **concret** |
+| *Ich übersetze den Text* | Inséparable | Je traduis — sens **figuré** |
+
+> Le sens dépend **entièrement** du préverbe : *kommen* (venir), *ankommen* (arriver), *bekommen* (recevoir), *mitkommen* (accompagner), *umkommen* (périr). On n’apprend jamais un verbe allemand sans son préverbe.`,
           },
           questions: [
             ['Comment reconnaître un préverbe séparable ?', ['Il porte l’accent du mot', 'Il commence par be-', 'Il se termine par -en', 'Il est toujours plus long'], 0, '*ÁNrufen* contre *be-SÚCHEN* : le critère s’entend.'],
@@ -1347,28 +1614,48 @@ Le verbe conjugué partant à la fin, il rejoint son préverbe : *…, weil er u
           axe: 'Le groupe verbal',
           lecon: {
             titre: 'sich, à l’accusatif ou au datif',
-            cours: `Le pronom réfléchi allemand a deux séries, et la différence n'est pas décorative : elle change la construction de la phrase.
+            cours: `Le pronom réfléchi allemand a **deux séries**, et la différence n’est pas décorative : elle change la construction de la phrase.
 
-## Le réfléchi à l'accusatif
-La série est *mich, dich, **sich**, uns, euch, **sich***. C'est le cas de la grande majorité des verbes pronominaux : *sich freuen* (se réjouir), *sich waschen* (se laver), *sich setzen* (s'asseoir), *sich erinnern* (se souvenir), *sich beeilen* (se dépêcher), *sich interessieren für* (s'intéresser à).
+## Les deux séries
+| Personne | Accusatif | Datif |
+| ich | *mich* | *mir* |
+| du | *dich* | *dir* |
+| er / sie / es | *sich* | *sich* |
+| wir | *uns* | *uns* |
+| ihr | *euch* | *euch* |
+| sie / Sie | *sich* | *sich* |
 
-*Ich freue **mich**.* / *Er interessiert **sich** für Musik.*
+Elles ne diffèrent **qu’aux deux premières personnes du singulier**.
 
-## Le réfléchi au datif
-La série change aux deux premières personnes du singulier : ***mir**, **dir**, sich, uns, euch, sich*. On l'emploie dès qu'il y a **déjà un complément d'objet direct** : *Ich wasche **mir** die Hände.* / *Ich sehe **mir** den Film an.* / *Ich kaufe **mir** ein Buch.*
+## La règle qui choisit
+| Y a-t-il déjà un COD ? | Le réfléchi est au… | Exemple |
+| **Non** | Accusatif | *Ich wasche mich* |
+| **Oui** | **Datif** | *Ich wasche mir die Hände* |
 
-La règle est mécanique : un COD dans la phrase → le réfléchi passe au datif.
+Elle est mécanique : un COD dans la phrase, et le réfléchi passe au datif. *Ich sehe mir den Film an* · *Ich kaufe mir ein Buch*.
 
 ## La place du pronom
-Juste **après le verbe conjugué** : *Ich freue **mich** auf die Ferien.* En cas d'inversion, il suit toujours le verbe et peut précéder un sujet nominal : *Gestern hat **sich** mein Bruder verletzt.* En subordonnée, il suit le sujet : *…, weil ich **mich** freue.*
+| Contexte | Où il va | Exemple |
+| Principale | Juste après le verbe conjugué | *Ich freue mich auf die Ferien* |
+| Inversion | Après le verbe, avant un sujet nominal | *Gestern hat sich mein Bruder verletzt* |
+| Subordonnée | Après le sujet | *…, weil ich mich freue* |
 
 ## Les prépositions qui vont avec
-Beaucoup de verbes pronominaux sont liés à une préposition fixe, à apprendre avec eux : *sich freuen **auf** + accusatif* (se réjouir de ce qui vient), *sich freuen **über** + accusatif* (se réjouir de ce qui est arrivé), *sich interessieren **für***, *sich erinnern **an** + accusatif*, *sich ärgern **über***.
+| Verbe | Préposition | Nuance |
+| *sich freuen* | *auf* + accusatif | Se réjouir de ce **qui vient** |
+| *sich freuen* | *über* + accusatif | Se réjouir de ce **qui est arrivé** |
+| *sich interessieren* | *für* + accusatif | S’intéresser à |
+| *sich erinnern* | *an* + accusatif | Se souvenir de |
+| *sich ärgern* | *über* + accusatif | S’agacer de |
 
 ## Les faux pronominaux
-Des verbes français pronominaux qui ne le sont pas en allemand : *aufstehen* (se lever), *spazieren gehen* (se promener), *passieren* (se passer), *heißen* (s'appeler), *bleiben* (se maintenir). Et l'inverse existe : *sich verspäten* (être en retard) est pronominal en allemand seulement.
+| Pronominal en français, pas en allemand | Pronominal en allemand, pas en français |
+| *aufstehen* — se lever | *sich verspäten* — être en retard |
+| *spazieren gehen* — se promener | |
+| *passieren* — se passer | |
+| *heißen* — s’appeler | |
 
-> *sich* ne s'écrit jamais avec une majuscule, même dans le vouvoiement : *Setzen Sie **sich** bitte!*`,
+> *sich* ne s’écrit **jamais** avec une majuscule, même dans le vouvoiement : *Setzen Sie sich bitte!* Le *Sie* la prend, le *sich* non.`,
           },
           questions: [
             ['Quelle est la forme du réfléchi à la 3e personne, à l’accusatif comme au datif ?', ['sich', 'ihn', 'ihm', 'es'], 0, '*sich* couvre les deux cas à la 3e personne, singulier et pluriel.'],
@@ -1387,30 +1674,42 @@ Des verbes français pronominaux qui ne le sont pas en allemand : *aufstehen* (s
           axe: 'Les temps',
           lecon: {
             titre: 'Un seul présent, et il dit aussi le futur',
-            cours: `L'allemand n'a qu'une forme de présent, là où l'anglais en a deux : *ich spiele* traduit aussi bien « je joue » que « je suis en train de jouer ».
+            cours: `L’allemand n’a **qu’une** forme de présent, là où l’anglais en a deux : *ich spiele* traduit aussi bien « je joue » que « je suis en train de jouer ».
 
 ## Les terminaisons
-Radical (infinitif moins *-en*) + *-e, -st, -t, -en, -t, -en* :
-*ich spiel**e**, du spiel**st**, er spiel**t**, wir spiel**en**, ihr spiel**t**, sie spiel**en***.
+| Personne | Terminaison | *spielen* |
+| ich | -e | *spiele* |
+| du | -st | *spielst* |
+| er / sie / es | -t | *spielt* |
+| wir | -en | *spielen* |
+| ihr | -t | *spielt* |
+| sie / Sie | -en | *spielen* |
 
 ## Les aménagements de prononciation
-- radical en **-d, -t, -n** précédé d'une consonne : on intercale un *e* — *du arbeit**e**st*, *er arbeit**e**t*, *ihr find**e**t*
-- radical en **-s, -ß, -z, -x** : le *-st* de la 2e personne perd son *s* — *du heiß**t***, *du sitz**t***, *du reis**t***
-- radical en **-el** : le *e* tombe à la 1re personne — *ich samm**le***
+| Le radical finit par… | Ce qui se passe | Exemple |
+| -d, -t, -n après consonne | On intercale un **e** | *du arbeitest*, *ihr findet* |
+| -s, -ß, -z, -x | Le -st perd son **s** | *du heißt*, *du sitzt* |
+| -el | Le e tombe à la 1re personne | *ich sammle* |
 
 ## Les verbes forts
-Aux **2e et 3e personnes du singulier seulement**, la voyelle change : *e → i* (*du gibst, er gibt* · *du sprichst*), *e → ie* (*du siehst, er sieht* · *du liest*), *a → ä* (*du fährst, er fährt* · *du schläfst*), *au → äu* (*du läufst*).
+Aux **2e et 3e personnes du singulier seulement** :
 
-## Les trois irréguliers majeurs
-*sein* : *bin, bist, ist, sind, seid, sind*. *haben* : *habe, hast, hat, haben, habt, haben*. *werden* : *werde, wirst, wird, werden, werdet, werden*.
+| Changement | Exemples |
+| *e → i* | *du gibst, er gibt* · *du sprichst* |
+| *e → ie* | *du siehst, er sieht* · *du liest* |
+| *a → ä* | *du fährst, er fährt* · *du schläfst* |
+| *au → äu* | *du läufst* |
 
-## Le présent vaut futur
-Avec un adverbe de temps, le présent suffit à dire l'avenir — et c'est la tournure la plus naturelle : *Morgen **fahre** ich nach Berlin.* Le futur en *werden* n'est utile que sans repère temporel, ou pour insister.
+## Les trois valeurs du présent
+| Valeur | Exemple |
+| Le **moment présent** | *Ich spiele jetzt* |
+| L’**habitude** | *Ich spiele jeden Tag* |
+| L’**avenir proche** | *Morgen fahre ich nach Berlin* |
+
+> Avec un adverbe de temps, le présent **suffit** à dire l’avenir — et c’est la tournure la plus naturelle. Le futur en *werden* n’est utile que **sans** repère temporel, ou pour insister.
 
 ## Le présent avec seit
-Là où le français dit « j'apprends… depuis trois ans », l'allemand fait de même, au présent : *Ich lerne **seit** drei Jahren Deutsch.* Employer le parfait ici est une faute.
-
-> Le présent allemand couvre donc trois valeurs : le moment présent, l'habitude, et l'avenir proche. Une forme, trois emplois.`,
+Là où le français dit « j’apprends… depuis trois ans », l’allemand fait **de même**, au présent : *Ich lerne seit drei Jahren Deutsch*. Employer le parfait ici est une faute — c’est l’anglais qui fait autrement, pas le français.`,
           },
           questions: [
             ['Quelle est la terminaison de la 2e personne du singulier ?', ['-st', '-t', '-e', '-en'], 0, '*du spielst*, *du lernst*, *du wohnst*.'],
@@ -1428,28 +1727,34 @@ Là où le français dit « j'apprends… depuis trois ans », l'allemand fait d
           axe: 'Les temps',
           lecon: {
             titre: 'Le passé de l’écrit et du récit',
-            cours: `Le prétérit est le temps du **récit** : romans, presse, exposés, comptes rendus. À l'oral, il ne survit que pour quelques verbes — mais ceux-là sont les plus fréquents de la langue.
+            cours: `Le prétérit est le temps du **récit** : romans, presse, exposés, comptes rendus. À l’oral, il ne survit que pour quelques verbes — mais ceux-là sont les plus fréquents de la langue.
 
-## Les verbes faibles
-Radical + **-te** + terminaisons. Les 1re et 3e personnes du singulier sont **identiques** et sans terminaison supplémentaire :
-*ich spiel**te**, du spiel**test**, er spiel**te**, wir spiel**ten**, ihr spiel**tet**, sie spiel**ten***.
+## Les trois familles
+| Famille | Formation | Exemple |
+| **Faibles** | Radical + **-te** + terminaisons | *ich spielte, du spieltest, er spielte* |
+| **Forts** | Voyelle changée, **aucune terminaison** aux 1re et 3e | *ich ging, du gingst, er ging* |
+| **Mixtes** | Radical modifié + terminaisons faibles | *bringen → brachte* · *denken → dachte* |
 
-## Les verbes forts
-La voyelle change, et les 1re et 3e personnes n'ont **aucune terminaison** :
-*ich **ging**, du **gingst**, er **ging**, wir **gingen**, ihr **gingt**, sie **gingen***.
+Dans les deux premières, les 1re et 3e personnes du singulier sont **identiques** : c’est le contexte qui les distingue.
 
-À connaître par cœur : *gehen → ging*, *kommen → kam*, *sehen → sah*, *geben → gab*, *fahren → fuhr*, *sprechen → sprach*, *nehmen → nahm*, *schreiben → schrieb*, *bleiben → blieb*, *finden → fand*, *trinken → trank*, *essen → aß*.
+## Les forts à connaître par cœur
+| Infinitif | Prétérit | Infinitif | Prétérit |
+| *gehen* | *ging* | *nehmen* | *nahm* |
+| *kommen* | *kam* | *schreiben* | *schrieb* |
+| *sehen* | *sah* | *bleiben* | *blieb* |
+| *geben* | *gab* | *finden* | *fand* |
+| *fahren* | *fuhr* | *trinken* | *trank* |
+| *sprechen* | *sprach* | *essen* | *aß* |
 
-## Les verbes mixtes
-Radical modifié, terminaisons faibles : *bringen → brachte*, *denken → dachte*, *kennen → kannte*, *wissen → wusste*.
+## Ceux qui survivent à l’oral
+*sein → war* · *haben → hatte* · *werden → wurde* · et les six modaux : *konnte, durfte, musste, sollte, wollte, mochte*.
 
-## Ceux qui survivent à l'oral
-*sein → **war***, *haben → **hatte***, *werden → **wurde***, et les six modaux (*konnte, durfte, musste, sollte, wollte, mochte*). Dire *ich bin müde gewesen* n'est pas faux, mais *ich **war** müde* est ce que tout le monde dit.
+Dire *ich bin müde gewesen* n’est pas faux — mais *ich war müde* est ce que **tout le monde** dit.
 
 ## Le plus-que-parfait
-Prétérit de *haben* ou *sein* + participe II : *Ich **hatte** gegessen*, *Er **war** gegangen*. Il sert à marquer l'antériorité, surtout après *nachdem* : ***Nachdem** ich gegessen **hatte**, ging ich schlafen.*
+Prétérit de *haben* ou *sein* + participe II : *Ich hatte gegessen*, *Er war gegangen*. Il marque l’antériorité, surtout après *nachdem* : *Nachdem ich gegessen hatte, ging ich schlafen*.
 
-> Règle de choix à retenir : à l'oral et dans une lettre, on raconte au parfait ; dans un texte narratif ou un résumé écrit, on raconte au prétérit. Mélanger les deux dans un même récit fait désordre.`,
+> Règle de choix : à l’**oral** et dans une lettre, on raconte au **parfait** ; dans un texte **narratif** ou un résumé écrit, on raconte au **prétérit**. Mélanger les deux dans un même récit fait désordre — et se voit.`,
           },
           questions: [
             ['Le prétérit est le temps…', ['De l’écrit et du récit', 'De l’oral courant', 'Du futur proche', 'De l’hypothèse'], 0, 'À l’oral, on raconte au parfait — sauf pour *sein*, *haben* et les modaux.'],
@@ -1467,30 +1772,37 @@ Prétérit de *haben* ou *sein* + participe II : *Ich **hatte** gegessen*, *Er *
           axe: 'Les temps',
           lecon: {
             titre: 'Le passé qu’on parle',
-            cours: `Le parfait (Perfekt) est le passé de la conversation, du courriel, du message. Il se forme en deux morceaux, comme le passé composé français — mais l'auxiliaire ne se choisit pas de la même façon.
+            cours: `Le parfait est le passé de la **conversation**, du courriel, du message. Il se forme en deux morceaux, comme le passé composé français — mais l’auxiliaire ne se choisit **pas** de la même façon.
 
 ## La formation
-**haben** ou **sein** conjugué au présent + **participe II** rejeté en fin de phrase : *Ich **habe** einen Film **gesehen**.* / *Ich **bin** nach Berlin **gefahren**.*
+**haben** ou **sein** au présent + **participe II** rejeté en fin de phrase.
+
+*Ich habe einen Film gesehen.* · *Ich bin nach Berlin gefahren.*
 
 ## Le participe II
-- verbes faibles : **ge-** + radical + **-t** — *gespielt*, *gelernt*, *gemacht*
-- verbes forts : **ge-** + radical (souvent modifié) + **-en** — *gesehen*, *gefahren*, *geschrieben*, *gegessen*
-- verbes en **-ieren** : pas de *ge-* — *studiert*, *telefoniert*
-- préverbe **inséparable** : pas de *ge-* — *besucht*, *verstanden*, *erzählt*
-- préverbe **séparable** : le *ge-* s'intercale — *aufgestanden*, *eingekauft*
+| Type de verbe | Formation | Exemples |
+| Faible | **ge-** + radical + **-t** | *gespielt*, *gelernt*, *gemacht* |
+| Fort | **ge-** + radical modifié + **-en** | *gesehen*, *gefahren*, *gegessen* |
+| En **-ieren** | **Pas** de ge- | *studiert*, *telefoniert* |
+| Préverbe **inséparable** | **Pas** de ge- | *besucht*, *verstanden*, *erzählt* |
+| Préverbe **séparable** | Le ge- **s’intercale** | *aufgestanden*, *eingekauft* |
 
 ## haben ou sein
-**sein** s'emploie avec :
-- les verbes de déplacement d'un point à un autre : *gehen, kommen, fahren, fliegen, laufen, reisen, steigen*
-- les verbes de changement d'état : *aufstehen, einschlafen, aufwachen, wachsen, sterben*
-- *sein*, *bleiben*, *werden*, *passieren*, *geschehen*, *begegnen*
+| On emploie **sein** avec | Exemples |
+| Les verbes de **déplacement** d’un point à un autre | *gehen, kommen, fahren, fliegen, laufen, reisen, steigen* |
+| Les verbes de **changement d’état** | *aufstehen, einschlafen, aufwachen, wachsen, sterben* |
+| Six à part | *sein*, *bleiben*, *werden*, *passieren*, *geschehen*, *begegnen* |
 
-**haben** ailleurs — y compris pour un verbe de mouvement employé transitivement : *Ich habe das Auto gefahren.*
+**haben** ailleurs — y compris pour un verbe de mouvement employé **transitivement** : *Ich habe das Auto gefahren*.
 
-## L'ordre des mots
-L'auxiliaire est en **deuxième position**, le participe **à la fin** : c'est la parenthèse verbale. En subordonnée, l'auxiliaire passe derrière le participe : *…, weil ich einen Film gesehen **habe**.*
+## L’ordre des mots
+| Contexte | L’auxiliaire | Le participe |
+| Principale | **2e position** | À la fin |
+| Subordonnée | **À la toute fin**, après le participe | Avant l’auxiliaire |
 
-> Le français distingue passé composé et imparfait ; l'allemand, lui, distingue registres (parfait à l'oral, prétérit à l'écrit) et non aspects. Traduire un imparfait par un prétérit est donc juste dans un récit écrit, et par un parfait dans un dialogue.`,
+*…, weil ich einen Film gesehen habe.*
+
+> Le français distingue passé composé et imparfait — une opposition d’**aspect**. L’allemand, lui, distingue parfait et prétérit — une opposition de **registre**. Un imparfait français se traduit donc par un prétérit dans un récit écrit, et par un parfait dans un dialogue.`,
           },
           questions: [
             ['Où se place le participe II dans une principale au parfait ?', ['À la fin de la phrase', 'Juste après l’auxiliaire', 'En deuxième position', 'Devant le sujet'], 0, 'C’est la parenthèse verbale : l’auxiliaire ouvre, le participe ferme.'],
@@ -1508,30 +1820,40 @@ L'auxiliaire est en **deuxième position**, le participe **à la fin** : c'est l
           axe: 'Les temps',
           lecon: {
             titre: 'werden + infinitif, et le présent qui suffit souvent',
-            cours: `L'allemand a un futur, mais il ne l'emploie pas aussi souvent que le français. Savoir quand il est nécessaire vaut mieux que de le placer partout.
+            cours: `L’allemand a un futur, mais il ne l’emploie **pas** aussi souvent que le français. Savoir quand il est nécessaire vaut mieux que de le placer partout.
 
 ## Le Futur I
-**werden** conjugué + **infinitif** en fin de phrase : *Ich **werde** morgen nach Berlin **fahren**.*
-Conjugaison de *werden* : *ich werde, du **wirst**, er **wird**, wir werden, ihr werdet, sie werden*.
+**werden** conjugué + **infinitif** en fin de phrase : *Ich werde morgen nach Berlin fahren*.
 
-## Le présent le remplace
-Dès qu'un adverbe de temps précise l'avenir, le présent suffit — et c'est la forme la plus courante : *Morgen **fahre** ich nach Berlin.* / *Nächstes Jahr **mache** ich mein Abitur.* Employer le futur dans ce cas n'est pas faux, seulement plus lourd.
+Conjugaison de *werden* : *ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden*.
 
-## Quand le futur est vraiment utile
-- sans repère de temps, pour lever l'ambiguïté : *Ich **werde** dir helfen.*
-- pour une promesse, une résolution, une prédiction : *Das **wird** nicht einfach **sein**.*
-- pour marquer une insistance : *Du **wirst** jetzt aufräumen!*
+## Présent ou futur
+| Situation | Ce qu’on emploie | Exemple |
+| Un adverbe de temps précise l’avenir | Le **présent** suffit | *Morgen fahre ich nach Berlin* |
+| Aucun repère de temps | Le **futur**, pour lever l’ambiguïté | *Ich werde dir helfen* |
+| Une promesse, une prédiction | Le futur | *Das wird nicht einfach sein* |
+| Une insistance, presque une menace | Le futur | *Du wirst jetzt aufräumen!* |
+
+Employer le futur avec un adverbe de temps n’est pas faux — seulement plus lourd.
 
 ## La valeur de supposition
-Le futur exprime aussi une **hypothèse sur le présent**, souvent renforcée par *wohl* : *Er **wird** wohl krank **sein*** = « il doit être malade ». C'est un emploi fréquent, et le contresens est facile.
+Le futur exprime aussi une **hypothèse sur le présent**, souvent renforcée par *wohl*.
 
-## Le Futur II
-*werden* + participe II + *haben* / *sein* : *Bis morgen **werde** ich das Buch **gelesen haben**.* Rare, il dit une action achevée dans l'avenir — ou une supposition sur le passé : *Er wird es vergessen haben* (il a dû l'oublier).
+| Phrase | Ce qu’elle dit vraiment |
+| *Er wird wohl krank sein* | « Il **doit** être malade » — pas « il sera malade » |
+| *Er wird es vergessen haben* | « Il a dû l’oublier » — Futur II de supposition |
+
+> C’est un emploi fréquent, et le contresens est facile : un futur allemand ne parle pas toujours de l’avenir.
 
 ## Attention à werden
-Le même verbe sert à trois choses : « devenir » (*Er wird Arzt*), le futur (*Er wird kommen*), le passif (*Das Haus wird gebaut*). C'est ce qui suit qui tranche — un nom, un infinitif, ou un participe II.
+Le même verbe sert à **trois** choses. C’est ce qui **suit** qui tranche.
 
-> En subordonnée, les deux morceaux se rejoignent à la fin, et c'est *werden* qui ferme : *…, dass er kommen **wird**.*`,
+| Ce qui suit *werden* | Ce que la phrase exprime | Exemple |
+| Un **nom** ou un adjectif | « Devenir » | *Er wird Arzt* |
+| Un **infinitif** | Le **futur** | *Er wird kommen* |
+| Un **participe II** | Le **passif** | *Das Haus wird gebaut* |
+
+En subordonnée, les deux morceaux se rejoignent à la fin, et c’est *werden* qui ferme : *…, dass er kommen wird*.`,
           },
           questions: [
             ['Comment se forme le Futur I ?', ['werden + infinitif', 'sein + participe II', 'haben + infinitif', 'werden + participe II'], 0, '*Ich werde morgen fahren*, l’infinitif en fin de phrase.'],
@@ -1549,33 +1871,45 @@ Le même verbe sert à trois choses : « devenir » (*Er wird Arzt*), le futur (
           axe: 'Les temps',
           lecon: {
             titre: 'Trois personnes, trois formes',
-            cours: `On ne donne pas un ordre de la même façon à un camarade, à un groupe ou à un adulte qu'on vouvoie. L'allemand a une forme pour chacun.
+            cours: `On ne donne pas un ordre de la même façon à un camarade, à un groupe ou à un adulte qu’on vouvoie. L’allemand a une forme pour chacun.
 
-## La forme du du
-Radical du présent **sans terminaison** et **sans pronom** : *Komm!*, *Geh!*, *Lern!*, *Mach!* Un *-e* final est possible à l'écrit soutenu (*Gehe!*), obligatoire après *-d, -t, -ig* : *Arbeit**e**!*, *Entschuldig**e**!*
+## Les quatre formes
+| Personne | Formation | Pronom ? | Exemple |
+| **du** | Radical du présent, **sans terminaison** | **Non** | *Komm!*, *Geh!*, *Mach!* |
+| **ihr** | La forme du présent | **Non** | *Kommt!*, *Arbeitet!* |
+| **Sie** | L’infinitif + *Sie* | **Oui** | *Kommen Sie!* |
+| **wir** | L’infinitif + *wir* | Oui | *Gehen wir!* — allons-y |
 
-Les verbes à alternance *e → i / ie* la **gardent** : *geben → **Gib**!*, *nehmen → **Nimm**!*, *lesen → **Lies**!*, *sehen → **Sieh**!*
-Ceux à alternance *a → ä* la **perdent** : *fahren → **Fahr**!*, *schlafen → **Schlaf**!*, *laufen → **Lauf**!*
+Un *-e* final est possible à l’écrit soutenu (*Gehe!*), et **obligatoire** après -d, -t, -ig : *Arbeite!*, *Entschuldige!*
 
-## La forme du ihr
-C'est la forme du présent, **sans pronom** : *Komm**t**!*, *Geh**t**!*, *Arbeit**et**!*
+## Les alternances vocaliques
+| Alternance | À l’impératif du *du* | Exemples |
+| *e → i / ie* | Elle se **garde** | *Gib!*, *Nimm!*, *Lies!*, *Sieh!* |
+| *a → ä* | Elle se **perd** | *Fahr!*, *Schlaf!*, *Lauf!* |
 
-## La forme du Sie
-Le verbe à l'infinitif **suivi de Sie** : *Komm**en Sie**!*, *Setz**en Sie** sich!* Le pronom se maintient, contrairement aux deux autres formes.
+C’est le seul point vraiment irrégulier de l’impératif.
 
-## La forme du wir
-Même construction, avec *wir* : *Gehen wir!* (allons-y), *Fangen wir an!*
-
-## sein est irrégulier
+## sein est à part
 *Sei ruhig!* (du) · *Seid ruhig!* (ihr) · *Seien Sie ruhig!* (Sie).
 
-## Adoucir l'ordre
-L'allemand ajoute volontiers *bitte*, *mal*, *doch*, ou les combine : *Komm **doch mal** her!*, *Machen Sie **bitte** die Tür zu!* Sans ces petits mots, un impératif allemand paraît sec.
+## Adoucir l’ordre
+| Particule | Ce qu’elle ajoute |
+| *bitte* | La politesse |
+| *mal* | La légèreté, l’occasion |
+| *doch* | L’insistance amicale |
+
+*Komm doch mal her!* · *Machen Sie bitte die Tür zu!*
+
+> Sans ces petits mots, un impératif allemand paraît **sec** — parfois hostile. Les ajouter n’est pas un ornement : c’est ce qui rend l’ordre acceptable.
 
 ## La place du verbe
-Le verbe ouvre la phrase, en **première position** — et le préverbe séparable part à la fin : *Steh bitte **auf**!*, *Ruf mich **an**!*
+Le verbe **ouvre** la phrase, en première position — et le préverbe séparable part **à la fin** : *Steh bitte auf!*, *Ruf mich an!*
 
-> Autres façons de commander sans impératif : l'infinitif seul sur les panneaux (*Nicht rauchen!*), le futur menaçant (*Du wirst jetzt lernen!*) ou la question polie (*Könnten Sie mir helfen?*).`,
+## Commander sans impératif
+| Moyen | Exemple | Registre |
+| L’infinitif seul | *Nicht rauchen!* | Panneaux, consignes |
+| Le futur | *Du wirst jetzt lernen!* | Menaçant |
+| La question au subjonctif II | *Könnten Sie mir helfen?* | Très poli |`,
           },
           questions: [
             ['Quelle est la forme d’impératif de « kommen » pour « du » ?', ['Komm!', 'Kommst!', 'Komme du!', 'Kommen!'], 0, 'Radical sans terminaison et sans pronom.'],
@@ -1593,32 +1927,39 @@ Le verbe ouvre la phrase, en **première position** — et le préverbe séparab
           axe: 'Les temps',
           lecon: {
             titre: 'würde, hätte, wäre : l’irréel et la politesse',
-            cours: `Le subjonctif II (Konjunktiv II) est l'équivalent du conditionnel français. Il sert à trois choses : l'hypothèse, le souhait et la politesse.
+            cours: `Le subjonctif II est l’équivalent du **conditionnel** français. Il sert à trois choses : l’**hypothèse**, le **souhait** et la **politesse**.
 
-## La forme usuelle : würde + infinitif
-*ich **würde**, du **würdest**, er **würde**, wir **würden**, ihr **würdet**, sie **würden*** + infinitif en fin de phrase : *Ich **würde** gern nach Berlin **fahren**.* C'est la construction à employer par défaut pour la plupart des verbes.
+## Les deux façons de le former
+| Forme | Quand l’employer | Exemple |
+| **würde** + infinitif | Par **défaut**, pour la plupart des verbes | *Ich würde gern nach Berlin fahren* |
+| La forme **simple** | Pour une petite liste de verbes très fréquents | *Ich hätte gern einen Kaffee* |
 
-## Les formes propres à connaître
-Certains verbes ont une forme simple, plus courante que *würde* :
-- *sein → **wäre*** · *haben → **hätte***
-- *werden → **würde*** · *wissen → **wüsste***
-- modaux : *können → **könnte***, *müssen → **müsste***, *dürfen → **dürfte***, *mögen → **möchte***, *sollen → **sollte***, *wollen → **wollte***
+## Les formes simples à connaître
+| Verbe | Subjonctif II | Verbe | Subjonctif II |
+| *sein* | *wäre* | *können* | *könnte* |
+| *haben* | *hätte* | *müssen* | *müsste* |
+| *werden* | *würde* | *dürfen* | *dürfte* |
+| *wissen* | *wüsste* | *mögen* | *möchte* |
+| | | *sollen* | *sollte* |
 
 Elles se forment sur le **prétérit**, avec **inflexion** et un *-e* : *war → wäre*, *hatte → hätte*, *konnte → könnte*.
 
-## L'irréel
-*Wenn ich Zeit **hätte**, **würde** ich kommen.* (si j'avais le temps, je viendrais) La subordonnée en *wenn* et la principale portent toutes deux le subjonctif II. *Wenn* peut disparaître, et le verbe prend alors la première place : ***Hätte** ich Zeit, würde ich kommen.*
+## Les trois emplois
+| Emploi | Structure | Exemple |
+| L’**irréel** | *wenn* + subj. II, puis *würde* | *Wenn ich Zeit hätte, würde ich kommen* |
+| La **politesse** | Forme simple de préférence | *Könnten Sie mir helfen?* · *Ich möchte bitte zahlen* |
+| Le **souhait**, le conseil | *wenn nur…* · *solltest* | *Wenn er nur hier wäre!* · *Du solltest mehr schlafen* |
 
-## La politesse
-C'est l'emploi le plus quotidien : ***Könnten** Sie mir helfen?* / *Ich **hätte** gern einen Kaffee.* / *Ich **möchte** bitte zahlen.* / ***Wären** Sie so freundlich…* Un présent à la place ferait brusque.
+> *Wenn* peut **disparaître** — et le verbe prend alors la **première** place : *Hätte ich Zeit, würde ich kommen*. C’est une tournure élégante, très valorisée à l’écrit.
 
-## Le souhait et le conseil
-*Wenn er nur hier **wäre**!* (si seulement il était là) · *Du **solltest** mehr schlafen.* (tu devrais dormir davantage) · *An deiner Stelle **würde** ich es machen.*
+## La politesse, l’emploi le plus quotidien
+Un présent à la place ferait brusque : *Ich will einen Kaffee* sonne comme un ordre, *Ich hätte gern einen Kaffee* comme une demande.
 
 ## als ob
-Après *als ob* (comme si), le subjonctif II est de règle : *Er tut so, **als ob** er alles **wüsste**.*
+Après *als ob* — « comme si » — le subjonctif II est de **règle** : *Er tut so, als ob er alles wüsste.*
 
-> Le subjonctif I, lui, sert au discours indirect de la presse (*Er sagte, er **sei** krank*) : il se rencontre à la lecture bien plus qu'il ne s'écrit.`,
+## Et le subjonctif I ?
+Il sert au **discours indirect de la presse** : *Er sagte, er sei krank*. On le rencontre à la **lecture** bien plus qu’on ne l’écrit soi-même — le reconnaître suffit.`,
           },
           questions: [
             ['Quelle est la construction usuelle du subjonctif II ?', ['würde + infinitif', 'werden + participe II', 'hätte + infinitif', 'sein + zu + infinitif'], 0, '*Ich würde gern nach Berlin fahren.*'],

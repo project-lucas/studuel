@@ -86,14 +86,15 @@ DELETE FROM public.chapters c
             cours: `On construit un ensemble plus grand que ℝ en y ajoutant un nombre **i** vérifiant **i² = −1**. Toutes les règles de calcul de ℝ y restent valables.
 
 ## La forme algébrique
-Tout nombre complexe z s’écrit de façon **unique** :
+Tout nombre complexe z s’écrit de façon **unique** : z = a + i b, avec a et b **réels**.
 
-z = a + i b, avec a et b réels
+| Notation | Ce qu’elle désigne |
+| **a = Re(z)** | La partie **réelle** |
+| **b = Im(z)** | La partie **imaginaire** — c’est un **réel**, pas un imaginaire |
+| b = 0 | z est **réel** |
+| a = 0 | z est **imaginaire pur** |
 
-- **a = Re(z)** est la **partie réelle**, **b = Im(z)** la **partie imaginaire**. La partie imaginaire est un **réel**, pas un nombre imaginaire — piège de vocabulaire à ne pas commettre ;
-- z est **réel** si b = 0, **imaginaire pur** si a = 0.
-
-Deux complexes sont égaux si et seulement si leurs parties réelles **et** imaginaires sont égales : une équation complexe équivaut à **deux** équations réelles. C’est la technique de résolution la plus employée.
+> Deux complexes sont égaux si et seulement si leurs parties réelles **et** imaginaires le sont : une équation complexe équivaut à **deux** équations réelles. C’est la technique de résolution la plus employée.
 
 ## Les opérations
 Somme et produit se calculent comme avec des expressions littérales, en remplaçant i² par −1 :
@@ -101,28 +102,37 @@ Somme et produit se calculent comme avec des expressions littérales, en rempla�
 (a + ib)(c + id) = (ac − bd) + i(ad + bc)
 
 ## Le conjugué
-Le **conjugué** de z = a + ib est z̄ = a − ib. Ses propriétés :
-- conjugué d’une somme = somme des conjugués ; idem pour le produit et le quotient ;
-- **z × z̄ = a² + b²**, un **réel positif** — c’est ce qui permet toutes les divisions ;
-- z + z̄ = 2 Re(z), z − z̄ = 2i Im(z) ;
-- z est **réel** si et seulement si z = z̄ ; **imaginaire pur** si et seulement si z = −z̄.
+Le conjugué de z = a + ib est z̄ = a − ib.
+
+| Propriété | Ce qu’elle donne |
+| Conjugué d’une somme, d’un produit, d’un quotient | La somme, le produit, le quotient des conjugués |
+| **z × z̄ = a² + b²** | Un **réel positif** — c’est ce qui rend toutes les divisions possibles |
+| z + z̄ = 2 Re(z) | — |
+| z − z̄ = 2i Im(z) | — |
+| z = z̄ | z est **réel** |
+| z = −z̄ | z est **imaginaire pur** |
 
 ## Le quotient
-Pour diviser, on **multiplie numérateur et dénominateur par le conjugué du dénominateur** : le dénominateur devient réel, et l’on obtient la forme algébrique. C’est le geste technique de base du chapitre.
+Pour diviser, on **multiplie numérateur et dénominateur par le conjugué du dénominateur** : le dénominateur devient réel, et l’on obtient la forme algébrique.
+
+> C’est le geste technique de base du chapitre.
 
 ## Le module
-Le **module** de z = a + ib est :
+Le module de z = a + ib vaut √(a² + b²), et son carré vaut z × z̄.
 
-|z| = √(a² + b²), et |z|² = z × z̄
+| Propriété | Ce qu’elle dit |
+| Il est **positif ou nul** | Et nul seulement si z = 0 |
+| Module d’un **produit** | Le produit des modules |
+| Module d’un **quotient** | Le quotient des modules |
+| Module d’une **puissance** | La puissance du module |
+| Module d’une **somme** | **Inférieur ou égal** à la somme des modules — inégalité triangulaire |
 
-Il est toujours **positif ou nul**, et nul seulement si z = 0. Propriétés : |zz′| = |z| |z′|, |z/z′| = |z|/|z′|, |zⁿ| = |z|ⁿ.
-
-⚠️ Le module n’est **pas** additif : |z + z′| ≤ |z| + |z′| (inégalité triangulaire), avec égalité seulement dans des cas particuliers.
+> Le module n’est **pas** additif. C’est la seule des cinq propriétés qui soit une inégalité, et c’est celle qu’on oublie.
 
 ## Ce que ℂ perd
-ℂ n’est **pas ordonné** : écrire z < z′ n’a aucun sens pour des complexes non réels. On ne peut comparer que des **modules**, qui sont des réels. C’est la faute la plus lourde d’une copie.
+ℂ n’est **pas ordonné** : écrire z < z′ n’a **aucun sens** pour des complexes non réels. On ne peut comparer que des **modules**, qui sont des réels.
 
-> Toute la suite du chapitre découle de deux formules : i² = −1 et z z̄ = |z|². La première fait exister ℂ, la seconde y rend la division possible.`,
+> C’est la faute la plus lourde d’une copie. Toute la suite du chapitre découle de deux formules : **i² = −1**, qui fait exister ℂ, et **z z̄ = module au carré**, qui y rend la division possible.`,
           },
           questions: [
             ['Que vaut i² ?', ['−1', '1', '0', 'i'], 0, 'C’est la définition même du nombre i, qui fonde tout le chapitre.'],
@@ -140,48 +150,54 @@ Il est toujours **positif ou nul**, et nul seulement si z = 0. Propriétés : |z
           axe: 'Nombres complexes',
           lecon: {
             titre: 'Chaque complexe est un point du plan',
-            cours: `Le vrai pouvoir des complexes est de traduire une figure du plan en calcul. Cette fiche installe le dictionnaire entre les deux langues.
+            cours: `Le vrai pouvoir des complexes est de traduire une **figure du plan en calcul**. Cette fiche installe le dictionnaire entre les deux langues.
 
 ## L’affixe
-Dans un repère orthonormé direct, au complexe z = a + ib on associe le point **M(a ; b)**, appelé **image** de z ; réciproquement, z est l’**affixe** de M. On associe de même une affixe à un **vecteur**.
+Dans un repère orthonormé direct, au complexe z = a + ib on associe le point **M(a ; b)**, son **image** ; réciproquement z est l’**affixe** de M. On associe de même une affixe à un **vecteur**.
 
 ## Le dictionnaire
-- affixe de AB : **z(B) − z(A)** ;
-- **AB = |z(B) − z(A)|** : le module d’une différence est une **distance** ;
-- affixe du **milieu** de [AB] : (z(A) + z(B))/2 ;
-- l’image de **z̄** est le symétrique de M par rapport à l’axe des abscisses ;
-- l’image de **−z** est le symétrique par rapport à l’origine.
+| L’objet géométrique | Son écriture complexe |
+| L’affixe du vecteur AB | z(B) − z(A) |
+| La **distance** AB | Le **module** de z(B) − z(A) |
+| Le **milieu** de [AB] | (z(A) + z(B))/2 |
+| Le symétrique par rapport à l’axe des abscisses | Le **conjugué** z̄ |
+| Le symétrique par rapport à l’origine | **−z** |
 
-## Le module et l’argument
-Pour z non nul, l’**argument** de z, noté arg(z), est une mesure de l’angle orienté entre l’axe des abscisses et le vecteur d’affixe z. Il est défini **modulo 2π** : un complexe a une infinité d’arguments.
+## Module et argument
+Pour z non nul, l’**argument** est une mesure de l’angle orienté entre l’axe des abscisses et le vecteur d’affixe z. Il est défini **modulo 2π** : un complexe a une **infinité** d’arguments.
 
-Le complexe **0 n’a pas d’argument** — son module est nul, aucune direction n’est définie. C’est l’oubli le plus fréquent des conditions d’existence.
+> Le complexe **0 n’a pas d’argument** — son module est nul, aucune direction n’est définie. C’est l’oubli le plus fréquent des conditions d’existence.
 
 ## La forme trigonométrique
-En posant r = |z| et θ = arg(z) :
+En posant r le module et θ l’argument : z = r (cos θ + i sin θ)
 
-z = r (cos θ + i sin θ)
+Le passage de l’algébrique au trigonométrique : calculer r, puis résoudre cos θ = a/r **et** sin θ = b/r.
 
-Le passage algébrique → trigonométrique se fait en calculant r, puis en résolvant cos θ = a/r et sin θ = b/r. Il faut les **deux** équations : le cosinus seul laisse deux angles possibles.
+> Il faut les **deux** équations : le cosinus seul laisse deux angles possibles.
 
 ## Les propriétés des arguments
-- arg(zz′) = arg z + arg z′ ;
-- arg(z/z′) = arg z − arg z′ ;
-- arg(zⁿ) = n arg z ;
-- arg(z̄) = − arg z.
+| Opération | Son argument |
+| Produit zz′ | arg z **+** arg z′ |
+| Quotient z/z′ | arg z **−** arg z′ |
+| Puissance zⁿ | **n** arg z |
+| Conjugué z̄ | **−** arg z |
 
-**Multiplier, c’est additionner les arguments** : c’est ce qui fait du produit complexe une **rotation** doublée d’un agrandissement.
+> **Multiplier, c’est additionner les arguments.** C’est ce qui fait du produit complexe une **rotation** doublée d’un agrandissement.
 
 ## Les caractérisations géométriques
-- |z − z(A)| = R : le **cercle** de centre A et de rayon R ;
-- |z − z(A)| = |z − z(B)| : la **médiatrice** de [AB] ;
-- arg d’un quotient de différences d’affixes : l’**angle** entre deux vecteurs.
+| La condition | L’ensemble ou la propriété |
+| Le module de z − z(A) vaut R | Le **cercle** de centre A et de rayon R |
+| Le module de z − z(A) égale celui de z − z(B) | La **médiatrice** de [AB] |
+| L’argument d’un quotient de différences d’affixes | L’**angle** entre deux vecteurs |
 
-## Les configurations
-- A, B, C **alignés** si et seulement si le quotient (z(C) − z(A))/(z(B) − z(A)) est **réel** ;
-- (AB) et (AC) **perpendiculaires** si et seulement si ce même quotient est **imaginaire pur**.
+## Les deux configurations à connaître
+En posant Z = (z(C) − z(A))/(z(B) − z(A)) :
 
-Ces deux critères transforment une question de géométrie en une question sur une partie réelle ou imaginaire.
+| Z est… | Alors |
+| **Réel** | A, B, C sont **alignés** |
+| **Imaginaire pur** | Les droites (AB) et (AC) sont **perpendiculaires** |
+
+> Ces deux critères transforment une question de géométrie en une question sur une **partie réelle ou imaginaire**.
 
 > Le pont est toujours le même : une **distance** est un module, un **angle** est un argument. Toute figure se traduit avec ces deux mots.`,
           },
@@ -201,46 +217,59 @@ Ces deux critères transforment une question de géométrie en une question sur 
           axe: 'Nombres complexes',
           lecon: {
             titre: 'La notation exponentielle, et tout devient simple',
-            cours: `La forme exponentielle transforme les identités trigonométriques les plus pénibles en simples règles de calcul sur les puissances.
+            cours: `La forme exponentielle transforme les identités trigonométriques les plus pénibles en simples règles de calcul sur les **puissances**.
 
 ## La notation exponentielle
-Pour tout réel θ, on pose :
+Pour tout réel θ : e^(iθ) = cos θ + i sin θ
 
-e^(iθ) = cos θ + i sin θ
+Tout complexe non nul de module r et d’argument θ s’écrit **z = r e^(iθ)**.
 
-Tout complexe non nul de module r et d’argument θ s’écrit alors **z = r e^(iθ)**. Cette notation n’est pas une convention arbitraire : elle est choisie parce que e^(iθ) × e^(iθ′) = e^(i(θ+θ′)), exactement comme les exponentielles réelles.
+> Ce n’est pas une convention arbitraire : elle est choisie parce que e^(iθ) × e^(iθ′) = e^(i(θ+θ′)), **exactement comme les exponentielles réelles**.
 
 ## Les valeurs remarquables
-e^(i0) = 1, e^(iπ/2) = i, e^(iπ) = −1, e^(3iπ/2) = −i, e^(2iπ) = 1.
+| Angle | Valeur |
+| e^(i0) | 1 |
+| e^(iπ/2) | **i** |
+| e^(iπ) | **−1** |
+| e^(3iπ/2) | −i |
+| e^(2iπ) | 1 |
 
-L’identité **e^(iπ) + 1 = 0** réunit en cinq symboles les cinq constantes fondamentales des mathématiques.
+> L’identité **e^(iπ) + 1 = 0** réunit en cinq symboles les cinq constantes fondamentales des mathématiques.
 
 ## Les règles de calcul
-- r e^(iθ) × r′ e^(iθ′) = r r′ e^(i(θ+θ′)) ;
-- (r e^(iθ)) / (r′ e^(iθ′)) = (r/r′) e^(i(θ−θ′)) ;
-- **formule de Moivre** : (r e^(iθ))ⁿ = rⁿ e^(inθ), soit (cos θ + i sin θ)ⁿ = cos(nθ) + i sin(nθ) ;
-- conjugué : le conjugué de r e^(iθ) est r e^(−iθ) ;
-- inverse : 1/(r e^(iθ)) = (1/r) e^(−iθ).
+| Opération | Résultat |
+| Produit | r r′ e^(i(θ+θ′)) |
+| Quotient | (r/r′) e^(i(θ−θ′)) |
+| **Formule de Moivre** | (r e^(iθ))ⁿ = rⁿ e^(inθ) |
+| Conjugué | r e^(−iθ) |
+| Inverse | (1/r) e^(−iθ) |
 
-Élever à une puissance devient donc immédiat, là où la forme algébrique exigerait de développer un binôme.
+> Élever à une puissance devient **immédiat**, là où la forme algébrique exigerait de développer un binôme.
 
 ## Les formules d’Euler
 En additionnant et en soustrayant e^(iθ) et e^(−iθ) :
 
 cos θ = (e^(iθ) + e^(−iθ)) / 2 et sin θ = (e^(iθ) − e^(−iθ)) / (2i)
 
-Elles servent à **linéariser** : transformer cos²θ ou sin³θ en une somme de cosinus et de sinus d’angles multiples — indispensable pour intégrer ces expressions.
+> Elles servent à **linéariser** : transformer cos²θ ou sin³θ en une somme de cosinus et de sinus d’angles multiples — indispensable pour **intégrer** ces expressions.
 
-## Les applications trigonométriques
-- **formules d’addition** : développer e^(i(a+b)) = e^(ia) e^(ib) et identifier parties réelles et imaginaires redonne cos(a+b) et sin(a+b) sans rien mémoriser ;
-- **formules de duplication** : même méthode avec e^(2iθ) ;
-- **linéarisation** par les formules d’Euler ;
-- **factorisation** de sommes du type e^(ia) + e^(ib), par mise en facteur de l’exponentielle de l’angle moyen.
+## Les quatre applications
+| Application | La méthode |
+| Formules d’**addition** | Développer e^(i(a+b)) = e^(ia) e^(ib), puis identifier parties réelles et imaginaires |
+| Formules de **duplication** | Même méthode, avec e^(2iθ) |
+| **Linéarisation** | Les formules d’Euler |
+| **Factorisation** de e^(ia) + e^(ib) | Mettre en facteur l’exponentielle de l’**angle moyen** |
+
+> On ne mémorise plus les formules de trigonométrie : on les **retrouve** en trois lignes.
 
 ## Les racines n-ièmes de l’unité
-Les solutions de zⁿ = 1 sont les n complexes e^(2ikπ/n) pour k de 0 à n−1. Leurs images forment un **polygone régulier** à n côtés inscrit dans le cercle unité, et leur **somme est nulle** pour n ≥ 2.
+Les solutions de zⁿ = 1 sont les n complexes e^(2ikπ/n), pour k de 0 à n−1.
 
-> La forme algébrique sert à additionner, la forme exponentielle à multiplier et à élever à une puissance. Choisir la bonne écriture avant de calculer économise la moitié du travail.`,
+| Propriété | Ce qu’elle donne |
+| Leurs images | Un **polygone régulier** à n côtés inscrit dans le cercle unité |
+| Leur somme | **Nulle**, dès que n est supérieur ou égal à 2 |
+
+> La forme **algébrique** sert à additionner, la forme **exponentielle** à multiplier et à élever à une puissance. Choisir la bonne écriture avant de calculer économise la moitié du travail.`,
           },
           questions: [
             ['Que vaut e^(iθ) ?', ['cos θ + i sin θ', 'cos θ − i sin θ', 'sin θ + i cos θ', 'e^θ (cos θ + i sin θ)'], 0, 'C’est la définition de la notation exponentielle.'],
@@ -261,41 +290,48 @@ Les solutions de zⁿ = 1 sont les n complexes e^(2ikπ/n) pour k de 0 à n−1.
             cours: `Le motif historique des complexes est ici : dans ℂ, **toute** équation polynomiale non constante admet des solutions. Aucune n’est plus « sans solution ».
 
 ## L’équation du second degré à coefficients réels
-Pour a z² + b z + c = 0 avec a, b, c réels et a ≠ 0, on calcule Δ = b² − 4ac :
-- **Δ > 0** : deux solutions réelles, (−b ± √Δ)/(2a) ;
-- **Δ = 0** : une solution double, −b/(2a) ;
-- **Δ < 0** : **deux solutions complexes conjuguées** :
+Pour a z² + b z + c = 0, on calcule Δ = b² − 4ac.
 
-z = (−b ± i√(−Δ)) / (2a)
+| Le signe de Δ | Les solutions |
+| **Δ > 0** | Deux solutions **réelles** : (−b ± √Δ)/(2a) |
+| **Δ = 0** | Une solution **double** : −b/(2a) |
+| **Δ < 0** | Deux solutions **complexes conjuguées** : (−b ± i√(−Δ))/(2a) |
 
-Le passage de √Δ à i√(−Δ) est le seul changement par rapport à la Première. Les deux solutions sont **conjuguées l’une de l’autre** — propriété générale quand les coefficients sont réels.
+> Le passage de √Δ à **i√(−Δ)** est le seul changement par rapport à la Première. Les deux solutions sont **conjuguées l’une de l’autre** — propriété générale quand les coefficients sont réels.
 
 ## Le théorème fondamental de l’algèbre
-Tout polynôme non constant à coefficients complexes admet **au moins une** racine dans ℂ. Par récurrence, un polynôme de degré n admet **exactement n racines** comptées avec leur multiplicité, et se **factorise** en un produit de n facteurs du premier degré.
+Tout polynôme non constant à coefficients complexes admet **au moins une** racine dans ℂ. Par récurrence : un polynôme de degré n admet **exactement n racines** comptées avec leur multiplicité, et se **factorise** en un produit de n facteurs du premier degré.
 
-C’est ce résultat, admis au programme, qui justifie qu’on ne cherche plus jamais si une équation « a des solutions » : on cherche **lesquelles**.
+> C’est ce résultat qui justifie qu’on ne cherche plus jamais si une équation « a des solutions » : on cherche **lesquelles**.
 
-## Les coefficients réels et les racines conjuguées
-Si un polynôme est à coefficients **réels** et admet la racine z, alors **z̄ est aussi racine**. Les racines non réelles vont donc **par paires**. Conséquence utile : un polynôme de degré impair à coefficients réels admet **au moins une racine réelle**.
+## Coefficients réels et racines conjuguées
+Si un polynôme est à coefficients **réels** et admet la racine z, alors **z̄ est aussi racine** : les racines non réelles vont **par paires**.
+
+> Conséquence utile : un polynôme de degré **impair** à coefficients réels admet **au moins une racine réelle**.
 
 ## La factorisation
-Connaître une racine évidente z₀ permet de factoriser par (z − z₀). Le quotient s’obtient par **identification des coefficients** — on pose la forme du quotient avec des coefficients inconnus, on développe, on identifie. C’est la méthode attendue pour un polynôme de degré 3.
+Connaître une racine évidente z₀ permet de factoriser par (z − z₀). Le quotient s’obtient par **identification des coefficients** : poser la forme du quotient avec des coefficients inconnus, développer, identifier. C’est la méthode attendue pour un degré 3.
 
-Somme et produit des racines d’un trinôme : S = −b/a et P = c/a. Elles servent à retrouver la seconde racine quand la première est connue.
+| Relation | Sa valeur |
+| Somme des racines d’un trinôme | −b/a |
+| Produit des racines | c/a |
 
-## Les équations z ⁿ = a
-Elles se résolvent en **forme exponentielle** : en écrivant a = r e^(iθ) et z = ρ e^(iφ), l’équation zⁿ = a devient ρⁿ = r et nφ = θ + 2kπ. D’où n solutions :
+Elles servent à retrouver la **seconde** racine quand la première est connue.
+
+## Les équations zⁿ = a
+Elles se résolvent en **forme exponentielle**. En écrivant a = r e^(iθ) et z = ρ e^(iφ), l’équation devient ρⁿ = r **et** nφ = θ + 2kπ. D’où n solutions :
 
 z = r^(1/n) e^(i(θ + 2kπ)/n), pour k de 0 à n−1
 
-Leurs images forment un polygone régulier à n côtés.
+Leurs images forment un **polygone régulier** à n côtés.
 
-## Les erreurs à éviter
-- écrire √(−4) = 2i sans précaution : le symbole racine n’est **pas défini** sur les négatifs, il faut passer par i√4 ;
-- oublier que Δ < 0 donne **deux** solutions, et non aucune ;
-- oublier les k de 1 à n−1 dans une équation zⁿ = a, et ne donner qu’une racine.
+## Les trois erreurs à éviter
+| Erreur | Ce qu’il faut écrire |
+| √(−4) = 2i | Le symbole racine n’est **pas défini** sur les négatifs : passer par **i√4** |
+| « Δ < 0, donc pas de solution » | **Deux** solutions conjuguées |
+| Ne donner qu’une racine à zⁿ = a | Les **n** valeurs de k, de 0 à n−1 |
 
-> Le passage de ℝ à ℂ ne change pas la méthode du second degré : il change seulement ce qu’on écrit quand Δ est négatif.`,
+> Le passage de ℝ à ℂ ne change pas la **méthode** du second degré : il change seulement ce qu’on écrit quand Δ est négatif.`,
           },
           questions: [
             ['Que donne une équation du second degré à coefficients réels avec Δ < 0 ?', ['Deux solutions complexes conjuguées', 'Aucune solution', 'Une solution double', 'Deux solutions réelles'], 0, 'z = (−b ± i√(−Δ))/(2a).'],
@@ -316,46 +352,51 @@ Leurs images forment un polygone régulier à n côtés.
             cours: `Le calcul complexe atteint sa pleine utilité ici : chaque transformation usuelle du plan s’écrit comme une **opération algébrique** sur les affixes.
 
 ## Le dictionnaire des transformations
-Soit z l’affixe d’un point M et z′ celle de son image M′ :
-- **translation** de vecteur d’affixe b : z′ = z + b ;
-- **homothétie** de centre Ω(ω) et de rapport k réel : z′ − ω = k (z − ω) ;
-- **rotation** de centre Ω(ω) et d’angle θ : z′ − ω = e^(iθ) (z − ω) ;
-- **similitude directe** de centre Ω, de rapport k et d’angle θ : z′ − ω = k e^(iθ) (z − ω).
+| Transformation | Son écriture |
+| **Translation** de vecteur d’affixe b | z′ = z + b |
+| **Homothétie** de centre ω, de rapport k réel | z′ − ω = k (z − ω) |
+| **Rotation** de centre ω, d’angle θ | z′ − ω = **e^(iθ)** (z − ω) |
+| **Similitude directe** de centre ω, rapport k, angle θ | z′ − ω = k e^(iθ) (z − ω) |
 
-Une rotation est donc une **multiplication** par un complexe de module 1 ; une homothétie, une multiplication par un réel. Les deux se combinent en une similitude, et toute application z ↦ a z + b avec a non nul est une similitude directe.
+> Une **rotation** est une multiplication par un complexe de **module 1** ; une **homothétie**, une multiplication par un **réel**. Toute application z ↦ a z + b, a non nul, est une similitude directe.
 
 ## Multiplier, c’est tourner
-Multiplier par i, c’est effectuer une rotation d’angle **+π/2** autour de l’origine. Multiplier par −1, une rotation d’angle π. C’est l’intuition la plus utile du chapitre : le produit complexe **est** une rotation-agrandissement.
+Multiplier par **i**, c’est une rotation d’angle **+π/2** autour de l’origine ; par **−1**, une rotation d’angle π.
+
+> C’est l’intuition la plus utile du chapitre : le produit complexe **est** une rotation-agrandissement.
 
 ## Lire une figure sur un quotient
-Pour trois points A, B, C d’affixes distinctes, on pose Z = (z(C) − z(A)) / (z(B) − z(A)). Alors :
-- **|Z| = AC / AB** : le module donne un **rapport de longueurs** ;
-- **arg(Z)** est une mesure de l’**angle** orienté entre les vecteurs AB et AC.
+Pour trois points A, B, C d’affixes distinctes, on pose Z = (z(C) − z(A))/(z(B) − z(A)).
 
-D’où les critères :
-- **Z réel** ⟺ A, B, C alignés ;
-- **Z imaginaire pur** ⟺ (AB) ⊥ (AC) ;
-- **|Z| = 1** ⟺ AB = AC, triangle isocèle en A ;
-- **Z = e^(iπ/3)** ⟺ triangle équilatéral direct.
+| Ce qu’on lit | Ce que ça donne |
+| Le **module** de Z | Le rapport de longueurs **AC / AB** |
+| L’**argument** de Z | L’angle orienté entre les vecteurs AB et AC |
+
+| Z est… | La figure |
+| **Réel** | A, B, C **alignés** |
+| **Imaginaire pur** | (AB) et (AC) **perpendiculaires** |
+| De **module 1** | AB = AC : triangle **isocèle** en A |
+| Égal à e^(iπ/3) | Triangle **équilatéral direct** |
 
 ## La méthode d’un exercice
-1. **traduire** l’énoncé en affixes ;
-2. **calculer** le quotient ou l’expression demandée ;
-3. **interpréter** module et argument en termes de longueurs et d’angles ;
-4. **conclure** sur la nature de la figure.
+1. **Traduire** l’énoncé en affixes ;
+2. **Calculer** le quotient ou l’expression demandée ;
+3. **Interpréter** module et argument en longueurs et en angles ;
+4. **Conclure** sur la nature de la figure.
 
-C’est une méthode entièrement **calculatoire** : elle évite la construction et les cas de figure, ce qui est précisément son intérêt à l’écrit.
+> C’est une méthode entièrement **calculatoire** : elle évite la construction et les cas de figure — ce qui est précisément son intérêt à l’écrit.
 
 ## Les ensembles de points
-- |z − a| = R : cercle ;
-- |z − a| = |z − b| : médiatrice ;
-- arg(z − a) = θ (modulo 2π) : demi-droite d’origine a ;
-- Re(z) = k ou Im(z) = k : droites parallèles aux axes.
+| L’équation | L’ensemble |
+| Module de (z − a) égal à R | Un **cercle** |
+| Module de (z − a) égal au module de (z − b) | Une **médiatrice** |
+| arg(z − a) = θ modulo 2π | Une **demi-droite** d’origine a |
+| Re(z) = k, ou Im(z) = k | Des **droites** parallèles aux axes |
 
 ## Ce que les complexes n’apportent pas
-Ils ne traitent que le **plan**. La géométrie de l’espace, elle, reste du ressort du produit scalaire et des coordonnées — les deux outils ne se recouvrent pas.
+Ils ne traitent que le **plan**. La géométrie de l’**espace** reste du ressort du produit scalaire et des coordonnées : les deux outils ne se recouvrent pas.
 
-> Longueur ↔ module, angle ↔ argument, transformation ↔ opération. Ces trois correspondances suffisent à traduire n’importe quel énoncé de géométrie plane.`,
+> **Longueur ↔ module, angle ↔ argument, transformation ↔ opération.** Ces trois correspondances suffisent à traduire n’importe quel énoncé de géométrie plane.`,
           },
           questions: [
             ['Quelle transformation l’écriture z′ − ω = e^(iθ)(z − ω) décrit-elle ?', ['La rotation de centre Ω et d’angle θ', 'L’homothétie de centre Ω', 'La translation de vecteur ω', 'La symétrie par rapport à Ω'], 0, 'Une rotation est une multiplication par un complexe de module 1.'],
@@ -374,46 +415,51 @@ Ils ne traitent que le **plan**. La géométrie de l’espace, elle, reste du re
           axe: 'Arithmétique',
           lecon: {
             titre: 'Raisonner sur les restes',
-            cours: `L’arithmétique étudie les entiers pour eux-mêmes. Son outil central, la **congruence**, permet de remplacer un nombre par son reste — et de traiter en une ligne des calculs impossibles autrement.
+            cours: `L’arithmétique étudie les entiers pour eux-mêmes. Son outil central, la **congruence**, permet de remplacer un nombre par son **reste** — et de traiter en une ligne des calculs impossibles autrement.
 
 ## La divisibilité
-Pour a et b entiers relatifs, **b divise a** s’il existe un entier k tel que a = b k. On note b | a.
+b **divise** a s’il existe un entier k tel que a = b k.
 
-Propriétés : tout entier divise 0 ; 1 divise tout entier ; si b | a et a | c alors b | c (transitivité) ; si b | a et b | a′ alors b divise **toute combinaison linéaire** u a + v a′ — c’est la propriété la plus utilisée en démonstration.
+| Propriété | Ce qu’elle dit |
+| Tout entier divise **0** | — |
+| **1** divise tout entier | — |
+| **Transitivité** | Si b divise a et a divise c, alors b divise c |
+| **Combinaison linéaire** | Si b divise a et a′, alors b divise **u a + v a′** |
+
+> La dernière est la propriété la plus utilisée en démonstration.
 
 ## La division euclidienne
-Pour a entier relatif et b entier naturel non nul, il existe un **unique** couple (q ; r) tel que :
+Pour a relatif et b naturel non nul, il existe un **unique** couple (q ; r) tel que a = b q + r, avec **r compris entre 0 inclus et b exclu**.
 
-a = b q + r, avec **0 ≤ r < b**
-
-q est le **quotient**, r le **reste**. L’encadrement strict du reste est ce qui assure l’unicité — et l’oublier est l’erreur classique, notamment pour a négatif : la division euclidienne de −7 par 3 donne q = −3 et r = 2, pas q = −2 et r = −1.
+> L’encadrement **strict** du reste est ce qui assure l’unicité. L’oublier est l’erreur classique, surtout pour a négatif : diviser −7 par 3 donne **q = −3 et r = 2**, et non q = −2 et r = −1.
 
 ## Les congruences
-Pour n entier naturel non nul, a et b sont **congrus modulo n** si n divise a − b. On note :
+a et b sont **congrus modulo n** si n divise a − b. On note a ≡ b [n].
 
-a ≡ b [n]
-
-C’est équivalent à : a et b ont le **même reste** dans la division euclidienne par n.
+> C’est équivalent à : a et b ont le **même reste** dans la division euclidienne par n.
 
 ## Les règles de calcul
-Si a ≡ b [n] et c ≡ d [n], alors :
-- a + c ≡ b + d [n] ;
-- a c ≡ b d [n] ;
-- a^k ≡ b^k [n] pour tout entier naturel k.
+| Opération | Est-elle compatible ? |
+| Addition | **Oui** |
+| Multiplication | **Oui** |
+| Puissances | **Oui** |
+| **Division** | **NON** |
 
-Les congruences sont donc **compatibles** avec l’addition, la multiplication et les puissances.
-
-⚠️ Elles **ne le sont pas** avec la division : de 6 ≡ 12 [6] on ne peut pas déduire 3 ≡ 6 [6], ce qui est faux. Simplifier une congruence exige des précautions liées au PGCD — c’est le sujet de la fiche suivante.
+> De 6 ≡ 12 [6] on ne peut **pas** déduire 3 ≡ 6 [6], qui est faux. Simplifier une congruence exige des précautions liées au PGCD.
 
 ## La méthode des puissances
-Pour trouver le reste de 3^2026 dans la division par 7, on calcule les premières puissances de 3 modulo 7 : 3, 2, 6, 4, 5, 1 — puis le cycle recommence, de période 6. Comme 2026 = 6 × 337 + 4, on a 3^2026 ≡ 3⁴ ≡ 4 [7].
+Pour trouver le reste de 3^2026 modulo 7, on calcule les premières puissances de 3 : 3, 2, 6, 4, 5, 1 — puis le cycle recommence, de **période 6**.
 
-**Chercher la périodicité** est la méthode systématique de tout exercice de ce type.
+Comme 2026 = 6 × 337 + 4, on a 3^2026 ≡ 3⁴ ≡ **4** [7].
+
+> **Chercher la périodicité** est la méthode systématique de tout exercice de ce type.
 
 ## Les critères de divisibilité
-Ils se démontrent tous par congruences. Comme 10 ≡ 1 [9], tout nombre est congru à la **somme de ses chiffres** modulo 9 — d’où le critère de divisibilité par 9, et la « preuve par neuf ». De même, 10 ≡ −1 [11] donne le critère par 11, en somme alternée.
+| Le point de départ | Le critère obtenu |
+| 10 ≡ 1 [9] | Un nombre est congru à la **somme de ses chiffres** modulo 9 — d’où la « preuve par neuf » |
+| 10 ≡ −1 [11] | Le critère par 11, en **somme alternée** |
 
-> Travailler modulo n, c’est ne garder d’un entier que son reste. Toute la difficulté d’un exercice d’arithmétique consiste à choisir **le bon** modulo.`,
+> Travailler modulo n, c’est ne garder d’un entier que son **reste**. Toute la difficulté d’un exercice consiste à choisir **le bon** modulo.`,
           },
           questions: [
             ['Que signifie a ≡ b [n] ?', ['n divise a − b, autrement dit a et b ont le même reste modulo n', 'a est égal à b', 'a divise b et n', 'n divise a et b'], 0, 'C’est la définition de la congruence modulo n.'],
@@ -431,49 +477,51 @@ Ils se démontrent tous par congruences. Comme 10 ≡ 1 [9], tout nombre est con
           axe: 'Arithmétique',
           lecon: {
             titre: 'Deux entiers, un plus grand diviseur commun',
-            cours: `Le PGCD gouverne toute la question de la simplification et de la résolution des équations en nombres entiers.
+            cours: `Le **PGCD** gouverne toute la question de la simplification et de la résolution des équations en nombres entiers.
 
 ## Le PGCD
-Le **PGCD** de deux entiers a et b non tous nuls est le plus grand entier qui les divise tous les deux. On le note PGCD(a ; b).
+Le plus grand entier qui divise a **et** b. Deux entiers sont **premiers entre eux** quand leur PGCD vaut **1**.
 
-Deux entiers sont **premiers entre eux** si leur PGCD vaut **1**. Attention : « premiers entre eux » ne signifie pas « nombres premiers ». 8 et 9 sont premiers entre eux, et ni l’un ni l’autre n’est premier.
+> « Premiers entre eux » ne signifie **pas** « nombres premiers » : 8 et 9 sont premiers entre eux, et ni l’un ni l’autre n’est premier.
 
 ## L’algorithme d’Euclide
-Il repose sur une égalité simple : PGCD(a ; b) = PGCD(b ; r), où r est le reste de la division de a par b. On répète jusqu’à obtenir un reste nul ; le **dernier reste non nul** est le PGCD.
+Il repose sur une égalité simple : PGCD(a ; b) = PGCD(b ; r), où r est le reste de la division de a par b. On répète jusqu’à un reste nul ; le **dernier reste non nul** est le PGCD.
 
-Exemple : 1071 et 462. 1071 = 2×462 + 147 ; 462 = 3×147 + 21 ; 147 = 7×21 + 0. Le PGCD vaut **21**.
+| Étape | Le calcul |
+| 1 | 1071 = 2 × 462 + **147** |
+| 2 | 462 = 3 × 147 + **21** |
+| 3 | 147 = 7 × 21 + **0** |
+| Conclusion | Le PGCD vaut **21** |
 
-C’est un algorithme très rapide : le nombre d’étapes croît comme le logarithme des données.
+> Algorithme très rapide : le nombre d’étapes croît comme le **logarithme** des données.
 
-## Le théorème de Bézout
-**Identité de Bézout** : il existe toujours des entiers relatifs u et v tels que a u + b v = PGCD(a ; b).
+## Bézout
+| Énoncé | Ce qu’il affirme |
+| **Identité** de Bézout | Il existe **toujours** u et v entiers tels que a u + b v = PGCD(a ; b) |
+| **Théorème** de Bézout | a et b sont premiers entre eux **si et seulement si** il existe u et v tels que **a u + b v = 1** |
 
-**Théorème de Bézout** : a et b sont **premiers entre eux si et seulement si** il existe u et v tels que **a u + b v = 1**.
+> Le sens « s’il existe u et v, alors le PGCD vaut 1 » est le plus utile : **exhiber un seul couple suffit** à prouver que deux entiers sont premiers entre eux. Les coefficients se calculent en **remontant** l’algorithme d’Euclide.
 
-Le sens « s’il existe u et v, alors PGCD = 1 » est le plus utile en démonstration : exhiber un seul couple suffit à prouver que deux entiers sont premiers entre eux.
-
-Les coefficients u et v se calculent en **remontant** l’algorithme d’Euclide.
-
-## Le théorème de Gauss
+## Gauss
 Si **a divise b c** et si **a est premier avec b**, alors **a divise c**.
 
-L’hypothèse de primalité est indispensable : 6 divise 4 × 3 sans diviser ni 4 ni 3. C’est le théorème le plus employé de l’arithmétique de Terminale.
+> L’hypothèse de primalité est indispensable : 6 divise 4 × 3 sans diviser ni 4 ni 3.
 
-Corollaire : si b et c divisent a et sont premiers entre eux, alors leur **produit** b c divise a.
+**Corollaire** : si b et c divisent a et sont premiers entre eux, alors leur **produit** b c divise a.
 
 ## Les équations diophantiennes
-Une équation **a x + b y = c** en nombres entiers admet des solutions **si et seulement si** PGCD(a ; b) divise c.
+Une équation **a x + b y = c** en nombres entiers admet des solutions **si et seulement si** le PGCD de a et b **divise c**.
 
-La méthode de résolution est codifiée :
-1. calculer le PGCD et vérifier la condition ;
-2. trouver une **solution particulière** (par Euclide remonté, ou à vue) ;
-3. **soustraire** l’équation particulière de l’équation générale ;
-4. conclure par le **théorème de Gauss** pour obtenir la forme générale des solutions.
+| Étape | Ce qu’on fait |
+| 1 | Calculer le PGCD et **vérifier la condition** |
+| 2 | Trouver une **solution particulière** — Euclide remonté, ou à vue |
+| 3 | **Soustraire** l’équation particulière de l’équation générale |
+| 4 | Conclure par le **théorème de Gauss** pour la forme générale |
 
 ## Le PPCM
-Le **plus petit commun multiple** vérifie : PGCD(a ; b) × PPCM(a ; b) = |a b|. Connaître l’un donne donc l’autre.
+Le produit du PGCD et du PPCM de a et b égale la valeur absolue du produit a b. Connaître l’un donne donc l’autre.
 
-> Bézout sert à prouver qu’on est premier entre eux ; Gauss sert à conclure qu’un facteur divise. Confondre leurs rôles est l’erreur la plus fréquente en démonstration.`,
+> **Bézout** sert à prouver qu’on est premier entre eux ; **Gauss** sert à conclure qu’un facteur divise. Confondre leurs rôles est l’erreur la plus fréquente en démonstration.`,
           },
           questions: [
             ['Que dit le théorème de Bézout ?', ['a et b sont premiers entre eux si et seulement s’il existe u, v tels que a u + b v = 1', 'Le PGCD divise toujours la somme', 'a divise b c implique a divise c', 'Tout entier est produit de nombres premiers'], 0, 'Exhiber un seul couple (u ; v) suffit à prouver la primalité relative.'],
@@ -491,45 +539,47 @@ Le **plus petit commun multiple** vérifie : PGCD(a ; b) × PPCM(a ; b) = |a b|.
           axe: 'Arithmétique',
           lecon: {
             titre: 'Les briques de tous les entiers',
-            cours: `Les nombres premiers sont aux entiers ce que les atomes sont à la matière : tout se décompose sur eux, d’une seule façon.
+            cours: `Les nombres premiers sont aux entiers ce que les atomes sont à la matière : tout se décompose sur eux, **d’une seule façon**.
 
 ## La définition
-Un entier p ≥ 2 est **premier** s’il n’admet que **deux** diviseurs positifs : 1 et lui-même.
+Un entier p supérieur ou égal à 2 est **premier** s’il n’admet que **deux** diviseurs positifs : 1 et lui-même.
 
-**1 n’est pas premier** — il n’a qu’un seul diviseur. Cette exclusion n’est pas arbitraire : elle est nécessaire à l’unicité de la décomposition.
-
-2 est le **seul nombre premier pair**.
+| Cas particulier | Pourquoi |
+| **1 n’est pas premier** | Il n’a qu’**un seul** diviseur — et l’exclure est **nécessaire** à l’unicité de la décomposition |
+| **2** | Le **seul** nombre premier pair |
 
 ## Le théorème fondamental de l’arithmétique
-Tout entier n ≥ 2 se décompose en produit de facteurs premiers, et cette décomposition est **unique** à l’ordre près.
+Tout entier supérieur ou égal à 2 se décompose en produit de facteurs premiers, et cette décomposition est **unique** à l’ordre près.
 
-De la décomposition se lisent immédiatement : le nombre de diviseurs (produit des exposants augmentés de 1), le PGCD (facteurs communs aux plus petits exposants) et le PPCM (tous les facteurs aux plus grands exposants).
+| Ce qu’on lit sur la décomposition | Comment |
+| Le **nombre de diviseurs** | Le produit des exposants **augmentés de 1** |
+| Le **PGCD** | Les facteurs **communs**, aux **plus petits** exposants |
+| Le **PPCM** | **Tous** les facteurs, aux **plus grands** exposants |
 
 ## Le crible d’Ératosthène
-Pour lister les nombres premiers jusqu’à n : on écrit les entiers de 2 à n et l’on raye les multiples de chaque premier trouvé. On peut s’arrêter dès que le premier courant dépasse **√n**.
+On écrit les entiers de 2 à n et l’on raye les multiples de chaque premier trouvé. On peut s’arrêter dès que le premier courant dépasse **√n**.
 
-Corollaire pratique : pour tester si n est premier, il suffit d’essayer les diviseurs jusqu’à **√n**. Si n n’est pas premier, il a nécessairement un diviseur inférieur ou égal à √n — sans quoi le produit des deux facteurs dépasserait n.
+> Corollaire pratique : pour tester si n est premier, il suffit d’essayer les diviseurs jusqu’à **√n**. Si n n’est pas premier, il a nécessairement un diviseur inférieur ou égal à √n — sans quoi le produit des deux facteurs dépasserait n.
 
 ## L’infinité des nombres premiers
-Euclide l’a démontré par l’absurde : s’il n’y en avait qu’un nombre fini p₁, …, pₙ, l’entier N = p₁ × … × pₙ + 1 ne serait divisible par aucun d’eux (il laisserait toujours le reste 1), donc il serait premier ou aurait un facteur premier nouveau. Contradiction.
+Euclide, par l’absurde : s’il n’y en avait qu’un nombre fini, l’entier obtenu en multipliant tous ces premiers **et en ajoutant 1** ne serait divisible par aucun d’eux — il laisserait toujours le reste 1. Il serait donc premier, ou aurait un facteur premier nouveau. **Contradiction.**
 
 ## Le petit théorème de Fermat
-Si **p est premier** et si **a n’est pas divisible par p**, alors :
+| Forme | Son énoncé |
+| **Restreinte** | Si p est **premier** et a **non divisible** par p, alors a^(p−1) ≡ 1 [p] |
+| **Générale** | Pour **tout** entier a : a^p ≡ a [p] |
 
-a^(p−1) ≡ 1 [p]
+Pour trouver 2^100 modulo 7 : le théorème donne 2⁶ ≡ 1 [7], et 100 = 6 × 16 + 4, donc 2^100 ≡ 2⁴ ≡ **2** [7].
 
-Sous sa forme générale, valable pour **tout** entier a : a^p ≡ a [p].
-
-Il permet de calculer instantanément d’immenses puissances modulo un nombre premier. Pour trouver 2^100 modulo 7 : le théorème donne 2⁶ ≡ 1 [7], et comme 100 = 6 × 16 + 4, on obtient 2^100 ≡ 2⁴ ≡ 2 [7].
-
-⚠️ L’hypothèse « p premier » est indispensable : le théorème est faux pour un modulo composé.
+> L’hypothèse « **p premier** » est indispensable : le théorème est **faux** pour un modulo composé.
 
 ## Les usages
-- calcul de restes de grandes puissances ;
-- **tests de primalité** probabilistes, qui reposent sur la contraposée : si a^(n−1) n’est pas congru à 1 modulo n, alors n n’est pas premier ;
-- **cryptographie RSA**, dont la sécurité repose sur l’asymétrie entre multiplier deux grands nombres premiers (immédiat) et factoriser leur produit (hors de portée pour de grandes tailles).
+| Usage | Le principe |
+| Restes de **grandes puissances** | Réduire l’exposant modulo p−1 |
+| **Tests de primalité** probabilistes | La **contraposée** : si a^(n−1) n’est pas congru à 1 modulo n, alors n n’est **pas** premier |
+| **Cryptographie RSA** | Multiplier deux grands premiers est **immédiat** ; factoriser leur produit est **hors de portée** |
 
-> Le petit théorème de Fermat ne dit rien quand a^(n−1) ≡ 1 [n] : certains nombres composés passent le test. Il permet d’affirmer qu’un nombre n’est **pas** premier, jamais qu’il l’est.`,
+> Le théorème ne dit **rien** quand a^(n−1) ≡ 1 [n] : certains nombres composés passent le test. Il permet d’affirmer qu’un nombre **n’est pas** premier, jamais qu’il l’est.`,
           },
           questions: [
             ['Pourquoi 1 n’est-il pas un nombre premier ?', ['Il n’a qu’un seul diviseur positif, et son exclusion assure l’unicité de la décomposition', 'Parce qu’il est trop petit', 'Parce qu’il est impair', 'C’est une convention sans justification'], 0, 'Sans cette exclusion, toute décomposition admettrait une infinité d’écritures.'],
@@ -548,40 +598,55 @@ Il permet de calculer instantanément d’immenses puissances modulo un nombre p
           axe: 'Graphes et matrices',
           lecon: {
             titre: 'Un tableau de nombres qu’on peut multiplier',
-            cours: `Une **matrice** est un tableau rectangulaire de nombres. Son intérêt vient de ce qu’on peut la multiplier — et que ce produit code une composition d’opérations.
+            cours: `Une **matrice** est un tableau rectangulaire de nombres. Son intérêt vient de ce qu’on peut la **multiplier** — et que ce produit code une **composition d’opérations**.
 
 ## Vocabulaire
-Une matrice de **taille n × p** a n lignes et p colonnes. Le coefficient situé ligne i, colonne j se note a(i,j). Une matrice est **carrée** si n = p, **colonne** si p = 1, **ligne** si n = 1.
+Une matrice de taille **n × p** a n lignes et p colonnes ; le coefficient ligne i, colonne j se note a(i,j).
 
-## Somme et produit par un réel
-Ils se font **coefficient par coefficient**, entre matrices de **même taille**. Rien de surprenant.
+| Nom | Sa forme |
+| **Carrée** | n = p |
+| **Colonne** | p = 1 |
+| **Ligne** | n = 1 |
+
+## Les opérations simples
+Somme et produit par un réel se font **coefficient par coefficient**, entre matrices de **même taille**.
 
 ## Le produit matriciel
-Le produit A × B n’est défini que si le **nombre de colonnes de A** égale le **nombre de lignes de B**. Si A est n × p et B est p × q, alors A × B est **n × q**.
+Il n’est défini que si le **nombre de colonnes de A** égale le **nombre de lignes de B**. Si A est n × p et B est p × q, alors A × B est **n × q**.
 
-Le coefficient (i ; j) du produit est obtenu en parcourant la **ligne i de A** et la **colonne j de B**, en multipliant terme à terme et en additionnant.
+Le coefficient (i ; j) s’obtient en parcourant la **ligne i de A** et la **colonne j de B**, en multipliant terme à terme et en additionnant.
 
-⚠️ **Le produit matriciel n’est pas commutatif** : A B et B A diffèrent en général, et l’un peut exister sans l’autre. C’est la propriété qui distingue le plus le calcul matriciel du calcul sur les réels — et l’erreur la plus coûteuse.
+| Ce qui change par rapport aux réels | Ce que ça implique |
+| Le produit **n’est pas commutatif** | A B et B A diffèrent en général, et l’un peut exister **sans l’autre** |
+| Un produit peut être **nul** | Sans qu’aucun facteur le soit |
 
-Autre différence : un produit peut être **nul** sans qu’aucun facteur le soit.
+> C’est l’erreur la plus coûteuse du chapitre : simplifier sans regarder **de quel côté** on multiplie.
 
-## La matrice identité
-La matrice identité I(n), avec des 1 sur la diagonale et des 0 ailleurs, vérifie A I = I A = A. Elle joue le rôle du nombre 1.
+## L’identité et l’inverse
+La matrice **I(n)** — des 1 sur la diagonale, des 0 ailleurs — vérifie A I = I A = A : elle joue le rôle du nombre 1.
 
-## L’inverse
-Une matrice carrée A est **inversible** s’il existe B telle que A B = B A = I. On note alors B = A⁻¹. Toutes les matrices carrées ne sont **pas** inversibles.
+A est **inversible** s’il existe B telle que A B = B A = I. Toutes les matrices carrées ne le sont **pas**.
 
-Pour une matrice 2 × 2 de coefficients a, b, c, d, le **déterminant** vaut ad − bc. La matrice est inversible **si et seulement si** ce déterminant est **non nul**, et l’inverse s’obtient en échangeant a et d, en changeant le signe de b et c, et en divisant par le déterminant.
+| Pour une matrice 2 × 2 de coefficients a, b, c, d | La règle |
+| Le **déterminant** | ad − bc |
+| Elle est inversible | **Si et seulement si** ce déterminant est **non nul** |
+| Son inverse | Échanger a et d, changer le signe de b et c, diviser par le déterminant |
 
 ## Les puissances
-Aⁿ est le produit de A par elle-même n fois. On les calcule :
-- par **récurrence**, quand une forme se conjecture sur les premières puissances ;
-- par **diagonalisation**, quand l’énoncé fournit une matrice P telle que A = P D P⁻¹ avec D diagonale. Alors Aⁿ = P Dⁿ P⁻¹, et Dⁿ se calcule en élevant chaque coefficient diagonal à la puissance n. C’est la méthode attendue au bac.
+| Méthode | Quand l’employer |
+| Par **récurrence** | Quand une forme se conjecture sur les premières puissances |
+| Par **diagonalisation** | Quand l’énoncé fournit P et D diagonale telles que A = P D P⁻¹ |
+
+Alors **Aⁿ = P Dⁿ P⁻¹**, et Dⁿ se calcule en élevant chaque coefficient diagonal à la puissance n. C’est la méthode attendue au bac.
 
 ## Les systèmes linéaires
-Un système de n équations à n inconnues s’écrit **A X = B**, où X est la colonne des inconnues. Si A est inversible, la solution est **unique** et vaut X = A⁻¹ B. Sinon, le système a une infinité de solutions ou aucune.
+Un système de n équations à n inconnues s’écrit **A X = B**.
 
-> Le produit matriciel n’est pas commutatif : avant chaque simplification, vérifier de quel côté on multiplie. C’est ce seul réflexe qui distingue une copie juste d’une copie fausse.`,
+| Si A est… | Le système |
+| **Inversible** | A une solution **unique** : X = A⁻¹ B |
+| Non inversible | A une infinité de solutions, ou aucune |
+
+> Avant chaque simplification, vérifier **de quel côté** on multiplie. Ce seul réflexe distingue une copie juste d’une copie fausse.`,
           },
           questions: [
             ['Quand le produit A × B est-il défini ?', ['Quand le nombre de colonnes de A égale le nombre de lignes de B', 'Quand A et B ont la même taille', 'Quand A et B sont carrées', 'Toujours'], 0, 'Si A est n × p et B est p × q, le produit est n × q.'],
@@ -599,38 +664,53 @@ Un système de n équations à n inconnues s’écrit **A X = B**, où X est la 
           axe: 'Graphes et matrices',
           lecon: {
             titre: 'Compter les chemins par une puissance',
-            cours: `Un graphe se range dans une matrice — et cette traduction met un outil de calcul au service d’une question de parcours.
+            cours: `Un graphe se range dans une matrice — et cette traduction met un outil de **calcul** au service d’une question de **parcours**.
 
 ## Le vocabulaire
-Un **graphe** est un ensemble de **sommets** reliés par des **arêtes** (graphe non orienté) ou des **arcs** (graphe orienté). Il est **pondéré** si chaque lien porte un nombre.
-
-Un graphe est **connexe** si deux sommets quelconques sont reliés par une chaîne. Le **degré** d’un sommet est son nombre d’arêtes.
+| Terme | Sa définition |
+| **Graphe** | Des **sommets** reliés par des **arêtes** (non orienté) ou des **arcs** (orienté) |
+| **Pondéré** | Chaque lien porte un nombre |
+| **Connexe** | Deux sommets quelconques sont reliés par une chaîne |
+| **Degré** | Le nombre d’arêtes d’un sommet |
 
 ## La matrice d’adjacence
-Pour un graphe à n sommets numérotés, la **matrice d’adjacence** M est la matrice n × n dont le coefficient (i ; j) vaut **1** s’il existe une arête de i vers j, et **0** sinon.
+Pour un graphe à n sommets numérotés, le coefficient (i ; j) de **M** vaut **1** s’il existe une arête de i vers j, **0** sinon.
 
-Pour un graphe **non orienté**, M est **symétrique** : la présence d’une arête entre i et j se lit dans les deux cases. Pour un graphe orienté, elle ne l’est en général pas.
+| Le graphe est… | La matrice est… |
+| **Non orienté** | **Symétrique** |
+| **Orienté** | En général **non** symétrique |
 
 ## Le résultat central
-Le coefficient (i ; j) de **Mᵏ** donne le **nombre de chemins de longueur exactement k** allant du sommet i au sommet j.
+Le coefficient (i ; j) de **Mᵏ** donne le **nombre de chemins de longueur exactement k** allant de i à j.
 
-C’est le théorème du chapitre, et il transforme une question de dénombrement de parcours en un calcul de puissance de matrice. Pour compter les chemins de longueur **au plus** k, on additionne M + M² + … + Mᵏ.
+> C’est le théorème du chapitre : il transforme un **dénombrement de parcours** en un **calcul de puissance**.
 
-Application immédiate : un graphe est connexe si la somme I + M + M² + … + Mⁿ⁻¹ n’a **aucun coefficient nul**.
+| La question | Le calcul |
+| Chemins de longueur **exactement** k | Le coefficient de **Mᵏ** |
+| Chemins de longueur **au plus** k | La somme M + M² + … + Mᵏ |
+| Le graphe est-il **connexe** ? | La somme I + M + … + Mⁿ⁻¹ n’a **aucun coefficient nul** |
 
-## Les chaînes et cycles remarquables
-- une **chaîne eulérienne** emprunte chaque **arête** une fois et une seule. Elle existe si le graphe est connexe et compte **0 ou 2 sommets de degré impair** (théorème d’Euler). Si le nombre est 0, il existe même un **cycle** eulérien ;
-- une **chaîne hamiltonienne** passe par chaque **sommet** une fois et une seule. Aucun critère simple n’existe pour son existence — c’est ce qui rend le problème du voyageur de commerce difficile.
+## Chaînes eulériennes et hamiltoniennes
+| | **Eulérienne** | **Hamiltonienne** |
+| Elle emprunte une fois | Chaque **arête** | Chaque **sommet** |
+| Le critère | Graphe connexe et **0 ou 2 sommets de degré impair** (théorème d’Euler) | **Aucun critère simple** |
+| Si 0 sommet impair | Il existe même un **cycle** eulérien | — |
+
+> L’absence de critère hamiltonien est ce qui rend le **problème du voyageur de commerce** difficile.
 
 ## La coloration
-Le **nombre chromatique** d’un graphe est le plus petit nombre de couleurs permettant de colorer les sommets sans que deux sommets adjacents partagent une couleur. Il est encadré par : degré maximal + 1 en majorant, et taille du plus grand sous-graphe complet en minorant.
+Le **nombre chromatique** est le plus petit nombre de couleurs permettant de colorer les sommets sans que deux sommets adjacents partagent une couleur.
+
+| Encadrement | Sa valeur |
+| **Majorant** | Le degré maximal, plus 1 |
+| **Minorant** | La taille du plus grand sous-graphe complet |
 
 Applications : planning d’examens sans conflit, allocation de fréquences, coloriage de cartes.
 
 ## Les usages
-Réseaux de transport, réseaux sociaux, ordonnancement de tâches, circuits, moteurs de recherche — l’algorithme originel de Google classe les pages par une puissance itérée de matrice.
+Réseaux de transport, réseaux sociaux, ordonnancement de tâches, circuits, moteurs de recherche — l’algorithme originel de Google classe les pages par une **puissance itérée de matrice**.
 
-> Une puissance de matrice compte des chemins. C’est le seul résultat à retenir, et il est presque toujours ce que l’énoncé demande d’appliquer.`,
+> **Une puissance de matrice compte des chemins.** C’est le seul résultat à retenir, et presque toujours celui que l’énoncé demande d’appliquer.`,
           },
           questions: [
             ['Que représente le coefficient (i ; j) de Mᵏ, M étant la matrice d’adjacence ?', ['Le nombre de chemins de longueur exactement k de i vers j', 'La distance entre i et j', 'Le degré du sommet i', 'Le poids de l’arête entre i et j'], 0, 'C’est le résultat central du chapitre.'],
@@ -648,46 +728,52 @@ Réseaux de transport, réseaux sociaux, ordonnancement de tâches, circuits, mo
           axe: 'Graphes et matrices',
           lecon: {
             titre: 'Plusieurs suites qui s’entraînent l’une l’autre',
-            cours: `Quand deux suites sont définies l’une par l’autre, les traiter séparément est impossible. Les écrire en **colonne** les rend calculables d’un seul geste.
+            cours: `Quand deux suites sont définies **l’une par l’autre**, les traiter séparément est impossible. Les écrire en **colonne** les rend calculables d’un seul geste.
 
 ## Le principe
-Deux suites u(n) et v(n) définies par un système de récurrence — chacune s’exprimant en fonction des deux termes précédents — se rassemblent dans une **matrice colonne** :
+Deux suites u(n) et v(n) liées par un système de récurrence se rassemblent dans une matrice colonne U(n) de composantes u(n) et v(n). Le système s’écrit alors :
 
-U(n) = colonne (u(n) ; v(n))
-
-Le système s’écrit alors **U(n+1) = A U(n)**, où A est une matrice carrée qui contient les coefficients du système.
+**U(n+1) = A U(n)**, où A contient les coefficients du système
 
 ## La forme explicite
-Par récurrence immédiate :
+Par récurrence immédiate : **U(n) = Aⁿ U(0)**
 
-U(n) = Aⁿ U(0)
+> Tout le problème se ramène donc au **calcul de Aⁿ**.
 
-Tout le problème se ramène donc au **calcul de Aⁿ**, objet de la fiche « Calcul matriciel ». Deux méthodes :
-- **conjecturer** la forme de Aⁿ sur les premières puissances, puis la démontrer **par récurrence** ;
-- **diagonaliser** : si l’énoncé fournit P inversible et D diagonale telles que A = P D P⁻¹, alors Aⁿ = P Dⁿ P⁻¹, et Dⁿ s’obtient en élevant chaque coefficient diagonal à la puissance n.
+| Méthode | Ce qu’elle demande |
+| **Conjecture et récurrence** | Deviner la forme sur les premières puissances, puis la démontrer |
+| **Diagonalisation** | L’énoncé fournit P inversible et D diagonale : Aⁿ = P Dⁿ P⁻¹ |
 
 ## Le cas affine
-Quand le système comporte un terme constant, on a **U(n+1) = A U(n) + B**. La méthode est la même que pour une suite arithmético-géométrique réelle :
-1. chercher l’**état stable** C, solution de C = A C + B — il vaut C = (I − A)⁻¹ B lorsque I − A est inversible ;
-2. poser V(n) = U(n) − C : la suite V vérifie alors **V(n+1) = A V(n)**, sans terme constant ;
-3. conclure : U(n) = Aⁿ (U(0) − C) + C.
+Quand le système comporte un terme constant : **U(n+1) = A U(n) + B**.
 
-C’est la méthode attendue, et elle est identique à celle du chapitre sur les suites en spécialité — seule la nature des objets change.
+1. Chercher l’**état stable** C, solution de C = A C + B — il vaut (I − A)⁻¹ B lorsque I − A est inversible ;
+2. Poser V(n) = U(n) − C : la suite V vérifie **V(n+1) = A V(n)**, sans terme constant ;
+3. Conclure : **U(n) = Aⁿ (U(0) − C) + C**.
+
+> C’est exactement la méthode de la suite arithmético-géométrique réelle : seule la **nature des objets** change.
 
 ## Le comportement à l’infini
-Il se lit sur les **puissances de A**. Si Aⁿ converge vers une matrice limite L, alors U(n) converge vers L U(0). Dans le cas affine, la limite est l’**état stable C**, indépendamment de U(0), dès que Aⁿ tend vers la matrice nulle.
+Il se lit sur les **puissances de A**.
 
-C’est le point le plus important pour l’interprétation : quand un modèle admet un état stable attractif, la répartition finale **ne dépend pas** de la répartition de départ.
+| Si… | Alors |
+| Aⁿ converge vers une matrice L | U(n) converge vers L U(0) |
+| Aⁿ tend vers la matrice **nulle** (cas affine) | U(n) converge vers l’**état stable C** |
+
+> Le point décisif pour l’interprétation : quand un modèle admet un état stable **attractif**, la répartition finale **ne dépend pas** de la répartition de départ.
 
 ## Les modèles décrits
-- **répartition entre deux ou trois états** : abonnés et non-abonnés d’un service, migrations entre villes, parts de marché ;
-- **suites imbriquées** en dynamique de populations ;
-- **cheminement dans un graphe** pondéré par des probabilités — ce qui mène directement aux chaînes de Markov.
+| Situation | Ce que les états représentent |
+| Répartition entre deux ou trois **états** | Abonnés et non-abonnés, migrations entre villes, parts de marché |
+| **Suites imbriquées** | Dynamique de populations |
+| **Cheminement dans un graphe** pondéré par des probabilités | Cela mène directement aux chaînes de Markov |
 
 ## La lecture d’un énoncé
-Il fournit presque toujours : le système de récurrence en français, la matrice A à écrire, une matrice P de changement de base, et une question finale d’interprétation. La rédaction attendue suit cet ordre, et l’interprétation vaut autant de points que le calcul.
+Il fournit presque toujours : le système en français, la matrice A à écrire, une matrice P de changement de base, et une question finale d’**interprétation**.
 
-> Le calcul matriciel ne fait rien de neuf : il **factorise** un raisonnement qu’on saurait mener suite par suite. Son intérêt est de rendre le cas à trois états aussi simple que le cas à deux.`,
+> La rédaction attendue suit cet ordre — et l’interprétation vaut **autant de points** que le calcul.
+
+> Le calcul matriciel ne fait rien de neuf : il **factorise** un raisonnement qu’on saurait mener suite par suite. Son intérêt est de rendre le cas à **trois** états aussi simple que le cas à deux.`,
           },
           questions: [
             ['Comment s’écrit un système de deux suites récurrentes couplées ?', ['U(n+1) = A U(n), avec U(n) matrice colonne', 'U(n+1) = U(n) + A', 'A U(n+1) = U(n)', 'U(n) = A + n'], 0, 'La matrice A contient les coefficients du système.'],
@@ -708,41 +794,43 @@ Il fournit presque toujours : le système de récurrence en français, la matric
             cours: `Une **chaîne de Markov** modélise un système qui passe d’un état à un autre au hasard, et dont l’avenir ne dépend que de l’**état actuel** — jamais du chemin parcouru pour y arriver.
 
 ## La propriété de Markov
-C’est l’hypothèse fondatrice : la probabilité de l’état suivant ne dépend **que** de l’état présent, et non de tout l’historique. On dit que le processus est « **sans mémoire** ».
+La probabilité de l’état suivant ne dépend **que** de l’état présent : le processus est « **sans mémoire** ».
 
-Cette hypothèse doit être **discutée** dans une modélisation : elle est raisonnable pour un déplacement aléatoire, plus discutable pour une fidélité de clientèle, où l’ancienneté joue.
+> Cette hypothèse doit être **discutée** dans une modélisation : raisonnable pour un déplacement aléatoire, plus discutable pour une fidélité de clientèle, où l’ancienneté joue.
 
 ## Le graphe probabiliste
-On représente la chaîne par un graphe orienté et pondéré : les **sommets** sont les états, les **arcs** portent les **probabilités de transition**. La somme des probabilités des arcs **sortant** d’un même sommet vaut nécessairement **1** — le système est forcément quelque part à l’étape suivante.
+Les **sommets** sont les états, les **arcs** portent les **probabilités de transition**.
+
+> La somme des probabilités des arcs **sortant** d’un même sommet vaut nécessairement **1** : le système est forcément quelque part à l’étape suivante.
 
 ## La matrice de transition
-La matrice **T** de la chaîne a pour coefficient (i ; j) la probabilité de passer de l’état **i** à l’état **j**. Chacune de ses **lignes** est donc une **distribution de probabilité** : ses coefficients sont positifs et de somme 1. Une telle matrice est dite **stochastique**.
+Le coefficient (i ; j) de **T** est la probabilité de passer de l’état i à l’état j. Chacune de ses **lignes** est donc une distribution de probabilité : coefficients positifs, de somme 1. Une telle matrice est dite **stochastique**.
 
-⚠️ La convention ligne/colonne doit être fixée dès le début et **tenue** : selon qu’on écrit les distributions en ligne ou en colonne, le produit se fait à droite ou à gauche. Mélanger les deux conventions en cours d’exercice est l’erreur la plus fréquente.
+> La convention ligne/colonne doit être **fixée dès le début et tenue** : selon qu’on écrit les distributions en ligne ou en colonne, le produit se fait à droite ou à gauche. Les mélanger en cours d’exercice est l’erreur la plus fréquente.
 
 ## L’évolution
-Si P(n) est la distribution de probabilité à l’étape n, écrite en **ligne**, alors :
+Avec les distributions écrites **en ligne** :
 
-P(n+1) = P(n) × T, et donc **P(n) = P(0) × Tⁿ**
+P(n+1) = P(n) × T, donc **P(n) = P(0) × Tⁿ**
 
 Le coefficient (i ; j) de **Tⁿ** est la probabilité d’être en j au bout de n étapes en partant de i.
 
 ## L’état stable
-Une distribution **π** est **stable** (ou invariante) si :
+Une distribution **π** est **stable** si π × T = π.
 
-π × T = π
-
-C’est un système linéaire, auquel on ajoute la condition que la somme des composantes de π vaut 1 — sans elle, le système admet une infinité de solutions proportionnelles.
+> C’est un **système linéaire**, auquel on ajoute la condition que la somme des composantes de π vaut **1**. Sans elle, le système admet une infinité de solutions proportionnelles.
 
 ## La convergence
-Si la matrice T ne comporte **aucun coefficient nul** — ou, plus généralement, si une de ses puissances n’en comporte aucun —, alors la distribution P(n) **converge vers l’unique état stable π**, et cette limite **ne dépend pas de la distribution initiale**.
+| La condition sur T | La conclusion |
+| Aucun coefficient nul — ou une puissance de T sans coefficient nul | P(n) **converge vers l’unique état stable π** |
+| — | Et cette limite **ne dépend pas** de la distribution initiale |
 
-C’est le résultat que les exercices font conclure : à long terme, la répartition s’installe et oublie d’où elle vient.
+> C’est le résultat que les exercices font conclure : à long terme, la répartition s’installe et **oublie d’où elle vient**.
 
 ## Les applications
-Fidélité à une marque et parts de marché, météo à deux ou trois états, déplacements aléatoires, files d’attente, génétique des populations, et le classement des pages web par marche aléatoire d’un internaute — le principe originel de Google.
+Fidélité à une marque et parts de marché, météo à deux ou trois états, déplacements aléatoires, files d’attente, génétique des populations — et le classement des pages web par la marche aléatoire d’un internaute, principe originel de Google.
 
-> Deux vérifications closent tout exercice : chaque ligne de T somme-t-elle à 1, et la somme des composantes de π vaut-elle 1 ? Si l’une des deux échoue, le calcul est faux.`,
+> Deux vérifications closent tout exercice : chaque **ligne de T** somme-t-elle à 1, et la somme des composantes de **π** vaut-elle 1 ? Si l’une échoue, le calcul est faux.`,
           },
           questions: [
             ['Que dit la propriété de Markov ?', ['L’avenir ne dépend que de l’état présent, pas de l’historique', 'Toutes les transitions sont équiprobables', 'Le système revient toujours à son état initial', 'Les probabilités changent à chaque étape'], 0, 'On dit que le processus est sans mémoire.'],

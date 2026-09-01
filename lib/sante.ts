@@ -2066,6 +2066,143 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'À EXÉCUTER en dernier du lot : c’est la matière dont le manque pèse le moins sur la semaine d’un élève. UN SEUL MODULE POUR QUATRE NIVEAUX, seule exception du dépôt — et c’est le BO qui l’autorise : les quatre champs d’apprentissage sont identiques de la 6e à la 3e, ce qui varie étant le niveau d’exigence dans la PRATIQUE, donc ce qui ne se révise pas sur écran. Le module ne couvre volontairement que ce qui est évaluable à l’écrit.',
   },
+  {
+    id: '340',
+    fichier: '340_cours_determinants_anglais.sql',
+    feature:
+      'Le cours « A, an, the — et l’article zéro » schématisé : arbre de décision en 3 étapes, tableau à double entrée (identifié × dénombrable), 6 tableaux d’oppositions — servi à l’identique en 2de, 1re et Tle',
+    siAbsente:
+      'La première fiche de grammaire de l’anglais — le chapitre 1 du groupe nominal, servi sur trois niveaux — reste rédigée en quatre paragraphes de prose. L’élève doit reconstruire lui-même la grille de choix, et l’article zéro (la faute n° 1 au bac) tient en une phrase noyée en milieu de paragraphe.',
+    // NON SONDABLE, et c'est la nature du geste qui le veut : une migration
+    // d'écriture pure ne crée ni ligne ni colonne, elle réécrit un `content` de
+    // 4 200 signes. La sonde ne sait comparer qu'à l'ÉGALITÉ (`.eq`) : la seule
+    // sonde exacte serait le cours entier recopié ici, qui dériverait au premier
+    // mot corrigé et mentirait alors dans les deux sens. Le rejeu est
+    // idempotent (UPDATE de valeur constante), donc sans risque.
+    sonde: null,
+    decision:
+      'ÉCRITURE PURE : aucune ligne créée ni supprimée, aucun UUID touché — donc aucune progression d’élève perdue. UN SEUL COURS POUR TROIS NIVEAUX, parce que `scripts/contenu/anglais-1re.mjs` et `anglais-2de.mjs` IMPORTENT la fiche de `anglais-tle.mjs` : les trois UUID (466b7a0c… en Tle, 1b3b3b73… en 1re, bee7a60a… en 2de) portent le même texte, et les oublier laisserait deux niveaux sur trois avec l’ancienne prose. ⚠️ L’UPDATE est GARDÉ PAR LE TITRE, apostrophe typographique comprise : si l’un de ces UUID désignait un jour une autre fiche, il ne ferait rien plutôt que d’écraser un cours étranger. Les 8 questions du quiz restent toutes couvertes par le nouveau texte (h muet, university, life is hard, the Netherlands, students’ bags, his sister, these/those, superlatif) — vérifié une par une avant d’écrire. DEPUIS LA CAMPAGNE 341 → 344, ELLE EST REDONDANTE, ET C’EST SANS DANGER : le texte de cette migration a été reporté dans les trois seeds qui portent la fiche (226, 266, 286), si bien que la 341 (Tle), la 342 (1/2, en 1re) et la 343 (2de) réécrivent ces mêmes trois leçons — avec des octets IDENTIQUES, vérifiés au comparateur. Les deux écritures ne peuvent donc pas diverger, et l’ordre d’exécution n’a aucune importance. La 340 reste au dépôt parce qu’elle a été exécutée : on ne réécrit pas une migration passée. Elle n’a simplement plus rien à faire de neuf.',
+  },
+  {
+    id: '341',
+    fichier: '341_cours_schematises_terminale.sql',
+    feature:
+      'Les cours de Terminale schématisés — 419 fiches : tableaux d’oppositions, marches à suivre numérotées et idées clés encadrées, à la place de la prose pleine',
+    siAbsente:
+      'Les cours de Terminale restent rédigés en paragraphes. La structure `##` et l’idée clé `>` sont là, mais aucune grille : l’élève doit reconstruire lui-même les oppositions (ser/estar, datif/accusatif, rétroaction positive/négative) que la fiche est censée lui donner d’un coup d’œil.',
+    // NON SONDABLE, comme la 340 et pour la même raison : une migration
+    // d'écriture pure ne crée ni ligne ni colonne, elle réécrit des `content`.
+    // La sonde ne compare qu'à l'ÉGALITÉ, et recopier ici un cours entier ferait
+    // mentir le catalogue au premier mot corrigé. Le rejeu est idempotent.
+    sonde: null,
+    decision:
+      'ÉCRITURE PURE, aucun UUID touché : la progression des élèves est intacte. UN FICHIER PAR NIVEAU, ET NON UN PAR SEED — les cours sont corrigés à la source dans les 65 seeds qui les portent (un clone neuf produit donc la bonne base sans rien exécuter), mais la base EN SERVICE ne les rejouera jamais : leurs INSERT sont gardés par `ON CONFLICT DO NOTHING`. D’où ces UPDATE. Les regrouper par niveau ramène 65 exécutions manuelles à 5 ; un fichier global unique dépasserait 4 Mo et ferait tomber le SQL Editor. ⚠️ À exécuter APRÈS tous les seeds de contenu du niveau Tle.',
+  },
+  {
+    id: '342',
+    fichier: '342_cours_schematises_premiere_1.sql',
+    feature:
+      'Les cours de Première schématisés (1/2) — 338 fiches : tableaux d’oppositions, marches à suivre numérotées et idées clés encadrées, à la place de la prose pleine',
+    siAbsente:
+      'Les cours de Première restent rédigés en paragraphes. La structure `##` et l’idée clé `>` sont là, mais aucune grille : l’élève doit reconstruire lui-même les oppositions (ser/estar, datif/accusatif, rétroaction positive/négative) que la fiche est censée lui donner d’un coup d’œil.',
+    // NON SONDABLE, comme la 340 et pour la même raison : une migration
+    // d'écriture pure ne crée ni ligne ni colonne, elle réécrit des `content`.
+    // La sonde ne compare qu'à l'ÉGALITÉ, et recopier ici un cours entier ferait
+    // mentir le catalogue au premier mot corrigé. Le rejeu est idempotent.
+    sonde: null,
+    decision:
+      'ÉCRITURE PURE, aucun UUID touché : la progression des élèves est intacte. UN FICHIER PAR NIVEAU, ET NON UN PAR SEED — les cours sont corrigés à la source dans les 65 seeds qui les portent (un clone neuf produit donc la bonne base sans rien exécuter), mais la base EN SERVICE ne les rejouera jamais : leurs INSERT sont gardés par `ON CONFLICT DO NOTHING`. D’où ces UPDATE. Les regrouper par niveau ramène 65 exécutions manuelles à 5 ; un fichier global unique dépasserait 4 Mo et ferait tomber le SQL Editor. ⚠️ LA 1re TIENT EN 2 FICHIERS, ET C’EST UNE LEÇON PAYÉE : en un seul, elle pesait 1,23 Mo et le SQL Editor l’a REFUSÉE (« Query is too large to be run via the SQL Editor »). Le plafond mesuré de l’éditeur est d’environ 1 Mo — la 341, à 0,93 Mo, est passée. Les 2 fichiers sont indépendants l’un de l’autre, mais il faut les exécuter TOUS LES 2, sans quoi une partie des cours de 1re resterait en prose. Celui-ci porte 338 leçons. ⚠️ À exécuter APRÈS tous les seeds de contenu du niveau 1re.',
+  },
+  {
+    id: '342',
+    fichier: '342_cours_schematises_premiere_2.sql',
+    feature:
+      'Les cours de Première schématisés (2/2) — 347 fiches : tableaux d’oppositions, marches à suivre numérotées et idées clés encadrées, à la place de la prose pleine',
+    siAbsente:
+      'Les cours de Première restent rédigés en paragraphes. La structure `##` et l’idée clé `>` sont là, mais aucune grille : l’élève doit reconstruire lui-même les oppositions (ser/estar, datif/accusatif, rétroaction positive/négative) que la fiche est censée lui donner d’un coup d’œil.',
+    // NON SONDABLE, comme la 340 et pour la même raison : une migration
+    // d'écriture pure ne crée ni ligne ni colonne, elle réécrit des `content`.
+    // La sonde ne compare qu'à l'ÉGALITÉ, et recopier ici un cours entier ferait
+    // mentir le catalogue au premier mot corrigé. Le rejeu est idempotent.
+    sonde: null,
+    decision:
+      'ÉCRITURE PURE, aucun UUID touché : la progression des élèves est intacte. UN FICHIER PAR NIVEAU, ET NON UN PAR SEED — les cours sont corrigés à la source dans les 65 seeds qui les portent (un clone neuf produit donc la bonne base sans rien exécuter), mais la base EN SERVICE ne les rejouera jamais : leurs INSERT sont gardés par `ON CONFLICT DO NOTHING`. D’où ces UPDATE. Les regrouper par niveau ramène 65 exécutions manuelles à 5 ; un fichier global unique dépasserait 4 Mo et ferait tomber le SQL Editor. ⚠️ LA 1re TIENT EN 2 FICHIERS, ET C’EST UNE LEÇON PAYÉE : en un seul, elle pesait 1,23 Mo et le SQL Editor l’a REFUSÉE (« Query is too large to be run via the SQL Editor »). Le plafond mesuré de l’éditeur est d’environ 1 Mo — la 341, à 0,93 Mo, est passée. Les 2 fichiers sont indépendants l’un de l’autre, mais il faut les exécuter TOUS LES 2, sans quoi une partie des cours de 1re resterait en prose. Celui-ci porte 347 leçons. ⚠️ À exécuter APRÈS tous les seeds de contenu du niveau 1re.',
+  },
+  {
+    id: '343',
+    fichier: '343_cours_schematises_seconde.sql',
+    feature:
+      'Les cours de Seconde schématisés — 305 fiches : tableaux d’oppositions, marches à suivre numérotées et idées clés encadrées, à la place de la prose pleine',
+    siAbsente:
+      'Les cours de Seconde restent rédigés en paragraphes. La structure `##` et l’idée clé `>` sont là, mais aucune grille : l’élève doit reconstruire lui-même les oppositions (ser/estar, datif/accusatif, rétroaction positive/négative) que la fiche est censée lui donner d’un coup d’œil.',
+    // NON SONDABLE, comme la 340 et pour la même raison : une migration
+    // d'écriture pure ne crée ni ligne ni colonne, elle réécrit des `content`.
+    // La sonde ne compare qu'à l'ÉGALITÉ, et recopier ici un cours entier ferait
+    // mentir le catalogue au premier mot corrigé. Le rejeu est idempotent.
+    sonde: null,
+    decision:
+      'ÉCRITURE PURE, aucun UUID touché : la progression des élèves est intacte. UN FICHIER PAR NIVEAU, ET NON UN PAR SEED — les cours sont corrigés à la source dans les 65 seeds qui les portent (un clone neuf produit donc la bonne base sans rien exécuter), mais la base EN SERVICE ne les rejouera jamais : leurs INSERT sont gardés par `ON CONFLICT DO NOTHING`. D’où ces UPDATE. Les regrouper par niveau ramène 65 exécutions manuelles à 5 ; un fichier global unique dépasserait 4 Mo et ferait tomber le SQL Editor. ⚠️ À exécuter APRÈS tous les seeds de contenu du niveau 2de.',
+  },
+  {
+    id: '344',
+    fichier: '344_cours_schematises_troisieme.sql',
+    feature:
+      'Les cours de Troisième schématisés — 273 fiches : tableaux d’oppositions, marches à suivre numérotées et idées clés encadrées, à la place de la prose pleine',
+    siAbsente:
+      'Les cours de Troisième restent rédigés en paragraphes. La structure `##` et l’idée clé `>` sont là, mais aucune grille : l’élève doit reconstruire lui-même les oppositions (ser/estar, datif/accusatif, rétroaction positive/négative) que la fiche est censée lui donner d’un coup d’œil.',
+    // NON SONDABLE, comme la 340 et pour la même raison : une migration
+    // d'écriture pure ne crée ni ligne ni colonne, elle réécrit des `content`.
+    // La sonde ne compare qu'à l'ÉGALITÉ, et recopier ici un cours entier ferait
+    // mentir le catalogue au premier mot corrigé. Le rejeu est idempotent.
+    sonde: null,
+    decision:
+      'ÉCRITURE PURE, aucun UUID touché : la progression des élèves est intacte. UN FICHIER PAR NIVEAU, ET NON UN PAR SEED — les cours sont corrigés à la source dans les 65 seeds qui les portent (un clone neuf produit donc la bonne base sans rien exécuter), mais la base EN SERVICE ne les rejouera jamais : leurs INSERT sont gardés par `ON CONFLICT DO NOTHING`. D’où ces UPDATE. Les regrouper par niveau ramène 65 exécutions manuelles à 5 ; un fichier global unique dépasserait 4 Mo et ferait tomber le SQL Editor. ⚠️ À exécuter APRÈS tous les seeds de contenu du niveau 3e.',
+  },
+  {
+    id: '345',
+    fichier: '345_cours_college_sixieme.sql',
+    feature:
+      'Les cours de 6e refaits pour des élèves de collège — 134 fiches dans 11 matières : l’alerte en corail pour l’erreur classique, la chaîne fléchée pour les processus, la frise pour les chronologies, la formule encadrée, en plus des tableaux',
+    siAbsente:
+      'Les cours de 6e restent ceux d’avant : de la prose, ou des tableaux seuls. L’erreur classique y a la même couleur que l’idée à retenir — un élève de collège ne distingue pas les deux —, les processus (cycle de l’eau, digestion, algorithme) sont à reconstruire de tête, et les dates d’histoire sont noyées dans les phrases au lieu de former une frise.',
+    // NON SONDABLE, comme la 340 et pour la même raison : une migration
+    // d'écriture pure ne crée ni ligne ni colonne, elle réécrit des `content`.
+    // La sonde ne compare qu'à l'ÉGALITÉ, et recopier ici un cours entier ferait
+    // mentir le catalogue au premier mot corrigé. Le rejeu est idempotent.
+    sonde: null,
+    decision:
+      'ÉCRITURE PURE, aucun UUID touché : la progression des élèves est intacte. ⚠️ CE NIVEAU COUVRE AUSSI LES CONTENUS IMPORTÉS — en anglais, en espagnol, en physique-chimie, en SVT et en technologie, la 4e et la 5e réutilisent les fiches de la 3e, mais sous des UUID qui leur sont propres : les migrations 341 → 344 ne les avaient donc PAS touchées. Un fichier par niveau, comme la 341 : les cours sont corrigés à la source dans les seeds (un clone neuf sort juste), mais la base EN SERVICE ne les rejouera jamais, leurs INSERT étant gardés par `ON CONFLICT DO NOTHING`. Les trois fichiers pèsent 0,24, 0,49 et 0,50 Mo — sous le plafond d’environ 1 Mo du SQL Editor, mesuré à la 342. ⚠️ À exécuter APRÈS tous les seeds de contenu du niveau 6e.',
+  },
+  {
+    id: '346',
+    fichier: '346_cours_college_cinquieme.sql',
+    feature:
+      'Les cours de 5e refaits pour des élèves de collège — 253 fiches dans 14 matières : l’alerte en corail pour l’erreur classique, la chaîne fléchée pour les processus, la frise pour les chronologies, la formule encadrée, en plus des tableaux',
+    siAbsente:
+      'Les cours de 5e restent ceux d’avant : de la prose, ou des tableaux seuls. L’erreur classique y a la même couleur que l’idée à retenir — un élève de collège ne distingue pas les deux —, les processus (cycle de l’eau, digestion, algorithme) sont à reconstruire de tête, et les dates d’histoire sont noyées dans les phrases au lieu de former une frise.',
+    // NON SONDABLE, comme la 340 et pour la même raison : une migration
+    // d'écriture pure ne crée ni ligne ni colonne, elle réécrit des `content`.
+    // La sonde ne compare qu'à l'ÉGALITÉ, et recopier ici un cours entier ferait
+    // mentir le catalogue au premier mot corrigé. Le rejeu est idempotent.
+    sonde: null,
+    decision:
+      'ÉCRITURE PURE, aucun UUID touché : la progression des élèves est intacte. ⚠️ CE NIVEAU COUVRE AUSSI LES CONTENUS IMPORTÉS — en anglais, en espagnol, en physique-chimie, en SVT et en technologie, la 4e et la 5e réutilisent les fiches de la 3e, mais sous des UUID qui leur sont propres : les migrations 341 → 344 ne les avaient donc PAS touchées. Un fichier par niveau, comme la 341 : les cours sont corrigés à la source dans les seeds (un clone neuf sort juste), mais la base EN SERVICE ne les rejouera jamais, leurs INSERT étant gardés par `ON CONFLICT DO NOTHING`. Les trois fichiers pèsent 0,24, 0,49 et 0,50 Mo — sous le plafond d’environ 1 Mo du SQL Editor, mesuré à la 342. ⚠️ À exécuter APRÈS tous les seeds de contenu du niveau 5e.',
+  },
+  {
+    id: '347',
+    fichier: '347_cours_college_quatrieme.sql',
+    feature:
+      'Les cours de 4e refaits pour des élèves de collège — 265 fiches dans 14 matières : l’alerte en corail pour l’erreur classique, la chaîne fléchée pour les processus, la frise pour les chronologies, la formule encadrée, en plus des tableaux',
+    siAbsente:
+      'Les cours de 4e restent ceux d’avant : de la prose, ou des tableaux seuls. L’erreur classique y a la même couleur que l’idée à retenir — un élève de collège ne distingue pas les deux —, les processus (cycle de l’eau, digestion, algorithme) sont à reconstruire de tête, et les dates d’histoire sont noyées dans les phrases au lieu de former une frise.',
+    // NON SONDABLE, comme la 340 et pour la même raison : une migration
+    // d'écriture pure ne crée ni ligne ni colonne, elle réécrit des `content`.
+    // La sonde ne compare qu'à l'ÉGALITÉ, et recopier ici un cours entier ferait
+    // mentir le catalogue au premier mot corrigé. Le rejeu est idempotent.
+    sonde: null,
+    decision:
+      'ÉCRITURE PURE, aucun UUID touché : la progression des élèves est intacte. ⚠️ CE NIVEAU COUVRE AUSSI LES CONTENUS IMPORTÉS — en anglais, en espagnol, en physique-chimie, en SVT et en technologie, la 4e et la 5e réutilisent les fiches de la 3e, mais sous des UUID qui leur sont propres : les migrations 341 → 344 ne les avaient donc PAS touchées. Un fichier par niveau, comme la 341 : les cours sont corrigés à la source dans les seeds (un clone neuf sort juste), mais la base EN SERVICE ne les rejouera jamais, leurs INSERT étant gardés par `ON CONFLICT DO NOTHING`. Les trois fichiers pèsent 0,24, 0,49 et 0,50 Mo — sous le plafond d’environ 1 Mo du SQL Editor, mesuré à la 342. ⚠️ À exécuter APRÈS tous les seeds de contenu du niveau 4e.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

@@ -142,25 +142,30 @@ DELETE FROM public.chapters c
           axe: 'Les états de la matière',
           lecon: {
             titre: 'Un seul constituant, ou plusieurs ?',
-            cours: `Un **corps pur** est constitué d’**une seule espèce chimique** : l’eau distillée, le dioxygène, le fer, le sel pur. Un **mélange** en contient **plusieurs**.
+            cours: `Un corps pur est constitué d'une seule espèce chimique. Un mélange en contient plusieurs.
 
 ## Deux familles de mélanges
-- **Homogène** : on ne distingue pas les constituants à l’œil nu, même après repos. L’eau salée, l’air, le vinaigre.
-- **Hétérogène** : on distingue au moins deux constituants. L’eau boueuse, le jus d’orange avec pulpe, l’huile dans l’eau.
+| Le mélange | Ce qu'on voit | Ses exemples |
+| **Homogène** | On ne distingue **pas** les constituants, même après repos | Eau salée, air, vinaigre |
+| **Hétérogène** | On distingue au moins deux constituants | Eau boueuse, jus avec pulpe, huile dans l'eau |
 
 ## Séparer les constituants
-- La **décantation** : on laisse reposer, le plus dense tombe au fond, puis on transvase.
-- La **filtration** : le filtre retient les particules solides ; le liquide qui passe est le **filtrat**. Elle ne sépare PAS un mélange homogène.
-- La **distillation** : on chauffe, la vapeur est refroidie dans un réfrigérant et recueillie — c’est le **distillat**. Elle sépare un mélange **homogène**, en jouant sur les températures d’ébullition.
+| La technique | Son principe | Ce qu'elle sépare |
+| La **décantation** | On laisse reposer : le plus dense tombe au fond | Un mélange **hétérogène** |
+| La **filtration** | Le filtre retient les solides ; le liquide qui passe est le **filtrat** | Un mélange **hétérogène** |
+| La **distillation** | On chauffe, la vapeur est refroidie et recueillie : le **distillat** | Un mélange **homogène** |
 
-> Filtrer de l’eau salée ne donne pas de l’eau pure : le sel est dissous, il traverse le filtre. Seule la distillation le retient.
+> Filtrer de l'eau salée ne donne pas de l'eau pure : le sel est **dissous**, il traverse le filtre. Seule la distillation le retient.
 
 ## Reconnaître un corps pur
-Un corps pur change d’état à **température constante** : l’eau pure bout à 100 °C sous pression normale, et la température ne bouge plus tant que toute l’eau n’est pas vaporisée. Un mélange, lui, change d’état sur un **intervalle** de températures.
+| Le corps | Son comportement au changement d'état |
+| Un **corps pur** | La température reste **constante** : l'eau pure bout à 100 °C, sans bouger |
+| Un **mélange** | Il change d'état sur un **intervalle** de températures |
 
 ## Les tests utiles
-- L’eau se reconnaît au **sulfate de cuivre anhydre**, blanc, qui devient **bleu** en sa présence.
-- Une eau **pure** ne laisse aucun résidu après évaporation ; une eau minérale en laisse.`,
+| Le test | Son résultat |
+| Le **sulfate de cuivre anhydre**, blanc | Il devient **bleu** en présence d'eau |
+| L'évaporation | Une eau **pure** ne laisse **aucun résidu** ; une eau minérale en laisse |`,
           },
           questions: [
             ['Qu’est-ce qu’un corps pur ?', ['Un corps constitué d’une seule espèce chimique', 'Un corps sans couleur', 'Un corps qui ne réagit avec rien', 'Un corps toujours solide'], 0, 'L’eau distillée, le fer ou le dioxygène en sont.'],
@@ -178,25 +183,33 @@ Un corps pur change d’état à **température constante** : l’eau pure bout 
           axe: 'Les états de la matière',
           lecon: {
             titre: 'Solide, liquide, gaz : la même matière, trois organisations',
-            cours: `La matière se présente sous trois **états physiques**, qui diffèrent par l’organisation de leurs molécules — jamais par leur nature.
+            cours: `La matière se présente sous trois états physiques, qui diffèrent par l'organisation de leurs molécules — jamais par leur nature.
 
 ## Les trois états
-- **Solide** : forme propre, volume propre. Les molécules sont **serrées**, **ordonnées** dans un solide cristallin, et **immobiles** (elles vibrent sur place).
-- **Liquide** : pas de forme propre (il prend celle du récipient), mais un **volume propre**. Les molécules sont serrées mais **désordonnées** et **glissent** les unes sur les autres.
-- **Gaz** : ni forme ni volume propres — il occupe tout l’espace disponible. Les molécules sont **très éloignées**, **désordonnées** et **très agitées**.
+| L'état | Sa forme | Son volume | Ses molécules |
+| **Solide** | **Propre** | Propre | Serrées, **ordonnées** dans un cristal, immobiles — elles vibrent sur place |
+| **Liquide** | Celle du récipient | **Propre** | Serrées, **désordonnées**, elles **glissent** les unes sur les autres |
+| **Gaz** | Aucune | Aucun : il occupe tout l'espace | Très **éloignées**, désordonnées, **très agitées** |
 
 ## Ce que cela explique
-- Un gaz est **compressible** : il y a beaucoup de vide entre ses molécules. Un liquide et un solide ne le sont quasiment pas.
-- Un liquide au repos a une surface **plane et horizontale**.
-- Un gaz est **expansible** : il remplit tout le volume qu’on lui offre.
+| L'observation | Son explication |
+| Un gaz est **compressible** | Il y a beaucoup de **vide** entre ses molécules |
+| Un liquide et un solide ne le sont quasiment pas | Leurs molécules sont déjà au contact |
+| Un liquide au repos a une surface **plane et horizontale** | Il n'a pas de forme propre |
+| Un gaz est **expansible** | Il remplit tout le volume offert |
 
 ## La conservation de la masse
-Lors d’un changement d’état, la **masse se conserve** : les molécules sont les mêmes, seul leur arrangement change. En revanche le **volume varie**, et l’eau fait exception en **augmentant** de volume quand elle gèle — c’est pourquoi une bouteille pleine d’eau placée au congélateur peut éclater.
+| Ce qui se conserve | Ce qui varie |
+| La **masse** : les molécules sont les mêmes | Le **volume** |
 
-> Ce qui distingue les trois états n’est pas la matière, c’est la distance entre les molécules et leur agitation.
+> L'eau fait exception : elle **augmente** de volume en gelant. C'est pourquoi une bouteille pleine d'eau placée au congélateur peut éclater.
 
-## L’agitation thermique
-Plus la température est élevée, plus les molécules sont agitées. Le **zéro absolu** (−273 °C) est la température où cette agitation cesserait : c’est le zéro de l’échelle des kelvins.`,
+> Ce qui distingue les trois états n'est pas la matière, c'est la **distance** entre les molécules et leur **agitation**.
+
+## L'agitation thermique
+| La température | L'agitation |
+| Plus elle est élevée | Plus les molécules sont agitées |
+| Le **zéro absolu**, −273 °C | L'agitation cesserait : c'est le zéro de l'échelle des kelvins |`,
           },
           questions: [
             ['Quel état a un volume propre mais pas de forme propre ?', ['L’état liquide', 'L’état solide', 'L’état gazeux', 'Aucun'], 0, 'Le liquide prend la forme du récipient sans changer de volume.'],
@@ -214,30 +227,45 @@ Plus la température est élevée, plus les molécules sont agitées. Le **zéro
           axe: 'Les états de la matière',
           lecon: {
             titre: 'Six passages, six noms à connaître',
-            cours: `Un **changement d’état** est le passage d’un état physique à un autre. Il y en a **six**, et chacun porte un nom précis.
+            cours: `Un changement d'état est le passage d'un état physique à un autre. Il y en a six.
 
 ## Les six changements
-- Solide → liquide : la **fusion**
-- Liquide → solide : la **solidification**
-- Liquide → gaz : la **vaporisation** (par **évaporation** en surface, ou par **ébullition** dans toute la masse)
-- Gaz → liquide : la **liquéfaction** (aussi appelée condensation liquide)
-- Solide → gaz : la **sublimation**
-- Gaz → solide : la **condensation solide**
+| De… | À… | Son nom |
+| Solide | Liquide | La **fusion** |
+| Liquide | Solide | La **solidification** |
+| Liquide | Gaz | La **vaporisation** |
+| Gaz | Liquide | La **liquéfaction** |
+| Solide | Gaz | La **sublimation** |
+| Gaz | Solide | La **condensation solide** |
 
-## Les températures de l’eau pure
-Sous la pression atmosphérique normale :
-- **fusion et solidification : 0 °C** ;
-- **ébullition et liquéfaction : 100 °C**.
+| La vaporisation | Où elle a lieu |
+| L'**évaporation** | En **surface**, à toute température |
+| L'**ébullition** | Dans **toute la masse**, à température fixe |
 
-Ces valeurs ne valent que pour l’**eau pure** et à pression normale. En altitude, la pression est plus faible et l’eau bout **en dessous** de 100 °C. Avec du sel, la température de fusion **descend** sous 0 °C — c’est le salage des routes.
+## Les températures de l'eau pure
+| Le changement | Sa température, sous 1 013 hPa |
+| Fusion et solidification | **0 °C** |
+| Ébullition et liquéfaction | **100 °C** |
+
+| Ce qui modifie ces valeurs | Son effet |
+| L'**altitude** | La pression baisse : l'eau bout **en dessous** de 100 °C |
+| Le **sel** | La température de fusion **descend** sous 0 °C — c'est le salage des routes |
 
 ## Le palier de température
-Pendant un changement d’état d’un corps pur, la température **reste constante** : toute l’énergie reçue sert à réorganiser les molécules, pas à les agiter davantage. Sur une courbe de refroidissement, ce **palier** est la signature d’un corps pur.
+Pendant un changement d'état d'un corps pur, la température **reste constante** : toute l'énergie reçue sert à réorganiser les molécules.
 
-> On peut chauffer de l’eau bouillante autant qu’on veut, elle ne dépassera pas 100 °C : elle se vaporisera plus vite, c’est tout.
+> Sur une courbe de refroidissement, ce **palier** est la signature d'un corps pur.
+
+> On peut chauffer de l'eau bouillante autant qu'on veut, elle ne dépassera pas 100 °C : elle se vaporisera plus vite, c'est tout.
 
 ## Dans la nature
-La rosée est une liquéfaction, le givre une condensation solide, la buée sur une vitre froide une liquéfaction, le brouillard un ensemble de gouttelettes en suspension — et non de la vapeur d’eau, qui est **invisible**.`,
+| Le phénomène | Le changement d'état |
+| La **rosée** | Une liquéfaction |
+| Le **givre** | Une condensation solide |
+| La **buée** sur une vitre froide | Une liquéfaction |
+| Le **brouillard** | Des gouttelettes en suspension — pas de la vapeur |
+
+> La vapeur d'eau est **invisible** : ce qu'on voit au-dessus d'une casserole, ce sont déjà des gouttelettes.`,
           },
           questions: [
             ['Comment appelle-t-on le passage de l’état solide à l’état liquide ?', ['La fusion', 'La solidification', 'La sublimation', 'La liquéfaction'], 0, 'Le passage inverse est la solidification.'],
@@ -255,27 +283,44 @@ La rosée est une liquéfaction, le givre une condensation solide, la buée sur 
           axe: 'Les états de la matière',
           lecon: {
             titre: 'Ce qui se mélange, ce qui se dissout',
-            cours: `Deux notions voisines à ne pas confondre : la **miscibilité** concerne deux **liquides**, la **solubilité** le passage d’une espèce **dans un solvant**.
+            cours: `Deux notions voisines à ne pas confondre : la miscibilité concerne deux liquides, la solubilité le passage d'une espèce dans un solvant.
 
 ## La miscibilité
-Deux liquides sont **miscibles** s’ils forment un mélange **homogène** : l’eau et l’alcool, l’eau et le vinaigre. Ils sont **non miscibles** s’ils forment deux phases superposées : l’eau et l’huile, l’eau et le cyclohexane.
+| Les liquides | Ce qu'ils forment | Des exemples |
+| **Miscibles** | Un mélange **homogène** | Eau et alcool, eau et vinaigre |
+| **Non miscibles** | Deux phases superposées | Eau et huile, eau et cyclohexane |
 
-Dans un mélange non miscible, le liquide le **moins dense** se place au-dessus. On les sépare à l’**ampoule à décanter**.
+| La question | La réponse |
+| Lequel est au-dessus ? | Le **moins dense** |
+| Comment les séparer ? | À l'**ampoule à décanter** |
 
 ## La dissolution
-Dissoudre, c’est disperser une espèce (le **soluté**) dans un liquide (le **solvant**) pour obtenir une **solution** homogène.
-- Solvant + soluté = solution.
-- La **masse se conserve** : masse de la solution = masse du solvant + masse du soluté. Le sucre ne « disparaît » pas, il se disperse en particules invisibles à l’œil nu.
+| Le terme | Ce qu'il désigne |
+| Le **solvant** | Le liquide qui dissout |
+| Le **soluté** | L'espèce dissoute |
+| La **solution** | Le mélange homogène obtenu |
+
+Masse de la solution = masse du solvant + masse du soluté
+
+> Le sucre ne « disparaît » pas : il se disperse en particules invisibles à l'œil nu. **La masse se conserve.**
 
 ## La solubilité
-La **solubilité** est la masse maximale de soluté que l’on peut dissoudre dans un litre (ou 100 g) de solvant, à une température donnée. Elle s’exprime en g/L.
-- Au-delà, la solution est **saturée** : le surplus reste au fond sans se dissoudre.
-- La solubilité d’un solide **augmente** généralement avec la température ; celle d’un **gaz diminue** quand la température monte — c’est pourquoi un soda tiède pétille moins.
+C'est la masse **maximale** de soluté que l'on peut dissoudre dans un litre de solvant, à une température donnée. Elle s'exprime en **g/L**.
 
-> Une solution saturée n’est pas une solution ratée : c’est une solution qui a atteint sa limite.
+| L'état de la solution | Ce qui se passe |
+| Sous la limite | Tout se dissout |
+| **Saturée** | Le surplus reste au fond |
 
-## Le cas des gaz dans l’eau
-Le dioxygène dissous dans l’eau des rivières permet la vie aquatique. Une eau réchauffée en contient moins : c’est un effet direct du réchauffement sur les milieux aquatiques.`,
+| Le soluté | L'effet d'une hausse de température |
+| Un **solide** | Sa solubilité **augmente** en général |
+| Un **gaz** | Elle **diminue** — un soda tiède pétille moins |
+
+> Une solution saturée n'est pas une solution ratée : c'est une solution qui a atteint sa limite.
+
+## Le cas des gaz dans l'eau
+Le **dioxygène dissous** permet la vie aquatique. Une eau réchauffée en contient moins.
+
+> C'est un effet direct du réchauffement sur les milieux aquatiques.`,
           },
           questions: [
             ['Que signifie « deux liquides sont miscibles » ?', ['Ils forment un mélange homogène', 'Ils forment deux couches distinctes', 'Ils réagissent chimiquement', 'Ils ont la même masse volumique'], 0, 'L’eau et l’alcool sont miscibles, l’eau et l’huile non.'],
@@ -293,29 +338,41 @@ Le dioxygène dissous dans l’eau des rivières permet la vie aquatique. Une ea
           axe: 'Les états de la matière',
           lecon: {
             titre: 'Un mélange de gaz, et une masse bien réelle',
-            cours: `L’**air** est un **mélange homogène de gaz**, et non un corps pur.
+            cours: `L'air est un mélange homogène de gaz, et non un corps pur.
 
-## Sa composition
-- environ **78 % de diazote (N₂)** ;
-- environ **21 % de dioxygène (O₂)** ;
-- environ **1 %** d’autres gaz, dont l’**argon**, le **dioxyde de carbone (CO₂)** et de la vapeur d’eau en proportion variable.
+## Sa composition, en volume
+| Le gaz | Sa proportion |
+| **Diazote** (N₂) | Environ **78 %** |
+| **Dioxygène** (O₂) | Environ **21 %** |
+| Autres — **argon**, **CO₂**, vapeur d'eau | Environ **1 %** |
 
-Ces pourcentages sont des pourcentages **en volume**.
-
-## L’air a une masse
-Un litre d’air pèse environ **1,2 g** dans les conditions ordinaires. On le prouve en pesant un ballon gonflé puis dégonflé : la différence est la masse de l’air ajouté.
+## L'air a une masse
+| Le repère | Sa valeur |
+| Un litre d'air | Environ **1,2 g** |
+| La preuve | Peser un ballon gonflé puis dégonflé : la différence est la masse de l'air |
 
 ## Deux tests à connaître
-- Le **dioxygène** est identifié par la **bûchette incandescente** : elle se rallume s’il est présent.
-- Le **dioxyde de carbone** est identifié par l’**eau de chaux**, qui se **trouble** (elle devient blanche laiteuse).
+| Le gaz | Son test | Son résultat |
+| **Dioxygène** | La bûchette incandescente | Elle se **rallume** |
+| **Dioxyde de carbone** | L'eau de chaux | Elle se **trouble**, blanche laiteuse |
 
-## L’atmosphère et la pression
-L’air de l’atmosphère exerce une **pression** dans toutes les directions, mesurée au **baromètre** en **hectopascals (hPa)** : environ **1 013 hPa** au niveau de la mer. Elle **diminue avec l’altitude**, parce que la colonne d’air au-dessus est plus courte.
+## L'atmosphère et la pression
+| La grandeur | Sa valeur ou son instrument |
+| La pression au niveau de la mer | Environ **1 013 hPa** |
+| Son instrument | Le **baromètre** |
+| Son unité | L'**hectopascal** |
+| Avec l'altitude | Elle **diminue** : la colonne d'air au-dessus est plus courte |
 
-> Un gaz est compressible : dans une bouteille de plongée, le même volume d’air occupe un volume bien plus petit sous forte pression.
+Elle s'exerce dans **toutes** les directions.
 
-## L’air et les activités humaines
-La combustion des énergies fossiles augmente la proportion de **CO₂**, gaz à effet de serre, et rejette des polluants : particules fines, oxydes d’azote. La composition de l’air n’est donc pas une donnée fixe à l’échelle du siècle.`,
+> Un gaz est compressible : dans une bouteille de plongée, le même volume d'air occupe un volume bien plus petit sous forte pression.
+
+## L'air et les activités humaines
+| L'effet | Son contenu |
+| Le **CO₂** augmente | Gaz à effet de serre issu des énergies fossiles |
+| Les **polluants** | Particules fines, oxydes d'azote |
+
+> La composition de l'air n'est donc pas une donnée fixe à l'échelle du siècle.`,
           },
           questions: [
             ['Quelle est la proportion de diazote dans l’air ?', ['Environ 78 %', 'Environ 21 %', 'Environ 50 %', 'Environ 1 %'], 0, 'Le dioxygène ne représente qu’environ 21 %.'],
@@ -333,32 +390,38 @@ La combustion des énergies fossiles augmente la proportion de **CO₂**, gaz à
           axe: 'Les états de la matière',
           lecon: {
             titre: 'Une grandeur qui identifie un matériau',
-            cours: `La **masse volumique** d’un matériau est la masse d’**une unité de volume** de ce matériau. Elle se note ρ (rhô) et se calcule par :
+            cours: `La masse volumique d'un matériau est la masse d'une unité de volume de ce matériau.
 
-**ρ = m ÷ V**
+ρ = m ÷ V
 
-- m est la **masse**, en g ou kg ;
-- V est le **volume**, en cm³, mL, L ou m³ ;
-- ρ s’exprime alors en **g/cm³**, g/mL ou kg/m³.
+| La grandeur | Son unité |
+| m, la **masse** | g ou kg |
+| V, le **volume** | cm³, mL, L ou m³ |
+| ρ | **g/cm³**, g/mL ou kg/m³ |
 
 ## Quelques valeurs de référence
-- Eau : **1 g/cm³** (soit 1 000 kg/m³)
-- Huile : environ 0,92 g/cm³
-- Fer : environ 7,9 g/cm³
-- Air : environ 0,0012 g/cm³
+| Le matériau | Sa masse volumique |
+| **Eau** | **1 g/cm³**, soit 1 000 kg/m³ |
+| Huile | Environ 0,92 g/cm³ |
+| Fer | Environ 7,9 g/cm³ |
+| Air | Environ 0,0012 g/cm³ |
 
-## Ce qu’elle sert à faire
-- **Identifier un matériau** : on mesure sa masse et son volume, on calcule ρ et on compare aux valeurs du tableau.
-- **Prévoir si un corps flotte** : un corps flotte sur un liquide si sa masse volumique est **inférieure** à celle du liquide. Le bois flotte sur l’eau, le fer coule, l’huile surnage.
+## Ce qu'elle sert à faire
+| L'usage | La méthode |
+| **Identifier** un matériau | Mesurer m et V, calculer ρ, comparer au tableau |
+| Prévoir s'il **flotte** | Il flotte si sa masse volumique est **inférieure** à celle du liquide |
+
+Le bois flotte sur l'eau, le fer coule, l'huile surnage.
 
 ## Mesurer un volume irrégulier
-On plonge l’objet dans une éprouvette graduée contenant de l’eau : le volume d’eau **déplacé** est le volume de l’objet.
+On plonge l'objet dans une éprouvette graduée : le **volume d'eau déplacé** est le volume de l'objet.
 
 ## Deux erreurs à éviter
-- **Masse et masse volumique ne sont pas la même chose** : « le plomb est plus lourd que le bois » n’a de sens qu’à volume égal.
-- **Les unités doivent être cohérentes** : 1 g/cm³ = 1 000 kg/m³ ; 1 mL = 1 cm³ ; 1 L = 1 dm³.
+| L'erreur | La correction |
+| Confondre **masse** et **masse volumique** | « Le plomb est plus lourd que le bois » n'a de sens qu'**à volume égal** |
+| Mélanger les unités | 1 g/cm³ = 1 000 kg/m³ ; 1 mL = 1 cm³ ; 1 L = 1 dm³ |
 
-> Un kilogramme de plumes et un kilogramme de plomb ont la même masse — mais pas du tout le même volume, et c’est exactement ce que mesure la masse volumique.`,
+> Un kilogramme de plumes et un kilogramme de plomb ont la même masse — mais pas du tout le même volume. C'est exactement ce que mesure la masse volumique.`,
           },
           questions: [
             ['Quelle est la formule de la masse volumique ?', ['ρ = m ÷ V', 'ρ = V ÷ m', 'ρ = m × V', 'ρ = m + V'], 0, 'La masse divisée par le volume occupé.'],
@@ -379,34 +442,38 @@ On plonge l’objet dans une éprouvette graduée contenant de l’eau : le volu
           axe: 'Les transformations chimiques',
           lecon: {
             titre: 'Réactifs, produits, et une équation qui s’équilibre',
-            cours: `Une **transformation chimique** est une transformation au cours de laquelle des espèces chimiques **disparaissent** (les **réactifs**) tandis que d’autres **apparaissent** (les **produits**).
+            cours: `Une transformation chimique fait disparaître des espèces — les réactifs — et en fait apparaître d'autres — les produits.
 
-## La différence avec un changement d’état
-Un changement d’état est **physique** : les molécules restent les mêmes. Une transformation chimique **réorganise les atomes** en de nouvelles molécules. La glace qui fond reste de l’eau ; le bois qui brûle devient du dioxyde de carbone et de l’eau.
+## La différence avec un changement d'état
+| La transformation | Ce qui change | Un exemple |
+| **Physique** | Seul l'**arrangement** des molécules | La glace qui fond reste de l'eau |
+| **Chimique** | Les **atomes se réorganisent** en nouvelles molécules | Le bois qui brûle devient CO₂ et eau |
 
-## Les signes d’une transformation chimique
-Dégagement de gaz, changement de couleur, apparition d’un solide (**précipité**), dégagement de chaleur, disparition d’un réactif.
+## Les signes d'une transformation chimique
+Dégagement de gaz, changement de couleur, apparition d'un solide — un **précipité** —, dégagement de chaleur, disparition d'un réactif.
 
-## L’équation de réaction
-Elle s’écrit avec les **formules chimiques** :
+## L'équation de réaction
+méthane + dioxygène donne dioxyde de carbone + eau
 
-méthane + dioxygène → dioxyde de carbone + eau
 CH₄ + 2 O₂ → CO₂ + 2 H₂O
 
-- La flèche se lit « donne » ou « réagit pour former ».
-- Les **nombres stœchiométriques** (devant les formules) **ajustent** l’équation.
+| L'élément | Ce qu'il signifie |
+| La **flèche** | « Donne », ou « réagit pour former » |
+| Les **nombres stœchiométriques** | Ils **ajustent** l'équation |
 
-## La conservation des atomes et de la masse
-Au cours d’une transformation chimique :
-- **les atomes se conservent** — ni créés, ni détruits, seulement réarrangés ;
-- donc **la masse totale se conserve** : masse des réactifs consommés = masse des produits formés.
+## La conservation
+| Ce qui se conserve | Sa conséquence |
+| Les **atomes** | Ni créés, ni détruits : seulement réarrangés |
+| La **masse totale** | Masse des réactifs consommés = masse des produits formés |
 
-C’est la loi de **Lavoisier** : « rien ne se perd, rien ne se crée, tout se transforme ».
+C'est la loi de **Lavoisier** : « rien ne se perd, rien ne se crée, tout se transforme ».
 
-> Une équation mal ajustée est une équation fausse : le nombre de chaque sorte d’atome doit être identique à gauche et à droite de la flèche.
+> Une équation mal ajustée est une équation **fausse** : le nombre de chaque sorte d'atome doit être identique à gauche et à droite.
 
 ## Le réactif limitant
-Quand un réactif est entièrement consommé, la réaction s’arrête, même s’il reste de l’autre : ce réactif est le **réactif limitant**. C’est lui qui fixe la quantité de produits obtenue.`,
+| Le fait | Sa conséquence |
+| Un réactif est entièrement consommé | La réaction **s'arrête**, même s'il reste de l'autre |
+| Ce réactif est le **limitant** | C'est lui qui fixe la quantité de produits |`,
           },
           questions: [
             ['Comment appelle-t-on les espèces qui disparaissent au cours d’une transformation chimique ?', ['Les réactifs', 'Les produits', 'Les catalyseurs', 'Les solutés'], 0, 'Celles qui apparaissent sont les produits.'],
@@ -424,37 +491,41 @@ Quand un réactif est entièrement consommé, la réaction s’arrête, même s�
           axe: 'Les transformations chimiques',
           lecon: {
             titre: 'Reconnaître un gaz, un ion, une espèce',
-            cours: `Un **test caractéristique** est une expérience simple dont le résultat identifie une espèce chimique **sans ambiguïté**.
+            cours: `Un test caractéristique est une expérience simple dont le résultat identifie une espèce chimique sans ambiguïté.
 
 ## Les tests des gaz
-- **Dioxygène (O₂)** : la **bûchette incandescente** se rallume.
-- **Dihydrogène (H₂)** : **détonation** (« aboiement ») à l’approche d’une flamme.
-- **Dioxyde de carbone (CO₂)** : l’**eau de chaux se trouble**.
+| Le gaz | Le test | Le résultat |
+| **Dioxygène** (O₂) | La bûchette incandescente | Elle se **rallume** |
+| **Dihydrogène** (H₂) | Une flamme approchée | Une **détonation** |
+| **Dioxyde de carbone** (CO₂) | L'eau de chaux | Elle se **trouble** |
 
-## Le test de l’eau
-Le **sulfate de cuivre anhydre**, poudre **blanche**, devient **bleu** en présence d’eau.
+## Le test de l'eau
+| Le réactif | Sa couleur sans eau | Sa couleur avec eau |
+| Le **sulfate de cuivre anhydre** | **Blanc** | **Bleu** |
 
 ## Les tests des ions
-On ajoute quelques gouttes d’un réactif à la solution : un **précipité** apparaît, dont la **couleur** identifie l’ion.
+On ajoute quelques gouttes de réactif : un **précipité** apparaît, dont la couleur identifie l'ion.
 
-Avec la **soude** (hydroxyde de sodium) :
-- ion **cuivre II (Cu²⁺)** → précipité **bleu** ;
-- ion **fer II (Fe²⁺)** → précipité **vert** ;
-- ion **fer III (Fe³⁺)** → précipité **rouille** ;
-- ion **zinc (Zn²⁺)** → précipité **blanc**.
-
-Avec le **nitrate d’argent** :
-- ion **chlorure (Cl⁻)** → précipité **blanc** qui **noircit à la lumière**.
+| L'ion | Le réactif | Le précipité |
+| **Cuivre II** (Cu²⁺) | Soude | **Bleu** |
+| **Fer II** (Fe²⁺) | Soude | **Vert** |
+| **Fer III** (Fe³⁺) | Soude | **Rouille** |
+| **Zinc** (Zn²⁺) | Soude | **Blanc** |
+| **Chlorure** (Cl⁻) | Nitrate d'argent | **Blanc**, qui **noircit à la lumière** |
 
 ## Comment rédiger une identification
-1. Prélever un peu de solution dans un tube à essai.
-2. Ajouter le réactif.
-3. Observer, comparer au tableau, **conclure** en nommant l’espèce identifiée.
+| L'étape | Le geste |
+| 1 | Prélever un peu de solution dans un tube à essai |
+| 2 | Ajouter le **réactif** |
+| 3 | **Observer**, comparer au tableau |
+| 4 | **Conclure** en nommant l'espèce |
 
-> Un test ne se conclut jamais par une couleur : il se conclut par un nom d’espèce. « Précipité bleu » n’est pas une réponse ; « la solution contient des ions cuivre II » en est une.
+> Un test ne se conclut jamais par une couleur. « Précipité bleu » n'est pas une réponse ; « la solution contient des ions cuivre II » en est une.
 
 ## Sécurité
-La soude et le nitrate d’argent sont **corrosifs** : lunettes, gants, blouse. Le nitrate d’argent tache durablement la peau et les vêtements.`,
+| Le produit | Son danger | La protection |
+| La **soude** | Corrosive | Lunettes, gants, blouse |
+| Le **nitrate d'argent** | Corrosif, il tache durablement la peau et les vêtements | Idem |`,
           },
           questions: [
             ['Quel test identifie le dihydrogène ?', ['Une détonation à l’approche d’une flamme', 'L’eau de chaux qui se trouble', 'La bûchette qui se rallume', 'Le sulfate de cuivre qui bleuit'], 0, 'On l’appelle familièrement le test de l’aboiement.'],
@@ -472,27 +543,39 @@ La soude et le nitrate d’argent sont **corrosifs** : lunettes, gants, blouse. 
           axe: 'Les transformations chimiques',
           lecon: {
             titre: 'Des atomes qui ont gagné ou perdu des électrons',
-            cours: `Un **ion** est un atome — ou un groupe d’atomes — qui a **gagné ou perdu un ou plusieurs électrons**. Il porte donc une **charge électrique**.
+            cours: `Un ion est un atome — ou un groupe d'atomes — qui a gagné ou perdu un ou plusieurs électrons. Il porte donc une charge électrique.
 
 ## Deux familles
-- Un **cation** a **perdu** des électrons : il est chargé **positivement**. Na⁺, Cu²⁺, Fe³⁺, H⁺.
-- Un **anion** a **gagné** des électrons : il est chargé **négativement**. Cl⁻, OH⁻, SO₄²⁻.
+| L'ion | Ce qu'il a fait | Sa charge | Ses exemples |
+| Le **cation** | Il a **perdu** des électrons | **Positive** | Na⁺, Cu²⁺, Fe³⁺, H⁺ |
+| L'**anion** | Il en a **gagné** | **Négative** | Cl⁻, OH⁻, SO₄²⁻ |
 
-Le nombre de charges se note en exposant après le symbole : Cu²⁺ a perdu **deux** électrons.
+Le nombre de charges se note en exposant : Cu²⁺ a perdu **deux** électrons.
 
 ## Pourquoi un atome devient un ion
-L’atome est électriquement **neutre** : autant de protons (+) que d’électrons (−). En perdant un électron, il a un proton de trop : il devient positif. En en gagnant un, il devient négatif. **Le noyau ne change jamais** — sinon ce ne serait plus le même élément chimique.
+| L'état | Son bilan de charges |
+| L'atome **neutre** | Autant de protons (+) que d'électrons (−) |
+| Il **perd** un électron | Un proton de trop : il devient **positif** |
+| Il **gagne** un électron | Un électron de trop : il devient **négatif** |
+
+> **Le noyau ne change jamais** — sinon ce ne serait plus le même élément chimique.
 
 ## Les solutions ioniques
-Dissoudre du sel dans l’eau donne une solution d’ions **sodium Na⁺** et **chlorure Cl⁻**. Une telle solution est **électriquement neutre dans son ensemble** : autant de charges positives que de négatives.
+Dissoudre du sel dans l'eau donne une solution d'ions **sodium Na⁺** et **chlorure Cl⁻**.
+
+> Une telle solution est **électriquement neutre dans son ensemble** : autant de charges positives que de négatives.
 
 ## La conduction électrique
-Une solution qui contient des ions **conduit le courant électrique** : ce sont les ions, mobiles, qui transportent la charge. L’eau distillée, pauvre en ions, conduit très mal ; l’eau salée conduit bien.
+| Le milieu | Ce qui transporte la charge | Sa conductivité |
+| Un **métal** | Les **électrons libres** | Très bonne |
+| Une **solution ionique** | Les **ions**, mobiles | Bonne si les ions sont nombreux |
+| L'eau **distillée** | Presque aucun ion | Très mauvaise |
+| L'eau **salée** | Beaucoup d'ions | Bonne |
 
-> Dans un métal, ce sont les électrons libres qui se déplacent ; dans une solution, ce sont les ions. Deux porteurs différents, un même courant.
+> Deux porteurs différents, un même courant.
 
 ## Danger
-C’est parce que l’eau du robinet et la sueur contiennent des ions que l’eau et l’électricité font si mauvais ménage.`,
+> C'est parce que l'eau du robinet et la sueur contiennent des ions que l'eau et l'électricité font si mauvais ménage.`,
           },
           questions: [
             ['Qu’est-ce qu’un ion ?', ['Un atome qui a gagné ou perdu un ou plusieurs électrons', 'Un atome sans noyau', 'Un atome plus gros que la normale', 'Une molécule d’eau chargée'], 0, 'Il porte de ce fait une charge électrique.'],
@@ -510,32 +593,39 @@ C’est parce que l’eau du robinet et la sueur contiennent des ions que l’ea
           axe: 'Les transformations chimiques',
           lecon: {
             titre: 'Mesurer l’acidité d’une solution',
-            cours: `Le **pH** mesure l’**acidité** d’une solution aqueuse. C’est un nombre sans unité, compris en pratique entre **0 et 14**.
+            cours: `Le pH mesure l'acidité d'une solution aqueuse. C'est un nombre sans unité, compris en pratique entre 0 et 14.
 
-## L’échelle
-- **pH < 7** : solution **acide** — jus de citron (≈ 2), vinaigre (≈ 3), soda (≈ 3).
-- **pH = 7** : solution **neutre** — eau pure.
-- **pH > 7** : solution **basique** — eau savonneuse (≈ 9), déboucheur (≈ 13).
+## L'échelle
+| Le pH | La solution | Des exemples |
+| **Inférieur à 7** | **Acide** | Jus de citron (≈ 2), vinaigre (≈ 3), soda (≈ 3) |
+| **Égal à 7** | **Neutre** | Eau pure |
+| **Supérieur à 7** | **Basique** | Eau savonneuse (≈ 9), déboucheur (≈ 13) |
 
-Plus le pH est **petit**, plus la solution est **acide** ; plus il est **grand**, plus elle est basique.
+Plus le pH est **petit**, plus la solution est **acide**.
 
 ## Le lien avec les ions
-- Une solution **acide** contient plus d’ions **hydrogène H⁺** que d’ions hydroxyde.
-- Une solution **basique** contient plus d’ions **hydroxyde OH⁻**.
-- Une solution **neutre** en contient autant.
+| La solution | L'ion majoritaire |
+| **Acide** | Les ions **hydrogène H⁺** |
+| **Basique** | Les ions **hydroxyde OH⁻** |
+| **Neutre** | Autant des deux |
 
 ## Comment le mesurer
-- Le **papier pH** : on dépose une goutte et on compare la couleur à l’échelle de teintes. Précision : environ 1 unité.
-- Le **pH-mètre** : plus précis (au dixième), il se plonge dans la solution après étalonnage.
-- Les **indicateurs colorés** (BBT, phénolphtaléine) : ils changent de couleur autour d’une valeur donnée, sans donner de mesure.
+| L'outil | Sa précision | Son usage |
+| Le **papier pH** | Environ **1 unité** | On dépose une goutte et on compare la couleur |
+| Le **pH-mètre** | Au **dixième** | On le plonge, après étalonnage |
+| Les **indicateurs colorés** — BBT, phénolphtaléine | Aucune mesure | Ils changent de couleur autour d'une valeur |
 
-## L’effet d’une dilution
-**Diluer une solution acide fait monter son pH** vers 7 ; diluer une solution basique le fait descendre vers 7. On ne rend jamais une solution acide basique en la diluant : on s’approche de la neutralité sans jamais la dépasser.
+## L'effet d'une dilution
+| La solution diluée | Son pH |
+| **Acide** | Il **monte** vers 7 |
+| **Basique** | Il **descend** vers 7 |
 
-> Diluer, c’est ajouter de l’eau : le nombre d’ions H⁺ ne change pas, mais leur concentration diminue.
+> On ne rend jamais une solution acide basique en la diluant : on s'approche de la neutralité **sans jamais la dépasser**. Le nombre d'ions H⁺ ne change pas — leur **concentration** diminue.
 
 ## Sécurité
-Les solutions très acides ou très basiques sont **corrosives**. On verse **toujours l’acide dans l’eau**, jamais l’inverse : l’opération dégage de la chaleur et peut projeter le liquide.`,
+| La règle | Sa raison |
+| Les solutions très acides ou très basiques sont **corrosives** | Lunettes, gants, blouse |
+| Verser **toujours l'acide dans l'eau**, jamais l'inverse | L'opération dégage de la chaleur et peut projeter le liquide |`,
           },
           questions: [
             ['Entre quelles valeurs le pH est-il compris en pratique ?', ['Entre 0 et 14', 'Entre 0 et 7', 'Entre 1 et 10', 'Entre −7 et 7'], 0, 'Le pH n’a pas d’unité.'],
@@ -553,30 +643,41 @@ Les solutions très acides ou très basiques sont **corrosives**. On verse **tou
           axe: 'Les transformations chimiques',
           lecon: {
             titre: 'Quand un acide attaque un métal',
-            cours: `Les solutions acides réagissent avec de nombreux **métaux**. C’est une transformation chimique, avec des réactifs consommés et des produits formés.
+            cours: `Les solutions acides réagissent avec de nombreux métaux. C'est une transformation chimique.
 
-## L’acide chlorhydrique et le fer
-Le fer disparaît, un **gaz** se dégage et la solution **verdit** :
+## L'acide chlorhydrique et le fer
+fer + acide chlorhydrique donne dihydrogène + solution de chlorure de fer II
 
-fer + acide chlorhydrique → dihydrogène + solution de chlorure de fer II
 Fe + 2 H⁺ → Fe²⁺ + H₂
 
-- Le gaz est le **dihydrogène**, identifié par une **détonation** à l’approche d’une flamme.
-- La couleur verte signale les ions **fer II (Fe²⁺)**, confirmés par un précipité vert à la soude.
+| L'observation | Ce qu'elle révèle |
+| Le fer **disparaît** | Il est consommé |
+| Un **gaz** se dégage | Le **dihydrogène**, identifié par une détonation |
+| La solution **verdit** | Les ions **fer II**, confirmés par un précipité vert à la soude |
 
 ## Ce qui se passe au niveau des ions
-Ce sont les ions **hydrogène H⁺** de l’acide qui réagissent. Les ions chlorure Cl⁻ ne participent pas : ce sont des **ions spectateurs**.
+| L'ion | Son rôle |
+| L'ion **hydrogène H⁺** | Il **réagit** |
+| L'ion **chlorure Cl⁻** | Il ne participe pas : c'est un **ion spectateur** |
 
-## Avec d’autres métaux
-Le zinc, l’aluminium et le magnésium réagissent de la même façon en dégageant du dihydrogène. **Le cuivre, l’or et l’argent ne réagissent pas** avec l’acide chlorhydrique : tous les métaux ne sont pas attaqués.
+## Avec d'autres métaux
+| Le métal | Réagit-il avec l'acide chlorhydrique |
+| Zinc, aluminium, magnésium | **Oui**, avec dégagement de dihydrogène |
+| **Cuivre**, **or**, **argent** | **Non** |
+
+> Tous les métaux ne sont pas attaqués.
 
 ## La corrosion, la même chimie au ralenti
-La **rouille** est une transformation chimique du fer en présence d’**eau et de dioxygène**. On la ralentit en isolant le métal (peinture, huile, galvanisation) ou en utilisant des **alliages** inoxydables.
+| Le fait | Son contenu |
+| La **rouille** | Une transformation du fer en présence d'**eau et de dioxygène** |
+| Comment la ralentir | Isoler le métal — peinture, huile, galvanisation — ou utiliser des **alliages inoxydables** |
 
-> Le fer ne « s’use » pas : il se transforme. La masse de rouille formée est supérieure à celle du fer disparu, car des atomes d’oxygène s’y ajoutent.
+> Le fer ne « s'use » pas : il se **transforme**. La masse de rouille formée est **supérieure** à celle du fer disparu, car des atomes d'oxygène s'y ajoutent.
 
 ## Sécurité
-Les acides concentrés sont **corrosifs** ; le dihydrogène est **explosif** en présence d’air et d’une flamme. Les expériences se font en petite quantité, sous hotte ou en salle ventilée, avec lunettes et gants.`,
+| Le risque | Sa parade |
+| Les acides concentrés sont **corrosifs** | Lunettes, gants, blouse |
+| Le **dihydrogène** est explosif avec l'air et une flamme | Petites quantités, salle ventilée ou hotte |`,
           },
           questions: [
             ['Quel gaz se dégage quand l’acide chlorhydrique attaque le fer ?', ['Le dihydrogène', 'Le dioxygène', 'Le dioxyde de carbone', 'Le diazote'], 0, 'On l’identifie par une détonation à l’approche d’une flamme.'],
@@ -597,28 +698,37 @@ Les acides concentrés sont **corrosifs** ; le dihydrogène est **explosif** en 
           axe: 'L’organisation de la matière dans l’Univers',
           lecon: {
             titre: 'Des échelles qui dépassent l’imagination',
-            cours: `L’**Univers** contient des centaines de milliards de **galaxies**, chacune faite de centaines de milliards d’**étoiles**. Il s’est formé il y a environ **13,8 milliards d’années**.
+            cours: `L'Univers contient des centaines de milliards de galaxies, chacune faite de centaines de milliards d'étoiles. Il s'est formé il y a environ 13,8 milliards d'années.
 
 ## Notre adresse cosmique
-Terre → **Système solaire** → **Voie lactée** (notre galaxie) → amas de galaxies → Univers.
+Terre → **Système solaire** → **Voie lactée** → amas de galaxies → Univers.
 
 ## Le Système solaire
-Il est né il y a environ **4,6 milliards d’années**. Au centre, le **Soleil**, une étoile — c’est-à-dire un corps qui **produit** sa propre lumière. Autour, **huit planètes** :
-- quatre **telluriques** (rocheuses) : Mercure, Vénus, la Terre, Mars ;
-- quatre **gazeuses** : Jupiter, Saturne, Uranus, Neptune.
+| Le repère | Sa valeur |
+| Son âge | Environ **4,6 milliards d'années** |
+| Son centre | Le **Soleil**, une **étoile** : elle produit sa propre lumière |
 
-S’y ajoutent des satellites (la Lune), des astéroïdes et des comètes. Les planètes et les satellites ne **produisent pas** de lumière : ils la **diffusent**.
+| Le type de planète | Ses membres |
+| **Telluriques**, rocheuses | Mercure, Vénus, la Terre, Mars |
+| **Gazeuses** | Jupiter, Saturne, Uranus, Neptune |
+
+S'y ajoutent satellites, astéroïdes et comètes.
+
+> Les planètes et les satellites ne **produisent pas** de lumière : ils la **diffusent**.
 
 ## Mesurer les distances
-- L’**année-lumière (a.l.)** est la distance parcourue par la lumière en un an, soit environ **9,5 × 10¹² km**.
-- La lumière va à environ **300 000 km/s** dans le vide.
-- Le Soleil est à **8 minutes-lumière** de la Terre : nous le voyons tel qu’il était il y a 8 minutes.
-- L’étoile la plus proche, Proxima du Centaure, est à environ **4,2 années-lumière**.
+| Le repère | Sa valeur |
+| La vitesse de la lumière | Environ **300 000 km/s** dans le vide |
+| Une **année-lumière** | Environ **9,5 × 10¹² km** |
+| Le Soleil | À **8 minutes-lumière** de la Terre |
+| Proxima du Centaure, l'étoile la plus proche | Environ **4,2 années-lumière** |
 
-> Regarder loin, c’est regarder tôt : plus un objet est distant, plus la lumière qu’on en reçoit est ancienne.
+> Regarder loin, c'est regarder **tôt** : nous voyons le Soleil tel qu'il était il y a huit minutes.
 
 ## Calculer une distance
-**d = v × t**, avec v la vitesse de la lumière et t la durée du trajet. Attention aux unités : une durée en secondes et une vitesse en km/s donnent une distance en km.`,
+d = v × t
+
+> Attention aux unités : une durée en **secondes** et une vitesse en **km/s** donnent une distance en **km**.`,
           },
           questions: [
             ['Quel âge a l’Univers environ ?', ['13,8 milliards d’années', '4,6 milliards d’années', '1 million d’années', '100 milliards d’années'], 0, 'Le Système solaire, lui, a environ 4,6 milliards d’années.'],
@@ -636,27 +746,40 @@ S’y ajoutent des satellites (la Lune), des astéroïdes et des comètes. Les p
           axe: 'L’organisation de la matière dans l’Univers',
           lecon: {
             titre: 'Les mêmes atomes ici et dans les étoiles',
-            cours: `La matière est faite **partout des mêmes constituants** : les mêmes atomes composent une pierre, un être vivant, l’atmosphère de Mars et une étoile lointaine. C’est ce qu’on appelle la **continuité de la matière** dans l’Univers.
+            cours: `La matière est faite partout des mêmes constituants : les mêmes atomes composent une pierre, un être vivant, l'atmosphère de Mars et une étoile lointaine.
 
 ## Les briques élémentaires
-- Les **atomes** — une centaine d’éléments différents, dont l’hydrogène et l’hélium constituent l’essentiel de l’Univers.
-- Les **molécules**, assemblages d’atomes : H₂O, CO₂, O₂.
-- Les **ions**, atomes chargés.
+| La brique | Ce qu'elle est |
+| L'**atome** | Une centaine d'éléments différents ; l'hydrogène et l'hélium constituent l'essentiel de l'Univers |
+| La **molécule** | Un assemblage d'atomes : H₂O, CO₂, O₂ |
+| L'**ion** | Un atome chargé |
 
 ## Une organisation à toutes les échelles
-De l’atome (10⁻¹⁰ m) à l’Univers observable (10²⁶ m), la matière s’organise en **niveaux emboîtés** : atomes → molécules → cellules → organismes → planètes → étoiles → galaxies.
+| Le niveau | Son ordre de grandeur |
+| L'**atome** | 10⁻¹⁰ m |
+| La **cellule** | 10⁻⁵ m |
+| L'**organisme** | 1 m |
+| La **planète** | 10⁷ m |
+| L'**Univers observable** | 10²⁶ m |
 
-## Comment le sait-on ?
-La **lumière** émise par une étoile porte la signature de sa composition : chaque élément chimique émet ou absorbe des couleurs précises. En analysant cette lumière (le **spectre**), on identifie les éléments présents à des millions d’années-lumière — sans jamais y aller. C’est ainsi que l’hélium a été découvert dans le Soleil avant de l’être sur Terre.
+Atomes → molécules → cellules → organismes → planètes → étoiles → galaxies.
 
-## L’origine des éléments
-- L’**hydrogène** et l’**hélium** se sont formés peu après la naissance de l’Univers.
-- Les éléments plus lourds (carbone, oxygène, fer) sont fabriqués **au cœur des étoiles**, puis dispersés lors de leur explosion.
+## Comment le sait-on
+| L'outil | Ce qu'il révèle |
+| La **lumière** d'une étoile | Chaque élément émet ou absorbe des couleurs **précises** |
+| Le **spectre** | Il identifie les éléments à des millions d'années-lumière, sans y aller |
+
+> C'est ainsi que l'**hélium** a été découvert dans le Soleil **avant** de l'être sur Terre.
+
+## L'origine des éléments
+| L'élément | Où il s'est formé |
+| L'**hydrogène** et l'**hélium** | Peu après la naissance de l'Univers |
+| Le carbone, l'oxygène, le fer | **Au cœur des étoiles**, puis dispersés lors de leur explosion |
 
 > Les atomes qui composent notre corps ont été fabriqués dans des étoiles mortes avant la naissance du Soleil.
 
-## L’unité de la matière
-Les mêmes lois physiques et chimiques s’appliquent ici et là-bas. C’est ce postulat, vérifié par l’observation, qui rend l’astrophysique possible.`,
+## L'unité de la matière
+> Les mêmes lois physiques et chimiques s'appliquent ici et là-bas. C'est ce postulat, vérifié par l'observation, qui rend l'astrophysique possible.`,
           },
           questions: [
             ['Que signifie la continuité de la matière dans l’Univers ?', ['La matière est faite partout des mêmes atomes', 'La matière est répartie uniformément dans l’espace', 'L’Univers ne contient aucun vide', 'Toute la matière est en mouvement continu'], 0, 'Une pierre, un être vivant et une étoile partagent les mêmes éléments.'],
@@ -674,31 +797,44 @@ Les mêmes lois physiques et chimiques s’appliquent ici et là-bas. C’est ce
           axe: 'L’organisation de la matière dans l’Univers',
           lecon: {
             titre: 'Un noyau minuscule, un immense vide',
-            cours: `Un **atome** est constitué d’un **noyau** central entouré d’**électrons** en mouvement.
+            cours: `Un atome est constitué d'un noyau central entouré d'électrons en mouvement.
 
-## Le noyau
-Il contient deux sortes de particules, appelées **nucléons** :
-- les **protons**, de charge **positive** ;
-- les **neutrons**, de charge **nulle**.
+## Les trois particules
+| La particule | Sa charge | Sa localisation | Sa masse |
+| Le **proton** | **Positive** | Le noyau | Un nucléon |
+| Le **neutron** | **Nulle** | Le noyau | Un nucléon |
+| L'**électron** | **Négative** | Autour du noyau | Environ **2 000 fois** plus petite |
 
-Le noyau concentre presque **toute la masse** de l’atome.
+Le noyau concentre presque **toute la masse** de l'atome.
 
-## Les électrons
-Ils portent une charge **négative** et se déplacent autour du noyau. Leur masse est environ **2 000 fois plus petite** que celle d’un nucléon.
+## La neutralité de l'atome
+Un atome possède **autant de protons que d'électrons** : il est électriquement **neutre**.
 
-## La neutralité de l’atome
-Un atome possède **autant de protons que d’électrons** : il est donc **électriquement neutre**. Devenir un ion, c’est perdre ou gagner des électrons — jamais des protons.
+> Devenir un ion, c'est perdre ou gagner des **électrons** — jamais des protons.
 
 ## Une structure essentiellement vide
-Le noyau est environ **100 000 fois plus petit** que l’atome. Si l’atome était un stade de football, le noyau serait une bille au centre du terrain : **l’atome est essentiellement du vide**.
+| L'objet | Sa taille relative |
+| L'**atome** | Un stade de football |
+| Le **noyau** | Une bille au centre du terrain |
+
+Le noyau est environ **100 000 fois** plus petit que l'atome.
 
 ## Ce qui identifie un élément
-C’est le **nombre de protons** du noyau, et lui seul. Un atome d’hydrogène a 1 proton, un atome de carbone en a 6, un atome d’oxygène 8. Changer ce nombre, c’est changer d’élément chimique.
+C'est le **nombre de protons** du noyau, et lui seul.
+
+| L'élément | Son nombre de protons |
+| Hydrogène | 1 |
+| Carbone | 6 |
+| Oxygène | 8 |
+
+> Changer ce nombre, c'est changer d'élément chimique.
 
 ## Les symboles
-Chaque élément a un **symbole** : une majuscule, parfois suivie d’une minuscule — H, C, O, N, Fe, Cu, Na, Cl. La casse compte : **Co** (cobalt) n’est pas **CO** (monoxyde de carbone).
+Une majuscule, parfois suivie d'une minuscule : H, C, O, N, Fe, Cu, Na, Cl.
 
-> Les molécules ne sont que des assemblages d’atomes : H₂O, deux atomes d’hydrogène et un d’oxygène ; le nombre en indice compte les atomes qui le précèdent.`,
+> La **casse** compte : **Co** (cobalt) n'est pas **CO** (monoxyde de carbone).
+
+> Dans une formule, le nombre en **indice** compte les atomes qui le précèdent : H₂O, deux atomes d'hydrogène et un d'oxygène.`,
           },
           questions: [
             ['Quelles particules composent le noyau d’un atome ?', ['Les protons et les neutrons', 'Les protons et les électrons', 'Les électrons et les neutrons', 'Uniquement les protons'], 0, 'On les appelle collectivement les nucléons.'],
@@ -719,38 +855,52 @@ Chaque élément a un **symbole** : une majuscule, parfois suivie d’une minusc
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Décrire un mouvement, et par rapport à quoi',
-            cours: `Décrire un mouvement, c’est indiquer **par rapport à quoi** on l’observe, quelle **trajectoire** il suit et à quelle **vitesse**.
+            cours: `Décrire un mouvement, c'est indiquer par rapport à quoi on l'observe, quelle trajectoire il suit et à quelle vitesse.
 
 ## La relativité du mouvement
-Un mouvement ne se décrit **jamais dans l’absolu** : il faut préciser le **référentiel**, c’est-à-dire l’objet par rapport auquel on observe.
+| Le référentiel | L'état du passager assis dans un train |
+| Celui du **train** | **Immobile** |
+| Celui du **quai** | **En mouvement** |
 
-Un passager assis dans un train est **immobile** dans le référentiel du train, et **en mouvement** dans le référentiel du quai. Les deux descriptions sont vraies.
+> Les deux descriptions sont vraies. Un mouvement ne se décrit **jamais dans l'absolu**.
 
 ## La trajectoire
-C’est la ligne décrite par l’objet au cours du temps :
-- **rectiligne** — une ligne droite ;
-- **circulaire** — un cercle ;
-- **curviligne** — une courbe quelconque.
+| Sa forme | Sa description |
+| **Rectiligne** | Une ligne droite |
+| **Circulaire** | Un cercle |
+| **Curviligne** | Une courbe quelconque |
 
 Elle dépend, elle aussi, du référentiel choisi.
 
 ## La vitesse
-**v = d ÷ t** : distance parcourue divisée par la durée du parcours.
-- en **m/s** si d est en mètres et t en secondes ;
-- en **km/h** si d est en kilomètres et t en heures ;
-- conversion : **diviser par 3,6** pour passer des km/h aux m/s (36 km/h = 10 m/s).
+v = d ÷ t
 
-On distingue la **vitesse moyenne** (sur tout le trajet) de la **vitesse instantanée** (à un instant donné, celle du compteur).
+| L'unité de d | L'unité de t | L'unité de v |
+| Mètres | Secondes | **m/s** |
+| Kilomètres | Heures | **km/h** |
+
+| La conversion | L'exemple |
+| Des km/h aux m/s : **diviser par 3,6** | 36 km/h = **10 m/s** |
+
+| La vitesse | Ce qu'elle mesure |
+| **Moyenne** | Sur tout le trajet |
+| **Instantanée** | À un instant donné : celle du compteur |
 
 ## Les régimes de mouvement
-- **Uniforme** : la vitesse ne change pas.
-- **Accéléré** : la vitesse augmente.
-- **Ralenti** (ou décéléré) : la vitesse diminue.
+| Le régime | La vitesse |
+| **Uniforme** | Elle ne change pas |
+| **Accéléré** | Elle augmente |
+| **Ralenti** | Elle diminue |
 
-> Un mouvement **rectiligne uniforme** cumule les deux : trajectoire droite ET vitesse constante. C’est le seul cas où l’objet ne subit aucune force résultante.
+> Un mouvement **rectiligne uniforme** cumule les deux : trajectoire droite **et** vitesse constante. C'est le seul cas où l'objet ne subit aucune force résultante.
 
 ## La chronophotographie
-Une série de photos prises à intervalles réguliers : plus les positions sont espacées, plus l’objet va vite. C’est l’outil de base pour identifier un régime de mouvement.`,
+Une série de photos prises à intervalles réguliers.
+
+| L'espacement des positions | Ce qu'il indique |
+| Grand | L'objet va **vite** |
+| Constant | Un mouvement **uniforme** |
+| Croissant | Un mouvement **accéléré** |`,
           },
           questions: [
             ['De quoi dépend la description d’un mouvement ?', ['Du référentiel choisi', 'De la masse de l’objet', 'De la couleur de l’objet', 'De rien : elle est absolue'], 0, 'Un passager de train est immobile dans le train et en mouvement par rapport au quai.'],
@@ -768,33 +918,38 @@ Une série de photos prises à intervalles réguliers : plus les positions sont 
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Ce qui met en mouvement, ce qui arrête',
-            cours: `Deux objets sont en **interaction** lorsqu’ils agissent l’un sur l’autre. On modélise cette action par une **force**.
+            cours: `Deux objets sont en interaction lorsqu'ils agissent l'un sur l'autre. On modélise cette action par une force.
 
-## Deux familles d’interactions
-- **De contact** : les objets se touchent (la main qui pousse, le sol qui soutient, les frottements de l’air).
-- **À distance** : sans contact (la **gravitation**, l’**interaction magnétique**, l’**interaction électrostatique**).
+## Deux familles d'interactions
+| La famille | Sa condition | Ses exemples |
+| **De contact** | Les objets se **touchent** | La main qui pousse, le sol qui soutient, les frottements de l'air |
+| **À distance** | Sans contact | La **gravitation**, le **magnétisme**, l'**électrostatique** |
 
 ## Représenter une force
-Une force se représente par une **flèche** (un vecteur) qui porte quatre informations :
-- son **point d’application** (où elle s’exerce) ;
-- sa **direction** (la droite qui la porte) ;
-- son **sens** (vers où elle pousse) ;
-- sa **valeur**, en **newtons (N)**, mesurée au **dynamomètre**, et traduite par la longueur de la flèche.
+| Ce que la flèche porte | Sa signification |
+| Le **point d'application** | Où la force s'exerce |
+| La **direction** | La droite qui la porte |
+| Le **sens** | Vers où elle pousse |
+| La **valeur** | En **newtons (N)**, mesurée au **dynamomètre** ; c'est la **longueur** de la flèche |
 
-## Les effets d’une force
-Une force peut :
-- **mettre en mouvement** un objet immobile ;
-- **modifier la vitesse** d’un objet en mouvement ;
-- **modifier la trajectoire** ;
-- **déformer** l’objet.
+## Les effets d'une force
+| L'effet | Son exemple |
+| **Mettre en mouvement** | Pousser un objet immobile |
+| **Modifier la vitesse** | Freiner ou accélérer |
+| **Modifier la trajectoire** | Dévier une balle |
+| **Déformer** | Écraser une éponge |
 
 ## Le principe des actions réciproques
-Si A exerce une force sur B, alors **B exerce sur A une force de même direction, de même valeur et de sens opposé**. Le nageur pousse l’eau vers l’arrière, l’eau le pousse vers l’avant.
+Si A exerce une force sur B, **B exerce sur A** une force de même direction, même valeur, sens opposé.
+
+> Le nageur pousse l'eau vers l'arrière, l'eau le pousse vers l'avant.
 
 ## Forces qui se compensent
-Quand les forces exercées sur un objet **se compensent** (même direction, sens opposés, valeurs égales), l’objet reste **immobile** ou garde un **mouvement rectiligne uniforme**. Si elles ne se compensent pas, sa vitesse ou sa trajectoire **change**.
+| Le bilan des forces | L'état de l'objet |
+| Elles se **compensent** | Immobile, ou en mouvement **rectiligne uniforme** |
+| Elles ne se compensent **pas** | Sa vitesse ou sa trajectoire **change** |
 
-> Un objet n’a pas besoin d’une force pour continuer d’avancer : il en a besoin pour **changer** de mouvement.`,
+> Un objet n'a pas besoin d'une force pour **continuer** d'avancer : il en a besoin pour **changer** de mouvement.`,
           },
           questions: [
             ['Comment appelle-t-on l’action qu’un objet exerce sur un autre ?', ['Une force', 'Une énergie', 'Une puissance', 'Une vitesse'], 0, 'Elle modélise une interaction entre deux objets.'],
@@ -864,30 +1019,36 @@ C’est la gravitation qui maintient les planètes en orbite autour du Soleil et
           axe: 'L’énergie',
           lecon: {
             titre: 'Ce qui permet à un système d’agir',
-            cours: `L’**énergie** est ce qui permet à un système de produire une action : mettre en mouvement, chauffer, éclairer, déformer. Elle se mesure en **joules (J)**.
+            cours: `L'énergie est ce qui permet à un système de produire une action : mettre en mouvement, chauffer, éclairer, déformer. Elle se mesure en joules.
 
 ## Les principales formes
-- **Cinétique** : liée au **mouvement** d’un objet. Ec = ½ × m × v².
-- **De position** (ou potentielle de pesanteur) : liée à la **hauteur** d’un objet. Epp = m × g × h.
-- **Thermique** : liée à l’agitation des particules — la chaleur.
-- **Chimique** : stockée dans les liaisons entre atomes (aliments, carburants, piles).
-- **Électrique** : liée au déplacement des charges.
-- **Lumineuse** (ou rayonnante) : transportée par la lumière.
-- **Nucléaire** : stockée dans le noyau des atomes.
+| La forme | Ce à quoi elle est liée | Sa formule éventuelle |
+| **Cinétique** | Le **mouvement** | Ec = ½ × m × v² |
+| **De position** | La **hauteur** | Epp = m × g × h |
+| **Thermique** | L'agitation des particules | — |
+| **Chimique** | Les liaisons entre atomes | Aliments, carburants, piles |
+| **Électrique** | Le déplacement des charges | — |
+| **Lumineuse** | La lumière | — |
+| **Nucléaire** | Le noyau des atomes | — |
 
 ## Les unités
-- Le **joule (J)** est l’unité légale.
-- Le **kilowattheure (kWh)** sert pour l’électricité domestique : **1 kWh = 3,6 × 10⁶ J**.
-- La **calorie** apparaît encore en nutrition : 1 cal ≈ 4,18 J.
+| L'unité | Sa valeur | Son usage |
+| Le **joule (J)** | L'unité légale | Partout |
+| Le **kilowattheure** | 1 kWh = **3,6 × 10⁶ J** | L'électricité domestique |
+| La **calorie** | 1 cal ≈ 4,18 J | La nutrition |
 
-## Les sources d’énergie
-- **Renouvelables** : solaire, éolien, hydraulique, géothermie, biomasse — elles se reconstituent à l’échelle humaine.
-- **Non renouvelables** : charbon, pétrole, gaz, uranium — leurs réserves sont limitées.
+## Les sources d'énergie
+| Le type | Sa disponibilité | Ses exemples |
+| **Renouvelables** | Elles se reconstituent à l'échelle humaine | Solaire, éolien, hydraulique, géothermie, biomasse |
+| **Non renouvelables** | Réserves limitées | Charbon, pétrole, gaz, uranium |
 
-> Une source d’énergie n’est pas une forme d’énergie : le pétrole est une source, l’énergie chimique qu’il contient est une forme.
+> Une **source** d'énergie n'est pas une **forme** d'énergie : le pétrole est une source, l'énergie chimique qu'il contient est une forme.
 
-## L’ordre de grandeur, pour se repérer
-Soulever une pomme d’un mètre : environ 1 J. Une barre chocolatée : environ 1 000 000 J. Un radiateur de 1 000 W pendant une heure : 3,6 × 10⁶ J, soit 1 kWh.`,
+## Des ordres de grandeur
+| L'action | Son énergie |
+| Soulever une pomme d'un mètre | Environ **1 J** |
+| Une barre chocolatée | Environ **10⁶ J** |
+| Un radiateur de 1 000 W pendant une heure | 3,6 × 10⁶ J, soit **1 kWh** |`,
           },
           questions: [
             ['Quelle est l’unité légale de l’énergie ?', ['Le joule (J)', 'Le watt (W)', 'Le newton (N)', 'Le volt (V)'], 0, 'Le watt est l’unité de la puissance, pas de l’énergie.'],
@@ -905,33 +1066,42 @@ Soulever une pomme d’un mètre : environ 1 J. Une barre chocolatée : environ 
           axe: 'L’énergie',
           lecon: {
             titre: 'L’énergie change de forme et change de lieu',
-            cours: `Deux mots à distinguer :
-- un **transfert** déplace l’énergie **d’un objet à un autre**, sans changer sa forme ;
-- une **conversion** change la **forme** de l’énergie à l’intérieur d’un système.
+            cours: `Deux mots à distinguer : un transfert déplace l'énergie d'un objet à un autre ; une conversion change sa forme.
 
 ## Les trois modes de transfert thermique
-- **Conduction** : de proche en proche dans un solide (la cuillère qui chauffe dans la casserole).
-- **Convection** : par déplacement de matière dans un fluide (l’air chaud qui monte).
-- **Rayonnement** : sans support matériel (la chaleur du Soleil qui traverse le vide).
+| Le mode | Son mécanisme | Son exemple |
+| **Conduction** | De proche en proche, dans un **solide** | La cuillère qui chauffe dans la casserole |
+| **Convection** | Par **déplacement de matière**, dans un fluide | L'air chaud qui monte |
+| **Rayonnement** | **Sans support matériel** | La chaleur du Soleil à travers le vide |
 
-> La chaleur va **toujours du corps le plus chaud vers le plus froid**, jamais l’inverse spontanément.
+> La chaleur va **toujours du corps le plus chaud vers le plus froid**, jamais l'inverse spontanément.
 
 ## Les convertisseurs
-Chaque appareil convertit une forme d’énergie en une autre :
-- **lampe** : électrique → lumineuse (+ thermique) ;
-- **moteur électrique** : électrique → cinétique (+ thermique) ;
-- **panneau photovoltaïque** : lumineuse → électrique ;
-- **alternateur** : cinétique → électrique ;
-- **pile** : chimique → électrique ;
-- **chaudière** : chimique → thermique.
+| L'appareil | Sa conversion |
+| **Lampe** | Électrique → lumineuse, + thermique |
+| **Moteur électrique** | Électrique → cinétique, + thermique |
+| **Panneau photovoltaïque** | Lumineuse → électrique |
+| **Alternateur** | Cinétique → électrique |
+| **Pile** | Chimique → électrique |
+| **Chaudière** | Chimique → thermique |
 
 ## La chaîne énergétique
-On la représente par un schéma : **source → convertisseur → utilisation**, avec des flèches pour chaque transfert, et une flèche de côté pour les **pertes**, presque toujours thermiques.
+On la schématise : **source → convertisseur → utilisation**, avec une flèche de côté pour les **pertes**, presque toujours thermiques.
 
-Exemple d’une centrale thermique : énergie chimique du charbon → énergie thermique (chaudière) → énergie cinétique (turbine) → énergie électrique (alternateur).
+| L'étape d'une centrale thermique | La forme d'énergie |
+| Le charbon | **Chimique** |
+| La chaudière | **Thermique** |
+| La turbine | **Cinétique** |
+| L'alternateur | **Électrique** |
 
 ## Le rendement
-**rendement = énergie utile ÷ énergie reçue**, exprimé en pourcentage. Il est **toujours inférieur à 100 %** : une part de l’énergie part en chaleur non désirée. Une lampe à incandescence convertit environ 5 % de l’électricité en lumière ; une LED plus de 30 %.`,
+rendement = énergie utile ÷ énergie reçue
+
+| L'appareil | Son rendement lumineux |
+| Lampe à incandescence | Environ **5 %** |
+| LED | Plus de **30 %** |
+
+> Il est **toujours inférieur à 100 %** : une part de l'énergie part en chaleur non désirée.`,
           },
           questions: [
             ['Quelle est la différence entre transfert et conversion d’énergie ?', ['Le transfert déplace l’énergie, la conversion change sa forme', 'Le transfert change la forme, la conversion déplace l’énergie', 'Ce sont deux mots pour la même chose', 'Le transfert ne concerne que l’électricité'], 0, 'Un radiateur transfère, une lampe convertit.'],
@@ -949,36 +1119,38 @@ Exemple d’une centrale thermique : énergie chimique du charbon → énergie t
           axe: 'L’énergie',
           lecon: {
             titre: 'Pourquoi doubler la vitesse quadruple le danger',
-            cours: `L’**énergie cinétique** est l’énergie que possède un objet du fait de son **mouvement**.
+            cours: `L'énergie cinétique est l'énergie que possède un objet du fait de son mouvement.
 
-**Ec = ½ × m × v²**
+Ec = ½ × m × v²
 
-- Ec en **joules (J)** ;
-- m en **kilogrammes (kg)** ;
-- v en **mètres par seconde (m/s)** — jamais en km/h.
+| La grandeur | Son unité |
+| Ec | **Joules (J)** |
+| m | **Kilogrammes (kg)** |
+| v | **Mètres par seconde (m/s)** — jamais en km/h |
 
 ## Le calcul, étape par étape
-Une voiture de 1 000 kg roulant à 72 km/h :
-1. convertir : 72 ÷ 3,6 = **20 m/s** ;
-2. appliquer : Ec = 0,5 × 1 000 × 20² = 0,5 × 1 000 × 400 = **200 000 J**.
+Une voiture de 1 000 kg à 72 km/h :
+
+| L'étape | Le calcul |
+| Convertir | 72 ÷ 3,6 = **20 m/s** |
+| Appliquer | Ec = 0,5 × 1 000 × 20² |
+| Résultat | 0,5 × 1 000 × 400 = **200 000 J** |
 
 ## Le carré, tout est là
-La vitesse est **au carré** : c’est la clé du chapitre.
-- Doubler la masse **double** l’énergie cinétique.
-- Doubler la **vitesse** la **multiplie par 4**.
-- La multiplier par 3 la multiplie par **9**.
+| Ce qu'on double ou triple | L'effet sur Ec |
+| La **masse** | Elle **double** |
+| La **vitesse** | Elle est **multipliée par 4** |
+| La vitesse ×3 | Elle est multipliée par **9** |
 
-> Passer de 50 à 100 km/h ne double pas la violence d’un choc : elle est **multipliée par quatre**. C’est le calcul qui fonde toutes les limitations de vitesse.
+> Passer de 50 à 100 km/h ne double pas la violence d'un choc : elle est **multipliée par quatre**. C'est le calcul qui fonde toutes les limitations de vitesse.
 
-## La distance d’arrêt
-Elle se compose de deux morceaux :
-- la **distance de réaction** — celle parcourue pendant le temps de réaction, environ 1 seconde ;
-- la **distance de freinage** — celle nécessaire pour dissiper l’énergie cinétique, qui augmente comme le **carré** de la vitesse.
+## La distance d'arrêt
+| Sa composante | Ce qu'elle recouvre | Ce qui l'allonge |
+| La distance de **réaction** | Le trajet pendant le temps de réaction, environ 1 s | Alcool, fatigue, téléphone |
+| La distance de **freinage** | Le trajet pour dissiper Ec ; elle croît comme le **carré** de la vitesse | Pluie, pneus usés |
 
-Alcool, fatigue et téléphone allongent le temps de réaction ; la pluie et l’usure des pneus allongent le freinage.
-
-## Ce que devient l’énergie au freinage
-Elle est **convertie en énergie thermique** par les frottements des freins : les disques chauffent. L’énergie n’a pas disparu, elle a changé de forme.`,
+## Ce que devient l'énergie au freinage
+> Elle est **convertie en énergie thermique** par les frottements des freins : les disques chauffent. L'énergie n'a pas disparu, elle a changé de forme.`,
           },
           questions: [
             ['Quelle est la formule de l’énergie cinétique ?', ['Ec = ½ × m × v²', 'Ec = m × v', 'Ec = m × g × h', 'Ec = ½ × m × v'], 0, 'La vitesse intervient au carré.'],
@@ -996,32 +1168,43 @@ Elle est **convertie en énergie thermique** par les frottements des freins : le
           axe: 'L’énergie',
           lecon: {
             titre: 'Rien ne se perd, mais tout se dégrade',
-            cours: `Le **principe de conservation de l’énergie** est l’un des plus solides de la physique : **l’énergie ne se crée pas et ne se détruit pas, elle se transforme**.
+            cours: `Le principe de conservation de l'énergie est l'un des plus solides de la physique : l'énergie ne se crée pas et ne se détruit pas, elle se transforme.
 
 ## Ce que cela implique
-Dans un système isolé, la somme de toutes les formes d’énergie reste **constante**. Une bille qui tombe convertit son énergie de position en énergie cinétique : la somme des deux ne varie pas, tant qu’on néglige les frottements.
+Dans un système isolé, la somme de toutes les formes d'énergie reste **constante**.
 
-## Alors pourquoi parle-t-on de « pertes » ?
-Parce qu’une partie de l’énergie prend une forme **inutilisable pour l’usage visé** : presque toujours de l’**énergie thermique**, dissipée dans l’environnement par les frottements ou l’effet Joule.
+| L'étape de la chute d'une bille | L'énergie |
+| En haut | Maximum d'énergie **de position** |
+| En descendant | Elle se convertit en **cinétique** |
+| La **somme** | Elle ne varie pas, si l'on néglige les frottements |
 
-Cette énergie n’a pas disparu — elle est **dégradée** : trop diluée dans l’air ambiant pour être récupérée.
+## Alors pourquoi parler de « pertes »
+| Ce qui se passe | Ce que cela signifie |
+| Une partie de l'énergie devient **thermique** | Elle est dissipée dans l'environnement, par frottements ou effet Joule |
+| Elle n'a pas **disparu** | Elle est **dégradée** : trop diluée pour être récupérée |
 
-> « Perte » est un mot d’ingénieur, pas de physicien : rien ne manque au bilan, quelque chose manque à l’usage.
+> « Perte » est un mot d'ingénieur, pas de physicien : rien ne manque au bilan, quelque chose manque à l'usage.
 
 ## Le rendement, mesure de cette dégradation
-**rendement = énergie utile ÷ énergie totale reçue**
-- Moteur thermique de voiture : environ **30 %** — les deux tiers partent en chaleur.
-- Moteur électrique : jusqu’à **90 %**.
-- Lampe à incandescence : environ **5 %** ; LED : plus de **30 %**.
+rendement = énergie utile ÷ énergie totale reçue
 
-## Économiser l’énergie
-Puisque l’énergie se dégrade, la seule vraie économie consiste à en **utiliser moins** :
-- **isoler** un logement pour limiter les transferts thermiques ;
-- choisir des appareils à **bon rendement** (étiquette énergie) ;
-- **éteindre** les veilles, limiter la vitesse, privilégier les transports collectifs.
+| L'appareil | Son rendement |
+| Moteur thermique de voiture | Environ **30 %** — les deux tiers partent en chaleur |
+| Moteur électrique | Jusqu'à **90 %** |
+| Lampe à incandescence | Environ **5 %** |
+| LED | Plus de **30 %** |
+
+## Économiser l'énergie
+| Le geste | Ce qu'il évite |
+| **Isoler** un logement | Les transferts thermiques |
+| Choisir un bon **rendement** | L'étiquette énergie |
+| Éteindre les **veilles** | Une consommation continue |
+| Limiter la vitesse, préférer les transports collectifs | Une énergie cinétique inutile |
 
 ## Le bilan énergétique
-Sur un schéma : énergie reçue = énergie utile + énergie dissipée. C’est ce bilan qu’on demande de compléter au brevet, en joules ou en pourcentages.`,
+énergie reçue = énergie utile + énergie dissipée
+
+> C'est ce bilan qu'on demande de compléter au brevet, en joules ou en pourcentages.`,
           },
           questions: [
             ['Que dit le principe de conservation de l’énergie ?', ['L’énergie ne se crée pas et ne se détruit pas, elle se transforme', 'L’énergie diminue à chaque conversion', 'L’énergie augmente avec la température', 'L’énergie disparaît lors des frottements'], 0, 'La somme des formes d’énergie reste constante dans un système isolé.'],
@@ -1042,32 +1225,44 @@ Sur un schéma : énergie reçue = énergie utile + énergie dissipée. C’est 
           axe: 'Les circuits électriques',
           lecon: {
             titre: 'Un déplacement de charges dans une boucle fermée',
-            cours: `Le **courant électrique** est un **déplacement ordonné de porteurs de charge** :
-- dans un **métal**, ce sont les **électrons libres** ;
-- dans une **solution ionique**, ce sont les **ions**.
+            cours: `Le courant électrique est un déplacement ordonné de porteurs de charge.
 
-## La condition d’existence
-Le courant ne circule que dans un **circuit fermé** — une boucle ininterrompue comprenant un **générateur**, des **récepteurs** et des **fils de connexion**. Un interrupteur ouvert coupe la boucle : plus rien ne circule.
+| Le milieu | Ses porteurs |
+| Un **métal** | Les **électrons libres** |
+| Une **solution ionique** | Les **ions** |
+
+## La condition d'existence
+Le courant ne circule que dans un **circuit fermé** : une boucle ininterrompue comprenant un **générateur**, des **récepteurs** et des **fils**.
+
+> Un interrupteur ouvert coupe la boucle : plus rien ne circule.
 
 ## Le vocabulaire du circuit
-- Le **générateur** (pile, batterie, alternateur) fournit l’énergie électrique.
-- Les **récepteurs** (lampe, moteur, résistance) la consomment.
-- Un **court-circuit** relie directement les deux bornes du générateur par un fil : l’intensité devient très grande, les fils chauffent, c’est un **danger d’incendie**.
+| L'élément | Son rôle |
+| Le **générateur** — pile, batterie, alternateur | Il fournit l'énergie |
+| Les **récepteurs** — lampe, moteur, résistance | Ils la consomment |
+| Le **court-circuit** | Un fil relie directement les deux bornes du générateur : l'intensité devient énorme, les fils chauffent — **danger d'incendie** |
 
 ## Deux sens à ne pas confondre
-- Le **sens conventionnel du courant** va, à l’extérieur du générateur, de la borne **+** vers la borne **−**.
-- Les **électrons**, eux, se déplacent en sens **inverse**.
+| Ce qui se déplace | Son sens, à l'extérieur du générateur |
+| Le **courant conventionnel** | De la borne **+** vers la borne **−** |
+| Les **électrons** | En sens **inverse** |
 
-C’est une convention historique, choisie avant qu’on ne connaisse l’électron : elle n’a jamais été corrigée, et elle reste celle des schémas.
+> C'est une convention historique, choisie avant qu'on ne connaisse l'électron. Elle n'a jamais été corrigée, et reste celle des schémas.
 
 ## Conducteurs et isolants
-- **Conducteurs** : les métaux (cuivre, aluminium, fer), le graphite, les solutions ioniques, le corps humain.
-- **Isolants** : le verre, le plastique, le bois sec, l’air sec, le caoutchouc.
+| La catégorie | Ses exemples |
+| **Conducteurs** | Métaux (cuivre, aluminium, fer), graphite, solutions ioniques, **corps humain** |
+| **Isolants** | Verre, plastique, bois sec, air sec, caoutchouc |
 
-> Le corps humain est **conducteur**, et d’autant plus qu’il est humide : c’est toute la raison des règles de sécurité électrique.
+> Le corps humain est **conducteur**, et d'autant plus qu'il est humide : c'est toute la raison des règles de sécurité électrique.
 
 ## Les schémas normalisés
-Chaque dipôle a son **symbole** : un rectangle pour la résistance, un cercle barré pour la lampe, deux traits inégaux pour la pile. Un schéma se dessine avec des traits droits et des angles droits.`,
+| Le dipôle | Son symbole |
+| La **résistance** | Un rectangle |
+| La **lampe** | Un cercle barré d'une croix |
+| La **pile** | Deux traits inégaux |
+
+Un schéma se dessine avec des traits droits et des angles droits.`,
           },
           questions: [
             ['Qu’est-ce que le courant électrique dans un métal ?', ['Un déplacement ordonné d’électrons libres', 'Un déplacement d’ions', 'Un déplacement d’atomes entiers', 'Un rayonnement lumineux'], 0, 'Dans une solution, ce sont les ions qui se déplacent.'],
@@ -1085,32 +1280,32 @@ Chaque dipôle a son **symbole** : un rectangle pour la résistance, un cercle b
           axe: 'Les circuits électriques',
           lecon: {
             titre: 'En série ou en dérivation : deux façons de brancher',
-            cours: `Il existe deux façons d’assembler des dipôles dans un circuit.
+            cours: `Il existe deux façons d'assembler des dipôles dans un circuit.
 
-## Le montage en série
-Tous les dipôles sont sur **une seule boucle**, l’un derrière l’autre.
-- Le courant a **un seul chemin** : l’**intensité est la même** partout.
-- Les **tensions s’additionnent** : U totale = U₁ + U₂ + …
-- Si un dipôle est retiré ou grillé, **tout s’éteint** : la boucle est ouverte.
-- Plus on ajoute de lampes, moins elles brillent : elles se partagent la tension.
-
-## Le montage en dérivation (ou en parallèle)
-Le circuit comporte **plusieurs branches** reliées par des **nœuds**.
-- Chaque branche a **la même tension** que le générateur.
-- Les **intensités s’additionnent** : I totale = I₁ + I₂ + … (loi des nœuds).
-- Si une lampe grille, **les autres continuent de fonctionner** : leur branche est intacte.
-- Ajouter une branche **augmente** l’intensité totale demandée au générateur.
+## Les deux montages face à face
+| Le point | En **série** | En **dérivation** |
+| La structure | **Une seule boucle** | Plusieurs **branches**, entre deux **nœuds** |
+| L'**intensité** | La **même** partout | Les intensités **s'additionnent** |
+| La **tension** | Les tensions **s'additionnent** | La **même** dans chaque branche |
+| Si un dipôle grille | **Tout s'éteint** | Les **autres continuent** |
+| Ajouter un dipôle | Les lampes brillent **moins** | L'intensité totale **augmente** |
 
 ## Pourquoi les installations domestiques sont en dérivation
-Chaque appareil reçoit la **même tension (230 V)**, fonctionne **indépendamment** des autres, et peut être commandé par son propre interrupteur. En série, éteindre la lampe du salon éteindrait le réfrigérateur.
+| L'avantage | Son contenu |
+| La **même tension** partout | 230 V pour chaque appareil |
+| L'**indépendance** | Chaque appareil fonctionne seul |
+| La **commande séparée** | Chacun son interrupteur |
 
-> Le montage en série n’a pas disparu pour autant : il est celui d’une guirlande à ampoules, où une seule ampoule grillée éteint toute la chaîne.
+> En série, éteindre la lampe du salon éteindrait le réfrigérateur.
+
+> Le montage en série n'a pas disparu : c'est celui d'une guirlande où une seule ampoule grillée éteint toute la chaîne.
 
 ## Le branchement des appareils de mesure
-- L’**ampèremètre** se branche **en série**, dans la branche à mesurer.
-- Le **voltmètre** se branche **en dérivation**, aux bornes du dipôle.
+| L'appareil | Son branchement | Sa raison |
+| L'**ampèremètre** | **En série** | Le courant doit le traverser |
+| Le **voltmètre** | **En dérivation** | Il mesure entre deux points |
 
-C’est la règle à ne jamais inverser : un ampèremètre branché en dérivation crée un court-circuit.`,
+> Règle à ne jamais inverser : un ampèremètre branché en dérivation crée un **court-circuit**.`,
           },
           questions: [
             ['Dans un montage en série, que peut-on dire de l’intensité ?', ['Elle est la même en tout point du circuit', 'Elle s’additionne à chaque dipôle', 'Elle diminue à chaque dipôle', 'Elle est nulle après le premier dipôle'], 0, 'Le courant n’a qu’un seul chemin possible.'],
@@ -1128,34 +1323,44 @@ C’est la règle à ne jamais inverser : un ampèremètre branché en dérivati
           axe: 'Les circuits électriques',
           lecon: {
             titre: 'Ce que mesure un voltmètre',
-            cours: `La **tension électrique** entre deux points traduit la différence d’état électrique entre eux. On la note **U** et elle se mesure en **volts (V)**.
+            cours: `La tension électrique entre deux points traduit la différence d'état électrique entre eux. On la note U, en volts.
 
-## L’instrument
-Le **voltmètre** (ou un multimètre en position V) se branche **en dérivation**, c’est-à-dire **aux bornes** du dipôle étudié — jamais en série.
-- borne **V** vers la borne **+** du dipôle,
-- borne **COM** vers l’autre.
+## L'instrument
+Le **voltmètre** se branche **en dérivation**, aux bornes du dipôle — jamais en série.
 
-Un branchement inversé affiche une valeur **négative** : le circuit ne risque rien, seul le signe change.
+| La borne du voltmètre | Où la placer |
+| **V** | Vers la borne **+** du dipôle |
+| **COM** | Vers l'autre |
+
+> Un branchement inversé affiche une valeur **négative** : le circuit ne risque rien, seul le signe change.
 
 ## Les valeurs usuelles
-- Pile plate : 4,5 V — pile bâton : 1,5 V — pile 9 V : 9 V.
-- Batterie de voiture : 12 V.
-- Secteur domestique en France : **230 V** — mortel.
-- Une tension est considérée comme **sans danger** en dessous de 25 V environ.
+| La source | Sa tension |
+| Pile bâton | 1,5 V |
+| Pile plate | 4,5 V |
+| Pile 9 V | 9 V |
+| Batterie de voiture | 12 V |
+| **Secteur domestique** | **230 V** — mortel |
+| Seuil de sécurité | Environ 25 V |
 
 ## Les lois de la tension
-- **En série** : les tensions **s’additionnent**. U générateur = U₁ + U₂ + …
-- **En dérivation** : les tensions sont **égales** dans toutes les branches.
+| Le montage | La loi |
+| En **série** | Les tensions **s'additionnent** : U générateur = U₁ + U₂ + … |
+| En **dérivation** | Les tensions sont **égales** dans toutes les branches |
 
-## La tension aux bornes d’un interrupteur
-- Interrupteur **fermé** : U ≈ 0 V (il ne consomme rien).
-- Interrupteur **ouvert** : U vaut la tension du générateur — toute la tension se retrouve à ses bornes.
+## La tension aux bornes d'un interrupteur
+| Son état | La tension à ses bornes |
+| **Fermé** | ≈ **0 V** : il ne consomme rien |
+| **Ouvert** | **Toute** la tension du générateur |
 
-> Une tension existe même sans courant : une pile posée sur la table a bien 1,5 V à ses bornes, sans qu’aucun électron ne circule.
+> Une tension existe même sans courant : une pile posée sur la table a bien 1,5 V à ses bornes, sans qu'aucun électron ne circule.
 
 ## Continu et alternatif
-- Une pile délivre une tension **continue** (symbole =) : constante dans le temps.
-- Le secteur délivre une tension **alternative** (symbole ~) : elle change de signe 50 fois par seconde en France (**fréquence 50 Hz**), ce qu’un oscilloscope rend visible sous forme de sinusoïde.`,
+| Le type | Son symbole | Son comportement |
+| **Continu** | = | Constante dans le temps ; c'est la pile |
+| **Alternatif** | ~ | Elle change de signe **50 fois par seconde** en France : 50 Hz |
+
+L'oscilloscope rend l'alternatif visible sous forme de sinusoïde.`,
           },
           questions: [
             ['Dans quelle unité se mesure la tension électrique ?', ['Le volt (V)', 'L’ampère (A)', 'L’ohm (Ω)', 'Le watt (W)'], 0, 'L’ampère est l’unité de l’intensité.'],
@@ -1173,31 +1378,42 @@ Un branchement inversé affiche une valeur **négative** : le circuit ne risque 
           axe: 'Les circuits électriques',
           lecon: {
             titre: 'Le débit du courant',
-            cours: `L’**intensité** mesure le **débit de charges électriques** dans une branche du circuit. On la note **I** et elle se mesure en **ampères (A)**.
+            cours: `L'intensité mesure le débit de charges électriques dans une branche. On la note I, en ampères.
 
-Une image utile : si le courant était de l’eau dans un tuyau, l’intensité serait le **débit** et la tension la **pression**.
+| L'analogie de l'eau dans un tuyau | La grandeur électrique |
+| Le **débit** | L'**intensité** |
+| La **pression** | La **tension** |
 
-## L’instrument
-L’**ampèremètre** se branche **en série**, dans la branche dont on veut mesurer l’intensité : le courant doit **le traverser**.
-- borne **A** (ou mA) du côté de la borne + du générateur, borne **COM** de l’autre ;
-- on démarre toujours sur le **plus grand calibre**, puis on descend.
+## L'instrument
+L'**ampèremètre** se branche **en série** : le courant doit **le traverser**.
 
-⚠️ Un ampèremètre branché **en dérivation** aux bornes d’un générateur crée un **court-circuit** et peut le détruire.
+| La règle | Son contenu |
+| La borne **A** (ou mA) | Du côté de la borne + du générateur |
+| La borne **COM** | De l'autre |
+| Le **calibre** | Démarrer sur le **plus grand**, puis descendre |
+
+> Un ampèremètre branché **en dérivation** aux bornes d'un générateur crée un **court-circuit** et peut le détruire.
 
 ## Les ordres de grandeur
-- LED : quelques mA (1 mA = 0,001 A)
-- Lampe de poche : environ 0,3 A
-- Réfrigérateur : environ 1 A
-- Plaque de cuisson : plus de 10 A
+| L'appareil | Son intensité |
+| Une **LED** | Quelques mA — 1 mA = 0,001 A |
+| Une lampe de poche | Environ 0,3 A |
+| Un réfrigérateur | Environ 1 A |
+| Une plaque de cuisson | Plus de 10 A |
 
-## Les lois de l’intensité
-- **En série** : l’intensité est **la même en tout point** du circuit. L’ordre des dipôles n’y change rien.
-- **En dérivation** : les intensités des branches **s’additionnent** pour donner l’intensité principale — c’est la **loi des nœuds** : I = I₁ + I₂ + …
+## Les lois de l'intensité
+| Le montage | La loi |
+| En **série** | L'intensité est **la même en tout point** ; l'ordre des dipôles n'y change rien |
+| En **dérivation** | Les intensités des branches **s'additionnent** : c'est la **loi des nœuds** |
 
-## Le rôle du fusible et du disjoncteur
-Ils **coupent** le circuit quand l’intensité dépasse une valeur limite, avant que les fils ne chauffent assez pour déclencher un incendie. Un fusible fond ; un disjoncteur se réarme.
+## Fusible et disjoncteur
+| Le dispositif | Ce qu'il fait | Sa réutilisation |
+| Le **fusible** | Il **fond** au-delà d'une intensité limite | À remplacer |
+| Le **disjoncteur** | Il coupe le circuit | Il se **réarme** |
 
-> Multiplier les multiprises sur la même prise ne change pas la tension, mais **additionne les intensités** : c’est ainsi que l’on dépasse la limite de l’installation.`,
+Tous deux coupent avant que les fils ne chauffent assez pour déclencher un incendie.
+
+> Multiplier les multiprises sur la même prise ne change pas la tension, mais **additionne les intensités** : c'est ainsi que l'on dépasse la limite de l'installation.`,
           },
           questions: [
             ['Dans quelle unité se mesure l’intensité du courant ?', ['L’ampère (A)', 'Le volt (V)', 'L’ohm (Ω)', 'Le joule (J)'], 0, 'Elle mesure le débit de charges électriques.'],
@@ -1215,36 +1431,44 @@ Ils **coupent** le circuit quand l’intensité dépasse une valeur limite, avan
           axe: 'Les circuits électriques',
           lecon: {
             titre: 'La loi d’Ohm et l’effet Joule',
-            cours: `Une **résistance** est un dipôle qui **s’oppose au passage du courant**. Sa valeur R se mesure en **ohms (Ω)**.
+            cours: `Une résistance est un dipôle qui s'oppose au passage du courant. Sa valeur R se mesure en ohms.
 
-## La loi d’Ohm
-Pour un conducteur ohmique :
+## La loi d'Ohm
+U = R × I
 
-**U = R × I**
+| La grandeur | Son unité |
+| U | **Volt (V)** |
+| R | **Ohm (Ω)** |
+| I | **Ampère (A)** |
 
-- U en **volts (V)** ;
-- R en **ohms (Ω)** ;
-- I en **ampères (A)**.
-
-On en déduit les deux autres formes : **R = U ÷ I** et **I = U ÷ R**.
+| La forme cherchée | Sa formule |
+| La tension | U = R × I |
+| La résistance | R = U ÷ I |
+| L'intensité | I = U ÷ R |
 
 ## Ce que la loi dit
-À tension constante, **plus la résistance est grande, plus l’intensité est faible**. Le graphique U en fonction de I est une **droite passant par l’origine** : la tension est proportionnelle à l’intensité, et la **pente** de cette droite vaut R.
+| Le fait | Sa conséquence |
+| À tension constante, R augmente | L'intensité **diminue** |
+| Le graphique U en fonction de I | Une **droite passant par l'origine** |
+| Sa **pente** | Elle vaut **R** |
 
 ## Mesurer une résistance
-- À l’**ohmmètre**, hors circuit (le dipôle doit être débranché).
-- Par la **méthode voltampèremétrique** : on mesure U et I, puis on calcule R = U ÷ I.
-- Par le **code des couleurs** imprimé sur le composant.
+| La méthode | Sa condition |
+| L'**ohmmètre** | **Hors circuit** : le dipôle doit être débranché |
+| La méthode **voltampèremétrique** | Mesurer U et I, puis calculer R = U ÷ I |
+| Le **code des couleurs** | Lu sur le composant |
 
-## L’effet Joule
-Toute résistance parcourue par un courant **s’échauffe** : c’est l’**effet Joule**.
-- **Recherché** dans un radiateur, un grille-pain, un sèche-cheveux, une ampoule à filament.
-- **Subi** dans les fils, les moteurs et les appareils électroniques, où il représente une perte d’énergie et un risque d’incendie.
+## L'effet Joule
+Toute résistance parcourue par un courant **s'échauffe**.
 
-> C’est l’effet Joule qui rend un court-circuit dangereux : l’intensité devient très grande, et l’énergie dissipée dans les fils suffit à les enflammer.
+| Où il est… | Ses exemples |
+| **Recherché** | Radiateur, grille-pain, sèche-cheveux, ampoule à filament |
+| **Subi** | Fils, moteurs, appareils électroniques : perte d'énergie et risque d'incendie |
 
-## Le rôle protecteur d’une résistance
-Placée en série avec une LED, une résistance limite l’intensité qui la traverse et l’empêche de griller : c’est son usage le plus courant en électronique.`,
+> C'est l'effet Joule qui rend un court-circuit dangereux : l'intensité devient très grande, et l'énergie dissipée dans les fils suffit à les enflammer.
+
+## Le rôle protecteur d'une résistance
+> Placée **en série** avec une LED, elle limite l'intensité qui la traverse et l'empêche de griller. C'est son usage le plus courant en électronique.`,
           },
           questions: [
             ['Quelle est la formule de la loi d’Ohm ?', ['U = R × I', 'U = R ÷ I', 'R = U × I', 'I = R × U'], 0, 'On en déduit R = U ÷ I et I = U ÷ R.'],
@@ -1262,38 +1486,43 @@ Placée en série avec une LED, une résistance limite l’intensité qui la tra
           axe: 'Les circuits électriques',
           lecon: {
             titre: 'Ce qui consomme, et ce que ça coûte',
-            cours: `La **puissance** d’un appareil est l’énergie qu’il convertit **par seconde**. Elle se note P et se mesure en **watts (W)**.
+            cours: `La puissance d'un appareil est l'énergie qu'il convertit par seconde. Elle se note P, en watts.
 
-## Les deux formules à connaître
-**P = U × I**
-- P en watts (W), U en volts (V), I en ampères (A).
+## Les deux formules
+| La formule | Ses unités |
+| **P = U × I** | P en watts, U en volts, I en ampères |
+| **E = P × t** | E en **joules** si t est en secondes |
+| — | En **wattheures** si t est en heures |
 
-**E = P × t**
-- E est l’**énergie** consommée, en **joules (J)** si t est en secondes ;
-- en **wattheures (Wh)** si t est en heures ; en **kilowattheures (kWh)** pour la facture.
+1 kWh = 3,6 × 10⁶ J
 
-**1 kWh = 3,6 × 10⁶ J.**
+## La plaque signalétique
+« 230 V — 2 000 W » : on en déduit l'intensité appelée.
 
-## L’indication portée sur les appareils
-La plaque signalétique indique la tension d’alimentation et la puissance : « 230 V — 2 000 W ». On en déduit l’intensité appelée : I = P ÷ U = 2 000 ÷ 230 ≈ **8,7 A**.
+I = P ÷ U = 2 000 ÷ 230 ≈ **8,7 A**
 
 ## Les ordres de grandeur
-- Chargeur de téléphone : environ 5 W
-- Ampoule LED : 8 W — ampoule à filament équivalente : 60 W
-- Réfrigérateur : 150 W
-- Four : 2 000 W
-- Plaque de cuisson : 3 000 W
+| L'appareil | Sa puissance |
+| Chargeur de téléphone | Environ 5 W |
+| Ampoule **LED** | 8 W |
+| Ampoule à filament équivalente | 60 W |
+| Réfrigérateur | 150 W |
+| Four | 2 000 W |
+| Plaque de cuisson | 3 000 W |
 
 ## Calculer un coût
-1. Calculer l’énergie en **kWh** : E = P (en kW) × t (en heures).
-2. Multiplier par le **prix du kWh**.
+| L'étape | Le calcul, pour un four de 2 000 W pendant 1 h 30 |
+| 1. L'énergie en kWh | E = 2 kW × 1,5 h = **3 kWh** |
+| 2. Le coût | 3 × 0,20 € = **0,60 €** |
 
-Un four de 2 000 W pendant 1 h 30 : E = 2 × 1,5 = **3 kWh**. À 0,20 € le kWh, cela coûte **0,60 €**.
-
-> La puissance dit la vitesse à laquelle on consomme, l’énergie dit la quantité totale consommée. Une ampoule de 60 W allumée une heure consomme autant qu’une ampoule de 6 W allumée dix heures.
+> La **puissance** dit la vitesse à laquelle on consomme, l'**énergie** la quantité totale. Une ampoule de 60 W allumée une heure consomme autant qu'une ampoule de 6 W allumée dix heures.
 
 ## Réduire sa consommation
-Comparer les **étiquettes énergie**, préférer les LED, éteindre les veilles, limiter la durée d’usage des appareils les plus puissants (four, chauffage, sèche-linge).`,
+| Le geste | Son effet |
+| Comparer les **étiquettes énergie** | Choisir le meilleur rendement |
+| Préférer les **LED** | Un rapport lumière/puissance bien meilleur |
+| Éteindre les **veilles** | Une consommation continue supprimée |
+| Limiter la durée des appareils **puissants** | Four, chauffage, sèche-linge |`,
           },
           questions: [
             ['Quelle est la formule de la puissance électrique ?', ['P = U × I', 'P = U ÷ I', 'P = I ÷ U', 'P = U + I'], 0, 'La tension en volts multipliée par l’intensité en ampères.'],
@@ -1314,32 +1543,42 @@ Comparer les **étiquettes énergie**, préférer les LED, éteindre les veilles
           axe: 'Les signaux',
           lecon: {
             titre: 'Transporter une information sans transporter de matière',
-            cours: `Un **signal** est un phénomène physique qui transporte une **information** d’un émetteur vers un récepteur — **sans transport de matière**.
+            cours: `Un signal est un phénomène physique qui transporte une information d'un émetteur vers un récepteur — sans transport de matière.
 
 ## La chaîne de transmission
-**Émetteur → milieu de propagation → récepteur.**
-Le téléphone, la télécommande, la radio, un feu tricolore ou un panneau de signalisation suivent tous ce même schéma.
+**Émetteur → milieu de propagation → récepteur**
+
+> Le téléphone, la télécommande, la radio, un feu tricolore ou un panneau de signalisation suivent tous ce même schéma.
 
 ## Trois familles de signaux
-- **Lumineux** : la lumière (fibre optique, télécommande infrarouge, feux de signalisation).
-- **Sonores** : les ondes sonores (la voix, une alarme, un klaxon).
-- **Électriques et électromagnétiques** : le courant dans un fil, les ondes radio, le Wi-Fi, la 4G/5G.
+| La famille | Ses exemples | Se propage-t-il dans le vide |
+| **Lumineux** | Fibre optique, télécommande infrarouge, feux | **Oui** |
+| **Sonores** | Voix, alarme, klaxon | **Non** : un milieu matériel est nécessaire |
+| **Électriques et électromagnétiques** | Courant dans un fil, radio, Wi-Fi, 4G et 5G | **Oui** |
 
-## Ce qui les distingue
-- Un signal **sonore** a besoin d’un **milieu matériel** : il ne se propage pas dans le vide.
-- Les signaux **lumineux et électromagnétiques** se propagent **dans le vide**, à environ **300 000 km/s** — c’est pourquoi les communications spatiales sont possibles.
+Lumière et ondes électromagnétiques vont à environ **300 000 km/s** dans le vide : c'est pourquoi les communications spatiales sont possibles.
 
 ## Analogique et numérique
-- Un signal **analogique** varie de façon **continue** (le sillon d’un disque vinyle, l’aiguille d’un cadran).
-- Un signal **numérique** est codé par une suite de **0 et de 1** (les **bits**). Il résiste bien mieux aux perturbations, se copie sans perte et se compresse.
+| Le signal | Sa variation | Sa robustesse |
+| **Analogique** | **Continue** — le sillon d'un disque vinyle, l'aiguille d'un cadran | Il se dégrade à chaque copie |
+| **Numérique** | Une suite de **0 et de 1**, les **bits** | Il se copie **sans perte** et se compresse |
 
-> C’est cette robustesse qui a fait passer la photo, la musique, la télévision et le téléphone au numérique en une génération.
+> C'est cette robustesse qui a fait passer la photo, la musique, la télévision et le téléphone au numérique en une génération.
 
-## Les unités de l’information
-1 octet = 8 bits ; 1 ko = 1 000 octets ; 1 Mo = 10⁶ octets ; 1 Go = 10⁹ octets.
+## Les unités de l'information
+| L'unité | Sa valeur |
+| 1 **octet** | 8 bits |
+| 1 **ko** | 1 000 octets |
+| 1 **Mo** | 10⁶ octets |
+| 1 **Go** | 10⁹ octets |
 
 ## Les usages quotidiens
-Un capteur transforme une grandeur physique (température, lumière, pression) en signal électrique ; un microcontrôleur le traite ; un actionneur agit. C’est le principe de tout objet connecté.`,
+| L'élément | Son rôle |
+| Le **capteur** | Il transforme une grandeur physique — température, lumière, pression — en signal électrique |
+| Le **microcontrôleur** | Il traite le signal |
+| L'**actionneur** | Il agit |
+
+C'est le principe de tout objet connecté.`,
           },
           questions: [
             ['Qu’est-ce qu’un signal ?', ['Un phénomène physique qui transporte une information sans transporter de matière', 'Un déplacement de matière d’un point à un autre', 'Une source d’énergie', 'Un appareil de mesure'], 0, 'Émetteur, milieu de propagation, récepteur.'],
@@ -1357,30 +1596,45 @@ Un capteur transforme une grandeur physique (température, lumière, pression) e
           axe: 'Les signaux',
           lecon: {
             titre: 'Sources, propagation, couleurs',
-            cours: `## Sources et objets diffusants
-- Une **source primaire** produit sa propre lumière : le Soleil, une flamme, une lampe, une LED, un écran.
-- Un **objet diffusant** (source secondaire) ne fait que **renvoyer** la lumière qu’il reçoit : la Lune, un mur, une page de livre.
+            cours: `Une source primaire produit sa propre lumière ; un objet diffusant ne fait que renvoyer celle qu'il reçoit.
 
-On ne voit un objet que si de la lumière **parvient de lui jusqu’à notre œil**.
+| Le type | Ses exemples |
+| Source **primaire** | Soleil, flamme, lampe, LED, écran |
+| Objet **diffusant** | Lune, mur, page de livre |
+
+> On ne voit un objet que si de la lumière **parvient de lui jusqu'à notre œil**.
 
 ## La propagation
-Dans un **milieu homogène et transparent**, la lumière se propage **en ligne droite**. On la modélise par des **rayons lumineux**, tracés avec une flèche pour indiquer le sens.
+Dans un milieu **homogène et transparent**, la lumière se propage **en ligne droite**. On la modélise par des **rayons lumineux**, fléchés.
 
-Cette propriété explique les **ombres** : l’ombre propre (la face non éclairée de l’objet), l’ombre portée (sur le sol ou l’écran), et le **cône d’ombre**. Elle explique aussi les **éclipses** et le fonctionnement de la chambre noire.
+| Le phénomène expliqué | Son mécanisme |
+| L'**ombre propre** | La face non éclairée de l'objet |
+| L'**ombre portée** | Sur le sol ou l'écran |
+| Le **cône d'ombre** | La zone privée de lumière |
+| Les **éclipses** | Un astre dans l'ombre d'un autre |
+| La **chambre noire** | Chaque point envoie un rayon par le trou |
 
 ## La vitesse
-Environ **300 000 km/s** dans le vide, un peu moins dans l’air, l’eau ou le verre. Rien ne va plus vite.
+| Le milieu | La vitesse |
+| Le **vide** | Environ **300 000 km/s** |
+| L'air, l'eau, le verre | Un peu moins |
+
+> Rien ne va plus vite.
 
 ## La lumière blanche est composée
-Un **prisme** la **disperse** en un **spectre continu** : rouge, orange, jaune, vert, bleu, indigo, violet — c’est ce qui se produit dans un arc-en-ciel avec les gouttes d’eau.
+Un **prisme** la **disperse** en un **spectre continu** : rouge, orange, jaune, vert, bleu, indigo, violet.
+
+> C'est ce qui se produit dans un arc-en-ciel, avec les gouttes d'eau.
 
 ## La couleur des objets
-Un objet éclairé en lumière blanche **absorbe** certaines couleurs et **diffuse** les autres : un tissu rouge diffuse le rouge et absorbe le reste. Éclairé en lumière **verte**, il apparaît **noir** — il n’a aucun rouge à renvoyer.
+| L'éclairage d'un tissu rouge | Sa couleur apparente | Pourquoi |
+| Lumière **blanche** | **Rouge** | Il diffuse le rouge et absorbe le reste |
+| Lumière **verte** | **Noir** | Il n'a aucun rouge à renvoyer |
 
-## La synthèse additive
-Les écrans mélangent trois couleurs primaires — **rouge, vert, bleu (RVB)** — pour reconstituer toutes les autres. Rouge + vert + bleu = **blanc**.
-
-> Les couleurs de la peinture obéissent, elles, à une synthèse **soustractive** : chaque pigment retire des couleurs à la lumière blanche.`,
+## Les deux synthèses
+| La synthèse | Ses primaires | Leur somme |
+| **Additive** — les écrans | **Rouge, vert, bleu** (RVB) | Le **blanc** |
+| **Soustractive** — la peinture | Cyan, magenta, jaune | Chaque pigment **retire** des couleurs à la lumière blanche |`,
           },
           questions: [
             ['Qu’est-ce qu’une source primaire de lumière ?', ['Un objet qui produit sa propre lumière', 'Un objet qui renvoie la lumière reçue', 'Un objet transparent', 'Un objet noir'], 0, 'Le Soleil et une LED en sont ; la Lune n’en est pas une.'],
@@ -1398,29 +1652,45 @@ Les écrans mélangent trois couleurs primaires — **rouge, vert, bleu (RVB)** 
           axe: 'Les signaux',
           lecon: {
             titre: 'Une vibration qui a besoin de matière',
-            cours: `Un **son** est produit par un objet qui **vibre** : une corde, une membrane, une colonne d’air, des cordes vocales.
+            cours: `Un son est produit par un objet qui vibre : une corde, une membrane, une colonne d'air, des cordes vocales.
 
 ## La propagation
-La vibration met en mouvement les particules du milieu : elles se **compriment** puis se **dilatent** de proche en proche. Le son a donc **absolument besoin d’un milieu matériel** — air, eau, métal, bois.
+La vibration met en mouvement les particules du milieu : elles se **compriment** puis se **dilatent** de proche en proche.
 
-> **Dans le vide, aucun son ne se propage.** L’expérience de la cloche à vide le montre : à mesure qu’on pompe l’air, la sonnerie s’éteint alors qu’on voit toujours le marteau frapper.
+> Le son a **absolument besoin d'un milieu matériel** — air, eau, métal, bois.
+
+> **Dans le vide, aucun son ne se propage.** L'expérience de la cloche à vide le montre : à mesure qu'on pompe l'air, la sonnerie s'éteint alors qu'on voit toujours le marteau frapper.
 
 ## La vitesse du son
-- dans l’**air** : environ **340 m/s** ;
-- dans l’**eau** : environ 1 500 m/s ;
-- dans l’**acier** : environ 5 000 m/s.
+| Le milieu | Sa vitesse |
+| L'**air** | Environ **340 m/s** |
+| L'**eau** | Environ 1 500 m/s |
+| L'**acier** | Environ 5 000 m/s |
 
-Elle est donc d’autant plus grande que le milieu est **dense et rigide** — et toujours **très inférieure** à celle de la lumière. C’est pourquoi on voit l’éclair avant d’entendre le tonnerre : compter les secondes et diviser par 3 donne la distance de l’orage en kilomètres.
+Elle est d'autant plus grande que le milieu est **dense et rigide** — et toujours **très inférieure** à celle de la lumière.
+
+> On voit l'éclair avant d'entendre le tonnerre : compter les secondes et **diviser par 3** donne la distance de l'orage, en kilomètres.
 
 ## Mesurer une distance par le son
-**d = v × t**, avec v = 340 m/s dans l’air. Pour un **écho** ou un sonar, le son fait l’aller-retour : la distance cherchée est la **moitié** du produit.
+d = v × t, avec v = 340 m/s dans l'air
+
+| Le cas | Le calcul |
+| Un trajet simple | d = v × t |
+| Un **écho** ou un sonar | La distance est la **moitié** : le son fait l'aller-retour |
 
 ## Deux grandeurs à ne pas confondre
-- La **fréquence** (en hertz, Hz) donne la **hauteur** du son : grave si elle est faible, aigu si elle est élevée. L’oreille humaine perçoit environ **20 Hz à 20 000 Hz**.
-- Le **niveau sonore** (en décibels, dB) donne l’**intensité** perçue : le volume.
+| La grandeur | Son unité | Ce qu'elle donne |
+| La **fréquence** | Hertz (Hz) | La **hauteur** : grave ou aigu |
+| Le **niveau sonore** | Décibel (dB) | L'**intensité** perçue : le volume |
+
+L'oreille humaine perçoit environ **20 Hz à 20 000 Hz**.
 
 ## Les dangers
-Au-delà de **85 dB**, une exposition prolongée abîme l’oreille interne ; **120 dB** est le seuil de douleur. Les cellules de l’oreille interne **ne se régénèrent pas** : les dommages sont définitifs. Casque à volume modéré, pauses régulières, bouchons en concert.`,
+| Le niveau | Son effet |
+| Au-delà de **85 dB** | Une exposition prolongée abîme l'oreille interne |
+| **120 dB** | Le **seuil de douleur** |
+
+> Les cellules de l'oreille interne **ne se régénèrent pas** : les dommages sont définitifs. Casque à volume modéré, pauses régulières, bouchons en concert.`,
           },
           questions: [
             ['Qu’est-ce qui produit un son ?', ['Un objet qui vibre', 'Un objet qui chauffe', 'Un objet qui brille', 'Un objet immobile'], 0, 'Corde, membrane ou colonne d’air en vibration.'],

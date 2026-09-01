@@ -129,21 +129,38 @@ DELETE FROM public.chapters c
           axe: 'Connecter',
           lecon: {
             titre: 'Personne ne possède Internet',
-            cours: `Internet n’est pas une entreprise, ni un ordinateur géant : c’est un **réseau de réseaux**, formé de millions de réseaux locaux qui acceptent de parler la même langue.
+            cours: `Internet n'est pas une entreprise, ni un ordinateur géant : c'est un réseau de réseaux, formé de millions de réseaux locaux qui acceptent de parler la même langue.
 
 ## Une naissance militaire, puis universitaire
-En 1969, **ARPANET** relie quatre universités américaines. L’objectif est de faire circuler l’information même si une partie du réseau tombe. En 1983, la famille de protocoles **TCP/IP** devient la règle commune ; c’est la date de naissance d’Internet tel qu’on le connaît.
+| La date | L'étape |
+| **1969** | **ARPANET** relie quatre universités américaines ; l'objectif est de faire circuler l'information même si une partie du réseau tombe |
+| **1983** | La famille de protocoles **TCP/IP** devient la règle commune : c'est la naissance d'Internet tel qu'on le connaît |
 
 ## Le principe de commutation de paquets
-Un message n’est pas envoyé d’un bloc : il est découpé en **paquets** qui voyagent indépendamment, empruntent des chemins différents et sont réassemblés à l’arrivée. Si un lien tombe, les paquets suivants passent ailleurs. C’est ce qui rend le réseau **résilient**.
+| L'étape | Ce qui se passe |
+| 1 | Le message est découpé en **paquets** |
+| 2 | Chaque paquet voyage **indépendamment**, par le chemin disponible |
+| 3 | Les paquets sont **réassemblés** à l'arrivée |
 
-> Internet n’a pas de centre. C’est un choix technique, et c’est aussi ce qui le rend si difficile à couper.
+> Si un lien tombe, les paquets suivants passent ailleurs. C'est ce qui rend le réseau **résilient**.
 
-## Les couches
-Le modèle **TCP/IP** empile quatre couches : accès réseau (le câble, le wifi, la fibre), Internet (l’adressage, avec le protocole **IP**), transport (l’acheminement fiable, avec **TCP** ou **UDP**), application (ce que voit l’utilisateur, avec HTTP, SMTP, DNS). Chaque couche ignore les détails des autres.
+> Internet n'a pas de centre. C'est un choix technique, et c'est aussi ce qui le rend si difficile à couper.
+
+## Les quatre couches du modèle TCP/IP
+| La couche | Ce dont elle s'occupe | Ses protocoles |
+| **Accès réseau** | Le support physique | Câble, wifi, fibre |
+| **Internet** | L'adressage | **IP** |
+| **Transport** | L'acheminement | **TCP**, **UDP** |
+| **Application** | Ce que voit l'utilisateur | HTTP, SMTP, DNS |
+
+Chaque couche ignore les détails des autres.
 
 ## Internet et le Web
-Ce sont deux choses différentes. Internet est l’**infrastructure** ; le **Web**, inventé en 1989 par **Tim Berners-Lee** au CERN, n’est qu’une application parmi d’autres, au même titre que le courrier électronique ou la messagerie instantanée.`,
+| Le terme | Ce qu'il est |
+| **Internet** | L'**infrastructure** |
+| Le **Web** | Une **application** parmi d'autres, inventée en 1989 par **Tim Berners-Lee** au CERN |
+
+> Le courrier électronique et la messagerie instantanée sont d'autres applications d'Internet, indépendantes du Web.`,
           },
           questions: [
             ['Qu’est-ce qu’Internet ?', ['Un réseau de réseaux reliés par des protocoles communs', 'Un ordinateur central géant', 'Une entreprise américaine', 'Un ensemble de pages web'], 0, 'Aucune entité ne le possède ni ne le contrôle entièrement.'],
@@ -161,21 +178,35 @@ Ce sont deux choses différentes. Internet est l’**infrastructure** ; le **Web
           axe: 'Connecter',
           lecon: {
             titre: 'Chaque machine a une adresse',
-            cours: `Pour qu’un paquet arrive à destination, il faut savoir où il va. C’est le rôle du protocole **IP**, qui attribue à chaque machine connectée une **adresse** unique sur le réseau.
+            cours: `Pour qu'un paquet arrive à destination, il faut savoir où il va. C'est le rôle du protocole IP, qui attribue à chaque machine une adresse unique.
 
 ## IPv4 et IPv6
-Une adresse **IPv4** s’écrit sur 32 bits, soit quatre nombres de 0 à 255 séparés par des points, comme 192.168.1.10. Cela n’autorise qu’environ **4,3 milliards** d’adresses — insuffisant depuis longtemps. L’**IPv6**, sur 128 bits, en offre un nombre gigantesque, écrit en hexadécimal et séparé par des deux-points.
+| La version | Sa taille | Son écriture | Son espace |
+| **IPv4** | 32 bits | Quatre nombres de 0 à 255, séparés par des points : 192.168.1.10 | Environ **4,3 milliards** — insuffisant depuis longtemps |
+| **IPv6** | 128 bits | Hexadécimal, séparé par des deux-points | Gigantesque |
 
 ## Réseau et machine
-Une adresse IP se lit en deux parties : la partie **réseau**, commune à toutes les machines d’un même réseau local, et la partie **hôte**, propre à chaque machine. Le **masque de sous-réseau** indique où passe la frontière entre les deux.
+| La partie de l'adresse | Ce qu'elle désigne |
+| **Réseau** | Commune à toutes les machines du même réseau local |
+| **Hôte** | Propre à chaque machine |
+
+Le **masque de sous-réseau** indique où passe la frontière entre les deux.
 
 > Une adresse IP ne dit pas qui vous êtes : elle dit où joindre la machine que vous utilisez, à cet instant.
 
 ## Adresses privées et publiques
-Certaines plages, comme celles commençant par 192.168 ou 10, sont **privées** : elles ne circulent pas sur Internet et servent aux réseaux domestiques. La box attribue ces adresses par **DHCP** et traduit vers l’unique adresse **publique** du foyer grâce au mécanisme de **NAT**.
+| L'adresse | Où elle circule | Un exemple |
+| **Privée** | Seulement dans le réseau local | Celles commençant par 192.168 ou 10 |
+| **Publique** | Sur Internet | Une seule par foyer, portée par la box |
+
+| Le mécanisme | Son rôle |
+| Le **DHCP** | La box attribue automatiquement les adresses privées |
+| Le **NAT** | Il traduit les adresses privées vers l'unique adresse publique |
 
 ## Le DNS
-Personne ne retient une adresse IP. Le **DNS** est l’annuaire qui traduit un nom de domaine lisible en adresse IP. Sans lui, le Web resterait praticable, mais illisible.`,
+Le **DNS** est l'annuaire qui traduit un nom de domaine lisible en adresse IP.
+
+> Sans lui, le Web resterait praticable, mais illisible : il faudrait retenir des suites de chiffres.`,
           },
           questions: [
             ['Sur combien de bits une adresse IPv4 est-elle codée ?', ['32 bits', '64 bits', '128 bits', '16 bits'], 0, 'Soit quatre nombres de 0 à 255.'],
@@ -193,21 +224,39 @@ Personne ne retient une adresse IP. Le **DNS** est l’annuaire qui traduit un n
           axe: 'Connecter',
           lecon: {
             titre: 'Trouver le chemin, et vérifier que tout est arrivé',
-            cours: `Une fois l’adresse connue, il faut acheminer les paquets. Deux mécanismes travaillent ensemble : le **routage**, qui choisit le chemin, et **TCP**, qui garantit que le message arrive entier.
+            cours: `Une fois l'adresse connue, il faut acheminer les paquets. Deux mécanismes travaillent ensemble : le routage choisit le chemin, TCP garantit que le message arrive entier.
 
 ## Les routeurs
-Un **routeur** est un appareil qui relie deux réseaux et décide, pour chaque paquet, vers quel voisin l’envoyer. Il consulte pour cela sa **table de routage**, qui associe des destinations à des directions. Les tables sont mises à jour automatiquement par des protocoles de routage : RIP, OSPF, ou BGP entre les grands opérateurs.
+| L'élément | Son rôle |
+| Le **routeur** | Il relie deux réseaux et décide, pour chaque paquet, vers quel voisin l'envoyer |
+| La **table de routage** | Elle associe des destinations à des directions |
+| Les protocoles de routage | **RIP**, **OSPF** en interne ; **BGP** entre les grands opérateurs |
 
 ## Le chemin le plus court
-Les algorithmes de routage cherchent la route de **coût minimal** : nombre de sauts, débit disponible, latence. Une **traceroute** permet de visualiser les routeurs traversés. Le chemin peut changer d’un paquet à l’autre, et il n’est pas toujours géographiquement direct.
+| Le critère de coût | Ce qu'il mesure |
+| Le nombre de **sauts** | Combien de routeurs traversés |
+| Le **débit** disponible | La capacité du lien |
+| La **latence** | Le délai |
+
+Une commande **traceroute** permet de visualiser les routeurs traversés.
 
 > Un message envoyé de Lille à Lyon peut passer par Francfort. Le réseau optimise ses coûts, pas la carte.
 
 ## Le rôle de TCP
-Le protocole **TCP** numérote les paquets, vérifie leur arrivée par des **accusés de réception**, redemande ceux qui manquent et les remet dans l’ordre. Il ajuste aussi le débit pour éviter la congestion. C’est ce qui rend fiable un réseau qui, lui, ne l’est pas.
+| Ce que TCP fait | Ce que cela garantit |
+| Il **numérote** les paquets | La remise dans l'ordre |
+| Il attend des **accusés de réception** | La certitude de l'arrivée |
+| Il **redemande** les manquants | L'intégralité du message |
+| Il ajuste le **débit** | Éviter la congestion |
+
+> C'est ce qui rend fiable un réseau qui, lui, ne l'est pas.
 
 ## TCP ou UDP
-**UDP** ne vérifie rien : il envoie sans accusé de réception. Plus rapide, il convient à la visioconférence, au jeu en ligne ou au streaming, où une image perdue vaut mieux qu’une image en retard. TCP convient au web, au courrier, au transfert de fichiers.`,
+| Le protocole | Ses garanties | Ses usages |
+| **TCP** | Ordre, intégralité, retransmission | Web, courrier, transfert de fichiers |
+| **UDP** | Aucune : il envoie sans accusé | Visioconférence, jeu en ligne, streaming |
+
+> En visioconférence, une image perdue vaut mieux qu'une image en retard.`,
           },
           questions: [
             ['Que fait un routeur ?', ['Il choisit vers quel réseau voisin envoyer chaque paquet', 'Il chiffre les données', 'Il attribue les adresses IP', 'Il stocke les pages web'], 0, 'Il s’appuie sur sa table de routage.'],
@@ -225,23 +274,34 @@ Le protocole **TCP** numérote les paquets, vérifie leur arrivée par des **acc
           axe: 'Connecter',
           lecon: {
             titre: 'Qui demande, qui fournit',
-            cours: `Une fois les machines reliées, reste à décider **qui fournit le service**. Deux organisations coexistent, avec des propriétés très différentes.
+            cours: `Une fois les machines reliées, reste à décider qui fournit le service. Deux organisations coexistent, aux propriétés très différentes.
 
-## Le modèle client-serveur
-Un **serveur** attend des requêtes et y répond ; un **client** demande. C’est le modèle du Web, du courrier électronique, des applications mobiles. Il est simple à administrer, permet un contrôle centralisé et une mise à jour immédiate du contenu.
-
-Ses limites : le serveur est un **point unique de défaillance**. S’il tombe ou s’il est saturé — c’est le principe d’une attaque par **déni de service** —, plus personne n’est servi. D’où les fermes de serveurs, la réplication et les réseaux de distribution de contenu.
-
-## Le modèle pair-à-pair
-Dans un réseau **pair-à-pair**, chaque machine est à la fois client et serveur : elle télécharge et fournit en même temps. Le contenu est **réparti** entre les participants. Plus il y a de participants, plus le réseau est rapide, alors qu’un serveur ralentit quand la demande augmente.
+## Les deux modèles
+| Le critère | **Client-serveur** | **Pair-à-pair** |
+| Le principe | Un serveur répond, un client demande | Chaque machine est à la fois client **et** serveur |
+| Le contenu | Centralisé sur le serveur | **Réparti** entre les participants |
+| Quand la demande augmente | Le serveur **ralentit** | Le réseau **accélère** |
+| Son point faible | Un **point unique de défaillance** | Le contrôle des contenus est difficile |
+| Ses usages | Web, courrier, applications mobiles | Partage de fichiers, mises à jour de jeux, crypto-monnaies, messageries décentralisées |
 
 > Client-serveur : une bibliothèque. Pair-à-pair : chacun prête ses livres à ses voisins.
 
-## Usages et enjeux
-Le pair-à-pair sert au partage de fichiers, à certaines mises à jour de jeux, aux crypto-monnaies, à des messageries décentralisées. Il résiste bien à la censure et à la panne, mais il rend le contrôle des contenus difficile — d’où son usage massif pour le partage illégal d’œuvres protégées.
+## Les faiblesses du serveur
+| Le risque | Sa parade |
+| La panne | La **réplication** sur plusieurs machines |
+| La saturation — le **déni de service** | Les fermes de serveurs |
+| L'éloignement géographique | Les réseaux de distribution de contenu |
+
+## Les forces du pair-à-pair
+| La force | Sa contrepartie |
+| Il résiste à la **censure** | Le retrait d'un contenu illicite est difficile |
+| Il résiste à la **panne** | Aucune autorité ne garantit la qualité |
+| Il monte en charge naturellement | D'où son usage massif pour le partage illégal d'œuvres protégées |
 
 ## En pratique, des modèles mixtes
-Beaucoup de services combinent les deux : un serveur central pour l’annuaire et l’authentification, du pair-à-pair pour le transfert lourd. C’est le cas de nombreuses plateformes de visioconférence et de distribution de logiciels.`,
+Beaucoup de services combinent les deux : un **serveur central** pour l'annuaire et l'authentification, du **pair-à-pair** pour le transfert lourd.
+
+> C'est le cas de nombreuses plateformes de visioconférence et de distribution de logiciels.`,
           },
           questions: [
             ['Dans le modèle client-serveur, que fait le serveur ?', ['Il attend des requêtes et y répond', 'Il envoie des données sans être sollicité', 'Il télécharge auprès des clients', 'Il route les paquets'], 0, 'Le client demande, le serveur fournit.'],
@@ -263,21 +323,35 @@ Beaucoup de services combinent les deux : un serveur central pour l’annuaire e
           axe: 'Naviguer',
           lecon: {
             titre: 'Le lien qui a fait le Web',
-            cours: `L’**hypertexte** est l’idée qui distingue le Web de tout ce qui existait avant : un texte dont certains mots renvoient à d’autres documents, atteignables d’un simple clic.
+            cours: `L'hypertexte est l'idée qui distingue le Web de tout ce qui existait avant : un texte dont certains mots renvoient à d'autres documents, atteignables d'un simple clic.
 
 ## Une idée plus ancienne que le Web
-En 1945, **Vannevar Bush** imagine le Memex, une machine reliant des documents par des associations. En 1965, **Ted Nelson** invente le mot hypertexte. En **1989**, **Tim Berners-Lee** propose au CERN un système reliant les documents de laboratoires du monde entier : le Web naît de ce besoin très concret.
+| La date | Le nom | L'apport |
+| **1945** | **Vannevar Bush** | Le Memex, une machine reliant des documents par associations |
+| **1965** | **Ted Nelson** | Il invente le mot *hypertexte* |
+| **1989** | **Tim Berners-Lee**, au CERN | Un système reliant les documents de laboratoires du monde entier : le Web |
 
 ## Les trois inventions fondatrices
-Le Web repose sur trois briques : l’**URL**, qui donne une adresse unique à chaque ressource ; le **HTTP**, protocole qui permet de la demander ; le **HTML**, langage qui décrit la page et ses liens.
+| La brique | Ce qu'elle fait |
+| L'**URL** | Elle donne une **adresse unique** à chaque ressource |
+| Le **HTTP** | Le protocole qui permet de la **demander** |
+| Le **HTML** | Le langage qui **décrit** la page et ses liens |
 
-> Un lien hypertexte n’est pas un renvoi de bas de page : c’est une adresse exécutable. C’est ce qui change tout.
+> Un lien hypertexte n'est pas un renvoi de bas de page : c'est une **adresse exécutable**. C'est ce qui change tout.
 
 ## Lire une URL
-Une URL se lit en morceaux : le **protocole** (https), le **nom de domaine** (exemple.fr), éventuellement un **chemin** vers un fichier, et parfois des **paramètres** après un point d’interrogation. Le nom de domaine se lit de droite à gauche : extension, domaine, sous-domaine.
+| Le morceau | Ce qu'il indique |
+| Le **protocole** | https |
+| Le **nom de domaine** | exemple.fr |
+| Le **chemin** | Le fichier ou la page visée |
+| Les **paramètres**, après un point d'interrogation | Des données transmises à la page |
+
+> Le nom de domaine se lit **de droite à gauche** : extension, domaine, sous-domaine.
 
 ## Ce que le lien a produit
-Le Web forme un immense **graphe** de pages reliées entre elles. Cette structure permet aux moteurs de recherche de mesurer la popularité d’une page par le nombre et la qualité des liens qui pointent vers elle. Sans hypertexte, pas de PageRank, et probablement pas de moteur de recherche efficace.`,
+Le Web forme un immense **graphe** de pages reliées entre elles.
+
+> Cette structure permet aux moteurs de mesurer la popularité d'une page par le nombre et la qualité des liens qui pointent vers elle. Sans hypertexte, pas de PageRank — et probablement pas de moteur de recherche efficace.`,
           },
           questions: [
             ['Qu’est-ce que l’hypertexte ?', ['Un texte comportant des liens vers d’autres documents', 'Un texte très long', 'Un texte chiffré', 'Un texte enrichi de couleurs'], 0, 'Le lien est une adresse activable.'],
@@ -295,21 +369,45 @@ Le Web forme un immense **graphe** de pages reliées entre elles. Cette structur
           axe: 'Naviguer',
           lecon: {
             titre: 'Demander, décrire, habiller',
-            cours: `Afficher une page suppose trois choses : un **protocole** pour la demander, un **langage** pour en décrire le contenu, un autre pour en régler l’apparence.
+            cours: `Afficher une page suppose trois choses : un protocole pour la demander, un langage pour en décrire le contenu, un autre pour en régler l'apparence.
 
 ## HTTP et HTTPS
-Le protocole **HTTP** fonctionne par requête et réponse : le navigateur demande une ressource, le serveur répond avec un **code** — 200 pour succès, 301 pour redirection, 404 pour introuvable, 500 pour erreur du serveur. **HTTPS** ajoute le chiffrement **TLS** : le contenu échangé devient illisible pour un tiers, et l’identité du site est authentifiée par un certificat.
+Le protocole **HTTP** fonctionne par requête et réponse.
+
+| Le code de réponse | Sa signification |
+| **200** | Succès |
+| **301** | Redirection |
+| **404** | Introuvable |
+| **500** | Erreur du serveur |
+
+**HTTPS** ajoute le chiffrement **TLS** : le contenu devient illisible pour un tiers, et l'identité du site est authentifiée par un **certificat**.
 
 ## HTML : le contenu et sa structure
-Le **HTML** décrit la structure d’une page à l’aide de **balises** encadrant le contenu : titres de niveau h1 à h6, paragraphes p, listes ul et li, liens a, images img, tableaux. Une page bien structurée est lisible par un lecteur d’écran et mieux comprise par un moteur de recherche.
+| La balise | Ce qu'elle décrit |
+| h1 à h6 | Les titres, par niveau |
+| p | Un paragraphe |
+| ul et li | Une liste et ses éléments |
+| a | Un lien |
+| img | Une image |
+| table | Un tableau |
 
-> HTML dit ce que sont les choses ; CSS dit à quoi elles ressemblent. Mélanger les deux est la première erreur du débutant.
+> Une page bien structurée est lisible par un **lecteur d'écran** et mieux comprise par un moteur de recherche.
 
 ## CSS : la présentation
-Le **CSS** applique des règles de style à des éléments sélectionnés : couleur, taille, police, marges, disposition. Une seule feuille de style peut habiller des milliers de pages, et l’on peut adapter l’affichage à la taille de l’écran — c’est le **responsive**.
+Le **CSS** applique des règles de style à des éléments sélectionnés : couleur, taille, police, marges, disposition.
 
-## Ce qui se passe à l’affichage
-Le navigateur télécharge le HTML, construit une représentation de la page, télécharge les feuilles de style, les images et les scripts, puis dessine le résultat. **JavaScript** peut ensuite modifier la page en cours d’usage : c’est ce qui rend une page interactive sans la recharger.`,
+| Son avantage | Ce qu'il permet |
+| Une **seule feuille** de style | Habiller des milliers de pages |
+| Les requêtes de média | Adapter l'affichage à la taille de l'écran : le **responsive** |
+
+> HTML dit **ce que sont** les choses ; CSS dit **à quoi elles ressemblent**. Mélanger les deux est la première erreur du débutant.
+
+## Ce qui se passe à l'affichage
+1. Le navigateur télécharge le **HTML**.
+2. Il construit une représentation de la page.
+3. Il télécharge feuilles de style, images et scripts.
+4. Il **dessine** le résultat.
+5. **JavaScript** peut ensuite modifier la page sans la recharger : c'est ce qui la rend interactive.`,
           },
           questions: [
             ['Que signifie le code HTTP 404 ?', ['La ressource demandée est introuvable', 'La requête a réussi', 'Le serveur a rencontré une erreur', 'La page a été déplacée'], 0, '200 = succès, 301 = redirection, 500 = erreur serveur.'],
@@ -327,21 +425,43 @@ Le navigateur télécharge le HTML, construit une représentation de la page, t�
           axe: 'Naviguer',
           lecon: {
             titre: 'La fenêtre par laquelle tout passe',
-            cours: `Le **navigateur** est le logiciel qui demande les pages, les interprète et les affiche. C’est aussi le principal point d’exposition de l’utilisateur.
+            cours: `Le navigateur est le logiciel qui demande les pages, les interprète et les affiche. C'est aussi le principal point d'exposition de l'utilisateur.
 
 ## Ce que fait un navigateur
-Il résout le nom de domaine par le DNS, envoie une requête HTTP, reçoit le HTML, télécharge les ressources associées, exécute le JavaScript et dessine la page. Il gère aussi un **cache**, un **historique**, des **cookies** et des **extensions**.
+| L'étape | Ce qu'elle fait |
+| Résoudre le **DNS** | Trouver l'adresse IP du site |
+| Envoyer une requête **HTTP** | Demander la page |
+| Télécharger les ressources | Images, styles, scripts |
+| Exécuter le **JavaScript** | Rendre la page interactive |
+| Dessiner la page | L'afficher |
+
+Il gère aussi un **cache**, un **historique**, des **cookies** et des **extensions**.
 
 ## Les cookies et le pistage
-Un **cookie** est un petit fichier déposé par un site pour se souvenir de vous : panier, connexion, préférences. Les **cookies tiers**, déposés par des régies publicitaires présentes sur de nombreux sites, permettent de suivre la navigation d’un site à l’autre. Le **RGPD** impose depuis 2018 le consentement libre et éclairé pour les cookies non nécessaires.
+| Le cookie | Son rôle |
+| **Propre au site** | Se souvenir de vous : panier, connexion, préférences |
+| **Tiers**, déposé par une régie publicitaire | Suivre votre navigation **d'un site à l'autre** |
 
-> Le service est gratuit parce que l’attention et les données sont le produit. Ce n’est pas un slogan : c’est un modèle économique.
+Le **RGPD** impose depuis 2018 le consentement libre et éclairé pour les cookies non nécessaires.
+
+> Le service est gratuit parce que l'attention et les données sont le produit. Ce n'est pas un slogan : c'est un modèle économique.
 
 ## Les menaces courantes
-Le **hameçonnage** imite un site de confiance pour voler des identifiants. Les **logiciels malveillants** s’installent par une pièce jointe ou un téléchargement. Les **rançongiciels** chiffrent les fichiers et exigent une rançon. Une connexion wifi publique non chiffrée expose les échanges.
+| La menace | Son mécanisme |
+| Le **hameçonnage** | Imiter un site de confiance pour voler des identifiants |
+| Les **logiciels malveillants** | Une pièce jointe, un téléchargement |
+| Les **rançongiciels** | Chiffrer les fichiers et exiger une rançon |
+| Le **wifi public** non chiffré | Les échanges sont exposés |
 
 ## Les bons réflexes
-Vérifier l’adresse et le cadenas HTTPS avant de saisir un mot de passe, mettre à jour navigateur et système, utiliser des **mots de passe longs et différents** avec un gestionnaire, activer la **double authentification**, se méfier des pièces jointes, limiter les extensions installées, et savoir que la navigation privée n’efface la trace que sur la machine, pas chez le fournisseur d’accès ni chez le site.`,
+| Le réflexe | Ce qu'il protège |
+| Vérifier l'adresse et le **cadenas HTTPS** | Avant toute saisie de mot de passe |
+| Mettre à jour navigateur et système | Les failles connues sont corrigées |
+| Des **mots de passe longs et différents**, avec un gestionnaire | Une fuite n'en compromet qu'un |
+| La **double authentification** | Le mot de passe seul ne suffit plus |
+| Limiter les **extensions** | Chacune voit tout ce que vous faites |
+
+> La navigation privée n'efface la trace que sur la machine : ni chez le fournisseur d'accès, ni chez le site visité.`,
           },
           questions: [
             ['Qu’est-ce qu’un cookie ?', ['Un petit fichier déposé par un site pour mémoriser des informations', 'Un virus informatique', 'Un fichier de cache d’image', 'Un protocole de transport'], 0, 'Panier, session, préférences, mais aussi pistage.'],
@@ -359,21 +479,39 @@ Vérifier l’adresse et le cadenas HTTPS avant de saisir un mot de passe, mettr
           axe: 'Naviguer',
           lecon: {
             titre: 'Comment une requête devient une liste de liens',
-            cours: `Un **moteur de recherche** ne parcourt pas le Web au moment où vous tapez votre requête : il a déjà tout lu, tout rangé, et il interroge son propre index.
+            cours: `Un moteur de recherche ne parcourt pas le Web au moment où vous tapez votre requête : il a déjà tout lu, tout rangé, et il interroge son propre index.
 
 ## Les trois étapes
-L’**exploration** : des robots, les crawlers, suivent les liens de page en page et téléchargent leur contenu. L’**indexation** : chaque page est analysée et rangée dans un **index inversé** qui associe à chaque mot la liste des pages où il figure. L’**interrogation** : à la requête, le moteur consulte l’index et **classe** les résultats.
+| L'étape | Ce qu'elle fait |
+| L'**exploration** | Des robots, les *crawlers*, suivent les liens de page en page et téléchargent leur contenu |
+| L'**indexation** | Chaque page est analysée et rangée dans un **index inversé** : à chaque mot, la liste des pages où il figure |
+| L'**interrogation** | À la requête, le moteur consulte l'index et **classe** les résultats |
 
 ## Le classement
-Il combine la **pertinence** — les mots de la requête figurent-ils dans la page, dans le titre, dans les liens ? — et la **popularité**, mesurée par le nombre et la qualité des liens entrants. C’est le principe du **PageRank**, algorithme fondateur de Google : une page est importante si des pages importantes pointent vers elle.
+| Le critère | Ce qu'il mesure |
+| La **pertinence** | Les mots de la requête figurent-ils dans la page, le titre, les liens ? |
+| La **popularité** | Le nombre et la qualité des liens entrants |
 
-> Le premier résultat n’est pas la vérité : c’est la réponse la mieux classée par un algorithme dont les critères sont privés.
+> C'est le principe du **PageRank** : une page est importante si des pages importantes pointent vers elle.
+
+> Le premier résultat n'est pas la vérité : c'est la réponse la mieux classée par un algorithme dont les critères sont privés.
 
 ## Ce qui influence les résultats
-La personnalisation selon l’historique et la localisation, les **liens sponsorisés** signalés comme publicité, l’optimisation faite par les sites eux-mêmes — le référencement. Deux personnes tapant la même requête n’obtiennent pas nécessairement la même page de résultats.
+| Le facteur | Son effet |
+| La **personnalisation** | Selon l'historique et la localisation |
+| Les **liens sponsorisés** | Signalés comme publicité |
+| Le **référencement** | L'optimisation faite par les sites eux-mêmes |
+
+> Deux personnes tapant la même requête n'obtiennent pas nécessairement la même page de résultats.
 
 ## Chercher efficacement
-Choisir des mots précis, utiliser les guillemets pour une expression exacte, restreindre à un site ou à un type de fichier, filtrer par date. Et surtout **recouper** : vérifier l’auteur, la date, la source et croiser avec une autre origine avant de citer.`,
+| La technique | Ce qu'elle apporte |
+| Des mots **précis** | Moins de bruit |
+| Les **guillemets** | Une expression exacte |
+| La restriction à un **site** ou à un type de fichier | Un périmètre défini |
+| Le filtre par **date** | De l'information récente |
+
+> Et surtout **recouper** : vérifier l'auteur, la date, la source, et croiser avec une autre origine avant de citer.`,
           },
           questions: [
             ['Quelles sont les trois étapes du fonctionnement d’un moteur de recherche ?', ['Exploration, indexation, interrogation', 'Requête, chiffrement, réponse', 'Téléchargement, compression, affichage', 'Filtrage, classement, publication'], 0, 'Tout est indexé avant que vous ne tapiez la requête.'],
@@ -391,21 +529,42 @@ Choisir des mots précis, utiliser les guillemets pour une expression exacte, re
           axe: 'Naviguer',
           lecon: {
             titre: 'Quand le lecteur devient auteur',
-            cours: `Le premier Web se lisait. À partir des années 2000, il s’écrit : chacun peut publier sans savoir programmer. C’est ce que l’on appelle le **web 2.0**.
+            cours: `Le premier Web se lisait. À partir des années 2000, il s'écrit : chacun peut publier sans savoir programmer.
 
 ## Le basculement
-Blogs, wikis, forums, réseaux sociaux, plateformes vidéo, commentaires, avis, cartes collaboratives : le **contenu généré par les utilisateurs** devient majoritaire. Les techniques qui le permettent existaient ; ce qui change, c’est l’interface — publier devient aussi simple qu’écrire un message.
+| Le service | Ce qu'il permet |
+| **Blogs**, forums | Publier un texte sans savoir coder |
+| **Wikis** | Écrire à plusieurs sur la même page |
+| **Réseaux sociaux**, plateformes vidéo | Diffuser à un large public |
+| Commentaires, avis, cartes collaboratives | Enrichir le contenu des autres |
+
+Le **contenu généré par les utilisateurs** devient majoritaire. Les techniques existaient déjà : ce qui change, c'est l'**interface**.
 
 ## Les effets de réseau
-La valeur d’une plateforme croît avec le nombre de ses utilisateurs : plus il y a de monde, plus il est coûteux de partir, ce qui favorise la concentration en quelques très grands acteurs. C’est un mécanisme économique, pas seulement technique.
+| Le mécanisme | Sa conséquence |
+| La valeur croît avec le nombre d'utilisateurs | Plus il y a de monde, plus il est coûteux de partir |
+| Le coût de sortie | Il favorise la **concentration** en quelques très grands acteurs |
 
-> Une encyclopédie écrite par des inconnus a fini par battre celles écrites par des spécialistes payés. Personne ne l’avait prévu.
+> C'est un mécanisme économique, pas seulement technique.
 
-## L’intelligence collective et ses limites
-Wikipédia, OpenStreetMap, les logiciels libres montrent la fécondité de la contribution ouverte, à condition qu’existent des règles, une vérification et des contributeurs réguliers. Sans elles, la contribution ouverte produit vandalisme, désinformation et harcèlement.
+## L'intelligence collective et ses limites
+| L'exemple réussi | Sa condition de réussite |
+| **Wikipédia** | Des règles, une vérification, des contributeurs réguliers |
+| **OpenStreetMap** | Une communauté qui corrige |
+| Les **logiciels libres** | Une gouvernance du projet |
+
+> Une encyclopédie écrite par des inconnus a fini par battre celles écrites par des spécialistes payés. Personne ne l'avait prévu.
+
+Sans ces règles, la contribution ouverte produit vandalisme, désinformation et harcèlement.
 
 ## Les enjeux
-Modération et responsabilité des plateformes, **droit d’auteur** et licences libres comme les Creative Commons, protection des données personnelles, **traces** laissées par chaque publication. Le contributeur n’est jamais seulement un lecteur : il est aussi une source de données monétisées.`,
+| L'enjeu | Sa question |
+| La **modération** | Quelle responsabilité pour les plateformes ? |
+| Le **droit d'auteur** | Quelles licences ? Les **Creative Commons** en proposent |
+| Les **données personnelles** | Que devient ce que je publie ? |
+| Les **traces** | Chaque publication en laisse |
+
+> Le contributeur n'est jamais seulement un lecteur : il est aussi une source de données monétisées.`,
           },
           questions: [
             ['Qu’est-ce que le web 2.0 ?', ['Un Web où les utilisateurs produisent eux-mêmes le contenu', 'Une nouvelle version du protocole HTTP', 'Le Web chiffré', 'Le Web des objets connectés'], 0, 'Blogs, wikis, réseaux sociaux, plateformes vidéo.'],
@@ -426,21 +585,38 @@ Modération et responsabilité des plateformes, **droit d’auteur** et licences
           axe: 'Mémoriser et traiter',
           lecon: {
             titre: 'Des données publiques, ouvertes à tous',
-            cours: `L’**open data**, ou donnée ouverte, désigne une donnée que chacun peut librement consulter, réutiliser et redistribuer, y compris à des fins commerciales.
+            cours: `L'open data désigne une donnée que chacun peut librement consulter, réutiliser et redistribuer, y compris à des fins commerciales.
 
 ## Les critères
-Une donnée est ouverte si elle est **accessible** en ligne, **gratuite** ou à coût marginal, publiée dans un **format ouvert et lisible par machine** — CSV, JSON, XML plutôt qu’un PDF scanné —, accompagnée de **métadonnées** qui la décrivent, et couverte par une **licence** qui autorise explicitement la réutilisation.
+| Le critère | Ce qu'il exige |
+| **Accessible** | En ligne, sans démarche |
+| **Gratuite** | Ou à coût marginal |
+| Dans un **format ouvert** | CSV, JSON, XML — et non un PDF scanné |
+| Lisible par **machine** | Exploitable sans ressaisie |
+| Documentée par des **métadonnées** | On sait ce que contient le fichier |
+| Sous **licence** explicite | La réutilisation est autorisée |
 
 ## Qui publie
-En France, la loi pour une République numérique de 2016 impose aux administrations de publier par défaut leurs données d’intérêt public. Le portail national data.gouv.fr les rassemble : budgets, résultats électoraux, horaires de transport, qualité de l’air, accidents, prix des carburants. L’Union européenne et de nombreuses collectivités font de même.
+| L'acteur | Ce qu'il fait |
+| Les administrations françaises | La loi pour une République numérique de **2016** impose la publication par défaut des données d'intérêt public |
+| Le portail **data.gouv.fr** | Il les rassemble : budgets, résultats électoraux, horaires de transport, qualité de l'air, accidents, prix des carburants |
+| L'Union européenne et les collectivités | Elles font de même |
 
-> Une donnée ouverte ne vaut que par ce qu’on en fait. Un fichier que personne ne réutilise est un fichier, pas une politique publique.
+> Une donnée ouverte ne vaut que par ce qu'on en fait. Un fichier que personne ne réutilise est un fichier, pas une politique publique.
 
 ## Ce que cela permet
-Applications d’horaires en temps réel, comparateurs de prix, cartes de qualité de l’air, journalisme de données, recherche, contrôle citoyen de l’action publique. L’ouverture crée aussi de la valeur économique pour des entreprises qui bâtissent des services sur ces données.
+| L'usage | Son exemple |
+| Des **applications** | Horaires en temps réel, comparateurs de prix, cartes de qualité de l'air |
+| Le **journalisme de données** | Des enquêtes fondées sur des chiffres publics |
+| La **recherche** | Des jeux de données réutilisables |
+| Le **contrôle citoyen** | Vérifier l'action publique |
 
 ## Les limites
-Les **données personnelles** ne sont pas ouvrables sans anonymisation solide — et la réidentification par croisement est un risque réel. S’ajoutent le secret statistique, la sécurité, la qualité inégale des jeux publiés, et le coût de leur mise à jour.`,
+| La limite | Son risque |
+| Les **données personnelles** | Non ouvrables sans anonymisation solide ; la **réidentification par croisement** est un risque réel |
+| Le **secret statistique** et la sécurité | Certaines données ne peuvent pas être publiées |
+| La **qualité inégale** des jeux publiés | Des fichiers incomplets ou mal documentés |
+| Le **coût de mise à jour** | Une donnée périmée vaut peu |`,
           },
           questions: [
             ['Qu’est-ce qu’une donnée ouverte ?', ['Une donnée librement accessible, réutilisable et redistribuable', 'Une donnée publiée sur un site officiel', 'Une donnée gratuite mais non réutilisable', 'Une donnée anonymisée'], 0, 'La licence doit autoriser explicitement la réutilisation.'],
@@ -458,21 +634,39 @@ Les **données personnelles** ne sont pas ouvrables sans anonymisation solide �
           axe: 'Mémoriser et traiter',
           lecon: {
             titre: 'Le nuage est un bâtiment',
-            cours: `Le **cloud** n’a rien d’immatériel : quand un fichier part dans le nuage, il atterrit sur un disque, dans un **centre de données** que quelqu’un possède, alimente et refroidit.
+            cours: `Le cloud n'a rien d'immatériel : quand un fichier part dans le nuage, il atterrit sur un disque, dans un bâtiment que quelqu'un possède, alimente et refroidit.
 
-## Ce qu’est le cloud
-C’est la mise à disposition, par le réseau, de ressources informatiques — stockage, puissance de calcul, logiciels — hébergées ailleurs et facturées à l’usage. On distingue l’infrastructure, la plateforme et le logiciel en tant que service.
+## Ce qu'est le cloud
+La mise à disposition, par le réseau, de ressources informatiques hébergées ailleurs et facturées à l'usage.
+
+| Le niveau de service | Ce qui est fourni |
+| L'**infrastructure** | Des machines et du stockage |
+| La **plateforme** | Un environnement d'exécution |
+| Le **logiciel** | Une application prête à l'emploi |
 
 ## Les datacenters
-Un **datacenter** rassemble des milliers de serveurs en baies, avec alimentation redondante, groupes électrogènes, climatisation et liaisons réseau multiples. Les données sont **répliquées** sur plusieurs machines, souvent sur plusieurs sites, pour survivre à une panne ou à un incendie.
+| L'élément | Son rôle |
+| Des milliers de **serveurs en baies** | La capacité de calcul et de stockage |
+| Une alimentation **redondante** et des groupes électrogènes | Survivre à une coupure |
+| La **climatisation** | Évacuer la chaleur |
+| Des liaisons réseau **multiples** | Rester joignable |
+| La **réplication** sur plusieurs machines et plusieurs sites | Survivre à une panne ou à un incendie |
 
-> Le nuage, ce sont des bâtiments climatisés, des câbles sous-marins et des factures d’électricité. Rien d’aérien là-dedans.
+> Le nuage, ce sont des bâtiments climatisés, des câbles sous-marins et des factures d'électricité. Rien d'aérien là-dedans.
 
 ## Avantages et contreparties
-Le cloud offre l’accès depuis n’importe où, la synchronisation, le partage, la sauvegarde automatique et une capacité élastique sans investissement matériel. En contrepartie : dépendance à la connexion, dépendance au fournisseur, coût qui grimpe avec le volume, et question de la **souveraineté** — la loi applicable dépend du pays où les données sont stockées et de la nationalité de l’hébergeur.
+| L'avantage | La contrepartie |
+| L'accès depuis n'importe où, la synchronisation, le partage | La **dépendance à la connexion** |
+| La sauvegarde automatique | La **dépendance au fournisseur** |
+| Une capacité **élastique** sans investissement matériel | Un coût qui grimpe avec le volume |
+| — | La **souveraineté** : la loi applicable dépend du pays de stockage et de la nationalité de l'hébergeur |
 
-## L’empreinte environnementale
-Le numérique représente environ **4 %** des émissions mondiales de gaz à effet de serre, en croissance. L’essentiel vient de la fabrication des terminaux, mais les datacenters pèsent lourd par leur consommation électrique et leur refroidissement. On mesure leur efficacité par le **PUE**, rapport entre l’énergie totale consommée et celle qui sert réellement aux calculs.`,
+## L'empreinte environnementale
+| Le repère | Sa valeur |
+| La part du numérique dans les émissions mondiales | Environ **4 %**, en croissance |
+| Le principal poste | La **fabrication des terminaux** |
+| Le poste des datacenters | Électricité et refroidissement |
+| L'indicateur d'efficacité | Le **PUE** : énergie totale rapportée à celle qui sert réellement aux calculs |`,
           },
           questions: [
             ['Qu’est-ce que le cloud ?', ['La mise à disposition par le réseau de ressources informatiques hébergées ailleurs', 'Un logiciel de compression', 'Un réseau pair-à-pair', 'Un protocole de transport'], 0, 'Stockage, calcul ou logiciel, facturés à l’usage.'],
@@ -494,21 +688,39 @@ Le numérique représente environ **4 %** des émissions mondiales de gaz à eff
           axe: 'Rassembler',
           lecon: {
             titre: 'Six poignées de main entre deux inconnus',
-            cours: `Un réseau social se représente mathématiquement par un **graphe** : des **sommets**, les personnes, et des **arêtes**, les relations. Cette représentation permet de mesurer ce qu’on croyait insaisissable.
+            cours: `Un réseau social se représente mathématiquement par un graphe : des sommets, les personnes, et des arêtes, les relations.
 
 ## Le vocabulaire des graphes
-Le **degré** d’un sommet est le nombre de ses voisins. Une **chaîne** relie deux sommets par une suite d’arêtes ; la **distance** entre deux sommets est la longueur de la plus courte chaîne. Le **diamètre** du graphe est la plus grande de ces distances. Un graphe peut être **orienté** — je te suis sans que tu me suives — ou non.
+| Le terme | Sa définition |
+| Le **degré** d'un sommet | Le nombre de ses voisins |
+| Une **chaîne** | Une suite d'arêtes reliant deux sommets |
+| La **distance** entre deux sommets | La longueur de la plus **courte** chaîne |
+| Le **diamètre** du graphe | La plus **grande** de ces distances |
+| Un graphe **orienté** | Je te suis sans que tu me suives |
 
-## L’expérience du petit monde
-En 1967, le psychologue **Stanley Milgram** demande à des habitants du Midwest de faire parvenir une lettre à un inconnu de Boston, en passant uniquement par des connaissances personnelles. Les lettres arrivées ont mis en moyenne **six** intermédiaires : c’est l’origine des **six degrés de séparation**.
+## L'expérience du petit monde
+| L'élément | Le détail |
+| L'auteur | Le psychologue **Stanley Milgram**, en **1967** |
+| Le protocole | Faire parvenir une lettre à un inconnu de Boston, en passant **uniquement** par des connaissances personnelles |
+| Le résultat | Environ **six** intermédiaires en moyenne |
+| Le nom resté | Les **six degrés de séparation** |
 
-> Ce ne sont pas les amis proches qui raccourcissent les chemins, mais les connaissances lointaines — les liens faibles, qui relient des mondes séparés.
+> Ce ne sont pas les amis proches qui raccourcissent les chemins, mais les connaissances lointaines — les **liens faibles**, qui relient des mondes séparés.
 
 ## Vérification à grande échelle
-Les réseaux sociaux ont permis de rejouer l’expérience sur des centaines de millions de comptes : la distance moyenne y est de l’ordre de quatre à cinq. Ces graphes ont deux propriétés typiques : un **diamètre faible** et une forte densité de triangles — mes amis sont amis entre eux.
+| Le constat | Sa valeur |
+| La distance moyenne sur de grands réseaux sociaux | De l'ordre de **quatre à cinq** |
+| Le **diamètre** | Faible |
+| La densité de **triangles** | Forte : mes amis sont amis entre eux |
 
 ## À quoi cela sert
-Recommander des contacts ou des contenus, détecter des communautés, repérer des comptes influents, modéliser la diffusion d’une information ou d’une épidémie. Le même modèle sert à étudier une rumeur et un virus.`,
+| L'application | Ce qu'elle exploite |
+| Recommander contacts et contenus | La proximité dans le graphe |
+| Détecter des **communautés** | Les zones fortement connectées |
+| Repérer des comptes **influents** | Le degré et la position |
+| Modéliser une **diffusion** | Information ou épidémie |
+
+> Le même modèle sert à étudier une rumeur et un virus.`,
           },
           questions: [
             ['Comment modélise-t-on un réseau social en mathématiques ?', ['Par un graphe, avec des sommets et des arêtes', 'Par un tableau de données', 'Par une équation', 'Par un arbre binaire'], 0, 'Les sommets sont les personnes, les arêtes les relations.'],
@@ -526,21 +738,41 @@ Recommander des contacts ou des contenus, détecter des communautés, repérer d
           axe: 'Rassembler',
           lecon: {
             titre: 'Ce que l’algorithme choisit de vous montrer',
-            cours: `Aucun utilisateur ne peut lire tout ce qui se publie. Une sélection est donc inévitable — la question est de savoir **qui la fait**, et selon quels critères.
+            cours: `Aucun utilisateur ne peut lire tout ce qui se publie. Une sélection est donc inévitable — la question est de savoir qui la fait, et selon quels critères.
 
 ## Les systèmes de recommandation
-Un fil d’actualité n’est pas chronologique : il est **classé**. L’algorithme prédit ce qui vous fera réagir à partir de vos clics, du temps passé, de vos interactions et de celles d’utilisateurs jugés semblables — c’est le **filtrage collaboratif**. L’objectif optimisé est l’**engagement**, c’est-à-dire le temps et l’attention.
+| Le mécanisme | Ce qu'il utilise |
+| Le **classement** du fil | Il n'est pas chronologique |
+| La prédiction de réaction | Vos clics, le temps passé, vos interactions |
+| Le **filtrage collaboratif** | Les comportements d'utilisateurs jugés semblables |
 
-## Bulle de filtre et chambre d’écho
-La **bulle de filtre**, notion popularisée par Eli Pariser, désigne l’enfermement progressif dans des contenus conformes à ses opinions. La **chambre d’écho** décrit le phénomène social correspondant : on ne discute qu’avec ceux qui pensent comme soi, ce qui renforce les convictions et fait paraître minoritaires les avis contraires.
+L'objectif optimisé est l'**engagement** : le temps et l'attention.
 
-> Un algorithme qui maximise l’engagement n’optimise ni la vérité, ni l’équilibre : il optimise la réaction.
+> Un algorithme qui maximise l'engagement n'optimise ni la vérité, ni l'équilibre : il optimise la **réaction**.
+
+## Bulle et chambre
+| La notion | Ce qu'elle décrit |
+| La **bulle de filtre**, popularisée par Eli Pariser | L'enfermement **algorithmique** dans des contenus conformes à ses opinions |
+| La **chambre d'écho** | Le phénomène **social** correspondant : on ne discute qu'avec ceux qui pensent comme soi |
+
+L'effet : les convictions se renforcent, et les avis contraires paraissent minoritaires.
 
 ## Désinformation
-Une **infox** circule plus vite qu’une information vérifiée, parce qu’elle est plus surprenante et plus indignante. Les biais cognitifs y aident : biais de confirmation, effet de répétition, illusion de familiarité.
+| Le facteur | Son effet |
+| La **surprise** et l'indignation | Une infox circule plus vite qu'une information vérifiée |
+| Le **biais de confirmation** | On retient ce qui nous donne raison |
+| L'**effet de répétition** | Ce qu'on lit souvent paraît vrai |
+| L'**illusion de familiarité** | Ce qui est connu paraît fiable |
 
 ## Se défendre
-Vérifier la **source** et sa date, remonter à l’information d’origine, chercher la même information ailleurs, faire une recherche d’image inversée, se méfier des titres qui provoquent une émotion forte, consulter les rubriques de vérification des rédactions. Et savoir que sa propre indignation est le levier utilisé.`,
+| Le réflexe | Ce qu'il vérifie |
+| La **source** et sa date | Qui parle, et quand |
+| L'information **d'origine** | Ce que disait le document de départ |
+| La même information **ailleurs** | Le recoupement |
+| Une recherche d'**image inversée** | Si la photo est ancienne ou détournée |
+| Les rubriques de **vérification** des rédactions | Un travail déjà fait |
+
+> Se méfier des titres qui provoquent une émotion forte : sa propre indignation est le levier utilisé.`,
           },
           questions: [
             ['Un fil d’actualité est-il chronologique ?', ['Non, il est classé par un algorithme', 'Oui, du plus récent au plus ancien', 'Oui, sauf pour les publicités', 'Non, il est aléatoire'], 0, 'Le classement vise à maximiser l’engagement.'],
@@ -558,21 +790,43 @@ Vérifier la **source** et sa date, remonter à l’information d’origine, che
           axe: 'Rassembler',
           lecon: {
             titre: 'Ce que le réseau garde de vous',
-            cours: `Chaque usage laisse une trace. L’ensemble de ces traces compose une **identité numérique** que l’on ne maîtrise qu’en partie.
+            cours: `Chaque usage laisse une trace. L'ensemble de ces traces compose une identité numérique que l'on ne maîtrise qu'en partie.
 
-## Traces volontaires et involontaires
-Les traces **volontaires** sont ce que l’on publie : messages, photos, avis. Les traces **involontaires** sont laissées par la machine : adresse IP, cookies, identifiants d’appareil, position, historique d’achat, durée de lecture. Les traces **héritées** viennent des autres : une photo où l’on est identifié, un commentaire qui vous cite.
+## Trois sortes de traces
+| La trace | Son origine | Ses exemples |
+| **Volontaire** | Ce que l'on publie | Messages, photos, avis |
+| **Involontaire** | Laissée par la machine | Adresse IP, cookies, identifiant d'appareil, position, historique d'achat, durée de lecture |
+| **Héritée** | Laissée par les autres | Une photo où l'on est identifié, un commentaire qui vous cite |
 
 ## Le droit
-Le **RGPD**, en vigueur depuis 2018, donne des droits : être informé, **accéder** à ses données, les faire **rectifier**, les faire **effacer** — le droit à l’oubli —, s’opposer au traitement, récupérer ses données pour les transférer. La **CNIL** contrôle et sanctionne. Le consentement doit être libre, spécifique, éclairé et révocable.
+Le **RGPD**, en vigueur depuis **2018**, donne des droits.
 
-> Publier, c’est écrire à trois publics à la fois : ceux que l’on vise, ceux que l’on n’a pas prévus, et ceux qui liront dans dix ans.
+| Le droit | Ce qu'il permet |
+| Être **informé** | Savoir ce qui est collecté |
+| **Accéder** | Obtenir ses données |
+| **Rectifier** | Corriger une erreur |
+| **Effacer** | Le droit à l'oubli |
+| S'**opposer** | Refuser un traitement |
+| La **portabilité** | Récupérer ses données pour les transférer |
+
+La **CNIL** contrôle et sanctionne. Le consentement doit être **libre, spécifique, éclairé et révocable**.
+
+> Publier, c'est écrire à trois publics à la fois : ceux que l'on vise, ceux que l'on n'a pas prévus, et ceux qui liront dans dix ans.
 
 ## Réputation et risques
-Une publication peut être recopiée, sortie de son contexte et resurgir des années plus tard, lors d’un recrutement par exemple. Le **cyberharcèlement** est un délit ; l’usurpation d’identité, la diffusion d’images sans consentement et le partage d’images intimes le sont également, avec des peines lourdes.
+| Le risque | Son mécanisme |
+| La **résurgence** | Une publication recopiée, sortie de son contexte, ressort des années plus tard — lors d'un recrutement, par exemple |
+| Le **cyberharcèlement** | Un délit, lourdement puni |
+| L'**usurpation d'identité** | Un délit |
+| La diffusion d'**images sans consentement** | Un délit, aggravé pour les images intimes |
 
 ## Bonnes pratiques
-Régler les paramètres de confidentialité, séparer les usages, réfléchir avant de publier une image d’autrui, exercer ses droits auprès des plateformes, signaler les contenus illicites, et savoir qu’un compte supprimé ne fait pas disparaître ce qui a déjà été copié.`,
+- Régler les paramètres de **confidentialité**.
+- **Séparer** les usages : personnel, scolaire, professionnel.
+- Réfléchir avant de publier l'**image d'autrui**.
+- Exercer ses droits auprès des plateformes, et **signaler** les contenus illicites.
+
+> Un compte supprimé ne fait pas disparaître ce qui a déjà été copié.`,
           },
           questions: [
             ['Qu’est-ce qu’une trace involontaire ?', ['Une donnée laissée par la machine, comme l’adresse IP ou un cookie', 'Un message publié par erreur', 'Une photo prise par un ami', 'Un commentaire supprimé'], 0, 'Elle est enregistrée sans action volontaire de l’utilisateur.'],
@@ -594,21 +848,41 @@ Régler les paramètres de confidentialité, séparer les usages, réfléchir av
           axe: 'Numériser',
           lecon: {
             titre: 'Une grille de nombres',
-            cours: `Une photo affichée à l’écran n’est pas une image au sens ancien : c’est un **tableau de nombres** que l’ordinateur interprète en couleurs.
+            cours: `Une photo affichée à l'écran n'est pas une image au sens ancien : c'est un tableau de nombres que l'ordinateur interprète en couleurs.
 
 ## Le pixel
-L’image matricielle est découpée en **pixels**, points élémentaires rangés en lignes et en colonnes. Chaque pixel porte une valeur : un niveau de gris, ou trois valeurs pour la couleur.
+L'image matricielle est découpée en **pixels**, rangés en lignes et en colonnes. Chaque pixel porte une valeur : un niveau de gris, ou trois valeurs pour la couleur.
 
 ## Le codage des couleurs
-Le modèle **RVB** compose chaque couleur à partir de trois composantes — rouge, vert, bleu — codées le plus souvent sur **8 bits**, soit 256 niveaux chacune. Un pixel occupe alors 24 bits et peut prendre environ **16,7 millions** de couleurs. Noir : trois zéros. Blanc : trois valeurs à 255.
+| L'élément | Sa valeur |
+| Le modèle | **RVB** : rouge, vert, bleu |
+| Le codage de chaque composante | **8 bits**, soit **256** niveaux |
+| Le poids d'un pixel couleur | **24 bits** |
+| Le nombre de couleurs possibles | Environ **16,7 millions** |
 
-> Une image en niveaux de gris de 1000 sur 1000 pixels, c’est un million d’octets. Rien d’autre.
+| La couleur | Ses composantes |
+| Noir | 0, 0, 0 |
+| Blanc | 255, 255, 255 |
+| Rouge vif | 255, 0, 0 |
+
+> Une image en niveaux de gris de 1000 sur 1000 pixels, c'est un million d'octets. Rien d'autre.
 
 ## Poids et compression
-Le poids brut d’une image est le nombre de pixels multiplié par le nombre d’octets par pixel. Les formats compressent : **PNG** sans perte, ce qui conserve toute l’information ; **JPEG** avec perte, ce qui allège fortement en supprimant des détails peu perceptibles ; **GIF** limité à 256 couleurs. Une image très compressée en JPEG montre des artefacts.
+Poids brut = nombre de pixels × nombre d'octets par pixel.
+
+| Le format | Sa compression | Son usage |
+| **PNG** | **Sans perte** | Logos, captures, transparence |
+| **JPEG** | **Avec perte** | Photographies ; artefacts visibles si trop compressé |
+| **GIF** | Limité à 256 couleurs | Petites animations |
 
 ## Matriciel et vectoriel
-Une image **vectorielle** — format SVG — n’est pas une grille : elle décrit des formes par des équations. Elle s’agrandit sans perte de qualité, ce que ne permet pas une image matricielle, mais convient mal à la photographie. Les **métadonnées EXIF** d’une photo enregistrent au passage l’appareil, la date et parfois la position GPS.`,
+| Le type | Ce qu'il stocke | Son comportement à l'agrandissement |
+| **Matriciel** | Une grille de pixels | Il **pixellise** |
+| **Vectoriel** (SVG) | Des formes décrites par des équations | Aucune perte de qualité |
+
+Le vectoriel convient mal à la photographie.
+
+> Les **métadonnées EXIF** d'une photo enregistrent au passage l'appareil, la date et parfois la **position GPS**.`,
           },
           questions: [
             ['Qu’est-ce qu’un pixel ?', ['Le point élémentaire d’une image matricielle', 'Une unité de mesure de l’écran', 'Un format de fichier', 'Un niveau de compression'], 0, 'Il porte une ou trois valeurs numériques.'],
@@ -626,21 +900,41 @@ Une image **vectorielle** — format SVG — n’est pas une grille : elle décr
           axe: 'Numériser',
           lecon: {
             titre: 'Changer les nombres, changer l’image',
-            cours: `Comme une image est un tableau de nombres, la transformer revient à appliquer un calcul à chacun de ses pixels. C’est ce que fait tout filtre de retouche.
+            cours: `Comme une image est un tableau de nombres, la transformer revient à appliquer un calcul à chacun de ses pixels. C'est ce que fait tout filtre de retouche.
 
 ## Du couleur au gris
-Pour convertir en **niveaux de gris**, on remplace les trois composantes d’un pixel par une valeur unique. La moyenne simple des trois convient, mais la **luminance** donne un meilleur résultat visuel, car l’œil est plus sensible au vert qu’au bleu : on pondère donc davantage la composante verte.
+| La méthode | Son calcul | Son résultat |
+| La **moyenne** | (R + V + B) / 3 | Correct |
+| La **luminance** | Une moyenne **pondérée**, le vert comptant davantage | Meilleur visuellement |
+
+> L'œil est plus sensible au vert qu'au bleu : c'est pourquoi on pondère.
 
 ## Le négatif
-Le **négatif** s’obtient en remplaçant chaque composante par 255 moins sa valeur. Un pixel rouge vif devient cyan, le noir devient blanc. L’opération est **réversible** : l’appliquer deux fois redonne l’image d’origine.
+Chaque composante est remplacée par **255 moins sa valeur**.
 
-> Une retouche n’est pas un geste artistique mystérieux : c’est une fonction appliquée à un million de nombres.
+| Le pixel d'origine | Son négatif |
+| Rouge vif (255, 0, 0) | Cyan (0, 255, 255) |
+| Noir (0, 0, 0) | Blanc (255, 255, 255) |
+
+> L'opération est **réversible** : l'appliquer deux fois redonne l'image d'origine.
+
+> Une retouche n'est pas un geste artistique mystérieux : c'est une fonction appliquée à un million de nombres.
 
 ## Le seuillage
-Le **seuillage** transforme l’image en noir et blanc pur : au-dessus d’un seuil, le pixel devient blanc ; en dessous, noir. C’est la base de la reconnaissance de caractères et de nombreux traitements automatiques, car il sépare la forme du fond.
+| La valeur du pixel | Ce qu'il devient |
+| Au-dessus du **seuil** | Blanc |
+| En dessous | Noir |
+
+> C'est la base de la reconnaissance de caractères et de nombreux traitements automatiques : il **sépare la forme du fond**.
 
 ## Coloriser et modifier les teintes
-On peut renforcer une composante, permuter les canaux, appliquer une **teinte sépia** par une combinaison linéaire des trois composantes, ou coloriser une image ancienne. Les logiciels récents utilisent pour cela des modèles d’apprentissage : le résultat est **vraisemblable**, pas véridique — coloriser une photo de 1900, c’est inventer des couleurs plausibles, pas les retrouver.`,
+| La transformation | Son principe |
+| Renforcer une composante | Multiplier un canal |
+| **Permuter** les canaux | Échanger rouge et bleu, par exemple |
+| Une teinte **sépia** | Une combinaison linéaire des trois composantes |
+| **Coloriser** une image ancienne | Un modèle d'apprentissage prédit des couleurs |
+
+> Le résultat d'une colorisation automatique est **vraisemblable**, pas véridique : coloriser une photo de 1900, c'est inventer des couleurs plausibles, pas les retrouver.`,
           },
           questions: [
             ['Comment convertit-on un pixel couleur en niveau de gris ?', ['En remplaçant les trois composantes par une valeur unique', 'En supprimant la composante bleue', 'En mettant toutes les composantes à 255', 'En doublant la composante rouge'], 0, 'Moyenne simple ou luminance pondérée.'],
@@ -658,21 +952,42 @@ On peut renforcer une composante, permuter les canaux, appliquer une **teinte s�
           axe: 'Numériser',
           lecon: {
             titre: 'La photo d’identité d’une image',
-            cours: `L’**histogramme** d’une image compte, pour chaque valeur possible, le nombre de pixels qui la portent. C’est l’outil de diagnostic de base de tout photographe et de tout logiciel de retouche.
+            cours: `L'histogramme d'une image compte, pour chaque valeur possible, le nombre de pixels qui la portent. C'est l'outil de diagnostic de base de toute retouche.
 
 ## Le lire
-En abscisse, les valeurs de 0 à 255, des tons sombres à gauche aux tons clairs à droite. En ordonnée, le nombre de pixels. Une image **sous-exposée** a un histogramme tassé à gauche ; **surexposée**, tassé à droite ; **peu contrastée**, resserré au centre.
+| L'axe | Ce qu'il porte |
+| **Abscisse** | Les valeurs de 0 à 255, des tons sombres à gauche aux clairs à droite |
+| **Ordonnée** | Le nombre de pixels |
 
-## L’étirement
-L’**étirement d’histogramme** consiste à étaler les valeurs occupées sur toute la plage disponible. Si les pixels d’une image vont de 80 à 170, on applique une transformation qui envoie 80 sur 0 et 170 sur 255 : le contraste augmente, et aucun détail n’est inventé — on utilise mieux la place existante.
+| L'allure | Le diagnostic |
+| Tassé à **gauche** | Image **sous-exposée** |
+| Tassé à **droite** | Image **surexposée** |
+| Resserré au **centre** | Image **peu contrastée** |
+| Étalé | Information bien répartie |
 
-> L’histogramme ne dit pas si l’image est belle. Il dit si l’information est répartie ou entassée.
+> L'histogramme ne dit pas si l'image est belle. Il dit si l'information est répartie ou entassée.
 
-## L’égalisation
-L’**égalisation** va plus loin : elle redistribue les valeurs pour que l’histogramme devienne aussi plat que possible. Le contraste local est fortement renforcé, ce qui révèle des détails invisibles — très utile en imagerie médicale, satellitaire ou astronomique — mais peut aussi accentuer le bruit et produire une image peu naturelle.
+## L'étirement
+On étale les valeurs occupées sur toute la plage disponible.
+
+| Avant | Après |
+| Les pixels vont de 80 à 170 | 80 devient 0, 170 devient 255 |
+
+> Le contraste augmente, et aucun détail n'est inventé : on utilise mieux la place existante.
+
+## L'égalisation
+Elle redistribue les valeurs pour rendre l'histogramme aussi **plat** que possible.
+
+| Son gain | Son coût |
+| Un contraste local fortement renforcé | Elle accentue le **bruit** |
+| Des détails invisibles révélés | Une image parfois peu naturelle |
+
+Très utile en imagerie médicale, satellitaire ou astronomique.
 
 ## Les limites
-Ces traitements ne créent pas d’information : ce qui a été perdu par surexposition, une zone entièrement à 255, est irrécupérable. C’est pourquoi les photographes exposent en surveillant l’histogramme plutôt que l’écran, dont la luminosité trompe.`,
+> Ces traitements ne **créent** pas d'information : une zone entièrement à 255, brûlée par la surexposition, est irrécupérable.
+
+C'est pourquoi les photographes exposent en surveillant l'histogramme plutôt que l'écran, dont la luminosité trompe.`,
           },
           questions: [
             ['Que représente l’histogramme d’une image ?', ['Le nombre de pixels pour chaque valeur possible', 'La taille du fichier', 'La répartition des couleurs sur la surface', 'Le nombre de pixels de l’image'], 0, 'Un diagnostic de la répartition des tons.'],
@@ -690,21 +1005,38 @@ Ces traitements ne créent pas d’information : ce qui a été perdu par surexp
           axe: 'Numériser',
           lecon: {
             titre: 'Combien de pixels, et que faire de leurs voisins',
-            cours: `Deux notions se confondent souvent : la **définition**, qui compte les pixels, et la **résolution**, qui dit à quelle densité ils sont restitués.
+            cours: `Deux notions se confondent souvent : la définition, qui compte les pixels, et la résolution, qui dit à quelle densité ils sont restitués.
 
-## Définition, résolution, poids
-La **définition** est le nombre de pixels en largeur et en hauteur, par exemple 4000 sur 3000, soit 12 millions de pixels. La **résolution** s’exprime en points par pouce et concerne l’affichage ou l’impression : la même image imprimée en grand format devient floue parce que ses pixels s’étalent. Le **poids** brut se calcule à partir de la définition et du nombre d’octets par pixel.
+## Trois grandeurs à distinguer
+| La grandeur | Sa définition | Son unité |
+| La **définition** | Le nombre de pixels en largeur et en hauteur | 4000 × 3000, soit 12 millions de pixels |
+| La **résolution** | La densité à l'affichage ou à l'impression | Points par pouce |
+| Le **poids** | Définition × octets par pixel | Octets |
+
+> La même image imprimée en grand format devient floue : ses pixels s'étalent.
 
 ## Rééchantillonner
-**Réduire** la définition supprime de l’information de façon définitive. **Agrandir** n’en ajoute pas : l’algorithme interpole, c’est-à-dire invente des valeurs intermédiaires à partir des pixels voisins. L’image paraît plus grande, pas plus détaillée.
+| L'opération | Ce qu'elle fait |
+| **Réduire** la définition | Elle supprime de l'information, **définitivement** |
+| **Agrandir** | Elle **interpole** : elle invente des valeurs intermédiaires à partir des voisins |
 
-> Zoomer sur une plaque d’immatriculation pour la rendre lisible n’existe qu’au cinéma. L’information absente ne se retrouve pas.
+> L'image paraît plus grande, pas plus détaillée. Zoomer sur une plaque d'immatriculation pour la rendre lisible n'existe qu'au cinéma.
 
 ## Le filtrage par convolution
-Un **filtre** remplace la valeur de chaque pixel par une combinaison de celles de ses voisins, définie par une petite matrice appelée **noyau**. Un noyau de moyenne produit un **flou** ; un noyau qui accentue les écarts produit une **netteté** renforcée ; d’autres détectent les **contours** en repérant les variations brutales de valeur.
+Un **filtre** remplace la valeur de chaque pixel par une combinaison de celles de ses voisins, définie par une petite matrice appelée **noyau**.
+
+| Le noyau | Son effet |
+| Une **moyenne** des voisins | Un **flou** |
+| Une accentuation des écarts | Une **netteté** renforcée |
+| Une détection des variations brutales | Les **contours** |
 
 ## À quoi servent les filtres
-Réduire le **bruit** d’une photo prise dans l’obscurité, préparer une image avant analyse automatique, détecter des formes, extraire des contours pour la reconnaissance de caractères ou l’imagerie médicale. Ce sont les mêmes opérations qui, empilées, forment les premières couches des réseaux de neurones de vision.`,
+| L'usage | Ce qu'il exploite |
+| Réduire le **bruit** d'une photo prise dans l'obscurité | Le lissage |
+| Préparer une image avant analyse automatique | Le nettoyage |
+| Détecter des formes, extraire des contours | Reconnaissance de caractères, imagerie médicale |
+
+> Ce sont les mêmes opérations qui, empilées, forment les premières couches des réseaux de neurones de vision.`,
           },
           questions: [
             ['Quelle différence entre définition et résolution ?', ['La définition compte les pixels, la résolution dit à quelle densité ils sont restitués', 'Ce sont deux synonymes', 'La définition concerne l’impression', 'La résolution est le poids du fichier'], 0, 'La résolution s’exprime en points par pouce.'],
@@ -722,21 +1054,39 @@ Réduire le **bruit** d’une photo prise dans l’obscurité, préparer une ima
           axe: 'Numériser',
           lecon: {
             titre: 'De la lumière aux nombres',
-            cours: `Avant d’être un tableau de nombres, une image est de la **lumière**. Le capteur d’un appareil photo fait la traduction, en trois temps : collecter, mesurer, coder.
+            cours: `Avant d'être un tableau de nombres, une image est de la lumière. Le capteur fait la traduction, en trois temps : collecter, mesurer, coder.
 
 ## Le capteur
-Derrière l’objectif, un **capteur** — technologie CCD ou, le plus souvent, **CMOS** — porte des millions de **photosites**, cellules sensibles qui accumulent des charges électriques proportionnelles à la quantité de lumière reçue pendant la pose.
+| L'élément | Son rôle |
+| Le **capteur**, technologie CCD ou le plus souvent **CMOS** | Il porte des millions de **photosites** |
+| Un **photosite** | Il accumule des charges électriques proportionnelles à la lumière reçue pendant la pose |
 
 ## La couleur
-Un photosite ne perçoit pas la couleur : il compte des photons. On place donc devant lui un filtre coloré. La **matrice de Bayer** dispose ces filtres selon un motif comptant deux verts pour un rouge et un bleu — encore la sensibilité de l’œil au vert. Un algorithme de **dématriçage** reconstitue ensuite les trois composantes de chaque pixel en s’aidant des voisins.
+Un photosite ne perçoit pas la couleur : il compte des photons. On place donc devant lui un filtre coloré.
+
+| L'élément | Son principe |
+| La **matrice de Bayer** | Un motif de filtres comptant **deux verts** pour un rouge et un bleu |
+| Pourquoi deux verts | La sensibilité de l'œil au vert |
+| Le **dématriçage** | Un algorithme reconstitue les trois composantes de chaque pixel à partir des voisins |
 
 > Un capteur ne voit pas de couleurs : il compte de la lumière derrière des filtres, et le reste est du calcul.
 
 ## La conversion
-Un **convertisseur analogique-numérique** transforme chaque charge en un nombre entier. Le nombre de bits de codage détermine la finesse des nuances : 8 bits donnent 256 niveaux par composante, 12 ou 14 bits en donnent bien davantage — c’est l’intérêt du format brut, dit RAW, qui conserve les données du capteur avant traitement.
+Un **convertisseur analogique-numérique** transforme chaque charge en nombre entier.
+
+| Le codage | Les niveaux par composante |
+| **8 bits** | 256 |
+| **12 ou 14 bits** | Bien davantage |
+
+> C'est l'intérêt du format brut, dit **RAW** : il conserve les données du capteur avant traitement.
 
 ## Ce qui détermine la qualité
-La **taille du capteur** et celle des photosites, plus déterminantes que le seul nombre de mégapixels ; l’**ouverture** et la **durée d’exposition** ; la **sensibilité**, dont la montée génère du bruit ; la qualité de l’optique ; et le traitement logiciel embarqué, qui joue aujourd’hui un rôle considérable dans les téléphones.`,
+| Le facteur | Son importance |
+| La **taille du capteur** et des photosites | Plus déterminante que le seul nombre de mégapixels |
+| L'**ouverture** et la **durée d'exposition** | La quantité de lumière reçue |
+| La **sensibilité** | Sa montée génère du **bruit** |
+| La qualité de l'**optique** | Netteté, aberrations |
+| Le **traitement logiciel** embarqué | Aujourd'hui décisif dans les téléphones |`,
           },
           questions: [
             ['Qu’est-ce qu’un photosite ?', ['Une cellule du capteur qui accumule une charge proportionnelle à la lumière reçue', 'Un pixel de l’écran', 'Un filtre coloré', 'Un point de mise au point'], 0, 'Des millions de photosites forment le capteur.'],
@@ -758,21 +1108,47 @@ La **taille du capteur** et celle des photosites, plus déterminantes que le seu
           axe: 'Cartographier',
           lecon: {
             titre: 'Savoir où l’on est, à quelques mètres près',
-            cours: `Un téléphone affiche sa position sans rien émettre vers les satellites : il **écoute**, et calcule. Le principe tient en une idée — mesurer des temps de parcours.
+            cours: `Un téléphone affiche sa position sans rien émettre vers les satellites : il écoute, et calcule.
 
 ## Le principe
-Chaque satellite d’un système comme le **GPS** américain, **Galileo** européen, GLONASS ou Beidou émet en permanence un signal contenant l’heure d’émission, donnée par une horloge atomique, et sa position. Le récepteur compare cette heure à l’heure de réception et en déduit sa **distance** au satellite.
+| L'acteur | Ce qu'il fait |
+| Le **satellite** | Il émet en permanence l'heure d'émission, donnée par une **horloge atomique**, et sa position |
+| Le **récepteur** | Il compare à l'heure de réception et en déduit sa **distance** au satellite |
+
+| Le système | Son origine |
+| **GPS** | États-Unis |
+| **Galileo** | Union européenne |
+| **GLONASS** | Russie |
+| **Beidou** | Chine |
 
 ## La trilatération
-Une distance connue place le récepteur sur une sphère. Deux sphères se coupent selon un cercle, trois selon deux points, dont un seul est plausible. Un **quatrième satellite** est nécessaire pour corriger l’imprécision de l’horloge du récepteur, qui n’est pas atomique. Avec quatre satellites, la position et l’altitude sont déterminées.
+| Le nombre de satellites | Ce qu'il détermine |
+| 1 | Une **sphère** de positions possibles |
+| 2 | Un **cercle** |
+| 3 | **Deux points**, dont un seul est plausible |
+| **4** | La position **et** l'altitude, en corrigeant l'horloge du récepteur, qui n'est pas atomique |
 
-> Ce n’est pas de la magie ni de la triangulation d’angles : c’est un calcul de distances à partir de temps de vol.
+> Ce n'est pas de la triangulation d'angles : c'est un calcul de **distances** à partir de temps de vol.
 
 ## La précision et ses limites
-Quelques mètres en conditions dégagées. Elle se dégrade en ville par la réflexion des signaux sur les façades, sous les arbres, en intérieur ou en tunnel. Les téléphones améliorent le résultat en s’appuyant aussi sur les **antennes du réseau mobile**, sur les **réseaux wifi** répertoriés et sur les capteurs internes — accéléromètre, gyroscope, boussole.
+| La condition | La précision |
+| En terrain dégagé | Quelques **mètres** |
+| En ville | Dégradée par la réflexion des signaux sur les façades |
+| Sous les arbres, en intérieur, en tunnel | Fortement dégradée, voire nulle |
+
+| L'appoint utilisé par les téléphones | Ce qu'il apporte |
+| Les **antennes du réseau mobile** | Une position approchée, rapide |
+| Les **réseaux wifi** répertoriés | Une position en intérieur |
+| Les capteurs internes — accéléromètre, gyroscope, boussole | La continuité entre deux points |
 
 ## Les usages et les données
-Navigation, trafic en temps réel, agriculture de précision, secours, horodatage des transactions. En contrepartie, la position est l’une des données les plus **sensibles** qui soient : elle révèle domicile, travail, habitudes, fréquentations. Le RGPD la protège, et l’autorisation demandée par les applications mérite d’être limitée à l’usage réel.`,
+| L'usage | Son domaine |
+| Navigation, trafic en temps réel | Transport |
+| Agriculture de précision | Agronomie |
+| Secours | Sécurité civile |
+| Horodatage des transactions | Finance et réseaux |
+
+> La position est l'une des données les plus **sensibles** : elle révèle domicile, travail, habitudes, fréquentations. Le RGPD la protège, et l'autorisation demandée par les applications mérite d'être limitée à l'usage réel.`,
           },
           questions: [
             ['Comment un récepteur GPS calcule-t-il sa distance à un satellite ?', ['En comparant l’heure d’émission du signal à l’heure de réception', 'En mesurant la puissance du signal', 'En calculant un angle', 'En interrogeant le satellite'], 0, 'La distance se déduit du temps de parcours.'],
@@ -790,21 +1166,43 @@ Navigation, trafic en temps réel, agriculture de précision, secours, horodatag
           axe: 'Cartographier',
           lecon: {
             titre: 'Le plus court chemin dans un graphe',
-            cours: `Un calculateur d’itinéraire ne regarde pas une carte : il parcourt un **graphe**. Les intersections sont les sommets, les tronçons de route les arêtes, et chaque arête porte un **poids**.
+            cours: `Un calculateur d'itinéraire ne regarde pas une carte : il parcourt un graphe.
 
 ## Modéliser la route
-Le poids peut être la distance, mais aussi la durée, qui dépend de la vitesse autorisée, du type de voie, des feux et du trafic en temps réel. Un péage, une pente, une interdiction de tourner se modélisent également. Changer le poids change l’itinéraire : le plus court n’est pas le plus rapide.
+| L'élément du graphe | Ce qu'il représente |
+| Le **sommet** | Une intersection |
+| L'**arête** | Un tronçon de route |
+| Le **poids** | Ce que l'on cherche à minimiser |
 
-## L’algorithme de Dijkstra
-Publié en 1959, il calcule le plus court chemin d’un sommet vers tous les autres. Il part de l’origine, explore progressivement les sommets les plus proches et met à jour les distances trouvées. Il est exact, à condition que les poids soient positifs.
+| Le poids choisi | Ce qu'il donne |
+| La **distance** | Le trajet le plus court |
+| La **durée** | Le plus rapide — vitesse autorisée, type de voie, feux, trafic en temps réel |
+| Un **coût** composite | Péages, pente, interdictions de tourner |
 
-> Un GPS ne cherche pas la belle route : il minimise une quantité qu’on lui a demandé de minimiser.
+> Changer le poids change l'itinéraire : le plus court n'est pas le plus rapide.
+
+## L'algorithme de Dijkstra
+| Le point | Son contenu |
+| Sa date | **1959** |
+| Ce qu'il calcule | Le plus court chemin d'un sommet vers **tous** les autres |
+| Sa méthode | Il part de l'origine, explore les sommets les plus proches, met à jour les distances |
+| Sa condition | Les poids doivent être **positifs** |
+
+> Un GPS ne cherche pas la belle route : il minimise une quantité qu'on lui a demandé de minimiser.
 
 ## Aller plus vite
-Sur un réseau routier de millions de sommets, Dijkstra explore trop. L’algorithme **A étoile** l’améliore en utilisant une estimation de la distance restante — la distance à vol d’oiseau — pour explorer d’abord dans la bonne direction. Les services réels ajoutent des prétraitements qui hiérarchisent le réseau, les autoroutes d’abord.
+| L'amélioration | Son principe |
+| L'algorithme **A étoile** | Il ajoute une **estimation** de la distance restante — le vol d'oiseau — pour explorer d'abord dans la bonne direction |
+| Les **prétraitements** | Ils hiérarchisent le réseau : les autoroutes d'abord |
+
+Sur un réseau de millions de sommets, Dijkstra seul explore trop.
 
 ## Les données et leurs effets
-Les fonds de carte proviennent de bases comme **OpenStreetMap** ou de fournisseurs privés ; le trafic vient des téléphones des utilisateurs eux-mêmes. Le calcul d’itinéraire a des effets réels sur le terrain : reporter le trafic dans des rues résidentielles, faire disparaître un commerce d’un trajet, ou saturer une déviation que tout le monde emprunte au même moment.`,
+| La donnée | Sa source |
+| Le fond de carte | **OpenStreetMap** ou des fournisseurs privés |
+| Le **trafic** | Les téléphones des utilisateurs eux-mêmes |
+
+> Le calcul d'itinéraire a des effets réels sur le terrain : reporter le trafic dans des rues résidentielles, faire disparaître un commerce d'un trajet, ou saturer une déviation que tout le monde emprunte au même moment.`,
           },
           questions: [
             ['Comment un réseau routier est-il modélisé pour un calcul d’itinéraire ?', ['Par un graphe pondéré, intersections et tronçons', 'Par une image satellite', 'Par un tableau de coordonnées', 'Par une liste d’adresses'], 0, 'Chaque arête porte un poids.'],
@@ -826,21 +1224,37 @@ Les fonds de carte proviennent de bases comme **OpenStreetMap** ou de fournisseu
           axe: 'Commander',
           lecon: {
             titre: 'Capter, décider, agir',
-            cours: `Un **système automatisé** exécute une tâche sans intervention humaine permanente. Il repose toujours sur le même triplet : des capteurs, un programme, des actionneurs.
+            cours: `Un système automatisé exécute une tâche sans intervention humaine permanente. Il repose toujours sur le même triplet.
 
 ## Les trois organes
-Les **capteurs** transforment une grandeur physique — température, lumière, distance, pression, présence — en signal exploitable. La **partie commande**, souvent un microcontrôleur, applique un programme. Les **actionneurs** agissent sur le monde : moteur, vérin, résistance chauffante, vanne, voyant.
+| L'organe | Ce qu'il fait | Des exemples |
+| Les **capteurs** | Ils transforment une grandeur physique en signal | Température, lumière, distance, pression, présence |
+| La **partie commande** | Elle applique un programme | Un microcontrôleur |
+| Les **actionneurs** | Ils agissent sur le monde | Moteur, vérin, résistance chauffante, vanne, voyant |
 
 ## La boucle de rétroaction
-Un système en **boucle ouverte** exécute sans vérifier le résultat, comme un grille-pain à minuterie. Un système en **boucle fermée** mesure l’effet de son action et corrige : c’est la **rétroaction**. Un thermostat compare la température mesurée à la **consigne** et commande le chauffage en conséquence.
+| Le système | Son fonctionnement | Un exemple |
+| En **boucle ouverte** | Il exécute **sans vérifier** le résultat | Un grille-pain à minuterie |
+| En **boucle fermée** | Il mesure l'effet de son action et **corrige** | Un thermostat, qui compare la température à la **consigne** |
 
 > Sans rétroaction, une machine applique une recette. Avec rétroaction, elle poursuit un objectif.
 
 ## Des exemples partout
-Chauffage, régulateur de vitesse, feux de circulation adaptatifs, ascenseur, distributeur de boissons, chaîne de production, drone stabilisé, robot aspirateur. Un même schéma décrit une machine à laver et un avion en pilotage automatique — seule la complexité change.
+| Le domaine | Le système |
+| L'habitat | Chauffage, volets, éclairage |
+| Le transport | Régulateur de vitesse, feux adaptatifs, ascenseur |
+| L'industrie | Chaîne de production, robot |
+| Le quotidien | Distributeur de boissons, robot aspirateur, drone stabilisé |
+
+> Un même schéma décrit une machine à laver et un avion en pilotage automatique. Seule la complexité change.
 
 ## Enjeux
-Gain de sécurité, de régularité et de productivité ; en contrepartie, questions de **fiabilité** — un capteur en panne peut faire prendre une mauvaise décision —, de **cybersécurité** dès que le système est connecté, de dépendance et de transformation du travail. La question de la **responsabilité** en cas d’accident, notamment pour les véhicules autonomes, reste largement ouverte.`,
+| Le gain | Le risque |
+| Sécurité, régularité, productivité | La **fiabilité** : un capteur en panne fait prendre une mauvaise décision |
+| Moins de tâches pénibles | La **cybersécurité**, dès que le système est connecté |
+| Une disponibilité continue | La **dépendance**, et la transformation du travail |
+
+> La question de la **responsabilité** en cas d'accident, notamment pour les véhicules autonomes, reste largement ouverte.`,
           },
           questions: [
             ['Quels sont les trois organes d’un système automatisé ?', ['Capteurs, partie commande, actionneurs', 'Écran, clavier, souris', 'Processeur, mémoire, disque', 'Réseau, serveur, client'], 0, 'Capter, décider, agir.'],
@@ -858,21 +1272,40 @@ Gain de sécurité, de régularité et de productivité ; en contrepartie, quest
           axe: 'Commander',
           lecon: {
             titre: 'Quand les objets se mettent à parler au réseau',
-            cours: `L’**Internet des objets** désigne l’extension du réseau à des objets du quotidien capables de mesurer, de communiquer et parfois d’agir : montres, ampoules, compteurs, capteurs agricoles, machines industrielles.
+            cours: `L'Internet des objets désigne l'extension du réseau à des objets du quotidien capables de mesurer, de communiquer et parfois d'agir.
 
 ## Ce qui a rendu cela possible
-La miniaturisation et l’effondrement du coût des capteurs et des microcontrôleurs, l’essor des réseaux sans fil — wifi, Bluetooth, 4G et 5G, réseaux basse consommation à longue portée —, l’adressage sans limite offert par **IPv6**, et le cloud pour stocker et traiter les flux collectés.
+| Le facteur | Son apport |
+| La **miniaturisation** et la chute du coût des capteurs | Des objets à quelques euros |
+| Les réseaux **sans fil** | Wifi, Bluetooth, 4G et 5G, réseaux basse consommation à longue portée |
+| L'**IPv6** | Un adressage sans limite pratique |
+| Le **cloud** | Stocker et traiter les flux collectés |
 
 ## À quoi cela sert
-Domotique et suivi de consommation, santé connectée, **compteurs communicants**, logistique et traçabilité, **agriculture de précision** avec sondes d’humidité, industrie avec maintenance prédictive, ville avec éclairage adaptatif, stationnement et qualité de l’air.
+| Le domaine | L'application |
+| L'habitat | Domotique, suivi de consommation |
+| La santé | Objets connectés de suivi |
+| L'énergie | **Compteurs communicants** |
+| La logistique | Traçabilité des colis |
+| L'agriculture | **Agriculture de précision**, sondes d'humidité |
+| L'industrie | Maintenance prédictive |
+| La ville | Éclairage adaptatif, stationnement, qualité de l'air |
 
-> Un capteur à trois euros qui envoie une mesure par heure, multiplié par des milliards : voilà le véritable changement d’échelle.
+> Un capteur à trois euros qui envoie une mesure par heure, multiplié par des milliards : voilà le véritable changement d'échelle.
 
 ## Les risques
-Beaucoup d’objets sont vendus avec un mot de passe par défaut, sans chiffrement et sans mise à jour. Ils deviennent des portes d’entrée sur le réseau domestique et des recrues pour des **réseaux de machines compromises** — le botnet Mirai a ainsi mobilisé des caméras connectées pour saturer de grands services en 2016.
+| La faiblesse | Sa conséquence |
+| Un **mot de passe par défaut** | L'objet est accessible à tous |
+| L'absence de **chiffrement** | Les données circulent en clair |
+| L'absence de **mise à jour** | Les failles restent ouvertes |
+
+> Ces objets deviennent des portes d'entrée sur le réseau domestique et des recrues pour des **réseaux de machines compromises** : le botnet Mirai a mobilisé des caméras connectées pour saturer de grands services en 2016.
 
 ## Les enjeux
-**Vie privée** : ces objets mesurent des habitudes intimes, présence, sommeil, déplacements. **Environnement** : fabrication, terres rares, obsolescence et déchets électroniques. **Souveraineté** : dépendance à un service distant, un objet cessant parfois de fonctionner quand son fabricant ferme ses serveurs.`,
+| L'enjeu | Sa question |
+| La **vie privée** | Ces objets mesurent présence, sommeil, déplacements |
+| L'**environnement** | Fabrication, terres rares, obsolescence, déchets électroniques |
+| La **souveraineté** | Un objet cesse parfois de fonctionner quand son fabricant ferme ses serveurs |`,
           },
           questions: [
             ['Qu’est-ce que l’Internet des objets ?', ['L’extension du réseau à des objets capables de mesurer et de communiquer', 'Un nouveau protocole de transport', 'Un réseau réservé aux entreprises', 'Un moteur de recherche d’objets'], 0, 'Montres, ampoules, compteurs, capteurs industriels.'],

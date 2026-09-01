@@ -121,41 +121,55 @@ DELETE FROM public.chapters c
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Lire, écrire et ranger les nombres',
-            cours: `## Les entiers et les décimaux
-Un **nombre entier** s’écrit sans virgule : 0, 7, 254.
-Un **nombre décimal** a une partie décimale finie : 3,5 ; 0,08 ; 12,750.
-Tout entier est un décimal (7 = 7,0), mais l’inverse est faux.
+            cours: `Un nombre décimal, c’est un nombre à virgule : la partie entière à gauche, ce qui reste à droite.
+
+## Entier ou décimal
+| Le nombre | Comment il s’écrit | Exemples |
+| **Entier** | Sans virgule | 0 · 7 · 254 |
+| **Décimal** | Avec une partie décimale qui s’arrête | 3,5 · 0,08 · 12,750 |
+
+> Tout entier est un décimal — 7 s’écrit 7,0. L’inverse est faux.
 
 ## Le tableau de numération
-Chaque chiffre a une **valeur selon sa position** :
+Chaque chiffre vaut selon **sa place**, pas selon lui-même.
 
 | centaines | dizaines | unités | , | dixièmes | centièmes | millièmes |
-|---|---|---|---|---|---|---|
 | 2 | 4 | 6 | , | 3 | 0 | 5 |
 
-Dans 246,305 : le 3 vaut 3 **dixièmes**, le 5 vaut 5 **millièmes**.
+Dans 246,305 : le **3** vaut 3 **dixièmes**, le **5** vaut 5 **millièmes**.
 
-> Ne pas confondre le **chiffre** (un symbole : 0 à 9) et le **nombre** (une quantité). Dans 246, le chiffre des dizaines est 4, mais le **nombre** de dizaines est 24.
+!> Le **chiffre** est un symbole (0 à 9), le **nombre** est une quantité. Dans 246, le *chiffre* des dizaines est **4**, mais le *nombre* de dizaines est **24**.
 
-## Les écritures d’un même nombre
-- **décimale** : 3,25
-- **fractionnaire** : 325/100
-- **décomposée** : 3 + 2/10 + 5/100
-Ajouter des zéros à droite de la partie décimale ne change rien : 3,25 = 3,250.
+## Trois écritures d’un même nombre
+| L’écriture | 3,25 s’écrit |
+| **Décimale** | 3,25 |
+| **Fractionnaire** | 325/100 |
+| **Décomposée** | 3 + 2/10 + 5/100 |
+
+= 3,25 = 3,250 = 3,2500
+
+Les zéros ajoutés **à droite** de la partie décimale ne changent rien.
 
 ## Comparer deux décimaux
-1. On compare d’abord les **parties entières** ;
-2. si elles sont égales, on compare les **dixièmes**, puis les centièmes, etc.
-On complète par des zéros pour avoir le même nombre de décimales.
-Piège classique : **12,7 > 12,25**, car 7 dixièmes valent plus que 2 dixièmes — le nombre le plus « long » n’est pas le plus grand.
+1. On compare les **parties entières** ;
+2. si elles sont égales, on compare les **dixièmes** ;
+3. puis les centièmes, puis les millièmes.
 
-## Ranger et encadrer
-- **Croissant** : du plus petit au plus grand ; **décroissant** : l’inverse.
-- **Encadrer à l’unité** : 3,7 est entre **3 et 4**.
-- **Arrondir au dixième** : on regarde le chiffre suivant, on arrondit au supérieur s’il vaut 5 ou plus. 3,47 → **3,5**.
+~ Parties entières → Dixièmes → Centièmes → Millièmes
+
+!> **12,7 est plus grand que 12,25.** Le nombre le plus « long » n’est pas le plus grand : 7 dixièmes valent plus que 2 dixièmes. Pour s’en convaincre, on complète : 12,70 contre 12,25.
+
+## Ranger, encadrer, arrondir
+| Le mot | Ce qu’il demande | Exemple |
+| **Croissant** | Du plus petit au plus grand | 1,2 · 1,5 · 2,4 |
+| **Décroissant** | L’inverse | 2,4 · 1,5 · 1,2 |
+| **Encadrer à l’unité** | Trouver les deux entiers voisins | 3 < **3,7** < 4 |
+| **Arrondir au dixième** | Regarder le chiffre suivant | 3,4**7** → **3,5** |
+
+On arrondit **au supérieur** si le chiffre suivant vaut 5 ou plus.
 
 ## La demi-droite graduée
-Chaque nombre a un **point** unique, appelé son **abscisse**. Plus on va à droite, plus le nombre est grand.`,
+Chaque nombre a **un seul** point, et ce point a un nom : son **abscisse**. Plus on va à droite, plus le nombre est grand.`,
           },
           questions: [
             ['Dans 246,305, que vaut le chiffre 3 ?', ['3 dixièmes', '3 centièmes', '3 unités', '3 millièmes'], 0, 'Il occupe le premier rang après la virgule.'],
@@ -173,36 +187,55 @@ Chaque nombre a un **point** unique, appelé son **abscisse**. Plus on va à dro
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Poser, calculer, vérifier',
-            cours: `## Addition et soustraction
-On **aligne les virgules**, quitte à compléter par des **zéros**.
-12,5 + 3,75 → 12,50 + 3,75 = **16,25**
-La virgule du résultat se place sous les autres.
+            cours: `Poser un calcul, c’est bien. L’estimer d’abord, c’est ce qui permet de repérer une erreur.
+
+## Addition et soustraction
+On **aligne les virgules**, quitte à compléter par des zéros.
+
+= 12,5 + 3,75 → 12,50 + 3,75 = 16,25
+
+La virgule du résultat se place **sous** les autres.
 
 ## Multiplication
-On multiplie **sans tenir compte des virgules**, puis on place la virgule : le produit a **autant de décimales que les deux facteurs réunis**.
-3,2 × 1,5 : 32 × 15 = 480 ; 1 + 1 = 2 décimales → **4,80**, soit 4,8.
+On multiplie **sans regarder les virgules**, puis on les compte.
+
+~ Calculer 32 × 15 = 480 → Compter 1 + 1 = 2 décimales → Placer : 4,80
+
+= 3,2 × 1,5 = 4,8
+
+> Le produit a **autant de décimales que les deux facteurs réunis**.
 
 ## Multiplier et diviser par 10, 100, 1 000
-- **multiplier** : la virgule se déplace vers la **droite** ;
-- **diviser** : vers la **gauche**.
-On complète par des zéros si besoin. 4,7 × 100 = **470** ; 4,7 ÷ 100 = **0,047**.
+| L’opération | La virgule se déplace | Exemple |
+| **× 10, × 100, × 1 000** | Vers la **droite** | 4,7 × 100 = **470** |
+| **÷ 10, ÷ 100, ÷ 1 000** | Vers la **gauche** | 4,7 ÷ 100 = **0,047** |
+
+On complète par des zéros quand il en manque.
 
 ## Les priorités opératoires
-1. les **parenthèses**, de la plus intérieure à la plus extérieure ;
+1. Les **parenthèses**, de la plus intérieure à la plus extérieure ;
 2. les **multiplications et divisions**, de gauche à droite ;
 3. les **additions et soustractions**, de gauche à droite.
-2 + 3 × 4 = 2 + 12 = **14**, et non 20.
+
+= 2 + 3 × 4 = 2 + 12 = 14
+
+!> **2 + 3 × 4 ne fait pas 20.** On ne calcule pas dans l’ordre où c’est écrit : la multiplication passe avant.
 
 ## L’ordre de grandeur
-Avant de calculer, on estime : 19,8 × 4,9 ≈ 20 × 5 = **100**. Si la machine affiche 9,7 ou 970, une virgule s’est déplacée.
+Avant de calculer, on estime avec des nombres ronds.
+
+= 19,8 × 4,9 ≈ 20 × 5 = 100
+
+Si la machine affiche 9,7 ou 970, une virgule s’est déplacée.
 
 > Un résultat qu’on n’a pas estimé d’abord est un résultat qu’on ne peut pas vérifier.
 
 ## Le vocabulaire
-- addition → **somme** ; les nombres sont des **termes** ;
-- soustraction → **différence** ;
-- multiplication → **produit** ; les nombres sont des **facteurs** ;
-- division → **quotient**.`,
+| L’opération | Son résultat | Ses nombres |
+| Addition | La **somme** | Des **termes** |
+| Soustraction | La **différence** | — |
+| Multiplication | Le **produit** | Des **facteurs** |
+| Division | Le **quotient** | — |`,
           },
           questions: [
             ['Que faut-il faire avant de poser une addition de décimaux ?', ['Aligner les virgules', 'Supprimer les virgules', 'Multiplier par 10', 'Arrondir'], 0, 'On complète par des zéros si nécessaire.'],
@@ -220,32 +253,46 @@ Avant de calculer, on estime : 19,8 × 4,9 ≈ 20 × 5 = **100**. Si la machine 
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Partager en parts entières',
-            cours: `## La division euclidienne
-Diviser 47 par 5, c’est chercher combien de fois 5 tient dans 47, et ce qu’il reste :
-**47 = 5 × 9 + 2**
-- 47 est le **dividende**, 5 le **diviseur**, 9 le **quotient**, 2 le **reste**.
-- Règle absolue : le **reste est toujours strictement inférieur au diviseur** (ici 2 < 5). Un reste plus grand signale une erreur.
+            cours: `Diviser 47 par 5, ce n’est pas toujours tomber juste : il reste souvent quelque chose.
 
-## Diviseur et multiple
-Quand le reste est **0**, la division est exacte : on dit que 5 **divise** 30, que 5 est un **diviseur** de 30, et que 30 est un **multiple** de 5. Ces trois phrases disent la même chose.
+## La division euclidienne
+= 47 = 5 × 9 + 2
+
+| Le nom | Sa place | Ici |
+| **Dividende** | Ce qu’on partage | 47 |
+| **Diviseur** | En combien de parts | 5 |
+| **Quotient** | Le résultat entier | 9 |
+| **Reste** | Ce qui ne se partage pas | 2 |
+
+!> Le **reste est toujours plus petit que le diviseur** (ici 2 < 5). Un reste plus grand que le diviseur signale à coup sûr une erreur de calcul.
+
+## Diviseur, multiple : trois phrases pour une
+Quand le reste vaut **0**, la division est exacte. On dit alors :
+
+~ 5 divise 30 → 5 est un diviseur de 30 → 30 est un multiple de 5
+
+Ces trois phrases disent **exactement la même chose**.
 
 ## Les critères de divisibilité
-Un nombre est divisible par :
-- **2** si son chiffre des unités est 0, 2, 4, 6 ou 8 (il est **pair**) ;
-- **3** si la **somme de ses chiffres** est divisible par 3 ;
-- **4** si le nombre formé par ses deux derniers chiffres l’est ;
-- **5** si son chiffre des unités est 0 ou 5 ;
-- **9** si la somme de ses chiffres est divisible par 9 ;
-- **10** si son chiffre des unités est 0.
+| Divisible par | Si… | Exemple |
+| **2** | Le chiffre des unités est 0, 2, 4, 6 ou 8 | 5 274 est **pair** |
+| **3** | La **somme des chiffres** est divisible par 3 | 5+2+7+4 = 18 |
+| **4** | Les **deux derniers chiffres** le sont | 5 2**74** → 74 non |
+| **5** | Le chiffre des unités est 0 ou 5 | 145 |
+| **9** | La somme des chiffres est divisible par 9 | 18 → oui |
+| **10** | Le chiffre des unités est 0 | 250 |
 
-> Exemple : 5 274. Somme des chiffres = 18, divisible par 3 **et** par 9. Le nombre l’est donc aussi.
+> 5 274 : la somme de ses chiffres vaut 18, divisible par 3 **et** par 9. Le nombre l’est donc aussi.
 
 ## Les nombres premiers
-Un **nombre premier** a exactement **deux** diviseurs : 1 et lui-même. Les premiers sont 2, 3, 5, 7, 11, 13, 17, 19, 23…
-**2 est le seul nombre premier pair.** **1 n’est pas premier** : il n’a qu’un seul diviseur.
+Un nombre **premier** a exactement **deux** diviseurs : 1 et lui-même.
+
+= 2 · 3 · 5 · 7 · 11 · 13 · 17 · 19 · 23…
+
+!> **2 est le seul nombre premier pair**, et **1 n’est pas premier** : il n’a qu’un seul diviseur, lui-même.
 
 ## À quoi ça sert
-Les critères permettent de **simplifier une fraction** sans calculatrice, et de vérifier un partage : 143 bonbons pour 5 enfants ne tombent pas juste (143 ne finit ni par 0 ni par 5).`,
+Les critères permettent de **simplifier une fraction** sans calculatrice, et de vérifier un partage d’un coup d’œil : 143 bonbons pour 5 enfants ne tombent pas juste — 143 ne finit ni par 0 ni par 5.`,
           },
           questions: [
             ['Dans 47 = 5 × 9 + 2, que représente le 2 ?', ['Le reste', 'Le quotient', 'Le diviseur', 'Le dividende'], 0, 'Le quotient est 9, le diviseur 5.'],
@@ -263,28 +310,41 @@ Les critères permettent de **simplifier une fraction** sans calculatrice, et de
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Continuer la division après la virgule',
-            cours: `## Le principe
-Dans la **division décimale**, on ne s’arrête pas au reste : on continue en abaissant des zéros après la virgule.
-13 ÷ 4 : 4 tient 3 fois dans 13, reste 1. On pose la virgule au quotient, on abaisse un zéro : 10 ÷ 4 = 2, reste 2 ; on abaisse encore : 20 ÷ 4 = 5, reste 0.
-**13 ÷ 4 = 3,25**
+            cours: `Quand le partage ne tombe pas juste, on ne s’arrête pas au reste : on continue après la virgule.
+
+## Le principe
+On abaisse des zéros et on poursuit la division.
+
+~ 13 ÷ 4 : 3, reste 1 → abaisser un zéro : 10 ÷ 4 = 2, reste 2 → abaisser : 20 ÷ 4 = 5, reste 0
+
+= 13 ÷ 4 = 3,25
 
 ## Diviser par un nombre à virgule
-On ne divise **jamais** par un décimal. On multiplie **le dividende et le diviseur** par 10, 100 ou 1 000 pour rendre le diviseur entier — le quotient ne change pas.
-7,5 ÷ 0,25 → **750 ÷ 25 = 30**
+On ne divise **jamais** par un décimal. On multiplie **le dividende ET le diviseur** par 10, 100 ou 1 000 : le quotient ne change pas.
 
-## Quand ça ne tombe pas juste
-Certaines divisions ne s’arrêtent jamais : **1 ÷ 3 = 0,3333…** On donne alors une **valeur approchée** :
-- **par défaut** : on tronque (0,33) ;
-- **par excès** : on prend la valeur juste au-dessus (0,34) ;
-- **arrondie** : la plus proche (0,33).
+= 7,5 ÷ 0,25 → 750 ÷ 25 = 30
 
-## Le symbole ≈
-On écrit **1 ÷ 3 ≈ 0,33** avec le signe « environ égal », jamais avec un signe =. Écrire 1 ÷ 3 = 0,33 est **faux**.
+!> Multiplier **un seul** des deux nombres change le résultat. Les deux, toujours, et par le même nombre.
 
-> Le signe = annonce une égalité exacte. Quand la valeur est approchée, le signe doit le dire.
+## Quand ça ne s’arrête jamais
+Certaines divisions ne finissent pas : 1 ÷ 3 = 0,3333…
+
+| La valeur approchée | Comment | 1 ÷ 3 donne |
+| **Par défaut** | On tronque | 0,33 |
+| **Par excès** | La valeur juste au-dessus | 0,34 |
+| **Arrondie** | La plus proche | 0,33 |
+
+## Le signe ≈
+= 1 ÷ 3 ≈ 0,33
+
+!> Écrire **1 ÷ 3 = 0,33 est faux**. Le signe **=** annonce une égalité exacte ; quand la valeur est approchée, le signe **≈** doit le dire.
 
 ## Vérifier une division
-On multiplie le quotient par le diviseur : on doit retrouver le dividende. 3,25 × 4 = 13. C’est la vérification à faire systématiquement.
+On multiplie le quotient par le diviseur : on doit retrouver le dividende.
+
+= 3,25 × 4 = 13
+
+> C’est la vérification à faire systématiquement — elle prend cinq secondes et rattrape la moitié des erreurs.
 
 ## Dans la vie
 Partager une addition, calculer un prix au kilo, une consommation aux 100 km : la division décimale est l’outil du quotidien.`,
@@ -305,32 +365,53 @@ Partager une addition, calculer un prix au kilo, une consommation aux 100 km : l
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Une fraction, c’est un partage et une division',
-            cours: `## Deux façons de lire a/b
-- **Un partage** : 3/4 d’une tarte, c’est la tarte coupée en **4** parts égales dont on prend **3**.
-- **Une division** : 3/4 est le **quotient** de 3 par 4, c’est-à-dire 0,75.
-Ces deux lectures sont la même chose, et savoir passer de l’une à l’autre est l’essentiel du chapitre.
+            cours: `Une fraction n’est pas un objet bizarre à deux étages : c’est un partage, et c’est aussi une division.
+
+## Deux façons de lire a/b
+| La lecture | Ce qu’elle dit | 3/4, c’est… |
+| **Un partage** | On coupe, on prend | La tarte en **4** parts, on en prend **3** |
+| **Une division** | Le quotient de a par b | 3 ÷ 4 = **0,75** |
+
+> Ces deux lectures sont la même chose. Savoir passer de l’une à l’autre, c’est tout le chapitre.
 
 ## Le vocabulaire
-Dans **a/b** : **a** est le **numérateur** (combien on prend), **b** le **dénominateur** (en combien de parts on coupe). Le dénominateur n’est **jamais** égal à 0.
+| Le terme | Sa place | Ce qu’il dit |
+| **Numérateur** | En haut | Combien de parts on prend |
+| **Dénominateur** | En bas | En combien de parts on coupe |
 
-## Fractions particulières
-- Si le numérateur est **plus petit** que le dénominateur, la fraction est **inférieure à 1** (3/4).
-- S’ils sont **égaux**, elle vaut **1** (4/4).
-- Si le numérateur est **plus grand**, elle est **supérieure à 1** (7/4).
-- Une **fraction décimale** a pour dénominateur 10, 100, 1 000.
+!> Le dénominateur n’est **jamais** égal à 0 : on ne coupe pas une tarte en zéro parts.
 
-## Fractions égales
-Multiplier ou diviser **numérateur et dénominateur par un même nombre** ne change pas la valeur :
-1/2 = 2/4 = 3/6 = 50/100.
-**Simplifier**, c’est diviser les deux par un même nombre jusqu’à ne plus pouvoir : 12/18 = 6/9 = **2/3**. La fraction est alors **irréductible**.
+## Plus petit, égal, plus grand que 1
+| Si… | Alors la fraction est… | Exemple |
+| Numérateur **<** dénominateur | Plus petite que 1 | 3/4 |
+| Numérateur **=** dénominateur | Égale à **1** | 4/4 |
+| Numérateur **>** dénominateur | Plus grande que 1 | 7/4 |
+
+Une **fraction décimale** a pour dénominateur 10, 100 ou 1 000.
+
+## Fractions égales, et simplification
+Multiplier ou diviser **les deux** nombres par un même nombre ne change pas la valeur.
+
+= 1/2 = 2/4 = 3/6 = 50/100
+
+~ 12/18 → 6/9 → 2/3 (irréductible)
+
+**Simplifier**, c’est diviser en haut et en bas jusqu’à ne plus pouvoir. La fraction est alors **irréductible**.
 
 ## Prendre une fraction d’une quantité
-« Prendre les 3/4 de 20 », c’est calculer 20 ÷ 4 × 3 = **15**. On peut diviser d’abord puis multiplier, ou l’inverse : le résultat est le même.
+« Les 3/4 **de** 20 » : on divise par 4, on multiplie par 3.
 
-> Le mot « de » se traduit par une multiplication : les 3/4 **de** 20, c’est 3/4 × 20.
+= 20 ÷ 4 × 3 = 15
 
-## Les équivalences à connaître par cœur
-1/2 = 0,5 ; 1/4 = 0,25 ; 3/4 = 0,75 ; 1/5 = 0,2 ; 1/10 = 0,1.`,
+> Le mot « de » se traduit par une **multiplication** : les 3/4 de 20, c’est 3/4 × 20.
+
+## À connaître par cœur
+| La fraction | Sa valeur décimale |
+| 1/2 | 0,5 |
+| 1/4 | 0,25 |
+| 3/4 | 0,75 |
+| 1/5 | 0,2 |
+| 1/10 | 0,1 |`,
           },
           questions: [
             ['Dans la fraction 3/4, comment appelle-t-on le 4 ?', ['Le dénominateur', 'Le numérateur', 'Le quotient', 'Le reste'], 0, 'Il indique en combien de parts on coupe.'],
@@ -348,34 +429,54 @@ Multiplier ou diviser **numérateur et dénominateur par un même nombre** ne ch
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Situer et ranger des fractions',
-            cours: `## Comparer à 1
-C’est le premier réflexe, et souvent il suffit :
-- numérateur **<** dénominateur → la fraction est **< 1** ;
-- numérateur **=** dénominateur → elle vaut **1** ;
-- numérateur **>** dénominateur → elle est **> 1**.
-Ainsi 5/8 < 1 < 9/7, sans aucun calcul.
+            cours: `Pour comparer deux fractions, le bon réflexe n’est presque jamais le calcul : c’est le coup d’œil.
+
+## D’abord : comparer à 1
+| Si… | La fraction est… |
+| Numérateur **<** dénominateur | **< 1** |
+| Numérateur **=** dénominateur | **= 1** |
+| Numérateur **>** dénominateur | **> 1** |
+
+Ainsi 5/8 < 1 < 9/7, **sans aucun calcul**.
 
 ## Même dénominateur
-On compare les **numérateurs** : 3/7 < 5/7. Plus on prend de parts de la même taille, plus on en a.
+On compare les **numérateurs**.
+
+= 3/7 < 5/7
+
+Plus on prend de parts de la même taille, plus on en a.
 
 ## Même numérateur
-On compare les dénominateurs **à l’envers** : 3/5 **>** 3/8. Plus on coupe en parts nombreuses, plus chaque part est petite.
+On compare les dénominateurs **à l’envers**.
 
-> C’est le piège le plus fréquent : avec le même numérateur, le plus grand dénominateur donne la plus **petite** fraction.
+= 3/5 > 3/8
+
+!> **C’est le piège le plus fréquent du chapitre.** Avec le même numérateur, le **plus grand dénominateur** donne la **plus petite** fraction : plus on coupe en parts nombreuses, plus chaque part est petite.
 
 ## Dénominateurs différents
-Deux méthodes :
-1. **Mettre au même dénominateur** : pour 2/3 et 3/4, on prend 12. 2/3 = 8/12 et 3/4 = 9/12, donc 2/3 **<** 3/4.
-2. **Passer en décimal** : 2/3 ≈ 0,67 et 3/4 = 0,75.
+| La méthode | Comment | Sur 2/3 et 3/4 |
+| **Même dénominateur** | On choisit 12 | 8/12 < 9/12 |
+| **Passer en décimal** | On divise | 0,67 < 0,75 |
+
+Dans les deux cas : **2/3 < 3/4**.
 
 ## Encadrer entre deux entiers
-On effectue la division : 17/5 = 3,4, donc **3 < 17/5 < 4**.
+On effectue la division.
+
+= 17/5 = 3,4 → 3 < 17/5 < 4
 
 ## Placer sur une demi-droite graduée
-On partage chaque unité en autant de parts que l’indique le dénominateur, puis on compte les numérateurs. C’est le meilleur moyen de **voir** qu’une fraction est un nombre comme un autre.
+1. On partage chaque unité en autant de parts que l’indique le **dénominateur** ;
+2. on compte autant de parts que l’indique le **numérateur**.
+
+> C’est le meilleur moyen de voir qu’une fraction est un nombre comme un autre, avec sa place sur la droite.
 
 ## Fraction et pourcentage
-1/2 = 50 % ; 1/4 = 25 % ; 3/4 = 75 % ; 1/10 = 10 %. Ces repères servent à comparer très vite.`,
+| La fraction | Le pourcentage |
+| 1/2 | 50 % |
+| 1/4 | 25 % |
+| 3/4 | 75 % |
+| 1/10 | 10 % |`,
           },
           questions: [
             ['Comment comparer 3/7 et 5/7 ?', ['3/7 < 5/7, on compare les numérateurs', '3/7 > 5/7', 'Elles sont égales', 'On ne peut pas comparer'], 0, 'Les parts sont de même taille.'],
@@ -393,35 +494,43 @@ On partage chaque unité en autant de parts que l’indique le dénominateur, pu
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Additionner, soustraire et multiplier des fractions',
-            cours: `## Additionner au même dénominateur
-On **ajoute les numérateurs** et on **garde** le dénominateur :
-2/7 + 3/7 = **5/7**
-On ne additionne **jamais** les dénominateurs : 2/7 + 3/7 ne fait pas 5/14.
+            cours: `On additionne des parts **de même taille**. Tout le chapitre tient dans cette phrase.
 
-> On ajoute des parts de même taille : leur nombre change, pas leur taille.
+## Additionner au même dénominateur
+On ajoute les numérateurs, on **garde** le dénominateur.
+
+= 2/7 + 3/7 = 5/7
+
+!> **2/7 + 3/7 ne fait pas 5/14.** On n’additionne jamais les dénominateurs : leur nombre change, pas leur taille.
 
 ## Dénominateurs différents
-Il faut d’abord les **rendre égaux**, en cherchant un dénominateur commun :
-1/2 + 1/3 → 3/6 + 2/6 = **5/6**
+Il faut d’abord les rendre égaux.
+
+~ 1/2 + 1/3 → 3/6 + 2/6 → 5/6
+
 Le plus simple est souvent de multiplier les deux dénominateurs entre eux (ici 2 × 3 = 6).
 
 ## Soustraire
-Même méthode : 5/8 − 2/8 = **3/8**.
+Même méthode, même règle.
 
-## Multiplier par un entier
-On multiplie **le numérateur seulement** :
-3 × 2/5 = **6/5**
+= 5/8 − 2/8 = 3/8
 
-## Multiplier deux fractions
-On multiplie les numérateurs entre eux et les dénominateurs entre eux :
-2/3 × 3/4 = 6/12 = **1/2**
-On simplifie avant de multiplier quand c’est possible : c’est plus rapide et les nombres restent petits.
+## Multiplier
+| Le cas | La règle | Exemple |
+| Par un **entier** | On multiplie **le numérateur seul** | 3 × 2/5 = **6/5** |
+| Par une **fraction** | Numérateurs entre eux, dénominateurs entre eux | 2/3 × 3/4 = 6/12 = **1/2** |
+
+> Quand c’est possible, on simplifie **avant** de multiplier : les nombres restent petits et le calcul va plus vite.
 
 ## Fraction d’une quantité
-« Les 2/5 de 30 » : 30 ÷ 5 × 2 = **12**. Le mot « de » se traduit par une multiplication.
+« Les 2/5 de 30 » :
+
+= 30 ÷ 5 × 2 = 12
+
+Le mot « de » se traduit par une multiplication.
 
 ## Toujours simplifier le résultat
-Un résultat s’écrit sous sa forme **irréductible** : 6/12 s’écrit 1/2. C’est une exigence de présentation autant que de calcul.`,
+Un résultat s’écrit sous sa forme **irréductible** : 6/12 s’écrit **1/2**. C’est une exigence de présentation autant que de calcul.`,
           },
           questions: [
             ['Combien font 2/7 + 3/7 ?', ['5/7', '5/14', '6/7', '5/49'], 0, 'On ajoute les numérateurs et on garde le dénominateur.'],
@@ -439,35 +548,44 @@ Un résultat s’écrit sous sa forme **irréductible** : 6/12 s’écrit 1/2. C
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Compter pour cent',
-            cours: `## Ce qu’est un pourcentage
-**t %** signifie **t pour 100**, c’est-à-dire la fraction **t/100**.
-25 % = 25/100 = 1/4 = **0,25**.
-Un pourcentage est donc simplement une autre façon d’écrire une fraction ou un décimal.
+            cours: `Un pourcentage n’est rien d’autre qu’une fraction dont le dénominateur vaut 100.
+
+## Ce qu’est un pourcentage
+= 25 % = 25/100 = 1/4 = 0,25
+
+**t %** signifie **t pour 100**.
 
 ## Appliquer un pourcentage
-Prendre **t %** d’une quantité, c’est **multiplier par t/100** — ou par le décimal correspondant.
-30 % de 80 = 80 × 30 ÷ 100 = **24**.
+Prendre t % d’une quantité, c’est **multiplier par t/100**.
 
-## Les pourcentages usuels, en calcul mental
-- **50 %** → on divise par 2
-- **25 %** → on divise par 4
-- **10 %** → on divise par 10
-- **1 %** → on divise par 100
-- **75 %** → 50 % + 25 %
-Avec ces repères, on calcule 35 % comme 25 % + 10 %.
+= 30 % de 80 = 80 × 30 ÷ 100 = 24
 
-## Augmentations et réductions
-- Une réduction de 20 % : on **retire** 20 % du prix, ou plus vite, on garde **80 %** du prix.
-  Un article à 50 € réduit de 20 % coûte 50 × 0,8 = **40 €**.
-- Une augmentation de 20 % : on garde **120 %**, soit × 1,2.
+## Les repères de calcul mental
+| Le pourcentage | Le geste |
+| **50 %** | On divise par **2** |
+| **25 %** | On divise par **4** |
+| **10 %** | On divise par **10** |
+| **1 %** | On divise par **100** |
+| **75 %** | 50 % + 25 % |
 
-> Le raccourci — multiplier par 0,8 au lieu de calculer puis soustraire — évite une étape et donc une erreur.
+Avec ces repères, 35 % se calcule comme 25 % + 10 %.
+
+## Réductions et augmentations
+| La situation | Le raccourci | Sur 50 € |
+| Réduction de **20 %** | On garde **80 %** : × 0,8 | **40 €** |
+| Augmentation de **20 %** | On garde **120 %** : × 1,2 | 60 € |
+
+> Multiplier par 0,8 au lieu de calculer puis soustraire, c’est une étape de moins — donc une erreur de moins.
 
 ## Calculer un pourcentage
-Quelle proportion 12 représente-t-il sur 40 ? On calcule 12 ÷ 40 = 0,3 = **30 %**.
+Quelle proportion 12 représente-t-il sur 40 ?
+
+= 12 ÷ 40 = 0,3 = 30 %
 
 ## Ce qui trompe
-Une baisse de 20 % suivie d’une hausse de 20 % **ne ramène pas** au prix de départ : 100 → 80 → 96. Les pourcentages ne s’additionnent pas comme des nombres.`,
+~ 100 € → −20 % → 80 € → +20 % → 96 €
+
+!> Une baisse de 20 % suivie d’une hausse de 20 % **ne ramène pas** au prix de départ. Les pourcentages ne s’additionnent pas comme des nombres : ils ne portent pas sur la même quantité.`,
           },
           questions: [
             ['Que signifie 25 % ?', ['25 pour 100, soit 1/4', '25 unités', '25 fois plus', '2,5 pour 100'], 0, 'C’est la fraction 25/100.'],
@@ -485,32 +603,42 @@ Une baisse de 20 % suivie d’une hausse de 20 % **ne ramène pas** au prix de d
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Trouver ce qu’on ne sait pas encore',
-            cours: `## Le nombre inconnu
-Dans « J’ajoute 7 à un nombre et j’obtiens 23 », le nombre cherché est l’**inconnu**. On peut le noter par un point d’interrogation, une case vide ou une **lettre** : *x* + 7 = 23.
+            cours: `Un problème, ce n’est pas un calcul déguisé : c’est une question à laquelle on doit répondre par une phrase.
 
-## Le raisonnement par l’opération inverse
-Chaque opération a son inverse :
-- l’addition ↔ la **soustraction**
-- la multiplication ↔ la **division**
-Pour *x* + 7 = 23, on fait 23 − 7 = **16**.
-Pour 4 × *x* = 52, on fait 52 ÷ 4 = **13**.
+## Le nombre inconnu
+Dans « J’ajoute 7 à un nombre et j’obtiens 23 », le nombre cherché est l’**inconnu**. On le note par une case vide, un point d’interrogation ou une **lettre**.
+
+= x + 7 = 23
+
+## L’opération inverse
+| L’opération | Son inverse | On résout… | Par… |
+| Addition | **Soustraction** | x + 7 = 23 | 23 − 7 = **16** |
+| Multiplication | **Division** | 4 × x = 52 | 52 ÷ 4 = **13** |
 
 ## La méthode en quatre temps
 1. **Lire** l’énoncé en entier, sans calculer ;
-2. **Repérer** ce qu’on cherche et ce qu’on connaît ;
-3. **Choisir** l’opération, puis calculer ;
-4. **Vérifier** en remplaçant l’inconnu par le résultat, et **répondre par une phrase**.
+2. **repérer** ce qu’on cherche et ce qu’on connaît ;
+3. **choisir** l’opération, puis calculer ;
+4. **vérifier**, et **répondre par une phrase**.
 
 > Une réponse sans phrase n’est pas une réponse : « 16 » ne dit pas ce que 16 désigne.
 
 ## Les problèmes à plusieurs étapes
-Beaucoup d’énoncés demandent **deux** calculs. On peut s’aider :
-- d’un **schéma** en barres ;
-- d’un **tableau** ;
-- de la question intermédiaire : « pour trouver ceci, que me faut-il d’abord ? »
+Beaucoup d’énoncés demandent **deux** calculs. Trois aides :
+
+| L’outil | Ce qu’il fait |
+| Le **schéma en barres** | Il montre les quantités les unes par rapport aux autres |
+| Le **tableau** | Il range les données |
+| La **question intermédiaire** | « Pour trouver ceci, que me faut-il d’abord ? » |
 
 ## Le sens des mots
-« de plus que » → addition ; « de moins que » → soustraction ; « fois plus » → multiplication ; « partagé également » → division. Mais la prudence reste de mise : c’est la **situation** qui décide, pas le mot isolé.
+| L’expression | L’opération |
+| « de plus que » | Addition |
+| « de moins que » | Soustraction |
+| « fois plus » | Multiplication |
+| « partagé également » | Division |
+
+!> Ces mots **aident**, ils ne décident pas. C’est la **situation** qui décide : « 3 fois moins » est une division, malgré le mot « fois ».
 
 ## Vérifier par l’ordre de grandeur
 Si un problème demande le prix d’un stylo et qu’on trouve 400 €, il y a une erreur — même si le calcul semble juste.`,
@@ -535,30 +663,41 @@ Si un problème demande le prix d’un stylo et qu’on trouve 400 €, il y a u
           axe: 'Grandeurs et mesures',
           lecon: {
             titre: 'Le tour d’une figure',
-            cours: `## Ce qu’est un périmètre
-Le **périmètre** est la **longueur du contour** d’une figure. Il se mesure en unités de longueur : **mm, cm, dm, m, km**.
+            cours: `Le périmètre, c’est la longueur du tour. On le mesure comme une ficelle qu’on déroulerait autour de la figure.
 
-## Les formules à connaître
-- **Carré** de côté c : P = **4 × c**
-- **Rectangle** de longueur L et largeur l : P = **2 × (L + l)**
-- **Triangle** : P = somme des trois côtés
-- **Cercle** de rayon r : P = **2 × π × r**, ou π × d avec d le diamètre
-On prend **π ≈ 3,14**.
+## Les formules
+| La figure | Son périmètre |
+| **Carré** de côté c | P = **4 × c** |
+| **Rectangle** L et l | P = **2 × (L + l)** |
+| **Triangle** | La somme des trois côtés |
+| **Cercle** de rayon r | P = **2 × π × r** |
+
+= π ≈ 3,14
 
 ## Le vocabulaire du cercle
-Le **rayon** relie le centre à un point du cercle ; le **diamètre** traverse le cercle en passant par le centre : **d = 2 × r**. Le périmètre du cercle s’appelle aussi la **circonférence**.
+| Le mot | Ce qu’il désigne |
+| Le **rayon** | Du centre à un point du cercle |
+| Le **diamètre** | Il traverse en passant par le centre : **d = 2 × r** |
+| La **circonférence** | Un autre nom du périmètre du cercle |
 
 ## Les conversions de longueur
-km — hm — dam — **m** — dm — cm — mm : chaque rang vaut **10 fois** le suivant.
-1 m = 100 cm ; 1 km = 1 000 m ; 1 cm = 10 mm.
+~ km → hm → dam → m → dm → cm → mm
 
-> Une seule erreur de conversion suffit à fausser tout un exercice : on convertit **avant** de calculer, et dans l’unité demandée.
+Chaque rang vaut **10 fois** le suivant.
 
-## Le piège du périmètre et de l’aire
-Deux figures de **même périmètre** peuvent avoir des **aires différentes**. Un rectangle 1 × 5 et un carré de côté 3 ont tous deux un périmètre de 12, mais des aires de 5 et 9. Périmètre et aire mesurent deux choses différentes.
+= 1 m = 100 cm · 1 km = 1 000 m · 1 cm = 10 mm
 
-## Périmètre d’une figure composée
-On additionne les longueurs de tous les segments du contour — **et seulement** ceux du contour. Les traits intérieurs ne comptent pas.`,
+!> On convertit **avant** de calculer, et dans l’unité demandée. Une seule erreur de conversion suffit à fausser tout un exercice.
+
+## Périmètre et aire ne mesurent pas la même chose
+| La figure | Son périmètre | Son aire |
+| Rectangle 1 × 5 | 12 | **5** |
+| Carré de côté 3 | 12 | **9** |
+
+> Même périmètre, aires différentes. Le tour d’une figure ne dit rien de la place qu’elle occupe.
+
+## Une figure composée
+On additionne les longueurs de tous les segments du **contour** — et seulement ceux-là. Les traits intérieurs ne comptent pas.`,
           },
           questions: [
             ['Quelle est la formule du périmètre d’un rectangle ?', ['2 × (L + l)', 'L × l', 'L + l', '4 × L'], 0, 'On fait le tour : deux longueurs et deux largeurs.'],
@@ -576,32 +715,37 @@ On additionne les longueurs de tous les segments du contour — **et seulement**
           axe: 'Grandeurs et mesures',
           lecon: {
             titre: 'La surface, et ses unités piégeuses',
-            cours: `## Ce qu’est une aire
-L’**aire** mesure la **surface** occupée par une figure. Elle s’exprime en unités **carrées** : mm², cm², dm², m², km².
+            cours: `L’aire mesure la place occupée. Elle se compte en carrés — et c’est de là que viennent tous les pièges d’unités.
 
 ## Les formules
-- **Carré** de côté c : A = **c × c**
-- **Rectangle** : A = **L × l**
-- **Triangle** : A = **(base × hauteur) ÷ 2**
-- **Disque** de rayon r : A = **π × r × r**
-- **Parallélogramme** : A = base × hauteur
+| La figure | Son aire |
+| **Carré** de côté c | A = **c × c** |
+| **Rectangle** | A = **L × l** |
+| **Triangle** | A = **(base × hauteur) ÷ 2** |
+| **Disque** de rayon r | A = **π × r × r** |
+| **Parallélogramme** | A = base × hauteur |
 
 ## La hauteur d’un triangle
-C’est le segment **perpendiculaire** à la base, mené du sommet opposé. Elle n’est **pas** forcément un côté du triangle — c’est l’erreur la plus fréquente.
+C’est le segment **perpendiculaire** à la base, mené du sommet opposé.
+
+!> La hauteur n’est **pas** forcément un côté du triangle. C’est l’erreur la plus fréquente : on prend un côté au hasard et on divise par deux.
 
 ## Les conversions, et pourquoi elles piègent
-Pour les aires, chaque rang vaut **100 fois** le suivant, et non 10 :
-- 1 m² = **10 000** cm²
-- 1 cm² = **100** mm²
-- 1 km² = **1 000 000** m²
+Pour les aires, chaque rang vaut **100 fois** le suivant, et non 10.
 
-> Un carré de 1 m de côté mesure 100 cm × 100 cm = 10 000 cm². C’est la raison du facteur 100 : on multiplie deux longueurs, donc on multiplie deux fois par 10.
+= 1 m² = 10 000 cm² · 1 cm² = 100 mm² · 1 km² = 1 000 000 m²
+
+> Un carré de 1 m de côté mesure 100 cm × 100 cm = 10 000 cm². On multiplie **deux** longueurs, donc on multiplie **deux fois** par 10 : d’où le facteur 100.
 
 ## Les unités agraires
-1 **are** (a) = 100 m² ; 1 **hectare** (ha) = 10 000 m² = 100 ares. Un terrain de football fait environ 0,7 ha.
+| L’unité | Sa valeur |
+| 1 **are** (a) | 100 m² |
+| 1 **hectare** (ha) | 10 000 m² = 100 ares |
 
-## Aire d’une figure composée
-On **découpe** la figure en formes connues, on calcule chaque aire, puis on additionne — ou on soustrait s’il s’agit d’un trou.`,
+Un terrain de football fait environ **0,7 ha**.
+
+## Une figure composée
+~ Découper en formes connues → Calculer chaque aire → Additionner (ou soustraire un trou)`,
           },
           questions: [
             ['Quelle est la formule de l’aire d’un rectangle ?', ['L × l', '2 × (L + l)', 'L + l', '4 × L'], 0, 'Le résultat s’exprime en unités carrées.'],
@@ -619,34 +763,43 @@ On **découpe** la figure en formes connues, on calcule chaque aire, puis on add
           axe: 'Grandeurs et mesures',
           lecon: {
             titre: 'Compter en base 60',
-            cours: `## Les unités de durée
-1 jour = **24 h** ; 1 h = **60 min** ; 1 min = **60 s**.
-Attention : le temps ne se compte **pas** en base 10. C’est la source de presque toutes les erreurs du chapitre.
+            cours: `Le temps ne se compte pas en base 10, mais en base 60. Presque toutes les erreurs du chapitre viennent de là.
+
+## Les unités de durée
+= 1 jour = 24 h · 1 h = 60 min · 1 min = 60 s
 
 ## Convertir
-- h → min : × 60. **2 h 30 = 150 min**
-- min → s : × 60
-- min → h : ÷ 60
-Piège majeur : **2,5 h = 2 h 30**, et non 2 h 5. La partie décimale se convertit : 0,5 × 60 = 30 min.
+| Le passage | L’opération | Exemple |
+| h → min | **× 60** | 2 h 30 = **150 min** |
+| min → s | × 60 | 3 min = 180 s |
+| min → h | ÷ 60 | 90 min = 1,5 h |
 
-> 1,25 h vaut 1 h 15, pas 1 h 25. Chaque fois qu’une durée est écrite avec une virgule, il faut convertir la partie décimale.
+!> **2,5 h vaut 2 h 30, pas 2 h 5.** La partie décimale se convertit : 0,5 × 60 = 30 min. De même **1,25 h = 1 h 15**. Chaque fois qu’une durée s’écrit avec une virgule, il faut convertir ce qui suit la virgule.
 
 ## Calculer une durée entre deux horaires
-De 8 h 45 à 11 h 20 :
-- de 8 h 45 à 9 h : **15 min**
-- de 9 h à 11 h : **2 h**
-- de 11 h à 11 h 20 : **20 min**
-Total : **2 h 35**.
+De 8 h 45 à 11 h 20, on avance par étapes rondes :
+
+~ 8 h 45 → 9 h : 15 min → 11 h : 2 h → 11 h 20 : 20 min
+
+= Total : 2 h 35
+
 On peut aussi poser la soustraction, en pensant à emprunter **60** et non 10.
 
 ## Ajouter une durée à un horaire
-14 h 50 + 35 min = 14 h 85 → comme 85 > 60, on retire 60 et on ajoute 1 h : **15 h 25**.
+= 14 h 50 + 35 min = 14 h 85 → 15 h 25
 
-## Les horaires
-On lit l’heure en format 24 h : 14 h correspond à 2 h de l’après-midi. Un tableau d’horaires (train, bus) se lit en colonnes : chaque colonne est un trajet.
+Dès que les minutes dépassent 60, on en retire 60 et on ajoute 1 h.
+
+## Lire les horaires
+On lit l’heure en format 24 h : **14 h**, c’est 2 h de l’après-midi. Dans un tableau de train ou de bus, **chaque colonne est un trajet**.
 
 ## Vitesse, distance et durée
-**v = d ÷ t**, **d = v × t**, **t = d ÷ v**. Les unités doivent concorder : des km/h avec des heures, des m/s avec des secondes.`,
+| On cherche | La formule |
+| La **vitesse** | v = d ÷ t |
+| La **distance** | d = v × t |
+| La **durée** | t = d ÷ v |
+
+> Les unités doivent concorder : des km/h avec des heures, des m/s avec des secondes.`,
           },
           questions: [
             ['Combien de minutes dans 2 h 30 ?', ['150 min', '230 min', '250 min', '120 min'], 0, '2 × 60 + 30.'],
@@ -668,33 +821,45 @@ On lit l’heure en format 24 h : 14 h correspond à 2 h de l’après-midi. Un 
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Le vocabulaire et les tracés fondamentaux',
-            cours: `## Les objets de base
-- **Point** : noté par une lettre majuscule (A).
-- **Droite (AB)** : illimitée des deux côtés.
-- **Segment [AB]** : limité par ses deux extrémités. Sa longueur se note AB.
-- **Demi-droite [AB)** : une origine, illimitée de l’autre côté.
-Les **notations** comptent : crochets pour un segment, parenthèses pour une droite.
+            cours: `En géométrie, les notations ne sont pas de la décoration : elles disent de quel objet on parle.
+
+## Les objets de base
+| L’objet | Sa notation | Ce qu’il est |
+| **Point** | A | Une lettre **majuscule** |
+| **Droite** | (AB) | Illimitée des **deux** côtés |
+| **Segment** | [AB] | Limité par ses deux extrémités ; sa longueur se note AB |
+| **Demi-droite** | [AB) | Une origine, illimitée de l’autre côté |
+
+!> Crochets pour un segment, parenthèses pour une droite. Écrire (AB) pour une longueur est une faute, pas une approximation.
 
 ## Perpendiculaires et parallèles
-- Deux droites sont **perpendiculaires** si elles se coupent en formant un **angle droit** (90°). On note ⊥ et on marque le petit carré.
-- Deux droites sont **parallèles** si elles ne se coupent **jamais**. On note //.
+| Les droites sont… | Quand… | On note |
+| **Perpendiculaires** | Elles se coupent à **90°** | ⊥ et le petit carré |
+| **Parallèles** | Elles ne se coupent **jamais** | // |
 
 ## Les trois propriétés à connaître
-1. Si deux droites sont **perpendiculaires à une même droite**, alors elles sont **parallèles** entre elles.
-2. Si deux droites sont **parallèles** et qu’une troisième est perpendiculaire à l’une, elle est **perpendiculaire à l’autre**.
-3. Par un point donné, il passe **une seule** parallèle à une droite donnée, et **une seule** perpendiculaire.
+1. Deux droites **perpendiculaires à une même droite** sont **parallèles** entre elles ;
+2. si deux droites sont **parallèles** et qu’une troisième est perpendiculaire à l’une, elle est **perpendiculaire à l’autre** ;
+3. par un point donné passe **une seule** parallèle à une droite donnée, et **une seule** perpendiculaire.
 
-> Ces propriétés servent à **démontrer**, pas seulement à constater sur le dessin. Un dessin peut tromper ; une propriété, non.
+> Ces propriétés servent à **démontrer**, pas à constater. Un dessin peut tromper ; une propriété, non.
 
 ## La médiatrice
 La **médiatrice** d’un segment est la droite **perpendiculaire** à ce segment passant par son **milieu**.
-Propriété : ses points sont **équidistants** des deux extrémités. On la trace au compas, en traçant deux arcs de même rayon de part et d’autre.
+
+= Ses points sont à égale distance des deux extrémités
+
+On la trace au compas, par deux arcs de même rayon de part et d’autre.
 
 ## La bissectrice
 La **bissectrice** d’un angle est la demi-droite qui le **partage en deux angles égaux**. Elle se trace aussi au compas.
 
 ## Les instruments
-Règle graduée (mesurer), équerre (angle droit), compas (reporter une longueur, tracer un cercle), rapporteur (mesurer un angle).`,
+| L’instrument | Ce qu’il fait |
+| La **règle graduée** | Mesurer, tracer |
+| L’**équerre** | L’angle droit |
+| Le **compas** | Reporter une longueur, tracer un cercle |
+| Le **rapporteur** | Mesurer un angle |`,
           },
           questions: [
             ['Comment note-t-on un segment d’extrémités A et B ?', ['[AB]', '(AB)', '[AB)', 'AB sans signe'], 0, 'Les parenthèses désignent une droite.'],
@@ -712,36 +877,42 @@ Règle graduée (mesurer), équerre (angle droit), compas (reporter une longueur
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Mesurer, nommer, construire',
-            cours: `## Ce qu’est un angle
-Un **angle** est l’ouverture formée par deux demi-droites de même origine, le **sommet**. Il se mesure en **degrés (°)** avec un **rapporteur**.
+            cours: `Un angle, c’est une ouverture. On la mesure en degrés, avec un rapporteur — et on la nomme avec trois lettres.
+
+## Ce qu’est un angle
+Deux demi-droites de **même origine** : cette origine est le **sommet**. L’ouverture se mesure en **degrés (°)**.
 
 ## Les noms des angles
-- **nul** : 0°
-- **aigu** : entre 0° et 90°
-- **droit** : exactement 90°
-- **obtus** : entre 90° et 180°
-- **plat** : exactement 180°
-Retenir le sens : **aigu** = pointu, **obtus** = ouvert.
+| L’angle | Sa mesure |
+| **Nul** | 0° |
+| **Aigu** | Entre 0° et 90° |
+| **Droit** | Exactement **90°** |
+| **Obtus** | Entre 90° et 180° |
+| **Plat** | Exactement **180°** |
+
+> Le moyen de ne plus confondre : **aigu** comme une pointe, **obtus** comme une ouverture large.
 
 ## Noter un angle
-On l’écrit avec **trois lettres**, celle du **sommet au milieu** : l’angle ABC a pour sommet **B**. C’est une convention à respecter absolument, sinon l’angle désigné n’est pas le bon.
+On l’écrit avec **trois lettres, le sommet au milieu** : l’angle ABC a pour sommet **B**.
+
+!> Changer l’ordre des lettres change l’angle désigné. La lettre du milieu n’est pas décorative : c’est elle qui dit où est le sommet.
 
 ## Utiliser le rapporteur
-1. Placer le **centre** du rapporteur sur le sommet ;
+1. Placer le **centre** du rapporteur sur le **sommet** ;
 2. aligner le **zéro** sur l’un des côtés ;
-3. lire la graduation sur l’autre côté, en choisissant **la bonne échelle** (les rapporteurs en ont deux).
-Le contrôle de bon sens : si l’angle est visiblement aigu, la réponse doit être inférieure à 90°.
+3. lire la graduation sur l’autre côté, sur **la bonne échelle**.
 
-> Un rapporteur mal lu donne souvent 130° au lieu de 50° — les deux graduations sont complémentaires à 180°.
+!> Un rapporteur a **deux** graduations, complémentaires à 180°. Mal lu, il donne 130° au lieu de 50°. Le contrôle de bon sens : un angle visiblement aigu doit mesurer **moins de 90°**.
 
 ## Angles particuliers
-- **Adjacents** : ils ont le même sommet, un côté commun, et sont de part et d’autre de ce côté.
-- **Complémentaires** : leur somme vaut **90°**.
-- **Supplémentaires** : leur somme vaut **180°**.
-- **Opposés par le sommet** : ils sont **égaux**.
+| Les angles sont… | Quand… |
+| **Adjacents** | Même sommet, un côté commun, de part et d’autre de ce côté |
+| **Complémentaires** | Leur somme vaut **90°** |
+| **Supplémentaires** | Leur somme vaut **180°** |
+| **Opposés par le sommet** | Ils sont **égaux** |
 
 ## Construire un angle
-On trace un côté, on place le rapporteur, on marque le point à la mesure voulue, puis on trace la demi-droite.`,
+~ Tracer un côté → Poser le rapporteur → Marquer la mesure → Tracer la demi-droite`,
           },
           questions: [
             ['Comment appelle-t-on un angle de 90° ?', ['Un angle droit', 'Un angle aigu', 'Un angle obtus', 'Un angle plat'], 0, 'L’angle plat mesure 180°.'],
@@ -759,31 +930,38 @@ On trace un côté, on place le rapporteur, on marque le point à la mesure voul
           axe: 'Espace et géométrie',
           lecon: {
             titre: '180°, toujours',
-            cours: `## La propriété fondamentale
-Dans **tout** triangle, la **somme des trois angles vaut 180°**. Sans exception, quelle que soit sa forme ou sa taille.
+            cours: `Dans tout triangle, les trois angles font 180°. Aucune exception, quelle que soit sa forme ou sa taille.
 
-C’est l’outil le plus utile du chapitre : si l’on connaît deux angles, on trouve le troisième par soustraction.
-Exemple : 65° et 40° → 180 − 65 − 40 = **75°**.
+## La propriété fondamentale
+= Angle 1 + Angle 2 + Angle 3 = 180°
+
+Si l’on connaît deux angles, le troisième s’obtient par soustraction.
+
+= 180 − 65 − 40 = 75°
 
 ## Ce qu’elle permet de déduire
-- Un triangle ne peut avoir **qu’un seul** angle droit — deux feraient déjà 180°, sans place pour le troisième.
-- Il ne peut avoir **qu’un seul** angle obtus.
-- Dans un triangle **rectangle**, les deux angles aigus sont **complémentaires** (leur somme vaut 90°).
+| La déduction | Pourquoi |
+| Un seul angle **droit** au maximum | Deux angles droits font déjà 180° |
+| Un seul angle **obtus** au maximum | Deux obtus dépasseraient 180° |
+| Dans un triangle **rectangle**, les deux angles aigus sont **complémentaires** | Il reste 90° à se partager |
 
 ## Construire un triangle
-Trois données suffisent :
-- **trois côtés** : on trace un côté, puis deux arcs de compas dont l’intersection donne le sommet ;
-- **deux côtés et l’angle entre eux** : règle, rapporteur, règle ;
-- **un côté et les deux angles adjacents** : règle, puis les deux demi-droites.
+| Ce qu’on connaît | Les instruments |
+| Les **trois côtés** | Règle et compas : deux arcs se croisent au sommet |
+| **Deux côtés et l’angle entre eux** | Règle, rapporteur, règle |
+| **Un côté et les deux angles adjacents** | Règle, puis les deux demi-droites |
 
 ## L’inégalité triangulaire
-Un triangle n’existe que si **le plus grand côté est inférieur à la somme des deux autres**.
-Avec 3 cm, 4 cm et 9 cm : 9 > 3 + 4, donc **le triangle est impossible** — les deux petits côtés ne se rejoignent pas.
+Un triangle n’existe que si le **plus grand côté est plus petit que la somme des deux autres**.
 
-> Avant de construire, on vérifie : c’est plus rapide que de s’acharner sur un tracé impossible.
+!> Avec 3 cm, 4 cm et 9 cm, **le triangle est impossible** : 9 > 3 + 4, les deux petits côtés ne se rejoignent jamais. On vérifie **avant** de construire, plutôt que de s’acharner sur un tracé impossible.
 
 ## Le programme de construction
-Un énoncé de construction se lit comme une recette : chaque phrase est une étape, dans l’ordre. On termine par un **codage** de la figure (marques d’égalité, angle droit).`,
+Un énoncé de construction se lit comme une recette : chaque phrase est une **étape**, dans l’ordre.
+
+~ Lire tout le programme → Tracer étape par étape → Coder la figure
+
+Le **codage** (marques d’égalité, petit carré de l’angle droit) fait partie du travail.`,
           },
           questions: [
             ['Combien vaut la somme des angles d’un triangle ?', ['180°', '360°', '90°', 'Cela dépend du triangle'], 0, 'C’est vrai pour tout triangle.'],
@@ -801,31 +979,41 @@ Un énoncé de construction se lit comme une recette : chaque phrase est une ét
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Les triangles particuliers et leurs propriétés',
-            cours: `## Le triangle isocèle
-Il a **deux côtés de même longueur**. Le sommet où ils se rejoignent est le **sommet principal**, le troisième côté la **base**.
-Propriétés :
-- les **angles à la base** sont **égaux** ;
-- il possède un **axe de symétrie** : la médiatrice de la base, qui passe par le sommet principal.
-Si l’angle au sommet vaut 40°, les deux autres valent (180 − 40) ÷ 2 = **70°** chacun.
+            cours: `Certains triangles ont des angles qu’on connaît sans les mesurer. C’est exactement ce qui sert dans les exercices.
+
+## Le triangle isocèle
+Deux côtés de même longueur. Le sommet où ils se rejoignent est le **sommet principal**, le troisième côté la **base**.
+
+| Sa propriété | Ce qu’elle donne |
+| Les **angles à la base** sont **égaux** | Un angle connu en donne deux |
+| Il a **un axe de symétrie** | La médiatrice de la base |
+
+= Angle au sommet 40° → (180 − 40) ÷ 2 = 70° à la base
 
 ## Le triangle équilatéral
-Il a **trois côtés égaux**. Ses trois angles valent donc **60°** chacun (180 ÷ 3). Il possède **trois axes de symétrie**.
-Tout triangle équilatéral est **aussi isocèle** — mais l’inverse est faux.
+Trois côtés égaux, donc trois angles égaux.
+
+= 180 ÷ 3 = 60°
+
+Il possède **trois** axes de symétrie.
+
+!> Tout triangle équilatéral est **aussi** isocèle. L’inverse est faux : un isocèle n’a que deux côtés égaux.
 
 ## Le triangle rectangle
-Il a un **angle droit**. Le côté opposé à l’angle droit est l’**hypoténuse**, et c’est **toujours le plus long**.
-Ses deux angles aigus sont **complémentaires**.
+Un angle droit. Le côté opposé à l’angle droit s’appelle l’**hypoténuse**, et c’est **toujours le plus long**. Ses deux angles aigus sont **complémentaires**.
 
 ## Le triangle isocèle rectangle
-Il cumule les deux : un angle droit et deux côtés égaux. Ses angles valent **90°, 45° et 45°**.
+Il cumule les deux.
 
-> Ces triangles ne sont pas des curiosités : ce sont les figures dont on connaît les angles sans les mesurer, et c’est précisément ce qui sert dans les exercices.
+= 90° · 45° · 45°
 
 ## Le codage d’une figure
-On marque les **égalités de longueur** par des traits identiques, les **angles droits** par un petit carré, les **angles égaux** par des arcs identiques. Un codage bien lu répond souvent à la question.
+| La marque | Ce qu’elle dit |
+| Traits identiques sur deux côtés | Ces **longueurs sont égales** |
+| Petit carré | **Angle droit** |
+| Arcs identiques | **Angles égaux** |
 
-## Reconnaître sans mesurer
-Face à une figure codée, on lit le codage — pas la règle. Le dessin peut être imprécis ; le codage, lui, est une donnée de l’énoncé.`,
+> Face à une figure codée, on lit le **codage**, pas la règle graduée. Le dessin peut être imprécis ; le codage est une donnée de l’énoncé.`,
           },
           questions: [
             ['Qu’est-ce qu’un triangle isocèle ?', ['Un triangle avec deux côtés de même longueur', 'Un triangle avec trois côtés égaux', 'Un triangle avec un angle droit', 'Un triangle sans axe de symétrie'], 0, 'Ses angles à la base sont égaux.'],
@@ -843,36 +1031,45 @@ Face à une figure codée, on lit le codage — pas la règle. Le dessin peut ê
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Le pliage et le miroir',
-            cours: `## L’idée
-Deux figures sont **symétriques par rapport à une droite** (l’**axe**) si elles se superposent **par pliage** le long de cet axe. C’est l’image dans un miroir.
+            cours: `La symétrie axiale, c’est le pliage : deux figures qui se superposent quand on plie la feuille le long d’un axe.
+
+## L’idée
+Deux figures sont **symétriques par rapport à une droite** — l’**axe** — si elles se superposent par pliage le long de cette droite. C’est l’image dans un miroir.
 
 ## Construire le symétrique d’un point
-Le symétrique A' de A par rapport à la droite (d) est tel que **(d) est la médiatrice du segment [AA']**. Concrètement :
-1. tracer la **perpendiculaire** à (d) passant par A ;
-2. **reporter** de l’autre côté la même distance.
-Si A est **sur** l’axe, son symétrique est **lui-même**.
+1. Tracer la **perpendiculaire** à l’axe passant par A ;
+2. **reporter** de l’autre côté la **même distance**.
+
+= L’axe (d) est la médiatrice de [AA’]
+
+!> Si le point est **sur** l’axe, son symétrique est **lui-même**. Il ne bouge pas.
 
 ## Ce que la symétrie conserve
-- les **longueurs** ;
-- les **mesures d’angles** ;
-- les **aires** ;
-- l’**alignement**, le **parallélisme**, le **milieu**.
-Une figure et son symétrique sont **superposables** : elles ont exactement la même forme et la même taille.
+| Elle conserve | Elle ne conserve pas |
+| Les **longueurs** | Le **sens** de lecture |
+| Les **mesures d’angles** | |
+| Les **aires** | |
+| L’**alignement**, le **parallélisme**, le **milieu** | |
 
-> La symétrie ne déforme rien. Elle change seulement la position et le sens.
+> Une figure et son symétrique sont **superposables** : même forme, même taille. La symétrie ne déforme rien, elle change seulement la position et le sens.
 
 ## Ce qu’elle change
-Le **sens** de lecture est inversé : un texte vu dans un miroir se lit à l’envers. C’est la seule chose que la symétrie modifie.
+Un texte vu dans un miroir se lit à l’envers : le **sens** est inversé. C’est la seule chose que la symétrie modifie.
 
-## Axe de symétrie d’une figure
-Une figure a un axe de symétrie si elle est son propre symétrique par rapport à cet axe.
-- **Carré** : 4 axes — **rectangle** : 2 — **losange** : 2
-- **Triangle équilatéral** : 3 — **isocèle** : 1
-- **Cercle** : une **infinité** (tous ses diamètres)
-- **Parallélogramme quelconque** : **aucun** — c’est le piège classique.
+## Combien d’axes ?
+| La figure | Ses axes de symétrie |
+| **Carré** | 4 |
+| **Rectangle** | 2 |
+| **Losange** | 2 |
+| **Triangle équilatéral** | 3 |
+| **Triangle isocèle** | 1 |
+| **Cercle** | Une **infinité** (tous ses diamètres) |
+| **Parallélogramme quelconque** | **Aucun** |
+
+!> Le parallélogramme quelconque n’a **aucun** axe de symétrie. C’est le piège classique : il a un centre de symétrie, ce qui n’est pas la même chose.
 
 ## Où on la rencontre
-Papillons, feuilles, façades, lettres de l’alphabet (A, H, M, T, O), frises et pavages : la symétrie axiale est partout, et sert autant à dessiner qu’à démontrer.`,
+Papillons, feuilles, façades, lettres A, H, M, T, O, frises et pavages : la symétrie axiale sert autant à dessiner qu’à démontrer.`,
           },
           questions: [
             ['Quelle est la définition du symétrique A’ de A par rapport à une droite (d) ?', ['(d) est la médiatrice de [AA’]', '(d) passe par A', '(d) est parallèle à [AA’]', 'A’ est le milieu de (d)'], 0, 'C’est la définition à retenir.'],
@@ -890,35 +1087,44 @@ Papillons, feuilles, façades, lettres de l’alphabet (A, H, M, T, O), frises e
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Des solides, des patrons et des litres',
-            cours: `## Le vocabulaire des solides
-Un **solide** a trois dimensions. On décrit ses **faces** (les surfaces), ses **arêtes** (les segments) et ses **sommets** (les points).
-- **Cube** : 6 faces carrées, 12 arêtes, 8 sommets.
-- **Pavé droit** (parallélépipède rectangle) : 6 faces rectangulaires, 12 arêtes, 8 sommets.
-- **Cylindre** : deux disques et une surface courbe.
-- **Pyramide**, **cône**, **boule** complètent la famille.
+            cours: `Un solide occupe de la place dans l’espace. Cette place se mesure en cubes — et se boit en litres.
+
+## Le vocabulaire
+| Le mot | Ce qu’il désigne |
+| **Face** | Une surface du solide |
+| **Arête** | Un segment, là où deux faces se rencontrent |
+| **Sommet** | Un point |
+
+| Le solide | Faces | Arêtes | Sommets |
+| **Cube** | 6 carrés | 12 | 8 |
+| **Pavé droit** | 6 rectangles | 12 | 8 |
+| **Cylindre** | 2 disques et une surface courbe | — | — |
+
+La **pyramide**, le **cône** et la **boule** complètent la famille.
 
 ## Le patron
-Un **patron** est le dessin à plat qui, une fois plié, redonne le solide. Le cube en a **onze** différents — de quoi vérifier qu’un patron proposé est bien valide : il faut 6 carrés, correctement disposés.
+Un **patron** est le dessin à plat qui, plié, redonne le solide.
+
+!> Le cube a **onze** patrons différents. Six carrés ne suffisent pas : encore faut-il qu’ils soient bien disposés. On vérifie un patron proposé en le pliant mentalement.
 
 ## Le volume
-Le **volume** mesure la place occupée, en unités **cubes** : mm³, cm³, dm³, m³.
-- **Cube** de côté c : V = **c × c × c**
-- **Pavé droit** : V = **L × l × h**
-- **Cylindre** de rayon r et hauteur h : V = **π × r × r × h**
+| Le solide | Son volume |
+| **Cube** de côté c | V = **c × c × c** |
+| **Pavé droit** | V = **L × l × h** |
+| **Cylindre** | V = **π × r × r × h** |
 
 ## Les conversions, encore plus piégeuses
-Pour les volumes, chaque rang vaut **1 000** fois le suivant :
-1 m³ = **1 000 000** cm³ ; 1 dm³ = **1 000** cm³.
+Pour les volumes, chaque rang vaut **1 000** fois le suivant.
+
+= 1 m³ = 1 000 000 cm³ · 1 dm³ = 1 000 cm³
 
 ## Le lien avec les litres
-C’est l’équivalence la plus utile du chapitre :
-**1 L = 1 dm³** et **1 mL = 1 cm³**.
-Un pack de 6 bouteilles d’un litre occupe donc 6 dm³.
+= 1 L = 1 dm³ · 1 mL = 1 cm³
 
-> Volume et capacité mesurent la même chose : l’un en unités de géométrie, l’autre en unités de la vie courante.
+> C’est l’équivalence la plus utile du chapitre. Un pack de six bouteilles d’un litre occupe **6 dm³**.
 
 ## La perspective cavalière
-On dessine les faces vues de face en **vraie grandeur**, et les arêtes fuyantes en **pointillés** quand elles sont cachées. Les fuyantes parallèles restent parallèles.`,
+Les faces vues de face se dessinent en **vraie grandeur** ; les arêtes cachées se tracent en **pointillés**. Les fuyantes parallèles restent parallèles.`,
           },
           questions: [
             ['Combien d’arêtes a un cube ?', ['12', '6', '8', '4'], 0, 'Il a 6 faces et 8 sommets.'],
@@ -940,32 +1146,44 @@ On dessine les faces vues de face en **vraie grandeur**, et les arêtes fuyantes
           axe: 'La proportionnalité',
           lecon: {
             titre: 'Quand tout augmente dans le même rapport',
-            cours: `## Reconnaître une situation proportionnelle
-Deux grandeurs sont **proportionnelles** si l’on passe de l’une à l’autre en multipliant **toujours par le même nombre**, appelé **coefficient de proportionnalité**.
-Le prix de pommes à 3 € le kilo : 2 kg → 6 €, 5 kg → 15 €. Le coefficient est **3**.
+            cours: `Deux grandeurs sont proportionnelles quand on passe de l’une à l’autre en multipliant toujours par le même nombre.
+
+## Reconnaître une situation proportionnelle
+Des pommes à 3 € le kilo :
+
+| La masse | Le prix |
+| 2 kg | 6 € |
+| 5 kg | 15 € |
+
+= Coefficient de proportionnalité : 3
+
+## Le test
+~ Le double doit donner le double → et 0 doit donner 0
 
 ## Ce qui n’est PAS proportionnel
-- L’**âge** et la **taille** d’une personne ;
-- le **périmètre** et l’**aire** d’un carré ;
-- un tarif avec un **abonnement** fixe plus un prix à l’unité.
-Le test : **le double doit donner le double**, et 0 doit correspondre à 0.
+| La situation | Pourquoi |
+| L’**âge** et la **taille** | On ne double pas de taille en doublant d’âge |
+| Le **périmètre** et l’**aire** d’un carré | L’aire est multipliée par 4 quand le côté double |
+| Un tarif avec **abonnement** | Le prix ne part pas de 0 |
 
-## Les méthodes de calcul
-1. **Le coefficient** : on le trouve en divisant une valeur de la seconde ligne par la valeur correspondante de la première, puis on l’applique.
-2. **Le passage à l’unité** : on cherche la valeur pour 1, puis on multiplie.
-3. **La quatrième proportionnelle** (produit en croix) : dans a/b = c/d, on a a × d = b × c.
-4. **La linéarité** : si 2 kg coûtent 6 € et 3 kg 9 €, alors 5 kg coûtent 6 + 9 = **15 €**.
+## Les quatre méthodes de calcul
+1. **Le coefficient** : on divise une valeur par celle qui lui correspond, puis on l’applique ;
+2. **le passage à l’unité** : on cherche la valeur pour 1, puis on multiplie ;
+3. **la quatrième proportionnelle** (produit en croix) : dans a/b = c/d, on a a × d = b × c ;
+4. **la linéarité** : si 2 kg coûtent 6 € et 3 kg 9 €, alors 5 kg coûtent 6 + 9 = **15 €**.
 
-> Les quatre méthodes donnent le même résultat. La plus rapide dépend des nombres : on choisit celle qui évite les divisions compliquées.
+> Les quatre donnent le **même** résultat. On choisit celle qui évite les divisions compliquées.
 
 ## Le tableau de proportionnalité
-On dispose les grandeurs sur deux lignes. Un tableau est de proportionnalité si **toutes** les colonnes donnent le même quotient.
+On dispose les grandeurs sur deux lignes. Le tableau est de proportionnalité si **toutes** les colonnes donnent le même quotient.
 
 ## Les échelles
-Une **échelle** est un rapport de proportionnalité entre le dessin et la réalité. Au 1/100, 1 cm sur le plan représente 100 cm, soit **1 m** en vrai.
+Une **échelle** est un rapport de proportionnalité entre le dessin et la réalité.
 
-## Pourcentages et vitesses
-Ce sont des situations de proportionnalité : appliquer 20 %, c’est multiplier par 0,2 ; rouler à vitesse constante, c’est parcourir une distance proportionnelle à la durée.`,
+= Au 1/100 : 1 cm sur le plan = 100 cm = 1 m en vrai
+
+## Où on la retrouve
+Appliquer 20 %, c’est multiplier par 0,2 ; rouler à vitesse constante, c’est parcourir une distance proportionnelle à la durée. Pourcentages et vitesses sont des situations de proportionnalité.`,
           },
           questions: [
             ['Que signifie « deux grandeurs proportionnelles » ?', ['On passe de l’une à l’autre en multipliant toujours par le même nombre', 'Elles augmentent toutes les deux', 'Elles sont égales', 'Leur somme est constante'], 0, 'Ce nombre est le coefficient de proportionnalité.'],
@@ -987,31 +1205,44 @@ Ce sont des situations de proportionnalité : appliquer 20 %, c’est multiplier
           axe: 'Organisation et gestion des données et probabilités',
           lecon: {
             titre: 'Recueillir, représenter, résumer',
-            cours: `## Le vocabulaire
-- La **population** : l’ensemble étudié (les élèves d’une classe).
-- Le **caractère** : ce qu’on observe (la couleur des yeux, la taille).
-- L’**effectif** : le nombre d’individus d’une catégorie.
-- L’**effectif total** : la somme de tous les effectifs.
-- La **fréquence** : effectif ÷ effectif total, souvent exprimée en **pourcentage**.
+            cours: `Recueillir des données, c’est facile. Les représenter sans mentir, c’est le vrai travail.
 
-## Le tableau
-On range les données dans un tableau à deux lignes : les catégories, puis leurs effectifs. On vérifie toujours que la somme des effectifs égale l’effectif total.
+## Le vocabulaire
+| Le mot | Ce qu’il désigne |
+| La **population** | L’ensemble étudié (les élèves de la classe) |
+| Le **caractère** | Ce qu’on observe (la couleur des yeux) |
+| L’**effectif** | Le nombre d’individus d’une catégorie |
+| L’**effectif total** | La somme de tous les effectifs |
+| La **fréquence** | Effectif ÷ effectif total, souvent en % |
 
-## Les représentations
-- **Diagramme en barres** : des barres de même largeur, de hauteur proportionnelle à l’effectif. Idéal pour **comparer** des catégories.
-- **Diagramme circulaire** : un disque de 360°, chaque part proportionnelle à l’effectif. Idéal pour montrer des **parts d’un tout**.
-  Angle = **fréquence × 360°**. Une catégorie représentant 25 % occupe 90°.
-- **Graphique cartésien** : pour suivre une **évolution** dans le temps.
+> On vérifie toujours que la somme des effectifs égale l’effectif total. Sinon, une donnée a été perdue.
+
+## Choisir sa représentation
+| Le graphique | Ce qu’il montre le mieux |
+| **Diagramme en barres** | **Comparer** des catégories |
+| **Diagramme circulaire** | Des **parts d’un tout** |
+| **Graphique cartésien** | Une **évolution** dans le temps |
+
+Dans un diagramme circulaire, le disque entier vaut 360°.
+
+= Angle = fréquence × 360°
+
+Une catégorie qui représente 25 % occupe donc **90°**.
 
 ## La moyenne
-**Moyenne = somme des valeurs ÷ nombre de valeurs**.
-Pour 12, 15, 9 et 16 : (12 + 15 + 9 + 16) ÷ 4 = 52 ÷ 4 = **13**.
-La moyenne est un **résumé** : elle ne dit rien de la dispersion. Deux classes de même moyenne peuvent avoir des résultats très différents.
+= Moyenne = somme des valeurs ÷ nombre de valeurs
 
-> Une moyenne de 13 peut venir de « tout le monde à 13 » comme de « moitié à 6, moitié à 20 ». C’est pourquoi on regarde aussi le détail.
+= (12 + 15 + 9 + 16) ÷ 4 = 52 ÷ 4 = 13
 
-## Lire un graphique
-Toujours vérifier : le **titre**, ce que portent les **axes**, les **unités**, et l’origine de l’échelle. Un axe qui ne part pas de zéro exagère visuellement les écarts — c’est le procédé le plus courant des graphiques trompeurs.`,
+!> La moyenne ne dit **rien** de la dispersion. Une moyenne de 13 peut venir de « tout le monde à 13 » comme de « la moitié à 6, la moitié à 20 ». C’est pourquoi on regarde aussi le détail.
+
+## Lire un graphique sans se faire avoir
+1. Lire le **titre** ;
+2. regarder ce que portent les **axes** ;
+3. vérifier les **unités** ;
+4. vérifier **où commence l’échelle**.
+
+!> Un axe qui ne part pas de zéro **exagère visuellement** les écarts. C’est le procédé le plus courant des graphiques trompeurs.`,
           },
           questions: [
             ['Comment calcule-t-on une fréquence ?', ['Effectif ÷ effectif total', 'Effectif × effectif total', 'Effectif total ÷ effectif', 'Effectif + effectif total'], 0, 'Elle s’exprime souvent en pourcentage.'],
@@ -1029,38 +1260,45 @@ Toujours vérifier : le **titre**, ce que portent les **axes**, les **unités**,
           axe: 'Organisation et gestion des données et probabilités',
           lecon: {
             titre: 'Mesurer la chance',
-            cours: `## L’expérience aléatoire
+            cours: `Une probabilité mesure la chance qu’un événement se produise. Elle se range toujours entre 0 et 1.
+
+## L’expérience aléatoire
 Une expérience est **aléatoire** quand on ne peut pas prévoir son résultat : lancer un dé, tirer une carte, jouer à pile ou face. Chaque résultat possible est une **issue**.
 
-## La probabilité
-La **probabilité** d’un événement mesure sa chance de se produire. Elle est comprise **entre 0 et 1** :
-- **0** : l’événement est **impossible** ;
-- **1** : il est **certain** ;
-- **0,5** : il a une chance sur deux.
+## L’échelle des probabilités
+| La probabilité | Ce qu’elle dit |
+| **0** | L’événement est **impossible** |
+| **0,5** | Une chance sur deux |
+| **1** | L’événement est **certain** |
+
 Elle s’écrit en fraction, en décimal ou en pourcentage : 1/2 = 0,5 = 50 %.
 
-## Le calcul dans le cas équiprobable
-Quand toutes les issues ont la même chance, on applique :
-**P = nombre de cas favorables ÷ nombre de cas possibles**
+## Le calcul quand toutes les issues se valent
+= P = nombre de cas favorables ÷ nombre de cas possibles
 
-Avec un dé à 6 faces :
-- obtenir 4 → **1/6**
-- obtenir un nombre pair → 3/6 = **1/2**
-- obtenir un nombre inférieur à 7 → 6/6 = **1** (certain)
-- obtenir 7 → **0** (impossible)
+Avec un dé à six faces :
+
+| L’événement | Sa probabilité |
+| Obtenir **4** | 1/6 |
+| Obtenir un nombre **pair** | 3/6 = **1/2** |
+| Obtenir un nombre **inférieur à 7** | 6/6 = **1** (certain) |
+| Obtenir **7** | **0** (impossible) |
 
 ## Le vocabulaire
-- **Événement certain** : il se produit toujours.
-- **Événement impossible** : il ne se produit jamais.
-- **Événement contraire** : il se produit exactement quand l’autre ne se produit pas. Les deux probabilités ont pour somme **1**.
+| L’événement | Ce qu’il est |
+| **Certain** | Il se produit toujours |
+| **Impossible** | Il ne se produit jamais |
+| **Contraire** | Il se produit exactement quand l’autre ne se produit pas |
 
-## Les pièges de l’intuition
-Une pièce lancée cinq fois sur « pile » a toujours **exactement une chance sur deux** de donner pile au sixième lancer : la pièce n’a pas de mémoire. Croire le contraire est une erreur si répandue qu’elle porte un nom.
+= P(événement) + P(son contraire) = 1
 
-> Le hasard n’a pas de dette. Ce qui est arrivé avant ne change rien à ce qui vient.
+## Le piège de l’intuition
+!> Une pièce tombée cinq fois sur pile a **exactement une chance sur deux** de donner pile au sixième lancer. La pièce n’a pas de mémoire.
+
+> Le hasard n’a pas de dette : ce qui est arrivé avant ne change rien à ce qui vient.
 
 ## Fréquence et probabilité
-Sur un petit nombre d’essais, la fréquence observée s’écarte souvent de la probabilité. Plus on répète l’expérience, plus elle s’en **rapproche**.`,
+Sur peu d’essais, la fréquence observée s’écarte souvent de la probabilité. Plus on répète l’expérience, plus elle s’en **rapproche**.`,
           },
           questions: [
             ['Entre quelles valeurs une probabilité est-elle comprise ?', ['Entre 0 et 1', 'Entre 0 et 100', 'Entre −1 et 1', 'Entre 1 et 10'], 0, '0 = impossible, 1 = certain.'],
@@ -1082,32 +1320,45 @@ Sur un petit nombre d’essais, la fréquence observée s’écarte souvent de l
           axe: 'Initiation à la pensée informatique',
           lecon: {
             titre: 'Donner des instructions à une machine',
-            cours: `## L’algorithme
-Un **algorithme** est une suite **finie** et **ordonnée** d’instructions permettant de résoudre un problème. Une recette de cuisine, un itinéraire, une notice de montage : ce sont des algorithmes.
-Ce qui compte : chaque instruction doit être **précise** et **sans ambiguïté**. Une machine ne devine pas.
+            cours: `Une machine ne devine pas. Elle exécute, dans l’ordre, exactement ce qu’on lui dit.
+
+## L’algorithme
+Un **algorithme** est une suite **finie** et **ordonnée** d’instructions qui résout un problème. Une recette, un itinéraire, une notice de montage en sont.
+
+!> Chaque instruction doit être **précise et sans ambiguïté**. « Avance un peu » n’est pas une instruction ; « avance de 100 pas » en est une.
 
 ## Le programme
-Un **programme** est un algorithme écrit dans un langage que la machine comprend. En 6e, on utilise **Scratch**, où les instructions sont des blocs qu’on assemble.
+Un **programme** est un algorithme écrit dans un langage que la machine comprend. En 6e, c’est **Scratch** : les instructions sont des blocs qu’on assemble.
 
-## Les instructions de déplacement
-Sur un quadrillage ou avec un lutin : **avancer de n pas**, **tourner de 90° à droite**, **s’orienter vers**, **aller à (x ; y)**.
-Le repérage se fait par des **coordonnées** : l’**abscisse** (horizontale) d’abord, l’**ordonnée** (verticale) ensuite. L’ordre ne s’invente pas.
+## Se déplacer et se repérer
+| L’instruction | Ce qu’elle fait |
+| **Avancer de n pas** | Déplacement en ligne droite |
+| **Tourner de 90° à droite** | Rotation |
+| **Aller à (x ; y)** | Déplacement vers un point |
+
+!> Dans un couple de coordonnées, l’**abscisse** (horizontale) vient **toujours** en premier, l’**ordonnée** (verticale) ensuite. L’ordre ne s’invente pas.
 
 ## La boucle
 Une **boucle** répète des instructions sans les réécrire.
-Pour tracer un carré : **répéter 4 fois [avancer de 100 ; tourner de 90°]**.
-Sans boucle, il faudrait écrire huit instructions ; avec, il en faut trois. Pour un polygone à n côtés, on tourne de **360 ÷ n** degrés à chaque étape.
 
-> Une boucle n’est pas seulement plus courte : elle est plus facile à **corriger**, puisqu’il n’y a qu’un endroit à modifier.
+= répéter 4 fois [avancer de 100 ; tourner de 90°]
+
+Sans boucle, huit instructions ; avec, trois. Pour un polygone à **n** côtés, on tourne de **360 ÷ n** degrés à chaque tour.
+
+> Une boucle n’est pas seulement plus courte : elle est plus facile à **corriger**, puisqu’il n’y a qu’un seul endroit à modifier.
 
 ## L’instruction conditionnelle
-**Si … alors … sinon …** permet à un programme de choisir selon une condition : *si le lutin touche le bord, alors rebondir*.
+= si … alors … sinon …
+
+Le programme choisit selon une condition : *si le lutin touche le bord, alors rebondir*.
 
 ## Les variables
 Une **variable** est une case mémoire portant un nom, qui retient une valeur : un score, un compteur. On peut la lire et la modifier au fil du programme.
 
 ## Déboguer
-Un **bug** est une erreur dans le programme. On le corrige en **testant pas à pas**, en isolant l’instruction fautive. Un programme se met au point ; il ne s’écrit presque jamais juste du premier coup.`,
+~ Tester pas à pas → Isoler l’instruction fautive → Corriger → Retester
+
+Un **bug** est une erreur dans le programme. Un programme se met au point ; il ne s’écrit presque jamais juste du premier coup.`,
           },
           questions: [
             ['Qu’est-ce qu’un algorithme ?', ['Une suite finie et ordonnée d’instructions pour résoudre un problème', 'Un langage de programmation', 'Un ordinateur', 'Une erreur de programme'], 0, 'Une recette de cuisine en est un.'],

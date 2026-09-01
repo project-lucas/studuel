@@ -144,46 +144,43 @@ DELETE FROM public.chapters c
           axe: 'Algèbre et géométrie',
           lecon: {
             titre: 'Compter sans énumérer',
-            cours: `Dénombrer, c’est compter le nombre d’issues d’une situation sans les écrire toutes. Deux questions décident de la formule à employer : **l’ordre compte-t-il ?** et **peut-on répéter ?**
+            cours: `Dénombrer, c’est compter le nombre d’issues **sans les écrire toutes**. Deux questions décident de la formule : **l’ordre compte-t-il ?** et **peut-on répéter ?**
+
+## Le tableau de décision
+| L’ordre compte | Répétition possible | La formule | Le nom |
+| **Oui** | **Oui** | **n^k** | Le **k-uplet** |
+| **Oui** | **Non** | n! / (n−k)! | L’**arrangement** |
+| **Oui** | Non, et k = n | **n!** | La **permutation** |
+| **Non** | **Non** | n! / (k! (n−k)!) | La **combinaison** |
 
 ## La factorielle
-n! = n × (n−1) × … × 2 × 1, avec la convention **0! = 1**. Elle compte le nombre de façons d’ordonner n objets distincts.
+n! = n × (n−1) × … × 2 × 1, avec la convention **0! = 1**. Elle compte le nombre de façons d’**ordonner** n objets distincts.
 
 ## Les k-uplets
-Un **k-uplet** d’un ensemble à n éléments est une liste ordonnée de k éléments, **avec répétition possible**. Il y en a :
+Liste ordonnée de k éléments, **avec répétition** : c’est le tirage **avec remise**.
 
-n^k
+> Un code à 4 chiffres offre 10⁴ = **10 000** possibilités.
 
-C’est le cas d’un tirage **avec remise** : un code à 4 chiffres offre 10⁴ = 10 000 possibilités.
+## Les arrangements
+Liste ordonnée **sans répétition** : le tirage **sans remise** où l’ordre compte.
 
-## Les k-uplets d’éléments distincts (arrangements)
-Liste ordonnée de k éléments **sans répétition**, prise dans un ensemble à n éléments :
-
-n × (n−1) × … × (n−k+1) = n! / (n−k)!
-
-C’est le tirage **sans remise** où l’ordre compte : un podium de 3 places parmi 8 coureurs, soit 8 × 7 × 6 = 336.
-
-## Les permutations
-Cas particulier k = n : ordonner **tous** les éléments. Il y en a **n!**.
+> Un podium de 3 places parmi 8 coureurs : 8 × 7 × 6 = **336**.
 
 ## Les combinaisons
-Une **combinaison** est une **partie** à k éléments d’un ensemble à n éléments : ni ordre, ni répétition.
+Une **partie** à k éléments d’un ensemble à n : ni ordre, ni répétition. On la note « k parmi n ».
 
-C(n,k) = n! / (k! × (n−k)!)
+> Le **k!** au dénominateur efface justement l’ordre : on part des arrangements, et on divise par le nombre de façons d’ordonner les k éléments choisis.
 
-On la note aussi « k parmi n ». Le k! au dénominateur efface justement l’ordre : on part des arrangements, et on divise par le nombre de façons d’ordonner les k éléments choisis.
-
-Exemple : une main de 5 cartes dans un jeu de 32 vaut C(32,5) = 201 376.
+Une main de 5 cartes dans un jeu de 32 : C(32,5) = **201 376**.
 
 ## Les propriétés
-- **symétrie** : C(n,k) = C(n, n−k) — choisir k éléments, c’est en écarter n−k ;
-- **relation de Pascal** : C(n,k) = C(n−1, k−1) + C(n−1, k). Elle se lit sur un exemple : soit un élément donné est dans la partie, soit il n’y est pas. C’est elle qui construit le **triangle de Pascal** ;
-- **cas particuliers** : C(n,0) = C(n,n) = 1, C(n,1) = n ;
-- **somme** : la somme de tous les C(n,k) pour k de 0 à n vaut 2ⁿ — c’est le nombre total de parties d’un ensemble à n éléments.
+| Propriété | Son énoncé | Sa lecture |
+| **Symétrie** | C(n,k) = C(n, n−k) | Choisir k éléments, c’est en **écarter** n−k |
+| **Relation de Pascal** | C(n,k) = C(n−1, k−1) + C(n−1, k) | Un élément donné **est** dans la partie, ou **n’y est pas** |
+| Cas particuliers | C(n,0) = C(n,n) = 1 ; C(n,1) = n | — |
+| **Somme** | La somme de tous les C(n,k) vaut **2ⁿ** | Le nombre total de **parties** d’un ensemble à n éléments |
 
-## Le mode d’emploi
-1. l’ordre compte-t-il ? Non → **combinaison**. Oui → suite ;
-2. peut-on répéter ? Oui → **n^k**. Non → **arrangement**, ou **permutation** si k = n.
+La relation de Pascal est celle qui construit le **triangle de Pascal**.
 
 > Les combinaisons resservent immédiatement : le coefficient C(n,k) est exactement celui de la **loi binomiale**, où il compte les façons d’obtenir k succès parmi n épreuves.`,
           },
@@ -203,46 +200,43 @@ Exemple : une main de 5 cartes dans un jeu de 32 vaut C(32,5) = 201 376.
           axe: 'Algèbre et géométrie',
           lecon: {
             titre: 'Trois coordonnées, les mêmes règles',
-            cours: `La géométrie de l’espace reprend tous les outils du plan, avec une coordonnée de plus — et une question nouvelle : deux droites peuvent ne se couper **ni** être parallèles.
+            cours: `La géométrie de l’espace reprend tous les outils du plan, avec **une coordonnée de plus** — et une question nouvelle : deux droites peuvent ne se couper **ni** être parallèles.
 
 ## Les vecteurs de l’espace
-Un vecteur se décompose sur une **base** (i, j, k) de trois vecteurs non coplanaires :
+Un vecteur se décompose sur une **base** de trois vecteurs non coplanaires : u = x i + y j + z k, noté u(x ; y ; z).
 
-u = x i + y j + z k, noté u(x ; y ; z)
+Somme, produit par un réel et colinéarité s’écrivent **coordonnée par coordonnée**, exactement comme dans le plan. Deux vecteurs sont **colinéaires** s’il existe un réel k tel que v = k u.
 
-Somme, produit par un réel et colinéarité s’écrivent coordonnée par coordonnée, exactement comme dans le plan. Deux vecteurs sont **colinéaires** s’il existe un réel k tel que v = k u.
+## La nouveauté : les vecteurs coplanaires
+Trois vecteurs u, v, w sont **coplanaires** s’il existe deux réels a et b tels que w = a u + b v — autrement dit si w **se décompose** sur u et v.
 
-## Vecteurs coplanaires
-Trois vecteurs u, v, w sont **coplanaires** s’il existe deux réels a et b tels que w = a u + b v — autrement dit si w se décompose sur u et v. Cette notion n’a pas d’équivalent dans le plan : c’est la nouveauté du chapitre.
-
-Trois vecteurs **non coplanaires** forment une base de l’espace.
+> Cette notion n’a **aucun équivalent** dans le plan : c’est la nouveauté du chapitre. Trois vecteurs **non coplanaires** forment une base de l’espace.
 
 ## Repère et coordonnées
-Un repère (O ; i, j, k) permet d’attribuer à tout point M ses trois coordonnées. Les formules du plan s’étendent :
-- coordonnées de AB : (xB − xA ; yB − yA ; zB − zA) ;
-- milieu de [AB] : moyenne des coordonnées ;
-- distance AB = √((xB−xA)² + (yB−yA)² + (zB−zA)²), dans un repère **orthonormé** seulement.
+| Objet | Sa formule |
+| Coordonnées de AB | (xB − xA ; yB − yA ; zB − zA) |
+| Milieu de [AB] | La moyenne des coordonnées |
+| Distance AB | √((xB−xA)² + (yB−yA)² + (zB−zA)²), en repère **orthonormé** seulement |
 
-## Caractériser une droite
-Une droite est définie par un point A et un **vecteur directeur** u non nul. Un point M lui appartient si et seulement si AM est **colinéaire** à u.
-
-## Caractériser un plan
-Un plan est défini par :
-- un point A et **deux vecteurs directeurs** u et v non colinéaires ; ou
-- **trois points non alignés** ; ou
-- une droite et un point hors de cette droite.
-
-Un point M appartient au plan si et seulement si AM, u et v sont **coplanaires**.
+## Caractériser une droite, caractériser un plan
+| | **Droite** | **Plan** |
+| Ce qui la définit | Un point A et **un** vecteur directeur u non nul | Un point A et **deux** vecteurs directeurs non colinéaires |
+| Autres définitions | — | **Trois points non alignés** ; ou une droite et un point hors d’elle |
+| M lui appartient si… | AM est **colinéaire** à u | AM, u et v sont **coplanaires** |
 
 ## Les théorèmes à connaître
-- si une droite est parallèle à une droite d’un plan, elle est parallèle à ce plan ;
-- deux plans parallèles coupés par un troisième déterminent deux droites parallèles ;
-- **théorème du toit** : si deux plans sécants contiennent chacun l’une de deux droites parallèles, leur intersection est parallèle à ces deux droites.
+| Théorème | Son énoncé |
+| Parallélisme droite-plan | Si une droite est parallèle à une droite d’un plan, elle est parallèle à ce plan |
+| Plans parallèles | Deux plans parallèles coupés par un troisième déterminent deux droites **parallèles** |
+| **Théorème du toit** | Si deux plans sécants contiennent chacun l’une de deux droites parallèles, leur **intersection** est parallèle à ces droites |
 
 ## Ce qui change vraiment
-Dans le plan, deux droites sont sécantes ou parallèles. Dans l’espace, elles peuvent être **non coplanaires** : elles ne se coupent pas et ne sont pas parallèles. Vérifier la coplanarité est donc le premier réflexe avant de chercher une intersection.
+| Dans le plan | Dans l’espace |
+| Deux droites sont **sécantes ou parallèles** | Elles peuvent être **non coplanaires** : ni sécantes, ni parallèles |
 
-> Toute la géométrie du chapitre se ramène à des calculs sur des coordonnées : dès qu’une configuration résiste, poser un repère et calculer.`,
+> Vérifier la **coplanarité** est donc le premier réflexe avant de chercher une intersection.
+
+> Toute la géométrie du chapitre se ramène à des calculs sur des coordonnées : dès qu’une configuration résiste, **poser un repère et calculer**.`,
           },
           questions: [
             ['Quand trois vecteurs de l’espace sont-ils coplanaires ?', ['Quand l’un est combinaison linéaire des deux autres', 'Quand ils sont deux à deux colinéaires', 'Quand ils ont la même norme', 'Quand leur somme est nulle'], 0, 'Trois vecteurs non coplanaires forment une base de l’espace.'],
@@ -262,42 +256,47 @@ Dans le plan, deux droites sont sécantes ou parallèles. Dans l’espace, elles
             titre: 'Sécants, parallèles, ou ni l’un ni l’autre',
             cours: `Étudier une position relative, c’est répondre à une seule question : **combien de points communs ?** Zéro, un, ou une infinité.
 
-## Deux droites
-Trois cas, et non deux comme dans le plan :
-- **coplanaires et sécantes** : un point commun ;
-- **coplanaires et parallèles** : aucun point commun (strictement parallèles) ou confondues ;
-- **non coplanaires** : aucun point commun, et pourtant pas parallèles.
+## Deux droites — trois cas, et non deux
+| Cas | Points communs | Comment le reconnaître |
+| Coplanaires et **sécantes** | **Un** | Directeurs non colinéaires, système avec une solution |
+| Coplanaires et **parallèles** | Aucun, ou infinité si confondues | Directeurs **colinéaires** |
+| **Non coplanaires** | **Aucun** — et pourtant pas parallèles | Directeurs non colinéaires, système **sans** solution |
 
-Méthode : les vecteurs directeurs sont-ils colinéaires ? Si oui, les droites sont parallèles (confondues si un point de l’une appartient à l’autre). Si non, on résout le système : une solution → sécantes, aucune → non coplanaires.
+La méthode : les vecteurs directeurs sont-ils colinéaires ? Si oui, les droites sont parallèles — confondues si un point de l’une appartient à l’autre. Sinon, on résout le système.
 
 ## Droite et plan
-- la droite est **incluse** dans le plan : une infinité de points communs ;
-- la droite est **strictement parallèle** au plan : aucun point commun ;
-- la droite est **sécante** au plan : un unique point.
+| Cas | Points communs |
+| La droite est **incluse** dans le plan | Une **infinité** |
+| Elle est **strictement parallèle** | **Aucun** |
+| Elle est **sécante** | **Un** seul |
 
-Critère : si le vecteur directeur u de la droite est **orthogonal** au vecteur normal n du plan, la droite est parallèle au plan (incluse si un de ses points y appartient). Sinon, elle est sécante.
+> Critère : si le vecteur directeur de la droite est **orthogonal** au vecteur normal du plan, la droite est **parallèle** au plan — incluse si un de ses points y appartient. Sinon elle est sécante.
 
 ## Deux plans
-- **confondus** ;
-- **strictement parallèles** : aucun point commun ;
-- **sécants** : leur intersection est une **droite**, jamais un point.
+| Cas | Intersection |
+| **Confondus** | Le plan lui-même |
+| **Strictement parallèles** | Aucune |
+| **Sécants** | Une **droite** — jamais un point |
 
-Critère : les vecteurs normaux sont-ils colinéaires ? Si oui, les plans sont parallèles ; sinon ils sont sécants.
+> Critère : les vecteurs **normaux** sont-ils colinéaires ?
 
 ## Trois plans
-Les cas se combinent : un point unique (les trois vecteurs normaux non coplanaires), une droite, un plan, ou aucun point commun — configuration en « prisme », où les plans se coupent deux à deux selon trois droites parallèles distinctes.
+Un point unique (les trois normaux non coplanaires), une droite, un plan, ou aucun point commun — la configuration en « **prisme** », où les plans se coupent deux à deux selon trois droites parallèles distinctes.
 
 ## Le lien avec les systèmes
-Chercher une intersection revient à **résoudre un système d’équations**. Le nombre de solutions traduit directement la position relative : une solution unique (sécants), une infinité (inclusion ou intersection selon une droite), aucune (parallélisme strict ou non-coplanarité).
+| Le système a… | La position relative |
+| Une solution **unique** | Sécants |
+| Une **infinité** | Inclusion, ou intersection selon une droite |
+| **Aucune** | Parallélisme strict **ou non-coplanarité** |
 
 ## La méthode générale
-1. écrire une **représentation paramétrique** de chaque droite et une **équation cartésienne** de chaque plan ;
-2. substituer l’une dans l’autre ;
-3. lire le nombre de solutions.
+1. Écrire une **représentation paramétrique** de chaque droite et une **équation cartésienne** de chaque plan ;
+2. **Substituer** l’une dans l’autre ;
+3. **Lire** le nombre de solutions.
 
-Substituer la paramétrique d’une droite dans l’équation d’un plan donne une équation en un seul paramètre : une solution → intersection en un point ; aucune → parallèle stricte ; identité vraie pour tout paramètre → droite incluse.
+Substituer la paramétrique d’une droite dans l’équation d’un plan donne une équation en un seul paramètre : une solution → un point ; aucune → parallèle stricte ; identité vraie pour tout paramètre → droite **incluse**.
 
-> Une erreur récurrente : conclure « parallèles » dès que le système n’a pas de solution. Dans l’espace, l’absence de solution peut aussi signaler des droites **non coplanaires**.`,
+> Erreur récurrente : conclure « parallèles » dès que le système n’a pas de solution. Dans l’espace, l’absence de solution peut aussi signaler des droites **non coplanaires**.`,
           },
           questions: [
             ['Combien de positions relatives deux droites de l’espace peuvent-elles avoir ?', ['Trois : sécantes, parallèles, ou non coplanaires', 'Deux : sécantes ou parallèles', 'Quatre', 'Une seule'], 0, 'La non-coplanarité est le cas propre à l’espace.'],
@@ -315,42 +314,47 @@ Substituer la paramétrique d’une droite dans l’équation d’un plan donne 
           axe: 'Algèbre et géométrie',
           lecon: {
             titre: 'L’outil qui transforme la géométrie en calcul',
-            cours: `Le produit scalaire est le seul outil qui relie **longueurs** et **angles** à des coordonnées. Il fournit le critère d’orthogonalité et toutes les distances du chapitre.
+            cours: `Le produit scalaire est le **seul** outil qui relie **longueurs** et **angles** à des coordonnées. Il fournit le critère d’orthogonalité et toutes les distances du chapitre.
 
 ## Les trois expressions
-Pour deux vecteurs u et v de l’espace :
-- **coordonnées** (repère orthonormé) : u · v = xx′ + yy′ + zz′ ;
-- **norme et angle** : u · v = ‖u‖ × ‖v‖ × cos(θ) ;
-- **projection** : u · v = ‖u‖ × ‖v′‖ où v′ est le projeté orthogonal de v sur la direction de u, au signe près.
+| Expression | Sa formule | Quand l’employer |
+| Par **coordonnées** (repère orthonormé) | xx′ + yy′ + zz′ | Pour calculer |
+| Par **norme et angle** | ‖u‖ × ‖v‖ × cos(θ) | Pour trouver un **angle** |
+| Par **projection** | ‖u‖ × la longueur du projeté de v sur u, au signe près | Pour interpréter |
 
 ## Les propriétés
-Symétrie (u · v = v · u), bilinéarité, et u · u = ‖u‖². Les identités remarquables s’appliquent aux vecteurs : ‖u + v‖² = ‖u‖² + 2 u · v + ‖v‖².
+Symétrie, bilinéarité, et **u · u = ‖u‖²**. Les identités remarquables s’appliquent aux vecteurs :
+
+‖u + v‖² = ‖u‖² + 2 u · v + ‖v‖²
 
 ## Le critère d’orthogonalité
-Deux vecteurs **non nuls** sont orthogonaux **si et seulement si** leur produit scalaire est nul. C’est le résultat le plus utilisé du chapitre : toute question d’orthogonalité devient un calcul de somme de produits.
+Deux vecteurs **non nuls** sont orthogonaux **si et seulement si** leur produit scalaire est **nul**.
+
+> C’est le résultat le plus utilisé du chapitre : toute question d’orthogonalité devient une **somme de produits**.
 
 ## Le vecteur normal à un plan
-Un vecteur **normal** n à un plan est orthogonal à **tous** les vecteurs du plan — il suffit qu’il soit orthogonal à **deux** vecteurs directeurs non colinéaires.
+Un vecteur **normal** est orthogonal à **tous** les vecteurs du plan — il suffit qu’il le soit à **deux** vecteurs directeurs non colinéaires.
 
-Conséquence majeure : le plan passant par A et de vecteur normal n(a ; b ; c) admet une **équation cartésienne** de la forme
+Le plan passant par A et de vecteur normal n(a ; b ; c) admet l’équation cartésienne :
 
 ax + by + cz + d = 0
 
-où les coefficients a, b, c **sont exactement** les coordonnées d’un vecteur normal. Lire un vecteur normal sur une équation de plan est immédiat.
+> Les coefficients a, b, c **sont exactement** les coordonnées d’un vecteur normal. Lire un vecteur normal sur une équation de plan est donc **immédiat**.
 
 ## Le projeté orthogonal
-Le **projeté orthogonal** d’un point M sur un plan (ou une droite) est le point du plan le plus proche de M. La distance de M au plan est donc la distance à son projeté.
+Le point du plan (ou de la droite) **le plus proche** de M. La distance de M au plan est la distance à son projeté.
 
-Pour le calculer : écrire la droite passant par M de vecteur directeur n, et chercher son intersection avec le plan.
+> Pour le calculer : écrire la droite passant par M **de vecteur directeur n**, et chercher son intersection avec le plan.
 
 ## Les distances
-- **distance d’un point à un plan** : |a·xM + b·yM + c·zM + d| / √(a² + b² + c²) ;
-- **distance d’un point à une droite** : passer par le projeté orthogonal.
+| Distance | Comment l’obtenir |
+| D’un **point à un plan** | La valeur absolue de (a·xM + b·yM + c·zM + d), divisée par √(a² + b² + c²) |
+| D’un **point à une droite** | Par le **projeté orthogonal** |
 
 ## Les usages classiques
-Sphère (ensemble des points à distance R d’un centre), position relative d’une sphère et d’un plan (comparer la distance du centre au plan et le rayon), calcul d’un angle, démonstration d’une orthogonalité, recherche d’un minimum de distance.
+Sphère (points à distance R d’un centre), position relative d’une sphère et d’un plan (comparer la distance du centre au plan et le rayon), calcul d’un angle, démonstration d’une orthogonalité, recherche d’un minimum de distance.
 
-> Deux réflexes suffisent à traiter presque tout le chapitre : « orthogonal » se traduit par « produit scalaire nul », et « distance minimale » par « projeté orthogonal ».`,
+> Deux réflexes traitent presque tout le chapitre : « **orthogonal** » se traduit par « **produit scalaire nul** », et « **distance minimale** » par « **projeté orthogonal** ».`,
           },
           questions: [
             ['Quelle est l’expression du produit scalaire en repère orthonormé ?', ['xx′ + yy′ + zz′', 'xx′ − yy′ + zz′', '(x + x′)(y + y′)', 'xyz + x′y′z′'], 0, 'C’est la somme des produits des coordonnées de même rang.'],
@@ -368,45 +372,45 @@ Sphère (ensemble des points à distance R d’un centre), position relative d�
           axe: 'Algèbre et géométrie',
           lecon: {
             titre: 'Deux écritures, deux usages',
-            cours: `Une droite et un plan s’écrivent avec deux outils différents, et savoir passer de l’un à l’autre est ce que les exercices demandent le plus souvent.
+            cours: `Une droite et un plan s’écrivent avec **deux outils différents**, et savoir passer de l’un à l’autre est ce que les exercices demandent le plus souvent.
 
-## La représentation paramétrique d’une droite
-La droite passant par A(xA ; yA ; zA) et de vecteur directeur u(a ; b ; c) est l’ensemble des points M tels que :
+## Les deux écritures
+| | **Représentation paramétrique** | **Équation cartésienne** |
+| Elle décrit naturellement | Une **droite** | Un **plan** |
+| Ce qu’on y lit | Un **point** (les constantes) et un **vecteur directeur** (les coefficients du paramètre) | Un **vecteur normal** (les coefficients a, b, c) |
+| Test d’appartenance d’un point | Il faut **résoudre un système** | On **remplace** et on regarde si l’égalité est vraie |
+
+## La paramétrique d’une droite
+Pour A(xA ; yA ; zA) et u(a ; b ; c) :
 
 x = xA + a t
 y = yA + b t
 z = zA + c t, avec t décrivant ℝ
 
-Le réel **t** est le **paramètre** : chaque valeur de t donne un point de la droite, et un seul. Lire une représentation paramétrique, c’est lire un point (les termes constants) et un vecteur directeur (les coefficients de t).
+Chaque valeur du **paramètre t** donne un point de la droite, et un seul.
 
-⚠️ Une représentation paramétrique **n’est pas unique** : changer de point de base ou multiplier le vecteur directeur par un réel non nul donne une autre écriture de la **même** droite. Pour vérifier que deux paramétriques décrivent la même droite, on teste la colinéarité des directeurs, puis l’appartenance d’un point de l’une à l’autre.
-
-## La représentation paramétrique d’un plan
-Elle existe aussi, avec **deux** paramètres t et s et deux vecteurs directeurs — mais le programme lui préfère l’équation cartésienne.
+> Elle **n’est pas unique** : changer de point de base ou multiplier le directeur par un réel non nul décrit la **même** droite. Pour vérifier que deux paramétriques coïncident : tester la **colinéarité** des directeurs, puis l’**appartenance** d’un point de l’une à l’autre.
 
 ## L’équation cartésienne d’un plan
-ax + by + cz + d = 0, où (a ; b ; c) est un **vecteur normal**. Pour l’obtenir :
-1. trouver un vecteur normal (souvent par produit scalaire nul avec deux vecteurs directeurs, ce qui donne un système) ;
-2. écrire ax + by + cz + d = 0 ;
-3. déterminer d en injectant les coordonnées d’un point connu du plan.
+| Étape | Ce qu’on fait |
+| 1 | Trouver un **vecteur normal** — souvent par produit scalaire nul avec deux directeurs, ce qui donne un système |
+| 2 | Écrire ax + by + cz + d = 0 |
+| 3 | Déterminer **d** en injectant les coordonnées d’un point connu |
 
-Elle non plus n’est pas unique : multiplier toute l’équation par un réel non nul donne le même plan.
+Elle non plus n’est pas unique : multiplier toute l’équation par un réel non nul donne le **même** plan.
 
 ## Intersection d’une droite et d’un plan
-C’est le calcul le plus fréquent de l’épreuve : on **substitue** x, y et z de la paramétrique dans l’équation cartésienne. On obtient une équation du premier degré en t :
-- une solution → un point d’intersection, obtenu en reportant t ;
-- aucune solution (du type 0 = 5) → droite strictement parallèle au plan ;
-- une identité (du type 0 = 0) → droite incluse dans le plan.
+Le calcul le plus fréquent de l’épreuve : on **substitue** x, y et z de la paramétrique dans l’équation cartésienne, ce qui donne une équation du premier degré en t.
+
+| Ce qu’on obtient | La conclusion |
+| Une solution | Un **point** d’intersection, obtenu en reportant t |
+| Aucune solution — du type 0 = 5 | Droite **strictement parallèle** au plan |
+| Une identité — du type 0 = 0 | Droite **incluse** dans le plan |
 
 ## Intersection de deux plans
-On résout le système des deux équations cartésiennes. En exprimant deux inconnues en fonction de la troisième, prise comme paramètre, on obtient directement une **représentation paramétrique** de la droite d’intersection.
+On résout le système des deux équations cartésiennes. En exprimant deux inconnues en fonction de la troisième, prise comme **paramètre**, on obtient directement une **représentation paramétrique** de la droite d’intersection.
 
-## Quel outil pour quelle question
-- une droite se décrit naturellement en **paramétrique** ;
-- un plan se décrit naturellement en **cartésien** ;
-- un test d’appartenance d’un point à un plan est immédiat en cartésien (on remplace et on regarde si l’égalité est vraie), alors qu’il demande de résoudre un système en paramétrique.
-
-> Le passage paramétrique → cartésien pour une droite se fait en éliminant t entre les trois équations : on obtient deux équations, car une droite de l’espace est l’intersection de deux plans.`,
+> Le passage paramétrique → cartésien pour une **droite** se fait en éliminant t entre les trois équations : on obtient **deux** équations, car une droite de l’espace est l’**intersection de deux plans**.`,
           },
           questions: [
             ['Dans une représentation paramétrique de droite, que représentent les coefficients du paramètre t ?', ['Les coordonnées d’un vecteur directeur', 'Les coordonnées d’un point de la droite', 'Un vecteur normal', 'La distance à l’origine'], 0, 'Les termes constants donnent, eux, un point de la droite.'],
@@ -429,38 +433,44 @@ On résout le système des deux équations cartésiennes. En exprimant deux inco
 
 ## Le principe
 Soit P(n) une propriété dépendant d’un entier n. Si :
-1. **initialisation** : P(n₀) est vraie ;
-2. **hérédité** : pour tout n ≥ n₀, P(n) vraie entraîne P(n+1) vraie ;
 
-alors P(n) est vraie **pour tout n ≥ n₀**.
+| Étape | Ce qu’elle établit |
+| **Initialisation** | P(n₀) est **vraie** |
+| **Hérédité** | Pour tout n supérieur ou égal à n₀, P(n) vraie **entraîne** P(n+1) vraie |
 
-L’image est celle de l’échelle : savoir monter sur le premier barreau, et savoir passer d’un barreau au suivant, c’est pouvoir monter aussi haut qu’on veut.
+alors P(n) est vraie **pour tout n supérieur ou égal à n₀**.
+
+> L’image de l’**échelle** : savoir monter sur le premier barreau, et savoir passer d’un barreau au suivant, c’est pouvoir monter aussi haut qu’on veut.
 
 ## La rédaction attendue
-Elle est **codifiée**, et sa rigueur fait une part de la note :
-1. **définir** clairement P(n) — la propriété, pas la conclusion ;
-2. **initialisation** : vérifier P(n₀) par le calcul, en écrivant les deux membres ;
-3. **hérédité** : « soit n ≥ n₀ un entier tel que P(n) est vraie » — on **suppose** P(n), on **démontre** P(n+1). Partir de l’expression de rang n+1 et y faire apparaître celle de rang n ;
-4. **conclusion** : « par récurrence, P(n) est vraie pour tout n ≥ n₀ ».
+| Étape | Ce qu’il faut écrire |
+| 1 | **Définir** clairement P(n) — la propriété, pas la conclusion |
+| 2 | **Initialisation** : vérifier P(n₀) par le calcul, en écrivant **les deux membres** |
+| 3 | **Hérédité** : « soit n tel que P(n) est vraie » ; on **suppose** P(n), on **démontre** P(n+1) — en partant du rang n+1 et en y faisant apparaître le rang n |
+| 4 | **Conclusion** : « par récurrence, P(n) est vraie pour tout n » |
+
+Sa rigueur fait une part de la note.
 
 ## Les deux erreurs classiques
-- **oublier l’initialisation** : l’hérédité seule ne prouve rien. La propriété « 2ⁿ > n² » est héréditaire à partir d’un certain rang, mais fausse pour n = 3 ;
-- **utiliser P(n+1) dans sa propre démonstration**, ce qui revient à supposer ce qu’on veut prouver. L’hypothèse de récurrence est **P(n)**, jamais P(n+1).
+| Erreur | Pourquoi elle est fatale |
+| **Oublier l’initialisation** | L’hérédité seule ne prouve rien : « 2ⁿ > n² » est héréditaire à partir d’un rang, et **fausse** pour n = 3 |
+| Utiliser **P(n+1)** dans sa propre démonstration | C’est supposer ce qu’on veut prouver. L’hypothèse est **P(n)**, jamais P(n+1) |
 
-## L’hypothèse de récurrence
-Elle doit être **utilisée** : une démonstration d’hérédité qui n’y fait jamais appel signale presque toujours une erreur — ou une propriété qui se démontre directement, sans récurrence.
+## L’hypothèse de récurrence doit servir
+Une démonstration d’hérédité qui n’y fait **jamais appel** signale presque toujours une erreur — ou une propriété qui se démontre directement, sans récurrence.
 
 ## Les usages au programme
-- **formules explicites** de suites définies par récurrence ;
-- **inégalités**, notamment l’**inégalité de Bernoulli** : pour a > −1 et tout n ≥ 0, (1 + a)ⁿ ≥ 1 + n a ;
-- **monotonie** d’une suite définie par u(n+1) = f(u(n)) ;
-- **encadrement** : montrer qu’une suite reste dans un intervalle stable ;
-- **divisibilité** : montrer qu’une expression est divisible par un entier.
+| Usage | Exemple |
+| **Formule explicite** d’une suite définie par récurrence | — |
+| **Inégalité** | L’**inégalité de Bernoulli** : (1 + a)ⁿ supérieur ou égal à 1 + n a, pour a > −1 |
+| **Monotonie** d’une suite u(n+1) = f(u(n)) | — |
+| **Encadrement** | Montrer qu’une suite reste dans un intervalle stable |
+| **Divisibilité** | Montrer qu’une expression est divisible par un entier |
 
 ## Le lien avec la suite du chapitre
-La récurrence sert immédiatement après : démontrer qu’une suite est croissante et majorée est l’étape qui, par le **théorème de la limite monotone**, garantit sa convergence.
+La récurrence sert immédiatement après : démontrer qu’une suite est **croissante et majorée** est l’étape qui, par le **théorème de la limite monotone**, garantit sa **convergence**.
 
-> Une propriété héréditaire sans initialisation vraie est une échelle sans premier barreau : on sait passer d’un barreau au suivant, mais on n’y monte jamais.`,
+> Une propriété héréditaire **sans initialisation vraie** est une échelle sans premier barreau : on sait passer d’un barreau au suivant, mais on n’y monte jamais.`,
           },
           questions: [
             ['Quelles sont les deux étapes d’un raisonnement par récurrence ?', ['L’initialisation et l’hérédité', 'L’hypothèse et la conclusion', 'La majoration et la minoration', 'Le calcul et la vérification'], 0, 'La conclusion vient ensuite, mais elle ne se démontre pas.'],
@@ -478,46 +488,53 @@ La récurrence sert immédiatement après : démontrer qu’une suite est croiss
           axe: 'Analyse',
           lecon: {
             titre: 'Vers quoi une suite se dirige-t-elle ?',
-            cours: `Étudier la limite d’une suite, c’est décrire son comportement quand n devient très grand. Trois issues sont possibles : converger, diverger vers l’infini, ou n’avoir aucune limite.
+            cours: `Étudier la limite d’une suite, c’est décrire son comportement quand n devient très grand. **Trois** issues sont possibles.
 
-## Les définitions
-- la suite **converge** vers ℓ si tout intervalle ouvert contenant ℓ contient tous les termes à partir d’un certain rang ;
-- elle **diverge vers +∞** si tout intervalle de la forme [A ; +∞[ contient tous les termes à partir d’un certain rang ;
-- elle peut **n’avoir aucune limite** : (−1)ⁿ oscille entre −1 et 1 sans jamais se fixer. Diverger ne signifie donc pas « tendre vers l’infini ».
+## Les trois comportements
+| Comportement | Sa définition | Exemple |
+| **Converger** vers ℓ | Tout intervalle ouvert contenant ℓ contient tous les termes à partir d’un certain rang | 1/n vers 0 |
+| **Diverger** vers +∞ | Tout intervalle [A ; +∞[ contient tous les termes à partir d’un certain rang | n² |
+| **N’avoir aucune limite** | La suite oscille sans se fixer | (−1)ⁿ |
+
+> **Diverger ne signifie pas « tendre vers l’infini »** : une suite sans limite diverge aussi.
 
 ## Les limites de référence
-Pour tout entier k ≥ 1 : n^k → +∞, √n → +∞, et 1/n^k → 0.
+Pour tout entier k supérieur ou égal à 1 : n^k tend vers +∞, √n tend vers +∞, et 1/n^k tend vers 0.
 
-## Les opérations
-Somme, produit et quotient des limites se calculent terme à terme — sauf pour les **quatre formes indéterminées** : ∞ − ∞, 0 × ∞, ∞/∞ et 0/0. Une forme indéterminée n’est pas une absence de limite : c’est un signal qu’il faut **transformer l’écriture** (factoriser par le terme dominant, utiliser l’expression conjuguée, simplifier).
+## Les opérations et les indéterminations
+Somme, produit et quotient se calculent terme à terme — sauf pour les **quatre formes indéterminées** : ∞ − ∞ · 0 × ∞ · ∞/∞ · 0/0.
+
+> Une forme indéterminée n’est pas une absence de limite : c’est un signal qu’il faut **transformer l’écriture** — factoriser par le terme dominant, utiliser l’expression conjuguée, simplifier.
 
 ## Les suites géométriques
-Pour une suite de terme général qⁿ :
-- si q > 1 : qⁿ → +∞ ;
-- si q = 1 : la suite est constante ;
-- si −1 < q < 1 : qⁿ → 0 ;
-- si q ≤ −1 : pas de limite.
+| La raison q | Le comportement de qⁿ |
+| q > 1 | **+∞** |
+| q = 1 | Suite **constante** |
+| −1 < q < 1 | **0** |
+| q inférieur ou égal à −1 | **Pas de limite** |
 
-C’est le résultat le plus utilisé du chapitre, et il se démontre pour q > 1 par l’inégalité de Bernoulli.
+> C’est le résultat le plus utilisé du chapitre. Pour q > 1, il se démontre par l’**inégalité de Bernoulli**.
 
 ## Les théorèmes de comparaison
-- **par minoration** : si u(n) ≥ v(n) à partir d’un rang et v(n) → +∞, alors u(n) → +∞ ;
-- **par majoration** : si u(n) ≤ v(n) et v(n) → −∞, alors u(n) → −∞ ;
-- **théorème des gendarmes** : si v(n) ≤ u(n) ≤ w(n) à partir d’un rang, et si v et w convergent vers la **même** limite ℓ, alors u converge vers ℓ.
+| Théorème | Ses hypothèses | Sa conclusion |
+| Par **minoration** | u(n) supérieure à v(n), et v tend vers +∞ | u tend vers **+∞** |
+| Par **majoration** | u(n) inférieure à v(n), et v tend vers −∞ | u tend vers **−∞** |
+| Des **gendarmes** | v(n) inférieure à u(n) inférieure à w(n), et v et w convergent vers la **même** limite ℓ | u converge vers **ℓ** |
 
-Le théorème des gendarmes est l’outil de choix dès qu’apparaît un terme borné mais sans limite, comme cos(n) ou (−1)ⁿ.
+> Le théorème des gendarmes est l’outil de choix dès qu’apparaît un terme **borné mais sans limite**, comme cos(n) ou (−1)ⁿ.
 
 ## Le théorème de la limite monotone
-- une suite **croissante et majorée** converge ;
-- une suite **décroissante et minorée** converge ;
-- une suite croissante **non majorée** diverge vers +∞.
+| La suite est… | Elle… |
+| **Croissante et majorée** | **Converge** |
+| **Décroissante et minorée** | **Converge** |
+| Croissante et **non** majorée | Diverge vers **+∞** |
 
-⚠️ Ce théorème garantit l’**existence** de la limite, pas sa valeur. Une suite croissante majorée par 10 converge — mais pas nécessairement vers 10.
+> Il garantit l’**existence** de la limite, **pas sa valeur** : une suite croissante majorée par 10 converge, mais pas nécessairement vers 10.
 
 ## Suites définies par récurrence
-Pour u(n+1) = f(u(n)) avec f continue : si la suite converge vers ℓ, alors ℓ vérifie **f(ℓ) = ℓ**. On cherche donc les points fixes de f, après avoir démontré la convergence — jamais avant.
+Pour u(n+1) = f(u(n)) avec f **continue** : si la suite converge vers ℓ, alors ℓ vérifie **f(ℓ) = ℓ**.
 
-> L’ordre du raisonnement est imposé : d’abord prouver que la limite existe (monotonie et bornes, par récurrence), ensuite seulement la calculer.`,
+> L’ordre du raisonnement est **imposé** : d’abord prouver que la limite **existe** — monotonie et bornes, par récurrence —, ensuite seulement la **calculer**.`,
           },
           questions: [
             ['Une suite qui diverge tend-elle nécessairement vers l’infini ?', ['Non, elle peut n’avoir aucune limite', 'Oui, toujours', 'Oui, vers +∞ uniquement', 'Non, elle converge alors vers 0'], 0, '(−1)ⁿ oscille entre −1 et 1 sans se fixer.'],
@@ -535,41 +552,51 @@ Pour u(n+1) = f(u(n)) avec f continue : si la suite converge vers ℓ, alors ℓ
           axe: 'Analyse',
           lecon: {
             titre: 'Le comportement aux bords du domaine',
-            cours: `La limite d’une fonction décrit ce qui se passe **au bord** : quand x tend vers l’infini, ou quand x s’approche d’une valeur interdite.
+            cours: `La limite d’une fonction décrit ce qui se passe **au bord** : quand x tend vers l’infini, ou quand x s’approche d’une **valeur interdite**.
 
 ## Les deux familles
-- **limite en l’infini** : f(x) tend vers ℓ, vers ±∞, ou n’a pas de limite quand x → ±∞ ;
-- **limite en un réel a** : f(x) tend vers ℓ ou vers ±∞ quand x s’approche de a. On distingue alors la limite **à gauche** (x < a) et **à droite** (x > a), qui peuvent différer : 1/x tend vers −∞ à gauche de 0 et vers +∞ à droite.
+| Famille | Ce qu’elle décrit |
+| Limite **en l’infini** | f(x) tend vers ℓ, vers ±∞, ou n’a pas de limite |
+| Limite **en un réel a** | On distingue la limite **à gauche** (x < a) et **à droite** (x > a) |
+
+> Les deux peuvent différer : 1/x tend vers **−∞** à gauche de 0 et vers **+∞** à droite.
 
 ## Les limites de référence
-En +∞ : x^n → +∞, √x → +∞, 1/x^n → 0.
-En 0 (à droite) : 1/x → +∞, 1/√x → +∞.
+| En **+∞** | La limite | En **0 à droite** | La limite |
+| x^n | +∞ | 1/x | +∞ |
+| √x | +∞ | 1/√x | +∞ |
+| 1/x^n | 0 | — | — |
 
-## Les opérations et les indéterminations
-Mêmes règles que pour les suites, mêmes quatre formes indéterminées : ∞ − ∞, 0 × ∞, ∞/∞, 0/0.
+## Lever une indétermination
+Mêmes quatre formes que pour les suites : ∞ − ∞ · 0 × ∞ · ∞/∞ · 0/0.
 
-Les techniques de levée :
-- **factoriser par le terme de plus haut degré** : c’est la méthode systématique pour les polynômes et les quotients de polynômes en l’infini. En +∞, un polynôme a la même limite que son **terme de plus haut degré**, et une fraction rationnelle la même limite que le **quotient des termes de plus haut degré** ;
-- **multiplier par l’expression conjuguée** quand une racine carrée produit ∞ − ∞ ;
-- **reconnaître un taux d’accroissement**, notamment pour les formes 0/0 en un point.
+| Technique | Quand l’employer |
+| **Factoriser par le terme de plus haut degré** | Polynômes et quotients de polynômes **en l’infini** |
+| Multiplier par l’**expression conjuguée** | Quand une racine carrée produit ∞ − ∞ |
+| Reconnaître un **taux d’accroissement** | Formes 0/0 en un point |
+
+> En +∞, un **polynôme** a la même limite que son terme de plus haut degré, et une **fraction rationnelle** la même limite que le quotient des termes de plus haut degré.
 
 ## Les théorèmes de comparaison
-Ils s’écrivent comme pour les suites : minoration, majoration, et **théorème des gendarmes**. Ce dernier traite tous les cas où apparaît un facteur borné, comme sin(x)/x en +∞.
+Minoration, majoration, et **théorème des gendarmes** — celui-ci traite tous les cas où apparaît un facteur **borné**, comme sin(x)/x en +∞.
 
 ## Les asymptotes
-- **asymptote horizontale** d’équation y = ℓ si f(x) → ℓ quand x → ±∞ ;
-- **asymptote verticale** d’équation x = a si f(x) → ±∞ quand x → a ;
-- **asymptote oblique** d’équation y = ax + b si f(x) − (ax + b) → 0 en l’infini.
+| Asymptote | Sa condition |
+| **Horizontale** y = ℓ | f(x) tend vers ℓ quand x tend vers ±∞ |
+| **Verticale** x = a | f(x) tend vers ±∞ quand x tend vers a |
+| **Oblique** y = ax + b | f(x) − (ax + b) tend vers 0 en l’infini |
 
-Une courbe **peut couper** son asymptote horizontale : l’asymptote décrit un comportement à l’infini, pas une barrière.
+> Une courbe **peut couper** son asymptote horizontale : l’asymptote décrit un comportement **à l’infini**, pas une barrière.
 
 ## La composition
-Si u(x) → b quand x → a, et f(y) → ℓ quand y → b, alors f(u(x)) → ℓ quand x → a. C’est ce qui permet de traiter les limites de fonctions composées en posant un changement de variable.
+Si u(x) tend vers b quand x tend vers a, et f(y) tend vers ℓ quand y tend vers b, alors f(u(x)) tend vers ℓ. C’est ce qui permet de traiter les composées par **changement de variable**.
 
 ## Le lien avec la continuité
-Une fonction est **continue en a** si sa limite en a existe et **vaut f(a)**. Une limite peut donc exister sans que la fonction soit continue — si elle n’est pas définie en a, ou si sa valeur diffère de la limite.
+f est **continue en a** si sa limite en a existe **et vaut f(a)**.
 
-> Réflexe systématique en l’infini : factoriser par le terme dominant. Il lève à lui seul la majorité des indéterminations de l’épreuve.`,
+> Une limite peut donc exister **sans** que la fonction soit continue : si elle n’est pas définie en a, ou si sa valeur diffère de la limite.
+
+> Réflexe systématique en l’infini : **factoriser par le terme dominant**. Il lève à lui seul la majorité des indéterminations de l’épreuve.`,
           },
           questions: [
             ['Quelle est la limite d’un polynôme en +∞ ?', ['Celle de son terme de plus haut degré', 'Celle de son terme constant', 'Toujours +∞', 'Elle n’existe pas'], 0, 'On le démontre en factorisant par ce terme dominant.'],
@@ -587,45 +614,51 @@ Une fonction est **continue en a** si sa limite en a existe et **vaut f(a)**. Un
           axe: 'Analyse',
           lecon: {
             titre: 'Dériver de l’extérieur vers l’intérieur',
-            cours: `Dériver une fonction composée est le geste technique le plus fréquent de l’année : il intervient dans toutes les fonctions écrites avec une exponentielle, un logarithme, une racine ou une puissance d’expression.
+            cours: `Dériver une composée est le geste technique **le plus fréquent de l’année** : il intervient dans toute fonction écrite avec une exponentielle, un logarithme, une racine ou une puissance d’expression.
 
 ## La composée
-La composée de u par f, notée f ∘ u, associe à x le nombre f(u(x)). On applique **d’abord** u, **ensuite** f. L’ordre n’est pas symétrique : f ∘ u et u ∘ f sont en général différentes.
+La composée de u par f associe à x le nombre f(u(x)) : on applique **d’abord u**, **ensuite f**.
+
+> L’ordre n’est pas symétrique : f ∘ u et u ∘ f sont en général **différentes**.
 
 ## Le théorème
-Si u est dérivable en x et f dérivable en u(x), alors f ∘ u est dérivable en x et :
+Si u est dérivable en x et f dérivable en u(x) :
 
 (f ∘ u)′(x) = u′(x) × f′(u(x))
 
-Autrement dit : la dérivée de la fonction **extérieure**, prise en la fonction intérieure, multipliée par la dérivée de la fonction **intérieure**. Le facteur u′(x) est celui qu’on oublie.
+> La dérivée de la fonction **extérieure**, prise **en la fonction intérieure**, multipliée par la dérivée de la fonction **intérieure**. Le facteur u′(x) est celui qu’on oublie.
 
 ## Les cas usuels
-- (uⁿ)′ = n u′ uⁿ⁻¹ ;
-- (√u)′ = u′ / (2√u), pour u > 0 ;
-- (e^u)′ = u′ e^u ;
-- (ln u)′ = u′ / u, pour u > 0 ;
-- (1/u)′ = −u′ / u² ;
-- (cos u)′ = −u′ sin u et (sin u)′ = u′ cos u.
+| Fonction | Sa dérivée | Condition |
+| uⁿ | n u′ uⁿ⁻¹ | — |
+| √u | u′ / (2√u) | u > 0 |
+| **e^u** | **u′ e^u** | — |
+| **ln u** | **u′ / u** | u > 0 |
+| 1/u | −u′ / u² | u non nul |
+| cos u, sin u | −u′ sin u, u′ cos u | — |
 
-Tous se déduisent du théorème : ce sont des cas particuliers, pas des formules indépendantes à mémoriser séparément.
+> Tous se **déduisent** du théorème : ce sont des cas particuliers, pas des formules indépendantes à mémoriser séparément.
 
-## Un exemple détaillé
-Pour f(x) = e^(3x² + 1) : la fonction intérieure est u(x) = 3x² + 1, de dérivée u′(x) = 6x. Donc f′(x) = 6x × e^(3x² + 1).
+## Deux exemples détaillés
+| La fonction | u et u′ | La dérivée |
+| e^(3x² + 1) | u = 3x² + 1, u′ = 6x | **6x e^(3x² + 1)** |
+| (2x − 5)⁴ | u = 2x − 5, u′ = 2 | 2 × 4 × (2x − 5)³ = **8(2x − 5)³** |
 
-Pour g(x) = (2x − 5)⁴ : u(x) = 2x − 5, u′(x) = 2, et g′(x) = 2 × 4 × (2x − 5)³ = 8(2x − 5)³.
-
-## Les erreurs à éviter
-- **oublier u′** : écrire (e^(3x))′ = e^(3x) au lieu de 3 e^(3x) ;
-- **dériver l’intérieur et l’extérieur séparément puis multiplier les dérivées** sans composer : la dérivée extérieure doit être évaluée **en u(x)**, pas en x ;
-- **confondre** f ∘ u et le produit f × u.
+## Les trois erreurs à éviter
+| Erreur | Ce qui est juste |
+| Écrire (e^(3x))′ = e^(3x) | **3 e^(3x)** : on oublie u′ |
+| Multiplier les dérivées sans composer | La dérivée extérieure s’évalue **en u(x)**, pas en x |
+| Confondre f ∘ u et f × u | Ce sont deux objets différents |
 
 ## Le domaine de dérivabilité
-Il faut que u soit dérivable **et** que f le soit en u(x). Pour √u, cela impose u > 0 strictement : la racine n’est pas dérivable en 0, même si elle y est définie. Pour ln u, il faut u > 0.
+Il faut que u soit dérivable **et** que f le soit **en u(x)**.
+
+> Pour √u, cela impose u **strictement** positif : la racine n’est pas dérivable en 0, même si elle y est définie. Pour ln u, il faut u > 0.
 
 ## À quoi cela sert immédiatement
-Toute étude de fonction du programme passe par là : signe de la dérivée, variations, tangentes, extremums, et — lu à l’envers — recherche de **primitives**, où reconnaître la forme u′ f′(u) est la seule méthode.
+Toute étude de fonction y passe : signe de la dérivée, variations, tangentes, extremums — et, **lu à l’envers**, la recherche de **primitives**.
 
-> Lire la formule à l’envers est le vrai enjeu : voir u′ e^u dans une expression, c’est savoir qu’une primitive est e^u. Le chapitre des primitives n’est que ce chapitre-ci retourné.`,
+> Voir **u′ e^u** dans une expression, c’est savoir qu’une primitive est **e^u**. Le chapitre des primitives n’est que celui-ci **retourné**.`,
           },
           questions: [
             ['Quelle est la dérivée de f ∘ u ?', ['u′(x) × f′(u(x))', 'f′(x) × u′(x)', 'f′(u′(x))', 'u(x) × f′(x)'], 0, 'La dérivée extérieure est évaluée en u(x), et multipliée par u′(x).'],
@@ -646,39 +679,37 @@ Toute étude de fonction du programme passe par là : signe de la dérivée, var
             cours: `La dérivée renseigne sur le **sens** de variation ; la **dérivée seconde** renseigne sur la façon dont ce sens évolue — c’est la **convexité**.
 
 ## Les définitions
-Une fonction f dérivable sur un intervalle I est :
-- **convexe** sur I si sa courbe est **au-dessus de chacune de ses tangentes** ;
-- **concave** si sa courbe est **au-dessous de chacune de ses tangentes**.
-
-Autre lecture, équivalente : une fonction est convexe si sa courbe est **au-dessous de chacune de ses cordes** (le segment joignant deux points de la courbe).
-
-Moyen mnémotechnique : une fonction convexe « tient l’eau » — sa courbe a la forme d’un récipient.
+| | **Convexe** | **Concave** |
+| Par rapport aux **tangentes** | La courbe est **au-dessus** | La courbe est **au-dessous** |
+| Par rapport aux **cordes** | La courbe est **au-dessous** | La courbe est au-dessus |
+| Image | Elle « **tient l’eau** » | — |
 
 ## Les caractérisations
-Pour f deux fois dérivable sur I, les trois propositions sont **équivalentes** :
-- f est convexe sur I ;
-- f′ est **croissante** sur I ;
-- f″ est **positive** sur I.
+Pour f deux fois dérivable, les trois propositions sont **équivalentes** : f est **convexe** ; **f′ est croissante** ; **f″ est positive**.
 
-Et symétriquement pour la concavité, avec f′ décroissante et f″ négative.
+Symétriquement pour la concavité : f′ décroissante, f″ négative.
 
 ## Le point d’inflexion
-Un **point d’inflexion** est un point où la courbe **change de convexité**. En ce point, f″ **s’annule en changeant de signe** — et la tangente **traverse** la courbe, ce qui est le signe visuel le plus net.
+Un point où la courbe **change de convexité**. En ce point, **f″ s’annule en changeant de signe** — et la **tangente traverse la courbe**, signe visuel le plus net.
 
-⚠️ L’annulation de f″ ne suffit pas : pour f(x) = x⁴, f″(0) = 0 mais la fonction reste convexe partout. C’est le **changement de signe** qui compte, exactement comme pour l’extremum et f′.
+> L’annulation de f″ ne suffit pas : pour x⁴, f″(0) = 0 mais la fonction reste convexe partout. C’est le **changement de signe** qui compte — exactement comme pour l’extremum et f′.
 
 ## Les fonctions de référence
-- **convexes sur ℝ** : x², e^x, et x^n pour n pair ;
-- **concave sur ]0 ; +∞[** : ln ;
-- **convexe sur [0 ; +∞[ et concave sur ]−∞ ; 0]** : x³ — d’où un point d’inflexion en 0 ;
-- **affine** : à la fois convexe et concave, sa courbe étant confondue avec ses tangentes.
+| Fonction | Sa convexité |
+| x², e^x, x^n pour n **pair** | **Convexes** sur ℝ |
+| ln | **Concave** sur les réels strictement positifs |
+| x³ | **Concave** sur les négatifs, **convexe** sur les positifs — point d’inflexion en 0 |
+| Fonction **affine** | Convexe **et** concave : sa courbe est confondue avec ses tangentes |
 
 ## Les usages
-- **encadrer** une fonction par ses tangentes : la convexité de e^x donne e^x ≥ x + 1 pour tout réel x, une inégalité qui resservira ;
-- **interpréter** une courbe : en économie, la convexité du coût traduit des rendements décroissants ; en physique, un point d’inflexion marque le moment où une croissance cesse d’accélérer ;
-- **lire un graphique** : distinguer « la fonction augmente » (f′ > 0) de « la fonction augmente de plus en plus vite » (f′ > 0 et f″ > 0).
+| Usage | Ce qu’il donne |
+| **Encadrer** par les tangentes | La convexité de e^x donne **e^x supérieur ou égal à x + 1** pour tout réel |
+| **Interpréter** une courbe | En économie, la convexité du coût traduit des rendements décroissants |
+| **Lire un graphique** | Distinguer « ça augmente » (f′ > 0) de « ça augmente **de plus en plus vite** » (f′ > 0 et f″ > 0) |
 
-> Variation et convexité sont deux informations **indépendantes** : une fonction peut être décroissante et convexe, croissante et concave, et toutes les combinaisons. Les confondre est l’erreur la plus fréquente à l’oral.`,
+En physique, un **point d’inflexion** marque le moment où une croissance **cesse d’accélérer**.
+
+> Variation et convexité sont **indépendantes** : une fonction peut être décroissante et convexe, croissante et concave, et toutes les combinaisons. Les confondre est l’erreur la plus fréquente à l’oral.`,
           },
           questions: [
             ['Une fonction convexe a sa courbe…', ['Au-dessus de chacune de ses tangentes', 'Au-dessous de chacune de ses tangentes', 'Confondue avec ses tangentes', 'Au-dessus de chacune de ses cordes'], 0, 'Et au-dessous de chacune de ses cordes.'],
@@ -699,34 +730,42 @@ Un **point d’inflexion** est un point où la courbe **change de convexité**. 
             cours: `La continuité est l’hypothèse qui rend légitimes la plupart des raisonnements de l’analyse — et elle sert surtout à démontrer qu’une équation **admet** une solution.
 
 ## La définition
-f est **continue en a** si f est définie en a et si sa limite en a existe et vaut **f(a)**. Elle est continue sur un intervalle si elle l’est en chacun de ses points.
+f est **continue en a** si f est définie en a et si sa limite en a existe **et vaut f(a)**.
 
-Intuitivement : on trace la courbe sans lever le crayon. C’est une image fidèle sur les fonctions du programme.
+> Intuitivement : on trace la courbe **sans lever le crayon**. Image fidèle sur les fonctions du programme.
 
 ## Ce qui est continu
-Toutes les fonctions **usuelles** sont continues sur leur ensemble de définition : polynômes, fonctions rationnelles, racine carrée, exponentielle, logarithme, sinus, cosinus, valeur absolue. Sommes, produits, quotients (là où le dénominateur ne s’annule pas) et composées de fonctions continues sont continues.
-
-La **fonction partie entière** est le contre-exemple de référence : elle est discontinue en chaque entier.
+| Continu sur son ensemble de définition | Le contre-exemple |
+| Polynômes, fonctions rationnelles, racine carrée | La **fonction partie entière** : discontinue en **chaque entier** |
+| Exponentielle, logarithme, sinus, cosinus, valeur absolue | — |
+| Sommes, produits, quotients (dénominateur non nul), composées | — |
 
 ## Dérivabilité et continuité
-Une fonction **dérivable** en a est **continue** en a. La réciproque est **fausse** : la valeur absolue est continue en 0 sans y être dérivable — sa courbe y présente un point anguleux. Retenir le sens de l’implication est indispensable.
+Une fonction **dérivable** en a est **continue** en a. **La réciproque est fausse.**
+
+> La **valeur absolue** est continue en 0 sans y être dérivable : sa courbe y présente un **point anguleux**. Retenir le sens de l’implication est indispensable.
 
 ## Le théorème des valeurs intermédiaires
-Si f est **continue** sur [a ; b], alors pour tout réel k compris entre f(a) et f(b), l’équation f(x) = k admet **au moins une** solution dans [a ; b].
+Si f est **continue** sur un segment, alors pour tout réel k compris entre f(a) et f(b), l’équation f(x) = k admet **au moins une** solution.
 
-La continuité est essentielle : la partie entière saute par-dessus des valeurs sans les prendre.
+> La continuité est essentielle : la partie entière **saute par-dessus** des valeurs sans les prendre.
 
-## Le corollaire (théorème de la bijection)
-Si f est continue **et strictement monotone** sur [a ; b], alors pour tout k entre f(a) et f(b), l’équation f(x) = k admet une **unique** solution dans [a ; b].
+## Le corollaire — théorème de la bijection
+Si f est continue **et strictement monotone**, la solution est **unique**.
 
-La rédaction attendue est codifiée : citer la continuité, citer la stricte monotonie, encadrer k entre les valeurs aux bornes, puis conclure à l’existence et à l’unicité. Chacun des trois éléments vaut des points.
+| L’élément de rédaction | Ce qu’il apporte |
+| La **continuité** | L’existence |
+| La **stricte monotonie** | L’unicité |
+| L’**encadrement de k** entre les valeurs aux bornes | L’applicabilité |
 
-Le théorème s’étend aux intervalles ouverts ou infinis en remplaçant f(a) et f(b) par les **limites** aux bornes.
+Chacun des trois vaut des points. Le théorème s’étend aux intervalles **ouverts ou infinis** en remplaçant les valeurs aux bornes par les **limites**.
 
 ## La recherche approchée
-Le théorème prouve qu’une solution existe **sans la donner**. Pour l’approcher, on emploie la **dichotomie** : on coupe l’intervalle en deux, on garde la moitié où le changement de signe se produit, et l’on recommence. Chaque étape divise l’amplitude par deux — dix étapes suffisent à gagner trois décimales.
+Le théorème prouve qu’une solution existe **sans la donner**. La **dichotomie** l’approche : couper l’intervalle en deux, garder la moitié où le signe change, recommencer.
 
-> Le théorème des valeurs intermédiaires donne l’**existence**, la stricte monotonie ajoute l’**unicité**, la dichotomie fournit la **valeur approchée**. Trois outils, trois rôles distincts.`,
+> Chaque étape **divise l’amplitude par deux** : dix étapes suffisent à gagner trois décimales.
+
+> Le **théorème des valeurs intermédiaires** donne l’existence, la **stricte monotonie** ajoute l’unicité, la **dichotomie** fournit la valeur approchée. Trois outils, trois rôles distincts.`,
           },
           questions: [
             ['Quand une fonction est-elle continue en a ?', ['Quand sa limite en a existe et vaut f(a)', 'Quand elle est définie en a', 'Quand elle est dérivable en a', 'Quand elle est croissante en a'], 0, 'La simple existence de la limite ne suffit pas.'],
@@ -744,48 +783,54 @@ Le théorème prouve qu’une solution existe **sans la donner**. Pour l’appro
           axe: 'Analyse',
           lecon: {
             titre: 'La fonction qui transforme les produits en sommes',
-            cours: `Le logarithme népérien est la fonction **réciproque** de l’exponentielle. Toutes ses propriétés en découlent, y compris la seule qui ait fait son succès historique : transformer un produit en somme.
+            cours: `Le logarithme népérien est la fonction **réciproque** de l’exponentielle. Toutes ses propriétés en découlent — y compris la seule qui ait fait son succès historique : **transformer un produit en somme**.
 
 ## La définition
-Pour tout réel x > 0, **ln(x)** est l’unique réel y tel que **e^y = x**. Autrement dit :
+Pour x > 0, **ln(x)** est l’unique réel y tel que **e^y = x** :
 
 e^(ln x) = x pour x > 0, et ln(e^x) = x pour tout réel x
 
-Le logarithme n’est défini que sur **]0 ; +∞[** : c’est la condition d’existence à vérifier avant tout calcul, et l’oubli le plus sanctionné du chapitre.
+> Il n’est défini que sur les réels **strictement positifs**. C’est la condition d’existence à vérifier avant tout calcul, et l’oubli le plus sanctionné du chapitre.
 
 ## Les valeurs de référence
-ln(1) = 0, ln(e) = 1, et ln(x) est **négatif** pour 0 < x < 1, **positif** pour x > 1.
+| x | ln(x) |
+| 1 | **0** |
+| e | **1** |
+| Entre 0 et 1 | **Négatif** |
+| Supérieur à 1 | **Positif** |
 
 ## Les propriétés algébriques
-Pour a > 0 et b > 0 :
-- **ln(ab) = ln a + ln b** — la relation fondamentale ;
-- ln(a/b) = ln a − ln b ;
-- ln(1/b) = − ln b ;
-- ln(a^n) = n ln a pour tout entier relatif n ;
-- ln(√a) = (1/2) ln a.
+| Propriété | Ce qu’elle transforme |
+| **ln(ab) = ln a + ln b** | Un produit en **somme** — la relation fondamentale |
+| ln(a/b) = ln a − ln b | Un quotient en différence |
+| ln(1/b) = − ln b | — |
+| ln(a^n) = n ln a | Un exposant en **facteur** |
+| ln(√a) = (1/2) ln a | — |
 
-⚠️ **ln(a + b) n’est pas ln a + ln b.** C’est l’erreur la plus fréquente, et elle est immédiatement repérable.
+> **ln(a + b) n’est pas ln a + ln b.** C’est l’erreur la plus fréquente — et la plus immédiatement repérable.
 
 ## La courbe
-Elle est **strictement croissante** sur ]0 ; +∞[, passe par (1 ; 0) et (e ; 1), et présente une **asymptote verticale** en 0. Elle est **symétrique** de celle de l’exponentielle par rapport à la droite d’équation y = x — puisque les deux fonctions sont réciproques l’une de l’autre.
+**Strictement croissante**, elle passe par (1 ; 0) et (e ; 1), et présente une **asymptote verticale** en 0.
+
+> Elle est **symétrique** de celle de l’exponentielle par rapport à la droite y = x — les deux fonctions étant réciproques l’une de l’autre.
 
 ## Résoudre avec le logarithme
-La stricte croissance donne les équivalences, pour a > 0 et b > 0 :
-- ln a = ln b ⟺ a = b ;
-- ln a < ln b ⟺ a < b.
+La stricte croissance donne, pour a > 0 et b > 0 : ln a = ln b équivaut à a = b, et ln a < ln b équivaut à a < b.
 
-C’est ce qui permet de résoudre les équations et inéquations où l’inconnue est en **exposant** : 2^n > 1000 devient n ln 2 > ln 1000, donc n > ln(1000)/ln(2).
+> C’est ce qui résout les équations où l’inconnue est **en exposant** : 2^n > 1000 devient n ln 2 > ln 1000, donc n > ln(1000)/ln(2).
 
 ## Les usages
-- **temps de doublement** d’un capital ou d’une population : ln(2)/ln(1 + t) ;
-- **demi-vie** d’un noyau radioactif : ln(2)/λ ;
-- **échelles logarithmiques** : décibels, magnitude d’un séisme, pH ;
-- toute résolution où l’inconnue est un exposant.
+| Usage | La formule |
+| **Temps de doublement** d’un capital ou d’une population | ln(2)/ln(1 + t) |
+| **Demi-vie** d’un noyau radioactif | ln(2)/λ |
+| **Échelles logarithmiques** | Décibels, magnitude d’un séisme, pH |
 
 ## Le lien avec les suites
-Une suite géométrique de raison q > 0 se ramène à une suite arithmétique par le logarithme : ln(u(n)) = ln(u₀) + n ln(q). C’est ce qui rend les seuils calculables sans tâtonnement.
+Une suite géométrique de raison positive devient **arithmétique** par le logarithme : ln(u(n)) = ln(u₀) + n ln(q).
 
-> Le logarithme est la seule fonction du programme qui change la **nature** d’une opération : produits en sommes, puissances en produits. C’est ce qui la rend indispensable dès qu’une inconnue est en exposant.`,
+> C’est ce qui rend les **seuils** calculables **sans tâtonnement**.
+
+> Le logarithme est la seule fonction du programme qui change la **nature** d’une opération : produits en sommes, puissances en produits.`,
           },
           questions: [
             ['Quel est l’ensemble de définition de la fonction ln ?', [']0 ; +∞[', 'ℝ', '[0 ; +∞[', 'ℝ privé de 0'], 0, 'Vérifier la condition d’existence est l’oubli le plus sanctionné du chapitre.'],
@@ -803,51 +848,50 @@ Une suite géométrique de raison q > 0 se ramène à une suite arithmétique pa
           axe: 'Analyse',
           lecon: {
             titre: 'L’étude analytique complète',
-            cours: `La fiche précédente donnait les propriétés algébriques du logarithme. Celle-ci l’étudie comme une fonction : dérivée, limites, croissances comparées.
+            cours: `La fiche précédente donnait les propriétés **algébriques** du logarithme. Celle-ci l’étudie **comme une fonction** : dérivée, limites, croissances comparées.
 
 ## Continuité et dérivabilité
-ln est **continue et dérivable** sur ]0 ; +∞[, et :
+| Élément | Sa valeur | Ce qu’il entraîne |
+| **ln′(x)** | **1/x** | Strictement positive : ln est **strictement croissante** |
+| **ln″(x)** | −1/x² | Strictement négative : ln est **concave** |
 
-ln′(x) = 1/x
-
-Cette dérivée est **strictement positive** sur tout l’intervalle : ln est donc **strictement croissante** sur ]0 ; +∞[. C’est la démonstration complète de sa monotonie, en une ligne.
-
-La dérivée seconde vaut −1/x², strictement négative : ln est **concave** sur ]0 ; +∞[.
+> La monotonie du logarithme se démontre ainsi **en une ligne**.
 
 ## Les limites aux bornes
-- en 0 par valeurs positives : ln(x) → **−∞** (asymptote verticale d’équation x = 0) ;
-- en +∞ : ln(x) → **+∞**, mais **lentement**.
-
-Le mot « lentement » a un sens précis, donné par les croissances comparées.
+| En… | La limite | Ce qu’elle donne |
+| **0** par valeurs positives | **−∞** | Une **asymptote verticale** d’équation x = 0 |
+| **+∞** | **+∞** | Mais **lentement** — au sens précis donné ci-dessous |
 
 ## Les croissances comparées
-Ce sont les limites à connaître par cœur :
-- ln(x)/x → 0 quand x → +∞, et plus généralement ln(x)/x^n → 0 pour tout n ≥ 1 ;
-- x ln(x) → 0 quand x → 0 par valeurs positives ;
-- ln(1 + x)/x → 1 quand x → 0 — c’est le **nombre dérivé de ln en 1**.
+| Limite | Sa valeur |
+| ln(x)/x, et plus généralement ln(x)/x^n, en +∞ | **0** |
+| x ln(x), en 0 par valeurs positives | **0** |
+| ln(1 + x)/x, en 0 | **1** — c’est le **nombre dérivé de ln en 1** |
 
-Le principe à retenir : **la puissance l’emporte toujours sur le logarithme**. Toute indétermination du type ∞/∞ mêlant ln et une puissance se lève par cette règle.
+> Le principe : **la puissance l’emporte toujours sur le logarithme**. Toute indétermination ∞/∞ mêlant ln et une puissance se lève par cette règle.
 
-Symétriquement, du côté de l’exponentielle : e^x/x^n → +∞, l’exponentielle l’emportant sur toute puissance.
+Symétriquement, du côté de l’exponentielle : e^x/x^n tend vers +∞ — **l’exponentielle l’emporte sur toute puissance**.
 
 ## La dérivée de ln(u)
-Pour une fonction u strictement positive et dérivable :
+Pour u strictement positive et dérivable : **(ln u)′ = u′ / u**
 
-(ln u)′ = u′ / u
-
-C’est le cas le plus fréquent en exercice. Il impose de déterminer d’abord l’ensemble où **u > 0** : le domaine d’étude de ln(u) n’est pas celui de u.
+> C’est le cas le plus fréquent en exercice. Il impose de déterminer d’abord l’ensemble où **u > 0** : le domaine d’étude de ln(u) **n’est pas** celui de u.
 
 ## La tangente en 1
-ln(1) = 0 et ln′(1) = 1 : la tangente en 1 a pour équation **y = x − 1**. La concavité place la courbe **au-dessous** de cette tangente, d’où l’inégalité valable pour tout x > 0 :
+ln(1) = 0 et ln′(1) = 1 : la tangente en 1 a pour équation **y = x − 1**. La **concavité** place la courbe **au-dessous** de cette tangente, d’où, pour tout x > 0 :
 
-ln(x) ≤ x − 1
+ln(x) inférieur ou égal à x − 1
 
-C’est le pendant exact de e^x ≥ x + 1, et elle sert dans de nombreuses majorations.
+> C’est le pendant exact de e^x supérieur ou égal à x + 1, et elle sert dans de nombreuses majorations.
 
 ## L’étude d’une fonction contenant ln
-La démarche est toujours la même : domaine (où l’argument est strictement positif), limites aux bornes, dérivée et son signe, tableau de variations, éventuelles asymptotes, puis tracé.
+1. Le **domaine** : où l’argument est strictement positif ;
+2. Les **limites** aux bornes ;
+3. La **dérivée** et son **signe** ;
+4. Le **tableau de variations** ;
+5. Les éventuelles **asymptotes**, puis le tracé.
 
-> Deux automatismes suffisent : (ln u)′ = u′/u pour dériver, et « la puissance gagne » pour lever les indéterminations.`,
+> Deux automatismes suffisent : **(ln u)′ = u′/u** pour dériver, et « **la puissance gagne** » pour lever les indéterminations.`,
           },
           questions: [
             ['Quelle est la dérivée de ln(x) ?', ['1/x', 'ln(x)/x', 'x', '−1/x²'], 0, 'Strictement positive sur ]0 ; +∞[, elle prouve la stricte croissance de ln.'],
@@ -865,50 +909,51 @@ La démarche est toujours la même : domaine (où l’argument est strictement p
           axe: 'Analyse',
           lecon: {
             titre: 'Les deux fonctions qui reviennent sur elles-mêmes',
-            cours: `Cosinus et sinus sont les seules fonctions du programme à être **périodiques**. Cette propriété change toute la méthode d’étude : on travaille sur une période, puis on complète.
+            cours: `Cosinus et sinus sont les seules fonctions du programme à être **périodiques**. Cette propriété change toute la méthode d’étude : on travaille sur **une période**, puis on complète.
 
 ## Définition et périodicité
-Sur le cercle trigonométrique, le point associé au réel x a pour coordonnées (cos x ; sin x). Les deux fonctions sont définies sur **ℝ** tout entier, à valeurs dans **[−1 ; 1]**, et **périodiques de période 2π** :
-
-cos(x + 2π) = cos x et sin(x + 2π) = sin x
+Sur le cercle trigonométrique, le point associé au réel x a pour coordonnées (cos x ; sin x). Les deux fonctions sont définies sur **ℝ** tout entier, à valeurs dans **[−1 ; 1]**, et **périodiques de période 2π**.
 
 ## Parité
-- **cos est paire** : cos(−x) = cos x, courbe symétrique par rapport à l’axe des ordonnées ;
-- **sin est impaire** : sin(−x) = −sin x, courbe symétrique par rapport à l’origine.
+| Fonction | Sa parité | Sa symétrie |
+| **cos** | **Paire** : cos(−x) = cos x | Par rapport à l’**axe des ordonnées** |
+| **sin** | **Impaire** : sin(−x) = −sin x | Par rapport à l’**origine** |
 
-Conséquence pratique : il suffit d’étudier sur [0 ; π], puis d’utiliser parité et périodicité pour obtenir toute la courbe. C’est ce qu’attend l’énoncé quand il demande de « réduire l’intervalle d’étude ».
+> Conséquence pratique : il suffit d’étudier sur [0 ; π], puis d’utiliser **parité et périodicité**. C’est ce qu’attend l’énoncé quand il demande de « réduire l’intervalle d’étude ».
 
 ## Les formules à connaître
-- cos²x + sin²x = 1 ;
-- cos(x + π) = −cos x, sin(x + π) = −sin x ;
-- cos(π/2 − x) = sin x, sin(π/2 − x) = cos x ;
-- valeurs remarquables en 0, π/6, π/4, π/3, π/2.
+| Formule | Ce qu’elle donne |
+| cos²x + sin²x = 1 | La relation fondamentale |
+| cos(x + π) = −cos x, sin(x + π) = −sin x | Le demi-tour |
+| cos(π/2 − x) = sin x, sin(π/2 − x) = cos x | L’échange des deux fonctions |
+
+Plus les valeurs remarquables en 0, π/6, π/4, π/3, π/2.
 
 ## Dérivées
-Les deux fonctions sont dérivables sur ℝ et :
+cos′(x) = **−sin(x)** et sin′(x) = **cos(x)**
 
-cos′(x) = −sin(x) et sin′(x) = cos(x)
+> Le **signe moins** sur la dérivée du cosinus est l’oubli classique.
 
-Le **signe moins** sur la dérivée du cosinus est l’oubli classique. Pour les composées : (cos u)′ = −u′ sin u et (sin u)′ = u′ cos u. En particulier, la dérivée de sin(ωx) vaut ω cos(ωx).
+Pour les composées : (cos u)′ = −u′ sin u et (sin u)′ = u′ cos u. En particulier, la dérivée de sin(ωx) vaut **ω cos(ωx)**.
 
 ## Les limites de référence en 0
-- **sin(x)/x → 1** ;
-- (cos(x) − 1)/x → 0.
+| Limite | Sa valeur | Ce qu’elle est |
+| sin(x)/x | **1** | Le nombre dérivé de **sin en 0** |
+| (cos(x) − 1)/x | **0** | Le nombre dérivé de **cos en 0** |
 
-Ce sont les **nombres dérivés** de sin en 0 et de cos en 0. Elles servent à lever les indéterminations du type 0/0 contenant une fonction trigonométrique.
-
-⚠️ Ni cos ni sin n’ont de **limite en +∞** : elles oscillent indéfiniment. C’est pourquoi une expression comme sin(x)/x en +∞ se traite par le **théorème des gendarmes**, en encadrant sin(x) entre −1 et 1.
+> Ni cos ni sin n’ont de **limite en +∞** : elles oscillent indéfiniment. Une expression comme sin(x)/x en +∞ se traite donc par le **théorème des gendarmes**, en encadrant sin(x) entre −1 et 1.
 
 ## Variations sur une période
-Sur [0 ; π] : cos décroît de 1 à −1, tandis que sin croît de 0 à 1 (sur [0 ; π/2]) puis décroît de 1 à 0.
+Sur [0 ; π] : **cos décroît** de 1 à −1 ; **sin croît** de 0 à 1 sur [0 ; π/2], puis décroît de 1 à 0.
 
 ## Résoudre une équation trigonométrique
-cos(x) = cos(a) équivaut à x = a + 2kπ **ou** x = −a + 2kπ, avec k entier.
-sin(x) = sin(a) équivaut à x = a + 2kπ **ou** x = π − a + 2kπ.
+| L’équation | Ses solutions |
+| cos(x) = cos(a) | x = a + 2kπ **ou** x = **−a** + 2kπ |
+| sin(x) = sin(a) | x = a + 2kπ **ou** x = **π − a** + 2kπ |
 
-Oublier la **seconde famille** de solutions est l’erreur la plus fréquente : une équation trigonométrique a presque toujours deux familles de solutions par période.
+> Oublier la **seconde famille** est l’erreur la plus fréquente : une équation trigonométrique a presque toujours **deux** familles de solutions par période.
 
-> Dans les modélisations, sin(ωt + φ) décrit toute oscillation : ω donne la pulsation, φ le déphasage, et l’amplitude multiplie l’ensemble. Le lien avec la physique est direct.`,
+> Dans les modélisations, sin(ωt + φ) décrit **toute oscillation** : ω donne la pulsation, φ le déphasage, et l’amplitude multiplie l’ensemble. Le lien avec la physique est direct.`,
           },
           questions: [
             ['Quelle est la dérivée de cos(x) ?', ['−sin(x)', 'sin(x)', 'cos(x)', '−cos(x)'], 0, 'Le signe moins est l’oubli classique du chapitre.'],
@@ -926,42 +971,52 @@ Oublier la **seconde famille** de solutions est l’erreur la plus fréquente : 
           axe: 'Analyse',
           lecon: {
             titre: 'Remonter de la dérivée à la fonction',
-            cours: `Chercher une **primitive**, c’est faire le chemin inverse de la dérivation. Ce chapitre installe l’outil, puis l’applique à la modélisation d’un phénomène par une **équation différentielle**.
+            cours: `Chercher une **primitive**, c’est faire le chemin **inverse** de la dérivation. Ce chapitre installe l’outil, puis l’applique à la modélisation par une **équation différentielle**.
 
 ## La définition
-F est une **primitive** de f sur un intervalle I si F est dérivable sur I et si **F′ = f** sur I.
+F est une **primitive** de f sur un intervalle I si F est dérivable sur I et si **F′ = f**.
 
-Toute fonction **continue** sur un intervalle y admet des primitives. Elles diffèrent toutes d’une **constante** : si F est une primitive de f, l’ensemble des primitives est l’ensemble des fonctions F + C, avec C réel.
-
-Conséquence : parmi toutes les primitives, il en existe **une seule** qui prend une valeur donnée en un point donné. C’est ainsi qu’une **condition initiale** détermine la constante.
+| Fait | Ce qu’il implique |
+| Toute fonction **continue** sur un intervalle y admet des primitives | L’existence est acquise |
+| Elles diffèrent toutes d’une **constante** | L’ensemble des primitives est F + C |
+| Une seule prend une **valeur donnée en un point donné** | C’est la **condition initiale** qui fixe C |
 
 ## Les primitives usuelles
-- f(x) = x^n → F(x) = x^(n+1)/(n+1), pour n ≠ −1 ;
-- f(x) = 1/x → F(x) = ln|x| ;
-- f(x) = e^x → F(x) = e^x ;
-- f(x) = cos x → F(x) = sin x ; f(x) = sin x → F(x) = −cos x ;
-- f(x) = 1/√x → F(x) = 2√x.
+| f(x) | Une primitive F(x) |
+| x^n, n différent de −1 | x^(n+1)/(n+1) |
+| 1/x | ln de la valeur absolue de x |
+| e^x | e^x |
+| cos x | sin x |
+| sin x | **−**cos x |
+| 1/√x | 2√x |
 
 ## Les formes composées
-Elles se lisent en retournant la dérivation des composées :
-- u′ uⁿ → uⁿ⁺¹/(n+1) ;
-- u′/u → ln|u| ;
-- u′ e^u → e^u ;
-- u′/√u → 2√u ;
-- u′ cos u → sin u.
+Elles se lisent en **retournant** la dérivation des composées.
 
-**Reconnaître u′ dans l’expression** est toute la méthode. Quand le facteur constant ne tombe pas juste, on le corrige : pour intégrer 2x e^(x²+1), on voit u = x² + 1 et u′ = 2x — le compte est bon ; pour x e^(x²+1), il faut un facteur 1/2.
+| Expression | Sa primitive |
+| u′ uⁿ | uⁿ⁺¹/(n+1) |
+| u′/u | ln de la valeur absolue de u |
+| **u′ e^u** | **e^u** |
+| u′/√u | 2√u |
+| u′ cos u | sin u |
 
-## Les équations différentielles
-Une **équation différentielle** relie une fonction inconnue et ses dérivées.
+> **Reconnaître u′** est toute la méthode. Pour 2x e^(x²+1), on voit u = x² + 1 et u′ = 2x : le compte est bon. Pour x e^(x²+1), il faut un facteur **1/2**.
 
-- **y′ = a y** : les solutions sont les fonctions x ↦ C e^(a x), C réel. C’est l’équation de toute évolution dont la vitesse est **proportionnelle à la quantité présente** : croissance de population, décroissance radioactive (a < 0), charge d’un condensateur ;
-- **y′ = a y + b** (a ≠ 0) : les solutions sont x ↦ C e^(a x) − b/a. La méthode attendue : trouver une **solution particulière constante** (celle qui vérifie 0 = a y + b, soit y = −b/a), puis y ajouter les solutions de l’équation **sans second membre**.
+## Les deux équations différentielles du programme
+| Équation | Ses solutions | Ce qu’elle modélise |
+| **y′ = a y** | x ↦ C e^(a x) | Toute évolution dont la vitesse est **proportionnelle à la quantité présente** |
+| **y′ = a y + b** | x ↦ C e^(a x) − b/a | La même, avec un apport ou un prélèvement constant |
+
+Croissance de population, **décroissance radioactive** (a < 0), charge d’un condensateur.
+
+La méthode pour la seconde : trouver une **solution particulière constante** — celle qui vérifie 0 = a y + b, soit y = −b/a — puis y ajouter les solutions de l’équation **sans second membre**.
 
 ## La condition initiale
-L’équation donne une **famille** de solutions ; la condition initiale (par exemple y(0) = 5) en sélectionne **une seule**. Un problème de modélisation comporte donc toujours deux données : l’équation et l’état de départ.
+L’équation donne une **famille** de solutions ; la condition initiale en sélectionne **une seule**.
 
-> Le vocabulaire compte : une primitive est une fonction, une constante d’intégration est un réel, et « la » primitive n’existe pas sans condition initiale.`,
+> Un problème de modélisation comporte donc **toujours deux données** : l’équation et l’état de départ.
+
+> Le vocabulaire compte : une primitive est une **fonction**, une constante d’intégration est un **réel**, et « **la** » primitive n’existe pas sans condition initiale.`,
           },
           questions: [
             ['Qu’est-ce qu’une primitive F de f sur un intervalle ?', ['Une fonction dérivable telle que F′ = f', 'Une fonction telle que f′ = F', 'La dérivée seconde de f', 'L’intégrale de f entre 0 et x uniquement'], 0, 'Toute fonction continue sur un intervalle y admet des primitives.'],
@@ -979,48 +1034,49 @@ L’équation donne une **famille** de solutions ; la condition initiale (par ex
           axe: 'Analyse',
           lecon: {
             titre: 'Une aire, une primitive, une moyenne',
-            cours: `L’intégrale est le seul objet du programme qui soit à la fois **géométrique** (une aire), **analytique** (une primitive) et **statistique** (une moyenne).
+            cours: `L’intégrale est le seul objet du programme à être à la fois **géométrique** (une aire), **analytique** (une primitive) et **statistique** (une moyenne).
 
 ## La définition géométrique
-Pour f **continue et positive** sur [a ; b], l’intégrale de a à b de f est l’**aire**, en unités d’aire, du domaine compris entre la courbe, l’axe des abscisses et les droites d’équations x = a et x = b.
+Pour f **continue et positive**, l’intégrale de a à b est l’**aire**, en unités d’aire, du domaine compris entre la courbe, l’axe des abscisses et les droites x = a et x = b.
 
-Quand f est **négative**, l’intégrale est l’**opposé** de l’aire : elle est négative. Une intégrale n’est donc pas une aire en général — c’est une **aire algébrique**.
+> Quand f est **négative**, l’intégrale est l’**opposé** de l’aire. Une intégrale n’est donc pas une aire en général : c’est une **aire algébrique**.
 
 ## Le théorème fondamental
-Si F est une primitive de f sur [a ; b], alors :
+Si F est une primitive de f :
 
 ∫ de a à b de f(x) dx = F(b) − F(a)
 
-C’est le résultat qui relie les deux visages de l’objet : calculer une aire revient à trouver une primitive. Le résultat ne dépend pas de la primitive choisie, puisque la constante s’élimine dans la différence.
+> C’est le résultat qui relie les deux visages de l’objet : **calculer une aire revient à trouver une primitive**. Le résultat ne dépend pas de la primitive choisie, la constante s’éliminant dans la différence.
 
 ## Les propriétés
-- **linéarité** : l’intégrale d’une somme est la somme des intégrales, et une constante multiplicative sort de l’intégrale ;
-- **relation de Chasles** : de a à b, plus de b à c, égale de a à c ;
-- **inversion des bornes** : échanger a et b change le signe ;
-- **positivité** : si f ≥ 0 sur [a ; b] avec a ≤ b, alors l’intégrale est positive ;
-- **croissance** : si f ≤ g sur [a ; b], alors l’intégrale de f est inférieure à celle de g. C’est l’outil des **encadrements**.
+| Propriété | Ce qu’elle dit |
+| **Linéarité** | L’intégrale d’une somme est la somme des intégrales ; une constante sort |
+| **Relation de Chasles** | De a à b, plus de b à c, égale de a à c |
+| **Inversion des bornes** | Échanger a et b change le **signe** |
+| **Positivité** | Si f est positive et a inférieur à b, l’intégrale est positive |
+| **Croissance** | Si f est inférieure à g, son intégrale l’est aussi — l’outil des **encadrements** |
 
 ## La valeur moyenne
-La **valeur moyenne** de f sur [a ; b] vaut :
-
 (1 / (b − a)) × ∫ de a à b de f(x) dx
 
-Interprétation : la hauteur du rectangle de base [a ; b] qui aurait la même aire que le domaine sous la courbe. Elle sert en physique (valeur moyenne d’un signal) et en probabilités.
+> Interprétation : la **hauteur du rectangle** de base [a ; b] qui aurait la même aire que le domaine sous la courbe. Elle sert en physique (valeur moyenne d’un signal) et en probabilités.
 
 ## L’aire entre deux courbes
-Pour f ≥ g sur [a ; b], l’aire comprise entre les deux courbes vaut l’intégrale de (f − g) sur [a ; b]. Il faut donc **déterminer laquelle est au-dessus** avant de calculer — et découper l’intervalle si les courbes se croisent.
+Pour f au-dessus de g, l’aire vaut l’intégrale de (f − g).
+
+> Il faut donc **déterminer laquelle est au-dessus avant** de calculer — et **découper** l’intervalle si les courbes se croisent.
 
 ## L’intégration par parties
-Elle transforme une intégrale en une autre, plus simple :
-
 ∫ u′v = [uv] − ∫ u v′
 
-On l’emploie typiquement quand l’intégrande est un **produit** dont un facteur se simplifie en dérivant : x e^x, x cos x, ou ln x (en posant v = ln x et u′ = 1).
+| Quand l’employer | Exemples |
+| L’intégrande est un **produit** dont un facteur **se simplifie en dérivant** | x e^x, x cos x |
+| Ou dont un facteur n’a pas de primitive simple | ln x, en posant v = ln x et u′ = 1 |
 
 ## Les valeurs approchées
-Quand aucune primitive ne s’exprime simplement, on approche l’intégrale par la méthode des **rectangles** ou des **trapèzes** : on découpe [a ; b] en n intervalles et l’on somme des aires élémentaires. La précision croît avec n.
+Quand aucune primitive ne s’exprime simplement : méthode des **rectangles** ou des **trapèzes**, en découpant en n intervalles. La précision croît avec n.
 
-> Le fil du chapitre : dériver et intégrer sont deux opérations inverses. C’est le théorème fondamental qui l’énonce, et tout le calcul intégral en découle.`,
+> Le fil du chapitre : **dériver et intégrer sont deux opérations inverses**. C’est le théorème fondamental qui l’énonce, et tout le calcul intégral en découle.`,
           },
           questions: [
             ['Que vaut l’intégrale de a à b de f, si F est une primitive de f ?', ['F(b) − F(a)', 'F(a) − F(b)', 'F(b) × F(a)', 'F(b − a)'], 0, 'Le résultat ne dépend pas de la primitive choisie : la constante s’élimine.'],
@@ -1039,44 +1095,52 @@ Quand aucune primitive ne s’exprime simplement, on approche l’intégrale par
           axe: 'Probabilités',
           lecon: {
             titre: 'Répéter la même expérience n fois',
-            cours: `Presque toute la probabilité de Terminale se ramène à un schéma unique : répéter n fois, de façon indépendante, une expérience à deux issues.
+            cours: `Presque toute la probabilité de Terminale se ramène à un schéma unique : **répéter n fois, de façon indépendante, une expérience à deux issues**.
 
 ## L’épreuve de Bernoulli
-Une **épreuve de Bernoulli** est une expérience aléatoire à **deux issues** : le **succès**, de probabilité p, et l’**échec**, de probabilité 1 − p.
+Deux issues : le **succès**, de probabilité p, et l’**échec**, de probabilité 1 − p. La variable X vaut **1** en cas de succès, **0** sinon.
 
-La **loi de Bernoulli** de paramètre p est la loi de la variable aléatoire X qui vaut 1 en cas de succès et 0 sinon. On retient :
-
-E(X) = p, V(X) = p(1 − p)
+E(X) = **p**, V(X) = **p(1 − p)**
 
 ## La succession d’épreuves indépendantes
-Répéter n fois la même épreuve, **de façon indépendante**, se représente par un **arbre pondéré**. Deux règles gouvernent sa lecture :
-- la probabilité d’un **chemin** est le **produit** des probabilités portées par ses branches ;
-- la probabilité d’un **événement** est la **somme** des probabilités des chemins qui le réalisent.
+Elle se représente par un **arbre pondéré**, dont la lecture obéit à deux règles :
 
-L’indépendance est l’hypothèse cruciale : elle autorise à multiplier. Un tirage **avec remise** la garantit ; un tirage **sans remise** ne la garantit pas — sauf si la population est très grande devant l’échantillon.
+| Objet | Sa probabilité |
+| Un **chemin** | Le **produit** des probabilités portées par ses branches |
+| Un **événement** | La **somme** des probabilités des chemins qui le réalisent |
 
-## Le schéma de Bernoulli et la loi binomiale
-Un **schéma de Bernoulli** est la répétition de n épreuves de Bernoulli identiques et indépendantes. La variable X qui compte le **nombre de succès** suit la **loi binomiale** de paramètres n et p, notée B(n ; p) :
+> L’**indépendance** est l’hypothèse cruciale : c’est elle qui autorise à **multiplier**. Un tirage **avec remise** la garantit ; un tirage **sans remise** ne la garantit **pas** — sauf si la population est très grande devant l’échantillon.
 
-P(X = k) = C(n,k) × p^k × (1 − p)^(n−k), pour k entier de 0 à n
+## La loi binomiale
+X compte le **nombre de succès** sur n épreuves identiques et indépendantes. X suit B(n ; p) :
 
-Chaque facteur se lit sur l’arbre : p^k pour les k succès, (1 − p)^(n−k) pour les échecs, et **C(n,k)** pour le nombre de chemins réalisant exactement k succès. C’est ici que sert le dénombrement du chapitre 1.
+P(X = k) = C(n,k) × p^k × (1 − p)^(n−k)
+
+| Le facteur | Ce qu’il compte |
+| p^k | Les **k succès** |
+| (1 − p)^(n−k) | Les **échecs** |
+| **C(n,k)** | Le **nombre de chemins** réalisant exactement k succès |
+
+> C’est ici que sert le **dénombrement** du premier chapitre.
 
 ## Espérance, variance, écart-type
-E(X) = n p, V(X) = n p (1 − p), σ(X) = √(n p (1 − p))
+E(X) = **n p**, V(X) = **n p (1 − p)**, σ(X) = √(n p (1 − p))
 
-L’espérance se retient sans calcul : sur 100 lancers d’une pièce équilibrée, on attend 50 piles.
+> L’espérance se retient sans calcul : sur 100 lancers d’une pièce équilibrée, on attend **50** piles.
 
-## Les conditions d’application
-Avant d’écrire « X suit la loi binomiale », il faut vérifier **trois points** : les épreuves sont **identiques**, **indépendantes**, et il n’y a que **deux issues**. Un énoncé de bac teste presque toujours l’une des trois — le plus souvent l’indépendance, par un tirage sans remise.
+## Les trois conditions à vérifier
+Épreuves **identiques**, **indépendantes**, à **deux issues** seulement.
+
+> Un énoncé de bac teste presque toujours l’une des trois — le plus souvent l’**indépendance**, par un tirage sans remise.
 
 ## Le calcul pratique
-- P(X = k) : formule directe ;
-- P(X ≤ k) : à la calculatrice, fonction de répartition ;
-- P(X ≥ k) = 1 − P(X ≤ k − 1) — le passage par l’événement contraire est l’automatisme à acquérir ;
-- **seuil** : chercher le plus petit k tel que P(X ≤ k) dépasse une valeur donnée.
+| La question | Le calcul |
+| P(X = k) | Formule directe |
+| P(X inférieur ou égal à k) | À la calculatrice, fonction de répartition |
+| P(X supérieur ou égal à k) | **1 − P(X inférieur ou égal à k − 1)** — l’automatisme à acquérir |
+| Un **seuil** | Le plus petit k tel que P(X inférieur ou égal à k) dépasse une valeur donnée |
 
-> La loi binomiale ne compte que des **succès**, jamais leur ordre. Si la question porte sur l’ordre d’apparition, on revient à l’arbre.`,
+> La loi binomiale ne compte que des **succès**, jamais leur **ordre**. Si la question porte sur l’ordre d’apparition, on revient à l’**arbre**.`,
           },
           questions: [
             ['Qu’est-ce qu’une épreuve de Bernoulli ?', ['Une expérience aléatoire à deux issues', 'Une expérience répétée n fois', 'Une variable aléatoire continue', 'Un tirage sans remise'], 0, 'Le succès de probabilité p, l’échec de probabilité 1 − p.'],
@@ -1094,48 +1158,43 @@ Avant d’écrire « X suit la loi binomiale », il faut vérifier **trois point
           axe: 'Probabilités',
           lecon: {
             titre: 'Ce qui s’additionne, et ce qui ne s’additionne pas',
-            cours: `Additionner des variables aléatoires est l’opération centrale de la fin du programme : c’est elle qui mène à la loi des grands nombres et à la notion d’échantillon.
+            cours: `Additionner des variables aléatoires est l’opération centrale de la fin du programme : c’est elle qui mène à la **loi des grands nombres** et à la notion d’**échantillon**.
 
-## Espérance et variance : les rappels
-Pour une variable aléatoire X prenant les valeurs x(i) avec les probabilités p(i) :
-- **espérance** : E(X) = Σ p(i) x(i) — la valeur moyenne attendue sur un grand nombre de répétitions ;
-- **variance** : V(X) = E(X²) − E(X)² — la dispersion autour de l’espérance ;
-- **écart-type** : σ(X) = √V(X), exprimé dans la **même unité** que X.
+## Les rappels
+| Indicateur | Sa formule | Ce qu’il dit |
+| **Espérance** | E(X) = somme des p(i) x(i) | La valeur moyenne sur un grand nombre de répétitions |
+| **Variance** | V(X) = E(X²) − E(X)² | La dispersion autour de l’espérance |
+| **Écart-type** | σ(X) = √V(X) | La même chose, dans la **même unité** que X |
 
-## La linéarité de l’espérance
-Pour tous réels a et b :
+## Ce qui s’additionne, ce qui ne s’additionne pas
+| | **Espérance** | **Variance** |
+| Transformation affine | E(aX + b) = a E(X) + b | V(aX + b) = **a²** V(X) — le b **disparaît** |
+| Somme de deux variables | E(X + Y) = E(X) + E(Y), **toujours** | V(X + Y) = V(X) + V(Y), **seulement si indépendantes** |
 
-E(aX + b) = a E(X) + b, et E(X + Y) = E(X) + E(Y)
+> L’espérance est **toujours** additive, même sans indépendance : le programme y insiste. La variance, **non** — et c’est l’erreur la plus sanctionnée du chapitre.
 
-⚠️ La seconde égalité est vraie **même si X et Y ne sont pas indépendantes**. C’est une propriété remarquablement générale, et le programme y insiste : l’espérance est **toujours** additive.
-
-## La variance, elle, ne l’est pas
-V(aX + b) = a² V(X)
-
-Le **carré** sur le coefficient et la **disparition** de b sont les deux points à retenir : ajouter une constante décale la distribution sans changer sa dispersion.
-
-Et surtout :
-
-V(X + Y) = V(X) + V(Y) **seulement si X et Y sont indépendantes**
-
-Sans indépendance, l’égalité est fausse. C’est la différence majeure avec l’espérance, et l’erreur la plus sanctionnée du chapitre.
+Ajouter une constante **décale** la distribution sans changer sa dispersion : d’où la disparition de b dans la variance.
 
 ## L’échantillon
-Un **échantillon de taille n** est une liste (X₁, …, Xₙ) de variables aléatoires **indépendantes** et de **même loi**, d’espérance μ et d’écart-type σ.
+Une liste de n variables **indépendantes** et de **même loi**, d’espérance μ et d’écart-type σ. On pose S la **somme** et M = S/n la **moyenne empirique**.
 
-On pose S = X₁ + … + Xₙ (la **somme**) et M = S/n (la **moyenne empirique**). Alors :
-- E(S) = n μ et V(S) = n σ², donc σ(S) = σ √n ;
-- **E(M) = μ** et V(M) = σ²/n, donc **σ(M) = σ/√n**.
+| Grandeur | Son espérance | Son écart-type |
+| La **somme** S | n μ | **σ √n** |
+| La **moyenne** M | **μ** | **σ/√n** |
 
 ## Ce que dit la formule en √n
-Deux conséquences, à savoir énoncer :
-- la moyenne empirique a **la même espérance** que la variable de départ : elle ne se trompe pas systématiquement, elle est **sans biais** ;
-- sa dispersion **décroît en 1/√n** : elle se concentre autour de μ quand n grandit, mais **lentement**. Diviser l’écart-type par 2 exige de **quadrupler** la taille de l’échantillon. C’est ce qui rend les sondages coûteux.
+| Conséquence | Ce qu’elle signifie |
+| E(M) = μ | La moyenne empirique ne se trompe **pas systématiquement** : elle est **sans biais** |
+| σ(M) = σ/√n | Sa dispersion **décroît**, mais **lentement** |
+
+> Diviser l’écart-type par 2 exige de **quadrupler** la taille de l’échantillon. C’est ce qui rend les sondages coûteux.
 
 ## Le cas de la loi binomiale
-Une variable de loi B(n ; p) est exactement la **somme de n variables de Bernoulli** indépendantes de paramètre p. On retrouve immédiatement E = n p et V = n p (1 − p) : la formule binomiale n’est qu’un cas particulier de ce chapitre.
+Une variable de loi B(n ; p) est **exactement** la somme de n variables de Bernoulli indépendantes de paramètre p.
 
-> Espérance : additive toujours. Variance : additive seulement sous indépendance. Ces deux lignes suffisent à traiter la moitié des questions du chapitre.`,
+> On retrouve immédiatement E = n p et V = n p (1 − p) : la formule binomiale n’est qu’un **cas particulier** de ce chapitre.
+
+> **Espérance : additive toujours. Variance : additive seulement sous indépendance.** Ces deux lignes suffisent à traiter la moitié des questions.`,
           },
           questions: [
             ['L’égalité E(X + Y) = E(X) + E(Y) exige-t-elle l’indépendance ?', ['Non, elle est toujours vraie', 'Oui, toujours', 'Oui, sauf pour la loi binomiale', 'Elle est fausse en général'], 0, 'L’espérance est additive sans condition : c’est ce qui la distingue de la variance.'],
@@ -1153,45 +1212,40 @@ Une variable de loi B(n ; p) est exactement la **somme de n variables de Bernoul
           axe: 'Probabilités',
           lecon: {
             titre: 'Pourquoi la moyenne finit par dire la vérité',
-            cours: `Ce dernier chapitre démontre ce que l’intuition affirme depuis la Seconde : quand on répète beaucoup, la fréquence observée s’approche de la probabilité théorique.
+            cours: `Ce dernier chapitre **démontre** ce que l’intuition affirme depuis la Seconde : quand on répète beaucoup, la **fréquence observée** s’approche de la **probabilité théorique**.
 
-## L’inégalité de Markov
-Pour une variable aléatoire X **positive** d’espérance E(X) et pour tout réel a > 0 :
+## Les deux inégalités
+| Inégalité | Son énoncé | Ce qu’elle utilise |
+| **Markov** | P(X supérieur ou égal à a) inférieur ou égal à E(X)/a, pour X **positive** | L’**espérance** seule |
+| **Bienaymé-Tchebychev** | P(l’écart à μ dépasse δ) inférieur ou égal à V/δ² | L’espérance **et** la variance |
 
-P(X ≥ a) ≤ E(X) / a
+> Markov : une variable positive ne peut pas dépasser **souvent** une valeur bien supérieure à sa moyenne. Très générale — donc très peu précise.
 
-Lecture : une variable positive ne peut pas dépasser souvent une valeur bien supérieure à sa moyenne. L’inégalité n’utilise que l’espérance, ce qui la rend très générale — et très peu précise.
-
-## L’inégalité de Bienaymé-Tchebychev
-Pour toute variable aléatoire X d’espérance μ et de variance V, et pour tout réel δ > 0 :
-
-P(|X − μ| ≥ δ) ≤ V / δ²
-
-Lecture : la probabilité de s’écarter de la moyenne d’au moins δ est majorée par la variance divisée par δ². Plus la variance est petite, plus la variable est concentrée autour de son espérance.
-
-Cette inégalité vaut pour **n’importe quelle** loi : c’est sa force. Sa faiblesse est d’être **grossière** — la majoration obtenue est souvent très supérieure à la probabilité réelle. Elle sert à **garantir**, pas à estimer finement.
+> Bienaymé-Tchebychev vaut pour **n’importe quelle loi** : c’est sa force. Sa faiblesse est d’être **grossière** — la majoration dépasse souvent de loin la probabilité réelle. Elle sert à **garantir**, pas à estimer finement.
 
 ## L’inégalité de concentration
-Appliquée à la **moyenne empirique** M d’un échantillon de taille n, d’espérance μ et de variance σ², dont on sait que V(M) = σ²/n :
+Appliquée à la **moyenne empirique** M d’un échantillon de taille n, dont on sait que V(M) = σ²/n :
 
-P(|M − μ| ≥ δ) ≤ σ² / (n δ²)
+P(l’écart entre M et μ dépasse δ) inférieur ou égal à σ² / (n δ²)
 
-Le majorant contient **n au dénominateur** : il tend vers 0 quand n grandit, pour tout δ fixé.
+> Le majorant contient **n au dénominateur** : il tend vers **0** quand n grandit, pour tout δ fixé.
 
 ## La loi des grands nombres
-C’en est la conséquence directe : pour tout δ > 0,
+C’en est la conséquence directe : pour tout δ > 0, la probabilité que M s’écarte de μ d’au moins δ **tend vers 0**.
 
-P(|M − μ| ≥ δ) → 0 quand n → +∞
-
-Autrement dit, la **moyenne empirique se concentre** autour de l’espérance quand la taille de l’échantillon augmente. Dans le cas d’une loi de Bernoulli, μ = p et M est la **fréquence observée** de succès : la fréquence tend vers la probabilité. C’est la justification théorique de tout ce qui a été admis depuis le collège.
+> La **moyenne empirique se concentre** autour de l’espérance quand la taille de l’échantillon augmente. Dans le cas d’une loi de Bernoulli, μ = p et M est la **fréquence observée** : la fréquence **tend vers la probabilité**. C’est la justification théorique de tout ce qui était admis depuis le collège.
 
 ## Ce que la loi ne dit pas
-Elle ne dit **rien sur une répétition particulière**. Après dix « pile » consécutifs, la probabilité du prochain lancer reste 1/2 : la pièce n’a pas de mémoire. La convergence porte sur la **moyenne**, pas sur une compensation des écarts passés — croire l’inverse est l’**erreur du joueur**.
+Elle ne dit **rien sur une répétition particulière**.
 
-## L’usage pratique : la taille d’échantillon
-L’inégalité de concentration permet de calculer un **n suffisant** pour garantir une précision donnée avec un risque donné. Pour une proportion, σ² = p(1 − p) ≤ 1/4, ce qui donne un majorant **utilisable même sans connaître p** — c’est ce qui rend le dimensionnement d’un sondage possible avant de l’avoir mené.
+> Après dix « pile » consécutifs, la probabilité du prochain lancer reste **1/2** : la pièce n’a pas de mémoire. La convergence porte sur la **moyenne**, pas sur une compensation des écarts passés — croire l’inverse est l’**erreur du joueur**.
 
-> La loi des grands nombres est le pont entre le calcul des probabilités et la statistique : elle autorise à estimer un paramètre inconnu à partir d’un échantillon, et à dire de combien on peut se tromper.`,
+## L’usage pratique : dimensionner un sondage
+L’inégalité de concentration donne un **n suffisant** pour garantir une précision donnée avec un risque donné.
+
+> Pour une proportion, σ² = p(1 − p) est **majorée par 1/4** : on obtient un majorant utilisable **même sans connaître p**. C’est ce qui rend le dimensionnement possible **avant** d’avoir mené l’enquête.
+
+> La loi des grands nombres est le **pont** entre le calcul des probabilités et la statistique : elle autorise à estimer un paramètre inconnu à partir d’un échantillon, **et à dire de combien on peut se tromper**.`,
           },
           questions: [
             ['Que dit l’inégalité de Markov ?', ['P(X ≥ a) ≤ E(X)/a pour X positive et a > 0', 'P(X ≥ a) ≤ V(X)/a²', 'P(X = a) ≤ E(X)', 'E(X) ≤ a P(X ≥ a)'], 0, 'Elle n’utilise que l’espérance, ce qui la rend générale mais peu précise.'],

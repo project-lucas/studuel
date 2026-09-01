@@ -133,31 +133,48 @@ UPDATE, ici, ou rien. Idempotent (rejouer réécrit la même valeur). En 2de et 
           titre: 'Les questions',
           lecon: {
             titre: 'Interroger en espagnol',
-            cours: `L'espagnol pose ses questions autrement que le français : pas d'inversion obligatoire, pas de « est-ce que », mais deux signes et des accents qui ne sont jamais facultatifs.
+            cours: `L’espagnol pose ses questions autrement que le français : pas d’inversion obligatoire, pas de « est-ce que » — mais deux signes et des accents qui ne sont **jamais** facultatifs.
 
-## Les deux points d'interrogation
-Toute question s'ouvre par **¿** et se ferme par **?** : *¿Cómo te llamas?* Le signe ouvrant ne se met pas forcément en début de phrase, mais au début de la **partie interrogée** : *Si no vienes, ¿qué hago?* L'oublier est une faute comptée.
+## Les deux points d’interrogation
+Toute question s’ouvre par **¿ et se ferme par ?** : *¿Cómo te llamas?*
 
-## L'interrogation totale
-Celle à laquelle on répond par oui ou non. Aucun outil particulier : l'ordre des mots peut rester celui de la phrase déclarative, seule l'intonation (et les signes à l'écrit) change. *¿Tú hablas español?* ou *¿Hablas español?* On peut aussi placer le sujet après le verbe : *¿Viene Juan mañana?*
+> Le signe ouvrant ne se met pas forcément en début de phrase, mais au début de la **partie interrogée** : *Si no vienes, ¿qué hago?* L’oublier est une faute comptée.
+
+## L’interrogation totale
+Celle à laquelle on répond par oui ou non. Aucun outil particulier : seule l’intonation change.
+
+| Ordre des mots | Exemple |
+| Comme une déclarative | *¿Tú hablas español?* |
+| Sans pronom sujet | *¿Hablas español?* |
+| Sujet après le verbe | *¿Viene Juan mañana?* |
 
 ## Les mots interrogatifs
-Ils portent **tous** un accent écrit : *qué, quién, quiénes, cuál, cuáles, cómo, cuándo, dónde, adónde, cuánto, cuánta, cuántos, cuántas, por qué*. Cet accent est ce qui distingue le mot interrogatif du relatif : *¿Dónde vives?* contre *La casa donde vivo*.
+Ils portent **tous** un accent écrit : *qué, quién, quiénes, cuál, cuáles, cómo, cuándo, dónde, adónde, cuánto, cuánta, cuántos, cuántas, por qué*.
+
+| Avec accent | Sans accent |
+| *¿Dónde vives?* — interrogatif | *La casa donde vivo* — relatif |
+| *¿Qué quieres?* | *El libro que leo* |
+
+L’accent est **ce qui distingue** l’interrogatif du relatif : ce n’est pas un ornement.
 
 ## Qué ou cuál
-- **qué** demande la nature, la définition : *¿Qué es esto?*, *¿Qué libro quieres?*
-- **cuál/cuáles** demande un **choix** dans un ensemble : *¿Cuál prefieres?*, *¿Cuál es tu color favorito?*
+| Mot | Ce qu’il demande | Exemple |
+| **qué** | La nature, la définition | *¿Qué es esto?* · *¿Qué libro quieres?* |
+| **cuál / cuáles** | Un **choix** dans un ensemble | *¿Cuál prefieres?* · *¿Cuál es tu color favorito?* |
 
-> Devant un nom, l'espagnol préfère presque toujours *qué* : on dit *¿Qué día es hoy?*, pas *¿Cuál día?*
+> Devant un **nom**, l’espagnol préfère presque toujours *qué* : on dit *¿Qué día es hoy?*, pas *¿Cuál día?*
 
 ## Les quatre « porque »
-- **por qué** (deux mots, accent) : la question — *¿Por qué lloras?*
-- **porque** (un mot, sans accent) : la réponse — *Porque estoy triste.*
-- **el porqué** (nom masculin) : la raison — *No entiendo el porqué.*
-- **por que** : rare, préposition + relatif.
+| Forme | Nature | Exemple |
+| **por qué** | La question | *¿Por qué lloras?* |
+| **porque** | La réponse | *Porque estoy triste.* |
+| **el porqué** | Un nom masculin : la raison | *No entiendo el porqué.* |
+| **por que** | Préposition + relatif, rare | *La razón por que lo hizo.* |
 
-## L'interrogation indirecte
-Elle garde l'accent du mot interrogatif, mais perd les signes ¿ ? : *No sé **dónde** está*, *Pregunta **cuánto** cuesta*. C'est l'erreur classique : l'accent reste, même sans point d'interrogation.`,
+## L’interrogation indirecte
+Elle garde l’**accent** du mot interrogatif, mais perd les signes ¿ ? : *No sé dónde está*, *Pregunta cuánto cuesta*.
+
+C’est l’erreur classique : l’accent reste, **même sans point d’interrogation**.`,
           },
           questions: [
             ['Comment s’écrit une question en espagnol ?', ['Avec un ¿ à l’ouverture et un ? à la fermeture', 'Avec un seul ? final', 'Avec un ¿ seulement', 'Avec « est-ce que » puis un ?'], 0, 'Le ¿ se place au début de la partie interrogée, pas forcément de la phrase.'],
@@ -174,26 +191,45 @@ Elle garde l'accent du mot interrogatif, mais perd les signes ¿ ? : *No sé **d
           titre: 'La négation',
           lecon: {
             titre: 'No, et la double négation',
-            cours: `La négation espagnole est plus simple que la française — un seul mot au lieu de « ne… pas » — mais elle a une règle que le français ne connaît pas : la **double négation** est obligatoire.
+            cours: `La négation espagnole est plus simple que la française — un seul mot au lieu de « ne… pas ». Mais elle a une règle que le français ne connaît pas : la **double négation** est obligatoire.
 
 ## Le no
-Il se place **juste devant le verbe**, et rien ne s'intercale sauf les pronoms compléments : *No hablo español*, *No **te lo** digo.*
+Il se place **juste devant le verbe**, et rien ne s’intercale sauf les pronoms compléments : *No hablo español*, *No te lo digo*.
 
 ## La double négation
-Quand un mot négatif (*nada, nadie, nunca, jamás, ninguno, tampoco, ni*) suit le verbe, le **no est obligatoire** devant lui : *No veo **nada***, *No viene **nadie***, *No lo hago **nunca***.
+Quand un mot négatif suit le verbe, le *no* est **obligatoire** devant lui.
 
-> Deux négations ne s'annulent pas en espagnol : elles se renforcent. C'est le contraire de la logique mathématique — et c'est la règle.
+| Faux | Juste |
+| *Veo nada* | *No veo nada* |
+| *Viene nadie* | *No viene nadie* |
+| *Lo hago nunca* | *No lo hago nunca* |
+
+> Deux négations ne s’annulent pas en espagnol : elles se **renforcent**. C’est le contraire de la logique mathématique — et c’est la règle.
 
 ## Le mot négatif avant le verbe
-S'il passe devant, le *no* **disparaît** : *Nadie viene*, *Nunca lo hago*, *Tampoco me gusta*. Les deux tournures sont correctes et équivalentes : *No viene nadie* = *Nadie viene*.
+S’il passe devant, le *no* **disparaît**. Les deux tournures sont correctes et équivalentes.
+
+| Avec *no* | Sans *no* |
+| *No viene nadie* | *Nadie viene* |
+| *No lo hago nunca* | *Nunca lo hago* |
+| *No me gusta tampoco* | *Tampoco me gusta* |
 
 ## Les mots à connaître
-- *nada* (rien), *nadie* (personne), *ninguno/a* (aucun — apocopé en *ningún* devant un masculin singulier)
-- *nunca / jamás* (jamais), *tampoco* (non plus), *ni… ni* (ni… ni)
-- *ya no* (ne… plus), *todavía no / aún no* (pas encore)
+| Mot | Sens | Remarque |
+| *nada* | Rien | |
+| *nadie* | Personne | |
+| *ninguno / a* | Aucun | Apocopé en *ningún* devant un masculin singulier |
+| *nunca / jamás* | Jamais | *jamás* est plus emphatique |
+| *tampoco* | Non plus | |
+| *ni… ni* | Ni… ni | |
+| *ya no* | Ne… plus | |
+| *todavía no / aún no* | Pas encore | |
 
 ## Sino ou pero
-Après une négation, pour **rectifier**, on emploie *sino* et non *pero* : *No es francés **sino** español*. Devant un verbe conjugué : *sino que* — *No canta **sino que** grita*. On garde *pero* quand il s'agit d'opposer sans rectifier : *No es rico **pero** es feliz.*`,
+| Mot | Ce qu’il fait | Exemple |
+| **sino** | **Rectifie** après une négation | *No es francés sino español* |
+| **sino que** | Idem, devant un verbe conjugué | *No canta sino que grita* |
+| **pero** | **Oppose** sans rectifier | *No es rico pero es feliz* |`,
           },
           questions: [
             ['Où se place « no » dans la phrase ?', ['Juste devant le verbe', 'À la fin de la phrase', 'Après le verbe', 'Devant le sujet'], 0, 'Seuls les pronoms compléments peuvent s’intercaler : *No te lo digo.*'],
@@ -210,28 +246,39 @@ Après une négation, pour **rectifier**, on emploie *sino* et non *pero* : *No 
           titre: 'La proposition subordonnée relative',
           lecon: {
             titre: 'Deux relatives, deux virgules, deux modes',
-            cours: `Une relative complète un nom. En espagnol, ce qui compte n'est pas seulement le pronom choisi mais **le type de relative** — car il commande la ponctuation et parfois le mode du verbe.
+            cours: `Une relative complète un nom. En espagnol, ce qui compte n’est pas seulement le **pronom choisi, mais le type de relative — car il commande la ponctuation et parfois le mode** du verbe.
 
-## La relative déterminative
-Elle **restreint** le sens de l'antécédent : sans elle, la phrase ne désigne plus la même chose. Elle s'écrit **sans virgule** : *Los alumnos **que estudian** aprueban* (seuls ceux-là).
+## Les deux relatives
+| | **Déterminative** | **Explicative** |
+| Ce qu’elle fait | Elle **restreint** l’antécédent | Elle **ajoute** une information |
+| Virgules | Aucune | Encadrée de virgules |
+| Pronom | *que* | *que*, ou *quien* pour une personne |
+| Exemple | *Los alumnos que estudian aprueban* — seuls ceux-là | *Los alumnos, que estudian, aprueban* — tous |
 
-## La relative explicative
-Elle **ajoute** une information dont on pourrait se passer. Elle est **encadrée de virgules** : *Los alumnos, **que estudian**, aprueban* (tous les élèves, et au passage ils travaillent). Changer la virgule change le sens de la phrase : ce n'est pas un détail typographique.
-
-> Après une virgule, *quien/quienes* est possible pour une personne : *Mi hermano, **quien** vive en Madrid, es médico.* Dans une déterminative, on emploie *que*.
+> Changer la virgule change **le sens de la phrase**. Ce n’est pas un détail typographique : c’est une information.
 
 ## Le mode dans la relative
-Voilà le point que le français ne prépare pas. Si l'antécédent est **connu, réel**, le verbe est à l'**indicatif** ; s'il est **indéfini, hypothétique, encore à trouver**, il passe au **subjonctif** :
-- *Busco a la secretaria que **habla** inglés* (elle existe, je la connais)
-- *Busco una secretaria que **hable** inglés* (n'importe laquelle, si elle existe)
+Voilà le point que le français ne prépare pas.
 
-Même chose après une négation : *No conozco a nadie que **sepa** ruso.*
+| L’antécédent est… | Le verbe est à… | Exemple |
+| Connu, réel | L’**indicatif** | *Busco a la secretaria que habla inglés* — je la connais |
+| Indéfini, encore à trouver | Le **subjonctif** | *Busco una secretaria que hable inglés* — n’importe laquelle |
+| Nié | Le **subjonctif** | *No conozco a nadie que sepa ruso* |
 
 ## La préposition ne se déplace pas
-L'espagnol ne rejette jamais la préposition à la fin : elle précède toujours le relatif. *La casa **en la que** vivo*, jamais « la casa que vivo en ».
+L’espagnol ne rejette **jamais** la préposition à la fin : elle précède toujours le relatif.
 
-## L'antécédent implicite
-Sans antécédent exprimé, on emploie *el que, la que, los que, las que, quien* : *El que quiera, que venga* (celui qui veut). Pour renvoyer à une idée entière, on emploie *lo que* : *Llegó tarde, **lo que** me molestó.*`,
+| Faux | Juste |
+| *La casa que vivo en* | *La casa en la que vivo* |
+| *El chico que hablo de* | *El chico del que hablo* |
+
+## L’antécédent implicite
+| Forme | Ce qu’elle reprend | Exemple |
+| *el que, la que, los que, las que* | Une personne ou une chose | *El que quiera, que venga* |
+| *quien* | Une personne | *Quien mucho abarca, poco aprieta* |
+| **lo que** | Une **idée entière** | *Llegó tarde, lo que me molestó* |
+
+Une phrase entière ne se reprend jamais par *el que* : toujours par le neutre *lo que*.`,
           },
           questions: [
             ['Quelle relative s’écrit entre virgules ?', ['L’explicative', 'La déterminative', 'Les deux', 'Aucune'], 0, 'L’explicative ajoute une information supprimable.'],
@@ -248,27 +295,39 @@ Sans antécédent exprimé, on emploie *el que, la que, los que, las que, quien*
           titre: 'La proposition subordonnée complétive',
           lecon: {
             titre: 'Que + indicatif ou que + subjonctif',
-            cours: `La complétive est la subordonnée introduite par *que* qui complète le verbe principal. Tout se joue sur une seule question : **indicatif ou subjonctif ?**
+            cours: `La complétive est la subordonnée introduite par *que* qui complète le verbe principal. Tout s’y joue sur une seule question : **indicatif ou subjonctif ?**
 
-## L'indicatif : ce qui est présenté comme un fait
-Après les verbes de **déclaration**, de **perception**, d'**opinion** et de **certitude** à la forme affirmative : *Digo que **viene***, *Veo que **está** cansado*, *Creo que **tiene** razón*, *Es verdad que **llueve**.*
+## La règle en un tableau
+| Le verbe principal exprime… | Mode | Exemples |
+| Une **déclaration** | Indicatif | *Digo que viene* |
+| Une **perception** | Indicatif | *Veo que está cansado* |
+| Une **opinion** affirmée | Indicatif | *Creo que tiene razón* |
+| Une **certitude** | Indicatif | *Es verdad que llueve* |
+| Une **volonté**, un ordre, un souhait | **Subjonctif** | *Quiero que vengas* · *Ojalá llueva* |
+| Un **sentiment** | **Subjonctif** | *Me alegro de que estés aquí* |
+| Un **doute, une certitude niée** | **Subjonctif** | *Dudo que sea verdad* · *No creo que venga* |
+| Un **jugement impersonnel** | **Subjonctif** | *Es necesario que estudies* |
 
-## Le subjonctif : ce qui est voulu, senti, mis en doute
-- **volonté, ordre, souhait** : *Quiero que **vengas***, *Te pido que **esperes***, *Ojalá **llueva*** ;
-- **sentiment** : *Me alegro de que **estés** aquí*, *Siento que **te vayas*** ;
-- **doute, négation d'une certitude** : *Dudo que **sea** verdad*, *No creo que **venga*** ;
-- **jugement impersonnel** : *Es necesario que **estudies***, *Es posible que **llegue** tarde.*
+> La bascule la plus rentable au bac : *creo que viene* (indicatif) mais *no creo que venga* (subjonctif). **Nier la certitude fait changer de mode** — le verbe n’a pas changé, sa polarité si.
 
-> La bascule la plus rentable au bac : *creo que viene* (indicatif) mais *no creo que **venga*** (subjonctif). Nier la certitude fait changer de mode.
+## L’infinitif quand le sujet ne change pas
+| Sujet | Construction | Exemple |
+| **Le même** | Infinitif, sans *que* | *Quiero venir* |
+| **Différent** | *que* + subjonctif | *Quiero que vengas* |
 
-## L'infinitif quand le sujet ne change pas
-Si les deux verbes ont le **même sujet**, l'espagnol emploie l'infinitif, sans *que* : *Quiero **venir*** (je veux venir) contre *Quiero que **vengas*** (je veux que tu viennes). Le français dit « je veux venir » aussi : c'est l'un des rares points où les deux langues s'accordent.
+C’est l’un des rares points où le français fait exactement pareil.
 
 ## Le que ne se supprime pas
-Là où le français peut l'alléger, l'espagnol garde *que* : *Espero **que** me llames.*
+Là où le français peut l’alléger, l’espagnol garde toujours *que* : *Espero que me llames*.
 
 ## Le décalage au passé
-Quand le verbe principal est au passé, le subjonctif présent devient **imparfait du subjonctif** : *Quiero que vengas* → *Quería que **vinieras** (ou **vinieses**)*. Les deux formes, en *-ra* et en *-se*, sont équivalentes.`,
+Quand le verbe principal passe au passé, le subjonctif présent devient **imparfait du subjonctif**.
+
+| Au présent | Au passé |
+| *Quiero que vengas* | *Quería que vinieras* (ou *vinieses*) |
+| *Es necesario que estudies* | *Era necesario que estudiaras* |
+
+Les deux formes, en *-ra* et en *-se*, sont **équivalentes**.`,
           },
           questions: [
             ['Après « Quiero que… », le verbe est…', ['Au subjonctif', 'À l’indicatif', 'À l’infinitif', 'Au conditionnel'], 0, 'La volonté commande le subjonctif : *Quiero que vengas.*'],
@@ -287,25 +346,42 @@ Quand le verbe principal est au passé, le subjonctif présent devient **imparfa
           titre: 'Genre et nombre',
           lecon: {
             titre: 'Le genre des noms et la formation du pluriel',
-            cours: `Le genre espagnol ne recopie pas le genre français : *la sangre* est féminin, *el color* masculin, et se fier au français coûte cher à l'écrit comme à l'oral.
+            cours: `Le genre espagnol ne recopie pas le genre français : *la sangre* est féminin, *el color* masculin. Se fier au français coûte cher, à l’écrit comme à l’oral.
 
 ## Les repères de genre
-- **masculins** : noms en *-o* (*el libro*), en *-or* (*el amor*), *-aje* (*el viaje*), *-ma* d'origine grecque (*el problema, el tema, el idioma, el sistema, el clima*) ;
-- **féminins** : noms en *-a* (*la casa*), et surtout les suffixes *-ción, -sión, -dad, -tad, -tud, -umbre, -ez* (*la canción, la ciudad, la libertad, la juventud, la costumbre, la vejez*).
+| Genre | Terminaisons | Exemples |
+| **Masculin** | -o | *el libro* |
+| Masculin | -or, -aje | *el amor*, *el viaje* |
+| Masculin | **-ma** d’origine grecque | *el problema, el tema, el idioma, el sistema, el clima* |
+| **Féminin** | -a | *la casa* |
+| Féminin | -ción, -sión | *la canción* |
+| Féminin | -dad, -tad, -tud | *la ciudad, la libertad, la juventud* |
+| Féminin | -umbre, -ez | *la costumbre, la vejez* |
 
 ## Les pièges du francophone
-*La sangre* (le sang), *la leche* (le lait), *la sal* (le sel), *la nariz* (le nez), *la miel*, *la costumbre* ; et à l'inverse *el color*, *el árbol*, *el viaje*, *el análisis*, *el minuto*, *el puente*. Aucune règle : il faut les apprendre avec leur article.
+| Féminin en espagnol, masculin en français | Masculin en espagnol, féminin en français |
+| *la sangre* (le sang) | *el color* (la couleur) |
+| *la leche* (le lait) | *el árbol* (l’arbre) |
+| *la sal* (le sel) | *el viaje* (le voyage) |
+| *la nariz* (le nez) | *el análisis* (l’analyse) |
+| *la miel*, *la costumbre* | *el minuto*, *el puente* |
+
+Aucune règle ne les couvre : il faut les apprendre **avec leur article**.
 
 ## Le féminin des noms de personnes
-*-o* → *-a* (*el niño / la niña*) ; les noms en *-or*, *-ón*, *-és* ajoutent un *-a* (*profesor / profesora*, *francés / francesa*). Certains sont invariables et seul l'article change : *el/la estudiante*, *el/la periodista*, *el/la artista*.
+| Cas | Règle | Exemple |
+| Nom en -o | -o devient -a | *el niño / la niña* |
+| Nom en -or, -ón, -és | On ajoute -a | *profesor / profesora*, *francés / francesa* |
+| Invariables | Seul l’article change | *el / la estudiante*, *el / la periodista*, *el / la artista* |
 
 ## Le pluriel
-- voyelle non accentuée + **-s** : *casa → casas* ;
-- consonne ou voyelle accentuée + **-es** : *papel → papeles*, *rubí → rubíes* ;
-- *-z* → **-ces** : *lápiz → lápices*, *vez → veces* ;
-- mots en *-s* non accentués sur la dernière syllabe : **invariables** — *el lunes / los lunes*, *la crisis / las crisis*.
+| Le mot se termine par… | On ajoute | Exemple |
+| Une voyelle non accentuée | **-s** | *casa → casas* |
+| Une consonne ou une voyelle accentuée | **-es** | *papel → papeles*, *rubí → rubíes* |
+| **-z** | **-ces** | *lápiz → lápices*, *vez → veces* |
+| **-s** non accentué sur la dernière syllabe | Rien : invariable | *el lunes / los lunes*, *la crisis / las crisis* |
 
-> L'accent écrit suit la prononciation, pas l'orthographe : *el examen → los **exámenes*** (l'accent apparaît), *la canción → las **canciones*** (il disparaît).`,
+> L’accent écrit suit la **prononciation**, pas l’orthographe : *el examen → los exámenes* — l’accent apparaît ; *la canción → las canciones* — il disparaît.`,
           },
           questions: [
             ['Quel est le genre de « la sangre » ?', ['Féminin', 'Masculin', 'Neutre', 'Les deux'], 0, 'Piège classique : le français dit « le sang ».'],
@@ -322,28 +398,46 @@ Quand le verbe principal est au passé, le subjonctif présent devient **imparfa
           titre: 'Les articles',
           lecon: {
             titre: 'El, un, lo : trois séries, dont une que le français n’a pas',
-            cours: `L'espagnol a un article de plus que le français : le **neutre** *lo*. Et son article défini réserve une surprise devant certains noms féminins.
+            cours: `L’espagnol a un article de **plus que le français : le neutre** *lo*. Et son article défini réserve une surprise devant certains noms féminins.
 
 ## Les formes
-- **défini** : *el, la, los, las*
-- **indéfini** : *un, una, unos, unas* — au pluriel, *unos/unas* signifie « quelques » : *unos amigos.*
+| Type | Masculin | Féminin |
+| **Défini** singulier | *el* | *la* |
+| Défini pluriel | *los* | *las* |
+| **Indéfini** singulier | *un* | *una* |
+| Indéfini pluriel | *unos* | *unas* |
+
+Au pluriel, *unos / unas* signifie « quelques » : *unos amigos*.
 
 ## Les contractions
-Deux, et deux seulement : **a + el = al**, **de + el = del**. *Voy **al** cine*, *La casa **del** profesor*. Elles ne se font pas devant un nom propre : *Voy a El Escorial.*
+Deux, et deux seulement.
+
+| Contraction | Exemple | L’exception |
+| a + el = **al** | *Voy al cine* | Pas devant un nom propre : *Voy a El Escorial* |
+| de + el = **del** | *La casa del profesor* | Idem |
 
 ## El devant un féminin
-Un nom féminin **singulier** qui commence par un *a-* ou *ha-* **tonique** prend *el* : *el agua, el águila, el hambre, el aula, el alma*. Le nom reste féminin — *el agua **fría*** — et le pluriel reprend *las* : *las aguas*. Avec *una*, on emploie *un* pour la même raison : *un águila.*
+Un nom **féminin singulier** commençant par un *a-* ou *ha-* tonique prend *el* — et *un*, pas *una*.
 
-> Attention : *la avenida*, *la harina* — l'accent tonique n'y est pas sur le *a*, donc la règle ne s'applique pas.
+| Avec *el / un* | Le nom reste féminin | Au pluriel |
+| *el agua* | *el agua fría* | *las aguas* |
+| *el águila*, *un águila* | *el águila blanca* | *las águilas* |
+| *el hambre*, *el aula*, *el alma* | | *las aulas* |
+
+> Le test est l’**accent tonique**, pas la lettre : *la avenida*, *la harina* — l’accent n’y est pas sur le *a*, donc la règle ne s’applique pas.
 
 ## Le neutre lo
-Il ne précède jamais un nom, mais un **adjectif**, un **adverbe** ou un relatif, pour désigner une qualité abstraite :
-- *lo importante* (ce qui est important), *lo mejor* (le mieux), *lo difícil* ;
-- *lo que* (ce que) : *No entiendo **lo que** dices* ;
-- *lo + adjectif + que* pour l'intensité : *No sabes **lo cansado que** estoy.*
+Il ne précède **jamais** un nom, mais un adjectif, un adverbe ou un relatif.
 
-## Quand l'article disparaît
-Devant un nom de **profession, nationalité ou religion** attribut : *Es **profesor***, *Soy **española***. On le remet s'il y a un qualificatif : *Es **un** profesor excelente.* Autre cas : *otro* ne prend jamais d'article indéfini — *otro día*, jamais « un otro día ».`,
+| Structure | Ce qu’elle exprime | Exemple |
+| *lo* + adjectif | Une qualité abstraite | *lo importante*, *lo mejor*, *lo difícil* |
+| *lo que* | « Ce que » | *No entiendo lo que dices* |
+| *lo* + adjectif + *que* | L’intensité | *No sabes lo cansado que estoy* |
+
+## Quand l’article disparaît
+| Cas | Sans article | Avec article |
+| Profession, nationalité, religion en attribut | *Es profesor* | *Es un profesor excelente* |
+| Devant *otro* | *otro día* | Jamais « un otro día » |`,
           },
           questions: [
             ['Quelles sont les deux contractions de l’espagnol ?', ['Al et del', 'Al, del et col', 'Del seulement', 'Al, del, pel'], 0, '*a + el = al*, *de + el = del*.'],
@@ -360,32 +454,41 @@ Devant un nom de **profession, nationalité ou religion** attribut : *Es **profe
           titre: 'Les démonstratifs',
           lecon: {
             titre: 'Este, ese, aquel : trois distances',
-            cours: `Là où le français n'a qu'un démonstratif (*ce… -ci / -là*), l'espagnol en a **trois**, calés sur trois distances — dans l'espace, dans le temps, ou dans le discours.
+            cours: `Là où le français n’a qu’un démonstratif — *ce… -ci / -là* —, l’espagnol en a **trois**, calés sur trois distances : dans l’espace, dans le temps, ou dans le discours.
 
 ## Les trois séries
-- **près de moi** : *este, esta, estos, estas* — l'adverbe qui va avec est *aquí* ;
-- **près de toi** : *ese, esa, esos, esas* — *ahí* ;
-- **loin de nous deux** : *aquel, aquella, aquellos, aquellas* — *allí*.
+| Distance | Masculin sing. | Féminin sing. | Pluriels | Adverbe |
+| **Près de moi** | *este* | *esta* | *estos, estas* | *aquí* |
+| **Près de toi** | *ese* | *esa* | *esos, esas* | *ahí* |
+| **Loin de nous deux** | *aquel* | *aquella* | *aquellos, aquellas* | *allí* |
 
-Une seule irrégularité à retenir : le masculin singulier de la troisième série est *aquel*, sans *-o*.
+Une seule irrégularité à retenir : le masculin singulier de la troisième série est *aquel*, **sans -o**.
 
-## La distance n'est pas seulement spatiale
-- **temps** : *este año* (cette année-ci), *ese año* (cette année-là, proche), *aquellos tiempos* (ces temps lointains) ;
-- **discours** : *este* renvoie à ce qu'on vient de dire ou à ce qui suit, *aquel* à ce qui est le plus éloigné dans le texte.
+## La distance n’est pas seulement spatiale
+| Domaine | *este* | *ese* | *aquel* |
+| Espace | Ici | Là, près de toi | Là-bas |
+| Temps | *este año* | *ese año* | *aquellos tiempos* |
+| Discours | Ce qu’on vient de dire | Ce dont on parlait | Le plus éloigné dans le texte |
 
 ## Adjectif ou pronom, même forme
-*Este libro es mío* (adjectif) / *Este es mío* (pronom). Depuis la réforme de la RAE (2010), le pronom **ne prend plus d'accent écrit** : on écrit *este*, *ese*, *aquel*, comme l'adjectif. Beaucoup de manuels anciens écrivent encore *éste* — ce n'est plus la norme, mais ce n'est pas compté faux.
+*Este libro es mío* (adjectif) · *Este es mío* (pronom).
+
+> Depuis la réforme de la RAE (2010), le pronom **ne prend plus d’accent écrit** : on écrit *este*, *ese*, *aquel*, comme l’adjectif. Beaucoup de manuels anciens écrivent encore *éste* — ce n’est plus la norme, mais ce n’est pas compté faux.
 
 ## Les neutres
-*esto, eso, aquello* : **invariables**, **sans accent**, et jamais suivis d'un nom. Ils renvoient à une chose non identifiée ou à une **idée entière** :
-- *¿Qué es **esto**?* (qu'est-ce que c'est ?)
-- ***Eso** no es verdad.* (ça, ce n'est pas vrai)
-- *Todo **aquello** me pareció extraño.*
+| Neutre | Ce qu’il reprend |
+| *esto* | Une chose non identifiée, proche |
+| *eso* | Une idée, ce qui vient d’être dit |
+| *aquello* | Un souvenir, du lointain |
 
-> Une phrase entière ne se reprend jamais par *este* ou *ese*, toujours par un neutre : *No vino, y **eso** me molestó.*
+Ils sont **invariables, sans accent, et jamais suivis d’un nom**.
+
+*¿Qué es esto?* · *Eso no es verdad.* · *Todo aquello me pareció extraño.*
+
+> Une **phrase entière** ne se reprend jamais par *este* ou *ese*, toujours par un neutre : *No vino, y eso me molestó.*
 
 ## Deux tournures utiles
-*en aquel entonces* (à cette époque-là), *ni esto ni aquello* (ni l'un ni l'autre).`,
+*en aquel entonces* (à cette époque-là) · *ni esto ni aquello* (ni l’un ni l’autre).`,
           },
           questions: [
             ['Combien l’espagnol a-t-il de séries de démonstratifs ?', ['Trois : este, ese, aquel', 'Deux : este et ese', 'Une seule', 'Quatre'], 0, 'Elles correspondent à *aquí*, *ahí*, *allí*.'],
@@ -402,35 +505,35 @@ Une seule irrégularité à retenir : le masculin singulier de la troisième sé
           titre: 'Les adjectifs',
           lecon: {
             titre: 'Accord, place, et le sens qui change de place',
-            cours: `L'adjectif espagnol s'accorde comme en français, mais sa **place** obéit à une logique que le français ne connaît pas — et qui peut changer le sens du mot.
+            cours: `L’adjectif espagnol s’accorde comme en français, mais sa **place obéit à une logique que le français ne connaît pas — et qui peut changer le sens** du mot.
 
-## L'accord
-En genre et en nombre avec le nom. Deux familles :
-- adjectifs en **-o** : quatre formes — *alto, alta, altos, altas* ;
-- adjectifs en **-e** ou en **consonne** : invariables en genre — *un chico inteligente / una chica inteligente*, *un examen fácil / una prueba fácil*.
+## L’accord
+| Type d’adjectif | Formes | Exemple |
+| En **-o** | Quatre | *alto, alta, altos, altas* |
+| En **-e** ou consonne | Invariable en genre | *un chico inteligente / una chica inteligente* |
+| Nationalité, ou en -or, -ón, -ín | Il forme un féminin | *español / española*, *trabajador / trabajadora* |
 
-**Exceptions** : les adjectifs de nationalité et ceux en *-or, -ón, -ín* forment un féminin — *español/española*, *inglés/inglesa*, *trabajador/trabajadora*, *hablador/habladora*.
+Avec **plusieurs noms dont l’un est masculin : accord au masculin pluriel** — *un chico y una chica simpáticos*.
 
-## Avec plusieurs noms
-Si l'un des noms est masculin, l'adjectif se met au **masculin pluriel** : *un chico y una chica **simpáticos***.
+## La place
+| Position | Ce qu’elle exprime | Exemples |
+| **Après** le nom (par défaut) | Elle **classe**, elle distingue objectivement | *un coche rojo*, *la lengua española*, *un problema difícil* |
+| **Avant** le nom | Le regard de celui qui parle : appréciation, qualité attendue | *la blanca nieve*, *un buen amigo*, *mi querida madre* |
 
-## La place : après le nom par défaut
-C'est la position normale, celle qui **classe**, qui distingue objectivement : *un coche **rojo***, *la lengua **española***, *un problema **difícil***. Les adjectifs de couleur, de forme, de nationalité, de religion y restent toujours.
+Les adjectifs de couleur, de forme, de nationalité et de religion restent **toujours** après le nom.
 
-## Devant le nom : le regard de celui qui parle
-Placé avant, l'adjectif exprime une appréciation, une qualité **connue ou attendue**, un effet de style : *la **blanca** nieve*, *un **buen** amigo*, *mi **querida** madre*.
+## Les changements de sens
+> Ce n’est pas une nuance décorative : certains adjectifs **changent de sens** selon leur place. C’est le point le plus rentable de la fiche.
 
-> Ce n'est pas une nuance décorative : certains adjectifs **changent de sens** selon la place.
+| Devant le nom | Après le nom |
+| *un gran hombre* — un grand homme | *un hombre grande* — de grande taille |
+| *un pobre hombre* — à plaindre | *un hombre pobre* — sans argent |
+| *un viejo amigo* — de longue date | *un amigo viejo* — âgé |
+| *diferentes libros* — plusieurs | *libros diferentes* — dissemblables |
+| *un cierto encanto* — un certain | *un hecho cierto* — avéré |
 
-## Les changements de sens à connaître
-- *un **gran** hombre* (un grand homme) / *un hombre **grande*** (un homme de grande taille)
-- *un **pobre** hombre* (un homme à plaindre) / *un hombre **pobre*** (sans argent)
-- *un **viejo** amigo* (un ami de longue date) / *un amigo **viejo*** (un ami âgé)
-- *diferentes libros* (plusieurs) / *libros diferentes* (dissemblables)
-- *un **cierto** encanto* (un certain) / *un hecho **cierto*** (avéré)
-
-## L'apocope
-Certains adjectifs perdent leur finale devant le nom : *bueno → **buen** día*, *malo → **mal** tiempo*, *grande → **gran** casa*. C'est l'objet d'une fiche à part.`,
+## L’apocope
+Certains adjectifs perdent leur finale devant le nom : *bueno → buen día*, *malo → mal tiempo*, *grande → gran casa*.`,
           },
           questions: [
             ['Où se place l’adjectif espagnol par défaut ?', ['Après le nom', 'Avant le nom', 'En fin de phrase', 'Avant le verbe'], 0, 'C’est la position qui classe objectivement : *un coche rojo*.'],
@@ -447,28 +550,38 @@ Certains adjectifs perdent leur finale devant le nom : *bueno → **buen** día*
           titre: 'Les pronoms personnels sujets',
           lecon: {
             titre: 'Yo, tú, usted : et pourquoi on les omet',
-            cours: `L'espagnol exprime rarement le pronom sujet : la terminaison du verbe suffit à identifier la personne. L'employer sans raison sonne lourd, voire insistant.
+            cours: `L’espagnol exprime **rarement** le pronom sujet : la terminaison du verbe suffit à identifier la personne. L’employer sans raison sonne lourd, voire insistant.
 
 ## Les formes
 *yo, tú, él / ella / usted, nosotros / nosotras, vosotros / vosotras, ellos / ellas / ustedes.*
 
 ## Pourquoi on les omet
-*Hablo* dit déjà « je parle » : ajouter *yo* n'apporte rien. On n'exprime le pronom que pour :
-- **insister** : ***Yo** no lo he dicho* (moi, je ne l'ai pas dit) ;
-- **opposer** : ***Tú** trabajas y **él** duerme* ;
-- **lever une ambiguïté** : à la 3e personne, *hablaba* peut être *yo*, *él*, *ella* ou *usted*.
+*Hablo* dit déjà « je parle ». On n’exprime le pronom que dans trois cas.
+
+| Raison | Exemple |
+| **Insister** | *Yo no lo he dicho* — moi, je ne l’ai pas dit |
+| **Opposer** | *Tú trabajas y él duerme* |
+| **Lever une ambiguïté** | *hablaba* peut être *yo*, *él*, *ella* ou *usted* |
 
 ## Le vouvoiement
-*Usted* (abrégé *Ud.*) et *ustedes* (*Uds.*) sont les formes de politesse — mais ils se conjuguent à la **3e personne** : *¿Usted **habla** español?*, *¿Ustedes **quieren** café?* C'est l'erreur la plus fréquente du francophone, qui les traite comme un « vous » de 2e personne.
+| Forme | Nombre | Personne du verbe |
+| *usted* (Ud.) | Singulier | **3e** : *¿Usted habla español?* |
+| *ustedes* (Uds.) | Pluriel | **3e** : *¿Ustedes quieren café?* |
 
-> *Usted* vient de *vuestra merced* (« votre grâce ») : d'où la 3e personne, comme un « Monsieur souhaite-t-il… ? ».
+> C’est l’erreur la plus fréquente du francophone, qui les traite comme un « vous » de 2e personne. *Usted* vient de *vuestra merced* — « votre grâce » : d’où la 3e personne, comme un « Monsieur souhaite-t-il… ? ».
 
 ## Les variantes du monde hispanophone
-- En **Amérique latine**, *vosotros* n'existe pas : le pluriel familier est *ustedes*, même entre amis.
-- En **Argentine, Uruguay, Paraguay, Amérique centrale**, *tú* cède la place à ***vos*** (le *voseo*), avec ses propres formes verbales : *vos **tenés***, *vos **sos***, *vos **hablás***. Ce n'est pas une faute mais une norme régionale.
+| Zone | Ce qui change |
+| **Amérique latine** | *vosotros* n’existe pas : le pluriel familier est *ustedes*, même entre amis |
+| **Argentine, Uruguay, Paraguay, Amérique centrale** | Le *voseo* : *vos* remplace *tú*, avec ses formes propres — *vos tenés*, *vos sos*, *vos hablás* |
+
+Ce ne sont pas des fautes, mais des **normes régionales**.
 
 ## Après une préposition
-Le pronom sujet change de forme : *mí, ti*, puis *él, ella, usted, nosotros, vosotros, ellos*. *Para **mí***, *sin **ti***. Deux soudures irrégulières : ***conmigo***, ***contigo***. Après *entre, según, excepto, salvo, incluso*, on garde en revanche *yo* et *tú* : *entre **tú** y **yo***, *según **tú***.`,
+| Préposition | Forme du pronom | Exemple |
+| Cas général | *mí, ti*, puis *él, ella…* | *Para mí*, *sin ti* |
+| Avec *con* | Soudure irrégulière | *conmigo*, *contigo* |
+| *entre, según, excepto, salvo, incluso* | On garde *yo* et *tú* | *entre tú y yo*, *según tú* |`,
           },
           questions: [
             ['Pourquoi l’espagnol omet-il souvent le pronom sujet ?', ['La terminaison du verbe identifie déjà la personne', 'C’est un usage familier', 'Pour aller plus vite', 'Le pronom n’existe pas'], 0, 'On l’exprime pour insister, opposer ou lever une ambiguïté.'],
@@ -485,33 +598,47 @@ Le pronom sujet change de forme : *mí, ti*, puis *él, ella, usted, nosotros, v
           titre: 'Les pronoms personnels compléments',
           lecon: {
             titre: 'Enclise, ordre, et le « se » qui remplace « le »',
-            cours: `C'est le point de grammaire qui distingue le plus nettement une copie sûre d'une copie approximative : le placement des pronoms compléments.
+            cours: `C’est le point de grammaire qui distingue le plus nettement une copie sûre d’une copie approximative : le **placement** des pronoms compléments.
 
 ## Les deux séries
-- **COD** : *me, te, **lo / la**, nos, os, **los / las***
-- **COI** : *me, te, **le**, nos, os, **les***
+| Personne | COD | COI |
+| 1re sing. | *me* | *me* |
+| 2e sing. | *te* | *te* |
+| **3e sing.** | *lo / la* | *le* |
+| 1re plur. | *nos* | *nos* |
+| 2e plur. | *os* | *os* |
+| **3e plur.** | *los / las* | *les* |
 
-Elles ne diffèrent qu'à la 3e personne. *La veo* (je la vois, COD) / *Le hablo* (je lui parle, COI).
+Elles ne diffèrent **qu’à la 3e personne** : *La veo* (je la vois, COD) contre *Le hablo* (je lui parle, COI).
 
 ## La place : proclise ou enclise
-- Devant un **verbe conjugué**, le pronom se place **avant**, séparé : *Te lo digo*, *No me lo dijo.*
-- Avec un **infinitif**, un **gérondif** ou un **impératif affirmatif**, il se **soude derrière** le verbe : *dár**melo***, *diciéndo**telo***, *dá**melo***. C'est l'**enclise**, et elle est obligatoire.
-- Avec l'impératif **négatif**, retour devant : *No me lo des.*
-- Avec un verbe conjugué + infinitif ou gérondif, les deux placements sont admis : *Te lo voy a decir* = *Voy a decír**telo***.
+| Le verbe est… | Le pronom se place… | Exemple |
+| Conjugué | **Devant**, séparé | *Te lo digo* · *No me lo dijo* |
+| À l’**infinitif** | Soudé derrière | *dármelo* |
+| Au **gérondif** | Soudé derrière | *diciéndotelo* |
+| À l’impératif **affirmatif** | Soudé derrière | *dámelo* |
+| À l’impératif **négatif** | Devant | *No me lo des* |
+| Conjugué + infinitif | Les deux sont admis | *Te lo voy a decir* = *Voy a decírtelo* |
 
-> L'enclise ajoute souvent un accent écrit, pour garder la syllabe tonique d'origine : *da* → *dámelo*, *decir* → *decírtelo*.
+> L’enclise ajoute souvent un **accent écrit**, pour garder la syllabe tonique d’origine : *da* devient *dámelo*, *decir* devient *decírtelo*.
 
-## L'ordre : COI avant COD
-Toujours, et sans exception : *Me lo da* (il me le donne), *Te la doy.*
+## L’ordre : COI avant COD
+Toujours, et sans exception : *Me lo da* (il me le donne), *Te la doy*.
 
 ## Le « le » qui devient « se »
-Quand *le* ou *les* rencontre *lo, la, los, las*, il se change en ***se*** : *le lo doy* est impossible → ***Se** lo doy* (je le lui donne). Pure question d'euphonie, mais faute lourde si on l'ignore.
+Quand *le* ou *les* rencontre *lo, la, los, las*, il se change en **se**.
+
+| Impossible | Correct |
+| *le lo doy* | *Se lo doy* — je le lui donne |
+| *les las digo* | *Se las digo* |
+
+Pure question d’euphonie — mais faute lourde si on l’ignore.
 
 ## Le redoublement
-L'espagnol répète très souvent le COI par un pronom, même quand le complément est exprimé : ***Le** doy el libro **a Juan***, ***A mí me** gusta. Loin d'être une lourdeur, c'est la norme.
+L’espagnol **répète** très souvent le COI par un pronom, même quand le complément est exprimé : *Le doy el libro a Juan*, *A mí me gusta*. Loin d’être une lourdeur, c’est la norme.
 
 ## Le leísmo
-En Castille, *le* s'emploie couramment comme COD pour une personne masculine : *Le vi* pour *Lo vi*. La RAE le tolère à ce seul cas ; ailleurs, on s'en tient à *lo*.`,
+En Castille, *le* s’emploie couramment comme COD pour une **personne masculine** : *Le vi* pour *Lo vi*. La RAE le tolère à ce seul cas ; ailleurs, on s’en tient à *lo*.`,
           },
           questions: [
             ['Dans quel ordre se placent les pronoms compléments ?', ['COI puis COD', 'COD puis COI', 'Selon la longueur du mot', 'Indifféremment'], 0, '*Me lo da*, *te la doy* : le COI passe toujours devant.'],
@@ -528,34 +655,43 @@ En Castille, *le* s'emploie couramment comme COD pour une personne masculine : *
           titre: 'Les possessifs',
           lecon: {
             titre: 'Mi, mío, el mío : trois emplois',
-            cours: `L'espagnol distingue deux séries de possessifs — l'une **avant** le nom, l'autre **après** — là où le français n'en a qu'une.
+            cours: `L’espagnol distingue **deux séries** de possessifs — l’une avant le nom, l’autre après — là où le français n’en a qu’une.
 
-## Les formes atones (devant le nom)
-*mi(s), tu(s), su(s), nuestro/a(s), vuestro/a(s), su(s).*
+## Les deux séries
+| | Atones (devant le nom) | Toniques (après, ou seuls) |
+| 1re sing. | *mi(s)* | *mío / a(s)* |
+| 2e sing. | *tu(s)* | *tuyo / a(s)* |
+| 3e sing. | *su(s)* | *suyo / a(s)* |
+| 1re plur. | *nuestro / a(s)* | *nuestro / a(s)* |
+| 2e plur. | *vuestro / a(s)* | *vuestro / a(s)* |
+| 3e plur. | *su(s)* | *suyo / a(s)* |
 
-Elles s'accordent avec **ce qui est possédé**, pas avec le possesseur : *mis libros* (mes livres), *nuestra casa*. Seuls *nuestro* et *vuestro* varient en genre.
+Elles s’accordent avec **ce qui est possédé**, pas avec le possesseur : *mis libros*, *nuestra casa*. Seuls *nuestro* et *vuestro* varient en genre.
 
-## Les formes toniques (après le nom, ou seules)
-*mío/a(s), tuyo/a(s), suyo/a(s), nuestro/a(s), vuestro/a(s), suyo/a(s).*
-
-Trois emplois :
-- après le nom, pour insister : *un amigo **mío*** (un ami à moi), *Dios **mío*** ;
-- comme attribut : *Este libro es **mío*** ;
-- avec l'article, comme pronom : *El **mío** es más grande.*
+## Les trois emplois de la forme tonique
+| Emploi | Exemple |
+| Après le nom, pour insister | *un amigo mío* — un ami à moi |
+| Comme attribut | *Este libro es mío* |
+| Avec l’article, comme pronom | *El mío es más grande* |
 
 ## Le problème de « su »
-*Su* peut signifier son, sa, leur, **votre** (de *usted*) : quatre possesseurs pour une seule forme. Quand le contexte ne suffit pas, on lève l'ambiguïté avec *de* + pronom : *su casa* → *la casa **de él***, *la casa **de usted***.
+*Su* peut signifier **son, sa, leur, votre** (de *usted*) : quatre possesseurs pour une seule forme.
+
+| Ambigu | Levé par *de* |
+| *su casa* | *la casa de él* · *la casa de ella* · *la casa de usted* |
 
 ## Le corps et les vêtements : pas de possessif
-C'est la différence la plus visible avec le français. Quand la possession est évidente, l'espagnol emploie **l'article défini** :
-- *Me lavo **las** manos* (je me lave les mains)
-- *Le duele **la** cabeza* (il a mal à la tête)
-- *Se quitó **el** abrigo* (il enleva son manteau)
+C’est la différence la plus visible avec le français. Quand la possession est évidente, l’espagnol emploie **l’article défini**.
 
-> Dire *mis manos* pour « mes mains » n'est pas faux mais sonne étrange : le pronom réfléchi porte déjà l'information.
+| En français | En espagnol |
+| Je me lave **les** mains | *Me lavo las manos* |
+| Il a mal à **la** tête | *Le duele la cabeza* |
+| Il enleva **son** manteau | *Se quitó el abrigo* |
+
+> Dire *mis manos* pour « mes mains » n’est pas faux, mais sonne étrange : le pronom réfléchi porte **déjà** l’information de possession.
 
 ## Le vocatif
-Après un nom en apostrophe, le possessif tonique suit : *¡Hijo **mío**!*, *¡Madre **mía**!*`,
+Après un nom en apostrophe, le possessif tonique suit : *¡Hijo mío!*, *¡Madre mía!*`,
           },
           questions: [
             ['Avec quoi le possessif espagnol s’accorde-t-il ?', ['Avec ce qui est possédé', 'Avec le possesseur', 'Avec le verbe', 'Avec l’article'], 0, '*Mis libros* : le -s vient des livres, pas de moi.'],
@@ -572,35 +708,35 @@ Après un nom en apostrophe, le possessif tonique suit : *¡Hijo **mío**!*, *¡
           titre: 'Les pronoms relatifs',
           lecon: {
             titre: 'Que, quien, el que, cuyo',
-            cours: `Un seul pronom relatif couvre l'essentiel — *que* — mais les autres se placent exactement là où une copie se distingue.
+            cours: `Un seul pronom relatif couvre l’essentiel — *que* — mais les autres se placent exactement là où une copie se distingue.
+
+## Le tableau des relatifs
+| Pronom | Ce qu’il reprend | Quand l’employer |
+| **que** | Personnes et choses | Le cas général, sujet ou complément |
+| **quien / quienes** | **Personnes seulement** | Après préposition, ou en relative explicative |
+| **el que, la que, los que, las que** | Tout | Quand il faut marquer le genre et le nombre |
+| **el cual, la cual…** | Tout | Registre soutenu, après préposition longue |
+| **cuyo / a / os / as** | Un possesseur | Le « dont » de possession |
+| **lo que, lo cual** | Une **idée entière** | Jamais un nom |
+| **donde, cuando, como** | Lieu, temps, manière | Sans accent |
 
 ## Que
-Le plus fréquent, invariable, pour les **personnes comme les choses**, sujet ou complément : *El libro **que** leo*, *La chica **que** vino.* Après une préposition courte, on lui adjoint l'article : *el libro **del que** te hablé*, *la casa **en la que** vivo.*
+Invariable, le plus fréquent : *El libro que leo*, *La chica que vino*. Après une préposition, on lui adjoint l’article : *el libro del que te hablé*, *la casa en la que vivo*.
 
-## Quien / quienes
-**Personnes uniquement**, et jamais en relative déterminative sans préposition. On l'emploie :
-- après préposition : *la persona **con quien** hablo* ;
-- en relative explicative : *Mi hermano, **quien** vive en Madrid, es médico* ;
-- sans antécédent : *Quien mucho abarca, poco aprieta.*
-
-## El que, la que, los que, las que
-Ils marquent le **genre et le nombre**, donc ils lèvent les ambiguïtés : *La hermana de Juan, **la que** vive en Sevilla…* Sans antécédent, ils signifient « celui/celle qui » : *Los que quieran, que vengan.*
-
-## El cual, la cual, los cuales, las cuales
-Même valeur, **registre plus soutenu**, surtout après une préposition longue : *la razón **por la cual** te llamo*, *el motivo **sin el cual*** …
+## Quien
+Jamais en relative déterminative sans préposition. Trois emplois : après préposition (*la persona con quien hablo*), en relative explicative (*Mi hermano, quien vive en Madrid, es médico*), sans antécédent (*Quien mucho abarca, poco aprieta*).
 
 ## Cuyo : le « dont » possessif
-*cuyo, cuya, cuyos, cuyas* traduisent « dont » quand il exprime la **possession**, et s'accordent avec **ce qui est possédé**, pas avec le possesseur :
-- *El escritor **cuya** novela leí* (l'écrivain dont j'ai lu le roman)
-- *La casa **cuyos** muros son blancos.*
+Il s’accorde avec **ce qui est possédé**, jamais avec le possesseur.
 
-> *Cuyo* n'est jamais suivi d'un article : « cuyo el libro » n'existe pas. Et il ne s'emploie pas en question : « ¿Cuyo es? » est incorrect, on dit *¿De quién es?*
+| Exemple | Ce qui commande l’accord |
+| *El escritor cuya novela leí* | *novela*, féminin |
+| *La casa cuyos muros son blancos* | *muros*, masculin pluriel |
+
+> Deux règles absolues : *cuyo* n’est **jamais** suivi d’un article — « cuyo el libro » n’existe pas ; et il ne s’emploie **jamais** en question — on dit *¿De quién es?*, pas « ¿Cuyo es? ».
 
 ## Lo que, lo cual
-Pour reprendre une **idée entière**, jamais un nom : *Llegó tarde, **lo que** (ou **lo cual**) me molestó.*
-
-## Donde, cuando, como
-Relatifs d'espace, de temps et de manière, sans accent : *el pueblo **donde** nací*, *el día **cuando** llegaste*, *la manera **como** lo hizo.*`,
+Pour reprendre une **idée entière** : *Llegó tarde, lo que me molestó*. Reprendre une phrase par *el que* est une faute.`,
           },
           questions: [
             ['Avec quoi « cuyo » s’accorde-t-il ?', ['Avec ce qui est possédé', 'Avec le possesseur', 'Avec le verbe', 'Il est invariable'], 0, '*El escritor cuya novela leí* : *cuya* s’accorde avec *novela*.'],
@@ -617,32 +753,40 @@ Relatifs d'espace, de temps et de manière, sans accent : *el pueblo **donde** n
           titre: 'Les indéfinis',
           lecon: {
             titre: 'Alguien, nada, cualquiera, cada',
-            cours: `Les indéfinis désignent sans identifier. Ils vont par paires — un positif, un négatif — et quelques-uns réservent des surprises.
+            cours: `Les indéfinis désignent sans identifier. Ils vont par **paires** — un positif, un négatif — et quelques-uns réservent des surprises.
 
-## Les personnes : alguien / nadie
-Invariables, toujours singuliers : *¿Hay **alguien**?* — *No hay **nadie**.* Avec un COD personne, la préposition *a* est obligatoire : *No veo **a nadie**.*
+## Les paires
+| Ce qu’ils désignent | Positif | Négatif | Variable ? |
+| Une personne | *alguien* | *nadie* | Invariables, toujours singuliers |
+| Une chose | *algo* | *nada* | Invariables |
+| Un élément d’un ensemble | *alguno* | *ninguno* | Accordés et **apocopés** |
 
-## Les choses : algo / nada
-Invariables également : *¿Quieres **algo**?* — *No quiero **nada**.* Employés avec un adjectif, ils prennent *de* : *algo **de** interesante*… ou plus couramment *algo interesante*.
+Avec un COD personne, la préposition *a* est obligatoire : *No veo a nadie*.
 
-## Alguno / ninguno
-Ceux-là s'accordent et s'**apocopent** devant un masculin singulier : *algún libro*, *ningún problema* ; mais *alguna casa*, *ninguna duda*, et *alguno de ellos* quand ils sont pronoms.
+## Alguno et ninguno
+| Position | Forme | Exemple |
+| Devant un masculin singulier | Apocopée | *algún libro*, *ningún problema* |
+| Devant un féminin | Complète | *alguna casa*, *ninguna duda* |
+| Comme pronom | Complète | *alguno de ellos* |
 
-> Placé **après** le nom, *alguno* prend un sens négatif renforcé : *No tengo duda **alguna*** = je n'ai aucun doute.
+> Placé **après** le nom, *alguno* prend un sens **négatif renforcé** : *No tengo duda alguna* = je n’ai aucun doute. La place inverse le sens.
 
-*Ninguno* s'emploie presque toujours au singulier : *ningún amigo vino*, pas « ningunos ».
+*Ninguno* s’emploie presque toujours au singulier : *ningún amigo vino*, jamais « ningunos ».
 
-## Cada
-Invariable, jamais de pluriel : *cada día*, *cada dos horas*. « Chacun » se dit *cada uno / cada una*. Ne pas confondre avec *todos los días* (tous les jours), qui insiste sur l'ensemble quand *cada día* détaille.
+## Cada et cualquiera
+| Mot | Sa règle | Exemple |
+| **cada** | Invariable, jamais de pluriel | *cada día*, *cada dos horas* |
+| *cada uno / una* | « Chacun » | *cada uno lo sabe* |
+| **cualquiera** | Apocopé en *cualquier* devant un nom, masculin **ou** féminin | *cualquier día*, *cualquier mujer* |
+| *cualquiera* seul | Garde le -a | *Cualquiera puede hacerlo* |
 
-## Cualquiera
-« N'importe lequel ». Il s'apocope en ***cualquier*** devant un nom, masculin **ou** féminin : *cualquier día*, *cualquier mujer*. Sans nom, il garde son *-a* : *Cualquiera puede hacerlo.* Pluriel rare : *cualesquiera*.
+*Cada día* détaille, *todos los días* insiste sur l’ensemble : ce n’est pas la même chose.
 
 ## Todo
-S'accorde : *todo el día, toda la noche, todos los alumnos*. Attention, il exige l'article : *todos **los** días*, jamais « todos días ».
+S’accorde, et **exige l’article** : *todo el día*, *toda la noche*, *todos los alumnos*. « Todos días » est une faute.
 
 ## Les autres à connaître
-*otro* (autre — sans article indéfini : *otro día*), *varios* (plusieurs), *mucho / poco* (accordés), *demasiado* (trop), *bastante*, *los demás* (les autres, le reste), *mismo* (même), *tal* (tel), *ambos* (tous les deux).`,
+*otro* (autre — sans article indéfini : *otro día*), *varios*, *mucho / poco* (accordés), *demasiado*, *bastante*, *los demás* (les autres, le reste), *mismo*, *tal*, *ambos* (tous les deux).`,
           },
           questions: [
             ['Comment traduire « je ne vois personne » ?', ['No veo a nadie', 'No veo nadie', 'Veo a nadie', 'No veo alguien'], 0, 'Double négation, et le *a* devant un COD de personne.'],
@@ -661,33 +805,38 @@ S'accorde : *todo el día, toda la noche, todos los alumnos*. Attention, il exig
             titre: 'Más que, tan como, tanto como',
             cours: `Trois structures suffisent — mais le choix entre *tan* et *tanto*, et entre *que* et *de*, se joue à chaque phrase.
 
-## La supériorité et l'infériorité
-**más… que** / **menos… que** : *Es **más alto que** yo*, *Tengo **menos dinero que** tú.* La structure vaut pour les adjectifs, les adverbes et les noms.
+## Les trois comparatifs
+| Relation | Structure | Exemple |
+| **Supériorité** | *más… que* | *Es más alto que yo* |
+| **Infériorité** | *menos… que* | *Tengo menos dinero que tú* |
+| **Égalité** — adjectif ou adverbe | *tan… como* | *Es tan alto como tú* |
+| **Égalité** — nom | *tanto / a / os / as… como* | *Tengo tantos libros como tú* |
+| **Égalité** — verbe | *tanto como* | *Trabaja tanto como yo* |
 
-## L'égalité : tan ou tanto
-- **tan + adjectif ou adverbe + como** : *Es **tan** alto **como** tú*, *Corre **tan** rápido **como** yo.*
-- **tanto/a/os/as + nom + como** : *Tengo **tantos** libros **como** tú*, *Bebe **tanta** agua **como** yo.*
-- **verbe + tanto como** : *Trabaja **tanto como** yo.*
-
-> Retenir la règle en une ligne : *tan* devant un mot **qualifiant**, *tanto* devant un mot **comptable** ou après un verbe.
+> La règle en une ligne : **tan** devant un mot qui **qualifie**, **tanto** devant un mot qui se **compte** — ou après un verbe.
 
 ## Que ou de devant un nombre
-Devant une **quantité chiffrée**, on emploie *de* et non *que* : *Tengo **más de** veinte libros*, *Cuesta **menos de** diez euros.*
+| Structure | Sens | Exemple |
+| *más de* + chiffre | Plus de | *Tengo más de veinte libros* |
+| *no… más que* + chiffre | **Seulement** | *No tengo más que diez euros* — je n’ai que dix euros |
+| *no… más de* + chiffre | Pas plus de | *No tengo más de diez euros* |
 
-Exception à connaître : dans une phrase **négative**, *más que* signifie « seulement » — *No tengo **más que** diez euros* (je n'ai que dix euros), à distinguer de *No tengo **más de** diez euros* (pas plus de dix).
+Les deux dernières lignes ne disent pas du tout la même chose : c’est le piège de la fiche.
 
 ## Les comparatifs irréguliers
-- *bueno → **mejor*** (meilleur), *malo → **peor*** (pire)
-- *grande → **mayor***, *pequeño → **menor*** (surtout pour l'âge et l'abstrait : *mi hermano mayor*)
-- *bien → **mejor***, *mal → **peor***
+| Adjectif ou adverbe | Comparatif |
+| *bueno*, *bien* | *mejor* |
+| *malo*, *mal* | *peor* |
+| *grande* | *mayor* |
+| *pequeño* | *menor* |
 
-Ils ne s'emploient jamais avec *más* : « más mejor » est une faute.
+*Mayor* et *menor* servent surtout pour l’âge et l’abstrait : *mi hermano mayor*. Et ils ne s’emploient **jamais** avec *más* : « más mejor » est une faute.
 
 ## Le second terme est une proposition
-On emploie alors *de lo que*, *del que*, *de la que* selon le cas : *Es **más** difícil **de lo que** parece*, *Tiene **más** dinero **del que** dice.*
+On emploie alors *de lo que*, *del que*, *de la que* : *Es más difícil de lo que parece*, *Tiene más dinero del que dice*.
 
 ## Le comparatif progressif
-*cada vez más / cada vez menos* : *Hace **cada vez más** calor.*`,
+*cada vez más / cada vez menos* : *Hace cada vez más calor*.`,
           },
           questions: [
             ['Comment traduire « aussi grand que toi » ?', ['Tan alto como tú', 'Tanto alto como tú', 'Más alto como tú', 'Tan alto que tú'], 0, '*Tan* devant un adjectif, *como* comme second terme.'],
@@ -704,36 +853,42 @@ On emploie alors *de lo que*, *del que*, *de la que* selon le cas : *Es **más**
           titre: 'Le superlatif',
           lecon: {
             titre: 'El más… de, et le suffixe -ísimo',
-            cours: `Deux superlatifs, et deux pièges : la préposition du superlatif relatif, et l'orthographe du suffixe absolu.
+            cours: `Deux superlatifs, et deux pièges : la **préposition** du superlatif relatif, et l’**orthographe** du suffixe absolu.
 
-## Le superlatif relatif
-Il compare à l'intérieur d'un ensemble : **el / la / los / las + (nom) + más ou menos + de**.
+## Les deux superlatifs
+| | Relatif | Absolu |
+| Ce qu’il fait | Il compare dans un ensemble | Il porte la qualité au maximum, sans comparer |
+| Sa structure | *el / la / los / las* + *más* ou *menos* + **de** | *muy* + adjectif, ou le suffixe **-ísimo** |
+| Exemple | *Es el alumno más inteligente de la clase* | *muy guapo*, *guapísimo* |
 
-*Es **el** alumno **más** inteligente **de** la clase.* — *Es **la** ciudad **menos** cara **del** país.*
+> Le piège du relatif : le complément se construit avec *de*, **jamais** avec *en*. Le français dit « le plus grand **du** monde », l’espagnol aussi : *el más grande del mundo*.
 
-> Le piège : le complément se construit avec ***de***, jamais avec *en*. Le français dit « le plus grand **du** monde », l'espagnol aussi : *el más grande **del** mundo*.
+Quand le nom est déjà exprimé avant, l’article ne se répète pas : *Mi hermano es el más alto*.
 
-Quand le nom est déjà exprimé avant, l'article ne se répète pas : *Mi hermano es **el más** alto.*
-
-## Le superlatif absolu
-Il n'y a pas de comparaison : la qualité est portée au maximum. Deux moyens :
-- **muy + adjectif** : *muy guapo* ;
-- le suffixe **-ísimo/a/os/as** : *guap**ísimo***, *rapid**ísimo***, *much**ísimo***.
-
-Les deux ne se cumulent jamais : « muy guapísimo » est une faute.
+Et les deux formes de l’absolu ne se cumulent jamais : « muy guapísimo » est une faute.
 
 ## Les changements orthographiques de -ísimo
-La finale disparaît, et la consonne s'ajuste pour garder le son :
-- *c → qu* : *rico → riqu**ísimo***, *blanco → blanqu**ísimo*** ;
-- *g → gu* : *largo → largu**ísimo*** ;
-- *z → c* : *feliz → felic**ísimo*** ;
-- diphtongue conservée ou non selon l'usage : *bueno → bon**ísimo*** (norme) ou *buen**ísimo*** (courant, admis) ; *fuerte → fort**ísimo***.
+La finale disparaît, et la consonne s’ajuste pour garder le **son**.
+
+| Changement | Exemple |
+| c devient qu | *rico* devient *riquísimo* · *blanco* devient *blanquísimo* |
+| g devient gu | *largo* devient *larguísimo* |
+| z devient c | *feliz* devient *felicísimo* |
+| Diphtongue réduite | *bueno* devient *bonísimo* (norme) ou *buenísimo* (courant, admis) |
+| Diphtongue réduite | *fuerte* devient *fortísimo* |
 
 ## Les superlatifs irréguliers savants
-*bueno → **óptimo***, *malo → **pésimo***, *grande → **máximo***, *pequeño → **mínimo***, *alto → **supremo***. Registre soutenu : à reconnaître à la lecture, à employer avec parcimonie.
+| Adjectif | Superlatif savant |
+| *bueno* | *óptimo* |
+| *malo* | *pésimo* |
+| *grande* | *máximo* |
+| *pequeño* | *mínimo* |
+| *alto* | *supremo* |
+
+Registre soutenu : à **reconnaître** à la lecture, à employer avec parcimonie.
 
 ## Renforcer autrement
-*sumamente, extremadamente, super-, requete-* : *un examen **super** difícil* (familier).`,
+*sumamente*, *extremadamente*, et les préfixes familiers *super-*, *requete-* : *un examen super difícil*.`,
           },
           questions: [
             ['Comment traduire « le plus grand du monde » ?', ['El más grande del mundo', 'El más grande en el mundo', 'El mucho grande del mundo', 'El más grande que el mundo'], 0, 'Le complément du superlatif relatif se construit avec *de*.'],
@@ -750,37 +905,39 @@ La finale disparaît, et la consonne s'ajuste pour garder le son :
           titre: 'L’apocope',
           lecon: {
             titre: 'Les mots qui perdent leur fin',
-            cours: `L'apocope est la chute de la finale d'un mot devant un autre. L'espagnol en fait un usage réglé : ce n'est pas un relâchement, c'est une obligation.
+            cours: `L’apocope est la chute de la finale d’un mot devant un autre. L’espagnol en fait un usage **réglé** : ce n’est pas un relâchement, c’est une obligation.
 
 ## Devant un nom masculin singulier
-Ces mots perdent leur *-o* final :
-- *uno → **un** libro*
-- *alguno → **algún** día*, *ninguno → **ningún** problema*
-- *bueno → **buen** amigo*, *malo → **mal** tiempo*
-- *primero → **primer** piso*, *tercero → **tercer** año*
-- *postrero → **postrer** día* (rare)
+| Forme pleine | Apocopée | Exemple |
+| *uno* | *un* | *un libro* |
+| *alguno* | *algún* | *algún día* |
+| *ninguno* | *ningún* | *ningún problema* |
+| *bueno* | *buen* | *buen amigo* |
+| *malo* | *mal* | *mal tiempo* |
+| *primero* | *primer* | *primer piso* |
+| *tercero* | *tercer* | *tercer año* |
 
-Devant un féminin, rien ne change : *una casa*, *buena idea*, *primera vez*.
+Devant un **féminin**, rien ne change : *una casa*, *buena idea*, *primera vez*.
 
-> Attention : l'apocope ne joue que si l'adjectif est **immédiatement** devant le nom. *Un **buen** amigo*, mais *un amigo **bueno***, et *el **primero** de la clase* (sans nom derrière).
+> L’apocope ne joue que si l’adjectif est **immédiatement** devant le nom : *un buen amigo*, mais *un amigo bueno* — et *el primero de la clase*, sans nom derrière.
 
-## Grande → gran
-Devant un nom singulier, **masculin ou féminin** : *un **gran** hombre*, *una **gran** mujer*. Au pluriel, la forme entière revient : *grandes hombres*. Et le sens change avec la place : *gran* devant = important ; *grande* derrière = de grande taille.
+## Les apocopes particulières
+| Mot | Devient | Devant quoi | Exemple |
+| *grande* | **gran** | Un nom singulier, masculin **ou** féminin | *un gran hombre*, *una gran mujer* |
+| *ciento* | **cien** | Un nom, ou *mil* et *millones* | *cien euros*, *cien mil* |
+| *santo* | **san** | Un prénom masculin | *san Juan*, *san Pedro* |
+| *cualquiera* | **cualquier** | Tout nom | *cualquier día*, *cualquier mujer* |
+| *tanto* | **tan** | Un adjectif ou un adverbe | *tan alto*, *tan rápido* |
+| *recientemente* | **recién** | Un participe | *recién nacido*, *recién casados* |
 
-## Ciento → cien
-Devant un **nom** ou devant *mil* et *millones* : *cien euros*, *cien mil*, *cien millones*. Mais on garde *ciento* quand il est suivi d'un autre nombre ou employé seul : *ciento veinte*, *el ciento por ciento*.
+## Les exceptions à retenir
+| Règle | L’exception |
+| *grande* devient *gran* | Au **pluriel**, la forme entière revient : *grandes hombres* |
+| *ciento* devient *cien* | On garde *ciento* devant un autre nombre : *ciento veinte* |
+| *santo* devient *san* | **Sauf** devant To- et Do- : *Santo Tomás*, *Santo Domingo* |
+| *santo* devient *san* | Jamais au féminin : *santa Teresa* |
 
-## Santo → san
-Devant un prénom masculin : *san Juan*, *san Pedro*. **Sauf** devant *To-* et *Do-* : *Santo Tomás*, *Santo Domingo*, *Santo Tomé*. Au féminin, jamais d'apocope : *santa Teresa*.
-
-## Cualquiera → cualquier
-Devant tout nom, masculin ou féminin : *cualquier día*, *cualquier mujer*.
-
-## Tanto → tan, cuanto → cuán
-Devant un adjectif ou un adverbe : *tan alto*, *tan rápido*, *¡**cuán** hermoso!* (littéraire). Devant un nom, la forme pleine reste : *tanto dinero*.
-
-## Recientemente → recién
-Devant un participe : *recién nacido*, *recién llegado*, *recién casados*.`,
+Et le sens change avec la place : *gran* devant = important ; *grande* derrière = de grande taille.`,
           },
           questions: [
             ['Quelle est la forme apocopée de « bueno » devant un nom masculin ?', ['Buen', 'Bue', 'Buenó', 'Bon'], 0, '*Un buen amigo*, mais *un amigo bueno* garde la forme pleine.'],
@@ -798,30 +955,40 @@ Devant un participe : *recién nacido*, *recién llegado*, *recién casados*.`,
           titre: 'L’auxiliaire haber',
           lecon: {
             titre: 'Haber, l’auxiliaire unique',
-            cours: `L'espagnol n'a qu'un seul auxiliaire de temps composé : *haber*. Là où le français hésite entre « être » et « avoir », l'espagnol ne choisit jamais.
+            cours: `L’espagnol n’a qu’**un seul** auxiliaire de temps composé : *haber*. Là où le français hésite entre « être » et « avoir », l’espagnol ne choisit jamais.
 
 ## Le présent de haber
-*he, has, ha, hemos, habéis, han.* Suivi du participe passé, il forme le **pretérito perfecto** : *He comido*, *Han llegado.*
+*he, has, ha, hemos, habéis, han.* Suivi du participe passé, il forme le **pretérito perfecto** : *He comido*, *Han llegado*.
 
-## Le participe ne s'accorde jamais
-C'est la conséquence directe de l'auxiliaire unique : *La carta que he **escrito*** (jamais « escrita »), *Ellas han **venido***, *Nos hemos **lavado***. Aucun accord, dans aucun cas, avec *haber*.
-
-## Rien ne s'intercale
-Entre l'auxiliaire et le participe, on ne place ni pronom, ni adverbe, ni négation : *No lo he visto **nunca*** — jamais « he nunca visto », jamais « he lo visto ». Le bloc *haber + participe* est soudé.
+## Les deux conséquences de l’auxiliaire unique
+| Conséquence | Ce qu’elle interdit | Exemple |
+| Le participe **ne s’accorde jamais** | Aucun accord, dans aucun cas | *La carta que he escrito* — jamais « escrita » |
+| Le bloc est **soudé** | Ni pronom, ni adverbe, ni négation entre les deux | *No lo he visto nunca* — jamais « he nunca visto » |
 
 ## Hay : la forme impersonnelle
-*Hay* signifie « il y a », et il est **invariable** : *Hay un libro*, *Hay dos libros.* Aux autres temps : *había* (il y avait), *hubo* (il y eut), *habrá* (il y aura), *habría*, *ha habido*. Toujours au singulier, même devant un pluriel : *Había muchos alumnos.*
+*Hay* signifie « il y a », et il est **invariable** — même devant un pluriel.
 
-> Ne pas confondre *hay* (existence) et *está* (localisation d'une chose déjà connue) : *Hay un banco en la plaza* / *El banco **está** en la plaza.*
+| Temps | Forme | Exemple |
+| Présent | *hay* | *Hay dos libros* |
+| Imparfait | *había* | *Había muchos alumnos* |
+| Passé simple | *hubo* | *Hubo un accidente* |
+| Futur | *habrá* | *Habrá una fiesta* |
+| Passé composé | *ha habido* | *Ha habido cambios* |
+
+> Ne pas confondre *hay* et *está* : *hay* pose l’**existence** d’une chose non encore identifiée, *está* donne la **localisation** d’une chose déjà connue. *Hay un banco en la plaza* / *El banco está en la plaza*.
 
 ## Les autres temps composés
-- **plus-que-parfait** : *había + participe* — *Había salido cuando llegué* ;
-- **futur antérieur** : *habré + participe* — *A las ocho ya habré terminado* ;
-- **conditionnel passé** : *habría + participe* ;
-- **subjonctif** : *haya + participe* (*Espero que haya llegado*), *hubiera / hubiese + participe.*
+| Temps | Formation | Exemple |
+| Plus-que-parfait | *había* + participe | *Había salido cuando llegué* |
+| Futur antérieur | *habré* + participe | *A las ocho ya habré terminado* |
+| Conditionnel passé | *habría* + participe | *Habría venido* |
+| Subjonctif passé | *haya* + participe | *Espero que haya llegado* |
+| Subjonctif plus-que-parfait | *hubiera / hubiese* + participe | *Si hubiera sabido…* |
 
 ## Haber que et haber de
-*Hay que + infinitif* exprime l'obligation impersonnelle : *Hay que estudiar* (il faut étudier). *Haber de + infinitif* exprime une obligation atténuée ou une prévision, d'un registre plus littéraire : *He de irme.*`,
+| Structure | Ce qu’elle exprime | Exemple |
+| *hay que* + infinitif | Une obligation **impersonnelle** | *Hay que estudiar* — il faut étudier |
+| *haber de* + infinitif | Une obligation atténuée, littéraire | *He de irme* |`,
           },
           questions: [
             ['Combien l’espagnol a-t-il d’auxiliaires de temps composés ?', ['Un seul : haber', 'Deux : haber et ser', 'Deux : haber et tener', 'Trois'], 0, 'Contrairement au français, aucune hésitation entre « être » et « avoir ».'],
@@ -838,32 +1005,38 @@ Entre l'auxiliaire et le participe, on ne place ni pronom, ni adverbe, ni négat
           titre: 'Les verbes pronominaux',
           lecon: {
             titre: 'Se, et ses cinq valeurs',
-            cours: `Le pronom réfléchi espagnol se comporte comme en français — sauf qu'il se **soude** au verbe dans trois cas, et qu'il couvre des emplois que le français rend autrement.
+            cours: `Le pronom réfléchi espagnol se comporte comme en français — sauf qu’il se **soude** au verbe dans trois cas, et qu’il couvre des emplois que le français rend autrement.
 
-## Les formes
-*me, te, se, nos, os, se.* Ils s'accordent avec le sujet : *yo **me** lavo, tú **te** lavas, él **se** lava.*
+## Les formes et la place
+*me, te, se, nos, os, se.* Ils s’accordent avec le sujet : *yo me lavo, tú te lavas, él se lava*.
 
-## La place
-Devant le verbe conjugué (*Me levanto a las siete*), mais **soudé** derrière l'infinitif, le gérondif et l'impératif affirmatif : *levantar**se***, *levantándo**se***, *¡levánta**te**!* Avec un semi-auxiliaire, les deux placements sont admis : *Me voy a levantar* = *Voy a levantar**me**.*
+| Le verbe est… | Le pronom se place… | Exemple |
+| Conjugué | **Devant** | *Me levanto a las siete* |
+| À l’infinitif | Soudé derrière | *levantarse* |
+| Au gérondif | Soudé derrière | *levantándose* |
+| À l’impératif affirmatif | Soudé derrière | *¡levántate!* |
+| Avec un semi-auxiliaire | Les deux sont admis | *Me voy a levantar* = *Voy a levantarme* |
 
-## Les cinq valeurs
-- **réfléchie** : l'action revient sur le sujet — *Se lava* (il se lave lui-même) ;
-- **réciproque** : plusieurs sujets agissent l'un sur l'autre — *Se escriben* (ils s'écrivent) ;
-- **lexicale** : le pronom fait partie du verbe — *quejarse* (se plaindre), *arrepentirse*, *atreverse*, *darse cuenta de* ;
-- **passive** (*se* pasiva) : *Se venden pisos* (des appartements sont à vendre) — le verbe s'accorde avec le sujet ;
-- **impersonnelle** : *Se dice que…* (on dit que), *Aquí se come bien* — verbe toujours au **singulier**.
+## Les cinq valeurs de « se »
+| Valeur | Ce qu’elle dit | Exemple |
+| **Réfléchie** | L’action revient sur le sujet | *Se lava* — il se lave lui-même |
+| **Réciproque** | Plusieurs sujets agissent l’un sur l’autre | *Se escriben* — ils s’écrivent |
+| **Lexicale** | Le pronom fait partie du verbe | *quejarse*, *arrepentirse*, *atreverse*, *darse cuenta de* |
+| **Passive** | Le verbe **s’accorde** avec le sujet | *Se venden pisos* — des appartements à vendre |
+| **Impersonnelle** | Le verbe reste au **singulier** | *Se dice que…*, *Aquí se come bien* |
 
-> *Se venden pisos* (passive : accord) contre *Se habla de política* (impersonnelle : singulier). C'est le même *se*, deux constructions.
+> Les deux dernières se ressemblent et ne se conjuguent pas pareil : *Se venden pisos* (passive, accord au pluriel) contre *Se habla de política* (impersonnelle, singulier). C’est le même *se*, deux constructions.
 
 ## Le pronominal qui change le sens
-- *ir* (aller) / *irse* (partir) — *Me voy* = je m'en vais
-- *dormir* (dormir) / *dormirse* (s'endormir)
-- *quedar* (rester, convenir) / *quedarse* (rester sur place)
-- *acordar* (décider) / *acordarse de* (se souvenir de)
-- *poner* (mettre) / *ponerse* (se mettre, devenir)
+| Sans pronom | Avec pronom |
+| *ir* — aller | *irse* — partir : *Me voy* |
+| *dormir* — dormir | *dormirse* — s’endormir |
+| *quedar* — convenir | *quedarse* — rester sur place |
+| *acordar* — décider | *acordarse de* — se souvenir |
+| *poner* — mettre | *ponerse* — se mettre, devenir |
 
-## Le pronominal d'intensité
-Sans valeur réfléchie, il ajoute une nuance d'appropriation : *Se comió toda la tarta* (il s'est enfilé toute la tarte), *Se bebió un litro.*`,
+## Le pronominal d’intensité
+Sans aucune valeur réfléchie, il ajoute une nuance d’appropriation : *Se comió toda la tarta* (il s’est enfilé toute la tarte), *Se bebió un litro*.`,
           },
           questions: [
             ['Où se place le pronom réfléchi avec un infinitif ?', ['Soudé derrière : levantarse', 'Devant l’infinitif', 'En fin de phrase', 'Devant le sujet'], 0, 'Même chose au gérondif et à l’impératif affirmatif.'],
@@ -880,34 +1053,45 @@ Sans valeur réfléchie, il ajoute une nuance d'appropriation : *Se comió toda 
           titre: 'Les verbes à diphtongue',
           lecon: {
             titre: 'E → ie, o → ue : l’accent tonique commande',
-            cours: `Une famille entière de verbes espagnols change de voyelle au présent. Ce n'est pas une irrégularité capricieuse : c'est **l'accent tonique** qui la déclenche.
+            cours: `Une famille entière de verbes espagnols change de voyelle au présent. Ce n’est pas une irrégularité capricieuse : c’est **l’accent tonique** qui la déclenche.
 
 ## La règle
-Quand l'accent tonique tombe sur la voyelle du radical, celle-ci **diphtongue** :
-- **e → ie** : *pensar → **pie**nso*
-- **o → ue** : *poder → **pue**do*
-- **u → ue** : un seul verbe, *jugar → **jue**go*
+Quand l’accent tonique tombe sur la voyelle du radical, celle-ci **diphtongue**. Quand il se déplace sur la terminaison, elle revient à sa forme simple.
 
-Quand l'accent se déplace sur la terminaison, la voyelle **revient à sa forme simple**.
+| Changement | Exemple |
+| e devient **ie** | *pensar* devient *pienso* |
+| o devient **ue** | *poder* devient *puedo* |
+| u devient **ue** | *jugar* devient *juego* — un seul verbe |
 
 ## La conjugaison en botte
-*Pensar* au présent : *p**ie**nso, p**ie**nsas, p**ie**nsa, pensamos, pensáis, p**ie**nsan.* Les quatre formes qui diphtonguent dessinent une botte autour des deux formes de *nosotros* et *vosotros*, qui restent régulières. Cette botte est le meilleur moyen mnémotechnique du chapitre.
+| Personne | Forme | Diphtongue ? |
+| yo | *pienso* | Oui |
+| tú | *piensas* | Oui |
+| él / ella | *piensa* | Oui |
+| **nosotros** | *pensamos* | **Non** |
+| **vosotros** | *pensáis* | **Non** |
+| ellos / ellas | *piensan* | Oui |
 
-> Toute la difficulté tient là : *nosotros* et *vosotros* portent l'accent sur la terminaison, donc jamais de diphtongue.
+> Les quatre formes qui diphtonguent dessinent une **botte** autour de *nosotros* et *vosotros* — les deux seules personnes où l’accent tombe sur la terminaison. C’est le meilleur moyen mnémotechnique du chapitre, et il explique la règle au lieu de la faire réciter.
 
 ## Où la diphtongue apparaît
-Au **présent de l'indicatif**, au **présent du subjonctif** (*piense, pienses, piense, pensemos, penséis, piensen* — même botte) et à l'**impératif** (*¡piensa!*). Nulle part ailleurs : *pensé*, *pensaba*, *pensaré* sont réguliers.
+| Temps | Diphtongue ? | Exemple |
+| Présent de l’indicatif | Oui | *pienso* |
+| Présent du subjonctif | Oui, même botte | *piense… pensemos… piensen* |
+| Impératif | Oui | *¡piensa!* |
+| Passé simple, imparfait, futur | **Non** | *pensé*, *pensaba*, *pensaré* |
 
 ## Les verbes à connaître
-- **e → ie** : *pensar, empezar, cerrar, despertar, sentar, querer, entender, perder, encender, preferir, sentir, mentir, divertirse* ;
-- **o → ue** : *poder, contar, encontrar, recordar, acostarse, volar, soñar, volver, mover, doler, morir, dormir* ;
-- **u → ue** : *jugar.*
+| Changement | Verbes |
+| e devient ie | *pensar, empezar, cerrar, despertar, sentar, querer, entender, perder, encender, preferir, sentir, mentir, divertirse* |
+| o devient ue | *poder, contar, encontrar, recordar, acostarse, volar, soñar, volver, mover, doler, morir, dormir* |
+| u devient ue | *jugar* |
 
 ## Un cas à part
-*Oler* (sentir une odeur) prend un **h** à l'écrit quand il diphtongue : *huelo, hueles, huele… olemos, oléis, huelen.*
+*Oler* (sentir une odeur) prend un **h** à l’écrit quand il diphtongue : *huelo, hueles, huele… olemos, oléis, huelen*.
 
 ## Ne pas confondre
-Un verbe à diphtongue n'est pas un verbe à affaiblissement (*pedir → pido*), où le *e* devient *i*. Les deux se ressemblent à l'oreille, pas dans la règle.`,
+Un verbe à **diphtongue** n’est pas un verbe à **affaiblissement** (*pedir* devient *pido*), où le e devient i. Les deux se ressemblent à l’oreille, pas dans la règle.`,
           },
           questions: [
             ['Qu’est-ce qui déclenche la diphtongue ?', ['L’accent tonique sur la voyelle du radical', 'La terminaison en -ar', 'Le pluriel', 'La négation'], 0, 'Quand l’accent passe sur la terminaison, la voyelle redevient simple.'],
@@ -924,31 +1108,50 @@ Un verbe à diphtongue n'est pas un verbe à affaiblissement (*pedir → pido*),
           titre: 'Les verbes à affaiblissement',
           lecon: {
             titre: 'E → i : la famille de pedir',
-            cours: `Deuxième famille d'irréguliers du radical : ceux où le *e* ne diphtongue pas mais **s'affaiblit** en *i*. Ils sont tous du troisième groupe, en *-ir*.
+            cours: `Deuxième famille d’irréguliers du radical : ceux où le *e* ne diphtongue pas mais **s’affaiblit** en *i*. Ils sont **tous** du troisième groupe, en *-ir*.
 
 ## La règle
-Sous l'accent tonique, le *e* du radical devient *i* : *pedir → **pi**do, **pi**des, **pi**de, pedimos, pedís, **pi**den.* Même botte que pour la diphtongue : *nosotros* et *vosotros* restent réguliers.
+Sous l’accent tonique, le *e* du radical devient *i* — avec la même botte que la diphtongue.
+
+| Personne | Forme | Affaiblissement ? |
+| yo | *pido* | Oui |
+| tú | *pides* | Oui |
+| él / ella | *pide* | Oui |
+| **nosotros** | *pedimos* | **Non** |
+| **vosotros** | *pedís* | **Non** |
+| ellos / ellas | *piden* | Oui |
 
 ## Ils sont tous en -ir
-C'est le repère le plus économique : aucun verbe en *-ar* ou en *-er* ne s'affaiblit. *Pedir, servir, repetir, seguir, conseguir, elegir, corregir, medir, vestir(se), reír, sonreír, despedirse, impedir, competir.*
+C’est le repère le plus économique : **aucun** verbe en *-ar* ou en *-er* ne s’affaiblit.
 
-## Où l'affaiblissement se produit
-Plus largement que la diphtongue :
-- **présent de l'indicatif** : *pido* ;
-- **présent du subjonctif**, à **toutes** les personnes cette fois : *pida, pidas, pida, **pidamos**, **pidáis**, pidan* ;
-- **3es personnes du passé simple** : *pidió, pidieron* (mais *pedí, pediste…*) ;
-- **imparfait du subjonctif**, dérivé du passé simple : *pidiera, pidiese* ;
-- **gérondif** : *p**i**diendo*, *s**i**rviendo*, *d**i**ciendo.*
+*Pedir, servir, repetir, seguir, conseguir, elegir, corregir, medir, vestirse, reír, sonreír, despedirse, impedir, competir.*
 
-> Le repère qui sauve : dès que la terminaison contient un *ie* ou un *ió*, l'affaiblissement s'applique. *Pidió*, jamais « pedió ».
+## Où l’affaiblissement se produit
+Plus largement que la diphtongue.
+
+| Temps | Où | Exemple |
+| Présent de l’indicatif | Dans la botte | *pido* |
+| Présent du subjonctif | À **toutes** les personnes | *pida, pidas, pida, pidamos, pidáis, pidan* |
+| Passé simple | Aux **3es personnes** seulement | *pidió, pidieron* — mais *pedí, pediste* |
+| Imparfait du subjonctif | Partout, dérivé du passé simple | *pidiera, pidiese* |
+| Gérondif | Toujours | *pidiendo*, *sirviendo*, *diciendo* |
+
+> Le repère qui sauve : dès que la **terminaison** contient un *ie* ou un *ió*, l’affaiblissement s’applique. *Pidió*, jamais « pedió ».
 
 ## Les verbes mixtes
-Quelques verbes en *-ir* diphtonguent au présent **et** s'affaiblissent ailleurs : *sentir* (*siento*, mais *sintió*, *sintiendo*), *preferir* (*prefiero*, *prefirió*), *dormir* (*duermo*, mais *durmió*, *durmiendo*), *morir* (*muero*, *murió*, *muriendo*).
+Quelques verbes en *-ir* diphtonguent au présent **et** s’affaiblissent ailleurs.
+
+| Verbe | Au présent | Au passé simple et au gérondif |
+| *sentir* | *siento* | *sintió*, *sintiendo* |
+| *preferir* | *prefiero* | *prefirió*, *prefiriendo* |
+| *dormir* | *duermo* | *durmió*, *durmiendo* |
+| *morir* | *muero* | *murió*, *muriendo* |
 
 ## Les petits pièges orthographiques
-- *seguir* perd son *u* devant *o* et *a* : *sigo*, *siga* ;
-- *elegir* et *corregir* changent le *g* en *j* : *elijo*, *corrijo* ;
-- *reír* garde son accent : *río, ríes, ríe, reímos, reís, ríen* ; gérondif *riendo.*`,
+| Verbe | Le changement |
+| *seguir* | Perd son u devant o et a : *sigo*, *siga* |
+| *elegir*, *corregir* | Le g devient j : *elijo*, *corrijo* |
+| *reír* | Garde l’accent : *río, ríes, ríe, reímos, reís, ríen* ; gérondif *riendo* |`,
           },
           questions: [
             ['À quel groupe appartiennent tous les verbes à affaiblissement ?', ['Aux verbes en -ir', 'Aux verbes en -ar', 'Aux verbes en -er', 'À tous les groupes'], 0, '*Pedir, servir, repetir, seguir…* — aucun -ar ni -er.'],
@@ -965,41 +1168,43 @@ Quelques verbes en *-ir* diphtonguent au présent **et** s'affaiblissent ailleur
           titre: 'Ser et estar',
           lecon: {
             titre: 'Deux verbes « être », et tout se joue là',
-            cours: `C'est l'erreur la plus visible d'un francophone en espagnol, parce qu'elle tombe à chaque phrase. La différence n'est pas « permanent contre passager » — c'est plus fin que ça.
+            cours: `C’est l’erreur la plus visible d’un francophone en espagnol, parce qu’elle tombe à **chaque phrase**. Et la différence n’est pas « permanent contre passager » — c’est plus fin que ça.
 
-## Ser : ce qui définit
-Il dit **ce que la chose est**, l'identité, la classe à laquelle elle appartient :
-- identité, origine, nationalité, profession, religion : *Soy español*, *Es profesora* ;
-- caractéristique inhérente : *El hielo **es** frío*, *Es alto*, *Es simpático* ;
-- matière, possession, destination : *Es de madera*, *El libro **es** de Juan*, *Es para ti* ;
-- heure, date, prix, quantité : *Son las tres*, *Hoy **es** lunes*, *Son diez euros* ;
-- voix passive d'action : *La casa **fue** construida en 1920.*
+## Ser ou estar ?
+| | **Ser** — ce qui définit | **Estar** — ce qui se constate |
+| La question à laquelle il répond | Qu’est-ce que c’est ? | Comment est-ce, en ce moment ? |
+| Identité, origine, profession | *Soy español*, *Es profesora* | |
+| Caractéristique inhérente | *El hielo es frío*, *Es alto* | |
+| Matière, possession, destination | *Es de madera*, *Es para ti* | |
+| Heure, date, prix | *Son las tres*, *Hoy es lunes* | |
+| Localisation | | *Madrid está en España* |
+| État, humeur, santé | | *Estoy cansado*, *Está enfermo* |
+| Résultat d’un changement | | *La sopa está fría* — elle a refroidi |
+| Forme progressive | | *Estoy estudiando* |
 
-## Estar : ce qui se constate
-Il dit **dans quel état la chose se trouve** à un moment donné :
-- localisation d'une chose ou d'une personne : *Madrid **está** en España* ;
-- état, humeur, santé : *Estoy cansado*, *Está enfermo*, *Está contenta* ;
-- résultat d'un changement : *La sopa **está** fría* (elle a refroidi) ;
-- forme progressive : *Estoy **estudiando*** ;
-- avec un participe, l'état résultant : *La puerta **está** cerrada.*
-
-> Le raccourci qui marche presque toujours : *ser* répond à « qu'est-ce que c'est ? », *estar* à « comment est-ce, en ce moment ? »
+> Le raccourci qui marche presque toujours : *ser* répond à « **qu’est-ce que c’est ?** », *estar* à « **comment est-ce, maintenant ?** »
 
 ## Les adjectifs qui changent de sens
-Ce ne sont pas des nuances, ce sont des mots différents :
-- *ser listo* (malin) / *estar listo* (prêt)
-- *ser aburrido* (ennuyeux) / *estar aburrido* (s'ennuyer)
-- *ser rico* (riche) / *estar rico* (délicieux)
-- *ser bueno* (bon, gentil) / *estar bueno* (bon au goût, en bonne santé)
-- *ser malo* (méchant) / *estar malo* (malade)
-- *ser vivo* (vif d'esprit) / *estar vivo* (en vie)
-- *ser verde* (de couleur verte) / *estar verde* (pas mûr)
+Ce ne sont pas des nuances : ce sont des mots différents.
 
-## Les expressions figées avec estar
-*estar de acuerdo, estar de vacaciones, estar de pie, estar a punto de, estar por, estar de moda.*
+| Avec *ser* | Avec *estar* |
+| *ser listo* — malin | *estar listo* — prêt |
+| *ser aburrido* — ennuyeux | *estar aburrido* — s’ennuyer |
+| *ser rico* — riche | *estar rico* — délicieux |
+| *ser bueno* — bon, gentil | *estar bueno* — bon au goût, en forme |
+| *ser malo* — méchant | *estar malo* — malade |
+| *ser vivo* — vif d’esprit | *estar vivo* — en vie |
+| *ser verde* — de couleur verte | *estar verde* — pas mûr |
 
 ## Le piège de la localisation
-Un **événement** se situe avec *ser*, pas avec *estar* : *La fiesta **es** en mi casa* (elle a lieu chez moi), alors que *Mi casa **está** en el centro.*`,
+| Ce qu’on situe | Le verbe | Exemple |
+| Un **lieu**, une chose | *estar* | *Mi casa está en el centro* |
+| Un **événement** | *ser* | *La fiesta es en mi casa* — elle a lieu chez moi |
+
+C’est le seul cas où *ser* localise : parce qu’un événement n’est pas quelque part, il **a lieu** quelque part.
+
+## Les expressions figées avec estar
+*estar de acuerdo*, *estar de vacaciones*, *estar de pie*, *estar a punto de*, *estar por*, *estar de moda*.`,
           },
           questions: [
             ['Quel verbe employer pour la localisation d’une chose ?', ['Estar', 'Ser', 'Haber', 'Tener'], 0, '*Madrid está en España* — mais un événement se situe avec *ser*.'],
@@ -1016,36 +1221,44 @@ Un **événement** se situe avec *ser*, pas avec *estar* : *La fiesta **es** en 
           titre: 'Le gérondif',
           lecon: {
             titre: 'Estar + gérondif, et les tournures de durée',
-            cours: `Le gérondif espagnol correspond à « en train de » plus qu'au gérondif français : il dit l'action **en cours**, dans son déroulement.
+            cours: `Le gérondif espagnol correspond à « **en train de** » plus qu’au gérondif français : il dit l’action **en cours**, dans son déroulement.
 
 ## La formation
-- verbes en *-ar* → **-ando** : *hablar → hablando* ;
-- verbes en *-er* et *-ir* → **-iendo** : *comer → comiendo*, *vivir → viviendo*.
+| Infinitif en… | Gérondif en… | Exemple |
+| -ar | **-ando** | *hablar* devient *hablando* |
+| -er, -ir | **-iendo** | *comer* devient *comiendo* |
 
-**Irréguliers** : *decir → diciendo*, *pedir → pidiendo*, *dormir → durmiendo*, *morir → muriendo*, *poder → pudiendo*, *venir → viniendo*, *ir → yendo*, *leer → leyendo*, *oír → oyendo*, *caer → cayendo*, *construir → construyendo*.
+| Irrégulier | Gérondif |
+| *decir* | *diciendo* |
+| *pedir* | *pidiendo* |
+| *dormir* | *durmiendo* |
+| *morir* | *muriendo* |
+| *poder* | *pudiendo* |
+| *venir* | *viniendo* |
+| *ir* | *yendo* |
 
-> Le *-iendo* devient *-yendo* après une voyelle : *leyendo*, *oyendo*, *cayendo*, *yendo*.
+> Le *-iendo* devient **-yendo** après une voyelle : *leyendo*, *oyendo*, *cayendo*, *construyendo*, *yendo*.
 
 ## Estar + gérondif
-La forme progressive, beaucoup plus employée qu'en français : *Estoy **comiendo*** (je suis en train de manger), *Estaba **lloviendo***, *¿Qué **estás haciendo**?*
+La forme progressive, **beaucoup plus employée** qu’en français : *Estoy comiendo* (je suis en train de manger), *Estaba lloviendo*, *¿Qué estás haciendo?*
 
 ## Les autres périphrases
-- *seguir / continuar + gérondif* : la continuation — *Sigue **lloviendo*** (il pleut toujours) ;
-- *llevar + durée + gérondif* : la durée écoulée — *Llevo dos años **estudiando** español* (j'étudie l'espagnol depuis deux ans) ;
-- *ir + gérondif* : la progression lente — *Va **mejorando*** (il va en s'améliorant) ;
-- *venir + gérondif* : une évolution qui vient du passé — *Viene **diciendo** lo mismo desde hace años* ;
-- *acabar + gérondif* : le point d'aboutissement — *Acabó **aceptando***.
+| Périphrase | Ce qu’elle exprime | Exemple |
+| *seguir / continuar* + gérondif | La continuation | *Sigue lloviendo* — il pleut toujours |
+| *llevar* + durée + gérondif | La durée écoulée | *Llevo dos años estudiando español* |
+| *ir* + gérondif | La progression lente | *Va mejorando* |
+| *venir* + gérondif | Une évolution venue du passé | *Viene diciendo lo mismo desde hace años* |
+| *acabar* + gérondif | Le point d’aboutissement | *Acabó aceptando* |
 
-## Le gérondif seul
-Il exprime la manière ou la simultanéité : *Salió **corriendo***, ***Estudiando**, se aprende.*
+La périphrase *llevar* est la plus rentable : elle rend le « depuis » français sans passer par une subordonnée.
 
 ## Ce que le gérondif ne peut pas faire
-- Il **ne qualifie pas un nom** : « una caja conteniendo libros » est un calque du français. On dit *una caja **que contiene** libros.*
-- Il n'exprime pas la **postériorité** : on ne dit pas « Se cayó rompiéndose el brazo » pour dire qu'il s'est cassé le bras en tombant après.
-- Après une préposition, l'espagnol emploie l'**infinitif**, pas le gérondif : *antes de **salir***, *sin **decir** nada*, *al **entrar***.
+| L’emploi interdit | Pourquoi | Ce qu’il faut dire |
+| Qualifier un **nom** | C’est un calque du français | *una caja que contiene libros*, jamais « conteniendo » |
+| Exprimer la **postériorité** | Le gérondif dit le simultané | Deux propositions, ou *y* + verbe conjugué |
 
-## Al + infinitif
-C'est la tournure qui traduit « en + participe présent » quand il y a simultanéité : ***Al entrar**, vi a Juan* (en entrant, j'ai vu Juan).`,
+## Le gérondif seul
+Il exprime la manière ou la simultanéité : *Salió corriendo*, *Estudiando, se aprende*.`,
           },
           questions: [
             ['Quelle est la terminaison du gérondif des verbes en -ar ?', ['-ando', '-iendo', '-yendo', '-ado'], 0, '*Hablar → hablando* ; les -er et -ir font *-iendo*.'],
@@ -1062,33 +1275,44 @@ C'est la tournure qui traduit « en + participe présent » quand il y a simulta
           titre: 'Le participe passé',
           lecon: {
             titre: 'Accord ou pas : la question qui tranche',
-            cours: `Le participe passé espagnol a une règle simple, à condition de savoir avec quoi il est employé.
+            cours: `Le participe passé espagnol a une règle simple, à condition de savoir **avec quoi** il est employé.
 
 ## La formation
-- verbes en *-ar* → **-ado** : *hablar → hablado* ;
-- verbes en *-er* et *-ir* → **-ido** : *comer → comido*, *vivir → vivido.*
+| Infinitif en… | Participe en… | Exemple |
+| -ar | **-ado** | *hablar* devient *hablado* |
+| -er, -ir | **-ido** | *comer* devient *comido* |
 
-**Irréguliers à connaître** : *abrir → abierto*, *cubrir → cubierto*, *decir → dicho*, *escribir → escrito*, *hacer → hecho*, *morir → muerto*, *poner → puesto*, *romper → roto*, *ver → visto*, *volver → vuelto*, *resolver → resuelto*, *satisfacer → satisfecho*.
+| Irrégulier | Participe | Irrégulier | Participe |
+| *abrir* | *abierto* | *poner* | *puesto* |
+| *cubrir* | *cubierto* | *romper* | *roto* |
+| *decir* | *dicho* | *ver* | *visto* |
+| *escribir* | *escrito* | *volver* | *vuelto* |
+| *hacer* | *hecho* | *resolver* | *resuelto* |
+| *morir* | *muerto* | *satisfacer* | *satisfecho* |
 
-## La règle d'accord, en une ligne
-- avec ***haber*** : **jamais** d'accord — *Ellas han **llegado***, *Las cartas que he **escrito***.
-- avec ***ser*** ou ***estar*** : accord avec le sujet — *La puerta está **cerrada***, *Las casas fueron **construidas***.
-- comme **adjectif** : accord avec le nom — *una carta **escrita** a mano.*
+## La règle d’accord, en une ligne
+| Employé avec… | Accord ? | Exemple |
+| *haber* | **Jamais** | *Ellas han llegado* · *Las cartas que he escrito* |
+| *ser* ou *estar* | Avec le **sujet** | *La puerta está cerrada* · *Las casas fueron construidas* |
+| Comme **adjectif** | Avec le **nom** | *una carta escrita a mano* |
 
-> C'est la seule règle du chapitre, mais elle se joue à chaque phrase : ce qui suit *haber* est figé, tout le reste s'accorde.
+> C’est la seule règle du chapitre, mais elle se joue à chaque phrase : ce qui suit *haber* est **figé**, tout le reste s’accorde.
 
 ## Ser + participe ou estar + participe
-- *ser* + participe = la **passive d'action**, on assiste au fait : *La casa **fue** construida en 1920* ;
-- *estar* + participe = l'**état résultant**, le fait est accompli : *La casa **está** construida.*
+| Construction | Ce qu’elle exprime | Exemple |
+| *ser* + participe | La **passive d’action** : on assiste au fait | *La casa fue construida en 1920* |
+| *estar* + participe | L’**état résultant** : le fait est accompli | *La casa está construida* |
 
-L'espagnol emploie d'ailleurs la passive avec *ser* beaucoup moins que le français : il lui préfère la tournure *se* (*Se construyó la casa en 1920*) ou la troisième personne du pluriel (*Construyeron la casa*).
+L’espagnol emploie d’ailleurs la passive avec *ser* **beaucoup moins** que le français : il lui préfère la tournure en *se* (*Se construyó la casa en 1920*) ou la troisième personne du pluriel (*Construyeron la casa*).
 
 ## Les participes doubles
 Quelques verbes ont **deux** participes : un régulier pour les temps composés, un irrégulier employé comme adjectif.
-- *freír* : *he freído* / *patatas **fritas***
-- *imprimir* : *he imprimido* / *un texto **impreso***
-- *soltar* : *he soltado* / *un perro **suelto***
-- *despertar* : *he despertado* / *está **despierto***`,
+
+| Verbe | Temps composé | Adjectif |
+| *freír* | *he freído* | *patatas fritas* |
+| *imprimir* | *he imprimido* | *un texto impreso* |
+| *soltar* | *he soltado* | *un perro suelto* |
+| *despertar* | *he despertado* | *está despierto* |`,
           },
           questions: [
             ['Le participe employé avec « haber » s’accorde-t-il ?', ['Jamais', 'Toujours', 'Seulement au féminin', 'Seulement au pluriel'], 0, '*Ellas han llegado*, *las cartas que he escrito*.'],
@@ -1105,37 +1329,40 @@ Quelques verbes ont **deux** participes : un régulier pour les temps composés,
           titre: 'Les verbes du type « gustar »',
           lecon: {
             titre: 'La construction inversée',
-            cours: `*Me gusta el cine* ne veut pas dire « je aime le cinéma » mais « le cinéma me plaît ». Toute la construction se lit à l'envers du français — et si on ne l'a pas comprise, on se trompe à chaque phrase.
+            cours: `*Me gusta el cine* ne veut pas dire « je aime le cinéma » mais « **le cinéma me plaît** ». Toute la construction se lit à l’envers du français — et si on ne l’a pas comprise, on se trompe à chaque phrase.
 
 ## Qui est le sujet ?
-Ce n'est pas la personne, c'est la **chose qui plaît**. La personne est un **complément d'objet indirect**, exprimé par *me, te, le, nos, os, les.*
+Ce n’est pas la personne : c’est **la chose qui plaît**. La personne est un complément d’objet indirect — *me, te, le, nos, os, les*.
 
-- *Me gusta **el cine***. → sujet : *el cine*, singulier → verbe au singulier.
-- *Me gusta**n** **las películas***. → sujet pluriel → verbe au pluriel.
+| Phrase | Le sujet | L’accord du verbe |
+| *Me gusta el cine* | *el cine*, singulier | Singulier |
+| *Me gustan las películas* | *las películas*, pluriel | **Pluriel** |
+| *Me gusta leer* | Un infinitif | Singulier |
+| *Me gusta leer y escribir* | Deux infinitifs | **Singulier quand même** |
 
-> D'où l'erreur à ne plus faire : « me gusta las películas ». Le verbe s'accorde avec ce qui plaît, jamais avec celui à qui ça plaît.
-
-## Avec un infinitif
-Un ou plusieurs infinitifs comptent pour un singulier : *Me gusta **leer***, *Me gusta **leer y escribir**.*
+> D’où l’erreur à ne plus faire : « me gusta las películas ». Le verbe s’accorde avec **ce qui plaît**, jamais avec celui à qui ça plaît.
 
 ## Le renforcement par « a »
-Pour insister ou lever une ambiguïté (*le* peut être *él*, *ella* ou *usted*), on ajoute *a* + pronom tonique : ***A mí me** gusta*, ***A él le** gusta*, ***A Juan le** gusta.* Le pronom complément reste obligatoire, même quand le nom est exprimé.
+*Le* peut renvoyer à *él*, *ella* ou *usted*. Pour insister ou lever l’ambiguïté, on ajoute *a* + pronom tonique — et le pronom complément **reste obligatoire**, même quand le nom est exprimé.
+
+*A mí me gusta* · *A él le gusta* · *A Juan le gusta*
 
 ## Les verbes de la même famille
-*encantar* (adorer), *interesar*, *importar*, *molestar*, *doler*, *apetecer*, *hacer falta*, *faltar*, *quedar*, *parecer*, *bastar*, *tocar*, *sobrar*, *convenir*, *costar*.
-
-- *Me **duele** la cabeza* (j'ai mal à la tête)
-- *Me **encantan** los perros*
-- *No me **importa***
-- *Nos **hacen falta** dos sillas*
-- *Me **queda** poco dinero*
+| Verbe | Sens | Exemple |
+| *encantar* | Adorer | *Me encantan los perros* |
+| *doler* | Avoir mal | *Me duele la cabeza* |
+| *importar* | Importer | *No me importa* |
+| *hacer falta* | Manquer, être nécessaire | *Nos hacen falta dos sillas* |
+| *quedar* | Rester | *Me queda poco dinero* |
+| *interesar*, *molestar*, *apetecer*, *faltar*, *parecer*, *bastar*, *tocar*, *sobrar*, *convenir*, *costar* | Même construction | |
 
 ## Répondre et enchaîner
-- accord : *A mí también* (moi aussi, après une affirmation), *A mí tampoco* (moi non plus, après une négation) ;
-- désaccord : *A mí sí* (moi si), *A mí no* (moi non).
+| Après une… | Accord | Désaccord |
+| Affirmation | *A mí también* | *A mí no* |
+| Négation | *A mí tampoco* | *A mí sí* |
 
 ## Le degré
-*Me gusta mucho / muchísimo*, *No me gusta nada*, *Me gusta más el cine que el teatro.* On ne dit pas « me gusta muy ».`,
+*Me gusta mucho / muchísimo*, *No me gusta nada*, *Me gusta más el cine que el teatro*. On ne dit **jamais** « me gusta muy ».`,
           },
           questions: [
             ['Dans « Me gustan las películas », quel est le sujet ?', ['Las películas', 'Me', 'Yo', 'Gustan'], 0, 'Le verbe s’accorde avec ce qui plaît, pas avec la personne.'],
@@ -1152,30 +1379,38 @@ Pour insister ou lever une ambiguïté (*le* peut être *él*, *ella* ou *usted*
           titre: 'L’obligation',
           lecon: {
             titre: 'Tener que, hay que, deber',
-            cours: `L'espagnol distingue nettement l'obligation qui s'adresse à **quelqu'un** de celle qui vaut **pour tout le monde**. Choisir la mauvaise, c'est changer le sens de la phrase.
+            cours: `L’espagnol distingue nettement l’obligation qui s’adresse à **quelqu’un** de celle qui vaut **pour tout le monde**. Choisir la mauvaise, c’est changer le sens de la phrase.
 
-## L'obligation personnelle : tener que
-La plus fréquente, la plus forte : ***tener que* + infinitif**. Elle a un sujet, donc elle vise quelqu'un.
-*Tengo que estudiar* (je dois étudier), *Tienes que venir*, *Tuvimos que salir.*
+## Les trois obligations
+| Structure | Ce qu’elle exprime | Sujet ? | Exemple |
+| *tener que* + infinitif | L’obligation personnelle, la plus forte | Oui | *Tengo que estudiar* |
+| *hay que* + infinitif | L’obligation impersonnelle, valable pour tous | **Non** | *Hay que estudiar para aprobar* |
+| *deber* + infinitif | Le devoir moral, le conseil pressant | Oui | *Debes respetar a tus padres* |
 
-## L'obligation impersonnelle : hay que
-***Hay que* + infinitif** : personne n'est visé, la règle vaut pour tous. Le verbe reste **invariable** : *Hay que estudiar para aprobar* (il faut étudier). Aux autres temps : *había que*, *habrá que*, *hubo que*.
+> C’est la distinction à tenir : *Tengo que trabajar* (moi, je dois) contre *Hay que trabajar* (il faut travailler, en général). Le français dit « il faut » dans les deux cas — l’espagnol non.
 
-> C'est la distinction à tenir : *Tengo que trabajar* (moi, je dois) contre *Hay que trabajar* (il faut travailler, en général).
+*Hay que* reste **invariable** ; aux autres temps : *había que*, *habrá que*, *hubo que*.
 
-## L'obligation morale : deber
-***Deber* + infinitif** exprime le devoir, l'obligation morale, le conseil pressant : *Debes respetar a tus padres*, *No debes fumar.*
+## Deber ou deber de
+| Structure | Ce qu’elle exprime | Exemple |
+| *deber* + infinitif | L’**obligation** | *Debes estudiar* — tu dois étudier |
+| *deber de* + infinitif | La **probabilité** | *Debe de estar enfermo* — il doit être malade, je suppose |
 
-Attention à ne pas confondre avec ***deber de* + infinitif***, qui exprime la **probabilité** : *Debe de estar enfermo* (il doit être malade — je suppose). La langue courante les mélange, l'examen non.
+La langue courante les mélange. L’examen, non.
 
 ## Les autres tournures
-- *haber de + infinitif* : obligation atténuée, registre soutenu ou littéraire — *He de irme* ;
-- *ser necesario / ser preciso / ser obligatorio que + subjonctif* : *Es necesario que **vengas*** ;
-- *hacer falta + infinitif ou que + subjonctif* : *Hace falta **estudiar***, *Hace falta que **estudies*** ;
-- l'**impératif** pour l'ordre direct : *¡Estudia!*, *¡No salgas!*
+| Tournure | Registre | Exemple |
+| *haber de* + infinitif | Soutenu, littéraire | *He de irme* |
+| *ser necesario / preciso que* + subjonctif | Neutre | *Es necesario que vengas* |
+| *hacer falta* + infinitif ou *que* + subjonctif | Courant | *Hace falta estudiar* · *Hace falta que estudies* |
+| L’**impératif** | L’ordre direct | *¡Estudia!* · *¡No salgas!* |
 
-## L'obligation au passé
-*Tenía que estudiar* (je devais, c'était prévu) contre *Tuve que estudiar* (j'ai dû, et je l'ai fait). L'imparfait laisse ouvert, le passé simple conclut.`,
+## L’obligation au passé
+| Temps | Ce qu’il dit | Exemple |
+| Imparfait | L’obligation existait — on ne sait pas si elle a été suivie | *Tenía que estudiar* |
+| Passé simple | L’obligation a été **exécutée** | *Tuve que estudiar* |
+
+L’imparfait laisse ouvert, le passé simple conclut.`,
           },
           questions: [
             ['Quelle tournure exprime une obligation personnelle ?', ['Tener que + infinitif', 'Hay que + infinitif', 'Soler + infinitif', 'Acabar de + infinitif'], 0, '*Tengo que estudiar* : l’obligation vise quelqu’un.'],
@@ -1192,34 +1427,44 @@ Attention à ne pas confondre avec ***deber de* + infinitif***, qui exprime la *
           titre: 'L’habitude',
           lecon: {
             titre: 'Soler, et les tournures de répétition',
-            cours: `L'espagnol possède un verbe que le français n'a pas : *soler*, qui dit à lui seul « avoir l'habitude de ». C'est la tournure la plus économique — et la plus valorisée dans une copie.
+            cours: `L’espagnol possède un verbe que le français n’a pas : *soler*, qui dit à lui seul « avoir l’habitude de ». C’est la tournure la plus **économique** — et la plus valorisée dans une copie.
 
 ## Soler + infinitif
-*Suelo levantarme temprano* (j'ai l'habitude de me lever tôt). C'est un verbe à **diphtongue** (*o → ue*) : *suelo, sueles, suele, solemos, soléis, suelen.*
+*Suelo levantarme temprano* — j’ai l’habitude de me lever tôt.
 
-Il ne s'emploie qu'au **présent** et à l'**imparfait** : *Solía ir al cine todos los domingos* (j'allais au cinéma tous les dimanches). Jamais au passé simple ni au futur — l'habitude n'est pas un événement.
+C’est un verbe à **diphtongue** (o devient ue) : *suelo, sueles, suele, solemos, soléis, suelen*.
 
-> Une phrase avec *soler* remplace toute une périphrase française : *suele llover* = « il a l'habitude de pleuvoir », « il pleut d'ordinaire ».
+| Temps | Employé ? | Exemple |
+| Présent | Oui | *Suele llover en otoño* |
+| Imparfait | Oui | *Solía ir al cine todos los domingos* |
+| Passé simple, futur | **Jamais** | L’habitude n’est pas un événement |
 
-## Acostumbrar a + infinitif
-Même sens, registre plus soutenu : *Acostumbra a llegar tarde.* La forme pronominale change de sens : *acostumbrarse a* = **s'habituer à** — *Me he acostumbrado al frío.*
+> Une seule phrase avec *soler* remplace toute une périphrase française : *suele llover* = « il a l’habitude de pleuvoir », « il pleut d’ordinaire ».
 
-## Tener la costumbre de
-Plus lourd mais toujours correct : *Tiene la costumbre de leer antes de dormir.*
-
-## L'imparfait suffit souvent
-Sans aucune périphrase, l'imparfait dit déjà l'habitude passée : *Cuando era pequeño, **jugaba** al fútbol.* C'est même son emploi principal.
+## Les autres tournures
+| Tournure | Sens | Registre |
+| *acostumbrar a* + infinitif | Avoir l’habitude de | Soutenu |
+| *acostumbrarse a* | **S’habituer à** — sens différent | Courant |
+| *tener la costumbre de* | Avoir l’habitude de | Lourd mais correct |
+| L’**imparfait** seul | L’habitude passée | Le plus fréquent : *Cuando era pequeño, jugaba al fútbol* |
 
 ## Les marqueurs de fréquence
-*siempre* (toujours), *a menudo / a veces* (souvent / parfois), *de vez en cuando* (de temps en temps), *cada día / todos los días*, *normalmente, generalmente, por lo general*, *casi nunca*, *nunca.*
+| Marqueur | Sens |
+| *siempre* | Toujours |
+| *a menudo* | Souvent |
+| *a veces* | Parfois |
+| *de vez en cuando* | De temps en temps |
+| *normalmente, generalmente, por lo general* | D’ordinaire |
+| *casi nunca*, *nunca* | Presque jamais, jamais |
 
-Attention à la nuance : *cada día* détaille jour après jour, *todos los días* embrasse l'ensemble.
+Attention à la nuance : *cada día* détaille jour après jour, *todos los días* embrasse l’ensemble.
 
-## Volver a + infinitif
-Pour la répétition d'une action ponctuelle, l'espagnol n'a pas de préfixe « re- » productif : il emploie *volver a*. *Volví a llamarlo* (je l'ai rappelé), *No vuelvas a hacerlo* (ne recommence pas).
+## Répéter et continuer
+| Structure | Ce qu’elle exprime | Exemple |
+| *volver a* + infinitif | Refaire une action ponctuelle | *Volví a llamarlo* — je l’ai rappelé |
+| *seguir* + gérondif | L’action qui continue | *Sigo estudiando español* |
 
-## Seguir + gérondif
-Pour l'action qui continue : *Sigo estudiando español.*`,
+L’espagnol n’a pas de préfixe « re- » productif comme le français : *volver a* en tient lieu, systématiquement.`,
           },
           questions: [
             ['Que signifie « Suelo levantarme temprano » ?', ['J’ai l’habitude de me lever tôt', 'Je me lève seul', 'Je viens de me lever', 'Je dois me lever tôt'], 0, '*Soler* + infinitif exprime l’habitude à lui seul.'],
@@ -1236,36 +1481,35 @@ Pour l'action qui continue : *Sigo estudiando español.*`,
           titre: 'La probabilité',
           lecon: {
             titre: 'Le futur et le conditionnel de supposition',
-            cours: `L'espagnol dispose d'un moyen d'exprimer la supposition que le français ne connaît pas : il conjugue le verbe au **futur** ou au **conditionnel** pour parler du présent ou du passé.
+            cours: `L’espagnol dispose d’un moyen d’exprimer la supposition que le français ne connaît pas : il conjugue le verbe au **futur** ou au **conditionnel** pour parler du **présent** ou du **passé**.
 
-## Le futur de probabilité
-Un futur qui ne parle pas de l'avenir mais du **présent** supposé :
-- *¿Qué hora es? — **Serán** las tres.* (il doit être trois heures)
-- ***Estará** enfermo.* (il doit être malade, en ce moment)
-- *¿Dónde está Juan? — **Estará** en casa.*
+## La règle, mécanique
+| Le temps employé | Sur quoi il suppose | Exemple |
+| **Futur** | Le **présent** | *¿Qué hora es? — Serán las tres* — il doit être trois heures |
+| **Conditionnel** | Le **passé** | *Serían las tres cuando llegó* — il devait être trois heures |
+| Futur antérieur | Un fait accompli, vu du présent | *Habrá salido* — il a dû sortir |
+| Conditionnel passé | Un fait accompli, vu du passé | *Habría salido* — il avait dû sortir |
 
-## Le conditionnel de probabilité
-Le même mécanisme, décalé d'un cran : il suppose sur le **passé**.
-- ***Serían** las tres cuando llegó.* (il devait être trois heures)
-- ***Tendría** veinte años entonces.* (il devait avoir vingt ans)
-
-> La règle est mécanique : futur → supposition sur le présent ; conditionnel → supposition sur le passé. Le futur antérieur (*habrá salido*) et le conditionnel passé (*habría salido*) supposent, eux, sur un fait accompli.
+*Estará enfermo* ne veut pas dire « il sera malade » mais « **il doit être** malade, en ce moment ». C’est le contresens le plus fréquent en version.
 
 ## Deber de + infinitif
-La tournure explicite : ***Debe de** estar enfermo* (il doit être malade). À ne pas confondre avec *deber* seul, qui exprime l'obligation : *Debe estudiar* (il doit étudier).
+La tournure explicite, à ne pas confondre avec *deber* seul.
+
+| Structure | Ce qu’elle exprime | Exemple |
+| *deber* + infinitif | L’**obligation** | *Debe estudiar* — il doit étudier |
+| *deber de* + infinitif | La **probabilité** | *Debe de estar enfermo* — il doit être malade |
 
 ## Les adverbes de doute
-*quizá(s), tal vez, acaso, posiblemente, probablemente* : ils se construisent avec l'**indicatif** si la probabilité est forte, avec le **subjonctif** si elle est faible.
-- *Quizás **viene** mañana* (je le crois assez)
-- *Quizás **venga** mañana* (je n'en sais rien)
+*quizá(s), tal vez, acaso, posiblemente, probablemente* se construisent avec l’un ou l’autre mode, **selon la force du doute**.
 
-***A lo mejor***, en revanche, est toujours suivi de l'**indicatif** : *A lo mejor **viene**.* C'est le piège classique.
+| Mode | Ce qu’il dit | Exemple |
+| **Indicatif** | La probabilité est forte | *Quizás viene mañana* — je le crois assez |
+| **Subjonctif** | La probabilité est faible | *Quizás venga mañana* — je n’en sais rien |
 
-## Puede que + subjonctif
-*Puede que **llueva*** (il se peut qu'il pleuve) : toujours au subjonctif, sans exception.
+> Deux exceptions absolues, et ce sont les pièges classiques : *a lo mejor* est **toujours** suivi de l’indicatif (*A lo mejor viene*), et *puede que* **toujours** du subjonctif (*Puede que llueva*).
 
 ## Les autres marques
-*seguramente, sin duda, a lo mejor, es probable que + subjonctif, parecer que + indicatif* (*Parece que va a llover*).`,
+*seguramente*, *sin duda*, *es probable que* + subjonctif, *parecer que* + indicatif (*Parece que va a llover*).`,
           },
           questions: [
             ['Que signifie « Serán las tres » ?', ['Il doit être trois heures', 'Il sera trois heures', 'Il était trois heures', 'Il faut qu’il soit trois heures'], 0, 'Le futur de probabilité suppose sur le PRÉSENT.'],
@@ -1282,34 +1526,47 @@ La tournure explicite : ***Debe de** estar enfermo* (il doit être malade). À n
           titre: 'Le conseil',
           lecon: {
             titre: 'Conseiller, suggérer, ordonner',
-            cours: `Conseiller, c'est doser : entre l'ordre brut et la suggestion polie, l'espagnol offre une échelle complète.
+            cours: `Conseiller, c’est doser. Entre l’ordre brut et la suggestion polie, l’espagnol offre une échelle complète — et le bac valorise celui qui sait en changer de barreau.
 
-## L'impératif : l'ordre direct
-- **affirmatif** : formes propres à *tú* et *vosotros* — *habla, come, vive* / *hablad, comed, vivid* ; les autres personnes empruntent au subjonctif — *hable (usted), hablemos, hablen.*
-- **irréguliers de tú** : *decir → di*, *hacer → haz*, *ir → ve*, *poner → pon*, *salir → sal*, *ser → sé*, *tener → ten*, *venir → ven.*
-- **négatif** : toujours au **subjonctif** — *no hables, no comas, no salgáis.*
+## L’échelle, du plus direct au plus poli
+| Registre | Structure | Exemple |
+| L’**ordre** | Impératif | *¡Estudia!* |
+| Le conseil ferme | *deberías* + infinitif | *Deberías descansar* |
+| La suggestion | *podrías* + infinitif | *Podrías llamarle* |
+| La question | *¿por qué no…?* | *¿Por qué no vas al médico?* |
+| L’invitation | *¿y si…?* + indicatif | *¿Y si salimos esta noche?* |
+| La politesse | *¿Te importaría…?*, *¿Podría usted…?* | |
 
-> L'impératif affirmatif soude les pronoms (*dímelo*), le négatif les place devant (*no me lo digas*).
+## L’impératif
+| Personne | Affirmatif | Négatif |
+| *tú* | *habla, come, vive* | *no hables, no comas* |
+| *vosotros* | *hablad, comed, vivid* | *no habléis, no comáis* |
+| *usted*, *nosotros*, *ustedes* | Emprunté au **subjonctif** | Idem |
 
-## Le conseil atténué
-- ***deberías* + infinitif** : *Deberías descansar* (tu devrais te reposer) — le conditionnel adoucit ;
-- ***podrías* + infinitif** : *Podrías llamarle* ;
-- ***¿por qué no…?*** : *¿Por qué no vas al médico?* ;
-- ***¿y si…?* + indicatif** : *¿Y si salimos esta noche?*
+| Irrégulier de *tú* | Forme |
+| *decir* | *di* |
+| *hacer* | *haz* |
+| *ir* | *ve* |
+| *poner* | *pon* |
+| *salir* | *sal* |
+| *ser* | *sé* |
+| *tener* | *ten* |
+| *venir* | *ven* |
+
+> Le négatif passe **toujours** au subjonctif. Et la place des pronoms bascule avec lui : l’affirmatif les soude (*dímelo*), le négatif les place devant (*no me lo digas*).
 
 ## Le conseil par le subjonctif
-Après un verbe de conseil ou de volonté, la subordonnée passe au subjonctif : *Te aconsejo que **vayas** al médico*, *Te recomiendo que **descanses***, *Te sugiero que lo **pienses***.
+Après un verbe de conseil ou de volonté, la subordonnée passe au subjonctif : *Te aconsejo que vayas al médico*, *Te recomiendo que descanses*, *Te sugiero que lo pienses*.
 
-Si le sujet ne change pas, on emploie l'infinitif : *Te aconsejo **descansar**.*
+Si le sujet ne change pas, on emploie l’infinitif : *Te aconsejo descansar*.
 
-## L'expression du souhait
-*Ojalá + subjonctif* : *Ojalá **apruebes***. Avec l'imparfait du subjonctif, le souhait devient improbable : *Ojalá **pudiera** ayudarte* (si seulement je pouvais).
+## Le souhait
+| Structure | Ce qu’elle dit | Exemple |
+| *ojalá* + subjonctif présent | Un souhait possible | *Ojalá apruebes* |
+| *ojalá* + imparfait du subjonctif | Un souhait **improbable** | *Ojalá pudiera ayudarte* — si seulement je pouvais |
 
-## Le conseil impersonnel
-*Hay que + infinitif* (il faut), *Lo mejor es + infinitif* (le mieux, c'est de), *Es mejor que + subjonctif*, *Conviene + infinitif.*
-
-## Adoucir : les formules de politesse
-*¿Te importaría…?*, *¿Podría usted…?*, *Si yo fuera tú…* (si j'étais toi), *Yo que tú…* (à ta place). Ces deux dernières se poursuivent au conditionnel : *Yo que tú, **iría** al médico.*`,
+## À la place de l’autre
+*Si yo fuera tú…* et *Yo que tú…* se poursuivent au **conditionnel** : *Yo que tú, iría al médico*.`,
           },
           questions: [
             ['Comment forme-t-on l’impératif négatif ?', ['Avec le subjonctif présent', 'Avec l’impératif affirmatif précédé de no', 'Avec l’infinitif', 'Avec le futur'], 0, '*No hables*, *no comas*, *no salgáis*.'],
@@ -1328,39 +1585,58 @@ Si le sujet ne change pas, on emploie l'infinitif : *Te aconsejo **descansar**.*
           titre: 'Le présent de l’indicatif',
           lecon: {
             titre: 'Trois conjugaisons et les irréguliers qui comptent',
-            cours: `Le présent est le temps le plus employé — et celui où se concentrent le plus d'irrégularités. Les connaître, c'est débloquer tous les autres temps qui en dérivent.
+            cours: `Le présent est le temps le plus employé — et celui où se concentrent le plus d’irrégularités. Les connaître, c’est débloquer **tous** les temps qui en dérivent, à commencer par le subjonctif.
 
 ## Les trois conjugaisons régulières
-- **-ar** (*hablar*) : *hablo, hablas, habla, hablamos, habláis, hablan*
-- **-er** (*comer*) : *como, comes, come, comemos, coméis, comen*
-- **-ir** (*vivir*) : *vivo, vives, vive, vivimos, vivís, viven*
+| Personne | -ar (*hablar*) | -er (*comer*) | -ir (*vivir*) |
+| yo | *hablo* | *como* | *vivo* |
+| tú | *hablas* | *comes* | *vives* |
+| él / ella | *habla* | *come* | *vive* |
+| nosotros | *hablamos* | *comemos* | *vivimos* |
+| vosotros | *habláis* | *coméis* | *vivís* |
+| ellos | *hablan* | *comen* | *viven* |
 
-Les deux dernières ne diffèrent qu'aux formes de *nosotros* et *vosotros*.
+Les deux dernières colonnes ne diffèrent qu’à *nosotros* et *vosotros*.
 
 ## Les irréguliers de la seule première personne
-Le reste de la conjugaison est régulier — d'où leur surnom de « verbes à *yo* irrégulier » :
-- *hacer → **hago***, *poner → **pongo***, *salir → **salgo***, *valer → **valgo***, *traer → **traigo***, *caer → **caigo*** ;
-- *conocer → **conozco***, et tous les verbes en *-cer* et *-cir* (*parecer → parezco*, *conducir → conduzco*) ;
-- *ver → **veo***, *saber → **sé***, *dar → **doy***, *caber → **quepo***.
+Le reste de la conjugaison est régulier — d’où leur surnom de verbes « à *yo* irrégulier ».
+
+| Verbe | 1re personne | Verbe | 1re personne |
+| *hacer* | *hago* | *conocer* | *conozco* |
+| *poner* | *pongo* | *conducir* | *conduzco* |
+| *salir* | *salgo* | *ver* | *veo* |
+| *traer* | *traigo* | *saber* | *sé* |
+| *caer* | *caigo* | *dar* | *doy* |
+| *valer* | *valgo* | *caber* | *quepo* |
+
+Tous les verbes en *-cer* et *-cir* suivent *conocer*.
 
 ## Les irréguliers du radical
-- **diphtongue** *e → ie* : *pensar → pienso* ; *o → ue* : *poder → puedo* ; *u → ue* : *jugar → juego* ;
-- **affaiblissement** *e → i* : *pedir → pido.*
+| Type | Changement | Exemple |
+| **Diphtongue** | e devient ie | *pensar* devient *pienso* |
+| Diphtongue | o devient ue | *poder* devient *puedo* |
+| Diphtongue | u devient ue | *jugar* devient *juego* |
+| **Affaiblissement** | e devient i | *pedir* devient *pido* |
 
-Dans les deux cas, *nosotros* et *vosotros* restent réguliers : c'est la conjugaison « en botte ».
+Dans les deux cas, *nosotros* et *vosotros* restent **réguliers** : c’est la conjugaison « en botte ».
 
-## Les cumulards
-Certains cumulent les deux irrégularités : *tener → **tengo**, tienes, tiene…* ; *venir → **vengo**, vienes…* ; *decir → **digo**, dices…* ; *oír → **oigo**, oyes, oye…*
+## Les cumulards et les totalement irréguliers
+| Verbe | Conjugaison |
+| *tener* | *tengo, tienes, tiene, tenemos, tenéis, tienen* |
+| *venir* | *vengo, vienes, viene, venimos, venís, vienen* |
+| *decir* | *digo, dices, dice, decimos, decís, dicen* |
+| *ser* | *soy, eres, es, somos, sois, son* |
+| *ir* | *voy, vas, va, vamos, vais, van* |
+| *haber* | *he, has, ha, hemos, habéis, han* |
+| *estar* | *estoy, estás, está, estamos, estáis, están* |
 
-## Les totalement irréguliers
-*ser* (*soy, eres, es, somos, sois, son*), *ir* (*voy, vas, va, vamos, vais, van*), *haber* (*he, has, ha, hemos, habéis, han*), *estar* (*estoy, estás, está, estamos, estáis, están*).
+> *Estar* porte un **accent écrit** sur cinq de ses six formes : il marque l’accent tonique sur la terminaison, contrairement à tous les autres verbes. L’oublier est une faute d’orthographe, pas de conjugaison.
 
-> *Estar* porte des accents écrits sur cinq formes : ils marquent l'accent tonique sur la terminaison, contrairement à tous les autres verbes.
-
-## Ce que le présent peut dire d'autre
-- le **futur proche** : *Mañana **salgo** a las ocho* ;
-- le **présent historique** : *En 1492, Colón **llega** a América* ;
-- une action commencée dans le passé, avec *desde* ou *hace… que* : *Estudio español **desde hace** dos años.*`,
+## Ce que le présent peut dire d’autre
+| Emploi | Exemple |
+| Le **futur proche** | *Mañana salgo a las ocho* |
+| Le **présent historique** | *En 1492, Colón llega a América* |
+| Une action commencée dans le passé | *Estudio español desde hace dos años* |`,
           },
           questions: [
             ['Quelle est la première personne du présent de « hacer » ?', ['Hago', 'Haco', 'Hazo', 'Hacio'], 0, 'Verbe à *yo* irrégulier : le reste de la conjugaison est régulier.'],
@@ -1377,35 +1653,48 @@ Certains cumulent les deux irrégularités : *tener → **tengo**, tienes, tiene
           titre: 'Le subjonctif présent',
           lecon: {
             titre: 'La voyelle qui bascule',
-            cours: `Le subjonctif espagnol est beaucoup plus vivant que le français : il s'emploie tous les jours, à l'oral comme à l'écrit. Sa formation est en revanche très régulière.
+            cours: `Le subjonctif espagnol est beaucoup plus vivant que le français : il s’emploie tous les jours, à l’oral comme à l’écrit. Sa formation est en revanche très régulière.
 
 ## La formation
-On part de la **première personne du présent de l'indicatif**, on retire le *-o*, et on **inverse la voyelle** :
-- verbes en **-ar** → terminaisons en **e** : *hablo → **hable, hables, hable, hablemos, habléis, hablen*** ;
-- verbes en **-er** et **-ir** → terminaisons en **a** : *como → **coma, comas, coma, comamos, comáis, coman***.
+On part de la **première personne du présent de l’indicatif**, on retire le *-o*, et on **inverse la voyelle**.
 
-> L'intérêt de partir de *yo* : toutes les irrégularités de la première personne se propagent à tout le subjonctif. *Hago → **haga***, *tengo → **tenga***, *conozco → **conozca***, *digo → **diga***, *salgo → **salga***, *oigo → **oiga***.
+| Infinitif en… | Terminaisons | Exemple |
+| **-ar** | en **e** | *hablo* devient *hable, hables, hable, hablemos, habléis, hablen* |
+| **-er, -ir** | en **a** | *como* devient *coma, comas, coma, comamos, comáis, coman* |
+
+> L’intérêt de partir de *yo* : **toutes** les irrégularités de la première personne se propagent à tout le subjonctif. *Hago* donne *haga*, *tengo* donne *tenga*, *conozco* donne *conozca*, *salgo* donne *salga*.
 
 ## Les six irréguliers
-Ceux dont la première personne ne finit pas par *-o* :
-*ser → **sea***, *ir → **vaya***, *haber → **haya***, *saber → **sepa***, *dar → **dé***, *estar → **esté***.
+Ce sont ceux dont la première personne ne finit pas par *-o*.
+
+| Verbe | Subjonctif |
+| *ser* | *sea* |
+| *ir* | *vaya* |
+| *haber* | *haya* |
+| *saber* | *sepa* |
+| *dar* | *dé* |
+| *estar* | *esté* |
 
 ## Les verbes du radical
-- **diphtongue** : même botte qu'à l'indicatif — *piense, pienses, piense, **pensemos**, **penséis**, piensen* ;
-- **affaiblissement** : il touche **toutes** les personnes — *pida, pidas, pida, **pidamos**, **pidáis**, pidan* ;
-- les verbes en *-ir* mixtes changent aussi à *nosotros* et *vosotros* : *sentir → sienta, sientas, sienta, **sintamos**, **sintáis**, sientan.*
+| Type | Où le changement porte | Exemple |
+| **Diphtongue** | Même botte qu’à l’indicatif | *piense… pensemos, penséis… piensen* |
+| **Affaiblissement** | **Toutes** les personnes | *pida, pidas, pida, pidamos, pidáis, pidan* |
+| Verbes en -ir mixtes | Aussi à *nosotros* et *vosotros* | *sienta… sintamos, sintáis… sientan* |
 
-## Quand l'employer
-- **volonté, ordre, souhait** : *Quiero que **vengas***, *Ojalá **llueva*** ;
-- **sentiment** : *Me alegro de que **estés** aquí* ;
-- **doute et négation d'opinion** : *No creo que **venga*** ;
-- **jugement impersonnel** : *Es necesario que **estudies*** ;
-- **futur dans une subordonnée de temps** : *Cuando **llegues**, llámame*, *En cuanto **pueda**, te aviso* — c'est le piège majeur du francophone, qui dirait « quand tu arriveras » ;
-- **but** : *Te lo digo para que lo **sepas***.
-- **impératif négatif** et personnes de politesse : *No **hables***, *¡**Hable** usted!*
+## Quand l’employer
+| Le déclencheur | Exemple |
+| Volonté, ordre, souhait | *Quiero que vengas* · *Ojalá llueva* |
+| Sentiment | *Me alegro de que estés aquí* |
+| Doute, négation d’opinion | *No creo que venga* |
+| Jugement impersonnel | *Es necesario que estudies* |
+| **Futur dans une subordonnée de temps** | *Cuando llegues, llámame* · *En cuanto pueda, te aviso* |
+| But | *Te lo digo para que lo sepas* |
+| Impératif négatif et politesse | *No hables* · *¡Hable usted!* |
 
-## Les conjonctions qui l'exigent toujours
-*para que, antes de que, sin que, a menos que, con tal de que, en caso de que.*`,
+> La ligne en gras est **le piège majeur du francophone** : le français dit « quand tu **arriveras** », l’espagnol met le subjonctif présent. Écrire *cuando llegarás* est une faute lourde.
+
+## Les conjonctions qui l’exigent toujours
+*para que*, *antes de que*, *sin que*, *a menos que*, *con tal de que*, *en caso de que*.`,
           },
           questions: [
             ['De quelle forme part-on pour construire le subjonctif présent ?', ['De la première personne du présent de l’indicatif', 'De l’infinitif', 'Du participe passé', 'Du passé simple'], 0, 'On retire le -o et on inverse la voyelle des terminaisons.'],
@@ -1422,35 +1711,40 @@ Ceux dont la première personne ne finit pas par *-o* :
           titre: 'L’imparfait',
           lecon: {
             titre: 'Le temps du décor et de l’habitude',
-            cours: `L'imparfait espagnol est le temps le plus régulier de la langue : **trois irréguliers en tout**. Sa difficulté n'est pas la forme, c'est l'emploi.
+            cours: `L’imparfait espagnol est le temps le plus **régulier** de la langue : trois irréguliers en tout. Sa difficulté n’est pas la forme, c’est l’emploi.
 
 ## La formation
-- verbes en **-ar** : *-aba, -abas, -aba, -ábamos, -abais, -aban* — *hablaba* ;
-- verbes en **-er** et **-ir** : *-ía, -ías, -ía, -íamos, -íais, -ían* — *comía*, *vivía*.
+| Infinitif en… | Terminaisons | Exemple |
+| -ar | *-aba, -abas, -aba, -ábamos, -abais, -aban* | *hablaba* |
+| -er, -ir | *-ía, -ías, -ía, -íamos, -íais, -ían* | *comía*, *vivía* |
 
 ## Les trois seuls irréguliers
-*ser → **era**, eras, era, éramos, erais, eran* ; *ir → **iba**, ibas, iba, íbamos, ibais, iban* ; *ver → **veía**, veías, veía…* (parce qu'il se forme sur l'ancien infinitif *veer*).
+| Verbe | Imparfait | Pourquoi |
+| *ser* | *era, eras, era, éramos, erais, eran* | Forme héritée du latin |
+| *ir* | *iba, ibas, iba, íbamos, ibais, iban* | Idem |
+| *ver* | *veía, veías, veía…* | Il se forme sur l’ancien infinitif *veer* |
 
-> Trois exceptions, pas une de plus : c'est le seul temps espagnol dont on puisse dire cela.
+> Trois exceptions, pas une de plus : c’est le **seul** temps espagnol dont on puisse dire cela.
 
-## Ce que l'imparfait fait
-- **la description** : il plante le décor, sans début ni fin — *Hacía frío y la calle **estaba** desierta* ;
-- **l'habitude passée** : *Cuando era pequeño, **jugaba** al fútbol todos los días* ;
-- **l'action en cours** interrompue par une autre : *Llovía cuando **salí*** ;
-- **la politesse** : *Quería pedirle un favor* (je voulais vous demander un service).
+## Ce que l’imparfait fait
+| Emploi | Exemple |
+| La **description** : ni début ni fin | *Hacía frío y la calle estaba desierta* |
+| L’**habitude** passée | *Cuando era pequeño, jugaba al fútbol* |
+| L’action **en cours**, interrompue | *Llovía cuando salí* |
+| La **politesse** | *Quería pedirle un favor* |
 
-## L'opposition avec le passé simple
-C'est le vrai enjeu du chapitre. Le passé simple **fait avancer** le récit ; l'imparfait **suspend** le temps :
-- *Llovía cuando salí de casa* : la pluie était le décor, la sortie est l'événement.
-- *Mientras **cenábamos**, **sonó** el teléfono.*
+## L’opposition avec le passé simple
+C’est le vrai enjeu du chapitre.
 
-Un même fait peut se dire aux deux temps, et le sens change : *Ayer **llovió*** (il a plu, c'est arrivé) contre *Ayer **llovía*** (il pleuvait, c'était le contexte).
+| | Imparfait | Passé simple |
+| Ce qu’il fait | Il **suspend** le temps | Il **fait avancer** le récit |
+| Ce qu’il donne | Le décor | L’événement |
+| Exemple | *Llovía* | *cuando salí de casa* |
 
-## L'imparfait de politesse et d'hypothèse
-Au conditionnel comme à l'imparfait : *¿Qué **quería**?* dans un magasin, ou l'imparfait à valeur de conditionnel dans la langue familière — *Si tuviera dinero, me **compraba** un coche.*
+Un même fait peut se dire aux deux temps, et le sens change : *Ayer llovió* (il a plu, c’est arrivé) contre *Ayer llovía* (il pleuvait, c’était le contexte).
 
-## L'accent écrit
-Il se met sur *-íamos*, *-íais* et sur toutes les formes en *-ía*, ainsi que sur *-ábamos* et *éramos*, *íbamos* : il marque la syllabe tonique.`,
+## L’accent écrit
+Il se met sur toutes les formes en *-ía*, ainsi que sur *-ábamos*, *éramos* et *íbamos* : il marque la **syllabe tonique**, et son oubli est une faute d’orthographe.`,
           },
           questions: [
             ['Combien de verbes sont irréguliers à l’imparfait ?', ['Trois : ser, ir, ver', 'Aucun', 'Six', 'Dix'], 0, '*Era*, *iba*, *veía* — la seule liste courte de la conjugaison espagnole.'],
@@ -1467,34 +1761,38 @@ Il se met sur *-íamos*, *-íais* et sur toutes les formes en *-ía*, ainsi que 
           titre: 'Le passé composé',
           lecon: {
             titre: 'El pretérito perfecto : le passé qui touche au présent',
-            cours: `Le *pretérito perfecto* ressemble au passé composé français par la forme, mais pas par l'emploi : l'espagnol le réserve à ce qui **touche encore au présent**.
+            cours: `Le *pretérito perfecto* ressemble au passé composé français par la **forme**, mais pas par l’**emploi** : l’espagnol le réserve à ce qui touche encore au présent.
 
 ## La formation
-*haber* au présent + participe passé : *he, has, ha, hemos, habéis, han* + *hablado, comido, vivido.*
+*haber* au présent — *he, has, ha, hemos, habéis, han* — suivi du participe passé.
 
-Le participe **ne s'accorde jamais**, et rien ne s'intercale entre l'auxiliaire et lui : *No lo he visto nunca*, jamais « he nunca visto ».
+Le participe **ne s’accorde jamais**, et rien ne s’intercale entre l’auxiliaire et lui : *No lo he visto nunca*, jamais « he nunca visto ».
 
-## Quand l'employer
-- dans une **période non achevée** : *Hoy **he comido** paella*, *Esta semana **hemos trabajado** mucho*, *Este año **ha llovido** poco* ;
-- pour un fait passé dont les **effets durent** : *Me **he roto** la pierna* (et j'ai encore le plâtre) ;
-- avec un **bilan de vie** : *Nunca **he estado** en México*, *¿**Has visto** esta película?*
+## Quand l’employer
+| Cas | Exemple |
+| Une **période non achevée** | *Hoy he comido paella* · *Este año ha llovido poco* |
+| Un fait dont les **effets durent** | *Me he roto la pierna* — et j’ai encore le plâtre |
+| Un **bilan de vie** | *Nunca he estado en México* · *¿Has visto esta película?* |
 
-## Les marqueurs qui l'appellent
-*hoy, esta mañana, esta semana, este mes, este año, últimamente, ya, todavía no, aún no, nunca, alguna vez, siempre, hace un rato.*
+## Le repère qui tranche
+| Le marqueur | Le temps à employer |
+| *hoy, esta semana, este mes, este año* | **Pretérito perfecto** |
+| *últimamente, ya, todavía no, aún no, nunca, alguna vez* | Pretérito perfecto |
+| *ayer, anoche, el año pasado, en 1990* | **Passé simple** |
 
-> Le repère le plus sûr : si le marqueur contient *este / esta*, c'est le *pretérito perfecto*. Si c'est *ayer*, *el año pasado*, *en 1990*, c'est le passé simple.
+> Le raccourci : si le marqueur contient *este* ou *esta*, c’est le passé composé. Si c’est *ayer* ou une date, c’est le passé simple. Il tient dans les deux tiers des cas d’examen.
 
-## L'opposition avec le passé simple
-- *Hoy **he ido** al cine.* / *Ayer **fui** al cine.*
-- *Este año **he viajado** mucho.* / *El año pasado **viajé** mucho.*
+## L’opposition, en deux paires
+| Passé composé | Passé simple |
+| *Hoy he ido al cine* | *Ayer fui al cine* |
+| *Este año he viajado mucho* | *El año pasado viajé mucho* |
 
-Le passé simple coupe le fait du présent ; le passé composé le raccroche.
+Le passé simple **coupe** le fait du présent ; le passé composé l’y **raccroche**.
 
 ## La variation géographique
-En **Amérique latine** et dans le nord-ouest de l'Espagne (Galice, Asturies), le passé simple absorbe largement le passé composé : *Hoy comí paella* y est parfaitement courant. La norme scolaire française suit l'usage castillan — c'est celui à appliquer en épreuve, mais ce n'est pas une faute là-bas.
+En **Amérique latine** et dans le nord-ouest de l’Espagne (Galice, Asturies), le passé simple absorbe largement le passé composé : *Hoy comí paella* y est parfaitement courant.
 
-## Ya et todavía no
-*¿**Ya** has terminado?* (as-tu déjà fini ?) — *No, **todavía no** he terminado.* Ces deux marqueurs appellent presque toujours le passé composé.`,
+La norme scolaire française suit l’usage **castillan** — c’est celui à appliquer en épreuve, mais ce n’est pas une faute là-bas.`,
           },
           questions: [
             ['Comment se forme le pretérito perfecto ?', ['Haber au présent + participe passé', 'Tener + participe passé', 'Ser + participe passé', 'Estar + gérondif'], 0, '*He comido*, *has estudiado*.'],
@@ -1511,34 +1809,45 @@ En **Amérique latine** et dans le nord-ouest de l'Espagne (Galice, Asturies), l
           titre: 'Le passé simple',
           lecon: {
             titre: 'El pretérito indefinido : le temps du récit',
-            cours: `Le passé simple espagnol n'a rien de littéraire : il s'emploie à l'oral, tous les jours. C'est le temps des faits **achevés et coupés du présent**.
+            cours: `Le passé simple espagnol n’a **rien de littéraire** : il s’emploie à l’oral, tous les jours. C’est le temps des faits achevés et coupés du présent.
 
 ## La formation régulière
-- verbes en **-ar** : *-é, -aste, -ó, -amos, -asteis, -aron* — *hablé, hablaste, habló…* ;
-- verbes en **-er** et **-ir** : *-í, -iste, -ió, -imos, -isteis, -ieron* — *comí, comiste, comió…*
+| Infinitif en… | Terminaisons | Exemple |
+| -ar | *-é, -aste, -ó, -amos, -asteis, -aron* | *hablé, hablaste, habló* |
+| -er, -ir | *-í, -iste, -ió, -imos, -isteis, -ieron* | *comí, comiste, comió* |
 
-Les accents de la 1re et de la 3e personne du singulier sont **distinctifs** : *hablo* (présent) contre *habló* (passé simple), *hable* (subjonctif) contre *hablé* (passé simple). Les oublier change le temps de la phrase.
+> Les accents de la 1re et de la 3e personne du singulier sont **distinctifs**, pas décoratifs.
+
+| Sans accent | Avec accent |
+| *hablo* — présent | *habló* — passé simple |
+| *hable* — subjonctif | *hablé* — passé simple |
+
+Les oublier ne fait pas une faute d’orthographe : cela **change le temps** de la phrase.
 
 ## Les prétérits forts
-Une famille de verbes très fréquents change de radical **et** de terminaisons : *-e, -iste, -o, -imos, -isteis, -ieron*, **sans accent écrit**.
-- *tener → **tuv**e*, *estar → **estuv**e*, *andar → **anduv**e*
-- *poder → **pud**e*, *poner → **pus**e*, *saber → **sup**e*, *caber → **cup**e*
-- *hacer → **hic**e* (mais *hi**z**o* à la 3e personne)
-- *querer → **quis**e*, *venir → **vin**e*, *decir → **dij**e*, *traer → **traj**e*, *conducir → **conduj**e*
+Une famille de verbes très fréquents change de radical **et** de terminaisons : *-e, -iste, -o, -imos, -isteis, -ieron*, **sans aucun accent écrit**.
 
-> Après un radical en *-j* (*dije*, *traje*, *conduje*), la 3e personne du pluriel perd son *i* : *di**jeron***, *tra**jeron***, jamais « dijieron ».
+| Verbe | Radical | Verbe | Radical |
+| *tener* | *tuv-* | *querer* | *quis-* |
+| *estar* | *estuv-* | *venir* | *vin-* |
+| *andar* | *anduv-* | *decir* | *dij-* |
+| *poder* | *pud-* | *traer* | *traj-* |
+| *poner* | *pus-* | *conducir* | *conduj-* |
+| *saber* | *sup-* | *hacer* | *hic-*, mais *hizo* |
+
+> Après un radical en **-j**, la 3e personne du pluriel **perd son i** : *dijeron*, *trajeron*, *condujeron* — jamais « dijieron ».
 
 ## Ser et ir : la même forme
-*fui, fuiste, fue, fuimos, fuisteis, fueron.* Seul le contexte tranche : *Fui a Madrid* (aller) / *Fui profesor* (être).
+*fui, fuiste, fue, fuimos, fuisteis, fueron.* Seul le contexte tranche : *Fui a Madrid* (aller) contre *Fui profesor* (être).
 
-## L'affaiblissement aux 3es personnes
-Les verbes en *-ir* du type *pedir* et *dormir* changent de voyelle aux deux troisièmes personnes : *pidió, pidieron* ; *durmió, durmieron* ; *sintió, sintieron.*
+## L’affaiblissement aux 3es personnes
+Les verbes en *-ir* du type *pedir* et *dormir* changent de voyelle aux deux troisièmes personnes seulement : *pidió, pidieron* ; *durmió, durmieron* ; *sintió, sintieron*.
 
 ## Les marqueurs
-*ayer, anoche, la semana pasada, el mes pasado, el año pasado, en 1975, hace dos años, entonces, de repente, aquel día.*
+*ayer, anoche, la semana pasada, el año pasado, en 1975, hace dos años, entonces, de repente, aquel día.*
 
-## L'emploi dans le récit
-C'est lui qui **fait avancer** l'histoire, tandis que l'imparfait décrit : *Era de noche y llovía. De repente, **sonó** el timbre y **abrí** la puerta.*`,
+## L’emploi dans le récit
+C’est lui qui **fait avancer** l’histoire, tandis que l’imparfait décrit : *Era de noche y llovía. De repente, sonó el timbre y abrí la puerta.*`,
           },
           questions: [
             ['Quelles terminaisons prend le passé simple des verbes en -ar ?', ['-é, -aste, -ó, -amos, -asteis, -aron', '-í, -iste, -ió…', '-aba, -abas…', '-aré, -arás…'], 0, '*Hablé, hablaste, habló, hablamos, hablasteis, hablaron.*'],
@@ -1555,38 +1864,51 @@ C'est lui qui **fait avancer** l'histoire, tandis que l'imparfait décrit : *Era
           titre: 'Le futur',
           lecon: {
             titre: 'Futur simple, futur proche, et le conditionnel qui en dérive',
-            cours: `Le futur espagnol se construit sur l'**infinitif entier** — ce qui le rend très régulier, et fait que ses douze irréguliers se retiennent d'un bloc.
+            cours: `Le futur espagnol se construit sur l’**infinitif entier** — ce qui le rend très régulier, et fait que ses douze irréguliers se retiennent d’un bloc.
 
 ## La formation
 Infinitif + *-é, -ás, -á, -emos, -éis, -án*, pour les trois conjugaisons :
-*hablar**é**, hablar**ás**, hablar**á**, hablar**emos**, hablar**éis**, hablar**án***.
 
-Toutes les formes portent un accent écrit sauf *nosotros*.
+*hablaré, hablarás, hablará, hablaremos, hablaréis, hablarán.*
+
+Toutes les formes portent un **accent écrit**, sauf *nosotros*.
 
 ## Les douze irréguliers
-Ils modifient le radical, jamais les terminaisons. Trois familles :
-- **le e de l'infinitif tombe** : *poder → **podr**é*, *querer → **querr**é*, *saber → **sabr**é*, *haber → **habr**é*, *caber → **cabr**é* ;
-- **un d remplace la voyelle** : *tener → **tendr**é*, *poner → **pondr**é*, *venir → **vendr**é*, *salir → **saldr**é*, *valer → **valdr**é* ;
-- **radical raccourci** : *hacer → **har**é*, *decir → **dir**é*.
+Ils modifient le **radical**, jamais les terminaisons. Trois familles, et rien d’autre à retenir.
 
-> Les composés suivent : *deshacer → desharé*, *mantener → mantendré*, *componer → compondré*.
+| Famille | Ce qui se passe | Verbes |
+| Le **e** de l’infinitif tombe | *pod-er* devient *podr-* | *poder, querer, saber, haber, caber* |
+| Un **d** remplace la voyelle | *ten-er* devient *tendr-* | *tener, poner, venir, salir, valer* |
+| Le radical est **raccourci** | *hac-er* devient *har-* | *hacer, decir* |
+
+| Verbe | Futur | Verbe | Futur |
+| *poder* | *podré* | *tener* | *tendré* |
+| *querer* | *querré* | *poner* | *pondré* |
+| *saber* | *sabré* | *venir* | *vendré* |
+| *haber* | *habré* | *salir* | *saldré* |
+| *caber* | *cabré* | *valer* | *valdré* |
+| *hacer* | *haré* | *decir* | *diré* |
+
+> Les composés suivent leur base : *deshacer* donne *desharé*, *mantener* donne *mantendré*, *componer* donne *compondré*. Douze verbes appris, cinquante formes acquises.
 
 ## Le conditionnel, même radical
-Il prend les terminaisons de l'imparfait des verbes en *-er* : *-ía, -ías, -ía, -íamos, -íais, -ían*, sur le **même radical** que le futur. *Hablaría*, *podría*, *tendría*, *haría*, *diría.* Apprendre les irréguliers du futur, c'est apprendre ceux du conditionnel.
+Il prend les terminaisons de l’imparfait des verbes en *-er* — *-ía, -ías, -ía, -íamos, -íais, -ían* — sur le **même radical** que le futur : *hablaría*, *podría*, *tendría*, *haría*, *diría*.
 
-## Le futur proche : ir a + infinitif
-Beaucoup plus fréquent à l'oral que le futur simple : *Voy a estudiar*, *Vamos a salir.* Il exprime l'intention ou l'imminence.
+Apprendre les irréguliers du futur, c’est donc apprendre ceux du conditionnel.
 
-## Les autres valeurs du futur
-- **la probabilité sur le présent** : *Serán las tres* (il doit être trois heures) ;
-- **l'ordre atténué** : *No matarás* ;
-- **la concession** : *Será muy inteligente, pero no lo parece.*
+## Les emplois
+| Forme | Ce qu’elle exprime | Exemple |
+| Futur simple | L’avenir, la prédiction | *Mañana lloverá* |
+| *ir a* + infinitif | L’intention, l’imminence — bien plus fréquent à l’oral | *Voy a estudiar* |
+| Futur de **probabilité** | Une supposition sur le **présent** | *Serán las tres* |
+| Futur d’ordre atténué | Un commandement | *No matarás* |
+| Futur de concession | Une réserve | *Será muy inteligente, pero no lo parece* |
+| Futur antérieur | Un fait accompli à venir, ou une supposition | *Ya habré terminado* · *Ya habrá salido* |
 
-## Le futur ne s'emploie PAS après « cuando »
-C'est le piège le plus coûteux du chapitre. Dans une subordonnée de temps à valeur de futur, l'espagnol met le **subjonctif présent** : *Cuando **llegues**, llámame*, *En cuanto **pueda**, te aviso*, *Mientras **estés** aquí…* Le français dirait « quand tu arriveras ».
+## Le futur ne s’emploie PAS après « cuando »
+> C’est le piège le plus coûteux du chapitre. Dans une subordonnée de temps à valeur de futur, l’espagnol met le **subjonctif présent** : *Cuando llegues, llámame* · *En cuanto pueda, te aviso* · *Mientras estés aquí…*
 
-## Le futur antérieur
-*habré + participe* : *Mañana a las ocho ya **habré terminado**.* Il sert aussi à supposer sur un fait accompli : *Ya **habrá salido*** (il a dû sortir).`,
+Le français dirait « quand tu **arriveras** ». Écrire *cuando llegarás* est une faute lourde, et elle se voit à la première ligne d’une copie.`,
           },
           questions: [
             ['Sur quoi se construit le futur simple espagnol ?', ['Sur l’infinitif entier', 'Sur le radical du présent', 'Sur le participe passé', 'Sur le passé simple'], 0, '*Hablaré*, *comeré*, *viviré* : mêmes terminaisons pour les trois groupes.'],

@@ -5052,3 +5052,108 @@ a:active > .arena-menu-row {
 
 
 
+
+/* ===========================================================================
+   L'IMPRESSION D'UN COURS — la feuille qu'on emporte au contrôle.
+
+   POURQUOI. Un cours de langue se relit sur papier : c'est là qu'on surligne,
+   et c'est la seule façon de réviser sans le téléphone à portée de main.
+   Imprimée telle quelle, la page sortait avec le bandeau du haut, la barre
+   d'onglets, la tête de Marcel et le bouton « J'ai lu le cours » — quatre
+   objets qui ne se cliquent pas sur du papier — et le cours lui-même écrasé
+   dans une colonne étroite au milieu de la feuille.
+
+   LA RÈGLE EST AVEUGLE À DESSEIN. `body *` s'efface, `.feuille-impression`
+   reparaît. Nommer le bandeau, la barre, le FAB et les toasts un par un, ce
+   serait en oublier un le jour où un cinquième arrive — et tous sont montés
+   par le layout racine, hors de portée de la page. Ils sont par ailleurs tous
+   `fixed` : les masquer ne laisse aucun blanc dans le flux.
+   =========================================================================== */
+@media print {
+  @page {
+    margin: 14mm 12mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .feuille-impression,
+  .feuille-impression * {
+    visibility: visible;
+  }
+
+  /* Les marges de lecture de l'écran (sous le bandeau, au-dessus des onglets)
+     n'ont plus d'objet une fois les deux barres parties — et la page de cours
+     les compense par des marges négatives qui, sans cette remise à zéro,
+     tireraient le titre hors de la feuille. */
+  main {
+    padding: 0 !important;
+  }
+
+  .feuille-impression {
+    margin: 0 !important;
+  }
+
+  /* Ce qui n'a aucun sens sur papier : retour, impression, « J'ai lu le
+     cours », et la suite du parcours. */
+  .sans-papier {
+    display: none !important;
+  }
+
+  /* Le bandeau coloré de la matière deviendrait un aplat d'encre pleine page.
+     Sur papier, un filet sous le titre dit la même chose pour rien. */
+  .entete-cours {
+    background: none !important;
+    padding: 0 0 0.75rem !important;
+    border-bottom: 1.5pt solid #111 !important;
+    color: #111 !important;
+  }
+
+  /* Les couleurs de la charte survivent au papier : sans cette ligne, Chrome
+     retire les fonds, et l'encadré doré de l'idée clé redevient un paragraphe
+     ordinaire — or c'est précisément la phrase qu'on veut retrouver d'un coup
+     d'œil en relisant. */
+  .feuille-impression * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Un tableau de conjugaison coupé en deux par un saut de page est illisible :
+     mieux vaut un blanc en bas de feuille. Et un titre ne reste jamais seul au
+     pied d'une page, sa section partie sur la suivante. */
+  .feuille-impression table,
+  .feuille-impression .idee-cle,
+  .feuille-impression .piege,
+  .feuille-impression .formule,
+  .feuille-impression .chaine,
+  .feuille-impression li {
+    break-inside: avoid;
+  }
+
+  /* La frise se lit comme un tout : un rail coupé au milieu d'une chronologie
+     fait perdre le fil, et c'est précisément le fil qu'elle sert à tenir. */
+  .feuille-impression .frise {
+    break-inside: avoid;
+  }
+
+  .feuille-impression h1,
+  .feuille-impression h2,
+  .feuille-impression h3 {
+    break-after: avoid;
+  }
+
+  /* Le conteneur qui défile à l'écran n'a rien à faire défiler sur du papier :
+     sans cette ligne, une colonne de trop serait tout simplement coupée. */
+  .feuille-impression .overflow-x-auto {
+    overflow: visible !important;
+    /* Le cadre du tableau est un `ring`, c'est-à-dire une ombre portée : les
+       navigateurs ne les impriment pas. Un vrai filet prend le relais. */
+    border: 0.5pt solid #999 !important;
+  }
+}

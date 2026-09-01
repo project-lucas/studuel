@@ -12,19 +12,37 @@ export default {
           titre: 'L’alphabet grec',
           lecon: {
             titre: 'Lire et écrire le grec ancien',
-            cours: `Tout commence par l'alphabet : 24 lettres, dont une bonne moitié se reconnaissent au premier coup d'œil.
+            cours: `Tout commence par l’alphabet : 24 lettres, dont une bonne moitié se reconnaissent au premier coup d’œil parce qu’elles servent déjà en mathématiques et en physique.
 
 ## Les 24 lettres
-α (alpha), β (bêta), γ (gamma), δ (delta), ε (epsilon), ζ (zêta), η (êta), θ (thêta), ι (iota), κ (kappa), λ (lambda), μ (mu), ν (nu), ξ (xi), ο (omicron), π (pi), ρ (rhô), σ/ς (sigma), τ (tau), υ (upsilon), φ (phi), χ (khi), ψ (psi), ω (oméga).
+α (alpha), β (bêta), γ (gamma), δ (delta), ε (epsilon), ζ (zêta), η (êta), θ (thêta), ι (iota), κ (kappa), λ (lambda), μ (mu), ν (nu), ξ (xi), ο (omicron), π (pi), ρ (rhô), σ ou ς (sigma), τ (tau), υ (upsilon), φ (phi), χ (khi), ψ (psi), ω (oméga).
+
+## Les pièges de lecture
+| La lettre | On croit lire | Elle note en fait |
+| η (êta) | un n | un **E long** |
+| ν (nu) | un v | un **N** |
+| ρ (rhô) | un p | un **R** |
+| χ (khi) | un x | un **KH** |
+| ω (oméga) | un w | un **O long** |
 
 ## Les voyelles longues et brèves
-ε (bref) et η (long) notent le même son E ; ο (bref) et ω (long) notent le O. C'est une distinction de **durée**, qui compte pour la métrique de la poésie.
+| Son | Voyelle brève | Voyelle longue |
+| E | **ε** (epsilon) | **η** (êta) |
+| O | **ο** (omicron) | **ω** (oméga) |
+
+C’est une distinction de **durée**, pas de timbre — et elle commande toute la métrique de la poésie grecque.
 
 ## Les esprits
-Toute voyelle initiale porte un **esprit** : l'esprit **doux** (᾿) ne se prononce pas ; l'esprit **rude** (῾) ajoute une aspiration, un « h ». C'est lui qu'on retrouve dans *histoire* (ἱστορία) ou *hippodrome* (ἵππος, le cheval).
+Toute voyelle initiale porte obligatoirement un esprit.
+
+| Esprit | Signe | Prononciation | Trace en français |
+| Doux | ᾿ | Rien | ἀ- privatif : *athée*, *amoral* |
+| Rude | ῾ | Une aspiration, un « h » | ἱστορία → *histoire* ; ἵππος → *hippodrome* |
+
+> L’esprit rude est un cadeau : c’est lui qui explique tous les « h » du vocabulaire savant français. Un mot grec sans « h » en français avait un esprit doux.
 
 ## Le sigma final
-La lettre sigma s'écrit **σ** à l'intérieur du mot et **ς** en fin de mot : λόγος. C'est la seule lettre grecque à avoir deux formes selon la position.`,
+La lettre sigma s’écrit **σ** à l’intérieur du mot et **ς** en fin de mot : λόγος. C’est la seule lettre grecque à changer de forme selon sa position.`,
           },
           questions: [
             ['Combien de lettres compte l’alphabet grec ?', ['24', '26', '21', '30'], 0, 'De l’alpha à l’oméga.'],
@@ -41,19 +59,39 @@ La lettre sigma s'écrit **σ** à l'intérieur du mot et **ς** en fin de mot :
           titre: 'Les mots grecs dans le français',
           lecon: {
             titre: 'Ce que nous devons au grec',
-            cours: `Apprendre le grec, c'est d'abord comprendre le français qu'on parle déjà.
+            cours: `Apprendre le grec, c’est d’abord comprendre le français qu’on parle déjà. Un mot savant sur deux se décompose — et se devine sans dictionnaire.
 
 ## Les racines les plus fréquentes
-*ἄνθρωπος* (anthrôpos, l'homme) → anthropologie, philanthrope. *λόγος* (logos, parole, science) → biologie, dialogue. *γράφειν* (graphein, écrire) → graphique, orthographe. *φιλεῖν* (philein, aimer) → philosophie, cinéphile. *πόλις* (polis, la cité) → politique, métropole. *βίος* (bios, la vie) → biologie, antibiotique.
+| Racine grecque | Sens | Mots français |
+| ἄνθρωπος (anthrôpos) | l’homme | anthropologie, philanthrope |
+| λόγος (logos) | parole, science | biologie, dialogue |
+| γράφειν (graphein) | écrire | graphique, orthographe |
+| φιλεῖν (philein) | aimer | philosophie, cinéphile |
+| πόλις (polis) | la cité | politique, métropole |
+| βίος (bios) | la vie | biologie, antibiotique |
 
 ## Les préfixes
-*ἀ-* privatif (athée, amoral), *anti-* (contre), *hyper-* (au-dessus), *hypo-* (en dessous), *péri-* (autour), *syn-/sym-* (avec), *dia-* (à travers), *méta-* (au-delà).
+| Préfixe | Sens | Exemple |
+| ἀ- privatif | sans | athée, amoral |
+| anti- | contre | antidote, antithèse |
+| hyper- | au-dessus | hypermarché, hypertension |
+| hypo- | en dessous | hypothèse, hypoglycémie |
+| péri- | autour | périmètre, périphérie |
+| syn- / sym- | avec | synthèse, symétrie |
+| dia- | à travers | diagonale, diamètre |
+| méta- | au-delà | métamorphose, métaphore |
 
 ## Le vocabulaire savant
-La médecine et les sciences puisent massivement dans le grec : *cardio-* (cœur), *derm-* (peau), *hémat-* (sang), *néphr-* (rein), *pneum-* (poumon), *psych-* (âme). Décomposer un mot savant permet souvent d'en deviner le sens sans dictionnaire.
+| Racine | Sens | Domaine |
+| cardio- | cœur | cardiologie |
+| derm- | peau | dermatologie |
+| hémat- | sang | hématome |
+| néphr- | rein | néphrologie |
+| pneum- | poumon | pneumonie |
+| psych- | âme | psychologie |
 
 ## Décomposer pour comprendre
-*Chronologie* = χρόνος (temps) + λόγος (discours). *Démocratie* = δῆμος (peuple) + κράτος (pouvoir). *Hippopotame* = ἵππος (cheval) + ποταμός (fleuve) : le « cheval du fleuve ».`,
+> Un mot savant se lit comme une addition. *Chronologie* = χρόνος (temps) + λόγος (discours). *Démocratie* = δῆμος (peuple) + κράτος (pouvoir). *Hippopotame* = ἵππος (cheval) + ποταμός (fleuve) : le « cheval du fleuve ».`,
           },
           questions: [
             ['Que signifie la racine grecque « logos » ?', ['Parole, discours, science', 'Vie', 'Cheval', 'Cité'], 0, 'On la retrouve dans biologie, dialogue, catalogue.'],
@@ -70,19 +108,43 @@ La médecine et les sciences puisent massivement dans le grec : *cardio-* (cœur
           titre: 'La mythologie grecque',
           lecon: {
             titre: 'Les dieux et les héros',
-            cours: `La mythologie n'est pas un recueil d'histoires : c'est la manière dont les Grecs pensaient le monde.
+            cours: `La mythologie n’est pas un recueil d’histoires : c’est la manière dont les Grecs pensaient le monde — l’origine des saisons, du feu, du malheur.
 
 ## Les douze Olympiens
-**Zeus** (roi des dieux, foudre), **Héra** (mariage), **Poséidon** (mers), **Athéna** (sagesse, guerre stratégique), **Apollon** (lumière, arts), **Artémis** (chasse), **Arès** (guerre brutale), **Aphrodite** (amour), **Héphaïstos** (forge), **Hermès** (messager), **Déméter** (moissons), **Hestia** ou **Dionysos** (foyer / vin) selon les listes. **Hadès** règne aux Enfers, hors de l'Olympe.
+| Divinité | Son domaine |
+| **Zeus** | Roi des dieux, la foudre |
+| **Héra** | Le mariage |
+| **Poséidon** | Les mers |
+| **Athéna** | La sagesse, la guerre stratégique |
+| **Apollon** | La lumière, les arts |
+| **Artémis** | La chasse |
+| **Arès** | La guerre brutale |
+| **Aphrodite** | L’amour |
+| **Héphaïstos** | La forge |
+| **Hermès** | Le messager, les voyageurs |
+| **Déméter** | Les moissons |
+| **Hestia** ou **Dionysos** | Le foyer, ou le vin, selon les listes |
+
+**Hadès** règne aux Enfers : il n’est pas compté parmi les Olympiens, parce qu’il ne siège pas sur l’Olympe.
 
 ## Les grands héros
-**Héraclès** et ses douze travaux, **Thésée** et le Minotaure, **Persée** et Méduse, **Achille** et son talon, **Ulysse** et son retour de dix ans.
+| Héros | Son exploit |
+| **Héraclès** | Les douze travaux |
+| **Thésée** | Le Minotaure et le labyrinthe |
+| **Persée** | Méduse et son regard qui pétrifie |
+| **Achille** | La guerre de Troie, et son talon |
+| **Ulysse** | Dix ans pour rentrer chez lui |
 
 ## Les récits fondateurs
-L'*Iliade* raconte quelques semaines de la guerre de Troie ; l'*Odyssée*, le retour d'Ulysse. Tous deux sont attribués à **Homère** (VIIIe siècle av. J.-C.).
+L’*Iliade* raconte quelques semaines de la guerre de Troie ; l’*Odyssée*, le retour d’Ulysse. Tous deux sont attribués à **Homère** (VIIIe siècle av. J.-C.).
 
 ## Le mythe comme explication
-Les saisons naissent de l'enlèvement de Perséphone, le feu du vol de **Prométhée**, les malheurs humains de la boîte de **Pandore**. Le mythe donne une forme narrative à ce qui n'a pas encore d'explication.`,
+| Le mythe | Ce qu’il explique |
+| L’enlèvement de **Perséphone** | Le retour des saisons |
+| Le vol de **Prométhée** | La possession du feu par les hommes |
+| La boîte de **Pandore** | L’origine des malheurs humains |
+
+> Le mythe donne une forme narrative à ce qui n’a pas encore d’explication. Il ne s’oppose pas au savoir : il occupe la place que le savoir n’a pas encore prise.`,
           },
           questions: [
             ['Qui est le roi des dieux grecs ?', ['Zeus', 'Poséidon', 'Apollon', 'Hadès'], 0, 'Son attribut est la foudre.'],
@@ -104,19 +166,28 @@ Les saisons naissent de l'enlèvement de Perséphone, le feu du vol de **Promét
           titre: 'La déclinaison grecque',
           lecon: {
             titre: 'Cas, genres et nombres',
-            cours: `Le grec, comme le latin, marque la fonction du mot par sa **terminaison**.
+            cours: `Le grec, comme le latin, marque la fonction du mot par sa **terminaison**. L’ordre des mots devient dès lors très libre : ce n’est pas la place qui indique la fonction, c’est la finale.
 
 ## Les cinq cas
-**Nominatif** (sujet, attribut), **vocatif** (interpellation), **accusatif** (COD, direction), **génitif** (complément du nom, origine), **datif** (COI, moyen, lieu). L'ordre des mots devient dès lors très libre : c'est la terminaison, pas la place, qui indique la fonction.
+| Cas | Sa fonction principale | En français |
+| Nominatif | Sujet, attribut | *le maître* parle |
+| Vocatif | Interpellation | ô *maître* ! |
+| Accusatif | COD, direction | je vois *le maître* |
+| Génitif | Complément du nom, origine | le livre *du maître* |
+| Datif | COI, moyen, lieu | je parle *au maître* |
 
-## La première déclinaison
-Noms féminins en *-η* ou *-α* : ἡ τιμή, τῆς τιμῆς, τῇ τιμῇ, τὴν τιμήν. Quelques masculins en *-ης* (ὁ πολίτης, le citoyen).
+## Les deux premières déclinaisons
+| Déclinaison | Type | Exemple au nominatif | Au génitif |
+| 1re | Féminins en -η ou -α | ἡ τιμή (l’honneur) | τῆς τιμῆς |
+| 1re | Quelques masculins en -ης | ὁ πολίτης (le citoyen) | τοῦ πολίτου |
+| 2e | Masculins en -ος | ὁ λόγος (la parole) | τοῦ λόγου |
+| 2e | Neutres en -ον | τὸ δῶρον (le don) | τοῦ δώρου |
 
-## La deuxième déclinaison
-Masculins et neutres en *-ος* / *-ον* : ὁ λόγος, τοῦ λόγου, τῷ λόγῳ, τὸν λόγον. Au neutre, **nominatif et accusatif sont toujours identiques** — règle valable dans toute la langue.
+## La règle du neutre
+> Au neutre, **nominatif et accusatif sont toujours identiques** — dans toute la langue, sans exception. C’est le repère le plus rentable : une forme neutre ambiguë se tranche par le sens, jamais par la terminaison.
 
-## L'article, votre meilleur allié
-ὁ / ἡ / τό se décline lui aussi et accompagne presque toujours le nom : sa terminaison suffit souvent à identifier le cas d'un mot inconnu.`,
+## L’article, votre meilleur allié
+ὁ / ἡ / τό se décline lui aussi, et accompagne presque toujours le nom. Devant un mot inconnu, c’est **sa terminaison à lui** qui donne le cas : lire l’article avant le nom fait gagner la moitié du travail de version.`,
           },
           questions: [
             ['Combien de cas compte la déclinaison grecque ?', ['5', '3', '6', '4'], 0, 'Nominatif, vocatif, accusatif, génitif, datif.'],
@@ -133,19 +204,32 @@ Masculins et neutres en *-ος* / *-ον* : ὁ λόγος, τοῦ λόγου, 
           titre: 'Athènes et la démocratie',
           lecon: {
             titre: 'La cité grecque et son invention politique',
-            cours: `Athènes n'a pas inventé le mot seulement : elle a inventé une pratique, avec ses limites.
+            cours: `Athènes n’a pas seulement inventé le mot : elle a inventé une pratique — avec ses limites, qu’il faut énoncer aussi précisément que ses institutions.
 
 ## La polis
-La cité grecque associe une ville, un territoire et une communauté de citoyens. Elle est **indépendante** : le monde grec est un monde de cités rivales, non un État unifié.
+La cité grecque associe une **ville**, un **territoire** et une **communauté de citoyens**. Elle est indépendante : le monde grec est un monde de cités rivales, jamais un État unifié. C’est ce morcellement qui rend possible l’expérimentation politique.
 
 ## Les réformes fondatrices
-**Solon** (594 av. J.-C.) abolit l'esclavage pour dettes et classe les citoyens par la richesse. **Clisthène** (508-507) réorganise le corps civique par dèmes et fonde l'**isonomie**, l'égalité devant la loi. **Périclès** (Ve siècle) instaure le *misthos*, indemnité qui permet aux plus pauvres de siéger.
+| Date | Le réformateur | Ce qu’il apporte |
+| 594 av. J.-C. | **Solon** | Abolit l’esclavage pour dettes, classe les citoyens par la richesse |
+| 508-507 av. J.-C. | **Clisthène** | Réorganise le corps civique par dèmes, fonde l’*isonomie* |
+| Ve siècle | **Périclès** | Instaure le *misthos*, qui permet aux pauvres de siéger |
 
 ## Les institutions
-L'**Ecclésia** (assemblée de tous les citoyens) vote les lois et la guerre. La **Boulè** (500 membres tirés au sort) prépare les décisions. L'**Héliée** est le tribunal populaire. Les **stratèges**, eux, sont élus.
+| Institution | Qui y siège | Ce qu’elle fait |
+| L’**Ecclésia** | Tous les citoyens | Vote les lois et la guerre |
+| La **Boulè** | 500 membres tirés au sort | Prépare les décisions |
+| L’**Héliée** | Jurés tirés au sort | Juge : c’est le tribunal populaire |
+| Les **stratèges** | Dix, élus et rééligibles | Commandent l’armée — les seuls élus |
 
 ## Les limites
-Sur environ 250 000 habitants, seuls **40 000 citoyens** environ : sont exclus les femmes, les métèques (étrangers libres) et les esclaves. Une démocratie **directe** mais **restreinte** — les deux mots comptent.`,
+| Sur environ 250 000 habitants | Statut | Droits politiques |
+| ~40 000 | Citoyens (hommes, nés de deux parents athéniens) | Tous |
+| Les femmes | Filles et épouses de citoyens | Aucun |
+| Les métèques | Étrangers libres, souvent commerçants | Aucun |
+| Les esclaves | Non libres | Aucun |
+
+> Une démocratie **directe** et **restreinte** : les deux mots comptent autant l’un que l’autre. Directe, parce que le citoyen vote lui-même ; restreinte, parce qu’un habitant sur six seulement est citoyen.`,
           },
           questions: [
             ['Qu’est-ce que l’Ecclésia à Athènes ?', ['L’assemblée de tous les citoyens', 'Le tribunal', 'Le conseil des 500', 'Le collège des stratèges'], 0, 'Elle vote les lois, la guerre et l’ostracisme.'],
@@ -162,19 +246,32 @@ Sur environ 250 000 habitants, seuls **40 000 citoyens** environ : sont exclus l
           titre: 'Théâtre et philosophie',
           lecon: {
             titre: 'Deux inventions grecques majeures',
-            cours: `Le théâtre et la philosophie naissent dans la même cité, à la même époque, et posent les mêmes questions autrement.
+            cours: `Le théâtre et la philosophie naissent dans la même cité, à la même époque, et posent la même question : comment vivre juste dans une cité imparfaite ? L’un la met en scène, l’autre l’argumente.
 
 ## Le théâtre
-Né des fêtes de **Dionysos**, il se joue en plein jour, dans un théâtre à ciel ouvert, devant des milliers de citoyens. La **tragédie** met en scène la chute d'un héros pris dans un destin qui le dépasse (Eschyle, Sophocle, Euripide) ; la **comédie** raille la vie politique (Aristophane).
+Né des fêtes de **Dionysos**, il se joue en plein jour, à ciel ouvert, devant des milliers de citoyens — c’est une institution civique, pas un loisir.
+
+| Genre | Ce qu’il met en scène | Auteurs |
+| Tragédie | La chute d’un héros pris dans un destin qui le dépasse | Eschyle, Sophocle, Euripide |
+| Comédie | La vie politique de la cité, raillée sans ménagement | Aristophane |
 
 ## Les notions clés de la tragédie
-L'**hybris** (démesure) attire la **némésis** (châtiment) ; la **catharsis** est la purgation des passions que le spectateur éprouve. Le **chœur** commente l'action et fait le lien avec le public.
+| Notion | Ce qu’elle désigne |
+| L’**hybris** | La démesure : le héros franchit la limite humaine |
+| La **némésis** | Le châtiment que l’hybris appelle |
+| La **catharsis** | La purgation des passions éprouvée par le spectateur |
+| Le **chœur** | Il commente l’action et fait le lien avec le public |
+
+> L’enchaînement hybris → némésis n’est pas une morale plaquée : c’est la mécanique même de la tragédie. Le héros n’est pas puni parce qu’il est méchant, mais parce qu’il a dépassé sa mesure.
 
 ## La philosophie
-**Socrate** (470-399) n'écrit rien : il interroge (*maïeutique*) et meurt condamné par la cité. **Platon**, son disciple, fonde l'Académie et écrit les *Dialogues*. **Aristote**, disciple de Platon, fonde le Lycée et classe l'ensemble des savoirs.
+| Philosophe | Dates | Ce qu’il laisse |
+| **Socrate** | 470-399 av. J.-C. | N’écrit rien : il interroge (*maïeutique*), et meurt condamné par la cité |
+| **Platon** | Disciple de Socrate | Fonde l’Académie, écrit les *Dialogues* |
+| **Aristote** | Disciple de Platon | Fonde le Lycée, classe l’ensemble des savoirs |
 
 ## Une même exigence
-Théâtre et philosophie partagent une question : comment vivre juste dans une cité imparfaite ? L'un la met en scène, l'autre l'argumente.`,
+Le théâtre montre l’homme aux prises avec la démesure ; la philosophie cherche la règle qui l’en préserve. Les deux supposent une cité où l’on peut, publiquement, mettre en question ce qui va de soi.`,
           },
           questions: [
             ['De quelles fêtes le théâtre grec est-il né ?', ['Les fêtes de Dionysos', 'Les fêtes d’Apollon', 'Les Panathénées', 'Les jeux olympiques'], 0, 'Les Grandes Dionysies athéniennes.'],

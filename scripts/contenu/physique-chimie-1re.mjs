@@ -132,37 +132,48 @@ DELETE FROM public.chapters c
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Pression, poussée d’Archimède, loi de Mariotte',
-            cours: `Un **fluide** au repos exerce des forces sur tout ce qu’il touche. Trois lois suffisent à décrire l’essentiel.
+            cours: `Un fluide au repos exerce des forces sur tout ce qu'il touche. Trois lois suffisent à décrire l'essentiel.
 
 ## La pression
-La **pression** est le quotient de la force pressante par la surface sur laquelle elle s’exerce :
+La **pression** est le quotient de la force pressante par la surface :
 
 p = F / S
 
-Elle s’exprime en **pascals** (1 Pa = 1 N/m²). L’hectopascal et le bar servent en météorologie : 1 bar = 100 000 Pa, et la pression atmosphérique vaut environ 1 013 hPa au niveau de la mer.
+| La grandeur | Son unité | Un repère |
+| Pression p | **Pascal** (Pa), avec 1 Pa = 1 N/m² | 1 bar = 100 000 Pa |
+| Force pressante F | Newton (N) | Toujours **perpendiculaire** à la surface |
+| Surface S | Mètre carré (m²) | — |
 
-> Une force pressante s’exerce toujours **perpendiculairement** à la surface, quelle que soit son orientation.
+> La pression atmosphérique vaut environ 1 013 hPa au niveau de la mer.
 
 ## La loi fondamentale de la statique des fluides
 Dans un liquide incompressible au repos, la pression augmente avec la profondeur :
 
 p(B) − p(A) = ρ × g × (z(A) − z(B))
 
-où ρ est la masse volumique du liquide (kg/m³) et g l’intensité de pesanteur. Deux points d’un même liquide situés à la **même profondeur** sont donc à la **même pression** — c’est le principe des vases communicants.
+où ρ est la masse volumique du liquide, en kg/m³, et g l'intensité de pesanteur.
 
-## La poussée d’Archimède
-Tout corps plongé dans un fluide subit une force verticale, dirigée vers le haut, **égale au poids du fluide déplacé** :
+> Deux points d'un même liquide à la **même profondeur** sont à la **même pression** : c'est le principe des vases communicants.
+
+## La poussée d'Archimède
+Tout corps plongé dans un fluide subit une force **verticale, vers le haut**, égale au **poids du fluide déplacé** :
 
 F = ρ(fluide) × V(immergé) × g
 
-Un corps flotte si sa masse volumique moyenne est inférieure à celle du fluide.
+| La masse volumique du corps | Ce qui se passe |
+| **Inférieure** à celle du fluide | Il **flotte** |
+| **Supérieure** | Il **coule** |
 
 ## La loi de Mariotte
-Pour un gaz à température constante, le produit de la pression par le volume est constant :
+Pour un **gaz** à température constante :
 
 p × V = constante
 
-Comprimer un gaz de moitié double donc sa pression. Cette loi ne vaut **que** pour un gaz, à température fixée — un liquide est considéré comme incompressible.`,
+| L'action | La conséquence |
+| Comprimer le gaz de moitié | Sa pression **double** |
+| Doubler son volume | Sa pression est **divisée par deux** |
+
+> Cette loi ne vaut que pour un gaz, à température fixée. Un liquide est considéré comme **incompressible**.`,
           },
           questions: [
             ['Quelle est l’unité de pression du Système international ?', ['Le pascal', 'Le newton', 'Le bar', 'Le joule'], 0, '1 Pa = 1 N/m² ; le bar et l’hectopascal en sont des multiples pratiques.'],
@@ -180,28 +191,39 @@ Comprimer un gaz de moitié double donc sa pression. Cette loi ne vaut **que** p
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Décrire un mouvement, puis l’expliquer',
-            cours: `Décrire un mouvement suppose d’abord de choisir un **référentiel** : un mouvement n’existe jamais « en soi ». Un passager assis est immobile dans le référentiel du train, en mouvement dans celui du sol.
+            cours: `Un mouvement n'existe jamais « en soi » : décrire un mouvement suppose d'abord de choisir un référentiel.
 
-## Vecteur vitesse et vecteur accélération
-- Le **vecteur vitesse** est tangent à la trajectoire et orienté dans le sens du mouvement. Sa valeur est v = d / t pour un mouvement uniforme.
-- Le **vecteur accélération** traduit la variation du vecteur vitesse : en **valeur** (on accélère ou on freine) **ou en direction** (on tourne).
+## Le référentiel
+| Le référentiel | Le passager assis dans un train |
+| Celui du **train** | Immobile |
+| Celui du **sol** | En mouvement |
 
-> Un mobile en mouvement circulaire uniforme a une vitesse de valeur constante et une accélération NON nulle, dirigée vers le centre : c’est la direction qui change.
+## Vitesse et accélération
+| Le vecteur | Ce qu'il indique |
+| **Vitesse** | Tangent à la trajectoire, orienté dans le sens du mouvement ; sa valeur est v = d / t pour un mouvement uniforme |
+| **Accélération** | La variation du vecteur vitesse : en **valeur** (accélérer, freiner) **ou en direction** (tourner) |
+
+> Un mobile en mouvement circulaire uniforme a une vitesse de valeur constante et une accélération **non nulle**, dirigée vers le centre : c'est la direction qui change.
 
 ## Les trois lois de Newton
-- **Première loi (principe d’inertie)** : dans un référentiel galiléen, si la somme des forces est nulle, le centre de masse est immobile ou en mouvement rectiligne uniforme — et réciproquement.
-- **Deuxième loi** : la somme des forces est égale au produit de la masse par l’accélération.
+| La loi | Son énoncé |
+| **Première** (inertie) | Dans un référentiel galiléen, si la somme des forces est nulle, le centre de masse est immobile ou en mouvement rectiligne uniforme — et réciproquement |
+| **Deuxième** | Σ F = m × a |
+| **Troisième** (actions réciproques) | Si A exerce une force sur B, B exerce sur A une force de même valeur, même direction, sens opposé |
 
-Σ F = m × a
+> Les deux forces de la troisième loi s'appliquent à **deux corps différents** : elles ne se compensent jamais.
 
-- **Troisième loi (actions réciproques)** : si A exerce une force sur B, alors B exerce sur A une force de même valeur, même direction et de sens opposé. Ces deux forces s’appliquent à **deux corps différents** : elles ne se compensent jamais.
+## La méthode, toujours la même
+1. Définir le **système**.
+2. Choisir le **référentiel**.
+3. Faire le **bilan des forces**.
+4. Appliquer la **deuxième loi** pour obtenir l'accélération.
+5. Intégrer pour obtenir la vitesse, puis la position.
 
-## Étudier un mouvement
-La méthode ne varie pas : définir le **système**, choisir le **référentiel**, faire le **bilan des forces**, appliquer la deuxième loi, en déduire l’accélération puis, par intégration, la vitesse et la position.
-
-## Cas particuliers utiles
-- **Chute libre** : seule la force de pesanteur agit ; l’accélération vaut g, indépendante de la masse.
-- **Mouvement rectiligne uniformément accéléré** : l’accélération est constante, la vitesse varie linéairement avec le temps.`,
+## Deux cas particuliers utiles
+| Le cas | Ce qui le caractérise |
+| **Chute libre** | Seule la pesanteur agit ; l'accélération vaut g, **indépendante de la masse** |
+| **Rectiligne uniformément accéléré** | L'accélération est constante, la vitesse varie linéairement avec le temps |`,
           },
           questions: [
             ['Que faut-il choisir avant de décrire un mouvement ?', ['Un référentiel', 'Une force', 'Une masse', 'Une énergie'], 0, 'Un mouvement n’a de sens que relativement à un référentiel.'],
@@ -219,31 +241,39 @@ La méthode ne varie pas : définir le **système**, choisir le **référentiel*
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'De la loi de Newton au champ de pesanteur',
-            cours: `Deux corps possédant une masse s’attirent : c’est l’**interaction gravitationnelle**, la seule des quatre interactions fondamentales qui soit toujours attractive et dont la portée soit infinie.
+            cours: `Deux corps possédant une masse s'attirent. La gravitation est la seule des quatre interactions fondamentales qui soit toujours attractive et de portée infinie.
 
 ## La loi de gravitation universelle
-Deux corps ponctuels de masses m(A) et m(B), distants de d, s’attirent avec une force de valeur :
+Deux corps ponctuels de masses m(A) et m(B), distants de d, s'attirent avec une force de valeur :
 
 F = G × m(A) × m(B) / d²
 
 avec G ≈ 6,67 × 10⁻¹¹ dans les unités du Système international. La force est portée par la droite qui joint les deux corps.
 
-> La dépendance en 1 / d² est décisive : doubler la distance divise la force par **quatre**, et non par deux.
+| La distance | La force |
+| Doublée | Divisée par **quatre** |
+| Triplée | Divisée par **neuf** |
+
+> La dépendance en 1 / d² est décisive : doubler la distance divise la force par quatre, et non par deux.
 
 ## Du champ à la force
-Un corps massique modifie l’espace autour de lui : il y crée un **champ gravitationnel**. En un point situé à la distance d d’un astre de masse M, ce champ a pour valeur :
+Un corps massique crée autour de lui un **champ gravitationnel**. À la distance d d'un astre de masse M :
 
 g = G × M / d²
 
-Il est dirigé vers le centre de l’astre. La force subie par une masse m placée en ce point vaut alors F = m × g.
+Il est dirigé vers le centre de l'astre. Une masse m placée en ce point subit alors la force F = m × g.
 
-## Champ de pesanteur
-Au voisinage de la surface terrestre, g est quasi uniforme : même valeur (environ 9,8 N/kg), même direction (la verticale), même sens (vers le bas). C’est ce qui autorise à écrire simplement P = m × g.
+## Masse et poids
+| La grandeur | Son unité | Ce dont elle dépend |
+| **Masse** | Kilogramme (kg) | Le corps seul : elle est **invariable** |
+| **Poids** | Newton (N) | L'astre : P = m × g |
 
-Attention à la distinction : la **masse** (en kg) est une propriété du corps, invariable ; le **poids** (en N) dépend de l’astre. Sur la Lune, où g vaut environ 1,6 N/kg, un astronaute a le même corps et un poids six fois plus faible.
+> Sur la Lune, où g vaut environ 1,6 N/kg, un astronaute a exactement le même corps et un poids six fois plus faible.
 
-## Champ uniforme, champ non uniforme
-À l’échelle d’une salle de classe, le champ de pesanteur est **uniforme**. À l’échelle d’un satellite en orbite, il ne l’est plus : sa valeur décroît avec l’altitude, et sa direction change d’un point à l’autre.`,
+## Champ uniforme ou non
+| L'échelle | Le champ de pesanteur |
+| Une salle de classe | **Uniforme** : même valeur (environ 9,8 N/kg), même direction, même sens |
+| Un satellite en orbite | **Non uniforme** : sa valeur décroît avec l'altitude, sa direction change |`,
           },
           questions: [
             ['Comment varie la force gravitationnelle si la distance est doublée ?', ['Elle est divisée par quatre', 'Elle est divisée par deux', 'Elle est multipliée par deux', 'Elle est inchangée'], 0, 'La force varie en 1 / d² : c’est une décroissance quadratique.'],
@@ -261,35 +291,47 @@ Attention à la distinction : la **masse** (en kg) est une propriété du corps,
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'La loi de Coulomb et le condensateur plan',
-            cours: `Deux corps portant une charge électrique interagissent. À la différence de la gravitation, cette interaction peut être **attractive ou répulsive**.
+            cours: `Deux corps portant une charge électrique interagissent. À la différence de la gravitation, cette interaction peut être attractive ou répulsive.
 
 ## La loi de Coulomb
-Deux charges ponctuelles q(A) et q(B), distantes de d, exercent l’une sur l’autre une force de valeur :
+Deux charges ponctuelles q(A) et q(B), distantes de d, exercent l'une sur l'autre une force de valeur :
 
-F = k × |q(A)| × |q(B)| / d²
+F = k × q(A) × q(B) / d²  (en valeurs absolues)
 
-avec k ≈ 9 × 10⁹ dans les unités du Système international. Les charges se comptent en **coulombs** (C) ; la charge élémentaire vaut e ≈ 1,6 × 10⁻¹⁹ C.
+avec k ≈ 9 × 10⁹ dans les unités du Système international.
 
-Deux charges de **même signe** se repoussent, deux charges de **signes contraires** s’attirent.
+| Les signes des charges | L'effet |
+| **Même** signe | Elles se **repoussent** |
+| Signes **contraires** | Elles s'**attirent** |
 
-> Même forme mathématique que la loi de Newton — en 1 / d² —, mais une intensité sans commune mesure : entre deux protons, la répulsion électrique est environ 10³⁶ fois plus grande que l’attraction gravitationnelle.
+Les charges se comptent en **coulombs** (C) ; la charge élémentaire vaut e ≈ 1,6 × 10⁻¹⁹ C.
+
+> Même forme mathématique que la loi de Newton, en 1 / d² — mais une intensité sans commune mesure : entre deux protons, la répulsion électrique est environ 10³⁶ fois plus grande que l'attraction gravitationnelle.
 
 ## Le champ électrique
-Une charge crée autour d’elle un **champ électrique**. Une charge q placée en un point où règne un champ E subit la force :
+Une charge q placée en un point où règne un champ E subit la force :
 
 F = q × E
 
-Le champ se mesure en volts par mètre (V/m). Son sens dépend du signe de la charge qui le subit : la force est dans le sens du champ si q est positive, dans le sens opposé si q est négative.
+| Le signe de q | Le sens de la force |
+| **Positive** | Dans le sens du champ |
+| **Négative** | Dans le sens **opposé** |
+
+Le champ se mesure en volts par mètre (V/m).
 
 ## Le condensateur plan
-Entre deux plaques parallèles portant des charges opposées, le champ est **uniforme** : même valeur, même direction, même sens en tout point. Sa valeur se calcule à partir de la tension U appliquée et de la distance d entre les plaques :
+Entre deux plaques parallèles portant des charges opposées, le champ est **uniforme** : même valeur, même direction, même sens en tout point.
 
 E = U / d
 
-Les lignes de champ y sont des droites parallèles, perpendiculaires aux plaques, orientées de la plaque positive vers la plaque négative.
+où U est la tension appliquée et d la distance entre les plaques. Les lignes de champ y sont des droites parallèles, perpendiculaires aux plaques, orientées du plus vers le moins.
 
 ## Lignes de champ
-Une ligne de champ est tangente au vecteur champ en chacun de ses points. Autour d’une charge ponctuelle positive, elles sont radiales et sortantes ; autour d’une charge négative, radiales et entrantes.`,
+| Autour d'une charge… | Les lignes sont… |
+| **Positive** | Radiales et **sortantes** |
+| **Négative** | Radiales et **entrantes** |
+
+Une ligne de champ est tangente au vecteur champ en chacun de ses points.`,
           },
           questions: [
             ['Deux charges de même signe…', ['se repoussent', 's’attirent', 'ne s’influencent pas', 's’annulent'], 0, 'C’est ce qui distingue l’interaction électrostatique de la gravitation, toujours attractive.'],
@@ -309,31 +351,42 @@ Une ligne de champ est tangente au vecteur champ en chacun de ses points. Autour
           axe: 'Lumière, images et couleurs',
           lecon: {
             titre: 'Propagation, période, longueur d’onde',
-            cours: `Une **onde** est la propagation d’une perturbation dans un milieu, **sans transport de matière** mais avec transport d’énergie. Un bouchon sur l’eau monte et descend au passage d’une vague : il n’avance pas avec elle.
+            cours: `Une onde est la propagation d'une perturbation dans un milieu, sans transport de matière mais avec transport d'énergie.
 
-## Deux familles
-- Les **ondes mécaniques** ont besoin d’un milieu matériel : son, vagues, ondes sismiques. Le son ne se propage pas dans le vide.
-- Les **ondes électromagnétiques** s’en passent : la lumière traverse le vide interstellaire.
+> Un bouchon sur l'eau monte et descend au passage d'une vague : il n'avance pas avec elle.
 
-On distingue aussi selon la direction de la perturbation : **transversale** (perpendiculaire à la propagation, comme sur une corde) ou **longitudinale** (parallèle, comme le son dans l’air).
+## Deux classements
+| Le critère | Les deux familles |
+| **Milieu nécessaire** | **Mécaniques** (son, vagues, ondes sismiques) : un milieu matériel est indispensable — le son ne se propage pas dans le vide. **Électromagnétiques** : la lumière traverse le vide |
+| **Direction de la perturbation** | **Transversale** (perpendiculaire à la propagation, comme sur une corde). **Longitudinale** (parallèle, comme le son dans l'air) |
 
 ## Les grandeurs
-- La **période T** (en s) est la durée d’un motif complet ;
-- la **fréquence f** (en hertz) est le nombre de motifs par seconde : f = 1 / T ;
-- la **longueur d’onde λ** (en m) est la distance parcourue pendant une période ;
-- la **célérité v** (en m/s) est la vitesse de propagation.
+| La grandeur | Son symbole | Son unité | Sa définition |
+| Période | T | seconde (s) | La durée d'un motif complet |
+| Fréquence | f | hertz (Hz) | Le nombre de motifs par seconde : f = 1 / T |
+| Longueur d'onde | λ | mètre (m) | La distance parcourue pendant une période |
+| Célérité | v | m/s | La vitesse de propagation |
 
 La relation à connaître les relie toutes :
 
 λ = v × T = v / f
 
-> La fréquence est imposée par la **source** et ne change pas quand l’onde change de milieu. La célérité, elle, dépend du milieu — donc la longueur d’onde aussi.
+> La fréquence est imposée par la **source** et ne change pas quand l'onde change de milieu. La célérité, elle, dépend du milieu — donc la longueur d'onde aussi.
 
 ## Quelques ordres de grandeur
-Le son se propage à environ 340 m/s dans l’air, 1 500 m/s dans l’eau et 5 000 m/s dans l’acier : plus le milieu est rigide, plus l’onde va vite. La lumière se propage à environ 3,00 × 10⁸ m/s dans le vide.
+| Le milieu | La célérité du son |
+| Air | Environ 340 m/s |
+| Eau | Environ 1 500 m/s |
+| Acier | Environ 5 000 m/s |
+
+Plus le milieu est rigide, plus l'onde va vite. La lumière se propage à environ 3,00 × 10⁸ m/s dans le vide.
 
 ## Retard et distance
-Deux points séparés d’une distance d reçoivent la même perturbation avec un **retard** τ = d / v. C’est ce qui permet de localiser un orage en comptant les secondes entre l’éclair et le tonnerre.`,
+Deux points séparés d'une distance d reçoivent la même perturbation avec un retard :
+
+τ = d / v
+
+> C'est ce qui permet de localiser un orage en comptant les secondes entre l'éclair et le tonnerre.`,
           },
           questions: [
             ['Que transporte une onde ?', ['De l’énergie, sans transport de matière', 'De la matière, sans énergie', 'De la matière et de l’énergie', 'Ni l’une ni l’autre'], 0, 'Le bouchon sur l’eau oscille sur place au passage de la vague.'],
@@ -351,27 +404,31 @@ Deux points séparés d’une distance d reçoivent la même perturbation avec u
           axe: 'Lumière, images et couleurs',
           lecon: {
             titre: 'Du gamma aux ondes radio',
-            cours: `Une **onde électromagnétique** est la propagation couplée d’un champ électrique et d’un champ magnétique. Elle n’a besoin d’aucun support matériel et se propage dans le vide à c ≈ 3,00 × 10⁸ m/s.
+            cours: `Une onde électromagnétique est la propagation couplée d'un champ électrique et d'un champ magnétique. Elle n'a besoin d'aucun support et va à c ≈ 3,00 × 10⁸ m/s dans le vide.
 
 ## Un domaine continu
-Toutes les ondes électromagnétiques sont de même nature : seules leur **fréquence** et leur **longueur d’onde** les distinguent. Par fréquence croissante — donc par longueur d’onde décroissante et par énergie croissante :
+Toutes ces ondes sont de même nature : seules leur **fréquence** et leur **longueur d'onde** les distinguent.
 
-- **ondes radio** : au-delà du mètre, télécommunications ;
-- **micro-ondes** : du millimètre au décimètre, radar, four, Wi-Fi ;
-- **infrarouge** : de 800 nm à 1 mm, chaleur, télécommandes ;
-- **lumière visible** : de **400 à 800 nm** environ, du violet au rouge ;
-- **ultraviolet** : de 10 à 400 nm, bronzage et brûlures ;
-- **rayons X** : radiographie ;
-- **rayons gamma** : les plus énergétiques, d’origine nucléaire.
+| Le domaine | Sa longueur d'onde | Un usage ou un effet |
+| **Ondes radio** | Au-delà du mètre | Télécommunications |
+| **Micro-ondes** | Du millimètre au décimètre | Radar, four, Wi-Fi |
+| **Infrarouge** | De 800 nm à 1 mm | Chaleur, télécommandes |
+| **Visible** | De **400 à 800 nm** | Du violet au rouge |
+| **Ultraviolet** | De 10 à 400 nm | Bronzage, brûlures |
+| **Rayons X** | Environ 0,01 à 10 nm | Radiographie |
+| **Rayons gamma** | En deçà | Les plus énergétiques, d'origine nucléaire |
 
-> Le domaine visible n’occupe qu’une bande minuscule du spectre. Ce n’est pas la lumière qui est particulière : c’est notre œil.
+Du haut vers le bas du tableau : la fréquence et l'énergie **augmentent**.
 
-## Spectres d’émission
-- Un **spectre continu** est produit par un corps chaud (filament, étoile). Il contient toutes les longueurs d’onde, et sa répartition dépend de la **température** : plus le corps est chaud, plus le maximum se déplace vers le bleu.
-- Un **spectre de raies d’émission** est produit par un gaz atomique excité : quelques raies colorées seulement, sur fond noir. Ces raies constituent la **signature** de l’élément — c’est ainsi qu’on identifie la composition d’une étoile.
+> Le domaine visible n'occupe qu'une bande minuscule du spectre. Ce n'est pas la lumière qui est particulière : c'est notre œil.
 
-## Spectres d’absorption
-Une lumière blanche traversant un gaz froid en ressort privée de certaines longueurs d’onde : le spectre continu est barré de **raies noires**, exactement aux positions où le même gaz émettrait. C’est le principe de l’analyse de l’atmosphère des étoiles et des planètes.`,
+## Les trois types de spectres
+| Le spectre | Sa source | Son aspect |
+| **Continu** | Un corps chaud : filament, étoile | Toutes les longueurs d'onde ; le maximum se déplace vers le bleu quand la **température** monte |
+| **Raies d'émission** | Un gaz atomique excité | Quelques raies colorées sur fond noir |
+| **Raies d'absorption** | Lumière blanche traversant un gaz froid | Un fond continu **barré de raies noires** |
+
+> Les raies noires d'absorption sont exactement aux positions où le même gaz émettrait. Chaque jeu de raies est la **signature** d'un élément : c'est ainsi qu'on lit la composition d'une étoile ou d'une atmosphère planétaire.`,
           },
           questions: [
             ['Quel est le domaine approximatif de la lumière visible ?', ['De 400 à 800 nm', 'De 10 à 400 nm', 'De 800 nm à 1 mm', 'Au-delà du mètre'], 0, 'Du violet au rouge, une bande minuscule du spectre total.'],
@@ -389,31 +446,39 @@ Une lumière blanche traversant un gaz froid en ressort privée de certaines lon
           axe: 'Lumière, images et couleurs',
           lecon: {
             titre: 'Quantification de l’énergie',
-            cours: `La lumière se comporte aussi comme un flux de **grains d’énergie**, les **photons**. C’est la seule façon d’expliquer que la matière n’absorbe et n’émette la lumière que par valeurs bien précises.
+            cours: `La lumière se comporte aussi comme un flux de grains d'énergie, les photons. C'est la seule façon d'expliquer que la matière n'absorbe et n'émette que par valeurs précises.
 
-## L’énergie d’un photon
-Un photon de fréquence f transporte l’énergie :
-
+## L'énergie d'un photon
 E = h × f = h × c / λ
 
-avec h ≈ 6,63 × 10⁻³⁴ J·s, la constante de Planck. Un photon **bleu** (petite longueur d’onde) est donc plus énergétique qu’un photon **rouge**.
+avec h ≈ 6,63 × 10⁻³⁴ J·s, la constante de Planck.
 
-Les énergies mises en jeu à l’échelle atomique étant minuscules en joules, on emploie l’**électronvolt** : 1 eV ≈ 1,60 × 10⁻¹⁹ J.
+| Le photon | Sa longueur d'onde | Son énergie |
+| **Bleu** | Petite | **Grande** |
+| **Rouge** | Grande | **Petite** |
 
-## Les niveaux d’énergie
-L’énergie d’un atome ne prend que certaines valeurs : elle est **quantifiée**. On la représente par un **diagramme de niveaux**, échelons horizontaux dont le plus bas est l’**état fondamental**, les autres des **états excités**.
+Les énergies atomiques étant minuscules en joules, on emploie l'**électronvolt** : 1 eV ≈ 1,60 × 10⁻¹⁹ J.
+
+## Les niveaux d'énergie
+L'énergie d'un atome ne prend que certaines valeurs : elle est **quantifiée**. On la représente par un **diagramme de niveaux**, échelons horizontaux.
+
+| Le niveau | Ce qu'il est |
+| Le plus bas | L'**état fondamental** |
+| Les autres | Des **états excités** |
 
 ## Absorption et émission
-- **Absorption** : l’atome ne peut absorber un photon que si son énergie correspond **exactement** à l’écart entre deux niveaux. Un photon d’énergie intermédiaire n’est pas absorbé du tout — il n’existe pas de demi-transition.
-- **Émission** : un atome excité redescend et émet un photon d’énergie égale à la différence des niveaux.
+| Le phénomène | Ce qui se passe |
+| **Absorption** | L'atome n'absorbe un photon que si son énergie correspond **exactement** à l'écart entre deux niveaux |
+| **Émission** | Un atome excité redescend et émet un photon d'énergie égale à la différence des niveaux |
 
 E(photon) = E(haut) − E(bas)
 
-> C’est ce qui explique les spectres de raies : chaque raie correspond à une transition, donc à un écart d’énergie propre à l’élément.
+> Un photon d'énergie intermédiaire n'est pas absorbé du tout : il n'existe pas de demi-transition. C'est ce qui explique les spectres de raies — chaque raie correspond à un écart d'énergie propre à l'élément.
 
 ## Deux applications
-- Le **laser** exploite une émission provoquée entre deux niveaux : lumière monochromatique et directive.
-- La **photosynthèse**, la **vision** et l’effet photoélectrique reposent tous sur l’absorption d’un photon par une molécule ou un métal.`,
+| L'application | Ce qu'elle exploite |
+| Le **laser** | Une émission provoquée entre deux niveaux : lumière monochromatique et directive |
+| La **photosynthèse**, la **vision**, l'effet photoélectrique | L'absorption d'un photon par une molécule ou un métal |`,
           },
           questions: [
             ['Quelle relation donne l’énergie d’un photon ?', ['E = h × f', 'E = h / f', 'E = h × λ', 'E = f / h'], 0, 'Équivalente à E = h × c / λ.'],
@@ -431,38 +496,43 @@ E(photon) = E(haut) − E(bas)
           axe: 'Lumière, images et couleurs',
           lecon: {
             titre: 'La lentille mince convergente',
-            cours: `Une **lentille mince convergente** fait converger en un point les rayons qui la traversent parallèlement à son axe optique. Ce point est le **foyer image F’**.
+            cours: `Une lentille mince convergente fait converger en un point les rayons qui la traversent parallèlement à son axe optique. Ce point est le foyer image F'.
 
-## Les grandeurs
-- La **distance focale** f’ (en m) est la distance du centre optique O au foyer image F’.
-- La **vergence** C (en **dioptries**, δ) en est l’inverse :
+## Les deux grandeurs
+| La grandeur | Son unité | Sa définition |
+| **Distance focale** f' | Mètre (m) | La distance du centre optique O au foyer image F' |
+| **Vergence** C | **Dioptrie** (δ) | Son inverse : C = 1 / f' |
 
-C = 1 / f’
-
-Une lentille de 5 dioptries a donc une distance focale de 0,20 m. Plus la vergence est grande, plus la lentille est convergente.
+Une lentille de 5 dioptries a une distance focale de 0,20 m. Plus la vergence est grande, plus la lentille est convergente.
 
 ## Les trois rayons à savoir tracer
-- Un rayon passant par le **centre optique O** n’est pas dévié.
-- Un rayon **parallèle à l’axe** ressort en passant par **F’**.
-- Un rayon passant par le **foyer objet F** ressort **parallèle à l’axe**.
+| Le rayon incident | Ce qu'il devient |
+| Passant par le **centre optique O** | Il n'est **pas dévié** |
+| **Parallèle à l'axe** | Il ressort en passant par **F'** |
+| Passant par le **foyer objet F** | Il ressort **parallèle à l'axe** |
 
-Deux suffisent à construire l’image d’un point.
+> Deux de ces trois rayons suffisent à construire l'image d'un point.
 
 ## La relation de conjugaison
 Avec les mesures algébriques comptées depuis le centre optique O :
 
-1 / OA’ − 1 / OA = 1 / f’
+1 / OA' − 1 / OA = 1 / f'
 
 ## Le grandissement
-γ = A’B’ / AB = OA’ / OA
+γ = A'B' / AB = OA' / OA
 
-- |γ| > 1 : l’image est **agrandie** ; |γ| < 1 : elle est réduite.
-- γ **négatif** : l’image est **renversée** ; γ positif : elle est droite.
-
-> Un objet placé au-delà de 2f’ donne une image réelle, renversée et plus petite : c’est le cas de l’œil et de l’appareil photo. Un objet situé entre O et F donne une image **virtuelle**, droite et agrandie : c’est la loupe.
+| La valeur de γ | Ce qu'elle dit de l'image |
+| Valeur absolue supérieure à 1 | Elle est **agrandie** |
+| Valeur absolue inférieure à 1 | Elle est **réduite** |
+| γ **négatif** | Elle est **renversée** |
+| γ positif | Elle est **droite** |
 
 ## Réelle ou virtuelle
-Une image **réelle** peut être recueillie sur un écran, du côté opposé à l’objet. Une image **virtuelle** ne le peut pas : elle se voit à travers la lentille, du même côté que l’objet.`,
+| L'image | Où est l'objet | Ce qu'elle donne |
+| **Réelle** | Au-delà de 2f' | Renversée, plus petite, recueillie sur un écran : l'œil, l'appareil photo |
+| **Virtuelle** | Entre O et F | Droite, agrandie, vue à travers la lentille : la loupe |
+
+> Une image réelle peut être recueillie sur un écran, du côté opposé à l'objet. Une image virtuelle ne le peut pas : elle est du même côté que l'objet.`,
           },
           questions: [
             ['Quelle est l’unité de la vergence d’une lentille ?', ['La dioptrie', 'Le mètre', 'Le lumen', 'Le hertz'], 0, 'La vergence est l’inverse de la distance focale exprimée en mètres.'],
@@ -480,24 +550,40 @@ Une image **réelle** peut être recueillie sur un écran, du côté opposé à 
           axe: 'Lumière, images et couleurs',
           lecon: {
             titre: 'Synthèses, absorption et perception',
-            cours: `La couleur perçue résulte de trois choses : la lumière qui éclaire, l’objet qui la modifie, et l’œil qui la reçoit. Changer l’une d’elles change la couleur.
+            cours: `La couleur perçue résulte de trois choses : la lumière qui éclaire, l'objet qui la modifie, l'œil qui la reçoit. Changer l'une d'elles change la couleur.
 
 ## Les deux synthèses
-- La **synthèse additive** combine des lumières colorées. Les primaires sont le **rouge**, le **vert** et le **bleu** (RVB) ; leur superposition donne du blanc. C’est le principe des écrans.
-- La **synthèse soustractive** combine des matières colorées qui **retranchent** des longueurs d’onde. Les primaires sont le **cyan**, le **magenta** et le **jaune** ; leur superposition donne du noir. C’est le principe de l’imprimerie et de la peinture.
+| La synthèse | Ce qu'elle combine | Ses primaires | Leur superposition | Où on la trouve |
+| **Additive** | Des **lumières** colorées | Rouge, vert, bleu (RVB) | Du **blanc** | Les écrans |
+| **Soustractive** | Des **matières** qui retranchent des longueurs d'onde | Cyan, magenta, jaune | Du **noir** | Imprimerie, peinture |
 
-## Couleur d’un objet
-- Un objet **opaque** apparaît de la couleur qu’il **diffuse** ; il absorbe les autres. Un pull rouge éclairé en lumière blanche diffuse le rouge et absorbe le reste. Éclairé en lumière verte, il paraît **noir** : il n’a rien à diffuser.
-- Un objet **transparent** apparaît de la couleur qu’il **transmet**.
-- Un objet **noir** absorbe toutes les longueurs d’onde ; un objet **blanc** les diffuse toutes.
+## Couleur d'un objet
+| L'objet | Ce qui détermine sa couleur |
+| **Opaque** | La lumière qu'il **diffuse** ; il absorbe le reste |
+| **Transparent** | La lumière qu'il **transmet** |
+| **Noir** | Il absorbe toutes les longueurs d'onde |
+| **Blanc** | Il les diffuse toutes |
+
+> Un pull rouge éclairé en lumière verte paraît **noir** : il n'a rien à diffuser.
 
 ## Couleurs complémentaires
-Deux couleurs sont **complémentaires** si leur superposition en synthèse additive donne du blanc : rouge et cyan, vert et magenta, bleu et jaune. Une solution absorbe la couleur complémentaire de celle qu’elle paraît avoir — une solution bleue absorbe dans le jaune-orangé, ce qui sert directement en spectrophotométrie.
+Deux couleurs sont complémentaires si leur superposition en synthèse additive donne du blanc.
+
+| La couleur | Sa complémentaire |
+| Rouge | Cyan |
+| Vert | Magenta |
+| Bleu | Jaune |
+
+> Une solution absorbe la couleur complémentaire de celle qu'elle paraît avoir : une solution bleue absorbe dans le jaune-orangé. C'est directement utile en spectrophotométrie.
 
 ## La vision des couleurs
-La rétine porte trois types de **cônes**, sensibles au rouge, au vert et au bleu, et des **bâtonnets**, très sensibles mais aveugles à la couleur — d’où la vision nocturne en niveaux de gris. Le cerveau reconstruit la couleur à partir des trois signaux : la couleur est une **construction**, pas une propriété de l’objet.
+| Le récepteur | Sa sensibilité |
+| Les trois types de **cônes** | Rouge, vert, bleu ; ils fonctionnent en pleine lumière |
+| Les **bâtonnets** | Très sensibles mais **aveugles à la couleur** : d'où la vision nocturne en niveaux de gris |
 
-> Le **daltonisme** vient d’une déficience d’un type de cônes ; la couleur perçue d’un même objet peut aussi changer selon l’éclairage, ce qui n’est pas une illusion mais la conséquence directe du mécanisme.`,
+Le cerveau reconstruit la couleur à partir des trois signaux.
+
+> La couleur est une **construction**, pas une propriété de l'objet. Le **daltonisme** vient d'une déficience d'un type de cônes ; qu'un objet change de teinte selon l'éclairage n'est pas une illusion, mais la conséquence directe du mécanisme.`,
           },
           questions: [
             ['Quelles sont les trois couleurs primaires de la synthèse additive ?', ['Rouge, vert, bleu', 'Cyan, magenta, jaune', 'Rouge, jaune, bleu', 'Vert, orange, violet'], 0, 'Leur superposition donne du blanc : c’est le principe des écrans.'],
@@ -517,37 +603,36 @@ La rétine porte trois types de **cônes**, sensibles au rouge, au vert et au bl
           axe: 'Énergie : conversions et transferts',
           lecon: {
             titre: 'Conservation et non-conservation',
-            cours: `L’**énergie mécanique** d’un système est la somme de son énergie cinétique et de son énergie potentielle de pesanteur.
+            cours: `L'énergie mécanique d'un système est la somme de son énergie cinétique et de son énergie potentielle de pesanteur.
 
 Em = Ec + Epp
 
 ## Les deux termes
-- L’**énergie cinétique** est liée au mouvement :
+| L'énergie | Sa formule | Ce dont elle dépend |
+| **Cinétique** Ec | ½ × m × v² | Le **mouvement** |
+| **Potentielle de pesanteur** Epp | m × g × z | L'**altitude** |
 
-Ec = ½ × m × v²
+> Ec croît avec le **carré** de la vitesse : doubler la vitesse **quadruple** l'énergie cinétique. C'est l'argument physique des limitations de vitesse.
 
-Elle croît avec le **carré** de la vitesse : doubler la vitesse **quadruple** l’énergie cinétique. C’est l’argument physique des limitations de vitesse.
+L'énergie potentielle dépend du choix de l'**origine des altitudes**, choisie librement : seules ses **variations** ont un sens physique.
 
-- L’**énergie potentielle de pesanteur** est liée à l’altitude :
-
-Epp = m × g × z
-
-Elle dépend du choix de l’**origine des altitudes**, choisie librement : seules ses **variations** ont un sens physique.
-
-## Le théorème de l’énergie cinétique
-La variation d’énergie cinétique entre deux points est égale à la somme des **travaux** des forces appliquées :
+## Le théorème de l'énergie cinétique
+La variation d'énergie cinétique entre deux points est égale à la somme des **travaux** des forces appliquées :
 
 ΔEc = Σ W(F)
 
-Le travail d’une force constante sur un déplacement rectiligne vaut W = F × d × cos α. Une force perpendiculaire au déplacement ne travaille **pas** — c’est le cas de la force de pesanteur pour un mouvement horizontal.
+Pour une force constante sur un déplacement rectiligne : W = F × d × cos α.
 
-## Conservation
-Si les seules forces qui travaillent sont **conservatives** (la pesanteur), l’énergie mécanique **se conserve** : ce qui est perdu en altitude est gagné en vitesse, et réciproquement.
+> Une force **perpendiculaire** au déplacement ne travaille pas — c'est le cas de la pesanteur pour un mouvement horizontal.
+
+## Conservation et non-conservation
+| Le cas | Ce qui se passe | Le bilan |
+| Seules des forces **conservatives** travaillent (la pesanteur) | L'énergie mécanique **se conserve** | Ce qui est perdu en altitude est gagné en vitesse |
+| Des **frottements** interviennent | L'énergie mécanique **diminue** | ΔEm est égale au travail des frottements, négatif |
 
 > Sur un toboggan sans frottement, la vitesse en bas ne dépend pas de la forme de la piste, mais seulement de la dénivellation.
 
-## Non-conservation
-Les **frottements** dissipent de l’énergie sous forme thermique : l’énergie mécanique diminue. Elle n’est pas « perdue » — le premier principe reste vrai — mais **transférée** au milieu et dégradée. La variation d’énergie mécanique est alors égale au travail des forces de frottement, négatif.`,
+L'énergie dissipée n'est pas « perdue » — le premier principe reste vrai — mais **transférée** au milieu sous forme thermique, et dégradée.`,
           },
           questions: [
             ['Quelle est l’expression de l’énergie cinétique ?', ['Ec = ½ × m × v²', 'Ec = m × g × z', 'Ec = m × v', 'Ec = ½ × m × v'], 0, 'Elle croît avec le carré de la vitesse.'],
@@ -565,41 +650,50 @@ Les **frottements** dissipent de l’énergie sous forme thermique : l’énergi
           axe: 'Énergie : conversions et transferts',
           lecon: {
             titre: 'Puissance, effet Joule et rendement',
-            cours: `Un circuit électrique **transfère** de l’énergie d’un générateur vers des récepteurs, qui la convertissent en une autre forme.
+            cours: `Un circuit électrique transfère de l'énergie d'un générateur vers des récepteurs, qui la convertissent en une autre forme.
 
 ## Puissance et énergie
-La **puissance électrique** reçue ou fournie par un dipôle vaut :
+| La grandeur | Sa formule | Son unité |
+| **Puissance** P | U × I | Watt (W), avec U en volts et I en ampères |
+| **Énergie** E | P × Δt | Joule (J) si Δt est en secondes |
 
-P = U × I
+> Le **kilowattheure**, unité des factures, vaut 3,6 × 10⁶ J.
 
-en watts (W), avec U en volts et I en ampères. L’**énergie** transférée pendant une durée Δt vaut :
-
-E = P × Δt
-
-en joules si Δt est en secondes. Le **kilowattheure**, unité des factures, vaut 3,6 × 10⁶ J.
-
-## La loi d’Ohm et l’effet Joule
-Pour un conducteur ohmique de résistance R (en ohms) :
+## La loi d'Ohm et l'effet Joule
+Pour un conducteur ohmique de résistance R, en ohms :
 
 U = R × I
 
-La puissance qu’il dissipe entièrement sous forme thermique vaut :
+La puissance qu'il dissipe entièrement sous forme thermique vaut :
 
 P = R × I²
 
-C’est l’**effet Joule**. Il est utile dans un radiateur ou un grille-pain, nuisible dans un ordinateur ou une ligne à haute tension — d’où le transport de l’électricité à très haute tension, qui réduit l’intensité et donc les pertes, puisqu’elles varient avec le **carré** de I.
+| L'effet Joule est… | Où |
+| **Utile** | Radiateur, grille-pain, fusible |
+| **Nuisible** | Ordinateur, ligne électrique |
 
-## Rendement
-Aucune conversion n’est parfaite. Le **rendement** est le rapport de l’énergie utile à l’énergie reçue :
+> Les pertes varient avec le **carré** de I : d'où le transport de l'électricité à très haute tension, qui réduit l'intensité et donc les pertes.
 
+## Le rendement
 η = E(utile) / E(reçue)
 
-Il est toujours inférieur à 1 et s’exprime souvent en pourcentage. Une lampe à incandescence convertit moins de 5 % de l’énergie reçue en lumière ; une LED dépasse largement les 30 %.
+Toujours inférieur à 1, souvent exprimé en pourcentage.
 
-## Générateur réel
-Un générateur réel n’est pas parfait : sa **résistance interne** r dissipe une part de l’énergie qu’il produit. Sa tension aux bornes vaut U = E − r × I, où E est la force électromotrice. Plus le courant appelé est fort, plus la tension délivrée chute.
+| Le convertisseur | Son rendement lumineux |
+| Lampe à incandescence | Moins de 5 % |
+| LED | Largement plus de 30 % |
 
-> Le bilan énergétique d’un circuit se lit toujours de la même façon : énergie fournie = énergie utile + énergie dissipée.`,
+## Le générateur réel
+Sa **résistance interne** r dissipe une part de l'énergie produite :
+
+U = E − r × I
+
+où E est la force électromotrice.
+
+> Plus le courant appelé est fort, plus la tension délivrée chute.
+
+## Le bilan, toujours le même
+énergie fournie = énergie utile + énergie dissipée`,
           },
           questions: [
             ['Quelle relation donne la puissance électrique d’un dipôle ?', ['P = U × I', 'P = U / I', 'P = U + I', 'P = U × I²'], 0, 'Avec U en volts et I en ampères, P est en watts.'],
@@ -619,32 +713,45 @@ Un générateur réel n’est pas parfait : sa **résistance interne** r dissipe
           axe: 'Constitution et transformations de la matière',
           lecon: {
             titre: 'Compter les entités sans les compter',
-            cours: `Un chimiste ne compte pas les atomes un par un : il les pèse. La **mole** est le pont entre l’échelle de la balance et celle de la molécule.
+            cours: `Un chimiste ne compte pas les atomes un par un : il les pèse. La mole est le pont entre l'échelle de la balance et celle de la molécule.
 
-## La mole et la constante d’Avogadro
-Une mole contient N(A) ≈ 6,02 × 10²³ entités. La quantité de matière n, en moles, se déduit du nombre d’entités N :
+## La mole
+Une mole contient N(A) ≈ 6,02 × 10²³ entités — la **constante d'Avogadro**.
 
 n = N / N(A)
 
 ## Les quatre relations à savoir
-- À partir de la **masse** : n = m / M, avec M la masse molaire en g/mol.
-- Pour un **gaz** : n = V / V(m), où V(m) est le volume molaire — environ 24 L/mol dans les conditions usuelles. Il ne dépend **pas** de la nature du gaz.
-- À partir d’un **volume de liquide** : on passe d’abord par la masse volumique, m = ρ × V.
-- En **solution** : n = C × V, où C est la concentration en quantité de matière (mol/L).
+| On part de… | La relation | L'unité de la grandeur intermédiaire |
+| Une **masse** | n = m / M | M, masse molaire, en g/mol |
+| Un **gaz** | n = V / V(m) | V(m), volume molaire, environ 24 L/mol dans les conditions usuelles |
+| Un **volume de liquide** | m = ρ × V, puis n = m / M | ρ, masse volumique, en g/L ou g/mL |
+| Une **solution** | n = C × V | C, concentration en quantité de matière, en mol/L |
 
-> Piège classique : la masse molaire d’une molécule s’obtient en additionnant celles de tous ses atomes. Pour l’eau H₂O : 2 × 1,0 + 16,0 = 18,0 g/mol.
+> Le volume molaire ne dépend **pas** de la nature du gaz.
 
-## Concentration en masse et concentration molaire
-La **concentration en masse** t (g/L) et la **concentration en quantité de matière** C (mol/L) sont reliées par la masse molaire :
+> Piège classique : la masse molaire d'une molécule s'obtient en additionnant celles de tous ses atomes. Pour l'eau H₂O : 2 × 1,0 + 16,0 = 18,0 g/mol.
+
+## Les deux concentrations
+| La concentration | Son symbole | Son unité |
+| En **masse** | t | g/L |
+| En **quantité de matière** | C | mol/L |
+
+Elles sont reliées par la masse molaire :
 
 t = C × M
 
 ## La dilution
-Diluer, c’est ajouter du solvant sans changer la quantité de soluté. D’où la relation :
+Diluer, c'est ajouter du solvant **sans changer la quantité de soluté**. D'où :
 
 C(mère) × V(prélevé) = C(fille) × V(fille)
 
-En pratique : prélever V(prélevé) à la pipette jaugée, verser dans une fiole jaugée de volume V(fille), compléter au trait de jauge et homogénéiser. Le **facteur de dilution** est le rapport C(mère) / C(fille).`,
+| L'étape | Le geste |
+| 1 | Prélever V(prélevé) à la **pipette jaugée** |
+| 2 | Verser dans une **fiole jaugée** de volume V(fille) |
+| 3 | Compléter **au trait de jauge** |
+| 4 | Boucher et **homogénéiser** |
+
+Le **facteur de dilution** est le rapport C(mère) / C(fille).`,
           },
           questions: [
             ['Combien d’entités contient une mole ?', ['Environ 6,02 × 10²³', 'Environ 3,00 × 10⁸', 'Environ 1,60 × 10⁻¹⁹', 'Environ 6,63 × 10⁻³⁴'], 0, 'C’est la constante d’Avogadro.'],
@@ -662,32 +769,38 @@ En pratique : prélever V(prélevé) à la pipette jaugée, verser dans une fiol
           axe: 'Constitution et transformations de la matière',
           lecon: {
             titre: 'Doser une espèce colorée sans la toucher',
-            cours: `Une espèce colorée en solution absorbe une partie de la lumière qui la traverse. Mesurer cette absorption permet de déterminer sa **concentration** sans prélèvement ni réaction : c’est la **spectrophotométrie**.
+            cours: `Une espèce colorée absorbe une partie de la lumière qui la traverse. Mesurer cette absorption donne sa concentration sans prélèvement ni réaction.
 
-## L’absorbance
-L’**absorbance** A est une grandeur **sans unité**, mesurée par un spectrophotomètre. Elle vaut 0 pour une solution qui n’absorbe rien, et croît avec la quantité de lumière retenue.
+## L'absorbance
+L'**absorbance** A est une grandeur **sans unité**, mesurée par un spectrophotomètre. Elle vaut 0 pour une solution qui n'absorbe rien et croît avec la lumière retenue.
 
-## Le spectre d’absorption
-On trace A en fonction de la longueur d’onde. Le maximum obtenu, **λ(max)**, est la longueur d’onde la plus absorbée — et c’est à cette longueur d’onde que l’on travaille, parce que c’est là que la mesure est la plus **sensible** et la plus **précise**.
+## Le spectre d'absorption
+On trace A en fonction de la longueur d'onde. Le maximum obtenu, **λ(max)**, est la longueur d'onde la plus absorbée.
 
-> λ(max) correspond à la couleur **complémentaire** de celle de la solution : une solution bleue absorbe dans le jaune-orangé, autour de 600 nm.
+| Pourquoi travailler à λ(max) | La raison |
+| **Sensibilité** | La variation d'absorbance est la plus forte |
+| **Précision** | Un petit écart de réglage change peu le résultat |
+
+> λ(max) correspond à la couleur **complémentaire** de la solution : une solution bleue absorbe dans le jaune-orangé, autour de 600 nm.
 
 ## La loi de Beer-Lambert
-Pour une solution **diluée** d’une espèce colorée, à une longueur d’onde donnée :
+Pour une solution **diluée**, à une longueur d'onde donnée :
 
 A = k × C
 
-L’absorbance est **proportionnelle** à la concentration. Le coefficient k dépend de l’espèce, de la longueur d’onde et de la longueur de cuve traversée.
+L'absorbance est **proportionnelle** à la concentration. Le coefficient k dépend de l'espèce, de la longueur d'onde et de la longueur de cuve traversée.
 
 ## Le dosage par étalonnage
-La méthode, exigible en travaux pratiques :
-1. préparer une **gamme d’étalons** de concentrations connues, par dilutions successives d’une solution mère ;
-2. régler le spectrophotomètre à λ(max) et faire le **blanc** avec le solvant seul, pour ne mesurer que l’absorption de l’espèce étudiée ;
-3. mesurer l’absorbance de chaque étalon et tracer la **droite d’étalonnage** A = f(C), qui passe par l’origine ;
-4. mesurer l’absorbance de la solution inconnue et lire sa concentration sur la droite.
+1. Préparer une **gamme d'étalons** de concentrations connues, par dilutions successives d'une solution mère.
+2. Régler le spectrophotomètre à **λ(max)** et faire le **blanc** avec le solvant seul.
+3. Mesurer chaque étalon et tracer la **droite d'étalonnage** A = f(C), qui passe par l'origine.
+4. Mesurer la solution inconnue et **lire sa concentration** sur la droite.
 
 ## Les limites
-La loi n’est valable que pour des solutions **diluées** : au-delà, la droite s’incurve. Il faut aussi que l’espèce ne réagisse pas et que la cuve soit propre — une trace de doigt fausse la mesure.`,
+| La limite | Sa conséquence |
+| Solutions **trop concentrées** | La droite s'incurve : la loi n'est plus valable |
+| Espèce qui **réagit** | La concentration change pendant la mesure |
+| Cuve sale ou rayée | Une trace de doigt fausse le résultat |`,
           },
           questions: [
             ['Quelle est l’unité de l’absorbance ?', ['Elle n’a pas d’unité', 'Le mol/L', 'Le mètre', 'Le hertz'], 0, 'C’est une grandeur sans dimension.'],
@@ -705,30 +818,41 @@ La loi n’est valable que pour des solutions **diluées** : au-delà, la droite
           axe: 'Constitution et transformations de la matière',
           lecon: {
             titre: 'Avancement, tableau et réactif limitant',
-            cours: `Une transformation chimique se modélise par une **équation de réaction** équilibrée : les mêmes atomes, en même nombre, de part et d’autre de la flèche. La charge se conserve aussi.
+            cours: `Une transformation chimique se modélise par une équation équilibrée : mêmes atomes, en même nombre, de part et d'autre de la flèche. La charge se conserve aussi.
 
-## L’avancement
-L’**avancement** x, en moles, mesure le degré de progression de la réaction. Il vaut 0 à l’état initial et croît jusqu’à sa valeur maximale x(max).
+## L'avancement
+L'**avancement** x, en moles, mesure la progression de la réaction. Il vaut 0 à l'état initial et croît jusqu'à x(max).
 
-Pour chaque espèce, la quantité à un instant donné vaut :
-- pour un **réactif** : n = n(initial) − coefficient × x ;
-- pour un **produit** : n = n(initial) + coefficient × x.
+| L'espèce | Sa quantité à l'instant considéré |
+| Un **réactif** | n = n(initial) − coefficient × x |
+| Un **produit** | n = n(initial) + coefficient × x |
 
-Les **coefficients stœchiométriques** de l’équation entrent donc directement dans le calcul : ils ne sont pas décoratifs.
+> Les **coefficients stœchiométriques** entrent directement dans le calcul : ils ne sont pas décoratifs.
 
-## Le tableau d’avancement
-Trois lignes — état initial, état intermédiaire, état final — et une colonne par espèce. C’est l’outil qui structure tout exercice de quantité de matière.
+## Le tableau d'avancement
+Trois lignes — état initial, état intermédiaire, état final — et une colonne par espèce. C'est l'outil qui structure tout exercice de quantité de matière.
 
 ## Le réactif limitant
-La réaction s’arrête quand le premier réactif est épuisé : c’est le **réactif limitant**. Pour le trouver, on calcule pour chaque réactif le rapport n(initial) / coefficient stœchiométrique ; **le plus petit désigne le limitant**, et x(max) vaut ce rapport.
+La réaction s'arrête quand le premier réactif est épuisé.
 
-> Erreur fréquente : croire que le réactif limitant est celui dont la quantité initiale est la plus faible. C’est faux dès que les coefficients diffèrent — il faut diviser par le coefficient.
+| L'étape | Le calcul |
+| 1 | Pour chaque réactif, calculer n(initial) / coefficient |
+| 2 | Le **plus petit rapport** désigne le **réactif limitant** |
+| 3 | x(max) vaut ce rapport |
 
-## Mélange stœchiométrique
-Si tous les rapports sont égaux, tous les réactifs sont épuisés en même temps : le mélange est **stœchiométrique**. Aucun réactif n’est gaspillé, ce qui est l’objectif d’une synthèse industrielle.
+> Erreur fréquente : croire que le limitant est celui dont la quantité initiale est la plus faible. C'est faux dès que les coefficients diffèrent — il faut **diviser par le coefficient**.
+
+## Le mélange stœchiométrique
+Si tous les rapports sont égaux, tous les réactifs s'épuisent en même temps : aucun n'est gaspillé. C'est l'objectif d'une synthèse industrielle.
 
 ## Le bilan de matière
-À l’état final, on calcule les quantités restantes en remplaçant x par x(max). On peut alors convertir en masse (m = n × M) ou en volume de gaz (V = n × V(m)) pour comparer à la mesure expérimentale — et en déduire un rendement.`,
+On remplace x par x(max) pour obtenir les quantités restantes, puis on convertit :
+
+| La conversion | La formule |
+| En **masse** | m = n × M |
+| En **volume de gaz** | V = n × V(m) |
+
+La comparaison à la mesure expérimentale donne le **rendement**.`,
           },
           questions: [
             ['Que mesure l’avancement d’une réaction ?', ['Le degré de progression de la réaction, en moles', 'La masse de produit formé', 'La vitesse de la réaction', 'La concentration des réactifs'], 0, 'Il vaut 0 à l’état initial et x(max) à l’état final.'],
@@ -746,33 +870,47 @@ Si tous les rapports sont égaux, tous les réactifs sont épuisés en même tem
           axe: 'Constitution et transformations de la matière',
           lecon: {
             titre: 'Trouver une concentration par une réaction',
-            cours: `Un **titrage** détermine la concentration inconnue d’une espèce (le **réactif titré**) en la faisant réagir avec une solution de concentration connue (le **réactif titrant**), versée progressivement à la burette.
+            cours: `Un titrage détermine la concentration inconnue d'une espèce en la faisant réagir avec une solution de concentration connue, versée progressivement à la burette.
 
-## Les conditions d’un bon titrage
+## Les deux acteurs
+| Le réactif | Sa concentration | Où il se trouve |
+| **Titré** | **Inconnue**, c'est ce qu'on cherche | Dans le bécher |
+| **Titrant** | **Connue** | Dans la burette |
+
+## Les conditions d'un bon titrage
 La réaction support doit être :
 - **totale** — sans quoi le calcul ne vaut rien ;
-- **rapide** — pour que l’équivalence soit nette ;
+- **rapide** — pour que l'équivalence soit nette ;
 - **unique** — aucune réaction parasite ;
-- et son terme doit être **repérable**.
+- **repérable** — son terme doit se voir ou se mesurer.
 
-## L’équivalence
-L’**équivalence** est l’instant où les réactifs ont été introduits dans les **proportions stœchiométriques**. Avant, le titrant est limitant ; après, c’est le titré qui a disparu et le titrant qui s’accumule.
+## L'équivalence
+C'est l'instant où les réactifs ont été introduits dans les **proportions stœchiométriques**.
+
+| Le moment | Le réactif limitant |
+| **Avant** l'équivalence | Le **titrant** |
+| **Après** | Le titré a disparu, le titrant s'accumule |
 
 Pour une réaction de coefficients 1-1 :
 
 C(titré) × V(titré) = C(titrant) × V(équivalence)
 
-Si les coefficients diffèrent, ils entrent dans la relation — c’est l’erreur la plus fréquente en devoir.
+> Si les coefficients diffèrent, ils entrent dans la relation. C'est l'erreur la plus fréquente en devoir.
 
-## Comment repérer l’équivalence
-- **Titrage colorimétrique** : par un changement de couleur, dû à un **indicateur coloré** ou à l’un des réactifs (le permanganate, violet, se décolore tant qu’il est consommé). L’équivalence est au **premier changement de couleur persistant**.
-- **Titrage conductimétrique** : on suit la conductivité, qui varie linéairement de part et d’autre de l’équivalence ; celle-ci est à l’**intersection des deux droites**.
-- **Titrage pH-métrique** : la courbe pH = f(V) présente un **saut de pH** ; l’équivalence est au point d’inflexion, repérable par la méthode des tangentes parallèles.
+## Comment repérer l'équivalence
+| Le type de titrage | Ce qu'on suit | Où est l'équivalence |
+| **Colorimétrique** | Une couleur | Au **premier changement persistant** — indicateur coloré, ou décoloration du permanganate |
+| **Conductimétrique** | La conductivité | À l'**intersection des deux droites** |
+| **pH-métrique** | Le pH | Au **saut de pH**, point d'inflexion repéré par les tangentes parallèles |
 
 ## Le mode opératoire
-Le réactif titré est prélevé à la **pipette jaugée** (précise) et placé dans un bécher ; le titrant est versé depuis la **burette graduée**. On peut ajouter de l’eau distillée dans le bécher **sans fausser le résultat** : elle ne change pas la quantité de matière titrée, seulement sa concentration.
+| Le geste | La verrerie |
+| Prélever le titré | **Pipette jaugée** : précise |
+| Verser le titrant | **Burette graduée** |
 
-> Ce qui compte, à l’équivalence, c’est une quantité de matière — pas une concentration.`,
+On peut ajouter de l'eau distillée dans le bécher **sans fausser le résultat** : elle change la concentration, pas la quantité de matière titrée.
+
+> Ce qui compte, à l'équivalence, c'est une **quantité de matière** — pas une concentration.`,
           },
           questions: [
             ['Qu’est-ce que l’équivalence d’un titrage ?', ['L’instant où les réactifs ont été mélangés dans les proportions stœchiométriques', 'L’instant où la solution devient neutre', 'L’instant où la burette est vide', 'L’instant où la couleur disparaît totalement'], 0, 'Avant, le titrant est limitant ; après, c’est le titré qui a disparu.'],
@@ -792,33 +930,38 @@ Le réactif titré est prélevé à la **pipette jaugée** (précise) et placé 
           axe: 'Structure de la matière',
           lecon: {
             titre: 'Compter les électrons de valence',
-            cours: `La représentation de **Lewis** montre comment les électrons **de valence** — ceux de la couche la plus externe — se répartissent dans une molécule.
+            cours: `La représentation de Lewis montre comment les électrons de valence — ceux de la couche la plus externe — se répartissent dans une molécule.
 
-## L’atome
-Le nombre d’électrons de valence se lit dans le tableau périodique : il correspond au numéro de colonne (pour les colonnes 1, 2, puis 13 à 18, où l’on retranche 10). Le carbone en a 4, l’azote 5, l’oxygène 6, un halogène 7.
+## Compter les électrons de valence
+Le nombre se lit dans le tableau périodique : il correspond au numéro de colonne, dont on retranche 10 pour les colonnes 13 à 18.
 
-Ces électrons se répartissent en **doublets liants** (partagés dans une liaison) et **doublets non liants** (propres à l’atome).
+| L'atome | Ses électrons de valence | Ses liaisons | Ses doublets non liants |
+| **Carbone** | 4 | **4** | 0 |
+| **Azote** | 5 | **3** | 1 |
+| **Oxygène** | 6 | **2** | 2 |
+| **Halogène** | 7 | **1** | 3 |
+| **Hydrogène** | 1 | **1** | 0 |
 
-## La règle de l’octet
-Un atome tend à s’entourer de **huit électrons** de valence, comme le gaz noble le plus proche — deux pour l’hydrogène (règle du duet). D’où le nombre de liaisons de chaque atome :
-- **carbone** : 4 liaisons, aucun doublet non liant ;
-- **azote** : 3 liaisons, 1 doublet non liant ;
-- **oxygène** : 2 liaisons, 2 doublets non liants ;
-- **halogène** : 1 liaison, 3 doublets non liants ;
-- **hydrogène** : 1 liaison.
+> Retenir cette colonne des liaisons évite de compter à chaque fois : elle donne directement la structure d'une molécule usuelle.
 
-> Retenir ce tableau évite de compter à chaque fois : il donne directement la structure d’une molécule usuelle.
+## La règle de l'octet
+Un atome tend à s'entourer de **huit électrons** de valence, comme le gaz noble le plus proche — **deux** pour l'hydrogène, c'est la règle du duet.
 
 ## Établir un schéma de Lewis
-1. Compter le **total** des électrons de valence de tous les atomes (en ajoutant ou retranchant des électrons pour un ion) ;
-2. placer les liaisons simples entre atomes voisins ;
-3. compléter les octets avec les doublets non liants ;
-4. si un atome reste incomplet, former une **liaison double** ou **triple**.
+1. Compter le **total** des électrons de valence de tous les atomes, en ajoutant ou retranchant pour un ion.
+2. Placer les **liaisons simples** entre atomes voisins.
+3. Compléter les octets avec les **doublets non liants**.
+4. Si un atome reste incomplet, former une liaison **double** ou **triple**.
 
-## Géométrie
-Les doublets, liants comme non liants, se **repoussent** et s’écartent au maximum. Cela détermine la forme de la molécule : linéaire pour deux doublets, triangulaire plane pour trois, tétraédrique pour quatre.
+## De Lewis à la géométrie
+Les doublets, liants comme non liants, se **repoussent** et s'écartent au maximum.
 
-C’est ainsi que l’eau est **coudée** (deux liaisons et deux doublets non liants autour de l’oxygène) et non linéaire — une différence qui explique ensuite toute sa chimie.`,
+| Le nombre de doublets autour de l'atome | La géométrie |
+| 2 | **Linéaire** |
+| 3 | **Triangulaire plane** |
+| 4 | **Tétraédrique** |
+
+> C'est ainsi que l'eau est **coudée** — deux liaisons et deux doublets non liants autour de l'oxygène — et non linéaire. Cette différence explique ensuite toute sa chimie.`,
           },
           questions: [
             ['Que représente un schéma de Lewis ?', ['La répartition des électrons de valence dans une molécule', 'La position des noyaux atomiques', 'Le nombre de neutrons', 'L’énergie de la molécule'], 0, 'Doublets liants et doublets non liants y figurent.'],
@@ -836,28 +979,36 @@ C’est ainsi que l’eau est **coudée** (deux liaisons et deux doublets non li
           axe: 'Structure de la matière',
           lecon: {
             titre: 'Quand une liaison n’est pas partagée à égalité',
-            cours: `L’**électronégativité** mesure la tendance d’un atome à attirer vers lui les électrons d’une liaison qu’il partage.
+            cours: `L'électronégativité mesure la tendance d'un atome à attirer vers lui les électrons d'une liaison qu'il partage.
 
 ## Comment elle varie
-Dans le tableau périodique, elle **augmente de gauche à droite** sur une période et **diminue de haut en bas** dans une colonne. Le **fluor** est l’élément le plus électronégatif, suivi de l’oxygène, de l’azote et du chlore. Les métaux sont peu électronégatifs.
+| Le sens de parcours | L'électronégativité |
+| De **gauche à droite** sur une période | Elle **augmente** |
+| De **haut en bas** dans une colonne | Elle **diminue** |
+
+Le **fluor** est le plus électronégatif, suivi de l'oxygène, de l'azote et du chlore. Les métaux le sont peu.
 
 ## Liaison polarisée
-Si deux atomes liés ont des électronégativités **différentes**, le doublet liant est déplacé vers le plus électronégatif : la liaison est **polarisée**. On note δ− sur l’atome enrichi et δ+ sur l’autre — ce sont des **charges partielles**, non des ions.
+| Les deux atomes liés | La liaison | La notation |
+| D'électronégativités **différentes** | **Polarisée** : le doublet est déplacé vers le plus électronégatif | δ− sur l'atome enrichi, δ+ sur l'autre |
+| **Identiques** (H₂, O₂, Cl₂) | Non polarisée | Aucune |
 
-Si les deux atomes sont **identiques**, la liaison n’est pas polarisée : c’est le cas dans H₂, O₂, Cl₂.
+> δ+ et δ− sont des **charges partielles**, pas des ions.
 
 ## Molécule polaire ou apolaire
-Une molécule est **polaire** si ses liaisons sont polarisées **et** si les charges partielles ne se compensent pas — autrement dit si le barycentre des charges positives ne coïncide pas avec celui des charges négatives.
+Une molécule est **polaire** si ses liaisons sont polarisées **et** si les charges partielles ne se compensent pas.
 
-- **H₂O** est polaire : ses deux liaisons sont polarisées et sa géométrie coudée empêche toute compensation.
-- **CO₂** est **apolaire** malgré deux liaisons fortement polarisées : la molécule est **linéaire** et symétrique, les deux effets s’annulent exactement.
+| La molécule | Ses liaisons | Sa géométrie | Le verdict |
+| **H₂O** | Polarisées | **Coudée** | **Polaire** : rien ne se compense |
+| **CO₂** | Fortement polarisées | **Linéaire** et symétrique | **Apolaire** : les deux effets s'annulent |
 
-> La géométrie compte donc autant que l’électronégativité. Deux molécules aux mêmes liaisons peuvent avoir des polarités opposées.
+> La géométrie compte donc autant que l'électronégativité. Deux molécules aux mêmes liaisons peuvent avoir des polarités opposées.
 
 ## Ce que la polarité commande
-- La **solubilité** : « semblable dissout semblable ». Une espèce polaire ou ionique se dissout bien dans un solvant polaire (eau, éthanol) ; une espèce apolaire dans un solvant apolaire (cyclohexane, huile).
-- La **température de changement d’état** : les molécules polaires s’attirent davantage, donc bouillent plus haut à masse comparable.
-- Les **propriétés du vivant** : l’eau doit à sa polarité d’être un solvant biologique et de posséder une tension superficielle élevée.`,
+| La propriété | La règle |
+| **Solubilité** | « Semblable dissout semblable » : polaire ou ionique dans l'eau ou l'éthanol ; apolaire dans le cyclohexane ou l'huile |
+| **Température de changement d'état** | Les molécules polaires s'attirent davantage, donc bouillent plus haut à masse comparable |
+| **Propriétés du vivant** | L'eau doit à sa polarité d'être un solvant biologique et d'avoir une tension superficielle élevée |`,
           },
           questions: [
             ['Que mesure l’électronégativité ?', ['La tendance d’un atome à attirer les électrons d’une liaison', 'La charge d’un ion', 'Le nombre d’électrons de valence', 'L’énergie d’ionisation'], 0, 'Elle décide de la polarisation des liaisons.'],
@@ -875,23 +1026,34 @@ Une molécule est **polaire** si ses liaisons sont polarisées **et** si les cha
           axe: 'Structure de la matière',
           lecon: {
             titre: 'Ce qui tient les entités ensemble',
-            cours: `Ce qui tient une **molécule** est différent de ce qui tient les molécules **entre elles**. Confondre les deux est l’erreur la plus coûteuse du chapitre.
+            cours: `Ce qui tient une molécule est différent de ce qui tient les molécules entre elles. Confondre les deux est l'erreur la plus coûteuse du chapitre.
 
-## À l’intérieur : les liaisons fortes
-- La **liaison covalente** partage un doublet entre deux atomes. Très énergétique : c’est elle que l’on rompt dans une réaction chimique.
-- La **liaison ionique** unit des ions de charges opposées dans un **solide ionique** : chaque ion s’entoure d’ions de signe contraire, en un empilement régulier électriquement neutre.
+## À l'intérieur : les liaisons fortes
+| La liaison | Son principe | Ce qu'elle forme |
+| **Covalente** | Un doublet partagé entre deux atomes | La molécule ; c'est elle qu'on rompt dans une réaction chimique |
+| **Ionique** | Attraction entre ions de charges opposées | Un **solide ionique** : empilement régulier, électriquement neutre |
 
 ## Entre les entités : les interactions faibles
-- Les **interactions de Van der Waals** existent entre **toutes** les molécules. Elles augmentent avec la taille de la molécule et avec sa polarité — ce qui explique que, dans une famille d’alcanes, la température d’ébullition croisse avec la longueur de la chaîne.
-- La **liaison hydrogène** est une interaction plus forte, qui apparaît quand un hydrogène lié à un atome très électronégatif (O, N ou F) s’approche du doublet non liant d’un autre atome électronégatif.
+| L'interaction | Quand elle existe | Ce qui la renforce |
+| **Van der Waals** | Entre **toutes** les molécules | La taille de la molécule et sa polarité |
+| **Liaison hydrogène** | Un H lié à O, N ou F s'approche du doublet non liant d'un autre atome électronégatif | Plus forte que Van der Waals |
 
-> C’est la liaison hydrogène qui explique l’anomalie de l’eau : à masse molaire comparable, elle devrait être gazeuse à température ambiante, comme le sulfure d’hydrogène. Elle est liquide, et sa glace flotte.
+> Dans une famille d'alcanes, la température d'ébullition croît avec la longueur de la chaîne : les interactions de Van der Waals augmentent avec la taille.
 
-## L’ordre de grandeur
-Les interactions faibles sont dix à cent fois moins énergétiques que les liaisons covalentes. C’est pourquoi **fondre** ou **vaporiser** un corps moléculaire ne casse **aucune** liaison covalente : ces changements d’état ne rompent que les interactions entre molécules.
+> La liaison hydrogène explique l'anomalie de l'eau : à masse molaire comparable, elle devrait être gazeuse comme le sulfure d'hydrogène. Elle est liquide, et sa glace flotte.
 
-## Solubilité et dissolution
-La dissolution d’un solide ionique dans l’eau se fait en trois temps : **dissociation** des ions, **solvatation** par les molécules d’eau qui orientent leur pôle opposé vers chaque ion, puis **dispersion** dans le solvant. L’eau y réussit précisément parce qu’elle est polaire.`,
+## L'ordre de grandeur
+Les interactions faibles sont **dix à cent fois** moins énergétiques que les liaisons covalentes.
+
+> D'où une conséquence à retenir : **fondre** ou **vaporiser** un corps moléculaire ne casse **aucune** liaison covalente. Ces changements d'état ne rompent que les interactions entre molécules.
+
+## La dissolution d'un solide ionique
+| L'étape | Ce qui se passe |
+| **Dissociation** | Les ions se séparent |
+| **Solvatation** | Les molécules d'eau orientent leur pôle opposé vers chaque ion |
+| **Dispersion** | Les ions solvatés se répartissent dans le solvant |
+
+L'eau y réussit précisément parce qu'elle est **polaire**.`,
           },
           questions: [
             ['Quelle liaison est rompue lors d’une réaction chimique ?', ['La liaison covalente', 'La liaison hydrogène', 'L’interaction de Van der Waals', 'Aucune'], 0, 'Les interactions faibles, elles, sont rompues lors des changements d’état.'],
@@ -909,27 +1071,45 @@ La dissolution d’un solide ionique dans l’eau se fait en trois temps : **dis
           axe: 'Structure de la matière',
           lecon: {
             titre: 'Faire passer une espèce d’une phase à l’autre',
-            cours: `La **solubilité** d’une espèce est la masse maximale que l’on peut dissoudre dans un litre de solvant, à une température donnée. Au-delà, la solution est **saturée** et le surplus reste solide.
+            cours: `La solubilité d'une espèce est la masse maximale que l'on peut dissoudre dans un litre de solvant, à une température donnée. Au-delà, la solution est saturée.
 
 ## Ce qui décide de la solubilité
-La règle est celle de la polarité : **semblable dissout semblable**.
-- Espèces **ioniques** ou **polaires** (sel, sucre, éthanol) : solubles dans les solvants **polaires**, l’eau au premier chef.
-- Espèces **apolaires** (huiles, diiode, hydrocarbures) : solubles dans les solvants **apolaires** — cyclohexane, éther, dichlorométhane.
+| L'espèce | Le solvant qui la dissout | Des exemples |
+| **Ionique** ou **polaire** | **Polaire** | Sel, sucre, éthanol dans l'eau |
+| **Apolaire** | **Apolaire** | Huiles, diiode, hydrocarbures dans le cyclohexane ou l'éther |
 
-La **température** joue aussi : la solubilité d’un solide augmente presque toujours avec elle, celle d’un gaz diminue — ce qui explique qu’une boisson gazeuse se dégaze en se réchauffant.
+> La règle tient en trois mots : **semblable dissout semblable**.
 
-## L’extraction liquide-liquide
-Elle consiste à faire passer une espèce d’un solvant à un autre, dans lequel elle est **plus soluble**. Deux conditions sur le solvant extracteur :
-- il doit **dissoudre mieux** l’espèce recherchée que le solvant de départ ;
+## L'effet de la température
+| L'espèce dissoute | Quand la température monte |
+| Un **solide** | Sa solubilité **augmente** presque toujours |
+| Un **gaz** | Sa solubilité **diminue** |
+
+> D'où une boisson gazeuse qui se dégaze en se réchauffant.
+
+## L'extraction liquide-liquide
+Faire passer une espèce d'un solvant à un autre. Deux conditions sur le solvant extracteur :
+- il doit **mieux dissoudre** l'espèce recherchée que le solvant de départ ;
 - il doit être **non miscible** avec lui, sans quoi les phases ne se sépareraient pas.
 
 ## Le mode opératoire
-On verse le mélange et le solvant extracteur dans une **ampoule à décanter**, on agite en **dégazant** régulièrement (l’agitation libère des vapeurs qui font monter la pression), on laisse **décanter** jusqu’à séparation nette des deux phases, puis on récupère chaque phase séparément.
+| L'étape | Le geste | Pourquoi |
+| 1 | Verser mélange et solvant dans l'**ampoule à décanter** | — |
+| 2 | Agiter en **dégazant** régulièrement | L'agitation libère des vapeurs qui font monter la pression |
+| 3 | Laisser **décanter** | Les deux phases se séparent nettement |
+| 4 | Récupérer chaque phase | — |
 
-> Pour savoir quelle phase est en haut, il suffit de comparer les **masses volumiques** : la moins dense surnage. Le dichlorométhane (1,33 g/mL) est sous l’eau, l’éther (0,71 g/mL) est dessus.
+## Quelle phase est en haut
+La moins **dense** surnage.
+
+| Le solvant | Sa masse volumique | Sa position par rapport à l'eau |
+| Dichlorométhane | 1,33 g/mL | **Dessous** |
+| Éther | 0,71 g/mL | **Dessus** |
 
 ## Ensuite
-Le solvant extracteur est éliminé par **évaporation**, laissant l’espèce extraite. Les mêmes principes gouvernent la **chromatographie sur couche mince**, où l’espèce se partage entre une phase fixe et une phase mobile — et qui sert à vérifier la pureté d’un produit de synthèse.`,
+Le solvant extracteur est éliminé par **évaporation**, laissant l'espèce extraite.
+
+> Les mêmes principes gouvernent la **chromatographie sur couche mince**, où l'espèce se partage entre une phase fixe et une phase mobile — et qui sert à vérifier la pureté d'un produit de synthèse.`,
           },
           questions: [
             ['Qu’est-ce qu’une solution saturée ?', ['Une solution qui a atteint la solubilité maximale de l’espèce dissoute', 'Une solution très diluée', 'Une solution colorée', 'Une solution chauffée'], 0, 'Le surplus de soluté reste alors à l’état solide.'],
@@ -949,34 +1129,46 @@ Le solvant extracteur est éliminé par **évaporation**, laissant l’espèce e
           axe: 'Propriétés physico-chimiques',
           lecon: {
             titre: 'Écrire et nommer une molécule organique',
-            cours: `Une même molécule s’écrit de plusieurs façons, du plus explicite au plus rapide.
+            cours: `Une même molécule s'écrit de plusieurs façons, du plus explicite au plus rapide.
 
-## Les représentations
-- **Formule brute** : le nombre de chaque atome, sans aucune information de structure. C₄H₁₀.
-- **Formule développée** : toutes les liaisons apparaissent, y compris avec les hydrogènes.
-- **Formule semi-développée** : les liaisons avec les hydrogènes sont sous-entendues — CH₃−CH₂−CH₂−CH₃.
-- **Formule topologique** : la plus employée. Chaque **extrémité** et chaque **sommet** de la ligne brisée est un carbone ; les hydrogènes portés par les carbones ne sont pas écrits ; les autres atomes le sont.
+## Les quatre représentations
+| La formule | Ce qu'elle montre | Un exemple pour le butane |
+| **Brute** | Le nombre de chaque atome, sans structure | C₄H₁₀ |
+| **Développée** | Toutes les liaisons, hydrogènes compris | Toutes les liaisons dessinées |
+| **Semi-développée** | Les liaisons avec les hydrogènes sont sous-entendues | CH₃−CH₂−CH₂−CH₃ |
+| **Topologique** | Chaque extrémité et chaque sommet est un carbone ; les H portés par les C ne sont pas écrits | Une ligne brisée |
 
-> Deux molécules de même formule brute mais de structures différentes sont des **isomères** — et n’ont pas les mêmes propriétés.
+> Deux molécules de même formule brute mais de structures différentes sont des **isomères** — et n'ont pas les mêmes propriétés.
 
 ## Nommer une chaîne carbonée
-1. Repérer la **chaîne principale**, la plus longue chaîne carbonée ; son nombre de carbones donne le préfixe : méth- (1), éth- (2), prop- (3), but- (4), pent- (5), hex- (6), hept- (7), oct- (8).
-2. Numéroter la chaîne de façon à donner les **plus petits indices** aux substituants ou à la fonction.
-3. Nommer les **ramifications** en substituants (méthyl-, éthyl-…), précédés de leur indice et, s’il y en a plusieurs identiques, d’un multiplicateur (di-, tri-).
-4. Ajouter la terminaison de la **famille**.
+1. Repérer la **chaîne principale**, la plus longue.
+2. La **numéroter** de façon à donner les plus petits indices aux substituants ou à la fonction.
+3. Nommer les **ramifications** en substituants (méthyl-, éthyl-), avec leur indice et un multiplicateur s'il y en a plusieurs (di-, tri-).
+4. Ajouter la **terminaison** de la famille.
+
+| Le nombre de carbones | Le préfixe |
+| 1 | méth- |
+| 2 | éth- |
+| 3 | prop- |
+| 4 | but- |
+| 5 | pent- |
+| 6 | hex- |
+| 7 | hept- |
+| 8 | oct- |
 
 ## Les familles au programme
-- **alcane** : terminaison -ane ;
-- **alcène** : -ène, avec l’indice de la double liaison ;
-- **alcool** : -ol ;
-- **aldéhyde** : -al ;
-- **cétone** : -one ;
-- **acide carboxylique** : acide …-oïque ;
-- **ester** : -oate de …-yle ;
-- **amine** : -amine.
+| La famille | Sa terminaison |
+| **Alcane** | -ane |
+| **Alcène** | -ène, avec l'indice de la double liaison |
+| **Alcool** | -ol |
+| **Aldéhyde** | -al |
+| **Cétone** | -one |
+| **Acide carboxylique** | acide …-oïque |
+| **Ester** | -oate de …-yle |
+| **Amine** | -amine |
 
 ## Ce que la structure change
-Les propriétés physiques suivent la structure : à nombre de carbones égal, une chaîne **ramifiée** bout plus bas qu’une chaîne **linéaire**, parce que ses molécules s’emboîtent moins bien et que les interactions de Van der Waals y sont plus faibles.`,
+> À nombre de carbones égal, une chaîne **ramifiée** bout plus bas qu'une chaîne **linéaire** : ses molécules s'emboîtent moins bien, et les interactions de Van der Waals y sont plus faibles.`,
           },
           questions: [
             ['Que représente chaque sommet d’une formule topologique ?', ['Un atome de carbone', 'Un atome d’hydrogène', 'Une liaison double', 'Un groupe fonctionnel'], 0, 'Les hydrogènes portés par ces carbones ne sont pas écrits.'],
@@ -994,28 +1186,45 @@ Les propriétés physiques suivent la structure : à nombre de carbones égal, u
           axe: 'Propriétés physico-chimiques',
           lecon: {
             titre: 'Fabriquer, isoler, purifier, identifier',
-            cours: `Une **synthèse organique** fabrique une espèce chimique au laboratoire. Le protocole suit toujours les mêmes quatre étapes, et chaque étape a sa raison d’être.
+            cours: `Une synthèse organique fabrique une espèce chimique au laboratoire. Le protocole suit toujours les mêmes quatre étapes, et chacune a sa raison d'être.
+
+## Les quatre étapes
+| L'étape | Ce qu'elle fait |
+| 1. **Transformation** | Les réactifs réagissent |
+| 2. **Isolement** | On sépare le produit du mélange |
+| 3. **Purification** | On élimine les impuretés restantes |
+| 4. **Identification** | On vérifie que c'est bien le produit voulu |
 
 ## 1. La transformation
-Les réactifs sont mélangés dans un ballon, souvent **chauffés à reflux**. Le montage à reflux comporte un **réfrigérant** vertical : les vapeurs se condensent et retombent dans le ballon. On chauffe donc **sans rien perdre**, ce qui accélère la réaction sans réduire le rendement. On ajoute de la **pierre ponce** pour réguler l’ébullition.
+Les réactifs sont mélangés dans un ballon, souvent **chauffés à reflux**. Le **réfrigérant** vertical condense les vapeurs, qui retombent dans le ballon : on chauffe **sans rien perdre**. La **pierre ponce** régule l'ébullition.
 
-> Les deux facteurs cinétiques à citer : la **température** et la **concentration** des réactifs. Un **catalyseur** accélère la réaction sans être consommé et sans modifier l’état final.
+| Le facteur cinétique | Son effet |
+| La **température** | Elle accélère la réaction |
+| La **concentration** des réactifs | Elle l'accélère aussi |
+| Un **catalyseur** | Il accélère sans être consommé et **sans modifier l'état final** |
 
-## 2. L’isolement
-On sépare le produit du mélange réactionnel : **extraction** liquide-liquide, **filtration sur Büchner** pour un solide, ou **distillation** si les températures d’ébullition diffèrent suffisamment.
+## 2. L'isolement
+| La technique | Quand l'employer |
+| **Extraction** liquide-liquide | Le produit est plus soluble dans un autre solvant |
+| **Filtration sur Büchner** | Le produit est solide |
+| **Distillation** | Les températures d'ébullition diffèrent assez |
 
 ## 3. La purification
-Pour un solide, la **recristallisation** : on dissout à chaud dans un solvant bien choisi, puis on laisse refroidir lentement — le produit cristallise pendant que les impuretés, plus solubles, restent en solution. Pour un liquide, la **distillation fractionnée**.
+| L'état du produit | La technique | Son principe |
+| **Solide** | **Recristallisation** | Dissoudre à chaud, refroidir lentement : le produit cristallise, les impuretés plus solubles restent en solution |
+| **Liquide** | **Distillation fractionnée** | Séparer par températures d'ébullition |
 
-## 4. L’identification
-- La **température de fusion** d’un solide ou la **température d’ébullition** d’un liquide, comparées aux valeurs tabulées ;
-- la **chromatographie sur couche mince**, avec un dépôt du produit brut, un du produit purifié et un du produit de référence : même hauteur de tache, même espèce ;
-- les spectroscopies **infrarouge** (elle révèle les groupes fonctionnels) et **RMN** (elle révèle le squelette carboné).
+## 4. L'identification
+| La méthode | Ce qu'elle révèle |
+| Température de **fusion** ou d'**ébullition** | Comparaison aux valeurs tabulées |
+| **Chromatographie sur couche mince** | Trois dépôts — brut, purifié, référence : même hauteur de tache, même espèce |
+| **Infrarouge** | Les groupes fonctionnels |
+| **RMN** | Le squelette carboné |
 
 ## Le rendement
 η = n(produit obtenu) / n(produit théorique maximal)
 
-Toujours inférieur à 1 : la réaction n’est jamais totale, et chaque manipulation en perd un peu. Le calculer suppose d’avoir identifié le **réactif limitant**.`,
+> Toujours inférieur à 1 : la réaction n'est jamais totale, et chaque manipulation en perd un peu. Le calculer suppose d'avoir identifié le **réactif limitant**.`,
           },
           questions: [
             ['À quoi sert un chauffage à reflux ?', ['Chauffer pour accélérer la réaction sans perdre de matière', 'Refroidir le mélange réactionnel', 'Séparer deux liquides', 'Purifier un solide'], 0, 'Le réfrigérant condense les vapeurs, qui retombent dans le ballon.'],
@@ -1033,29 +1242,39 @@ Toujours inférieur à 1 : la réaction n’est jamais totale, et chaque manipul
           axe: 'Propriétés physico-chimiques',
           lecon: {
             titre: 'Énergie libérée et bilan de matière',
-            cours: `Une **combustion** est la réaction d’un combustible avec un comburant — le dioxygène — accompagnée d’une libération d’énergie. Elle est **exothermique** : elle cède de l’énergie au milieu.
+            cours: `Une combustion est la réaction d'un combustible avec le dioxygène, accompagnée d'une libération d'énergie. Elle est exothermique : elle cède de l'énergie au milieu.
 
-## Combustion complète
-Pour un hydrocarbure ou une molécule ne contenant que C, H et O, la combustion complète donne **du dioxyde de carbone et de l’eau** :
+## Complète ou incomplète
+| La combustion | Le dioxygène | Les produits | Le danger |
+| **Complète** | En excès | **Dioxyde de carbone** et **eau** | — |
+| **Incomplète** | En défaut | **Monoxyde de carbone** (CO) et **suie** | CO est **inodore, incolore et mortel** |
 
-combustible + dioxygène → dioxyde de carbone + eau
+> Le monoxyde de carbone se fixe sur l'hémoglobine à la place du dioxygène. C'est la première cause d'intoxication domestique liée au chauffage. La suie rend la flamme jaune et fumeuse.
 
-Exemple, le méthane : CH₄ + 2 O₂ → CO₂ + 2 H₂O
+## Ajuster l'équation
+Exemple du méthane : CH₄ + 2 O₂ → CO₂ + 2 H₂O
 
-Ajuster l’équation suit toujours le même ordre : le **carbone** d’abord, l’**hydrogène** ensuite, l’**oxygène** en dernier.
+| L'ordre à suivre | L'élément |
+| 1 | Le **carbone** |
+| 2 | L'**hydrogène** |
+| 3 | L'**oxygène**, en dernier |
 
-## Combustion incomplète
-Si le dioxygène est en défaut, la combustion produit du **monoxyde de carbone** (CO) et des **particules de carbone** (la suie, qui rend la flamme jaune et fumeuse). Le monoxyde de carbone est un gaz **inodore, incolore et mortel** : il se fixe sur l’hémoglobine à la place du dioxygène. C’est la première cause d’intoxication domestique liée au chauffage.
-
-## L’énergie libérée
-Le **pouvoir calorifique** est l’énergie libérée par la combustion complète d’un kilogramme (ou d’un mètre cube) de combustible. L’énergie dégagée par une masse m vaut :
+## L'énergie libérée
+Le **pouvoir calorifique** est l'énergie libérée par la combustion complète d'un kilogramme — ou d'un mètre cube — de combustible.
 
 E = m × pouvoir calorifique
 
-Elle se calcule aussi à partir des **énergies de liaison** : rompre les liaisons des réactifs coûte de l’énergie, en former dans les produits en libère ; le bilan est négatif pour une réaction exothermique.
+| Le bilan par les énergies de liaison | Son signe |
+| **Rompre** les liaisons des réactifs | Coûte de l'énergie |
+| **Former** celles des produits | En libère |
+| Le total, pour une réaction exothermique | **Négatif** |
 
-## L’enjeu environnemental
-Toute combustion d’un composé carboné produit du CO₂, gaz à effet de serre. Les combustibles **fossiles** libèrent un carbone stocké depuis des millions d’années : leur bilan est un ajout net à l’atmosphère. La combustion de la **biomasse** relâche un carbone prélevé récemment par photosynthèse, ce qui change la nature du bilan — sans supprimer les autres polluants émis (particules fines, oxydes d’azote).`,
+## L'enjeu environnemental
+| Le combustible | Le carbone libéré | Le bilan |
+| **Fossile** | Stocké depuis des millions d'années | Un **ajout net** à l'atmosphère |
+| **Biomasse** | Prélevé récemment par photosynthèse | Un bilan de nature différente |
+
+> Cela ne supprime pas les autres polluants émis : particules fines, oxydes d'azote.`,
           },
           questions: [
             ['Quels sont les produits d’une combustion complète d’un hydrocarbure ?', ['Du dioxyde de carbone et de l’eau', 'Du monoxyde de carbone et de la suie', 'Du dioxygène et du carbone', 'De l’eau seulement'], 0, 'La combustion incomplète, elle, produit CO et des particules.'],

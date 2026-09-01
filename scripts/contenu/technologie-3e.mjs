@@ -136,32 +136,32 @@ DELETE FROM public.chapters c
           axe: 'L’évolution des OST',
           lecon: {
             titre: 'Objets et systèmes techniques : de quoi parle-t-on ?',
-            cours: `Un **OST** — **Objet et Système Technique** — est un objet **conçu et fabriqué par l’homme** pour **satisfaire un besoin**. Un vélo, un smartphone, un ascenseur, un feu tricolore en sont.
+            cours: `Un OST — Objet et Système Technique — est un objet conçu et fabriqué par l'homme pour satisfaire un besoin.
 
-## Objet ou système ?
-- Un **objet technique** répond à un besoin par lui-même : un tournevis, une chaise.
-- Un **système technique** associe plusieurs objets qui travaillent ensemble, souvent avec de l’électronique et un programme : une alarme, un ascenseur, un portail automatisé.
+## Objet ou système
+| Le terme | Sa définition | Ses exemples |
+| Un **objet technique** | Il répond à un besoin **par lui-même** | Un tournevis, une chaise |
+| Un **système technique** | Plusieurs objets qui travaillent **ensemble**, souvent avec électronique et programme | Une alarme, un ascenseur, un portail automatisé |
 
 ## Le besoin
-Tout OST naît d’un **besoin**. On l’exprime par trois questions :
-- **À qui rend-il service ?** (l’utilisateur)
-- **Sur quoi agit-il ?** (la matière d’œuvre)
-- **Dans quel but ?** (la fonction d’usage)
+| La question | Ce qu'elle désigne | Pour une lampe |
+| **À qui** rend-il service ? | L'**utilisateur** | Celui qui lit |
+| **Sur quoi** agit-il ? | La **matière d'œuvre** | La lumière de la pièce |
+| Dans quel **but** ? | La **fonction d'usage** | Éclairer |
 
-Une lampe rend service à celui qui lit, agit sur la lumière de la pièce, dans le but d’éclairer.
+## L'évolution dans le temps
+| Le moteur d'évolution | Son contenu |
+| L'évolution des **besoins** | Se déplacer plus vite, plus proprement |
+| Le **progrès** scientifique et technique | Nouveaux matériaux, électronique, informatique |
+| Les contraintes **économiques** | Coût de fabrication, prix de vente |
+| Les contraintes **environnementales et réglementaires** | Normes, recyclage, sécurité |
 
-## L’évolution dans le temps
-Un OST n’est jamais figé : il évolue sous l’effet de
-- **l’évolution des besoins** (se déplacer plus vite, plus proprement) ;
-- **le progrès scientifique et technique** (nouveaux matériaux, électronique, informatique) ;
-- **les contraintes économiques** (coût de fabrication, prix de vente) ;
-- **les contraintes environnementales et réglementaires** (normes, recyclage, sécurité).
+> Le vélo n'a pas changé de fonction en 150 ans — se déplacer — mais tout le reste a changé : matériaux, transmission, freins, éclairage, et maintenant l'assistance électrique.
 
-> Le vélo n’a pas changé de fonction en 150 ans — se déplacer — mais tout le reste a changé : matériaux, transmission, freins, éclairage, et maintenant l’assistance électrique.
-
-## La famille et la lignée
-- Une **famille** regroupe des objets qui remplissent la **même fonction d’usage** par des solutions différentes (bougie, lampe à huile, ampoule, LED).
-- Une **lignée** suit un objet et ses **améliorations successives** au fil du temps.`,
+## Famille et lignée
+| Le groupement | Ce qu'il rassemble | Son exemple |
+| Une **famille** | Des objets de **même fonction d'usage**, par des solutions différentes | Bougie, lampe à huile, ampoule, LED |
+| Une **lignée** | Un objet et ses **améliorations successives** | Les générations d'un même modèle |`,
           },
           questions: [
             ['Que signifie le sigle OST ?', ['Objet et Système Technique', 'Organisation Standard du Travail', 'Outil de Simulation Technique', 'Objet Sans Transformation'], 0, 'C’est le vocabulaire employé tout au long du programme.'],
@@ -179,28 +179,36 @@ Un OST n’est jamais figé : il évolue sous l’effet de
           axe: 'L’évolution des OST',
           lecon: {
             titre: 'Ce que l’objet doit faire, et comment il le fait',
-            cours: `Trois notions s’emboîtent, de la plus générale à la plus concrète.
+            cours: `Trois notions s'emboîtent, de la plus générale à la plus concrète.
 
-## La fonction d’usage
-C’est le **service rendu** à l’utilisateur : « éclairer une pièce », « percer un trou », « garder les aliments au froid ». Elle s’exprime par un **verbe à l’infinitif**.
+## Les trois niveaux
+| Le niveau | Ce qu'il désigne | Un exemple, pour un vélo |
+| La **fonction d'usage** | Le **service rendu** à l'utilisateur, exprimé par un verbe à l'infinitif | Se déplacer |
+| La **fonction technique** | Ce que l'objet doit assurer **en interne** | Freiner |
+| Le **principe technique** | Le **phénomène physique** utilisé | Le frottement |
+| La **solution technique** | Le **composant concret** retenu | Frein à patins, à disque, rétropédalage |
 
-## La fonction technique
-C’est ce que l’objet doit **assurer en interne** pour remplir sa fonction d’usage. Un vélo doit : transmettre le mouvement, freiner, diriger, supporter le poids, éclairer. Chacune est une **fonction technique**.
+> Une même fonction technique — freiner — se réalise par plusieurs solutions techniques, toutes fondées sur le même principe.
 
-## Le principe technique et la solution technique
-- Le **principe technique** est le phénomène physique utilisé : le frottement pour freiner, l’électromagnétisme pour produire du courant.
-- La **solution technique** est le composant concret retenu : un frein à patins, un frein à disque, un frein à rétropédalage.
-
-> Une même fonction technique — freiner — se réalise par plusieurs solutions techniques, toutes fondées sur le même principe : le frottement.
+## Les fonctions techniques d'un vélo
+| La fonction | Ce qu'elle assure |
+| **Transmettre** le mouvement | Du pédalier à la roue |
+| **Freiner** | Ralentir et arrêter |
+| **Diriger** | Choisir la trajectoire |
+| **Supporter** le poids | Cadre et roues |
+| **Éclairer** | Voir et être vu |
 
 ## Le diagramme des fonctions
-On représente ces relations par un tableau ou un arbre :
-**fonction d’usage → fonctions techniques → solutions techniques**
+fonction d'usage → fonctions techniques → solutions techniques
 
-C’est l’outil qui permet, en conception, de comparer plusieurs solutions pour une même fonction, et de choisir selon les contraintes (coût, poids, sécurité, entretien).
+> C'est l'outil qui permet de **comparer** plusieurs solutions pour une même fonction, et de choisir selon les contraintes : coût, poids, sécurité, entretien.
 
 ## Les critères et les niveaux
-Chaque fonction se **mesure** : un critère (la distance de freinage) et un niveau (moins de 5 mètres à 20 km/h). C’est ce qui rend un cahier des charges vérifiable — sans critère chiffré, une exigence n’est qu’un vœu.`,
+| L'élément | Son contenu | Un exemple |
+| Le **critère** | Ce qu'on mesure | La distance de freinage |
+| Le **niveau** | La valeur à atteindre | Moins de 5 m à 20 km/h |
+
+> Sans critère chiffré, une exigence n'est qu'un vœu.`,
           },
           questions: [
             ['Qu’est-ce que la fonction d’usage d’un objet ?', ['Le service qu’il rend à l’utilisateur', 'Le phénomène physique qu’il exploite', 'Le composant qui le réalise', 'Son prix de revient'], 0, 'Elle s’exprime par un verbe à l’infinitif.'],
@@ -218,31 +226,46 @@ Chaque fonction se **mesure** : un critère (la distance de freinage) et un nive
           axe: 'L’évolution des OST',
           lecon: {
             titre: 'De l’extraction du minerai à la déchèterie',
-            cours: `Le **cycle de vie** d’un objet technique décrit toutes les étapes de son existence, **de l’extraction des matières premières à sa fin de vie**.
+            cours: `Le cycle de vie d'un objet technique décrit toutes les étapes de son existence, de l'extraction des matières premières à sa fin de vie.
 
 ## Les cinq étapes
-1. **Extraction** des matières premières (minerai, pétrole, bois, sable).
-2. **Fabrication** : transformation des matériaux, assemblage, emballage.
-3. **Distribution** : transport et vente.
-4. **Utilisation** : usage, consommation d’énergie, entretien, réparation.
-5. **Fin de vie** : collecte, tri, **recyclage**, **valorisation énergétique** ou enfouissement.
+| L'étape | Ce qu'elle comprend |
+| 1. L'**extraction** | Minerai, pétrole, bois, sable |
+| 2. La **fabrication** | Transformation, assemblage, emballage |
+| 3. La **distribution** | Transport et vente |
+| 4. L'**utilisation** | Usage, énergie, entretien, réparation |
+| 5. La **fin de vie** | Collecte, tri, **recyclage**, valorisation énergétique ou enfouissement |
 
-## L’impact environnemental
-Chaque étape consomme de l’**énergie**, de l’**eau** et des **ressources**, et produit des **déchets** et des **émissions**. L’**analyse du cycle de vie (ACV)** mesure ces impacts sur toute la chaîne, pour comparer deux objets sans se limiter à leur usage.
+## L'impact environnemental
+| Ce que chaque étape consomme | Ce qu'elle produit |
+| Énergie, eau, ressources | Déchets, émissions |
 
-> Un sac réutilisable coûte plus cher à fabriquer qu’un sac plastique : il ne devient avantageux qu’après un certain nombre de réemplois. Le cycle de vie est le seul moyen de le savoir.
+L'**analyse du cycle de vie (ACV)** mesure ces impacts sur **toute** la chaîne.
 
-## L’économie circulaire
-Le modèle **linéaire** — extraire, fabriquer, jeter — épuise les ressources. Le modèle **circulaire** cherche à refermer la boucle :
-- **réduire** (écoconception, moins de matière, moins d’emballage) ;
-- **réemployer** et **réparer** (indice de réparabilité, pièces détachées disponibles) ;
-- **recycler** (le déchet redevient matière première).
+> Un sac réutilisable coûte plus cher à fabriquer qu'un sac plastique : il ne devient avantageux qu'après un certain nombre de réemplois. Le cycle de vie est le seul moyen de le savoir.
 
-## Les déchets d’équipements électriques
-Les **DEEE** (téléphones, ordinateurs, électroménager) contiennent des métaux précieux et des substances dangereuses : ils ne vont **jamais** à la poubelle ordinaire, mais en déchèterie ou en point de collecte.
+## L'économie circulaire
+| Le modèle | Son principe |
+| **Linéaire** | Extraire, fabriquer, **jeter** — il épuise les ressources |
+| **Circulaire** | Refermer la boucle |
 
-## L’obsolescence
-Un objet peut cesser d’être utilisé sans être cassé : parce qu’une pièce n’existe plus, parce qu’un logiciel n’est plus mis à jour, ou par simple effet de mode. La loi impose désormais un **indice de réparabilité** sur plusieurs familles de produits.`,
+| Le levier circulaire | Son contenu |
+| **Réduire** | Écoconception, moins de matière et d'emballage |
+| **Réemployer** et **réparer** | Indice de réparabilité, pièces détachées disponibles |
+| **Recycler** | Le déchet redevient matière première |
+
+## Les DEEE
+Les déchets d'équipements électriques et électroniques — téléphones, ordinateurs, électroménager — contiennent des métaux précieux **et** des substances dangereuses.
+
+> Ils ne vont **jamais** à la poubelle ordinaire : déchèterie ou point de collecte.
+
+## L'obsolescence
+| Sa forme | Sa cause |
+| **Technique** | Une pièce n'existe plus |
+| **Logicielle** | Plus de mises à jour |
+| **Esthétique** | Un simple effet de mode |
+
+La loi impose désormais un **indice de réparabilité** sur plusieurs familles de produits.`,
           },
           questions: [
             ['Quelle est la première étape du cycle de vie d’un objet ?', ['L’extraction des matières premières', 'La fabrication', 'La distribution', 'L’utilisation'], 0, 'Le cycle commence bien avant l’usine.'],
@@ -263,30 +286,38 @@ Un objet peut cesser d’être utilisé sans être cassé : parce qu’une pièc
           axe: 'L’OST, ses utilisateurs, son environnement et ses contraintes',
           lecon: {
             titre: 'Tout ce qui entoure l’objet et agit sur lui',
-            cours: `Un objet technique n’existe jamais seul : il est entouré d’**interacteurs** — les éléments de son environnement avec lesquels il est en relation.
+            cours: `Un objet technique n'existe jamais seul : il est entouré d'interacteurs, les éléments de son environnement avec lesquels il est en relation.
 
-## Qui sont les interacteurs ?
-- L’**utilisateur** (celui qui s’en sert) ;
-- la **matière d’œuvre** (ce sur quoi l’objet agit) ;
-- l’**énergie** dont il a besoin ;
-- le **milieu** : air, eau, température, poussière, vibrations ;
-- les **normes** et les **règlements** ;
-- les autres **objets** avec lesquels il communique ou se connecte ;
-- le **budget** et l’**esthétique**.
+## Qui sont les interacteurs
+| L'interacteur | Ce qu'il apporte ou impose |
+| L'**utilisateur** | Celui qui s'en sert |
+| La **matière d'œuvre** | Ce sur quoi l'objet agit |
+| L'**énergie** | Ce dont il a besoin |
+| Le **milieu** | Air, eau, température, poussière, vibrations |
+| Les **normes** | Ce qu'il doit respecter |
+| Les autres **objets** | Ce avec quoi il communique |
+| Le **budget**, l'**esthétique** | Les limites de conception |
 
 ## Le diagramme des interacteurs
-On le trace en plaçant l’objet au centre et les interacteurs autour. Chaque **liaison** entre deux interacteurs qui passe par l’objet définit une **fonction** :
-- la **fonction principale** relie **deux** interacteurs à travers l’objet — c’est la raison d’être de l’objet ;
-- les **fonctions contraintes** relient l’objet à **un seul** interacteur — s’adapter au réseau électrique, résister à la pluie, respecter une norme.
+On place l'objet au centre, les interacteurs autour.
+
+| La liaison | Combien d'interacteurs elle relie | Ce qu'elle définit |
+| La **fonction principale** | **Deux**, à travers l'objet | La raison d'être de l'objet |
+| Une **fonction contrainte** | **Un seul** | Une exigence à respecter |
 
 ## Un exemple : le lampadaire de rue
-- Fonction principale : permettre au **piéton** de voir la **chaussée** la nuit.
-- Fonctions contraintes : résister aux **intempéries**, s’alimenter sur le **réseau électrique**, respecter les **normes** d’éclairage, s’intégrer au **paysage urbain**, rester dans le **budget** de la commune.
+| La fonction | Son contenu |
+| **Principale** | Permettre au **piéton** de voir la **chaussée** la nuit |
+| Contrainte | Résister aux **intempéries** |
+| Contrainte | S'alimenter sur le **réseau électrique** |
+| Contrainte | Respecter les **normes** d'éclairage |
+| Contrainte | S'intégrer au **paysage urbain** |
+| Contrainte | Rester dans le **budget** de la commune |
 
-> Un objet réussi n’est pas celui qui remplit sa fonction principale : c’est celui qui la remplit **sans manquer** une seule de ses fonctions contraintes.
+> Un objet réussi n'est pas celui qui remplit sa fonction principale : c'est celui qui la remplit **sans manquer** une seule de ses fonctions contraintes.
 
 ## À quoi ça sert
-Ce diagramme est la première étape d’un **cahier des charges** : chaque fonction identifiée devient une exigence à mesurer.`,
+> Ce diagramme est la première étape d'un **cahier des charges** : chaque fonction identifiée devient une exigence à mesurer.`,
           },
           questions: [
             ['Qu’est-ce qu’un interacteur ?', ['Un élément de l’environnement en relation avec l’objet technique', 'Une pièce interne de l’objet', 'Un logiciel de conception', 'Un défaut de fabrication'], 0, 'Utilisateur, énergie, milieu, normes, budget en sont.'],
@@ -304,31 +335,41 @@ Ce diagramme est la première étape d’un **cahier des charges** : chaque fonc
           axe: 'L’OST, ses utilisateurs, son environnement et ses contraintes',
           lecon: {
             titre: 'Les limites dans lesquelles il faut concevoir',
-            cours: `Une **contrainte** est une exigence imposée au concepteur : elle limite ses choix et doit être respectée.
+            cours: `Une contrainte est une exigence imposée au concepteur : elle limite ses choix et doit être respectée.
 
-## Les grandes familles de contraintes
-- **Fonctionnelles** : ce que l’objet doit faire, et à quel niveau de performance.
-- **Techniques** : matériaux disponibles, procédés de fabrication, dimensions, poids.
-- **Économiques** : coût de fabrication, prix de vente, coût d’entretien.
-- **Réglementaires et normatives** : lois, normes NF ou CE, sécurité électrique, âge minimal.
-- **Environnementales** : recyclabilité, consommation d’énergie, matériaux dangereux interdits.
-- **Ergonomiques** : confort, facilité d’usage, accessibilité aux personnes en situation de handicap.
-- **Esthétiques** : forme, couleur, style, image de marque.
-- **De sécurité** : ne présenter aucun danger pour l’utilisateur ni pour son entourage.
+## Les grandes familles
+| La famille | Son contenu |
+| **Fonctionnelles** | Ce que l'objet doit faire, et à quel niveau |
+| **Techniques** | Matériaux, procédés, dimensions, poids |
+| **Économiques** | Coût de fabrication, prix de vente, entretien |
+| **Réglementaires** | Lois, normes NF ou CE, sécurité électrique, âge minimal |
+| **Environnementales** | Recyclabilité, consommation, matériaux interdits |
+| **Ergonomiques** | Confort, facilité d'usage, accessibilité |
+| **Esthétiques** | Forme, couleur, style, image de marque |
+| **De sécurité** | Aucun danger pour l'utilisateur ni son entourage |
 
 ## Le cahier des charges fonctionnel
-C’est le document qui **rassemble toutes ces exigences**. Chaque fonction y est décrite avec :
-- un **critère** (ce qu’on mesure) ;
-- un **niveau** (la valeur à atteindre) ;
-- une **flexibilité** (la tolérance acceptée : F0 impératif, F1 peu négociable, F2 négociable).
+Chaque fonction y est décrite avec trois éléments.
 
-> « Le casque doit être léger » n’est pas une exigence ; « masse inférieure à 300 g, tolérance ±20 g » en est une.
+| L'élément | Son rôle |
+| Le **critère** | Ce qu'on mesure |
+| Le **niveau** | La valeur à atteindre |
+| La **flexibilité** | La tolérance : **F0** impératif, **F1** peu négociable, **F2** négociable |
 
-## Des contraintes qui s’opposent
-Alléger un objet le rend souvent **moins résistant** ou **plus cher** ; le rendre plus sûr l’alourdit. Concevoir, c’est **arbitrer** entre des contraintes contradictoires — jamais toutes les satisfaire au maximum.
+> « Le casque doit être léger » n'est pas une exigence ; « masse inférieure à 300 g, tolérance ±20 g » en est une.
+
+## Des contraintes qui s'opposent
+| L'amélioration cherchée | Ce qu'elle coûte |
+| **Alléger** | Moins de résistance, ou plus cher |
+| Rendre plus **sûr** | Plus lourd |
+| Baisser le **prix** | Moins de performance ou de durabilité |
+
+> Concevoir, c'est **arbitrer** entre des contraintes contradictoires — jamais toutes les satisfaire au maximum.
 
 ## Vérifier
-Chaque exigence chiffrée sera **testée** en fin de projet : c’est le rôle des essais et de la validation (chapitre 8). Une contrainte non mesurable est une contrainte invérifiable.`,
+Chaque exigence chiffrée sera **testée** en fin de projet.
+
+> Une contrainte non mesurable est une contrainte **invérifiable**.`,
           },
           questions: [
             ['Qu’est-ce qu’une contrainte, en technologie ?', ['Une exigence imposée au concepteur, qui limite ses choix', 'Un défaut de l’objet', 'Une panne en cours d’usage', 'Le prix de vente conseillé'], 0, 'Elle doit être respectée par la solution retenue.'],
@@ -346,28 +387,37 @@ Chaque exigence chiffrée sera **testée** en fin de projet : c’est le rôle d
           axe: 'L’OST, ses utilisateurs, son environnement et ses contraintes',
           lecon: {
             titre: 'Comparer plusieurs solutions et justifier',
-            cours: `Face à un besoin, plusieurs solutions techniques sont possibles. **Choisir** suppose de les comparer sur des **critères explicites**.
+            cours: `Face à un besoin, plusieurs solutions techniques sont possibles. Choisir suppose de les comparer sur des critères explicites.
 
-## Les critères de comparaison usuels
-- **Performance** : l’objet fait-il ce qu’on attend, et à quel niveau ?
-- **Coût** : prix d’achat, mais aussi coût d’usage (énergie, consommables) et d’entretien.
-- **Fiabilité et durée de vie** : combien de temps sans panne ?
-- **Impact environnemental** : matériaux, consommation, recyclabilité.
-- **Ergonomie** : facilité et confort d’utilisation.
-- **Encombrement et masse**.
-- **Sécurité** et conformité aux normes.
-- **Disponibilité** des pièces détachées et **réparabilité**.
+## Les critères de comparaison
+| Le critère | La question qu'il pose |
+| La **performance** | L'objet fait-il ce qu'on attend, et à quel niveau ? |
+| Le **coût** | Achat, usage, entretien |
+| La **fiabilité** | Combien de temps sans panne ? |
+| L'**impact environnemental** | Matériaux, consommation, recyclabilité |
+| L'**ergonomie** | Est-il facile et confortable à utiliser ? |
+| L'**encombrement** et la masse | Tient-il dans l'espace disponible ? |
+| La **sécurité** | Est-il conforme aux normes ? |
+| La **réparabilité** | Les pièces détachées existent-elles ? |
 
-## L’outil de décision : le tableau comparatif
-On dresse un tableau **solutions en colonnes, critères en lignes**, on note chaque case, et on additionne. Quand certains critères comptent plus que d’autres, on leur donne un **coefficient** (une pondération) : c’est le tableau **multicritère pondéré**.
+## Le tableau multicritère
+| L'étape | Ce qu'on fait |
+| 1 | Solutions en **colonnes**, critères en **lignes** |
+| 2 | Noter chaque case |
+| 3 | Affecter un **coefficient** aux critères prioritaires |
+| 4 | Additionner les totaux pondérés |
 
-> Une comparaison sans pondération traite le prix et la sécurité comme équivalents. C’est le coefficient qui fait entrer les priorités du cahier des charges dans le calcul.
+> Une comparaison sans pondération traite le prix et la sécurité comme équivalents. C'est le **coefficient** qui fait entrer les priorités du cahier des charges dans le calcul.
 
 ## Justifier un choix
-Un choix ne se justifie pas par « c’est mieux », mais par la **confrontation au cahier des charges** : telle solution atteint le niveau exigé sur les critères impératifs (F0), les autres non.
+> Un choix ne se justifie pas par « c'est mieux », mais par la **confrontation au cahier des charges** : telle solution atteint le niveau exigé sur les critères impératifs (F0), les autres non.
 
 ## Le coût global
-Le prix d’achat ne dit pas tout : une ampoule LED coûte plus cher qu’une ampoule à filament, mais consomme sept fois moins et dure vingt fois plus longtemps. Sur la durée de vie, elle est bien moins chère — c’est le **coût global** qui décide.`,
+| L'ampoule | Son prix d'achat | Sa consommation | Sa durée de vie |
+| À **filament** | Faible | Sept fois plus | Courte |
+| **LED** | Plus élevé | Faible | Vingt fois plus longue |
+
+> Sur la durée de vie, la LED est bien moins chère : c'est le **coût global** qui décide, pas le prix d'achat.`,
           },
           questions: [
             ['Quel outil sert à comparer plusieurs solutions techniques ?', ['Un tableau multicritère', 'Un diagramme des interacteurs', 'Un chronogramme', 'Un schéma de câblage'], 0, 'Solutions en colonnes, critères en lignes.'],
@@ -388,31 +438,31 @@ Le prix d’achat ne dit pas tout : une ampoule LED coûte plus cher qu’une am
           axe: 'L’organisation interne et les échanges d’un OST',
           lecon: {
             titre: 'Alimenter, distribuer, convertir, transmettre',
-            cours: `La **chaîne d’énergie** décrit le trajet de l’énergie dans un objet technique, depuis sa source jusqu’à l’action produite. Elle comporte **quatre fonctions**, dans cet ordre.
+            cours: `La chaîne d'énergie décrit le trajet de l'énergie dans un objet technique, depuis sa source jusqu'à l'action produite.
 
-## Alimenter
-Fournir l’énergie au système. Les **sources** : réseau électrique, pile, batterie, panneau solaire, carburant, air comprimé.
+## Les quatre fonctions, dans l'ordre
+| La fonction | Ce qu'elle fait | Ses composants |
+| **Alimenter** | Fournir l'énergie | Réseau, pile, batterie, panneau solaire, carburant, air comprimé |
+| **Distribuer** | Laisser passer ou interrompre, sur ordre | **Interrupteur**, **relais**, **transistor**, variateur, distributeur pneumatique |
+| **Convertir** | Transformer l'énergie d'une forme en une autre | Les **actionneurs** : moteur, vérin, résistance chauffante, lampe, haut-parleur |
+| **Transmettre** | Acheminer l'énergie mécanique, en adaptant vitesse et effort | Engrenages, poulies-courroie, chaîne, arbre, roue, **réducteur** |
 
-## Distribuer
-Laisser passer l’énergie, ou l’interrompre, sur ordre de la partie commande. Les composants : **interrupteur**, **relais**, **transistor**, **variateur**, **distributeur pneumatique**.
-
-## Convertir
-Transformer l’énergie d’une forme en une autre — c’est le cœur de la chaîne. Les **actionneurs** : **moteur** (électrique → mécanique), **vérin** (pneumatique → mécanique), **résistance chauffante**, **lampe**, **haut-parleur**.
-
-## Transmettre
-Acheminer l’énergie mécanique jusqu’à l’endroit utile, en adaptant vitesse et effort. Les composants : **engrenages**, **poulies-courroie**, **chaîne**, **arbre**, **roue**, **réducteur**.
-
-> Le résultat de la chaîne s’appelle l’**action** : la roue tourne, la porte s’ouvre, l’air se réchauffe.
+Le résultat s'appelle l'**action** : la roue tourne, la porte s'ouvre, l'air se réchauffe.
 
 ## Un exemple complet : le portail automatique
-- **Alimenter** : réseau 230 V
-- **Distribuer** : relais commandé par la carte électronique
-- **Convertir** : moteur électrique
-- **Transmettre** : réducteur puis crémaillère
-- **Action** : le vantail s’ouvre
+| La fonction | Son composant |
+| Alimenter | Le réseau 230 V |
+| Distribuer | Un **relais**, commandé par la carte électronique |
+| Convertir | Un **moteur électrique** |
+| Transmettre | Un réducteur, puis une **crémaillère** |
+| **Action** | Le vantail s'ouvre |
 
-## Le lien avec la chaîne d’information
-La chaîne d’énergie **agit** ; la chaîne d’information **décide**. C’est la partie commande qui envoie l’ordre à la fonction « distribuer » : les deux chaînes se rejoignent exactement là.`,
+## Le lien avec la chaîne d'information
+| La chaîne | Ce qu'elle fait |
+| D'**énergie** | Elle **agit** |
+| D'**information** | Elle **décide** |
+
+> La partie commande envoie l'ordre à la fonction « **distribuer** » : c'est exactement là que les deux chaînes se rejoignent.`,
           },
           questions: [
             ['Quelles sont les quatre fonctions de la chaîne d’énergie, dans l’ordre ?', ['Alimenter, distribuer, convertir, transmettre', 'Acquérir, traiter, communiquer, agir', 'Convertir, alimenter, transmettre, distribuer', 'Alimenter, convertir, distribuer, agir'], 0, 'Elle se termine par l’action produite.'],
@@ -432,31 +482,38 @@ La chaîne d’énergie **agit** ; la chaîne d’information **décide**. C’e
             titre: 'Changer la vitesse, l’effort ou la nature du mouvement',
             cours: `Deux familles de mécanismes à ne jamais confondre.
 
-## Transmettre : le mouvement garde sa nature
-Le mouvement d’entrée et de sortie sont de **même nature** (le plus souvent des rotations). On modifie la **vitesse** et l’**effort**.
+## Transmettre ou transformer
+| La famille | Ce qui change | Ce qui ne change pas |
+| **Transmettre** | La **vitesse** et l'**effort** | La **nature** du mouvement — le plus souvent une rotation |
+| **Transformer** | La **nature** du mouvement | — |
 
-- **Engrenages** : deux roues dentées. Elles tournent en **sens inverse** (sauf avec une roue intermédiaire, ou en engrenage intérieur).
-- **Poulies et courroie** : transmission **silencieuse**, sur une plus grande distance, avec risque de glissement. Même sens de rotation avec une courroie droite, sens inverse avec une courroie croisée.
-- **Pignons et chaîne** : pas de glissement, même sens de rotation — c’est la transmission du vélo.
-- **Roues de friction** : simples, mais elles patinent.
+## Les mécanismes de transmission
+| Le mécanisme | Ses sens de rotation | Son atout, sa limite |
+| **Engrenages** | **Inverses**, sauf roue intermédiaire ou engrenage intérieur | Précis, sans glissement |
+| **Poulies-courroie** | Même sens si courroie droite, inverse si croisée | **Silencieux**, sur grande distance ; risque de **glissement** |
+| **Pignons-chaîne** | **Même sens** | Pas de glissement — c'est le vélo |
+| **Roues de friction** | Inverses | Simples, mais elles **patinent** |
 
 ## Le rapport de transmission
-**r = vitesse de sortie ÷ vitesse d’entrée = nombre de dents de l’entrée ÷ nombre de dents de la sortie**
+r = vitesse de sortie ÷ vitesse d'entrée = dents de l'entrée ÷ dents de la sortie
 
-- **r < 1** : c’est un **réducteur** — on perd de la vitesse, on gagne de la force.
-- **r > 1** : c’est un **multiplicateur** — l’inverse.
+| La valeur de r | Le mécanisme | Son effet |
+| **r < 1** | Un **réducteur** | On perd de la vitesse, on gagne de la **force** |
+| **r > 1** | Un **multiplicateur** | L'inverse |
 
-> Un grand pignon entraîné par un petit fait tourner moins vite mais plus fort : c’est exactement ce que l’on cherche en montant une côte à vélo.
+> Un grand pignon entraîné par un petit tourne moins vite mais plus fort : c'est exactement ce que l'on cherche en montant une côte à vélo.
 
-## Transformer : le mouvement change de nature
-Le mouvement passe de **rotation à translation**, ou l’inverse.
-- **Pignon-crémaillère** : rotation → translation (portail coulissant, direction de voiture).
-- **Système vis-écrou** : rotation → translation lente et puissante (étau, presse).
-- **Bielle-manivelle** : rotation ↔ translation alternative (moteur thermique, pompe).
-- **Came et poussoir** : rotation → translation alternative (soupapes).
+## Les mécanismes de transformation
+| Le mécanisme | Sa transformation | Son application |
+| **Pignon-crémaillère** | Rotation → translation | Portail coulissant, direction de voiture |
+| **Vis-écrou** | Rotation → translation **lente et puissante** | Étau, presse |
+| **Bielle-manivelle** | Rotation ↔ translation **alternative** | Moteur thermique, pompe |
+| **Came et poussoir** | Rotation → translation alternative | Soupapes |
 
 ## Le vocabulaire du mouvement
-Un mouvement de **rotation** tourne autour d’un axe ; un mouvement de **translation** se déplace en ligne droite ou selon une courbe, sans tourner sur lui-même.`,
+| Le mouvement | Sa définition |
+| La **rotation** | Il tourne autour d'un axe |
+| La **translation** | Il se déplace sans tourner sur lui-même |`,
           },
           questions: [
             ['Quelle différence y a-t-il entre transmettre et transformer un mouvement ?', ['Transmettre conserve la nature du mouvement, transformer la change', 'Transmettre change la nature, transformer conserve la vitesse', 'Ce sont deux mots pour la même chose', 'Transmettre concerne l’électricité, transformer la mécanique'], 0, 'Rotation vers rotation, ou rotation vers translation.'],
@@ -474,32 +531,38 @@ Un mouvement de **rotation** tourne autour d’un axe ; un mouvement de **transl
           axe: 'L’organisation interne et les échanges d’un OST',
           lecon: {
             titre: 'Choisir la matière selon ce qu’on lui demande',
-            cours: `## Les grandes familles de matériaux
-- **Métalliques** : acier, aluminium, cuivre, laiton. Résistants, conducteurs, recyclables, mais lourds et sensibles à la corrosion.
-- **Organiques** : plastiques, bois, cuir, papier. Légers, faciles à mettre en forme ; les plastiques dérivent du pétrole et se recyclent mal.
-- **Céramiques** : verre, porcelaine, béton. Très durs, résistants à la chaleur, mais **fragiles** (ils cassent sans se déformer).
-- **Composites** : deux matériaux associés pour cumuler leurs qualités — fibre de carbone dans une résine, béton armé, contreplaqué.
+            cours: `Choisir la matière selon ce qu'on lui demande.
+
+## Les grandes familles de matériaux
+| La famille | Ses exemples | Ses atouts | Ses limites |
+| **Métalliques** | Acier, aluminium, cuivre, laiton | Résistants, conducteurs, recyclables | Lourds, sensibles à la corrosion |
+| **Organiques** | Plastiques, bois, cuir, papier | Légers, faciles à mettre en forme | Les plastiques dérivent du pétrole et se recyclent mal |
+| **Céramiques** | Verre, porcelaine, béton | Très durs, résistants à la chaleur | **Fragiles** : ils cassent sans se déformer |
+| **Composites** | Fibre de carbone, béton armé, contreplaqué | Ils **cumulent** les qualités de deux matériaux | Difficiles à séparer pour le recyclage |
 
 ## Les propriétés à connaître
-- **Dureté** : résistance à la rayure.
-- **Résistance mécanique** : capacité à supporter un effort sans rompre.
-- **Élasticité** : capacité à reprendre sa forme après déformation.
-- **Ductilité** : capacité à être étiré en fil.
-- **Masse volumique** : masse par unité de volume — c’est elle qui décide de la légèreté.
-- **Conductivité** électrique et thermique.
-- **Résistance à la corrosion**, aux UV, à l’humidité.
-- **Recyclabilité** et coût.
+| La propriété | Ce qu'elle mesure |
+| La **dureté** | La résistance à la rayure |
+| La **résistance mécanique** | Supporter un effort sans rompre |
+| L'**élasticité** | Reprendre sa forme après déformation |
+| La **ductilité** | Être étiré en fil |
+| La **masse volumique** | Elle décide de la **légèreté** |
+| La **conductivité** | Électrique et thermique |
+| La résistance à la **corrosion**, aux UV, à l'humidité | La durabilité |
+| La **recyclabilité** et le **coût** | La fin de vie et le budget |
 
 > On ne choisit pas « le meilleur matériau » : on choisit celui dont le **profil de propriétés** correspond aux contraintes du cahier des charges, au meilleur coût.
 
 ## Le lien matériau-procédé
-Chaque famille impose ses procédés :
-- les **thermoplastiques** se ramollissent à la chaleur : injection, extrusion, thermoformage, impression 3D ;
-- les **métaux** : usinage, pliage, moulage, soudage, découpe laser ;
-- le **bois** : sciage, ponçage, collage, assemblage.
+| Le matériau | Ses procédés |
+| Les **thermoplastiques** | Injection, extrusion, thermoformage, impression 3D |
+| Les **métaux** | Usinage, pliage, moulage, soudage, découpe laser |
+| Le **bois** | Sciage, ponçage, collage, assemblage |
 
-## L’impact environnemental
-Extraction, transport, transformation et fin de vie pèsent différemment selon les matériaux. L’aluminium coûte très cher à produire mais se recycle presque indéfiniment ; un plastique composite est léger mais quasi impossible à séparer pour le recyclage.`,
+## L'impact environnemental
+| Le matériau | Son bilan |
+| L'**aluminium** | Très cher à produire, mais recyclable presque **indéfiniment** |
+| Un **composite** plastique | Léger, mais quasi impossible à séparer pour le recyclage |`,
           },
           questions: [
             ['À quelle famille appartient le verre ?', ['Aux céramiques', 'Aux métalliques', 'Aux organiques', 'Aux composites'], 0, 'Dur, résistant à la chaleur, mais fragile.'],
@@ -566,35 +629,40 @@ Un objet connecté ajoute une fonction : envoyer ses données vers un serveur ou
           axe: 'Fabrication/réalisation d’un objet technique',
           lecon: {
             titre: 'Enlever, déformer, ajouter, assembler',
-            cours: `Fabriquer une pièce, c’est lui donner sa forme définitive. Les procédés se rangent en **quatre familles**.
+            cours: `Fabriquer une pièce, c'est lui donner sa forme définitive. Les procédés se rangent en quatre familles.
 
-## Par enlèvement de matière
-On part d’un bloc et on retire ce qui est en trop : **sciage**, **perçage**, **fraisage**, **tournage**, **découpe laser**, **découpe jet d’eau**.
-- Précis, adapté à toutes les matières.
-- Produit des **copeaux** : de la matière perdue.
+## Les quatre familles
+| La famille | Son principe | Ses procédés | Son atout, sa limite |
+| Par **enlèvement** | On retire ce qui est en trop | Sciage, perçage, fraisage, tournage, découpe laser ou jet d'eau | Précis, toutes matières — mais des **copeaux** perdus |
+| Par **déformation** | La matière change de forme | Pliage, emboutissage, forgeage, extrusion, thermoformage | **Aucune perte**, rapide en série — outillage coûteux |
+| Par **ajout** | Couche par couche | L'**impression 3D** | Idéale pour prototype et formes complexes — lente en série |
+| Par **assemblage** | On réunit des pièces | Voir ci-dessous | — |
 
-## Par déformation
-La matière change de forme sans être retirée : **pliage**, **emboutissage**, **forgeage**, **extrusion**, **thermoformage**.
-- Aucune perte de matière, rapide en série.
-- Nécessite un outillage coûteux.
-
-## Par ajout de matière
-On dépose la matière couche par couche : c’est l’**impression 3D** (fabrication additive).
-- Idéale pour le **prototype** et les formes complexes.
-- Lente pour la grande série.
-
-## Par assemblage
-On réunit plusieurs pièces :
-- **démontable** : vis, boulon, clips — on peut réparer et recycler ;
-- **non démontable** : soudure, rivet, collage — plus résistant, mais définitif.
+## L'assemblage
+| Le type | Ses moyens | Sa conséquence |
+| **Démontable** | Vis, boulon, clips | On peut **réparer** et recycler |
+| **Non démontable** | Soudure, rivet, collage | Plus résistant, mais **définitif** |
 
 ## Les machines à commande numérique
-Une **MOCN** (machine-outil à commande numérique) exécute un programme issu du dessin numérique : elle garantit la **répétabilité** — mille pièces identiques — et la précision.
+Une **MOCN** exécute un programme issu du dessin numérique.
+
+| Ce qu'elle garantit | Son intérêt |
+| La **répétabilité** | Mille pièces identiques |
+| La **précision** | Au dixième de millimètre |
 
 ## Choisir un procédé
-Le choix dépend du **matériau**, de la **forme**, de la **précision** exigée, de la **quantité** à produire et du **coût**. L’impression 3D convient à une pièce unique ; l’injection plastique à cent mille.
+| Le facteur | Ce qu'il impose |
+| Le **matériau** | Tous ne se travaillent pas de la même façon |
+| La **forme** | Certaines exigent l'additif |
+| La **précision** | Elle oriente vers l'usinage |
+| La **quantité** | Le critère décisif |
+| Le **coût** | Outillage contre temps machine |
 
-> Un prototype et une série n’appellent presque jamais le même procédé : c’est la quantité qui décide.`,
+| La quantité | Le procédé adapté |
+| Une pièce **unique** | L'impression 3D |
+| Cent mille pièces | L'**injection** plastique |
+
+> Un prototype et une série n'appellent presque jamais le même procédé : c'est la quantité qui décide.`,
           },
           questions: [
             ['À quelle famille appartient le perçage ?', ['À l’enlèvement de matière', 'À la déformation', 'À l’ajout de matière', 'À l’assemblage'], 0, 'Il produit des copeaux : de la matière est perdue.'],
@@ -612,33 +680,38 @@ Le choix dépend du **matériau**, de la **forme**, de la **précision** exigée
           axe: 'Fabrication/réalisation d’un objet technique',
           lecon: {
             titre: 'Travailler en atelier sans se blesser',
-            cours: `Un atelier de technologie contient des machines, des outils tranchants et de l’électricité : la sécurité y est une **règle**, pas une recommandation.
+            cours: `Un atelier de technologie contient des machines, des outils tranchants et de l'électricité : la sécurité y est une règle, pas une recommandation.
 
-## Les équipements de protection individuelle (EPI)
-- **Lunettes** de protection : perçage, sciage, meulage, tout ce qui projette.
-- **Gants** : manipulation de pièces coupantes ou chaudes — mais **jamais** près d’une pièce en rotation, où ils peuvent être happés.
-- **Blouse** ou vêtements ajustés, **cheveux attachés**, aucun **bijou** ni écharpe pendante.
-- **Chaussures fermées**.
-- **Protection auditive** en cas de bruit prolongé.
+## Les équipements de protection individuelle
+| L'EPI | Quand le porter | Son point d'attention |
+| **Lunettes** | Perçage, sciage, meulage | Tout ce qui projette |
+| **Gants** | Pièces coupantes ou chaudes | **Jamais** près d'une pièce en rotation : ils peuvent être happés |
+| **Blouse**, vêtements ajustés | Toujours | Cheveux attachés, aucun bijou ni écharpe |
+| **Chaussures fermées** | Toujours | Chute d'objet |
+| Protection **auditive** | Bruit prolongé | — |
 
 ## Les règles de conduite
-1. Ne jamais utiliser une machine **sans autorisation** ni sans avoir reçu la consigne.
-2. Vérifier que les **carters** et protections sont en place avant de démarrer.
-3. **Un opérateur à la fois** sur une machine ; ne jamais distraire celui qui travaille.
-4. Machine **à l’arrêt complet** avant tout réglage, changement d’outil ou nettoyage.
-5. Ranger l’outil après usage, garder le poste **dégagé** et propre.
-6. Signaler immédiatement toute **anomalie**, tout câble abîmé, tout incident.
+| La règle | Sa raison |
+| Ne jamais utiliser une machine **sans autorisation** | La consigne précède le geste |
+| Vérifier les **carters** avant de démarrer | Ils protègent des pièces mobiles |
+| **Un opérateur à la fois** | Ne jamais distraire celui qui travaille |
+| Machine **à l'arrêt complet** avant tout réglage | La règle la plus enfreinte |
+| **Ranger** l'outil, garder le poste dégagé | Éviter la chute et l'encombrement |
+| **Signaler** toute anomalie | Câble abîmé, bruit inhabituel |
 
 ## Les pictogrammes
-- **Triangle jaune** : danger (risque électrique, laser, matière chaude).
-- **Rond bleu** : obligation (port des lunettes, des gants).
-- **Rond rouge barré** : interdiction.
-- **Carré vert** : information de secours (issue, trousse de premiers soins).
+| La forme et la couleur | Ce qu'elle signale | Ses exemples |
+| **Triangle jaune** | Un **danger** | Risque électrique, laser, matière chaude |
+| **Rond bleu** | Une **obligation** | Port des lunettes, des gants |
+| **Rond rouge barré** | Une **interdiction** | — |
+| **Carré vert** | Une information de **secours** | Issue, trousse de premiers soins |
 
-## Le bouton d’arrêt d’urgence
-Rouge sur fond jaune, il coupe l’alimentation immédiatement. Chacun doit savoir **où il se trouve avant** de démarrer la machine — le chercher pendant l’incident est déjà trop tard.
+## Le bouton d'arrêt d'urgence
+Rouge sur fond jaune, il coupe l'alimentation immédiatement.
 
-> La règle la plus enfreinte est aussi la plus simple : ne jamais régler une machine qui tourne encore. La grande majorité des accidents d’atelier vient de là.`,
+> Chacun doit savoir où il se trouve **avant** de démarrer la machine : le chercher pendant l'incident est déjà trop tard.
+
+> La grande majorité des accidents d'atelier vient d'un seul geste : régler une machine qui tourne encore.`,
           },
           questions: [
             ['Quand porte-t-on des lunettes de protection ?', ['Dès qu’une opération peut projeter des éclats', 'Uniquement lors des soudures', 'Seulement si la machine est bruyante', 'Uniquement en cas de produits chimiques'], 0, 'Perçage, sciage et meulage projettent des particules.'],
@@ -659,35 +732,40 @@ Rouge sur fond jaune, il coupe l’alimentation immédiatement. Chacun doit savo
           axe: 'Programmes',
           lecon: {
             titre: 'Séquence, condition, boucle, variable',
-            cours: `Un **algorithme** est une suite d’instructions permettant d’obtenir un résultat. Un **programme** en est la traduction dans un langage compris par la machine.
+            cours: `Un algorithme est une suite d'instructions permettant d'obtenir un résultat. Un programme en est la traduction dans un langage compris par la machine.
 
 ## Les quatre structures fondamentales
-**1. La séquence** — les instructions s’exécutent **l’une après l’autre**, dans l’ordre écrit.
+| La structure | Ce qu'elle fait | Son exemple |
+| La **séquence** | Les instructions s'exécutent **l'une après l'autre** | Dans l'ordre écrit |
+| La **condition** | Un bloc s'exécute **seulement si** un test est vrai | Si température > 25, allumer le ventilateur, sinon l'éteindre |
+| La **boucle** | On **répète** des instructions | Voir ci-dessous |
+| La **variable** | Une case mémoire nommée qui **stocke** une valeur | Un compteur, une mesure, un score |
 
-**2. La condition** (structure conditionnelle) — on exécute un bloc **seulement si** un test est vrai :
-**si** température > 25 **alors** allumer le ventilateur **sinon** l’éteindre
-
-**3. La boucle** (structure itérative) — on répète des instructions :
-- **boucle bornée** : répéter 10 fois — on connaît le nombre de tours d’avance ;
-- **boucle non bornée** : tant que le bouton n’est pas appuyé — on répète jusqu’à ce qu’une condition change.
-
-**4. La variable** — une case mémoire nommée qui **stocke** une valeur susceptible de changer : un compteur, une mesure, un score.
+| La boucle | Ce qu'on connaît d'avance |
+| **Bornée** | Le **nombre de tours** : répéter 10 fois |
+| **Non bornée** | Rien : tant que le bouton n'est pas appuyé |
 
 ## Les opérateurs
-- **Comparaison** : =, <, >, ≤, ≥, ≠
-- **Logiques** : **et**, **ou**, **non** — « si porte fermée **et** code correct ».
-- **Arithmétiques** : +, −, ×, ÷, reste de la division.
+| La famille | Ses opérateurs |
+| **Comparaison** | =, <, >, ≤, ≥, ≠ |
+| **Logiques** | **et**, **ou**, **non** — « si porte fermée **et** code correct » |
+| **Arithmétiques** | +, −, ×, ÷, reste de la division |
 
 ## Les entrées et les sorties
-Un programme d’objet technique **lit des capteurs** (entrées) et **commande des actionneurs** (sorties). C’est le lien direct avec la chaîne d’information.
+| Le type | Son composant |
+| **Entrée** | Un **capteur**, que le programme **lit** |
+| **Sortie** | Un **actionneur**, que le programme **commande** |
 
-> Une boucle « tant que » dont la condition ne devient jamais fausse ne s’arrête jamais : c’est la **boucle infinie**, l’erreur la plus fréquente du débutant.
+> C'est le lien direct avec la chaîne d'information.
+
+> Une boucle « tant que » dont la condition ne devient jamais fausse ne s'arrête jamais : c'est la **boucle infinie**, l'erreur la plus fréquente du débutant.
 
 ## Représenter un algorithme
-- L’**organigramme** : des losanges pour les tests, des rectangles pour les actions, des flèches pour l’enchaînement.
-- Le **pseudo-code** : le texte en français, structuré et indenté.
+| La représentation | Sa forme |
+| L'**organigramme** | Losanges pour les tests, rectangles pour les actions, flèches pour l'enchaînement |
+| Le **pseudo-code** | Du texte structuré et indenté, en français |
 
-Les deux se traduisent ensuite dans n’importe quel langage.`,
+Les deux se traduisent ensuite dans n'importe quel langage.`,
           },
           questions: [
             ['Qu’est-ce qu’un algorithme ?', ['Une suite d’instructions permettant d’obtenir un résultat', 'Un langage de programmation', 'Un composant électronique', 'Un logiciel de dessin'], 0, 'Le programme en est la traduction pour la machine.'],
@@ -705,30 +783,33 @@ Les deux se traduisent ensuite dans n’importe quel langage.`,
           axe: 'Programmes',
           lecon: {
             titre: 'Des blocs à assembler, ou des lignes à écrire',
-            cours: `Deux façons d’écrire un programme, pour la même logique.
+            cours: `Deux façons d'écrire un programme, pour la même logique.
 
-## La programmation graphique (par blocs)
-On assemble des **briques** colorées qui s’emboîtent : Scratch, mBlock, Blockly, Snap!.
-- **Avantages** : aucune faute de syntaxe possible (les blocs incompatibles ne s’emboîtent pas), lecture immédiate de la structure, prise en main rapide.
-- **Limites** : peu adaptée aux programmes longs, dépendante d’un environnement particulier, difficile à partager sous forme de texte.
-
-## La programmation textuelle
-On écrit des **lignes de code** : Python, JavaScript, C, C++ (Arduino).
-- **Avantages** : plus rapide à écrire pour qui la maîtrise, sans limite de taille, facile à copier, versionner et partager.
-- **Limites** : la **syntaxe** est stricte — une majuscule, un deux-points ou une indentation oubliés suffisent à empêcher l’exécution.
+## Les deux approches face à face
+| Le point | Programmation **graphique** | Programmation **textuelle** |
+| Ce qu'on manipule | Des **blocs** qui s'emboîtent | Des **lignes de code** |
+| Ses environnements | Scratch, mBlock, Blockly, Snap! | Python, JavaScript, C, C++ (Arduino) |
+| La **syntaxe** | Aucune faute possible : les blocs incompatibles ne s'emboîtent pas | **Stricte** : une majuscule, un deux-points, une indentation oubliés bloquent tout |
+| La **lecture** | Structure visible d'un coup d'œil | Elle demande de l'habitude |
+| Les **programmes longs** | Peu adaptée | Sans limite de taille |
+| Le **partage** | Dépend d'un environnement | Facile à copier, versionner, partager |
 
 ## La même logique dans les deux mondes
-Une condition en blocs (« si … alors … sinon … ») devient en Python :
-**if** temperature > 25 **:** puis, en dessous et **indenté**, l’instruction à exécuter, puis **else :** et son instruction.
+Une condition en blocs — « si … alors … sinon … » — devient en Python :
 
-> Passer des blocs au texte ne change **rien** à l’algorithme : séquence, condition, boucle et variable sont les mêmes. Seule l’écriture change.
+if temperature > 25 :
+
+puis, **en dessous et indenté**, l'instruction à exécuter ; puis else : et son instruction.
+
+> Passer des blocs au texte ne change **rien** à l'algorithme : séquence, condition, boucle et variable sont les mêmes. Seule l'écriture change.
 
 ## En Python, deux règles à retenir
-- Le **deux-points** termine la ligne qui ouvre un bloc (condition, boucle, fonction).
-- L’**indentation** (le décalage) indique ce qui appartient au bloc : elle n’est pas décorative, elle fait partie du langage.
+| La règle | Son rôle |
+| Le **deux-points** | Il termine la ligne qui **ouvre** un bloc : condition, boucle, fonction |
+| L'**indentation** | Elle indique ce qui **appartient** au bloc — elle fait partie du langage |
 
-## Quel usage au collège ?
-Le programme du cycle 4 demande de savoir lire et modifier les deux. On commence par les blocs pour la logique, on passe au texte pour piloter une carte programmable ou traiter des données.`,
+## Quel usage au collège
+> Le programme du cycle 4 demande de savoir **lire et modifier** les deux : les blocs pour la logique, le texte pour piloter une carte programmable ou traiter des données.`,
           },
           questions: [
             ['Quel est l’avantage principal de la programmation par blocs ?', ['Aucune faute de syntaxe n’est possible', 'Elle s’exécute plus vite', 'Elle permet des programmes plus longs', 'Elle est plus facile à partager par texte'], 0, 'Les blocs incompatibles ne s’emboîtent tout simplement pas.'],
@@ -746,30 +827,38 @@ Le programme du cycle 4 demande de savoir lire et modifier les deux. On commence
           axe: 'Programmes',
           lecon: {
             titre: 'Du besoin au programme qui marche',
-            cours: `Écrire un programme qui fonctionne, c’est suivre une **démarche**, pas écrire du premier coup.
+            cours: `Écrire un programme qui fonctionne, c'est suivre une démarche — pas écrire du premier coup.
 
 ## Les cinq étapes
-1. **Analyser le besoin** : que doit faire le système ? Quelles entrées (capteurs), quelles sorties (actionneurs) ?
-2. **Écrire l’algorithme** en pseudo-code ou en organigramme, **avant** de toucher au clavier.
-3. **Traduire** en programme, dans le langage choisi.
-4. **Tester** : exécuter, comparer le comportement obtenu au comportement attendu.
-5. **Corriger** — c’est le **débogage** — puis retester, jusqu’à conformité.
+| L'étape | Ce qu'on fait |
+| 1. **Analyser le besoin** | Que doit faire le système ? Quelles entrées, quelles sorties ? |
+| 2. Écrire l'**algorithme** | En pseudo-code ou organigramme, **avant** de toucher au clavier |
+| 3. **Traduire** | Dans le langage choisi |
+| 4. **Tester** | Comparer le comportement obtenu à l'attendu |
+| 5. **Corriger** — le **débogage** | Puis retester, jusqu'à conformité |
 
-## Les types d’erreurs
-- **Erreur de syntaxe** : le programme ne démarre pas ; le message d’erreur indique la ligne fautive. C’est la plus facile à corriger.
-- **Erreur de logique** : le programme s’exécute mais fait **autre chose** que prévu. Aucun message : c’est la plus difficile.
-- **Erreur d’exécution** : le programme s’arrête en cours de route (division par zéro, capteur absent).
+## Les types d'erreurs
+| L'erreur | Ce qui se passe | Sa difficulté |
+| De **syntaxe** | Le programme ne démarre pas ; un message indique la ligne | La plus **facile** |
+| De **logique** | Il s'exécute mais fait **autre chose** que prévu ; aucun message | La plus **difficile** |
+| D'**exécution** | Il s'arrête en cours de route | Division par zéro, capteur absent |
 
 ## Les techniques de mise au point
-- **Tester par morceaux** : valider une fonction à la fois plutôt que tout le programme.
-- **Afficher les valeurs** intermédiaires des variables pour voir où le comportement dévie.
-- **Exécuter pas à pas**, en mode débogage.
-- **Jeux d’essai** : préparer des cas de test — un cas normal, un cas limite, un cas interdit.
+| La technique | Ce qu'elle apporte |
+| Tester **par morceaux** | Valider une fonction à la fois |
+| **Afficher** les valeurs intermédiaires | Voir où le comportement dévie |
+| Exécuter **pas à pas** | En mode débogage |
+| Préparer des **jeux d'essai** | Un cas normal, un cas limite, un cas interdit |
 
-> Un programme qui « marche une fois » n’est pas validé. Ce sont les **cas limites** — la valeur nulle, la valeur maximale, l’entrée absurde — qui révèlent les défauts.
+> Un programme qui « marche une fois » n'est pas validé. Ce sont les **cas limites** — la valeur nulle, la valeur maximale, l'entrée absurde — qui révèlent les défauts.
 
 ## Documenter
-Des **commentaires** dans le code, des **noms de variables explicites** (**vitesse** plutôt que **v2**) et un court mode d’emploi : c’est ce qui rend le programme modifiable par un autre — ou par soi-même trois mois plus tard.`,
+| L'élément | Son utilité |
+| Des **commentaires** dans le code | Expliquer le pourquoi |
+| Des **noms de variables explicites** | **vitesse** plutôt que **v2** |
+| Un court **mode d'emploi** | Pour l'utilisateur |
+
+> C'est ce qui rend le programme modifiable par un autre — ou par soi-même trois mois plus tard.`,
           },
           questions: [
             ['Que faut-il faire avant d’écrire le programme ?', ['Analyser le besoin et écrire l’algorithme', 'Choisir la couleur de l’interface', 'Acheter la carte programmable', 'Tester le programme'], 0, 'L’algorithme se pense avant de toucher au clavier.'],
@@ -790,33 +879,48 @@ Des **commentaires** dans le code, des **noms de variables explicites** (**vites
           axe: 'Information et données',
           lecon: {
             titre: 'Organiser pour pouvoir chercher',
-            cours: `Une **donnée** est une valeur brute (18, « Dupont », 21/08/2026). Une **information** est une donnée **interprétée** dans un contexte : « la température du local est de 18 °C ».
+            cours: `Une donnée est une valeur brute. Une information est une donnée interprétée dans un contexte.
+
+| Le terme | Son exemple |
+| Une **donnée** | 18, « Dupont », 21/08/2026 |
+| Une **information** | « La température du local est de 18 °C » |
 
 ## Structurer les données
-Des données en vrac sont inexploitables. On les organise en **tableaux** :
-- chaque **ligne** est un **enregistrement** (un objet, une personne, une mesure) ;
-- chaque **colonne** est un **champ** (nom, date, valeur, unité) ;
-- un champ sert de **clé** : il identifie chaque ligne sans ambiguïté.
+| L'élément du tableau | Ce qu'il représente |
+| Une **ligne** | Un **enregistrement** : un objet, une personne, une mesure |
+| Une **colonne** | Un **champ** : nom, date, valeur, unité |
+| La **clé** | Le champ qui identifie chaque ligne **sans ambiguïté** |
 
-C’est le principe du **tableur** comme de la **base de données**.
+C'est le principe du **tableur** comme de la **base de données**.
 
 ## Les types de données
-Nombre entier, nombre décimal, texte, booléen (vrai/faux), date. Le type détermine ce qu’on peut faire : on additionne des nombres, on trie des dates, on compare des textes.
+| Le type | Ce qu'il permet |
+| Nombre entier, nombre décimal | Calculer |
+| **Texte** | Comparer, trier alphabétiquement |
+| **Booléen** (vrai/faux) | Tester |
+| **Date** | Ordonner chronologiquement |
 
 ## Traiter les données
-- **Trier** : ranger selon un champ (par ordre croissant de température).
-- **Filtrer** : ne garder que les lignes qui vérifient une condition (mesures supérieures à 25 °C).
-- **Calculer** : somme, moyenne, minimum, maximum, écart.
-- **Représenter** : courbe pour une évolution dans le temps, histogramme pour comparer, camembert pour des parts d’un tout.
+| L'opération | Ce qu'elle fait |
+| **Trier** | Ranger selon un champ |
+| **Filtrer** | Ne garder que les lignes vérifiant une condition |
+| **Calculer** | Somme, moyenne, minimum, maximum, écart |
+| **Représenter** | Un graphique adapté |
 
-> Le choix du graphique n’est pas décoratif : une courbe raconte une évolution, un camembert une répartition. Se tromper de graphique, c’est raconter autre chose que ce que disent les données.
+| Le graphique | Ce qu'il raconte |
+| La **courbe** | Une **évolution** dans le temps |
+| L'**histogramme** | Une **comparaison** |
+| Le **camembert** | Une **répartition**, des parts d'un tout |
 
-## Les formats d’échange
-- **CSV** : un tableau en texte, une ligne par enregistrement, des champs séparés par des virgules ou des points-virgules. Simple, lisible partout.
-- **JSON** : des données structurées en couples nom-valeur, utilisé par les objets connectés et les sites web.
+> Se tromper de graphique, c'est raconter autre chose que ce que disent les données.
+
+## Les formats d'échange
+| Le format | Sa structure | Son usage |
+| **CSV** | Un tableau en texte, champs séparés par des virgules ou points-virgules | Simple, lisible partout |
+| **JSON** | Des couples nom-valeur | Objets connectés, sites web |
 
 ## La qualité des données
-Une donnée mal saisie, une unité oubliée, une valeur aberrante faussent tout le traitement. Vérifier les valeurs extrêmes fait partie du travail.`,
+> Une donnée mal saisie, une unité oubliée, une valeur aberrante faussent **tout** le traitement. Vérifier les valeurs extrêmes fait partie du travail.`,
           },
           questions: [
             ['Quelle différence y a-t-il entre une donnée et une information ?', ['L’information est une donnée interprétée dans un contexte', 'La donnée est toujours un texte', 'L’information est plus courte', 'Ce sont deux mots pour la même chose'], 0, '« 18 » est une donnée ; « 18 °C dans le local » est une information.'],
@@ -834,30 +938,49 @@ Une donnée mal saisie, une unité oubliée, une valeur aberrante faussent tout 
           axe: 'Information et données',
           lecon: {
             titre: 'Où vivent les données, et qui y a droit',
-            cours: `Un **système d’information** réunit tout ce qui permet de **collecter, stocker, traiter et diffuser** des données : matériel, logiciels, données, procédures et utilisateurs.
+            cours: `Un système d'information réunit tout ce qui permet de collecter, stocker, traiter et diffuser des données : matériel, logiciels, données, procédures et utilisateurs.
 
-## Où sont stockées les données ?
-- **Localement** : disque dur, SSD, carte mémoire, clé USB. Accessible sans réseau, mais fragile — une panne, un vol, un incendie et tout disparaît.
-- **Sur un serveur** de l’établissement ou de l’entreprise, accessible par le réseau local.
-- **Dans le nuage (cloud)** : sur les serveurs d’un prestataire, accessibles depuis n’importe où avec une connexion. Pratique, mais dépendant du réseau et du prestataire.
+## Où sont stockées les données
+| Le lieu | Son atout | Sa limite |
+| **Localement** — disque, SSD, carte, clé USB | Accessible **sans réseau** | Fragile : panne, vol, incendie |
+| Sur un **serveur** local | Partagé dans l'établissement | Il faut le réseau local |
+| Dans le **nuage** | Accessible de partout | Dépend du réseau **et** du prestataire |
 
-> « Le nuage » n’a rien d’immatériel : ce sont des **centres de données** bien réels, qui consomment électricité et eau de refroidissement.
+> « Le nuage » n'a rien d'immatériel : ce sont des **centres de données** bien réels, qui consomment électricité et eau de refroidissement.
 
 ## Les unités de capacité
-1 octet = 8 bits ; 1 ko = 1 000 octets ; 1 Mo = 10⁶ octets ; 1 Go = 10⁹ octets ; 1 To = 10¹² octets.
-Une photo : quelques Mo. Un film : quelques Go. Un disque : plusieurs To.
+| L'unité | Sa valeur | Son ordre de grandeur |
+| 1 **octet** | 8 bits | Un caractère |
+| 1 **Mo** | 10⁶ octets | Une photo : quelques Mo |
+| 1 **Go** | 10⁹ octets | Un film : quelques Go |
+| 1 **To** | 10¹² octets | Un disque : plusieurs To |
 
 ## La sauvegarde
-La règle **3-2-1** : **3** copies des données, sur **2** supports différents, dont **1** hors du lieu principal. Une sauvegarde jamais testée n’est pas une sauvegarde.
+| La règle **3-2-1** | Son contenu |
+| **3** | Copies des données |
+| **2** | Supports différents |
+| **1** | Hors du lieu principal |
+
+> Une sauvegarde **jamais testée** n'est pas une sauvegarde.
 
 ## La sécurité
-- **Mot de passe** long et unique, **authentification à deux facteurs**.
-- **Chiffrement** des données sensibles : illisibles sans la clé.
-- **Droits d’accès** : chaque utilisateur ne voit que ce qui le concerne.
-- **Mises à jour** régulières contre les failles connues.
+| La mesure | Ce qu'elle protège |
+| Mot de passe **long et unique** | L'accès au compte |
+| L'**authentification à deux facteurs** | Le mot de passe seul ne suffit plus |
+| Le **chiffrement** | Les données restent illisibles sans la clé |
+| Les **droits d'accès** | Chacun ne voit que ce qui le concerne |
+| Les **mises à jour** | Les failles connues sont corrigées |
 
 ## Les données personnelles
-Le **RGPD** encadre la collecte des données personnelles en Europe : consentement explicite, finalité déclarée, durée de conservation limitée, droit d’accès, de rectification et de **suppression**. Un objet connecté qui collecte des données y est soumis comme un site web.`,
+Le **RGPD** encadre leur collecte en Europe.
+
+| Le principe | Son contenu |
+| Le **consentement** | Explicite |
+| La **finalité** | Déclarée |
+| La **durée** de conservation | Limitée |
+| Les **droits** | Accès, rectification, **suppression** |
+
+> Un objet connecté qui collecte des données y est soumis comme un site web.`,
           },
           questions: [
             ['Qu’est-ce qu’un système d’information ?', ['L’ensemble matériel, logiciel, données, procédures et utilisateurs qui traite l’information', 'Un ordinateur puissant', 'Un logiciel de base de données', 'Un réseau de câbles'], 0, 'Il collecte, stocke, traite et diffuse des données.'],
@@ -875,32 +998,49 @@ Le **RGPD** encadre la collecte des données personnelles en Europe : consenteme
           axe: 'Information et données',
           lecon: {
             titre: 'Comment un message va d’une machine à l’autre',
-            cours: `Un **réseau informatique** relie des machines pour qu’elles **échangent des données** et **partagent des ressources** (imprimante, fichiers, connexion).
+            cours: `Un réseau informatique relie des machines pour qu'elles échangent des données et partagent des ressources.
 
 ## Les échelles de réseau
-- **LAN** (réseau local) : une salle, un établissement, une maison.
-- **WAN** (réseau étendu) : plusieurs sites, une région, un pays.
-- **Internet** : le réseau mondial qui relie tous les autres.
+| Le sigle | Son étendue |
+| **LAN** | Une salle, un établissement, une maison |
+| **WAN** | Plusieurs sites, une région, un pays |
+| **Internet** | Le réseau mondial, qui relie tous les autres |
 
 ## Les équipements
-- **Switch** (commutateur) : relie les machines d’un même réseau local et **aiguille** les messages vers le bon destinataire.
-- **Routeur** : relie **deux réseaux différents** et choisit le chemin d’un message vers sa destination.
-- **Box** : elle réunit dans un seul boîtier un routeur, un switch, un modem et un point d’accès Wi-Fi.
-- **Serveur** : une machine qui rend un service (fichiers, web, messagerie) ; le **client** est celui qui le demande.
+| L'équipement | Son rôle |
+| Le **switch** | Il relie les machines d'un **même** réseau local et aiguille les messages |
+| Le **routeur** | Il relie **deux réseaux différents** et choisit le chemin |
+| La **box** | Un routeur, un switch, un modem et un point d'accès Wi-Fi en un seul boîtier |
+| Le **serveur** | Une machine qui **rend un service** ; le **client** est celui qui le demande |
 
-## L’adressage
-Chaque machine du réseau possède une **adresse IP** unique, qui l’identifie — comme une adresse postale. Le **DNS** traduit un nom lisible (un nom de site) en adresse IP : sans lui, il faudrait retenir des suites de chiffres.
+## L'adressage
+| L'élément | Son rôle |
+| L'**adresse IP** | Elle identifie chaque machine, comme une adresse postale |
+| Le **DNS** | Il traduit un nom lisible en adresse IP |
+
+> Sans le DNS, il faudrait retenir des suites de chiffres.
 
 ## Les protocoles
-Un **protocole** est un ensemble de règles que les machines respectent pour se comprendre : **HTTP** et **HTTPS** pour le web, **FTP** pour les fichiers, **SMTP** pour le courrier. Le **S** de HTTPS signifie que l’échange est **chiffré**.
+| Le protocole | Son usage |
+| **HTTP** et **HTTPS** | Le web ; le **S** signifie que l'échange est **chiffré** |
+| **FTP** | Le transfert de fichiers |
+| **SMTP** | Le courrier électronique |
 
 ## Le découpage en paquets
-Un message n’est pas envoyé d’un bloc : il est découpé en **paquets** numérotés, qui peuvent emprunter des chemins différents et sont **réassemblés** à l’arrivée. Si un paquet manque, il est redemandé.
+| L'étape | Ce qui se passe |
+| 1 | Le message est découpé en **paquets numérotés** |
+| 2 | Ils peuvent emprunter des chemins **différents** |
+| 3 | Ils sont **réassemblés** à l'arrivée |
+| 4 | Un paquet manquant est **redemandé** |
 
-> C’est ce découpage qui rend Internet robuste : si un chemin est coupé, les paquets passent par un autre.
+> C'est ce découpage qui rend Internet robuste : si un chemin est coupé, les paquets passent par un autre.
 
 ## Filaire ou sans fil
-Le **câble Ethernet** est plus rapide, plus stable et plus sûr ; le **Wi-Fi** est plus pratique mais plus sensible aux obstacles et aux interceptions — d’où l’importance de son mot de passe.`,
+| La liaison | Ses atouts | Ses limites |
+| Le **câble Ethernet** | Plus rapide, plus stable, plus sûr | Il faut tirer un câble |
+| Le **Wi-Fi** | Pratique | Sensible aux obstacles et aux **interceptions** |
+
+> D'où l'importance du mot de passe du Wi-Fi.`,
           },
           questions: [
             ['Que désigne un LAN ?', ['Un réseau local, limité à un bâtiment ou un site', 'Le réseau mondial', 'Un réseau sans fil uniquement', 'Un protocole de sécurité'], 0, 'Le WAN relie, lui, plusieurs sites.'],
@@ -921,32 +1061,45 @@ Le **câble Ethernet** est plus rapide, plus stable et plus sûr ; le **Wi-Fi** 
           axe: 'Gérer un projet technique',
           lecon: {
             titre: 'Des tâches, des délais, une équipe',
-            cours: `Un **projet** est un ensemble d’actions coordonnées, avec un **objectif**, un **délai** et des **moyens** limités.
+            cours: `Un projet est un ensemble d'actions coordonnées, avec un objectif, un délai et des moyens limités.
 
 ## Les grandes phases
-1. **Analyse du besoin** et rédaction du **cahier des charges**.
-2. **Recherche de solutions** : plusieurs pistes, comparées sur des critères.
-3. **Conception** : choix d’une solution, dessins, plans, calculs.
-4. **Réalisation** : prototype ou objet final.
-5. **Tests et validation** face au cahier des charges.
-6. **Bilan** : ce qui a fonctionné, ce qui est à améliorer.
+| La phase | Ce qu'elle produit |
+| 1. **Analyse du besoin** | Le **cahier des charges** |
+| 2. **Recherche de solutions** | Plusieurs pistes comparées |
+| 3. **Conception** | Dessins, plans, calculs |
+| 4. **Réalisation** | Prototype ou objet final |
+| 5. **Tests et validation** | Le verdict face au cahier des charges |
+| 6. **Bilan** | Ce qui a marché, ce qui est à améliorer |
 
 ## Découper en tâches
-Chaque phase se découpe en **tâches**, avec pour chacune :
-- une **durée** estimée ;
-- un ou plusieurs **responsables** ;
-- des **antériorités** — les tâches qui doivent être finies avant qu’elle commence.
+| Ce qu'on précise pour chaque tâche | Son contenu |
+| La **durée** | Estimée |
+| Le ou les **responsables** | Qui la fait |
+| Les **antériorités** | Ce qui doit être fini avant qu'elle commence |
 
 ## Le diagramme de Gantt
-Un tableau où le **temps** court en abscisse et les **tâches** en ordonnée ; chaque tâche est une barre horizontale dont la longueur est sa durée. Il montre d’un coup d’œil ce qui se fait **en parallèle**, ce qui **attend**, et la date de fin.
+| L'axe | Ce qu'il porte |
+| L'**abscisse** | Le **temps** |
+| L'**ordonnée** | Les **tâches** |
+| Chaque barre | Sa longueur est la durée de la tâche |
 
-> Le **chemin critique** est la suite de tâches dont le moindre retard décale toute la fin du projet. Les autres disposent d’une marge.
+Il montre d'un coup d'œil ce qui se fait **en parallèle**, ce qui **attend**, et la date de fin.
+
+> Le **chemin critique** est la suite de tâches dont le moindre retard décale toute la fin du projet. Les autres disposent d'une **marge**.
 
 ## Répartir les rôles
-Un projet d’équipe suppose des rôles clairs : responsable de la conception, de la fabrication, de la programmation, de la documentation, coordinateur. Les **revues de projet** régulières font le point et corrigent la trajectoire.
+| Le rôle | Ce dont il répond |
+| Conception | Les plans et les choix |
+| Fabrication | La réalisation |
+| Programmation | Le code |
+| Documentation | Le dossier |
+| Coordination | Le planning et les revues |
+
+Les **revues de projet** régulières font le point et corrigent la trajectoire.
 
 ## La traçabilité
-Un **carnet de bord** ou un dossier partagé garde les décisions, les essais ratés et leurs raisons. Un essai raté documenté vaut mieux qu’un succès inexpliqué : il évite qu’un autre refasse la même erreur.`,
+> Un **carnet de bord** garde les décisions, les essais ratés et leurs raisons. Un essai raté documenté vaut mieux qu'un succès inexpliqué : il évite qu'un autre refasse la même erreur.`,
           },
           questions: [
             ['Qu’est-ce qu’un projet technique ?', ['Un ensemble d’actions coordonnées avec un objectif, un délai et des moyens limités', 'La fabrication d’un objet unique', 'Un dessin technique détaillé', 'Un cahier des charges'], 0, 'Il se découpe en phases puis en tâches.'],
@@ -966,33 +1119,38 @@ Un **carnet de bord** ou un dossier partagé garde les décisions, les essais ra
             titre: 'Dessiner pour se faire comprendre',
             cours: `Un objet technique se représente de plusieurs façons, chacune répondant à une question différente.
 
-## Le croquis
-Un dessin **à main levée**, rapide, pour fixer une idée et la partager. Il n’est ni à l’échelle ni normalisé — c’est ce qui le rend utile en début de projet.
+## Les quatre représentations
+| La représentation | Ce qu'elle montre | Quand l'utiliser |
+| Le **croquis** | Une idée, à main levée | Pour **chercher**, en début de projet |
+| Le **schéma** | Le **fonctionnement**, pas la forme | Pour **expliquer** |
+| Le **dessin technique** | Les **dimensions** exactes, normalisées | Pour **faire fabriquer** |
+| Le **modèle 3D** | L'objet complet, manipulable | Pour **simuler** et produire |
 
-## Le schéma
-Il représente le **fonctionnement**, pas la forme :
-- **schéma de principe** : les fonctions et leurs liens ;
-- **schéma électrique** : les composants normalisés d’un circuit ;
-- **schéma cinématique** : les liaisons entre pièces et les mouvements possibles.
+## Les schémas
+| Le schéma | Ce qu'il représente |
+| De **principe** | Les fonctions et leurs liens |
+| **Électrique** | Les composants normalisés d'un circuit |
+| **Cinématique** | Les liaisons entre pièces et les mouvements possibles |
 
 ## Le dessin technique
-Un dessin **normalisé**, à l’**échelle**, avec des **cotes** :
-- l’**échelle** compare le dessin au réel : 1:2 = deux fois plus petit ; 2:1 = deux fois plus grand ; 1:1 = grandeur nature ;
-- la **cotation** donne les dimensions réelles, en millimètres ;
-- les **vues** (face, dessus, gauche) sont disposées selon des règles fixes ;
-- les **traits** ont un sens : continu fort pour les arêtes vues, interrompu pour les arêtes cachées, mixte fin pour les axes.
+| L'élément | Sa règle |
+| L'**échelle** | 1:2 = deux fois plus petit ; 2:1 = deux fois plus grand ; 1:1 = grandeur nature |
+| La **cotation** | Les dimensions **réelles**, en millimètres |
+| Les **vues** | Face, dessus, gauche, disposées selon des règles fixes |
 
-> Un dessin technique n’est pas un joli dessin : c’est un **document contractuel**, qui doit être lu de la même façon par le concepteur et par le fabricant.
+| Le trait | Ce qu'il désigne |
+| Continu **fort** | Une arête **vue** |
+| **Interrompu** | Une arête **cachée** |
+| Mixte **fin** | Un **axe** |
+
+> Un dessin technique n'est pas un joli dessin : c'est un **document contractuel**, lu de la même façon par le concepteur et par le fabricant.
 
 ## La modélisation 3D
-Réalisée sur un **logiciel de CAO** (conception assistée par ordinateur), elle permet de :
-- visualiser l’objet sous tous les angles et en **éclaté** ;
-- **simuler** les mouvements, les efforts, la résistance ;
-- vérifier les **interférences** entre pièces avant toute fabrication ;
-- **exporter** le fichier vers une imprimante 3D ou une machine à commande numérique.
-
-## Choisir la bonne représentation
-Croquis pour chercher, schéma pour expliquer un fonctionnement, dessin technique pour faire fabriquer, modèle 3D pour simuler et produire.`,
+| Ce qu'elle permet | Son bénéfice |
+| Visualiser sous tous les angles, en **éclaté** | Comprendre l'assemblage |
+| **Simuler** mouvements, efforts, résistance | Éviter un essai coûteux |
+| Vérifier les **interférences** entre pièces | Avant toute fabrication |
+| **Exporter** vers une imprimante 3D ou une MOCN | Passer directement à la production |`,
           },
           questions: [
             ['Qu’est-ce qu’un croquis ?', ['Un dessin à main levée, rapide, pour fixer une idée', 'Un dessin normalisé à l’échelle', 'Un schéma électrique', 'Un modèle 3D simplifié'], 0, 'Ni à l’échelle, ni normalisé : c’est ce qui le rend rapide.'],
@@ -1010,33 +1168,39 @@ Croquis pour chercher, schéma pour expliquer un fonctionnement, dessin techniqu
           axe: 'Gérer un projet technique',
           lecon: {
             titre: 'De l’idée à l’objet réel',
-            cours: `Concevoir, c’est passer d’un **besoin** à une **solution réalisable**, puis la fabriquer. La démarche est toujours la même, quel que soit l’objet.
+            cours: `Concevoir, c'est passer d'un besoin à une solution réalisable, puis la fabriquer.
 
-## 1. Analyser
-Identifier le besoin, les utilisateurs, les interacteurs, puis rédiger le **cahier des charges fonctionnel** avec des exigences chiffrées.
+## Les sept étapes
+| L'étape | Ce qu'elle produit |
+| 1. **Analyser** | Besoin, utilisateurs, interacteurs, **cahier des charges** chiffré |
+| 2. **Rechercher** des solutions | **Plusieurs** idées : croquis, documentation, objets existants |
+| 3. **Choisir** | Un **tableau multicritère pondéré**, et une justification |
+| 4. **Concevoir en détail** | Dessins, **modélisation 3D**, matériaux, composants, **nomenclature** |
+| 5. **Préparer la fabrication** | Procédés, **gamme de fabrication**, machines, outils, sécurité |
+| 6. **Fabriquer et assembler** | Les pièces, contrôlées au fur et à mesure |
+| 7. **Tester, valider, améliorer** | La confrontation à chaque exigence |
 
-## 2. Rechercher des solutions
-Produire **plusieurs** idées avant d’en choisir une : croquis, recherche documentaire, observation d’objets existants. Une seule idée n’est pas un choix.
+> Une seule idée n'est pas un choix : l'étape 2 exige d'en produire plusieurs.
 
-## 3. Choisir
-Comparer les solutions dans un **tableau multicritère pondéré**, confronter au cahier des charges, **justifier** le choix retenu.
+> Une pièce hors cote détectée **tôt** coûte infiniment moins cher qu'une pièce hors cote détectée à l'assemblage.
 
-## 4. Concevoir en détail
-Dessins, **modélisation 3D**, choix des matériaux, dimensionnement, choix des composants électroniques, **nomenclature** (la liste des pièces avec quantités et références).
+## Une démarche itérative
+| Le blocage | Vers quelle étape il renvoie |
+| Un **test raté** | La conception |
+| Un **matériau indisponible** | Le choix des solutions |
+| Un problème d'**assemblage** | Le dessin de détail |
 
-## 5. Préparer la fabrication
-Définir les **procédés**, l’ordre des opérations (la **gamme de fabrication**), les machines et les outils, les règles de sécurité applicables.
-
-## 6. Fabriquer et assembler
-Réaliser les pièces, les contrôler au fur et à mesure — une pièce hors cote détectée tôt coûte infiniment moins cher — puis assembler.
-
-## 7. Tester, valider, améliorer
-Confronter l’objet fini à chaque exigence du cahier des charges, corriger, documenter.
-
-> La démarche n’est pas une ligne droite : un test raté renvoie à la conception, un matériau indisponible renvoie au choix. On appelle cela une démarche **itérative**.
+> La démarche n'est pas une ligne droite : c'est une boucle.
 
 ## La documentation finale
-Dossier de conception, plans, nomenclature, programme commenté, notice d’utilisation, bilan environnemental. C’est ce dossier, autant que l’objet, qui prouve la maîtrise de la démarche.`,
+| Le document | Ce qu'il contient |
+| Le dossier de conception | Le raisonnement et les choix |
+| Les **plans** et la **nomenclature** | De quoi refabriquer |
+| Le **programme commenté** | La partie logicielle |
+| La **notice d'utilisation** | Pour l'utilisateur |
+| Le **bilan environnemental** | L'impact du cycle de vie |
+
+> C'est ce dossier, autant que l'objet, qui prouve la maîtrise de la démarche.`,
           },
           questions: [
             ['Par quoi commence toute démarche de conception ?', ['L’analyse du besoin et le cahier des charges', 'Le choix du matériau', 'La fabrication du prototype', 'La rédaction de la notice'], 0, 'On ne conçoit pas avant de savoir ce qui est demandé.'],
@@ -1057,33 +1221,43 @@ Dossier de conception, plans, nomenclature, programme commenté, notice d’util
           axe: 'Tester et valider les OST',
           lecon: {
             titre: 'Prouver que l’objet fait ce qu’on a promis',
-            cours: `**Tester**, c’est mesurer le comportement réel de l’objet. **Valider**, c’est comparer cette mesure à l’exigence du cahier des charges et conclure : conforme ou non conforme.
+            cours: `Tester, c'est mesurer le comportement réel. Valider, c'est comparer cette mesure à l'exigence et conclure : conforme ou non conforme.
 
 ## Les essais de tenue mécanique
-- **Traction** : on tire sur la pièce jusqu’à la rupture, pour mesurer sa résistance.
-- **Compression** : on l’écrase.
-- **Flexion** : on la charge en son milieu, appuyée à ses extrémités.
-- **Torsion** : on la vrille.
-- **Chocs** : on mesure la résistance à un impact.
-- **Fatigue** : on répète un effort des milliers de fois — beaucoup de pièces cassent non par un effort excessif, mais par répétition.
+| L'essai | Ce qu'on fait subir à la pièce |
+| **Traction** | On tire jusqu'à la rupture |
+| **Compression** | On l'écrase |
+| **Flexion** | On la charge en son milieu, appuyée aux extrémités |
+| **Torsion** | On la vrille |
+| **Chocs** | On mesure la résistance à un impact |
+| **Fatigue** | On répète un effort des milliers de fois |
 
-## Les essais de comportement et de performance
+> Beaucoup de pièces cassent non par un effort excessif, mais par **répétition**.
+
+## Les essais de performance
 Vitesse, autonomie, temps de réponse, précision, consommation, niveau sonore, température de fonctionnement, étanchéité, tenue aux UV et à la corrosion.
 
-## Le protocole d’essai
-Un essai n’a de valeur que s’il est **reproductible**. On note :
-- la **grandeur mesurée** et l’**instrument** utilisé ;
-- les **conditions** (température, charge, durée) ;
-- le **mode opératoire** ;
-- les **résultats**, avec leur **incertitude**.
+## Le protocole d'essai
+| Ce qu'on note | Sa raison |
+| La **grandeur mesurée** et l'**instrument** | La mesure doit être reproductible |
+| Les **conditions** | Température, charge, durée |
+| Le **mode opératoire** | Pour refaire à l'identique |
+| Les **résultats** et leur **incertitude** | Une mesure sans incertitude n'en est pas une |
 
-> Un résultat sans conditions d’essai n’est pas un résultat : « il tient 40 kg » ne veut rien dire sans savoir comment la charge a été appliquée.
+> Un résultat sans conditions d'essai n'est pas un résultat : « il tient 40 kg » ne veut rien dire sans savoir **comment** la charge a été appliquée.
 
 ## La simulation numérique
-Sur le modèle 3D, un logiciel calcule les **contraintes**, les **déformations** et les zones de rupture probables. Elle permet d’essayer vingt formes sans rien fabriquer — mais elle repose sur des **hypothèses**, et ne remplace jamais entièrement l’essai réel.
+| Ce qu'elle calcule | Sa limite |
+| Contraintes, déformations, zones de rupture probables | Elle repose sur des **hypothèses** |
+| Vingt formes essayées sans rien fabriquer | Elle ne remplace **jamais entièrement** l'essai réel |
 
 ## La conclusion de validation
-Pour chaque exigence : la valeur mesurée, le niveau exigé, et le verdict — **conforme** ou **non conforme**. Une non-conformité renvoie à la conception : c’est le retour de boucle de la démarche itérative.`,
+| Ce qu'on écrit, pour chaque exigence | Son contenu |
+| La valeur **mesurée** | Le résultat de l'essai |
+| Le niveau **exigé** | Celui du cahier des charges |
+| Le **verdict** | **Conforme** ou **non conforme** |
+
+> Une non-conformité renvoie à la conception : c'est le retour de boucle de la démarche itérative.`,
           },
           questions: [
             ['Quelle différence y a-t-il entre tester et valider ?', ['Tester mesure, valider compare la mesure à l’exigence', 'Tester compare, valider mesure', 'Ce sont deux mots pour la même chose', 'Tester concerne le prototype, valider la série'], 0, 'La validation conclut : conforme ou non conforme.'],
@@ -1101,32 +1275,41 @@ Pour chaque exigence : la valeur mesurée, le niveau exigé, et le verdict — *
           axe: 'Tester et valider les OST',
           lecon: {
             titre: 'Fabriquer pour apprendre, avant de fabriquer pour vendre',
-            cours: `Un **prototype** est un premier exemplaire, fabriqué pour **vérifier** une solution avant la production. Il n’est pas le produit final : il sert à **apprendre**.
+            cours: `Un prototype est un premier exemplaire, fabriqué pour vérifier une solution avant la production. Il sert à apprendre, pas à vendre.
 
 ## À quoi sert un prototype
-- **Vérifier** que la solution fonctionne réellement.
-- **Mesurer** des performances impossibles à calculer sur le papier.
-- **Détecter** les problèmes d’assemblage, d’ergonomie, d’encombrement.
-- **Montrer** l’objet à l’utilisateur et recueillir son avis — bien plus efficace qu’un dessin.
+| Sa fonction | Ce qu'elle apporte |
+| **Vérifier** | Que la solution fonctionne réellement |
+| **Mesurer** | Des performances impossibles à calculer sur le papier |
+| **Détecter** | Les problèmes d'assemblage, d'ergonomie, d'encombrement |
+| **Montrer** | À l'utilisateur, pour recueillir son avis — bien plus efficace qu'un dessin |
 
 ## Les degrés de prototype
-- La **maquette** : à l’échelle, non fonctionnelle, elle montre la **forme** et l’encombrement.
-- Le **prototype fonctionnel** : il fonctionne, mais avec des matériaux et des procédés qui ne seront pas ceux de la série.
-- Le **préséries** : fabriqué comme le sera le produit final, pour valider le **procédé** autant que l’objet.
+| Le degré | Ce qu'il valide | Ses matériaux |
+| La **maquette** | La **forme** et l'encombrement | Non fonctionnels |
+| Le **prototype fonctionnel** | Le **fonctionnement** | Pas ceux de la série |
+| La **présérie** | Le **procédé** autant que l'objet | Ceux du produit final |
 
 ## Les moyens de prototypage rapide
-- **Impression 3D** : formes complexes, une pièce à la fois, en quelques heures.
-- **Découpe laser** et découpe vinyle sur plaques.
-- **Cartes programmables** et modules électroniques enfichables, câblés sans soudure.
-- Carton plume, bois, mousse pour les maquettes de forme.
+| Le moyen | Son usage |
+| L'**impression 3D** | Formes complexes, une pièce en quelques heures |
+| La **découpe laser**, la découpe vinyle | Les plaques |
+| Les **cartes programmables** et modules enfichables | L'électronique, sans soudure |
+| Carton plume, bois, mousse | Les maquettes de forme |
 
-> Un prototype raté n’est pas un échec : c’est un test qui a donné son résultat. Le vrai échec est de lancer la production sans avoir jamais rien fabriqué.
+> Un prototype raté n'est pas un échec : c'est un test qui a donné son résultat. Le vrai échec est de lancer la production sans avoir jamais rien fabriqué.
 
 ## Itérer
-Prototype → test → analyse → modification → nouveau prototype. Chaque tour coûte du temps mais en fait gagner bien davantage : une erreur détectée sur un prototype coûte cent fois moins cher que la même erreur détectée sur dix mille exemplaires vendus.
+prototype → test → analyse → modification → nouveau prototype
+
+| Le coût d'une erreur | Selon le moment où on la détecte |
+| Sur un **prototype** | Faible |
+| Sur **dix mille exemplaires vendus** | **Cent fois** plus |
 
 ## Documenter le prototype
-Photos, mesures, difficultés rencontrées, modifications apportées et raisons : c’est la mémoire du projet, et la matière du dossier final.`,
+Photos, mesures, difficultés rencontrées, modifications apportées **et leurs raisons**.
+
+> C'est la mémoire du projet, et la matière du dossier final.`,
           },
           questions: [
             ['Qu’est-ce qu’un prototype ?', ['Un premier exemplaire fabriqué pour vérifier une solution', 'Le produit final vendu au client', 'Un dessin en trois dimensions', 'Un cahier des charges illustré'], 0, 'Il sert à apprendre avant de produire.'],

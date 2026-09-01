@@ -124,35 +124,42 @@ DELETE FROM public.chapters c
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'La règle des signes',
-            cours: `Un **nombre relatif** est un nombre précédé d’un signe : **positif** (+) ou **négatif** (−). Additionner et soustraire des relatifs se travaille en 5e ; la 4e ajoute la **multiplication** et la **division**.
+            cours: `Multiplier et diviser des relatifs tient dans une seule règle, et elle vaut mot pour mot pour les deux opérations.
 
 ## La règle des signes
-Elle est la même pour les deux opérations :
-- (+) × (+) = **+**
-- (−) × (−) = **+**
-- (+) × (−) = **−**
-- (−) × (+) = **−**
+| Le calcul | Son signe |
+| (+) × (+) | **+** |
+| (−) × (−) | **+** |
+| (+) × (−) | **−** |
+| (−) × (+) | **−** |
 
-> **Deux signes identiques donnent un résultat positif ; deux signes contraires donnent un résultat négatif.** La règle vaut mot pour mot pour la division.
+> **Deux signes identiques donnent un résultat positif ; deux signes contraires, un résultat négatif.** La même règle sert pour la division.
 
 ## La méthode en deux temps
-1. On détermine le **signe** du résultat.
-2. On calcule le produit ou le quotient des **distances à zéro** (les valeurs sans le signe).
+1. On détermine le **signe** du résultat ;
+2. on calcule le produit ou le quotient des **distances à zéro**.
 
-(−7) × (+3) : signes contraires → résultat négatif ; 7 × 3 = 21 ; donc **−21**.
-(−36) ÷ (−4) : signes identiques → résultat positif ; 36 ÷ 4 = 9 ; donc **+9**.
+~ (−7) × (+3) → signes contraires : négatif → 7 × 3 = 21 → −21
+
+~ (−36) ÷ (−4) → signes identiques : positif → 36 ÷ 4 = 9 → +9
 
 ## Un produit de plusieurs facteurs
-On compte les facteurs **négatifs** :
-- un nombre **pair** de facteurs négatifs → produit **positif** ;
-- un nombre **impair** → produit **négatif**.
+On compte les facteurs **négatifs**.
 
-(−2) × (−3) × (−5) : trois facteurs négatifs, nombre impair → résultat négatif ; 2 × 3 × 5 = 30 ; donc **−30**.
+| Nombre de facteurs négatifs | Le produit est… |
+| **Pair** | **Positif** |
+| **Impair** | **Négatif** |
 
-## Les pièges à éviter
-- **(−3)² = +9** mais **−3² = −9** : dans le second cas, le carré ne porte que sur le 3.
-- L’opposé de −5 est **+5** ; l’inverse de −5 est **−1/5**. Opposé et inverse ne se confondent pas.
-- Un produit est **nul** si et seulement si l’un de ses facteurs est nul.`,
+= (−2) × (−3) × (−5) = −30
+
+Trois facteurs négatifs : nombre impair, donc résultat négatif.
+
+## Les pièges
+!> **(−3)² = +9, mais −3² = −9.** Dans le second cas, le carré ne porte que sur le 3, pas sur le signe.
+
+!> L’**opposé** de −5 est **+5** ; son **inverse** est **−1/5**. Opposé et inverse ne se confondent jamais.
+
+> Un produit est **nul** si et seulement si **l’un de ses facteurs** est nul.`,
           },
           questions: [
             ['Quel est le signe du produit (−7) × (+3) ?', ['Négatif', 'Positif', 'Nul', 'Cela dépend de l’ordre'], 0, 'Deux signes contraires donnent un résultat négatif.'],
@@ -170,36 +177,43 @@ On compte les facteurs **négatifs** :
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Ranger les nombres, les situer entre deux bornes',
-            cours: `## Comparer deux nombres relatifs
-- Un nombre **positif** est toujours supérieur à un nombre **négatif**.
-- Entre deux nombres **positifs**, le plus grand est celui dont la distance à zéro est la plus grande : 7 > 3.
-- Entre deux nombres **négatifs**, c’est **l’inverse** : le plus grand est celui dont la distance à zéro est la plus **petite**. **−3 > −7**.
+            cours: `Comparer, c’est savoir qui est le plus à droite sur la droite graduée. Encadrer, c’est dire entre quelles bornes on se trouve.
 
-Sur une droite graduée, comparer revient à regarder qui est le plus **à droite**.
+## Comparer deux relatifs
+| Le cas | La règle | Exemple |
+| Un positif, un négatif | Le **positif** gagne toujours | 2 > −100 |
+| Deux **positifs** | La plus grande distance à zéro | 7 > 3 |
+| Deux **négatifs** | La **plus petite** distance à zéro | **−3 > −7** |
 
 ## Comparer deux fractions
-- **Même dénominateur** : on compare les numérateurs. 5/7 > 3/7.
-- **Dénominateurs différents** : on les **réduit au même dénominateur** avant de comparer. Pour 2/3 et 3/5, on prend 15 : 10/15 < 9/15 est faux — 10/15 > 9/15, donc 2/3 > 3/5.
-- **Même numérateur** : plus le dénominateur est grand, plus la fraction est petite. 3/10 < 3/4.
+| Le cas | La règle | Exemple |
+| Même **dénominateur** | On compare les numérateurs | 5/7 > 3/7 |
+| Même **numérateur** | Plus le dénominateur est grand, plus la fraction est petite | 3/10 < 3/4 |
+| **Différents** | On réduit au même dénominateur | 2/3 = 10/15 > 9/15 = 3/5 |
 
 ## Les symboles
-**<** (strictement inférieur), **>** (strictement supérieur), **≤**, **≥**. La pointe se tourne toujours vers le plus **petit**.
+| Le symbole | Il se lit |
+| **<** | Strictement inférieur |
+| **>** | Strictement supérieur |
+| **≤** · **≥** | Inférieur ou égal · supérieur ou égal |
+
+> La pointe se tourne toujours vers le plus **petit**.
 
 ## Encadrer un nombre
-**Encadrer**, c’est le placer entre deux bornes : a < x < b.
-L’encadrement est d’autant plus **précis** que l’écart entre les bornes — l’**amplitude** — est petit.
+Encadrer, c’est le placer entre deux bornes : a < x < b. L’écart entre les bornes s’appelle l’**amplitude** : plus elle est petite, plus l’encadrement est **précis**.
 
-Pour √2 ≈ 1,4142 :
-- à l’unité : 1 < √2 < 2
-- au dixième : 1,4 < √2 < 1,5
-- au centième : 1,41 < √2 < 1,42
+| La précision | Pour √2 ≈ 1,4142 |
+| À l’unité | 1 < √2 < 2 |
+| Au dixième | 1,4 < √2 < 1,5 |
+| Au centième | 1,41 < √2 < 1,42 |
 
 ## Valeur approchée
-- par **défaut** : la borne inférieure (1,41) ;
-- par **excès** : la borne supérieure (1,42) ;
-- **arrondi** : la borne la plus proche du nombre.
+| Le type | Ce qu’on prend | Sur √2 au centième |
+| Par **défaut** | La borne inférieure | 1,41 |
+| Par **excès** | La borne supérieure | 1,42 |
+| **Arrondi** | La borne la plus proche | 1,41 |
 
-> Un encadrement ne se lit jamais tout seul : il faut savoir à quelle **précision** il est donné.`,
+!> Un encadrement ne se lit jamais seul : il faut savoir **à quelle précision** il est donné. « 1 < x < 2 » et « 1,41 < x < 1,42 » ne disent pas la même chose.`,
           },
           questions: [
             ['Quel nombre est le plus grand : −3 ou −7 ?', ['−3', '−7', 'Ils sont égaux', 'On ne peut pas comparer'], 0, 'Entre deux négatifs, le plus grand est celui dont la distance à zéro est la plus petite.'],
@@ -217,34 +231,40 @@ Pour √2 ≈ 1,4142 :
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Le même nombre, écrit autrement',
-            cours: `Une **fraction** a/b désigne le quotient de a par b (avec b non nul). Un même nombre peut s’écrire avec **une infinité** de fractions différentes : 1/2 = 2/4 = 3/6 = 50/100.
+            cours: `Un même nombre s’écrit avec une infinité de fractions. Reste à trouver celle qui sert.
 
 ## La propriété fondamentale
-On ne change pas la valeur d’une fraction en **multipliant** ou en **divisant** son numérateur ET son dénominateur par un **même nombre non nul** :
+= a/b = (a × k)/(b × k) = (a ÷ k)/(b ÷ k)
 
-a/b = (a × k) / (b × k) = (a ÷ k) / (b ÷ k)
+Multiplier ou diviser **les deux** par un même nombre non nul ne change pas la valeur.
+
+= 1/2 = 2/4 = 3/6 = 50/100
 
 ## Simplifier une fraction
-C’est diviser le haut et le bas par un diviseur commun.
-24/36 : on divise par 12 → **2/3**.
+~ 24/36 → on divise haut et bas par 12 → 2/3
 
-Une fraction est **irréductible** quand plus aucune simplification n’est possible — c’est-à-dire quand numérateur et dénominateur n’ont plus de diviseur commun autre que 1.
+Une fraction est **irréductible** quand numérateur et dénominateur n’ont plus de diviseur commun autre que 1.
 
-> Simplifier n’est pas « enlever des chiffres » : on ne simplifie que par **multiplication ou division**, jamais en retirant un terme d’une somme.
+!> Simplifier n’est pas « enlever des chiffres ». On ne simplifie que par **multiplication ou division**, jamais en retirant un terme d’une somme.
 
 ## Réduire au même dénominateur
-Pour comparer ou additionner, on cherche un dénominateur commun — le plus simple étant le produit des deux, le plus efficace étant leur **plus petit multiple commun**.
-2/3 et 3/4 → 8/12 et 9/12.
+On cherche un multiple commun : le produit des deux marche toujours, leur **plus petit multiple commun** donne des nombres plus simples.
+
+= 2/3 et 3/4 → 8/12 et 9/12
 
 ## Reconnaître deux fractions égales
-Deux fractions a/b et c/d sont égales si et seulement si **a × d = b × c** : c’est le **produit en croix**.
-6/9 et 8/12 : 6 × 12 = 72 et 9 × 8 = 72 → elles sont égales.
+= a/b = c/d si et seulement si a × d = b × c
+
+~ 6/9 et 8/12 → 6 × 12 = 72 → 9 × 8 = 72 → égales
+
+C’est le **produit en croix**.
 
 ## Les écritures particulières
-- a/1 = a
-- a/a = 1 (a non nul)
-- 0/a = 0
-- Une fraction dont le numérateur est un multiple du dénominateur est un **entier** : 20/5 = 4.`,
+| L’écriture | Sa valeur |
+| a/1 | **a** |
+| a/a | **1** (a non nul) |
+| 0/a | **0** |
+| 20/5 | **4** — un entier |`,
           },
           questions: [
             ['Que peut-on faire sans changer la valeur d’une fraction ?', ['Multiplier ou diviser numérateur et dénominateur par un même nombre non nul', 'Ajouter le même nombre en haut et en bas', 'Soustraire le même nombre en haut et en bas', 'Échanger numérateur et dénominateur'], 0, 'C’est la propriété fondamentale des fractions.'],
@@ -262,42 +282,52 @@ Deux fractions a/b et c/d sont égales si et seulement si **a × d = b × c** : 
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Les quatre opérations sur les fractions',
-            cours: `Un **nombre rationnel** est un nombre qui peut s’écrire sous forme de fraction a/b, avec a et b entiers et b non nul.
+            cours: `Additionner exige un dénominateur commun. Multiplier n’en exige aucun. C’est toute la différence à retenir.
+
+## Ce qu’est un nombre rationnel
+Un nombre qui peut s’écrire **a/b**, avec a et b entiers et b non nul.
+
+## Les quatre opérations d’un coup d’œil
+| L’opération | Faut-il un dénominateur commun ? | La règle |
+| **Addition** | **Oui** | On ajoute les numérateurs, on garde le dénominateur |
+| **Soustraction** | **Oui** | Même chose |
+| **Multiplication** | **Non** | Numérateurs entre eux, dénominateurs entre eux |
+| **Division** | **Non** | On multiplie par l’**inverse** |
 
 ## Addition et soustraction
-Elles exigent le **même dénominateur**.
-1. Réduire au même dénominateur.
-2. Additionner (ou soustraire) les **numérateurs**, en gardant le dénominateur commun.
-3. Simplifier.
+1. Réduire au **même dénominateur** ;
+2. additionner (ou soustraire) les **numérateurs** ;
+3. garder le dénominateur commun ;
+4. simplifier.
 
-2/3 + 1/4 = 8/12 + 3/12 = **11/12**
+= 2/3 + 1/4 = 8/12 + 3/12 = 11/12
 
-> On n’additionne **jamais** les dénominateurs. 1/2 + 1/3 ne fait pas 2/5.
+!> **On n’additionne jamais les dénominateurs.** 1/2 + 1/3 ne fait pas 2/5 — et le bon sens le dit : 2/5 est plus petit que 1/2.
 
 ## Multiplication
-C’est la plus simple : on multiplie les numérateurs entre eux et les dénominateurs entre eux, **sans chercher de dénominateur commun**.
+= 3/5 × 2/7 = 6/35
 
-3/5 × 2/7 = 6/35
-
-Il est souvent plus rapide de **simplifier avant** de multiplier : 4/9 × 3/8 = (4 × 3)/(9 × 8), on simplifie par 4 et par 3 → **1/6**.
+~ 4/9 × 3/8 → simplifier par 4 et par 3 AVANT → 1/6
 
 ## Division
-Diviser par une fraction, c’est **multiplier par son inverse**.
+= Diviser par une fraction, c’est multiplier par son inverse
 
-(2/3) ÷ (5/7) = 2/3 × 7/5 = **14/15**
+= (2/3) ÷ (5/7) = 2/3 × 7/5 = 14/15
 
-L’**inverse** de a/b est b/a (a et b non nuls). Attention : l’inverse n’est pas l’opposé.
+!> L’**inverse** de a/b est **b/a**. Ce n’est pas l’**opposé**, qui serait −a/b.
 
 ## Les signes
-La règle des signes s’applique comme pour les entiers. Un signe « moins » peut se placer devant la fraction, au numérateur ou au dénominateur : −(3/4) = (−3)/4 = 3/(−4).
+Un signe « moins » peut se placer devant la fraction, au numérateur ou au dénominateur : ces trois écritures désignent le même nombre.
 
-## Les priorités opératoires
-1. les **parenthèses** ;
+= −(3/4) = (−3)/4 = 3/(−4)
+
+## Les priorités
+1. Les **parenthèses** ;
 2. les **puissances** ;
 3. les **multiplications et divisions**, de gauche à droite ;
 4. les **additions et soustractions**, de gauche à droite.
 
-Une barre de fraction joue le rôle d’une **parenthèse** : on calcule entièrement le numérateur et le dénominateur avant de diviser.`,
+> Une **barre de fraction** joue le rôle d’une parenthèse : on calcule entièrement le numérateur **et** le dénominateur avant de diviser.`,
           },
           questions: [
             ['Que faut-il faire avant d’additionner deux fractions ?', ['Les réduire au même dénominateur', 'Les simplifier obligatoirement', 'Multiplier les dénominateurs entre eux', 'Les convertir en décimaux'], 0, 'On additionne ensuite les numérateurs seulement.'],
@@ -315,39 +345,53 @@ Une barre de fraction joue le rôle d’une **parenthèse** : on calcule entièr
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Écrire court les nombres très grands et très petits',
-            cours: `## La définition
-Pour n entier positif, a^n est le produit de **n facteurs** égaux à a.
-5³ = 5 × 5 × 5 = 125.
+            cours: `Les puissances servent à écrire court ce qui serait très long : la masse d’un atome comme la distance d’une étoile.
 
-Conventions : **a¹ = a**, **a⁰ = 1** (a non nul), **a^(−n) = 1 / a^n**.
+## La définition
+= a^n = a × a × … × a (n facteurs)
+
+= 5³ = 5 × 5 × 5 = 125
+
+| La convention | Sa valeur |
+| **a¹** | a |
+| **a⁰** | **1** (a non nul) |
+| **a^(−n)** | 1 / a^n |
 
 ## Les règles de calcul
-- a^m × a^n = **a^(m+n)**
-- a^m ÷ a^n = **a^(m−n)**
-- (a^m)^n = **a^(m×n)**
-- (a × b)^n = **a^n × b^n**
+| L’opération | Le résultat |
+| a^m × a^n | **a^(m+n)** |
+| a^m ÷ a^n | **a^(m−n)** |
+| (a^m)^n | **a^(m×n)** |
+| (a × b)^n | **a^n × b^n** |
 
-Elles n’ont de sens qu’entre puissances de **même base**.
+!> Ces règles n’ont de sens qu’entre puissances de **même base**. 2³ × 5³ ne se simplifie pas en additionnant les exposants.
 
 ## Les puissances de 10
-- 10³ = 1 000 (trois zéros)
-- 10⁻³ = 0,001
-- 10^n avec n positif : n zéros après le 1 ;
-- 10^(−n) : le 1 se trouve au n-ième rang après la virgule.
+| L’écriture | Sa valeur |
+| **10³** | 1 000 — trois zéros |
+| **10⁻³** | 0,001 |
+| **10^n** | n zéros après le 1 |
+| **10^(−n)** | Le 1 au n-ième rang après la virgule |
 
-Multiplier par 10^n **décale la virgule** de n rangs vers la droite ; par 10^(−n), de n rangs vers la gauche.
+~ × 10^n → la virgule recule de n rangs vers la droite
+
+~ × 10^(−n) → la virgule recule de n rangs vers la gauche
 
 ## L’écriture scientifique
-Tout nombre s’écrit **a × 10^n** avec **1 ≤ a < 10** et n entier relatif.
-- 45 300 = **4,53 × 10⁴**
-- 0,00072 = **7,2 × 10⁻⁴**
+= a × 10^n, avec 1 ≤ a < 10
 
-Cette écriture est **unique**, ce qui permet de comparer deux nombres d’un coup d’œil : on regarde d’abord l’exposant, puis le facteur a.
+| Le nombre | Son écriture scientifique |
+| 45 300 | **4,53 × 10⁴** |
+| 0,00072 | **7,2 × 10⁻⁴** |
+
+> Cette écriture est **unique**. Comparer deux nombres devient immédiat : on regarde d’abord l’**exposant**, puis le facteur a.
 
 ## Les préfixes
-kilo (10³), méga (10⁶), giga (10⁹), téra (10¹²) ; milli (10⁻³), micro (10⁻⁶), nano (10⁻⁹).
+| Grand | Petit |
+| kilo 10³ · méga 10⁶ | milli 10⁻³ · micro 10⁻⁶ |
+| giga 10⁹ · téra 10¹² | nano 10⁻⁹ |
 
-> Un ordre de grandeur, c’est la puissance de 10 la plus proche : dire qu’une bactérie mesure « de l’ordre du micromètre » suffit souvent à raisonner.`,
+> Un **ordre de grandeur** est la puissance de 10 la plus proche : dire qu’une bactérie mesure « de l’ordre du micromètre » suffit souvent à raisonner.`,
           },
           questions: [
             ['Combien vaut 5³ ?', ['125', '15', '53', '25'], 0, 'Trois facteurs égaux à 5.'],
@@ -365,36 +409,44 @@ kilo (10³), méga (10⁶), giga (10⁹), téra (10¹²) ; milli (10⁻³), micr
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Le nombre positif dont le carré vaut a',
-            cours: `## La définition
-Pour **a positif**, la **racine carrée** de a, notée **√a**, est le nombre **positif** dont le carré vaut a.
+            cours: `La racine carrée de a, c’est le nombre positif dont le carré vaut a. Ni plus, ni moins.
 
-√9 = 3, parce que 3² = 9 et que 3 est positif.
+## La définition
+= √9 = 3, parce que 3² = 9 et que 3 est positif
 
-> **La racine carrée d’un nombre négatif n’existe pas** en 4e : aucun carré n’est négatif.
+!> **La racine carrée d’un nombre négatif n’existe pas** en 4e : aucun carré n’est négatif.
 
 ## Les conséquences immédiates
-- (√a)² = **a**
-- √(a²) = **a**, si a est positif
-- √0 = 0 et √1 = 1
+| L’écriture | Sa valeur |
+| (√a)² | **a** |
+| √(a²) | **a**, si a est positif |
+| √0 · √1 | 0 · 1 |
 
 ## Les carrés parfaits à connaître
-1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225 — soit les carrés de 1 à 15.
+= 1 · 4 · 9 · 16 · 25 · 36 · 49 · 64 · 81 · 100 · 121 · 144 · 169 · 196 · 225
+
+Ce sont les carrés de 1 à 15.
 
 ## Les règles de calcul
-- **√a × √b = √(a × b)**
-- **√a ÷ √b = √(a ÷ b)** (b non nul)
+| La règle | Exemple |
+| **√a × √b = √(a × b)** | √2 × √8 = √16 = 4 |
+| **√a ÷ √b = √(a ÷ b)** | √18 ÷ √2 = √9 = 3 |
 
-⚠️ En revanche, **√(a + b) n’est PAS égal à √a + √b**. √(9 + 16) = √25 = 5, tandis que √9 + √16 = 3 + 4 = 7. C’est l’erreur la plus fréquente du chapitre.
+!> **√(a + b) n’est PAS égal à √a + √b.** √(9 + 16) = √25 = **5**, tandis que √9 + √16 = 3 + 4 = **7**. C’est l’erreur la plus fréquente du chapitre.
 
 ## Simplifier une racine
-On cherche le plus grand **carré parfait** contenu dans le nombre :
-√50 = √(25 × 2) = √25 × √2 = **5√2**.
+~ √50 → chercher le plus grand carré parfait → √(25 × 2) → 5√2
 
 ## Les valeurs approchées
-√2 ≈ 1,414 ; √3 ≈ 1,732 ; √5 ≈ 2,236. La calculatrice donne une **valeur approchée** : √2 est un nombre **irrationnel**, sa suite de décimales est infinie et sans période.
+| La racine | Sa valeur |
+| √2 | ≈ 1,414 |
+| √3 | ≈ 1,732 |
+| √5 | ≈ 2,236 |
+
+> √2 est **irrationnel** : sa suite de décimales est infinie et sans période. La calculatrice n’en donne qu’une valeur approchée.
 
 ## Où elles servent
-Dans le **théorème de Pythagore**, pour retrouver une longueur à partir d’un carré ; dans le calcul du **côté d’un carré** à partir de son aire.`,
+Dans le **théorème de Pythagore**, pour retrouver une longueur à partir d’un carré ; et pour trouver le **côté d’un carré** à partir de son aire.`,
           },
           questions: [
             ['Qu’est-ce que la racine carrée de a ?', ['Le nombre positif dont le carré vaut a', 'Le nombre qui multiplié par 2 donne a', 'La moitié de a', 'Le carré de a'], 0, 'Elle n’est définie que pour a positif.'],
@@ -412,32 +464,32 @@ Dans le **théorème de Pythagore**, pour retrouver une longueur à partir d’u
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Les briques de tous les entiers',
-            cours: `Un **nombre premier** est un entier **supérieur à 1** qui n’admet **que deux diviseurs** : 1 et lui-même.
+            cours: `Les nombres premiers sont aux entiers ce que les atomes sont à la matière : les briques dont tout le reste est fait.
 
-## Les premiers d’entre eux
-2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47…
-- **2 est le seul nombre premier pair** ;
-- **1 n’est pas premier** : il n’a qu’un seul diviseur ;
-- il en existe une **infinité** — Euclide l’a démontré il y a plus de deux mille ans.
+## La définition
+Un **nombre premier** est un entier **supérieur à 1** qui n’a que **deux** diviseurs : 1 et lui-même.
 
-## Comment tester si un nombre est premier
-On essaie de le diviser par les nombres premiers successifs — 2, 3, 5, 7, 11… — et on peut s’arrêter dès que le **carré** du diviseur testé dépasse le nombre.
+= 2 · 3 · 5 · 7 · 11 · 13 · 17 · 19 · 23 · 29 · 31 · 37 · 41 · 43 · 47…
 
-97 : il n’est divisible ni par 2, ni par 3, ni par 5, ni par 7 ; 11² = 121 > 97, donc **97 est premier**.
+!> **2 est le seul nombre premier pair**, et **1 n’est pas premier** : il n’a qu’un seul diviseur. Il en existe une **infinité** — Euclide l’a démontré il y a plus de deux mille ans.
+
+## Tester si un nombre est premier
+~ Diviser par 2 → par 3 → par 5 → par 7 → par 11 → s’arrêter quand le carré du diviseur dépasse le nombre
+
+~ 97 : ni par 2, ni 3, ni 5, ni 7 → 11² = 121 > 97 → 97 est premier
 
 ## La décomposition en facteurs premiers
-Tout entier supérieur à 1 s’écrit d’**une seule façon** comme produit de nombres premiers (à l’ordre près).
+Tout entier supérieur à 1 s’écrit d’**une seule façon** comme produit de nombres premiers, à l’ordre près.
 
-360 = 2 × 180 = 2 × 2 × 90 = 2 × 2 × 2 × 45 = **2³ × 3² × 5**
+~ 360 → 2 × 180 → 2² × 90 → 2³ × 45 → 2³ × 3² × 5
 
-Méthode : on divise successivement par le plus petit nombre premier possible, jusqu’à obtenir 1.
+La méthode : diviser successivement par le **plus petit** nombre premier possible, jusqu’à obtenir 1.
 
 ## À quoi ça sert
-- **Simplifier une fraction** : on décompose numérateur et dénominateur, on barre les facteurs communs.
-- Trouver **tous les diviseurs** d’un nombre.
-- Reconnaître deux nombres **premiers entre eux** : ils n’ont aucun facteur premier commun, et une fraction formée de deux tels nombres est déjà irréductible.
-
-> Les nombres premiers sont aux entiers ce que les atomes sont à la matière : les briques dont tout le reste est fait.`,
+| L’usage | Comment |
+| **Simplifier une fraction** | On décompose haut et bas, on barre les facteurs communs |
+| Trouver **tous les diviseurs** | On combine les facteurs premiers |
+| Reconnaître deux nombres **premiers entre eux** | Aucun facteur commun : la fraction est déjà irréductible |`,
           },
           questions: [
             ['Qu’est-ce qu’un nombre premier ?', ['Un entier supérieur à 1 qui n’a que deux diviseurs', 'Un entier impair', 'Le premier entier d’une liste', 'Un entier divisible par 2'], 0, '1 et lui-même.'],
@@ -455,39 +507,45 @@ Méthode : on divise successivement par le plus petit nombre premier possible, j
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Développer et factoriser',
-            cours: `Le **calcul littéral** manipule des lettres qui représentent des nombres. Deux gestes inverses le structurent.
+            cours: `Développer et factoriser sont deux gestes inverses. Ils ne changent jamais la valeur d’une expression, seulement son habit.
 
-## Développer
-Transformer un **produit** en **somme**.
+## Développer : du produit à la somme
+| La distributivité | La formule | L’exemple |
+| **Simple** | k(a + b) = **ka + kb** | 3(x + 5) = **3x + 15** |
+| **Double** | (a + b)(c + d) = **ac + ad + bc + bd** | (x + 2)(x + 3) = **x² + 5x + 6** |
 
-**Simple distributivité** : k(a + b) = **ka + kb**
-3(x + 5) = 3x + 15
+~ (x + 2)(x + 3) → x² + 3x + 2x + 6 → x² + 5x + 6
 
-**Double distributivité** : (a + b)(c + d) = **ac + ad + bc + bd**
-(x + 2)(x + 3) = x² + 3x + 2x + 6 = **x² + 5x + 6**
+!> Le signe **moins** devant une parenthèse change **tous** les signes à l’intérieur : −(x − 4) = **−x + 4**, pas −x − 4.
 
-⚠️ Le signe **moins** devant une parenthèse change **tous** les signes à l’intérieur : −(x − 4) = −x + 4.
+## Factoriser : de la somme au produit
+On repère un **facteur commun**.
 
-## Factoriser
-Transformer une **somme** en **produit**, en repérant un **facteur commun**.
-- 5x + 15 = **5(x + 3)**
-- 7a − 7b = **7(a − b)**
-- x² + 3x = **x(x + 3)**
-- (x + 1)(x + 2) + (x + 1)(x − 5) = **(x + 1)(2x − 3)** — ici le facteur commun est une parenthèse entière.
+| L’expression | Factorisée |
+| 5x + 15 | **5(x + 3)** |
+| 7a − 7b | **7(a − b)** |
+| x² + 3x | **x(x + 3)** |
+| (x + 1)(x + 2) + (x + 1)(x − 5) | **(x + 1)(2x − 3)** |
+
+> Dans le dernier cas, le facteur commun est une **parenthèse entière**. C’est le cas que les exercices attendent le plus.
 
 ## Réduire
-Regrouper les termes de même nature : 3x + 5 + 2x − 1 = **5x + 4**.
-Attention : 3x et 3x² ne se regroupent **jamais** — ce ne sont pas les mêmes « objets ».
+On regroupe les termes de même nature.
+
+= 3x + 5 + 2x − 1 = 5x + 4
+
+!> **3x et 3x² ne se regroupent jamais** : ce ne sont pas les mêmes objets.
 
 ## Tester une égalité
-Une égalité littérale est vraie **pour toutes** les valeurs si les deux membres, développés et réduits, sont identiques. Sinon, il suffit d’**un seul contre-exemple** pour la réfuter.
+| Pour prouver | Il faut |
+| Qu’elle est **vraie** | Développer et réduire les deux membres jusqu’à les rendre identiques |
+| Qu’elle est **fausse** | **Un seul contre-exemple** |
 
 ## Les conventions d’écriture
-- On n’écrit pas le signe × devant une lettre : 3 × x s’écrit **3x** ;
-- 1 × x s’écrit **x**, et x × x s’écrit **x²** ;
-- le coefficient se place **avant** la lettre.
-
-> Développer et factoriser ne changent jamais la **valeur** d’une expression : ce sont deux écritures du même nombre, choisies selon ce qu’on veut en faire.`,
+| On écrit | Et non |
+| **3x** | 3 × x, ni x3 |
+| **x** | 1 × x |
+| **x²** | x × x |`,
           },
           questions: [
             ['Que donne le développement de 3(x + 5) ?', ['3x + 15', '3x + 5', 'x + 15', '3x × 15'], 0, 'La simple distributivité multiplie chaque terme de la parenthèse.'],
@@ -505,44 +563,50 @@ Une égalité littérale est vraie **pour toutes** les valeurs si les deux membr
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Trouver la valeur qui rend l’égalité vraie',
-            cours: `## Vocabulaire
-Une **équation** est une égalité contenant une **inconnue**, le plus souvent notée x.
-- **Résoudre** une équation, c’est trouver **toutes** les valeurs de l’inconnue qui rendent l’égalité vraie ;
-- ces valeurs sont les **solutions** ;
-- le **membre de gauche** et le **membre de droite** encadrent le signe =.
+            cours: `Résoudre une équation, c’est trouver toutes les valeurs qui rendent l’égalité vraie. Une seule règle suffit.
+
+## Le vocabulaire
+| Le mot | Ce qu’il désigne |
+| L’**inconnue** | La lettre cherchée, souvent x |
+| **Résoudre** | Trouver **toutes** les valeurs qui rendent l’égalité vraie |
+| Les **solutions** | Ces valeurs |
+| Les **membres** | Ce qui est à gauche et à droite du signe = |
 
 ## Les deux règles fondamentales
 On ne change pas les solutions d’une équation :
-1. en **ajoutant** ou en **soustrayant** un même nombre aux deux membres ;
-2. en **multipliant** ou en **divisant** les deux membres par un même nombre **non nul**.
 
-> Ce qu’on fait d’un côté, on le fait **de l’autre**. C’est la seule règle du chapitre, et toutes les autres en découlent.
+1. en **ajoutant** ou **soustrayant** un même nombre aux deux membres ;
+2. en **multipliant** ou **divisant** les deux membres par un même nombre **non nul**.
+
+> Ce qu’on fait d’un côté, on le fait **de l’autre**. C’est la seule règle du chapitre ; toutes les autres en découlent.
 
 ## La méthode
-1. Développer et réduire chaque membre.
-2. Regrouper les termes en x d’un côté, les nombres de l’autre.
-3. Diviser par le coefficient de x.
-4. **Vérifier** en remplaçant dans l’équation de départ.
+1. Développer et réduire chaque membre ;
+2. regrouper les **termes en x** d’un côté, les **nombres** de l’autre ;
+3. diviser par le coefficient de x ;
+4. **vérifier** en remplaçant dans l’équation de départ.
 
-5x − 3 = 2x + 9
-→ 5x − 2x = 9 + 3
-→ 3x = 12
-→ **x = 4**
-Vérification : 5 × 4 − 3 = 17 et 2 × 4 + 9 = 17. ✔
+~ 5x − 3 = 2x + 9 → 3x = 12 → x = 4
+
+= Vérification : 5 × 4 − 3 = 17 et 2 × 4 + 9 = 17
 
 ## L’équation produit nul
-Si **A × B = 0**, alors **A = 0 ou B = 0**.
-(x − 2)(x + 5) = 0 a donc pour solutions **2** et **−5**.
+= Si A × B = 0, alors A = 0 ou B = 0
+
+= (x − 2)(x + 5) = 0 → solutions : 2 et −5
 
 ## Les cas particuliers
-- **0x = 0** : tous les nombres sont solutions ;
-- **0x = 7** : aucune solution.
+| L’équation | Ses solutions |
+| **0x = 0** | **Tous** les nombres |
+| **0x = 7** | **Aucune** |
 
 ## Mettre un problème en équation
 1. Nommer l’inconnue et dire ce qu’elle représente ;
 2. traduire l’énoncé par une égalité ;
 3. résoudre ;
-4. **conclure par une phrase** — la solution de l’équation n’est pas encore la réponse au problème.`,
+4. **conclure par une phrase**.
+
+!> La solution de l’équation n’est pas encore la réponse au problème. « x = 4 » ne dit pas ce que 4 désigne.`,
           },
           questions: [
             ['Qu’est-ce que résoudre une équation ?', ['Trouver toutes les valeurs de l’inconnue qui rendent l’égalité vraie', 'Développer les deux membres', 'Simplifier l’écriture', 'Vérifier une égalité connue'], 0, 'Ces valeurs sont les solutions.'],
@@ -560,38 +624,45 @@ Si **A × B = 0**, alors **A = 0 ou B = 0**.
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Traduire un problème en langage mathématique',
-            cours: `**Modéliser**, c’est traduire une situation concrète en objets mathématiques — une expression, une équation, un tableau, un graphique — pour la résoudre.
+            cours: `Modéliser, ce n’est pas trouver le résultat : c’est écrire correctement le problème. Le reste est de la technique.
 
-## Les étapes
-1. **Lire et reformuler** : quelle est la question posée ? quelles données sont fournies ? lesquelles manquent ?
-2. **Choisir l’inconnue** et écrire ce qu’elle représente : « Soit x le nombre de… ». C’est l’étape la plus souvent bâclée, et celle qui décide de tout.
-3. **Traduire** l’énoncé en expressions littérales.
-4. **Résoudre**.
-5. **Vérifier la vraisemblance** : un âge négatif, un nombre de personnes décimal, une longueur nulle signalent une erreur.
-6. **Conclure** par une phrase.
+## Les six étapes
+1. **Lire et reformuler** : quelle question ? quelles données ? lesquelles manquent ?
+2. **Choisir l’inconnue** et écrire ce qu’elle représente : « Soit x le nombre de… » ;
+3. **traduire** l’énoncé en expressions littérales ;
+4. **résoudre** ;
+5. **vérifier la vraisemblance** ;
+6. **conclure** par une phrase.
+
+!> L’étape 2 est la plus souvent bâclée, et c’est elle qui décide de tout. Une inconnue mal définie donne une équation juste qui répond à une autre question.
 
 ## Les traductions courantes
-| Énoncé | Traduction |
-|---|---|
-| la somme de x et 5 | x + 5 |
-| le double de x | 2x |
-| le triple de x, augmenté de 4 | 3x + 4 |
-| x diminué de 7 | x − 7 |
-| la moitié de x | x/2 |
-| le carré de x | x² |
-| trois nombres entiers consécutifs | x, x + 1, x + 2 |
-| un prix après une hausse de 20 % | 1,2 × p |
+| L’énoncé | Sa traduction |
+| La somme de x et 5 | **x + 5** |
+| Le double de x | **2x** |
+| Le triple de x, augmenté de 4 | **3x + 4** |
+| x diminué de 7 | **x − 7** |
+| La moitié de x | **x/2** |
+| Le carré de x | **x²** |
+| Trois entiers consécutifs | **x, x + 1, x + 2** |
+| Un prix après une hausse de 20 % | **1,2 × p** |
 
 ## Le programme de calcul
-Un énoncé qui enchaîne des opérations (« choisis un nombre, ajoute 3, multiplie par 2… ») se traduit par une **expression littérale**, qu’on **développe et réduit** pour découvrir ce que le programme fait vraiment — c’est ainsi qu’on démontre une conjecture du type « on retombe toujours sur le nombre de départ ».
+Un énoncé qui enchaîne des opérations se traduit par une **expression littérale**, qu’on développe et réduit pour voir ce que le programme fait vraiment.
+
+~ Choisis un nombre → ajoute 3 → multiplie par 2 → retire 6 → 2(x + 3) − 6 = 2x
+
+C’est ainsi qu’on démontre une conjecture du type « on retombe toujours sur le double du nombre de départ ».
 
 ## Choisir le bon modèle
-- Une situation de **proportionnalité** → un tableau et un coefficient.
-- Une **égalité à trouver** → une équation.
-- Une **évolution** → un tableau de valeurs ou un graphique.
-- Un **partage** ou une **comparaison de tarifs** → une équation, puis une discussion selon les valeurs.
+| La situation | Le modèle |
+| **Proportionnalité** | Un tableau et un coefficient |
+| Une **égalité** à trouver | Une équation |
+| Une **évolution** | Un tableau de valeurs ou un graphique |
+| Un **partage**, une **comparaison de tarifs** | Une équation, puis une discussion |
 
-> Modéliser ne consiste pas à trouver le résultat, mais à écrire correctement le problème. Une fois l’équation posée, le reste est de la technique.`,
+## Vérifier la vraisemblance
+Un âge négatif, un nombre de personnes décimal, une longueur nulle : ces résultats signalent une erreur, même quand le calcul est juste.`,
           },
           questions: [
             ['Que signifie modéliser une situation ?', ['La traduire en objets mathématiques pour la résoudre', 'La dessiner à l’échelle', 'La résumer en une phrase', 'La comparer à une autre situation'], 0, 'Expression, équation, tableau ou graphique selon le cas.'],
@@ -612,31 +683,42 @@ Un énoncé qui enchaîne des opérations (« choisis un nombre, ajoute 3, multi
           axe: 'Organisation et gestion des données',
           lecon: {
             titre: 'Lire, résumer et représenter une série',
-            cours: `## Le vocabulaire
-- La **population** : l’ensemble étudié (les élèves d’une classe).
-- L’**individu** : un élément de cette population.
-- Le **caractère** : ce qu’on observe (la taille, la couleur des yeux).
-  - **quantitatif** s’il se mesure (taille, note) ;
-  - **qualitatif** sinon (sport pratiqué, couleur).
-- L’**effectif** d’une valeur : le nombre d’individus qui la portent.
-- L’**effectif total** : la somme de tous les effectifs.
-- La **fréquence** : effectif ÷ effectif total. Elle s’exprime en décimal ou en pourcentage, et la somme des fréquences vaut toujours **1** (ou 100 %).
+            cours: `Une série statistique se résume par trois nombres — et se déforme par un seul choix de graphique.
 
-## Les indicateurs
-- L’**étendue** : plus grande valeur − plus petite valeur. Elle mesure la **dispersion**.
-- La **moyenne** : somme des valeurs ÷ effectif total.
-- La **médiane** : la valeur qui partage la série **ordonnée** en deux groupes de même effectif.
+## Le vocabulaire
+| Le mot | Ce qu’il désigne |
+| La **population** | L’ensemble étudié |
+| L’**individu** | Un élément de cette population |
+| Le **caractère** | Ce qu’on observe |
+| L’**effectif** | Combien d’individus portent une valeur |
+| L’**effectif total** | La somme de tous les effectifs |
+| La **fréquence** | Effectif ÷ effectif total |
 
-## Les représentations
-- Le **diagramme en bâtons** : pour un caractère quantitatif discret.
-- Le **diagramme circulaire** : pour des parts d’un tout. L’angle d’un secteur se calcule par **fréquence × 360°**.
-- L’**histogramme** : pour des données regroupées en classes.
-- La **courbe** : pour une évolution dans le temps.
+| Le caractère est… | Quand… | Exemples |
+| **Quantitatif** | Il se **mesure** | Taille, note |
+| **Qualitatif** | Il ne se mesure pas | Sport, couleur des yeux |
 
-> Le choix de la représentation n’est jamais neutre : une courbe raconte une évolution, un diagramme circulaire une répartition. Se tromper de graphique, c’est raconter autre chose.
+= La somme des fréquences vaut toujours 1, soit 100 %
+
+## Les trois indicateurs
+| L’indicateur | Sa définition | Ce qu’il dit |
+| L’**étendue** | Plus grande − plus petite valeur | La **dispersion** |
+| La **moyenne** | Somme des valeurs ÷ effectif total | Le centre « de masse » |
+| La **médiane** | La valeur qui partage la série **ordonnée** en deux groupes de même effectif | Le milieu du classement |
+
+!> On ne calcule une médiane qu’après avoir **ordonné** la série. Sur des données brutes, elle ne veut rien dire.
+
+## Choisir sa représentation
+| Le graphique | Pour quoi |
+| **Diagramme en bâtons** | Un caractère quantitatif discret |
+| **Diagramme circulaire** | Des parts d’un tout — angle = fréquence × 360° |
+| **Histogramme** | Des données regroupées en classes |
+| **Courbe** | Une évolution dans le temps |
+
+> Le choix n’est jamais neutre : une courbe raconte une évolution, un diagramme circulaire une répartition. Se tromper de graphique, c’est raconter autre chose.
 
 ## Les pièges de lecture
-Un axe qui ne part pas de zéro, une échelle irrégulière ou des secteurs en trois dimensions déforment la perception sans falsifier aucun chiffre. Toujours lire les **axes** et l’**échelle** avant les barres.`,
+!> Un axe qui ne part pas de zéro, une échelle irrégulière ou des secteurs en trois dimensions **déforment la perception sans falsifier aucun chiffre**. On lit les axes et l’échelle **avant** les barres.`,
           },
           questions: [
             ['Qu’est-ce que l’effectif d’une valeur ?', ['Le nombre d’individus qui portent cette valeur', 'La somme de toutes les valeurs', 'La valeur la plus fréquente', 'L’écart entre deux valeurs'], 0, 'L’effectif total est la somme de tous les effectifs.'],
@@ -654,40 +736,46 @@ Un axe qui ne part pas de zéro, une échelle irrégulière ou des secteurs en t
           axe: 'Organisation et gestion des données',
           lecon: {
             titre: 'Mesurer une chance entre 0 et 1',
-            cours: `## Le vocabulaire
-Une **expérience aléatoire** a plusieurs **issues** possibles, et on ne peut pas prévoir laquelle se produira.
-Un **événement** est un ensemble d’issues : « obtenir un nombre pair » avec un dé.
+            cours: `La probabilité se calcule avant l’expérience ; la fréquence se constate après. Les deux se rejoignent quand on répète.
 
-## La probabilité
-C’est un nombre compris entre **0** et **1** :
-- **0** = événement **impossible** ;
-- **1** = événement **certain** ;
-- plus la probabilité est proche de 1, plus l’événement est probable.
+## Le vocabulaire
+| Le mot | Ce qu’il désigne |
+| Une **expérience aléatoire** | Plusieurs issues possibles, aucune prévisible |
+| Une **issue** | Un résultat possible |
+| Un **événement** | Un ensemble d’issues |
+
+## L’échelle
+| La valeur | Ce qu’elle dit |
+| **0** | Impossible |
+| **0,5** | Une chance sur deux |
+| **1** | Certain |
 
 ## Le calcul en situation d’équiprobabilité
-Quand toutes les issues ont la même chance :
+= P(A) = nombre d’issues favorables ÷ nombre d’issues possibles
 
-**P(A) = nombre d’issues favorables ÷ nombre d’issues possibles**
-
-Avec un dé à six faces : P(« nombre pair ») = 3/6 = **1/2**.
-Dans une urne de 5 boules rouges et 3 bleues : P(« rouge ») = **5/8**.
+| La situation | L’événement | Sa probabilité |
+| Dé à six faces | Un nombre pair | 3/6 = **1/2** |
+| 5 rouges, 3 bleues | Tirer une rouge | **5/8** |
 
 ## L’événement contraire
-**P(non A) = 1 − P(A)**.
-C’est souvent le chemin le plus court : « au moins un » se calcule presque toujours par le contraire, « aucun ».
+= P(non A) = 1 − P(A)
+
+> C’est souvent le chemin le plus court : « **au moins un** » se calcule presque toujours par son contraire, « **aucun** ».
 
 ## Événements incompatibles
-Deux événements qui ne peuvent pas se produire en même temps. Alors P(A ou B) = P(A) + P(B).
+Deux événements qui ne peuvent pas se produire en même temps.
+
+= P(A ou B) = P(A) + P(B)
 
 ## Les expériences à deux épreuves
-On les représente par un **arbre** ou un **tableau à double entrée** :
-- on **multiplie** les probabilités le long d’une branche ;
-- on **additionne** les branches qui conviennent.
+On les représente par un **arbre** ou un **tableau à double entrée**.
+
+~ Le long d’une branche : on MULTIPLIE → Entre les branches qui conviennent : on ADDITIONNE
 
 ## Ce que la probabilité ne dit pas
-Elle ne prédit **pas** le prochain tirage. Une pièce tombée cinq fois sur pile reste à 1/2 au sixième lancer : elle n’a pas de mémoire.
+!> Elle ne prédit **pas** le prochain tirage. Une pièce tombée cinq fois sur pile reste à **1/2** au sixième lancer : elle n’a pas de mémoire.
 
-> La **loi des grands nombres** dit seulement ceci : plus on répète l’expérience, plus la **fréquence observée** se rapproche de la probabilité théorique.`,
+> La **loi des grands nombres** dit seulement ceci : plus on répète l’expérience, plus la fréquence observée se rapproche de la probabilité théorique.`,
           },
           questions: [
             ['Entre quelles valeurs une probabilité est-elle comprise ?', ['Entre 0 et 1', 'Entre −1 et 1', 'Entre 0 et 100', 'Entre 1 et 6'], 0, '0 = impossible, 1 = certain.'],
@@ -705,28 +793,32 @@ Elle ne prédit **pas** le prochain tirage. Une pièce tombée cinq fois sur pil
           axe: 'Organisation et gestion des données',
           lecon: {
             titre: 'Reconnaître, calculer, représenter',
-            cours: `Deux grandeurs sont **proportionnelles** quand on passe de l’une à l’autre en multipliant **toujours par le même nombre**, appelé **coefficient de proportionnalité**.
+            cours: `Avant tout produit en croix, une question : est-ce vraiment proportionnel ?
 
 ## Reconnaître une situation de proportionnalité
-- **Dans un tableau** : le quotient de chaque valeur de la deuxième ligne par celle de la première est **constant**.
-- **Graphiquement** : les points sont **alignés** avec l’**origine** du repère. Une droite qui ne passe pas par (0 ; 0) ne traduit **pas** une proportionnalité.
-- **Concrètement** : si l’une double, l’autre double ; si l’une est nulle, l’autre l’est aussi.
+| Le test | Ce qu’on vérifie |
+| **Dans un tableau** | Le quotient de chaque colonne est **constant** |
+| **Graphiquement** | Les points sont **alignés avec l’origine** |
+| **Concrètement** | L’une double, l’autre double ; l’une est nulle, l’autre aussi |
+
+!> Une droite qui ne passe **pas** par (0 ; 0) ne traduit **pas** une proportionnalité. C’est le test graphique qui tranche.
 
 ## Les contre-exemples classiques
-- Le **périmètre** d’un carré est proportionnel à son côté ; son **aire** ne l’est pas (elle est en côté²).
-- L’**âge** de deux personnes n’est pas proportionnel : l’écart reste constant, pas le rapport.
-- Un tarif avec **abonnement fixe** n’est pas proportionnel.
+| La situation | Pourquoi non |
+| L’**aire** d’un carré en fonction du côté | Elle varie en côté², pas en côté |
+| L’**âge** de deux personnes | L’écart reste constant, pas le rapport |
+| Un tarif avec **abonnement fixe** | Le prix ne part pas de 0 |
 
-## Les méthodes de calcul
-**1. Le coefficient** : on le calcule une fois, on l’applique partout.
-**2. Le passage à l’unité** : on cherche la valeur pour 1, puis on multiplie.
-**3. Le produit en croix** : dans un tableau de proportionnalité, a/b = c/d donne **a × d = b × c**. C’est la **quatrième proportionnelle**.
-**4. Les propriétés d’additivité et de linéarité** : si 3 objets coûtent 12 € et 5 objets 20 €, alors 8 objets coûtent 32 €.
+> Le **périmètre** d’un carré, lui, **est** proportionnel à son côté : P = 4 × c. La même figure porte donc une grandeur proportionnelle et une qui ne l’est pas.
+
+## Les quatre méthodes
+1. **Le coefficient** : on le calcule une fois, on l’applique partout ;
+2. **le passage à l’unité** : la valeur pour 1, puis on multiplie ;
+3. **le produit en croix** : a/b = c/d donne **a × d = b × c** ;
+4. **l’additivité et la linéarité** : 3 objets à 12 € et 5 objets à 20 € → 8 objets à **32 €**.
 
 ## Où on la retrouve
-Échelles, vitesses, pourcentages, recettes de cuisine, agrandissements-réductions, conversions d’unités, Thalès.
-
-> La question à se poser avant tout calcul : **est-ce vraiment proportionnel ?** Beaucoup d’erreurs viennent d’un produit en croix appliqué à une situation qui ne s’y prête pas.`,
+Échelles, vitesses, pourcentages, recettes, agrandissements-réductions, conversions d’unités, et le théorème de **Thalès**.`,
           },
           questions: [
             ['Comment reconnaît-on une proportionnalité dans un tableau ?', ['Le quotient entre les deux lignes est constant', 'La différence entre les deux lignes est constante', 'La somme des lignes est constante', 'Les valeurs sont croissantes'], 0, 'Ce quotient est le coefficient de proportionnalité.'],
@@ -744,35 +836,39 @@ Elle ne prédit **pas** le prochain tirage. Une pièce tombée cinq fois sur pil
           axe: 'Organisation et gestion des données',
           lecon: {
             titre: 'Appliquer, augmenter, diminuer, retrouver',
-            cours: `Un **pourcentage** est une proportion rapportée à **100**. « 25 % » signifie 25 pour 100, soit la fraction 25/100 = 0,25.
+            cours: `Un pourcentage, c’est un coefficient multiplicateur déguisé. Une fois qu’on le voit ainsi, tout devient une multiplication.
 
 ## Appliquer un pourcentage
-Prendre **t %** d’une quantité, c’est la multiplier par **t/100**.
-30 % de 80 € = 80 × 0,3 = **24 €**.
+= 30 % de 80 € = 80 × 0,3 = 24 €
+
+Prendre t % d’une quantité, c’est la multiplier par **t/100**.
 
 ## Augmenter ou diminuer
-- **Augmenter de t %** : multiplier par **(1 + t/100)**. +15 % → × **1,15**.
-- **Diminuer de t %** : multiplier par **(1 − t/100)**. −15 % → × **0,85**.
-
-Le nombre par lequel on multiplie s’appelle le **coefficient multiplicateur**.
+| L’évolution | Le coefficient multiplicateur |
+| **+ t %** | × (1 + t/100) — +15 % → **× 1,15** |
+| **− t %** | × (1 − t/100) — −15 % → **× 0,85** |
 
 ## Enchaîner deux évolutions
-On **multiplie** les coefficients — on ne les additionne jamais.
-- +10 % puis +10 % : 1,1 × 1,1 = 1,21, soit **+21 %**.
-- −20 % puis +20 % : 0,8 × 1,2 = 0,96, soit **−4 %** : on ne revient pas au prix de départ.
+On **multiplie** les coefficients, jamais on ne les additionne.
 
-## Retrouver la quantité totale
-Si 24 € représentent 30 % du prix, alors le prix est **24 ÷ 0,3 = 80 €**. On **divise** par le coefficient au lieu de multiplier.
+| L’enchaînement | Le calcul | Le résultat |
+| +10 % puis +10 % | 1,1 × 1,1 = 1,21 | **+21 %** |
+| −20 % puis +20 % | 0,8 × 1,2 = 0,96 | **−4 %** |
 
-## Calculer un pourcentage
-**pourcentage = (partie ÷ tout) × 100**.
-15 élèves sur 25 → (15 ÷ 25) × 100 = **60 %**.
+!> **Une baisse suivie d’une hausse du même taux ne ramène jamais au prix de départ.** Les deux pourcentages ne portent pas sur la même quantité.
+
+## Les trois questions
+| On cherche… | On fait… | Exemple |
+| La **partie** | On multiplie | 30 % de 80 = 24 € |
+| Le **pourcentage** | (partie ÷ tout) × 100 | 15 sur 25 → **60 %** |
+| Le **tout** | On divise | 24 ÷ 0,3 = **80 €** |
 
 ## Le taux d’évolution
-**(valeur finale − valeur initiale) ÷ valeur initiale × 100**.
-De 50 € à 60 € : (60 − 50) ÷ 50 × 100 = **+20 %**.
+= (valeur finale − valeur initiale) ÷ valeur initiale × 100
 
-> Un pourcentage ne veut rien dire sans savoir **de quoi** il est le pourcentage. « +50 % » sur un petit nombre peut être moins qu’« +5 % » sur un grand.`,
+= De 50 € à 60 € : (60 − 50) ÷ 50 × 100 = +20 %
+
+> Un pourcentage ne veut rien dire sans savoir **de quoi** il est le pourcentage : « +50 % » sur un petit nombre peut peser moins que « +5 % » sur un grand.`,
           },
           questions: [
             ['Que signifie 25 % ?', ['25 pour 100, soit 0,25', '25 unités', '25 fois plus', 'Un quart de 25'], 0, 'C’est une proportion rapportée à 100.'],
@@ -790,31 +886,41 @@ De 50 € à 60 € : (60 − 50) ÷ 50 × 100 = **+20 %**.
           axe: 'Organisation et gestion des données',
           lecon: {
             titre: 'Quand une grandeur en commande une autre',
-            cours: `Deux grandeurs sont **dépendantes** quand la valeur de l’une **détermine** celle de l’autre. Le prix payé dépend de la quantité achetée ; la distance parcourue dépend de la durée du trajet.
+            cours: `Quand la valeur d’une grandeur en détermine une autre, on peut la décrire de trois façons — et la lire sur un graphique.
 
-## Vocabulaire
-- La grandeur qu’on choisit est la **variable** ;
-- celle qui en découle est la grandeur **dépendante** ;
-- à chaque valeur de la variable correspond **une seule** valeur de la grandeur dépendante — c’est la première approche de la notion de **fonction**, formalisée en 3e.
+## Le vocabulaire
+| Le mot | Ce qu’il désigne |
+| La **variable** | La grandeur qu’on choisit |
+| La grandeur **dépendante** | Celle qui en découle |
+
+> À chaque valeur de la variable correspond **une seule** valeur de la grandeur dépendante. C’est la première approche de la notion de **fonction**, formalisée en 3e.
 
 ## Trois façons de décrire la dépendance
-**1. Une formule** : P = 2,50 × n (prix de n croissants à 2,50 €).
-**2. Un tableau de valeurs** : la première ligne donne la variable, la seconde la grandeur dépendante.
-**3. Un graphique** : la **variable en abscisse**, la grandeur dépendante en **ordonnée**.
+| La description | Sa forme |
+| Une **formule** | P = 2,50 × n |
+| Un **tableau de valeurs** | Variable en première ligne, grandeur dépendante en seconde |
+| Un **graphique** | Variable en **abscisse**, grandeur dépendante en **ordonnée** |
 
 ## Lire un graphique
-- Pour une valeur donnée de x, on monte jusqu’à la courbe puis on lit en ordonnée ;
-- pour retrouver x à partir d’une ordonnée, on fait le chemin inverse ;
-- une courbe **croissante** signifie que la grandeur augmente avec la variable ; **décroissante**, l’inverse ; un **palier** signifie qu’elle ne change pas.
+~ Partir de x en abscisse → monter jusqu’à la courbe → lire en ordonnée
+
+Et le chemin inverse pour retrouver x à partir d’une ordonnée.
+
+| L’allure | Ce qu’elle dit |
+| **Croissante** | La grandeur augmente avec la variable |
+| **Décroissante** | Elle diminue |
+| Un **palier** | Elle ne change pas |
 
 ## Dépendance n’est pas proportionnalité
-- Le prix d’un abonnement à 10 € par mois **plus** 5 € de frais fixes dépend du nombre de mois, sans être proportionnel.
-- L’aire d’un disque dépend du rayon, mais en R² : la courbe n’est pas une droite.
+| L’exemple | Dépendance | Proportionnalité |
+| Prix = 10 € par mois + 5 € de frais | oui | **non** |
+| Aire d’un disque en fonction de R | oui | **non** (en R²) |
+| Prix de n croissants à 2,50 € | oui | **oui** |
 
-> Toute proportionnalité est une dépendance ; l’inverse est faux. Le test reste le même : **la représentation passe-t-elle par l’origine en ligne droite ?**
+!> Toute proportionnalité est une dépendance ; **l’inverse est faux**. Le test reste le même : la représentation est-elle une **droite passant par l’origine** ?
 
 ## Utiliser un tableur
-Une colonne pour la variable, une colonne de formule pour la grandeur dépendante, et un graphique construit sur les deux : c’est la manière la plus rapide d’explorer une dépendance et d’en lire les valeurs remarquables.`,
+Une colonne pour la variable, une colonne de formule pour la grandeur dépendante, un graphique sur les deux : c’est la façon la plus rapide d’explorer une dépendance.`,
           },
           questions: [
             ['Que signifie que deux grandeurs sont dépendantes ?', ['La valeur de l’une détermine celle de l’autre', 'Elles sont toujours égales', 'Elles varient toujours dans le même sens', 'Elles sont proportionnelles'], 0, 'Le prix payé dépend de la quantité achetée.'],
@@ -835,34 +941,39 @@ Une colonne pour la variable, une colonne de formule pour la grandeur dépendant
           axe: 'Grandeurs et mesures',
           lecon: {
             titre: 'Des grandeurs fabriquées avec d’autres',
-            cours: `Certaines grandeurs se mesurent directement — longueur, masse, durée. D’autres sont **composées** : elles se calculent à partir de deux grandeurs simples.
+            cours: `Certaines grandeurs se mesurent. D’autres se fabriquent, en multipliant ou en divisant deux grandeurs simples.
 
 ## Les grandeurs produits
-Elles s’obtiennent en **multipliant** deux grandeurs.
-- **Aire** = longueur × longueur → m², cm², km²
-- **Volume** = longueur × longueur × longueur → m³, cm³
-- **Énergie** = puissance × durée → le **kilowattheure** (kW × h)
-- Le **kilomètre-passager**, la **personne-heure** de travail.
+Elles s’obtiennent en **multipliant**.
+
+| La grandeur | Son calcul | Son unité |
+| **Aire** | longueur × longueur | m², cm² |
+| **Volume** | longueur × longueur × longueur | m³, cm³ |
+| **Énergie** | puissance × durée | le **kilowattheure** |
+
+Le kilomètre-passager et la personne-heure de travail en sont aussi.
 
 ## Les grandeurs quotients
-Elles s’obtiennent en **divisant** une grandeur par une autre.
-- **Vitesse** = distance ÷ durée → m/s, km/h
-- **Masse volumique** = masse ÷ volume → g/cm³, kg/m³
-- **Débit** = volume ÷ durée → L/min, m³/s
-- **Prix au kilo** = prix ÷ masse → €/kg
-- **Densité de population** = habitants ÷ superficie → hab/km²
-- **Consommation** = volume ÷ distance → L/100 km
+Elles s’obtiennent en **divisant**.
+
+| La grandeur | Son calcul | Son unité |
+| **Vitesse** | distance ÷ durée | m/s, km/h |
+| **Masse volumique** | masse ÷ volume | g/cm³ |
+| **Débit** | volume ÷ durée | L/min |
+| **Prix au kilo** | prix ÷ masse | €/kg |
+| **Densité de population** | habitants ÷ superficie | hab/km² |
+| **Consommation** | volume ÷ distance | L/100 km |
 
 ## L’unité dit la formule
-C’est le point à retenir : l’**unité** d’une grandeur composée porte en elle son mode de calcul.
-- « km/h » se lit « kilomètres **par** heure » : c’est bien une **division** d’une distance par une durée ;
-- « kWh » est un **produit** d’une puissance par une durée ;
-- « g/cm³ » : une masse divisée par un volume.
+| L’unité | Ce qu’elle raconte |
+| **km/h** | Kilomètres **par** heure : une division |
+| **kWh** | Une puissance **multipliée** par une durée |
+| **g/cm³** | Une masse divisée par un volume |
 
-> Devant un énoncé, lire l’unité demandée indique **l’opération** à faire. C’est la meilleure vérification d’un résultat.
+> Devant un énoncé, lire l’unité **demandée** indique l’opération à faire. C’est la meilleure vérification d’un résultat qui soit.
 
 ## La cohérence des unités
-Avant tout calcul, les unités doivent être **compatibles** : une durée en heures avec une distance en kilomètres donne des km/h ; en mélangeant minutes et kilomètres, le résultat n’a pas de nom.`,
+!> Une durée en **heures** avec une distance en **kilomètres** donne des km/h. En mélangeant minutes et kilomètres, le résultat n’a **aucun nom** — et aucune valeur.`,
           },
           questions: [
             ['Qu’est-ce qu’une grandeur produit ?', ['Une grandeur obtenue en multipliant deux grandeurs', 'Une grandeur obtenue par division', 'Une grandeur mesurée directement', 'Une grandeur sans unité'], 0, 'L’aire et le volume en sont.'],
@@ -880,35 +991,46 @@ Avant tout calcul, les unités doivent être **compatibles** : une durée en heu
           axe: 'Grandeurs et mesures',
           lecon: {
             titre: 'Vitesse, débit, consommation : calculer et convertir',
-            cours: `## La vitesse moyenne
-**v = d ÷ t** — et les deux formules dérivées : **d = v × t** et **t = d ÷ v**.
+            cours: `Vitesse, débit, consommation : trois grandeurs quotients, une même méthode, et une conversion à ne pas rater.
 
-Un triangle mnémotechnique aide : d en haut, v et t en bas ; on masque la grandeur cherchée pour lire l’opération.
+## La vitesse moyenne
+= v = d ÷ t · d = v × t · t = d ÷ v
+
+Un triangle mnémotechnique aide : **d** en haut, **v** et **t** en bas ; on masque la grandeur cherchée pour lire l’opération.
 
 ## Les conversions
-- **km/h → m/s** : diviser par **3,6** (36 km/h = 10 m/s) ;
-- **m/s → km/h** : multiplier par **3,6**.
+| Le sens | L’opération | Exemple |
+| **km/h → m/s** | ÷ 3,6 | 36 km/h = **10 m/s** |
+| **m/s → km/h** | × 3,6 | 20 m/s = **72 km/h** |
 
-Et pour les durées : 1 h = 60 min = 3 600 s. **1 h 30 min = 1,5 h**, jamais 1,30 h — c’est l’erreur la plus fréquente du chapitre.
+= 1 h = 60 min = 3 600 s
 
-## Vitesse moyenne et vitesse instantanée
-La **moyenne** se calcule sur l’ensemble du trajet ; l’**instantanée** est celle d’un instant donné, celle du compteur. Une vitesse moyenne de 90 km/h ne dit rien des vitesses réellement atteintes.
+!> **1 h 30 min = 1,5 h, jamais 1,30 h.** C’est l’erreur la plus fréquente du chapitre : les durées ne sont pas décimales.
 
-⚠️ La vitesse moyenne d’un aller-retour n’est **pas** la moyenne des deux vitesses : il faut repasser par la **distance totale** et la **durée totale**.
+## Moyenne et instantanée
+| La vitesse | Ce qu’elle mesure |
+| **Moyenne** | Sur l’ensemble du trajet |
+| **Instantanée** | À un instant donné — celle du compteur |
+
+!> **La vitesse moyenne d’un aller-retour n’est pas la moyenne des deux vitesses.** Il faut repasser par la **distance totale** et la **durée totale**.
 
 ## Le débit
-**débit = volume ÷ durée**, en L/min ou m³/h. On en déduit le volume : V = débit × durée.
-Un robinet à 12 L/min remplit une baignoire de 150 L en 150 ÷ 12 = **12,5 min**.
+= débit = volume ÷ durée
+
+~ Baignoire de 150 L → robinet à 12 L/min → 150 ÷ 12 = 12,5 min
 
 ## La consommation
-Exprimée en **L/100 km** : consommation = (volume consommé ÷ distance) × 100.
-Une voiture qui consomme 6,5 L/100 km utilise 6,5 × 4,2 = **27,3 L** pour 420 km.
+= consommation = (volume consommé ÷ distance) × 100
+
+= 6,5 L/100 km sur 420 km : 6,5 × 4,2 = 27,3 L
 
 ## La méthode générale
-1. Repérer l’unité demandée — elle donne l’opération ;
+1. Repérer l’**unité demandée** — elle donne l’opération ;
 2. convertir les données dans des unités **compatibles** ;
 3. calculer ;
-4. **vérifier l’ordre de grandeur** : un piéton à 300 km/h ou une baignoire remplie en 2 secondes signalent une erreur.`,
+4. **vérifier l’ordre de grandeur**.
+
+> Un piéton à 300 km/h ou une baignoire remplie en deux secondes : le résultat se réfute tout seul.`,
           },
           questions: [
             ['Quelle est la formule de la vitesse moyenne ?', ['v = d ÷ t', 'v = d × t', 'v = t ÷ d', 'v = d + t'], 0, 'On en déduit d = v × t et t = d ÷ v.'],
@@ -929,30 +1051,43 @@ Une voiture qui consomme 6,5 L/100 km utilise 6,5 × 4,2 = **27,3 L** pour 420 k
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Trois coordonnées pour situer un point dans l’espace',
-            cours: `## Le pavé droit
-Un **pavé droit** (ou parallélépipède rectangle) a **6 faces** rectangulaires, **12 arêtes** et **8 sommets**. Le **cube** en est le cas particulier où toutes les arêtes sont égales.
+            cours: `Dans le plan, deux coordonnées suffisent. Dans l’espace, il en faut trois.
 
-## Se repérer sur ses faces
-On choisit un sommet comme **origine** et trois arêtes issues de ce sommet comme **axes**. Chaque point du pavé est alors repéré par **trois coordonnées** — souvent notées (x ; y ; z) : une pour la longueur, une pour la largeur, une pour la hauteur.
+## Le pavé droit
+| Le solide | Faces | Arêtes | Sommets |
+| **Pavé droit** | 6 rectangles | 12 | 8 |
+| **Cube** | 6 carrés | 12 | 8 |
 
-Le sommet origine a pour coordonnées (0 ; 0 ; 0) ; le sommet opposé, (L ; l ; h).
+Le cube est le cas particulier où toutes les arêtes sont égales.
 
-> C’est le même principe qu’un repère du plan, avec un axe de plus. Deux coordonnées situent un point sur une **face**, trois le situent dans l’**espace**.
+## Se repérer
+On choisit un sommet comme **origine** et trois arêtes issues de ce sommet comme **axes**.
 
-## Lire un dessin en perspective cavalière
-Le pavé se dessine en **perspective cavalière** : la face avant est en vraie grandeur, les **fuyantes** sont parallèles entre elles, et les arêtes **cachées** se tracent en **pointillés**.
+= Origine (0 ; 0 ; 0) → sommet opposé (L ; l ; h)
 
-Conséquence à retenir : ce qui est **parallèle dans la réalité** reste **parallèle sur le dessin**, mais les **angles droits** et les **longueurs** des fuyantes ne sont **pas conservés**. Une face carrée peut apparaître comme un parallélogramme.
+> C’est le principe du repère du plan, avec un axe de plus. **Deux** coordonnées situent un point sur une **face** ; **trois** le situent dans l’**espace**.
+
+## Lire une perspective cavalière
+| Ce qui est conservé | Ce qui ne l’est pas |
+| Le **parallélisme** | Les **angles droits** (sauf face avant) |
+| L’**alignement** | Les **longueurs** des fuyantes |
+
+!> Une face **carrée** peut apparaître comme un **parallélogramme**. Les arêtes cachées se tracent en **pointillés** ; la face avant, en vraie grandeur.
 
 ## Positions relatives dans l’espace
-- Deux droites peuvent être **parallèles**, **sécantes**, ou **non coplanaires** (elles ne sont pas dans un même plan et ne se coupent jamais) — ce dernier cas n’existe pas dans le plan.
-- Une droite et un plan : la droite est **parallèle** au plan, **sécante** en un point, ou **contenue** dans le plan.
-- Deux plans sont **parallèles** ou **sécants** selon une **droite**.
+| Les objets | Leurs positions possibles |
+| Deux **droites** | Parallèles · sécantes · **non coplanaires** |
+| Une **droite** et un **plan** | Parallèle · sécante en un point · contenue dans le plan |
+| Deux **plans** | Parallèles · sécants selon une **droite** |
 
-## Calculs
-- **Volume** = L × l × h
-- **Aire totale** = somme des aires des 6 faces = 2(L×l + L×h + l×h)
-- La **diagonale d’une face** se calcule par **Pythagore** dans le rectangle correspondant.`,
+!> Le cas **non coplanaire** — deux droites qui ne se coupent jamais sans être parallèles — **n’existe pas dans le plan**. C’est la nouveauté de la géométrie dans l’espace.
+
+## Les calculs
+= Volume = L × l × h
+
+= Aire totale = 2(L×l + L×h + l×h)
+
+La **diagonale d’une face** se calcule par **Pythagore** dans le rectangle correspondant.`,
           },
           questions: [
             ['Combien de faces, d’arêtes et de sommets a un pavé droit ?', ['6 faces, 12 arêtes, 8 sommets', '4 faces, 8 arêtes, 6 sommets', '8 faces, 12 arêtes, 6 sommets', '6 faces, 8 arêtes, 12 sommets'], 0, 'Le cube en est le cas particulier.'],
@@ -970,33 +1105,44 @@ Conséquence à retenir : ce qui est **parallèle dans la réalité** reste **pa
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Deux solides pointus, une même formule',
-            cours: `## La pyramide
-Elle a une **base polygonale** et des **faces latérales triangulaires** qui se rejoignent en un point : le **sommet**.
-- La **hauteur** est le segment issu du sommet, **perpendiculaire** à la base.
-- Une pyramide est **régulière** quand sa base est un polygone régulier et que son sommet se projette au centre de la base.
-- Le **tétraèdre** est une pyramide à base triangulaire : quatre faces, toutes des triangles.
+            cours: `Pyramide et cône partagent une même formule de volume — et un même tiers oublié.
+
+## La pyramide
+| Ce qu’elle a | Sa nature |
+| Une **base** | Un polygone |
+| Des **faces latérales** | Des triangles qui se rejoignent au **sommet** |
+| Une **hauteur** | Du sommet, **perpendiculaire** à la base |
+
+Une pyramide est **régulière** quand sa base est un polygone régulier et que son sommet se projette au centre de la base. Le **tétraèdre** est une pyramide à base triangulaire : quatre faces, toutes des triangles.
 
 ## Le cône de révolution
-Il s’obtient en faisant tourner un **triangle rectangle** autour de l’un de ses côtés de l’angle droit. Sa base est un **disque**, sa surface latérale est engendrée par l’hypoténuse, appelée **génératrice**.
+Il s’obtient en faisant tourner un **triangle rectangle** autour d’un côté de l’angle droit. Sa base est un **disque** ; l’hypoténuse, qui engendre la surface latérale, s’appelle la **génératrice**.
 
-## La formule du volume, commune aux deux
+## La formule commune
+= V = (1/3) × aire de la base × hauteur
 
-**V = (1/3) × aire de la base × hauteur**
+| Le solide | Son volume |
+| **Pyramide** | (1/3) × aire du polygone × h |
+| **Cône** | (1/3) × π × R² × h |
 
-- Pyramide : V = (1/3) × aire du polygone × h
-- Cône : V = (1/3) × π × R² × h
+!> **Le tiers est le facteur que les copies oublient le plus.** Une pyramide occupe exactement le tiers du prisme de même base et de même hauteur — cela se vérifie en versant du sable.
 
-> **Le tiers est le facteur que les copies oublient le plus.** Une pyramide occupe exactement le tiers du prisme de même base et de même hauteur — on peut le vérifier en versant du sable.
+!> La **hauteur** est perpendiculaire à la base ; ce n’est **jamais** l’arête latérale, qui est plus longue.
 
 ## Les patrons
-- **Pyramide** : la base, plus autant de triangles que la base a de côtés.
-- **Cône** : un disque et un **secteur circulaire** — pas un triangle. Le rayon du secteur est la génératrice, et sa longueur d’arc est le périmètre de la base.
+| Le solide | Son patron |
+| **Pyramide** | La base, plus autant de triangles que de côtés |
+| **Cône** | Un disque et un **secteur circulaire** — pas un triangle |
+
+Pour le cône, le rayon du secteur est la **génératrice**, et sa longueur d’arc est le **périmètre de la base**.
 
 ## Les sections planes
-Un plan **parallèle à la base** coupe une pyramide selon un polygone **de même forme** que la base, et un cône selon un **disque**. Dans les deux cas, la section est une **réduction** : longueurs × k, aires × k², volumes × k³.
+Un plan **parallèle à la base** coupe une pyramide selon un polygone de même forme, et un cône selon un **disque**.
+
+~ La section est une réduction : longueurs × k → aires × k² → volumes × k³
 
 ## Les unités
-Un volume s’exprime en unités **cubes**. 1 L = 1 dm³ ; 1 cm³ = 1 mL ; 1 m³ = 1 000 L.`,
+= 1 L = 1 dm³ · 1 cm³ = 1 mL · 1 m³ = 1 000 L`,
           },
           questions: [
             ['Quelle est la formule du volume d’une pyramide ?', ['(1/3) × aire de la base × hauteur', 'Aire de la base × hauteur', '(1/2) × aire de la base × hauteur', 'Périmètre de la base × hauteur'], 0, 'La même formule vaut pour le cône.'],
@@ -1014,37 +1160,36 @@ Un volume s’exprime en unités **cubes**. 1 L = 1 dm³ ; 1 cm³ = 1 mL ; 1 m³
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Les longueurs, les aires et les volumes ne suivent pas la même règle',
-            cours: `Agrandir ou réduire une figure, c’est multiplier **toutes** ses longueurs par un même nombre **k**, appelé **rapport** (ou coefficient) d’agrandissement-réduction.
-- **k > 1** : agrandissement ;
-- **k < 1** : réduction ;
-- **k = 1** : la figure ne change pas.
+            cours: `Agrandir une figure multiplie ses longueurs par k. Mais ses aires par k², et ses volumes par k³.
+
+## Le rapport k
+| La valeur de k | Ce qui se passe |
+| **k > 1** | Agrandissement |
+| **k < 1** | Réduction |
+| **k = 1** | La figure ne change pas |
 
 ## Ce qui est conservé
-- la **forme** ;
-- les **angles**, qui gardent exactement la même mesure ;
-- le **parallélisme** et l’**alignement** ;
-- les **rapports** entre longueurs à l’intérieur de la figure.
+| Conservé | Multiplié |
+| La **forme** | Les longueurs, par **k** |
+| Les **angles** — même mesure exacte | Les aires, par **k²** |
+| Le **parallélisme** et l’**alignement** | Les volumes, par **k³** |
+| Les **rapports** internes | |
 
-## Ce qui est multiplié
-| Grandeur | Multipliée par |
-|---|---|
-| Longueurs (côtés, périmètre, rayon, hauteur) | **k** |
-| Aires (surface, aire latérale, aire totale) | **k²** |
-| Volumes | **k³** |
-
-> C’est la règle centrale du chapitre, et la source d’erreur numéro un. Un agrandissement de rapport 3 triple les longueurs, multiplie l’aire par **9** et le volume par **27**.
+!> **C’est la source d’erreur numéro un du chapitre.** Un agrandissement de rapport 3 triple les longueurs, multiplie l’aire par **9** et le volume par **27**.
 
 ## Un exemple complet
 Une maquette au 1/50 d’un immeuble :
-- une hauteur de 20 cm sur la maquette correspond à 20 × 50 = 1 000 cm = **10 m** en réalité ;
-- une aire de 4 cm² correspond à 4 × 50² = 4 × 2 500 = **10 000 cm²** = 1 m² ;
-- un volume de 2 cm³ correspond à 2 × 50³ = **250 000 cm³** = 0,25 m³.
 
-## Où on le rencontre
-Les **échelles** (cartes, plans, maquettes), les **sections** de solides par un plan parallèle à la base, la **configuration de Thalès**, les **triangles semblables**, l’**homothétie** (vue en 3e).
+| Sur la maquette | En réalité | Le calcul |
+| Hauteur 20 cm | **10 m** | 20 × 50 = 1 000 cm |
+| Aire 4 cm² | **1 m²** | 4 × 50² = 10 000 cm² |
+| Volume 2 cm³ | **0,25 m³** | 2 × 50³ = 250 000 cm³ |
 
 ## Reconnaître un agrandissement
-Deux figures sont un agrandissement l’une de l’autre si le rapport de deux longueurs correspondantes est **le même pour toutes les paires** de côtés.`,
+Deux figures sont un agrandissement l’une de l’autre si le rapport de deux longueurs correspondantes est **le même pour toutes les paires** de côtés.
+
+## Où on le rencontre
+Les **échelles** (cartes, plans, maquettes), les **sections** de solides, la configuration de **Thalès**, les **triangles semblables**, et l’**homothétie** vue en 3e.`,
           },
           questions: [
             ['Que multiplie un agrandissement de rapport k ?', ['Toutes les longueurs de la figure', 'Seulement la base', 'Seulement les aires', 'Les angles'], 0, 'Les angles, eux, sont conservés.'],
@@ -1062,36 +1207,41 @@ Deux figures sont un agrandissement l’une de l’autre si le rapport de deux l
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Même taille, ou seulement même forme',
-            cours: `## Les triangles égaux (ou isométriques)
-Deux triangles sont **égaux** quand ils ont **exactement les mêmes mesures** : leurs côtés sont deux à deux de même longueur, et leurs angles deux à deux de même mesure. L’un se superpose exactement à l’autre, éventuellement après un retournement.
+            cours: `Deux triangles égaux ont la même taille. Deux triangles semblables n’ont que la même forme.
+
+## Les triangles égaux (ou isométriques)
+Leurs côtés sont deux à deux de même longueur, et leurs angles deux à deux de même mesure. L’un se superpose exactement à l’autre, éventuellement après retournement.
 
 **Trois cas d’égalité** suffisent à le démontrer :
 1. **Trois côtés** égaux deux à deux ;
-2. **Deux côtés et l’angle compris** entre eux ;
-3. **Un côté et les deux angles adjacents**.
+2. **deux côtés et l’angle compris** entre eux ;
+3. **un côté et les deux angles adjacents**.
 
 ## Les triangles semblables
-Deux triangles sont **semblables** quand ils ont **la même forme**, sans forcément la même taille : leurs angles sont deux à deux égaux, et leurs côtés sont **proportionnels**.
+Même **forme**, sans forcément la même taille : angles deux à deux égaux, côtés **proportionnels**.
 
-**Le critère à retenir : deux angles égaux suffisent.** Comme la somme des angles vaut 180°, le troisième suit automatiquement.
+> **Le critère à retenir : deux angles égaux suffisent.** Comme la somme des angles vaut 180°, le troisième suit tout seul.
 
 ## Le rapport de similitude
-Si ABC et DEF sont semblables (A↔D, B↔E, C↔F) :
+= AB/DE = AC/DF = BC/EF = k
 
-**AB/DE = AC/DF = BC/EF = k**
+| La grandeur | Multipliée par |
+| Les longueurs | **k** |
+| Les aires | **k²** |
 
-- longueurs × **k**, aires × **k²** ;
-- deux triangles **égaux** sont des triangles semblables de rapport **k = 1**.
+Deux triangles **égaux** sont des triangles semblables de rapport **k = 1**.
 
-> L’**ordre des lettres** n’est pas décoratif : c’est lui qui dit quel côté correspond à quel autre. Écrire « ABC semblable à DEF » engage les trois correspondances.
+!> **L’ordre des lettres n’est pas décoratif.** Écrire « ABC semblable à DEF » engage les trois correspondances A↔D, B↔E, C↔F. Les intervertir donne des quotients faux.
 
 ## À quoi ça sert
-- Calculer une **longueur inaccessible** : la hauteur d’un arbre par son ombre, la largeur d’une rivière.
-- **Démontrer** une égalité de rapports.
-- La **configuration de Thalès** produit toujours deux triangles semblables : les deux chapitres décrivent la même situation.
+| L’usage | L’exemple |
+| Calculer une **longueur inaccessible** | La hauteur d’un arbre par son ombre |
+| **Démontrer** une égalité de rapports | Dans un exercice de Thalès |
+
+> La configuration de **Thalès** produit toujours deux triangles semblables : les deux chapitres décrivent la même situation, avec deux vocabulaires.
 
 ## La rédaction type
-« Dans les triangles ABC et DEF : l’angle A = l’angle D et l’angle B = l’angle E. Donc ABC et DEF sont semblables. Par conséquent AB/DE = AC/DF = BC/EF. »`,
+« Dans les triangles ABC et DEF : angle A = angle D et angle B = angle E. Donc ABC et DEF sont semblables. Par conséquent AB/DE = AC/DF = BC/EF. »`,
           },
           questions: [
             ['Quand deux triangles sont-ils égaux ?', ['Quand leurs côtés et leurs angles sont deux à deux de même mesure', 'Quand ils ont la même aire', 'Quand ils ont un angle commun', 'Quand ils sont tous deux rectangles'], 0, 'L’un se superpose exactement à l’autre.'],
@@ -1109,30 +1259,36 @@ Si ABC et DEF sont semblables (A↔D, B↔E, C↔F) :
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Des parallèles, des quotients égaux',
-            cours: `## La configuration
-Deux droites sécantes en **A**, deux points **B** et **M** sur la première, **C** et **N** sur la seconde. Si **(BC) et (MN) sont parallèles**, alors :
+            cours: `Deux droites parallèles coupant deux sécantes : les longueurs se retrouvent dans le même rapport.
 
-**AM / AB = AN / AC = MN / BC**
+## La configuration
+Deux droites sécantes en **A** ; **B** et **M** sur la première, **C** et **N** sur la seconde. Si **(BC) // (MN)**, alors :
 
-Deux figures possibles, et le théorème est le même dans les deux :
-- le **triangle emboîté** : M et N du même côté de A ;
-- le **papillon** : M et N de l’autre côté de A.
+= AM / AB = AN / AC = MN / BC
+
+| La figure | Où sont M et N |
+| Le **triangle emboîté** | Du **même côté** de A |
+| Le **papillon** | De part et d’autre de A |
+
+Le théorème est le même dans les deux cas.
 
 ## La méthode en trois temps
-1. **Vérifier les hypothèses** : les points sont alignés, les droites sont parallèles.
-2. **Écrire les trois quotients** dans le bon ordre — chacun commence par le sommet commun A.
-3. **Résoudre par le produit en croix**, en n’utilisant que les deux quotients dont on connaît trois longueurs.
+1. **Vérifier les hypothèses** : points alignés, droites parallèles ;
+2. **écrire les trois quotients** dans le bon ordre — chacun commence par le sommet commun **A** ;
+3. **résoudre par le produit en croix**, avec les deux quotients dont on connaît trois longueurs.
 
-> L’erreur classique consiste à mélanger un « petit » et un « grand » segment dans le même quotient. Écrire systématiquement **petit sur grand** évite la moitié des fautes.
+!> L’erreur classique est de mélanger un « petit » et un « grand » segment dans le même quotient. Écrire systématiquement **petit sur grand** évite la moitié des fautes.
 
 ## La réciproque : démontrer un parallélisme
-Si A, M, B et A, N, C sont alignés **dans le même ordre**, et si **AM/AB = AN/AC**, alors **(MN) et (BC) sont parallèles**.
+Si A, M, B et A, N, C sont alignés **dans le même ordre**, et si AM/AB = AN/AC, alors **(MN) // (BC)**.
 
 ## La contraposée : démontrer un NON-parallélisme
-Si les deux quotients sont **différents**, alors les droites **ne sont pas parallèles**. C’est la question type de fin d’exercice : on calcule les deux quotients, on les compare, on conclut.
+~ Calculer les deux quotients → Les comparer → S’ils diffèrent, les droites ne sont pas parallèles
+
+C’est la question type de fin d’exercice.
 
 ## Le lien avec les agrandissements
-Le rapport commun des quotients est un **coefficient de réduction** : les longueurs y sont dans le rapport k, les aires dans le rapport k².
+Le rapport commun est un **coefficient de réduction** : les longueurs y sont dans le rapport k, les aires dans le rapport k².
 
 ## La rédaction type
 « Les points A, M, B d’une part, A, N, C d’autre part sont alignés, et (MN) // (BC). D’après le théorème de Thalès : AM/AB = AN/AC = MN/BC. »`,
@@ -1153,35 +1309,43 @@ Le rapport commun des quotients est un **coefficient de réduction** : les longu
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Trois longueurs, ou deux longueurs et un angle',
-            cours: `## Le théorème de Pythagore
-Dans un triangle **rectangle**, le carré de l’**hypoténuse** est égal à la somme des carrés des deux autres côtés.
+            cours: `Pythagore relie trois longueurs. Le cosinus relie deux longueurs et un angle. Un exercice les enchaîne souvent.
 
-Si ABC est rectangle en A : **BC² = AB² + AC²**
+## Le théorème de Pythagore
+Dans un triangle **rectangle en A** :
 
-L’**hypoténuse** est le côté opposé à l’angle droit, et c’est toujours le plus long.
+= BC² = AB² + AC²
 
-**Calculer l’hypoténuse** : BC = √(AB² + AC²).
-**Calculer un autre côté** : AB² = BC² − AC², puis AB = √(BC² − AC²) — on **soustrait**, et l’ordre compte.
+L’**hypoténuse** est le côté opposé à l’angle droit, et c’est **toujours le plus long**.
+
+| On cherche | La formule |
+| L’**hypoténuse** | BC = √(AB² + AC²) — on **additionne** |
+| Un **autre côté** | AB = √(BC² − AC²) — on **soustrait** |
+
+!> Dans le second cas, **l’ordre compte** : c’est toujours le carré de l’hypoténuse **moins** l’autre, jamais l’inverse.
 
 ## La réciproque
-Si dans un triangle le carré du plus grand côté **est égal** à la somme des carrés des deux autres, alors le triangle **est rectangle**, et l’angle droit est opposé au plus grand côté.
+Si le carré du plus grand côté **est égal** à la somme des carrés des deux autres, alors le triangle **est rectangle**, et l’angle droit est opposé au plus grand côté.
 
 ## La contraposée
-Si cette égalité **n’est pas vérifiée**, le triangle **n’est pas rectangle**. Méthode : on calcule séparément le carré du plus grand côté, puis la somme des carrés des deux autres, et on **compare**.
+~ Calculer le carré du plus grand côté → Calculer la somme des carrés des deux autres → Comparer
+
+Si l’égalité n’est pas vérifiée, le triangle **n’est pas rectangle**.
 
 ## Le cosinus d’un angle aigu
-Il relie un **angle** à deux **longueurs**, ce que Pythagore ne sait pas faire :
+= cos(angle) = côté adjacent ÷ hypoténuse
 
-**cos(angle) = côté adjacent ÷ hypoténuse**
-
-- Pour trouver une **longueur** : on isole l’inconnue.
-- Pour trouver un **angle** : on calcule le quotient, puis on emploie la touche **cos⁻¹** de la calculatrice, réglée en **degrés (DEG)**.
+| On cherche | La démarche |
+| Une **longueur** | On isole l’inconnue |
+| Un **angle** | On calcule le quotient, puis la touche **cos⁻¹**, calculatrice en **degrés (DEG)** |
 
 ## Les valeurs à connaître
-cos 0° = 1 ; cos 60° = 0,5 ; cos 90° = 0.
-Le cosinus d’un angle aigu est **toujours compris entre 0 et 1** : un résultat supérieur à 1 signale une erreur.
+| L’angle | Son cosinus |
+| 0° | 1 |
+| 60° | 0,5 |
+| 90° | 0 |
 
-> Pythagore relie **trois longueurs** ; le cosinus relie **deux longueurs et un angle**. Un exercice les enchaîne souvent : Pythagore pour trouver un côté, le cosinus pour trouver l’angle.`,
+!> Le cosinus d’un angle aigu est **toujours compris entre 0 et 1**. Un résultat supérieur à 1 signale une erreur de calcul, pas un angle exotique.`,
           },
           questions: [
             ['Que dit le théorème de Pythagore ?', ['Le carré de l’hypoténuse égale la somme des carrés des deux autres côtés', 'La somme des angles vaut 180°', 'Les côtés sont proportionnels', 'L’aire vaut base × hauteur ÷ 2'], 0, 'Il ne s’applique qu’au triangle rectangle.'],
@@ -1199,38 +1363,39 @@ Le cosinus d’un angle aigu est **toujours compris entre 0 et 1** : un résulta
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Rectangle, losange, carré : qui a quoi',
-            cours: `## Le parallélogramme
-Un quadrilatère dont les côtés opposés sont **parallèles deux à deux**. Ses propriétés :
-- les **côtés opposés** sont de même longueur ;
-- les **angles opposés** sont de même mesure ;
-- les **diagonales se coupent en leur milieu** ;
-- il a un **centre de symétrie** : le point d’intersection des diagonales.
+            cours: `Un parallélogramme, trois façons de le rendre particulier — et des diagonales qui suffisent à les distinguer.
+
+## Le parallélogramme
+Un quadrilatère dont les côtés opposés sont **parallèles deux à deux**.
+
+| Sa propriété | Le détail |
+| Les **côtés opposés** | Même longueur |
+| Les **angles opposés** | Même mesure |
+| Les **diagonales** | Elles se coupent **en leur milieu** |
+| Le **centre de symétrie** | Le point d’intersection des diagonales |
 
 ## Les trois cas particuliers
-**Le rectangle** = un parallélogramme qui a **un angle droit**.
-→ Il en a donc quatre, et ses **diagonales sont de même longueur**.
-
-**Le losange** = un parallélogramme qui a **deux côtés consécutifs de même longueur**.
-→ Ses quatre côtés sont égaux, et ses **diagonales sont perpendiculaires** — elles sont aussi ses axes de symétrie.
-
-**Le carré** = à la fois **rectangle et losange**.
-→ Il cumule **toutes** les propriétés : quatre côtés égaux, quatre angles droits, diagonales de même longueur, perpendiculaires, et se coupant en leur milieu.
+| La figure | Ce qu’on ajoute | Ce qu’on obtient |
+| **Rectangle** | Un **angle droit** | Quatre angles droits, diagonales de **même longueur** |
+| **Losange** | Deux côtés consécutifs **égaux** | Quatre côtés égaux, diagonales **perpendiculaires** |
+| **Carré** | Rectangle **et** losange | Toutes les propriétés des deux |
 
 ## Le tableau des diagonales
-| Figure | Se coupent au milieu | Même longueur | Perpendiculaires |
-|---|---|---|---|
+| La figure | Milieu commun | Même longueur | Perpendiculaires |
 | Parallélogramme | oui | non | non |
-| Rectangle | oui | **oui** | non |
-| Losange | oui | non | **oui** |
-| Carré | oui | **oui** | **oui** |
+| **Rectangle** | oui | **oui** | non |
+| **Losange** | oui | non | **oui** |
+| **Carré** | oui | **oui** | **oui** |
 
-> Les **diagonales** sont l’outil de démonstration le plus efficace du chapitre : leurs trois propriétés suffisent à distinguer les quatre figures.
+> Les diagonales sont l’outil de démonstration le plus efficace du chapitre : leurs trois propriétés suffisent à distinguer les quatre figures.
 
 ## Les axes de symétrie
-Parallélogramme : **aucun** (mais un centre de symétrie). Rectangle : **2** (les médiatrices des côtés). Losange : **2** (ses diagonales). Carré : **4**.
+= Parallélogramme 0 · Rectangle 2 · Losange 2 · Carré 4
+
+!> Le parallélogramme quelconque a un **centre** de symétrie mais **aucun axe**.
 
 ## Rédiger une démonstration
-On part d’une propriété connue et on cite le théorème : « Les diagonales de ABCD se coupent en leur milieu **et** ont la même longueur, donc ABCD est un rectangle. »`,
+« Les diagonales de ABCD se coupent en leur milieu **et** ont la même longueur, **donc** ABCD est un rectangle. »`,
           },
           questions: [
             ['Que peut-on dire des diagonales d’un parallélogramme ?', ['Elles se coupent en leur milieu', 'Elles sont de même longueur', 'Elles sont perpendiculaires', 'Elles sont parallèles'], 0, 'Les autres propriétés distinguent ses cas particuliers.'],
@@ -1248,36 +1413,44 @@ On part d’une propriété connue et on cite le théorème : « Les diagonales 
           axe: 'Espace et géométrie',
           lecon: {
             titre: 'Glisser une figure sans la tourner',
-            cours: `Une **translation** fait **glisser** une figure entière dans une **direction** donnée, d’une certaine **longueur**, et dans un **sens** précis. Ces trois informations définissent la translation ; on les résume par une **flèche**.
+            cours: `Une translation fait glisser une figure. Elle ne la tourne pas, et surtout elle ne la retourne pas.
+
+## Ce qui définit une translation
+~ Une direction → un sens → une longueur
+
+Ces trois informations se résument par une **flèche**.
 
 ## Construire l’image d’un point
-L’image M′ d’un point M par la translation qui transforme A en B est le point tel que **ABM′M soit un parallélogramme** — autrement dit, on reporte le déplacement de A vers B à partir de M.
+L’image M′ d’un point M par la translation qui transforme A en B est le point tel que **ABM′M soit un parallélogramme**.
 
-Concrètement : même direction, même sens, même longueur.
+> Concrètement : on reporte le déplacement de A vers B à partir de M — même direction, même sens, même longueur.
 
 ## Ce que la translation conserve
 Elle conserve **tout**, sauf la position :
-- les **longueurs** ;
-- les **angles** ;
-- les **aires** et les **périmètres** ;
-- l’**alignement**, le **parallélisme**, les **milieux** ;
-- l’**orientation** de la figure — c’est ce qui la distingue de la symétrie.
 
-Une figure et son image par translation sont donc **superposables sans retournement**.
+| Elle conserve |
+| Les **longueurs** |
+| Les **angles** |
+| Les **aires** et les **périmètres** |
+| L’**alignement**, le **parallélisme**, les **milieux** |
+| L’**orientation** de la figure |
 
-## Comparer avec les autres transformations
-| Transformation | Définie par | Conserve les longueurs | Retourne la figure |
-|---|---|---|---|
-| **Translation** | une direction, un sens, une longueur | oui | non |
-| **Symétrie axiale** | un axe | oui | **oui** |
-| **Symétrie centrale** | un centre | oui | oui (demi-tour) |
-| **Rotation** | un centre et un angle | oui | non |
+!> C’est l’**orientation** qui la distingue des symétries : une figure et son image par translation sont superposables **sans retournement**.
+
+## Comparer les transformations
+| La transformation | Définie par | Retourne la figure |
+| **Translation** | Une direction, un sens, une longueur | **non** |
+| **Symétrie axiale** | Un axe | **oui** |
+| **Symétrie centrale** | Un centre | oui (demi-tour) |
+| **Rotation** | Un centre et un angle | non |
+
+Les quatre conservent les longueurs.
 
 ## Enchaîner deux translations
-Deux translations successives équivalent à **une seule** translation : les deux déplacements s’ajoutent.
+Deux translations successives équivalent à **une seule** : les deux déplacements s’ajoutent.
 
 ## Où on la rencontre
-Les **frises** et les **pavages**, qui se construisent par répétition d’un motif translaté ; les mosaïques ; les dessins d’Escher. C’est aussi la première approche des **vecteurs**, étudiés au lycée.`,
+Les **frises** et les **pavages**, construits par répétition d’un motif translaté ; les mosaïques ; les dessins d’Escher. C’est aussi la première approche des **vecteurs**, étudiés au lycée.`,
           },
           questions: [
             ['Quelles informations définissent une translation ?', ['Une direction, un sens et une longueur', 'Un centre et un angle', 'Un axe seulement', 'Un rapport de réduction'], 0, 'On les résume par une flèche.'],
@@ -1298,35 +1471,44 @@ Les **frises** et les **pavages**, qui se construisent par répétition d’un m
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: '« Les trois quarts de » veut dire « multiplier par 3/4 »',
-            cours: `Prendre une **fraction d’une quantité**, c’est **multiplier** cette quantité par la fraction. Le mot « **de** » se traduit toujours par le signe **×**.
+            cours: `Le mot « de » se traduit toujours par le signe ×. Tout le chapitre en découle.
 
-Les trois quarts de 60 : 60 × 3/4 = 180/4 = **45**.
+## Prendre une fraction d’une quantité
+= Les trois quarts de 60 = 60 × 3/4 = 45
 
 ## Deux méthodes équivalentes
-**1. Diviser puis multiplier** — la plus sûre mentalement :
-60 ÷ 4 = 15, puis 15 × 3 = **45**.
+| La méthode | Sur 60 × 3/4 |
+| **Diviser puis multiplier** | 60 ÷ 4 = 15, puis 15 × 3 = **45** |
+| **Multiplier puis diviser** | 60 × 3 = 180, puis 180 ÷ 4 = **45** |
 
-**2. Multiplier puis diviser** :
-60 × 3 = 180, puis 180 ÷ 4 = **45**.
-
-On choisit l’ordre qui donne les calculs les plus simples : si la division tombe juste, on commence par elle.
+> On choisit l’ordre qui donne les calculs les plus simples : si la division tombe juste, on commence par elle.
 
 ## Le lien avec les pourcentages
-Un pourcentage **est** une fraction de dénominateur 100 :
-- 25 % de 80 = 80 × 25/100 = 80 × 0,25 = **20**
-- 50 % = 1/2, 25 % = 1/4, 75 % = 3/4, 10 % = 1/10, 20 % = 1/5.
+Un pourcentage **est** une fraction de dénominateur 100.
+
+| Le pourcentage | La fraction |
+| 50 % | 1/2 |
+| 25 % | 1/4 |
+| 75 % | 3/4 |
+| 10 % | 1/10 |
+| 20 % | 1/5 |
+
+= 25 % de 80 = 80 × 0,25 = 20
 
 ## Fraction d’une fraction
-On multiplie les deux fractions : la moitié des trois quarts = 1/2 × 3/4 = **3/8**.
+On multiplie les deux fractions.
+
+= La moitié des trois quarts = 1/2 × 3/4 = 3/8
 
 ## Retrouver le tout
-Si 45 représente les trois quarts d’un nombre, on **divise** par la fraction :
-45 ÷ 3/4 = 45 × 4/3 = **60**.
+On **divise** par la fraction — c’est-à-dire qu’on multiplie par son inverse.
 
-> Prendre une fraction, c’est multiplier ; retrouver le tout, c’est diviser. Une erreur de sens se repère à la vraisemblance : la partie doit être **plus petite** que le tout quand la fraction est inférieure à 1.
+= 45 ÷ 3/4 = 45 × 4/3 = 60
 
-## Attention aux fractions supérieures à 1
-Prendre les 5/4 d’une quantité l’**augmente** : 60 × 5/4 = 75. Une fraction supérieure à 1 agrandit, une fraction inférieure à 1 réduit.`,
+> Prendre une fraction, c’est **multiplier** ; retrouver le tout, c’est **diviser**. Une erreur de sens se repère à la vraisemblance : la partie doit être plus petite que le tout quand la fraction est inférieure à 1.
+
+## Les fractions supérieures à 1
+!> Prendre les **5/4** d’une quantité l’**augmente** : 60 × 5/4 = 75. Une fraction supérieure à 1 agrandit, une fraction inférieure à 1 réduit.`,
           },
           questions: [
             ['Comment traduit-on « les trois quarts de 60 » ?', ['60 × 3/4', '60 ÷ 3/4', '60 + 3/4', '60 − 3/4'], 0, 'Le mot « de » se traduit par le signe ×.'],
@@ -1344,20 +1526,18 @@ Prendre les 5/4 d’une quantité l’**augmente** : 60 × 5/4 = 75. Une fractio
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: 'La règle qui résout les tableaux de proportionnalité',
-            cours: `## La propriété
-Deux fractions sont **égales** si et seulement si leurs **produits en croix** sont égaux :
+            cours: `Le produit en croix résout tous les tableaux de proportionnalité. Encore faut-il que la situation en soit une.
 
-**a/b = c/d ⟺ a × d = b × c** (avec b et d non nuls)
+## La propriété
+= a/b = c/d si et seulement si a × d = b × c
 
 On multiplie « en croix » : le numérateur de l’une par le dénominateur de l’autre.
 
 ## Deux usages
-**1. Vérifier une égalité de fractions.**
-6/9 et 8/12 : 6 × 12 = 72 et 9 × 8 = 72 → les fractions sont **égales**.
-5/7 et 7/9 : 5 × 9 = 45 et 7 × 7 = 49 → elles ne le sont **pas**.
-
-**2. Trouver une valeur manquante** — la **quatrième proportionnelle**.
-Dans x/12 = 5/4 : 4x = 60, donc **x = 15**.
+| L’usage | L’exemple | Le verdict |
+| **Vérifier** une égalité | 6/9 et 8/12 : 72 et 72 | **Égales** |
+| | 5/7 et 7/9 : 45 et 49 | **Différentes** |
+| **Trouver** une valeur manquante | x/12 = 5/4 → 4x = 60 | **x = 15** |
 
 ## La méthode pas à pas
 1. Écrire l’égalité de deux quotients ;
@@ -1367,12 +1547,11 @@ Dans x/12 = 5/4 : 4x = 60, donc **x = 15**.
 
 ## Dans un tableau de proportionnalité
 | Quantité | 4 | 12 |
-|---|---|---|
-| Prix | 5 | x |
+| Prix | 5 | **x** |
 
-4x = 12 × 5 → 4x = 60 → **x = 15 €**.
+~ 4x = 12 × 5 → 4x = 60 → x = 15 €
 
-> ⚠️ Le produit en croix ne s’applique qu’à une situation **réellement proportionnelle**. L’appliquer à un tarif avec abonnement fixe, ou à l’aire d’un carré en fonction de son côté, donne un résultat faux — et l’erreur ne se voit pas dans le calcul.
+!> **Le produit en croix ne s’applique qu’à une situation réellement proportionnelle.** Appliqué à un tarif avec abonnement fixe, ou à l’aire d’un carré en fonction de son côté, il donne un résultat faux — et **rien dans le calcul ne le signale**.
 
 ## Où on le retrouve
 Échelles, recettes, vitesses, pourcentages, agrandissements, et le théorème de **Thalès**, dont toute la résolution repose sur cette seule règle.`,
@@ -1393,36 +1572,39 @@ Dans x/12 = 5/4 : 4x = 60, donc **x = 15**.
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: 'Quotient et reste, dans les entiers',
-            cours: `## La définition
-Effectuer la **division euclidienne** d’un entier **a** (le **dividende**) par un entier **b** non nul (le **diviseur**), c’est trouver deux entiers **q** (le **quotient**) et **r** (le **reste**) tels que :
+            cours: `Dans un problème de partage, la question porte tantôt sur le quotient, tantôt sur le reste. Tout l’exercice est là.
 
-**a = b × q + r**, avec **0 ≤ r < b**
+## La définition
+= a = b × q + r, avec 0 ≤ r < b
 
-Le reste est toujours **positif** et **strictement inférieur au diviseur** — c’est la condition qui rend le couple (q ; r) unique.
+| Le nom | Sa place |
+| **Dividende** | a, ce qu’on partage |
+| **Diviseur** | b, non nul |
+| **Quotient** | q |
+| **Reste** | r |
 
-## Un exemple
-47 divisé par 5 : 47 = 5 × 9 + 2.
-Quotient **9**, reste **2**. Et 2 < 5 : la condition est respectée.
+= 47 = 5 × 9 + 2, et 2 < 5
 
-> Si le reste obtenu est supérieur ou égal au diviseur, c’est que le quotient est trop petit : il faut le relever d’un cran.
+!> Si le reste obtenu est **supérieur ou égal** au diviseur, c’est que le quotient est trop petit : il faut le relever d’un cran. C’est la condition qui rend le couple (q ; r) **unique**.
 
 ## Le vocabulaire de la divisibilité
-Quand le **reste est nul**, on dit que :
-- a est **divisible** par b ;
-- b est un **diviseur** de a ;
-- a est un **multiple** de b.
+Quand le reste est **nul** :
 
-47 = 5 × 9 + 2 : 47 n’est pas divisible par 5.
-48 = 6 × 8 + 0 : 48 **est** divisible par 6, 6 est un diviseur de 48, et 48 est un multiple de 6.
+~ a est divisible par b → b est un diviseur de a → a est un multiple de b
+
+| Le calcul | Le verdict |
+| 47 = 5 × 9 + 2 | 47 **n’est pas** divisible par 5 |
+| 48 = 6 × 8 + 0 | 48 **est** divisible par 6 |
 
 ## À quoi ça sert
-- **Les problèmes de partage** : combien de paquets complets, et combien reste-t-il ?
-- **Les conversions** : 200 minutes = 3 h et 20 min (200 = 60 × 3 + 20).
-- **La parité** : le reste de la division par 2 vaut 0 (pair) ou 1 (impair).
-- **Les problèmes cycliques** : le jour de la semaine dans 100 jours se trouve avec le reste de la division par 7.
+| Le problème | Ce qu’on utilise |
+| **Partage** : combien de paquets complets ? | Le **quotient** |
+| **Conversions** : 200 min = 3 h 20 | 200 = 60 × 3 + 20 |
+| **Parité** : pair ou impair ? | Le reste de la division par 2 |
+| **Cycles** : quel jour dans 100 jours ? | Le reste de la division par 7 |
 
-## L’interprétation du quotient et du reste
-Dans un énoncé, il faut décider **lequel des deux répond à la question** : « combien de boîtes pleines ? » demande le quotient ; « combien d’objets en trop ? » demande le reste. C’est là que se joue l’exercice, plus que dans le calcul.`,
+## L’interprétation
+!> Dans un énoncé, il faut **décider lequel des deux répond à la question**. « Combien de boîtes pleines ? » demande le **quotient** ; « combien d’objets en trop ? » demande le **reste**. C’est là que se joue l’exercice, plus que dans le calcul.`,
           },
           questions: [
             ['Quelle égalité définit la division euclidienne ?', ['a = b × q + r, avec 0 ≤ r < b', 'a = b × q, sans reste', 'a = b + q + r', 'a = (b + q) × r'], 0, 'Le reste doit être strictement inférieur au diviseur.'],
@@ -1440,36 +1622,41 @@ Dans un énoncé, il faut décider **lequel des deux répond à la question** : 
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: 'Deux mots pour une même relation',
-            cours: `## Les définitions
-Si un entier **a** peut s’écrire **a = b × k** avec k entier, alors :
-- **a est un multiple de b** ;
-- **b est un diviseur de a** ;
-- a est **divisible** par b.
+            cours: `Multiple et diviseur disent la même relation, vue de deux côtés.
 
-Les trois phrases disent **exactement la même chose**, vue de deux côtés.
+## Les définitions
+= Si a = b × k avec k entier, alors a est un multiple de b et b est un diviseur de a
 
-42 = 6 × 7 : 42 est un multiple de 6 **et** de 7 ; 6 et 7 sont des diviseurs de 42.
+~ 42 = 6 × 7 → 42 est un multiple de 6 et de 7 → 6 et 7 sont des diviseurs de 42
 
 ## Les multiples
-Les multiples d’un nombre sont **infinis** : ceux de 7 sont 0, 7, 14, 21, 28, 35, 42…
-- **0 est un multiple de tous** les entiers ;
-- tout nombre est multiple de lui-même et de 1.
+| Leur propriété | Le détail |
+| Ils sont **infinis** | Ceux de 7 : 0, 7, 14, 21, 28, 35, 42… |
+| **0** | Il est multiple de **tous** les entiers |
+| Tout nombre | Il est multiple de lui-même et de 1 |
 
 ## Les diviseurs
-Les diviseurs d’un nombre sont **en nombre fini** : ceux de 12 sont 1, 2, 3, 4, 6 et 12.
-- **1 divise tout** ;
-- tout nombre non nul est son propre diviseur ;
-- **on ne divise jamais par 0**.
+| Leur propriété | Le détail |
+| Ils sont en nombre **fini** | Ceux de 12 : 1, 2, 3, 4, 6, 12 |
+| **1** | Il divise tout |
+| **0** | On ne divise **jamais** par 0 |
 
-## La méthode pour lister tous les diviseurs
-On teste 1, 2, 3… en formant des **paires** : 12 = 1 × 12 = 2 × 6 = 3 × 4. On s’arrête quand les deux facteurs se croisent.
-Cette méthode par paires garantit qu’aucun diviseur n’est oublié.
+## Lister tous les diviseurs
+On teste 1, 2, 3… en formant des **paires**, et on s’arrête quand les deux facteurs se croisent.
+
+= 12 = 1 × 12 = 2 × 6 = 3 × 4
+
+> La méthode par paires est la seule qui **garantisse** qu’aucun diviseur n’est oublié.
 
 ## Les diviseurs communs
-Ceux de 18 : 1, 2, 3, 6, 9, 18. Ceux de 24 : 1, 2, 3, 4, 6, 8, 12, 24.
-**Communs** : 1, 2, 3, 6 — le plus grand est **6**. Il sert à **simplifier** la fraction 18/24 d’un coup : 18/24 = **3/4**.
+| Le nombre | Ses diviseurs |
+| 18 | 1, 2, 3, 6, 9, 18 |
+| 24 | 1, 2, 3, 4, 6, 8, 12, 24 |
+| **Communs** | 1, 2, 3, **6** |
 
-> Deux nombres qui n’ont que 1 comme diviseur commun sont dits **premiers entre eux** : la fraction qu’ils forment est déjà irréductible.
+~ 18/24 → diviser par le plus grand commun, 6 → 3/4
+
+> Deux nombres qui n’ont que 1 comme diviseur commun sont **premiers entre eux** : la fraction qu’ils forment est déjà irréductible.
 
 ## Le lien avec les nombres premiers
 Un nombre **premier** est un entier supérieur à 1 qui n’a **que deux** diviseurs : 1 et lui-même.`,
@@ -1490,33 +1677,37 @@ Un nombre **premier** est un entier supérieur à 1 qui n’a **que deux** divis
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: 'Savoir sans poser l’opération',
-            cours: `Un **critère de divisibilité** permet de savoir si un nombre est divisible par un autre **sans effectuer la division**.
+            cours: `Un critère de divisibilité, c’est savoir sans poser l’opération.
 
 ## Les critères à connaître
-- **par 2** : le nombre se termine par **0, 2, 4, 6 ou 8** (il est pair).
-- **par 3** : la **somme de ses chiffres** est divisible par 3.
-- **par 4** : le nombre formé par ses **deux derniers chiffres** est divisible par 4.
-- **par 5** : il se termine par **0 ou 5**.
-- **par 9** : la **somme de ses chiffres** est divisible par 9.
-- **par 10** : il se termine par **0**.
-- **par 25** : il se termine par 00, 25, 50 ou 75.
+| Divisible par | Si… |
+| **2** | Le nombre se termine par 0, 2, 4, 6 ou 8 |
+| **3** | La **somme des chiffres** est divisible par 3 |
+| **4** | Les **deux derniers chiffres** forment un multiple de 4 |
+| **5** | Le nombre se termine par 0 ou 5 |
+| **9** | La somme des chiffres est divisible par 9 |
+| **10** | Le nombre se termine par 0 |
+| **25** | Le nombre se termine par 00, 25, 50 ou 75 |
 
 ## Des exemples
-- **2 358** : somme des chiffres = 2 + 3 + 5 + 8 = 18, divisible par 3 **et** par 9 → 2 358 est divisible par 3 et par 9. Il se termine par 8, donc aussi par 2.
-- **1 236** : 36 est divisible par 4 → 1 236 est divisible par 4.
-- **4 725** : se termine par 25 → divisible par 25 ; somme des chiffres = 18 → divisible par 9 ; se termine par 5 → divisible par 5.
+| Le nombre | Ce qu’on constate | Divisible par |
+| **2 358** | Somme = 18 ; finit par 8 | 2, 3, 9 |
+| **1 236** | 36 est multiple de 4 | 4 |
+| **4 725** | Finit par 25 ; somme = 18 | 5, 9, 25 |
 
 ## Combiner les critères
-Un nombre divisible par 2 **et** par 3 est divisible par **6**.
-Un nombre divisible par 3 **et** par 4 est divisible par **12**.
-⚠️ Cela ne marche que si les deux diviseurs sont **premiers entre eux** : divisible par 2 et par 4 ne signifie pas divisible par 8.
+| La combinaison | Ce qu’on en déduit |
+| Divisible par **2 et 3** | Divisible par **6** |
+| Divisible par **3 et 4** | Divisible par **12** |
+
+!> **Cela ne marche que si les deux diviseurs sont premiers entre eux.** Divisible par 2 **et** par 4 ne signifie **pas** divisible par 8.
 
 ## À quoi ça sert
-- **Simplifier une fraction** sans tâtonner : on repère d’un coup d’œil un diviseur commun.
-- **Décomposer** un nombre en facteurs premiers plus vite.
-- Vérifier un résultat de calcul mental.
+~ Repérer un diviseur commun → Simplifier la fraction sans tâtonner
 
-> Le critère de 9 sert aussi à la **preuve par neuf**, une vérification rapide de multiplication utilisée avant les calculatrices.`,
+Les critères servent aussi à **décomposer** un nombre en facteurs premiers plus vite, et à vérifier un calcul mental.
+
+> Le critère de 9 fonde la **preuve par neuf**, la vérification rapide des multiplications qu’on utilisait avant les calculatrices.`,
           },
           questions: [
             ['Quel est le critère de divisibilité par 3 ?', ['La somme des chiffres est divisible par 3', 'Le nombre se termine par 3', 'Le nombre est impair', 'Les deux derniers chiffres forment un multiple de 3'], 0, 'Exemple : 2 358 → 2 + 3 + 5 + 8 = 18.'],
@@ -1534,36 +1725,37 @@ Un nombre divisible par 3 **et** par 4 est divisible par **12**.
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: 'Remonter du pourcentage à la quantité de départ',
-            cours: `Trois questions reviennent sans cesse, et chacune a son opération.
+            cours: `Trois questions reviennent sans cesse, et chacune a son opération. Se tromper d’opération, c’est se tromper de question.
 
-## 1. Calculer une partie
-« Combien font t % de N ? » → **multiplier**.
-18 % de 250 = 250 × 0,18 = **45**.
+## Les trois questions
+| La question | L’opération | L’exemple |
+| Combien font **18 % de 250** ? | On **multiplie** | 250 × 0,18 = **45** |
+| **45 est quel pourcentage** de 250 ? | On divise, puis × 100 | (45 ÷ 250) × 100 = **18 %** |
+| 45 est **18 % de quoi** ? | On **divise** par le coefficient | 45 ÷ 0,18 = **250** |
 
-## 2. Calculer un pourcentage
-« Quel pourcentage 45 représente-t-il de 250 ? » → **diviser, puis ×100**.
-(45 ÷ 250) × 100 = **18 %**.
-
-## 3. Retrouver la quantité totale
-« 45 représente 18 % de quelle quantité ? » → **diviser par le coefficient**.
-45 ÷ 0,18 = **250**.
-
-> Le sens de l’opération se déduit de ce qu’on cherche : la **partie** se multiplie, le **tout** se divise. En cas de doute, un test rapide : le tout doit être **plus grand** que la partie.
+> La **partie** se multiplie, le **tout** se divise. En cas de doute : le tout doit être **plus grand** que la partie.
 
 ## Retrouver un prix avant réduction
-Un article soldé à 68 € après **−15 %** : le prix payé vaut 0,85 fois le prix initial.
-Prix initial = 68 ÷ 0,85 = **80 €**.
+Un article soldé à 68 € après −15 % : le prix payé vaut **0,85 fois** le prix initial.
 
-⚠️ Erreur classique : ajouter 15 % à 68 € donnerait 78,20 € — un résultat faux, car les 15 % portaient sur le prix **initial**, pas sur le prix soldé.
+= 68 ÷ 0,85 = 80 €
+
+!> **Ajouter 15 % à 68 € donnerait 78,20 €, et ce serait faux.** Les 15 % portaient sur le prix **initial**, pas sur le prix soldé.
 
 ## Retrouver un prix avant augmentation
-Un article à 96 € après **+20 %** : prix initial = 96 ÷ 1,2 = **80 €**.
+= 96 ÷ 1,2 = 80 €
 
 ## Les évolutions successives
-On **multiplie** les coefficients : +10 % puis −10 % donne 1,1 × 0,9 = 0,99, soit **−1 %**. On ne revient jamais au point de départ.
+On **multiplie** les coefficients.
+
+= +10 % puis −10 % → 1,1 × 0,9 = 0,99 → −1 %
+
+On ne revient jamais au point de départ.
 
 ## Le taux d’évolution
-**(finale − initiale) ÷ initiale × 100**. De 80 € à 96 € : (96 − 80) ÷ 80 × 100 = **+20 %**.`,
+= (finale − initiale) ÷ initiale × 100
+
+= De 80 € à 96 € : (96 − 80) ÷ 80 × 100 = +20 %`,
           },
           questions: [
             ['Comment calcule-t-on 18 % de 250 ?', ['250 × 0,18', '250 ÷ 0,18', '250 + 18', '18 ÷ 250'], 0, 'Chercher la partie, c’est multiplier.'],
@@ -1581,39 +1773,43 @@ On **multiplie** les coefficients : +10 % puis −10 % donne 1,1 × 0,9 = 0,99, 
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: 'Du plan au terrain, et retour',
-            cours: `## La définition
-L’**échelle** d’un plan, d’une carte ou d’une maquette est le rapport :
+            cours: `Une échelle est un rapport sans unité. Le calcul est simple ; c’est la conversion qui piège.
 
-**échelle = distance sur le plan ÷ distance réelle**, exprimées **dans la même unité**.
+## La définition
+= Échelle = distance sur le plan ÷ distance réelle
 
-Elle s’écrit sous forme de fraction (1/25 000) ou de rapport (1 : 25 000), et n’a **pas d’unité**.
+Les deux distances doivent être **dans la même unité**. L’échelle n’a donc **pas d’unité** : 1/25 000, ou 1 : 25 000.
 
-## Comment la lire
-- **1/25 000** : 1 cm sur la carte représente 25 000 cm en réalité, soit **250 m**.
-- **Échelle < 1** : c’est une **réduction** (cartes, plans).
-- **Échelle > 1** : c’est un **agrandissement** (schéma d’un insecte, d’un circuit électronique).
+| L’échelle | Ce que c’est | Exemple |
+| **< 1** | Une **réduction** | Cartes, plans |
+| **> 1** | Un **agrandissement** | Schéma d’un insecte, d’un circuit |
 
 ## Les deux calculs
-**Du plan vers le réel** : distance réelle = distance sur le plan **÷** échelle.
-3 cm au 1/25 000 → 3 × 25 000 = 75 000 cm = **750 m**.
-
-**Du réel vers le plan** : distance sur le plan = distance réelle **×** échelle.
-2 km au 1/25 000 → 200 000 cm × 1/25 000 = **8 cm**.
+| Le sens | L’opération | Au 1/25 000 |
+| Plan → **réel** | On **divise** par l’échelle | 3 cm → 75 000 cm = **750 m** |
+| Réel → **plan** | On **multiplie** par l’échelle | 2 km = 200 000 cm → **8 cm** |
 
 ## Les conversions, le vrai piège
-1 m = 100 cm ; 1 km = 1 000 m = **100 000 cm**.
-Il faut **tout convertir dans la même unité avant de calculer**, puis reconvertir dans l’unité demandée à la fin. La majorité des erreurs du chapitre viennent de là, pas du raisonnement.
+= 1 m = 100 cm · 1 km = 1 000 m = 100 000 cm
+
+!> La majorité des erreurs du chapitre viennent de là, **pas du raisonnement**. On convertit tout dans la même unité **avant** de calculer, puis on reconvertit dans l’unité demandée à la fin.
 
 ## Aires et volumes
-Une échelle porte sur les **longueurs**. Sur un plan au 1/100 :
-- les longueurs sont divisées par 100 ;
-- les **aires** par 100² = **10 000** ;
-- les **volumes** par 100³.
+Une échelle porte sur les **longueurs** seules.
 
-> Un salon de 20 m² occupe donc 20 ÷ 10 000 = 0,002 m², soit **20 cm²**, sur un plan au 1/100.
+| Au 1/100 | Divisé par |
+| Les longueurs | 100 |
+| Les **aires** | **10 000** (100²) |
+| Les **volumes** | **1 000 000** (100³) |
+
+> Un salon de 20 m² occupe donc 20 ÷ 10 000 = 0,002 m², soit **20 cm²** sur un plan au 1/100.
 
 ## Les échelles courantes
-Plan de maison : 1/50 ou 1/100. Plan de ville : 1/10 000. Carte de randonnée : 1/25 000. Carte routière : 1/200 000.`,
+| Le document | Son échelle |
+| Plan de maison | 1/50 ou 1/100 |
+| Plan de ville | 1/10 000 |
+| Carte de randonnée | 1/25 000 |
+| Carte routière | 1/200 000 |`,
           },
           questions: [
             ['Comment se calcule une échelle ?', ['Distance sur le plan ÷ distance réelle, dans la même unité', 'Distance réelle ÷ distance sur le plan', 'Distance réelle × distance sur le plan', 'Distance sur le plan + distance réelle'], 0, 'Elle n’a pas d’unité.'],
@@ -1631,43 +1827,43 @@ Plan de maison : 1/50 ou 1/100. Plan de ville : 1/10 000. Carte de randonnée : 
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: 'Ce qui se mesure directement, ce qui se calcule',
-            cours: `## Les grandeurs simples
-Elles se mesurent **directement**, avec un instrument :
-- **longueur** (mètre, règle) ;
-- **masse** (kilogramme, balance) ;
-- **durée** (seconde, chronomètre) ;
-- **température** (degré Celsius, thermomètre) ;
-- **intensité** électrique (ampère, ampèremètre).
+            cours: `Certaines grandeurs se lisent sur un instrument. D’autres n’existent qu’au bout d’un calcul.
+
+## Les grandeurs simples
+| La grandeur | Son unité | Son instrument |
+| **Longueur** | Le mètre | La règle |
+| **Masse** | Le kilogramme | La balance |
+| **Durée** | La seconde | Le chronomètre |
+| **Température** | Le degré Celsius | Le thermomètre |
+| **Intensité** | L’ampère | L’ampèremètre |
 
 ## Les grandeurs composées
-Elles se **calculent** à partir de grandeurs simples, par multiplication ou par division.
+| Par **multiplication** | Son unité |
+| Aire = longueur × longueur | m² |
+| Volume = longueur × longueur × longueur | m³ |
+| Énergie = puissance × durée | kWh |
 
-**Par multiplication** (grandeurs produits) :
-- aire = longueur × longueur → m²
-- volume = longueur × longueur × longueur → m³
-- énergie = puissance × durée → kWh
-
-**Par division** (grandeurs quotients) :
-- vitesse = distance ÷ durée → m/s
-- masse volumique = masse ÷ volume → g/cm³
-- débit = volume ÷ durée → L/min
-- prix au kilo = prix ÷ masse → €/kg
+| Par **division** | Son unité |
+| Vitesse = distance ÷ durée | m/s |
+| Masse volumique = masse ÷ volume | g/cm³ |
+| Débit = volume ÷ durée | L/min |
+| Prix au kilo = prix ÷ masse | €/kg |
 
 ## L’unité révèle la construction
-C’est le point à retenir : **l’unité d’une grandeur composée dit comment elle se calcule**.
-- « m² » : deux longueurs multipliées ;
-- « km/h » : une distance divisée par une durée ;
-- « kWh » : une puissance multipliée par une durée.
+| L’unité | Ce qu’elle dit |
+| **m²** | Deux longueurs multipliées |
+| **km/h** | Une distance divisée par une durée |
+| **kWh** | Une puissance multipliée par une durée |
 
-> Devant un exercice, lire l’unité **demandée** indique l’opération à faire, et vérifier l’unité **obtenue** valide le résultat. C’est la vérification la plus rapide qui soit.
+> Lire l’unité **demandée** indique l’opération ; vérifier l’unité **obtenue** valide le résultat. C’est la vérification la plus rapide qui soit.
 
 ## Grandeur, mesure et unité
-Trois mots à distinguer :
-- la **grandeur** est ce qu’on étudie (la longueur d’une table) ;
-- la **mesure** est le nombre obtenu (1,20) ;
-- l’**unité** précise à quoi ce nombre se rapporte (le mètre).
+| Le mot | Sur une table |
+| La **grandeur** | La longueur |
+| La **mesure** | 1,20 |
+| L’**unité** | Le mètre |
 
-Un résultat sans unité n’a **aucun sens** : « la table mesure 1,20 » ne dit rien.`,
+!> Un résultat **sans unité** n’a aucun sens : « la table mesure 1,20 » ne dit rien.`,
           },
           questions: [
             ['Qu’est-ce qu’une grandeur simple ?', ['Une grandeur qui se mesure directement avec un instrument', 'Une grandeur sans unité', 'Une grandeur toujours entière', 'Une grandeur calculée'], 0, 'Longueur, masse, durée, température.'],
@@ -1685,38 +1881,48 @@ Un résultat sans unité n’a **aucun sens** : « la table mesure 1,20 » ne di
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: 'Les tableaux de conversion',
-            cours: `## Le système décimal
-Les unités du système international se déduisent les unes des autres par des **puissances de 10**. Les préfixes :
+            cours: `Le système décimal marche de 10 en 10 — sauf pour les durées, qui n’en font qu’à leur tête.
 
-**kilo (× 1 000) — hecto (× 100) — déca (× 10) — [unité] — déci (÷ 10) — centi (÷ 100) — milli (÷ 1 000)**
+## Les préfixes
+~ kilo ×1000 → hecto ×100 → déca ×10 → unité → déci ÷10 → centi ÷100 → milli ÷1000
 
 ## Les longueurs
-km — hm — dam — **m** — dm — cm — mm
+~ km → hm → dam → m → dm → cm → mm
+
 Chaque colonne vaut **10 fois** la suivante.
-- 1 km = 1 000 m ; 1 m = 100 cm ; 1 cm = 10 mm.
-- 3,5 km = **3 500 m** ; 250 cm = **2,5 m**.
+
+= 1 km = 1 000 m · 1 m = 100 cm · 1 cm = 10 mm
+
+= 3,5 km = 3 500 m · 250 cm = 2,5 m
 
 ## Les masses
-t — q — kg — hg — dag — **g** — dg — cg — mg
-- 1 t = 1 000 kg ; 1 kg = 1 000 g ; 1 g = 1 000 mg.
+~ t → q → kg → hg → dag → g → dg → cg → mg
+
+= 1 t = 1 000 kg · 1 kg = 1 000 g · 1 g = 1 000 mg
 
 ## Les contenances
-- 1 L = 100 cL = 1 000 mL ;
-- **1 L = 1 dm³** et **1 mL = 1 cm³** : ce sont les deux égalités qui relient contenances et volumes.
+= 1 L = 100 cL = 1 000 mL
 
-## Les durées — l’exception
-Elles ne sont **pas décimales** :
-1 h = 60 min, 1 min = 60 s, 1 jour = 24 h.
-- 1 h 30 = **1,5 h**, jamais 1,30 h ;
-- 2 h 15 = 2,25 h ; 45 min = 0,75 h.
-Pour convertir des minutes en heures décimales, on divise par 60.
+= 1 L = 1 dm³ et 1 mL = 1 cm³
+
+> Ces deux dernières égalités sont celles qui relient les **contenances** aux **volumes**. Sans elles, un exercice sur une citerne ne se termine pas.
+
+## Les durées, l’exception
+= 1 h = 60 min · 1 min = 60 s · 1 jour = 24 h
+
+| L’écriture | Sa valeur décimale |
+| 1 h 30 | **1,5 h** |
+| 2 h 15 | **2,25 h** |
+| 45 min | **0,75 h** |
+
+!> **1 h 30 n’est jamais 1,30 h.** Pour convertir des minutes en heures décimales, on divise par 60.
 
 ## La méthode sûre
 1. Écrire l’unité de départ dans un **tableau de conversion**, un chiffre par colonne ;
 2. placer la virgule après la colonne de l’unité de départ ;
-3. déplacer la virgule jusqu’à la colonne de l’unité d’arrivée, en complétant par des **zéros**.
+3. déplacer la virgule jusqu’à la colonne d’arrivée, en complétant par des **zéros**.
 
-> **Convertir vers une unité plus petite donne un nombre plus grand.** Ce test de vraisemblance repère instantanément une virgule déplacée dans le mauvais sens.`,
+> **Convertir vers une unité plus petite donne un nombre plus grand.** Ce test de vraisemblance repère instantanément une virgule partie du mauvais côté.`,
           },
           questions: [
             ['Combien de mètres vaut 1 km ?', ['1 000 m', '100 m', '10 000 m', '10 m'], 0, 'Chaque préfixe correspond à une puissance de 10.'],
@@ -1734,43 +1940,46 @@ Pour convertir des minutes en heures décimales, on divise par 60.
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: 'Les aires, les volumes, les vitesses',
-            cours: `Convertir une grandeur composée ne suit **pas** la règle des grandeurs simples : le rapport entre deux unités y est **élevé à une puissance**.
+            cours: `Une aire n’est pas une longueur. C’est pourquoi elle ne se convertit pas comme une longueur.
 
 ## Les aires : de 100 en 100
-km² — hm² — dam² — **m²** — dm² — cm² — mm²
-Chaque colonne vaut **100 fois** la suivante, parce qu’une aire est un produit de deux longueurs (10 × 10 = 100).
+~ km² → hm² → dam² → m² → dm² → cm² → mm²
 
-- 1 m² = **10 000 cm²** (et non 100) ;
-- 1 km² = 1 000 000 m² ;
-- 1 hectare (ha) = 1 hm² = **10 000 m²** ; 1 are (a) = 100 m².
+Chaque colonne vaut **100 fois** la suivante, parce qu’une aire est un produit de **deux** longueurs (10 × 10 = 100).
 
-**Dans un tableau de conversion, chaque unité d’aire occupe DEUX colonnes.**
+= 1 m² = 10 000 cm² · 1 km² = 1 000 000 m²
+
+= 1 hectare = 1 hm² = 10 000 m² · 1 are = 100 m²
+
+> Dans un tableau de conversion, chaque unité d’aire occupe **DEUX** colonnes.
 
 ## Les volumes : de 1 000 en 1 000
-km³ — hm³ — dam³ — **m³** — dm³ — cm³ — mm³
+~ km³ → hm³ → dam³ → m³ → dm³ → cm³ → mm³
+
 Chaque colonne vaut **1 000 fois** la suivante (10 × 10 × 10).
 
-- 1 m³ = **1 000 dm³** = 1 000 000 cm³ ;
-- **1 dm³ = 1 L** et **1 cm³ = 1 mL** ;
-- 1 m³ = **1 000 L**.
+= 1 m³ = 1 000 dm³ = 1 000 000 cm³
 
-**Chaque unité de volume occupe TROIS colonnes.**
+= 1 dm³ = 1 L · 1 cm³ = 1 mL · 1 m³ = 1 000 L
+
+> Chaque unité de volume occupe **TROIS** colonnes.
 
 ## Les vitesses
-- **km/h → m/s** : diviser par **3,6** ;
-- **m/s → km/h** : multiplier par **3,6**.
+| Le sens | L’opération | Exemple |
+| **km/h → m/s** | ÷ 3,6 | 36 km/h = **10 m/s** |
+| **m/s → km/h** | × 3,6 | 20 m/s = **72 km/h** |
 
-36 km/h = 10 m/s ; 20 m/s = 72 km/h.
-
-L’origine du 3,6 : 1 km/h = 1 000 m ÷ 3 600 s.
+= L’origine du 3,6 : 1 km/h = 1 000 m ÷ 3 600 s
 
 ## Les autres grandeurs quotients
-On convertit **le numérateur et le dénominateur séparément** :
-- 1 g/cm³ = 1 000 kg/m³ ;
-- 1 L/min = 60 L/h ;
-- 5 €/kg = 0,005 €/g.
+On convertit **le numérateur et le dénominateur séparément**.
 
-> L’erreur la plus fréquente du chapitre : traiter une aire ou un volume comme une longueur. **1 m² ne fait pas 100 cm², mais 10 000.**`,
+| L’égalité | |
+| 1 g/cm³ | = 1 000 kg/m³ |
+| 1 L/min | = 60 L/h |
+| 5 €/kg | = 0,005 €/g |
+
+!> **L’erreur la plus fréquente du chapitre : traiter une aire ou un volume comme une longueur.** 1 m² ne fait pas 100 cm², mais **10 000**.`,
           },
           questions: [
             ['Combien de cm² vaut 1 m² ?', ['10 000 cm²', '100 cm²', '1 000 cm²', '1 000 000 cm²'], 0, 'Une aire est un produit de deux longueurs : le rapport est élevé au carré.'],
@@ -1788,30 +1997,42 @@ On convertit **le numérateur et le dénominateur séparément** :
           axe: 'Cours de l’ancien programme',
           lecon: {
             titre: 'Classer, construire, calculer',
-            cours: `## La somme des angles
-Dans **tout** triangle, la somme des trois angles vaut **180°**. C’est la propriété la plus utilisée du chapitre : connaissant deux angles, on trouve toujours le troisième.
+            cours: `Un triangle se classe, se construit et se calcule. Trois propriétés suffisent à tout tenir.
+
+## La somme des angles
+= Angle A + Angle B + Angle C = 180°
+
+C’est la propriété la plus utilisée du chapitre : deux angles connus donnent toujours le troisième.
 
 ## Les triangles particuliers
-- **Isocèle** : deux côtés de même longueur. Les **angles à la base** sont alors égaux, et il a un **axe de symétrie**.
-- **Équilatéral** : trois côtés égaux, donc trois angles de **60°** et trois axes de symétrie.
-- **Rectangle** : un angle droit. Les deux autres angles sont **complémentaires** (leur somme vaut 90°). Le théorème de **Pythagore** s’y applique.
-- **Rectangle isocèle** : un angle droit et deux angles de **45°**.
+| Le triangle | Sa définition | Ce qu’on en déduit |
+| **Isocèle** | Deux côtés égaux | Angles à la base **égaux**, un axe de symétrie |
+| **Équilatéral** | Trois côtés égaux | Trois angles de **60°**, trois axes |
+| **Rectangle** | Un angle droit | Les deux autres angles sont **complémentaires** ; **Pythagore** s’applique |
+| **Rectangle isocèle** | Les deux à la fois | 90°, 45°, 45° |
 
 ## L’inégalité triangulaire
-Un triangle n’existe que si la **plus grande longueur est inférieure à la somme des deux autres**.
-3, 4 et 9 : 3 + 4 = 7 < 9 → **ce triangle est impossible**.
-Si la plus grande longueur **égale** la somme des deux autres, les trois points sont **alignés**.
+= Le plus grand côté < la somme des deux autres
+
+| Les longueurs | Le verdict |
+| 3, 4 et 9 | 3 + 4 = 7 < 9 → **impossible** |
+| 3, 4 et 7 | 3 + 4 = 7 → les points sont **alignés** |
+
+!> C’est la **première** vérification à faire avant toute construction.
 
 ## Les droites remarquables
-- La **médiatrice** d’un côté : perpendiculaire à ce côté en son milieu. Les trois se coupent au **centre du cercle circonscrit**.
-- La **hauteur** issue d’un sommet : perpendiculaire au côté opposé. Les trois se coupent à l’**orthocentre**.
-- La **médiane** : joint un sommet au milieu du côté opposé. Les trois se coupent au **centre de gravité**, situé aux **deux tiers** de chaque médiane depuis le sommet.
-- La **bissectrice** : partage un angle en deux angles égaux. Les trois se coupent au centre du **cercle inscrit**.
+| La droite | Sa définition | Son point de concours |
+| **Médiatrice** | Perpendiculaire au milieu d’un côté | Centre du cercle **circonscrit** |
+| **Hauteur** | Perpendiculaire au côté opposé | L’**orthocentre** |
+| **Médiane** | Vers le milieu du côté opposé | Le **centre de gravité**, aux **deux tiers** depuis le sommet |
+| **Bissectrice** | Partage un angle en deux | Centre du cercle **inscrit** |
 
 ## L’aire
-**aire = (base × hauteur) ÷ 2**, la hauteur étant celle **relative** à la base choisie. N’importe lequel des trois côtés peut servir de base, à condition de prendre la hauteur qui lui correspond.
+= Aire = (base × hauteur) ÷ 2
 
-> Dans un triangle **rectangle**, deux des côtés sont déjà perpendiculaires : ils servent directement de base et de hauteur.`,
+La hauteur doit être celle **relative à la base choisie**. N’importe lequel des trois côtés peut servir de base.
+
+> Dans un triangle **rectangle**, deux côtés sont déjà perpendiculaires : ils servent directement de base et de hauteur, sans rien tracer.`,
           },
           questions: [
             ['Combien vaut la somme des angles d’un triangle ?', ['180°', '360°', '90°', 'Cela dépend du triangle'], 0, 'C’est vrai pour tout triangle.'],

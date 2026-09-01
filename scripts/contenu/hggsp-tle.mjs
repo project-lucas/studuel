@@ -139,22 +139,42 @@ DELETE FROM public.chapters c
           axe: 'De nouveaux espaces de conquête',
           lecon: {
             titre: 'Deux immensités que le droit a voulu soustraire à l’appropriation',
-            cours: `Les océans et l’espace extra-atmosphérique ont une histoire commune : longtemps hors d’atteinte, ils ont été déclarés « bien commun » au moment même où la technique permettait enfin de les exploiter. C’est toute la tension du thème.
+            cours: `Océans et espace ont une histoire commune : longtemps hors d’atteinte, ils ont été déclarés « **bien commun** » **au moment même** où la technique permettait enfin de les exploiter. C’est toute la tension du thème.
 
-## Des espaces immenses et mal connus
-Les océans couvrent **71 % de la surface du globe** et concentrent l’essentiel de la biodiversité, mais moins d’un quart des fonds marins est cartographié avec précision. L’espace commence conventionnellement à **100 km d’altitude** (ligne de Kármán) : au-delà, plus aucune souveraineté nationale ne s’exerce.
+## Deux immensités mal connues
+| Espace | Ce qu’il représente |
+| Les **océans** | **71 %** de la surface du globe, l’essentiel de la biodiversité — moins d’un quart des fonds cartographié avec précision |
+| L’**espace extra-atmosphérique** | Il commence à **100 km** d’altitude (ligne de Kármán) : au-delà, **aucune souveraineté** nationale |
 
-## Des ressources et des positions convoitées
-En mer : ressources **halieutiques** (pêche), **hydrocarbures offshore**, **nodules polymétalliques** et terres rares des grands fonds. Dans l’espace, les **orbites** sont elles-mêmes une ressource rare, en particulier l’orbite géostationnaire (36 000 km), tout comme les fréquences radio, attribuées par l’Union internationale des télécommunications.
+## Les ressources convoitées
+| En mer | Dans l’espace |
+| Ressources **halieutiques** (pêche) | Les **orbites**, ressource rare — surtout la géostationnaire, à 36 000 km |
+| **Hydrocarbures offshore** | Les **fréquences radio**, attribuées par l’Union internationale des télécommunications |
+| **Nodules polymétalliques** et terres rares des grands fonds | — |
 
-## Un droit international ambitieux… et fragile
-- **Convention de Montego Bay (1982**, entrée en vigueur en 1994) : mer territoriale de **12 milles marins** (souveraineté pleine), **zone économique exclusive (ZEE) de 200 milles** (droits exclusifs d’exploitation), puis la **haute mer**, libre. Les grands fonds sont « patrimoine commun de l’humanité », gérés par l’Autorité internationale des fonds marins.
-- **Traité de l’espace (1967)** : l’espace est « l’apanage de l’humanité tout entière », aucune appropriation nationale n’est possible, aucune arme de destruction massive ne peut y être placée. Le traité sur la Lune (1979) n’a été ratifié par aucune grande puissance spatiale.
+## Deux textes fondateurs
+| | **Montego Bay** (1982, en vigueur 1994) | **Traité de l’espace** (1967) |
+| Le principe | Des zones de droits **graduées** | L’espace est « l’**apanage de l’humanité tout entière** » |
+| L’appropriation | Souveraineté jusqu’à 12 milles | **Aucune** appropriation nationale possible |
+| La militarisation | — | Pas d’**arme de destruction massive** en orbite |
+| Sa faiblesse | La ZEE se surveille difficilement | Le traité sur la **Lune** (1979) n’a été ratifié par **aucune** grande puissance spatiale |
 
-> Un droit qui interdit l’appropriation mais pas l’exploitation : c’est par cette brèche que passent les États et les entreprises.
+## Les zones maritimes
+| Zone | Sa largeur | Ce qu’elle donne |
+| **Mer territoriale** | **12 milles marins** | Souveraineté **pleine** |
+| **Zone économique exclusive** | **200 milles** | Droits **exclusifs d’exploitation** |
+| **Haute mer** | Au-delà | **Libre** |
+| Les **grands fonds** | — | « **Patrimoine commun de l’humanité** », gérés par l’Autorité internationale des fonds marins |
+
+> Un droit qui **interdit l’appropriation mais pas l’exploitation** : c’est par cette brèche que passent les États et les entreprises.
 
 ## Des espaces devenus vitaux
-**99 % des données numériques** mondiales transitent par des câbles sous-marins ; 80 % du commerce mondial en volume passe par la mer, via des **détroits** vulnérables (Malacca, Ormuz, Bab el-Mandeb). GPS, météo, télécommunications, renseignement : la vie quotidienne dépend de satellites. Ces deux espaces ne sont plus des marges, ce sont des infrastructures.`,
+| Fait | Ce qu’il implique |
+| **99 %** des données numériques mondiales passent par des **câbles sous-marins** | Une infrastructure invisible et vulnérable |
+| **80 %** du commerce mondial en volume passe par la mer | Via des **détroits** exposés : Malacca, Ormuz, Bab el-Mandeb |
+| GPS, météo, télécommunications, renseignement | La vie quotidienne dépend de **satellites** |
+
+> Ces deux espaces ne sont plus des **marges** : ce sont des **infrastructures**.`,
           },
           questions: [
             ['Quelle convention fixe aujourd’hui le droit de la mer ?', ['La convention de Montego Bay (1982)', 'Le traité de Versailles (1919)', 'La convention de Genève (1949)', 'Le protocole de Kyoto (1997)'], 0, 'Signée en 1982, elle entre en vigueur en 1994 et découpe l’espace maritime en zones.'],
@@ -172,19 +192,40 @@ En mer : ressources **halieutiques** (pêche), **hydrocarbures offshore**, **nod
           axe: 'De nouveaux espaces de conquête',
           lecon: {
             titre: 'De la course à la Lune au New Space',
-            cours: `La conquête spatiale n’a jamais été une aventure scientifique désintéressée : elle est née de la guerre froide, et elle est aujourd’hui redevenue un terrain de rivalité entre puissances — avec des acteurs privés en plus.
+            cours: `La conquête spatiale n’a jamais été une aventure scientifique désintéressée : née de la guerre froide, elle est redevenue un terrain de rivalité — avec des acteurs **privés** en plus.
 
-## Une conquête née de la guerre froide
-Les fusées viennent des **V2 allemands**, dont ingénieurs et plans sont récupérés par les deux Grands en 1945. La compétition est un affrontement de prestige : **Spoutnik** (1957) puis **Gagarine** (1961) pour l’URSS, **Apollo 11** (1969) pour les États-Unis, après le discours de Kennedy (1962). Chaque succès est une démonstration de supériorité technique, donc militaire : la fusée qui met un satellite en orbite peut porter une ogive.
+## Née de la guerre froide
+Les fusées viennent des **V2 allemands**, dont ingénieurs et plans sont récupérés par les deux Grands en 1945.
+
+| Date | L’événement | Pour qui |
+| **1957** | **Spoutnik**, premier satellite | URSS |
+| **1961** | **Gagarine**, premier homme dans l’espace | URSS |
+| 1962 | Le discours de Kennedy | États-Unis |
+| **1969** | **Apollo 11**, premiers pas sur la Lune | États-Unis |
+
+> Chaque succès est une démonstration de supériorité technique, **donc militaire** : la fusée qui met un satellite en orbite peut porter une **ogive**.
 
 ## Le temps de la coopération
-La détente ouvre une parenthèse : mission **Apollo-Soyouz** (1975), puis surtout la **Station spatiale internationale (ISS)**, assemblée à partir de 1998 par quinze pays. L’Europe se dote de son propre accès à l’espace avec l’**Agence spatiale européenne (1975)** et les lanceurs **Ariane**, tirés depuis Kourou.
+| Programme | Ce qu’il marque |
+| **Apollo-Soyouz** (1975) | La détente jusque dans l’espace |
+| L’**ISS**, assemblée à partir de 1998 | Quinze pays associés |
+| L’**Agence spatiale européenne** (1975) et **Ariane** | L’Europe se dote de son **propre accès** à l’espace, depuis Kourou |
 
 ## Le retour de la rivalité
-La Chine devient la troisième puissance à envoyer un homme dans l’espace (2003), pose un engin sur la face cachée de la Lune (2019) et construit sa station **Tiangong**. L’Inde réussit un alunissage près du pôle Sud (2023). Les États-Unis créent une **Space Force** (2019) et lancent le programme **Artemis** pour un retour lunaire. La militarisation avance : essais antisatellites chinois (2007), indien (2019), russe (2021).
+| Puissance | Ses jalons |
+| **Chine** | Vol habité **2003**, face cachée de la Lune **2019**, station **Tiangong** |
+| **Inde** | Alunissage près du **pôle Sud**, 2023 |
+| **États-Unis** | **Space Force** (2019), programme **Artemis** de retour lunaire |
+
+La militarisation avance : essais **antisatellites** chinois (2007), indien (2019), russe (2021).
 
 ## Le New Space
-Des entreprises privées — **SpaceX**, Blue Origin — font chuter le coût de l’accès à l’orbite grâce aux lanceurs **réutilisables** et déploient des **constellations** de milliers de satellites (Starlink). Deux conséquences : la puissance spatiale n’est plus seulement étatique, et l’orbite basse s’encombre de **débris**, menace directe pour les satellites en service.`,
+| Ce que le privé change | Sa conséquence |
+| **SpaceX**, Blue Origin : des lanceurs **réutilisables** | Le coût de l’accès à l’orbite **s’effondre** |
+| Des **constellations** de milliers de satellites (Starlink) | La puissance spatiale n’est plus **seulement étatique** |
+| — | L’orbite basse s’encombre de **débris**, menace directe pour les satellites en service |
+
+> Le thème se résume à une bascule : d’une compétition **entre deux États** à une compétition **entre puissances et entreprises**, sur un espace juridiquement inappropriable et physiquement saturé.`,
           },
           questions: [
             ['Quel satellite ouvre la conquête spatiale en 1957 ?', ['Spoutnik', 'Explorer 1', 'Vostok 1', 'Telstar'], 0, 'Le « choc du Spoutnik » soviétique pousse les États-Unis à créer la NASA en 1958.'],
@@ -202,23 +243,36 @@ Des entreprises privées — **SpaceX**, Blue Origin — font chuter le coût de
           axe: 'De nouveaux espaces de conquête',
           lecon: {
             titre: 'Contrôler la mer, c’est peser sur le monde',
-            cours: `« Qui tient la mer tient le commerce du monde » : la formule attribuée à Walter Raleigh vaut encore. La maîtrise des espaces maritimes est un attribut de puissance, et les rivalités s’y multiplient depuis que le droit y a dessiné des frontières.
+            cours: `« Qui tient la mer tient le commerce du monde » : la formule attribuée à Walter Raleigh vaut encore. La maîtrise des espaces maritimes est un **attribut de puissance**.
 
-## Une puissance qui se mesure
-Elle se lit à la flotte de guerre — **porte-avions**, sous-marins nucléaires lanceurs d’engins —, à la flotte de commerce, aux ports et aux compagnies (Maersk, CMA CGM, COSCO), mais aussi à l’étendue de la **ZEE**. La France, grâce à ses territoires ultramarins, détient la **deuxième ZEE du monde** (près de 11 millions de km²) derrière les États-Unis.
+## Ce qui se mesure
+| Critère | Ce qu’il recouvre |
+| La flotte de **guerre** | **Porte-avions**, sous-marins nucléaires lanceurs d’engins |
+| La flotte de **commerce** | Maersk, CMA CGM, COSCO |
+| Les **ports** | Capacité, hinterland, connexions |
+| L’étendue de la **ZEE** | La France en détient la **deuxième du monde** — près de 11 millions de km², derrière les États-Unis |
 
 ## Les États-Unis, puissance maritime globale
-Onze porte-avions, des bases prépositionnées sur toutes les mers, une doctrine de **liberté de navigation** (opérations FONOP) : la marine américaine garantit la sécurité des routes commerciales — et par là même son influence.
+Onze porte-avions, des bases prépositionnées sur toutes les mers, et une doctrine de **liberté de navigation** — les opérations FONOP.
 
-## Des espaces sous tension
-- **Mer de Chine méridionale** : la Chine revendique 80 à 90 % de la zone par sa « ligne en neuf traits », construit des îles artificielles militarisées, contre les revendications du Vietnam, des Philippines et de la Malaisie. La Cour permanente d’arbitrage lui a donné tort en **2016** ; Pékin ignore la sentence.
-- **Arctique** : la fonte de la banquise ouvre de nouvelles routes et l’accès aux hydrocarbures ; Russie, Canada et Danemark revendiquent l’extension de leur plateau continental.
-- **Piraterie** (golfe d’Aden, golfe de Guinée), pêche illégale, trafics : la haute mer est aussi une zone grise.
+> La marine américaine **garantit la sécurité des routes commerciales** — et par là même son influence.
 
-> Une ZEE ne se décrète pas : elle se surveille. C’est pourquoi la puissance maritime reste militaire autant que juridique.
+## Trois espaces sous tension
+| Espace | Ce qui s’y joue |
+| **Mer de Chine méridionale** | La Chine revendique 80 à 90 % de la zone par sa « **ligne en neuf traits** » et militarise des **îles artificielles**, contre le Vietnam, les Philippines, la Malaisie |
+| **Arctique** | La fonte ouvre des **routes** et l’accès aux hydrocarbures : Russie, Canada et Danemark revendiquent l’extension de leur **plateau continental** |
+| Les **zones grises** | **Piraterie** (golfe d’Aden, golfe de Guinée), pêche illégale, trafics |
+
+> En **2016**, la Cour permanente d’arbitrage a donné tort à Pékin sur la mer de Chine méridionale. **Pékin ignore la sentence** — la preuve que le droit de la mer n’a pas de gendarme.
+
+> Une ZEE ne se **décrète** pas : elle se **surveille**. C’est pourquoi la puissance maritime reste **militaire autant que juridique**.
 
 ## La France, puissance maritime par ses outre-mer
-Clipperton, la Polynésie, Kerguelen, la Réunion, la Guyane : chaque territoire ouvre une ZEE. La France entretient une marine de premier rang et des bases (Djibouti, Nouvelle-Calédonie), ce qui lui donne une voix dans l’Indo-Pacifique.`,
+| Territoire | Ce qu’il ouvre |
+| Clipperton, Polynésie, Kerguelen, la Réunion, la Guyane | Chacun ouvre une **ZEE** |
+| Bases de Djibouti, Nouvelle-Calédonie | Une **présence** permanente |
+
+> Ces territoires donnent à la France une voix dans l’**Indo-Pacifique** — un statut qu’aucun autre pays européen ne possède.`,
           },
           questions: [
             ['Quel pays détient la deuxième zone économique exclusive du monde ?', ['La France', 'Le Royaume-Uni', 'La Chine', 'Le Japon'], 0, 'Près de 11 millions de km², grâce aux territoires ultramarins.'],
@@ -236,24 +290,40 @@ Clipperton, la Polynésie, Kerguelen, la Réunion, la Guyane : chaque territoire
           axe: 'De nouveaux espaces de conquête',
           lecon: {
             titre: 'Une puissance qui prend la mer et le ciel',
-            cours: `En quarante ans, la Chine est passée d’une puissance continentale repliée à un acteur majeur des mers et de l’espace. C’est l’étude de cas qui permet de relire tout le thème depuis un seul point de vue.
+            cours: `En quarante ans, la Chine est passée d’une puissance continentale repliée à un acteur majeur des mers **et** de l’espace. C’est l’étude de cas qui permet de relire tout le thème d’un seul point de vue.
 
-## Un objectif politique affiché
-Le « **rêve chinois** » de Xi Jinping vise le « grand renouveau de la nation » pour 2049, centenaire de la République populaire. Mer et espace en sont deux instruments : ils effacent le souvenir du « siècle des humiliations », pendant lequel la Chine avait été forcée d’ouvrir ses ports.
+## L’objectif politique affiché
+Le « **rêve chinois** » de Xi Jinping vise le « grand renouveau de la nation » pour **2049**, centenaire de la République populaire.
 
-## Une puissance maritime construite en une génération
-- Une marine devenue la **première du monde en nombre de bâtiments**, avec porte-avions (Liaoning, Shandong, Fujian) et sous-marins nucléaires.
-- Sept des dix premiers **ports à conteneurs** mondiaux sont chinois (Shanghai, Ningbo, Shenzhen) ; COSCO est un armateur de premier rang.
-- Les **nouvelles routes de la soie** (2013) ont un volet maritime : investissements dans les ports du Pirée, de Gwadar, de Hambantota, base militaire à **Djibouti** (2017).
-- En mer de Chine méridionale, la construction d’**îles artificielles** militarisées transforme un rapport de force juridique en fait accompli.
+> Mer et espace en sont deux instruments : ils effacent le souvenir du « **siècle des humiliations** », pendant lequel la Chine avait été **forcée d’ouvrir ses ports**.
+
+## Une puissance maritime en une génération
+| Levier | Ce qu’il représente |
+| La **marine** | La **première du monde en nombre de bâtiments** : porte-avions Liaoning, Shandong, Fujian, et sous-marins nucléaires |
+| Les **ports** | **Sept** des dix premiers ports à conteneurs mondiaux : Shanghai, Ningbo, Shenzhen |
+| Les **routes de la soie** (2013) | Volet maritime : le Pirée, Gwadar, Hambantota, et une base militaire à **Djibouti** (2017) |
+| Les **îles artificielles** | En mer de Chine méridionale : un rapport de force juridique transformé en **fait accompli** |
 
 ## Une puissance spatiale complète
-Vol habité en **2003**, sonde sur la **face cachée de la Lune** en 2019, retour d’échantillons lunaires (Chang’e 5), rover sur Mars (2021), station **Tiangong** habitée en continu, système de navigation **Beidou** concurrent du GPS. La Chine dispose d’une chaîne complète : lanceurs, satellites, station, programme lunaire habité.
+| Jalon | Sa date |
+| Premier **vol habité** | 2003 |
+| Sonde sur la **face cachée de la Lune** | 2019 |
+| Retour d’**échantillons lunaires** (Chang’e 5) | 2020 |
+| **Rover** sur Mars | 2021 |
+| Station **Tiangong** habitée en continu | Depuis 2021 |
+| Système de navigation **Beidou** | Concurrent du GPS |
 
-> Ce que la Chine construit en mer et dans l’espace, elle le construit d’abord comme une infrastructure — puis comme un levier diplomatique.
+> La Chine dispose d’une **chaîne complète** : lanceurs, satellites, station, programme lunaire habité. Ce que peu d’États peuvent dire.
 
-## Des limites
-Dépendance aux détroits (le « dilemme de Malacca »), méfiance des voisins qui se rapprochent des États-Unis (Quad, AUKUS), coût des investissements et endettement des pays partenaires : la montée en puissance suscite des contre-alliances.`,
+> Ce que la Chine construit en mer et dans l’espace, elle le construit d’abord comme une **infrastructure** — puis comme un **levier diplomatique**.
+
+## Les limites
+| Limite | Ce qu’elle produit |
+| La dépendance aux **détroits** | Le « **dilemme de Malacca** » : l’essentiel des importations passe par un goulot qu’elle ne contrôle pas |
+| La **méfiance des voisins** | Ils se rapprochent des États-Unis : **Quad**, **AUKUS** |
+| Le **coût** des investissements | Et l’**endettement** des pays partenaires, qui alimente les critiques |
+
+> La montée en puissance suscite mécaniquement des **contre-alliances**. C’est le paradoxe classique de la puissance.`,
           },
           questions: [
             ['Quel horizon Xi Jinping fixe-t-il au « rêve chinois » de renouveau national ?', ['2049, centenaire de la République populaire', '2030', '2100', '2025'], 0, 'La date structure les grands programmes chinois, maritimes comme spatiaux.'],
@@ -274,23 +344,43 @@ Dépendance aux détroits (le « dilemme de Malacca »), méfiance des voisins q
           axe: 'Faire la guerre, faire la paix : formes de conflits et modes de résolution',
           lecon: {
             titre: 'Ce qu’on appelle « guerre », et ce qu’on appelle « paix »',
-            cours: `Le thème s’ouvre sur une question de définition. Depuis 1945, les guerres déclarées entre États sont devenues rares, mais la violence armée n’a pas reculé : elle a changé de forme, et la paix aussi.
+            cours: `Le thème s’ouvre sur une **question de définition**. Depuis 1945, les guerres déclarées entre États sont rares, mais la violence armée n’a pas reculé : elle a changé de forme — et la paix aussi.
 
 ## Définir la guerre
-Pour **Clausewitz** (De la guerre, 1832), la guerre est « la continuation de la politique par d’autres moyens » : un affrontement de volontés politiques, mené par des États, avec des armées régulières, une déclaration et un traité pour la clore. C’est le modèle de la guerre « classique », dite trinitaire (peuple, armée, gouvernement).
+Pour **Clausewitz** (*De la guerre*, 1832), la guerre est « la continuation de la politique par d’autres moyens » : un affrontement de **volontés politiques**.
 
-## Ce modèle ne suffit plus
-Depuis 1945, les guerres sont surtout **intra-étatiques** : guerres civiles, guérillas, insurrections, conflits « de basse intensité ». Elles ne se déclarent pas, elles ne se terminent pas par un traité, et les civils y sont majoritairement les victimes. On parle de **nouvelles guerres** (Mary Kaldor) ou de guerres « asymétriques » quand une armée régulière affronte un adversaire irrégulier.
+| Le modèle « classique », dit **trinitaire** | Ce qu’il suppose |
+| Les acteurs | Des **États** |
+| Les combattants | Des **armées régulières** |
+| Le début | Une **déclaration** |
+| La fin | Un **traité** |
+
+## Pourquoi ce modèle ne suffit plus
+| Depuis 1945 | Ce qui change |
+| Les guerres sont surtout **intra-étatiques** | Guerres civiles, guérillas, insurrections |
+| Elles ne se **déclarent** pas | Et ne se terminent pas par un traité |
+| Les **civils** sont majoritairement les victimes | — |
+| Les guerres sont **asymétriques** | Une armée régulière contre un adversaire irrégulier |
+
+Mary Kaldor parle de « **nouvelles guerres** ».
 
 ## Définir la paix
-- La **paix négative** est la simple absence de guerre : un cessez-le-feu, une trêve, une ligne de démarcation.
-- La **paix positive** (Johan Galtung) suppose la justice, la reconstruction, la réconciliation : elle s’installe dans la durée.
-- Kant, dans *Vers la paix perpétuelle* (1795), pose l’idée d’une fédération d’États républicains — matrice lointaine de la SDN puis de l’ONU.
+| Type de paix | Ce qu’elle est |
+| **Négative** | La simple **absence de guerre** : cessez-le-feu, trêve, ligne de démarcation |
+| **Positive** (Johan Galtung) | Elle suppose la **justice**, la reconstruction, la réconciliation — elle s’installe dans la durée |
 
-> Un conflit gelé — Chypre, la Corée, le Cachemire — est une paix négative qui dure : les armes se sont tues, le différend n’est pas réglé.
+**Kant**, dans *Vers la paix perpétuelle* (1795), pose l’idée d’une **fédération d’États républicains** — matrice lointaine de la SDN puis de l’ONU.
+
+> Un **conflit gelé** — Chypre, la Corée, le Cachemire — est une paix **négative qui dure** : les armes se sont tues, le différend n’est pas réglé.
 
 ## Les acteurs de la paix
-États, mais aussi **ONU** (Casques bleus, opérations de maintien de la paix), organisations régionales (Union africaine, OTAN, Union européenne), ONG et médiateurs privés. Les conflits contemporains mêlent tous ces acteurs, plus des groupes armés non étatiques et des sociétés militaires privées.`,
+| Acteur | Son rôle |
+| Les **États** | La négociation et la garantie |
+| L’**ONU** | Casques bleus, opérations de maintien de la paix |
+| Les organisations **régionales** | Union africaine, OTAN, Union européenne |
+| Les **ONG** et médiateurs privés | Le contact quand les États ne se parlent plus |
+
+> Les conflits contemporains mêlent **tous** ces acteurs, plus des **groupes armés non étatiques** et des **sociétés militaires privées**. C’est ce qui rend la sortie de guerre si difficile à organiser.`,
           },
           questions: [
             ['Pour Clausewitz, la guerre est…', ['la continuation de la politique par d’autres moyens', 'un accident de l’histoire', 'un phénomène purement économique', 'une maladie des sociétés'], 0, 'Elle est un instrument au service d’une fin politique, pas une fin en soi.'],
@@ -308,23 +398,35 @@ Depuis 1945, les guerres sont surtout **intra-étatiques** : guerres civiles, gu
           axe: 'Faire la guerre, faire la paix : formes de conflits et modes de résolution',
           lecon: {
             titre: 'De la guerre de Trente Ans au terrorisme et au cyber',
-            cours: `Ce jalon suit la mutation des conflits sur quatre siècles : de la guerre de religion à la guerre d’État, puis de la guerre d’État aux conflits diffus d’aujourd’hui.
+            cours: `Ce jalon suit la mutation des conflits sur quatre siècles : de la guerre de **religion** à la guerre d’**État**, puis de la guerre d’État aux **conflits diffus** d’aujourd’hui.
 
-## Un modèle : la guerre de Trente Ans (1618-1648)
-Guerre de religion devenue guerre européenne, elle ravage l’Empire et coûte peut-être un tiers de sa population à certaines régions. Elle se clôt par les **traités de Westphalie (1648)**, acte de naissance du système des États souverains : chaque État est maître chez lui, et les relations internationales deviennent des relations entre États.
+## Le modèle : la guerre de Trente Ans (1618-1648)
+Guerre de religion devenue guerre européenne, elle ravage l’Empire et coûte peut-être **un tiers** de sa population à certaines régions.
+
+> Elle se clôt par les **traités de Westphalie (1648)**, acte de naissance du **système des États souverains** : chaque État est maître chez lui, et les relations internationales deviennent des relations **entre États**.
 
 ## L’âge de la guerre totale
-La Révolution et l’Empire inventent la **levée en masse** ; la Première Guerre mondiale porte l’industrie, l’économie et les sociétés entières au service du front. La Seconde ajoute le bombardement stratégique des villes et l’extermination : la distinction entre combattants et civils s’efface.
+| Étape | Ce qu’elle ajoute |
+| La Révolution et l’Empire | La **levée en masse** |
+| La **Première Guerre mondiale** | L’industrie, l’économie et les sociétés entières au service du front |
+| La **Seconde** | Le **bombardement stratégique** des villes et l’extermination |
+
+> La distinction entre **combattants et civils s’efface**. C’est ce que résume l’expression « guerre totale ».
 
 ## Les conflits contemporains
-- **Terrorisme** : violence non étatique cherchant un effet politique par la peur — Al-Qaïda (11 septembre 2001), Daech (attentats de 2015-2016 en France). La riposte prend la forme d’une « guerre contre le terrorisme » aux contours flous (Afghanistan, Sahel).
-- **Guerres hybrides** : mélange de forces régulières, de milices, de mercenaires (groupe Wagner), de désinformation et de cyberattaques, sans déclaration — l’annexion de la Crimée en 2014 en est le cas d’école.
-- **Cyberconflictualité** : attaques contre les infrastructures (Estonie 2007, Stuxnet contre le programme nucléaire iranien), espionnage, manipulation de l’information.
+| Forme | Son principe | Ses exemples |
+| **Terrorisme** | Une violence **non étatique** cherchant un effet politique **par la peur** | Al-Qaïda (11 septembre 2001), Daech (2015-2016 en France) |
+| **Guerres hybrides** | Forces régulières, milices, mercenaires, désinformation, cyberattaques — **sans déclaration** | L’annexion de la **Crimée**, 2014 |
+| **Cyberconflictualité** | Attaques d’infrastructures, espionnage, manipulation de l’information | Estonie 2007, **Stuxnet** contre le programme nucléaire iranien |
 
-> Ces guerres n’ont ni ligne de front ni traité de paix : elles n’ont donc pas de fin claire.
+La riposte au terrorisme prend la forme d’une « **guerre contre le terrorisme** » aux contours flous : Afghanistan, Sahel.
+
+> Ces guerres n’ont **ni ligne de front ni traité de paix** : elles n’ont donc **pas de fin claire**. C’est leur trait commun, et ce qui les distingue du modèle westphalien.
 
 ## Ce qui reste de la guerre classique
-L’invasion de l’Ukraine en 2022 rappelle que la guerre interétatique de haute intensité, avec chars, artillerie et front continu, n’a pas disparu : elle coexiste désormais avec les drones et la guerre informationnelle.`,
+L’invasion de l’**Ukraine en 2022** rappelle que la guerre interétatique de **haute intensité** — chars, artillerie, front continu — n’a pas disparu.
+
+> Elle **coexiste** désormais avec les drones et la guerre informationnelle. Le mot juste n’est pas « remplacement », mais **superposition**.`,
           },
           questions: [
             ['Quels traités mettent fin à la guerre de Trente Ans en 1648 ?', ['Les traités de Westphalie', 'Le traité de Versailles', 'Le traité d’Utrecht', 'Le congrès de Vienne'], 0, 'Ils fondent le système des États souverains.'],
@@ -342,21 +444,38 @@ L’invasion de l’Ukraine en 2022 rappelle que la guerre interétatique de hau
           axe: 'Faire la guerre, faire la paix : formes de conflits et modes de résolution',
           lecon: {
             titre: 'De Westphalie à l’ONU : les institutions de la paix',
-            cours: `Faire la paix n’est pas seulement arrêter de se battre : c’est construire des règles, des institutions et des procédures qui rendent la guerre moins probable. Le jalon suit cette construction, et ses échecs.
+            cours: `Faire la paix n’est pas seulement **arrêter de se battre** : c’est construire des règles, des institutions et des procédures qui rendent la guerre **moins probable**. Le jalon suit cette construction — et ses échecs.
 
-## Les congrès et les traités
-Après Westphalie, le **congrès de Vienne (1814-1815)** organise l’Europe autour d’un équilibre entre grandes puissances et d’un « concert européen » de consultations régulières. Il stabilise le continent pour un demi-siècle, mais ignore les nationalités.
+## Le congrès de Vienne (1814-1815)
+Il organise l’Europe autour d’un **équilibre** entre grandes puissances et d’un « **concert européen** » de consultations régulières.
 
-## La Société des Nations, une tentative manquée
-Née du traité de Versailles (1919) sur une idée de **Wilson**, la SDN est la première organisation à vocation universelle chargée d’assurer la sécurité collective. Elle échoue : les États-Unis n’y adhèrent pas, elle n’a pas d’armée, la règle de l’unanimité la paralyse, et elle ne sait répondre ni à l’invasion de l’Éthiopie (1935) ni aux coups de force allemands.
+| Sa réussite | Sa limite |
+| Il stabilise le continent pour un **demi-siècle** | Il **ignore les nationalités** — ce qui prépare les crises suivantes |
+
+## La SDN, une tentative manquée
+Née du traité de Versailles (1919) sur une idée de **Wilson**, première organisation à vocation **universelle** chargée de la sécurité collective.
+
+| Cause de l’échec | Sa conséquence |
+| Les **États-Unis n’y adhèrent pas** | L’organisation naît amputée de son inspirateur |
+| Elle n’a **pas d’armée** | Aucune sanction crédible |
+| La règle de l’**unanimité** | La paralysie |
+| Aucune réponse à l’invasion de l’**Éthiopie** (1935) ni aux coups de force allemands | La démonstration publique de son impuissance |
 
 ## L’ONU
-La **Charte de San Francisco (1945)** interdit le recours à la force sauf légitime défense ou décision du Conseil de sécurité. Cinq membres permanents disposent du **droit de veto** — ce qui garantit leur participation mais bloque le Conseil dès qu’ils s’opposent. L’ONU dispose des **opérations de maintien de la paix** (Casques bleus), d’une diplomatie préventive et de la médiation du Secrétaire général.
+La **Charte de San Francisco (1945)** interdit le recours à la force — sauf **légitime défense** ou décision du **Conseil de sécurité**.
+
+| Instrument | Ce qu’il permet |
+| Le **Conseil de sécurité** | Seul habilité à autoriser la force |
+| Le **droit de veto** des cinq permanents | Il **garantit leur participation** — et **bloque** le Conseil dès qu’ils s’opposent |
+| Les **Casques bleus** | Les opérations de maintien de la paix |
+| La **médiation** du Secrétaire général | La diplomatie préventive |
 
 ## La justice comme instrument de paix
-La **Cour internationale de justice** (1945) tranche les différends entre États ; la **Cour pénale internationale** (statut de Rome, 1998, entrée en vigueur en 2002) juge les individus pour génocide, crimes de guerre et crimes contre l’humanité. Ni la Chine, ni la Russie, ni les États-Unis n’en sont parties.
+| Juridiction | Qui elle juge | Sa limite |
+| **Cour internationale de justice** (1945) | Les **États**, sur leurs différends | Elle exige leur consentement |
+| **Cour pénale internationale** (Rome 1998, en vigueur 2002) | Les **individus** : génocide, crimes de guerre, crimes contre l’humanité | **Ni la Chine, ni la Russie, ni les États-Unis** n’en sont parties |
 
-> La diplomatie ne supprime pas les rapports de force : elle leur donne un cadre où ils s’expriment autrement que par les armes.`,
+> La diplomatie ne **supprime** pas les rapports de force : elle leur donne un **cadre** où ils s’expriment autrement que par les armes. C’est la formule à retenir pour toute la partie.`,
           },
           questions: [
             ['Quel congrès réorganise l’Europe après la chute de Napoléon ?', ['Le congrès de Vienne (1814-1815)', 'Le congrès de Berlin (1878)', 'La conférence de Yalta', 'La conférence de Bandung'], 0, 'Il instaure un équilibre entre grandes puissances, le « concert européen ».'],
@@ -374,21 +493,43 @@ La **Cour internationale de justice** (1945) tranche les différends entre État
           axe: 'Faire la guerre, faire la paix : formes de conflits et modes de résolution',
           lecon: {
             titre: 'Un siècle de conflits enchevêtrés',
-            cours: `Le Moyen-Orient sert d’étude de cas parce qu’on y trouve toutes les formes de conflit du thème : guerres entre États, guerres civiles, terrorisme, interventions extérieures, et des tentatives de paix qui n’ont jamais pris.
+            cours: `Le Moyen-Orient sert d’étude de cas parce qu’on y trouve **toutes** les formes de conflit du thème : guerres entre États, guerres civiles, terrorisme, interventions extérieures — et des tentatives de paix qui n’ont jamais pris.
 
 ## Les héritages
-Le démantèlement de l’**Empire ottoman** après 1918 laisse la région sous mandats français et britannique, sur des frontières tracées de l’extérieur (accords **Sykes-Picot**, 1916). La **déclaration Balfour** (1917) promet un foyer national juif en Palestine. Ces décisions pèsent encore.
+| Décision | Sa date | Ce qu’elle laisse |
+| Démantèlement de l’**Empire ottoman** | Après 1918 | La région sous mandats français et britannique |
+| Accords **Sykes-Picot** | 1916 | Des frontières **tracées de l’extérieur** |
+| Déclaration **Balfour** | 1917 | La promesse d’un foyer national juif en Palestine |
+
+> Ces décisions **pèsent encore** : c’est le point de départ obligé de toute copie sur le thème.
 
 ## Le conflit israélo-palestinien
-Plan de partage de l’ONU (1947), création d’**Israël** (1948) et première guerre israélo-arabe, guerre des Six Jours (**1967**) et occupation de la Cisjordanie, de Gaza, du Golan et de Jérusalem-Est, guerre du Kippour (1973). Les **accords d’Oslo (1993)** posent une reconnaissance mutuelle et une autonomie palestinienne, mais le processus s’enraye : colonisation, seconde Intifada, blocage durable.
+| Date | L’événement |
+| **1947** | Plan de partage de l’ONU |
+| **1948** | Création d’**Israël**, première guerre israélo-arabe |
+| **1967** | Guerre des **Six Jours** : occupation de la Cisjordanie, de Gaza, du Golan et de Jérusalem-Est |
+| **1973** | Guerre du Kippour |
+| **1993** | **Accords d’Oslo** : reconnaissance mutuelle, autonomie palestinienne |
+
+> Le processus d’Oslo s’enraye : **colonisation**, **seconde Intifada**, blocage durable. C’est la tentative de paix la plus aboutie — et son échec structure tout ce qui suit.
 
 ## Les autres foyers
-Guerre Iran-Irak (1980-1988), guerres du Golfe (1991, 2003), guerre civile syrienne à partir de 2011, guerre au Yémen : s’y superposent la rivalité entre l’**Arabie saoudite** et l’**Iran**, la question kurde et l’implication de puissances extérieures (États-Unis, Russie, Turquie).
+| Conflit | Sa période |
+| Guerre **Iran-Irak** | 1980-1988 |
+| Guerres du **Golfe** | 1991, 2003 |
+| Guerre civile **syrienne** | Depuis 2011 |
+| Guerre au **Yémen** | Depuis 2014 |
+
+S’y superposent la rivalité entre l’**Arabie saoudite** et l’**Iran**, la **question kurde**, et l’implication de puissances extérieures : États-Unis, Russie, Turquie.
 
 ## Les ressources et les puissances
-Le pétrole et le gaz font de la région un enjeu mondial depuis les années 1930 ; le détroit d’Ormuz est un point de passage vital. Les États-Unis y ont longtemps été le garant de l’équilibre, la Russie y est revenue par la Syrie.
+| Enjeu | Ce qu’il représente |
+| Le **pétrole** et le gaz | Ils font de la région un enjeu mondial depuis les années 1930 |
+| Le détroit d’**Ormuz** | Un point de passage **vital** pour l’approvisionnement mondial |
+| Les **États-Unis** | Longtemps garants de l’équilibre régional |
+| La **Russie** | Revenue par la **Syrie** à partir de 2015 |
 
-> Aucun conflit du Moyen-Orient n’est isolé : chacun sert de terrain à des rivalités plus larges, ce qui rend les médiations si difficiles.`,
+> **Aucun conflit du Moyen-Orient n’est isolé** : chacun sert de terrain à des rivalités plus larges. C’est ce qui rend les médiations si difficiles — un accord local suppose l’accord de puissances extérieures.`,
           },
           questions: [
             ['Quels accords secrets de 1916 préparent le partage du Moyen-Orient entre la France et le Royaume-Uni ?', ['Les accords Sykes-Picot', 'Les accords de Camp David', 'Les accords d’Oslo', 'Le pacte de Bagdad'], 0, 'Ils dessinent des frontières décidées hors de la région.'],
@@ -409,25 +550,41 @@ Le pétrole et le gaz font de la région un enjeu mondial depuis les années 193
           axe: 'Histoire et mémoires',
           lecon: {
             titre: 'Une guerre longtemps sans nom',
-            cours: `Le thème commence par une distinction : l’**histoire** est un savoir critique, construit sur des sources et soumis à la discussion ; la **mémoire** est un souvenir vécu, sélectif, affectif, porté par un groupe. La guerre d’Algérie montre ce que devient un passé quand les mémoires s’affrontent.
+            cours: `Le thème commence par une **distinction**.
 
-## Une guerre niée
-De 1954 à 1962, la France parle d’« événements », d’« opérations de maintien de l’ordre » : le mot « guerre » n’est officiellement employé qu’en **1999**. Les accords d’Évian (1962) sont suivis d’**amnisties** qui interdisent les poursuites et referment le dossier.
+| | L’**histoire** | La **mémoire** |
+| Ce que c’est | Un **savoir critique** | Un **souvenir vécu** |
+| Sur quoi elle repose | Des **sources**, une méthode | L’**affect**, le témoignage |
+| Sa nature | Discutable, révisable | **Sélective**, portée par un groupe |
+
+La guerre d’Algérie montre ce que devient un passé quand les mémoires **s’affrontent**.
+
+## Une guerre longtemps sans nom
+De 1954 à 1962, la France parle d’« **événements** », d’« opérations de maintien de l’ordre ». Le mot « **guerre** » n’est officiellement employé qu’en **1999**.
+
+> Les accords d’Évian (1962) sont suivis d’**amnisties** qui **interdisent les poursuites** et referment le dossier. Le silence n’est pas un oubli : c’est une décision politique.
 
 ## Des mémoires plurielles et concurrentes
-- Les **appelés** du contingent, longtemps silencieux.
-- Les **pieds-noirs**, rapatriés en 1962, porteurs d’une mémoire de l’arrachement.
-- Les **harkis**, supplétifs abandonnés puis mal accueillis, dont le statut de victimes n’est reconnu que tardivement.
-- Les **immigrés algériens** et leurs enfants, marqués par la répression du **17 octobre 1961** à Paris.
-- Côté algérien, une mémoire d’État centrée sur le FLN et la « révolution », qui laisse peu de place aux divisions internes.
+| Groupe | Sa mémoire |
+| Les **appelés** du contingent | Longtemps **silencieux** |
+| Les **pieds-noirs** | Rapatriés en 1962 : une mémoire de l’**arrachement** |
+| Les **harkis** | Supplétifs **abandonnés**, puis mal accueillis — reconnaissance tardive |
+| Les **immigrés algériens** et leurs enfants | Marqués par la répression du **17 octobre 1961** à Paris |
+| Côté **algérien** | Une mémoire d’**État**, centrée sur le FLN et la « révolution », qui laisse peu de place aux divisions internes |
 
 ## Le travail des historiens
-À partir des années 1980-1990, l’ouverture des archives permet d’écrire l’histoire de la **torture** (Aussaresses, 2000), du 17 octobre 1961, du sort des harkis. Les travaux de **Benjamin Stora** structurent le champ ; son rapport de 2021 propose des gestes de réconciliation mémorielle.
+À partir des années 1980-1990, l’**ouverture des archives** permet d’écrire l’histoire de la **torture** (Aussaresses, 2000), du 17 octobre 1961, du sort des harkis.
+
+Les travaux de **Benjamin Stora** structurent le champ ; son **rapport de 2021** propose des gestes de réconciliation mémorielle.
 
 ## Les gestes politiques
-Reconnaissance de la guerre (1999), plaque commémorative pour le 17 octobre 1961 (2001), journée nationale d’hommage aux harkis (2001), reconnaissance de la responsabilité de la France dans l’assassinat de Maurice Audin (2018) et d’Ali Boumendjel (2021).
+| Date | Le geste |
+| **1999** | Reconnaissance du mot « guerre » |
+| **2001** | Plaque commémorative pour le 17 octobre 1961 ; journée d’hommage aux **harkis** |
+| **2018** | Responsabilité de la France dans l’assassinat de **Maurice Audin** |
+| **2021** | Reconnaissance pour **Ali Boumendjel** |
 
-> Une mémoire n’est pas une histoire : l’État peut reconnaître, l’historien doit établir. Les deux gestes ne se remplacent pas.`,
+> Une mémoire n’est pas une histoire : l’**État peut reconnaître**, l’**historien doit établir**. Les deux gestes ne se remplacent pas.`,
           },
           questions: [
             ['Quelle est la différence essentielle entre histoire et mémoire ?', ['L’histoire est un savoir critique, la mémoire un souvenir vécu et sélectif', 'La mémoire est écrite, l’histoire est orale', 'L’histoire est officielle, la mémoire est privée', 'Il n’y a aucune différence'], 0, 'L’une se discute et se démontre, l’autre se transmet et s’éprouve.'],
@@ -445,24 +602,43 @@ Reconnaissance de la guerre (1999), plaque commémorative pour le 17 octobre 196
           axe: 'Histoire et mémoires',
           lecon: {
             titre: 'Qui a voulu la guerre de 1914 ? Un siècle de débat',
-            cours: `La question des responsabilités de 1914 est le meilleur exemple d’un débat historiographique qui traverse un siècle : la réponse a changé plusieurs fois, non parce que les faits ont changé, mais parce que les sources et les questions ont changé.
+            cours: `La question des responsabilités de 1914 est le meilleur exemple d’un **débat historiographique** qui traverse un siècle : la réponse a changé plusieurs fois — non parce que les faits ont changé, mais parce que les **sources** et les **questions** ont changé.
+
+## Les quatre temps du débat
+| Moment | La thèse dominante |
+| **1919** | L’**article 231** de Versailles : l’Allemagne et ses alliés sont **responsables** |
+| Années **1920** | La bataille des **recueils de documents** : chacun se disculpe |
+| **1961** | **Fritz Fischer** : l’Allemagne poursuivait des buts **expansionnistes** |
+| Aujourd’hui | L’**engrenage** : responsabilités partagées, mais inégales |
 
 ## Le verdict de 1919
-L’**article 231** du traité de Versailles déclare l’Allemagne et ses alliés responsables des dommages : c’est la « clause de culpabilité ». Elle justifie les **réparations** et nourrit en Allemagne le sentiment d’un *Diktat*, thème massivement exploité par les nationalistes puis par les nazis.
+L’article 231 est la « **clause de culpabilité** ». Elle justifie les **réparations**.
+
+> Elle nourrit en Allemagne le sentiment d’un *Diktat*, thème **massivement exploité** par les nationalistes puis par les nazis. Une clause juridique devient une arme politique.
 
 ## La bataille des documents
-Dans les années 1920, l’Allemagne publie des recueils de documents diplomatiques pour se disculper ; la France et le Royaume-Uni répliquent. L’histoire devient un terrain de politique étrangère.
+Dans les années 1920, l’Allemagne publie des recueils diplomatiques pour se disculper ; la France et le Royaume-Uni répliquent.
+
+> L’**histoire devient un terrain de politique étrangère**. C’est l’illustration la plus nette de l’usage public du passé.
 
 ## La thèse Fischer
-En **1961**, l’historien allemand **Fritz Fischer** montre, archives à l’appui, que l’Allemagne poursuivait des buts de guerre expansionnistes et a délibérément pris le risque du conflit. La thèse fait scandale en Allemagne : elle rouvre la question de la responsabilité, cette fois de l’intérieur.
+En **1961**, l’historien **allemand** Fritz Fischer montre, **archives à l’appui**, que l’Allemagne a délibérément pris le risque du conflit.
+
+> La thèse fait scandale en Allemagne : elle rouvre la question de la responsabilité, cette fois **de l’intérieur**. Ce n’est plus le vainqueur qui accuse.
 
 ## Les lectures actuelles
-Les historiens insistent aujourd’hui sur l’**engrenage** : le jeu des alliances, la course aux armements, les plans de mobilisation rigides (plan Schlieffen), les nationalismes et l’aveuglement des dirigeants. Christopher Clark parle de « somnambules », d’autres maintiennent une responsabilité principale des empires centraux.
+| Facteur invoqué | Ce qu’il explique |
+| Le jeu des **alliances** | L’extension automatique du conflit |
+| La **course aux armements** | Le climat d’attente |
+| Les **plans de mobilisation rigides** | Le plan Schlieffen laisse peu de marge à la diplomatie |
+| Les **nationalismes** | Le consentement des opinions |
+| L’**aveuglement** des dirigeants | Christopher Clark parle de « **somnambules** » |
 
-> Le débat ne porte pas seulement sur 1914 : dire qui est responsable, c’est aussi justifier ou non le traité de Versailles, donc l’ordre européen qui en est sorti.
+D’autres historiens maintiennent une responsabilité **principale** des empires centraux.
 
-## Ce que cela apprend
-Une même série de faits admet plusieurs interprétations, mais toutes ne se valent pas : elles se jugent aux sources, à la méthode et à la capacité de rendre compte des documents connus.`,
+> Le débat ne porte pas seulement sur 1914 : dire qui est responsable, c’est **justifier ou non le traité de Versailles**, donc l’ordre européen qui en est sorti.
+
+> Ce que cela apprend : une même série de faits admet plusieurs interprétations — mais **toutes ne se valent pas**. Elles se jugent aux **sources**, à la **méthode**, et à la capacité de rendre compte des documents connus.`,
           },
           questions: [
             ['Que dispose l’article 231 du traité de Versailles ?', ['Il désigne l’Allemagne et ses alliés comme responsables des dommages', 'Il crée la Société des Nations', 'Il fixe les frontières de la Pologne', 'Il interdit l’armée allemande'], 0, 'C’est la « clause de culpabilité », fondement juridique des réparations.'],
@@ -480,22 +656,40 @@ Une même série de faits admet plusieurs interprétations, mais toutes ne se va
           axe: 'Histoire et mémoires',
           lecon: {
             titre: 'Quand la justice prend en charge le passé',
-            cours: `Juger un crime de masse, c’est établir des faits, désigner des responsables et permettre à une société de continuer à vivre ensemble. Le Rwanda et l’ex-Yougoslavie montrent deux échelles de justice, et leurs limites.
+            cours: `Juger un crime de masse, c’est **établir des faits**, **désigner des responsables** et permettre à une société de **continuer à vivre ensemble**. Le Rwanda et l’ex-Yougoslavie montrent deux échelles de justice — et leurs limites.
 
 ## Deux crimes des années 1990
-- **Rwanda, 1994** : en cent jours, le génocide des **Tutsi** fait environ 800 000 morts, planifié par le pouvoir hutu, exécuté par l’armée, les milices *interahamwe* et une partie de la population. La communauté internationale n’intervient pas.
-- **Ex-Yougoslavie, 1991-1999** : guerres d’éclatement, nettoyage ethnique, siège de Sarajevo, **massacre de Srebrenica** (juillet 1995, plus de 8 000 hommes et adolescents bosniaques musulmans), qualifié de génocide par la justice internationale.
+| | **Rwanda, 1994** | **Ex-Yougoslavie, 1991-1999** |
+| Les faits | En **cent jours**, le génocide des **Tutsi** fait environ **800 000** morts | Guerres d’éclatement, **nettoyage ethnique**, siège de Sarajevo |
+| Les auteurs | Planifié par le pouvoir hutu, exécuté par l’armée, les milices *interahamwe* et une partie de la population | Forces serbes, milices, armées des républiques |
+| Le point culminant | — | **Srebrenica**, juillet 1995 : plus de **8 000** hommes et adolescents bosniaques musulmans |
+| La communauté internationale | Elle **n’intervient pas** | Elle intervient tard |
+
+Srebrenica a été qualifié de **génocide** par la justice internationale.
 
 ## Les tribunaux internationaux
-Le Conseil de sécurité crée le **TPIY** (1993) et le **TPIR** (1994), héritiers lointains de **Nuremberg** (1945-1946), qui avait forgé la notion de crime contre l’humanité. Ils jugent des chefs d’État et des chefs militaires : Milošević (mort avant son verdict), Karadžić et Mladić condamnés à la perpétuité, Jean Kambanda, Premier ministre rwandais, condamné pour génocide. La **CPI**, permanente, prend le relais à partir de 2002.
+Créés par le Conseil de sécurité — **TPIY** (1993) et **TPIR** (1994) —, héritiers lointains de **Nuremberg** (1945-1946), qui avait forgé la notion de **crime contre l’humanité**.
 
-## La justice locale
-Le Rwanda, avec plus de cent mille détenus, rouvre les juridictions traditionnelles : les **gacaca**, tribunaux communautaires en plein air, jugent près de deux millions de dossiers entre 2002 et 2012. Rapides et proches des victimes, elles sont critiquées pour leurs garanties procédurales.
+| Accusé | L’issue |
+| **Milošević** | Mort **avant** son verdict |
+| **Karadžić** et **Mladić** | Condamnés à la **perpétuité** |
+| **Jean Kambanda**, Premier ministre rwandais | Condamné pour **génocide** |
 
-> Justice internationale et justice locale ne font pas le même travail : l’une fixe la qualification et l’exemplarité, l’autre traite la masse et la vie du village.
+La **CPI**, permanente, prend le relais à partir de **2002**.
+
+## La justice locale : les gacaca
+Le Rwanda, avec plus de **cent mille détenus**, rouvre des juridictions traditionnelles : les **gacaca**, tribunaux communautaires **en plein air**.
+
+| Ce qu’elles apportent | Ce qu’on leur reproche |
+| Près de **deux millions** de dossiers jugés entre 2002 et 2012 | Des **garanties procédurales** insuffisantes |
+| Rapidité, proximité avec les victimes | Le risque de règlements de comptes |
+
+> Justice **internationale** et justice **locale** ne font pas le même travail : l’une fixe la **qualification** et l’**exemplarité**, l’autre traite la **masse** et la **vie du village**.
 
 ## Justice et mémoire
-Les procès produisent des archives, des témoignages et une vérité judiciaire qui nourrit l’histoire. Ils ne suffisent pas : commémorations, mémoriaux (Gisozi, Srebrenica-Potočari) et enseignement prennent le relais. En France, le rapport Duclert (2021) a établi les « responsabilités accablantes » de l’État français au Rwanda.`,
+Les procès produisent des **archives**, des **témoignages** et une **vérité judiciaire** qui nourrit l’histoire. Ils ne suffisent pas : commémorations, mémoriaux (Gisozi, Srebrenica-Potočari) et **enseignement** prennent le relais.
+
+> En France, le **rapport Duclert (2021)** a établi les « responsabilités accablantes » de l’État français au Rwanda — un exemple de ce que l’**historien** peut établir là où le **juge** n’a pas été saisi.`,
           },
           questions: [
             ['Quel génocide a lieu au Rwanda en 1994 ?', ['Le génocide des Tutsi', 'Le génocide des Hutu', 'Le génocide des Twa', 'Le génocide des Bantous'], 0, 'Environ 800 000 morts en cent jours, planifiés par le pouvoir en place.'],
@@ -513,21 +707,36 @@ Les procès produisent des archives, des témoignages et une vérité judiciaire
           axe: 'Histoire et mémoires',
           lecon: {
             titre: 'Du silence d’après-guerre au devoir de mémoire',
-            cours: `Le génocide des Juifs et des Tsiganes est le cas où l’écart entre l’histoire et les mémoires est le plus visible : les faits ont été connus très tôt, mais il a fallu des décennies pour qu’ils occupent la place qu’ils ont aujourd’hui.
+            cours: `C’est le cas où l’écart entre l’**histoire** et les **mémoires** est le plus visible : les faits ont été connus **très tôt**, mais il a fallu **des décennies** pour qu’ils occupent la place qu’ils ont aujourd’hui.
 
 ## Les faits
-Entre 1941 et 1945, environ **six millions de Juifs** sont assassinés par fusillades (la « Shoah par balles »), dans les ghettos et dans les centres de mise à mort (Auschwitz-Birkenau, Treblinka, Sobibor). Le génocide des **Tsiganes**, le *Porajmos*, fait entre 200 000 et 500 000 victimes. En France, le régime de **Vichy** collabore : statut des Juifs (octobre 1940), rafle du **Vél d’Hiv** (juillet 1942), convois vers Auschwitz.
+| Victimes | L’ampleur | Les formes |
+| Les **Juifs** | environ **six millions** | Fusillades (la « Shoah par balles »), ghettos, centres de mise à mort — Auschwitz-Birkenau, Treblinka, Sobibor |
+| Les **Tsiganes** — le *Porajmos* | entre **200 000 et 500 000** | Internement, déportation, exécutions |
 
-## Le temps du silence (1945-années 1960)
-Le retour des déportés se heurte à l’indifférence ; la mémoire nationale privilégie le **résistancialisme**, l’idée d’une France massivement résistante, portée par de Gaulle comme par le PCF. Les victimes juives sont noyées dans la catégorie générale des « déportés ».
+En France, le régime de **Vichy** collabore : **statut des Juifs** (octobre 1940), rafle du **Vél d’Hiv** (juillet 1942), convois vers Auschwitz.
+
+## Le temps du silence — 1945 aux années 1960
+| Ce qui se passe | Pourquoi |
+| Le retour des déportés se heurte à l’**indifférence** | La société veut reconstruire, pas se souvenir |
+| La mémoire nationale privilégie le **résistancialisme** | L’idée d’une France massivement résistante, portée par **de Gaulle comme par le PCF** |
+| Les victimes juives sont noyées dans la catégorie « **déportés** » | La spécificité du génocide est effacée |
 
 ## Le réveil de la mémoire
-Le procès **Eichmann** à Jérusalem (**1961**), largement médiatisé, fait entendre les témoins. En France, le film *Le Chagrin et la Pitié* (1971), le livre de **Robert Paxton** *La France de Vichy* (1973) et *Shoah* de Claude Lanzmann (1985) brisent le récit rassurant.
+| Date | L’événement | Son effet |
+| **1961** | Procès **Eichmann** à Jérusalem | Largement médiatisé, il **fait entendre les témoins** |
+| **1971** | *Le Chagrin et la Pitié* | Le récit rassurant se fissure |
+| **1973** | **Robert Paxton**, *La France de Vichy* | Un historien **américain** établit la collaboration d’État |
+| **1985** | *Shoah*, de Claude Lanzmann | Le témoignage devient une forme historique |
 
 ## Le temps de la justice et de la reconnaissance
-Procès **Barbie** (1987), **Touvier** (1994), **Papon** (1998) pour complicité de crimes contre l’humanité — imprescriptibles depuis 1964. Le **discours de Jacques Chirac** au Vél d’Hiv (**1995**) reconnaît la responsabilité de l’État français. Le génocide des Tsiganes n’est reconnu par la France qu’en 2016.
+| Date | Le fait |
+| **1964** | Les crimes contre l’humanité déclarés **imprescriptibles** |
+| **1987**, **1994**, **1998** | Procès **Barbie**, **Touvier**, **Papon** |
+| **1995** | Le discours de **Jacques Chirac** au Vél d’Hiv reconnaît la responsabilité de l’**État français** |
+| **2016** | Reconnaissance par la France du génocide des **Tsiganes** |
 
-> On est passé du silence au « devoir de mémoire » : le risque nouveau n’est plus l’oubli, mais la commémoration sans connaissance.`,
+> On est passé du **silence** au « **devoir de mémoire** ». Le risque nouveau n’est plus l’**oubli**, mais la **commémoration sans connaissance** — c’est la conclusion que le programme attend.`,
           },
           questions: [
             ['Quel procès de 1961 relance la mémoire du génocide des Juifs dans le monde ?', ['Le procès Eichmann à Jérusalem', 'Le procès de Nuremberg', 'Le procès Barbie', 'Le procès Papon'], 0, 'Sa médiatisation donne enfin la parole aux témoins.'],
@@ -548,21 +757,41 @@ Procès **Barbie** (1987), **Touvier** (1994), **Papon** (1998) pour complicité
           axe: 'Les enjeux géopolitiques liés à la conservation et à la valorisation du patrimoine',
           lecon: {
             titre: 'Comment un héritage devient un bien commun',
-            cours: `Le mot « patrimoine » vient du latin *patrimonium*, le bien hérité du père. En quelques siècles, il est passé de la propriété privée à l’héritage d’une nation, puis à celui de l’humanité entière. Ce glissement est tout sauf neutre.
+            cours: `Le mot « patrimoine » vient du latin *patrimonium*, le **bien hérité du père**. En quelques siècles, il est passé de la propriété **privée** à l’héritage d’une **nation**, puis à celui de l’**humanité**. Ce glissement est tout sauf neutre.
 
 ## D’un héritage privé à un bien de la nation
-La **Révolution française** est le moment décisif : les biens du clergé, de la Couronne et des émigrés sont nationalisés, et l’État doit décider quoi en faire. Face au **vandalisme**, l’abbé Grégoire forge le mot en 1794 pour dénoncer les destructions. La Monarchie de Juillet crée en **1830** l’inspection générale des Monuments historiques, confiée à **Prosper Mérimée** en 1834 ; la loi de **1913** organise le classement et la protection.
+La **Révolution française** est le moment décisif : les biens du clergé, de la Couronne et des émigrés sont **nationalisés**, et l’État doit décider quoi en faire.
+
+| Date | Le jalon |
+| **1794** | Face au **vandalisme**, l’abbé **Grégoire** forge le mot pour dénoncer les destructions |
+| **1830** | Création de l’inspection générale des **Monuments historiques** |
+| **1834** | **Prosper Mérimée** en prend la charge |
+| **1913** | La **loi** organise le classement et la protection |
 
 ## L’élargissement du patrimoine
-Le patrimoine ne se limite plus aux châteaux et aux cathédrales : il englobe le patrimoine **industriel** (mines, usines), **rural**, **maritime**, le patrimoine du XXe siècle, et depuis 2003 le **patrimoine culturel immatériel** (savoir-faire, fêtes, langues, gastronomie).
+| Type | Ce qu’il recouvre |
+| **Industriel** | Mines, usines, cités ouvrières |
+| **Rural** et **maritime** | Paysages, bâti, savoir-faire |
+| Du **XXe siècle** | Architecture moderne, béton |
+| **Immatériel**, depuis **2003** | Savoir-faire, fêtes, langues, gastronomie |
 
 ## L’échelle mondiale
-L’**UNESCO**, créée en 1945, fait du patrimoine un enjeu international. Le sauvetage des temples d’**Abou Simbel** (1960-1968), menacés par le barrage d’Assouan, est le geste fondateur. La **convention du patrimoine mondial de 1972** crée la liste du patrimoine mondial : un bien y est inscrit s’il possède une « valeur universelle exceptionnelle ». Plus de 1 200 biens sont aujourd’hui inscrits.
+| Étape | Ce qu’elle apporte |
+| L’**UNESCO**, 1945 | Le patrimoine devient un enjeu **international** |
+| **Abou Simbel**, 1960-1968 | Le sauvetage des temples menacés par le barrage d’Assouan : le **geste fondateur** |
+| La **convention de 1972** | Elle crée la **liste du patrimoine mondial** |
+| Le critère | Une « **valeur universelle exceptionnelle** » |
 
-> Inscrire un site, c’est affirmer qu’il n’appartient plus seulement à l’État qui l’abrite : c’est aussi, pour cet État, une reconnaissance et une ressource.
+Plus de **1 200 biens** sont aujourd’hui inscrits.
+
+> Inscrire un site, c’est affirmer qu’il **n’appartient plus seulement** à l’État qui l’abrite. C’est aussi, pour cet État, une **reconnaissance** et une **ressource**.
 
 ## Une répartition inégale
-L’Europe concentre près de la moitié des inscriptions, l’Afrique moins d’un dixième : la liste reflète autant les capacités administratives et diplomatiques des États que la richesse patrimoniale réelle.`,
+| Région | Sa part des inscriptions |
+| L’**Europe** | Près de la **moitié** |
+| L’**Afrique** | Moins d’un **dixième** |
+
+> La liste reflète autant les **capacités administratives et diplomatiques** des États que la richesse patrimoniale réelle. C’est la nuance critique que le programme attend.`,
           },
           questions: [
             ['Quel événement fait passer le patrimoine d’un bien privé à un bien de la nation ?', ['La Révolution française', 'La Renaissance', 'Le Second Empire', 'La Libération'], 0, 'La nationalisation des biens du clergé et de la Couronne pose la question de leur conservation.'],
@@ -580,21 +809,35 @@ L’Europe concentre près de la moitié des inscriptions, l’Afrique moins d�
           axe: 'Les enjeux géopolitiques liés à la conservation et à la valorisation du patrimoine',
           lecon: {
             titre: 'Un héritage dont on se sert',
-            cours: `Le patrimoine n’est jamais seulement conservé : il est utilisé. Pour construire une identité, pour attirer des touristes, pour asseoir un pouvoir — ou pour l’effacer.
+            cours: `Le patrimoine n’est jamais **seulement conservé** : il est **utilisé**. Pour construire une identité, attirer des touristes, asseoir un pouvoir — ou pour l’effacer.
 
 ## Un instrument politique
-Les États se servent du patrimoine pour fabriquer un **récit national** : le Panthéon en France, la restauration des palais impériaux en Chine, la reconstruction de la vieille ville de Varsovie après 1945 comme affirmation de survie nationale. À l’inverse, détruire le patrimoine de l’autre, c’est nier son existence : destruction du pont de **Mostar** (1993), des bouddhas de **Bamiyan** par les talibans (2001), de **Palmyre** par Daech (2015).
+| Usage | Exemples |
+| **Construire** un récit national | Le **Panthéon** en France, la restauration des palais impériaux en Chine |
+| **Affirmer** une survie | La reconstruction de la **vieille ville de Varsovie** après 1945 |
+| **Nier** l’existence de l’autre | Le pont de **Mostar** (1993), les bouddhas de **Bamiyan** (2001), **Palmyre** (2015) |
+
+> Détruire le patrimoine de l’autre, c’est **nier son existence**. C’est pourquoi la destruction patrimoniale accompagne presque toujours le nettoyage ethnique.
 
 ## Le patrimoine comme arme et comme crime
-La **convention de La Haye (1954)** protège les biens culturels en cas de conflit armé. En **2016**, la CPI condamne **Ahmad al-Faqi al-Mahdi** pour la destruction des mausolées de Tombouctou : pour la première fois, la destruction du patrimoine est jugée comme crime de guerre à part entière.
+| Texte ou décision | Ce qu’il établit |
+| Convention de **La Haye**, 1954 | La protection des biens culturels en cas de **conflit armé** |
+| **CPI, 2016** : condamnation d’**Ahmad al-Faqi al-Mahdi** pour les mausolées de Tombouctou | Pour la **première fois**, la destruction du patrimoine est jugée comme **crime de guerre à part entière** |
 
 ## Le patrimoine comme ressource économique
-Le tourisme culturel est une industrie : il fait vivre des régions entières, finance la restauration, mais provoque la **surfréquentation** (Venise, Barcelone, Machu Picchu), la hausse des loyers et la muséification des centres-villes. Le label UNESCO est un argument commercial autant qu’une exigence de protection.
+| Ce qu’il apporte | Ce qu’il coûte |
+| Il fait vivre des régions entières | La **surfréquentation** : Venise, Barcelone, Machu Picchu |
+| Il finance la restauration | La **hausse des loyers** |
+| Le label UNESCO est un argument commercial | La **muséification** des centres-villes |
 
 ## Les conflits d’usage
-Qui décide de ce qui mérite d’être conservé ? Les habitants, l’État, les experts, les investisseurs ? La question des **restitutions** d’objets acquis en contexte colonial (rapport Sarr-Savoy, 2018 ; restitutions au Bénin en 2021) montre que le patrimoine engage aussi des rapports de domination hérités.
+Qui décide de ce qui mérite d’être conservé : les habitants, l’État, les experts, les investisseurs ?
 
-> Le patrimoine n’est pas un stock d’objets anciens : c’est un choix collectif, toujours révisable, sur ce qu’une société veut transmettre.`,
+| Débat | Ce qu’il révèle |
+| Les **restitutions** d’objets acquis en contexte colonial | Rapport **Sarr-Savoy** (2018), restitutions au **Bénin** (2021) |
+| — | Le patrimoine engage des **rapports de domination hérités** |
+
+> Le patrimoine n’est pas un **stock d’objets anciens** : c’est un **choix collectif**, toujours révisable, sur ce qu’une société veut transmettre.`,
           },
           questions: [
             ['Quelle convention protège les biens culturels en cas de conflit armé ?', ['La convention de La Haye (1954)', 'La convention de 1972', 'La convention de 2003', 'La convention de Genève'], 0, 'Adoptée après les destructions de la Seconde Guerre mondiale.'],
@@ -612,23 +855,39 @@ Qui décide de ce qui mérite d’être conservé ? Les habitants, l’État, le
           axe: 'Les enjeux géopolitiques liés à la conservation et à la valorisation du patrimoine',
           lecon: {
             titre: 'Conserver, restaurer, arbitrer',
-            cours: `Préserver un patrimoine, c’est répondre à trois questions : que garder, dans quel état, et avec quel argent. Aucune n’a de réponse évidente.
+            cours: `Préserver un patrimoine, c’est répondre à **trois questions** : que garder, dans quel état, et avec quel argent. Aucune n’a de réponse évidente.
 
 ## Deux doctrines de la restauration
-- **Viollet-le-Duc** (XIXe siècle) : restaurer, c’est « rétablir un édifice dans un état complet qui peut n’avoir jamais existé » — quitte à recréer (Carcassonne, Notre-Dame et ses gargouilles).
-- **John Ruskin**, à l’inverse, refuse la restauration : il faut entretenir et laisser vieillir, car chaque ajout falsifie le témoignage.
-La **charte de Venise (1964)** tranche partiellement : respecter l’authenticité des matériaux, rendre visible toute intervention nouvelle.
+| | **Viollet-le-Duc** | **John Ruskin** |
+| Sa position | Restaurer, c’est « rétablir un édifice dans un état complet **qui peut n’avoir jamais existé** » | **Refuser** la restauration : entretenir et laisser vieillir |
+| Son argument | L’unité de style prime | Chaque ajout **falsifie le témoignage** |
+| Ses exemples | Carcassonne, les gargouilles de Notre-Dame | — |
+
+La **charte de Venise (1964)** tranche partiellement : respecter l’**authenticité des matériaux**, et rendre **visible** toute intervention nouvelle.
 
 ## Les menaces
-Guerres et pillages, mais aussi le **temps**, la pollution, le **changement climatique** (érosion côtière, montée des eaux à Venise et sur les sites du Pacifique), l’urbanisation, le tourisme de masse et le manque de moyens. Le trafic illicite d’antiquités finance des groupes armés.
+| Menace | Ce qu’elle produit |
+| **Guerres** et pillages | Destruction délibérée, trafic |
+| Le **temps** et la pollution | Érosion des matériaux |
+| Le **changement climatique** | Érosion côtière, montée des eaux à Venise et sur les sites du Pacifique |
+| L’**urbanisation** et le tourisme de masse | Pression sur le bâti et les habitants |
+| Le **manque de moyens** | L’entretien différé, plus coûteux à terme |
+
+> Le **trafic illicite d’antiquités finance des groupes armés** : la préservation est aussi un enjeu de sécurité.
 
 ## Les outils
-La **liste du patrimoine mondial en péril** de l’UNESCO alerte l’opinion et débloque des aides ; un bien mal géré peut aussi être **retiré** de la liste (Dresde en 2009, Liverpool en 2021). En France : classement et inscription, architectes des Bâtiments de France, Fondation du patrimoine, **Loto du patrimoine**, souscriptions — comme celle qui a suivi l’incendie de Notre-Dame de Paris (2019).
+| Outil | Son effet |
+| La liste du **patrimoine mondial en péril** | Elle alerte l’opinion et débloque des aides |
+| Le **retrait** de la liste | Dresde en **2009**, Liverpool en **2021** : la sanction existe |
+| En France | Classement et inscription, **architectes des Bâtiments de France**, Fondation du patrimoine |
+| Le **Loto du patrimoine** et les souscriptions | Comme celle qui a suivi l’incendie de **Notre-Dame de Paris**, 2019 |
 
-> Conserver coûte. Chaque euro dépensé sur un site est un euro non dépensé ailleurs : la préservation est aussi un arbitrage politique.
+> Conserver **coûte**. Chaque euro dépensé sur un site est un euro **non dépensé ailleurs** : la préservation est aussi un **arbitrage politique**.
 
 ## Participer
-Journées européennes du patrimoine, chantiers de bénévoles, associations locales, inventaires participatifs : la préservation n’est pas réservée aux experts, elle suppose une appropriation par les habitants.`,
+Journées européennes du patrimoine, chantiers de bénévoles, associations locales, inventaires participatifs.
+
+> La préservation n’est pas réservée aux experts : elle suppose une **appropriation par les habitants**.`,
           },
           questions: [
             ['Quelle conception de la restauration Viollet-le-Duc défend-il ?', ['Rétablir l’édifice dans un état complet, quitte à recréer', 'Ne jamais intervenir', 'Reconstruire en matériaux modernes', 'Déplacer les monuments menacés'], 0, 'D’où les ajouts de Carcassonne ou les gargouilles de Notre-Dame.'],
@@ -646,24 +905,45 @@ Journées européennes du patrimoine, chantiers de bénévoles, associations loc
           axe: 'Les enjeux géopolitiques liés à la conservation et à la valorisation du patrimoine',
           lecon: {
             titre: 'Une politique publique, et une diplomatie',
-            cours: `La France est l’un des pays où le patrimoine est le plus fortement pris en charge par l’État, et où il sert le plus explicitement d’instrument d’influence à l’étranger.
+            cours: `La France est l’un des pays où le patrimoine est le plus fortement pris en charge par l’**État**, et où il sert le plus explicitement d’**instrument d’influence** à l’étranger.
 
 ## Une longue tradition d’État
-Des inventaires révolutionnaires à la loi de **1913**, de la création du **ministère des Affaires culturelles** par **André Malraux** (1959) aux **secteurs sauvegardés** de la loi Malraux (1962), l’État a construit un arsenal complet : classement, inscription, architectes des Bâtiments de France, abords protégés, sites patrimoniaux remarquables.
+| Date | Le jalon |
+| Révolution | Les premiers **inventaires** |
+| **1913** | La loi sur les monuments historiques |
+| **1959** | **André Malraux** crée le ministère des Affaires culturelles |
+| **1962** | La **loi Malraux** et les **secteurs sauvegardés** |
+
+L’arsenal est complet : classement, inscription, architectes des Bâtiments de France, abords protégés, sites patrimoniaux remarquables.
 
 ## Un patrimoine élargi
-Plus de 45 000 immeubles protégés, des milliers de musées, mais aussi le patrimoine industriel (bassin minier du Nord-Pas-de-Calais inscrit en 2012), les paysages culturels (Val de Loire, Causses et Cévennes), le patrimoine immatériel (repas gastronomique des Français, savoir-faire de la baguette, art du zinc des couvreurs parisiens).
+| Catégorie | Exemples |
+| **Immeubles protégés** | Plus de **45 000** |
+| Patrimoine **industriel** | Le bassin minier du Nord-Pas-de-Calais, inscrit en **2012** |
+| **Paysages culturels** | Val de Loire, Causses et Cévennes |
+| Patrimoine **immatériel** | Le repas gastronomique des Français, le savoir-faire de la **baguette**, l’art du zinc des couvreurs parisiens |
 
-## Le patrimoine, ressource économique
-Premier pays touristique du monde par le nombre de visiteurs internationaux, la France tire du patrimoine une part de son économie : le Louvre, Versailles, le Mont-Saint-Michel. Les **Journées européennes du patrimoine**, nées en France en **1984**, attirent chaque année des millions de visiteurs.
+## Une ressource économique
+Premier pays touristique du monde par le nombre de visiteurs internationaux : le Louvre, Versailles, le Mont-Saint-Michel.
+
+> Les **Journées européennes du patrimoine**, nées **en France en 1984**, attirent chaque année des millions de visiteurs — et ont été reprises dans toute l’Europe.
 
 ## Une diplomatie du patrimoine
-La France défend le patrimoine à l’international : accueil du siège de l’**UNESCO** à Paris, fonds **ALIPH** pour la protection du patrimoine en zone de conflit (créé en 2017 avec les Émirats), coopérations archéologiques, réseau des instituts français. Le **Louvre Abou Dabi** (2017), qui loue le nom du musée, en est la forme la plus commerciale.
+| Levier | Ce qu’il fait |
+| Le siège de l’**UNESCO** à Paris | Une centralité institutionnelle |
+| Le fonds **ALIPH**, créé en 2017 avec les Émirats | La protection du patrimoine **en zone de conflit** |
+| Coopérations archéologiques, instituts français | Un réseau mondial |
+| Le **Louvre Abou Dabi**, 2017 | La forme la plus **commerciale** : le nom du musée est loué |
 
-> Le patrimoine est pour la France un « soft power » : il projette une image, ouvre des relations, et rapporte.
+> Le patrimoine est pour la France un « **soft power** » : il projette une image, ouvre des relations, et **rapporte**.
 
 ## Des débats
-Restitutions d’œuvres aux anciennes colonies, coût de l’entretien des églises rurales, tension entre préservation et logement ou transition énergétique (isolation, éoliennes en covisibilité) : la politique du patrimoine est aussi un arbitrage permanent.`,
+| Débat | Ce qui s’oppose |
+| Les **restitutions** aux anciennes colonies | Inaliénabilité des collections publiques contre réparation historique |
+| Le **coût** de l’entretien des églises rurales | Charge des communes contre valeur patrimoniale |
+| Préservation contre **logement** ou **transition énergétique** | Isolation, éoliennes en covisibilité |
+
+> La politique du patrimoine est un **arbitrage permanent** — jamais une simple conservation.`,
           },
           questions: [
             ['Qui crée le ministère des Affaires culturelles en 1959 ?', ['André Malraux', 'Jack Lang', 'Prosper Mérimée', 'Georges Pompidou'], 0, 'Il fait du patrimoine et de sa diffusion une politique d’État à part entière.'],
@@ -684,24 +964,38 @@ Restitutions d’œuvres aux anciennes colonies, coût de l’entretien des égl
           axe: 'L’environnement, un enjeu planétaire',
           lecon: {
             titre: 'Une notion récente, une histoire longue',
-            cours: `L’environnement paraît être une évidence : le milieu qui nous entoure. C’est en réalité une construction récente, et son histoire dit beaucoup du rapport que les sociétés entretiennent avec la nature.
+            cours: `L’environnement paraît une évidence : le milieu qui nous entoure. C’est en réalité une **construction récente**, et son histoire dit beaucoup du rapport que les sociétés entretiennent avec la nature.
 
 ## Une construction culturelle
-Le rapport à la nature varie selon les époques et les civilisations : nature à dominer dans la tradition occidentale issue de la Genèse, nature-milieu dont on fait partie dans d’autres cosmologies. Le mot « environnement » ne s’impose au sens actuel qu’au **XXe siècle** ; il désigne l’ensemble des relations entre les sociétés et leur milieu — sols, eau, air, vivant.
+| Conception | Sa tradition |
+| Une nature **à dominer** | La tradition occidentale issue de la Genèse |
+| Une nature-**milieu** dont on fait partie | D’autres cosmologies |
 
-## Une notion née d’une prise de conscience
-- **XIXe siècle** : premières alertes, création des premiers **parcs nationaux** (Yellowstone, 1872), réaction des naturalistes à l’industrialisation.
-- **1972** : rapport **Halte à la croissance ?** du Club de Rome et **conférence de Stockholm**, première conférence mondiale sur l’environnement humain, qui crée le Programme des Nations unies pour l’environnement.
-- **1987** : le **rapport Brundtland** définit le **développement durable**, « qui répond aux besoins du présent sans compromettre la capacité des générations futures à répondre aux leurs ».
-- **1992** : le **sommet de Rio** installe le vocabulaire (biodiversité, climat, Agenda 21).
+> Le mot « environnement » ne s’impose au sens actuel qu’au **XXe siècle**. Il désigne l’ensemble des **relations** entre les sociétés et leur milieu : sols, eau, air, vivant.
+
+## Les jalons de la prise de conscience
+| Date | L’événement | Ce qu’il apporte |
+| **XIXe siècle** | Premiers **parcs nationaux** — Yellowstone, **1872** | La réaction des naturalistes à l’industrialisation |
+| **1972** | Rapport **Halte à la croissance ?** du Club de Rome, et **conférence de Stockholm** | La première conférence mondiale ; création du **PNUE** |
+| **1987** | Le **rapport Brundtland** | La définition du **développement durable** |
+| **1992** | Le **sommet de Rio** | Le vocabulaire s’installe : biodiversité, climat, Agenda 21 |
+
+Le développement durable « répond aux besoins du présent **sans compromettre** la capacité des générations futures à répondre aux leurs ».
 
 ## L’anthropocène
-Le terme, popularisé par **Paul Crutzen** en 2000, désigne une époque où l’humanité est devenue une force géologique : elle modifie le climat, les cycles de l’azote et du carbone, la biodiversité, la sédimentation. Le débat sur sa date de départ — Néolithique, Révolution industrielle, « grande accélération » de 1950 — est aussi un débat sur les responsabilités.
+Popularisé par **Paul Crutzen** en **2000** : une époque où l’humanité est devenue une **force géologique** — elle modifie le climat, les cycles de l’azote et du carbone, la biodiversité, la sédimentation.
 
-> Dire « environnement », c’est déjà choisir un point de vue : celui d’une nature vue depuis les sociétés qui l’habitent et la transforment.
+| Date de départ proposée | Ce qu’elle implique |
+| Le **Néolithique** | Une responsabilité **diffuse**, très ancienne |
+| La **Révolution industrielle** | La responsabilité des pays **industrialisés en premier** |
+| La « **grande accélération** » de 1950 | Une responsabilité **contemporaine**, mesurable |
+
+> Le débat sur la date est aussi un **débat sur les responsabilités**. C’est ce qui le rend politique.
 
 ## Trois échelles indissociables
-Le local (un fleuve, une forêt), le national (les politiques publiques) et le mondial (le climat, les océans) : un même problème environnemental se joue simultanément sur les trois, ce qui explique la difficulté à le gouverner.`,
+Le **local** (un fleuve, une forêt), le **national** (les politiques publiques), le **mondial** (le climat, les océans).
+
+> Un même problème environnemental se joue **simultanément** sur les trois — ce qui explique la difficulté à le gouverner.`,
           },
           questions: [
             ['Qui a popularisé le terme d’anthropocène en 2000 ?', ['Paul Crutzen', 'Rachel Carson', 'Gro Harlem Brundtland', 'James Lovelock'], 0, 'Le chimiste de l’atmosphère désigne ainsi une humanité devenue force géologique.'],
@@ -719,23 +1013,40 @@ Le local (un fleuve, une forêt), le national (les politiques publiques) et le m
           axe: 'L’environnement, un enjeu planétaire',
           lecon: {
             titre: 'Ressources, pressions et politiques de protection',
-            cours: `Exploiter et protéger ne sont pas deux moments successifs : les sociétés font les deux en même temps, et c’est l’articulation entre les deux qui fait débat.
+            cours: `Exploiter et protéger ne sont pas deux moments **successifs** : les sociétés font les deux **en même temps**, et c’est leur articulation qui fait débat.
 
 ## Exploiter
-Les sociétés puisent dans des ressources **renouvelables** (forêts, eau douce, poissons) et **non renouvelables** (pétrole, gaz, minerais). L’exploitation forestière, la pêche industrielle, l’extraction minière et l’agriculture intensive ont permis de nourrir et d’équiper une population qui a quadruplé au XXe siècle — au prix d’une pression inédite.
+| Type de ressource | Exemples |
+| **Renouvelables** | Forêts, eau douce, poissons |
+| **Non renouvelables** | Pétrole, gaz, minerais |
+
+Exploitation forestière, pêche industrielle, extraction minière et agriculture intensive ont permis de nourrir et d’équiper une population **quadruplée** au XXe siècle — au prix d’une pression inédite.
 
 ## Les pressions mesurées
-Déforestation (Amazonie, bassin du Congo, Indonésie), **surpêche** (un tiers des stocks exploités au-delà du renouvellement), érosion et salinisation des sols, stress hydrique, pollutions chimiques et plastiques, **effondrement de la biodiversité** : la sixième extinction est documentée par l’IPBES.
+| Pression | Son ampleur |
+| **Déforestation** | Amazonie, bassin du Congo, Indonésie |
+| **Surpêche** | Un **tiers** des stocks exploités **au-delà** de leur renouvellement |
+| Sols | Érosion, **salinisation** |
+| Eau | **Stress hydrique** croissant |
+| Pollutions | Chimiques et **plastiques** |
+| **Biodiversité** | La **sixième extinction**, documentée par l’IPBES |
 
 ## Protéger
-- **Aires protégées** : parcs nationaux, réserves, aires marines protégées. Objectif international de **30 % des terres et des mers protégées en 2030** (accord de Kunming-Montréal, 2022).
-- **Conventions** : CITES (1973) contre le commerce des espèces menacées, convention sur la diversité biologique (1992), protocole de **Montréal** (1987) contre les gaz destructeurs de la couche d’ozone — le succès le plus net de la coopération environnementale.
-- **Réglementations nationales** : études d’impact, principe pollueur-payeur, principe de précaution (inscrit dans la Charte de l’environnement adossée à la Constitution française en 2005).
+| Outil | Ce qu’il vise |
+| Les **aires protégées** | Parcs nationaux, réserves, aires marines — objectif de **30 % des terres et des mers en 2030** (Kunming-Montréal, 2022) |
+| **CITES**, 1973 | Le commerce des espèces menacées |
+| Convention sur la **diversité biologique**, 1992 | La protection du vivant |
+| Protocole de **Montréal**, 1987 | Les gaz destructeurs de la couche d’ozone |
+| Les **réglementations nationales** | Études d’impact, **pollueur-payeur**, **principe de précaution** |
 
-> L’ozone montre qu’un accord mondial peut fonctionner : substances identifiées, alternatives disponibles, industriels peu nombreux. Le climat réunit rarement ces trois conditions.
+En France, le principe de précaution est inscrit dans la **Charte de l’environnement**, adossée à la Constitution en **2005**.
+
+> L’**ozone** montre qu’un accord mondial **peut** fonctionner : substances **identifiées**, alternatives **disponibles**, industriels **peu nombreux**. Le climat réunit rarement ces trois conditions — c’est toute la différence.
 
 ## Des conflits d’usage
-Barrages, mines, aéroports, éoliennes, parcs naturels : chaque projet oppose des acteurs aux intérêts contraires — habitants, entreprises, ONG, États. La protection de l’environnement est un rapport de force, pas seulement une politique publique.`,
+Barrages, mines, aéroports, éoliennes, parcs naturels : chaque projet oppose habitants, entreprises, ONG et États.
+
+> La protection de l’environnement est un **rapport de force**, pas seulement une politique publique.`,
           },
           questions: [
             ['Quel protocole de 1987 a permis de réduire les gaz détruisant la couche d’ozone ?', ['Le protocole de Montréal', 'Le protocole de Kyoto', 'L’accord de Paris', 'La convention CITES'], 0, 'C’est le succès le plus net de la coopération environnementale mondiale.'],
@@ -753,26 +1064,43 @@ Barrages, mines, aéroports, éoliennes, parcs naturels : chaque projet oppose d
           axe: 'L’environnement, un enjeu planétaire',
           lecon: {
             titre: 'Un savoir scientifique devenu question diplomatique',
-            cours: `Le climat a toujours varié ; ce qui est nouveau, c’est la **vitesse** du réchauffement actuel et sa cause **humaine**. Ce constat scientifique est devenu, en trente ans, l’un des principaux sujets de négociation internationale.
+            cours: `Le climat a **toujours** varié ; ce qui est nouveau, c’est la **vitesse** du réchauffement actuel et sa cause **humaine**. Ce constat scientifique est devenu, en trente ans, l’un des principaux sujets de négociation internationale.
 
 ## Le climat a une histoire
-Optimum médiéval, **Petit Âge glaciaire** (XIVe-XIXe siècle) et ses hivers rigoureux, ses mauvaises récoltes et ses famines : les sociétés du passé ont subi des variations climatiques naturelles, étudiées par les historiens (Emmanuel Le Roy Ladurie) à partir des dates de vendanges, des registres paroissiaux et des glaciers.
+Optimum médiéval, puis **Petit Âge glaciaire** (XIVe-XIXe siècle) : hivers rigoureux, mauvaises récoltes, famines.
 
-## La construction d’un savoir
-De la découverte de l’**effet de serre** (Fourier, Tyndall, Arrhenius au XIXe siècle) aux mesures de CO₂ de Charles Keeling à Mauna Loa (1958), puis à la création du **GIEC en 1988** : le savoir se consolide, rapport après rapport, jusqu’à une certitude sur l’origine humaine du réchauffement.
+> Les historiens — **Emmanuel Le Roy Ladurie** — l’étudient à partir des **dates de vendanges**, des registres paroissiaux et des glaciers. Le climat est donc un objet d’histoire, pas seulement de science physique.
+
+## La construction du savoir
+| Étape | Ce qu’elle établit |
+| **XIXe siècle** : Fourier, Tyndall, **Arrhenius** | La découverte de l’**effet de serre** |
+| **1958** : Charles **Keeling** à Mauna Loa | La mesure continue du **CO₂** atmosphérique |
+| **1988** : création du **GIEC** | La synthèse des travaux, rapport après rapport |
+
+Jusqu’à une **certitude** sur l’origine humaine du réchauffement.
 
 ## Une gouvernance mondiale difficile
-- **1992** : convention-cadre de Rio sur les changements climatiques.
-- **1997** : protocole de **Kyoto**, contraignant mais limité aux pays développés ; les États-Unis ne le ratifient pas.
-- **2015** : **accord de Paris** (COP21), universel mais fondé sur des engagements volontaires ; objectif de contenir le réchauffement « nettement en dessous de 2 °C », en visant 1,5 °C.
+| Date | Le texte | Sa portée |
+| **1992** | Convention-cadre de **Rio** | Le cadre général |
+| **1997** | Protocole de **Kyoto** | **Contraignant**, mais limité aux pays développés — les **États-Unis ne le ratifient pas** |
+| **2015** | Accord de **Paris** (COP21) | **Universel**, mais fondé sur des engagements **volontaires** |
+
+L’objectif de Paris : contenir le réchauffement « **nettement en dessous de 2 °C** », en visant **1,5 °C**.
 
 ## Un problème géopolitique
-Les responsabilités sont **inégales** : les pays développés portent l’essentiel des émissions historiques, les pays émergents une part croissante des émissions actuelles, tandis que les États insulaires et les pays du Sud subissent les effets les plus violents. D’où les principes de **responsabilités communes mais différenciées** et les débats sur le financement (fonds « pertes et dommages », créé en 2022).
+| Groupe de pays | Sa position |
+| Les pays **développés** | L’essentiel des émissions **historiques** |
+| Les pays **émergents** | Une part croissante des émissions **actuelles** |
+| Les **États insulaires** et les pays du Sud | Ils **subissent** les effets les plus violents |
 
-> Négocier le climat, c’est négocier un partage : celui d’un budget carbone restant, donc d’un droit à se développer.
+D’où le principe des « **responsabilités communes mais différenciées** », et les débats sur le financement — le fonds « **pertes et dommages** », créé en 2022.
+
+> Négocier le climat, c’est négocier un **partage** : celui d’un **budget carbone restant**, donc d’un **droit à se développer**.
 
 ## Des effets déjà là
-Montée du niveau des mers, canicules, fonte des glaciers, migrations environnementales, tensions sur l’eau : le climat devient un facteur de conflits et de recompositions territoriales.`,
+Montée du niveau des mers, canicules, fonte des glaciers, **migrations environnementales**, tensions sur l’eau.
+
+> Le climat devient un **facteur de conflits** et de recompositions territoriales : il ne relève plus seulement de la politique environnementale.`,
           },
           questions: [
             ['En quelle année le GIEC a-t-il été créé ?', ['1988', '1972', '1997', '2015'], 0, 'Il évalue et synthétise l’état des connaissances scientifiques sur le climat.'],
@@ -790,24 +1118,44 @@ Montée du niveau des mers, canicules, fonte des glaciers, migrations environnem
           axe: 'L’environnement, un enjeu planétaire',
           lecon: {
             titre: 'Pionniers de la protection, réticents du climat',
-            cours: `Les États-Unis sont l’étude de cas du thème parce qu’ils cumulent les contraires : ils ont inventé la protection de la nature et ils ont longtemps freiné la négociation climatique.
+            cours: `Les États-Unis sont l’étude de cas du thème parce qu’ils **cumulent les contraires** : ils ont **inventé** la protection de la nature, et ils ont longtemps **freiné** la négociation climatique.
 
 ## Des pionniers de la protection
-**Yellowstone** (1872), premier parc national du monde ; **John Muir** et le Sierra Club ; **Theodore Roosevelt**, qui protège des millions d’hectares. La conception américaine sépare la **wilderness**, nature sauvage à préserver, des espaces exploités.
+| Jalon | Sa date |
+| **Yellowstone**, premier parc national du monde | **1872** |
+| **John Muir** et le Sierra Club | Fin du XIXe siècle |
+| **Theodore Roosevelt** protège des millions d’hectares | Années 1900 |
+
+> La conception américaine **sépare** la *wilderness*, nature sauvage à préserver, des espaces exploités. C’est une protection par **mise à l’écart**, non par gestion intégrée.
 
 ## Une prise de conscience précoce
-*Printemps silencieux* de **Rachel Carson** (1962) dénonce les pesticides et lance l’écologie moderne. Le premier **Jour de la Terre** (1970) rassemble vingt millions d’Américains. L’**EPA** (Agence de protection de l’environnement) est créée en **1970** sous Nixon, suivie du Clean Air Act et du Clean Water Act.
+| Date | L’événement |
+| **1962** | *Printemps silencieux* de **Rachel Carson** dénonce les pesticides et lance l’écologie moderne |
+| **1970** | Le premier **Jour de la Terre** rassemble **vingt millions** d’Américains |
+| **1970** | Création de l’**EPA**, l’Agence de protection de l’environnement — **sous Nixon** |
+| Années 1970 | **Clean Air Act**, **Clean Water Act** |
 
 ## Une puissance très émettrice
-Deuxième émetteur mondial de CO₂ derrière la Chine, mais premier en **émissions cumulées** depuis 1850 et parmi les tout premiers par habitant : mode de vie fondé sur l’automobile, l’étalement urbain, la climatisation, l’abondance énergétique. La **révolution du gaz de schiste** (fracturation hydraulique) a fait des États-Unis un exportateur d’hydrocarbures.
+| Classement | Sa position |
+| Émissions **annuelles** de CO₂ | **Deuxième**, derrière la Chine |
+| Émissions **cumulées** depuis 1850 | **Premier** |
+| Émissions **par habitant** | Parmi les tout premiers |
+
+Un mode de vie fondé sur l’**automobile**, l’étalement urbain, la climatisation, l’abondance énergétique. La **révolution du gaz de schiste** en a même fait un **exportateur** d’hydrocarbures.
 
 ## Une position internationale en dents de scie
-Signature mais non-ratification du protocole de **Kyoto** ; rôle moteur dans l’accord de **Paris** (2015) sous Obama ; **retrait** annoncé par Trump (2017, effectif en 2020) ; retour dès 2021 sous Biden, avec l’**Inflation Reduction Act** (2022), plus grand plan d’investissement climatique américain.
+| Date | La décision |
+| **Kyoto** | Signature, mais **non-ratification** |
+| **2015**, sous Obama | Rôle **moteur** dans l’accord de Paris |
+| **2017**, sous Trump | **Retrait** annoncé, effectif en 2020 |
+| **2021**, sous Biden | **Retour** ; puis l’**Inflation Reduction Act** (2022), plus grand plan d’investissement climatique américain |
 
-> Aux États-Unis, la politique environnementale change avec les majorités : c’est le fédéralisme et l’alternance qui rendent la position du pays si instable.
+> La politique environnementale change **avec les majorités** : c’est le **fédéralisme** et l’**alternance** qui rendent la position du pays si instable.
 
 ## Le rôle des contre-pouvoirs
-Les **États fédérés** (Californie et ses normes propres), les villes, les entreprises et les tribunaux mènent leur propre politique : le pays agit même quand Washington recule.`,
+Les **États fédérés** — la **Californie** et ses normes propres —, les villes, les entreprises et les **tribunaux** mènent leur propre politique.
+
+> Le pays **agit même quand Washington recule**. C’est la nuance qui manque à la plupart des copies.`,
           },
           questions: [
             ['Quel ouvrage de Rachel Carson lance l’écologie moderne en 1962 ?', ['Printemps silencieux', 'Halte à la croissance ?', 'La Terre vue du ciel', 'Notre avenir à tous'], 0, 'Il dénonce les effets des pesticides, à commencer par le DDT.'],
@@ -828,21 +1176,37 @@ Les **États fédérés** (Californie et ses normes propres), les villes, les en
           axe: 'L’enjeu de la connaissance',
           lecon: {
             titre: 'Quand le savoir devient la première ressource',
-            cours: `Une « société de la connaissance » est une société où la production, la circulation et l’usage du savoir sont devenus le principal moteur économique et le principal facteur de puissance. L’expression est récente ; le mouvement, lui, est ancien.
+            cours: `Une « société de la connaissance » est une société où la **production**, la **circulation** et l’**usage** du savoir sont devenus le principal moteur économique et le principal facteur de puissance. L’expression est récente ; le mouvement, ancien.
 
 ## Les étapes d’une longue montée
-De l’imprimerie de **Gutenberg** (vers 1450) à la **République des Lettres** des XVIIe-XVIIIe siècles, de l’*Encyclopédie* de Diderot et d’Alembert à l’**instruction obligatoire** (lois Ferry, 1881-1882), l’accès au savoir s’élargit. La recherche s’institutionnalise : académies, universités de recherche à l’allemande (modèle **Humboldt**, 1810), laboratoires industriels.
+| Étape | Sa date | Ce qu’elle élargit |
+| L’imprimerie de **Gutenberg** | vers **1450** | La reproduction du texte |
+| La **République des Lettres** | XVIIe-XVIIIe siècles | La circulation entre savants |
+| L’*Encyclopédie* de Diderot et d’Alembert | XVIIIe siècle | L’ambition de tout rassembler |
+| Le modèle **Humboldt** | **1810** | L’université **de recherche** |
+| Les **lois Ferry** | **1881-1882** | L’instruction **obligatoire** |
 
 ## Une économie de la connaissance
-Depuis les années 1990, la croissance repose de plus en plus sur l’**immatériel** : recherche et développement, brevets, logiciels, formation. L’Union européenne s’était fixé en **2000** (stratégie de Lisbonne) l’objectif de devenir « l’économie de la connaissance la plus compétitive du monde », avec une cible de **3 % du PIB** consacrés à la R&D — rarement atteinte.
+Depuis les années 1990, la croissance repose de plus en plus sur l’**immatériel** : recherche et développement, brevets, logiciels, formation.
+
+| L’objectif européen | Son résultat |
+| Stratégie de **Lisbonne**, **2000** : devenir « l’économie de la connaissance la plus compétitive du monde » | — |
+| Une cible de **3 % du PIB** consacrés à la R&D | **Rarement atteinte** |
 
 ## Massification et inégalités
-Le nombre d’étudiants dans le monde a été multiplié par plus de cinq depuis 1970 ; l’alphabétisation dépasse 86 % de la population adulte mondiale. Mais l’accès reste très inégal : **fracture numérique**, sous-financement de la recherche dans les pays du Sud, **fuite des cerveaux** vers l’Amérique du Nord et l’Europe.
+| Constat | Sa portée |
+| Le nombre d’étudiants dans le monde a été **multiplié par plus de cinq** depuis 1970 | La massification est réelle |
+| L’alphabétisation dépasse **86 %** des adultes | — |
+| La **fracture numérique** | L’accès reste très inégal |
+| Le sous-financement de la recherche au **Sud** | — |
+| La **fuite des cerveaux** | Vers l’Amérique du Nord et l’Europe |
 
-> Ce qui compte n’est plus seulement de détenir un savoir, mais d’avoir les moyens d’en produire : universités, laboratoires, données, calcul.
+> Ce qui compte n’est plus seulement de **détenir** un savoir, mais d’avoir les **moyens d’en produire** : universités, laboratoires, données, calcul.
 
 ## Les nouveaux acteurs
-Universités et États, mais aussi entreprises (les géants du numérique financent une part croissante de la recherche en intelligence artificielle), fondations, et réseaux transnationaux de chercheurs. La connaissance échappe de plus en plus au seul cadre national.`,
+Universités et États, mais aussi **entreprises** — les géants du numérique financent une part croissante de la recherche en **intelligence artificielle** —, fondations, et réseaux **transnationaux** de chercheurs.
+
+> La connaissance échappe de plus en plus au seul **cadre national**.`,
           },
           questions: [
             ['Quelle invention du milieu du XVe siècle accélère la diffusion des savoirs en Europe ?', ['L’imprimerie de Gutenberg', 'Le télescope', 'La machine à vapeur', 'Le papier'], 0, 'Elle rend possible une circulation des textes sans précédent.'],
@@ -860,23 +1224,41 @@ Universités et États, mais aussi entreprises (les géants du numérique financ
           axe: 'L’enjeu de la connaissance',
           lecon: {
             titre: 'Qui produit le savoir, et qui y accède ?',
-            cours: `Produire une connaissance suppose des moyens ; la diffuser suppose des canaux. Les deux sont très inégalement répartis, et les règles qui les encadrent sont elles-mêmes des enjeux de pouvoir.
+            cours: `Produire une connaissance suppose des **moyens** ; la diffuser suppose des **canaux**. Les deux sont très inégalement répartis, et les règles qui les encadrent sont elles-mêmes des enjeux de pouvoir.
 
 ## Comment se produit la science
-La recherche s’organise en laboratoires publics et privés, autour de financements sur projet, de publications dans des revues à **comité de lecture** et d’une évaluation par les pairs. Les grands équipements — accélérateurs, télescopes, supercalculateurs — imposent la **coopération internationale** : CERN, ITER, Station spatiale internationale.
+| Élément | Son rôle |
+| Les **laboratoires** publics et privés | Le lieu du travail |
+| Les **financements sur projet** | La sélection des recherches |
+| Les revues à **comité de lecture** | L’**évaluation par les pairs** |
+| Les **grands équipements** | Accélérateurs, télescopes, supercalculateurs |
+
+> Les grands équipements imposent la **coopération internationale** : CERN, ITER, Station spatiale internationale. Aucun État ne les finance seul.
 
 ## Une géographie très concentrée
-États-Unis, Chine, Union européenne, Japon et Corée du Sud concentrent l’essentiel de la dépense mondiale de R&D. La Chine est devenue le premier producteur d’articles scientifiques en volume et le premier déposant de **brevets**. À l’inverse, l’Afrique subsaharienne pèse moins de 1 % de la production scientifique mondiale.
+| Zone | Sa place |
+| États-Unis, Chine, Union européenne, Japon, Corée du Sud | L’**essentiel** de la dépense mondiale de R&D |
+| La **Chine** | **Premier** producteur d’articles en volume, **premier** déposant de brevets |
+| L’**Afrique subsaharienne** | Moins de **1 %** de la production scientifique mondiale |
 
 ## Diffuser : entre ouverture et fermeture
-- L’**open access** et les archives ouvertes veulent rendre les résultats accessibles gratuitement, contre le modèle payant des grands éditeurs scientifiques.
-- Les **brevets** protègent l’innovation mais réservent son usage : le débat sur les brevets des vaccins pendant la pandémie de Covid-19 l’a montré à l’échelle mondiale.
-- Le **secret** — militaire, industriel, d’État — soustrait des pans entiers de la recherche à la publication.
+| Régime | Ce qu’il fait |
+| L’*open access* et les archives ouvertes | Rendre les résultats **gratuitement** accessibles, contre le modèle payant des grands éditeurs |
+| Les **brevets** | Protéger l’innovation — mais **réserver** son usage |
+| Le **secret** militaire, industriel, d’État | Soustraire des pans entiers de la recherche à la publication |
 
-> Un savoir non publié n’existe pas pour la communauté scientifique ; un savoir publié échappe à celui qui l’a produit. Toute politique de recherche arbitre entre les deux.
+> Le débat sur les **brevets des vaccins** pendant la pandémie de Covid-19 a porté cette tension à l’échelle mondiale.
+
+> Un savoir **non publié n’existe pas** pour la communauté scientifique ; un savoir **publié échappe** à celui qui l’a produit. Toute politique de recherche **arbitre** entre les deux.
 
 ## Les menaces sur la crédibilité
-Fraudes et rétractations, revues prédatrices, financement des études par des industriels intéressés, mise en doute organisée des résultats (tabac, climat) : la confiance dans la science est devenue un enjeu politique à part entière.`,
+| Menace | Ce qu’elle produit |
+| **Fraudes** et rétractations | Le doute sur les résultats |
+| Revues **prédatrices** | La publication sans évaluation réelle |
+| Études financées par des **industriels intéressés** | Le conflit d’intérêts |
+| La **mise en doute organisée** | Le tabac, puis le climat |
+
+> La **confiance** dans la science est devenue un enjeu politique à part entière.`,
           },
           questions: [
             ['Comment s’appelle l’évaluation d’un article scientifique par d’autres chercheurs avant publication ?', ['L’évaluation par les pairs', 'L’audit externe', 'Le contrôle éditorial', 'La certification'], 0, 'C’est la procédure de base du contrôle de qualité scientifique.'],
@@ -894,21 +1276,38 @@ Fraudes et rétractations, revues prédatrices, financement des études par des 
           axe: 'L’enjeu de la connaissance',
           lecon: {
             titre: 'Savoir, pouvoir et rivalités entre puissances',
-            cours: `Le savoir n’est pas neutre politiquement : il donne un avantage militaire, économique et symbolique. Les États le savent, et cherchent à le produire, à le capter ou à le contrôler.
+            cours: `Le savoir n’est **pas neutre** politiquement : il donne un avantage militaire, économique et symbolique. Les États le savent — et cherchent à le **produire**, à le **capter** ou à le **contrôler**.
 
 ## La science sous contrainte politique
-Quand un régime décide de ce qui est vrai, la science recule : le **lyssenkisme** en URSS ruine la génétique soviétique pendant vingt ans ; la « science aryenne » nazie chasse les savants juifs ; le procès de Galilée reste le symbole du conflit entre autorité et démonstration. Les régimes autoritaires contrôlent aussi l’accès à l’information et censurent Internet.
+| Cas | Ce qu’il montre |
+| Le **lyssenkisme** en URSS | Il ruine la génétique soviétique pendant **vingt ans** |
+| La « science aryenne » nazie | Elle **chasse** les savants juifs |
+| Le procès de **Galilée** | Le symbole du conflit entre **autorité** et **démonstration** |
+
+> Quand un régime décide de **ce qui est vrai**, la science recule. Les régimes autoritaires contrôlent aussi l’accès à l’information et **censurent Internet**.
 
 ## Le savoir comme arme
-Le **projet Manhattan** (1942-1945) montre l’alliance de l’État, de l’armée et de la science : la connaissance devient une capacité militaire décisive. Après 1945, la guerre froide se joue aussi dans les laboratoires — nucléaire, espace, informatique — et les scientifiques deviennent une ressource stratégique que l’on récupère (opération Paperclip).
+Le **projet Manhattan** (1942-1945) montre l’alliance de l’**État**, de l’**armée** et de la **science** : la connaissance devient une **capacité militaire décisive**.
+
+> Après 1945, la guerre froide se joue aussi dans les **laboratoires** — nucléaire, espace, informatique. Les scientifiques deviennent une **ressource stratégique** que l’on récupère : opération **Paperclip**.
 
 ## Les rivalités actuelles
-La compétition sino-américaine porte sur les **semi-conducteurs**, l’**intelligence artificielle**, le quantique, la 5G : contrôles à l’exportation, restrictions sur Huawei, subventions massives (CHIPS Act américain, plans chinois). L’**espionnage industriel** et les cyberattaques visant les laboratoires font partie du répertoire.
+| Domaine | Ce qui s’y joue |
+| Les **semi-conducteurs** | Contrôles à l’exportation, **CHIPS Act** américain, plans chinois |
+| L’**intelligence artificielle** | La course aux modèles et aux données |
+| Le **quantique** et la **5G** | Restrictions sur **Huawei** |
+
+L’**espionnage industriel** et les **cyberattaques** visant les laboratoires font partie du répertoire.
 
 ## Le soft power du savoir
-Universités attractives, bourses, instituts culturels, classements internationaux (Shanghai) : accueillir les étudiants du monde, c’est former des élites qui garderont un lien avec le pays d’accueil. Les États-Unis en ont fait un pilier de leur influence ; la Chine développe ses instituts Confucius.
+| Instrument | Son effet |
+| Universités **attractives**, bourses | Former des élites qui garderont un lien avec le pays d’accueil |
+| Instituts culturels | Les **instituts Confucius** pour la Chine |
+| Classements internationaux — **Shanghai** | Ils orientent les flux d’étudiants |
 
-> La connaissance est à la fois une ressource que l’on protège et une influence que l’on projette : c’est ce double statut qui en fait un enjeu géopolitique.`,
+Les États-Unis en ont fait un **pilier** de leur influence.
+
+> La connaissance est à la fois une **ressource que l’on protège** et une **influence que l’on projette** : c’est ce double statut qui en fait un enjeu géopolitique.`,
           },
           questions: [
             ['Qu’est-ce que le lyssenkisme ?', ['Une doctrine imposée par le pouvoir soviétique qui a ruiné la génétique', 'Une théorie physique russe', 'Un mouvement d’ouverture scientifique', 'Une méthode agricole reconnue'], 0, 'Un cas d’école de science soumise à l’idéologie.'],
@@ -926,26 +1325,44 @@ Universités attractives, bourses, instituts culturels, classements internationa
           axe: 'L’enjeu de la connaissance',
           lecon: {
             titre: 'Un espace sans frontières, mais pas sans puissance',
-            cours: `Le cyberespace est le dernier des « nouveaux espaces » du programme. Il n’a pas de territoire, mais il a une géographie très concrète : des câbles, des serveurs, des normes — et des États qui cherchent à le contrôler.
+            cours: `Le cyberespace est le dernier des « nouveaux espaces » du programme. Il n’a **pas de territoire**, mais il a une géographie très concrète : des **câbles**, des **serveurs**, des **normes** — et des États qui cherchent à le contrôler.
 
 ## Trois couches
-- Une couche **matérielle** : câbles sous-marins, data centers, satellites, terminaux. Elle est localisée, donc vulnérable et soumise à des souverainetés.
-- Une couche **logicielle** : protocoles, systèmes d’exploitation, normes. Elle est dominée par quelques acteurs.
-- Une couche **sémantique** : les contenus, les réseaux sociaux, l’information — c’est là que se jouent les batailles d’influence.
+| Couche | Ce qu’elle contient | Ce qui s’y joue |
+| **Matérielle** | Câbles sous-marins, data centers, satellites, terminaux | Elle est **localisée**, donc vulnérable et soumise à des souverainetés |
+| **Logicielle** | Protocoles, systèmes d’exploitation, normes | Elle est **dominée par quelques acteurs** |
+| **Sémantique** | Contenus, réseaux sociaux, information | Les **batailles d’influence** |
 
 ## Une origine militaire devenue mondiale
-**ARPANET** (1969) naît d’un programme de recherche militaire américain ; le **web** est inventé au CERN par Tim Berners-Lee (1989-1991) et donné au domaine public. Cette histoire explique le poids durable des États-Unis dans la gouvernance technique (ICANN, standards, entreprises dominantes).
+| Date | L’étape |
+| **1969** | **ARPANET**, issu d’un programme de recherche militaire américain |
+| **1989-1991** | Le **web**, inventé au CERN par Tim Berners-Lee et **donné au domaine public** |
+
+> Cette histoire explique le **poids durable des États-Unis** dans la gouvernance technique : ICANN, standards, entreprises dominantes.
 
 ## Une conflictualité réelle
-Cyberattaques contre l’Estonie (2007), **Stuxnet** contre le nucléaire iranien, rançongiciels contre des hôpitaux, vols de données, ingérences électorales et campagnes de désinformation, révélations de **Snowden** (2013) sur la surveillance de masse. La cyberdéfense devient une composante des armées (commandement de cyberdéfense français, cyber reconnu comme domaine d’opérations par l’OTAN en 2016).
+| Type | Exemples |
+| **Cyberattaques** d’État | **Estonie** (2007), **Stuxnet** contre le nucléaire iranien |
+| **Cybercriminalité** | Rançongiciels contre des hôpitaux, vols de données |
+| **Ingérences** | Manipulations électorales, campagnes de désinformation |
+| **Surveillance de masse** | Révélée par **Snowden**, 2013 |
+
+La cyberdéfense devient une composante des armées : commandement français dédié, et le cyber **reconnu comme domaine d’opérations par l’OTAN en 2016**.
 
 ## Des souverainetés qui se referment
-La Chine construit un Internet contrôlé (« Grande Muraille numérique ») ; la Russie teste un réseau autonome ; l’Union européenne légifère (**RGPD**, 2018 ; DSA et DMA) pour imposer ses normes aux plateformes. On parle de **fragmentation** de l’Internet, ou *splinternet*.
+| Acteur | Sa stratégie |
+| La **Chine** | Un Internet contrôlé : la « **Grande Muraille numérique** » |
+| La **Russie** | Elle teste un **réseau autonome** |
+| L’**Union européenne** | Elle **légifère** : **RGPD** (2018), DSA et DMA, pour imposer ses normes aux plateformes |
 
-> Le cyberespace n’efface pas les frontières : il les déplace vers les câbles, les normes et les serveurs.
+On parle de **fragmentation** de l’Internet, ou *splinternet*.
+
+> Le cyberespace **n’efface pas les frontières** : il les **déplace** vers les câbles, les normes et les serveurs.
 
 ## Et de la coopération
-Normes techniques partagées, coopération policière contre la cybercriminalité (convention de Budapest, 2001), CERT nationaux, discussions à l’ONU sur un comportement responsable des États : la coopération existe, mais elle reste en retard sur les usages.`,
+Normes techniques partagées, coopération policière contre la cybercriminalité (**convention de Budapest**, 2001), CERT nationaux, discussions à l’ONU sur un comportement responsable des États.
+
+> La coopération existe — mais elle reste **en retard sur les usages**.`,
           },
           questions: [
             ['Quel réseau, ancêtre d’Internet, naît en 1969 d’un programme militaire américain ?', ['ARPANET', 'Minitel', 'Usenet', 'Ethernet'], 0, 'Cette origine explique le poids durable des États-Unis dans la gouvernance du réseau.'],

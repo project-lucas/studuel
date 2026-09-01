@@ -12,19 +12,40 @@ export default {
           titre: 'Les paramètres du son',
           lecon: {
             titre: 'Hauteur, durée, intensité, timbre',
-            cours: `Tout son musical se décrit avec quatre paramètres. Les nommer, c'est pouvoir parler précisément de ce qu'on entend.
+            cours: `Tout son musical se décrit avec quatre paramètres. Les nommer, c’est pouvoir parler précisément de ce qu’on entend.
+
+## Les quatre paramètres
+| Le paramètre | Ce qu’il décrit | Son vocabulaire |
+| La **hauteur** | Aigu ou grave | La **fréquence**, en hertz (Hz) |
+| La **durée** | Long ou court | Ronde, blanche, noire, croche |
+| L’**intensité** | Le volume | *piano*, *forte* |
+| Le **timbre** | La « couleur » du son | Les **harmoniques** |
 
 ## La hauteur
-Un son est **aigu** ou **grave** selon sa fréquence, mesurée en hertz (Hz). Plus la fréquence est élevée, plus le son est aigu. Le la du diapason est à 440 Hz.
+~ Fréquence élevée → son aigu · fréquence basse → son grave
+
+= Le la du diapason est à 440 Hz
 
 ## La durée
-Un son est long ou court. En notation, les figures de note codent ces durées : ronde, blanche, noire, croche — chacune vaut la moitié de la précédente.
+Les **figures de note** codent les durées.
 
-## L'intensité
-C'est le volume : **piano** (doux), **forte** (fort), avec les nuances intermédiaires (mezzo forte, fortissimo). Le **crescendo** augmente progressivement l'intensité, le **decrescendo** la diminue.
+~ Ronde → blanche → noire → croche
+
+!> Chaque figure vaut **la moitié** de la précédente. Ce n’est pas une liste à apprendre : c’est une division par deux à chaque fois.
+
+## L’intensité
+| La nuance | Ce qu’elle veut dire |
+| ***piano*** | Doux |
+| ***mezzo forte*** | Moyennement fort |
+| ***forte*** | Fort |
+| ***fortissimo*** | Très fort |
+
+| Le mouvement | Ce qu’il fait |
+| Le ***crescendo*** | L’intensité **augmente** progressivement |
+| Le ***decrescendo*** | Elle **diminue** |
 
 ## Le timbre
-C'est la « couleur » du son : ce qui permet de distinguer une flûte d'un violon jouant exactement la même note. Le timbre vient des harmoniques produites par l'instrument.`,
+> C’est le timbre qui permet de distinguer une **flûte** d’un **violon** jouant **exactement la même note**. Il vient des harmoniques produites par l’instrument.`,
           },
           questions: [
             ['Quel paramètre distingue un son aigu d’un son grave ?', ['La hauteur', 'L’intensité', 'La durée', 'Le timbre'], 0, 'Elle dépend de la fréquence, mesurée en hertz.'],
@@ -41,19 +62,35 @@ C'est la « couleur » du son : ce qui permet de distinguer une flûte d'un viol
           titre: 'La voix et les familles d’instruments',
           lecon: {
             titre: 'Qui produit le son ?',
-            cours: `Un orchestre se lit d'abord par familles.
+            cours: `Un orchestre se lit d’abord par familles. Ce qui les distingue, c’est la façon dont naît le son.
 
 ## Les cordes
-**Frottées** (violon, alto, violoncelle, contrebasse), **pincées** (harpe, guitare), **frappées** (piano). Le violon est le plus aigu de la famille frottée, la contrebasse la plus grave.
+| La famille | Comment le son naît | Ses instruments |
+| **Frottées** | L’archet | Violon, alto, violoncelle, contrebasse |
+| **Pincées** | Le doigt | Harpe, guitare |
+| **Frappées** | Un marteau | Piano |
+
+~ Violon (le plus aigu) → alto → violoncelle → contrebasse (la plus grave)
 
 ## Les vents
-**Bois** : flûte, clarinette, hautbois, basson, saxophone (classé bois malgré son métal, car le son naît d'une anche). **Cuivres** : trompette, cor, trombone, tuba, où le son naît de la vibration des lèvres.
+| La famille | Comment le son naît | Ses instruments |
+| Les **bois** | Une **anche** ou un souffle sur un biseau | Flûte, clarinette, hautbois, basson, saxophone |
+| Les **cuivres** | La **vibration des lèvres** | Trompette, cor, trombone, tuba |
+
+!> Le **saxophone** est classé dans les **bois**, **malgré son métal** : ce n’est pas la matière qui classe un instrument, c’est la façon dont le son est produit.
 
 ## Les percussions
-**Déterminées** (elles produisent une hauteur précise : xylophone, timbales) ou **indéterminées** (caisse claire, cymbales, triangle).
+| Le type | Ce qu’il produit | Ses instruments |
+| **Déterminées** | Une **hauteur précise** | Xylophone, timbales |
+| **Indéterminées** | Pas de hauteur définie | Caisse claire, cymbales, triangle |
 
 ## La voix
-Voix de femmes : soprano, mezzo-soprano, alto. Voix d'hommes : ténor, baryton, basse. Le chœur peut être **a cappella** (sans accompagnement) ou accompagné.`,
+| Les voix de femmes | Les voix d’hommes |
+| Soprano | Ténor |
+| Mezzo-soprano | Baryton |
+| Alto | Basse |
+
+Le chœur peut être ***a cappella*** — sans accompagnement — ou accompagné.`,
           },
           questions: [
             ['À quelle famille appartient le saxophone ?', ['Les bois', 'Les cuivres', 'Les cordes', 'Les percussions'], 0, 'Le son naît d’une anche, ce qui le classe dans les bois malgré son métal.'],
@@ -70,19 +107,39 @@ Voix de femmes : soprano, mezzo-soprano, alto. Voix d'hommes : ténor, baryton, 
           titre: 'Rythme, pulsation et tempo',
           lecon: {
             titre: 'Ce qui met la musique en mouvement',
-            cours: `Trois notions qu'on confond souvent, et qu'il faut distinguer.
+            cours: `Pulsation, tempo, rythme : trois notions qu’on confond souvent, et qu’il faut distinguer.
 
 ## La pulsation
-C'est le battement régulier sous-jacent, celui qu'on tape du pied. Elle ne s'entend pas toujours, mais on la sent : c'est la grille sur laquelle tout se place.
+Le **battement régulier** sous-jacent, celui qu’on tape du pied.
+
+!> Elle **ne s’entend pas toujours**, mais on la **sent** : c’est la grille sur laquelle tout se place.
 
 ## Le tempo
-C'est la **vitesse** de cette pulsation, en battements par minute (bpm). Les indications italiennes traditionnelles : *largo* (très lent), *adagio* (lent), *andante* (allant), *allegro* (vif), *presto* (très rapide).
+La **vitesse** de cette pulsation, en battements par minute (bpm).
+
+| L’indication italienne | Sa vitesse |
+| ***largo*** | Très lent |
+| ***adagio*** | Lent |
+| ***andante*** | Allant |
+| ***allegro*** | Vif |
+| ***presto*** | Très rapide |
 
 ## Le rythme
-C'est l'organisation des durées **par-dessus** la pulsation : les notes longues et courtes qui dessinent une figure reconnaissable. Deux morceaux au même tempo peuvent avoir des rythmes très différents.
+L’organisation des durées **par-dessus** la pulsation : les notes longues et courtes qui dessinent une figure reconnaissable.
+
+> Deux morceaux au **même tempo** peuvent avoir des **rythmes très différents**. C’est ce qui distingue les deux notions.
 
 ## La mesure
-Les pulsations se groupent en mesures : à **2 temps**, **3 temps** (la valse) ou **4 temps** (le plus courant). Le premier temps est le temps fort.`,
+Les pulsations se groupent en **mesures**.
+
+| La mesure | Ce qu’elle donne |
+| À **2 temps** | La marche |
+| À **3 temps** | La **valse** |
+| À **4 temps** | La plus courante |
+
+!> Le **premier temps** est le **temps fort**. C’est lui qu’on cherche quand on veut « retrouver la mesure ».
+
+~ La pulsation (le battement) → le tempo (sa vitesse) → le rythme (ce qu’on pose dessus) → la mesure (comment on la groupe)`,
           },
           questions: [
             ['Qu’est-ce que la pulsation ?', ['Le battement régulier sous-jacent', 'La vitesse de la musique', 'L’organisation des durées', 'La hauteur des notes'], 0, 'C’est ce qu’on tape du pied.'],
@@ -106,17 +163,24 @@ Les pulsations se groupent en mesures : à **2 temps**, **3 temps** (la valse) o
             titre: 'Du Moyen Âge à aujourd’hui',
             cours: `Situer une œuvre dans le temps, c'est déjà comprendre pourquoi elle sonne ainsi.
 
-## Moyen Âge et Renaissance
-Le **chant grégorien** (monodique, en latin, sans accompagnement) domine le Moyen Âge. La Renaissance développe la **polyphonie** : plusieurs voix indépendantes superposées.
+## Les grandes périodes
+| La période | Ses dates | Son trait dominant | Ses figures |
+| **Moyen Âge** | Jusqu'au XVe | Le **chant grégorien** : monodique, en latin, sans accompagnement | — |
+| **Renaissance** | XVe-XVIe | La **polyphonie** : plusieurs voix indépendantes superposées | — |
+| **Baroque** | 1600-1750 | Basse continue, ornementation, naissance de l'**opéra** | **Bach**, **Vivaldi**, **Haendel**, Monteverdi |
+| **Classique** | 1750-1820 | L'**équilibre** et la clarté | **Mozart**, **Haydn**, le premier **Beethoven** |
+| **Romantique** | 1820-1900 | L'**expression du sentiment**, l'ampleur | **Chopin**, **Berlioz**, **Wagner** |
+| **XXe siècle** | — | La **rupture avec la tonalité** | **Debussy**, **Stravinsky**, Schoenberg |
+| Musiques **actuelles** | Depuis 1900 | L'enregistrement change tout | Jazz, rock, électronique, rap |
 
-## Baroque (1600-1750)
-Naissance de l'**opéra** (Monteverdi), de la fugue et du concerto. Basse continue et ornementation. Figures : **Bach**, **Vivaldi**, **Haendel**.
+## Le Baroque
+| L'innovation | Ce qu'elle apporte |
+| L'**opéra** | Le théâtre chanté |
+| La **fugue** | L'écriture savante de l'imitation |
+| Le **concerto** | L'opposition soliste et orchestre |
 
-## Classique (1750-1820) et romantique (1820-1900)
-Le classicisme cherche l'équilibre et la clarté : **Mozart**, **Haydn**, le premier **Beethoven**. Le romantisme cherche l'expression du sentiment et l'ampleur : **Chopin**, **Berlioz**, **Wagner**.
-
-## XXe siècle et musiques actuelles
-Rupture avec la tonalité (**Debussy**, **Stravinsky**, Schoenberg), puis explosion des musiques enregistrées : jazz, rock, musiques électroniques, rap. La technologie devient un instrument à part entière.`,
+## Le XXe siècle et après
+> La **technologie** devient un instrument à part entière : studio, synthétiseur, échantillonneur, ordinateur.`,
           },
           questions: [
             ['Le chant grégorien est…', ['Monodique et en latin', 'Polyphonique et en français', 'Accompagné à l’orgue', 'Chanté à deux voix'], 0, 'Une seule ligne mélodique, sans accompagnement.'],
@@ -136,16 +200,28 @@ Rupture avec la tonalité (**Debussy**, **Stravinsky**, Schoenberg), puis explos
             cours: `Écouter, c'est repérer ce qui revient et ce qui change.
 
 ## Les formes simples
-**Forme strophique** : le même thème avec des paroles différentes (la chanson à couplets). **Forme AABA** : très répandue dans la chanson et le jazz. **Refrain-couplet** : l'alternance la plus familière.
+| La forme | Son principe | Où on la trouve |
+| **Strophique** | Le même thème, des paroles différentes | La chanson à couplets |
+| **AABA** | Trois fois le thème, un pont au milieu | Chanson et jazz |
+| **Couplet-refrain** | L'alternance la plus familière | La chanson populaire |
 
 ## Le rondo
-Un thème principal A revient entre des épisodes contrastés : **A-B-A-C-A**. La forme est fondée sur le retour.
+Un thème principal **A** revient entre des épisodes contrastés :
+
+**A – B – A – C – A**
+
+> La forme est fondée sur le **retour**.
 
 ## Le thème et variations
-Un thème est exposé puis transformé : changement de rythme, d'harmonie, de mode, d'instrumentation. Le thème reste reconnaissable sous ses déguisements.
+| L'élément | Ce qui se passe |
+| Le **thème** | Il est d'abord exposé simplement |
+| Les **variations** | Changement de rythme, d'harmonie, de mode, d'instrumentation |
+| Le fil | Le thème reste **reconnaissable** sous ses déguisements |
 
 ## Le canon et la fugue
-Dans le **canon**, une voix imite exactement une autre à distance (*Frère Jacques*). La **fugue** développe cette imitation de façon savante, avec un sujet, une réponse et des épisodes.`,
+| La forme | Son principe |
+| Le **canon** | Une voix imite **exactement** une autre, à distance — *Frère Jacques* |
+| La **fugue** | Elle développe cette imitation de façon savante : un **sujet**, une **réponse**, des **épisodes** |`,
           },
           questions: [
             ['Quelle est la structure d’un rondo ?', ['A-B-A-C-A', 'A-A-B-A', 'A-B-C-D', 'A-B'], 0, 'Le thème principal revient entre des épisodes contrastés.'],
@@ -165,16 +241,36 @@ Dans le **canon**, une voix imite exactement une autre à distance (*Frère Jacq
             cours: `Une musique n'existe jamais hors de son contexte.
 
 ## Musique et engagement
-Chanson de révolte et musique de contestation : le blues né de l'esclavage et de la ségrégation, la chanson engagée française, le rap comme parole des quartiers, les hymnes de mouvements sociaux. La musique donne une voix collective.
+| La musique | Ce qu'elle porte |
+| Le **blues** | Né de l'esclavage et de la ségrégation |
+| La **chanson engagée** française | La contestation politique |
+| Le **rap** | La parole des quartiers |
+| Les **hymnes** de mouvements sociaux | La cohésion d'une lutte |
+
+> La musique donne une **voix collective**.
 
 ## Musique et pouvoir
-Les régimes autoritaires ont toujours cherché à contrôler la musique : censure, musiques officielles, artistes interdits. À l'inverse, un hymne national fabrique de l'unité.
+| Le procédé | Son but |
+| La **censure** | Faire taire |
+| Les **musiques officielles** | Célébrer le régime |
+| Les artistes **interdits** | Effacer une opposition |
+| L'**hymne national** | Fabriquer de l'unité |
 
 ## Musique et image
-Au cinéma, la musique **anticipe** (elle prévient d'un danger), **contredit** (une valse sur une scène violente) ou **soutient** l'image. Le *leitmotiv* associe un thème à un personnage.
+| Le rapport à l'image | Son effet |
+| La musique **anticipe** | Elle prévient d'un danger |
+| Elle **contredit** | Une valse sur une scène violente |
+| Elle **soutient** | Elle amplifie l'émotion visible |
+| Le *leitmotiv* | Un thème associé à un personnage |
 
 ## L'industrie musicale aujourd'hui
-Enregistrement, diffusion, streaming, algorithmes de recommandation : la façon dont on découvre la musique a changé plus vite que la musique elle-même. Le droit d'auteur rémunère la création.`,
+| L'étape | Sa transformation |
+| L'**enregistrement** | Il fige et diffuse |
+| Le **streaming** | Il rend tout disponible |
+| Les **algorithmes** de recommandation | Ils décident de ce qu'on écoute |
+| Le **droit d'auteur** | Il rémunère la création |
+
+> La façon dont on découvre la musique a changé plus vite que la musique elle-même.`,
           },
           questions: [
             ['Le blues est né…', ['De l’expérience de l’esclavage et de la ségrégation', 'Dans les cours européennes', 'Au XXIe siècle', 'De la musique baroque'], 0, 'Il puise dans les chants de travail et les spirituals.'],
@@ -196,19 +292,35 @@ Enregistrement, diffusion, streaming, algorithmes de recommandation : la façon 
           titre: 'Langage musical et analyse',
           lecon: {
             titre: 'Tonalité, mode et harmonie',
-            cours: `Analyser, c'est nommer ce qui produit l'effet ressenti.
+            cours: `Analyser, ce n’est pas juger : c’est **nommer ce qui produit l’effet ressenti**. Quatre outils suffisent — la tonalité, l’accord, la cadence, la texture.
 
 ## Tonalité et modes
-Le système **tonal** organise les sons autour d'une note centrale, la tonique. Le mode **majeur** est perçu comme lumineux, le **mineur** comme sombre — perception culturelle plus que naturelle. Les musiques modales (grégorien, musiques traditionnelles, jazz modal) reposent sur d'autres échelles.
+Le système **tonal** organise les sons autour d’une note centrale, la **tonique**. Tout le reste s’entend par rapport à elle.
 
-## L'accord et la cadence
-Un **accord** superpose au moins trois sons. La **cadence** est la formule qui conclut une phrase : la cadence parfaite (dominante → tonique) donne un sentiment d'achèvement, la cadence suspensive laisse en attente.
+| Mode | Ce qu’on perçoit | Réserve |
+| Majeur | Lumineux, ouvert | Perception culturelle, pas naturelle |
+| Mineur | Sombre, tendu | Idem : une berceuse mineure n’est pas triste partout |
+| Modal | Ni l’un ni l’autre : une autre échelle | Grégorien, musiques traditionnelles, jazz modal |
+
+## L’accord et la cadence
+Un **accord** superpose au moins trois sons. La **cadence** est la formule qui conclut une phrase — c’est elle qui dit à l’oreille si c’est fini.
+
+| Cadence | Le mouvement | L’effet |
+| Parfaite | Dominante → tonique | Achèvement, la phrase se ferme |
+| Suspensive | On s’arrête sur la dominante | Attente, la phrase reste ouverte |
+| Rompue | Dominante → autre degré | Surprise, l’attente est déjouée |
 
 ## La texture
-**Monodie** (une seule ligne), **homophonie** (une mélodie accompagnée), **polyphonie** (plusieurs lignes indépendantes), **hétérophonie** (variantes simultanées d'une même ligne).
+| Texture | Combien de lignes | Exemple |
+| Monodie | Une seule | Chant grégorien |
+| Homophonie | Une mélodie accompagnée | Chanson, choral |
+| Polyphonie | Plusieurs, indépendantes | Fugue, motet |
+| Hétérophonie | Une seule, en variantes simultanées | Musiques traditionnelles |
 
 ## Analyser une œuvre
-Repérer la forme, la texture, l'instrumentation, le tempo, le mode, et surtout ce qui **change** : c'est au moment de la rupture que l'intention du compositeur se lit le mieux.`,
+Repérer la forme, la texture, l’instrumentation, le tempo, le mode — puis, surtout, repérer ce qui **change**.
+
+> C’est au moment de la rupture que l’intention du compositeur se lit le mieux : un changement de texture ou de mode est toujours un geste, jamais un hasard.`,
           },
           questions: [
             ['Qu’est-ce que la tonique ?', ['La note centrale autour de laquelle s’organise la tonalité', 'La note la plus aiguë', 'Le premier instrument', 'La note finale d’une gamme chromatique'], 0, 'Tout le système tonal gravite autour d’elle.'],
@@ -225,19 +337,29 @@ Repérer la forme, la texture, l'instrumentation, le tempo, le mode, et surtout 
           titre: 'Création et technologies',
           lecon: {
             titre: 'Composer avec les machines',
-            cours: `Depuis un siècle, la technologie n'accompagne plus la musique : elle la compose.
+            cours: `Depuis un siècle, la technologie n’accompagne plus la musique : elle la **compose**. Chaque outil déplace la frontière entre jouer et fabriquer.
 
-## De l'enregistrement au studio
-Le microphone, le disque puis le multipiste transforment l'œuvre : le studio devient un instrument, et la version enregistrée devient la référence, alors qu'elle n'était au départ qu'une trace.
+## Un siècle en cinq étapes
+| Date | L’outil | Ce qu’il change |
+| Années 1900 | Microphone et disque | L’œuvre devient un objet qu’on possède |
+| 1948 | Musique concrète (Schaeffer) | Le son enregistré du réel devient matériau |
+| Années 1950 | Le multipiste | Le studio devient un instrument |
+| 1983 | La norme MIDI | Les machines dialoguent entre elles |
+| Aujourd’hui | Échantillonnage, IA générative | La question de l’auteur se rouvre |
+
+## De l’enregistrement au studio
+Le microphone, le disque puis le multipiste transforment le statut de l’œuvre : la **version enregistrée devient la référence**, alors qu’elle n’était au départ qu’une trace d’une exécution parmi d’autres.
 
 ## Musique concrète et électroacoustique
-**Pierre Schaeffer** (1948) compose à partir de sons enregistrés du réel : c'est la musique concrète. L'électroacoustique élargit le matériau à tout son possible, y compris synthétique.
+**Pierre Schaeffer** (1948) compose à partir de sons enregistrés du réel — une porte, un train : c’est la **musique concrète**. L’**électroacoustique** élargit ensuite le matériau à tout son possible, y compris entièrement synthétique.
 
 ## Le synthétiseur et le MIDI
-Le synthétiseur fabrique le son (additif, soustractif, FM). La norme **MIDI** (1983) permet aux machines de dialoguer : elle transporte des instructions (quelle note, quelle intensité), pas du son.
+Le synthétiseur **fabrique** le son, par trois grandes voies : additive (on empile des harmoniques), soustractive (on filtre un son riche), FM (on module une fréquence par une autre).
 
-## Aujourd'hui
-Séquenceurs, échantillonnage, auto-tune, intelligence artificielle générative : chaque outil déplace la frontière entre interprétation et fabrication, et pose la question de ce qu'est un auteur.`,
+> **MIDI ne transporte pas de son.** Il transporte des instructions — quelle note, quelle intensité, quelle durée. C’est pourquoi un même fichier MIDI sonne autrement d’une machine à l’autre.
+
+## Aujourd’hui
+Séquenceurs, échantillonnage, auto-tune, intelligence artificielle générative : chaque outil déplace un peu plus la frontière entre l’interprétation et la fabrication — et repose la question de ce qu’est un **auteur**.`,
           },
           questions: [
             ['Qui est à l’origine de la musique concrète ?', ['Pierre Schaeffer', 'Claude Debussy', 'Igor Stravinsky', 'Karlheinz Stockhausen'], 0, 'À partir de 1948, il compose avec des sons enregistrés du réel.'],
@@ -254,19 +376,31 @@ Séquenceurs, échantillonnage, auto-tune, intelligence artificielle générativ
           titre: 'Interpréter et écouter',
           lecon: {
             titre: 'Le geste de l’interprète et l’oreille de l’auditeur',
-            cours: `Entre la partition et l'auditeur, il y a un interprète — et une écoute.
+            cours: `Entre la partition et l’auditeur, il y a un interprète — et une écoute. Ni l’un ni l’autre n’est passif.
 
-## L'interprétation
-Une même partition donne des résultats très différents selon le tempo choisi, les nuances, le phrasé, l'instrument d'époque ou moderne. L'interprète ne « restitue » pas : il décide.
+## L’interprétation
+Une même partition donne des résultats très différents selon ce que l’interprète décide. Il ne « restitue » pas : il **choisit**.
 
-## Les pratiques d'époque
-Le mouvement de la musique historiquement informée (à partir des années 1960) rejoue le répertoire ancien avec les instruments et les techniques de son temps : diapason plus bas, cordes en boyau, effectifs réduits.
+| Le choix | Ce qu’il change à l’écoute |
+| Le tempo | L’énergie, la respiration de la phrase |
+| Les nuances | Le relief, ce qui passe au premier plan |
+| Le phrasé | Le sens : où la phrase respire, où elle s’enchaîne |
+| L’instrument | La couleur, l’équilibre, la puissance |
+
+## Les pratiques d’époque
+Le mouvement de la musique **historiquement informée**, à partir des années 1960, rejoue le répertoire ancien avec les moyens de son temps : diapason plus bas, cordes en boyau, effectifs réduits, articulation plus légère. Le même Bach y devient méconnaissable — et c’est le but : montrer que « la » version fidèle n’existe pas.
 
 ## Écouter activement
-Écouter, ce n'est pas subir : c'est anticiper, comparer, repérer les retours et les ruptures. Une écoute active se prépare (que vais-je chercher ?) et se raconte après (qu'ai-je entendu ?).
+Écouter, ce n’est pas subir : c’est anticiper, comparer, repérer. Une écoute active se prépare et se raconte.
+
+1. **Avant** : que vais-je chercher ? Un instrument, une forme, un retour de thème ?
+2. **Pendant** : repérer les **retours** (ce qui revient) et les **ruptures** (ce qui casse).
+3. **Après** : dire ce qu’on a entendu, avec des mots d’analyse, pas seulement de goût.
+
+> Comparer deux interprétations du même passage est le raccourci le plus efficace : ce qui diffère entre les deux, c’est exactement ce que l’interprète décide.
 
 ## Le concert et le direct
-Le direct ajoute l'incertitude, le corps, l'acoustique du lieu et le public. Aucun enregistrement ne reproduit exactement ce que fait une salle qui écoute ensemble.`,
+Le direct ajoute l’incertitude, le corps, l’acoustique du lieu et le public. Aucun enregistrement ne reproduit ce que fait une salle qui écoute ensemble — le silence d’un public attentif fait partie de l’œuvre entendue.`,
           },
           questions: [
             ['Deux interprétations d’une même partition peuvent différer fortement.', ['Vrai', 'Faux'], 0, 'Tempo, nuances, phrasé, instruments : l’interprète décide.'],

@@ -125,29 +125,34 @@ DELETE FROM public.chapters c
           axe: 'Comprendre un régime politique : la démocratie',
           lecon: {
             titre: 'Un mot, plusieurs régimes',
-            cours: `**Démocratie** vient du grec : *dêmos*, le peuple, *kratos*, le pouvoir. Le pouvoir du peuple — mais le mot recouvre des régimes très différents, et c’est ce que le thème demande de démêler.
+            cours: `Démocratie vient du grec : *dêmos*, le peuple, *kratos*, le pouvoir. Le mot recouvre pourtant des régimes très différents.
 
-## Les critères d’un régime démocratique
-- des **élections** libres, pluralistes, régulières et au suffrage universel ;
-- la **séparation des pouvoirs**, énoncée par Montesquieu : l’exécutif, le législatif et le judiciaire ne doivent pas se confondre ;
-- l’**État de droit** : tous, gouvernants compris, sont soumis à la loi, et une juridiction peut censurer la loi elle-même ;
-- les **libertés fondamentales** : expression, presse, réunion, association, conscience ;
-- le **pluralisme** : une opposition existe, elle est reconnue, et l’alternance est possible.
+## Les critères d'un régime démocratique
+| Le critère | Ce qu'il exige |
+| Des **élections** | Libres, pluralistes, régulières, au suffrage universel |
+| La **séparation des pouvoirs** | Exécutif, législatif et judiciaire ne se confondent pas — Montesquieu |
+| L'**État de droit** | Tous, gouvernants compris, soumis à la loi ; une juridiction peut censurer la loi |
+| Les **libertés fondamentales** | Expression, presse, réunion, association, conscience |
+| Le **pluralisme** | Une opposition reconnue, et l'alternance possible |
 
-> Le critère décisif n’est pas la tenue d’élections — beaucoup de régimes autoritaires en organisent — mais la possibilité réelle de **perdre le pouvoir** et de le céder.
+> Le critère décisif n'est pas la tenue d'élections — beaucoup de régimes autoritaires en organisent — mais la possibilité réelle de **perdre le pouvoir** et de le céder.
 
-## Directe, représentative, participative
-- La démocratie **directe** fait décider les citoyens eux-mêmes : l’Athènes classique, le référendum, les *Landsgemeinde* suisses.
-- La démocratie **représentative** fait élire des représentants qui décident. C’est le régime de tous les grands États contemporains, pour des raisons d’échelle autant que de principe.
-- La démocratie **participative** cherche à associer les citoyens entre deux élections : budgets participatifs, conventions citoyennes, consultations.
+## Trois formes de démocratie
+| La forme | Qui décide | Ses exemples |
+| **Directe** | Les citoyens eux-mêmes | L'Athènes classique, le référendum, les *Landsgemeinde* suisses |
+| **Représentative** | Des représentants élus | Tous les grands États contemporains |
+| **Participative** | Les citoyens, associés entre deux élections | Budgets participatifs, conventions citoyennes |
 
-## Régimes parlementaire, présidentiel, semi-présidentiel
-- **Parlementaire** : le gouvernement est responsable devant le parlement, qui peut le renverser — le Royaume-Uni, l’Allemagne.
-- **Présidentiel** : le président est élu par le peuple, ne peut être renversé par le parlement, mais ne peut pas le dissoudre — les États-Unis.
-- **Semi-présidentiel** : la France de la Ve République combine un président élu au suffrage universel direct depuis 1962 et un gouvernement responsable devant l’Assemblée.
+## Trois types de régimes
+| Le régime | Le gouvernement est-il renversable par le parlement | Le parlement est-il dissoluble | Un exemple |
+| **Parlementaire** | **Oui** | Oui | Royaume-Uni, Allemagne |
+| **Présidentiel** | **Non** | Non | États-Unis |
+| **Semi-présidentiel** | Oui, devant l'Assemblée | Oui | La France depuis 1962 |
 
-## L’état des démocraties
-Les indices internationaux constatent depuis une quinzaine d’années une **érosion** : montée de régimes dits « illibéraux », qui conservent les élections en affaiblissant la presse, la justice et les contre-pouvoirs. La démocratie n’est pas un acquis irréversible — c’est la leçon que le thème martèle.`,
+## L'état des démocraties
+Les indices internationaux constatent depuis une quinzaine d'années une **érosion** : montée de régimes dits « illibéraux », qui conservent les élections en affaiblissant la presse, la justice et les contre-pouvoirs.
+
+> La démocratie n'est pas un acquis irréversible. C'est la leçon que le thème martèle.`,
           },
           questions: [
             ['Que signifie étymologiquement le mot démocratie ?', ['Le pouvoir du peuple', 'Le pouvoir de la loi', 'Le gouvernement des meilleurs', 'Le pouvoir du plus grand nombre de riches'], 0, 'Dêmos, le peuple, et kratos, le pouvoir.'],
@@ -165,29 +170,36 @@ Les indices internationaux constatent depuis une quinzaine d’années une **ér
           axe: 'Comprendre un régime politique : la démocratie',
           lecon: {
             titre: 'Le premier régime démocratique, et ses exclus',
-            cours: `Athènes au Ve siècle avant notre ère invente un régime où les citoyens décident **eux-mêmes**, sans représentants. C’est le premier jalon du programme.
+            cours: `Athènes au Ve siècle avant notre ère invente un régime où les citoyens décident eux-mêmes, sans représentants.
 
 ## Les institutions
-- L’**Ecclésia**, l’assemblée du peuple, se réunit une quarantaine de fois par an sur la colline de la Pnyx. Tout citoyen peut y prendre la parole — c’est l’*isêgoria* — et voter les lois, la guerre, les traités.
-- La **Boulê**, conseil de 500 membres **tirés au sort**, prépare les débats de l’Ecclésia.
-- L’**Héliée** est le tribunal populaire, ses jurés également tirés au sort.
-- Les **magistrats** sont tirés au sort pour la plupart, sauf les **stratèges**, élus parce que la compétence militaire ne s’improvise pas. Périclès sera stratège quinze années de suite.
+| L'institution | Sa composition | Son rôle |
+| **Ecclésia** | Tous les citoyens, une quarantaine de fois par an sur la Pnyx | Voter les lois, la guerre, les traités |
+| **Boulê** | 500 membres **tirés au sort** | Préparer les débats de l'Ecclésia |
+| **Héliée** | Des jurés tirés au sort | Le tribunal populaire |
+| **Magistrats** | Tirés au sort, sauf les **stratèges**, élus | Administrer et commander |
 
-> Le **tirage au sort** est, aux yeux des Grecs, le procédé démocratique par excellence : il donne à chacun une chance égale, quand l’élection favorise les notables et les orateurs. C’est un point contre-intuitif, et régulièrement demandé.
+L'*isêgoria* — le droit égal à la parole — permet à tout citoyen de s'exprimer devant l'Ecclésia.
+
+> Le **tirage au sort** est, aux yeux des Grecs, le procédé démocratique par excellence : il donne à chacun une chance égale, quand l'élection favorise les notables et les orateurs. Point contre-intuitif, et régulièrement demandé. Les stratèges font exception, parce que la compétence militaire ne s'improvise pas : Périclès le sera quinze années de suite.
 
 ## Les mécanismes de contrôle
-La **misthophorie**, indemnité versée pour la participation, permet aux plus pauvres de siéger. L’**ostracisme** permet d’exiler pour dix ans, par vote, un citoyen jugé trop puissant. La *graphê paranomôn* permet de poursuivre l’auteur d’une proposition illégale.
+| Le mécanisme | Ce qu'il permet |
+| **Misthophorie** | Une indemnité de participation, pour que les plus pauvres puissent siéger |
+| **Ostracisme** | Exiler dix ans, par vote, un citoyen jugé trop puissant |
+| *Graphê paranomôn* | Poursuivre l'auteur d'une proposition illégale |
 
-## Les limites, qui sont le cœur du jalon
-Sur environ 300 000 habitants en Attique, **40 000 citoyens** au plus. Sont exclus :
-- les **femmes**, quelle que soit leur naissance ;
-- les **métèques**, étrangers libres, souvent installés depuis des générations, qui paient l’impôt et servent à l’armée sans jamais voter ;
-- les **esclaves**, très nombreux, dont le travail rend possible la disponibilité des citoyens.
+## Les limites, cœur du jalon
+Sur environ 300 000 habitants en Attique, **40 000 citoyens** au plus.
 
-La citoyenneté est en outre **restreinte** en 451 par Périclès : il faut désormais être né de père **et** de mère athéniens.
+| Le groupe | Pourquoi il est exclu |
+| Les **femmes** | Quelle que soit leur naissance |
+| Les **métèques** | Étrangers libres, souvent installés depuis des générations : ils paient l'impôt et servent à l'armée sans voter |
+| Les **esclaves** | Très nombreux ; leur travail rend possible la disponibilité des citoyens |
 
-## Ce que le jalon enseigne
-Athènes est à la fois le modèle invoqué depuis vingt-cinq siècles et un régime dont la participation intense reposait sur une exclusion massive. Les deux constats vont ensemble, et un devoir attend qu’on les tienne simultanément.`,
+La citoyenneté est encore restreinte en **451** par Périclès : il faut être né de père **et** de mère athéniens.
+
+> Athènes est à la fois le modèle invoqué depuis vingt-cinq siècles et un régime dont la participation intense reposait sur une exclusion massive. Un devoir attend qu'on tienne les deux constats ensemble.`,
           },
           questions: [
             ['Comment étaient désignés la plupart des magistrats athéniens ?', ['Par tirage au sort', 'Par élection', 'Par hérédité', 'Par nomination du stratège'], 0, 'Les stratèges, eux, étaient élus pour leur compétence militaire.'],
@@ -205,27 +217,32 @@ Athènes est à la fois le modèle invoqué depuis vingt-cinq siècles et un ré
           axe: 'Comprendre un régime politique : la démocratie',
           lecon: {
             titre: 'Trois révolutions, un modèle',
-            cours: `Entre le XVIIe et le XVIIIe siècle, trois révolutions imposent un modèle nouveau : le peuple est **souverain**, mais il gouverne par des **représentants**.
+            cours: `Entre le XVIIe et le XVIIIe siècle, trois révolutions imposent un modèle nouveau : le peuple est souverain, mais il gouverne par des représentants.
 
-## La révolution anglaise
-Deux temps : la première révolution (1642-1649) aboutit à l’exécution de Charles Ier ; la **Glorieuse Révolution** de 1688 chasse Jacques II et impose à Guillaume d’Orange le **Bill of Rights** (1689). Le roi ne peut plus lever d’impôt ni suspendre les lois sans le Parlement, dont la liberté de parole est garantie. C’est la naissance de la **monarchie parlementaire** : le souverain règne sous condition.
+## Les trois révolutions
+| Le pays | Les dates | Le texte fondateur | Le régime institué |
+| **Angleterre** | 1642-1649, puis **1688** | Le **Bill of Rights** (1689) | **Monarchie parlementaire** : le roi ne peut lever d'impôt ni suspendre les lois sans le Parlement |
+| **États-Unis** | 1776-1791 | La **Déclaration d'indépendance**, la **Constitution de 1787**, le *Bill of Rights* de 1791 | Régime **présidentiel** et **fédéral**, avec des *checks and balances* |
+| **France** | 1789-1792 | La **Déclaration des droits de l'homme et du citoyen** | Monarchie constitutionnelle en 1791, puis **République** en 1792 |
 
-## La révolution américaine
-La **Déclaration d’indépendance** de 1776 fonde la légitimité sur des droits naturels et sur le consentement des gouvernés. La **Constitution de 1787**, première constitution écrite d’un grand État, organise un régime **présidentiel** et **fédéral**, avec une séparation stricte des pouvoirs et un système de contrôles réciproques (*checks and balances*). Le *Bill of Rights* de 1791 y ajoute les dix premiers amendements.
-
-## La révolution française
-1789 : la **Déclaration des droits de l’homme et du citoyen** proclame l’égalité en droits, la souveraineté de la Nation et la séparation des pouvoirs. La Constitution de 1791 institue une monarchie constitutionnelle, avec un **suffrage censitaire** distinguant citoyens actifs et passifs. La République est proclamée en 1792, et la Convention est élue au **suffrage universel masculin** — une première, sans lendemain immédiat.
+La Constitution de 1787 est la première constitution écrite d'un grand État. La Convention française est élue au **suffrage universel masculin** — une première, sans lendemain immédiat.
 
 ## Ce qui est consacré
-- La **souveraineté nationale** : le pouvoir vient du peuple, non de Dieu ni de la naissance ;
-- le **mandat représentatif** : l’élu représente la Nation entière et non ses seuls électeurs ; il n’est pas révocable en cours de mandat ;
-- la **constitution écrite** et la **déclaration de droits** ;
-- la **séparation des pouvoirs**, inspirée de Montesquieu et de Locke.
+| Le principe | Son contenu |
+| **Souveraineté nationale** | Le pouvoir vient du peuple, non de Dieu ni de la naissance |
+| **Mandat représentatif** | L'élu représente la Nation entière, non ses seuls électeurs ; il n'est pas révocable en cours de mandat |
+| **Constitution écrite** et **déclaration de droits** | Le pouvoir est borné par un texte |
+| **Séparation des pouvoirs** | D'après Montesquieu et Locke |
 
-> Le modèle est représentatif **et non** direct : Sieyès l’assume explicitement, en distinguant la démocratie, où le peuple fait la loi, du gouvernement représentatif, où il choisit qui la fera. Ce n’est pas un pis-aller d’échelle mais un choix politique.
+> Le modèle est représentatif **et non** direct. Sieyès l'assume : il distingue la démocratie, où le peuple fait la loi, du gouvernement représentatif, où il choisit qui la fera. Ce n'est pas un pis-aller d'échelle, mais un choix politique.
 
 ## Les limites du moment
-Le suffrage reste **censitaire** presque partout ; les femmes en sont exclues ; l’esclavage subsiste aux États-Unis et sera rétabli en France en 1802. L’universalité proclamée met un siècle et demi à se réaliser.`,
+| La limite | Où |
+| Le **suffrage censitaire** | Presque partout |
+| L'exclusion des **femmes** | Partout |
+| L'**esclavage** | Maintenu aux États-Unis, rétabli en France en 1802 |
+
+> L'universalité proclamée met un siècle et demi à se réaliser.`,
           },
           questions: [
             ['Que garantit le Bill of Rights anglais de 1689 ?', ['Que le roi ne peut lever l’impôt ni suspendre les lois sans le Parlement', 'Le suffrage universel', 'L’indépendance des colonies', 'L’abolition de la monarchie'], 0, 'C’est l’acte de naissance de la monarchie parlementaire.'],
@@ -243,27 +260,35 @@ Le suffrage reste **censitaire** presque partout ; les femmes en sont exclues ; 
           axe: 'Comprendre un régime politique : la démocratie',
           lecon: {
             titre: 'Égalité, conformisme et despotisme doux',
-            cours: `**Alexis de Tocqueville** (1805-1859) voyage aux États-Unis en 1831 et en tire *De la démocratie en Amérique* (1835 et 1840). Il n’y cherche pas un modèle mais un **avenir** : l’égalisation des conditions lui paraît un mouvement **providentiel**, irrésistible, dont l’Europe suivra le chemin.
+            cours: `Tocqueville voyage aux États-Unis en 1831 et en tire *De la démocratie en Amérique*. Il n'y cherche pas un modèle, mais un avenir : l'égalisation des conditions lui paraît irrésistible.
 
-## Ce qu’il admire
-- La vitalité des **associations** : les Américains s’unissent pour tout, ce qui les forme à l’action collective et fait contrepoids à l’État ;
-- la **décentralisation** et l’administration locale, école pratique de la liberté ;
-- l’indépendance de la **justice** et le rôle politique des juges ;
-- la **religion**, qui, séparée de l’État, y soutient les mœurs au lieu de les contraindre.
+## Ce qu'il admire
+| L'institution | Ce qu'elle apporte |
+| Les **associations** | Les Américains s'unissent pour tout : cela les forme à l'action collective et fait contrepoids à l'État |
+| La **décentralisation** | L'administration locale est une école pratique de la liberté |
+| La **justice** | Indépendante, et politiquement importante |
+| La **religion** | Séparée de l'État, elle soutient les mœurs au lieu de les contraindre |
 
-## Ce qu’il redoute
-Trois périls, qu’il faut savoir distinguer :
-- La **tyrannie de la majorité** : là où la majorité fait la loi et l’opinion, la minorité n’a aucun recours. Le danger n’est pas d’abord la contrainte physique mais la pression morale — Tocqueville juge qu’il n’y a « pas de liberté de l’esprit en Amérique », tant chacun redoute de s’écarter de l’opinion commune.
-- L’**individualisme** : l’égalité détache les hommes les uns des autres et les replie sur leur cercle privé. Ce mot, dont il fixe le sens, ne désigne pas l’égoïsme mais un retrait du public.
-- Le **despotisme doux** : un pouvoir « tutélaire, immense », qui ne tyrannise pas mais **infantilise**, prend tout en charge, ôte l’usage de soi-même. Les citoyens y consentent, parce qu’ils l’ont élu et qu’il les soulage.
+## Les trois périls
+| Le péril | Ce qu'il décrit |
+| La **tyrannie de la majorité** | Là où la majorité fait la loi **et** l'opinion, la minorité n'a aucun recours — la pression est morale avant d'être physique |
+| L'**individualisme** | L'égalité détache les hommes et les replie sur leur cercle privé ; le mot, dont il fixe le sens, désigne un **retrait du public**, non l'égoïsme |
+| Le **despotisme doux** | Un pouvoir « tutélaire, immense », qui ne tyrannise pas mais **infantilise**, prend tout en charge, ôte l'usage de soi-même |
 
-> C’est cette dernière analyse qui a fait la fortune du livre : la menace ne vient pas d’un tyran, mais d’une servitude **volontaire, réglée et douce**, compatible avec les formes extérieures de la souveraineté populaire.
+> C'est cette dernière analyse qui a fait la fortune du livre : la menace ne vient pas d'un tyran, mais d'une servitude **volontaire, réglée et douce**, compatible avec les formes extérieures de la souveraineté populaire. Les citoyens y consentent, parce qu'ils l'ont élu et qu'il les soulage.
 
 ## Les remèdes
-Tocqueville n’est pas pessimiste par principe : il indique des contrepoids — l’**association**, la **liberté de la presse**, la **décentralisation**, la **religion** comme frein moral, l’indépendance de la justice. La liberté ne se conserve pas d’elle-même : elle demande des institutions et des mœurs.
+Tocqueville n'est pas pessimiste par principe. Il indique des contrepoids :
+- l'**association** ;
+- la **liberté de la presse** ;
+- la **décentralisation** ;
+- la **religion** comme frein moral ;
+- l'indépendance de la **justice**.
+
+> La liberté ne se conserve pas d'elle-même : elle demande des institutions et des mœurs.
 
 ## Pourquoi ce jalon
-Il fournit les concepts avec lesquels penser les fragilités des démocraties contemporaines — apathie électorale, conformisme des opinions, délégation croissante à l’administration ou à l’algorithme.`,
+Il fournit les concepts avec lesquels penser les fragilités contemporaines : apathie électorale, conformisme des opinions, délégation croissante à l'administration ou à l'algorithme.`,
           },
           questions: [
             ['Quel ouvrage Tocqueville tire-t-il de son voyage de 1831 ?', ['De la démocratie en Amérique', 'L’Ancien Régime et la Révolution', 'Du contrat social', 'De l’esprit des lois'], 0, 'Publié en deux tomes, en 1835 et 1840.'],
@@ -281,28 +306,42 @@ Il fournit les concepts avec lesquels penser les fragilités des démocraties co
           axe: 'Comprendre un régime politique : la démocratie',
           lecon: {
             titre: 'Comment une démocratie ancienne s’effondre',
-            cours: `Le Chili offre au programme le cas d’une démocratie **ancienne et stable** — l’une des plus solides d’Amérique latine — qui bascule en trois ans dans une dictature militaire.
+            cours: `Le Chili offre le cas d'une démocratie ancienne et stable — l'une des plus solides d'Amérique latine — qui bascule en trois ans dans une dictature militaire.
 
-## L’élection de 1970
-**Salvador Allende**, candidat de l’Unité populaire, coalition de socialistes et de communistes, l’emporte avec 36,6 % des voix. Sans majorité absolue, il est confirmé par le Congrès. C’est la première fois qu’un marxiste accède au pouvoir par les urnes dans un pays occidental.
+## L'élection de 1970
+**Salvador Allende**, candidat de l'Unité populaire — socialistes et communistes —, l'emporte avec **36,6 %** des voix. Sans majorité absolue, il est confirmé par le Congrès.
+
+> C'est la première fois qu'un marxiste accède au pouvoir par les urnes dans un pays occidental.
 
 ## Le programme et ses effets
-Nationalisation du **cuivre**, principale ressource du pays, sans indemnisation des compagnies américaines ; nationalisation des banques ; accélération de la **réforme agraire** ; hausse des salaires.
+| La mesure | Son effet |
+| Nationalisation du **cuivre**, sans indemnisation des compagnies américaines | Rupture avec les États-Unis |
+| Nationalisation des **banques** | — |
+| Accélération de la **réforme agraire** | Tensions dans les campagnes |
+| Hausse des **salaires** | **Inflation** vertigineuse, **pénuries**, marché noir |
 
-Les résultats se retournent vite : **inflation** vertigineuse, **pénuries**, marché noir. Le pays se polarise, chaque camp descendant dans la rue.
+## Ce qui fait basculer le pays
+| La pression | Sa forme |
+| **Extérieure** | Les États-Unis bloquent le crédit international et financent l'opposition ; Nixon veut « faire crier l'économie » |
+| **Économique** | La **grève des camionneurs** de 1972-1973 paralyse un pays étiré sur 4 300 kilomètres |
+| **Institutionnelle** | Le **Congrès**, dominé par l'opposition, déclare le gouvernement hors de la légalité en août 1973 |
 
-## Les pressions extérieures et intérieures
-- Les **États-Unis**, en pleine guerre froide, organisent le blocage du crédit international et financent l’opposition ; Nixon veut « faire crier l’économie ».
-- La **grève des camionneurs** de 1972-1973 paralyse un pays étiré sur 4 300 kilomètres.
-- Le **Congrès**, où l’opposition domine, déclare le gouvernement hors de la légalité en août 1973.
+## Le coup d'État
+Le **11 septembre 1973**, l'armée dirigée par **Augusto Pinochet** bombarde le palais de la Moneda. Allende y meurt.
 
-## Le coup d’État
-Le **11 septembre 1973**, l’armée dirigée par **Augusto Pinochet** bombarde le palais de la Moneda. Allende y meurt. Suivent la dissolution du Congrès, l’interdiction des partis, la censure, les arrestations massives — le stade national transformé en centre de détention —, la torture, les exécutions et les disparitions. La dictature durera **jusqu’en 1990**.
+| Ce qui suit | Le détail |
+| Dissolution du **Congrès** | Interdiction des partis, censure |
+| **Arrestations massives** | Le stade national transformé en centre de détention |
+| **Torture**, exécutions, disparitions | — |
+| La dictature | Jusqu'en **1990** |
 
-> Le jalon n’enseigne pas seulement une chronologie : il montre **comment** une démocratie s’effondre — polarisation extrême, crise économique, délégitimation réciproque des institutions, intervention extérieure, et enfin recours à l’armée présenté comme un rétablissement de l’ordre.
+> Le jalon montre **comment** une démocratie s'effondre : polarisation extrême, crise économique, délégitimation réciproque des institutions, intervention extérieure, puis recours à l'armée présenté comme un rétablissement de l'ordre.
 
-## L’après
-Le retour à la démocratie se fait par le **référendum de 1988**, où le « non » à la prolongation de Pinochet l’emporte, puis par des élections en 1989. La **commission Rettig** établit ensuite le bilan des violations : plus de 3 000 morts et disparus, des dizaines de milliers de victimes de la torture.`,
+## L'après
+| L'étape | Sa date |
+| Le **référendum** où le « non » à Pinochet l'emporte | 1988 |
+| Les élections libres | 1989 |
+| La **commission Rettig** | Plus de 3 000 morts et disparus, des dizaines de milliers de victimes de la torture |`,
           },
           questions: [
             ['Avec quel pourcentage Salvador Allende est-il élu en 1970 ?', ['36,6 %, sans majorité absolue', 'Plus de 50 %', 'Environ 45 %', 'Il n’a pas été élu'], 0, 'Il est ensuite confirmé par le Congrès.'],
@@ -320,25 +359,35 @@ Le retour à la démocratie se fait par le **référendum de 1988**, où le « n
           axe: 'Comprendre un régime politique : la démocratie',
           lecon: {
             titre: 'Deux sorties de dictature, deux chemins',
-            cours: `Le jalon symétrique du précédent : deux dictatures d’Europe du Sud deviennent des démocraties, et par des voies opposées.
+            cours: `Deux dictatures d'Europe du Sud deviennent des démocraties, par des voies opposées. C'est le jalon symétrique du Chili.
 
 ## Le Portugal : la rupture
-La dictature de l’**Estado Novo**, fondée par **Salazar** en 1933 et poursuivie par Caetano, s’épuise dans des **guerres coloniales** qui durent depuis 1961 en Angola, au Mozambique et en Guinée : elles absorbent près de la moitié du budget et mobilisent toute une jeunesse.
+La dictature de l'**Estado Novo**, fondée par **Salazar** en 1933 et poursuivie par Caetano, s'épuise dans des **guerres coloniales** menées depuis 1961 en Angola, au Mozambique et en Guinée : elles absorbent près de la moitié du budget.
 
-Le **25 avril 1974**, un mouvement d’officiers renverse le régime presque sans effusion de sang. La population se joint à eux et glisse des **œillets** dans les canons : c’est la **révolution des Œillets**.
+| La date | L'événement |
+| **25 avril 1974** | Un mouvement d'officiers renverse le régime presque sans effusion de sang ; la population glisse des **œillets** dans les canons |
+| 1974-1975 | Décolonisation rapide, nationalisations, tensions entre courants |
+| **1976** | Constitution, élection de Mário Soares |
+| **1986** | Entrée dans la CEE |
 
-Suivent deux années agitées — décolonisation rapide, nationalisations, tensions entre courants —, puis la **Constitution de 1976** et l’élection de Mário Soares. Le Portugal entre dans la CEE en **1986**.
+## L'Espagne : la transition négociée
+**Franco** meurt le 20 novembre 1975, après trente-six ans de dictature. Il a désigné pour successeur le roi **Juan Carlos**, qui, contre toute attente, choisit d'ouvrir le régime.
 
-## L’Espagne : la transition négociée
-**Franco** meurt le 20 novembre 1975, après trente-six ans de dictature. Il a désigné pour lui succéder le roi **Juan Carlos**, qui, contre toute attente, choisit d’ouvrir le régime.
+| La date | L'étape |
+| **1976** | **Adolfo Suárez** fait voter par les Cortès franquistes leur propre disparition ; la loi de réforme politique est approuvée par référendum |
+| **1977** | Légalisation des partis, parti communiste compris ; premières élections libres ; **pactes de la Moncloa** entre gouvernement, patronat et syndicats ; **loi d'amnistie** |
+| **1978** | Constitution : monarchie parlementaire et État des autonomies |
+| **23 février 1981** | Tentative de coup d'État militaire ; le refus public de Juan Carlos la fait échouer |
+| **1986** | Entrée dans la CEE |
 
-**Adolfo Suárez**, nommé président du gouvernement, fait voter par les Cortès franquistes leur propre disparition — la loi de réforme politique de 1976, approuvée par référendum. Les partis, dont le parti communiste, sont légalisés en 1977 ; les premières élections libres ont lieu la même année ; la **Constitution de 1978** institue une monarchie parlementaire et un État des autonomies.
+> La loi d'amnistie laissera longtemps sans réponse la question des crimes du franquisme.
 
-La transition tient sur deux appuis : les **pactes de la Moncloa** (1977), accord économique et social entre gouvernement, patronat et syndicats, et une **loi d’amnistie** — qui laissera longtemps sans réponse la question des crimes du franquisme.
+## Deux chemins, un résultat
+| Le pays | La voie |
+| **Portugal** | La **rupture** révolutionnaire |
+| **Espagne** | La **transition négociée** |
 
-Le **23 février 1981**, une tentative de coup d’État militaire prend les Cortès en otage. Le refus public de Juan Carlos la fait échouer. L’adhésion à la CEE, en **1986**, scelle l’ancrage démocratique.
-
-> Deux chemins opposés — **rupture** révolutionnaire au Portugal, **transition négociée** en Espagne — et un même résultat. Le jalon montre qu’il n’y a pas une seule voie vers la démocratie, et que la sortie de dictature se paye toujours de compromis dont l’examen vient plus tard.`,
+> Il n'y a pas une seule voie vers la démocratie — et la sortie de dictature se paie toujours de compromis dont l'examen vient plus tard.`,
           },
           questions: [
             ['Comment s’appelle le régime dictatorial portugais fondé par Salazar ?', ['L’Estado Novo', 'Le Franquisme', 'La Falange', 'Le Salazarisme constitutionnel'], 0, 'Fondé en 1933, poursuivi ensuite par Caetano.'],
@@ -356,32 +405,39 @@ Le **23 février 1981**, une tentative de coup d’État militaire prend les Cor
           axe: 'Comprendre un régime politique : la démocratie',
           lecon: {
             titre: 'Une démocratie sans peuple européen ?',
-            cours: `L’Union européenne n’est ni un État fédéral ni une simple organisation internationale : c’est une construction **sui generis**, dont la légitimité démocratique fait débat depuis l’origine.
+            cours: `L'Union européenne n'est ni un État fédéral ni une simple organisation internationale. Sa légitimité démocratique fait débat depuis l'origine.
 
 ## Les institutions et leur légitimité
-- Le **Parlement européen** est élu au suffrage universel direct depuis **1979**. Ses pouvoirs se sont considérablement étendus : il colégifère avec le Conseil, vote le budget, investit la Commission et peut la censurer.
-- La **Commission** propose les textes et veille à l’application des traités. Ses membres sont **nommés**, non élus — d’où le reproche de technocratie.
-- Le **Conseil de l’Union** réunit les ministres des États : sa légitimité est **indirecte**, tirée des gouvernements nationaux.
-- Le **Conseil européen** rassemble les chefs d’État et de gouvernement et fixe les orientations.
-- La **Cour de justice** assure la primauté et l’application uniforme du droit européen.
+| L'institution | Sa composition | Sa légitimité |
+| **Parlement européen** | Élu au suffrage universel direct depuis **1979** | **Directe** ; il colégifère, vote le budget, investit et peut censurer la Commission |
+| **Commission** | Membres **nommés** | Indirecte : d'où le reproche de technocratie. Elle propose les textes et veille aux traités |
+| **Conseil de l'Union** | Les ministres des États | **Indirecte**, tirée des gouvernements |
+| **Conseil européen** | Chefs d'État et de gouvernement | Indirecte ; il fixe les orientations |
+| **Cour de justice** | Juges nommés par les États | Elle assure la primauté et l'application uniforme du droit |
 
 ## Le « déficit démocratique »
-Les critiques adressées à l’Union sont récurrentes :
-- l’initiative des textes appartient à une institution **non élue** ;
-- la **complexité** des procédures rend les responsabilités illisibles pour le citoyen ;
-- les élections européennes connaissent une **abstention** élevée et se jouent souvent sur des enjeux nationaux ;
-- il n’existe pas d’**espace public** ni de partis véritablement européens : les débats restent nationaux.
+| La critique | Son contenu |
+| L'**initiative** des textes | Elle appartient à une institution non élue |
+| La **complexité** | Les responsabilités sont illisibles pour le citoyen |
+| L'**abstention** | Élevée aux européennes, qui se jouent souvent sur des enjeux nationaux |
+| L'**espace public** | Il n'existe pas de partis véritablement européens : les débats restent nationaux |
 
-> Le cœur du problème est souvent formulé ainsi : peut-il y avoir une démocratie sans **demos**, sans peuple qui se reconnaisse comme tel ? Les uns y voient un obstacle indépassable, les autres un processus en cours, comme le furent les nations elles-mêmes.
+> Le cœur du problème se formule ainsi : peut-il y avoir une démocratie sans *demos*, sans peuple qui se reconnaisse comme tel ? Les uns y voient un obstacle indépassable, les autres un processus en cours — comme le furent les nations elles-mêmes.
 
 ## Les réponses apportées
-- Extension continue des pouvoirs du Parlement, jusqu’au traité de Lisbonne (2009) ;
-- l’**initiative citoyenne européenne**, qui permet à un million de citoyens de demander à la Commission de proposer un texte ;
-- le principe de **subsidiarité** : l’Union n’agit que si son action est plus efficace que celle des États ;
-- la **Charte des droits fondamentaux**, contraignante depuis 2009.
+| La réponse | Ce qu'elle fait |
+| L'extension des pouvoirs du **Parlement** | Jusqu'au traité de Lisbonne, en 2009 |
+| L'**initiative citoyenne européenne** | Un million de citoyens peuvent demander à la Commission de proposer un texte |
+| La **subsidiarité** | L'Union n'agit que si son action est plus efficace que celle des États |
+| La **Charte des droits fondamentaux** | Contraignante depuis 2009 |
 
 ## Les crises
-Les référendums français et néerlandais de **2005** rejettent le traité constitutionnel ; la crise de la zone euro à partir de 2010 fait apparaître le poids des créanciers dans des décisions nationales ; le **Brexit**, voté en 2016 et effectif en 2020, montre qu’une sortie est possible. À l’inverse, les crises récentes ont conduit à des décisions communes inédites, en matière sanitaire comme budgétaire.`,
+| La date | La crise |
+| **2005** | Les référendums français et néerlandais rejettent le traité constitutionnel |
+| À partir de **2010** | La crise de la zone euro fait apparaître le poids des créanciers dans des décisions nationales |
+| **2016-2020** | Le **Brexit** montre qu'une sortie est possible |
+
+> À l'inverse, les crises récentes ont conduit à des décisions communes inédites, en matière sanitaire comme budgétaire.`,
           },
           questions: [
             ['Depuis quand le Parlement européen est-il élu au suffrage universel direct ?', ['1979', '1957', '1992', '2009'], 0, 'Ses pouvoirs se sont ensuite considérablement étendus.'],
@@ -401,33 +457,41 @@ Les référendums français et néerlandais de **2005** rejettent le traité con
           axe: 'Analyser les dynamiques des puissances internationales',
           lecon: {
             titre: 'Ce qui fait qu’un État pèse',
-            cours: `La **puissance** est la capacité d’un acteur à imposer sa volonté, à influencer les autres et à résister à leur influence. Elle se mesure moins à ce qu’un État possède qu’à ce qu’il **obtient**.
+            cours: `La puissance est la capacité d'un acteur à imposer sa volonté, à influencer les autres et à résister à leur influence. Elle se mesure moins à ce qu'un État possède qu'à ce qu'il obtient.
 
 ## Les attributs traditionnels
-- **Militaires** : effectifs, budget, capacité de projection, arme nucléaire, sièges permanents au Conseil de sécurité ;
-- **économiques** : PIB, industrie, monnaie de réserve, entreprises multinationales, maîtrise des technologies ;
-- **démographiques et territoriaux** : population, ressources, position géographique, contrôle des voies de passage ;
-- **diplomatiques** : réseau d’alliances, présence dans les organisations internationales, capacité d’initiative.
+| L'attribut | Ce qu'il recouvre |
+| **Militaire** | Effectifs, budget, capacité de projection, arme nucléaire, siège permanent au Conseil de sécurité |
+| **Économique** | PIB, industrie, monnaie de réserve, multinationales, maîtrise des technologies |
+| **Démographique et territorial** | Population, ressources, position, contrôle des voies de passage |
+| **Diplomatique** | Réseau d'alliances, présence dans les organisations, capacité d'initiative |
 
-## Hard power et soft power
-Joseph Nye distingue deux façons d’obtenir ce que l’on veut :
-- le **hard power** : la contrainte — la force militaire, la sanction économique ;
-- le **soft power** : l’**attraction** — la culture, les valeurs, le modèle de société, la langue, les universités, le cinéma, la capacité de faire désirer ce qu’on propose.
+## Les trois « powers » de Joseph Nye
+| Le terme | Son moyen | Son coût |
+| **Hard power** | La **contrainte** : force militaire, sanction économique | Élevé |
+| **Soft power** | L'**attraction** : culture, valeurs, modèle de société, langue, universités, cinéma | Faible, mais il ne se décrète pas |
+| **Smart power** | L'art de **combiner** les deux à propos | Il suppose du jugement |
 
-Il ajoute le **smart power** : l’art de combiner les deux à propos, parce qu’aucun ne suffit seul.
-
-> Le soft power n’est pas une puissance au rabais : obtenir sans contraindre coûte moins cher et dure plus longtemps. Mais il ne se décrète pas — il se constate.
+> Le soft power n'est pas une puissance au rabais : obtenir sans contraindre coûte moins cher et dure plus longtemps. Mais il se constate, il ne se décide pas.
 
 ## Les acteurs non étatiques
-La puissance n’appartient plus aux seuls États : **firmes multinationales** dont le chiffre d’affaires dépasse le PIB de nombreux pays, **organisations internationales**, **ONG**, réseaux criminels ou terroristes, grandes plateformes numériques capables d’infléchir des débats publics entiers.
+| L'acteur | Sa capacité |
+| **Firmes multinationales** | Un chiffre d'affaires supérieur au PIB de nombreux pays |
+| **Organisations internationales** | Elles produisent des normes |
+| **ONG** | Elles font l'agenda et l'opinion |
+| Réseaux criminels ou terroristes | Ils contestent le monopole de la violence |
+| **Plateformes numériques** | Elles infléchissent des débats publics entiers |
 
 ## Les configurations du système international
-- **Bipolaire** : deux blocs, comme pendant la guerre froide ;
-- **unipolaire** : la période qui suit 1991, souvent appelée le « moment unipolaire » américain ;
-- **multipolaire** : plusieurs pôles rivaux, ce que décrivent la plupart des analystes aujourd’hui — États-Unis, Chine, Union européenne, Russie, Inde, puissances régionales.
+| La configuration | Sa description | Sa période |
+| **Bipolaire** | Deux blocs | La guerre froide |
+| **Unipolaire** | Un seul pôle dominant | Le « moment unipolaire » américain après 1991 |
+| **Multipolaire** | Plusieurs pôles rivaux | Aujourd'hui : États-Unis, Chine, Union européenne, Russie, Inde, puissances régionales |
 
 ## Les nouveaux terrains
-La puissance s’exerce désormais aussi dans le **cyberespace**, dans l’**espace** extra-atmosphérique, sur les **normes** techniques et juridiques, et par la maîtrise des **données**. Ce sont des terrains où un acteur privé peut peser autant qu’un État.`,
+Le **cyberespace**, l'**espace** extra-atmosphérique, les **normes** techniques et juridiques, la maîtrise des **données**.
+
+> Ce sont des terrains où un acteur privé peut peser autant qu'un État.`,
           },
           questions: [
             ['Comment définit-on la puissance en relations internationales ?', ['La capacité d’imposer sa volonté et de résister à celle des autres', 'La taille du territoire', 'Le nombre d’habitants', 'La richesse par habitant'], 0, 'Elle se mesure à ce qu’un acteur obtient, non à ce qu’il possède.'],
@@ -445,29 +509,37 @@ La puissance s’exerce désormais aussi dans le **cyberespace**, dans l’**esp
           axe: 'Analyser les dynamiques des puissances internationales',
           lecon: {
             titre: 'Deux déclins, deux réponses',
-            cours: `Aucune puissance n’est éternelle. Le jalon compare deux trajectoires de déclin séparées par un siècle, et les stratégies employées pour y répondre.
+            cours: `Aucune puissance n'est éternelle. Le jalon compare deux trajectoires de déclin séparées par un siècle, et les stratégies employées pour y répondre.
 
-## L’Empire ottoman : « l’homme malade de l’Europe »
-Fondé au XIVe siècle, l’Empire atteint son apogée au XVIe avec Soliman le Magnifique : il domine les Balkans, l’Anatolie, le Proche-Orient et l’Afrique du Nord, et contrôle les routes commerciales entre l’Europe et l’Asie.
+## L'Empire ottoman : « l'homme malade de l'Europe »
+Fondé au XIVe siècle, il atteint son apogée au XVIe avec Soliman le Magnifique : Balkans, Anatolie, Proche-Orient, Afrique du Nord, et le contrôle des routes entre l'Europe et l'Asie.
 
-Le reflux s’amorce à partir de la fin du XVIIe siècle. Ses causes se cumulent :
-- l’**échec devant Vienne** en 1683, puis des défaites militaires répétées face à l’Autriche et à la Russie ;
-- le contournement des routes ottomanes par les **routes maritimes** atlantiques, qui ruine son avantage commercial ;
-- le **retard technique et industriel** face à une Europe qui s’industrialise ;
-- la montée des **nationalismes** dans les Balkans — indépendance grecque en 1830, puis serbe, roumaine, bulgare ;
-- la **dépendance financière** : la dette contractée auprès des puissances européennes conduit en 1881 à la création de l’Administration de la Dette publique ottomane, qui place les recettes sous contrôle étranger ; les **capitulations** accordent aux Européens des privilèges commerciaux et judiciaires.
+| La cause du reflux | Son effet |
+| L'**échec devant Vienne** (1683), puis des défaites face à l'Autriche et à la Russie | Perte de territoires |
+| Le **contournement** par les routes maritimes atlantiques | Son avantage commercial est ruiné |
+| Le **retard technique et industriel** | Face à une Europe qui s'industrialise |
+| La montée des **nationalismes** balkaniques | Grèce (1830), puis Serbie, Roumanie, Bulgarie |
+| La **dépendance financière** | Administration de la Dette publique ottomane (1881) ; les **capitulations** donnent aux Européens des privilèges commerciaux et judiciaires |
 
-Les tentatives de réforme — les **Tanzimat** au XIXe siècle, puis la révolution des Jeunes-Turcs en 1908 — ne renversent pas le mouvement. La défaite de 1918, le traité de Sèvres puis la guerre d’indépendance débouchent sur la **République turque** de Mustafa Kemal en 1923.
+| La tentative de réforme | Sa date | Son issue |
+| Les **Tanzimat** | XIXe siècle | Insuffisantes |
+| La révolution des **Jeunes-Turcs** | 1908 | Elle ne renverse pas le mouvement |
+| Défaite, traité de Sèvres, guerre d'indépendance | 1918-1923 | La **République turque** de Mustafa Kemal |
 
 ## La Russie post-soviétique
-La disparition de l’**URSS** en décembre 1991 fait perdre à Moscou près de la moitié de sa population, un quart de son territoire et son statut de superpuissance. Les années 1990 sont celles de l’effondrement économique, de l’hyperinflation, des privatisations et de l’humiliation stratégique — élargissement de l’OTAN, guerre en Tchétchénie.
+La disparition de l'**URSS**, en décembre 1991, fait perdre à Moscou près de la moitié de sa population, un quart de son territoire et son statut de superpuissance.
 
-À partir de 2000, la stratégie change : reprise en main de l’État et des médias, usage de la **rente énergétique** — le gaz et le pétrole comme instruments diplomatiques —, modernisation militaire, réaffirmation par la force en Géorgie (2008), en Crimée et dans le Donbass (2014), puis par l’invasion de l’Ukraine en 2022.
+| La période | Ce qui la caractérise |
+| Les **années 1990** | Effondrement économique, hyperinflation, privatisations, humiliation stratégique — élargissement de l'OTAN, guerre en Tchétchénie |
+| **À partir de 2000** | Reprise en main de l'État et des médias, **rente énergétique** comme instrument diplomatique, modernisation militaire |
+| Les réaffirmations par la force | Géorgie (2008), Crimée et Donbass (2014), invasion de l'Ukraine (2022) |
 
-> Deux stratégies distinctes devant le déclin : l’Empire ottoman a cherché à **se réformer** en s’européanisant ; la Russie choisit la **réaffirmation** par la puissance militaire et énergétique. Le jalon invite à comparer ces réponses, non à les juger d’avance.
+## Deux stratégies devant le déclin
+| L'empire | Sa réponse |
+| **Ottoman** | Se **réformer** en s'européanisant |
+| **Russie** | Se **réaffirmer** par la puissance militaire et énergétique |
 
-## Ce que la comparaison enseigne
-Le déclin d’une puissance est rarement un effondrement soudain : c’est un **processus** long, fait de retards accumulés, de dépendances financières, de contestations internes et de recompositions du commerce mondial — et les réponses qu’on y apporte pèsent autant que les causes.`,
+> Le déclin d'une puissance est rarement un effondrement soudain : c'est un **processus** long, fait de retards accumulés, de dépendances financières, de contestations internes et de recompositions du commerce mondial. Et les réponses qu'on y apporte pèsent autant que les causes.`,
           },
           questions: [
             ['Sous quel surnom l’Empire ottoman est-il désigné au XIXe siècle ?', ['L’homme malade de l’Europe', 'Le géant endormi', 'La Sublime Porte déchue', 'Le colosse aux pieds d’argile'], 0, 'La formule est attribuée au tsar Nicolas Ier.'],
@@ -488,32 +560,33 @@ Le déclin d’une puissance est rarement un effondrement soudain : c’est un *
             cours: `À côté de la force, il existe des formes de puissance qui agissent sans coercition — et qui sont souvent les plus durables.
 
 ## La culture et la langue
-Le **cinéma**, les séries, la musique, la mode et les jeux vidéo diffusent des représentations et des modèles. Hollywood a longtemps constitué le premier vecteur d’influence américaine ; la **vague coréenne**, avec sa musique et ses séries, illustre qu’une puissance moyenne peut y réussir remarquablement.
-
-La **langue** est une infrastructure d’influence : elle ouvre des marchés, oriente les normes juridiques et scientifiques, structure les réseaux universitaires. L’anglais domine la publication scientifique ; la **francophonie**, l’**hispanophonie** et le développement des instituts Confucius sont des politiques assumées.
-
-Les **universités** attirent des étudiants qui repartent avec un réseau et une familiarité durables : c’est l’un des investissements d’influence les plus rentables.
+| Le vecteur | Ce qu'il diffuse | Un exemple |
+| Le **cinéma**, les séries, la musique, les jeux vidéo | Des représentations et des modèles | Hollywood ; la **vague coréenne**, qui montre qu'une puissance moyenne peut y réussir |
+| La **langue** | Marchés, normes juridiques et scientifiques, réseaux universitaires | L'anglais domine la publication scientifique ; francophonie, hispanophonie, instituts Confucius |
+| Les **universités** | Des étudiants qui repartent avec un réseau et une familiarité durables | L'un des investissements d'influence les plus rentables |
 
 ## Les technologies
-Maîtriser une technologie critique, c’est détenir un moyen de pression :
-- les **semi-conducteurs**, dont la production est très concentrée géographiquement ;
-- les **réseaux** et les équipements de télécommunication ;
-- l’**intelligence artificielle** et les infrastructures de calcul ;
-- les **terres rares** et les métaux nécessaires à la transition énergétique.
+| La technologie critique | Pourquoi elle donne prise |
+| Les **semi-conducteurs** | Une production très concentrée géographiquement |
+| Les **réseaux** de télécommunication | Les équipements structurent les échanges |
+| L'**intelligence artificielle** | Elle suppose des infrastructures de calcul |
+| Les **terres rares** | Elles conditionnent la transition énergétique |
 
-Les **normes** techniques sont un enjeu à part entière : celui qui les fixe impose ses choix à tous ceux qui veulent vendre.
+> Les **normes** techniques sont un enjeu à part entière : celui qui les fixe impose ses choix à tous ceux qui veulent vendre.
 
 ## Les voies de communication
-Le contrôle des passages stratégiques est une donnée permanente de la géopolitique :
-- les **détroits** — Ormuz pour le pétrole, Malacca pour le commerce asiatique, Bab el-Mandeb, le Bosphore ;
-- les **canaux** de Suez et de Panama, dont le blocage momentané suffit à désorganiser le commerce mondial ;
-- les **câbles sous-marins**, qui transportent l’essentiel des données mondiales et dont la vulnérabilité est devenue un sujet de sécurité ;
-- les **routes maritimes** nouvelles, notamment arctiques, que le réchauffement rend praticables.
+| Le passage | Ce qu'il commande |
+| **Ormuz** | Le pétrole du Golfe |
+| **Malacca** | Le commerce asiatique |
+| **Bab el-Mandeb**, le **Bosphore** | Des goulots régionaux |
+| Les **canaux** de Suez et de Panama | Leur blocage momentané désorganise le commerce mondial |
+| Les **câbles sous-marins** | L'essentiel des données mondiales — une vulnérabilité devenue sujet de sécurité |
+| Les **routes arctiques** | Que le réchauffement rend praticables |
 
-> La Chine a fait des **nouvelles routes de la soie** l’instrument de cette puissance indirecte : investissements en ports, chemins de fer et infrastructures, qui créent des liens économiques durables — et parfois des dépendances par la dette.
+> La Chine a fait des **nouvelles routes de la soie** l'instrument de cette puissance indirecte : ports, chemins de fer, infrastructures — des liens économiques durables, et parfois des dépendances par la dette.
 
 ## Puissance et dépendance
-Ces formes indirectes créent des relations **asymétriques** durables. Elles peuvent aussi se retourner : une dépendance mutuelle contraint les deux parties, et les crises récentes ont montré combien les chaînes d’approvisionnement mondialisées exposent ceux qui les dominent.`,
+Ces formes créent des relations **asymétriques** durables. Elles peuvent aussi se retourner : une dépendance mutuelle contraint les deux parties, et les crises récentes ont montré combien les chaînes d'approvisionnement mondialisées exposent ceux qui les dominent.`,
           },
           questions: [
             ['Quel exemple montre qu’une puissance moyenne peut réussir par la culture ?', ['La vague coréenne, musique et séries', 'Hollywood', 'Le cinéma français des années 1930', 'Les studios indiens'], 0, 'Le soft power n’est pas réservé aux plus grandes puissances.'],
@@ -531,31 +604,36 @@ Ces formes indirectes créent des relations **asymétriques** durables. Elles pe
           axe: 'Analyser les dynamiques des puissances internationales',
           lecon: {
             titre: 'Une puissance complète, et contestée',
-            cours: `Les États-Unis restent, au début des années 2020, la seule puissance **complète** : présente sur tous les registres à la fois. Mais leur position relative se transforme.
+            cours: `Les États-Unis restent, au début des années 2020, la seule puissance complète : présente sur tous les registres à la fois. Mais leur position relative se transforme.
 
 ## Les fondements
-- **Militaire** : un budget de défense supérieur à celui des dix pays suivants réunis, environ 750 bases dans quelque 80 pays, onze porte-avions, une capacité de projection sans équivalent, un réseau d’alliances dont l’OTAN.
-- **Économique** : premier ou deuxième PIB mondial, domination des secteurs de pointe, entreprises technologiques et financières dominantes.
-- **Monétaire** : le **dollar** assure l’essentiel des réserves de change et des échanges internationaux, ce qui permet de financer les déficits et de faire de la sanction financière une arme — l’extraterritorialité du droit américain.
-- **Culturelle** : cinéma, séries, musique, plateformes, universités de premier rang, langue.
-- **Scientifique** : dépenses de recherche, brevets, prix, capacité d’attirer les chercheurs du monde entier.
+| Le registre | Ce qui le fonde |
+| **Militaire** | Un budget supérieur à celui des dix pays suivants réunis, environ 750 bases dans 80 pays, onze porte-avions, l'OTAN |
+| **Économique** | Premier ou deuxième PIB mondial, domination des secteurs de pointe |
+| **Monétaire** | Le **dollar** : l'essentiel des réserves de change et des échanges, ce qui permet de financer les déficits et de faire de la sanction financière une arme |
+| **Culturel** | Cinéma, séries, musique, plateformes, universités, langue |
+| **Scientifique** | Dépenses de recherche, brevets, capacité d'attirer les chercheurs du monde entier |
 
 ## Les limites internes
-- Une **polarisation politique** profonde, qui rend la politique étrangère moins prévisible d’une administration à l’autre ;
-- des **inégalités** sociales, sanitaires et raciales importantes ;
-- une **dette publique** élevée ;
-- des débats récurrents sur l’**engagement extérieur**, entre interventionnisme et retrait — les guerres d’Irak et d’Afghanistan ayant durablement marqué l’opinion.
+| La limite | Sa conséquence |
+| La **polarisation politique** | Une politique étrangère moins prévisible d'une administration à l'autre |
+| Les **inégalités** sociales, sanitaires et raciales | Une cohésion fragilisée |
+| La **dette publique** | Une contrainte budgétaire |
+| Le débat sur l'**engagement extérieur** | Les guerres d'Irak et d'Afghanistan ont durablement marqué l'opinion |
 
 ## Les contestations externes
-- La **Chine** conteste la primauté américaine sur presque tous les registres : commerce, technologies, monnaie, présence en mer de Chine méridionale, influence en Afrique et en Asie ;
-- la **Russie** conteste l’ordre européen par la force ;
-- des puissances moyennes conduisent des politiques de plus en plus **autonomes** ;
-- des projets de **dédollarisation** partielle apparaissent, encore limités.
+| Le contestataire | Sur quel terrain |
+| La **Chine** | Commerce, technologies, monnaie, mer de Chine méridionale, influence en Afrique et en Asie |
+| La **Russie** | L'ordre européen, par la force |
+| Les **puissances moyennes** | Des politiques de plus en plus autonomes |
+| Les projets de **dédollarisation** | Encore limités |
 
-> Ce que le jalon demande de nuancer : la puissance américaine est **relativement** moins dominante qu’en 1991, mais elle demeure la seule qui réunisse tous les attributs. Multipolarité ne signifie pas égalité des pôles.
+> Ce que le jalon demande de nuancer : la puissance américaine est **relativement** moins dominante qu'en 1991, mais elle demeure la seule qui réunisse tous les attributs. Multipolarité ne signifie pas égalité des pôles.
 
-## L’exercice de la puissance
-Il combine alliances, présence militaire, sanctions économiques, diplomatie, influence culturelle et rôle dans les institutions internationales. Les États-Unis y sont à la fois le principal architecte de l’ordre international issu de 1945 et l’un de ses contestataires occasionnels, quand ils s’en écartent au nom de leurs intérêts.`,
+## L'exercice de la puissance
+Alliances, présence militaire, sanctions économiques, diplomatie, influence culturelle, rôle dans les institutions internationales.
+
+> Les États-Unis sont à la fois le principal architecte de l'ordre international issu de 1945 et l'un de ses contestataires occasionnels, quand ils s'en écartent au nom de leurs intérêts.`,
           },
           questions: [
             ['Pourquoi qualifie-t-on la puissance américaine de « complète » ?', ['Elle est présente sur tous les registres à la fois', 'Elle est militaire uniquement', 'Elle est incontestée', 'Elle est la plus ancienne'], 0, 'Militaire, économique, monétaire, culturelle et scientifique.'],
@@ -575,25 +653,36 @@ Il combine alliances, présence militaire, sanctions économiques, diplomatie, i
           axe: 'Étudier les divisions politiques du monde : les frontières',
           lecon: {
             titre: 'Lignes, zones, murs',
-            cours: `Une **frontière** est la limite d’un territoire sur lequel s’exerce une souveraineté. Elle est à la fois une **ligne** sur une carte, une **institution** juridique et un **fait social** vécu par ceux qui la traversent ou qu’elle sépare.
+            cours: `Une frontière est la limite d'un territoire souverain. Elle est à la fois une ligne sur une carte, une institution juridique et un fait social vécu.
 
 ## Une typologie
-- Selon leur **tracé** : les frontières **naturelles** s’appuient sur un fleuve, une crête, un littoral ; les frontières **géométriques**, tracées à la règle, sont fréquentes en Afrique et en Amérique du Nord, héritées de partages coloniaux ou de conventions.
-- Selon leur **origine** : issues d’un traité, d’une guerre, d’une décolonisation, d’un référendum.
-- Selon leur **fonction** : ouvertes ou fermées, contrôlées ou poreuses, militarisées ou invisibles.
+| Le critère | Les types |
+| Le **tracé** | **Naturelles** (fleuve, crête, littoral) ou **géométriques**, tracées à la règle — fréquentes en Afrique et en Amérique du Nord |
+| L'**origine** | Traité, guerre, décolonisation, référendum |
+| La **fonction** | Ouvertes ou fermées, contrôlées ou poreuses, militarisées ou invisibles |
 
-> L’expression « frontière naturelle » est trompeuse : un fleuve n’a rien de naturellement séparateur — il fut longtemps un axe de circulation qui unit les deux rives plus qu’il ne les oppose. Une frontière est toujours une **construction politique**.
+> L'expression « frontière naturelle » est trompeuse : un fleuve n'a rien de naturellement séparateur — il fut longtemps un axe de circulation qui unit les deux rives. Une frontière est toujours une **construction politique**.
 
 ## Les frontières autres que terrestres
-- **Maritimes** : la convention de Montego Bay (1982) fixe la mer territoriale à 12 milles marins et la **zone économique exclusive** à 200 milles, où l’État exerce des droits sur les ressources. Elle explique l’intérêt stratégique des îles les plus modestes.
-- **Aériennes**, superposées à l’espace terrestre.
-- **Numériques** : le contrôle national d’Internet, le filtrage, la localisation obligatoire des données — ce que l’on appelle parfois la « souveraineté numérique ».
+| Le domaine | Ce qui la fixe |
+| **Maritime** | La convention de Montego Bay (1982) : mer territoriale à 12 milles, **zone économique exclusive** à 200 milles |
+| **Aérien** | Superposé à l'espace terrestre |
+| **Numérique** | Contrôle national d'Internet, filtrage, localisation obligatoire des données |
+
+> La ZEE explique l'intérêt stratégique des îles les plus modestes : quelques rochers ouvrent des droits sur 200 milles de ressources.
 
 ## La ligne et la zone
-Toute frontière n’est pas linéaire. Certaines sont des **zones** : marges, confins, espaces de transition où l’autorité s’estompe. À l’inverse, les **murs** matérialisent la ligne de la façon la plus brutale.
+| La forme | Ce qu'elle est |
+| La **ligne** | Le tracé net, cartographié |
+| La **zone** | Marges, confins, espaces de transition où l'autorité s'estompe |
+| Le **mur** | La matérialisation la plus brutale de la ligne |
 
 ## Le paradoxe contemporain
-Jamais les échanges n’ont été aussi intenses, et jamais on n’a construit autant de barrières. On comptait moins d’une dizaine de murs frontaliers à la chute du mur de Berlin ; on en dénombre aujourd’hui plusieurs dizaines. La mondialisation n’efface pas les frontières : elle les **différencie** — très ouvertes aux capitaux et aux marchandises, sélectives pour les personnes, et d’autant plus selon le passeport que l’on détient.`,
+| L'époque | Le nombre de murs frontaliers |
+| À la chute du mur de Berlin | Moins d'une dizaine |
+| Aujourd'hui | Plusieurs dizaines |
+
+> La mondialisation n'efface pas les frontières : elle les **différencie** — très ouvertes aux capitaux et aux marchandises, sélectives pour les personnes, et d'autant plus selon le passeport que l'on détient.`,
           },
           questions: [
             ['Qu’est-ce qu’une frontière ?', ['La limite d’un territoire sur lequel s’exerce une souveraineté', 'Un obstacle naturel', 'Une zone militaire', 'Une ligne de démarcation provisoire'], 0, 'Elle est à la fois ligne, institution juridique et fait social.'],
@@ -611,27 +700,39 @@ Jamais les échanges n’ont été aussi intenses, et jamais on n’a construit 
           axe: 'Étudier les divisions politiques du monde : les frontières',
           lecon: {
             titre: 'Qui trace, comment, et avec quelles conséquences',
-            cours: `Tracer une frontière est un acte **politique** : il désigne un « nous » et un « eux », attribue des ressources, et engage des générations.
+            cours: `Tracer une frontière est un acte politique : il désigne un « nous » et un « eux », attribue des ressources, et engage des générations.
 
 ## Les grands moments du traçage
-- Les **traités de Westphalie** (1648) posent le principe de souveraineté territoriale exclusive : c’est l’acte de naissance du système international moderne.
-- La **conférence de Berlin** (1884-1885) organise le partage de l’Afrique entre puissances européennes, sans consultation ni connaissance des réalités locales. D’où la prédominance des tracés géométriques et la coupure de peuples entiers.
-- Les **traités de 1919-1920** redessinent l’Europe centrale au nom du droit des peuples à disposer d’eux-mêmes, principe énoncé par Wilson — mais que la réalité des peuplements mêlés rend inapplicable à la lettre, laissant partout des minorités.
-- La **décolonisation** consacre le principe de l’*uti possidetis juris* : les nouveaux États héritent des frontières coloniales. Le choix est assumé par l’Organisation de l’unité africaine en 1964, non parce que ces frontières seraient justes, mais parce que les rouvrir toutes provoquerait des guerres en chaîne.
+| Le moment | Sa date | Ce qu'il pose |
+| Les traités de **Westphalie** | 1648 | La souveraineté territoriale exclusive : l'acte de naissance du système international moderne |
+| La conférence de **Berlin** | 1884-1885 | Le partage de l'Afrique, sans consultation ni connaissance des réalités locales : d'où les tracés géométriques et les peuples coupés |
+| Les traités de **1919-1920** | — | Le droit des peuples à disposer d'eux-mêmes, énoncé par Wilson — inapplicable à la lettre là où les peuplements sont mêlés |
+| La **décolonisation** | Années 1960 | L'*uti possidetis juris* : les nouveaux États héritent des frontières coloniales |
 
-> C’est l’un des arbitrages les plus instructifs du thème : conserver des frontières reconnues arbitraires, au nom de la **stabilité** contre la **justice** du tracé.
+Le choix de l'*uti possidetis* est assumé par l'Organisation de l'unité africaine en **1964**, non parce que ces frontières seraient justes, mais parce que les rouvrir toutes provoquerait des guerres en chaîne.
+
+> C'est l'un des arbitrages les plus instructifs du thème : conserver des frontières reconnues arbitraires, au nom de la **stabilité** contre la **justice** du tracé.
 
 ## Ce qui rend un tracé conflictuel
-- La présence de **ressources** : eau, hydrocarbures, minerais, zones de pêche ;
-- une **population** partagée entre deux États ;
-- une **valeur symbolique** — un lieu saint, un berceau national revendiqué de part et d’autre ;
-- l’absence de **reconnaissance** internationale du tracé.
+| Le facteur | Un exemple de ce qui est en jeu |
+| Des **ressources** | Eau, hydrocarbures, minerais, zones de pêche |
+| Une **population** partagée | Une minorité de part et d'autre |
+| Une **valeur symbolique** | Un lieu saint, un berceau national revendiqué |
+| L'absence de **reconnaissance** | Le tracé n'est admis que par une partie |
 
 ## Comment on règle un différend
-Par la **négociation** bilatérale, par la **médiation**, par l’arbitrage de la **Cour internationale de justice**, ou par un **référendum** d’autodétermination — la partition du Soudan du Sud en 2011 en est un exemple. Faute de quoi, le conflit s’installe : Cachemire, Sahara occidental, Chypre, ligne de contrôle en Ukraine.
+| Le moyen | Sa nature |
+| La **négociation** bilatérale | Politique |
+| La **médiation** | Un tiers facilite |
+| La **Cour internationale de justice** | Juridictionnelle |
+| Un **référendum** d'autodétermination | Le Soudan du Sud, en 2011 |
+
+Faute de quoi le conflit s'installe : Cachemire, Sahara occidental, Chypre, ligne de contrôle en Ukraine.
 
 ## Les frontières non reconnues
-Il existe des entités qui contrôlent un territoire sans être reconnues, ou reconnues par quelques États seulement. Elles rappellent que la frontière n’existe pleinement que si les autres l’**acceptent** : une frontière est une relation, pas seulement un tracé.`,
+Des entités contrôlent un territoire sans être reconnues, ou reconnues par quelques États seulement.
+
+> Une frontière n'existe pleinement que si les autres l'**acceptent** : c'est une relation, pas seulement un tracé.`,
           },
           questions: [
             ['Que posent les traités de Westphalie en 1648 ?', ['Le principe de souveraineté territoriale exclusive', 'Le droit des peuples à disposer d’eux-mêmes', 'L’abolition des frontières', 'La liberté des mers'], 0, 'C’est l’acte de naissance du système international moderne.'],
@@ -649,27 +750,42 @@ Il existe des entités qui contrôlent un territoire sans être reconnues, ou re
           axe: 'Étudier les divisions politiques du monde : les frontières',
           lecon: {
             titre: 'Effacer, franchir, contourner',
-            cours: `Les frontières sont contestées de deux façons opposées : certains veulent en établir de nouvelles, d’autres veulent les dépasser.
+            cours: `Les frontières sont contestées de deux façons opposées : certains veulent en établir de nouvelles, d'autres veulent les dépasser.
 
 ## La reconnaissance
-Un État n’existe pleinement qu’une fois **reconnu**. La reconnaissance est un acte politique, non un constat : plusieurs entités contrôlent un territoire, une population et une administration sans être admises dans le concert des nations.
+Un État n'existe pleinement qu'une fois **reconnu**. La reconnaissance est un acte politique, non un constat.
 
-Ce sont les « **États de facto** » : Somaliland, Transnistrie, Ossétie du Sud, Haut-Karabagh avant 2023. Leur cas montre que les critères matériels de l’État ne suffisent pas — il faut le **regard des autres**.
+| L'entité | Sa situation |
+| Les « **États de facto** » — Somaliland, Transnistrie, Ossétie du Sud, Haut-Karabagh avant 2023 | Territoire, population et administration, mais pas de reconnaissance |
+| Le **Kosovo** | Reconnu par une centaine d'États, refusé par d'autres |
 
-Le Kosovo, reconnu par une centaine d’États et refusé par d’autres, illustre la dimension géopolitique de la reconnaissance : on reconnaît aussi en fonction de ses propres contentieux internes.
+> Les critères matériels de l'État ne suffisent pas : il faut le **regard des autres**. Et l'on reconnaît aussi en fonction de ses propres contentieux internes — c'est ce qu'illustre le Kosovo.
 
 ## Dépasser les frontières
-- L’**intégration régionale** : l’espace **Schengen** supprime les contrôles aux frontières intérieures de 27 pays européens, tout en renforçant la frontière extérieure commune. L’union douanière, le marché unique et la libre circulation des personnes en sont les instruments.
-- La **coopération transfrontalière** : eurorégions, bassins de vie partagés, travailleurs frontaliers, services communs. Des dizaines de milliers de personnes traversent chaque jour une frontière pour aller travailler.
-- Les **flux** immatériels — capitaux, données, information — ignorent largement les frontières, ce qui pose la question de la régulation et de la fiscalité.
+| Le procédé | Ce qu'il fait |
+| L'**intégration régionale** | **Schengen** supprime les contrôles intérieurs de 27 pays, avec le marché unique et la libre circulation |
+| La **coopération transfrontalière** | Eurorégions, bassins de vie partagés, services communs ; des dizaines de milliers de travailleurs frontaliers chaque jour |
+| Les **flux immatériels** | Capitaux, données, information : ils ignorent largement les frontières, d'où la question de la régulation et de la fiscalité |
 
-> Une frontière ouverte n’est pas une frontière abolie : Schengen suppose au contraire une frontière extérieure **renforcée**, des bases de données communes et une agence de garde-frontières. Ouvrir à l’intérieur, c’est fermer davantage à l’extérieur.
+> Une frontière ouverte n'est pas une frontière abolie : Schengen suppose au contraire une frontière **extérieure renforcée**, des bases de données communes et une agence de garde-frontières. Ouvrir à l'intérieur, c'est fermer davantage à l'extérieur.
 
 ## Le retour des frontières
-Le mouvement inverse est tout aussi net : rétablissement temporaire des contrôles lors des crises migratoires, sanitaires ou sécuritaires ; multiplication des barrières ; Brexit. La **pandémie** a montré la rapidité avec laquelle des frontières que l’on croyait effacées se referment.
+| L'occasion | La réaction |
+| Crises migratoires | Rétablissement temporaire des contrôles |
+| Crises sécuritaires | Multiplication des barrières |
+| Le **Brexit** | Une frontière réinstallée là où elle avait disparu |
+| La **pandémie** | Des frontières que l'on croyait effacées se referment en quelques jours |
 
 ## Ce que le thème demande
-Non pas de choisir entre un monde de murs et un monde sans frontières, mais de comprendre que la frontière remplit plusieurs **fonctions** — protection, identité, régulation, fiscalité — et que chaque projet d’ouverture ou de fermeture arbitre entre elles.`,
+Non pas de choisir entre un monde de murs et un monde sans frontières, mais de voir que la frontière remplit plusieurs **fonctions** :
+
+| La fonction | Ce qu'elle assure |
+| **Protection** | Sécurité, contrôle des entrées |
+| **Identité** | La désignation d'un « nous » |
+| **Régulation** | Normes, sanitaire, migrations |
+| **Fiscalité** | Douanes, impôts, redistribution |
+
+> Chaque projet d'ouverture ou de fermeture arbitre entre elles.`,
           },
           questions: [
             ['Qu’est-ce qu’un État de facto ?', ['Une entité qui contrôle un territoire sans être reconnue internationalement', 'Un État fédéral', 'Un État sans constitution', 'Un territoire sous mandat de l’ONU'], 0, 'Somaliland, Transnistrie et Ossétie du Sud en sont des exemples.'],
@@ -687,27 +803,38 @@ Non pas de choisir entre un monde de murs et un monde sans frontières, mais de 
           axe: 'Étudier les divisions politiques du monde : les frontières',
           lecon: {
             titre: 'Vivre la frontière',
-            cours: `Une frontière n’est pas seulement une limite : c’est un **espace habité**, qui produit ses activités, ses métiers et ses paysages propres.
+            cours: `Une frontière n'est pas seulement une limite : c'est un espace habité, qui produit ses activités, ses métiers et ses paysages propres.
 
-## L’effet frontière
-La différence de législation, de fiscalité, de salaires ou de prix crée de l’activité **parce que** la frontière existe :
-- commerces frontaliers, stations-service, pharmacies, bureaux de tabac ;
-- travail **frontalier** : des centaines de milliers de personnes traversent quotidiennement une frontière pour aller travailler — vers le Luxembourg, la Suisse, l’Allemagne, ou entre Tijuana et San Diego ;
-- **délocalisation** de proximité : les *maquiladoras* mexicaines, usines d’assemblage installées le long de la frontière américaine, combinent salaires mexicains et accès au marché américain ;
-- économies **illégales** : contrebande, trafics, passeurs, qui vivent eux aussi de l’écart entre deux régimes juridiques.
+## L'effet frontière
+La différence de législation, de fiscalité, de salaires ou de prix crée de l'activité **parce que** la frontière existe.
+
+| L'activité | Ce qu'elle exploite |
+| Commerces frontaliers, stations-service, pharmacies, tabac | L'écart de **prix** et de fiscalité |
+| Le travail **frontalier** | L'écart de **salaires** : Luxembourg, Suisse, Allemagne, ou Tijuana vers San Diego |
+| Les *maquiladoras* mexicaines | Salaires mexicains **et** accès au marché américain |
+| Contrebande, trafics, passeurs | L'écart entre deux **régimes juridiques** |
 
 ## Les régions transfrontalières
-Certaines forment de véritables **bassins de vie** intégrés : la Grande Région autour du Luxembourg, l’Öresund entre Danemark et Suède, le Rhin supérieur. On y organise des transports communs, des équipements partagés, parfois des institutions dédiées.
+| La région | Ce qu'elle intègre |
+| La **Grande Région** autour du Luxembourg | Transports, emploi, équipements |
+| L'**Öresund** entre Danemark et Suède | Un pont et un bassin d'emploi commun |
+| Le **Rhin supérieur** | Trois pays, des institutions dédiées |
 
-Elles rencontrent des difficultés typiques : régimes fiscaux et sociaux différents, diplômes non reconnus, services de secours qui ne peuvent pas franchir la ligne, statistiques incompatibles.
+| L'obstacle typique | Sa conséquence |
+| Régimes fiscaux et sociaux différents | Des situations personnelles complexes |
+| **Diplômes** non reconnus | Un marché du travail cloisonné |
+| Services de **secours** bloqués à la ligne | Des délais absurdes |
+| **Statistiques** incompatibles | On ne sait pas mesurer le bassin de vie |
 
 ## Les métropoles frontalières
-Certaines villes doivent leur existence à la frontière — Ciudad Juárez et El Paso, Bâle au contact de trois pays, Genève dont le bassin d’emploi déborde largement en France. La frontière y devient une donnée quotidienne, gérée par des accords spécifiques.
+Ciudad Juárez et El Paso, Bâle au contact de trois pays, Genève dont le bassin d'emploi déborde largement en France : la frontière y devient une donnée quotidienne, gérée par des accords spécifiques.
 
-> L’asymétrie est ce qui fait la frontière vivante : si les deux côtés étaient identiques, il n’y aurait ni flux, ni activité, ni intérêt à traverser. La frontière crée de la **ressource** en même temps qu’elle sépare.
+> L'**asymétrie** fait la frontière vivante : si les deux côtés étaient identiques, il n'y aurait ni flux, ni activité, ni intérêt à traverser. La frontière crée de la **ressource** en même temps qu'elle sépare.
 
 ## Les acteurs
-États, régions, communes, entreprises, associations, habitants : la frontière est gérée à plusieurs niveaux, et rarement par le seul pouvoir central. C’est un espace de **négociation permanente**, où le local pèse souvent plus que le national.`,
+États, régions, communes, entreprises, associations, habitants.
+
+> La frontière est gérée à plusieurs niveaux, et rarement par le seul pouvoir central : c'est un espace de **négociation permanente**, où le local pèse souvent plus que le national.`,
           },
           questions: [
             ['Qu’est-ce que l’effet frontière ?', ['L’activité créée par l’écart de législation, de prix ou de salaires entre deux pays', 'La fermeture d’une frontière', 'La longueur d’une frontière', 'Le contrôle douanier'], 0, 'Commerces frontaliers et travail frontalier en découlent.'],
@@ -725,32 +852,41 @@ Certaines villes doivent leur existence à la frontière — Ciudad Juárez et E
           axe: 'Étudier les divisions politiques du monde : les frontières',
           lecon: {
             titre: 'Schengen, Dublin et la question de la solidarité',
-            cours: `L’Union européenne a supprimé ses frontières intérieures tout en construisant une frontière extérieure commune : c’est cette combinaison qui organise, et complique, la question migratoire.
+            cours: `L'Union européenne a supprimé ses frontières intérieures tout en construisant une frontière extérieure commune. C'est cette combinaison qui organise, et complique, la question migratoire.
 
 ## Le dispositif
-- L’**espace Schengen** (1985, appliqué en 1995) supprime les contrôles aux frontières intérieures pour 27 pays, dont quatre hors Union.
-- **Frontex**, créée en 2004 et devenue Agence européenne de garde-frontières et de garde-côtes, appuie les États dans la surveillance de la frontière extérieure.
-- Les **accords de Dublin** rendent responsable de l’examen d’une demande d’asile le **premier pays d’entrée** dans l’Union.
-- Des bases de données communes enregistrent les entrées et les demandes.
+| L'élément | Sa date | Ce qu'il fait |
+| L'espace **Schengen** | 1985, appliqué en 1995 | Supprime les contrôles intérieurs pour 27 pays, dont quatre hors Union |
+| **Frontex** | 2004 | Agence européenne de garde-frontières : elle appuie les États sur la frontière extérieure |
+| Les accords de **Dublin** | 1990, révisés | Le **premier pays d'entrée** est responsable de l'examen d'une demande d'asile |
+| Les bases de données communes | — | Elles enregistrent entrées et demandes |
 
 ## La faille du système
-La règle de Dublin fait peser l’essentiel de la charge sur les pays d’**entrée** — Grèce, Italie, Espagne, Malte —, en raison de leur seule position géographique. Les mécanismes de **répartition** entre États membres n’ont jamais fonctionné durablement : chaque crise rouvre le conflit entre solidarité et souveraineté nationale.
+La règle de Dublin fait peser l'essentiel de la charge sur les pays d'**entrée** — Grèce, Italie, Espagne, Malte —, en raison de leur seule position géographique.
 
-> C’est le point que le programme demande de comprendre : ce n’est pas une difficulté technique mais un **désaccord politique** sur ce que les États se doivent les uns aux autres.
+> Les mécanismes de **répartition** entre États membres n'ont jamais fonctionné durablement. Ce n'est pas une difficulté technique mais un **désaccord politique** sur ce que les États se doivent les uns aux autres.
 
 ## La crise de 2015 et ses suites
-L’arrivée de plus d’un million de personnes en 2015, fuyant principalement la Syrie, l’Afghanistan et l’Érythrée, a produit trois effets durables : le rétablissement de contrôles intérieurs par plusieurs États, la conclusion d’accords avec des pays tiers pour retenir les départs, et un durcissement général des politiques d’asile.
+Plus d'un million de personnes arrivent en 2015, fuyant principalement la Syrie, l'Afghanistan et l'Érythrée.
 
-Le Pacte sur la migration et l’asile, adopté en 2024, tente de refonder l’équilibre entre responsabilité des pays d’entrée et solidarité des autres.
+| L'effet durable | Sa forme |
+| Le rétablissement de **contrôles intérieurs** | Par plusieurs États |
+| Les **accords avec des pays tiers** | Pour retenir les départs |
+| Le **durcissement** des politiques d'asile | Général |
 
-## Les enjeux à distinguer
-Une confusion fréquente, qu’un devoir doit éviter :
-- le **demandeur d’asile** sollicite une protection au titre de la convention de Genève de 1951 ; le droit d’asile est un droit **individuel**, protégé par le droit international ;
-- le **migrant économique** relève, lui, des politiques nationales d’immigration ;
-- ces catégories se recouvrent dans les faits, mais pas en droit.
+Le Pacte sur la migration et l'asile, adopté en **2024**, tente de refonder l'équilibre entre responsabilité des pays d'entrée et solidarité des autres.
+
+## Deux catégories à distinguer
+| La personne | Le fondement juridique | Le régime |
+| Le **demandeur d'asile** | La convention de Genève de 1951 | Un droit **individuel**, protégé par le droit international |
+| Le **migrant économique** | — | Les politiques **nationales** d'immigration |
+
+> Ces catégories se recouvrent dans les faits, mais pas en droit. Un devoir doit éviter la confusion.
 
 ## Le coût humain
-La Méditerranée est la route migratoire la plus meurtrière du monde : plusieurs dizaines de milliers de disparus depuis 2014. Les débats portent sur les opérations de sauvetage, la criminalisation de l’aide, et l’externalisation du contrôle vers des pays où les droits ne sont pas garantis.`,
+La Méditerranée est la route migratoire la plus meurtrière du monde : plusieurs dizaines de milliers de disparus depuis 2014.
+
+Les débats portent sur les opérations de sauvetage, la criminalisation de l'aide, et l'externalisation du contrôle vers des pays où les droits ne sont pas garantis.`,
           },
           questions: [
             ['Que prévoient les accords de Dublin ?', ['Le premier pays d’entrée est responsable de l’examen de la demande d’asile', 'La répartition égale des demandeurs entre États', 'La libre circulation des demandeurs', 'La compétence exclusive de Frontex'], 0, 'D’où la charge concentrée sur les pays méditerranéens.'],
@@ -770,27 +906,39 @@ La Méditerranée est la route migratoire la plus meurtrière du monde : plusieu
           axe: 'S’informer : un regard critique sur les sources et les moyens de communication',
           lecon: {
             titre: 'Quatre siècles de circulation de l’écrit',
-            cours: `L’**imprimerie** à caractères mobiles, mise au point par **Gutenberg** vers 1450, change l’échelle de la circulation des idées : ce qu’un copiste mettait un an à produire s’imprime désormais en centaines d’exemplaires.
+            cours: `L'imprimerie à caractères mobiles, mise au point par Gutenberg vers 1450, change l'échelle de la circulation des idées.
+
+> Ce qu'un copiste mettait un an à produire s'imprime désormais en centaines d'exemplaires.
 
 ## Les premiers effets
-- La **Réforme** se diffuse par l’imprimé : les thèses de Luther, traduites en allemand, circulent en quelques semaines dans tout l’Empire. Aucun mouvement religieux antérieur n’avait disposé d’un tel vecteur.
-- Les États réagissent aussitôt par la **censure** : privilèges d’impression, autorisations préalables, index des livres interdits.
-- Les savoirs se **stabilisent** : un texte imprimé est identique partout, ce qui rend possible la comparaison, la critique et la science moderne.
+| L'effet | Ce qu'il produit |
+| La **Réforme** | Les thèses de Luther, traduites en allemand, circulent en quelques semaines dans tout l'Empire |
+| La **censure** | Privilèges d'impression, autorisations préalables, index des livres interdits |
+| La **stabilisation des savoirs** | Un texte imprimé est identique partout : comparaison, critique et science moderne deviennent possibles |
 
 ## La naissance de la presse
-- 1631 : la **Gazette** de Théophraste Renaudot, hebdomadaire proche du pouvoir, première publication périodique française.
-- La **Révolution** libère l’imprimé : la Déclaration de 1789 proclame la libre communication des pensées et des opinions, et des centaines de titres paraissent. La liberté est ensuite reprise et rendue à plusieurs reprises selon les régimes.
-- **1881** : la loi sur la liberté de la presse supprime l’autorisation préalable et fixe un régime de responsabilité *a posteriori*. Elle est encore en vigueur.
+| La date | L'événement |
+| **1631** | La **Gazette** de Théophraste Renaudot, hebdomadaire proche du pouvoir |
+| **1789** | La Déclaration proclame la libre communication des pensées et des opinions ; des centaines de titres paraissent |
+| Le XIXe siècle | La liberté est reprise et rendue selon les régimes |
+| **1881** | La loi sur la liberté de la presse supprime l'autorisation préalable — elle est encore en vigueur |
 
 ## La presse à grand tirage
-La fin du XIXe siècle réunit les conditions d’une presse de masse : rotatives, papier bon marché, **alphabétisation** généralisée par les lois scolaires, chemin de fer pour la diffusion, télégraphe pour l’information rapide, et surtout **publicité**, qui permet de vendre le journal en dessous de son coût.
+La fin du XIXe siècle réunit toutes les conditions d'une presse de masse.
 
-*Le Petit Journal* dépasse le million d’exemplaires ; la presse devient le premier média de masse de l’histoire, et le principal espace du débat public.
+| La condition | Ce qu'elle apporte |
+| Les **rotatives** et le papier bon marché | Le tirage de masse |
+| L'**alphabétisation** par les lois scolaires | Le lectorat |
+| Le **chemin de fer** | La diffusion |
+| Le **télégraphe** | L'information rapide |
+| La **publicité** | De vendre le journal en dessous de son coût |
 
-> Le modèle économique change tout : un journal financé par la publicité dépend de son audience, donc du fait divers, du feuilleton et du sensationnel autant que de l’information.
+*Le Petit Journal* dépasse le million d'exemplaires : la presse devient le premier média de masse de l'histoire, et le principal espace du débat public.
+
+> Le modèle économique change tout : un journal financé par la publicité dépend de son audience, donc du fait divers, du feuilleton et du sensationnel autant que de l'information.
 
 ## Ce que le jalon met en place
-Il installe les questions qui traverseront tout le thème : qui contrôle la diffusion, qui la finance, comment un pouvoir tente de la limiter, et ce que change chaque élargissement du public.`,
+Les questions qui traverseront tout le thème : qui **contrôle** la diffusion, qui la **finance**, comment un pouvoir tente de la **limiter**, et ce que change chaque **élargissement** du public.`,
           },
           questions: [
             ['Vers quelle date Gutenberg met-il au point l’imprimerie à caractères mobiles ?', ['Vers 1450', 'Vers 1350', 'Vers 1550', 'Vers 1650'], 0, 'Ce qu’un copiste mettait un an à produire s’imprime en centaines d’exemplaires.'],
@@ -808,31 +956,42 @@ Il installe les questions qui traverseront tout le thème : qui contrôle la dif
           axe: 'S’informer : un regard critique sur les sources et les moyens de communication',
           lecon: {
             titre: 'La voix, l’image et le pouvoir',
-            cours: `Au XXe siècle, l’information cesse d’être seulement lue : elle s’**entend**, puis se **voit**. Chaque changement de support modifie le rapport au pouvoir.
+            cours: `Au XXe siècle, l'information cesse d'être seulement lue : elle s'entend, puis se voit. Chaque changement de support modifie le rapport au pouvoir.
 
 ## La radio
-Les premières émissions régulières datent des années 1920. La radio apporte l’**immédiateté** et touche ceux que l’écrit n’atteignait pas — analphabètes compris. Elle crée un lien de **proximité** : une voix s’adresse à chacun.
+Les premières émissions régulières datent des années 1920.
 
-Elle devient aussitôt un instrument politique :
-- les *causeries au coin du feu* de Roosevelt à partir de 1933 ;
-- la propagande des régimes totalitaires, qui diffusent des postes à bas prix pour toucher chaque foyer ;
-- l’**Appel du 18 juin 1940** sur la BBC, et le rôle de Radio Londres, avec ses messages personnels, dans la Résistance ;
-- les **radios libres** ensuite, autorisées en France en 1981 après des années d’émissions clandestines.
+| Son apport | Ce qu'il change |
+| L'**immédiateté** | L'information n'attend plus l'imprimerie |
+| L'accès sans l'écrit | Elle touche ceux que la presse n'atteignait pas, analphabètes compris |
+| La **proximité** | Une voix s'adresse à chacun |
+
+| L'usage politique | Sa date |
+| Les *causeries au coin du feu* de Roosevelt | À partir de 1933 |
+| La propagande des régimes totalitaires | Des postes à bas prix pour toucher chaque foyer |
+| L'**Appel du 18 juin** et Radio Londres | 1940-1944, avec ses messages personnels |
+| Les **radios libres** | Autorisées en France en 1981 |
 
 ## La télévision
-Elle se généralise dans les foyers français au cours des années 1960. Elle ajoute l’**image**, avec sa force d’évidence : ce qu’on voit paraît vrai.
+Elle se généralise dans les foyers français au cours des années 1960 et ajoute l'**image**, avec sa force d'évidence : ce qu'on voit paraît vrai.
 
-Jusqu’en 1982, la radiodiffusion est un **monopole d’État** en France ; le journal télévisé est étroitement contrôlé, et l’ORTF sert le pouvoir. La libéralisation vient avec la création d’une autorité de régulation en 1982, l’autorisation des télévisions privées, puis la privatisation de TF1 en 1987.
+| La date | L'étape française |
+| Jusqu'en **1982** | Monopole d'État ; le journal télévisé est étroitement contrôlé, l'ORTF sert le pouvoir |
+| **1982** | Création d'une autorité de régulation ; autorisation des télévisions privées |
+| **1987** | Privatisation de TF1 |
 
-Quelques moments marquent la conscience du pouvoir de l’image : le débat télévisé Kennedy-Nixon de 1960, où l’apparence pèse plus que les arguments ; la guerre du Vietnam, première guerre télévisée ; la chute du mur de Berlin, suivie en direct.
-
-> La **guerre du Golfe** de 1991, retransmise en continu, marque un tournant : l’information devient un flux permanent, et l’image en direct s’impose au moment même où elle est le moins vérifiée.
+| Le moment | Ce qu'il révèle |
+| Le débat **Kennedy-Nixon**, 1960 | L'apparence pèse plus que les arguments |
+| La guerre du **Vietnam** | La première guerre télévisée |
+| La chute du **mur de Berlin** | Suivie en direct |
+| La guerre du **Golfe**, 1991 | L'information devient un flux permanent, et l'image en direct s'impose au moment où elle est le moins vérifiée |
 
 ## Les effets
-- **Simultanéité** : un même événement est vécu ensemble par des millions de personnes ;
-- **personnalisation** de la vie politique, qui se joue désormais sur la présence à l’écran ;
-- **format** : le temps de parole, la formule, le rythme imposent leurs contraintes au contenu ;
-- **concentration** : les médias de masse coûtent cher, ce qui pose la question de la propriété et de l’indépendance des rédactions.`,
+| L'effet | Ce qu'il produit |
+| **Simultanéité** | Un même événement vécu ensemble par des millions de personnes |
+| **Personnalisation** | La vie politique se joue sur la présence à l'écran |
+| **Format** | Temps de parole, formule, rythme imposent leurs contraintes au contenu |
+| **Concentration** | Les médias de masse coûtent cher : d'où la question de la propriété et de l'indépendance des rédactions |`,
           },
           questions: [
             ['Quel avantage la radio présente-t-elle sur la presse écrite ?', ['L’immédiateté, et l’accès de ceux que l’écrit n’atteignait pas', 'Une meilleure précision', 'Un coût de production supérieur', 'Une plus grande liberté légale'], 0, 'Elle touche les analphabètes et crée un lien de proximité.'],
@@ -850,32 +1009,39 @@ Quelques moments marquent la conscience du pouvoir de l’image : le débat tél
           axe: 'S’informer : un regard critique sur les sources et les moyens de communication',
           lecon: {
             titre: 'D’un réseau militaire à l’espace public mondial',
-            cours: `Internet naît d’un projet de recherche militaire américain, **ARPANET**, à la fin des années 1960 : un réseau décentralisé, conçu pour continuer de fonctionner si l’un de ses nœuds est détruit.
+            cours: `Internet naît d'un projet de recherche militaire américain, ARPANET, à la fin des années 1960 : un réseau décentralisé, conçu pour continuer de fonctionner si l'un de ses nœuds est détruit.
 
 ## Les étapes
-- 1969 : les premiers nœuds d’ARPANET sont reliés ;
-- années 1970-1980 : les protocoles TCP/IP s’imposent et le réseau s’ouvre aux universités ;
-- **1989-1991** : Tim Berners-Lee invente le **World Wide Web** au CERN — les liens hypertextes, les adresses, le navigateur ;
-- années 1990 : ouverture au public et essor commercial ;
-- années 2000 : le **web social** ; chacun devient producteur de contenus ;
-- années 2010 : l’**Internet mobile** met le réseau dans chaque poche, et les **plateformes** deviennent les principaux points d’accès à l’information.
+| La période | L'étape |
+| **1969** | Les premiers nœuds d'ARPANET sont reliés |
+| Années 1970-1980 | Les protocoles TCP/IP s'imposent ; le réseau s'ouvre aux universités |
+| **1989-1991** | Tim Berners-Lee invente le **World Wide Web** au CERN : liens hypertextes, adresses, navigateur |
+| Années 1990 | Ouverture au public, essor commercial |
+| Années 2000 | Le **web social** : chacun devient producteur de contenus |
+| Années 2010 | L'**Internet mobile** ; les **plateformes** deviennent les principaux points d'accès à l'information |
 
 ## Ce qui change
-- **Immédiateté et mondialisation** : l’information circule instantanément et sans frontière ;
-- **fin du monopole des médias** : n’importe qui peut publier, ce qui a permis de documenter des événements que les régimes voulaient cacher ;
-- **individualisation** : chacun compose son propre flux, et l’**algorithme** de recommandation le compose largement pour lui ;
-- **gratuité apparente** : le service est financé par la publicité, donc par l’attention et par les données.
+| Le changement | Sa portée |
+| **Immédiateté et mondialisation** | L'information circule instantanément et sans frontière |
+| La **fin du monopole des médias** | N'importe qui peut publier : des événements que des régimes voulaient cacher ont ainsi été documentés |
+| L'**individualisation** | Chacun compose son flux — et l'**algorithme** le compose largement pour lui |
+| La **gratuité apparente** | Le service est financé par la publicité, donc par l'attention et les données |
 
 ## Les effets à connaître
-- La **bulle de filtres** et la **chambre d’écho** : les recommandations exposent surtout à ce qui confirme, ce qui renforce les convictions et raréfie la contradiction ;
-- l’**infobésité** : l’abondance rend le tri plus difficile que la recherche ;
-- la **viralité** : ce qui circule est ce qui suscite une réaction, non ce qui est vérifié ;
-- la **désinformation** organisée, dont des campagnes coordonnées par des États.
+| L'effet | Ce qu'il produit |
+| La **bulle de filtres**, la **chambre d'écho** | On est surtout exposé à ce qui confirme ; la contradiction se raréfie |
+| L'**infobésité** | L'abondance rend le tri plus difficile que la recherche |
+| La **viralité** | Ce qui circule est ce qui fait réagir, non ce qui est vérifié |
+| La **désinformation** organisée | Y compris des campagnes coordonnées par des États |
 
-> Le renversement décisif : l’enjeu n’est plus l’**accès** à l’information, devenu presque illimité, mais sa **hiérarchisation** et sa **vérification**. Ce que le journalisme apportait par sa fonction éditoriale doit désormais être en partie assuré par le lecteur lui-même.
+> Le renversement décisif : l'enjeu n'est plus l'**accès** à l'information, devenu presque illimité, mais sa **hiérarchisation** et sa **vérification**. Ce que le journalisme apportait par sa fonction éditoriale doit désormais être en partie assuré par le lecteur.
 
 ## La fracture numérique
-L’accès reste très inégal selon les régions du monde, les revenus, l’âge et le niveau de formation — et il faut distinguer l’accès **matériel** de la **capacité** à s’en servir de façon critique, qui est la véritable fracture.`,
+| Le niveau de fracture | Ce qui manque |
+| **Matériel** | L'équipement et le réseau, très inégaux selon les régions, les revenus, l'âge |
+| **Cognitif** | La **capacité** à s'en servir de façon critique |
+
+> C'est le second qui constitue la véritable fracture.`,
           },
           questions: [
             ['De quel projet Internet est-il issu ?', ['ARPANET, un réseau de recherche militaire américain', 'Un projet commercial d’IBM', 'Un programme européen', 'Une initiative de l’ONU'], 0, 'Réseau décentralisé, conçu pour survivre à la destruction d’un nœud.'],
@@ -893,28 +1059,37 @@ L’accès reste très inégal selon les régions du monde, les revenus, l’âg
           axe: 'S’informer : un regard critique sur les sources et les moyens de communication',
           lecon: {
             titre: 'Quand un journal fait basculer une affaire',
-            cours: `L’**affaire Dreyfus** est le jalon qui montre la presse à son maximum de puissance — dans les deux sens.
+            cours: `L'affaire Dreyfus montre la presse à son maximum de puissance — dans les deux sens.
 
 ## Les faits
-En **1894**, le capitaine **Alfred Dreyfus**, officier alsacien et juif, est accusé d’avoir livré des documents à l’Allemagne. Condamné par un conseil de guerre sur la foi d’une pièce mince et d’une expertise contestée, il est dégradé publiquement et déporté à l’île du Diable.
+| La date | L'événement |
+| **1894** | Le capitaine **Alfred Dreyfus**, officier alsacien et juif, est accusé d'avoir livré des documents à l'Allemagne ; condamné sur une pièce mince, dégradé publiquement, déporté à l'île du Diable |
+| **1896** | Le colonel **Picquart** découvre que le véritable auteur du bordereau est le commandant **Esterhazy** |
+| Janvier **1898** | L'état-major étouffe l'affaire : Esterhazy est acquitté |
 
-En 1896, le colonel **Picquart** découvre que le véritable auteur du bordereau est le commandant **Esterhazy**. L’état-major étouffe l’affaire ; Esterhazy est acquitté en janvier 1898.
+## « J'accuse… ! »
+Le **13 janvier 1898**, **Émile Zola** publie dans *L'Aurore*, à la une, une lettre ouverte au président de la République, titrée par Clemenceau.
 
-## « J’accuse… ! »
-Le **13 janvier 1898**, **Émile Zola** publie dans *L’Aurore*, à la une, une lettre ouverte au président de la République, titrée par Clemenceau « J’accuse… ! ». Il y nomme les responsables et les accuse publiquement, sachant qu’il s’expose à un procès en diffamation — c’est précisément ce qu’il cherche, pour obtenir un débat contradictoire.
+| Le fait | Sa portée |
+| Il **nomme** les responsables | Il s'expose sciemment à un procès en diffamation |
+| C'est ce qu'il cherche | Le procès forcera un débat contradictoire |
+| Le tirage du jour | **300 000 exemplaires** |
+| L'issue pour Zola | Condamné, il s'exile à Londres |
 
-Le journal tire ce jour-là à **300 000 exemplaires**. Zola est condamné et s’exile à Londres.
+## Ce que l'affaire révèle
+| Le constat | Son contenu |
+| La presse est une **puissance politique** | Elle impose un sujet, structure deux camps, fait basculer l'opinion |
+| Elle est aussi le lieu de la **calomnie** | *La Libre Parole* de Drumont déverse un antisémitisme d'une violence extrême et fabrique de fausses preuves |
+| Les **intellectuels** apparaissent comme groupe | Le mot prend son sens actuel avec le « Manifeste des intellectuels » de janvier 1898 |
+| La **France se divise** | Jusque dans les familles — le dessin de Caran d'Ache, « ils en ont parlé », le résume mieux qu'un récit |
 
-## Ce que l’affaire révèle
-- La presse est devenue une **puissance politique** : elle impose un sujet, structure deux camps, fait basculer l’opinion.
-- Elle est aussi le lieu de la **calomnie** : la presse antidreyfusarde, notamment *La Libre Parole* de Drumont, déverse un antisémitisme d’une violence extrême et fabrique de fausses preuves.
-- Les **intellectuels** apparaissent comme groupe : le mot prend son sens actuel avec la pétition dite « Manifeste des intellectuels » de janvier 1898. Des hommes de savoir interviennent dans le débat public au nom de la vérité et de la justice.
-- La **France se divise** en deux camps, jusque dans les familles — le célèbre dessin de Caran d’Ache, « ils en ont parlé », le résume mieux qu’un long récit.
+## L'issue
+| La date | L'étape |
+| **1899** | Dreyfus est gracié |
+| **1906** | Il est **réhabilité** et réintégré dans l'armée |
+| **1905** | L'affaire nourrit la loi de séparation des Églises et de l'État |
 
-## L’issue
-Dreyfus est gracié en 1899, **réhabilité en 1906**, réintégré dans l’armée. L’affaire pèse durablement : elle nourrit la loi de séparation des Églises et de l’État de 1905 et modifie le rapport entre pouvoir, armée et opinion.
-
-> Ce que le jalon enseigne : la même liberté de la presse a permis la campagne de calomnie **et** son démenti. Elle n’est pas un instrument neutre, mais elle est la condition pour que l’erreur puisse être corrigée.`,
+> Ce que le jalon enseigne : la même liberté de la presse a permis la campagne de calomnie **et** son démenti. Elle n'est pas un instrument neutre, mais elle est la condition pour que l'erreur puisse être corrigée.`,
           },
           questions: [
             ['De quoi le capitaine Dreyfus est-il accusé en 1894 ?', ['D’avoir livré des documents militaires à l’Allemagne', 'D’avoir déserté', 'D’avoir comploté contre la République', 'D’avoir détourné des fonds'], 0, 'Il est condamné sur la foi d’une pièce mince et d’une expertise contestée.'],
@@ -932,28 +1107,41 @@ Dreyfus est gracié en 1899, **réhabilité en 1906**, réintégré dans l’arm
           axe: 'S’informer : un regard critique sur les sources et les moyens de communication',
           lecon: {
             titre: 'Une conquête lente et jamais définitive',
-            cours: `La liberté de l’information n’a pas été donnée : elle a été **conquise**, texte après texte, et elle reste réversible.
+            cours: `La liberté de l'information n'a pas été donnée : elle a été conquise, texte après texte, et elle reste réversible.
 
 ## Les grandes étapes juridiques
-- **1789** : l’article 11 de la Déclaration des droits de l’homme et du citoyen proclame que « la libre communication des pensées et des opinions est un des droits les plus précieux de l’homme » — en réservant la répression des abus définis par la loi.
-- **XIXe siècle** : la liberté est accordée, retirée, restaurée au gré des régimes. La monarchie de Juillet, puis le Second Empire, la restreignent fortement.
-- **1881** : la loi sur la liberté de la presse supprime l’autorisation préalable et le cautionnement, et fixe un régime de responsabilité *a posteriori* devant les tribunaux, avec un directeur de publication identifié. C’est le texte fondateur, toujours en vigueur.
-- **1948** : la Déclaration universelle des droits de l’homme, article 19, énonce le droit de « chercher, de recevoir et de répandre » les informations, sans considération de frontières.
-- **1950** : la Convention européenne des droits de l’homme, article 10, en fait un droit justiciable devant une cour.
+| La date | Le texte | Ce qu'il pose |
+| **1789** | Déclaration des droits de l'homme, article 11 | « La libre communication des pensées et des opinions est un des droits les plus précieux de l'homme » — sauf abus définis par la loi |
+| XIXe siècle | Régimes successifs | La liberté est accordée, retirée, restaurée ; la monarchie de Juillet et le Second Empire la restreignent fortement |
+| **1881** | Loi sur la liberté de la presse | Fin de l'autorisation préalable et du cautionnement ; responsabilité *a posteriori* devant les tribunaux, directeur de publication identifié |
+| **1948** | Déclaration universelle, article 19 | Chercher, recevoir et répandre les informations, sans considération de frontières |
+| **1950** | Convention européenne des droits de l'homme, article 10 | Un droit justiciable devant une cour |
 
 ## Les compléments contemporains
-- La **protection des sources** des journalistes, reconnue par la loi française en 2010 : sans elle, personne ne parle à un journaliste ;
-- le statut des **lanceurs d’alerte**, protégé au niveau européen depuis 2019 ;
-- le droit d’**accès aux documents administratifs**, qui rend l’action publique vérifiable ;
-- les autorités de **régulation** de l’audiovisuel et du numérique.
+| Le dispositif | Ce qu'il protège |
+| La **protection des sources** (loi française de 2010) | Sans elle, personne ne parle à un journaliste |
+| Le statut des **lanceurs d'alerte** (Europe, 2019) | Celui qui révèle depuis l'intérieur |
+| Le droit d'**accès aux documents administratifs** | La vérifiabilité de l'action publique |
+| Les autorités de **régulation** | L'audiovisuel et le numérique |
 
 ## Les limites légitimes
-Aucune liberté n’est absolue. Le droit encadre : la **diffamation** et l’**injure**, l’**incitation** à la haine et à la violence, la **vie privée** et le droit à l’image, le **secret** de la défense nationale et le secret de l’instruction, la protection des mineurs.
+| La limite | Ce qu'elle protège |
+| **Diffamation** et **injure** | L'honneur des personnes |
+| **Incitation** à la haine et à la violence | L'ordre public et les personnes visées |
+| **Vie privée**, droit à l'image | L'intimité |
+| **Secret** de la défense, secret de l'instruction | La sécurité, la présomption d'innocence |
+| Protection des **mineurs** | — |
 
-> La difficulté est toujours la même : ces limites sont légitimes, et ce sont exactement celles qu’un pouvoir invoque quand il veut restreindre. C’est pourquoi le **juge**, et non l’administration, doit en décider.
+> La difficulté est toujours la même : ces limites sont légitimes, et ce sont exactement celles qu'un pouvoir invoque quand il veut restreindre. C'est pourquoi le **juge**, et non l'administration, doit en décider.
 
-## L’état des lieux
-Les classements internationaux montrent une dégradation dans de nombreux pays : lois sur les « fausses nouvelles » utilisées contre l’opposition, procédures-bâillons contre les journalistes d’investigation, surveillance des communications, concentration des médias entre peu de mains. La liberté de l’information se mesure moins aux textes qu’à ce qu’il est effectivement possible de publier.`,
+## L'état des lieux
+| Le procédé de restriction | Sa forme actuelle |
+| Les lois sur les « fausses nouvelles » | Utilisées contre l'opposition |
+| Les **procédures-bâillons** | Contre les journalistes d'investigation |
+| La **surveillance** des communications | Elle tarit les sources |
+| La **concentration** des médias | Peu de propriétaires |
+
+> La liberté de l'information se mesure moins aux textes qu'à ce qu'il est effectivement possible de publier.`,
           },
           questions: [
             ['Que proclame l’article 11 de la Déclaration de 1789 ?', ['La libre communication des pensées et des opinions', 'La liberté de réunion', 'Le droit de vote', 'La liberté de culte'], 0, 'En réservant la répression des abus définis par la loi.'],
@@ -971,31 +1159,41 @@ Les classements internationaux montrent une dégradation dans de nombreux pays :
           axe: 'S’informer : un regard critique sur les sources et les moyens de communication',
           lecon: {
             titre: 'Propagande, censure et contre-information',
-            cours: `Le XXe siècle est celui des médias de masse — et donc celui de leur **captation** par les États.
+            cours: `Le XXe siècle est celui des médias de masse — et donc celui de leur captation par les États.
 
 ## La propagande de guerre
-Dès **1914-1918**, les États organisent le contrôle de l’information : censure préalable, bureaux de presse, images officielles. Le **« bourrage de crâne »** — minimiser les pertes, ridiculiser l’ennemi, promettre la victoire prochaine — nourrit une défiance durable des combattants envers la presse.
+Dès **1914-1918** : censure préalable, bureaux de presse, images officielles.
+
+> Le **« bourrage de crâne »** — minimiser les pertes, ridiculiser l'ennemi, promettre la victoire prochaine — nourrit une défiance durable des combattants envers la presse.
 
 ## Les régimes totalitaires
-Le contrôle y devient **total** :
-- ministère de la Propagande, sous Goebbels, qui coordonne presse, radio, cinéma et affiche ;
-- **monopole** de l’information et suppression de toute publication indépendante ;
-- **culte du chef**, mise en scène des masses, esthétique du régime ;
-- **réécriture** du passé : photographies retouchées d’où disparaissent les personnages tombés en disgrâce, manuels réécrits.
+| Le procédé | Ce qu'il fait |
+| Le **ministère de la Propagande** | Il coordonne presse, radio, cinéma et affiche |
+| Le **monopole** de l'information | Toute publication indépendante disparaît |
+| Le **culte du chef** | Mise en scène des masses, esthétique du régime |
+| La **réécriture du passé** | Photographies retouchées d'où disparaissent les disgraciés, manuels réécrits |
 
-> Orwell en tire dans *1984* la formule la plus juste : contrôler le passé, c’est contrôler l’avenir. La propagande totalitaire ne se contente pas de mentir sur le présent — elle refait ce qui a eu lieu.
+> Orwell en tire dans *1984* la formule la plus juste : contrôler le passé, c'est contrôler l'avenir. La propagande totalitaire ne se contente pas de mentir sur le présent — elle refait ce qui a eu lieu.
 
-## En France sous l’Occupation
-La presse autorisée est contrôlée par Vichy et l’occupant ; Radio-Paris est allemande. En face, la **presse clandestine** — *Combat*, *Libération*, *Défense de la France* — imprime dans des conditions périlleuses, et **Radio Londres** diffuse depuis l’extérieur. À la Libération, les journaux compromis sont interdits et leurs biens transférés à des titres issus de la Résistance.
+## En France sous l'Occupation
+| Le camp | Ses moyens |
+| Vichy et l'occupant | La presse autorisée, contrôlée ; Radio-Paris, allemande |
+| La Résistance | La **presse clandestine** — *Combat*, *Libération*, *Défense de la France* — et **Radio Londres** |
+
+À la Libération, les journaux compromis sont interdits et leurs biens transférés à des titres issus de la Résistance.
 
 ## La guerre froide
-L’information devient un **champ de bataille** : radios internationales émettant par-delà le rideau de fer, brouillage systématique par les régimes de l’Est, samizdats recopiés à la main, dissidents dont les textes circulent clandestinement.
+| L'arme | Son emploi |
+| Les radios internationales | Émettre par-delà le rideau de fer |
+| Le **brouillage** | La riposte des régimes de l'Est |
+| Les **samizdats** | Recopiés à la main et diffusés clandestinement |
 
 ## Le contre-pouvoir journalistique
-Deux affaires établissent le journalisme d’investigation comme contre-pouvoir : les **Pentagon Papers** (1971), documents classifiés sur la guerre du Vietnam publiés malgré l’opposition du gouvernement, et le **Watergate** (1972-1974), dont l’enquête du *Washington Post* mène à la démission de Nixon.
+| L'affaire | Sa date | Son issue |
+| Les **Pentagon Papers** | 1971 | Des documents classifiés sur le Vietnam publiés malgré le gouvernement |
+| Le **Watergate** | 1972-1974 | L'enquête du *Washington Post* mène à la démission de Nixon |
 
-## Aujourd’hui
-Les formes ont changé, les mécanismes demeurent : censure directe dans certains pays, contrôle par la propriété des médias, campagnes coordonnées de désinformation, surveillance. Le jalon demande de reconnaître ces mécanismes plutôt que de les croire réservés au passé.`,
+> Les formes ont changé, les mécanismes demeurent : censure directe, contrôle par la propriété, campagnes de désinformation, surveillance. Le jalon demande de les reconnaître, plutôt que de les croire réservés au passé.`,
           },
           questions: [
             ['Qu’appelle-t-on le « bourrage de crâne » pendant la Grande Guerre ?', ['La propagande minimisant les pertes et promettant une victoire proche', 'La censure des lettres de soldats', 'Un entraînement militaire', 'Une méthode d’interrogatoire'], 0, 'Il a nourri une défiance durable des combattants envers la presse.'],
@@ -1015,26 +1213,51 @@ Les formes ont changé, les mécanismes demeurent : censure directe dans certain
           axe: 'Analyser les relations entre États et religions',
           lecon: {
             titre: 'Deux glaives, un royaume',
-            cours: `Dans l’Occident médiéval, le pouvoir politique et le pouvoir religieux sont **distincts** mais **inséparables**. Toute la période se joue dans leur articulation — et dans leurs conflits.
+            cours: `Dans l'Occident médiéval, pouvoir politique et pouvoir religieux sont distincts mais inséparables. Toute la période se joue dans leur articulation.
 
-## La théorie
-La doctrine dite **des deux glaives** distingue le pouvoir **spirituel**, confié à l’Église, et le pouvoir **temporel**, confié aux princes. Reste à savoir lequel prime : les papes soutiendront que le spirituel commande, les empereurs qu’ils tiennent leur pouvoir directement de Dieu.
+## La théorie des deux glaives
+| Le glaive | Son domaine | Qui le porte |
+| **Spirituel** | Le salut des âmes | L'Église |
+| **Temporel** | Le gouvernement des hommes | Les princes |
+
+> Reste à savoir lequel prime : les papes soutiendront que le spirituel commande, les empereurs qu'ils tiennent leur pouvoir directement de Dieu.
 
 ## Le sacre
-Le roi de France est **sacré à Reims**, oint de l’huile de la Sainte Ampoule. Le rite le fait **roi par la grâce de Dieu** : son pouvoir n’est plus seulement héréditaire ou militaire, il est consacré. Le sacre fonde aussi les devoirs du roi — protéger l’Église, rendre la justice, défendre les faibles.
+Le roi de France est **sacré à Reims**, oint de l'huile de la Sainte Ampoule.
 
-Le sacre de **Charlemagne** en 800 par le pape Léon III inaugure cette dépendance mutuelle : l’empereur tient sa légitimité du pape, mais le pape tient sa protection de l’empereur.
+| Ce que le rite fait | Ce qu'il impose en retour |
+| Il fait le roi **par la grâce de Dieu** | Protéger l'Église |
+| Son pouvoir n'est plus seulement héréditaire ou militaire | Rendre la justice |
+| Il est **consacré** | Défendre les faibles |
+
+> Le sacre de **Charlemagne** en 800 par le pape Léon III inaugure la dépendance mutuelle : l'empereur tient sa légitimité du pape, mais le pape tient sa protection de l'empereur.
 
 ## La querelle des Investitures
-Le conflit majeur, de 1075 à 1122 : qui nomme les évêques, le pape ou l’empereur ? L’enjeu est considérable, car les évêques sont aussi de grands seigneurs temporels. L’affrontement entre **Grégoire VII** et **Henri IV** aboutit à l’humiliation de Canossa, puis au **concordat de Worms** (1122), qui répartit les rôles : investiture spirituelle par l’Église, temporelle par l’empereur.
+| L'élément | Le détail |
+| La question | Qui nomme les évêques, le pape ou l'empereur ? |
+| L'enjeu | Les évêques sont aussi de **grands seigneurs temporels** |
+| Les protagonistes | **Grégoire VII** contre **Henri IV** |
+| L'épisode fameux | L'humiliation de **Canossa** |
+| Le règlement | Le **concordat de Worms** (1122) : investiture spirituelle par l'Église, temporelle par l'empereur |
 
-## L’Église dans la société
-Elle encadre la vie entière : baptême, mariage, funérailles ; le calendrier et les fêtes ; le temps de la journée rythmé par les cloches ; l’enseignement, les universités, les hôpitaux, l’assistance aux pauvres. Elle dispose de sa propre **justice** et lève la **dîme**.
+## L'Église dans la société
+| Le domaine | Ce qu'elle y fait |
+| La vie | Baptême, mariage, funérailles |
+| Le **temps** | Calendrier, fêtes, journée rythmée par les cloches |
+| Le savoir | Enseignement, universités |
+| L'assistance | Hôpitaux, secours aux pauvres |
+| Le pouvoir propre | Sa **justice**, et la **dîme** |
 
-## La montée de l’État royal
-À partir du XIIIe siècle, les rois de France affirment leur autonomie : le roi est « empereur en son royaume ». **Philippe le Bel** ose faire arrêter le pape Boniface VIII en 1303. La **Pragmatique Sanction de Bourges** (1438) puis le **concordat de Bologne** (1516) donnent au roi de France la nomination des évêques : c’est le **gallicanisme**, une Église catholique mais largement contrôlée par le pouvoir royal.
+## La montée de l'État royal
+| La date | L'étape |
+| XIIIe siècle | Le roi de France est « **empereur en son royaume** » |
+| **1303** | **Philippe le Bel** fait arrêter le pape Boniface VIII |
+| **1438** | La **Pragmatique Sanction de Bourges** |
+| **1516** | Le **concordat de Bologne** donne au roi la nomination des évêques |
 
-> Le jalon prépare tout le thème : la séparation moderne n’est pas un point de départ mais un **aboutissement**, arraché à des siècles d’imbrication.`,
+C'est le **gallicanisme** : une Église catholique, mais largement contrôlée par le pouvoir royal.
+
+> Le jalon prépare tout le thème : la séparation moderne n'est pas un point de départ mais un **aboutissement**, arraché à des siècles d'imbrication.`,
           },
           questions: [
             ['Que distingue la doctrine des deux glaives ?', ['Le pouvoir spirituel de l’Église et le pouvoir temporel des princes', 'Le roi et l’empereur', 'La justice civile et la justice pénale', 'Le clergé régulier et le clergé séculier'], 0, 'Reste à savoir lequel prime : c’est l’enjeu de toute la période.'],
@@ -1052,30 +1275,38 @@ Elle encadre la vie entière : baptême, mariage, funérailles ; le calendrier e
           axe: 'Analyser les relations entre États et religions',
           lecon: {
             titre: 'Une laïcité imposée par l’État, et contestée',
-            cours: `La Turquie offre le cas d’une **sécularisation autoritaire**, décidée d’en haut en quelques années, puis remise en cause — ce qui en fait un contrepoint utile au modèle français.
+            cours: `La Turquie offre le cas d'une sécularisation autoritaire, décidée d'en haut en quelques années, puis remise en cause. C'est un contrepoint utile au modèle français.
 
 ## Le point de départ
-L’Empire ottoman était un État **musulman** : le sultan portait aussi le titre de **calife**, chef spirituel des musulmans sunnites, et la loi religieuse régissait le statut personnel. Les communautés non musulmanes vivaient sous le régime du *millet*, avec une autonomie juridique et une position subordonnée.
+| Le trait de l'Empire ottoman | Son contenu |
+| Le sultan est aussi **calife** | Chef spirituel des musulmans sunnites |
+| La **loi religieuse** régit le statut personnel | Mariage, héritage, filiation |
+| Le régime du *millet* | Autonomie juridique des communautés non musulmanes, dans une position subordonnée |
 
 ## Les réformes kémalistes
-Après la guerre d’indépendance, **Mustafa Kemal**, dit **Atatürk**, proclame la République en **1923** et engage une transformation d’ensemble :
-- **1924** : abolition du **califat**, suppression du ministère des affaires religieuses traditionnel, fermeture des écoles coraniques ;
-- adoption d’un **code civil** inspiré du code suisse : mariage civil, interdiction de la polygamie, égalité successorale ;
-- remplacement de l’alphabet arabe par l’**alphabet latin** en 1928 — une rupture culturelle majeure, qui coupe d’un coup l’accès aux textes anciens ;
-- calendrier grégorien, réforme vestimentaire, dissolution des confréries ;
-- droit de vote et d’éligibilité des femmes en 1934, avant plusieurs pays européens ;
-- **1937** : la **laïcité** est inscrite dans la Constitution.
+Après la guerre d'indépendance, **Mustafa Kemal**, dit **Atatürk**, proclame la République en **1923**.
 
-> Le modèle kémaliste ne sépare pas l’État et la religion : il **contrôle** la religion par l’État. La Direction des affaires religieuses (Diyanet), créée en 1924, nomme les imams, rédige les prêches et gère les mosquées. C’est la différence décisive avec la laïcité française, et un devoir doit la formuler.
+| La date | La réforme |
+| **1924** | Abolition du **califat**, fermeture des écoles coraniques ; création du **Diyanet** |
+| 1926 | **Code civil** inspiré du code suisse : mariage civil, interdiction de la polygamie, égalité successorale |
+| **1928** | L'**alphabet latin** remplace l'arabe : une rupture qui coupe d'un coup l'accès aux textes anciens |
+| — | Calendrier grégorien, réforme vestimentaire, dissolution des confréries |
+| **1934** | Droit de vote et d'éligibilité des femmes, avant plusieurs pays européens |
+| **1937** | La **laïcité** est inscrite dans la Constitution |
 
-## L’armée, gardienne du régime
-L’armée s’est longtemps considérée comme la garante de l’héritage kémaliste, intervenant à plusieurs reprises — 1960, 1971, 1980, et par un « coup d’État postmoderne » en 1997 — contre des gouvernements jugés trop religieux.
+> Le modèle kémaliste ne **sépare** pas l'État et la religion : il la **contrôle** par l'État. Le Diyanet nomme les imams, rédige les prêches et gère les mosquées. C'est la différence décisive avec la laïcité française, et un devoir doit la formuler.
+
+## L'armée, gardienne du régime
+Elle s'est longtemps considérée comme la garante de l'héritage kémaliste, intervenant en **1960**, **1971**, **1980**, et par un « coup d'État postmoderne » en **1997**, contre des gouvernements jugés trop religieux.
 
 ## Le tournant contemporain
-Depuis 2002, l’AKP, parti conservateur d’inspiration islamique, gouverne durablement. On observe une place croissante du religieux dans l’espace public et l’enseignement, la levée de l’interdiction du foulard dans les institutions, la reconversion de **Sainte-Sophie** en mosquée en 2020, et un renforcement considérable du Diyanet. Après la tentative de coup d’État de 2016, le pouvoir de l’armée est fortement réduit.
+| La date | L'évolution |
+| Depuis **2002** | L'AKP, parti conservateur d'inspiration islamique, gouverne durablement |
+| — | Place croissante du religieux dans l'espace public et l'enseignement ; levée de l'interdiction du foulard |
+| **2016** | Après la tentative de coup d'État, le pouvoir de l'armée est fortement réduit |
+| **2020** | **Sainte-Sophie** est reconvertie en mosquée |
 
-## Ce que le jalon enseigne
-La sécularisation n’est ni linéaire ni irréversible, et elle prend des formes très différentes : séparation, contrôle étatique du religieux, religion d’État, neutralité bienveillante. Comparer suppose de préciser **de quel modèle** on parle.`,
+> La sécularisation n'est ni linéaire ni irréversible, et elle prend des formes très différentes : séparation, contrôle étatique du religieux, religion d'État, neutralité bienveillante. Comparer suppose de préciser **de quel modèle** on parle.`,
           },
           questions: [
             ['Quel titre religieux le sultan ottoman portait-il ?', ['Celui de calife', 'Celui d’imam', 'Celui de patriarche', 'Celui de mufti'], 0, 'Chef spirituel des musulmans sunnites, en plus du pouvoir temporel.'],
@@ -1093,28 +1324,39 @@ La sécularisation n’est ni linéaire ni irréversible, et elle prend des form
           axe: 'Analyser les relations entre États et religions',
           lecon: {
             titre: 'Laïcité, liberté religieuse et conflits',
-            cours: `La **liberté de conscience** est le droit de croire, de ne pas croire, de changer de conviction et de le manifester. Sa mise en œuvre distingue des modèles très différents.
+            cours: `La liberté de conscience est le droit de croire, de ne pas croire, de changer de conviction et de le manifester. Sa mise en œuvre distingue des modèles très différents.
 
 ## Les modèles de relation entre États et religions
-- La **séparation** : la France depuis la loi de **1905**, qui pose que la République ne reconnaît, ne salarie ni ne subventionne aucun culte, tout en garantissant le libre exercice. Les États-Unis pratiquent une séparation d’un autre type, avec un premier amendement qui interdit toute religion d’État tout en laissant au religieux une forte visibilité publique.
-- La **religion d’État** : le Royaume-Uni, où le souverain est gouverneur de l’Église anglicane ; le Danemark ; plusieurs États du Golfe.
-- La **reconnaissance de cultes** : l’Allemagne, où les Églises perçoivent un impôt collecté par l’État ; le régime concordataire encore en vigueur en Alsace-Moselle.
-- Le **contrôle étatique** du religieux : la Turquie kémaliste, la Chine.
+| Le modèle | Son principe | Ses exemples |
+| **Séparation** | L'État ne reconnaît, ne salarie ni ne subventionne aucun culte, mais en garantit le libre exercice | La France depuis **1905** ; les États-Unis, d'un autre type : pas de religion d'État, mais une forte visibilité publique du religieux |
+| **Religion d'État** | Un culte officiel | Royaume-Uni (le souverain gouverne l'Église anglicane), Danemark, États du Golfe |
+| **Reconnaissance de cultes** | L'État organise et finance | Allemagne (impôt d'Église collecté par l'État), régime concordataire d'Alsace-Moselle |
+| **Contrôle étatique** | L'État administre le religieux | Turquie kémaliste, Chine |
 
-> La laïcité française n’est ni l’effacement du religieux ni son hostilité : c’est la **neutralité de l’État** qui garantit la liberté de tous. La distinction à tenir est celle entre l’**agent public**, tenu à la neutralité dans l’exercice de ses fonctions, et l’**usager**, libre de manifester ses convictions dans l’espace public, sous les réserves de l’ordre public.
+> La laïcité française n'est ni l'effacement du religieux ni son hostilité : c'est la **neutralité de l'État** qui garantit la liberté de tous.
+
+| La personne | Ce à quoi elle est tenue |
+| L'**agent public** | À la **neutralité**, dans l'exercice de ses fonctions |
+| L'**usager** | Libre de manifester ses convictions dans l'espace public, sous réserve de l'ordre public |
 
 ## Les textes qui protègent
-L’article 18 de la Déclaration universelle de 1948 et l’article 9 de la Convention européenne des droits de l’homme garantissent la liberté de pensée, de conscience et de religion, y compris le droit d’en changer — point qui reste refusé dans plusieurs États.
+| Le texte | Son article |
+| Déclaration universelle de 1948 | Article 18 |
+| Convention européenne des droits de l'homme | Article 9 |
+
+Tous deux garantissent la liberté de pensée, de conscience et de religion, **y compris le droit d'en changer** — point qui reste refusé dans plusieurs États.
 
 ## Les enjeux géopolitiques
-Le religieux structure des conflits et des alliances :
-- des **conflits** où l’appartenance religieuse recoupe des enjeux territoriaux et politiques — Proche-Orient, Balkans, Cachemire, Sahel ;
-- des **minorités persécutées** sur plusieurs continents ;
-- des **acteurs transnationaux** : le Saint-Siège, sujet de droit international ; l’Organisation de la coopération islamique ; des mouvements religieux mondialisés ;
-- l’instrumentalisation du religieux comme **ressource identitaire** par des pouvoirs qui cherchent une légitimité.
+| L'enjeu | Sa manifestation |
+| Des **conflits** où l'appartenance religieuse recoupe des enjeux territoriaux | Proche-Orient, Balkans, Cachemire, Sahel |
+| Des **minorités persécutées** | Sur plusieurs continents |
+| Des **acteurs transnationaux** | Le Saint-Siège, sujet de droit international ; l'Organisation de la coopération islamique ; des mouvements mondialisés |
+| Le religieux comme **ressource identitaire** | Instrumentalisé par des pouvoirs en quête de légitimité |
 
 ## Le piège à éviter
-Lire un conflit comme purement religieux est presque toujours une erreur d’analyse : la religion y est le plus souvent un **marqueur** d’identité mobilisé sur des enjeux de terre, de pouvoir, de ressources ou de mémoire. Le programme demande de démêler ces dimensions plutôt que de les confondre.`,
+> Lire un conflit comme purement religieux est presque toujours une erreur d'analyse : la religion y est le plus souvent un **marqueur** d'identité mobilisé sur des enjeux de terre, de pouvoir, de ressources ou de mémoire.
+
+Le programme demande de démêler ces dimensions plutôt que de les confondre.`,
           },
           questions: [
             ['Que pose la loi française de 1905 ?', ['La République ne reconnaît, ne salarie ni ne subventionne aucun culte', 'La religion est interdite dans l’espace public', 'L’État nomme les ministres du culte', 'Une religion d’État est instituée'], 0, 'Elle garantit en même temps le libre exercice des cultes.'],

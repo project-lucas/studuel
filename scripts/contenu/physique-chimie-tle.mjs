@@ -152,33 +152,44 @@ DELETE FROM public.chapters c
             cours: `Toute la chimie des solutions de Terminale tient dans une seule particule qui se déplace : le **proton H⁺**. Brönsted en a donné une définition qui vaut pour toutes les réactions acido-basiques.
 
 ## Les deux définitions
-Un **acide** est une espèce capable de **céder** un proton H⁺. Une **base** est une espèce capable d’en **capter** un. Rien n’est acide ou basique dans l’absolu : une espèce l’est **face à une autre**, qui joue le rôle inverse.
+| Espèce | Ce qu’elle fait du proton |
+| Un **acide** | Il le **cède** |
+| Une **base** | Elle le **capte** |
+
+> Rien n’est acide ou basique dans l’absolu : une espèce l’est **face à une autre**, qui joue le rôle inverse. C’est ce qui distingue Brönsted de toutes les définitions antérieures.
 
 ## Le couple acide/base
-À tout acide AH correspond la base A⁻ qu’il devient en perdant son proton : c’est un **couple acide/base**, noté AH/A⁻, relié par une **demi-équation** :
+À tout acide AH correspond la base A⁻ qu’il devient en perdant son proton. Ils forment un **couple**, relié par une **demi-équation** :
 
 AH = A⁻ + H⁺
 
-Exemples à connaître : CH₃COOH/CH₃COO⁻, NH₄⁺/NH₃, H₃O⁺/H₂O, H₂O/HO⁻, CO₂,H₂O/HCO₃⁻.
+| Couple | Acide | Base |
+| Acide éthanoïque | CH₃COOH | CH₃COO⁻ |
+| Ammonium | NH₄⁺ | NH₃ |
+| Oxonium | H₃O⁺ | H₂O |
+| Eau | H₂O | HO⁻ |
+| Dioxyde de carbone | CO₂,H₂O | HCO₃⁻ |
 
 ## La réaction acido-basique
-Le proton ne reste jamais seul en solution : il passe **directement** de l’acide d’un couple à la base d’un autre. On additionne les deux demi-équations, l’une dans le sens direct, l’autre dans le sens inverse :
+Le proton ne reste **jamais seul** en solution : il passe **directement** de l’acide d’un couple à la base d’un autre. On additionne les deux demi-équations, l’une dans le sens direct, l’autre dans le sens inverse.
 
-CH₃COOH + HO⁻ → CH₃COO⁻ + H₂O
+CH₃COOH + HO⁻ donne CH₃COO⁻ + H₂O
 
-Une réaction acido-basique est donc toujours un **transfert de proton entre deux couples**.
+Une réaction acido-basique est donc **toujours** un transfert de proton **entre deux couples**.
 
 ## L’eau, espèce amphotère
-L’eau appartient à deux couples : elle est l’acide de H₂O/HO⁻ et la base de H₃O⁺/H₂O. Une espèce qui joue les deux rôles est dite **amphotère** — c’est aussi le cas de HCO₃⁻ et des acides aminés.
+| Couple | Rôle de l’eau |
+| H₂O / HO⁻ | Elle y est l’**acide** |
+| H₃O⁺ / H₂O | Elle y est la **base** |
+
+Une espèce qui joue les deux rôles est dite **amphotère** — c’est aussi le cas de HCO₃⁻ et des acides aminés.
 
 ## L’autoprotolyse de l’eau
-Deux molécules d’eau échangent un proton entre elles :
+Deux molécules d’eau échangent un proton entre elles : 2 H₂O = H₃O⁺ + HO⁻
 
-2 H₂O = H₃O⁺ + HO⁻
+Cette réaction, très limitée, explique deux faits : l’eau pure conduit **faiblement** le courant, et H₃O⁺ et HO⁻ sont **toujours présents ensemble**.
 
-Cette réaction, très limitée, explique pourquoi l’eau pure conduit (faiblement) le courant et pourquoi H₃O⁺ et HO⁻ sont toujours présents ensemble.
-
-> Le proton H⁺ n’existe pas libre en solution aqueuse : il est immédiatement fixé par une molécule d’eau pour donner l’**ion oxonium H₃O⁺**. C’est pour cela qu’on écrit H₃O⁺ dans les équations, et H⁺ seulement dans les demi-équations.`,
+> Le proton H⁺ n’existe **pas libre** en solution aqueuse : il est immédiatement fixé par une molécule d’eau pour donner l’**ion oxonium H₃O⁺**. D’où la convention d’écriture — H₃O⁺ dans les équations, H⁺ seulement dans les demi-équations.`,
           },
           questions: [
             ['Selon Brönsted, un acide est une espèce qui…', ['Cède un proton H⁺', 'Capte un proton H⁺', 'Cède un électron', 'Libère un ion HO⁻'], 0, 'La base, elle, capte le proton. La définition ne parle ni d’électron ni de HO⁻.'],
@@ -196,36 +207,46 @@ Cette réaction, très limitée, explique pourquoi l’eau pure conduit (faiblem
           axe: 'Déterminer les composantes d’un système chimique',
           lecon: {
             titre: 'Une échelle logarithmique, pas une échelle de valeurs',
-            cours: `Les concentrations en ions oxonium d’une solution courante s’étalent sur quatorze puissances de dix. Les comparer en écriture décimale serait illisible : le **pH** compresse cette étendue sur une échelle de 0 à 14.
+            cours: `Les concentrations en ions oxonium d’une solution courante s’étalent sur **quatorze puissances de dix**. Les comparer en écriture décimale serait illisible : le **pH** compresse cette étendue sur une échelle de 0 à 14.
 
 ## La définition
-pH = −log([H₃O⁺]/c°), où c° = 1 mol·L⁻¹ est la concentration standard (elle rend l’argument du logarithme sans dimension). En pratique :
+pH = −log([H₃O⁺]/c°), avec c° = 1 mol·L⁻¹ — la concentration standard, qui rend l’argument du logarithme sans dimension.
 
-[H₃O⁺] = c° × 10^(−pH)
+D’où la relation inverse : **[H₃O⁺] = c° × 10^(−pH)**
 
-Un pH mesuré au dixième près donne une concentration à environ 2 % près : au-delà d’une décimale, le chiffre n’a plus de sens expérimental.
+## Ce qu’une unité de pH représente
+| Écart de pH | Facteur sur [H₃O⁺] |
+| 1 unité | **×10** |
+| 2 unités | ×100 |
+| 3 unités | ×1000 |
 
-## Ce que « une unité de pH » veut dire
-Une unité de pH = un **facteur 10** sur la concentration. Passer de pH 3 à pH 2, c’est multiplier [H₃O⁺] par 10, pas l’augmenter d’un tiers.
+> Passer de pH 3 à pH 2, c’est **multiplier** la concentration par 10 — pas l’augmenter d’un tiers. C’est le contresens le plus fréquent sur une échelle logarithmique.
+
+Un pH mesuré au dixième près donne une concentration à environ 2 % près : **au-delà d’une décimale, le chiffre n’a plus de sens expérimental**.
 
 ## Le produit ionique de l’eau
-Dans toute solution aqueuse à 25 °C :
+Dans **toute** solution aqueuse à 25 °C :
 
 Ke = ([H₃O⁺]/c°) × ([HO⁻]/c°) = 1,0 × 10⁻¹⁴, soit pKe = 14,0
 
 Les deux concentrations sont donc **liées** : si l’une monte, l’autre descend. C’est pourquoi une solution basique contient tout de même des ions H₃O⁺.
 
 ## Acide, neutre, basique
-- solution **acide** : [H₃O⁺] > [HO⁻], donc pH < 7,0 à 25 °C ;
-- solution **neutre** : [H₃O⁺] = [HO⁻] = 1,0 × 10⁻⁷ mol·L⁻¹, donc pH = 7,0 ;
-- solution **basique** : pH > 7,0.
+| Solution | La relation | Le pH à 25 °C |
+| **Acide** | [H₃O⁺] > [HO⁻] | pH < 7,0 |
+| **Neutre** | [H₃O⁺] = [HO⁻] = 1,0 × 10⁻⁷ mol·L⁻¹ | pH = 7,0 |
+| **Basique** | [H₃O⁺] < [HO⁻] | pH > 7,0 |
 
-Le 7 n’est pas une constante universelle : il vaut 7,0 **à 25 °C**, parce que Ke dépend de la température.
+Le 7 n’est **pas** une constante universelle : il vaut 7,0 **à 25 °C**, parce que Ke dépend de la température.
 
 ## L’effet d’une dilution
-Diluer une solution d’acide fort **dix fois** augmente son pH d’**une unité** (et le diminue d’une unité pour une base forte). La dilution rapproche le pH de 7 sans jamais le franchir : une solution acide diluée reste acide.
+| Solution | Diluée 10 fois | Ce que cela donne |
+| Acide fort | pH **+1** | Il se rapproche de 7 |
+| Base forte | pH **−1** | Il se rapproche de 7 |
 
-> Un pH-mètre s’**étalonne** avant chaque série de mesures avec au moins deux solutions tampon (pH 4,0 et 7,0 par exemple) : la sonde dérive, et une mesure non étalonnée peut se tromper de plusieurs dixièmes.`,
+La dilution rapproche le pH de 7 **sans jamais le franchir** : une solution acide diluée reste acide.
+
+> Un pH-mètre s’**étalonne** avant chaque série avec au moins deux solutions tampon — pH 4,0 et 7,0 par exemple. La sonde dérive, et une mesure non étalonnée peut se tromper de plusieurs dixièmes.`,
           },
           questions: [
             ['Quelle relation donne [H₃O⁺] à partir du pH ?', ['[H₃O⁺] = c° × 10^(−pH)', '[H₃O⁺] = c° × 10^(pH)', '[H₃O⁺] = pH / 14', '[H₃O⁺] = c° × ln(pH)'], 0, 'C’est la relation réciproque de pH = −log([H₃O⁺]/c°).'],
@@ -243,31 +264,46 @@ Diluer une solution d’acide fort **dix fois** augmente son pH d’**une unité
           axe: 'Déterminer les composantes d’un système chimique',
           lecon: {
             titre: 'Ce que la conductivité sait dire des ions présents',
-            cours: `Une solution ionique conduit le courant parce que ses **ions se déplacent**. Mesurer cette aptitude, c’est mesurer indirectement combien d’ions sont là — et lesquels.
+            cours: `Une solution ionique conduit le courant parce que ses **ions se déplacent**. Mesurer cette aptitude, c’est mesurer indirectement **combien** d’ions sont là — et **lesquels**.
 
 ## Conductance et conductivité
-La **conductance** G d’une portion de solution, en siemens (S), est l’inverse de sa résistance : G = 1/R = I/U. Elle dépend de la cellule de mesure (surface S des électrodes, distance L entre elles) :
+| Grandeur | Symbole, unité | Dépend de… |
+| **Conductance** | G, en siemens (S) | La solution **et** la géométrie de la cellule |
+| **Conductivité** | σ, en S·m⁻¹ | La **solution seule** |
 
-G = σ × S/L
+G = 1/R = I/U, et G = σ × S/L, où S est la surface des électrodes et L leur distance.
 
-La **conductivité** σ, en S·m⁻¹, ne dépend plus de la géométrie : c’est une propriété de la solution seule. On l’obtient avec un conductimètre préalablement **étalonné** sur une solution de conductivité connue.
+On obtient σ avec un conductimètre **étalonné** sur une solution de conductivité connue.
 
 ## La loi de Kohlrausch
-Chaque ion apporte sa part, indépendamment des autres, tant que la solution est diluée :
+Chaque ion apporte sa part, **indépendamment des autres**, tant que la solution est diluée :
 
 σ = Σ λᵢ × [Xᵢ]
 
-où λᵢ est la **conductivité molaire ionique** de l’ion Xᵢ (en S·m²·mol⁻¹), tabulée à 25 °C. Attention aux unités : les concentrations y entrent en **mol·m⁻³**, pas en mol·L⁻¹ (1 mol·L⁻¹ = 10³ mol·m⁻³).
+> Piège d’unités systématique : les concentrations y entrent en **mol·m⁻³**, pas en mol·L⁻¹. Rappel : 1 mol·L⁻¹ = 10³ mol·m⁻³. Oublier le facteur mille fausse le résultat de trois ordres de grandeur.
 
 ## Tous les ions ne se valent pas
-H₃O⁺ (35,0 mS·m²·mol⁻¹) et HO⁻ (19,9) conduisent bien mieux que les autres, d’un facteur 5 environ. Ils se déplacent par **relais de proton** de molécule d’eau en molécule d’eau, sans avoir à traverser physiquement la solution.
+| Ion | λ, en mS·m²·mol⁻¹ | Pourquoi |
+| **H₃O⁺** | 35,0 | Relais de proton |
+| **HO⁻** | 19,9 | Relais de proton |
+| Les autres ions courants | de l’ordre de 5 à 8 | Ils traversent physiquement la solution |
+
+H₃O⁺ et HO⁻ conduisent environ **cinq fois mieux** que les autres : ils se déplacent par **relais** de molécule d’eau en molécule d’eau, sans avoir à parcourir la distance eux-mêmes.
 
 ## Le titrage conductimétrique
-C’est la conséquence directe de la remarque précédente. Au cours d’un titrage, la conductivité varie **linéairement par morceaux** : chaque segment correspond à un jeu d’ions donné, et la **rupture de pente** marque l’équivalence. On trace les deux droites, on lit leur intersection.
+C’est la conséquence directe de la remarque précédente : au cours d’un titrage, la conductivité varie **linéairement par morceaux**.
 
-C’est la méthode de choix quand la solution est **colorée ou trouble** (un indicateur coloré y serait invisible) ou quand la réaction donne un saut de pH trop peu marqué.
+| Ce qu’on observe | Ce que cela signifie |
+| Un segment de droite | Un jeu d’ions donné |
+| Une **rupture de pente** | L’**équivalence** |
 
-> Toujours travailler avec un grand volume dans le bécher, ou **corriger la dilution** : sans cela, l’ajout de solution titrante dilue les ions et courbe les segments qu’on veut droits.`,
+On trace les deux droites, on lit leur intersection.
+
+| Quand la préférer | Pourquoi |
+| Solution **colorée ou trouble** | Un indicateur coloré y serait invisible |
+| Saut de pH peu marqué | La conductimétrie ne dépend pas du saut |
+
+> Toujours travailler avec un **grand volume** dans le bécher, ou **corriger la dilution** : sans cela, l’ajout de titrant dilue les ions et **courbe** les segments qu’on veut droits.`,
           },
           questions: [
             ['Quelle est l’unité de la conductivité σ ?', ['S·m⁻¹', 'S', 'S·m²·mol⁻¹', 'Ω'], 0, 'Le siemens seul est l’unité de la conductance G ; S·m²·mol⁻¹ celle de λ.'],
@@ -285,30 +321,49 @@ C’est la méthode de choix quand la solution est **colorée ou trouble** (un i
           axe: 'Déterminer les composantes d’un système chimique',
           lecon: {
             titre: 'Lire une espèce dans la lumière qu’elle absorbe',
-            cours: `Une espèce chimique n’absorbe pas la lumière n’importe comment : elle prélève des longueurs d’onde précises, qui la signent. Trois spectroscopies exploitent ce fait, chacune sur son domaine.
+            cours: `Une espèce chimique n’absorbe pas la lumière n’importe comment : elle prélève des longueurs d’onde précises, qui la **signent**. Trois spectroscopies exploitent ce fait, chacune sur son domaine.
 
-## Spectroscopie UV-visible : doser
-Une solution colorée absorbe la couleur **complémentaire** de celle qu’elle laisse passer : une solution bleue absorbe dans l’orange. On mesure l’**absorbance** A, sans unité, à la longueur d’onde λ_max où l’absorption est maximale — c’est là que la mesure est la plus sensible.
+## Les trois, et ce qu’elles font
+| Spectroscopie | Ce qu’elle sonde | Ce qu’elle donne |
+| **UV-visible** | Les électrons | Elle **quantifie** : une concentration |
+| **Infrarouge** | Les vibrations des liaisons | Elle **reconnaît** les groupes caractéristiques |
+| **RMN** du proton | Les noyaux d’hydrogène | Elle **reconstruit** le squelette |
 
-## La loi de Beer-Lambert
-A = ε × ℓ × c
+Elles sont **complémentaires** : aucune ne remplace les autres.
 
-- ε : coefficient d’absorption molaire (L·mol⁻¹·cm⁻¹), propre à l’espèce ET à λ ;
-- ℓ : largeur de la cuve (cm) ;
-- c : concentration (mol·L⁻¹).
+## UV-visible : la loi de Beer-Lambert
+Une solution colorée absorbe la couleur **complémentaire** de celle qu’elle laisse passer : une solution bleue absorbe dans l’orange. On mesure l’absorbance à λ_max, là où la mesure est la plus sensible.
 
-L’absorbance est donc **proportionnelle à la concentration** — mais seulement pour les solutions **diluées** (au-delà de A ≈ 2, la loi décroche).
+**A = ε × ℓ × c**
+
+| Symbole | Ce qu’il désigne | Unité |
+| ε | Coefficient d’absorption molaire, propre à l’espèce **et** à λ | L·mol⁻¹·cm⁻¹ |
+| ℓ | Largeur de la cuve | cm |
+| c | Concentration | mol·L⁻¹ |
+| A | Absorbance | **sans unité** |
+
+L’absorbance est **proportionnelle à la concentration** — mais seulement pour les solutions **diluées** : au-delà de A ≈ 2, la loi décroche.
 
 ## Le dosage par étalonnage
-On prépare une gamme de solutions de concentrations connues, on mesure leur absorbance à λ_max, on trace la **droite d’étalonnage** A = f(c) qui doit passer par l’origine, puis on y reporte l’absorbance de la solution inconnue. Le spectrophotomètre est réglé au préalable sur le « blanc » (solvant seul), qui fixe le zéro.
+1. Préparer une **gamme** de solutions de concentrations connues.
+2. Régler le spectrophotomètre sur le « **blanc** » — le solvant seul fixe le zéro.
+3. Mesurer l’absorbance de chacune à λ_max.
+4. Tracer la **droite d’étalonnage** A = f(c), qui doit passer par l’**origine**.
+5. Y reporter l’absorbance de la solution inconnue.
 
-## Spectroscopie infrarouge : identifier les groupes
-L’IR sonde les **vibrations des liaisons**. Chaque groupe caractéristique donne une bande à un nombre d’onde tabulé : O—H d’alcool, large, vers 3300 cm⁻¹ ; C=O vers 1700 cm⁻¹ ; O—H d’acide carboxylique, très large, de 2500 à 3200 cm⁻¹. L’IR ne compte pas les atomes : il dit **quelles familles** sont présentes, et sert donc à suivre une transformation (disparition d’une bande, apparition d’une autre).
+## Infrarouge : les bandes à connaître
+| Liaison | Nombre d’onde | Allure |
+| O—H d’**alcool** | vers 3300 cm⁻¹ | Large |
+| O—H d’**acide carboxylique** | 2500 à 3200 cm⁻¹ | **Très** large |
+| C=O | vers 1700 cm⁻¹ | Fine et intense |
 
-## Spectroscopie RMN : compter les hydrogènes
-La RMN du proton donne, pour chaque groupe d’hydrogènes équivalents, un **signal** dont on lit trois choses : le **déplacement chimique** δ (l’environnement), la **courbe d’intégration** (le nombre de H) et la **multiplicité** (n voisins → n+1 pics, règle des (n+1)-uplets).
+L’IR ne **compte** pas les atomes : il dit **quelles familles** sont présentes. D’où son usage pour suivre une transformation — une bande disparaît, une autre apparaît.
 
-> Ces trois spectroscopies sont **complémentaires** : l’UV-visible quantifie, l’IR reconnaît les fonctions, la RMN reconstruit le squelette.`,
+## RMN : les trois lectures d’un signal
+| Ce qu’on lit | Ce que cela donne |
+| Le **déplacement chimique** δ | L’environnement du groupe |
+| La **courbe d’intégration** | Le **nombre** d’hydrogènes |
+| La **multiplicité** | Le nombre de voisins : n voisins donnent **n+1** pics |`,
           },
           questions: [
             ['Que relie la loi de Beer-Lambert ?', ['L’absorbance et la concentration', 'L’absorbance et la température', 'La conductivité et la concentration', 'Le pH et l’absorbance'], 0, 'A = ε × ℓ × c, pour une solution diluée et à une longueur d’onde fixée.'],
@@ -327,37 +382,55 @@ La RMN du proton donne, pour chaque groupe d’hydrogènes équivalents, un **si
           axe: 'Modéliser l’évolution temporelle d’un système chimique',
           lecon: {
             titre: 'La vitesse d’une réaction, c’est une pente',
-            cours: `Deux transformations peuvent aboutir au même état final et mettre l’une une seconde, l’autre un mois. La thermodynamique dit **où** on va ; la cinétique dit **en combien de temps**.
+            cours: `Deux transformations peuvent aboutir au **même état final** et mettre l’une une seconde, l’autre un mois. La thermodynamique dit **où** on va ; la cinétique dit **en combien de temps**.
 
-## La vitesse volumique de réaction
-Pour une réaction d’équation a A + b B → c C, on définit la vitesse volumique à partir de l’avancement :
+## La vitesse volumique
+Pour a A + b B donnant c C : v = (1/V) × dx/dt
 
-v = (1/V) × dx/dt
+En pratique, on la relie à une concentration :
 
-En pratique, on la relie à une concentration : v = −(1/a) × d[A]/dt = +(1/c) × d[C]/dt. Le signe moins compense la **disparition** du réactif, pour que la vitesse reste positive.
+| Espèce | Expression | Pourquoi le signe |
+| Un **réactif** A | v = −(1/a) × d[A]/dt | Le moins compense la **disparition** |
+| Un **produit** C | v = +(1/c) × d[C]/dt | Il apparaît |
+
+Dans les deux cas, la vitesse reste **positive**.
 
 ## Comment on la lit sur une courbe
-La vitesse est le **coefficient directeur de la tangente** à la courbe [A] = f(t). Elle est donc **maximale au début** (les réactifs sont les plus concentrés) et **s’annule à la fin** : la courbe s’aplatit. Une réaction ne ralentit pas parce qu’elle « fatigue », mais parce qu’il reste moins de réactif.
+La vitesse est le **coefficient directeur de la tangente** à la courbe [A] = f(t).
+
+| Moment | Vitesse | Pourquoi |
+| Au début | **Maximale** | Les réactifs sont les plus concentrés |
+| À la fin | Elle **s’annule** | Il reste moins de réactif |
+
+> Une réaction ne ralentit pas parce qu’elle « fatigue » : elle ralentit parce qu’il **reste moins de réactif**. La courbe s’aplatit pour une raison de concentration, pas d’usure.
 
 ## Le temps de demi-réaction
-Noté t₁/₂, c’est la durée au bout de laquelle l’avancement atteint **la moitié** de sa valeur finale. Il fournit l’ordre de grandeur de la durée totale : au bout d’environ 5 à 7 fois t₁/₂, la transformation est pratiquement terminée.
+t₁/₂ est la durée au bout de laquelle l’avancement atteint **la moitié** de sa valeur finale. Il donne l’ordre de grandeur de la durée totale : au bout de **5 à 7 fois** t₁/₂, la transformation est pratiquement terminée.
 
 ## Les facteurs cinétiques
-- la **température** : l’élever accélère (plus de chocs, et plus énergétiques) ;
-- la **concentration** des réactifs : plus elle est grande, plus la vitesse est grande ;
-- le **catalyseur** : il accélère sans être consommé ni figurer dans le bilan ;
-- l’**état de division** d’un solide, l’éclairement pour une réaction photochimique.
+| Facteur | Son effet | Pourquoi |
+| **Température** | L’élever accélère | Plus de chocs, et plus énergétiques |
+| **Concentration** | L’augmenter accélère | Plus de chocs |
+| **Catalyseur** | Il accélère | Sans être consommé ni figurer au bilan |
+| **État de division** | Plus fin, plus rapide | Plus de surface de contact |
+| **Éclairement** | Pour une réaction photochimique | Il apporte l’énergie |
 
-La **trempe** exploite le premier : refroidir brutalement (ou diluer) un prélèvement **fige** la réaction le temps de le titrer.
+La **trempe** exploite le premier : refroidir brutalement, ou diluer, **fige** un prélèvement le temps de le titrer.
 
 ## La loi de vitesse d’ordre 1
-Quand v = k × [A], la concentration décroît exponentiellement :
+Quand v = k × [A] :
 
-[A](t) = [A]₀ × e^(−kt), et t₁/₂ = ln2 / k
+[A](t) = [A]₀ × e^(−kt) et **t₁/₂ = ln2 / k**
 
-Le temps de demi-réaction y est **indépendant de la concentration initiale** — signature qu’on reconnaît sur un graphe. La constante k, elle, dépend de la température.
+> Le temps de demi-réaction y est **indépendant de la concentration initiale**. C’est la signature qu’on reconnaît sur un graphe : si t₁/₂ ne change pas quand on part de plus concentré, l’ordre est 1.
 
-> Le choix de la méthode de suivi dépend de ce qui change : **spectrophotométrie** si une espèce est colorée, **conductimétrie** si le nombre ou la nature des ions varie, **pH-métrie**, mesure de pression pour un gaz, ou titrages successifs avec trempe.`,
+## Choisir la méthode de suivi
+| Ce qui change au cours de la réaction | La méthode |
+| Une espèce est **colorée** | Spectrophotométrie |
+| Le nombre ou la nature des **ions** varie | Conductimétrie |
+| Le **pH** varie | pH-métrie |
+| Un **gaz** se forme | Mesure de pression |
+| Rien de tout cela | Titrages successifs, avec trempe |`,
           },
           questions: [
             ['Pourquoi écrit-on un signe moins dans v = −d[A]/dt pour un réactif ?', ['Pour que la vitesse reste positive malgré la disparition de A', 'Parce que la concentration est négative', 'Pour convertir en mol·L⁻¹', 'C’est une erreur d’écriture fréquente'], 0, '[A] décroît, donc sa dérivée est négative : le signe moins rétablit une vitesse positive.'],
@@ -375,29 +448,46 @@ Le temps de demi-réaction y est **indépendant de la concentration initiale** �
           axe: 'Modéliser l’évolution temporelle d’un système chimique',
           lecon: {
             titre: 'Ce qui se passe vraiment entre deux molécules',
-            cours: `L’équation de bilan est un **résumé comptable** : elle dit ce qui entre et ce qui sort, jamais comment. Le **mécanisme réactionnel** décrit le trajet réel, en une suite d’étapes.
+            cours: `L’équation de bilan est un **résumé comptable** : elle dit ce qui entre et ce qui sort, **jamais comment**. Le **mécanisme réactionnel** décrit le trajet réel, en une suite d’étapes.
 
-## L’acte élémentaire
-Un **acte élémentaire** est une étape qui se produit en une seule rencontre, sans étape intermédiaire. Il met en jeu au plus deux entités (les chocs à trois sont trop improbables). Un mécanisme est une **succession d’actes élémentaires** dont la somme redonne l’équation de bilan.
+## Les notions de base
+| Notion | Ce que c’est | Comment on le reconnaît |
+| **Acte élémentaire** | Une étape en une seule rencontre | Au plus **deux** entités : les chocs à trois sont trop improbables |
+| **Mécanisme** | Une succession d’actes élémentaires | Leur somme redonne l’équation de bilan |
+| **Intermédiaire réactionnel** | Une espèce **formée puis consommée** | Elle n’apparaît **pas** au bilan |
+| **Catalyseur** | Consommé à une étape, **régénéré** à une autre | Il n’apparaît pas non plus au bilan |
 
-## L’intermédiaire réactionnel
-Une espèce **formée puis consommée** au cours du mécanisme n’apparaît pas dans le bilan : c’est un **intermédiaire réactionnel** (carbocation, radical…). Sa durée de vie est très courte ; il est souvent indétectable directement.
+Carbocations et radicaux sont les intermédiaires les plus fréquents : leur durée de vie est très courte, et ils sont souvent indétectables directement.
 
 ## Le catalyseur, vu de près
-Un catalyseur ouvre un **chemin réactionnel différent**, dont les étapes demandent moins d’énergie. Il est consommé à une étape et **régénéré** à une autre : d’où son absence du bilan malgré sa participation réelle. Il ne modifie **ni l’état final ni la constante d’équilibre** — seulement la durée.
+Il ouvre un **chemin réactionnel différent**, dont les étapes demandent **moins d’énergie**.
 
-## Sites donneurs et sites accepteurs
-Une étape se comprend en repérant, sur les molécules, **où sont les électrons disponibles** :
-- **site donneur** : doublet non liant, liaison multiple, atome porteur d’une charge négative ou d’un δ⁻ ;
-- **site accepteur** : atome porteur d’une charge positive ou d’un δ⁺, dû à une différence d’**électronégativité** (C—O, C—Cl, C=O).
+| Ce qu’il change | Ce qu’il ne change **pas** |
+| La **durée** de la transformation | L’**état final** |
+| Le chemin suivi | La **constante d’équilibre** |
+
+## Sites donneurs et accepteurs
+Une étape se comprend en repérant **où sont les électrons disponibles**.
+
+| Site | Ce qui le signale |
+| **Donneur** | Doublet non liant, liaison multiple, charge négative ou δ⁻ |
+| **Accepteur** | Charge positive ou δ⁺, dû à une différence d’**électronégativité** : C—O, C—Cl, C=O |
 
 ## Les flèches courbes
-Une flèche courbe part **toujours du site donneur** et pointe **vers le site accepteur**. Elle représente le mouvement d’un **doublet d’électrons**, jamais le déplacement d’un atome. C’est la convention à respecter à la lettre : une flèche à l’envers est comptée fausse.
+> Une flèche courbe part **toujours du site donneur** et pointe **vers le site accepteur**. Elle représente le mouvement d’un **doublet d’électrons**, jamais le déplacement d’un atome.
+
+C’est une convention à respecter à la lettre : une flèche à l’envers est comptée fausse, même si le produit final est juste.
 
 ## Le lien avec les facteurs cinétiques
-À l’échelle microscopique, une réaction avance par **chocs efficaces** — c’est-à-dire assez énergétiques ET bien orientés. Augmenter la concentration multiplie les chocs ; augmenter la température rend une plus grande part d’entre eux assez énergétiques. Les deux facteurs cinétiques du chapitre précédent s’expliquent ainsi.
+À l’échelle microscopique, une réaction avance par **chocs efficaces** — assez énergétiques **et** bien orientés.
 
-> Le mécanisme ne se devine pas d’après le bilan : il s’établit expérimentalement, et deux réactions au bilan identique peuvent suivre des chemins totalement différents.`,
+| Le facteur | Ce qu’il augmente |
+| La **concentration** | Le **nombre** de chocs |
+| La **température** | La **part** de chocs assez énergétiques |
+
+Les deux facteurs cinétiques du chapitre précédent s’expliquent ainsi, sans rien ajouter.
+
+> Le mécanisme ne se **devine** pas d’après le bilan : il s’établit expérimentalement. Deux réactions au bilan identique peuvent suivre des chemins totalement différents.`,
           },
           questions: [
             ['Qu’est-ce qu’un acte élémentaire ?', ['Une étape se produisant en une seule rencontre, sans intermédiaire', 'L’équation de bilan de la réaction', 'La réaction la plus rapide du mécanisme', 'Un choc entre trois molécules'], 0, 'Il met en jeu au plus deux entités : les chocs à trois sont trop improbables.'],
@@ -415,32 +505,47 @@ Une flèche courbe part **toujours du site donneur** et pointe **vers le site ac
           axe: 'Modéliser l’évolution temporelle d’un système chimique',
           lecon: {
             titre: 'Quand le noyau, et non le cortège, se transforme',
-            cours: `Toute la chimie jouait jusqu’ici sur les électrons. La radioactivité, elle, touche au **noyau** : elle change l’élément lui-même, et aucune action chimique ou physique ordinaire ne peut l’accélérer ou l’empêcher.
+            cours: `Toute la chimie jouait jusqu’ici sur les **électrons**. La radioactivité, elle, touche au **noyau** : elle change l’élément lui-même, et aucune action chimique ou physique ordinaire ne peut l’accélérer ou l’empêcher.
 
 ## Le noyau et ses isotopes
-Un noyau se note ᴬ_Z X : **Z** protons (le numéro atomique, qui fixe l’élément), **A** nucléons au total, donc A − Z neutrons. Deux **isotopes** ont le même Z et des A différents : carbone 12 et carbone 14, uranium 235 et 238.
+Un noyau se note ᴬ_Z X : **Z** protons — le numéro atomique, qui **fixe l’élément** — et **A** nucléons au total, donc A − Z neutrons.
 
-## La définition de la radioactivité
-Un noyau **instable** se transforme **spontanément** et **aléatoirement** en un autre noyau, en émettant une particule. Le phénomène est :
-- **spontané** : rien ne le déclenche ;
-- **aléatoire** : impossible de prédire quand un noyau donné se désintégrera ;
-- **inéluctable** : ni la température, ni la pression, ni une réaction chimique n’y changent rien.
+Deux **isotopes** ont le même Z et des A différents : carbone 12 et carbone 14, uranium 235 et 238. Chimiquement identiques, nucléairement très différents.
+
+## Les trois caractères de la radioactivité
+| Caractère | Ce qu’il signifie |
+| **Spontané** | Rien ne la déclenche |
+| **Aléatoire** | Impossible de prédire **quand** un noyau donné se désintégrera |
+| **Inéluctable** | Ni température, ni pression, ni réaction chimique n’y changent rien |
 
 ## Les trois désintégrations
-- **α** : émission d’un noyau d’hélium ⁴₂He. ᴬ_Z X → ᴬ⁻⁴_(Z−2) Y + ⁴₂He. Concerne les noyaux lourds.
-- **β⁻** : un neutron devient proton, avec émission d’un électron ⁰₋₁e. ᴬ_Z X → ᴬ_(Z+1) Y + ⁰₋₁e. Concerne les noyaux trop riches en neutrons.
-- **β⁺** : un proton devient neutron, avec émission d’un positon ⁰₊₁e. ᴬ_Z X → ᴬ_(Z−1) Y + ⁰₊₁e.
+| Type | Ce qui est émis | L’équation | Quels noyaux |
+| **α** | Un noyau d’hélium ⁴₂He | ᴬ_Z X donne ᴬ⁻⁴_(Z−2) Y + ⁴₂He | Les noyaux **lourds** |
+| **β⁻** | Un électron ⁰₋₁e | ᴬ_Z X donne ᴬ_(Z+1) Y + ⁰₋₁e | Trop riches en **neutrons** |
+| **β⁺** | Un positon ⁰₊₁e | ᴬ_Z X donne ᴬ_(Z−1) Y + ⁰₊₁e | Trop riches en **protons** |
+
+En β⁻, un neutron devient proton ; en β⁺, l’inverse.
 
 ## Le rayonnement γ
-Il n’est **pas une désintégration** : le noyau fils, formé dans un état excité, se désexcite en émettant un photon très énergétique. Ni A ni Z ne changent — d’où l’étoile : Y* → Y + γ.
+> Ce n’est **pas** une désintégration. Le noyau fils, formé dans un état **excité**, se désexcite en émettant un photon très énergétique. **Ni A ni Z ne changent** — on note le noyau excité d’une étoile, et sa désexcitation s’écrit Y excité donne Y + γ.
 
-## Les lois de conservation (Soddy)
-Dans toute équation nucléaire, le **nombre de nucléons A** et la **charge Z** se conservent. Ce sont ces deux égalités qui permettent d’identifier le noyau fils sans rien connaître d’autre.
+## Les lois de Soddy
+Dans **toute** équation nucléaire, deux grandeurs se conservent :
+
+| Grandeur | Ce qu’elle conserve |
+| **A** | Le nombre de nucléons |
+| **Z** | La charge |
+
+Ce sont ces deux égalités qui permettent d’identifier le noyau fils **sans rien connaître d’autre**.
 
 ## L’énergie libérée
-La masse du noyau est **inférieure** à la somme des masses de ses nucléons séparés : c’est le **défaut de masse** Δm. L’énergie de liaison correspondante vaut E = Δm × c². C’est cette énergie, colossale devant celle des réactions chimiques, qui est libérée lors d’une désintégration.
+La masse du noyau est **inférieure** à la somme des masses de ses nucléons séparés : c’est le **défaut de masse** Δm.
 
-> La radioactivité **naturelle** (uranium, thorium, potassium 40, radon, carbone 14) nous entoure en permanence. Elle est **naturelle** au sens où elle ne vient d’aucune manipulation humaine — pas au sens où elle serait inoffensive.`,
+E = Δm × c²
+
+C’est cette énergie, **colossale** devant celle des réactions chimiques, qui est libérée lors d’une désintégration.
+
+> La radioactivité **naturelle** — uranium, thorium, potassium 40, radon, carbone 14 — nous entoure en permanence. Elle est naturelle au sens où elle ne vient d’**aucune manipulation humaine**, pas au sens où elle serait inoffensive.`,
           },
           questions: [
             ['Dans la notation ᴬ_Z X, que représente Z ?', ['Le nombre de protons', 'Le nombre de neutrons', 'Le nombre de nucléons', 'La masse du noyau'], 0, 'A est le nombre de nucléons ; le nombre de neutrons vaut donc A − Z.'],
@@ -458,40 +563,52 @@ La masse du noyau est **inférieure** à la somme des masses de ses nucléons s�
           axe: 'Modéliser l’évolution temporelle d’un système chimique',
           lecon: {
             titre: 'Imprévisible un par un, parfaitement régulier en masse',
-            cours: `Un noyau isolé se désintègre à un instant imprévisible. Mais un échantillon en contient des milliards : à cette échelle, le hasard devient une **loi mathématique exacte**.
+            cours: `Un noyau isolé se désintègre à un instant **imprévisible**. Mais un échantillon en contient des milliards : à cette échelle, le hasard devient une **loi mathématique exacte**.
 
 ## La loi de décroissance
-Le nombre N de noyaux non encore désintégrés à l’instant t vaut :
+**N(t) = N₀ × e^(−λt)**
 
-N(t) = N₀ × e^(−λt)
+| Symbole | Ce qu’il désigne | Unité |
+| N(t) | Noyaux **non encore** désintégrés à l’instant t | — |
+| N₀ | Noyaux à l’instant initial | — |
+| **λ** | La **constante radioactive**, propre au noyau | s⁻¹ |
 
-où **λ** est la **constante radioactive** (en s⁻¹), propre au noyau considéré. Elle traduit la probabilité, pour un noyau donné, de se désintégrer par unité de temps. Elle vérifie l’équation différentielle dN/dt = −λN.
+λ traduit la **probabilité**, pour un noyau donné, de se désintégrer par unité de temps. Elle vérifie dN/dt = −λN.
 
 ## La demi-vie
-La **demi-vie** t₁/₂ est la durée au bout de laquelle **la moitié** des noyaux se sont désintégrés :
+**t₁/₂ = ln2 / λ** — la durée au bout de laquelle **la moitié** des noyaux se sont désintégrés.
 
-t₁/₂ = ln2 / λ
+| Noyau | Demi-vie | Ce qu’elle permet |
+| Iode 131 | **8 jours** | Médecine nucléaire |
+| Carbone 14 | **5 730 ans** | Datation jusqu’à environ 50 000 ans |
+| Uranium 238 | **4,5 milliards d’années** | Datation des roches |
 
-Elle est **caractéristique du noyau** et ne dépend ni de la quantité initiale ni des conditions extérieures. Elle va de la microseconde à des milliards d’années : 5730 ans pour le carbone 14, 4,5 milliards d’années pour l’uranium 238, 8 jours pour l’iode 131.
+Elle est **caractéristique du noyau** et ne dépend ni de la quantité initiale, ni des conditions extérieures.
 
-## Lire une courbe de décroissance
-Après une demi-vie il reste N₀/2, après deux il reste N₀/4, après trois N₀/8 : la population est **divisée par deux à chaque t₁/₂**, jamais réduite d’une quantité fixe. Au bout de 10 demi-vies, il reste moins d’un millième de l’échantillon.
+## Lire une courbe
+| Après… | Il reste |
+| 1 demi-vie | N₀/2 |
+| 2 demi-vies | N₀/4 |
+| 3 demi-vies | N₀/8 |
+| 10 demi-vies | moins d’un **millième** |
+
+> La population est **divisée par deux** à chaque t₁/₂ — jamais réduite d’une quantité fixe. C’est une décroissance **exponentielle**, pas linéaire.
 
 ## L’activité
-L’**activité** A d’un échantillon est le nombre de désintégrations par seconde, en **becquerel (Bq)** :
+A(t) = λ × N(t) = A₀ × e^(−λt), en **becquerel (Bq)** : le nombre de désintégrations par seconde.
 
-A(t) = λ × N(t) = A₀ × e^(−λt)
-
-Elle décroît donc **selon la même loi** que N. C’est elle qu’on mesure (compteur Geiger), jamais N directement.
+Elle décroît selon **la même loi** que N. C’est elle qu’on **mesure** — au compteur Geiger — jamais N directement.
 
 ## La datation
-On compare l’activité (ou la quantité de noyaux) d’un échantillon à celle d’un échantillon de référence :
-
 t = (1/λ) × ln(A₀/A)
 
-La **datation au carbone 14** exploite le fait qu’un organisme vivant échange du carbone avec son milieu, et cesse à sa mort : sa teneur en ¹⁴C se met alors à décroître. Sa demi-vie de 5730 ans la rend utilisable jusqu’à 50 000 ans environ ; au-delà, il n’en reste pas assez pour mesurer. Pour les roches, on emploie des couples à demi-vie beaucoup plus longue (uranium-plomb, potassium-argon).
+| Méthode | Ce qui fixe A₀ | Portée |
+| **Carbone 14** | L’organisme vivant échange du carbone, et cesse à sa mort | environ 50 000 ans |
+| Uranium-plomb, potassium-argon | La composition initiale de la roche | Des milliards d’années |
 
-> Une demi-vie n’est **pas** une durée de vie : après t₁/₂, l’échantillon n’est pas « à moitié mort », il a exactement la même probabilité de perdre encore la moitié de ce qui reste pendant la période suivante.`,
+Au-delà de 50 000 ans, il ne reste **pas assez** de ¹⁴C pour mesurer : ce n’est pas une limite d’appareil, c’est une limite physique.
+
+> Une demi-vie n’est **pas** une durée de vie : après t₁/₂, l’échantillon n’est pas « à moitié mort ». Il a exactement la même probabilité de perdre encore la moitié de ce qui reste pendant la période suivante.`,
           },
           questions: [
             ['Quelle est la loi de décroissance radioactive ?', ['N(t) = N₀ × e^(−λt)', 'N(t) = N₀ − λt', 'N(t) = N₀ / (λt)', 'N(t) = N₀ × λ^t'], 0, 'Elle est la solution de l’équation différentielle dN/dt = −λN.'],
@@ -510,37 +627,51 @@ La **datation au carbone 14** exploite le fait qu’un organisme vivant échange
           axe: 'Prévoir l’état final d’un système chimique',
           lecon: {
             titre: 'Toutes les réactions ne vont pas jusqu’au bout',
-            cours: `Au collège, une réaction s’arrête quand le réactif limitant est épuisé. En Terminale, on découvre qu’une grande partie des transformations s’arrêtent **avant**, dans un état où réactifs et produits coexistent : l’**état d’équilibre**.
+            cours: `Au collège, une réaction s’arrête quand le réactif limitant est épuisé. En Terminale, on découvre qu’une grande partie des transformations s’arrêtent **avant** : réactifs et produits **coexistent**. C’est l’**état d’équilibre**.
 
 ## Le quotient de réaction
-Pour une réaction a A + b B = c C + d D, à un instant quelconque :
+Pour a A + b B = c C + d D :
 
-Qr = ([C]/c°)^c × ([D]/c°)^d / (([A]/c°)^a × ([B]/c°)^b)
+Qr = ([C]/c°)^c × ([D]/c°)^d divisé par ([A]/c°)^a × ([B]/c°)^b
 
-Il est **sans unité**. Règle d’écriture : les **solides** et le **solvant** (l’eau, dans une solution aqueuse diluée) n’y figurent pas — leur concentration ne varie pratiquement pas.
+Il est **sans unité**.
+
+| Ce qui figure dans Qr | Ce qui n’y figure **pas** |
+| Les espèces dissoutes | Les **solides** |
+| Les gaz | Le **solvant** — l’eau en solution diluée |
+
+Leur concentration ne varie pratiquement pas : c’est la raison de leur absence.
 
 ## La constante d’équilibre
-Quand le système n’évolue plus, Qr atteint une valeur qui ne dépend **que de la température** : c’est la **constante d’équilibre K**. Elle ne dépend ni des quantités introduites, ni du volume, ni de la présence d’un catalyseur.
+Quand le système n’évolue plus, Qr atteint **K**, qui ne dépend **que de la température**.
 
-## Le critère d’évolution spontanée
-On compare Qr,i (à l’état initial) à K :
-- Qr,i < K : le système évolue dans le **sens direct** (formation de produits) ;
-- Qr,i > K : il évolue dans le **sens indirect** ;
-- Qr,i = K : il n’évolue pas, il est déjà à l’équilibre.
+| K ne dépend **pas** de… |
+| Des quantités introduites |
+| Du volume |
+| De la présence d’un **catalyseur** |
 
-Ce critère répond à la question « dans quel sens ? » sans aucun calcul d’avancement.
+## Le critère d’évolution
+| Comparaison | Le système évolue… |
+| Qr,i **<** K | Dans le **sens direct** : il forme des produits |
+| Qr,i **>** K | Dans le **sens indirect** |
+| Qr,i **=** K | Il n’évolue pas : il est déjà à l’équilibre |
+
+Ce critère répond à « dans quel sens ? » **sans aucun calcul d’avancement**.
 
 ## L’équilibre est dynamique
-À l’équilibre, les deux réactions inverses continuent de se produire, **à la même vitesse**. Rien ne s’arrête à l’échelle microscopique : ce sont les concentrations, à l’échelle macroscopique, qui cessent de varier.
+> À l’équilibre, les deux réactions inverses **continuent** de se produire, à la **même vitesse**. Rien ne s’arrête à l’échelle microscopique : ce sont les concentrations, à l’échelle macroscopique, qui cessent de varier.
 
-## Le taux d’avancement final
-τ = x_f / x_max mesure à quel point la transformation est allée loin :
-- τ = 1 (ou > 0,99) : transformation **totale** ;
-- τ < 1 : transformation **limitée** par un équilibre.
+## K ou τ
+τ = x_f / x_max mesure jusqu’où la transformation est allée.
 
-Un K très grand (au-delà de 10⁴) correspond à une transformation quasi totale ; un K très petit à une transformation quasi nulle. Mais **τ dépend aussi des conditions initiales** : diluer une solution d’acide faible augmente son taux d’avancement, alors que K, lui, ne bouge pas.
+| | **K** | **τ** |
+| Ce que c’est | Une **constante** du couple réactionnel | Le résultat d’une **expérience** |
+| De quoi cela dépend | De la **température** seule | Aussi des conditions initiales |
+| Valeur limite | K > 10⁴ : transformation quasi totale | τ = 1 : transformation totale |
 
-> Ne pas confondre **K** et **τ** : K est une constante du couple réactionnel à une température donnée, τ est le résultat d’une expérience particulière. C’est la confusion la plus fréquente sur ce chapitre.`,
+Diluer une solution d’acide faible **augmente** son taux d’avancement — alors que K, lui, **ne bouge pas**.
+
+> Ne pas confondre K et τ est la difficulté principale du chapitre, et la confusion la plus sanctionnée.`,
           },
           questions: [
             ['De quoi dépend la constante d’équilibre K ?', ['De la température seule', 'Des quantités initiales', 'Du volume du récipient', 'De la présence d’un catalyseur'], 0, 'C’est ce qui la distingue du taux d’avancement final τ, propre à chaque expérience.'],
@@ -558,33 +689,43 @@ Un K très grand (au-delà de 10⁴) correspond à une transformation quasi tota
           axe: 'Prévoir l’état final d’un système chimique',
           lecon: {
             titre: 'Une réaction d’oxydoréduction dont on récolte les électrons',
-            cours: `Plongez une lame de zinc dans une solution de sulfate de cuivre : la réaction se fait sur place, et son énergie part en chaleur. Séparez les deux couples : les électrons sont **obligés de passer par un fil**, et l’on obtient un courant.
+            cours: `Plongez une lame de zinc dans du sulfate de cuivre : la réaction se fait sur place, et son énergie part en **chaleur**. Séparez les deux couples, et les électrons sont **obligés de passer par un fil** — on obtient un courant.
 
 ## Oxydant, réducteur, couple
-Un **réducteur** cède des électrons, un **oxydant** en capte. Ils forment un **couple Ox/Red** relié par une demi-équation : Ox + n e⁻ = Red. Exemples : Cu²⁺/Cu, Zn²⁺/Zn, Fe³⁺/Fe²⁺, MnO₄⁻/Mn²⁺.
+| Espèce | Ce qu’elle fait des électrons |
+| Un **réducteur** | Il en **cède** |
+| Un **oxydant** | Il en **capte** |
+
+Ils forment un couple Ox/Red relié par : Ox + n e⁻ = Red. Exemples : Cu²⁺/Cu, Zn²⁺/Zn, Fe³⁺/Fe²⁺, MnO₄⁻/Mn²⁺.
 
 ## La constitution d’une pile
-Deux **demi-piles** (chacune une électrode plongée dans la solution de son couple), reliées par :
-- un **circuit extérieur** (le fil, où circulent les **électrons**) ;
-- un **pont salin**, qui ferme le circuit **à l’intérieur** en laissant migrer les ions et assure l’électroneutralité de chaque compartiment. Sans lui, les charges s’accumulent et la pile s’arrête aussitôt.
+| Élément | Son rôle | Ce qui y circule |
+| Deux **demi-piles** | Chacune une électrode dans la solution de son couple | — |
+| Le **circuit extérieur** | Relier les électrodes | Les **électrons** |
+| Le **pont salin** | Fermer le circuit **à l’intérieur** | Les **ions** |
+
+> Sans pont salin, les charges s’accumulent dans chaque compartiment et la pile **s’arrête aussitôt**. Il n’est pas un accessoire : il assure l’électroneutralité, donc la continuité du courant.
 
 ## Les deux électrodes
-- l’**anode** est le siège de l’**oxydation** ; dans une pile, c’est le pôle **négatif** (elle libère les électrons) ;
-- la **cathode** est le siège de la **réduction** ; c’est le pôle **positif**.
+| Électrode | Ce qui s’y passe | Son pôle dans une **pile** |
+| **Anode** | L’**oxydation** | Le pôle **négatif** |
+| **Cathode** | La **réduction** | Le pôle **positif** |
 
-Moyen mnémotechnique : **anode/oxydation** commencent par une voyelle, **cathode/réduction** par une consonne. Les électrons vont de l’anode vers la cathode dans le fil ; le **courant** conventionnel circule en sens inverse.
+Moyen mnémotechnique : **a**node et **o**xydation commencent par une **voyelle** ; **c**athode et **r**éduction par une **consonne**.
+
+Les **électrons** vont de l’anode vers la cathode dans le fil ; le **courant conventionnel** circule en sens inverse.
 
 ## Le sens d’évolution
-La pile débite tant que Qr ≠ K. Elle **fonctionne** dans le sens qui rapproche Qr de K, et elle est **usée** quand Qr = K : le système a atteint son équilibre, la tension tombe à zéro. Une pile usée n’est pas « vide », elle est **à l’équilibre**.
+| État | Ce qui se passe |
+| Qr ≠ K | La pile **débite**, dans le sens qui rapproche Qr de K |
+| Qr = K | La pile est **usée** : la tension tombe à zéro |
+
+> Une pile usée n’est pas « vide » : elle est **à l’équilibre**. Il y reste exactement autant de matière qu’au départ.
 
 ## La capacité électrique
-La quantité d’électricité débitée vaut :
+Q = I × Δt = n(e⁻) × **F**, avec F = **96 500 C·mol⁻¹** — la charge d’une mole d’électrons.
 
-Q = I × Δt = n(e⁻) × F
-
-avec **F = 96 500 C·mol⁻¹** (constante de Faraday, la charge d’une mole d’électrons). En reliant n(e⁻) à l’avancement par les demi-équations, on calcule la **durée de vie** de la pile ou la masse d’électrode consommée.
-
-> Le réactif limitant fixe la capacité : c’est presque toujours le métal de l’anode, qui se dissout, ou l’oxydant en solution.`,
+En reliant n(e⁻) à l’avancement par les demi-équations, on calcule la **durée de vie** de la pile ou la masse d’électrode consommée. Le réactif limitant est presque toujours le **métal de l’anode**, qui se dissout.`,
           },
           questions: [
             ['Dans une pile, l’anode est le siège de…', ['L’oxydation, et c’est le pôle négatif', 'La réduction, et c’est le pôle négatif', 'L’oxydation, et c’est le pôle positif', 'La réduction, et c’est le pôle positif'], 0, 'Elle libère les électrons dans le circuit extérieur, d’où sa polarité négative.'],
@@ -602,38 +743,44 @@ avec **F = 96 500 C·mol⁻¹** (constante de Faraday, la charge d’une mole d�
           axe: 'Prévoir l’état final d’un système chimique',
           lecon: {
             titre: 'Forcer un système à remonter la pente',
-            cours: `Une pile suit le sens spontané. Une **électrolyse** fait l’inverse : un générateur impose au système d’évoluer **contre** son sens naturel — et donc **d’éloigner Qr de K**.
+            cours: `Une pile suit le sens **spontané**. Une **électrolyse** fait l’inverse : un générateur impose au système d’évoluer **contre** son sens naturel — donc d’**éloigner Qr de K**.
 
-## La transformation forcée
-On plonge deux électrodes dans un électrolyte et on les relie à un **générateur de tension continue**, qui doit fournir une tension supérieure à celle que délivrerait la pile correspondante. Le système, laissé seul, reviendrait spontanément en arrière.
+## Pile ou électrolyse
+| | **Pile** | **Électrolyse** |
+| Le sens | Spontané | **Forcé** |
+| Qr par rapport à K | Il s’en **rapproche** | Il s’en **éloigne** |
+| L’énergie | Chimique vers électrique | Électrique vers **chimique** |
+| L’anode | Pôle **négatif** | Reliée à la borne **+** |
+| La cathode | Pôle **positif** | Reliée à la borne **−** |
 
-## Le repérage des électrodes
-Les définitions **ne changent pas** — c’est le branchement qui change :
-- l’**anode** reste le siège de l’**oxydation**, mais elle est reliée à la borne **+** du générateur ;
-- la **cathode** reste le siège de la **réduction**, reliée à la borne **−**.
+> Les définitions **ne changent pas** : anode = oxydation, cathode = réduction, **toujours**. C’est le **branchement** qui change. Retenir « anode = oxydation » et rien d’autre évite le piège le plus classique du chapitre.
 
-C’est le piège classique : dans une pile l’anode est le pôle négatif, dans une électrolyse elle est reliée au pôle positif. La règle sûre est « anode = oxydation », toujours.
+Le générateur doit fournir une tension **supérieure** à celle que délivrerait la pile correspondante.
 
 ## Le bilan quantitatif
-Le même calcul que pour une pile s’applique :
+Le même calcul que pour une pile : **n(e⁻) = I × Δt / F**
 
-n(e⁻) = I × Δt / F
-
-d’où la masse déposée ou dissoute, ou le volume de gaz dégagé. C’est ainsi qu’on dimensionne un dépôt de galvanoplastie ou une production industrielle.
+D’où la masse déposée ou dissoute, ou le volume de gaz dégagé. C’est ainsi qu’on dimensionne un dépôt de galvanoplastie ou une production industrielle.
 
 ## Les applications
-- **électrolyse de l’eau** : production de dihydrogène (réduction à la cathode) et de dioxygène (oxydation à l’anode) ;
-- **galvanoplastie** : dépôt d’un métal (chromage, dorure) sur une pièce placée à la cathode ;
-- **production de métaux** : l’aluminium s’obtient exclusivement par électrolyse de l’alumine ;
-- **raffinage** du cuivre.
+| Application | Ce qui se passe |
+| **Électrolyse de l’eau** | Dihydrogène à la cathode, dioxygène à l’anode |
+| **Galvanoplastie** | Dépôt d’un métal sur la pièce placée à la **cathode** |
+| Production d’**aluminium** | Il ne s’obtient **que** par électrolyse de l’alumine |
+| **Raffinage** du cuivre | Purification par transfert d’une anode vers une cathode |
 
-## L’accumulateur
-Un **accumulateur** (batterie lithium-ion, plomb-acide) est un système réversible : il fonctionne **en pile** à la décharge, **en électrolyseur** à la recharge — le chargeur y joue le rôle du générateur, et l’anode et la cathode échangent leurs places. C’est ce qui le distingue d’une pile jetable.
+## Accumulateur et pile à combustible
+| | **Accumulateur** | **Pile à combustible** |
+| Ce que c’est | Un système **réversible** | Une pile **alimentée en continu** |
+| À la décharge | Il fonctionne en **pile** | Elle débite |
+| À la recharge | Il fonctionne en **électrolyseur** | Elle ne se recharge pas : on l’alimente |
+| Exemples | Lithium-ion, plomb-acide | Hydrogène / dioxygène |
 
-## La pile à combustible
-Elle n’est pas un accumulateur : ses réactifs (dihydrogène et dioxygène) sont **alimentés en continu** au lieu d’être stockés. Elle débite tant qu’on l’alimente et ne rejette que de l’eau — à condition que le dihydrogène ait lui-même été produit proprement.
+Dans un accumulateur en charge, anode et cathode **échangent leurs places** : c’est ce qui le distingue d’une pile jetable.
 
-> Une électrolyse consomme de l’énergie électrique et la stocke sous forme chimique ; une pile fait le trajet inverse. Le rendement du couple charge-décharge n’est jamais de 100 %.`,
+La pile à combustible ne rejette que de l’**eau** — à condition que le dihydrogène ait lui-même été produit proprement.
+
+> Le rendement du couple charge-décharge n’est **jamais** de 100 % : une part de l’énergie part en chaleur à chaque conversion.`,
           },
           questions: [
             ['Lors d’une électrolyse, l’anode est reliée à…', ['La borne + du générateur', 'La borne − du générateur', 'Aucune borne', 'Au pont salin'], 0, 'Elle reste le siège de l’oxydation : seule sa polarité change par rapport à une pile.'],
@@ -651,37 +798,49 @@ Elle n’est pas un accumulateur : ses réactifs (dihydrogène et dioxygène) so
           axe: 'Prévoir l’état final d’un système chimique',
           lecon: {
             titre: 'Fort ou faible : une question de taux, pas de danger',
-            cours: `« Acide fort » ne veut pas dire « acide dangereux » : cela veut dire que sa réaction avec l’eau est **totale**. Un acide faible concentré peut être bien plus corrosif qu’un acide fort dilué.
+            cours: `« Acide fort » ne veut **pas** dire « acide dangereux » : cela veut dire que sa réaction avec l’eau est **totale**. Un acide faible concentré peut être bien plus corrosif qu’un acide fort dilué.
 
-## Acide fort, acide faible
-- **acide fort** : réagit **totalement** avec l’eau. AH + H₂O → A⁻ + H₃O⁺, flèche simple. Dans la solution, il ne reste **plus de AH**. Exemples : HCl, HNO₃, H₂SO₄ (première acidité).
-- **acide faible** : la réaction est **limitée**, l’équilibre s’établit. AH + H₂O = A⁻ + H₃O⁺, double flèche. AH et A⁻ **coexistent**. Exemples : CH₃COOH, HF, NH₄⁺.
+## Fort ou faible
+| | Acide **fort** | Acide **faible** |
+| La réaction avec l’eau | **Totale** | **Limitée** : équilibre |
+| La flèche | Simple | Double |
+| Ce qui reste en solution | **Plus de AH du tout** | AH et A⁻ **coexistent** |
+| Exemples | HCl, HNO₃, H₂SO₄ | CH₃COOH, HF, NH₄⁺ |
 
-Même distinction pour les bases : HO⁻ et les hydroxydes solubles sont forts, NH₃ et CH₃COO⁻ sont faibles.
+Même distinction pour les bases : HO⁻ et les hydroxydes solubles sont **forts**, NH₃ et CH₃COO⁻ sont **faibles**.
 
 ## La constante d’acidité
-Pour un couple AH/A⁻, la constante d’équilibre de la réaction avec l’eau porte un nom propre :
+Ka = ([A⁻]/c°) × ([H₃O⁺]/c°) divisé par ([AH]/c°), et **pKa = −log Ka**
 
-Ka = ([A⁻]/c°) × ([H₃O⁺]/c°) / ([AH]/c°), et pKa = −log Ka
+| L’acide est… | Ka | pKa |
+| Plus **fort** | Plus **grand** | Plus **petit** |
+| Plus **faible** | Plus petit | Plus grand |
 
-**Plus l’acide est fort, plus Ka est grand, donc plus le pKa est petit.** L’échelle est inversée : c’est le sens à ne pas perdre.
+> L’échelle est **inversée** : c’est le sens à ne jamais perdre. Un pKa de 3 signale un acide plus fort qu’un pKa de 9.
 
 ## Le diagramme de prédominance
 En prenant le logarithme de l’expression de Ka, on obtient la **relation de Henderson** :
 
 pH = pKa + log([A⁻]/[AH])
 
-D’où la lecture immédiate :
-- **pH < pKa** : l’**acide** AH prédomine ;
-- **pH > pKa** : la **base** A⁻ prédomine ;
-- **pH = pKa** : les deux espèces sont en **concentrations égales**.
+| La situation | Ce qui prédomine |
+| pH **<** pKa | L’**acide** AH |
+| pH **>** pKa | La **base** A⁻ |
+| pH **=** pKa | Les deux, à **concentrations égales** |
 
-Un diagramme de prédominance est donc un axe de pH coupé en deux au pKa. Pour un diacide, deux pKa découpent trois domaines.
+Un diagramme de prédominance est donc un axe de pH **coupé en deux au pKa**. Pour un diacide, deux pKa découpent trois domaines.
 
 ## Les indicateurs colorés
-Un indicateur coloré est un couple acide/base dont les deux formes n’ont **pas la même couleur**. Il change de teinte sur une **zone de virage** d’environ deux unités, centrée sur son pKa. On le choisit pour que sa zone de virage soit **contenue dans le saut de pH** du titrage : sinon, le virage n’indique pas l’équivalence.
+Un indicateur est un couple acide/base dont les deux formes **n’ont pas la même couleur**. Il change de teinte sur une **zone de virage** d’environ deux unités, centrée sur son pKa.
 
-> Le pKa de l’acide éthanoïque vaut 4,8, celui de l’ion ammonium 9,2 : deux repères qui permettent de situer presque tous les autres.`,
+> On le choisit pour que sa zone de virage soit **contenue dans le saut de pH** du titrage. Sinon, le virage n’indique **pas** l’équivalence — et le dosage est faux malgré une manipulation correcte.
+
+## Deux repères à retenir
+| Couple | pKa |
+| Acide éthanoïque / éthanoate | **4,8** |
+| Ion ammonium / ammoniac | **9,2** |
+
+Ils permettent de situer presque tous les autres.`,
           },
           questions: [
             ['Un acide fort est un acide qui…', ['Réagit totalement avec l’eau', 'Est très concentré', 'Est très corrosif', 'A un pKa élevé'], 0, 'Après réaction, il n’en reste plus sous forme AH dans la solution.'],
@@ -699,33 +858,44 @@ Un indicateur coloré est un couple acide/base dont les deux formes n’ont **pa
           axe: 'Prévoir l’état final d’un système chimique',
           lecon: {
             titre: 'Du tableau d’avancement au pH, et retour',
-            cours: `Calculer un pH, c’est toujours la même démarche : identifier la réaction prépondérante, dresser un tableau d’avancement, écrire la constante d’équilibre, résoudre.
+            cours: `Calculer un pH, c’est **toujours** la même démarche : identifier la réaction prépondérante, dresser un tableau d’avancement, écrire la constante d’équilibre, résoudre.
 
-## Le cas de l’acide fort
-La réaction avec l’eau étant totale, tout l’acide est converti :
+## Acide fort ou acide faible
+| | **Acide fort** | **Acide faible** |
+| La réaction | **Totale** | **Limitée** |
+| Le calcul | Direct : [H₃O⁺] = c | Par tableau d’avancement et Ka |
+| Le pH | pH = −log(c/c°) | **Plus élevé**, à concentration égale |
+| Pourquoi | Tout l’acide est converti | Moins de H₃O⁺ ont été libérés |
 
-[H₃O⁺] = c, donc pH = −log(c/c°)
+Pour une **base forte**, on passe par [HO⁻] puis par Ke : pH = 14,0 + log(c/c°) à 25 °C.
 
-Vrai tant que c n’est pas trop faible (au-delà de 10⁻⁶ mol·L⁻¹, l’autoprotolyse de l’eau doit être prise en compte, et le pH ne dépasse jamais 7). Pour une base forte, on passe par [HO⁻] puis par Ke : pH = 14,0 + log(c/c°) à 25 °C.
+> La formule de l’acide fort n’est vraie que si c reste au-dessus de **10⁻⁶ mol·L⁻¹**. En dessous, l’autoprotolyse de l’eau domine — et le pH d’une solution acide ne dépasse **jamais** 7, si diluée soit-elle.
 
-## Le cas de l’acide faible
-La réaction est limitée. On dresse le tableau d’avancement de AH + H₂O = A⁻ + H₃O⁺, on exprime Ka en fonction de l’avancement volumique, et on résout. Le résultat est **toujours un pH plus élevé** que celui d’un acide fort de même concentration : moins de H₃O⁺ ont été libérés.
-
-Le taux d’avancement final τ = [A⁻]/c mesure cet écart. Il **augmente quand on dilue** : un acide faible très dilué se comporte presque comme un acide fort.
+## Le taux d’avancement
+τ = [A⁻]/c mesure l’écart au cas de l’acide fort. Il **augmente quand on dilue** : un acide faible très dilué se comporte presque comme un acide fort.
 
 ## La solution tampon
-Une solution contenant **l’acide ET sa base conjuguée en quantités comparables** possède un pH qui varie peu par ajout modéré d’acide, de base, ou par dilution : c’est un **tampon**. Son pH vaut :
+Une solution contenant **l’acide ET sa base conjuguée** en quantités comparables voit son pH varier peu.
 
-pH = pKa + log([A⁻]/[AH])
+| Ce à quoi elle résiste | Le pH |
+| Un ajout modéré d’acide | Il bouge peu |
+| Un ajout modéré de base | Il bouge peu |
+| Une dilution | Il ne bouge pratiquement pas |
 
-Il est **maximalement efficace quand [A⁻] = [AH]**, c’est-à-dire quand pH = pKa. Le sang est tamponné par le couple CO₂,H₂O/HCO₃⁻ autour de pH 7,4.
+pH = pKa + log([A⁻]/[AH]) — et le tampon est **maximalement efficace quand [A⁻] = [AH]**, c’est-à-dire quand **pH = pKa**.
+
+Le sang est tamponné par le couple CO₂,H₂O / HCO₃⁻ autour de **pH 7,4**.
 
 ## Le titrage pH-métrique
-On suit le pH en fonction du volume de solution titrante versé. La réaction de titrage doit être **totale, rapide et unique**.
-- l’**équivalence** est atteinte quand les réactifs ont été mélangés dans les **proportions stœchiométriques** ; c’est le point d’inflexion du saut de pH, repéré par la méthode des tangentes ou par le maximum de la dérivée ;
-- à la **demi-équivalence** d’un titrage d’acide faible, la moitié de AH a été transformée : [A⁻] = [AH], donc **pH = pKa**. C’est la façon la plus simple de mesurer un pKa.
+La réaction de titrage doit être **totale, rapide et unique**.
 
-> À l’équivalence, le pH ne vaut 7 que si l’on titre un acide fort par une base forte. Titrer un acide **faible** par une base forte donne un pH d’équivalence **supérieur à 7** : la base conjuguée formée est basique.`,
+| Point remarquable | Ce qui s’y passe | Ce qu’on en tire |
+| L’**équivalence** | Les réactifs sont mélangés dans les proportions stœchiométriques | La **concentration** cherchée |
+| La **demi-équivalence** | La moitié de AH est transformée : [A⁻] = [AH] | **pH = pKa** |
+
+L’équivalence est le point d’inflexion du saut de pH : on la repère par la méthode des **tangentes** ou par le **maximum de la dérivée**.
+
+> À l’équivalence, le pH ne vaut 7 **que** si l’on titre un acide fort par une base forte. Titrer un acide **faible** par une base forte donne un pH d’équivalence **supérieur à 7** — la base conjuguée formée est basique. C’est ce qui commande le choix de l’indicateur coloré.`,
           },
           questions: [
             ['Quel est le pH d’une solution d’acide fort de concentration 1,0 × 10⁻³ mol·L⁻¹ ?', ['3,0', '11,0', '1,0', '7,0'], 0, 'La réaction est totale : [H₃O⁺] = c, donc pH = −log c.'],
@@ -744,42 +914,44 @@ On suit le pH en fonction du volume de solution titrante versé. La réaction de
           axe: 'Stratégies en synthèse organique',
           lecon: {
             titre: 'Le squelette, les groupes, et l’espace',
-            cours: `Une molécule organique se lit à trois niveaux : la **chaîne carbonée** qui lui sert de squelette, les **groupes caractéristiques** qui portent sa réactivité, et sa **forme dans l’espace**, qui décide parfois de tout.
+            cours: `Une molécule organique se lit à **trois niveaux** : la **chaîne carbonée** qui lui sert de squelette, les **groupes caractéristiques** qui portent sa réactivité, et sa **forme dans l’espace** — qui décide parfois de tout.
 
-## Les formules
-- **brute** : C₂H₆O — elle compte les atomes, rien de plus ;
-- **semi-développée** : CH₃—CH₂—OH — les liaisons entre atomes lourds sont écrites ;
-- **topologique** : la chaîne carbonée en ligne brisée, chaque sommet et chaque extrémité étant un carbone, les H portés par les carbones étant sous-entendus.
+## Les trois formules
+| Formule | Ce qu’elle montre | Sa limite |
+| **Brute** | Le nombre d’atomes : C₂H₆O | Elle ne distingue pas les isomères |
+| **Semi-développée** | Les liaisons entre atomes lourds | Illisible au-delà de quelques carbones |
+| **Topologique** | Une ligne brisée : chaque sommet est un carbone | La seule lisible sur les grosses molécules |
 
-Une même formule brute peut correspondre à plusieurs molécules : C₂H₆O est aussi bien l’éthanol que le méthoxyméthane. Ce sont des **isomères de constitution**.
+C₂H₆O est aussi bien l’**éthanol** que le **méthoxyméthane** : ce sont des **isomères de constitution**.
 
 ## Les familles et leurs groupes
-- **alcool** : —OH porté par un carbone tétragonal ;
-- **aldéhyde** : —CHO, toujours en bout de chaîne ;
-- **cétone** : —CO—, toujours en milieu de chaîne ;
-- **acide carboxylique** : —COOH ;
-- **ester** : —COO— ;
-- **amine** : —NH₂, —NH— ou —N ;
-- **amide** : —CONH— ;
-- **halogénoalcane** : —X, avec X = F, Cl, Br ou I.
+| Famille | Groupe | Position |
+| **Alcool** | —OH | Sur un carbone tétragonal |
+| **Aldéhyde** | —CHO | **Toujours** en bout de chaîne |
+| **Cétone** | —CO— | **Toujours** en milieu de chaîne |
+| **Acide carboxylique** | —COOH | En bout de chaîne |
+| **Ester** | —COO— | |
+| **Amine** | —NH₂, —NH—, —N | |
+| **Amide** | —CONH— | |
+| **Halogénoalcane** | —X, avec X = F, Cl, Br, I | |
 
-Les alcools se classent en **primaire, secondaire, tertiaire** selon le nombre de carbones voisins du carbone porteur du —OH — distinction décisive pour l’oxydation (un alcool tertiaire ne s’oxyde pas).
-
-## La nomenclature
-Chaîne principale la plus longue contenant le groupe caractéristique, numérotation donnant l’indice le plus petit à ce groupe, substituants en préfixe par ordre alphabétique. *Pentan-2-ol*, *3-méthylbutanoate d’éthyle*.
+Les alcools se classent en **primaire, secondaire, tertiaire** selon le nombre de carbones voisins de celui qui porte le —OH. Distinction décisive : un alcool **tertiaire ne s’oxyde pas**.
 
 ## Les isoméries
-- **de constitution** : même formule brute, enchaînement différent (chaîne, position, fonction) ;
-- **stéréo-isomérie Z/E** : autour d’une double liaison C=C, qui ne tourne pas ;
-- **énantiomérie** : deux molécules images l’une de l’autre dans un miroir et non superposables. Elle apparaît dès qu’un **carbone asymétrique** (quatre substituants différents) est présent. La molécule est alors **chirale**.
-- **diastéréo-isomérie** : stéréo-isomères qui ne sont pas énantiomères.
+| Type | Ce qui diffère | Ce qui l’engendre |
+| **De constitution** | L’enchaînement des atomes | Chaîne, position, fonction |
+| **Z / E** | La disposition autour d’une double liaison | La C=C ne tourne pas |
+| **Énantiomérie** | Images dans un miroir, non superposables | Un **carbone asymétrique** : quatre substituants différents |
+| **Diastéréo-isomérie** | Stéréo-isomères non énantiomères | Plusieurs centres |
 
-Deux énantiomères ont **les mêmes propriétés physiques** (température de fusion, solubilité) mais peuvent avoir des **effets biologiques radicalement différents** : un récepteur biologique est lui-même chiral et ne reconnaît qu’une des deux formes.
+> Deux énantiomères ont **exactement** les mêmes propriétés physiques — température de fusion, solubilité — et peuvent avoir des effets **biologiques radicalement différents**. La raison : un récepteur biologique est lui-même **chiral**, et ne reconnaît qu’une des deux formes.
 
 ## La polarité, source de réactivité
-Une liaison entre atomes d’**électronégativités différentes** est polarisée : le carbone d’un C—O ou d’un C=O porte un δ⁺ (site accepteur), l’oxygène un δ⁻ et ses doublets non liants (site donneur). C’est cette carte des charges qui prédit où une molécule sera attaquée.
+| Site | Ce qui le crée | Exemple |
+| **Accepteur**, δ⁺ | Le carbone d’une liaison polarisée | C—O, C—Cl, C=O |
+| **Donneur**, δ⁻ | L’atome électronégatif et ses doublets | L’oxygène du C=O |
 
-> La formule topologique est la seule qui reste lisible au-delà d’une dizaine de carbones : c’est celle des énoncés de bac.`,
+C’est cette **carte des charges** qui prédit où une molécule sera attaquée — et c’est elle qu’on dessine avant d’écrire le moindre mécanisme.`,
           },
           questions: [
             ['Sur une formule topologique, que représente chaque sommet de la ligne brisée ?', ['Un atome de carbone', 'Un atome d’hydrogène', 'Une liaison double', 'Un groupe caractéristique'], 0, 'Les hydrogènes portés par ces carbones sont sous-entendus.'],
@@ -797,38 +969,53 @@ Une liaison entre atomes d’**électronégativités différentes** est polaris�
           axe: 'Stratégies en synthèse organique',
           lecon: {
             titre: 'Choisir un chemin, pas seulement une réaction',
-            cours: `Synthétiser une molécule, ce n’est pas trouver « la » réaction : c’est enchaîner des étapes, dans un ordre qui protège ce qu’il faut protéger, avec des réactifs qui n’attaquent que ce qu’on veut.
+            cours: `Synthétiser une molécule, ce n’est pas trouver « la » réaction : c’est **enchaîner des étapes**, dans un ordre qui protège ce qu’il faut protéger, avec des réactifs qui n’attaquent que ce qu’on veut.
 
 ## Les trois modifications possibles
-Une synthèse joue sur :
-- la **chaîne carbonée** (l’allonger, la raccourcir, la ramifier) ;
-- le **groupe caractéristique** (le transformer : alcool → aldéhyde → acide) ;
-- la **stéréochimie** (obtenir un énantiomère plutôt que l’autre).
+| Ce qu’on modifie | Exemple |
+| La **chaîne carbonée** | L’allonger, la raccourcir, la ramifier |
+| Le **groupe caractéristique** | Alcool vers aldéhyde vers acide |
+| La **stéréochimie** | Obtenir un énantiomère plutôt que l’autre |
 
-## Les grandes catégories de réactions
-- **substitution** : un atome ou un groupe en remplace un autre ;
-- **addition** : deux entités s’ajoutent sur une liaison multiple, qui devient simple ;
-- **élimination** : une liaison multiple se crée par départ de deux groupes portés par des carbones voisins.
+## Les trois catégories de réactions
+| Réaction | Ce qui se passe | Comment la reconnaître |
+| **Substitution** | Un groupe en remplace un autre | Même nombre d’atomes, un groupe échangé |
+| **Addition** | Deux entités s’ajoutent sur une liaison multiple | Une **insaturation disparaît** |
+| **Élimination** | Une liaison multiple se crée | Une **insaturation apparaît** |
 
-On les reconnaît en **comparant réactif et produit** : nombre d’atomes conservé et un groupe échangé (substitution), insaturation qui disparaît (addition), insaturation qui apparaît (élimination).
+On les identifie en **comparant réactif et produit**, jamais en lisant le nom du réactif.
 
-## La sélectivité
-- **chimiosélectivité** : le réactif n’attaque qu’un seul type de groupe alors que plusieurs sont présents ;
-- **régiosélectivité** : parmi plusieurs positions possibles, une seule réagit (ou majoritairement) ;
-- **stéréosélectivité** : un stéréo-isomère se forme préférentiellement.
+## Les trois sélectivités
+| Sélectivité | Ce qu’elle garantit |
+| **Chimiosélectivité** | Un seul **type de groupe** réagit, alors que plusieurs sont présents |
+| **Régiosélectivité** | Une seule **position** réagit parmi plusieurs possibles |
+| **Stéréosélectivité** | Un seul **stéréo-isomère** se forme |
 
-Un réactif « brutal » manque de sélectivité et donne un mélange à séparer : la sélectivité, c’est du rendement gagné et de la purification épargnée.
+Un réactif « brutal » manque de sélectivité et donne un mélange à séparer : **la sélectivité, c’est du rendement gagné et de la purification épargnée**.
 
 ## La protection de fonction
-Quand un groupe risque de réagir alors qu’on ne le souhaite pas, on le **protège** : on le transforme temporairement en un groupe inerte, on réalise l’étape voulue, puis on **déprotège**. Cela ajoute deux étapes — donc du coût et une perte de rendement — mais c’est souvent le seul chemin possible. C’est la stratégie systématique en synthèse peptidique, où seule la bonne extrémité de chaque acide aminé doit réagir.
+| Étape | Ce qu’on fait |
+| 1 | **Protéger** : transformer temporairement le groupe en un groupe inerte |
+| 2 | Réaliser l’étape voulue |
+| 3 | **Déprotéger** : restaurer le groupe d’origine |
+
+Cela ajoute **deux étapes** — donc du coût et une perte de rendement — mais c’est souvent le seul chemin possible. C’est la stratégie systématique en **synthèse peptidique**, où seule la bonne extrémité de chaque acide aminé doit réagir.
 
 ## La synthèse multi-étapes
-Le rendement global est le **produit** des rendements de chaque étape : cinq étapes à 80 % ne donnent que 33 % au total. D’où deux principes : **peu d’étapes**, et **les étapes coûteuses le plus tard possible**.
+> Le rendement global est le **produit** des rendements de chaque étape : **cinq étapes à 80 % ne donnent que 33 %** au total.
+
+D’où deux principes qui commandent toute stratégie : **le moins d’étapes possible**, et **les étapes coûteuses le plus tard possible**.
 
 ## Le coût et l’impact
-Le choix d’une voie de synthèse intègre le prix des réactifs, la **sécurité** (solvants inflammables, toxicité), la consommation d’énergie (chauffage à reflux) et l’**économie d’atomes** — la part de la masse des réactifs qui se retrouve dans le produit voulu. Ce sont les principes de la **chimie verte** : moins de solvants, catalyse plutôt que réactifs stœchiométriques, matières premières renouvelables.
+| Critère | Ce qu’on évalue |
+| Prix | Celui des réactifs et des solvants |
+| **Sécurité** | Solvants inflammables, toxicité |
+| Énergie | Chauffage à reflux prolongé |
+| **Économie d’atomes** | La part de la masse des réactifs qui finit dans le produit |
 
-> Le protocole d’un TP de synthèse se lit à cette lumière : chauffage à reflux (accélérer sans perdre de matière), montage à distiller ou recristallisation (purifier), CCM (vérifier), calcul du rendement (mesurer).`,
+Ce sont les principes de la **chimie verte** : moins de solvants, catalyse plutôt que réactifs stœchiométriques, matières premières renouvelables.
+
+> Le protocole d’un TP se lit à cette lumière : **reflux** (accélérer sans perdre de matière), **distillation ou recristallisation** (purifier), **CCM** (vérifier), **rendement** (mesurer).`,
           },
           questions: [
             ['Comment reconnaît-on une réaction d’addition ?', ['Une liaison multiple disparaît au profit de liaisons simples', 'Un groupe en remplace un autre', 'Une liaison multiple apparaît', 'La chaîne carbonée se raccourcit'], 0, 'L’élimination fait exactement l’inverse ; la substitution conserve les insaturations.'],
@@ -847,42 +1034,42 @@ Le choix d’une voie de synthèse intègre le prix des réactifs, la **sécurit
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Position, vitesse, accélération : trois vecteurs, deux dérivations',
-            cours: `Décrire un mouvement, c’est répondre à trois questions dans l’ordre : par rapport à quoi, où, et comment cela change.
+            cours: `Décrire un mouvement, c’est répondre à trois questions **dans l’ordre** : par rapport à quoi, où, et comment cela change.
 
 ## Le référentiel
-Aucun mouvement n’existe dans l’absolu : il faut d’abord choisir un **référentiel** (un solide de référence muni d’une horloge). Un passager est immobile dans le référentiel du train et animé de 300 km/h dans celui du sol. Les référentiels usuels : **terrestre** (le sol), **géocentrique** (centre de la Terre, axes vers des étoiles lointaines), **héliocentrique** (centre du Soleil).
+Aucun mouvement n’existe dans l’absolu. Un passager est **immobile** dans le référentiel du train et animé de 300 km/h dans celui du sol — les deux descriptions sont vraies.
 
-## Le vecteur position
-Dans un repère (O, i, j, k), la position du point M s’écrit OM = x(t) i + y(t) j + z(t) k. Les fonctions x(t), y(t), z(t) sont les **équations horaires** du mouvement ; en éliminant t entre elles, on obtient l’**équation de la trajectoire**.
+| Référentiel | Son origine | Quand l’employer |
+| **Terrestre** | Le sol | Mouvements courants |
+| **Géocentrique** | Le centre de la Terre | Satellites |
+| **Héliocentrique** | Le centre du Soleil | Planètes |
 
-## Vitesse et accélération
-Le vecteur vitesse est la **dérivée** du vecteur position :
+## Les trois vecteurs
+| Vecteur | Comment on l’obtient | Sa direction |
+| **Position** OM | Les équations horaires x(t), y(t), z(t) | Du repère vers le point |
+| **Vitesse** v | La **dérivée** de OM | **Tangente** à la trajectoire, dans le sens du mouvement |
+| **Accélération** a | La dérivée de v, donc la dérivée **seconde** de OM | Toujours vers l’**intérieur** de la courbure |
 
-v = dOM/dt, soit v_x = dx/dt, v_y = dy/dt
-
-Le vecteur accélération est la dérivée du vecteur vitesse (donc la dérivée seconde de la position) :
-
-a = dv/dt = d²OM/dt²
-
-Le vecteur vitesse est **toujours tangent à la trajectoire** et orienté dans le sens du mouvement. Le vecteur accélération, lui, est toujours dirigé **vers l’intérieur** de la courbure.
+En éliminant t entre les équations horaires, on obtient l’**équation de la trajectoire**.
 
 ## La méthode expérimentale
-Sur une chronophotographie ou un pointage vidéo, on n’a pas de fonction dérivable mais une suite de positions à intervalle τ. On approche alors la dérivée par une **différence finie centrée** :
+Sur un pointage vidéo, on n’a pas de fonction dérivable mais une suite de positions à intervalle τ. On approche la dérivée par une **différence finie centrée** :
 
 v(Mᵢ) ≈ M(ᵢ₋₁)M(ᵢ₊₁) / (2τ)
 
-Plus τ est petit, meilleure est l’approximation — mais plus l’incertitude de pointage pèse.
+> Plus τ est petit, meilleure est l’approximation de la dérivée — mais **plus l’incertitude de pointage pèse**. C’est un compromis, pas une optimisation.
 
 ## Le repère de Frenet
-Pour un mouvement courbe, on projette l’accélération sur deux directions liées à la trajectoire :
-- la **composante tangentielle** aₜ = dv/dt : elle traduit la variation de la **valeur** de la vitesse ;
-- la **composante normale** aₙ = v²/R (R = rayon de courbure), dirigée vers le centre : elle traduit la variation de la **direction**.
+| Composante | Formule | Ce qu’elle traduit |
+| **Tangentielle** aₜ | dv/dt | La variation de la **valeur** de la vitesse |
+| **Normale** aₙ | v²/R, vers le centre | La variation de la **direction** |
 
 ## Deux mouvements de référence
-- **rectiligne uniforme** : a = 0, v constant en direction et en valeur ;
-- **circulaire uniforme** : la valeur de v est constante, mais **a n’est pas nulle** — elle vaut v²/R et pointe vers le centre. C’est le point le plus contre-intuitif du chapitre.
+| Mouvement | L’accélération | Pourquoi |
+| Rectiligne **uniforme** | **a = 0** | Ni la valeur ni la direction ne changent |
+| Circulaire **uniforme** | **a = v²/R**, vers le centre | La valeur ne change pas, la **direction** si |
 
-> Un mouvement uniforme n’est pas un mouvement sans accélération : « uniforme » ne parle que de la **valeur** de la vitesse, pas de sa direction.`,
+> Un mouvement uniforme n’est **pas** un mouvement sans accélération : « uniforme » ne parle que de la **valeur** de la vitesse. C’est le point le plus contre-intuitif du chapitre — et le plus testé.`,
           },
           questions: [
             ['Le vecteur vitesse est toujours…', ['Tangent à la trajectoire', 'Perpendiculaire à la trajectoire', 'Dirigé vers le centre de courbure', 'Vertical'], 0, 'C’est le vecteur accélération qui pointe vers l’intérieur de la courbure.'],
@@ -900,34 +1087,44 @@ Pour un mouvement courbe, on projette l’accélération sur deux directions li�
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Une méthode, toujours la même, en cinq gestes',
-            cours: `La deuxième loi de Newton est l’outil central de la mécanique de Terminale. Sa difficulté n’est pas la formule : c’est la rigueur de la mise en place.
+            cours: `La deuxième loi de Newton est l’outil central de la mécanique de Terminale. Sa difficulté n’est **pas** la formule : c’est la **rigueur de la mise en place**.
 
 ## Les trois lois
-- **1re loi (principe d’inertie)** : dans un référentiel galiléen, un système isolé ou pseudo-isolé (somme des forces nulle) est au repos ou en mouvement rectiligne uniforme. Réciproque vraie.
-- **2e loi** : ΣF = dp/dt, où p = m v est la **quantité de mouvement**. Si la masse est constante : **ΣF = m a**.
-- **3e loi (actions réciproques)** : si A exerce F(A→B) sur B, alors B exerce F(B→A) = −F(A→B) sur A. Les deux forces ont **toujours** même valeur et sens opposés, quelles que soient les masses — et elles s’appliquent à **deux corps différents**, donc ne se compensent jamais entre elles.
+| Loi | Son énoncé | Ce qu’elle permet |
+| **1re** — inertie | Un système pseudo-isolé est au repos ou en mouvement rectiligne uniforme | La réciproque est vraie : elle sert de test |
+| **2e** | ΣF = dp/dt, avec p = m v ; si m est constante, **ΣF = m a** | Tout le reste du chapitre |
+| **3e** — actions réciproques | F(A→B) = −F(B→A) | Relier deux corps en interaction |
 
-## La méthode
-1. **Définir le système** (le corps étudié) et le préciser par écrit ;
-2. choisir le **référentiel**, supposé galiléen ;
-3. faire le **bilan des forces extérieures** : poids, réaction du support (normale + frottements), tension, poussée d’Archimède, force électrique… et le représenter sur un schéma ;
-4. **appliquer ΣF = m a** ;
-5. **projeter** sur les axes du repère choisi, puis intégrer deux fois pour obtenir vitesse puis position, en déterminant les constantes par les **conditions initiales**.
+> Les deux forces de la 3e loi ont **toujours** même valeur et sens opposés, **quelles que soient les masses** — et elles s’appliquent à **deux corps différents**, donc elles ne se compensent **jamais** entre elles. C’est l’erreur classique.
+
+## La méthode, en cinq gestes
+1. **Définir le système** — et l’écrire noir sur blanc.
+2. Choisir le **référentiel**, supposé galiléen.
+3. Faire le **bilan des forces extérieures** et le **schématiser** : poids, réaction du support (normale et frottements), tension, poussée d’Archimède, force électrique.
+4. **Appliquer ΣF = m a**.
+5. **Projeter** sur les axes, puis intégrer **deux fois** — les constantes viennent des **conditions initiales**.
+
+> Une force **intérieure** au système ne figure jamais dans le bilan. C’est pour cela que définir le système est le **premier** geste, et non une formalité.
 
 ## Ce que la loi ne dit pas
-La force ne donne pas la vitesse mais sa **variation**. Un objet peut avancer vite alors qu’aucune force ne s’exerce sur lui (inertie), et être immobile un instant alors qu’une force agit (sommet d’un lancer vertical).
+| L’idée fausse | Ce qui est vrai |
+| Une force donne la vitesse | Elle donne sa **variation** |
+| Pas de force, pas de mouvement | L’inertie : on avance vite sans aucune force |
+| Une force, donc du mouvement | Au sommet d’un lancer vertical, v = 0 alors que le poids agit |
 
 ## La chute avec frottement
-Quand un frottement fluide s’oppose au mouvement (f = k v ou k v²), l’accélération diminue à mesure que v augmente. La vitesse tend vers une **vitesse limite**, atteinte quand ΣF = 0 : le poids est alors exactement compensé. On la calcule en posant a = 0 dans l’équation différentielle, sans avoir à la résoudre.
+| Ce qui se passe | Pourquoi |
+| L’accélération **diminue** à mesure que v augmente | Le frottement f = k v ou k v² grandit |
+| La vitesse tend vers une **vitesse limite** | Elle est atteinte quand ΣF = 0 |
+
+On la calcule en posant **a = 0** dans l’équation différentielle — **sans avoir à la résoudre**. C’est le raccourci à connaître.
 
 ## La méthode d’Euler
-Quand l’équation différentielle n’a pas de solution analytique simple, on la résout **pas à pas** :
+Quand l’équation n’a pas de solution analytique simple, on avance **pas à pas** :
 
 v(t + Δt) = v(t) + a(t) × Δt, puis x(t + Δt) = x(t) + v(t) × Δt
 
-C’est ce que fait un tableur ou un programme Python. Plus Δt est petit, plus la solution approchée est fidèle.
-
-> Une force intérieure au système ne figure jamais dans le bilan : seules les forces **extérieures** comptent. C’est pour cela que définir le système est le premier geste, et pas une formalité.`,
+C’est ce que fait un tableur ou un programme Python. Plus Δt est petit, plus la solution approchée est fidèle.`,
           },
           questions: [
             ['Quel est l’énoncé de la deuxième loi de Newton ?', ['ΣF = dp/dt, soit ΣF = m a à masse constante', 'ΣF = 0 pour tout système', 'F(A→B) = −F(B→A)', 'p = m v'], 0, 'La troisième loi est celle des actions réciproques ; p = m v en est la définition.'],
@@ -945,38 +1142,51 @@ C’est ce que fait un tableur ou un programme Python. Plus Δt est petit, plus 
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Une parabole, qu’il s’agisse d’un ballon ou d’un électron',
-            cours: `Un champ **uniforme** a même valeur, même direction et même sens en tout point de la région considérée. La force qui en découle est constante, donc l’accélération aussi : le mouvement est toujours le même, à un facteur près.
+            cours: `Un champ **uniforme** a même valeur, même direction et même sens en tout point. La force qui en découle est **constante**, donc l’accélération aussi : le mouvement est toujours le même, à un facteur près.
 
-## Le champ de pesanteur
-Près de la surface terrestre, g est uniforme (g ≈ 9,81 m·s⁻² en France) sur quelques dizaines de mètres. Un projectile en **chute libre** (soumis à son seul poids) a pour accélération a = g, **indépendante de sa masse** : c’est pourquoi une plume et une bille tombent ensemble dans le vide.
+## Les deux champs, côte à côte
+| | Champ de **pesanteur** | Champ **électrique** |
+| Sa valeur | g ≈ 9,81 m·s⁻² près du sol | E = U / d entre deux plaques |
+| La force | P = m g | F = q E |
+| L’accélération | **a = g** | **a = qE/m** |
+| Dépend-elle de l’objet ? | **Non** : indépendante de la masse | **Oui** : masse et charge |
+| Ce que cela permet | Une plume et une bille tombent ensemble dans le vide | **Trier** des particules |
+
+> Le mouvement d’un projectile ne dépend **pas** de sa masse ; celui d’une particule chargée en dépend. Confondre les deux cas est l’erreur la plus fréquente du chapitre.
 
 ## Les équations du tir
-Avec une vitesse initiale v₀ faisant un angle α avec l’horizontale, en projetant a = g puis en intégrant deux fois :
+Avec une vitesse initiale v₀ faisant un angle α avec l’horizontale :
 
-- a_x = 0 → v_x = v₀ cos α → x = v₀ cos α × t
-- a_y = −g → v_y = −g t + v₀ sin α → y = −½ g t² + v₀ sin α × t + y₀
+| Axe | Accélération | Vitesse | Position |
+| x | a_x = 0 | v_x = v₀ cos α | x = v₀ cos α × t |
+| y | a_y = −g | v_y = −g t + v₀ sin α | y = −½ g t² + v₀ sin α × t + y₀ |
 
 En éliminant t : y = −g x² / (2 v₀² cos²α) + x tan α + y₀ — l’équation d’une **parabole**.
 
-Le mouvement se décompose donc en un mouvement **uniforme** à l’horizontale et **uniformément accéléré** à la verticale : les deux sont indépendants.
+Le mouvement se décompose donc en un mouvement **uniforme** à l’horizontale et **uniformément accéléré** à la verticale, et les deux sont **indépendants**.
 
 ## Portée et flèche
-La **flèche** (altitude maximale) est atteinte quand v_y = 0. La **portée** s’obtient en cherchant le second point où y retrouve sa valeur initiale. Sans frottement, la portée est maximale pour α = 45°.
+| Grandeur | Comment on la trouve |
+| La **flèche** — altitude maximale | Quand v_y = 0 |
+| La **portée** | Le second point où y retrouve sa valeur initiale |
+| L’angle optimal, sans frottement | **45°** |
 
-## Le champ électrique uniforme
-Entre deux plaques planes parallèles séparées de d et soumises à une tension U, le champ est uniforme, dirigé du **+** vers le **−**, de valeur :
+## Le champ électrique entre deux plaques
+E = U / d, dirigé du **+** vers le **−**.
 
-E = U / d
-
-Une particule de charge q y subit F = q E. Si la charge est positive, la force est dans le sens de E ; si elle est négative, en sens inverse. L’accélération a = qE/m dépend cette fois de la **masse et de la charge** — c’est ce qui permet de trier des particules.
+| La charge est… | La force est… |
+| Positive | Dans le sens de E |
+| Négative | En sens **inverse** de E |
 
 ## L’analogie
-Un électron lancé perpendiculairement à E entre deux plaques suit **exactement la même parabole** qu’un ballon lancé horizontalement : mêmes équations, seul le rapport force/masse change. Le poids d’un électron est d’ailleurs totalement négligeable devant la force électrique.
+Un électron lancé perpendiculairement à E entre deux plaques suit **exactement la même parabole** qu’un ballon lancé horizontalement : mêmes équations, seul le rapport force/masse change.
 
-## L’énergie
-En l’absence de frottement, l’**énergie mécanique** Em = Ec + Ep se conserve. Elle donne une vitesse en un point sans passer par les équations horaires : ½mv² + mgz = constante. C’est souvent le chemin le plus court.
+Le **poids** d’un électron est d’ailleurs totalement négligeable devant la force électrique — on ne le fait pas figurer au bilan.
 
-> Le mouvement d’un projectile ne dépend pas de sa masse ; celui d’une particule chargée en dépend. Confondre les deux cas est l’erreur la plus fréquente du chapitre.`,
+## Le raccourci énergétique
+En l’absence de frottement, l’**énergie mécanique** se conserve : ½mv² + mgz = constante.
+
+Elle donne une vitesse en un point **sans passer par les équations horaires**. C’est très souvent le chemin le plus court.`,
           },
           questions: [
             ['Un champ uniforme est un champ…', ['De même valeur, direction et sens en tout point', 'Qui ne varie pas dans le temps', 'Dont la valeur décroît en 1/r²', 'Qui n’exerce aucune force'], 0, 'Le champ de pesanteur l’est localement ; le champ de gravitation ne l’est pas à grande échelle.'],
@@ -994,44 +1204,43 @@ En l’absence de frottement, l’**énergie mécanique** Em = Ec + Ep se conser
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Tomber sans jamais toucher le sol',
-            cours: `Un satellite en orbite n’échappe pas à la gravitation : il tombe en permanence, mais sa vitesse horizontale est telle que le sol se dérobe aussi vite qu’il descend.
+            cours: `Un satellite en orbite n’**échappe pas** à la gravitation : il tombe en permanence, mais sa vitesse horizontale est telle que le sol se dérobe **aussi vite** qu’il descend.
 
 ## La loi de gravitation universelle
-Deux corps de masses m_A et m_B, distants de r, s’attirent avec une force de valeur :
+F = G × m_A × m_B / r², avec G = 6,67 × 10⁻¹¹ N·m²·kg⁻²
 
-F = G × m_A × m_B / r²
+Le **champ de gravitation** créé par un astre de masse M vaut G(r) = G M / r², dirigé **vers** l’astre.
 
-avec G = 6,67 × 10⁻¹¹ N·m²·kg⁻². Le **champ de gravitation** créé par un astre de masse M à la distance r vaut G(r) = G M / r², dirigé **vers** l’astre. Il n’est **pas uniforme** : il décroît en 1/r².
+> Ce champ n’est **pas uniforme** : il décroît en 1/r². S’il est traité comme uniforme près du sol, c’est parce que sur quelques dizaines de mètres r varie si peu que G M/r² ne bouge pas. C’est le lien avec le chapitre précédent.
 
 ## Le mouvement circulaire d’un satellite
-En appliquant la deuxième loi de Newton à un satellite en orbite circulaire de rayon r, la seule force étant l’attraction de l’astre, l’accélération est **centripète** de valeur v²/r. D’où :
+La seule force étant l’attraction, l’accélération est **centripète** : v²/r = G M/r², d’où
 
-v² / r = G M / r², soit **v = √(G M / r)**
+**v = √(G M / r)**
 
-Trois conséquences immédiates :
-- la vitesse ne dépend **pas de la masse du satellite** ;
-- plus l’orbite est **basse**, plus le satellite va **vite** ;
-- le mouvement est **uniforme** (la valeur de v est constante), car aucune force n’a de composante tangentielle.
-
-## La période et la troisième loi de Kepler
-La période de révolution vaut T = 2πr / v, d’où :
-
-T² / r³ = 4π² / (G M) = constante pour tous les satellites du même astre
-
-C’est la **troisième loi de Kepler**. Elle permet de peser un astre à partir de l’orbite d’un seul de ses satellites.
+| Ce qu’on en déduit | Pourquoi |
+| La vitesse ne dépend **pas de la masse du satellite** | Elle disparaît de l’équation |
+| Plus l’orbite est **basse**, plus le satellite va **vite** | v varie en 1/√r |
+| Le mouvement est **uniforme** | Aucune force n’a de composante tangentielle |
 
 ## Les trois lois de Kepler
-1. Les planètes décrivent des **ellipses** dont le Soleil occupe un **foyer**.
-2. Le segment astre-planète balaie des **aires égales en des durées égales** (loi des aires) : la planète va plus vite au périhélie.
-3. T²/a³ est la même constante pour toutes les planètes du système (a = demi-grand axe).
+| Loi | Son énoncé | Ce qu’elle permet |
+| **1re** | Les planètes décrivent des **ellipses**, le Soleil à un **foyer** | Corriger le modèle circulaire |
+| **2e** — loi des aires | Le segment astre-planète balaie des **aires égales en des durées égales** | La planète va plus vite au **périhélie** |
+| **3e** | **T²/a³** est la même constante pour tous les satellites d’un même astre | **Peser un astre** à partir d’une seule orbite |
+
+T² / r³ = 4π² / (G M)
 
 ## Le satellite géostationnaire
-Il paraît immobile au-dessus d’un point du sol, ce qui impose trois conditions : orbite **équatoriale**, sens de rotation **identique** à celui de la Terre, et période **égale à un jour sidéral** (86 164 s). La troisième loi de Kepler donne alors un rayon d’orbite unique, d’environ 42 200 km depuis le centre de la Terre — soit environ 36 000 km d’altitude.
+| Condition | Pourquoi |
+| Orbite **équatoriale** | Sinon il oscille en latitude |
+| Même **sens** que la rotation terrestre | Sinon il défile en sens inverse |
+| Période = **un jour sidéral**, 86 164 s | Pour rester à la verticale du même point |
+
+La troisième loi de Kepler donne alors un rayon **unique** : environ **42 200 km** depuis le centre de la Terre, soit **36 000 km d’altitude**.
 
 ## L’impesanteur
-Un astronaute en orbite n’est pas « hors de la gravité » : il est en **chute libre permanente** avec son vaisseau. Tous deux tombent avec la même accélération, d’où l’absence de force de contact — et la sensation d’apesanteur.
-
-> Le champ de gravitation près du sol est assimilé à un champ uniforme : sur quelques dizaines de mètres, r varie si peu que G M/r² ne bouge pas. C’est le lien entre ce chapitre et le précédent.`,
+> Un astronaute en orbite n’est **pas** « hors de la gravité » : il est en **chute libre permanente** avec son vaisseau. Tous deux tombent avec la même accélération — d’où l’absence de force de contact, et la sensation d’apesanteur.`,
           },
           questions: [
             ['Quelle est l’expression de la vitesse d’un satellite en orbite circulaire de rayon r ?', ['v = √(G M / r)', 'v = G M / r²', 'v = √(G M r)', 'v = 2πr / G'], 0, 'Elle ne dépend pas de la masse du satellite, seulement de celle de l’astre et du rayon.'],
@@ -1049,41 +1258,51 @@ Un astronaute en orbite n’est pas « hors de la gravité » : il est en **chut
           axe: 'Mouvements et interactions',
           lecon: {
             titre: 'Là où le fluide accélère, la pression tombe',
-            cours: `Un fluide en mouvement obéit encore à la conservation de la matière et de l’énergie — mais réécrites pour un milieu qui coule.
+            cours: `Un fluide en mouvement obéit encore à la conservation de la matière et de l’énergie — mais réécrites pour un milieu qui **coule**.
 
-## Le débit volumique
-Le **débit volumique** Dv, en m³·s⁻¹, est le volume traversant une section par unité de temps :
+## Le débit et sa conservation
+Dv = V / Δt = **S × v**, en m³·s⁻¹
 
-Dv = V / Δt = S × v
+Pour un fluide **incompressible** en écoulement **stationnaire**, le débit est le même dans **toutes** les sections :
 
-où S est l’aire de la section et v la vitesse moyenne du fluide.
+**S₁ v₁ = S₂ v₂**
 
-## La conservation du débit
-Pour un fluide **incompressible** (masse volumique constante — les liquides, et les gaz à faible vitesse) en écoulement **stationnaire**, le débit est le **même dans toutes les sections** d’une canalisation :
-
-S₁ v₁ = S₂ v₂
-
-Là où la section se **rétrécit**, la vitesse **augmente**. C’est pourquoi on pince l’extrémité d’un tuyau d’arrosage pour envoyer l’eau plus loin.
+| Si la section… | La vitesse… | Exemple |
+| Se **rétrécit** | **Augmente** | On pince un tuyau d’arrosage pour envoyer l’eau plus loin |
+| S’élargit | Diminue | Un fleuve ralentit dans une plaine |
 
 ## La relation de Bernoulli
-Le long d’une ligne de courant, pour un fluide incompressible en écoulement stationnaire et **sans frottement** :
+Le long d’une ligne de courant : **P + ½ρv² + ρgz = constante**
 
-P + ½ρv² + ρgz = constante
+| Terme | Son nom | Ce qu’il représente |
+| P | Pression **statique** | La pression du fluide |
+| ½ρv² | Pression **dynamique** | Son mouvement |
+| ρgz | Terme de **hauteur** | Son altitude |
 
-Les trois termes sont homogènes à une pression : la **pression statique** P, la **pression dynamique** ½ρv², et le terme de **hauteur** ρgz. La relation est une conservation de l’énergie par unité de volume.
+Les trois sont homogènes à une pression : la relation est une **conservation de l’énergie par unité de volume**.
 
 ## L’effet Venturi
-Dans un rétrécissement horizontal (z constant), la vitesse augmente donc la pression **diminue**. C’est contre-intuitif : le fluide va plus vite là où il est le moins comprimé.
+Dans un rétrécissement **horizontal**, la vitesse augmente donc la pression **diminue**.
 
-Applications : trompe à eau, carburateur, débitmètre à Venturi, portance d’une aile, et le fait qu’une douche colle au rideau.
+> C’est contre-intuitif : le fluide va **plus vite** là où il est **le moins comprimé**. C’est pourtant ce qui explique la trompe à eau, le carburateur, le débitmètre à Venturi, la portance d’une aile — et le rideau de douche qui colle.
 
 ## Les limites du modèle
-Bernoulli suppose un fluide parfait : sans **viscosité**, donc sans perte de charge. Dans une conduite réelle, les frottements font chuter la pression le long du trajet, et il faut une pompe pour l’entretenir. La relation reste néanmoins un excellent modèle sur de courtes distances et à vitesse modérée.
+| Hypothèse de Bernoulli | Ce qui arrive dans le réel |
+| Fluide **sans viscosité** | Les frottements font chuter la pression le long du trajet |
+| Écoulement **stationnaire** | Les régimes transitoires y échappent |
+| **Incompressible** | Faux pour un gaz à grande vitesse |
+| Le long d’une **même** ligne de courant | Ne pas comparer deux lignes différentes |
 
-## Écoulement laminaire ou turbulent
-Un écoulement **laminaire** se fait en couches parallèles qui ne se mélangent pas ; un écoulement **turbulent** est chaotique et dissipe beaucoup plus d’énergie. Le passage de l’un à l’autre dépend de la vitesse, du diamètre et de la viscosité.
+Il faut une **pompe** pour entretenir la pression dans une conduite réelle. Le modèle reste excellent sur de courtes distances et à vitesse modérée.
 
-> Vérifier les hypothèses avant d’appliquer Bernoulli — incompressible, stationnaire, sans frottement, le long d’une même ligne de courant — vaut la moitié des points de l’exercice.`,
+## Laminaire ou turbulent
+| Écoulement | Comment il se fait | Ce qu’il coûte |
+| **Laminaire** | En couches parallèles qui ne se mélangent pas | Peu d’énergie |
+| **Turbulent** | Chaotique | Beaucoup plus de dissipation |
+
+Le passage de l’un à l’autre dépend de la vitesse, du diamètre et de la viscosité.
+
+> Vérifier les hypothèses **avant** d’appliquer Bernoulli vaut la moitié des points de l’exercice.`,
           },
           questions: [
             ['Quelle relation donne le débit volumique ?', ['Dv = S × v', 'Dv = S / v', 'Dv = ρ × v', 'Dv = v / S'], 0, 'S est l’aire de la section, v la vitesse moyenne du fluide.'],
@@ -1102,37 +1321,51 @@ Un écoulement **laminaire** se fait en couches parallèles qui ne se mélangent
           axe: 'L’énergie : conversion et transferts',
           lecon: {
             titre: 'Deux échelles pour un même objet',
-            cours: `Un litre d’eau, c’est 3 × 10²⁵ molécules en mouvement désordonné. On ne les suivra jamais une par une : la thermodynamique décrit ce même système avec **quatre grandeurs**.
+            cours: `Un litre d’eau, c’est **3 × 10²⁵ molécules** en mouvement désordonné. On ne les suivra jamais une par une : la thermodynamique décrit ce même système avec **quatre grandeurs**.
 
-## Macroscopique et microscopique
-- **échelle microscopique** : les entités individuelles (molécules, ions), leurs vitesses, leurs positions ;
-- **échelle macroscopique** : les grandeurs mesurables sur l’ensemble — pression, volume, température, quantité de matière.
+## Les deux échelles
+| Échelle | Ce qu’elle décrit | Le lien |
+| **Microscopique** | Les entités, leurs vitesses, leurs positions | — |
+| **Macroscopique** | P, V, T, n — mesurables | Ce sont des **moyennes statistiques** de l’échelle du dessous |
 
-Les grandeurs macroscopiques sont des **moyennes statistiques** de ce qui se passe en bas. La pression d’un gaz, c’est l’effet moyen des chocs des molécules sur les parois ; la température, l’agitation moyenne.
+La **pression** d’un gaz est l’effet moyen des chocs sur les parois ; la **température**, l’agitation moyenne.
 
 ## Le système et son extérieur
-Un **système** est la portion d’univers qu’on décide d’étudier ; tout le reste est l’**extérieur**. Il peut être :
-- **ouvert** : échange matière et énergie (une casserole sans couvercle) ;
-- **fermé** : échange l’énergie mais pas la matière (une bouteille bouchée) ;
-- **isolé** : n’échange rien (le calorimètre idéal).
+| Type de système | Il échange… | Exemple |
+| **Ouvert** | Matière **et** énergie | Une casserole sans couvercle |
+| **Fermé** | L’énergie seulement | Une bouteille bouchée |
+| **Isolé** | **Rien** | Le calorimètre idéal |
 
 ## Les variables d’état
-P, V, T et n décrivent l’état du système à un instant donné, sans rien dire de son histoire. Une **transformation** fait passer d’un état initial à un état final ; l’**équilibre thermodynamique** est atteint quand elles ne varient plus.
+P, V, T et n décrivent l’état à un instant donné, **sans rien dire de son histoire**. Une **transformation** fait passer d’un état initial à un état final ; l’**équilibre thermodynamique** est atteint quand elles ne varient plus.
 
 ## La température
-La **température thermodynamique** T se mesure en **kelvin (K)** : T(K) = θ(°C) + 273,15. Le zéro absolu (0 K = −273,15 °C) correspond à l’agitation minimale. La température est directement liée à l’**énergie cinétique moyenne** des entités : deux fois plus chaud en kelvin, c’est deux fois plus agité.
+T(K) = θ(°C) + 273,15. Le **zéro absolu** — 0 K, soit −273,15 °C — correspond à l’agitation minimale.
 
-Toute formule contenant T doit employer le **kelvin** — l’usage des °C n’est licite que dans les **écarts** ΔT, puisqu’un écart de 1 °C vaut un écart de 1 K.
+> Toute formule contenant T doit employer le **kelvin**. Les °C ne sont licites que dans les **écarts** ΔT, puisqu’un écart de 1 °C vaut exactement un écart de 1 K. C’est une source d’erreur permanente.
+
+La température est directement liée à l’**énergie cinétique moyenne** : deux fois plus chaud en kelvin, c’est deux fois plus agité.
 
 ## L’énergie interne
-L’**énergie interne U** d’un système est la somme de **toutes** les énergies à l’échelle microscopique : énergies cinétiques d’agitation et énergies d’interaction entre entités. Elle ne comprend **ni** l’énergie cinétique d’ensemble du système, **ni** son énergie potentielle de pesanteur : une bouteille d’eau posée sur une table et la même bouteille dans un train lancé ont la même énergie interne.
+| Ce que U **comprend** | Ce que U ne comprend **pas** |
+| L’énergie cinétique d’**agitation** | L’énergie cinétique d’**ensemble** du système |
+| Les énergies d’**interaction** entre entités | L’énergie potentielle de **pesanteur** |
 
-C’est une **fonction d’état** : sa variation ΔU ne dépend que de l’état initial et de l’état final, jamais du chemin suivi.
+> Une bouteille d’eau posée sur une table et la même bouteille dans un train lancé ont **exactement la même énergie interne**.
+
+C’est une **fonction d’état** : ΔU ne dépend que de l’état initial et de l’état final, **jamais du chemin suivi**.
 
 ## La capacité thermique
-La **capacité thermique** C d’un corps (en J·K⁻¹) est l’énergie à lui fournir pour élever sa température de 1 K. Pour un corps homogène de masse m, C = m × c, où **c** est la **capacité thermique massique** (en J·kg⁻¹·K⁻¹). Celle de l’eau liquide, 4185 J·kg⁻¹·K⁻¹, est remarquablement élevée : c’est ce qui fait de l’eau un bon fluide caloporteur et ce qui adoucit les climats côtiers.
+C = m × c, où c est la **capacité thermique massique**, en J·kg⁻¹·K⁻¹.
 
-> Chaleur et température ne sont pas la même chose : la température est un état, le transfert thermique est un échange. Un système « ne contient pas de chaleur », il contient de l’énergie interne.`,
+| Corps | c |
+| Eau liquide | **4185** J·kg⁻¹·K⁻¹ |
+| Air | environ 1000 |
+| Fer | environ 450 |
+
+Celle de l’eau est remarquablement élevée : c’est ce qui en fait un bon **fluide caloporteur**, et ce qui **adoucit les climats côtiers**.
+
+> Chaleur et température ne sont pas la même chose : la température est un **état**, le transfert thermique un **échange**. Un système « ne contient pas de chaleur » — il contient de l’énergie interne.`,
           },
           questions: [
             ['Un système fermé…', ['Échange de l’énergie mais pas de matière', 'N’échange rien du tout', 'Échange matière et énergie', 'Est toujours à l’équilibre'], 0, 'Le système isolé n’échange rien, le système ouvert échange les deux.'],
@@ -1150,38 +1383,44 @@ La **capacité thermique** C d’un corps (en J·K⁻¹) est l’énergie à lui
           axe: 'L’énergie : conversion et transferts',
           lecon: {
             titre: 'Chauffer, ou changer d’état : deux factures différentes',
-            cours: `Faire monter la température d’un corps a un coût énergétique ; le faire fondre en a un autre, sans qu’aucun thermomètre ne bouge.
+            cours: `Faire monter la température d’un corps a un coût énergétique ; le faire **fondre** en a un autre — sans qu’aucun thermomètre ne bouge.
 
-## La variation d’énergie interne d’une phase condensée
-Pour un solide ou un liquide (**phase condensée incompressible**), dont le volume ne change pratiquement pas, l’énergie interne ne dépend que de la température :
+## Les deux calculs
+| Situation | La formule | La température |
+| Chauffer une phase condensée | **ΔU = m × c × ΔT** | Elle **varie** |
+| Changer d’état | **Q = m × L** | Elle reste **constante** |
 
-ΔU = C × ΔT = m × c × ΔT
+Pendant un changement d’état, l’énergie sert à **rompre ou former les interactions** entre entités — pas à les agiter davantage.
 
-avec C en J·K⁻¹, c en J·kg⁻¹·K⁻¹, ΔT = T_final − T_initial en K (ou en °C, puisque c’est un écart). Le signe de ΔU suit celui de ΔT : refroidir, c’est perdre de l’énergie interne.
+## Le coût des changements d’état de l’eau
+| Transformation | L, en J·kg⁻¹ | Équivalent en chauffage |
+| Fusion | 3,34 × 10⁵ | Environ **80 °C** |
+| Vaporisation | **2,26 × 10⁶** | Environ **540 °C** |
 
-## Le changement d’état
-Pendant un changement d’état d’un corps pur, la **température reste constante** alors que le système reçoit ou cède de l’énergie. L’énergie sert à **rompre ou former les interactions** entre entités, pas à les agiter davantage :
+Vaporiser coûte près de **sept fois** plus que fondre. C’est ce qui explique la **transpiration** : l’eau qui s’évapore prélève cette énergie sur la peau.
 
-Q = m × L
+## Les deux modes de transfert
+| Mode | Sa nature | Exemples |
+| Le **travail W** | Transfert **ordonné**, par une force | Compression d’un gaz, agitation, travail électrique |
+| Le **transfert thermique Q** | Transfert **désordonné** | Une différence de température |
 
-où **L** est l’**énergie massique de changement d’état** (J·kg⁻¹). Pour l’eau : L_fusion ≈ 3,34 × 10⁵ J·kg⁻¹, L_vaporisation ≈ 2,26 × 10⁶ J·kg⁻¹ — près de sept fois plus. Fondre un glaçon coûte l’équivalent d’un chauffage de 80 °C ; le vaporiser, l’équivalent de 540 °C.
-
-C’est ce qui explique la transpiration : l’eau qui s’évapore prélève cette énergie sur la peau.
-
-## Les modes de transfert
-L’énergie entre ou sort d’un système par deux voies :
-- le **travail W** : transfert **ordonné**, par une force (compression d’un gaz, agitation mécanique, travail électrique) ;
-- le **transfert thermique Q** : transfert **désordonné**, dû à une différence de température.
-
-Les deux se comptent en joules, et la distinction n’est pas de nature mais d’ordre : le travail déplace la matière en bloc, le transfert thermique passe de proche en proche.
+Les deux se comptent en joules. La distinction n’est pas de nature mais d’**ordre** : le travail déplace la matière en bloc, le transfert thermique passe de proche en proche.
 
 ## La convention de signe
-Toute énergie **reçue** par le système est comptée **positivement**, toute énergie **cédée** négativement. C’est la convention du « banquier » : ce qui entre sur le compte est positif. Se tromper de signe, c’est se tromper de sens physique.
+| Énergie | Signe |
+| **Reçue** par le système | **Positif** |
+| **Cédée** par le système | **Négatif** |
+
+C’est la convention du banquier : ce qui entre sur le compte est positif. Se tromper de signe, c’est se tromper de **sens physique**.
 
 ## Le calorimètre
-Un calorimètre approche un système **isolé**. En y mélangeant deux corps de températures différentes, l’énergie cédée par l’un est reçue par l’autre : Q₁ + Q₂ = 0 (aux pertes et à la capacité du vase près, qu’on modélise par une **valeur en eau**). C’est la méthode expérimentale pour mesurer une capacité thermique massique ou une énergie de changement d’état.
+Un calorimètre approche un système **isolé**. En y mélangeant deux corps de températures différentes :
 
-> Une erreur classique : appliquer ΔU = mcΔT à travers un changement d’état. Il faut découper le calcul en tranches — chauffer jusqu’à la température de changement d’état, changer d’état, puis chauffer à nouveau.`,
+**Q₁ + Q₂ = 0**
+
+Aux pertes et à la capacité du vase près, qu’on modélise par une **valeur en eau**. C’est la méthode expérimentale pour mesurer une capacité thermique massique ou une énergie de changement d’état.
+
+> Erreur classique : appliquer ΔU = mcΔT **à travers** un changement d’état. Il faut découper le calcul en tranches — chauffer jusqu’à la température de changement d’état, **changer d’état**, puis chauffer à nouveau.`,
           },
           questions: [
             ['Quelle relation donne la variation d’énergie interne d’une phase condensée ?', ['ΔU = m × c × ΔT', 'ΔU = m × L', 'ΔU = P × ΔV', 'ΔU = Q / m'], 0, 'Valable tant qu’il n’y a pas de changement d’état.'],
@@ -1202,35 +1441,40 @@ Un calorimètre approche un système **isolé**. En y mélangeant deux corps de 
             cours: `Le premier principe n’est pas une formule de plus : c’est la **conservation de l’énergie**, énoncée pour un système qui échange avec son extérieur.
 
 ## L’énoncé
-Pour un système fermé au repos, entre un état initial et un état final :
-
 **ΔU = W + Q**
 
-La variation d’énergie interne est égale à la somme du **travail** et du **transfert thermique** reçus, comptés algébriquement. Deux conséquences immédiates :
-- l’énergie ne se crée ni ne se détruit : elle **change de forme** ou **change de main** ;
-- ΔU ne dépend **que des états initial et final** (fonction d’état), alors que W et Q dépendent **du chemin suivi**. Deux chemins différents entre les mêmes états donnent des W et des Q différents, mais la même somme.
+La variation d’énergie interne égale la somme du **travail** et du **transfert thermique** reçus, comptés algébriquement.
 
-## Le cas du système isolé
-Un système isolé n’échange ni travail ni transfert thermique : W = Q = 0, donc **ΔU = 0**. Son énergie interne est constante — ce qui n’empêche aucune transformation à l’intérieur, seulement toute variation du total.
+| Grandeur | Dépend-elle du chemin ? |
+| **ΔU** | **Non** : c’est une fonction d’état |
+| W | **Oui** |
+| Q | **Oui** |
+
+> Deux chemins différents entre les **mêmes** états donnent des W et des Q différents — mais **la même somme**. C’est tout le contenu du principe.
 
 ## Les bilans usuels
-- **transformation isotherme d’une phase condensée** : ΔU = 0, donc W = −Q ;
-- **transfert thermique seul** (pas de travail) : ΔU = Q ;
-- **travail seul** (parois calorifugées, transformation dite adiabatique) : ΔU = W. C’est le cas de l’expérience de Joule : agiter de l’eau la réchauffe, sans jamais l’avoir chauffée.
+| Transformation | Ce qui est nul | Ce qui reste |
+| Système **isolé** | W = Q = 0 | **ΔU = 0** |
+| **Isotherme** d’une phase condensée | ΔU = 0 | W = −Q |
+| **Transfert thermique seul** | W = 0 | ΔU = Q |
+| **Adiabatique** — parois calorifugées | Q = 0 | ΔU = W |
+
+Le dernier cas est celui de l’**expérience de Joule** : agiter de l’eau la réchauffe, sans jamais l’avoir chauffée. C’est ce qui a établi l’équivalence entre travail et chaleur.
 
 ## Les machines thermiques
-Une machine thermique échange avec deux sources à des températures différentes. Le premier principe impose que le total se conserve, mais **il n’interdit rien sur le sens** : c’est le second principe (hors programme ici) qui interdit à la chaleur de remonter spontanément du froid vers le chaud.
+Une machine thermique échange avec deux sources à températures différentes. Le premier principe impose que le **total se conserve** — mais il **n’interdit rien sur le sens**.
 
-Le **rendement** d’un convertisseur est le rapport de l’énergie utile à l’énergie fournie :
+> C’est le **second principe** qui interdit à la chaleur de remonter spontanément du froid vers le chaud. Le premier, à lui seul, autoriserait un réfrigérateur sans électricité.
 
-η = E_utile / E_fournie, toujours inférieur à 1
-
-Le complément part en pertes, essentiellement en transfert thermique vers l’extérieur.
+Le **rendement** d’un convertisseur : η = E_utile / E_fournie, **toujours inférieur à 1**. Le complément part en pertes, essentiellement en transfert thermique vers l’extérieur.
 
 ## La chaîne énergétique
-Un diagramme de chaîne énergétique représente les réservoirs, les convertisseurs et les transferts (flèches). Il rend le bilan lisible : **la somme des flèches entrantes égale la somme des flèches sortantes**, pour chaque bloc. C’est le premier principe dessiné.
+Un diagramme représente les réservoirs, les convertisseurs et les transferts. Il rend le bilan lisible :
 
-> « Consommer de l’énergie » est un abus de langage : on la **convertit** en une forme moins utilisable. Ce qu’on paye sur une facture, c’est une conversion, pas une disparition.`,
+> Pour **chaque bloc**, la somme des flèches entrantes égale la somme des flèches sortantes. C’est le premier principe **dessiné**.
+
+## Un abus de langage
+« Consommer de l’énergie » n’a aucun sens physique : on la **convertit** en une forme moins utilisable. Ce qu’on paye sur une facture, c’est une **conversion**, pas une disparition.`,
           },
           questions: [
             ['Quel est l’énoncé du premier principe pour un système fermé au repos ?', ['ΔU = W + Q', 'ΔU = W − Q', 'ΔU = Q / W', 'U = W × Q'], 0, 'C’est la conservation de l’énergie, écrite pour un système qui échange avec l’extérieur.'],
@@ -1248,40 +1492,54 @@ Un diagramme de chaîne énergétique représente les réservoirs, les convertis
           axe: 'L’énergie : conversion et transferts',
           lecon: {
             titre: 'Trois façons de passer du chaud au froid',
-            cours: `Un transfert thermique est spontané et **toujours orienté du corps chaud vers le corps froid**, jusqu’à l’égalité des températures. Trois mécanismes le portent.
+            cours: `Un transfert thermique est **spontané** et toujours orienté **du corps chaud vers le corps froid**, jusqu’à l’égalité des températures. Trois mécanismes le portent.
 
 ## Les trois modes
-- la **conduction** : de proche en proche, sans déplacement de matière. C’est le mode des solides — une cuillère métallique dans une casserole.
-- la **convection** : par déplacement de matière, dans les fluides. L’air chaud, moins dense, monte, et un mouvement d’ensemble s’installe. C’est ainsi que chauffe un radiateur.
-- le **rayonnement** : par ondes électromagnétiques, **sans support matériel**. C’est le seul mode qui traverse le vide — celui par lequel le Soleil nous chauffe.
+| Mode | Comment | Support matériel ? | Exemple |
+| **Conduction** | De proche en proche, sans déplacement de matière | Oui | Une cuillère dans une casserole |
+| **Convection** | Par déplacement de matière | Oui, un **fluide** | Un radiateur : l’air chaud monte |
+| **Rayonnement** | Par ondes électromagnétiques | **Non** | Le Soleil nous chauffe à travers le vide |
 
-Dans la plupart des situations réelles, les trois coexistent.
+Dans la plupart des situations réelles, les **trois coexistent**.
 
-## Le flux thermique
-Le **flux thermique** Φ est l’énergie transférée par unité de temps, en **watts** :
+## Flux et résistance
+| Grandeur | Formule | Unité |
+| **Flux thermique** Φ | Q / Δt | Le **watt** |
+| **Résistance thermique** R_th | e / (λ × S) | K·W⁻¹ |
+| La loi | **Φ = ΔT / R_th** | |
 
-Φ = Q / Δt
+## L’analogie électrique
+| En thermique | En électricité |
+| ΔT, l’écart de température | La tension U |
+| Φ, le flux | L’intensité I |
+| R_th | La résistance R |
 
-## La résistance thermique
-Pour une paroi plane d’épaisseur e, de surface S et de conductivité thermique λ (en W·m⁻¹·K⁻¹) :
+Elle est complète : des parois **en série additionnent** leurs résistances — c’est ainsi qu’on calcule un mur multicouche.
 
-R_th = e / (λ × S), en K·W⁻¹, et Φ = ΔT / R_th
+## Isolants et conducteurs
+| Matériau | λ, en W·m⁻¹·K⁻¹ | Rôle |
+| Laine de verre | **0,04** | Très bon isolant |
+| Air **immobile** | 0,026 | Excellent isolant |
+| Verre | environ 1 | Médiocre |
+| Cuivre | **390** | Très bon conducteur |
 
-L’analogie électrique est complète : ΔT joue le rôle de la tension, Φ celui de l’intensité, R_th celui de la résistance. Des parois en série **additionnent** leurs résistances — d’où le calcul d’un mur multicouche.
-
-Un bon **isolant** a une faible λ (laine de verre : 0,04 W·m⁻¹·K⁻¹) ; un bon **conducteur** une grande λ (cuivre : 390). L’air immobile est un excellent isolant — c’est tout le principe du double vitrage, du pull et du plumage.
+> C’est l’**air immobile** qui isole, pas le matériau qui l’emprisonne. Tout le principe du double vitrage, du pull et du plumage tient là — et c’est pourquoi un isolant mouillé ou comprimé n’isole plus.
 
 ## La loi de refroidissement de Newton
-Pour un corps de température T dans un milieu à T_ext, le flux perdu est proportionnel à l’écart :
-
 Φ = h × S × (T − T_ext)
 
-Il en résulte une décroissance **exponentielle** de l’écart de température : un café chaud refroidit vite au début, lentement ensuite. C’est la même forme mathématique que la décroissance radioactive ou la décharge d’un condensateur.
+Le flux perdu est **proportionnel à l’écart** — d’où une décroissance **exponentielle** de cet écart : un café chaud refroidit vite au début, lentement ensuite.
 
-## Le bilan thermique d’un système
-En régime **stationnaire**, ce qui entre égale ce qui sort et la température ne varie plus. Si l’un des deux l’emporte, le système s’échauffe ou se refroidit : la différence vaut m c dT/dt. C’est ce bilan qui gouverne aussi bien le chauffage d’une maison que l’**effet de serre** — le rayonnement solaire reçu contre le rayonnement infrarouge réémis, dont une partie est renvoyée au sol par l’atmosphère.
+C’est la **même forme mathématique** que la décroissance radioactive ou la décharge d’un condensateur.
 
-> Un manteau ne « donne » pas de chaleur : il **freine** le flux qui sort. C’est la résistance thermique qu’on achète, pas une source.`,
+## Le bilan thermique
+| Régime | Ce qui se passe |
+| **Stationnaire** | Ce qui entre égale ce qui sort : T ne varie plus |
+| Déséquilibré | La différence vaut m c dT/dt : le système s’échauffe ou refroidit |
+
+Ce bilan gouverne aussi bien le chauffage d’une maison que l’**effet de serre** — le rayonnement solaire reçu contre l’infrarouge réémis, dont une partie est renvoyée au sol par l’atmosphère.
+
+> Un manteau ne « donne » pas de chaleur : il **freine le flux qui sort**. C’est une résistance thermique qu’on achète, pas une source.`,
           },
           questions: [
             ['Quel mode de transfert thermique ne nécessite aucun support matériel ?', ['Le rayonnement', 'La conduction', 'La convection', 'Aucun'], 0, 'C’est ainsi que l’énergie du Soleil nous parvient à travers le vide.'],
@@ -1302,39 +1560,41 @@ En régime **stationnaire**, ce qui entre égale ce qui sort et la température 
             titre: 'Pourquoi l’échelle des décibels n’est pas une échelle ordinaire',
             cours: `L’oreille humaine perçoit des sons dont les intensités s’étalent sur **douze puissances de dix**. Aucune échelle linéaire ne pourrait les porter : d’où le décibel.
 
-## L’intensité sonore
-L’**intensité sonore** I est la puissance sonore reçue par unité de surface, en **W·m⁻²**. Deux repères :
-- **seuil d’audibilité** : I₀ = 1,0 × 10⁻¹² W·m⁻² (la référence) ;
-- **seuil de douleur** : environ 1 W·m⁻², soit 10¹² fois plus.
+## Les deux grandeurs
+| Grandeur | Symbole, unité | Définition |
+| **Intensité sonore** | I, en W·m⁻² | Puissance reçue par unité de surface |
+| **Niveau d’intensité** | L, en **décibels** | L = 10 × log(I / I₀) |
 
-## Le niveau d’intensité sonore
-L = 10 × log(I / I₀), en **décibels (dB)**
+avec I₀ = 1,0 × 10⁻¹² W·m⁻², le **seuil d’audibilité**.
 
-Le seuil d’audibilité vaut donc 0 dB, le seuil de douleur 120 dB. Une conversation, 60 dB ; une rue passante, 80 dB.
+| Situation | I, en W·m⁻² | L, en dB |
+| Seuil d’audibilité | 10⁻¹² | **0** |
+| Conversation | 10⁻⁶ | 60 |
+| Rue passante | 10⁻⁴ | 80 |
+| Seuil de douleur | **1** | **120** |
 
 ## Les trois règles à retenir
-- intensité **multipliée par 10** → niveau **+ 10 dB** ;
-- intensité **multipliée par 2** → niveau **+ 3 dB** (car 10 log 2 ≈ 3) ;
-- deux sources identiques ensemble → **+ 3 dB**, jamais le double du niveau.
+| Si l’intensité est… | Le niveau… |
+| Multipliée par **10** | **+ 10 dB** |
+| Multipliée par **2** | **+ 3 dB** — car 10 log 2 ≈ 3 |
+| Doublée par une seconde source identique | **+ 3 dB**, pas le double |
 
-Une erreur classique : croire que 60 dB + 60 dB font 120 dB. Deux machines à 60 dB donnent 63 dB.
+> Erreur classique : croire que 60 dB + 60 dB font 120 dB. **Deux machines à 60 dB donnent 63 dB.** L’échelle est logarithmique, les niveaux ne s’additionnent pas.
 
-## L’atténuation géométrique
-Loin d’une source ponctuelle rayonnant dans toutes les directions, la puissance se répartit sur une sphère de surface 4πd² :
+## Les deux atténuations
+| Atténuation | Sa cause | Sa loi |
+| **Géométrique** | L’énergie s’**étale** sur une sphère | I = P / (4π d²) : doubler la distance donne **− 6 dB** |
+| Par **absorption** | Le milieu convertit réellement l’énergie | A = L_émis − L_reçu |
 
-I = P / (4π d²)
-
-L’intensité décroît donc en **1/d²** : doubler la distance divise l’intensité par 4, soit **− 6 dB**. C’est l’atténuation **géométrique**, qui n’a rien à voir avec une perte d’énergie : l’énergie est seulement étalée.
-
-## L’atténuation par absorption
-Le milieu, lui, absorbe réellement : une paroi, un isolant, l’air sur de grandes distances convertissent une part de l’énergie sonore en énergie interne. C’est l’**atténuation par absorption**, exprimée elle aussi en dB, et qui **s’additionne** à l’atténuation géométrique :
-
-A = L_émis − L_reçu
+Elles **s’additionnent** en décibels. La première ne perd aucune énergie — elle la répartit ; la seconde la transforme en énergie interne.
 
 ## La sensibilité de l’oreille
-La perception ne suit ni I ni exactement L : l’oreille est plus sensible entre 1 et 4 kHz qu’aux extrêmes, ce qui a conduit à la pondération **dB(A)** utilisée en acoustique réglementaire. Une exposition prolongée au-delà de 85 dB endommage l’audition, de façon **irréversible** — les cellules ciliées ne se régénèrent pas.
+La perception ne suit ni I ni exactement L : l’oreille est **plus sensible entre 1 et 4 kHz** qu’aux extrêmes, d’où la pondération **dB(A)** de l’acoustique réglementaire.
 
-> Le décibel n’est pas une unité au sens strict : c’est un **rapport** transformé en logarithme. Un niveau de 0 dB ne signifie donc pas « pas de son », mais « son au seuil d’audibilité ».`,
+> Une exposition prolongée au-delà de **85 dB** endommage l’audition de façon **irréversible** : les cellules ciliées ne se régénèrent pas.
+
+## Un point de vocabulaire
+Le décibel n’est pas une unité au sens strict : c’est un **rapport** transformé en logarithme. Un niveau de **0 dB** ne signifie donc pas « pas de son », mais « son au seuil d’audibilité ».`,
           },
           questions: [
             ['Quelle est l’expression du niveau d’intensité sonore ?', ['L = 10 × log(I / I₀)', 'L = log(I / I₀)', 'L = 10 × I / I₀', 'L = 20 × ln(I / I₀)'], 0, 'Avec I₀ = 1,0 × 10⁻¹² W·m⁻², le seuil d’audibilité.'],
@@ -1352,34 +1612,41 @@ La perception ne suit ni I ni exactement L : l’oreille est plus sensible entre
           axe: 'Ondes et signaux',
           lecon: {
             titre: 'La fréquence dépend de qui bouge',
-            cours: `Le son d’une sirène qui s’approche est plus aigu que celui de la même sirène qui s’éloigne. Ce n’est pas la source qui change de note : c’est le mouvement relatif qui modifie la fréquence **reçue**.
+            cours: `Le son d’une sirène qui s’approche est plus **aigu** que celui de la même sirène qui s’éloigne. Ce n’est pas la source qui change de note : c’est le **mouvement relatif** qui modifie la fréquence **reçue**.
 
 ## Le mécanisme
-Quand la source se rapproche du récepteur, chaque front d’onde est émis **plus près** que le précédent : les fronts se resserrent, la longueur d’onde perçue diminue, donc la **fréquence perçue augmente**. Quand elle s’éloigne, l’inverse. La fréquence **émise**, elle, n’a jamais changé.
+| La source… | Les fronts d’onde… | La fréquence perçue |
+| S’**approche** | Se **resserrent** | **Augmente** — le son monte |
+| S’**éloigne** | S’**écartent** | **Diminue** — le son descend |
 
-## La relation
-Pour une source de fréquence f_e s’approchant du récepteur à la vitesse v, l’onde se propageant à la célérité c :
+> La fréquence **émise** n’a jamais changé. C’est le point que toute copie doit poser d’emblée.
 
-f_r = f_e × c / (c − v) si la source s’approche
-f_r = f_e × c / (c + v) si elle s’éloigne
+## Les relations
+| Situation | Formule |
+| La source s’approche | f_r = f_e × c / (c − v) |
+| La source s’éloigne | f_r = f_e × c / (c + v) |
+| v petite devant c | **Δf / f_e ≈ v / c** |
 
-Quand v est petite devant c, on retient la forme approchée, celle qui sert le plus :
-
-**Δf / f_e ≈ v / c**, avec Δf = f_r − f_e
-
-## Le décalage temporel
-On mesure souvent, non pas une fréquence, mais un **retard** entre deux signaux successifs. La méthode expérimentale consiste à enregistrer le son (par exemple avec un smartphone), à en extraire le spectre avant et après le passage, et à mesurer l’écart des deux pics.
+La forme approchée est celle qui sert le plus.
 
 ## Les applications
-- **radar routier** : l’onde émise se réfléchit sur le véhicule, qui joue successivement le rôle de récepteur puis de source. Le décalage subit donc **deux fois** l’effet, d’où Δf/f = 2v/c ;
-- **échographie Doppler** : mesure la vitesse du sang dans un vaisseau, sur la réflexion sur les globules rouges ;
-- **astrophysique** : le spectre d’une étoile qui s’éloigne est décalé vers les grandes longueurs d’onde — le **décalage vers le rouge**, ou *redshift*. Sa mesure systématique sur les galaxies lointaines a établi l’expansion de l’Univers ;
-- **détection d’exoplanètes** : l’étoile tourne légèrement autour du centre de masse du système, et son spectre oscille au rythme de la planète.
+| Application | Ce qu’elle mesure | Particularité |
+| **Radar routier** | La vitesse d’un véhicule | Le décalage subit l’effet **deux fois** : Δf/f = **2v/c** |
+| **Échographie Doppler** | La vitesse du sang | Réflexion sur les globules rouges |
+| **Décalage vers le rouge** | La vitesse d’une galaxie | Il a établi l’**expansion de l’Univers** |
+| Détection d’**exoplanètes** | L’oscillation d’une étoile | Le spectre oscille au rythme de la planète |
 
 ## Ce que l’effet Doppler ne change pas
-La **célérité** de l’onde reste celle du milieu : elle ne dépend pas du mouvement de la source. Seules la fréquence et la longueur d’onde perçues sont modifiées. Et si la source se déplace **perpendiculairement** à la ligne de visée, l’effet est nul : ce n’est pas la vitesse qui compte, mais sa **composante radiale**.
+| Grandeur | Est-elle modifiée ? |
+| La **célérité** de l’onde | **Non** : elle ne dépend que du milieu |
+| La fréquence **émise** | Non |
+| La fréquence **perçue** | **Oui** |
+| La longueur d’onde perçue | Oui |
 
-> Le mur du son se produit quand v atteint c : les fronts d’onde s’accumulent en une seule surface, l’onde de choc. La formule f_r = f_e c/(c−v) diverge — elle annonce le phénomène.`,
+> Si la source se déplace **perpendiculairement** à la ligne de visée, l’effet est **nul**. Ce n’est pas la vitesse qui compte, mais sa **composante radiale** — c’est ce qui rend la méthode aveugle à certaines orbites d’exoplanètes.
+
+## Le mur du son
+Il se produit quand v atteint c : les fronts d’onde s’accumulent en une **seule surface**, l’onde de choc. La formule f_r = f_e c/(c−v) **diverge** — elle annonce le phénomène avant même qu’on l’observe.`,
           },
           questions: [
             ['Quand une source sonore s’approche du récepteur, la fréquence perçue…', ['Augmente', 'Diminue', 'Ne change pas', 'S’annule'], 0, 'Les fronts d’onde se resserrent : la longueur d’onde perçue diminue.'],
@@ -1397,36 +1664,48 @@ La **célérité** de l’onde reste celle du milieu : elle ne dépend pas du mo
           axe: 'Ondes et signaux',
           lecon: {
             titre: 'Ce qui prouve qu’une onde est une onde',
-            cours: `Faites passer de la lumière par une fente très fine : au lieu d’un trait net, vous obtenez une figure étalée. Aucun modèle de particule ne prédit cela — c’est la signature du caractère **ondulatoire**.
+            cours: `Faites passer de la lumière par une fente très fine : au lieu d’un trait net, vous obtenez une figure **étalée**. Aucun modèle de particule ne prédit cela — c’est la signature du caractère **ondulatoire**.
 
 ## Le phénomène
-La **diffraction** est l’étalement d’une onde lorsqu’elle rencontre une **ouverture** ou un **obstacle** dont la dimension a est du même ordre de grandeur que sa **longueur d’onde λ**. Elle concerne toutes les ondes : lumière, son, houle, ondes radio.
+La **diffraction** est l’étalement d’une onde rencontrant une ouverture ou un obstacle de dimension **a du même ordre que λ**.
 
-Plus l’ouverture est **petite**, plus l’étalement est **grand** — c’est contraire à l’intuition, et c’est le point à retenir.
+| Si l’ouverture est… | L’étalement est… |
+| Petite devant λ | **Grand** |
+| Grande devant λ | Faible : l’onde semble aller tout droit |
 
-## L’écart angulaire
-Le demi-angle d’ouverture de la tache centrale vaut :
+> Plus l’ouverture est **petite**, plus l’étalement est **grand**. C’est contraire à l’intuition, et c’est **le** point du chapitre.
 
-θ = λ / a (θ en radians)
+## Les relations
+| Grandeur | Formule | Unité |
+| Demi-angle d’ouverture | θ = λ / a | radians |
+| Largeur de la tache centrale | **L = 2 λ D / a** | mètres |
 
-Sur un écran placé à la distance D, la **largeur de la tache centrale** vaut :
-
-L = 2 D θ = 2 λ D / a
-
-C’est la relation qui permet de mesurer λ connaissant a, ou l’inverse — la mesure du diamètre d’un cheveu par diffraction en est l’application classique.
+C’est la relation qui permet de mesurer λ connaissant a — ou l’inverse, comme dans la mesure du diamètre d’un cheveu.
 
 ## Ce que la diffraction ne change pas
-La diffraction **ne modifie ni la fréquence, ni la longueur d’onde, ni la célérité** de l’onde. Elle change seulement sa **répartition dans l’espace**. C’est une erreur fréquente de croire que la lumière « ralentit » ou « change de couleur » en traversant la fente.
+| Grandeur | Modifiée ? |
+| La **fréquence** | Non |
+| La **longueur d’onde** | Non |
+| La **célérité** | Non |
+| La **répartition dans l’espace** | **Oui** — c’est tout |
+
+C’est une erreur fréquente de croire que la lumière « ralentit » ou « change de couleur » en traversant la fente.
 
 ## Les conséquences observables
-- le son **contourne** un obstacle (grandes longueurs d’onde, de quelques centimètres à plusieurs mètres), alors que la lumière semble se propager en ligne droite : λ vaut pour elle quelques centaines de nanomètres, très inférieure à la taille des objets courants ;
-- les **graves** se diffractent mieux que les aigus : c’est pourquoi, d’une pièce voisine, on n’entend que les basses ;
-- la **résolution** d’un instrument d’optique est limitée par la diffraction sur son ouverture : deux étoiles trop proches donnent deux taches qui se recouvrent. C’est la raison profonde pour laquelle on construit de grands télescopes.
+| Observation | L’explication |
+| Le **son contourne** un obstacle | λ vaut de quelques cm à plusieurs mètres |
+| La lumière semble aller tout droit | λ vaut quelques centaines de **nanomètres** |
+| D’une pièce voisine, on n’entend que les **basses** | Les graves se diffractent mieux que les aigus |
+| Deux étoiles proches se confondent | La **résolution** est limitée par la diffraction sur l’ouverture |
+
+C’est cette dernière raison — et non le grossissement — qui pousse à construire de **grands** télescopes.
 
 ## En pratique au laboratoire
-Un laser, une fente calibrée, un écran à quelques mètres : on mesure L, on connaît D et a, on en déduit λ. Le tracé de L en fonction de 1/a doit donner une **droite passant par l’origine**, de coefficient directeur 2λD — c’est la vérification quantitative du modèle.
+Un laser, une fente calibrée, un écran à quelques mètres : on mesure L, on connaît D et a, on en déduit λ.
 
-> Diffraction et interférences se produisent souvent ensemble : la figure des fentes d’Young est faite de franges d’interférences **modulées** par l’enveloppe de diffraction de chaque fente.`,
+> Le tracé de L en fonction de **1/a** doit donner une **droite passant par l’origine**, de coefficient directeur 2λD. C’est la vérification quantitative du modèle — pas une simple illustration.
+
+Diffraction et interférences se produisent souvent **ensemble** : la figure des fentes d’Young est faite de franges d’interférences **modulées** par l’enveloppe de diffraction de chaque fente.`,
           },
           questions: [
             ['À quelle condition une onde est-elle notablement diffractée ?', ['Quand la dimension de l’ouverture est de l’ordre de sa longueur d’onde', 'Quand l’ouverture est très grande', 'Quand la fréquence est très élevée', 'Quand le milieu est absorbant'], 0, 'Plus l’ouverture est petite devant λ, plus l’étalement est marqué.'],
@@ -1444,35 +1723,46 @@ Un laser, une fente calibrée, un écran à quelques mètres : on mesure L, on c
           axe: 'Ondes et signaux',
           lecon: {
             titre: 'Deux lumières qui donnent de l’ombre',
-            cours: `Superposer deux ondes ne donne pas toujours « plus ». Selon leur décalage, elles peuvent s’additionner ou s’annuler : c’est l’**interférence**, second phénomène exclusivement ondulatoire.
+            cours: `Superposer deux ondes ne donne pas toujours « plus ». Selon leur décalage, elles peuvent s’**additionner** ou s’**annuler** : c’est l’interférence, second phénomène exclusivement ondulatoire.
 
 ## Le principe de superposition
-Quand deux ondes se rencontrent, les élongations **s’ajoutent** algébriquement en chaque point. Après la rencontre, chacune poursuit son chemin sans avoir été modifiée.
+Quand deux ondes se rencontrent, les élongations **s’ajoutent algébriquement** en chaque point. Après la rencontre, **chacune poursuit son chemin sans avoir été modifiée**.
 
 ## La condition de cohérence
-Pour observer une figure d’interférences **stable**, les deux sources doivent être **cohérentes** : même fréquence et déphasage constant dans le temps. En pratique, on n’y parvient qu’en **dédoublant une même source** (deux fentes éclairées par le même laser, réflexion, division du faisceau). Deux lampes distinctes ne donnent jamais d’interférences visibles.
+| Exigence | Pourquoi |
+| Même **fréquence** | Sinon le déphasage varie sans cesse |
+| **Déphasage constant** dans le temps | Sinon la figure défile trop vite pour être vue |
+
+> En pratique, on n’y parvient qu’en **dédoublant une même source** : deux fentes éclairées par le même laser, une réflexion, une division du faisceau. **Deux lampes distinctes ne donnent jamais d’interférences visibles.**
 
 ## La différence de marche
-En un point M du champ d’interférences, la **différence de marche** est l’écart des distances parcourues par les deux ondes :
-
 δ = |S₂M − S₁M|
 
-- **interférences constructives** : δ = k λ (k entier) → les ondes sont en phase, l’amplitude est maximale ;
-- **interférences destructives** : δ = (k + ½) λ → les ondes sont en opposition de phase, l’amplitude est minimale (nulle si les amplitudes sont égales).
+| Condition | Type d’interférence | Ce qu’on voit |
+| δ = **k λ** | **Constructive** | Amplitude maximale : frange brillante |
+| δ = **(k + ½) λ** | **Destructive** | Amplitude minimale : frange sombre |
 
-## Le dispositif des fentes d’Young
-Deux fentes distantes de b, éclairées par la même source, donnent sur un écran à la distance D un système de **franges** rectilignes, alternativement brillantes et sombres. La distance entre deux franges de même nature, l’**interfrange**, vaut :
+## Les fentes d’Young
+Deux fentes distantes de b, un écran à la distance D. L’**interfrange** vaut :
 
-i = λ D / b
+**i = λ D / b**
 
-L’interfrange est donc **proportionnel à λ** : c’est ainsi qu’on mesure une longueur d’onde avec une règle. En lumière blanche, chaque couleur donne son propre interfrange : les franges apparaissent irisées, et seule la frange centrale reste blanche.
+| Ce qui augmente i | Ce qui le diminue |
+| Une grande longueur d’onde λ | Des fentes plus écartées |
+| Un écran plus éloigné | |
+
+L’interfrange est **proportionnel à λ** : c’est ainsi qu’on mesure une longueur d’onde **avec une règle**. En lumière blanche, chaque couleur a son propre interfrange — les franges s’irisent, et seule la **frange centrale** reste blanche.
 
 ## Les manifestations courantes
-Les couleurs d’une bulle de savon, d’une flaque d’essence ou d’une plume de paon ne viennent d’aucun pigment : elles naissent d’interférences entre les rayons réfléchis sur les deux faces d’une couche mince. On parle de **couleurs interférentielles** — elles changent avec l’angle de vue, ce qu’aucun pigment ne fait.
+| Phénomène | Sa cause |
+| Les couleurs d’une **bulle de savon** | Interférences entre les rayons réfléchis sur les deux faces |
+| Une flaque d’**essence**, une plume de **paon** | Idem : ce ne sont pas des pigments |
+| Le **casque à réduction active** | Il émet l’onde en **opposition de phase** |
 
-Le son connaît le même phénomène : deux haut-parleurs en phase créent, dans une salle, des zones où l’on entend fort et d’autres presque rien. C’est le principe, retourné, du **casque à réduction active de bruit**, qui émet l’onde en opposition de phase.
+> Les couleurs interférentielles **changent avec l’angle de vue** — ce qu’aucun pigment ne fait. C’est le test qui les distingue.
 
-> Interférences destructives ne veut pas dire « énergie détruite » : elle est **redistribuée** vers les franges brillantes. Le bilan énergétique total est inchangé.`,
+## Une précision qui compte
+Interférences destructives ne veut **pas** dire « énergie détruite » : elle est **redistribuée** vers les franges brillantes. Le bilan énergétique total est inchangé.`,
           },
           questions: [
             ['Quelle condition deux sources doivent-elles remplir pour interférer de façon stable ?', ['Être cohérentes : même fréquence, déphasage constant', 'Avoir la même intensité', 'Être placées à la même distance de l’écran', 'Émettre en lumière blanche'], 0, 'En pratique, on dédouble une source unique : deux lampes distinctes ne suffisent pas.'],
@@ -1490,42 +1780,55 @@ Le son connaît le même phénomène : deux haut-parleurs en phase créent, dans
           axe: 'Ondes et signaux',
           lecon: {
             titre: 'Deux lentilles, un foyer commun, et le ciel s’agrandit',
-            cours: `Une lunette astronomique ne rapproche rien : elle **augmente l’angle** sous lequel on voit l’objet. Tout le chapitre tient dans cette phrase.
+            cours: `Une lunette astronomique ne **rapproche rien** : elle **augmente l’angle** sous lequel on voit l’objet. Tout le chapitre tient dans cette phrase.
 
 ## La lentille mince convergente
-Caractérisée par sa **distance focale** f′ (en m) ou sa **vergence** V = 1/f′ (en dioptries). Trois rayons se tracent sans calcul :
-- un rayon passant par le **centre optique** O n’est pas dévié ;
-- un rayon **parallèle à l’axe** émerge en passant par le **foyer image** F′ ;
-- un rayon passant par le **foyer objet** F émerge **parallèle à l’axe**.
+Caractérisée par sa **distance focale** f′ ou sa **vergence** V = 1/f′, en dioptries.
 
-## La relation de conjugaison
-1/OA′ − 1/OA = 1/f′, et le **grandissement** γ = A′B′/AB = OA′/OA
+| Rayon incident | Ce qu’il devient |
+| Passant par le **centre optique** O | Non dévié |
+| **Parallèle à l’axe** | Il passe par le **foyer image** F′ |
+| Passant par le **foyer objet** F | Il ressort **parallèle à l’axe** |
 
-Les mesures sont **algébriques** : elles se comptent positivement dans le sens de propagation de la lumière, à partir de O. Un grandissement négatif signale une image **renversée**.
+Trois rayons, aucun calcul : c’est la construction de base.
 
-## Le cas particulier de l’objet à l’infini
-Un astre est si lointain que ses rayons arrivent **parallèles entre eux**. Leur image se forme alors exactement **dans le plan focal image**. Si l’objet est vu sous le **diamètre apparent** θ, l’image intermédiaire a pour taille :
+## Les relations
+| Relation | Formule | Ce qu’elle donne |
+| Conjugaison | 1/OA′ − 1/OA = 1/f′ | La position de l’image |
+| Grandissement | γ = A′B′/AB = OA′/OA | Sa taille et son sens |
 
-A₁B₁ = f′₁ × θ (θ en radians)
+Les mesures sont **algébriques**, comptées dans le sens de propagation à partir de O. Un grandissement **négatif** signale une image **renversée**.
+
+## L’objet à l’infini
+Un astre est si lointain que ses rayons arrivent **parallèles**. Leur image se forme donc **exactement dans le plan focal image** — et si l’astre est vu sous le diamètre apparent θ :
+
+A₁B₁ = f′₁ × θ, avec θ en radians
 
 ## La lunette afocale
-Elle associe deux lentilles convergentes :
-- l’**objectif**, de grande distance focale f′₁, qui donne de l’astre une image réelle dans son plan focal image ;
-- l’**oculaire**, de courte distance focale f′₂, à travers lequel l’œil observe cette image.
+| Élément | Sa focale | Son rôle |
+| L’**objectif** | Grande, f′₁ | Il donne une image réelle dans son plan focal |
+| L’**oculaire** | Courte, f′₂ | On y observe cette image |
 
-Le montage est dit **afocale** quand le **foyer image de l’objectif est confondu avec le foyer objet de l’oculaire** : F′₁ = F₂. L’image finale est alors rejetée **à l’infini**, ce qui permet à l’œil d’observer **sans accommoder** — donc sans fatigue, pendant des heures.
+Le montage est **afocal** quand **F′₁ = F₂** : le foyer image de l’objectif est confondu avec le foyer objet de l’oculaire.
+
+> L’image finale est alors rejetée **à l’infini**, ce qui permet à l’œil d’observer **sans accommoder**. Ce n’est pas un détail de montage : c’est la condition d’un confort d’observation sur plusieurs heures.
 
 ## Le grossissement
-G = θ′ / θ = f′₁ / f′₂
+**G = θ′ / θ = f′₁ / f′₂**
 
-où θ est le diamètre apparent de l’astre à l’œil nu et θ′ celui de l’image finale. Un grossissement élevé demande donc un **objectif de grande focale** et un **oculaire de courte focale** — c’est en changeant d’oculaire qu’on change de grossissement.
+| Pour grossir davantage | Ce qu’il faut |
+| Augmenter G | Un objectif de **grande** focale |
+| Augmenter G | Un oculaire de **courte** focale |
 
-L’image finale est **renversée**, ce qui est sans importance en astronomie (une lunette terrestre ajoute un redresseur).
+C’est en **changeant d’oculaire** qu’on change de grossissement. L’image finale est **renversée** — sans importance en astronomie.
 
 ## Ce qui limite vraiment une lunette
-Pas le grossissement, mais le **diamètre de l’objectif** : il fixe la quantité de lumière collectée (donc la capacité à voir les objets faibles) et la limite de **diffraction** (donc le pouvoir séparateur). Grossir au-delà ne fait qu’agrandir une image floue — c’est le « grossissement vide » des publicités d’instruments bon marché.
+| Ce qu’on croit limitant | Ce qui l’est vraiment |
+| Le grossissement | Le **diamètre de l’objectif** |
 
-> Un œil normal accommode sans effort sur l’infini : c’est pourquoi l’afocalité n’est pas un détail de montage, mais la condition d’un confort réel d’observation.`,
+Le diamètre fixe la **lumière collectée** — donc la capacité à voir les objets faibles — et la limite de **diffraction**, donc le pouvoir séparateur.
+
+Grossir au-delà ne fait qu’agrandir une image floue : c’est le « **grossissement vide** » des publicités d’instruments bon marché.`,
           },
           questions: [
             ['Où se forme l’image d’un objet situé à l’infini à travers une lentille convergente ?', ['Dans le plan focal image', 'Au centre optique', 'Dans le plan focal objet', 'À l’infini également'], 0, 'Les rayons arrivent parallèles entre eux et convergent en un point de ce plan.'],
@@ -1543,38 +1846,46 @@ Pas le grossissement, mais le **diamètre de l’objectif** : il fixe la quantit
           axe: 'Ondes et signaux',
           lecon: {
             titre: 'Une onde qui arrive par paquets',
-            cours: `Les deux chapitres précédents ont établi que la lumière est une onde. Celui-ci montre qu’elle est aussi, dans les mêmes expériences, un flot de grains d’énergie. Les deux descriptions sont vraies.
+            cours: `Les deux chapitres précédents ont établi que la lumière est une **onde**. Celui-ci montre qu’elle est aussi un flot de **grains d’énergie**. Les deux descriptions sont vraies.
 
 ## Le photon
-La lumière échange son énergie par **quanta** indivisibles, les **photons**. L’énergie d’un photon dépend uniquement de la fréquence :
+**E = h ν = h c / λ**, avec h = 6,63 × 10⁻³⁴ J·s et c = 3,00 × 10⁸ m·s⁻¹
 
-E = h ν = h c / λ
+| Lumière | λ | Énergie du photon |
+| Rouge | 700 nm | environ **1,8 eV** |
+| Bleue | 450 nm | environ **2,8 eV** |
 
-avec **h = 6,63 × 10⁻³⁴ J·s** (constante de Planck) et c = 3,00 × 10⁸ m·s⁻¹. Une lumière rouge (λ = 700 nm) transporte des photons moins énergétiques qu’une lumière bleue (λ = 450 nm), quelle que soit son intensité.
-
-L’**électronvolt** est l’unité commode à cette échelle : 1 eV = 1,60 × 10⁻¹⁹ J. Les photons visibles portent de 1,8 à 3,1 eV.
+L’énergie d’un photon dépend **uniquement de la fréquence** — jamais de l’intensité. L’**électronvolt** est l’unité commode : 1 eV = 1,60 × 10⁻¹⁹ J.
 
 ## L’effet photoélectrique
-Éclairer un métal peut lui arracher des électrons — mais **seulement si la fréquence dépasse un seuil**, quelle que soit l’intensité. Une lumière rouge très intense n’arrache rien ; une lumière ultraviolette très faible y parvient aussitôt.
+| L’observation | Ce que prédit le modèle **ondulatoire** | Ce que dit le modèle **corpusculaire** |
+| Une lumière rouge très **intense** n’arrache rien | Elle devrait finir par y arriver | Chaque photon est trop peu énergétique |
+| Une lumière UV très **faible** y parvient aussitôt | Elle devrait mettre longtemps | Un seul photon suffit |
 
-Le modèle ondulatoire ne l’explique pas : il prédirait qu’en attendant assez longtemps, n’importe quelle lumière finit par accumuler l’énergie nécessaire. Le modèle corpusculaire l’explique en une ligne : **un électron reçoit un photon entier, ou rien**. Il faut donc hν > W₀, le **travail d’extraction** du métal.
+> Un électron reçoit **un photon entier, ou rien**. Il faut donc hν > W₀, le **travail d’extraction** du métal. C’est cette condition de seuil que le modèle ondulatoire ne peut pas produire.
 
 ## La dualité onde-corpuscule
-La lumière se comporte comme une **onde** dans les phénomènes de propagation (diffraction, interférences) et comme un **flot de corpuscules** dans les échanges d’énergie (effet photoélectrique, absorption, émission). Les deux modèles ne s’opposent pas : ils décrivent des aspects différents d’un même objet, et chacun est indispensable.
+| Phénomène | Modèle qui l’explique |
+| Diffraction, interférences | **Ondulatoire** |
+| Effet photoélectrique, absorption, émission | **Corpusculaire** |
 
-L’expérience des fentes d’Young **photon par photon** le montre de façon spectaculaire : chaque photon arrive en un point unique (corpuscule), mais l’accumulation de milliers d’impacts reconstitue les franges (onde).
+Les deux ne s’opposent pas : ils décrivent des **aspects différents** d’un même objet, et chacun est indispensable.
+
+L’expérience des fentes d’Young **photon par photon** le montre : chaque photon arrive en un **point unique** (corpuscule), mais l’accumulation de milliers d’impacts reconstitue les **franges** (onde).
 
 ## Les niveaux d’énergie quantifiés
-Un atome ne peut posséder que certaines valeurs d’énergie, ses **niveaux**. Il ne peut absorber ou émettre que la **différence** entre deux niveaux :
+Un atome ne possède que certaines valeurs d’énergie. Il ne peut absorber ou émettre que la **différence** entre deux niveaux :
 
-ΔE = E_haut − E_bas = h ν
+**ΔE = E_haut − E_bas = h ν**
 
-D’où les **spectres de raies** : chaque élément absorbe et émet un jeu de longueurs d’onde qui lui est propre. C’est ainsi qu’on identifie la composition d’une étoile sans y aller, et que se lisent les raies de Fraunhofer du spectre solaire.
+D’où les **spectres de raies** : chaque élément a son jeu de longueurs d’onde propre. C’est ainsi qu’on identifie la composition d’une **étoile sans y aller**, et que se lisent les raies de Fraunhofer du spectre solaire.
 
 ## Le laser
-Il exploite l’**émission stimulée** : un photon qui traverse un atome excité en déclenche l’émission d’un second, identique en direction, en phase et en longueur d’onde. D’où un faisceau **monochromatique, directif et cohérent** — c’est cette cohérence qui rend possibles les expériences d’interférences du chapitre précédent.
+Il exploite l’**émission stimulée** : un photon traversant un atome excité en déclenche l’émission d’un second — **identique** en direction, en phase et en longueur d’onde.
 
-> Le photon n’a pas de masse, mais il transporte de l’énergie et une quantité de mouvement. Ce n’est pas une contradiction : la relation E = mc² ne s’applique pas telle quelle à une particule sans masse.`,
+D’où un faisceau **monochromatique, directif et cohérent** — et c’est cette cohérence qui rend possibles les expériences d’interférences du chapitre précédent.
+
+> Le photon n’a **pas de masse**, mais il transporte énergie et quantité de mouvement. Ce n’est pas une contradiction : la relation E = mc² ne s’applique pas telle quelle à une particule sans masse.`,
           },
           questions: [
             ['Quelle est l’expression de l’énergie d’un photon ?', ['E = h c / λ', 'E = h λ', 'E = c / (h λ)', 'E = ½ h ν²'], 0, 'Soit E = hν : elle ne dépend que de la fréquence.'],
@@ -1592,45 +1903,46 @@ Il exploite l’**émission stimulée** : un photon qui traverse un atome excit�
           axe: 'Ondes et signaux',
           lecon: {
             titre: 'Le temps qu’il faut à un condensateur pour se remplir',
-            cours: `Un circuit électrique n’atteint pas son régime final instantanément. Un condensateur y introduit une **durée caractéristique**, qu’on peut mesurer, calculer — et exploiter comme capteur.
+            cours: `Un circuit électrique n’atteint pas son régime final instantanément. Un condensateur y introduit une **durée caractéristique**, qu’on peut mesurer, calculer — et exploiter comme **capteur**.
 
 ## Le condensateur
-Deux armatures conductrices séparées par un isolant. Il stocke une charge q proportionnelle à la tension entre ses bornes :
+| Relation | Ce qu’elle dit |
+| **q = C × u** | La charge est proportionnelle à la tension |
+| **i = C × du/dt** | L’intensité est le **débit de charge** |
 
-q = C × u
+C est la **capacité**, en farads. Le farad est une unité énorme : les condensateurs usuels se comptent en µF ou en nF.
 
-où **C** est la **capacité**, en **farads (F)**. Le farad est une unité énorme : les condensateurs usuels se comptent en microfarads (µF) ou en nanofarads (nF).
-
-L’intensité qui le traverse est le débit de charge : i = dq/dt = C × du/dt. Un condensateur ne laisse donc passer du courant que **tant que la tension varie** : en régime permanent, il se comporte comme un interrupteur ouvert.
+> Un condensateur ne laisse passer du courant que **tant que la tension varie**. En régime permanent, il se comporte comme un **interrupteur ouvert** — c’est la conséquence directe de i = C du/dt.
 
 ## La charge d’un dipôle RC
-Un condensateur initialement déchargé, mis en série avec une résistance R sous une tension continue E, obéit à l’équation différentielle :
+RC × du/dt + u = E, de solution **u(t) = E × (1 − e^(−t/RC))**
 
-RC × du/dt + u = E, de solution u(t) = E × (1 − e^(−t/RC))
-
-La tension croît d’abord vite, puis de plus en plus lentement, et tend vers E sans jamais l’atteindre exactement.
+La tension croît d’abord vite, puis de plus en plus lentement, et tend vers E **sans jamais l’atteindre** exactement.
 
 ## La constante de temps
-**τ = R × C**, homogène à un temps (Ω × F = s). Elle se lit sur la courbe de trois façons :
-- à t = τ, la tension a atteint **63 %** de sa valeur finale ;
-- la **tangente à l’origine** coupe l’asymptote à t = τ ;
-- le régime permanent est pratiquement atteint au bout de **5τ**.
+**τ = R × C**, homogène à un temps : Ω × F = s.
 
-## La décharge
-En court-circuitant le générateur, u(t) = E × e^(−t/τ) : la même constante de temps gouverne la décroissance. À t = τ, il reste 37 % de la tension initiale.
+| Comment la lire sur la courbe | Ce qu’on observe |
+| À t = τ | La tension a atteint **63 %** de sa valeur finale |
+| La **tangente à l’origine** | Elle coupe l’asymptote à t = τ |
+| À t = **5τ** | Le régime permanent est pratiquement atteint |
+
+À la décharge, u(t) = E × e^(−t/τ) : la même constante gouverne la décroissance, et à t = τ il reste **37 %**.
 
 ## L’énergie stockée
-E_stockée = ½ C u²
+E = ½ C u²
 
-Un condensateur peut restituer cette énergie très rapidement — d’où son emploi dans un flash d’appareil photo : la pile le charge lentement, il se décharge en quelques millisecondes.
+Un condensateur peut **restituer très vite** cette énergie : c’est le principe du flash d’appareil photo — la pile le charge lentement, il se décharge en quelques millisecondes.
 
 ## Les capteurs capacitifs
-La capacité d’un condensateur plan dépend de la surface des armatures, de leur écartement et de l’isolant qui les sépare. **Faire varier l’un de ces paramètres fait varier C**, donc τ, donc une durée mesurable par un circuit électronique. D’où toute une famille de capteurs :
-- **écran tactile** : le doigt, conducteur, modifie localement la capacité de la grille d’électrodes ;
-- **capteur de niveau** dans un réservoir : le liquide remplace l’air entre les armatures ;
-- **capteur d’humidité**, de pression, de position : même principe, autre grandeur.
+La capacité d’un condensateur plan dépend de trois paramètres. **Faire varier l’un d’eux fait varier C, donc τ, donc une durée mesurable.**
 
-> Le condensateur est le troisième système de l’année à décroissance exponentielle, après les noyaux radioactifs et le refroidissement d’un corps. Trois phénomènes sans rapport, une seule équation : c’est ce qu’on appelle une analogie formelle, et elle vaut d’être vue comme telle.`,
+| Capteur | Le paramètre qui varie |
+| **Écran tactile** | Le doigt, conducteur, modifie la capacité locale |
+| **Capteur de niveau** | Le liquide remplace l’air entre les armatures |
+| Capteur d’humidité, de pression, de position | L’isolant, l’écartement, la surface en regard |
+
+> Le condensateur est le **troisième** système de l’année à décroissance exponentielle, après les noyaux radioactifs et le refroidissement d’un corps. Trois phénomènes sans aucun rapport, **une seule équation** : c’est une analogie formelle, et elle vaut d’être vue comme telle.`,
           },
           questions: [
             ['Quelle relation lie la charge d’un condensateur à la tension à ses bornes ?', ['q = C × u', 'q = u / C', 'q = C / u', 'q = C × u²'], 0, 'C est la capacité, exprimée en farads.'],

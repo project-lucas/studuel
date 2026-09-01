@@ -154,22 +154,29 @@ DELETE FROM public.chapters c
             titre: 'Six siècles de poésie en une page',
             cours: `Pendant six siècles, la poésie française change de forme, de sujet et de public — mais elle garde une constante : elle travaille la langue pour la rendre plus dense que la prose.
 
-## Le Moyen Âge : la poésie se chante
-La poésie médiévale est d’abord **chantée**. Les **troubadours** au sud, les **trouvères** au nord, célèbrent l’**amour courtois** : une dame inaccessible, un chevalier qui se met à son service. À la fin de la période, **François Villon** rompt avec ce monde poli et écrit la faim, la prison et la mort dans une langue directe.
+## Six siècles en un tableau
+| Le siècle | Ce que la poésie y fait | Ses figures |
+| **Moyen Âge** | Elle se **chante** : l'amour courtois, une dame inaccessible, un chevalier à son service | Troubadours au sud, **trouvères** au nord ; **Villon** en rupture |
+| **Renaissance** | Elle passe au **français** et devient savante | La **Pléiade** : **Ronsard**, **Du Bellay** |
+| **XVIIe** | Elle obéit à la **règle** : mètres fixes, rimes riches, respect des genres | **La Fontaine** et la fable |
+| **XVIIIe** | Elle devient une **arme** contre l'intolérance et l'injustice | Les **Lumières** |
 
-## La Renaissance : la Pléiade et le sonnet
-Au XVIe siècle, un groupe de poètes — la **Pléiade**, autour de **Ronsard** et **Du Bellay** — décide d’écrire en français, et non plus en latin, une poésie savante inspirée de l’Antiquité. C’est le triomphe du **sonnet**, importé d’Italie, et de thèmes qui traverseront les siècles : la fuite du temps, la beauté qui passe, l’exil.
+## Le Moyen Âge
+À la fin de la période, **François Villon** rompt avec le monde poli de la courtoisie et écrit la faim, la prison et la mort dans une langue directe.
 
-> « Défense et illustration de la langue française » (Du Bellay, 1549) : le manifeste d’une génération qui veut faire du français une langue de poésie.
+## La Renaissance
+Le **sonnet**, importé d'Italie, triomphe. Les thèmes traverseront les siècles : la fuite du temps, la beauté qui passe, l'exil.
 
-## Le XVIIe siècle : la règle
-Le classicisme impose la **régularité** : mètres fixes, rimes riches, respect des genres. La **fable**, avec **La Fontaine**, fait entrer le récit et la satire dans le vers.
+> *Défense et illustration de la langue française* (Du Bellay, 1549) : le manifeste d'une génération qui veut faire du français une langue de poésie.
 
-## Le XVIIIe siècle : la poésie au service des idées
-Le siècle des **Lumières** préfère l’essai, le conte et la fable au lyrisme. La poésie devient une arme : elle sert à **critiquer** l’intolérance, l’injustice, le fanatisme, comme le fait la fable en cachant sa cible derrière des animaux.
+## Le XVIIIe siècle
+Le siècle préfère l'essai, le conte et la fable au lyrisme. La fable cache sa cible derrière des animaux — et devient d'autant plus efficace.
 
-## Ce qui reste
-D’un bout à l’autre, la poésie se reconnaît à trois traits : un **travail du rythme** (le vers, la strophe), un **travail du son** (la rime, les allitérations), un **travail de l’image** (comparaison, métaphore, personnification).`,
+## Ce qui reste, d'un bout à l'autre
+| Le travail | Ses moyens |
+| Le **rythme** | Le vers, la strophe, la césure |
+| Le **son** | La rime, les allitérations, les assonances |
+| L'**image** | Comparaison, métaphore, personnification |`,
           },
           questions: [
             ['Comment la poésie médiévale était-elle d’abord diffusée ?', ['Chantée, accompagnée de musique', 'Imprimée en recueils', 'Lue en silence', 'Affichée dans les églises'], 0, 'Troubadours et trouvères sont autant musiciens que poètes.'],
@@ -187,24 +194,66 @@ D’un bout à l’autre, la poésie se reconnaît à trois traits : un **travai
           axe: 'La poésie du Moyen Âge au XVIIIe siècle',
           lecon: {
             titre: 'Les mots pour analyser un poème',
-            cours: `Analyser un poème, ce n’est pas dire ce qu’on ressent : c’est nommer ce que le texte fait. Voici les outils.
+            cours: `Analyser un poème, ce n'est pas dire ce qu'on ressent : c'est nommer ce que le texte fait.
 
 ## Compter les syllabes
-Le **vers** se mesure en syllabes. Les mètres les plus fréquents : l’**octosyllabe** (8), le **décasyllabe** (10) et l’**alexandrin** (12), qui se coupe souvent en deux **hémistiches** de 6 par une **césure**. Attention au **e** muet : il compte devant une consonne, pas devant une voyelle (**élision**) ni en fin de vers. Deux voyelles prononcées en deux syllabes forment une **diérèse** (li-on), en une seule une **synérèse**.
+| Le mètre | Son nombre de syllabes |
+| **Octosyllabe** | 8 |
+| **Décasyllabe** | 10 |
+| **Alexandrin** | 12, coupé en deux **hémistiches** de 6 par une **césure** |
+
+| Le cas du **e** muet | Compte-t-il |
+| Devant une **consonne** | **Oui** |
+| Devant une **voyelle** — élision | Non |
+| En **fin de vers** | Non |
+
+| Le phénomène | Ce qu'il fait | Un exemple |
+| La **diérèse** | Deux voyelles en **deux** syllabes | li-on |
+| La **synérèse** | Deux voyelles en **une** syllabe | lion |
 
 ## Ranger les rimes
-Deux rimes se répondent **AABB** (suivies ou plates), **ABAB** (croisées), **ABBA** (embrassées). Leur **richesse** dépend du nombre de sons communs : pauvre (1), suffisante (2), riche (3 et plus). On distingue aussi les rimes **féminines** (finissant par un e muet) et **masculines**.
+| La disposition | Son schéma |
+| Suivies, ou plates | AABB |
+| **Croisées** | ABAB |
+| **Embrassées** | ABBA |
+
+| La richesse | Les sons communs |
+| **Pauvre** | 1 |
+| **Suffisante** | 2 |
+| **Riche** | 3 ou plus |
+
+On distingue aussi les rimes **féminines**, finissant par un e muet, et **masculines**.
 
 ## Nommer les strophes
-Deux vers font un **distique**, trois un **tercet**, quatre un **quatrain**, cinq un **quintil**, six un **sizain**, huit un **huitain**. Le **sonnet** associe deux quatrains et deux tercets, soit 14 vers.
+| Le nombre de vers | Son nom |
+| 2 | Distique |
+| 3 | Tercet |
+| 4 | **Quatrain** |
+| 5 | Quintil |
+| 6 | Sizain |
+| 8 | Huitain |
+| 14 | Le **sonnet** : deux quatrains, deux tercets |
 
-> Quand le sens déborde du vers sur le suivant, c’est un **enjambement** ; quand ce débordement est court et mis en valeur, un **rejet** (au début du vers suivant) ou un **contre-rejet** (à la fin du vers précédent).
+## Quand le sens déborde
+| Le procédé | Sa définition |
+| L'**enjambement** | Le sens déborde du vers sur le suivant |
+| Le **rejet** | Le débordement est court, mis en valeur **au début** du vers suivant |
+| Le **contre-rejet** | Il est à la **fin** du vers précédent |
 
-## Travailler le son
-L’**allitération** répète une consonne, l’**assonance** une voyelle. L’**anaphore** répète un mot en début de vers. Ces répétitions ne décorent pas : elles imitent, insistent, martèlent.
+## Travailler le son et l'image
+| La figure | Ce qu'elle fait |
+| L'**allitération** | Elle répète une **consonne** |
+| L'**assonance** | Elle répète une **voyelle** |
+| L'**anaphore** | Elle répète un mot en début de vers |
+| La **comparaison** | Elle rapproche avec un outil : comme, tel, pareil à |
+| La **métaphore** | Elle supprime l'outil |
+| La **personnification** | Elle prête une conduite humaine à une chose |
+| L'**allégorie** | Elle représente une idée abstraite par une figure concrète |
+| L'**hyperbole** | Elle exagère |
+| La **litote** | Elle dit moins pour suggérer plus |
+| L'**oxymore** | Elle accole deux mots contraires |
 
-## Travailler l’image
-La **comparaison** rapproche deux termes avec un outil (comme, tel, pareil à) ; la **métaphore** le supprime ; la **personnification** prête une conduite humaine à une chose ; l’**allégorie** représente une idée abstraite par une figure concrète. L’**hyperbole** exagère, la **litote** dit moins pour suggérer plus, l’**oxymore** accole deux mots contraires.`,
+> Ces répétitions ne décorent pas : elles imitent, insistent, martèlent.`,
           },
           questions: [
             ['Combien de syllabes compte un alexandrin ?', ['12', '10', '8', '14'], 0, 'Il se coupe souvent en deux hémistiches de six syllabes.'],
@@ -222,21 +271,40 @@ La **comparaison** rapproche deux termes avec un outil (comme, tel, pareil à) ;
           axe: 'La poésie du Moyen Âge au XVIIIe siècle',
           lecon: {
             titre: 'Rire des puissants sous le masque des bêtes',
-            cours: `Le **Roman de Renart** n’est pas un roman ni l’œuvre d’un seul auteur : c’est un ensemble de récits en vers, les **branches**, composés par des auteurs différents entre 1170 et 1250 environ.
+            cours: `Le Roman de Renart n'est pas un roman ni l'œuvre d'un seul auteur : c'est un ensemble de récits en vers, les branches, composés entre 1170 et 1250 environ.
 
 ## Une parodie
-Le texte imite les grands genres de son temps pour s’en moquer : la **chanson de geste** et le **roman courtois**. À la place des chevaliers, des animaux ; à la place des combats héroïques, des ruses de goupil pour voler une andouille ou des anguilles. C’est une **parodie**, c’est-à-dire l’imitation comique d’un modèle sérieux.
+| Le modèle sérieux | Ce que Renart en fait |
+| La **chanson de geste** | Des ruses de goupil à la place des combats héroïques |
+| Le **roman courtois** | Des animaux à la place des chevaliers |
+| Le procès féodal | Un tribunal grotesque où l'on juge un renard dans les formes |
+
+La **parodie** est l'imitation comique d'un modèle sérieux.
 
 ## Une société transposée
-Chaque animal porte un rôle social : **Noble** le lion est le roi, **Ysengrin** le loup le grand baron brutal, **Brun** l’ours et **Tibert** le chat des vassaux, **Chantecler** le coq un naïf plein de vanité. **Renart** le goupil, lui, est le petit qui n’a que sa ruse. Le succès du personnage est tel que son nom propre a remplacé le mot « goupil » dans la langue : le renard s’appelle aujourd’hui renard à cause de lui.
+| L'animal | Son rôle social |
+| **Noble** le lion | Le roi |
+| **Ysengrin** le loup | Le grand baron brutal |
+| **Brun** l'ours, **Tibert** le chat | Des vassaux |
+| **Chantecler** le coq | Un naïf plein de vanité |
+| **Renart** le goupil | Le petit, qui n'a que sa ruse |
 
-> Faire parler des animaux permet de dire des choses qu’un texte sur des humains ne pourrait pas dire impunément.
+> Le succès du personnage est tel que son nom propre a remplacé le mot « goupil » : le renard s'appelle aujourd'hui renard **à cause de lui**.
 
-## Un comique de situation et de mots
-Le rire naît des ruses, des déguisements, des coups reçus — un **comique de situation** proche de la farce — mais aussi des **jeux de mots**, des serments détournés et des procès grotesques où l’on juge un renard selon les formes du droit féodal.
+> Faire parler des animaux permet de dire des choses qu'un texte sur des humains ne pourrait pas dire impunément.
 
-## Une satire
-Sous le rire, la **satire** vise les puissants : la justice qu’on achète, la force qui tient lieu de droit, la religion qui sert de couverture. Renart n’est pas un héros positif — il est menteur, voleur et cruel — mais ses victimes le sont autant que lui, et ce sont elles qui détiennent le pouvoir.`,
+## Le comique
+| Sa forme | Ses ressorts |
+| De **situation** | Ruses, déguisements, coups reçus — proche de la farce |
+| De **mots** | Jeux de mots, serments détournés |
+
+## La satire
+| Ce qu'elle vise | Comment |
+| La **justice** | On l'achète |
+| La **force** | Elle tient lieu de droit |
+| La **religion** | Elle sert de couverture |
+
+> Renart n'est pas un héros positif — il est menteur, voleur et cruel — mais ses victimes le sont autant que lui, et ce sont elles qui détiennent le pouvoir.`,
           },
           questions: [
             ['Qu’est-ce qu’une branche du Roman de Renart ?', ['Un récit indépendant qui compose l’ensemble', 'Un chapitre de roman moderne', 'Une famille de personnages', 'Un épisode musical'], 0, 'Les branches sont écrites par des auteurs différents sur près d’un siècle.'],
@@ -254,21 +322,41 @@ Sous le rire, la **satire** vise les puissants : la justice qu’on achète, la 
           axe: 'La poésie du Moyen Âge au XVIIIe siècle',
           lecon: {
             titre: 'Quatorze vers pour dire le temps et le désir',
-            cours: `Le **sonnet** arrive d’Italie au XVIe siècle et devient la forme reine de la poésie française avec la **Pléiade**.
+            cours: `Le sonnet arrive d'Italie au XVIe siècle et devient la forme reine de la poésie française avec la Pléiade.
 
 ## La structure
-Quatorze vers : deux **quatrains**, puis deux **tercets**. Les quatrains riment le plus souvent en ABBA ABBA ; les tercets suivent des combinaisons variées (CCD EED en France). Le passage des quatrains aux tercets marque une **rupture** : on y change de ton, on y répond à ce qui précède. Le dernier vers, la **chute**, condense tout le poème en une formule.
+| La partie | Son contenu | Ses rimes |
+| Deux **quatrains** | La situation, l'image posée | Le plus souvent ABBA ABBA |
+| Deux **tercets** | La **rupture** : on change de ton, on répond | Combinaisons variées, CCD EED en France |
+| Le dernier vers | La **chute** : elle condense tout le poème | — |
 
-> Un sonnet, ce n’est pas un poème court : c’est un raisonnement en quatorze vers, avec une bascule au milieu et une pointe à la fin.
+> Un sonnet, ce n'est pas un poème court : c'est un **raisonnement en quatorze vers**, avec une bascule au milieu et une pointe à la fin.
 
-## Du Bellay : l’exil et le regret
-Dans **Les Regrets** (1558), écrits pendant son séjour à Rome, Du Bellay abandonne le style savant pour une langue simple et personnelle. « Heureux qui, comme Ulysse, a fait un beau voyage » oppose la grandeur romaine à la douceur du village natal ; le voyage antique sert à dire le mal du pays d’un homme réel.
+## Du Bellay : l'exil et le regret
+| L'élément | Son contenu |
+| Le recueil | *Les Regrets*, **1558**, écrits pendant son séjour à Rome |
+| Le style | Abandon du style savant pour une langue simple et personnelle |
+| Le sonnet fameux | « Heureux qui, comme Ulysse, a fait un beau voyage » |
+| Son procédé | Opposer la grandeur romaine à la douceur du village natal |
+
+> Le voyage antique sert à dire le mal du pays d'un homme réel.
 
 ## Ronsard : la fuite du temps
-Ronsard chante la beauté qui passe et invite à en jouir : c’est le **carpe diem** hérité d’Horace. « Mignonne, allons voir si la rose » construit tout le poème sur une **comparaison** entre la fleur fanée en un jour et la jeunesse de Cassandre.
+| L'élément | Son contenu |
+| Le thème | Le **carpe diem**, hérité d'Horace : la beauté passe, il faut en jouir |
+| Le sonnet fameux | « Mignonne, allons voir si la rose » |
+| Son procédé | Toute une **comparaison** entre la fleur fanée en un jour et la jeunesse de Cassandre |
 
-## L’animalité dans le sonnet
-Les animaux y entrent comme **images** : le poète est un cerf blessé, un oiseau en cage, une abeille qui butine ; la dame est une biche insaisissable. Ces figures viennent de Pétrarque et servent à dire ce que le poète ne peut pas dire en propre — le désir, la douleur, la dépendance. L’animal n’y est pas une bête réelle : c’est un **véhicule de la métaphore**.`,
+## L'animalité dans le sonnet
+| L'image | Ce qu'elle dit |
+| Le poète en **cerf blessé** | La douleur du désir |
+| Le poète en **oiseau en cage** | La dépendance |
+| Le poète en **abeille** qui butine | Le désir qui va de fleur en fleur |
+| La dame en **biche** insaisissable | L'inaccessible |
+
+Ces figures viennent de Pétrarque.
+
+> L'animal n'y est pas une bête réelle : c'est un **véhicule de la métaphore**, qui permet de dire ce que le poète ne peut pas dire en propre.`,
           },
           questions: [
             ['Comment se répartissent les 14 vers d’un sonnet ?', ['Deux quatrains puis deux tercets', 'Trois quatrains puis un distique', 'Deux sizains puis un distique', 'Quatorze vers sans strophes'], 0, 'La bascule se fait au passage des quatrains aux tercets.'],
@@ -286,24 +374,36 @@ Les animaux y entrent comme **images** : le poète est un cerf blessé, un oisea
           axe: 'La poésie du Moyen Âge au XVIIIe siècle',
           lecon: {
             titre: 'Une même bête, des sens contraires',
-            cours: `Le lion traverse toute la littérature — et il n’y veut jamais dire tout à fait la même chose. C’est un excellent terrain pour comprendre qu’une image n’a pas de sens fixe : elle prend celui que le texte lui donne.
+            cours: `Le lion traverse toute la littérature — et il n'y veut jamais dire tout à fait la même chose. C'est un excellent terrain pour comprendre qu'une image n'a pas de sens fixe.
 
 ## Le lion des origines
-Dans la Bible, il est à la fois la menace (la fosse aux lions) et la force au service du juste (Samson, Daniel). Dans les fables antiques d’**Ésope**, il est déjà le puissant dont la part est prise d’avance : c’est « la part du lion ».
+| La source | Ce qu'il y représente |
+| La **Bible** | À la fois la menace — la fosse aux lions — et la force au service du juste : Samson, Daniel |
+| Les fables d'**Ésope** | Le puissant dont la part est prise d'avance : « la part du lion » |
 
 ## Le lion médiéval
-Le **bestiaire** médiéval lui prête des vertus chrétiennes : il efface ses traces, il dort les yeux ouverts, il ranime ses petits au troisième jour — autant de symboles du Christ. Dans le roman courtois, le lion du **Chevalier au lion** de Chrétien de Troyes devient le compagnon fidèle d’Yvain. Mais dans le Roman de Renart, le même animal est **Noble**, un roi faible et partial.
+| Le texte | Ce qu'il en fait |
+| Le **bestiaire** | Des vertus chrétiennes : il efface ses traces, dort les yeux ouverts, ranime ses petits au troisième jour — autant de symboles du Christ |
+| Le *Chevalier au lion* de Chrétien de Troyes | Le **compagnon fidèle** d'Yvain |
+| Le *Roman de Renart* | **Noble**, un roi faible et partial |
 
-> Le lion n’est ni bon ni mauvais : il est un signe, et un signe se lit dans son contexte.
+> Le lion n'est ni bon ni mauvais : il est un **signe**, et un signe se lit dans son contexte.
 
 ## Le lion classique
-Chez **La Fontaine**, il est le roi — donc la critique du pouvoir. « La Génisse, la Chèvre et la Brebis en société avec le Lion » montre la loi du plus fort déguisée en contrat ; « Le Lion et le Rat » retourne le rapport de force en montrant qu’on a toujours besoin d’un plus petit que soi.
+| La fable de **La Fontaine** | Ce qu'elle montre |
+| « La Génisse, la Chèvre et la Brebis en société avec le Lion » | La loi du plus fort déguisée en contrat |
+| « Le Lion et le Rat » | On a toujours besoin d'un plus petit que soi : le rapport de force se retourne |
 
 ## Le lion moderne
-Il devient emblème politique et publicitaire — drapeaux, blasons, logos, marques — et sujet de romans comme **Le Lion** de Joseph Kessel, où l’animal sauvage sert à interroger la place de l’homme dans la nature.
+| Son usage | Sa forme |
+| **Emblème** politique | Drapeaux, blasons |
+| Emblème commercial | Logos, marques |
+| Sujet **romanesque** | *Le Lion* de Joseph Kessel, où l'animal sauvage interroge la place de l'homme dans la nature |
 
-## Ce qu’il faut retenir
-Un même motif peut être **universel** — on le retrouve partout — et **pluriel** — il change de valeur selon l’époque, le genre et l’intention de l’auteur.`,
+## Ce qu'il faut retenir
+| Le caractère du motif | Ce qu'il signifie |
+| **Universel** | On le retrouve partout |
+| **Pluriel** | Il change de valeur selon l'époque, le genre et l'intention de l'auteur |`,
           },
           questions: [
             ['Que signifie l’expression « la part du lion » ?', ['La plus grosse part, prise par le plus fort', 'Une part égale pour tous', 'Une part symbolique', 'La part réservée aux invités'], 0, 'Elle vient des fables antiques d’Ésope.'],
@@ -321,24 +421,46 @@ Un même motif peut être **universel** — on le retrouve partout — et **plur
           axe: 'La poésie du Moyen Âge au XVIIIe siècle',
           lecon: {
             titre: 'Une arme brève contre l’injustice',
-            cours: `La **fable** est un récit court, souvent en vers, mettant en scène des animaux et débouchant sur une **morale**. Elle est un **apologue** : un récit qui sert une démonstration.
+            cours: `La fable est un récit court, souvent en vers, mettant en scène des animaux et débouchant sur une morale. C'est un apologue : un récit qui sert une démonstration.
 
 ## Sa mécanique
-Deux temps : le **récit** (la situation, la rencontre, l’issue) et la **morale** (explicite en tête ou en fin, parfois implicite). L’**animalisation** des personnages produit deux effets : elle rend la scène plaisante, et elle protège l’auteur, qui parle d’un loup et non d’un ministre. La brièveté fait le reste : une fable se retient, donc elle circule.
+| Le temps | Son contenu |
+| Le **récit** | La situation, la rencontre, l'issue |
+| La **morale** | Explicite en tête ou en fin, parfois implicite |
+
+| L'effet de l'**animalisation** | Ce qu'il produit |
+| Le **plaisir** | La scène est plaisante, donc lue |
+| La **protection** | L'auteur parle d'un loup, non d'un ministre |
+| La **brièveté** | Une fable se retient, donc elle circule |
 
 ## La Fontaine, un siècle avant les Lumières
-Publiées de 1668 à 1694, les **Fables** de La Fontaine critiquent déjà la cour, l’arbitraire du pouvoir et la justice inégale — « Selon que vous serez puissant ou misérable, les jugements de cour vous rendront blanc ou noir ». Les philosophes du XVIIIe siècle héritent de cet outil.
+Publiées de **1668 à 1694**, les *Fables* critiquent déjà la cour, l'arbitraire du pouvoir et la justice inégale.
+
+> « Selon que vous serez puissant ou misérable, les jugements de cour vous rendront blanc ou noir. »
 
 ## Les combats des Lumières
-Le siècle des Lumières combat l’**intolérance** religieuse, la **torture** et les erreurs judiciaires (Voltaire et l’affaire Calas), l’**esclavage** (le chapitre du nègre de Surinam dans Candide), la **censure**, l’arbitraire du pouvoir. Il défend la **raison**, la **tolérance**, l’**égalité devant la loi**.
+| Ce que le siècle **combat** | Ce qu'il **défend** |
+| L'**intolérance** religieuse | La **raison** |
+| La **torture** et les erreurs judiciaires — Voltaire et l'affaire Calas | La **tolérance** |
+| L'**esclavage** — le nègre de Surinam dans *Candide* | L'**égalité devant la loi** |
+| La **censure** et l'arbitraire du pouvoir | La liberté d'expression |
 
-> Les Lumières n’inventent pas la fable : elles la trouvent déjà chargée, et elles la rechargent.
+> Les Lumières n'inventent pas la fable : elles la trouvent déjà chargée, et elles la rechargent.
 
 ## Les formes voisines
-Pour porter ces combats, le siècle utilise aussi le **conte philosophique** (Candide, Micromégas), le **dictionnaire** (le Dictionnaire philosophique), l’**article d’encyclopédie**, le **pamphlet** et la **lettre fictive** (les Lettres persanes de Montesquieu). Tous partagent la stratégie de la fable : détourner le regard vers un ailleurs — un animal, un naïf, un étranger — pour faire voir le scandale de chez soi.
+| La forme | Un exemple |
+| Le **conte philosophique** | *Candide*, *Micromégas* |
+| Le **dictionnaire** | Le *Dictionnaire philosophique* |
+| L'**article d'encyclopédie** | L'*Encyclopédie* |
+| Le **pamphlet** | Des textes de combat |
+| La **lettre fictive** | Les *Lettres persanes* de Montesquieu |
 
-## L’ironie
-L’arme commune est l’**ironie** : dire le contraire de ce qu’on pense pour le rendre insoutenable. Le lecteur qui la décode devient complice, donc convaincu par lui-même.`,
+> Toutes partagent la stratégie de la fable : détourner le regard vers un ailleurs — un animal, un naïf, un étranger — pour faire voir le scandale de chez soi.
+
+## L'ironie
+L'arme commune : dire le contraire de ce qu'on pense pour le rendre insoutenable.
+
+> Le lecteur qui la décode devient complice, donc convaincu par lui-même.`,
           },
           questions: [
             ['Qu’est-ce qu’un apologue ?', ['Un récit bref qui sert une démonstration', 'Un poème d’amour', 'Une pièce en un acte', 'Un discours de tribunal'], 0, 'La fable, le conte philosophique et la parabole en sont.'],
@@ -359,24 +481,52 @@ L’arme commune est l’**ironie** : dire le contraire de ce qu’on pense pour
           axe: 'La littérature d’idées et la presse du XIXe siècle au XXIe siècle',
           lecon: {
             titre: 'Quand écrire, c’est prendre parti',
-            cours: `La **littérature d’idées** regroupe tous les textes qui cherchent à convaincre, persuader ou faire réfléchir : essais, discours, pamphlets, articles, tribunes, préfaces engagées.
+            cours: `La littérature d'idées regroupe tous les textes qui cherchent à convaincre, persuader ou faire réfléchir.
 
-## Convaincre, persuader, délibérer
-**Convaincre** s’adresse à la raison par des arguments et des preuves. **Persuader** s’adresse aux émotions par des images, des exemples frappants, un rythme. **Délibérer**, c’est peser plusieurs thèses avant de trancher. Un texte efficace combine souvent les trois.
+## Trois visées à distinguer
+| Le verbe | Ce à quoi il s'adresse | Ses moyens |
+| **Convaincre** | La **raison** | Arguments, preuves |
+| **Persuader** | Les **émotions** | Images, exemples frappants, rythme |
+| **Délibérer** | Le jugement | Peser plusieurs thèses avant de trancher |
+
+Un texte efficace combine souvent les trois.
 
 ## Le XIXe siècle : le siècle de la presse
-L’essor de l’imprimerie industrielle, l’alphabétisation et la **loi du 29 juillet 1881** sur la liberté de la presse font du journal le premier média de masse. Écrivains et journalistes sont les mêmes hommes : **Hugo**, **Zola**, **Sand** publient dans les journaux. Le sommet du genre est le **J’accuse…!** de Zola, publié en une de L’Aurore le 13 janvier 1898 pendant l’**affaire Dreyfus**.
+| Le facteur | Son effet |
+| L'imprimerie industrielle | Des tirages de masse |
+| L'**alphabétisation** | Un lectorat élargi |
+| La **loi du 29 juillet 1881** | La liberté de la presse |
 
-> Un journal, ce n’est pas seulement de l’information : c’est une tribune, et la tribune est une forme littéraire.
+Écrivains et journalistes sont les mêmes hommes : **Hugo**, **Zola**, **Sand** publient dans les journaux.
 
-## Le XXe siècle : les combats et les doutes
-La littérature d’idées accompagne les grandes causes : l’antifascisme, la Résistance, la décolonisation, le féminisme (**Le Deuxième Sexe**, Simone de Beauvoir, 1949), l’antiracisme. Elle doute aussi de ses propres armes après les propagandes de masse.
+> Le sommet du genre : **J'accuse… !** de Zola, en une de *L'Aurore*, le 13 janvier **1898**, pendant l'affaire Dreyfus.
 
-## Le XXIe siècle : l’information dispersée
-Les réseaux sociaux font de chaque lecteur un diffuseur. Les questions changent d’échelle : comment vérifier ? qui finance ? que valent les images ? Les genres de la littérature d’idées migrent vers de nouveaux supports — tribunes en ligne, podcasts, documentaires, vidéos.
+> Un journal, ce n'est pas seulement de l'information : c'est une tribune, et la tribune est une forme littéraire.
 
-## Ce qu’on apprend à repérer
-La **thèse** (ce que le texte soutient), les **arguments** (ce qui la soutient), les **exemples** (ce qui l’illustre), les **connecteurs logiques** (ce qui l’organise), et les procédés de style qui font pencher le lecteur : ironie, question rhétorique, hyperbole, apostrophe.`,
+## Le XXe siècle
+| La cause | Un texte |
+| L'antifascisme, la Résistance | Des écrits de combat |
+| La **décolonisation** | Essais et discours |
+| Le **féminisme** | *Le Deuxième Sexe*, Simone de Beauvoir, 1949 |
+| L'antiracisme | Tribunes et récits |
+
+La littérature d'idées doute aussi de ses propres armes, après les propagandes de masse.
+
+## Le XXIe siècle
+| Le changement | La question qu'il pose |
+| Chaque lecteur devient **diffuseur** | Comment **vérifier** ? |
+| De nouveaux financements | **Qui** finance ? |
+| L'abondance d'**images** | Que valent-elles comme preuve ? |
+
+Les genres migrent : tribunes en ligne, podcasts, documentaires, vidéos.
+
+## Ce qu'on apprend à repérer
+| L'élément | Sa fonction |
+| La **thèse** | Ce que le texte soutient |
+| Les **arguments** | Ce qui la soutient |
+| Les **exemples** | Ce qui l'illustre |
+| Les **connecteurs logiques** | Ce qui l'organise |
+| Les **procédés de style** | Ironie, question rhétorique, hyperbole, apostrophe |`,
           },
           questions: [
             ['Quelle différence entre convaincre et persuader ?', ['Convaincre s’adresse à la raison, persuader aux émotions', 'Convaincre s’adresse aux émotions, persuader à la raison', 'Les deux sont synonymes', 'Convaincre concerne l’oral, persuader l’écrit'], 0, 'Un texte efficace combine souvent les deux.'],
@@ -394,24 +544,56 @@ La **thèse** (ce que le texte soutient), les **arguments** (ce qui la soutient)
           axe: 'La littérature d’idées et la presse du XIXe siècle au XXIe siècle',
           lecon: {
             titre: 'Ce qui sépare une information d’une opinion',
-            cours: `Le journalisme n’est pas l’art de raconter : c’est celui d’**établir** puis de **hiérarchiser** des faits.
+            cours: `Le journalisme n'est pas l'art de raconter : c'est celui d'établir puis de hiérarchiser des faits.
 
 ## Les cinq questions
-Un article répond à cinq questions, apprises dans toutes les rédactions du monde : **qui, quoi, quand, où, pourquoi** — souvent complétées par **comment**. Ce qui est le plus important vient en premier : c’est la **pyramide inversée**, qui permet de couper la fin d’un article sans perdre l’essentiel.
+| La question | Ce qu'elle établit |
+| **Qui** | Les acteurs |
+| **Quoi** | Le fait |
+| **Quand** | La date |
+| **Où** | Le lieu |
+| **Pourquoi** | La cause |
+| **Comment** | Le déroulement |
+
+> Ce qui est le plus important vient en premier : c'est la **pyramide inversée**, qui permet de couper la fin d'un article sans perdre l'essentiel.
 
 ## Les genres
-Deux familles. Les genres d’**information** : la **brève**, le **reportage** (le journaliste raconte ce qu’il a vu), l’**interview**, l’**enquête** (une recherche longue sur ce qu’on veut cacher). Les genres d’**opinion** : l’**éditorial** (la position du journal), la **chronique**, la **critique**, la **tribune** (signée par quelqu’un d’extérieur). Confondre les deux familles est la première source de malentendus.
+| La famille | Le genre | Ce qu'il fait |
+| **Information** | La **brève** | Le fait, en quelques lignes |
+| | Le **reportage** | Le journaliste raconte ce qu'il a vu |
+| | L'**interview** | Il donne la parole |
+| | L'**enquête** | Une recherche longue sur ce qu'on veut cacher |
+| **Opinion** | L'**éditorial** | La position du journal |
+| | La **chronique**, la **critique** | Un point de vue signé |
+| | La **tribune** | Signée par quelqu'un d'extérieur |
 
-> Un fait se vérifie, une opinion se discute. Un journal honnête signale clairement laquelle des deux il publie.
+> Confondre les deux familles est la première source de malentendus. Un fait se **vérifie**, une opinion se **discute** — et un journal honnête signale clairement laquelle des deux il publie.
 
-## L’habillage
-Le **titre** accroche, le **chapô** résume, l’**attaque** est la première phrase, la **chute** la dernière ; l’**intertitre** aère ; la **légende** dit ce que la photo ne dit pas seule.
+## L'habillage
+| L'élément | Son rôle |
+| Le **titre** | Il accroche |
+| Le **chapô** | Il résume |
+| L'**attaque** | La première phrase |
+| La **chute** | La dernière |
+| L'**intertitre** | Il aère |
+| La **légende** | Elle dit ce que la photo ne dit pas seule |
 
 ## La déontologie
-La **Charte de Munich** (1971) fixe les devoirs : respecter la vérité, vérifier avant de publier, ne pas dénaturer les informations, rectifier ses erreurs, protéger ses **sources**, ne pas confondre le métier avec la publicité. Un fait se **recoupe** : on le tient d’au moins deux sources indépendantes.
+La **Charte de Munich** (1971) fixe les devoirs :
+- respecter la **vérité** et vérifier avant de publier ;
+- ne pas dénaturer les informations ;
+- **rectifier** ses erreurs ;
+- protéger ses **sources** ;
+- ne pas confondre le métier avec la publicité.
 
-## Vérifier aujourd’hui
-Contre les fausses informations : remonter à la **source primaire**, dater et localiser une image (recherche d’image inversée), distinguer le **compte satirique** du média d’information, se méfier des titres qui provoquent une émotion immédiate — c’est souvent leur seule fonction.`,
+> Un fait se **recoupe** : on le tient d'au moins deux sources indépendantes.
+
+## Vérifier aujourd'hui
+| Le réflexe | Ce qu'il permet |
+| Remonter à la **source primaire** | Voir le document d'origine |
+| Dater et localiser une image | Une recherche d'image inversée |
+| Distinguer le **compte satirique** du média d'information | Éviter le contresens |
+| Se méfier des titres à forte émotion | C'est souvent leur seule fonction |`,
           },
           questions: [
             ['Quelles sont les cinq questions de base d’un article ?', ['Qui, quoi, quand, où, pourquoi', 'Comment, combien, pourquoi, quand, qui', 'Où, quand, combien, à qui, pour quoi faire', 'Qui, comment, combien, pourquoi, où'], 0, 'Souvent complétées par « comment ».'],
@@ -429,24 +611,43 @@ Contre les fausses informations : remonter à la **source primaire**, dater et l
           axe: 'La littérature d’idées et la presse du XIXe siècle au XXIe siècle',
           lecon: {
             titre: 'Le siècle où le journal devient une machine',
-            cours: `En cent ans, le journal passe d’une feuille coûteuse réservée à quelques milliers de lecteurs au premier objet culturel de masse.
+            cours: `En cent ans, le journal passe d'une feuille coûteuse réservée à quelques milliers de lecteurs au premier objet culturel de masse.
 
-## Les conditions de l’essor
-Trois causes se combinent : les **progrès techniques** (presse rotative, papier bon marché, télégraphe puis chemin de fer pour la diffusion), l’**alphabétisation** (accélérée par les lois **Ferry** de 1881-1882 sur l’école gratuite, laïque et obligatoire) et l’**invention économique** de Girardin, qui en 1836 divise par deux le prix de La Presse en la finançant par la **publicité**.
+## Les conditions de l'essor
+| La cause | Son contenu |
+| Les **progrès techniques** | Presse rotative, papier bon marché, télégraphe, chemin de fer pour la diffusion |
+| L'**alphabétisation** | Accélérée par les lois **Ferry** de 1881-1882 : école gratuite, laïque, obligatoire |
+| L'invention **économique** de Girardin | En **1836**, il divise par deux le prix de *La Presse* en la finançant par la **publicité** |
 
 ## Le roman-feuilleton
-Pour fidéliser le lecteur, on publie un roman en épisodes au bas de la une : le **feuilleton**. **Eugène Sue** (Les Mystères de Paris), **Alexandre Dumas** (Les Trois Mousquetaires, Le Comte de Monte-Cristo) écrivent avec la contrainte du suspense en fin d’épisode. Le format façonne l’écriture : chapitres courts, rebondissements, personnages typés.
+Pour fidéliser le lecteur, on publie un roman en épisodes au bas de la une.
+
+| L'auteur | Son feuilleton |
+| **Eugène Sue** | *Les Mystères de Paris* |
+| **Alexandre Dumas** | *Les Trois Mousquetaires*, *Le Comte de Monte-Cristo* |
+
+| La contrainte | Son effet sur l'écriture |
+| Le **suspense** en fin d'épisode | Des chapitres courts |
+| La parution régulière | Des rebondissements fréquents |
+| Un public large | Des personnages **typés**, reconnaissables |
 
 > La littérature et le journalisme partagent le même papier, les mêmes auteurs et le même public : au XIXe siècle, la frontière entre les deux est un mince filet de colle.
 
 ## Les grands textes de combat
-La presse est le lieu de l’engagement : **Hugo** contre le coup d’État de Louis-Napoléon Bonaparte et contre la peine de mort, **Zola** avec **J’accuse…!** (1898), qui lui vaudra un procès et l’exil. La **loi de 1881** protège cette liberté tout en punissant la diffamation.
+| L'auteur | Son combat |
+| **Hugo** | Contre le coup d'État de Louis-Napoléon Bonaparte, et contre la peine de mort |
+| **Zola** | **J'accuse… !** (1898), qui lui vaudra un procès et l'exil |
 
-## L’autre face
-Le siècle invente aussi le **fait divers**, la **chronique judiciaire**, la course au sensationnel, et les campagnes de presse qui peuvent détruire une réputation. La caricature — **Daumier**, **Le Charivari** — subit censure et procès.
+La **loi de 1881** protège cette liberté tout en punissant la diffamation.
+
+## L'autre face
+| L'invention du siècle | Son revers |
+| Le **fait divers**, la chronique judiciaire | La course au sensationnel |
+| Les **campagnes de presse** | Elles peuvent détruire une réputation |
+| La **caricature** — Daumier, *Le Charivari* | Censure et procès |
 
 ## Ce qui reste
-Beaucoup de nos habitudes de lecture datent de là : la une, le titre accrocheur, la série à épisodes, la tribune signée, le débat public par journaux interposés.`,
+La une, le titre accrocheur, la série à épisodes, la tribune signée, le débat public par journaux interposés.`,
           },
           questions: [
             ['Quelle invention économique Girardin introduit-il en 1836 ?', ['Financer le journal par la publicité pour en baisser le prix', 'Vendre le journal par abonnement uniquement', 'Supprimer les illustrations', 'Imprimer sur du papier de luxe'], 0, 'La Presse coûte deux fois moins cher que ses concurrents.'],
@@ -464,21 +665,43 @@ Beaucoup de nos habitudes de lecture datent de là : la une, le titre accrocheur
           axe: 'La littérature d’idées et la presse du XIXe siècle au XXIe siècle',
           lecon: {
             titre: 'Un poète chassé qui fait de son absence une arme',
-            cours: `Le 2 décembre 1851, **Louis-Napoléon Bonaparte** prend le pouvoir par un coup d’État. **Victor Hugo**, député opposé au coup de force, fuit : Bruxelles, Jersey, puis **Guernesey**. Il ne rentrera qu’en 1870, après dix-neuf ans.
+            cours: `Le 2 décembre 1851, Louis-Napoléon Bonaparte prend le pouvoir par un coup d'État. Victor Hugo, député opposé au coup de force, fuit.
+
+## Le parcours de l'exil
+| L'étape | Sa date |
+| Le **coup d'État** | 2 décembre 1851 |
+| Bruxelles, puis Jersey | 1852-1855 |
+| **Guernesey** | 1855-1870 |
+| Le retour | **1870**, après dix-neuf ans |
 
 ## Un exil choisi
-Hugo aurait pu accepter l’amnistie de 1859. Il la refuse par une formule restée célèbre : quand la liberté rentrera, il rentrera. L’exil cesse d’être une punition subie pour devenir une **position morale**, et le poète en tire une autorité que le pouvoir ne peut pas lui retirer.
+Hugo aurait pu accepter l'**amnistie de 1859**. Il la refuse : quand la liberté rentrera, il rentrera.
 
-> « Et s’il n’en reste qu’un, je serai celui-là. » (Ultima verba, Les Châtiments)
+> L'exil cesse d'être une punition subie pour devenir une **position morale** — et le poète en tire une autorité que le pouvoir ne peut pas lui retirer.
 
-## Deux registres
-Les **Châtiments** (1853) sont l’exil en colère : la **satire**, l’**invective**, le pamphlet en vers contre « Napoléon le Petit ». Les **Contemplations** (1856) sont l’exil en deuil : la mort de sa fille **Léopoldine**, noyée en 1843, y devient le centre d’un livre organisé en « Autrefois » et « Aujourd’hui », séparés par ce gouffre.
+> « Et s'il n'en reste qu'un, je serai celui-là. » (*Ultima verba*, *Les Châtiments*)
 
-## Dire l’absence
-Le manque se dit par des procédés simples et puissants : l’**antithèse** entre ici et là-bas, le **champ lexical** de la mer et de l’île, l’**apostrophe** au pays perdu, l’**anaphore** qui martèle, la **personnification** de la France ou de l’Océan. Le lieu de l’exil, l’île, est à la fois prison et poste d’observation.
+## Deux registres, deux recueils
+| Le recueil | Sa date | Son registre | Son sujet |
+| *Les Châtiments* | 1853 | La **colère** : satire, invective, pamphlet en vers | « Napoléon le Petit » |
+| *Les Contemplations* | 1856 | Le **deuil** | La mort de **Léopoldine**, noyée en 1843 |
 
-## L’exil comme force
-Hugo continue de publier, se fait photographier sur son rocher, écrit **Les Misérables** à Guernesey : il transforme l’éloignement en scène. Absent du territoire, il devient omniprésent dans les esprits — l’exil, chez lui, est une manière de rester.`,
+*Les Contemplations* s'organisent en « Autrefois » et « Aujourd'hui », séparés par ce gouffre.
+
+## Dire l'absence
+| Le procédé | Ce qu'il produit |
+| L'**antithèse** entre ici et là-bas | Le partage du monde en deux |
+| Le **champ lexical** de la mer et de l'île | L'enfermement et l'horizon |
+| L'**apostrophe** au pays perdu | Il devient un interlocuteur |
+| L'**anaphore** | Elle martèle |
+| La **personnification** de la France ou de l'Océan | Des forces qui répondent |
+
+> Le lieu de l'exil, l'île, est à la fois prison et poste d'observation.
+
+## L'exil comme force
+Hugo continue de publier, se fait photographier sur son rocher, écrit *Les Misérables* à Guernesey.
+
+> Absent du territoire, il devient omniprésent dans les esprits : l'exil, chez lui, est une manière de rester.`,
           },
           questions: [
             ['Quel événement provoque l’exil de Victor Hugo ?', ['Le coup d’État du 2 décembre 1851', 'La révolution de 1848', 'La Commune de Paris', 'La guerre de 1870'], 0, 'Il s’oppose à Louis-Napoléon Bonaparte, futur Napoléon III.'],
@@ -499,21 +722,42 @@ Hugo continue de publier, se fait photographier sur son rocher, écrit **Les Mis
             cours: `Le XXe siècle est celui des exils de masse : guerres mondiales, régimes totalitaires, guerres coloniales, dictatures. La poésie enregistre ces départs et en fait une forme.
 
 ## Deux exils
-L’exil **subi** — fuir une menace — et l’exil **intérieur**, quand on reste au pays mais qu’on ne s’y reconnaît plus. Beaucoup de poèmes du siècle jouent des deux à la fois.
+| L'exil | Ce qu'il est |
+| **Subi** | On fuit une menace |
+| **Intérieur** | On reste au pays, mais on ne s'y reconnaît plus |
+
+Beaucoup de poèmes du siècle jouent des deux à la fois.
 
 ## Des voix
-**Aimé Césaire**, dans le **Cahier d’un retour au pays natal** (1939), écrit le retour comme une épreuve et forge le mot **négritude** pour transformer une insulte en fierté. **Léopold Sédar Senghor** écrit l’Afrique depuis Paris. **Nâzim Hikmet**, poète turc, écrit depuis la prison puis l’exil. **Paul Celan**, survivant de la Shoah, écrit en allemand — la langue des bourreaux — une poésie trouée par ce qu’elle ne peut pas dire. **Mahmoud Darwich** fait de la Palestine perdue un territoire de langue.
+| Le poète | Son exil et son œuvre |
+| **Aimé Césaire** | Le *Cahier d'un retour au pays natal* (1939) : le retour comme épreuve ; il forge le mot **négritude**, transformant une insulte en fierté |
+| **Léopold Sédar Senghor** | Il écrit l'Afrique depuis Paris |
+| **Nâzim Hikmet** | Poète turc, il écrit depuis la prison puis l'exil |
+| **Paul Celan** | Survivant de la Shoah, il écrit en **allemand** — la langue des bourreaux — une poésie trouée |
+| **Mahmoud Darwich** | Il fait de la Palestine perdue un territoire de langue |
 
 > Quand la terre manque, il reste la langue : beaucoup de poètes exilés en font leur seul pays.
 
-## Ce que l’exil fait à la forme
-Le vers se libère souvent du mètre régulier : **vers libre**, ruptures, blancs typographiques, phrases inachevées, **plurilinguisme** (des mots de la langue perdue au milieu du poème). Les images reviennent : la valise, le train, la frontière, la mer, la fenêtre, la carte, la clé d’une maison qui n’existe plus.
+## Ce que l'exil fait à la forme
+| Le procédé | Ce qu'il imite |
+| Le **vers libre** | La rupture avec l'ordre ancien |
+| Les **blancs** typographiques, les phrases inachevées | Ce qui manque |
+| Le **plurilinguisme** | Des mots de la langue perdue au milieu du poème |
+
+| L'image récurrente | Ce qu'elle porte |
+| La valise, le train | Le départ |
+| La frontière, la mer | Le passage |
+| La fenêtre, la carte | Le regard vers l'ailleurs |
+| La **clé** d'une maison qui n'existe plus | La perte irréversible |
 
 ## Chanter aussi
-La chanson prolonge ces poèmes — Barbara, Ferré, Moustaki, plus tard le rap — parce qu’elle circule là où le livre n’entre pas.
+La chanson prolonge ces poèmes — Barbara, Ferré, Moustaki, plus tard le rap — parce qu'elle circule là où le livre n'entre pas.
 
-## Lire un poème d’exil
-Chercher trois choses : ce que le poème NOMME (un lieu, une date, un nom propre), ce qu’il **tait**, et comment sa forme imite la rupture — vers coupés, énumérations qui s’essoufflent, retours obsessionnels d’un même mot.`,
+## Lire un poème d'exil
+| La question | Ce qu'elle cherche |
+| Que **nomme**-t-il ? | Un lieu, une date, un nom propre |
+| Que **tait**-il ? | Les silences, les blancs |
+| Comment sa **forme** imite-t-elle la rupture ? | Vers coupés, énumérations qui s'essoufflent, retours obsessionnels d'un même mot |`,
           },
           questions: [
             ['Quelle différence entre exil subi et exil intérieur ?', ['L’un fait quitter le pays, l’autre se vit sur place sans s’y reconnaître', 'L’un est temporaire, l’autre définitif', 'L’un concerne les écrivains, l’autre les citoyens', 'Il n’y a aucune différence'], 0, 'Beaucoup de poèmes du XXe siècle mêlent les deux.'],
@@ -531,24 +775,39 @@ Chercher trois choses : ce que le poème NOMME (un lieu, une date, un nom propre
           axe: 'La littérature d’idées et la presse du XIXe siècle au XXIe siècle',
           lecon: {
             titre: 'Le théâtre documentaire face à l’actualité',
-            cours: `**Sonia Ristić**, née à Belgrade en 1972, a elle-même connu l’exil au moment des guerres de Yougoslavie. Sa pièce **Migrants** porte à la scène des trajectoires contemporaines de départ, de traversée et d’attente.
+            cours: `Sonia Ristić, née à Belgrade en 1972, a elle-même connu l'exil au moment des guerres de Yougoslavie. Sa pièce *Migrants* porte à la scène des trajectoires contemporaines.
 
-## Un théâtre de l’urgence
-La pièce appartient à une famille de textes qu’on appelle **théâtre documentaire** ou **théâtre du réel** : l’auteur part de témoignages, de rapports, d’articles, et les met en forme dramatique. Le spectateur n’est pas invité à s’évader, mais à regarder ce qu’il croit déjà connaître par les journaux.
+## Un théâtre de l'urgence
+La pièce appartient au **théâtre documentaire**, ou théâtre du réel.
+
+| Sa matière première | Sa transformation |
+| Témoignages, rapports, articles | Mis en forme dramatique |
+
+> Le spectateur n'est pas invité à s'évader, mais à regarder ce qu'il croit déjà connaître par les journaux.
 
 ## Des voix plutôt que des héros
-Le texte fait entendre des **voix** — des personnes déplacées, des passeurs, des fonctionnaires, des témoins — parfois sans les nommer. Cette écriture **chorale** empêche l’identification à un seul héros et remplace le destin individuel par une situation collective.
+| Qui parle | Ce que cela produit |
+| Des personnes déplacées, des passeurs, des fonctionnaires, des témoins | Une écriture **chorale** |
+| Parfois sans être nommés | Le destin individuel cède la place à une **situation collective** |
 
-> Le chiffre anesthésie, le récit réveille : c’est le pari du théâtre documentaire.
+> Le chiffre anesthésie, le récit réveille : c'est le pari du théâtre documentaire.
 
 ## Le procédé
-Récits fragmentés, monologues, adresse directe au public, absence de décor réaliste, alternance entre le concret (un nom de ville, une somme d’argent, une durée d’attente) et le silence. Le plateau vide oblige le spectateur à imaginer ce que la télévision montre en boucle.
+| Le choix scénique | Son effet |
+| Récits **fragmentés**, monologues | Aucune intrigue linéaire à suivre |
+| L'**adresse directe** au public | Le spectateur est pris à partie |
+| L'**absence de décor** réaliste | Le plateau vide oblige à imaginer |
+| L'alternance concret / silence | Un nom de ville, une somme, une durée d'attente — puis rien |
 
 ## De quoi ça parle vraiment
-Moins de la migration comme problème politique que de ce que l’attente, la frontière et l’administration font à des personnes : la dignité, la peur, l’espoir, la mémoire du pays quitté. Le texte ne conclut pas à la place du public : il installe une question.
+Moins de la migration comme problème politique que de ce que **l'attente, la frontière et l'administration** font à des personnes : la dignité, la peur, l'espoir, la mémoire du pays quitté.
+
+> Le texte ne conclut pas à la place du public : il installe une question.
 
 ## À rapprocher
-Le corpus contemporain est large : romans, documentaires, photographies, chansons. La question posée par tous est la même — comment représenter la souffrance d’autrui sans la transformer en spectacle ?`,
+Romans, documentaires, photographies, chansons.
+
+> La question posée par tous est la même : comment représenter la souffrance d'autrui sans la transformer en spectacle ?`,
           },
           questions: [
             ['D’où vient Sonia Ristić ?', ['De Belgrade, en ex-Yougoslavie', 'De Grèce', 'Du Maroc', 'De Roumanie'], 0, 'Elle a elle-même connu l’exil pendant les guerres de Yougoslavie.'],
@@ -569,24 +828,41 @@ Le corpus contemporain est large : romans, documentaires, photographies, chanson
           axe: 'Le roman et le récit du XVIIIe siècle au XXIe siècle',
           lecon: {
             titre: 'Trois siècles de romans, et les outils pour les lire',
-            cours: `Le roman est le genre qui change le plus vite, parce qu’il n’a jamais eu de règles fixes. C’est aussi celui qui prétend le plus souvent dire la vérité sur la société.
+            cours: `Le roman est le genre qui change le plus vite, parce qu'il n'a jamais eu de règles fixes. C'est aussi celui qui prétend le plus souvent dire la vérité sur la société.
 
 ## Les outils de base
-Le **narrateur** n’est pas l’auteur. Il peut être **externe** (il raconte de l’extérieur, à la troisième personne) ou **interne** (un personnage raconte, à la première personne). Le **point de vue** — ou focalisation — peut être **zéro** (le narrateur sait tout), **interne** (on ne sait que ce qu’un personnage sait) ou **externe** (on ne voit que les comportements). Le **rythme** du récit varie : **sommaire** (on résume), **scène** (on raconte au rythme réel), **ellipse** (on saute), **pause** (on décrit).
+| L'outil | Ses valeurs |
+| Le **narrateur** | **Externe** (troisième personne, de l'extérieur) ou **interne** (un personnage raconte) |
+| Le **point de vue** | **Zéro** (il sait tout), **interne** (on ne sait que ce qu'un personnage sait), **externe** (on ne voit que les comportements) |
+
+> Le narrateur n'est pas l'auteur.
+
+| Le rythme du récit | Ce qu'il fait |
+| Le **sommaire** | On résume |
+| La **scène** | On raconte au rythme réel |
+| L'**ellipse** | On saute |
+| La **pause** | On décrit |
+
+## Trois siècles en un tableau
+| Le siècle | Ce que le roman y devient | Ses auteurs |
+| **XVIIIe** | Il conquiert sa légitimité en se **déguisant** | Laclos (*Les Liaisons dangereuses*), Prévost (*Manon Lescaut*), Voltaire (*Candide*) |
+| **XIXe** | **Réalisme** et **naturalisme** : le personnage est déterminé par son milieu | **Balzac**, **Flaubert**, **Zola** |
+| **XXe** | Le récit **doute de lui-même** | **Proust**, **Céline**, **Camus**, le Nouveau Roman |
+| **XXIe** | Retour du **récit du réel** | Autofiction, récits de filiation, romans d'enquête |
 
 ## Le XVIIIe siècle
-Le roman conquiert sa légitimité en se déguisant : **roman par lettres** (Les Liaisons dangereuses de Laclos), **mémoires fictifs** (Manon Lescaut de Prévost), **conte philosophique** (Candide de Voltaire). Il raconte l’apprentissage d’un individu confronté au monde.
+Roman par lettres, mémoires fictifs, conte philosophique : le roman raconte l'apprentissage d'un individu confronté au monde.
 
 ## Le XIXe siècle
-Le siècle du **réalisme** et du **naturalisme** : **Balzac** veut faire concurrence à l’état civil, **Flaubert** travaille la banalité, **Zola** applique au roman une méthode qu’il dit expérimentale. Le personnage est déterminé par son milieu, son hérédité, son époque.
+Balzac veut faire concurrence à l'état civil, Flaubert travaille la banalité, Zola applique au roman une méthode qu'il dit expérimentale.
 
-> Le roman du XIXe siècle raconte moins des aventures que des places sociales : monter, tomber, tenir.
+> Le roman du XIXe siècle raconte moins des aventures que des **places sociales** : monter, tomber, tenir.
 
 ## Le XXe siècle
-Le récit doute de lui-même : **monologue intérieur**, chronologie éclatée, personnage sans nom ni psychologie stable. **Proust** explore la mémoire, **Céline** casse la langue écrite, **Camus** écrit une voix blanche, le **Nouveau Roman** supprime l’intrigue.
+Monologue intérieur, chronologie éclatée, personnage sans nom ni psychologie stable. Proust explore la mémoire, Céline casse la langue écrite, Camus écrit une voix blanche, le Nouveau Roman supprime l'intrigue.
 
 ## Le XXIe siècle
-Retour du récit du réel : **autofiction**, **récits de filiation**, romans nourris d’enquête, écritures des marges et des villes. Le roman reprend le rôle de témoin, sans renoncer aux libertés gagnées au siècle précédent.`,
+Le roman reprend le rôle de témoin, sans renoncer aux libertés gagnées au siècle précédent.`,
           },
           questions: [
             ['Le narrateur d’un roman est-il l’auteur ?', ['Non, c’est une voix construite par le texte', 'Oui, toujours', 'Oui, sauf dans les récits à la première personne', 'Seulement dans les romans historiques'], 0, 'Confondre les deux est l’erreur la plus fréquente en commentaire.'],
@@ -604,24 +880,46 @@ Retour du récit du réel : **autofiction**, **récits de filiation**, romans no
           axe: 'Le roman et le récit du XVIIIe siècle au XXIe siècle',
           lecon: {
             titre: 'Peindre le réel pour le mettre en accusation',
-            cours: `Le **réalisme** ne se contente pas de décrire : il choisit ce qu’il décrit, et ce choix est déjà un jugement.
+            cours: `Le réalisme ne se contente pas de décrire : il choisit ce qu'il décrit, et ce choix est déjà un jugement.
 
 ## Le programme réaliste
-Écrire le monde tel qu’il est : les métiers, l’argent, les intérieurs, les corps, la province autant que Paris. D’où l’importance de la **documentation** — Zola visite des mines, Flaubert lit des traités —, du **détail vrai** et du **discours indirect libre**, qui fait passer les pensées d’un personnage dans le récit sans guillemets ni verbe introducteur.
+| Ce qu'il écrit | Ce qu'il abandonne |
+| Les métiers, l'argent, les intérieurs, les corps | L'idéalisation |
+| La province autant que Paris | Le seul monde des salons |
+
+| L'outil | Son rôle |
+| La **documentation** | Zola visite des mines, Flaubert lit des traités |
+| Le **détail vrai** | Il fait croire au reste |
+| Le **discours indirect libre** | Il fait passer les pensées d'un personnage dans le récit, sans guillemets ni verbe introducteur |
 
 ## Maupassant
-Élève de Flaubert, **Guy de Maupassant** (1850-1893) écrit environ trois cents **nouvelles**. La nouvelle réaliste tient en peu de pages, resserre l’action sur une situation et se termine souvent par une **chute** qui retourne le sens du récit.
+| Le fait | Son détail |
+| Ses dates | 1850-1893 |
+| Son maître | **Flaubert** |
+| Son œuvre | Environ **trois cents nouvelles** |
+| Sa forme | Peu de pages, une situation resserrée, souvent une **chute** qui retourne le sens |
 
-> Dans « La Parure », dix ans de misère pour rembourser un bijou faux : la chute ne surprend pas seulement, elle accuse.
+> Dans « La Parure », dix ans de misère pour rembourser un bijou faux : la chute ne surprend pas seulement, elle **accuse**.
 
-## Ce qu’il met en accusation
-La **hiérarchie sociale** et le mépris (« Boule de suif », où des notables sacrifient une prostituée puis la méprisent), la **vanité** et l’apparence (« La Parure »), l’**hypocrisie** familiale et l’argent (« Aux champs », « Mon oncle Jules »), la **guerre** de 1870 et ses lâchetés.
+## Ce qu'il met en accusation
+| La cible | La nouvelle |
+| La **hiérarchie sociale** et le mépris | « Boule de suif » : des notables sacrifient une prostituée, puis la méprisent |
+| La **vanité** et l'apparence | « La Parure » |
+| L'**hypocrisie** familiale et l'argent | « Aux champs », « Mon oncle Jules » |
+| La **guerre** de 1870 et ses lâchetés | Plusieurs récits |
 
-## Comment il s’y prend
-Un narrateur qui n’explique pas : il montre. Une **ironie** froide qui laisse les personnages se juger par leurs propres paroles. Des descriptions brèves mais orientées, où un objet — une robe, une pièce de monnaie, une soupe — dit la place sociale mieux qu’un commentaire.
+## Comment il s'y prend
+| Le procédé | Son effet |
+| Un narrateur qui **montre** sans expliquer | Le lecteur juge lui-même |
+| Une **ironie froide** | Les personnages se condamnent par leurs propres paroles |
+| Des descriptions **brèves mais orientées** | Une robe, une pièce de monnaie, une soupe disent la place sociale |
 
 ## Réalisme et naturalisme
-Le naturalisme prolonge le réalisme en ajoutant la thèse **héréditaire** et **sociale** : le personnage n’est pas seulement décrit dans son milieu, il en est le produit. Maupassant reste plus proche du réalisme : il accuse la société sans se réclamer d’une science.`,
+| Le courant | Sa thèse |
+| Le **réalisme** | Décrire le personnage **dans** son milieu |
+| Le **naturalisme** | Le personnage est le **produit** de son hérédité et de son milieu |
+
+> Maupassant reste plus proche du réalisme : il accuse la société sans se réclamer d'une science.`,
           },
           questions: [
             ['Qu’est-ce que le discours indirect libre ?', ['Les pensées d’un personnage passent dans le récit sans guillemets ni verbe introducteur', 'Un dialogue entre deux personnages', 'Un monologue au théâtre', 'Une citation entre guillemets'], 0, 'Il permet l’ironie : on ne sait plus qui parle, du personnage ou du narrateur.'],
@@ -639,24 +937,51 @@ Le naturalisme prolonge le réalisme en ajoutant la thèse **héréditaire** et 
           axe: 'Le roman et le récit du XVIIIe siècle au XXIe siècle',
           lecon: {
             titre: 'Un roman écrit à voix blanche',
-            cours: `Publié en **1942**, **L’Étranger** d’**Albert Camus** raconte, à la première personne, quelques mois de la vie de **Meursault**, employé à Alger : la mort de sa mère, une liaison avec Marie, un meurtre sur une plage, un procès, une condamnation à mort.
+            cours: `Publié en 1942, *L'Étranger* d'Albert Camus raconte à la première personne quelques mois de la vie de Meursault, employé à Alger.
+
+## L'histoire
+| L'étape | Ce qui se passe |
+| Le début | La mort de sa mère, et l'enterrement |
+| Ensuite | Une liaison avec Marie, une vie ordinaire |
+| Le basculement | Un **meurtre** sur une plage, sous un soleil écrasant |
+| La fin | Le procès, et la condamnation à mort |
 
 ## Une langue sans effet
-Le récit est écrit dans un français court, au **passé composé**, sans subordination complexe ni image. Le lecteur reçoit les faits comme des constats. Cette **voix blanche** produit un malaise : le narrateur dit tout et n’explique rien.
+| Le trait | Son effet |
+| Un français **court**, au **passé composé** | Les faits arrivent comme des constats |
+| Aucune subordination complexe, aucune image | Rien n'est interprété pour le lecteur |
+
+> Cette **voix blanche** produit un malaise : le narrateur dit tout et n'explique rien.
 
 ## Un héros qui ne joue pas le jeu
-Meursault ne pleure pas à l’enterrement de sa mère, ne ment pas, ne dit pas qu’il aime, ne se justifie pas. Le procès le condamne moins pour le meurtre que pour ces manquements : on lui reproche d’avoir « enterré sa mère avec un cœur de criminel ».
+| Ce que Meursault ne fait pas | Ce qu'on lui reproche |
+| Pleurer à l'enterrement de sa mère | D'avoir « enterré sa mère avec un cœur de criminel » |
+| Mentir, dire qu'il aime | De ne pas se conformer |
+| Se justifier | De refuser le rituel du procès |
 
-> Ce n’est pas l’acte qui est jugé, c’est l’écart. La société ne pardonne pas qu’on refuse ses rituels.
+> Ce n'est pas l'acte qui est jugé, c'est l'**écart**. La société ne pardonne pas qu'on refuse ses rituels.
 
-## L’absurde
-Camus range l’œuvre dans son « cycle de l’absurde », avec l’essai **Le Mythe de Sisyphe** et la pièce **Caligula**. L’**absurde** naît de la rencontre entre le besoin humain de sens et le silence du monde. La révolte, chez Camus, consiste à vivre lucidement sans se raconter d’histoires.
+## L'absurde
+Camus range l'œuvre dans son « cycle de l'absurde ».
+
+| L'œuvre du cycle | Son genre |
+| *L'Étranger* | Roman |
+| *Le Mythe de Sisyphe* | Essai |
+| *Caligula* | Théâtre |
+
+L'**absurde** naît de la rencontre entre le besoin humain de sens et le silence du monde.
+
+> La révolte, chez Camus, consiste à vivre lucidement sans se raconter d'histoires.
 
 ## Deux parties, deux temps
-La première partie suit une vie ordinaire jusqu’au meurtre, sous un soleil écrasant. La seconde, celle de la prison et du procès, la relit et la déforme : les mêmes faits, racontés par d’autres, deviennent des preuves de monstruosité. Le roman démonte ainsi la fabrication d’une culpabilité.
+| La partie | Ce qu'elle fait |
+| **Première** | Elle suit une vie ordinaire jusqu'au meurtre |
+| **Seconde** | La prison et le procès **relisent** ces mêmes faits, et les déforment |
+
+> Racontés par d'autres, les mêmes faits deviennent des preuves de monstruosité. Le roman démonte ainsi la **fabrication d'une culpabilité**.
 
 ## Une œuvre à part
-À part par sa langue, par son héros et par sa place : traduit dans le monde entier, il reste l’un des romans français les plus lus, et l’un des plus discutés — notamment pour la figure sans nom de l’Arabe tué sur la plage.`,
+À part par sa langue, par son héros, et par sa place : traduit dans le monde entier, l'un des romans français les plus lus — et l'un des plus discutés, notamment pour la figure sans nom de l'Arabe tué sur la plage.`,
           },
           questions: [
             ['En quelle année paraît L’Étranger ?', ['1942', '1932', '1957', '1968'], 0, 'Camus recevra le prix Nobel en 1957.'],
@@ -674,24 +999,47 @@ La première partie suit une vie ordinaire jusqu’au meurtre, sous un soleil é
           axe: 'Le roman et le récit du XVIIIe siècle au XXIe siècle',
           lecon: {
             titre: 'Le récit de soi et ses pièges',
-            cours: `L’**autobiographie** est le récit rétrospectif qu’une personne réelle fait de sa propre existence, en mettant l’accent sur sa vie individuelle. Auteur, narrateur et personnage y sont **la même personne** : c’est le **pacte autobiographique** (Philippe Lejeune).
+            cours: `L'autobiographie est le récit rétrospectif qu'une personne réelle fait de sa propre existence, en mettant l'accent sur sa vie individuelle.
+
+## Le pacte autobiographique
+| Ce qui doit coïncider | La conséquence |
+| L'**auteur**, le **narrateur** et le **personnage** | C'est la même personne |
+
+C'est le **pacte autobiographique**, formulé par Philippe Lejeune.
 
 ## Les genres voisins
-Les **Mémoires** racontent une époque à travers un témoin ; le **journal intime** s’écrit au jour le jour, sans recul ; le **roman autobiographique** garde la fiction comme paravent ; l’**autofiction** assume de mêler les deux ; le **récit de filiation** part des parents ou des grands-parents pour se comprendre soi.
+| Le genre | Ce qui le distingue |
+| Les **Mémoires** | Ils racontent une **époque**, à travers un témoin |
+| Le **journal intime** | Il s'écrit au jour le jour, sans recul |
+| Le **roman autobiographique** | La fiction sert de paravent |
+| L'**autofiction** | Elle assume de mêler les deux |
+| Le **récit de filiation** | Il part des parents ou des grands-parents pour se comprendre soi |
 
-## Pourquoi s’écrire
-Se justifier (**Rousseau** ouvre Les Confessions en 1782 en promettant de tout dire), témoigner (les récits de déportation, **Primo Levi**), comprendre son parcours social (**Annie Ernaux**), garder une mémoire menacée, ou simplement transmettre.
+## Pourquoi s'écrire
+| Le motif | Son exemple |
+| Se **justifier** | **Rousseau** ouvre *Les Confessions* (1782) en promettant de tout dire |
+| **Témoigner** | Les récits de déportation, **Primo Levi** |
+| Comprendre son **parcours social** | **Annie Ernaux** |
+| Garder une **mémoire menacée** | Récits de familles, de langues, de métiers disparus |
 
-> « Je forme une entreprise qui n’eut jamais d’exemple. » — Rousseau, Les Confessions.
+> « Je forme une entreprise qui n'eut jamais d'exemple. » — Rousseau, *Les Confessions*.
 
-## Comment s’écrire
-Trois problèmes techniques reviennent. Le **temps** : deux « je » cohabitent, celui qui vécut et celui qui écrit, et le second sait ce que le premier ignorait. La **mémoire** : elle trie, déforme, invente sans le vouloir. La **sincérité** : elle n’est pas la vérité, car on ne se raconte jamais devant personne.
+## Comment s'écrire : trois problèmes
+| Le problème | Sa difficulté |
+| Le **temps** | Deux « je » cohabitent : celui qui vécut et celui qui écrit — et le second sait ce que le premier ignorait |
+| La **mémoire** | Elle trie, déforme, invente sans le vouloir |
+| La **sincérité** | Elle n'est pas la vérité : on ne se raconte jamais devant personne |
 
 ## Le style
-Choix du **temps** (imparfait de l’habitude, passé composé du bilan, présent qui rapproche), de la **distance** (ironie, tendresse, froideur), du **cadre** (une maison, une classe, un objet). Annie Ernaux écrit dans une langue volontairement plate, sans effets, pour ne pas trahir le milieu dont elle vient : c’est une décision politique autant qu’esthétique.
+| Le choix | Ce qu'il produit |
+| Le **temps** verbal | Imparfait de l'habitude, passé composé du bilan, présent qui rapproche |
+| La **distance** | Ironie, tendresse, froideur |
+| Le **cadre** | Une maison, une classe, un objet |
+
+> Annie Ernaux écrit dans une langue volontairement plate, sans effets, pour ne pas trahir le milieu dont elle vient : c'est une décision politique autant qu'esthétique.
 
 ## Lire une autobiographie
-Ne pas croire tout ce qu’elle dit, ne pas la réduire à un document : chercher ce qu’elle choisit de raconter, ce qu’elle tait, et pour qui elle est écrite.`,
+Ne pas croire tout ce qu'elle dit, ne pas la réduire à un document : chercher ce qu'elle **choisit** de raconter, ce qu'elle **tait**, et **pour qui** elle est écrite.`,
           },
           questions: [
             ['Qu’est-ce que le pacte autobiographique ?', ['L’identité entre auteur, narrateur et personnage', 'La promesse de ne rien inventer', 'Le contrat avec l’éditeur', 'L’engagement à publier après sa mort'], 0, 'La formule est de Philippe Lejeune.'],
@@ -709,24 +1057,48 @@ Ne pas croire tout ce qu’elle dit, ne pas la réduire à un document : cherche
           axe: 'Le roman et le récit du XVIIIe siècle au XXIe siècle',
           lecon: {
             titre: 'D’un quartier de Strasbourg à la scène',
-            cours: `**Abd Al Malik**, né Régis Fayette-Mikano en 1975, rappeur et écrivain, publie en **2004** **Qu’Allah bénisse la France**, récit autobiographique de son enfance à Strasbourg, dans le quartier du **Neuhof**.
+            cours: `Abd Al Malik, né Régis Fayette-Mikano en 1975, publie en 2004 *Qu'Allah bénisse la France*, récit autobiographique de son enfance à Strasbourg, dans le quartier du Neuhof.
 
 ## Un récit de trajectoire
-Le livre suit un parcours : une famille congolaise, la précarité, l’école où il réussit, la délinquance en parallèle, la découverte du rap, la conversion à l’islam puis le choix d’un islam soufi de paix. Le héros n’est pas exemplaire d’avance : il devient ce qu’il raconte.
+| L'étape | Ce qu'elle apporte |
+| Une famille congolaise, la **précarité** | Le point de départ |
+| L'**école**, où il réussit | Une porte |
+| La **délinquance**, en parallèle | L'autre chemin, simultané |
+| La découverte du **rap** | Une langue à soi |
+| La **conversion**, puis le choix d'un islam soufi de paix | Une discipline intérieure |
 
-## Un récit d’ascension et de dette
-La réussite n’efface pas le point de départ. Le narrateur revient sans cesse sur ce qu’il doit — à sa mère, à un frère, à un professeur, à un quartier — et sur ce qu’il a laissé derrière lui. C’est un **récit de transfuge** : celui qui change de monde social découvre qu’on n’en change jamais tout à fait.
+> Le héros n'est pas exemplaire d'avance : il **devient** ce qu'il raconte.
 
-> Le titre est une provocation calculée : il accole deux mots que le débat public tient pour incompatibles, et le livre entier travaille à montrer qu’ils ne le sont pas.
+## Un récit d'ascension et de dette
+La réussite n'efface pas le point de départ. Le narrateur revient sans cesse sur ce qu'il doit — à sa mère, à un frère, à un professeur, à un quartier.
+
+> C'est un **récit de transfuge** : celui qui change de monde social découvre qu'on n'en change jamais tout à fait.
+
+> Le titre est une provocation calculée : il accole deux mots que le débat public tient pour incompatibles, et le livre entier travaille à montrer qu'ils ne le sont pas.
 
 ## Une langue mêlée
-Français courant, argot du quartier, verlan, références religieuses et littéraires cohabitent. Cette langue composite est le sujet même du livre : elle prouve qu’une identité peut être plusieurs choses à la fois.
+| Le registre présent | Ce qu'il apporte |
+| Le français courant | La narration |
+| L'**argot** du quartier, le verlan | La voix réelle |
+| Les références **religieuses** | La quête intérieure |
+| Les références **littéraires** | L'appropriation d'un héritage |
 
-## L’engagement
-Le récit refuse deux discours symétriques : celui qui fait des quartiers populaires un décor de misère, et celui qui les idéalise. Il défend l’**éducation**, la **spiritualité** comme travail sur soi, et la parole comme moyen d’exister. Abd Al Malik en tire un album, puis un film qu’il réalise en 2014.
+> Cette langue composite est le sujet même du livre : elle prouve qu'une identité peut être plusieurs choses à la fois.
 
-## Ce qu’on en retient pour le programme
-Un même parcours peut être raconté comme fait divers, comme statistique ou comme récit à la première personne — et le récit est le seul des trois à rendre au sujet le droit de se définir lui-même.`,
+## L'engagement
+| Le discours refusé | Pourquoi |
+| Le quartier comme **décor de misère** | Il nie les personnes |
+| Le quartier **idéalisé** | Il nie les difficultés |
+
+| Ce que le livre défend | Son rôle |
+| L'**éducation** | Une issue réelle |
+| La **spiritualité** | Un travail sur soi |
+| La **parole** | Un moyen d'exister |
+
+Abd Al Malik en tire un album, puis un film qu'il réalise en 2014.
+
+## Ce qu'on en retient
+> Un même parcours peut être raconté comme fait divers, comme statistique ou comme récit à la première personne — et le récit est le seul des trois à rendre au sujet le droit de se définir lui-même.`,
           },
           questions: [
             ['En quelle année paraît Qu’Allah bénisse la France ?', ['2004', '1994', '2014', '2020'], 0, 'Le film que l’auteur en tire date, lui, de 2014.'],
@@ -744,24 +1116,41 @@ Un même parcours peut être raconté comme fait divers, comme statistique ou co
           axe: 'Le roman et le récit du XVIIIe siècle au XXIe siècle',
           lecon: {
             titre: 'La ville comme personnage et comme jugement',
-            cours: `La ville n’est pas un décor : dans le récit, elle **classe** les personnages. Dire où quelqu’un habite, c’est déjà dire ce qu’il peut espérer.
+            cours: `La ville n'est pas un décor : dans le récit, elle classe les personnages. Dire où quelqu'un habite, c'est déjà dire ce qu'il peut espérer.
 
 ## La ville du XIXe siècle
-Paris devient un personnage à part entière chez **Balzac** (la pension Vauquer contre le faubourg Saint-Germain), **Hugo** (les égouts, les barricades des Misérables), **Zola** (les Halles, le grand magasin, le quartier ouvrier). La **description** y est un outil d’analyse sociale : le mobilier, l’odeur, la lumière disent un revenu et une trajectoire.
+| L'auteur | Ce qu'il met en scène |
+| **Balzac** | La pension Vauquer contre le faubourg Saint-Germain |
+| **Hugo** | Les égouts, les barricades des *Misérables* |
+| **Zola** | Les Halles, le grand magasin, le quartier ouvrier |
+
+> La **description** y est un outil d'analyse sociale : le mobilier, l'odeur, la lumière disent un revenu et une trajectoire.
 
 ## Le XXe siècle
-La ville se dilate : banlieues, grands ensembles, périphéries. Le récit s’intéresse aux **marges** — la cité, la zone, l’usine, la gare — et à ceux qui les habitent. La **littérature ouvrière**, puis les écritures issues de l’immigration, entrent dans le champ du roman.
+| Le nouvel espace | Ce que le récit y cherche |
+| Banlieues, grands ensembles, périphéries | La dilatation de la ville |
+| La cité, la zone, l'usine, la gare | Les **marges** et ceux qui les habitent |
 
-> Décrire une cité comme un paysage exotique, c’est déjà la mettre à distance : la question de qui parle est ici décisive.
+La **littérature ouvrière**, puis les écritures issues de l'immigration, entrent dans le champ du roman.
+
+> Décrire une cité comme un paysage exotique, c'est déjà la mettre à distance : la question de **qui parle** est ici décisive.
 
 ## Le XXIe siècle
-Trois tendances se croisent : les récits écrits **de l’intérieur** par des auteurs qui viennent des quartiers populaires ; les récits d’**enquête**, nourris de terrain ; et les formes venues d’ailleurs — **rap**, **slam**, séries, documentaires — qui imposent leurs images de la ville dans la littérature.
+| La tendance | Sa position |
+| Les récits écrits **de l'intérieur** | Par des auteurs venus des quartiers populaires |
+| Les récits d'**enquête** | Nourris de terrain |
+| Les formes venues d'ailleurs | **Rap**, slam, séries, documentaires |
 
 ## Les procédés à repérer
-Le **champ lexical** de l’espace (béton, cage d’escalier, périph, terrasse), la **métonymie** (« la cité » pour ses habitants), l’**opposition** centre/périphérie, la **focalisation** (voit-on la cité de l’intérieur ou depuis une voiture qui passe ?), l’oralité (le **discours direct** et l’argot qui font entendre une langue réelle).
+| Le procédé | Ce qu'il révèle |
+| Le **champ lexical** de l'espace | Béton, cage d'escalier, périph, terrasse |
+| La **métonymie** | « La cité » pour ses habitants |
+| L'**opposition** centre / périphérie | Une hiérarchie spatiale |
+| La **focalisation** | Voit-on la cité de l'intérieur, ou depuis une voiture qui passe ? |
+| L'**oralité** | Discours direct et argot font entendre une langue réelle |
 
-## L’enjeu
-Une représentation n’est jamais neutre : elle produit de la sympathie, de la peur ou de l’indifférence. Étudier les écritures urbaines, c’est apprendre à lire les images sociales qu’on nous propose — et à se demander qui les fabrique.`,
+## L'enjeu
+> Une représentation n'est jamais neutre : elle produit de la sympathie, de la peur ou de l'indifférence. Étudier les écritures urbaines, c'est apprendre à lire les images sociales qu'on nous propose — et à se demander qui les fabrique.`,
           },
           questions: [
             ['Quel rôle joue la ville dans un récit réaliste ?', ['Elle classe socialement les personnages', 'Elle sert uniquement de décor', 'Elle remplace l’intrigue', 'Elle n’a pas d’importance'], 0, 'Dire où l’on habite, c’est dire ce qu’on peut espérer.'],
@@ -782,24 +1171,50 @@ Une représentation n’est jamais neutre : elle produit de la sympathie, de la 
           axe: 'Le théâtre du XVIIe siècle au XXIe siècle',
           lecon: {
             titre: 'Les mots pour analyser une pièce',
-            cours: `Une pièce de théâtre est un texte fait pour être **joué** : tout s’y analyse en double, comme écriture et comme représentation.
+            cours: `Une pièce de théâtre est un texte fait pour être joué : tout s'y analyse en double, comme écriture et comme représentation.
 
 ## Le texte
-Le **dialogue** est l’essentiel ; les **didascalies** sont les indications scéniques (décor, gestes, ton, entrées et sorties), écrites par l’auteur et non prononcées. La **réplique** est ce que dit un personnage ; une **tirade** est une longue réplique ; une **stichomythie** est un échange de répliques très courtes ; le **monologue** est une parole seule en scène ; l’**aparté** est dit au public sans être entendu des autres personnages.
+| Le terme | Sa définition |
+| Le **dialogue** | L'essentiel du texte |
+| Les **didascalies** | Les indications scéniques — décor, gestes, ton, entrées et sorties — non prononcées |
+| La **réplique** | Ce que dit un personnage |
+| La **tirade** | Une longue réplique |
+| La **stichomythie** | Un échange de répliques très courtes |
+| Le **monologue** | Une parole seule en scène |
+| L'**aparté** | Dit au public, sans être entendu des autres personnages |
 
 ## La structure
-La pièce se divise en **actes**, eux-mêmes en **scènes** — une scène change dès qu’un personnage entre ou sort. L’**exposition** informe le spectateur, le **nœud** installe le conflit, les **péripéties** le relancent, le **dénouement** le résout. Le **coup de théâtre** est un renversement brutal.
+| L'élément | Son rôle |
+| L'**acte** | La grande division |
+| La **scène** | Elle change dès qu'un personnage entre ou sort |
+| L'**exposition** | Elle informe le spectateur |
+| Le **nœud** | Il installe le conflit |
+| Les **péripéties** | Elles le relancent |
+| Le **dénouement** | Il le résout |
+| Le **coup de théâtre** | Un renversement brutal |
 
-> La **double énonciation** est la clé du genre : un personnage parle à un autre personnage, et en même temps l’auteur parle au public.
+> La **double énonciation** est la clé du genre : un personnage parle à un autre personnage, et en même temps l'auteur parle au public.
 
 ## Les registres
-Le **tragique** met un personnage face à une fatalité qui le dépasse ; le **comique** fait rire par les mots, les gestes, les situations, les caractères et la répétition ; le **pathétique** émeut ; le **lyrique** dit les sentiments. L’**ironie tragique** fait dire à un personnage plus qu’il ne croit dire — le spectateur, lui, sait.
+| Le registre | Son effet |
+| **Tragique** | Un personnage face à une fatalité qui le dépasse |
+| **Comique** | Le rire par les mots, les gestes, les situations, les caractères, la répétition |
+| **Pathétique** | Il émeut |
+| **Lyrique** | Il dit les sentiments |
+
+> L'**ironie tragique** fait dire à un personnage plus qu'il ne croit dire : le spectateur, lui, sait.
 
 ## Les grandes formes
-La **tragédie** classique (XVIIe siècle) suit la règle des **trois unités** — un jour, un lieu, une action — et l’exigence de **vraisemblance** et de **bienséance** (pas de mort sur scène). La **comédie** peint les mœurs. Le **drame romantique** (XIXe) revendique le mélange des genres. Les théâtres des XXe et XXIe siècles cassent la fable, le personnage et parfois le dialogue lui-même.
+| La forme | Ses règles ou son parti pris |
+| La **tragédie** classique | Les **trois unités** — un jour, un lieu, une action —, la vraisemblance, la **bienséance** : pas de mort sur scène |
+| La **comédie** | Elle peint les mœurs |
+| Le **drame romantique** | Il revendique le **mélange** des genres |
+| Les théâtres des XXe et XXIe siècles | Ils cassent la fable, le personnage, parfois le dialogue |
 
 ## La représentation
-La **mise en scène** interprète le texte : décor, lumière, costumes, son, jeu, rythme. Deux mises en scène du même texte peuvent dire des choses opposées — c’est ce qui fait qu’une pièce ne vieillit pas.`,
+La **mise en scène** interprète le texte : décor, lumière, costumes, son, jeu, rythme.
+
+> Deux mises en scène du même texte peuvent dire des choses opposées — c'est ce qui fait qu'une pièce ne vieillit pas.`,
           },
           questions: [
             ['Qu’est-ce qu’une didascalie ?', ['Une indication scénique non prononcée par les acteurs', 'Une longue réplique', 'Un monologue', 'Une scène muette'], 0, 'Elle précise décor, gestes, ton, entrées et sorties.'],
@@ -817,24 +1232,47 @@ La **mise en scène** interprète le texte : décor, lumière, costumes, son, je
           axe: 'Le théâtre du XVIIe siècle au XXIe siècle',
           lecon: {
             titre: 'Deux enfants, deux familles, cinq jours',
-            cours: `Écrite vers **1595**, **Roméo et Juliette** de **William Shakespeare** met en scène deux adolescents de Vérone qui s’aiment alors que leurs familles, les **Montaigu** et les **Capulet**, se haïssent.
+            cours: `Écrite vers 1595, *Roméo et Juliette* met en scène deux adolescents de Vérone qui s'aiment alors que leurs familles se haïssent.
 
 ## Une tragédie annoncée
-Le **prologue**, dit par un chœur, révèle dès l’ouverture que les amants mourront. Le spectateur ne regarde donc pas ce qui va se passer, mais **comment** cela devient inévitable : chaque scène rapproche d’une fin déjà connue. C’est l’un des grands effets de l’**ironie tragique**.
+Le **prologue**, dit par un chœur, révèle dès l'ouverture que les amants mourront.
 
-## Ce qui rend l’amour impossible
-Trois obstacles s’ajoutent : la **haine héritée** entre deux familles, dont personne ne connaît plus l’origine ; l’**ordre patriarcal**, qui destine Juliette à Pâris sans lui demander son avis ; et le **hasard**, décisif — un message qui n’arrive pas, un réveil trop tardif. La fatalité, chez Shakespeare, passe par des détails ordinaires.
+| Ce que le spectateur regarde | Ce qu'il ne cherche pas |
+| **Comment** cela devient inévitable | Ce qui va se passer : il le sait déjà |
 
-> Aimer devient un acte politique : choisir l’autre camp, c’est trahir le sien.
+> Chaque scène rapproche d'une fin déjà connue : c'est l'un des grands effets de l'**ironie tragique**.
+
+## Ce qui rend l'amour impossible
+| L'obstacle | Son contenu |
+| La **haine héritée** | Entre Montaigu et Capulet — personne n'en connaît plus l'origine |
+| L'**ordre patriarcal** | Juliette est destinée à Pâris sans qu'on lui demande son avis |
+| Le **hasard** | Un message qui n'arrive pas, un réveil trop tardif |
+
+> La fatalité, chez Shakespeare, passe par des détails ordinaires.
+
+> Aimer devient un acte politique : choisir l'autre camp, c'est trahir le sien.
 
 ## Un théâtre libre
-Shakespeare ignore les futures règles françaises : l’action dure plusieurs jours, change de lieu, mêle le **comique** (la nourrice, Mercutio) et le **tragique**, la prose et le vers, les nobles et les valets. Cette liberté, condamnée par les classiques, deviendra le modèle des romantiques.
+| La règle française future | Ce que Shakespeare fait |
+| Unité de temps | L'action dure **plusieurs jours** |
+| Unité de lieu | Elle change de lieu |
+| Séparation des genres | Il mêle **comique** — la nourrice, Mercutio — et **tragique** |
+| Unité de style | Il mêle la prose et le vers, les nobles et les valets |
 
-## Une langue d’images
-La scène du balcon fait de Juliette le soleil ; la lumière et la nuit, le poison et le remède, le faucon et l’oiseau reviennent en réseaux d’images. Les amants inventent une langue à eux, y compris un sonnet partagé lors de leur première rencontre.
+> Cette liberté, condamnée par les classiques, deviendra le modèle des romantiques.
+
+## Une langue d'images
+| Le réseau d'images | Son emploi |
+| La lumière et la nuit | Juliette est le soleil, à la scène du balcon |
+| Le poison et le remède | La même substance sauve ou tue |
+| Le faucon et l'oiseau | L'appel et la captivité |
+
+Les amants inventent une langue à eux — jusqu'à un **sonnet partagé** lors de leur première rencontre.
 
 ## Une œuvre sans cesse rejouée
-Ballets, opéras, comédies musicales — West Side Story transpose l’intrigue dans les gangs new-yorkais —, films, adaptations en cité, en camp de réfugiés, en réseau social : la pièce fonctionne partout où existent deux camps et une frontière.`,
+Ballets, opéras, comédies musicales — *West Side Story* transpose l'intrigue dans les gangs new-yorkais —, films, adaptations en cité, en camp de réfugiés, en réseau social.
+
+> La pièce fonctionne partout où existent deux camps et une frontière.`,
           },
           questions: [
             ['Comment s’appellent les deux familles ennemies de la pièce ?', ['Les Montaigu et les Capulet', 'Les Médicis et les Borgia', 'Les York et les Lancastre', 'Les Sforza et les Visconti'], 0, 'Leur haine n’a plus d’origine connue.'],
@@ -852,24 +1290,46 @@ Ballets, opéras, comédies musicales — West Side Story transpose l’intrigue
           axe: 'Le théâtre du XVIIe siècle au XXIe siècle',
           lecon: {
             titre: 'Trois personnages, une mort, aucun coupable simple',
-            cours: `**Alfred de Musset** publie **Les Caprices de Marianne** en **1833**. La pièce appartient au **théâtre romantique**, mais elle est d’abord écrite pour être lue : Musset, après l’échec de sa première pièce, publie un recueil intitulé Un spectacle dans un fauteuil.
+            cours: `Alfred de Musset publie *Les Caprices de Marianne* en 1833. La pièce est d'abord écrite pour être lue : après l'échec de sa première pièce, Musset publie un recueil intitulé *Un spectacle dans un fauteuil*.
 
-## L’intrigue
-À Naples, **Cœlio** aime **Marianne**, jeune femme mariée au vieux juge **Claudio**. Timide, il demande à son ami **Octave**, viveur et cynique, de plaider sa cause. Marianne se refuse à Cœlio, puis se rapproche d’Octave. Un malentendu envoie Cœlio à un rendez-vous piégé : il y est tué par les hommes de Claudio.
+## L'intrigue
+| L'étape | Ce qui se passe |
+| Le désir | **Cœlio** aime **Marianne**, mariée au vieux juge **Claudio** |
+| La délégation | Timide, il demande à son ami **Octave** de plaider sa cause |
+| Le déplacement | Marianne se refuse à Cœlio, puis se rapproche d'Octave |
+| Le drame | Un malentendu envoie Cœlio à un rendez-vous piégé : il y est tué par les hommes de Claudio |
 
 ## Le triangle
-Trois figures, trois rapports à l’amour : Cœlio, l’**amoureux idéaliste** qui préfère le rêve à la rencontre ; Octave, le **libertin** qui ne croit à rien et se découvre incapable d’aimer ; Marianne, enfermée dans un mariage et dont les « caprices » sont en réalité les seules libertés qu’on lui laisse. Les deux amis sont dits « deux moitiés d’un même homme ».
+| Le personnage | Son rapport à l'amour |
+| **Cœlio** | L'**idéaliste**, qui préfère le rêve à la rencontre |
+| **Octave** | Le **libertin** cynique, qui se découvre incapable d'aimer |
+| **Marianne** | Enfermée dans un mariage : ses « caprices » sont les seules libertés qu'on lui laisse |
 
-> « Je ne t’aimais pas, Cœlio, c’est toi qui m’aimais. » La réplique finale de Marianne à Octave rend la mort irréparable — et sans coupable désignable.
+Les deux amis sont dits « deux moitiés d'un même homme ».
+
+> « Je ne t'aimais pas, Cœlio, c'est toi qui m'aimais. » La réplique finale de Marianne à Octave rend la mort irréparable — et sans coupable désignable.
 
 ## Le drame romantique
-Le mélange des registres (fantaisie et tragédie), le refus des unités, l’usage de la prose, la présence du hasard et l’ironie constante s’opposent aux règles classiques. **Victor Hugo** en avait donné le manifeste dans la **préface de Cromwell** (1827) et la bataille d’**Hernani** (1830) avait été le champ de bataille.
+| Le trait | Ce à quoi il s'oppose |
+| Le **mélange** des registres, fantaisie et tragédie | La séparation classique des genres |
+| Le refus des **unités** | Les trois unités |
+| L'usage de la **prose** | L'alexandrin |
+| Le **hasard** et l'ironie constante | La nécessité tragique |
+
+| Le texte fondateur | Sa date |
+| La **préface de Cromwell**, manifeste de Hugo | 1827 |
+| La bataille d'**Hernani** | 1830 |
 
 ## Le mal du siècle
-Cœlio et Octave portent le **mal du siècle** : une génération née après l’épopée napoléonienne, sans guerre à faire, sans foi solide, oscillant entre le rêve et le cynisme. Musset l’analyse dans La Confession d’un enfant du siècle.
+Cœlio et Octave portent le **mal du siècle** : une génération née après l'épopée napoléonienne, sans guerre à faire, sans foi solide, oscillant entre le rêve et le cynisme.
+
+Musset l'analyse dans *La Confession d'un enfant du siècle*.
 
 ## Ce que la pièce interroge
-La condition faite aux femmes mariées, l’amitié masculine et ses aveuglements, la parole déléguée — parler pour un autre, c’est déjà parler à sa place.`,
+| La question | Son enjeu |
+| La condition faite aux **femmes mariées** | Un mariage subi, sans issue |
+| L'**amitié masculine** | Et ses aveuglements |
+| La **parole déléguée** | Parler pour un autre, c'est déjà parler à sa place |`,
           },
           questions: [
             ['En quelle année Musset publie-t-il Les Caprices de Marianne ?', ['1833', '1830', '1843', '1827'], 0, 'Dans le recueil Un spectacle dans un fauteuil.'],
@@ -887,24 +1347,43 @@ La condition faite aux femmes mariées, l’amitié masculine et ses aveuglement
           axe: 'Le théâtre du XVIIe siècle au XXIe siècle',
           lecon: {
             titre: 'Une tragédie contemporaine sans dieux',
-            cours: `**Bernard-Marie Koltès** (1948-1989) écrit **Roberto Zucco** peu avant sa mort ; la pièce est créée en **1990**. Elle s’inspire librement d’un fait divers : le parcours meurtrier de l’Italien Roberto Succo à la fin des années 1980.
+            cours: `Bernard-Marie Koltès (1948-1989) écrit *Roberto Zucco* peu avant sa mort ; la pièce est créée en 1990. Elle s'inspire librement d'un fait divers.
 
 ## Une structure de tragédie
-Quinze tableaux, chacun titré, plutôt que des actes : le personnage traverse des lieux — une prison, une chambre, un métro, un parc, un commissariat, un toit — et laisse des morts derrière lui. Cette progression par stations rappelle autant la tragédie antique que le chemin de croix.
+| Le choix | Son effet |
+| **Quinze tableaux** titrés, plutôt que des actes | Une progression par **stations** |
+| Des lieux traversés — prison, chambre, métro, parc, commissariat, toit | Un chemin, non une intrigue |
+
+> Cette progression rappelle autant la tragédie antique que le chemin de croix.
 
 ## Un héros sans psychologie
-Koltès refuse d’expliquer Zucco. Aucun mobile, aucune enfance analysée, aucune leçon : le personnage est une **énergie** qui passe et détruit. Les autres personnages n’ont pas de nom mais une fonction — **la Gamine**, **la Mère**, **la Sœur**, **la Dame**, **le Costaud** —, ce qui les rapproche des figures mythiques.
+| Ce que Koltès refuse | Ce qu'il donne à la place |
+| Un mobile | Une **énergie** qui passe et détruit |
+| Une enfance analysée | Rien |
+| Une leçon | Un regard |
 
-> « Un tueur est une chose fragile. » Koltès ne demande ni compréhension ni pardon : il demande qu’on regarde.
+| Le personnage | Sa désignation |
+| **La Gamine**, **la Mère**, **la Sœur** | Une fonction, pas un nom |
+| **La Dame**, **le Costaud** | Idem |
+
+> Cette désignation par fonction les rapproche des figures mythiques.
+
+> « Un tueur est une chose fragile. » Koltès ne demande ni compréhension ni pardon : il demande qu'on regarde.
 
 ## Une langue
-Le texte alterne un français très écrit, presque classique dans son rythme, et des scènes de parole brute. Les monologues de Zucco touchent au mythe : le soleil, le rhinocéros, la disparition. Le dernier tableau, sur un toit, en plein soleil, transforme la capture en apothéose ambiguë.
+| Le registre | Où il apparaît |
+| Un français très **écrit**, presque classique dans son rythme | Les monologues |
+| Une parole **brute** | Les scènes de rue |
+
+Les monologues de Zucco touchent au mythe : le soleil, le rhinocéros, la disparition. Le dernier tableau, sur un toit en plein soleil, transforme la capture en apothéose ambiguë.
 
 ## Faits divers et théâtre
-La pièce a provoqué un débat : représenter un criminel réel, est-ce le glorifier ? Koltès répond par le déplacement — Zucco n’est pas un portrait, c’est une figure, comme Œdipe ou Médée, qui sert à interroger la violence d’une société entière plutôt que la folie d’un homme.
+| L'objection | La réponse de Koltès |
+| Représenter un criminel réel, est-ce le glorifier ? | Zucco n'est pas un **portrait**, c'est une **figure** — comme Œdipe ou Médée |
+| Que vise alors la pièce ? | La violence d'une **société entière**, plutôt que la folie d'un homme |
 
-## Ce qu’il faut retenir
-La tragédie moderne se passe de dieux et de rois : la fatalité y prend la forme d’un déterminisme social, d’une famille, d’une ville, et le héros n’a plus de grandeur — seulement une trajectoire qu’il ne maîtrise pas.`,
+## Ce qu'il faut retenir
+> La tragédie moderne se passe de dieux et de rois : la fatalité y prend la forme d'un déterminisme social, d'une famille, d'une ville — et le héros n'a plus de grandeur, seulement une trajectoire qu'il ne maîtrise pas.`,
           },
           questions: [
             ['Qui a écrit Roberto Zucco ?', ['Bernard-Marie Koltès', 'Jean Genet', 'Samuel Beckett', 'Eugène Ionesco'], 0, 'La pièce est créée en 1990, après la mort de l’auteur.'],
@@ -922,24 +1401,44 @@ La tragédie moderne se passe de dieux et de rois : la fatalité y prend la form
           axe: 'Le théâtre du XVIIe siècle au XXIe siècle',
           lecon: {
             titre: 'Montrer, raconter, suggérer',
-            cours: `Le théâtre parle sans cesse de la mort, mais il n’a jamais eu une seule manière de la traiter. Comparer ces manières, c’est comprendre l’histoire du genre.
+            cours: `Le théâtre parle sans cesse de la mort, mais il n'a jamais eu une seule manière de la traiter.
 
-## L’Antiquité et le classicisme : raconter
-La tragédie grecque évite de tuer devant le public ; le **messager** vient raconter ce qui s’est passé hors scène. Le théâtre classique français reprend la règle sous le nom de **bienséance** : chez **Racine**, la mort de Phèdre ou d’Hippolyte est rapportée par un **récit** — un morceau de bravoure où la parole doit faire voir. Le **hors-scène** rend la mort plus grande que ne le ferait sa représentation.
+## Quatre traitements, quatre époques
+| L'époque | Le traitement | Son moyen |
+| Antiquité et **classicisme** | **Raconter** | Le récit du messager, le hors-scène |
+| Théâtre élisabéthain et **romantisme** | **Montrer** | La mort sur scène |
+| Le **XXe siècle** | **Suspendre** | L'attente remplace l'événement |
+| Aujourd'hui | **Documenter** | Témoignage, chœur, liste de noms |
 
-## Le baroque et le romantique : montrer
-Le théâtre élisabéthain, lui, tue sur scène : dans Hamlet, le dernier acte laisse un plateau jonché de corps. Le **drame romantique** français revendique cette liberté au nom de la vérité, contre les règles.
+## Raconter
+La tragédie grecque évite de tuer devant le public : le **messager** vient raconter ce qui s'est passé hors scène. Le théâtre classique reprend la règle sous le nom de **bienséance** — chez **Racine**, la mort d'Hippolyte est rapportée par un **récit**, morceau de bravoure où la parole doit faire voir.
 
-> Faire entrer un cadavre sur scène ou en faire le récit ne raconte pas la même histoire : dans un cas la mort est un fait, dans l’autre un événement de langage.
+> Le **hors-scène** rend la mort plus grande que ne le ferait sa représentation.
 
-## Le XXe siècle : suspendre
-Chez **Beckett**, on n’en finit pas de mourir : l’attente remplace l’événement. Chez **Ionesco** (Le roi se meurt), la mort devient une cérémonie lente et absurde. Le théâtre de l’**absurde** transforme la mort en durée plutôt qu’en coup de théâtre.
+## Montrer
+Dans *Hamlet*, le dernier acte laisse un plateau jonché de corps. Le **drame romantique** français revendique cette liberté au nom de la vérité, contre les règles.
 
-## Aujourd’hui : documenter
-Le théâtre contemporain reprend la mort réelle — guerres, attentats, migrations, épidémies — et cherche des formes qui ne la transforment pas en spectacle : témoignage, chœur, adresse au public, silence, liste de noms.
+> Faire entrer un cadavre sur scène ou en faire le récit ne raconte pas la même histoire : dans un cas la mort est un **fait**, dans l'autre un **événement de langage**.
+
+## Suspendre
+| L'auteur | Ce qu'il en fait |
+| **Beckett** | On n'en finit pas de mourir : l'attente est le sujet |
+| **Ionesco**, *Le roi se meurt* | Une cérémonie lente et absurde |
+
+Le théâtre de l'**absurde** transforme la mort en **durée** plutôt qu'en coup de théâtre.
+
+## Documenter
+Le théâtre contemporain reprend la mort réelle — guerres, attentats, migrations, épidémies — et cherche des formes qui ne la transforment pas en spectacle.
 
 ## Les procédés à repérer
-Le **hors-scène** et le récit, le **chœur**, l’**objet** qui reste (une arme, un vêtement), la **lumière** qui baisse, le silence, l’**ellipse**. Et toujours la même question : que gagne-t-on à montrer, que gagne-t-on à cacher ?`,
+| Le procédé | Ce qu'il fait |
+| Le **hors-scène** et le récit | Il délègue à la parole |
+| Le **chœur** | Il commente et amplifie |
+| L'**objet** qui reste | Une arme, un vêtement |
+| La **lumière** qui baisse, le **silence** | Ils suspendent |
+| L'**ellipse** | Elle laisse un vide |
+
+> Et toujours la même question : que gagne-t-on à montrer, que gagne-t-on à cacher ?`,
           },
           questions: [
             ['Comment la tragédie classique traite-t-elle la mort d’un personnage ?', ['Elle la fait raconter hors scène, par un récit', 'Elle la montre en détail', 'Elle la supprime de l’intrigue', 'Elle la met en musique'], 0, 'C’est l’effet de la règle de bienséance.'],
@@ -957,24 +1456,50 @@ Le **hors-scène** et le récit, le **chœur**, l’**objet** qui reste (une arm
           axe: 'Le théâtre du XVIIe siècle au XXIe siècle',
           lecon: {
             titre: 'Quatre siècles de scène en une page',
-            cours: `Le théâtre change quand change son public, sa salle et ce qu’on lui autorise à montrer. Voici les quatre grandes étapes du programme.
+            cours: `Le théâtre change quand changent son public, sa salle et ce qu'on lui autorise à montrer.
+
+## Quatre siècles en un tableau
+| Le siècle | Son principe | Ses auteurs |
+| **XVIIe** | La **règle** classique | Corneille, Racine, Molière |
+| **XVIIIe** | Le **glissement** vers le sentiment et la critique | Marivaux, Beaumarchais |
+| **XIXe** | La **rupture** romantique | Hugo, Musset, Vigny |
+| **XXe-XXIe** | La **mise en question** | Brecht, Beckett, Ionesco, Koltès |
 
 ## Le XVIIe siècle : la règle
-Le **classicisme** encadre le genre : trois unités (un jour, un lieu, une action), **vraisemblance**, **bienséance**, séparation stricte de la tragédie et de la comédie. **Corneille** met en scène le conflit du devoir et de la passion, **Racine** la fatalité amoureuse, **Molière** la comédie de caractère et de mœurs — Tartuffe, Dom Juan, L’Avare, Le Misanthrope. Le théâtre est un art de cour, soumis à la censure et au goût du roi.
+| La contrainte | Son contenu |
+| Les **trois unités** | Un jour, un lieu, une action |
+| La **vraisemblance** | Rien d'incroyable |
+| La **bienséance** | Rien de choquant sur scène |
+| La séparation des genres | Tragédie et comédie ne se mêlent pas |
 
-## Le XVIIIe siècle : le glissement
-**Marivaux** explore le langage du sentiment et le brouillage des rangs sociaux ; **Beaumarchais**, dans Le Mariage de Figaro, met dans la bouche d’un valet une critique politique qui annonce la Révolution. Le **drame bourgeois** apparaît : des héros ordinaires, des sujets sérieux.
+| L'auteur | Son domaine |
+| **Corneille** | Le conflit du devoir et de la passion |
+| **Racine** | La fatalité amoureuse |
+| **Molière** | La comédie de caractère et de mœurs : *Tartuffe*, *Dom Juan*, *L'Avare*, *Le Misanthrope* |
 
-## Le XIXe siècle : la rupture
-Le **drame romantique** revendique le mélange des genres, la couleur locale, la liberté de la scène. La **bataille d’Hernani** (1830) est le symbole de ce conflit. Musset, Hugo, Vigny en sont les auteurs ; le mélodrame et le vaudeville occupent, eux, le théâtre populaire.
+Le théâtre est un art de cour, soumis à la censure et au goût du roi.
 
-> Le XIXe siècle donne à la scène ce qu’elle n’avait pas : le droit de tout montrer, et l’obligation d’avoir un point de vue.
+## Le XVIIIe siècle
+| L'auteur ou la forme | Son apport |
+| **Marivaux** | Le langage du sentiment, le brouillage des rangs sociaux |
+| **Beaumarchais**, *Le Mariage de Figaro* | Une critique politique dans la bouche d'un valet |
+| Le **drame bourgeois** | Des héros ordinaires, des sujets sérieux |
 
-## Les XXe et XXIe siècles : la mise en question
-Le **metteur en scène** devient un auteur à part entière. **Brecht** invente la **distanciation** pour empêcher l’identification et faire penser ; le théâtre de l’**absurde** (Beckett, Ionesco) défait l’intrigue et le langage ; **Koltès**, **Vinaver**, **Lagarce** réinventent le dialogue. Le théâtre contemporain part souvent du **réel** : témoignages, documents, faits divers.
+## Le XIXe siècle
+Le **drame romantique** revendique le mélange des genres, la couleur locale, la liberté de la scène. La **bataille d'Hernani** (1830) en est le symbole. Le mélodrame et le vaudeville occupent le théâtre populaire.
+
+> Le XIXe siècle donne à la scène ce qu'elle n'avait pas : le droit de tout montrer, et l'obligation d'avoir un point de vue.
+
+## Les XXe et XXIe siècles
+| L'apport | Son auteur |
+| Le **metteur en scène** devient un auteur | — |
+| La **distanciation**, pour empêcher l'identification et faire penser | **Brecht** |
+| L'intrigue et le langage défaits | **Beckett**, **Ionesco** |
+| Le dialogue réinventé | **Koltès**, Vinaver, Lagarce |
+| Le départ du **réel** | Témoignages, documents, faits divers |
 
 ## Le fil commun
-Depuis quatre siècles, une pièce répond toujours aux mêmes trois questions : que montre-t-on, à qui, et depuis quel point de vue ?`,
+> Depuis quatre siècles, une pièce répond toujours aux mêmes trois questions : que montre-t-on, à qui, et depuis quel point de vue ?`,
           },
           questions: [
             ['Quelles règles encadrent la tragédie au XVIIe siècle ?', ['Les trois unités, la vraisemblance et la bienséance', 'Le mélange des genres', 'La liberté du lieu et du temps', 'L’usage exclusif de la prose'], 0, 'Le classicisme fait de la contrainte une esthétique.'],

@@ -113,30 +113,44 @@ DELETE FROM public.chapters c
           axe: 'L’objet technique et son besoin',
           lecon: {
             titre: 'Pourquoi cet objet existe',
-            cours: `## L’objet technique
-Un **objet technique** est un objet **fabriqué par l’humain** pour répondre à un **besoin**. Un caillou n’est pas un objet technique ; un marteau l’est.
+            cours: `Un objet technique est fabriqué par l’humain pour répondre à un besoin. Un caillou n’en est pas un ; un marteau, si.
 
-## Le besoin
-Le besoin est ce qui **manque** à quelqu’un. Un objet technique n’existe que parce qu’un besoin l’a précédé : on ne se déplace pas parce que le vélo existe, on a inventé le vélo parce qu’on voulait se déplacer.
+## Le besoin d’abord
+!> On n’a **pas** inventé le vélo puis trouvé à quoi il servait. Le besoin — se déplacer — existait avant l’objet. **Le besoin précède toujours l’objet.**
 
 ## La fonction d’usage
-La **fonction d’usage** répond à la question : **à quoi ça sert ?**
-Elle s’exprime par un **verbe à l’infinitif** + un complément :
-- un parapluie sert à **protéger de la pluie** ;
-- une lampe sert à **éclairer un espace** ;
-- un vélo sert à **se déplacer**.
+= La fonction d’usage répond à : À QUOI ÇA SERT ?
+
+Elle s’écrit avec un **verbe à l’infinitif** suivi d’un complément.
+
+| L’objet | Sa fonction d’usage |
+| Un parapluie | **Protéger de la pluie** |
+| Une lampe | **Éclairer un espace** |
+| Un vélo | **Se déplacer** |
 
 ## La fonction d’estime
-C’est ce qui fait **préférer** un objet à un autre alors qu’ils rendent le même service : la couleur, la forme, la marque, le prix. Deux vélos ont la même fonction d’usage ; on choisit l’un pour sa fonction d’estime.
+C’est ce qui fait **préférer** un objet à un autre alors qu’ils rendent le même service : la couleur, la forme, la marque, le prix.
 
-> La fonction d’usage explique pourquoi l’objet existe. La fonction d’estime explique pourquoi on achète **celui-là**.
+> La fonction d’usage explique pourquoi l’objet **existe**. La fonction d’estime explique pourquoi on achète **celui-là**.
 
 ## Le cahier des charges
-Avant de concevoir, on écrit un **cahier des charges** : la liste des **contraintes** que l’objet devra respecter — dimensions, poids, prix, sécurité, matériaux, durée de vie, impact sur l’environnement.
-C’est un contrat : il dit ce que l’objet doit faire, sans dire comment.
+La liste des **contraintes** que l’objet devra respecter.
+
+| La contrainte | Exemple |
+| Dimensions, poids | |
+| Prix | |
+| Sécurité | |
+| Matériaux, durée de vie | |
+| Impact sur l’environnement | |
+
+!> Le cahier des charges dit **ce que l’objet doit faire**, jamais **comment** le faire. C’est un contrat, pas une notice.
 
 ## L’utilisateur
-Un même besoin appelle des objets différents selon **qui** s’en sert : une cuillère pour un adulte, pour un bébé, ou pour une personne qui n’a qu’une main valide. Concevoir, c’est d’abord regarder l’utilisateur.`,
+~ Une cuillère pour un adulte → pour un bébé → pour une personne qui n’a qu’une main valide
+
+Un même besoin appelle des objets différents selon **qui** s’en sert.
+
+> Concevoir, c’est d’abord regarder l’utilisateur.`,
           },
           questions: [
             ['Qu’est-ce qu’un objet technique ?', ['Un objet fabriqué par l’humain pour répondre à un besoin', 'Tout objet naturel', 'Un objet électrique', 'Un objet en métal'], 0, 'Un caillou n’en est pas un, un marteau si.'],
@@ -154,31 +168,43 @@ Un même besoin appelle des objets différents selon **qui** s’en sert : une c
           axe: 'L’objet technique et son besoin',
           lecon: {
             titre: 'Comment l’objet fait ce qu’il fait',
-            cours: `## De l’usage à la technique
-La **fonction d’usage** dit à quoi l’objet sert. Les **fonctions techniques** disent **comment** il y parvient : ce sont les tâches que doivent accomplir ses différentes parties.
+            cours: `La fonction d’usage dit à quoi l’objet sert. Les fonctions techniques disent comment il y parvient.
 
-Un vélo sert à se déplacer (usage). Pour cela, il doit :
-- **transmettre** le mouvement (pédalier, chaîne, roue) ;
-- **diriger** (guidon, fourche) ;
-- **freiner** (leviers, patins) ;
-- **soutenir** l’utilisateur (cadre, selle).
+## De l’usage à la technique
+Un vélo sert à **se déplacer**. Pour cela, il doit :
+
+| La fonction technique | Les organes qui l’assurent |
+| **Transmettre** le mouvement | Pédalier, chaîne, roue |
+| **Diriger** | Guidon, fourche |
+| **Freiner** | Leviers, patins |
+| **Soutenir** l’utilisateur | Cadre, selle |
 
 ## Les solutions techniques
-Pour chaque fonction technique, plusieurs **solutions** sont possibles :
-- freiner → patins sur la jante, frein à disque, rétropédalage ;
-- transmettre → chaîne, courroie, cardan.
+Pour chaque fonction technique, plusieurs **solutions** sont possibles.
+
+| La fonction | Les solutions possibles |
+| **Freiner** | Patins sur la jante · frein à disque · rétropédalage |
+| **Transmettre** | Chaîne · courroie · cardan |
+
 Le concepteur choisit selon le **cahier des charges** : coût, poids, entretien, sécurité.
 
-> Une fonction technique est un PROBLÈME à résoudre ; une solution technique est UNE réponse parmi d’autres. Il n’y a jamais une seule bonne solution.
+!> Une fonction technique est un **problème** à résoudre ; une solution technique est **une** réponse parmi d’autres. Il n’y a jamais une seule bonne solution.
 
 ## Le diagramme
-On représente cela en arbre : la fonction d’usage en haut, les fonctions techniques en dessous, et sous chacune les solutions retenues.
+~ La fonction d’usage → les fonctions techniques → les solutions retenues
+
+On le représente en arbre, de haut en bas.
 
 ## Les composants
 Chaque solution se réalise par des **composants** : un ressort, un engrenage, une vis, un moteur, un interrupteur. Un même composant peut servir plusieurs fonctions.
 
 ## Faire des choix
-Comparer deux solutions, c’est peser des **critères** : prix, masse, résistance, facilité de réparation, impact environnemental. Un tableau de comparaison rend le choix explicite au lieu de le laisser à l’intuition.`,
+| Le critère de comparaison | |
+| Prix | Masse |
+| Résistance | Facilité de **réparation** |
+| Impact environnemental | |
+
+> Un tableau de comparaison rend le choix **explicite** au lieu de le laisser à l’intuition.`,
           },
           questions: [
             ['Que dit une fonction technique ?', ['Comment l’objet parvient à rendre son service', 'À quoi l’objet sert', 'Combien il coûte', 'Qui l’utilise'], 0, 'C’est la tâche d’une partie de l’objet.'],
@@ -196,30 +222,37 @@ Comparer deux solutions, c’est peser des **critères** : prix, masse, résista
           axe: 'L’objet technique et son besoin',
           lecon: {
             titre: 'Pourquoi les objets changent',
-            cours: `## Les objets ont une histoire
-Un objet technique n’apparaît pas d’un coup : il **évolue**. Le vélo, le téléphone, l’éclairage, le vélocipède devenu VTT électrique — chacun a une lignée.
+            cours: `Un objet technique n’apparaît pas d’un coup : il évolue. Et ce qui évolue, ce n’est presque jamais sa fonction d’usage.
 
 ## Ce qui pousse l’évolution
-- Les **progrès techniques** : nouveaux matériaux, nouvelles énergies, électronique.
-- Les **besoins** qui changent : aller plus vite, plus loin, plus confortablement.
-- La **société** : lois de sécurité, normes, préoccupations environnementales.
-- L’**économie** : produire moins cher, en plus grande quantité.
+| Le moteur | Ce qu’il apporte |
+| Les **progrès techniques** | Nouveaux matériaux, nouvelles énergies, électronique |
+| Les **besoins** qui changent | Aller plus vite, plus loin, plus confortablement |
+| La **société** | Lois de sécurité, normes, préoccupations environnementales |
+| L’**économie** | Produire moins cher, en plus grande quantité |
 
 ## Un exemple : l’éclairage
-Feu → bougie → lampe à huile → bec de gaz → lampe à incandescence → fluocompacte → **LED**.
-À chaque étape : plus de lumière, moins d’énergie, moins de danger. La LED consomme environ **dix fois moins** que l’ampoule à filament pour le même éclairage.
+~ Feu → bougie → lampe à huile → bec de gaz → lampe à incandescence → fluocompacte → LED
+
+À chaque étape : **plus de lumière**, **moins d’énergie**, **moins de danger**.
+
+= La LED consomme environ dix fois moins que l’ampoule à filament, pour le même éclairage
 
 ## Ce qui reste, ce qui change
-La **fonction d’usage** reste souvent la même sur des siècles — éclairer, se déplacer, conserver les aliments. Ce sont les **solutions techniques** qui changent.
+| Ce qui reste | Ce qui change |
+| La **fonction d’usage** — éclairer, se déplacer, conserver | Les **solutions techniques** |
 
 > On n’a jamais cessé d’avoir besoin de lumière. On a cessé d’utiliser le feu pour l’obtenir.
 
-## Les familles et les lignées
-- une **famille** regroupe les objets qui remplissent la même fonction d’usage à une même époque ;
-- une **lignée** suit un objet à travers le temps.
+## Familles et lignées
+| Le mot | Ce qu’il regroupe |
+| Une **famille** | Les objets qui remplissent la **même fonction d’usage** à une même époque |
+| Une **lignée** | Un objet suivi **à travers le temps** |
 
 ## Le progrès n’est pas automatique
-Un objet plus récent n’est pas meilleur sur tous les critères : il peut être plus difficile à réparer, plus coûteux à produire, ou dépendant de matériaux rares. C’est en cela que l’**analyse du cycle de vie** — extraction, fabrication, usage, fin de vie — est devenue un critère de conception.`,
+!> Un objet plus récent **n’est pas meilleur sur tous les critères** : il peut être plus difficile à réparer, plus coûteux à produire, ou dépendant de matériaux rares.
+
+C’est pour cela que l’**analyse du cycle de vie** — extraction, fabrication, usage, fin de vie — est devenue un critère de conception.`,
           },
           questions: [
             ['Qu’est-ce qui pousse un objet technique à évoluer ?', ['Progrès techniques, besoins, société et économie', 'Uniquement la mode', 'Uniquement le prix', 'Rien, ils ne changent pas'], 0, 'Plusieurs causes agissent ensemble.'],
@@ -241,31 +274,37 @@ Un objet plus récent n’est pas meilleur sur tous les critères : il peut êtr
           axe: 'Les matériaux',
           lecon: {
             titre: 'De quoi les objets sont faits',
-            cours: `## Les grandes familles
-- **Métaux** : fer, acier, aluminium, cuivre. Résistants, conducteurs de chaleur et d’électricité, souvent lourds, recyclables à l’infini.
-- **Plastiques** : légers, faciles à mouler, isolants, peu chers — mais issus du **pétrole** et longs à se dégrader.
-- **Céramiques et verres** : durs, résistants à la chaleur, mais **fragiles** (ils cassent net).
-- **Matériaux organiques** : bois, papier, cuir, textiles naturels. Renouvelables.
-- **Composites** : plusieurs matériaux associés pour cumuler leurs qualités — béton armé, fibre de carbone, contreplaqué.
+            cours: `On ne choisit pas un matériau parce qu’il est « meilleur ». On le choisit parce que ses propriétés correspondent aux contraintes.
+
+## Les grandes familles
+| La famille | Ses qualités | Sa limite |
+| Les **métaux** — fer, acier, aluminium, cuivre | Résistants, conducteurs, **recyclables à l’infini** | Souvent lourds |
+| Les **plastiques** | Légers, faciles à mouler, isolants, peu chers | Issus du **pétrole**, longs à se dégrader |
+| Les **céramiques et verres** | Durs, résistants à la chaleur | **Fragiles** : ils cassent net |
+| Les **matériaux organiques** — bois, papier, cuir | **Renouvelables** | |
+| Les **composites** — béton armé, fibre de carbone, contreplaqué | Ils cumulent les qualités de plusieurs matériaux | Difficiles à recycler |
 
 ## Les propriétés qu’on mesure
-- **dureté** : résiste à la rayure ;
-- **élasticité** : reprend sa forme ;
-- **résistance** : supporte un effort sans casser ;
-- **masse volumique** : léger ou lourd à volume égal ;
-- **conductivité** électrique et thermique ;
-- **résistance à la corrosion**, à l’eau, à la chaleur.
+| La propriété | Ce qu’elle dit |
+| La **dureté** | Il résiste à la rayure |
+| L’**élasticité** | Il reprend sa forme |
+| La **résistance** | Il supporte un effort sans casser |
+| La **masse volumique** | Léger ou lourd à volume égal |
+| La **conductivité** | Électrique et thermique |
+| La résistance à la **corrosion** | À l’eau, à la chaleur |
 
-> On ne choisit pas un matériau parce qu’il est « meilleur » : on le choisit parce que ses propriétés correspondent aux contraintes du cahier des charges.
+## Le choix, en pratique
+~ Une casserole : métal pour le corps (il CONDUIT la chaleur) → plastique pour le manche (il ISOLE)
 
-## Le choix
-Une casserole : métal pour conduire la chaleur, plastique pour le manche parce qu’il est **isolant**. Deux matériaux dans un même objet, chacun pour une raison précise.
+> Deux matériaux dans un même objet, chacun pour une raison précise et opposée.
 
 ## L’origine et le coût
-Extraction, transport, transformation : chaque matériau a un coût économique **et** environnemental. L’aluminium est très recyclable, mais sa production initiale consomme énormément d’électricité.
+!> L’**aluminium** est très recyclable, mais sa production **initiale** consomme énormément d’électricité. Un matériau recyclable n’est pas pour autant un matériau bon marché à produire.
 
 ## Le recyclage
-Trier permet de réintroduire la matière dans un nouveau cycle. Le **verre** et les **métaux** se recyclent presque indéfiniment ; le **plastique** se dégrade à chaque cycle et finit par sortir de la boucle.`,
+| Le matériau | Son recyclage |
+| Le **verre**, les **métaux** | Presque **indéfiniment** |
+| Le **plastique** | Il se **dégrade à chaque cycle** et finit par sortir de la boucle |`,
           },
           questions: [
             ['Quelle famille regroupe le fer, l’aluminium et le cuivre ?', ['Les métaux', 'Les plastiques', 'Les céramiques', 'Les composites'], 0, 'Résistants et conducteurs.'],
@@ -283,32 +322,45 @@ Trier permet de réintroduire la matière dans un nouveau cycle. Le **verre** et
           axe: 'Les matériaux',
           lecon: {
             titre: 'Ce que coûte un objet, au-delà de son prix',
-            cours: `## Le cycle de vie
-Tout objet technique passe par cinq étapes, et chacune a un coût pour l’environnement :
-1. **extraction** des matières premières ;
-2. **fabrication** (énergie, eau, rejets) ;
-3. **transport** (souvent sur des milliers de kilomètres) ;
-4. **utilisation** (énergie consommée pendant des années) ;
-5. **fin de vie** : réemploi, recyclage, incinération ou décharge.
+            cours: `Avant de vouloir réduire un impact, il faut savoir où il se trouve. Sinon on optimise ce qui ne pèse rien.
+
+## Le cycle de vie
+~ Extraction → fabrication → transport → utilisation → fin de vie
+
+| L’étape | Son coût |
+| L’**extraction** | Des matières premières |
+| La **fabrication** | Énergie, eau, rejets |
+| Le **transport** | Souvent des milliers de kilomètres |
+| L’**utilisation** | L’énergie consommée pendant des années |
+| La **fin de vie** | Réemploi, recyclage, incinération ou décharge |
 
 ## Où se joue l’impact
-Il n’est pas toujours là où on le croit. Pour un smartphone, l’essentiel de l’empreinte vient de la **fabrication**, pas de l’usage : le garder deux ans de plus fait plus de bien que de le recharger « proprement ».
-Pour un réfrigérateur, c’est l’inverse : c’est l’**usage**, sur quinze ans, qui domine.
+| L’objet | L’étape qui domine | Le geste utile |
+| Un **smartphone** | La **fabrication** | Le garder **deux ans de plus** |
+| Un **réfrigérateur** | L’**usage**, sur quinze ans | Choisir un bon rendement |
 
-> Avant de vouloir réduire un impact, il faut savoir OÙ il se trouve. Sinon on optimise ce qui ne pèse rien.
+!> L’impact n’est pas toujours là où on le croit. Recharger « proprement » un smartphone pèse bien moins que retarder son remplacement.
 
 ## Les leviers, dans l’ordre d’efficacité
-1. **Ne pas produire** l’objet : s’en passer, le partager, le louer.
-2. **Allonger sa durée de vie** : entretenir, réparer, revendre.
-3. **Réemployer** : donner une seconde vie sans transformation.
-4. **Recycler** : refaire de la matière — utile, mais coûteux en énergie.
-5. **Valoriser** : incinérer en récupérant la chaleur, en dernier recours.
+1. **Ne pas produire** l’objet : s’en passer, le partager, le louer ;
+2. **allonger sa durée de vie** : entretenir, réparer, revendre ;
+3. **réemployer** : une seconde vie sans transformation ;
+4. **recycler** : refaire de la matière — utile, mais coûteux en énergie ;
+5. **valoriser** : incinérer en récupérant la chaleur, en dernier recours.
+
+> L’ordre compte autant que la liste : recycler est le **quatrième** levier, pas le premier.
 
 ## L’obsolescence
-Un objet peut cesser d’être utilisé alors qu’il fonctionne : pièces indisponibles, logiciel qui ne se met plus à jour, mode. L’**indice de réparabilité**, affiché en France depuis 2021, informe l’acheteur.
+Un objet peut cesser d’être utilisé **alors qu’il fonctionne** : pièces indisponibles, logiciel qui ne se met plus à jour, mode.
+
+@ 2021 — L’indice de réparabilité devient obligatoire en France
 
 ## L’écoconception
-C’est concevoir en pensant à tout le cycle : moins de matière, matériaux recyclables, assemblage démontable (vis plutôt que colle), pièces détachées disponibles.`,
+| Le principe | Ce qu’il donne |
+| Moins de **matière** | |
+| Des matériaux **recyclables** | |
+| Un assemblage **démontable** | Vis plutôt que colle |
+| Des **pièces détachées** disponibles | |`,
           },
           questions: [
             ['Quelles sont les cinq étapes du cycle de vie d’un objet ?', ['Extraction, fabrication, transport, utilisation, fin de vie', 'Achat, usage, revente', 'Conception, vente, recyclage', 'Fabrication, vente, réparation'], 0, 'Chacune a un coût environnemental.'],
@@ -330,31 +382,38 @@ C’est concevoir en pensant à tout le cycle : moins de matière, matériaux re
           axe: 'Représenter et fabriquer',
           lecon: {
             titre: 'Dessiner pour se faire comprendre',
-            cours: `## Pourquoi représenter
-Un objet ne se fabrique pas à partir d’une description orale : il faut un **dessin** que tout le monde lise de la même façon. C’est un **langage**, avec ses règles.
+            cours: `Un objet ne se fabrique pas à partir d’une description orale. Il lui faut un dessin que tout le monde lise de la même façon.
 
 ## Les trois niveaux
-- Le **croquis** : dessin à main levée, rapide, pour montrer une idée. Pas d’échelle exacte.
-- Le **schéma** : dessin simplifié qui montre le **fonctionnement** ou les liaisons, avec des **symboles** normalisés. Il ne ressemble pas à l’objet.
-- Le **plan** (ou dessin technique) : dessin précis, à l’**échelle**, coté, qui permet de **fabriquer**.
+| Le dessin | Ce qu’il montre | Sa précision |
+| Le **croquis** | Une **idée** | À main levée, sans échelle exacte |
+| Le **schéma** | Le **fonctionnement** ou les liaisons | Simplifié, avec des **symboles normalisés** |
+| Le **plan** (dessin technique) | Comment **fabriquer** | À l’**échelle**, coté |
 
-> Le croquis dit « voilà l’idée », le schéma dit « voilà comment ça marche », le plan dit « voilà comment le faire ». Trois usages, trois dessins.
+!> Le **schéma ne ressemble pas à l’objet**. Il montre comment ça marche, pas à quoi ça ressemble.
+
+> Le croquis dit « voilà l’idée », le schéma dit « voilà comment ça marche », le plan dit « voilà comment le faire ».
 
 ## L’échelle
-Elle compare le dessin au réel :
-- **1:1** → taille réelle ;
-- **1:10** → le dessin est 10 fois plus petit ;
-- **10:1** → le dessin est 10 fois plus grand (pour une petite pièce).
+| L’échelle | Ce qu’elle signifie |
+| **1:1** | Taille réelle |
+| **1:10** | Le dessin est **10 fois plus petit** |
+| **10:1** | Le dessin est **10 fois plus grand** — pour une petite pièce |
 
 ## Les vues
-Un objet en trois dimensions se représente par plusieurs **vues** planes : de **face**, de **dessus**, de **gauche**. Ensemble, elles décrivent l’objet sans ambiguïté.
-La **perspective** donne une idée du volume, mais ne permet pas de mesurer.
+~ Vue de face → vue de dessus → vue de gauche
+
+Ensemble, ces trois vues planes décrivent l’objet **sans ambiguïté**.
+
+!> La **perspective** donne une idée du volume, mais **ne permet pas de mesurer**. Ce n’est pas un dessin de fabrication.
 
 ## Les cotes
-Les **cotes** indiquent les dimensions réelles, en **millimètres**, quelle que soit l’échelle du dessin. On ne mesure jamais sur le papier : on lit la cote.
+Les **cotes** indiquent les dimensions **réelles**, en **millimètres**, quelle que soit l’échelle du dessin.
+
+> On ne mesure jamais sur le papier : on **lit la cote**.
 
 ## Les outils numériques
-La **conception assistée par ordinateur** (CAO) permet de dessiner en 3D, de tester avant de fabriquer, et d’envoyer le fichier directement à une machine — imprimante 3D ou découpeuse.`,
+La **conception assistée par ordinateur** (CAO) permet de dessiner en 3D, de tester avant de fabriquer, et d’envoyer le fichier directement à une imprimante 3D ou à une découpeuse.`,
           },
           questions: [
             ['Qu’est-ce qu’un croquis ?', ['Un dessin à main levée qui montre une idée', 'Un dessin précis et coté', 'Un dessin avec des symboles normalisés', 'Une photographie'], 0, 'Pas d’échelle exacte.'],
@@ -372,31 +431,41 @@ La **conception assistée par ordinateur** (CAO) permet de dessiner en 3D, de te
           axe: 'Représenter et fabriquer',
           lecon: {
             titre: 'Du plan à l’objet réel',
-            cours: `## La gamme de fabrication
-C’est la **suite ordonnée** des opérations qui transforment la matière en objet. Chaque ligne indique l’opération, l’outil, et le contrôle à faire. Sans elle, chacun s’y prend autrement et les pièces ne s’assemblent pas.
+            cours: `La gamme de fabrication est la suite ordonnée des opérations. Sans elle, chacun s’y prend autrement et les pièces ne s’assemblent pas.
 
 ## Les grandes opérations
-- **Mesurer et tracer** : reporter les cotes du plan sur la matière.
-- **Découper** : scie, cisaille, découpeuse laser.
-- **Percer**, **usiner**, **poncer**.
-- **Assembler**.
-- **Contrôler** : vérifier que la pièce est conforme au plan.
-- **Finir** : peinture, vernis, protection.
+~ Mesurer et tracer → découper → percer, usiner, poncer → assembler → contrôler → finir
+
+| L’opération | Les outils |
+| **Mesurer et tracer** | Reporter les cotes du plan sur la matière |
+| **Découper** | Scie, cisaille, découpeuse laser |
+| **Contrôler** | Vérifier que la pièce est conforme au plan |
+| **Finir** | Peinture, vernis, protection |
 
 ## Les assemblages
-- **Démontables** : vis, boulons, clips. On peut réparer et recycler.
-- **Permanents** : colle, soudure, rivet. Plus solides, mais l’objet devient difficile à réparer.
+| Le type | Ses moyens | Sa conséquence |
+| **Démontable** | Vis, boulons, clips | On peut **réparer** et recycler |
+| **Permanent** | Colle, soudure, rivet | Plus solide, mais **difficile à réparer** |
 
-> Choisir la colle plutôt que la vis, c’est décider, à la conception, que l’objet ne sera jamais réparé. Ce n’est pas un détail technique, c’est un choix de durée de vie.
+!> Choisir la colle plutôt que la vis, c’est décider **à la conception** que l’objet ne sera jamais réparé. Ce n’est pas un détail technique : c’est un choix de durée de vie.
 
 ## Le contrôle qualité
-On vérifie les **dimensions** (pied à coulisse, gabarit), l’**aspect**, le **fonctionnement**. Une pièce hors **tolérance** — l’écart acceptable autour de la cote — est refusée.
+| On vérifie | Avec quoi |
+| Les **dimensions** | Pied à coulisse, gabarit |
+| L’**aspect** | À l’œil |
+| Le **fonctionnement** | En essai |
+
+= La tolérance : l’écart acceptable autour de la cote
+
+Une pièce hors tolérance est **refusée**.
 
 ## La sécurité
-Lunettes, gants, cheveux attachés, machine arrêtée avant tout réglage, un seul opérateur à la fois. Les consignes ne sont pas des formalités : les machines de l’atelier coupent, percent et chauffent.
+!> Lunettes, gants, cheveux attachés, machine **arrêtée avant tout réglage**, un seul opérateur à la fois. Les consignes ne sont pas des formalités : les machines de l’atelier coupent, percent et chauffent.
 
 ## Prototype et série
-Le **prototype** est le premier exemplaire : il sert à tester et à corriger. La **série** vient ensuite, avec des outillages qui rendent chaque pièce identique.`,
+| L’étape | Son rôle |
+| Le **prototype** | Le premier exemplaire : il sert à **tester et corriger** |
+| La **série** | Des outillages rendent chaque pièce **identique** |`,
           },
           questions: [
             ['Qu’est-ce qu’une gamme de fabrication ?', ['La suite ordonnée des opérations pour fabriquer l’objet', 'La liste des matériaux', 'Le prix de revient', 'Le plan coté'], 0, 'Elle indique aussi les outils et les contrôles.'],
@@ -418,31 +487,35 @@ Le **prototype** est le premier exemplaire : il sert à tester et à corriger. L
           axe: 'Objets programmables et information',
           lecon: {
             titre: 'Les deux circuits de tout objet technique',
-            cours: `## Deux chaînes en parallèle
-Tout objet technique un peu élaboré contient **deux chaînes** qui travaillent ensemble :
-- la **chaîne d’information** : elle **acquiert**, **traite** et **communique** ;
-- la **chaîne d’énergie** : elle **alimente**, **distribue**, **convertit** et **transmet**.
+            cours: `Le capteur est l’oreille, le microcontrôleur le cerveau, l’actionneur le muscle. Ces trois mots suffisent à lire n’importe quel objet.
+
+## Deux chaînes en parallèle
+| La chaîne | Ce qu’elle fait |
+| D’**information** | Elle **acquiert**, **traite** et **communique** |
+| D’**énergie** | Elle **alimente**, **distribue**, **convertit** et **transmet** |
 
 ## La chaîne d’information
-1. **Acquérir** — le **capteur** transforme une grandeur physique en signal : capteur de température, de lumière, de présence, bouton-poussoir.
-2. **Traiter** — la **carte programmable** (microcontrôleur) décide selon le programme.
-3. **Communiquer** — le résultat part vers la chaîne d’énergie ou vers un écran, une LED, un haut-parleur.
+| L’étape | Le composant | Son rôle |
+| **Acquérir** | Le **capteur** | Il transforme une grandeur physique en signal : température, lumière, présence, bouton-poussoir |
+| **Traiter** | La **carte programmable** (microcontrôleur) | Elle décide, selon le programme |
+| **Communiquer** | Écran, LED, haut-parleur | Le résultat part vers la chaîne d’énergie ou vers l’utilisateur |
 
 ## La chaîne d’énergie
-1. **Alimenter** — pile, secteur, batterie, panneau solaire.
-2. **Distribuer** — interrupteur, relais : laisser passer ou non.
-3. **Convertir** — l’**actionneur** transforme l’énergie en action : moteur (mouvement), lampe (lumière), résistance (chaleur), buzzer (son).
-4. **Transmettre** — engrenages, courroies, roues.
-
-> Le capteur est l’oreille, le microcontrôleur le cerveau, l’actionneur le muscle. Retenir ces trois mots suffit à lire n’importe quel objet.
+| L’étape | Le composant | Son rôle |
+| **Alimenter** | Pile, secteur, batterie, panneau solaire | Fournir l’énergie |
+| **Distribuer** | Interrupteur, relais | Laisser passer ou non |
+| **Convertir** | L’**actionneur** | Moteur (mouvement), lampe (lumière), résistance (chaleur), buzzer (son) |
+| **Transmettre** | Engrenages, courroies, roues | Porter l’action jusqu’au bout |
 
 ## Un exemple complet
-Un éclairage automatique de couloir :
-capteur de **présence** → carte programmable → relais → **lampe**.
+~ Capteur de présence → carte programmable → relais → lampe
+
 Information à gauche, énergie à droite, et le programme au milieu qui décide.
 
 ## Pourquoi les séparer
-Parce que les pannes ne se cherchent pas au même endroit : si la lampe ne s’allume pas, soit le capteur n’a rien vu (information), soit l’alimentation est coupée (énergie). Distinguer les deux chaînes, c’est diviser le problème en deux.`,
+!> Les pannes ne se cherchent pas au même endroit. Si la lampe ne s’allume pas : soit le **capteur** n’a rien vu (information), soit l’**alimentation** est coupée (énergie).
+
+> Distinguer les deux chaînes, c’est diviser le problème en deux.`,
           },
           questions: [
             ['Quelles sont les deux chaînes d’un objet technique ?', ['La chaîne d’information et la chaîne d’énergie', 'La chaîne de production et de vente', 'La chaîne de montage et de contrôle', 'La chaîne mécanique et électrique'], 0, 'Elles travaillent ensemble.'],
@@ -460,32 +533,40 @@ Parce que les pannes ne se cherchent pas au même endroit : si la lampe ne s’a
           axe: 'Objets programmables et information',
           lecon: {
             titre: 'Donner des instructions à une carte',
-            cours: `## Le programme
-Un **programme** est une suite d’**instructions** que la carte exécute dans l’ordre. Il est écrit par blocs (Scratch, mBlock) ou en texte (Python), puis **téléversé** dans la carte.
+            cours: `Une machine n’interprète pas : elle exécute exactement ce qui est écrit.
+
+## Le programme
+Une suite d’**instructions** que la carte exécute **dans l’ordre**. Il s’écrit par blocs (Scratch, mBlock) ou en texte (Python), puis se **téléverse** dans la carte.
 
 ## Les briques de base
-- L’**instruction** : une action simple — allumer, attendre, lire un capteur.
-- La **boucle** : répéter sans réécrire — *répéter 10 fois*, *répéter indéfiniment*.
-- La **condition** : *si … alors … sinon …* — c’est elle qui rend l’objet capable de **réagir**.
-- La **variable** : une case mémoire nommée qui retient une valeur — un compteur, une mesure.
+| La brique | Ce qu’elle fait |
+| L’**instruction** | Une action simple : allumer, attendre, lire un capteur |
+| La **boucle** | Répéter sans réécrire : *répéter 10 fois*, *répéter indéfiniment* |
+| La **condition** | *si … alors … sinon …* — c’est elle qui rend l’objet capable de **réagir** |
+| La **variable** | Une case mémoire nommée : un compteur, une mesure |
 
 ## Un exemple lisible
-> **répéter indéfiniment**
->   **si** le capteur de présence est activé **alors** allumer la lampe ; attendre 30 secondes
->   **sinon** éteindre la lampe
+= répéter indéfiniment : si le capteur de présence est activé, alors allumer la lampe et attendre 30 s ; sinon éteindre
 
-Trois lignes, et l’objet devient automatique.
+> Trois lignes, et l’objet devient automatique.
 
 ## L’organigramme
-Avant de programmer, on dessine le **logigramme** : des rectangles pour les actions, des losanges pour les décisions, des flèches pour l’ordre. Il se lit sans connaître le langage — c’est ce qui permet d’en discuter à plusieurs.
+| Le symbole | Ce qu’il représente |
+| Le **rectangle** | Une action |
+| Le **losange** | Une décision |
+| La **flèche** | L’ordre d’exécution |
+
+> Le **logigramme** se lit sans connaître le langage : c’est ce qui permet d’en discuter à plusieurs, avant d’écrire une ligne.
 
 ## Tester et déboguer
-Un programme fonctionne rarement du premier coup. On **teste**, on isole l’instruction fautive, on corrige. Un **bug** n’est pas un échec : c’est une étape normale.
+~ Tester → isoler l’instruction fautive → corriger → retester
 
-> Une machine n’interprète pas : elle exécute exactement ce qui est écrit. Quand le résultat surprend, c’est presque toujours le programme qui a raison et l’intention qui était floue.
+!> Un **bug** n’est pas un échec : c’est une étape normale. Quand le résultat surprend, c’est presque toujours le **programme qui a raison** et l’**intention** qui était floue.
 
 ## Les objets connectés
-Une carte peut envoyer ses mesures sur un réseau : c’est l’**objet connecté**. Utile — mais cela pose des questions de **sécurité** et de **données personnelles** : qui reçoit ces mesures, et pour en faire quoi ?`,
+Une carte peut envoyer ses mesures sur un réseau : c’est l’**objet connecté**.
+
+!> Cela pose des questions de **sécurité** et de **données personnelles** : qui reçoit ces mesures, et pour en faire quoi ?`,
           },
           questions: [
             ['Qu’est-ce qu’un programme ?', ['Une suite d’instructions exécutées dans l’ordre', 'Un schéma de câblage', 'Un plan coté', 'Une liste de matériaux'], 0, 'Il est téléversé dans la carte.'],
@@ -503,28 +584,45 @@ Une carte peut envoyer ses mesures sur un réseau : c’est l’**objet connect�
           axe: 'Objets programmables et information',
           lecon: {
             titre: 'Comment les objets se parlent',
-            cours: `## L’information numérique
-Une machine ne comprend que deux états, notés **0** et **1** : c’est le **binaire**. Textes, images, sons et mesures sont d’abord **convertis** en suites de 0 et de 1, transmis, puis reconvertis à l’arrivée.
+            cours: `Le « nuage » n’a rien d’immatériel : c’est un bâtiment climatisé plein de machines, quelque part sur la planète.
+
+## L’information numérique
+= Le binaire : deux états seulement, 0 et 1
+
+~ Textes, images, sons, mesures → convertis en 0 et 1 → transmis → reconvertis à l’arrivée
 
 ## Les unités
-Le **bit** est l’unité de base ; l’**octet** vaut 8 bits. Puis **ko**, **Mo**, **Go**, **To**. Une photo de téléphone pèse quelques Mo, un film quelques Go.
+| L’unité | Sa valeur |
+| Le **bit** | L’unité de base |
+| L’**octet** | **8 bits** |
+| **ko**, **Mo**, **Go**, **To** | Les multiples |
+
+Une photo de téléphone pèse quelques **Mo**, un film quelques **Go**.
 
 ## Les supports de transmission
-- **Câble électrique** : l’information circule sous forme de courant.
-- **Ondes** : wifi, Bluetooth, téléphonie — sans fil, dans l’air.
-- **Fibre optique** : sous forme de **lumière**, dans un fil de verre. C’est le support le plus rapide et celui qui porte le plus de données.
+| Le support | Sous quelle forme |
+| Le **câble électrique** | Un **courant** |
+| Les **ondes** — wifi, Bluetooth, téléphonie | Sans fil, dans l’air |
+| La **fibre optique** | De la **lumière**, dans un fil de verre |
+
+> La fibre est le support le plus rapide, et celui qui porte le plus de données.
 
 ## Le réseau
-Un **réseau** relie des machines pour qu’elles échangent. **Internet** est le réseau des réseaux : les données y voyagent découpées en **paquets**, qui empruntent des chemins différents et sont réassemblés à l’arrivée.
+Un **réseau** relie des machines pour qu’elles échangent. **Internet** est le réseau des réseaux.
+
+~ Les données sont découpées en PAQUETS → chaque paquet emprunte son propre chemin → ils sont réassemblés à l’arrivée
+
 Chaque machine y possède une **adresse IP**.
 
 ## Le stockage
-Disque dur, mémoire flash, carte SD, serveur distant (le « cloud » — c’est-à-dire l’ordinateur de quelqu’un d’autre, dans un centre de données réel qui consomme de l’électricité).
+Disque dur, mémoire flash, carte SD, ou **serveur distant** — le « cloud ».
 
-> Le « nuage » n’a rien d’immatériel : c’est un bâtiment climatisé plein de machines, quelque part sur la planète.
+!> Le « cloud », c’est l’**ordinateur de quelqu’un d’autre**, dans un centre de données bien réel, qui consomme de l’électricité.
 
 ## Sécurité et responsabilité
-Un **mot de passe** solide, des **mises à jour**, de la prudence sur ce qu’on publie. Une donnée transmise peut être **copiée**, **conservée** et **rediffusée** sans qu’on le sache : ce qu’on met en ligne échappe vite à son auteur.`,
+~ Un mot de passe solide → des mises à jour → de la prudence sur ce qu’on publie
+
+!> Une donnée transmise peut être **copiée**, **conservée** et **rediffusée** sans qu’on le sache. Ce qu’on met en ligne **échappe vite à son auteur**.`,
           },
           questions: [
             ['Quels sont les deux états du langage binaire ?', ['0 et 1', 'A et B', 'Oui et non', '+ et −'], 0, 'Toute information y est convertie.'],

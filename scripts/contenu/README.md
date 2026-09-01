@@ -76,7 +76,53 @@ node scripts/seed-contenu.mjs --num 327 --modules svt-6e                        
 node scripts/seed-contenu.mjs --num 328 --modules francais-6e                      > supabase/328_contenu_francais_6e.sql
 node scripts/seed-contenu.mjs --num 329 --modules maths-6e                         > supabase/329_contenu_maths_6e.sql
 node scripts/seed-contenu.mjs --num 330 --modules histoire-geo-6e                  > supabase/330_contenu_histoire_geo_6e.sql
+node scripts/seed-contenu.mjs --num 332 --modules histoire-geo-4e                  > supabase/332_contenu_histoire_geo_4e.sql
+node scripts/seed-contenu.mjs --num 333 --modules anglais-6e                       > supabase/333_contenu_anglais_6e.sql
+node scripts/seed-contenu.mjs --num 334 --modules technologie-5e                   > supabase/334_contenu_technologie_5e.sql
+node scripts/seed-contenu.mjs --num 335 --modules technologie-4e                   > supabase/335_contenu_technologie_4e.sql
+node scripts/seed-contenu.mjs --num 336 --modules technologie-6e                   > supabase/336_contenu_technologie_6e.sql
+node scripts/seed-contenu.mjs --num 337 --modules emc-6e                           > supabase/337_contenu_emc_6e.sql
+node scripts/seed-contenu.mjs --num 338 --modules emc-cycle4                       > supabase/338_contenu_emc_cycle4.sql
+node scripts/seed-contenu.mjs --num 339 --modules sport-college                    > supabase/339_contenu_sport_college.sql
 ```
+
+## Le markdown d'un cours — le sous-ensemble, et rien d'autre
+
+`components/LessonRichContent` ne rend PAS du markdown libre : il rend un
+sous-ensemble fermé, écrit ici. Tout ce qui n'est pas dans ce tableau s'affiche
+tel quel à l'écran — astérisques comprises.
+
+| Le marqueur | Ce qu'il devient à l'écran |
+|---|---|
+| `## Titre` | Une section, barrée de violet |
+| `**gras**` | Le terme à retenir |
+| `*italique*` | L'exemple : mot étranger, titre d'œuvre, nom latin |
+| `\| a \| b \|` | Un tableau — **la première ligne est l'en-tête** |
+| `1. étape` | Une marche à suivre, numéros en pastilles |
+| `- puce` | Une liste |
+| `> idée clé` | L'encadré **doré** : ce qu'on emporte |
+| `!> alerte` | L'encadré **corail** : l'erreur classique, le piège |
+| `= formule` | La carte centrée en pointillés : « recopie-moi dans la marge » |
+| `~ A → B → C` | Une chaîne de maillons fléchés : un processus ordonné |
+| `@ 1789 — Prise de la Bastille` | Un jalon de frise ; les `@` contigus forment UNE chronologie |
+
+⚠️ **Ni `###`, ni `---`, ni backticks** : ils ne sont pas rendus.
+⚠️ **Pas de LaTeX** : les formules s'écrivent en texte (a × b, 3/4, 12 cm², ≈).
+
+**LES QUATRE DERNIERS MARQUEURS SONT NÉS DU COLLÈGE (migrations 345 → 347).** La
+campagne 341 → 344 avait tout ramené au tableau, qui est l'outil juste pour une
+opposition à deux entrées. De la 6e à la 4e, trois formes de savoir y perdaient :
+l'**erreur classique**, qu'un élève de onze ans ne distingue pas de l'idée à
+retenir quand les deux encadrés sont dorés ; le **processus** ordonné, que la
+prose oblige à reconstruire de tête ; la **chronologie**, colonne vertébrale de
+l'histoire au collège. S'y ajoute la **formule**, qu'on doit retrouver sans
+relire le paragraphe qui la porte.
+
+Les marqueurs ont été choisis **sur relevé** : `!>`, `=`, `@` et `~` en tête de
+ligne totalisent **zéro** occurrence dans les 73 614 lignes des cours du dépôt.
+La chaîne, elle, ne peut PAS se reconnaître à ses flèches seules — 154 lignes de
+prose existantes contiennent déjà « → » (*alt → älter*, « 3,47 → 3,5 ») et
+seraient devenues des schémas : d'où le `~` explicite.
 
 ## La campagne de Sixième (326 → 330)
 

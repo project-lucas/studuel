@@ -131,21 +131,44 @@ DELETE FROM public.chapters c
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Ranger les nombres, écrire les ensembles de solutions',
-            cours: `Tous les nombres ne se ressemblent pas. Les classer permet de savoir ce qu’on a le droit de faire avec, et d’écrire proprement les solutions d’une inéquation.
+            cours: `Tous les nombres ne se ressemblent pas. Les classer permet de savoir ce qu'on a le droit de faire avec, et d'écrire proprement les solutions d'une inéquation.
 
 ## Les ensembles emboîtés
-ℕ contient les entiers naturels (0, 1, 2, …). ℤ y ajoute les entiers négatifs. ⅅ, les décimaux, sont ceux dont l’écriture décimale est finie. ℚ, les rationnels, sont les quotients de deux entiers. ℝ, les réels, contiennent en plus les irrationnels comme √2 ou π. Chacun contient le précédent : ℕ ⊂ ℤ ⊂ ⅅ ⊂ ℚ ⊂ ℝ.
+| L'ensemble | Ce qu'il contient | Un exemple |
+| **ℕ** | Les entiers naturels | 0, 1, 2, 3 |
+| **ℤ** | Plus les entiers négatifs | −5 |
+| **ⅅ** | Les décimaux : écriture décimale **finie** | 0,25 |
+| **ℚ** | Les rationnels : quotients de deux entiers | 1/3 |
+| **ℝ** | Plus les irrationnels | √2, π |
+
+Chacun contient le précédent : ℕ ⊂ ℤ ⊂ ⅅ ⊂ ℚ ⊂ ℝ.
 
 ## La droite numérique
-Chaque réel correspond à un point d’une droite graduée, et réciproquement. C’est ce qui permet de représenter un ensemble de solutions par une portion de droite.
+Chaque réel correspond à un point d'une droite graduée, et réciproquement.
 
-> Résoudre une inéquation, ce n’est pas trouver un nombre : c’est décrire une partie de la droite réelle.
+> Résoudre une inéquation, ce n'est pas trouver un nombre : c'est décrire une **partie de la droite réelle**.
 
 ## Les intervalles
-[a ; b] contient a et b (crochets fermés) ; ]a ; b[ les exclut ; les formes mixtes existent. On écrit aussi ]−∞ ; b] pour tous les réels inférieurs ou égaux à b, et [a ; +∞[ pour ceux supérieurs ou égaux à a. Le crochet est **toujours ouvert** du côté de l’infini, qui n’est pas un nombre.
+| L'écriture | Ce qu'elle contient |
+| [a ; b] | a et b compris |
+| ]a ; b[ | a et b **exclus** |
+| [a ; b[ | a compris, b exclu |
+| ]−∞ ; b] | Tous les réels inférieurs ou égaux à b |
+| [a ; +∞[ | Tous les réels supérieurs ou égaux à a |
+
+> Le crochet est **toujours ouvert** du côté de l'infini : l'infini n'est pas un nombre.
 
 ## Réunion, intersection, valeur absolue
-L’intersection ∩ garde ce qui appartient aux deux ensembles, la réunion ∪ garde ce qui appartient à l’un ou à l’autre. La **valeur absolue** |x| est la distance de x à 0 ; |x − a| ≤ r se traduit par x ∈ [a − r ; a + r], soit un intervalle centré en a de rayon r.`,
+| Le symbole | Ce qu'il garde |
+| L'intersection ∩ | Ce qui appartient **aux deux** ensembles |
+| La réunion ∪ | Ce qui appartient à **l'un ou à l'autre** |
+
+La **valeur absolue** d'un réel x est sa distance à 0.
+
+| L'inéquation | Sa traduction |
+| La valeur absolue de (x − a) est inférieure ou égale à r | x appartient à [a − r ; a + r] |
+
+C'est l'intervalle **centré en a**, de rayon r.`,
           },
           questions: [
             ['Quel ensemble contient tous les autres ?', ['ℝ, l’ensemble des réels', 'ℚ, l’ensemble des rationnels', 'ℤ, l’ensemble des entiers relatifs', 'ⅅ, l’ensemble des décimaux'], 0, 'ℕ ⊂ ℤ ⊂ ⅅ ⊂ ℚ ⊂ ℝ.'],
@@ -163,21 +186,44 @@ L’intersection ∩ garde ce qui appartient aux deux ensembles, la réunion ∪
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Reconnaître un nombre à son écriture',
-            cours: `Un même nombre s’écrit de plusieurs façons. Savoir passer d’une écriture à l’autre, et reconnaître à quelle famille il appartient, évite bien des erreurs de raisonnement.
+            cours: `Un même nombre s'écrit de plusieurs façons. Savoir à quelle famille il appartient évite bien des erreurs de raisonnement.
 
-## Les décimaux
-Un nombre est **décimal** s’il peut s’écrire sous la forme a/10ⁿ avec a entier : son écriture décimale est **finie**. 0,25 est décimal (25/100), 3 aussi (3/1). Un quotient d’entiers est décimal si, une fois la fraction irréductible, le dénominateur ne contient comme facteurs premiers que 2 et 5.
+## Les trois familles
+| La famille | Sa définition | Son écriture décimale |
+| **Décimal** | De la forme a/10ⁿ avec a entier | **Finie** |
+| **Rationnel** | Quotient de deux entiers | Finie ou **périodique** |
+| **Irrationnel** | Ni l'un ni l'autre | Infinie et **non périodique** |
 
-## Les rationnels
-Un **rationnel** est un quotient de deux entiers. Son écriture décimale est finie ou **périodique** à partir d’un certain rang : 1/3 = 0,333…, 1/7 = 0,142857142857… Réciproquement, tout développement périodique correspond à un rationnel.
+> Le développement décimal ne ment pas : fini ou périodique, c'est un rationnel ; infini sans période, c'est un irrationnel.
 
-> Le développement décimal ne ment pas : fini ou périodique, c’est un rationnel ; infini sans période, c’est un irrationnel.
+## Reconnaître un décimal
+| Le nombre | Est-il décimal | Pourquoi |
+| 0,25 | **Oui** | 25/100 |
+| 3 | **Oui** | 3/1 |
+| 1/3 | **Non** | Le dénominateur contient un 3 |
 
-## Les irrationnels
-√2, √3, π, le nombre d’or : leur écriture décimale est infinie et non périodique. On démontre par l’absurde que √2 n’est pas rationnel : en le supposant égal à p/q irréductible, on aboutit à ce que p et q soient tous deux pairs, ce qui contredit l’irréductibilité.
+> Un quotient d'entiers est décimal si, la fraction étant irréductible, le dénominateur ne contient comme facteurs premiers que **2 et 5**.
+
+## Des exemples de rationnels et d'irrationnels
+| Le nombre | Son développement |
+| 1/3 | 0,333… — période de longueur 1 |
+| 1/7 | 0,142857142857… — période de longueur 6 |
+| √2, √3, π, le nombre d'or | Infini, sans période |
+
+## Pourquoi √2 est irrationnel
+| L'étape du raisonnement par l'absurde | Ce qu'elle donne |
+| On suppose √2 = p/q, fraction **irréductible** | L'hypothèse |
+| On élève au carré : 2q² = p² | p² est pair, donc p est pair |
+| On pose p = 2k | 2q² = 4k², donc q² = 2k² |
+| q est donc pair aussi | p et q sont tous deux pairs : **contradiction** avec l'irréductibilité |
 
 ## Calculer avec les fractions
-Additionner suppose un dénominateur commun ; multiplier se fait terme à terme ; diviser revient à multiplier par l’inverse. Il est presque toujours plus sûr de garder une valeur exacte, comme 1/3 ou √2, que d’écrire une valeur approchée — les arrondis successifs s’accumulent.`,
+| L'opération | La règle |
+| **Additionner** | Réduire au même dénominateur |
+| **Multiplier** | Terme à terme |
+| **Diviser** | Multiplier par l'inverse |
+
+> Il est presque toujours plus sûr de garder une valeur **exacte** — 1/3, √2 — qu'une valeur approchée : les arrondis successifs s'accumulent.`,
           },
           questions: [
             ['Qu’est-ce qu’un nombre décimal ?', ['Un nombre dont l’écriture décimale est finie', 'Un nombre à virgule', 'Un quotient de deux entiers', 'Un nombre inférieur à 1'], 0, 'Il peut s’écrire a/10ⁿ avec a entier.'],
@@ -195,21 +241,42 @@ Additionner suppose un dénominateur commun ; multiplier se fait terme à terme 
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'La structure cachée des entiers',
-            cours: `Les entiers ne sont pas interchangeables : chacun se décompose d’une seule manière en produit de nombres premiers. C’est le théorème fondamental de l’arithmétique.
+            cours: `Les entiers ne sont pas interchangeables : chacun se décompose d'une seule manière en produit de nombres premiers.
 
 ## Multiples et diviseurs
-Dire que b **divise** a, c’est dire qu’il existe un entier k tel que a = b × k ; on dit aussi que a est un **multiple** de b. Les deux formulations décrivent la même relation, vue de chaque côté.
+| La formulation | Ce qu'elle dit |
+| b **divise** a | Il existe un entier k tel que a = b × k |
+| a est un **multiple** de b | La même relation, vue de l'autre côté |
 
 ## Les critères de divisibilité
-Par 2 : le chiffre des unités est pair. Par 3 : la somme des chiffres est divisible par 3. Par 5 : le nombre se termine par 0 ou 5. Par 9 : la somme des chiffres est divisible par 9. Par 10 : il se termine par 0. Par 4 : les deux derniers chiffres forment un nombre divisible par 4.
-
-> Un nombre premier n’est pas un nombre rare : il y en a une infinité, et Euclide l’a démontré il y a plus de deux mille ans.
+| Le diviseur | Le critère |
+| **2** | Le chiffre des unités est pair |
+| **3** | La somme des chiffres est divisible par 3 |
+| **4** | Les deux derniers chiffres forment un nombre divisible par 4 |
+| **5** | Le nombre se termine par 0 ou 5 |
+| **9** | La somme des chiffres est divisible par 9 |
+| **10** | Le nombre se termine par 0 |
 
 ## Les nombres premiers
-Un entier supérieur ou égal à 2 est **premier** s’il n’admet que deux diviseurs positifs : 1 et lui-même. 2, 3, 5, 7, 11, 13, 17, 19, 23, 29… Le nombre 1 n’est pas premier, par convention utile : sinon la décomposition ne serait plus unique. Pour tester si n est premier, il suffit d’essayer les diviseurs premiers jusqu’à √n.
+Un entier supérieur ou égal à 2 est **premier** s'il n'admet que deux diviseurs positifs : 1 et lui-même.
+
+Les premiers : 2, 3, 5, 7, 11, 13, 17, 19, 23, 29…
+
+| La question | La réponse |
+| 1 est-il premier ? | **Non**, par convention utile : sinon la décomposition ne serait plus unique |
+| Jusqu'où tester les diviseurs de n ? | Jusqu'à **√n**, en n'essayant que les premiers |
+
+> Un nombre premier n'est pas un nombre rare : il y en a une infinité, et Euclide l'a démontré il y a plus de deux mille ans.
 
 ## La décomposition
-Tout entier supérieur ou égal à 2 s’écrit de manière **unique** comme produit de facteurs premiers : 360 = 2³ × 3² × 5. Cette décomposition sert à simplifier une fraction, à trouver le PGCD, et fonde la cryptographie moderne — multiplier deux grands nombres premiers est facile, retrouver les facteurs d’un très grand produit ne l’est pas.`,
+Tout entier supérieur ou égal à 2 s'écrit de manière **unique** comme produit de facteurs premiers.
+
+360 = 2³ × 3² × 5
+
+| Son usage | Ce qu'elle permet |
+| Simplifier une **fraction** | Repérer les facteurs communs |
+| Trouver le **PGCD** | Prendre les facteurs communs au plus petit exposant |
+| La **cryptographie** moderne | Multiplier deux grands premiers est facile ; retrouver les facteurs d'un très grand produit ne l'est pas |`,
           },
           questions: [
             ['Qu’est-ce qu’un nombre premier ?', ['Un entier supérieur ou égal à 2 n’ayant que deux diviseurs positifs', 'Un nombre impair', 'Un nombre qui n’est pas décomposable', 'Le premier terme d’une suite'], 0, '1 et lui-même.'],
@@ -227,21 +294,43 @@ Tout entier supérieur ou égal à 2 s’écrit de manière **unique** comme pro
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Les règles qui évitent les fautes',
-            cours: `Le calcul littéral n’est pas une gymnastique gratuite : il permet de transformer une expression pour la rendre lisible, comparable, ou résoluble.
+            cours: `Le calcul littéral n'est pas une gymnastique gratuite : il transforme une expression pour la rendre lisible, comparable, ou résoluble.
 
 ## Les puissances
-aⁿ est le produit de n facteurs égaux à a. Les règles : aᵐ × aⁿ = aᵐ⁺ⁿ ; aᵐ / aⁿ = aᵐ⁻ⁿ ; (aᵐ)ⁿ = aᵐˣⁿ ; (ab)ⁿ = aⁿbⁿ. Par convention a⁰ = 1 pour a non nul, et a⁻ⁿ = 1/aⁿ. La **notation scientifique** écrit tout nombre sous la forme a × 10ⁿ avec 1 ≤ |a| < 10.
+| La règle | Son écriture |
+| Produit de même base | aᵐ × aⁿ = aᵐ⁺ⁿ |
+| Quotient de même base | aᵐ / aⁿ = aᵐ⁻ⁿ |
+| Puissance de puissance | (aᵐ)ⁿ = aᵐˣⁿ |
+| Produit élevé à une puissance | (ab)ⁿ = aⁿbⁿ |
+| Exposant nul | a⁰ = 1, pour a non nul |
+| Exposant négatif | a⁻ⁿ = 1/aⁿ |
+
+La **notation scientifique** écrit tout nombre sous la forme a × 10ⁿ, où la valeur absolue de a est comprise entre 1 inclus et 10 exclu.
 
 ## Les racines carrées
-Pour a ≥ 0, √a est l’unique nombre positif dont le carré vaut a. Règles : √(ab) = √a × √b et √(a/b) = √a / √b pour b > 0. Attention : **√(a + b) n’est pas √a + √b**, c’est la faute la plus fréquente. On sait aussi que √(a²) = |a|, et non a.
+Pour a ≥ 0, √a est l'unique nombre **positif** dont le carré vaut a.
+
+| L'égalité | Est-elle vraie |
+| √(ab) = √a × √b | **Vraie** |
+| √(a/b) = √a / √b, pour b > 0 | **Vraie** |
+| √(a + b) = √a + √b | **FAUSSE** — la faute la plus fréquente |
+| √(a²) = a | **Fausse** : c'est la valeur absolue de a |
 
 > Une racine au dénominateur se rend rationnelle en multipliant haut et bas par la même racine : 1/√2 = √2/2.
 
 ## Les quotients
-Un quotient n’est défini que si le dénominateur est non nul : il faut toujours donner les **valeurs interdites**. Pour additionner, on réduit au même dénominateur ; pour simplifier, on factorise numérateur et dénominateur avant de barrer un facteur commun — jamais un terme d’une somme.
+| La règle | Son contenu |
+| Le domaine | Un quotient n'est défini que si le dénominateur est **non nul** : donner les **valeurs interdites** |
+| Additionner | Réduire au même dénominateur |
+| Simplifier | Factoriser numérateur et dénominateur **avant** de barrer |
 
 ## Les pièges classiques
-(a + b)² ne vaut pas a² + b². 1/(a + b) ne vaut pas 1/a + 1/b. Simplifier (x + 3)/(x + 5) en 3/5 est faux. Dans tous ces cas, la règle est la même : on ne simplifie que des **facteurs**, jamais des **termes**.`,
+| L'écriture fausse | Pourquoi |
+| (a + b)² = a² + b² | Le **double produit** manque |
+| 1/(a + b) = 1/a + 1/b | L'inverse d'une somme n'est pas la somme des inverses |
+| (x + 3)/(x + 5) = 3/5 | On a barré des **termes**, pas des facteurs |
+
+> Dans tous ces cas, la règle est la même : on ne simplifie que des **facteurs**, jamais des **termes**.`,
           },
           questions: [
             ['Que vaut a⁵ × a³ ?', ['a⁸', 'a¹⁵', 'a²', '2a⁸'], 0, 'On additionne les exposants.'],
@@ -259,25 +348,40 @@ Un quotient n’est défini que si le dénominateur est non nul : il faut toujou
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Trois formules à savoir dans les deux sens',
-            cours: `Les identités remarquables servent à **développer** quand on veut calculer, et à **factoriser** quand on veut résoudre. Savoir les lire dans les deux sens est ce qui compte.
+            cours: `Les identités remarquables servent à développer quand on veut calculer, et à factoriser quand on veut résoudre.
 
 ## Les trois formules
-(a + b)² = a² + 2ab + b²
-(a − b)² = a² − 2ab + b²
-(a + b)(a − b) = a² − b²
+| L'identité | Son développement |
+| (a + b)² | a² + **2ab** + b² |
+| (a − b)² | a² − **2ab** + b² |
+| (a + b)(a − b) | a² − b² |
 
-Le terme du milieu, le fameux **double produit**, est celui que l’on oublie : (a + b)² n’est jamais a² + b².
+> Le terme du milieu, le **double produit**, est celui que l'on oublie : (a + b)² n'est **jamais** a² + b².
 
 ## Développer
-(x + 5)² = x² + 10x + 25. (3x − 2)² = 9x² − 12x + 4. (2x + 7)(2x − 7) = 4x² − 49. Le repérage se fait en identifiant a et b avant tout calcul.
+| L'expression | Son développement |
+| (x + 5)² | x² + 10x + 25 |
+| (3x − 2)² | 9x² − 12x + 4 |
+| (2x + 7)(2x − 7) | 4x² − 49 |
+
+> Le repérage se fait en identifiant a et b **avant** tout calcul.
+
+## Factoriser
+| L'expression | Sa forme factorisée | L'identité utilisée |
+| x² − 9 | (x − 3)(x + 3) | La troisième |
+| x² + 6x + 9 | (x + 3)² | La première |
+| 16x² − 25 | (4x − 5)(4x + 5) | La troisième |
+
+> On cherche d'abord un **facteur commun**, puis une identité remarquable.
 
 > Développer sert à calculer ; factoriser sert à résoudre. Une équation se résout presque toujours sous forme factorisée.
 
-## Factoriser
-Reconnaître x² − 9 comme (x − 3)(x + 3) ; x² + 6x + 9 comme (x + 3)² ; 16x² − 25 comme (4x − 5)(4x + 5). On cherche d’abord un **facteur commun**, puis une identité remarquable.
-
 ## À quoi cela sert
-Résoudre une équation grâce au principe du produit nul : un produit est nul si et seulement si l’un de ses facteurs est nul. Simplifier une fraction rationnelle. Calculer de tête : 101 × 99 = (100 + 1)(100 − 1) = 10 000 − 1 = 9 999. Et, l’an prochain, mettre un trinôme sous forme canonique.`,
+| L'usage | Le mécanisme |
+| Résoudre une équation | Le **produit nul** : un produit est nul si et seulement si l'un de ses facteurs est nul |
+| Simplifier une fraction rationnelle | Faire apparaître un facteur commun |
+| Calculer de tête | 101 × 99 = (100 + 1)(100 − 1) = 10 000 − 1 = **9 999** |
+| Préparer la Première | La forme canonique du trinôme |`,
           },
           questions: [
             ['Que vaut (a + b)² ?', ['a² + 2ab + b²', 'a² + b²', 'a² − 2ab + b²', '2a + 2b'], 0, 'Le double produit est le terme qu’on oublie.'],
@@ -295,21 +399,45 @@ Résoudre une équation grâce au principe du produit nul : un produit est nul s
           axe: 'Nombres et calculs',
           lecon: {
             titre: 'Résoudre sans perdre ni inventer de solutions',
-            cours: `Résoudre, c’est trouver **toutes** les valeurs qui rendent l’égalité ou l’inégalité vraie — ni plus, ni moins. Chaque transformation doit conserver exactement l’ensemble des solutions.
+            cours: `Résoudre, c'est trouver toutes les valeurs qui rendent l'égalité ou l'inégalité vraie — ni plus, ni moins.
 
 ## Les équations du premier degré
-ax + b = 0 admet, pour a non nul, l’unique solution x = −b/a. La méthode : développer si nécessaire, regrouper les termes en x d’un côté, les constantes de l’autre, puis diviser par le coefficient de x.
+ax + b = 0 admet, pour a non nul, l'unique solution x = −b/a.
 
-## Les équations produit et quotient
-Un **produit** est nul si et seulement si l’un de ses facteurs est nul : (x − 2)(x + 5) = 0 donne x = 2 ou x = −5. Un **quotient** est nul si son numérateur est nul et son dénominateur non nul — d’où l’obligation de déterminer les **valeurs interdites** avant de résoudre.
+| L'étape | Le geste |
+| 1 | **Développer** si nécessaire |
+| 2 | Regrouper les termes en x d'un côté, les constantes de l'autre |
+| 3 | **Diviser** par le coefficient de x |
 
-> Multiplier les deux membres par un nombre négatif change le sens de l’inégalité. C’est la seule règle vraiment nouvelle des inéquations.
+## Produit et quotient
+| L'équation | La condition de nullité |
+| Un **produit** est nul | Si et seulement si **l'un de ses facteurs** est nul |
+| Un **quotient** est nul | Si son **numérateur** est nul et son dénominateur non nul |
+
+(x − 2)(x + 5) = 0 donne x = 2 **ou** x = −5.
+
+> Pour un quotient, déterminer les **valeurs interdites** avant toute résolution.
 
 ## Les inéquations
-Mêmes gestes qu’une équation, avec une exception décisive : lorsqu’on multiplie ou divise par un nombre **strictement négatif**, on inverse le sens de l’inégalité. La solution s’écrit sous forme d’**intervalle** : par exemple S = ]−∞ ; 3].
+Mêmes gestes qu'une équation, avec une exception décisive.
+
+| L'opération | L'effet sur l'inégalité |
+| Ajouter ou soustraire | Le sens est **conservé** |
+| Multiplier ou diviser par un nombre **positif** | Conservé |
+| Multiplier ou diviser par un nombre **strictement négatif** | Le sens est **inversé** |
+
+> C'est la seule règle vraiment nouvelle des inéquations.
+
+La solution s'écrit sous forme d'**intervalle** : par exemple S = ]−∞ ; 3].
 
 ## Le tableau de signes
-Pour une inéquation produit ou quotient, on étudie le signe de chaque facteur puis on applique la règle des signes dans un **tableau**. Pour une double barre au dénominateur, on note la valeur interdite. Cette méthode se réutilisera toute l’année, et l’an prochain avec le second degré.`,
+| L'étape | Ce qu'on y met |
+| 1 | Les **valeurs qui annulent** chaque facteur, dans l'ordre croissant |
+| 2 | Le signe de chaque facteur sur chaque intervalle |
+| 3 | Le signe du produit ou du quotient, par la règle des signes |
+| 4 | Une **double barre** à la valeur interdite d'un dénominateur |
+
+> Cette méthode se réutilise toute l'année, et l'an prochain avec le second degré.`,
           },
           questions: [
             ['Quelle est la solution de 3x − 12 = 0 ?', ['x = 4', 'x = −4', 'x = 12', 'x = 36'], 0, 'On isole x puis on divise par 3.'],
@@ -331,21 +459,42 @@ Pour une inéquation produit ou quotient, on étudie le signe de chaque facteur 
           axe: 'Géométrie',
           lecon: {
             titre: 'Le pied de la perpendiculaire, et la plus courte distance',
-            cours: `La géométrie de seconde reprend les outils du collège et ajoute une notion neuve, le **projeté orthogonal**, qui donnera plus tard le produit scalaire.
+            cours: `La géométrie de seconde reprend les outils du collège et ajoute une notion neuve, le projeté orthogonal, qui donnera plus tard le produit scalaire.
 
 ## Les outils du triangle
-**Pythagore** et sa réciproque, dans un triangle rectangle. **Thalès** et sa réciproque, dans une configuration de droites parallèles. La **trigonométrie** dans le triangle rectangle : cosinus égale adjacent sur hypoténuse, sinus égale opposé sur hypoténuse, tangente égale opposé sur adjacent.
+| L'outil | Sa condition d'emploi |
+| **Pythagore** et sa réciproque | Un triangle **rectangle** |
+| **Thalès** et sa réciproque | Une configuration de droites **parallèles** |
+| La **trigonométrie** | Un triangle rectangle |
+
+| Le rapport | Sa définition |
+| **Cosinus** | Adjacent sur hypoténuse |
+| **Sinus** | Opposé sur hypoténuse |
+| **Tangente** | Opposé sur adjacent |
 
 ## Les droites remarquables
-**Médiatrices** d’un triangle, concourantes au centre du cercle circonscrit. **Hauteurs**, concourantes à l’orthocentre. **Médianes**, concourantes au centre de gravité, situé aux deux tiers de chaque médiane depuis le sommet. **Bissectrices**, concourantes au centre du cercle inscrit.
-
-> Le projeté orthogonal, c’est l’ombre d’un point sur une droite quand la lumière vient perpendiculairement.
+| La droite | Son point de concours | Ce qu'il est |
+| **Médiatrices** | Centre du cercle **circonscrit** | Équidistant des trois sommets |
+| **Hauteurs** | **Orthocentre** | — |
+| **Médianes** | Centre de **gravité** | Aux deux tiers de chaque médiane depuis le sommet |
+| **Bissectrices** | Centre du cercle **inscrit** | Équidistant des trois côtés |
 
 ## Le projeté orthogonal
-Le **projeté orthogonal** de M sur une droite d est le point H de d tel que la droite (MH) soit perpendiculaire à d. Il est unique, et la distance MH est **la plus courte** de toutes les distances de M à un point de d : c’est ce qu’on appelle la distance du point M à la droite d.
+Le **projeté orthogonal** de M sur une droite d est le point H de d tel que (MH) soit perpendiculaire à d.
+
+| Sa propriété | Ce qu'elle affirme |
+| L'**unicité** | Il n'y en a qu'un |
+| La **minimalité** | MH est la **plus courte** des distances de M à un point de d |
+
+C'est ce qu'on appelle la distance du point M à la droite d.
+
+> Le projeté orthogonal, c'est l'ombre d'un point sur une droite quand la lumière vient perpendiculairement.
 
 ## Applications
-Calculer une hauteur, une aire, une distance à une droite. Justifier qu’un point est le plus proche. Optimiser : dans de nombreux problèmes concrets, le minimum d’une distance s’obtient exactement au pied de la perpendiculaire.`,
+| L'application | Ce qu'elle utilise |
+| Calculer une hauteur, une aire | La distance à une droite |
+| Justifier qu'un point est le plus proche | La minimalité |
+| **Optimiser** | Dans de nombreux problèmes concrets, le minimum d'une distance s'obtient au pied de la perpendiculaire |`,
           },
           questions: [
             ['Qu’est-ce que le projeté orthogonal d’un point M sur une droite d ?', ['Le point H de d tel que (MH) soit perpendiculaire à d', 'Le milieu du segment reliant M à d', 'Le point de d le plus éloigné de M', 'L’intersection de d avec la médiatrice'], 0, 'Il est unique.'],
@@ -363,21 +512,41 @@ Calculer une hauteur, une aire, une distance à une droite. Justifier qu’un po
           axe: 'Géométrie',
           lecon: {
             titre: 'Un objet qui décrit un déplacement',
-            cours: `Un **vecteur** ne décrit pas un point mais un **déplacement** : une direction, un sens, une longueur. Deux flèches situées à des endroits différents peuvent représenter le même vecteur.
+            cours: `Un vecteur ne décrit pas un point mais un déplacement : une direction, un sens, une longueur.
 
-## Définition
-Le vecteur AB est caractérisé par trois données : sa **direction** (celle de la droite (AB)), son **sens** (de A vers B), sa **norme**, c’est-à-dire la longueur AB. Le vecteur nul a une norme nulle et pas de direction propre.
+## Les trois caractéristiques
+| La caractéristique | Ce qu'elle est, pour le vecteur AB |
+| La **direction** | Celle de la droite (AB) |
+| Le **sens** | De A vers B |
+| La **norme** | La longueur AB |
+
+Le **vecteur nul** a une norme nulle et pas de direction propre.
 
 ## Égalité et parallélogramme
-Deux vecteurs AB et CD sont **égaux** lorsqu’ils ont même direction, même sens et même norme. C’est exactement dire que ABDC est un parallélogramme, éventuellement aplati. Un vecteur peut donc être représenté à partir de n’importe quel point.
+Deux vecteurs AB et CD sont **égaux** lorsqu'ils ont même direction, même sens et même norme.
 
-> Dire que deux vecteurs sont égaux, c’est dire qu’un même déplacement a été effectué à deux endroits.
+> C'est exactement dire que **ABDC est un parallélogramme**, éventuellement aplati. Un vecteur peut donc être représenté à partir de n'importe quel point.
+
+> Dire que deux vecteurs sont égaux, c'est dire qu'un même déplacement a été effectué à deux endroits.
 
 ## Somme et relation de Chasles
-La **relation de Chasles** énonce que AB + BC = AC : enchaîner deux déplacements revient à en faire un seul. On peut aussi construire la somme par la règle du **parallélogramme**. La somme est commutative et associative, et AB + BA est le vecteur nul.
+| La méthode | Son énoncé |
+| La relation de **Chasles** | AB + BC = AC : enchaîner deux déplacements revient à en faire un seul |
+| La règle du **parallélogramme** | La somme est la diagonale issue du point commun |
+
+| La propriété | Son contenu |
+| Commutativité | u + v = v + u |
+| Associativité | (u + v) + w = u + (v + w) |
+| Vecteur opposé | AB + BA est le vecteur nul |
 
 ## Multiplication par un réel
-k fois le vecteur u a la même direction que u ; même sens si k > 0, sens opposé si k < 0 ; sa norme est |k| fois celle de u. Deux vecteurs non nuls sont **colinéaires** s’il existe un réel k tel que l’un soit k fois l’autre — ce qui traduit exactement le parallélisme de leurs directions, et l’alignement lorsqu’ils partagent un point.`,
+| Le réel k | La direction | Le sens | La norme |
+| k > 0 | Inchangée | **Conservé** | k fois celle de u |
+| k < 0 | Inchangée | **Opposé** | La valeur absolue de k fois celle de u |
+
+Deux vecteurs non nuls sont **colinéaires** s'il existe un réel k tel que l'un soit k fois l'autre.
+
+> La colinéarité traduit exactement le **parallélisme** des directions — et l'**alignement** lorsque les vecteurs partagent un point.`,
           },
           questions: [
             ['Quelles sont les trois caractéristiques d’un vecteur ?', ['Direction, sens et norme', 'Origine, extrémité et longueur', 'Abscisse, ordonnée et angle', 'Position, vitesse et sens'], 0, 'Un vecteur n’a pas de position fixe.'],
@@ -395,21 +564,38 @@ k fois le vecteur u a la même direction que u ; même sens si k > 0, sens oppos
           axe: 'Géométrie',
           lecon: {
             titre: 'Traduire la géométrie en calculs',
-            cours: `Un **repère** transforme des figures en nombres : dès que les points ont des coordonnées, démontrer devient calculer.
+            cours: `Un repère transforme des figures en nombres : dès que les points ont des coordonnées, démontrer devient calculer.
 
-## Coordonnées d’un vecteur
-Dans un repère du plan, si A a pour coordonnées (xA ; yA) et B (xB ; yB), le vecteur AB a pour coordonnées (xB − xA ; yB − yA). L’ordre compte : on soustrait toujours l’origine à l’extrémité.
+## Coordonnées d'un vecteur
+Si A est le point (xA ; yA) et B le point (xB ; yB), le vecteur AB a pour coordonnées :
+
+(xB − xA ; yB − yA)
+
+> L'ordre compte : on soustrait toujours l'**origine** à l'**extrémité**.
 
 ## Les formules à connaître
-Milieu de [AB] : ((xA + xB)/2 ; (yA + yB)/2). Distance, dans un repère **orthonormé** : AB = √((xB − xA)² + (yB − yA)²), qui n’est rien d’autre que Pythagore. Somme de deux vecteurs : on additionne les coordonnées. Produit par un réel k : on multiplie chaque coordonnée par k.
+| La grandeur | Sa formule | Sa condition |
+| Milieu de [AB] | ((xA + xB)/2 ; (yA + yB)/2) | Tout repère |
+| **Distance** AB | √((xB − xA)² + (yB − yA)²) | Repère **orthonormé** uniquement |
+| Somme de deux vecteurs | On additionne les coordonnées | Tout repère |
+| Produit par un réel k | On multiplie chaque coordonnée par k | Tout repère |
 
-> Le calcul de distance n’est valable que dans un repère orthonormé. Dans un repère quelconque, la formule est fausse.
+> Le calcul de distance n'est valable que dans un repère **orthonormé**. Dans un repère quelconque, la formule est fausse. C'est Pythagore, rien de plus.
 
 ## Le critère de colinéarité
-Deux vecteurs u (x ; y) et v (x' ; y') sont **colinéaires** si et seulement si leur **déterminant** xy' − yx' est nul. Ce critère unique remplace la recherche d’un coefficient k.
+Deux vecteurs u(x ; y) et v(x' ; y') sont colinéaires si et seulement si leur **déterminant** est nul :
 
-## Ce qu’on démontre avec
-Que deux droites sont parallèles, que trois points sont alignés, qu’un quadrilatère est un parallélogramme — en montrant l’égalité de deux vecteurs, ou en vérifiant que les diagonales ont le même milieu. La géométrie repérée offre presque toujours une démonstration purement calculatoire.`,
+xy' − yx' = 0
+
+> Ce critère unique remplace la recherche d'un coefficient k.
+
+## Ce qu'on démontre avec
+| La propriété à démontrer | La méthode |
+| Deux droites **parallèles** | Deux vecteurs directeurs colinéaires |
+| Trois points **alignés** | Deux vecteurs colinéaires partageant un point |
+| Un **parallélogramme** | Deux vecteurs égaux, ou des diagonales de même milieu |
+
+> La géométrie repérée offre presque toujours une démonstration purement calculatoire.`,
           },
           questions: [
             ['Quelles sont les coordonnées du vecteur AB si A(1 ; 2) et B(4 ; 7) ?', ['(3 ; 5)', '(5 ; 9)', '(−3 ; −5)', '(4 ; 14)'], 0, 'On soustrait l’origine à l’extrémité.'],
@@ -427,21 +613,41 @@ Que deux droites sont parallèles, que trois points sont alignés, qu’un quadr
           axe: 'Géométrie',
           lecon: {
             titre: 'Reconnaître une droite à son équation',
-            cours: `Toute droite du plan admet une équation, et toute équation de cette forme représente une droite. C’est le pont entre la géométrie et l’algèbre.
+            cours: `Toute droite du plan admet une équation, et toute équation de cette forme représente une droite.
 
-## Les deux formes
-Une droite **non parallèle à l’axe des ordonnées** admet une équation **réduite** y = mx + p, où m est le **coefficient directeur** et p l’**ordonnée à l’origine**. Une droite parallèle à cet axe a une équation de la forme x = c. La forme **cartésienne** ax + by + c = 0, avec a et b non tous deux nuls, couvre tous les cas.
+## Les formes d'équation
+| La forme | Son écriture | Ce qu'elle couvre |
+| **Réduite** | y = mx + p | Toute droite **non parallèle** à l'axe des ordonnées |
+| Verticale | x = c | Les droites parallèles à l'axe des ordonnées |
+| **Cartésienne** | ax + by + c = 0, a et b non tous deux nuls | **Tous** les cas |
+
+Dans la forme réduite, m est le **coefficient directeur** et p l'**ordonnée à l'origine**.
 
 ## Calculer le coefficient directeur
-Pour deux points distincts A et B d’abscisses différentes : m = (yB − yA)/(xB − xA). Il mesure la variation de y pour une augmentation de 1 de x. Positif, la droite monte ; négatif, elle descend ; nul, elle est horizontale.
+Pour deux points distincts d'abscisses différentes :
 
-> Deux droites sont parallèles si elles ont le même coefficient directeur. C’est le critère le plus rapide, et le plus souvent oublié.
+m = (yB − yA) / (xB − xA)
+
+| Le signe de m | La droite |
+| **Positif** | Elle monte |
+| **Négatif** | Elle descend |
+| **Nul** | Elle est horizontale |
+
+Il mesure la variation de y pour une augmentation de 1 de x.
 
 ## Vecteur directeur
-Un **vecteur directeur** de la droite d’équation ax + by + c = 0 est le vecteur de coordonnées (−b ; a). Pour la forme réduite y = mx + p, le vecteur (1 ; m) convient : avancer de 1 en abscisse fait monter de m.
+| La forme de l'équation | Un vecteur directeur |
+| ax + by + c = 0 | (−b ; a) |
+| y = mx + p | (1 ; m) |
+
+> Avancer de 1 en abscisse fait monter de m : le vecteur (1 ; m) le dit littéralement.
 
 ## Positions relatives
-Deux droites sont **parallèles** si leurs coefficients directeurs sont égaux — ou si leurs vecteurs directeurs sont colinéaires. Sinon, elles sont **sécantes**, et le point d’intersection s’obtient en résolvant le système formé par les deux équations.`,
+| La situation | Le critère | Ce qu'on fait |
+| **Parallèles** | Mêmes coefficients directeurs, ou vecteurs directeurs colinéaires | Rien de plus |
+| **Sécantes** | Coefficients directeurs différents | On résout le **système** des deux équations pour trouver le point d'intersection |
+
+> Deux droites sont parallèles si elles ont le même coefficient directeur : c'est le critère le plus rapide, et le plus souvent oublié.`,
           },
           questions: [
             ['Que représente m dans l’équation y = mx + p ?', ['Le coefficient directeur', 'L’ordonnée à l’origine', 'L’abscisse à l’origine', 'La pente du vecteur normal'], 0, 'Il mesure la variation de y quand x augmente de 1.'],
@@ -463,21 +669,42 @@ Deux droites sont **parallèles** si leurs coefficients directeurs sont égaux �
           axe: 'Fonctions',
           lecon: {
             titre: 'Le vocabulaire qui sert toute l’année',
-            cours: `Une **fonction** est un procédé qui, à chaque nombre d’un ensemble de départ, associe **un seul** nombre. Tout le reste du chapitre repose sur cette définition.
+            cours: `Une fonction est un procédé qui, à chaque nombre d'un ensemble de départ, associe un seul nombre.
 
 ## Le vocabulaire
-L’**ensemble de définition** est l’ensemble des valeurs de x pour lesquelles f(x) existe : on exclut ce qui annule un dénominateur ou rend négatif l’intérieur d’une racine. f(x) est l’**image** de x ; si f(a) = b, alors a est un **antécédent** de b. Un nombre a au plus une image, mais peut avoir plusieurs antécédents — ou aucun.
+| Le terme | Sa définition |
+| L'**ensemble de définition** | Les valeurs de x pour lesquelles f(x) existe |
+| L'**image** de x | Le nombre f(x) |
+| Un **antécédent** de b | Un nombre a tel que f(a) = b |
+
+| La règle | Son contenu |
+| Un nombre a **au plus une** image | C'est la définition d'une fonction |
+| Un nombre peut avoir **plusieurs** antécédents, ou aucun | Rien ne l'interdit |
+
+On exclut de l'ensemble de définition ce qui annule un dénominateur ou rend négatif l'intérieur d'une racine.
 
 ## Trois représentations
-Une fonction peut être donnée par une **formule**, un **tableau de valeurs**, ou une **courbe**. Un point M(x ; y) appartient à la courbe si et seulement si y = f(x). Lire une image, c’est partir de x sur l’axe des abscisses ; lire un antécédent, c’est partir de y sur l’axe des ordonnées.
+| La représentation | Ce qu'elle donne |
+| Une **formule** | Le calcul exact pour tout x |
+| Un **tableau de valeurs** | Quelques images |
+| Une **courbe** | Le comportement d'ensemble |
 
-> Une courbe qu’une verticale coupe deux fois n’est pas la courbe d’une fonction : un nombre n’a qu’une image.
+Un point M(x ; y) appartient à la courbe si et seulement si **y = f(x)**.
+
+> Une courbe qu'une verticale coupe deux fois n'est pas la courbe d'une fonction : un nombre n'a qu'une image.
 
 ## Variations
-f est **croissante** sur un intervalle si elle conserve l’ordre : lorsque a ≤ b, on a f(a) ≤ f(b). Elle est **décroissante** si elle l’inverse. Le **tableau de variations** résume ce comportement avec des flèches, et fait apparaître les **extremums** — maximum ou minimum, avec la valeur de x où il est atteint.
+| Le sens | Sa définition |
+| **Croissante** sur un intervalle | Elle conserve l'ordre : si a ≤ b, alors f(a) ≤ f(b) |
+| **Décroissante** | Elle l'inverse |
+
+Le **tableau de variations** résume ce comportement avec des flèches, et fait apparaître les **extremums** — avec la valeur de x où ils sont atteints.
 
 ## Résoudre graphiquement
-Résoudre f(x) = k revient à chercher les abscisses des points de la courbe d’ordonnée k. Résoudre f(x) ≥ k revient à repérer les portions de courbe situées au-dessus de la droite horizontale d’équation y = k. Le **tableau de signes** de f indique où la courbe est au-dessus ou au-dessous de l’axe des abscisses.`,
+| La question | La lecture |
+| f(x) = k | Les **abscisses** des points de la courbe d'ordonnée k |
+| f(x) ≥ k | Les portions de courbe **au-dessus** de la droite y = k |
+| Le signe de f | Où la courbe est au-dessus ou au-dessous de l'axe des abscisses |`,
           },
           questions: [
             ['Qu’est-ce qu’une fonction ?', ['Un procédé qui associe à chaque nombre au plus une image', 'Une courbe du plan', 'Une équation à deux inconnues', 'Une suite de nombres'], 0, 'Un antécédent a une image unique.'],
@@ -495,21 +722,44 @@ Résoudre f(x) = k revient à chercher les abscisses des points de la courbe d�
           axe: 'Fonctions',
           lecon: {
             titre: 'La droite, et le taux d’accroissement constant',
-            cours: `Une fonction **affine** est définie sur ℝ par f(x) = ax + b. Sa courbe est une **droite**, et c’est la seule fonction dont l’accroissement est constant.
+            cours: `Une fonction affine est définie sur ℝ par f(x) = ax + b. Sa courbe est une droite, et c'est la seule fonction dont l'accroissement est constant.
 
 ## Coefficients et courbe
-a est le **coefficient directeur**, b l’**ordonnée à l’origine**. Si a > 0, la fonction est croissante ; si a < 0, décroissante ; si a = 0, elle est **constante**. Lorsque b = 0, la fonction est dite **linéaire** et traduit une situation de proportionnalité, sa droite passant par l’origine.
+| Le coefficient | Ce qu'il est |
+| **a** | Le coefficient directeur |
+| **b** | L'ordonnée à l'origine |
 
-## Le taux d’accroissement
-Pour deux valeurs distinctes u et v, (f(v) − f(u))/(v − u) = a, quelle que soit la paire choisie. C’est la propriété caractéristique : une augmentation de 1 de x fait toujours varier f(x) de a.
+| Le signe de a | Le sens de variation |
+| a > 0 | **Croissante** |
+| a < 0 | **Décroissante** |
+| a = 0 | **Constante** |
 
-> Le prix d’un abonnement avec un forfait fixe et un tarif par unité consommée est une fonction affine. C’est le modèle le plus fréquent de la vie courante.
+> Lorsque b = 0, la fonction est dite **linéaire** : elle traduit une proportionnalité, et sa droite passe par l'origine.
+
+## Le taux d'accroissement
+Pour deux valeurs distinctes u et v :
+
+(f(v) − f(u)) / (v − u) = a
+
+> C'est la propriété caractéristique : le résultat ne dépend pas de la paire choisie. Une augmentation de 1 de x fait toujours varier f(x) de a.
+
+> Le prix d'un abonnement avec un forfait fixe et un tarif par unité consommée est une fonction affine. C'est le modèle le plus fréquent de la vie courante.
 
 ## Déterminer une fonction affine
-Connaissant deux points, on calcule a par le taux d’accroissement, puis b en réinjectant les coordonnées d’un point. Deux points suffisent toujours à tracer la droite.
+| L'étape | Le calcul |
+| 1 | Calculer **a** par le taux d'accroissement entre les deux points |
+| 2 | Trouver **b** en réinjectant les coordonnées d'un point |
+
+Deux points suffisent toujours à tracer la droite.
 
 ## Signe et résolution
-f(x) = 0 pour x = −b/a lorsque a est non nul. Le tableau de signes se déduit du sens de variation : si a > 0, f est négative avant −b/a et positive après ; si a < 0, c’est l’inverse. Cette règle sert dans toutes les inéquations produit ou quotient.`,
+f(x) = 0 pour x = −b/a, lorsque a est non nul.
+
+| Le signe de a | Avant −b/a | Après −b/a |
+| a > 0 | f est **négative** | f est **positive** |
+| a < 0 | f est **positive** | f est **négative** |
+
+> Cette règle sert dans toutes les inéquations produit ou quotient.`,
           },
           questions: [
             ['Quelle est la forme d’une fonction affine ?', ['f(x) = ax + b', 'f(x) = ax²', 'f(x) = a/x', 'f(x) = √x'], 0, 'Sa courbe est une droite.'],
@@ -527,21 +777,38 @@ f(x) = 0 pour x = −b/a lorsque a est non nul. Le tableau de signes se déduit 
           axe: 'Fonctions',
           lecon: {
             titre: 'La parabole et son sommet',
-            cours: `La fonction **carré** associe à tout réel x le nombre x². Elle est définie sur ℝ tout entier, et sa courbe s’appelle une **parabole**.
+            cours: `La fonction carré associe à tout réel x le nombre x². Elle est définie sur ℝ tout entier, et sa courbe s'appelle une parabole.
 
 ## Variations
-Elle est **décroissante** sur ]−∞ ; 0] et **croissante** sur [0 ; +∞[. Elle atteint donc un **minimum** égal à 0, en x = 0. Ce point est le **sommet** de la parabole.
+| L'intervalle | Le sens |
+| ]−∞ ; 0] | **Décroissante** |
+| [0 ; +∞[ | **Croissante** |
+
+Elle atteint donc un **minimum** égal à **0**, en x = 0. Ce point est le **sommet** de la parabole.
 
 ## Symétrie et signe
-Comme (−x)² = x², la fonction est **paire** : sa courbe est symétrique par rapport à l’axe des ordonnées. Elle est **positive ou nulle** pour tout x : un carré n’est jamais négatif.
+| La propriété | Sa raison |
+| Elle est **paire** | (−x)² = x² : la courbe est symétrique par rapport à l'**axe des ordonnées** |
+| Elle est **positive ou nulle** | Un carré n'est jamais négatif |
 
-> Passer au carré ne conserve pas l’ordre : −3 est plus petit que 2, mais 9 est plus grand que 4. C’est l’erreur la plus fréquente de l’année.
+> Passer au carré ne conserve pas l'ordre : −3 est plus petit que 2, mais 9 est plus grand que 4. C'est l'erreur la plus fréquente de l'année.
 
-## Résoudre des équations
-x² = k n’a **aucune solution** si k < 0, une seule (x = 0) si k = 0, et **deux solutions** √k et −√k si k > 0. Oublier la solution négative est une faute classique. x² = 25 donne donc x = 5 ou x = −5.
+## Résoudre x² = k
+| La valeur de k | Les solutions |
+| k < 0 | **Aucune** |
+| k = 0 | Une seule : x = 0 |
+| k > 0 | **Deux** : √k et −√k |
+
+x² = 25 donne donc x = 5 **ou** x = −5.
+
+> Oublier la solution négative est une faute classique.
 
 ## Résoudre des inéquations
-x² ≤ 9 équivaut à −3 ≤ x ≤ 3, soit l’intervalle [−3 ; 3]. x² > 9 équivaut à x < −3 ou x > 3, soit la réunion ]−∞ ; −3[ ∪ ]3 ; +∞[. Le tracé de la parabole et de la droite horizontale rend ces résultats immédiats.`,
+| L'inéquation | Sa solution |
+| x² ≤ 9 | [−3 ; 3] |
+| x² > 9 | ]−∞ ; −3[ ∪ ]3 ; +∞[ |
+
+> Le tracé de la parabole et de la droite horizontale rend ces résultats immédiats.`,
           },
           questions: [
             ['Sur quel intervalle la fonction carré est-elle décroissante ?', [']−∞ ; 0]', '[0 ; +∞[', 'ℝ tout entier', 'Elle est toujours croissante'], 0, 'Elle atteint son minimum en 0.'],
@@ -559,21 +826,42 @@ x² ≤ 9 équivaut à −3 ≤ x ≤ 3, soit l’intervalle [−3 ; 3]. x² > 9
           axe: 'Fonctions',
           lecon: {
             titre: 'Croissante partout, et impaire',
-            cours: `La fonction **cube** associe à tout réel x le nombre x³. Elle est définie sur ℝ, et son comportement diffère nettement de celui de la fonction carré.
+            cours: `La fonction cube associe à tout réel x le nombre x³. Son comportement diffère nettement de celui de la fonction carré.
 
-## Variations
-Elle est **croissante sur ℝ tout entier**. Elle n’admet donc ni maximum ni minimum. Contrairement à la fonction carré, elle conserve l’ordre : si a < b, alors a³ < b³, quels que soient les signes.
+## Le contraste avec la fonction carré
+| Le point | **Carré** | **Cube** |
+| Variations | Décroissante puis croissante | **Croissante sur ℝ** tout entier |
+| Extremum | Un minimum en 0 | **Aucun** |
+| Parité | **Paire** : symétrie par rapport à l'axe des ordonnées | **Impaire** : symétrie par rapport à l'**origine** |
+| Signe | Toujours positif ou nul | Celui de **x** |
+| L'équation = k | 0, 1 ou 2 solutions | **Toujours exactement une** |
 
-## Symétrie et signe
-Comme (−x)³ = −x³, la fonction est **impaire** : sa courbe est symétrique par rapport à l’**origine** du repère. Son signe est celui de x : négative sur ]−∞ ; 0[, nulle en 0, positive sur ]0 ; +∞[.
+> Le cube garde le signe, le carré l'efface. Toute la différence entre les deux fonctions tient dans cette phrase.
 
-> Le cube garde le signe, le carré l’efface. Toute la différence entre les deux fonctions tient dans cette phrase.
+## Variations et ordre
+Elle **conserve l'ordre** : si a < b, alors a³ < b³, quels que soient les signes.
 
-## L’équation x³ = k
-Elle admet **toujours exactement une solution**, quel que soit le réel k — y compris négatif : x³ = −8 donne x = −2. C’est une différence majeure avec x² = k.
+## Signe
+| L'intervalle | Le signe de x³ |
+| ]−∞ ; 0[ | Négatif |
+| 0 | Nul |
+| ]0 ; +∞[ | Positif |
+
+## L'équation x³ = k
+Elle admet **toujours exactement une solution**, quel que soit le réel k — y compris négatif.
+
+x³ = −8 donne x = −2.
+
+> C'est une différence majeure avec x² = k.
 
 ## Comparer les puissances
-Sur [0 ; 1], on a x³ ≤ x² ≤ x : élever à une puissance plus grande rapproche de 0. Sur [1 ; +∞[, l’ordre s’inverse : x ≤ x² ≤ x³. Le point de bascule est 1, où les trois valent 1. Ce résultat sert dès qu’on compare des grandeurs modélisées par des puissances, en géométrie comme en physique.`,
+| L'intervalle | L'ordre |
+| [0 ; 1] | x³ ≤ x² ≤ x |
+| [1 ; +∞[ | x ≤ x² ≤ x³ |
+
+Le point de bascule est **1**, où les trois valent 1.
+
+> Sur [0 ; 1], élever à une puissance plus grande **rapproche de 0**. Ce résultat sert dès qu'on compare des grandeurs modélisées par des puissances, en géométrie comme en physique.`,
           },
           questions: [
             ['Sur quel intervalle la fonction cube est-elle croissante ?', ['Sur ℝ tout entier', 'Sur [0 ; +∞[ seulement', 'Sur ]−∞ ; 0] seulement', 'Elle n’est jamais croissante'], 0, 'Elle conserve l’ordre partout.'],
@@ -591,21 +879,40 @@ Sur [0 ; 1], on a x³ ≤ x² ≤ x : élever à une puissance plus grande rappr
           axe: 'Fonctions',
           lecon: {
             titre: 'Définie seulement sur les positifs',
-            cours: `La fonction **racine carrée** associe à tout réel positif x le nombre √x, l’unique réel positif dont le carré vaut x. Sa première particularité est son ensemble de définition.
+            cours: `La fonction racine carrée associe à tout réel positif x le nombre √x, l'unique réel positif dont le carré vaut x.
 
 ## Ensemble de définition et variations
-Elle est définie sur **[0 ; +∞[** seulement : la racine carrée d’un nombre négatif n’existe pas dans ℝ. Elle est **croissante** sur tout cet intervalle, et son minimum vaut 0, atteint en 0. Sa courbe part de l’origine et monte en s’aplatissant, sans jamais s’arrêter.
+| Le point | Sa valeur |
+| L'ensemble de définition | **[0 ; +∞[** seulement |
+| Pourquoi | La racine carrée d'un nombre négatif n'existe pas dans ℝ |
+| Le sens de variation | **Croissante** sur tout l'intervalle |
+| Le minimum | **0**, atteint en 0 |
+
+Sa courbe part de l'origine et monte en s'aplatissant, sans jamais s'arrêter.
 
 ## Le lien avec la fonction carré
-Pour x ≥ 0, (√x)² = x et √(x²) = x. Sur les positifs, les deux fonctions se défont l’une l’autre, et leurs courbes sont symétriques par rapport à la droite d’équation y = x. Attention toutefois : pour tout réel, √(x²) = |x|.
+| L'égalité | Sa condition |
+| (√x)² = x | x ≥ 0 |
+| √(x²) = x | x ≥ 0 **seulement** |
+| √(x²) = la valeur absolue de x | Pour **tout** réel |
 
-> Une croissance qui ralentit sans jamais s’arrêter : c’est la forme même de la racine carrée, et la raison de son usage en modélisation.
+> Sur les positifs, les deux fonctions se défont l'une l'autre : leurs courbes sont symétriques par rapport à la droite d'équation y = x.
+
+> Une croissance qui ralentit sans jamais s'arrêter : c'est la forme même de la racine carrée, et la raison de son usage en modélisation.
 
 ## Comparer avec x
-Sur [0 ; 1], on a x ≤ √x : la racine d’un nombre entre 0 et 1 est plus grande que lui. Sur [1 ; +∞[, c’est l’inverse : √x ≤ x. Le point d’égalité est 1 — et aussi 0.
+| L'intervalle | La comparaison |
+| [0 ; 1] | x ≤ **√x** : la racine d'un nombre entre 0 et 1 est **plus grande** que lui |
+| [1 ; +∞[ | **√x** ≤ x |
+
+Les points d'égalité sont 0 et 1.
 
 ## Résoudre
-√x = k n’a de solution que si k ≥ 0, et alors x = k². Une équation contenant une racine se résout en élevant au carré, mais cette opération peut créer des solutions **parasites** : il faut donc toujours vérifier les valeurs trouvées dans l’équation de départ.`,
+| L'équation | Ses solutions |
+| √x = k, avec k < 0 | **Aucune** |
+| √x = k, avec k ≥ 0 | x = k² |
+
+> Une équation contenant une racine se résout en élevant au carré — mais cette opération peut créer des solutions **parasites**. Il faut toujours vérifier les valeurs trouvées dans l'équation de départ.`,
           },
           questions: [
             ['Quel est l’ensemble de définition de la fonction racine carrée ?', ['[0 ; +∞[', 'ℝ', ']0 ; +∞[', ']−∞ ; 0]'], 0, 'La racine d’un négatif n’existe pas dans ℝ.'],
@@ -623,21 +930,42 @@ Sur [0 ; 1], on a x ≤ √x : la racine d’un nombre entre 0 et 1 est plus gra
           axe: 'Fonctions',
           lecon: {
             titre: 'L’hyperbole, et le trou en zéro',
-            cours: `La fonction **inverse** associe à tout réel non nul x le nombre 1/x. Elle est la première fonction de l’année dont l’ensemble de définition est troué.
+            cours: `La fonction inverse associe à tout réel non nul x le nombre 1/x. Elle est la première fonction de l'année dont l'ensemble de définition est troué.
 
 ## Ensemble de définition
-Elle est définie sur ℝ privé de 0, que l’on note ]−∞ ; 0[ ∪ ]0 ; +∞[. Diviser par zéro n’a pas de sens : 0 est une **valeur interdite**.
+Elle est définie sur ℝ privé de 0, soit :
+
+]−∞ ; 0[ ∪ ]0 ; +∞[
+
+> Diviser par zéro n'a pas de sens : **0 est une valeur interdite**.
 
 ## Variations
-Elle est **décroissante sur ]−∞ ; 0[** et **décroissante sur ]0 ; +∞[** — deux intervalles séparés, et surtout **pas** décroissante sur la réunion des deux. C’est un point de vigilance permanent : −1 est plus petit que 1, mais 1/(−1) = −1 est plus petit que 1/1 = 1.
+| L'intervalle | Le sens |
+| ]−∞ ; 0[ | **Décroissante** |
+| ]0 ; +∞[ | **Décroissante** |
 
-> On ne dit jamais qu’une fonction est décroissante sur une réunion d’intervalles. On énonce ses variations intervalle par intervalle.
+> Et surtout **pas** décroissante sur la réunion des deux. Contre-exemple : −1 est plus petit que 1, mais 1/(−1) = −1 est plus petit que 1/1 = 1.
+
+> On ne dit jamais qu'une fonction est décroissante sur une réunion d'intervalles. On énonce ses variations **intervalle par intervalle**.
 
 ## Courbe et symétrie
-Sa courbe est une **hyperbole**, formée de deux branches. La fonction est **impaire**, donc la courbe est symétrique par rapport à l’origine. Les axes du repère sont des **asymptotes** : quand x devient très grand, 1/x se rapproche de 0 sans jamais l’atteindre ; quand x se rapproche de 0, |1/x| devient arbitrairement grand.
+| La propriété | Son contenu |
+| La courbe | Une **hyperbole**, formée de deux branches |
+| La parité | **Impaire** : symétrie par rapport à l'**origine** |
+| Les **asymptotes** | Les deux axes du repère |
+
+| Le comportement | Ce qui se passe |
+| Quand x devient très grand | 1/x se rapproche de 0 sans jamais l'atteindre |
+| Quand x se rapproche de 0 | La valeur absolue de 1/x devient arbitrairement grande |
 
 ## Signe et résolution
-1/x a le signe de x. L’équation 1/x = k admet, pour k non nul, l’unique solution x = 1/k, et aucune solution si k = 0. Pour une inéquation comme 1/x ≤ 2, on ne multiplie surtout pas par x sans connaître son signe : on passe tout d’un côté et on étudie un **tableau de signes**.`,
+1/x a **le signe de x**.
+
+| L'équation 1/x = k | Sa solution |
+| k non nul | x = 1/k, unique |
+| k = 0 | **Aucune** |
+
+> Pour une inéquation comme 1/x ≤ 2, on ne multiplie **surtout pas** par x sans connaître son signe : on passe tout d'un côté et on étudie un **tableau de signes**.`,
           },
           questions: [
             ['Quel est l’ensemble de définition de la fonction inverse ?', ['ℝ privé de 0', 'ℝ', '[0 ; +∞[', ']0 ; +∞['], 0, 'Diviser par zéro n’a pas de sens.'],
@@ -659,24 +987,47 @@ Sa courbe est une **hyperbole**, formée de deux branches. La fonction est **imp
           axe: 'Statistiques et probabilités',
           lecon: {
             titre: 'Proportions, pourcentages et évolutions',
-            cours: `Une part importante des erreurs de raisonnement vient d’un mauvais maniement des pourcentages. Ce chapitre fixe les règles.
+            cours: `Une part importante des erreurs de raisonnement vient d'un mauvais maniement des pourcentages.
 
 ## Proportion et pourcentage
-Une **proportion** est un quotient d’un effectif partiel par un effectif total, compris entre 0 et 1 ; multiplié par 100, il devient un **pourcentage**. Prendre t % d’une quantité, c’est la multiplier par t/100.
+| La notion | Sa définition | Ses valeurs |
+| Une **proportion** | Effectif partiel divisé par effectif total | Entre 0 et 1 |
+| Un **pourcentage** | La proportion multipliée par 100 | Entre 0 et 100 |
+
+Prendre t % d'une quantité, c'est la multiplier par t/100.
 
 ## Proportion de proportion
-La proportion d’une sous-population dans le tout est le **produit** des proportions successives : si 40 % des élèves sont en seconde et que 25 % d’entre eux font de l’allemand, alors 0,40 × 0,25 = 0,10, soit 10 % de l’ensemble.
+La proportion d'une sous-population dans le tout est le **produit** des proportions successives.
+
+| L'étape | Sa valeur |
+| 40 % des élèves sont en seconde | 0,40 |
+| 25 % d'entre eux font de l'allemand | 0,25 |
+| La part dans l'ensemble | 0,40 × 0,25 = 0,10, soit **10 %** |
 
 ## Le coefficient multiplicateur
-Augmenter de t % revient à multiplier par (1 + t/100) ; diminuer de t % revient à multiplier par (1 − t/100). Ce **coefficient multiplicateur** est l’outil central : il permet d’enchaîner les évolutions en multipliant les coefficients, et de revenir en arrière en divisant.
+| L'évolution | Le coefficient |
+| Augmenter de t % | 1 + t/100 |
+| Diminuer de t % | 1 − t/100 |
+| Hausse de 20 % | 1,20 |
+| Baisse de 20 % | 0,80 |
 
-> Une hausse de 20 % suivie d’une baisse de 20 % ne ramène pas au point de départ : 1,20 × 0,80 = 0,96, soit une baisse de 4 %.
+> C'est l'outil central : il permet d'enchaîner les évolutions en **multipliant** les coefficients, et de revenir en arrière en divisant.
+
+> Une hausse de 20 % suivie d'une baisse de 20 % ne ramène pas au point de départ : 1,20 × 0,80 = 0,96, soit une **baisse de 4 %**.
 
 ## Évolutions successives et réciproques
-Le coefficient global est le **produit** des coefficients, jamais la somme des pourcentages. L’évolution **réciproque** s’obtient avec l’inverse du coefficient : après une hausse de 25 %, il faut baisser de 20 % pour revenir au départ, car 1/1,25 = 0,80.
+| L'opération | La règle |
+| Évolutions **successives** | Le coefficient global est le **produit** des coefficients — jamais la somme des pourcentages |
+| Évolution **réciproque** | Elle correspond à l'**inverse** du coefficient |
+
+Après une hausse de 25 %, il faut baisser de **20 %** pour revenir au départ, car 1/1,25 = 0,80.
 
 ## Points et pourcentages
-Passer de 10 % à 12 %, c’est une hausse de **2 points**, mais de **20 %**. Confondre les deux est l’erreur la plus répandue dans les commentaires de chiffres publics.`,
+| Passer de 10 % à 12 %, c'est… | La valeur |
+| Une hausse de **points** | +2 points |
+| Une hausse en **pourcentage** | +20 % |
+
+> Confondre les deux est l'erreur la plus répandue dans les commentaires de chiffres publics.`,
           },
           questions: [
             ['Comment calcule-t-on t % d’une quantité ?', ['En la multipliant par t/100', 'En la divisant par t', 'En lui ajoutant t', 'En la multipliant par t'], 0, 'Un pourcentage est une proportion multipliée par 100.'],
@@ -694,21 +1045,40 @@ Passer de 10 % à 12 %, c’est une hausse de **2 points**, mais de **20 %**. Co
           axe: 'Statistiques et probabilités',
           lecon: {
             titre: 'Résumer une série sans la trahir',
-            cours: `Décrire une série statistique, c’est répondre à deux questions : autour de quelle valeur se situent les données, et à quel point sont-elles dispersées ?
+            cours: `Décrire une série statistique, c'est répondre à deux questions : autour de quelle valeur se situent les données, et à quel point sont-elles dispersées ?
 
 ## Les indicateurs de position
-La **moyenne** est la somme des valeurs divisée par leur nombre ; en présence d’effectifs, on calcule une moyenne **pondérée**. La **médiane** partage la série ordonnée en deux moitiés de même effectif. La moyenne est sensible aux **valeurs extrêmes**, la médiane ne l’est pas — c’est pourquoi on publie le salaire médian plutôt que le salaire moyen.
+| L'indicateur | Sa définition | Sa sensibilité aux extrêmes |
+| La **moyenne** | Somme des valeurs divisée par leur nombre ; **pondérée** en présence d'effectifs | **Forte** |
+| La **médiane** | Elle partage la série ordonnée en deux moitiés de même effectif | **Aucune** |
+
+> C'est pourquoi on publie le salaire **médian** plutôt que le salaire moyen.
 
 ## Les indicateurs de dispersion
-L’**étendue** est l’écart entre la plus grande et la plus petite valeur. Les **quartiles** Q1 et Q3 partagent la série ordonnée en quatre groupes d’effectifs égaux ; l’**écart interquartile** Q3 − Q1 mesure la dispersion du cœur de la série. L’**écart type** mesure la dispersion autour de la moyenne : plus il est grand, plus les valeurs sont éloignées d’elle.
+| L'indicateur | Ce qu'il mesure |
+| L'**étendue** | L'écart entre la plus grande et la plus petite valeur |
+| Les **quartiles** Q1 et Q3 | Ils partagent la série en quatre groupes d'effectifs égaux |
+| L'**écart interquartile** Q3 − Q1 | La dispersion du **cœur** de la série |
+| L'**écart type** | La dispersion autour de la **moyenne** |
 
-> Deux séries peuvent avoir la même moyenne et n’avoir rien à voir. C’est la dispersion qui les distingue.
+> Deux séries peuvent avoir la même moyenne et n'avoir rien à voir. C'est la dispersion qui les distingue.
 
 ## Les représentations
-Diagramme en bâtons pour des données discrètes, histogramme pour des classes, **diagramme en boîte** pour visualiser minimum, Q1, médiane, Q3 et maximum d’un seul coup d’œil. Le choix de la représentation, comme celui des échelles, oriente la lecture.
+| La représentation | Ce qu'elle convient à montrer |
+| Diagramme en **bâtons** | Des données discrètes |
+| **Histogramme** | Des classes |
+| Diagramme en **boîte** | Minimum, Q1, médiane, Q3 et maximum d'un seul coup d'œil |
+
+Le choix de la représentation, comme celui des échelles, oriente la lecture.
 
 ## Lire de façon critique
-Un axe tronqué exagère une variation, une moyenne cache une bimodalité, un effectif faible rend tout écart peu significatif, et une moyenne de moyennes est presque toujours fausse. Interpréter suppose de connaître l’effectif, la source et la définition exacte de ce qui est mesuré.`,
+| Le piège | Ce qu'il produit |
+| Un **axe tronqué** | Il exagère une variation |
+| Une moyenne sur une série **bimodale** | Elle cache deux groupes distincts |
+| Un **effectif faible** | Tout écart y est peu significatif |
+| Une **moyenne de moyennes** | Elle est presque toujours fausse |
+
+> Interpréter suppose de connaître l'effectif, la source et la définition exacte de ce qui est mesuré.`,
           },
           questions: [
             ['Que partage la médiane ?', ['La série ordonnée en deux moitiés de même effectif', 'La série en quatre groupes égaux', 'La somme des valeurs', 'L’étendue en deux'], 0, 'Elle est peu sensible aux valeurs extrêmes.'],
@@ -726,21 +1096,36 @@ Un axe tronqué exagère une variation, une moyenne cache une bimodalité, un ef
           axe: 'Statistiques et probabilités',
           lecon: {
             titre: 'Modéliser le hasard',
-            cours: `Une **expérience aléatoire** est une expérience dont on connaît tous les résultats possibles sans pouvoir prévoir lequel se produira. Les probabilités en donnent un modèle chiffré.
+            cours: `Une expérience aléatoire est une expérience dont on connaît tous les résultats possibles sans pouvoir prévoir lequel se produira.
 
 ## Le vocabulaire
-L’**univers** Ω est l’ensemble des issues possibles. Un **événement** est une partie de l’univers. L’événement **certain** est Ω, l’événement **impossible** est l’ensemble vide. Deux événements sont **incompatibles** s’ils ne peuvent pas se produire en même temps.
+| Le terme | Sa définition |
+| L'**univers** Ω | L'ensemble des issues possibles |
+| Un **événement** | Une partie de l'univers |
+| L'événement **certain** | Ω |
+| L'événement **impossible** | L'ensemble vide |
+| Deux événements **incompatibles** | Ils ne peuvent pas se produire en même temps |
 
 ## La loi de probabilité
-Attribuer une probabilité à chaque issue, positive et de somme égale à 1. La probabilité d’un événement est la somme des probabilités des issues qui le composent. En situation d’**équiprobabilité**, P(A) est le nombre d’issues favorables divisé par le nombre d’issues possibles.
+| La règle | Son contenu |
+| Chaque issue reçoit une probabilité | **Positive**, et la somme vaut **1** |
+| La probabilité d'un événement | La somme des probabilités des issues qui le composent |
+| En **équiprobabilité** | P(A) = issues favorables / issues possibles |
 
 > Une probabilité est un nombre entre 0 et 1. Toute réponse en dehors de cet intervalle signale une erreur, sans même avoir à relire le calcul.
 
 ## Les formules
-P(A barre) = 1 − P(A), où A barre est l’événement **contraire** : c’est souvent le chemin le plus court, notamment pour un événement du type au moins un. Et P(A ∪ B) = P(A) + P(B) − P(A ∩ B), la soustraction évitant de compter deux fois l’intersection ; si A et B sont incompatibles, elle disparaît.
+| La formule | Quand l'employer |
+| P(A barre) = 1 − P(A) | Souvent le chemin le plus court, notamment pour un « au moins un » |
+| P(A ∪ B) = P(A) + P(B) − P(A ∩ B) | La soustraction évite de compter deux fois l'intersection |
+| P(A ∪ B) = P(A) + P(B) | Seulement si A et B sont **incompatibles** |
 
 ## Compter les issues
-Un **arbre de probabilités** ou un **tableau à double entrée** organise le dénombrement pour une expérience à deux épreuves. Sur un arbre, on multiplie le long d’un chemin et on additionne les chemins qui réalisent l’événement cherché.`,
+| L'outil | Quand il convient |
+| L'**arbre de probabilités** | Une expérience à deux épreuves successives |
+| Le **tableau à double entrée** | Deux caractères croisés |
+
+> Sur un arbre : on **multiplie** le long d'un chemin, et on **additionne** les chemins qui réalisent l'événement cherché.`,
           },
           questions: [
             ['Qu’est-ce que l’univers d’une expérience aléatoire ?', ['L’ensemble de toutes les issues possibles', 'L’ensemble des événements favorables', 'La probabilité totale', 'Le nombre d’expériences réalisées'], 0, 'On le note souvent Ω.'],
@@ -758,21 +1143,39 @@ Un **arbre de probabilités** ou un **tableau à double entrée** organise le d�
           axe: 'Statistiques et probabilités',
           lecon: {
             titre: 'Ce qu’un échantillon peut dire, et ce qu’il ne peut pas',
-            cours: `On ne peut presque jamais interroger toute une population. On observe un **échantillon**, et l’on accepte que le résultat **fluctue** d’un échantillon à l’autre.
+            cours: `On ne peut presque jamais interroger toute une population. On observe un échantillon, et l'on accepte que le résultat fluctue.
 
 ## Le vocabulaire
-Un **échantillon** de taille n est le résultat de n répétitions indépendantes de la même expérience. La **fréquence observée** f est la proportion du caractère étudié dans l’échantillon ; la **proportion** p est la valeur, inconnue, dans la population entière.
+| Le terme | Sa définition |
+| Un **échantillon** de taille n | Le résultat de n répétitions **indépendantes** de la même expérience |
+| La **fréquence observée** f | La proportion du caractère dans l'échantillon |
+| La **proportion** p | Sa valeur, **inconnue**, dans la population entière |
 
-## La fluctuation d’échantillonnage
-Deux échantillons de même taille tirés de la même population ne donnent pas la même fréquence. Cette variation n’est pas une erreur de mesure : elle est inhérente au tirage. Elle **diminue** quand la taille de l’échantillon augmente.
+## La fluctuation d'échantillonnage
+| Le constat | Sa portée |
+| Deux échantillons de même taille donnent des fréquences différentes | Ce n'est **pas** une erreur de mesure : c'est inhérent au tirage |
+| Quand n augmente | La fluctuation **diminue** |
 
-> Un sondage sur mille personnes n’est pas mille fois moins fiable qu’un recensement : il l’est environ trente fois moins, parce que la précision dépend de la racine de n.
+> Un sondage sur mille personnes n'est pas mille fois moins fiable qu'un recensement : la précision dépend de la **racine** de n.
 
-## L’intervalle de fluctuation
-Pour n assez grand et p pas trop proche de 0 ou de 1, environ 95 % des échantillons donnent une fréquence comprise dans l’intervalle [p − 1/√n ; p + 1/√n]. Sa **largeur** est donc en 1/√n : pour diviser l’incertitude par deux, il faut multiplier la taille de l’échantillon par quatre.
+## L'intervalle de fluctuation
+Pour n assez grand et p pas trop proche de 0 ou de 1, environ **95 %** des échantillons donnent une fréquence dans :
+
+[p − 1/√n ; p + 1/√n]
+
+| La taille n | La demi-largeur 1/√n |
+| 100 | 0,10 |
+| 400 | 0,05 |
+| 1 600 | 0,025 |
+
+> Pour diviser l'incertitude par deux, il faut multiplier la taille de l'échantillon par **quatre**.
 
 ## À quoi cela sert
-Décider si une observation est compatible avec une hypothèse : si la fréquence observée tombe hors de l’intervalle de fluctuation, on rejette l’hypothèse au seuil de 95 % ; sinon, on ne la rejette pas — ce qui n’est pas la même chose que la démontrer. C’est aussi ce qui justifie la **marge d’erreur** annoncée avec tout sondage, et l’importance du mode de recrutement : un échantillon mal constitué reste biaisé, quelle que soit sa taille.`,
+| Le résultat | La conclusion |
+| La fréquence observée tombe **hors** de l'intervalle | On **rejette** l'hypothèse, au seuil de 95 % |
+| Elle tombe **dedans** | On ne la rejette pas — ce qui n'est **pas** la démontrer |
+
+> C'est aussi ce qui justifie la **marge d'erreur** annoncée avec tout sondage. Et l'importance du recrutement : un échantillon mal constitué reste biaisé, quelle que soit sa taille.`,
           },
           questions: [
             ['Qu’est-ce qu’un échantillon de taille n ?', ['Le résultat de n répétitions indépendantes de la même expérience', 'Les n premiers individus d’une liste', 'Une population de taille n', 'Un tirage sans remise de n éléments'], 0, 'L’indépendance des tirages est essentielle.'],

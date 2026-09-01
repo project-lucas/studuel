@@ -131,33 +131,38 @@ DELETE FROM public.chapters c
           axe: 'L’art de la parole',
           lecon: {
             titre: 'L’art de bien dire, et ses cinq parties',
-            cours: `La **rhétorique** est l’art de bien dire en vue de persuader. Née dans la Sicile du Ve siècle avant notre ère, à l’occasion de procès en restitution de terres, elle est d’emblée liée à la **démocratie** : là où l’on décide par la parole, il faut savoir parler.
+            cours: `La rhétorique est l'art de bien dire en vue de persuader. Née dans la Sicile du Ve siècle avant notre ère, à l'occasion de procès en restitution de terres, elle est d'emblée liée à la démocratie.
+
+> Là où l'on décide par la parole, il faut savoir parler.
 
 ## Les trois genres
-Aristote les distingue par leur temps et leur fin :
-- le **judiciaire** porte sur le passé et vise le juste ;
-- le **délibératif** porte sur l’avenir et vise l’utile — c’est le genre de l’assemblée politique ;
-- l’**épidictique** porte sur le présent, loue ou blâme, et vise le beau.
+| Le genre | Son temps | Sa fin | Son lieu |
+| **Judiciaire** | Le passé | Le **juste** | Le tribunal |
+| **Délibératif** | L'avenir | L'**utile** | L'assemblée politique |
+| **Épidictique** | Le présent | Le **beau** : louer ou blâmer | La cérémonie |
 
 ## Les cinq parties
-La tradition en fixe cinq, dans l’ordre du travail de l’orateur :
-- l’**invention** (*inventio*) : trouver les arguments ;
-- la **disposition** (*dispositio*) : les ordonner — exorde, narration, confirmation, péroraison ;
-- l’**élocution** (*elocutio*) : les mettre en mots, choisir le style et les figures ;
-- la **mémoire** (*memoria*) : retenir le discours ;
-- l’**action** (*actio*) : le prononcer, avec la voix, le regard, le geste.
+| La partie | Ce qu'elle fait |
+| **Invention** | Trouver les arguments |
+| **Disposition** | Les ordonner : exorde, narration, confirmation, péroraison |
+| **Élocution** | Les mettre en mots, choisir le style et les figures |
+| **Mémoire** | Retenir le discours |
+| **Action** | Le prononcer : la voix, le regard, le geste |
 
-> Démosthène, à qui l’on demandait ce qui compte le plus dans l’éloquence, aurait répondu trois fois « l’action ». Le corps n’accompagne pas le discours : il en fait partie.
+> Démosthène, à qui l'on demandait ce qui compte le plus dans l'éloquence, aurait répondu trois fois « l'action ». Le corps n'accompagne pas le discours : il en fait partie.
 
 ## Les trois moyens de persuasion
-- l’**ethos** : ce que l’orateur donne à voir de lui — sa crédibilité, sa droiture apparente ;
-- le **pathos** : les émotions qu’il suscite chez l’auditoire ;
-- le **logos** : le raisonnement, les preuves, la logique du discours.
+| Le moyen | Ce qu'il mobilise |
+| **Ethos** | Ce que l'orateur donne à voir de lui : crédibilité, droiture apparente |
+| **Pathos** | Les émotions de l'auditoire |
+| **Logos** | Le raisonnement, les preuves, la logique |
 
 ## Le procès de la rhétorique
-Platon lui reproche, dans le *Gorgias*, d’être une **flatterie** : elle apprend à paraître savant devant qui ne sait pas, sans se soucier du vrai. Aristote la réhabilite dans sa *Rhétorique* : c’est une **technique**, moralement neutre, et l’ignorer laisserait le champ libre à ceux qui en usent mal.
+| Le philosophe | Sa position |
+| **Platon**, dans le *Gorgias* | Une **flatterie** : elle apprend à paraître savant devant qui ne sait pas, sans se soucier du vrai |
+| **Aristote**, dans la *Rhétorique* | Une **technique**, moralement neutre — et l'ignorer laisserait le champ libre à ceux qui en usent mal |
 
-Le débat n’a rien perdu de son actualité : savoir reconnaître une figure, un appel à l’émotion ou un argument d’autorité est aujourd’hui une compétence de défense autant que d’attaque.`,
+> Le débat n'a rien perdu de son actualité : reconnaître une figure, un appel à l'émotion ou un argument d'autorité est aujourd'hui une compétence de défense autant que d'attaque.`,
           },
           questions: [
             ['Dans quel contexte historique la rhétorique est-elle née ?', ['Dans la Sicile du Ve siècle avant notre ère, à l’occasion de procès', 'À Rome sous l’Empire', 'En France au XVIIe siècle', 'En Grèce à l’époque homérique'], 0, 'Elle est d’emblée liée à la démocratie et au règlement des litiges par la parole.'],
@@ -175,28 +180,42 @@ Le débat n’a rien perdu de son actualité : savoir reconnaître une figure, u
           axe: 'L’art de la parole',
           lecon: {
             titre: 'Instruire, plaire, émouvoir',
-            cours: `La tradition latine assigne au discours trois fonctions, que Cicéron résume : **instruire** (*docere*), **plaire** (*delectare*), **émouvoir** (*movere*).
+            cours: `La tradition latine assigne au discours trois fonctions, que Cicéron résume : instruire, plaire, émouvoir.
 
 ## Trois fonctions, trois styles
-À chacune correspond un registre : le style **simple** pour instruire, le style **tempéré** pour plaire, le style **sublime** pour émouvoir. Le grand orateur les alterne : un discours entièrement sublime épuise, un discours entièrement simple n’emporte rien.
+| La fonction | Son nom latin | Son style |
+| **Instruire** | *docere* | **Simple** |
+| **Plaire** | *delectare* | **Tempéré** |
+| **Émouvoir** | *movere* | **Sublime** |
+
+> Le grand orateur les alterne : un discours entièrement sublime épuise, un discours entièrement simple n'emporte rien.
 
 ## Convaincre ou persuader
-La distinction est au cœur du chapitre, et elle est régulièrement demandée :
-- **convaincre** s’adresse à la **raison** : on avance des preuves, on argumente, on vise l’assentiment de l’intelligence ;
-- **persuader** s’adresse à la **sensibilité** : on émeut, on touche, on entraîne l’adhésion de tout l’être.
+La distinction est au cœur du chapitre, et régulièrement demandée.
 
-On peut être convaincu sans être persuadé — savoir qu’il faudrait agir sans s’y résoudre — et persuadé sans être convaincu, ce qui est le danger.
+| Le verbe | Ce à quoi il s'adresse | Ses moyens | Ce qu'il obtient |
+| **Convaincre** | La **raison** | Preuves, arguments | L'assentiment de l'intelligence |
+| **Persuader** | La **sensibilité** | Émotion, images, présence | L'adhésion de tout l'être |
+
+> On peut être convaincu sans être persuadé — savoir qu'il faudrait agir sans s'y résoudre — et persuadé sans être convaincu, ce qui est le danger.
 
 ## Les figures au service des fonctions
-- Figures d’**analogie** : la métaphore, la comparaison, la personnification, qui rendent sensible l’abstrait.
-- Figures d’**insistance** : l’anaphore, l’hyperbole, la gradation, qui martèlent et amplifient.
-- Figures d’**opposition** : l’antithèse, l’oxymore, le chiasme, qui structurent la pensée en tensions.
-- Figures d’**atténuation** : la litote, l’euphémisme, qui disent moins pour suggérer plus.
+| La famille | Les figures | Ce qu'elles font |
+| **Analogie** | Métaphore, comparaison, personnification | Rendre sensible l'abstrait |
+| **Insistance** | Anaphore, hyperbole, gradation | Marteler et amplifier |
+| **Opposition** | Antithèse, oxymore, chiasme | Structurer la pensée en tensions |
+| **Atténuation** | Litote, euphémisme | Dire moins pour suggérer plus |
 
-## L’éloquence en action
-La **délibération** politique, le **plaidoyer** judiciaire, le **sermon** religieux et, aujourd’hui, le débat télévisé ou la vidéo en ligne relèvent des mêmes mécanismes. La forme change, la structure reste : capter l’attention, établir sa crédibilité, avancer ses raisons, toucher, conclure.
+## L'éloquence en action
+| Le lieu | Le genre |
+| L'assemblée | La **délibération** politique |
+| Le tribunal | Le **plaidoyer** |
+| L'église | Le **sermon** |
+| Aujourd'hui | Le débat télévisé, la vidéo en ligne |
 
-> Une question traverse toute la spécialité : la parole qui plaît et émeut sert-elle la vérité ou la remplace-t-elle ? Les deux réponses ont leurs textes, et un devoir de HLP attend qu’on les fasse dialoguer plutôt que de trancher trop vite.`,
+La forme change, la structure reste : capter l'attention, établir sa crédibilité, avancer ses raisons, toucher, conclure.
+
+> Une question traverse toute la spécialité : la parole qui plaît et émeut sert-elle la vérité, ou la remplace-t-elle ? Les deux réponses ont leurs textes, et un devoir de HLP attend qu'on les fasse dialoguer plutôt que de trancher trop vite.`,
           },
           questions: [
             ['Quelles sont les trois fonctions du discours selon la tradition latine ?', ['Instruire, plaire, émouvoir', 'Décrire, raconter, argumenter', 'Louer, blâmer, juger', 'Écouter, parler, écrire'], 0, 'Docere, delectare, movere chez Cicéron.'],
@@ -214,29 +233,42 @@ La **délibération** politique, le **plaidoyer** judiciaire, le **sermon** reli
           axe: 'L’art de la parole',
           lecon: {
             titre: 'La parole publique aujourd’hui',
-            cours: `La rhétorique n’a pas disparu avec l’Antiquité : elle a changé de **supports**, et ces supports ont changé ses règles.
+            cours: `La rhétorique n'a pas disparu avec l'Antiquité : elle a changé de supports, et ces supports ont changé ses règles.
 
 ## Ce que les nouveaux médias imposent
-- La **brièveté** : quelques secondes pour capter, quelques dizaines de mots pour convaincre. La formule frappante l’emporte sur le développement argumenté.
-- La **visibilité algorithmique** : ce qui circule n’est pas ce qui est le mieux raisonné, mais ce qui suscite le plus de **réactions** — d’où une prime à l’indignation et à la polémique.
-- L’**image** : un discours se juge autant à son montage, sa musique, son cadrage qu’à ses mots.
-- L’**horizontalité** : chacun peut prendre la parole publiquement, ce que les siècles précédents réservaient à une élite.
+| La contrainte | Sa conséquence |
+| La **brièveté** | La formule frappante l'emporte sur le développement argumenté |
+| La **visibilité algorithmique** | Ce qui circule est ce qui suscite le plus de **réactions** : prime à l'indignation |
+| L'**image** | Un discours se juge autant à son montage, sa musique, son cadrage qu'à ses mots |
+| L'**horizontalité** | Chacun peut prendre la parole publiquement, ce que les siècles précédents réservaient à une élite |
 
 ## Les nouvelles figures
-- Le **slogan** et l’**élément de langage**, formules répétées jusqu’à s’imposer comme évidences ;
-- la **petite phrase**, conçue pour être extraite et reprise ;
-- le **storytelling**, qui remplace l’argument par un récit incarné — plus mémorable, plus difficile à réfuter ;
-- le **mème**, argument condensé en image, qui fonctionne par connivence.
+| La figure | Son fonctionnement |
+| **Slogan** et **élément de langage** | Formules répétées jusqu'à s'imposer comme évidences |
+| **Petite phrase** | Conçue pour être extraite et reprise |
+| *Storytelling* | Remplace l'argument par un récit incarné : plus mémorable, plus difficile à réfuter |
+| **Mème** | Argument condensé en image, qui fonctionne par connivence |
 
-## Ce qui n’a pas changé
-Les ressorts restent ceux d’Aristote : **ethos** (l’authenticité mise en scène, le « je vous parle vrai »), **pathos** (l’émotion, plus efficace que jamais), **logos** (souvent le parent pauvre).
+## Ce qui n'a pas changé
+Les ressorts restent ceux d'Aristote.
 
-> Le paradoxe : jamais autant de personnes n’ont eu accès à la parole publique, et jamais l’attention n’a été aussi disputée. La rareté a changé de camp — ce n’est plus le droit de parler qui manque, c’est le temps d’écouter.
+| Le ressort | Sa forme actuelle |
+| **Ethos** | L'authenticité mise en scène : « je vous parle vrai » |
+| **Pathos** | L'émotion, plus efficace que jamais |
+| **Logos** | Souvent le parent pauvre |
+
+> Le paradoxe : jamais autant de personnes n'ont eu accès à la parole publique, et jamais l'attention n'a été aussi disputée. La rareté a changé de camp — ce n'est plus le droit de parler qui manque, c'est le temps d'écouter.
 
 ## Enjeux
-La **désinformation** exploite ces mêmes ressorts : une fausse information conçue pour l’émotion circule plus vite qu’un démenti argumenté. D’où l’importance de l’**esprit critique** : identifier la source, distinguer un fait d’une opinion, repérer un appel à l’émotion ou un argument d’autorité.
+La **désinformation** exploite ces mêmes ressorts : une fausse information conçue pour l'émotion circule plus vite qu'un démenti argumenté.
 
-Savoir analyser un discours n’est plus un exercice scolaire : c’est ce qui permet de ne pas être parlé par ce qu’on écoute.`,
+| Le réflexe critique | La question à poser |
+| Identifier la **source** | Qui parle, et d'où ? |
+| Distinguer le **fait** de l'**opinion** | Est-ce vérifiable ? |
+| Repérer l'appel à l'**émotion** | Que veut-on me faire ressentir ? |
+| Repérer l'argument d'**autorité** | A-t-on examiné le propos, ou seulement son auteur ? |
+
+> Savoir analyser un discours n'est plus un exercice scolaire : c'est ce qui permet de ne pas être parlé par ce qu'on écoute.`,
           },
           questions: [
             ['Quelle contrainte les réseaux sociaux imposent-ils à la parole publique ?', ['La brièveté et la recherche de la formule frappante', 'La rigueur argumentative', 'La longueur du développement', 'Le respect des cinq parties de la rhétorique'], 0, 'Quelques secondes pour capter l’attention.'],
@@ -256,28 +288,37 @@ Savoir analyser un discours n’est plus un exercice scolaire : c’est ce qui p
           axe: 'L’autorité de la parole',
           lecon: {
             titre: 'Ce que raconte un récit qui fonde',
-            cours: `Un **mythe** est un récit **anonyme** et **collectif**, transmis par la tradition, qui explique une origine — celle du monde, d’une cité, d’une institution, d’un interdit — et fonde ainsi un ordre.
+            cours: `Un mythe est un récit anonyme et collectif, transmis par la tradition, qui explique une origine — et fonde ainsi un ordre.
 
 ## Ce qui le distingue
-- De la **fable**, qui vise une leçon morale explicite ;
-- de la **légende**, ancrée dans un lieu et un personnage historique ;
-- du **conte**, dont personne n’attend qu’il soit vrai ;
-- de l’**histoire**, qui produit des preuves et se corrige.
+| Le récit | Sa marque propre |
+| La **fable** | Une leçon morale explicite |
+| La **légende** | Un ancrage dans un lieu et un personnage historique |
+| Le **conte** | Personne n'attend qu'il soit vrai |
+| L'**histoire** | Elle produit des preuves et se corrige |
+| Le **mythe** | Ni preuve ni auteur : son autorité tient à ce qu'il est **reçu** |
 
-Le mythe, lui, ne demande ni preuve ni auteur : son autorité tient à ce qu’il est **reçu**, répété, et qu’il rend le monde intelligible.
+## Les trois fonctions du mythe
+| La fonction | Ce qu'elle fait | Un exemple |
+| **Expliquer** | Ce que l'on ne sait pas | D'où vient le feu, pourquoi il y a des saisons, pourquoi on meurt |
+| **Fonder** | Une communauté | Romulus pour Rome, la dispute d'Athéna et de Poséidon pour Athènes |
+| **Justifier** | Un ordre social | Prométhée et la technique, Pandore et une hiérarchie, la Genèse et le travail |
 
-## La fonction du mythe
-- **Expliquer** ce que l’on ne sait pas : d’où vient le feu, pourquoi il y a des saisons, pourquoi les hommes meurent.
-- **Fonder** une communauté : Rome a Romulus, Athènes a la dispute d’Athéna et de Poséidon. Se reconnaître dans un même récit d’origine, c’est former un « nous ».
-- **Justifier** un ordre social : Prométhée dit ce que l’homme doit à sa technique, Pandore justifie une hiérarchie, la Genèse fonde un rapport au travail et à la connaissance.
-
-> Le mythe ne se discute pas : il se raconte. C’est ce qui fait à la fois sa puissance — il n’a pas besoin d’être démontré — et son danger, car un récit d’origine peut légitimer une domination sans qu’on puisse le réfuter.
+> Le mythe ne se discute pas : il se raconte. C'est ce qui fait sa puissance — il n'a pas besoin d'être démontré — et son danger : un récit d'origine peut légitimer une domination sans qu'on puisse le réfuter.
 
 ## Mythe et philosophie
-La philosophie grecque naît en partie **contre** le mythe : Platon oppose le *muthos*, récit reçu, au *logos*, discours qui rend raison. Mais Platon lui-même recourt au mythe — la caverne, l’attelage ailé, le mythe d’Er — là où l’argument ne suffit plus. Le mythe **prolonge** alors le raisonnement au lieu de s’y opposer.
+| Le terme grec | Ce qu'il désigne |
+| *Muthos* | Le récit reçu |
+| *Logos* | Le discours qui rend raison |
 
-## Le mythe aujourd’hui
-Barthes, dans *Mythologies*, montre que le mythe n’est pas mort : il s’est déplacé vers la publicité, le sport, la politique, où des images transforment une construction historique en **évidence naturelle**. Reconnaître un mythe contemporain, c’est repérer ce qui se donne pour allant de soi.`,
+La philosophie grecque naît en partie **contre** le mythe. Mais Platon lui-même y recourt — la caverne, l'attelage ailé, le mythe d'Er — là où l'argument ne suffit plus.
+
+> Le mythe **prolonge** alors le raisonnement au lieu de s'y opposer.
+
+## Le mythe aujourd'hui
+Barthes, dans *Mythologies*, montre que le mythe s'est déplacé vers la publicité, le sport, la politique, où des images transforment une construction historique en **évidence naturelle**.
+
+> Reconnaître un mythe contemporain, c'est repérer ce qui se donne pour allant de soi.`,
           },
           questions: [
             ['Qu’est-ce qui caractérise un mythe ?', ['Un récit anonyme et collectif qui explique une origine et fonde un ordre', 'Un récit d’auteur avec une morale explicite', 'Un récit historique vérifiable', 'Un récit destiné aux enfants'], 0, 'Son autorité tient à ce qu’il est reçu et répété, non prouvé.'],
@@ -295,26 +336,36 @@ Barthes, dans *Mythologies*, montre que le mythe n’est pas mort : il s’est d
           axe: 'L’autorité de la parole',
           lecon: {
             titre: 'Qui a le droit de parler, et pourquoi on l’écoute',
-            cours: `Toute parole n’a pas le même poids. Ce qui fait qu’on écoute quelqu’un tient autant à sa **position** qu’à ce qu’il dit.
+            cours: `Toute parole n'a pas le même poids. Ce qui fait qu'on écoute quelqu'un tient autant à sa position qu'à ce qu'il dit.
 
-## Les sources de l’autorité
-- L’autorité **institutionnelle** : elle vient de la fonction — le juge, le maître, le prêtre. On l’écoute parce qu’il occupe une place, indépendamment de ses qualités.
-- L’autorité **de compétence** : elle vient du savoir. Le médecin, le savant, l’expert.
-- L’autorité **morale** : elle vient de l’**exemplarité**. Socrate, les prophètes, plus près de nous les figures qui ont payé de leur personne — leur parole vaut parce que leur vie l’a garantie.
-- L’autorité **charismatique** : elle vient d’une présence, d’un don de séduction, et Weber a montré combien elle est puissante et instable.
+## Les sources de l'autorité
+| L'autorité | D'où elle vient | Ses figures |
+| **Institutionnelle** | La **fonction**, indépendamment des qualités | Le juge, le maître, le prêtre |
+| De **compétence** | Le **savoir** | Le médecin, le savant, l'expert |
+| **Morale** | L'**exemplarité** : la vie garantit la parole | Socrate, les prophètes |
+| **Charismatique** | Une présence, un don de séduction | Weber l'a montrée puissante et instable |
 
-## L’exigence de cohérence
-L’autorité morale se distingue des autres en ceci qu’elle est **révocable par la conduite** : celui dont les actes démentent les mots la perd instantanément, ce qui n’est pas le cas d’une autorité de fonction.
+## L'exigence de cohérence
+L'autorité morale se distingue en ceci qu'elle est **révocable par la conduite** : celui dont les actes démentent les mots la perd instantanément, ce qui n'est pas le cas d'une autorité de fonction.
 
-Socrate en est la figure limite : il n’écrit rien, n’enseigne aucune doctrine, ne réclame aucun titre — et accepte de mourir plutôt que de renier ce qu’il a dit. Sa mort **authentifie** sa parole.
+> Socrate en est la figure limite : il n'écrit rien, n'enseigne aucune doctrine, ne réclame aucun titre — et accepte de mourir plutôt que de renier ce qu'il a dit. Sa mort **authentifie** sa parole.
 
 ## Les paroles instituées
-Certaines paroles **font** ce qu’elles disent, dès lors qu’elles sont prononcées dans les conditions requises : le verdict, le serment, la promesse, la déclaration de mariage. Austin les appelle des énoncés **performatifs** — dire, c’est faire.
+Certaines paroles **font** ce qu'elles disent : le verdict, le serment, la promesse, la déclaration de mariage. Austin les appelle des énoncés **performatifs** — dire, c'est faire.
 
-> Leur efficacité ne tient pas aux mots seuls mais au **cadre** : le même « je vous déclare unis » prononcé par un passant ne marie personne. L’autorité de la parole est ici tout entière dans l’institution.
+| Ce qui fait leur efficacité | Ce qui ne suffit pas |
+| Le **cadre** institutionnel | Les mots seuls |
 
-## L’argument d’autorité
-Invoquer la position de celui qui parle **au lieu** d’examiner ce qu’il dit est un **sophisme**. Il n’est pas toujours illégitime de faire confiance à un spécialiste — on ne peut pas tout vérifier —, mais il faut distinguer la **confiance raisonnée**, qui s’enquiert de la compétence et des désaccords, de la **soumission**, qui s’en dispense.`,
+> Le même « je vous déclare unis » prononcé par un passant ne marie personne.
+
+## L'argument d'autorité
+Invoquer la position de celui qui parle **au lieu** d'examiner ce qu'il dit est un **sophisme**.
+
+| L'attitude | Ce qu'elle fait |
+| La **confiance raisonnée** | Elle s'enquiert de la compétence, des désaccords, des intérêts en jeu |
+| La **soumission** | Elle s'en dispense |
+
+> Il n'est pas illégitime de faire confiance à un spécialiste — on ne peut pas tout vérifier. Toute la question est de savoir laquelle des deux attitudes on adopte.`,
           },
           questions: [
             ['Quelle autorité repose sur l’exemplarité de celui qui parle ?', ['L’autorité morale', 'L’autorité institutionnelle', 'L’autorité de compétence', 'L’autorité charismatique'], 0, 'Sa vie garantit sa parole — et la démentir la lui fait perdre.'],
@@ -332,28 +383,40 @@ Invoquer la position de celui qui parle **au lieu** d’examiner ce qu’il dit 
           axe: 'L’autorité de la parole',
           lecon: {
             titre: 'Éloquence, domination et résistance',
-            cours: `La parole ne sert pas seulement à échanger : elle **établit des rapports de force**. Qui parle, à qui, dans quel ordre, et avec quel droit d’interrompre — tout cela dessine une hiérarchie.
+            cours: `La parole ne sert pas seulement à échanger : elle établit des rapports de force. Qui parle, à qui, dans quel ordre, avec quel droit d'interrompre — tout cela dessine une hiérarchie.
 
-## L’éloquence comme pouvoir
-Dans la démocratie athénienne, savoir parler donne accès au pouvoir : les **sophistes** enseignent, contre rémunération, l’art de faire triompher n’importe quelle cause. Ils prétendent rendre « le discours le plus faible le plus fort » — et c’est exactement ce que Platon leur reproche.
+## L'éloquence comme pouvoir
+| Le lieu | Ce que la parole y donne |
+| L'Athènes démocratique | L'accès au pouvoir ; les **sophistes** l'enseignent contre rémunération |
+| La Rome républicaine | La carrière politique passe par le barreau et la tribune — Cicéron doit tout à sa voix |
 
-À Rome, la carrière politique passe par le barreau et la tribune. Cicéron doit tout à sa voix.
+Les sophistes prétendent rendre « le discours le plus faible le plus fort ». C'est exactement ce que Platon leur reproche.
 
-## Prendre la parole, la garder, la refuser
-Trois gestes de pouvoir distincts :
-- **prendre** la parole suppose qu’on vous la reconnaisse. L’histoire des femmes, des esclaves, des colonisés est d’abord celle d’un droit de parole refusé ;
-- **garder** la parole se joue dans l’interruption, le monopole du temps, le refus de céder le tour ;
-- **imposer le silence** — la censure, la menace, l’ostracisme — est la forme la plus brutale, et la plus révélatrice.
+## Trois gestes de pouvoir
+| Le geste | Ce qu'il suppose ou révèle |
+| **Prendre** la parole | Qu'on vous la reconnaisse. L'histoire des femmes, des esclaves, des colonisés est d'abord celle d'un droit de parole refusé |
+| **Garder** la parole | L'interruption, le monopole du temps, le refus de céder le tour |
+| **Imposer le silence** | Censure, menace, ostracisme : la forme la plus brutale, et la plus révélatrice |
 
-> La **parrhêsia** grecque désigne le franc-parler : dire toute la vérité, y compris à qui a le pouvoir de vous nuire. Elle suppose un courage, parce qu’elle expose. Foucault en a fait une figure centrale du rapport entre vérité et pouvoir.
+> La **parrhêsia** grecque désigne le franc-parler : dire toute la vérité, y compris à qui a le pouvoir de vous nuire. Elle suppose un courage, parce qu'elle expose. Foucault en a fait une figure centrale du rapport entre vérité et pouvoir.
 
 ## Les mots qui font le monde
-Nommer, c’est déjà classer et hiérarchiser. Une même réalité change de valeur selon qu’on l’appelle « migrant » ou « exilé », « réforme » ou « recul », « émeute » ou « soulèvement ». Le combat politique est aussi un combat sur les mots — Klemperer, dans *LTI*, a montré comment un régime transforme une langue pour transformer les esprits.
+Nommer, c'est déjà classer et hiérarchiser.
+
+| Un mot | Son concurrent | Ce que le choix engage |
+| « Migrant » | « Exilé » | La contrainte subie, ou non |
+| « Réforme » | « Recul » | Le progrès, ou la perte |
+| « Émeute » | « Soulèvement » | Le désordre, ou la légitimité |
+
+> Klemperer, dans *LTI*, a montré comment un régime transforme une langue pour transformer les esprits.
 
 ## La parole des dominés
-Contre la parole qui écrase, il y a celle qui résiste : le discours de tribune, le pamphlet, le témoignage, la chanson. Le discours de Victor Hugo sur la misère, celui de Simone Veil en 1974, les témoignages des rescapés : la même arme, retournée.
+| L'arme | Un exemple |
+| Le discours de tribune | Victor Hugo sur la misère |
+| Le discours politique | Simone Veil, en 1974 |
+| Le témoignage | Les récits des rescapés |
 
-Prendre la parole quand elle vous était refusée est en soi un acte politique, avant même ce qu’on dit.`,
+> Prendre la parole quand elle vous était refusée est en soi un acte politique, avant même ce qu'on dit.`,
           },
           questions: [
             ['Que prétendaient enseigner les sophistes ?', ['L’art de faire triompher n’importe quelle cause par le discours', 'La science de la nature', 'La grammaire grecque', 'La géométrie'], 0, 'Rendre « le discours le plus faible le plus fort » : ce que Platon leur reproche.'],
@@ -371,30 +434,40 @@ Prendre la parole quand elle vous était refusée est en soi un acte politique, 
           axe: 'Les séductions de la parole',
           lecon: {
             titre: 'La parole qui enchante',
-            cours: `Le poète ne cherche pas d’abord à convaincre : il **enchante**. Sa parole vaut par elle-même, avant tout message.
+            cours: `Le poète ne cherche pas d'abord à convaincre : il enchante. Sa parole vaut par elle-même, avant tout message.
 
-## L’origine sacrée
-Dans la tradition grecque, le poète est **inspiré** : les Muses parlent par sa bouche. Il n’est pas l’auteur de son chant mais celui qui le reçoit — d’où l’*enthousiasme*, littéralement le fait d’avoir un dieu en soi. Platon, dans l’*Ion*, en tire une conséquence embarrassante : si le poète ne sait pas d’où lui vient ce qu’il dit, il ne peut pas en répondre.
+## L'origine sacrée
+Dans la tradition grecque, le poète est **inspiré** : les Muses parlent par sa bouche. D'où l'*enthousiasme*, littéralement le fait d'avoir un dieu en soi.
 
-**Orphée** est la figure limite : son chant fait pleurer les pierres, suspend les fleuves, arrache une morte aux Enfers. La parole poétique y est présentée comme une **puissance** sur le monde, non comme une décoration.
+| L'œuvre | Ce qu'elle pose |
+| L'*Ion* de Platon | Si le poète ne sait pas d'où lui vient ce qu'il dit, il ne peut pas en répondre |
+| Le mythe d'**Orphée** | Son chant fait pleurer les pierres, suspend les fleuves, arrache une morte aux Enfers |
+
+> La parole poétique y est une **puissance** sur le monde, non une décoration.
 
 ## Les moyens du poète
-- Le **rythme** et le **mètre**, qui font entendre autre chose que le sens ;
-- les **sonorités** — allitérations, assonances, rimes —, qui lient les mots par le son ;
-- l’**image** — métaphore, comparaison, symbole —, qui donne à voir ;
-- l’**écart** avec la langue ordinaire, qui oblige à ralentir.
+| Le moyen | Ce qu'il produit |
+| **Rythme** et **mètre** | Ils font entendre autre chose que le sens |
+| **Sonorités** — allitérations, assonances, rimes | Elles lient les mots par le son |
+| **Image** — métaphore, comparaison, symbole | Elle donne à voir |
+| L'**écart** avec la langue ordinaire | Il oblige à ralentir |
 
-Ce dernier point est décisif : le poème résiste, il ne se laisse pas consommer. C’est cette résistance qui fait qu’on le relit.
+> Ce dernier point est décisif : le poème résiste, il ne se laisse pas consommer. C'est cette résistance qui fait qu'on le relit.
 
 ## Poésie et vérité
-Deux positions à connaître :
-- **Platon** bannit les poètes de la Cité idéale : ils imitent les apparences, flattent les passions, et éloignent du vrai ;
-- **Aristote** répond que la poésie dit le **général** quand l’histoire dit le **particulier** — elle est donc « plus philosophique » que l’histoire.
+| Le philosophe | Sa position |
+| **Platon** | Il bannit les poètes de la Cité idéale : ils imitent les apparences, flattent les passions, éloignent du vrai |
+| **Aristote** | La poésie dit le **général** quand l'histoire dit le **particulier** : elle est donc « plus philosophique » que l'histoire |
 
-> Les modernes déplacent la question : la poésie ne dit pas une vérité **sur** le monde, elle fait éprouver une **manière** de l’habiter. Ce n’est pas un savoir de moins, c’est un savoir d’un autre ordre.
+> Les modernes déplacent la question : la poésie ne dit pas une vérité **sur** le monde, elle fait éprouver une **manière** de l'habiter. Ce n'est pas un savoir de moins, c'est un savoir d'un autre ordre.
 
 ## Le poète moderne
-Baudelaire, Rimbaud, Mallarmé rompent avec la belle langue : ils cherchent l’inconnu, dérèglent la syntaxe, travaillent la matière sonore. Le poète cesse d’être le porte-parole des dieux pour devenir un **explorateur du langage** — et souvent une figure marginale, l’albatros dont les ailes de géant empêchent de marcher.`,
+Baudelaire, Rimbaud, Mallarmé rompent avec la belle langue : ils cherchent l'inconnu, dérèglent la syntaxe, travaillent la matière sonore.
+
+| Ce qu'il cesse d'être | Ce qu'il devient |
+| Le porte-parole des dieux | Un **explorateur du langage**, et souvent une figure marginale |
+
+> L'albatros de Baudelaire : ses ailes de géant l'empêchent de marcher.`,
           },
           questions: [
             ['Que signifie l’enthousiasme, dans la tradition poétique grecque ?', ['Le fait d’avoir un dieu en soi, d’être inspiré', 'Une grande joie', 'Un travail acharné', 'Une technique apprise'], 0, 'Les Muses parlent par la bouche du poète.'],
@@ -412,28 +485,35 @@ Baudelaire, Rimbaud, Mallarmé rompent avec la belle langue : ils cherchent l’
           axe: 'Les séductions de la parole',
           lecon: {
             titre: 'Dire l’amour, ou l’inventer',
-            cours: `Le discours amoureux est le lieu où la parole cherche à **faire naître** ce qu’elle prétend seulement exprimer.
+            cours: `Le discours amoureux est le lieu où la parole cherche à faire naître ce qu'elle prétend seulement exprimer.
 
 ## Une parole codée
-Loin d’être spontanée, la déclaration obéit à des **codes** hérités :
-- l’**amour courtois** médiéval, où le poète sert une dame inaccessible, et où le désir se nourrit de l’obstacle ;
-- le **pétrarquisme** de la Renaissance, avec ses images obligées — la dame au teint de lys, le feu et la glace, le doux supplice — que Du Bellay et Shakespeare finiront par moquer ;
-- la **carte de Tendre** du XVIIe siècle, qui cartographie les étapes du sentiment comme un itinéraire.
+| Le code | Son époque | Ce qu'il impose |
+| L'**amour courtois** | Le Moyen Âge | Le poète sert une dame inaccessible ; le désir se nourrit de l'obstacle |
+| Le **pétrarquisme** | La Renaissance | Le teint de lys, le feu et la glace, le doux supplice — images que Du Bellay et Shakespeare finiront par moquer |
+| La **carte de Tendre** | Le XVIIe siècle | Les étapes du sentiment cartographiées comme un itinéraire |
 
-> Chaque époque fournit aux amants les mots pour dire ce qu’ils éprouvent — et, en les fournissant, façonne ce qu’ils éprouvent. La Rochefoucauld : bien des gens n’auraient jamais été amoureux s’ils n’avaient entendu parler de l’amour.
+> Chaque époque fournit aux amants les mots pour dire ce qu'ils éprouvent — et, en les fournissant, façonne ce qu'ils éprouvent. La Rochefoucauld : bien des gens n'auraient jamais été amoureux s'ils n'avaient entendu parler de l'amour.
 
-## Séduire, c’est parler
-Dom Juan séduit par la parole avant tout : il promet, jure, épouse en paroles. Sa force n’est pas dans ce qu’il ressent mais dans ce qu’il sait dire — et le personnage inquiète précisément parce qu’il révèle que le discours amoureux **peut fonctionner à vide**.
+## Séduire, c'est parler
+| La figure | Ce qu'elle révèle |
+| **Dom Juan** | Il promet, jure, épouse **en paroles** : sa force n'est pas dans ce qu'il ressent mais dans ce qu'il sait dire |
+| La **lettre**, chez Rousseau et Laclos | On écrit parce qu'on ne peut pas dire ; l'écriture creuse le manque autant qu'elle le comble |
 
-À l’inverse, la lettre — chez Rousseau, chez Laclos — donne à l’absence sa forme : on écrit parce qu’on ne peut pas dire, et l’écriture creuse le manque autant qu’elle le comble.
+> Dom Juan inquiète précisément parce qu'il montre que le discours amoureux **peut fonctionner à vide**.
 
-## L’insuffisance des mots
-Le discours amoureux se heurte à sa propre impuissance : les mots sont **usés**, partagés par tous, incapables de dire ce qui se veut unique. D’où le recours à l’**hyperbole**, au néologisme, au silence lui-même.
+## L'insuffisance des mots
+Les mots sont **usés**, partagés par tous, incapables de dire ce qui se veut unique.
 
-Barthes, dans les *Fragments d’un discours amoureux*, décrit l’amoureux comme quelqu’un qui parle **seul**, dans une langue que personne d’autre ne partage — et qui pourtant reprend, sans le savoir, les figures de tous ceux qui ont aimé avant lui.
+| Le recours | Ce qu'il tente |
+| L'**hyperbole** | Forcer la langue pour dépasser l'ordinaire |
+| Le **néologisme** | Inventer un mot qui n'aurait servi à personne d'autre |
+| Le **silence** | Avouer que rien ne convient |
+
+> Barthes, dans les *Fragments d'un discours amoureux*, décrit l'amoureux comme quelqu'un qui parle **seul**, dans une langue que personne ne partage — et qui pourtant reprend, sans le savoir, les figures de tous ceux qui ont aimé avant lui.
 
 ## Ce que le chapitre demande
-Non pas de juger la sincérité des amants, mais d’observer **comment la parole travaille** : ce qu’elle promet, ce qu’elle institue, ce qu’elle échoue à dire.`,
+Non pas de juger la sincérité des amants, mais d'observer **comment la parole travaille** : ce qu'elle promet, ce qu'elle institue, ce qu'elle échoue à dire.`,
           },
           questions: [
             ['Qu’est-ce que l’amour courtois médiéval ?', ['Un code où le poète sert une dame inaccessible et où l’obstacle nourrit le désir', 'Un mariage arrangé', 'Une déclaration spontanée', 'Un genre théâtral'], 0, 'Le désir s’y entretient de la distance.'],
@@ -451,29 +531,39 @@ Non pas de juger la sincérité des amants, mais d’observer **comment la parol
           axe: 'Les séductions de la parole',
           lecon: {
             titre: 'Mensonge, silence et vérité',
-            cours: `Après avoir vu ce que la parole peut, reste à demander ce qu’elle **doit**. Le chapitre est le versant éthique de tout le semestre.
+            cours: `Après avoir vu ce que la parole peut, reste à demander ce qu'elle doit. Le chapitre est le versant éthique de tout le semestre.
 
-## Le mensonge
-Deux positions célèbres, et opposées :
-- **Kant** juge le mensonge toujours interdit. Mentir, c’est traiter autrui comme un moyen, et c’est ruiner la condition même du langage : si mentir devenait universel, la parole ne signifierait plus rien. Il maintient l’interdit jusque dans le cas du meurtrier qui demande où se cache sa victime — position qui a fait scandale et qu’il faut savoir exposer sans la caricaturer.
-- **Benjamin Constant** lui répond : dire la vérité n’est un devoir qu’envers celui qui a **droit** à la vérité. Le meurtrier n’y a pas droit.
+## Le mensonge : deux positions
+| L'auteur | Sa thèse | Son argument |
+| **Kant** | Le mensonge est **toujours** interdit | Mentir, c'est traiter autrui comme un moyen — et ruiner la condition même du langage : universalisé, le mensonge viderait la parole de sens |
+| **Benjamin Constant** | Il dépend du destinataire | Dire la vérité n'est un devoir qu'envers celui qui a **droit** à la vérité |
+
+> Kant maintient l'interdit jusque dans le cas du meurtrier qui demande où se cache sa victime. Position qui a fait scandale, et qu'il faut savoir exposer sans la caricaturer.
 
 ## La médisance et la calomnie
-La parole blesse sans qu’on la voie blesser. La **rumeur** se répand parce qu’elle circule, non parce qu’elle est vraie : chacun la relaie en la croyant vérifiée par le simple fait qu’un autre l’a dite. Elle est **irréversible** — un démenti n’efface pas ce qui a été entendu.
+| Le trait de la rumeur | Ce qu'il produit |
+| Elle circule | Chacun la relaie en la croyant vérifiée par le fait qu'un autre l'a dite |
+| Elle est **irréversible** | Un démenti n'efface pas ce qui a été entendu |
 
 ## Le silence
-Il n’est pas l’absence de parole mais l’une de ses formes :
-- silence de **prudence**, qui retient ce qui blesserait inutilement ;
-- silence de **complicité**, qui laisse faire — « qui ne dit mot consent » ;
-- silence de **respect**, devant la douleur ou l’indicible ;
-- silence **imposé**, celui du censeur.
+Il n'est pas l'absence de parole, mais l'une de ses formes.
 
-> Après les catastrophes du XXe siècle, la question s’est déplacée : ce qui pose problème n’est plus seulement ce qu’on dit, mais ce qu’on **n’arrive pas** à dire — et le devoir de continuer malgré tout, pour le témoignage.
+| Le silence | Ce qu'il fait |
+| De **prudence** | Il retient ce qui blesserait inutilement |
+| De **complicité** | Il laisse faire : « qui ne dit mot consent » |
+| De **respect** | Devant la douleur ou l'indicible |
+| **Imposé** | Celui du censeur |
+
+> Après les catastrophes du XXe siècle, la question s'est déplacée : ce qui pose problème n'est plus seulement ce qu'on dit, mais ce qu'on **n'arrive pas** à dire — et le devoir de continuer malgré tout, pour le témoignage.
 
 ## La parole juste
-Les traditions convergent sur quelques exigences : parler **à propos** — le *kairos* grec, savoir le moment —, mesurer la **portée** de ce qu’on dit, écouter avant de répondre, et ne pas confondre le droit de dire avec le devoir de tout dire.
+| L'exigence | Ce qu'elle demande |
+| Parler **à propos** | Le *kairos* grec : savoir le moment |
+| Mesurer la **portée** | Devant qui, et avec quelles conséquences |
+| **Écouter** avant de répondre | Ne pas parler contre |
+| Ne pas confondre | Le **droit** de dire et le **devoir** de tout dire |
 
-C’est là que HLP rejoint le quotidien : la question du bon usage de la parole n’est pas une question de politesse mais de responsabilité, et elle se pose à chaque publication en ligne.`,
+> La question du bon usage de la parole n'est pas une question de politesse mais de responsabilité — et elle se pose à chaque publication en ligne.`,
           },
           questions: [
             ['Pourquoi Kant juge-t-il le mensonge toujours interdit ?', ['Parce qu’il ruine la condition même du langage et traite autrui comme un moyen', 'Parce qu’il est inefficace', 'Parce qu’il est puni par la loi', 'Parce qu’il finit toujours par se savoir'], 0, 'Il maintient l’interdit jusque dans le cas du meurtrier à la porte.'],
@@ -493,26 +583,41 @@ C’est là que HLP rejoint le quotidien : la question du bon usage de la parole
           axe: 'Découverte du monde et rencontre des cultures',
           lecon: {
             titre: 'Le choc des mondes, et ce qu’il révèle',
-            cours: `Le second semestre s’ouvre sur les grandes découvertes. En quelques décennies, l’Europe apprend l’existence de peuples entiers dont aucun de ses livres ne parlait — et cette rencontre l’oblige à se penser elle-même.
+            cours: `En quelques décennies, l'Europe apprend l'existence de peuples entiers dont aucun de ses livres ne parlait. Cette rencontre l'oblige à se penser elle-même.
 
-## L’événement
-1492 : Colomb atteint l’Amérique en croyant aborder les Indes. Suivent la conquête, l’effondrement démographique des populations amérindiennes, l’évangélisation forcée et la traite. La « découverte » est aussi une **destruction** : c’est sous ce double aspect que le programme demande de l’étudier.
+## L'événement
+1492 : Colomb atteint l'Amérique en croyant aborder les Indes. Suivent la conquête, l'effondrement démographique des populations amérindiennes, l'évangélisation forcée et la traite.
 
-## Trois attitudes devant l’autre
-- **Réduire** : l’autre est un sauvage, un barbare, un être inachevé qu’il faut civiliser. C’est la position qui légitime la conquête.
-- **Idéaliser** : l’autre vit dans l’innocence que nous avons perdue. C’est le **bon sauvage**, chez Rousseau ou déjà chez Montaigne. Le renversement est généreux, mais il reste une projection : on parle encore de soi.
-- **Comprendre** : reconnaître dans l’autre une culture à part entière, avec sa cohérence propre.
+> La « découverte » est aussi une **destruction** : c'est sous ce double aspect que le programme demande de l'étudier.
+
+## Trois attitudes devant l'autre
+| L'attitude | Ce qu'elle affirme | Ce qu'elle produit |
+| **Réduire** | L'autre est un sauvage, un être inachevé | Elle légitime la conquête |
+| **Idéaliser** | L'autre vit dans l'innocence que nous avons perdue | Le **bon sauvage** : renversement généreux, mais qui reste une projection |
+| **Comprendre** | L'autre a une culture entière, avec sa cohérence propre | La seule qui regarde vraiment |
 
 ## La controverse de Valladolid
-En 1550, l’Espagne organise un débat public sur la question de savoir si les Indiens ont une âme et des droits. **Las Casas**, qui a vu la conquête, plaide pour leur pleine humanité ; **Sepúlveda** défend la guerre juste et la servitude naturelle d’Aristote. Que la question ait dû être **posée** en dit autant que la réponse.
+En 1550, l'Espagne organise un débat public sur la question de savoir si les Indiens ont une âme et des droits.
+
+| L'orateur | Sa thèse |
+| **Las Casas**, qui a vu la conquête | Leur pleine humanité |
+| **Sepúlveda** | La guerre juste, et la servitude naturelle d'Aristote |
+
+> Que la question ait dû être **posée** en dit autant que la réponse.
 
 ## Montaigne, « Des cannibales »
-Le texte central du chapitre. Montaigne rapporte les usages des Tupinambas, y compris l’anthropophagie rituelle, et retourne le jugement : « chacun appelle barbarie ce qui n’est pas de son usage ». Il compare la cruauté du cannibale, qui mange un mort, à celle des guerres de religion, qui torture un vivant.
+Le texte central du chapitre. Montaigne rapporte les usages des Tupinambas, anthropophagie rituelle comprise, et retourne le jugement : « chacun appelle barbarie ce qui n'est pas de son usage ».
 
-> Le geste de Montaigne n’est pas de dire que tout se vaut, mais de **suspendre** le jugement le temps de regarder — et de découvrir que la mesure avec laquelle on jugeait était locale.
+| La cruauté | Sur qui elle s'exerce |
+| Celle du cannibale | Sur un **mort** |
+| Celle des guerres de religion | Sur un **vivant** |
 
-## L’ethnocentrisme
-Juger les autres cultures à l’aune de la sienne, en la tenant pour la mesure de toutes. Lévi-Strauss en fait, dans *Race et histoire*, l’attitude la mieux partagée du monde : chaque société tend à réserver le nom d’humanité à ses propres membres. Le reconnaître est la condition d’un regard moins étroit.`,
+> Le geste de Montaigne n'est pas de dire que tout se vaut, mais de **suspendre** le jugement le temps de regarder — et de découvrir que la mesure avec laquelle on jugeait était locale.
+
+## L'ethnocentrisme
+Juger les autres cultures à l'aune de la sienne, en la tenant pour la mesure de toutes.
+
+> Lévi-Strauss, dans *Race et histoire*, en fait l'attitude la mieux partagée du monde : chaque société tend à réserver le nom d'humanité à ses propres membres. Le reconnaître est la condition d'un regard moins étroit.`,
           },
           questions: [
             ['Pourquoi la « découverte » de l’Amérique doit-elle être étudiée sous un double aspect ?', ['Parce qu’elle est aussi une conquête et une destruction', 'Parce que Colomb s’est trompé de route', 'Parce qu’elle fut tardive', 'Parce qu’elle a enrichi l’Europe'], 0, 'Effondrement démographique, évangélisation forcée et traite l’accompagnent.'],
@@ -530,26 +635,40 @@ Juger les autres cultures à l’aune de la sienne, en la tenant pour la mesure 
           axe: 'Découverte du monde et rencontre des cultures',
           lecon: {
             titre: 'Ce que l’image de l’autre dit de nous',
-            cours: `L’autre n’est presque jamais rencontré : il est d’abord **représenté**. Récits de voyage, gravures, romans, expositions, images — une figure de l’étranger circule bien avant lui.
+            cours: `L'autre n'est presque jamais rencontré : il est d'abord représenté. Une figure de l'étranger circule bien avant lui.
 
 ## Les figures héritées
-- Le **barbare** grec : celui qui ne parle pas grec, dont la langue fait « bar-bar ». La frontière est linguistique avant d’être morale.
-- Le **monstre** médiéval : les cartes peuplent les marges du monde de cynocéphales et d’hommes sans tête. L’inconnu s’écrit d’abord en monstres.
-- L’**exotique** : l’ailleurs comme décor, désirable et sans consistance propre.
-- Said a nommé **orientalisme** ce discours qui construit un Orient rêvé, immobile et sensuel, qui en dit plus sur l’Occident que sur l’Orient.
+| La figure | Son époque | Ce qui la définit |
+| Le **barbare** | La Grèce | Celui qui ne parle pas grec : la frontière est **linguistique** avant d'être morale |
+| Le **monstre** | Le Moyen Âge | Les cartes peuplent les marges du monde de cynocéphales et d'hommes sans tête |
+| L'**exotique** | L'âge classique | L'ailleurs comme décor, désirable et sans consistance propre |
+| L'**orientalisme**, selon Said | Le XIXe siècle | Un Orient rêvé, immobile et sensuel, qui en dit plus sur l'Occident |
 
-## Le procédé du regard renversé
+## Le regard renversé
 Une stratégie littéraire majeure : faire décrire **notre** monde par un étranger, pour le rendre étrange.
-- Montesquieu, *Lettres persanes* : deux Persans à Paris trouvent bizarres nos usages, et la fameuse question — « comment peut-on être Persan ? » — retourne l’étonnement contre celui qui s’étonne.
-- Voltaire, *Micromégas*, *L’Ingénu* : le regard naïf démasque l’arbitraire de ce que nous tenons pour naturel.
 
-> Le procédé s’appelle la **défamiliarisation** : rendre étrange le familier pour le voir enfin. C’est l’un des grands outils des Lumières, et il fonctionne encore.
+| L'œuvre | Son procédé |
+| Montesquieu, *Lettres persanes* | Deux Persans à Paris trouvent bizarres nos usages ; « comment peut-on être Persan ? » retourne l'étonnement contre celui qui s'étonne |
+| Voltaire, *Micromégas* et *L'Ingénu* | Le regard naïf démasque l'arbitraire de ce que nous tenons pour naturel |
 
-## Les images d’aujourd’hui
-Les **stéréotypes** ne sont pas seulement faux : ils sont **économiques**. Ils dispensent de connaître, ils circulent vite, ils se confirment eux-mêmes — on remarque ce qui les vérifie, on oublie ce qui les dément. Les médias, la publicité, le cinéma en produisent en continu.
+> Le procédé s'appelle la **défamiliarisation** : rendre étrange le familier pour le voir enfin. C'est l'un des grands outils des Lumières, et il fonctionne encore.
+
+## Les images d'aujourd'hui
+| Le trait du stéréotype | Ce qu'il produit |
+| Il est **économique** | Il dispense de connaître |
+| Il **circule vite** | Il se transmet sans examen |
+| Il se **confirme lui-même** | On remarque ce qui le vérifie, on oublie ce qui le dément |
+
+Médias, publicité et cinéma en produisent en continu.
 
 ## Ce que le chapitre demande
-Non pas de dénoncer, mais d’**analyser** : quelle figure est construite, par quels moyens, à qui elle profite, et ce que le portrait de l’autre révèle de celui qui le trace. Une représentation de l’étranger est toujours, aussi, un autoportrait.`,
+| La question | Ce qu'elle cherche |
+| Quelle figure est **construite** ? | Le portrait exact |
+| Par quels **moyens** ? | Images, mots, cadrages |
+| À qui **profite**-t-elle ? | L'intérêt servi |
+| Que révèle-t-elle de celui qui la trace ? | L'autoportrait involontaire |
+
+> Une représentation de l'étranger est toujours, aussi, un autoportrait.`,
           },
           questions: [
             ['Que désigne le mot « barbare » chez les Grecs ?', ['Celui qui ne parle pas grec', 'Un ennemi militaire', 'Un être cruel', 'Un habitant du Nord'], 0, 'La frontière est linguistique avant d’être morale.'],
@@ -567,29 +686,40 @@ Non pas de dénoncer, mais d’**analyser** : quelle figure est construite, par 
           axe: 'Découverte du monde et rencontre des cultures',
           lecon: {
             titre: 'La révolution astronomique et ses effets',
-            cours: `Entre le XVIe et le XVIIe siècle, l’Europe change de **cosmos**. Ce n’est pas seulement une révision scientifique : c’est la place de l’homme dans l’être qui se déplace.
+            cours: `Entre le XVIe et le XVIIe siècle, l'Europe change de cosmos. Ce n'est pas une simple révision scientifique : c'est la place de l'homme dans l'être qui se déplace.
 
-## Le monde d’avant
-Le modèle d’**Aristote et Ptolémée** décrit un univers **fini**, **clos** et **hiérarchisé** : la Terre immobile au centre, entourée de sphères concentriques portant la Lune, le Soleil et les planètes, puis la sphère des fixes. Le monde **sublunaire** est celui du changement et de la corruption ; le monde supralunaire, celui de la perfection et des mouvements circulaires éternels.
+## Le monde d'avant
+Le modèle d'**Aristote et Ptolémée** décrit un univers **fini**, **clos** et **hiérarchisé**.
 
-Ce cosmos est **habitable** au sens fort : chaque chose y a un lieu propre, et l’homme y occupe le centre.
+| Le domaine | Ce qui y règne |
+| **Sublunaire** | Le changement et la corruption |
+| **Supralunaire** | La perfection et les mouvements circulaires éternels |
+
+La Terre est immobile au centre, entourée de sphères concentriques.
+
+> Ce cosmos est **habitable** au sens fort : chaque chose y a un lieu propre, et l'homme y occupe le centre.
 
 ## Les étapes de la rupture
-- **Copernic** (1543) place le Soleil au centre — d’abord comme hypothèse de calcul ;
-- **Giordano Bruno** franchit le pas décisif en affirmant l’univers **infini** et la pluralité des mondes ; il est brûlé en 1600 ;
-- **Galilée** observe à la lunette les satellites de Jupiter — tout ne tourne donc pas autour de la Terre — et les reliefs de la Lune, qui ruinent la perfection supralunaire ; il est condamné en 1633 ;
-- **Newton** (1687) unifie ciel et terre sous une même loi de gravitation.
+| La date | Le savant | Ce qu'il établit | Ce qu'il lui en coûte |
+| **1543** | **Copernic** | Le Soleil au centre — d'abord comme hypothèse de calcul | — |
+| **1600** | **Giordano Bruno** | L'univers **infini** et la pluralité des mondes | Il est brûlé |
+| **1610-1633** | **Galilée** | Les satellites de Jupiter (tout ne tourne pas autour de la Terre) et les reliefs de la Lune (fin de la perfection supralunaire) | Il est condamné |
+| **1687** | **Newton** | Ciel et terre unifiés sous une même loi de gravitation | — |
 
-## Le retentissement
-Alexandre Koyré a résumé le mouvement d’une formule qui donne son titre au chapitre : « du monde clos à l’univers infini ». Ce qui se perd n’est pas seulement une position géométrique :
-- l’homme n’est plus au **centre** ;
-- l’univers n’a plus de **haut** ni de **bas**, donc plus d’ordre naturel des places ;
-- la nature cesse d’être un livre à déchiffrer pour devenir un système à **mesurer**.
+## Ce qui se perd
+| Ce qui disparaît | Sa conséquence |
+| La position **centrale** de l'homme | Il n'est plus au milieu de l'être |
+| Le **haut** et le **bas** | Plus d'ordre naturel des places |
+| La nature comme **livre** à déchiffrer | Elle devient un système à **mesurer** |
 
-> Pascal en tire l’effroi le plus célèbre : « le silence éternel de ces espaces infinis m’effraie ». Et pourtant, dans le même mouvement, il fait de la pensée la grandeur du roseau : l’homme est écrasé par l’univers, mais il le sait, et l’univers ne sait rien.
+Alexandre Koyré a résumé le mouvement d'une formule : « du monde clos à l'univers infini ».
 
-## Un déplacement qui n’est pas achevé
-Chaque avancée reconduit le décentrement : le Soleil n’est qu’une étoile parmi des milliards, la galaxie une parmi des milliards d’autres. Le chapitre demande moins de retenir des dates que de mesurer ce que coûte, et ce que vaut, un tel changement de cadre.`,
+> Pascal en tire l'effroi le plus célèbre : « le silence éternel de ces espaces infinis m'effraie ». Et pourtant, dans le même mouvement, il fait de la pensée la grandeur du roseau : l'homme est écrasé par l'univers, mais il le sait, et l'univers ne sait rien.
+
+## Un décentrement inachevé
+Chaque avancée le reconduit : le Soleil n'est qu'une étoile parmi des milliards, la galaxie une parmi des milliards d'autres.
+
+> Le chapitre demande moins de retenir des dates que de mesurer ce que coûte, et ce que vaut, un tel changement de cadre.`,
           },
           questions: [
             ['Comment le cosmos d’Aristote et Ptolémée est-il conçu ?', ['Fini, clos et hiérarchisé, avec la Terre immobile au centre', 'Infini et homogène', 'Centré sur le Soleil', 'Sans ordre déterminé'], 0, 'Le monde sublunaire y est celui du changement, le supralunaire celui de la perfection.'],
@@ -607,29 +737,37 @@ Chaque avancée reconduit le décentrement : le Soleil n’est qu’une étoile 
           axe: 'Découverte du monde et rencontre des cultures',
           lecon: {
             titre: 'Un art du mouvement et de l’instabilité',
-            cours: `Le **baroque** naît à la fin du XVIe siècle et domine le XVIIe européen. Il est la traduction esthétique d’un monde qui a perdu ses repères : nouvelles terres, nouvel univers, guerres de religion, épidémies.
+            cours: `Le baroque naît à la fin du XVIe siècle et domine le XVIIe européen. Il est la traduction esthétique d'un monde qui a perdu ses repères.
 
 ## Le mot
-De *barroco*, la perle irrégulière. Le mot dit déjà l’essentiel : ce qui n’est pas rond, pas régulier, pas apaisé.
+De *barroco*, la perle irrégulière.
+
+> Le mot dit déjà l'essentiel : ce qui n'est pas rond, pas régulier, pas apaisé.
 
 ## Les traits
-- Le **mouvement** : lignes courbes, torsions, diagonales, drapés agités. Rien n’est stable.
-- L’**illusion** : trompe-l’œil, plafonds qui s’ouvrent sur le ciel, machines de théâtre. L’art montre qu’il fait illusion, et joue de ce dévoilement.
-- La **métamorphose** : les êtres changent d’état, se déguisent, se transforment. Le théâtre dans le théâtre en est la forme achevée.
-- Le **contraste** : ombre et lumière violemment opposées, le clair-obscur du Caravage.
-- L’**excès** : profusion des ornements, démesure, saturation.
+| Le trait | Sa manifestation |
+| Le **mouvement** | Lignes courbes, torsions, diagonales, drapés agités : rien n'est stable |
+| L'**illusion** | Trompe-l'œil, plafonds ouverts sur le ciel, machines de théâtre — l'art montre qu'il fait illusion |
+| La **métamorphose** | Les êtres changent d'état, se déguisent ; le théâtre dans le théâtre en est la forme achevée |
+| Le **contraste** | Ombre et lumière violemment opposées : le clair-obscur du Caravage |
+| L'**excès** | Profusion des ornements, démesure, saturation |
 
 ## Les grands motifs
-- **Vanité** : crâne, sablier, fleur fanée, bulle de savon — tout rappelle la brièveté de la vie.
-- **Memento mori** : souviens-toi que tu vas mourir.
-- **Theatrum mundi** : le monde est un théâtre, chacun y joue un rôle qu’il n’a pas choisi. Shakespeare, Calderón (*La vie est un songe*), Corneille (*L’Illusion comique*) y reviennent.
+| Le motif | Ce qu'il rappelle | Ses signes |
+| **Vanité** | La brièveté de la vie | Crâne, sablier, fleur fanée, bulle de savon |
+| *Memento mori* | Souviens-toi que tu vas mourir | — |
+| *Theatrum mundi* | Le monde est un théâtre, chacun y joue un rôle qu'il n'a pas choisi | Shakespeare, Calderón (*La vie est un songe*), Corneille (*L'Illusion comique*) |
 
-> L’instabilité baroque n’est pas un goût décoratif : c’est une **réponse** à un monde où plus rien ne tient. Si l’univers est infini et si la Terre bouge, alors les apparences peuvent tromper — et l’art le met en scène.
+> L'instabilité baroque n'est pas un goût décoratif : c'est une **réponse** à un monde où plus rien ne tient. Si l'univers est infini et si la Terre bouge, alors les apparences peuvent tromper — et l'art le met en scène.
 
 ## Baroque et classicisme
-Le **classicisme** français réagit en cherchant l’inverse : mesure, symétrie, clarté, respect des règles, unité. Les deux esthétiques coexistent et se répondent — Versailles est classique, mais ses fêtes sont baroques.
+| L'esthétique | Ce qu'elle cherche |
+| **Baroque** | Mouvement, illusion, excès, instabilité |
+| **Classicisme** | Mesure, symétrie, clarté, règles, unité |
 
-Le chapitre demande de savoir **repérer** les traits baroques dans un tableau, un texte ou une scène, et de les rattacher à l’inquiétude qui les produit.`,
+> Les deux coexistent et se répondent : Versailles est classique, mais ses fêtes sont baroques.
+
+Le chapitre demande de savoir **repérer** les traits baroques dans un tableau, un texte ou une scène, et de les rattacher à l'inquiétude qui les produit.`,
           },
           questions: [
             ['D’où vient le mot « baroque » ?', ['De barroco, la perle irrégulière', 'Du nom d’un architecte', 'D’un mot grec signifiant excès', 'Du latin barbarus'], 0, 'Le mot dit déjà l’irrégularité et l’instabilité.'],
@@ -649,28 +787,50 @@ Le chapitre demande de savoir **repérer** les traits baroques dans un tableau, 
           axe: 'Décrire, figurer, imaginer',
           lecon: {
             titre: 'Rassembler tout le savoir, et le classer',
-            cours: `**Encyclopédie** vient du grec : le « cercle » des connaissances. L’ambition est ancienne — Pline l’Ancien, Isidore de Séville —, mais elle change de nature au XVIIIe siècle.
+            cours: `Encyclopédie vient du grec : le « cercle » des connaissances. L'ambition est ancienne, mais elle change de nature au XVIIIe siècle.
 
-## L’Encyclopédie de Diderot et d’Alembert
-Publiée de 1751 à 1772 : 28 volumes, plus de 70 000 articles, quelque 150 collaborateurs. Elle se veut à la fois **inventaire** et **instrument**.
+## L'Encyclopédie de Diderot et d'Alembert
+| Le chiffre | Sa valeur |
+| Années de publication | **1751 à 1772** |
+| Volumes | 28 |
+| Articles | Plus de 70 000 |
+| Collaborateurs | Environ 150 |
 
-Ses partis pris font d’elle une œuvre de combat :
-- le savoir doit être **utile** et **accessible** — d’où la place considérable donnée aux **arts mécaniques**, aux métiers, aux techniques, longtemps méprisés au profit des arts libéraux, et les onze volumes de **planches** qui les montrent ;
-- la connaissance procède de l’**expérience** et de la **raison**, non de l’autorité ni de la révélation ;
-- l’ordre du savoir ne doit rien à la théologie : l’**arbre des connaissances** le range selon les facultés humaines — mémoire (histoire), raison (philosophie), imagination (poésie).
+## Ses partis pris, qui en font une œuvre de combat
+| Le parti pris | Ce qu'il implique |
+| Le savoir doit être **utile** et **accessible** | Une place considérable aux **arts mécaniques**, aux métiers, aux techniques, et **onze volumes de planches** qui les montrent |
+| La connaissance vient de l'**expérience** et de la **raison** | Ni autorité, ni révélation |
+| L'ordre du savoir ne doit rien à la théologie | L'**arbre des connaissances** le range selon les facultés humaines |
+
+| La faculté | La branche du savoir |
+| **Mémoire** | L'histoire |
+| **Raison** | La philosophie |
+| **Imagination** | La poésie |
 
 ## Une œuvre censurée
-Le privilège est révoqué en 1759 ; l’ouvrage se poursuit dans la semi-clandestinité. Les encyclopédistes déjouent la censure par le **système des renvois** : un article anodin renvoie à un autre qui en ruine le contenu. C’est une stratégie d’écriture, et il faut savoir l’expliquer.
+Le privilège est révoqué en **1759** ; l'ouvrage se poursuit dans la semi-clandestinité.
+
+> Les encyclopédistes déjouent la censure par le **système des renvois** : un article anodin renvoie à un autre qui en ruine le contenu. C'est une stratégie d'écriture, et il faut savoir l'expliquer.
 
 ## Le problème du classement
-Comment ranger le savoir ? Par **matières**, ce qui suppose de connaître d’avance les frontières entre disciplines ? Ou par ordre **alphabétique**, arbitraire mais neutre, et surtout consultable par qui ne sait pas encore ?
+| Le classement | Son avantage | Son inconvénient |
+| Par **matières** | Il montre les liens entre savoirs | Il suppose de connaître d'avance les frontières entre disciplines |
+| Par ordre **alphabétique** | Neutre, et consultable par qui ne sait pas encore | Arbitraire, il émiette |
 
-L’Encyclopédie choisit l’alphabet **et** l’arbre, et compense l’émiettement par les renvois. Le choix n’est jamais innocent : classer, c’est déjà interpréter.
+L'Encyclopédie choisit l'alphabet **et** l'arbre, et compense l'émiettement par les renvois.
 
-> Le rêve encyclopédique se poursuit aujourd’hui sous d’autres formes : bases de données, moteurs de recherche, encyclopédies collaboratives. Les questions n’ont pas changé — qui écrit, selon quelles règles, avec quelle vérification, et qu’est-ce qui reste absent ?
+> Classer, c'est déjà interpréter. Le choix n'est jamais innocent.
 
-## Ce qui est absent
-Toute encyclopédie a des angles morts : ce qu’elle juge indigne d’un article, les savoirs qu’elle ne reconnaît pas comme tels, les régions du monde qu’elle traite à la marge. Les repérer fait partie de la lecture.`,
+## Le rêve encyclopédique aujourd'hui
+Bases de données, moteurs de recherche, encyclopédies collaboratives : les questions n'ont pas changé.
+
+| La question | Ce qu'elle vise |
+| Qui **écrit** ? | La légitimité |
+| Selon quelles **règles** ? | La méthode |
+| Avec quelle **vérification** ? | La fiabilité |
+| Qu'est-ce qui reste **absent** ? | Les angles morts |
+
+> Toute encyclopédie en a : ce qu'elle juge indigne d'un article, les savoirs qu'elle ne reconnaît pas comme tels, les régions du monde qu'elle traite à la marge. Les repérer fait partie de la lecture.`,
           },
           questions: [
             ['Que signifie étymologiquement « encyclopédie » ?', ['Le cercle des connaissances', 'Le livre des sciences', 'La somme des livres', 'L’art de classer'], 0, 'L’ambition est ancienne, mais change de nature au XVIIIe siècle.'],
@@ -688,26 +848,36 @@ Toute encyclopédie a des angles morts : ce qu’elle juge indigne d’un articl
           axe: 'Décrire, figurer, imaginer',
           lecon: {
             titre: 'Représenter l’espace, et choisir un point de vue',
-            cours: `La **perspective linéaire** est une construction géométrique mise au point à Florence au début du XVe siècle par **Brunelleschi**, et théorisée par **Alberti** en 1435.
+            cours: `La perspective linéaire est une construction géométrique mise au point à Florence au début du XVe siècle par Brunelleschi, et théorisée par Alberti en 1435.
 
 ## Le principe
-Le tableau est traité comme une **fenêtre** ouverte sur l’espace. Les lignes parallèles perpendiculaires au plan du tableau **convergent** vers un unique **point de fuite**, situé sur la ligne d’horizon, et la taille des objets décroît proportionnellement à leur éloignement.
+Le tableau est traité comme une **fenêtre** ouverte sur l'espace.
+
+| La règle | Son effet |
+| Les parallèles perpendiculaires au plan du tableau **convergent** | Vers un unique **point de fuite**, sur la ligne d'horizon |
+| La taille décroît avec l'éloignement | Proportionnellement à la distance |
 
 ## Ce qui change avec elle
-- L’espace peint devient **mesurable** et **cohérent** : on peut y calculer les distances.
-- La taille des figures ne dépend plus de leur **importance** — dans l’art médiéval, le Christ était grand parce qu’il était le Christ. Elle dépend désormais de leur **position**. C’est un changement de logique complet.
-- Le tableau suppose un **spectateur unique**, placé à un endroit précis. La perspective **institue** un point de vue, et l’humanisme s’y reconnaît : le monde est organisé depuis le regard d’un homme.
+| Avant | Après |
+| La taille des figures dépend de leur **importance** — le Christ est grand parce qu'il est le Christ | Elle dépend de leur **position** |
+| L'espace est symbolique | L'espace est **mesurable** et cohérent : on peut y calculer les distances |
+| Le regard n'est pas situé | Le tableau suppose un **spectateur unique**, à un endroit précis |
 
-> Panofsky a soutenu que la perspective est une **forme symbolique** : non pas la vision « vraie », mais une convention historique qui traduit une certaine conception du monde. D’autres cultures ont représenté l’espace autrement, sans erreur ni retard.
+> La perspective **institue** un point de vue, et l'humanisme s'y reconnaît : le monde est organisé depuis le regard d'un homme.
+
+> Panofsky a soutenu qu'elle est une **forme symbolique** : non la vision « vraie », mais une convention historique. D'autres cultures ont représenté l'espace autrement, sans erreur ni retard.
 
 ## Les usages du procédé
-- L’**anamorphose** déforme l’image de telle sorte qu’elle ne se recompose que vue d’un point oblique. Le crâne des *Ambassadeurs* de Holbein en est l’exemple canonique : la vanité surgit quand on quitte la place assignée.
-- Le **trompe-l’œil** et les plafonds baroques poussent l’illusion jusqu’à faire disparaître la limite entre l’espace peint et l’espace réel.
+| Le procédé | Ce qu'il fait | Son exemple |
+| L'**anamorphose** | L'image ne se recompose que d'un point oblique | Le crâne des *Ambassadeurs* de Holbein : la vanité surgit quand on quitte la place assignée |
+| Le **trompe-l'œil** | Il fait disparaître la limite entre espace peint et espace réel | Les plafonds baroques |
 
 ## La remise en cause
-À partir de Cézanne, puis du **cubisme**, la perspective unique est abandonnée : plusieurs points de vue coexistent sur la même toile, parce qu’un objet ne se donne jamais d’un seul coup. La photographie, qui produit mécaniquement une image perspective, libère la peinture de cette tâche.
+| Le moment | Ce qui advient |
+| **Cézanne**, puis le **cubisme** | Plusieurs points de vue coexistent sur la même toile : un objet ne se donne jamais d'un seul coup |
+| La **photographie** | Elle produit mécaniquement une image perspective, et libère la peinture de cette tâche |
 
-Ce que le chapitre retient : représenter n’est jamais **enregistrer**. Toute représentation est une **construction**, qui choisit un point de vue et, ce faisant, en exclut d’autres.`,
+> Ce que le chapitre retient : représenter n'est jamais **enregistrer**. Toute représentation est une construction, qui choisit un point de vue et, ce faisant, en exclut d'autres.`,
           },
           questions: [
             ['Qui met au point la perspective linéaire au début du XVe siècle ?', ['Brunelleschi, à Florence', 'Alberti, à Rome', 'Léonard de Vinci, à Milan', 'Giotto, à Assise'], 0, 'Alberti la théorise ensuite dans son traité de 1435.'],
@@ -725,32 +895,34 @@ Ce que le chapitre retient : représenter n’est jamais **enregistrer**. Toute 
           axe: 'Décrire, figurer, imaginer',
           lecon: {
             titre: 'Faculté trompeuse ou condition de la connaissance ?',
-            cours: `L’**imagination** est la faculté de se représenter ce qui n’est pas présent, et de composer des images inédites. Toute la question du chapitre est de savoir si elle **égare** ou si elle **fait connaître**.
+            cours: `L'imagination est la faculté de se représenter ce qui n'est pas présent, et de composer des images inédites. Égare-t-elle, ou fait-elle connaître ?
 
 ## Le procès
-Pour une longue tradition rationaliste, l’imagination est suspecte :
-- **Malebranche** la nomme « la folle du logis » ;
-- **Pascal** en fait « maîtresse d’erreur et de fausseté », d’autant plus dangereuse qu’elle est parfois juste — on ne peut donc pas s’en défier systématiquement ;
-- **Descartes** l’écarte de la méthode : le morceau de cire n’est pas connu par les sens ni par l’imagination, mais par l’entendement seul.
+| L'auteur | Sa formule ou sa thèse |
+| **Malebranche** | « La folle du logis » |
+| **Pascal** | « Maîtresse d'erreur et de fausseté » — d'autant plus dangereuse qu'elle est parfois juste |
+| **Descartes** | Il l'écarte de la méthode : le morceau de cire est connu par l'**entendement** seul |
 
-Le reproche est constant : l’imagination confond ce qu’elle produit avec ce qui est, et elle emporte le jugement par la vivacité de ses images.
+> Le reproche est constant : l'imagination confond ce qu'elle produit avec ce qui est, et elle emporte le jugement par la vivacité de ses images.
 
 ## La réhabilitation
-Le mouvement s’inverse à partir du XVIIIe siècle :
-- **Kant** en fait une faculté **nécessaire** à la connaissance : sans imagination pour synthétiser le divers des sensations, aucune expérience unifiée ne serait possible. Elle n’est plus l’ennemie de l’entendement mais son auxiliaire indispensable ;
-- le **romantisme** en fait la faculté suprême, celle qui atteint ce que la raison ne peut pas dire — Baudelaire la nomme « la reine des facultés » ;
-- **Bachelard** montre que l’imagination est **dynamique** : elle ne recopie pas des images, elle les déforme, et c’est cette déformation qui est créatrice.
+| L'auteur | Ce qu'il en fait |
+| **Kant** | Une faculté **nécessaire** : sans elle pour synthétiser le divers des sensations, aucune expérience unifiée ne serait possible |
+| Le **romantisme**, Baudelaire | « La reine des facultés » : elle atteint ce que la raison ne peut dire |
+| **Bachelard** | Elle est **dynamique** : elle ne recopie pas les images, elle les **déforme**, et c'est là qu'elle crée |
 
 ## Imagination et science
-Le point le plus intéressant, et celui qu’un devoir attend : la science elle-même en dépend.
-- **L’hypothèse** est un acte d’imagination : imaginer ce qui pourrait expliquer, avant de le vérifier.
-- L’**expérience de pensée** — la chute des corps chez Galilée, l’ascenseur d’Einstein — fait avancer la théorie sans instrument.
-- Le **modèle** est une fiction utile : personne n’a vu un atome comme on le dessine.
+Le point le plus intéressant, et celui qu'un devoir attend : la science elle-même en dépend.
 
-> Ce qui distingue la science de la rêverie n’est donc pas l’absence d’imagination, mais la **soumission de l’imaginé à l’épreuve** des faits. Imaginer est le premier temps ; vérifier est le second, et il est obligatoire.
+| Le moment scientifique | Ce que l'imagination y fait |
+| L'**hypothèse** | Imaginer ce qui pourrait expliquer, avant de le vérifier |
+| L'**expérience de pensée** | La chute des corps chez Galilée, l'ascenseur d'Einstein : faire avancer la théorie sans instrument |
+| Le **modèle** | Une fiction utile : personne n'a vu un atome comme on le dessine |
+
+> Ce qui distingue la science de la rêverie n'est donc pas l'absence d'imagination, mais la **soumission de l'imaginé à l'épreuve** des faits. Imaginer est le premier temps ; vérifier est le second, et il est obligatoire.
 
 ## Un usage éthique
-Se représenter la situation d’autrui, ce qu’il éprouve, ce que subirait quelqu’un d’autre à notre place : c’est encore l’imagination qui rend possible l’**empathie** et, avec elle, une bonne part du jugement moral.`,
+Se représenter la situation d'autrui, ce qu'il éprouve, ce que subirait quelqu'un d'autre à notre place : c'est encore l'imagination qui rend possible l'**empathie**, et avec elle une bonne part du jugement moral.`,
           },
           questions: [
             ['Qui appelle l’imagination « la folle du logis » ?', ['Malebranche', 'Pascal', 'Descartes', 'Kant'], 0, 'Pascal, lui, en fait « maîtresse d’erreur et de fausseté ».'],
@@ -770,30 +942,37 @@ Se représenter la situation d’autrui, ce qu’il éprouve, ce que subirait qu
           axe: 'L’homme et l’animal',
           lecon: {
             titre: 'Ce qui fait le propre de l’homme',
-            cours: `Chercher le **propre de l’homme**, c’est chercher ce qui l’en distingue absolument. Le chapitre montre que chaque critère proposé a été contesté — et que ce reflux même est instructif.
+            cours: `Chercher le propre de l'homme, c'est chercher ce qui l'en distingue absolument. Chaque critère proposé a été contesté — et ce reflux même est instructif.
 
 ## Les critères classiques
-- Le **langage**. Aristote : l’homme est l’animal doué de *logos*, seul capable de dire le juste et l’injuste, quand l’animal ne fait qu’exprimer plaisir et douleur. Descartes en fait le critère décisif : les animaux ne composent jamais un discours nouveau pour répondre à une situation nouvelle.
-- La **conscience de soi** et la capacité de dire « je ».
-- La **technique**. Bergson préfère nommer l’homme *homo faber* plutôt que *homo sapiens* : ce qui le caractérise est de fabriquer des outils **à fabriquer des outils**.
-- La **culture** cumulative : chaque génération part de ce que la précédente a laissé.
-- La **conscience de la mort**, et les sépultures qui l’attestent.
-- Le **rire**, chez Rabelais.
+| Le critère | Qui l'avance | Ce qu'il affirme |
+| Le **langage** | **Aristote** | L'homme est l'animal doué de *logos*, seul capable de dire le juste et l'injuste |
+| Le langage, encore | **Descartes** | Les animaux ne composent jamais un discours nouveau pour une situation nouvelle |
+| La **conscience de soi** | — | La capacité de dire « je » |
+| La **technique** | **Bergson** | *Homo faber* plutôt que *sapiens* : il fabrique des outils **à fabriquer des outils** |
+| La **culture cumulative** | — | Chaque génération part de ce que la précédente a laissé |
+| La **conscience de la mort** | — | Les sépultures l'attestent |
+| Le **rire** | **Rabelais** | — |
 
-## Ce que l’éthologie a montré
-Chacun de ces critères a reculé :
-- des **outils** sont fabriqués et transmis par des chimpanzés, des corbeaux, des loutres ;
-- des **cultures locales** existent, avec des techniques propres à un groupe et transmises ;
-- des **langages** structurés ont été observés, et certains grands singes manient des symboles ;
-- l’**empathie**, la coopération, le sens de l’équité et le deuil sont attestés chez plusieurs espèces.
+## Ce que l'éthologie a montré
+| Le critère | Ce qu'on a observé ailleurs |
+| Les **outils** | Fabriqués et transmis par des chimpanzés, des corbeaux, des loutres |
+| Les **cultures locales** | Des techniques propres à un groupe et transmises |
+| Le **langage** | Des systèmes structurés ; certains grands singes manient des symboles |
+| L'**empathie** | Coopération, sens de l'équité, formes de deuil chez plusieurs espèces |
 
-> Le programme n’en conclut pas qu’il n’y a pas de différence, mais que la différence est plus vraisemblablement de **degré** que de nature — et que chaque critère avancé disait autant du regard porté que de l’objet regardé.
+> Le programme n'en conclut pas qu'il n'y a pas de différence, mais qu'elle est plus vraisemblablement de **degré** que de nature — et que chaque critère avancé disait autant du regard porté que de l'objet regardé.
 
-## Une longue histoire
-La classification a elle-même déplacé la question : Linné range l’homme parmi les primates dès le XVIIIe siècle ; Darwin l’inscrit dans une continuité évolutive. La paléoanthropologie montre que plusieurs espèces humaines ont coexisté, et que *Homo sapiens* est resté longtemps l’une d’elles.
+## Une longue histoire du classement
+| L'étape | Ce qu'elle établit |
+| **Linné**, XVIIIe siècle | Il range l'homme parmi les primates |
+| **Darwin** | Il l'inscrit dans une continuité évolutive |
+| La **paléoanthropologie** | Plusieurs espèces humaines ont coexisté ; *Homo sapiens* est resté longtemps l'une d'elles |
 
 ## Ce qui reste
-Peut-être moins un critère unique qu’un **faisceau** : le langage articulé et sa syntaxe, la culture cumulative sur des milliers de générations, la capacité de se représenter des mondes possibles — et celle de se poser la question elle-même, qu’aucun autre animal ne semble se poser.`,
+Peut-être moins un critère unique qu'un **faisceau** : le langage articulé et sa syntaxe, la culture cumulative sur des milliers de générations, la capacité de se représenter des mondes possibles.
+
+> Et celle de se poser la question elle-même, qu'aucun autre animal ne semble se poser.`,
           },
           questions: [
             ['Selon Aristote, qu’est-ce qui distingue l’homme de l’animal ?', ['Le logos, qui permet de dire le juste et l’injuste', 'La station debout', 'La force physique', 'La longévité'], 0, 'L’animal exprime plaisir et douleur, il ne délibère pas.'],
@@ -811,25 +990,33 @@ Peut-être moins un critère unique qu’un **faisceau** : le langage articulé 
           axe: 'L’homme et l’animal',
           lecon: {
             titre: 'De la machine au sujet sensible',
-            cours: `Le mot « animal » recouvre des réalités sans commune mesure : l’éponge et le chimpanzé, la fourmi et l’éléphant. Le penser au singulier est déjà une décision.
+            cours: `Le mot « animal » recouvre des réalités sans commune mesure : l'éponge et le chimpanzé, la fourmi et l'éléphant. Le penser au singulier est déjà une décision.
 
-## L’animal-machine
-**Descartes** soutient que les animaux sont des **automates** : ils n’ont ni pensée ni âme, et leurs cris ne sont pas plus des plaintes que le grincement d’un ressort. La conséquence pratique est immédiate — la vivisection ne pose alors aucun problème moral.
+## L'animal-machine
+**Descartes** soutient que les animaux sont des **automates** : ni pensée ni âme, et leurs cris ne sont pas plus des plaintes que le grincement d'un ressort.
 
-Sa thèse tient à sa métaphysique : la pensée est une substance à part, dont le langage est le signe. Faute de langage, pas de pensée.
+| Le fondement de la thèse | Sa conséquence pratique |
+| La pensée est une substance à part, dont le **langage** est le signe ; faute de langage, pas de pensée | La vivisection ne pose alors aucun problème moral |
 
 ## Les objections
-- **Montaigne**, bien avant : « quand je me joue à ma chatte, qui sait si elle ne se joue pas plus de moi que moi d’elle ? » Il renverse la position de surplomb.
-- **La Fontaine** consacre un *Discours à Madame de la Sablière* à réfuter l’animal-machine.
-- **Bentham** déplace radicalement la question, et c’est la citation clé du chapitre : la question n’est pas « peuvent-ils raisonner ? » ni « peuvent-ils parler ? » mais **« peuvent-ils souffrir ? »**. Le critère moral cesse d’être l’intelligence pour devenir la **sensibilité**.
+| L'auteur | Son objection |
+| **Montaigne** | « Quand je me joue à ma chatte, qui sait si elle ne se joue pas plus de moi que moi d'elle ? » — il renverse la position de surplomb |
+| **La Fontaine** | Tout un *Discours à Madame de la Sablière* pour réfuter l'animal-machine |
+| **Bentham** | La question n'est pas « peuvent-ils raisonner ? » ni « peuvent-ils parler ? » mais **« peuvent-ils souffrir ? »** |
 
-## L’apport de l’éthologie
-Le comportement animal a cessé d’être lu par analogie avec l’homme ou avec la machine. On sait aujourd’hui documenter, selon les espèces : la douleur, l’anticipation, la mémoire à long terme, la reconnaissance de soi dans un miroir, la coopération, la transmission culturelle, des formes de deuil.
+> Avec Bentham, le critère moral cesse d'être l'intelligence pour devenir la **sensibilité**. C'est la citation clé du chapitre.
 
-> Von Uexküll a introduit une idée décisive : chaque espèce vit dans son propre **Umwelt**, un monde perçu structuré par ses organes et ses besoins. La tique n’habite pas le même monde que nous — non parce qu’il lui manque quelque chose, mais parce que son monde est autrement fait.
+## L'apport de l'éthologie
+Ce que l'on sait aujourd'hui documenter, selon les espèces : la douleur, l'anticipation, la mémoire à long terme, la reconnaissance de soi dans un miroir, la coopération, la transmission culturelle, des formes de deuil.
+
+> Von Uexküll a introduit une idée décisive : chaque espèce vit dans son propre **Umwelt**, un monde perçu structuré par ses organes et ses besoins. La tique n'habite pas le même monde que nous — non parce qu'il lui manque quelque chose, mais parce que son monde est autrement fait.
 
 ## Le statut juridique
-Le droit français a longtemps rangé l’animal parmi les **biens meubles**. Depuis 2015, le code civil le reconnaît comme un **être vivant doué de sensibilité**, tout en le soumettant au régime des biens. Ce compromis dit exactement où en est la question : la sensibilité est reconnue, les conséquences ne sont pas tirées.`,
+| La période | Le statut de l'animal en droit français |
+| Longtemps | Un **bien meuble** |
+| Depuis **2015** | Un **être vivant doué de sensibilité**, tout en restant soumis au régime des biens |
+
+> Ce compromis dit exactement où en est la question : la sensibilité est reconnue, les conséquences ne sont pas tirées.`,
           },
           questions: [
             ['Que soutient Descartes avec la thèse de l’animal-machine ?', ['Les animaux sont des automates sans pensée ni sensibilité au sens propre', 'Les animaux pensent comme les hommes', 'Les animaux ont une âme immortelle', 'Les animaux communiquent par le langage'], 0, 'La vivisection n’y pose alors aucun problème moral.'],
@@ -847,23 +1034,37 @@ Le droit français a longtemps rangé l’animal parmi les **biens meubles**. De
           axe: 'L’homme et l’animal',
           lecon: {
             titre: 'Quels droits, quelles obligations ?',
-            cours: `Une fois reconnue la sensibilité animale, la question cesse d’être seulement métaphysique : elle devient **politique**, c’est-à-dire une question de règles communes et de justice.
+            cours: `Une fois reconnue la sensibilité animale, la question cesse d'être seulement métaphysique : elle devient politique, c'est-à-dire affaire de règles communes et de justice.
 
 ## Les positions en présence
-- Le **welfarisme** ne conteste pas l’usage des animaux mais exige de **réduire leur souffrance** : conditions d’élevage, transport, abattage, expérimentation encadrée. C’est la position dominante dans le droit européen.
-- L’**utilitarisme** de Peter Singer étend le calcul du bien-être à tous les êtres sensibles. Écarter un intérêt au motif qu’il est celui d’un animal serait un **spécisme**, analogue dans sa forme au racisme ou au sexisme.
-- L’**abolitionnisme** de Tom Regan raisonne en termes de **droits** : un animal capable de préférences est un « sujet-d’une-vie » et ne peut pas être traité comme un moyen. Il ne s’agit plus d’améliorer les conditions d’usage mais d’y mettre fin.
-- Les positions **contractualistes** objectent que les droits supposent des obligations réciproques, impossibles pour un animal — objection à laquelle on répond en invoquant le cas des jeunes enfants et des personnes très vulnérables, titulaires de droits sans devoirs correspondants.
+| La position | Son critère | Ce qu'elle demande |
+| **Welfarisme** | La souffrance | Réduire la souffrance sans contester l'usage : élevage, transport, abattage, expérimentation encadrés. C'est la position dominante du droit européen |
+| **Utilitarisme** (Peter Singer) | L'intérêt de tout être sensible | Écarter un intérêt au motif qu'il est animal serait un **spécisme**, analogue dans sa forme au racisme |
+| **Abolitionnisme** (Tom Regan) | Le **droit** | Un animal capable de préférences est un « sujet-d'une-vie » : il ne peut être traité comme un moyen. Non plus améliorer l'usage, mais y mettre fin |
+| **Contractualisme** | La réciprocité | Les droits supposent des obligations réciproques, impossibles pour un animal |
 
-## L’état du droit
-Le droit français punit les mauvais traitements et les actes de cruauté, encadre l’expérimentation par la règle des trois R (**remplacer**, **réduire**, **raffiner**), et impose des normes d’élevage et d’abattage. Il maintient en même temps l’élevage, la chasse, la pêche et la corrida sous conditions. La cohérence d’ensemble est régulièrement contestée devant les tribunaux et devant l’opinion.
+> À la dernière objection, on répond par le cas des jeunes enfants et des personnes très vulnérables : titulaires de droits sans devoirs correspondants.
 
-## Les enjeux qui s’ajoutent
-- **Écologiques** : l’élevage intensif pèse lourdement sur les émissions, l’usage des terres et de l’eau ; l’effondrement de la biodiversité déplace la question de l’individu vers l’espèce.
-- **Sanitaires** : la promiscuité de l’élevage industriel favorise les zoonoses et la résistance aux antibiotiques.
-- **Sociaux** : toute transformation des filières engage des emplois, des territoires et des habitudes alimentaires.
+## L'état du droit
+| Ce que le droit français interdit ou encadre | Ce qu'il maintient |
+| Mauvais traitements et actes de cruauté | L'élevage |
+| L'expérimentation, par la règle des trois R — **remplacer**, **réduire**, **raffiner** | La chasse et la pêche |
+| Des normes d'élevage et d'abattage | La corrida, sous conditions |
 
-> Ce que le chapitre attend n’est pas une opinion tranchée mais une **argumentation** : identifier la position défendue par un texte, le critère moral qu’elle retient — sensibilité, intérêt, droit, réciprocité —, ce qu’elle implique concrètement, et les objections qu’elle doit affronter.`,
+> La cohérence d'ensemble est régulièrement contestée devant les tribunaux et devant l'opinion.
+
+## Les enjeux qui s'ajoutent
+| L'enjeu | Son contenu |
+| **Écologique** | L'élevage intensif pèse sur les émissions, les terres et l'eau ; l'effondrement de la biodiversité déplace la question de l'individu vers l'**espèce** |
+| **Sanitaire** | La promiscuité de l'élevage industriel favorise les zoonoses et la résistance aux antibiotiques |
+| **Social** | Toute transformation des filières engage des emplois, des territoires, des habitudes alimentaires |
+
+## Ce que le chapitre attend
+Non pas une opinion tranchée, mais une **argumentation** :
+1. Identifier la position défendue par le texte.
+2. Nommer le **critère moral** qu'elle retient — sensibilité, intérêt, droit, réciprocité.
+3. Dire ce qu'elle implique **concrètement**.
+4. Exposer les objections qu'elle doit affronter.`,
           },
           questions: [
             ['Que défend la position welfariste ?', ['Réduire la souffrance animale sans contester l’usage des animaux', 'Abolir tout usage des animaux', 'Accorder des droits identiques aux humains et aux animaux', 'Supprimer toute réglementation'], 0, 'C’est la position dominante dans le droit européen.'],

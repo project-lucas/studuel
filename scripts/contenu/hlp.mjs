@@ -14,19 +14,35 @@ export default {
           titre: 'Les pouvoirs de la parole',
           lecon: {
             titre: 'Convaincre, persuader, manipuler',
-            cours: `La parole n'est pas seulement un moyen d'exprimer une pensée : elle agit sur autrui.
+            cours: `La parole n’est pas seulement un moyen d’exprimer une pensée : elle **agit** sur autrui. C’est cette efficacité qui fait sa puissance — et son procès.
 
 ## Les trois moyens de la rhétorique
-Aristote distingue le **logos** (l'argument, la raison), l'**ethos** (l'image que l'orateur donne de lui) et le **pathos** (l'émotion suscitée). Un discours efficace mobilise les trois — et c'est précisément pourquoi il peut être suspect.
+Aristote en distingue trois, et un discours efficace les mobilise tous.
+
+| Moyen | Ce qu’il vise | Comment il agit |
+| **Logos** | La raison | L’argument, la preuve, l’enchaînement |
+| **Ethos** | La confiance | L’image que l’orateur donne de lui |
+| **Pathos** | L’émotion | Ce que l’auditoire est amené à ressentir |
+
+> C’est précisément parce qu’un discours efficace mobilise les trois qu’il peut être **suspect** : rien ne distingue formellement celui qui a raison de celui qui sait convaincre.
 
 ## Convaincre ou persuader
-**Convaincre** s'adresse à la raison par la démonstration ; **persuader** s'adresse à la sensibilité. Pascal soulignait que l'homme se laisse mener autant par l'imagination et l'habitude que par la preuve.
+| | Convaincre | Persuader |
+| À quoi cela s’adresse | À la raison | À la sensibilité |
+| Par quels moyens | La démonstration | L’image, le rythme, l’exemple frappant |
+| Le risque | Être juste et inaudible | Être efficace et faux |
+
+**Pascal** soulignait que l’homme se laisse mener autant par l’imagination et l’habitude que par la preuve — le constat n’est pas un éloge de la manipulation, c’est une description.
 
 ## La méfiance philosophique
-Platon oppose le **philosophe**, qui cherche la vérité, au **sophiste**, qui enseigne à avoir raison. Dans le *Gorgias*, la rhétorique est comparée à la cuisine : elle flatte au lieu de soigner. La question traverse toute l'histoire : une parole efficace est-elle une parole vraie ?
+| | Le philosophe | Le sophiste |
+| Ce qu’il cherche | La vérité | Avoir raison |
+| Ce qu’il enseigne | À examiner | À l’emporter |
 
-## L'éloquence en actes
-Discours politiques, plaidoiries, sermons, tribunes, publicité, réseaux sociaux : chaque époque a ses formes. Analyser un discours, c'est repérer sa structure, ses figures (métaphore, anaphore, gradation, question rhétorique) et l'effet visé.`,
+Dans le *Gorgias*, **Platon** compare la rhétorique à la cuisine : elle **flatte** au lieu de soigner. La question traverse toute l’histoire de la philosophie — une parole efficace est-elle une parole vraie ?
+
+## L’éloquence en actes
+Discours politiques, plaidoiries, sermons, tribunes, publicité, réseaux sociaux : chaque époque a ses formes. Analyser un discours, c’est repérer sa **structure**, ses **figures** (métaphore, anaphore, gradation, question rhétorique) et l’**effet visé** — les trois ensemble, jamais l’une sans les autres.`,
           },
           questions: [
             ['Que désigne l’ethos dans la rhétorique aristotélicienne ?', ['L’image que l’orateur donne de lui-même', 'L’argument rationnel', 'L’émotion du public', 'Le style du discours'], 0, 'Logos, ethos, pathos forment les trois leviers.'],
@@ -43,19 +59,30 @@ Discours politiques, plaidoiries, sermons, tribunes, publicité, réseaux sociau
           titre: 'Les représentations du monde',
           lecon: {
             titre: 'Découvrir, décrire, inventer le monde',
-            cours: `À partir de la Renaissance, le monde cesse d'être un livre déjà écrit : il devient un objet à explorer.
+            cours: `À partir de la Renaissance, le monde cesse d’être un livre déjà écrit : il devient un objet à **explorer**. Quatre gestes marquent ce basculement.
 
-## La découverte et le choc de l'autre
-Les grandes découvertes confrontent l'Europe à des sociétés inconnues. **Montaigne**, dans « Des cannibales » (*Essais*, 1580), retourne le regard : « chacun appelle barbarie ce qui n'est pas de son usage ». C'est l'acte de naissance du **relativisme culturel**.
+## La découverte et le choc de l’autre
+Les grandes découvertes confrontent l’Europe à des sociétés inconnues. **Montaigne**, dans « Des cannibales » (*Essais*, 1580), retourne le regard : chacun appelle barbarie ce qui n’est pas de son usage.
+
+> C’est l’acte de naissance du **relativisme culturel** : non pas « tout se vaut », mais « mon évidence est une coutume comme une autre ». La nuance est tout le sujet.
 
 ## La science et le regard neuf
-Copernic, Galilée, Descartes : le monde devient mesurable. La nature n'est plus un texte symbolique à déchiffrer mais un ensemble de lois. Descartes veut rendre l'homme « comme maître et possesseur de la nature ».
+| Savant | Ce qu’il déplace |
+| **Copernic** | La Terre n’est plus au centre |
+| **Galilée** | L’observation prime sur l’autorité des textes |
+| **Descartes** | La nature devient mesurable, réductible à des lois |
 
-## L'utopie
-Thomas More invente le mot en 1516 : *ou-topos*, le lieu de nulle part. L'utopie décrit une société parfaite pour mieux critiquer la sienne. La **dystopie** (Orwell, Huxley) en est le versant sombre au XXe siècle.
+La nature cesse d’être un texte symbolique à déchiffrer. Descartes veut rendre l’homme « comme maître et possesseur de la nature » — formule que le XXe siècle relira avec inquiétude.
+
+## L’utopie
+**Thomas More** invente le mot en 1516 : *ou-topos*, le lieu de nulle part.
+
+| Genre | Ce qu’il décrit | Ce qu’il vise |
+| **Utopie** | Une société parfaite, ailleurs | Critiquer la sienne par contraste |
+| **Dystopie** | Une société parfaite qui a tourné au cauchemar | Avertir : Orwell, Huxley |
 
 ## Le regard sur soi par le détour
-Montesquieu (*Lettres persanes*, 1721), Voltaire, Diderot utilisent le regard étranger pour dénaturaliser les évidences françaises. Décrire le monde, c'est toujours aussi se décrire.`,
+**Montesquieu** (*Lettres persanes*, 1721), **Voltaire**, **Diderot** utilisent le regard étranger pour **dénaturaliser** les évidences françaises : un Persan à Paris rend visible ce qu’un Parisien ne voit plus. Décrire le monde, c’est toujours aussi se décrire.`,
           },
           questions: [
             ['Qui écrit « chacun appelle barbarie ce qui n’est pas de son usage » ?', ['Montaigne', 'Montesquieu', 'Voltaire', 'Rousseau'], 0, 'Dans le chapitre « Des cannibales » des *Essais*.'],
@@ -72,19 +99,35 @@ Montesquieu (*Lettres persanes*, 1721), Voltaire, Diderot utilisent le regard é
           titre: 'Lire, analyser, écrire',
           lecon: {
             titre: 'Les deux exercices de la spécialité',
-            cours: `L'épreuve de HLP repose sur deux exercices complémentaires, à ne surtout pas confondre.
+            cours: `L’épreuve repose sur deux exercices complémentaires, à ne surtout pas confondre : l’un part du **texte**, l’autre part d’une **question**.
 
-## L'interprétation littéraire
-Elle part **du texte**. On repère la situation d'énonciation, le mouvement du texte, les procédés (lexique, syntaxe, images, rythme) et on montre comment la forme **produit** le sens. Une interprétation ne raconte pas le texte : elle explique ce qu'il fait au lecteur, et par quels moyens.
+## Les deux exercices
+| | Interprétation littéraire | Essai philosophique |
+| D’où l’on part | Du texte | D’une question |
+| Ce qu’on cherche | Comment la forme **produit** le sens | Une réponse argumentée qui tient l’objection |
+| Ce qu’on mobilise | Lexique, syntaxe, images, rythme | Exemples précis et références |
+| Le contresens à éviter | Raconter le texte | Donner son opinion |
 
-## L'essai philosophique
-Il part **d'une question**. On problématise (pourquoi la réponse évidente ne suffit-elle pas ?), on argumente en plusieurs étapes, on convoque des exemples précis et des références. Un essai n'est pas une opinion : c'est un raisonnement qui accepte l'objection.
+## L’interprétation littéraire
+On repère la situation d’énonciation, le **mouvement** du texte, les procédés — puis on montre ce que le texte **fait au lecteur**, et par quels moyens. Une interprétation qui pourrait s’appliquer à n’importe quel autre texte n’est pas une interprétation.
+
+## L’essai philosophique
+1. **Problématiser** : pourquoi la réponse évidente ne suffit-elle pas ?
+2. **Argumenter** en étapes, chacune avec sa thèse.
+3. **Convoquer** des exemples précis et des références qui travaillent.
+4. **Accepter l’objection** : c’est elle qui fait avancer le devoir.
 
 ## Le geste commun
-Les deux exercices exigent la même chose : ne jamais rester au niveau de l'affirmation générale. « L'auteur critique la société » ne vaut rien sans le mot du texte qui le montre.
+> Les deux exercices exigent la même chose : ne jamais rester au niveau de l’affirmation générale. « L’auteur critique la société » ne vaut rien sans le **mot du texte** qui le montre.
 
 ## La méthode de travail
-Lire crayon en main, noter les mots qui résistent, formuler une question plutôt qu'un thème, construire un plan qui **progresse** au lieu de juxtaposer. Une bonne copie se reconnaît à ce que la troisième partie ne pouvait pas être écrite avant la première.`,
+| Le geste | Ce qu’il évite |
+| Lire crayon en main | Relire trois fois sans rien retenir |
+| Noter les mots qui **résistent** | Passer à côté de ce qui fait l’intérêt du texte |
+| Formuler une **question**, pas un thème | Un plan qui juxtapose au lieu de progresser |
+| Construire un plan qui progresse | Une troisième partie interchangeable avec la première |
+
+Une bonne copie se reconnaît à ce que sa troisième partie **ne pouvait pas** être écrite avant la première.`,
           },
           questions: [
             ['L’interprétation littéraire part…', ['Du texte lui-même', 'D’une question générale', 'D’une opinion personnelle', 'D’une biographie'], 0, 'C’est l’exercice ancré dans les procédés du texte.'],
@@ -106,19 +149,33 @@ Lire crayon en main, noter les mots qui résistent, formuler une question plutô
           titre: 'La recherche de soi',
           lecon: {
             titre: 'Éducation, sensibilité, métamorphoses du moi',
-            cours: `Le moi n'est pas un donné : il se forme, se raconte et se transforme.
+            cours: `Le moi n’est pas un donné : il se forme, se raconte et se transforme. Le programme aborde ces trois moments — et une objection qui les traverse tous.
 
-## L'éducation et la formation
-Rousseau (*Émile*, 1762) veut une éducation qui suive la nature de l'enfant plutôt que les conventions. Le roman d'apprentissage met en scène cette formation : le héros se construit en se heurtant au monde.
+## L’éducation et la formation
+**Rousseau** (*Émile*, 1762) veut une éducation qui suive la nature de l’enfant plutôt que les conventions sociales. Le **roman d’apprentissage** met cette formation en récit : le héros ne se découvre pas, il se construit en se heurtant au monde.
 
 ## La connaissance de soi
-« Connais-toi toi-même » : la maxime delphique reprise par Socrate. Mais l'introspection est-elle fiable ? **Freud** montre que le moi n'est « pas maître dans sa propre maison » : l'inconscient agit en nous sans nous.
+| Position | Ce qu’elle affirme |
+| « Connais-toi toi-même » | La maxime delphique, reprise par Socrate : le savoir commence par soi |
+| L’introspection classique | La conscience s’atteint elle-même directement |
+| **Freud** | Le moi n’est « pas maître dans sa propre maison » : l’inconscient agit sans nous |
 
-## L'écriture de soi
-Les *Confessions* de saint Augustin, puis celles de **Rousseau**, inaugurent l'autobiographie moderne. Se raconter, c'est aussi se construire : le récit sélectionne, ordonne, justifie. D'où la question — l'autobiographie dit-elle le moi ou le fabrique-t-elle ?
+> L’objection freudienne ne détruit pas la connaissance de soi : elle en déplace la méthode. Si le moi ne se voit pas en se regardant, il faut passer par ce qu’il produit — actes manqués, rêves, récits.
+
+## L’écriture de soi
+| Œuvre | Ce qu’elle inaugure |
+| Les *Confessions* de saint **Augustin** | L’aveu comme chemin vers la vérité |
+| Les *Confessions* de **Rousseau** | L’autobiographie moderne, sans instance divine |
+| Le journal, le mémoire | Le moi écrit au présent, sans recul |
+
+Se raconter, c’est aussi se construire : le récit **sélectionne**, ordonne, justifie. D’où la question du chapitre — l’autobiographie dit-elle le moi, ou le fabrique-t-elle ?
 
 ## Le moi et les autres
-On ne se découvre pas seul. Hegel montre que la conscience de soi passe par la **reconnaissance** d'autrui ; Sartre, que le regard de l'autre me fige en objet. Le moi est un rapport, pas une substance.`,
+| Penseur | Ce que l’autre fait au moi |
+| **Hegel** | La conscience de soi passe par la **reconnaissance** d’autrui |
+| **Sartre** | Le regard de l’autre me fige en objet : « l’enfer, c’est les autres » |
+
+Dans les deux cas, le moi est un **rapport**, jamais une substance : il n’existe pas avant la relation qui le constitue.`,
           },
           questions: [
             ['Qui écrit *Émile ou De l’éducation* ?', ['Rousseau', 'Montaigne', 'Voltaire', 'Diderot'], 0, 'Publié en 1762.'],
@@ -135,19 +192,35 @@ On ne se découvre pas seul. Hegel montre que la conscience de soi passe par la 
           titre: 'L’Humanité en question',
           lecon: {
             titre: 'Nature, technique et limites de l’humain',
-            cours: `Ce que nous appelons « l'humain » a une histoire — et peut-être une fin.
+            cours: `Ce que nous appelons « l’humain » a une histoire — et peut-être une fin. Le chapitre suit cette histoire en quatre stations.
 
 ## Nature et culture
-Y a-t-il une nature humaine ? Lévi-Strauss propose un critère : est **naturel** ce qui est universel, **culturel** ce qui varie selon les sociétés. La prohibition de l'inceste, à la fois universelle et réglée, brouille précisément la frontière.
+**Lévi-Strauss** propose un critère de partage, simple et opératoire :
 
-## L'humanisme et ses procès
-L'humanisme place l'homme au centre. Le XXe siècle en fait le procès : la Shoah montre que la culture et la technique n'empêchent pas la barbarie. **Levi**, **Arendt** interrogent la « banalité du mal » — le crime commis par des hommes ordinaires, dans un système obéissant.
+| | Naturel | Culturel |
+| Le critère | Ce qui est **universel** | Ce qui **varie** selon les sociétés |
+| Exemple | Marcher, dormir | La table, le vêtement, la parenté |
+
+> La **prohibition de l’inceste** brouille précisément la frontière : elle est universelle comme la nature, et réglée comme la culture. C’est le cas qui oblige à penser, pas celui qui confirme.
+
+## L’humanisme et ses procès
+L’humanisme place l’homme au centre et fait de la culture une promesse. Le XXe siècle en fait le procès : la **Shoah** montre que ni la culture ni la technique n’empêchent la barbarie.
+
+| Auteur | Ce qu’il établit |
+| **Primo Levi** | Le témoignage de ce que le camp fait à l’humain |
+| **Hannah Arendt** | La « banalité du mal » : le crime commis par des hommes ordinaires, dans un système obéissant |
 
 ## La technique
-De Prométhée aux biotechnologies, la technique augmente le pouvoir de l'homme sur lui-même. **Hans Jonas** formule un principe responsabilité : agir de telle sorte que les effets de l'action soient compatibles avec la permanence d'une vie humaine authentique.
+De Prométhée aux biotechnologies, la technique augmente le pouvoir de l’homme **sur lui-même**. **Hans Jonas** en tire un *principe responsabilité* : agir de telle sorte que les effets de l’action soient compatibles avec la permanence d’une vie humaine authentique sur terre.
 
 ## Le transhumanisme
-Augmenter l'humain (génétique, prothèses, intelligence artificielle) pose une question que la philosophie n'esquive plus : ce qui définit l'humain est-il sa perfectibilité ou sa **finitude** ?`,
+Génétique, prothèses, intelligence artificielle : augmenter l’humain n’est plus une hypothèse d’école.
+
+| La question | Les deux réponses en présence |
+| Qu’est-ce qui définit l’humain ? | Sa **perfectibilité** — il est l’être qui se transforme |
+| | Sa **finitude** — il est l’être qui sait qu’il meurt |
+
+Tout le débat contemporain tient dans cet écart : augmenter l’humain, est-ce l’accomplir ou le supprimer ?`,
           },
           questions: [
             ['Quel critère Lévi-Strauss propose-t-il pour distinguer nature et culture ?', ['L’universel relève de la nature, le variable de la culture', 'L’ancien contre le moderne', 'Le corps contre l’esprit', 'L’individu contre le groupe'], 0, 'La prohibition de l’inceste met ce critère en difficulté.'],
@@ -164,19 +237,38 @@ Augmenter l'humain (génétique, prothèses, intelligence artificielle) pose une
           titre: 'Méthode de l’épreuve',
           lecon: {
             titre: 'Réussir interprétation et essai au bac',
-            cours: `L'épreuve de terminale dure 4 heures et comporte deux exercices notés sur 10 chacun, à partir d'un même texte.
+            cours: `L’épreuve dure **4 heures** et comporte deux exercices notés sur 10 chacun, à partir d’un même texte. Les deux ne demandent pas le même geste.
 
-## L'interprétation littéraire
-Une question porte sur le texte. On répond en **construisant** : une thèse claire, deux ou trois mouvements, des citations courtes et exactes, et à chaque fois l'articulation entre le procédé relevé et l'effet produit.
+## Les deux exercices
+| | Interprétation littéraire | Essai philosophique |
+| Ce qui est donné | Une question sur le texte | Une question liée au thème, plus large |
+| Ce qu’on attend | Une analyse du texte lui-même | Une argumentation qui dépasse le texte |
+| Le matériau | Citations courtes et exactes | Exemples littéraires, historiques, scientifiques |
+| Le risque | Paraphraser | Réciter un cours |
 
-## L'essai philosophique
-Une question, liée au thème du texte mais plus large. Structure attendue : problématisation, développement en parties argumentées, exemples choisis (littéraires, historiques, scientifiques, personnels s'ils sont précis), conclusion qui répond vraiment.
+## L’interprétation littéraire
+On répond en **construisant**, jamais en suivant le texte ligne à ligne : une thèse claire, deux ou trois mouvements, et à chaque fois l’articulation entre le **procédé relevé** et l’**effet produit**. Un procédé nommé sans effet analysé ne rapporte rien.
+
+## L’essai philosophique
+1. **Problématiser** : montrer que la question n’a pas de réponse évidente.
+2. **Développer** en parties argumentées, chacune avec sa thèse.
+3. **Illustrer** par des exemples choisis — personnels s’ils sont précis, jamais vagues.
+4. **Conclure** en répondant vraiment à la question posée.
 
 ## Les erreurs qui coûtent le plus
-Paraphraser au lieu d'analyser. Réciter un cours sans répondre à la question posée. Accumuler des références sans les faire travailler. Annoncer un plan qu'on ne suit pas.
+| L’erreur | Pourquoi elle coûte |
+| Paraphraser | On raconte le texte au lieu de l’expliquer |
+| Réciter un cours | On répond à une autre question que celle posée |
+| Accumuler des références | Elles ne travaillent pas, elles décorent |
+| Annoncer un plan qu’on ne suit pas | Le correcteur perd le fil et sanctionne |
 
 ## La gestion du temps
-Environ 2 heures par exercice, dont 20 minutes de préparation à chaque fois. Relire 10 minutes à la fin : les fautes de syntaxe et les citations approximatives pèsent lourd sur une copie qui, sur le fond, se tenait.`,
+| Moment | Durée | Ce qu’on y fait |
+| Exercice 1 | 2 h | Dont 20 min de préparation au brouillon |
+| Exercice 2 | 1 h 50 | Dont 20 min de préparation |
+| Relecture | 10 min | Syntaxe et exactitude des citations |
+
+> Les fautes de syntaxe et les citations approximatives pèsent lourd sur une copie qui, sur le fond, se tenait. Les dix dernières minutes rapportent plus que les dix premières.`,
           },
           questions: [
             ['Combien de temps dure l’épreuve de HLP en terminale ?', ['4 heures', '2 heures', '3 heures', '5 heures'], 0, 'Deux exercices notés sur 10 chacun.'],

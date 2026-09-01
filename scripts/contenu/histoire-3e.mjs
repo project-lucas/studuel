@@ -184,27 +184,43 @@ L'UPDATE est idempotent : rejoué, il repose la même valeur.`,
           axe: 'L’Europe, un théâtre majeur des guerres totales (1914-1945)',
           lecon: {
             titre: '1914-1918 : quand la guerre engloutit les sociétés',
-            cours: `La Première Guerre mondiale (**28 juillet 1914 – 11 novembre 1918**) oppose la **Triple-Entente** (France, Royaume-Uni, Russie, rejoints par l’Italie en 1915 et les États-Unis en 1917) aux **Empires centraux** (Allemagne, Autriche-Hongrie, Empire ottoman). Elle inaugure un type de conflit nouveau : la **guerre totale**.
+            cours: `La Première Guerre mondiale inaugure un type de conflit nouveau : la guerre totale.
+
+## Les deux camps
+| Le camp | Ses membres |
+| La **Triple-Entente** | France, Royaume-Uni, Russie ; l'Italie en 1915, les États-Unis en 1917 |
+| Les **Empires centraux** | Allemagne, Autriche-Hongrie, Empire ottoman |
+
+Dates : **28 juillet 1914 – 11 novembre 1918**.
 
 ## Trois phases
-- **1914 : la guerre de mouvement.** L’attentat de Sarajevo (28 juin) déclenche le jeu des alliances. Les armées avancent, puis se bloquent après la bataille de la Marne (septembre).
-- **1915-1917 : la guerre de position.** Le front se fige sur 700 km de **tranchées**. **Verdun** (février-décembre 1916) et la **Somme** (1916) coûtent des centaines de milliers de vies pour quelques kilomètres.
-- **1917-1918 : le tournant.** La Russie sort du conflit après la révolution bolchevique ; les **États-Unis** entrent en guerre en avril 1917. La guerre de mouvement reprend et l’Allemagne signe l’armistice le 11 novembre 1918.
+| La phase | Ses dates | Ce qui s'y passe |
+| La guerre de **mouvement** | 1914 | L'attentat de Sarajevo (28 juin) déclenche les alliances ; le front se bloque après la **Marne** |
+| La guerre de **position** | 1915-1917 | 700 km de **tranchées** ; **Verdun** et la **Somme** en 1916 |
+| Le **tournant** | 1917-1918 | La Russie sort du conflit ; les **États-Unis** entrent en avril 1917 ; armistice le 11 novembre |
 
-## Qu’est-ce qu’une guerre totale ?
-C’est une guerre qui mobilise **toutes** les ressources d’un pays :
-- **militaires** : plus de 70 millions d’hommes mobilisés, conscription générale ;
-- **économiques** : usines converties à l’armement, femmes à l’usine, emprunts de guerre ;
-- **scientifiques** : gaz de combat, chars, aviation, sous-marins ;
-- **morales** : censure, **propagande**, « bourrage de crâne ».
+## Qu'est-ce qu'une guerre totale
+| Le domaine mobilisé | Ce qu'il engage |
+| **Militaire** | Plus de 70 millions d'hommes, conscription générale |
+| **Économique** | Usines converties, femmes à l'usine, emprunts de guerre |
+| **Scientifique** | Gaz de combat, chars, aviation, sous-marins |
+| **Moral** | Censure, **propagande**, « bourrage de crâne » |
 
-> La frontière entre le front et l’arrière s’efface : les civils deviennent une cible et une ressource.
+> La frontière entre le front et l'arrière s'efface : les civils deviennent une cible **et** une ressource.
 
 ## La violence de masse
-La vie dans les **tranchées** — boue, rats, poux, bombardements, attaques à la baïonnette — provoque des **mutineries** en 1917. Le **génocide des Arméniens** (1915-1916), organisé par le gouvernement jeune-turc, fait environ 1,2 million de morts : c’est le premier génocide du siècle.
+| Le fait | Son contenu |
+| La vie dans les **tranchées** | Boue, rats, poux, bombardements, attaques à la baïonnette |
+| Les **mutineries** de 1917 | Le refus des offensives inutiles |
+| Le **génocide des Arméniens**, 1915-1916 | Organisé par le gouvernement jeune-turc : environ **1,2 million** de morts — le premier génocide du siècle |
 
 ## Un bilan écrasant
-Près de **10 millions de morts** et 20 millions de blessés, dont les **« gueules cassées »**. Le **traité de Versailles** (28 juin 1919) impose à l’Allemagne la responsabilité de la guerre, des réparations et des pertes territoriales : elle y voit un **diktat**. Quatre empires disparaissent (allemand, austro-hongrois, ottoman, russe) et la **Société des Nations** est créée pour garantir la paix — sans les États-Unis, qui refusent d’y entrer.`,
+| Le chiffre ou le fait | Sa valeur |
+| Les morts | Près de **10 millions** |
+| Les blessés | 20 millions, dont les « **gueules cassées** » |
+| Le **traité de Versailles**, 28 juin 1919 | Responsabilité de la guerre, réparations, pertes territoriales imposées à l'Allemagne — un **diktat** à ses yeux |
+| Les empires disparus | Allemand, austro-hongrois, ottoman, russe |
+| La **Société des Nations** | Créée pour garantir la paix — **sans** les États-Unis, qui refusent d'y entrer |`,
           },
           questions: [
             ['Quelles dates encadrent la Première Guerre mondiale ?', ['28 juillet 1914 – 11 novembre 1918', '1er septembre 1914 – 8 mai 1918', '3 août 1914 – 28 juin 1919', '28 juin 1914 – 11 novembre 1919'], 0, 'L’armistice du 11 novembre 1918 précède le traité de Versailles de 1919.'],
@@ -222,29 +238,50 @@ Près de **10 millions de morts** et 20 millions de blessés, dont les **« gueu
           axe: 'L’Europe, un théâtre majeur des guerres totales (1914-1945)',
           lecon: {
             titre: 'URSS, Italie, Allemagne : l’État contre l’individu',
-            cours: `Un régime **totalitaire** ne se contente pas d’exercer le pouvoir : il veut **transformer l’homme** et contrôler la société tout entière — le travail, les loisirs, la famille, la pensée. Trois régimes en donnent le modèle dans l’entre-deux-guerres.
+            cours: `Un régime totalitaire ne se contente pas d'exercer le pouvoir : il veut transformer l'homme et contrôler la société tout entière.
 
 ## Les traits communs
-- Un **parti unique** et un **chef** placé au-dessus des lois, objet d’un **culte de la personnalité**.
-- Une **idéologie** officielle qui prétend expliquer le monde entier.
-- La **propagande** (radio, cinéma, affiches, défilés) et l’**embrigadement de la jeunesse**.
-- La **terreur** : police politique, camps, procès truqués, dénonciation.
-- La suppression des **libertés** : presse, réunion, opposition, syndicats.
-- Une **économie dirigée** par l’État.
+| Le trait | Sa forme |
+| Un **parti unique** et un **chef** au-dessus des lois | Le culte de la personnalité |
+| Une **idéologie** officielle | Elle prétend expliquer le monde entier |
+| La **propagande** | Radio, cinéma, affiches, défilés |
+| L'**embrigadement de la jeunesse** | Organisations obligatoires |
+| La **terreur** | Police politique, camps, procès truqués, dénonciation |
+| La suppression des **libertés** | Presse, réunion, opposition, syndicats |
+| Une **économie dirigée** | Par l'État |
 
-## L’URSS de Staline
-Après la révolution de 1917 et la mort de Lénine (1924), **Staline** impose son pouvoir. La **collectivisation** des terres liquide les paysans propriétaires (les « koulaks ») et provoque une famine terrible en Ukraine (**Holodomor**, 1932-1933). Les **plans quinquennaux** industrialisent le pays à marche forcée. Les **Grandes Purges** (1936-1938) et le **Goulag** frappent jusqu’aux cadres du parti.
+## Les trois régimes
+| Le régime | Son chef | Sa prise de pouvoir | Son fondement |
+| **URSS** | **Staline** | Après la mort de Lénine, 1924 | La lutte des classes, une société sans classes |
+| **Italie** | **Mussolini** | **1922**, la marche sur Rome | Le **fascisme**, la nation et le chef |
+| **Allemagne** | **Hitler** | **30 janvier 1933**, chancelier | Le **racisme** et l'antisémitisme |
 
-## L’Italie de Mussolini
-Arrivé au pouvoir en **1922** (marche sur Rome), Mussolini instaure le **fascisme** : parti unique, chemises noires, culte du *Duce*, encadrement de la jeunesse (*Balilla*), conquête coloniale de l’Éthiopie en 1935.
+## L'URSS de Staline
+| La politique | Son coût |
+| La **collectivisation** des terres | La liquidation des « koulaks » ; famine terrible en Ukraine, l'**Holodomor** de 1932-1933 |
+| Les **plans quinquennaux** | Une industrialisation à marche forcée |
+| Les **Grandes Purges**, 1936-1938 | Elles frappent jusqu'aux cadres du parti |
+| Le **Goulag** | Le système concentrationnaire |
 
-## L’Allemagne d’Hitler
-Nommé chancelier le **30 janvier 1933**, Hitler obtient les pleins pouvoirs en quelques semaines. Le **IIIe Reich** repose sur une idéologie **raciste** et **antisémite** : les **lois de Nuremberg** (1935) privent les Juifs de la citoyenneté, la **Nuit de Cristal** (novembre 1938) déchaîne la violence. La Gestapo, les SS et les premiers camps (Dachau) installent la terreur, tandis que le réarmement prépare la guerre.
+## L'Italie de Mussolini
+Parti unique, chemises noires, culte du *Duce*, encadrement de la jeunesse par les *Balilla*, conquête de l'Éthiopie en 1935.
 
-> Trois régimes, une même ambition : fabriquer un « homme nouveau » et faire disparaître l’individu dans la masse.
+## L'Allemagne d'Hitler
+| L'étape | Sa date | Son contenu |
+| Les pleins pouvoirs | 1933 | En quelques semaines |
+| Les **lois de Nuremberg** | **1935** | Elles privent les Juifs de la citoyenneté |
+| La **Nuit de Cristal** | Novembre **1938** | La violence déchaînée |
+| Gestapo, SS, premiers camps (Dachau) | Dès 1933 | La terreur installée |
+| Le **réarmement** | Années 1930 | Il prépare la guerre |
+
+> Trois régimes, une même ambition : fabriquer un « homme nouveau » et faire disparaître l'individu dans la masse.
 
 ## Des différences réelles
-Le communisme stalinien vise une société sans classes et s’appuie sur la lutte des classes ; le nazisme repose sur la **race** et la conquête d’un « espace vital ». Les moyens se ressemblent, les buts s’opposent.`,
+| Le régime | Son but |
+| Le communisme stalinien | Une société sans classes, par la lutte des classes |
+| Le nazisme | La **race** et la conquête d'un « espace vital » |
+
+> Les moyens se ressemblent, les buts s'opposent.`,
           },
           questions: [
             ['Qu’est-ce qui caractérise un régime totalitaire ?', ['Il veut contrôler la société entière et transformer l’homme', 'Il limite son action à l’économie', 'Il organise des élections libres', 'Il respecte l’indépendance de la justice'], 0, 'Travail, loisirs, famille et pensée sont encadrés.'],
@@ -262,29 +299,54 @@ Le communisme stalinien vise une société sans classes et s’appuie sur la lut
           axe: 'L’Europe, un théâtre majeur des guerres totales (1914-1945)',
           lecon: {
             titre: 'Une République ébranlée, du deuil au Front populaire',
-            cours: `Sortie victorieuse mais **saignée** de la Grande Guerre — 1,4 million de morts, des régions dévastées, une dette immense —, la France de l’entre-deux-guerres traverse la reconstruction, la crise, puis une profonde crise politique.
+            cours: `Sortie victorieuse mais saignée de la Grande Guerre, la France traverse la reconstruction, la crise, puis une profonde crise politique.
 
-## Le poids du deuil et la reconstruction
-Chaque commune élève son **monument aux morts** ; les anciens combattants s’organisent ; les « gueules cassées » rappellent le prix payé. Les régions du Nord et de l’Est sont reconstruites. Les **années 1920** apportent une relative prospérité et l’espoir d’une paix durable (accords de Locarno, 1925).
+## Le poids de la guerre
+| Le chiffre ou le fait | Sa portée |
+| **1,4 million** de morts | Chaque commune élève son **monument aux morts** |
+| Des régions dévastées | Nord et Est reconstruits |
+| Une dette immense | Elle pèse sur les finances |
+| Les anciens combattants | Ils s'organisent ; les « gueules cassées » rappellent le prix payé |
+
+Les **années 1920** apportent une relative prospérité et l'espoir d'une paix durable — accords de Locarno, 1925.
 
 ## La crise des années 1930
-La crise venue des États-Unis atteint la France en **1931-1932** : chute de la production, chômage, faillites agricoles. Les gouvernements se succèdent sans stabilité. La confiance dans la République s’effrite.
+| L'effet | Sa manifestation |
+| L'arrivée de la crise | **1931-1932**, venue des États-Unis |
+| L'économie | Chute de la production, chômage, faillites agricoles |
+| La politique | Les gouvernements se succèdent sans stabilité |
+| La confiance | Elle s'effrite envers la République |
 
 ## Le 6 février 1934
-Des **ligues d’extrême droite** (Croix-de-Feu, Action française, Jeunesses patriotes) manifestent devant la Chambre des députés ; l’affrontement fait une quinzaine de morts. Une partie de la gauche y voit une tentative de coup de force **antiparlementaire** et décide de s’unir.
+| L'élément | Le détail |
+| Les acteurs | Les **ligues d'extrême droite** : Croix-de-Feu, Action française, Jeunesses patriotes |
+| Le lieu | Devant la Chambre des députés |
+| Le bilan | Une quinzaine de morts |
+| La lecture à gauche | Une tentative de coup de force **antiparlementaire** |
 
-> Le 6 février 1934 est le déclencheur : la peur du fascisme fait naître l’union des gauches.
+> Le 6 février 1934 est le déclencheur : la peur du fascisme fait naître l'union des gauches.
 
-## Le Front populaire (1936-1938)
-La coalition des **socialistes** (SFIO), **radicaux** et **communistes** remporte les élections de mai 1936. **Léon Blum** devient président du Conseil. Une immense vague de grèves avec occupation d’usines accompagne cette victoire et débouche sur les **accords Matignon** (7 juin 1936) :
-- **hausse des salaires** d’environ 12 % ;
-- **conventions collectives** et reconnaissance des délégués du personnel ;
-- **semaine de 40 heures** ;
-- **deux semaines de congés payés**.
-S’y ajoutent la scolarité obligatoire jusqu’à 14 ans et la création d’un sous-secrétariat aux Sports et Loisirs.
+## Le Front populaire
+| L'élément | Le détail |
+| La coalition | **SFIO**, **radicaux**, **communistes** |
+| La victoire | Élections de **mai 1936** |
+| Le chef du gouvernement | **Léon Blum** |
+| Le contexte | Une immense vague de grèves avec occupation d'usines |
 
-## Un héritage durable, une fin rapide
-Le Front populaire se défait dès 1938, miné par les divisions, la crise économique et la guerre d’Espagne. Mais les congés payés, les 40 heures et les conventions collectives marquent durablement la société française — et le mot « vacances » change de sens pour des millions de familles.`,
+Les **accords Matignon** du 7 juin 1936 :
+
+| La mesure | Son contenu |
+| Les **salaires** | Hausse d'environ 12 % |
+| Les **conventions collectives** | Et la reconnaissance des délégués du personnel |
+| Le temps de travail | La **semaine de 40 heures** |
+| Les **congés payés** | **Deux semaines** |
+
+S'y ajoutent la scolarité obligatoire jusqu'à 14 ans et un sous-secrétariat aux Sports et Loisirs.
+
+## Un héritage durable
+Le Front populaire se défait dès 1938, miné par les divisions, la crise et la guerre d'Espagne.
+
+> Mais les congés payés, les 40 heures et les conventions collectives marquent durablement la société — et le mot « vacances » change de sens pour des millions de familles.`,
           },
           questions: [
             ['Combien de morts la Première Guerre mondiale coûte-t-elle à la France ?', ['Environ 1,4 million', 'Environ 400 000', 'Environ 3 millions', 'Environ 700 000'], 0, 'Chaque commune élève un monument aux morts.'],
@@ -302,24 +364,41 @@ Le Front populaire se défait dès 1938, miné par les divisions, la crise écon
           axe: 'L’Europe, un théâtre majeur des guerres totales (1914-1945)',
           lecon: {
             titre: '1939-1945 : une guerre qui vise des peuples',
-            cours: `La Seconde Guerre mondiale (**1er septembre 1939 – 2 septembre 1945**) dépasse la guerre totale : elle devient une **guerre d’anéantissement**, où l’ennemi n’est plus seulement une armée à battre mais un peuple à détruire.
+            cours: `La Seconde Guerre mondiale dépasse la guerre totale : elle devient une guerre d'anéantissement, où l'ennemi n'est plus une armée à battre mais un peuple à détruire.
+
+Dates : **1er septembre 1939 – 2 septembre 1945**.
 
 ## Les grandes étapes
-- **1939-1941 : les victoires de l’Axe.** Invasion de la Pologne, **Blitzkrieg** à l’Ouest, défaite française de juin 1940, bataille d’Angleterre, invasion de l’URSS (opération Barbarossa, juin 1941).
-- **1941-1942 : la mondialisation.** **Pearl Harbor** (7 décembre 1941) fait entrer les États-Unis. Le conflit devient planétaire.
-- **1942-1943 : le tournant.** **Stalingrad**, El-Alamein, Midway, Guadalcanal : l’Axe recule sur tous les fronts.
-- **1943-1945 : la victoire des Alliés.** Débarquements en Sicile (1943), en **Normandie** (6 juin 1944) et en Provence, libération de Paris, capitulation allemande le **8 mai 1945**, bombes atomiques sur **Hiroshima et Nagasaki** (6 et 9 août), capitulation japonaise le 2 septembre.
+| La période | Ce qui s'y passe |
+| **1939-1941** | Les victoires de l'Axe : Pologne, **Blitzkrieg**, défaite française de juin 1940, bataille d'Angleterre, invasion de l'URSS (Barbarossa, juin 1941) |
+| **1941-1942** | La **mondialisation** : **Pearl Harbor**, 7 décembre 1941, fait entrer les États-Unis |
+| **1942-1943** | Le **tournant** : Stalingrad, El-Alamein, Midway, Guadalcanal |
+| **1943-1945** | La victoire alliée : Sicile, **Normandie** (6 juin 1944), Provence, Paris ; capitulation allemande le **8 mai 1945** ; **Hiroshima** et **Nagasaki** (6 et 9 août) ; capitulation japonaise le 2 septembre |
 
-## Une guerre d’anéantissement
-Le nazisme mène à l’Est une guerre idéologique : populations slaves considérées comme inférieures, prisonniers soviétiques laissés mourir par millions, villages entiers détruits. Les bombardements massifs frappent les villes (Londres, Coventry, Dresde, Tokyo). L’arme nucléaire, employée deux fois, change la nature même de la guerre.
+## Une guerre d'anéantissement
+| Le fait | Son contenu |
+| La guerre idéologique à l'Est | Populations slaves jugées inférieures, prisonniers soviétiques laissés mourir par millions, villages détruits |
+| Les **bombardements massifs** | Londres, Coventry, Dresde, Tokyo |
+| L'arme **nucléaire** | Employée deux fois : elle change la nature même de la guerre |
 
 ## La Shoah
-L’extermination des Juifs d’Europe se fait en deux temps : les **Einsatzgruppen** fusillent à l’Est dès 1941 (la « Shoah par balles », Babi Yar) ; la **conférence de Wannsee** (janvier 1942) organise ensuite la déportation vers les **camps d’extermination** (Auschwitz-Birkenau, Treblinka, Sobibor…). Environ **5 à 6 millions de Juifs** sont assassinés. Le **génocide des Tsiganes** fait entre 200 000 et 500 000 victimes.
+| L'étape | Sa date | Son contenu |
+| La « Shoah par balles » | Dès **1941** | Les **Einsatzgruppen** fusillent à l'Est : Babi Yar |
+| La conférence de **Wannsee** | Janvier **1942** | Elle organise la déportation |
+| Les **camps d'extermination** | 1942-1944 | Auschwitz-Birkenau, Treblinka, Sobibor |
 
-> Un **camp de concentration** enferme et fait travailler jusqu’à la mort ; un **camp d’extermination** est conçu pour tuer dès l’arrivée. La distinction est essentielle.
+| La victime | Le bilan |
+| Les **Juifs d'Europe** | Environ **5 à 6 millions** assassinés |
+| Les **Tsiganes** | Entre 200 000 et 500 000 |
+
+> Un **camp de concentration** enferme et fait travailler jusqu'à la mort ; un **camp d'extermination** est conçu pour tuer dès l'arrivée. La distinction est essentielle.
 
 ## Un bilan sans précédent
-Entre **50 et 60 millions de morts**, dont une majorité de **civils** — l’inverse de 1914-1918. L’Europe est en ruines. En 1945 naissent l’**ONU** (juin 1945) et le **procès de Nuremberg**, qui invente la notion de **crime contre l’humanité**.`,
+| Le chiffre ou le fait | Sa valeur |
+| Les morts | **50 à 60 millions** |
+| Leur composition | Une **majorité de civils** — l'inverse de 1914-1918 |
+| L'**ONU** | Créée en juin 1945 |
+| Le procès de **Nuremberg** | Il invente la notion de **crime contre l'humanité** |`,
           },
           questions: [
             ['Quelle date marque le début de la Seconde Guerre mondiale en Europe ?', ['Le 1er septembre 1939', 'Le 3 septembre 1939', 'Le 10 mai 1940', 'Le 22 juin 1941'], 0, 'L’Allemagne envahit la Pologne ; France et Royaume-Uni déclarent la guerre deux jours plus tard.'],
@@ -337,24 +416,56 @@ Entre **50 et 60 millions de morts**, dont une majorité de **civils** — l’i
           axe: 'L’Europe, un théâtre majeur des guerres totales (1914-1945)',
           lecon: {
             titre: 'Défaite, collaboration, Résistance',
-            cours: `En **juin 1940**, l’armée française s’effondre en six semaines. Le 17 juin, **Pétain** annonce qu’il faut « cesser le combat » ; le **22 juin**, l’armistice est signé. Le **10 juillet 1940**, l’Assemblée nationale lui accorde les pleins pouvoirs : la République laisse place à l’**État français**, dont la capitale est **Vichy**.
+            cours: `En juin 1940, l'armée française s'effondre en six semaines. La République laisse place à l'État français.
+
+## L'effondrement
+| La date | L'événement |
+| **17 juin 1940** | **Pétain** annonce qu'il faut « cesser le combat » |
+| **22 juin 1940** | L'armistice est signé |
+| **10 juillet 1940** | L'Assemblée nationale lui accorde les pleins pouvoirs |
+
+La capitale de l'**État français** est **Vichy**.
 
 ## Un régime autoritaire
-La devise devient « **Travail, Famille, Patrie** ». Le Parlement ne siège plus, les partis et les syndicats sont dissous, la presse est censurée, un **culte du Maréchal** est organisé. La **Révolution nationale** prétend redresser le pays par le retour à la terre, à l’ordre et à la religion, et désigne des responsables de la défaite : la République, les communistes, les étrangers, les Juifs.
+| La mesure | Son contenu |
+| La devise | « **Travail, Famille, Patrie** » |
+| Le Parlement | Il ne siège plus |
+| Partis et syndicats | Dissous |
+| La presse | Censurée |
+| Le **culte du Maréchal** | Organisé |
+| La **Révolution nationale** | Retour à la terre, à l'ordre, à la religion |
 
-## L’antisémitisme d’État
-Sans qu’aucune autorité allemande ne l’exige, Vichy promulgue le **statut des Juifs** (**3 octobre 1940**, aggravé en juin 1941) qui les exclut de la fonction publique, de l’enseignement, de la presse. La **rafle du Vél’ d’Hiv’** (16-17 juillet 1942), menée par la **police française**, arrête plus de 13 000 personnes, dont plus de 4 000 enfants. Environ **75 000 Juifs** sont déportés de France ; moins de 3 % reviennent.
+Elle désigne des responsables de la défaite : la République, les communistes, les étrangers, les Juifs.
+
+## L'antisémitisme d'État
+| La mesure | Sa date | Son contenu |
+| Le **statut des Juifs** | **3 octobre 1940**, aggravé en juin 1941 | Exclusion de la fonction publique, de l'enseignement, de la presse |
+| La **rafle du Vél' d'Hiv'** | 16-17 juillet **1942** | Menée par la **police française** : plus de 13 000 personnes, dont plus de 4 000 enfants |
+| Le bilan | — | Environ **75 000 Juifs** déportés de France ; moins de 3 % reviennent |
+
+> Aucune autorité allemande n'avait exigé le statut des Juifs.
 
 ## La collaboration
-L’entrevue de **Montoire** (24 octobre 1940) scelle la politique de collaboration. Elle devient économique (livraisons, **STO** — service du travail obligatoire — en 1943), policière (Milice créée en janvier 1943) et idéologique.
+| Sa forme | Son contenu |
+| **Politique** | L'entrevue de **Montoire**, 24 octobre 1940 |
+| **Économique** | Livraisons, puis le **STO** en 1943 |
+| **Policière** | La **Milice**, créée en janvier 1943 |
+| **Idéologique** | Propagande et dénonciation |
 
-> Une **collaboration d’État**, décidée à Vichy, s’ajoute à la contrainte de l’occupation : c’est ce que la France a mis un demi-siècle à reconnaître officiellement (discours de Jacques Chirac, 1995).
+> Une **collaboration d'État**, décidée à Vichy, s'ajoute à la contrainte de l'occupation. La France a mis un demi-siècle à le reconnaître officiellement : discours de Jacques Chirac, 1995.
 
 ## La Résistance
-Le **18 juin 1940**, depuis Londres, **de Gaulle** appelle à poursuivre le combat : c’est l’acte de naissance de la **France libre**. À l’intérieur, des réseaux et des mouvements se forment (Combat, Libération, Franc-Tireur), publient des journaux clandestins, renseignent, sabotent. **Jean Moulin** unifie les mouvements au sein du **Conseil national de la Résistance**, qui se réunit le **27 mai 1943** et adopte en 1944 un programme de réformes.
+| La date | L'acte |
+| **18 juin 1940** | De Gaulle appelle de Londres à poursuivre le combat : naissance de la **France libre** |
+| 1941-1943 | Réseaux et mouvements : Combat, Libération, Franc-Tireur — journaux clandestins, renseignement, sabotage |
+| **27 mai 1943** | **Jean Moulin** réunit le **Conseil national de la Résistance** |
+| 1944 | Le CNR adopte un programme de réformes |
 
 ## La Libération
-Après les débarquements de 1944, Paris est libéré en août. Le **Gouvernement provisoire de la République française** rétablit la légalité républicaine, et les femmes obtiennent le **droit de vote** par l’ordonnance du **21 avril 1944**.`,
+| La date | L'événement |
+| **21 avril 1944** | Une ordonnance accorde le **droit de vote aux femmes** |
+| Août 1944 | Paris est libéré |
+| — | Le **GPRF** rétablit la légalité républicaine |`,
           },
           questions: [
             ['Quelle devise remplace « Liberté, Égalité, Fraternité » sous Vichy ?', ['Travail, Famille, Patrie', 'Ordre, Force, Nation', 'Terre, Peuple, Chef', 'Honneur, Patrie, Discipline'], 0, 'Elle résume le programme de la Révolution nationale.'],
@@ -376,26 +487,38 @@ Après les débarquements de 1944, Paris est libéré en août. Le **Gouvernemen
           axe: 'Le monde depuis 1945',
           lecon: {
             titre: 'La fin des empires coloniaux',
-            cours: `En 1945, l’Europe domine encore une grande partie de l’Afrique et de l’Asie. En 1975, presque tous ces territoires sont indépendants : c’est la **décolonisation**, l’un des grands bouleversements du siècle.
+            cours: `En 1945, l'Europe domine encore une grande partie de l'Afrique et de l'Asie. En 1975, presque tous ces territoires sont indépendants.
 
-## Pourquoi maintenant ?
-- Les puissances coloniales sortent **affaiblies** de la guerre.
-- Les colonies ont **participé** à la victoire et réclament une contrepartie.
-- Les mouvements **nationalistes** sont organisés autour de chefs formés en Europe.
-- Les **États-Unis** et l’**URSS**, pour des raisons opposées, sont hostiles aux empires.
-- La **Charte de l’ONU** consacre le **droit des peuples à disposer d’eux-mêmes**.
+## Pourquoi maintenant
+| La cause | Son contenu |
+| L'**affaiblissement** des puissances coloniales | Elles sortent épuisées de la guerre |
+| La **participation** des colonies à la victoire | Elles réclament une contrepartie |
+| Les mouvements **nationalistes** | Organisés autour de chefs souvent formés en Europe |
+| Les **deux Grands** | États-Unis et URSS, pour des raisons opposées, sont hostiles aux empires |
+| La **Charte de l'ONU** | Elle consacre le droit des peuples à disposer d'eux-mêmes |
 
 ## Deux voies
-- **Négociée** : l’**Inde** obtient son indépendance en **1947** (Gandhi, Nehru), au prix d’une partition sanglante avec le Pakistan. La plupart des colonies françaises d’Afrique noire accèdent pacifiquement à l’indépendance en **1960**, « l’année de l’Afrique ».
-- **Par la guerre** : l’**Indochine** (1946-1954) s’achève par la défaite française de **Diên Biên Phu** et les accords de Genève ; l’**Algérie** (**1954-1962**) est la plus longue et la plus douloureuse.
+| La voie | Ses exemples | Son coût |
+| **Négociée** | L'**Inde** en **1947** (Gandhi, Nehru) ; l'Afrique noire française en **1960** | La partition sanglante entre Inde et Pakistan |
+| **Par la guerre** | L'**Indochine** (1946-1954), l'**Algérie** (1954-1962) | Diên Biên Phu ; huit ans de guerre |
 
-## La guerre d’Algérie
-Elle commence le **1er novembre 1954** (« Toussaint rouge ») à l’initiative du **FLN**. Elle mêle attentats, guérilla, torture, déplacements de populations. Elle provoque en France la chute de la IVe République (1958) et le retour de **de Gaulle**. Les **accords d’Évian** (18 mars 1962) et le référendum d’autodétermination conduisent à l’indépendance le 5 juillet 1962. Suivent l’exode de près d’un million de **pieds-noirs** et l’abandon de nombreux **harkis**.
+## La guerre d'Algérie
+| La date | L'événement |
+| **1er novembre 1954** | La « Toussaint rouge », à l'initiative du **FLN** |
+| 1954-1962 | Attentats, guérilla, torture, déplacements de populations |
+| **1958** | La guerre provoque la chute de la IVe République et le retour de **de Gaulle** |
+| **18 mars 1962** | Les **accords d'Évian** |
+| **5 juillet 1962** | L'indépendance |
+
+Suivent l'exode de près d'un million de **pieds-noirs** et l'abandon de nombreux **harkis**.
 
 ## Le tiers-monde
-Réunis à **Bandung** en **1955**, vingt-neuf pays d’Asie et d’Afrique affirment leur refus de choisir entre les deux blocs et condamnent le colonialisme. Le **mouvement des non-alignés** naît en 1961. Le mot « **tiers-monde** », forgé par Alfred Sauvy en 1952, désigne ces pays pauvres et nouvellement indépendants.
+| L'élément | Sa date | Son contenu |
+| La conférence de **Bandung** | **1955** | Vingt-neuf pays d'Asie et d'Afrique refusent de choisir entre les blocs et condamnent le colonialisme |
+| Le mouvement des **non-alignés** | 1961 | Il s'organise |
+| Le mot « **tiers-monde** » | Forgé par Alfred Sauvy en 1952 | Il désigne ces pays pauvres et nouvellement indépendants |
 
-> L’indépendance politique ne suffit pas : frontières héritées, économies dépendantes, instabilité politique pèsent longtemps sur les nouveaux États.`,
+> L'indépendance politique ne suffit pas : frontières héritées, économies dépendantes, instabilité politique pèsent longtemps sur les nouveaux États.`,
           },
           questions: [
             ['Quel principe de la Charte de l’ONU sert d’appui aux mouvements de décolonisation ?', ['Le droit des peuples à disposer d’eux-mêmes', 'La liberté de circulation', 'La souveraineté des empires', 'L’égalité devant l’impôt'], 0, 'Il est inscrit dans la Charte signée en 1945.'],
@@ -413,24 +536,43 @@ Réunis à **Bandung** en **1955**, vingt-neuf pays d’Asie et d’Afrique affi
           axe: 'Le monde depuis 1945',
           lecon: {
             titre: 'Deux blocs, une paix impossible et une guerre improbable',
-            cours: `Alliés contre l’Allemagne jusqu’en 1945, les **États-Unis** et l’**URSS** deviennent adversaires dès 1947. La **guerre froide** est un affrontement global — idéologique, économique, militaire, culturel — entre deux superpuissances qui ne s’affrontent jamais directement.
+            cours: `Alliés contre l'Allemagne jusqu'en 1945, les États-Unis et l'URSS deviennent adversaires dès 1947.
 
 ## La rupture de 1947
-La **doctrine Truman** (mars 1947) promet d’aider tout pays menacé par le communisme : c’est l’**endiguement** (*containment*). Le **plan Marshall** apporte une aide économique massive à l’Europe de l’Ouest. En réponse, l’URSS crée le **Kominform** et la doctrine Jdanov, qui divise le monde en deux camps.
+| Le camp | Sa doctrine | Son instrument |
+| Les **États-Unis** | La **doctrine Truman**, mars 1947 : aider tout pays menacé par le communisme — l'**endiguement** | Le **plan Marshall**, une aide économique massive |
+| L'**URSS** | La doctrine **Jdanov** : le monde en deux camps | Le **Kominform** |
 
-> Churchill avait annoncé dès 1946 qu’un « **rideau de fer** » était tombé à travers l’Europe.
+> Churchill avait annoncé dès 1946 qu'un « **rideau de fer** » était tombé à travers l'Europe.
 
 ## Berlin, symbole du monde coupé en deux
-Le **blocus de Berlin** (juin 1948 – mai 1949) répond à la réforme monétaire occidentale ; les Alliés ravitaillent la ville par un **pont aérien**. En 1949 naissent la **RFA** et la **RDA**, l’**OTAN** (1949) puis le **pacte de Varsovie** (1955). Le **mur de Berlin** est construit dans la nuit du **12 au 13 août 1961** pour arrêter l’hémorragie des départs vers l’Ouest.
+| La date | L'événement |
+| Juin 1948 – mai 1949 | Le **blocus de Berlin** ; les Alliés ravitaillent par un **pont aérien** |
+| **1949** | Naissance de la **RFA** et de la **RDA** ; création de l'**OTAN** |
+| **1955** | Le **pacte de Varsovie** |
+| **12-13 août 1961** | Le **mur de Berlin**, pour arrêter les départs vers l'Ouest |
 
 ## Des guerres par procuration
-Faute de s’affronter directement, les blocs s’affrontent ailleurs : **guerre de Corée** (1950-1953), qui fige la péninsule au 38e parallèle ; guerres d’Indochine ; coups d’État et soutiens à des régimes amis en Amérique latine, en Afrique, au Moyen-Orient.
+| Le conflit | Ses dates | Son issue |
+| La **guerre de Corée** | 1950-1953 | La péninsule figée au 38e parallèle |
+| L'**Indochine** | 1946-1954 | La défaite française |
+| Coups d'État et régimes soutenus | En permanence | Amérique latine, Afrique, Moyen-Orient |
 
-## La crise de Cuba (octobre 1962)
-L’installation de missiles soviétiques à Cuba, à 150 km des côtes américaines, provoque la crise la plus dangereuse du siècle. Kennedy impose un blocus naval ; après treize jours, Khrouchtchev retire les missiles contre l’engagement américain de ne pas envahir Cuba et le retrait discret des missiles de Turquie. Un « téléphone rouge » est installé.
+## La crise de Cuba
+| L'étape | Ce qui se passe |
+| Le déclencheur | Des missiles soviétiques installés à Cuba, à 150 km des côtes américaines |
+| La réponse | **Kennedy** impose un **blocus naval** |
+| L'issue, après treize jours | **Khrouchtchev** retire les missiles ; les États-Unis s'engagent à ne pas envahir Cuba et retirent discrètement leurs missiles de Turquie |
+| La suite | Un « téléphone rouge » est installé |
 
-## L’équilibre de la terreur
-Les deux camps possèdent l’arme nucléaire (URSS depuis 1949). La **dissuasion** rend la guerre directe suicidaire : c’est ce que Raymond Aron résume par « **paix impossible, guerre improbable** ».`,
+Octobre **1962** : la crise la plus dangereuse du siècle.
+
+## L'équilibre de la terreur
+| Le fait | Sa conséquence |
+| L'URSS a l'arme nucléaire depuis **1949** | Les deux camps peuvent se détruire |
+| La **dissuasion** | La guerre directe devient suicidaire |
+
+> Raymond Aron le résume : « **paix impossible, guerre improbable** ».`,
           },
           questions: [
             ['Qu’annonce la doctrine Truman en mars 1947 ?', ['L’aide américaine à tout pays menacé par le communisme', 'Le retrait des troupes américaines d’Europe', 'La création de l’ONU', 'Le désarmement nucléaire'], 0, 'C’est la politique dite d’endiguement.'],
@@ -448,24 +590,57 @@ Les deux camps possèdent l’arme nucléaire (URSS depuis 1949). La **dissuasio
           axe: 'Le monde depuis 1945',
           lecon: {
             titre: 'De la détente à l’effondrement du bloc de l’Est',
-            cours: `Après la peur d’octobre 1962, les deux blocs cherchent à encadrer leur rivalité — sans y renoncer. Trois temps se succèdent : la **détente**, la **guerre fraîche**, puis l’**effondrement**.
+            cours: `Après la peur d'octobre 1962, les deux blocs cherchent à encadrer leur rivalité — sans y renoncer.
 
-## La détente (1963-1975)
-Les traités se multiplient : interdiction des essais atmosphériques (1963), traité de **non-prolifération** (1968), accords **SALT I** (1972), reconnaissance mutuelle des deux Allemagnes (*Ostpolitik* de Willy Brandt), acte final d’**Helsinki** (1975) sur les frontières et les droits de l’homme. La coexistence n’efface pas la répression à l’intérieur du bloc de l’Est : **Prague, 1968**, où les chars du pacte de Varsovie écrasent le « socialisme à visage humain ».
+## Trois temps
+| La période | Son nom | Son climat |
+| 1963-1975 | La **détente** | Les traités se multiplient |
+| 1975-1985 | La **guerre fraîche** | La tension repart |
+| 1985-1991 | L'**effondrement** | Le bloc de l'Est se défait |
 
-## La guerre fraîche (1975-1985)
-La **guerre du Vietnam** s’achève en 1975 par la défaite américaine. L’**invasion de l’Afghanistan** par l’URSS (1979), la crise des euromissiles et l’arrivée de **Reagan** relancent la tension et la course aux armements.
+## La détente
+| L'accord | Sa date | Son objet |
+| Interdiction des essais atmosphériques | 1963 | Le nucléaire |
+| Traité de **non-prolifération** | 1968 | Limiter le nombre de puissances nucléaires |
+| **SALT I** | 1972 | Les armements stratégiques |
+| L'*Ostpolitik* de Willy Brandt | Années 1970 | La reconnaissance mutuelle des deux Allemagnes |
+| L'acte final d'**Helsinki** | 1975 | Frontières et droits de l'homme |
 
-## L’URSS à bout de souffle
-L’économie soviétique stagne : pénuries, retard technologique, coût de l’armement et de la guerre d’Afghanistan. En 1985, **Mikhaïl Gorbatchev** lance la **perestroïka** (restructuration économique) et la **glasnost** (transparence). La catastrophe de **Tchernobyl** (1986) frappe la confiance dans le régime.
+> La coexistence n'efface pas la répression intérieure : **Prague, 1968**, où les chars du pacte de Varsovie écrasent le « socialisme à visage humain ».
 
-## 1989 : l’année charnière
-Gorbatchev renonce à intervenir militairement chez les satellites. En quelques mois, la Pologne (Solidarność), la Hongrie, la Tchécoslovaquie (« révolution de velours ») et la RDA basculent. Le **mur de Berlin tombe le 9 novembre 1989** ; l’Allemagne est réunifiée le 3 octobre 1990.
+## La guerre fraîche
+| L'événement | Sa date |
+| La défaite américaine au **Vietnam** | 1975 |
+| L'**invasion de l'Afghanistan** par l'URSS | 1979 |
+| La crise des **euromissiles** | Début des années 1980 |
+| L'arrivée de **Reagan** | 1981 |
 
-> La chute du Mur n’est pas une victoire militaire : c’est un régime qui cesse d’être cru par ses propres populations.
+## L'URSS à bout de souffle
+| La faiblesse | Son effet |
+| L'économie **stagnante** | Pénuries, retard technologique |
+| Le coût de l'armement et de l'Afghanistan | Un budget insoutenable |
+| **Tchernobyl**, 1986 | La confiance dans le régime s'effondre |
 
-## 1991 : la fin de l’URSS
-Le pacte de Varsovie est dissous en juillet 1991 ; après un putsch manqué en août, les républiques se déclarent indépendantes et l’**URSS disparaît le 25 décembre 1991**. Les États-Unis restent seule superpuissance : on parle alors d’un monde **unipolaire**.`,
+En 1985, **Gorbatchev** lance la **perestroïka** — restructuration économique — et la **glasnost** — transparence.
+
+## 1989, l'année charnière
+| Le pays | Ce qui s'y passe |
+| La **Pologne** | Solidarność |
+| La **Hongrie** | L'ouverture de la frontière |
+| La **Tchécoslovaquie** | La « révolution de velours » |
+| La **RDA** | Le **mur de Berlin tombe le 9 novembre 1989** |
+
+L'Allemagne est réunifiée le 3 octobre 1990.
+
+> La chute du Mur n'est pas une victoire militaire : c'est un régime qui cesse d'être cru par ses propres populations.
+
+## 1991, la fin de l'URSS
+| La date | L'événement |
+| Juillet 1991 | Le pacte de Varsovie est dissous |
+| Août 1991 | Un putsch échoue |
+| **25 décembre 1991** | L'**URSS disparaît** |
+
+Les États-Unis restent seule superpuissance : on parle d'un monde **unipolaire**.`,
           },
           questions: [
             ['Que désigne la « détente » entre 1963 et 1975 ?', ['Une période d’accords limitant la rivalité sans y renoncer', 'La fin définitive de la guerre froide', 'L’alliance militaire des deux blocs', 'Le désarmement total des deux camps'], 0, 'SALT I, non-prolifération et Helsinki en sont les jalons.'],
@@ -483,27 +658,46 @@ Le pacte de Varsovie est dissous en juillet 1991 ; après un putsch manqué en a
           axe: 'Le monde depuis 1945',
           lecon: {
             titre: 'De la CECA à l’Union européenne',
-            cours: `Après deux guerres nées en Europe, des responsables politiques cherchent à rendre la guerre entre voisins **matériellement impossible**. C’est le point de départ de la construction européenne.
+            cours: `Après deux guerres nées en Europe, des responsables politiques cherchent à rendre la guerre entre voisins matériellement impossible.
 
-## Les débuts (1951-1957)
-La **déclaration Schuman** (9 mai 1950), inspirée par Jean Monnet, propose de mettre en commun le charbon et l’acier — les matières premières de l’armement. La **CECA** naît en 1951 avec six pays : France, RFA, Italie, Belgique, Pays-Bas, Luxembourg. Le **traité de Rome** (25 mars 1957) crée la **CEE**, un marché commun fondé sur la libre circulation des marchandises, des personnes, des services et des capitaux, et une politique agricole commune (**PAC**).
+## Les débuts
+| La date | L'étape | Son contenu |
+| **9 mai 1950** | La **déclaration Schuman**, inspirée par Jean Monnet | Mettre en commun le charbon et l'acier, matières premières de l'armement |
+| **1951** | La **CECA** | Six pays : France, RFA, Italie, Belgique, Pays-Bas, Luxembourg |
+| **25 mars 1957** | Le **traité de Rome**, qui crée la **CEE** | Marché commun : libre circulation des marchandises, personnes, services, capitaux ; la **PAC** |
 
 ## Les élargissements
-De 6 membres en 1957, l’Europe passe à 9 (1973, dont le Royaume-Uni), 12 (Espagne et Portugal en 1986), 15 (1995), puis 25 en **2004** avec l’entrée des pays d’Europe centrale et orientale sortis du bloc soviétique, 27 en 2007 et 28 en 2013. Le **Royaume-Uni quitte l’Union en 2020** (Brexit) : l’Union compte 27 membres.
+| L'année | Le nombre de membres | Les entrants |
+| 1957 | **6** | Les fondateurs |
+| 1973 | 9 | Dont le Royaume-Uni |
+| 1986 | 12 | Espagne, Portugal |
+| 1995 | 15 | — |
+| **2004** | **25** | Les pays d'Europe centrale et orientale |
+| 2013 | 28 | Croatie |
+| **2020** | **27** | Le Royaume-Uni part : le **Brexit** |
 
-## L’approfondissement
-- **Accords de Schengen** (1985, appliqués en 1995) : suppression des contrôles aux frontières intérieures.
-- **Traité de Maastricht** (1992) : l’Union européenne remplace la CEE, la **citoyenneté européenne** est créée, la monnaie unique est programmée.
-- L’**euro** devient monnaie de compte en 1999 et circule en pièces et billets le **1er janvier 2002**.
-- Le **traité de Lisbonne** (2007) réforme les institutions après l’échec du projet de Constitution rejeté par référendum en France et aux Pays-Bas en 2005.
+## L'approfondissement
+| Le traité ou l'accord | Sa date | Son apport |
+| **Schengen** | 1985, appliqué en 1995 | Fin des contrôles aux frontières intérieures |
+| **Maastricht** | 1992 | L'**Union européenne**, la **citoyenneté européenne**, la monnaie unique programmée |
+| L'**euro** | 1999, puis **1er janvier 2002** | Monnaie de compte, puis pièces et billets |
+| **Lisbonne** | 2007 | Réforme des institutions, après le rejet du projet de Constitution en 2005 |
 
 ## Les institutions
-Le **Parlement européen** est élu au suffrage universel direct depuis **1979**. La **Commission** propose les textes et veille aux traités ; le **Conseil de l’Union** réunit les ministres ; le **Conseil européen** rassemble les chefs d’État et de gouvernement ; la **Cour de justice** tranche les litiges.
+| L'institution | Son rôle |
+| Le **Parlement européen** | Élu au suffrage universel direct depuis **1979** |
+| La **Commission** | Elle propose les textes et veille aux traités |
+| Le **Conseil de l'Union** | Les ministres des États |
+| Le **Conseil européen** | Les chefs d'État et de gouvernement |
+| La **Cour de justice** | Elle tranche les litiges |
 
-> Deux logiques cohabitent : la **supranationale** (des décisions s’imposent aux États) et l’**intergouvernementale** (les États décident ensemble). Tout l’équilibre européen tient dans ce dosage.
+> Deux logiques cohabitent : la **supranationale**, où des décisions s'imposent aux États, et l'**intergouvernementale**, où les États décident ensemble. Tout l'équilibre européen tient dans ce dosage.
 
 ## Débats
-L’Union est critiquée pour son déficit démocratique, la lourdeur de ses décisions, les écarts économiques entre membres ; elle est défendue comme un espace de paix, de libre circulation, de normes protectrices et de poids commercial.`,
+| La critique | La défense |
+| Un déficit démocratique | Un espace de **paix** |
+| La lourdeur des décisions | La **libre circulation** |
+| Les écarts économiques entre membres | Des **normes protectrices** et un poids commercial |`,
           },
           questions: [
             ['Quelle déclaration du 9 mai 1950 lance la construction européenne ?', ['La déclaration Schuman', 'Le traité de Rome', 'Le traité de Maastricht', 'La déclaration de Messine'], 0, 'Elle propose de mettre en commun le charbon et l’acier.'],
@@ -521,27 +715,48 @@ L’Union est critiquée pour son déficit démocratique, la lourdeur de ses dé
           axe: 'Le monde depuis 1945',
           lecon: {
             titre: 'Un monde multipolaire et ses conflits',
-            cours: `Après 1991, on a cru à un monde simple, dominé par une seule puissance. Trente ans plus tard, le monde est **multipolaire** : plusieurs pôles, plusieurs modèles, et des conflits d’un type nouveau.
+            cours: `Après 1991, on a cru à un monde simple, dominé par une seule puissance. Trente ans plus tard, le monde est multipolaire.
 
-## De l’unipolarité au multipolaire
-Les **États-Unis** restent la première puissance militaire, mais la **Chine** est devenue une puissance économique, technologique et navale de premier plan ; la **Russie** réaffirme ses ambitions par la force ; l’**Union européenne** pèse par son marché et ses normes ; l’**Inde**, le **Brésil** et d’autres puissances émergentes revendiquent leur place.
+## Les pôles
+| La puissance | Son atout principal |
+| Les **États-Unis** | La première puissance militaire |
+| La **Chine** | Économique, technologique, navale |
+| La **Russie** | Elle réaffirme ses ambitions **par la force** |
+| L'**Union européenne** | Son marché et ses **normes** |
+| L'**Inde**, le **Brésil** | Des émergents qui revendiquent leur place |
 
 ## Le terrorisme international
-Les attentats du **11 septembre 2001** ouvrent une nouvelle séquence : interventions en Afghanistan (2001) et en Irak (2003), essor puis recul de **Daech**, attentats en Europe — dont la France en 2015 et 2016. Le terrorisme frappe des civils pour peser sur des sociétés entières.
+| La date | L'événement |
+| **11 septembre 2001** | Les attentats aux États-Unis |
+| 2001, 2003 | Interventions en Afghanistan, puis en Irak |
+| 2014-2019 | Essor puis recul de **Daech** |
+| 2015-2016 | Attentats en France |
+
+> Le terrorisme frappe des civils pour peser sur des sociétés entières.
 
 ## Les grands foyers de tension
-- Le **Proche et Moyen-Orient** : conflit israélo-palestinien, guerre en Syrie, rivalités régionales.
-- L’**Europe orientale** : après l’annexion de la Crimée en 2014, la Russie envahit l’**Ukraine** en février 2022.
-- L’**Asie** : tensions autour de Taïwan et en mer de Chine méridionale.
-- L’**Afrique sahélienne** : États fragiles, groupes armés, coups d’État.
+| La région | Le conflit |
+| **Proche et Moyen-Orient** | Conflit israélo-palestinien, guerre en Syrie, rivalités régionales |
+| **Europe orientale** | Annexion de la Crimée en 2014, invasion de l'**Ukraine** en février 2022 |
+| **Asie** | Tensions autour de Taïwan et en mer de Chine méridionale |
+| **Sahel** | États fragiles, groupes armés, coups d'État |
 
 ## Les défis communs
-Aucun État ne peut traiter seul le **changement climatique** (accord de Paris, 2015), les **migrations**, les **pandémies** (Covid-19), la **cybersécurité**, ni la régulation du numérique et de l’intelligence artificielle.
+| Le défi | Pourquoi il dépasse les États |
+| Le **changement climatique** | Accord de Paris, 2015 |
+| Les **migrations** | Elles traversent les frontières |
+| Les **pandémies** | Covid-19 |
+| La **cybersécurité** | Les attaques ignorent les territoires |
+| La régulation du numérique et de l'IA | Les acteurs sont mondiaux |
 
-> Les menaces sont devenues **transnationales** alors que les décisions restent **nationales** : c’est la principale difficulté de la gouvernance mondiale.
+> Les menaces sont devenues **transnationales** alors que les décisions restent **nationales** : c'est la principale difficulté de la gouvernance mondiale.
 
 ## Une gouvernance contestée
-L’**ONU** reste le cadre du droit international, mais le **droit de veto** des cinq membres permanents du Conseil de sécurité bloque souvent l’action. D’autres enceintes (G7, G20, OMC, ONG) participent à la régulation, sans autorité contraignante. Le débat sur la réforme du Conseil de sécurité est ouvert depuis des décennies.`,
+| L'acteur | Sa limite |
+| L'**ONU** | Le **droit de veto** des cinq membres permanents bloque souvent l'action |
+| G7, G20, OMC, ONG | Aucune autorité contraignante |
+
+> Le débat sur la réforme du Conseil de sécurité est ouvert depuis des décennies.`,
           },
           questions: [
             ['Que signifie « monde multipolaire » ?', ['Plusieurs pôles de puissance coexistent', 'Une seule puissance domine', 'Deux blocs s’affrontent', 'Aucun État n’a de puissance militaire'], 0, 'C’est la situation qui succède à l’unipolarité des années 1990.'],
@@ -563,27 +778,42 @@ L’**ONU** reste le cadre du droit international, mais le **droit de veto** des
           axe: 'Françaises et Français dans une République repensée',
           lecon: {
             titre: 'La IVe République et l’État providence',
-            cours: `À la Libération, il ne s’agit pas de rétablir l’ordre d’avant-guerre mais de **refonder** la République sur de nouvelles bases sociales et politiques. Le programme du **Conseil national de la Résistance**, adopté en mars 1944 sous le titre *Les Jours heureux*, en fixe la feuille de route.
+            cours: `À la Libération, il ne s'agit pas de rétablir l'ordre d'avant-guerre mais de refonder la République sur de nouvelles bases.
+
+Le programme du **Conseil national de la Résistance**, adopté en mars 1944 sous le titre *Les Jours heureux*, en fixe la feuille de route.
 
 ## Rétablir la légalité républicaine
-Le **Gouvernement provisoire de la République française** (GPRF), dirigé par de Gaulle, rétablit les libertés et organise l’**épuration** — légale par des cours de justice, parfois sauvage dans les premières semaines. Les Françaises obtiennent le **droit de vote** (ordonnance du 21 avril 1944) et votent pour la première fois en avril 1945.
+| L'action | Son contenu |
+| Le **GPRF**, dirigé par de Gaulle | Il rétablit les libertés |
+| L'**épuration** | Légale par des cours de justice ; parfois sauvage dans les premières semaines |
+| Le **droit de vote des femmes** | Ordonnance du **21 avril 1944** ; premier vote en avril 1945 |
 
 ## Les grandes réformes sociales
-- Création de la **Sécurité sociale** (ordonnances d’octobre 1945) : maladie, accidents du travail, vieillesse, famille.
-- **Nationalisations** : Renault, charbonnages, Banque de France, EDF-GDF, Air France.
-- **Comités d’entreprise**, statut de la fonction publique.
-- Renforcement de l’école publique et de la recherche.
+| La réforme | Son contenu |
+| La **Sécurité sociale** | Ordonnances d'octobre 1945 : maladie, accidents du travail, vieillesse, famille |
+| Les **nationalisations** | Renault, charbonnages, Banque de France, EDF-GDF, Air France |
+| Les **comités d'entreprise** | Et le statut de la fonction publique |
+| L'école publique et la recherche | Renforcées |
 
-> L’idée directrice : protéger chacun contre les risques de l’existence, par la solidarité nationale plutôt que par la charité.
+> L'idée directrice : protéger chacun contre les risques de l'existence, par la **solidarité nationale** plutôt que par la charité.
 
 ## La IVe République
-La Constitution est adoptée par référendum en **octobre 1946**, après un premier projet rejeté. Elle donne l’essentiel du pouvoir à l’**Assemblée nationale** : le gouvernement dépend d’une majorité fragile. De Gaulle, hostile à ce régime, a démissionné dès **janvier 1946**.
+| Le point | Son contenu |
+| Son adoption | Par référendum en **octobre 1946**, après un premier projet rejeté |
+| Son équilibre | L'essentiel du pouvoir à l'**Assemblée nationale** |
+| Sa fragilité | Le gouvernement dépend d'une majorité instable |
+| De Gaulle | Hostile à ce régime, il a démissionné dès **janvier 1946** |
 
 ## Réussites et faiblesses
-La IVe République reconstruit le pays, engage la construction européenne et la modernisation économique. Mais l’**instabilité ministérielle** est chronique — plus de vingt gouvernements en douze ans — et les guerres coloniales, en Indochine puis en Algérie, finissent par emporter le régime en **1958**.
+| La réussite | La faiblesse |
+| La reconstruction du pays | Plus de **vingt gouvernements en douze ans** |
+| La construction européenne engagée | Les guerres coloniales : Indochine, puis Algérie |
+| La modernisation économique | Le régime est emporté en **1958** |
 
 ## Un héritage vivant
-La Sécurité sociale, les nationalisations, le préambule de 1946 (droit au travail, à la santé, à l’instruction, égalité femmes-hommes) constituent le socle du modèle social français, encore discuté aujourd’hui.`,
+Sécurité sociale, nationalisations, préambule de 1946 — droit au travail, à la santé, à l'instruction, égalité femmes-hommes.
+
+> C'est le socle du modèle social français, encore discuté aujourd'hui.`,
           },
           questions: [
             ['Quel texte adopté en 1944 sert de feuille de route à la refondation ?', ['Le programme du Conseil national de la Résistance', 'La Charte de l’ONU', 'Le préambule de 1958', 'Les accords Matignon'], 0, 'Il est intitulé Les Jours heureux.'],
@@ -601,24 +831,53 @@ La Sécurité sociale, les nationalisations, le préambule de 1946 (droit au tra
           axe: 'Françaises et Français dans une République repensée',
           lecon: {
             titre: 'Une République nouvelle et un pouvoir présidentiel',
-            cours: `La crise du **13 mai 1958** en Algérie ramène **de Gaulle** au pouvoir. Il obtient les pleins pouvoirs pour rédiger une nouvelle Constitution, approuvée par référendum le **28 septembre 1958** : c’est la **Ve République**.
+            cours: `La crise du 13 mai 1958 en Algérie ramène de Gaulle au pouvoir. Une nouvelle Constitution est approuvée par référendum le 28 septembre 1958 : c'est la Ve République.
 
-## Une Constitution qui renverse l’équilibre
-Le **président de la République** devient la clé de voûte des institutions : il nomme le Premier ministre, peut dissoudre l’Assemblée nationale, soumettre un texte au **référendum** (article 11) et disposer de pouvoirs exceptionnels (article 16). Le Parlement voit son domaine de compétence délimité. En **1962**, un référendum instaure l’**élection du président au suffrage universel direct**, appliquée dès 1965.
+## Une Constitution qui renverse l'équilibre
+| Le pouvoir présidentiel | Son fondement |
+| Nommer le Premier ministre | La Constitution |
+| **Dissoudre** l'Assemblée nationale | — |
+| Soumettre un texte au **référendum** | Article 11 |
+| Disposer de pouvoirs exceptionnels | Article 16 |
 
-> Le référendum devient l’instrument privilégié du général : il pose sa propre légitimité en jeu à chaque consultation.
+Le Parlement voit son domaine de compétence **délimité**.
+
+| La date | La réforme |
+| **1962** | Référendum : le président est élu au **suffrage universel direct** |
+| **1965** | Première application |
+
+> Le référendum devient l'instrument privilégié du général : il pose sa propre légitimité en jeu à chaque consultation.
 
 ## Régler la question algérienne
-De Gaulle passe de l’ambiguïté à l’autodétermination, affronte le putsch des généraux (avril 1961) et les attentats de l’**OAS**, puis conclut les **accords d’Évian** (mars 1962). L’indépendance de l’Algérie est proclamée le 5 juillet 1962.
+| L'étape | Sa date |
+| Le passage à l'**autodétermination** | 1959-1961 |
+| Le **putsch des généraux** | Avril 1961 |
+| Les attentats de l'**OAS** | 1961-1962 |
+| Les **accords d'Évian** | Mars 1962 |
+| L'indépendance | **5 juillet 1962** |
 
-## L’indépendance nationale
-La France se dote de l’**arme nucléaire** (premier essai en 1960), quitte le commandement intégré de l’**OTAN** (1966), reconnaît la Chine populaire (1964), critique la guerre du Vietnam (discours de Phnom Penh, 1966) et se rapproche de l’Allemagne (**traité de l’Élysée**, 1963).
+## L'indépendance nationale
+| L'acte | Sa date |
+| Premier essai de l'**arme nucléaire** | 1960 |
+| Le **traité de l'Élysée** avec l'Allemagne | 1963 |
+| Reconnaissance de la **Chine populaire** | 1964 |
+| Sortie du commandement intégré de l'**OTAN** | 1966 |
+| Discours de Phnom Penh contre la guerre du Vietnam | 1966 |
 
 ## Mai 1968
-Parti des universités, le mouvement s’étend aux lycées puis à une **grève générale** de plusieurs millions de salariés. Les **accords de Grenelle** accordent une forte hausse du SMIG et des droits syndicaux. Au-delà des salaires, la contestation vise l’autorité, la famille, l’école, la place des femmes : la société française change plus vite que ses institutions.
+| L'étape | Ce qui se passe |
+| Le départ | Les universités, puis les lycées |
+| L'extension | Une **grève générale** de plusieurs millions de salariés |
+| Les **accords de Grenelle** | Forte hausse du SMIG, droits syndicaux |
+| Au-delà des salaires | La contestation vise l'autorité, la famille, l'école, la place des femmes |
+
+> La société française change plus vite que ses institutions.
 
 ## Le départ
-De Gaulle dissout l’Assemblée et remporte les législatives de juin 1968, mais perd le **référendum d’avril 1969** sur la régionalisation et la réforme du Sénat. Fidèle à sa pratique, il démissionne le lendemain. Georges Pompidou lui succède.`,
+| La date | L'événement |
+| Juin 1968 | De Gaulle dissout et remporte les législatives |
+| **Avril 1969** | Il **perd le référendum** sur la régionalisation et le Sénat |
+| Le lendemain | Il démissionne ; Georges Pompidou lui succède |`,
           },
           questions: [
             ['Quel événement ramène de Gaulle au pouvoir en 1958 ?', ['La crise du 13 mai 1958 en Algérie', 'Mai 1968', 'La guerre d’Indochine', 'La crise de Suez'], 0, 'Il obtient les pleins pouvoirs pour rédiger une Constitution.'],
@@ -636,24 +895,54 @@ De Gaulle dissout l’Assemblée et remporte les législatives de juin 1968, mai
           axe: 'Françaises et Français dans une République repensée',
           lecon: {
             titre: '1945-1975 : trente ans qui transforment la société',
-            cours: `L’expression **Trente Glorieuses**, forgée par Jean Fourastié, désigne les trois décennies de forte croissance qui suivent la Seconde Guerre mondiale, entre **1945 et 1973-1975**. La France y change plus vite qu’en un siècle.
+            cours: `L'expression Trente Glorieuses, forgée par Jean Fourastié, désigne les trois décennies de forte croissance qui suivent la guerre.
+
+Dates : **1945 – 1973-1975**.
 
 ## Une croissance exceptionnelle
-La croissance dépasse **5 % par an** en moyenne. Elle repose sur la reconstruction, le plan Marshall, la modernisation industrielle, la planification, l’ouverture du marché commun, une main-d’œuvre nombreuse (**baby-boom** et immigration) et un pétrole bon marché.
+| Le moteur | Son apport |
+| La **reconstruction** | Une demande énorme |
+| Le **plan Marshall** | Des capitaux |
+| La modernisation industrielle et la **planification** | Des gains de productivité |
+| Le **marché commun** | Des débouchés |
+| Le **baby-boom** et l'immigration | Une main-d'œuvre nombreuse |
+| Un **pétrole bon marché** | Une énergie abondante |
+
+Le rythme dépasse **5 % par an** en moyenne.
 
 ## La société de consommation
-Le pouvoir d’achat double. Les ménages s’équipent : réfrigérateur, machine à laver, télévision, automobile. Les **grandes surfaces** apparaissent, la publicité s’installe, le crédit se répand, les **congés payés** deviennent départs en vacances. Un nouveau mode de vie se diffuse à toute la société.
+| Le changement | Sa manifestation |
+| Le **pouvoir d'achat** | Il **double** |
+| L'équipement des ménages | Réfrigérateur, machine à laver, télévision, automobile |
+| Le commerce | Les **grandes surfaces** apparaissent |
+| Le financement | Le **crédit** se répand |
+| Les **congés payés** | Ils deviennent des départs en vacances |
 
-## L’exode rural et l’urbanisation
-La population agricole s’effondre ; les villes s’étendent. Les **grands ensembles**, construits vite pour loger les rapatriés, les migrants et les familles mal logées, apportent d’abord le confort moderne (eau chaude, chauffage, salle de bains) avant de poser, plus tard, des problèmes d’enclavement.
+## L'exode rural et l'urbanisation
+| Le phénomène | Son effet |
+| La chute de la population agricole | L'**exode rural** |
+| L'extension des villes | Les **grands ensembles**, construits vite |
+| Leur apport initial | Eau chaude, chauffage, salle de bains |
+| Leur problème ultérieur | L'enclavement |
 
 ## Le travail et les femmes
-Le salariat devient la norme, le **secteur tertiaire** dépasse l’industrie. Le **travail des femmes** progresse fortement, accompagné de conquêtes juridiques : capacité d’ouvrir un compte bancaire sans l’accord du mari (1965), autorisation de la contraception (**loi Neuwirth**, 1967), dépénalisation de l’IVG (**loi Veil**, 1975).
+| L'évolution | Son contenu |
+| Le **salariat** | Il devient la norme |
+| Le secteur **tertiaire** | Il dépasse l'industrie |
+| Le **travail des femmes** | Il progresse fortement |
+
+| La conquête juridique | Sa date |
+| Ouvrir un compte bancaire sans l'accord du mari | **1965** |
+| L'autorisation de la contraception, **loi Neuwirth** | **1967** |
+| La dépénalisation de l'IVG, **loi Veil** | **1975** |
 
 > La croissance ne fait pas que produire des biens : elle déplace les gens, change les familles et redessine les paysages.
 
-## La fin d’un cycle
-Le **choc pétrolier de 1973** met fin à cette période : ralentissement, inflation, montée du **chômage** de masse. Les Trente Glorieuses laissent un héritage considérable — équipement du pays, protection sociale, élévation du niveau de vie — mais aussi une facture environnementale et des inégalités territoriales durables.`,
+## La fin d'un cycle
+| Le fait | Sa conséquence |
+| Le **choc pétrolier de 1973** | Ralentissement, inflation, **chômage de masse** |
+| L'héritage positif | Équipement du pays, protection sociale, niveau de vie |
+| L'héritage négatif | Une facture environnementale, des inégalités territoriales durables |`,
           },
           questions: [
             ['Qui a forgé l’expression « Trente Glorieuses » ?', ['Jean Fourastié', 'Alfred Sauvy', 'Raymond Aron', 'Fernand Braudel'], 0, 'Elle désigne les trois décennies de forte croissance après 1945.'],
@@ -671,28 +960,41 @@ Le **choc pétrolier de 1973** met fin à cette période : ralentissement, infla
           axe: 'Françaises et Français dans une République repensée',
           lecon: {
             titre: 'Alternances, cohabitations et réformes',
-            cours: `Conçue pour un homme et une crise, la Ve République a duré : elle a résisté au départ de son fondateur, à l’alternance politique et à la cohabitation. Sa **plasticité** est sa principale caractéristique.
+            cours: `Conçue pour un homme et une crise, la Ve République a duré : elle a résisté au départ de son fondateur, à l'alternance et à la cohabitation.
 
 ## Les présidences successives
-- **Georges Pompidou** (1969-1974) : modernisation industrielle et urbaine.
-- **Valéry Giscard d’Estaing** (1974-1981) : majorité à **18 ans**, loi Veil (1975), divorce par consentement mutuel, réforme du collège unique — mais aussi le premier choc du chômage.
-- **François Mitterrand** (1981-1995) : première **alternance** de gauche, abolition de la **peine de mort** (1981), retraite à 60 ans, cinquième semaine de congés payés, décentralisation, lois Auroux ; puis le tournant de la rigueur (1983).
-- **Jacques Chirac** (1995-2007) : fin du service militaire, passage au **quinquennat** (2000), loi sur la laïcité à l’école (2004).
-- **Nicolas Sarkozy** (2007-2012) : réforme constitutionnelle de 2008, crise financière de 2008.
+| Le président | Ses dates | Ses marques |
+| **Georges Pompidou** | 1969-1974 | Modernisation industrielle et urbaine |
+| **Valéry Giscard d'Estaing** | 1974-1981 | Majorité à **18 ans**, **loi Veil** (1975), divorce par consentement mutuel, collège unique — et le premier choc du chômage |
+| **François Mitterrand** | 1981-1995 | Première **alternance** de gauche, abolition de la **peine de mort** (1981), retraite à 60 ans, cinquième semaine de congés, décentralisation ; puis la rigueur en 1983 |
+| **Jacques Chirac** | 1995-2007 | Fin du service militaire, **quinquennat** (2000), loi sur la laïcité à l'école (2004) |
+| **Nicolas Sarkozy** | 2007-2012 | Réforme constitutionnelle de 2008, crise financière |
 
-## L’alternance et la cohabitation
-L’**alternance** de 1981 prouve que la Constitution fonctionne quel que soit le camp au pouvoir. Trois **cohabitations** (1986-1988, 1993-1995, 1997-2002) mettent face à face un président et un Premier ministre d’orientations opposées : le président conserve la défense et les affaires étrangères, le gouvernement conduit la politique intérieure.
+## L'alternance et la cohabitation
+| Le phénomène | Ce qu'il montre |
+| L'**alternance** de 1981 | La Constitution fonctionne quel que soit le camp au pouvoir |
+| Les trois **cohabitations** — 1986-1988, 1993-1995, 1997-2002 | Le président garde la défense et les affaires étrangères, le gouvernement conduit la politique intérieure |
 
-> Le **quinquennat** (2000) et l’inversion du calendrier électoral visent précisément à rendre la cohabitation improbable.
+> Le **quinquennat** (2000) et l'inversion du calendrier électoral visent précisément à rendre la cohabitation improbable.
 
 ## La décentralisation
-Les lois **Defferre** (1982) transfèrent des compétences aux communes, départements et régions, qui deviennent des collectivités de plein exercice. La révision de 2003 inscrit dans la Constitution que la République est **décentralisée**.
+| La réforme | Sa date | Son contenu |
+| Les lois **Defferre** | 1982 | Transfert de compétences aux communes, départements et régions |
+| La révision constitutionnelle | 2003 | La République est déclarée **décentralisée** |
 
 ## Une société qui se transforme
-Le droit suit les évolutions sociales : parité (1999-2000), PACS (1999), lutte contre les discriminations, place croissante du **Conseil constitutionnel** — saisine élargie en 1974, **question prioritaire de constitutionnalité** en 2008 — et poids grandissant du droit européen.
+| La réforme | Sa date |
+| La **parité** | 1999-2000 |
+| Le **PACS** | 1999 |
+| La saisine élargie du **Conseil constitutionnel** | 1974 |
+| La **question prioritaire de constitutionnalité** | 2008 |
+
+S'y ajoute le poids grandissant du droit européen.
 
 ## Les débats permanents
-Puissance du président, place du Parlement, abstention croissante, montée des extrêmes, rôle des corps intermédiaires : la Ve République vit depuis soixante ans avec le même débat sur l’équilibre entre efficacité et représentation.`,
+Puissance du président, place du Parlement, abstention croissante, montée des extrêmes, rôle des corps intermédiaires.
+
+> La Ve République vit depuis soixante ans avec le même débat : l'équilibre entre **efficacité** et **représentation**.`,
           },
           questions: [
             ['Quelle réforme majeure Valéry Giscard d’Estaing fait-il adopter dès 1974 ?', ['La majorité à 18 ans', 'L’abolition de la peine de mort', 'Le quinquennat', 'La retraite à 60 ans'], 0, 'La loi Veil sur l’IVG suit en 1975.'],

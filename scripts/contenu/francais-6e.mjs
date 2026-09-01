@@ -116,26 +116,33 @@ DELETE FROM public.chapters c
           axe: 'Créer, recréer le monde : récit des origines',
           lecon: {
             titre: 'La Genèse, et ce qu’un récit de création raconte',
-            cours: `Toutes les cultures ont cherché à répondre à la même question : **d’où vient le monde ?** Ces réponses prennent la forme de **récits des origines**, ou **cosmogonies**.
+            cours: `Toutes les cultures ont cherché à répondre à la même question : d’où vient le monde ? Ces réponses s’appellent des cosmogonies.
 
 ## Le récit de la Genèse
-La Bible s’ouvre sur la création en **sept jours** — six jours d’action, un jour de repos. Ce récit est partagé, avec des variantes, par les trois **monothéismes** : judaïsme, christianisme, islam. « Monothéiste » vient du grec *monos* (seul) et *theos* (dieu) : **un seul dieu**.
+La Bible s’ouvre sur la création en **sept jours** — six jours d’action, un jour de repos.
+
+= Monothéiste = monos (seul) + theos (dieu)
+
+Ce récit est partagé, avec des variantes, par les trois monothéismes : **judaïsme**, **christianisme**, **islam**.
 
 ## Ce qui fait sa force d’écriture
-- La **répétition** : « Dieu dit… et cela fut ainsi », reprise à chaque étape, donne un **rythme** solennel.
-- La **progression** : du plus général (la lumière, le ciel) au plus particulier (les animaux, l’humain).
-- La **parole créatrice** : ici, dire suffit à faire exister. C’est un choix littéraire fort.
-- Le **déluge** est un récit de **re**-création : le monde est effacé, puis recommencé avec Noé.
+| Le procédé | Ce qu’il produit |
+| La **répétition** | « Dieu dit… et cela fut ainsi », reprise à chaque étape : un **rythme** solennel |
+| La **progression** | Du plus général — la lumière, le ciel — au plus particulier : les animaux, l’humain |
+| La **parole créatrice** | Ici, **dire suffit à faire exister**. C’est un choix littéraire fort |
+
+Le **déluge** est un récit de **re**-création : le monde est effacé, puis recommencé avec Noé.
 
 ## Les outils de la langue du récit
-- Le **passé simple** raconte les actions principales, achevées : *il créa*, *il sépara*.
-- L’**imparfait** décrit le décor et l’état des choses : *la terre était informe*.
-- Les **connecteurs de temps** organisent : *au commencement*, *puis*, *le septième jour*.
+| Le temps | Ce qu’il fait | Exemple |
+| Le **passé simple** | Les actions principales, achevées | *il créa*, *il sépara* |
+| L’**imparfait** | Le décor et l’état des choses | *la terre était informe* |
+| Les **connecteurs de temps** | Ils organisent | *au commencement*, *puis*, *le septième jour* |
 
-> Le passé simple fait avancer l’histoire ; l’imparfait installe le décor. C’est la répartition à retenir pour tout récit.
+> Le passé simple fait **avancer** l’histoire ; l’imparfait **installe le décor**. C’est la répartition à retenir pour tout récit.
 
 ## Lire ces textes en classe
-On les étudie comme des **textes fondateurs** : des œuvres littéraires qui ont façonné la culture, les arts et la langue. On y cherche la construction et les images, pas une vérité scientifique — ce n’est pas le même terrain.`,
+!> On les étudie comme des **textes fondateurs** : des œuvres littéraires qui ont façonné la culture, les arts et la langue. On y cherche la **construction** et les **images**, pas une vérité scientifique — ce n’est pas le même terrain.`,
           },
           questions: [
             ['Qu’est-ce qu’un récit des origines ?', ['Un récit qui explique la naissance du monde', 'Un récit d’aventures', 'Une pièce de théâtre', 'Un poème d’amour'], 0, 'On parle aussi de cosmogonie.'],
@@ -153,25 +160,45 @@ On les étudie comme des **textes fondateurs** : des œuvres littéraires qui on
           axe: 'Créer, recréer le monde : récit des origines',
           lecon: {
             titre: 'Quand les dieux sont nombreux',
-            cours: `Une religion **polythéiste** reconnaît **plusieurs** dieux (*poly*, nombreux). Grecs, Romains, Égyptiens, Nordiques, Mésopotamiens : leurs récits des origines sont peuplés de divinités qui se disputent, s’aiment et se trahissent.
+            cours: `Chez les Grecs, le monde ne naît pas d’une parole : il naît d’une succession de générations et de conflits de famille.
 
 ## La cosmogonie grecque
-Chez **Hésiode** (*La Théogonie*), le monde naît du **Chaos**, vide originel. Puis viennent **Gaïa** (la Terre) et **Ouranos** (le Ciel). Leur fils **Cronos** renverse son père ; **Zeus**, fils de Cronos, le renverse à son tour et s’installe sur l’**Olympe** avec les douze dieux.
+~ Le Chaos → Gaïa (la Terre) et Ouranos (le Ciel) → Cronos renverse son père → Zeus renverse Cronos
+
+C’est le récit d’**Hésiode**, dans *La Théogonie*. Zeus s’installe alors sur l’**Olympe** avec les douze dieux.
 
 ## Ce qui distingue ces récits
-- Les dieux sont **anthropomorphes** : ils ont un corps, un caractère, des défauts humains — jalousie, colère, ruse.
-- Le monde naît d’une **succession de générations** et de conflits, non d’une parole unique.
-- Chaque dieu a un **domaine** : Zeus le ciel, Poséidon la mer, Hadès les Enfers, Athéna la sagesse, Arès la guerre.
+| Chez les polythéistes | Chez les monothéistes |
+| Les dieux sont **anthropomorphes** : corps, caractère, défauts humains | Un dieu unique, sans image |
+| Le monde naît d’une **succession de générations** | Le monde naît d’une **parole** |
+| Chaque dieu a son **domaine** | |
+
+= Polythéiste = poly (nombreux) + theos (dieu)
+
+| Le dieu | Son domaine |
+| **Zeus** | Le ciel |
+| **Poséidon** | La mer |
+| **Hadès** | Les Enfers |
+| **Athéna** | La sagesse |
+| **Arès** | La guerre |
 
 ## Les grands mythes qui en découlent
-- **Prométhée** vole le feu pour les humains et sera puni : le mythe du savoir conquis contre les dieux.
-- **Pandore** ouvre la jarre d’où s’échappent les maux, ne laissant que l’espérance.
-- Le **déluge** existe aussi chez les Grecs (Deucalion) et chez les Mésopotamiens (*L’Épopée de Gilgamesh*, bien plus ancienne que la Bible).
+| Le mythe | Ce qu’il raconte |
+| **Prométhée** | Il vole le feu pour les humains, et sera puni : le savoir conquis contre les dieux |
+| **Pandore** | Elle ouvre la jarre d’où s’échappent les maux, ne laissant que l’espérance |
+| Le **déluge** | Il existe aussi chez les Grecs (Deucalion) et chez les Mésopotamiens |
 
-> Le même motif — un monde détruit puis refait — traverse des cultures qui ne se connaissaient pas. C’est ce qui rend ces récits passionnants à comparer.
+!> *L’Épopée de Gilgamesh*, qui contient un déluge, est **bien plus ancienne que la Bible**. Le même motif traverse des cultures qui ne se connaissaient pas.
+
+> C’est ce qui rend ces récits passionnants à **comparer** plutôt qu’à classer.
 
 ## Ce que ces récits nous laissent
-Une **langue** : *panique* (Pan), *narcissique* (Narcisse), *titanesque*, *olympien*, *dédale*. Et des œuvres sans nombre, de la peinture au cinéma.`,
+| Le mot | Son origine |
+| *panique* | Le dieu **Pan** |
+| *narcissique* | **Narcisse** |
+| *titanesque* | Les **Titans** |
+| *olympien* | L’**Olympe** |
+| *dédale* | **Dédale**, l’architecte du labyrinthe |`,
           },
           questions: [
             ['Que signifie « polythéiste » ?', ['Qui reconnaît plusieurs dieux', 'Qui ne reconnaît qu’un dieu', 'Qui ne croit en rien', 'Qui adore les ancêtres'], 0, 'Du grec poly, nombreux.'],
@@ -189,26 +216,35 @@ Une **langue** : *panique* (Pan), *narcissique* (Narcisse), *titanesque*, *olymp
           axe: 'Créer, recréer le monde : récit des origines',
           lecon: {
             titre: 'Le conte qui explique pourquoi',
-            cours: `## Qu’est-ce qu’un conte étiologique ?
-Un **conte étiologique** (ou conte des origines) explique **pourquoi** une chose est comme elle est : pourquoi le chameau a une bosse, pourquoi la mer est salée, pourquoi le léopard a des taches. Le mot vient du grec *aitia*, la cause.
+            cours: `Un conte étiologique explique pourquoi une chose est comme elle est. En vérité, il fait semblant d’expliquer — et c’est le jeu qui plaît.
+
+## De quoi il s’agit
+= Étiologique vient du grec aitia, la cause
+
+Pourquoi le chameau a une bosse, pourquoi la mer est salée, pourquoi le léopard a des taches.
 
 ## L’histoire de Kipling
-Dans *Histoires comme ça* (1902), **Rudyard Kipling** raconte un chameau paresseux qui refuse de travailler et répond toujours « **Bof !** » Le Djinn du désert le punit : ce « Bof » se change en **bosse**, qui lui permettra de travailler trois jours sans manger.
+Dans *Histoires comme ça* (**1902**), **Rudyard Kipling** raconte un chameau paresseux qui refuse de travailler et répond toujours « **Bof !** ».
+
+~ Le chameau dit « Bof » → le Djinn du désert le punit → le « Bof » se change en BOSSE → elle lui permettra de travailler trois jours sans manger
 
 ## La structure, toujours la même
-1. Une **situation initiale** où la chose n’existe pas encore (le chameau n’a pas de bosse) ;
+1. Une **situation initiale** où la chose n’existe pas encore ;
 2. un **événement** — une faute, une ruse, une punition ;
-3. une **situation finale** qui explique l’état actuel, valable **pour toujours** et pour **toute l’espèce**.
+3. une **situation finale** qui explique l’état actuel.
+
+!> Cette situation finale vaut **pour toujours** et pour **toute l’espèce**. Ce n’est pas ce chameau-ci qui a une bosse : ce sont tous les chameaux, depuis ce jour.
 
 ## Le ton de Kipling
-- Il s’adresse **directement** au lecteur : « Ô Bien-Aimé ». Ce procédé s’appelle l’**apostrophe**.
-- Il joue sur les **répétitions** et les mots inventés, qui font entendre une voix de conteur.
-- L’**humour** est constant : la morale n’est pas assenée, elle est glissée dans le rire.
+| Le procédé | Son effet |
+| L’**apostrophe** : « Ô Bien-Aimé » | Il s’adresse **directement** au lecteur |
+| Les **répétitions** et les mots inventés | On entend une voix de conteur |
+| L’**humour** | La morale n’est pas assenée, elle est glissée dans le rire |
 
-> Le conte étiologique n’explique pas vraiment : il **fait semblant** d’expliquer, et c’est le jeu qui plaît.
+> Le conte étiologique n’explique pas vraiment : il **fait semblant** d’expliquer.
 
 ## Écrire le sien
-On choisit une particularité animale, on invente la faute et la sanction, on écrit au **passé simple** pour les actions et à l’**imparfait** pour les descriptions, et on termine par une formule qui installe le définitif : *« et depuis ce jour… »*.`,
+~ Choisir une particularité animale → inventer la faute → inventer la sanction → écrire au passé simple et à l’imparfait → clore par « et depuis ce jour… »`,
           },
           questions: [
             ['Qu’explique un conte étiologique ?', ['Pourquoi une chose est comme elle est', 'Comment finit une aventure', 'Qui a gagné une guerre', 'Comment cuisiner'], 0, 'Du grec aitia, la cause.'],
@@ -230,33 +266,44 @@ On choisit une particularité animale, on invente la faute et la sanction, on é
           axe: 'Chanter et enchanter le monde : mots et merveilles',
           lecon: {
             titre: 'Les outils du poète',
-            cours: `La poésie ne dit pas les choses autrement pour compliquer : elle les dit autrement pour les faire **voir** et **entendre**.
+            cours: `La poésie ne dit pas les choses autrement pour compliquer : elle les dit autrement pour les faire voir et entendre.
 
 ## Le vers et la strophe
-Un **vers** est une ligne du poème. On le compte en **syllabes** :
-- 8 syllabes : **octosyllabe** ;
-- 10 : **décasyllabe** ;
-- 12 : **alexandrin**, le vers le plus célèbre de la poésie française.
-Une **strophe** est un groupe de vers : **distique** (2), **tercet** (3), **quatrain** (4).
+| Le vers | Ses syllabes |
+| **Octosyllabe** | 8 |
+| **Décasyllabe** | 10 |
+| **Alexandrin** | **12** — le vers le plus célèbre de la poésie française |
+
+| La strophe | Ses vers |
+| **Distique** | 2 |
+| **Tercet** | 3 |
+| **Quatrain** | 4 |
 
 ## La rime
-Deux vers riment quand leurs derniers sons se répondent. Les dispositions :
-- **suivies** (AABB), **croisées** (ABAB), **embrassées** (ABBA).
+| La disposition | Son schéma |
+| **Suivies** (ou plates) | AABB |
+| **Croisées** | ABAB |
+| **Embrassées** | ABBA |
 
 ## Les images
-- **Comparaison** : deux éléments rapprochés par un **outil** (comme, tel, semblable à). *Il est fort **comme** un lion.*
-- **Métaphore** : la même image **sans** outil. *C’est un lion.*
-- **Personnification** : on prête à une chose ou à un animal des traits humains. *Le vent **murmure**.*
+| L’image | Sa définition | Exemple |
+| La **comparaison** | Deux éléments rapprochés par un **outil** — comme, tel, semblable à | Il est fort **comme** un lion |
+| La **métaphore** | La même image, **sans outil** | C’est un lion |
+| La **personnification** | On prête à une chose des traits humains | Le vent **murmure** |
 
-> La différence entre comparaison et métaphore tient à un seul mot : l’outil de comparaison. C’est le piège classique des contrôles.
+!> **La différence entre comparaison et métaphore tient à un seul mot** : l’outil de comparaison. C’est le piège classique des contrôles.
 
 ## Les jeux de sons
-- **Allitération** : répétition de **consonnes** (*Pour qui sont ces serpents qui sifflent sur nos têtes ?*).
-- **Assonance** : répétition de **voyelles**.
-Ces répétitions créent une musique qui **imite** parfois ce que le texte décrit.
+| Le procédé | Ce qui se répète | Exemple |
+| L’**allitération** | Des **consonnes** | *Pour qui sont ces serpents qui sifflent sur nos têtes ?* |
+| L’**assonance** | Des **voyelles** | |
+
+> Ces répétitions créent une musique qui **imite** parfois ce que le texte décrit.
 
 ## La poésie libre
-Depuis le XIXe siècle, les poètes s’affranchissent des règles : **vers libres** sans compte fixe, **calligrammes** dont la forme dessine le sujet (Apollinaire). La contrainte disparaît, l’intention reste.`,
+Depuis le XIXe siècle, les poètes s’affranchissent des règles : **vers libres** sans compte fixe, **calligrammes** dont la forme dessine le sujet — **Apollinaire**.
+
+> La contrainte disparaît ; l’intention reste.`,
           },
           questions: [
             ['Combien de syllabes compte un alexandrin ?', ['Douze', 'Dix', 'Huit', 'Quatorze'], 0, 'C’est le vers le plus célèbre de la poésie française.'],
@@ -274,30 +321,42 @@ Depuis le XIXe siècle, les poètes s’affranchissent des règles : **vers libr
           axe: 'Chanter et enchanter le monde : mots et merveilles',
           lecon: {
             titre: 'Célébrer, émerveiller, transformer',
-            cours: `## Ce que fait la poésie lyrique
-« **Lyrique** » vient de la **lyre**, l’instrument dont s’accompagnait le poète antique **Orphée**. La poésie lyrique **chante** : elle exprime des sentiments — joie, amour, tristesse, émerveillement — et cherche à les faire partager.
+            cours: `« Lyrique » vient de la lyre, l’instrument d’Orphée. Le mot dit lui-même que le poème, à l’origine, se chantait.
+
+## Ce que fait la poésie lyrique
+Elle **chante** : elle exprime des sentiments — joie, amour, tristesse, émerveillement — et cherche à les faire partager.
 
 ## Le monde vu autrement
-Le poète prend un objet banal et le rend **extraordinaire**. Une flaque devient un miroir du ciel, un caillou une planète. C’est le regard qui change, pas la chose.
+~ Un objet banal → le regard du poète → un objet extraordinaire
+
+Une flaque devient un miroir du ciel, un caillou une planète.
+
+> C’est le **regard** qui change, pas la chose.
 
 ## Les marques du lyrisme
-- la première personne : **je**, **mon**, **mes** ;
-- les **exclamations** et les **apostrophes** (*Ô temps ! suspends ton vol*) ;
-- le champ lexical du **sentiment** ;
-- des images fortes, comparaisons et métaphores.
+| La marque | Exemple |
+| La **première personne** | *je*, *mon*, *mes* |
+| Les **exclamations** et **apostrophes** | *Ô temps ! suspends ton vol* |
+| Le champ lexical du **sentiment** | |
+| Les **images** fortes | Comparaisons, métaphores |
 
 ## La musique du poème
-- Le **rythme** naît de la longueur des vers et des pauses.
-- Les **répétitions** — d’un mot, d’un vers entier (le **refrain**) — installent une mélodie.
-- Les **sonorités** peuvent imiter le réel : c’est l’**harmonie imitative**.
+| Le procédé | Ce qu’il produit |
+| Le **rythme** | La longueur des vers et les pauses |
+| Les **répétitions** — d’un mot, d’un vers entier | Le **refrain** installe une mélodie |
+| L’**harmonie imitative** | Les sonorités imitent le réel |
 
 ## Poésie et chanson
-La frontière est mince : beaucoup de poèmes ont été **mis en musique**, et les textes de chansons obéissent aux mêmes outils — rimes, refrains, images. Étudier un texte de chanson, c’est faire de la poésie.
+La frontière est mince : beaucoup de poèmes ont été **mis en musique**, et les textes de chansons obéissent aux mêmes outils — rimes, refrains, images.
 
-> Le mot « lyrique » raconte lui-même cette parenté : à l’origine, le poème se chantait.
+> Étudier un texte de chanson, c’est faire de la poésie. Le mot « lyrique » raconte lui-même cette parenté.
 
 ## Dire un poème
-Un poème s’entend autant qu’il se lit. Le **dire à voix haute** — en respectant les pauses, en détachant les images, en variant le volume — fait apparaître ce que l’œil seul ne perçoit pas.`,
+1. Respecter les **pauses** ;
+2. détacher les **images** ;
+3. varier le **volume**.
+
+!> Un poème s’**entend** autant qu’il se lit. Le dire à voix haute fait apparaître ce que l’œil seul ne perçoit pas.`,
           },
           questions: [
             ['D’où vient le mot « lyrique » ?', ['De la lyre, l’instrument du poète antique', 'Du nom d’un poète', 'D’une ville grecque', 'Du mot « lire »'], 0, 'À l’origine, le poème se chantait.'],
@@ -315,25 +374,37 @@ Un poème s’entend autant qu’il se lit. Le **dire à voix haute** — en res
           axe: 'Chanter et enchanter le monde : mots et merveilles',
           lecon: {
             titre: 'Quand le mot devient un jouet',
-            cours: `## Le recueil
-Dans **Les Animaux de tout le monde** (1990), **Jacques Roubaud** consacre un poème à chaque animal — de la sardine au morse. Ce sont des poèmes courts, drôles, pleins de jeux de mots, où l’animal sert de prétexte à jouer avec la langue.
+            cours: `Roubaud écrit pour les enfants sans écrire en dessous d’eux : la fantaisie est réelle, mais la langue est exigeante.
+
+## Le recueil
+Dans **Les Animaux de tout le monde** (**1990**), **Jacques Roubaud** consacre un poème à chaque animal — de la sardine au morse. Des poèmes courts, drôles, où l’animal sert de prétexte à jouer avec la langue.
 
 ## L’Oulipo
-Roubaud appartient à l’**Oulipo** (Ouvroir de Littérature Potentielle), un groupe d’écrivains qui s’imposent des **contraintes** volontaires pour écrire : n’employer aucun *e*, remplacer chaque nom par le septième qui le suit dans le dictionnaire, écrire un poème dont les vers se recombinent.
+= OULIPO = OUvroir de LIttérature POtentielle
+
+Un groupe d’écrivains qui s’imposent des **contraintes volontaires** pour écrire.
+
+| La contrainte | Ce qu’elle impose |
+| Le lipogramme | N’employer aucun *e* |
+| La méthode S + 7 | Remplacer chaque nom par le septième qui le suit dans le dictionnaire |
+| Le poème combinatoire | Des vers qui se recombinent |
 
 > La contrainte n’empêche pas d’écrire : elle **oblige à trouver** ce qu’on n’aurait pas cherché.
 
 ## Les jeux de langue du recueil
-- Le **calembour** : jouer sur deux sens ou deux sons proches d’un mot.
-- Le **mot-valise** : fondre deux mots en un (*ani-mots* : animal + mots).
-- La **paronymie** : rapprocher des mots qui se ressemblent (*sardine* / *sourdine*).
-- Le **détournement** de proverbes et d’expressions figées.
+| Le jeu | Ce qu’il fait | Exemple |
+| Le **calembour** | Jouer sur deux sens ou deux sons proches | |
+| Le **mot-valise** | Fondre deux mots en un | *ani-mots* |
+| La **paronymie** | Rapprocher des mots qui se ressemblent | *sardine* / *sourdine* |
+| Le **détournement** | Retourner un proverbe ou une expression figée | |
 
 ## Le ton
-Roubaud écrit **pour les enfants sans écrire en dessous d’eux** : la fantaisie est réelle, mais la langue est exigeante. L’humour vient du décalage entre le sérieux de la forme poétique et la drôlerie du sujet.
+L’humour vient du **décalage** entre le sérieux de la forme poétique et la drôlerie du sujet.
 
 ## Écrire à sa manière
-On choisit un animal, on cherche tous les mots que son nom contient ou évoque, on s’impose une **contrainte** (une seule voyelle, un acrostiche, une rime imposée) — et c’est la contrainte qui fait surgir l’idée.`,
+~ Choisir un animal → chercher tous les mots que son nom contient ou évoque → s’imposer une contrainte → écrire
+
+Une seule voyelle, un acrostiche, une rime imposée : c’est la contrainte qui fait surgir l’idée.`,
           },
           questions: [
             ['Qui a écrit Les Animaux de tout le monde ?', ['Jacques Roubaud', 'Rudyard Kipling', 'Guillaume Apollinaire', 'Raymond Queneau'], 0, 'Le recueil paraît en 1990.'],
@@ -355,30 +426,42 @@ On choisit un animal, on cherche tous les mots que son nom contient ou évoque, 
           axe: 'Se masquer, jouer, déjouer : ruses en action',
           lecon: {
             titre: 'Un faux médecin, une vraie farce',
-            cours: `## La pièce
-*Le Médecin malgré lui* (**1666**) est une **comédie** en trois actes de **Molière**. **Sganarelle**, bûcheron ivrogne et paresseux, bat sa femme Martine ; pour se venger, elle le fait passer pour un médecin génial qui ne reconnaît son talent que sous les coups. Roué de bâton, Sganarelle finit par « avouer » qu’il est médecin — et se prend au jeu.
+            cours: `Sganarelle ne trompe personne par son savoir : il trompe par son assurance. C’est le vrai sujet de la pièce.
+
+## La pièce
+*Le Médecin malgré lui* (**1666**) est une **comédie** en **trois actes** de **Molière**.
+
+~ Sganarelle bat sa femme Martine → elle le fait passer pour un médecin génial → on le roue de coups → il « avoue » qu’il est médecin → il se prend au jeu
+
+Le ressort : ce faux médecin « ne reconnaîtrait son talent que sous les coups ».
 
 ## La farce
-Molière reprend les ressorts de la **farce** médiévale :
-- les **coups de bâton** ;
-- le **déguisement** et l’**imposture** ;
-- le **quiproquo** : un malentendu où chacun croit parler de la même chose ;
-- le **comique de mots** : Sganarelle débite du faux latin, que personne n’ose contredire.
+Molière reprend les ressorts de la **farce** médiévale.
 
-## Les formes de comique
-- **de gestes** : coups, chutes, grimaces ;
-- **de mots** : jeux de langage, patois, latin de cuisine, répétitions ;
-- **de situation** : quiproquos, déguisements ;
-- **de caractère** : l’ivrogne, le crédule, le pédant ;
-- **de répétition** : une réplique qui revient et déclenche le rire.
+| Le ressort | Ce qu’il est |
+| Les **coups de bâton** | |
+| Le **déguisement** et l’**imposture** | |
+| Le **quiproquo** | Un malentendu où chacun croit parler de la même chose |
+| Le **comique de mots** | Sganarelle débite du **faux latin**, que personne n’ose contredire |
+
+## Les cinq formes de comique
+| La forme | Ses moyens |
+| De **gestes** | Coups, chutes, grimaces |
+| De **mots** | Jeux de langage, patois, latin de cuisine, répétitions |
+| De **situation** | Quiproquos, déguisements |
+| De **caractère** | L’ivrogne, le crédule, le pédant |
+| De **répétition** | Une réplique qui revient et déclenche le rire |
 
 ## Ce que la pièce dénonce
-Derrière le rire, Molière moque les **médecins** de son temps — leur jargon, leur assurance et leur incapacité à guérir — et la **crédulité** de ceux qui se laissent impressionner par un vocabulaire qu’ils ne comprennent pas.
-
-> Sganarelle ne trompe personne par son savoir : il trompe par son **assurance**. C’est le vrai sujet de la pièce.
+Derrière le rire, Molière moque les **médecins** de son temps — leur jargon, leur assurance, leur incapacité à guérir — et la **crédulité** de ceux qui se laissent impressionner par un vocabulaire qu’ils ne comprennent pas.
 
 ## Le vocabulaire du théâtre
-Une **réplique** est ce que dit un personnage ; une **tirade** une longue réplique ; un **monologue** un personnage seul en scène ; un **aparté** ce qu’un personnage dit sans être entendu des autres. Les **didascalies** sont les indications de mise en scène, en italique.`,
+| Le mot | Ce qu’il désigne |
+| Une **réplique** | Ce que dit un personnage |
+| Une **tirade** | Une longue réplique |
+| Un **monologue** | Un personnage seul en scène |
+| Un **aparté** | Ce qu’un personnage dit sans être entendu des autres |
+| Les **didascalies** | Les indications de mise en scène, en italique |`,
           },
           questions: [
             ['En quelle année Le Médecin malgré lui a-t-il été créé ?', ['1666', '1670', '1622', '1700'], 0, 'C’est une comédie en trois actes.'],
@@ -396,23 +479,45 @@ Une **réplique** est ce que dit un personnage ; une **tirade** une longue répl
           axe: 'Se masquer, jouer, déjouer : ruses en action',
           lecon: {
             titre: 'Le valet qui mène le jeu',
-            cours: `## La pièce
-*Les Fourberies de Scapin* (**1671**) est une **comédie** en trois actes. **Scapin**, valet rusé, aide deux jeunes gens — Octave et Léandre — à épouser celles qu’ils aiment, contre la volonté de leurs pères **Argante** et **Géronte**. Pour cela, il ment, invente, manipule et soutire de l’argent.
+            cours: `Molière fait rire d’un ordre renversé : le valet mène, les maîtres suivent.
 
-## Une « fourberie », c’est quoi ?
-Une **ruse**, une tromperie habile. Scapin en enchaîne : il invente un mariage forcé, un frère vengeur, une galère turque. Chaque mensonge en appelle un autre — c’est le moteur de la pièce.
+## La pièce
+*Les Fourberies de Scapin* (**1671**), comédie en **trois actes**.
+
+| Le personnage | Son rôle |
+| **Scapin** | Le valet rusé |
+| **Octave** et **Léandre** | Les jeunes gens amoureux |
+| **Argante** et **Géronte** | Leurs pères, opposés aux mariages |
+
+Pour les aider, Scapin ment, invente, manipule et soutire de l’argent.
+
+## Ce qu’est une « fourberie »
+Une **ruse**, une tromperie habile.
+
+~ Un mariage forcé inventé → un frère vengeur inventé → une galère turque inventée
+
+> Chaque mensonge en appelle un autre : c’est le moteur de la pièce.
 
 ## La scène du sac
-La scène la plus célèbre (acte III) : Scapin persuade Géronte de se cacher dans un **sac** pour échapper à des ennemis imaginaires, puis le **roue de coups** en imitant plusieurs voix. Il se venge ainsi de son maître tout en prétendant le sauver.
-C’est de cette scène que vient la réplique passée en proverbe : « **Que diable allait-il faire dans cette galère ?** »
+Acte III, la scène la plus célèbre.
+
+~ Scapin persuade Géronte de se cacher dans un sac → il imite plusieurs voix d’ennemis → il roue son maître de coups → tout en prétendant le sauver
+
+= « Que diable allait-il faire dans cette galère ? »
+
+Cette réplique est passée en proverbe.
 
 ## Le type du valet rusé
-Scapin descend d’une longue lignée : l’esclave malin de la comédie latine, le **zanni** de la **commedia dell’arte** italienne. Il est **plus intelligent que ses maîtres**, et c’est là que la pièce devient piquante : le pouvoir social et l’intelligence ne sont pas du même côté.
+| L’ancêtre | Où |
+| L’esclave malin | La comédie latine |
+| Le ***zanni*** | La **commedia dell’arte** italienne |
 
-> Molière fait rire d’un ordre renversé — le valet mène, les maîtres suivent.
+!> Scapin est **plus intelligent que ses maîtres**. C’est là que la pièce devient piquante : le **pouvoir social** et l’**intelligence** ne sont pas du même côté.
 
 ## Le rythme
-Les répliques sont **courtes**, s’enchaînent vite, se répètent en écho (la scène du sac, celle où Argante répète « Je te chasserai »). Cette vitesse est l’essentiel du comique : il faut la retrouver quand on lit à voix haute.`,
+Les répliques sont **courtes**, s’enchaînent vite, se répètent en écho.
+
+> Cette **vitesse** est l’essentiel du comique : c’est elle qu’il faut retrouver en lisant à voix haute.`,
           },
           questions: [
             ['En quelle année Les Fourberies de Scapin ont-elles été créées ?', ['1671', '1666', '1680', '1650'], 0, 'C’est une comédie en trois actes.'],
@@ -430,29 +535,40 @@ Les répliques sont **courtes**, s’enchaînent vite, se répètent en écho (l
           axe: 'Se masquer, jouer, déjouer : ruses en action',
           lecon: {
             titre: 'Faire croire, tout en sachant',
-            cours: `## Un art qui se joue
+            cours: `Le spectateur sait que la scène est un décor. Il accepte quand même d’y croire : c’est un contrat, pas une naïveté.
+
+## Un art qui se joue
 Le théâtre est le seul genre écrit **pour être joué**. Un texte de théâtre n’est achevé que sur une scène, devant un public : il attend des corps, des voix, une lumière.
 
 ## Le double jeu du spectateur
-Le spectateur sait parfaitement que la scène est un décor et l’acteur un comédien. Pourtant il **accepte d’y croire** le temps de la représentation : c’est la **convention théâtrale**, ou « suspension volontaire de l’incrédulité ».
+= La convention théâtrale, ou « suspension volontaire de l’incrédulité »
 
-> On ne se laisse pas tromper : on **accepte** d’être trompé. C’est un contrat, pas une naïveté.
+> On ne se laisse pas tromper : on **accepte** d’être trompé.
 
 ## Les outils de l’illusion
-- le **décor** et les **accessoires** ;
-- le **costume** et le **maquillage** ;
-- la **lumière**, qui isole, colore et rythme ;
-- le **son** et la **musique** ;
-- le **jeu** de l’acteur — voix, geste, regard, silence.
+| L’outil | Ce qu’il apporte |
+| Le **décor** et les **accessoires** | Le lieu |
+| Le **costume** et le **maquillage** | Le personnage |
+| La **lumière** | Elle isole, colore et rythme |
+| Le **son** et la **musique** | L’atmosphère |
+| Le **jeu** de l’acteur | Voix, geste, regard, **silence** |
 
 ## Le théâtre dans le théâtre
-Certaines pièces montrent des personnages qui **jouent la comédie** à d’autres personnages : Sganarelle joue au médecin, Scapin joue la peur. Le spectateur voit alors **deux niveaux** : il sait ce que le personnage trompé ignore. Ce décalage s’appelle l’**ironie dramatique**, et c’est une grande source de plaisir.
+~ Sganarelle joue au médecin → Scapin joue la peur → le spectateur voit DEUX niveaux
+
+Il sait ce que le personnage trompé ignore : ce décalage s’appelle l’**ironie dramatique**, et c’est une grande source de plaisir.
 
 ## Le vocabulaire de la représentation
-La **mise en scène** est le travail du **metteur en scène** : il choisit comment le texte devient spectacle. Les **coulisses** sont l’espace caché, le **plateau** l’espace de jeu, la **réplique** ce que dit un personnage, la **scène** à la fois le lieu et une unité du texte.
+| Le mot | Ce qu’il désigne |
+| La **mise en scène** | Le travail du **metteur en scène** : comment le texte devient spectacle |
+| Les **coulisses** | L’espace caché |
+| Le **plateau** | L’espace de jeu |
+| La **scène** | À la fois le lieu et une unité du texte |
 
 ## Deux grands genres
-La **comédie** fait rire de personnages ordinaires et finit bien ; la **tragédie** met en scène des personnages illustres pris dans un destin funeste et finit mal.`,
+| Le genre | Ses personnages | Sa fin |
+| La **comédie** | Ordinaires | Elle finit **bien** |
+| La **tragédie** | Illustres, pris dans un destin funeste | Elle finit **mal** |`,
           },
           questions: [
             ['Qu’est-ce que la convention théâtrale ?', ['L’accord tacite du spectateur pour croire à ce qu’il voit', 'Le contrat de l’acteur', 'Le règlement de la salle', 'Le plan du décor'], 0, 'On accepte d’être trompé, on n’est pas dupe.'],
@@ -470,29 +586,41 @@ La **comédie** fait rire de personnages ordinaires et finit bien ; la **tragéd
           axe: 'Se masquer, jouer, déjouer : ruses en action',
           lecon: {
             titre: 'Réécrire un conte pour aujourd’hui',
-            cours: `## La pièce
-**Joël Pommerat** est un auteur et metteur en scène contemporain. Son *Petit Chaperon Rouge* (**2004**) réécrit le conte de **Charles Perrault** pour la scène : même trame, tout autre éclairage.
+            cours: `Pommerat garde la trame du conte de Perrault et en change tout l’éclairage — au sens propre.
+
+## La pièce
+**Joël Pommerat** est un auteur et metteur en scène contemporain. Son *Petit Chaperon Rouge* (**2004**) réécrit le conte de **Charles Perrault** pour la scène.
 
 ## Ce qu’il garde, ce qu’il change
-- **Il garde** : la petite fille, la mère, la grand-mère, le loup, le chemin, la dévoration.
-- **Il change** : un **narrateur** vient sur scène raconter et commenter ; les personnages n’ont pas de nom (« la petite fille », « la mère ») ; l’histoire est ramenée à un cadre **quotidien** — une mère trop occupée, une enfant qui s’ennuie et cherche l’aventure.
+| Il garde | Il change |
+| La petite fille, la mère, la grand-mère | Un **narrateur** vient sur scène raconter et commenter |
+| Le loup, le chemin, la dévoration | Les personnages n’ont **pas de nom** : « la petite fille », « la mère » |
+| | Le cadre devient **quotidien** : une mère trop occupée, une enfant qui s’ennuie |
 
 ## Le rôle de la lumière
-La pièce se joue dans une **quasi-obscurité** traversée de faisceaux. La peur naît de ce qu’on **ne voit pas** : le loup est souvent une ombre, une voix, une silhouette. C’est un choix de mise en scène qui fait le sujet même du spectacle.
+La pièce se joue dans une **quasi-obscurité** traversée de faisceaux. Le loup est souvent une ombre, une voix, une silhouette.
+
+!> La peur naît de ce qu’on **ne voit pas**. Ce n’est pas un effet ajouté : c’est le sujet même du spectacle.
 
 > Chez Pommerat, le noir n’est pas une absence de décor : c’est le décor.
 
 ## Le thème
-Le conte parle de l’**enfance qui grandit** : quitter la maison, désobéir, affronter la peur, revenir changé. Pommerat déplace l’accent de la morale (« n’écoutez pas les inconnus ») vers la **solitude** de l’enfant et le **désir d’aventure**.
+Le conte parle de l’**enfance qui grandit**.
 
-## Réécriture, adaptation, parodie
-- **Réécrire** : reprendre une trame et la traiter autrement.
-- **Adapter** : faire passer une œuvre d’un genre à un autre (conte → théâtre).
-- **Parodier** : imiter en exagérant, pour faire rire.
-Pommerat **réécrit** et **adapte** ; il ne parodie pas — son texte est grave.
+~ Quitter la maison → désobéir → affronter la peur → revenir changé
+
+Pommerat déplace l’accent de la morale — « n’écoutez pas les inconnus » — vers la **solitude** de l’enfant et le **désir d’aventure**.
+
+## Trois mots à distinguer
+| Le mot | Ce qu’il désigne |
+| **Réécrire** | Reprendre une trame et la traiter autrement |
+| **Adapter** | Faire passer une œuvre d’un genre à un autre — conte → théâtre |
+| **Parodier** | Imiter en exagérant, pour faire rire |
+
+!> Pommerat **réécrit** et **adapte** ; il ne **parodie pas**. Son texte est grave.
 
 ## Comparer deux versions
-Comparer Perrault et Pommerat, c’est mesurer ce qu’une époque fait d’une même histoire : la fin, le rôle de la mère, la présence ou l’absence de morale explicite.`,
+Comparer Perrault et Pommerat, c’est mesurer ce qu’une époque fait d’une même histoire : la **fin**, le **rôle de la mère**, la présence ou l’absence de **morale explicite**.`,
           },
           questions: [
             ['Qui a écrit ce Petit Chaperon Rouge pour le théâtre ?', ['Joël Pommerat', 'Charles Perrault', 'Les frères Grimm', 'Molière'], 0, 'La pièce date de 2004.'],

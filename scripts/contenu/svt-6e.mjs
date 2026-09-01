@@ -114,29 +114,34 @@ DELETE FROM public.chapters c
           axe: 'Unité et diversité des êtres vivants',
           lecon: {
             titre: 'La brique commune à tout ce qui vit',
-            cours: `Tous les êtres vivants — la bactérie, le chêne, la fourmi, toi — sont faits de **cellules**. C’est le point commun de tout ce qui vit.
+            cours: `La bactérie, le chêne, la fourmi, toi : tous faits de cellules. C’est le point commun de tout ce qui vit.
 
-## Qu’est-ce qu’une cellule ?
-C’est la **plus petite unité** capable de vivre. Elle est si petite qu’il faut un **microscope** pour la voir : quelques centièmes de millimètre.
+## Qu’est-ce qu’une cellule
+La **plus petite unité capable de vivre**. Quelques centièmes de millimètre : il faut un **microscope** pour la voir.
 
-## Ce qu’on trouve dans toute cellule
-- une **membrane** qui la délimite et contrôle les échanges ;
-- un **cytoplasme**, milieu gélatineux où se déroulent les réactions ;
-- un **noyau**, qui contient l’information génétique et commande la cellule.
+## Ce qu’on trouve dans TOUTE cellule
+| L’élément | Son rôle |
+| La **membrane** | Elle délimite et contrôle les échanges |
+| Le **cytoplasme** | Milieu gélatineux où se déroulent les réactions |
+| Le **noyau** | Il contient l’information génétique et commande la cellule |
 
-## Ce que la cellule végétale a en plus
-- une **paroi** rigide, qui lui donne sa forme et soutient la plante ;
-- des **chloroplastes** verts, contenant la **chlorophylle**, où se fait la photosynthèse ;
-- une grande **vacuole** remplie de liquide.
+## Ce que la cellule végétale a EN PLUS
+| L’élément | Son rôle |
+| La **paroi** rigide | Elle donne la forme et soutient la plante |
+| Les **chloroplastes** verts | Ils contiennent la **chlorophylle** : la photosynthèse s’y fait |
+| La grande **vacuole** | Elle est remplie de liquide |
 
-> C’est la paroi qui explique qu’une tige tienne debout et qu’une cellule végétale ait des angles droits, là où la cellule animale est arrondie.
+!> C’est la **paroi** qui explique qu’une tige tienne debout, et qu’une cellule végétale ait des **angles droits** là où la cellule animale est arrondie.
 
 ## Unicellulaire et pluricellulaire
-- **Unicellulaire** : l’être vivant tient en **une seule** cellule (bactérie, paramécie, levure).
-- **Pluricellulaire** : il en compte des milliards, organisées en tissus et en organes (l’humain en a environ 30 000 milliards).
+| Le type | Ce qu’il est | Exemples |
+| **Unicellulaire** | **Une seule** cellule | Bactérie, paramécie, levure |
+| **Pluricellulaire** | Des milliards, organisées en tissus et en organes | L’humain en a environ **30 000 milliards** |
 
 ## Toute cellule vient d’une cellule
-Une cellule ne naît jamais de rien : elle provient toujours de la **division** d’une cellule précédente. C’est ainsi que l’on grandit et que les blessures cicatrisent.`,
+~ Une cellule se divise → deux cellules → elles se divisent à leur tour
+
+> Une cellule ne naît **jamais de rien**. C’est ainsi que l’on grandit et que les blessures cicatrisent.`,
           },
           questions: [
             ['Quel est le point commun de tous les êtres vivants ?', ['Ils sont constitués de cellules', 'Ils ont un squelette', 'Ils se déplacent', 'Ils respirent de l’air'], 0, 'La cellule est la plus petite unité capable de vivre.'],
@@ -154,26 +159,37 @@ Une cellule ne naît jamais de rien : elle provient toujours de la **division** 
           axe: 'Unité et diversité des êtres vivants',
           lecon: {
             titre: 'Ranger le vivant par ce qu’il possède',
-            cours: `## Le principe : les attributs
-On ne classe **pas** les êtres vivants par ce qu’ils font (voler, nager) ni par leur milieu de vie, mais par les **attributs** qu’ils **possèdent** : squelette interne, vertèbres, poils, plumes, quatre membres, mamelles…
+            cours: `On ne classe pas les êtres vivants par ce qu’ils font, mais par ce qu’ils possèdent.
 
-> La chauve-souris vole comme l’oiseau, mais elle a des **poils** et des **mamelles** : c’est un mammifère. Le critère est ce qu’on possède, pas ce qu’on fait.
+## Le principe : les attributs
+Squelette interne, vertèbres, poils, plumes, quatre membres, mamelles : ce sont des **attributs**.
+
+!> La **chauve-souris vole** comme l’oiseau, mais elle a des **poils** et des **mamelles** : c’est un **mammifère**. Le critère est ce qu’on **possède**, pas ce qu’on fait ni où l’on vit.
 
 ## Les groupes emboîtés
-On représente la classification par des **boîtes emboîtées** : chaque boîte porte un attribut, et tous les êtres qui la partagent y entrent. Une boîte incluse dans une autre partage tous les attributs de la plus grande.
-Exemple : la boîte « vertèbres » contient la boîte « poils et mamelles » (les mammifères), qui contient la boîte « pouce opposable » (les primates).
+~ Vertèbres → contient les poils et mamelles (mammifères) → contient le pouce opposable (primates)
+
+Chaque boîte porte un attribut, et une boîte incluse dans une autre partage **tous** les attributs de la plus grande.
 
 ## Quelques grands groupes
-- **Vertébrés** : squelette interne et vertèbres — poissons, amphibiens, reptiles, oiseaux, mammifères.
-- **Arthropodes** : squelette **externe** et pattes articulées — insectes (6 pattes), arachnides (8 pattes), crustacés.
-- **Mollusques** : corps mou, souvent une coquille.
+| Le groupe | Son attribut | Ses membres |
+| Les **vertébrés** | Squelette **interne** et vertèbres | Poissons, amphibiens, reptiles, oiseaux, mammifères |
+| Les **arthropodes** | Squelette **externe** et pattes articulées | Insectes (**6 pattes**), arachnides (**8 pattes**), crustacés |
+| Les **mollusques** | Corps mou, souvent une coquille | Escargot, moule, poulpe |
 
 ## Espèce, genre, nom scientifique
-Une **espèce** regroupe les individus qui peuvent se reproduire entre eux et donner une descendance elle-même féconde.
-Chaque espèce porte un **nom scientifique en latin**, en deux mots : *Homo sapiens*, *Canis lupus*. Ce nom est le même dans tous les pays, ce qui évite les confusions entre langues.
+= Une espèce : les individus qui peuvent se reproduire entre eux ET donner une descendance elle-même féconde
+
+Chaque espèce porte un **nom scientifique en latin**, en deux mots.
+
+= Homo sapiens · Canis lupus
+
+> Ce nom est le **même dans tous les pays** : il évite les confusions entre langues.
 
 ## Un lien de parenté
-Partager des attributs, c’est partager un **ancêtre commun**. La classification ne range pas seulement : elle raconte une **histoire de famille**.`,
+Partager des attributs, c’est partager un **ancêtre commun**.
+
+> La classification ne range pas seulement : elle raconte une **histoire de famille**.`,
           },
           questions: [
             ['Sur quoi repose la classification des êtres vivants ?', ['Sur les attributs qu’ils possèdent', 'Sur leur milieu de vie', 'Sur leur mode de déplacement', 'Sur leur taille'], 0, 'On classe par ce qu’on a, pas par ce qu’on fait.'],
@@ -191,22 +207,38 @@ Partager des attributs, c’est partager un **ancêtre commun**. La classificati
           axe: 'Unité et diversité des êtres vivants',
           lecon: {
             titre: 'Le vivant change au fil du temps',
-            cours: `## Les espèces ne sont pas figées
-Les espèces **apparaissent**, se **transforment** et **disparaissent**. La vie sur Terre a environ **3,8 milliards d’années**, et l’immense majorité des espèces qui ont existé sont aujourd’hui **éteintes**.
+            cours: `Les espèces apparaissent, se transforment et disparaissent. L’immense majorité de celles qui ont existé sont éteintes.
+
+## L’échelle du temps
+@ Il y a 3,8 milliards d’années — Apparition de la vie sur Terre
+@ Il y a 66 millions d’années — Une extinction de masse fait disparaître les dinosaures non-aviens
+@ Ensuite — Les mammifères se diversifient dans la place libérée
 
 ## Les fossiles, nos archives
-Un **fossile** est un reste ou une trace d’un être vivant du passé, conservé dans la roche (os, coquille, empreinte, terrier). Les fossiles prouvent que des espèces différentes des actuelles ont vécu, et permettent de les **dater** : plus la couche de roche est profonde, plus elle est ancienne.
+Un **fossile** est un reste ou une trace d’un être vivant du passé, conservé dans la roche : os, coquille, empreinte, terrier.
+
+~ Une couche profonde = ancienne → une couche superficielle = récente
+
+Les fossiles prouvent que des espèces différentes des actuelles ont vécu, et permettent de les **dater**.
 
 ## Comment ça marche
-Au sein d’une espèce, les individus **varient** : taille, couleur, résistance au froid. Quand le milieu change, certaines variations donnent un **avantage** — ces individus survivent mieux, se reproduisent davantage et transmettent leurs caractères. Sur des milliers de générations, l’espèce **se transforme**.
+~ Les individus VARIENT → le milieu change → certaines variations donnent un avantage → ces individus laissent plus de descendants → sur des milliers de générations, l’espèce se transforme
 
-> Ce n’est pas l’individu qui s’adapte au cours de sa vie : c’est l’espèce qui change parce que certains individus laissent plus de descendants que d’autres.
+!> **Ce n’est pas l’individu qui s’adapte au cours de sa vie.** C’est l’**espèce** qui change, parce que certains individus laissent plus de descendants que d’autres. La girafe n’a pas allongé son cou en tirant dessus.
 
 ## Les crises biologiques
-Cinq **extinctions de masse** ont éliminé une grande part du vivant. La plus connue, il y a **66 millions d’années**, a fait disparaître les dinosaures non-aviens et a libéré la place où les mammifères se sont diversifiés.
+= Cinq extinctions de masse ont éliminé une grande part du vivant
 
 ## La biodiversité aujourd’hui
-La **biodiversité** est la variété du vivant. Elle diminue vite sous l’effet des activités humaines : destruction des milieux, pollution, surexploitation, réchauffement. La protéger, c’est protéger les équilibres dont nous dépendons.`,
+La **biodiversité** est la variété du vivant. Elle diminue vite sous l’effet des activités humaines.
+
+| La menace | |
+| Destruction des **milieux** | |
+| **Pollution** | |
+| **Surexploitation** | |
+| **Réchauffement** | |
+
+> La protéger, c’est protéger les équilibres dont nous dépendons.`,
           },
           questions: [
             ['Qu’est-ce qu’un fossile ?', ['Un reste ou une trace d’un être vivant du passé conservé dans la roche', 'Une pierre de forme animale', 'Un animal très ancien encore vivant', 'Un minéral rare'], 0, 'Os, coquilles, empreintes et terriers en sont.'],
@@ -228,26 +260,34 @@ La **biodiversité** est la variété du vivant. Elle diminue vite sous l’effe
           axe: 'Les aliments',
           lecon: {
             titre: 'Ce que contient ce qu’on mange',
-            cours: `Les aliments apportent des **nutriments**, dont l’organisme a besoin pour fonctionner, grandir et se réparer.
+            cours: `Les aliments apportent des nutriments. L’organisme en a besoin pour fonctionner, grandir et se réparer.
 
 ## Les grandes familles de nutriments
-- **Glucides** (sucres) : le **carburant** principal. Pain, pâtes, riz, fruits.
-- **Lipides** (graisses) : réserve d’énergie et constituants des membranes. Huile, beurre, fruits secs.
-- **Protides** (protéines) : les **matériaux de construction** du corps. Viande, poisson, œufs, légumineuses.
-- **Vitamines** et **minéraux** (calcium, fer) : en très petite quantité, mais indispensables.
-- **Eau** : elle représente environ **60 %** de la masse du corps.
-- **Fibres** : elles ne nourrissent pas mais font fonctionner l’intestin.
+| Le nutriment | Son rôle | Où on le trouve |
+| Les **glucides** (sucres) | Le **carburant** principal | Pain, pâtes, riz, fruits |
+| Les **lipides** (graisses) | Réserve d’énergie, constituants des membranes | Huile, beurre, fruits secs |
+| Les **protides** (protéines) | Les **matériaux de construction** | Viande, poisson, œufs, légumineuses |
+| Les **vitamines** et **minéraux** | En très petite quantité, mais indispensables | Calcium, fer |
+| L’**eau** | Environ **60 %** de la masse du corps | |
+| Les **fibres** | Elles ne nourrissent pas, mais font fonctionner l’intestin | |
 
 ## Le rôle de la digestion
-Les aliments sont trop gros pour passer dans le sang. La **digestion** les réduit en nutriments assez petits pour traverser la paroi de l’**intestin grêle** : c’est l’**absorption intestinale**. Le sang les distribue ensuite à tous les organes.
+!> Les aliments sont **trop gros** pour passer dans le sang.
+
+~ La digestion réduit les aliments en nutriments → l’absorption les fait traverser la paroi de l’intestin grêle → le sang les distribue à tous les organes
 
 ## Une alimentation équilibrée
-Aucun aliment ne contient tout : il faut **varier**. Les repères sont simples — des fruits et légumes à chaque repas, des féculents à chaque repas, des protéines une à deux fois par jour, peu de produits gras, sucrés et salés, et de l’eau comme seule boisson indispensable.
+| Le repère | |
+| Des **fruits et légumes** | À chaque repas |
+| Des **féculents** | À chaque repas |
+| Des **protéines** | Une à deux fois par jour |
+| Gras, sucré, salé | **Peu** |
+| L’**eau** | La seule boisson indispensable |
 
-> Équilibré ne veut pas dire parfait à chaque repas, mais varié sur la semaine.
+> Équilibré ne veut pas dire parfait à chaque repas, mais **varié sur la semaine**.
 
 ## Les besoins varient
-Un adolescent en croissance, un sportif et une personne âgée n’ont pas les mêmes besoins. L’activité physique, l’âge et la taille les font changer.`,
+Un adolescent en croissance, un sportif et une personne âgée n’ont pas les mêmes besoins. L’**activité physique**, l’**âge** et la **taille** les font changer.`,
           },
           questions: [
             ['Quel nutriment est le carburant principal de l’organisme ?', ['Les glucides', 'Les lipides', 'Les protides', 'Les vitamines'], 0, 'Pain, pâtes et riz en apportent.'],
@@ -265,28 +305,41 @@ Un adolescent en croissance, un sportif et une personne âgée n’ont pas les m
           axe: 'Les aliments',
           lecon: {
             titre: 'Le sang livre, les organes consomment',
-            cours: `## Ce dont un organe a besoin
-Pour fonctionner, tout organe a besoin en permanence de **dioxygène** et de **nutriments**. Il produit en retour des **déchets** : du **dioxyde de carbone** et de l’urée.
+            cours: `Le sang livre, les organes consomment. Toute la circulation tient dans cette phrase.
+
+## Ce dont un organe a besoin
+| Il reçoit | Il rejette |
+| Du **dioxygène** | Du **dioxyde de carbone** |
+| Des **nutriments** | De l’**urée** |
 
 ## Le sang, le livreur
-Le **sang** circule dans les vaisseaux et assure ces échanges : il **apporte** dioxygène et nutriments, il **emporte** les déchets. Le **cœur** est la pompe qui le fait circuler sans arrêt.
+Le **sang** circule dans les vaisseaux : il **apporte** dioxygène et nutriments, il **emporte** les déchets. Le **cœur** est la pompe qui le fait circuler sans arrêt.
 
 ## D’où vient le dioxygène
-De l’air, par la **respiration**. Il entre dans les **poumons**, passe dans le sang au niveau des **alvéoles pulmonaires** — de minuscules sacs très nombreux, dont la paroi est extrêmement fine — et le dioxyde de carbone fait le trajet inverse.
+~ L’air → les poumons → les alvéoles pulmonaires → le sang
+
+Les **alvéoles pulmonaires** sont de minuscules sacs très nombreux, à la paroi extrêmement fine. Le dioxyde de carbone fait le trajet **inverse**.
 
 ## D’où viennent les nutriments
-Des aliments, par la **digestion** puis l’**absorption** dans l’intestin grêle.
+~ Les aliments → la digestion → l’absorption dans l’intestin grêle → le sang
 
 ## Ce que devient l’énergie
-Dans chaque organe, les nutriments et le dioxygène réagissent : c’est la **respiration cellulaire**. Elle libère l’**énergie** nécessaire au fonctionnement, et produit du dioxyde de carbone et de l’eau.
+= Nutriments + dioxygène → énergie + dioxyde de carbone + eau
+
+C’est la **respiration cellulaire**, et elle a lieu **dans chaque organe**.
 
 ## Pendant l’effort
-Les muscles consomment davantage. Le corps s’adapte : le **rythme cardiaque** augmente, la **respiration** s’accélère, et le sang est redistribué en priorité vers les muscles.
+| Ce qui change | Pourquoi |
+| Le **rythme cardiaque** augmente | Il faut livrer plus vite |
+| La **respiration** s’accélère | Il faut plus de dioxygène |
+| Le sang est **redistribué** | En priorité vers les muscles |
 
-> Un cœur qui bat plus vite pendant un effort n’est pas un cœur en difficulté : c’est un cœur qui livre plus vite.
+> Un cœur qui bat plus vite pendant un effort n’est pas un cœur en difficulté : c’est un cœur qui **livre plus vite**.
 
 ## L’élimination des déchets
-Les **reins** filtrent le sang et fabriquent l’**urine**, qui évacue l’urée. Les poumons, eux, évacuent le dioxyde de carbone.`,
+| L’organe | Ce qu’il évacue |
+| Les **reins** | Ils filtrent le sang et fabriquent l’**urine**, qui évacue l’**urée** |
+| Les **poumons** | Ils évacuent le **dioxyde de carbone** |`,
           },
           questions: [
             ['De quoi tout organe a-t-il besoin en permanence ?', ['De dioxygène et de nutriments', 'De dioxyde de carbone', 'D’urée', 'De fibres'], 0, 'Le sang les lui apporte.'],
@@ -304,25 +357,44 @@ Les **reins** filtrent le sang et fabriquent l’**urine**, qui évacue l’uré
           axe: 'Les aliments',
           lecon: {
             titre: 'Produire de quoi manger',
-            cours: `## Deux grandes voies
-- L’**agriculture** cultive des végétaux (céréales, légumes, fruits).
-- L’**élevage** produit des animaux et leurs produits (viande, lait, œufs).
+            cours: `Une plante ne mange pas : elle produit. C’est le point de départ de toute la chaîne alimentaire.
+
+## Deux grandes voies
+| La voie | Ce qu’elle produit |
+| L’**agriculture** | Des végétaux : céréales, légumes, fruits |
+| L’**élevage** | Des animaux et leurs produits : viande, lait, œufs |
 
 ## Les besoins d’une plante cultivée
-Une plante verte a besoin de **lumière**, d’**eau**, de **dioxyde de carbone** et de **sels minéraux** puisés dans le sol par ses racines. Avec ces éléments et la lumière, elle fabrique sa propre matière : c’est la **photosynthèse**.
-Une plante est **productrice primaire** : elle ne mange pas, elle produit.
+| Ce qu’il lui faut | D’où ça vient |
+| La **lumière** | Le Soleil |
+| L’**eau** | Le sol, par les racines |
+| Le **dioxyde de carbone** | L’air |
+| Les **sels minéraux** | Le sol, par les racines |
+
+= Avec ces éléments et la lumière, la plante fabrique sa propre matière : c’est la PHOTOSYNTHÈSE
+
+> Une plante est **productrice primaire** : elle ne mange pas, elle produit.
 
 ## Pourquoi on amende les sols
-Les cultures **prélèvent** des sels minéraux. Sans apport, le sol s’appauvrit. On y remédie par des **engrais** (organiques comme le fumier, ou minéraux) et par la **rotation des cultures**, qui alterne les espèces pour ménager le sol.
+~ Les cultures prélèvent des sels minéraux → sans apport, le sol s’appauvrit → engrais et rotation des cultures
+
+| Le remède | Ce qu’il fait |
+| Les **engrais** | Organiques (fumier) ou minéraux |
+| La **rotation des cultures** | Alterner les espèces pour ménager le sol |
 
 ## Le coût de l’élevage
-Nourrir un animal pour le manger ensuite coûte beaucoup plus de végétaux, d’eau et de surface que de manger directement des végétaux : à chaque maillon de la chaîne alimentaire, une grande partie de l’énergie est **perdue**.
+!> À **chaque maillon** de la chaîne alimentaire, une grande partie de l’énergie est **perdue**. Nourrir un animal pour le manger ensuite coûte beaucoup plus de végétaux, d’eau et de surface que de manger directement des végétaux.
 
 > C’est pourquoi un kilo de viande mobilise bien plus de ressources qu’un kilo de céréales.
 
 ## Les impacts et les choix
-L’agriculture intensive produit beaucoup mais utilise engrais et **pesticides**, qui polluent l’eau et réduisent la biodiversité. L’agriculture biologique s’en passe largement, avec des rendements souvent inférieurs.
-Manger local et de **saison**, limiter le **gaspillage** — un tiers de la nourriture produite est perdue — sont des leviers accessibles à chacun.`,
+| Le modèle | Ce qu’il donne | Ce qu’il coûte |
+| L’agriculture **intensive** | Beaucoup de production | Engrais et **pesticides** : eau polluée, biodiversité réduite |
+| L’agriculture **biologique** | Elle s’en passe largement | Des rendements souvent inférieurs |
+
+~ Manger local → manger de saison → limiter le gaspillage
+
+= Un tiers de la nourriture produite est perdue`,
           },
           questions: [
             ['De quoi une plante verte a-t-elle besoin pour produire sa matière ?', ['Lumière, eau, dioxyde de carbone et sels minéraux', 'De matière organique du sol', 'D’animaux', 'De dioxygène seulement'], 0, 'C’est la photosynthèse.'],
@@ -340,29 +412,45 @@ Manger local et de **saison**, limiter le **gaspillage** — un tiers de la nour
           axe: 'Les aliments',
           lecon: {
             titre: 'Des micro-organismes utiles, des micro-organismes à arrêter',
-            cours: `## Les micro-organismes qui transforment
-Certains aliments existent **grâce** aux micro-organismes. C’est la **fermentation** :
-- le **pain** lève grâce à la **levure**, qui produit du dioxyde de carbone ;
-- le **yaourt** et le **fromage** viennent de **bactéries** qui transforment le lait ;
-- le vin, la bière et la choucroute sont aussi des produits fermentés.
+            cours: `Certains micro-organismes fabriquent nos aliments. D’autres les abîment. Toute la conservation est là.
+
+## Les micro-organismes qui transforment
+= La fermentation
+
+| L’aliment | Le micro-organisme |
+| Le **pain** | La **levure**, qui produit du dioxyde de carbone : la pâte lève |
+| Le **yaourt**, le **fromage** | Des **bactéries** qui transforment le lait |
+| Le vin, la bière, la choucroute | D’autres fermentations |
 
 ## Les micro-organismes qui abîment
-D’autres provoquent l’**altération** des aliments et peuvent rendre malade. Ils ont besoin, pour se multiplier, de **chaleur**, d’**eau** et de **nutriments**. Toute technique de conservation consiste à leur retirer au moins l’un des trois.
+| Ce dont ils ont besoin | |
+| De la **chaleur** | |
+| De l’**eau** | |
+| Des **nutriments** | |
+
+> Toute technique de conservation consiste à leur **retirer au moins l’un des trois**.
 
 ## Les techniques de conservation
-- **Le froid** : le **réfrigérateur** (~4 °C) ralentit leur multiplication ; le **congélateur** (−18 °C) l’arrête presque. Le froid ne **tue** pas : il met en pause.
-- **La chaleur** : la **pasteurisation** (~70 °C) en détruit une grande partie ; la **stérilisation** (>100 °C) les élimine — c’est la conserve.
-- **Le séchage** : on retire l’eau (fruits secs, pâtes).
-- **Le sel et le sucre** : ils retiennent l’eau et la rendent indisponible (jambon sec, confiture).
-- **Le vide** et la **fumaison** complètent la liste.
+| La technique | Ce qu’elle fait | Le détail |
+| Le **réfrigérateur** (≈ 4 °C) | Il **ralentit** | |
+| Le **congélateur** (−18 °C) | Il **arrête presque** | |
+| La **pasteurisation** (≈ 70 °C) | Elle en **détruit** une grande partie | |
+| La **stérilisation** (> 100 °C) | Elle les **élimine** | C’est la conserve |
+| Le **séchage** | Il retire l’**eau** | Fruits secs, pâtes |
+| Le **sel** et le **sucre** | Ils rendent l’eau indisponible | Jambon sec, confiture |
+| Le **vide**, la **fumaison** | | |
 
-> Le froid met en pause, la chaleur détruit. C’est pourquoi un produit décongelé ne doit jamais être recongelé : les micro-organismes ont repris leur multiplication.
+!> **Le froid ne tue pas : il met en pause.** C’est pourquoi un produit décongelé ne doit **jamais** être recongelé — les micro-organismes ont repris leur multiplication.
 
 ## Lire une étiquette
-La **DLC** (« à consommer jusqu’au ») concerne les produits frais : elle ne se dépasse pas. La **DDM** (« à consommer de préférence avant ») signale une baisse de qualité, pas un danger.
+| La mention | Ce qu’elle signifie |
+| La **DLC** — « à consommer jusqu’au » | Produits frais : elle **ne se dépasse pas** |
+| La **DDM** — « à consommer de préférence avant » | Une baisse de **qualité**, pas un danger |
 
 ## L’hygiène
-Se laver les mains, respecter la chaîne du froid, séparer le cru et le cuit : les gestes simples évitent la plupart des intoxications alimentaires.`,
+~ Se laver les mains → respecter la chaîne du froid → séparer le cru et le cuit
+
+Ces gestes simples évitent la plupart des intoxications alimentaires.`,
           },
           questions: [
             ['Grâce à quoi le pain lève-t-il ?', ['À la levure, qui produit du dioxyde de carbone', 'Au sel', 'Au froid', 'À la cuisson seule'], 0, 'C’est une fermentation.'],
@@ -384,26 +472,37 @@ Se laver les mains, respecter la chaîne du froid, séparer le cru et le cuit : 
           axe: 'La reproduction des êtres vivants',
           lecon: {
             titre: 'Naître, grandir, se reproduire',
-            cours: `## Deux formes de reproduction
-- **Sexuée** : elle demande **deux** cellules reproductrices, un **spermatozoïde** (mâle) et un **ovule** (femelle). Leur rencontre est la **fécondation** ; elle donne une **cellule-œuf**, première cellule du nouvel être vivant. Les descendants sont **tous différents** entre eux.
-- **Asexuée** : un seul individu suffit — bouturage d’une plante, division d’une bactérie, stolons du fraisier. Les descendants sont **identiques** au parent.
+            cours: `La reproduction sexuée fabrique de la diversité ; l’asexuée fabrique des copies.
 
-> La reproduction sexuée fabrique de la diversité ; l’asexuée fabrique des copies.
+## Deux formes de reproduction
+| La reproduction | Ce qu’elle demande | Ses descendants |
+| **Sexuée** | **Deux** cellules reproductrices : un **spermatozoïde** et un **ovule** | Tous **différents** |
+| **Asexuée** | **Un seul** individu — bouturage, division d’une bactérie, stolons du fraisier | **Identiques** au parent |
+
+~ Spermatozoïde + ovule → fécondation → cellule-œuf → nouvel être vivant
 
 ## Où se fait la fécondation
-- **Externe** : dans l’eau, les cellules sont libérées dans le milieu (poissons, grenouilles). Il en faut beaucoup, car peu survivent.
-- **Interne** : dans le corps de la femelle (mammifères, oiseaux, reptiles, insectes). Moins de descendants, mieux protégés.
+| Le type | Où | Sa conséquence |
+| **Externe** | Dans l’eau : les cellules sont libérées dans le milieu (poissons, grenouilles) | Il en faut **beaucoup**, car peu survivent |
+| **Interne** | Dans le corps de la femelle (mammifères, oiseaux, reptiles, insectes) | Moins de descendants, **mieux protégés** |
 
 ## Le développement
-- **Direct** : le jeune ressemble à l’adulte en plus petit (chat, humain, oiseau).
-- **Indirect** : le jeune, appelé **larve**, ne ressemble pas à l’adulte et se transforme par **métamorphose** (têtard → grenouille, chenille → papillon).
+| Le type | Ce qui se passe | Exemples |
+| **Direct** | Le jeune ressemble à l’adulte, en plus petit | Chat, humain, oiseau |
+| **Indirect** | Une **larve**, puis une **métamorphose** | Têtard → grenouille, chenille → papillon |
 
 ## Chez les plantes à fleurs
-La **fleur** porte les organes reproducteurs. Le **pollen** doit atteindre le **pistil** : c’est la **pollinisation**, assurée par le vent ou par les **insectes pollinisateurs**. Après fécondation, l’**ovaire** devient un **fruit** et l’ovule une **graine**.
-La **dispersion** des graines (vent, animaux, eau) éloigne les jeunes plantes de la plante mère.
+~ Le pollen atteint le pistil (pollinisation) → fécondation → l’ovaire devient un FRUIT et l’ovule une GRAINE
+
+La **pollinisation** est assurée par le **vent** ou par les **insectes pollinisateurs**. La **dispersion** des graines — vent, animaux, eau — éloigne les jeunes plantes de la plante mère.
 
 ## Peuplement et saisons
-Selon les saisons, les espèces changent de forme ou de lieu : graines, bulbes, œufs, migration, hibernation. C’est ainsi qu’un milieu se **repeuple** au printemps.`,
+| La forme de résistance | Qui l’emploie |
+| **Graines**, **bulbes** | Les plantes |
+| **Œufs** | De nombreux animaux |
+| **Migration**, **hibernation** | Les animaux mobiles |
+
+> C’est ainsi qu’un milieu se **repeuple** au printemps.`,
           },
           questions: [
             ['Comment appelle-t-on la rencontre d’un spermatozoïde et d’un ovule ?', ['La fécondation', 'La pollinisation', 'La métamorphose', 'La germination'], 0, 'Elle donne une cellule-œuf.'],
@@ -421,28 +520,41 @@ Selon les saisons, les espèces changent de forme ou de lieu : graines, bulbes, 
           axe: 'La reproduction des êtres vivants',
           lecon: {
             titre: 'La puberté et le début de la vie',
-            cours: `## La puberté
-La **puberté** est le passage de l’enfance à l’âge adulte. Elle commence en général entre **10 et 15 ans**, à un âge qui varie beaucoup d’une personne à l’autre — et cette variation est **normale**.
+            cours: `La puberté commence entre 10 et 15 ans, à un âge qui varie beaucoup d’une personne à l’autre — et cette variation est normale.
 
-Elle se traduit par :
-- une **croissance** rapide ;
-- l’apparition des **caractères sexuels secondaires** (pilosité, mue de la voix et développement musculaire chez le garçon ; développement des seins et élargissement du bassin chez la fille) ;
-- le début du fonctionnement des **organes reproducteurs** : production de **spermatozoïdes** par les testicules, premières **règles** chez la fille, signe qu’un ovule est libéré chaque mois par les ovaires.
+## La puberté
+C’est le passage de l’enfance à l’âge adulte.
+
+| Ce qui change | Le détail |
+| Une **croissance** rapide | |
+| Les **caractères sexuels secondaires** | Pilosité, mue de la voix et développement musculaire chez le garçon ; développement des seins et élargissement du bassin chez la fille |
+| Les **organes reproducteurs** entrent en fonction | Production de **spermatozoïdes** par les testicules ; premières **règles** chez la fille |
+
+!> Il n’y a pas d’âge « normal » à la puberté : il y a une **fourchette**. Être en avance ou en retard sur ses camarades ne veut rien dire.
 
 ## Le cycle et les règles
-Environ une fois par mois, un ovaire libère un ovule : c’est l’**ovulation**. En l’absence de fécondation, la paroi de l’utérus est évacuée : ce sont les **règles**, qui durent quelques jours.
+~ Un ovaire libère un ovule (ovulation) → pas de fécondation → la paroi de l’utérus est évacuée : les RÈGLES
+
+Cela se produit environ une fois par mois ; les règles durent quelques jours.
 
 ## De la fécondation à la naissance
-La **fécondation** a lieu dans une trompe. La cellule-œuf se divise et vient se fixer dans l’**utérus** : c’est la **nidation**. L’**embryon** devient **fœtus** vers la fin du deuxième mois.
-Il est relié au **placenta** par le **cordon ombilical**, qui lui apporte dioxygène et nutriments et évacue ses déchets. La **grossesse** dure environ **9 mois** et se termine par l’**accouchement**.
+~ Fécondation dans une trompe → la cellule-œuf se divise → nidation dans l’utérus → embryon → fœtus vers la fin du 2e mois → accouchement
+
+| L’organe | Son rôle |
+| Le **placenta** | Il assure les échanges avec la mère |
+| Le **cordon ombilical** | Il apporte dioxygène et nutriments, évacue les déchets |
+
+= La grossesse dure environ 9 mois
 
 ## Contraception et protection
-La **contraception** (préservatif, pilule…) permet d’éviter une grossesse. Le **préservatif** est le seul moyen qui protège **aussi** des infections sexuellement transmissibles.
+| Le moyen | Ce qu’il évite |
+| La **pilule**, et les autres contraceptifs | Une **grossesse** |
+| Le **préservatif** | Une grossesse **ET** les infections sexuellement transmissibles |
 
-> Deux fonctions différentes, un seul objet qui remplit les deux : c’est pourquoi le préservatif a une place à part.
+!> Le **préservatif est le seul** moyen qui protège **aussi** des IST. Deux fonctions différentes, un seul objet qui remplit les deux.
 
 ## Respect et consentement
-Le corps de chacun lui appartient. Le **consentement** est libre, éclairé et peut être retiré à tout moment. Aucune pression, aucune moquerie sur le corps d’autrui n’est acceptable.`,
+> Le corps de chacun lui appartient. Le **consentement** est libre, éclairé, et peut être **retiré à tout moment**. Aucune pression, aucune moquerie sur le corps d’autrui n’est acceptable.`,
           },
           questions: [
             ['Qu’est-ce que la puberté ?', ['Le passage de l’enfance à l’âge adulte', 'La naissance', 'La fin de la croissance', 'Le début de la grossesse'], 0, 'Elle commence en général entre 10 et 15 ans.'],

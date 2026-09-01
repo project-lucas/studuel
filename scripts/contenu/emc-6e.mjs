@@ -102,27 +102,41 @@ DELETE FROM public.chapters c
           axe: 'Respecter autrui',
           lecon: {
             titre: 'Vivre ensemble sans se ressembler',
-            cours: `## Ce qu’est le respect
-Respecter quelqu’un, c’est reconnaître qu’il a la **même valeur** que soi, même s’il ne pense pas, ne croit pas, ne vit pas comme soi. Ce n’est pas être d’accord : c’est refuser de rabaisser.
+            cours: `Respecter quelqu’un, ce n’est pas être d’accord avec lui. C’est refuser de le rabaisser.
+
+## Ce qu’est le respect
+Reconnaître qu’une personne a la **même valeur** que soi, même si elle ne pense pas, ne croit pas, ne vit pas comme soi.
 
 ## La dignité
-Chaque personne a une **dignité** qui ne se mérite pas et ne se perd pas. Elle ne dépend ni des notes, ni de l’argent, ni de l’apparence, ni de l’origine. C’est le fondement de tous les droits.
+= La dignité ne se mérite pas et ne se perd pas
+
+Elle ne dépend ni des notes, ni de l’argent, ni de l’apparence, ni de l’origine.
+
+> C’est le fondement de **tous** les droits : si la dignité se méritait, les droits se retireraient.
 
 ## Les différences
-Les élèves d’une classe diffèrent par leur origine, leur religion ou son absence, leur famille, leur santé, leur handicap, leurs goûts. Ces différences sont **normales** — un groupe où tout le monde serait identique n’existe pas.
+Origine, religion ou absence de religion, famille, santé, handicap, goûts : ces différences sont **normales**.
+
+!> Un groupe où tout le monde serait identique **n’existe pas**. La question n’est donc jamais « faut-il des différences ? », mais « comment vit-on avec ? ».
 
 ## Le préjugé et le stéréotype
-- Un **stéréotype** est une idée toute faite sur un groupe (« les filles sont… », « les garçons sont… »).
-- Un **préjugé** est un jugement porté **avant** de connaître.
-Tous deux se répandent sans preuve, et ils font mal parce qu’ils traitent une personne comme un exemplaire de son groupe.
+| Le mot | Ce qu’il est | Exemple |
+| Le **stéréotype** | Une idée toute faite sur un **groupe** | « Les filles sont… », « les garçons sont… » |
+| Le **préjugé** | Un jugement porté **avant** de connaître | |
 
-> On ne choisit pas d’avoir des préjugés : on les reçoit. Mais on peut choisir de les vérifier avant d’agir dessus.
+Tous deux se répandent **sans preuve**, et font mal parce qu’ils traitent une personne comme un **exemplaire de son groupe**.
+
+> On ne choisit pas d’avoir des préjugés : on les reçoit. Mais on peut choisir de les **vérifier** avant d’agir dessus.
 
 ## La discrimination
-Traiter quelqu’un **moins bien** à cause de son origine, son sexe, sa religion, son handicap ou son apparence est une **discrimination**. C’est **interdit par la loi** — ce n’est pas seulement impoli, c’est un délit.
+= Traiter quelqu’un moins bien à cause de son origine, son sexe, sa religion, son handicap ou son apparence
+
+!> Ce n’est pas seulement impoli : c’est **interdit par la loi**. C’est un **délit**.
 
 ## Le respect en actes
-Écouter sans couper, ne pas se moquer, ne pas surnommer sans accord, laisser sa place, s’excuser quand on a blessé. Le respect n’est pas une intention : c’est une suite de gestes qui se voient.`,
+~ Écouter sans couper → ne pas se moquer → ne pas surnommer sans accord → s’excuser quand on a blessé
+
+> Le respect n’est pas une intention : c’est une suite de gestes qui **se voient**.`,
           },
           questions: [
             ['Que signifie respecter quelqu’un ?', ['Reconnaître qu’il a la même valeur que soi', 'Être d’accord avec lui', 'Lui obéir', 'L’éviter'], 0, 'Ce n’est pas être d’accord, c’est refuser de rabaisser.'],
@@ -140,36 +154,50 @@ Traiter quelqu’un **moins bien** à cause de son origine, son sexe, sa religio
           axe: 'Respecter autrui',
           lecon: {
             titre: 'Ce n’est jamais « juste pour rire »',
-            cours: `## La définition
-Le **harcèlement** est une violence **répétée**, exercée par une ou plusieurs personnes contre quelqu’un qui ne peut pas se défendre. Trois éléments le caractérisent :
+            cours: `Le harcèlement s’effondre presque toujours quand les témoins cessent d’être un public.
+
+## La définition
+Une violence **répétée**, exercée contre quelqu’un qui ne peut pas se défendre. Trois éléments le caractérisent :
+
 1. la **répétition** ;
 2. l’**intention** de nuire ;
 3. le **déséquilibre** de force — en nombre, en popularité, en âge.
 
-Une dispute entre deux élèves à égalité n’est pas du harcèlement. Une moquerie répétée par un groupe contre une même personne, si.
+!> Une dispute entre **deux élèves à égalité** n’est pas du harcèlement. Une moquerie répétée par un **groupe** contre une même personne, si. Les trois critères comptent ensemble.
 
 ## Les formes
-Moqueries, insultes, surnoms, mise à l’écart, rumeurs, vol ou dégradation d’affaires, violences physiques. Et le **cyberharcèlement** : messages, photos, comptes créés pour nuire.
+| La forme | Exemples |
+| **Verbale** | Moqueries, insultes, surnoms |
+| **Sociale** | Mise à l’écart, rumeurs |
+| **Matérielle** | Vol ou dégradation d’affaires |
+| **Physique** | Coups, bousculades |
+| **Cyber** | Messages, photos, comptes créés pour nuire |
 
 ## Pourquoi le cyberharcèlement est pire
-Il ne s’arrête pas à la grille du collège : il suit la victime **chez elle**, **la nuit**, et les traces se **rediffusent** indéfiniment. Le harceleur, lui, se croit protégé par l’écran — alors qu’une adresse IP s’identifie.
+| Ce qui change | Sa conséquence |
+| Il ne s’arrête pas à la grille | Il suit la victime **chez elle**, **la nuit** |
+| Les traces restent | Elles se **rediffusent** indéfiniment |
+| L’écran | Le harceleur se croit protégé — alors qu’une **adresse IP s’identifie** |
 
-## Les rôles
-- La **victime** ne « l’a pas cherché ». Personne ne mérite d’être harcelé.
-- Les **harceleurs**.
-- Les **témoins** : ce sont eux qui font tout basculer. Un groupe qui rit encourage ; un groupe qui refuse arrête. Ne rien faire, c’est déjà choisir un camp.
+## Les trois rôles
+| Le rôle | Ce qu’il faut savoir |
+| La **victime** | Elle ne « l’a pas cherché ». **Personne ne mérite d’être harcelé** |
+| Les **harceleurs** | |
+| Les **témoins** | Ce sont eux qui font tout basculer |
 
-> Le harcèlement s’effondre presque toujours quand les témoins cessent d’être un public.
+!> Un groupe qui rit **encourage** ; un groupe qui refuse **arrête**. Ne rien faire, c’est **déjà choisir un camp**.
 
 ## Que faire
-**En parler** — à un adulte, un professeur, l’infirmière, le CPE, un parent. Ce n’est pas « rapporter » : rapporter, c’est nuire à quelqu’un ; **signaler, c’est protéger**.
-Conserver les preuves (captures d’écran), ne pas répondre aux provocations, bloquer.
+~ En parler à un adulte → conserver les preuves (captures d’écran) → ne pas répondre aux provocations → bloquer
+
+!> **Signaler n’est pas rapporter.** Rapporter, c’est nuire à quelqu’un ; **signaler, c’est protéger**.
 
 ## Les numéros
-**3018** (harcèlement et cyberharcèlement, gratuit et anonyme) et **119** (enfance en danger).
+| Le numéro | Pour quoi |
+| **3018** | Harcèlement et cyberharcèlement — gratuit et anonyme |
+| **119** | Enfance en danger |
 
-## La loi
-Le harcèlement scolaire est un **délit** depuis 2022, puni par la loi — y compris pour les mineurs, avec des peines adaptées à leur âge.`,
+@ 2022 — Le harcèlement scolaire devient un délit puni par la loi, y compris pour les mineurs`,
           },
           questions: [
             ['Quels sont les trois éléments du harcèlement ?', ['La répétition, l’intention de nuire, le déséquilibre de force', 'La colère, le bruit, la peur', 'L’âge, le sexe, l’origine', 'Une seule insulte suffit'], 0, 'Une dispute à égalité n’est pas du harcèlement.'],
@@ -187,27 +215,34 @@ Le harcèlement scolaire est un **délit** depuis 2022, puni par la loi — y co
           axe: 'Respecter autrui',
           lecon: {
             titre: 'Le même droit, et la même liberté de choisir',
-            cours: `## Le principe
-Les filles et les garçons ont **les mêmes droits** : même école, mêmes matières, mêmes métiers possibles, même liberté de choisir. C’est inscrit dans la **Constitution** et dans la loi.
+            cours: `Un droit inscrit dans la loi n’est pas encore une réalité dans les faits. C’est justement pour cela qu’on continue d’en parler.
+
+## Le principe
+Filles et garçons ont **les mêmes droits** : même école, mêmes matières, mêmes métiers possibles, même liberté de choisir. C’est inscrit dans la **Constitution** et dans la loi.
 
 ## Ce qui gêne encore
-- Les **stéréotypes** : « les maths, c’est pour les garçons », « le soin, c’est pour les filles ». Rien ne les fonde, et ils orientent pourtant des choix d’études à 15 ans.
-- Le partage de l’espace : dans une cour de récréation, le terrain central est le plus souvent occupé par des garçons.
-- Les **remarques** sur l’apparence, plus fréquentes envers les filles.
+| L’obstacle | Comment il agit |
+| Les **stéréotypes** | « Les maths, c’est pour les garçons », « le soin, c’est pour les filles » : rien ne les fonde, et ils orientent pourtant des choix d’études à 15 ans |
+| Le partage de l’**espace** | Dans une cour de récréation, le terrain central est le plus souvent occupé par des garçons |
+| Les **remarques** sur l’apparence | Plus fréquentes envers les filles |
 
 ## Dans le monde du travail
-En France, à travail comparable, les femmes gagnent encore moins que les hommes, et les postes de direction leur sont moins ouverts. La loi impose l’**égalité salariale** depuis 1972 — elle n’est toujours pas atteinte.
+@ 1972 — La loi impose l’égalité salariale en France
 
-> Un droit inscrit dans la loi n’est pas encore une réalité dans les faits. C’est justement pour cela qu’on continue d’en parler.
+!> Elle **n’est toujours pas atteinte** : à travail comparable, les femmes gagnent encore moins, et les postes de direction leur sont moins ouverts.
 
 ## Le sexisme
-C’est le fait de traiter quelqu’un moins bien, ou de le juger, **à cause de son sexe**. Blagues rabaissantes, remarques sur le corps, insultes genrées : ce ne sont pas des maladresses, ce sont des atteintes.
+= Traiter quelqu’un moins bien, ou le juger, à cause de son sexe
+
+Blagues rabaissantes, remarques sur le corps, insultes genrées.
+
+> Ce ne sont pas des maladresses : ce sont des **atteintes**.
 
 ## Le consentement et le respect du corps
-Personne n’a le droit de toucher quelqu’un sans son accord. Le **consentement** est libre, clair, et peut être retiré à tout moment. Cela vaut à tout âge et dans toutes les situations.
+!> Personne n’a le droit de toucher quelqu’un **sans son accord**. Le **consentement** est libre, clair, et peut être **retiré à tout moment** — à tout âge et dans toutes les situations.
 
 ## Agir
-Ne pas rire d’une blague sexiste, ne pas relayer une image, dire quand quelque chose n’est pas normal, et en parler à un adulte.`,
+~ Ne pas rire d’une blague sexiste → ne pas relayer une image → dire quand ce n’est pas normal → en parler à un adulte`,
           },
           questions: [
             ['Que garantit la loi entre filles et garçons ?', ['Les mêmes droits et la même liberté de choisir', 'Des matières différentes', 'Des métiers séparés', 'Rien de particulier'], 0, 'C’est inscrit dans la Constitution.'],
@@ -227,28 +262,43 @@ Ne pas rire d’une blague sexiste, ne pas relayer une image, dire quand quelque
           axe: 'Les valeurs et symboles de la République',
           lecon: {
             titre: 'Ce qui représente la France',
-            cours: `## Le drapeau tricolore
-**Bleu, blanc, rouge**. Le bleu et le rouge sont les couleurs de Paris, le blanc celle du roi : le drapeau né en 1790 réunit la ville et la monarchie, puis devient celui de la Nation. Il flotte sur les bâtiments publics.
+            cours: `Un symbole n’est pas une décoration : c’est un raccourci qui rappelle une histoire commune.
+
+## Le drapeau tricolore
+| La couleur | Son origine |
+| Le **bleu** et le **rouge** | Les couleurs de **Paris** |
+| Le **blanc** | La couleur du **roi** |
+
+@ 1790 — Naissance du drapeau tricolore, qui réunit la ville et la monarchie
+
+Il flotte sur les bâtiments publics.
 
 ## La Marseillaise
-Écrite par **Rouget de Lisle** en **1792** à Strasbourg comme chant de guerre, reprise par les fédérés marseillais montant à Paris — d’où son nom. Hymne national depuis **1879**.
+@ 1792 — Rouget de Lisle l’écrit à Strasbourg, comme chant de guerre
+@ 1879 — Elle devient hymne national
+
+Elle doit son nom aux **fédérés marseillais** qui la chantaient en montant à Paris.
 
 ## Marianne
-Figure de femme coiffée du **bonnet phrygien**, porté par les esclaves affranchis de Rome : elle représente la **liberté** et la République. On la trouve dans toutes les mairies et sur les timbres.
+Une figure de femme coiffée du **bonnet phrygien**, porté par les **esclaves affranchis** de Rome : elle représente la **liberté** et la République.
 
-## La devise : Liberté, Égalité, Fraternité
-Elle apparaît pendant la Révolution et devient officielle sous la Troisième République. Elle est gravée au fronton des mairies et des écoles.
+> On la trouve dans toutes les mairies et sur les timbres.
+
+## La devise
+= Liberté, Égalité, Fraternité
+
+Apparue pendant la Révolution, officielle sous la Troisième République. Elle est gravée au fronton des mairies et des écoles.
 
 ## Le 14 Juillet
-Fête nationale depuis **1880**. Elle commémore à la fois la prise de la Bastille (1789) et la **Fête de la Fédération** (1790), qui célébrait l’unité de la Nation.
+@ 1880 — Le 14 Juillet devient fête nationale
+
+!> Il commémore **deux** événements : la prise de la **Bastille** (1789) **et** la **Fête de la Fédération** (1790), qui célébrait l’unité de la Nation.
 
 ## Le coq gaulois
-Symbole plus ancien et non officiel, né d’un jeu de mots latin (*gallus* signifie à la fois « coq » et « gaulois »). On le voit surtout dans le sport.
-
-> Un symbole n’est pas une décoration : c’est un raccourci qui rappelle une histoire commune. C’est pourquoi on les respecte, et pourquoi les abîmer est une atteinte.
+Un symbole plus ancien et **non officiel**, né d’un jeu de mots latin : *gallus* signifie à la fois « coq » et « gaulois ». On le voit surtout dans le sport.
 
 ## À quoi ça sert
-Les symboles disent qu’au-delà des différences, les citoyens appartiennent à une même communauté politique. Ils sont visibles partout précisément pour être un rappel quotidien.`,
+> Les symboles disent qu’au-delà des différences, les citoyens appartiennent à une **même communauté politique**. Ils sont visibles partout précisément pour être un rappel quotidien.`,
           },
           questions: [
             ['Quelles sont les couleurs du drapeau français, et d’où viennent-elles ?', ['Bleu et rouge de Paris, blanc du roi', 'Trois couleurs choisies au hasard', 'Les couleurs de la Révolution américaine', 'Les couleurs de la Bastille'], 0, 'Le drapeau naît en 1790.'],
@@ -266,25 +316,35 @@ Les symboles disent qu’au-delà des différences, les citoyens appartiennent �
           axe: 'Les valeurs et symboles de la République',
           lecon: {
             titre: 'Trois mots, trois exigences',
-            cours: `## La liberté
-C’est le droit de **penser, croire, s’exprimer, circuler, se réunir**. Mais elle n’est pas illimitée : la **liberté des uns s’arrête où commence celle des autres**.
-La loi fixe ces limites : on ne peut ni insulter, ni menacer, ni diffamer, ni appeler à la haine au nom de la liberté d’expression.
+            cours: `Liberté et égalité peuvent s’opposer. La fraternité est ce qui permet de tenir les deux ensemble.
+
+## La liberté
+Le droit de **penser, croire, s’exprimer, circuler, se réunir**.
+
+= La liberté des uns s’arrête où commence celle des autres
+
+!> On ne peut ni **insulter**, ni **menacer**, ni **diffamer**, ni **appeler à la haine** au nom de la liberté d’expression. Ces limites sont fixées par la loi.
 
 ## L’égalité
 Tous les citoyens sont **égaux devant la loi** : mêmes droits, mêmes devoirs, même justice, quels que soient l’origine, la religion, le sexe, la fortune.
-⚠️ Égalité ne veut pas dire **identité** : les gens restent différents. Et elle ne veut pas dire non plus égalité des situations — l’école gratuite existe justement parce que les familles ne sont pas également riches.
+
+!> **Égalité ne veut pas dire identité** : les gens restent différents. Et elle ne veut pas dire égalité des **situations** — l’école gratuite existe justement parce que les familles ne sont pas également riches.
 
 ## L’équité
-Traiter également des personnes en situation inégale ne suffit pas. Donner un temps supplémentaire à un élève dyslexique lors d’un contrôle n’est pas un privilège : c’est ce qui rétablit l’égalité réelle. C’est l’**équité**.
+= Traiter également des personnes en situation inégale ne suffit pas
+
+~ Un élève dyslexique reçoit du temps supplémentaire → ce n’est pas un privilège → c’est ce qui rétablit l’égalité RÉELLE
 
 ## La fraternité
-C’est le lien qui fait qu’on se sent concerné par les autres : entraide, solidarité, refus de laisser quelqu’un de côté. C’est la seule des trois qui ne s’impose pas par la loi — elle se pratique.
-Elle est pourtant inscrite dans le droit : la **non-assistance à personne en danger** est un délit.
+Le lien qui fait qu’on se sent concerné par les autres : entraide, solidarité, refus de laisser quelqu’un de côté.
 
-> Liberté et égalité peuvent s’opposer : la liberté totale creuse les écarts, l’égalité absolue supprime les choix. La fraternité est ce qui permet de tenir les deux ensemble.
+!> C’est la **seule des trois qui ne s’impose pas par la loi** — elle se pratique. Elle est pourtant inscrite dans le droit : la **non-assistance à personne en danger** est un délit.
 
-## Où on la lit
-Au fronton des mairies, des écoles, sur les pièces de monnaie, sur les documents officiels.
+## Pourquoi les trois ensemble
+| Seule | Ce qu’elle produit |
+| La **liberté** totale | Elle **creuse les écarts** |
+| L’**égalité** absolue | Elle **supprime les choix** |
+| La **fraternité** | Elle permet de tenir les deux ensemble |
 
 ## En classe
 La liberté d’exprimer son avis, l’égalité de traitement entre élèves, l’entraide : la devise n’est pas un slogan lointain, elle se joue chaque jour dans un établissement.`,
@@ -305,33 +365,38 @@ La liberté d’exprimer son avis, l’égalité de traitement entre élèves, l
           axe: 'Les valeurs et symboles de la République',
           lecon: {
             titre: 'Un espace où chacun est libre de croire ou non',
-            cours: `## Ce qu’est la laïcité
-La **laïcité** garantit trois choses en même temps :
-1. la **liberté de conscience** : croire, ne pas croire, changer d’avis ;
-2. la **séparation** entre l’État et les religions ;
-3. l’**égalité** de tous devant la loi, quelle que soit la croyance.
+            cours: `La laïcité ne demande à personne de renoncer à ce qu’il croit. Elle demande que l’État, lui, ne croie rien.
+
+## Ce qu’elle garantit
+| La garantie | Ce qu’elle veut dire |
+| La **liberté de conscience** | Croire, ne pas croire, changer d’avis |
+| La **séparation** | Entre l’État et les religions |
+| L’**égalité** | De tous devant la loi, quelle que soit la croyance |
 
 ## Ce qu’elle n’est pas
-Ce n’est **pas** l’interdiction des religions, ni une opinion contre elles. L’État ne se mêle pas des croyances : il ne les impose pas, ne les combat pas, n’en finance aucune.
+!> Ce n’est **pas** l’interdiction des religions, ni une opinion contre elles. L’État ne se mêle pas des croyances : il ne les impose pas, ne les combat pas, **n’en finance aucune**.
 
-> La laïcité ne demande à personne de renoncer à ce qu’il croit. Elle demande que l’État, lui, ne croie rien — pour pouvoir accueillir tout le monde.
+> C’est parce qu’il ne croit rien qu’il peut accueillir tout le monde.
 
 ## La loi de 1905
-La **séparation des Églises et de l’État** met fin au financement public des cultes et garantit le libre exercice de chacun.
+@ 1905 — La séparation des Églises et de l’État
+
+Elle met fin au financement public des cultes et garantit le libre exercice de chacun.
 
 ## À l’école publique
-- Les **enseignants**, agents de l’État, sont tenus à une **stricte neutralité**.
-- Les **élèves** sont libres de croire, mais la loi du **15 mars 2004** interdit les signes religieux **ostensibles** dans les écoles, collèges et lycées publics.
-- Les **programmes** sont les mêmes pour tous : on n’est pas dispensé d’un cours au nom d’une croyance.
+| Qui | Ce que la règle lui demande |
+| Les **enseignants**, agents de l’État | Une **stricte neutralité** |
+| Les **élèves** | Libres de croire, mais **pas de signes religieux ostensibles** |
+| Les **programmes** | Les mêmes pour tous : pas de dispense au nom d’une croyance |
+
+@ 15 mars 2004 — La loi interdit les signes religieux ostensibles dans les écoles, collèges et lycées publics
+@ 2013 — La Charte de la laïcité, en 15 articles, est affichée dans tous les établissements
 
 ## Pourquoi l’école
-Parce que c’est le lieu où l’on apprend **ensemble**, avant de choisir. Mettre les croyances à distance dans la classe, c’est faire en sorte qu’aucun élève ne soit d’abord vu comme le représentant d’un groupe.
-
-## La Charte de la laïcité
-Affichée dans tous les établissements depuis 2013, elle en rappelle les 15 articles en termes simples.
+> C’est le lieu où l’on apprend **ensemble**, avant de choisir. Mettre les croyances à distance dans la classe, c’est faire en sorte qu’aucun élève ne soit d’abord vu comme **le représentant d’un groupe**.
 
 ## Ce qui reste possible
-Parler des religions en cours — en histoire, en français, en arts — est non seulement permis mais **prévu par les programmes** : les connaître est un savoir, les pratiquer est un choix privé.`,
+!> **Parler des religions en cours est prévu par les programmes** — en histoire, en français, en arts. Les **connaître** est un savoir ; les **pratiquer** est un choix privé.`,
           },
           questions: [
             ['Que garantit la laïcité ?', ['La liberté de conscience, la séparation État-religions et l’égalité', 'L’interdiction des religions', 'Le financement des cultes', 'Une religion officielle'], 0, 'Trois choses en même temps.'],
@@ -351,28 +416,44 @@ Parler des religions en cours — en histoire, en français, en arts — est non
           axe: 'Construire une culture civique',
           lecon: {
             titre: 'Pourquoi on n’est pas libre de tout faire',
-            cours: `## Deux niveaux
-- La **règle** organise un groupe précis : le règlement intérieur du collège, les règles d’un jeu, celles d’une famille. Elle vaut **dans ce cadre**.
-- La **loi** s’applique à **tous**, sur tout le territoire. Elle est votée par le **Parlement** — Assemblée nationale et Sénat — et publiée au *Journal officiel*.
+            cours: `Une règle n’est pas là pour empêcher, elle est là pour permettre. Sans règles, un match de football n’est pas plus libre : il n’existe pas.
+
+## Règle ou loi
+| Le texte | À qui il s’applique | Qui le fait |
+| La **règle** | À **un groupe précis** : un collège, un jeu, une famille | Le groupe lui-même |
+| La **loi** | À **tous**, sur tout le territoire | Le **Parlement** : Assemblée nationale et Sénat |
+
+La loi est publiée au *Journal officiel*.
 
 ## À quoi elles servent
-- **Protéger** : la loi protège le plus faible du plus fort. Sans elle, seul le rapport de force compterait.
-- **Organiser** la vie commune : le code de la route ne bride pas la liberté de circuler, il la rend possible.
-- **Sanctionner** ce qui porte atteinte à autrui.
+| Leur rôle | Le détail |
+| **Protéger** | La loi protège le plus **faible** du plus **fort** |
+| **Organiser** | Le code de la route ne bride pas la liberté de circuler : il la **rend possible** |
+| **Sanctionner** | Ce qui porte atteinte à autrui |
 
-> Une règle n’est pas là pour empêcher, elle est là pour permettre. Sans règles, un match de football n’est pas plus libre : il n’existe pas.
+!> Sans loi, seul le **rapport de force** compterait. C’est exactement ce dont elle protège.
 
 ## La hiérarchie des normes
-La **Constitution** est au sommet, puis les lois, puis les décrets, puis les règlements. Une règle ne peut pas contredire une norme supérieure : le règlement intérieur d’un collège ne peut pas aller contre la loi.
+~ La Constitution → les lois → les décrets → les règlements
+
+!> Une règle ne peut **jamais** contredire une norme supérieure : le règlement intérieur d’un collège ne peut pas aller contre la loi.
 
 ## Comment une loi se fait
-Une **proposition** (parlementaires) ou un **projet** (gouvernement) est discuté et voté par les deux chambres, éventuellement contrôlé par le **Conseil constitutionnel**, puis promulgué par le président.
+~ Une proposition (parlementaires) ou un projet (gouvernement) → discuté et voté par les deux chambres → éventuel contrôle du Conseil constitutionnel → promulgation par le président
 
 ## Une loi peut changer
-Une loi n’est pas éternelle : elle est votée par des représentants élus et peut être **modifiée** ou **abrogée**. C’est ainsi que l’esclavage a été aboli, la peine de mort supprimée (1981), et l’égalité progressivement étendue.
+@ 1848 — Abolition définitive de l’esclavage
+@ 1981 — Abolition de la peine de mort
+
+> Une loi n’est pas éternelle : elle est votée par des représentants **élus**, et peut être modifiée ou abrogée.
 
 ## Sanction et réparation
-La sanction n’est pas une vengeance : elle doit être **proportionnée**, **prévue à l’avance** et **expliquée**. Elle vise aussi à **réparer** — d’où les mesures de responsabilisation au collège.`,
+| La sanction doit être… | |
+| **Proportionnée** | À la faute |
+| **Prévue à l’avance** | Pas inventée après coup |
+| **Expliquée** | |
+
+!> La sanction n’est pas une **vengeance**. Elle vise aussi à **réparer** — d’où les mesures de responsabilisation au collège.`,
           },
           questions: [
             ['Quelle est la différence entre une règle et une loi ?', ['La règle vaut dans un cadre précis, la loi s’applique à tous', 'Aucune', 'La loi ne concerne que les adultes', 'La règle est plus forte'], 0, 'La loi est votée par le Parlement.'],
@@ -390,35 +471,45 @@ La sanction n’est pas une vengeance : elle doit être **proportionnée**, **pr
           axe: 'Construire une culture civique',
           lecon: {
             titre: 'Agir avant d’avoir 18 ans',
-            cours: `## L’engagement, dès le collège
-On n’attend pas la majorité pour agir. Le collège offre plusieurs voies concrètes.
+            cours: `On n’attend pas la majorité pour agir. Le collège offre plusieurs voies concrètes.
 
 ## Le délégué de classe
-Élu par ses camarades au **scrutin secret**, il les **représente** au conseil de classe. Son rôle : porter la parole du groupe, pas la sienne ; rendre compte ensuite ; ne pas révéler ce qui est confidentiel.
-C’est la première expérience de **démocratie représentative** : on choisit quelqu’un pour parler en son nom, et on lui demande des comptes.
+Élu par ses camarades au **scrutin secret**, il les **représente** au conseil de classe.
+
+| Son devoir | |
+| Porter la parole **du groupe**, pas la sienne | |
+| **Rendre compte** ensuite | |
+| Ne pas révéler ce qui est **confidentiel** | |
+
+> C’est la première expérience de **démocratie représentative** : on choisit quelqu’un pour parler en son nom, et **on lui demande des comptes**.
 
 ## Les autres instances
-- Le **CVC** (conseil de la vie collégienne) : les élèves proposent des projets sur la vie de l’établissement.
-- Les **éco-délégués** : ils portent les questions d’environnement — tri, gaspillage alimentaire, énergie.
-- Le **foyer socio-éducatif**, les clubs, l’**AS** (association sportive).
+| L’instance | Son objet |
+| Le **CVC** (conseil de la vie collégienne) | Les élèves proposent des projets sur la vie de l’établissement |
+| Les **éco-délégués** | Tri, gaspillage alimentaire, énergie |
+| Le **foyer socio-éducatif**, les clubs, l’**AS** | La vie associative de l’établissement |
 
 ## Les associations
-Une **association loi 1901** réunit des personnes autour d’un but non lucratif. Bénévolat, aide aux devoirs, protection animale, secourisme, environnement : des millions de personnes y consacrent du temps sans être payées.
+= Une association loi 1901 : des personnes réunies autour d’un but NON LUCRATIF
+
+Bénévolat, aide aux devoirs, protection animale, secourisme, environnement : des millions de personnes y consacrent du temps **sans être payées**.
 
 ## Porter secours
-Tout le monde peut appeler les secours :
-- **15** : SAMU (urgence médicale)
-- **17** : Police / Gendarmerie
-- **18** : Pompiers
-- **112** : numéro d’urgence européen, depuis n’importe quel téléphone
-- **114** : urgences par SMS, pour les personnes sourdes ou malentendantes
+| Le numéro | Pour quoi |
+| **15** | SAMU — urgence médicale |
+| **17** | Police / Gendarmerie |
+| **18** | Pompiers |
+| **112** | Numéro d’urgence **européen**, depuis n’importe quel téléphone |
+| **114** | Urgences **par SMS**, pour les personnes sourdes ou malentendantes |
 
-Au collège, la formation **PSC1** apprend les gestes qui sauvent : alerter, masser, utiliser un défibrillateur.
+Au collège, la formation **PSC1** apprend les gestes qui sauvent.
 
-> Ne pas porter secours quand on le peut est un **délit**. Appeler, c’est déjà secourir.
+~ Alerter → masser → utiliser un défibrillateur
+
+!> **Ne pas porter secours quand on le peut est un délit.** Appeler, c’est déjà secourir.
 
 ## Ce que l’engagement apporte
-Il change le rapport à l’établissement : on cesse de subir un lieu pour en devenir responsable. Et il s’apprend — comme tout le reste.`,
+> Il change le rapport à l’établissement : on cesse de **subir** un lieu pour en devenir **responsable**. Et il s’apprend — comme tout le reste.`,
           },
           questions: [
             ['Comment le délégué de classe est-il désigné ?', ['Élu par ses camarades au scrutin secret', 'Désigné par le professeur principal', 'Tiré au sort', 'Volontaire sans vote'], 0, 'C’est une première expérience de démocratie représentative.'],

@@ -12,19 +12,39 @@ export default {
           titre: 'La couleur',
           lecon: {
             titre: 'Comprendre et utiliser les couleurs',
-            cours: `La couleur n'est pas un décor : c'est un outil de composition.
+            cours: `La couleur n’est pas un décor : c’est un outil de composition.
 
 ## Primaires, secondaires, tertiaires
-Les couleurs **primaires** en peinture sont le magenta (rouge), le cyan (bleu) et le jaune : on ne peut pas les obtenir par mélange. Les **secondaires** naissent du mélange de deux primaires : vert, orange, violet. Les **tertiaires** mélangent une primaire et une secondaire voisine.
+| La famille | Comment on l’obtient | Ses membres |
+| **Primaires** | On ne peut **pas** les obtenir par mélange | Magenta (rouge), cyan (bleu), jaune |
+| **Secondaires** | Le mélange de **deux primaires** | Vert, orange, violet |
+| **Tertiaires** | Une primaire **+** une secondaire voisine | |
+
+~ Deux primaires → une secondaire → mélangée à une primaire voisine → une tertiaire
 
 ## Les couleurs complémentaires
-Elles se font face sur le cercle chromatique : rouge/vert, bleu/orange, jaune/violet. Côte à côte, elles se renforcent mutuellement ; mélangées, elles s'éteignent en gris.
+Elles se font **face** sur le cercle chromatique.
+
+| L’une | Son opposée |
+| Rouge | Vert |
+| Bleu | Orange |
+| Jaune | Violet |
+
+!> **Côte à côte**, elles se **renforcent** ; **mélangées**, elles s’**éteignent en gris**. Le même couple produit l’effet le plus vif ou le plus terne, selon qu’on les pose l’une contre l’autre ou l’une dans l’autre.
 
 ## Chaudes et froides
-Rouges, oranges, jaunes sont perçus comme **chauds** et semblent avancer ; bleus et verts comme **froids** et semblent reculer. C'est un moyen simple de créer de la profondeur.
+| La famille | Ses couleurs | Ce qu’elles font |
+| **Chaudes** | Rouges, oranges, jaunes | Elles semblent **avancer** |
+| **Froides** | Bleus, verts | Elles semblent **reculer** |
+
+> C’est un moyen simple de créer de la **profondeur** sans tracer une seule ligne de perspective.
 
 ## Valeur et saturation
-La **valeur** est le degré de clair ou de sombre ; la **saturation**, l'intensité de la couleur. Une couleur peut être vive et sombre, pâle et lumineuse : les deux notions sont indépendantes.`,
+| La notion | Ce qu’elle mesure |
+| La **valeur** | Le degré de **clair** ou de **sombre** |
+| La **saturation** | L’**intensité** de la couleur |
+
+!> Les deux notions sont **indépendantes** : une couleur peut être **vive et sombre**, ou **pâle et lumineuse**.`,
           },
           questions: [
             ['Quelles sont les trois couleurs primaires en peinture ?', ['Magenta, cyan, jaune', 'Rouge, vert, bleu', 'Noir, blanc, gris', 'Orange, violet, vert'], 0, 'On ne peut pas les obtenir en mélangeant d’autres couleurs.'],
@@ -41,19 +61,34 @@ La **valeur** est le degré de clair ou de sombre ; la **saturation**, l'intensi
           titre: 'La représentation de l’espace',
           lecon: {
             titre: 'Donner de la profondeur à une image',
-            cours: `Une feuille est plate : représenter l'espace est une **construction**, jamais une évidence.
+            cours: `Une feuille est plate. Représenter l’espace est une construction, jamais une évidence.
 
 ## Les procédés simples
-La **superposition** (ce qui cache est devant), l'**étagement** (ce qui est plus haut sur la feuille est plus loin), la **taille relative** (plus c'est petit, plus c'est loin).
+| Le procédé | Sa règle |
+| La **superposition** | Ce qui **cache** est devant |
+| L’**étagement** | Ce qui est plus **haut** sur la feuille est plus loin |
+| La **taille relative** | Plus c’est **petit**, plus c’est loin |
 
 ## La perspective linéaire
-Inventée à la Renaissance : les lignes parallèles convergent vers un **point de fuite** situé sur la **ligne d'horizon**, à hauteur d'œil. Un point de fuite pour une vue frontale, deux pour une vue d'angle.
+Inventée à la **Renaissance**.
+
+~ Les lignes parallèles convergent → vers un POINT DE FUITE → situé sur la LIGNE D’HORIZON, à hauteur d’œil
+
+| La vue | Ses points de fuite |
+| **Frontale** | **Un** |
+| **D’angle** | **Deux** |
 
 ## La perspective atmosphérique
-Plus un objet est loin, plus il devient pâle, bleuté, flou et peu contrasté. Léonard de Vinci l'utilise dans les arrière-plans de ses tableaux.
+~ Plus un objet est loin → plus il devient pâle, bleuté, flou et peu contrasté
 
-## Rompre avec l'espace
-Le XXe siècle a délibérément cassé ces règles : le cubisme montre plusieurs points de vue à la fois, l'abstraction abandonne la représentation. Connaître la règle permet d'en jouer.`,
+**Léonard de Vinci** l’utilise dans les arrière-plans de ses tableaux.
+
+## Rompre avec l’espace
+| Le mouvement | Ce qu’il fait |
+| Le **cubisme** | Il montre **plusieurs points de vue à la fois** |
+| L’**abstraction** | Elle abandonne la représentation |
+
+> Le XXe siècle a **délibérément** cassé ces règles. Connaître la règle est ce qui permet d’en jouer.`,
           },
           questions: [
             ['Vers quoi convergent les lignes en perspective linéaire ?', ['Le point de fuite', 'Le centre du tableau', 'Le cadre', 'Le premier plan'], 0, 'Il se situe sur la ligne d’horizon, à hauteur d’œil.'],
@@ -70,19 +105,37 @@ Le XXe siècle a délibérément cassé ces règles : le cubisme montre plusieur
           titre: 'Matières, outils et gestes',
           lecon: {
             titre: 'Faire avec ce qu’on a sous la main',
-            cours: `En arts plastiques, le **geste** et le **matériau** font partie de l'œuvre.
+            cours: `En arts plastiques, le geste et le matériau font partie de l’œuvre.
 
 ## Les gestes
-Tracer, frotter, gratter, déchirer, coller, superposer, effacer, tamponner. Chaque geste laisse une trace reconnaissable : une même couleur n'a pas le même effet posée au pinceau, au rouleau ou à l'éponge.
+~ Tracer → frotter → gratter → déchirer → coller → superposer → effacer → tamponner
+
+!> Chaque geste laisse une trace **reconnaissable**. Une même couleur n’a pas le même effet posée au **pinceau**, au **rouleau** ou à l’**éponge**.
 
 ## Les matériaux
-Crayon, fusain, encre, gouache, aquarelle, pastel, papiers, tissus, objets récupérés. Le **collage**, inventé au début du XXe siècle, introduit le réel dans l'œuvre.
+| La famille | Ses membres |
+| Les **traçants** | Crayon, fusain, encre |
+| Les **peintures** | Gouache, aquarelle, pastel |
+| Les **matières rapportées** | Papiers, tissus, objets récupérés |
+
+Le **collage**, inventé au début du XXe siècle, introduit le **réel** dans l’œuvre.
 
 ## Le format et le support
-Un même dessin change de sens selon qu'il est minuscule ou monumental, sur papier lisse ou froissé, sur toile ou sur carton. Le support n'est jamais neutre.
+| Ce qui change | Son effet |
+| La **taille** | Minuscule ou monumental |
+| La **texture** | Papier lisse ou froissé |
+| La **nature** | Toile ou carton |
+
+> Le support n’est **jamais neutre** : un même dessin change de sens selon ce sur quoi il est posé.
 
 ## Le hasard maîtrisé
-Coulures, empreintes, taches : de nombreux artistes ont fait du hasard un allié — les **frottages** de Max Ernst, le dripping de Jackson Pollock. Provoquer un accident et savoir le garder est un savoir-faire.`,
+| L’artiste | Son procédé |
+| **Max Ernst** | Les **frottages** |
+| **Jackson Pollock** | Le **dripping** |
+
+Coulures, empreintes, taches.
+
+!> **Provoquer un accident et savoir le garder est un savoir-faire.** Le hasard en art n’est pas de la négligence : c’est une décision.`,
           },
           questions: [
             ['Le collage introduit…', ['Des éléments du réel dans l’œuvre', 'De la perspective', 'Des couleurs primaires', 'De la symétrie'], 0, 'Il apparaît au début du XXe siècle avec le cubisme.'],
@@ -107,16 +160,35 @@ Coulures, empreintes, taches : de nombreux artistes ont fait du hasard un allié
             cours: `Une œuvre n'existe pleinement que regardée.
 
 ## Le cadre et le hors-champ
-Cadrer, c'est choisir ce qu'on montre — et donc ce qu'on cache. Le **hors-champ** travaille l'imagination du spectateur : ce qu'on ne voit pas peut être plus présent que ce qu'on voit.
+| La notion | Ce qu'elle fait |
+| Le **cadre** | Il choisit ce qu'on montre — et donc ce qu'on **cache** |
+| Le **hors-champ** | Il travaille l'imagination du spectateur |
+
+> Ce qu'on ne voit pas peut être plus présent que ce qu'on voit.
 
 ## L'échelle et le lieu
-Une même forme n'a pas le même effet dans une vitrine, dans un musée ou sur une place publique. L'**in situ** désigne une œuvre conçue pour un lieu précis, indissociable de lui.
+Une même forme n'a pas le même effet selon l'endroit.
+
+| Le lieu | Ce qu'il fait à l'œuvre |
+| Une **vitrine** | Elle devient marchandise |
+| Un **musée** | Elle devient patrimoine |
+| Une **place publique** | Elle devient affaire de tous |
+
+> L'**in situ** désigne une œuvre conçue pour un lieu précis, indissociable de lui.
 
 ## Le spectateur actif
-Certaines œuvres exigent que le spectateur se déplace, touche, participe, ou complète mentalement. L'art cinétique joue du mouvement du regardeur ; les installations l'obligent à entrer dedans.
+| Ce que l'œuvre demande | Son exemple |
+| Se **déplacer** | L'art cinétique joue du mouvement du regardeur |
+| **Entrer** dedans | Les installations |
+| **Toucher**, participer | Les œuvres interactives |
+| **Compléter** mentalement | Ce que le cadre laisse hors champ |
 
 ## Le titre
-Le titre oriente la lecture. *Sans titre* laisse volontairement libre ; un titre précis ferme ou déplace le sens. C'est un élément de l'œuvre, pas une étiquette.`,
+| Le titre | Ce qu'il fait |
+| Précis | Il **ferme** ou **déplace** le sens |
+| *Sans titre* | Il laisse volontairement libre |
+
+> C'est un élément de l'œuvre, pas une étiquette.`,
           },
           questions: [
             ['Que désigne le hors-champ ?', ['Ce qui est hors du cadre mais reste présent', 'Le fond de l’image', 'Le cadre en bois', 'Le premier plan'], 0, 'Il travaille l’imagination du spectateur.'],
@@ -136,16 +208,32 @@ Le titre oriente la lecture. *Sans titre* laisse volontairement libre ; un titre
             cours: `Nous recevons chaque jour des centaines d'images construites pour agir sur nous.
 
 ## Dénotation et connotation
-La **dénotation** est ce que l'image montre littéralement. La **connotation** est ce qu'elle suggère : valeurs, émotions, appartenance sociale. Une voiture photographiée sur une route déserte dénote une voiture ; elle connote la liberté.
+| Le niveau | Ce qu'il désigne | L'exemple de la voiture sur une route déserte |
+| La **dénotation** | Ce que l'image montre **littéralement** | Une voiture |
+| La **connotation** | Ce qu'elle **suggère** : valeurs, émotions, appartenance | La liberté |
 
 ## Les procédés de l'image publicitaire
-Cadrage serré, lumière valorisante, retouche, mise en scène du corps, association d'idées (un produit + un décor + une musique). Le texte (**accroche**) ancre le sens que l'image seule laisserait flottant.
+| Le procédé | Son effet |
+| Le **cadrage serré** | Il isole et magnifie |
+| La **lumière** valorisante | Elle embellit |
+| La **retouche** | Elle efface le défaut |
+| La **mise en scène du corps** | Elle transfère le désir sur le produit |
+| L'**association d'idées** | Un produit + un décor + une musique |
+| L'**accroche** textuelle | Elle **ancre** le sens que l'image laissait flottant |
 
 ## Détournement et parodie
-Depuis les années 1960, de nombreux artistes détournent les codes publicitaires pour les retourner contre eux : c'est le principe du **détournement**, hérité des situationnistes.
+Depuis les années 1960, de nombreux artistes retournent les codes publicitaires contre eux-mêmes.
+
+> C'est le principe du **détournement**, hérité des situationnistes.
 
 ## Regard critique
-Se demander : qui parle ? à qui ? pour vendre quoi ? que montre-t-on, que cache-t-on ? Ces questions suffisent à transformer un spectateur en lecteur d'images.`,
+| La question | Ce qu'elle révèle |
+| **Qui** parle ? | L'émetteur, et son intérêt |
+| **À qui** ? | La cible visée |
+| Pour **vendre quoi** ? | L'objectif réel |
+| Que **montre**-t-on ? Que **cache**-t-on ? | Le choix du cadre |
+
+> Ces quatre questions suffisent à transformer un spectateur en lecteur d'images.`,
           },
           questions: [
             ['Que désigne la connotation d’une image ?', ['Ce qu’elle suggère au-delà de ce qu’elle montre', 'Ce qu’elle montre littéralement', 'Son format', 'Son auteur'], 0, 'Valeurs, émotions, associations d’idées.'],
@@ -165,16 +253,30 @@ Se demander : qui parle ? à qui ? pour vendre quoi ? que montre-t-on, que cache
             cours: `Passer du plan au volume change tout : l'œuvre a un dos, un poids, une place.
 
 ## Les techniques
-**Tailler** (retirer de la matière : pierre, bois), **modeler** (ajouter : argile, plâtre), **assembler** (souder, coller, visser), **mouler** (reproduire par empreinte).
+| La technique | Son geste | Ses matériaux |
+| **Tailler** | **Retirer** de la matière | Pierre, bois |
+| **Modeler** | **Ajouter** de la matière | Argile, plâtre |
+| **Assembler** | Souder, coller, visser | Métal, objets |
+| **Mouler** | Reproduire par empreinte | Plâtre, bronze, résine |
 
 ## Plein et vide
-Un volume se lit autant par ses creux que par ses pleins. Henry Moore perce ses figures ; l'espace traverse la sculpture et devient partie de l'œuvre.
+Un volume se lit autant par ses **creux** que par ses pleins.
+
+> Henry Moore perce ses figures : l'espace traverse la sculpture et devient partie de l'œuvre.
 
 ## Socle ou pas de socle
-Le socle isole l'œuvre et la désigne comme art. Le supprimer (Brancusi, puis l'art contemporain) fait descendre la sculpture dans notre espace, au même niveau que nous.
+| Le choix | Ce qu'il produit |
+| **Avec socle** | Il isole l'œuvre et la **désigne** comme art |
+| **Sans socle**, de Brancusi à l'art contemporain | La sculpture descend dans **notre** espace, au même niveau que nous |
 
 ## Le ready-made
-En 1917, **Marcel Duchamp** présente un urinoir renversé et signé sous le titre *Fontaine*. L'objet n'est pas fabriqué par l'artiste : c'est le **choix** et le **déplacement** qui font l'œuvre. Une bascule dont l'art du XXe siècle ne s'est jamais remis.`,
+| L'élément | Le détail |
+| L'année | **1917** |
+| L'artiste | **Marcel Duchamp** |
+| L'objet | Un urinoir renversé et signé, intitulé *Fontaine* |
+| Ce qui fait l'œuvre | Non la fabrication, mais le **choix** et le **déplacement** |
+
+> Une bascule dont l'art du XXe siècle ne s'est jamais remis.`,
           },
           questions: [
             ['Quelle technique consiste à retirer de la matière ?', ['La taille', 'Le modelage', 'L’assemblage', 'Le moulage'], 0, 'On taille la pierre ou le bois ; on modèle l’argile.'],
@@ -196,19 +298,36 @@ En 1917, **Marcel Duchamp** présente un urinoir renversé et signé sous le tit
           titre: 'Démarche artistique et projet',
           lecon: {
             titre: 'Conduire un projet plastique',
-            cours: `Au lycée, ce qui est évalué n'est pas seulement l'objet produit : c'est la **démarche**.
+            cours: `Au lycée, ce qui est évalué n’est pas seulement l’objet produit : c’est la **démarche**. Un projet plastique se conduit en quatre temps, et chacun laisse une trace que le jury peut lire.
+
+## Les quatre temps du projet
+1. **Formuler une intention** : une phrase, pas un thème — « je veux rendre visible la disparition », « je veux que le spectateur hésite ».
+2. **Chercher** : essais, matériaux, échelles, références. C’est la phase où l’on a le droit de rater.
+3. **Réaliser** : les choix plastiques répondent à l’intention, ou la déplacent — et le déplacement se note.
+4. **Présenter** : l’accrochage et le texte d’intention font partie de l’œuvre.
 
 ## Intention et problématique
-Tout projet part d'une intention formulable : « je veux rendre visible la disparition », « je veux que le spectateur hésite ». La question posée guide les choix plastiques ; sans elle, la production reste illustrative.
+Sans question posée, la production reste **illustrative** : elle montre un sujet au lieu de le travailler. La problématique se reconnaît à ce qu’elle admet plusieurs réponses plastiques — si une seule est possible, ce n’est pas une question, c’est une consigne.
 
 ## Le carnet de recherche
-Croquis, essais ratés, références, notes : le carnet montre le **cheminement**. Un échec documenté vaut mieux qu'une réussite inexpliquée.
+| Ce qu’on y met | Ce que ça prouve au jury |
+| Croquis et variantes | Que des choix ont été écartés |
+| Essais ratés, datés | Que la recherche a eu lieu |
+| Références annotées | Que le travail se situe |
+| Notes d’intention | Que la démarche est consciente |
+
+> Un échec documenté vaut mieux qu’une réussite inexpliquée : c’est le cheminement qui est noté, pas la seule habileté.
 
 ## Les références
-Situer son travail par rapport à des artistes n'est pas copier : c'est se positionner. Citer, prolonger, contredire — les trois relations sont légitimes si elles sont conscientes.
+Situer son travail par rapport à des artistes n’est pas copier : c’est se positionner. Trois relations sont légitimes, à condition d’être conscientes.
+
+| Relation | Ce que je fais de la référence |
+| Citer | Je reprends un motif et je l’assume comme emprunt |
+| Prolonger | Je poursuis une recherche là où l’artiste l’a laissée |
+| Contredire | Je reprends le dispositif pour en renverser le sens |
 
 ## Présenter et défendre
-Accrochage, éclairage, ordre de lecture, texte d'intention : la présentation est le dernier acte plastique. Défendre son travail, c'est expliciter les choix, pas justifier les manques.`,
+Accrochage, éclairage, ordre de lecture, texte d’intention : la présentation est le **dernier acte plastique**, pas une formalité. Défendre son travail, c’est expliciter les choix — jamais justifier les manques.`,
           },
           questions: [
             ['Que montre principalement un carnet de recherche ?', ['Le cheminement, y compris les essais ratés', 'Uniquement les réussites', 'Les notes obtenues', 'La liste du matériel'], 0, 'Un échec documenté vaut mieux qu’une réussite inexpliquée.'],
@@ -225,19 +344,30 @@ Accrochage, éclairage, ordre de lecture, texte d'intention : la présentation e
           titre: 'Art contemporain : formes et enjeux',
           lecon: {
             titre: 'Comprendre l’art depuis 1960',
-            cours: `L'art contemporain déroute souvent parce qu'il a déplacé la question : non plus « est-ce beau ? », mais « qu'est-ce que cela fait ? ».
+            cours: `L’art contemporain déroute souvent parce qu’il a déplacé la question : non plus « est-ce beau ? », mais « qu’est-ce que cela fait ? ». Quatre déplacements suffisent à s’y retrouver.
 
 ## Les grands déplacements
-De l'objet à l'**idée** (art conceptuel), de l'atelier au **lieu** (in situ, land art), de l'objet au **corps** (performance), de l'unique au **reproductible** (Pop art, sérigraphie).
+| L’œuvre passe… | … à | Ce que ça donne |
+| de l’objet | à l’**idée** | Art conceptuel : le protocole vaut l’œuvre |
+| de l’atelier | au **lieu** | In situ, land art : l’œuvre tient à son site |
+| de l’objet | au **corps** | Performance : l’œuvre est un temps vécu |
+| de l’unique | au **reproductible** | Pop art, sérigraphie : la copie n’est plus un défaut |
 
 ## Quelques repères
-**Andy Warhol** et la reproduction sérielle ; **Christo et Jeanne-Claude** et l'emballage monumental ; **Sophie Calle** et le récit ; **Ai Weiwei** et l'art politique ; le street art passé de l'illégalité au marché.
+| Artiste | Le geste | Ce qu’il déplace |
+| Andy Warhol | La reproduction sérielle | L’unicité de l’œuvre |
+| Christo et Jeanne-Claude | L’emballage monumental | L’œuvre devient éphémère et publique |
+| Sophie Calle | Le récit et l’enquête | L’artiste devient narratrice |
+| Ai Weiwei | L’art politique | L’œuvre comme prise de position |
+| Le street art | La rue, puis le marché | L’illégalité devenue valeur |
 
-## Le marché et l'institution
-Galeries, foires, biennales, musées : la valeur d'une œuvre contemporaine se construit aussi socialement. Comprendre ce circuit fait partie de la compréhension de l'œuvre.
+## Le marché et l’institution
+Galeries, foires, biennales, musées : la valeur d’une œuvre contemporaine se construit **aussi socialement**. Ignorer ce circuit, c’est se condamner à trouver les prix absurdes ; le comprendre fait partie de la compréhension de l’œuvre.
 
 ## Le rôle du regardeur
-« C'est le regardeur qui fait le tableau », disait Duchamp. Beaucoup d'œuvres contemporaines n'existent qu'activées par une interprétation, une participation ou un récit.`,
+> « C’est le regardeur qui fait le tableau », disait **Duchamp**. Beaucoup d’œuvres contemporaines n’existent qu’activées — par une interprétation, une participation ou un récit.
+
+D’où la règle de méthode devant une œuvre qui déroute : ne pas demander ce qu’elle représente, mais **ce qu’elle demande de faire**.`,
           },
           questions: [
             ['Quelle question l’art contemporain déplace-t-il ?', ['De « est-ce beau ? » à « qu’est-ce que cela fait ? »', 'De « qui l’a fait ? » à « combien ça coûte ? »', 'De « où ? » à « quand ? »', 'Aucune, la question reste la même'], 0, 'Le critère se déplace du goût vers l’effet et le sens.'],
@@ -254,19 +384,30 @@ Galeries, foires, biennales, musées : la valeur d'une œuvre contemporaine se c
           titre: 'Image numérique et création',
           lecon: {
             titre: 'Créer avec les outils numériques',
-            cours: `Le numérique n'est pas un simple pinceau supplémentaire : il change le statut de l'image.
+            cours: `Le numérique n’est pas un pinceau de plus : il change le **statut** de l’image — sa matière, sa copie, sa preuve.
 
 ## Pixel et vecteur
-Une image **matricielle** (bitmap) est une grille de pixels : elle se dégrade en s'agrandissant. Une image **vectorielle** est décrite par des formules : elle s'agrandit sans perte. Photo = matriciel, logo = vectoriel.
+| | Matricielle (bitmap) | Vectorielle |
+| Comment l’image est décrite | Une grille de pixels colorés | Des formules géométriques |
+| En l’agrandissant | Elle se dégrade, se pixellise | Elle reste nette, sans perte |
+| Usage typique | Photographie, peinture numérique | Logo, typographie, pictogramme |
 
 ## Résolution et formats
-La résolution se mesure en pixels (dimensions) et en ppp/dpi pour l'impression. JPEG compresse en perdant de l'information, PNG conserve la transparence, TIFF garde la qualité maximale, SVG est vectoriel.
+La résolution se lit deux fois : en **pixels** (les dimensions de l’image) et en **ppp / dpi** (sa finesse à l’impression).
+
+| Format | Ce qu’il fait | Quand l’employer |
+| JPEG | Compresse en perdant de l’information | Photo destinée au web |
+| PNG | Compresse sans perte, garde la transparence | Image détourée, capture |
+| TIFF | Conserve la qualité maximale | Archivage, impression |
+| SVG | Vectoriel, éditable en texte | Logo, icône, schéma |
 
 ## Le montage et la retouche
-Calques, masques, détourage, fondus : le montage permet des images sans référent réel. D'où une question centrale — que reste-t-il de la valeur de preuve d'une photographie ?
+Calques, masques, détourage, fondus : le montage permet des images **sans référent réel** — une scène qui n’a jamais eu lieu, photographiquement parfaite.
 
-## L'œuvre reproductible
-Walter Benjamin l'avait anticipé dès 1935 : la reproduction fait perdre à l'œuvre son « aura », son ici-et-maintenant. Le numérique pousse cette logique à l'extrême — copie parfaite, diffusion instantanée, auteur parfois indéterminé.`,
+> D’où la question centrale du chapitre : que reste-t-il de la **valeur de preuve** d’une photographie, quand la retouche ne laisse plus de trace ?
+
+## L’œuvre reproductible
+**Walter Benjamin** l’anticipait dès 1935 : la reproduction fait perdre à l’œuvre son « aura », c’est-à-dire son ici-et-maintenant. Le numérique pousse la logique à l’extrême — copie parfaite, diffusion instantanée, auteur parfois indéterminé.`,
           },
           questions: [
             ['Quelle image ne se dégrade pas en s’agrandissant ?', ['L’image vectorielle', 'L’image matricielle', 'Le JPEG', 'La photographie'], 0, 'Elle est décrite par des formules, pas par des pixels.'],

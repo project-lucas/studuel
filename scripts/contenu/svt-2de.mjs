@@ -143,24 +143,47 @@ DELETE FROM public.chapters c
           axe: 'La cellule unité du vivant',
           lecon: {
             titre: 'Un même génome, des cellules toutes différentes',
-            cours: `Tous les êtres vivants sont faits de **cellules**. Certains n’en possèdent qu’une (unicellulaires), d’autres des milliers de milliards (pluricellulaires).
+            cours: `Tous les êtres vivants sont faits de cellules. Certains n'en possèdent qu'une, d'autres des milliers de milliards.
 
 ## Ce que toute cellule possède
-Une **membrane plasmique** qui délimite un milieu intérieur, un **cytoplasme** contenant les molécules et les organites, et de l’**ADN** support de l’information génétique. Les cellules **eucaryotes** enferment leur ADN dans un **noyau** ; les cellules **procaryotes** (bactéries) n’en ont pas.
+| L'élément | Son rôle |
+| La **membrane plasmique** | Elle délimite un milieu intérieur |
+| Le **cytoplasme** | Il contient molécules et organites |
+| L'**ADN** | Il porte l'information génétique |
+
+| Le type de cellule | Son ADN |
+| **Eucaryote** | Enfermé dans un **noyau** |
+| **Procaryote** (bactérie) | **Sans** noyau |
 
 ## Voir les cellules
-Le **microscope optique** permet d’observer des cellules et leur noyau (résolution de l’ordre du micromètre) ; le **microscope électronique** révèle les organites (mitochondries, chloroplastes, réticulum). Les tailles s’échelonnent : une bactérie mesure quelques micromètres, une cellule animale de 10 à 100 micromètres, un ovule humain environ 100 micromètres.
+| L'instrument | Ce qu'il révèle |
+| Le microscope **optique** | Les cellules et leur noyau, jusqu'au micromètre |
+| Le microscope **électronique** | Les organites : mitochondries, chloroplastes, réticulum |
+
+| L'objet | Sa taille |
+| Une bactérie | Quelques micromètres |
+| Une cellule animale | 10 à 100 micromètres |
+| Un ovule humain | Environ 100 micromètres |
 
 ## La spécialisation
-Chez un organisme pluricellulaire, toutes les cellules issues de la cellule-œuf possèdent **le même génome**. Pourtant, une cellule musculaire, un neurone, une cellule de la peau et un globule rouge n’ont ni la même forme, ni la même taille, ni la même fonction.
+Toutes les cellules issues de la cellule-œuf possèdent **le même génome**. Pourtant, une cellule musculaire, un neurone, une cellule de peau et un globule rouge n'ont ni la même forme, ni la même fonction.
 
-> Même génome, expressions différentes : chaque type cellulaire n’utilise qu’une **partie** des gènes disponibles. C’est la **différenciation cellulaire**.
+> Même génome, expressions différentes : chaque type cellulaire n'utilise qu'une **partie** des gènes disponibles. C'est la **différenciation cellulaire**.
 
 ## Structure et fonction
-La forme d’une cellule spécialisée sert sa fonction : les fibres musculaires sont allongées et riches en protéines contractiles ; le neurone porte de longs prolongements pour transmettre un message ; le globule rouge humain, sans noyau, est bourré d’hémoglobine ; la cellule intestinale multiplie les replis pour absorber.
+| La cellule | Sa forme | Ce qu'elle permet |
+| Fibre **musculaire** | Allongée, riche en protéines contractiles | Se contracter |
+| **Neurone** | De longs prolongements | Transmettre un message |
+| **Globule rouge** humain | Sans noyau, bourré d'hémoglobine | Transporter le dioxygène |
+| Cellule **intestinale** | Multiplie les replis | Absorber |
 
-## L’organisation en tissus
-Des cellules spécialisées de même type forment un **tissu**, plusieurs tissus un **organe**, plusieurs organes un **appareil**. Cette organisation hiérarchisée permet une division du travail impossible chez un unicellulaire.`,
+## L'organisation en niveaux
+| Le niveau | Ce qu'il est |
+| Le **tissu** | Des cellules spécialisées de même type |
+| L'**organe** | Plusieurs tissus |
+| L'**appareil** | Plusieurs organes |
+
+> Cette organisation hiérarchisée permet une **division du travail** impossible chez un unicellulaire.`,
           },
           questions: [
             ['Quel élément est commun à toutes les cellules ?', ['Une membrane plasmique, du cytoplasme et de l’ADN', 'Un noyau', 'Des chloroplastes', 'Une paroi'], 0, 'Le noyau n’existe que chez les eucaryotes.'],
@@ -178,24 +201,41 @@ Des cellules spécialisées de même type forment un **tissu**, plusieurs tissus
           axe: 'La cellule unité du vivant',
           lecon: {
             titre: 'Comment une cellule fabrique sa matière et son énergie',
-            cours: `Le **métabolisme** est l’ensemble des réactions chimiques qui se déroulent dans une cellule. Il assure deux besoins : produire de la **matière** et fournir de l’**énergie**.
+            cours: `Le métabolisme est l'ensemble des réactions chimiques d'une cellule. Il assure deux besoins : produire de la matière, et fournir de l'énergie.
 
 ## Deux grands modes
-Les cellules **autotrophes** produisent leur matière organique à partir de matière **minérale** et d’une source d’énergie ; les cellules **hétérotrophes** doivent prélever de la matière organique déjà formée.
+| Le mode | Sa source de matière | Sa source d'énergie |
+| **Autotrophe** | De la matière **minérale** | La lumière, le plus souvent |
+| **Hétérotrophe** | De la matière **organique** déjà formée | Cette même matière |
 
 ## La photosynthèse
-Dans les **chloroplastes** des cellules chlorophylliennes, la **photosynthèse** utilise l’énergie lumineuse pour produire du glucose à partir de dioxyde de carbone et d’eau, en libérant du dioxygène. On peut l’écrire : 6 CO2 + 6 H2O + énergie lumineuse donne C6H12O6 + 6 O2. C’est la porte d’entrée de la matière et de l’énergie dans presque tous les écosystèmes.
+Dans les **chloroplastes**, elle utilise l'énergie lumineuse :
 
-## La respiration et la fermentation
-La **respiration cellulaire**, dans les **mitochondries**, dégrade complètement le glucose en présence de dioxygène, avec libération de CO2, d’eau et de beaucoup d’énergie. La **fermentation**, en l’absence de dioxygène, dégrade partiellement le glucose : elle libère peu d’énergie et produit de l’éthanol (fermentation alcoolique) ou de l’acide lactique (fermentation lactique).
+6 CO2 + 6 H2O + énergie lumineuse donne C6H12O6 + 6 O2
 
-> Respirer rapporte beaucoup plus d’énergie que fermenter, mais fermenter permet de survivre sans dioxygène.
+> C'est la porte d'entrée de la matière et de l'énergie dans presque tous les écosystèmes.
 
-## Ce qui détermine le métabolisme d’une cellule
-Deux facteurs : son **patrimoine génétique** — les gènes codant les enzymes dont elle dispose — et son **environnement** — la présence de lumière, de dioxygène, de nutriments. Une levure respire en présence de dioxygène et fermente en son absence : même génome, deux métabolismes.
+## Respiration et fermentation
+| Le point | **Respiration cellulaire** | **Fermentation** |
+| Le lieu | Les **mitochondries** | Le cytoplasme |
+| Le dioxygène | **Nécessaire** | **Absent** |
+| La dégradation du glucose | **Complète** | Partielle |
+| Les produits | CO2 et eau | Éthanol (alcoolique) ou acide lactique |
+| L'énergie libérée | **Beaucoup** | Peu |
+
+> Respirer rapporte beaucoup plus d'énergie que fermenter, mais fermenter permet de survivre **sans dioxygène**.
+
+## Ce qui détermine le métabolisme d'une cellule
+| Le facteur | Ce qu'il apporte |
+| Le **patrimoine génétique** | Les gènes codant les enzymes dont elle dispose |
+| L'**environnement** | Lumière, dioxygène, nutriments disponibles |
+
+> Une levure respire en présence de dioxygène et fermente en son absence : même génome, deux métabolismes.
 
 ## Les enzymes
-Chaque réaction du métabolisme est catalysée par une **enzyme**, protéine spécifique de son substrat et de la réaction. Une cellule qui ne possède pas le gène d’une enzyme ne peut pas réaliser la réaction correspondante — c’est ce qui explique les besoins nutritionnels particuliers de chaque espèce.`,
+Chaque réaction est catalysée par une **enzyme**, protéine spécifique de son substrat et de sa réaction.
+
+> Une cellule qui ne possède pas le gène d'une enzyme ne peut pas réaliser la réaction correspondante. C'est ce qui explique les besoins nutritionnels particuliers de chaque espèce.`,
           },
           questions: [
             ['Qu’est-ce que le métabolisme d’une cellule ?', ['L’ensemble des réactions chimiques qui s’y déroulent', 'Sa vitesse de division', 'Sa taille et sa forme', 'Son mode de déplacement'], 0, 'Il assure production de matière et fourniture d’énergie.'],
@@ -216,24 +256,50 @@ Chaque réaction du métabolisme est catalysée par une **enzyme**, protéine sp
           axe: 'Biodiversité, résultat et étape de l’évolution',
           lecon: {
             titre: 'Trois échelles pour une seule biodiversité',
-            cours: `La **biodiversité** désigne la diversité du monde vivant. Elle se mesure à **trois échelles** emboîtées : la diversité des **écosystèmes**, la diversité des **espèces**, et la diversité **génétique** au sein de chaque espèce.
+            cours: `La biodiversité désigne la diversité du monde vivant. Elle se mesure à trois échelles emboîtées.
+
+## Les trois échelles
+| L'échelle | Ce qu'elle compte |
+| Les **écosystèmes** | La diversité des milieux |
+| Les **espèces** | Le nombre et la variété des espèces |
+| Les **gènes** | La diversité **génétique** au sein de chaque espèce |
 
 ## La biosphère
-La **biosphère** rassemble tous les êtres vivants de la planète et les milieux qu’ils occupent. Elle est très mince à l’échelle de la Terre : de la haute atmosphère aux fonds océaniques, elle occupe une pellicule de quelques kilomètres.
+Elle rassemble tous les êtres vivants et les milieux qu'ils occupent.
 
-## Qu’est-ce qu’un écosystème
-Un **écosystème** associe un **biotope** — le milieu physique et chimique, avec sa température, sa lumière, son eau, son sol — et une **biocénose** — l’ensemble des êtres vivants qui l’occupent et les relations qu’ils entretiennent : prédation, compétition, coopération, parasitisme.
+> Elle est très mince à l'échelle de la Terre : de la haute atmosphère aux fonds océaniques, une pellicule de quelques kilomètres.
 
-> Un écosystème n’est pas une collection d’espèces : c’est un réseau de relations. Retirer une espèce, c’est modifier tout le réseau.
+## Qu'est-ce qu'un écosystème
+| Sa composante | Ce qu'elle recouvre |
+| Le **biotope** | Le milieu physique et chimique : température, lumière, eau, sol |
+| La **biocénose** | Les êtres vivants, et leurs relations |
+
+| La relation | Son bilan |
+| **Prédation** | L'un mange l'autre |
+| **Compétition** | Une même ressource limitée |
+| **Coopération** | Les deux y gagnent |
+| **Parasitisme** | L'un gagne, l'autre perd |
+
+> Un écosystème n'est pas une collection d'espèces : c'est un **réseau de relations**. Retirer une espèce, c'est modifier tout le réseau.
 
 ## Les flux
-Un écosystème est traversé par un **flux d’énergie**, entrant surtout par la photosynthèse des **producteurs primaires**, transmis aux **consommateurs** puis dissipé, et par des **cycles de matière** — carbone, azote, eau — refermés par les **décomposeurs**, qui reminéralisent la matière organique morte.
+| Le flux | Son parcours |
+| L'**énergie** | Elle entre par la **photosynthèse** des producteurs primaires, passe aux consommateurs, se dissipe |
+| La **matière** | Elle **cycle** : carbone, azote, eau, refermés par les **décomposeurs** |
 
 ## Un état, pas un aboutissement
-La biodiversité actuelle est un **état** de l’évolution, pas son point final. Elle a beaucoup varié : cinq **crises biologiques** majeures ont éliminé une grande partie des espèces, la plus connue étant celle de la limite Crétacé-Paléogène, il y a 66 millions d’années. Chaque crise a été suivie d’une diversification des groupes survivants.
+| La crise | Sa date |
+| Cinq **crises biologiques** majeures | Dans l'histoire de la Terre |
+| La plus connue, à la limite Crétacé-Paléogène | Il y a **66 millions d'années** |
 
-## L’ordre de grandeur
-Environ 2 millions d’espèces ont été décrites ; les estimations du total varient de quelques millions à plusieurs dizaines de millions. L’essentiel de la biodiversité reste donc inconnu.`,
+Chaque crise a été suivie d'une diversification des groupes survivants.
+
+## L'ordre de grandeur
+| Le chiffre | Sa valeur |
+| Espèces **décrites** | Environ 2 millions |
+| Estimation du **total** | De quelques millions à plusieurs dizaines de millions |
+
+> L'essentiel de la biodiversité reste inconnu.`,
           },
           questions: [
             ['À quelles trois échelles la biodiversité se mesure-t-elle ?', ['Écosystèmes, espèces, diversité génétique', 'Continents, pays, régions', 'Cellules, tissus, organes', 'Passé, présent, futur'], 0, 'Ces trois niveaux sont emboîtés.'],
@@ -251,24 +317,41 @@ Environ 2 millions d’espèces ont été décrites ; les estimations du total v
           axe: 'Biodiversité, résultat et étape de l’évolution',
           lecon: {
             titre: 'Pourquoi aucun individu n’est identique à un autre',
-            cours: `Deux individus d’une même espèce partagent les mêmes **gènes**, mais pas les mêmes **allèles** : c’est la diversité génétique intraspécifique.
+            cours: `Deux individus d'une même espèce partagent les mêmes gènes, mais pas les mêmes allèles.
 
 ## Gènes et allèles
-Un **gène** est une séquence d’ADN portant l’information d’un caractère ; un **allèle** est une version particulière de ce gène. Un individu diploïde possède deux allèles de chaque gène, un sur chaque chromosome de la paire.
+| Le terme | Sa définition |
+| Un **gène** | Une séquence d'ADN portant l'information d'un caractère |
+| Un **allèle** | Une **version** particulière de ce gène |
+
+Un individu diploïde possède **deux** allèles de chaque gène, un sur chaque chromosome de la paire.
 
 ## Les sources de la diversité
-La première source est la **mutation** : une modification aléatoire de la séquence de l’ADN, qui crée de nouveaux allèles. Elle peut être spontanée (erreur de réplication) ou provoquée par des agents **mutagènes** — rayons UV, rayons X, certaines substances chimiques.
+| La source | Ce qu'elle fait |
+| La **mutation** | Elle **crée** de nouveaux allèles |
+| Le **brassage** de la méiose | Il recombine ceux qui existent |
+| La **fécondation** | Elle réunit deux gamètes au hasard |
 
-> Toutes les mutations ne se valent pas : la plupart sont sans effet, certaines sont défavorables, quelques-unes sont avantageuses dans un environnement donné.
+| L'origine d'une mutation | Son exemple |
+| **Spontanée** | Une erreur de réplication |
+| **Provoquée** | Rayons UV, rayons X, substances chimiques mutagènes |
+
+> Toutes les mutations ne se valent pas : la plupart sont sans effet, certaines sont défavorables, quelques-unes sont avantageuses **dans un environnement donné**.
 
 ## Le brassage de la reproduction sexuée
-La **méiose** produit des gamètes tous différents, par **brassage interchromosomique** (répartition indépendante des chromosomes de chaque paire) et **brassage intrachromosomique** (échanges entre chromosomes homologues, ou crossing-over). La **fécondation** réunit ensuite deux gamètes au hasard parmi des millions de combinaisons possibles.
+| Le brassage | Son mécanisme |
+| **Interchromosomique** | La répartition indépendante des chromosomes de chaque paire |
+| **Intrachromosomique** | Les échanges entre chromosomes homologues : le crossing-over |
 
 ## Ce que ça donne
-Chez l’espèce humaine, avec 23 paires de chromosomes, le seul brassage interchromosomique produit déjà 2 puissance 23 combinaisons de gamètes, soit plus de 8 millions — avant même le crossing-over et le hasard de la fécondation.
+| Le calcul | Son résultat |
+| 23 paires de chromosomes chez l'humain | 2 puissance 23 combinaisons de gamètes |
+| Soit | Plus de **8 millions** — avant le crossing-over et le hasard de la fécondation |
 
 ## À quoi sert cette diversité
-Une population génétiquement diverse résiste mieux à un changement d’environnement ou à une maladie : la probabilité qu’au moins certains individus portent un allèle avantageux est plus grande. À l’inverse, une population peu diverse — un cheptel très sélectionné, une espèce réduite à quelques individus — est fragile.`,
+| La population | Sa résistance |
+| Génétiquement **diverse** | Meilleure : la probabilité qu'au moins certains individus portent un allèle avantageux est plus grande |
+| Peu diverse — cheptel très sélectionné, espèce réduite à quelques individus | **Fragile** |`,
           },
           questions: [
             ['Quelle différence entre un gène et un allèle ?', ['Le gène est la séquence, l’allèle en est une version particulière', 'Le gène est une protéine, l’allèle un chromosome', 'Ce sont deux mots synonymes', 'L’allèle est plus long que le gène'], 0, 'Deux individus partagent les gènes, mais pas forcément les allèles.'],
@@ -286,24 +369,41 @@ Une population génétiquement diverse résiste mieux à un changement d’envir
           axe: 'Biodiversité, résultat et étape de l’évolution',
           lecon: {
             titre: 'Dérive, sélection, spéciation',
-            cours: `Les fréquences des allèles dans une population changent au fil des générations : c’est l’**évolution**. Deux mécanismes principaux la produisent.
+            cours: `Les fréquences des allèles dans une population changent au fil des générations : c'est l'évolution.
+
+## Les deux mécanismes
+| Le mécanisme | Son caractère | Ce qui l'amplifie |
+| La **dérive génétique** | **Aléatoire** | Une population **petite** |
+| La **sélection naturelle** | **Non aléatoire** | Un avantage de survie ou de reproduction |
 
 ## La dérive génétique
-La **dérive génétique** est la modification **aléatoire** de la fréquence des allèles d’une génération à l’autre, due au hasard de la reproduction et de la survie. Son effet est d’autant plus fort que la population est **petite** : dans un grand effectif, les écarts s’annulent ; dans un petit, un allèle peut disparaître ou devenir majoritaire par pur hasard.
+Elle modifie au hasard la fréquence des allèles d'une génération à l'autre.
+
+| La taille de la population | L'effet de la dérive |
+| **Grande** | Les écarts s'annulent |
+| **Petite** | Un allèle peut disparaître ou devenir majoritaire par pur hasard |
 
 ## La sélection naturelle
-La **sélection naturelle** n’est pas aléatoire : dans un environnement donné, les individus porteurs d’allèles conférant un **avantage** — mieux survivre, mieux se reproduire — laissent en moyenne plus de descendants. La fréquence de ces allèles augmente donc au fil des générations.
+Les individus porteurs d'allèles conférant un **avantage** — mieux survivre, mieux se reproduire — laissent en moyenne plus de descendants. La fréquence de ces allèles augmente.
 
-> La sélection ne crée pas les allèles : elle trie ceux que la mutation a produits.
+> La sélection ne **crée** pas les allèles : elle **trie** ceux que la mutation a produits.
 
 ## Un exemple de référence
-La **phalène du bouleau**, papillon de nuit, existe sous une forme claire et une forme sombre. Lors de la révolution industrielle en Angleterre, les troncs noircis par la suie ont rendu la forme claire très visible pour les oiseaux : la forme sombre est devenue majoritaire dans les régions polluées. La dépollution a inversé la tendance.
+| L'époque | Les troncs | La forme majoritaire de la phalène |
+| Avant l'industrialisation | Clairs, couverts de lichens | La forme **claire** |
+| Pendant, avec la suie | **Noircis** | La forme **sombre**, moins visible des oiseaux |
+| Après la dépollution | À nouveau clairs | La forme claire revient |
 
 ## La spéciation
-Quand deux populations d’une même espèce sont **isolées** — par une barrière géographique, un décalage des périodes de reproduction, un comportement différent —, elles accumulent des différences génétiques. Si l’isolement dure, elles finissent par ne plus pouvoir se reproduire entre elles en donnant une descendance fertile : ce sont alors deux **espèces** distinctes. C’est la **spéciation**.
+| L'étape | Ce qui se passe |
+| L'**isolement** | Barrière géographique, décalage des périodes de reproduction, comportement différent |
+| L'accumulation | Les différences génétiques s'accumulent |
+| La **spéciation** | Les deux populations ne peuvent plus se reproduire entre elles en donnant une descendance fertile |
 
-## L’espèce, une notion utile mais floue
-La définition la plus courante — un ensemble d’individus interféconds donnant une descendance fertile — ne s’applique ni aux espèces fossiles, ni aux organismes à reproduction asexuée, et souffre de nombreux cas limites, comme les hybrides fertiles.`,
+## L'espèce, une notion utile mais floue
+| La définition courante | Ses limites |
+| Des individus **interféconds**, à descendance fertile | Elle ne s'applique ni aux espèces **fossiles**, ni à la reproduction **asexuée** |
+| — | Et elle bute sur les cas limites, comme les **hybrides fertiles** |`,
           },
           questions: [
             ['Qu’est-ce que la dérive génétique ?', ['Une modification aléatoire de la fréquence des allèles au fil des générations', 'Le tri des individus les mieux adaptés', 'L’apparition de nouveaux allèles', 'Le déplacement d’une population'], 0, 'Elle agit d’autant plus fort que la population est petite.'],
@@ -321,24 +421,47 @@ La définition la plus courante — un ensemble d’individus interféconds donn
           axe: 'Biodiversité, résultat et étape de l’évolution',
           lecon: {
             titre: 'Une sixième crise, et ce qui la distingue des cinq autres',
-            cours: `La biodiversité a toujours varié. Ce qui change aujourd’hui, c’est la **vitesse** de cette variation et sa **cause**.
+            cours: `La biodiversité a toujours varié. Ce qui change aujourd'hui, c'est la vitesse de cette variation, et sa cause.
 
 ## Les variations naturelles
-Les crises passées sont liées à des causes géologiques ou astronomiques : volcanisme massif, chute d’astéroïde, variations climatiques de grande ampleur, modification de la composition de l’atmosphère. Chacune a été suivie d’une **radiation évolutive** : les groupes survivants se diversifient et occupent les niches libérées.
+| La cause d'une crise passée | Son type |
+| Volcanisme massif | Géologique |
+| Chute d'astéroïde | Astronomique |
+| Variations climatiques de grande ampleur | Climatique |
+| Modification de l'atmosphère | Chimique |
 
-## Le taux d’extinction actuel
-Le rythme actuel d’extinction est estimé de **10 à 100 fois** supérieur au rythme moyen observé dans les archives fossiles, ce qui conduit de nombreux scientifiques à parler d’une **sixième crise biologique**, la première d’origine humaine.
+Chaque crise a été suivie d'une **radiation évolutive** : les groupes survivants se diversifient et occupent les niches libérées.
+
+## Le taux d'extinction actuel
+| Le repère | Sa valeur |
+| Le rythme actuel | **10 à 100 fois** supérieur au rythme moyen des archives fossiles |
+| Le nom donné | Une **sixième crise biologique** — la première d'origine humaine |
 
 ## Les cinq causes
-Retenues sous l’acronyme des travaux de l’IPBES : la **destruction et la fragmentation des habitats** (première cause), la **surexploitation** des ressources (pêche, chasse, prélèvements), les **pollutions** (chimiques, plastiques, lumineuses, sonores), les **espèces exotiques envahissantes**, et le **changement climatique**, dont l’effet s’amplifie.
+| La cause | Son poids |
+| La **destruction et la fragmentation des habitats** | **Première** cause |
+| La **surexploitation** | Pêche, chasse, prélèvements |
+| Les **pollutions** | Chimiques, plastiques, lumineuses, sonores |
+| Les **espèces exotiques envahissantes** | Introduites volontairement ou non |
+| Le **changement climatique** | Son effet s'amplifie |
 
-> Une espèce ne disparaît presque jamais d’une seule cause : c’est l’addition d’un habitat réduit, d’un climat qui change et d’un prélèvement excessif qui la fait basculer.
+> Une espèce ne disparaît presque jamais d'une seule cause : c'est l'addition d'un habitat réduit, d'un climat qui change et d'un prélèvement excessif qui la fait basculer.
 
 ## Les indicateurs
-Les **listes rouges** de l’UICN classent les espèces selon leur risque d’extinction ; les indices d’abondance suivent l’évolution des populations. La disparition d’insectes et d’oiseaux communs montre que ce n’est pas seulement l’espèce rare qui recule, mais l’abondance générale.
+| L'indicateur | Ce qu'il mesure |
+| Les **listes rouges** de l'UICN | Le risque d'extinction par espèce |
+| Les indices d'**abondance** | L'évolution des populations |
+
+> La disparition d'insectes et d'oiseaux communs montre que ce n'est pas seulement l'espèce rare qui recule, mais l'**abondance générale**.
 
 ## Agir
-Aires protégées et réserves, **corridors écologiques** reliant les habitats fragmentés, restauration des milieux, réglementation des prélèvements (CITES), agriculture moins intensive, lutte contre les espèces envahissantes, réduction des émissions de gaz à effet de serre.`,
+| Le levier | Son objet |
+| Aires protégées et réserves | Soustraire des espaces |
+| **Corridors écologiques** | Relier les habitats fragmentés |
+| Restauration des milieux | Réparer |
+| Réglementation des prélèvements — **CITES** | Encadrer le commerce |
+| Agriculture moins intensive | Réduire la pression |
+| Réduction des émissions | Freiner le changement climatique |`,
           },
           questions: [
             ['Quelles causes expliquent les crises biologiques passées ?', ['Volcanisme, impact d’astéroïde, changements climatiques majeurs', 'L’activité humaine', 'Les épidémies uniquement', 'La dérive génétique'], 0, 'Elles sont géologiques ou astronomiques.'],
@@ -356,24 +479,40 @@ Aires protégées et réserves, **corridors écologiques** reliant les habitats 
           axe: 'Biodiversité, résultat et étape de l’évolution',
           lecon: {
             titre: 'Séduire, dissuader, coordonner',
-            cours: `Au sein d’une même espèce, les individus **communiquent** : ils échangent des signaux qui modifient le comportement du receveur.
+            cours: `Au sein d'une même espèce, les individus communiquent : ils échangent des signaux qui modifient le comportement du receveur.
 
 ## Les canaux
-La communication **chimique** utilise des **phéromones**, molécules émises en très faible quantité et détectées à grande distance : marquage de territoire, piste des fourmis, attraction sexuelle des papillons. La communication **sonore** porte loin et de nuit : chant des oiseaux, stridulation des criquets, coassement des grenouilles. La communication **visuelle** joue sur la couleur, la posture, les mouvements — parades, danses, exhibition d’ornements. S’y ajoutent le **toucher** et, chez certaines espèces, les signaux électriques ou vibratoires.
+| Le canal | Son support | Ses exemples |
+| **Chimique** | Les **phéromones**, émises en très faible quantité | Marquage de territoire, piste des fourmis, attraction sexuelle des papillons |
+| **Sonore** | Il porte loin, et de nuit | Chant des oiseaux, stridulation des criquets, coassement |
+| **Visuel** | Couleur, posture, mouvement | Parades, danses, ornements |
+| **Tactile** | Le contact | Toilettage, contacts sociaux |
+| **Autres** | Électrique, vibratoire | Certains poissons, insectes |
 
 ## À quoi servent ces signaux
-Trois grandes fonctions : la **reproduction** (attirer un partenaire, signaler sa disponibilité), la **compétition** (défendre un territoire, dissuader un rival sans combattre), et la **cohésion sociale** (alerter d’un danger, indiquer une ressource, coordonner un groupe).
+| La fonction | Ce qu'elle permet |
+| La **reproduction** | Attirer un partenaire, signaler sa disponibilité |
+| La **compétition** | Défendre un territoire, dissuader un rival **sans combattre** |
+| La **cohésion sociale** | Alerter d'un danger, indiquer une ressource, coordonner un groupe |
 
-> Un signal coûteux — un chant qui attire aussi les prédateurs, une queue immense qui gêne la fuite — est difficile à truquer : c’est ce qui en fait une information fiable.
+> Un signal coûteux — un chant qui attire aussi les prédateurs, une queue immense qui gêne la fuite — est difficile à truquer : c'est ce qui en fait une information **fiable**.
 
 ## La sélection sexuelle
-Décrite par **Darwin**, la **sélection sexuelle** favorise les caractères qui augmentent le **succès reproducteur**, même s’ils diminuent la survie. Elle opère de deux manières : la **compétition intrasexuelle** (des mâles s’affrontent pour l’accès aux femelles : bois des cerfs, combats) et le **choix intersexuel** (les femelles choisissent selon des critères : couleur, chant, parade, taille du territoire).
+Décrite par **Darwin**, elle favorise les caractères qui augmentent le **succès reproducteur**, même s'ils diminuent la survie.
+
+| Sa forme | Son mécanisme | Un exemple |
+| **Intrasexuelle** | Des mâles s'affrontent pour l'accès aux femelles | Bois des cerfs, combats |
+| **Intersexuelle** | Les femelles choisissent | Couleur, chant, parade, taille du territoire |
 
 ## Le paradoxe du paon
-La queue du paon gêne le vol et signale l’oiseau aux prédateurs : la sélection naturelle devrait la contre-sélectionner. Elle persiste parce que le succès reproducteur qu’elle procure compense la perte de survie.
+| Le fait | Sa conséquence |
+| La queue gêne le vol et signale l'oiseau aux prédateurs | La **sélection naturelle** devrait l'éliminer |
+| Elle persiste pourtant | Le **succès reproducteur** qu'elle procure compense la perte de survie |
 
 ## La conséquence
-La sélection sexuelle explique une part importante du **dimorphisme sexuel** — différences de taille, de couleur ou d’ornements entre mâles et femelles — et participe, comme la sélection naturelle et la dérive, à l’évolution de la biodiversité.`,
+La sélection sexuelle explique une part importante du **dimorphisme sexuel** — différences de taille, de couleur, d'ornements entre mâles et femelles.
+
+> Avec la sélection naturelle et la dérive, elle participe à l'évolution de la biodiversité.`,
           },
           questions: [
             ['Qu’est-ce qu’une phéromone ?', ['Une molécule émise par un individu qui modifie le comportement d’un congénère', 'Une hormone circulant dans le sang', 'Un signal sonore de basse fréquence', 'Un pigment de la peau'], 0, 'Elle agit à très faible concentration, parfois à grande distance.'],
@@ -394,27 +533,50 @@ La sélection sexuelle explique une part importante du **dimorphisme sexuel** �
           axe: 'Géosciences et compréhension des paysages',
           lecon: {
             titre: 'Comment une montagne finit en grains de sable',
-            cours: `L’**érosion** est l’ensemble des processus qui usent les roches à la surface de la Terre et transportent les débris produits. Elle façonne tous les paysages continentaux.
+            cours: `L'érosion est l'ensemble des processus qui usent les roches à la surface de la Terre et transportent les débris produits.
 
 ## Trois étapes
-L’**altération** fragilise la roche sur place ; l’**ablation** arrache les débris ; le **transport** les emporte vers un lieu de dépôt.
+| L'étape | Ce qu'elle fait |
+| L'**altération** | Elle fragilise la roche **sur place** |
+| L'**ablation** | Elle arrache les débris |
+| Le **transport** | Il les emporte vers un lieu de dépôt |
 
-## L’altération physique
-Elle fragmente la roche sans changer sa composition : la **gélifraction** (l’eau qui gèle dans une fissure augmente de volume et fait éclater la roche), les variations de température, l’action des racines, l’abrasion par le vent et les grains.
+## L'altération physique
+Elle fragmente la roche **sans changer sa composition**.
 
-## L’altération chimique
-Elle transforme les minéraux. L’eau chargée de dioxyde de carbone forme un acide faible qui **dissout** le calcaire : c’est l’origine des paysages **karstiques** — grottes, gouffres, lapiaz, résurgences. L’**hydrolyse** attaque les silicates du granite : le feldspath se transforme en **argile**, le mica se dégrade, seul le **quartz**, très résistant, subsiste sous forme de grains de sable. C’est ainsi qu’un granite devient de l’**arène granitique**.
+| Le processus | Son mécanisme |
+| La **gélifraction** | L'eau qui gèle dans une fissure augmente de volume et fait éclater la roche |
+| Les variations de **température** | Dilatations et contractions répétées |
+| L'action des **racines** | Elles écartent les fissures |
+| L'**abrasion** | Par le vent et les grains transportés |
 
-> Un grain de sable de plage est très souvent un cristal de quartz, dernier survivant d’un granite désagrégé.
+## L'altération chimique
+Elle **transforme** les minéraux.
+
+| La roche | La réaction | Le résultat |
+| Le **calcaire** | **Dissolution** par l'eau chargée de CO2 | Paysages **karstiques** : grottes, gouffres, lapiaz, résurgences |
+| Le **granite** | **Hydrolyse** des silicates | Le feldspath devient **argile**, le mica se dégrade, le **quartz** subsiste en grains |
+
+Un granite altéré devient de l'**arène granitique**.
+
+> Un grain de sable de plage est très souvent un cristal de quartz, dernier survivant d'un granite désagrégé.
 
 ## Le transport
-Les débris voyagent par l’eau (rivières, torrents, glaciers), par le vent, ou simplement par gravité sur les pentes. Plus le transport est long, plus les grains sont **arrondis** et **triés** par taille : la forme d’un grain raconte son histoire.
+| L'agent | Son domaine |
+| L'**eau** | Rivières, torrents, glaciers |
+| Le **vent** | Régions sèches |
+| La **gravité** | Les pentes |
 
-## Ce qui contrôle l’intensité
-Trois facteurs : la **nature de la roche** (un calcaire se dissout, un granite s’hydrolyse, un grès résiste), le **climat** (chaleur et humidité accélèrent l’altération chimique, le gel favorise l’altération physique) et la **pente**, qui commande la vitesse d’évacuation. La végétation, elle, freine l’érosion en retenant les sols.
+> Plus le transport est long, plus les grains sont **arrondis** et **triés** par taille : la forme d'un grain raconte son histoire.
 
-## Un phénomène inexorable
-Sans les forces internes qui soulèvent les reliefs, l’érosion aurait depuis longtemps aplani les continents : les paysages résultent d’une course entre surrection et usure.`,
+## Ce qui contrôle l'intensité
+| Le facteur | Son effet |
+| La **nature de la roche** | Le calcaire se dissout, le granite s'hydrolyse, le grès résiste |
+| Le **climat** | Chaleur et humidité accélèrent l'altération chimique ; le gel favorise la physique |
+| La **pente** | Elle commande la vitesse d'évacuation |
+| La **végétation** | Elle **freine** l'érosion en retenant les sols |
+
+> Sans les forces internes qui soulèvent les reliefs, l'érosion aurait depuis longtemps aplani les continents : les paysages résultent d'une course entre surrection et usure.`,
           },
           questions: [
             ['Quelles sont les trois étapes de l’érosion ?', ['Altération, ablation, transport', 'Dépôt, compaction, cimentation', 'Fusion, cristallisation, refroidissement', 'Pluie, ruissellement, infiltration'], 0, 'Le dépôt relève ensuite de la sédimentation.'],
@@ -432,24 +594,50 @@ Sans les forces internes qui soulèvent les reliefs, l’érosion aurait depuis 
           axe: 'Géosciences et compréhension des paysages',
           lecon: {
             titre: 'Des débris au calcaire',
-            cours: `Ce que l’érosion arrache finit par se déposer : c’est la **sédimentation**, deuxième moitié du cycle qui façonne les paysages.
+            cours: `Ce que l'érosion arrache finit par se déposer : c'est la sédimentation, deuxième moitié du cycle qui façonne les paysages.
 
-## Le dépôt
-Un sédiment se dépose lorsque l’agent de transport perd de l’énergie. Un torrent rapide charrie des blocs ; en ralentissant, il abandonne d’abord les plus gros éléments, puis les sables, enfin les argiles, qui se déposent en eau calme. Ce **tri granulométrique** explique l’organisation des dépôts, du piémont au delta et jusqu’au fond des océans.
+## Le dépôt et le tri
+Un sédiment se dépose lorsque l'agent de transport perd de l'énergie.
+
+| L'énergie du courant | Ce qui se dépose |
+| Forte, en torrent | Les **blocs** |
+| Moyenne | Les **sables** |
+| Faible, en eau calme | Les **argiles** |
+
+> Ce **tri granulométrique** explique l'organisation des dépôts, du piémont au delta et jusqu'au fond des océans.
 
 ## De sédiment à roche : la diagenèse
-Un sédiment meuble devient une roche par **diagenèse** : la **compaction** sous le poids des dépôts supérieurs chasse l’eau, puis la **cimentation** colle les grains entre eux par précipitation de minéraux. Le sable devient **grès**, l’argile devient **argilite**, les débris de coquilles deviennent **calcaire**.
+| L'étape | Ce qu'elle fait |
+| La **compaction** | Le poids des dépôts supérieurs chasse l'eau |
+| La **cimentation** | Des minéraux précipitent et collent les grains |
+
+| Le sédiment | La roche obtenue |
+| Le sable | Le **grès** |
+| L'argile | L'**argilite** |
+| Les débris de coquilles | Le **calcaire** |
 
 ## Les trois familles
-Les roches **détritiques** sont faites de débris (conglomérats, grès, argilites) ; les roches **biogènes** proviennent de restes d’êtres vivants (calcaires coquilliers, craie, charbon) ; les roches **chimiques** naissent d’une précipitation (sel gemme, gypse, certains calcaires).
+| La famille | Son origine | Ses exemples |
+| **Détritique** | Des débris | Conglomérats, grès, argilites |
+| **Biogène** | Des restes d'êtres vivants | Calcaires coquilliers, craie, charbon |
+| **Chimique** | Une précipitation | Sel gemme, gypse, certains calcaires |
 
-> La craie du Bassin parisien est un empilement de squelettes microscopiques d’algues marines : une roche entièrement construite par le vivant.
+> La craie du Bassin parisien est un empilement de squelettes microscopiques d'algues marines : une roche entièrement construite par le vivant.
 
 ## Des archives
-Les couches sédimentaires, ou **strates**, se déposent horizontalement, les plus anciennes en bas : c’est le **principe de superposition**. Elles enferment des **fossiles** et des indices du milieu de dépôt — nature des grains, rides, traces —, ce qui permet de reconstituer les paysages du passé et les climats anciens.
+| L'indice | Ce qu'il permet de reconstituer |
+| Le **principe de superposition** | Les strates se déposent horizontalement, les plus anciennes en bas |
+| Les **fossiles** | L'âge et le milieu de vie |
+| La nature des grains, les rides, les traces | Le **milieu de dépôt** |
 
 ## Le cycle
-Érosion, transport, dépôt, diagenèse, puis soulèvement et nouvelle érosion : les mêmes atomes traversent des roches successives. Une roche sédimentaire enfouie profondément peut aussi être transformée en roche **métamorphique**, ou fondre et redonner une roche magmatique.`,
+1. **Érosion**
+2. **Transport**
+3. **Dépôt**
+4. **Diagenèse**
+5. **Soulèvement**, puis nouvelle érosion
+
+> Les mêmes atomes traversent des roches successives. Une roche sédimentaire enfouie profondément peut aussi devenir **métamorphique**, ou fondre et redonner une roche magmatique.`,
           },
           questions: [
             ['Quand un sédiment se dépose-t-il ?', ['Quand l’agent de transport perd de l’énergie', 'Quand la température augmente', 'Quand la pression diminue', 'Quand le vent se lève'], 0, 'Les gros éléments se déposent en premier.'],
@@ -467,24 +655,46 @@ Les couches sédimentaires, ou **strates**, se déposent horizontalement, les pl
           axe: 'Géosciences et compréhension des paysages',
           lecon: {
             titre: 'Subir, exploiter, aggraver',
-            cours: `L’érosion est un phénomène naturel, mais les sociétés humaines la **subissent**, l’**exploitent** et souvent l’**accélèrent**.
+            cours: `L'érosion est un phénomène naturel, mais les sociétés humaines la subissent, l'exploitent — et souvent l'accélèrent.
 
-## Ce que l’humain subit
-Les **glissements de terrain**, les **coulées de boue**, les **crues torrentielles**, l’**érosion côtière** — recul du trait de côte, effondrement de falaises — menacent des habitations et des infrastructures. La **perte des sols** agricoles par ruissellement est un problème mondial : un sol met des siècles à se former et peut partir en une saison.
+## Ce que l'humain subit
+| Le phénomène | Sa menace |
+| **Glissements de terrain**, coulées de boue | Habitations et infrastructures |
+| **Crues torrentielles** | Vies et biens |
+| **Érosion côtière** | Recul du trait de côte, effondrement de falaises |
+| **Perte des sols** agricoles | Un sol met des siècles à se former et peut partir en une saison |
 
-## Ce que l’humain exploite
-Les produits de l’érosion sont des ressources : **granulats** (sables et graviers) indispensables au béton, **argiles** pour la brique et la céramique, **sables** industriels, minerais concentrés par le tri naturel dans certains dépôts alluviaux, et paysages remarquables valorisés par le tourisme. Le sable est aujourd’hui la deuxième ressource la plus consommée au monde après l’eau, et son extraction pose de graves problèmes environnementaux.
+## Ce que l'humain exploite
+| La ressource | Son usage |
+| Les **granulats** — sables et graviers | Indispensables au béton |
+| Les **argiles** | Brique, céramique |
+| Les **sables** industriels | Verre, électronique |
+| Les minerais concentrés par le tri naturel | Dépôts alluviaux |
+| Les **paysages** remarquables | Le tourisme |
 
-> Extraire du sable dans un lit de rivière ou au large ne prélève pas seulement de la matière : cela modifie l’équilibre des courants et fragilise les côtes.
+Le sable est la **deuxième ressource la plus consommée** au monde, après l'eau.
 
-## Ce que l’humain aggrave
-La **déforestation**, le **labour** dans le sens de la pente, la disparition des **haies** et des talus, l’**imperméabilisation** des sols par l’urbanisation, le surpâturage augmentent le ruissellement et l’ablation. La construction de **barrages** piège les sédiments en amont et prive les plages de leur alimentation en sable, accélérant leur recul.
+> Extraire du sable dans un lit de rivière ou au large ne prélève pas seulement de la matière : cela modifie l'équilibre des courants et fragilise les côtes.
 
-## Prévenir et s’adapter
-Reboisement, cultures en terrasses, bandes enherbées, haies et talus, labour perpendiculaire à la pente, sols couverts en hiver, protection des dunes, cartes d’aléas et plans de prévention des risques, et parfois **repli stratégique** : déplacer un bâtiment plutôt que défendre indéfiniment un trait de côte.
+## Ce que l'humain aggrave
+| La pratique | Son effet |
+| La **déforestation** | Plus de ruissellement, moins de retenue |
+| Le **labour dans le sens de la pente** | L'eau accélère |
+| La disparition des **haies** et des talus | Rien ne freine plus |
+| L'**imperméabilisation** urbaine | L'eau ne s'infiltre plus |
+| Le **surpâturage** | Le sol est mis à nu |
+| Les **barrages** | Ils piègent les sédiments et privent les plages de sable |
 
-## L’enjeu
-Ces choix mêlent des données scientifiques et des décisions politiques : protéger, laisser faire ou reculer n’a ni le même coût, ni les mêmes conséquences pour les habitants.`,
+## Prévenir et s'adapter
+| Le moyen | Son objet |
+| Reboisement, cultures en terrasses | Ralentir l'eau |
+| Bandes enherbées, haies, talus | Retenir les particules |
+| Labour **perpendiculaire** à la pente, sols couverts en hiver | Protéger la surface |
+| Protection des dunes | Défendre le littoral |
+| Cartes d'aléas, plans de prévention | Encadrer l'urbanisation |
+| Le **repli stratégique** | Déplacer un bâtiment plutôt que défendre indéfiniment un trait de côte |
+
+> Ces choix mêlent données scientifiques et décisions politiques : protéger, laisser faire ou reculer n'a ni le même coût, ni les mêmes conséquences pour les habitants.`,
           },
           questions: [
             ['Quel risque lié à l’érosion menace directement le littoral ?', ['Le recul du trait de côte', 'Les séismes', 'Les éruptions volcaniques', 'Les tempêtes solaires'], 0, 'Il conduit parfois à l’effondrement de falaises et d’habitations.'],
@@ -505,27 +715,51 @@ Ces choix mêlent des données scientifiques et des décisions politiques : prot
           axe: 'Nourrir l’humanité : vers une agriculture durable pour l’humanité ?',
           lecon: {
             titre: 'Le sol, une ressource vivante et lente',
-            cours: `Toute agriculture repose sur la production de **biomasse végétale**, elle-même dépendante d’une ressource fragile : le **sol**.
+            cours: `Toute agriculture repose sur la production de biomasse végétale, elle-même dépendante d'une ressource fragile : le sol.
 
 ## La biomasse
-La **biomasse** est la masse de matière organique produite par les êtres vivants. À la base des écosystèmes, les végétaux chlorophylliens la produisent par **photosynthèse**, à partir de matière minérale et d’énergie lumineuse. L’agriculture consiste à orienter cette production vers l’alimentation humaine ou animale.
+La **biomasse** est la masse de matière organique produite par les êtres vivants.
 
-## Ce qu’est un sol
-Un sol est un mélange de matière **minérale** issue de l’altération de la roche mère (sables, limons, argiles), de matière **organique** (l’**humus**, issu de la décomposition), d’**eau**, d’**air** et d’une intense **vie souterraine** : bactéries, champignons, vers de terre, arthropodes. Un seul gramme de sol contient des centaines de millions de micro-organismes.
+| L'étape | Ce qui se passe |
+| La **photosynthèse** | Les végétaux chlorophylliens produisent la matière organique à partir de minéral et de lumière |
+| L'**agriculture** | Elle oriente cette production vers l'alimentation humaine ou animale |
 
-> Un sol fertile n’est pas un support inerte : c’est un écosystème, et sa fertilité est le produit de son activité biologique.
+## Ce qu'est un sol
+| Sa composante | Son contenu |
+| La matière **minérale** | Sables, limons, argiles, issus de l'altération de la roche mère |
+| La matière **organique** | L'**humus**, issu de la décomposition |
+| L'**eau** et l'**air** | Dans les pores |
+| La **vie souterraine** | Bactéries, champignons, vers de terre, arthropodes |
+
+Un seul gramme de sol contient des **centaines de millions** de micro-organismes.
+
+> Un sol fertile n'est pas un support inerte : c'est un écosystème, et sa fertilité est le produit de son activité biologique.
 
 ## Une ressource lente
-La formation d’un centimètre de sol demande de plusieurs décennies à plusieurs siècles selon le climat et la roche. À l’échelle d’une vie humaine, le sol est donc une ressource **non renouvelable**.
+| Le repère | Sa valeur |
+| Former **un centimètre** de sol | De plusieurs décennies à plusieurs siècles |
+| À l'échelle d'une vie humaine | Une ressource **non renouvelable** |
 
 ## Les rendements des cultures
-La production dépend de la lumière, de l’eau, de la température, de la disponibilité en éléments minéraux — azote, phosphore, potassium principalement — et de l’état biologique du sol. Les plantes ne prélèvent que ce qui est disponible dans la solution du sol.
+| Le facteur | Ce qu'il apporte |
+| La **lumière** | L'énergie |
+| L'**eau** | Le transport des éléments |
+| La **température** | La vitesse des réactions |
+| Les éléments minéraux — **azote**, phosphore, potassium | La matière |
+| L'état **biologique** du sol | La disponibilité de ces éléments |
 
 ## Les pressions
-Érosion, tassement par les engins lourds, salinisation par irrigation mal maîtrisée, perte de matière organique, pollution par certains intrants, et **artificialisation** — en France, plusieurs dizaines de milliers d’hectares disparaissent chaque année sous les constructions et les infrastructures.
+| La pression | Son effet |
+| L'**érosion** | Le sol part |
+| Le **tassement** par les engins lourds | L'air et l'eau ne circulent plus |
+| La **salinisation** par irrigation mal maîtrisée | Le sol devient stérile |
+| La perte de matière **organique** | La vie du sol s'appauvrit |
+| L'**artificialisation** | Plusieurs dizaines de milliers d'hectares par an en France |
 
 ## Préserver
-Rotation des cultures, couverture permanente du sol, apports de matière organique, réduction du travail du sol, agroforesterie, maintien des haies : autant de pratiques qui entretiennent la vie du sol au lieu de l’épuiser.`,
+Rotation des cultures, couverture permanente du sol, apports de matière organique, réduction du travail du sol, agroforesterie, maintien des haies.
+
+> Autant de pratiques qui **entretiennent** la vie du sol au lieu de l'épuiser.`,
           },
           questions: [
             ['Qu’est-ce que la biomasse ?', ['La masse de matière organique produite par les êtres vivants', 'La masse de minéraux d’un sol', 'La quantité d’eau d’un écosystème', 'Le poids des engrais utilisés'], 0, 'Les végétaux la produisent par photosynthèse.'],
@@ -543,24 +777,38 @@ Rotation des cultures, couverture permanente du sol, apports de matière organiq
           axe: 'Nourrir l’humanité : vers une agriculture durable pour l’humanité ?',
           lecon: {
             titre: 'Ce que coûte, en surface et en énergie, une assiette',
-            cours: `Nourrir huit milliards d’humains suppose des choix : quoi produire, où, comment, et à quel coût pour les écosystèmes.
+            cours: `Nourrir huit milliards d'humains suppose des choix : quoi produire, où, comment, et à quel coût pour les écosystèmes.
 
 ## Les chaînes alimentaires
-Dans une chaîne, seule une petite partie de l’énergie passe d’un maillon au suivant : environ **10 %**, le reste étant dissipé par la respiration et les déchets. Conséquence directe : produire un kilogramme de protéines animales demande beaucoup plus de surface, d’eau et d’énergie que produire un kilogramme de protéines végétales.
+| Le fait | Sa conséquence |
+| Environ **10 %** de l'énergie passe d'un maillon au suivant | Le reste est dissipé par la respiration et les déchets |
+| Produire un kg de protéines **animales** | Demande beaucoup plus de surface, d'eau et d'énergie qu'un kg de protéines **végétales** |
 
-> Un régime riche en produits animaux mobilise plusieurs fois plus de surface agricole qu’un régime majoritairement végétal, à apport nutritionnel comparable.
+> Un régime riche en produits animaux mobilise plusieurs fois plus de surface agricole qu'un régime majoritairement végétal, à apport nutritionnel comparable.
 
 ## Les grands modèles
-L’agriculture **vivrière** nourrit d’abord la famille du producteur, avec peu d’intrants. L’agriculture **intensive** maximise le rendement à l’hectare par les engrais, les produits phytosanitaires, l’irrigation, la mécanisation et la sélection variétale. L’agriculture **extensive** utilise de grandes surfaces avec peu d’intrants. L’agriculture **biologique** exclut les produits de synthèse et les OGM. L’**agroécologie** cherche à s’appuyer sur les régulations naturelles.
+| Le modèle | Son principe |
+| **Vivrière** | Nourrir d'abord la famille du producteur, avec peu d'intrants |
+| **Intensive** | Maximiser le rendement à l'hectare : engrais, phytosanitaires, irrigation, mécanisation, sélection |
+| **Extensive** | De grandes surfaces, peu d'intrants |
+| **Biologique** | Sans produits de synthèse ni OGM |
+| **Agroécologie** | S'appuyer sur les régulations naturelles |
 
 ## Les intrants
-Les **engrais** apportent les éléments minéraux ; les **produits phytosanitaires** luttent contre ravageurs, maladies et adventices ; l’**irrigation** lève la contrainte hydrique. Ils augmentent les rendements, mais posent des problèmes : eutrophisation des eaux par les nitrates et les phosphates, résidus dans les aliments, résistances chez les ravageurs, épuisement des nappes.
+| L'intrant | Ce qu'il apporte | Son risque |
+| Les **engrais** | Les éléments minéraux | **Eutrophisation** des eaux |
+| Les **phytosanitaires** | Lutte contre ravageurs, maladies, adventices | Résidus, **résistances** |
+| L'**irrigation** | Elle lève la contrainte hydrique | Épuisement des nappes |
 
 ## Les pertes
-Un tiers environ de la production alimentaire mondiale est perdu ou gaspillé, au champ, au transport, au commerce ou chez le consommateur. Réduire ces pertes est un levier au moins aussi puissant que l’augmentation des rendements.
+| Le repère | Sa valeur |
+| La part perdue ou gaspillée | Environ **un tiers** de la production mondiale |
+| Où | Au champ, au transport, au commerce, chez le consommateur |
 
-## L’enjeu
-La question n’est pas seulement de produire plus, mais de produire **autrement** et de répartir : la faim dans le monde tient largement à l’accès et aux revenus, pas seulement au volume produit.`,
+> Réduire ces pertes est un levier au moins aussi puissant que l'augmentation des rendements.
+
+## L'enjeu
+> La question n'est pas seulement de produire plus, mais de produire **autrement** et de **répartir** : la faim dans le monde tient largement à l'accès et aux revenus, pas seulement au volume produit.`,
           },
           questions: [
             ['Quelle part de l’énergie passe environ d’un maillon à l’autre d’une chaîne alimentaire ?', ['Environ 10 %', 'Environ 90 %', 'Environ 50 %', 'La totalité'], 0, 'Le reste est dissipé par la respiration et les déchets.'],
@@ -578,24 +826,49 @@ La question n’est pas seulement de produire plus, mais de produire **autrement
           axe: 'Nourrir l’humanité : vers une agriculture durable pour l’humanité ?',
           lecon: {
             titre: 'Augmenter les rendements sans détruire ce qui les permet',
-            cours: `Depuis un siècle, les rendements agricoles ont été multipliés par plusieurs fois en Europe. Cette hausse a un prix, aujourd’hui mesuré.
+            cours: `Depuis un siècle, les rendements agricoles ont été multipliés plusieurs fois en Europe. Cette hausse a un prix, aujourd'hui mesuré.
 
 ## Les leviers de la hausse
-La **sélection variétale**, d’abord empirique puis assistée par la génétique, a produit des variétés plus productives et plus résistantes. Les **engrais de synthèse**, permis par la fixation industrielle de l’azote atmosphérique, ont levé la principale limite. S’y ajoutent la **mécanisation**, l’**irrigation**, les **produits phytosanitaires** et le **remembrement** des parcelles.
+| Le levier | Son apport |
+| La **sélection variétale** | Des variétés plus productives et plus résistantes |
+| Les **engrais de synthèse** | Permis par la fixation industrielle de l'azote : ils lèvent la principale limite |
+| La **mécanisation** | Plus de surface par actif |
+| L'**irrigation** | Une saison de culture sécurisée |
+| Les **phytosanitaires** | Moins de pertes |
+| Le **remembrement** | De grandes parcelles mécanisables |
 
-## Les effets sur l’environnement
-Pollution des eaux par les nitrates et les phosphates, marées vertes et zones mortes littorales, résidus de pesticides dans les sols et les cours d’eau, **effondrement des populations d’insectes** pollinisateurs et d’oiseaux des champs, perte de biodiversité liée à la disparition des haies, tassement et érosion des sols, consommation d’eau des nappes.
+## Les effets sur l'environnement
+| L'effet | Sa manifestation |
+| Pollution par **nitrates** et phosphates | Marées vertes, zones mortes littorales |
+| Résidus de **pesticides** | Dans les sols et les cours d'eau |
+| **Effondrement des insectes** pollinisateurs et des oiseaux des champs | Une chaîne entière fragilisée |
+| Perte de **biodiversité** | Disparition des haies |
+| Tassement et **érosion** des sols | Une fertilité qui recule |
+| Consommation d'**eau** | Des nappes surexploitées |
 
-> On ne peut pas augmenter durablement un rendement en détruisant le sol, les pollinisateurs et l’eau qui le rendent possible.
+> On ne peut pas augmenter durablement un rendement en détruisant le sol, les pollinisateurs et l'eau qui le rendent possible.
 
 ## Les effets sur la santé
-Exposition professionnelle des agriculteurs à certains produits, résidus dans l’alimentation, développement de **résistances** chez les ravageurs et de l’**antibiorésistance** liée aux usages en élevage. L’évaluation des risques repose sur des seuils, des autorisations de mise sur le marché et une surveillance continue.
+| Le risque | Qui il concerne |
+| L'exposition **professionnelle** | Les agriculteurs |
+| Les **résidus** dans l'alimentation | Les consommateurs |
+| Les **résistances** chez les ravageurs | L'efficacité future des traitements |
+| L'**antibiorésistance** liée aux usages en élevage | La médecine humaine |
+
+L'évaluation repose sur des seuils, des autorisations de mise sur le marché et une surveillance continue.
 
 ## Les pistes de la durabilité
-Les **rotations** et l’allongement des successions culturales, la **lutte biologique** — utiliser un ennemi naturel du ravageur —, les auxiliaires de culture favorisés par les haies, la **lutte intégrée** qui réserve le traitement chimique au dernier recours, la sélection de variétés résistantes, l’agriculture de précision qui n’applique un intrant que là où il est utile, l’**agroforesterie** et la couverture des sols.
+| La pratique | Son principe |
+| Les **rotations** longues | Casser les cycles des ravageurs |
+| La **lutte biologique** | Utiliser un ennemi naturel du ravageur |
+| Les **auxiliaires** favorisés par les haies | Une régulation gratuite |
+| La **lutte intégrée** | Le traitement chimique en **dernier** recours |
+| Les variétés **résistantes** | Moins de traitements |
+| L'agriculture de **précision** | Un intrant seulement là où il est utile |
+| **Agroforesterie**, couverture des sols | Protéger et enrichir |
 
 ## Un arbitrage permanent
-Une agriculture durable doit tenir trois exigences à la fois : nourrir, préserver les milieux, et faire vivre ceux qui produisent. Aucune solution technique ne dispense de ce triple arbitrage.`,
+> Une agriculture durable doit tenir trois exigences à la fois : **nourrir**, **préserver les milieux**, et **faire vivre** ceux qui produisent. Aucune solution technique ne dispense de ce triple arbitrage.`,
           },
           questions: [
             ['Quel progrès a levé la principale limite minérale des cultures au XXe siècle ?', ['Les engrais azotés de synthèse', 'L’irrigation goutte à goutte', 'La récolte mécanisée', 'Le stockage réfrigéré'], 0, 'Ils reposent sur la fixation industrielle de l’azote atmosphérique.'],
@@ -616,24 +889,44 @@ Une agriculture durable doit tenir trois exigences à la fois : nourrir, préser
           axe: 'Procréation et sexualité humaine',
           lecon: {
             titre: 'Devenir un individu sexué, en trois temps',
-            cours: `Le sexe d’un individu ne se met pas en place en une fois : il se construit de la fécondation à la puberté, en plusieurs étapes contrôlées.
+            cours: `Le sexe d'un individu ne se met pas en place en une fois : il se construit de la fécondation à la puberté, en plusieurs étapes contrôlées.
+
+## Les trois niveaux
+| Le niveau | Quand il se met en place | Ce qui le détermine |
+| Le sexe **chromosomique** | Dès la **fécondation** | La paire de chromosomes sexuels |
+| Le sexe **gonadique** | Vers la 7e semaine | La présence ou l'absence du gène **SRY** |
+| Le sexe **phénotypique** | Avant la naissance, complété à la puberté | Les **hormones** produites par les gonades |
 
 ## Le sexe chromosomique
-Il est déterminé dès la **fécondation** : l’ovule apporte toujours un chromosome X, le spermatozoïde un X ou un Y. Une cellule-œuf **XX** donnera en règle générale un individu de sexe féminin, une cellule-œuf **XY** un individu de sexe masculin. C’est le gène **SRY**, porté par le chromosome Y, qui déclenche la différenciation en testicules.
+| Le gamète | Le chromosome apporté |
+| L'ovule | Toujours **X** |
+| Le spermatozoïde | **X** ou **Y** |
+
+| La cellule-œuf | Le sexe, en règle générale |
+| **XX** | Féminin |
+| **XY** | Masculin |
+
+Le gène **SRY**, porté par le chromosome Y, déclenche la différenciation en testicules.
 
 ## Le sexe gonadique
-Jusqu’à la septième semaine environ, l’embryon possède des **gonades indifférenciées** et une double ébauche de conduits. La présence ou l’absence du gène SRY oriente ces gonades vers des testicules ou des ovaires.
+Jusqu'à la septième semaine environ, l'embryon possède des **gonades indifférenciées** et une double ébauche de conduits.
 
-> Un même point de départ, deux trajectoires : l’appareil génital masculin et l’appareil génital féminin dérivent des mêmes ébauches embryonnaires.
+> Un même point de départ, deux trajectoires : les appareils génitaux masculin et féminin dérivent des **mêmes ébauches** embryonnaires.
 
 ## Le sexe phénotypique
-Les gonades différenciées produisent ensuite des **hormones** : la **testostérone** et l’hormone antimüllérienne chez le fœtus masculin font régresser un jeu de conduits et développer l’autre. Le phénotype sexuel se met en place avant la naissance, mais reste incomplet.
+| L'hormone | Son effet chez le fœtus masculin |
+| La **testostérone** | Elle développe un jeu de conduits |
+| L'hormone **antimüllérienne** | Elle fait régresser l'autre |
 
 ## La puberté
-Entre 10 et 16 ans environ, une élévation de la production hormonale déclenche la **puberté** : développement des caractères sexuels secondaires (pilosité, voix, seins, morphologie), croissance rapide, acquisition de la **fonction reproductrice** — premières règles chez la fille, premières éjaculations chez le garçon. La production de gamètes commence.
+| Le repère | Son contenu |
+| L'âge | Entre 10 et 16 ans environ |
+| Le déclencheur | Une élévation de la production hormonale |
+| Les caractères sexuels **secondaires** | Pilosité, voix, seins, morphologie |
+| La croissance | Rapide |
+| La **fonction reproductrice** | Premières règles, premières éjaculations ; la production de gamètes commence |
 
-## Ce qui se joue en même temps
-La puberté est aussi un bouleversement psychologique et social : image du corps, identité, relations aux autres. L’âge de la puberté varie fortement d’un individu à l’autre, et cette variabilité est normale.`,
+> La puberté est aussi un bouleversement psychologique et social : image du corps, identité, relations aux autres. Son âge varie fortement d'un individu à l'autre, et cette variabilité est **normale**.`,
           },
           questions: [
             ['À quel moment le sexe chromosomique est-il déterminé ?', ['À la fécondation', 'À la puberté', 'À la septième semaine de développement', 'À la naissance'], 0, 'Le spermatozoïde apporte un X ou un Y.'],
@@ -651,24 +944,45 @@ La puberté est aussi un bouleversement psychologique et social : image du corps
           axe: 'Procréation et sexualité humaine',
           lecon: {
             titre: 'Deux niveaux de contrôle : réflexes et cerveau',
-            cours: `Chez l’être humain, la sexualité n’est pas gouvernée par les seules hormones : elle met en jeu le **système nerveux**, à deux niveaux.
+            cours: `Chez l'être humain, la sexualité n'est pas gouvernée par les seules hormones : elle met en jeu le système nerveux, à deux niveaux.
 
-## Le niveau automatique
-Certaines réponses sexuelles sont des **réflexes** contrôlés par la **moelle épinière** : un stimulus, un circuit nerveux court, une réponse. Ces mécanismes fonctionnent sans décision consciente et sont comparables à ceux d’autres mammifères.
+## Les deux niveaux de contrôle
+| Le niveau | Sa structure | Son fonctionnement |
+| **Automatique** | La **moelle épinière** | Des **réflexes** : un stimulus, un circuit court, une réponse — sans décision consciente |
+| **Cérébral** | Le **cerveau** | Il **module** ces réflexes |
 
 ## Le niveau cérébral
-Ces réflexes sont **modulés** par le **cerveau**. Le **système de récompense**, qui met en jeu des zones profondes et le neurotransmetteur **dopamine**, associe certains comportements à une sensation de plaisir et favorise leur répétition. Le **cortex** intervient par la mémoire, l’imaginaire, l’anticipation, l’émotion, l’attention portée à l’autre.
+| La structure | Son rôle |
+| Le **système de récompense** | Il associe certains comportements au plaisir, par la **dopamine**, et favorise leur répétition |
+| Le **cortex** | Mémoire, imaginaire, anticipation, émotion, attention portée à l'autre |
 
-> Chez l’humain, l’activité sexuelle est largement dissociée de la reproduction : elle est aussi un comportement de plaisir, de lien et de communication.
+> Chez l'humain, l'activité sexuelle est largement **dissociée de la reproduction** : elle est aussi un comportement de plaisir, de lien et de communication.
 
 ## Ce que cela implique
-La sexualité humaine dépend fortement du **contexte** : histoire personnelle, apprentissages, culture, normes sociales, relations. C’est ce qui la distingue des comportements sexuels de nombreuses espèces, strictement rythmés par les hormones et les saisons.
+| Le facteur | Son influence |
+| L'histoire personnelle | Elle façonne les attentes |
+| Les **apprentissages** | Ils construisent les représentations |
+| La **culture** et les normes sociales | Elles encadrent |
+| La **relation** | Elle est déterminante |
+
+> C'est ce qui distingue la sexualité humaine des comportements sexuels de nombreuses espèces, strictement rythmés par les hormones et les saisons.
 
 ## Le respect et le consentement
-Parce que le cerveau est engagé, la sexualité relève de la **décision** et de la **relation**. Le **consentement** de chaque personne est nécessaire, libre, éclairé et révocable à tout moment ; il ne se présume pas. Le droit sanctionne toute atteinte sexuelle imposée, ainsi que le harcèlement.
+| Le caractère du consentement | Ce qu'il signifie |
+| **Nécessaire** | De chaque personne |
+| **Libre** | Sans contrainte ni pression |
+| **Éclairé** | En connaissance de cause |
+| **Révocable** | À tout moment |
 
-## S’informer
-Les sources fiables existent : professionnels de santé, infirmerie scolaire, centres de santé sexuelle, sites publics d’information. Les représentations diffusées par la pornographie ne sont ni un documentaire, ni un modèle : elles sont des productions commerciales, souvent éloignées de la réalité des relations.`,
+> Il ne se présume pas. Le droit sanctionne toute atteinte sexuelle imposée, ainsi que le harcèlement.
+
+## S'informer
+| La source fiable | Ce qu'elle apporte |
+| Professionnels de santé, infirmerie scolaire | Un avis personnalisé |
+| Centres de santé sexuelle | Prévention, dépistage, contraception |
+| Sites publics d'information | Des repères vérifiés |
+
+> Les représentations diffusées par la pornographie ne sont ni un documentaire, ni un modèle : ce sont des productions commerciales, souvent éloignées de la réalité des relations.`,
           },
           questions: [
             ['Quel organe contrôle les réponses sexuelles réflexes ?', ['La moelle épinière', 'Le cortex cérébral', 'L’hypophyse', 'Le cervelet'], 0, 'Ces réflexes fonctionnent sans décision consciente.'],
@@ -686,24 +1000,43 @@ Les sources fiables existent : professionnels de santé, infirmerie scolaire, ce
           axe: 'Procréation et sexualité humaine',
           lecon: {
             titre: 'Un dialogue permanent entre le cerveau et les gonades',
-            cours: `La fonction de reproduction est pilotée par un **système hormonal** reliant le cerveau et les gonades.
+            cours: `La fonction de reproduction est pilotée par un système hormonal reliant le cerveau et les gonades.
 
-## Le complexe hypothalamo-hypophysaire
-L’**hypothalamus** libère une hormone qui commande l’**hypophyse** ; celle-ci sécrète deux **gonadostimulines**, **FSH** et **LH**, transportées par le sang jusqu’aux gonades. Une hormone est justement définie comme une substance produite par une glande, transportée par le sang, et agissant à distance sur des **cellules cibles** qui possèdent le récepteur correspondant.
+## La chaîne de commande
+| L'étage | Ce qu'il produit | Sur quoi il agit |
+| L'**hypothalamus** | Une hormone de commande | L'hypophyse |
+| L'**hypophyse** | Les **gonadostimulines** : **FSH** et **LH** | Les gonades |
+| Les **gonades** | Hormones sexuelles et gamètes | L'organisme, et en retour le cerveau |
 
-## Chez l’homme
-FSH et LH stimulent les testicules : production continue de **spermatozoïdes** et sécrétion de **testostérone**. Cette dernière exerce en retour un **rétrocontrôle négatif** sur le complexe hypothalamo-hypophysaire, ce qui maintient un taux hormonal stable.
+> Une **hormone** est une substance produite par une glande, transportée par le **sang**, et agissant à distance sur des **cellules cibles** qui possèdent le récepteur correspondant.
+
+## Chez l'homme
+| Le fait | Son contenu |
+| La production de **spermatozoïdes** | **Continue** |
+| L'hormone produite | La **testostérone** |
+| Le **rétrocontrôle négatif** | La testostérone freine le complexe hypothalamo-hypophysaire, ce qui maintient un taux stable |
 
 ## Chez la femme
-Le fonctionnement est **cyclique**, d’environ 28 jours. FSH permet la maturation d’un **follicule** ovarien ; un pic de **LH** déclenche l’**ovulation** vers le 14e jour. Les ovaires sécrètent des **œstrogènes** puis, après l’ovulation, de la **progestérone**, qui préparent la **muqueuse utérine** à une éventuelle implantation. En l’absence de fécondation, la chute hormonale provoque l’élimination de cette muqueuse : ce sont les **règles**.
+Le fonctionnement est **cyclique**, d'environ 28 jours.
 
-> Le cycle utérin est l’image, avec un léger décalage, de ce qui se passe dans l’ovaire : les deux sont synchronisés par les hormones ovariennes.
+| Le moment | Ce qui se passe |
+| Première phase | La **FSH** permet la maturation d'un **follicule** ovarien |
+| Vers le 14e jour | Un **pic de LH** déclenche l'**ovulation** |
+| Après l'ovulation | Les ovaires sécrètent des **œstrogènes**, puis de la **progestérone** |
+| Effet sur l'utérus | La **muqueuse utérine** se prépare à une éventuelle implantation |
+| Sans fécondation | La chute hormonale provoque l'élimination de la muqueuse : les **règles** |
+
+> Le cycle utérin est l'image, avec un léger décalage, de ce qui se passe dans l'ovaire : les deux sont synchronisés par les hormones ovariennes.
 
 ## La maîtrise de la procréation
-La **contraception hormonale** (pilule, implant, patch) apporte des hormones de synthèse qui bloquent l’ovulation par rétrocontrôle et modifient la glaire cervicale. Le **préservatif** est le seul moyen protégeant aussi des **infections sexuellement transmissibles**. La **contraception d’urgence** agit en retardant l’ovulation ; le **DIU** (stérilet) offre une contraception de longue durée.
+| Le moyen | Son mécanisme | Sa particularité |
+| **Contraception hormonale** — pilule, implant, patch | Des hormones de synthèse bloquent l'ovulation par rétrocontrôle et modifient la glaire | Très efficace si bien suivie |
+| Le **préservatif** | Barrière mécanique | Le **seul** à protéger aussi des **IST** |
+| La contraception d'**urgence** | Elle retarde l'ovulation | À prendre au plus vite |
+| Le **DIU** (stérilet) | Action locale | Longue durée |
 
-## L’aide médicale à la procréation
-En cas d’infertilité, des techniques comme la stimulation ovarienne, l’insémination artificielle ou la **fécondation in vitro** utilisent précisément ces mécanismes hormonaux.`,
+## L'aide médicale à la procréation
+En cas d'infertilité : stimulation ovarienne, insémination artificielle, **fécondation in vitro** — toutes fondées sur ces mêmes mécanismes hormonaux.`,
           },
           questions: [
             ['Qu’est-ce qu’une hormone ?', ['Une substance produite par une glande, transportée par le sang, agissant sur des cellules cibles', 'Un message nerveux rapide', 'Une enzyme digestive', 'Un nutriment'], 0, 'Seules les cellules portant le récepteur y répondent.'],
@@ -724,24 +1057,46 @@ En cas d’infertilité, des techniques comme la stimulation ovarienne, l’ins�
           axe: 'Microorganismes et santé',
           lecon: {
             titre: 'Qui rend malade, et comment le microbe voyage',
-            cours: `Une **maladie infectieuse** est causée par un **agent pathogène** : un micro-organisme capable de provoquer une maladie chez son hôte.
+            cours: `Une maladie infectieuse est causée par un agent pathogène : un micro-organisme capable de provoquer une maladie chez son hôte.
 
 ## Les quatre grandes familles
-Les **bactéries** sont des cellules procaryotes, capables de se multiplier seules (tuberculose, salmonellose, angine à streptocoque). Les **virus** ne sont pas des cellules : ils doivent parasiter une cellule hôte pour se répliquer (grippe, VIH, Covid-19). Les **champignons** microscopiques causent les mycoses. Les **protozoaires**, eucaryotes unicellulaires, sont responsables du paludisme ou de la toxoplasmose.
+| L'agent | Sa nature | Des exemples |
+| **Bactéries** | Cellules procaryotes, capables de se multiplier seules | Tuberculose, salmonellose, angine à streptocoque |
+| **Virus** | **Pas** des cellules : ils doivent parasiter une cellule hôte | Grippe, VIH, Covid-19 |
+| **Champignons** microscopiques | Eucaryotes | Mycoses |
+| **Protozoaires** | Eucaryotes unicellulaires | Paludisme, toxoplasmose |
 
 ## Les modes de transmission
-Directe, par contact ou par gouttelettes ; indirecte, par l’eau, les aliments ou les objets ; et **vectorielle**, par un animal qui transporte l’agent d’un hôte à l’autre.
+| Le mode | Son support |
+| **Directe** | Contact, gouttelettes |
+| **Indirecte** | Eau, aliments, objets |
+| **Vectorielle** | Un animal transporte l'agent d'un hôte à l'autre |
 
 ## Les maladies à vecteur
-Le vecteur le plus meurtrier est le **moustique**. Le genre *Anopheles* transmet le **paludisme**, dû à un protozoaire du genre *Plasmodium* ; le moustique **tigre** (*Aedes albopictus*) transmet la **dengue**, le **chikungunya** et le **Zika**. La **tique** transmet la **maladie de Lyme**, due à une bactérie.
+| Le vecteur | La maladie | L'agent |
+| *Anopheles* | Le **paludisme** | Un protozoaire du genre *Plasmodium* |
+| Le moustique **tigre** (*Aedes albopictus*) | **Dengue**, **chikungunya**, **Zika** | Des virus |
+| La **tique** | La **maladie de Lyme** | Une bactérie |
 
-> Un vecteur n’est pas seulement un moyen de transport : le parasite y accomplit souvent une partie de son cycle, ce qui rend la lutte plus complexe.
+> Un vecteur n'est pas seulement un moyen de transport : le parasite y accomplit souvent une partie de son cycle, ce qui rend la lutte plus complexe.
 
-## Le rôle de l’environnement
-La répartition des maladies à vecteur dépend du climat, de l’eau stagnante, de l’urbanisation, de la déforestation et des déplacements humains. Le **réchauffement climatique** étend l’aire du moustique tigre vers le nord : il est aujourd’hui installé dans une grande partie de la France métropolitaine.
+## Le rôle de l'environnement
+| Le facteur | Son effet |
+| Le **climat** | Il fixe l'aire du vecteur |
+| L'**eau stagnante** | Elle offre des gîtes larvaires |
+| L'**urbanisation** et la **déforestation** | Elles rapprochent hôtes et vecteurs |
+| Les **déplacements humains** | Ils importent les agents |
+| Le **réchauffement climatique** | Il étend l'aire du moustique tigre vers le nord — il est installé dans une grande partie de la France métropolitaine |
 
 ## Prévenir
-Éliminer les eaux stagnantes, se protéger des piqûres (répulsifs, moustiquaires, vêtements couvrants), surveiller les cas, vacciner quand un vaccin existe, respecter l’hygiène des mains et des aliments, traiter les eaux. La prévention collective compte autant que la protection individuelle.`,
+| La mesure | Son niveau |
+| Éliminer les eaux stagnantes | Collectif et individuel |
+| Répulsifs, moustiquaires, vêtements couvrants | Individuel |
+| Surveiller les cas | Collectif |
+| **Vacciner**, quand un vaccin existe | Collectif |
+| Hygiène des mains et des aliments, traitement des eaux | Les deux |
+
+> La prévention collective compte autant que la protection individuelle.`,
           },
           questions: [
             ['Qu’est-ce qu’un agent pathogène ?', ['Un micro-organisme capable de provoquer une maladie', 'Un organisme utile à la digestion', 'Un vecteur animal', 'Un vaccin atténué'], 0, 'Bactéries, virus, champignons et protozoaires en font partie.'],
@@ -759,24 +1114,45 @@ La répartition des maladies à vecteur dépend du climat, de l’eau stagnante,
           axe: 'Microorganismes et santé',
           lecon: {
             titre: 'Vivre avec des milliards de partenaires',
-            cours: `Tous les micro-organismes ne sont pas des ennemis : l’immense majorité de ceux qui vivent avec nous sont neutres ou utiles.
+            cours: `Tous les micro-organismes ne sont pas des ennemis : l'immense majorité de ceux qui vivent avec nous sont neutres ou utiles.
 
 ## Les types de relations
-Le **mutualisme** ou la **symbiose** au sens strict profite aux deux partenaires ; le **commensalisme** profite à l’un sans nuire à l’autre ; le **parasitisme** profite à l’un aux dépens de l’autre. Une même espèce peut changer de rôle selon les circonstances : un micro-organisme habituellement inoffensif peut devenir **opportuniste** chez une personne immunodéprimée.
+| La relation | Le bilan pour chacun |
+| **Mutualisme** ou symbiose | Les **deux** y gagnent |
+| **Commensalisme** | L'un gagne, l'autre est indifférent |
+| **Parasitisme** | L'un gagne **aux dépens** de l'autre |
+
+> Une même espèce peut changer de rôle : un micro-organisme habituellement inoffensif devient **opportuniste** chez une personne immunodéprimée.
 
 ## Des symbioses célèbres
-Les **légumineuses** hébergent dans leurs racines des bactéries du genre *Rhizobium* capables de fixer l’azote de l’air : la plante reçoit de l’azote, la bactérie du sucre. Les **mycorhizes**, associations entre racines et champignons, améliorent l’absorption d’eau et de minéraux de la plupart des plantes. Les **ruminants** digèrent la cellulose grâce aux micro-organismes de leur rumen.
+| L'association | Ce que chacun apporte |
+| **Légumineuses** et bactéries *Rhizobium* | La plante reçoit de l'**azote** fixé de l'air, la bactérie du sucre |
+| Racines et champignons — les **mycorhizes** | Une meilleure absorption d'eau et de minéraux pour la plupart des plantes |
+| **Ruminants** et micro-organismes du rumen | Ils digèrent la **cellulose** que l'animal ne saurait dégrader |
 
-> Sans ces associations, ni les prairies, ni les forêts, ni l’élevage tels que nous les connaissons n’existeraient.
+> Sans ces associations, ni les prairies, ni les forêts, ni l'élevage tels que nous les connaissons n'existeraient.
 
 ## Le microbiote humain
-Le **microbiote** est l’ensemble des micro-organismes qui vivent sur et dans notre corps : intestin, peau, bouche, voies respiratoires, voies génitales. Il compte un nombre de cellules du même ordre de grandeur que celui des cellules du corps humain, et bien plus de gènes.
+| Le point | Sa valeur |
+| Sa définition | L'ensemble des micro-organismes vivant sur et dans le corps |
+| Ses sites | Intestin, peau, bouche, voies respiratoires, voies génitales |
+| Son nombre de cellules | Du **même ordre de grandeur** que celui des cellules du corps |
+| Ses gènes | Bien plus nombreux que ceux du génome humain |
 
 ## Sa mise en place
-Il se constitue dès la **naissance** — mode d’accouchement, allaitement, environnement —, se diversifie durant les premières années et se stabilise ensuite, tout en restant influencé par l’alimentation, l’âge, les traitements et le mode de vie. Chaque individu possède un microbiote qui lui est propre.
+| L'étape | Ce qui l'influence |
+| La **naissance** | Mode d'accouchement, allaitement, environnement |
+| Les premières années | Il se **diversifie** |
+| Ensuite | Il se stabilise, tout en variant avec l'alimentation, l'âge, les traitements, le mode de vie |
+
+> Chaque individu possède un microbiote qui lui est propre.
 
 ## Ses fonctions
-Digestion d’aliments que nous ne pouvons pas dégrader seuls, synthèse de certaines vitamines, maturation et éducation du **système immunitaire**, et **effet barrière** : en occupant la place, le microbiote empêche l’installation d’agents pathogènes.`,
+| La fonction | Ce qu'elle apporte |
+| La **digestion** | D'aliments que nous ne pouvons pas dégrader seuls |
+| La **synthèse** | De certaines vitamines |
+| La **maturation immunitaire** | Il éduque le système immunitaire |
+| L'**effet barrière** | En occupant la place, il empêche l'installation d'agents pathogènes |`,
           },
           questions: [
             ['Qu’est-ce que le mutualisme ?', ['Une association bénéfique aux deux partenaires', 'Une association bénéfique à un seul, sans nuire à l’autre', 'Une association nuisible à l’un des deux', 'Une absence de relation'], 0, 'Le commensalisme ne profite qu’à l’un, sans nuire.'],
@@ -794,24 +1170,47 @@ Digestion d’aliments que nous ne pouvons pas dégrader seuls, synthèse de cer
           axe: 'Microorganismes et santé',
           lecon: {
             titre: 'Un organe à part entière',
-            cours: `Le **microbiote intestinal** est le plus riche de l’organisme : plusieurs centaines d’espèces bactériennes, essentiellement dans le côlon.
+            cours: `Le microbiote intestinal est le plus riche de l'organisme : plusieurs centaines d'espèces bactériennes, essentiellement dans le côlon.
 
-## Ce qu’il fait
-Il **dégrade** les fibres alimentaires que nos enzymes ne savent pas digérer, produisant des acides gras à chaîne courte utilisés par les cellules de la paroi intestinale. Il **synthétise** certaines vitamines, dont la vitamine K et des vitamines du groupe B. Il **éduque** le système immunitaire intestinal, qui doit apprendre à tolérer ce qui est inoffensif tout en réagissant aux agresseurs. Il exerce enfin un **effet barrière** contre les bactéries pathogènes.
+## Ce qu'il fait
+| Sa fonction | Son mécanisme |
+| **Dégrader les fibres** | Nos enzymes ne savent pas les digérer ; il en tire des acides gras à chaîne courte, utilisés par la paroi intestinale |
+| **Synthétiser** | Vitamine K, vitamines du groupe B |
+| **Éduquer** l'immunité intestinale | Elle apprend à tolérer l'inoffensif tout en réagissant aux agresseurs |
+| L'**effet barrière** | Contre les bactéries pathogènes |
 
-> Ce n’est pas un passager : la paroi intestinale, le système immunitaire et le microbiote se construisent ensemble.
+> Ce n'est pas un passager : la paroi intestinale, le système immunitaire et le microbiote se construisent **ensemble**.
 
 ## La dysbiose
-Un déséquilibre durable de composition s’appelle une **dysbiose**. Elle est associée — les études parlent le plus souvent d’**association**, pas de cause démontrée — à des maladies inflammatoires chroniques de l’intestin, à l’obésité, à certaines allergies, au diabète de type 2, et fait l’objet de recherches sur l’axe intestin-cerveau.
+Un déséquilibre durable de composition.
+
+| Ce à quoi elle est **associée** | La nature du lien |
+| Maladies inflammatoires chroniques de l'intestin | Une **association**, pas une cause démontrée |
+| Obésité, diabète de type 2 | Idem |
+| Certaines allergies | Idem |
+| L'axe intestin-cerveau | En cours de recherche |
 
 ## Ce qui déséquilibre
-Les **antibiotiques**, qui détruisent aussi les bactéries utiles ; une alimentation très pauvre en fibres et riche en produits ultratransformés ; certaines infections ; le stress chronique.
+| Le facteur | Son effet |
+| Les **antibiotiques** | Ils détruisent aussi les bactéries utiles |
+| Une alimentation pauvre en **fibres**, riche en produits ultratransformés | Elle appauvrit la diversité |
+| Certaines infections | Elles bouleversent l'équilibre |
+| Le **stress chronique** | Il modifie le transit et la composition |
 
-## Ce qui entretient l’équilibre
-Une alimentation variée et riche en **fibres** (légumes, légumineuses, céréales complètes, fruits), les aliments **fermentés**, un usage raisonné des antibiotiques — inefficaces sur les virus, donc inutiles contre une grippe ou un rhume. Les **probiotiques** apportent des micro-organismes vivants, les **prébiotiques** nourrissent ceux déjà présents.
+## Ce qui entretient l'équilibre
+| La pratique | Son apport |
+| Une alimentation variée et riche en **fibres** | Légumes, légumineuses, céréales complètes, fruits |
+| Les aliments **fermentés** | Des micro-organismes vivants |
+| Un usage **raisonné** des antibiotiques | Ils sont inefficaces sur les virus : inutiles contre une grippe ou un rhume |
+
+| Le terme | Ce qu'il désigne |
+| Les **probiotiques** | Ils apportent des micro-organismes vivants |
+| Les **prébiotiques** | Ils nourrissent ceux déjà présents |
 
 ## Une piste thérapeutique
-La **transplantation de microbiote fécal** est aujourd’hui un traitement reconnu de certaines infections récidivantes à *Clostridioides difficile* : elle rétablit un microbiote fonctionnel là où les antibiotiques échouent.`,
+La **transplantation de microbiote fécal** est aujourd'hui un traitement reconnu de certaines infections récidivantes à *Clostridioides difficile*.
+
+> Elle rétablit un microbiote fonctionnel là où les antibiotiques échouent.`,
           },
           questions: [
             ['Où se concentre l’essentiel du microbiote intestinal ?', ['Dans le côlon', 'Dans l’estomac', 'Dans l’œsophage', 'Dans le foie'], 0, 'Il y compte plusieurs centaines d’espèces bactériennes.'],

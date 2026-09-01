@@ -14,19 +14,40 @@ export default {
           titre: 'Les cinq déclinaisons',
           lecon: {
             titre: 'Reconnaître un cas, comprendre une phrase',
-            cours: `En latin, la **terminaison** dit la fonction. Tant qu'on traduit dans l'ordre des mots français, on ne traduit pas : on devine.
+            cours: `En latin, la **terminaison** dit la fonction. Tant qu’on traduit dans l’ordre des mots français, on ne traduit pas : on devine.
 
 ## Les six cas
-**Nominatif** (sujet, attribut), **vocatif** (interpellation), **accusatif** (COD, but du mouvement), **génitif** (complément du nom), **datif** (COI, attribution), **ablatif** (compléments circonstanciels : moyen, manière, lieu d'où l'on vient).
+| Cas | Sa fonction | En français |
+| Nominatif | Sujet, attribut | *le maître* parle |
+| Vocatif | Interpellation | ô *maître* ! |
+| Accusatif | COD, but du mouvement | je vois *le maître* |
+| Génitif | Complément du nom | le livre *du maître* |
+| Datif | COI, attribution | je donne *au maître* |
+| Ablatif | Moyen, manière, lieu d’où l’on vient | *par le maître*, *depuis Rome* |
 
 ## Les cinq déclinaisons
-1re en *-a* (*rosa, rosae*, féminins) ; 2e en *-us / -um* (*dominus, domini* ; *templum, templi*) ; 3e, la plus vaste, en *-is* au génitif (*consul, consulis*) ; 4e en *-us, -us* (*manus*) ; 5e en *-es, -ei* (*res, dies*).
+| Déclinaison | Marque | Exemple | Genre dominant |
+| 1re | -a, -ae | *rosa, rosae* | Féminin |
+| 2e | -us / -um, -i | *dominus, domini* ; *templum, templi* | Masculin, neutre |
+| 3e | -is au génitif | *consul, consulis* | Les trois |
+| 4e | -us, -us | *manus, manus* | Féminin, masculin |
+| 5e | -es, -ei | *res, rei* ; *dies, diei* | Féminin |
+
+La 3e est la plus vaste et la plus irrégulière : c’est elle qu’il faut travailler en priorité, les autres se déduisent.
 
 ## La règle du neutre
-Au neutre, **nominatif et accusatif sont toujours identiques**, et le nominatif-accusatif pluriel se termine par **-a**. C'est le repère le plus rentable de toute la grammaire latine.
+> Au neutre, **nominatif et accusatif sont toujours identiques**, et leur pluriel se termine par **-a**. C’est le repère le plus rentable de toute la grammaire latine : un mot en -a peut être un féminin singulier ou un neutre pluriel, et c’est le verbe qui tranche.
 
 ## La méthode de traduction
-1. Repérer le **verbe** conjugué (souvent en fin de proposition). 2. Chercher le **nominatif** : c'est le sujet. 3. Chercher l'**accusatif** : c'est le COD. 4. Placer les compléments. Traduire, c'est analyser d'abord, mettre en français ensuite.`,
+Elle se fait dans cet ordre, jamais dans celui des mots :
+
+1. Repérer le **verbe** conjugué — souvent en fin de proposition.
+2. Chercher le **nominatif** : c’est le sujet, et il s’accorde avec le verbe.
+3. Chercher l’**accusatif** : c’est le COD.
+4. Placer les compléments (génitif, datif, ablatif) autour.
+5. Alors seulement, mettre en français.
+
+Traduire, c’est analyser d’abord et rédiger ensuite. L’inverse produit du charabia vraisemblable.`,
           },
           questions: [
             ['Combien de cas compte la déclinaison latine ?', ['6', '5', '4', '7'], 0, 'Nominatif, vocatif, accusatif, génitif, datif, ablatif.'],
@@ -43,19 +64,34 @@ Au neutre, **nominatif et accusatif sont toujours identiques**, et le nominatif-
           titre: 'Propositions subordonnées et syntaxe',
           lecon: {
             titre: 'Construire une phrase complexe',
-            cours: `La phrase latine littéraire est architecturée : la comprendre, c'est démonter cette architecture.
+            cours: `La phrase latine littéraire est architecturée : la comprendre, c’est en démonter l’architecture. Quatre constructions couvrent l’essentiel du programme.
 
 ## La proposition infinitive
-Après les verbes de parole, de pensée et de perception, le latin n'emploie pas « que » : le sujet passe à l'**accusatif** et le verbe à l'**infinitif**. *Dico Marcum venire* = je dis que Marcus vient. C'est la structure la plus déroutante — et la plus fréquente.
+Après les verbes de **parole**, de **pensée** et de **perception**, le latin n’emploie pas « que ». Le sujet passe à l’**accusatif** et le verbe à l’**infinitif**.
+
+*Dico Marcum venire* = je dis **que** Marcus vient.
+
+> C’est la structure la plus déroutante pour un francophone — et la plus fréquente dans les textes. Devant un accusatif suivi d’un infinitif, ne jamais chercher de COD : chercher une subordonnée.
 
 ## Le subjonctif dans les subordonnées
-*Ut* + subjonctif : but (« pour que ») ou conséquence (« si bien que »), la distinction se lit dans la principale (*tam, ita, sic* annoncent la conséquence). *Cum* + subjonctif : circonstance, cause ou opposition.
+| Conjonction | Sens | Comment trancher |
+| *ut* + subjonctif | But : « pour que » | Rien n’annonce dans la principale |
+| *ut* + subjonctif | Conséquence : « si bien que » | *tam, ita, sic* annoncent dans la principale |
+| *cum* + subjonctif | Circonstance, cause ou opposition | Le contexte tranche |
 
-## L'ablatif absolu
-Un nom et un participe à l'**ablatif**, sans lien grammatical avec la principale : *Urbe capta*, « la ville ayant été prise », soit « après la prise de la ville ». Le français le rend le plus souvent par un complément circonstanciel, jamais mot à mot.
+## L’ablatif absolu
+Un nom et un participe à l’**ablatif**, sans lien grammatical avec la principale.
+
+*Urbe capta*, mot à mot « la ville ayant été prise », soit **« après la prise de la ville »**. Le français le rend par un complément circonstanciel, jamais mot à mot — la traduction littérale sonne toujours faux.
 
 ## Le participe
-Présent actif (*-ns, -ntis*), parfait passif (*-tus, -a, -um*), futur actif (*-turus*). L'adjectif verbal en *-ndus* exprime l'obligation : *Carthago delenda est*, « Carthage doit être détruite ».`,
+| Participe | Forme | Sens |
+| Présent actif | -ns, -ntis | *amans* : aimant |
+| Parfait passif | -tus, -a, -um | *amatus* : ayant été aimé |
+| Futur actif | -turus | *amaturus* : devant aimer |
+| Adjectif verbal | -ndus | *amandus* : qui doit être aimé |
+
+L’adjectif verbal exprime l’**obligation** : *Carthago delenda est*, « Carthage doit être détruite » — la formule de Caton, répétée à la fin de chacun de ses discours.`,
           },
           questions: [
             ['Dans une proposition infinitive, le sujet est…', ['À l’accusatif', 'Au nominatif', 'Au datif', 'À l’ablatif'], 0, '*Dico Marcum venire* : je dis que Marcus vient.'],
@@ -72,19 +108,35 @@ Présent actif (*-ns, -ntis*), parfait passif (*-tus, -a, -um*), futur actif (*-
           titre: 'Rome : société, pouvoir, héritage',
           lecon: {
             titre: 'Ce que Rome nous a laissé',
-            cours: `Le programme de lycée lit les textes latins comme des documents sur une société — et sur la nôtre.
+            cours: `Le programme de lycée lit les textes latins comme des documents sur une société — et, par ricochet, sur la nôtre.
 
 ## Les institutions de la République
-Le **cursus honorum** : questure, édilité, préture, consulat. Le **Sénat** (assemblée des anciens magistrats) donne l'orientation politique ; les **comices** votent ; les **tribuns de la plèbe** disposent du droit de veto. La formule *SPQR* — *Senatus PopulusQue Romanus* — dit l'équilibre revendiqué.
+| Institution | Qui | Son pouvoir |
+| Le *cursus honorum* | Questure, édilité, préture, consulat | La carrière politique, dans cet ordre |
+| Le **Sénat** | Anciens magistrats | Donne l’orientation politique |
+| Les **comices** | Le peuple assemblé | Votent les lois et élisent |
+| Les **tribuns de la plèbe** | Élus de la plèbe | Le droit de veto |
 
-## De la République à l'Empire
-Les guerres civiles, César assassiné aux ides de mars 44 av. J.-C., puis **Auguste** qui fonde le principat en 27 av. J.-C. : l'Empire garde les formes républicaines et en vide le contenu. *Res publica restituta*, disait-il — la formule est un chef-d'œuvre de communication politique.
+La formule *SPQR* — *Senatus PopulusQue Romanus* — dit l’équilibre revendiqué entre le Sénat et le peuple.
+
+## De la République à l’Empire
+| Date | L’événement |
+| Ier siècle av. J.-C. | Les guerres civiles minent la République |
+| 15 mars 44 av. J.-C. | César assassiné aux ides de mars |
+| 27 av. J.-C. | **Auguste** fonde le principat |
+
+> L’Empire **garde les formes républicaines et en vide le contenu**. *Res publica restituta* (« la République restaurée »), affirmait Auguste : la formule est un chef-d’œuvre de communication politique, et le programme invite à la lire comme telle.
 
 ## La société
-Patriciens et plébéiens, clientélisme (*patronus* / *cliens*), place centrale de l'esclavage, statut de la *materfamilias*, importance du *mos maiorum*, la coutume des ancêtres.
+| Notion | Ce qu’elle recouvre |
+| Patriciens et plébéiens | La division fondatrice du corps civique |
+| *Patronus* / *cliens* | Le clientélisme : protection contre soutien |
+| L’esclavage | Massif, au cœur de l’économie et de la maison |
+| La *materfamilias* | Un statut respecté, sans droits politiques |
+| Le *mos maiorum* | La coutume des ancêtres, norme suprême |
 
-## L'héritage
-Le droit romain irrigue nos codes civils ; le latin a donné les langues romanes ; l'urbanisme (forum, thermes, aqueducs), la rhétorique de Cicéron et l'historiographie de Tacite structurent encore notre manière d'argumenter et d'écrire l'histoire.`,
+## L’héritage
+Le **droit romain** irrigue encore nos codes civils. Le latin a donné les langues romanes. L’urbanisme (forum, thermes, aqueducs), la rhétorique de **Cicéron** et l’historiographie de **Tacite** structurent toujours notre manière d’argumenter et d’écrire l’histoire.`,
           },
           questions: [
             ['Que désigne le cursus honorum ?', ['La carrière des magistratures romaines', 'Une course de chars', 'Le parcours des légions', 'Une cérémonie religieuse'], 0, 'Questure, édilité, préture, consulat.'],

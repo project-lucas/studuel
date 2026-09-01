@@ -48,19 +48,51 @@ les positions 6 à 25 leur sont réservées.`,
           titre: 'L’influence de la chute de l’URSS sur l’Europe',
           lecon: {
             titre: 'De deux Europes à une seule',
-            cours: `En moins de trois ans, l'Europe issue de Yalta disparaît. Le continent qui en sort n'est pas seulement réunifié : il est à reconstruire.
+            cours: `En moins de trois ans, l’Europe issue de Yalta disparaît. Le continent qui en sort n’est pas seulement réunifié : il est **à reconstruire**.
 
-## L'effondrement, 1989-1991
-Gorbatchev, au pouvoir depuis 1985, lance la *perestroïka* (restructuration économique) et la *glasnost* (transparence), et renonce à la doctrine Brejnev : Moscou n'interviendra plus pour sauver les régimes frères. Privés de ce filet, ils tombent en quelques mois — Pologne, Hongrie, RDA, Tchécoslovaquie, Roumanie. Le **mur de Berlin** s'ouvre le **9 novembre 1989**, l'Allemagne est réunifiée le **3 octobre 1990**, et l'**URSS est dissoute le 25 décembre 1991**.
+## L’effondrement, 1989-1991
+**Gorbatchev**, au pouvoir depuis 1985, lance deux réformes et renonce à un principe — et c’est ce renoncement qui fait tout tomber.
+
+| Réforme | Ce qu’elle vise |
+| *Perestroïka* | La restructuration économique |
+| *Glasnost* | La transparence, la fin de la censure |
+| Abandon de la doctrine Brejnev | Moscou n’interviendra plus pour sauver les régimes frères |
+
+| Date | L’événement |
+| 9 novembre 1989 | Ouverture du **mur de Berlin** |
+| 3 octobre 1990 | Réunification de l’**Allemagne** |
+| 25 décembre 1991 | Dissolution de l’**URSS** |
+
+> Privés du filet soviétique, les régimes d’Europe centrale tombent en quelques mois — Pologne, Hongrie, RDA, Tchécoslovaquie, Roumanie. Ce n’est pas une révolution simultanée : c’est un effet domino déclenché par une décision prise à Moscou.
 
 ## Une transition brutale
-Les anciennes démocraties populaires passent à l'économie de marché par la « thérapie de choc » : privatisations, fin des prix administrés, effondrement de la production, chômage de masse inconnu jusque-là. La Russie de Eltsine connaît une décennie de crise, jusqu'au redressement autoritaire engagé par Poutine à partir de 2000.
+Les anciennes démocraties populaires passent à l’économie de marché par la « **thérapie de choc** ».
 
-## L'Europe recomposée
-L'Union européenne et l'OTAN s'élargissent vers l'est : entrée dans l'OTAN de la Pologne, la Hongrie et la République tchèque en **1999**, puis des pays baltes en 2004 ; élargissement de l'UE à dix pays en **2004**. L'Allemagne réunifiée devient la première puissance économique du continent.
+| La mesure | Sa conséquence immédiate |
+| Privatisations massives | Concentration des actifs, corruption |
+| Fin des prix administrés | Inflation, chute du pouvoir d’achat |
+| Ouverture à la concurrence | Effondrement de la production |
+| Fin de l’emploi garanti | Chômage de masse, inconnu jusque-là |
+
+La Russie d’Eltsine connaît une décennie de crise, jusqu’au redressement autoritaire engagé par **Poutine** à partir de 2000.
+
+## L’Europe recomposée
+| Date | L’élargissement |
+| 1999 | Pologne, Hongrie, République tchèque entrent dans l’**OTAN** |
+| 2004 | Les pays baltes rejoignent l’OTAN |
+| 2004 | Dix pays rejoignent l’**Union européenne** |
+
+L’Allemagne réunifiée devient la première puissance économique du continent.
 
 ## Le retour de la guerre
-La disparition du carcan communiste libère aussi les nationalismes. La **Yougoslavie** éclate à partir de 1991 : guerres de Croatie et de Bosnie, massacre de **Srebrenica (juillet 1995)**, intervention de l'OTAN au **Kosovo en 1999**. L'Europe découvre qu'elle ne sait pas régler seule un conflit sur son propre sol.`,
+La disparition du carcan communiste libère aussi les **nationalismes**.
+
+| Date | L’événement |
+| 1991 | Éclatement de la **Yougoslavie** : guerres de Croatie puis de Bosnie |
+| Juillet 1995 | Massacre de **Srebrenica** |
+| 1999 | Intervention de l’OTAN au **Kosovo** |
+
+> L’Europe découvre qu’elle ne sait pas régler seule un conflit sur son propre sol : c’est l’OTAN, donc les États-Unis, qui tranchent.`,
           },
           questions: [
             ['Quand le mur de Berlin s’est-il ouvert ?', ['Le 9 novembre 1989', 'Le 3 octobre 1990', 'Le 25 décembre 1991', 'Le 1er mai 1989'], 0, 'La réunification allemande suivra le 3 octobre 1990.'],
@@ -77,19 +109,43 @@ La disparition du carcan communiste libère aussi les nationalismes. La **Yougos
           titre: 'Le Proche-Orient au cœur de la nouvelle géopolitique mondiale',
           lecon: {
             titre: 'Pétrole, conflits et ingérences',
-            cours: `Le Proche et le Moyen-Orient concentrent depuis 1945 trois enjeux qui s'entretiennent : les hydrocarbures, le conflit israélo-palestinien, et la rivalité des puissances.
+            cours: `Le Proche et le Moyen-Orient concentrent depuis 1945 trois enjeux qui s’entretiennent : les **hydrocarbures**, le **conflit israélo-palestinien**, et la **rivalité des puissances**.
 
 ## Le poids du pétrole
-La région détient près de la moitié des réserves mondiales de pétrole. Les chocs de **1973** et **1979** ont montré qu'un événement régional pouvait dérégler l'économie mondiale. Le détroit d'Ormuz et le canal de Suez restent des passages stratégiques majeurs.
+La région détient près de la **moitié** des réserves mondiales de pétrole.
+
+| Élément | Ce qu’il pèse |
+| Les chocs de **1973** et **1979** | Un événement régional dérègle l’économie mondiale |
+| Le détroit d’**Ormuz** | Un cinquième du pétrole mondial y transite |
+| Le canal de **Suez** | La route Europe-Asie la plus courte |
 
 ## Le conflit israélo-palestinien
-Après les guerres de 1948, 1967 (guerre des Six Jours, occupation de la Cisjordanie, de Gaza et du Golan) et 1973, la première **Intifada** (1987) change le rapport de force. Les **accords d'Oslo (1993)** créent l'Autorité palestinienne et esquissent la solution à deux États, mais le processus s'enlise : assassinat de Rabin (1995), seconde Intifada (2000), poursuite de la colonisation. Aucun règlement n'est intervenu depuis.
+| Date | L’événement | Ce qu’il change |
+| 1948 | Première guerre israélo-arabe | Naissance d’Israël, exode palestinien |
+| 1967 | Guerre des **Six Jours** | Occupation de la Cisjordanie, de Gaza et du Golan |
+| 1973 | Guerre du Kippour | Le choc pétrolier suit |
+| 1987 | Première **Intifada** | Le rapport de force change |
+| 1993 | Accords d’**Oslo** | Autorité palestinienne, solution à deux États esquissée |
+| 1995 | Assassinat de **Rabin** | Le processus s’enraye |
+| 2000 | Seconde Intifada | Il s’effondre |
+
+> Aucun règlement n’est intervenu depuis Oslo : la colonisation s’est poursuivie, et la solution à deux États s’est éloignée à mesure que le territoire disponible se réduisait.
 
 ## Les guerres du Golfe
-L'invasion du Koweït par l'Irak de Saddam Hussein déclenche la **guerre du Golfe (1991)**, menée par une coalition sous mandat de l'ONU. En **2003**, l'invasion de l'Irak par les États-Unis se fait au contraire **sans mandat du Conseil de sécurité**, sur la base d'armes de destruction massive jamais retrouvées — la France s'y oppose (discours de Villepin à l'ONU).
+| | Guerre du Golfe (1991) | Invasion de l’Irak (2003) |
+| Le motif | Invasion du Koweït par Saddam Hussein | Des armes de destruction massive |
+| Le mandat de l’ONU | **Oui** | **Non** |
+| La France | Participe | S’y oppose : discours de Villepin à l’ONU |
+| Les armes invoquées | Sans objet | **Jamais retrouvées** |
 
 ## Fractures et recompositions
-Rivalité entre l'Arabie saoudite sunnite et l'Iran chiite, révolution iranienne de 1979, montée des mouvements islamistes, **printemps arabes de 2011** aux issues divergentes, guerre civile syrienne et émergence de Daech (2014). La région reste le premier foyer de conflits armés du monde.`,
+| Ligne de fracture | Ce qu’elle oppose |
+| Arabie saoudite / Iran | Sunnisme et chiisme, deux puissances régionales |
+| 1979 | La révolution iranienne installe une république islamique |
+| 2011 | Les **printemps arabes**, aux issues divergentes |
+| 2014 | La guerre civile syrienne et l’émergence de **Daech** |
+
+La région reste le premier foyer de conflits armés du monde.`,
           },
           questions: [
             ['Les accords d’Oslo sont signés en…', ['1993', '1979', '1987', '2000'], 0, 'Ils créent l’Autorité palestinienne et esquissent deux États.'],
@@ -106,19 +162,36 @@ Rivalité entre l'Arabie saoudite sunnite et l'Iran chiite, révolution iranienn
           titre: 'La montée de la puissance économique chinoise de 1978 à 2001',
           lecon: {
             titre: 'Deng Xiaoping et le « socialisme de marché »',
-            cours: `En une génération, la Chine passe d'une économie collectivisée et fermée au rang d'atelier du monde — sans changer de régime politique.
+            cours: `En une génération, la Chine passe d’une économie collectivisée et fermée au rang d’atelier du monde — **sans changer de régime politique**. C’est cette dissociation qui fait tout l’intérêt du chapitre.
 
 ## Le tournant de 1978
-Deux ans après la mort de Mao, **Deng Xiaoping** engage les **Quatre Modernisations** (agriculture, industrie, défense, science et technique). Le mot d'ordre est pragmatique : « peu importe qu'un chat soit noir ou blanc, pourvu qu'il attrape les souris ». Les communes populaires sont démantelées, la terre revient aux familles par contrat, la production agricole bondit.
+Deux ans après la mort de Mao, **Deng Xiaoping** engage les **Quatre Modernisations** : agriculture, industrie, défense, science et technique. Le mot d’ordre est pragmatique — « peu importe qu’un chat soit noir ou blanc, pourvu qu’il attrape les souris ».
 
-## L'ouverture maîtrisée
-Quatre **zones économiques spéciales** sont créées en 1980, dont **Shenzhen**, alors village de pêcheurs face à Hong Kong. Elles accueillent les capitaux étrangers avec des avantages fiscaux et une main-d'œuvre bon marché. Le littoral devient le moteur de la croissance, creusant un écart durable avec l'intérieur rural.
+| La réforme | Son effet |
+| Démantèlement des communes populaires | La terre revient aux familles par contrat |
+| Liberté de vendre les surplus | La production agricole bondit |
+| Autonomie des entreprises | Le plan cesse de tout décider |
+
+## L’ouverture maîtrisée
+Quatre **zones économiques spéciales** sont créées en 1980, dont **Shenzhen**, alors village de pêcheurs face à Hong Kong.
+
+| L’avantage offert | À qui il profite |
+| Avantages fiscaux | Aux capitaux étrangers |
+| Main-d’œuvre bon marché | Aux industries d’exportation |
+| Cadre juridique dérogatoire | À l’expérimentation, sans toucher au reste du pays |
+
+> Le littoral devient le moteur de la croissance — et creuse avec l’intérieur rural un écart qui n’a jamais été comblé depuis.
 
 ## Réforme économique, pas politique
-Le printemps de Pékin s'achève par la répression de la place **Tian'anmen (juin 1989)** : le Parti communiste montre que l'ouverture économique ne s'étendra pas au politique. La croissance reprend après la « tournée dans le Sud » de Deng en 1992, sous le nom d'« économie socialiste de marché ».
+Le printemps de Pékin s’achève par la répression de la place **Tian’anmen** en juin 1989 : le Parti montre que l’ouverture économique **ne s’étendra pas au politique**. La croissance reprend après la « tournée dans le Sud » de Deng en 1992, sous le nom d’« économie socialiste de marché ».
 
-## L'entrée dans la mondialisation
-Hong Kong est rétrocédée en **1997**, Macao en 1999. Surtout, la Chine adhère à l'**OMC en décembre 2001** : ses exportations explosent, elle devient l'usine du monde puis, dans la décennie suivante, la deuxième économie mondiale. La croissance a longtemps dépassé 9 % par an.`,
+## L’entrée dans la mondialisation
+| Date | L’événement |
+| 1997 | Rétrocession de **Hong Kong** |
+| 1999 | Rétrocession de Macao |
+| Décembre 2001 | Adhésion à l’**OMC** |
+
+L’adhésion à l’OMC fait exploser les exportations : la Chine devient l’usine du monde, puis, dans la décennie suivante, la **deuxième économie mondiale**. La croissance a longtemps dépassé 9 % par an.`,
           },
           questions: [
             ['Qui engage les réformes économiques chinoises à partir de 1978 ?', ['Deng Xiaoping', 'Mao Zedong', 'Jiang Zemin', 'Zhou Enlai'], 0, 'Deux ans après la mort de Mao.'],
@@ -137,17 +210,36 @@ Hong Kong est rétrocédée en **1997**, Macao en 1999. Surtout, la Chine adhèr
             titre: 'L’année charnière',
             cours: `Rarement une année aura autant concentré de ruptures. 1989 ferme le XXe siècle politique et ouvre la mondialisation contemporaine.
 
-## Le printemps de Pékin
-En avril, des étudiants occupent la place Tian'anmen et réclament des réformes politiques. Le mouvement est écrasé dans la nuit du **3 au 4 juin 1989**. La Chine choisit une voie inverse de celle qui s'ouvre en Europe : réformer l'économie, verrouiller le politique.
+## L’année en quatre temps
+| Mois | L’événement | Où |
+| Avril-juin | Occupation puis répression de **Tian’anmen** | Chine |
+| Juin | Élections semi-libres | Pologne |
+| Été | La Hongrie ouvre le rideau de fer | Hongrie |
+| 9 novembre | **Chute du mur de Berlin** | RDA |
+| Novembre-décembre | « Révolution de velours » | Tchécoslovaquie |
+| Décembre | Exécution de Ceaușescu | Roumanie |
 
-## L'automne des peuples
-En quelques semaines, les régimes communistes d'Europe centrale s'effondrent presque tous sans violence : élections semi-libres en Pologne (juin), ouverture du rideau de fer par la Hongrie (été), **chute du mur de Berlin le 9 novembre**, « révolution de velours » en Tchécoslovaquie. Seule la Roumanie connaît un dénouement sanglant, avec l'exécution de Ceaușescu en décembre.
+## Le printemps de Pékin
+Des étudiants occupent la place Tian’anmen et réclament des réformes politiques. Le mouvement est écrasé dans la nuit du **3 au 4 juin 1989**.
+
+> La Chine choisit exactement la voie **inverse** de celle qui s’ouvre en Europe : réformer l’économie, verrouiller le politique. Trente ans plus tard, c’est ce choix qui a survécu.
+
+## L’automne des peuples
+Les régimes communistes d’Europe centrale s’effondrent presque tous **sans violence**, en quelques semaines. Seule la Roumanie connaît un dénouement sanglant.
 
 ## Un basculement économique
-Le **consensus de Washington** (1989) formule le programme des institutions financières internationales : libéralisation, privatisations, discipline budgétaire, ouverture aux capitaux. Il servira de cadre aux transitions post-communistes comme aux plans d'ajustement du Sud.
+Le **consensus de Washington** (1989) formule le programme des institutions financières internationales :
 
-## « La fin de l'histoire » ?
-Francis Fukuyama annonce en 1989 le triomphe définitif de la démocratie libérale et de l'économie de marché. Les décennies suivantes démentiront cette prophétie — guerres yougoslaves, terrorisme international, régimes autoritaires assumés, retour de la guerre en Europe — mais la formule dit bien l'euphorie du moment.`,
+| Le mot d’ordre | Ce qu’il impose |
+| Libéralisation | Ouverture des marchés |
+| Privatisations | Retrait de l’État de la production |
+| Discipline budgétaire | Réduction des déficits |
+| Ouverture aux capitaux | Libre circulation financière |
+
+Il servira de cadre aux transitions post-communistes comme aux plans d’ajustement du Sud.
+
+## « La fin de l’histoire » ?
+**Francis Fukuyama** annonce en 1989 le triomphe définitif de la démocratie libérale et de l’économie de marché. Les décennies suivantes démentiront la prophétie — guerres yougoslaves, terrorisme international, régimes autoritaires assumés, retour de la guerre en Europe — mais la formule dit bien l’**euphorie du moment**, et c’est à ce titre qu’elle est un document.`,
           },
           questions: [
             ['Que se passe-t-il place Tian’anmen dans la nuit du 3 au 4 juin 1989 ?', ['Le mouvement étudiant est écrasé', 'Un accord de réforme est signé', 'Le Parti communiste est dissous', 'Deng Xiaoping démissionne'], 0, 'La Chine verrouille le politique tout en ouvrant l’économie.'],
@@ -165,19 +257,35 @@ Francis Fukuyama annonce en 1989 le triomphe définitif de la démocratie libér
           titre: 'La crise économique et politique en France (1974-1988)',
           lecon: {
             titre: 'La fin des Trente Glorieuses',
-            cours: `En 1974, la France entre dans une crise dont elle ne sortira pas : le chômage de masse s'installe, et avec lui une recomposition complète de la vie politique.
+            cours: `En 1974, la France entre dans une crise dont elle ne sortira pas : le chômage de masse s’installe, et avec lui une recomposition complète de la vie politique.
 
-## Le choc et la fin d'un cycle
-Le **premier choc pétrolier (1973)** quadruple le prix du baril, le **second (1979)** achève le mouvement. L'inflation atteint plus de 13 % par an, la croissance s'effondre, l'industrie lourde — sidérurgie lorraine, charbon, textile, chantiers navals — entre en déclin. Le chômage passe de 400 000 personnes en 1974 à plus de **2,5 millions en 1988**.
+## Le choc et la fin d’un cycle
+| Indicateur | Avant 1974 | Après |
+| Croissance | Près de 5 % par an | Autour de 2 % |
+| Inflation | Modérée | Plus de **13 %** par an |
+| Chômage | 400 000 personnes (1974) | Plus de **2,5 millions** (1988) |
 
-## Giscard, la modernisation dans la crise
-Élu en 1974, **Valéry Giscard d'Estaing** engage des réformes de société (voir la fiche suivante) et confie l'économie à Raymond Barre à partir de 1976 : lutte contre l'inflation, rigueur, « libéralisme ». Sans résultat sur l'emploi.
+Le **premier choc pétrolier** (1973) quadruple le prix du baril, le **second** (1979) achève le mouvement. L’industrie lourde — sidérurgie lorraine, charbon, textile, chantiers navals — entre en déclin irréversible.
 
-## 1981 : l'alternance
-**François Mitterrand** est élu le 10 mai 1981 — première alternance de la Ve République. Le programme de relance est appliqué : nationalisations (banques, grands groupes industriels), retraite à 60 ans, cinquième semaine de congés payés, semaine de 39 heures, hausse du SMIC. Mais la relance dans un contexte de récession mondiale creuse le déficit extérieur et provoque trois dévaluations du franc.
+## Giscard : la modernisation dans la crise
+Élu en 1974, **Valéry Giscard d’Estaing** engage des réformes de société et confie l’économie à **Raymond Barre** à partir de 1976 : lutte contre l’inflation, rigueur, libéralisme. Sans résultat sur l’emploi.
+
+## 1981 : l’alternance
+**François Mitterrand** est élu le 10 mai 1981 — première alternance de la Ve République.
+
+| La mesure | Ce qu’elle change |
+| Nationalisations | Banques et grands groupes industriels |
+| Retraite à **60 ans** | Un droit nouveau |
+| Cinquième semaine de congés payés | Le temps libre s’étend |
+| Semaine de **39 heures** | Réduction du temps de travail |
+| Hausse du SMIC | Relance par la consommation |
+
+> La relance dans un contexte de **récession mondiale** produit l’effet inverse de celui recherché : la consommation supplémentaire part vers les importations, le déficit extérieur se creuse, et le franc est dévalué trois fois.
 
 ## Le tournant de la rigueur
-En **mars 1983**, le gouvernement choisit de rester dans le Système monétaire européen et adopte un plan de rigueur : blocage des salaires, réduction des déficits. C'est une rupture idéologique durable pour la gauche française. Les élections de 1986 sont perdues, ouvrant la **première cohabitation** (Mitterrand président, Chirac Premier ministre), qui procède aux premières privatisations.`,
+En **mars 1983**, le gouvernement choisit de rester dans le Système monétaire européen et adopte un plan de rigueur : blocage des salaires, réduction des déficits. C’est une **rupture idéologique durable** pour la gauche française.
+
+Les élections de 1986 sont perdues, ouvrant la **première cohabitation** — Mitterrand président, Chirac Premier ministre — qui procède aux premières privatisations.`,
           },
           questions: [
             ['Quel événement de 1973 marque le début de la crise ?', ['Le premier choc pétrolier', 'La dévaluation du franc', 'La création de l’euro', 'La fin du service militaire'], 0, 'Le prix du baril est multiplié par quatre.'],
@@ -194,19 +302,36 @@ En **mars 1983**, le gouvernement choisit de rester dans le Système monétaire 
           titre: 'Les mutations sociales et culturelles de la société française',
           lecon: {
             titre: 'Une société qui change de mœurs',
-            cours: `Pendant que l'économie se dégrade, la société française connaît une transformation profonde de ses droits, de ses mœurs et de sa culture.
+            cours: `Pendant que l’économie se dégrade, la société française connaît une transformation profonde de ses droits, de ses mœurs et de sa culture. Les deux mouvements sont simultanés — c’est ce qui rend la période difficile à résumer d’une formule.
 
 ## Les grandes lois de société
-La majorité passe à **18 ans en 1974**. Le divorce par consentement mutuel est instauré en **1975**, année où la **loi Veil** dépénalise l'**interruption volontaire de grossesse** (remboursée à partir de 1982). En **1981**, sous l'impulsion de Robert Badinter, la **peine de mort est abolie**.
+| Année | La loi | Ce qu’elle change |
+| 1974 | Majorité à **18 ans** | Un million d’électeurs de plus |
+| 1975 | Divorce par consentement mutuel | Le mariage devient dissoluble sans faute |
+| 1975 | **Loi Veil** | Dépénalisation de l’IVG, remboursée à partir de 1982 |
+| 1981 | Abolition de la **peine de mort** | Sous l’impulsion de Robert Badinter |
 
 ## Les femmes
-Leur activité professionnelle progresse fortement, la contraception se diffuse (loi Neuwirth de 1967, remboursement en 1974), la natalité baisse. Un ministère des Droits de la femme est créé en 1981 (Yvette Roudy), et la loi de 1983 pose l'égalité professionnelle. Les inégalités de salaire et le partage des tâches domestiques, eux, résistent.
+| Évolution | Ce qu’elle produit |
+| L’activité professionnelle progresse | Le modèle de la femme au foyer recule |
+| La contraception se diffuse | Loi Neuwirth (1967), remboursement en 1974 |
+| Ministère des Droits de la femme (1981) | Yvette Roudy ; loi de 1983 sur l’égalité professionnelle |
+| Ce qui résiste | Les écarts de salaire et le partage des tâches domestiques |
 
 ## Immigration et société
-L'immigration de travail est suspendue en **1974**, mais le regroupement familial (1976) transforme une immigration d'hommes seuls en immigration de familles installées. Les difficultés des grands ensembles, la montée du chômage et l'apparition du Front national dans les urnes (1983-1984) font de l'immigration un enjeu politique central. La **Marche pour l'égalité et contre le racisme (1983)** marque l'entrée d'une génération née en France dans le débat public.
+| Date | L’événement | Sa portée |
+| 1974 | Suspension de l’immigration de travail | Fin d’un cycle ouvert en 1945 |
+| 1976 | **Regroupement familial** | D’une immigration d’hommes seuls à une immigration de familles installées |
+| 1983-1984 | Le Front national entre dans les urnes | L’immigration devient un enjeu politique central |
+| 1983 | **Marche pour l’égalité et contre le racisme** | Une génération née en France entre dans le débat public |
 
 ## Une culture de masse
-Libéralisation des **radios libres (1981)**, création de **Canal+ (1984)** puis des chaînes privées, essor du disque, du cinéma et des pratiques juvéniles. L'État culturel s'affirme sous Jack Lang : Fête de la musique (1982), grands travaux, doublement du budget de la Culture.`,
+| Date | L’événement |
+| 1981 | Libéralisation des **radios libres** |
+| 1982 | Première **Fête de la musique** |
+| 1984 | Création de **Canal+**, puis des chaînes privées |
+
+L’État culturel s’affirme sous **Jack Lang** : doublement du budget de la Culture, grands travaux, reconnaissance des pratiques juvéniles jusque-là ignorées.`,
           },
           questions: [
             ['La loi Veil de 1975 concerne…', ['L’interruption volontaire de grossesse', 'Le divorce par consentement mutuel', 'La peine de mort', 'La majorité à 18 ans'], 0, 'L’IVG est dépénalisée, puis remboursée en 1982.'],
@@ -224,19 +349,41 @@ Libéralisation des **radios libres (1981)**, création de **Canal+ (1984)** pui
           titre: 'Les États-Unis, gendarmes du monde',
           lecon: {
             titre: 'L’hyperpuissance et ses limites',
-            cours: `Après 1991, les États-Unis sont la seule superpuissance — militaire, économique, technologique et culturelle. Hubert Védrine forge en 1998 le mot d'**hyperpuissance** pour dire cette situation inédite.
+            cours: `Après 1991, les États-Unis sont la **seule** superpuissance — militaire, économique, technologique et culturelle. Hubert Védrine forge en 1998 le mot d’**hyperpuissance** pour dire cette situation inédite.
 
 ## Les fondements de la domination
-Premier budget militaire du monde, réseau de bases sur tous les continents, dollar comme monnaie des échanges, universités et firmes dominantes, et un **soft power** — cinéma, musique, numérique — sans équivalent.
+| Domaine | L’atout |
+| Militaire | Premier budget du monde, bases sur tous les continents |
+| Monétaire | Le dollar, monnaie des échanges internationaux |
+| Scientifique | Universités et firmes dominantes |
+| Culturel | Un *soft power* — cinéma, musique, numérique — sans équivalent |
 
 ## Le gendarme des années 1990
-Guerre du Golfe (1991) sous mandat de l'ONU, interventions en Somalie (1992), en Bosnie (accords de Dayton, 1995), au Kosovo (1999, sans mandat du Conseil de sécurité). Les États-Unis se posent en garants de l'ordre international, tout en choisissant leurs engagements — l'inaction lors du **génocide des Tutsi au Rwanda (1994)** en est la contre-épreuve.
+| Année | L’intervention | Mandat de l’ONU |
+| 1991 | Guerre du Golfe | **Oui** |
+| 1992 | Somalie | Oui |
+| 1995 | Bosnie, accords de Dayton | Oui |
+| 1999 | Kosovo | **Non** |
+
+> La contre-épreuve est le **génocide des Tutsi au Rwanda** (1994), où rien n’est fait. Les États-Unis se posent en garants de l’ordre international tout en **choisissant** leurs engagements : c’est la limite de la notion de gendarme.
 
 ## Le 11 septembre 2001 et ses suites
-Les attentats d'al-Qaïda font près de 3 000 morts. Washington lance la « guerre contre le terrorisme » : Afghanistan (2001), puis **Irak (2003)** sans mandat de l'ONU et sur un motif — les armes de destruction massive — jamais vérifié. L'enlisement, Guantánamo et Abou Ghraib abîment durablement l'image du pays.
+Les attentats d’al-Qaïda font près de **3 000 morts**. Washington lance la « guerre contre le terrorisme ».
+
+| Année | L’intervention | Le motif | Ce qu’il en reste |
+| 2001 | Afghanistan | Abriter al-Qaïda | Retrait en 2021, retour des talibans |
+| 2003 | **Irak** | Des armes de destruction massive | Jamais retrouvées ; pas de mandat de l’ONU |
+
+L’enlisement, **Guantánamo** et **Abou Ghraib** abîment durablement l’image du pays — y compris auprès de ses alliés.
 
 ## Les limites
-Coût humain et financier des guerres, retrait d'Irak (2011) puis d'Afghanistan (2021), montée de la Chine, tentation du repli (« America First »). La puissance reste immense, mais elle ne suffit plus à imposer un ordre : c'est le sens du passage d'un monde unipolaire à un monde multipolaire.`,
+| La limite | Ce qu’elle montre |
+| Le coût humain et financier des guerres | La puissance militaire ne suffit pas à gagner la paix |
+| Les retraits d’Irak (2011) et d’Afghanistan (2021) | L’engagement a une fin, et l’adversaire le sait |
+| La montée de la Chine | Le monopole économique est terminé |
+| La tentation du repli (« America First ») | La volonté de puissance elle-même est discutée à l’intérieur |
+
+La puissance reste immense, mais elle ne suffit plus à imposer un ordre : c’est le sens du passage d’un monde **unipolaire** à un monde **multipolaire**.`,
           },
           questions: [
             ['Qui forge le terme d’« hyperpuissance » ?', ['Hubert Védrine', 'Francis Fukuyama', 'Samuel Huntington', 'Bill Clinton'], 0, 'En 1998, pour désigner la domination américaine dans tous les domaines.'],
@@ -253,19 +400,36 @@ Coût humain et financier des guerres, retrait d'Irak (2011) puis d'Afghanistan 
           titre: 'Les efforts de coopération internationale depuis 1990',
           lecon: {
             titre: 'Gouverner un monde sans gouvernement',
-            cours: `Les problèmes sont devenus mondiaux — climat, pandémies, finance, migrations — alors que le pouvoir reste national. D'où la multiplication des institutions et des accords, et la fragilité de chacun.
+            cours: `Les problèmes sont devenus mondiaux — climat, pandémies, finance, migrations — alors que le pouvoir reste **national**. Tout le chapitre tient dans cet écart : d’où la multiplication des institutions, et la fragilité de chacune.
 
 ## Les organisations
-L'**ONU** reste le cadre principal : maintien de la paix (les casques bleus), agences spécialisées (OMS, UNESCO, PNUD). L'**OMC**, créée en 1995, arbitre le commerce mondial. Le **G7**, puis le **G20** à partir de 2008, réunissent les grandes économies — l'élargissement au G20 acte le poids nouveau des émergents.
+| Institution | Créée | Ce qu’elle fait |
+| **ONU** | 1945 | Maintien de la paix (casques bleus), agences spécialisées : OMS, UNESCO, PNUD |
+| **OMC** | 1995 | Arbitre le commerce mondial |
+| **G7** | 1975 | Réunit les grandes économies occidentales |
+| **G20** | Sommet de 2008 | L’élargissement acte le poids nouveau des émergents |
 
 ## Le climat
-**Sommet de Rio (1992)**, **protocole de Kyoto (1997)** — que les États-Unis ne ratifient pas —, puis l'**accord de Paris (COP21, 2015)** : 195 États s'engagent à contenir le réchauffement bien en dessous de 2 °C. L'accord est universel mais **non contraignant**, et les engagements nationaux restent en deçà de l'objectif. Le **GIEC**, créé en 1988, fournit la base scientifique commune.
+| Date | L’étape | Sa portée |
+| 1988 | Création du **GIEC** | Une base scientifique commune |
+| 1992 | Sommet de **Rio** | Le climat entre à l’agenda mondial |
+| 1997 | Protocole de **Kyoto** | Contraignant — mais les États-Unis ne ratifient pas |
+| 2015 | Accord de **Paris**, COP21 | 195 États, bien en dessous de 2 °C |
+
+> L’accord de Paris est **universel mais non contraignant** : chaque État fixe lui-même son engagement, et la somme des engagements reste en deçà de l’objectif. C’est le résumé exact de toute la coopération internationale contemporaine.
 
 ## La justice et les droits
-La **Cour pénale internationale** entre en fonction en 2002 pour juger génocides, crimes contre l'humanité et crimes de guerre. Plusieurs grandes puissances — États-Unis, Chine, Russie — n'en reconnaissent pas la compétence. Les **Objectifs de développement durable** (2015) fixent 17 cibles à l'horizon 2030.
+| Institution ou texte | Date | Sa limite |
+| **Cour pénale internationale** | En fonction en 2002 | États-Unis, Chine et Russie n’en reconnaissent pas la compétence |
+| **Objectifs de développement durable** | 2015 | 17 cibles à l’horizon 2030, sans sanction |
 
 ## Les limites structurelles
-Le **droit de veto** des cinq membres permanents du Conseil de sécurité bloque toute décision contraire à leurs intérêts ; aucune institution ne peut contraindre un État souverain ; le financement dépend de contributions volontaires. La coopération produit des normes, rarement des sanctions.`,
+| L’obstacle | Ce qu’il empêche |
+| Le **droit de veto** des cinq permanents | Toute décision contraire à leurs intérêts |
+| La **souveraineté** des États | Aucune institution ne peut les contraindre |
+| Le financement volontaire | Une agence peut être asphyxiée par un retrait |
+
+La coopération produit des **normes**, rarement des **sanctions**. C’est sa force — elle rend possible l’accord — et sa faiblesse.`,
           },
           questions: [
             ['L’accord de Paris sur le climat est signé lors de…', ['La COP21, en 2015', 'Le sommet de Rio, en 1992', 'Le protocole de Kyoto, en 1997', 'La COP26, en 2021'], 0, '195 États s’engagent à limiter le réchauffement bien en dessous de 2 °C.'],
@@ -282,19 +446,42 @@ Le **droit de veto** des cinq membres permanents du Conseil de sécurité bloque
           titre: 'Un monde multipolaire (2001 - ) : de nouveaux types de conflits',
           lecon: {
             titre: 'Puissances rivales et guerres sans front',
-            cours: `Le monde issu de 1991 n'a pas duré. Depuis 2001, la puissance se redistribue, et la guerre change de forme.
+            cours: `Le monde issu de 1991 n’a pas duré. Depuis 2001, la puissance se **redistribue**, et la guerre **change de forme**.
 
-## De l'unipolaire au multipolaire
-La Chine devient la deuxième économie mondiale, la Russie se réaffirme militairement, l'Inde, le Brésil, la Turquie ou l'Afrique du Sud pèsent régionalement. Les **BRICS** (formalisés en 2009) contestent l'ordre issu de 1945. L'Union européenne, elle, est une puissance économique et normative sans commandement militaire unifié.
+## De l’unipolaire au multipolaire
+| Acteur | Ce qui a changé |
+| **Chine** | Deuxième économie mondiale, puissance militaire assumée |
+| **Russie** | Réaffirmation militaire, contestation de l’ordre occidental |
+| Inde, Brésil, Turquie, Afrique du Sud | Des puissances régionales qui pèsent |
+| **BRICS** (formalisés en 2009) | Contestent l’ordre issu de 1945 |
+| **Union européenne** | Puissance économique et normative, sans commandement militaire unifié |
 
 ## Le terrorisme transnational
-Al-Qaïda puis **Daech** (proclamation du « califat » en 2014) mènent une guerre sans territoire fixe et sans armée régulière. La France est frappée en **2015** (*Charlie Hebdo* en janvier, Paris et le Bataclan le 13 novembre) et en 2016 (Nice). La riposte mêle interventions extérieures (Sahel, Levant) et sécurité intérieure — au prix d'un débat récurrent entre sécurité et libertés.
+Al-Qaïda puis **Daech** — proclamation du « califat » en 2014 — mènent une guerre **sans territoire fixe et sans armée régulière**.
+
+| Date | L’attentat en France |
+| Janvier 2015 | *Charlie Hebdo* |
+| 13 novembre 2015 | Paris et le **Bataclan** |
+| Juillet 2016 | Nice |
+
+La riposte mêle interventions extérieures (Sahel, Levant) et sécurité intérieure — au prix d’un débat récurrent entre **sécurité et libertés**.
 
 ## Les guerres asymétriques et hybrides
-Face à des armées régulières, des groupes armés emploient guérilla, attentats et propagande en ligne. Les États eux-mêmes combinent moyens militaires et non militaires : **cyberattaques**, désinformation, pressions énergétiques, mercenaires. Le champ de bataille inclut désormais l'information et les réseaux.
+| Type de moyen | Exemples |
+| Militaire irrégulier | Guérilla, attentats, prise d’otages |
+| Informationnel | Propagande en ligne, désinformation |
+| Cyber | Attaques sur les réseaux, les hôpitaux, les administrations |
+| Économique | Pressions énergétiques, sanctions |
+| Privatisé | Mercenaires, sociétés militaires privées |
+
+> Le champ de bataille inclut désormais l’**information** et les **réseaux** : un conflit peut être mené sans qu’un seul soldat franchisse une frontière.
 
 ## Le retour de la guerre interétatique
-L'annexion de la Crimée (2014) puis l'**invasion russe de l'Ukraine en février 2022** ramènent en Europe un conflit classique de haute intensité, avec front, artillerie et occupation. La guerre n'avait pas disparu : elle avait changé de lieu.`,
+| Date | L’événement |
+| 2014 | Annexion de la **Crimée** par la Russie |
+| Février 2022 | **Invasion de l’Ukraine** |
+
+Un conflit classique de haute intensité revient en Europe : front, artillerie, occupation. La guerre n’avait pas disparu — elle avait changé de **lieu**.`,
           },
           questions: [
             ['Que désigne le sigle BRICS ?', ['Un groupe de grandes économies émergentes', 'Une alliance militaire', 'Une agence de l’ONU', 'Un accord climatique'], 0, 'Brésil, Russie, Inde, Chine, Afrique du Sud, puis élargi.'],
@@ -312,19 +499,35 @@ L'annexion de la Crimée (2014) puis l'**invasion russe de l'Ukraine en février
           titre: 'La création d’une Europe ouverte et d’un marché commun (1957-1993)',
           lecon: {
             titre: 'Du traité de Rome au marché unique',
-            cours: `L'Europe communautaire naît d'un projet de paix et se construit par l'économie : lier assez les intérêts pour rendre la guerre impossible.
+            cours: `L’Europe communautaire naît d’un projet de **paix** et se construit par l’**économie** : lier assez les intérêts pour rendre la guerre impossible.
 
 ## Les fondations
-Après la CECA (1951), le **traité de Rome (25 mars 1957)** crée la **CEE** entre six États — France, RFA, Italie, Belgique, Pays-Bas, Luxembourg. Objectifs : union douanière, libre circulation des marchandises, des personnes, des services et des capitaux, et politiques communes. La **PAC**, mise en place à partir de 1962, assure l'autosuffisance alimentaire et modernise l'agriculture — elle absorbera longtemps la majeure partie du budget.
+| Date | Le traité | Ce qu’il crée |
+| 1951 | **CECA** | Charbon et acier mis en commun — les matières de la guerre |
+| 25 mars 1957 | **Traité de Rome** | La **CEE** entre six États |
+
+Les six : France, RFA, Italie, Belgique, Pays-Bas, Luxembourg. Objectifs : union douanière, libre circulation des marchandises, des personnes, des services et des capitaux, et politiques communes.
+
+La **PAC**, mise en place à partir de 1962, assure l’autosuffisance alimentaire et modernise l’agriculture — elle absorbera longtemps la majeure partie du budget communautaire.
 
 ## Les élargissements
-Royaume-Uni, Irlande et Danemark en **1973** ; Grèce en 1981 ; Espagne et Portugal en 1986, au sortir de leurs dictatures. L'adhésion devient un instrument d'ancrage démocratique.
+| Année | Les entrants | Ce que l’adhésion signifie |
+| 1973 | Royaume-Uni, Irlande, Danemark | L’ouverture au nord |
+| 1981 | Grèce | Sortie de la dictature des colonels |
+| 1986 | Espagne, Portugal | Sortie du franquisme et du salazarisme |
 
-## L'approfondissement
-L'**Acte unique européen (1986)** fixe l'achèvement du **marché unique au 1er janvier 1993** : suppression des barrières non tarifaires et des contrôles. Les accords de **Schengen (1985)**, entrés en application en 1995, suppriment les contrôles aux frontières intérieures.
+> L’adhésion devient un **instrument d’ancrage démocratique** : entrer dans la Communauté, c’est rendre coûteux le retour à la dictature.
+
+## L’approfondissement
+| Date | Le texte | Son effet |
+| 1985 | Accords de **Schengen** | Suppression des contrôles aux frontières intérieures (application en 1995) |
+| 1986 | **Acte unique européen** | Fixe l’achèvement du marché unique |
+| 1er janvier 1993 | **Marché unique** | Fin des barrières non tarifaires et des contrôles |
 
 ## Maastricht
-Le **traité de Maastricht (signé en 1992, en vigueur en 1993)** crée l'**Union européenne**, la **citoyenneté européenne** et prépare la monnaie unique, avec des critères de convergence stricts. En France, il est ratifié par référendum à une courte majorité (51,04 %) — premier signe visible que l'opinion ne suit plus automatiquement.`,
+Le **traité de Maastricht** — signé en 1992, en vigueur en 1993 — crée l’**Union européenne**, la **citoyenneté européenne**, et prépare la monnaie unique avec des critères de convergence stricts.
+
+En France, il est ratifié par référendum à une **très courte majorité (51,04 %)** : premier signe visible que l’opinion ne suit plus automatiquement le projet européen.`,
           },
           questions: [
             ['Le traité de Rome (1957) crée…', ['La Communauté économique européenne', 'L’Union européenne', 'La zone euro', 'L’espace Schengen'], 0, 'Entre six États fondateurs.'],
@@ -341,19 +544,42 @@ Le **traité de Maastricht (signé en 1992, en vigueur en 1993)** crée l'**Unio
           titre: 'Le projet européen remis en question : les crises de la coopération européenne',
           lecon: {
             titre: 'Vingt ans de contestation',
-            cours: `Depuis les années 2000, l'Union avance de crise en crise. Chacune pose la même question : jusqu'où les États acceptent-ils de décider ensemble ?
+            cours: `Depuis les années 2000, l’Union avance de crise en crise. Chacune pose la même question : **jusqu’où les États acceptent-ils de décider ensemble ?**
 
 ## Le choc de 2005
-Le **traité constitutionnel européen** est rejeté par référendum en **France (29 mai 2005, 54,7 % de non)** puis aux Pays-Bas. Le traité de **Lisbonne (2007, en vigueur en 2009)** en reprend l'essentiel par la voie parlementaire — ce qui nourrit durablement le reproche d'un projet mené sans les peuples.
+| Date | L’événement |
+| 29 mai 2005 | La France rejette le **traité constitutionnel** (54,7 % de non) |
+| Juin 2005 | Les Pays-Bas le rejettent à leur tour |
+| 2007 | Le traité de **Lisbonne** en reprend l’essentiel, par voie **parlementaire** |
+
+> C’est ce contournement du référendum qui nourrit durablement le reproche d’un projet **mené sans les peuples** — quels que soient les mérites juridiques du traité de Lisbonne.
 
 ## La crise de la zone euro
-À partir de 2010, la Grèce, puis l'Irlande, le Portugal, l'Espagne et Chypre sont frappés par la crise des dettes souveraines. Plans d'aide, austérité, création du Mécanisme européen de stabilité et intervention de la **BCE** — « whatever it takes » de Mario Draghi en 2012 — sauvent la monnaie unique, au prix d'un coût social très lourd dans les pays aidés.
+À partir de 2010, la Grèce, puis l’Irlande, le Portugal, l’Espagne et Chypre sont frappés par la crise des dettes souveraines.
+
+| La réponse | Ce qu’elle a produit |
+| Plans d’aide conditionnés | Austérité imposée aux pays aidés |
+| **Mécanisme européen de stabilité** | Un pare-feu permanent |
+| La **BCE** : « whatever it takes » (Draghi, 2012) | La spéculation contre l’euro cesse |
+
+La monnaie unique est sauvée — au prix d’un coût social très lourd, notamment en Grèce.
 
 ## La crise migratoire
-En **2015**, plus d'un million de personnes demandent l'asile dans l'Union, fuyant surtout la guerre en Syrie. Le système de Dublin, qui fait peser la demande sur le pays d'entrée, se révèle inapplicable ; la répartition par quotas est refusée par plusieurs États. Les frontières intérieures sont temporairement rétablies.
+En **2015**, plus d’**un million** de personnes demandent l’asile dans l’Union, fuyant surtout la guerre en Syrie.
+
+| Le dispositif | Pourquoi il échoue |
+| Le système de **Dublin** | Il fait peser la demande sur le seul pays d’entrée |
+| La répartition par **quotas** | Plusieurs États la refusent |
+| Schengen | Des frontières intérieures sont temporairement rétablies |
 
 ## Le Brexit et après
-Le **référendum du 23 juin 2016** (51,9 % pour la sortie) conduit au retrait effectif du Royaume-Uni le **31 janvier 2020** : c'est le premier départ de l'histoire de la construction européenne. S'y ajoutent les conflits sur l'État de droit avec la Hongrie et la Pologne. À l'inverse, la pandémie de Covid-19 débouche en 2020 sur un **plan de relance financé par un emprunt commun** — une première.`,
+| Date | L’événement |
+| 23 juin 2016 | Référendum britannique : **51,9 %** pour la sortie |
+| 31 janvier 2020 | Retrait effectif du Royaume-Uni |
+
+C’est le **premier départ** de l’histoire de la construction européenne. S’y ajoutent les conflits sur l’**État de droit** avec la Hongrie et la Pologne.
+
+À l’inverse, la pandémie de Covid-19 débouche en 2020 sur un **plan de relance financé par un emprunt commun** — une première, et un pas fédéral qu’aucune crise n’avait obtenu auparavant.`,
           },
           questions: [
             ['En 2005, les Français rejettent par référendum…', ['Le traité constitutionnel européen', 'Le traité de Maastricht', 'Le traité de Lisbonne', 'L’adhésion de la Turquie'], 0, '54,7 % de « non » le 29 mai 2005.'],
@@ -371,19 +597,41 @@ Le **référendum du 23 juin 2016** (51,9 % pour la sortie) conduit au retrait e
           titre: 'Le renforcement de la Ve République : décentralisation territoriale et fonctionnelle',
           lecon: {
             titre: 'L’État se réorganise',
-            cours: `La Ve République, née en 1958 d'un État très centralisé, a passé quarante ans à redistribuer son pouvoir — vers les territoires, et vers des autorités indépendantes.
+            cours: `La Ve République, née en 1958 d’un État très centralisé, a passé quarante ans à **redistribuer son pouvoir** — vers les territoires, et vers des autorités indépendantes.
 
-## L'acte I de la décentralisation
-Les **lois Defferre (1982-1983)** suppriment la tutelle du préfet sur les collectivités, font du président du conseil général l'exécutif du département, créent la **région comme collectivité territoriale** de plein exercice (première élection au suffrage universel en 1986) et transfèrent des compétences : collèges aux départements, lycées aux régions, urbanisme aux communes.
+## L’acte I de la décentralisation
+Les **lois Defferre (1982-1983)** rompent avec deux siècles de tutelle.
 
-## L'acte II
-La révision constitutionnelle du **28 mars 2003** inscrit à l'article 1er que l'organisation de la République « est décentralisée », et introduit l'autonomie financière des collectivités, le **référendum local** et le droit à l'expérimentation. De nouveaux transferts suivent (RMI puis RSA aux départements, routes nationales).
+| La mesure | Ce qu’elle change |
+| Fin de la tutelle du préfet | Les actes des collectivités s’appliquent sans son accord préalable |
+| Le président du conseil général devient l’exécutif | Le préfet ne dirige plus le département |
+| La **région** devient une collectivité de plein exercice | Première élection au suffrage universel en 1986 |
+
+| Compétence transférée | À qui |
+| Les collèges | Aux départements |
+| Les lycées | Aux régions |
+| L’urbanisme | Aux communes |
+
+## L’acte II
+La révision constitutionnelle du **28 mars 2003** inscrit à l’article 1er que l’organisation de la République « est **décentralisée** ».
+
+| L’apport | Ce qu’il permet |
+| Autonomie financière | Une part garantie de ressources propres |
+| **Référendum local** | Consulter les habitants sur un projet |
+| Droit à l’expérimentation | Tester une politique sur un territoire |
+
+De nouveaux transferts suivent : RMI puis RSA aux départements, routes nationales.
 
 ## La carte redessinée
-La loi de 2015 réduit le nombre de régions métropolitaines de 22 à **13** (effectif au 1er janvier 2016). Les intercommunalités et métropoles montent en puissance, tandis que la commune, échelon le plus ancien, reste très nombreuse — plus de 34 000.
+| Échelon | Évolution |
+| Régions métropolitaines | De 22 à **13** (loi de 2015, effective au 1er janvier 2016) |
+| Intercommunalités et métropoles | Montée en puissance continue |
+| Communes | Plus de **34 000** : l’échelon le plus ancien reste le plus nombreux |
 
 ## La décentralisation fonctionnelle
-L'État délègue aussi à des **autorités administratives indépendantes** : Défenseur des droits (2011), Autorité de la concurrence, CNIL, ARCOM. Enfin, le passage au **quinquennat (référendum de 2000)** et l'inversion du calendrier électoral renforcent le président, contrepoint centralisateur de tout ce mouvement.`,
+L’État délègue aussi à des **autorités administratives indépendantes** : Défenseur des droits (2011), Autorité de la concurrence, CNIL, ARCOM.
+
+> Un contrepoint centralisateur traverse pourtant tout ce mouvement : le passage au **quinquennat** (référendum de 2000) et l’inversion du calendrier électoral renforcent le président. L’État se décentralise et se présidentialise en même temps.`,
           },
           questions: [
             ['Les lois Defferre de 1982-1983 créent…', ['La région comme collectivité territoriale', 'Les intercommunalités obligatoires', 'Le quinquennat', 'Le Défenseur des droits'], 0, 'Première élection régionale au suffrage universel en 1986.'],
@@ -400,19 +648,37 @@ L'État délègue aussi à des **autorités administratives indépendantes** : D
           titre: 'L’évolution de la Ve République : défense des principes fondateurs et émergence de nouveaux droits',
           lecon: {
             titre: 'Des principes anciens, des droits neufs',
-            cours: `« La France est une République indivisible, laïque, démocratique et sociale » : l'article 1er n'a pas changé, mais ce qu'il garantit s'est considérablement élargi.
+            cours: `« La France est une République indivisible, laïque, démocratique et sociale » : l’article 1er n’a pas changé — mais ce qu’il **garantit** s’est considérablement élargi.
 
 ## La laïcité
-Héritée de la **loi de 1905** de séparation des Églises et de l'État, elle garantit la liberté de conscience et la neutralité de l'État. Elle est reprécisée par la **loi du 15 mars 2004** interdisant les signes religieux ostensibles à l'école publique, puis par la loi de 2010 sur la dissimulation du visage dans l'espace public et celle de 2021 confortant le respect des principes de la République.
+| Date | Le texte | Ce qu’il pose |
+| 1905 | Séparation des Églises et de l’État | Liberté de conscience, neutralité de l’État |
+| 15 mars 2004 | Loi sur les signes religieux | Interdiction des signes ostensibles à l’école publique |
+| 2010 | Dissimulation du visage | Interdiction dans l’espace public |
+| 2021 | Respect des principes de la République | Contrôle renforcé des associations et de l’instruction |
 
-## L'égalité en actes
-Révision constitutionnelle de **1999** et loi de **2000** sur la **parité** en politique ; **PACS en 1999** ; **mariage pour tous en 2013** ; lois sur l'égalité professionnelle et contre les discriminations. En **mars 2024**, la liberté de recourir à l'IVG est inscrite dans la Constitution — une première mondiale.
+## L’égalité en actes
+| Date | L’avancée |
+| 1999 | Révision constitutionnelle et loi de 2000 sur la **parité** en politique |
+| 1999 | Le **PACS** |
+| 2013 | Le **mariage pour tous** |
+| Mars 2024 | La liberté de recourir à l’**IVG** inscrite dans la Constitution — une première mondiale |
 
 ## Le citoyen face à la loi
-La révision de **2008** crée la **question prioritaire de constitutionnalité** : depuis 2010, tout justiciable peut faire contrôler la constitutionnalité d'une loi déjà en vigueur. Le Conseil constitutionnel, simple régulateur des pouvoirs en 1958, est devenu un véritable protecteur des droits — mouvement engagé par sa décision de **1971** intégrant le préambule de 1946 et la Déclaration de 1789 au « bloc de constitutionnalité ».
+| Date | L’étape | Ce qu’elle change |
+| 1971 | Décision du Conseil constitutionnel | Le préambule de 1946 et la Déclaration de 1789 entrent dans le **bloc de constitutionnalité** |
+| 2008 | Révision constitutionnelle | Création de la **question prioritaire de constitutionnalité** |
+| 2010 | Entrée en vigueur de la QPC | Tout justiciable peut faire contrôler une loi **déjà en vigueur** |
+
+> Le Conseil constitutionnel, simple régulateur des pouvoirs en 1958, est devenu un **protecteur des droits**. Ce n’est pas une réforme unique : c’est un glissement en trois temps, sur quarante ans.
 
 ## Les tensions
-Sécurité et libertés (états d'urgence de 2015 et de 2020), participation et défiance (abstention élevée, mouvement des Gilets jaunes en 2018), place des outre-mer et de la diversité : la République se redéfinit sans cesse dans ces tensions, ce qui est aussi le signe qu'elle reste vivante.`,
+| La tension | Ce qui la manifeste |
+| Sécurité et libertés | États d’urgence de 2015 et de 2020 |
+| Participation et défiance | Abstention élevée, mouvement des Gilets jaunes (2018) |
+| Unité et diversité | Place des outre-mer, reconnaissance des minorités |
+
+La République se redéfinit sans cesse dans ces tensions — ce qui est aussi le signe qu’elle reste **vivante**.`,
           },
           questions: [
             ['La loi de séparation des Églises et de l’État date de…', ['1905', '2004', '1958', '1946'], 0, 'Elle fonde la laïcité française.'],

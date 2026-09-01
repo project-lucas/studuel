@@ -129,21 +129,40 @@ DELETE FROM public.chapters c
           axe: 'L’Europe face aux révolutions',
           lecon: {
             titre: 'De sujets du roi à citoyens de la nation',
-            cours: `En dix ans, la France passe d’une société d’ordres où l’on naît sujet à une nation d’individus égaux devant la loi. C’est cette bascule que le programme appelle « une nouvelle conception de la nation ».
+            cours: `En **dix ans**, la France passe d’une société d’**ordres** où l’on naît sujet à une **nation d’individus égaux** devant la loi. C’est cette bascule que le programme appelle « une nouvelle conception de la nation ».
 
 ## 1789 : la fin de la société d’ordres
-Convoqués en mai 1789 pour résoudre la crise financière, les États généraux se transforment : le tiers état se proclame **Assemblée nationale** (17 juin), puis prête le **serment du Jeu de paume** (20 juin). La nuit du **4 août** abolit les privilèges, et la **Déclaration des droits de l’homme et du citoyen** (26 août) pose l’égalité en droits et la souveraineté de la nation.
+| Date | L’événement | Ce qu’il abolit ou fonde |
+| **17 juin 1789** | Le tiers état se proclame **Assemblée nationale** | La souveraineté change de main |
+| **20 juin** | Le **serment du Jeu de paume** | L’engagement de donner une constitution |
+| **Nuit du 4 août** | L’abolition des **privilèges** | La société d’ordres |
+| **26 août** | La **Déclaration des droits de l’homme et du citoyen** | L’égalité en droits, la souveraineté de la nation |
 
 ## La souveraineté change de mains
-La Constitution de 1791 fait du roi le chef d’une **monarchie constitutionnelle**, mais distingue citoyens actifs (qui votent) et passifs : l’égalité proclamée n’est pas encore l’égalité politique. La fuite à Varennes (juin 1791) ruine la confiance ; la guerre déclarée en avril 1792 et la journée du 10 août 1792 emportent la royauté.
+La Constitution de **1791** fait du roi le chef d’une **monarchie constitutionnelle**.
 
-> La nation n’est plus l’ensemble des sujets d’un roi : elle est le corps des citoyens, seul détenteur de la souveraineté.
+| Catégorie | Son droit |
+| Citoyens **actifs** | Ils **votent** |
+| Citoyens **passifs** | Ils ne votent pas |
+
+> L’égalité **proclamée** n’est pas encore l’égalité **politique**. C’est la tension qui traverse toute la décennie.
+
+La fuite à **Varennes** (juin 1791) ruine la confiance ; la guerre (avril 1792) et la journée du **10 août 1792** emportent la royauté.
+
+> La nation n’est plus l’ensemble des **sujets d’un roi** : elle est le **corps des citoyens**, seul détenteur de la souveraineté.
 
 ## La République, la guerre et la Terreur
-Proclamée le 22 septembre 1792, la Ire République juge et exécute Louis XVI (janvier 1793). Menacée aux frontières et en Vendée, elle bascule dans la **Terreur** (1793-1794) : Comité de salut public, loi des suspects, quelque 17 000 condamnations à mort. La chute de Robespierre (9 thermidor an II) ouvre le **Directoire** (1795-1799), régime censitaire et instable.
+| Date | L’événement |
+| **22 septembre 1792** | Proclamation de la **Ire République** |
+| **Janvier 1793** | Exécution de **Louis XVI** |
+| **1793-1794** | La **Terreur** : Comité de salut public, loi des suspects, environ **17 000** condamnations à mort |
+| **9 thermidor an II** | La chute de **Robespierre** |
+| **1795-1799** | Le **Directoire** : régime **censitaire** et instable |
 
 ## Ce qui reste en 1799
-L’égalité civile, la propriété, l’état civil laïque, la vente des biens nationaux, la nation en armes. Mais aussi une question non tranchée : comment fonder un régime stable sur la souveraineté du peuple ?`,
+L’**égalité civile**, la propriété, l’**état civil laïque**, la vente des biens nationaux, la **nation en armes**.
+
+> Mais une question reste ouverte : **comment fonder un régime stable sur la souveraineté du peuple ?** C’est elle que Bonaparte prétendra trancher.`,
           },
           questions: [
             ['Que proclame le tiers état le 17 juin 1789 ?', ['Il se déclare Assemblée nationale', 'Il proclame la République', 'Il vote la Constitution civile du clergé', 'Il abolit la monarchie'], 0, 'Se dire « Assemblée nationale », c’est affirmer que la souveraineté vient de la nation, pas du roi.'],
@@ -161,21 +180,40 @@ L’égalité civile, la propriété, l’état civil laïque, la vente des bien
           axe: 'L’Europe face aux révolutions',
           lecon: {
             titre: 'Consolider la Révolution en confisquant la liberté',
-            cours: `Napoléon Bonaparte prétend « clore la Révolution ». Il en garde l’égalité civile et la met en pierre, mais il en supprime la liberté politique : c’est toute l’ambiguïté de son héritage.
+            cours: `Napoléon Bonaparte prétend « **clore la Révolution** ». Il en garde l’**égalité civile** et la met en pierre — mais il en supprime la **liberté politique**. C’est toute l’ambiguïté de son héritage.
 
 ## Le Consulat : l’ordre après le chaos
-Le coup d’État du **18 brumaire an VIII** (9 novembre 1799) porte Bonaparte au pouvoir. La Constitution de l’an VIII lui donne l’essentiel : le **plébiscite** remplace le débat, le suffrage universel masculin ne sert qu’à approuver. Consul à vie en 1802, il se fait sacrer **empereur** en 1804.
+| Date | L’étape |
+| **18 brumaire an VIII** (9 novembre 1799) | Le **coup d’État** porte Bonaparte au pouvoir |
+| Constitution de l’an VIII | Le **plébiscite** remplace le débat : le suffrage universel masculin ne sert qu’à **approuver** |
+| **1802** | Consul **à vie** |
+| **1804** | Sacré **empereur** |
 
 ## Les masses de granit
-Bonaparte fonde des institutions qui durent encore : le **Code civil** (1804), les **préfets**, la **Banque de France**, le **franc germinal**, les **lycées**, la **Légion d’honneur**, le **Concordat** de 1801 avec le pape. Toutes consacrent l’égalité devant la loi, la propriété et un État centralisé.
+| Institution | Sa date | Ce qu’elle consacre |
+| Le **Concordat** | 1801 | La paix religieuse, sous contrôle de l’État |
+| Le **Code civil** | **1804** | L’égalité devant la loi et la **propriété** |
+| Les **préfets** | 1800 | La **centralisation** |
+| La **Banque de France** et le **franc germinal** | 1800, 1803 | La stabilité monétaire |
+| Les **lycées** et la **Légion d’honneur** | 1802 | Le mérite d’État |
 
-> L’égalité civile est gravée dans le marbre ; la liberté politique, elle, est suspendue — censure, police, assemblées sans pouvoir.
+> L’égalité civile est gravée dans le **marbre** ; la liberté politique, elle, est **suspendue** — censure, police, assemblées sans pouvoir.
 
 ## L’Empire et l’Europe
-De 1805 à 1809, Austerlitz, Iéna et Wagram font de la France la puissance dominante du continent. La Grande Armée exporte le Code civil et l’abolition de la féodalité, mais l’occupation, les réquisitions et le **Blocus continental** nourrissent des **sentiments nationaux** contre elle : Espagne (1808), Allemagne, Russie. La campagne de Russie (1812) brise l’armée ; 1814 puis Waterloo (1815) achèvent l’aventure.
+De **1805** à **1809**, **Austerlitz**, **Iéna** et **Wagram** font de la France la puissance dominante du continent.
+
+| Ce que la Grande Armée exporte | Ce qu’elle provoque |
+| Le **Code civil**, l’abolition de la féodalité | L’occupation, les **réquisitions**, le **Blocus continental** |
+| — | Des **sentiments nationaux contre elle** : Espagne (1808), Allemagne, Russie |
+
+La campagne de **Russie** (1812) brise l’armée ; **1814** puis **Waterloo** (1815) achèvent l’aventure.
 
 ## Un héritage à double face
-Pour les uns, Napoléon a sauvé les acquis de 1789 ; pour les autres, il a inventé le pouvoir personnel plébiscité. Les deux lectures sont vraies, et c’est ce que le programme appelle « les ambiguïtés ».`,
+| Lecture | Ce qu’elle retient |
+| Napoléon **sauveur** de 1789 | Il a consolidé les acquis civils |
+| Napoléon **fondateur** du pouvoir personnel | Il a inventé le régime plébiscitaire |
+
+> Les deux lectures sont **vraies**. C’est ce que le programme appelle « les ambiguïtés » — et ce qu’une bonne copie doit tenir ensemble.`,
           },
           questions: [
             ['Quel coup d’État porte Bonaparte au pouvoir ?', ['Le 18 brumaire an VIII', 'Le 9 thermidor an II', 'Le 10 août 1792', 'Le 2 décembre 1851'], 0, '9 novembre 1799 : le Directoire est renversé, le Consulat commence.'],
@@ -193,21 +231,37 @@ Pour les uns, Napoléon a sauvé les acquis de 1789 ; pour les autres, il a inve
           axe: 'L’Europe face aux révolutions',
           lecon: {
             titre: 'Le congrès de Vienne contre le printemps des peuples',
-            cours: `De 1814 à 1848, l’Europe est le théâtre d’un bras de fer : des souverains veulent restaurer l’ordre d’avant 1789, des peuples réclament des libertés et des nations.
+            cours: `De 1814 à 1848, l’Europe est le théâtre d’un bras de fer : des **souverains** veulent restaurer l’ordre d’avant 1789 ; des **peuples** réclament des libertés et des nations.
 
 ## 1815 : restaurer l’ordre ancien
-Le **congrès de Vienne** (1814-1815) redessine la carte au nom de la légitimité et de l’équilibre : la France revient à ses frontières de 1792, la Sainte-Alliance (Russie, Prusse, Autriche) s’engage à écraser toute révolution. Metternich, chancelier autrichien, en est l’architecte.
+Le **congrès de Vienne** (1814-1815) redessine la carte au nom de la **légitimité** et de l’**équilibre**.
 
-## Deux forces contre lui : libéralisme et nationalisme
-Le **libéralisme** réclame une constitution, des libertés et un parlement. Le **nationalisme** affirme qu’un peuple partageant langue, histoire et culture a droit à un État : Grecs, Italiens, Allemands, Polonais, Hongrois. Les deux se combinent souvent — et les sociétés secrètes (carbonari) les diffusent.
+| Décision | Sa portée |
+| La France revient à ses frontières de **1792** | La Révolution est effacée de la carte |
+| La **Sainte-Alliance** (Russie, Prusse, Autriche) | Elle s’engage à **écraser toute révolution** |
+| **Metternich**, chancelier autrichien | L’architecte du système |
 
-> Vienne raisonne en souverains, les peuples raisonnent en nations : tout le XIXe siècle sort de ce désaccord.
+## Deux forces contre lui
+| Force | Ce qu’elle réclame |
+| Le **libéralisme** | Une constitution, des libertés, un parlement |
+| Le **nationalisme** | Qu’un peuple partageant langue, histoire et culture ait **droit à un État** |
+
+Les deux se **combinent** souvent, et les sociétés secrètes — les **carbonari** — les diffusent. Grecs, Italiens, Allemands, Polonais, Hongrois.
+
+> Vienne raisonne en **souverains**, les peuples raisonnent en **nations** : tout le XIXe siècle sort de ce désaccord.
 
 ## Trois vagues révolutionnaires
-**1820-1821** : Espagne, Naples, Grèce (indépendance reconnue en 1830). **1830** : les Trois Glorieuses chassent Charles X en France ; la Belgique devient indépendante ; la Pologne est écrasée. **1848** : le « printemps des peuples » embrase Paris, Vienne, Berlin, Milan, Budapest — partout des constitutions arrachées, presque partout la répression l’emporte l’année suivante.
+| Vague | Où | Son issue |
+| **1820-1821** | Espagne, Naples, **Grèce** | L’indépendance grecque reconnue en **1830** |
+| **1830** | France (**Trois Glorieuses**, chute de Charles X), Belgique, Pologne | La Belgique **indépendante** ; la Pologne **écrasée** |
+| **1848** | Paris, Vienne, Berlin, Milan, Budapest | Des constitutions arrachées — presque partout la **répression** l’emporte l’année suivante |
 
 ## La France de la monarchie constitutionnelle
-Restauration (1814-1830) puis monarchie de Juillet (1830-1848) : le régime est parlementaire mais **censitaire**, moins de 1 % des Français votent. Le refus d’élargir le droit de vote (« la campagne des banquets ») fait tomber Louis-Philippe en février 1848.`,
+| Régime | Ses dates | Sa nature |
+| **Restauration** | 1814-1830 | Parlementaire mais **censitaire** |
+| **Monarchie de Juillet** | 1830-1848 | Même chose : **moins de 1 %** des Français votent |
+
+> Le **refus d’élargir le droit de vote** — la « campagne des banquets » — fait tomber Louis-Philippe en février **1848**.`,
           },
           questions: [
             ['Que fait le congrès de Vienne (1814-1815) ?', ['Il redessine la carte de l’Europe au nom de la légitimité et de l’équilibre', 'Il proclame le droit des peuples à disposer d’eux-mêmes', 'Il crée la Société des Nations', 'Il abolit la monarchie en Europe'], 0, 'Les vainqueurs de Napoléon organisent un ordre contre-révolutionnaire.'],
@@ -228,21 +282,33 @@ Restauration (1814-1830) puis monarchie de Juillet (1830-1848) : le régime est 
           axe: 'La France dans l’Europe des nationalités : politique et société (1848-1871)',
           lecon: {
             titre: 'Quatre ans pour passer de l’espoir au coup d’État',
-            cours: `Née d’une révolution en février 1848, la Deuxième République meurt d’un coup d’État en décembre 1851. Entre les deux, elle invente le suffrage universel masculin — et découvre qu’il ne vote pas comme ses fondateurs l’espéraient.
+            cours: `Née d’une révolution en **février 1848**, la Deuxième République meurt d’un **coup d’État** en décembre 1851. Entre les deux, elle invente le **suffrage universel masculin** — et découvre qu’il ne vote pas comme ses fondateurs l’espéraient.
 
 ## Février 1848 : la République des espérances
-Le gouvernement provisoire proclame la République, instaure le **suffrage universel masculin** (mars 1848 : 9 millions d’électeurs contre 240 000 la veille), abolit l’**esclavage** dans les colonies (décret Schoelcher, 27 avril), supprime la peine de mort en matière politique et ouvre les **Ateliers nationaux** pour les chômeurs.
+| Mesure | Sa portée |
+| Le **suffrage universel masculin** (mars) | **9 millions** d’électeurs, contre **240 000** la veille |
+| L’**abolition de l’esclavage** dans les colonies (décret **Schoelcher**, 27 avril) | Définitive, cette fois |
+| La suppression de la **peine de mort** en matière politique | — |
+| Les **Ateliers nationaux** | Du travail pour les chômeurs |
 
 ## Juin 1848 : la fracture sociale
-La fermeture des Ateliers nationaux déclenche l’insurrection ouvrière des **journées de Juin**, écrasée par le général Cavaignac : plusieurs milliers de morts. La République sociale est vaincue par la République des notables ; la peur du « partageux » gagne les campagnes et la bourgeoisie.
+La fermeture des Ateliers nationaux déclenche l’insurrection ouvrière des **journées de Juin**, écrasée par le général **Cavaignac** : plusieurs milliers de morts.
 
-> Le suffrage universel n’a pas donné la majorité aux républicains : il a donné 74 % des voix à un Bonaparte.
+> La **République sociale** est vaincue par la **République des notables**. La peur du « partageux » gagne les campagnes et la bourgeoisie — et c’est elle qui explique la suite.
 
 ## Décembre 1848 : le neveu de l’Empereur
-**Louis-Napoléon Bonaparte** est élu président au suffrage universel. L’Assemblée conservatrice élue en 1849 vote la loi Falloux (1850, place de l’Église dans l’enseignement) et restreint le corps électoral (mai 1850, 3 millions d’électeurs rayés).
+**Louis-Napoléon Bonaparte** est élu président au suffrage universel.
+
+> Le suffrage universel n’a **pas** donné la majorité aux républicains : il a donné **74 %** des voix à un **Bonaparte**.
+
+| L’Assemblée conservatrice de 1849 | Ce qu’elle vote |
+| La **loi Falloux**, 1850 | La place de l’Église dans l’enseignement |
+| La loi électorale de **mai 1850** | **3 millions** d’électeurs rayés des listes |
 
 ## Le 2 décembre 1851
-Ne pouvant se représenter, le président dissout l’Assemblée par un **coup d’État**, réprime la résistance (surtout dans le Sud-Est), puis fait approuver par plébiscite l’Empire, proclamé le 2 décembre 1852.`,
+Ne pouvant se représenter, le président **dissout l’Assemblée** par un coup d’État, réprime la résistance — surtout dans le Sud-Est —, puis fait approuver par **plébiscite** l’Empire, proclamé le **2 décembre 1852**.
+
+> La date est choisie : celle du sacre de Napoléon Ier et d’Austerlitz. Le régime se réclame d’une **filiation**, pas d’un programme.`,
           },
           questions: [
             ['Quelle grande mesure politique la Deuxième République instaure-t-elle en mars 1848 ?', ['Le suffrage universel masculin', 'Le vote des femmes', 'Le suffrage censitaire', 'Le droit de grève'], 0, 'Le corps électoral passe de 240 000 à environ 9 millions d’hommes.'],
@@ -260,21 +326,35 @@ Ne pouvant se représenter, le président dissout l’Assemblée par un **coup d
           axe: 'La France dans l’Europe des nationalités : politique et société (1848-1871)',
           lecon: {
             titre: 'Le suffrage universel au service d’un pouvoir personnel',
-            cours: `Le Second Empire garde le suffrage universel masculin et l’utilise contre la démocratie : c’est ce que le programme appelle un régime autoritaire « au vernis démocratique ».
+            cours: `Le Second Empire **garde** le suffrage universel masculin et l’utilise **contre** la démocratie : c’est ce que le programme appelle un régime autoritaire « au **vernis démocratique** ».
 
 ## L’Empire autoritaire (1852-1860)
-Napoléon III concentre l’exécutif : il nomme les ministres, dissout le Corps législatif, contrôle la presse par le système des **avertissements**. Les **candidatures officielles** — un candidat soutenu par les préfets, affiché sur papier blanc — font élire des députés dévoués. La surveillance policière frappe les républicains, exilés ou déportés.
+| Instrument | Ce qu’il permet |
+| La concentration de l’**exécutif** | L’empereur nomme les ministres, dissout le Corps législatif |
+| Le système des **avertissements** | Le contrôle de la presse |
+| Les **candidatures officielles** | Un candidat soutenu par les **préfets**, affiché sur papier blanc |
+| La **surveillance policière** | Républicains exilés ou déportés |
 
-## Le vernis : plébiscites et suffrage universel
-Le régime ne supprime jamais le vote : il le met en scène. Les **plébiscites** (1851, 1852, 1870) donnent des majorités écrasantes, et l’empereur se dit issu du peuple. La légitimité vient des urnes, mais le débat est confisqué.
+## Le vernis : le vote mis en scène
+Le régime ne supprime **jamais** le vote : il le **met en scène**. Les **plébiscites** de 1851, 1852 et 1870 donnent des majorités écrasantes, et l’empereur se dit **issu du peuple**.
 
-> Voter beaucoup et choisir peu : le Second Empire invente une démocratie sans libertés.
+> **Voter beaucoup et choisir peu** : le Second Empire invente une démocratie **sans libertés**. La légitimité vient des urnes, mais le débat est confisqué.
 
 ## L’Empire libéral (1860-1870)
-Affaibli par ses difficultés extérieures et par la montée d’une opposition (les « Cinq » en 1857, 2 millions de voix en 1863), Napoléon III concède : droit d’adresse (1860), droit de **grève** (loi Ollivier, 1864), liberté de la presse et de réunion (1868), gouvernement responsable devant les Chambres (1870). Le plébiscite de mai 1870 le confirme largement.
+Affaibli par ses difficultés extérieures et par la montée d’une opposition — les « **Cinq** » en 1857, **2 millions** de voix en 1863 — Napoléon III concède.
+
+| Date | La concession |
+| **1860** | Le droit d’**adresse** |
+| **1864** | Le droit de **grève** (loi Ollivier) |
+| **1868** | La liberté de la **presse** et de **réunion** |
+| **1870** | Un gouvernement **responsable** devant les Chambres |
+
+Le plébiscite de mai **1870** le confirme largement.
 
 ## La chute
-La guerre contre la Prusse et la capitulation de **Sedan** (2 septembre 1870) emportent le régime : la République est proclamée le 4 septembre.`,
+La guerre contre la **Prusse** et la capitulation de **Sedan** (2 septembre 1870) emportent le régime.
+
+> La **République** est proclamée le **4 septembre 1870** — sans révolution, par l’effondrement militaire.`,
           },
           questions: [
             ['Qu’est-ce qu’une candidature officielle sous le Second Empire ?', ['Un candidat soutenu et affiché par l’administration', 'Un candidat désigné par tirage au sort', 'Un candidat de l’opposition autorisé', 'Un candidat élu par le Sénat'], 0, 'Les préfets font campagne pour lui : l’élection reste libre en apparence seulement.'],
@@ -292,21 +372,41 @@ La guerre contre la Prusse et la capitulation de **Sedan** (2 septembre 1870) em
           axe: 'La France dans l’Europe des nationalités : politique et société (1848-1871)',
           lecon: {
             titre: 'Le rail, la banque et la ville',
-            cours: `Sous le Second Empire, la France entre dans l’âge industriel : le pays se couvre de voies ferrées, invente la banque moderne et transforme ses villes.
+            cours: `Sous le Second Empire, la France entre dans l’âge industriel : le pays se couvre de **voies ferrées**, invente la **banque moderne** et transforme ses **villes**.
 
 ## Le chemin de fer, colonne vertébrale
-Le réseau passe d’environ 3 000 km en 1851 à près de 17 000 km en 1870, organisé en étoile autour de Paris et confié à six grandes compagnies. Il abaisse le coût du transport, unifie le marché national, fait vivre la sidérurgie et le charbon, et met fin aux famines locales.
+| Année | Longueur du réseau |
+| **1851** | environ **3 000 km** |
+| **1870** | près de **17 000 km** |
+
+Organisé **en étoile** autour de Paris, confié à **six** grandes compagnies.
+
+| Ce qu’il produit | Comment |
+| Il **abaisse** le coût du transport | Et unifie le **marché national** |
+| Il **fait vivre** la sidérurgie et le charbon | La demande d’acier explose |
+| Il met fin aux **famines locales** | Le grain circule |
 
 ## La banque et le crédit
-Les frères **Pereire** (Crédit mobilier), le **Crédit lyonnais** (1863), la **Société générale** (1864) et le Crédit foncier drainent l’épargne vers l’industrie. L’État signe le **traité de libre-échange** avec le Royaume-Uni (1860), qui expose l’industrie française à la concurrence et la pousse à se moderniser.
+| Établissement | Sa date |
+| Le **Crédit mobilier** des frères **Pereire** | 1852 |
+| Le **Crédit lyonnais** | **1863** |
+| La **Société générale** | **1864** |
+| Le Crédit foncier | 1852 |
 
-> Une économie ne s’industrialise pas seulement avec des machines : il lui faut du crédit, des transports et un marché.
+Ils **drainent l’épargne** vers l’industrie. L’État signe le **traité de libre-échange** avec le Royaume-Uni (**1860**), qui expose l’industrie française à la concurrence — et la pousse à se moderniser.
+
+> Une économie ne s’industrialise pas seulement avec des **machines** : il lui faut du **crédit**, des **transports** et un **marché**.
 
 ## Les grands travaux et la ville
-Le préfet **Haussmann** perce les grands boulevards de Paris, installe l’eau, les égouts et les gares : la ville devient un chantier permanent, et le prix du sol chasse les ouvriers vers la périphérie. Les **Expositions universelles** (1855, 1867) mettent en scène cette modernité.
+Le préfet **Haussmann** perce les grands boulevards de Paris, installe l’eau, les égouts et les gares.
 
-## Une industrialisation encore inachevée
-La France reste très rurale : en 1870, une majorité d’actifs vit encore de l’agriculture, et la petite entreprise domine. L’industrialisation française est réelle, mais plus lente et plus dispersée que la britannique.`,
+| Effet voulu | Effet subi |
+| Une ville aérée, salubre, circulable | Le **prix du sol** chasse les ouvriers vers la **périphérie** |
+
+Les **Expositions universelles** de **1855** et **1867** mettent en scène cette modernité.
+
+## Une industrialisation inachevée
+> En **1870**, une **majorité d’actifs vit encore de l’agriculture**, et la **petite entreprise** domine. L’industrialisation française est réelle, mais plus **lente** et plus **dispersée** que la britannique.`,
           },
           questions: [
             ['De combien de kilomètres le réseau ferré français passe-t-il environ entre 1851 et 1870 ?', ['De 3 000 à près de 17 000 km', 'De 500 à 3 000 km', 'De 17 000 à 40 000 km', 'De 1 000 à 2 000 km'], 0, 'Le rail multiplie par plus de cinq en vingt ans et unifie le marché national.'],
@@ -324,21 +424,37 @@ La France reste très rurale : en 1870, une majorité d’actifs vit encore de l
           axe: 'La France dans l’Europe des nationalités : politique et société (1848-1871)',
           lecon: {
             titre: 'La France des campagnes entre en mouvement',
-            cours: `Au milieu du XIXe siècle, les trois quarts des Français vivent à la campagne. Ce monde rural n’est pas immobile : il se modernise, s’ouvre et commence à se vider.
+            cours: `Au milieu du XIXe siècle, **les trois quarts** des Français vivent à la campagne. Ce monde rural n’est **pas immobile** : il se modernise, s’ouvre — et commence à se vider.
 
 ## Un poids démographique écrasant
-En 1851, la population rurale atteint son maximum historique. Le village vit en quasi-autarcie, rythmé par la paroisse, la foire et le travail collectif. Les patois dominent encore largement le français.
+En **1851**, la population rurale atteint son **maximum historique**.
+
+> Le village vit en quasi-autarcie, rythmé par la **paroisse**, la **foire** et le travail collectif. Les **patois** dominent encore largement le français.
 
 ## La modernisation agricole
-Les rendements progressent avec l’usage des **engrais**, la fin de la jachère, la sélection des semences et les premières machines. Le chemin de fer ouvre les marchés urbains : la polyculture vivrière recule au profit de productions spécialisées (vigne, betterave, élevage). Les crises frappent aussi : le **phylloxéra** ravage le vignoble à partir de 1863.
+| Facteur | Son effet |
+| Les **engrais** et la fin de la **jachère** | Les rendements progressent |
+| La sélection des **semences**, les premières machines | Le travail se rationalise |
+| Le **chemin de fer** | Il ouvre les marchés **urbains** |
 
-> Le rail fait entrer le marché dans le village : on cesse de produire pour se nourrir, on produit pour vendre.
+La polyculture **vivrière** recule au profit de productions **spécialisées** : vigne, betterave, élevage.
+
+> Les crises frappent aussi : le **phylloxéra** ravage le vignoble à partir de **1863**.
+
+> Le rail fait entrer le **marché** dans le village : on cesse de produire **pour se nourrir**, on produit **pour vendre**.
 
 ## Le début de l’exode rural
-Le surplus de main-d’œuvre part vers les villes et les chantiers. Le mouvement est d’abord lent et souvent temporaire (migrations saisonnières), avant de s’accélérer sous la Troisième République.
+Le surplus de main-d’œuvre part vers les villes et les chantiers.
+
+> Le mouvement est d’abord **lent** et souvent **temporaire** — des migrations saisonnières — avant de s’accélérer sous la Troisième République.
 
 ## L’ouverture culturelle et politique
-L’école, le service militaire, la presse et le colportage diffusent le français et l’information nationale. Le suffrage universel masculin fait du paysan un électeur courtisé — un électeur qui, en 1848 comme en 1851, vote massivement pour l’ordre.`,
+| Vecteur | Ce qu’il diffuse |
+| L’**école** | Le français |
+| Le **service militaire** | L’appartenance nationale |
+| La **presse** et le **colportage** | L’information nationale |
+
+> Le suffrage universel masculin fait du paysan un **électeur courtisé** — un électeur qui, en **1848** comme en **1851**, vote massivement pour l’**ordre**.`,
           },
           questions: [
             ['Quelle part de la population française vit à la campagne au milieu du XIXe siècle ?', ['Environ les trois quarts', 'Environ un quart', 'La moitié', 'Un dixième'], 0, 'La population rurale atteint son maximum historique vers 1851.'],
@@ -356,21 +472,40 @@ L’école, le service militaire, la presse et le colportage diffusent le franç
           axe: 'La France dans l’Europe des nationalités : politique et société (1848-1871)',
           lecon: {
             titre: 'La misère ouvrière devient une affaire d’État',
-            cours: `Avec l’industrialisation naît une classe ouvrière nombreuse et pauvre. Sa condition cesse d’être une affaire de charité : elle devient une **question politique**, qui traverse tout le siècle.
+            cours: `Avec l’industrialisation naît une **classe ouvrière** nombreuse et pauvre. Sa condition cesse d’être une affaire de **charité** : elle devient une **question politique**.
 
 ## Une condition ouvrière dure
-Journées de 12 heures, salaires bas, logements insalubres, travail des enfants et des femmes, absence de protection en cas d’accident ou de maladie. Les enquêtes du docteur **Villermé** (1840) décrivent une misère qui choque l’opinion et débouchent sur la loi de 1841 limitant le travail des enfants — peu appliquée, faute d’inspecteurs.
+| Ce qui la caractérise | Le détail |
+| La **durée** du travail | **12 heures** par jour |
+| Les **salaires** | Bas, à peine au-dessus de la subsistance |
+| Le **logement** | Insalubre, surpeuplé |
+| Le travail des **enfants** et des femmes | Massif |
+| La **protection** | **Aucune** en cas d’accident ou de maladie |
+
+> Les enquêtes du docteur **Villermé** (1840) décrivent une misère qui **choque l’opinion**. Elles débouchent sur la loi de **1841** limitant le travail des enfants — **peu appliquée**, faute d’inspecteurs.
 
 ## Des réponses concurrentes
-Les **catholiques sociaux** misent sur le patronage et la charité. Les **socialistes utopiques** (Fourier, Cabet) imaginent des communautés modèles. **Proudhon** défend le mutualisme, **Marx** l’organisation de classe et la révolution. L’Association internationale des travailleurs (**AIT**, 1864) donne un cadre international à ces débats.
+| Courant | Sa solution |
+| Les **catholiques sociaux** | Le patronage et la **charité** |
+| Les **socialistes utopiques** — Fourier, Cabet | Des **communautés modèles** |
+| **Proudhon** | Le **mutualisme** |
+| **Marx** | L’**organisation de classe** et la révolution |
 
-> Tant que la pauvreté relève de la charité, elle n’est pas politique ; dès qu’elle relève de la loi, elle le devient.
+L’**AIT** (Association internationale des travailleurs, 1864) donne un cadre international à ces débats.
+
+> Tant que la pauvreté relève de la **charité**, elle n’est pas politique ; dès qu’elle relève de la **loi**, elle le devient.
 
 ## Le droit qui avance à petits pas
-La loi Le Chapelier (1791) interdisait les coalitions ; la loi Ollivier (**1864**) dépénalise la **grève** ; les chambres syndicales sont tolérées en 1868. Les syndicats ne seront pleinement légalisés qu’en **1884**.
+| Date | La mesure |
+| **1791** | La **loi Le Chapelier** interdit les coalitions |
+| **1864** | La **loi Ollivier** dépénalise la **grève** |
+| **1868** | Les chambres syndicales sont **tolérées** |
+| **1884** | Les syndicats sont **pleinement légalisés** |
 
 ## La Commune de Paris (1871)
-Née du siège, de la défaite et du refus d’un gouvernement conservateur, la Commune associe revendications sociales et municipales. Écrasée pendant la **Semaine sanglante** (21-28 mai 1871), elle laisse un souvenir qui pèse sur la République naissante.`,
+Née du **siège**, de la **défaite** et du refus d’un gouvernement conservateur, elle associe revendications **sociales** et **municipales**.
+
+> Écrasée pendant la **Semaine sanglante** (21-28 mai 1871), elle laisse un souvenir qui **pèse sur la République naissante** : la peur du désordre social freinera longtemps les réformes.`,
           },
           questions: [
             ['Qui enquête sur la condition ouvrière en 1840 ?', ['Le docteur Villermé', 'Victor Hugo', 'Émile Zola', 'Jules Ferry'], 0, 'Son tableau de l’état physique et moral des ouvriers marque l’opinion.'],
@@ -388,21 +523,39 @@ Née du siège, de la défaite et du refus d’un gouvernement conservateur, la 
           axe: 'La France dans l’Europe des nationalités : politique et société (1848-1871)',
           lecon: {
             titre: 'Aider les nations, et se retrouver seule',
-            cours: `Entre 1852 et 1871, deux nations naissent en Europe : l’Italie et l’Allemagne. La France de Napoléon III joue un rôle dans la première et paie très cher la seconde.
+            cours: `Entre 1852 et 1871, **deux nations naissent** en Europe : l’Italie et l’Allemagne. La France de Napoléon III joue un rôle dans la première — et paie très cher la seconde.
 
 ## L’unité italienne (1859-1870)
-Le royaume de Piémont-Sardaigne, mené par **Cavour**, obtient l’appui français aux entrevues de Plombières (1858). Les victoires de **Magenta** et **Solferino** (1859) chassent l’Autriche de Lombardie ; la France reçoit **Nice et la Savoie** (1860) après plébiscites. Garibaldi et l’expédition des Mille achèvent l’unification ; Rome devient capitale en 1870, quand la garnison française se retire.
+| Date | L’étape |
+| **1858** | Entrevues de **Plombières** : **Cavour** obtient l’appui français |
+| **1859** | Victoires de **Magenta** et **Solferino** : l’Autriche perd la Lombardie |
+| **1860** | La France reçoit **Nice et la Savoie**, après plébiscites |
+| 1860-1861 | **Garibaldi** et l’expédition des **Mille** achèvent l’unification |
+| **1870** | **Rome** devient capitale, quand la garnison française se retire |
 
 ## L’unité allemande (1864-1871)
-**Bismarck**, chancelier de Prusse, unifie « par le fer et par le sang » : guerre des Duchés (1864), victoire sur l’Autriche à **Sadowa** (1866), puis guerre contre la France. La dépêche d’Ems provoque la déclaration de guerre française en juillet 1870.
+**Bismarck**, chancelier de Prusse, unifie « par le **fer** et par le **sang** ».
 
-> Napoléon III soutenait le principe des nationalités : il a contribué à créer, à ses frontières, une puissance plus forte que la sienne.
+| Date | La guerre | Contre qui |
+| **1864** | Guerre des **Duchés** | Le Danemark |
+| **1866** | **Sadowa** | L’Autriche |
+| **1870** | La dépêche d’**Ems** provoque la déclaration de guerre française | La France |
+
+> Napoléon III soutenait le **principe des nationalités** : il a contribué à créer, **à ses frontières**, une puissance plus forte que la sienne.
 
 ## 1870-1871 : la défaite et ses conséquences
-Sedan (2 septembre 1870), le siège de Paris, l’armistice de janvier 1871. L’**Empire allemand** est proclamé dans la galerie des Glaces de Versailles le 18 janvier 1871. Le traité de Francfort (mai 1871) impose la perte de l’**Alsace-Moselle** et 5 milliards de francs-or.
+| Date | L’événement |
+| **2 septembre 1870** | **Sedan** |
+| Septembre-janvier | Le **siège de Paris** |
+| **18 janvier 1871** | L’**Empire allemand** proclamé dans la **galerie des Glaces de Versailles** |
+| **Mai 1871** | Le traité de **Francfort** : perte de l’**Alsace-Moselle**, **5 milliards** de francs-or |
+
+> Le lieu de la proclamation n’est pas un hasard : l’unité allemande se fait **dans le palais du roi de France**. L’humiliation est calculée.
 
 ## Une plaie ouverte
-La « revanche » et la question des provinces perdues pèsent sur la vie politique française jusqu’en 1914 : c’est l’un des fils qui mène à la Première Guerre mondiale.`,
+La « **revanche** » et la question des provinces perdues pèsent sur la vie politique française **jusqu’en 1914**.
+
+> C’est l’un des fils qui mènent à la Première Guerre mondiale — et la raison pour laquelle 1871 est une date de **deux** programmes.`,
           },
           questions: [
             ['Qui est le principal artisan politique de l’unité italienne ?', ['Cavour', 'Bismarck', 'Metternich', 'Mazzini seul'], 0, 'Ministre du Piémont-Sardaigne, il obtient l’alliance française à Plombières.'],
@@ -423,21 +576,40 @@ La « revanche » et la question des provinces perdues pèsent sur la vie politi
           axe: 'La Troisième République avant 1914 : la mise en œuvre du projet républicain',
           lecon: {
             titre: 'Une république proclamée par des monarchistes',
-            cours: `La Troisième République naît dans la défaite, avec une Assemblée majoritairement monarchiste. Il lui faudra cinq ans pour se donner des lois constitutionnelles — et une voix d’avance.
+            cours: `La Troisième République naît **dans la défaite**, avec une Assemblée majoritairement **monarchiste**. Il lui faudra **cinq ans** pour se donner des lois constitutionnelles — et **une voix** d’avance.
 
 ## 1870-1871 : la République avant la Constitution
-Le 4 septembre 1870, la République est proclamée après Sedan. L’Assemblée élue en février 1871, à majorité monarchiste, choisit **Thiers** comme chef du pouvoir exécutif. Elle écrase la **Commune de Paris** (mai 1871) et signe la paix.
+| Date | L’événement |
+| **4 septembre 1870** | La République est proclamée après Sedan |
+| **Février 1871** | Une Assemblée à majorité **monarchiste** est élue ; **Thiers** devient chef du pouvoir exécutif |
+| **Mai 1871** | L’Assemblée écrase la **Commune de Paris** |
+| Mai 1871 | Elle signe la **paix** |
 
 ## Pourquoi la monarchie échoue
-Les monarchistes sont divisés entre **légitimistes** (comte de Chambord) et **orléanistes** (comte de Paris). Le refus du comte de Chambord d’accepter le **drapeau tricolore** (1873) fait capoter la restauration : on se rabat sur une présidence de sept ans confiée à **Mac-Mahon**, en attendant mieux.
+| Camp | Son prétendant |
+| Les **légitimistes** | Le comte de **Chambord** |
+| Les **orléanistes** | Le comte de **Paris** |
 
-> La République s’installe faute d’accord sur le roi : elle est, selon Thiers, « le régime qui nous divise le moins ».
+> Le refus du comte de Chambord d’accepter le **drapeau tricolore** (1873) fait capoter la restauration. On se rabat sur une présidence de **sept ans** confiée à **Mac-Mahon**, en attendant mieux.
+
+> La République s’installe **faute d’accord sur le roi**. Selon Thiers, c’est « le régime qui nous **divise le moins** ».
 
 ## Les lois constitutionnelles de 1875
-Trois lois créent un régime parlementaire bicaméral : Chambre des députés élue au suffrage universel masculin, Sénat, et un président élu par les deux Chambres. L’**amendement Wallon** (30 janvier 1875), adopté par 353 voix contre 352, inscrit le mot « République ».
+| Institution | Son mode de désignation |
+| La **Chambre des députés** | Suffrage **universel masculin** |
+| Le **Sénat** | Suffrage indirect |
+| Le **président** | Élu par les **deux Chambres** |
+
+> L’**amendement Wallon** (30 janvier 1875) inscrit le mot « **République** » — adopté par **353 voix contre 352**. Une seule voix.
 
 ## La crise du 16 mai 1877
-Mac-Mahon renvoie un gouvernement républicain et dissout la Chambre ; les électeurs renvoient une majorité républicaine. Le président se « soumet » puis démissionne (1879) : le président renonce durablement au droit de dissolution, et le régime devient un parlementarisme dominé par les Chambres.`,
+Mac-Mahon renvoie un gouvernement républicain et **dissout** la Chambre ; les électeurs renvoient une **majorité républicaine**.
+
+| Conséquence | Sa portée |
+| Le président « se soumet », puis démissionne en **1879** | La légitimité passe aux Chambres |
+| Le droit de **dissolution** n’est plus utilisé | Le régime devient un **parlementarisme** dominé par les Chambres |
+
+> Cette renonciation durera jusqu’en **1958**. C’est la crise de 1877 qui fixe la pratique de la Troisième République.`,
           },
           questions: [
             ['Quand la Troisième République est-elle proclamée ?', ['Le 4 septembre 1870', 'Le 18 mars 1871', 'Le 30 janvier 1875', 'Le 16 mai 1877'], 0, 'La proclamation suit immédiatement la capitulation de Sedan.'],
@@ -455,21 +627,42 @@ Mac-Mahon renvoie un gouvernement républicain et dissout la Chambre ; les élec
           axe: 'La Troisième République avant 1914 : la mise en œuvre du projet républicain',
           lecon: {
             titre: 'Des lois, des symboles, une école',
-            cours: `Une fois installée, la République doit devenir une culture partagée. En vingt ans, elle s’enracine par les libertés, par l’école et par des symboles quotidiens.
+            cours: `Une fois installée, la République doit devenir une **culture partagée**. En vingt ans, elle s’enracine par les **libertés**, par l’**école** et par des **symboles**.
 
 ## Les grandes lois de liberté
-1881 : liberté de la **presse** et de réunion. 1884 : liberté **syndicale** (loi Waldeck-Rousseau) et élection des maires par les conseils municipaux. 1901 : liberté d’**association**. Ces lois font de la République un régime de libertés concrètes, pas seulement un mot.
+| Date | La liberté |
+| **1881** | La **presse** et la **réunion** |
+| **1884** | La liberté **syndicale** (loi Waldeck-Rousseau) ; l’élection des **maires** par les conseils municipaux |
+| **1901** | L’**association** |
+
+> Ces lois font de la République un régime de **libertés concrètes**, pas seulement un mot.
 
 ## L’école de Jules Ferry
-Les lois de **1881-1882** rendent l’école primaire **gratuite, laïque et obligatoire** de 6 à 13 ans. L’instituteur — le « hussard noir » — apprend le français, l’histoire nationale et la morale civique ; l’école forme des citoyens et unifie linguistiquement le pays.
+Les lois de **1881-1882** rendent l’école primaire **gratuite, laïque et obligatoire** de **6 à 13 ans**.
 
-> Une République ne dure que si elle est enseignée : l’école primaire est son institution centrale.
+| Ce que l’instituteur transmet | Son effet |
+| Le **français** | L’unification linguistique du pays |
+| L’**histoire nationale** | Un récit commun |
+| La **morale civique** | Des citoyens |
+
+> Le « **hussard noir** » est l’agent de la République dans le village. Une République ne dure que si elle est **enseignée**.
 
 ## Les symboles du quotidien
-La **Marseillaise** devient hymne national (1879), le **14 Juillet** fête nationale (1880), Marianne et le buste républicain entrent dans les mairies, les rues sont rebaptisées. Le retour du Parlement à Paris et le Panthéon (funérailles de Victor Hugo, 1885) achèvent de fixer le récit.
+| Date | Le symbole |
+| **1879** | La **Marseillaise**, hymne national |
+| **1880** | Le **14 Juillet**, fête nationale |
+| — | **Marianne** et le buste républicain dans les mairies |
+| **1885** | Les funérailles de **Victor Hugo** au Panthéon |
+
+Le retour du Parlement à Paris achève de fixer le récit.
 
 ## Les crises traversées
-Le **boulangisme** (1886-1889), le scandale de **Panama** (1892) et surtout l’**affaire Dreyfus** (à partir de 1894) menacent le régime. La République en sort renforcée : « J’accuse » de Zola (1898), la mobilisation des intellectuels et la révision du procès montrent que la justice et la liberté d’opinion l’emportent.`,
+| Crise | Sa date |
+| Le **boulangisme** | 1886-1889 |
+| Le scandale de **Panama** | 1892 |
+| L’**affaire Dreyfus** | À partir de **1894** |
+
+> La République en sort **renforcée** : « **J’accuse** » de Zola (1898), la mobilisation des intellectuels et la révision du procès montrent que la **justice** et la **liberté d’opinion** l’emportent.`,
           },
           questions: [
             ['Quelle liberté fondamentale la loi de 1881 consacre-t-elle ?', ['La liberté de la presse', 'La liberté syndicale', 'La liberté d’association', 'La liberté de culte'], 0, 'Elle supprime l’autorisation préalable et limite fortement les délits de presse.'],
@@ -487,21 +680,41 @@ Le **boulangisme** (1886-1889), le scandale de **Panama** (1892) et surtout l’
           axe: 'La Troisième République avant 1914 : la mise en œuvre du projet républicain',
           lecon: {
             titre: 'La laïcité, les réformes, et l’ombre de la guerre',
-            cours: `Sortie renforcée de l’affaire Dreyfus, la République des radicaux mène à son terme le projet laïque et pose les premières bases sociales, tout en préparant la guerre qui vient.
+            cours: `Sortie renforcée de l’affaire Dreyfus, la République des radicaux mène à son terme le projet **laïque** et pose les premières bases **sociales** — tout en préparant la guerre qui vient.
 
 ## La séparation des Églises et de l’État
-La loi du **9 décembre 1905** garantit la liberté de conscience et le libre exercice des cultes, ne reconnaît ni ne salarie aucun culte, et met fin au Concordat de 1801. Elle est précédée par la loi de 1901 sur les associations, appliquée sévèrement aux congrégations. Les **inventaires** des biens d’église (1906) provoquent des incidents violents dans certaines régions.
+La loi du **9 décembre 1905**.
 
-> La laïcité n’est pas une religion d’État contre les autres : c’est la neutralité de l’État, qui garantit les cultes sans en financer aucun.
+| Ce qu’elle garantit | Ce qu’elle supprime |
+| La **liberté de conscience** | La reconnaissance des cultes |
+| Le **libre exercice** des cultes | Leur **financement** par l’État |
+| — | Le **Concordat** de 1801 |
+
+Elle est précédée par la loi de **1901** sur les associations, appliquée sévèrement aux **congrégations**. Les **inventaires** des biens d’église (1906) provoquent des incidents violents dans certaines régions.
+
+> La laïcité n’est pas une **religion d’État contre les autres** : c’est la **neutralité** de l’État, qui garantit les cultes sans en financer aucun.
 
 ## Les premières lois sociales
-Repos hebdomadaire obligatoire (**1906**), retraites ouvrières et paysannes (**1910**), journée de dix heures, extension des accidents du travail (1898). Le mouvement ouvrier s’organise : la **CGT** est fondée en 1895, la **SFIO** en 1905, avec Jean Jaurès.
+| Date | La loi |
+| **1898** | L’extension des **accidents du travail** |
+| **1906** | Le **repos hebdomadaire** obligatoire |
+| **1910** | Les **retraites** ouvrières et paysannes |
+
+Le mouvement ouvrier s’organise : la **CGT** en **1895**, la **SFIO** en **1905**, avec **Jean Jaurès**.
 
 ## Les tensions
-Les grèves sont nombreuses et parfois durement réprimées par Clemenceau, « premier flic de France ». Les nationalistes, l’Action française et les ligues contestent le régime, tandis que la question scolaire divise encore.
+| Tension | Sa forme |
+| Les **grèves** | Nombreuses, parfois durement réprimées par **Clemenceau**, « premier flic de France » |
+| Les **ligues** et l’**Action française** | Elles contestent le régime |
+| La question **scolaire** | Elle divise encore |
 
 ## Vers 1914
-La loi de **trois ans** (1913) allonge le service militaire face à l’Allemagne. L’assassinat de **Jaurès**, le 31 juillet 1914, précède de quelques jours l’entrée en guerre : l’**Union sacrée** rassemble alors des camps qui se combattaient la veille.`,
+| Date | Le fait |
+| **1913** | La loi de **trois ans** allonge le service militaire face à l’Allemagne |
+| **31 juillet 1914** | L’assassinat de **Jaurès** |
+| Août 1914 | L’**Union sacrée** rassemble des camps qui se combattaient la veille |
+
+> Trois jours séparent la mort du principal opposant à la guerre de l’union nationale pour la faire. Le raccourci est brutal, et il est exact.`,
           },
           questions: [
             ['Que dispose la loi du 9 décembre 1905 ?', ['La République ne reconnaît ni ne salarie aucun culte', 'Les cultes sont interdits', 'Le catholicisme redevient religion d’État', 'L’Église contrôle les écoles'], 0, 'Elle garantit la liberté de conscience et le libre exercice des cultes.'],
@@ -522,21 +735,37 @@ La loi de **trois ans** (1913) allonge le service militaire face à l’Allemagn
           axe: 'La Troisième République avant 1914 : permanences et mutations de la société française jusqu’en 1914',
           lecon: {
             titre: 'Deux France qui avancent à des rythmes différents',
-            cours: `Entre 1870 et 1914, la France s’industrialise sans cesser d’être paysanne. C’est cette coexistence que le programme appelle « permanences et mutations ».
+            cours: `Entre 1870 et 1914, la France **s’industrialise sans cesser d’être paysanne**. C’est cette coexistence que le programme appelle « permanences et mutations ».
 
 ## La deuxième révolution industrielle
-L’**électricité**, le **moteur à explosion**, la chimie et l’acier transforment la production. De grandes entreprises apparaissent (Renault 1898, Michelin, Saint-Gobain) et le **taylorisme** commence à s’introduire. Les banques de dépôt financent l’industrie, et la France exporte massivement des capitaux (emprunts russes).
+| Innovation | Ce qu’elle transforme |
+| L’**électricité** | L’usine et la ville |
+| Le **moteur à explosion** | Le transport |
+| La **chimie** et l’**acier** | Les matériaux |
+
+De grandes entreprises apparaissent — **Renault** (1898), Michelin, Saint-Gobain — et le **taylorisme** commence à s’introduire. Les banques de dépôt financent l’industrie, et la France **exporte massivement des capitaux** : les emprunts russes.
 
 ## Une France qui reste rurale
-En 1911, environ **44 %** des actifs travaillent encore dans l’agriculture, et près de la moitié des Français vivent à la campagne. L’exploitation familiale domine, protégée par les tarifs douaniers Méline (1892). La population française stagne (démographie faible), ce qui distingue la France de l’Allemagne ou du Royaume-Uni.
+| Indicateur, vers 1911 | Sa valeur |
+| Part des actifs dans l’**agriculture** | environ **44 %** |
+| Part des Français vivant à la **campagne** | Près de la **moitié** |
+| La forme dominante | L’**exploitation familiale**, protégée par les tarifs **Méline** (1892) |
+| La **démographie** | **Stagnante** — ce qui distingue la France de l’Allemagne et du Royaume-Uni |
 
-> La France de 1900 n’est pas une société industrielle qui garde des paysans : c’est une société paysanne qui s’industrialise.
+> La France de 1900 n’est pas une société **industrielle qui garde des paysans** : c’est une société **paysanne qui s’industrialise**.
 
 ## Villes et migrations
-Paris dépasse 2,8 millions d’habitants en 1911 ; les bassins industriels (Nord, Lorraine, Saint-Étienne) attirent une main-d’œuvre venue des campagnes, mais aussi des **immigrés** belges, italiens et polonais. L’urbanisation reste plus lente qu’ailleurs en Europe.
+| Fait | Le détail |
+| **Paris** | Plus de **2,8 millions** d’habitants en 1911 |
+| Les bassins industriels | Nord, Lorraine, Saint-Étienne |
+| La main-d’œuvre | Venue des campagnes, mais aussi **immigrée** : Belges, Italiens, Polonais |
+
+> L’**urbanisation reste plus lente** qu’ailleurs en Europe. C’est une spécificité française.
 
 ## De nouvelles classes sociales
-Ouvriers d’usine, employés de bureau et de grand magasin, ingénieurs et fonctionnaires : les groupes sociaux se diversifient, et avec eux les manières de vivre, de consommer et de voter.`,
+Ouvriers d’usine, employés de bureau et de grand magasin, ingénieurs, fonctionnaires.
+
+> Les groupes sociaux se **diversifient** — et avec eux les manières de vivre, de consommer et de **voter**.`,
           },
           questions: [
             ['Quelles énergies caractérisent la deuxième révolution industrielle ?', ['L’électricité et le pétrole', 'Le charbon et la vapeur seuls', 'Le gaz de ville uniquement', 'L’énergie hydraulique seule'], 0, 'Elles s’ajoutent au charbon et transforment usines et transports.'],
@@ -554,21 +783,34 @@ Ouvriers d’usine, employés de bureau et de grand magasin, ingénieurs et fonc
           axe: 'La Troisième République avant 1914 : permanences et mutations de la société française jusqu’en 1914',
           lecon: {
             titre: 'Ce qui change vite, ce qui résiste',
-            cours: `La société française se transforme sous la Troisième République — école, travail, consommation, condition féminine — mais chaque avancée rencontre des résistances tenaces.
+            cours: `La société française se transforme sous la Troisième République — école, travail, consommation, condition féminine — mais **chaque avancée rencontre des résistances**.
 
 ## Ce qui change
-L’**alphabétisation** devient générale grâce à l’école obligatoire. La presse à un sou (Le Petit Journal) touche des millions de lecteurs. Le grand magasin, le vélo, le tramway, l’éclairage électrique modifient la vie quotidienne. Le travail se réglemente : accidents du travail (1898), repos hebdomadaire (1906), retraites (1910).
+| Domaine | La transformation |
+| L’**alphabétisation** | Elle devient générale, grâce à l’école obligatoire |
+| L’**information** | La presse à un sou — *Le Petit Journal* — touche des millions de lecteurs |
+| La **vie quotidienne** | Grand magasin, vélo, tramway, éclairage électrique |
+| Le **travail** | Accidents du travail (1898), repos hebdomadaire (1906), retraites (1910) |
 
 ## La condition des femmes
-Les femmes travaillent massivement (usine textile, domesticité, ferme, bureau). Les lois **Camille Sée** (1880) créent l’enseignement secondaire féminin, et les premières femmes accèdent aux professions libérales. Mais le **Code civil** maintient la femme mariée sous l’autorité du mari, et le **droit de vote** leur reste refusé — la France ne l’accordera qu’en 1944, bien après la Finlande, le Royaume-Uni ou l’Allemagne.
+| Ce qui avance | Ce qui bloque |
+| Les femmes travaillent **massivement** : textile, domesticité, ferme, bureau | Le **Code civil** maintient la femme mariée sous l’**autorité du mari** |
+| Les lois **Camille Sée** (1880) créent l’enseignement **secondaire féminin** | Le **droit de vote** leur reste **refusé** |
+| Les premières femmes accèdent aux professions libérales | La France ne l’accordera qu’en **1944** — bien après la Finlande, le Royaume-Uni ou l’Allemagne |
 
-> Une société peut scolariser ses filles et leur refuser le bulletin de vote : les mutations n’avancent pas au même rythme partout.
+> Une société peut **scolariser ses filles et leur refuser le bulletin de vote** : les mutations n’avancent pas au même rythme partout.
 
 ## Les réticences
-Les élites craignent la « dissolution » des mœurs, l’Église combat la laïcisation, les campagnes se méfient des nouveautés urbaines, et le patronat résiste aux lois sociales. Le service militaire et l’école, eux, unifient les esprits et les usages.
+| Qui résiste | À quoi |
+| Les **élites** | À la « dissolution » des mœurs |
+| L’**Église** | À la laïcisation |
+| Les **campagnes** | Aux nouveautés urbaines |
+| Le **patronat** | Aux lois sociales |
+
+Le **service militaire** et l’**école**, eux, unifient les esprits et les usages.
 
 ## Un bilan contrasté
-En 1914, les Français sont plus instruits, mieux informés, plus mobiles qu’en 1870 — mais les inégalités sociales restent fortes, et l’égalité politique s’arrête à la moitié de la population.`,
+> En **1914**, les Français sont plus **instruits**, mieux **informés**, plus **mobiles** qu’en 1870. Mais les **inégalités sociales** restent fortes — et l’**égalité politique s’arrête à la moitié de la population**.`,
           },
           questions: [
             ['Que crée la loi Camille Sée en 1880 ?', ['L’enseignement secondaire public pour les filles', 'L’école primaire obligatoire', 'Les universités féminines', 'Le droit de vote des femmes'], 0, 'Les lycées de jeunes filles ouvrent, sans programme identique à celui des garçons au départ.'],
@@ -589,21 +831,37 @@ En 1914, les Français sont plus instruits, mieux informés, plus mobiles qu’e
           axe: 'La Troisième République avant 1914 : métropoles et colonies',
           lecon: {
             titre: 'Le deuxième empire colonial du monde',
-            cours: `Entre 1880 et 1914, la France se constitue le deuxième empire colonial du monde après le Royaume-Uni : environ 10 millions de km² et 50 millions d’habitants.
+            cours: `Entre 1880 et 1914, la France se constitue le **deuxième empire colonial du monde**, après le Royaume-Uni : environ **10 millions de km²** et **50 millions d’habitants**.
 
 ## Les étapes de la conquête
-Algérie (à partir de 1830, colonie de peuplement), Tunisie (protectorat, 1881), Indochine (1858-1887), Afrique de l’Ouest et Afrique équatoriale (1880-1900), Madagascar (1895), Maroc (protectorat, 1912). La **conférence de Berlin** (1884-1885) organise le partage de l’Afrique entre puissances européennes et impose le principe de l’occupation effective.
+| Territoire | Date | Statut |
+| **Algérie** | à partir de **1830** | Colonie de **peuplement**, départements |
+| **Tunisie** | **1881** | **Protectorat** |
+| **Indochine** | 1858-1887 | Colonie et protectorats |
+| Afrique de l’Ouest et **équatoriale** | 1880-1900 | Fédérations coloniales |
+| **Madagascar** | **1895** | Colonie |
+| **Maroc** | **1912** | **Protectorat** |
+
+La **conférence de Berlin** (1884-1885) organise le **partage de l’Afrique** entre puissances européennes et impose le principe de l’**occupation effective**.
 
 ## Les rivalités
-La course aux territoires provoque des crises : **Fachoda** (1898) oppose la France au Royaume-Uni au Soudan et se solde par un recul français ; les crises marocaines (1905, 1911) opposent la France à l’Allemagne. La colonisation est donc aussi un facteur de tension européenne.
+| Crise | Sa date | Qui s’oppose |
+| **Fachoda** | **1898** | France et Royaume-Uni au Soudan — **recul français** |
+| Crises **marocaines** | **1905**, **1911** | France et Allemagne |
 
-> Les empires coloniaux ne se croisent pas seulement en Afrique : ils rapprochent l’Europe de sa propre guerre.
+> Les empires coloniaux ne se croisent pas seulement en Afrique : ils **rapprochent l’Europe de sa propre guerre**.
 
 ## Les moyens
-Supériorité militaire (fusil à répétition, mitrailleuse, canonnière), missions d’exploration, missionnaires, traités imposés aux souverains locaux. Les résistances sont nombreuses et parfois longues : Abd el-Kader, Samory Touré, insurrections malgaches ou vietnamiennes.
+| Moyen | Son rôle |
+| La **supériorité militaire** | Fusil à répétition, mitrailleuse, canonnière |
+| Les **missions d’exploration** | La cartographie et le prétexte |
+| Les **missionnaires** | La justification morale |
+| Les **traités imposés** | La légalité de façade |
+
+Les résistances sont nombreuses et parfois longues : **Abd el-Kader**, **Samory Touré**, insurrections malgaches ou vietnamiennes.
 
 ## Ce que l’empire représente
-Un marché protégé, des matières premières, des points d’appui militaires — et un prestige national, très présent dans les Expositions coloniales, les manuels scolaires et la presse.`,
+Un **marché protégé**, des **matières premières**, des **points d’appui militaires** — et un **prestige national**, très présent dans les Expositions coloniales, les manuels scolaires et la presse.`,
           },
           questions: [
             ['Quel rang occupe l’empire colonial français vers 1914 ?', ['Le deuxième après le Royaume-Uni', 'Le premier', 'Le troisième après l’Allemagne', 'Le cinquième'], 0, 'Environ 10 millions de km² et 50 millions d’habitants.'],
@@ -621,21 +879,37 @@ Un marché protégé, des matières premières, des points d’appui militaires 
           axe: 'La Troisième République avant 1914 : métropoles et colonies',
           lecon: {
             titre: 'Pourquoi une République coloniale ?',
-            cours: `La colonisation n’est pas seulement une conquête : c’est un projet justifié, débattu et contesté au sein même de la République.
+            cours: `La colonisation n’est pas seulement une conquête : c’est un projet **justifié**, **débattu** et **contesté** au sein même de la République.
 
-## Les motivations
-**Économiques** : débouchés pour l’industrie protégée, matières premières (arachide, caoutchouc, coton, minerais), placement des capitaux. **Stratégiques** : bases navales, routes maritimes, prestige après la défaite de 1871. **Idéologiques** : la « mission civilisatrice », qui prétend apporter progrès, santé et instruction — et qui repose sur une hiérarchie des races alors très répandue.
+## Les trois familles de motivations
+| Motivation | Ce qu’elle recherche |
+| **Économique** | Débouchés pour l’industrie protégée, matières premières (arachide, caoutchouc, coton, minerais), placement des capitaux |
+| **Stratégique** | Bases navales, routes maritimes, **prestige après la défaite de 1871** |
+| **Idéologique** | La « **mission civilisatrice** » — progrès, santé, instruction |
 
-## Le débat politique
-En 1885, **Jules Ferry** défend à la Chambre le « devoir des races supérieures » de civiliser ; **Georges Clemenceau** lui répond que la conquête n’est qu’une violence coûteuse et détourne la France de la revanche. Une partie des socialistes (Jaurès) dénonce l’exploitation, mais l’expansion se poursuit.
+> La mission civilisatrice repose sur une **hiérarchie des races** alors très répandue. La nommer n’est pas un jugement rétrospectif : c’est l’argument tel qu’il était formulé.
 
-> La colonisation a été justifiée par le progrès, menée par la force et payée par les colonisés : les trois énoncés sont vrais ensemble.
+## Le débat politique de 1885
+| Qui | Ce qu’il défend |
+| **Jules Ferry** | Le « **devoir des races supérieures** » de civiliser |
+| **Georges Clemenceau** | La conquête n’est qu’une **violence coûteuse** — et elle **détourne** la France de la revanche |
+| Une partie des socialistes (**Jaurès**) | La dénonciation de l’**exploitation** |
+
+L’expansion se poursuit malgré ces oppositions.
+
+> La colonisation a été **justifiée par le progrès**, **menée par la force** et **payée par les colonisés** : les trois énoncés sont vrais **ensemble**.
 
 ## La propagande coloniale
-Expositions coloniales, cartes postales, manuels scolaires, presse illustrée, publicités : l’empire entre dans la culture quotidienne des métropolitains, présenté comme une aventure et un bienfait.
+Expositions coloniales, cartes postales, manuels scolaires, presse illustrée, publicités.
+
+> L’empire entre dans la **culture quotidienne** des métropolitains, présenté comme une **aventure** et un **bienfait**.
 
 ## Le coût réel
-Guerres de conquête, épidémies, travail forcé, impôt de capitation, réquisitions. L’empire rapporte moins qu’on ne l’a dit, mais il structure durablement les échanges de la France.`,
+| Pour les colonisés | Pour la métropole |
+| Guerres de conquête, **épidémies** | Un coût budgétaire élevé |
+| **Travail forcé**, impôt de capitation, réquisitions | Un empire qui **rapporte moins qu’on ne l’a dit** |
+
+> Mais il structure **durablement** les échanges de la France — et sa démographie, bien après les indépendances.`,
           },
           questions: [
             ['Quel homme politique défend en 1885 le « devoir des races supérieures » ?', ['Jules Ferry', 'Georges Clemenceau', 'Jean Jaurès', 'Léon Gambetta'], 0, 'Son discours devant la Chambre est le texte de référence sur la mission civilisatrice.'],
@@ -653,21 +927,42 @@ Guerres de conquête, épidémies, travail forcé, impôt de capitation, réquis
           axe: 'La Troisième République avant 1914 : métropoles et colonies',
           lecon: {
             titre: 'Une République qui n’applique pas ses principes',
-            cours: `Dans les colonies, la République applique un droit d’exception : les principes de 1789 s’arrêtent aux frontières de l’empire.
+            cours: `Dans les colonies, la République applique un **droit d’exception** : les principes de 1789 **s’arrêtent aux frontières de l’empire**.
 
 ## Deux statuts, deux droits
-Les colonisés sont **sujets** et non citoyens : ils ne votent pas, ne circulent pas librement et relèvent du **Code de l’indigénat** (1881 en Algérie, étendu ensuite), qui permet à l’administration de punir sans juge. Seule une minorité accède à la citoyenneté, au prix, souvent, de l’abandon du statut personnel.
+| | En **métropole** | Dans les **colonies** |
+| Le statut | **Citoyen** | **Sujet** |
+| Le vote | Oui | **Non** |
+| La circulation | Libre | **Contrôlée** |
+| Le droit applicable | Le droit commun | Le **Code de l’indigénat** — 1881 en Algérie, étendu ensuite |
 
-> Une même République, deux droits : c’est la contradiction que le programme demande d’expliquer.
+Le Code de l’indigénat permet à l’administration de **punir sans juge**. Seule une **minorité** accède à la citoyenneté — au prix, souvent, de l’abandon du **statut personnel**.
+
+> Une même République, **deux droits** : c’est la contradiction que le programme demande d’expliquer.
 
 ## L’administration et l’économie
-Colonies (administration directe), protectorats (souverain local maintenu), Algérie (départements). L’économie est orientée vers l’exportation : cultures commerciales, mines, grands travaux, main-d’œuvre requise ou sous-payée. Les terres sont souvent expropriées au profit des colons.
+| Statut | Ce qu’il implique |
+| **Colonie** | Administration **directe** |
+| **Protectorat** | Le souverain local est **maintenu**, sous tutelle |
+| L’**Algérie** | Des **départements** français |
+
+L’économie est orientée vers l’**exportation** : cultures commerciales, mines, grands travaux, main-d’œuvre **requise** ou sous-payée. Les terres sont souvent **expropriées** au profit des colons.
 
 ## La société coloniale
-Une minorité européenne concentre les postes et les revenus ; des intermédiaires locaux (chefs, interprètes, tirailleurs) servent l’administration. École et hôpital existent, mais restent très minoritaires : en 1914, une petite minorité d’enfants colonisés est scolarisée.
+| Groupe | Sa place |
+| La **minorité européenne** | Elle concentre les postes et les revenus |
+| Les **intermédiaires locaux** | Chefs, interprètes, tirailleurs : ils servent l’administration |
+| La **majorité colonisée** | École et hôpital existent, mais restent **très minoritaires** |
+
+> En **1914**, seule une **petite minorité** d’enfants colonisés est scolarisée. La « mission civilisatrice » se mesure aussi à ce chiffre.
 
 ## Résistances et acculturation
-Révoltes armées, refus de l’impôt, désertions, mais aussi appropriation des outils du colonisateur : premières élites formées à l’école française, premières revendications d’égalité — qui nourriront les mouvements nationalistes du XXe siècle.`,
+| Forme | Ce qu’elle produit |
+| **Révoltes armées**, refus de l’impôt, désertions | Une contestation directe |
+| L’**appropriation des outils** du colonisateur | Les premières élites formées à l’école française |
+| Les premières revendications d’**égalité** | Elles nourriront les **mouvements nationalistes** du XXe siècle |
+
+> Le colonisateur a formé, sans le vouloir, ceux qui lui opposeront ses propres principes.`,
           },
           questions: [
             ['Quel statut ont la plupart des colonisés ?', ['Sujets français, sans droits politiques', 'Citoyens français', 'Étrangers protégés', 'Ressortissants autonomes'], 0, 'Ils ne votent pas et relèvent d’un droit d’exception.'],
@@ -688,21 +983,37 @@ Révoltes armées, refus de l’impôt, désertions, mais aussi appropriation de
           axe: 'La Première Guerre mondiale : le « suicide de l’Europe » et la fin des empires européens',
           lecon: {
             titre: 'Quatre ans, trois phases, un monde renversé',
-            cours: `L’attentat de Sarajevo (28 juin 1914) enclenche en cinq semaines une guerre européenne qui devient mondiale et fait environ 10 millions de morts militaires.
+            cours: `L’attentat de **Sarajevo** (28 juin 1914) enclenche en **cinq semaines** une guerre européenne qui devient mondiale et fait environ **10 millions de morts militaires**.
 
 ## L’engrenage
-Deux systèmes d’alliances (Triple-Alliance et Triple-Entente), une course aux armements, des nationalismes exacerbés et des rivalités coloniales. L’assassinat de l’archiduc **François-Ferdinand** déclenche l’ultimatum autrichien à la Serbie, puis les mobilisations en chaîne. La guerre est mondiale par les empires coloniaux, les Dominions et l’entrée d’acteurs extra-européens.
+| Facteur | Son effet |
+| Deux systèmes d’**alliances** | Triple-Alliance et Triple-Entente : l’extension est automatique |
+| La **course aux armements** | Un climat d’attente |
+| Les **nationalismes** | Le consentement des opinions |
+| Les **rivalités coloniales** | Des contentieux accumulés |
 
-## 1914 : la guerre de mouvement
-Le plan allemand traverse la Belgique ; la contre-offensive de la **Marne** (septembre 1914) arrête l’avance. Le front se fige de la mer du Nord à la Suisse : c’est la « **course à la mer** ».
+L’assassinat de l’archiduc **François-Ferdinand** déclenche l’ultimatum autrichien à la Serbie, puis les **mobilisations en chaîne**.
 
-## 1915-1917 : la guerre de position
-Tranchées, artillerie massive, gaz, assauts très meurtriers : **Verdun** et la **Somme** (1916) coûtent des centaines de milliers de vies pour quelques kilomètres. 1917 est l’année de la crise : mutineries françaises, révolutions russes, mais aussi entrée en guerre des **États-Unis** (avril).
+> La guerre est **mondiale** par les empires coloniaux, les Dominions et l’entrée d’acteurs extra-européens — pas seulement par son nom.
 
-> Un front qui ne bouge plus n’est pas une guerre qui s’arrête : c’est une guerre qui consomme des hommes à la place des kilomètres.
+## Les trois phases
+| Période | Sa nature | Ses moments |
+| **1914** | Guerre de **mouvement** | Le plan allemand traverse la Belgique ; la **Marne** (septembre) arrête l’avance ; la « **course à la mer** » fige le front |
+| **1915-1917** | Guerre de **position** | Tranchées, artillerie massive, gaz ; **Verdun** et la **Somme** en 1916 |
+| **1918** | Retour du **mouvement** | Offensives allemandes du printemps, puis contre-offensives alliées |
 
-## 1918 : le retour du mouvement et l’armistice
-Sortie de la Russie (traité de Brest-Litovsk, mars 1918), offensives allemandes du printemps, puis contre-offensives alliées appuyées par les chars et les Américains. L’**armistice** est signé le **11 novembre 1918** à Rethondes.`,
+## 1917, l’année de la crise
+| Événement | Sa portée |
+| Les **mutineries** françaises | Le consentement s’use |
+| Les **révolutions russes** | Un allié va sortir de la guerre |
+| L’entrée en guerre des **États-Unis** (avril) | La balance bascule à terme |
+
+> Un front qui ne bouge plus n’est pas une guerre qui s’arrête : c’est une guerre qui **consomme des hommes à la place des kilomètres**.
+
+## 1918 : la fin
+Sortie de la Russie (traité de **Brest-Litovsk**, mars 1918), offensives allemandes, puis contre-offensives alliées appuyées par les **chars** et les Américains.
+
+> L’**armistice** est signé le **11 novembre 1918** à Rethondes.`,
           },
           questions: [
             ['Quel événement déclenche l’engrenage de juillet 1914 ?', ['L’assassinat de François-Ferdinand à Sarajevo', 'L’invasion de la Belgique', 'La bataille de la Marne', 'La crise d’Agadir'], 0, 'L’ultimatum autrichien à la Serbie enclenche les alliances.'],
@@ -720,21 +1031,39 @@ Sortie de la Russie (traité de Brest-Litovsk, mars 1918), offensives allemandes
           axe: 'La Première Guerre mondiale : le « suicide de l’Europe » et la fin des empires européens',
           lecon: {
             titre: 'Quand la guerre devient totale',
-            cours: `La Grande Guerre est une **guerre totale** : elle mobilise l’économie, les esprits et les populations entières, et elle atteint les civils comme jamais auparavant.
+            cours: `La Grande Guerre est une **guerre totale** : elle mobilise l’**économie**, les **esprits** et les **populations entières** — et elle atteint les civils comme jamais auparavant.
 
 ## L’arrière mobilisé
-Les usines se convertissent à l’armement, les femmes remplacent les hommes aux champs, aux guichets et dans les usines (les « munitionnettes »), les colonies fournissent des soldats et des travailleurs. Les États dirigent l’économie, rationnent, empruntent massivement et financent par la dette et l’inflation.
+| Ressource | Comment elle est mobilisée |
+| L’**industrie** | Les usines se convertissent à l’armement |
+| Les **femmes** | Aux champs, aux guichets, dans les usines — les « **munitionnettes** » |
+| Les **colonies** | Elles fournissent des **soldats** et des **travailleurs** |
+| L’**État** | Il dirige l’économie, **rationne**, emprunte massivement |
+| Le **financement** | Par la **dette** et l’**inflation** |
 
 ## Les esprits mobilisés
-La censure et la propagande — le « **bourrage de crâne** » — encadrent l’information. Les enfants, l’école, l’Église et la presse participent à l’effort. Le consentement s’use pourtant : grèves de 1917, mutineries, lassitude.
+La **censure** et la **propagande** — le « **bourrage de crâne** » — encadrent l’information. Enfants, école, Église et presse participent à l’effort.
 
-> Une guerre totale ne se gagne pas seulement au front : elle se gagne, ou se perd, dans les usines et dans les têtes.
+> Le consentement **s’use** pourtant : grèves de **1917**, mutineries, lassitude.
+
+> Une guerre totale ne se gagne pas seulement **au front** : elle se gagne, ou se perd, **dans les usines et dans les têtes**.
 
 ## Les civils victimes
-Occupation et réquisitions dans le nord de la France et en Belgique, bombardements, famines, déplacements de populations. Le **génocide des Arméniens** (1915-1916), perpétré par le pouvoir jeune-turc, fait environ 1,2 million de morts : c’est la violence extrême de cette guerre contre des civils.
+| Violence | Où |
+| **Occupation** et réquisitions | Le nord de la France, la Belgique |
+| **Bombardements**, famines | Partout |
+| **Déplacements** de populations | Fronts de l’Est et des Balkans |
+| Le **génocide des Arméniens** (1915-1916) | Perpétré par le pouvoir **jeune-turc** : environ **1,2 million** de morts |
+
+> Le génocide arménien est la **violence extrême** de cette guerre contre des civils. Il figure au programme comme tel, et non comme une note de bas de page.
 
 ## Le sortir de guerre
-Deuil de masse (1,4 million de morts français), 4 millions de blessés, « gueules cassées », veuves et orphelins. Les monuments aux morts, présents dans presque chaque commune, et les commémorations du 11 Novembre inscrivent la guerre dans le paysage.`,
+| Bilan français | Le chiffre |
+| Morts | **1,4 million** |
+| Blessés | **4 millions** |
+| Les « **gueules cassées** », veuves, orphelins | Un deuil de masse |
+
+> Les **monuments aux morts**, présents dans presque **chaque commune**, et les commémorations du **11 Novembre** inscrivent la guerre dans le paysage — pour un siècle.`,
           },
           questions: [
             ['Qu’est-ce qu’une guerre totale ?', ['Une guerre qui mobilise l’économie, les esprits et les populations entières', 'Une guerre menée sur tous les continents', 'Une guerre sans prisonniers', 'Une guerre qui dure plus de quatre ans'], 0, 'Le front et l’arrière sont également engagés.'],
@@ -752,21 +1081,40 @@ Deuil de masse (1,4 million de morts français), 4 millions de blessés, « gueu
           axe: 'La Première Guerre mondiale : le « suicide de l’Europe » et la fin des empires européens',
           lecon: {
             titre: 'Une paix fondée sur des principes, et sur des rancunes',
-            cours: `En 1919-1920, les vainqueurs tentent de fonder un ordre international nouveau : le droit des peuples, une organisation permanente, des démocraties. La construction est fragile dès le départ.
+            cours: `En 1919-1920, les vainqueurs tentent de fonder un **ordre international nouveau** : le droit des peuples, une organisation permanente, des démocraties. La construction est **fragile dès le départ**.
 
 ## Les traités
-Le **traité de Versailles** (28 juin 1919) impose à l’Allemagne la reconnaissance de sa responsabilité (article 231), la perte de l’Alsace-Moselle et de ses colonies, une forte limitation militaire et de lourdes **réparations**. D’autres traités règlent le sort de l’Autriche-Hongrie, de la Bulgarie et de l’Empire ottoman.
+Le **traité de Versailles** (28 juin 1919) impose à l’Allemagne :
+
+| Clause | Son contenu |
+| L’**article 231** | La reconnaissance de sa **responsabilité** |
+| Les pertes territoriales | L’**Alsace-Moselle** et **toutes ses colonies** |
+| Les clauses **militaires** | Une forte limitation de l’armée |
+| Les **réparations** | Un montant considérable, longtemps discuté |
+
+D’autres traités règlent le sort de l’Autriche-Hongrie, de la Bulgarie et de l’Empire ottoman.
 
 ## La fin des empires
-Quatre empires disparaissent : allemand, austro-hongrois, russe et ottoman. Des États neufs naissent en Europe centrale (Pologne, Tchécoslovaquie, Yougoslavie, États baltes), au nom du **droit des peuples à disposer d’eux-mêmes** énoncé par **Wilson** dans ses 14 points. Les frontières ne coïncident jamais parfaitement avec les nationalités : des minorités restent partout.
+**Quatre** empires disparaissent : allemand, austro-hongrois, russe, ottoman. Des États neufs naissent en Europe centrale : Pologne, Tchécoslovaquie, Yougoslavie, États baltes.
 
-> On a voulu une paix de principes, on a signé une paix de vainqueurs : c’est la contradiction que porte 1919.
+Au nom du **droit des peuples à disposer d’eux-mêmes**, énoncé par **Wilson** dans ses **14 points**.
+
+> Les frontières ne coïncident **jamais parfaitement** avec les nationalités : **des minorités restent partout**. C’est la bombe à retardement des années 1930.
+
+> On a voulu une **paix de principes**, on a signé une **paix de vainqueurs** : c’est la contradiction que porte 1919.
 
 ## La Société des Nations
-Créée en 1920, la **SDN** doit garantir la paix par la sécurité collective et l’arbitrage. Elle est affaiblie d’emblée : les États-Unis n’y entrent pas (refus du Sénat), l’Allemagne et la Russie soviétique en sont d’abord exclues, et elle n’a pas de force armée.
+Créée en **1920**, elle doit garantir la paix par la **sécurité collective** et l’**arbitrage**.
+
+| Faiblesse | Sa conséquence |
+| Les **États-Unis n’y entrent pas** (refus du Sénat) | L’inspirateur est absent |
+| L’**Allemagne** et la **Russie soviétique** en sont d’abord **exclues** | Elle n’est pas universelle |
+| Elle n’a **pas de force armée** | Aucune sanction crédible |
 
 ## Des sociétés bouleversées
-Révolution russe et création de l’URSS, poussées révolutionnaires en Allemagne et en Hongrie, montée des nationalismes déçus (Italie), difficultés du retour à la vie civile : la sortie de guerre prépare déjà les crises des années 1930.`,
+Révolution russe et création de l’**URSS**, poussées révolutionnaires en Allemagne et en Hongrie, **nationalismes déçus** (Italie), difficultés du retour à la vie civile.
+
+> La sortie de guerre **prépare déjà** les crises des années 1930.`,
           },
           questions: [
             ['Quand le traité de Versailles est-il signé ?', ['Le 28 juin 1919', 'Le 11 novembre 1918', 'Le 10 janvier 1920', 'Le 18 janvier 1919'], 0, 'Cinq ans jour pour jour après l’attentat de Sarajevo.'],
@@ -787,21 +1135,38 @@ Révolution russe et création de l’URSS, poussées révolutionnaires en Allem
           axe: 'Les villes à l’échelle mondiale : le poids croissant des métropoles',
           lecon: {
             titre: 'Plus d’un humain sur deux vit en ville',
-            cours: `Depuis 2007, la majorité de l’humanité vit en ville. L’urbanisation est le fait géographique majeur de notre époque, mais elle ne se déroule pas partout au même rythme.
+            cours: `Depuis **2007**, la **majorité de l’humanité vit en ville**. L’urbanisation est le fait géographique majeur de notre époque — mais elle ne se déroule pas partout au même rythme.
 
 ## Mesurer l’urbanisation
-Le **taux d’urbanisation** est la part de la population qui vit en ville : environ 56 % aujourd’hui, plus de 65 % prévus en 2050. La **croissance urbaine**, elle, mesure l’augmentation du nombre de citadins. Attention : les définitions de « ville » varient d’un État à l’autre, ce qui rend les comparaisons délicates.
+| Indicateur | Ce qu’il mesure | Sa valeur |
+| Le **taux d’urbanisation** | La **part** de la population qui vit en ville | environ **56 %** aujourd’hui, plus de **65 %** prévus en 2050 |
+| La **croissance urbaine** | L’**augmentation du nombre** de citadins | Concentrée dans les pays du Sud |
+
+> Les définitions de « ville » **varient d’un État à l’autre** : les comparaisons internationales sont à manier avec prudence.
 
 ## Deux moteurs
-L’**exode rural** (départ des campagnes) et l’**accroissement naturel** des villes. Dans les pays du Sud, les deux jouent ensemble : c’est là que se concentre l’essentiel de la croissance urbaine mondiale.
+| Moteur | Ce qu’il apporte |
+| L’**exode rural** | Le départ des campagnes |
+| L’**accroissement naturel** des villes | Les naissances sur place |
 
-> Les pays du Nord sont déjà très urbanisés mais croissent peu ; les pays du Sud s’urbanisent vite et fort.
+> Les pays du **Nord** sont **déjà très urbanisés** mais croissent peu ; les pays du **Sud** s’urbanisent **vite et fort**. Dans le Sud, les deux moteurs jouent **ensemble**.
 
 ## Des formes urbaines nouvelles
-**Mégapoles** (plus de 10 millions d’habitants : Tokyo, Delhi, Shanghai, Le Caire…), **conurbations** (villes soudées), **mégalopoles** (chapelets urbains comme la mégalopole du Nord-Est américain, la mégalopole européenne ou japonaise). L’étalement urbain, la périurbanisation et les **bidonvilles** en sont les autres visages.
+| Forme | Sa définition | Exemples |
+| **Mégapole** | Plus de **10 millions** d’habitants | Tokyo, Delhi, Shanghai, Le Caire |
+| **Conurbation** | Des villes **soudées** entre elles | La Ruhr, la Randstad |
+| **Mégalopole** | Un **chapelet** urbain continu | Nord-Est américain, Europe, Japon |
+
+L’**étalement urbain**, la **périurbanisation** et les **bidonvilles** en sont les autres visages.
 
 ## Des défis
-Logement, transports, eau, déchets, pollution, inégalités et vulnérabilité aux risques : la ville concentre à la fois les richesses et les problèmes, et les politiques de **ville durable** cherchent à y répondre.`,
+| Défi | Ce qu’il pose |
+| **Logement** et **transports** | L’accès et le coût |
+| **Eau**, **déchets**, pollution | La soutenabilité |
+| **Inégalités** | La ségrégation socio-spatiale |
+| Vulnérabilité aux **risques** | Inondations, séismes, chaleur |
+
+> La ville concentre à la fois les **richesses** et les **problèmes**. C’est à cette double concentration que répondent les politiques de **ville durable**.`,
           },
           questions: [
             ['Depuis quelle année la majorité de l’humanité vit-elle en ville ?', ['2007', '1950', '1990', '2020'], 0, 'Le seuil des 50 % de citadins est franchi au milieu des années 2000.'],
@@ -819,21 +1184,34 @@ Logement, transports, eau, déchets, pollution, inégalités et vulnérabilité 
           axe: 'Les villes à l’échelle mondiale : le poids croissant des métropoles',
           lecon: {
             titre: 'Quand quelques villes concentrent tout',
-            cours: `La **métropolisation** est la concentration croissante des hommes, des activités et surtout des fonctions de commandement dans un petit nombre de grandes villes.
+            cours: `La **métropolisation** est la concentration croissante des hommes, des activités et surtout des **fonctions de commandement** dans un petit nombre de grandes villes.
 
 ## Métropole n’est pas mégapole
-Une **métropole** se définit par ses **fonctions** : sièges sociaux, bourses, universités et laboratoires, médias, institutions internationales, aéroports de rang mondial. Une mégapole se définit par sa **taille**. Lagos est une mégapole ; Zurich, bien plus petite, est une métropole.
+| | **Métropole** | **Mégapole** |
+| Ce qui la définit | Ses **fonctions** | Sa **taille** |
+| Les critères | Sièges sociaux, bourses, universités et laboratoires, médias, institutions internationales, aéroports de rang mondial | Plus de 10 millions d’habitants |
+| L’exemple | **Zurich**, bien plus petite, est une métropole | **Lagos** est une mégapole |
+
+> Confondre les deux est l’erreur la plus courante. Une ville immense peut n’exercer **aucune** fonction de commandement.
 
 ## Les villes mondiales
-Au sommet, quelques **villes globales** — New York, Londres, Tokyo, Paris, Hong Kong, Singapour, Shanghai — commandent l’économie mondiale. Elles concentrent les **flux** (capitaux, informations, personnes) et forment un **archipel métropolitain mondial** : elles sont souvent plus reliées entre elles qu’à leur propre arrière-pays.
+Au sommet, quelques **villes globales** : New York, Londres, Tokyo, Paris, Hong Kong, Singapour, Shanghai.
 
-> La métropolisation crée un monde de réseaux : ce qui compte n’est plus seulement la place sur la carte, mais la position dans les flux.
+| Ce qu’elles concentrent | Ce qu’elles forment |
+| Les **flux** : capitaux, informations, personnes | Un **archipel métropolitain mondial** |
+| Le commandement de l’économie mondiale | Elles sont souvent **plus reliées entre elles** qu’à leur propre arrière-pays |
+
+> La métropolisation crée un **monde de réseaux** : ce qui compte n’est plus seulement la **place sur la carte**, mais la **position dans les flux**.
 
 ## Les acteurs
-Firmes transnationales, États, collectivités locales, investisseurs, habitants. La compétition entre métropoles passe par le **marketing territorial**, les grands équipements (aéroports, gares TGV, quartiers d’affaires) et les événements internationaux (Jeux olympiques, expositions).
+| Acteur | Son levier |
+| Les **firmes transnationales** | Le choix de localisation |
+| Les **États** et collectivités | Infrastructures, fiscalité, **marketing territorial** |
+| Les grands équipements | Aéroports, gares TGV, quartiers d’affaires |
+| Les **événements internationaux** | Jeux olympiques, expositions |
 
 ## Un processus inégal
-La métropolisation renforce les métropoles au détriment des villes moyennes et des espaces périphériques : elle produit de la richesse et, en même temps, des fractures territoriales.`,
+> La métropolisation renforce les métropoles **au détriment** des villes moyennes et des espaces périphériques : elle produit de la **richesse** et, en même temps, des **fractures territoriales**.`,
           },
           questions: [
             ['Qu’est-ce que la métropolisation ?', ['La concentration des hommes, des activités et du commandement dans les grandes villes', 'La croissance des villes moyennes', 'L’étalement des banlieues', 'Le retour à la campagne'], 0, 'Elle se mesure surtout aux fonctions, pas seulement à la population.'],
@@ -854,21 +1232,33 @@ La métropolisation renforce les métropoles au détriment des villes moyennes e
           axe: 'Des métropoles inégales et en mutation',
           lecon: {
             titre: 'Une hiérarchie mondiale des villes',
-            cours: `Toutes les métropoles ne se valent pas : elles forment une **hiérarchie** que l’on peut lire à travers leur rayonnement, leurs fonctions et leur richesse.
+            cours: `Toutes les métropoles ne se valent pas : elles forment une **hiérarchie** que l’on lit à travers leur rayonnement, leurs fonctions et leur richesse.
 
 ## Les critères du classement
-Poids économique (PIB, sièges sociaux, place financière), rayonnement culturel (musées, universités, médias), connectivité (aéroports, ports, câbles numériques), influence politique (institutions internationales). Les classements internationaux (GaWC, indices de villes mondiales) hiérarchisent ainsi les villes de rang mondial jusqu’aux métropoles régionales.
+| Critère | Ce qu’on mesure |
+| Le poids **économique** | PIB, sièges sociaux, place financière |
+| Le rayonnement **culturel** | Musées, universités, médias |
+| La **connectivité** | Aéroports, ports, câbles numériques |
+| L’influence **politique** | Institutions internationales |
+
+Les classements internationaux — **GaWC**, indices de villes mondiales — hiérarchisent ainsi les villes, du rang mondial aux métropoles régionales.
 
 ## Les inégalités entre métropoles
-Les métropoles du Nord conservent l’essentiel des fonctions financières ; celles des pays émergents montent vite (Shanghai, Shenzhen, Dubaï, São Paulo, Bombay) ; beaucoup de métropoles du Sud restent des villes très peuplées mais peu connectées, dont les fonctions de commandement restent faibles.
+| Catégorie | Sa situation |
+| Les métropoles du **Nord** | Elles conservent l’essentiel des **fonctions financières** |
+| Les métropoles **émergentes** | Elles montent vite : Shanghai, Shenzhen, Dubaï, São Paulo, Bombay |
+| Beaucoup de métropoles du **Sud** | **Très peuplées** mais **peu connectées**, aux fonctions de commandement faibles |
 
-> Une métropole peut concentrer des millions d’habitants et rester à l’écart des flux qui comptent.
+> Une métropole peut concentrer des **millions d’habitants** et rester **à l’écart des flux** qui comptent.
 
 ## Les inégalités DANS la métropole
-Quartiers d’affaires ultramodernes et **bidonvilles** cohabitent parfois à quelques kilomètres (Bombay et Dharavi, Le Cap, Rio). La **gentrification** transforme d’anciens quartiers populaires du centre, tandis que la **ségrégation socio-spatiale** et les quartiers fermés (gated communities) fragmentent l’espace urbain.
+| Phénomène | Ce qu’il produit |
+| La coexistence de quartiers d’affaires et de **bidonvilles** | Bombay et **Dharavi**, Le Cap, Rio |
+| La **gentrification** | D’anciens quartiers populaires du centre transformés |
+| La **ségrégation socio-spatiale** | Les quartiers fermés — *gated communities* |
 
 ## Une hiérarchie mouvante
-Le classement n’est pas figé : la montée des métropoles asiatiques, la concurrence des places financières et les stratégies d’attractivité redistribuent les positions en quelques décennies.`,
+> Le classement n’est **pas figé** : la montée des métropoles asiatiques, la concurrence des places financières et les stratégies d’attractivité **redistribuent les positions en quelques décennies**.`,
           },
           questions: [
             ['Quels critères servent à hiérarchiser les métropoles ?', ['Poids économique, rayonnement culturel, connectivité, influence politique', 'La superficie et le climat', 'Le nombre de monuments', 'La densité seule'], 0, 'Les classements croisent plusieurs indicateurs de fonctions.'],
@@ -886,21 +1276,35 @@ Le classement n’est pas figé : la montée des métropoles asiatiques, la conc
           axe: 'Des métropoles inégales et en mutation',
           lecon: {
             titre: 'Recentrer, étaler, recomposer',
-            cours: `Les métropoles ne cessent de se transformer : leurs centres se renouvellent, leurs périphéries s’étendent, et de nouveaux espaces apparaissent aux marges.
+            cours: `Les métropoles ne cessent de se transformer : leurs **centres** se renouvellent, leurs **périphéries** s’étendent, et de **nouveaux espaces** apparaissent aux marges.
 
 ## Le centre : renouvellement et spécialisation
-Les **CBD** (quartiers d’affaires) concentrent bureaux, sièges et services supérieurs — La Défense, Canary Wharf, Pudong. Les anciens espaces industriels ou portuaires sont réhabilités (**friches**, docks) et deviennent quartiers culturels ou résidentiels haut de gamme. Le foncier y est très cher.
+| Espace | Ce qui s’y passe |
+| Les **CBD**, quartiers d’affaires | Bureaux, sièges, services supérieurs — **La Défense**, Canary Wharf, **Pudong** |
+| Les anciens espaces **industriels ou portuaires** | Réhabilités en quartiers culturels ou résidentiels haut de gamme — **friches**, docks |
+
+Le foncier y est **très cher** : c’est ce qui commande tous les autres mouvements.
 
 ## Les périphéries : étalement et périurbanisation
-Lotissements, zones commerciales, plateformes logistiques et parcs technologiques s’installent en périphérie, le long des axes. La **périurbanisation** allonge les distances domicile-travail et multiplie les déplacements pendulaires.
+| Ce qui s’y installe | Où |
+| Lotissements | Toujours plus loin |
+| Zones commerciales, plateformes **logistiques**, parcs technologiques | Le long des **axes** |
 
-> La métropole ne se lit plus dans ses limites administratives : elle se lit dans son aire d’influence.
+> La **périurbanisation** allonge les distances domicile-travail et multiplie les **déplacements pendulaires**.
+
+> La métropole ne se lit plus dans ses **limites administratives** : elle se lit dans son **aire d’influence**.
 
 ## Les recompositions
-Des **edge cities** et des pôles secondaires naissent aux marges ; les métropoles se polycentrisent. Les projets de **ville durable** (transports en commun, densification, végétalisation, écoquartiers) tentent de limiter l’étalement et l’empreinte carbone.
+| Phénomène | Ce qu’il produit |
+| Les *edge cities* et pôles secondaires | Les métropoles se **polycentrisent** |
+| Les projets de **ville durable** | Transports en commun, **densification**, végétalisation, écoquartiers |
+
+Ces derniers cherchent à limiter l’**étalement** et l’**empreinte carbone**.
 
 ## Une gouvernance difficile
-Une métropole rassemble des dizaines, parfois des centaines de communes. La coordination des transports, du logement et de l’urbanisme suppose des institutions dédiées (en France, les métropoles créées depuis 2014).`,
+Une métropole rassemble des **dizaines**, parfois des centaines de communes.
+
+> La coordination des transports, du logement et de l’urbanisme suppose des **institutions dédiées** — en France, les métropoles créées depuis **2014**.`,
           },
           questions: [
             ['Qu’est-ce qu’un CBD ?', ['Le quartier central des affaires', 'Un quartier résidentiel fermé', 'Une zone industrielle', 'Un centre commercial périphérique'], 0, 'La Défense, Canary Wharf ou Pudong en sont des exemples.'],
@@ -921,21 +1325,40 @@ Une métropole rassemble des dizaines, parfois des centaines de communes. La coo
           axe: 'La France : la métropolisation et ses effets',
           lecon: {
             titre: 'Paris, les grandes villes, et les autres',
-            cours: `La France n’échappe pas à la métropolisation : ses grandes villes concentrent la croissance, l’emploi qualifié et les fonctions de commandement, au détriment d’une partie du reste du territoire.
+            cours: `La France n’échappe pas à la métropolisation : ses grandes villes concentrent la **croissance**, l’**emploi qualifié** et les **fonctions de commandement** — au détriment d’une partie du reste du territoire.
 
 ## Le poids de Paris
-L’aire urbaine de Paris rassemble environ 13 millions d’habitants et près d’un tiers du PIB national. Elle est la seule métropole française de rang mondial : sièges sociaux du CAC 40, place financière, hubs de Roissy et d’Orly, universités et laboratoires. On parle de **macrocéphalie** pour désigner ce poids démesuré.
+| Indicateur | Sa valeur |
+| Population de l’aire urbaine | environ **13 millions** d’habitants |
+| Part du **PIB national** | près d’un **tiers** |
+| Son rang | La **seule** métropole française de rang **mondial** |
+
+Sièges du CAC 40, place financière, hubs de **Roissy** et d’**Orly**, universités et laboratoires.
+
+> On parle de **macrocéphalie** pour désigner ce poids démesuré d’une capitale sur son pays.
 
 ## Les métropoles régionales
-Lyon, Marseille-Aix, Toulouse, Bordeaux, Lille, Nantes, Rennes, Montpellier, Strasbourg : ces métropoles gagnent des habitants et des emplois, portées par l’enseignement supérieur, la recherche, les services et parfois l’industrie de pointe (aéronautique à Toulouse).
+Lyon, Marseille-Aix, Toulouse, Bordeaux, Lille, Nantes, Rennes, Montpellier, Strasbourg.
 
-> La croissance française se joue de plus en plus dans une quinzaine d’aires urbaines : c’est là que se concentrent emplois qualifiés et création de richesse.
+| Ce qui les porte | Exemple |
+| L’enseignement supérieur et la **recherche** | Partout |
+| Les **services** | Le tertiaire supérieur |
+| L’**industrie de pointe** | L’aéronautique à **Toulouse** |
+
+> La croissance française se joue de plus en plus dans une **quinzaine d’aires urbaines**.
 
 ## Les espaces à l’écart
-Villes moyennes en difficulté (commerces de centre-ville fermés), espaces ruraux isolés, anciennes régions industrielles : ils cumulent vieillissement, faible croissance de l’emploi et sentiment d’abandon. Le **programme Action cœur de ville** tente d’y répondre.
+| Territoire | Ce qu’il cumule |
+| Les **villes moyennes** en difficulté | Commerces de centre-ville fermés |
+| Les espaces **ruraux isolés** | Vieillissement, faible croissance de l’emploi |
+| Les anciennes régions **industrielles** | Sentiment d’abandon |
+
+Le programme **Action cœur de ville** tente d’y répondre.
 
 ## Les outils de l’aménagement
-LGV, aéroports, métropoles instituées, pôles de compétitivité, contrats de plan État-région : les politiques publiques accompagnent la métropolisation tout en cherchant, parfois, à en corriger les effets.`,
+LGV, aéroports, métropoles instituées, pôles de compétitivité, contrats de plan État-région.
+
+> Les politiques publiques **accompagnent** la métropolisation — tout en cherchant, parfois, à en **corriger les effets**. Les deux objectifs ne sont pas toujours compatibles.`,
           },
           questions: [
             ['Combien d’habitants compte environ l’aire urbaine de Paris ?', ['Environ 13 millions', 'Environ 5 millions', 'Environ 20 millions', 'Environ 8 millions'], 0, 'Elle produit près du tiers du PIB français.'],
@@ -953,21 +1376,40 @@ LGV, aéroports, métropoles instituées, pôles de compétitivité, contrats de
           axe: 'La France : la métropolisation et ses effets',
           lecon: {
             titre: 'Ce que la métropole change dans la vie quotidienne',
-            cours: `Au-delà des classements, la métropolisation transforme concrètement l’organisation des villes françaises et la vie de leurs habitants.
+            cours: `Au-delà des classements, la métropolisation transforme **concrètement** l’organisation des villes françaises et la vie de leurs habitants.
 
 ## Une métropole, un statut
-Depuis les lois MAPTAM (2014) et NOTRe (2015), 21 **métropoles** françaises exercent des compétences élargies : transports, développement économique, logement, déchets, aménagement. La **Métropole du Grand Paris** et celles de Lyon et Marseille ont des régimes particuliers.
+| Loi | Sa date | Ce qu’elle crée |
+| **MAPTAM** | 2014 | Le statut de métropole |
+| **NOTRe** | 2015 | Le renforcement des compétences |
+
+**21 métropoles** exercent des compétences élargies : transports, développement économique, logement, déchets, aménagement.
+
+> La **Métropole du Grand Paris** et celles de **Lyon** et **Marseille** ont des régimes **particuliers**.
 
 ## Des espaces qui se recomposent
-Centres anciens réhabilités et parfois gentrifiés, quartiers d’affaires (La Défense, La Part-Dieu, Euralille), quartiers prioritaires de la politique de la ville, périurbain pavillonnaire, zones commerciales d’entrée de ville. Le **tramway**, revenu dans une vingtaine d’agglomérations, restructure les déplacements.
+| Espace | Ce qui s’y passe |
+| Les **centres anciens** | Réhabilités, parfois **gentrifiés** |
+| Les quartiers d’affaires | La Défense, **La Part-Dieu**, Euralille |
+| Les **quartiers prioritaires** | La politique de la ville |
+| Le **périurbain** pavillonnaire | L’étalement |
+| Les zones commerciales d’entrée de ville | La banalisation des paysages |
 
-> Une métropole ne se juge pas seulement à sa croissance : elle se juge à l’écart entre ses quartiers.
+Le **tramway**, revenu dans une vingtaine d’agglomérations, **restructure les déplacements**.
+
+> Une métropole ne se juge pas seulement à sa **croissance** : elle se juge à l’**écart entre ses quartiers**.
 
 ## Les inégalités internes
-Les écarts de revenus, de réussite scolaire et d’accès à l’emploi sont parfois considérables entre communes voisines d’une même métropole (Seine-Saint-Denis et Hauts-de-Seine, par exemple). La politique de la ville, la rénovation urbaine (ANRU) et les transports cherchent à réduire ces fractures.
+Les écarts de **revenus**, de **réussite scolaire** et d’**accès à l’emploi** sont parfois considérables entre communes **voisines** d’une même métropole — Seine-Saint-Denis et Hauts-de-Seine, par exemple.
+
+La politique de la ville, la rénovation urbaine (**ANRU**) et les transports cherchent à réduire ces fractures.
 
 ## Les défis
-Logement cher, congestion, pollution de l’air, artificialisation des sols, adaptation au changement climatique : ce sont aujourd’hui les grands chantiers des métropoles françaises.`,
+| Défi | Ce qu’il pose |
+| Le **logement cher** | L’éviction des ménages modestes |
+| La **congestion** et la pollution de l’air | La santé et le temps perdu |
+| L’**artificialisation** des sols | La biodiversité et l’eau |
+| L’adaptation au **changement climatique** | Îlots de chaleur, inondations |`,
           },
           questions: [
             ['Quelle loi de 2014 crée le statut de métropole en France ?', ['La loi MAPTAM', 'La loi NOTRe seule', 'La loi SRU', 'La loi Chevènement'], 0, 'La loi NOTRe (2015) complète ensuite la répartition des compétences.'],
@@ -988,21 +1430,37 @@ Logement cher, congestion, pollution de l’air, artificialisation des sols, ada
           axe: 'Les espaces de production dans le monde : une diversité croissante',
           lecon: {
             titre: 'La carte de la production se redessine',
-            cours: `Un **espace productif** est un espace aménagé pour produire des biens ou des services. Sous l’effet de la mondialisation, sa carte se redessine en permanence.
+            cours: `Un **espace productif** est un espace aménagé pour produire des biens ou des services. Sous l’effet de la mondialisation, sa carte **se redessine en permanence**.
 
 ## La division internationale du travail
-Les **firmes transnationales** fragmentent la production : conception et marketing au Nord, fabrication là où les coûts sont bas, assemblage ailleurs encore. C’est la **DIT** (division internationale du travail), qui explique les chaînes de valeur mondiales — un smartphone conçu en Californie, fabriqué en Asie, vendu partout.
+Les **firmes transnationales** **fragmentent** la production.
+
+| Étape | Où elle se fait |
+| **Conception** et marketing | Au **Nord** |
+| **Fabrication** | Là où les coûts sont **bas** |
+| **Assemblage** | Ailleurs encore |
+
+> C’est la **DIT** — division internationale du travail — qui explique les **chaînes de valeur mondiales** : un smartphone conçu en Californie, fabriqué en Asie, vendu partout.
 
 ## Délocalisations et relocalisations
-Les **délocalisations** ont vidé une partie des régions industrielles du Nord (Nord-Est américain, Ruhr, Nord de la France). Depuis quelques années, des **relocalisations** apparaissent : hausse des salaires asiatiques, coût du transport, robotisation, recherche de souplesse et souveraineté (santé, électronique) après la crise sanitaire.
+| Mouvement | Ce qui le pousse |
+| Les **délocalisations** | Elles ont vidé une partie des régions industrielles du Nord : Nord-Est américain, **Ruhr**, Nord de la France |
+| Les **relocalisations** | Hausse des salaires asiatiques, coût du **transport**, **robotisation** |
+| — | La recherche de **souplesse** et de **souveraineté** — santé, électronique — après la crise sanitaire |
 
-> Un espace productif n’est jamais acquis : il se gagne et se perd au rythme des stratégies d’entreprises et des politiques publiques.
+> Un espace productif n’est **jamais acquis** : il se gagne et se perd au rythme des stratégies d’entreprises et des politiques publiques.
 
 ## Les nouveaux espaces gagnants
-Technopôles et clusters (Silicon Valley, Bangalore, Shenzhen), zones franches et **ZES** chinoises, plateformes logistiques près des ports et des aéroports, espaces agricoles exportateurs (Brésil, Ukraine).
+| Type | Exemples |
+| **Technopôles** et clusters | Silicon Valley, Bangalore, **Shenzhen** |
+| Zones franches et **ZES** chinoises | Des régimes fiscaux dérogatoires |
+| **Plateformes logistiques** | Près des ports et des aéroports |
+| Espaces agricoles **exportateurs** | Brésil, Ukraine |
 
 ## Les acteurs
-Firmes, États (subventions, infrastructures, fiscalité), collectivités, syndicats, consommateurs, ONG. Les choix de localisation résultent de leur rapport de force.`,
+Firmes, États (subventions, infrastructures, fiscalité), collectivités, syndicats, consommateurs, ONG.
+
+> Les choix de localisation **résultent de leur rapport de force** — jamais d’une pure logique de coût.`,
           },
           questions: [
             ['Qu’est-ce qu’un espace productif ?', ['Un espace aménagé pour produire des biens ou des services', 'Un espace densément peuplé', 'Une zone commerciale', 'Un espace protégé'], 0, 'Usine, technopôle, exploitation agricole, plateforme logistique.'],
@@ -1020,21 +1478,34 @@ Firmes, États (subventions, infrastructures, fiscalité), collectivités, syndi
           axe: 'Les espaces de production dans le monde : une diversité croissante',
           lecon: {
             titre: 'Des usines, mais aussi des serveurs et des champs',
-            cours: `Produire ne signifie plus seulement fabriquer : les espaces productifs se diversifient, et les activités de service, de recherche et de logistique occupent une place croissante.
+            cours: `Produire ne signifie plus seulement **fabriquer** : les espaces productifs se diversifient, et les activités de **service**, de **recherche** et de **logistique** occupent une place croissante.
 
 ## Trois grandes familles
-Les espaces **industriels** (zones industrialo-portuaires, parcs d’activités, ateliers), les espaces **agricoles** (agriculture productiviste exportatrice, agriculture vivrière, agriculture de firme), et les espaces de **services** (quartiers d’affaires, technopôles, centres d’appels, data centers).
+| Famille | Ce qu’elle recouvre |
+| Les espaces **industriels** | Zones industrialo-portuaires, parcs d’activités, ateliers |
+| Les espaces **agricoles** | Agriculture productiviste exportatrice, agriculture vivrière, **agriculture de firme** |
+| Les espaces de **services** | Quartiers d’affaires, technopôles, centres d’appels, **data centers** |
 
 ## Les espaces de l’innovation
-La recherche et développement se concentre dans quelques territoires : universités, laboratoires, start-up et capital-risque forment des écosystèmes difficiles à reproduire. Ils attirent une main-d’œuvre très qualifiée et font monter les prix du logement.
+La recherche et développement se concentre dans quelques territoires : **universités**, laboratoires, start-up et **capital-risque** forment des écosystèmes **difficiles à reproduire**.
 
-> Le nouveau facteur de localisation n’est plus seulement le charbon ou le port : c’est la matière grise, la connexion et l’accès aux marchés.
+| Ce qu’ils attirent | Ce qu’ils provoquent |
+| Une main-d’œuvre **très qualifiée** | Une **montée des prix du logement** |
+
+> Le nouveau facteur de localisation n’est plus le **charbon** ou le **port** : c’est la **matière grise**, la **connexion** et l’**accès aux marchés**.
 
 ## Les espaces de la logistique
-Le commerce mondial repose sur des **hubs** : ports à conteneurs (Shanghai, Singapour, Rotterdam), aéroports de fret, entrepôts géants le long des autoroutes. La **conteneurisation** a fait s’effondrer le coût du transport et rendu possible l’éclatement des chaînes de production.
+| Infrastructure | Exemples |
+| Les **ports à conteneurs** | Shanghai, Singapour, Rotterdam |
+| Les **aéroports de fret** | Memphis, Hong Kong |
+| Les **entrepôts géants** | Le long des autoroutes |
+
+> La **conteneurisation** a fait **s’effondrer** le coût du transport — et c’est elle qui a rendu possible l’**éclatement** des chaînes de production. Sans conteneur, pas de mondialisation productive.
 
 ## Des espaces en marge
-Certains territoires restent à l’écart : faible infrastructure, instabilité politique, enclavement. Ailleurs, l’économie **informelle** occupe une part majeure de l’emploi productif, notamment dans les villes du Sud.`,
+| Situation | Sa cause |
+| Territoires **à l’écart** | Faible infrastructure, instabilité politique, **enclavement** |
+| L’économie **informelle** | Elle occupe une part **majeure** de l’emploi productif, notamment dans les villes du Sud |`,
           },
           questions: [
             ['Quelles sont les trois grandes familles d’espaces productifs ?', ['Industriels, agricoles et de services', 'Urbains, ruraux et littoraux', 'Publics, privés et associatifs', 'Primaires, secondaires et informels'], 0, 'La production de services occupe une place croissante.'],
@@ -1055,21 +1526,37 @@ Certains territoires restent à l’écart : faible infrastructure, instabilité
           axe: 'Métropolisation, littoralisation des espaces productifs et accroissement des flux',
           lecon: {
             titre: 'La production se concentre sur les côtes et dans les grandes villes',
-            cours: `Deux mouvements réorganisent la géographie de la production : elle se concentre dans les métropoles, et elle se déplace vers les littoraux.
+            cours: `Deux mouvements réorganisent la géographie de la production : elle se **concentre dans les métropoles**, et elle se **déplace vers les littoraux**.
 
 ## La littoralisation
-Environ 60 % de la population mondiale vit à moins de 100 km d’une côte, et l’essentiel du commerce mondial passe par la mer (plus de 80 % des marchandises en volume). Les **ZIP** (zones industrialo-portuaires) associent port en eau profonde, raffineries, sidérurgie, pétrochimie et logistique : Rotterdam, Shanghai, Singapour, Fos-sur-Mer.
+| Fait | Sa valeur |
+| Population vivant à moins de **100 km** d’une côte | environ **60 %** |
+| Part du commerce mondial passant par la **mer** | plus de **80 %** en volume |
 
-## Pourquoi la côte ?
-Elle offre un accès direct aux navires géants, un terrain disponible, et évite les ruptures de charge coûteuses. Les **hinterlands** (arrière-pays desservis) s’étendent grâce aux voies ferrées, aux fleuves et aux autoroutes.
+Les **ZIP** — zones industrialo-portuaires — associent port en eau profonde, raffineries, sidérurgie, pétrochimie et logistique : **Rotterdam**, Shanghai, Singapour, **Fos-sur-Mer**.
 
-> Ce qui compte n’est plus d’être près des matières premières, mais d’être près des flux.
+## Pourquoi la côte
+| Avantage | Ce qu’il évite ou permet |
+| L’accès direct aux **navires géants** | Les plus grands porte-conteneurs |
+| Un **terrain disponible** | L’extension des installations |
+| Aucune **rupture de charge** | Le principal poste de coût du transport |
+
+Les **hinterlands** — arrière-pays desservis — s’étendent grâce aux voies ferrées, aux fleuves et aux autoroutes.
+
+> Ce qui compte n’est plus d’être près des **matières premières**, mais d’être près des **flux**.
 
 ## La métropolisation de la production
-Sièges sociaux, R&D, finance, marketing, services aux entreprises se concentrent dans les métropoles, tandis que la fabrication s’éloigne. Une même entreprise peut ainsi occuper une métropole du Nord et une zone franche du Sud.
+| Ce qui se concentre dans la métropole | Ce qui s’en éloigne |
+| Sièges sociaux, **R&D**, finance, marketing, services aux entreprises | La **fabrication** |
+
+> Une même entreprise peut ainsi occuper une **métropole du Nord** et une **zone franche du Sud**. C’est la même firme, sur deux continents, dans deux fonctions.
 
 ## Les effets et les limites
-Concentration des richesses, congestion, pollution, vulnérabilité aux risques littoraux (submersion, tempêtes, montée du niveau de la mer). La littoralisation est efficace économiquement et fragile écologiquement.`,
+| Effet positif | Fragilité |
+| Concentration des **richesses** | **Congestion** et pollution |
+| Efficacité logistique | Vulnérabilité aux **risques littoraux** : submersion, tempêtes, montée du niveau de la mer |
+
+> La littoralisation est **efficace économiquement** et **fragile écologiquement**. Les deux constats vont ensemble.`,
           },
           questions: [
             ['Qu’est-ce que la littoralisation ?', ['La concentration des hommes et des activités sur les littoraux', 'La protection des côtes', 'La construction de digues', 'L’érosion des plages'], 0, 'Environ 60 % de la population mondiale vit à moins de 100 km d’une côte.'],
@@ -1087,21 +1574,38 @@ Concentration des richesses, congestion, pollution, vulnérabilité aux risques 
           axe: 'Métropolisation, littoralisation des espaces productifs et accroissement des flux',
           lecon: {
             titre: 'Des chaînes mondiales tenues par des flux',
-            cours: `La fragmentation de la production n’est possible que parce que les flux — de marchandises, de capitaux, d’informations — sont devenus massifs, rapides et bon marché.
+            cours: `La fragmentation de la production n’est possible que parce que les **flux** — marchandises, capitaux, informations — sont devenus **massifs**, **rapides** et **bon marché**.
 
 ## Des flux de plus en plus intenses
-Le commerce mondial a été multiplié par plusieurs dizaines depuis 1950. Les **routes maritimes** relient les trois grands pôles (Asie orientale, Amérique du Nord, Europe) et passent par des **points de passage stratégiques** : Malacca, Suez, Panama, Ormuz, Gibraltar.
+Le commerce mondial a été multiplié par plusieurs **dizaines** depuis 1950. Les **routes maritimes** relient les trois grands pôles : Asie orientale, Amérique du Nord, Europe.
+
+| Point de passage stratégique | Ce qu’il commande |
+| **Malacca** | Le lien Asie orientale — océan Indien |
+| **Suez** | Europe — Asie |
+| **Panama** | Atlantique — Pacifique |
+| **Ormuz** | Le pétrole du Golfe |
+| **Gibraltar** | L’entrée de la Méditerranée |
 
 ## Les flux immatériels
-Capitaux (places financières, investissements directs), données (câbles sous-marins, data centers), savoir-faire. Ils circulent en continu et rendent possible le pilotage à distance des chaînes de production.
+| Flux | Son support |
+| Les **capitaux** | Places financières, investissements directs |
+| Les **données** | **Câbles sous-marins**, data centers |
+| Les **savoir-faire** | Brevets, licences, mobilité des ingénieurs |
 
-> Une chaîne mondiale de production est d’abord une chaîne d’informations : la marchandise suit le flux de données, pas l’inverse.
+> Une chaîne mondiale de production est d’abord une **chaîne d’informations** : la marchandise **suit** le flux de données, pas l’inverse.
 
 ## Les vulnérabilités
-Blocage du canal de Suez (2021), pandémie, tensions en mer Rouge, piraterie, guerre : chaque incident révèle la fragilité du **flux tendu**. Les entreprises rallongent leurs stocks, diversifient leurs fournisseurs, régionalisent parfois leur production.
+| Incident | Ce qu’il a révélé |
+| Le blocage du **canal de Suez**, 2021 | Un seul navire peut interrompre le commerce mondial |
+| La **pandémie** | La dépendance à quelques fournisseurs |
+| Les tensions en **mer Rouge**, la piraterie, la guerre | La sécurité des routes n’est jamais acquise |
+
+> Chaque incident révèle la fragilité du **flux tendu**. En réponse : rallonger les **stocks**, **diversifier** les fournisseurs, parfois **régionaliser** la production.
 
 ## Les effets environnementaux
-Le transport maritime et aérien pèse lourd dans les émissions de gaz à effet de serre ; l’exigence de vitesse multiplie les trajets. Les débats sur le coût écologique des chaînes longues nourrissent les projets de circuits plus courts.`,
+Le transport maritime et aérien pèse lourd dans les émissions de gaz à effet de serre, et l’exigence de **vitesse** multiplie les trajets.
+
+> Les débats sur le **coût écologique des chaînes longues** nourrissent les projets de **circuits plus courts**.`,
           },
           questions: [
             ['Quels sont les trois grands pôles du commerce mondial ?', ['Asie orientale, Amérique du Nord, Europe', 'Afrique, Asie du Sud, Océanie', 'Amérique latine, Afrique, Europe', 'Russie, Inde, Brésil'], 0, 'La Triade concentre l’essentiel des échanges, malgré la montée des émergents.'],
@@ -1122,21 +1626,39 @@ Le transport maritime et aérien pèse lourd dans les émissions de gaz à effet
           axe: 'La France : les systèmes productifs entre valorisation locale et intégration européenne et mondiale',
           lecon: {
             titre: 'Ce que la France produit, et où',
-            cours: `La France est la septième économie mondiale, très tertiarisée, avec quelques filières industrielles de rang mondial et une agriculture puissante.
+            cours: `La France est la **septième économie mondiale**, très **tertiarisée**, avec quelques filières industrielles de rang mondial et une agriculture puissante.
 
 ## Une économie de services
-Environ **75 %** des emplois relèvent des services : commerce, santé, éducation, tourisme (la France est la première destination touristique mondiale), finance, services aux entreprises. L’industrie ne pèse plus qu’environ 13 % du PIB, contre le double dans les années 1970 : c’est la **désindustrialisation**.
+| Indicateur | Sa valeur |
+| Part des emplois dans les **services** | environ **75 %** |
+| Part de l’**industrie** dans le PIB | environ **13 %** — le **double** dans les années 1970 |
+
+C’est la **désindustrialisation**. Les services couvrent commerce, santé, éducation, **tourisme** — la France est la **première destination touristique mondiale** — finance et services aux entreprises.
 
 ## Les points forts industriels
-Aéronautique et spatial (Toulouse, Bordeaux), luxe et cosmétique, agroalimentaire, pharmacie, nucléaire, automobile (en difficulté), armement. Ces filières s’appuient sur des **pôles de compétitivité** et une recherche publique dense.
+| Filière | Ses pôles |
+| **Aéronautique** et spatial | **Toulouse**, Bordeaux |
+| **Luxe** et cosmétique | Paris, Grasse |
+| **Agroalimentaire** | Bretagne, Grand Ouest |
+| **Pharmacie**, **nucléaire**, armement | Filières stratégiques |
+| **Automobile** | En difficulté |
 
-> Une industrie qui pèse moins dans l’emploi peut peser encore beaucoup dans les exportations : c’est le cas de l’aéronautique française.
+Elles s’appuient sur des **pôles de compétitivité** et une recherche publique dense.
+
+> Une industrie qui pèse **moins dans l’emploi** peut peser **encore beaucoup dans les exportations** : c’est le cas de l’aéronautique française.
 
 ## Des territoires très inégaux
-L’Île-de-France concentre les sièges et la recherche ; l’Ouest et le Sud-Ouest gagnent des emplois ; le Nord et l’Est industriels ont perdu des centaines de milliers d’emplois depuis 1975. Les **friches industrielles** et la reconversion (Lille-Euralille, Nord-Pas-de-Calais) témoignent de cette mutation.
+| Territoire | Sa trajectoire |
+| L’**Île-de-France** | Elle concentre les sièges et la recherche |
+| L’**Ouest** et le **Sud-Ouest** | Ils gagnent des emplois |
+| Le **Nord** et l’**Est** industriels | Des **centaines de milliers** d’emplois perdus depuis 1975 |
+
+Les **friches industrielles** et la reconversion — Lille-Euralille, Nord-Pas-de-Calais — témoignent de cette mutation.
 
 ## L’agriculture
-Première agriculture européenne en valeur, très exportatrice (céréales, vin, produits laitiers), mais confrontée à la baisse du nombre d’exploitations, au revenu agricole et aux exigences environnementales.`,
+**Première agriculture européenne en valeur**, très exportatrice : céréales, vin, produits laitiers.
+
+> Elle est confrontée à la **baisse du nombre d’exploitations**, à la question du **revenu agricole** et aux **exigences environnementales**.`,
           },
           questions: [
             ['Quelle part des emplois français relève des services ?', ['Environ 75 %', 'Environ 50 %', 'Environ 30 %', 'Environ 90 %'], 0, 'La France est une économie très tertiarisée.'],
@@ -1154,21 +1676,35 @@ Première agriculture européenne en valeur, très exportatrice (céréales, vin
           axe: 'La France : les systèmes productifs entre valorisation locale et intégration européenne et mondiale',
           lecon: {
             titre: 'Entre terroir et marché mondial',
-            cours: `Les espaces productifs français jouent sur deux tableaux : l’insertion dans les réseaux européens et mondiaux, et la valorisation de ressources locales impossibles à délocaliser.
+            cours: `Les espaces productifs français jouent sur **deux tableaux** : l’insertion dans les réseaux européens et mondiaux, et la valorisation de **ressources locales impossibles à délocaliser**.
 
 ## L’insertion européenne
-L’Union européenne est le premier partenaire commercial de la France (environ 60 % des échanges). Les **régions frontalières** (Alsace, Nord, Rhône-Alpes) et les corridors de transport (autoroutes, LGV, Rhin) intègrent le territoire dans l’espace européen. La **PAC** soutient l’agriculture, et les fonds européens financent des projets régionaux.
+| Élément | Sa portée |
+| L’Union européenne | **Premier** partenaire commercial : environ **60 %** des échanges |
+| Les régions **frontalières** | Alsace, Nord, Rhône-Alpes |
+| Les **corridors** de transport | Autoroutes, LGV, le **Rhin** |
+| La **PAC** et les fonds européens | Soutien à l’agriculture, financement de projets régionaux |
 
 ## L’insertion mondiale
-Firmes transnationales françaises (LVMH, TotalEnergies, Airbus, L’Oréal, Danone), investissements croisés, ports et aéroports de rang international. Mais la France a une balance commerciale déficitaire : elle importe plus de biens qu’elle n’en exporte.
+| Atout | Exemples |
+| Des **firmes transnationales** françaises | LVMH, TotalEnergies, **Airbus**, L’Oréal, Danone |
+| Des **investissements croisés** | Dans les deux sens |
+| Des **ports et aéroports** de rang international | Roissy, Le Havre, Marseille |
 
-> Deux stratégies coexistent : produire pour le monde, et produire ce que le monde ne peut pas copier.
+> Mais la France a une **balance commerciale déficitaire** : elle **importe plus de biens qu’elle n’en exporte**. C’est le chiffre qui nuance tout le reste.
+
+> Deux stratégies coexistent : **produire pour le monde**, et **produire ce que le monde ne peut pas copier**.
 
 ## La valorisation locale
-**AOP, AOC, IGP, Label rouge** : les signes de qualité protègent un savoir-faire lié à un lieu (champagne, comté, roquefort). Le tourisme, l’artisanat d’art, les circuits courts et l’agriculture biologique valorisent des ressources locales et créent des emplois non délocalisables.
+| Signe de qualité | Ce qu’il protège |
+| **AOP**, **AOC**, **IGP**, **Label rouge** | Un savoir-faire **lié à un lieu** — champagne, comté, roquefort |
+
+Le tourisme, l’artisanat d’art, les **circuits courts** et l’agriculture biologique valorisent des ressources locales et créent des emplois **non délocalisables**.
 
 ## Les tensions
-Concurrence intra-européenne, normes, coût du travail, conflits d’usage des sols, transition écologique : les systèmes productifs français doivent arbitrer entre compétitivité et ancrage territorial.`,
+Concurrence intra-européenne, normes, coût du travail, **conflits d’usage des sols**, transition écologique.
+
+> Les systèmes productifs français doivent arbitrer entre **compétitivité** et **ancrage territorial** — et les deux ne pointent pas toujours dans la même direction.`,
           },
           questions: [
             ['Quel est le premier partenaire commercial de la France ?', ['L’Union européenne', 'La Chine', 'Les États-Unis', 'Le Royaume-Uni'], 0, 'Environ 60 % des échanges français se font avec les pays de l’UE.'],
@@ -1189,21 +1725,37 @@ Concurrence intra-européenne, normes, coût du travail, conflits d’usage des 
           axe: 'Les espaces ruraux : multifonctionnalité ou fragmentation ?',
           lecon: {
             titre: 'La campagne n’est plus seulement agricole',
-            cours: `Un **espace rural** se définit par une faible densité et un paysage largement ouvert — mais il n’est plus défini par l’agriculture seule.
+            cours: `Un **espace rural** se définit par une **faible densité** et un paysage largement ouvert — mais il n’est **plus défini par l’agriculture seule**.
 
 ## Une définition qui a changé
-Autrefois, rural voulait dire agricole. Aujourd’hui, les agriculteurs représentent une petite minorité des actifs ruraux : on y trouve des employés, des ouvriers, des retraités, des télétravailleurs. La frontière ville-campagne s’efface au profit d’un **continuum urbain-rural**.
+| Autrefois | Aujourd’hui |
+| Rural = **agricole** | Les agriculteurs sont une **petite minorité** des actifs ruraux |
+| Une frontière nette ville-campagne | Un **continuum urbain-rural** |
+
+On y trouve des employés, des ouvriers, des retraités, des **télétravailleurs**.
 
 ## Trois dynamiques opposées
-Les campagnes **périurbaines** gagnent des habitants (maison individuelle, prix du foncier) ; les campagnes **touristiques et résidentielles** (littoral, montagne, Sud) attirent actifs et retraités ; les campagnes **isolées** (« diagonale des faibles densités », de la Meuse aux Landes) perdent des habitants et des services.
+| Type de campagne | Sa trajectoire | Ce qui l’explique |
+| **Périurbaine** | Elle **gagne** des habitants | Maison individuelle, prix du foncier |
+| **Touristique et résidentielle** | Elle attire actifs et retraités | Littoral, montagne, Sud |
+| **Isolée** | Elle **perd** habitants et services | La « **diagonale des faibles densités** », de la Meuse aux Landes |
 
-> Il n’existe pas UNE campagne : il existe des espaces ruraux dont les trajectoires divergent.
+> Il n’existe pas **UNE** campagne : il existe des espaces ruraux dont les **trajectoires divergent**.
 
 ## Un renouveau démographique
-Depuis les années 1970, la France rurale ne se vide plus globalement : le solde migratoire est redevenu positif dans beaucoup de communes. Le télétravail, accéléré depuis 2020, renforce ce mouvement — sans effacer les fractures.
+Depuis les années 1970, la France rurale ne se vide **plus globalement** : le solde migratoire est redevenu **positif** dans beaucoup de communes.
+
+> Le **télétravail**, accéléré depuis 2020, renforce ce mouvement — **sans effacer** les fractures.
 
 ## Les enjeux
-Accès aux services (santé, école, commerce), mobilité et dépendance à la voiture, artificialisation des sols, conflits d’usage, maintien de l’activité agricole. La **multifonctionnalité** est une chance ; la **fragmentation** en est le risque.`,
+| Enjeu | Ce qu’il pose |
+| L’accès aux **services** | Santé, école, commerce |
+| La **mobilité** | La dépendance à la voiture |
+| L’**artificialisation** des sols | La consommation de terres agricoles |
+| Les **conflits d’usage** | Le même sol, plusieurs prétendants |
+| Le maintien de l’**activité agricole** | La transmission des exploitations |
+
+> La **multifonctionnalité** est une chance ; la **fragmentation** en est le risque.`,
           },
           questions: [
             ['Comment définit-on aujourd’hui un espace rural ?', ['Par sa faible densité et son paysage ouvert, plus seulement par l’agriculture', 'Par la présence exclusive d’exploitations agricoles', 'Par l’absence totale de services', 'Par son éloignement des routes'], 0, 'Les agriculteurs ne forment qu’une minorité des actifs ruraux.'],
@@ -1221,21 +1773,36 @@ Accès aux services (santé, école, commerce), mobilité et dépendance à la v
           axe: 'Les espaces ruraux : multifonctionnalité ou fragmentation ?',
           lecon: {
             titre: 'Moins d’agriculteurs, autant de terres cultivées',
-            cours: `L’agriculture occupe encore l’essentiel des surfaces rurales, mais elle emploie de moins en moins de personnes et prend des formes très différentes selon les régions du monde.
+            cours: `L’agriculture occupe encore l’**essentiel des surfaces** rurales, mais elle emploie **de moins en moins de personnes** — et prend des formes très différentes selon les régions du monde.
 
 ## Un paradoxe
-En France, la surface agricole utile couvre environ **la moitié du territoire**, alors que les agriculteurs représentent moins de 2 % des actifs. Concentration des exploitations, mécanisation et hausse des rendements expliquent ce paradoxe.
+| En France | Sa valeur |
+| Part du territoire en **surface agricole utile** | environ la **moitié** |
+| Part des **agriculteurs** dans les actifs | moins de **2 %** |
+
+> Concentration des exploitations, **mécanisation** et hausse des **rendements** expliquent ce paradoxe : moins de bras pour autant de terres.
 
 ## Des agricultures très inégales
-L’**agriculture productiviste** (mécanisée, intensive, exportatrice) domine dans les pays du Nord et dans les grands pays émergents ; l’**agriculture vivrière** nourrit encore des centaines de millions de personnes au Sud ; l’**agriculture de firme**, financée par des investisseurs, s’étend en Amérique du Sud et en Europe de l’Est.
+| Type | Où elle domine | Ce qui la caractérise |
+| **Productiviste** | Pays du Nord, grands émergents | Mécanisée, intensive, **exportatrice** |
+| **Vivrière** | Une grande partie du Sud | Elle nourrit encore des **centaines de millions** de personnes |
+| **De firme** | Amérique du Sud, Europe de l’Est | Financée par des **investisseurs** |
 
-> Les rendements ont augmenté plus vite que le nombre d’agriculteurs n’a diminué : c’est ce qui a permis de nourrir une population multipliée par trois depuis 1950.
+> Les rendements ont augmenté **plus vite** que le nombre d’agriculteurs n’a diminué : c’est ce qui a permis de nourrir une population **multipliée par trois** depuis 1950.
 
 ## Des modèles contestés
-Pollution des sols et de l’eau, pesticides, érosion de la biodiversité, bien-être animal, émissions de méthane. En réponse : agriculture **biologique**, agroécologie, circuits courts, réduction des intrants.
+| Critique | Ce qu’elle vise |
+| Pollution des **sols** et de l’**eau** | Nitrates, **pesticides** |
+| Érosion de la **biodiversité** | Haies, insectes, oiseaux |
+| Le **bien-être animal** | L’élevage intensif |
+| Les émissions de **méthane** | Le climat |
+
+En réponse : agriculture **biologique**, **agroécologie**, circuits courts, réduction des intrants.
 
 ## L’accaparement des terres
-Des États et des firmes achètent ou louent d’immenses surfaces à l’étranger (**land grabbing**), surtout en Afrique et en Amérique latine, pour sécuriser leur approvisionnement — au risque d’évincer les paysanneries locales.`,
+Des États et des firmes achètent ou louent d’immenses surfaces à l’étranger — le *land grabbing* —, surtout en **Afrique** et en **Amérique latine**, pour sécuriser leur approvisionnement.
+
+> Au risque d’**évincer les paysanneries locales** : c’est la critique centrale portée à ces opérations.`,
           },
           questions: [
             ['Quelle part du territoire français la surface agricole utile couvre-t-elle environ ?', ['La moitié', 'Un quart', 'Les trois quarts', 'Un dixième'], 0, 'Alors que les agriculteurs représentent moins de 2 % des actifs.'],
@@ -1253,24 +1820,37 @@ Des États et des firmes achètent ou louent d’immenses surfaces à l’étran
           axe: 'Les espaces ruraux : multifonctionnalité ou fragmentation ?',
           lecon: {
             titre: 'Habiter, produire, se détendre, protéger',
-            cours: `Les espaces ruraux remplissent aujourd’hui quatre grandes fonctions, qui se superposent sur les mêmes territoires.
+            cours: `Les espaces ruraux remplissent aujourd’hui **quatre grandes fonctions**, qui se **superposent sur les mêmes territoires**.
+
+## Les quatre fonctions
+| Fonction | Ce qu’elle recouvre |
+| **Productive** | Agriculture, sylviculture, extraction, agroalimentaire, ateliers et petites entreprises |
+| **Résidentielle** | Ménages travaillant en ville, retraités, résidences secondaires |
+| **Récréative** | Tourisme vert, randonnée, sports de nature, gîtes, festivals |
+| **Écologique** | Puits de carbone, biodiversité, ressources en eau, paysages |
 
 ## La fonction productive
-Agriculture, sylviculture, extraction, mais aussi industries agroalimentaires, ateliers et petites entreprises. Les énergies renouvelables (éolien, solaire, méthanisation) créent de nouveaux revenus — et de nouveaux conflits.
+Les **énergies renouvelables** — éolien, solaire, méthanisation — créent de **nouveaux revenus**, et de **nouveaux conflits**.
 
 ## La fonction résidentielle
-Le rural accueille des ménages qui travaillent en ville, des retraités et des résidents secondaires. Le logement y est moins cher, mais la dépendance à la voiture est forte et les services publics sont plus éloignés.
+| Avantage | Contrepartie |
+| Un logement **moins cher** | Une **forte dépendance à la voiture** |
+| Un cadre de vie recherché | Des **services publics plus éloignés** |
 
 ## La fonction récréative
-Tourisme vert, randonnée, sports de nature, gîtes, festivals : la campagne devient un espace de loisirs pour les citadins. La montagne et le littoral concentrent l’essentiel des flux touristiques.
+La campagne devient un **espace de loisirs pour les citadins**. La **montagne** et le **littoral** concentrent l’essentiel des flux touristiques.
 
-> Ces fonctions ne s’additionnent pas toujours pacifiquement : elles se disputent le même sol.
+> Ces fonctions ne s’additionnent pas toujours **pacifiquement** : elles se **disputent le même sol**.
 
 ## La fonction écologique
-Puits de carbone, biodiversité, ressources en eau, paysages. Les **parcs naturels régionaux**, les parcs nationaux et les zones Natura 2000 encadrent la protection, tandis que la trame verte et bleue cherche à relier les milieux.
+Les **parcs naturels régionaux**, les parcs nationaux et les zones **Natura 2000** encadrent la protection, tandis que la **trame verte et bleue** cherche à **relier** les milieux.
 
-## Multifonctionnalité ou fragmentation ?
-Là où les fonctions se complètent, le territoire est dynamique. Là où elles s’excluent — agriculture contre lotissements, éolien contre paysage, tourisme contre habitants permanents — la campagne se fragmente.`,
+## Multifonctionnalité ou fragmentation
+| Cas | Le résultat |
+| Les fonctions **se complètent** | Le territoire est **dynamique** |
+| Les fonctions **s’excluent** | La campagne se **fragmente** |
+
+Agriculture contre lotissements, éolien contre paysage, tourisme contre habitants permanents.`,
           },
           questions: [
             ['Quelles sont les quatre grandes fonctions des espaces ruraux ?', ['Productive, résidentielle, récréative et écologique', 'Agricole, industrielle, minière et commerciale', 'Politique, sociale, culturelle et économique', 'Résidentielle, scolaire, sanitaire et sportive'], 0, 'Elles se superposent sur les mêmes espaces.'],
@@ -1288,21 +1868,43 @@ Là où les fonctions se complètent, le territoire est dynamique. Là où elles
           axe: 'Les espaces ruraux : multifonctionnalité ou fragmentation ?',
           lecon: {
             titre: 'Un même sol, plusieurs prétendants',
-            cours: `Parce qu’ils remplissent plusieurs fonctions, les espaces ruraux sont **convoités** : agriculteurs, promoteurs, industriels, écologistes et habitants se disputent le même sol.
+            cours: `Parce qu’ils remplissent **plusieurs fonctions**, les espaces ruraux sont **convoités** : agriculteurs, promoteurs, industriels, écologistes et habitants se disputent **le même sol**.
 
 ## Les conflits d’usage
-Extension des lotissements sur des terres agricoles, implantation d’éoliennes ou de fermes solaires, carrières, entrepôts logistiques, grands projets d’infrastructure. Chaque projet oppose des acteurs aux intérêts différents, souvent devant les tribunaux.
+| Projet | Ce qu’il déplace |
+| L’extension des **lotissements** | Des terres agricoles |
+| Les **éoliennes** et fermes solaires | Le paysage et les usages |
+| Les **carrières** | Le sol et l’eau |
+| Les **entrepôts logistiques** | Des surfaces considérables |
+| Les grands projets d’**infrastructure** | Des continuités écologiques |
+
+Chaque projet oppose des acteurs aux intérêts différents — souvent **devant les tribunaux**.
 
 ## Des exemples emblématiques
-Notre-Dame-des-Landes (projet d’aéroport abandonné en 2018), les « méga-bassines » de retenue d’eau, les zones commerciales d’entrée de ville, la lutte contre l’artificialisation.
+| Cas | Son issue ou son enjeu |
+| **Notre-Dame-des-Landes** | Projet d’aéroport **abandonné en 2018** |
+| Les « **méga-bassines** » | La retenue d’eau et son partage |
+| Les zones commerciales d’entrée de ville | La banalisation et l’artificialisation |
 
-> Quand plusieurs projets légitimes visent la même parcelle, l’aménagement devient un arbitrage politique, pas un calcul technique.
+> Quand plusieurs projets **légitimes** visent la même parcelle, l’aménagement devient un **arbitrage politique**, pas un calcul technique.
 
 ## L’enjeu de l’artificialisation
-La France a artificialisé plusieurs dizaines de milliers d’hectares par an. La loi Climat et résilience (2021) fixe l’objectif **ZAN** (zéro artificialisation nette) à l’horizon 2050, avec une réduction de moitié d’ici 2031 : un objectif qui, lui aussi, crée des tensions entre communes.
+La France a artificialisé plusieurs **dizaines de milliers d’hectares par an**.
+
+| Objectif de la loi Climat et résilience (2021) | Son échéance |
+| Réduction de **moitié** du rythme | **2031** |
+| **ZAN** — zéro artificialisation nette | **2050** |
+
+> Un objectif qui, lui aussi, crée des **tensions entre communes** : celles qui ont déjà construit et celles qui voudraient encore le faire.
 
 ## Les outils de régulation
-PLU et SCoT (documents d’urbanisme), zones agricoles protégées, SAFER (contrôle du foncier agricole), enquêtes publiques, concertation. Ils organisent l’arbitrage, sans supprimer le conflit.`,
+| Outil | Son rôle |
+| **PLU** et **SCoT** | Les documents d’urbanisme |
+| Les **zones agricoles protégées** | Sanctuariser des terres |
+| La **SAFER** | Le contrôle du foncier agricole |
+| **Enquêtes publiques**, concertation | La participation |
+
+> Ils **organisent l’arbitrage**, sans **supprimer le conflit**.`,
           },
           questions: [
             ['Qu’est-ce qu’un conflit d’usage ?', ['Une opposition entre acteurs qui veulent utiliser différemment le même espace', 'Un litige entre voisins', 'Un désaccord sur un prix agricole', 'Une grève des agriculteurs'], 0, 'Il naît de la multifonctionnalité des espaces ruraux.'],
@@ -1323,24 +1925,30 @@ PLU et SCoT (documents d’urbanisme), zones agricoles protégées, SAFER (contr
           axe: 'La France : des espaces ruraux multifonctionnels, entre initiatives locales et politiques européennes',
           lecon: {
             titre: 'Trois France rurales',
-            cours: `Les campagnes françaises ne suivent pas une trajectoire unique : selon leur position et leurs ressources, elles gagnent ou perdent des habitants et des fonctions.
+            cours: `Les campagnes françaises ne suivent **pas une trajectoire unique** : selon leur position et leurs ressources, elles gagnent ou perdent des habitants et des fonctions.
 
-## Les campagnes des villes
-À proximité des agglomérations, la population augmente fortement : lotissements, zones d’activité, mais aussi pression sur les terres agricoles et allongement des trajets. Ce sont les espaces les plus touchés par l’**artificialisation**.
+## Trois France rurales
+| Type | Ce qui s’y passe | Son risque |
+| Les campagnes **des villes** | Lotissements, zones d’activité, forte croissance | **Artificialisation**, pression sur les terres, trajets allongés |
+| Les campagnes **attractives** | Retraités, actifs, résidences secondaires | La **flambée des prix** du logement pour les permanents |
+| Les campagnes **fragiles** | Vieillissement, recul des services | **Déserts médicaux**, fermetures de commerces et d’écoles |
 
-## Les campagnes attractives
-Littoral atlantique et méditerranéen, vallées alpines, Sud-Ouest : elles attirent retraités, actifs et résidences secondaires. L’économie y est **résidentielle et touristique**, avec un risque de flambée des prix du logement pour les habitants permanents.
+Les campagnes attractives : littoral atlantique et méditerranéen, vallées alpines, Sud-Ouest. L’économie y est **résidentielle et touristique**.
 
-## Les campagnes fragiles
-La diagonale des faibles densités, une partie des massifs et des zones industrielles rurales cumulent vieillissement, recul des services, difficultés d’accès aux soins (**déserts médicaux**) et fermetures de commerces et d’écoles.
+Les campagnes fragiles : la **diagonale des faibles densités**, une partie des massifs, les zones industrielles rurales.
 
-> La question n’est plus « la campagne se vide-t-elle ? », mais « quelles campagnes gagnent, lesquelles décrochent ? ».
+> La question n’est plus « **la campagne se vide-t-elle ?** », mais « **quelles campagnes gagnent, lesquelles décrochent ?** ».
 
 ## Les DROM
-Les espaces ruraux ultramarins ont leurs propres dynamiques : forte croissance démographique, agriculture d’exportation (banane, canne), contraintes foncières et risques naturels.
+| Spécificité | Ce qu’elle implique |
+| Une forte **croissance démographique** | Une pression sur le foncier |
+| Une agriculture d’**exportation** | Banane, canne |
+| Des **contraintes foncières** et des **risques naturels** | Cyclones, volcanisme, submersion |
 
 ## Les mobilités
-La voiture reste indispensable ; les mobilités quotidiennes structurent la vie rurale, et la question du carburant y a une portée sociale directe, comme l’a montré le mouvement des gilets jaunes en 2018.`,
+La voiture reste **indispensable** ; les mobilités quotidiennes structurent la vie rurale.
+
+> La question du **carburant** y a une portée **sociale directe** — comme l’a montré le mouvement des **gilets jaunes** en 2018.`,
           },
           questions: [
             ['Quels espaces ruraux français gagnent le plus d’habitants ?', ['Les campagnes périurbaines et les campagnes attractives du Sud et de l’Ouest', 'Les campagnes de la diagonale des faibles densités', 'Les zones de montagne isolées', 'Les anciennes régions minières'], 0, 'Proximité des villes, littoral et cadre de vie expliquent ces gains.'],
@@ -1358,21 +1966,43 @@ La voiture reste indispensable ; les mobilités quotidiennes structurent la vie 
           axe: 'La France : des espaces ruraux multifonctionnels, entre initiatives locales et politiques européennes',
           lecon: {
             titre: 'Qui aménage la campagne, et avec quel argent ?',
-            cours: `L’aménagement des espaces ruraux résulte d’un jeu à plusieurs niveaux : l’Union européenne, l’État, les régions, les intercommunalités et les acteurs locaux.
+            cours: `L’aménagement des espaces ruraux résulte d’un **jeu à plusieurs niveaux** : l’Union européenne, l’État, les régions, les intercommunalités et les acteurs locaux.
 
 ## L’échelon européen
-La **PAC** représente la première dépense agricole : aides directes au revenu (premier pilier) et développement rural (second pilier, programme **LEADER**). Les **fonds structurels** (FEDER, FSE) financent équipements, numérique et projets locaux.
+| Outil | Ce qu’il finance |
+| La **PAC**, premier pilier | Les **aides directes au revenu** |
+| La PAC, second pilier — programme **LEADER** | Le **développement rural** |
+| Les **fonds structurels** — FEDER, FSE | Équipements, numérique, projets locaux |
+
+La PAC représente la **première dépense** agricole du continent.
 
 ## L’échelon national et régional
-Politiques de revitalisation, maisons de santé, zones de revitalisation rurale, plan France Très Haut Débit, contrats de plan État-région. Les **régions** gèrent une partie des fonds européens et animent le développement économique.
+| Dispositif | Son objet |
+| Les **maisons de santé** | Lutter contre les déserts médicaux |
+| Les **zones de revitalisation rurale** | Des avantages fiscaux ciblés |
+| Le plan **France Très Haut Débit** | La couverture numérique |
+| Les **contrats de plan État-région** | Le cofinancement des équipements |
 
-> Une politique rurale efficace ne se décrète pas d’en haut : elle combine un cadre européen, des financements nationaux et des projets portés localement.
+Les **régions** gèrent une partie des fonds européens et animent le développement économique.
+
+> Une politique rurale efficace ne se **décrète pas d’en haut** : elle combine un **cadre européen**, des **financements nationaux** et des **projets portés localement**.
 
 ## Les initiatives locales
-Coopératives, circuits courts, AMAP, tiers-lieux et espaces de coworking, reprise de commerces par des communes, écotourisme, valorisation du patrimoine, énergies citoyennes. Les **PNR** et les intercommunalités servent de cadre à ces projets.
+| Initiative | Ce qu’elle apporte |
+| Coopératives, circuits courts, **AMAP** | Un revenu et un débouché direct |
+| **Tiers-lieux** et espaces de coworking | Un ancrage pour les télétravailleurs |
+| Reprise de commerces par des communes | Le maintien du dernier service |
+| **Écotourisme**, valorisation du patrimoine | Une ressource non délocalisable |
+| Énergies citoyennes | Un revenu local |
+
+Les **PNR** et les intercommunalités servent de cadre à ces projets.
 
 ## Les débats
-Faut-il concentrer les moyens sur les territoires qui décrochent, ou soutenir ceux qui réussissent ? Comment concilier attractivité, préservation des terres et transition écologique ? L’aménagement rural est un choix politique, pas une évidence technique.`,
+| Question | Ce qui s’oppose |
+| Où mettre les moyens | Les territoires qui **décrochent**, ou ceux qui **réussissent** ? |
+| Comment arbitrer | **Attractivité**, **préservation des terres** et **transition écologique** |
+
+> L’aménagement rural est un **choix politique**, pas une évidence technique.`,
           },
           questions: [
             ['Quel programme européen finance des projets de développement rural ?', ['LEADER, dans le second pilier de la PAC', 'Erasmus', 'Horizon Europe', 'Le FEDER uniquement'], 0, 'Il soutient des initiatives portées par des acteurs locaux.'],
@@ -1393,21 +2023,39 @@ Faut-il concentrer les moyens sur les territoires qui décrochent, ou soutenir c
           axe: 'La Chine : des recompositions spatiales multiples',
           lecon: {
             titre: 'Une croissance spectaculaire, un territoire déséquilibré',
-            cours: `En quarante ans, la Chine est devenue la deuxième économie mondiale. Cette croissance a profondément transformé son territoire — et creusé ses inégalités.
+            cours: `En **quarante ans**, la Chine est devenue la **deuxième économie mondiale**. Cette croissance a profondément transformé son territoire — et **creusé ses inégalités**.
 
 ## Les étapes du décollage
-Réformes de **Deng Xiaoping** à partir de 1978, ouverture aux investissements étrangers, création des **zones économiques spéciales** (Shenzhen, 1980), entrée à l’**OMC** en 2001. La Chine devient « l’atelier du monde », puis monte en gamme (électronique, véhicules électriques, spatial, IA).
+| Date | L’étape |
+| **1978** | Les réformes de **Deng Xiaoping**, ouverture aux investissements étrangers |
+| **1980** | Création des **zones économiques spéciales** — **Shenzhen** |
+| **2001** | L’entrée à l’**OMC** |
+| Depuis | De « l’**atelier du monde** » à la montée en gamme : électronique, véhicules électriques, spatial, IA |
 
 ## Un développement inégal
-Le **littoral** oriental concentre la richesse, les usines exportatrices et les métropoles ; l’**intérieur** et l’**Ouest** restent en retrait, malgré les plans de développement (« Go West », nouvelles routes ferroviaires). L’écart de PIB par habitant entre provinces reste considérable.
+| Espace | Sa situation |
+| Le **littoral** oriental | Il concentre la richesse, les usines exportatrices, les métropoles |
+| L’**intérieur** et l’**Ouest** | Ils restent en retrait, malgré les plans « **Go West** » et les nouvelles lignes ferroviaires |
 
-> La Chine n’est pas un pays émergent uniforme : c’est un pays riche sur ses côtes et en développement dans ses marges.
+L’écart de **PIB par habitant entre provinces** reste considérable.
+
+> La Chine n’est pas un pays émergent **uniforme** : c’est un pays **riche sur ses côtes** et **en développement dans ses marges**.
 
 ## Le hukou et les migrations
-Le **hukou** (permis de résidence) attache un habitant à sa région d’origine. Des centaines de millions de **mingong** (travailleurs migrants) ont rejoint les villes côtières sans y avoir pleinement accès aux droits sociaux : c’est la plus grande migration interne de l’histoire.
+Le **hukou** — permis de résidence — **attache** un habitant à sa région d’origine.
+
+| Conséquence | Son ampleur |
+| Les **mingong**, travailleurs migrants | Des **centaines de millions** de personnes |
+| Leur statut en ville | Ils y travaillent **sans pleinement accéder aux droits sociaux** |
+
+> C’est la **plus grande migration interne de l’histoire** — et elle est juridiquement organisée.
 
 ## Les défis
-Vieillissement rapide (conséquence de la politique de l’enfant unique, abandonnée en 2015), dette, ralentissement de la croissance, dépendance aux exportations, tensions commerciales et environnementales.`,
+| Défi | Sa cause |
+| Le **vieillissement rapide** | La politique de l’**enfant unique**, abandonnée en **2015** |
+| La **dette** et le ralentissement | Le modèle d’investissement s’essouffle |
+| La dépendance aux **exportations** | Elle expose aux tensions commerciales |
+| Les tensions **environnementales** | Le coût de quarante ans de croissance |`,
           },
           questions: [
             ['Qui lance les réformes économiques chinoises à partir de 1978 ?', ['Deng Xiaoping', 'Mao Zedong', 'Xi Jinping', 'Zhou Enlai'], 0, 'Le « socialisme de marché » ouvre le pays aux investissements.'],
@@ -1425,21 +2073,33 @@ Vieillissement rapide (conséquence de la politique de l’enfant unique, abando
           axe: 'La Chine : des recompositions spatiales multiples',
           lecon: {
             titre: 'Le prix environnemental de la croissance',
-            cours: `La croissance chinoise s’est appuyée sur une consommation massive de ressources, avec des conséquences environnementales majeures — que le pays tente désormais de corriger.
+            cours: `La croissance chinoise s’est appuyée sur une **consommation massive de ressources**, avec des conséquences environnementales majeures — que le pays tente désormais de **corriger à la même échelle**.
 
-## L’énergie
-La Chine est le premier consommateur mondial d’énergie et le premier émetteur de **CO2** (environ 30 % des émissions mondiales), en grande partie à cause du **charbon**. Elle est aussi, en même temps, le premier investisseur mondial dans les **renouvelables** : elle fabrique la majorité des panneaux solaires de la planète et vise la neutralité carbone en 2060.
+## L’énergie : les deux visages
+| Ce que la Chine est | Sa valeur |
+| **Premier consommateur** mondial d’énergie | En grande partie du **charbon** |
+| **Premier émetteur** de CO2 | environ **30 %** des émissions mondiales |
+| **Premier investisseur** mondial dans les **renouvelables** | Elle fabrique la **majorité des panneaux solaires** de la planète |
+| Son objectif affiché | La **neutralité carbone en 2060** |
 
 ## L’eau
-La ressource est très inégalement répartie : le Sud est humide, le Nord (Pékin, Tianjin) manque d’eau. Le **transfert Sud-Nord**, gigantesque réseau d’aqueducs, achemine l’eau du Yangzi vers le Nord. Le barrage des **Trois-Gorges** produit de l’électricité et régule les crues, au prix du déplacement de plus d’un million de personnes.
+| Région | Sa situation |
+| Le **Sud** | Humide, excédentaire |
+| Le **Nord** — Pékin, Tianjin | Il **manque d’eau** |
 
-> Aucune économie n’a jamais consommé autant de ressources aussi vite : les corrections chinoises se font à la même échelle que les dégâts.
+| Grand aménagement | Ce qu’il fait | Son coût |
+| Le **transfert Sud-Nord** | Un gigantesque réseau d’aqueducs achemine l’eau du **Yangzi** vers le Nord | — |
+| Le barrage des **Trois-Gorges** | Électricité et régulation des crues | Le déplacement de **plus d’un million** de personnes |
+
+> Aucune économie n’a jamais consommé autant de ressources aussi vite : les **corrections** chinoises se font à la **même échelle** que les dégâts.
 
 ## Les pollutions
-Pics de pollution de l’air dans les grandes villes, sols contaminés, cours d’eau dégradés, déchets. Les conséquences sanitaires ont provoqué des mobilisations locales et une réponse politique (normes, fermetures d’usines, contrôle des émissions).
+Pics de pollution de l’air dans les grandes villes, sols contaminés, cours d’eau dégradés, déchets.
+
+> Les conséquences **sanitaires** ont provoqué des **mobilisations locales** — et une réponse politique : normes, fermetures d’usines, contrôle des émissions.
 
 ## La dépendance extérieure
-Importations massives de pétrole, de gaz, de minerais et de soja ; investissements à l’étranger pour sécuriser l’approvisionnement, notamment via les **nouvelles routes de la soie**.`,
+Importations massives de **pétrole**, de gaz, de **minerais** et de **soja** ; investissements à l’étranger pour sécuriser l’approvisionnement, notamment via les **nouvelles routes de la soie**.`,
           },
           questions: [
             ['Quelle place occupe la Chine dans les émissions mondiales de CO2 ?', ['Premier émetteur, environ 30 % du total', 'Deuxième derrière les États-Unis', 'Troisième', 'Cinquième'], 0, 'Le charbon reste sa première source d’énergie.'],
@@ -1457,21 +2117,34 @@ Importations massives de pétrole, de gaz, de minerais et de soja ; investisseme
           axe: 'La Chine : des recompositions spatiales multiples',
           lecon: {
             titre: 'Un pays qui a basculé en ville en trente ans',
-            cours: `En 1980, moins de 20 % des Chinois vivaient en ville ; ils sont plus de 60 % aujourd’hui. C’est l’urbanisation la plus rapide et la plus massive de l’histoire.
+            cours: `En **1980**, moins de **20 %** des Chinois vivaient en ville ; ils sont **plus de 60 %** aujourd’hui. C’est l’urbanisation la plus **rapide** et la plus **massive** de l’histoire.
 
 ## Des métropoles géantes
-Shanghai, Pékin, Canton, Shenzhen, Chongqing : la Chine compte plusieurs dizaines de villes de plus de 5 millions d’habitants. Les grandes régions urbaines — **delta de la rivière des Perles**, delta du **Yangzi**, région de Pékin-Tianjin — forment des ensembles de plusieurs dizaines de millions d’habitants.
+Shanghai, Pékin, Canton, Shenzhen, Chongqing : plusieurs **dizaines** de villes de plus de 5 millions d’habitants.
+
+| Grande région urbaine | Son ampleur |
+| Le delta de la **rivière des Perles** | Plusieurs dizaines de millions d’habitants |
+| Le delta du **Yangzi** | Autour de Shanghai |
+| La région **Pékin-Tianjin** | Le pôle politique et industriel du Nord |
 
 ## Une urbanisation planifiée
-L’État crée des villes nouvelles, des quartiers d’affaires (Pudong à Shanghai), des lignes à grande vitesse (le plus grand réseau du monde), des métros. Certaines opérations ont produit des **villes fantômes**, construites avant leur peuplement.
+| Ce que l’État construit | Le résultat |
+| Des **villes nouvelles** | Parfois des « **villes fantômes** », bâties **avant** leur peuplement |
+| Des quartiers d’affaires | **Pudong** à Shanghai |
+| Des lignes à **grande vitesse** | Le **plus grand réseau du monde** |
+| Des **métros** | Dans des dizaines de villes |
 
-> En Chine, la ville n’attend pas la demande : elle est construite pour la précéder, avec les excès que cela suppose.
+> En Chine, la ville **n’attend pas la demande** : elle est construite pour la **précéder** — avec les excès que cela suppose.
 
 ## Des métropoles de rang mondial
-Shanghai et Hong Kong figurent parmi les premières places financières mondiales ; Shenzhen est un pôle technologique majeur. La Chine passe du statut d’atelier à celui de centre de décision et d’innovation.
+| Ville | Sa spécialisation |
+| **Shanghai** et **Hong Kong** | Parmi les premières places **financières** mondiales |
+| **Shenzhen** | Un pôle **technologique** majeur |
+
+> La Chine passe du statut d’**atelier** à celui de **centre de décision et d’innovation**.
 
 ## Les limites
-Prix du logement, endettement des promoteurs, inégalités liées au hukou, pollution, disparition de terres agricoles, patrimoine urbain détruit lors des rénovations.`,
+Prix du logement, **endettement des promoteurs**, inégalités liées au **hukou**, pollution, disparition de terres agricoles, patrimoine urbain détruit lors des rénovations.`,
           },
           questions: [
             ['Quel était le taux d’urbanisation chinois vers 1980 ?', ['Moins de 20 %', 'Environ 40 %', 'Environ 50 %', 'Plus de 60 %'], 0, 'Il dépasse aujourd’hui 60 % : le basculement a pris une génération.'],
@@ -1489,21 +2162,37 @@ Prix du logement, endettement des promoteurs, inégalités liées au hukou, poll
           axe: 'La Chine : des recompositions spatiales multiples',
           lecon: {
             titre: 'La façade maritime, moteur du pays',
-            cours: `La croissance chinoise s’est construite sur ses côtes : c’est là que se trouvent les ZES, les usines exportatrices, les ports géants et les métropoles.
+            cours: `La croissance chinoise s’est construite **sur ses côtes** : c’est là que se trouvent les ZES, les usines exportatrices, les ports géants et les métropoles.
 
 ## Une façade maritime hors norme
-Sept des dix premiers ports à conteneurs du monde sont chinois (Shanghai, Ningbo-Zhoushan, Shenzhen, Canton, Qingdao, Tianjin, Hong Kong). Les **ZIP** associent ports, sidérurgie, pétrochimie, chantiers navals et zones logistiques.
+**Sept** des dix premiers ports à conteneurs du monde sont chinois : Shanghai, Ningbo-Zhoushan, Shenzhen, Canton, Qingdao, Tianjin, Hong Kong.
 
-## Pourquoi le littoral ?
-Accès direct aux marchés mondiaux, coût de transport minimal, proximité des ZES et de la main-d’œuvre migrante, politiques publiques de soutien. La littoralisation a donc été d’abord un **choix politique**, avant d’être un fait géographique.
+Les **ZIP** y associent ports, **sidérurgie**, pétrochimie, chantiers navals et zones logistiques.
 
-> Les provinces côtières rassemblent environ 40 % de la population et produisent une nette majorité de la richesse chinoise.
+## Pourquoi le littoral
+| Raison | Ce qu’elle apporte |
+| L’accès **direct** aux marchés mondiaux | Pas de rupture de charge |
+| Le coût de transport **minimal** | La compétitivité à l’export |
+| La proximité des **ZES** | Le régime fiscal favorable |
+| La **main-d’œuvre migrante** | Disponible et bon marché |
+| Les **politiques publiques** | Le soutien de l’État |
+
+> La littoralisation a donc été d’abord un **choix politique**, avant d’être un fait géographique.
+
+> Les provinces côtières rassemblent environ **40 %** de la population et produisent une **nette majorité** de la richesse chinoise.
 
 ## Un rééquilibrage engagé
-Hausse des salaires côtiers, congestion et coût du foncier poussent des industries vers l’intérieur (Chongqing, Chengdu, Wuhan), desservi par le rail et les fleuves. Les liaisons ferroviaires vers l’Europe prolongent ce mouvement.
+| Ce qui pousse vers l’intérieur | Où vont les industries |
+| La **hausse des salaires** côtiers | **Chongqing**, Chengdu, Wuhan |
+| La **congestion** et le coût du foncier | Desservis par le **rail** et les **fleuves** |
+
+Les liaisons ferroviaires vers l’**Europe** prolongent ce mouvement.
 
 ## Les vulnérabilités
-Dépendance aux détroits (Malacca) et aux routes maritimes, tensions en mer de Chine méridionale, exposition des littoraux aux typhons et à la montée du niveau marin.`,
+| Vulnérabilité | Ce qu’elle expose |
+| La dépendance aux **détroits** — Malacca | L’approvisionnement énergétique |
+| Les tensions en **mer de Chine méridionale** | Les routes commerciales |
+| Les **typhons** et la montée du niveau marin | Les littoraux eux-mêmes |`,
           },
           questions: [
             ['Quel est le premier port à conteneurs du monde ?', ['Shanghai', 'Rotterdam', 'Singapour', 'Los Angeles'], 0, 'La Chine possède sept des dix premiers ports mondiaux.'],
@@ -1521,21 +2210,37 @@ Dépendance aux détroits (Malacca) et aux routes maritimes, tensions en mer de 
           axe: 'La Chine : des recompositions spatiales multiples',
           lecon: {
             titre: 'Des campagnes vidées, modernisées, inégales',
-            cours: `Les campagnes chinoises ont fourni la main-d’œuvre du miracle économique. Elles en sortent transformées, et très inégalement.
+            cours: `Les campagnes chinoises ont **fourni la main-d’œuvre** du miracle économique. Elles en sortent transformées — et **très inégalement**.
 
 ## Un monde rural encore immense
-Environ 500 millions de Chinois vivent en zone rurale. La terre appartient à l’État ou au collectif : les paysans en ont l’**usage**, pas la propriété, ce qui fragilise leur position face aux projets d’aménagement.
+Environ **500 millions** de Chinois vivent en zone rurale.
+
+> La terre appartient à l’**État ou au collectif** : les paysans en ont l’**usage**, **pas la propriété**. C’est ce qui **fragilise leur position** face aux projets d’aménagement.
 
 ## Le départ des actifs
-Les **mingong** partis vers les villes laissent derrière eux des villages où vivent surtout des enfants et des personnes âgées — on parle d’« enfants laissés à l’arrière ». Les **remises** (l’argent envoyé) font vivre une partie de ces campagnes.
+| Fait | Sa conséquence |
+| Les **mingong** partis vers les villes | Des villages où vivent surtout des **enfants et des personnes âgées** |
+| Les « **enfants laissés à l’arrière** » | Élevés par les grands-parents |
+| Les **remises** — l’argent envoyé | Elles **font vivre** une partie de ces campagnes |
 
-> Les campagnes chinoises ne se sont pas seulement vidées : elles se sont spécialisées, certaines dans l’agriculture moderne, d’autres dans la survie.
+> Les campagnes chinoises ne se sont pas seulement **vidées** : elles se sont **spécialisées** — certaines dans l’agriculture moderne, d’autres dans la **survie**.
 
 ## Des campagnes très différentes
-Plaines du Nord-Est mécanisées et céréalières, deltas intensifs, campagnes périurbaines converties au maraîchage et au tourisme, marges de l’Ouest pastorales et pauvres. La modernisation agricole progresse (mécanisation, serres, e-commerce agricole), mais l’écart de revenu avec les villes reste fort.
+| Région | Son agriculture |
+| Les plaines du **Nord-Est** | Mécanisées, **céréalières** |
+| Les **deltas** | Intensifs |
+| Les campagnes **périurbaines** | Maraîchage et **tourisme** |
+| Les marges de l’**Ouest** | **Pastorales** et pauvres |
+
+La modernisation progresse — mécanisation, serres, **e-commerce agricole** — mais l’**écart de revenu avec les villes** reste fort.
 
 ## Les politiques publiques
-Suppression de la taxe agricole (2006), assouplissement du hukou, plans de « revitalisation rurale », lutte proclamée contre la grande pauvreté, développement du numérique et des « villages Taobao » vendant en ligne.`,
+| Date ou dispositif | Sa mesure |
+| **2006** | Suppression de la **taxe agricole** |
+| Depuis | Assouplissement du **hukou** |
+| Plans de « **revitalisation rurale** » | Équipements et services |
+| La lutte proclamée contre la **grande pauvreté** | Un objectif politique affiché |
+| Les « **villages Taobao** » | La vente en ligne depuis la campagne |`,
           },
           questions: [
             ['Combien de Chinois vivent environ en zone rurale ?', ['Environ 500 millions', 'Environ 100 millions', 'Environ 1 milliard', 'Environ 250 millions'], 0, 'Malgré l’urbanisation, le monde rural chinois reste immense.'],

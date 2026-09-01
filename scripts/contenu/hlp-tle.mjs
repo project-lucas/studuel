@@ -120,26 +120,43 @@ c'est un UPDATE, ici, ou rien. Idempotent (rejouer réécrit la même valeur).`,
           titre: 'Le renouveau de l’éducation',
           lecon: {
             titre: 'Éduquer : conduire hors de soi ou faire pousser ?',
-            cours: `Le mot lui-même hésite. *Educere*, en latin, c'est « conduire hors de » ; *educare*, c'est « nourrir, élever ». Toute l'histoire de l'éducation tient dans cet écart : fait-on sortir l'enfant de son état premier, ou l'y aide-t-on à s'accomplir ?
+            cours: `Le mot lui-même hésite, et toute l’histoire de l’éducation tient dans cet écart.
+
+| Racine latine | Ce qu’elle veut dire | Ce qu’elle suppose |
+| *Educere* | Conduire **hors de** | L’enfant doit être arraché à son état premier |
+| *Educare* | Nourrir, élever | L’enfant doit être aidé à s’accomplir |
 
 ## Le tournant de la Renaissance
-Montaigne, dans « De l'institution des enfants » (*Essais*, I, 26), congédie le savoir accumulé : il veut « **une tête bien faite plutôt que bien pleine** ». L'élève doit passer le savoir au crible de son propre jugement — « qu'il ne lui demande pas seulement les mots de sa leçon, mais le sens et la substance ». Rabelais, dans *Gargantua*, oppose le pédagogue sorbonagre Thubal Holopherne, qui abrutit par la récitation, à Ponocrates, qui associe le corps, l'observation et la conversation.
+**Montaigne**, dans « De l’institution des enfants » (*Essais*, I, 26), congédie le savoir accumulé : il veut « **une tête bien faite plutôt que bien pleine** ». L’élève doit passer le savoir au crible de son propre jugement — « qu’il ne lui demande pas seulement les mots de sa leçon, mais le sens et la substance ».
 
-## Rousseau et l'éducation négative
-*Émile ou De l'éducation* (1762) renverse la question : l'enfant n'est pas un adulte incomplet. Rousseau prône une **éducation négative**, qui protège l'enfant des préjugés au lieu de les lui inculquer, et qui suit l'ordre de la nature. « Le plus grand, le plus important, le plus utile de toute l'éducation, c'est de ne pas gagner du temps, c'est d'en perdre. »
+**Rabelais**, dans *Gargantua*, oppose deux précepteurs :
 
-> L'élève apprend par l'expérience et par la nécessité des choses, non par l'autorité du maître. Kant en tirera une formule tendue : « Comment cultiver la liberté par la contrainte ? »
+| Précepteur | Sa méthode | Son résultat |
+| Thubal Holopherne | La récitation, le par cœur | Il abrutit |
+| Ponocrates | Le corps, l’observation, la conversation | Il forme |
 
-## L'école républicaine
-Condorcet (1792) fonde l'instruction publique sur l'idée que l'égalité politique reste fictive sans égalité des lumières. Les lois **Ferry** (1881-1882) rendent l'école gratuite, laïque et obligatoire. L'instruction devient une **condition de la citoyenneté**, non un ornement.
+## Rousseau et l’éducation négative
+*Émile ou De l’éducation* (1762) renverse la question : l’enfant n’est **pas** un adulte incomplet.
+
+> « Le plus grand, le plus important, le plus utile de toute l’éducation, c’est de ne pas gagner du temps, c’est d’en perdre. »
+
+L’**éducation négative** protège l’enfant des préjugés au lieu de les lui inculquer : il apprend par l’expérience et par la nécessité des choses, non par l’autorité du maître. **Kant** en tirera une formule tendue — « comment cultiver la liberté par la contrainte ? »
+
+## L’école républicaine
+| Date | L’étape | Ce qu’elle pose |
+| 1792 | **Condorcet** | L’égalité politique reste fictive sans égalité des lumières |
+| 1881-1882 | Lois **Ferry** | École gratuite, laïque et obligatoire |
+
+L’instruction devient une **condition de la citoyenneté**, non un ornement.
 
 ## Les critiques contemporaines
-- **Bourdieu et Passeron** (*Les Héritiers*, 1964 ; *La Reproduction*, 1970) : l'école, sous couvert de méritocratie, transmet un capital culturel qui avantage ceux qui le possèdent déjà.
-- **Ivan Illich** (*Une société sans école*, 1971) : l'institution scolaire crée le besoin qu'elle prétend satisfaire.
-- **Freire** (*Pédagogie des opprimés*, 1968) oppose l'éducation « bancaire » — le maître dépose, l'élève reçoit — à une pédagogie de la conscientisation.
+| Auteur | Œuvre | Ce qu’il reproche à l’école |
+| **Bourdieu et Passeron** | *Les Héritiers* (1964), *La Reproduction* (1970) | Sous couvert de méritocratie, elle transmet un capital culturel qui avantage ceux qui l’ont déjà |
+| **Ivan Illich** | *Une société sans école* (1971) | L’institution crée le besoin qu’elle prétend satisfaire |
+| **Paulo Freire** | *Pédagogie des opprimés* (1968) | L’éducation « bancaire » — le maître dépose, l’élève reçoit — contre la conscientisation |
 
 ## La question qui reste
-Éduquer, est-ce transmettre un héritage ou rendre capable de le contester ? Hannah Arendt, dans *La Crise de la culture*, refuse de choisir : c'est parce que le monde est ancien qu'on doit l'enseigner, et parce qu'il est confié à des nouveaux venus qu'il peut être renouvelé.`,
+Éduquer, est-ce **transmettre** un héritage ou rendre capable de le **contester** ? **Hannah Arendt**, dans *La Crise de la culture*, refuse de choisir : c’est parce que le monde est ancien qu’on doit l’enseigner, et parce qu’il est confié à des nouveaux venus qu’il peut être renouvelé.`,
           },
           questions: [
             ['Quelle formule de Montaigne résume son projet éducatif ?', ['« Une tête bien faite plutôt que bien pleine »', '« Que sais-je ? »', '« Connais-toi toi-même »', '« Je pense donc je suis »'], 0, 'Dans « De l’institution des enfants », *Essais*, I, 26.'],
@@ -156,27 +173,36 @@ Condorcet (1792) fonde l'instruction publique sur l'idée que l'égalité politi
           titre: 'La transmission des savoirs',
           lecon: {
             titre: 'Ce qui passe d’une génération à l’autre',
-            cours: `Transmettre n'est pas copier. Entre celui qui donne et celui qui reçoit, quelque chose se perd, se déforme, et parfois se crée.
+            cours: `Transmettre n’est pas copier. Entre celui qui donne et celui qui reçoit, quelque chose se perd, se déforme — et parfois se crée.
 
 ## Les supports et leurs effets
-Platon, dans le *Phèdre*, fait raconter par Socrate le mythe de **Theuth** : l'inventeur de l'écriture croit offrir un remède à la mémoire, le roi Thamous y voit un poison — les hommes cesseront de se souvenir, ils croiront savoir sans savoir. L'écriture est un ***pharmakon***, remède et poison à la fois. La même inquiétude accompagnera l'imprimerie, puis Internet.
+Platon, dans le *Phèdre*, fait raconter par Socrate le mythe de **Theuth**.
 
-## L'imprimerie et la démocratisation
-Gutenberg (vers 1450) fait basculer le savoir hors des scriptoria. Le livre devient reproductible, vérifiable, discutable : la Réforme, la révolution scientifique et les Lumières sont indissociables de ce changement matériel.
+| Personnage | Ce qu’il voit dans l’écriture |
+| Theuth, l’inventeur | Un **remède** à la mémoire |
+| Thamous, le roi | Un **poison** : on cessera de se souvenir, on croira savoir sans savoir |
 
-## L'école, la famille, le maître
-La transmission ne passe pas seulement par des contenus. **Rituels**, gestes, manières d'être : l'apprenti apprend en regardant faire. Michel Serres, dans *Petite Poucette* (2012), soutient que les nouvelles générations, disposant d'un savoir accessible d'un clic, n'ont plus besoin qu'on leur transmette des contenus mais qu'on leur apprenne à **s'orienter** dans ce qui est déjà là.
+L’écriture est un *pharmakon* — remède et poison à la fois. La même inquiétude accompagnera l’imprimerie, puis Internet : chaque support nouveau est accusé de ruiner la faculté qu’il prétend servir.
 
-> Le savoir ne se transmet pas comme un objet : il se **reconstruit** par celui qui l'acquiert. Ce que le maître donne, l'élève doit le refaire.
+## L’imprimerie et la démocratisation
+**Gutenberg**, vers 1450, fait basculer le savoir hors des scriptoria. Le livre devient reproductible, vérifiable, discutable : la Réforme, la révolution scientifique et les Lumières sont **indissociables** de ce changement matériel.
 
-## Ce qui se transmet à côté du savoir
-Bourdieu appelle **habitus** l'ensemble des dispositions incorporées — façons de parler, de se tenir, goûts — qui se transmettent sans être enseignées et qui décident souvent de la réussite scolaire.
+## Ce qui se transmet, et comment
+| Ce qu’on transmet | Par quel canal | Qui le décrit |
+| Des contenus | L’école, le livre | La tradition scolaire |
+| Des **gestes**, des manières d’être | L’imitation, l’apprentissage | L’atelier, le compagnonnage |
+| Un *habitus* — façons de parler, de se tenir, goûts | La famille, sans être enseigné | **Bourdieu** |
+| Une **mémoire collective** | Monuments, manuels, commémorations | **Halbwachs** |
 
-## La mémoire collective
-Halbwachs montre que le souvenir individuel s'appuie sur des **cadres sociaux**. Une société transmet aussi ce qu'elle décide de commémorer, et ce qu'elle choisit d'oublier : les monuments, les manuels, les commémorations sont des actes de transmission autant que des récits.
+> Le savoir ne se transmet pas comme un objet : il se **reconstruit** par celui qui l’acquiert. Ce que le maître donne, l’élève doit le **refaire**.
+
+**Michel Serres**, dans *Petite Poucette* (2012), en tire une conséquence : disposant d’un savoir accessible d’un clic, les nouvelles générations n’ont plus besoin qu’on leur transmette des contenus, mais qu’on leur apprenne à **s’orienter** dans ce qui est déjà là.
+
+## La mémoire et l’oubli
+Une société transmet aussi ce qu’elle décide de **commémorer** — et donc, en creux, ce qu’elle choisit d’oublier. Halbwachs montre que le souvenir individuel lui-même s’appuie sur des **cadres sociaux** : on ne se souvient jamais seul.
 
 ## Trahir pour transmettre
-*Traduttore, traditore*. Toute transmission est une traduction, donc une trahison partielle. Mais c'est cette trahison qui permet au savoir de rester vivant : une tradition qui ne se réinterprète plus est une tradition morte.`,
+*Traduttore, traditore.* Toute transmission est une traduction, donc une **trahison partielle**. Mais c’est cette trahison qui permet au savoir de rester vivant : une tradition qui ne se réinterprète plus est une tradition morte.`,
           },
           questions: [
             ['Dans le « Phèdre », l’écriture est comparée à…', ['Un pharmakon : remède et poison', 'Un miroir', 'Une cité', 'Un jardin'], 0, 'Le mythe de Theuth : elle affaiblit la mémoire tout en la fixant.'],
@@ -193,27 +219,39 @@ Halbwachs montre que le souvenir individuel s'appuie sur des **cadres sociaux**.
           titre: 'L’émancipation pour tous ?',
           lecon: {
             titre: 'Sortir de tutelle, et à quelles conditions',
-            cours: `S'émanciper, en droit romain, c'est sortir de la *manus*, la main du père. Le mot garde cette trace : il désigne le passage d'un état de tutelle à un état d'autonomie.
+            cours: `S’émanciper, en droit romain, c’est sortir de la *manus* — la main du père. Le mot garde cette trace : il désigne le passage d’un état de **tutelle** à un état d’**autonomie**.
 
 ## Les Lumières
-Kant, dans *Qu'est-ce que les Lumières ?* (1784), donne la définition la plus nette : « La sortie de l'homme hors de l'état de **minorité** dont il est lui-même responsable. » Minorité, c'est-à-dire l'incapacité de se servir de son entendement sans la direction d'autrui. Et le mot « responsable » compte : ce n'est pas la nature qui nous y maintient, c'est la paresse et la lâcheté. D'où le mot d'ordre : ***Sapere aude***, ose savoir.
+**Kant**, dans *Qu’est-ce que les Lumières ?* (1784), donne la définition la plus nette : « La sortie de l’homme hors de l’état de **minorité** dont il est lui-même responsable. »
+
+| Le mot | Ce qu’il désigne |
+| **Minorité** | L’incapacité de se servir de son entendement sans la direction d’autrui |
+| **Responsable** | Ce n’est pas la nature qui nous y maintient, mais la paresse et la lâcheté |
+| *Sapere aude* | Ose savoir : le mot d’ordre qui en découle |
 
 ## Les émancipations politiques
-- l'**abolition de l'esclavage** (1794, rétabli en 1802, définitivement aboli en 1848 en France) ;
-- l'émancipation des **Juifs** en France (1791) ;
-- le **droit de vote des femmes** (1944 en France) et l'accès à la capacité juridique pleine (1965 pour le droit de travailler sans autorisation maritale) ;
-- la **décolonisation**, dont Frantz Fanon (*Les Damnés de la terre*, 1961) analyse à la fois la nécessité et le coût psychique.
+| Date | L’émancipation | Sa fragilité |
+| 1791 | Les **Juifs** en France | |
+| 1794 | Abolition de l’**esclavage** | **Rétablie en 1802**, abolie définitivement en 1848 |
+| 1944 | Droit de **vote des femmes** | La capacité juridique pleine n’arrive qu’en 1965 |
+| Années 1950-1960 | La **décolonisation** | Son coût psychique, analysé par **Frantz Fanon** |
 
-## L'émancipation par le savoir
-Jacotot, redécouvert par **Jacques Rancière** dans *Le Maître ignorant* (1987), fait l'hypothèse de l'**égalité des intelligences** : ce n'est pas l'inégalité qu'il faut réduire, c'est l'égalité qu'il faut poser au départ et vérifier. Un maître qui explique installe la dépendance qu'il prétend guérir.
+## L’émancipation par le savoir
+**Jacotot**, redécouvert par **Jacques Rancière** dans *Le Maître ignorant* (1987), fait l’hypothèse de l’**égalité des intelligences** : ce n’est pas l’inégalité qu’il faut réduire, c’est l’égalité qu’il faut **poser au départ** et vérifier.
 
-> D'où la tension du chapitre : l'éducation émancipe-t-elle, ou fabrique-t-elle la minorité qu'elle prétend abolir ?
+> Un maître qui explique installe la dépendance qu’il prétend guérir. D’où la tension du chapitre : l’éducation émancipe-t-elle, ou **fabrique-t-elle la minorité** qu’elle prétend abolir ?
 
 ## Les émancipations en tension
-Émanciper un groupe suppose parfois de contraindre : l'école obligatoire arrache l'enfant au travail mais aussi à sa famille. La laïcité libère du dogme mais impose sa propre norme. Il n'y a pas d'émancipation qui ne s'exerce **depuis quelque part**.
+| L’émancipation | Ce qu’elle libère | Ce qu’elle impose |
+| L’école obligatoire | De l’ignorance et du travail des enfants | Elle arrache aussi l’enfant à sa famille |
+| La laïcité | Du dogme | Sa propre norme |
 
-## L'émancipation aujourd'hui
-Le mot s'est déplacé du politique vers l'individuel : s'émanciper des assignations de genre, d'origine, de classe. Simone de Beauvoir (*Le Deuxième Sexe*, 1949) — « On ne naît pas femme : on le devient » — pose que ce qui est construit peut être défait. La question demeure : à quelles conditions matérielles une liberté proclamée devient-elle une liberté réelle ?`,
+Il n’y a pas d’émancipation qui ne s’exerce **depuis quelque part**.
+
+## L’émancipation aujourd’hui
+Le mot s’est déplacé du politique vers l’individuel : s’émanciper des assignations de genre, d’origine, de classe.
+
+**Simone de Beauvoir** (*Le Deuxième Sexe*, 1949) — « On ne naît pas femme : on le devient » — pose que ce qui est **construit** peut être défait. La question demeure : à quelles conditions **matérielles** une liberté proclamée devient-elle une liberté réelle ?`,
           },
           questions: [
             ['Comment Kant définit-il les Lumières ?', ['La sortie de l’homme hors de l’état de minorité dont il est responsable', 'Le progrès des sciences', 'La victoire de la raison sur la religion', 'Le règne des philosophes'], 0, 'D’où le mot d’ordre *Sapere aude* : ose savoir.'],
@@ -232,26 +270,31 @@ Le mot s'est déplacé du politique vers l'individuel : s'émanciper des assigna
           titre: '« Un seul être vous manque et tout est dépeuplé » : le sentiment romantique',
           lecon: {
             titre: 'Le moi romantique et son mal',
-            cours: `Le vers est de Lamartine (« L'Isolement », *Méditations poétiques*, 1820). Il condense un basculement : le sentiment individuel devient le centre d'où l'on regarde le monde entier.
+            cours: `Le vers est de Lamartine — « L’Isolement », *Méditations poétiques*, 1820. Il condense un basculement : le sentiment individuel devient le centre d’où l’on regarde le monde entier.
 
 ## Ce que le romantisme renverse
-L'âge classique tenait la passion pour un désordre à corriger par la raison. Le romantisme en fait une **source de vérité**. Le sujet ne cache plus son émotion : il en fait la matière même de l'œuvre.
+| | L’âge classique | Le romantisme |
+| La passion est… | Un désordre à corriger par la raison | Une **source de vérité** |
+| Le sujet | Se retient, se dissimule | Fait de son émotion la matière de l’œuvre |
 
 ## Le « mal du siècle »
-Chateaubriand invente la figure avec **René** (1802) : un jeune homme rongé par une mélancolie sans objet, un « vague des passions » — le désir devance l'expérience, et rien de réel ne peut le combler. Musset, dans *La Confession d'un enfant du siècle* (1836), en donne l'explication historique : une génération née entre l'Empire écroulé et une monarchie sans grandeur, « entre deux mondes », sans avenir à quoi s'accrocher.
+| Œuvre | Auteur, date | Ce qu’elle établit |
+| *René* | Chateaubriand, 1802 | Une mélancolie **sans objet** : le « vague des passions », où le désir devance l’expérience |
+| *La Confession d’un enfant du siècle* | Musset, 1836 | Son explication **historique** : une génération née « entre deux mondes », l’Empire écroulé et une monarchie sans grandeur |
 
-## La nature comme miroir et comme refuge
-Chez Rousseau déjà (*Les Rêveries du promeneur solitaire*), la nature n'est pas un décor : elle répond au sentiment. Lamartine (« Le Lac »), Hugo (« Tristesse d'Olympio ») lui demandent de garder la mémoire d'un amour que le temps efface. Le paysage devient ce que Baudelaire appellera plus tard un jeu de **correspondances**.
+## La nature, miroir et refuge
+Chez **Rousseau** déjà (*Les Rêveries du promeneur solitaire*), la nature n’est pas un décor : elle **répond** au sentiment. **Lamartine** (« Le Lac ») et **Hugo** (« Tristesse d’Olympio ») lui demandent de garder la mémoire d’un amour que le temps efface — le paysage devient ce que Baudelaire appellera plus tard un jeu de **correspondances**.
 
-> Le romantisme lie trois choses : l'exaltation du moi, la découverte du temps qui passe, et le sentiment que le monde ne répond pas à notre attente.
+> Le romantisme lie trois choses, et c’est leur nœud qu’il faut savoir défaire : l’exaltation du **moi**, la découverte du **temps qui passe**, et le sentiment que le **monde ne répond pas** à notre attente.
 
 ## Les objections
-- **Hegel** voit dans l'« âme belle » romantique une conscience qui préfère sa pureté à l'action, et se complaît dans son insatisfaction.
-- **Nietzsche** distingue un romantisme de la **détresse** (qui souffre du manque) et un art de la **surabondance** — et ne cache pas sa préférence.
-- La psychanalyse relira la mélancolie non comme une profondeur mais comme un **deuil impossible** : le mélancolique ne sait pas ce qu'il a perdu.
+| Penseur | Ce qu’il reproche au romantisme |
+| **Hegel** | L’« âme belle » préfère sa pureté à l’action, et se complaît dans son insatisfaction |
+| **Nietzsche** | Il distingue un romantisme de la **détresse**, qui souffre du manque, d’un art de la **surabondance** — et ne cache pas sa préférence |
+| La **psychanalyse** | La mélancolie n’est pas une profondeur mais un **deuil impossible** : le mélancolique ne sait pas ce qu’il a perdu |
 
 ## Ce qui en reste
-Le sentiment romantique a durablement installé l'idée que la **sincérité** de l'émotion vaut caution : c'est cet héritage que travaillent encore la chanson, le cinéma et une bonne part des réseaux sociaux.`,
+Le sentiment romantique a durablement installé l’idée que la **sincérité** de l’émotion vaut caution. C’est cet héritage que travaillent encore la chanson, le cinéma — et une bonne part des réseaux sociaux.`,
           },
           questions: [
             ['De quel poète est le vers « Un seul être vous manque et tout est dépeuplé » ?', ['Lamartine', 'Hugo', 'Musset', 'Baudelaire'], 0, '« L’Isolement », *Méditations poétiques*, 1820.'],
@@ -268,26 +311,31 @@ Le sentiment romantique a durablement installé l'idée que la **sincérité** d
           titre: 'Les sentiments et la raison',
           lecon: {
             titre: 'Faut-il se méfier de ce que l’on ressent ?',
-            cours: `La question traverse la philosophie entière : nos émotions nous égarent-elles, ou nous renseignent-elles sur ce qui compte ?
+            cours: `La question traverse la philosophie entière : nos émotions nous **égarent**-elles, ou nous **renseignent**-elles sur ce qui compte ?
 
 ## La méfiance antique
-Les **stoïciens** tiennent la passion pour un jugement faux : ce n'est pas la chose qui trouble, c'est l'opinion qu'on en a (Épictète). Le sage vise l'*apatheia*, non l'insensibilité mais l'affranchissement des jugements précipités. Platon, dans le *Phèdre*, figure l'âme en attelage : le cocher (la raison) doit maîtriser deux chevaux, dont l'un tire vers le bas.
+| Penseur | Sa thèse | Son image |
+| Les **stoïciens** | La passion est un **jugement faux** : ce n’est pas la chose qui trouble, c’est l’opinion qu’on en a | L’*apatheia* — non l’insensibilité, mais l’affranchissement des jugements précipités |
+| **Platon** | L’âme est un attelage | Le cocher (la raison) maîtrise deux chevaux, dont l’un tire vers le bas |
 
 ## Le partage cartésien
-Descartes, dans *Les Passions de l'âme* (1649), refuse de les condamner : elles sont « toutes bonnes de leur nature » et nous portent à ce qui est utile au corps. Ce qu'il faut, c'est ne pas s'y soumettre — la **générosité**, sentiment de sa propre liberté, est chez lui le remède.
+**Descartes**, dans *Les Passions de l’âme* (1649), refuse de les condamner : elles sont « toutes bonnes de leur nature » et nous portent à ce qui est utile au corps. Ce qu’il faut, c’est ne pas s’y **soumettre** — la **générosité**, sentiment de sa propre liberté, est chez lui le remède.
 
 ## La réhabilitation
-- **Pascal** : « Le cœur a ses raisons que la raison ne connaît point » — non pas un éloge de l'irrationnel, mais le constat qu'il existe un ordre de connaissance immédiate, distinct de la démonstration.
-- **Hume** va plus loin : « La raison est, et ne doit être, que l'esclave des passions. » Elle calcule les moyens, mais elle ne fixe aucune fin ; seul un sentiment peut nous faire vouloir quelque chose.
-- **Rousseau** fait de la **pitié** — la répugnance à voir souffrir son semblable — un fondement moral antérieur à toute réflexion.
+| Penseur | Ce qu’il établit |
+| **Pascal** | « Le cœur a ses raisons que la raison ne connaît point » — non un éloge de l’irrationnel, mais un autre ordre de connaissance |
+| **Hume** | « La raison est, et ne doit être, que l’esclave des passions » : elle calcule les **moyens**, elle ne fixe aucune **fin** |
+| **Rousseau** | La **pitié** — la répugnance à voir souffrir son semblable — est un fondement moral **antérieur** à toute réflexion |
 
 ## Le tournant contemporain
-Le neurologue **Antonio Damasio** (*L'Erreur de Descartes*, 1994) observe que des patients dont les circuits émotionnels sont lésés, tout en gardant une intelligence intacte, deviennent **incapables de décider**. L'émotion n'est pas le contraire du raisonnement : elle en est une condition. Martha Nussbaum, de son côté, décrit les émotions comme des **jugements de valeur** — avoir peur, c'est juger qu'une chose importante est menacée.
+| Chercheur | L’observation | Ce qu’elle prouve |
+| **Antonio Damasio**, *L’Erreur de Descartes* (1994) | Des patients aux circuits émotionnels lésés, intelligence intacte, deviennent **incapables de décider** | L’émotion n’est pas le contraire du raisonnement : elle en est une **condition** |
+| **Martha Nussbaum** | Les émotions sont des **jugements de valeur** | Avoir peur, c’est juger qu’une chose importante est menacée |
 
-> Le débat s'est déplacé : non plus « faut-il obéir à ses sentiments ? », mais « que connaissent-ils que la raison seule ne connaît pas ? »
+> Le débat s’est déplacé : non plus « faut-il obéir à ses sentiments ? », mais « **que connaissent-ils que la raison seule ne connaît pas ?** »
 
 ## Le point de tension à garder
-Les émotions renseignent, mais elles se manipulent : c'est tout l'enjeu de la rhétorique du *pathos*, de la publicité et des algorithmes de recommandation, qui exploitent l'indignation parce qu'elle retient l'attention.`,
+Les émotions **renseignent**, mais elles se **manipulent**. C’est tout l’enjeu de la rhétorique du *pathos*, de la publicité et des algorithmes de recommandation, qui exploitent l’indignation parce qu’elle retient l’attention.`,
           },
           questions: [
             ['Pour les stoïciens, la passion est…', ['Un jugement faux sur les choses', 'Une maladie du corps', 'Un don divin', 'Une force à cultiver'], 0, 'Épictète : ce n’est pas la chose qui trouble, mais l’opinion qu’on en a.'],
@@ -304,27 +352,36 @@ Les émotions renseignent, mais elles se manipulent : c'est tout l'enjeu de la r
           titre: 'Musique et sensibilité artistique',
           lecon: {
             titre: 'L’art qui touche sans dire',
-            cours: `La musique pose un problème unique : elle émeut sans représenter. Elle ne raconte rien, ne montre rien — et pourtant elle agit plus directement que les autres arts.
+            cours: `La musique pose un problème unique : elle **émeut sans représenter**. Elle ne raconte rien, ne montre rien — et pourtant elle agit plus directement que les autres arts.
 
 ## La méfiance ancienne
-Platon, dans *La République*, veut régler les modes musicaux dans la cité : certains amollissent, d'autres fortifient. La musique n'est pas un divertissement mais une **éducation de l'âme**, donc une affaire politique. Saint Augustin s'inquiète, dans les *Confessions*, de prendre plus de plaisir au chant qu'au texte sacré qu'il porte.
+| Penseur | Son inquiétude |
+| **Platon**, *La République* | Certains modes musicaux amollissent, d’autres fortifient : la musique est une **éducation de l’âme**, donc une affaire politique |
+| **Saint Augustin**, *Confessions* | Il craint de prendre plus de plaisir au chant qu’au texte sacré qu’il porte |
 
-## L'art le plus haut
-Le romantisme allemand inverse le rapport. Parce qu'elle ne représente rien, la musique atteint ce que les mots manquent. **Schopenhauer** en fait un cas à part : les autres arts figurent des apparences, la musique est l'expression directe de la **volonté**, du fond même du monde. D'où l'idée, courante au XIXe siècle, que tous les arts aspirent à l'état de musique.
+## L’art le plus haut
+Le romantisme allemand **inverse** le rapport : parce qu’elle ne représente rien, la musique atteint ce que les mots manquent.
 
-## Le sublime
-Kant distingue le **beau** — une forme qui s'accorde à nos facultés, qui apaise — et le **sublime** — ce qui les excède : l'océan démonté, la montagne, l'infini. Le sublime commence par un déplaisir (nous mesurons notre petitesse) et s'achève en un sentiment de grandeur (la raison conçoit ce que l'imagination ne peut embrasser).
+**Schopenhauer** en fait un cas à part — les autres arts figurent des apparences, la musique est l’expression **directe de la volonté**, du fond même du monde. D’où l’idée, courante au XIXe siècle, que tous les arts aspirent à l’état de musique.
 
-> Kant énonce aussi le paradoxe du goût : le jugement esthétique est **subjectif** (il repose sur un sentiment) mais prétend à l'**universalité** — on dit « c'est beau », pas « ça me plaît ».
+## Le beau et le sublime
+| | Le **beau** | Le **sublime** |
+| Ce que c’est | Une forme qui s’accorde à nos facultés | Ce qui les **excède** : l’océan démonté, la montagne, l’infini |
+| Ce qu’on éprouve | L’apaisement | Un déplaisir d’abord, une grandeur ensuite |
+| Pourquoi | La forme est à notre mesure | L’imagination échoue là où la raison conçoit |
 
-## L'émotion esthétique est-elle une vraie émotion ?
-Pleurer devant une fiction sans croire à sa réalité : c'est le « paradoxe de la fiction ». Aristote y répondait déjà par la **catharsis** — la tragédie purge les passions en les faisant éprouver à distance protégée.
+> **Kant** énonce aussi le paradoxe du goût : le jugement esthétique est **subjectif** — il repose sur un sentiment — mais prétend à l’**universalité**. On dit « c’est beau », pas « ça me plaît ».
+
+## L’émotion esthétique est-elle une vraie émotion ?
+Pleurer devant une fiction **sans croire à sa réalité** : c’est le « paradoxe de la fiction ». **Aristote** y répondait déjà par la **catharsis** — la tragédie purge les passions en les faisant éprouver à distance protégée.
 
 ## Le soupçon contemporain
-**Adorno** dénonce une « industrie culturelle » qui standardise l'écoute : la musique de masse ne libère pas la sensibilité, elle la formate et l'occupe. À l'inverse, **Bourdieu** (*La Distinction*, 1979) montre que les goûts musicaux fonctionnent comme des **marqueurs sociaux** : ce qu'on trouve beau dit d'où l'on vient.
+| Penseur | Sa critique |
+| **Adorno** | L’« industrie culturelle » standardise l’écoute : la musique de masse ne libère pas la sensibilité, elle la **formate** |
+| **Bourdieu**, *La Distinction* (1979) | Les goûts musicaux sont des **marqueurs sociaux** : ce qu’on trouve beau dit d’où l’on vient |
 
 ## Ce qui reste ouvert
-Si la musique n'imite rien, que nous apprend-elle ? Peut-être ceci, que la sensibilité s'éduque : entendre une œuvre difficile n'est pas un don, c'est le résultat d'un apprentissage — ce qui est une réponse, indirecte, au chapitre sur l'éducation.`,
+Si la musique n’imite rien, que nous apprend-elle ? Peut-être ceci : que la **sensibilité s’éduque**. Entendre une œuvre difficile n’est pas un don, c’est le résultat d’un apprentissage — ce qui est une réponse, indirecte, au chapitre sur l’éducation.`,
           },
           questions: [
             ['Pourquoi Platon veut-il régler les modes musicaux dans la cité ?', ['La musique éduque l’âme : c’est une affaire politique', 'Elle coûte trop cher', 'Elle distrait des mathématiques', 'Elle est réservée aux dieux'], 0, 'Certains modes amollissent, d’autres fortifient.'],
@@ -343,33 +400,40 @@ Si la musique n'imite rien, que nous apprend-elle ? Peut-être ceci, que la sens
           titre: 'Les transformations historiques de l’ego',
           lecon: {
             titre: 'Une histoire du « je »',
-            cours: `Le moi n'a pas toujours existé sous la forme que nous lui connaissons. Ce que nous prenons pour une évidence intime est le résultat d'une histoire.
+            cours: `Le moi n’a pas toujours existé sous la forme que nous lui connaissons. Ce que nous prenons pour une **évidence intime** est le résultat d’une histoire.
 
-## Avant le moi
-Dans le monde antique, on se définit par sa place : la cité, la famille, la fonction. Le « connais-toi toi-même » de Delphes, repris par **Socrate**, n'invite pas à l'introspection psychologique mais à mesurer ce que l'on sait et ce que l'on ignore.
+## Les cinq étapes du « je »
+| Époque | L’auteur | Ce que le moi devient |
+| Antiquité | **Socrate** | Rien d’intime : « connais-toi » invite à mesurer ce qu’on sait et ce qu’on ignore |
+| IVe siècle | **Augustin**, *Confessions* | Un **dedans** : *in interiore homine habitat veritas* |
+| 1580 | **Montaigne**, *Essais* | Un **objet d’étude** : « je suis moi-même la matière de mon livre » |
+| 1637 | **Descartes**, *cogito* | Un **fondement** : une substance pensante, transparente à elle-même |
+| XIXe-XXe | Marx, Nietzsche, Freud | Un **soupçon** : le moi n’est plus transparent |
 
-## L'intériorité chrétienne
-Saint **Augustin** (*Confessions*, IVe siècle) invente une écriture du dedans : il s'adresse à Dieu, mais en scrutant sa mémoire, ses désirs, ses contradictions. *In interiore homine habitat veritas* — la vérité habite l'homme intérieur. L'examen de conscience devient un exercice réglé.
+## Montaigne : un moi qui ne tient pas en place
+Le moi des *Essais* n’est pas stable : « Je ne peins pas l’être, je peins le **passage**. » Mouvant, contradictoire, saisi dans le temps — c’est la première fois qu’un auteur en fait une qualité et non un défaut.
 
-## Montaigne : le moi comme objet d'étude
-Les *Essais* (1580) sont le premier livre où quelqu'un se prend lui-même pour sujet — « je suis moi-même la matière de mon livre ». Et ce moi n'est pas stable : « Je ne peins pas l'être, je peins le passage. » Le moi devient mouvant, contradictoire, saisi dans le temps.
+## Descartes : le moi comme socle
+Le *cogito* fait du moi le point d’appui de toute certitude : je puis douter de tout, sauf que je pense. Le moi n’est plus un objet d’observation, c’est le **fondement**.
 
-## Descartes : le moi comme fondement
-Le *cogito* (1637) fait du moi le point d'appui de toute certitude : je puis douter de tout, sauf que je pense. Le moi n'est plus un objet d'observation, c'est le socle. Une **substance pensante**, transparente à elle-même.
-
-> C'est cette transparence que les siècles suivants vont démolir méthodiquement.
+> C’est cette **transparence** que les siècles suivants vont démolir méthodiquement.
 
 ## Les trois blessures narcissiques
-Freud décrit trois humiliations infligées à l'amour-propre humain :
-- **Copernic** : la Terre n'est pas au centre du monde ;
-- **Darwin** : l'homme n'est pas d'une autre nature que l'animal ;
-- la **psychanalyse** : le moi « n'est pas maître dans sa propre maison ».
+Freud décrit trois humiliations infligées à l’amour-propre humain.
+
+| Blessure | Ce qu’elle retire à l’homme |
+| **Copernic** | La Terre n’est pas au centre du monde |
+| **Darwin** | L’homme n’est pas d’une autre nature que l’animal |
+| La **psychanalyse** | Le moi « n’est pas maître dans sa propre maison » |
 
 ## Les soupçons croisés
-**Marx** : la conscience est déterminée par les conditions matérielles d'existence. **Nietzsche** : le « je » est une fiction grammaticale, une cause inventée derrière l'action. **Sartre** répond en renversant le problème : l'homme n'a pas de nature, « l'existence précède l'essence » — le moi est ce qu'il se fait.
+| Penseur | Ce qu’il fait du moi |
+| **Marx** | La conscience est déterminée par les conditions matérielles d’existence |
+| **Nietzsche** | Le « je » est une **fiction grammaticale**, une cause inventée derrière l’action |
+| **Sartre** | Il renverse : l’homme n’a pas de nature, « l’existence précède l’essence » |
 
-## Aujourd'hui
-Le moi se met en scène : profils, avatars, récits de soi. Ce qui était examen intérieur devient exposition. Le moi contemporain est peut-être moins un secret à découvrir qu'une **image à administrer**.`,
+## Aujourd’hui
+Le moi se **met en scène** : profils, avatars, récits de soi. Ce qui était examen intérieur devient **exposition**. Le moi contemporain est peut-être moins un secret à découvrir qu’une image à administrer.`,
           },
           questions: [
             ['Quel ouvrage inaugure l’écriture de l’intériorité au IVe siècle ?', ['Les Confessions de saint Augustin', 'Les Essais de Montaigne', 'Le Discours de la méthode', 'La République'], 0, '*In interiore homine habitat veritas.*'],
@@ -386,24 +450,36 @@ Le moi se met en scène : profils, avatars, récits de soi. Ce qui était examen
           titre: 'Identité et genre',
           lecon: {
             titre: 'Ce qui est donné, ce qui est construit',
-            cours: `L'identité désigne à la fois ce qui reste identique à travers le temps et ce qui distingue de tous les autres. Le genre est l'un des lieux où cette double exigence se met le plus visiblement en tension.
+            cours: `L’identité désigne à la fois ce qui reste **identique** dans le temps et ce qui **distingue** de tous les autres. Le genre est l’un des lieux où cette double exigence se met le plus visiblement en tension.
 
-## Le problème de l'identité personnelle
-**Locke** dissocie l'identité de la substance : ce qui fait qu'on est la même personne, c'est la **conscience** qui relie les moments par la mémoire. **Hume** va plus loin : introspectant, il ne trouve jamais un moi, seulement « un faisceau de perceptions ». L'unité du moi serait une fiction utile. **Ricœur** propose une sortie : distinguer l'*idem* (rester le même, mêmeté) de l'*ipse* (se tenir à ses promesses, ipséité), et faire de l'**identité narrative** — le récit qu'on se fait de soi — le lieu où les deux se nouent.
+## Le problème de l’identité personnelle
+| Penseur | Ce qui fait l’identité | Sa difficulté |
+| **Locke** | La **conscience**, qui relie les moments par la mémoire | Que devient l’identité quand la mémoire manque ? |
+| **Hume** | Rien : seulement « un faisceau de perceptions » | L’unité du moi serait une fiction utile |
+| **Ricœur** | Le **récit** qu’on se fait de soi | Il noue l’*idem* et l’*ipse* |
+
+Ricœur distingue en effet l’*idem* — rester le même, la mêmeté — de l’*ipse* — se tenir à ses promesses, l’ipséité. On peut changer entièrement et rester fidèle : c’est l’**identité narrative**.
 
 ## Sexe et genre
-La distinction s'installe au XXe siècle : le **sexe** renvoie aux caractères biologiques, le **genre** aux rôles, conduites et attentes que chaque société y associe. Simone de **Beauvoir** l'anticipe en 1949 : « On ne naît pas femme : on le devient » — la féminité est un produit de l'histoire, non une essence.
+| Terme | Ce qu’il désigne |
+| Le **sexe** | Les caractères biologiques |
+| Le **genre** | Les rôles, conduites et attentes qu’une société y associe |
+
+**Simone de Beauvoir** l’anticipe en 1949 : « On ne naît pas femme : on le devient » — la féminité est un produit de l’histoire, non une essence.
 
 ## La performativité
-**Judith Butler** (*Trouble dans le genre*, 1990) radicalise : le genre n'est pas ce que l'on est, c'est ce que l'on **fait**, une série d'actes répétés qui finissent par produire l'illusion d'une nature. La norme se maintient parce qu'elle est rejouée quotidiennement — ce qui est aussi la condition pour qu'elle puisse être déplacée.
+**Judith Butler** (*Trouble dans le genre*, 1990) radicalise : le genre n’est pas ce que l’on **est**, c’est ce que l’on **fait** — une série d’actes répétés qui finissent par produire l’illusion d’une nature.
 
-> Le point de méthode : dire qu'une chose est construite ne signifie pas qu'elle est fausse ou facile à défaire. Une construction sociale est réelle et contraignante.
+> Point de méthode, décisif en dissertation : dire qu’une chose est **construite** ne signifie pas qu’elle est **fausse** ou facile à défaire. Une construction sociale est réelle et contraignante — c’est même à cela qu’on la reconnaît.
 
 ## Les objections
-Certains reprochent à ces analyses de dissoudre toute réalité corporelle ; d'autres soulignent qu'une identité peut être **subie** avant d'être choisie (Sartre, *Réflexions sur la question juive* : c'est le regard de l'antisémite qui fait le Juif). Amin Maalouf (*Les Identités meurtrières*, 1998) met en garde contre l'identité réduite à une seule appartenance — c'est ainsi qu'elle devient meurtrière.
+| Objection | Ce qu’elle rappelle |
+| Le corps | Ces analyses dissoudraient toute réalité corporelle |
+| **Sartre**, *Réflexions sur la question juive* | Une identité peut être **subie** avant d’être choisie : c’est le regard de l’antisémite qui fait le Juif |
+| **Amin Maalouf**, *Les Identités meurtrières* (1998) | Réduite à une **seule** appartenance, l’identité devient meurtrière |
 
 ## En littérature
-Les *Mémoires d'Hadrien* de Yourcenar, *Orlando* de Virginia Woolf — dont le personnage traverse les siècles et change de sexe — ou *Une femme* d'Annie Ernaux montrent que la question du moi ne se sépare pas de celle du genre et de la classe.`,
+Les *Mémoires d’Hadrien* de Yourcenar, *Orlando* de Virginia Woolf — dont le personnage traverse les siècles et change de sexe — ou *Une femme* d’Annie Ernaux montrent que la question du moi ne se sépare pas de celle du genre et de la classe.`,
           },
           questions: [
             ['Sur quoi Locke fonde-t-il l’identité personnelle ?', ['La conscience et la mémoire', 'La substance corporelle', 'Le nom propre', 'La communauté'], 0, 'Ce qui relie les moments, c’est la conscience qu’on en garde.'],
@@ -420,26 +496,40 @@ Les *Mémoires d'Hadrien* de Yourcenar, *Orlando* de Virginia Woolf — dont le 
           titre: 'Mutilations de la guerre et détention',
           lecon: {
             titre: 'Quand le corps et l’enfermement défont le moi',
-            cours: `Ce chapitre pose une question brutale : que reste-t-il du moi lorsqu'on lui retire le corps intact, la liberté de mouvement, ou le nom ?
+            cours: `Ce chapitre pose une question brutale : que reste-t-il du moi lorsqu’on lui retire le **corps intact**, la **liberté de mouvement**, ou le **nom** ?
 
 ## Les « gueules cassées »
-La Première Guerre mondiale produit une catégorie inédite : des survivants au visage détruit. Le visage étant ce par quoi on est reconnu, la mutilation faciale attaque l'identité elle-même. **Emmanuel Levinas** en donne la clé philosophique : le **visage** d'autrui n'est pas un objet, c'est ce qui m'oblige, ce qui me dit « tu ne tueras point ». Détruire un visage, c'est plus que blesser un corps.
+La Première Guerre mondiale produit une catégorie inédite : des survivants au visage détruit. Le visage étant ce par quoi on est **reconnu**, la mutilation faciale attaque l’identité elle-même.
 
-La littérature s'en empare : *Le Feu* de Barbusse (1916), *À l'Ouest, rien de nouveau* de Remarque, et surtout *Au revoir là-haut* de Pierre Lemaitre (2013), dont le héros défiguré se fabrique des masques — devenir une image faute de pouvoir redevenir un visage.
+**Emmanuel Levinas** en donne la clé philosophique : le **visage** d’autrui n’est pas un objet, c’est ce qui m’**oblige**, ce qui me dit « tu ne tueras point ». Détruire un visage, c’est plus que blesser un corps.
+
+| Œuvre | Auteur, date | Ce qu’elle montre |
+| *Le Feu* | Barbusse, 1916 | La guerre depuis la tranchée |
+| *À l’Ouest, rien de nouveau* | Remarque, 1929 | La génération sacrifiée |
+| *Au revoir là-haut* | Pierre Lemaitre, 2013 | Un héros défiguré se fabrique des **masques** — devenir une image faute de redevenir un visage |
 
 ## Le corps comme épreuve du moi
-**Merleau-Ponty** rappelle qu'on n'a pas un corps comme on a un objet : on **est** son corps, c'est par lui qu'on habite le monde. D'où la violence particulière de la mutilation : ce n'est pas une possession qui se perd, c'est le rapport au monde qui se reconfigure. Le « membre fantôme » en est le signe clinique : le corps vécu ne coïncide pas avec le corps objectif.
+**Merleau-Ponty** rappelle qu’on n’**a** pas un corps comme on a un objet : on **est** son corps, c’est par lui qu’on habite le monde.
+
+> D’où la violence particulière de la mutilation : ce n’est pas une possession qui se perd, c’est le **rapport au monde** qui se reconfigure. Le « membre fantôme » en est le signe clinique — le corps vécu ne coïncide pas avec le corps objectif.
 
 ## La détention
-**Foucault**, dans *Surveiller et punir* (1975), montre que la prison moderne ne vise plus le corps du supplicié mais **l'âme** : discipline, emploi du temps, surveillance continue. Il emprunte à Bentham le **panoptique** — une architecture où le détenu, sachant qu'il peut être vu à tout moment sans savoir quand, finit par se surveiller lui-même. Le pouvoir devient intérieur.
+**Foucault**, dans *Surveiller et punir* (1975), montre le déplacement de la peine.
 
-> L'enfermement ne prive pas seulement de liberté : il fabrique un type de sujet.
+| | La peine ancienne | La prison moderne |
+| Ce qu’elle vise | Le **corps** du supplicié | L’**âme** |
+| Ses moyens | Le spectacle du supplice | Discipline, emploi du temps, surveillance continue |
+| Son modèle | L’échafaud | Le **panoptique** de Bentham |
 
-## L'expérience concentrationnaire
-**Primo Levi** (*Si c'est un homme*, 1947) décrit la « démolition d'un homme » : le nom remplacé par un numéro, les cheveux, les vêtements, le langage. Le camp est une entreprise méthodique de destruction de la personne avant la destruction du corps. **Robert Antelme** (*L'Espèce humaine*, 1947) en tire la conclusion inverse et décisive : il n'existe pas plusieurs espèces humaines, et c'est précisément ce que le bourreau tentait de nier.
+Dans le panoptique, le détenu sait qu’il **peut** être vu à tout moment sans savoir **quand** : il finit par se surveiller lui-même. Le pouvoir devient **intérieur** — et c’est là son économie.
+
+## L’expérience concentrationnaire
+| Auteur | Œuvre | Ce qu’il établit |
+| **Primo Levi** | *Si c’est un homme* (1947) | La « démolition d’un homme » : le nom remplacé par un numéro, les cheveux, les vêtements, le langage |
+| **Robert Antelme** | *L’Espèce humaine* (1947) | Il n’existe **pas** plusieurs espèces humaines — et c’est précisément ce que le bourreau tentait de nier |
 
 ## Ce que ces expériences enseignent
-Que le moi n'est pas une forteresse intérieure indépendante des conditions : il tient à un corps, à un nom, à un regard. Mais aussi qu'il résiste — les témoignages existent, et écrire est déjà une reconquête.`,
+Que le moi n’est pas une forteresse intérieure indépendante des conditions : il tient à un corps, à un nom, à un regard. Mais aussi qu’il **résiste** — les témoignages existent, et écrire est déjà une reconquête.`,
           },
           questions: [
             ['Que représente le visage chez Levinas ?', ['Ce qui m’oblige, et me dit « tu ne tueras point »', 'Un simple objet de perception', 'Un masque social', 'Une image trompeuse'], 0, 'D’où la gravité particulière de la mutilation faciale.'],
@@ -458,27 +548,31 @@ Que le moi n'est pas une forteresse intérieure indépendante des conditions : i
           titre: 'La science en question',
           lecon: {
             titre: 'Ce qui fait qu’une science est une science',
-            cours: `La science jouit d'une autorité particulière : on la croit sur parole là où l'on discute tout le reste. Ce chapitre demande sur quoi repose cette autorité — et ce qu'elle ne garantit pas.
+            cours: `La science jouit d’une autorité particulière : on la croit sur parole là où l’on discute tout le reste. Ce chapitre demande sur quoi repose cette autorité — et ce qu’elle **ne garantit pas**.
 
-## Le problème de l'induction
-Aucun nombre d'observations ne prouve une loi générale : **Hume** le montre dès le XVIIIe siècle. Que le soleil se soit levé chaque jour n'implique pas qu'il se lèvera demain. Toute science empirique repose donc sur un pari.
+## Le problème de l’induction
+Aucun nombre d’observations ne prouve une loi générale : **Hume** le montre dès le XVIIIe siècle. Que le soleil se soit levé chaque jour n’implique pas qu’il se lèvera demain. Toute science empirique repose donc sur un **pari**.
 
-## Popper et la falsifiabilité
-**Karl Popper** en tire un critère de démarcation : une théorie est scientifique non parce qu'elle est vérifiable, mais parce qu'elle est **réfutable**. Une théorie qui explique tout, quel que soit le fait observé, n'est pas plus forte — elle est hors du champ scientifique. Le progrès se fait par **conjectures et réfutations** : on ne prouve jamais, on élimine.
+## Les trois réponses
+| Penseur | Sa thèse | Sa formule |
+| **Popper** | Une théorie est scientifique parce qu’elle est **réfutable**, pas vérifiable | On progresse par « conjectures et réfutations » |
+| **Kuhn** | La science ordinaire travaille dans un **paradigme** ; les anomalies s’accumulent, puis il bascule | Les paradigmes ne sont pas toujours commensurables |
+| **Bachelard** | Le savoir se construit **contre** l’expérience première | « Le fait scientifique est conquis, construit, constaté » |
 
-## Kuhn et les révolutions
-**Thomas Kuhn** (*La Structure des révolutions scientifiques*, 1962) décrit un fonctionnement moins linéaire. La science ordinaire travaille à l'intérieur d'un **paradigme** — un cadre partagé de problèmes et de méthodes. Les anomalies s'accumulent, puis un nouveau paradigme s'impose : la révolution copernicienne, la relativité. Les paradigmes successifs ne sont pas toujours commensurables : on ne voit plus les mêmes faits.
+> Trois idées à ne jamais confondre en dissertation : **réfutable** (Popper) ne veut pas dire faux ; **paradigme** (Kuhn) ne veut pas dire opinion ; **construit** (Bachelard) ne veut pas dire arbitraire.
 
-## Bachelard et l'obstacle épistémologique
-Pour **Bachelard**, la connaissance scientifique se construit **contre** l'expérience première : le sens commun n'est pas un point de départ mais un obstacle à franchir. « Le fait scientifique est conquis, construit, constaté. »
-
-> Trois idées à ne pas confondre : réfutable (Popper) ne veut pas dire faux ; paradigme (Kuhn) ne veut pas dire opinion ; construit (Bachelard) ne veut pas dire arbitraire.
+Une théorie qui explique **tout**, quel que soit le fait observé, n’est pas plus forte : elle est hors du champ scientifique.
 
 ## Ce que la science ne dit pas
-Elle établit ce qui est, non ce qui doit être. **Hume** encore : on ne déduit pas un devoir d'un fait. Une donnée climatique n'énonce aucune politique ; une possibilité technique n'énonce aucune permission. **Weber** en tirait la neutralité axiologique du savant, et l'obligation de ne pas confondre sa chaire et sa tribune.
+| Ce qu’elle établit | Ce qu’elle n’établit pas |
+| Ce qui **est** | Ce qui **doit être** |
+| Une donnée climatique | La politique à mener |
+| Une possibilité technique | La permission de l’employer |
+
+**Hume** encore : on ne déduit pas un devoir d’un fait. **Weber** en tirait la **neutralité axiologique** du savant, et l’obligation de ne pas confondre sa chaire et sa tribune.
 
 ## Les défis contemporains
-Reproductibilité en crise, expertise contestée, désinformation organisée. La réponse n'est pas de renforcer l'autorité mais d'exposer la **méthode** : ce qui distingue une science, c'est qu'elle expose ce qui pourrait la démentir.`,
+Crise de la reproductibilité, expertise contestée, désinformation organisée. La réponse n’est pas de **renforcer l’autorité** mais d’exposer la **méthode** : ce qui distingue une science, c’est qu’elle expose ce qui pourrait la démentir.`,
           },
           questions: [
             ['Quel critère Popper propose-t-il pour distinguer la science ?', ['La falsifiabilité : une théorie doit pouvoir être réfutée', 'La vérifiabilité', 'L’utilité pratique', 'Le consensus des savants'], 0, 'Une théorie qui explique tout n’est pas plus forte : elle sort du champ.'],
@@ -495,27 +589,34 @@ Reproductibilité en crise, expertise contestée, désinformation organisée. La
           titre: 'Les arts contemporains : héritages et reniements',
           lecon: {
             titre: 'Rompre avec la tradition, une tradition ?',
-            cours: `L'art du XXe siècle s'est défini contre : contre l'imitation, contre le métier, contre le musée. Reste à savoir si la rupture est un geste isolé ou devenue elle-même une norme.
+            cours: `L’art du XXe siècle s’est défini **contre** : contre l’imitation, contre le métier, contre le musée. Reste à savoir si la rupture est un geste isolé — ou devenue elle-même une norme.
 
-## La fin de l'imitation
-Depuis Aristote, l'art était **mimesis**, imitation de la nature. La photographie (1839) rend cette fonction techniquement caduque : si la machine copie mieux, l'art doit chercher ailleurs. Impressionnisme, cubisme, abstraction : le tableau cesse d'être une fenêtre pour devenir une surface.
+## La fin de l’imitation
+Depuis Aristote, l’art était **mimesis**, imitation de la nature. La **photographie** (1839) rend cette fonction techniquement caduque : si la machine copie mieux, l’art doit chercher ailleurs.
+
+| Mouvement | Ce qu’il abandonne |
+| Impressionnisme | La ligne, le fini |
+| Cubisme | Le point de vue unique |
+| Abstraction | Le sujet lui-même |
+
+Le tableau cesse d’être une **fenêtre** pour devenir une **surface**.
 
 ## Le geste de Duchamp
-En 1917, **Duchamp** présente *Fountain*, un urinoir renversé et signé. Le ready-made déplace la question : ce n'est plus le faire qui fait l'œuvre, c'est le **choix** et le contexte de présentation. Le musée devient l'opérateur — mettre un objet là suffit à en faire de l'art.
+En 1917, **Duchamp** présente *Fountain*, un urinoir renversé et signé. Le ready-made déplace la question : ce n’est plus le **faire** qui fait l’œuvre, c’est le **choix** et le contexte de présentation. Le musée devient l’opérateur.
 
-> D'où la question que le chapitre doit tenir : si l'art n'est plus défini par le savoir-faire ni par la beauté, par quoi l'est-il ?
+> D’où la question que le chapitre doit tenir jusqu’au bout : si l’art n’est plus défini par le savoir-faire ni par la beauté, **par quoi l’est-il ?**
 
-## Les réponses institutionnelles
-**Arthur Danto**, devant les *Boîtes Brillo* de Warhol (1964), constate que rien de visible ne distingue l'œuvre du produit de supermarché : la différence est **théorique**, elle tient à une interprétation et à un monde de l'art. **George Dickie** en tire une définition institutionnelle : est art ce qu'un monde de l'art traite comme tel.
-
-## Walter Benjamin
-*L'Œuvre d'art à l'époque de sa reproductibilité technique* (1935) : la reproduction fait perdre à l'œuvre son **aura**, son unicité liée à un ici et maintenant. Benjamin ne le déplore pas seulement — il y voit aussi une chance politique, l'art sortant du culte pour entrer dans l'usage.
-
-## Adorno contre Benjamin
-Adorno répond que la culture de masse ne démocratise rien : elle standardise. L'art véritable, selon lui, résiste précisément en n'étant pas immédiatement consommable.
+## Les réponses
+| Penseur | Sa réponse |
+| **Arthur Danto** | Devant les *Boîtes Brillo* de Warhol (1964), rien de **visible** ne distingue l’œuvre du produit : la différence est **théorique** |
+| **George Dickie** | Définition **institutionnelle** : est art ce qu’un monde de l’art traite comme tel |
+| **Walter Benjamin** | La reproduction fait perdre l’**aura** — mais c’est aussi une chance politique : l’art sort du culte pour entrer dans l’usage |
+| **Adorno** | La culture de masse ne démocratise pas, elle **standardise** ; l’art résiste en n’étant pas immédiatement consommable |
 
 ## La rupture comme institution
-Les avant-gardes ont fini au musée. Ce qui devait scandaliser est aujourd'hui enseigné, coté, patrimonialisé. C'est la tension à formuler dans un essai : une transgression qui devient canonique reste-t-elle une transgression ? Peut-être que la vraie continuité de l'art contemporain est celle de la **question** qu'il pose — non de la réponse qu'il donne.`,
+Les avant-gardes ont fini au **musée**. Ce qui devait scandaliser est aujourd’hui enseigné, coté, patrimonialisé.
+
+C’est la tension à formuler dans un essai : **une transgression qui devient canonique reste-t-elle une transgression ?** Peut-être que la vraie continuité de l’art contemporain est celle de la **question** qu’il pose — non de la réponse qu’il donne.`,
           },
           questions: [
             ['Que déplace le ready-made de Duchamp ?', ['Ce n’est plus le faire qui fait l’œuvre, mais le choix et le contexte', 'La technique picturale', 'Le prix des œuvres', 'La durée de conservation'], 0, '*Fountain*, 1917 : un urinoir renversé et signé.'],
@@ -532,23 +633,31 @@ Les avant-gardes ont fini au musée. Ce qui devait scandaliser est aujourd'hui e
           titre: 'La question de la pop culture',
           lecon: {
             titre: 'Culture de masse, culture légitime',
-            cours: `Séries, jeux vidéo, bandes dessinées, musiques populaires : ce que le XXe siècle a tenu pour un divertissement mineur constitue aujourd'hui l'essentiel de l'expérience culturelle. La question n'est plus de savoir si c'est de l'art, mais ce que ce déplacement change.
+            cours: `Séries, jeux vidéo, bandes dessinées, musiques populaires : ce que le XXe siècle a tenu pour un divertissement mineur constitue aujourd’hui l’**essentiel** de l’expérience culturelle. La question n’est plus de savoir si c’est de l’art, mais ce que ce déplacement change.
 
-## Le procès d'Adorno et Horkheimer
-Dans *La Dialectique de la raison* (1944), ils forgent la notion d'**industrie culturelle**. Le mot est choisi contre « culture de masse » : les masses ne produisent pas cette culture, elles la reçoivent. Trois reproches : la **standardisation** (les mêmes formes répétées sous couvert de nouveauté), la **pseudo-individualisation** (des variantes de surface qui simulent le choix), et une fonction de **distraction** qui neutralise la critique. Le divertissement, disent-ils, est la prolongation du travail.
+## Le procès d’Adorno et Horkheimer
+Dans *La Dialectique de la raison* (1944), ils forgent la notion d’**industrie culturelle** — le mot est choisi **contre** « culture de masse » : les masses ne produisent pas cette culture, elles la reçoivent.
+
+| Le reproche | Ce qu’il vise |
+| La **standardisation** | Les mêmes formes répétées sous couvert de nouveauté |
+| La **pseudo-individualisation** | Des variantes de surface qui simulent le choix |
+| La **distraction** | Elle neutralise la critique : le divertissement prolonge le travail |
 
 ## Les réponses
-- **Umberto Eco** (*Apocalittici e integrati*, 1964) refuse le partage : il n'y a pas les lucides d'un côté et les naïfs de l'autre. Il faut analyser les objets populaires avec les mêmes outils que les autres — ce qu'il fait pour James Bond ou Superman.
-- Les **cultural studies** britanniques (Hoggart, Hall) montrent que la réception n'est pas passive : Stuart Hall décrit des lectures **dominantes, négociées ou oppositionnelles** d'un même message. Le public réinterprète.
-- **Michel de Certeau** (*L'Invention du quotidien*, 1980) parle de **braconnage** : l'usager détourne, bricole, réemploie ce qui lui est donné.
+| Penseur | Ce qu’il oppose |
+| **Umberto Eco** (1964) | Il refuse le partage entre lucides et naïfs : il faut analyser James Bond avec les mêmes outils que le reste |
+| **Stuart Hall**, *cultural studies* | La réception n’est pas passive : lectures **dominantes, négociées ou oppositionnelles** d’un même message |
+| **Michel de Certeau** (1980) | Le **braconnage** : l’usager détourne, bricole, réemploie ce qui lui est donné |
 
 ## Bourdieu et la légitimité
-*La Distinction* (1979) déplace la question du contenu vers l'usage social : ce qui sépare la culture légitime de la culture populaire n'est pas une propriété des œuvres mais un **rapport de force symbolique**. Les hiérarchies culturelles reconduisent les hiérarchies sociales.
+*La Distinction* (1979) déplace la question du **contenu** vers l’**usage social** : ce qui sépare la culture légitime de la culture populaire n’est pas une propriété des œuvres mais un **rapport de force symbolique**. Les hiérarchies culturelles reconduisent les hiérarchies sociales.
 
-> Le fait décisif : les frontières bougent. Le roman, le cinéma, le jazz, la bande dessinée ont tous été des divertissements suspects avant d'être des objets d'étude.
+> Le fait décisif, et le meilleur argument du chapitre : **les frontières bougent**. Le roman, le cinéma, le jazz et la bande dessinée ont tous été des divertissements suspects avant d’être des objets d’étude.
 
-## Ce que la pop culture fait aujourd'hui
-Elle produit les **mythologies** communes — au sens de Barthes, qui analysait déjà en 1957 le catch, la DS ou le bifteck-frites comme des récits collectifs. Une série regardée par des dizaines de millions de personnes façonne des représentations de la justice, du travail, de la famille. C'est à ce titre qu'elle relève d'un examen sérieux, sans complaisance ni mépris.`,
+## Ce que la pop culture fait aujourd’hui
+Elle produit les **mythologies** communes — au sens de **Barthes**, qui analysait déjà en 1957 le catch, la DS ou le bifteck-frites comme des récits collectifs.
+
+Une série regardée par des dizaines de millions de personnes façonne des représentations de la justice, du travail, de la famille. C’est à ce titre qu’elle relève d’un examen **sérieux** : ni complaisance, ni mépris.`,
           },
           questions: [
             ['Pourquoi Adorno et Horkheimer parlent-ils d’« industrie culturelle » ?', ['Parce que les masses ne produisent pas cette culture, elles la reçoivent', 'Parce qu’elle emploie des ouvriers', 'Parce qu’elle est peu coûteuse', 'Parce qu’elle est récente'], 0, 'Le terme est choisi contre celui de « culture de masse ».'],
@@ -567,27 +676,35 @@ Elle produit les **mythologies** communes — au sens de Barthes, qui analysait 
           titre: 'La dystopie : la fin de l’utopie',
           lecon: {
             titre: 'Quand la société parfaite devient un cauchemar',
-            cours: `L'utopie et la dystopie sont le même geste retourné : décrire une société entièrement organisée. La première espère, la seconde avertit.
+            cours: `L’utopie et la dystopie sont **le même geste retourné** : décrire une société entièrement organisée. La première espère, la seconde avertit.
 
-## L'utopie
-**Thomas More** invente le mot en 1516, à partir du grec : *ou-topos*, le lieu de nulle part — avec un jeu possible sur *eu-topos*, le lieu du bonheur. L'utopie décrit une société idéale, close, réglée, sur une île ; mais son objet réel est la société de l'auteur, critiquée par contraste. Elle appartient à la même famille que *La République* de Platon, la *Cité du Soleil* de Campanella ou la *Nouvelle Atlantide* de Bacon.
+## L’utopie
+**Thomas More** invente le mot en 1516, à partir du grec : *ou-topos*, le lieu de nulle part — avec un jeu possible sur *eu-topos*, le lieu du bonheur. Elle décrit une société idéale, close, réglée, sur une île ; mais son objet **réel** est la société de l’auteur, critiquée par contraste.
 
-> Ce que l'utopie a toujours en commun : l'organisation totale. C'est cela même que la dystopie retourne contre elle.
+Même famille : *La République* de Platon, la *Cité du Soleil* de Campanella, la *Nouvelle Atlantide* de Bacon.
 
-## Le basculement du XXe siècle
-Trois romans fixent le genre :
-- **Zamiatine**, *Nous autres* (1920), matrice du genre : des numéros, des maisons de verre, l'ablation chirurgicale de l'imagination ;
-- **Huxley**, *Le Meilleur des mondes* (1932) : la servitude par le plaisir — conditionnement, castes fabriquées, *soma*. Personne ne souffre, personne n'est libre ;
-- **Orwell**, *1984* (1949) : la servitude par la terreur et par la langue. Big Brother, la police de la pensée, la **novlangue** — appauvrir le vocabulaire pour rendre la dissidence littéralement impensable — et la double-pensée, qui fait tenir ensemble deux propositions contradictoires.
+> Ce que l’utopie a toujours en commun : l’**organisation totale**. C’est cela même que la dystopie retourne contre elle.
+
+## Les trois romans qui fixent le genre
+| Œuvre | Auteur, date | Le moyen de la servitude |
+| *Nous autres* | Zamiatine, 1920 | Des numéros, des maisons de verre, l’ablation chirurgicale de l’imagination |
+| *Le Meilleur des mondes* | Huxley, 1932 | Le **plaisir** : conditionnement, castes fabriquées, *soma* |
+| *1984* | Orwell, 1949 | La **terreur** et la **langue** : Big Brother, novlangue, double-pensée |
+
+La **novlangue** est le dispositif le plus redoutable : appauvrir le vocabulaire pour rendre la dissidence littéralement **impensable**. La double-pensée fait tenir ensemble deux propositions contradictoires.
 
 ## Deux avertissements différents
-Huxley craint qu'on nous prive de liberté en nous donnant ce que nous désirons ; Orwell, qu'on nous l'arrache par la peur. Postman résumait : Orwell redoutait ceux qui interdiraient les livres, Huxley que personne n'ait plus envie d'en lire.
+| | Huxley | Orwell |
+| Ce qu’il craint | Qu’on nous prive de liberté en nous **donnant ce que nous désirons** | Qu’on nous l’**arrache par la peur** |
+| Le résumé de Postman | Que personne n’ait plus envie de lire | Que les livres soient interdits |
 
-## Pourquoi la dystopie parle de l'histoire
-Les dystopies sont écrites après ou pendant les totalitarismes : elles ne prédisent pas l'avenir, elles décrivent des mécanismes réels — le contrôle de l'information, la réécriture du passé, la fabrique du consentement. Arendt, dans *Les Origines du totalitarisme* (1951), en donne l'analyse théorique : idéologie totale, terreur, destruction de l'espace public.
+## Pourquoi la dystopie parle de l’histoire
+Les dystopies sont écrites **après ou pendant** les totalitarismes : elles ne prédisent pas l’avenir, elles décrivent des mécanismes **réels** — contrôle de l’information, réécriture du passé, fabrique du consentement.
 
-## La dystopie aujourd'hui
-Surveillance de masse, données personnelles, effondrement écologique, biotechnologies : *La Servante écarlate* d'Atwood, *Black Mirror*, les récits post-apocalyptiques. Le genre reste ce qu'il était chez More : un détour pour parler du présent.`,
+**Arendt**, dans *Les Origines du totalitarisme* (1951), en donne l’analyse théorique : idéologie totale, terreur, destruction de l’espace public.
+
+## La dystopie aujourd’hui
+Surveillance de masse, données personnelles, effondrement écologique, biotechnologies : *La Servante écarlate* d’Atwood, *Black Mirror*, les récits post-apocalyptiques. Le genre reste ce qu’il était chez More — un **détour pour parler du présent**.`,
           },
           questions: [
             ['Qui invente le mot « utopie » et en quelle année ?', ['Thomas More, en 1516', 'Platon, au IVe siècle av. J.-C.', 'Orwell, en 1949', 'Campanella, en 1602'], 0, 'Du grec *ou-topos* : le lieu de nulle part.'],
@@ -604,27 +721,44 @@ Surveillance de masse, données personnelles, effondrement écologique, biotechn
           titre: 'Violence et société',
           lecon: {
             titre: 'La violence fonde-t-elle l’ordre, ou le détruit-elle ?',
-            cours: `Toute société interdit la violence — et toute société en exerce. Cette contradiction apparente est le vrai sujet du chapitre.
+            cours: `Toute société **interdit** la violence — et toute société en **exerce**. Cette contradiction apparente est le vrai sujet du chapitre.
 
-## L'état de nature
-**Hobbes** (*Léviathan*, 1651) : sans État, c'est la « guerre de tous contre tous », et la vie y est « solitaire, misérable, dangereuse, animale et brève ». Le contrat social échange la liberté illimitée contre la sécurité. **Rousseau** conteste le diagnostic : l'homme naturel est pacifique et pitoyable ; c'est la **société**, la propriété et la comparaison qui produisent la violence.
+## L’état de nature
+| Penseur | Le diagnostic | Ce qui produit la violence |
+| **Hobbes**, *Léviathan* (1651) | « Guerre de tous contre tous » : vie « solitaire, misérable, dangereuse, animale et brève » | L’absence d’État |
+| **Rousseau** | L’homme naturel est pacifique et pitoyable | La **société**, la propriété, la comparaison |
+
+Le contrat social échange, chez Hobbes, la liberté illimitée contre la sécurité.
 
 ## Le monopole de la violence légitime
-**Max Weber** définit l'État moderne par une caractéristique unique : il revendique avec succès le **monopole de la violence physique légitime** sur un territoire. La violence n'a pas disparu, elle a été confisquée et encadrée — police, justice, armée. D'où la question critique : qu'est-ce qui rend une violence légitime, sinon celui qui la nomme ainsi ?
+**Max Weber** définit l’État moderne par une caractéristique unique : il revendique avec succès le **monopole de la violence physique légitime** sur un territoire.
 
-## La violence invisible
-**Bourdieu** appelle **violence symbolique** celle qui s'exerce avec la complicité tacite de ceux qui la subissent, parce qu'ils partagent les catégories qui la font paraître naturelle. **Galtung** parle de **violence structurelle** : des inégalités qui tuent sans qu'aucun coup soit porté.
+> La violence n’a pas disparu : elle a été **confisquée et encadrée** — police, justice, armée. D’où la question critique : qu’est-ce qui rend une violence légitime, sinon celui qui la nomme ainsi ?
 
-> Ces notions élargissent le mot « violence ». À manier avec précaution dans un essai : si tout est violence, le mot ne distingue plus rien.
+## Les violences invisibles
+| Notion | Qui la forge | Ce qu’elle désigne |
+| Violence **symbolique** | **Bourdieu** | Elle s’exerce avec la complicité tacite de ceux qui la subissent, parce qu’ils partagent les catégories qui la font paraître naturelle |
+| Violence **structurelle** | **Galtung** | Des inégalités qui tuent sans qu’aucun coup soit porté |
+
+> Ces notions **élargissent** le mot. À manier avec précaution dans un essai : si tout est violence, le mot ne distingue plus rien.
 
 ## Girard et le bouc émissaire
-**René Girard** propose un mécanisme : le **désir mimétique** (nous désirons ce que l'autre désire) engendre la rivalité, la rivalité la crise, et la crise se résout par le report de toute la violence sur une victime unique, arbitrairement désignée — le **bouc émissaire**. Le sacrifice restaure l'unité du groupe. Les mythes racontent ces meurtres du point de vue des meurtriers.
+| Étape | Ce qui se passe |
+| 1. Le **désir mimétique** | Nous désirons ce que l’autre désire |
+| 2. La **rivalité** | Le désir partagé devient conflit |
+| 3. La **crise** | La violence se généralise |
+| 4. Le **bouc émissaire** | Toute la violence est reportée sur une victime arbitrairement désignée |
+| 5. L’**unité restaurée** | Le sacrifice refait le groupe |
+
+Les mythes racontent ces meurtres **du point de vue des meurtriers** : c’est ce que Girard prétend décrypter.
 
 ## Le procès de la civilisation
-**Norbert Elias** décrit un processus de civilisation : montée de l'autocontrôle, baisse de la violence interpersonnelle. **Freud** (*Malaise dans la civilisation*, 1930) est moins rassurant : la civilisation s'obtient par le refoulement de l'agressivité, qui se retourne alors contre le sujet en culpabilité — et ressurgit dans la guerre.
+| Penseur | Sa thèse |
+| **Norbert Elias** | Un processus de civilisation : montée de l’autocontrôle, baisse de la violence interpersonnelle |
+| **Freud**, *Malaise dans la civilisation* (1930) | La civilisation s’obtient par le **refoulement** de l’agressivité, qui se retourne en culpabilité — et ressurgit dans la guerre |
 
 ## Ce qui reste à trancher
-Y a-t-il des violences justes ? Les révolutions, les résistances, la désobéissance civile posent la question sans la clore. Benjamin distingue la violence qui **fonde** le droit et celle qui le **conserve** ; Gandhi et King ont opposé une troisième voie — la non-violence organisée, qui n'est pas passivité mais stratégie.`,
+Y a-t-il des violences justes ? **Benjamin** distingue la violence qui **fonde** le droit de celle qui le **conserve**. **Gandhi** et **King** ont opposé une troisième voie — la non-violence organisée, qui n’est pas passivité mais **stratégie**.`,
           },
           questions: [
             ['Comment Hobbes décrit-il l’état de nature ?', ['Une guerre de tous contre tous', 'Un âge d’or pacifique', 'Une société égalitaire', 'Un état inconnaissable'], 0, 'La vie y est « solitaire, misérable, dangereuse, animale et brève ».'],
@@ -641,27 +775,44 @@ Y a-t-il des violences justes ? Les révolutions, les résistances, la désobéi
           titre: 'L’histoire de la psychiatrie (Foucault)',
           lecon: {
             titre: 'La folie, l’enfermement et le savoir',
-            cours: `*Histoire de la folie à l'âge classique* (1961) est la thèse de **Michel Foucault**. Son objet n'est pas la maladie mentale mais le **partage** entre raison et déraison : comment une société décide de ce qui relève de l'entendement et de ce qui n'en relève pas.
+            cours: `*Histoire de la folie à l’âge classique* (1961) est la thèse de **Michel Foucault**. Son objet n’est **pas** la maladie mentale, mais le **partage** entre raison et déraison : comment une société décide de ce qui relève de l’entendement.
 
-## La folie avant l'enfermement
-Au Moyen Âge et à la Renaissance, le fou circule. Il est inquiétant mais il parle : la « nef des fous », la place du bouffon, la folie chez Érasme (*Éloge de la folie*) et chez Shakespeare tiennent un discours que la raison n'entend pas mais ne fait pas taire.
+## Les trois âges de la folie
+| Époque | Le statut du fou | Le dispositif |
+| Moyen Âge, Renaissance | Il **circule** et il **parle** | La nef des fous, le bouffon, Érasme, Shakespeare |
+| À partir de **1656** | Il est **enfermé** et **tu** | L’**Hôpital général** de Paris |
+| Fin du XVIIIe | Il est **observé** | La psychiatrie naissante |
 
 ## Le « grand renfermement »
-Foucault date de 1656, avec la création de l'**Hôpital général** à Paris, un basculement : on enferme ensemble pauvres, oisifs, vénériens, libertins et insensés. Le critère n'est pas médical mais **social et moral** — l'incapacité de travailler. La folie est réduite au silence : ce qui était parole devient absence de raison.
+En 1656, on enferme **ensemble** pauvres, oisifs, vénériens, libertins et insensés. Le critère n’est pas médical mais **social et moral** : l’incapacité de travailler.
 
-> La thèse : la raison classique ne réfute pas la folie, elle l'exclut. Le silence de l'interné est la condition du monologue de la raison sur lui.
+> La thèse de Foucault : la raison classique ne **réfute** pas la folie, elle l’**exclut**. Le silence de l’interné est la condition du monologue de la raison sur lui.
 
 ## La naissance de la psychiatrie
-À la fin du XVIIIe siècle, **Pinel** libère les aliénés de leurs chaînes — geste fondateur devenu image d'Épinal. Foucault le relit : la libération physique s'accompagne de l'installation d'un pouvoir nouveau, celui du **regard médical**, de l'observation et du jugement moral permanent. On échange une contrainte visible contre une contrainte intériorisée.
+À la fin du XVIIIe siècle, **Pinel** libère les aliénés de leurs chaînes — geste fondateur devenu image d’Épinal. Foucault le relit :
 
-## Le prolongement : biopouvoir et discipline
-*Naissance de la clinique* (1963), *Surveiller et punir* (1975), *La Volonté de savoir* (1976) déploient la même analyse : le pouvoir moderne ne s'exerce plus principalement par l'interdiction mais par la **norme**. Il produit des savoirs, classe, mesure, corrige. Foucault parle de **biopouvoir** — un pouvoir qui prend en charge la vie, la santé, la population.
+| Ce qu’on retire | Ce qu’on installe |
+| Les chaînes | Le **regard médical** |
+| La contrainte visible | L’observation et le jugement moral permanents |
+| Une violence physique | Une contrainte **intériorisée** |
+
+## Le prolongement
+| Œuvre | Année | Ce qu’elle ajoute |
+| *Naissance de la clinique* | 1963 | Le regard médical comme savoir-pouvoir |
+| *Surveiller et punir* | 1975 | La discipline, le panoptique |
+| *La Volonté de savoir* | 1976 | Le **biopouvoir** : un pouvoir qui prend en charge la vie, la santé, la population |
+
+Le pouvoir moderne ne s’exerce plus principalement par l’**interdiction** mais par la **norme** : il produit des savoirs, classe, mesure, corrige.
 
 ## Les critiques
-Les historiens (Gauchet et Swain, Scull) ont contesté la chronologie du « grand renfermement » et la place accordée à la France. Derrida a objecté qu'on ne peut faire l'histoire de la folie **elle-même** dans le langage de la raison. Ces objections n'annulent pas la méthode : elles rappellent qu'une archéologie n'est pas une chronique.
+| Objection | Qui la porte |
+| La chronologie du « grand renfermement » est contestable | Gauchet et Swain, Scull |
+| On ne peut faire l’histoire de la folie **elle-même** dans le langage de la raison | **Derrida** |
 
-## Ce qu'il faut en retenir pour l'essai
-Foucault fournit un outil : ne jamais tenir une catégorie pour naturelle. Folie, délinquance, sexualité, normalité sont des découpages historiques, produits par des institutions et des savoirs — et donc contestables.`,
+Ces objections n’annulent pas la méthode : elles rappellent qu’une **archéologie** n’est pas une chronique.
+
+## Ce qu’il faut en retenir pour l’essai
+Foucault fournit un **outil** : ne jamais tenir une catégorie pour naturelle. Folie, délinquance, sexualité, normalité sont des **découpages historiques**, produits par des institutions et des savoirs — donc contestables.`,
           },
           questions: [
             ['Quel est l’objet réel de l’« Histoire de la folie » de Foucault ?', ['Le partage historique entre raison et déraison', 'Le traitement des maladies mentales', 'La biographie des aliénistes', 'La chimie des médicaments'], 0, 'Comment une société décide de ce qui relève de l’entendement.'],
@@ -683,24 +834,40 @@ Foucault fournit un outil : ne jamais tenir une catégorie pour naturelle. Folie
             cours: `Le désir de tout pouvoir est aussi ancien que les récits qui en avertissent. Ces récits ne condamnent pas la technique : ils posent la question du **prix**.
 
 ## Les mythes fondateurs
-**Prométhée** vole le feu aux dieux pour le donner aux hommes : la technique est un don arraché, et il est puni. **Icare** tombe pour avoir volé trop haut. **Babel** : une tour, une langue unique, la dispersion pour châtiment. **Faust**, chez Marlowe puis Goethe, vend son âme contre la connaissance et la jouissance sans limite.
+| Mythe | Le geste | Le châtiment |
+| **Prométhée** | Il vole le feu aux dieux pour les hommes | Le supplice éternel |
+| **Icare** | Il vole trop haut | La chute |
+| **Babel** | Une tour, une langue unique | La dispersion |
+| **Faust** | Il vend son âme contre la connaissance sans limite | La damnation |
 
 ## Descartes et la maîtrise
-Le *Discours de la méthode* (1637) formule le programme moderne : la science pratique doit nous rendre « comme **maîtres et possesseurs de la nature** ». Le « comme » compte : Descartes ne divinise pas l'homme, il l'assigne à une tâche. Bacon, avant lui : « on ne commande à la nature qu'en lui obéissant ».
+Le *Discours de la méthode* (1637) formule le programme moderne : la science pratique doit nous rendre « **comme** maîtres et possesseurs de la nature ».
+
+> Le « comme » compte, et c’est souvent ce qu’on oublie de citer : Descartes ne **divinise** pas l’homme, il l’assigne à une tâche. Bacon, avant lui : « on ne commande à la nature qu’en lui obéissant ».
 
 ## Frankenstein
-Mary Shelley (1818) sous-titre son roman *Le Prométhée moderne*. La faute de Victor Frankenstein n'est pas d'avoir créé — c'est d'avoir **abandonné** sa créature. Le roman déplace la question de la puissance vers la **responsabilité** : ce n'est pas la technique qui est monstrueuse, c'est le refus d'en répondre.
+**Mary Shelley** (1818) sous-titre son roman *Le Prométhée moderne*.
 
-> D'où la formule utile : la question n'est pas « peut-on ? » mais « qui répondra de ce qui arrivera ? »
+| L’idée reçue | Ce que dit le roman |
+| Victor Frankenstein est puni d’avoir **créé** | Il est puni d’avoir **abandonné** sa créature |
+| La technique est monstrueuse | C’est le **refus d’en répondre** qui l’est |
+
+D’où la formule utile en essai : la question n’est pas « **peut-on ?** » mais « **qui répondra de ce qui arrivera ?** »
 
 ## Le principe responsabilité
-**Hans Jonas** (*Le Principe responsabilité*, 1979) constate que la technique moderne a changé d'échelle : ses effets portent sur des générations qui ne peuvent ni consentir ni protester. Il propose un impératif adapté : « Agis de telle sorte que les effets de ton action soient compatibles avec la permanence d'une vie authentiquement humaine sur terre. » Il y ajoute une **heuristique de la peur** — donner plus de poids au pronostic pessimiste, parce que l'enjeu est irréversible.
+**Hans Jonas** (1979) constate que la technique moderne a changé d’**échelle** : ses effets portent sur des générations qui ne peuvent ni consentir ni protester.
 
-## Heidegger et l'arraisonnement
-Pour **Heidegger**, la technique moderne n'est pas un outil neutre : elle est une manière de dévoiler le monde qui le transforme en **fonds disponible** (*Gestell*). Le fleuve n'est plus un fleuve mais une réserve d'énergie. Ce qui est en jeu n'est pas l'usage de la technique, mais le regard qu'elle impose.
+| Son apport | Le contenu |
+| L’impératif | « Agis de telle sorte que les effets de ton action soient compatibles avec la permanence d’une vie authentiquement humaine sur terre » |
+| L’**heuristique de la peur** | Donner plus de poids au pronostic pessimiste, parce que l’enjeu est **irréversible** |
 
-## Aujourd'hui
-Géo-ingénierie, intelligence artificielle, édition du génome, conquête spatiale privée. Le fantasme de toute-puissance n'a pas disparu — il s'est déplacé de la nature vers l'humain lui-même, ce qui ouvre la question du transhumanisme et celle de la bioéthique.`,
+## Heidegger et l’arraisonnement
+Pour **Heidegger**, la technique moderne n’est pas un outil neutre : elle est une manière de dévoiler le monde qui le transforme en **fonds disponible** (*Gestell*). Le fleuve n’est plus un fleuve mais une réserve d’énergie.
+
+Ce qui est en jeu n’est pas l’**usage** de la technique, mais le **regard** qu’elle impose.
+
+## Aujourd’hui
+Géo-ingénierie, intelligence artificielle, édition du génome, conquête spatiale privée. Le fantasme de toute-puissance n’a pas disparu — il s’est **déplacé de la nature vers l’humain lui-même**, ce qui ouvre la question du transhumanisme et celle de la bioéthique.`,
           },
           questions: [
             ['Quel est le sous-titre de « Frankenstein » de Mary Shelley ?', ['Le Prométhée moderne', 'Le Docteur et le Monstre', 'La Créature', 'L’Apprenti sorcier'], 0, 'Publié en 1818, il place le mythe grec au cœur de la modernité.'],
@@ -717,27 +884,39 @@ Géo-ingénierie, intelligence artificielle, édition du génome, conquête spat
           titre: 'La conscience écologique',
           lecon: {
             titre: 'Habiter une planète que l’on abîme',
-            cours: `La crise écologique n'est pas seulement un problème technique : elle oblige à repenser ce que l'humanité est, et ce qu'elle doit aux vivants qui ne sont pas elle.
+            cours: `La crise écologique n’est pas seulement un problème technique : elle oblige à **repenser ce que l’humanité est**, et ce qu’elle doit aux vivants qui ne sont pas elle.
 
 ## La rupture conceptuelle
-Le concept d'**Anthropocène**, popularisé par Crutzen (2000), énonce que l'activité humaine est devenue une force géologique. Conséquence philosophique lourde : la distinction entre **histoire humaine** et **histoire naturelle**, qui structurait la pensée moderne, ne tient plus. **Bruno Latour** en tire l'idée que nous n'avons jamais été aussi peu séparés de la nature qu'au moment où nous croyions l'avoir dominée.
+Le concept d’**Anthropocène**, popularisé par Crutzen en 2000, énonce que l’activité humaine est devenue une **force géologique**.
+
+> Conséquence philosophique lourde : la distinction entre **histoire humaine** et **histoire naturelle**, qui structurait toute la pensée moderne, ne tient plus. **Bruno Latour** en tire l’idée que nous n’avons jamais été aussi peu séparés de la nature qu’au moment où nous croyions l’avoir dominée.
 
 ## Généalogie du problème
-Certains, avec Lynn White, ont accusé le récit biblique de la domination (« soumettez la terre ») ; d'autres la modernité cartésienne et l'économie extractive. **Descola** (*Par-delà nature et culture*, 2005) montre que le partage nature/culture est une singularité **occidentale** : d'autres sociétés le découpent autrement, sans y voir deux mondes séparés.
+| L’accusation | Ce qu’elle vise |
+| Lynn White | Le récit biblique de la domination : « soumettez la terre » |
+| La modernité cartésienne | La nature réduite à un objet mesurable |
+| L’économie extractive | La nature réduite à une ressource |
+| **Descola**, *Par-delà nature et culture* (2005) | Le partage nature / culture est une **singularité occidentale** : d’autres sociétés le découpent autrement |
 
 ## Élargir le cercle moral
-- **Hans Jonas** étend la responsabilité aux générations futures, qui ne peuvent ni consentir ni réclamer.
-- **Aldo Leopold** (*Almanach d'un comté des sables*, 1949) formule une « éthique de la terre » : est juste ce qui tend à préserver l'intégrité et la beauté de la communauté biotique.
-- **Peter Singer** étend la considération morale aux êtres **sensibles**, sur le critère de la souffrance — d'où l'antispécisme.
-- **Arne Næss** distingue une écologie **superficielle** (protéger la nature parce qu'elle nous est utile) d'une écologie **profonde** (lui reconnaître une valeur intrinsèque).
+| Penseur | Qui il inclut | Sur quel critère |
+| **Hans Jonas** | Les **générations futures** | Elles ne peuvent ni consentir ni réclamer |
+| **Aldo Leopold** (1949) | La **communauté biotique** | Est juste ce qui préserve son intégrité et sa beauté |
+| **Peter Singer** | Les êtres **sensibles** | La capacité de souffrir — d’où l’antispécisme |
+| **Arne Næss** | La nature entière | Elle a une **valeur intrinsèque** : écologie profonde contre écologie superficielle |
 
-> Toute la discussion tient dans une question : la nature vaut-elle **pour nous**, ou **en elle-même** ?
+> Toute la discussion tient dans une seule question : la nature vaut-elle **pour nous**, ou **en elle-même** ?
 
 ## Les objections
-**Luc Ferry** (*Le Nouvel Ordre écologique*, 1992) met en garde contre une écologie qui subordonnerait l'humain à un tout ; on peut aussi refuser d'accorder des droits à des entités incapables de devoirs. À l'inverse, l'écologie politique répond que la crise est d'abord une question de justice : les moins responsables en subissent les effets les plus lourds.
+| Objection | Ce qu’elle avance |
+| **Luc Ferry**, *Le Nouvel Ordre écologique* (1992) | Une écologie qui subordonne l’humain à un tout est dangereuse |
+| L’objection juridique | On ne peut accorder des **droits** à des entités incapables de **devoirs** |
+| L’écologie politique | La crise est d’abord une question de **justice** : les moins responsables en subissent les effets les plus lourds |
 
 ## Ce que la littérature apporte
-*Walden* de Thoreau, *L'Homme qui plantait des arbres* de Giono, *Le Baron perché* de Calvino, la « nature writing » contemporaine : elles ne démontrent pas, elles rendent **sensible** un rapport au monde — ce qui, dans une crise où les chiffres ne suffisent pas à faire agir, n'est pas rien.`,
+*Walden* de Thoreau, *L’Homme qui plantait des arbres* de Giono, *Le Baron perché* de Calvino, la *nature writing* contemporaine : elles ne démontrent pas, elles rendent **sensible** un rapport au monde.
+
+Dans une crise où les chiffres ne suffisent pas à faire agir, ce n’est pas rien.`,
           },
           questions: [
             ['Que désigne l’Anthropocène ?', ['L’activité humaine devenue une force géologique', 'L’ère des grands singes', 'La période d’avant l’industrie', 'Une théorie économique'], 0, 'Concept popularisé par Crutzen vers 2000.'],
@@ -754,33 +933,42 @@ Certains, avec Lynn White, ont accusé le récit biblique de la domination (« s
           titre: 'La bioéthique',
           lecon: {
             titre: 'Ce que la technique permet, ce que la loi autorise',
-            cours: `La bioéthique naît d'un écart : la médecine peut faire des choses sur lesquelles aucune tradition morale ne s'était prononcée. Elle ne consiste pas à interdire, mais à décider **au nom de quoi** on autorise.
+            cours: `La bioéthique naît d’un **écart** : la médecine peut faire des choses sur lesquelles aucune tradition morale ne s’était prononcée. Elle ne consiste pas à interdire, mais à décider **au nom de quoi** on autorise.
 
-## L'origine : les crimes et le consentement
-Le **code de Nuremberg** (1947), rédigé après le procès des médecins nazis, pose le principe cardinal : le **consentement volontaire** du sujet humain est absolument essentiel. La déclaration d'Helsinki (1964) l'étend à la recherche médicale. Toute la bioéthique moderne part de là : le corps n'est pas un matériau disponible.
+## L’origine : les crimes et le consentement
+| Texte | Date | Ce qu’il pose |
+| **Code de Nuremberg** | 1947 | Le **consentement volontaire** du sujet humain est « absolument essentiel » |
+| Déclaration d’**Helsinki** | 1964 | Il l’étend à toute la recherche médicale |
+
+Rédigé après le procès des médecins nazis, le code de Nuremberg fonde toute la bioéthique moderne sur un seul principe : **le corps n’est pas un matériau disponible**.
 
 ## Les quatre principes
-Beauchamp et Childress (1979) proposent un cadre encore employé :
-- **autonomie** (respecter la décision informée de la personne) ;
-- **bienfaisance** (agir pour son bien) ;
-- **non-malfaisance** (*primum non nocere*) ;
-- **justice** (équité dans l'accès aux soins et la répartition des ressources).
+Beauchamp et Childress (1979) proposent un cadre encore employé.
 
-Leur intérêt est aussi leur difficulté : ils **entrent en conflit**. Le débat bioéthique consiste souvent à arbitrer entre l'autonomie du patient et la bienfaisance du soignant.
+| Principe | Ce qu’il exige |
+| **Autonomie** | Respecter la décision informée de la personne |
+| **Bienfaisance** | Agir pour son bien |
+| **Non-malfaisance** | *Primum non nocere* : d’abord ne pas nuire |
+| **Justice** | L’équité dans l’accès aux soins et la répartition des ressources |
+
+> Leur intérêt est aussi leur difficulté : ils **entrent en conflit**. Le débat bioéthique consiste le plus souvent à arbitrer entre l’**autonomie** du patient et la **bienfaisance** du soignant.
 
 ## Les grands dossiers
-- **début de vie** : IVG, procréation médicalement assistée, GPA, diagnostic préimplantatoire — quel statut pour l'embryon ?
-- **fin de vie** : soins palliatifs, sédation profonde, euthanasie, suicide assisté. En France, les lois Leonetti (2005) et Claeys-Leonetti (2016) refusent l'euthanasie active mais admettent la sédation profonde et continue jusqu'au décès ;
-- **génome** : depuis **CRISPR-Cas9** (2012), l'édition génétique est devenue simple et peu coûteuse. La modification des cellules **germinales**, transmissible aux descendants, fait l'objet d'un moratoire international — franchi en 2018 par He Jiankui, condamné en Chine ;
-- **don et transplantation**, statut des données de santé, intelligence artificielle en médecine.
+| Domaine | La question ouverte | L’état du droit français |
+| **Début de vie** | Quel statut pour l’embryon ? | IVG, PMA ; GPA interdite |
+| **Fin de vie** | Jusqu’où accompagner ? | Lois **Leonetti** (2005) et **Claeys-Leonetti** (2016) : sédation profonde et continue, pas d’euthanasie active |
+| **Génome** | Modifier les cellules **germinales** ? | Moratoire international — franchi en 2018 par He Jiankui, condamné en Chine |
+| Don, données de santé, IA | Qui décide, qui contrôle ? | En construction |
 
-> Une constante : ces questions ne se résolvent pas par la science, parce que la science ne dit jamais ce qui doit être. Elles se tranchent politiquement, par délibération.
+**CRISPR-Cas9** (2012) a rendu l’édition génétique simple et peu coûteuse : c’est ce qui a fait passer la question du laboratoire au débat public.
 
 ## Dignité et transhumanisme
-Kant fournit l'argument le plus employé : la personne a une **dignité**, non un prix ; elle ne doit jamais être traitée « simplement comme un moyen ». Contre le transhumanisme, **Habermas** (*L'Avenir de la nature humaine*, 2001) objecte que programmer génétiquement un enfant rompt l'égalité entre générations : celui qui a été conçu selon un projet ne peut plus se considérer comme l'auteur unique de sa vie.
+**Kant** fournit l’argument le plus employé : la personne a une **dignité**, non un **prix** ; elle ne doit jamais être traitée « simplement comme un moyen ».
+
+**Habermas** (*L’Avenir de la nature humaine*, 2001) objecte au transhumanisme que programmer génétiquement un enfant **rompt l’égalité entre générations** : celui qui a été conçu selon un projet ne peut plus se considérer comme l’auteur unique de sa vie.
 
 ## La méthode française
-Le Comité consultatif national d'éthique (créé en 1983), les lois de bioéthique révisées périodiquement, les états généraux : le choix assumé est celui d'une éthique **délibérative et révisable**, plutôt que de principes fixés une fois pour toutes.`,
+Le **CCNE** (créé en 1983), les lois de bioéthique révisées périodiquement, les états généraux : le choix assumé est celui d’une éthique **délibérative et révisable**, plutôt que de principes fixés une fois pour toutes.`,
           },
           questions: [
             ['Quel principe le code de Nuremberg pose-t-il en 1947 ?', ['Le consentement volontaire du sujet est essentiel', 'La gratuité des soins', 'Le secret médical', 'La liberté de la recherche'], 0, 'Il est rédigé après le procès des médecins nazis.'],

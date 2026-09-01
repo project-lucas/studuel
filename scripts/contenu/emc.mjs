@@ -104,19 +104,40 @@ Le **conseil de classe** examine la scolarité de chaque élève. Le **conseil d
           titre: 'Libertés et laïcité',
           lecon: {
             titre: 'Les libertés fondamentales et la laïcité',
-            cours: `La République garantit des **libertés fondamentales**, et la laïcité est la condition qui permet à toutes de coexister.
+            cours: `La République garantit des libertés fondamentales, et la laïcité est la condition qui permet à toutes de coexister.
 
 ## Les grandes libertés
-Liberté de **conscience** (croire ou ne pas croire), d'**expression**, de **réunion**, d'**association**, de la **presse**, d'**aller et venir**. Elles sont inscrites dans la Déclaration des droits de l'homme et du citoyen de 1789 et dans la Constitution.
+| La liberté | Ce qu'elle permet |
+| De **conscience** | Croire, ou ne pas croire |
+| D'**expression** | Dire et publier ce que l'on pense |
+| De **réunion** | Se rassembler |
+| D'**association** | Créer un groupe organisé |
+| De la **presse** | Informer librement |
+| D'**aller et venir** | Se déplacer |
+
+Elles sont inscrites dans la **Déclaration des droits de l'homme et du citoyen de 1789** et dans la Constitution.
 
 ## Aucune liberté n'est illimitée
-« La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui » (article 4 de la DDHC de 1789). L'injure, la diffamation, l'appel à la haine et l'apologie du terrorisme ne sont pas des opinions : ce sont des délits.
+> « La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui. » — article 4 de la DDHC.
+
+| Ce qui n'est pas une opinion | Ce que c'est |
+| L'**injure** | Un délit |
+| La **diffamation** | Un délit |
+| L'appel à la **haine** | Un délit |
+| L'**apologie du terrorisme** | Un délit |
 
 ## La laïcité
-Posée par la **loi de 1905** de séparation des Églises et de l'État. Elle repose sur trois piliers : liberté de conscience, séparation des institutions et des cultes, égalité de tous devant la loi. L'État ne finance ni ne salarie aucun culte.
+Posée par la **loi de 1905** de séparation des Églises et de l'État.
+
+| Le pilier | Son contenu |
+| La **liberté de conscience** | Chacun croit ou ne croit pas |
+| La **séparation** | L'État ne finance ni ne salarie aucun culte |
+| L'**égalité** | Tous égaux devant la loi, quelles que soient leurs convictions |
 
 ## La laïcité à l'école
-La loi de 2004 interdit le port de signes religieux ostensibles dans les écoles, collèges et lycées publics. L'école doit rester un espace neutre où l'on apprend, pas un lieu de pression.`,
+La **loi de 2004** interdit le port de signes religieux **ostensibles** dans les écoles, collèges et lycées publics.
+
+> L'école doit rester un espace **neutre** où l'on apprend, pas un lieu de pression.`,
           },
           questions: [
             ['Quelle loi fonde la laïcité en France ?', ['La loi de 1905', 'La loi de 1789', 'La loi de 1958', 'La loi de 2004'], 0, 'La loi du 9 décembre 1905 sépare les Églises et l’État.'],
@@ -136,16 +157,28 @@ La loi de 2004 interdit le port de signes religieux ostensibles dans les écoles
             cours: `La justice tranche les conflits et sanctionne les infractions, selon des règles connues d'avance.
 
 ## Deux grandes justices
-La justice **civile** règle les conflits entre particuliers (un loyer impayé, un divorce). La justice **pénale** juge les infractions et punit.
+| La justice | Ce qu'elle traite | Un exemple |
+| **Civile** | Les conflits entre particuliers | Un loyer impayé, un divorce |
+| **Pénale** | Les infractions, et leur punition | Un vol, des violences |
 
 ## Les trois niveaux d'infraction
-La **contravention** (la moins grave, jugée au tribunal de police), le **délit** (vol, violences — tribunal correctionnel), le **crime** (meurtre, viol — cour d'assises, avec un jury populaire).
+| L'infraction | Sa gravité | Le tribunal |
+| La **contravention** | La moins grave | Le tribunal de **police** |
+| Le **délit** | Vol, violences | Le tribunal **correctionnel** |
+| Le **crime** | Meurtre, viol | La **cour d'assises**, avec un jury populaire |
 
 ## Les grands principes
-**Présomption d'innocence** : on est innocent tant qu'on n'est pas jugé coupable. Droit à un **avocat**. Droit de faire **appel**. Le procès est **public** et **contradictoire** (chacun peut répondre).
+| Le principe | Ce qu'il garantit |
+| La **présomption d'innocence** | On est innocent tant qu'on n'est pas jugé coupable |
+| Le droit à un **avocat** | Personne n'est seul face à la justice |
+| Le droit de faire **appel** | Une décision peut être réexaminée |
+| Un procès **public** et **contradictoire** | Chacun peut répondre à ce qui lui est reproché |
 
 ## La justice des mineurs
-Elle est spécifique : elle privilégie l'éducation sur la punition. Le juge des enfants suit le mineur. La responsabilité pénale peut être engagée dès 13 ans, avec des peines réduites.`,
+| Le point | Sa règle |
+| Sa priorité | L'**éducation** plutôt que la punition |
+| Son juge | Le **juge des enfants**, qui suit le mineur |
+| L'âge de la responsabilité pénale | Dès **13 ans**, avec des peines réduites |`,
           },
           questions: [
             ['Quelle juridiction juge les crimes ?', ['La cour d’assises', 'Le tribunal de police', 'Le tribunal correctionnel', 'Le conseil de prud’hommes'], 0, 'Elle comprend un jury populaire tiré au sort.'],
@@ -165,16 +198,38 @@ Elle est spécifique : elle privilégie l'éducation sur la punition. Le juge de
             cours: `La citoyenneté n'est pas seulement un statut : c'est une pratique.
 
 ## Nationalité et citoyenneté
-La **nationalité** est un lien juridique avec un État. La **citoyenneté** ajoute des droits politiques : voter, être élu. On devient français par filiation (droit du sang), par naissance et résidence en France (droit du sol), ou par naturalisation.
+| Le terme | Ce qu'il désigne |
+| La **nationalité** | Un lien juridique avec un État |
+| La **citoyenneté** | Elle y ajoute des **droits politiques** : voter, être élu |
+
+| La voie d'accès à la nationalité | Son principe |
+| Le **droit du sang** | Par filiation |
+| Le **droit du sol** | Naissance et résidence en France |
+| La **naturalisation** | Par décision, sous conditions |
 
 ## Le droit de vote
-Universel (tous les majeurs), **égal** (une personne, une voix), **secret**. Voter à 18 ans suppose d'être inscrit sur les listes électorales. Les citoyens de l'Union européenne votent en France aux élections municipales et européennes.
+| Son caractère | Ce qu'il signifie |
+| **Universel** | Tous les majeurs |
+| **Égal** | Une personne, une voix |
+| **Secret** | Personne ne sait pour qui l'on vote |
+
+Voter à 18 ans suppose d'être **inscrit sur les listes électorales**. Les citoyens de l'Union européenne votent en France aux **municipales** et aux **européennes**.
 
 ## Les devoirs du citoyen
-Respecter la loi, payer l'impôt, être juré si on est tiré au sort, participer à la **Journée défense et citoyenneté** (JDC) après le recensement à 16 ans.
+| Le devoir | Son contenu |
+| Respecter la **loi** | La même pour tous |
+| Payer l'**impôt** | Il finance les services publics |
+| Être **juré** | Si l'on est tiré au sort |
+| La **JDC** | Après le recensement à 16 ans |
 
-## S'engager
-On peut agir sans attendre 18 ans : délégué de classe, association, service civique (dès 16 ans), don du sang, sapeur-pompier volontaire. La démocratie tient aussi à ceux qui s'engagent entre deux élections.`,
+## S'engager avant 18 ans
+| L'engagement | Son âge |
+| Délégué de classe | Dès la 6e |
+| Association | À tout âge |
+| **Service civique** | Dès **16 ans** |
+| Sapeur-pompier volontaire | Dès 16 ans, comme jeune sapeur-pompier |
+
+> La démocratie tient aussi à ceux qui s'engagent **entre** deux élections.`,
           },
           questions: [
             ['À quel âge se fait le recensement citoyen ?', ['16 ans', '15 ans', '18 ans', '14 ans'], 0, 'Il ouvre la voie à la Journée défense et citoyenneté.'],
@@ -196,19 +251,40 @@ On peut agir sans attendre 18 ans : délégué de classe, association, service c
           titre: 'La liberté d’expression et ses limites',
           lecon: {
             titre: 'Jusqu’où va la liberté d’expression ?',
-            cours: `La liberté d'expression est une liberté fondamentale — et une liberté encadrée.
+            cours: `La liberté d’expression est une liberté fondamentale — et une liberté encadrée. Toute la matière du chapitre tient dans une seule question : où passe la ligne entre l’opinion et l’infraction ?
 
 ## Un socle juridique
-Article 11 de la DDHC (1789), article 10 de la Convention européenne des droits de l'homme, **loi du 29 juillet 1881** sur la liberté de la presse. Le principe : la parole est libre, la sanction vient après, et seulement pour des abus définis par la loi.
+Trois textes fondent le régime français, et tous les trois disent la même chose : la parole est libre AVANT, la sanction vient APRÈS, et seulement pour des abus définis par la loi.
+
+| Texte | Date | Ce qu’il pose |
+| Article 11 de la DDHC | 1789 | La libre communication des pensées est un droit précieux |
+| Loi sur la liberté de la presse | 29 juillet 1881 | Pas de censure préalable, mais une liste fermée de délits |
+| Article 10 de la CEDH | 1950 | La liberté d’expression et ses restrictions nécessaires |
+
+> La censure préalable est interdite : c’est le **juge**, jamais l’administration, qui sanctionne un abus — et toujours après la publication.
 
 ## Ce que la loi interdit
-La **diffamation** (imputer un fait qui porte atteinte à l'honneur), l'**injure**, l'**incitation à la haine** raciale ou religieuse, l'**apologie du terrorisme**, la **négation** de crimes contre l'humanité. Ce ne sont pas des opinions : ce sont des infractions.
+Ces cinq abus ne sont pas des opinions minoritaires ou choquantes : ce sont des **infractions** définies par le code pénal.
+
+| Infraction | Ce qu’elle vise |
+| Diffamation | Imputer un fait précis qui porte atteinte à l’honneur |
+| Injure | Une expression outrageante sans imputation de fait |
+| Incitation à la haine | Provoquer à la haine raciale, religieuse ou sexuelle |
+| Apologie du terrorisme | Présenter un acte terroriste comme légitime |
+| Négationnisme | Contester l’existence de crimes contre l’humanité |
+
+## Le test à appliquer
+Devant un propos, la question n’est jamais « est-ce que je suis d’accord ? » mais :
+
+1. Est-ce un **jugement** sur des idées, une œuvre, une politique ? → c’est une opinion, elle est libre, même blessante.
+2. Est-ce un **fait précis et vérifiable** imputé à quelqu’un, qui l’atteint dans son honneur ? → diffamation possible.
+3. Est-ce un **appel** à s’en prendre à un groupe pour ce qu’il est ? → incitation à la haine, l’infraction est constituée.
 
 ## Le cas du numérique
-En ligne, la portée change tout : un message atteint des milliers de personnes en quelques heures et laisse une trace durable. La loi s'y applique intégralement. Le **cyberharcèlement** est un délit aggravé.
+En ligne, la portée change tout : un message atteint des milliers de personnes en quelques heures et laisse une trace durable et indexée. La loi s’y applique **intégralement** — publier n’est pas discuter. Le **cyberharcèlement** est un délit aggravé, y compris quand chaque message pris isolément semble anodin : c’est la répétition, ou la meute, qui constitue l’infraction.
 
 ## Le débat démocratique
-Une démocratie suppose que l'on puisse critiquer le pouvoir, caricaturer, se tromper. La censure préalable est interdite : c'est le juge, pas l'administration, qui sanctionne les abus.`,
+Une démocratie suppose que l’on puisse critiquer le pouvoir, caricaturer, se tromper. Restreindre la parole au nom du confort de chacun reviendrait à supprimer le désaccord, c’est-à-dire la politique elle-même.`,
           },
           questions: [
             ['Quelle loi fondatrice encadre la liberté de la presse en France ?', ['La loi du 29 juillet 1881', 'La loi de 1905', 'La loi de 2004', 'La loi de 1958'], 0, 'Elle pose la liberté de publier et définit les abus punissables.'],
@@ -225,19 +301,37 @@ Une démocratie suppose que l'on puisse critiquer le pouvoir, caricaturer, se tr
           titre: 'Démocratie et État de droit',
           lecon: {
             titre: 'Ce qui fait tenir une démocratie',
-            cours: `Une démocratie ne se réduit pas au vote : elle suppose un **État de droit**.
+            cours: `Une démocratie ne se réduit pas au vote : une majorité élue qui pourrait tout faire ne serait pas une démocratie. Ce qui la tient, c’est l’**État de droit** — l’idée que le pouvoir lui-même obéit à des règles.
 
 ## La séparation des pouvoirs
-Montesquieu, *De l'esprit des lois* (1748) : le **législatif** (Parlement) fait la loi, l'**exécutif** (Président, gouvernement) l'applique, le **judiciaire** la fait respecter. Aucun ne doit absorber les autres.
+Montesquieu, *De l’esprit des lois* (1748) : aucun des trois pouvoirs ne doit absorber les autres.
+
+| Pouvoir | Qui l’exerce | Ce qu’il fait |
+| Législatif | Le Parlement | Vote la loi et le budget |
+| Exécutif | Président et gouvernement | Applique la loi, conduit la politique |
+| Judiciaire | Les juges | Fait respecter la loi, tranche les litiges |
 
 ## La hiérarchie des normes
-Au sommet, la **Constitution** ; en dessous, les traités internationaux, la loi, les règlements. Le **Conseil constitutionnel** vérifie qu'une loi respecte la Constitution, y compris après son entrée en vigueur (question prioritaire de constitutionnalité, depuis 2010).
+Une norme ne vaut que si elle respecte celles du dessus. La pyramide se lit du sommet vers la base :
+
+1. La **Constitution** (1958) et le bloc de constitutionnalité — DDHC comprise.
+2. Les **traités internationaux** ratifiés, dont le droit de l’Union européenne.
+3. La **loi**, votée par le Parlement.
+4. Les **règlements** : décrets, arrêtés, pris par l’exécutif.
+
+> Le **Conseil constitutionnel** vérifie qu’une loi respecte la Constitution — et depuis 2010, il peut le faire même APRÈS son entrée en vigueur, sur renvoi d’un justiciable : c’est la question prioritaire de constitutionnalité.
 
 ## Les contre-pouvoirs
-Une presse indépendante, une justice indépendante, des associations, des syndicats, des autorités indépendantes (Défenseur des droits, CNIL). Sans eux, la majorité pourrait tout.
+Ils n’appartiennent à aucun des trois pouvoirs, et c’est précisément leur fonction : rendre le pouvoir contestable.
+
+| Contre-pouvoir | Ce qu’il rend possible |
+| Presse indépendante | Révéler ce que le pouvoir tait |
+| Justice indépendante | Juger sans consigne de l’exécutif |
+| Associations et syndicats | Organiser la contestation collective |
+| Autorités indépendantes | Défenseur des droits, CNIL : contrôler l’administration |
 
 ## Les fragilités
-Abstention, défiance, désinformation, concentration des médias : la démocratie n'est jamais acquise, elle s'entretient.`,
+Abstention, défiance, désinformation, concentration des médias entre quelques mains : aucune de ces menaces ne se présente comme un coup d’État. La démocratie ne s’effondre pas, elle s’érode — elle n’est jamais acquise, elle s’entretient.`,
           },
           questions: [
             ['Qui a théorisé la séparation des pouvoirs ?', ['Montesquieu', 'Rousseau', 'Voltaire', 'Napoléon'], 0, 'Dans *De l’esprit des lois*, en 1748.'],
@@ -254,19 +348,35 @@ Abstention, défiance, désinformation, concentration des médias : la démocrat
           titre: 'Enjeux du numérique et de l’information',
           lecon: {
             titre: 'S’informer et se protéger en ligne',
-            cours: `Le numérique a rendu chaque citoyen à la fois lecteur, auteur et donnée.
+            cours: `Le numérique a fait de chaque citoyen trois choses à la fois : un lecteur, un auteur, et une **donnée**. Les trois demandent des réflexes différents.
 
 ## Les données personnelles
-Le **RGPD** (2018) donne des droits : être informé, accéder à ses données, les rectifier, les effacer (droit à l'oubli), s'opposer. En France, la **CNIL** veille à leur application.
+Le **RGPD** (2018) ne se contente pas d’interdire : il donne cinq droits que l’on peut exercer, gratuitement, auprès de n’importe quelle plateforme.
 
-## L'économie de l'attention
-Les plateformes gagnent de l'argent au temps passé. Leurs algorithmes mettent en avant ce qui fait réagir — pas ce qui est vrai. D'où les **bulles de filtre** : chacun voit un monde confirmant ce qu'il pense déjà.
+| Droit | Ce que je peux exiger |
+| Information | Savoir quelles données sont collectées, et pourquoi |
+| Accès | Obtenir une copie de tout ce qui est détenu sur moi |
+| Rectification | Faire corriger une donnée fausse |
+| Effacement | Le droit à l’oubli : faire supprimer mes données |
+| Opposition | Refuser un traitement, dont la prospection |
+
+En France, la **CNIL** veille à leur application et peut sanctionner — les amendes se comptent en centaines de millions d’euros.
+
+## L’économie de l’attention
+Les plateformes ne vendent pas un service : elles vendent du **temps de cerveau** à des annonceurs. Leurs algorithmes mettent donc en avant ce qui fait réagir, pas ce qui est vrai — l’indignation retient mieux que la nuance. D’où les **bulles de filtre** : chacun finit par voir un monde qui confirme ce qu’il pense déjà, et croit que tout le monde pense comme lui.
+
+> Une information qui provoque une émotion forte est un signal d’**alerte**, pas une preuve. C’est même souvent le signe qu’elle a été fabriquée pour circuler.
 
 ## Vérifier une information
-Quatre réflexes : identifier la **source**, chercher la **date**, croiser avec **deux autres médias**, faire une **recherche d'image inversée**. Une émotion forte est un signal d'alerte, pas une preuve.
+Quatre réflexes, dans cet ordre, avant tout partage :
+
+1. Identifier la **source** : qui publie, avec quel intérêt, sous quelle responsabilité ?
+2. Chercher la **date** : une information vraie mais ancienne, ressortie hors contexte, est une désinformation.
+3. Croiser avec **deux autres médias** indépendants du premier.
+4. Faire une **recherche d’image inversée** : la photo illustre-t-elle vraiment cet événement ?
 
 ## Identité numérique
-Ce qu'on publie laisse une trace durable et consultable. Le droit à l'image protège chacun : publier la photo d'une personne sans son accord est une atteinte à la vie privée.`,
+Ce qu’on publie laisse une trace durable, indexée et consultable — par un recruteur comme par n’importe qui. Le **droit à l’image** protège chacun : publier la photo d’une personne identifiable sans son accord est une atteinte à la vie privée, même si la photo est flatteuse et même entre amis.`,
           },
           questions: [
             ['Que garantit le RGPD ?', ['Des droits sur ses données personnelles', 'La gratuité d’internet', 'La liberté de la presse', 'Le droit d’auteur'], 0, 'Information, accès, rectification, effacement, opposition.'],

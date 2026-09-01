@@ -16,19 +16,32 @@ export default {
           titre: 'Imaginaires : le gothique et le fantastique',
           lecon: {
             titre: 'From Gothic to Science Fiction',
-            cours: `Le roman gothique anglais invente une grammaire de la peur dont notre culture vit encore.
+            cours: `Le roman gothique anglais invente une grammaire de la peur dont notre culture vit encore — du film d’horreur à la science-fiction.
 
 ## The Gothic novel
-Né avec *The Castle of Otranto* d'Horace Walpole (1764), le genre installe ses motifs : le château, le souterrain, le portrait animé, le manuscrit retrouvé, la malédiction familiale. Ann Radcliffe y ajoute le **suspense** et l'explication rationnelle finale.
+Né avec *The Castle of Otranto* d’**Horace Walpole** (1764), le genre installe des motifs qui se reconnaissent au premier regard.
+
+| Motif | Ce qu’il produit |
+| Le château, le souterrain | L’espace clos dont on ne sort pas |
+| Le portrait animé | Le passé qui revient |
+| Le manuscrit retrouvé | Un récit dont on ne peut vérifier l’origine |
+| La malédiction familiale | La faute qui se transmet |
+
+**Ann Radcliffe** y ajoute le **suspense** et l’explication rationnelle finale : la peur y est un effet, pas une croyance.
 
 ## Frankenstein
-**Mary Shelley**, *Frankenstein, or The Modern Prometheus* (1818), déplace la peur : le monstre n'est plus surnaturel, il est **fabriqué par la science**. Le roman pose une question toujours actuelle — le créateur est-il responsable de sa créature ?
+**Mary Shelley**, *Frankenstein, or The Modern Prometheus* (1818), déplace la peur : le monstre n’est plus surnaturel, il est **fabriqué par la science**.
+
+> Le roman pose une question toujours actuelle : le créateur est-il responsable de sa créature ? Le monstre de Shelley ne naît pas mauvais — il le devient d’être abandonné.
 
 ## Doubles and monsters
-*Strange Case of Dr Jekyll and Mr Hyde* (Stevenson, 1886) et *The Picture of Dorian Gray* (Wilde, 1890) explorent le **double** : la respectabilité victorienne et sa face cachée. *Dracula* (Bram Stoker, 1897) mêle peur de l'étranger, de la contagion et du désir.
+| Œuvre | Auteur, date | Ce que le monstre révèle |
+| *Dr Jekyll and Mr Hyde* | Stevenson, 1886 | La face cachée de la respectabilité victorienne |
+| *The Picture of Dorian Gray* | Wilde, 1890 | Le portrait vieillit à la place de l’homme |
+| *Dracula* | Bram Stoker, 1897 | Peur de l’étranger, de la contagion et du désir |
 
 ## Key vocabulary
-*uncanny* (inquiétante étrangeté), *dread* (effroi), *haunted* (hanté), *supernatural*, *foreshadowing* (annonce d'un événement futur), *unreliable narrator* (narrateur non fiable).`,
+*uncanny* (inquiétante étrangeté), *dread* (effroi), *haunted* (hanté), *supernatural*, *foreshadowing* (annonce d’un événement futur), *unreliable narrator* (narrateur non fiable).`,
           },
           questions: [
             ['Qui a écrit *Frankenstein* ?', ['Mary Shelley', 'Bram Stoker', 'Emily Brontë', 'Ann Radcliffe'], 0, 'Publié en 1818, sous-titré *The Modern Prometheus*.'],
@@ -45,16 +58,25 @@ Né avec *The Castle of Otranto* d'Horace Walpole (1764), le genre installe ses 
           titre: 'Rencontres et société victorienne',
           lecon: {
             titre: 'Love, class and money in the 19th century',
-            cours: `Le roman anglais du XIXe siècle raconte des mariages — et derrière eux, une économie.
+            cours: `Le roman anglais du XIXe siècle raconte des mariages — et derrière eux, une **économie**. Lire ces romans sans voir l’argent, c’est n’en lire que la moitié.
 
 ## Jane Austen
-*Pride and Prejudice* (1813) s'ouvre sur une ironie devenue célèbre : « It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife. » Le mariage y est un marché autant qu'un sentiment, et l'ironie du narrateur en est l'instrument critique.
+*Pride and Prejudice* (1813) s’ouvre sur une ironie devenue célèbre : une vérité universellement reconnue veut qu’un célibataire pourvu d’une belle fortune doive chercher une épouse.
+
+Le mariage y est un **marché** autant qu’un sentiment, et l’ironie du narrateur en est l’instrument critique : elle dit le contraire de ce qu’elle affirme, et laisse au lecteur le soin de conclure.
 
 ## The Brontë sisters
-*Jane Eyre* (Charlotte, 1847) donne la parole à une héroïne pauvre qui exige d'être traitée en égale. *Wuthering Heights* (Emily, 1847) brise la linéarité du récit et fait du désir une force destructrice.
+| Œuvre | Autrice, date | Ce qu’elle brise |
+| *Jane Eyre* | Charlotte, 1847 | Une héroïne pauvre exige d’être traitée en égale |
+| *Wuthering Heights* | Emily, 1847 | La linéarité du récit, et la morale du désir |
 
 ## Dickens and social criticism
-*Oliver Twist*, *Hard Times*, *Great Expectations* : Dickens décrit le travail des enfants, les workhouses, la ville industrielle. Publiés en **feuilletons**, ses romans touchent un public immense et pèsent sur l'opinion.
+| Roman | Ce qu’il met en accusation |
+| *Oliver Twist* | Les workhouses et le sort des orphelins |
+| *Hard Times* | La ville industrielle et l’utilitarisme |
+| *Great Expectations* | L’argent qui fabrique un gentleman |
+
+> Publiés en **feuilletons**, ces romans touchent un public immense et pèsent réellement sur l’opinion : la forme de publication fait partie de l’efficacité politique du texte.
 
 ## Key notions
 *social class*, *gentry*, *inheritance* (héritage), *entail* (substitution successorale qui prive les filles), *irony*, *free indirect speech* (discours indirect libre), *serialisation*.`,
@@ -74,19 +96,35 @@ Né avec *The Castle of Otranto* d'Horace Walpole (1764), le genre installe ses 
           titre: 'Méthode : commenter un texte en anglais',
           lecon: {
             titre: 'Analysing a text and writing an essay',
-            cours: `L'épreuve valorise autant la **langue** que la **méthode**.
+            cours: `L’épreuve valorise autant la **langue** que la **méthode** — et la méthode se réduit à trois questions posées dans l’ordre.
 
 ## Reading the text
-Repérer d'abord : *genre* (extract of a novel, poem, article, speech), *narrator* (first/third person), *setting* (time and place), *tone* (ironic, nostalgic, satirical), *structure* (turning point).
+Avant d’écrire une ligne, repérer cinq choses :
+
+| Ce qu’on repère | Les possibilités |
+| *Genre* | Extract of a novel, poem, article, speech |
+| *Narrator* | First person, third person, omniscient |
+| *Setting* | Time and place |
+| *Tone* | Ironic, nostalgic, satirical, detached |
+| *Structure* | Où se trouve le turning point |
 
 ## Building an analysis
-Une analyse suit toujours trois temps : **what** (ce que dit le texte), **how** (par quels moyens : lexical field, imagery, rhythm, contrast), **why** (l'effet produit et l'intention). Sauter le « how », c'est faire un résumé.
+| Étape | La question | Ce qu’on y met |
+| **What** | Que dit le texte ? | Le contenu, brièvement |
+| **How** | Par quels moyens ? | Lexical field, imagery, rhythm, contrast |
+| **Why** | Pour quel effet ? | L’intention et ce qu’elle produit sur le lecteur |
+
+> Sauter le **how**, c’est faire un résumé. C’est l’erreur la plus fréquente, et celle qui plafonne le plus vite une copie.
 
 ## Useful phrases
-*The text deals with…* / *The author suggests that…* / *This is emphasised by…* / *In contrast with…* / *It could be argued that…* / *This echoes…* / *To sum up…*
+*The text deals with…* · *The author suggests that…* · *This is emphasised by…* · *In contrast with…* · *It could be argued that…* · *This echoes…* · *To sum up…*
 
 ## Common mistakes
-Traduire mot à mot depuis le français ; confondre *author* et *narrator* ; raconter l'intrait au lieu de l'analyser ; oublier de citer. Une citation en anglais doit être exacte, courte et entre guillemets.`,
+| L’erreur | Ce qu’il faut faire |
+| Traduire mot à mot depuis le français | Penser directement en anglais, quitte à simplifier |
+| Confondre *author* et *narrator* | Le narrateur est une construction de l’auteur |
+| Raconter l’extrait | L’analyser : what, how, why |
+| Oublier de citer | Une citation exacte, courte, entre guillemets |`,
           },
           questions: [
             ['Quels sont les trois temps d’une analyse de texte ?', ['What, how, why', 'Who, where, when', 'Read, write, check', 'Introduction, plan, conclusion'], 0, 'Sauter le « how » revient à faire un résumé.'],
@@ -108,19 +146,33 @@ Traduire mot à mot depuis le français ; confondre *author* et *narrator* ; rac
           titre: 'Expression et construction de soi',
           lecon: {
             titre: 'Voices, identity and the self',
-            cours: `Écrire « je » en anglais, c'est aussi revendiquer une place.
+            cours: `Écrire « je » en anglais, c’est aussi revendiquer une place. Le chapitre suit cette voix depuis la fondation américaine jusqu’aux tribunes contemporaines.
 
 ## The American self
-Walt Whitman, *Song of Myself* (1855), invente une voix qui embrasse la nation entière. Emerson et Thoreau (*Walden*, 1854) fondent le **self-reliance** : compter sur soi, se retirer pour se retrouver. Le rêve américain se dit d'abord à la première personne.
+| Auteur | Œuvre | Ce qu’il fonde |
+| **Walt Whitman** | *Song of Myself* (1855) | Une voix qui embrasse la nation entière |
+| **Emerson** | *Self-Reliance* (1841) | Compter sur soi comme principe |
+| **Thoreau** | *Walden* (1854) | Se retirer pour se retrouver |
+
+Le rêve américain se dit d’abord à la première personne — et c’est ce qui rend possible sa contestation, elle aussi personnelle.
 
 ## Voices from the margins
-La *Harlem Renaissance* des années 1920 (Langston Hughes, Zora Neale Hurston) donne une voix littéraire à l'Amérique noire. Maya Angelou (*I Know Why the Caged Bird Sings*, 1969) et Toni Morrison (*Beloved*, 1987, prix Nobel 1993) font du récit de soi un acte politique.
+| Auteur | Œuvre | L’enjeu |
+| **Langston Hughes** | *Harlem Renaissance*, années 1920 | Une voix littéraire pour l’Amérique noire |
+| **Zora Neale Hurston** | *Their Eyes Were Watching God* (1937) | La langue vernaculaire comme littérature |
+| **Maya Angelou** | *I Know Why the Caged Bird Sings* (1969) | Le récit de soi comme survie |
+| **Toni Morrison** | *Beloved* (1987), Nobel 1993 | La mémoire de l’esclavage, portée par un roman |
+
+> Chez ces auteurs, le récit de soi n’est pas un genre intime : c’est un **acte politique**. Dire « je » quand on vous a refusé ce droit, c’est déjà une prise de position.
 
 ## Speeches that shaped history
-Martin Luther King, *I Have a Dream* (1963) : anaphore, rythme du prêche, appel aux textes fondateurs. Obama, Malala Yousafzai à l'ONU (2013) : la construction de soi passe par la prise de parole publique.
+| Discours | Date | Les procédés à repérer |
+| **Martin Luther King**, *I Have a Dream* | 1963 | Anaphore, rythme du prêche, appel aux textes fondateurs |
+| **Barack Obama**, discours de campagne | 2008 | Récit personnel adossé au récit national |
+| **Malala Yousafzai**, à l’ONU | 2013 | Le témoignage comme autorité |
 
 ## Key notions
-*identity*, *self-reliance*, *coming of age*, *empowerment*, *voice*, *memoir*, *testimony*, *double consciousness* (W. E. B. Du Bois).`,
+*identity*, *self-reliance*, *coming of age*, *empowerment*, *voice*, *memoir*, *testimony*, et le *double consciousness* de **W. E. B. Du Bois** — se voir toujours à travers le regard de l’autre.`,
           },
           questions: [
             ['Qui a écrit *Song of Myself* ?', ['Walt Whitman', 'Ralph Waldo Emerson', 'Henry David Thoreau', 'Langston Hughes'], 0, 'Publié en 1855 dans *Leaves of Grass*.'],
@@ -137,16 +189,30 @@ Martin Luther King, *I Have a Dream* (1963) : anaphore, rythme du prêche, appel
           titre: 'Voyages, territoires, frontières',
           lecon: {
             titre: 'Migration, empire and borders',
-            cours: `Le monde anglophone s'est construit par déplacements — choisis ou imposés.
+            cours: `Le monde anglophone s’est construit par **déplacements** — choisis ou imposés. Le chapitre suit ces trois mouvements : l’empire, la migration, la frontière.
 
 ## Empire and colonisation
-À son apogée, l'Empire britannique couvre un quart des terres émergées. *The Sun Never Sets on the British Empire*. La littérature postcoloniale (Chinua Achebe, *Things Fall Apart*, 1958 ; Salman Rushdie ; Jhumpa Lahiri) réécrit ce récit depuis l'autre rive.
+À son apogée, l’Empire britannique couvre un **quart des terres émergées** : *the sun never sets on the British Empire*. La littérature postcoloniale réécrit ce récit depuis l’autre rive.
+
+| Auteur | Œuvre | Le déplacement du regard |
+| **Chinua Achebe** | *Things Fall Apart* (1958) | L’arrivée des colons vue du village igbo |
+| **Salman Rushdie** | *Midnight’s Children* (1981) | L’indépendance indienne racontée de l’intérieur |
+| **Jhumpa Lahiri** | *The Namesake* (2003) | La deuxième génération, entre deux appartenances |
 
 ## Migration to America
-*Ellis Island* accueille plus de 12 millions de migrants entre 1892 et 1954. Le *melting pot* raconte l'assimilation ; le *salad bowl* lui oppose une image où chacun garde sa saveur. Les deux métaphores s'affrontent encore dans le débat américain.
+**Ellis Island** accueille plus de **12 millions** de migrants entre 1892 et 1954. Deux métaphores s’affrontent pour dire ce que devient le migrant :
+
+| Métaphore | Ce qu’elle affirme | Ce qu’elle suppose |
+| *Melting pot* | Tout fond dans un alliage commun | L’assimilation est la condition d’entrée |
+| *Salad bowl* | Chacun garde sa saveur dans le plat | La différence n’empêche pas l’appartenance |
 
 ## Borders today
-Le mur à la frontière mexicaine, le Brexit et la frontière irlandaise, les *Windrush* britanniques : la frontière n'est pas qu'une ligne, c'est un dispositif juridique et un imaginaire.
+| Frontière | Ce qu’elle cristallise |
+| Le mur mexicain | La frontière comme dispositif physique et politique |
+| Le Brexit et la frontière irlandaise | Une frontière invisible redevenue un problème |
+| La génération *Windrush* | Des citoyens britanniques rendus illégaux rétroactivement |
+
+> Une frontière n’est pas seulement une ligne : c’est un **dispositif juridique** et un **imaginaire**. C’est pourquoi elle peut se déplacer sans que la carte change.
 
 ## Key vocabulary
 *settler* (colon), *exile*, *diaspora*, *homeland*, *belonging* (appartenance), *uprooting* (déracinement), *melting pot*, *border*, *citizenship*.`,
@@ -166,19 +232,28 @@ Le mur à la frontière mexicaine, le Brexit et la frontière irlandaise, les *W
           titre: 'L’épreuve de LLCER en terminale',
           lecon: {
             titre: 'Written and oral exams',
-            cours: `Connaître le format de l'épreuve fait partie de la préparation.
+            cours: `Connaître le format de l’épreuve fait partie de la préparation : la moitié des points perdus vient d’une consigne mal lue, pas d’une langue insuffisante.
 
-## L'écrit (3h30)
-Deux parties. **Synthèse** en anglais d'un dossier de trois documents (environ 500 mots) : il s'agit de dégager une problématique commune et de faire dialoguer les documents, non de les résumer l'un après l'autre. Puis une **traduction** ou une **transposition** d'un court passage.
+## Les deux épreuves
+| | Écrit | Oral |
+| Durée | 3 h 30 | 20 minutes |
+| Première partie | **Synthèse** en anglais d’un dossier de trois documents (environ 500 mots) | Présentation d’un **dossier personnel** |
+| Seconde partie | **Traduction** ou **transposition** d’un court passage | Entretien avec le jury |
 
-## L'oral (20 minutes)
-Présentation d'un **dossier personnel** de documents étudiés, suivie d'un entretien. Le jury attend une problématique assumée, des œuvres réellement lues, et une capacité à répondre à l'imprévu.
+> La synthèse n’est pas un résumé successif des trois documents : il faut dégager une **problématique commune** et les faire dialoguer. Un devoir en trois blocs « document 1, document 2, document 3 » est hors sujet, même bien écrit.
 
 ## Ce qui distingue une bonne copie
-Une problématique qui **tient** tout le devoir ; des connecteurs logiques variés (*however*, *whereas*, *therefore*, *insofar as*) ; une langue correcte avant d'être brillante ; des exemples précis plutôt que nombreux.
+| Critère | Ce que le jury regarde |
+| La problématique | Elle **tient** du début à la fin, elle n’est pas décorative |
+| Les connecteurs | *however*, *whereas*, *therefore*, *insofar as* — variés et justes |
+| La langue | Correcte avant d’être brillante : une phrase simple et juste vaut mieux |
+| Les exemples | Précis plutôt que nombreux |
 
 ## Préparer efficacement
-Tenir une fiche par œuvre (auteur, date, contexte, deux citations, un enjeu) ; lire régulièrement en anglais, même court ; s'entraîner à écrire 500 mots en temps limité — c'est un exercice de rythme autant que de langue.`,
+1. Tenir **une fiche par œuvre** : auteur, date, contexte, deux citations, un enjeu.
+2. Lire régulièrement en anglais, même court — la régularité bat l’intensité.
+3. S’entraîner à écrire **500 mots en temps limité** : c’est un exercice de rythme autant que de langue.
+4. Préparer l’oral en se faisant poser des questions imprévues : le jury évalue la réaction, pas la récitation.`,
           },
           questions: [
             ['Combien de temps dure l’épreuve écrite de LLCER en terminale ?', ['3h30', '2 heures', '4 heures', '5 heures'], 0, 'Synthèse en anglais puis traduction ou transposition.'],

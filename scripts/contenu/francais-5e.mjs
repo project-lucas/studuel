@@ -128,31 +128,37 @@ DELETE FROM public.chapters c
           axe: 'Se chercher, se construire — Le voyage et l’aventure : pourquoi aller vers l’inconnu ?',
           lecon: {
             titre: 'Le récit de voyage, entre témoignage et invention',
-            cours: `## Un genre ancien
-Le **récit de voyage** raconte un déplacement réel vers des terres lointaines. Il se développe considérablement aux **XVe et XVIe siècles**, quand les navigateurs européens atteignent l’Afrique, l’Amérique et l’Asie.
+            cours: `Un récit de voyage renseigne autant sur celui qui regarde que sur ce qu’il regarde.
+
+## Un genre ancien
+Le **récit de voyage** raconte un déplacement **réel** vers des terres lointaines. Il se développe considérablement aux **XVe et XVIe siècles**, quand les navigateurs européens atteignent l’Afrique, l’Amérique et l’Asie.
 
 ## Les grands textes
-- **Marco Polo**, *Le Devisement du monde* (vers 1298) : le récit de ses années en Chine, dicté en prison. On l’a surnommé *Le Livre des merveilles* — et longtemps soupçonné d’exagération.
-- **Christophe Colomb**, son **journal de bord** (1492) : un texte administratif devenu document historique.
-- **Jean de Léry**, *Histoire d’un voyage en terre de Brésil* (1578) : l’un des premiers regards ethnographiques sur un peuple amérindien.
-- **Jacques Cartier**, **Bougainville**, plus tard **Chateaubriand**.
+| L’auteur | L’œuvre | Ce qu’elle est |
+| **Marco Polo** | *Le Devisement du monde* (vers 1298) | Ses années en Chine, dictées en prison ; surnommé *Le Livre des merveilles* |
+| **Christophe Colomb** | Son **journal de bord** (1492) | Un texte administratif devenu document historique |
+| **Jean de Léry** | *Histoire d’un voyage en terre de Brésil* (1578) | L’un des premiers regards ethnographiques |
+| **Jacques Cartier**, **Bougainville**, **Chateaubriand** | | La suite du genre |
 
 ## Les caractéristiques du genre
-- Un **narrateur** qui dit « je » et se porte garant de ce qu’il rapporte.
-- Un ordre **chronologique**, souvent daté — journal, lettres, mémoires.
-- Des **descriptions** de paysages, de plantes, d’animaux, de peuples.
-- Un vocabulaire de la **découverte** et de l’**étonnement** : « jamais vu », « merveille », « étrange ».
-- Le recours à la **comparaison** avec le connu, seul moyen de faire imaginer l’inconnu au lecteur.
+| Le trait | Ce qu’il produit |
+| Un **narrateur** qui dit « je » | Il se porte garant de ce qu’il rapporte |
+| Un ordre **chronologique**, souvent daté | Journal, lettres, mémoires |
+| Des **descriptions** | Paysages, plantes, animaux, peuples |
+| Un vocabulaire de l’**étonnement** | « jamais vu », « merveille », « étrange » |
+| La **comparaison** avec le connu | Le seul moyen de faire imaginer l’inconnu |
 
 ## Le regard sur l’autre
-C’est l’enjeu du chapitre. Le voyageur décrit toujours **depuis** sa propre culture :
-- il peut verser dans l’**émerveillement** ou dans le **mépris** ;
-- il invente parfois la figure du « **bon sauvage** », dont **Montaigne** se sert dans « Des cannibales » (*Essais*, 1580) pour critiquer sa propre société : les vrais barbares, écrit-il, ne sont peut-être pas ceux qu’on croit.
+Le voyageur décrit toujours **depuis** sa propre culture.
 
-> Un récit de voyage renseigne autant sur celui qui regarde que sur ce qu’il regarde.
+~ L’émerveillement ← le regard du voyageur → le mépris
+
+**Montaigne**, dans « Des cannibales » (*Essais*, **1580**), invente la figure du « **bon sauvage** » pour critiquer **sa propre société**.
+
+> Les vrais barbares, écrit-il, ne sont peut-être pas ceux qu’on croit.
 
 ## Vérité et invention
-Le voyageur veut être cru : il multiplie les détails précis, les dates, les mesures. Mais il embellit aussi, pour tenir son lecteur — et certains récits mêlent l’observé et l’imaginé sans le signaler.`,
+!> Le voyageur veut être **cru** : il multiplie les détails précis, les dates, les mesures. Mais il **embellit** aussi, pour tenir son lecteur — et certains récits mêlent l’observé et l’imaginé **sans le signaler**.`,
           },
           questions: [
             ['Qu’est-ce qu’un récit de voyage ?', ['Le récit d’un déplacement réel vers des terres lointaines', 'Un roman d’aventures imaginaire', 'Un poème sur l’exil', 'Une pièce de théâtre sur la mer'], 0, 'Le narrateur s’y porte garant de ce qu’il rapporte.'],
@@ -170,29 +176,33 @@ Le voyageur veut être cru : il multiplie les détails précis, les dates, les m
           axe: 'Se chercher, se construire — Le voyage et l’aventure : pourquoi aller vers l’inconnu ?',
           lecon: {
             titre: 'Partir, rêver de partir, regretter d’être parti',
-            cours: `La poésie n’a pas attendu les navires pour voyager : l’**ailleurs** y est un thème constant, et souvent plus rêvé que parcouru.
+            cours: `La poésie du voyage dit rarement un lieu : elle dit un manque. C’est pourquoi elle reste lisible quand les cartes ont changé.
 
 ## Trois façons de traiter le voyage
-**1. Le voyage rêvé.**
-**Baudelaire**, « L’Invitation au voyage » : « Là, tout n’est qu’ordre et beauté, / Luxe, calme et volupté. » Le pays décrit n’existe pas : il est fait du désir du poète. C’est l’**exotisme** — l’ailleurs comme promesse.
+| La façon | Le poète | Ce qu’il en fait |
+| Le voyage **rêvé** | **Baudelaire**, « L’Invitation au voyage » | Le pays décrit n’existe pas : il est fait du **désir** du poète |
+| Le voyage comme **fuite** | Baudelaire encore, puis **Rimbaud** | Fuir l’ennui, la médiocrité, soi-même |
+| Le **retour** et le **regret** | **Du Bellay**, *Les Regrets* (1558) | Le mal du pays, écrit depuis Rome |
 
-**2. Le voyage comme fuite.**
-Fuir l’ennui, la médiocrité, soi-même. Baudelaire encore : « N’importe où hors du monde ». **Rimbaud** part vraiment, à dix-sept ans, et n’écrira plus.
+= « Là, tout n’est qu’ordre et beauté, / Luxe, calme et volupté »
 
-**3. Le retour et le regret.**
-**Du Bellay**, dans *Les Regrets* (1558), écrit depuis Rome le plus célèbre poème du mal du pays : « **Heureux qui, comme Ulysse, a fait un beau voyage…** » Le voyageur y préfère « le séjour qu’ont bâti mes aïeux » aux palais romains.
+= « Heureux qui, comme Ulysse, a fait un beau voyage… »
+
+Du Bellay préfère « le séjour qu’ont bâti mes aïeux » aux palais romains. **Rimbaud**, lui, part vraiment — à dix-sept ans — et n’écrira plus.
+
+## L’exotisme
+= L’exotisme, c’est l’ailleurs comme promesse
 
 ## Les procédés à repérer
-- l’**apostrophe** et l’**impératif** : « Mon enfant, ma sœur, / Songe à la douceur… » ;
-- l’**énumération** des merveilles entrevues ;
-- les **images** — comparaison, métaphore — qui transforment le paysage en état d’âme ;
-- la **musicalité** : rythme, allitérations, refrains, qui imitent le bercement du départ ;
-- les **noms propres** exotiques, qui font rêver par leur seule sonorité.
+| Le procédé | Son effet |
+| L’**apostrophe** et l’**impératif** | « Mon enfant, ma sœur, / Songe à la douceur… » |
+| L’**énumération** | Les merveilles entrevues défilent |
+| Les **images** | Comparaison et métaphore transforment le paysage en **état d’âme** |
+| La **musicalité** | Rythme, allitérations, refrains imitent le bercement du départ |
+| Les **noms propres** exotiques | Ils font rêver par leur seule sonorité |
 
 ## Ulysse, la figure matrice
-Depuis l’*Odyssée*, le voyageur poétique est un homme **qui rentre**. Le voyage y vaut moins par les terres traversées que par le retour, et par ce qu’il a fait de celui qui part.
-
-> La poésie du voyage dit rarement un lieu : elle dit un **manque**. C’est pourquoi elle reste lisible quand les cartes ont changé.`,
+!> Depuis l’*Odyssée*, le voyageur poétique est un homme **qui rentre**. Le voyage y vaut moins par les terres traversées que par le **retour**, et par ce qu’il a fait de celui qui part.`,
           },
           questions: [
             ['Quel poème de Baudelaire décrit un pays rêvé « ordre et beauté » ?', ['« L’Invitation au voyage »', '« Le Pont Mirabeau »', '« Demain, dès l’aube… »', '« Le Dormeur du val »'], 0, 'Le pays décrit n’existe pas : il est fait du désir du poète.'],
@@ -210,37 +220,40 @@ Depuis l’*Odyssée*, le voyageur poétique est un homme **qui rentre**. Le voy
           axe: 'Se chercher, se construire — Le voyage et l’aventure : pourquoi aller vers l’inconnu ?',
           lecon: {
             titre: 'Un héros, un départ, des épreuves',
-            cours: `## Ce qui fait un roman d’aventures
-- Un **héros** jeune, courageux, souvent seul, qui quitte son cadre habituel ;
-- un **départ** vers l’inconnu — île, jungle, mer, pays lointain ;
-- une succession d’**épreuves** et de **rebondissements** ;
-- des **péripéties** dangereuses : tempêtes, poursuites, captivités, trahisons ;
-- un **suspense** entretenu par les fins de chapitre ;
-- un **dénouement** où le héros revient transformé.
+            cours: `Sous les tempêtes et les trésors, le roman d’aventures raconte presque toujours la même chose : ce que c’est que de grandir.
+
+## Ce qui fait un roman d’aventures
+~ Un héros jeune → un départ vers l’inconnu → des épreuves → un dénouement où il revient transformé
+
+| L’ingrédient | Son rôle |
+| Le **héros** | Jeune, courageux, souvent seul |
+| Les **péripéties** | Tempêtes, poursuites, captivités, trahisons |
+| Le **suspense** | Entretenu par les fins de chapitre |
 
 ## Les grands titres
-- **Daniel Defoe**, *Robinson Crusoé* (1719) : le naufragé qui reconstruit une civilisation sur son île ;
-- **Jules Verne**, *Le Tour du monde en 80 jours*, *Vingt mille lieues sous les mers*, *L’Île mystérieuse* ;
-- **Robert Louis Stevenson**, *L’Île au trésor* (1883) ;
-- **Jack London**, *L’Appel de la forêt* ;
-- **Alexandre Dumas**, *Les Trois Mousquetaires*, à la frontière du roman historique.
+| L’auteur | L’œuvre |
+| **Daniel Defoe** | *Robinson Crusoé* (1719) : le naufragé qui reconstruit une civilisation |
+| **Jules Verne** | *Le Tour du monde en 80 jours*, *Vingt mille lieues sous les mers* |
+| **Robert Louis Stevenson** | *L’Île au trésor* (1883) |
+| **Jack London** | *L’Appel de la forêt* |
+| **Alexandre Dumas** | *Les Trois Mousquetaires* |
 
 ## Le rythme du récit
-C’est le point technique du chapitre :
-- la **scène** : le récit prend le temps de l’action, dialogue compris ;
-- le **sommaire** : plusieurs jours résumés en quelques lignes ;
-- l’**ellipse** : un passage de temps passé sous silence ;
-- la **pause** : une description qui suspend l’action.
+| La vitesse | Ce qu’elle fait |
+| La **scène** | Le récit prend le temps de l’action, dialogue compris |
+| Le **sommaire** | Plusieurs jours résumés en quelques lignes |
+| L’**ellipse** | Un passage de temps **passé sous silence** |
+| La **pause** | Une description qui suspend l’action |
 
-Un roman d’aventures alterne ces vitesses : il accélère dans le danger, ralentit pour faire voir.
+> Un roman d’aventures **alterne** ces vitesses : il accélère dans le danger, ralentit pour faire voir.
 
 ## Le narrateur
-Souvent **interne** — le héros raconte lui-même, ce qui rend l’aventure plus vive et le lecteur plus proche. Parfois **externe**, pour ménager le suspense en montrant ce que le héros ignore.
+| Le narrateur | Ce qu’il permet |
+| **Interne** — le héros raconte | L’aventure est plus vive, le lecteur plus proche |
+| **Externe** | Le suspense : on montre ce que le héros ignore |
 
 ## Ce que le genre raconte vraiment
-Sous les tempêtes et les trésors, le roman d’aventures est presque toujours un **récit d’apprentissage** : le héros part enfant et revient adulte. L’île, la jungle ou la mer sont les épreuves qui le construisent.
-
-> C’est pourquoi le genre parle si bien aux lecteurs de 5e : il raconte, sous forme d’exploits, ce que c’est que de grandir.`,
+!> Le roman d’aventures est presque toujours un **récit d’apprentissage** : le héros part enfant et revient adulte. L’île, la jungle ou la mer sont les épreuves qui le **construisent**.`,
           },
           questions: [
             ['Qu’est-ce qui caractérise un roman d’aventures ?', ['Un héros qui quitte son cadre habituel et affronte des épreuves', 'Une intrigue sentimentale', 'Un récit sans action', 'Une enquête policière'], 0, 'Rebondissements et suspense en sont les moteurs.'],
@@ -261,32 +274,38 @@ Sous les tempêtes et les trésors, le roman d’aventures est presque toujours 
           axe: 'Vivre en société, participer à la société — Avec autrui : famille, amis, réseaux',
           lecon: {
             titre: 'Faire rire, et faire réfléchir',
-            cours: `## La comédie classique
-Elle vise à « **corriger les mœurs par le rire** » (*castigat ridendo mores*). Elle met en scène des personnages ordinaires, dans un cadre quotidien, et se termine bien — le plus souvent par un mariage.
+            cours: `Agnès ne devient pas amoureuse malgré son ignorance : elle devient intelligente en devenant amoureuse.
 
-Comme la tragédie, elle respecte les **trois unités** (action, lieu, temps) et la **bienséance**.
+## La comédie classique
+= Castigat ridendo mores : corriger les mœurs par le rire
+
+Elle met en scène des personnages **ordinaires**, dans un cadre quotidien, et se termine **bien** — le plus souvent par un mariage. Comme la tragédie, elle respecte les **trois unités** — action, lieu, temps — et la **bienséance**.
 
 ## Les procédés comiques
-- **de mots** : jeux de mots, patois, répétitions, quiproquos verbaux ;
-- **de gestes** : chutes, coups, grimaces, déguisements ;
-- **de situation** : quiproquo, malentendu, personnage caché qui entend tout ;
-- **de caractère** : un défaut poussé jusqu’à l’absurde ;
-- **de répétition** : une réplique qui revient et devient drôle par son retour même.
+| Le comique | Ses moyens |
+| De **mots** | Jeux de mots, patois, répétitions, quiproquos verbaux |
+| De **gestes** | Chutes, coups, grimaces, déguisements |
+| De **situation** | Quiproquo, malentendu, personnage caché qui entend tout |
+| De **caractère** | Un défaut poussé jusqu’à l’absurde |
+| De **répétition** | Une réplique qui devient drôle par son retour même |
 
 ## L’École des femmes (1662)
-**Arnolphe**, un homme mûr, terrifié à l’idée d’être trompé, a fait élever **Agnès** dans l’**ignorance** totale depuis l’âge de quatre ans, pour qu’elle devienne une épouse docile. Il compte l’épouser.
+~ Arnolphe fait élever Agnès dans l’ignorance depuis ses quatre ans → il compte l’épouser → elle rencontre Horace → Horace raconte naïvement ses progrès à Arnolphe, sans savoir qu’il parle au rival
 
-Mais Agnès rencontre **Horace**, jeune homme sans fortune — et, par une ironie parfaite, celui-ci raconte naïvement ses progrès amoureux à Arnolphe, sans savoir qu’il parle au rival. Agnès s’éveille à l’intelligence et au sentiment ; Arnolphe, qui l’aime réellement, échoue et reste seul.
+!> Arnolphe **aime réellement** Agnès. C’est ce qui empêche la pièce d’être une simple farce : il échoue, et il reste seul.
 
 ## Ce que la pièce met en jeu
-- L’**éducation** des filles : faut-il les instruire ou les tenir dans l’ignorance ?
-- Le **mariage** forcé et l’autorité des tuteurs ;
-- la **liberté** de choisir sa vie.
+| La question | |
+| L’**éducation des filles** | Faut-il les instruire, ou les tenir dans l’ignorance ? |
+| Le **mariage forcé** | Et l’autorité des tuteurs |
+| La **liberté** | Choisir sa vie |
 
-> Agnès ne devient pas amoureuse **malgré** son ignorance : elle devient intelligente **en** devenant amoureuse. C’est l’ignorance, et non la nature, qui la tenait enfermée.
+> C’est l’ignorance, et non la nature, qui tenait Agnès enfermée.
 
 ## Un scandale
-La pièce déclencha une violente querelle : on reprocha à Molière son immoralité et son irrespect. Il répondit par deux pièces, *La Critique de l’École des femmes* et *L’Impromptu de Versailles* — le théâtre se défendant par le théâtre.`,
+La pièce déclencha une violente querelle : on reprocha à Molière son immoralité. Il répondit par deux pièces, *La Critique de l’École des femmes* et *L’Impromptu de Versailles*.
+
+> Le théâtre se défendant par le théâtre.`,
           },
           questions: [
             ['Quel est le but affiché de la comédie classique ?', ['Corriger les mœurs par le rire', 'Provoquer la terreur et la pitié', 'Raconter l’histoire des rois', 'Enseigner la religion'], 0, 'La formule latine est castigat ridendo mores.'],
@@ -304,35 +323,43 @@ La pièce déclencha une violente querelle : on reprocha à Molière son immoral
           axe: 'Vivre en société, participer à la société — Avec autrui : famille, amis, réseaux',
           lecon: {
             titre: 'Se raconter enfant, des années plus tard',
-            cours: `## Le genre
-Un **récit d’enfance** est le récit que fait un adulte de ses jeunes années. Il relève le plus souvent de l’**autobiographie** : l’auteur, le narrateur et le personnage principal sont **la même personne** — c’est le « pacte autobiographique » défini par Philippe Lejeune.
+            cours: `Deux voix se superposent dans un récit d’enfance : l’adulte qui sait, et l’enfant qui ne savait pas.
+
+## Le genre
+= Autobiographie : l’auteur, le narrateur et le personnage principal sont la MÊME personne
+
+C’est le « **pacte autobiographique** » défini par Philippe Lejeune.
 
 ## Les grands textes
-- **Rousseau**, *Les Confessions* (1782), qui inaugure le genre moderne ;
-- **Marcel Pagnol**, *La Gloire de mon père*, *Le Château de ma mère* ;
-- **Romain Gary**, *La Promesse de l’aube* ;
-- **Nathalie Sarraute**, *Enfance* ;
-- **Hervé Bazin**, *Vipère au poing*, où la famille est un lieu de guerre ;
-- **Azouz Begag**, *Le Gone du Chaâba* ;
-- et, du côté du roman, **Hugo** avec Gavroche ou **Dickens** avec Oliver Twist.
+| L’auteur | L’œuvre |
+| **Rousseau** | *Les Confessions* (1782), qui inaugure le genre moderne |
+| **Marcel Pagnol** | *La Gloire de mon père*, *Le Château de ma mère* |
+| **Romain Gary** | *La Promesse de l’aube* |
+| **Nathalie Sarraute** | *Enfance* |
+| **Hervé Bazin** | *Vipère au poing*, où la famille est un lieu de guerre |
+| **Azouz Begag** | *Le Gone du Chaâba* |
+
+Du côté du roman : **Hugo** avec Gavroche, **Dickens** avec Oliver Twist.
 
 ## Les deux « je »
-C’est la clé de lecture du chapitre. Deux voix se superposent :
-- le **je narrant** : l’adulte qui écrit, qui commente, qui juge, qui sait ce qui va arriver ;
-- le **je narré** : l’enfant qu’il était, qui ne savait pas.
+| Le « je » | Qui c’est | Ce qu’il sait |
+| Le **je narrant** | L’adulte qui écrit | Il commente, il juge, il sait ce qui va arriver |
+| Le **je narré** | L’enfant qu’il était | Il ne sait pas |
 
-L’écart entre les deux crée l’**ironie**, la **tendresse** ou le **regret**, selon la distance que l’auteur choisit.
+!> C’est **l’écart entre les deux** qui crée l’**ironie**, la **tendresse** ou le **regret**, selon la distance que l’auteur choisit. Repérer les deux voix, c’est comprendre le texte.
 
 ## Les procédés
-- Les **temps du passé** : imparfait pour le décor et les habitudes, passé simple ou passé composé pour les événements ;
-- les **retours en arrière** et les **anticipations** (« je ne savais pas encore que… ») ;
-- les **sensations** — odeurs, sons, lumières —, qui font revenir le souvenir plus sûrement que les faits ;
-- le **portrait** des adultes, vus d’en bas, souvent agrandis par le regard de l’enfant.
+| Le procédé | Son emploi |
+| Les **temps du passé** | Imparfait pour le décor et les habitudes, passé simple ou composé pour les événements |
+| Les **retours en arrière** et **anticipations** | « je ne savais pas encore que… » |
+| Les **sensations** | Odeurs, sons, lumières : elles font revenir le souvenir plus sûrement que les faits |
+| Le **portrait** des adultes | Vus d’en bas, souvent agrandis par le regard de l’enfant |
 
 ## Autobiographie ou roman ?
-- L’**autobiographie** promet la vérité.
-- Le **roman autobiographique** s’en inspire mais assume la fiction.
-- L’**autofiction** mêle les deux volontairement.
+| Le genre | Son pacte |
+| L’**autobiographie** | Elle promet la vérité |
+| Le **roman autobiographique** | Il s’en inspire mais assume la fiction |
+| L’**autofiction** | Elle mêle les deux volontairement |
 
 > La mémoire n’enregistre pas, elle **reconstruit**. Tout récit d’enfance est donc en partie une invention — non par mensonge, mais par nature.`,
           },
@@ -355,15 +382,20 @@ L’écart entre les deux crée l’**ironie**, la **tendresse** ou le **regret*
           axe: 'Regarder le monde, inventer des mondes — Imaginer des univers nouveaux',
           lecon: {
             titre: 'Un monde où le surnaturel ne surprend personne',
-            cours: `## Ce qui définit le merveilleux
-Dans un conte merveilleux, le **surnaturel** est **admis d’emblée** : personne ne s’étonne qu’un animal parle ou qu’une fée apparaisse. C’est ce qui le distingue du **fantastique**, où l’inexplicable fait irruption dans un monde réaliste et provoque le doute.
+            cours: `Dans le conte merveilleux, personne ne s’étonne qu’un animal parle. C’est exactement ce qui le sépare du fantastique.
+
+## Merveilleux ou fantastique
+| Le genre | Le surnaturel y est… |
+| **Merveilleux** | **Admis d’emblée** : personne ne s’étonne |
+| **Fantastique** | Une **irruption** dans un monde réaliste, qui provoque le **doute** |
 
 ## Les marques du conte
-- une **formule d’ouverture** : « Il était une fois… », qui installe un temps et un lieu indéterminés ;
-- des **personnages types** plus que des individus : le héros, la princesse, l’ogre, la marâtre, la fée, l’adjuvant ;
-- des **objets magiques** : baguette, bottes de sept lieues, miroir, anneau ;
-- des **nombres symboliques** : trois épreuves, sept nains, cent ans de sommeil ;
-- une **fin heureuse** et souvent une **morale**.
+| La marque | Exemple |
+| Une **formule d’ouverture** | « Il était une fois… » : un temps et un lieu indéterminés |
+| Des **personnages types** | Le héros, la princesse, l’ogre, la marâtre, la fée |
+| Des **objets magiques** | Baguette, bottes de sept lieues, miroir, anneau |
+| Des **nombres symboliques** | Trois épreuves, sept nains, cent ans de sommeil |
+| Une **fin heureuse** | Et souvent une **morale** |
 
 ## Le schéma narratif
 1. **Situation initiale** — l’équilibre de départ ;
@@ -373,15 +405,18 @@ Dans un conte merveilleux, le **surnaturel** est **admis d’emblée** : personn
 5. **situation finale** — le nouvel équilibre.
 
 ## Le schéma actanciel
-Le héros (**sujet**) poursuit un **objet** ; il est aidé par des **adjuvants**, gêné par des **opposants** ; un **destinateur** l’envoie, un **destinataire** profite du résultat.
+~ Un destinateur envoie → le SUJET poursuit un OBJET → des adjuvants l’aident, des opposants le gênent → un destinataire profite du résultat
 
 ## Les grands auteurs
-- **Charles Perrault** (*Contes*, 1697) : Le Petit Chaperon rouge, Cendrillon, Le Chat botté — versions écrites, avec moralités en vers ;
-- les **frères Grimm**, qui collectent les contes allemands au XIXe siècle ;
-- **Andersen**, qui les invente plus qu’il ne les recueille.
+| L’auteur | Ce qu’il fait |
+| **Charles Perrault** (*Contes*, 1697) | Il **écrit** les versions françaises, avec moralités en vers |
+| Les **frères Grimm** | Ils **collectent** les contes allemands au XIXe siècle |
+| **Andersen** | Il les **invente** plus qu’il ne les recueille |
 
 ## À quoi sert un conte
-Il divertit, mais il **enseigne** aussi : prudence, courage, patience, méfiance envers les apparences. Sous une forme simple, il met en scène des peurs profondes — l’abandon, la faim, la mort, la cruauté des adultes.
+Il divertit, mais il **enseigne** aussi : prudence, courage, patience, méfiance envers les apparences.
+
+!> Sous une forme simple, le conte met en scène des peurs **profondes** — l’abandon, la faim, la mort, la cruauté des adultes.
 
 > Le conte n’est pas naïf : c’est une histoire simple qui traite de choses très graves.`,
           },
@@ -401,33 +436,40 @@ Il divertit, mais il **enseigne** aussi : prudence, courage, patience, méfiance
           axe: 'Regarder le monde, inventer des mondes — Imaginer des univers nouveaux',
           lecon: {
             titre: 'Décrire un monde parfait pour juger le sien',
-            cours: `## Le mot
-**Utopie** est un mot fabriqué par **Thomas More** en **1516**, à partir du grec : *ou-topos*, « **en aucun lieu** ». Le titre complet de son livre annonce déjà l’ambiguïté : il décrit une île parfaite… qui n’existe nulle part.
+            cours: `Une utopie ne décrit jamais vraiment un ailleurs : elle critique la société de son auteur par contraste.
+
+## Le mot
+= Utopie, de Thomas More (1516) : ou-topos, « en aucun lieu »
+
+Le titre annonce déjà l’ambiguïté : une île parfaite… qui n’existe nulle part.
 
 ## Ce qu’est une utopie
-Le récit d’une société **idéale**, généralement située :
-- dans un lieu **isolé** — une île, une vallée, une planète ;
-- hors du temps ordinaire ;
-- et découverte par un **voyageur**, qui sert de guide au lecteur.
+| Son cadre | |
+| Un lieu **isolé** | Une île, une vallée, une planète |
+| Hors du **temps** ordinaire | |
+| Découverte par un **voyageur** | Qui sert de guide au lecteur |
 
 ## Ses traits récurrents
-- **égalité** entre les habitants, absence de misère ;
-- **propriété commune** ou fortement encadrée ;
-- **travail** partagé et limité ;
-- **éducation** pour tous ;
-- **lois simples**, peu de crimes, peu de juges ;
-- une organisation **rationnelle** : villes identiques, horaires réglés, urbanisme géométrique.
+| Le trait | |
+| **Égalité** entre les habitants | Absence de misère |
+| **Propriété commune** ou fortement encadrée | |
+| **Travail** partagé et limité | |
+| **Éducation** pour tous | |
+| **Lois simples** | Peu de crimes, peu de juges |
+| Organisation **rationnelle** | Villes identiques, horaires réglés, urbanisme géométrique |
 
 ## Le vrai sujet : ici, pas là-bas
-Une utopie ne décrit jamais vraiment un ailleurs : elle **critique** la société de son auteur par contraste. Chez More, l’île d’Utopie sans propriété privée ni oisiveté vise l’Angleterre de son temps, ses enclosures et sa misère.
+Chez More, l’île sans propriété privée ni oisiveté vise l’**Angleterre de son temps**, ses enclosures et sa misère.
 
-C’est une **argumentation indirecte** : montrer ce qui pourrait être, pour faire voir ce qui ne va pas.
+= C’est une argumentation INDIRECTE : montrer ce qui pourrait être, pour faire voir ce qui ne va pas
 
 ## Les grands textes
-Platon (*La République*), Thomas More, **Rabelais** avec l’**abbaye de Thélème** et sa règle unique — « Fais ce que voudras » —, Campanella, Fourier, et jusqu’aux cités idéales des architectes.
+Platon (*La République*), **Thomas More**, **Rabelais** avec l’**abbaye de Thélème** et sa règle unique — « Fais ce que voudras » —, Campanella, Fourier, jusqu’aux cités idéales des architectes.
 
 ## La limite, et le passage à la dystopie
-Une société parfaite suppose que tout le monde veuille la même chose. Ce qui garantit l’ordre — l’uniformité, la surveillance, l’absence de choix — peut vite devenir **oppressant**. C’est exactement le point où l’utopie bascule en **dystopie**, dès le XXe siècle.
+!> Une société parfaite suppose que **tout le monde veuille la même chose**. Ce qui garantit l’ordre — uniformité, surveillance, absence de choix — devient vite oppressant.
+
+~ L’utopie → l’uniformité nécessaire → la surveillance → la dystopie
 
 > Toute utopie contient sa propre inquiétude : qui décide de ce qui est parfait, et que fait-on de ceux qui ne sont pas d’accord ?`,
           },
@@ -447,35 +489,40 @@ Une société parfaite suppose que tout le monde veuille la même chose. Ce qui 
           axe: 'Regarder le monde, inventer des mondes — Imaginer des univers nouveaux',
           lecon: {
             titre: 'Le cauchemar qui se présente comme un idéal',
-            cours: `## La définition
-Une **dystopie** (ou contre-utopie) décrit une société **en apparence parfaite**, mais en réalité **totalitaire** : l’ordre y est obtenu au prix de la liberté. C’est l’inverse exact de l’utopie — et son prolongement logique.
+            cours: `Une dystopie décrit une société en apparence parfaite, et en réalité totalitaire. C’est l’inverse de l’utopie — et son prolongement logique.
 
 ## Les traits du genre
-- Un **régime** qui contrôle tout : information, travail, loisirs, famille, pensée ;
-- une **surveillance** permanente ;
-- la **propagande** et la **réécriture** du passé ;
-- l’**uniformisation** des individus, souvent désignés par des numéros ;
-- l’élimination des **opposants** ;
-- un **héros** qui prend conscience et tente de résister — et qui, très souvent, échoue.
+| Le trait | Ce qu’il produit |
+| Un **régime** qui contrôle tout | Information, travail, loisirs, famille, pensée |
+| Une **surveillance** permanente | |
+| La **propagande** | Et la **réécriture** du passé |
+| L’**uniformisation** | Les individus sont souvent désignés par des numéros |
+| L’élimination des **opposants** | |
+| Un **héros** qui prend conscience | Et qui, très souvent, **échoue** |
 
 ## Les grands textes
-- **Evgueni Zamiatine**, *Nous autres* (1920), le premier du genre ;
-- **Aldous Huxley**, *Le Meilleur des mondes* (1932) : une société où l’on est heureux par conditionnement et par drogue ;
-- **George Orwell**, *1984* (1949) : Big Brother, la police de la pensée, la **novlangue** — une langue appauvrie pour rendre la révolte littéralement impensable ;
-- **Ray Bradbury**, *Fahrenheit 451* (1953) : des pompiers qui brûlent les livres ;
-- pour la jeunesse : *Hunger Games*, *Divergente*, *Le Passeur* de Lois Lowry.
+| L’auteur | L’œuvre | Son ressort |
+| **Evgueni Zamiatine** | *Nous autres* (1920) | Le premier du genre |
+| **Aldous Huxley** | *Le Meilleur des mondes* (1932) | Heureux par **conditionnement** et par drogue |
+| **George Orwell** | *1984* (1949) | Big Brother, la police de la pensée, la **novlangue** |
+| **Ray Bradbury** | *Fahrenheit 451* (1953) | Des pompiers qui **brûlent les livres** |
+
+La **novlangue** est une langue appauvrie pour rendre la révolte littéralement **impensable**.
+
+Pour la jeunesse : *Hunger Games*, *Divergente*, *Le Passeur* de Lois Lowry.
 
 ## Deux formes d’oppression
-- Chez **Orwell**, on obéit par **peur** : la surveillance et la torture.
-- Chez **Huxley**, on obéit par **plaisir** : le divertissement et le confort suffisent à faire renoncer à la liberté.
+| Chez **Orwell** | Chez **Huxley** |
+| On obéit par **peur** | On obéit par **plaisir** |
+| La surveillance et la torture | Le divertissement et le confort |
 
 > Huxley redoutait qu’on n’ait plus besoin d’interdire les livres, parce que plus personne n’aurait envie d’en lire.
 
 ## Une fiction qui parle du présent
-Comme l’utopie, la dystopie **avertit** : elle prend une tendance de son époque — la propagande, la technique, la surveillance, le divertissement de masse — et la pousse à l’extrême pour la rendre visible.
+!> La dystopie ne prédit pas : elle prend une **tendance de son époque** — propagande, technique, surveillance, divertissement de masse — et la pousse à l’extrême pour la rendre **visible**.
 
 ## Le repérage en classe
-Chercher **qui détient le pouvoir**, **ce qui est interdit**, **comment on surveille**, **ce que le héros découvre** et **ce que le récit reproche à notre monde**.`,
+~ Qui détient le pouvoir ? → Qu’est-ce qui est interdit ? → Comment surveille-t-on ? → Que découvre le héros ? → Que reproche le récit à notre monde ?`,
           },
           questions: [
             ['Qu’est-ce qu’une dystopie ?', ['Une société en apparence parfaite mais en réalité totalitaire', 'Une société idéale et libre', 'Un récit de voyage imaginaire', 'Un conte merveilleux moderne'], 0, 'C’est l’inverse et le prolongement de l’utopie.'],
@@ -496,28 +543,37 @@ Chercher **qui détient le pouvoir**, **ce qui est interdit**, **comment on surv
           axe: 'Agir sur le monde — Héros / héroïnes et héroïsme',
           lecon: {
             titre: 'Le chevalier, entre prouesse et courtoisie',
-            cours: `## Deux grandes familles de récits
-- La **chanson de geste** (XIe-XIIe siècles) : un récit en vers, chanté par les **jongleurs**, qui célèbre les exploits guerriers et la fidélité au seigneur. Modèle : **La Chanson de Roland** (vers 1100).
-- Le **roman de chevalerie** (XIIe-XIIIe) : écrit pour être lu, il ajoute l’**amour** et la **quête** intérieure. Modèle : **Chrétien de Troyes** (*Yvain ou le Chevalier au lion*, *Perceval ou le Conte du Graal*, *Lancelot*).
+            cours: `Le héros médiéval n’est pas seulement fort : il est exemplaire. Sa vie sert de modèle à ceux qui l’écoutent.
+
+## Deux grandes familles de récits
+| Le genre | Sa période | Ce qu’il célèbre | Son modèle |
+| La **chanson de geste** | XIe-XIIe | Les exploits guerriers, la fidélité au seigneur ; **en vers**, chantée par les **jongleurs** | *La Chanson de Roland* (vers 1100) |
+| Le **roman de chevalerie** | XIIe-XIIIe | L’**amour** et la **quête** intérieure ; écrit pour être **lu** | **Chrétien de Troyes** |
+
+De Chrétien de Troyes : *Yvain ou le Chevalier au lion*, *Perceval ou le Conte du Graal*, *Lancelot*.
 
 ## Les valeurs du chevalier
-- la **prouesse** : le courage et la force au combat ;
-- la **loyauté** envers son seigneur — c’est le lien vassalique ;
-- la **foi** : le chevalier chrétien combat pour Dieu ;
-- la **générosité** (largesse) envers les pauvres et les vaincus ;
-- la **courtoisie** : le respect des dames, la maîtrise de soi, l’élégance des manières ;
-- la **démesure** est le défaut à éviter — Roland refuse de sonner l’olifant par orgueil, et tous ses hommes en meurent.
+| La valeur | Ce qu’elle exige |
+| La **prouesse** | Le courage et la force au combat |
+| La **loyauté** | Envers son seigneur : le lien vassalique |
+| La **foi** | Le chevalier chrétien combat pour Dieu |
+| La **largesse** | La générosité envers les pauvres et les vaincus |
+| La **courtoisie** | Le respect des dames, la maîtrise de soi, l’élégance |
+
+!> La **démesure** est le défaut à éviter. **Roland** refuse de sonner l’olifant par orgueil — et tous ses hommes en meurent.
 
 ## La Chanson de Roland
-L’arrière-garde de Charlemagne est attaquée à **Roncevaux**. **Roland**, neveu de l’empereur, refuse d’appeler à l’aide tant qu’il est temps ; il sonne son cor trop tard, meurt le visage tourné vers l’ennemi, et Charlemagne vient venger les siens. Le poème est écrit en **laisses** — des strophes de longueur variable, sur une même assonance.
+~ L’arrière-garde de Charlemagne est attaquée à Roncevaux → Roland refuse d’appeler à l’aide → il sonne son cor trop tard → il meurt le visage tourné vers l’ennemi → Charlemagne vient venger les siens
+
+Le poème est écrit en **laisses** : des strophes de longueur variable, sur une même **assonance**.
 
 ## L’amour courtois
-Le chevalier sert une **dame** souvent inaccessible ; il accomplit des exploits **pour** elle, et cette souffrance amoureuse le rend meilleur. La femme y prend, pour la première fois dans la littérature occidentale, une position **haute**.
+Le chevalier sert une **dame** souvent inaccessible ; il accomplit des exploits **pour** elle, et cette souffrance amoureuse le rend meilleur.
+
+> La femme y prend, pour la première fois dans la littérature occidentale, une position **haute**.
 
 ## Le merveilleux
-Fées, enchanteurs (**Merlin**), objets magiques, animaux qui parlent, **Graal** : le surnaturel fait partie du monde, sans surprendre personne — comme dans le conte.
-
-> Le héros médiéval n’est pas seulement fort : il est **exemplaire**. Sa vie sert de modèle à ceux qui l’écoutent.`,
+Fées, enchanteurs — **Merlin** —, objets magiques, animaux qui parlent, **Graal** : le surnaturel fait partie du monde, sans surprendre personne, comme dans le conte.`,
           },
           questions: [
             ['Qu’est-ce qu’une chanson de geste ?', ['Un récit en vers célébrant les exploits guerriers, chanté par les jongleurs', 'Un roman écrit pour être lu', 'Un poème d’amour courtois', 'Une pièce de théâtre médiévale'], 0, 'La Chanson de Roland en est le modèle.'],
@@ -535,26 +591,37 @@ Fées, enchanteurs (**Merlin**), objets magiques, animaux qui parlent, **Graal**
           axe: 'Agir sur le monde — Héros / héroïnes et héroïsme',
           lecon: {
             titre: 'Demi-dieux, exploits et destin',
-            cours: `## Qu’est-ce qu’un héros antique ?
-Dans la mythologie grecque, le **héros** est un personnage exceptionnel, souvent né d’un dieu et d’une mortelle. Il n’est ni tout à fait dieu, ni tout à fait homme : il accomplit des exploits surhumains, mais il **meurt**.
+            cours: `Achille et Ulysse s’opposent terme à terme. Toute la littérature occidentale se partagera entre ces deux figures.
+
+## Qu’est-ce qu’un héros antique
+Un personnage exceptionnel, souvent né d’un **dieu** et d’une **mortelle**. Ni tout à fait dieu, ni tout à fait homme : il accomplit des exploits surhumains, mais il **meurt**.
 
 ## Les grandes figures
-- **Achille**, le meilleur guerrier de l’*Iliade*, invulnérable sauf au talon. Il choisit une vie **courte et glorieuse** plutôt que longue et obscure.
-- **Ulysse**, héros de l’*Odyssée* : sa force est la **ruse** (le cheval de Troie, le Cyclope) et la **ténacité** — dix ans pour rentrer à Ithaque.
-- **Héraclès** (Hercule), et ses **douze travaux**, expiation d’une faute.
-- **Thésée** et le **Minotaure**, sauvé par le fil d’**Ariane**.
-- **Persée**, **Jason** et la Toison d’or, **Antigone** qui désobéit au roi au nom d’une loi supérieure.
-- Chez les Romains : **Énée**, héros de l’*Énéide* de Virgile, fondateur mythique de Rome.
+| Le héros | Ce qui le définit |
+| **Achille** | Le meilleur guerrier de l’*Iliade*, invulnérable **sauf au talon** ; il choisit une vie **courte et glorieuse** |
+| **Ulysse** | Héros de l’*Odyssée* : la **ruse** (le cheval de Troie, le Cyclope) et la **ténacité** — dix ans pour rentrer à Ithaque |
+| **Héraclès** (Hercule) | Ses **douze travaux**, expiation d’une faute |
+| **Thésée** | Le **Minotaure**, et le fil d’**Ariane** |
+| **Persée**, **Jason** | La Méduse, la Toison d’or |
+| **Antigone** | Elle désobéit au roi au nom d’une loi supérieure |
+| **Énée** | Chez les Romains : l’*Énéide* de Virgile, fondateur mythique de Rome |
 
 ## Les traits communs
-- une **naissance** extraordinaire, souvent accompagnée d’un oracle ;
-- des **épreuves** imposées, presque toujours par les dieux ;
-- des **monstres** à vaincre : Cyclope, Hydre, Minotaure, Méduse ;
-- un **défaut** qui coûte cher — la colère d’Achille, la curiosité, l’orgueil (**hybris**), toujours puni par les dieux ;
-- un **destin** fixé d’avance, que le héros ne peut pas fuir.
+~ Une naissance extraordinaire → un oracle → des épreuves imposées par les dieux → des monstres à vaincre → un défaut qui coûte cher
+
+| Le monstre | Le héros |
+| Le **Cyclope** | Ulysse |
+| L’**Hydre** | Héraclès |
+| Le **Minotaure** | Thésée |
+| **Méduse** | Persée |
+
+!> L’***hybris*** — la démesure, l’orgueil — est **toujours punie** par les dieux. La colère d’Achille en est l’exemple le plus célèbre.
 
 ## Deux modèles d’héroïsme
-Achille et Ulysse s’opposent terme à terme : la **force** contre la **ruse**, la gloire contre le retour, la mort jeune contre la survie. Toute la littérature occidentale se partagera entre ces deux figures.
+| Achille | Ulysse |
+| La **force** | La **ruse** |
+| La **gloire** | Le **retour** |
+| La mort jeune | La survie |
 
 ## Les œuvres
 L’*Iliade* et l’*Odyssée*, attribuées à **Homère** (VIIIe siècle av. J.-C.), les *Métamorphoses* d’**Ovide**, l’*Énéide* de **Virgile**.
@@ -580,27 +647,32 @@ L’*Iliade* et l’*Odyssée*, attribuées à **Homère** (VIIIe siècle av. J.
           axe: 'Questionnements complémentaires — L’être humain est-il maître de la nature ?',
           lecon: {
             titre: 'La littérature face aux machines',
-            cours: `## Le contexte
-Au **XIXe siècle**, la machine à vapeur, le charbon, le chemin de fer et l’usine transforment l’Europe en quelques décennies. Les campagnes se vident, les villes industrielles enflent, un nouveau monde apparaît — et avec lui, une nouvelle **question littéraire** : que devient l’homme dans ce monde qu’il a fabriqué ?
+            cours: `La machine devient vivante, l’ouvrier devient une chose. Ce renversement est la trouvaille majeure du roman industriel.
+
+## Le contexte
+Au **XIXe siècle**, la machine à vapeur, le charbon, le chemin de fer et l’usine transforment l’Europe en quelques décennies. Une question littéraire nouvelle apparaît : **que devient l’homme dans ce monde qu’il a fabriqué ?**
 
 ## Deux regards opposés
-**L’enthousiasme.** Le progrès promet de vaincre la maladie, la distance, la nuit. **Jules Verne** en fait la matière de ses romans ; **Hugo** salue le train comme un poème. La technique y est une conquête.
-
-**L’inquiétude.** La même machine détruit les paysages, épuise les corps et rompt le lien avec la nature.
-- **Zola**, *Germinal* (1885) : la mine est décrite comme un monstre vivant qui **dévore** les hommes — « une bête goulue » ;
-- **Zola**, *La Bête humaine* : la locomotive devient un personnage ;
-- **Hugo**, *Les Misérables*, sur la misère urbaine.
+| L’enthousiasme | L’inquiétude |
+| Le progrès promet de vaincre la maladie, la distance, la nuit | La même machine détruit les paysages et épuise les corps |
+| **Jules Verne** en fait la matière de ses romans | **Zola**, *Germinal* (1885) : la mine, « une bête goulue » qui dévore les hommes |
+| **Hugo** salue le train comme un poème | **Zola**, *La Bête humaine* : la locomotive devient un personnage |
+| | **Hugo**, *Les Misérables*, sur la misère urbaine |
 
 ## Le procédé central : la personnification
-La machine, l’usine, la mine sont dotées d’un **corps** et d’une **volonté**. Elles respirent, avalent, grondent. À l’inverse, l’ouvrier est décrit comme une **chose** : un rouage, un outil. Ce **renversement** — la machine vivante et l’homme mécanisé — est la trouvaille majeure du roman industriel.
+| Ce qui est décrit | Comment |
+| La machine, l’usine, la mine | Dotées d’un **corps** et d’une **volonté** : elles respirent, avalent, grondent |
+| L’ouvrier | Décrit comme une **chose** : un rouage, un outil |
+
+!> C’est un **renversement** : la machine vivante et l’homme mécanisé. Le repérer, c’est comprendre tout le texte.
 
 ## Le romantisme et la nature refuge
 Face à cela, les romantiques font de la **nature** un refuge et un miroir de l’âme : **Rousseau** déjà, puis **Lamartine**, **Hugo**, et plus tard **Giono**, qui oppose la vie paysanne à la modernité.
 
 ## Ce que le chapitre met en jeu
-L’homme est-il **maître** de la nature — ou en fait-il partie ? La révolution industrielle donne à cette question une portée nouvelle : pour la première fois, l’activité humaine transforme la planète à grande échelle.
+L’homme est-il **maître** de la nature — ou en fait-il **partie** ?
 
-> Les textes du XIXe siècle formulent, avec un siècle et demi d’avance, les questions écologiques d’aujourd’hui.`,
+> Pour la première fois, l’activité humaine transforme la planète à grande échelle. Les textes du XIXe siècle formulent, avec un siècle et demi d’avance, les questions écologiques d’aujourd’hui.`,
           },
           questions: [
             ['Quelles inventions transforment l’Europe au XIXe siècle ?', ['La machine à vapeur, le charbon, le chemin de fer et l’usine', 'L’électricité et l’informatique', 'L’imprimerie et la boussole', 'Le moteur à explosion seul'], 0, 'Les campagnes se vident, les villes industrielles enflent.'],
@@ -618,34 +690,41 @@ L’homme est-il **maître** de la nature — ou en fait-il partie ? La révolut
           axe: 'Questionnements complémentaires — L’être humain est-il maître de la nature ?',
           lecon: {
             titre: 'Raconter demain pour comprendre aujourd’hui',
-            cours: `## La définition
-Le **roman d’anticipation** situe son récit dans le **futur** et imagine les conséquences d’une évolution scientifique, technique ou sociale déjà commencée. Il se distingue de la **science-fiction** au sens large par sa proximité avec le présent : il extrapole, il n’invente pas un univers entier.
+            cours: `L’anticipation ne prédit pas l’avenir : elle prend une tendance du présent et demande « et si cela continuait ? »
+
+## La définition
+Le **roman d’anticipation** situe son récit dans le **futur** et imagine les conséquences d’une évolution **déjà commencée**.
+
+!> Il se distingue de la **science-fiction** au sens large par sa **proximité avec le présent** : il extrapole, il n’invente pas un univers entier.
 
 ## Les fondateurs
-- **Jules Verne** (*De la Terre à la Lune*, *Vingt mille lieues sous les mers*, *Paris au XXe siècle*) : l’anticipation y est **technique**, documentée, optimiste — le sous-marin, la fusée, le visiophone.
-- **H. G. Wells** (*La Machine à explorer le temps*, *La Guerre des mondes*, *L’Île du docteur Moreau*) : l’anticipation y devient **sociale et morale**, et souvent inquiète.
+| L’auteur | Ses œuvres | Son type d’anticipation |
+| **Jules Verne** | *De la Terre à la Lune*, *Vingt mille lieues sous les mers*, *Paris au XXe siècle* | **Technique**, documentée, optimiste |
+| **H. G. Wells** | *La Machine à explorer le temps*, *La Guerre des mondes*, *L’Île du docteur Moreau* | **Sociale et morale**, souvent inquiète |
 
 ## Le siècle suivant
-**Barjavel** (*Ravage*, 1943), **Bradbury**, **Asimov** et ses lois de la robotique, **Orwell** et **Huxley** pour le versant dystopique, et aujourd’hui toute une production sur le climat, l’intelligence artificielle et la génétique.
+**Barjavel** (*Ravage*, 1943), **Bradbury**, **Asimov** et ses lois de la robotique, **Orwell** et **Huxley** pour le versant dystopique — et aujourd’hui toute une production sur le climat, l’intelligence artificielle et la génétique.
 
 ## Les grands thèmes
-- le **progrès technique** et ses effets non prévus ;
-- la **catastrophe écologique** ;
-- l’**intelligence artificielle** et la place de l’humain ;
-- la **manipulation** du vivant ;
-- la **surveillance** et la perte des libertés.
+| Le thème | |
+| Le **progrès technique** | Et ses effets non prévus |
+| La **catastrophe écologique** | |
+| L’**intelligence artificielle** | Et la place de l’humain |
+| La **manipulation** du vivant | |
+| La **surveillance** | Et la perte des libertés |
 
 ## Les procédés d’écriture
-- Un **cadre** futur rendu crédible par des détails concrets ;
-- un **vocabulaire** technique, parfois inventé — le **néologisme** ;
-- une **date** qui ancre le récit et le rend mesurable ;
-- des **explications** données au lecteur par un personnage — le savant, le guide, le nouveau venu ;
-- le **contraste** entre le monde décrit et le nôtre, qui produit le sens.
+| Le procédé | Son rôle |
+| Un **cadre** futur rendu crédible | Par des détails concrets |
+| Un **vocabulaire** technique, parfois inventé | Le **néologisme** |
+| Une **date** | Elle ancre le récit et le rend mesurable |
+| Des **explications** au lecteur | Par le savant, le guide, le nouveau venu |
+| Le **contraste** avec notre monde | C’est lui qui produit le sens |
 
-> L’anticipation ne prédit pas l’avenir : elle prend une tendance du présent et demande « **et si cela continuait ?** ». Ses erreurs de prédiction ne l’invalident pas, parce que ce n’était pas le but.
+> Les erreurs de prédiction n’invalident pas une anticipation, parce que prédire n’était pas le but.
 
 ## La lecture critique
-Devant un tel texte : quelle tendance actuelle est poussée à l’extrême ? qu’est-ce que l’auteur redoute ? qu’est-ce qu’il espère ? Et surtout : que dit ce futur du monde dans lequel il a été écrit ?`,
+~ Quelle tendance actuelle est poussée à l’extrême ? → Que redoute l’auteur ? → Qu’espère-t-il ? → Que dit ce futur du monde où il a été écrit ?`,
           },
           questions: [
             ['Qu’est-ce qu’un roman d’anticipation ?', ['Un récit situé dans le futur qui extrapole une évolution déjà commencée', 'Un récit historique', 'Un conte merveilleux', 'Un récit de voyage réel'], 0, 'Il part du présent et demande « et si cela continuait ? ».'],
@@ -663,28 +742,40 @@ Devant un tel texte : quelle tendance actuelle est poussée à l’extrême ? qu
           axe: 'Questionnements complémentaires — L’être humain est-il maître de la nature ?',
           lecon: {
             titre: 'Le jardin comme réponse à une question',
-            cours: `La façon dont une époque **représente** la nature dit ce qu’elle en pense. Trois moments, trois réponses.
+            cours: `La façon dont une époque représente la nature dit ce qu’elle en pense. Trois moments, trois réponses.
 
 ## Le Moyen Âge : la nature encadrée
-- Le **jardin clos** (*hortus conclusus*), entouré de murs : un espace protégé, utile (herbes médicinales, légumes) et symbolique — image du paradis retrouvé.
-- La **forêt**, à l’inverse, est le lieu du danger, de l’épreuve et du merveilleux : c’est là que les chevaliers de Chrétien de Troyes rencontrent fées, ermites et monstres.
-- Dans les **enluminures**, la nature est peinte sans profondeur, en aplats, sur fond d’or : elle est un **signe**, pas un paysage.
+| Le lieu | Ce qu’il signifie |
+| Le **jardin clos** (*hortus conclusus*) | Entouré de murs : protégé, utile — herbes, légumes — et **image du paradis** |
+| La **forêt** | Le danger, l’épreuve, le merveilleux : fées, ermites et monstres |
+
+Dans les **enluminures**, la nature est peinte **sans profondeur**, en aplats, sur fond d’or.
+
+!> Elle y est un **signe**, pas un paysage. Ce n’est pas de la maladresse : c’est une intention.
 
 ## La Renaissance : la nature observée
-- L’**humanisme** réhabilite l’observation. **Léonard de Vinci** dessine des plantes, des eaux, des anatomies avec une précision inédite.
-- La **perspective** fait entrer la profondeur dans la peinture : le paysage devient un **espace**, et non plus un décor plat.
-- Les **jardins italiens** allient géométrie, statues, grottes et jeux d’eau — la nature y est mise en scène, pas contrainte.
-- **Ronsard** chante la rose et le temps qui passe : la nature devient miroir du sentiment.
+| L’apport | Ce qu’il change |
+| L’**humanisme** | Il réhabilite l’**observation** ; **Léonard de Vinci** dessine plantes, eaux et anatomies |
+| La **perspective** | Le paysage devient un **espace**, non plus un décor plat |
+| Les **jardins italiens** | Géométrie, statues, grottes, jeux d’eau : la nature **mise en scène** |
+| **Ronsard** | Il chante la rose et le temps qui passe : la nature devient miroir du sentiment |
 
 ## Le XVIIe siècle : la nature soumise
-- Le **jardin à la française** — **Le Nôtre** à **Versailles** — pousse la maîtrise à son terme : axes de symétrie, perspectives infinies, parterres géométriques, arbres taillés, eaux domptées. La nature y devient une **démonstration de pouvoir** : ce que le roi fait aux arbres, il le fait au royaume.
-- **La Fontaine**, dans ses *Fables*, se sert au contraire des animaux pour dire la vérité des hommes — la nature y redevient une leçon.
-- **Descartes** formule le programme du siècle : l’homme doit se rendre « comme maître et possesseur de la nature ».
+Le **jardin à la française** — **Le Nôtre** à **Versailles** — pousse la maîtrise à son terme : axes de symétrie, perspectives infinies, parterres géométriques, arbres taillés, eaux domptées.
 
-> Jardin clos, jardin observé, jardin dompté : trois manières de répondre à la même question, et trois idées de la place de l’homme dans le monde.
+> Ce que le roi fait aux arbres, il le fait au royaume. Le jardin est une **démonstration de pouvoir**.
+
+= Descartes : l’homme doit se rendre « comme maître et possesseur de la nature »
+
+**La Fontaine**, dans ses *Fables*, se sert au contraire des animaux pour dire la vérité des hommes.
+
+## Les trois jardins
+~ Jardin clos (encadré) → jardin observé (Renaissance) → jardin dompté (Versailles)
 
 ## Et après
-Le **jardin à l’anglaise** du XVIIIe siècle prendra le contre-pied de Versailles : allées sinueuses, faux désordre, ruines artificielles. La nature n’est plus à soumettre, elle est à **rêver**.`,
+Le **jardin à l’anglaise** du XVIIIe siècle prendra le contre-pied de Versailles : allées sinueuses, faux désordre, ruines artificielles.
+
+> La nature n’est plus à soumettre : elle est à **rêver**.`,
           },
           questions: [
             ['Qu’est-ce que l’hortus conclusus médiéval ?', ['Un jardin clos de murs, utile et symbolique', 'Une forêt sacrée', 'Un parc royal ouvert', 'Un potager collectif'], 0, 'Il évoque le paradis retrouvé.'],

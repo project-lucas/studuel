@@ -149,28 +149,47 @@ DELETE FROM public.chapters c
           axe: 'Dynamiques territoriales de la France contemporaine',
           lecon: {
             titre: 'Où vivent les Français ? La ville qui s’étale',
-            cours: `La France est un pays **urbain** : plus de **80 % des Français** habitent une ville, et **95 %** vivent sous l’influence d’une ville — pour y travailler, y étudier, s’y soigner ou y faire leurs courses.
+            cours: `La France est un pays urbain : plus de 80 % des Français habitent une ville, et 95 % vivent sous l'influence d'une ville.
 
-## L’aire urbaine, l’outil qui mesure la ville réelle
-Une **aire urbaine** réunit deux morceaux :
-- le **pôle urbain** — la ville-centre et sa banlieue, une zone bâtie en continu qui offre au moins 1 500 emplois ;
-- la **couronne périurbaine** — les communes d’où **au moins 40 % des actifs** partent travailler dans le pôle.
+## L'aire urbaine, l'outil qui mesure la ville réelle
+| Sa partie | Sa définition |
+| Le **pôle urbain** | La ville-centre et sa banlieue : une zone bâtie en continu, avec au moins 1 500 emplois |
+| La **couronne périurbaine** | Les communes d'où **au moins 40 %** des actifs partent travailler dans le pôle |
 
-> La commune s’arrête à sa limite administrative ; l’aire urbaine, elle, dit jusqu’où la ville fait vivre les gens. (Depuis 2020, l’INSEE parle d’**aire d’attraction des villes** : le principe est le même.)
+> La commune s'arrête à sa limite administrative ; l'aire urbaine dit jusqu'où la ville fait vivre les gens.
 
-## Une hiérarchie urbaine très inégale
-- **Paris** domine tout : environ **13 millions d’habitants**, soit un Français sur cinq. C’est la seule **métropole mondiale** française.
-- Une douzaine de **métropoles régionales** suivent de loin : Lyon, Marseille, Lille, Toulouse, Bordeaux, Nantes, Nice, Strasbourg, Rennes, Montpellier…
-- Puis les **villes moyennes** et les **petites villes**, dont beaucoup perdent commerces et services.
+Depuis 2020, l'INSEE parle d'**aire d'attraction des villes** : le principe est le même.
 
-## La métropolisation, effet de la mondialisation
-La **métropolisation** est la concentration des hommes, des richesses et des **fonctions de commandement** dans les plus grandes villes : sièges sociaux, universités, laboratoires, hôpitaux de pointe, musées, aéroports internationaux. Les quartiers d’affaires en sont le symbole — **La Défense** à Paris, la Part-Dieu à Lyon, Euralille.
+## Une hiérarchie très inégale
+| Le rang | Les villes | Leur poids |
+| **Paris** | — | Environ **13 millions** d'habitants : un Français sur cinq. Seule **métropole mondiale** française |
+| Les **métropoles régionales** | Lyon, Marseille, Lille, Toulouse, Bordeaux, Nantes, Nice, Strasbourg, Rennes, Montpellier | Loin derrière |
+| Les **villes moyennes** et petites villes | — | Beaucoup perdent commerces et services |
 
-## Une ville qui s’étale
-Depuis les années 1960, la ville grandit surtout **en surface** : c’est l’**étalement urbain**, nourri par le prix du logement, la voiture et le rêve de la maison avec jardin. Il produit la **périurbanisation**, des **mobilités pendulaires** (les navettes domicile-travail) toujours plus longues, l’**artificialisation des sols** et le **mitage** des campagnes. La loi vise désormais le « **zéro artificialisation nette** ».
+## La métropolisation
+C'est la concentration des hommes, des richesses et des **fonctions de commandement** dans les plus grandes villes.
+
+| La fonction concentrée | Son exemple |
+| Les **sièges sociaux** | **La Défense**, la Part-Dieu, Euralille |
+| Universités et laboratoires | La recherche |
+| Hôpitaux de pointe, musées | Les services rares |
+| Aéroports internationaux | La connexion au monde |
+
+## Une ville qui s'étale
+| La cause | L'effet |
+| Le prix du logement, la voiture, le rêve de la maison avec jardin | L'**étalement urbain** |
+| L'installation en couronne | La **périurbanisation** |
+| Les navettes domicile-travail | Des **mobilités pendulaires** plus longues |
+| L'urbanisation des terres | L'**artificialisation** des sols, le **mitage** des campagnes |
+
+> La loi vise désormais le « **zéro artificialisation nette** ».
 
 ## Une ville qui sépare
-La **ségrégation socio-spatiale** trie les quartiers selon les revenus : centres rénovés et chers (**gentrification**) d’un côté, **quartiers prioritaires** de l’autre. Habiter la même aire urbaine ne veut pas dire vivre la même ville.`,
+| Le quartier | Sa dynamique |
+| Les centres rénovés et chers | La **gentrification** |
+| Les **quartiers prioritaires** | Le décrochage |
+
+> Habiter la même aire urbaine ne veut pas dire vivre la même ville.`,
           },
           questions: [
             ['Que réunit une aire urbaine ?', ['Un pôle urbain et sa couronne périurbaine', 'Une commune et ses hameaux', 'Un département et sa préfecture', 'Une région et ses métropoles'], 0, 'Le pôle est la zone bâtie en continu, la couronne les communes qui envoient leurs actifs y travailler.'],
@@ -188,28 +207,42 @@ La **ségrégation socio-spatiale** trie les quartiers selon les revenus : centr
           axe: 'Dynamiques territoriales de la France contemporaine',
           lecon: {
             titre: 'Des mines fermées aux technopôles',
-            cours: `Un **espace productif** est un espace aménagé pour produire des richesses. L’industrie française a changé de visage — et de carte — en cinquante ans.
+            cours: `Un espace productif est un espace aménagé pour produire des richesses. L'industrie française a changé de visage — et de carte — en cinquante ans.
 
 ## La désindustrialisation
-Depuis les années 1970, l’industrie a perdu la moitié de ses emplois. Trois causes :
-- la **concurrence mondiale** et les **délocalisations** vers des pays à main-d’œuvre moins chère ;
-- l’**automatisation**, qui produit autant avec moins d’ouvriers ;
-- l’épuisement ou l’abandon des ressources locales (charbon, minerai de fer).
+Depuis les années 1970, l'industrie a perdu **la moitié** de ses emplois.
 
-Les vieilles régions industrielles du **Nord**, de **Lorraine** et de **Saint-Étienne** en gardent des **friches industrielles**, un chômage élevé et une population qui part.
+| La cause | Son mécanisme |
+| La **concurrence mondiale** | Les **délocalisations** vers des pays à main-d'œuvre moins chère |
+| L'**automatisation** | Produire autant avec moins d'ouvriers |
+| L'épuisement des ressources locales | Charbon, minerai de fer |
+
+| La région touchée | Ce qu'elle en garde |
+| Le **Nord**, la **Lorraine**, Saint-Étienne | **Friches industrielles**, chômage élevé, départs |
 
 ## Les espaces industriels qui gagnent
-- Les **technopôles** : des parcs qui associent entreprises de haute technologie, laboratoires et universités — **Sophia Antipolis** près de Nice, l’Aerospace Valley à Toulouse.
-- Les **pôles de compétitivité**, labellisés par l’État pour faire travailler ensemble industriels et chercheurs.
-- Les **métropoles**, où se concentrent recherche, ingénierie et sièges sociaux.
+| L'espace | Ce qu'il associe | Son exemple |
+| Le **technopôle** | Entreprises de haute technologie, laboratoires, universités | **Sophia Antipolis**, l'Aerospace Valley |
+| Le **pôle de compétitivité** | Industriels et chercheurs, labellisés par l'État | — |
+| La **métropole** | Recherche, ingénierie, sièges sociaux | Toutes les grandes villes |
 
 ## La littoralisation
-Les industries lourdes qui consomment des matières premières importées s’installent sur les **littoraux**, au contact des grands ports : ce sont les **zones industrialo-portuaires (ZIP)** de **Dunkerque**, du **Havre**, de **Marseille-Fos**. Le littoral est une **interface** — le lieu de contact entre le territoire national et le monde.
+Les industries lourdes qui consomment des matières premières importées s'installent près des grands ports.
 
-> Ce n’est pas l’industrie qui disparaît, ce sont ses lieux qui se déplacent : du bassin minier vers le port, le technopôle et la métropole.
+| La **zone industrialo-portuaire** | Son littoral |
+| **Dunkerque** | Mer du Nord |
+| **Le Havre** | Manche |
+| **Marseille-Fos** | Méditerranée |
 
-## Des industries de pointe qui font la puissance française
-Aéronautique (**Airbus**, Toulouse), spatial, nucléaire, pharmacie, luxe et agroalimentaire restent des points forts, très exportateurs.`,
+> Le littoral est une **interface** : le lieu de contact entre le territoire national et le monde.
+
+> Ce n'est pas l'industrie qui disparaît, ce sont ses lieux qui se déplacent : du bassin minier vers le port, le technopôle et la métropole.
+
+## Des industries de pointe
+| Le secteur | Son ancrage |
+| L'**aéronautique** | **Airbus**, à Toulouse |
+| Le **spatial**, le **nucléaire** | Filières nationales |
+| La **pharmacie**, le **luxe**, l'**agroalimentaire** | Très exportateurs |`,
           },
           questions: [
             ['Qu’est-ce qu’un espace productif ?', ['Un espace aménagé pour produire des richesses', 'Un espace protégé de toute activité humaine', 'Un quartier réservé aux logements', 'Une zone uniquement agricole'], 0, 'Il peut être industriel, agricole ou de services.'],
@@ -227,31 +260,40 @@ Aéronautique (**Airbus**, Toulouse), spatial, nucléaire, pharmacie, luxe et ag
           axe: 'Dynamiques territoriales de la France contemporaine',
           lecon: {
             titre: 'Une agriculture puissante, sous tension',
-            cours: `La France est le **premier producteur agricole de l’Union européenne**, alors que l’agriculture n’occupe plus que **2 % des actifs**. Ce paradoxe s’explique par un demi-siècle de modernisation.
+            cours: `La France est le premier producteur agricole de l'Union européenne — alors que l'agriculture n'occupe plus que 2 % des actifs.
 
 ## Une agriculture productiviste
-Depuis les années 1960, l’agriculture française cherche le **rendement maximal** :
-- **mécanisation** (tracteurs, moissonneuses) et agrandissement des exploitations ;
-- **engrais**, **pesticides**, semences sélectionnées, irrigation ;
-- **spécialisation** de chaque région dans une production.
+| Le levier | Son contenu |
+| La **mécanisation** | Tracteurs, moissonneuses, exploitations agrandies |
+| Les **intrants** | Engrais, pesticides, semences sélectionnées, irrigation |
+| La **spécialisation** | Chaque région dans une production |
 
-Elle est **intégrée aux marchés** : reliée en amont aux entreprises qui vendent machines et intrants, en aval aux **industries agroalimentaires** et à la grande distribution.
+Elle est **intégrée aux marchés** : en amont les fournisseurs de machines et d'intrants, en aval les **industries agroalimentaires** et la grande distribution.
 
 ## Une carte très spécialisée
-- Les **grandes cultures céréalières** de la Beauce et du Bassin parisien, dans de vastes champs ouverts (**openfield**).
-- L’**élevage** de l’Ouest — dont l’élevage **hors-sol** de porcs et de volailles en Bretagne.
-- La **viticulture** de Bordeaux, de Bourgogne, de Champagne et du Languedoc.
-- Les **fruits et légumes** du Midi méditerranéen et des vallées irriguées.
+| La région | Sa production | Son paysage |
+| La Beauce, le Bassin parisien | **Grandes cultures céréalières** | L'**openfield**, de vastes champs ouverts |
+| L'**Ouest** | L'**élevage**, dont le **hors-sol** breton — porcs, volailles | Bocage |
+| Bordeaux, Bourgogne, Champagne, Languedoc | La **viticulture** | Vignobles |
+| Le Midi méditerranéen, les vallées irriguées | **Fruits et légumes** | Cultures irriguées |
 
-## Le rôle de l’Europe
-La **PAC** (Politique agricole commune) verse des aides aux agriculteurs et oriente les productions depuis 1962. Sans elle, une grande partie des exploitations ne serait pas rentable.
+## Le rôle de l'Europe
+| La **PAC** | Son action |
+| Depuis **1962** | Elle verse des aides et oriente les productions |
+
+> Sans elle, une grande partie des exploitations ne serait pas rentable.
 
 ## Des tensions fortes
-- **Environnement** : nitrates et algues vertes en Bretagne, érosion des sols, perte de biodiversité.
-- **Revenus** : les prix imposés par la grande distribution étranglent beaucoup d’exploitations.
-- Une autre agriculture progresse : **bio**, labels de qualité (**AOP**, AOC, Label rouge) et **circuits courts** qui rapprochent producteur et consommateur.
+| La tension | Sa manifestation |
+| L'**environnement** | Nitrates et algues vertes en Bretagne, érosion des sols, perte de biodiversité |
+| Les **revenus** | Les prix imposés par la grande distribution étranglent beaucoup d'exploitations |
 
-> Produire plus ou produire mieux : c’est le débat qui traverse aujourd’hui les campagnes françaises.`,
+| L'alternative en progression | Son principe |
+| Le **bio** | Sans produits de synthèse |
+| Les **labels** — AOP, AOC, Label rouge | La qualité et l'origine |
+| Les **circuits courts** | Rapprocher producteur et consommateur |
+
+> Produire plus ou produire mieux : c'est le débat qui traverse aujourd'hui les campagnes françaises.`,
           },
           questions: [
             ['Quelle place occupe la France dans l’agriculture européenne ?', ['Elle est le premier producteur agricole de l’Union européenne', 'Elle est le dernier producteur de l’Union', 'Elle n’exporte aucun produit agricole', 'Elle importe la totalité de ses céréales'], 0, 'Et pourtant l’agriculture n’occupe plus que 2 % des actifs.'],
@@ -269,26 +311,37 @@ La **PAC** (Politique agricole commune) verse des aides aux agriculteurs et orie
           axe: 'Dynamiques territoriales de la France contemporaine',
           lecon: {
             titre: 'Le pays des services et le premier pays touristique du monde',
-            cours: `Les **services** (le secteur tertiaire) emploient aujourd’hui près de **80 % des actifs** français : c’est la **tertiarisation** de l’économie.
+            cours: `Les services emploient près de 80 % des actifs français : c'est la tertiarisation de l'économie.
 
 ## Deux familles de services
-- Les **services marchands**, vendus : commerce, banque, assurance, transport, conseil, informatique, tourisme.
-- Les **services non marchands**, financés par l’impôt : école, hôpital public, justice, sécurité, administration.
+| La famille | Son financement | Ses exemples |
+| **Marchands** | La vente | Commerce, banque, assurance, transport, conseil, informatique, tourisme |
+| **Non marchands** | L'**impôt** | École, hôpital public, justice, sécurité, administration |
 
 ## Une géographie très concentrée
-Les services à **haute valeur ajoutée** (finance, conseil, recherche, médias) se concentrent dans les **métropoles**, et d’abord à Paris : **La Défense** rassemble plus de 180 000 salariés. Les villes moyennes et les campagnes gardent surtout les services **de proximité** (commerces, écoles, médecins) — et souffrent quand ceux-ci ferment.
+| Le territoire | Ses services |
+| Les **métropoles**, Paris d'abord | Ceux à **haute valeur ajoutée** : finance, conseil, recherche, médias — **La Défense** rassemble plus de 180 000 salariés |
+| Villes moyennes et campagnes | Ceux de **proximité** : commerces, écoles, médecins |
 
-## La France, première destination touristique mondiale
-La France accueille chaque année environ **90 millions de touristes étrangers**, un record mondial. Le tourisme représente près de **8 % du PIB**.
+> Ces territoires souffrent quand les services de proximité ferment.
 
-Quatre grands types d’espaces touristiques :
-- le **tourisme urbain et culturel** : Paris, les châteaux de la Loire, les villes d’art ;
-- le **tourisme balnéaire** : Côte d’Azur, littoral atlantique, Languedoc ;
-- le **tourisme de montagne** : stations des Alpes et des Pyrénées, hiver comme été ;
-- le **tourisme vert**, dans les campagnes et les parcs naturels.
+## La première destination touristique mondiale
+| Le repère | Sa valeur |
+| Touristes étrangers par an | Environ **90 millions** |
+| Part du PIB | Près de **8 %** |
 
-## Aménager pour accueillir… et ses limites
-Stations balnéaires, remontées mécaniques, parcs de loisirs (Disneyland Paris) créent des emplois, souvent **saisonniers**. Mais l’afflux touristique bétonne les littoraux, use les milieux fragiles de montagne et provoque un **surtourisme** dans certains sites.
+| Le type de tourisme | Ses lieux |
+| **Urbain et culturel** | Paris, les châteaux de la Loire, les villes d'art |
+| **Balnéaire** | Côte d'Azur, littoral atlantique, Languedoc |
+| De **montagne** | Alpes et Pyrénées, hiver comme été |
+| **Vert** | Campagnes, parcs naturels |
+
+## Aménager pour accueillir, et ses limites
+| L'aménagement | Son revers |
+| Stations balnéaires | Le **bétonnage** des littoraux |
+| Remontées mécaniques | L'usure des milieux fragiles de montagne |
+| Parcs de loisirs, comme Disneyland Paris | Des emplois souvent **saisonniers** |
+| L'afflux dans certains sites | Le **surtourisme** |
 
 > Le tourisme fait vivre des territoires entiers — et menace parfois ce qui les rend attirants.`,
           },
@@ -308,28 +361,38 @@ Stations balnéaires, remontées mécaniques, parcs de loisirs (Disneyland Paris
           axe: 'Dynamiques territoriales de la France contemporaine',
           lecon: {
             titre: 'La France des campagnes et des montagnes',
-            cours: `Un **espace de faible densité** compte moins de **30 habitants par km²**. Ces espaces couvrent près de **la moitié du territoire français** mais n’abritent qu’environ **6 % de la population**.
+            cours: `Un espace de faible densité compte moins de 30 habitants par km².
 
-## Où sont-ils ?
-Ils dessinent une **diagonale des faibles densités** (l’ancienne « diagonale du vide ») qui traverse la France des Ardennes aux Landes, en passant par la Champagne, le Massif central et les Pyrénées. S’y ajoutent les hautes montagnes et une partie de la Corse.
+| Le repère | Sa valeur |
+| Leur part du **territoire** | Près de la **moitié** |
+| Leur part de la **population** | Environ **6 %** |
+
+## Où sont-ils
+La **diagonale des faibles densités**, des Ardennes aux Landes, par la Champagne, le Massif central et les Pyrénées. S'y ajoutent les hautes montagnes et une partie de la Corse.
 
 ## Des difficultés réelles
-- **L’exode rural** puis la **déprise** : des villages qui perdent des habitants depuis un siècle.
-- Le **vieillissement** de la population.
-- La fermeture des **services** : école, bureau de poste, commerce, et parfois **déserts médicaux** où l’on cherche un médecin à 40 km.
-- La dépendance à la **voiture**, faute de transports collectifs.
+| La difficulté | Sa manifestation |
+| L'**exode rural** puis la **déprise** | Des villages qui perdent des habitants depuis un siècle |
+| Le **vieillissement** | Peu de jeunes actifs |
+| La fermeture des **services** | École, poste, commerce — et parfois des **déserts médicaux** |
+| La dépendance à la **voiture** | Faute de transports collectifs |
 
 ## Mais de vrais atouts
-- Une **agriculture de qualité** : élevage extensif, AOP fromagères, vignobles.
-- Le **tourisme vert** et le tourisme de montagne : randonnée, sports d’hiver, gîtes.
-- Les **énergies renouvelables** : éolien, solaire, hydroélectricité, biomasse.
-- Un **cadre de vie** recherché : des **néoruraux** s’y installent, et le **télétravail** a accéléré le mouvement depuis 2020.
-- Une **biodiversité** protégée par les **parcs naturels régionaux** et les parcs nationaux.
+| L'atout | Son contenu |
+| Une **agriculture de qualité** | Élevage extensif, AOP fromagères, vignobles |
+| Le **tourisme vert** et de montagne | Randonnée, sports d'hiver, gîtes |
+| Les **énergies renouvelables** | Éolien, solaire, hydroélectricité, biomasse |
+| Un **cadre de vie** recherché | Des **néoruraux** s'installent ; le **télétravail** accélère depuis 2020 |
+| La **biodiversité** | Protégée par les parcs naturels régionaux et nationaux |
 
-> La faible densité n’est pas le vide : ces espaces produisent l’eau, l’énergie, les paysages et une partie de l’alimentation du pays.
+> La faible densité n'est pas le vide : ces espaces produisent l'eau, l'énergie, les paysages et une partie de l'alimentation du pays.
 
 ## Des dynamiques opposées
-Les campagnes proches des villes ou touristiques **gagnent** des habitants ; les campagnes isolées de montagne moyenne continuent souvent d’en perdre. Parler « des » espaces de faible densité au pluriel n’est pas une précaution de style : ce sont des mondes différents.`,
+| Le type de campagne | Sa dynamique |
+| Proche d'une ville, ou touristique | Elle **gagne** des habitants |
+| Isolée, de montagne moyenne | Elle continue souvent d'en **perdre** |
+
+> Parler « des » espaces de faible densité au pluriel n'est pas une précaution de style : ce sont des mondes différents.`,
           },
           questions: [
             ['En dessous de quelle densité parle-t-on d’espace de faible densité ?', ['30 habitants par km²', '100 habitants par km²', '5 habitants par km²', '250 habitants par km²'], 0, 'Ces espaces couvrent près de la moitié du territoire français.'],
@@ -350,28 +413,43 @@ Les campagnes proches des villes ou touristiques **gagnent** des habitants ; les
           axe: 'Pourquoi et comment aménager le territoire ?',
           lecon: {
             titre: 'Qui transforme le territoire, et pour corriger quoi ?',
-            cours: `**Aménager le territoire**, c’est le transformer volontairement pour le rendre plus attractif, plus accessible ou plus juste. En France, l’aménagement poursuit depuis les années 1960 un objectif affiché : réduire les **inégalités territoriales**.
+            cours: `Aménager le territoire, c'est le transformer volontairement pour le rendre plus attractif, plus accessible ou plus juste.
 
 ## Les inégalités à corriger
-- **Métropoles / périphéries** : les grandes villes captent emplois qualifiés et investissements ; villes moyennes et campagnes isolées décrochent.
-- **Centres / marges** au sein d’une même région : accès aux soins, à l’école, au très haut débit.
-- **Hexagone / outre-mer** : chômage deux à trois fois plus élevé, vie chère.
+| L'inégalité | Son contenu |
+| **Métropoles / périphéries** | Les grandes villes captent emplois qualifiés et investissements |
+| **Centres / marges** d'une même région | Accès aux soins, à l'école, au très haut débit |
+| **Hexagone / outre-mer** | Chômage deux à trois fois plus élevé, vie chère |
 
 ## Trois grands objectifs
-- **Corriger les déséquilibres** entre les territoires.
-- **Rendre le territoire compétitif** dans la mondialisation : LGV, ports, aéroports, très haut débit, pôles de compétitivité.
-- **Répondre au défi environnemental** : transports collectifs, énergies renouvelables, limitation de l’étalement urbain.
+| L'objectif | Ses moyens |
+| **Corriger les déséquilibres** | Aides aux territoires en difficulté |
+| Rendre le territoire **compétitif** | LGV, ports, aéroports, très haut débit, pôles de compétitivité |
+| Répondre au défi **environnemental** | Transports collectifs, renouvelables, limitation de l'étalement |
 
-## Une multitude d’acteurs
-- L’**État**, qui fixe les orientations et finance (autrefois la DATAR, aujourd’hui l’**ANCT**, Agence nationale de la cohésion des territoires).
-- Les **collectivités territoriales** : la **région** (développement économique, transports, lycées), le **département** (routes, collèges, action sociale), la **commune** et l’**intercommunalité** (urbanisme, écoles, déchets).
-- L’**Union européenne**, par ses fonds (**FEDER**) qui cofinancent des projets régionaux.
-- Les **entreprises**, qui investissent, et les **habitants et associations**, consultés lors des enquêtes publiques — parfois opposés aux projets.
+## Une multitude d'acteurs
+| L'acteur | Ses compétences |
+| L'**État** | Il oriente et finance : autrefois la DATAR, aujourd'hui l'**ANCT** |
+| La **région** | Développement économique, transports, lycées |
+| Le **département** | Routes, collèges, action sociale |
+| La **commune** et l'**intercommunalité** | Urbanisme, écoles, déchets |
+| L'**Union européenne** | Le **FEDER** cofinance des projets régionaux |
+| Les **entreprises** | Elles investissent |
+| Habitants et **associations** | Consultés lors des enquêtes publiques — parfois opposés aux projets |
 
-> Aucun aménagement d’ampleur n’a un seul auteur : c’est toujours une négociation entre plusieurs échelles.
+> Aucun aménagement d'ampleur n'a un seul auteur : c'est toujours une négociation entre plusieurs échelles.
 
-## Des exemples et leurs limites
-LGV, **Grand Paris Express**, **Action cœur de ville** pour les centres de villes moyennes, **maisons France Services**, plan **France Très Haut Débit**, maisons de santé. Mais un aménagement peut aussi creuser l’écart : une LGV qui met une métropole à deux heures de Paris peut vider les villes qu’elle traverse sans s’y arrêter — c’est l’**effet tunnel**.`,
+## Des exemples
+| Le programme | Son objet |
+| Les **LGV** | La vitesse et la connexion |
+| Le **Grand Paris Express** | Les transports métropolitains |
+| **Action cœur de ville** | Les centres de villes moyennes |
+| Les **maisons France Services** | L'accès aux services publics |
+| **France Très Haut Débit** | Le numérique |
+| Les maisons de santé | L'accès aux soins |
+
+## Une limite
+> Une LGV qui met une métropole à deux heures de Paris peut **vider** les villes qu'elle traverse sans s'y arrêter : c'est l'**effet tunnel**.`,
           },
           questions: [
             ['Qu’est-ce qu’aménager le territoire ?', ['Le transformer volontairement pour le rendre plus attractif, accessible ou juste', 'Le laisser évoluer sans intervention', 'Le diviser en nouvelles régions administratives', 'Le protéger de toute construction'], 0, 'C’est une action publique volontaire, menée à plusieurs échelles.'],
@@ -389,27 +467,38 @@ LGV, **Grand Paris Express**, **Action cœur de ville** pour les centres de vill
           axe: 'Pourquoi et comment aménager le territoire ?',
           lecon: {
             titre: 'Réparer la ville là où elle sépare',
-            cours: `La **politique de la ville** est l’ensemble des mesures destinées aux quartiers urbains les plus en difficulté. Elle est née dans les années 1980, après les premières émeutes urbaines dans les banlieues.
+            cours: `La politique de la ville est l'ensemble des mesures destinées aux quartiers urbains les plus en difficulté. Elle est née dans les années 1980.
 
 ## Les quartiers concernés
-Ce sont les **quartiers prioritaires de la politique de la ville (QPV)** : environ 1 500 quartiers, 5 millions d’habitants. Un seul critère les désigne depuis 2014 — le **revenu des habitants**. On y trouve souvent :
-- des **grands ensembles** construits dans les années 1950-1970, aujourd’hui dégradés ;
-- un **taux de pauvreté** trois fois supérieur à la moyenne nationale ;
-- un chômage élevé, en particulier chez les jeunes ;
-- un **enclavement** : mal desservis, coupés du reste de la ville par une rocade ou une voie ferrée.
+| Le repère | Sa valeur |
+| Leur nom | Les **quartiers prioritaires**, ou **QPV** |
+| Leur nombre | Environ **1 500** |
+| Leur population | **5 millions** d'habitants |
+| Le critère depuis 2014 | Le **revenu** des habitants — un seul critère |
 
-## Deux volets d’action
-**1. Le volet urbain : rénover.** L’**ANRU** (Agence nationale pour la rénovation urbaine) démolit les barres les plus dégradées, reconstruit des immeubles plus petits, réaménage les espaces publics, ouvre des rues et amène le **tramway** pour désenclaver.
+| Leur caractéristique fréquente | Son contenu |
+| Les **grands ensembles** | Construits dans les années 1950-1970, aujourd'hui dégradés |
+| Le **taux de pauvreté** | **Trois fois** la moyenne nationale |
+| Le **chômage** | Élevé, en particulier chez les jeunes |
+| L'**enclavement** | Mal desservis, coupés par une rocade ou une voie ferrée |
 
-**2. Le volet humain : accompagner.** Éducation prioritaire (**REP** et **REP+**) avec des classes allégées, dispositifs de réussite éducative, maisons de justice, associations de quartier, **zones franches urbaines** qui exonèrent d’impôts les entreprises qui s’installent.
+## Deux volets d'action
+| Le volet | Son acteur | Ses actions |
+| **Urbain** : rénover | L'**ANRU** | Démolir les barres dégradées, reconstruire plus petit, réaménager les espaces publics, ouvrir des rues, amener le **tramway** |
+| **Humain** : accompagner | L'État et les associations | Éducation prioritaire (**REP**, **REP+**), réussite éducative, maisons de justice, associations de quartier, **zones franches urbaines** |
 
-## L’objectif : la mixité sociale
-La **loi SRU** impose aux communes d’au moins 3 500 habitants un minimum de **25 % de logements sociaux**, pour que le logement social cesse d’être concentré dans les mêmes communes.
+## L'objectif : la mixité sociale
+| La **loi SRU** | Son exigence |
+| Communes d'au moins 3 500 habitants | Un minimum de **25 % de logements sociaux** |
+
+> Pour que le logement social cesse d'être concentré dans les mêmes communes.
 
 > Rénover les immeubles ne suffit pas : sans emploi, sans école et sans transports, un quartier rénové reste un quartier relégué.
 
 ## Un bilan discuté
-Les quartiers ont changé de visage, mais les écarts de revenus et de chômage avec le reste de la ville se sont peu réduits. Beaucoup de communes préfèrent encore payer l’amende que construire des logements sociaux.`,
+| Le progrès | La limite |
+| Les quartiers ont changé de visage | Les écarts de revenus et de chômage se sont peu réduits |
+| Des logements rénovés | Beaucoup de communes préfèrent payer l'amende que construire du logement social |`,
           },
           questions: [
             ['Que désigne le sigle QPV ?', ['Quartier prioritaire de la politique de la ville', 'Quartier public de valorisation', 'Quartier péri-urbain de veille', 'Quartier protégé et vert'], 0, 'Environ 1 500 quartiers et 5 millions d’habitants sont concernés.'],
@@ -427,27 +516,32 @@ Les quartiers ont changé de visage, mais les écarts de revenus et de chômage 
           axe: 'Pourquoi et comment aménager le territoire ?',
           lecon: {
             titre: 'La France des trois océans',
-            cours: `La France ne s’arrête pas à l’Hexagone : ses **territoires ultramarins**, répartis dans les trois océans, portent environ **2,8 millions d’habitants** et font d’elle une puissance mondiale.
+            cours: `La France ne s'arrête pas à l'Hexagone : ses territoires ultramarins, répartis dans les trois océans, portent environ 2,8 millions d'habitants.
 
 ## Des statuts différents
-- Les cinq **DROM** (départements et régions d’outre-mer) : **Guadeloupe, Martinique, Guyane, La Réunion, Mayotte**. Ce sont des départements français à part entière, et des **régions ultrapériphériques (RUP)** de l’Union européenne.
-- Les **COM** (collectivités d’outre-mer), plus autonomes : Polynésie française, Saint-Pierre-et-Miquelon, Saint-Martin, Saint-Barthélemy, Wallis-et-Futuna.
-- La **Nouvelle-Calédonie**, au statut particulier, et les **TAAF** (Terres australes et antarctiques françaises), sans population permanente.
+| Le statut | Les territoires | Sa nature |
+| Les **DROM** | Guadeloupe, Martinique, Guyane, La Réunion, Mayotte | Départements français à part entière, et **régions ultrapériphériques** de l'Union |
+| Les **COM** | Polynésie française, Saint-Pierre-et-Miquelon, Saint-Martin, Saint-Barthélemy, Wallis-et-Futuna | Plus autonomes |
+| Statut particulier | La **Nouvelle-Calédonie** | Un titre propre de la Constitution |
+| Sans population permanente | Les **TAAF** | Terres australes et antarctiques |
 
 ## Trois contraintes lourdes
-- L’**éloignement** et la **discontinuité territoriale** : des milliers de kilomètres séparent ces territoires de l’Hexagone, ce qui renchérit tout — c’est la **vie chère**.
-- L’**insularité** et l’exiguïté, sauf en Guyane.
-- Les **risques naturels** : cyclones, séismes, volcans (la Soufrière, le Piton de la Fournaise), submersion.
+| La contrainte | Son effet |
+| L'**éloignement** et la **discontinuité territoriale** | Tout est renchéri : la **vie chère** |
+| L'**insularité** et l'exiguïté | Sauf en Guyane |
+| Les **risques naturels** | Cyclones, séismes, volcans — la Soufrière, le Piton de la Fournaise —, submersion |
 
-S’y ajoutent un **chômage** deux à trois fois supérieur à celui de l’Hexagone, une forte dépendance aux importations et aux transferts publics.
+S'y ajoutent un **chômage** deux à trois fois supérieur à celui de l'Hexagone et une forte dépendance aux importations et aux transferts publics.
 
 ## De vrais atouts
-- Une **biodiversité** exceptionnelle : l’outre-mer abrite 80 % de la biodiversité française.
-- Le **tourisme**, l’agriculture tropicale (banane, canne à sucre, vanille), la pêche.
-- Le **centre spatial de Kourou**, en Guyane, base de lancement européenne.
-- Une immense **zone économique exclusive (ZEE)** : grâce à l’outre-mer, la France possède le **deuxième domaine maritime du monde**, environ 11 millions de km².
+| L'atout | Sa valeur |
+| La **biodiversité** | L'outre-mer abrite **80 %** de la biodiversité française |
+| Le **tourisme** | Une ressource majeure |
+| L'agriculture tropicale | Banane, canne à sucre, vanille |
+| Le **centre spatial de Kourou** | La base de lancement européenne |
+| La **zone économique exclusive** | Environ **11 millions de km²** : le **deuxième domaine maritime du monde** |
 
-> Sans l’outre-mer, la France serait une puissance européenne ; avec lui, elle est présente dans tous les océans du globe.`,
+> Sans l'outre-mer, la France serait une puissance européenne ; avec lui, elle est présente dans tous les océans du globe.`,
           },
           questions: [
             ['Combien de DROM la France compte-t-elle ?', ['Cinq', 'Trois', 'Sept', 'Dix'], 0, 'Guadeloupe, Martinique, Guyane, La Réunion et Mayotte.'],
@@ -468,30 +562,37 @@ S’y ajoutent un **chômage** deux à trois fois supérieur à celui de l’Hex
           axe: 'La France et l’Union européenne',
           lecon: {
             titre: 'Comment 27 États font un territoire commun',
-            cours: `L’**Union européenne** réunit **27 États** et environ **450 millions d’habitants**. Elle est née de la volonté d’empêcher le retour de la guerre en Europe.
+            cours: `L'Union européenne réunit 27 États et environ 450 millions d'habitants. Elle est née de la volonté d'empêcher le retour de la guerre en Europe.
 
 ## Les grandes étapes
-- **1951** : la **CECA** met en commun le charbon et l’acier de six pays, dont la France et l’Allemagne.
-- **1957** : le **traité de Rome** crée la **CEE** — un marché commun à six.
-- **1992** : le **traité de Maastricht** crée l’**Union européenne** et la **citoyenneté européenne**.
-- **2002** : l’**euro** entre en circulation ; il est aujourd’hui la monnaie de 20 États.
-- **2004** : le grand élargissement à l’Est fait entrer dix pays d’un coup.
-- **2020** : le **Brexit** fait sortir le Royaume-Uni — l’Union passe de 28 à 27 membres.
+| La date | L'étape | Son contenu |
+| **1951** | La **CECA** | Le charbon et l'acier de six pays en commun |
+| **1957** | Le **traité de Rome** | La **CEE** : un marché commun à six |
+| **1992** | **Maastricht** | L'**Union européenne** et la **citoyenneté européenne** |
+| **2002** | L'**euro** en circulation | Aujourd'hui la monnaie de 20 États |
+| **2004** | Le grand élargissement à l'Est | Dix pays d'un coup |
+| **2020** | Le **Brexit** | De 28 à **27** membres |
 
-## Un territoire qui s’élargit et s’approfondit
-S’**élargir**, c’est accueillir de nouveaux États (de 6 en 1957 à 27 aujourd’hui, avec des candidats dans les Balkans et en Ukraine). S’**approfondir**, c’est mettre en commun toujours plus de compétences : marché unique, monnaie, frontières, recherche, environnement.
+## S'élargir et s'approfondir
+| Le mouvement | Ce qu'il fait |
+| S'**élargir** | Accueillir de nouveaux États : de 6 en 1957 à 27, avec des candidats dans les Balkans et en Ukraine |
+| S'**approfondir** | Mettre en commun plus de compétences : marché unique, monnaie, frontières, recherche, environnement |
 
-## Ce que l’Union change au quotidien
-- La **libre circulation** des personnes, des marchandises, des services et des capitaux (le **marché unique**).
-- L’espace **Schengen**, où l’on franchit les frontières intérieures sans contrôle.
-- La **citoyenneté européenne** : voter aux élections municipales et européennes dans son pays de résidence, étudier ailleurs avec **Erasmus**, être soigné partout.
+## Ce que l'Union change au quotidien
+| Le droit | Son contenu |
+| La **libre circulation** | Des personnes, marchandises, services et capitaux : le **marché unique** |
+| L'espace **Schengen** | Franchir les frontières intérieures sans contrôle |
+| La **citoyenneté européenne** | Voter aux municipales et aux européennes dans son pays de résidence |
+| **Erasmus** | Étudier ailleurs |
+| La carte européenne d'assurance maladie | Être soigné partout |
 
-## Qui décide ?
-- Le **Parlement européen** (Strasbourg), élu au suffrage universel direct tous les cinq ans.
-- La **Commission européenne** (Bruxelles), qui propose les lois et fait appliquer les traités.
-- Le **Conseil de l’Union européenne** et le **Conseil européen**, où siègent les États.
+## Qui décide
+| L'institution | Son siège | Son rôle |
+| Le **Parlement européen** | Strasbourg | Élu au suffrage universel direct tous les cinq ans |
+| La **Commission** | Bruxelles | Elle propose les lois et fait appliquer les traités |
+| Le **Conseil de l'Union** et le **Conseil européen** | Bruxelles | Les États y siègent |
 
-> L’Union n’est ni un État, ni une simple alliance : les États lui ont transféré une part de leur souveraineté, et gardent le reste.`,
+> L'Union n'est ni un État, ni une simple alliance : les États lui ont transféré une part de leur souveraineté, et gardent le reste.`,
           },
           questions: [
             ['Combien d’États membres compte l’Union européenne depuis 2020 ?', ['27', '25', '28', '30'], 0, 'Le Brexit a fait sortir le Royaume-Uni en 2020.'],
@@ -509,29 +610,36 @@ S’**élargir**, c’est accueillir de nouveaux États (de 6 en 1957 à 27 aujo
           axe: 'La France et l’Union européenne',
           lecon: {
             titre: 'Un centre, des périphéries, des frontières qui s’effacent',
-            cours: `L’Union européenne forme un territoire **très inégal** : d’une région à l’autre, la richesse par habitant peut varier du simple au sextuple.
+            cours: `L'Union européenne forme un territoire très inégal : d'une région à l'autre, la richesse par habitant peut varier du simple au sextuple.
 
 ## Un centre : la mégalopole européenne
-Une **dorsale** urbaine et industrielle court de **Londres à Milan**, en passant par les Pays-Bas, la vallée du Rhin et la Suisse — parfois appelée « banane bleue ». On y trouve :
-- les plus fortes densités de population ;
-- les grandes places financières (Francfort, Amsterdam, Paris) ;
-- les plus grands ports d’Europe : **Rotterdam**, Anvers, Hambourg ;
-- les axes de transport les plus chargés.
+Une **dorsale** urbaine et industrielle court de **Londres à Milan**, par les Pays-Bas, la vallée du Rhin et la Suisse — parfois appelée « banane bleue ».
+
+| Ce qu'on y trouve | Ses exemples |
+| Les plus fortes **densités** | Randstad, Ruhr, bassin londonien |
+| Les grandes places **financières** | Francfort, Amsterdam, Paris |
+| Les plus grands **ports** | **Rotterdam**, Anvers, Hambourg |
+| Les axes de transport les plus chargés | Rhin, autoroutes, LGV |
 
 ## Des périphéries multiples
-- Les **périphéries méridionales** (Sud de l’Italie, Grèce, une partie de l’Espagne et du Portugal), touchées par le chômage.
-- Les **périphéries orientales**, entrées en 2004-2013 : elles rattrapent vite leur retard, portées par les investissements industriels, mais restent plus pauvres.
-- Les **régions ultrapériphériques** : DROM français, Açores, Madère, Canaries.
+| La périphérie | Sa situation |
+| **Méridionale** | Sud de l'Italie, Grèce, une partie de l'Espagne et du Portugal : chômage élevé |
+| **Orientale** | Entrée en 2004-2013 : rattrapage rapide, portée par les investissements industriels, mais encore plus pauvre |
+| **Ultrapériphérique** | DROM français, Açores, Madère, Canaries |
 
 ## Ce qui rapproche les territoires
-- La **politique de cohésion** et ses fonds (**FEDER**, Fonds social européen) : environ un tiers du budget de l’Union, dirigé en priorité vers les régions les moins riches.
-- Les **eurorégions** et les programmes transfrontaliers (**Interreg**), qui font coopérer des régions voisines de deux pays.
-- Les **corridors de transport** européens : LGV, autoroutes, tunnels alpins.
+| L'instrument | Son action |
+| La **politique de cohésion** — **FEDER**, Fonds social européen | Environ un **tiers** du budget, vers les régions les moins riches |
+| Les **eurorégions** et **Interreg** | Faire coopérer des régions voisines de deux pays |
+| Les **corridors de transport** | LGV, autoroutes, tunnels alpins |
 
-> Un habitant de Lille travaille parfois en Belgique, un Alsacien en Allemagne : dans les régions frontalières, la frontière est devenue une ressource plutôt qu’une barrière.
+> Un habitant de Lille travaille parfois en Belgique, un Alsacien en Allemagne : dans les régions frontalières, la frontière est devenue une **ressource** plutôt qu'une barrière.
 
 ## Des contrastes qui se déplacent
-L’élargissement à l’Est a déplacé le **centre de gravité** de l’Union vers l’est, et des délocalisations d’Ouest en Est ont suivi. Les écarts se réduisent entre pays, mais se creusent souvent **à l’intérieur** de chaque pays, entre capitales et campagnes.`,
+| Le mouvement | Son effet |
+| L'élargissement à l'Est | Le **centre de gravité** de l'Union se déplace vers l'est |
+| Les délocalisations d'Ouest en Est | Elles suivent |
+| Les écarts | Ils se **réduisent entre pays**, mais se **creusent à l'intérieur** de chaque pays, entre capitales et campagnes |`,
           },
           questions: [
             ['Comment nomme-t-on la dorsale urbaine et industrielle qui va de Londres à Milan ?', ['La mégalopole européenne', 'La diagonale du vide', 'Le croissant fertile', 'L’arc atlantique'], 0, 'On l’a aussi surnommée la « banane bleue ».'],
@@ -549,26 +657,38 @@ L’élargissement à l’Est a déplacé le **centre de gravité** de l’Union
           axe: 'La France et l’Union européenne',
           lecon: {
             titre: 'Une puissance commerciale, une puissance politique inachevée',
-            cours: `Avec 450 millions d’habitants et environ **17 % du PIB mondial**, l’Union européenne est un géant économique. Sa puissance politique, elle, reste très en deçà.
+            cours: `Avec 450 millions d'habitants et environ 17 % du PIB mondial, l'Union européenne est un géant économique. Sa puissance politique reste très en deçà.
 
 ## Une puissance économique de premier rang
-- **Première puissance commerciale du monde** : premier exportateur de services, deuxième exportateur de marchandises.
-- Un **marché unique** de 450 millions de consommateurs, que toute entreprise du monde veut atteindre.
-- L’**euro**, deuxième monnaie de réserve mondiale après le dollar.
-- Des **normes** (sécurité alimentaire, environnement, données personnelles avec le RGPD) que les entreprises étrangères doivent respecter pour vendre en Europe : c’est le pouvoir de la norme.
+| L'atout | Sa valeur |
+| Le **commerce** | **Première puissance commerciale** du monde : premier exportateur de services, deuxième de marchandises |
+| Le **marché unique** | 450 millions de consommateurs, que toute entreprise du monde veut atteindre |
+| L'**euro** | Deuxième monnaie de réserve mondiale, après le dollar |
+| Les **normes** | Sécurité alimentaire, environnement, données avec le **RGPD** : les entreprises étrangères doivent s'y plier pour vendre |
 
 ## Une puissance culturelle et diplomatique réelle
-Premier **pôle touristique** mondial, premier donateur d’**aide publique au développement**, moteur des négociations climatiques (accord de Paris, 2015). L’Union pèse par ses idées et ses règles autant que par ses marchés.
+| Le domaine | Sa position |
+| Le **tourisme** | Premier pôle mondial |
+| L'**aide publique au développement** | Premier donateur |
+| Le **climat** | Moteur des négociations, accord de Paris 2015 |
 
-## Mais une puissance politique inachevée
-- Pas d’**armée commune** : la défense repose largement sur l’**OTAN** et sur les armées nationales.
-- Une diplomatie qui exige souvent l’**unanimité des 27** : un seul État peut bloquer une décision.
-- Une **dépendance énergétique** (pétrole, gaz) et technologique (numérique) qui limite sa liberté d’action.
+> L'Union pèse par ses idées et ses règles autant que par ses marchés.
 
-> L’Union pèse par ses marchés et ses normes, beaucoup moins par ses armes.
+## Une puissance politique inachevée
+| La faiblesse | Son contenu |
+| Pas d'**armée commune** | La défense repose sur l'**OTAN** et les armées nationales |
+| La règle de l'**unanimité** | Un seul État peut bloquer une décision diplomatique |
+| La **dépendance** énergétique et technologique | Pétrole, gaz, numérique |
+
+> L'Union pèse par ses marchés et ses normes, beaucoup moins par ses armes.
 
 ## Un monde plus concurrentiel
-La montée de la **Chine** et de l’**Inde**, la rivalité entre la Chine et les États-Unis et le retour de la guerre en Europe avec l’invasion de l’**Ukraine** (2022) obligent l’Union à repenser son autonomie : production de vaccins, de semi-conducteurs, d’énergie, d’armement.`,
+| Le facteur | Ce qu'il oblige à repenser |
+| La montée de la **Chine** et de l'**Inde** | La compétitivité |
+| La rivalité Chine-États-Unis | Le positionnement |
+| L'invasion de l'**Ukraine**, 2022 | La sécurité |
+
+D'où la recherche d'une **autonomie** : vaccins, semi-conducteurs, énergie, armement.`,
           },
           questions: [
             ['Quel rang commercial l’Union européenne occupe-t-elle dans le monde ?', ['Le premier rang', 'Le troisième rang', 'Le cinquième rang', 'Le dixième rang'], 0, 'Premier exportateur de services, deuxième de marchandises.'],
@@ -586,24 +706,35 @@ La montée de la **Chine** et de l’**Inde**, la rivalité entre la Chine et le
           axe: 'La France et l’Union européenne',
           lecon: {
             titre: 'Un membre fondateur, un carrefour, une puissance mondiale',
-            cours: `La France est l’un des **six États fondateurs** de la construction européenne : CECA en 1951, traité de Rome en 1957. Elle en est aujourd’hui la **deuxième économie** et le pays le plus **étendu**.
+            cours: `La France est l'un des six États fondateurs de la construction européenne. Elle en est aujourd'hui la deuxième économie et le pays le plus étendu.
 
-## Une place centrale dans l’Union
-- **Politique** : avec l’Allemagne, elle forme le « couple franco-allemand », moteur historique des grandes décisions européennes.
-- **Institutionnelle** : le **Parlement européen** siège à **Strasbourg**.
-- **Économique** : premier bénéficiaire de la **PAC**, membre de la zone **euro** et de l’espace **Schengen**.
-- **Territoriale** : ses **régions frontalières** (Nord, Grand Est, Alsace, Savoie) vivent au quotidien avec la Belgique, l’Allemagne, la Suisse, l’Italie et l’Espagne ; des dizaines de milliers de **travailleurs transfrontaliers** franchissent chaque jour la frontière.
+## Une place centrale dans l'Union
+| Le registre | Sa position |
+| **Politique** | Avec l'Allemagne, le « **couple franco-allemand** », moteur historique des grandes décisions |
+| **Institutionnel** | Le **Parlement européen** siège à **Strasbourg** |
+| **Économique** | Premier bénéficiaire de la **PAC**, membre de la zone **euro** et de **Schengen** |
+| **Territorial** | Des régions frontalières avec la Belgique, l'Allemagne, la Suisse, l'Italie, l'Espagne |
+
+> Des dizaines de milliers de **travailleurs transfrontaliers** franchissent chaque jour la frontière.
 
 ## Un carrefour de circulation
-Située entre l’Europe du Nord et la péninsule Ibérique, entre l’Atlantique et la Méditerranée, la France est traversée par les grands **corridors européens** : LGV vers Londres et Barcelone, tunnels alpins, autoroutes du Rhône et du Rhin, ports du Havre et de Marseille.
+| L'axe | Ce qu'il relie |
+| Les **LGV** | Londres, Barcelone |
+| Les **tunnels alpins** | L'Italie |
+| Les autoroutes du **Rhône** et du **Rhin** | Nord-Sud et Est |
+| Les ports du **Havre** et de **Marseille** | Le monde |
+
+Située entre l'Europe du Nord et la péninsule Ibérique, entre l'Atlantique et la Méditerranée.
 
 ## Une puissance mondiale par ses propres moyens
-- Membre **permanent** du Conseil de sécurité de l’**ONU**, avec droit de veto.
-- **Dissuasion nucléaire** et armée projetable.
-- Deuxième **réseau diplomatique** et deuxième **ZEE** du monde, grâce à l’outre-mer.
-- Un fort *soft power* : la **francophonie** (plus de 320 millions de locuteurs), la première fréquentation touristique du monde, un réseau d’instituts culturels et de lycées français sur tous les continents.
+| L'atout | Son contenu |
+| Le siège à l'**ONU** | Membre **permanent** du Conseil de sécurité, avec droit de veto |
+| La **dissuasion nucléaire** | Et une armée projetable |
+| Le **réseau diplomatique** | Le deuxième du monde |
+| La **ZEE** | La deuxième du monde, grâce à l'outre-mer |
+| Le *soft power* | La **francophonie** — plus de 320 millions de locuteurs —, le tourisme, les instituts culturels et lycées français sur tous les continents |
 
-> La France agit à deux échelles : seule quand il s’agit de son siège à l’ONU ou de sa défense, à 27 quand il s’agit de commerce, de climat ou de normes.`,
+> La France agit à **deux échelles** : seule quand il s'agit de son siège à l'ONU ou de sa défense, à 27 quand il s'agit de commerce, de climat ou de normes.`,
           },
           questions: [
             ['La France fait-elle partie des États fondateurs de la construction européenne ?', ['Oui, dès la CECA en 1951', 'Non, elle a rejoint l’Union en 1973', 'Non, elle est entrée en 1992', 'Oui, mais seulement depuis 1986'], 0, 'Elle signe la CECA en 1951 puis le traité de Rome en 1957.'],

@@ -151,24 +151,47 @@ DELETE FROM public.chapters c
           axe: 'L’État de droit : garant des droits, libertés et d’un pluralisme démocratique',
           lecon: {
             titre: 'Un pouvoir qui obéit à ses propres règles',
-            cours: `L’**État de droit** est un État dans lequel **tous** — gouvernants comme gouvernés — sont soumis au droit. Son contraire n’est pas l’absence de lois : un État autoritaire en a beaucoup. Son contraire, c’est l’**arbitraire**, c’est-à-dire un pouvoir qui n’est pas lié par les règles qu’il édicte.
+            cours: `L'État de droit est un État dans lequel tous — gouvernants comme gouvernés — sont soumis au droit.
+
+> Son contraire n'est pas l'absence de lois : un État autoritaire en a beaucoup. Son contraire, c'est l'**arbitraire** : un pouvoir qui n'est pas lié par les règles qu'il édicte.
 
 ## Trois conditions
-Un État de droit suppose une **hiérarchie des normes** respectée, une **séparation des pouvoirs** effective, et des **juges indépendants** devant lesquels chacun peut contester une décision publique.
+| La condition | Ce qu'elle exige |
+| Une **hiérarchie des normes** respectée | Chaque règle est conforme à celle du dessus |
+| Une **séparation des pouvoirs** effective | Aucun organe ne cumule tout |
+| Des **juges indépendants** | Chacun peut contester une décision publique |
 
 ## La hiérarchie des normes
-Les règles s’emboîtent, de la plus forte à la plus faible : la **Constitution** (et le bloc de constitutionnalité, qui comprend la Déclaration des droits de l’homme et du citoyen de 1789 et le Préambule de 1946), les **traités internationaux** et le droit de l’Union européenne, la **loi** votée par le Parlement, les **règlements** (décrets, arrêtés), enfin les contrats. Une norme inférieure qui contredit une norme supérieure peut être annulée.
+| Le rang | La norme |
+| 1 | La **Constitution**, et le bloc de constitutionnalité : Déclaration de 1789, Préambule de 1946 |
+| 2 | Les **traités** internationaux et le droit de l'Union européenne |
+| 3 | La **loi**, votée par le Parlement |
+| 4 | Les **règlements** : décrets, arrêtés |
+| 5 | Les contrats |
 
-> Ce n’est pas la force qui valide une règle, c’est sa conformité à la règle du dessus.
+Une norme inférieure qui contredit une norme supérieure peut être **annulée**.
+
+> Ce n'est pas la force qui valide une règle, c'est sa conformité à la règle du dessus.
 
 ## La séparation des pouvoirs
-Formulée par **Montesquieu** en 1748 dans De l’esprit des lois : le pouvoir **législatif** fait la loi, l’**exécutif** l’applique, le **judiciaire** la fait respecter. Chacun limite les autres — « il faut que le pouvoir arrête le pouvoir ».
+| Le pouvoir | Sa fonction |
+| **Législatif** | Il fait la loi |
+| **Exécutif** | Il l'applique |
+| **Judiciaire** | Il la fait respecter |
+
+Formulée par **Montesquieu** en 1748 : « il faut que le pouvoir arrête le pouvoir ».
 
 ## Les gardiens
-Le **Conseil constitutionnel** contrôle la conformité des lois à la Constitution, y compris après leur entrée en vigueur grâce à la **question prioritaire de constitutionnalité** (QPC, depuis 2010). Le **Conseil d’État** juge l’administration. La **Cour de cassation** unifie l’interprétation du droit. La **Cour européenne des droits de l’homme** (CEDH), à Strasbourg, peut condamner la France.
+| L'institution | Ce qu'elle contrôle |
+| Le **Conseil constitutionnel** | La conformité des lois à la Constitution, y compris après leur entrée en vigueur, par la **QPC** depuis 2010 |
+| Le **Conseil d'État** | L'administration |
+| La **Cour de cassation** | L'interprétation du droit |
+| La **CEDH**, à Strasbourg | Elle peut condamner la France |
 
 ## Ce que ça change pour un citoyen
-Il peut contester un refus de l’administration, demander réparation d’un dommage causé par l’État, faire écarter une loi contraire à la Constitution. Sans État de droit, ces recours n’existent pas.`,
+Contester un refus de l'administration, demander réparation d'un dommage causé par l'État, faire écarter une loi contraire à la Constitution.
+
+> Sans État de droit, ces recours n'existent pas.`,
           },
           questions: [
             ['Qu’est-ce qu’un État de droit ?', ['Un État où gouvernants et gouvernés sont soumis au droit', 'Un État qui a beaucoup de lois', 'Un État dirigé par des juges', 'Un État sans Constitution'], 0, 'Son contraire n’est pas l’absence de lois, mais l’arbitraire.'],
@@ -186,24 +209,48 @@ Il peut contester un refus de l’administration, demander réparation d’un do
           axe: 'L’État de droit : garant des droits, libertés et d’un pluralisme démocratique',
           lecon: {
             titre: 'Huit siècles pour limiter le pouvoir',
-            cours: `L’État de droit n’a pas été décrété : il s’est construit par étapes, presque toujours après une crise.
+            cours: `L'État de droit n'a pas été décrété : il s'est construit par étapes, presque toujours après une crise.
 
 ## Les premières limites
-En 1215, la **Magna Carta** anglaise impose au roi de ne pas emprisonner un homme libre sans jugement. C’est l’ancêtre lointain de l’**habeas corpus** (1679). En France, l’Ancien Régime connaît des « lois fondamentales du royaume », mais le roi n’est jugé par personne.
+| La date | Le texte | Ce qu'il pose |
+| **1215** | La **Magna Carta** anglaise | Le roi ne peut emprisonner un homme libre sans jugement |
+| **1679** | L'**habeas corpus** | Le contrôle judiciaire de la détention |
+
+En France, l'Ancien Régime connaît des « lois fondamentales du royaume », mais le roi n'est jugé par personne.
 
 ## 1789 et la Déclaration
-La **Déclaration des droits de l’homme et du citoyen** du 26 août 1789 pose les principes : les hommes naissent libres et égaux en droits (art. 1), la liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui (art. 4), nul ne peut être puni qu’en vertu d’une loi antérieure (art. 8), toute société où la garantie des droits n’est pas assurée n’a point de Constitution (art. 16).
+| L'article | Ce qu'il pose |
+| **1** | Les hommes naissent libres et égaux en droits |
+| **4** | La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui |
+| **8** | Nul ne peut être puni qu'en vertu d'une loi antérieure |
+| **16** | Toute société où la garantie des droits n'est pas assurée n'a point de Constitution |
 
-> L’article 16 est la définition la plus courte de l’État de droit : sans garantie des droits ni séparation des pouvoirs, il n’y a pas de Constitution du tout.
+> L'article 16 est la définition la plus courte de l'État de droit.
 
 ## Le XIXe et le XXe siècle
-Les libertés s’installent par des lois : **1881** liberté de la presse et école, **1884** liberté syndicale, **1901** liberté d’association, **1905** séparation des Églises et de l’État. Puis les femmes obtiennent le **droit de vote en 1944**.
+| La date | La liberté conquise |
+| **1881** | Liberté de la presse, et école |
+| **1884** | Liberté syndicale |
+| **1901** | Liberté d'association |
+| **1905** | Séparation des Églises et de l'État |
+| **1944** | Droit de vote des femmes |
 
 ## Après 1945
-Face à ce qu’ont fait des États légaux mais criminels, la garantie devient internationale : **Déclaration universelle des droits de l’homme** (1948), **Convention européenne des droits de l’homme** (1950). En France, la **Constitution de 1958** crée le Conseil constitutionnel, qui s’émancipe en **1971** en donnant valeur constitutionnelle au Préambule — donc à la Déclaration de 1789.
+Face à ce qu'ont fait des États **légaux mais criminels**, la garantie devient internationale.
 
-## Aujourd’hui
-Le mouvement continue : abolition de la peine de mort (**1981**), QPC (2010), création du **Défenseur des droits** (2011). Rien n’est acquis : chaque état d’urgence rouvre la question de l’équilibre entre sécurité et libertés.`,
+| La date | Le texte |
+| **1948** | Déclaration universelle des droits de l'homme |
+| **1950** | Convention européenne des droits de l'homme |
+| **1958** | La Constitution crée le **Conseil constitutionnel** |
+| **1971** | Il s'émancipe en donnant valeur constitutionnelle au Préambule — donc à la Déclaration de 1789 |
+
+## Aujourd'hui
+| La date | L'avancée |
+| **1981** | Abolition de la peine de mort |
+| **2010** | La **question prioritaire de constitutionnalité** |
+| **2011** | Création du **Défenseur des droits** |
+
+> Rien n'est acquis : chaque état d'urgence rouvre la question de l'équilibre entre sécurité et libertés.`,
           },
           questions: [
             ['Quel texte anglais de 1215 limite pour la première fois le pouvoir royal ?', ['La Magna Carta', 'L’Habeas Corpus', 'Le Bill of Rights', 'La Pétition de droit'], 0, 'Elle interdit d’emprisonner un homme libre sans jugement.'],
@@ -221,24 +268,39 @@ Le mouvement continue : abolition de la peine de mort (**1981**), QPC (2010), cr
           axe: 'L’État de droit : garant des droits, libertés et d’un pluralisme démocratique',
           lecon: {
             titre: 'Ce que la loi de 1905 dit, et ce qu’elle ne dit pas',
-            cours: `La **laïcité** n’est pas une opinion sur la religion : c’est une **règle d’organisation** de l’État, qui garantit à la fois la liberté de croire ou de ne pas croire et l’égalité des citoyens quelles que soient leurs convictions.
+            cours: `La laïcité n'est pas une opinion sur la religion : c'est une règle d'organisation de l'État.
 
 ## Les deux articles fondateurs
-La **loi du 9 décembre 1905** de séparation des Églises et de l’État tient dans deux articles décisifs. L’**article 1** : la République assure la liberté de conscience et garantit le libre exercice des cultes. L’**article 2** : la République ne reconnaît, ne salarie ni ne subventionne aucun culte.
+| L'article de la loi du 9 décembre **1905** | Ce qu'il pose |
+| **Article 1** | La République assure la **liberté de conscience** et garantit le libre exercice des cultes |
+| **Article 2** | La République ne reconnaît, ne salarie ni ne subventionne aucun culte |
 
-> D’abord la liberté, ensuite la séparation : l’ordre des deux articles n’est pas un détail, c’est le sens même de la loi.
+> D'abord la liberté, ensuite la séparation : l'ordre des deux articles n'est pas un détail, c'est le sens même de la loi.
 
 ## Ce qui en découle
-L’État est **neutre** : il ne privilégie aucune religion, n’en combat aucune. Les **agents publics** sont soumis à une stricte neutralité dans l’exercice de leurs fonctions. Les **usagers** du service public, eux, restent libres — sauf exceptions prévues par la loi.
+| Qui | Ce à quoi il est tenu |
+| L'**État** | La **neutralité** : il ne privilégie aucune religion, n'en combat aucune |
+| Les **agents publics** | Une **stricte neutralité** dans l'exercice de leurs fonctions |
+| Les **usagers** du service public | Ils restent **libres**, sauf exceptions prévues par la loi |
 
-## À l’école
-La loi du **15 mars 2004** interdit, dans les écoles, collèges et lycées publics, le port de **signes ou tenues manifestant ostensiblement une appartenance religieuse** par les élèves. La **Charte de la laïcité à l’école** (2013) explicite ces principes. À l’université, la règle est différente : les étudiants sont majeurs et libres.
+## À l'école
+| Le texte | Sa règle |
+| La loi du **15 mars 2004** | Elle interdit aux **élèves** des écoles, collèges et lycées publics les signes ou tenues manifestant **ostensiblement** une appartenance religieuse |
+| La **Charte de la laïcité à l'école** (2013) | Elle explicite ces principes |
+| À l'**université** | La règle est différente : les étudiants sont majeurs et libres |
 
-## Ce que la laïcité n’est pas
-Ce n’est pas l’interdiction de croire, ni l’effacement des religions de l’espace public — la rue, un commerce, une association ne sont pas soumis à la neutralité. Ce n’est pas non plus une valeur dirigée contre une religion en particulier.
+## Ce que la laïcité n'est pas
+| L'idée fausse | La réalité |
+| L'interdiction de croire | Elle **garantit** la liberté de conscience |
+| L'effacement des religions de l'espace public | La rue, un commerce, une association ne sont pas soumis à la neutralité |
+| Une arme contre une religion en particulier | Elle vaut pour toutes, de la même façon |
 
 ## Les particularités
-L’**Alsace-Moselle**, allemande en 1905, conserve le régime concordataire ; la **Guyane** a un statut propre. La laïcité française reste un cas particulier en Europe : d’autres démocraties financent des cultes ou ont une religion d’État tout en garantissant la liberté religieuse.`,
+| Le territoire | Son régime |
+| L'**Alsace-Moselle**, allemande en 1905 | Le régime **concordataire** subsiste |
+| La **Guyane** | Un statut propre |
+
+> La laïcité française reste un cas particulier en Europe : d'autres démocraties financent des cultes, ou ont une religion d'État, tout en garantissant la liberté religieuse.`,
           },
           questions: [
             ['Que garantit l’article 1 de la loi de 1905 ?', ['La liberté de conscience et le libre exercice des cultes', 'La séparation des Églises et de l’État', 'La neutralité des agents publics', 'La gratuité de l’école'], 0, 'La liberté vient avant la séparation, énoncée à l’article 2.'],
@@ -256,27 +318,43 @@ L’**Alsace-Moselle**, allemande en 1905, conserve le régime concordataire ; l
           axe: 'L’État de droit : garant des droits, libertés et d’un pluralisme démocratique',
           lecon: {
             titre: 'Jusqu’où l’État peut-il limiter une liberté ?',
-            cours: `Aucune liberté n’est absolue, mais aucune limitation n’est libre : le droit encadre très précisément la manière dont l’État peut restreindre une liberté.
+            cours: `Aucune liberté n'est absolue, mais aucune limitation n'est libre : le droit encadre très précisément la manière dont l'État peut restreindre une liberté.
 
 ## Les libertés fondamentales
-Ce sont les libertés protégées par la Constitution et les traités : liberté d’aller et venir, de conscience, d’expression, de réunion, d’association, de manifestation, droit à la vie privée, droit de propriété, droit à un procès équitable, liberté d’entreprendre.
+Protégées par la Constitution et les traités : aller et venir, conscience, expression, réunion, association, manifestation, vie privée, propriété, procès équitable, liberté d'entreprendre.
 
-## L’ordre public
-La police administrative peut limiter une liberté pour préserver l’**ordre public**, traditionnellement défini par trois composantes : la **sécurité**, la **tranquillité** et la **salubrité** publiques, auxquelles la jurisprudence ajoute le respect de la **dignité** de la personne humaine.
+## L'ordre public
+| Sa composante | Ce qu'elle protège |
+| La **sécurité** | Les personnes et les biens |
+| La **tranquillité** | Le calme public |
+| La **salubrité** | La santé publique |
+| La **dignité** de la personne humaine | Ajoutée par la jurisprudence |
 
-> L’ordre public n’est pas un pouvoir de tout interdire : c’est un motif, qui doit être prouvé, et une mesure, qui doit être proportionnée.
+> L'ordre public n'est pas un pouvoir de tout interdire : c'est un **motif**, qui doit être prouvé, et une **mesure**, qui doit être proportionnée.
 
 ## Le test de proportionnalité
-Le juge administratif vérifie qu’une mesure restrictive est **adaptée** (elle sert bien le but invoqué), **nécessaire** (aucune mesure moins sévère ne suffirait) et **proportionnée** (l’atteinte n’est pas excessive par rapport au bénéfice). Une interdiction générale et absolue est presque toujours annulée : la règle est l’autorisation, l’exception est l’interdiction.
+| Le critère | Sa question |
+| **Adaptée** | La mesure sert-elle bien le but invoqué ? |
+| **Nécessaire** | Une mesure moins sévère suffirait-elle ? |
+| **Proportionnée** | L'atteinte est-elle excessive par rapport au bénéfice ? |
+
+> Une interdiction **générale et absolue** est presque toujours annulée : la règle est l'autorisation, l'exception est l'interdiction.
 
 ## Le juge du référé
-Le **référé-liberté** permet de saisir le juge administratif en urgence : il doit statuer en **48 heures** lorsqu’une liberté fondamentale est gravement et manifestement atteinte.
+| Le recours | Son délai |
+| Le **référé-liberté** | Le juge administratif doit statuer en **48 heures**, lorsqu'une liberté fondamentale est gravement et manifestement atteinte |
 
-## Les régimes d’exception
-L’**état d’urgence** (loi de 1955, appliqué de 2015 à 2017) élargit les pouvoirs de police. Il reste sous contrôle du juge et du Parlement, mais il illustre le risque principal : des mesures d’exception qui passent peu à peu dans le droit commun.
+## Les régimes d'exception
+L'**état d'urgence**, prévu par la loi de 1955 et appliqué de 2015 à 2017, élargit les pouvoirs de police. Il reste sous contrôle du juge et du Parlement.
+
+> Le risque principal : des mesures d'exception qui passent peu à peu dans le **droit commun**.
 
 ## Manifester
-La manifestation est une liberté, soumise à **déclaration** préalable et non à autorisation. Une interdiction doit être justifiée par un risque précis de trouble, pas par une gêne.`,
+| La formalité | Sa nature |
+| La **déclaration** préalable | Obligatoire |
+| L'**autorisation** | Elle n'est **pas** exigée |
+
+Une interdiction doit être justifiée par un risque précis de trouble, pas par une gêne.`,
           },
           questions: [
             ['Quelles sont les trois composantes classiques de l’ordre public ?', ['Sécurité, tranquillité et salubrité publiques', 'Liberté, égalité, fraternité', 'Police, justice, armée', 'Santé, éducation, transport'], 0, 'La jurisprudence y a ajouté la dignité de la personne humaine.'],
@@ -297,24 +375,46 @@ La manifestation est une liberté, soumise à **déclaration** préalable et non
           axe: 'Libertés et responsabilité : l’information',
           lecon: {
             titre: 'Une liberté qui protège d’abord le lecteur',
-            cours: `La **liberté de la presse** n’est pas un privilège de journaliste : c’est le droit du public d’être informé. Sans elle, la démocratie n’a plus de moyen de contrôler ceux qui gouvernent.
+            cours: `La liberté de la presse n'est pas un privilège de journaliste : c'est le droit du public d'être informé.
 
 ## Le texte de référence
-La **loi du 29 juillet 1881** sur la liberté de la presse pose que l’imprimerie et la librairie sont libres. Elle supprime l’autorisation préalable et la censure administrative : on ne demande plus la permission de publier, on répond de ce qu’on a publié. Ce basculement du **contrôle a priori** au **contrôle a posteriori** est le cœur du système.
+La **loi du 29 juillet 1881** pose que l'imprimerie et la librairie sont libres.
 
-> On ne juge pas un journal avant qu’il paraisse : on le juge après, devant un tribunal, sur ce qu’il a réellement écrit.
+| Le contrôle | Sa nature | Le régime |
+| **A priori** | Autorisation préalable, censure administrative | **Supprimé** |
+| **A posteriori** | On répond devant un tribunal de ce qu'on a publié | Le régime actuel |
+
+> On ne juge pas un journal avant qu'il paraisse : on le juge après, sur ce qu'il a réellement écrit.
 
 ## Les limites prévues par la loi
-La même loi de 1881 définit les **abus** : la **diffamation** (imputer un fait précis qui porte atteinte à l’honneur), l’**injure**, la **provocation** à la haine ou à la violence, l’**apologie** de crimes, la publication de fausses nouvelles troublant l’ordre public. La loi **Pleven** (1972) puis la loi **Gayssot** (1990) ont renforcé la répression du racisme et de la négation des crimes contre l’humanité.
+| L'abus | Sa définition |
+| La **diffamation** | Imputer un fait précis portant atteinte à l'honneur |
+| L'**injure** | Une expression outrageante, sans imputation de fait |
+| La **provocation** | À la haine ou à la violence |
+| L'**apologie** de crimes | Présenter un crime sous un jour favorable |
+| Les **fausses nouvelles** | Lorsqu'elles troublent l'ordre public |
+
+Les lois **Pleven** (1972) et **Gayssot** (1990) ont renforcé la répression du racisme et de la négation des crimes contre l'humanité.
 
 ## Les garanties du métier
-La **protection des sources** est reconnue par la loi de 2010 ; la **clause de conscience** permet à un journaliste de quitter un journal qui change de ligne ; la loi Bloche (2016) protège l’indépendance des rédactions. Le **secret des sources** ne peut être levé que pour un impératif prépondérant d’intérêt public.
+| La garantie | Son contenu |
+| La **protection des sources** | Loi de 2010 ; elle ne cède que devant un impératif prépondérant d'intérêt public |
+| La **clause de conscience** | Un journaliste peut quitter un journal qui change de ligne |
+| L'indépendance des rédactions | Loi Bloche, 2016 |
 
-## Qui régule ?
-Le juge, d’abord. L’**Arcom** (issue en 2022 de la fusion du CSA et de l’Hadopi) régule l’audiovisuel et les plateformes. Des instances professionnelles — conseils de déontologie, sociétés de journalistes — complètent le dispositif.
+## Qui régule
+| L'acteur | Son rôle |
+| Le **juge** | Il tranche les abus |
+| L'**Arcom** | Née en 2022 de la fusion du CSA et de l'Hadopi : audiovisuel et plateformes |
+| Les instances professionnelles | Conseils de déontologie, sociétés de journalistes |
 
 ## Les menaces contemporaines
-La **concentration** des médias entre quelques groupes, la dépendance à la publicité, les **procédures-bâillons** destinées à épuiser financièrement un média, la mise en danger physique des reporters, et la difficulté économique de l’information de qualité face aux contenus gratuits.`,
+| La menace | Son effet |
+| La **concentration** des médias | Peu de propriétaires |
+| La dépendance à la **publicité** | Un contenu orienté par l'audience |
+| Les **procédures-bâillons** | Épuiser financièrement un média |
+| Le danger physique | Reporters menacés |
+| La difficulté économique | L'information de qualité face aux contenus gratuits |`,
           },
           questions: [
             ['Que change la loi du 29 juillet 1881 ?', ['Elle supprime l’autorisation préalable et instaure un contrôle a posteriori', 'Elle crée la censure administrative', 'Elle interdit les journaux d’opinion', 'Elle nationalise la presse'], 0, 'On répond de ce qu’on publie, on ne demande plus la permission.'],
@@ -332,24 +432,44 @@ La **concentration** des médias entre quelques groupes, la dépendance à la pu
           axe: 'Libertés et responsabilité : l’information',
           lecon: {
             titre: 'Dire ce qu’on veut, répondre de ce qu’on dit',
-            cours: `La **liberté d’expression** est reconnue par l’**article 11** de la Déclaration de 1789 — « la libre communication des pensées et des opinions est un des droits les plus précieux de l’homme » — et par l’**article 10** de la Convention européenne des droits de l’homme.
+            cours: `La liberté d'expression est reconnue par l'article 11 de la Déclaration de 1789 et par l'article 10 de la Convention européenne des droits de l'homme.
+
+> « La libre communication des pensées et des opinions est un des droits les plus précieux de l'homme. »
 
 ## Une liberté large
-Elle protège les idées qui heurtent, choquent ou inquiètent, et pas seulement celles qui plaisent : c’est une formule constante de la Cour européenne des droits de l’homme. La **caricature**, la **satire**, la **critique** des institutions et des religions en font partie.
+Elle protège les idées qui **heurtent, choquent ou inquiètent**, et pas seulement celles qui plaisent : c'est une formule constante de la Cour européenne.
 
-> On a le droit de critiquer une religion, une idée, un parti. On n’a pas le droit d’attaquer des personnes en raison de ce qu’elles sont.
+| Ce qu'elle protège | Ce qui reste possible |
+| La **caricature** | Se moquer |
+| La **satire** | Détourner |
+| La **critique** des institutions et des religions | Contester une idée |
 
 ## Une liberté responsable
-L’article 11 lui-même le dit : chacun répond de l’abus de cette liberté « dans les cas déterminés par la loi ». Sont sanctionnés : l’**injure** et la **diffamation**, la **provocation** à la haine, à la violence ou à la discrimination, l’**apologie du terrorisme**, la **négation** de crimes contre l’humanité, le **harcèlement** en ligne, les **menaces**, l’atteinte à la vie privée et au droit à l’image.
+L'article 11 le dit lui-même : chacun répond de l'abus de cette liberté « dans les cas déterminés par la loi ».
+
+| Ce qui est sanctionné | Sa nature |
+| L'**injure** et la **diffamation** | Contre des personnes |
+| La **provocation** à la haine, à la violence, à la discrimination | Contre des groupes |
+| L'**apologie du terrorisme** | Un délit spécifique |
+| La **négation** de crimes contre l'humanité | Un délit |
+| Le **harcèlement** en ligne, les **menaces** | Des délits |
+| L'atteinte à la **vie privée** et au droit à l'image | Un délit civil et pénal |
 
 ## La ligne de partage
-Le droit distingue la critique d’une **idée**, toujours possible, de l’attaque contre des **personnes** en raison de leur origine, leur religion, leur sexe, leur orientation sexuelle ou leur handicap. La première relève du débat ; la seconde du délit.
+| L'objet visé | Le régime |
+| Une **idée**, une doctrine, une religion, un parti | Critiquable : cela relève du **débat** |
+| Des **personnes**, en raison de leur origine, religion, sexe, orientation sexuelle, handicap | Attaque interdite : cela relève du **délit** |
 
 ## En ligne
-La liberté d’expression s’applique sur les réseaux, et les infractions aussi. Un message public sur un réseau est une publication : il peut fonder des poursuites, et l’**anonymat** relatif d’un pseudonyme ne protège pas d’une identification judiciaire. Depuis 2018 et 2022, plusieurs textes ont renforcé la lutte contre le cyberharcèlement.
+| Le point | La règle |
+| Un message **public** sur un réseau | C'est une **publication** : il peut fonder des poursuites |
+| L'**anonymat** d'un pseudonyme | Il ne protège pas d'une identification judiciaire |
+| Depuis 2018 et 2022 | Plusieurs textes ont renforcé la lutte contre le cyberharcèlement |
 
 ## Au lycée
-Les élèves disposent de la liberté d’expression individuelle et collective, dans le respect du **pluralisme**, de la **neutralité** du service public et sans propos injurieux ou diffamatoires. Elle s’exerce notamment par les délégués, le CVL et les journaux lycéens.`,
+Les élèves disposent d'une liberté d'expression individuelle et collective, dans le respect du **pluralisme** et de la **neutralité** du service public, sans propos injurieux ni diffamatoires.
+
+Elle s'exerce notamment par les délégués, le CVL et les journaux lycéens.`,
           },
           questions: [
             ['Quel article de la Déclaration de 1789 consacre la liberté d’expression ?', ['L’article 11', 'L’article 4', 'L’article 16', 'L’article 1'], 0, 'La libre communication des pensées et des opinions.'],
@@ -367,24 +487,44 @@ Les élèves disposent de la liberté d’expression individuelle et collective,
           axe: 'Libertés et responsabilité : l’information',
           lecon: {
             titre: 'Des plateformes privées, un espace public',
-            cours: `Les réseaux sociaux posent un problème inédit : ce sont des **entreprises privées**, régies par des conditions d’utilisation, qui organisent une part majeure du **débat public**.
+            cours: `Les réseaux sociaux posent un problème inédit : ce sont des entreprises privées, régies par des conditions d'utilisation, qui organisent une part majeure du débat public.
 
 ## Ce qui rend la régulation difficile
-Le **volume** (des millions de contenus par heure), la **vitesse** de diffusion, le caractère **transnational** des plateformes, et le fait que la modération soit assurée par des **algorithmes** et des sous-traitants selon des règles privées, non votées.
+| L'obstacle | Son contenu |
+| Le **volume** | Des millions de contenus par heure |
+| La **vitesse** | La diffusion précède la vérification |
+| Le caractère **transnational** | Une plateforme, des dizaines de droits nationaux |
+| La modération par **algorithmes** et sous-traitants | Selon des règles **privées**, non votées |
 
 ## Les algorithmes de recommandation
-Ils ne choisissent pas ce qui est vrai, mais ce qui **retient l’attention** — donc souvent ce qui indigne. D’où les phénomènes de **bulle de filtres** et de **chambre d’écho**, qui donnent l’impression que tout le monde pense comme soi, et l’emballement des contenus faux, qui circulent en moyenne plus vite que les vrais.
+Ils ne choisissent pas ce qui est vrai, mais ce qui **retient l'attention** — donc souvent ce qui indigne.
 
-> Le problème n’est pas seulement ce qui est publié : c’est ce qui est mis en avant.
+| Le phénomène | Son effet |
+| La **bulle de filtres** | On ne voit plus que ce qui nous ressemble |
+| La **chambre d'écho** | On croit que tout le monde pense comme soi |
+| L'emballement du faux | Les contenus faux circulent en moyenne plus vite que les vrais |
+
+> Le problème n'est pas seulement ce qui est publié : c'est ce qui est **mis en avant**.
 
 ## Les leviers juridiques
-En France, la **LCEN** de 2004 fixe le régime de responsabilité des hébergeurs : ils ne sont pas responsables a priori, mais doivent retirer promptement un contenu manifestement illicite qui leur est signalé. En Europe, le **Digital Services Act** (DSA, applicable depuis 2023-2024) impose aux très grandes plateformes des obligations de transparence des algorithmes, d’analyse des risques, de signalement facilité et d’audit indépendant. Le **RGPD** (2018) encadre l’usage des données personnelles ; la **CNIL** le contrôle.
+| Le texte | Sa date | Ce qu'il impose |
+| La **LCEN** | 2004 | Les hébergeurs ne sont pas responsables a priori, mais doivent **retirer promptement** un contenu manifestement illicite signalé |
+| Le **Digital Services Act** | Applicable depuis 2023-2024 | Transparence des algorithmes, analyse des risques, signalement facilité, audit indépendant pour les très grandes plateformes |
+| Le **RGPD** | 2018 | L'usage des données personnelles ; la **CNIL** contrôle |
 
 ## Les autres leviers
-La **modération** par les plateformes elles-mêmes, l’**éducation aux médias** (EMI) à l’école, le **fact-checking**, la vérification par les utilisateurs, et le signalement — plateforme **Pharos** pour les contenus illicites, **3018** pour le cyberharcèlement.
+| Le levier | Son acteur |
+| La **modération** | Les plateformes elles-mêmes |
+| L'**éducation aux médias** | L'école |
+| Le **fact-checking** | Les rédactions et les utilisateurs |
+| Le **signalement** | **Pharos** pour les contenus illicites, **3018** pour le cyberharcèlement |
 
 ## Le débat de fond
-Trop réguler, c’est risquer la **surcensure** : une plateforme menacée d’amende retire par précaution des contenus légaux. Trop peu, c’est laisser prospérer haine et désinformation. La question centrale reste : qui décide, selon quelles règles, et avec quel recours pour l’utilisateur ?`,
+| L'excès | Son risque |
+| Trop **réguler** | La **surcensure** : une plateforme menacée d'amende retire par précaution des contenus légaux |
+| Trop **peu** | Haine et désinformation prospèrent |
+
+> La question centrale : qui décide, selon quelles règles, et avec quel recours pour l'utilisateur ?`,
           },
           questions: [
             ['Quel texte européen impose depuis 2023-2024 des obligations aux très grandes plateformes ?', ['Le Digital Services Act (DSA)', 'Le RGPD', 'La LCEN', 'La directive e-commerce'], 0, 'Transparence des algorithmes, analyse des risques, audits indépendants.'],
@@ -405,24 +545,39 @@ Trop réguler, c’est risquer la **surcensure** : une plateforme menacée d’a
           axe: 'Droit et responsabilité : la protection de l’environnement et la sauvegarde de la biodiversité',
           lecon: {
             titre: 'Quand l’environnement entre dans la Constitution',
-            cours: `Le droit de l’environnement est récent : il naît dans les années 1970 et prend en France une valeur constitutionnelle en **2005**.
+            cours: `Le droit de l'environnement est récent : il naît dans les années 1970 et prend en France une valeur constitutionnelle en 2005.
 
-## La Charte de l’environnement
-Adossée à la Constitution en **2005**, la **Charte de l’environnement** proclame que chacun a le droit de vivre dans un environnement équilibré et respectueux de la santé, et le devoir de prendre part à sa préservation. Elle a donc la même valeur que la Déclaration de 1789.
+## La Charte de l'environnement
+| Le point | Son contenu |
+| Sa date | **2005**, adossée à la Constitution |
+| Sa valeur | La **même** que la Déclaration de 1789 |
+| Ce qu'elle proclame | Le droit de vivre dans un environnement équilibré et respectueux de la santé, et le **devoir** de prendre part à sa préservation |
 
 ## Quatre principes
-Le principe de **prévention** : agir en amont pour éviter les atteintes connues. Le principe de **précaution** : en cas de risque incertain mais de dommage grave et irréversible, prendre des mesures provisoires plutôt qu’attendre la certitude scientifique. Le principe **pollueur-payeur** : celui qui pollue supporte le coût de la réparation. Le principe de **participation** : chacun a accès à l’information et participe aux décisions ayant un impact sur l’environnement.
+| Le principe | Ce qu'il impose |
+| **Prévention** | Agir en amont pour éviter les atteintes **connues** |
+| **Précaution** | Face à un risque **incertain** mais grave et irréversible, prendre des mesures provisoires sans attendre la certitude scientifique |
+| **Pollueur-payeur** | Celui qui pollue supporte le coût de la réparation |
+| **Participation** | Chacun accède à l'information et participe aux décisions |
 
-> Prévention et précaution ne sont pas la même chose : la première vise un risque connu, la seconde un risque encore incertain.
+> Prévention et précaution ne sont pas la même chose : la première vise un risque **connu**, la seconde un risque encore **incertain**.
 
 ## Les textes internationaux
-Le **sommet de Rio** (1992) consacre le développement durable ; la **convention d’Aarhus** (1998) garantit information, participation et accès à la justice ; l’**accord de Paris** (2015) engage les États à contenir le réchauffement bien en dessous de 2 °C. Les **objectifs de développement durable** de l’ONU (2015) fixent un cap commun à l’horizon 2030.
+| La date | Le texte | Son apport |
+| **1992** | Le sommet de **Rio** | Le développement durable |
+| **1998** | La convention d'**Aarhus** | Information, participation, accès à la justice |
+| **2015** | L'**accord de Paris** | Contenir le réchauffement bien en dessous de 2 °C |
+| **2015** | Les **objectifs de développement durable** de l'ONU | Un cap commun à l'horizon 2030 |
 
-## Le juge s’en mêle
-En 2021, dans l’**Affaire du siècle**, la justice administrative a reconnu la responsabilité de l’État pour carence fautive dans la lutte contre le changement climatique. Des décisions comparables existent aux Pays-Bas et en Allemagne : le contentieux climatique est devenu un levier réel.
+## Le juge s'en mêle
+| L'affaire | Sa décision |
+| L'**Affaire du siècle**, 2021 | La justice administrative reconnaît la responsabilité de l'État pour **carence fautive** dans la lutte contre le changement climatique |
+| Aux Pays-Bas, en Allemagne | Des décisions comparables |
+
+> Le contentieux climatique est devenu un levier réel.
 
 ## Le nouveau vocabulaire pénal
-La loi **Climat et résilience** de 2021 a créé un délit général de pollution des milieux et un délit d’**écocide** pour les atteintes les plus graves et durables commises intentionnellement.`,
+La loi **Climat et résilience** de **2021** a créé un délit général de pollution des milieux et un délit d'**écocide** pour les atteintes les plus graves et durables, commises intentionnellement.`,
           },
           questions: [
             ['Depuis quand la Charte de l’environnement a-t-elle valeur constitutionnelle ?', ['2005', '1992', '2015', '2021'], 0, 'Elle est adossée à la Constitution, comme la Déclaration de 1789.'],
@@ -440,27 +595,47 @@ La loi **Climat et résilience** de 2021 a créé un délit général de polluti
           axe: 'Droit et responsabilité : la protection de l’environnement et la sauvegarde de la biodiversité',
           lecon: {
             titre: 'Décider ensemble ce qui engage tout le monde',
-            cours: `La **démocratie environnementale** repose sur une idée simple : les décisions qui modifient durablement un territoire ou un climat doivent associer ceux qui les subiront.
+            cours: `La démocratie environnementale repose sur une idée simple : les décisions qui modifient durablement un territoire ou un climat doivent associer ceux qui les subiront.
 
 ## Les trois piliers
-Issus de la convention d’**Aarhus** (1998) : l’**accès à l’information** environnementale, la **participation** du public au processus décisionnel, et l’**accès à la justice** pour contester une décision.
+Issus de la convention d'**Aarhus**, 1998 :
+
+| Le pilier | Ce qu'il garantit |
+| L'**accès à l'information** | Environnementale, et compréhensible |
+| La **participation** | Au processus décisionnel |
+| L'**accès à la justice** | Pour contester une décision |
 
 ## Les outils français
-L’**enquête publique** précède les grands projets ; la **Commission nationale du débat public** (CNDP) organise des débats sur les projets d’ampleur ; l’**étude d’impact** évalue les effets d’un aménagement ; la **consultation en ligne** permet de réagir à un projet de décret. Les **associations agréées** de protection de l’environnement peuvent agir en justice.
+| L'outil | Son moment |
+| L'**enquête publique** | Avant les grands projets |
+| La **Commission nationale du débat public** | Elle organise les débats sur les projets d'ampleur |
+| L'**étude d'impact** | Elle évalue les effets d'un aménagement |
+| La **consultation en ligne** | Pour réagir à un projet de décret |
+| L'action des **associations agréées** | Elles peuvent agir en justice |
 
-> Participer n’est pas décider : la consultation éclaire la décision, elle ne la remplace pas — et c’est là que naissent la plupart des conflits.
+> Participer n'est pas décider : la consultation éclaire la décision, elle ne la remplace pas — et c'est là que naissent la plupart des conflits.
 
 ## La Convention citoyenne pour le climat
-Réunie en 2019-2020, elle a tiré au sort **150 citoyens** chargés de proposer des mesures de réduction des émissions dans un esprit de justice sociale. Elle a produit 149 propositions, dont une partie a nourri la loi Climat et résilience de 2021. Son bilan est débattu : expérience démocratique inédite pour les uns, promesses non tenues pour les autres.
+| Le point | Son contenu |
+| Sa période | 2019-2020 |
+| Sa composition | **150 citoyens tirés au sort** |
+| Sa mission | Proposer des mesures de réduction des émissions, dans un esprit de justice sociale |
+| Son résultat | **149 propositions**, dont une partie a nourri la loi Climat et résilience de 2021 |
+| Son bilan | Débattu : expérience démocratique inédite pour les uns, promesses non tenues pour les autres |
 
-## Les formes d’engagement
-Le vote et l’engagement politique, l’**adhésion associative**, le bénévolat, la **pétition** (dont celles adressées au Parlement), la **manifestation**, la consommation responsable, le lancement d’alerte, et l’action en justice.
+## Les formes d'engagement
+Le vote et l'engagement politique, l'adhésion associative, le bénévolat, la **pétition**, la **manifestation**, la consommation responsable, le lancement d'alerte, l'action en justice.
 
 ## Les limites et les tensions
-L’engagement écologique croise des conflits réels : emplois contre protection, propriété contre intérêt général, urgence contre concertation. Certaines actions — occupations, blocages, dégradations — posent la question des **limites de la désobéissance civile** dans un État de droit : agir pour une cause n’exonère pas de la loi.
+| La tension | Ce qui s'oppose |
+| Emploi contre protection | Deux intérêts légitimes |
+| Propriété contre intérêt général | Deux droits |
+| Urgence contre concertation | Deux temporalités |
+
+> Certaines actions — occupations, blocages, dégradations — posent la question des limites de la **désobéissance civile** : agir pour une cause n'exonère pas de la loi.
 
 ## Au lycée
-Éco-délégués, projets d’établissement, semaine du développement durable : le programme fait de l’engagement une compétence à exercer, pas seulement une notion à connaître.`,
+Éco-délégués, projets d'établissement, semaine du développement durable : le programme fait de l'engagement une **compétence à exercer**, pas seulement une notion à connaître.`,
           },
           questions: [
             ['Quels sont les trois piliers de la démocratie environnementale ?', ['Information, participation, accès à la justice', 'Vote, référendum, pétition', 'Prévention, précaution, réparation', 'État, entreprises, associations'], 0, 'Ils viennent de la convention d’Aarhus de 1998.'],
@@ -478,24 +653,40 @@ L’engagement écologique croise des conflits réels : emplois contre protectio
           axe: 'Droit et responsabilité : la protection de l’environnement et la sauvegarde de la biodiversité',
           lecon: {
             titre: 'Ni chose, ni personne : le statut juridique de l’animal',
-            cours: `Le droit français a longtemps rangé l’animal parmi les **biens**. Depuis 2015, il occupe une place à part, qui reste discutée.
+            cours: `Le droit français a longtemps rangé l'animal parmi les biens. Depuis 2015, il occupe une place à part, qui reste discutée.
 
-## L’évolution du statut
-La loi **Grammont** (1850) punit les mauvais traitements infligés publiquement aux animaux domestiques. En **1976**, la loi reconnaît l’animal comme un **être sensible**. En **2015**, l’article 515-14 du Code civil pose que « les animaux sont des êtres vivants doués de sensibilité », tout en les soumettant, sous réserve des lois qui les protègent, au régime des biens.
+## L'évolution du statut
+| La date | Le texte | Ce qu'il pose |
+| **1850** | La loi **Grammont** | Elle punit les mauvais traitements infligés **publiquement** aux animaux domestiques |
+| **1976** | La loi | L'animal est un **être sensible** |
+| **2015** | L'article 515-14 du Code civil | « Les animaux sont des êtres vivants doués de sensibilité » — tout en restant soumis au régime des biens |
 
-> L’animal n’est plus un meuble, mais il n’est pas une personne : le droit lui a créé une catégorie intermédiaire, et personne ne s’accorde sur ce qu’elle devrait devenir.
+> L'animal n'est plus un meuble, mais il n'est pas une personne : le droit lui a créé une catégorie intermédiaire, et personne ne s'accorde sur ce qu'elle devrait devenir.
 
 ## Ce que la loi protège
-Le Code pénal punit les **sévices graves**, les **actes de cruauté** et l’**abandon**, aggravés par la loi de **2021** contre la maltraitance animale, qui encadre aussi la vente en ligne, interdit progressivement les animaux sauvages dans les cirques itinérants et les delphinariums. Le **bien-être animal** en élevage, en transport et en abattoir relève largement du droit européen.
+| L'infraction ou la règle | Son cadre |
+| **Sévices graves**, **actes de cruauté**, **abandon** | Punis par le Code pénal, aggravés par la loi de **2021** |
+| La vente en ligne | Encadrée par cette même loi |
+| Animaux sauvages en cirque itinérant, delphinariums | Interdits progressivement |
+| Le **bien-être animal** en élevage, transport, abattoir | Largement du droit européen |
 
 ## Le débat philosophique
-Trois positions structurent la discussion. Le **welfarisme** cherche à réduire la souffrance sans remettre en cause l’usage des animaux. L’**abolitionnisme** ou théorie des **droits des animaux** (Tom Regan) veut reconnaître des droits fondamentaux à certains animaux. L’**antispécisme** conteste la légitimité même de la hiérarchie entre espèces. En face, d’autres défendent la continuité des usages — élevage, chasse, recherche — au nom de traditions, d’équilibres économiques ou d’un statut particulier de l’humain.
+| La position | Ce qu'elle demande |
+| Le **welfarisme** | Réduire la souffrance, sans remettre en cause l'usage |
+| Les **droits des animaux** (Tom Regan) | Reconnaître des droits fondamentaux à certains animaux |
+| L'**antispécisme** | Contester la légitimité même de la hiérarchie entre espèces |
+| La continuité des usages | Défendre élevage, chasse et recherche, au nom de traditions, d'équilibres économiques ou d'un statut particulier de l'humain |
 
 ## Biodiversité et animaux sauvages
-La protection des espèces sauvages relève d’une autre logique : convention de Washington (**CITES**, 1973) contre le commerce des espèces menacées, directives européennes **Oiseaux** et **Habitats**, réseau **Natura 2000**, listes rouges de l’**UICN**, Office français de la biodiversité.
+| L'instrument | Son objet |
+| La convention de Washington — **CITES**, 1973 | Le commerce des espèces menacées |
+| Les directives européennes **Oiseaux** et **Habitats** | Les espèces et les milieux |
+| Le réseau **Natura 2000** | Des sites protégés |
+| Les **listes rouges** de l'UICN | L'état des espèces |
+| L'Office français de la biodiversité | La police et l'expertise |
 
 ## Une tension à assumer
-Protéger un animal individuel et protéger une espèce ne demandent pas les mêmes règles — et peuvent parfois s’opposer, par exemple lors de la régulation d’une espèce invasive.`,
+> Protéger un **animal individuel** et protéger une **espèce** ne demandent pas les mêmes règles — et peuvent parfois s'opposer, par exemple lors de la régulation d'une espèce invasive.`,
           },
           questions: [
             ['Que dit l’article 515-14 du Code civil depuis 2015 ?', ['Que les animaux sont des êtres vivants doués de sensibilité', 'Que les animaux sont des personnes juridiques', 'Que les animaux sont des meubles', 'Que les animaux appartiennent à l’État'], 0, 'Ils restent toutefois soumis au régime des biens sous réserve des lois protectrices.'],

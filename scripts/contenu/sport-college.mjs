@@ -106,35 +106,34 @@ DELETE FROM public.chapters c
           axe: 'Les champs d’apprentissage',
           lecon: {
             titre: 'Ce qu’on apprend en EPS, et pourquoi',
-            cours: `## Une matière organisée en quatre champs
-Le programme d’EPS n’est pas une liste de sports : c’est **quatre familles de problèmes** à résoudre. Chaque activité pratiquée sert à en travailler un.
+            cours: `Le programme d'EPS n'est pas une liste de sports : c'est quatre familles de problèmes à résoudre.
 
-## Champ 1 — Produire une performance mesurée
-Courir, sauter, lancer, nager vite ou longtemps. Le problème : **se dépasser** et **mesurer** son progrès.
-Activités : athlétisme, natation de vitesse, demi-fond.
+## Les quatre champs
+| Le champ | Le problème posé | Les activités |
+| 1. **Produire une performance mesurée** | Se **dépasser** et **mesurer** son progrès | Athlétisme, natation de vitesse, demi-fond |
+| 2. **Adapter son déplacement** à des environnements variés | Gérer sa **sécurité** dans un milieu incertain | Escalade, course d'orientation, sauvetage aquatique, VTT |
+| 3. **S'exprimer** par une prestation artistique | **Assumer un regard**, construire une intention | Danse, acrosport, arts du cirque, gymnastique |
+| 4. **Conduire un affrontement** | **Décider vite** dans un rapport de force | Sports collectifs, raquettes, sports de combat |
 
-## Champ 2 — Adapter son déplacement à des environnements variés
-Se déplacer dans un milieu **incertain** : hauteur, eau profonde, nature.
-Activités : escalade, course d’orientation, sauvetage aquatique, VTT.
-Le problème : **gérer sa sécurité** et lire un environnement qui change.
+> Chaque année d'EPS couvre normalement les quatre champs. Ce n'est pas une collection de sports : c'est un parcours pensé pour rencontrer quatre types de difficultés.
 
-## Champ 3 — S’exprimer devant les autres par une prestation artistique
-Créer, répéter, présenter à un public.
-Activités : danse, acrosport, arts du cirque, gymnastique.
-Le problème : **assumer un regard** et construire une intention.
-
-## Champ 4 — Conduire et maîtriser un affrontement
-Face à un adversaire, seul ou en équipe.
-Activités : sports collectifs (hand, basket, foot, volley), raquettes (badminton, tennis de table), combat (judo, lutte).
-Le problème : **décider vite** dans un rapport de force.
-
-> Chaque cycle d’EPS de l’année couvre normalement les quatre champs. Ce n’est pas une collection de sports : c’est un parcours pensé pour rencontrer quatre types de difficultés.
+## Le détail des activités
+| Le champ | Ce qu'on y rencontre |
+| 2 | Hauteur, eau profonde, nature — un environnement qui **change** |
+| 4, collectif | Hand, basket, foot, volley |
+| 4, raquettes | Badminton, tennis de table |
+| 4, combat | Judo, lutte |
 
 ## Ce qui est évalué
-Pas seulement la performance : aussi la **progression**, la **méthode**, la capacité à tenir un **rôle** (arbitre, observateur, coach) et le **respect** des règles et des autres.
+| Le critère | Ce qu'il regarde |
+| La **performance** | Le résultat mesuré |
+| La **progression** | L'écart avec le point de départ |
+| La **méthode** | La façon de s'entraîner et de se corriger |
+| Le **rôle tenu** | Arbitre, observateur, coach |
+| Le **respect** | Des règles et des autres |
 
-## L’AS
-L’**association sportive** du collège prolonge l’EPS le mercredi. Elle est ouverte à tous, pas seulement aux meilleurs, et permet de découvrir des activités absentes des cours.`,
+## L'association sportive
+> L'**AS** du collège prolonge l'EPS le mercredi. Elle est ouverte à tous, pas seulement aux meilleurs, et permet de découvrir des activités absentes des cours.`,
           },
           questions: [
             ['Combien de champs d’apprentissage compte le programme d’EPS ?', ['Quatre', 'Deux', 'Six', 'Trois'], 0, 'Ce sont quatre familles de problèmes à résoudre.'],
@@ -152,28 +151,41 @@ L’**association sportive** du collège prolonge l’EPS le mercredi. Elle est 
           axe: 'Les champs d’apprentissage',
           lecon: {
             titre: 'Comment on devient meilleur, vraiment',
-            cours: `## Le progrès n’est pas le talent
-En EPS comme ailleurs, on progresse par la **répétition organisée**, pas par des dons. Ce qui distingue les élèves qui progressent, ce n’est pas leur niveau de départ : c’est leur **méthode**.
+            cours: `On progresse par la répétition organisée, pas par des dons. Ce qui distingue les élèves qui progressent, c'est leur méthode.
 
 ## Un objectif utile
-Un bon objectif est **précis**, **mesurable** et **atteignable** : « courir 8 minutes sans m’arrêter » vaut mieux que « être meilleur en sport ». On peut le vérifier, donc constater le progrès.
+| Le critère | L'objectif faible | L'objectif utile |
+| **Précis** | « Être meilleur en sport » | « Courir 8 minutes sans m'arrêter » |
+| **Mesurable** | On ne peut rien vérifier | On peut constater le progrès |
+| **Atteignable** | Décourage | Motive |
 
 ## Se situer avant de progresser
-On mesure d’abord où l’on en est — un temps, une distance, un nombre de passes réussies. Sans cette mesure de départ, aucun progrès n’est visible, et un progrès invisible décourage.
+On mesure d'abord où l'on en est : un temps, une distance, un nombre de passes réussies.
 
-> Ce qui se mesure se travaille. Ce qui ne se mesure pas se subit.
+> Ce qui se mesure se travaille. Ce qui ne se mesure pas se subit. Sans mesure de départ, aucun progrès n'est visible — et un progrès invisible décourage.
 
-## La régularité bat l’intensité
-Trois séances de 20 minutes par semaine font davantage progresser qu’une séance de deux heures. Le corps s’adapte **entre** les séances, pas pendant : c’est la **surcompensation**.
+## Régularité contre intensité
+| L'organisation | Son effet |
+| **3 séances de 20 minutes** par semaine | Le meilleur progrès |
+| **1 séance de 2 heures** | Beaucoup moins efficace |
 
-## Le rôle de l’erreur
-Rater fait partie de l’apprentissage moteur. Un geste s’automatise après des centaines de répétitions, dont beaucoup d’échecs. L’élève qui refuse de rater refuse d’apprendre.
+> Le corps s'adapte **entre** les séances, pas pendant : c'est la **surcompensation**.
+
+## Le rôle de l'erreur
+| Ce qu'on croit | Ce qui est vrai |
+| Rater, c'est échouer | Un geste s'automatise après des **centaines** de répétitions, dont beaucoup d'échecs |
+| Le bon élève ne rate pas | L'élève qui refuse de rater refuse d'apprendre |
 
 ## Observer pour apprendre
-Regarder un camarade, être observé, se filmer : voir le geste de l’extérieur corrige plus vite que la sensation seule, qui trompe souvent.
+| Le moyen | Ce qu'il apporte |
+| Regarder un camarade | Voir le geste de l'extérieur |
+| Être observé | Un retour chiffré |
+| Se filmer | Corriger ce que la sensation seule ne montre pas |
 
 ## Le carnet de suivi
-Noter ses performances, ses ressentis et ses objectifs transforme une suite de séances en **progression consciente**. C'est le même principe que la révision espacée dans les autres matières.`,
+Noter ses performances, ses ressentis et ses objectifs transforme une suite de séances en **progression consciente**.
+
+> C'est le même principe que la révision espacée dans les autres matières.`,
           },
           questions: [
             ['Qu’est-ce qui distingue un élève qui progresse ?', ['Sa méthode, pas son niveau de départ', 'Son talent naturel', 'Sa taille', 'Sa force initiale'], 0, 'On progresse par la répétition organisée.'],
@@ -193,30 +205,36 @@ Noter ses performances, ses ressentis et ses objectifs transforme une suite de s
           axe: 'Le corps à l’effort',
           lecon: {
             titre: 'Préparer le corps avant de lui demander',
-            cours: `## Pourquoi s’échauffer
-L’échauffement prépare le corps à l’effort et **réduit le risque de blessure**. Il n’est pas une formalité que l’on abrège quand on est pressé : c’est la partie de la séance qui protège toutes les autres.
+            cours: `L'échauffement prépare le corps à l'effort et réduit le risque de blessure. C'est la partie de la séance qui protège toutes les autres.
 
-## Ce qu’il produit dans le corps
-- La **température** musculaire monte de 1 à 2 °C : le muscle devient plus **élastique**, donc moins exposé au claquage.
-- Le **cœur** accélère progressivement et envoie plus de sang aux muscles.
-- Les **articulations** produisent du liquide synovial, qui les lubrifie.
-- La **vigilance** et la coordination s’améliorent : on réagit plus vite.
+## Ce qu'il produit dans le corps
+| L'effet | Son bénéfice |
+| La **température** musculaire monte de 1 à 2 °C | Le muscle devient **élastique**, donc moins exposé au claquage |
+| Le **cœur** accélère progressivement | Plus de sang aux muscles |
+| Les **articulations** produisent du liquide synovial | Elles sont lubrifiées |
+| La **vigilance** et la coordination s'améliorent | On réagit plus vite |
 
 ## Les trois temps
-1. **Général** : 5 à 10 minutes d’activité douce et continue — trottiner, sautiller — pour élever le rythme cardiaque.
-2. **Articulaire** : mobiliser chaque articulation, de la nuque aux chevilles, par des rotations lentes.
-3. **Spécifique** : reproduire les gestes de l’activité à venir, de plus en plus vite — passes avant un match, mouvements de bras avant la natation.
+| Le temps | Sa durée | Son contenu |
+| **Général** | 5 à 10 minutes | Activité douce et continue : trottiner, sautiller |
+| **Articulaire** | Quelques minutes | Rotations lentes, de la nuque aux chevilles |
+| **Spécifique** | Jusqu'à l'effort | Les gestes de l'activité à venir, de plus en plus vite |
 
-## Progressif, toujours
-On va du **lent vers le rapide**, du **général vers le spécifique**, du **petit vers le grand**. Un échauffement qui commence par un sprint n’échauffe rien : il blesse.
+## Le principe de progressivité
+| On va | Vers |
+| Du **lent** | Vers le **rapide** |
+| Du **général** | Vers le **spécifique** |
+| Du **petit** | Vers le **grand** |
 
-> Un muscle froid a la souplesse d’un élastique sorti du réfrigérateur. C’est exactement ce qui se déchire.
+> Un muscle froid a la souplesse d'un élastique sorti du réfrigérateur. C'est exactement ce qui se déchire. Un échauffement qui commence par un sprint n'échauffe rien : il blesse.
 
-## Les étirements
-Les étirements longs et statiques n’ont **pas** leur place avant l’effort : ils diminuent temporairement la force et n’empêchent pas les blessures. On les réserve au **retour au calme**, après.
+## Les étirements, avant ou après
+| Le moment | Le verdict |
+| **Avant** l'effort | **Non** : les étirements longs et statiques diminuent temporairement la force et n'empêchent pas les blessures |
+| Au **retour au calme** | **Oui** : c'est leur place |
 
 ## Le retour au calme
-5 minutes d’activité douce en fin de séance font redescendre le rythme cardiaque et facilitent la récupération.`,
+> 5 minutes d'activité douce en fin de séance font redescendre le rythme cardiaque et facilitent la récupération.`,
           },
           questions: [
             ['À quoi sert principalement l’échauffement ?', ['Préparer le corps à l’effort et réduire le risque de blessure', 'Fatiguer avant l’effort', 'Gagner du temps', 'Impressionner l’adversaire'], 0, 'C’est la partie qui protège toutes les autres.'],
@@ -234,32 +252,46 @@ Les étirements longs et statiques n’ont **pas** leur place avant l’effort :
           axe: 'Le corps à l’effort',
           lecon: {
             titre: 'Ce qui se passe quand on court',
-            cours: `## La réponse immédiate
-Pendant un effort, les muscles réclament plus de **dioxygène** et de **nutriments**. Le corps répond :
-- le **rythme cardiaque** augmente (de ~70 à 150-190 battements par minute) ;
-- la **respiration** s’accélère et s’amplifie ;
-- la **température** monte, d’où la **transpiration**, qui refroidit ;
-- le sang est redistribué en priorité vers les **muscles actifs**.
+            cours: `Pendant un effort, les muscles réclament plus de dioxygène et de nutriments. Le corps répond immédiatement.
 
-Un cœur qui accélère à l’effort n’est pas un cœur en difficulté : c’est un cœur qui livre plus vite.
+## La réponse immédiate
+| Ce qui change | Comment |
+| Le **rythme cardiaque** | De 70 à 150-190 battements par minute |
+| La **respiration** | Plus rapide et plus ample |
+| La **température** | Elle monte, d'où la **transpiration**, qui refroidit |
+| Le **sang** | Redistribué en priorité vers les **muscles actifs** |
+
+> Un cœur qui accélère à l'effort n'est pas un cœur en difficulté : c'est un cœur qui livre plus vite.
 
 ## Les deux régimes
-- **Aérobie** : effort modéré et long, le dioxygène suffit. On peut parler en courant. C’est le régime de l’endurance.
-- **Anaérobie** : effort intense et bref, le dioxygène ne suffit plus. Le corps produit de l’énergie autrement et **accumule de l’acide lactique** — d’où les jambes qui brûlent et l’essoufflement rapide.
+| Le régime | L'effort | Le dioxygène | Ce qu'on ressent |
+| **Aérobie** | Modéré et long | Il **suffit** | On peut parler en courant — c'est l'endurance |
+| **Anaérobie** | Intense et bref | Il ne suffit **plus** | Accumulation d'**acide lactique** : jambes qui brûlent, essoufflement rapide |
 
-## La fréquence cardiaque maximale
-Une estimation simple : **FCmax ≈ 220 − âge**. À 13 ans, environ 207. L’endurance se travaille entre **60 et 75 %** de cette valeur — soit une allure où l’on peut encore parler.
+## La fréquence cardiaque
+| Le repère | Son calcul |
+| La **FCmax** estimée | Environ **220 moins l'âge** |
+| À 13 ans | Environ **207** battements par minute |
+| La zone d'**endurance** | **60 à 75 %** de la FCmax |
 
 > Le test le plus fiable ne demande aucun matériel : si vous pouvez tenir une conversation en courant, vous êtes en endurance. Si vous ne pouvez plus parler, vous êtes au-delà.
 
 ## Les effets à long terme
-Un entraînement régulier fait baisser le rythme cardiaque **au repos**, augmente le volume de sang envoyé à chaque battement, renforce les muscles et les os, améliore le sommeil et l’humeur.
+| L'adaptation | Son bénéfice |
+| Le rythme cardiaque **au repos** baisse | Le cœur travaille moins pour le même résultat |
+| Le volume de sang par battement augmente | Plus d'oxygène livré à chaque coup |
+| Muscles et os se renforcent | Moins de blessures |
+| Sommeil et humeur s'améliorent | Un effet immédiat, hors sport |
 
-## Les signaux d’alerte
-Douleur vive, vertiges, nausée, point de côté persistant, essoufflement anormal : on s’arrête et on prévient l’enseignant. La douleur n’est pas un signe de courage, c’est une information.
+## Les signaux d'alerte
+Douleur vive, vertiges, nausée, point de côté persistant, essoufflement anormal : on s'arrête et on prévient l'enseignant.
 
-## L’hydratation
-On boit **avant, pendant et après**. La soif apparaît quand la déshydratation a déjà commencé : elle est un retardataire, pas un avertisseur.`,
+> La douleur n'est pas un signe de courage, c'est une information.
+
+## L'hydratation
+On boit **avant, pendant et après**.
+
+> La soif apparaît quand la déshydratation a déjà commencé : elle est un retardataire, pas un avertisseur.`,
           },
           questions: [
             ['Que réclament les muscles pendant l’effort ?', ['Plus de dioxygène et de nutriments', 'Moins de sang', 'Du dioxyde de carbone', 'Du repos immédiat'], 0, 'Le cœur et la respiration s’accélèrent pour les fournir.'],
@@ -277,31 +309,46 @@ On boit **avant, pendant et après**. La soif apparaît quand la déshydratation
           axe: 'Le corps à l’effort',
           lecon: {
             titre: 'Ce qui se joue en dehors du terrain',
-            cours: `## Le sommeil
-Un adolescent a besoin de **8 à 10 heures** par nuit. Le sommeil n’est pas du temps perdu : c’est pendant qu’il dort que le corps **répare** ses muscles, sécrète l’hormone de croissance et **consolide** les apprentissages — moteurs comme scolaires.
-Dormir après avoir appris un geste améliore mesurablement son exécution le lendemain.
+            cours: `Ce qui se joue en dehors du terrain pèse autant que l'entraînement.
+
+## Le sommeil
+| Le repère | Sa valeur |
+| Le besoin d'un adolescent | **8 à 10 heures** par nuit |
+| Ce que fait le corps pendant | Il **répare** les muscles, sécrète l'hormone de croissance, **consolide** les apprentissages |
+
+> Dormir après avoir appris un geste améliore mesurablement son exécution le lendemain.
 
 ## Les écrans et le sommeil
-La **lumière bleue** retarde la sécrétion de mélatonine, l’hormone qui déclenche l’endormissement. Un écran dans l’heure qui précède le coucher décale l’endormissement et raccourcit la nuit — et la nuit raccourcie se paie le lendemain, en concentration comme en performance.
+| L'étape | Ce qui se passe |
+| 1 | La **lumière bleue** retarde la sécrétion de **mélatonine** |
+| 2 | L'endormissement est décalé |
+| 3 | La nuit est raccourcie |
+| 4 | La concentration et la performance du lendemain baissent |
 
-## L’alimentation
-- Les **glucides complexes** (pâtes, riz, pain, légumes secs) sont le carburant de l’effort.
-- Les **protéines** (viande, poisson, œufs, légumineuses) réparent le muscle.
-- Les **fruits et légumes** apportent vitamines et minéraux.
-- L’**eau** est la seule boisson indispensable.
+## L'alimentation
+| L'apport | Son rôle | Ses sources |
+| Les **glucides complexes** | Le carburant de l'effort | Pâtes, riz, pain, légumes secs |
+| Les **protéines** | Réparer le muscle | Viande, poisson, œufs, légumineuses |
+| Les **fruits et légumes** | Vitamines et minéraux | Frais, cuits ou surgelés |
+| L'**eau** | La seule boisson indispensable | — |
 
-Le **petit-déjeuner** compte : venir en cours d’EPS à jeun expose au malaise.
+> Le petit-déjeuner compte : venir en cours d'EPS à jeun expose au malaise.
 
-## Ce qui est vendu comme utile et ne l’est pas
-Boissons énergisantes, compléments protéinés, produits « performance » : inutiles à cet âge, parfois dangereux. Un adolescent qui mange varié n’a besoin d’aucun complément.
+## Ce qui est vendu comme utile et ne l'est pas
+| Le produit | Le verdict |
+| Boissons énergisantes | Inutiles, parfois **dangereuses** |
+| Compléments protéinés | Inutiles à cet âge |
+| Produits « performance » | Aucun bénéfice démontré |
 
-> À 13 ans, le principal facteur de performance n’est ni la protéine ni la boisson : c’est le sommeil.
+> À 13 ans, le principal facteur de performance n'est ni la protéine ni la boisson : c'est le sommeil. Un adolescent qui mange varié n'a besoin d'aucun complément.
 
-## L’activité physique quotidienne
-L’OMS recommande **au moins 60 minutes** d’activité physique par jour pour les 5-17 ans. Marcher, prendre l’escalier, faire du vélo comptent : il ne s’agit pas de sport encadré, mais de mouvement.
+## Bouger tous les jours
+| La recommandation de l'OMS | Sa valeur |
+| Pour les **5-17 ans** | Au moins **60 minutes** d'activité physique par jour |
+| Ce qui compte | Marcher, prendre l'escalier, faire du vélo — pas seulement le sport encadré |
 
 ## La sédentarité
-Rester assis longtemps est un risque **distinct** du manque de sport : on peut faire de l’EPS et être sédentaire le reste du temps. Se lever et bouger quelques minutes chaque heure compte réellement.`,
+> Rester assis longtemps est un risque **distinct** du manque de sport : on peut faire de l'EPS et être sédentaire le reste du temps. Se lever quelques minutes chaque heure compte réellement.`,
           },
           questions: [
             ['De combien d’heures de sommeil un adolescent a-t-il besoin ?', ['8 à 10 heures', '5 à 6 heures', '12 heures', '7 heures maximum'], 0, 'C’est pendant le sommeil que le corps répare et consolide.'],
@@ -321,30 +368,37 @@ Rester assis longtemps est un risque **distinct** du manque de sport : on peut f
           axe: 'Les rôles, les règles, la sécurité',
           lecon: {
             titre: 'On n’est pas seulement joueur',
-            cours: `## Pourquoi des rôles
-En EPS, on ne fait pas que pratiquer : on **arbitre**, on **observe**, on **conseille**, on **organise**. Ces rôles sont évalués au même titre que la performance, et pour une bonne raison — ils demandent de comprendre l’activité, pas seulement de la subir.
+            cours: `En EPS, on ne fait pas que pratiquer : on arbitre, on observe, on conseille, on organise.
 
-## L’arbitre
-Il fait appliquer la règle. Cela suppose de la **connaître**, de **décider vite**, et d’**assumer** une décision contestée. Un arbitre qui hésite perd le match.
-Il apprend aussi ce qu’on ressent quand on est contesté — ce qui change durablement la façon de jouer ensuite.
+## Les quatre rôles
+| Le rôle | Ce qu'il fait | Ce qu'il demande |
+| L'**arbitre** | Il fait appliquer la règle | La **connaître**, **décider vite**, **assumer** une décision contestée |
+| L'**observateur** | Il relève des données précises | Un **critère** mesurable |
+| Le **coach** | Il conseille, encourage, propose une stratégie | Des conseils **précis** et **positifs** |
+| L'**organisateur** | Matériel, score, chronomètre, équipes | Sans lui, la séance n'a pas lieu |
 
-## L’observateur
-Il relève des données précises : nombre de passes réussies, temps de possession, zones de tir, appuis. Ces relevés servent au camarade à **voir** ce qu’il ne sent pas.
-Observer demande un **critère** : « il a bien joué » ne sert à rien ; « 7 passes sur 10 réussies » se travaille.
+## L'arbitre
+> Un arbitre qui hésite perd le match. Il apprend aussi ce qu'on ressent quand on est contesté — ce qui change durablement la façon de jouer ensuite.
+
+## L'observateur
+| Le relevé | Sa valeur |
+| « Il a bien joué » | Inutilisable |
+| « **7 passes sur 10** réussies » | Se travaille |
+
+Nombre de passes réussies, temps de possession, zones de tir, appuis : ces relevés servent au camarade à **voir** ce qu'il ne sent pas.
 
 ## Le coach
-Il conseille, encourage, propose une stratégie. Un bon conseil est **précis** et **positif** : « place-toi plus haut » plutôt que « tu joues mal ».
+| Le conseil | Son effet |
+| « Tu joues mal » | Rien à corriger |
+| « **Place-toi plus haut** » | Une action possible |
 
-## L’organisateur
-Installer et ranger le matériel, tenir un score, gérer un chronomètre, constituer des équipes équilibrées. Sans lui, la séance n’a pas lieu.
-
-> Tenir un rôle, c’est passer du statut de participant à celui de responsable. C’est ce qui distingue un groupe d’élèves d’une classe qui travaille.
+> Tenir un rôle, c'est passer du statut de participant à celui de responsable. C'est ce qui distingue un groupe d'élèves d'une classe qui travaille.
 
 ## Ce que ça apporte hors du gymnase
-Décider sous pression, formuler un retour utile, accepter une décision qu’on juge injuste, organiser un groupe : ce sont des compétences qui servent partout, et l’EPS est l’un des rares endroits où on les pratique vraiment.
+Décider sous pression, formuler un retour utile, accepter une décision qu'on juge injuste, organiser un groupe : des compétences qui servent partout, et que l'EPS est l'un des rares endroits à faire pratiquer vraiment.
 
 ## Le respect de celui qui tient le rôle
-Contester systématiquement l’arbitre — élève ou adulte — désorganise la séance et rend le rôle intenable. On peut demander une explication ; on n’insulte pas.`,
+> Contester systématiquement l'arbitre — élève ou adulte — rend le rôle intenable. On peut demander une explication ; on n'insulte pas.`,
           },
           questions: [
             ['Pourquoi les rôles sont-ils évalués en EPS ?', ['Ils demandent de comprendre l’activité, pas seulement de la subir', 'Pour occuper les élèves dispensés', 'Pour gagner du temps', 'Ils ne sont pas évalués'], 0, 'Au même titre que la performance.'],
@@ -362,30 +416,42 @@ Contester systématiquement l’arbitre — élève ou adulte — désorganise l
           axe: 'Les rôles, les règles, la sécurité',
           lecon: {
             titre: 'Ce qui rend le jeu possible',
-            cours: `## La règle n’empêche pas, elle permet
-Sans règle commune, il n’y a pas de match : il y a une bagarre. La règle **crée** le jeu en fixant ce qui compte, ce qui est interdit et comment on gagne. C’est pourquoi la contester en permanence revient à détruire ce à quoi on veut jouer.
+            cours: `Sans règle commune, il n'y a pas de match : il y a une bagarre. La règle crée le jeu.
 
-## Trois familles de règles
-- Les règles de **but** : comment on marque et comment on gagne.
-- Les règles d’**espace et de temps** : terrain, zones, durée.
-- Les règles de **sécurité** : contacts autorisés ou non, matériel obligatoire.
+## Les trois familles de règles
+| La famille | Ce qu'elle fixe |
+| Les règles de **but** | Comment on marque et comment on gagne |
+| Les règles d'**espace et de temps** | Terrain, zones, durée |
+| Les règles de **sécurité** | Contacts autorisés ou non, matériel obligatoire |
+
+> Contester la règle en permanence revient à détruire ce à quoi on veut jouer.
 
 ## Le fair-play
-C’est respecter la règle **et** l’adversaire, même quand rien ne nous y oblige : reconnaître une faute que l’arbitre n’a pas vue, ne pas humilier un adversaire dominé, aider un joueur à terre, serrer la main à la fin.
+| La situation | Le geste de fair-play |
+| L'arbitre n'a pas vu une faute | La **reconnaître** |
+| L'adversaire est dominé | Ne pas l'**humilier** |
+| Un joueur est à terre | L'**aider** |
+| Le match est fini | **Serrer la main** |
 
-> Le fair-play commence exactement là où finit la surveillance. Respecter la règle quand l’arbitre regarde, c’est de l’obéissance ; la respecter quand il ne regarde pas, c’est du fair-play.
+> Le fair-play commence exactement là où finit la surveillance. Respecter la règle quand l'arbitre regarde, c'est de l'obéissance ; la respecter quand il ne regarde pas, c'est du fair-play.
 
-## La victoire et la défaite
-Gagner sans mépriser, perdre sans accuser. Chercher une excuse — l’arbitre, le terrain, les autres — empêche d’identifier ce qu’il y avait à corriger : le mauvais perdant se prive du principal bénéfice de la défaite.
+## Gagner et perdre
+| Le comportement | Ce qu'il produit |
+| Gagner **sans mépriser** | Le respect de l'adversaire |
+| Perdre **sans accuser** | On identifie ce qu'il y avait à corriger |
+| Chercher une excuse — l'arbitre, le terrain, les autres | Le mauvais perdant se prive du principal bénéfice de la défaite |
 
-## La triche
-Elle peut faire gagner un match et fait perdre l’essentiel : une victoire obtenue en trichant ne prouve rien, pas même à celui qui triche.
-
-## Le dopage
-Utiliser des substances interdites pour améliorer sa performance est **interdit** et **dangereux** : effets sur le cœur, les hormones, le psychisme. Les contrôles existent à tous les niveaux, et les sanctions vont jusqu’à l’exclusion des compétitions.
+## La triche et le dopage
+| La faute | Sa conséquence |
+| La **triche** | Elle peut faire gagner un match ; une victoire obtenue en trichant ne prouve rien, pas même à celui qui triche |
+| Le **dopage** | **Interdit** et **dangereux** : effets sur le cœur, les hormones, le psychisme |
+| Les **contrôles** | Ils existent à tous les niveaux ; les sanctions vont jusqu'à l'exclusion des compétitions |
 
 ## Les valeurs olympiques
-**Excellence** (donner son meilleur), **amitié**, **respect**. Elles résument ce que l’EPS cherche à transmettre au-delà des performances.`,
+| La valeur | Ce qu'elle demande |
+| L'**excellence** | Donner son meilleur |
+| L'**amitié** | Le lien avant le résultat |
+| Le **respect** | De la règle, de l'adversaire, de soi |`,
           },
           questions: [
             ['À quoi sert la règle dans un sport ?', ['Elle crée le jeu en fixant ce qui compte', 'Elle empêche de jouer librement', 'Elle avantage les plus forts', 'Elle sert à punir'], 0, 'Sans règle commune, il n’y a pas de match.'],
@@ -403,38 +469,52 @@ Utiliser des substances interdites pour améliorer sa performance est **interdit
           axe: 'Les rôles, les règles, la sécurité',
           lecon: {
             titre: 'Prévenir, et savoir quoi faire',
-            cours: `## Prévenir d’abord
-La plupart des accidents en EPS sont évitables. Les règles de base :
-- une **tenue adaptée** : chaussures de sport lacées, vêtements qui ne gênent pas ;
-- **pas de bijoux** — bagues, colliers, montres, piercings : ils accrochent et blessent ;
-- **cheveux attachés**, lunettes sécurisées ;
-- **échauffement** systématique ;
-- **matériel vérifié** : tapis en place, agrès stables, terrain dégagé ;
-- **respect des consignes** : elles existent parce qu’un accident a déjà eu lieu.
+            cours: `La plupart des accidents en EPS sont évitables : la prévention passe avant les secours.
+
+## Prévenir d'abord
+| La règle | Sa raison |
+| Une **tenue adaptée** | Chaussures de sport lacées, vêtements qui ne gênent pas |
+| **Pas de bijoux** | Bagues, colliers, montres, piercings accrochent et blessent |
+| **Cheveux attachés**, lunettes sécurisées | Ils gênent la vue et s'arrachent |
+| **Échauffement** systématique | Il protège le muscle |
+| **Matériel vérifié** | Tapis en place, agrès stables, terrain dégagé |
+| **Respect des consignes** | Elles existent parce qu'un accident a déjà eu lieu |
 
 ## Les règles propres à chaque activité
-Parade en gymnastique, assurage en escalade, zone de lancer dégagée en athlétisme, contacts interdits en sport de combat hors situation prévue. Elles ne sont pas négociables.
+| L'activité | Sa règle non négociable |
+| La **gymnastique** | La parade |
+| L'**escalade** | L'assurage |
+| L'**athlétisme** | La zone de lancer dégagée |
+| Les **sports de combat** | Aucun contact hors situation prévue |
 
-> Une consigne de sécurité n’est presque jamais une précaution théorique : c’est la trace d’un accident réel qu’on ne veut pas revoir.
+> Une consigne de sécurité n'est presque jamais une précaution théorique : c'est la trace d'un accident réel qu'on ne veut pas revoir.
 
 ## Reconnaître une blessure
-- **Entorse** : articulation tordue, douleur, gonflement.
-- **Claquage** : douleur musculaire brutale en plein effort.
-- **Fracture** : douleur intense, déformation, impossibilité de bouger.
-- **Malaise** : pâleur, sueurs, vertiges.
+| La blessure | Ses signes |
+| L'**entorse** | Articulation tordue, douleur, gonflement |
+| Le **claquage** | Douleur musculaire brutale en plein effort |
+| La **fracture** | Douleur intense, déformation, impossibilité de bouger |
+| Le **malaise** | Pâleur, sueurs, vertiges |
 
 ## Le protocole RICE
-Pour une entorse ou un choc : **Repos**, **Ice** (glace 15-20 min, jamais à même la peau), **Compression**, **Élévation**. Puis avis médical.
+| La lettre | Le geste |
+| **R** — Repos | Arrêter l'effort |
+| **I** — Ice | Glace 15 à 20 minutes, **jamais à même la peau** |
+| **C** — Compression | Un bandage, sans serrer à couper la circulation |
+| **E** — Élévation | Surélever le membre |
+
+Puis avis médical.
 
 ## Alerter
-1. **Protéger** : supprimer le danger, sans se mettre en danger soi-même.
-2. **Alerter** : **15** (SAMU), **18** (pompiers), **112** (numéro européen), **114** (par SMS).
-3. **Secourir** dans la limite de ce qu’on sait faire.
+| L'étape | Ce qu'on fait |
+| 1. **Protéger** | Supprimer le danger, sans se mettre en danger soi-même |
+| 2. **Alerter** | **15** SAMU · **18** pompiers · **112** européen · **114** par SMS |
+| 3. **Secourir** | Dans la limite de ce qu'on sait faire |
 
-Au téléphone : le lieu précis, ce qui s’est passé, l’état de la victime — et **ne jamais raccrocher le premier**.
+> Au téléphone : le lieu précis, ce qui s'est passé, l'état de la victime — et **ne jamais raccrocher le premier**.
 
 ## Le PSC1
-La formation **Prévention et secours civiques de niveau 1** s’obtient dès le collège : position latérale de sécurité, massage cardiaque, défibrillateur. Elle sauve des vies bien au-delà du gymnase.`,
+> La formation **Prévention et secours civiques de niveau 1** s'obtient dès le collège : position latérale de sécurité, massage cardiaque, défibrillateur. Elle sauve des vies bien au-delà du gymnase.`,
           },
           questions: [
             ['Pourquoi retire-t-on les bijoux avant une séance ?', ['Ils accrochent et blessent', 'Ils font du bruit', 'Ils ralentissent', 'C’est une tradition'], 0, 'Bagues, colliers, montres, piercings.'],

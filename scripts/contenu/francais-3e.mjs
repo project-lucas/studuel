@@ -151,27 +151,45 @@ DELETE FROM public.chapters c
           axe: 'Se chercher, se construire — Se raconter, se représenter',
           lecon: {
             titre: 'Se peindre soi-même, en mots ou en couleurs',
-            cours: `L’**autoportrait** est la représentation que quelqu’un donne de lui-même : un peintre le fait avec des couleurs, un écrivain avec des mots. Dans les deux cas, l’auteur est à la fois **celui qui regarde** et **celui qui est regardé**.
+            cours: `L'autoportrait est la représentation que quelqu'un donne de lui-même : un peintre avec des couleurs, un écrivain avec des mots.
 
-## Ce qui distingue l’autoportrait de l’autobiographie
-L’autobiographie **raconte** une vie : elle suit le fil du temps, de l’enfance à aujourd’hui. L’autoportrait **décrit** un être : son visage, son caractère, ses goûts, ses contradictions. L’un est un **récit**, l’autre est un **tableau**. Montaigne, dans les *Essais*, écrit : « Je suis moi-même la matière de mon livre » — il ne raconte pas sa vie, il se peint.
+> Dans les deux cas, l'auteur est à la fois **celui qui regarde** et **celui qui est regardé**.
 
-> L’autoportrait ne répond pas à « qu’est-ce qui m’est arrivé ? » mais à « qui suis-je ? ».
+## Autoportrait ou autobiographie
+| Le genre | Ce qu'il fait | Sa forme |
+| L'**autobiographie** | Elle **raconte** une vie, dans le fil du temps | Un **récit** |
+| L'**autoportrait** | Il **décrit** un être : visage, caractère, goûts, contradictions | Un **tableau** |
+
+> Montaigne, dans les *Essais* : « Je suis moi-même la matière de mon livre. » Il ne raconte pas sa vie, il se peint.
+
+> L'autoportrait ne répond pas à « qu'est-ce qui m'est arrivé ? » mais à « **qui suis-je ?** ».
 
 ## Les outils de la langue
-- La **première personne** (« je », « moi », « mon ») : l’auteur parle en son nom.
-- Le **présent d’énonciation**, qui donne l’impression d’un être saisi maintenant.
-- Le **portrait physique** (le corps, le visage) et le **portrait moral** (le caractère, les défauts).
-- Le **champ lexical** des qualités et des défauts, souvent mêlés : un autoportrait honnête n’est pas un éloge.
+| L'outil | Son effet |
+| La **première personne** | L'auteur parle en son nom |
+| Le **présent d'énonciation** | Un être saisi **maintenant** |
+| Le portrait **physique** | Le corps, le visage |
+| Le portrait **moral** | Le caractère, les défauts |
+| Le champ lexical des qualités **et** des défauts | Un autoportrait honnête n'est pas un éloge |
 
-## L’autoportrait en peinture
-Rembrandt s’est peint plus de quatre-vingts fois, du jeune homme assuré au vieillard fatigué. Van Gogh se peint l’oreille bandée. Frida Kahlo fait de son corps blessé le sujet même de son œuvre. Le peintre choisit une **pose**, une **lumière**, un **décor** : ces choix disent autant que les traits du visage.
+## L'autoportrait en peinture
+| Le peintre | Ce qu'il montre |
+| **Rembrandt** | Plus de quatre-vingts autoportraits, du jeune homme assuré au vieillard fatigué |
+| **Van Gogh** | Il se peint l'oreille bandée |
+| **Frida Kahlo** | Son corps blessé devient le sujet même de l'œuvre |
+
+Le peintre choisit une **pose**, une **lumière**, un **décor** : ces choix disent autant que les traits du visage.
 
 ## La sincérité en question
-Se peindre, c’est choisir ce qu’on montre. L’auteur peut **s’embellir**, se **noircir** par modestie, ou se réinventer. Le lecteur doit donc lire un autoportrait comme une **construction**, pas comme un miroir : ce que l’auteur veut faire croire de lui fait partie de son portrait.
+| Ce que l'auteur peut faire | Son effet |
+| S'**embellir** | Il donne l'image qu'il veut laisser |
+| Se **noircir** par modestie | Il paraît honnête |
+| Se **réinventer** | Il devient personnage |
+
+> Un autoportrait se lit comme une **construction**, pas comme un miroir : ce que l'auteur veut faire croire de lui fait partie de son portrait.
 
 ## Quelques repères
-Montaigne (*Essais*), La Rochefoucauld (*Portrait de La Rochefoucauld par lui-même*), Michel Leiris (*L’Âge d’homme*), Nathalie Sarraute (*Enfance*), Annie Ernaux.`,
+Montaigne (*Essais*), La Rochefoucauld, Michel Leiris (*L'Âge d'homme*), Nathalie Sarraute (*Enfance*), Annie Ernaux.`,
           },
           questions: [
             ['Qu’est-ce qu’un autoportrait littéraire ?', ['Une description que l’auteur donne de lui-même', 'Le récit chronologique de sa vie', 'Le portrait d’un proche', 'Un roman à la première personne'], 0, 'Il décrit un être là où l’autobiographie raconte une vie.'],
@@ -189,29 +207,48 @@ Montaigne (*Essais*), La Rochefoucauld (*Portrait de La Rochefoucauld par lui-m�
           axe: 'Se chercher, se construire — Se raconter, se représenter',
           lecon: {
             titre: 'Le pacte, le « je » et la mémoire',
-            cours: `Une **autobiographie** est le récit **rétrospectif** qu’une personne réelle fait de sa **propre existence**. Le mot vient du grec : *auto* (soi-même), *bios* (la vie), *graphein* (écrire).
+            cours: `Une autobiographie est le récit rétrospectif qu'une personne réelle fait de sa propre existence.
+
+Du grec : *auto* (soi-même), *bios* (la vie), *graphein* (écrire).
 
 ## Le pacte autobiographique
-Philippe Lejeune appelle **pacte autobiographique** l’engagement que l’auteur prend envers son lecteur : dire la vérité sur sa propre vie. Il repose sur une **identité triple** — l’auteur, le narrateur et le personnage principal sont **une seule et même personne**. C’est ce pacte qui sépare l’autobiographie du roman, où le narrateur est une invention.
+Philippe Lejeune appelle ainsi l'engagement de l'auteur envers son lecteur : dire la vérité sur sa propre vie.
 
-> Rousseau ouvre les *Confessions* par une promesse : « Je forme une entreprise qui n’eut jamais d’exemple. »
+| Qui doit coïncider | Ce que cela sépare |
+| L'**auteur**, le **narrateur**, le **personnage principal** | Le roman, où le narrateur est une invention |
+
+> Rousseau ouvre les *Confessions* par une promesse : « Je forme une entreprise qui n'eut jamais d'exemple. »
 
 ## Les deux « je »
-Le récit s’écrit à la première personne, mais il y a en réalité **deux voix** : le **je qui écrit** (l’adulte, aujourd’hui) et le **je qui a vécu** (l’enfant, autrefois). L’adulte commente, juge, explique ; l’enfant agit sans savoir. Ce décalage s’appelle le **regard rétrospectif**, et c’est souvent là que naît l’émotion.
+| La voix | Qui parle | Ce qu'elle fait |
+| Le **je qui écrit** | L'adulte, aujourd'hui | Il commente, juge, explique |
+| Le **je qui a vécu** | L'enfant, autrefois | Il agit sans savoir |
 
-## Les temps du récit d’enfance
-- L’**imparfait** pour les habitudes et le décor : « chaque été, nous partions… ».
-- Le **passé simple** ou le **passé composé** pour les événements marquants.
-- Le **présent de vérité générale** quand l’adulte tire une leçon.
+> Ce décalage s'appelle le **regard rétrospectif** — et c'est souvent là que naît l'émotion.
+
+## Les temps du récit d'enfance
+| Le temps | Son emploi |
+| L'**imparfait** | Les habitudes et le décor : « chaque été, nous partions… » |
+| Le **passé simple** ou composé | Les événements marquants |
+| Le **présent de vérité générale** | Quand l'adulte tire une leçon |
 
 ## Les genres voisins
-Les **Mémoires** racontent surtout la vie publique et les grands événements traversés (Chateaubriand). Le **journal intime** s’écrit au jour le jour, sans recul (Anne Frank). L’**autofiction** mêle sciemment le vrai et l’inventé. Le **roman autobiographique** garde la matière d’une vie mais renonce au pacte.
+| Le genre | Ce qui le distingue | Un exemple |
+| Les **Mémoires** | La vie **publique** et les grands événements traversés | Chateaubriand |
+| Le **journal intime** | Écrit au jour le jour, **sans recul** | Anne Frank |
+| L'**autofiction** | Elle mêle sciemment le vrai et l'inventé | — |
+| Le **roman autobiographique** | La matière d'une vie, sans le pacte | — |
 
-## Pourquoi se raconter ?
-Pour **se souvenir** avant que la mémoire ne s’efface, pour **se comprendre**, pour **se justifier** devant les autres, pour **témoigner** d’une époque, ou simplement pour **transmettre**. Une même œuvre mêle souvent plusieurs de ces motifs.
+## Pourquoi se raconter
+| Le motif | Ce qu'il cherche |
+| Se **souvenir** | Avant que la mémoire ne s'efface |
+| Se **comprendre** | Relire sa trajectoire |
+| Se **justifier** | Devant les autres |
+| **Témoigner** | D'une époque |
+| **Transmettre** | À ceux qui viennent |
 
 ## Quelques repères
-Rousseau (*Les Confessions*), Chateaubriand (*Mémoires d’outre-tombe*), Nathalie Sarraute (*Enfance*), Georges Perec (*W ou le souvenir d’enfance*), Annie Ernaux (*La Place*).`,
+Rousseau (*Les Confessions*), Chateaubriand (*Mémoires d'outre-tombe*), Sarraute (*Enfance*), Perec (*W ou le souvenir d'enfance*), Ernaux (*La Place*).`,
           },
           questions: [
             ['Que signifie littéralement le mot « autobiographie » ?', ['Écrire soi-même sa vie', 'Écrire la vie d’un autre', 'Écrire une histoire vraie', 'Écrire chaque jour'], 0, 'Du grec auto (soi-même), bios (la vie), graphein (écrire).'],
@@ -229,27 +266,45 @@ Rousseau (*Les Confessions*), Chateaubriand (*Mémoires d’outre-tombe*), Natha
           axe: 'Se chercher, se construire — Se raconter, se représenter',
           lecon: {
             titre: 'Quand une vie raconte une époque',
-            cours: `Certaines autobiographies ne cherchent pas seulement à dire « qui je suis » : elles se servent d’une vie singulière pour **faire voir un monde**. Le « je » devient alors une **fenêtre** ouverte sur une famille, une classe sociale, une guerre, un exil.
+            cours: `Certaines autobiographies se servent d'une vie singulière pour faire voir un monde. Le « je » devient une fenêtre ouverte sur une famille, une classe sociale, une guerre, un exil.
+
+## Trois usages du « je »
+| L'usage | Ce qu'il éclaire | Ses auteurs |
+| Le **témoignage** | Un événement historique traversé | Primo Levi, Charlotte Delbo, Elie Wiesel, Anne Frank |
+| Le récit d'un **milieu** | Une classe sociale | Annie Ernaux |
+| Le récit d'**exil** ou d'enfance | Une histoire collective | Georges Perec, Azouz Begag |
 
 ## Le témoignage
-Quand l’auteur a traversé un événement historique, son récit devient un **témoignage** : il engage sa parole pour que l’on sache. Primo Levi raconte Auschwitz dans *Si c’est un homme* ; Charlotte Delbo, Elie Wiesel, Anne Frank écrivent depuis l’intérieur de la catastrophe. Le témoignage a une valeur **documentaire** et une valeur **morale** : il lutte contre l’oubli et contre le mensonge.
+L'auteur engage sa parole pour que l'on sache.
 
-> « Vous qui vivez en toute quiétude / Dans vos maisons bien chaudes… » — Primo Levi s’adresse directement au lecteur d’après.
+| Sa valeur | Ce qu'elle fait |
+| **Documentaire** | Elle établit ce qui a eu lieu |
+| **Morale** | Elle lutte contre l'oubli et contre le mensonge |
 
-## Le récit d’un milieu
-L’autobiographie peut aussi éclairer un **milieu social**. Annie Ernaux, dans *La Place*, raconte son père, petit commerçant normand, et à travers lui l’écart douloureux entre le monde d’où elle vient et celui où l’école l’a menée. L’écriture s’y fait volontairement **plate**, sans effets, pour ne pas trahir ce qu’elle décrit.
+> « Vous qui vivez en toute quiétude / Dans vos maisons bien chaudes… » — Primo Levi s'adresse directement au lecteur d'après.
 
-## Le récit d’enfance et d’exil
-Chez Georges Perec (*W ou le souvenir d’enfance*), le trou de la mémoire dit la disparition des parents. Chez Azouz Begag (*Le Gone du Chaâba*), l’enfance dans un bidonville lyonnais raconte l’immigration. Le détail vécu vaut alors mieux qu’un chapitre d’histoire : il rend le passé **habitable**.
+## Le récit d'un milieu
+Dans *La Place*, Annie Ernaux raconte son père, petit commerçant normand — et à travers lui l'écart douloureux entre le monde d'où elle vient et celui où l'école l'a menée.
+
+> L'écriture s'y fait volontairement **plate**, sans effets, pour ne pas trahir ce qu'elle décrit.
+
+## Le récit d'enfance et d'exil
+| L'œuvre | Ce que l'enfance y raconte |
+| Perec, *W ou le souvenir d'enfance* | Le **trou** de la mémoire dit la disparition des parents |
+| Begag, *Le Gone du Chaâba* | L'enfance dans un bidonville lyonnais raconte l'immigration |
+
+> Le détail vécu vaut mieux qu'un chapitre d'histoire : il rend le passé **habitable**.
 
 ## Ce que cela change pour le lecteur
-Lire ces récits, ce n’est pas seulement s’intéresser à une personne : c’est **comprendre de l’intérieur** une situation qu’un manuel décrit de l’extérieur. Le lecteur passe de « je sais que cela a eu lieu » à « je vois ce que cela faisait ».
+| Avant | Après |
+| « Je sais que cela a eu lieu » | « Je **vois** ce que cela faisait » |
 
 ## Les procédés à repérer
-- L’**ancrage référentiel** : dates, lieux, noms réels.
-- L’**adresse au lecteur**, qui l’implique et l’oblige.
-- Le **détail concret** (un objet, une odeur, un mot entendu), plus parlant qu’une généralité.
-- L’**alternance** entre le récit et le commentaire de l’adulte.`,
+| Le procédé | Son effet |
+| L'**ancrage référentiel** | Dates, lieux, noms réels |
+| L'**adresse au lecteur** | Elle l'implique et l'oblige |
+| Le **détail concret** | Un objet, une odeur, un mot entendu — plus parlant qu'une généralité |
+| L'**alternance** récit / commentaire | Deux regards sur les mêmes faits |`,
           },
           questions: [
             ['Que devient une autobiographie quand l’auteur a traversé un événement historique ?', ['Un témoignage', 'Un pamphlet', 'Une fable', 'Un journal de bord'], 0, 'L’auteur engage sa parole pour que l’on sache.'],
@@ -271,28 +326,45 @@ Lire ces récits, ce n’est pas seulement s’intéresser à une personne : c�
           axe: 'Vivre en société, participer à la société — Dénoncer les travers de la société',
           lecon: {
             titre: 'Rire pour faire voir ce qui cloche',
-            cours: `La **satire** est un texte qui **critique en faisant rire** ou sourire. Elle vise les défauts d’une personne, d’un groupe ou d’une société entière. Son projet est double : **amuser** et **corriger**. Molière le résume : « castigat ridendo mores », elle corrige les mœurs par le rire.
+            cours: `La satire est un texte qui critique en faisant rire. Son projet est double : amuser et corriger.
+
+> Molière le résume : *castigat ridendo mores* — elle corrige les mœurs par le rire.
 
 ## La caricature
-La caricature **grossit un trait** jusqu’à le rendre ridicule : l’avare devient obsédé par sa cassette, le médecin ne parle plus qu’en latin. En dessin comme en littérature, elle rend visible d’un coup ce qu’un discours mettrait une page à expliquer.
+Elle **grossit un trait** jusqu'à le rendre ridicule.
 
-## La parodie et le pastiche
-- Le **pastiche** imite le style d’un auteur ou d’un genre.
-- La **parodie** imite pour se moquer : elle applique un style noble à un sujet bas.
-- L’**héroï-comique** raconte une dispute de village dans le style de l’épopée ; le **burlesque** fait l’inverse et fait parler les héros comme des valets.
+| Le personnage | Le trait grossi |
+| L'**avare** | Il est obsédé par sa cassette |
+| Le **médecin** | Il ne parle plus qu'en latin |
 
-## L’ironie et l’antiphrase
-L’**ironie** consiste à dire le contraire de ce que l’on pense, en laissant entendre qu’on n’en pense pas un mot. Sa figure principale est l’**antiphrase** : « Quelle brillante idée ! » pour dire l’inverse. Elle demande une **complicité** avec le lecteur, qui doit rétablir seul le vrai sens — c’est ce qui la rend efficace et dangereuse.
+> En dessin comme en littérature, elle rend visible d'un coup ce qu'un discours mettrait une page à expliquer.
 
-> Voltaire, dans *Candide*, écrit que « tout est pour le mieux dans le meilleur des mondes possibles » — au milieu d’un désastre.
+## Parodie, pastiche et compagnie
+| Le procédé | Son principe |
+| Le **pastiche** | Il **imite** le style d'un auteur ou d'un genre |
+| La **parodie** | Il imite **pour se moquer** |
+| L'**héroï-comique** | Un sujet **bas** dans un style **noble** : une dispute de village en épopée |
+| Le **burlesque** | L'inverse : les héros parlent comme des valets |
 
-## L’apologue
-La **fable**, le **conte philosophique** et l’**utopie** racontent une histoire pour faire passer une leçon. L’apologue protège : on peut critiquer un roi en parlant d’un lion.
+## L'ironie et l'antiphrase
+| La figure | Son fonctionnement |
+| L'**ironie** | Dire le contraire de ce qu'on pense, en le laissant entendre |
+| L'**antiphrase** | « Quelle brillante idée ! » pour dire l'inverse |
+
+> Elle demande une **complicité** avec le lecteur, qui rétablit seul le vrai sens. C'est ce qui la rend efficace — et dangereuse.
+
+> Voltaire, dans *Candide* : « tout est pour le mieux dans le meilleur des mondes possibles » — au milieu d'un désastre.
+
+## L'apologue
+La **fable**, le **conte philosophique** et l'**utopie** racontent une histoire pour faire passer une leçon.
+
+> L'apologue protège : on peut critiquer un roi en parlant d'un lion.
 
 ## Les registres voisins
-- Le **comique** fait rire sans forcément critiquer.
-- Le **pamphlet** attaque frontalement, sans passer par le rire.
-- La **satire** occupe le milieu : elle attaque, mais par le détour du rire.`,
+| Le registre | Ce qu'il fait |
+| Le **comique** | Il fait rire, sans forcément critiquer |
+| Le **pamphlet** | Il attaque **frontalement**, sans passer par le rire |
+| La **satire** | Elle attaque, mais **par le détour du rire** |`,
           },
           questions: [
             ['Quel est le double projet de la satire ?', ['Amuser et corriger', 'Émouvoir et consoler', 'Informer et classer', 'Décrire et raconter'], 0, 'Elle critique en faisant rire : « castigat ridendo mores ».'],
@@ -310,27 +382,43 @@ La **fable**, le **conte philosophique** et l’**utopie** racontent une histoir
           axe: 'Vivre en société, participer à la société — Dénoncer les travers de la société',
           lecon: {
             titre: 'Ce que le rire peut contre le pouvoir',
-            cours: `Faire rire d’un puissant, c’est lui retirer une part de sa puissance. Depuis l’Antiquité, la satire sert d’**arme** aux auteurs qui n’en ont pas d’autre — et les pouvoirs le savent, puisqu’ils la censurent.
+            cours: `Faire rire d'un puissant, c'est lui retirer une part de sa puissance. Les pouvoirs le savent, puisqu'ils la censurent.
 
 ## Cibles et enjeux
-La satire vise les **abus de pouvoir**, les **injustices sociales**, l’**hypocrisie religieuse**, la **vanité** des grands, la **bêtise** des modes. Molière attaque les faux dévots dans *Tartuffe* — la pièce est interdite cinq ans. La Fontaine met en scène des animaux : « La raison du plus fort est toujours la meilleure » ouvre *Le Loup et l’Agneau*.
+| La cible | Un exemple |
+| Les **abus de pouvoir** | La Fontaine : « La raison du plus fort est toujours la meilleure » |
+| L'**hypocrisie religieuse** | *Tartuffe* de Molière — la pièce est interdite cinq ans |
+| Les **injustices sociales** | Les fables de cour |
+| La **vanité** des grands, la **bêtise** des modes | Portraits et caricatures |
 
 ## Le détour comme protection
-Trois détours reviennent sans cesse :
-- l’**animal** (la fable), qui permet de nommer sans nommer ;
-- le **pays imaginaire** (l’utopie, le conte), où l’injustice est décrite ailleurs ;
-- le **regard étranger** (le Persan de Montesquieu, le Huron de Voltaire), qui trouve absurde ce que l’habitude nous a rendu normal.
+| Le détour | Ce qu'il permet | Son exemple |
+| L'**animal** | Nommer sans nommer | La fable |
+| Le **pays imaginaire** | Décrire l'injustice ailleurs | L'utopie, le conte |
+| Le **regard étranger** | Trouver absurde ce que l'habitude a rendu normal | Le Persan de Montesquieu, le Huron de Voltaire |
 
-> Rendre étrange ce qui est familier : c’est le ressort le plus sûr de la satire.
+> Rendre étrange ce qui est familier : c'est le ressort le plus sûr de la satire.
 
 ## Les armes du texte
-L’**hyperbole** grossit, l’**accumulation** écrase, l’**antiphrase** feint d’approuver, la **fausse naïveté** feint de ne pas comprendre, l’**énumération** ridicule met sur le même plan des choses incomparables. La satire aime aussi la **chute** brève, qui referme le texte sur un constat sans appel.
+| La figure | Son effet |
+| L'**hyperbole** | Elle grossit |
+| L'**accumulation** | Elle écrase |
+| L'**antiphrase** | Elle feint d'approuver |
+| La **fausse naïveté** | Elle feint de ne pas comprendre |
+| L'**énumération** ridicule | Elle met sur le même plan des choses incomparables |
+| La **chute** brève | Elle referme sur un constat sans appel |
 
 ## De la fable au dessin de presse
-La satire n’a pas quitté la scène : dessin de presse, chanson, sketch, caricature en ligne prolongent la tradition. Elle continue de poser la même question, qui est une question de démocratie : **jusqu’où peut-on rire, et de qui ?**
+Dessin de presse, chanson, sketch, caricature en ligne prolongent la tradition.
+
+> Elle continue de poser une question de démocratie : **jusqu'où peut-on rire, et de qui ?**
 
 ## Ses limites
-Le rire peut manquer sa cible : il peut renforcer un préjugé au lieu de l’attaquer, ou blesser une personne quand il visait une idée. Une satire réussie fait rire **de ce qui mérite d’être combattu**, pas de ceux qui subissent déjà.`,
+| Le risque | Ce qui se passe |
+| Renforcer un **préjugé** | Le rire manque sa cible |
+| **Blesser une personne** quand on visait une idée | La satire devient attaque |
+
+> Une satire réussie fait rire **de ce qui mérite d'être combattu**, pas de ceux qui subissent déjà.`,
           },
           questions: [
             ['Pourquoi la satire est-elle une arme ?', ['Faire rire d’un puissant lui retire une part de sa puissance', 'Elle remplace un discours juridique', 'Elle interdit la publication d’autres textes', 'Elle est toujours anonyme'], 0, 'Les pouvoirs la censurent précisément pour cette raison.'],
@@ -352,27 +440,45 @@ Le rire peut manquer sa cible : il peut renforcer un préjugé au lieu de l’at
           axe: 'Regarder le monde, inventer des mondes — Visions poétiques du monde',
           lecon: {
             titre: 'Voir autrement ce que tout le monde voit',
-            cours: `Le poète ne regarde pas des choses différentes : il regarde **différemment** les mêmes choses. Une rue, une fenêtre, un passant, une saison deviennent, dans un poème, l’occasion d’une découverte.
+            cours: `Le poète ne regarde pas des choses différentes : il regarde différemment les mêmes choses.
 
 ## Le poète, un voyant
-Rimbaud écrit que « le poète se fait **voyant** ». Il ne se contente pas de décrire : il perçoit, sous l’apparence, des liens que le regard ordinaire ne voit pas. Baudelaire parle de **correspondances** — des échos secrets entre les parfums, les couleurs et les sons.
+| L'auteur | Sa formule |
+| **Rimbaud** | « Le poète se fait **voyant** » |
+| **Baudelaire** | Les **correspondances** : des échos secrets entre parfums, couleurs et sons |
 
-> « Les parfums, les couleurs et les sons se répondent. » (Baudelaire, *Correspondances*)
+> « Les parfums, les couleurs et les sons se répondent. » (*Correspondances*)
 
 ## Les thèmes du regard poétique
-- La **nature** et les saisons, miroirs des états d’âme (le **lyrisme**).
-- La **ville moderne**, ses foules, ses vitrines, ses solitudes (Apollinaire, Cendrars).
-- Le **quotidien** et les objets humbles, que le poème rend soudain remarquables (Ponge, *Le Parti pris des choses*).
-- Le **temps qui passe**, la fuite de la jeunesse, la mémoire.
+| Le thème | Ce qu'il permet | Ses auteurs |
+| La **nature** et les saisons | Miroirs des états d'âme : le **lyrisme** | Lamartine, Hugo |
+| La **ville moderne** | Foules, vitrines, solitudes | Apollinaire, Cendrars |
+| Le **quotidien** et les objets humbles | Le poème les rend remarquables | Ponge, *Le Parti pris des choses* |
+| Le **temps qui passe** | La fuite de la jeunesse, la mémoire | Ronsard, Apollinaire |
 
 ## Les outils du poème
-Le **vers** et la **strophe** découpent le texte autrement que la prose ; la **rime** et le **rythme** créent une musique ; les **images** — comparaison, métaphore, personnification — rapprochent des réalités éloignées. Un **enjambement** fait déborder la phrase d’un vers sur le suivant et surprend l’oreille.
+| L'outil | Ce qu'il produit |
+| Le **vers** et la **strophe** | Un découpage différent de la prose |
+| La **rime** et le **rythme** | Une musique |
+| Les **images** — comparaison, métaphore, personnification | Un rapprochement de réalités éloignées |
+| L'**enjambement** | La phrase déborde d'un vers sur le suivant, et surprend l'oreille |
 
 ## Formes fixes et vers libre
-Le **sonnet** (deux quatrains, deux tercets) traverse cinq siècles. Le **calligramme** dessine avec les mots. Le **vers libre**, sans rime ni mètre régulier, laisse au rythme de la phrase le soin de faire poème. Aucune de ces formes n’est plus « poétique » qu’une autre : c’est l’usage qu’on en fait qui décide.
+| La forme | Sa structure |
+| Le **sonnet** | Deux quatrains, deux tercets — cinq siècles de poésie |
+| Le **calligramme** | Il dessine avec les mots |
+| Le **vers libre** | Ni rime ni mètre régulier : le rythme de la phrase fait poème |
+
+> Aucune n'est plus « poétique » qu'une autre : c'est l'usage qu'on en fait qui décide.
 
 ## Comment lire un poème
-Repérer d’abord la **forme** (vers, strophes, rimes), puis les **images**, puis les **sonorités** (allitérations, assonances), enfin le **mouvement** du texte : d’où part-il, où arrive-t-il ? Un poème est un trajet, pas une liste.`,
+| L'étape | Ce qu'on cherche |
+| 1 | La **forme** : vers, strophes, rimes |
+| 2 | Les **images** |
+| 3 | Les **sonorités** : allitérations, assonances |
+| 4 | Le **mouvement** : d'où part le texte, où arrive-t-il ? |
+
+> Un poème est un **trajet**, pas une liste.`,
           },
           questions: [
             ['Que veut dire Rimbaud quand il écrit que le poète « se fait voyant » ?', ['Il perçoit, sous l’apparence, des liens que le regard ordinaire ne voit pas', 'Il prédit l’avenir avec exactitude', 'Il décrit uniquement ce qu’il a vu de ses yeux', 'Il refuse de regarder le monde réel'], 0, 'Voir devient un travail, pas un don passif.'],
@@ -390,28 +496,45 @@ Repérer d’abord la **forme** (vers, strophes, rimes), puis les **images**, pu
           axe: 'Regarder le monde, inventer des mondes — Visions poétiques du monde',
           lecon: {
             titre: 'Quand l’image transforme la réalité',
-            cours: `Le poème ne se contente pas de montrer le monde : il le **transforme**. Un objet banal devient monstre, un ciel devient mer, une ville devient corps. Cette transformation passe d’abord par les **images**.
+            cours: `Le poème ne se contente pas de montrer le monde : il le transforme. Un objet banal devient monstre, un ciel devient mer, une ville devient corps.
 
 ## Les figures de la métamorphose
-- La **comparaison** rapproche deux réalités avec un outil (« comme », « tel », « ressemble à »).
-- La **métaphore** supprime l’outil et fait passer l’une pour l’autre : « la mer, ce grand miroir ».
-- La **personnification** prête à une chose ou à un animal des traits humains : « le vent gémit ».
-- L’**allégorie** représente une idée abstraite par une figure concrète : la Mort en faucheuse.
-- L’**hyperbole** exagère jusqu’à créer une vision.
+| La figure | Son principe | Un exemple |
+| La **comparaison** | Deux réalités, un outil : comme, tel, ressemble à | « fort comme un chêne » |
+| La **métaphore** | L'outil disparaît | « la mer, ce grand miroir » |
+| La **personnification** | Des traits humains à une chose | « le vent gémit » |
+| L'**allégorie** | Une idée abstraite en figure concrète | La Mort en faucheuse |
+| L'**hyperbole** | L'exagération jusqu'à la vision | — |
 
 ## Le pouvoir des mots
-Les **sonorités** participent à la métamorphose : l’**allitération** (répétition de consonnes) et l’**assonance** (répétition de voyelles) installent une atmosphère. « Pour qui sont ces serpents qui sifflent sur nos têtes ? » : le sifflement est dans le vers avant d’être dans l’image.
+| La sonorité | Ce qu'elle répète |
+| L'**allitération** | Des **consonnes** |
+| L'**assonance** | Des **voyelles** |
 
-> Le poème fait entendre ce qu’il décrit ; c’est ce qui le sépare d’une description ordinaire.
+> « Pour qui sont ces serpents qui sifflent sur nos têtes ? » : le sifflement est dans le vers avant d'être dans l'image.
 
-## Inventer d’autres mondes
-Certains poètes ne transforment plus, ils **inventent**. Les **surréalistes** rapprochent des mots que rien ne rapprochait, écrivent sous la dictée du rêve, cherchent l’image qui étonne. Le merveilleux, le fantastique, l’ailleurs (l’*Invitation au voyage* de Baudelaire) ouvrent un monde parallèle où le désir peut enfin se dire.
+> Le poème **fait entendre** ce qu'il décrit ; c'est ce qui le sépare d'une description ordinaire.
+
+## Inventer d'autres mondes
+| Le courant ou le procédé | Ce qu'il ouvre |
+| Les **surréalistes** | Ils rapprochent des mots que rien ne rapprochait, écrivent sous la dictée du rêve |
+| Le **merveilleux**, le fantastique | Un monde parallèle |
+| L'**ailleurs** | L'*Invitation au voyage* de Baudelaire : là où le désir peut enfin se dire |
 
 ## La force du rythme
-Le **rythme** ne décore pas : il porte le sens. Un vers court accélère, un alexandrin ample déploie, une **anaphore** (même mot en tête de plusieurs vers) martèle. Un poème se lit donc à voix haute — l’oreille comprend souvent avant l’œil.
+| Le procédé | Son effet |
+| Un **vers court** | Il accélère |
+| L'**alexandrin** | Il déploie |
+| L'**anaphore** | Elle martèle |
+
+> Un poème se lit à voix haute : l'oreille comprend souvent avant l'œil.
 
 ## Lire une métamorphose
-Se demander, devant une image : **quelles deux réalités sont rapprochées ?** puis **qu’est-ce que ce rapprochement fait voir ?** Une métaphore réussie n’est pas un ornement : elle apporte une connaissance qu’aucune phrase littérale ne donnerait.`,
+| La question | Ce qu'elle cherche |
+| Quelles **deux réalités** sont rapprochées ? | Le mécanisme de l'image |
+| Qu'est-ce que ce rapprochement **fait voir** ? | Son apport |
+
+> Une métaphore réussie n'est pas un ornement : elle apporte une **connaissance** qu'aucune phrase littérale ne donnerait.`,
           },
           questions: [
             ['Quelle différence entre comparaison et métaphore ?', ['La comparaison garde un outil comme « comme », la métaphore le supprime', 'La comparaison est en vers, la métaphore en prose', 'La comparaison est toujours brève', 'Il n’y a aucune différence'], 0, 'La métaphore fait passer une réalité pour une autre, sans transition.'],
@@ -433,28 +556,43 @@ Se demander, devant une image : **quelles deux réalités sont rapprochées ?** 
           axe: 'Agir sur le monde — Agir dans la cité : individu et pouvoir',
           lecon: {
             titre: 'Montrer l’insupportable pour qu’il cesse',
-            cours: `Devant la guerre, l’art hésite entre deux tentations : **se taire**, parce que les mots semblent indignes, ou **montrer**, pour que personne ne puisse dire qu’il ne savait pas. La littérature et la peinture ont choisi le plus souvent de montrer.
+            cours: `Devant la guerre, l'art hésite entre se taire — parce que les mots semblent indignes — et montrer, pour que personne ne puisse dire qu'il ne savait pas.
 
 ## Les grandes œuvres de la dénonciation
-Goya grave *Les Désastres de la guerre* et peint *Tres de Mayo* ; Picasso peint *Guernica* après le bombardement de la ville basque en 1937. En littérature, Voltaire décrit dans *Candide* une bataille en la nommant « boucherie héroïque » ; Barbusse (*Le Feu*), Genevoix (*Ceux de 14*), Céline racontent les tranchées ; Apollinaire, Aragon, Éluard écrivent la guerre en poèmes.
+| L'artiste | L'œuvre | Son sujet |
+| **Goya** | *Les Désastres de la guerre*, *Tres de Mayo* | L'occupation napoléonienne en Espagne |
+| **Picasso** | *Guernica* | Le bombardement de la ville basque, **1937** |
+| **Voltaire** | *Candide* | Une bataille nommée « boucherie héroïque » |
+| **Barbusse**, **Genevoix**, Céline | *Le Feu*, *Ceux de 14* | Les tranchées |
+| **Apollinaire**, **Aragon**, **Éluard** | Des poèmes | La guerre en vers |
 
 > *Guernica* ne montre ni avion, ni soldat, ni uniforme : la souffrance y suffit à désigner le crime.
 
 ## Les procédés de la dénonciation
-- L’**ironie**, qui feint d’admirer ce qu’elle condamne (« boucherie héroïque »).
-- Le **contraste** entre la beauté du décor et l’horreur des faits.
-- L’**hyperbole** et l’**accumulation** de détails insoutenables.
-- Le **point de vue** de la victime ou du simple soldat, jamais celui de l’état-major.
-- Le **registre pathétique**, qui provoque la pitié, et le **registre polémique**, qui accuse.
+| Le procédé | Son effet |
+| L'**ironie** | Elle feint d'admirer ce qu'elle condamne |
+| Le **contraste** | La beauté du décor contre l'horreur des faits |
+| L'**hyperbole**, l'**accumulation** | Des détails insoutenables |
+| Le **point de vue** de la victime ou du simple soldat | Jamais celui de l'état-major |
+| Le registre **pathétique** | Il provoque la pitié |
+| Le registre **polémique** | Il accuse |
 
-## L’argument du témoin
-Un texte de guerre tire souvent sa force de son **authenticité** : l’auteur y était. Le détail vrai — une odeur, un objet, un prénom — pèse plus lourd qu’une abstraction. C’est pourquoi le témoignage et la fiction se mêlent souvent dans ces œuvres.
+## L'argument du témoin
+Un texte de guerre tire souvent sa force de son **authenticité** : l'auteur y était.
 
-## Ce que l’art peut, et ce qu’il ne peut pas
-L’art n’arrête pas une guerre. Mais il **empêche l’oubli**, il **désigne les responsables**, il **rend une voix** à ceux qui n’en ont plus, et il transmet à ceux qui n’ont pas vécu l’événement quelque chose que les chiffres ne transmettent pas.
+> Le détail vrai — une odeur, un objet, un prénom — pèse plus lourd qu'une abstraction. C'est pourquoi témoignage et fiction se mêlent souvent.
+
+## Ce que l'art peut, et ce qu'il ne peut pas
+| Il ne peut pas | Il peut |
+| Arrêter une guerre | **Empêcher l'oubli** |
+| — | **Désigner** les responsables |
+| — | **Rendre une voix** à ceux qui n'en ont plus |
+| — | Transmettre ce que les chiffres ne transmettent pas |
 
 ## Écrire après la catastrophe
-Adorno a écrit qu’il serait « barbare d’écrire un poème après Auschwitz ». Les auteurs lui ont répondu en écrivant quand même — mais autrement : phrases nues, refus du lyrisme, méfiance envers les belles images. La forme elle-même devient une prise de position.`,
+Adorno a écrit qu'il serait « barbare d'écrire un poème après Auschwitz ».
+
+> Les auteurs lui ont répondu en écrivant quand même — mais **autrement** : phrases nues, refus du lyrisme, méfiance envers les belles images. La forme elle-même devient une prise de position.`,
           },
           questions: [
             ['Quel tableau Picasso peint-il après le bombardement d’une ville basque en 1937 ?', ['Guernica', 'Les Désastres de la guerre', 'Le Radeau de la Méduse', 'La Liberté guidant le peuple'], 0, 'Il devient le symbole mondial de la dénonciation de la guerre.'],
@@ -472,28 +610,45 @@ Adorno a écrit qu’il serait « barbare d’écrire un poème après Auschwitz
           axe: 'Agir sur le monde — Agir dans la cité : individu et pouvoir',
           lecon: {
             titre: 'L’écrivain engagé et sa parole',
-            cours: `Un écrivain **engagé** met son écriture au service d’une cause : la justice, la liberté, la paix, l’égalité. Il ne quitte pas la littérature pour la politique — il fait de la littérature un moyen d’agir.
+            cours: `Un écrivain engagé met son écriture au service d'une cause. Il ne quitte pas la littérature pour la politique : il fait de la littérature un moyen d'agir.
 
 ## Des exemples fondateurs
-Victor Hugo attaque Napoléon III dans *Les Châtiments* depuis l’exil. Émile Zola publie en 1898 « **J’accuse…!** » à la une de *L’Aurore* pour défendre le capitaine Dreyfus, et paie sa prise de position d’un procès et d’un exil. Sous l’Occupation, Vercors publie clandestinement *Le Silence de la mer* ; Éluard fait circuler *Liberté*. Aimé Césaire, avec le *Cahier d’un retour au pays natal*, écrit contre le colonialisme.
+| L'auteur | L'œuvre | Sa cause | Son risque |
+| **Victor Hugo** | *Les Châtiments* | Contre Napoléon III | L'exil |
+| **Émile Zola** | « **J'accuse… !** », *L'Aurore*, 1898 | Défendre le capitaine Dreyfus | Un procès et l'exil |
+| **Vercors** | *Le Silence de la mer* | La Résistance | La clandestinité |
+| **Éluard** | *Liberté* | La Résistance | La diffusion sous l'Occupation |
+| **Aimé Césaire** | *Cahier d'un retour au pays natal* | Contre le colonialisme | — |
 
-> Un texte engagé se reconnaît à ce qu’il prend un **risque** : il désigne, il nomme, il s’expose.
+> Un texte engagé se reconnaît à ce qu'il prend un **risque** : il désigne, il nomme, il s'expose.
 
-## Les formes de l’engagement
-- Le **pamphlet** et la **lettre ouverte**, frontaux.
-- Le **poème de résistance**, qui se retient et circule à voix basse.
-- Le **roman**, qui fait vivre une injustice de l’intérieur.
-- Le **théâtre**, qui la met sous les yeux d’un public rassemblé.
-- La **chanson**, qui la fait retenir par cœur.
+## Les formes de l'engagement
+| La forme | Sa manière |
+| Le **pamphlet**, la **lettre ouverte** | Frontales |
+| Le **poème de résistance** | Il se retient, et circule à voix basse |
+| Le **roman** | Il fait vivre une injustice de l'intérieur |
+| Le **théâtre** | Il la met sous les yeux d'un public rassemblé |
+| La **chanson** | Elle la fait retenir par cœur |
 
-## Les procédés de l’argumentation engagée
-L’**apostrophe** interpelle (« Vous qui… »), l’**anaphore** martèle, la **question rhétorique** oblige le lecteur à répondre en lui-même, le **lexique du droit et de la vérité** pose l’auteur en accusateur, l’**alternance du je et du nous** transforme une voix en collectif.
+## Les procédés de l'argumentation engagée
+| Le procédé | Son effet |
+| L'**apostrophe** | Elle interpelle : « Vous qui… » |
+| L'**anaphore** | Elle martèle |
+| La **question rhétorique** | Elle oblige le lecteur à répondre en lui-même |
+| Le lexique du **droit** et de la **vérité** | Il pose l'auteur en accusateur |
+| L'alternance du **je** et du **nous** | Elle transforme une voix en collectif |
 
-## Directement ou par le détour ?
-Deux stratégies s’opposent. **Dire directement** frappe fort mais expose à la censure et au procès. **Passer par la fiction** (fable, conte, science-fiction, apologue) protège l’auteur et laisse au lecteur le plaisir de comprendre seul. Le contexte historique décide souvent laquelle est possible.
+## Directement ou par le détour
+| La stratégie | Sa force | Son risque |
+| **Dire directement** | Elle frappe fort | Censure et procès |
+| **Passer par la fiction** — fable, conte, science-fiction | Elle protège, et laisse au lecteur le plaisir de comprendre | Le message peut se perdre |
 
-## Et aujourd’hui
-L’engagement littéraire n’a pas disparu : romans sur l’exil, théâtre documentaire, slam, bande dessinée de reportage. La question reste la même : comment faire qu’un lecteur, qui n’était pas là, ne puisse plus dire qu’il ne savait pas ?`,
+> Le contexte historique décide souvent laquelle est possible.
+
+## Et aujourd'hui
+Romans sur l'exil, théâtre documentaire, slam, bande dessinée de reportage.
+
+> La question reste la même : comment faire qu'un lecteur, qui n'était pas là, ne puisse plus dire qu'il ne savait pas ?`,
           },
           questions: [
             ['Qu’est-ce qu’un écrivain engagé ?', ['Un auteur qui met son écriture au service d’une cause', 'Un auteur payé par un journal', 'Un auteur qui n’écrit que des essais', 'Un auteur membre d’un parti politique'], 0, 'Il fait de la littérature un moyen d’agir.'],
@@ -516,28 +671,44 @@ L’engagement littéraire n’a pas disparu : romans sur l’exil, théâtre do
           axe: 'Questionnements complémentaires — Progrès et rêves scientifiques',
           lecon: {
             titre: 'Le siècle qui croyait au progrès',
-            cours: `Au XIXe siècle, la science change le monde à vue d’œil : chemin de fer, électricité, vaccin, photographie, télégraphe. La littérature s’en empare et **rêve tout haut** de ce que l’avenir permettra.
+            cours: `Au XIXe siècle, la science change le monde à vue d'œil. La littérature s'en empare et rêve tout haut de ce que l'avenir permettra.
+
+## Les inventions qui frappent le siècle
+Chemin de fer, électricité, vaccin, photographie, télégraphe.
 
 ## Le mot « progrès »
-Le **progrès** désigne l’idée que l’humanité avance, que demain sera meilleur qu’hier grâce au savoir. Cette confiance porte le **positivisme** d’Auguste Comte, les grandes **Expositions universelles**, et une littérature qui célèbre l’ingénieur, l’explorateur, le savant.
+| Ce qu'il désigne | Ce qui le porte |
+| L'idée que l'humanité **avance**, que demain sera meilleur grâce au savoir | Le **positivisme** d'Auguste Comte |
+| — | Les grandes **Expositions universelles** |
+| — | Une littérature qui célèbre l'ingénieur, l'explorateur, le savant |
 
-> Hugo, dans *Plein Ciel*, voit dans le vol humain la promesse d’une humanité enfin libérée.
+> Hugo, dans *Plein Ciel*, voit dans le vol humain la promesse d'une humanité enfin libérée.
 
-## Jules Verne et les Voyages extraordinaires
-Jules Verne invente un genre : le **roman d’anticipation scientifique**. *Vingt Mille Lieues sous les mers*, *De la Terre à la Lune*, *Voyage au centre de la Terre* mêlent aventure, documentation technique et émerveillement. Ses machines sont décrites avec un sérieux d’ingénieur : le lecteur y croit parce que le texte explique.
+## Jules Verne
+Il invente un genre : le **roman d'anticipation scientifique**.
 
-## Les procédés de l’exaltation
-- Le **champ lexical** de la lumière, de la conquête, de l’élan.
-- L’**hyperbole** et l’**énumération** des inventions.
-- Le **registre épique** : le savant devient un héros, la machine un personnage.
-- Le **présent** ou le **futur** qui rendent l’avenir présent.
-- Le **vocabulaire technique**, garant de vraisemblance.
+| L'œuvre | Son domaine |
+| *Vingt Mille Lieues sous les mers* | La mer |
+| *De la Terre à la Lune* | L'espace |
+| *Voyage au centre de la Terre* | Le sous-sol |
+
+> Ses machines sont décrites avec un sérieux d'ingénieur : le lecteur y croit parce que le texte **explique**.
+
+## Les procédés de l'exaltation
+| Le procédé | Son effet |
+| Le champ lexical de la **lumière**, de la conquête, de l'élan | Il porte l'enthousiasme |
+| L'**hyperbole** et l'**énumération** des inventions | Elles saturent la page |
+| Le registre **épique** | Le savant devient héros, la machine personnage |
+| Le **présent** ou le **futur** | Ils rendent l'avenir présent |
+| Le **vocabulaire technique** | Il garantit la vraisemblance |
 
 ## Utopies
-L’**utopie** décrit une société idéale rendue possible par la raison et la technique : plus de faim, plus de maladie, plus de travail pénible. Elle sert moins à prédire qu’à **critiquer le présent** en montrant ce qu’il pourrait être.
+L'**utopie** décrit une société idéale rendue possible par la raison et la technique : plus de faim, plus de maladie, plus de travail pénible.
 
-## Ce que l’enthousiasme apprend
-Ces textes ne sont pas naïfs : ils formulent un **désir**. Lire aujourd’hui l’enthousiasme du XIXe siècle, c’est mesurer ce que nous avons obtenu, ce que nous avons abandonné, et ce que nous continuons d’espérer de la science.`,
+> Elle sert moins à prédire qu'à **critiquer le présent** en montrant ce qu'il pourrait être.
+
+## Ce que l'enthousiasme apprend
+> Ces textes ne sont pas naïfs : ils formulent un **désir**. Les lire aujourd'hui, c'est mesurer ce que nous avons obtenu, ce que nous avons abandonné, et ce que nous continuons d'espérer de la science.`,
           },
           questions: [
             ['Que désigne l’idée de progrès au XIXe siècle ?', ['L’idée que l’humanité avance grâce au savoir', 'Le retour aux techniques anciennes', 'La croissance de la population', 'L’extension des empires coloniaux'], 0, 'Elle porte le positivisme et les Expositions universelles.'],
@@ -555,28 +726,43 @@ Ces textes ne sont pas naïfs : ils formulent un **désir**. Lire aujourd’hui 
           axe: 'Questionnements complémentaires — Progrès et rêves scientifiques',
           lecon: {
             titre: 'Quand le savant crée ce qu’il ne maîtrise plus',
-            cours: `Au même moment que l’enthousiasme naît l’**inquiétude**. Et si le savoir servait à détruire ? Et si la machine remplaçait l’homme ? Et si le savant créait ce qu’il ne pourrait plus arrêter ?
+            cours: `Au même moment que l'enthousiasme naît l'inquiétude. Et si le savoir servait à détruire ? Et si le savant créait ce qu'il ne pourrait plus arrêter ?
 
 ## Frankenstein, le récit fondateur
-En 1818, Mary Shelley publie *Frankenstein ou le Prométhée moderne* : un étudiant en sciences donne la vie à une créature, puis la rejette. Le monstre n’est pas mauvais par nature ; il le devient parce qu’il est abandonné. Le sous-titre dit tout : Prométhée, dans le mythe grec, vole le feu aux dieux — et il est puni.
+| L'élément | Le détail |
+| L'autrice et la date | **Mary Shelley**, **1818** |
+| Le titre complet | *Frankenstein ou le Prométhée moderne* |
+| L'histoire | Un étudiant en sciences donne la vie à une créature, puis la **rejette** |
+| Le point clé | Le monstre n'est pas mauvais par nature : il le devient parce qu'il est abandonné |
+| Le sous-titre | Prométhée vole le feu aux dieux — et il est **puni** |
 
-> La question de Shelley n’est pas « peut-on le faire ? » mais « **doit-on** le faire ? ».
+> La question de Shelley n'est pas « peut-on le faire ? » mais « **doit-on** le faire ? ».
 
 ## La contre-utopie
-La **contre-utopie** (ou **dystopie**) décrit une société parfaitement organisée… et invivable. *Le Meilleur des mondes* d’Aldous Huxley (1932) fabrique des humains sur mesure et supprime la souffrance en supprimant la liberté. *1984* d’Orwell (1949) invente une surveillance totale et une langue appauvrie pour rendre la révolte impensable. *Fahrenheit 451* de Bradbury brûle les livres.
+Elle décrit une société parfaitement organisée… et invivable.
 
-## Le savant fou et l’apprenti sorcier
-La figure du **savant fou** traverse le fantastique (*Docteur Jekyll et Mister Hyde*, *L’Île du docteur Moreau*). Celle de l’**apprenti sorcier** dit le même danger : déclencher un processus qu’on ne sait plus arrêter. Après 1945, la bombe atomique donne à ces récits une réalité brutale.
+| L'œuvre | Sa date | Ce qu'elle supprime |
+| *Le Meilleur des mondes*, Huxley | 1932 | La souffrance — en supprimant la **liberté** |
+| *1984*, Orwell | 1949 | La révolte — par la surveillance et une langue appauvrie |
+| *Fahrenheit 451*, Bradbury | 1953 | Les **livres**, brûlés |
 
-## Les procédés de l’inquiétude
-- Le **registre fantastique** et le doute qu’il installe.
-- Le **champ lexical** de la nuit, du froid, de l’enfermement.
-- L’**anticipation** d’un futur proche, donc crédible.
-- Le **retournement** : l’invention se retourne contre son inventeur.
-- L’**ironie** d’un monde qui se dit heureux.
+## Le savant fou et l'apprenti sorcier
+| La figure | Ce qu'elle dit | Ses œuvres |
+| Le **savant fou** | Le savoir sans conscience | *Docteur Jekyll et Mister Hyde*, *L'Île du docteur Moreau* |
+| L'**apprenti sorcier** | Déclencher un processus qu'on ne sait plus arrêter | Le mythe, repris partout |
+
+> Après 1945, la bombe atomique donne à ces récits une réalité brutale.
+
+## Les procédés de l'inquiétude
+| Le procédé | Son effet |
+| Le registre **fantastique** | Il installe le doute |
+| Le champ lexical de la nuit, du froid, de l'enfermement | Il oppresse |
+| L'**anticipation** d'un futur **proche** | Elle rend crédible |
+| Le **retournement** | L'invention se retourne contre son inventeur |
+| L'**ironie** | Un monde qui se dit heureux |
 
 ## Une question toujours ouverte
-Ces textes ne sont pas contre la science : ils demandent qui la contrôle, pour quoi et à quel prix. Intelligence artificielle, manipulations génétiques, données personnelles, climat : les questions posées par Shelley, Huxley et Orwell n’ont pas vieilli.`,
+> Ces textes ne sont pas contre la science : ils demandent **qui la contrôle**, **pour quoi** et **à quel prix**. Intelligence artificielle, manipulations génétiques, données personnelles, climat : les questions de Shelley, Huxley et Orwell n'ont pas vieilli.`,
           },
           questions: [
             ['Qui a écrit Frankenstein ou le Prométhée moderne, publié en 1818 ?', ['Mary Shelley', 'Jules Verne', 'Bram Stoker', 'H. G. Wells'], 0, 'Elle a une vingtaine d’années lorsqu’elle l’écrit.'],
@@ -598,36 +784,35 @@ Ces textes ne sont pas contre la science : ils demandent qui la contrôle, pour 
           axe: 'Outils d’analyse littéraire',
           lecon: {
             titre: 'Rapporter les paroles : direct, indirect, narrativisé',
-            cours: `Quand un récit fait parler ses personnages, il doit choisir **comment** rapporter leurs paroles. Ce choix change tout : la vivacité de la scène, la distance du narrateur, la place du lecteur.
+            cours: `Quand un récit fait parler ses personnages, il choisit comment rapporter leurs paroles. Ce choix change la vivacité de la scène et la distance du narrateur.
 
-## Le discours direct
-Les paroles sont rapportées **telles quelles**, entre guillemets ou après un tiret, avec un **verbe de parole** (« dit-il », « répondit-elle »). Le temps et les personnes sont ceux du personnage.
-- *Il dit : « Je pars demain. »*
-- Effet : **vivacité**, présence, on entend la voix.
-
-## Le discours indirect
-Les paroles sont **intégrées** à la phrase du narrateur, dans une **subordonnée** introduite par « que », « si », « ce que ». Guillemets et tirets disparaissent ; les temps, les personnes et les repères de temps et de lieu **changent**.
-- *Il dit qu’il partait le lendemain.*
-- « je » devient « il », le présent devient l’imparfait, « demain » devient « le lendemain ».
+## Les quatre types
+| Le type | Sa forme | Son exemple | Son effet |
+| **Direct** | Guillemets ou tiret, verbe de parole | *Il dit : « Je pars demain. »* | **Vivacité** : on entend la voix |
+| **Indirect** | Une subordonnée introduite par que, si, ce que | *Il dit qu'il partait le lendemain.* | Mise à distance |
+| **Indirect libre** | Ni guillemets ni « que » | *Il fallait partir. Demain ? Non, il n'aurait jamais le courage.* | On ne sait plus **qui parle** |
+| **Narrativisé** | Un simple verbe | *Il annonça son départ.* | Rapidité |
 
 ## Le discours indirect libre
-Ni guillemets, ni « que » : la parole du personnage **traverse** le récit du narrateur. Les temps sont ceux du discours indirect, mais l’exclamation, l’interrogation et le vocabulaire restent ceux du personnage.
-- *Il fallait partir. Demain ? Non, il n’aurait jamais le courage.*
-- Effet : on ne sait plus **qui parle**, du personnage ou du narrateur — c’est l’outil favori de Flaubert.
+Les temps sont ceux du discours indirect, mais l'exclamation, l'interrogation et le vocabulaire restent ceux du **personnage**.
 
-## Le discours narrativisé
-La parole est **résumée** par un simple verbe, sans être rapportée.
-- *Il annonça son départ.*
-- Effet : rapidité, mise à distance.
+> C'est l'outil favori de Flaubert : la parole du personnage traverse le récit du narrateur.
 
-## Ce qu’il faut savoir transposer
-Passer du direct à l’indirect suppose de modifier :
-- les **personnes** (je → il) ;
-- les **temps** (présent → imparfait, passé composé → plus-que-parfait, futur → conditionnel) ;
-- les **indicateurs** (aujourd’hui → ce jour-là, hier → la veille, ici → là) ;
-- la **ponctuation expressive**, qui disparaît au discours indirect.
+## Ce qu'il faut savoir transposer
+Passer du direct à l'indirect suppose de modifier :
 
-> Au brevet, la question porte presque toujours sur l’**effet** produit, pas seulement sur le nom du procédé.`,
+| Ce qui change | Du direct | À l'indirect |
+| Les **personnes** | je | il |
+| Les **temps** | présent | imparfait |
+| — | passé composé | plus-que-parfait |
+| — | futur | conditionnel |
+| Les **indicateurs** | aujourd'hui | ce jour-là |
+| — | hier | la veille |
+| — | demain | le lendemain |
+| — | ici | là |
+| La **ponctuation expressive** | Présente | Elle **disparaît** |
+
+> Au brevet, la question porte presque toujours sur l'**effet** produit, pas seulement sur le nom du procédé.`,
           },
           questions: [
             ['Quel discours rapporte les paroles telles quelles, entre guillemets ?', ['Le discours direct', 'Le discours indirect', 'Le discours indirect libre', 'Le discours narrativisé'], 0, 'Un verbe de parole l’introduit ou le suit.'],
@@ -645,27 +830,31 @@ Passer du direct à l’indirect suppose de modifier :
           axe: 'Outils d’analyse littéraire',
           lecon: {
             titre: 'Par quels yeux le lecteur voit-il l’histoire ?',
-            cours: `La **focalisation** — ou point de vue narratif — désigne la **quantité d’information** que le narrateur donne au lecteur, et par quels yeux il la fait passer. Il ne faut pas la confondre avec la personne grammaticale : un récit à la première personne peut adopter plusieurs focalisations.
+            cours: `La focalisation désigne la quantité d'information que le narrateur donne au lecteur, et par quels yeux il la fait passer.
 
-## La focalisation zéro (narrateur omniscient)
-Le narrateur **sait tout** : le passé, l’avenir, les pensées de tous les personnages, ce qui se passe en même temps ailleurs. Il peut commenter, juger, annoncer.
-- Indices : accès aux pensées de **plusieurs** personnages, informations qu’aucun d’eux ne possède.
-- Effet : le lecteur **domine** l’histoire ; c’est le point de vue du roman du XIXe siècle (Balzac, Hugo).
+> Ne pas la confondre avec la personne grammaticale : un récit à la première personne peut adopter plusieurs focalisations.
 
-## La focalisation interne
-Le récit passe par les yeux d’**un seul** personnage : on ne sait que ce qu’il sait, on ne voit que ce qu’il voit, on ignore ce qu’il ignore.
-- Indices : verbes de perception et de pensée (« il crut voir », « il lui sembla »), hypothèses, zones d’ombre.
-- Effet : **identification** et **suspense** — le lecteur découvre en même temps que le personnage. C’est le point de vue du fantastique et du policier.
+## Les trois focalisations
+| La focalisation | Ce que le narrateur sait | Ses indices | Son effet |
+| **Zéro** (omnisciente) | **Tout** : le passé, l'avenir, les pensées de tous | Accès aux pensées de **plusieurs** personnages | Le lecteur **domine** l'histoire |
+| **Interne** | Ce que sait **un seul** personnage | « Il crut voir », « il lui sembla », des zones d'ombre | **Identification** et **suspense** |
+| **Externe** | Rien des consciences : une caméra | Aucun accès aux pensées, description des seuls gestes | **Mystère**, neutralité, inquiétude |
 
-## La focalisation externe
-Le narrateur se comporte comme une **caméra** : il enregistre les gestes, les paroles, les décors, sans entrer dans aucune conscience.
-- Indices : aucun accès aux pensées, description behavioriste, hypothèses laissées au lecteur.
-- Effet : **mystère**, neutralité, parfois inquiétude — on voit sans comprendre.
+## Où on les rencontre
+| La focalisation | Son terrain de prédilection |
+| **Zéro** | Le roman du XIXe siècle : Balzac, Hugo |
+| **Interne** | Le fantastique, le policier |
+| **Externe** | Le roman behavioriste, certaines scènes d'ouverture |
 
 ## Pourquoi cela compte
-Changer de focalisation change le sens d’une scène. Une même dispute racontée en focalisation interne par l’un puis par l’autre donne deux vérités différentes. Un roman peut **alterner** les points de vue d’un chapitre à l’autre : le lecteur reconstitue alors le puzzle.
+> Une même dispute racontée en focalisation interne par l'un puis par l'autre donne **deux vérités différentes**.
 
-> Question type : « Quel est le point de vue adopté ? Justifiez, puis dites ce qu’il produit. » La justification se fait toujours par un **relevé** dans le texte.`,
+Un roman peut **alterner** les points de vue d'un chapitre à l'autre : le lecteur reconstitue alors le puzzle.
+
+## La question type
+« Quel est le point de vue adopté ? Justifiez, puis dites ce qu'il produit. »
+
+> La justification se fait toujours par un **relevé** dans le texte.`,
           },
           questions: [
             ['Que désigne la focalisation ?', ['La quantité d’information donnée au lecteur et par quels yeux elle passe', 'Le temps verbal dominant du récit', 'Le nombre de personnages', 'La longueur des chapitres'], 0, 'Elle ne se confond pas avec la personne grammaticale.'],
@@ -683,36 +872,42 @@ Changer de focalisation change le sens d’une scène. Une même dispute racont�
           axe: 'Outils d’analyse littéraire',
           lecon: {
             titre: 'Ce qu’un temps verbal fait au sens',
-            cours: `Un temps verbal ne dit pas seulement **quand** : il dit aussi **comment** l’action est vue — brève ou durable, unique ou répétée, achevée ou en cours. C’est ce qu’on appelle ses **valeurs**.
+            cours: `Un temps verbal ne dit pas seulement quand : il dit comment l'action est vue — brève ou durable, unique ou répétée.
 
 ## Les valeurs du présent
-- **Présent d’énonciation** : au moment où l’on parle (« je t’écoute »).
-- **Présent de narration** : un récit au passé bascule au présent pour rendre une scène plus vivante.
-- **Présent de vérité générale** : ce qui vaut toujours (« l’eau bout à 100 °C »).
-- **Présent d’habitude** : une action répétée (« il court tous les matins »).
-- **Présent à valeur de passé ou de futur proche** : « j’arrive », « il sort à l’instant ».
+| La valeur | Ce qu'elle exprime | Un exemple |
+| D'**énonciation** | Au moment où l'on parle | « Je t'écoute » |
+| De **narration** | Un récit au passé bascule au présent | Pour rendre la scène vivante |
+| De **vérité générale** | Ce qui vaut toujours | « L'eau bout à 100 °C » |
+| D'**habitude** | Une action répétée | « Il court tous les matins » |
+| De **passé** ou de futur proche | Un décalage | « Il sort à l'instant », « j'arrive » |
 
-## Les valeurs du passé simple
-Temps du **récit écrit**, il présente une action **brève**, **achevée**, qui fait **avancer l’histoire**. Il pose les événements de premier plan, les uns après les autres.
-- *Il ouvrit la porte, entra, s’assit.*
+## Passé simple et imparfait
+| Le temps | L'action présentée | Son plan | Son exemple |
+| Le **passé simple** | **Brève**, achevée, elle fait avancer l'histoire | Le **premier plan** | *Il ouvrit la porte, entra, s'assit* |
+| L'**imparfait** | **En cours**, durable ou répétée | L'**arrière-plan** | Le décor, le portrait |
 
-## Les valeurs de l’imparfait
-Temps de l’**arrière-plan**, il présente une action **en cours**, **durable** ou **répétée**.
-- **Imparfait descriptif** : le décor, le portrait.
-- **Imparfait d’habitude** : « chaque été, nous partions… ».
-- **Imparfait de rupture** : une action longue interrompue par un passé simple.
-- **Imparfait dans l’hypothèse** : « si j’avais le temps… ».
+| La valeur de l'imparfait | Son emploi |
+| **Descriptif** | Le décor, le portrait |
+| D'**habitude** | « Chaque été, nous partions… » |
+| De **rupture** | Une action longue interrompue par un passé simple |
+| Dans l'**hypothèse** | « Si j'avais le temps… » |
 
-> Le couple imparfait / passé simple est le moteur du récit : le décor dure, l’événement surgit.
+> Le couple imparfait / passé simple est le moteur du récit : le décor **dure**, l'événement **surgit**.
 
 ## Les valeurs du futur
-- **Futur simple** : ce qui arrivera, une prédiction, une promesse.
-- **Futur antérieur** : une action achevée avant une autre à venir.
-- **Futur de politesse ou d’atténuation** : « je vous demanderai de patienter ».
-- **Futur historique** : dans un récit au passé, il annonce une suite (« il deviendra empereur »).
+| La valeur | Ce qu'elle exprime |
+| **Futur simple** | Ce qui arrivera : prédiction, promesse |
+| **Futur antérieur** | Une action achevée avant une autre à venir |
+| Futur de **politesse** | « Je vous demanderai de patienter » |
+| Futur **historique** | Dans un récit au passé : « il deviendra empereur » |
 
-## Méthode d’analyse
-Repérer d’abord le temps **dominant**, puis les **ruptures** : c’est presque toujours au moment où le texte change de temps que quelque chose d’important se produit.`,
+## Méthode d'analyse
+| L'étape | Ce qu'on cherche |
+| 1 | Le temps **dominant** |
+| 2 | Les **ruptures** |
+
+> C'est presque toujours au moment où le texte change de temps que quelque chose d'important se produit.`,
           },
           questions: [
             ['Quel présent rend une scène de récit plus vivante ?', ['Le présent de narration', 'Le présent de vérité générale', 'Le présent d’habitude', 'Le présent d’énonciation'], 0, 'Le récit au passé bascule brusquement au présent.'],
@@ -730,39 +925,50 @@ Repérer d’abord le temps **dominant**, puis les **ruptures** : c’est presqu
           axe: 'Outils d’analyse littéraire',
           lecon: {
             titre: 'Nommer un procédé, et dire ce qu’il fait',
-            cours: `Une **figure de style** est un écart volontaire par rapport à l’expression ordinaire, destiné à produire un **effet**. Les nommer ne suffit pas : au brevet, il faut toujours dire **ce qu’elles produisent**.
+            cours: `Une figure de style est un écart volontaire par rapport à l'expression ordinaire, destiné à produire un effet.
 
-## Les figures d’analogie
-- **Comparaison** : rapproche deux réalités avec un outil (« comme », « tel », « semblable à »).
-- **Métaphore** : même rapprochement, sans outil (« cet homme est un lion »).
-- **Personnification** : prête des traits humains à une chose ou à un animal.
-- **Allégorie** : représente une idée abstraite par une figure concrète.
+> Les nommer ne suffit pas : il faut toujours dire **ce qu'elles produisent**.
 
-## Les figures d’insistance
-- **Hyperbole** : exagération (« mourir de rire »).
-- **Anaphore** : reprise du même mot en tête de plusieurs vers ou phrases.
-- **Gradation** : termes de force croissante ou décroissante.
-- **Accumulation** : longue énumération qui écrase.
-- **Répétition** et **pléonasme**.
+## Les figures d'analogie
+| La figure | Son principe | Un exemple |
+| **Comparaison** | Deux réalités et un outil | « comme », « tel », « semblable à » |
+| **Métaphore** | Le même rapprochement, sans outil | « cet homme est un lion » |
+| **Personnification** | Des traits humains à une chose | « le vent gémit » |
+| **Allégorie** | Une idée abstraite en figure concrète | La Justice aux yeux bandés |
 
-## Les figures d’atténuation
-- **Litote** : dire moins pour suggérer plus (« ce n’est pas mauvais » = c’est très bon).
-- **Euphémisme** : adoucir une réalité pénible (« il nous a quittés »).
+## Les figures d'insistance
+| La figure | Son principe |
+| **Hyperbole** | L'exagération : « mourir de rire » |
+| **Anaphore** | Le même mot en tête de plusieurs vers ou phrases |
+| **Gradation** | Des termes de force croissante ou décroissante |
+| **Accumulation** | Une longue énumération, qui écrase |
+| **Répétition**, **pléonasme** | Le retour du même |
 
-## Les figures d’opposition
-- **Antithèse** : deux termes opposés dans la même phrase.
-- **Oxymore** : deux termes contradictoires accolés (« une obscure clarté »).
-- **Chiasme** : construction croisée (A-B-B-A).
-- **Antiphrase** : dire le contraire de ce que l’on pense — moteur de l’ironie.
+## Les figures d'atténuation
+| La figure | Son principe | Un exemple |
+| **Litote** | Dire moins pour suggérer plus | « Ce n'est pas mauvais » = c'est très bon |
+| **Euphémisme** | Adoucir une réalité pénible | « Il nous a quittés » |
 
-## Les figures de construction et de sonorité
-- **Parallélisme** : deux structures identiques.
-- **Ellipse** : suppression d’un mot attendu.
-- **Allitération** (consonnes) et **assonance** (voyelles).
-- **Périphrase** : dire en plusieurs mots ce qu’un seul dirait (« l’astre du jour »).
-- **Métonymie** : nommer par un lien logique (« boire un verre »).
+## Les figures d'opposition
+| La figure | Son principe |
+| **Antithèse** | Deux termes opposés dans la même phrase |
+| **Oxymore** | Deux termes contradictoires accolés : « une obscure clarté » |
+| **Chiasme** | Une construction croisée : A-B-B-A |
+| **Antiphrase** | Dire le contraire de ce qu'on pense — moteur de l'ironie |
 
-> Méthode en trois temps : **je repère** (je cite), **je nomme** (la figure), **j’interprète** (l’effet dans ce texte-ci).`,
+## Construction et sonorité
+| La figure | Son principe |
+| **Parallélisme** | Deux structures identiques |
+| **Ellipse** | La suppression d'un mot attendu |
+| **Allitération** | Une consonne répétée |
+| **Assonance** | Une voyelle répétée |
+| **Périphrase** | Dire en plusieurs mots : « l'astre du jour » |
+| **Métonymie** | Nommer par un lien logique : « boire un verre » |
+
+## La méthode en trois temps
+1. **Je repère** — je cite.
+2. **Je nomme** — la figure.
+3. **J'interprète** — l'effet dans **ce** texte-ci.`,
           },
           questions: [
             ['Qu’est-ce qu’un oxymore ?', ['Deux termes contradictoires accolés', 'Deux termes opposés dans la même phrase', 'Une exagération', 'Une répétition en début de vers'], 0, '« Une obscure clarté » de Corneille en est l’exemple type.'],
@@ -780,36 +986,52 @@ Repérer d’abord le temps **dominant**, puis les **ruptures** : c’est presqu
           axe: 'Outils d’analyse littéraire',
           lecon: {
             titre: 'Thèse, arguments, exemples : la charpente',
-            cours: `**Argumenter**, c’est défendre une **opinion** en donnant des **raisons** de la partager. Un texte argumentatif se reconnaît à trois pièces : une **thèse**, des **arguments**, des **exemples**.
+            cours: `Argumenter, c'est défendre une opinion en donnant des raisons de la partager.
 
 ## Les trois pièces
-- La **thèse** est l’opinion défendue. Elle peut être annoncée d’emblée ou apparaître à la fin.
-- L’**argument** est la raison qui la soutient : c’est une **idée**, pas un fait.
-- L’**exemple** illustre l’argument : c’est un **fait précis** (une œuvre, une expérience, un chiffre, une anecdote).
+| La pièce | Ce qu'elle est |
+| La **thèse** | L'**opinion** défendue |
+| L'**argument** | La **raison** qui la soutient : une idée |
+| L'**exemple** | Le **fait précis** qui l'illustre : une œuvre, une expérience, un chiffre |
 
 > Un argument sans exemple reste abstrait ; un exemple sans argument ne prouve rien.
 
 ## Thèse et contre-thèse
-La **thèse adverse** (ou contre-thèse) est l’opinion que l’on combat. La **concession** consiste à lui reconnaître une part de vérité (« certes… ») avant de la réfuter (« mais… ») : loin d’affaiblir le texte, elle le renforce, parce qu’elle montre qu’on a compris l’autre camp.
+| Le mouvement | Son rôle |
+| La **contre-thèse** | L'opinion que l'on combat |
+| La **concession** — « certes… » | Reconnaître une part de vérité à l'adversaire |
+| La **réfutation** — « mais… » | Montrer pourquoi elle ne suffit pas |
+
+> La concession ne fragilise pas le texte : elle le renforce, parce qu'elle montre qu'on a compris l'autre camp.
 
 ## Les connecteurs logiques
-Ils rendent le raisonnement lisible :
-- **addition** : de plus, en outre, par ailleurs ;
-- **cause** : car, en effet, parce que ;
-- **conséquence** : donc, ainsi, par conséquent ;
-- **opposition** : mais, cependant, néanmoins, toutefois ;
-- **concession** : certes, bien sûr, il est vrai que ;
-- **conclusion** : enfin, en somme, pour conclure.
+| Le lien | Ses connecteurs |
+| **Addition** | De plus, en outre, par ailleurs |
+| **Cause** | Car, en effet, parce que |
+| **Conséquence** | Donc, ainsi, par conséquent |
+| **Opposition** | Mais, cependant, néanmoins, toutefois |
+| **Concession** | Certes, bien sûr, il est vrai que |
+| **Conclusion** | Enfin, en somme, pour conclure |
 
 ## Convaincre ou persuader
-**Convaincre** s’adresse à la raison : logique, preuves, chiffres, exemples vérifiables. **Persuader** s’adresse aux sentiments : images, émotion, apostrophe, question rhétorique, engagement de la personne. Les meilleurs textes font les deux.
+| Le verbe | Ce à quoi il s'adresse | Ses moyens |
+| **Convaincre** | La **raison** | Logique, preuves, chiffres, exemples vérifiables |
+| **Persuader** | Les **sentiments** | Images, émotion, apostrophe, question rhétorique |
 
-## Les formes de l’argumentation
-- **Directe** : essai, article, lettre ouverte, discours — l’auteur dit ce qu’il pense.
-- **Indirecte** : fable, conte, apologue, théâtre — l’auteur fait comprendre par une histoire.
+> Les meilleurs textes font les deux.
+
+## Les formes de l'argumentation
+| La forme | Ses genres |
+| **Directe** | Essai, article, lettre ouverte, discours |
+| **Indirecte** | Fable, conte, apologue, théâtre |
 
 ## Construire un paragraphe
-Une idée par paragraphe, dans cet ordre : **argument** → **exemple** → **explication de l’exemple**. Sans la troisième étape, le lecteur ne voit pas le lien, et l’exemple reste décoratif.`,
+| L'étape | Son contenu |
+| 1 | L'**argument** |
+| 2 | L'**exemple** |
+| 3 | L'**explication** de l'exemple |
+
+> Sans la troisième étape, le lecteur ne voit pas le lien, et l'exemple reste décoratif.`,
           },
           questions: [
             ['Qu’est-ce que la thèse d’un texte argumentatif ?', ['L’opinion défendue par l’auteur', 'Le fait précis qui illustre une idée', 'Le mot de liaison entre deux idées', 'La conclusion du dernier paragraphe'], 0, 'Elle peut être annoncée d’emblée ou n’apparaître qu’à la fin.'],
@@ -827,34 +1049,56 @@ Une idée par paragraphe, dans cet ordre : **argument** → **exemple** → **ex
           axe: 'Outils d’analyse littéraire',
           lecon: {
             titre: 'Les mots pour parler d’un poème',
-            cours: `Analyser un poème demande un vocabulaire précis. Ces mots ne sont pas des ornements d’examen : ils permettent de dire **exactement** ce que le texte fait.
+            cours: `Analyser un poème demande un vocabulaire précis. Ces mots permettent de dire exactement ce que le texte fait.
 
 ## Le vers et sa mesure
-Un **vers** se mesure en **syllabes**. Les mètres les plus courants :
-- **octosyllabe** : 8 syllabes ;
-- **décasyllabe** : 10 syllabes ;
-- **alexandrin** : 12 syllabes.
-Le **e** en fin de mot compte s’il est suivi d’une consonne, mais pas devant une voyelle ni en fin de vers. La **diérèse** sépare en deux syllabes ce qu’on prononce d’ordinaire en une (« pas-si-on »).
+| Le mètre | Ses syllabes |
+| **Octosyllabe** | 8 |
+| **Décasyllabe** | 10 |
+| **Alexandrin** | 12 |
+
+| Le cas | La règle |
+| Le **e** devant une consonne | Il **compte** |
+| Le **e** devant une voyelle, ou en fin de vers | Il ne compte pas |
+| La **diérèse** | Elle sépare en deux syllabes ce qu'on prononce d'ordinaire en une : « pas-si-on » |
 
 ## Les strophes
-- **distique** : 2 vers ; **tercet** : 3 ; **quatrain** : 4 ; **quintil** : 5 ; **sizain** : 6.
-- Un **sonnet** compte deux quatrains et deux tercets.
+| Le nombre de vers | Son nom |
+| 2 | Distique |
+| 3 | Tercet |
+| 4 | Quatrain |
+| 5 | Quintil |
+| 6 | Sizain |
+
+Le **sonnet** compte deux quatrains et deux tercets.
 
 ## Les rimes
-- **Disposition** : **plates** (AABB), **croisées** (ABAB), **embrassées** (ABBA).
-- **Richesse** : **pauvre** (un son commun), **suffisante** (deux), **riche** (trois ou plus).
-- **Genre** : **féminine** (se termine par un *e* muet), **masculine** (sinon).
+| Le critère | Ses valeurs |
+| La **disposition** | **Plates** (AABB), **croisées** (ABAB), **embrassées** (ABBA) |
+| La **richesse** | Pauvre (1 son), suffisante (2), riche (3 ou plus) |
+| Le **genre** | **Féminine** si elle finit par un e muet, **masculine** sinon |
 
 ## Le rythme
-La **césure** coupe le vers (l’alexandrin classique se coupe en deux **hémistiches** de 6). L’**enjambement** fait déborder la phrase sur le vers suivant ; le **rejet** place un mot bref au début du vers suivant ; le **contre-rejet** l’annonce à la fin du vers précédent.
+| Le terme | Sa définition |
+| La **césure** | Elle coupe le vers — l'alexandrin en deux **hémistiches** de 6 |
+| L'**enjambement** | La phrase déborde sur le vers suivant |
+| Le **rejet** | Un mot bref au **début** du vers suivant |
+| Le **contre-rejet** | Il l'annonce à la **fin** du vers précédent |
 
 ## Les sonorités
-**Allitération** (consonne répétée), **assonance** (voyelle répétée), **harmonie imitative** (les sons imitent ce qu’ils décrivent), **paronomase** (mots de sonorités proches).
+| La figure | Ce qu'elle répète |
+| **Allitération** | Une consonne |
+| **Assonance** | Une voyelle |
+| **Harmonie imitative** | Les sons imitent ce qu'ils décrivent |
+| **Paronomase** | Des mots de sonorités proches |
 
-## Les formes
-**Sonnet**, **ode**, **ballade**, **fable**, **calligramme**, **poème en prose**, **vers libre**. Le **lyrisme** exprime les sentiments personnels ; le registre **élégiaque** dit la plainte et le deuil ; le registre **épique** amplifie et grandit.
+## Les formes et les registres
+| La forme | Le registre |
+| Sonnet, ode, ballade, fable | **Lyrique** : les sentiments personnels |
+| Calligramme, poème en prose, vers libre | **Élégiaque** : la plainte, le deuil |
+| — | **Épique** : il amplifie et grandit |
 
-> Devant un poème : compter d’abord, écouter ensuite, interpréter enfin.`,
+> Devant un poème : **compter** d'abord, **écouter** ensuite, **interpréter** enfin.`,
           },
           questions: [
             ['Combien de syllabes compte un alexandrin ?', ['12', '10', '8', '14'], 0, 'Le décasyllabe en compte 10, l’octosyllabe 8.'],
@@ -872,36 +1116,49 @@ La **césure** coupe le vers (l’alexandrin classique se coupe en deux **hémis
           axe: 'Outils d’analyse littéraire',
           lecon: {
             titre: 'Le texte, la scène et le spectateur',
-            cours: `Une pièce de théâtre est un texte **écrit pour être joué**. Son vocabulaire distingue toujours deux plans : ce qui est **écrit** et ce qui se **passe sur scène**.
+            cours: `Une pièce de théâtre est un texte écrit pour être joué. Son vocabulaire distingue toujours ce qui est écrit et ce qui se passe sur scène.
 
 ## La structure de la pièce
-- **Acte** : grande partie, souvent marquée par un changement de lieu ou de temps.
-- **Scène** : subdivision d’un acte ; on change de scène quand un personnage entre ou sort.
-- **Tableau** : dans le théâtre moderne, une unité qui remplace l’acte.
-- **Exposition** : les premières scènes, qui posent le lieu, les personnages et l’intrigue.
-- **Nœud**, **péripéties**, **coup de théâtre**, **dénouement** : les étapes de l’action.
+| Le terme | Sa définition |
+| L'**acte** | Une grande partie, souvent marquée par un changement de lieu ou de temps |
+| La **scène** | Elle change dès qu'un personnage entre ou sort |
+| Le **tableau** | Dans le théâtre moderne, il remplace l'acte |
+| L'**exposition** | Les premières scènes : lieu, personnages, intrigue |
+| Le **nœud** | Le conflit installé |
+| Les **péripéties** | Les rebondissements |
+| Le **coup de théâtre** | Un renversement brutal |
+| Le **dénouement** | La résolution |
 
 ## Les formes de parole
-- **Réplique** : ce que dit un personnage.
-- **Tirade** : longue réplique ininterrompue.
-- **Monologue** : un personnage seul parle à voix haute.
-- **Stichomythie** : échange de répliques très brèves, une par vers ou par ligne.
-- **Aparté** : ce qu’un personnage dit à part, entendu du public mais pas des autres personnages.
-- **Didascalie** : indication scénique qui n’est pas prononcée (décor, gestes, ton).
+| Le terme | Sa définition |
+| La **réplique** | Ce que dit un personnage |
+| La **tirade** | Une longue réplique ininterrompue |
+| Le **monologue** | Un personnage seul parle à voix haute |
+| La **stichomythie** | Un échange de répliques très brèves |
+| L'**aparté** | Dit à part : entendu du public, pas des autres personnages |
+| La **didascalie** | Une indication scénique, non prononcée |
 
 ## La double énonciation
-Au théâtre, un personnage parle à un autre personnage **et** au public en même temps : c’est la **double énonciation**. Elle explique qu’un personnage puisse rappeler une information que son interlocuteur connaît déjà — c’est le spectateur qui l’ignore.
+Un personnage parle à un autre personnage **et** au public en même temps.
 
-> L’**ironie tragique** naît quand le spectateur sait ce que le personnage ignore.
+> Elle explique qu'un personnage rappelle une information que son interlocuteur connaît déjà : c'est le **spectateur** qui l'ignore.
+
+> L'**ironie tragique** naît quand le spectateur sait ce que le personnage ignore.
 
 ## Les genres
-- La **tragédie** : personnages nobles, destin, fin malheureuse ; règles classiques des trois unités (action, lieu, temps).
-- La **comédie** : personnages ordinaires, fin heureuse, correction des mœurs par le rire.
-- Le **drame romantique** : mélange des registres, refus des règles (Hugo).
-- Le **théâtre de l’absurde** : langage en panne, action réduite (Ionesco, Beckett).
+| Le genre | Ses traits |
+| La **tragédie** | Personnages nobles, destin, fin malheureuse ; les **trois unités** : action, lieu, temps |
+| La **comédie** | Personnages ordinaires, fin heureuse, correction des mœurs par le rire |
+| Le **drame romantique** | Mélange des registres, refus des règles — Hugo |
+| Le théâtre de l'**absurde** | Langage en panne, action réduite — Ionesco, Beckett |
 
 ## Les ressorts du comique
-**Comique de mots** (jeux de langage, répétitions), **de gestes** (chutes, coups), **de situation** (quiproquo, malentendu), **de caractère** (le défaut poussé à l’extrême), **de répétition**.`,
+| Le comique | Son ressort |
+| De **mots** | Jeux de langage, répétitions |
+| De **gestes** | Chutes, coups |
+| De **situation** | Quiproquo, malentendu |
+| De **caractère** | Le défaut poussé à l'extrême |
+| De **répétition** | Le même effet qui revient |`,
           },
           questions: [
             ['Qu’est-ce qu’une didascalie ?', ['Une indication scénique qui n’est pas prononcée', 'Une longue réplique', 'Un échange rapide de répliques', 'Une scène finale'], 0, 'Elle indique décor, gestes, ton ou déplacements.'],

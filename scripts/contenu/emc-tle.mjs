@@ -39,25 +39,42 @@ Terminale.`,
           titre: 'Histoire de la démocratie',
           lecon: {
             titre: 'D’Athènes au suffrage universel',
-            cours: `La démocratie n'est ni une invention récente ni une évidence : c'est un régime rare, longtemps minoritaire, et toujours réversible.
+            cours: `La démocratie n’est ni une invention récente ni une évidence : c’est un régime **rare**, longtemps minoritaire, et toujours **réversible**.
 
 ## Athènes, Ve siècle avant J.-C.
-La démocratie athénienne est **directe** : les citoyens votent eux-mêmes les lois à l'**ecclésia**, et la plupart des magistrats sont **tirés au sort**. Mais le corps civique est étroit — de l'ordre de **40 000 citoyens** pour peut-être 300 000 habitants : femmes, **métèques** (étrangers résidents) et **esclaves** en sont exclus.
+La démocratie athénienne est **directe** : les citoyens votent eux-mêmes les lois à l’**ecclésia**, et la plupart des magistrats sont **tirés au sort**.
 
-> Deux enseignements durables : la démocratie suppose un peuple **défini** (qui en fait partie ?), et le tirage au sort est aussi démocratique que l'élection — l'élection, disait Aristote, est plutôt **aristocratique**.
+| Groupe | Effectif approximatif | Droits politiques |
+| Citoyens | environ **40 000** | Tous |
+| Femmes, **métèques**, **esclaves** | le reste des ~300 000 habitants | Aucun |
 
-## L'éclipse et les jalons
-Après la République romaine et les cités italiennes du Moyen Âge, l'idée s'efface au profit des monarchies. Reviennent alors des jalons :
-- **1215**, la *Magna Carta* limite le pouvoir du roi d'Angleterre ;
-- **1688-1689**, la Glorieuse Révolution et le *Bill of Rights* installent la monarchie parlementaire ;
-- **1776**, la Déclaration d'indépendance américaine ; **1787**, la Constitution des États-Unis ;
-- **1789**, la Révolution française et la **Déclaration des droits de l'homme et du citoyen**.
+> Deux enseignements durables. D’abord, la démocratie suppose un peuple **défini** — la première question est toujours « qui en fait partie ? ». Ensuite, le **tirage au sort** est aussi démocratique que l’élection : l’élection, disait Aristote, est plutôt **aristocratique**, puisqu’elle désigne les meilleurs.
 
-## L'élargissement du corps électoral
-Le suffrage reste longtemps **censitaire** (réservé aux plus imposés). En France : suffrage universel **masculin** en **1848**, droit de vote des **femmes** en **1944** (premier vote en 1945), abaissement de la majorité à **18 ans** en **1974**.
+## Les jalons
+| Date | L’étape | Ce qu’elle apporte |
+| **1215** | *Magna Carta* | Limite le pouvoir du roi d’Angleterre |
+| **1688-1689** | Glorieuse Révolution, *Bill of Rights* | Installe la monarchie parlementaire |
+| **1776** | Déclaration d’indépendance américaine | Le droit de se donner un gouvernement |
+| **1787** | Constitution des États-Unis | La séparation des pouvoirs écrite |
+| **1789** | Révolution française, **DDHC** | Les droits comme fondement du régime |
+
+## L’élargissement du corps électoral
+Le suffrage reste longtemps **censitaire** — réservé aux plus imposés.
+
+| Date | L’extension en France |
+| **1848** | Suffrage universel **masculin** |
+| **1944** | Droit de vote des **femmes** (premier vote en 1945) |
+| **1974** | Majorité abaissée à **18 ans** |
 
 ## Les vagues de démocratisation
-Le politiste Samuel Huntington décrit **trois vagues** : XIXe siècle et début du XXe, après 1945 (décolonisation, reconstruction), puis à partir de 1974 (Portugal, Espagne, Grèce, Amérique latine, Europe de l'Est après 1989). Chaque vague a été suivie d'un **reflux** — d'où l'attention portée aujourd'hui aux reculs démocratiques.`,
+Le politiste **Samuel Huntington** décrit trois vagues.
+
+| Vague | Période | Exemples |
+| Première | XIXe et début du XXe siècle | Europe occidentale, Amérique du Nord |
+| Deuxième | Après 1945 | Reconstruction, décolonisation |
+| Troisième | À partir de 1974 | Portugal, Espagne, Grèce, Amérique latine, Europe de l’Est après 1989 |
+
+Chaque vague a été suivie d’un **reflux** — d’où l’attention portée aujourd’hui aux reculs démocratiques.`,
           },
           questions: [
             ['Comment étaient désignés la plupart des magistrats à Athènes ?', ['Par tirage au sort', 'Par élection au suffrage universel', 'Par hérédité', 'Par cooptation des riches'], 0, 'Aristote jugeait l’élection plutôt aristocratique, et le tirage au sort démocratique.'],
@@ -74,26 +91,32 @@ Le politiste Samuel Huntington décrit **trois vagues** : XIXe siècle et début
           titre: 'La démocratie et le peuple souverain',
           lecon: {
             titre: 'Qui décide, et au nom de qui',
-            cours: `« Gouvernement du peuple, par le peuple et pour le peuple » : la formule de Lincoln, reprise à l'**article 2 de la Constitution de 1958**, cache une question difficile — comment un peuple entier peut-il gouverner ?
+            cours: `« Gouvernement du peuple, par le peuple et pour le peuple » : la formule de Lincoln, reprise à l’**article 2 de la Constitution de 1958**, cache une question difficile — comment un peuple entier peut-il gouverner ?
 
 ## Deux conceptions de la souveraineté
-- La **souveraineté populaire** (**Rousseau**) : elle appartient au peuple, somme des citoyens ; chacun en détient une part, d'où le mandat impératif et la démocratie directe.
-- La **souveraineté nationale** (**Sieyès**) : elle appartient à la Nation, entité abstraite qui ne peut s'exprimer que par des **représentants**, lesquels ne reçoivent pas d'ordre de leurs électeurs (mandat représentatif).
+| | Souveraineté **populaire** | Souveraineté **nationale** |
+| Le théoricien | **Rousseau** | **Sieyès** |
+| À qui elle appartient | Au peuple, somme des citoyens | À la Nation, entité abstraite |
+| Chacun en détient | Une part | Rien : elle est indivisible |
+| Le mandat | **Impératif** : l’élu obéit à ses électeurs | **Représentatif** : l’élu décide librement |
+| La forme logique | Démocratie directe | Démocratie représentative |
 
-La Constitution française combine les deux : « La souveraineté nationale appartient au peuple qui l'exerce par ses représentants et par la voie du référendum. »
+La Constitution française **combine** les deux : « La souveraineté nationale appartient au peuple qui l’exerce par ses représentants et par la voie du référendum. »
 
 ## Trois formes de démocratie
-- **directe** : le peuple décide lui-même (référendum, votations suisses) ;
-- **représentative** : il élit ceux qui décident ;
-- **participative** : il est associé aux décisions sans trancher lui-même (concertations, conventions citoyennes, budgets participatifs).
+| Forme | Qui décide | Exemples |
+| **Directe** | Le peuple lui-même | Référendum, votations suisses |
+| **Représentative** | Ceux qu’il élit | Le régime français ordinaire |
+| **Participative** | Le peuple est associé sans trancher | Concertations, conventions citoyennes, budgets participatifs |
 
 ## Les garanties du régime
-- La **séparation des pouvoirs** (**Montesquieu**) : exécutif, législatif, judiciaire se limitent mutuellement ;
-- l'**État de droit** : tous, y compris les gouvernants, sont soumis au droit ;
-- une **hiérarchie des normes** contrôlée : le **Conseil constitutionnel** vérifie la conformité des lois à la Constitution, et depuis la **QPC (2010)** tout justiciable peut contester une loi déjà en vigueur ;
-- des **droits fondamentaux** qui limitent ce que la majorité peut décider.
+| Garantie | Ce qu’elle empêche |
+| **Séparation des pouvoirs** (Montesquieu) | Qu’un organe décide et juge à la fois |
+| **État de droit** | Que les gouvernants s’exemptent de la loi |
+| Hiérarchie des normes contrôlée | Qu’une loi viole la Constitution — **QPC** depuis 2010 |
+| **Droits fondamentaux** | Que la majorité décide de tout |
 
-> Point de vigilance pour une copie : la démocratie n'est pas seulement la **règle de la majorité**. Une majorité qui supprimerait les droits d'une minorité détruirait la démocratie tout en respectant la règle du nombre.`,
+> Point de vigilance pour une copie : la démocratie n’est **pas seulement** la règle de la majorité. Une majorité qui supprimerait les droits d’une minorité détruirait la démocratie tout en respectant la règle du nombre.`,
           },
           questions: [
             ['Selon Rousseau, à qui appartient la souveraineté ?', ['Au peuple, somme des citoyens', 'À la Nation, entité abstraite', 'Aux représentants élus', 'Au chef de l’État'], 0, 'De là découlent le mandat impératif et la préférence pour la démocratie directe.'],
@@ -110,26 +133,39 @@ La Constitution française combine les deux : « La souveraineté nationale appa
           titre: 'Les élections, outils de la démocratie',
           lecon: {
             titre: 'Le vote, et ce qu’il produit',
-            cours: `L'élection est l'acte démocratique le plus visible. Mais le **mode de scrutin** choisi façonne le résultat autant que les votes eux-mêmes.
+            cours: `L’élection est l’acte démocratique le plus visible. Mais le **mode de scrutin** choisi façonne le résultat autant que les votes eux-mêmes.
 
 ## Les principes du vote
-Le suffrage est **universel**, **égal** (une personne, une voix), **secret** et, en France, **libre** (le vote n'est pas obligatoire, contrairement à la Belgique ou à l'Australie). Il est **direct** quand les électeurs désignent l'élu, **indirect** quand ils désignent des grands électeurs — c'est le cas du **Sénat**.
+| Principe | Ce qu’il signifie | En France |
+| **Universel** | Tous les citoyens majeurs votent | Depuis 1944 pour les femmes |
+| **Égal** | Une personne, une voix | Oui |
+| **Secret** | L’isoloir est obligatoire | Oui |
+| **Libre** | Voter n’est pas obligatoire | Oui — à la différence de la Belgique ou de l’Australie |
+| **Direct ou indirect** | Les électeurs désignent l’élu, ou des grands électeurs | Indirect pour le **Sénat** |
 
 ## Les modes de scrutin, et leurs effets
-- **Majoritaire à deux tours** (présidentielle, législatives, cantonales) : dégage des majorités nettes et un lien fort avec la circonscription, mais **sous-représente** les courants minoritaires ;
-- **proportionnel** (européennes, municipales pour partie, régionales) : reflète fidèlement l'opinion, mais peut produire des assemblées fragmentées et des coalitions instables ;
-- des systèmes **mixtes** ajoutent une prime majoritaire pour concilier représentativité et stabilité.
+| Mode | Ce qu’il produit | Ce qu’il coûte |
+| **Majoritaire à deux tours** | Des majorités nettes, un lien fort avec la circonscription | Il **sous-représente** les courants minoritaires |
+| **Proportionnel** | Une image fidèle de l’opinion | Des assemblées fragmentées, des coalitions instables |
+| **Mixte** | Une prime majoritaire ajoutée à la proportionnelle | Un compromis, jamais parfait |
 
-> Une règle à retenir : il n'existe pas de mode de scrutin neutre. Choisir entre représentativité et gouvernabilité est un **choix politique**, pas une question technique.
+> Il n’existe **aucun** mode de scrutin neutre. Choisir entre représentativité et gouvernabilité est un **choix politique**, pas une question technique — et c’est pourquoi la réforme du mode de scrutin est un débat permanent.
 
-## Les élections en France
-Présidentielle (5 ans), législatives, municipales, départementales, régionales, européennes. Depuis la réforme du **quinquennat (2000)** et l'inversion du calendrier, les législatives suivent la présidentielle — ce qui a longtemps donné au président une majorité, jusqu'aux configurations récentes sans majorité absolue.
+## L’abstention, principal enjeu contemporain
+| Phénomène | Ce qu’il produit |
+| Abstention | Plus de la moitié des inscrits aux dernières législatives, davantage chez les jeunes et les catégories populaires |
+| **Mal-inscription** | On est inscrit ailleurs que là où l’on vit |
+| Non-inscription | On n’est pas sur les listes du tout |
 
-## L'abstention, principal enjeu contemporain
-Elle progresse : plus de la moitié des inscrits aux dernières élections législatives, davantage encore chez les jeunes et les catégories populaires. S'y ajoute la **mal-inscription** (inscrit ailleurs qu'où l'on vit) et la **non-inscription**. Un élu peut ainsi être désigné par une fraction réduite du corps électoral — ce qui alimente la contestation de sa **légitimité**.
+Un élu peut ainsi être désigné par une **fraction réduite** du corps électoral — ce qui alimente la contestation de sa **légitimité**, distincte de sa légalité.
 
 ## Le contrôle
-Les campagnes sont encadrées : plafonnement des dépenses, contrôle des comptes par la **CNCCFP**, égalité du temps de parole surveillée par l'**Arcom**, financement public des partis. Le juge de l'élection peut annuler un scrutin irrégulier.`,
+| Dispositif | Ce qu’il encadre |
+| Plafonnement des dépenses | Le coût des campagnes |
+| **CNCCFP** | Le contrôle des comptes de campagne |
+| **Arcom** | L’égalité du temps de parole |
+| Financement public des partis | Leur indépendance vis-à-vis des donateurs |
+| Le juge de l’élection | Il peut annuler un scrutin irrégulier |`,
           },
           questions: [
             ['Quel mode de scrutin dégage le plus facilement une majorité stable ?', ['Le scrutin majoritaire', 'La proportionnelle intégrale', 'Le vote préférentiel', 'Le tirage au sort'], 0, 'Au prix d’une sous-représentation des courants minoritaires.'],
@@ -146,29 +182,37 @@ Les campagnes sont encadrées : plafonnement des dépenses, contrôle des compte
           titre: 'Laïcité et démocratie',
           lecon: {
             titre: 'Ce que la laïcité oblige, et ce qu’elle n’interdit pas',
-            cours: `La laïcité est l'un des principes les plus mal compris du droit français. Elle ne dit rien des croyances : elle organise le rapport entre l'**État** et les **cultes**.
+            cours: `La laïcité est l’un des principes les plus mal compris du droit français. Elle ne dit rien des croyances : elle organise le rapport entre l’**État** et les **cultes**.
 
 ## La loi de 1905
-La loi du **9 décembre 1905** de séparation des Églises et de l'État tient dans deux articles fondateurs :
-- « La République **assure la liberté de conscience**. Elle **garantit le libre exercice des cultes** » ;
-- « La République **ne reconnaît, ne salarie ni ne subventionne** aucun culte. »
+La loi du **9 décembre 1905** tient dans deux articles fondateurs.
 
-Autrement dit : liberté de croire ou de ne pas croire, et **neutralité** de l'État.
+| Article | Ce qu’il pose |
+| Article 1er | « La République **assure la liberté de conscience**. Elle **garantit le libre exercice des cultes**. » |
+| Article 2 | « La République **ne reconnaît, ne salarie ni ne subventionne** aucun culte. » |
 
-## À qui s'applique la neutralité
-- Aux **agents publics** dans l'exercice de leurs fonctions : ils ne peuvent manifester leur religion ;
-- aux **bâtiments et services publics**, qui n'affichent aucun culte.
+Autrement dit : **liberté** de croire ou de ne pas croire, et **neutralité** de l’État.
 
-Elle ne s'applique **pas** aux usagers dans l'espace public : un particulier peut porter un signe religieux dans la rue. Deux exceptions légales concernent les élèves des écoles, collèges et lycées publics (**loi de 2004**, signes religieux ostensibles) et la dissimulation du visage dans l'espace public (**loi de 2010**, pour des motifs d'ordre public et de sécurité).
+## À qui s’applique la neutralité
+| Concerné | La règle |
+| Les **agents publics** dans l’exercice de leurs fonctions | Ils ne peuvent manifester leur religion |
+| Les bâtiments et services publics | Ils n’affichent aucun culte |
+| Les **usagers** dans l’espace public | **Ils sont libres** : un particulier peut porter un signe religieux dans la rue |
 
-## Les précisions récentes
-La **loi du 24 août 2021** confortant le respect des principes de la République étend l'obligation de neutralité aux salariés des organismes chargés d'une mission de service public et renforce le contrôle des associations et de l'instruction en famille.
+| L’exception légale | Le texte |
+| Signes religieux ostensibles à l’école publique | **Loi de 2004** |
+| Dissimulation du visage dans l’espace public | **Loi de 2010** — motifs d’ordre public et de sécurité |
+| Neutralité étendue aux missions de service public | **Loi du 24 août 2021** |
 
 ## Deux confusions à éviter
-1. **Laïcité ≠ athéisme** : l'État n'est pas contre les religions, il est **neutre** entre elles ;
-2. **critique des religions ≠ délit** : le **blasphème** n'existe pas en droit français. En revanche, l'**injure et l'incitation à la haine visant des personnes** en raison de leur religion sont punies. La ligne passe entre les **idées** (critiquables) et les **personnes** (protégées).
+| La confusion | La correction |
+| Laïcité = athéisme | L’État n’est **pas contre** les religions : il est **neutre** entre elles |
+| Critiquer une religion = délit | Le **blasphème n’existe pas** en droit français |
 
-> Cas particulier assumé : l'**Alsace-Moselle**, annexée en 1905, conserve le régime concordataire — des cultes y sont salariés par l'État.`,
+> La ligne de partage est précise : les **idées** sont critiquables, y compris durement ; les **personnes** sont protégées. L’injure et l’incitation à la haine visant des personnes en raison de leur religion sont punies — pas la critique d’un dogme.
+
+## Un cas particulier assumé
+L’**Alsace-Moselle**, annexée à l’Empire allemand en 1905, n’a jamais reçu la loi de séparation : elle conserve le régime concordataire, où des cultes sont salariés par l’État.`,
           },
           questions: [
             ['Que garantissent les deux premiers articles de la loi de 1905 ?', ['La liberté de conscience et le libre exercice des cultes', 'L’interdiction des religions dans l’espace public', 'Le financement des cultes par l’État', 'La suppression des jours fériés religieux'], 0, 'Et, dans le même mouvement, la neutralité de l’État qui ne salarie aucun culte.'],
@@ -185,26 +229,38 @@ La **loi du 24 août 2021** confortant le respect des principes de la Républiqu
           titre: 'Contestation de la démocratie et transformations des régimes politiques',
           lecon: {
             titre: 'Quand la démocratie recule',
-            cours: `Depuis une quinzaine d'années, les grands indices de mesure (**V-Dem**, **Freedom House**, *Democracy Index*) constatent la même chose : le nombre de démocraties **recule**, et la population vivant sous régime autoritaire progresse.
+            cours: `Depuis une quinzaine d’années, les grands indices — **V-Dem**, **Freedom House**, *Democracy Index* — constatent la même chose : le nombre de démocraties **recule**, et la population vivant sous régime autoritaire progresse.
 
 ## Les régimes non démocratiques
-- **Autoritaire** : le pouvoir est concentré, l'opposition entravée, mais la société conserve des espaces d'autonomie ;
-- **totalitaire** : le régime prétend contrôler la société entière, avec une idéologie officielle, un parti unique, une terreur organisée.
+| | **Autoritaire** | **Totalitaire** |
+| Ce que le pouvoir contrôle | L’État et la vie politique | La **société entière** |
+| L’opposition | Entravée | Supprimée |
+| La société civile | Garde des espaces d’autonomie | N’en garde aucun |
+| Les moyens | Répression ciblée | Idéologie officielle, parti unique, terreur organisée |
 
 ## La forme nouvelle : la démocratie illibérale
-Le régime conserve les **apparences** — élections tenues, Parlement en place — mais vide les contre-pouvoirs de leur substance : justice mise sous tutelle, médias rachetés ou étouffés, découpage électoral sur mesure, société civile harcelée. La **Hongrie** en est l'exemple le plus discuté en Europe ; la **Turquie** un autre cas fréquemment cité.
+Le régime conserve les **apparences** — élections tenues, Parlement en place — mais vide les contre-pouvoirs de leur substance.
 
-> Le point décisif : on ne renverse plus une démocratie par un coup d'État militaire, on la **vide de l'intérieur** en respectant les formes. C'est ce qui rend le recul difficile à dater et à contester.
+| L’apparence conservée | La substance vidée |
+| Des élections ont lieu | Découpage électoral sur mesure, médias rachetés |
+| Une justice existe | Elle est mise sous tutelle |
+| La presse n’est pas interdite | Elle est étouffée économiquement |
+| Les associations sont légales | Elles sont harcelées administrativement |
+
+La **Hongrie** en est l’exemple le plus discuté en Europe ; la **Turquie** un autre cas fréquemment cité.
+
+> Le point décisif : on ne renverse plus une démocratie par un **coup d’État militaire**, on la **vide de l’intérieur** en respectant les formes. C’est ce qui rend le recul difficile à dater — et difficile à contester, puisque chaque étape est légale.
 
 ## Ce qui alimente la contestation
-- La **défiance** envers les élus et les institutions ;
-- le sentiment que le vote ne change rien (abstention, votes protestataires) ;
-- les **inégalités** et le déclassement ;
-- la **désinformation** et la fragmentation de l'espace informationnel ;
-- l'existence d'un **modèle alternatif** revendiqué — la Chine mettant en avant l'efficacité contre le pluralisme.
+| Facteur | Comment il agit |
+| La **défiance** | Envers les élus et les institutions |
+| Le sentiment d’inutilité du vote | Abstention, votes protestataires |
+| Les **inégalités** | Déclassement, sentiment d’abandon |
+| La **désinformation** | Fragmentation de l’espace informationnel |
+| Un modèle alternatif revendiqué | La Chine met en avant l’efficacité contre le pluralisme |
 
 ## Ce qui résiste
-Des institutions indépendantes (juges constitutionnels, autorités administratives), une presse pluraliste, des contre-pouvoirs locaux, une société civile organisée, et l'**alternance** effective. La résilience démocratique se mesure moins aux textes qu'à l'existence réelle de ces contre-pouvoirs.`,
+Des institutions indépendantes, une presse pluraliste, des contre-pouvoirs locaux, une société civile organisée — et l’**alternance** effective. La résilience démocratique se mesure moins aux textes qu’à l’existence **réelle** de ces contre-pouvoirs.`,
           },
           questions: [
             ['Qu’est-ce qu’une démocratie illibérale ?', ['Un régime qui garde les formes électorales mais vide les contre-pouvoirs', 'Une démocratie sans élections', 'Une monarchie constitutionnelle', 'Un régime militaire'], 0, 'Justice sous tutelle, médias contrôlés, société civile harcelée.'],
@@ -221,27 +277,37 @@ Des institutions indépendantes (juges constitutionnels, autorités administrati
           titre: 'La protection des démocraties : les enjeux de sécurité',
           lecon: {
             titre: 'Protéger sans détruire ce qu’on protège',
-            cours: `Une démocratie doit assurer la sécurité de ses citoyens sans sacrifier les libertés qui la définissent. Tout le sujet tient dans cet **équilibre**.
+            cours: `Une démocratie doit assurer la sécurité de ses citoyens **sans sacrifier les libertés qui la définissent**. Tout le sujet tient dans cet équilibre.
 
 ## Les menaces
-- Le **terrorisme** : la France a été durement frappée en **2015-2016** (*Charlie Hebdo* et l'Hyper Cacher en janvier 2015, le 13 novembre 2015, Nice en juillet 2016) ;
-- les **cyberattaques** contre hôpitaux, collectivités et entreprises ;
-- les **ingérences étrangères** : manipulation de l'information, financement occulte, opérations d'influence en période électorale ;
-- la criminalité organisée.
+| Menace | Ce qu’elle vise |
+| Le **terrorisme** | *Charlie Hebdo* et l’Hyper Cacher (janvier 2015), le 13 novembre 2015, Nice (juillet 2016) |
+| Les **cyberattaques** | Hôpitaux, collectivités, entreprises |
+| Les **ingérences étrangères** | Manipulation de l’information, financement occulte, influence électorale |
+| La criminalité organisée | Trafics, blanchiment |
 
 ## Les réponses françaises
-- L'**état d'urgence** est déclaré en novembre 2015 et prolongé jusqu'en 2017 : perquisitions administratives, assignations à résidence, décidées par l'administration et non par un juge ;
-- la **loi SILT de 2017** fait passer dans le droit commun plusieurs de ces mesures, sous contrôle du juge administratif ;
-- la **loi renseignement de 2015** encadre — et élargit — les techniques de surveillance, avec un contrôle par une autorité indépendante (**CNCTR**) ;
-- des dispositifs de lutte contre les ingérences numériques et la manipulation de l'information.
+| Dispositif | Date | Ce qu’il permet | Qui décide |
+| **État d’urgence** | Novembre 2015, prolongé jusqu’en 2017 | Perquisitions administratives, assignations à résidence | L’**administration**, pas un juge |
+| **Loi SILT** | 2017 | Fait passer ces mesures dans le droit commun | Sous contrôle du juge administratif |
+| **Loi renseignement** | 2015 | Encadre — et élargit — les techniques de surveillance | Contrôle par la **CNCTR** |
 
 ## Les garde-fous
-- Le **juge**, administratif ou judiciaire, contrôle la proportionnalité des mesures ;
-- le **Conseil constitutionnel** a censuré plusieurs dispositions jugées excessives ;
-- la **CNIL** protège les données personnelles ; la **CEDH** et la Cour de Strasbourg constituent un recours externe ;
-- le **Parlement** contrôle et limite dans le temps les régimes d'exception.
+| Garde-fou | Son rôle |
+| Le **juge** administratif ou judiciaire | Contrôler la proportionnalité des mesures |
+| Le **Conseil constitutionnel** | Il a censuré plusieurs dispositions jugées excessives |
+| La **CNIL** | Protéger les données personnelles |
+| La **CEDH** | Un recours externe, à Strasbourg |
+| Le **Parlement** | Limiter dans le temps les régimes d’exception |
 
-> Le raisonnement attendu au bac : une mesure de sécurité s'apprécie à trois critères — est-elle **nécessaire**, **proportionnée**, et **contrôlée** par un juge ? Une mesure d'exception qui devient permanente et échappe au contrôle change la nature du régime.`,
+## Le raisonnement attendu au bac
+Une mesure de sécurité s’apprécie à **trois critères**, et il faut les poser tous les trois :
+
+1. Est-elle **nécessaire** — répond-elle à une menace établie ?
+2. Est-elle **proportionnée** — n’existe-t-il pas de moyen moins attentatoire ?
+3. Est-elle **contrôlée** — un juge peut-il la censurer ?
+
+> Une mesure d’exception qui devient **permanente** et qui **échappe au contrôle** ne protège plus la démocratie : elle en change la nature.`,
           },
           questions: [
             ['Quand l’état d’urgence a-t-il été déclaré en France après les attentats ?', ['En novembre 2015', 'En janvier 2015', 'En juillet 2016', 'En 2017'], 0, 'Il a été prolongé jusqu’à son remplacement partiel par la loi SILT en 2017.'],
@@ -258,24 +324,36 @@ Des institutions indépendantes (juges constitutionnels, autorités administrati
           titre: 'La construction européenne et la démocratie',
           lecon: {
             titre: 'L’Europe, contrainte et garantie démocratique',
-            cours: `L'Union européenne n'est pas seulement un marché : c'est une **communauté de valeurs** qui conditionne l'adhésion et, de plus en plus, le versement des fonds.
+            cours: `L’Union européenne n’est pas seulement un marché : c’est une **communauté de valeurs** qui conditionne l’adhésion et, de plus en plus, le versement des fonds.
 
-## L'exigence démocratique
-Les **critères de Copenhague (1993)** subordonnent l'adhésion à des « institutions stables garantissant la démocratie, l'État de droit, les droits de l'homme et la protection des minorités ». Pour l'Espagne, le Portugal et la Grèce sortant de dictatures, puis pour les pays d'Europe centrale après 1989, l'adhésion a servi d'**ancrage démocratique**.
+## L’exigence démocratique
+Les **critères de Copenhague (1993)** subordonnent l’adhésion à des « institutions stables garantissant la démocratie, l’État de droit, les droits de l’homme et la protection des minorités ».
 
-L'**article 2 du traité sur l'UE** énonce les valeurs communes ; l'**article 7** permet de sanctionner un État qui s'en écarte — jusqu'à la suspension de son droit de vote au Conseil, mais l'unanimité requise la rend en pratique très difficile. D'où le mécanisme de **conditionnalité budgétaire** (2020) : les fonds européens peuvent être suspendus en cas d'atteinte à l'État de droit.
+| Pays | Ce que l’adhésion a ancré |
+| Espagne, Portugal, Grèce | La sortie de dictature, dans les années 1980 |
+| Europe centrale et orientale | La transition post-communiste, après 1989 |
+
+| Instrument | Ce qu’il permet | Sa limite |
+| **Article 2 du TUE** | Énonce les valeurs communes | Déclaratif |
+| **Article 7** | Sanctionner un État qui s’en écarte, jusqu’à suspendre son droit de vote | L’**unanimité** requise le rend presque inapplicable |
+| **Conditionnalité budgétaire** (2020) | Suspendre les fonds en cas d’atteinte à l’État de droit | Elle, elle a été utilisée |
 
 ## Les institutions et la question démocratique
-- Le **Parlement européen** est élu au **suffrage universel direct depuis 1979** ; ses pouvoirs n'ont cessé de croître (codécision, investiture de la Commission) ;
-- le **Conseil** réunit les gouvernements, eux-mêmes issus d'élections nationales ;
-- la **Commission**, non élue, détient l'initiative législative — c'est l'un des arguments du **déficit démocratique** ;
-- la **CJUE** fait respecter le droit de l'Union ; la **Charte des droits fondamentaux** a valeur contraignante depuis **2009**.
+| Institution | Sa légitimité | Ce qu’on lui reproche |
+| **Parlement européen** | Élu au suffrage universel direct **depuis 1979** | Une participation faible aux européennes |
+| **Conseil** | Réunit des gouvernements élus | La responsabilité est diluée |
+| **Commission** | Investie par le Parlement | **Non élue**, et détient l’initiative législative |
+| **CJUE** | Fait respecter le droit de l’Union | Accusée de gouverner par la jurisprudence |
+
+La **Charte des droits fondamentaux** a valeur contraignante depuis **2009**.
 
 ## La participation citoyenne
-L'**initiative citoyenne européenne** permet à un million de citoyens issus d'au moins sept États de demander à la Commission de légiférer. La **Conférence sur l'avenir de l'Europe** (2021-2022) a expérimenté des panels de citoyens tirés au sort.
+| Dispositif | Ce qu’il permet |
+| **Initiative citoyenne européenne** | Un million de citoyens d’au moins sept États demandent à la Commission de légiférer |
+| **Conférence sur l’avenir de l’Europe** (2021-2022) | Des panels de citoyens tirés au sort |
 
 ## Le débat, honnêtement posé
-Ceux qui parlent de **déficit démocratique** pointent une machine lointaine, technique, où la responsabilité est diluée. Ceux qui le contestent rappellent que chaque décision est prise soit par des députés élus, soit par des gouvernements responsables devant leurs Parlements. Les deux arguments sont recevables : c'est la **lisibilité** du système, plus que sa légitimité formelle, qui fait problème.`,
+> Ceux qui parlent de **déficit démocratique** pointent une machine lointaine et technique, où la responsabilité se dilue. Ceux qui le contestent rappellent que chaque décision est prise soit par des députés élus, soit par des gouvernements responsables devant leurs Parlements. Les deux arguments sont recevables : c’est la **lisibilité** du système, plus que sa légitimité formelle, qui fait problème.`,
           },
           questions: [
             ['Que fixent les critères de Copenhague de 1993 ?', ['Les conditions démocratiques d’adhésion à l’Union', 'Les règles budgétaires de la zone euro', 'Les quotas migratoires', 'Le fonctionnement de la BCE'], 0, 'Institutions stables, État de droit, droits de l’homme, protection des minorités.'],
@@ -294,30 +372,38 @@ Ceux qui parlent de **déficit démocratique** pointent une machine lointaine, t
           titre: 'Faire vivre le débat dans une démocratie',
           lecon: {
             titre: 'Argumenter, écouter, se contredire',
-            cours: `Une démocratie ne tient pas seulement par ses institutions : elle tient par la **qualité de son débat**. Or celle-ci n'a rien de spontané.
+            cours: `Une démocratie ne tient pas seulement par ses institutions : elle tient par la **qualité de son débat**. Or celle-ci n’a rien de spontané.
 
-## Débat n'est pas dispute
-Débattre suppose d'**argumenter** — appuyer une position sur des raisons et des faits vérifiables — et non d'affirmer. Cela suppose aussi d'**écouter** l'objection, d'accepter qu'elle puisse être forte, et de distinguer la critique d'une idée de l'attaque d'une personne.
+## Débat n’est pas dispute
+| | Débattre | Se disputer |
+| Ce qu’on avance | Des raisons et des faits vérifiables | Des affirmations |
+| Ce qu’on fait de l’objection | On l’écoute, on la prend au sérieux | On l’ignore ou on la ridiculise |
+| Ce qu’on attaque | L’**idée** | La **personne** |
+| Ce qu’on cherche | Ce qui est vrai | À avoir raison |
 
-> La formule à retenir : dans un débat démocratique, on ne cherche pas à avoir raison, on cherche **ce qui est vrai** — et le désaccord, à condition d'être argumenté, est **productif**.
+> Dans un débat démocratique, le **désaccord argumenté est productif** : il oblige chacun à préciser sa position. C’est le désaccord non argumenté qui stérilise.
 
-## L'espace public
-Le philosophe **Habermas** appelle *espace public* le lieu où les citoyens discutent des affaires communes : autrefois la presse, les cafés, les partis ; aujourd'hui, principalement, les **médias** et les **réseaux sociaux**.
+## L’espace public
+Le philosophe **Habermas** appelle *espace public* le lieu où les citoyens discutent des affaires communes : autrefois la presse, les cafés, les partis ; aujourd’hui, principalement, les médias et les **réseaux sociaux**.
 
-Cet espace connaît des difficultés réelles :
-- la **concentration** de la propriété des médias, qui pose une question de pluralisme ;
-- les **algorithmes** de recommandation, qui exposent surtout à ce qui confirme et à ce qui indigne — bulles de filtre et chambres d'écho ;
-- la **désinformation**, qui circule plus vite que sa correction ;
-- l'**anonymat** et le harcèlement, qui font taire.
+| La difficulté | Ce qu’elle produit |
+| La **concentration** des médias | Une question de pluralisme |
+| Les **algorithmes** de recommandation | Bulles de filtre, chambres d’écho : on voit ce qui confirme et ce qui indigne |
+| La **désinformation** | Elle circule plus vite que sa correction |
+| L’anonymat et le harcèlement | Ils font taire |
 
 ## Les réponses
-- L'**éducation aux médias et à l'information**, inscrite dans les programmes ;
-- les **règles de pluralisme** (Arcom, temps de parole) ;
-- le **fact-checking** et la responsabilisation des plateformes (règlement européen sur les services numériques) ;
-- les dispositifs de **débat organisé** : Commission nationale du débat public, enquêtes publiques, **conventions citoyennes** — celle sur le climat (2019-2020) a réuni 150 citoyens tirés au sort.
+| Réponse | Ce qu’elle vise |
+| **Éducation aux médias et à l’information** | Former le lecteur, inscrite dans les programmes |
+| Règles de pluralisme (Arcom) | Garantir les temps de parole |
+| *Fact-checking*, règlement européen sur les services numériques | Responsabiliser les plateformes |
+| Débat organisé | CNDP, enquêtes publiques, **conventions citoyennes** — 150 citoyens tirés au sort pour celle sur le climat |
 
-## Ce qu'on attend de toi
-Savoir construire un argument (thèse, raison, exemple), repérer un **sophisme** (attaque personnelle, faux dilemme, généralisation abusive), vérifier une source, et exposer honnêtement la position adverse avant de la discuter.`,
+## Ce qu’on attend de toi
+1. **Construire** un argument : thèse, raison, exemple.
+2. **Repérer un sophisme** : attaque personnelle, faux dilemme, généralisation abusive.
+3. **Vérifier** une source.
+4. **Exposer honnêtement** la position adverse **avant** de la discuter.`,
           },
           questions: [
             ['Qu’est-ce qu’argumenter ?', ['Appuyer une position sur des raisons et des faits vérifiables', 'Répéter son opinion avec conviction', 'Convaincre par tous les moyens', 'Éviter le désaccord'], 0, 'Sans raisons vérifiables, il n’y a pas de débat mais une confrontation d’affirmations.'],
@@ -337,21 +423,33 @@ Savoir construire un argument (thèse, raison, exemple), repérer un **sophisme*
             cours: `La défiance envers les responsables politiques est devenue un fait durable des démocraties. La réponse construite depuis dix ans tient en deux mots : **transparence** et **exemplarité**.
 
 ## Le tournant de 2013
-L'affaire Cahuzac — un ministre du Budget mentant sur un compte à l'étranger — provoque une réforme d'ampleur : création de la **Haute Autorité pour la transparence de la vie publique (HATVP)**, qui reçoit et contrôle les **déclarations de patrimoine** et les **déclarations d'intérêts** de milliers de responsables publics, et les publie pour certains d'entre eux.
+L’affaire Cahuzac — un ministre du Budget mentant sur un compte à l’étranger — provoque une réforme d’ampleur.
+
+| L’institution créée | Ce qu’elle contrôle |
+| La **HATVP** | Les **déclarations de patrimoine** et les **déclarations d’intérêts** de milliers de responsables publics, publiées pour certains |
 
 ## Les lois de 2017
-Les lois pour la **confiance dans la vie politique** interdisent les emplois familiaux des parlementaires, suppriment la réserve parlementaire, encadrent les frais de mandat et rendent obligatoire un casier judiciaire compatible avec l'exercice d'un mandat. Depuis 2017 s'applique aussi le **non-cumul** entre un mandat parlementaire et un exécutif local.
+| La mesure | Ce qu’elle interdit ou impose |
+| Emplois familiaux | Interdits aux parlementaires |
+| Réserve parlementaire | Supprimée |
+| Frais de mandat | Encadrés et justifiés |
+| Casier judiciaire | Doit être compatible avec l’exercice d’un mandat |
+| **Non-cumul** | Entre un mandat parlementaire et un exécutif local |
 
-## Encadrer l'influence
-Les **représentants d'intérêts** (lobbyistes) doivent s'inscrire sur un **répertoire public** tenu par la HATVP et déclarer leurs actions. Le **conflit d'intérêts** est défini par la loi : une situation où un intérêt privé peut influencer l'exercice d'une fonction publique — il doit être déclaré et l'agent doit se déporter.
+## Encadrer l’influence
+| Notion | Sa définition | L’obligation |
+| **Représentant d’intérêts** | Un lobbyiste | S’inscrire au répertoire public de la HATVP et déclarer ses actions |
+| **Conflit d’intérêts** | Une situation où un intérêt privé peut influencer une fonction publique | Le déclarer, et se **déporter** |
 
 ## Protéger ceux qui alertent
-Les **lanceurs d'alerte** — qui révèlent une infraction ou une menace pour l'intérêt général — sont protégés par la **loi Sapin II (2016)**, renforcée par la **loi de 2022** transposant une directive européenne de 2019 : protection contre les représailles, procédure de signalement clarifiée.
+| Texte | Ce qu’il apporte |
+| **Loi Sapin II** (2016) | Premier statut du **lanceur d’alerte** |
+| **Loi de 2022** | Transpose la directive européenne de 2019 : protection contre les représailles, procédure de signalement clarifiée |
 
-## Contrôler l'argent public
-La **Cour des comptes** contrôle l'emploi des fonds publics et publie ses rapports ; les données publiques sont diffusées en **open data** ; les marchés publics sont encadrés.
+## Contrôler l’argent public
+La **Cour des comptes** contrôle l’emploi des fonds publics et publie ses rapports ; les données publiques sont diffusées en **open data** ; les marchés publics sont encadrés.
 
-> À nuancer, comme toujours : la transparence n'est pas la vertu. Elle rend le contrôle possible, elle ne le garantit pas — et poussée à l'extrême, elle peut se retourner en défiance permanente ou en surveillance de la vie privée des élus.`,
+> À nuancer, comme toujours : la transparence **n’est pas la vertu**. Elle rend le contrôle possible, elle ne le garantit pas — et poussée à l’extrême, elle peut se retourner en défiance permanente, ou en surveillance de la vie privée des élus.`,
           },
           questions: [
             ['Quelle autorité contrôle les déclarations de patrimoine des responsables publics ?', ['La HATVP', 'La CNIL', 'La Cour des comptes', 'Le Conseil constitutionnel'], 0, 'Créée en 2013 après l’affaire Cahuzac.'],
@@ -368,25 +466,32 @@ La **Cour des comptes** contrôle l'emploi des fonds publics et publie ses rappo
           titre: 'S’engager dans la démocratie au XXIe siècle',
           lecon: {
             titre: 'Voter n’est pas la seule façon d’agir',
-            cours: `L'engagement ne disparaît pas : il **change de forme**. Le militantisme de long terme recule, l'engagement ponctuel, concret et choisi progresse.
+            cours: `L’engagement ne disparaît pas : il **change de forme**. Le militantisme de long terme recule, l’engagement ponctuel, concret et choisi progresse.
 
 ## Les formes classiques
-- Le **vote**, premier acte civique — mais en recul (voir l'abstention) ;
-- les **partis politiques**, dont les effectifs ont fortement diminué ;
-- les **syndicats** : le taux de syndicalisation français est l'un des plus faibles d'Europe (autour de **10 %**), alors que la couverture des accords collectifs y est l'une des plus élevées ;
-- les **associations** : plus d'**un million** en France, mobilisant de l'ordre de **20 millions de bénévoles** — c'est aujourd'hui la première forme d'engagement du pays.
+| Forme | Son état en France |
+| Le **vote** | Premier acte civique, mais en recul |
+| Les **partis politiques** | Effectifs fortement diminués |
+| Les **syndicats** | Taux de syndicalisation autour de **10 %**, l’un des plus faibles d’Europe — alors que la couverture des accords collectifs y est l’une des plus élevées |
+| Les **associations** | Plus d’**un million**, environ **20 millions de bénévoles** : la première forme d’engagement du pays |
 
 ## Les formes nouvelles
-- **Pétitions en ligne**, mobilisations par les réseaux sociaux, campagnes de nommage ;
-- **consommation engagée** : boycott, achat responsable ;
-- **désobéissance civile** : violation publique, assumée et non violente d'une règle jugée injuste, en acceptant la sanction — Thoreau, Gandhi, King en sont les références ;
-- **service civique** (depuis 2010), ouvert aux 16-25 ans, plusieurs centaines de milliers de missions accomplies ;
-- **engagement local** : conseils de quartier, conseils municipaux de jeunes, budgets participatifs.
+| Forme | Ce qu’elle est |
+| Pétitions en ligne, campagnes sur les réseaux | Une mobilisation rapide, sans organisation |
+| **Consommation engagée** | Boycott, achat responsable |
+| **Désobéissance civile** | Violation **publique, assumée et non violente** d’une règle jugée injuste, en acceptant la sanction — Thoreau, Gandhi, King |
+| **Service civique** (depuis 2010) | Ouvert aux 16-25 ans, plusieurs centaines de milliers de missions |
+| Engagement local | Conseils de quartier, conseils municipaux de jeunes, budgets participatifs |
 
 ## Les limites à connaître
-Le militantisme numérique peut se réduire au **« slacktivisme »** : un clic qui donne le sentiment d'avoir agi sans coût ni effet. À l'inverse, une pétition massive peut porter un sujet jusqu'au Parlement. Ce qui distingue les deux : la **continuité** de l'action et son **ancrage** dans une organisation.
+| Le risque | Ce qui le distingue d’un vrai engagement |
+| Le « **slacktivisme** » | Un clic qui donne le sentiment d’agir, sans coût ni effet |
+| À l’inverse | Une pétition massive peut porter un sujet jusqu’au Parlement |
 
-> Ce que le programme te demande : identifier une cause, choisir une forme d'action **proportionnée et légale**, en mesurer les effets, et savoir distinguer l'engagement — qui vise l'intérêt général — de la simple expression d'une opinion.`,
+> Ce qui sépare les deux : la **continuité** de l’action et son **ancrage** dans une organisation. Un geste isolé n’est pas un engagement, même s’il est sincère.
+
+## Ce que le programme te demande
+Identifier une cause, choisir une forme d’action **proportionnée et légale**, en mesurer les effets — et savoir distinguer l’**engagement**, qui vise l’intérêt général, de la simple expression d’une opinion.`,
           },
           questions: [
             ['Quelle est aujourd’hui la première forme d’engagement en France ?', ['Le bénévolat associatif', 'L’adhésion à un parti', 'La syndicalisation', 'La pétition en ligne'], 0, 'Plus d’un million d’associations et de l’ordre de 20 millions de bénévoles.'],
@@ -406,25 +511,42 @@ Le militantisme numérique peut se réduire au **« slacktivisme »** : un clic 
             cours: `À côté du vote, de nouvelles pratiques cherchent à associer les citoyens **entre** deux élections. Elles ne remplacent pas la démocratie représentative : elles la complètent — et la mettent sous tension.
 
 ## La démocratie délibérative
-Son pari : une décision est meilleure et plus légitime si elle est précédée d'une **délibération informée**. D'où les dispositifs de **citoyens tirés au sort**, formés par des experts, qui délibèrent puis formulent des propositions : Convention citoyenne pour le climat (2019-2020), Convention sur la fin de vie (2022-2023), panels européens.
+Son pari : une décision est meilleure et plus légitime si elle est précédée d’une **délibération informée**.
 
-Le **tirage au sort** revient ainsi dans le débat : il assure une diversité sociale que l'élection ne produit pas, mais il ne confère pas de **mandat** — d'où la question, toujours ouverte, du **sort réservé aux propositions**.
+| Dispositif | Date | Ce qu’il a produit |
+| Convention citoyenne pour le **climat** | 2019-2020 | 149 propositions, reprises très partiellement |
+| Convention sur la **fin de vie** | 2022-2023 | Un avis favorable à une aide active à mourir |
+| Panels européens | Depuis 2021 | Des recommandations à la Commission |
+
+Le **tirage au sort** revient ainsi dans le débat.
+
+| Ce qu’il apporte | Ce qui lui manque |
+| Une diversité sociale que l’élection ne produit pas | Un **mandat** : personne n’a voté pour ces citoyens |
+
+D’où la question, toujours ouverte : **que fait-on des propositions ?**
 
 ## La démocratie participative locale
-- **Budgets participatifs** : les habitants décident de l'affectation d'une part du budget municipal ;
-- **conseils de quartier**, conseils de développement, jurys citoyens ;
-- **enquêtes publiques** et débats organisés par la **CNDP** avant les grands projets d'aménagement.
+| Dispositif | Ce qu’il permet |
+| **Budgets participatifs** | Les habitants affectent une part du budget municipal |
+| Conseils de quartier, jurys citoyens | Un avis organisé sur les projets |
+| **Enquêtes publiques** et **CNDP** | Un débat obligatoire avant les grands aménagements |
 
 ## Les demandes plus radicales
-Le **référendum d'initiative citoyenne (RIC)** est réclamé notamment depuis le mouvement des Gilets jaunes. Le droit français ne connaît que le **référendum d'initiative partagée** (2008), dont les seuils — un cinquième des parlementaires et un dixième du corps électoral, soit environ 4,8 millions de signatures — n'ont jamais été atteints jusqu'au bout.
+Le **référendum d’initiative citoyenne (RIC)** est réclamé notamment depuis le mouvement des Gilets jaunes. Le droit français ne connaît que le **référendum d’initiative partagée** (2008).
 
-## Les nouveaux objets du débat démocratique
-- La **démocratie environnementale** : la **Charte de l'environnement**, adossée à la Constitution en **2005**, garantit un droit à l'information et à la **participation** du public aux décisions environnementales ;
-- les **droits des générations futures**, invoqués dans les contentieux climatiques ;
-- la **transparence des algorithmes** utilisés par l'administration ;
-- l'usage des outils numériques (*civic tech*) pour consulter — avec le risque de consultations sans suite, qui nourrissent la déception.
+| Seuil du RIP | Valeur |
+| Parlementaires signataires | Un **cinquième** |
+| Électeurs signataires | Un **dixième**, soit environ **4,8 millions** |
+| Fois où la procédure est allée à son terme | **Aucune** |
 
-> La question qui traverse tout le chapitre : associer davantage les citoyens **renforce** la démocratie si les décisions en tiennent compte ; sinon, chaque consultation sans effet aggrave la défiance qu'elle prétendait réduire.`,
+## Les nouveaux objets du débat
+| Objet | Ce qui l’encadre |
+| **Démocratie environnementale** | La **Charte de l’environnement**, adossée à la Constitution en **2005** : droit à l’information et à la participation |
+| Droits des **générations futures** | Invoqués dans les contentieux climatiques |
+| **Transparence des algorithmes** | Ceux utilisés par l’administration |
+| *Civic tech* | Consulter par le numérique — au risque de consultations sans suite |
+
+> La question qui traverse tout le chapitre : associer davantage les citoyens **renforce** la démocratie si les décisions en tiennent compte. Sinon, chaque consultation sans effet **aggrave** la défiance qu’elle prétendait réduire.`,
           },
           questions: [
             ['Sur quel pari repose la démocratie délibérative ?', ['Une décision précédée d’une délibération informée est plus légitime', 'La majorité a toujours raison', 'Les experts doivent décider seuls', 'Le vote suffit à légitimer'], 0, 'D’où les panels de citoyens tirés au sort et formés avant de délibérer.'],
@@ -444,23 +566,39 @@ Le **référendum d'initiative citoyenne (RIC)** est réclamé notamment depuis 
             cours: `Depuis 1945, un ordre juridique international proclame des droits **universels**. Il se heurte en permanence à un principe aussi fort : la **souveraineté** des États.
 
 ## Les textes fondateurs
-- La **Déclaration universelle des droits de l'homme (1948)**, adoptée par l'ONU : sans force contraignante, mais référence morale et juridique universelle ;
-- la **Convention européenne des droits de l'homme (1950)**, elle contraignante : la **Cour européenne des droits de l'homme** de Strasbourg peut condamner un État, y compris la France, sur requête d'un simple individu ;
-- les pactes de 1966, la Convention internationale des droits de l'enfant (1989).
+| Texte | Date | Force contraignante |
+| **Déclaration universelle des droits de l’homme** | 1948 | **Aucune** — mais une référence morale et juridique universelle |
+| **Convention européenne des droits de l’homme** | 1950 | **Oui** : la CEDH peut condamner un État sur requête d’un simple individu |
+| Pactes internationaux | 1966 | Oui, avec un contrôle faible |
+| Convention des droits de l’enfant | 1989 | Oui |
 
 ## La justice pénale internationale
-La **Cour pénale internationale** (statut de Rome, **1998**, entrée en vigueur **2002**) juge les individus — et non les États — pour génocide, crimes contre l'humanité, crimes de guerre et crime d'agression. Ses limites sont connues : de grandes puissances (États-Unis, Chine, Russie, Inde) n'ont pas ratifié le statut, et la Cour dépend des États pour arrêter les personnes recherchées.
+La **Cour pénale internationale** — statut de Rome, **1998**, en vigueur **2002** — juge des **individus**, et non des États.
+
+| Ce qu’elle juge | Ses limites |
+| Génocide | Les États-Unis, la Chine, la Russie et l’Inde n’ont pas ratifié |
+| Crimes contre l’humanité | Elle dépend des États pour arrêter les personnes recherchées |
+| Crimes de guerre, crime d’agression | Ses procédures sont longues |
 
 ## Intervenir ou non
-Le **droit d'ingérence** puis la **responsabilité de protéger** (adoptée par l'ONU en **2005**) posent qu'une communauté internationale peut intervenir quand un État massacre sa population. Mais l'application dépend du **Conseil de sécurité**, où cinq membres permanents disposent du **veto** — ce qui a bloqué l'action sur la Syrie comme sur d'autres crises.
+| Notion | Ce qu’elle pose | Ce qui la bloque |
+| **Droit d’ingérence** | Une communauté internationale peut intervenir | Il n’a jamais eu de base juridique claire |
+| **Responsabilité de protéger** (ONU, 2005) | Un État qui massacre sa population perd la protection de sa souveraineté | Son application dépend du **Conseil de sécurité**, où cinq membres ont le **veto** |
+
+C’est ce veto qui a bloqué l’action sur la Syrie comme sur d’autres crises.
 
 ## Les acteurs non étatiques
-Les **ONG** — Amnesty International, Human Rights Watch, Médecins sans frontières, Reporters sans frontières — documentent, alertent, plaident. Leur pouvoir est celui de la **preuve** et de l'**opinion** : elles n'ont aucune force contraignante, mais leurs rapports pèsent sur les décisions et les réputations.
+Les **ONG** — Amnesty International, Human Rights Watch, Médecins sans frontières, Reporters sans frontières — documentent, alertent, plaident.
+
+> Leur pouvoir est celui de la **preuve** et de l’**opinion**. Elles n’ont aucune force contraignante, mais leurs rapports pèsent sur les décisions et les réputations : c’est une puissance sans moyens de coercition.
 
 ## Le débat honnête
-Promouvoir la démocratie à l'extérieur a produit des résultats contrastés : ancrage réussi par l'élargissement européen, échecs coûteux là où elle a été imposée par la force. S'y ajoute le reproche du **deux poids, deux mesures**, adressé aux puissances occidentales.
+| L’argument | Ce qu’il rappelle |
+| Les réussites | L’élargissement européen a ancré des démocraties |
+| Les échecs | Là où elle a été **imposée par la force**, la démocratie n’a pas pris |
+| Le reproche | Le « **deux poids, deux mesures** » adressé aux puissances occidentales |
 
-> Ce que le programme attend : comprendre que la conscience démocratique ne s'arrête pas aux frontières, tout en mesurant ce qui limite son application — souveraineté, veto, rapports de force.`,
+Ce que le programme attend : comprendre que la conscience démocratique **ne s’arrête pas aux frontières**, tout en mesurant ce qui limite son application — souveraineté, veto, rapports de force.`,
           },
           questions: [
             ['En quelle année la Déclaration universelle des droits de l’homme est-elle adoptée ?', ['1948', '1945', '1950', '1966'], 0, 'Par l’Assemblée générale de l’ONU : une référence sans force contraignante.'],

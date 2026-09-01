@@ -37,10 +37,25 @@ des composites). Cette migration n'écrit que des fiches neuves.`,
           lecon: {
             titre: 'Gide, 1893 — un voyage qui n’a pas eu lieu',
             cours: `## L’œuvre
-Premier livre publié sous son nom par Gide, à vingt-quatre ans, en pleine période **symboliste**. **Urien** et ses compagnons s’embarquent pour un voyage en trois parties : l’**Océan pathétique**, où les escales offrent tentations et plaisirs ; la **mer des Sargasses**, immobile et morne, où l’équipage s’enlise ; la **mer glaciale**, blanche et pure, où l’on progresse vers un pôle mystérieux. Au terme, ils trouvent une **stèle** portant une inscription… et un feuillet où l’on découvre que rien de tout cela n’a eu lieu, que le voyage a été rêvé sur place.
+**Premier livre publié sous son nom** par Gide, à **vingt-quatre ans**, en pleine période **symboliste**.
+
+| Partie du voyage | Ce qu’elle est |
+| L’**Océan pathétique** | Les escales offrent **tentations et plaisirs** |
+| La **mer des Sargasses** | **Immobile et morne** : l’équipage **s’enlise** |
+| La **mer glaciale** | **Blanche et pure** : on progresse vers un **pôle mystérieux** |
+
+| Le dénouement | Ce qu’il révèle |
+| Une **stèle** portant une inscription | Et un **feuillet** |
+| Ce qu’il apprend | **Rien de tout cela n’a eu lieu** : le voyage a été **rêvé sur place** |
 
 ## À retenir
-Un **récit symboliste** : paysages allégoriques, quête spirituelle, prose musicale et volontairement irréelle. Gide y met en scène la tentation du **renoncement** et l’ambiguïté du désir — thèmes qu’il reprendra toute sa vie. Il ironisera plus tard sur ce livre de jeunesse. Utile pour comprendre d’où vient Gide : le symbolisme, la revue *La Conque*, les mardis de Mallarmé — avant *Les Nourritures terrestres* et le tournant de 1897.
+Un **récit symboliste** : paysages **allégoriques**, quête spirituelle, prose **musicale et volontairement irréelle**.
+
+| Thème installé ici | Ce qu’il deviendra |
+| La tentation du **renoncement** | *La Porte étroite* |
+| L’**ambiguïté du désir** | *L’Immoraliste* |
+
+> Gide **ironisera plus tard** sur ce livre de jeunesse. Il est pourtant **utile pour comprendre d’où il vient** : le symbolisme, la revue *La Conque*, les **mardis de Mallarmé** — **avant** *Les Nourritures terrestres* et le tournant de **1897**.
 
 > « Nous n’avions pas quitté la chambre où nous rêvions. »`,
           },
@@ -58,13 +73,27 @@ Un **récit symboliste** : paysages allégoriques, quête spirituelle, prose mus
           lecon: {
             titre: 'Corbière, 1873 — le poète qui se moque de lui-même',
             cours: `## Le recueil
-Unique recueil de **Tristan Corbière** (1845-1875), publié à compte d’auteur en **1873**, passé totalement inaperçu — quatre-vingts pages vendues à quelques exemplaires. Le poète meurt à trente ans. **Verlaine** le sauve de l’oubli en l’inscrivant, dix ans plus tard, en tête des *Poètes maudits*.
+| Fait | Le détail |
+| L’auteur | **Tristan Corbière** (1845-1875) |
+| La publication | **À compte d’auteur**, en **1873** |
+| Son accueil | **Totalement inaperçu** : quatre-vingts pages, quelques exemplaires vendus |
+| Sa mort | À **trente ans** |
+| Son sauvetage | **Verlaine** l’inscrit, dix ans plus tard, en tête des *Poètes maudits* |
 
 ## Le ton
-« Jaune » comme le rire jaune : Corbière écrit des poèmes d’amour, de mer et de mort, et les sabote lui-même par l’**ironie**, l’argot, les jeux de mots, les tirets, les ruptures de ton. Il se peint laid, malade, raté (« Le Crapaud », « Épitaphe », « Le Poète contumace »). Les poèmes bretons et marins (« La Rapsode foraine », « Le Bossu Bitor », « Matelots ») donnent une voix rude et concrète, très éloignée du lyrisme parnassien.
+« **Jaune** » comme le **rire jaune** : Corbière écrit des poèmes d’amour, de mer et de mort — **et les sabote lui-même**.
+
+| Son arme | Son effet |
+| L’**ironie**, l’**argot**, les jeux de mots | Le poème **se retourne contre lui-même** |
+| Les **tirets** et les **ruptures de ton** | Rien ne s’installe |
+| L’**autoportrait** | Laid, malade, raté : « Le Crapaud », « Épitaphe », « Le Poète contumace » |
+
+Les poèmes **bretons et marins** — « La Rapsode foraine », « Le Bossu Bitor », « Matelots » — donnent une voix **rude et concrète**, très éloignée du lyrisme parnassien.
 
 ## À retenir
-Une œuvre longtemps illisible pour ses contemporains, devenue majeure au XXe siècle : Laforgue, puis les surréalistes, puis T. S. Eliot y ont reconnu une modernité — le **poème qui se retourne contre lui-même**, la voix qui refuse la pose du poète.
+Une œuvre **longtemps illisible** pour ses contemporains, **devenue majeure au XXe siècle**.
+
+> **Laforgue**, puis les **surréalistes**, puis **T. S. Eliot** y ont reconnu une modernité : **la voix qui refuse la pose du poète**.
 
 > « Ne me tuez pas, je suis déjà mort. »`,
           },
@@ -81,14 +110,25 @@ Une œuvre longtemps illisible pour ses contemporains, devenue majeure au XXe si
           titre: 'Les Amours, Pierre de Ronsard',
           lecon: {
             titre: 'Ronsard, 1552-1578 — trois femmes, trois manières',
-            cours: `## Les recueils
-Sous ce titre, on réunit les cycles amoureux de **Ronsard**, chef de la **Pléiade** :
-- **Les Amours de Cassandre** (1552) : sonnets **pétrarquistes** en décasyllabes, amour idéal et inaccessible pour Cassandre Salviati, images précieuses, mythologie abondante.
-- **La Continuation des Amours** et **Les Amours de Marie** (1555-1556) : le « beau style bas », plus simple et plus sensuel, pour une jeune paysanne d’Anjou ; c’est là que se trouve « Mignonne, allons voir si la rose… » (en réalité tirée des *Odes*) et « Comme on voit sur la branche… », déploration après la mort de Marie.
-- **Les Sonnets pour Hélène** (1578) : le poète vieillissant s’adresse à Hélène de Surgères, dame d’honneur de Catherine de Médicis. C’est le cycle du **« Quand vous serez bien vieille… »**.
+            cours: `## Les trois cycles
+| Cycle | Sa date | Sa manière |
+| **Les Amours de Cassandre** | **1552** | Sonnets **pétrarquistes** en **décasyllabes** : amour **idéal et inaccessible**, images précieuses, **mythologie abondante** |
+| **La Continuation** et **Les Amours de Marie** | **1555-1556** | Le « **beau style bas** » : **plus simple et plus sensuel**, pour une jeune paysanne d’Anjou |
+| **Les Sonnets pour Hélène** | **1578** | Le poète **vieillissant** s’adresse à **Hélène de Surgères**, dame d’honneur de Catherine de Médicis |
+
+## Les poèmes à connaître
+| Poème | Où il se trouve |
+| « Mignonne, allons voir si la rose… » | En réalité tiré des *Odes* |
+| « Comme on voit sur la branche… » | La **déploration après la mort de Marie** |
+| « **Quand vous serez bien vieille…** » | Le cycle **d’Hélène** |
 
 ## À retenir
-Ronsard installe le **sonnet** en français, pratique l’**imitation** des Anciens et de Pétrarque prônée par Du Bellay, et donne à la langue une souplesse nouvelle. Thème constant : le **carpe diem**, la fuite du temps, la beauté qui se fane — et la poésie comme seule immortalité.
+| Apport de Ronsard | Le détail |
+| Il **installe le sonnet** en français | La forme reine du siècle |
+| Il pratique l’**imitation** des Anciens et de **Pétrarque** | Comme le prônait **Du Bellay** |
+| Il donne à la langue une **souplesse nouvelle** | Le programme de la **Pléiade** |
+
+> Thème constant : le *carpe diem* — la **fuite du temps**, la **beauté qui se fane**, et la **poésie comme seule immortalité**.
 
 > « Cueillez dès aujourd’hui les roses de la vie. »`,
           },
@@ -106,10 +146,28 @@ Ronsard installe le **sonnet** en français, pratique l’**imitation** des Anci
           lecon: {
             titre: 'Fénelon, 1699 — un roman pour éduquer un futur roi',
             cours: `## L’œuvre
-Écrit pour le **duc de Bourgogne**, petit-fils de Louis XIV dont Fénelon était le précepteur. **Télémaque**, fils d’Ulysse, part à la recherche de son père, accompagné de **Mentor** — qui est en réalité la déesse **Minerve**. Le voyage est une **éducation** : Chypre et la tentation des plaisirs, l’île de Calypso, la guerre en Italie, et surtout la description de deux États modèles — la **Bétique**, société pastorale sans luxe ni propriété, et **Salente**, que Mentor réforme sous les yeux du lecteur en réduisant le commerce de luxe, en revalorisant l’agriculture et en simplifiant la cour.
+Écrit pour le **duc de Bourgogne**, **petit-fils de Louis XIV**, dont Fénelon était le **précepteur**.
+
+| Élément | Ce qu’il est |
+| **Télémaque**, fils d’Ulysse | Il part **à la recherche de son père** |
+| **Mentor**, son guide | En réalité la déesse **Minerve** |
+| Le voyage | Une **éducation** |
+
+| Étape | Ce qu’elle enseigne |
+| **Chypre** | La **tentation des plaisirs** |
+| L’île de **Calypso** | L’amour et le renoncement |
+| La guerre en **Italie** | Le métier des armes |
+| La **Bétique** | Une société **pastorale**, **sans luxe ni propriété** |
+| **Salente** | Mentor la **réforme sous les yeux du lecteur** : moins de **commerce de luxe**, plus d’**agriculture**, une **cour simplifiée** |
 
 ## À retenir
-Publié **sans l’accord de l’auteur** en 1699, le livre fut lu comme une critique directe du règne de **Louis XIV** — la guerre, le luxe, l’orgueil, les courtisans — et coûta à Fénelon la disgrâce définitive. Immense succès européen au XVIIIe siècle : c’est l’un des livres les plus lus des Lumières, une matrice du **roman d’éducation** et de la réflexion politique sur le bon gouvernement.
+Publié **sans l’accord de l’auteur** en **1699**.
+
+> Le livre fut lu comme une **critique directe du règne de Louis XIV** — la guerre, le luxe, l’orgueil, les courtisans — et **coûta à Fénelon la disgrâce définitive**.
+
+| Sa postérité | Le détail |
+| **Immense succès européen** au XVIIIe siècle | L’un des **livres les plus lus** des Lumières |
+| Une **matrice** | Du **roman d’éducation** et de la réflexion politique sur le **bon gouvernement** |
 
 > « Un roi n’est roi que pour ceux qu’il gouverne. »`,
           },
@@ -127,10 +185,28 @@ Publié **sans l’accord de l’auteur** en 1699, le livre fut lu comme une cri
           lecon: {
             titre: 'Genet, 1947 — la cérémonie des servantes',
             cours: `## La pièce
-Un acte. Deux sœurs, **Claire** et **Solange**, servantes, profitent de l’absence de **Madame** pour jouer un **jeu** rituel : l’une prend le rôle de Madame, l’autre celui de la bonne, et la « cérémonie » va toujours jusqu’au bord du meurtre — sans jamais l’atteindre, car le réveil sonne. On apprend qu’elles ont dénoncé Monsieur par des lettres anonymes ; or il est libéré, et la peur d’être découvertes précipite tout. Elles préparent un **tilleul empoisonné** pour Madame, qui ne le boit pas. Restées seules, elles reprennent la cérémonie une dernière fois : Claire, jouant Madame, boit le tilleul et meurt ; Solange reste, seule, avec son crime enfin réel.
+Un acte. Deux sœurs, **Claire** et **Solange**, servantes, profitent de l’absence de **Madame** pour jouer un **jeu rituel**.
+
+| La cérémonie | Comment elle fonctionne |
+| L’une joue **Madame**, l’autre **la bonne** | Elle va **toujours jusqu’au bord du meurtre** |
+| Elle n’aboutit jamais | **Le réveil sonne** |
+
+| L’engrenage | Ce qui se passe |
+| Elles ont **dénoncé Monsieur** par des **lettres anonymes** | **Il est libéré** — la peur d’être découvertes précipite tout |
+| Elles préparent un **tilleul empoisonné** pour Madame | **Elle ne le boit pas** |
+| La dernière cérémonie | **Claire, jouant Madame, boit le tilleul et meurt** |
+| La fin | **Solange reste seule** — avec son **crime enfin réel** |
 
 ## À retenir
-Inspirée de l’affaire des **sœurs Papin** (1933), la pièce n’est pas un fait divers mis en scène mais une **cérémonie** : Genet exige des rôles, des masques, du **théâtre dans le théâtre**. Thèmes : la domination, la haine et l’amour mêlés, l’identité comme rôle imposé. Genet, orphelin et voleur devenu écrivain, écrit une langue somptueuse pour dire les humiliés.
+Inspirée de l’affaire des **sœurs Papin** (**1933**).
+
+| Ce que la pièce n’est pas | Ce qu’elle est |
+| Un **fait divers mis en scène** | Une **cérémonie** |
+| — | Genet exige des **rôles**, des **masques**, du **théâtre dans le théâtre** |
+
+Thèmes : la **domination**, la **haine et l’amour mêlés**, l’**identité comme rôle imposé**.
+
+> Genet, **orphelin et voleur devenu écrivain**, écrit une **langue somptueuse pour dire les humiliés**.
 
 > « Il faut que la cérémonie s’achève. »`,
           },
@@ -148,10 +224,24 @@ Inspirée de l’affaire des **sœurs Papin** (1933), la pièce n’est pas un f
           lecon: {
             titre: 'Hugo, 1843 — l’échec qui ferme une époque',
             cours: `## La pièce
-Drame en trois parties et en vers, créé en **1843**. Dans un burg des bords du Rhin, au XIIIe siècle, trois générations de **burgraves** — seigneurs brigands — vivent sous le même toit. Le vieux **Job**, centenaire, cache un crime : il a jadis frappé son frère **Donato**. Or un mendiant mystérieux, **Job le Maudit**, se révèle être l’**empereur Frédéric Barberousse**, revenu pour juger les siens. Autour, l’esclave **Guanhumara**, empoisonneuse, prépare une vengeance vieille de cinquante ans. Le pardon final referme l’épopée familiale.
+Drame en **trois parties et en vers**, créé en **1843**. Dans un **burg des bords du Rhin**, au XIIIe siècle.
+
+| Personnage | Qui il est |
+| **Job**, centenaire | Il cache un crime : **il a jadis frappé son frère Donato** |
+| Trois générations de **burgraves** | Des **seigneurs brigands**, sous le même toit |
+| Un **mendiant mystérieux** | Il se révèle être l’**empereur Frédéric Barberousse**, revenu **pour juger les siens** |
+| **Guanhumara**, l’esclave | **Empoisonneuse** : elle prépare une vengeance **vieille de cinquante ans** |
+
+Le **pardon final** referme l’épopée familiale.
 
 ## À retenir
-La pièce est un **échec** retentissant : le public boude, la critique se moque, et la même saison voit le triomphe de la *Lucrèce* de Ponsard, néoclassique. Cet échec est traditionnellement retenu comme la **fin du drame romantique** au théâtre ; Hugo n’écrira plus pour la scène (hormis le *Théâtre en liberté*, non joué). Deux mois plus tard, sa fille Léopoldine se noyait à Villequier.
+La pièce est un **échec retentissant** : le public boude, la critique se moque — et la **même saison** voit le triomphe de la *Lucrèce* de **Ponsard**, **néoclassique**.
+
+| Ce que cet échec marque | Le détail |
+| La **fin du drame romantique** au théâtre | C’est la lecture traditionnelle |
+| La fin du théâtre de Hugo | Il n’écrira plus pour la scène — hormis le *Théâtre en liberté*, **non joué** |
+
+> **Deux mois plus tard**, sa fille **Léopoldine se noyait à Villequier**.
 
 > Un drame grandiose, écrasé par son propre gigantisme.`,
           },
@@ -169,10 +259,27 @@ La pièce est un **échec** retentissant : le public boude, la critique se moque
           lecon: {
             titre: 'Gide, 1891 — le premier livre, anonyme',
             cours: `## L’œuvre
-Publié **anonymement** à vingt et un ans, le livre se présente comme les **cahiers posthumes** d’un jeune homme, André Walter, mort fou. Deux parties : le *Cahier blanc* et le *Cahier noir*. Walter aime sa cousine **Emmanuèle** ; sa mère mourante lui a fait promettre de ne pas l’épouser. Il choisit alors l’amour **pur**, refuse le corps, s’enferme dans l’écriture, la lecture de la Bible et la mystique — et sombre peu à peu dans le délire.
+Publié **anonymement** à **vingt et un ans**. Le livre se présente comme les **cahiers posthumes** d’un jeune homme, **André Walter**, **mort fou** : le *Cahier blanc* et le *Cahier noir*.
+
+| Étape | Ce qui se passe |
+| L’amour | Walter aime sa cousine **Emmanuèle** |
+| L’interdit | Sa **mère mourante** lui a fait **promettre de ne pas l’épouser** |
+| Le choix | Il opte pour l’amour **pur** : il **refuse le corps** |
+| L’enfermement | L’écriture, la lecture de la **Bible**, la **mystique** |
+| La fin | Il **sombre peu à peu dans le délire** |
 
 ## À retenir
-Livre de jeunesse, mais matrice de toute l’œuvre : la tension entre le **corps** et l’**esprit**, l’exigence protestante, le journal comme forme, l’écriture comme sublimation. La cousine Emmanuèle est **Madeleine Rondeaux**, que Gide épousera réellement en 1895 et avec qui il vivra un mariage blanc. Style symboliste, très marqué par la période, que Gide jugera plus tard avec sévérité.
+Livre de jeunesse — mais **matrice de toute l’œuvre**.
+
+| Ce qui s’y installe | Où on le retrouvera |
+| La tension entre le **corps** et l’**esprit** | *L’Immoraliste*, *La Porte étroite* |
+| L’**exigence protestante** | Partout |
+| Le **journal** comme forme | *Les Faux-Monnayeurs*, le *Journal* |
+| L’**écriture comme sublimation** | Le fil de sa vie |
+
+> La cousine Emmanuèle est **Madeleine Rondeaux**, que Gide **épousera réellement en 1895** — et avec qui il vivra un **mariage blanc**.
+
+Style **symboliste**, très marqué par la période, que Gide jugera plus tard **avec sévérité**.
 
 > On y voit un écrivain de vingt ans se donner un programme dont il mettra cinquante ans à sortir.`,
           },
@@ -190,15 +297,25 @@ Livre de jeunesse, mais matrice de toute l’œuvre : la tension entre le **corp
           lecon: {
             titre: 'Rimbaud, 1870 — vingt-deux poèmes de fugue',
             cours: `## Le recueil
-**Vingt-deux poèmes** recopiés en deux liasses par Rimbaud, âgé de **quinze et seize ans**, chez Paul Demeny, à **Douai**, à l’automne **1870**. Le titre est posthume : ce n’est pas un recueil composé par son auteur.
+**Vingt-deux poèmes** recopiés **en deux liasses** par Rimbaud, âgé de **quinze et seize ans**, chez **Paul Demeny**, à **Douai**, à l’automne **1870**.
+
+> Le titre est **posthume** : **ce n’est pas un recueil composé par son auteur**.
 
 ## Trois veines
-- **La fugue et la sensation** : « Sensation », « Ma Bohème », « Au Cabaret-Vert », « Roman ». Le corps marche, mange, regarde ; la nature remplace la maison.
-- **La satire politique** : « Le Forgeron », « Rages de Césars », « Le Mal », « Le Dormeur du val ». Rimbaud écrit pendant la guerre franco-prussienne et la chute du Second Empire.
-- **La provocation** : « Vénus Anadyomène », « À la Musique », « Les Reparties de Nina ». Le sonnet, forme noble, sert à dire le trivial et le laid.
+| Veine | Ses textes | Ce qu’elle fait |
+| La **fugue et la sensation** | « Sensation », « Ma Bohème », « Au Cabaret-Vert », « Roman » | Le corps **marche, mange, regarde** ; la nature **remplace la maison** |
+| La **satire politique** | « Le Forgeron », « Rages de Césars », « Le Mal », « Le Dormeur du val » | Écrits pendant la **guerre franco-prussienne** et la **chute du Second Empire** |
+| La **provocation** | « Vénus Anadyomène », « À la Musique », « Les Reparties de Nina » | Le **sonnet, forme noble**, sert à dire **le trivial et le laid** |
 
 ## À retenir
-Parcours associé au bac : **émancipations créatrices**. L’émancipation y est triple — de l’adolescent contre sa famille, du citoyen contre l’ordre impérial, du poète contre les formes héritées. Rimbaud maîtrise le vers classique **et** le maltraite : enjambements violents, rejets, mots familiers dans un moule noble. « Le Dormeur du val » en est le modèle.
+Parcours associé au bac : **émancipations créatrices**.
+
+| L’émancipation est **triple** | Contre quoi |
+| De l’**adolescent** | Sa famille |
+| Du **citoyen** | L’ordre impérial |
+| Du **poète** | Les formes héritées |
+
+> Rimbaud **maîtrise le vers classique ET le maltraite** : enjambements violents, rejets, **mots familiers dans un moule noble**. « Le Dormeur du val » en est le modèle.
 
 > « Il a deux trous rouges au côté droit. »`,
           },
@@ -216,16 +333,31 @@ Parcours associé au bac : **émancipations créatrices**. L’émancipation y e
           lecon: {
             titre: 'La Bruyère, 1688 — la société en fragments',
             cours: `## L’œuvre
-*Les Caractères ou les Mœurs de ce siècle*, publiés en **1688** et augmentés jusqu’en 1696. L’ouvrage se présente d’abord comme une traduction de **Théophraste**, avant de devenir une œuvre autonome de plus de mille **remarques** : maximes, portraits, dialogues, réflexions.
+*Les Caractères ou les Mœurs de ce siècle*, publiés en **1688**, augmentés jusqu’en **1696**.
+
+> L’ouvrage se présente d’abord comme une **traduction de Théophraste** — avant de devenir une œuvre **autonome** de plus de **mille remarques** : maximes, portraits, dialogues, réflexions.
 
 ## Les livres principaux
-« De la société et de la conversation », « Des biens de fortune » (les portraits de **Giton** le riche et de **Phédon** le pauvre), « De la ville », « **De la cour** » — le sommet du livre —, « Des grands », « Du souverain ou de la république », « De l’homme », « Des femmes », « Des ouvrages de l’esprit ».
+| Livre | Ce qu’il vise |
+| « De la société et de la conversation » | Les fâcheux, les vaniteux du langage |
+| « **Des biens de fortune** » | Les portraits de **Giton** le riche et de **Phédon** le pauvre |
+| « De la ville » | La bourgeoisie qui **singe la cour** |
+| « **De la cour** » | **Le sommet du livre** |
+| « Des grands », « Du souverain » | Le pouvoir |
+| « De l’homme », « Des femmes », « Des ouvrages de l’esprit » | Le reste du monde |
 
 ## La méthode
-La Bruyère **montre** au lieu de démontrer : un geste, un habit, une façon de parler suffisent à faire un caractère. Il donne à ses figures des noms grecs (Ménalque le distrait, Giton, Phédon) pour se protéger, mais la cour s’y reconnaissait — des « clés » circulaient. Style de la **brièveté frappante**, art de la chute.
+> La Bruyère **montre au lieu de démontrer** : un **geste**, un **habit**, une **façon de parler** suffisent à faire un caractère.
+
+| Sa protection | Son efficacité |
+| Des **noms grecs** — Ménalque le distrait, Giton, Phédon | **La cour s’y reconnaissait** : des « **clés** » circulaient |
+
+Style de la **brièveté frappante**, art de la **chute**.
 
 ## À retenir
-Un moraliste **classique** dans la forme, presque sociologue dans le regard : il décrit une société où l’argent commence à concurrencer la naissance. Sa page sur les paysans, « animaux farouches » qui se révèlent des hommes, est l’une des plus fortes du siècle.
+Un moraliste **classique dans la forme**, **presque sociologue dans le regard** : il décrit une société où **l’argent commence à concurrencer la naissance**.
+
+> Sa page sur les **paysans**, « animaux farouches » **qui se révèlent des hommes**, est l’une des **plus fortes du siècle**.
 
 > « Tout est dit, et l’on vient trop tard. »`,
           },
@@ -243,10 +375,27 @@ Un moraliste **classique** dans la forme, presque sociologue dans le regard : il
           lecon: {
             titre: 'Gide, 1914 — la sotie et l’acte gratuit',
             cours: `## L’histoire
-Gide appelle ce livre une **sotie** : une farce satirique. Une bande d’escrocs, menée par **Protos**, répand une rumeur : le **pape** serait séquestré dans les caves du Vatican, et un faux pape régnerait à sa place ; il faut donc réunir des fonds pour le délivrer. Autour de cette escroquerie, quatre familles s’agitent : le savant athée **Anthime Armand-Dubois**, converti après un miracle ; le romancier **Julius de Baraglioul** ; le juge **Amédée Fleurissoire**, naïf, qui part héroïquement à Rome délivrer le pape ; et **Lafcadio Wluiki**, jeune bâtard élégant et libre. Dans un train, sans mobile, par pure disponibilité, Lafcadio **pousse Fleurissoire par la portière** : c’est l’**acte gratuit**.
+Gide appelle ce livre une **sotie** : une **farce satirique**.
+
+| L’escroquerie | Le détail |
+| Une bande menée par **Protos** | Elle répand une **rumeur** |
+| La rumeur | Le **pape** serait **séquestré dans les caves du Vatican**, et un **faux pape** régnerait |
+| Le but | Réunir des **fonds** pour le délivrer |
+
+| Personnage | Ce qu’il est |
+| **Anthime Armand-Dubois** | Savant **athée**, **converti après un miracle** |
+| **Julius de Baraglioul** | Le romancier |
+| **Amédée Fleurissoire** | Juge **naïf** : il part **héroïquement délivrer le pape** |
+| **Lafcadio Wluiki** | Jeune **bâtard élégant et libre** |
+
+> Dans un train, **sans mobile**, **par pure disponibilité**, Lafcadio **pousse Fleurissoire par la portière** : c’est l’**acte gratuit**.
 
 ## À retenir
-Le roman a rendu célèbre la notion d’**acte gratuit** — un acte sans motif, donc preuve supposée de liberté —, que les surréalistes ont adorée et que Gide lui-même a relativisée : Lafcadio est finalement rattrapé par la logique et par le remords. Ton ironique, personnages de comédie, intrigue de vaudeville : la « sotie » se moque autant de la religion que de la crédulité et du romanesque.
+| Notion | Sa fortune |
+| L’**acte gratuit** — un acte **sans motif**, donc **preuve supposée de liberté** | Les **surréalistes** l’ont adorée |
+| Sa relativisation | **Gide lui-même** : Lafcadio est **rattrapé par la logique et par le remords** |
+
+Ton **ironique**, personnages de comédie, intrigue de **vaudeville** : la « sotie » se moque **autant de la religion que de la crédulité et du romanesque**.
 
 > « Un crime immotivé, quel embarras pour la police. »`,
           },
@@ -264,10 +413,24 @@ Le roman a rendu célèbre la notion d’**acte gratuit** — un acte sans motif
           lecon: {
             titre: 'Ionesco, 1952 — une salle pleine de personne',
             cours: `## La pièce
-Un **Vieux** de quatre-vingt-quinze ans et une **Vieille** de quatre-vingt-quatorze vivent seuls dans une maison entourée d’eau. Le Vieux a un **message** capital à délivrer à l’humanité, et a convoqué pour cela une assemblée. Les invités arrivent : ils sont **invisibles**. Le couple les accueille, leur parle, leur apporte des **chaises**, de plus en plus vite, jusqu’à ce que la scène soit entièrement encombrée. L’Empereur lui-même est annoncé. Enfin paraît l’**Orateur**, chargé de transmettre le message ; rassurés, les deux vieux se jettent par la fenêtre. L’Orateur, resté seul devant la foule vide, est **sourd-muet** : il émet des gutturales, écrit au tableau des lettres sans signification, salue et sort.
+Un **Vieux** de quatre-vingt-quinze ans et une **Vieille** de quatre-vingt-quatorze vivent **seuls** dans une maison **entourée d’eau**.
+
+| Étape | Ce qui se passe |
+| Le projet | Le Vieux a un **message capital** à délivrer à l’humanité : il a **convoqué une assemblée** |
+| Les invités | **Ils sont invisibles** |
+| L’accueil | Le couple leur parle et leur apporte des **chaises** — **de plus en plus vite**, jusqu’à ce que **la scène soit entièrement encombrée** |
+| Le sommet | **L’Empereur** lui-même est annoncé |
+| L’Orateur | Chargé de **transmettre le message** ; rassurés, **les deux vieux se jettent par la fenêtre** |
+| La chute | L’Orateur, **seul devant la foule vide**, est **sourd-muet** : gutturales, **lettres sans signification** au tableau, salut — et sortie |
 
 ## À retenir
-Ionesco sous-titre la pièce « farce tragique ». Elle porte à son sommet le thème du **langage impuissant** et de la **prolifération** des objets (les chaises envahissent l’espace comme les mots envahissent le vide). L’une des œuvres majeures du théâtre de l’absurde, souvent montée.
+Ionesco sous-titre la pièce « **farce tragique** ».
+
+| Thème | Comment il est porté |
+| Le **langage impuissant** | L’Orateur **sourd-muet** |
+| La **prolifération** des objets | **Les chaises envahissent l’espace comme les mots envahissent le vide** |
+
+L’une des œuvres **majeures** du théâtre de l’absurde, **souvent montée**.
 
 > « Le message ! Le message ! »`,
           },
@@ -285,13 +448,37 @@ Ionesco sous-titre la pièce « farce tragique ». Elle porte à son sommet le t
           lecon: {
             titre: 'Hugo, 1853 — la poésie comme arme de combat',
             cours: `## Le recueil
-Écrit en exil, publié à **Bruxelles en 1853** et interdit en France. Cible unique : **Louis-Napoléon Bonaparte**, auteur du coup d’État du 2 décembre **1851**, que Hugo appelle « **Napoléon le Petit** ». Sept livres aux titres ironiques : « La société est sauvée », « L’ordre est rétabli », « La famille est restaurée », « La religion est glorifiée », « L’autorité est sacrée », « La stabilité est assurée », « Les sauveurs se sauveront ». Un dernier poème, « **Lux** », annonce l’avenir lumineux.
+Écrit **en exil**, publié à **Bruxelles en 1853** — et **interdit en France**.
+
+| Cible | Le détail |
+| **Louis-Napoléon Bonaparte** | Auteur du **coup d’État du 2 décembre 1851** |
+| Le surnom que Hugo lui donne | « **Napoléon le Petit** » |
+
+## Sept livres aux titres ironiques
+| Titre | Ce qu’il moque |
+| « La société est sauvée » | La propagande du régime |
+| « L’ordre est rétabli » | La répression |
+| « La famille est restaurée » | La morale officielle |
+| « La religion est glorifiée » | Le cléricalisme |
+| « L’autorité est sacrée » | Le pouvoir personnel |
+| « La stabilité est assurée » | L’immobilisme |
+| « Les sauveurs se sauveront » | La chute annoncée |
+
+Un dernier poème, « **Lux** », annonce l’**avenir lumineux**.
 
 ## Les poèmes célèbres
-« **Souvenir de la nuit du 4** » (un enfant tué par les balles, sa grand-mère qui le déshabille), « **L’expiation** » (Waterloo, la Bérézina, Sainte-Hélène — l’ombre du grand Napoléon écrasant le petit), « Ô soldats de l’an deux ! », « Chanson » et ses refrains populaires.
+| Poème | Ce qu’il montre |
+| « **Souvenir de la nuit du 4** » | Un **enfant tué par les balles**, sa **grand-mère qui le déshabille** |
+| « **L’expiation** » | Waterloo, la Bérézina, Sainte-Hélène — **l’ombre du grand Napoléon écrasant le petit** |
+| « Ô soldats de l’an deux ! » | L’épopée révolutionnaire |
+| « Chanson » | Des **refrains populaires** |
 
 ## À retenir
-Un recueil **polémique** total : satire, invective, ironie, épopée, chanson. Hugo y change de registre à chaque poème et invente une poésie **d’action**, faite pour circuler clandestinement. Il refusera l’amnistie de 1859 — « quand la liberté rentrera, je rentrerai » — et restera dix-neuf ans en exil.
+Un recueil **polémique total** : satire, invective, ironie, épopée, chanson.
+
+> Hugo **change de registre à chaque poème** et invente une poésie **d’action**, faite pour **circuler clandestinement**.
+
+Il **refusera l’amnistie de 1859** — « quand la liberté rentrera, je rentrerai » — et **restera dix-neuf ans en exil**.
 
 > « Et s’il n’en reste qu’un, je serai celui-là. »`,
           },
@@ -309,13 +496,27 @@ Un recueil **polémique** total : satire, invective, ironie, épopée, chanson. 
           lecon: {
             titre: 'Laforgue, 1885 — l’ironie contre le lyrisme',
             cours: `## Le recueil
-Publié à compte d’auteur en **1885** par un poète de vingt-cinq ans, mort de tuberculose deux ans plus tard. Cinquante « complaintes » qui reprennent la forme de la **chanson populaire** — la complainte de rue, avec refrains et couplets — pour dire l’ennui, la solitude, la lune, la mort et l’amour impossible : « Complainte de la Lune en province », « Complainte du pauvre jeune homme », « Complainte du roi de Thulé ».
+Publié **à compte d’auteur** en **1885** par un poète de **vingt-cinq ans**, **mort de tuberculose deux ans plus tard**.
+
+| La forme | Ce qu’elle emprunte |
+| **Cinquante « complaintes »** | La **chanson populaire** — la complainte de rue, avec **refrains et couplets** |
+| Ce qu’elle dit | L’**ennui**, la solitude, la **lune**, la mort, l’amour impossible |
+
+Titres : « Complainte de la Lune en province », « Complainte du pauvre jeune homme », « Complainte du roi de Thulé ».
 
 ## L’écriture
-Laforgue mélange les registres, invente des mots (« sangsuel », « éternullité », « violupté »), déforme les clichés, casse le vers de l’intérieur, mêle le vocabulaire savant et l’argot. Il est l’un des **inventeurs du vers libre**, avec ses *Derniers vers* (posthumes). L’ironie y est une politesse : elle empêche l’épanchement de devenir ridicule.
+| Procédé | Exemple ou effet |
+| Le **mélange des registres** | Vocabulaire savant **et** argot |
+| Les **mots inventés** | « sangsuel », « **éternullité** », « violupté » |
+| Les **clichés déformés** | Le vers **cassé de l’intérieur** |
+| Le **vers libre** | Laforgue en est l’un des **inventeurs**, avec ses *Derniers vers* (posthumes) |
+
+> L’**ironie** y est une **politesse** : elle **empêche l’épanchement de devenir ridicule**.
 
 ## À retenir
-Une influence immense, très supérieure à sa notoriété : **T. S. Eliot** revendiquait Laforgue, les surréalistes s’en réclamaient, et une grande part de la poésie moderne — celle qui rit d’elle-même en même temps qu’elle chante — vient de là.
+Une influence **immense**, **très supérieure à sa notoriété**.
+
+> **T. S. Eliot** le revendiquait, les **surréalistes** s’en réclamaient — et **une grande part de la poésie moderne**, celle **qui rit d’elle-même en même temps qu’elle chante**, **vient de là**.
 
 > « Ah ! que la Vie est quotidienne… »`,
           },
@@ -333,13 +534,32 @@ Une influence immense, très supérieure à sa notoriété : **T. S. Eliot** rev
           lecon: {
             titre: 'Rousseau, 1782-1789 — l’autobiographie moderne',
             cours: `## L’œuvre
-Douze livres, écrits entre 1765 et 1770, publiés **après la mort** de Rousseau (1782 pour les six premiers, 1789 pour les suivants). Le projet est annoncé dès la première page : « Je forme une entreprise qui n’eut jamais d’exemple… Je veux montrer à mes semblables un homme dans toute la vérité de la nature ; et cet homme, ce sera moi. »
+**Douze livres**, écrits entre **1765 et 1770**, publiés **après la mort** de Rousseau : **1782** pour les six premiers, **1789** pour les suivants.
+
+> Le projet est annoncé dès la première page : « Je forme une entreprise **qui n’eut jamais d’exemple**… Je veux montrer à mes semblables **un homme dans toute la vérité de la nature** ; et cet homme, **ce sera moi**. »
 
 ## Le contenu
-L’enfance à Genève et la lecture des romans, la fugue, Madame de Warens (« Maman »), les métiers, la musique, la montée à Paris, l’Encyclopédie, le succès du *Discours sur les sciences et les arts*, les enfants abandonnés aux Enfants-Trouvés, les brouilles avec Diderot, Voltaire et Hume, et la persécution — réelle et fantasmée — des dernières années. Deux épisodes célèbres : le **ruban volé** dont il accuse la servante Marion, et le **vol des pommes** chez son maître graveur.
+| Période | Ce qu’elle contient |
+| L’**enfance** à Genève | La **lecture des romans**, la fugue |
+| La jeunesse | **Madame de Warens** — « **Maman** » —, les métiers, la **musique** |
+| La montée à Paris | L’**Encyclopédie**, le succès du *Discours sur les sciences et les arts* |
+| L’aveu le plus lourd | Les **enfants abandonnés** aux Enfants-Trouvés |
+| Les ruptures | **Diderot**, **Voltaire**, **Hume** |
+| La fin | La **persécution** — réelle **et fantasmée** |
+
+| Deux épisodes célèbres | Ce qu’ils avouent |
+| Le **ruban volé** | Il en accuse la servante **Marion** |
+| Le **vol des pommes** | Chez son maître graveur |
 
 ## À retenir
-Le livre fonde l’**autobiographie moderne** : sincérité revendiquée, aveu des fautes, importance donnée à l’enfance et aux sensations, primauté du **sentiment** intérieur sur les faits. Il s’oppose aux *Essais* de Montaigne (qui se peint « en passant ») et annonce le romantisme.
+Le livre **fonde l’autobiographie moderne**.
+
+| Trait | Ce qu’il installe |
+| La **sincérité revendiquée** | Et l’**aveu des fautes** |
+| L’importance de l’**enfance** et des **sensations** | Le récit part de là |
+| La primauté du **sentiment intérieur** | Sur les **faits** |
+
+> Il s’**oppose** aux *Essais* de Montaigne — qui se peint « en passant » — et **annonce le romantisme**.
 
 > « Je sens mon cœur et je connais les hommes. »`,
           },
@@ -357,13 +577,29 @@ Le livre fonde l’**autobiographie moderne** : sincérité revendiquée, aveu d
           lecon: {
             titre: 'Hugo, 1856 — « les Mémoires d’une âme »',
             cours: `## L’architecture
-Six livres en deux ensembles : **Autrefois** (*Aurore*, *L’Âme en fleur*, *Les Luttes et les Rêves*) et **Aujourd’hui** (*Pauca meae*, *En marche*, *Au bord de l’infini*). Entre les deux, la mort de **Léopoldine**, noyée à Villequier en **1843** à dix-neuf ans. La préface donne la clé : « Ce livre doit être lu comme on lirait le livre d’un mort », et « **Quand je vous parle de moi, je vous parle de vous** ».
+| Ensemble | Ses livres |
+| **Autrefois** | *Aurore*, *L’Âme en fleur*, *Les Luttes et les Rêves* |
+| **Aujourd’hui** | *Pauca meae*, *En marche*, *Au bord de l’infini* |
+
+> Entre les deux : la mort de **Léopoldine**, **noyée à Villequier en 1843**, à **dix-neuf ans**.
+
+La préface donne la clé : « Ce livre doit être lu **comme on lirait le livre d’un mort** » — et « **Quand je vous parle de moi, je vous parle de vous** ».
 
 ## Les poèmes à connaître
-« Réponse à un acte d’accusation » (« Je mis un bonnet rouge au vieux dictionnaire »), « Vieille chanson du jeune temps », « Melancholia » (les enfants à l’usine), « **Demain, dès l’aube…** », « À Villequier », « Paroles sur la dune », « Ce que dit la bouche d’ombre ».
+| Poème | Ce qu’il porte |
+| « Réponse à un acte d’accusation » | « Je mis un **bonnet rouge** au vieux dictionnaire » |
+| « Vieille chanson du jeune temps » | L’amour manqué |
+| « **Melancholia** » | Les **enfants à l’usine** |
+| « **Demain, dès l’aube…** », « À Villequier » | Le **deuil** |
+| « Paroles sur la dune », « Ce que dit la bouche d’ombre » | La **méditation métaphysique** |
 
 ## À retenir
-Ce n’est pas une autobiographie de faits mais le **récit d’une vie intérieure** : enfance, amour, révolte sociale, deuil, méditation métaphysique. Hugo écrit en exil, à Guernesey. Le recueil réunit tous ses registres — lyrique, épique, satirique, visionnaire — et pratique une extraordinaire variété de mètres et de strophes.
+| Ce que le recueil n’est pas | Ce qu’il est |
+| Une autobiographie **de faits** | Le récit d’une **vie intérieure** |
+
+Enfance, amour, **révolte sociale**, deuil, métaphysique. Hugo écrit **en exil**, à **Guernesey**.
+
+> Le recueil réunit **tous ses registres** — lyrique, épique, satirique, visionnaire — et pratique une **extraordinaire variété de mètres et de strophes**.
 
 > « Un jour je vis, debout au bord des flots mouvants, passer, gonflant ses voiles, un rire… »`,
           },
@@ -381,13 +617,31 @@ Ce n’est pas une autobiographie de faits mais le **récit d’une vie intérie
           lecon: {
             titre: 'Vigny, 1864 — onze poèmes philosophiques',
             cours: `## Le recueil
-Publié **après la mort** de Vigny, en **1864**. Onze **poèmes philosophiques** écrits sur trente ans, dont chacun développe une idée par un **symbole** : « Les Destinées » (le poids du destin et la grâce), « **La Maison du berger** » (la nature indifférente, la femme aimée, la poésie comme refuge), « La Colère de Samson » (la trahison amoureuse), « **La Mort du loup** » (le stoïcisme), « Le Mont des Oliviers » (le silence de Dieu), « La Bouteille à la mer » (l’œuvre confiée à l’avenir), « L’Esprit pur » (la noblesse de l’esprit contre celle du sang).
+Publié **après la mort** de Vigny, en **1864** : **onze poèmes philosophiques** écrits **sur trente ans**.
+
+> Chacun développe **une idée par un symbole**.
+
+| Poème | Son idée |
+| « Les Destinées » | Le **poids du destin** et la grâce |
+| « **La Maison du berger** » | La **nature indifférente**, la femme aimée, la **poésie comme refuge** |
+| « La Colère de Samson » | La **trahison amoureuse** |
+| « **La Mort du loup** » | Le **stoïcisme** |
+| « Le Mont des Oliviers » | Le **silence de Dieu** |
+| « La Bouteille à la mer » | L’**œuvre confiée à l’avenir** |
+| « L’Esprit pur » | La **noblesse de l’esprit** contre celle du sang |
 
 ## La pensée
-Vigny est le plus **pessimiste** des grands romantiques : Dieu se tait, la nature est indifférente (« Je roule avec dédain, sans voir et sans entendir »), les hommes sont ingrats. Reste la **dignité** : ne pas se plaindre, faire son travail, transmettre. C’est la leçon de « La Mort du loup » : « Gémir, pleurer, prier est également lâche… souffre et meurs sans parler. »
+Vigny est le **plus pessimiste** des grands romantiques.
+
+| Constat | Le détail |
+| **Dieu se tait** | « Le Mont des Oliviers » |
+| La **nature est indifférente** | Elle « roule avec dédain, sans voir et sans entendre » |
+| Les hommes sont **ingrats** | — |
+
+> Reste la **dignité** : **ne pas se plaindre, faire son travail, transmettre**. C’est la leçon de « La Mort du loup » : « **Gémir, pleurer, prier est également lâche… souffre et meurs sans parler.** »
 
 ## À retenir
-Une poésie de la **pensée** et du symbole, plus austère que celle de Hugo ou de Lamartine, où le poème est la démonstration d’une idée par une image.
+Une poésie de la **pensée** et du **symbole**, **plus austère** que celle de Hugo ou de Lamartine — où le **poème est la démonstration d’une idée par une image**.
 
 > « Seul le silence est grand ; tout le reste est faiblesse. »`,
           },
@@ -405,10 +659,30 @@ Une poésie de la **pensée** et du symbole, plus austère que celle de Hugo ou 
           lecon: {
             titre: 'Marivaux, 1737 — l’amour organisé par un valet',
             cours: `## L’histoire
-Comédie en **trois actes et en prose**. **Dorante**, ruiné, aime en secret **Araminte**, riche veuve. Son ancien valet **Dubois**, désormais au service d’Araminte, lui obtient la place d’intendant et mène toute l’opération. Il révèle « en confidence » à Araminte que Dorante est fou d’amour pour elle depuis qu’il l’a aperçue à l’Opéra. Suivent le **portrait** d’Araminte trouvé chez Dorante, une fausse lettre, la jalousie de **Marton**, la pression de **Madame Argante** et du **comte Dorimont** qui veulent un beau mariage. Araminte teste Dorante en lui dictant une lettre annonçant son propre mariage — scène cruelle — puis avoue. Elle épousera un homme sans fortune.
+Comédie en **trois actes et en prose**.
+
+| Personnage | Sa position |
+| **Dorante** | **Ruiné**, il aime en secret **Araminte**, riche veuve |
+| **Dubois**, son ancien valet | Désormais au service d’Araminte : il lui obtient la place d’**intendant** et **mène toute l’opération** |
+| **Madame Argante** et le **comte Dorimont** | Ils veulent un **beau mariage** |
+| **Marton** | Elle est **jalouse** |
+
+| Le stratagème | Le coup |
+| La **confidence** initiale | Dorante serait **fou d’amour** depuis l’Opéra |
+| Le **portrait** d’Araminte | Trouvé chez Dorante |
+| La **fausse lettre** | Elle relance |
+| L’**épreuve** | Araminte lui **dicte une lettre annonçant son propre mariage** — scène cruelle |
+| La fin | **Elle avoue.** Elle épousera **un homme sans fortune** |
 
 ## À retenir
-Parcours possible : **théâtre et stratagème**. Dubois ne ment presque jamais : il choisit **quand** la vérité est dite. Le stratagème ne fabrique pas le sentiment, il lève les obstacles — mais la pièce laisse la lecture inverse ouverte, et c’est ce qui en fait un excellent sujet de dissertation. L’argent y est partout : la difficulté n’est pas d’aimer, c’est de pouvoir le dire.
+Parcours possible : **théâtre et stratagème**.
+
+| Ce que Dubois fait | Ce qu’il ne fait pas |
+| Il **choisit quand la vérité est dite** | Il **ne ment presque jamais** |
+
+> Le stratagème **ne fabrique pas le sentiment** : il **lève les obstacles**. Mais la pièce **laisse la lecture inverse ouverte** — et c’est ce qui en fait un excellent sujet de dissertation.
+
+> L’**argent** y est partout : **la difficulté n’est pas d’aimer, c’est de pouvoir le dire**.
 
 > « Nous sommes convenus de nos faits. »`,
           },
@@ -426,13 +700,29 @@ Parcours possible : **théâtre et stratagème**. Dubois ne ment presque jamais 
           lecon: {
             titre: 'Gide, 1925 — le seul livre qu’il appelait « roman »',
             cours: `## L’histoire
-Plusieurs intrigues entrelacées. **Bernard Profitendieu**, découvrant qu’il est un enfant illégitime, quitte sa famille ; il devient secrétaire de l’écrivain **Édouard**, son oncle par alliance, qui tient un **journal** et prépare un roman intitulé *Les Faux-Monnayeurs*. Autour : **Olivier**, ami de Bernard, attiré par le cynique comte de **Passavant** ; le pasteur **Vedel** et sa famille ; une bande de lycéens qui écoulent de la **fausse monnaie** ; et le petit **Boris**, poussé au suicide par un pacte d’enfants, sous les yeux de son grand-père.
+Plusieurs intrigues **entrelacées**.
+
+| Personnage | Ce qui le porte |
+| **Bernard Profitendieu** | Découvrant qu’il est un **enfant illégitime**, il quitte sa famille |
+| **Édouard** | Écrivain, oncle par alliance : il tient un **journal** et prépare un roman intitulé *Les Faux-Monnayeurs* |
+| **Olivier** | Ami de Bernard, **attiré par le cynique comte de Passavant** |
+| Le pasteur **Vedel** et sa famille | La façade religieuse |
+| Une bande de lycéens | Ils écoulent de la **fausse monnaie** |
+| Le petit **Boris** | Poussé au **suicide** par un **pacte d’enfants**, **sous les yeux de son grand-père** |
 
 ## La construction
-Gide y pratique la **mise en abyme** : un roman qui contient un romancier écrivant le même roman, et le journal de ce romancier. Le narrateur intervient, doute, commente ses propres personnages (« J’aurais aimé que… »). Aucun point de vue ne domine.
+> **Mise en abyme** : un roman **qui contient un romancier écrivant le même roman** — **et le journal de ce romancier**.
+
+| Ce que le narrateur fait | Son effet |
+| Il **intervient**, doute, **commente ses propres personnages** | « J’aurais aimé que… » |
+| **Aucun point de vue ne domine** | Le lecteur reconstruit |
 
 ## À retenir
-Publié en **1925**, accompagné l’année suivante du *Journal des faux-monnayeurs*. Le titre est une métaphore : la fausse monnaie, ce sont aussi les sentiments faux, les vertus affichées, les êtres qui se jouent la comédie. Roman de la **sincérité** impossible et de l’adolescence, il a ouvert la voie à toutes les expérimentations romanesques du siècle.
+Publié en **1925**, accompagné l’année suivante du *Journal des faux-monnayeurs*.
+
+> Le titre est une **métaphore** : la fausse monnaie, ce sont aussi les **sentiments faux**, les **vertus affichées**, **les êtres qui se jouent la comédie**.
+
+Roman de la **sincérité impossible** et de l’**adolescence**, il a **ouvert la voie à toutes les expérimentations romanesques du siècle**.
 
 > « Je voudrais que ce roman fût un carrefour de problèmes. »`,
           },
@@ -450,16 +740,30 @@ Publié en **1925**, accompagné l’année suivante du *Journal des faux-monnay
           lecon: {
             titre: 'Baudelaire, 1857 — spleen et idéal',
             cours: `## Le recueil
-Publié en **1857**, condamné la même année pour outrage aux bonnes mœurs : **six pièces** sont retranchées. Édition augmentée et réorganisée en **1861**. Six sections : **Spleen et Idéal**, **Tableaux parisiens** (ajoutée en 1861), **Le Vin**, **Fleurs du mal**, **Révolte**, **La Mort**.
+Publié en **1857**, **condamné la même année** pour outrage aux bonnes mœurs : **six pièces** retranchées. Édition **augmentée et réorganisée** en **1861**.
 
-## Les notions
-- Le **spleen** : angoisse sans objet, ennui métaphysique, temps qui écrase (« Quand le ciel bas et lourd pèse comme un couvercle »).
-- L’**idéal** : l’élévation par l’art, la beauté, le voyage rêvé (« L’Invitation au voyage »).
-- Les **correspondances** : la nature est « une forêt de symboles » où parfums, couleurs et sons se répondent.
-- L’**alchimie poétique** : « Tu m’as donné ta boue et j’en ai fait de l’or » — la beauté naît du travail de la forme, non du sujet (« Une Charogne »).
+| Section | Ce qu’elle porte |
+| **Spleen et Idéal** | La plus longue : la tension centrale |
+| **Tableaux parisiens** | Ajoutée en **1861** : la ville moderne |
+| **Le Vin** | L’ivresse |
+| **Fleurs du mal** | La transgression |
+| **Révolte** | Le blasphème |
+| **La Mort** | Le dernier voyage |
+
+## Les quatre notions
+| Notion | Sa définition |
+| Le **spleen** | Angoisse **sans objet**, ennui métaphysique — « Quand le ciel bas et lourd pèse comme un **couvercle** » |
+| L’**idéal** | L’élévation par l’art, la beauté, le **voyage rêvé** — « L’Invitation au voyage » |
+| Les **correspondances** | La nature est « une **forêt de symboles** » : parfums, couleurs et sons **se répondent** |
+| L’**alchimie poétique** | « Tu m’as donné ta **boue** et j’en ai fait de l’**or** » — la beauté naît **du travail de la forme, non du sujet** |
+
+« Une Charogne » en est la démonstration.
 
 ## À retenir
-Baudelaire est **classique** de facture (sonnets, alexandrins) et **révolutionnaire** de matière (la ville, la laideur, le transitoire). Il invente le regard du **flâneur** (« À une passante ») et ouvre la modernité poétique. La condamnation ne sera annulée qu’en **1949**.
+| Baudelaire est… | Et il est… |
+| **Classique de facture** : sonnets, alexandrins | **Révolutionnaire de matière** : la ville, la laideur, le transitoire |
+
+> Il invente le regard du **flâneur** — « À une passante » — et **ouvre la modernité poétique**. La condamnation ne sera **annulée qu’en 1949**.
 
 > « Au fond de l’Inconnu pour trouver du nouveau ! »`,
           },
@@ -477,10 +781,32 @@ Baudelaire est **classique** de facture (sonnets, alexandrins) et **révolutionn
           lecon: {
             titre: 'Molière, 1671 — le valet et le sac',
             cours: `## L’histoire
-Comédie en **trois actes et en prose**. Deux jeunes gens ont profité de l’absence de leurs pères pour s’engager : **Octave** a épousé secrètement **Hyacinte**, **Léandre** aime la « bohémienne » **Zerbinette** qu’il faut racheter. Les pères, **Argante** et **Géronte**, reviennent avec d’autres projets de mariage. Le valet **Scapin** prend l’affaire en main : il extorque de l’argent à Argante par un faux procès, puis à Géronte en lui faisant croire que son fils est retenu sur une **galère turque** — « Que diable allait-il faire dans cette galère ? ». Pour se venger d’une insulte, il enferme Géronte dans un **sac** et le roue de coups en imitant plusieurs agresseurs. Le dénouement révèle que les deux jeunes filles sont les filles perdues des deux pères : tout s’arrange, et Scapin obtient son pardon en feignant d’être mourant.
+Comédie en **trois actes et en prose**.
+
+| Jeune homme | Ce qu’il a fait en l’absence de son père |
+| **Octave** | Il a **épousé secrètement Hyacinte** |
+| **Léandre** | Il aime la « bohémienne » **Zerbinette**, qu’il faut **racheter** |
+
+Les pères, **Argante** et **Géronte**, reviennent **avec d’autres projets de mariage**.
+
+| La fourberie de Scapin | Comment elle marche |
+| Contre **Argante** | Un **faux procès** |
+| Contre **Géronte** | Son fils serait **retenu sur une galère turque** — « **Que diable allait-il faire dans cette galère ?** » |
+| La vengeance personnelle | Il enferme Géronte dans un **sac** et le **roue de coups** en **imitant plusieurs agresseurs** |
+
+| Le dénouement | Ce qu’il révèle |
+| Les deux jeunes filles | Ce sont les **filles perdues des deux pères** |
+| Scapin | Il obtient son **pardon en feignant d’être mourant** |
 
 ## À retenir
-Retour assumé à la **farce** et à la **commedia dell’arte** (Scapin vient de Scapino) chez un Molière au sommet. Boileau le lui reprochera. Comique de **gestes** (la scène du sac), de **mots** (la réplique de la galère), de **caractère**. Le valet y est un artiste de l’intrigue, moteur de toute la pièce.
+Un **retour assumé à la farce** et à la *commedia dell’arte* — **Scapin** vient de **Scapino** — chez un Molière **au sommet**. **Boileau** le lui reprochera.
+
+| Type de comique | La scène |
+| De **gestes** | La scène du **sac** |
+| De **mots** | La réplique de la **galère** |
+| De **caractère** | Les deux pères |
+
+> Le valet y est un **artiste de l’intrigue** : **le moteur de toute la pièce**.
 
 > « Que diable allait-il faire dans cette galère ? »`,
           },
@@ -498,10 +824,29 @@ Retour assumé à la **farce** et à la **commedia dell’arte** (Scapin vient d
           lecon: {
             titre: 'Camus, 1949 — peut-on tuer pour une cause juste ?',
             cours: `## L’histoire
-Cinq actes, d’après un fait réel : à Moscou, en **1905**, un groupe de **socialistes révolutionnaires** prépare l’attentat contre le **grand-duc Serge**. **Kaliayev**, poète, doit lancer la bombe. Au premier passage, il **renonce** : les neveux du grand-duc sont dans la calèche. **Stepan**, endurci par la prison, lui reproche cette faiblesse au nom de l’efficacité révolutionnaire ; **Dora**, qui aime Kaliayev, et **Annenkov**, le chef, lui donnent raison. Deux jours plus tard, l’attentat réussit. En prison, Kaliayev refuse la grâce que lui propose la grande-duchesse et le marchandage du chef de la police. Il est pendu. Dora demande à lancer la prochaine bombe.
+**Cinq actes**, d’après un **fait réel** : à **Moscou**, en **1905**, un groupe de **socialistes révolutionnaires** prépare l’attentat contre le **grand-duc Serge**.
+
+| Personnage | Sa position |
+| **Kaliayev**, poète | Il doit **lancer la bombe** |
+| **Stepan**, endurci par la prison | Au nom de l’**efficacité révolutionnaire** |
+| **Dora**, qui aime Kaliayev | Elle **lui donne raison** |
+| **Annenkov**, le chef | Aussi |
+
+| Étape | Ce qui se passe |
+| Le premier passage | Il **renonce** : les **neveux du grand-duc** sont dans la calèche |
+| Le reproche | **Stepan** lui reproche cette « faiblesse » |
+| Deux jours plus tard | **L’attentat réussit** |
+| En prison | Il **refuse la grâce** que lui propose la grande-duchesse, et le **marchandage** du chef de la police |
+| La fin | Il est **pendu**. **Dora demande à lancer la prochaine bombe** |
 
 ## À retenir
-Pièce du cycle de la **révolte** (avec *L’Homme révolté*, 1951). Camus y pose la question centrale de son époque : la fin justifie-t-elle les moyens ? Sa réponse : le révolté doit accepter de **payer de sa vie** le meurtre qu’il commet, et refuser de tuer des innocents — au risque d’être inefficace. Théâtre d’idées, dialogué comme un procès.
+Pièce du cycle de la **révolte**, avec *L’Homme révolté* (1951).
+
+| La question | La réponse de Camus |
+| La **fin justifie-t-elle les moyens** ? | Le révolté doit accepter de **payer de sa vie** le meurtre qu’il commet |
+| Et les innocents ? | **Refuser de les tuer** — **au risque d’être inefficace** |
+
+Théâtre d’**idées**, **dialogué comme un procès**.
 
 > « Nous tuons pour bâtir un monde où plus jamais personne ne tuera. »`,
           },
@@ -519,10 +864,25 @@ Pièce du cycle de la **révolte** (avec *L’Homme révolté*, 1951). Camus y p
           lecon: {
             titre: 'Laclos, 1782 — la guerre des lettres',
             cours: `## L’histoire
-Roman **épistolaire** en **175 lettres**. La **marquise de Merteuil** et le **vicomte de Valmont**, anciens amants devenus complices, mènent deux entreprises de séduction comme des campagnes militaires. Merteuil veut se venger de Gercourt en faisant déniaiser sa future épouse, la jeune **Cécile de Volanges**, sortie du couvent ; Valmont, lui, veut séduire la **présidente de Tourvel**, femme pieuse et mariée — pari dont l’enjeu est une nuit avec Merteuil. Valmont réussit… et tombe amoureux. Merteuil, jalouse, exige qu’il rompe par une lettre cruelle (« ce n’est pas ma faute »). Tourvel en meurt. Valmont est tué en duel par **Danceny**, à qui il lègue les lettres de Merteuil. Démasquée, sifflée à l’Opéra, ruinée, défigurée par la petite vérole, la marquise s’enfuit.
+Roman **épistolaire** en **175 lettres**. La **marquise de Merteuil** et le **vicomte de Valmont**, anciens amants devenus **complices**, mènent deux séductions **comme des campagnes militaires**.
+
+| Qui | Son entreprise |
+| **Merteuil** | Se venger de Gercourt en faisant **déniaiser sa future épouse**, la jeune **Cécile de Volanges**, sortie du couvent |
+| **Valmont** | Séduire la **présidente de Tourvel**, femme **pieuse et mariée** — **l’enjeu du pari est une nuit avec Merteuil** |
+
+| Le retournement | Ce qui se passe |
+| Valmont réussit | **Et tombe amoureux** |
+| **Merteuil**, jalouse | Elle exige qu’il **rompe par une lettre cruelle** — « **ce n’est pas ma faute** » |
+| **Tourvel** | Elle **en meurt** |
+| **Valmont** | **Tué en duel par Danceny**, à qui il **lègue les lettres de Merteuil** |
+| **Merteuil** | **Démasquée**, **sifflée à l’Opéra**, **ruinée**, **défigurée par la petite vérole** : elle s’enfuit |
 
 ## À retenir
-Chef-d’œuvre de la **polyphonie** : chaque lettre a son style, son destinataire et sa stratégie ; le lecteur reconstitue seul la vérité. La marquise, dans sa **lettre 81**, décrit l’éducation qu’elle s’est donnée pour survivre dans un monde d’hommes : c’est l’un des plus grands textes féministes du siècle. Laclos, officier d’artillerie, écrit un roman construit comme un plan de bataille.
+Chef-d’œuvre de la **polyphonie** : **chaque lettre a son style, son destinataire et sa stratégie** — **le lecteur reconstitue seul la vérité**.
+
+> La **lettre 81** de la marquise décrit l’**éducation qu’elle s’est donnée pour survivre dans un monde d’hommes** : **l’un des plus grands textes féministes du siècle**.
+
+**Laclos**, **officier d’artillerie**, écrit un roman **construit comme un plan de bataille**.
 
 > « J’ai été punie par où j’avais péché. »`,
           },
@@ -540,10 +900,26 @@ Chef-d’œuvre de la **polyphonie** : chaque lettre a son style, son destinatai
           lecon: {
             titre: 'Sartre, 1948 — l’intellectuel et le parti',
             cours: `## L’histoire
-Sept tableaux, en grande partie en **flash-back**. **Hugo**, jeune bourgeois devenu communiste dans un pays imaginaire, l’**Illyrie**, en 1943, sort de prison. Le parti doit décider s’il faut le liquider. On revient deux ans en arrière : chargé d’assassiner **Hoederer**, dirigeant accusé de trahison parce qu’il veut s’allier aux conservateurs et au régent, Hugo devient son secrétaire, l’admire, hésite. Hoederer lui explique qu’un homme politique doit accepter de se salir les mains — « **Moi, j’ai les mains sales. Jusqu’aux coudes.** » Finalement, Hugo le tue, mais dans un accès de jalousie : il a surpris sa femme **Jessica** dans ses bras. Or, entre-temps, la ligne d’Hoederer est devenue celle du parti, qui l’a réhabilité. Sommé de renier son acte pour vivre, Hugo refuse et se déclare « **non récupérable** ».
+**Sept tableaux**, en grande partie en **flash-back**.
+
+| Étape | Ce qui se passe |
+| Le présent | **Hugo**, jeune bourgeois devenu communiste en **Illyrie**, sort de prison ; le parti doit décider **s’il faut le liquider** |
+| Deux ans plus tôt | Chargé d’**assassiner Hoederer**, dirigeant accusé de trahison **parce qu’il veut s’allier aux conservateurs et au régent** |
+| Le trouble | Devenu son **secrétaire**, Hugo **l’admire** et **hésite** |
+| La leçon d’Hoederer | Un homme politique doit **accepter de se salir les mains** — « **Moi, j’ai les mains sales. Jusqu’aux coudes.** » |
+| L’acte | Il le tue — **mais dans un accès de jalousie** : il a **surpris sa femme Jessica dans ses bras** |
+| L’ironie | Entre-temps, **la ligne d’Hoederer est devenue celle du parti**, qui l’a **réhabilité** |
+| La fin | Sommé de **renier son acte pour vivre**, Hugo **refuse** et se déclare « **non récupérable** » |
 
 ## À retenir
-Pièce **politique** créée en 1948, en pleine guerre froide, longtemps interdite de représentation par Sartre lui-même parce qu’elle était utilisée par l’anticommunisme. Sujets : la **pureté** contre l’**efficacité**, l’intellectuel face à l’action, et l’ambiguïté des motifs — Hugo ne sait pas lui-même pourquoi il a tiré.
+Pièce **politique** créée en **1948**, en pleine **guerre froide**.
+
+> **Sartre lui-même en interdit longtemps la représentation**, parce qu’elle était **utilisée par l’anticommunisme**.
+
+| Sujet | Ce qui s’oppose |
+| La **pureté** contre l’**efficacité** | Hugo contre Hoederer |
+| L’**intellectuel** face à l’**action** | — |
+| L’**ambiguïté des motifs** | **Hugo ne sait pas lui-même pourquoi il a tiré** |
 
 > « Un intellectuel, ce n’est pas quelqu’un de propre. »`,
           },
@@ -561,10 +937,27 @@ Pièce **politique** créée en 1948, en pleine guerre froide, longtemps interdi
           lecon: {
             titre: 'Hugo, 1862 — le roman du peuple et de la rédemption',
             cours: `## L’histoire
-**Jean Valjean**, bagnard libéré après **dix-neuf ans** pour un pain volé, est accueilli par l’évêque **Myriel**, qui lui offre les chandeliers qu’il vient de lui voler et le rend à la vie. Devenu Monsieur Madeleine, maire et industriel, il recueille **Cosette**, fille de **Fantine**, prostituée morte de misère, en l’arrachant aux **Thénardier**. Poursuivi sans relâche par l’inspecteur **Javert**, il fuit à Paris, se cache au couvent, puis rue Plumet. **Marius**, jeune républicain, aime Cosette. Juin **1832** : insurrection, barricade de la rue de la Chanvrerie, mort de **Gavroche** et d’**Éponine**. Valjean sauve Marius par les **égouts**, épargne Javert — qui, incapable de penser un criminel bon, se jette dans la Seine. Valjean meurt, réconcilié, après avoir tout dit.
+| Étape | Ce qui se passe |
+| Le bagne | **Jean Valjean**, libéré après **dix-neuf ans** **pour un pain volé** |
+| La rédemption | L’évêque **Myriel** lui **offre les chandeliers qu’il vient de lui voler** — et **le rend à la vie** |
+| L’ascension | Devenu **Monsieur Madeleine**, maire et industriel |
+| Le sauvetage | Il recueille **Cosette**, fille de **Fantine**, prostituée morte de misère, en l’arrachant aux **Thénardier** |
+| La traque | L’inspecteur **Javert**, sans relâche |
+| Paris | La fuite, le couvent, la rue Plumet ; **Marius**, jeune républicain, aime Cosette |
+| **Juin 1832** | L’insurrection, la **barricade** de la rue de la Chanvrerie, la mort de **Gavroche** et d’**Éponine** |
+| Les égouts | Valjean **sauve Marius** — et **épargne Javert** |
+| Javert | **Incapable de penser un criminel bon**, il **se jette dans la Seine** |
+| La fin | Valjean meurt, **réconcilié**, après avoir tout dit |
 
 ## À retenir
-Roman-monde en cinq parties, publié en **1862** depuis l’exil, immense succès populaire immédiat. Hugo y mêle récit, digressions historiques (Waterloo), sociales (les égouts, l’argot, les couvents) et politiques : « tant qu’il existera… une damnation sociale créant artificiellement des enfers, des livres de la nature de celui-ci pourront ne pas être inutiles ».
+Roman-monde en **cinq parties**, publié en **1862** **depuis l’exil**, **immense succès populaire immédiat**.
+
+| Ce que Hugo y mêle | Exemples |
+| Le **récit** | Les destins croisés |
+| Les **digressions historiques** | **Waterloo** |
+| Les **digressions sociales** | Les **égouts**, l’**argot**, les couvents |
+
+> Son but est **politique** : « tant qu’il existera… une **damnation sociale** créant artificiellement des enfers, **des livres de la nature de celui-ci pourront ne pas être inutiles** ».
 
 > « Il n’y a ni mauvaises herbes ni mauvais hommes. Il n’y a que de mauvais cultivateurs. »`,
           },
@@ -582,13 +975,27 @@ Roman-monde en cinq parties, publié en **1862** depuis l’exil, immense succè
           lecon: {
             titre: 'Sartre, 1964 — une enfance démontée',
             cours: `## L’œuvre
-Autobiographie en deux parties : « **Lire** » et « **Écrire** ». Sartre y raconte ses dix premières années. Orphelin de père très tôt, il grandit chez son grand-père **Charles Schweitzer**, professeur d’allemand, dans un appartement plein de livres. Enfant unique adulé, il joue le rôle qu’on attend de lui : celui de l’enfant prodige. Il lit avant de comprendre, écrit des romans d’aventures recopiés, et se persuade qu’il est **destiné** à écrire.
+Autobiographie en **deux parties** : « **Lire** » et « **Écrire** ». Sartre y raconte ses **dix premières années**.
+
+| Élément | Le détail |
+| Le père | **Mort très tôt** |
+| Le foyer | Chez son grand-père **Charles Schweitzer**, professeur d’allemand, **dans un appartement plein de livres** |
+| L’enfant | **Unique et adulé** : il **joue le rôle qu’on attend de lui** — l’**enfant prodige** |
+| Ce qu’il fait | Il **lit avant de comprendre**, écrit des **romans d’aventures recopiés** |
+| Ce qu’il se persuade | Qu’il est **destiné** à écrire |
 
 ## Le regard rétrospectif
-Le livre n’est pas nostalgique : c’est une **démolition**. Sartre y traque la **comédie** qu’il jouait, la « névrose littéraire » qui lui a fait prendre l’écriture pour un salut et un mandat sacré. Il conclut qu’il s’est trompé pendant trente ans, et que la littérature ne sauve personne — mais il ajoute : « Je continue d’écrire. Que faire d’autre ? »
+| Ce que le livre n’est pas | Ce qu’il est |
+| **Nostalgique** | Une **démolition** |
+
+> Sartre y traque la **comédie** qu’il jouait, la « **névrose littéraire** » qui lui a fait **prendre l’écriture pour un salut et un mandat sacré**.
+
+Il conclut qu’il **s’est trompé pendant trente ans** — et que **la littérature ne sauve personne**. Mais il ajoute : « **Je continue d’écrire. Que faire d’autre ?** »
 
 ## À retenir
-Écrit dans une prose **brillante et ironique**, c’est paradoxalement le plus beau livre d’un auteur qui règle son compte à la beauté littéraire. Sartre **refuse le prix Nobel** en 1964, l’année même de sa parution.
+Écrit dans une prose **brillante et ironique** : **paradoxalement le plus beau livre d’un auteur qui règle son compte à la beauté littéraire**.
+
+> Sartre **refuse le prix Nobel** en **1964** — **l’année même de sa parution**.
 
 > « J’ai commencé ma vie comme je la finirai sans doute : au milieu des livres. »`,
           },
@@ -606,10 +1013,26 @@ Le livre n’est pas nostalgique : c’est une **démolition**. Sartre y traque 
           lecon: {
             titre: 'Sartre, 1943 — Oreste sous l’Occupation',
             cours: `## La pièce
-Reprise du mythe des Atrides, créée à **Paris en 1943**, sous l’Occupation. À **Argos**, quinze ans après le meurtre d’Agamemnon, la ville est couverte de **mouches** et vit dans le remords organisé : **Égisthe** et **Clytemnestre** entretiennent le repentir collectif, avec la complicité de **Jupiter**, pour tenir le peuple. **Oreste** revient, étranger, libre et sans attaches, d’abord tenté de repartir. Sa sœur **Électre** attend la vengeance. Oreste tue Égisthe et Clytemnestre — puis, contrairement à Électre qui s’effondre dans le remords, il **assume** entièrement son acte, refuse le pardon de Jupiter et quitte la ville en entraînant les mouches derrière lui, comme le joueur de flûte de Hamelin.
+Reprise du mythe des **Atrides**, créée à **Paris en 1943** — **sous l’Occupation**.
+
+| Élément | Ce qu’il est |
+| **Argos**, quinze ans après le meurtre d’Agamemnon | La ville est **couverte de mouches** et vit dans le **remords organisé** |
+| **Égisthe** et **Clytemnestre** | Ils **entretiennent le repentir collectif** — **pour tenir le peuple** |
+| **Jupiter** | Leur **complice** |
+| **Électre** | Elle **attend la vengeance** |
+| **Oreste** | Il revient **étranger, libre et sans attaches** — d’abord **tenté de repartir** |
+
+| Le dénouement | Ce qui distingue les deux |
+| **Oreste** tue Égisthe et Clytemnestre | Il **assume entièrement son acte** |
+| **Électre** | Elle **s’effondre dans le remords** |
+| La fin | Il **refuse le pardon de Jupiter** et **quitte la ville en entraînant les mouches** — comme le **joueur de flûte de Hamelin** |
 
 ## À retenir
-Pièce **existentialiste** : l’homme est libre, il n’y a pas de nature humaine, et assumer ses actes est la seule dignité. Sous l’Occupation, le message était clair pour qui savait lire : refuser le remords et la résignation organisés par le pouvoir. Sartre y oppose la liberté à toute autorité, y compris divine.
+Pièce **existentialiste** : **l’homme est libre**, il n’y a **pas de nature humaine**, et **assumer ses actes est la seule dignité**.
+
+> Sous l’Occupation, le message était **clair pour qui savait lire** : **refuser le remords et la résignation organisés par le pouvoir**.
+
+Sartre y oppose la **liberté** à **toute autorité — y compris divine**.
 
 > « Je suis ma liberté ! À peine m’as-tu créé que j’ai cessé de t’appartenir. »`,
           },
@@ -627,13 +1050,25 @@ Pièce **existentialiste** : l’homme est libre, il n’y a pas de nature humai
           lecon: {
             titre: 'Gide, 1897 — « Nathanaël, je t’enseignerai la ferveur »',
             cours: `## L’œuvre
-Ni roman, ni essai, ni recueil : un livre **inclassable**, fait de proses, de fragments, de rondes, de journaux de voyage et d’apostrophes. Le narrateur s’adresse à un disciple imaginaire, **Nathanaël**, et lui enseigne le **désir**, la disponibilité, la ferveur, l’attention au monde sensible : les fruits, la soif, le vent, les villes d’Afrique du Nord (Biskra, Alger), les jardins.
+**Ni roman, ni essai, ni recueil** : un livre **inclassable** — proses, fragments, rondes, journaux de voyage, apostrophes.
+
+| L’adresse | Ce qui est enseigné |
+| À un disciple imaginaire, **Nathanaël** | Le **désir**, la **disponibilité**, la **ferveur** |
+| Le monde sensible | Les fruits, la **soif**, le vent, les villes d’Afrique du Nord — **Biskra**, Alger — les jardins |
 
 ## Le message
-Refuser les possessions, les habitudes, les familles, les doctrines : « **Familles, je vous hais !** » Et surtout ne pas se laisser enfermer par le livre lui-même : la dernière page ordonne à Nathanaël de le **jeter** — « Que mon livre t’enseigne à t’intéresser plus à toi qu’à lui-même, puis à tout le reste plus qu’à toi. »
+Refuser les **possessions**, les **habitudes**, les **familles**, les **doctrines** : « **Familles, je vous hais !** »
+
+> Et surtout **ne pas se laisser enfermer par le livre lui-même** : la dernière page ordonne à Nathanaël de le **jeter** — « Que mon livre t’enseigne à t’intéresser **plus à toi qu’à lui-même**, puis à **tout le reste plus qu’à toi** ».
 
 ## À retenir
-Publié en **1897**, le livre passe d’abord inaperçu (une cinquantaine d’exemplaires vendus en dix ans), puis devient le bréviaire de deux générations, après 1918 puis après 1945. Il marque le tournant de Gide, sorti du symbolisme et de la contrainte protestante par un voyage en Afrique du Nord. Prose rythmée, presque poème.
+| Sa réception | Le détail |
+| À sa parution, **1897** | **Inaperçu** — une cinquantaine d’exemplaires vendus en dix ans |
+| Ensuite | Le **bréviaire de deux générations** : **après 1918**, puis **après 1945** |
+
+> Il marque le **tournant de Gide** : sorti du **symbolisme** et de la **contrainte protestante** **par un voyage en Afrique du Nord**.
+
+Prose **rythmée**, **presque poème**.
 
 > « Nathanaël, je t’enseignerai la ferveur. »`,
           },
@@ -651,10 +1086,30 @@ Publié en **1897**, le livre passe d’abord inaperçu (une cinquantaine d’ex
           lecon: {
             titre: 'Racine, 1668 — l’unique comédie du tragédien',
             cours: `## La pièce
-Trois actes en vers, inspirés des *Guêpes* d’**Aristophane** : la seule **comédie** de Racine. Le juge **Dandin** est atteint d’une manie du jugement si forte que son fils **Léandre** doit l’enfermer pour l’empêcher de courir au tribunal ; le vieux juge tente de s’évader par la fenêtre et par la cave. La **comtesse de Pimbesche**, plaideuse professionnelle, et **Chicanneau**, bourgeois processif, s’injurient à qui mieux mieux. Pour calmer Dandin, on organise un faux procès à domicile : celui d’un **chien**, Citron, accusé d’avoir mangé un chapon. L’avocat **Petit Jean** plaide, **L’Intimé** répond en style noble, et l’on produit les **chiots** du prévenu pour attendrir le tribunal. Dandin acquitte, épuisé.
+**Trois actes en vers**, inspirés des *Guêpes* d’**Aristophane** : **la seule comédie de Racine**.
+
+| Personnage | Sa manie |
+| Le juge **Dandin** | Une **manie du jugement** si forte que son fils **Léandre** doit **l’enfermer** — il tente de **s’évader par la fenêtre et par la cave** |
+| La **comtesse de Pimbesche** | **Plaideuse professionnelle** |
+| **Chicanneau** | Bourgeois **processif** — ils s’injurient à qui mieux mieux |
+
+| Le faux procès | Ce qui s’y passe |
+| L’accusé | Un **chien**, **Citron**, accusé d’avoir **mangé un chapon** |
+| **Petit Jean** | Il plaide |
+| **L’Intimé** | Il répond **en style noble** |
+| La pièce à conviction | On produit les **chiots du prévenu** — **pour attendrir le tribunal** |
+| La fin | **Dandin acquitte, épuisé** |
 
 ## À retenir
-Une satire de la **justice** et de la manie procédurière, portée par un comique de mots (le pastiche des plaidoiries), de gestes et de caractère. On y trouve le fameux « Que de discours ! » et la parodie de l’éloquence judiciaire. Racine n’écrira plus de comédie : c’est une récréation, mais une récréation de virtuose.
+Une satire de la **justice** et de la **manie procédurière**.
+
+| Type de comique | Où |
+| De **mots** | Le **pastiche des plaidoiries** |
+| De **gestes** et de **caractère** | La fuite de Dandin, les chiots |
+
+On y trouve le fameux « **Que de discours !** » et la **parodie de l’éloquence judiciaire**.
+
+> Racine **n’écrira plus de comédie** : c’est une **récréation** — mais **une récréation de virtuose**.
 
 > « Ce que je sais le mieux, c’est mon commencement. »`,
           },
@@ -672,13 +1127,25 @@ Une satire de la **justice** et de la manie procédurière, portée par un comiq
           lecon: {
             titre: 'Verlaine, 1884 — six portraits qui font entrer six poètes dans l’histoire',
             cours: `## L’œuvre
-Une série d’**essais-portraits** publiés en revue puis en volume en **1884**, complétés en 1888. Verlaine y présente des poètes alors inconnus ou méprisés, en citant longuement leurs textes : **Tristan Corbière**, **Arthur Rimbaud**, **Stéphane Mallarmé**, puis, dans la seconde édition, **Marceline Desbordes-Valmore**, **Villiers de L’Isle-Adam** et « **Pauvre Lelian** » — anagramme de Paul Verlaine lui-même.
+Une série d’**essais-portraits** publiés en revue, puis en volume en **1884**, **complétés en 1888**. Verlaine y présente des poètes **alors inconnus ou méprisés**, **en citant longuement leurs textes**.
+
+| Poète | Son état à l’époque |
+| **Tristan Corbière** | **Totalement invisible** |
+| **Arthur Rimbaud** | **Parti en Afrique** : ses textes **ne circulaient plus** |
+| **Stéphane Mallarmé** | Réputé illisible |
+| **Marceline Desbordes-Valmore** | Ajoutée en 1888 |
+| **Villiers de L’Isle-Adam** | Idem |
+| « **Pauvre Lelian** » | **Anagramme de Paul Verlaine lui-même** |
 
 ## L’effet
-Le livre a **créé** une catégorie : le poète maudit, incompris de son temps, refusé par les revues et les académies, dont le génie n’est reconnu qu’après coup. Il a surtout **sauvé** des œuvres : sans Verlaine, Corbière serait resté invisible, et les textes de Rimbaud, alors parti en Afrique, ne circulaient plus. Mallarmé y gagne un public.
+| Ce que le livre **crée** | Ce qu’il **sauve** |
+| Une **catégorie** : le poète **maudit**, incompris de son temps, reconnu **après coup** | Des **œuvres** : sans Verlaine, **Corbière serait resté invisible** |
+| — | **Mallarmé y gagne un public** |
 
 ## À retenir
-Un cas rare de **critique littéraire** qui modifie le cours de la littérature. Le mot « maudit » vient de Baudelaire (« Bénédiction », dans *Les Fleurs du mal*) et deviendra un cliché — au point d’être appliqué à peu près à tout poète pauvre ou mort jeune.
+Un cas **rare** de **critique littéraire qui modifie le cours de la littérature**.
+
+> Le mot « maudit » vient de **Baudelaire** — « Bénédiction », dans *Les Fleurs du mal* — et **deviendra un cliché**, appliqué à peu près à **tout poète pauvre ou mort jeune**.
 
 > Verlaine y invente moins un mythe qu’il ne répare une injustice.`,
           },
@@ -696,10 +1163,24 @@ Un cas rare de **critique littéraire** qui modifie le cours de la littérature.
           lecon: {
             titre: 'Molière, 1659 — la première pièce du succès parisien',
             cours: `## L’histoire
-Farce en **un acte et en prose**. **Magdelon** et **Cathos**, deux jeunes provinciales installées à Paris et gorgées de romans précieux (Scudéry !), éconduisent les deux prétendants que leur destine **Gorgibus**, sous prétexte qu’ils manquent d’élégance et vont trop vite en besogne. Pour se venger, les deux hommes envoient leurs **valets** déguisés en gens de qualité : le « **marquis de Mascarille** » et le « **vicomte de Jodelet** ». Les deux précieuses s’extasient devant leurs impromptus, leurs perruques, leur jargon. Les maîtres surviennent, font bâtonner et déshabiller les faux marquis, et la supercherie éclate.
+Farce en **un acte et en prose**.
+
+| Étape | Ce qui se passe |
+| Le refus | **Magdelon** et **Cathos**, deux provinciales **gorgées de romans précieux** — Scudéry ! —, **éconduisent** les prétendants que leur destine **Gorgibus** |
+| Leur motif | Ils **manquent d’élégance** et **vont trop vite en besogne** |
+| La vengeance | Les deux hommes envoient leurs **valets déguisés** : le « **marquis de Mascarille** » et le « **vicomte de Jodelet** » |
+| L’extase | Les précieuses **s’extasient** devant leurs **impromptus**, leurs **perruques**, leur **jargon** |
+| La chute | Les maîtres surviennent, **font bâtonner et déshabiller les faux marquis** |
 
 ## À retenir
-Créée en **1659**, c’est la pièce qui **lance** Molière à Paris. Elle vise moins la préciosité elle-même (mouvement littéraire réel, animé par des femmes cultivées) que sa **caricature** de province : le snobisme du langage. On y trouve les fameuses périphrases (« le conseiller des grâces » pour le miroir, « les commodités de la conversation » pour les fauteuils).
+Créée en **1659** : **c’est la pièce qui lance Molière à Paris**.
+
+| Ce qu’elle vise | Ce qu’elle ne vise pas |
+| La **caricature de province** : le **snobisme du langage** | La **préciosité elle-même** — un mouvement littéraire **réel**, animé par des **femmes cultivées** |
+
+| Périphrase célèbre | Ce qu’elle désigne |
+| « Le **conseiller des grâces** » | Le **miroir** |
+| « Les **commodités de la conversation** » | Les **fauteuils** |
 
 > « Voiturez-nous ici les commodités de la conversation. »`,
           },
@@ -717,10 +1198,30 @@ Créée en **1659**, c’est la pièce qui **lance** Molière à Paris. Elle vis
           lecon: {
             titre: 'Pascal, 1656-1657 — dix-huit lettres qui inventent la polémique moderne',
             cours: `## L’œuvre
-**Dix-huit lettres** publiées clandestinement sous le pseudonyme de **Louis de Montalte**, pour défendre **Antoine Arnauld** et les **jansénistes** de Port-Royal, attaqués par la Sorbonne et par les **jésuites**. Les premières lettres feignent la naïveté : un provincial demande à un ami parisien de lui expliquer les querelles théologiques sur la **grâce**, et l’on découvre que les mots employés ne veulent rien dire de précis. Les suivantes attaquent frontalement la **casuistique** jésuite — cette morale qui, à force de distinguer les cas, permet de tout justifier : le duel, l’usure, le mensonge par « restriction mentale ».
+**Dix-huit lettres** publiées **clandestinement** sous le pseudonyme de **Louis de Montalte**.
+
+| Le contexte | Le détail |
+| La défense | **Antoine Arnauld** et les **jansénistes** de **Port-Royal** |
+| Les attaquants | La **Sorbonne** et les **jésuites** |
+
+| Les lettres | Leur méthode |
+| Les **premières** | Elles **feignent la naïveté** : un provincial demande qu’on lui explique les querelles sur la **grâce** — et l’on découvre que **les mots employés ne veulent rien dire de précis** |
+| Les **suivantes** | Elles attaquent **frontalement la casuistique jésuite** |
+
+> Cette morale qui, **à force de distinguer les cas**, **permet de tout justifier** : le **duel**, l’**usure**, le mensonge par « **restriction mentale** ».
 
 ## À retenir
-Un modèle de **polémique** : ironie, mise en scène dialoguée, citations exactes des adversaires retournées contre eux, langue limpide. Voltaire y voyait le premier livre de prose française vraiment moderne. Les lettres furent condamnées et brûlées, sans empêcher leur diffusion massive. Pascal poursuivra sa réflexion dans les *Pensées*, restées inachevées.
+Un **modèle de polémique**.
+
+| Arme | Son effet |
+| L’**ironie** | Elle désarme |
+| La **mise en scène dialoguée** | Elle rend le raisonnement vivant |
+| Les **citations exactes** des adversaires | **Retournées contre eux** |
+| Une langue **limpide** | Elle rend le débat accessible |
+
+> **Voltaire** y voyait le **premier livre de prose française vraiment moderne**.
+
+Les lettres furent **condamnées et brûlées** — **sans empêcher leur diffusion massive**. Pascal poursuivra sa réflexion dans les *Pensées*, **restées inachevées**.
 
 > « Je n’ai fait celle-ci plus longue que parce que je n’ai pas eu le loisir de la faire plus courte. »`,
           },
@@ -738,10 +1239,31 @@ Un modèle de **polémique** : ironie, mise en scène dialoguée, citations exac
           lecon: {
             titre: 'Steinbeck, 1939 — la route 66 vers la Californie',
             cours: `## L’histoire
-Années 1930, la **Grande Dépression** et le **Dust Bowl**. Chassés de leur ferme d’**Oklahoma** par les tempêtes de poussière, les dettes et les tracteurs des banques, les **Joad** — trois générations, douze personnes — entassent tout dans un camion et prennent la **route 66** vers la Californie, attirés par des prospectus promettant du travail. En chemin : la mort du grand-père, puis de la grand-mère, le départ de Noah et de Connie, l’ancien pasteur **Casy** qui les accompagne. En Californie, la réalité : camps sordides, salaires écrasés par l’afflux de main-d’œuvre, milices, récoltes détruites pour maintenir les prix. Casy, devenu syndicaliste, est tué ; **Tom Joad**, le fils, le venge et doit fuir. À la fin, dans une grange inondée, **Rose de Saron**, qui vient de perdre son enfant, donne le sein à un homme mourant de faim.
+Années **1930** : la **Grande Dépression** et le **Dust Bowl**.
+
+| Étape | Ce qui se passe |
+| Le départ | Chassés de leur ferme d’**Oklahoma** par les **tempêtes de poussière**, les **dettes** et les **tracteurs des banques** |
+| La famille **Joad** | **Trois générations, douze personnes**, entassées dans un camion |
+| La route | La **route 66** vers la **Californie**, attirés par des **prospectus promettant du travail** |
+| Les pertes en chemin | Le **grand-père**, puis la **grand-mère** ; le départ de Noah et de Connie |
+| L’ancien pasteur **Casy** | Il les accompagne |
+
+| En Californie | La réalité |
+| Les **camps sordides** | Les salaires **écrasés par l’afflux de main-d’œuvre** |
+| Les **milices** | La répression |
+| Les **récoltes détruites** | **Pour maintenir les prix** |
+
+| La fin | Ce qui se passe |
+| **Casy**, devenu syndicaliste | Il est **tué** |
+| **Tom Joad** | Il le **venge** — et doit **fuir** |
+| L’image finale | Dans une grange inondée, **Rose de Saron**, **qui vient de perdre son enfant**, **donne le sein à un homme mourant de faim** |
 
 ## À retenir
-**Prix Pulitzer 1940**, Nobel en 1962. Le roman alterne les chapitres du récit familial et des chapitres **collectifs**, qui élargissent à toute une classe. Livre brûlé et interdit dans certains comtés à sa sortie, devenu un classique de la littérature sociale.
+**Prix Pulitzer 1940**, **Nobel** en **1962**.
+
+> Le roman **alterne** les chapitres du **récit familial** et des chapitres **collectifs**, qui **élargissent à toute une classe**.
+
+Livre **brûlé et interdit dans certains comtés** à sa sortie — **devenu un classique** de la littérature sociale.
 
 > « Partout où il y aura une bagarre pour que les affamés puissent manger, je serai là. »`,
           },
@@ -759,13 +1281,26 @@ Années 1930, la **Grande Dépression** et le **Dust Bowl**. Chassés de leur fe
           lecon: {
             titre: 'Hugo, 1840 — le dernier recueil avant l’exil',
             cours: `## Le recueil
-Publié en **1840**, il clôt la première grande période lyrique de Hugo (après *Les Feuilles d’automne*, *Les Chants du crépuscule*, *Les Voix intérieures*). Il faudra attendre **1853** et *Les Châtiments* pour qu’il publie à nouveau des vers.
+Publié en **1840**, il **clôt la première grande période lyrique** de Hugo — après *Les Feuilles d’automne*, *Les Chants du crépuscule*, *Les Voix intérieures*.
+
+> Il faudra attendre **1853** et *Les Châtiments* pour qu’il **publie à nouveau des vers**.
 
 ## Les poèmes
-« **Fonction du poète** », qui ouvre le recueil et donne au poète une mission — il est celui qui « voit », guide le peuple, éclaire l’avenir ; « **Tristesse d’Olympio** », méditation célèbre sur le retour dans un lieu aimé où la nature a tout oublié, à comparer avec « Le Lac » de Lamartine et « Souvenir » de Musset ; « **Oceano nox** », sur les marins disparus en mer et les familles qui les attendent ; « Guitare » et ses vers de chanson.
+| Poème | Ce qu’il porte |
+| « **Fonction du poète** » | Il ouvre le recueil : le poète est celui qui « **voit** », **guide le peuple**, **éclaire l’avenir** |
+| « **Tristesse d’Olympio** » | Le **retour dans un lieu aimé où la nature a tout oublié** |
+| « **Oceano nox** » | Les **marins disparus en mer** et les **familles qui les attendent** |
+| « Guitare » | Des vers de **chanson** |
+
+> « Tristesse d’Olympio » se **compare** avec « Le Lac » de **Lamartine** et « Souvenir » de **Musset** : trois traitements du même motif.
 
 ## À retenir
-Le recueil réunit les deux versants annoncés par le titre : les **rayons** — le poète prophète, l’élan vers l’avenir — et les **ombres** — le deuil, le temps, l’oubli. C’est le moment où Hugo cesse d’être un poète intime pour devenir un poète **public**, ce que confirmera l’exil.
+Le recueil réunit les **deux versants annoncés par le titre**.
+
+| Les **rayons** | Les **ombres** |
+| Le poète **prophète**, l’élan vers l’avenir | Le **deuil**, le **temps**, l’**oubli** |
+
+> C’est le moment où Hugo **cesse d’être un poète intime** pour devenir un **poète public** — ce que **l’exil confirmera**.
 
 > « Le poète en des jours impies vient préparer des jours meilleurs. »`,
           },
@@ -783,10 +1318,28 @@ Le recueil réunit les deux versants annoncés par le titre : les **rayons** —
           lecon: {
             titre: 'Dumas, 1844 — « un pour tous, tous pour un »',
             cours: `## L’histoire
-**1625**. Le jeune **d’Artagnan** monte de Gascogne à Paris pour entrer dans les mousquetaires du roi. Il se lie d’amitié avec **Athos**, **Porthos** et **Aramis** après avoir failli se battre en duel avec les trois le même jour. Il s’oppose aux gardes du **cardinal de Richelieu**, tombe amoureux de **Constance Bonacieux**, lingère de la reine, et part avec ses amis pour Londres récupérer les **ferrets de diamants** que **Anne d’Autriche** a donnés au duc de **Buckingham** — sauvant l’honneur de la reine sous les yeux du cardinal. Face à eux : **Milady de Winter**, espionne marquée d’une fleur de lys à l’épaule, ancienne épouse d’Athos, qui empoisonne Constance et fait assassiner Buckingham. Les mousquetaires la jugent eux-mêmes et la font exécuter.
+**1625.** Le jeune **d’Artagnan** monte de **Gascogne** à Paris pour entrer dans les mousquetaires du roi.
+
+| Étape | Ce qui se passe |
+| L’amitié | Il se lie avec **Athos**, **Porthos** et **Aramis** — **après avoir failli se battre en duel avec les trois le même jour** |
+| L’adversaire | Les gardes du **cardinal de Richelieu** |
+| L’amour | **Constance Bonacieux**, lingère de la reine |
+| La mission | Récupérer à Londres les **ferrets de diamants** que la reine **Anne d’Autriche** a donnés au duc de **Buckingham** |
+| Le triomphe | Ils **sauvent l’honneur de la reine sous les yeux du cardinal** |
+
+| L’ennemie | Ce qu’elle est |
+| **Milady de Winter** | Espionne **marquée d’une fleur de lys à l’épaule** — **ancienne épouse d’Athos** |
+| Ce qu’elle fait | Elle **empoisonne Constance** et **fait assassiner Buckingham** |
+| Sa fin | Les mousquetaires **la jugent eux-mêmes** et **la font exécuter** |
 
 ## À retenir
-Roman-feuilleton de **1844**, écrit avec **Auguste Maquet**, sans doute le roman d’aventures le plus lu au monde. Rythme, dialogues, sens du chapitre qui s’arrête au bon moment. La devise « **un pour tous, tous pour un** » est passée dans la langue. Deux suites : *Vingt ans après* et *Le Vicomte de Bragelonne*.
+Roman-feuilleton de **1844**, écrit avec **Auguste Maquet** — sans doute le **roman d’aventures le plus lu au monde**.
+
+| Sa force | Le détail |
+| Le **rythme** et les **dialogues** | Le sens du **chapitre qui s’arrête au bon moment** |
+| Sa **devise** | « **un pour tous, tous pour un** » — **passée dans la langue** |
+
+Deux suites : *Vingt ans après* et *Le Vicomte de Bragelonne*.
 
 > « Un pour tous, tous pour un. »`,
           },
@@ -804,13 +1357,36 @@ Roman-feuilleton de **1844**, écrit avec **Auguste Maquet**, sans doute le roma
           lecon: {
             titre: 'Heredia, 1893 — cent dix-huit sonnets, trente ans de travail',
             cours: `## Le recueil
-Unique recueil de **José-Maria de Heredia** (1842-1905), poète d’origine cubaine et figure majeure du **Parnasse**. Il rassemble **cent dix-huit sonnets** ciselés pendant trente ans, organisés comme une **traversée de l’histoire** : « La Grèce et la Sicile », « Rome et les Barbares », « Le Moyen Âge et la Renaissance », « L’Orient et les Tropiques », « La Nature et le Rêve ». Poèmes célèbres : « Les Conquérants », « Antoine et Cléopâtre », « Soir de bataille », « Le Récif de corail ».
+Unique recueil de **José-Maria de Heredia** (1842-1905), poète d’origine **cubaine** et figure majeure du **Parnasse**.
+
+| Fait | Le détail |
+| Le nombre | **Cent dix-huit sonnets** |
+| Le temps de travail | **Trente ans** |
+| L’organisation | Une **traversée de l’histoire** |
+
+| Section | Son époque |
+| « La Grèce et la Sicile » | L’Antiquité grecque |
+| « Rome et les Barbares » | L’Antiquité romaine |
+| « Le Moyen Âge et la Renaissance » | L’Europe |
+| « L’Orient et les Tropiques » | L’ailleurs |
+| « La Nature et le Rêve » | Le présent |
+
+Poèmes célèbres : « **Les Conquérants** », « Antoine et Cléopâtre », « Soir de bataille », « Le Récif de corail ».
 
 ## L’esthétique parnassienne
-Contre l’épanchement romantique : **impersonnalité**, culte de la **forme**, érudition, images précises et éclatantes, richesse des rimes. Le sonnet doit se refermer sur un **dernier vers** frappant, souvent une vision colorée — « Et dans leurs yeux, où l’or s’étoile de points rouges, / Ils regardaient monter en un ciel ignoré / Du fond de l’Océan des étoiles nouvelles ».
+| Contre le romantisme | Ce que le Parnasse vise |
+| L’**épanchement** | L’**impersonnalité** |
+| L’à-peu-près | Le **culte de la forme**, l’**érudition** |
+| Le flou | Des images **précises et éclatantes**, des **rimes riches** |
+
+> Le sonnet doit **se refermer sur un dernier vers frappant** — souvent une **vision colorée** : « Ils regardaient monter en un ciel ignoré / Du fond de l’Océan des **étoiles nouvelles** ».
 
 ## À retenir
-Heredia entre à l’Académie française l’année suivante. Son art est celui de l’**orfèvre** : chaque sonnet est un objet fini, indépendant, où l’histoire et le mythe deviennent des tableaux. C’est la formule parnassienne à son point de perfection — et son point de rigidité, que le symbolisme viendra bousculer.
+Heredia entre à l’**Académie française** l’année suivante.
+
+> Son art est celui de l’**orfèvre** : **chaque sonnet est un objet fini, indépendant**, où **l’histoire et le mythe deviennent des tableaux**.
+
+C’est la formule parnassienne **à son point de perfection** — **et à son point de rigidité**, que le **symbolisme** viendra bousculer.
 
 > « Comme un vol de gerfauts hors du charnier natal… »`,
           },
@@ -828,13 +1404,31 @@ Heredia entre à l’Académie française l’année suivante. Son art est celui
           lecon: {
             titre: 'Colette, 1908 — le premier livre signé de son seul nom',
             cours: `## Le recueil
-Vingt textes brefs, écrits pour la presse et réunis en **1908**. Ce n’est ni un roman ni un recueil de nouvelles : chroniques, souvenirs, dialogues, poèmes en prose. Le texte liminaire donne le titre : un **rossignol**, réveillé une nuit par les vrilles de la vigne qui l’avaient ligoté, décide de **chanter** sans cesse pour ne plus jamais se laisser prendre — art poétique en miniature.
+**Vingt textes brefs**, écrits pour la presse et réunis en **1908**.
+
+> Ce n’est **ni un roman ni un recueil de nouvelles** : chroniques, souvenirs, dialogues, **poèmes en prose**.
+
+| Le texte liminaire | Ce qu’il raconte |
+| Un **rossignol** | Réveillé une nuit par les **vrilles de la vigne qui l’avaient ligoté** |
+| Sa décision | **Chanter sans cesse** — **pour ne plus jamais se laisser prendre** |
+
+> C’est un **art poétique en miniature**.
 
 ## Le contenu
-Des dialogues avec ses animaux (**Toby-Chien** et **Kiki-la-Doucette**), des souvenirs d’enfance en Puisaye (« Nuit blanche », « Jour gris », « Le Dernier Feu »), des chroniques sur le music-hall, le maquillage, les femmes, la province et Paris.
+| Type de texte | Exemples |
+| Les **dialogues d’animaux** | **Toby-Chien** et **Kiki-la-Doucette** |
+| Les **souvenirs d’enfance** en Puisaye | « Nuit blanche », « Jour gris », « Le Dernier Feu » |
+| Les **chroniques** | Le music-hall, le maquillage, les femmes, la province et Paris |
 
 ## À retenir
-Le livre marque une **émancipation** : Colette, jusque-là publiée sous le nom de son mari **Willy** (les *Claudine*), signe ici « Colette Willy » et s’affranchit peu à peu. Écriture des **sensations**, phrase souple, attention au vivant. C’est le texte qui accompagne *Sido* dans le volume au programme du bac, sous le parcours « **la célébration du monde** ».
+Le livre marque une **émancipation**.
+
+| Avant | Ici |
+| Publiée sous le nom de son mari **Willy** — les *Claudine* | Elle signe « **Colette Willy** » et **s’affranchit peu à peu** |
+
+Écriture des **sensations**, phrase **souple**, attention au **vivant**.
+
+> C’est le texte qui **accompagne** *Sido* dans le volume au programme du bac, sous le parcours « **la célébration du monde** ».
 
 > « Plus de nuits, plus de sommeil : je chanterai. »`,
           },
@@ -852,16 +1446,34 @@ Le livre marque une **émancipation** : Colette, jusque-là publiée sous le nom
           lecon: {
             titre: 'Aragon, 1942 — poésie d’amour et poésie de résistance',
             cours: `## Le recueil
-Publié en **1942** à Neuchâtel, en pleine Occupation. Le titre vient du poème liminaire, adressé à **Elsa Triolet**, sa femme. Le recueil contient aussi « **Les Lilas et les Roses** » (la défaite de mai 1940), « Zone libre », « Plus belle que les larmes », « Richard Cœur-de-Lion ».
+Publié en **1942** à **Neuchâtel**, en pleine **Occupation**. Le titre vient du poème liminaire, adressé à **Elsa Triolet**, sa femme.
+
+| Poème | Ce qu’il évoque |
+| « **Les Lilas et les Roses** » | La **défaite de mai 1940** |
+| « Zone libre » | La France coupée en deux |
+| « Plus belle que les larmes », « Richard Cœur-de-Lion » | L’amour et la légende |
 
 ## La double lecture
-Aragon pratique la **contrebande** : les poèmes d’amour et les évocations médiévales — troubadours, chevaliers, Tristan — passent la censure allemande, mais tout lecteur français y entend le pays occupé, la défaite, l’espoir de libération. La femme aimée y devient aussi la **France**.
+Aragon pratique la **contrebande**.
+
+| Ce qui passe la censure | Ce que le lecteur français entend |
+| Les poèmes d’**amour** | Le **pays occupé** |
+| Les évocations **médiévales** — troubadours, chevaliers, Tristan | La **défaite** et l’**espoir de libération** |
+
+> **La femme aimée y devient aussi la France.**
 
 ## Le retour de la forme
-Dans la préface, « **Arma virumque cano** », Aragon défend le retour à la **rime** et au vers régulier, contre le vers libre surréaliste dont il vient : une poésie qui se retient par cœur peut se transmettre clandestinement et se chanter. Il invente la « rime enjambée », qui fait rimer la fin d’un vers avec le début du suivant.
+Dans la préface, « **Arma virumque cano** », Aragon défend le retour à la **rime** et au **vers régulier** — **contre le vers libre surréaliste dont il vient**.
+
+| Son argument | Sa conséquence |
+| Une poésie qui **se retient par cœur** | Peut **se transmettre clandestinement** et **se chanter** |
+
+Il invente la « **rime enjambée** » : la fin d’un vers rime avec le **début du suivant**.
 
 ## À retenir
-Avec Éluard, Aragon est le grand poète de la **Résistance**. Ses poèmes, mis en musique par Ferré, Ferrat et Brassens, sont parmi les plus connus du XXe siècle.
+Avec **Éluard**, Aragon est le grand poète de la **Résistance**.
+
+> Ses poèmes, mis en musique par **Ferré**, **Ferrat** et **Brassens**, sont **parmi les plus connus du XXe siècle**.
 
 > « Tes yeux sont si profonds qu’en me penchant pour boire… »`,
           },
@@ -878,14 +1490,26 @@ Avec Éluard, Aragon est le grand poète de la **Résistance**. Ses poèmes, mis
           titre: 'Lettre à d’Alembert sur les spectacles, Jean-Jacques Rousseau',
           lecon: {
             titre: 'Rousseau, 1758 — contre le théâtre, et contre les Lumières',
-            cours: `## L’œuvre
-**D’Alembert**, dans l’article « Genève » de l’*Encyclopédie*, avait suggéré d’ouvrir un **théâtre** dans la ville. Rousseau, citoyen de Genève, répond par cette longue lettre publique.
+            cours: `## L’occasion
+**D’Alembert**, dans l’article « **Genève** » de l’*Encyclopédie*, avait suggéré d’**ouvrir un théâtre** dans la ville.
+
+> Rousseau, **citoyen de Genève**, répond par cette **longue lettre publique**.
 
 ## La thèse
-Le théâtre ne corrige pas les mœurs, il les **amollit**. Il ne fait pas aimer la vertu, il fait pleurer sur des malheurs fictifs — et ces larmes tiennent lieu d’action réelle. La comédie rend le vice aimable (Rousseau attaque longuement *Le Misanthrope* : Molière y fait rire d’Alceste, c’est-à-dire de l’homme vertueux). Le théâtre enferme les citoyens dans une salle obscure, isolés, spectateurs passifs — au lieu des **fêtes publiques** en plein air, où le peuple est à la fois acteur et spectateur : « Plantez au milieu d’une place un piquet couronné de fleurs, rassemblez-y le peuple, et vous aurez une fête. »
+| Ce que Rousseau reproche au théâtre | Le détail |
+| Il **amollit** les mœurs au lieu de les corriger | Il fait **pleurer sur des malheurs fictifs** — et **ces larmes tiennent lieu d’action réelle** |
+| Il **rend le vice aimable** | Il attaque longuement *Le Misanthrope* : **Molière y fait rire d’Alceste**, c’est-à-dire **de l’homme vertueux** |
+| Il **isole** les citoyens | Dans une **salle obscure**, **spectateurs passifs** |
+
+| Ce qu’il propose à la place | Le détail |
+| Les **fêtes publiques**, en plein air | Le peuple y est **à la fois acteur et spectateur** |
+
+> « Plantez au milieu d’une place un **piquet couronné de fleurs**, rassemblez-y le peuple, **et vous aurez une fête**. »
 
 ## À retenir
-Le texte **rompt** avec les Encyclopédistes : c’est la brouille définitive avec Diderot et d’Alembert. On y trouve, en germe, toute la pensée de Rousseau — la méfiance envers la représentation, l’éloge de la transparence, la préférence pour la communauté sur le spectacle.
+Le texte **rompt avec les Encyclopédistes** : c’est la **brouille définitive** avec **Diderot** et **d’Alembert**.
+
+> On y trouve, **en germe, toute la pensée de Rousseau** : la **méfiance envers la représentation**, l’éloge de la **transparence**, la préférence pour la **communauté** sur le **spectacle**.
 
 > « On croit s’assembler au spectacle, et c’est là que chacun s’isole. »`,
           },
@@ -903,10 +1527,31 @@ Le texte **rompt** avec les Encyclopédistes : c’est la brouille définitive a
           lecon: {
             titre: 'Graffigny, 1747 — une étrangère juge la France',
             cours: `## L’histoire
-Roman **épistolaire**. **Zilia**, jeune Inca, est enlevée par les conquistadors le jour de ses noces avec **Aza**, puis capturée en mer par des Français. Recueillie par le chevalier **Déterville**, elle arrive en France sans en connaître ni la langue ni les usages. Elle écrit à Aza, d’abord sur des **quipus** — cordelettes nouées qui servaient d’écriture aux Incas —, puis en français, qu’elle apprend. Son regard neuf démonte les usages : miroirs, carrosses, rites religieux, politesse, et surtout l’**éducation des femmes**, réduite à des ornements. Aza, retrouvé, s’est converti et va épouser une Espagnole. Déterville espère. Zilia les **refuse tous les deux** et choisit l’étude, l’amitié et l’indépendance.
+Roman **épistolaire**.
+
+| Étape | Ce qui arrive à Zilia |
+| L’enlèvement | Jeune **Inca**, elle est enlevée par les **conquistadors** **le jour de ses noces** avec **Aza** |
+| La capture | En mer, par des **Français** |
+| L’arrivée | Recueillie par le chevalier **Déterville**, elle **ne connaît ni la langue ni les usages** |
+| L’écriture | D’abord sur des **quipus** — cordelettes nouées des Incas — puis **en français**, qu’elle apprend |
+
+| Ce que son regard neuf démonte | Le détail |
+| Miroirs, carrosses, rites religieux, politesse | Ils deviennent des **énigmes**, donc des **absurdités** |
+| L’**éducation des femmes** | **Réduite à des ornements** |
+
+| Le dénouement | Ce qui se passe |
+| **Aza**, retrouvé | **Converti**, il va **épouser une Espagnole** |
+| **Déterville** | Il **espère** |
+| **Zilia** | Elle les **refuse tous les deux** et choisit l’**étude**, l’**amitié** et l’**indépendance** |
 
 ## À retenir
-Immense succès du siècle (plus de quarante éditions), longtemps oublié, redécouvert par la critique féministe. Deux visées mêlées : la **satire** par le regard éloigné, et la construction d’un **sujet féminin autonome** — écrire, pour Zilia, c’est d’abord survivre, puis comprendre, enfin exister. Le refus final du mariage était inouï pour l’époque.
+**Immense succès du siècle** — plus de **quarante éditions** —, **longtemps oublié**, **redécouvert par la critique féministe**.
+
+| Les deux visées mêlées | Le détail |
+| La **satire** | Par le **regard éloigné** |
+| La construction d’un **sujet féminin autonome** | **Écrire, c’est d’abord survivre, puis comprendre, enfin exister** |
+
+> Le **refus final du mariage** était **inouï pour l’époque**.
 
 > « Je ne serai ni l’épouse d’Aza, ni celle de Déterville. »`,
           },
@@ -924,13 +1569,25 @@ Immense succès du siècle (plus de quarante éditions), longtemps oublié, red�
           lecon: {
             titre: 'Daudet, 1869 — la Provence racontée depuis Paris',
             cours: `## Le recueil
-Une trentaine de **contes et chroniques**, parus d’abord dans la presse et réunis en **1869**. Le dispositif est une fiction : le narrateur, installé dans un vieux **moulin** de Fontvieille, écrit à ses amis parisiens — en réalité, Daudet vivait à Paris et n’a jamais possédé ce moulin.
+Une **trentaine de contes et chroniques**, parus d’abord **dans la presse** et réunis en **1869**.
+
+| Le dispositif | La réalité |
+| Le narrateur écrit depuis un vieux **moulin** de **Fontvieille**, à ses amis parisiens | **Daudet vivait à Paris** — et **n’a jamais possédé ce moulin** |
 
 ## Les textes à connaître
-« **La Chèvre de M. Seguin** » (la chèvre qui préfère une nuit de liberté et la mort au piquet — lettre adressée à un poète pour lui conseiller de ne pas quitter son emploi) ; « **Le Secret de maître Cornille** » (le dernier meunier qui feint de moudre du blé alors que la minoterie à vapeur a tout emporté) ; « **La Mule du pape** » (la mule qui garde son coup de pied sept ans) ; « L’Élixir du révérend père Gaucher » ; « Les Étoiles » ; « L’Arlésienne ».
+| Conte | Ce qu’il raconte |
+| « **La Chèvre de M. Seguin** » | La chèvre qui **préfère une nuit de liberté et la mort au piquet** — lettre adressée à un poète **pour lui conseiller de ne pas quitter son emploi** |
+| « **Le Secret de maître Cornille** » | Le **dernier meunier** qui **feint de moudre du blé** alors que la **minoterie à vapeur** a tout emporté |
+| « **La Mule du pape** » | La mule qui **garde son coup de pied sept ans** |
+| « L’Élixir du révérend père Gaucher » | La liqueur qui enrichit le couvent |
+| « Les Étoiles », « L’Arlésienne » | La tendresse et le drame |
 
 ## À retenir
-Un livre de **contes**, souvent lus comme des textes pour enfants alors qu’ils sont mélancoliques : ils racontent une Provence qui **disparaît** — moulins ruinés par l’industrie, traditions perdues, villages vidés. L’humour, la légèreté du ton et l’oralité y masquent une nostalgie constante.
+Des **contes** souvent lus comme des textes pour enfants — **alors qu’ils sont mélancoliques**.
+
+> Ils racontent une **Provence qui disparaît** : **moulins ruinés par l’industrie**, traditions perdues, villages vidés.
+
+L’**humour**, la **légèreté du ton** et l’**oralité** y **masquent une nostalgie constante**.
 
 > « Elle se battit toute la nuit… puis, au matin, le loup la mangea. »`,
           },
@@ -948,16 +1605,31 @@ Un livre de **contes**, souvent lus comme des textes pour enfants alors qu’ils
           lecon: {
             titre: 'Montesquieu, 1721 — le regard éloigné',
             cours: `## Le dispositif
-**161 lettres**, écrites par une quinzaine de correspondants. Deux Persans, **Usbek** et **Rica**, voyagent en Europe et écrivent à leurs amis, à leurs eunuques et aux femmes de leur sérail resté à Ispahan.
+**161 lettres**, écrites par une **quinzaine de correspondants**. Deux Persans, **Usbek** et **Rica**, voyagent en Europe et écrivent à leurs amis, à leurs **eunuques** et aux femmes de leur **sérail** resté à **Ispahan**.
 
 ## La satire
-Faire décrire nos usages par qui ne les comprend pas : le roi devient « un grand magicien » qui fait croire que le papier est de l’argent, le pape « un autre magicien » qui fait croire que trois ne font qu’un. Rica rapporte la fameuse exclamation : « **Comment peut-on être Persan ?** » Sont visés la monarchie absolue, la cour, l’Église, la justice, la mode, le fanatisme. L’apologue des **Troglodytes** (lettres XI à XIV) pose la question politique centrale : quelles institutions rendent la liberté possible ?
+Faire décrire **nos** usages **par qui ne les comprend pas**.
+
+| Ce qui est décrit | Comment il apparaît |
+| Le **roi** | « Un grand **magicien** » qui fait croire que **le papier est de l’argent** |
+| Le **pape** | « Un autre magicien » qui fait croire que **trois ne font qu’un** |
+
+> Et la formule restée célèbre : « **Comment peut-on être Persan ?** »
+
+Sont visés la **monarchie absolue**, la **cour**, l’**Église**, la **justice**, la **mode**, le **fanatisme**.
+
+| L’apologue des **Troglodytes**, lettres XI à XIV | Sa question |
+| Un peuple égoïste **s’autodétruit** ; une communauté vertueuse **prospère**, puis **demande un roi** | **Quelles institutions rendent la liberté possible ?** |
 
 ## Le sérail
-Pendant qu’Usbek philosophe sur la liberté, ses femmes se révoltent. La dernière lettre est celle de **Roxane** : elle a trahi, elle s’est empoisonnée, elle n’a jamais aimé son maître. Le penseur de la liberté était un despote chez lui — et le sérail apparaît comme un **modèle réduit** du despotisme, qui s’écroule faute de lois.
+Pendant qu’Usbek **philosophe sur la liberté**, **ses femmes se révoltent**.
+
+> La dernière lettre est celle de **Roxane** : elle a **trahi**, elle s’est **empoisonnée**, elle **n’a jamais aimé son maître**.
+
+> **Le penseur de la liberté était un despote chez lui.** Et le sérail apparaît comme un **modèle réduit du despotisme**, **qui s’écroule faute de lois**.
 
 ## À retenir
-Publié anonymement en **1721**. Le roman annonce *De l’esprit des lois* (1748) et fixe le procédé du **regard éloigné**, repris tout au long du siècle.
+Publié **anonymement** en **1721**. Le roman **annonce** *De l’esprit des lois* (1748) et **fixe le procédé du regard éloigné**, repris tout au long du siècle.
 
 > « Comment peut-on être Persan ? »`,
           },
@@ -975,16 +1647,34 @@ Publié anonymement en **1721**. Le roman annonce *De l’esprit des lois* (1748
           lecon: {
             titre: 'Sévigné, 1671-1696 — mille lettres à une fille',
             cours: `## L’œuvre
-Environ **onze cents lettres** conservées, dont la plupart adressées à sa fille, **Madame de Grignan**, partie vivre en Provence en 1671 — départ qui déclenche l’écriture et lui donne son ton : celui d’un amour maternel exalté et douloureux. Publiées après sa mort, à partir de 1725.
+Environ **onze cents lettres** conservées.
+
+| Fait | Le détail |
+| La destinataire principale | Sa fille, **Madame de Grignan**, **partie vivre en Provence en 1671** |
+| Ce que ce départ déclenche | L’**écriture** — et **son ton** : un **amour maternel exalté et douloureux** |
+| La publication | **Après sa mort**, à partir de **1725** |
 
 ## Ce qu’on y trouve
-La cour de **Louis XIV** vue de très près : le mariage manqué de la Grande Mademoiselle, la mort de **Vatel** (qui se transperce de son épée parce que la marée n’arrive pas), le procès de Fouquet, les campagnes militaires, l’affaire des Poisons. Mais aussi la vie quotidienne : la santé, le temps qu’il fait, la lecture, les Rochers en Bretagne, les foins, les paysans.
+| La cour de **Louis XIV**, vue de très près | L’épisode |
+| Le mariage manqué de la **Grande Mademoiselle** | — |
+| La mort de **Vatel** | Il **se transperce de son épée** parce que **la marée n’arrive pas** |
+| Le **procès de Fouquet**, les campagnes militaires, l’**affaire des Poisons** | Le siècle en direct |
+
+| La vie quotidienne | Le détail |
+| La santé, le **temps qu’il fait**, la lecture | Les **Rochers** en Bretagne, les foins, les paysans |
 
 ## Le style
-Vivacité, oralité, phrases qui suivent l’instant (« je vous écris comme je vous parle »), passages du grave au léger, art de la **nouvelle** frappante (« je m’en vais vous mander la chose la plus étonnante, la plus surprenante… »). Madame de Sévigné écrit sans se relire et sans imaginer être publiée : c’est ce qui rend ses lettres si vivantes.
+| Trait | Son effet |
+| **Vivacité**, **oralité** | « je vous écris **comme je vous parle** » |
+| Le passage du **grave au léger** | En une phrase |
+| L’art de la **nouvelle frappante** | « je m’en vais vous mander la chose la plus étonnante, la plus surprenante… » |
+
+> Elle écrit **sans se relire** et **sans imaginer être publiée** : **c’est ce qui rend ses lettres si vivantes**.
 
 ## À retenir
-La **lettre** devient un genre littéraire de plein droit. On y lit le XVIIe siècle par les détails, et la naissance d’une écriture de l’intime que le XIXe siècle admirera (Proust l’a beaucoup citée).
+> La **lettre** devient un **genre littéraire de plein droit**.
+
+On y lit le XVIIe siècle **par les détails** — et la naissance d’une **écriture de l’intime** que le XIXe siècle admirera : **Proust l’a beaucoup citée**.
 
 > « Je vous écris tous les jours ; c’est une joie que je ne puis me refuser. »`,
           },
@@ -1002,10 +1692,32 @@ La **lettre** devient un genre littéraire de plein droit. On y lit le XVIIe si�
           lecon: {
             titre: 'Musset, 1834 — le drame romantique impossible à jouer',
             cours: `## L’histoire
-**Florence, 1537**. **Alexandre de Médicis**, duc débauché soutenu par l’empereur et par le pape, opprime la ville. Son cousin **Lorenzo**, dit **Lorenzaccio**, s’est fait son compagnon de débauche : il joue le rôle du corrompu, du lâche, du souteneur — pour approcher le duc et le tuer. Mais à force de jouer ce rôle, il est devenu ce qu’il feignait d’être : « **le vice a été pour moi un vêtement, maintenant il est collé à ma peau** ». Il tue Alexandre. Rien ne change : les républicains ne se soulèvent pas, un nouveau duc, **Côme**, est aussitôt installé, et Lorenzo, réfugié à Venise, est assassiné pour la prime mise sur sa tête.
+**Florence, 1537.**
+
+| Personnage | Sa position |
+| **Alexandre de Médicis** | Duc **débauché**, soutenu par l’**empereur** et par le **pape** : il opprime la ville |
+| **Lorenzo**, dit **Lorenzaccio** | Son cousin : il s’est fait son **compagnon de débauche** |
+| Son plan | Jouer le **corrompu**, le **lâche**, le **souteneur** — **pour approcher le duc et le tuer** |
+
+> Mais **à force de jouer ce rôle, il est devenu ce qu’il feignait d’être** : « **le vice a été pour moi un vêtement, maintenant il est collé à ma peau** ».
+
+| L’acte et son résultat | Ce qui se passe |
+| Il **tue Alexandre** | **Rien ne change** |
+| Les **républicains** | **Ils ne se soulèvent pas** |
+| Un nouveau duc, **Côme** | **Aussitôt installé** |
+| **Lorenzo** | Réfugié à Venise, **assassiné pour la prime mise sur sa tête** |
 
 ## À retenir
-Pièce écrite **pour la lecture** (les *Spectacles dans un fauteuil*) : trente-neuf scènes, une quarantaine de personnages, changements de lieu constants — injouable dans les théâtres de 1834, créée seulement en 1896 avec Sarah Bernhardt en Lorenzo. Drame **politique** et drame de l’**identité** : à quoi sert un acte juste dans un monde qui ne veut pas de la liberté ? Musset y transpose la désillusion des républicains après **1830**.
+Pièce écrite **pour la lecture** — les *Spectacles dans un fauteuil*.
+
+| Ce qui la rendait injouable en 1834 | Le détail |
+| **Trente-neuf scènes** | Une **quarantaine de personnages** |
+| Des **changements de lieu constants** | Elle ne sera **créée qu’en 1896**, avec **Sarah Bernhardt** en Lorenzo |
+
+| Ce qu’elle est | La question qu’elle pose |
+| Un drame **politique** et un drame de l’**identité** | **À quoi sert un acte juste dans un monde qui ne veut pas de la liberté ?** |
+
+Musset y transpose la **désillusion des républicains après 1830**.
 
 > « Je suis plus creux et plus vide qu’une statue de fer-blanc. »`,
           },
@@ -1023,10 +1735,30 @@ Pièce écrite **pour la lecture** (les *Spectacles dans un fauteuil*) : trente-
           lecon: {
             titre: 'Stendhal, 1894 — le roman inachevé de la monarchie de Juillet',
             cours: `## L’histoire
-**Lucien Leuwen**, fils d’un riche banquier parisien, est chassé de Polytechnique pour ses opinions républicaines. Son père lui achète un poste de **sous-lieutenant** à Nancy. Il y tombe amoureux de **Madame de Chasteller**, jeune veuve légitimiste ; une machination lui fait croire qu’elle vient d’accoucher, et il part, désespéré. À Paris, il devient **maître des requêtes** au ministère de l’Intérieur et découvre de l’intérieur la corruption électorale de la **monarchie de Juillet** : achat de voix, préfets aux ordres, candidatures officielles. Le roman s’arrête là ; une troisième partie, à Rome, n’a jamais été écrite.
+| Étape | Ce qui se passe |
+| L’exclusion | **Lucien Leuwen**, fils d’un **riche banquier** parisien, est **chassé de Polytechnique** pour ses opinions **républicaines** |
+| Nancy | Son père lui **achète** un poste de **sous-lieutenant** |
+| L’amour | **Madame de Chasteller**, jeune veuve **légitimiste** |
+| La machination | On lui fait croire **qu’elle vient d’accoucher** : il part, **désespéré** |
+| Paris | **Maître des requêtes** au ministère de l’Intérieur |
+| Ce qu’il découvre | La **corruption électorale** de la **monarchie de Juillet** : **achat de voix**, préfets aux ordres, **candidatures officielles** |
+
+> Le roman **s’arrête là** : une **troisième partie, à Rome, n’a jamais été écrite**.
 
 ## À retenir
-Écrit vers **1834-1835**, laissé inachevé, publié seulement en **1894**. C’est le plus **politique** des romans de Stendhal, et un document de première main sur le régime de Louis-Philippe. Ironie constante, discours indirect libre, peinture des salons de province — Nancy y est aussi féroce que Verrières dans *Le Rouge et le Noir*. Le père, Monsieur Leuwen, est l’un des personnages les plus séduisants de Stendhal : cynique, drôle, généreux.
+| Fait | Le détail |
+| Écriture | Vers **1834-1835** |
+| État | **Laissé inachevé** |
+| Publication | **Seulement en 1894** |
+
+> C’est le **plus politique** des romans de Stendhal — et un **document de première main** sur le régime de **Louis-Philippe**.
+
+| Marque de l’auteur | Le détail |
+| L’**ironie constante** | Le narrateur commente |
+| Le **discours indirect libre** | La pensée dans le récit |
+| Les **salons de province** | **Nancy y est aussi féroce que Verrières** dans *Le Rouge et le Noir* |
+
+> Le père, **Monsieur Leuwen**, est l’un des personnages **les plus séduisants** de Stendhal : **cynique, drôle, généreux**.
 
 > « Le roman est un miroir… mais ici, c’est le ministère qui se regarde. »`,
           },
@@ -1044,10 +1776,26 @@ Pièce écrite **pour la lecture** (les *Spectacles dans un fauteuil*) : trente-
           lecon: {
             titre: 'Flaubert, 1857 — « Mœurs de province »',
             cours: `## L’histoire
-**Charles Bovary**, officier de santé médiocre, épouse en secondes noces **Emma Rouault**, fille de fermier élevée au couvent et nourrie de romans sentimentaux. La vie conjugale à Tostes puis à **Yonville** l’ennuie profondément. Elle s’invente des passions : le clerc **Léon**, puis le hobereau **Rodolphe**, qui la séduit et l’abandonne par une lettre lâche ; elle retrouve Léon à Rouen. Pour tenir son rêve, elle emprunte au marchand **Lheureux**, s’endette, ment. Menacée de saisie, abandonnée de tous, elle avale de l’**arsenic** et meurt dans d’atroces souffrances. Charles découvre les lettres, s’effondre et meurt ; leur fille est placée en filature. Le pharmacien **Homais**, symbole de la bêtise progressiste, reçoit la Légion d’honneur.
+| Étape | Ce qui se passe |
+| Le mariage | **Charles Bovary**, officier de santé **médiocre**, épouse en secondes noces **Emma Rouault** — fille de fermier **élevée au couvent** et **nourrie de romans sentimentaux** |
+| L’ennui | Tostes, puis **Yonville** |
+| Les passions inventées | Le clerc **Léon**, puis le hobereau **Rodolphe** — qui la **séduit et l’abandonne par une lettre lâche** |
+| La reprise | Elle **retrouve Léon à Rouen** |
+| L’argent | Pour tenir son rêve, elle **emprunte au marchand Lheureux**, s’endette, ment |
+| La fin | Menacée de **saisie**, **abandonnée de tous**, elle avale de l’**arsenic** et **meurt dans d’atroces souffrances** |
+| Après | Charles **découvre les lettres**, s’effondre et meurt ; leur **fille est placée en filature** |
+| L’ironie finale | Le pharmacien **Homais**, symbole de la **bêtise progressiste**, **reçoit la Légion d’honneur** |
 
 ## À retenir
-Procès pour outrage aux bonnes mœurs en **1857**, acquittement. Roman du **réalisme** : sujet banal, style travaillé jusqu’à l’obsession, **discours indirect libre** généralisé, ironie sans commentaire. Le « **bovarysme** » désigne depuis l’insatisfaction née de l’écart entre le rêve et la vie.
+**Procès pour outrage aux bonnes mœurs** en **1857** — **acquittement**.
+
+| Trait du **réalisme** | Le détail |
+| Un **sujet banal** | Une femme de province |
+| Un **style travaillé jusqu’à l’obsession** | Le « gueuloir » |
+| Le **discours indirect libre** généralisé | La voix d’Emma dans le récit |
+| Une **ironie sans commentaire** | L’auteur ne juge pas |
+
+> Le « **bovarysme** » désigne depuis l’**insatisfaction née de l’écart entre le rêve et la vie**.
 
 > « Madame Bovary, c’est moi. » (attribué à Flaubert)`,
           },
@@ -1065,10 +1813,27 @@ Procès pour outrage aux bonnes mœurs en **1857**, acquittement. Roman du **ré
           lecon: {
             titre: 'Gautier, 1835 — « l’art pour l’art », et un roman scandaleux',
             cours: `## L’œuvre
-Roman en partie **épistolaire**. **D’Albert**, jeune homme en quête d’une beauté idéale qu’aucune femme réelle ne satisfait, s’éprend de **Théodore de Sérannes**, cavalier élégant dont il devine ou redoute qu’il soit un homme. Théodore est en réalité **Madeleine de Maupin**, jeune femme qui s’est déguisée en homme pour observer les hommes tels qu’ils sont entre eux, avant de choisir un amant. Une représentation de *Comme il vous plaira* de Shakespeare, où chacun joue un rôle travesti, met tout le monde face à ses désirs. Madeleine se donne à d’Albert, puis à sa maîtresse Rosette, et disparaît.
+Roman en partie **épistolaire**.
+
+| Personnage | Ce qu’il est |
+| **D’Albert** | Jeune homme en quête d’une **beauté idéale** qu’**aucune femme réelle ne satisfait** |
+| **Théodore de Sérannes** | Cavalier élégant dont il **devine ou redoute qu’il soit un homme** |
+| La vérité | Théodore est **Madeleine de Maupin** |
+| Son projet | **Se déguiser en homme pour observer les hommes tels qu’ils sont entre eux** — **avant de choisir un amant** |
+
+| Le pivot | Ce qu’il produit |
+| Une représentation de *Comme il vous plaira* de **Shakespeare** | Où **chacun joue un rôle travesti** : tout le monde est mis **face à ses désirs** |
+| La fin | Madeleine **se donne à d’Albert**, **puis à sa maîtresse Rosette** — et **disparaît** |
 
 ## À retenir
-La **préface** est plus célèbre que le roman : Gautier y attaque violemment la critique moralisante et l’utilitarisme, et proclame la doctrine de l’« **art pour l’art** » — « il n’y a de vraiment beau que ce qui ne peut servir à rien ». Le roman lui-même, par son sujet — travestissement, ambiguïté du désir —, fit scandale et fut longtemps mis à l’index. Le personnage s’inspire d’une figure réelle : **Julie d’Aubigny**, cantatrice et duelliste du XVIIe siècle.
+> La **préface** est **plus célèbre que le roman**.
+
+| Ce qu’elle attaque | Ce qu’elle proclame |
+| La **critique moralisante** et l’**utilitarisme** | L’« **art pour l’art** » : « **il n’y a de vraiment beau que ce qui ne peut servir à rien** » |
+
+Le roman lui-même — **travestissement**, **ambiguïté du désir** — fit **scandale** et fut **longtemps mis à l’index**.
+
+> Le personnage s’inspire d’une **figure réelle** : **Julie d’Aubigny**, **cantatrice et duelliste** du XVIIe siècle.
 
 > « Il n’y a de vraiment beau que ce qui ne peut servir à rien. »`,
           },
@@ -1085,11 +1850,30 @@ La **préface** est plus célèbre que le roman : Gautier y attaque violemment l
           titre: 'Mangeclous, Albert Cohen',
           lecon: {
             titre: 'Cohen, 1938 — la truculence des Valeureux',
-            cours: `## L’histoire
-Suite de *Solal* (1930) et deuxième volet du cycle qui s’achèvera avec *Belle du Seigneur* (1968) et *Les Valeureux* (1969). Le roman met en scène les « **Valeureux de France** », cousins juifs de **Céphalonie** : **Mangeclous** — avocat, faux médecin, faux prophète, père de famille nombreuse et menteur de génie —, **Saltiel**, **Salomon**, **Michaël** et **Mattathias**. Apprenant que leur cousin **Solal** est devenu haut fonctionnaire à Genève, ils entreprennent le voyage pour le rejoindre, semant sur leur passage inventions, discours, escroqueries et festins.
+            cours: `## L’œuvre
+Suite de *Solal* (1930), **deuxième volet** d’un cycle qui s’achèvera avec *Belle du Seigneur* (**1968**) et *Les Valeureux* (**1969**).
+
+| Les « **Valeureux de France** » | Qui ils sont |
+| **Mangeclous** | Avocat, **faux médecin**, **faux prophète**, père de famille nombreuse — et **menteur de génie** |
+| **Saltiel** | Le doux |
+| **Salomon** | Le naïf |
+| **Michaël** | Le beau |
+| **Mattathias** | L’avare |
+
+Cousins juifs de **Céphalonie**.
+
+| Le voyage | Ce qui le déclenche |
+| Ils apprennent que leur cousin **Solal** est devenu **haut fonctionnaire à Genève** | Ils **entreprennent le voyage pour le rejoindre** |
+| Sur leur passage | **Inventions, discours, escroqueries et festins** |
 
 ## À retenir
-Un livre de **truculence** verbale : discours interminables, listes, exagérations, mélange de sublime et de bouffon. Mangeclous est l’un des grands personnages comiques de la littérature française du XXe siècle. Sous le rire, Cohen écrit une **élégie** pour un monde juif méditerranéen menacé — le livre paraît en 1938 — et prépare la mécanique tragique de *Belle du Seigneur*.
+Un livre de **truculence verbale** : discours **interminables**, listes, exagérations, **mélange de sublime et de bouffon**.
+
+> **Mangeclous** est l’un des **grands personnages comiques** de la littérature française du XXe siècle.
+
+| Sous le rire | Le détail |
+| Une **élégie** | Pour un **monde juif méditerranéen menacé** — **le livre paraît en 1938** |
+| Une préparation | La **mécanique tragique** de *Belle du Seigneur* |
 
 > Les Valeureux sont à Cohen ce que les compagnons de Falstaff sont à Shakespeare.`,
           },
@@ -1107,17 +1891,30 @@ Un livre de **truculence** verbale : discours interminables, listes, exagératio
           lecon: {
             titre: 'Breton, 1924 — l’acte de naissance d’un mouvement',
             cours: `## Le texte
-Publié en **1924**, il donne au **surréalisme** sa définition, restée célèbre : « **Automatisme psychique pur par lequel on se propose d’exprimer, soit verbalement, soit par écrit, soit de toute autre manière, le fonctionnement réel de la pensée**… en l’absence de tout contrôle exercé par la raison, en dehors de toute préoccupation esthétique ou morale. »
+Publié en **1924**, il donne au **surréalisme** sa **définition**, restée célèbre :
+
+> « **Automatisme psychique pur** par lequel on se propose d’exprimer… **le fonctionnement réel de la pensée**… **en l’absence de tout contrôle exercé par la raison**, en dehors de toute préoccupation esthétique ou morale. »
 
 ## Le programme
-- L’**écriture automatique** : écrire vite, sans sujet préconçu, pour laisser parler l’inconscient — Breton et Soupault en avaient fait l’expérience dans *Les Champs magnétiques* (1919).
-- Le **rêve**, le hasard objectif, la folie, l’enfance : tout ce que la raison écarte.
-- L’**image** surréaliste : le rapprochement de deux réalités éloignées, d’après Reverdy — plus l’écart est grand et juste, plus l’image est forte.
-- Le refus du **roman** réaliste, moqué pour ses descriptions et sa psychologie.
-Breton s’appuie sur **Freud** et cite les précurseurs : Sade, Lautréamont, Rimbaud, Jarry.
+| Élément | Ce qu’il apporte |
+| L’**écriture automatique** | Écrire **vite**, **sans sujet préconçu**, pour **laisser parler l’inconscient** |
+| Le **rêve**, le **hasard objectif**, la **folie**, l’**enfance** | Tout ce que **la raison écarte** |
+| L’**image surréaliste** | Le **rapprochement de deux réalités éloignées**, d’après **Reverdy** |
+| Le **refus du roman réaliste** | Moqué pour ses **descriptions** et sa **psychologie** |
+
+> Sur l’image : **plus l’écart est grand et juste, plus l’image est forte**.
+
+Breton et **Soupault** avaient fait l’expérience de l’automatisme dans *Les Champs magnétiques* (**1919**).
+
+## Les appuis
+| Référence | Son rôle |
+| **Freud** | La théorie de l’inconscient |
+| **Sade**, **Lautréamont**, **Rimbaud**, **Jarry** | Les **précurseurs** revendiqués |
 
 ## À retenir
-Le manifeste fonde un mouvement qui dominera l’entre-deux-guerres et débordera la littérature (peinture, cinéma, politique). Un second manifeste suivra en 1930, avec exclusions et règlements de comptes.
+Le manifeste **fonde un mouvement** qui **dominera l’entre-deux-guerres** et **débordera la littérature** : peinture, cinéma, politique.
+
+> Un **second manifeste** suivra en **1930** — **avec exclusions et règlements de comptes**.
 
 > « L’imagination est peut-être sur le point de reprendre ses droits. »`,
           },
@@ -1135,10 +1932,24 @@ Le manifeste fonde un mouvement qui dominera l’entre-deux-guerres et déborder
           lecon: {
             titre: 'Pagnol, 1963 — la vengeance de la fille',
             cours: `## L’histoire
-Second volume de *L’Eau des collines*, suite de *Jean de Florette*. Une dizaine d’années après la mort de son père, **Manon**, devenue bergère dans les collines, vit à l’écart du village. Elle découvre par hasard la **source** qui alimente tout **Les Bastides** — et comprend, en recoupant ce qu’elle sait, que les **Soubeyran** avaient bouché celle de son père. Elle **obstrue** la source du village : les fontaines se tarissent, la panique s’installe, on organise des processions. **Ugolin**, tombé follement amoureux d’elle, est repoussé et se pend. Le **Papet** apprend alors de la vieille Delphine que Jean de Florette était son propre fils, né de son amour de jeunesse avec Florette : il a tué son enfant sans le savoir. Il meurt peu après, léguant tout à Manon.
+Second volume de *L’Eau des collines*, **suite** de *Jean de Florette*.
+
+| Étape | Ce qui se passe |
+| Le point de départ | Une dizaine d’années après la mort de son père, **Manon** est **bergère dans les collines**, à l’écart du village |
+| La découverte | Elle trouve **par hasard la source qui alimente Les Bastides** — et **comprend** que les **Soubeyran** avaient bouché celle de son père |
+| La vengeance | Elle **obstrue la source du village** : les fontaines **se tarissent**, la panique s’installe, on organise des **processions** |
+| **Ugolin** | **Follement amoureux d’elle**, **repoussé**, il **se pend** |
+| La révélation | La vieille **Delphine** apprend au **Papet** que **Jean de Florette était son propre fils**, né de son amour de jeunesse avec **Florette** |
+| La fin | **Il a tué son enfant sans le savoir.** Il meurt peu après, **léguant tout à Manon** |
 
 ## À retenir
-La tragédie se referme comme une **fatalité antique** : le crime revient sur son auteur par un chemin qu’il n’avait pas prévu. Le village, complice par son silence, est puni collectivement par la soif. Manon épouse l’instituteur : la vengeance ne l’enferme pas.
+> La tragédie se referme comme une **fatalité antique** : **le crime revient sur son auteur par un chemin qu’il n’avait pas prévu**.
+
+| Qui est puni | Comment |
+| Le **Papet** | Par la **révélation** |
+| Le **village**, complice **par son silence** | **Collectivement, par la soif** |
+
+> **Manon épouse l’instituteur** : **la vengeance ne l’enferme pas**. C’est la nuance qui sauve le livre du pur noir.
 
 > « Il a tué son fils. »`,
           },
@@ -1156,10 +1967,25 @@ La tragédie se referme comme une **fatalité antique** : le crime revient sur s
           lecon: {
             titre: 'Prévost, 1731 — la passion racontée par le coupable',
             cours: `## L’histoire
-*Histoire du chevalier Des Grieux et de Manon Lescaut*. Le narrateur premier, **Renoncour**, recueille le récit de **Des Grieux** : à dix-sept ans, promis à l’ordre de Malte, il rencontre à **Amiens** Manon qu’on envoie au couvent, et s’enfuit avec elle. Suivent la misère, la trahison de Manon avec M. de B…, le retour de Des Grieux à Saint-Sulpice, la rechute le jour de sa thèse, la vie de jeu avec le frère **Lescaut**, les escroqueries contre **G… M…**, la prison à **Saint-Lazare** et à l’**Hôpital**, l’évasion, la déportation de Manon en **Louisiane** — où Des Grieux la suit, où ils vivent enfin en paix, et où elle meurt dans le désert après un duel.
+*Histoire du chevalier Des Grieux et de Manon Lescaut*. Le narrateur premier, **Renoncour**, **recueille le récit de Des Grieux**.
+
+| Étape | Ce qui se passe |
+| **Amiens** | À **dix-sept ans**, promis à l’ordre de Malte, il rencontre Manon **qu’on envoie au couvent** — et **s’enfuit avec elle** |
+| Paris | La **misère**, puis la **trahison** de Manon avec **M. de B…** |
+| **Saint-Sulpice** | Le retour à la religion — et la **rechute le jour de sa thèse** |
+| La dérive | La vie de jeu avec le frère **Lescaut**, les escroqueries contre **G… M…** |
+| La prison | **Saint-Lazare** pour lui, l’**Hôpital** pour elle — puis l’**évasion** |
+| La **Louisiane** | Manon **déportée** ; Des Grieux la suit ; **ils vivent enfin en paix** |
+| La fin | **Elle meurt dans le désert**, après un duel |
 
 ## À retenir
-Parcours possible au bac : **personnages en marge, plaisirs du romanesque**. Tout le roman est la **parole de Des Grieux**, après coup : Manon n’est jamais analysée de l’intérieur, et le narrateur se justifie autant qu’il raconte. Rythme d’accélération constante — évasions, duels, larmes, exil — qui ne laisse jamais le temps de juger.
+Parcours possible au bac : **personnages en marge, plaisirs du romanesque**.
+
+| Ce que le dispositif implique | Le détail |
+| Tout le roman est la **parole de Des Grieux**, **après coup** | **Manon n’est jamais analysée de l’intérieur** |
+| Le narrateur | **Se justifie autant qu’il raconte** |
+
+> Rythme d’**accélération constante** — évasions, duels, larmes, exil — **qui ne laisse jamais le temps de juger**.
 
 > « Nous nous embrassâmes avec une tendresse ardente. »`,
           },
@@ -1177,19 +2003,29 @@ Parcours possible au bac : **personnages en marge, plaisirs du romanesque**. Tou
           lecon: {
             titre: 'Lamartine, 1820 — le premier recueil romantique',
             cours: `## Le recueil
-Vingt-quatre poèmes publiés en **1820**, succès immédiat et considérable : on y voit habituellement l’acte de naissance du **romantisme** français en poésie. Lamartine a vingt-neuf ans.
+**Vingt-quatre poèmes** publiés en **1820** : succès **immédiat et considérable**.
+
+> On y voit habituellement l’**acte de naissance du romantisme français en poésie**. Lamartine a **vingt-neuf ans**.
 
 ## Les poèmes
-« **Le Lac** », le plus célèbre : revenu seul au bord du lac du Bourget, le poète s’adresse à la nature et au temps — « Ô temps, suspends ton vol ! » — après la mort de **Julie Charles**, la « Elvire » du recueil. « L’Isolement » (« Un seul être vous manque, et tout est dépeuplé »), « Le Vallon », « L’Automne », « Le Golfe de Baya ».
+| Poème | Ce qu’il porte |
+| « **Le Lac** » | Le plus célèbre : revenu **seul** au bord du **lac du Bourget**, le poète s’adresse à la nature et au temps — après la mort de **Julie Charles**, l’« **Elvire** » du recueil |
+| « **L’Isolement** » | « Un seul être vous manque, et **tout est dépeuplé** » |
+| « Le Vallon », « L’Automne », « Le Golfe de Baya » | La méditation, la mort, la mémoire |
+
+> « **Ô temps, suspends ton vol !** »
 
 ## Ce qui est neuf
-- Le **je** lyrique s’expose directement, sans masque mythologique.
-- La **nature** devient confidente et miroir de l’âme : elle console, elle dure quand l’homme passe.
-- Le vers reste **classique** de facture (alexandrins, strophes régulières), mais la **musicalité** et la fluidité l’emportent sur l’ornement.
-- Le sentiment religieux, la mort, le temps et la mémoire deviennent les grands sujets.
+| Élément | Le changement |
+| Le **je** lyrique | Il **s’expose directement**, **sans masque mythologique** |
+| La **nature** | Elle devient **confidente et miroir de l’âme** : elle **console**, elle **dure quand l’homme passe** |
+| Le **vers** | **Classique de facture** — alexandrins, strophes régulières — mais la **musicalité l’emporte sur l’ornement** |
+| Les **sujets** | Le sentiment **religieux**, la **mort**, le **temps**, la **mémoire** |
 
 ## À retenir
-Lamartine sera aussi un homme politique majeur (chef du gouvernement provisoire en 1848). Mais c’est ce mince recueil qui a changé la poésie française.
+Lamartine sera aussi un **homme politique majeur** — **chef du gouvernement provisoire en 1848**.
+
+> Mais c’est **ce mince recueil** qui a **changé la poésie française**.
 
 > « Ô temps, suspends ton vol ! et vous, heures propices, suspendez votre cours ! »`,
           },
@@ -1207,13 +2043,29 @@ Lamartine sera aussi un homme politique majeur (chef du gouvernement provisoire 
           lecon: {
             titre: 'Yourcenar, 1951 — la conscience d’un empereur',
             cours: `## L’œuvre
-Une longue **lettre** de l’empereur **Hadrien** (76-138), malade et proche de la mort, à son petit-fils adoptif **Marc Aurèle**. Six sections aux titres latins, dont la première, *Animula vagula blandula*, reprend les premiers mots du poème que la tradition attribue à Hadrien mourant.
+Une longue **lettre** de l’empereur **Hadrien** (**76-138**), **malade et proche de la mort**, à son petit-fils adoptif **Marc Aurèle**.
+
+> **Six sections** aux titres **latins** — la première, *Animula vagula blandula*, reprend les **premiers mots du poème que la tradition attribue à Hadrien mourant**.
 
 ## Le contenu
-Le soldat, le voyageur, le prince : Hadrien arrête l’expansion militaire, consolide les frontières (le mur en Bretagne), parcourt l’Empire, restaure Athènes, bâtit la Villa Adriana et le Panthéon. Il aime **Antinoüs**, jeune Bithynien qui se noie dans le Nil en 130 — mort peut-être volontaire — et le divinise. Puis viennent la révolte juive, la maladie, la préparation de la succession, et l’acceptation de la mort.
+| Étape de la vie | Ce qu’elle apporte |
+| Le **soldat**, le **voyageur**, le **prince** | Les trois âges du récit |
+| Sa politique | Il **arrête l’expansion militaire** et **consolide les frontières** — le **mur en Bretagne** |
+| Ses œuvres | Il **restaure Athènes**, bâtit la **Villa Adriana** et le **Panthéon** |
+| **Antinoüs** | Jeune Bithynien **noyé dans le Nil en 130** — **mort peut-être volontaire**. Il le **divinise** |
+| La fin | La **révolte juive**, la **maladie**, la **succession** — et l’**acceptation de la mort** |
 
 ## À retenir
-Yourcenar a mis près de **trente ans** à écrire ce livre. Sa méthode, exposée dans les *Carnets de notes* joints au volume : « Un pied dans l’érudition, l’autre dans la magie. » Prose ample, de rythme latin, aphoristique. Ce n’est pas seulement un roman historique : c’est une méditation sur le **pouvoir**, le **corps**, l’**art** et la **mort**. Yourcenar sera, en 1980, la première femme élue à l’Académie française.
+Yourcenar a mis **près de trente ans** à écrire ce livre.
+
+> Sa méthode, exposée dans les *Carnets de notes* joints au volume : « **Un pied dans l’érudition, l’autre dans la magie.** »
+
+| Ce que le livre n’est pas seulement | Ce qu’il est |
+| Un **roman historique** | Une **méditation** sur le **pouvoir**, le **corps**, l’**art** et la **mort** |
+
+Prose **ample**, de **rythme latin**, **aphoristique**.
+
+> Yourcenar sera, en **1980**, la **première femme élue à l’Académie française**.
 
 > « Tâchons d’entrer dans la mort les yeux ouverts. »`,
           },

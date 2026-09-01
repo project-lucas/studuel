@@ -140,36 +140,49 @@ DELETE FROM public.chapters c
           axe: 'Quelles sont les sources et quels sont les défis de la croissance économique ?',
           lecon: {
             titre: 'D’où vient la richesse en plus',
-            cours: `La **croissance économique** est l’augmentation durable de la production de biens et de services d’un pays, mesurée par la variation du **PIB en volume** (c’est-à-dire corrigée de l’inflation).
+            cours: `La **croissance économique** est l’augmentation durable de la production, mesurée par la variation du **PIB en volume** — c’est-à-dire corrigée de l’inflation.
 
 ## Les facteurs de production
-La production combine deux facteurs :
-- le **travail** : le nombre d’heures travaillées, mais aussi leur qualité — le **capital humain** (formation, expérience, santé) ;
-- le **capital fixe** : les machines, bâtiments et logiciels utilisés durablement.
+| Facteur | Ce qu’il recouvre | Sa dimension qualitative |
+| Le **travail** | Le nombre d’heures travaillées | Le **capital humain** : formation, expérience, santé |
+| Le **capital fixe** | Machines, bâtiments, logiciels | Leur modernité, leur efficacité |
 
-## Croissance extensive et croissance intensive
-- **extensive** : on produit plus parce qu’on utilise **plus** de facteurs (plus d’actifs, plus de machines) ;
-- **intensive** : on produit plus **avec la même quantité** de facteurs, grâce aux gains de **productivité**.
+## Extensive ou intensive
+| | Croissance **extensive** | Croissance **intensive** |
+| D’où vient la hausse | De **plus** de facteurs | De **gains de productivité** |
+| Ce qu’elle suppose | Plus d’actifs, plus de machines | La même quantité de facteurs |
+| Est-elle soutenable ? | **Non** à long terme | **Oui** |
 
-Seule la croissance intensive est soutenable à long terme : la population active et le stock de capital ne peuvent pas croître indéfiniment.
+La population active et le stock de capital ne peuvent pas croître indéfiniment : seule la croissance intensive tient sur la durée.
 
 ## La productivité globale des facteurs
-La **PGF** est la part de la croissance qui n’est expliquée **ni** par la hausse du travail **ni** par celle du capital. Elle mesure l’efficacité de leur combinaison, et sert d’approximation du **progrès technique**. Dans les pays développés, elle explique l’essentiel de la croissance de longue période.
+La **PGF** est la part de la croissance qui n’est expliquée **ni** par la hausse du travail **ni** par celle du capital. Elle mesure l’efficacité de leur **combinaison**, et sert d’approximation du **progrès technique**.
 
-## Le progrès technique, moteur central
-Le progrès technique désigne l’ensemble des innovations qui améliorent les procédés, les produits et l’organisation. Schumpeter parle de **destruction créatrice** : l’innovation détruit des activités anciennes en même temps qu’elle en crée de nouvelles. C’est un processus douloureux à court terme et créateur de croissance à long terme.
+Dans les pays développés, elle explique **l’essentiel** de la croissance de longue période.
 
-## Une croissance endogène
-Les théories de la **croissance endogène** (Romer, Lucas, Barro) montrent que le progrès technique n’est pas un cadeau tombé du ciel : il est **produit** par les décisions d’investissement des agents. Quatre types de capital l’alimentent :
-- le **capital physique** (les machines) ;
-- le **capital humain** (l’éducation) ;
-- le **capital public** (les infrastructures) ;
-- le **capital technologique** (la recherche-développement).
+## Le progrès technique
+**Schumpeter** parle de **destruction créatrice** : l’innovation détruit des activités anciennes **en même temps** qu’elle en crée de nouvelles.
 
-## Les rendements croissants et les externalités
-La connaissance a une particularité : elle ne se détruit pas en s’utilisant, et elle profite à d’autres que celui qui l’a produite. Ces **externalités positives** expliquent que l’investissement privé en recherche soit spontanément **inférieur à l’optimum social** — d’où l’intervention publique (subventions, crédit d’impôt recherche, universités).
+> C’est un processus **douloureux à court terme** et **créateur de croissance à long terme**. Les deux à la fois — et une copie qui n’en retient qu’une moitié passe à côté du concept.
 
-> Croissance n’est pas développement : le PIB mesure une production, pas un bien-être. L’**IDH** y ajoute l’espérance de vie et le niveau d’éducation, sans mesurer pour autant les inégalités ni l’état de l’environnement.`,
+## La croissance endogène
+Les théories de **Romer, Lucas et Barro** montrent que le progrès technique n’est pas un cadeau tombé du ciel : il est **produit** par les décisions d’investissement.
+
+| Type de capital | Ce qui l’alimente |
+| **Physique** | L’investissement des entreprises |
+| **Humain** | L’éducation, la formation |
+| **Public** | Les infrastructures |
+| **Technologique** | La recherche-développement |
+
+## Rendements croissants et externalités
+La connaissance a deux particularités : elle **ne se détruit pas** en s’utilisant, et elle **profite à d’autres** que celui qui l’a produite.
+
+> Ces **externalités positives** expliquent que l’investissement privé en recherche soit spontanément **inférieur à l’optimum social** — d’où subventions, crédit d’impôt recherche et universités publiques. Ce n’est pas de l’assistanat : c’est la correction d’une défaillance de marché.
+
+## Croissance ou développement
+| Indicateur | Ce qu’il mesure | Ce qu’il ignore |
+| **PIB** | Une production | Le bien-être, les inégalités, l’environnement |
+| **IDH** | Revenu, espérance de vie, éducation | Les inégalités et l’état de l’environnement |`,
           },
           questions: [
             ['Qu’est-ce que la croissance intensive ?', ['Produire plus avec la même quantité de facteurs, grâce aux gains de productivité', 'Produire plus en utilisant plus de travail et de capital', 'Produire plus en augmentant les prix', 'Produire plus en réduisant les importations'], 0, 'C’est la seule soutenable à long terme : les facteurs ne peuvent pas croître indéfiniment.'],
@@ -187,33 +200,47 @@ La connaissance a une particularité : elle ne se détruit pas en s’utilisant,
           axe: 'Quelles sont les sources et quels sont les défis de la croissance économique ?',
           lecon: {
             titre: 'Pourquoi certains pays innovent et d’autres non',
-            cours: `Deux pays dotés du même capital et de la même main-d’œuvre ne connaissent pas la même croissance. Ce qui les sépare tient largement à leurs **institutions**.
+            cours: `Deux pays dotés du même capital et de la même main-d’œuvre ne connaissent **pas** la même croissance. Ce qui les sépare tient largement à leurs **institutions**.
 
 ## Ce qu’est une institution
-Une institution est l’ensemble des **règles du jeu** d’une société : lois, contrats, droits de propriété, système judiciaire, mais aussi normes et habitudes. Elle fixe les incitations auxquelles répondent les agents économiques.
+L’ensemble des **règles du jeu** d’une société : lois, contrats, droits de propriété, système judiciaire — mais aussi normes et habitudes. Elle fixe les **incitations** auxquelles répondent les agents.
 
 ## Les droits de propriété
-C’est l’institution la plus déterminante pour l’innovation. Sans garantie de pouvoir s’approprier le fruit de son effort, personne n’investit sur le long terme. Le **brevet** en est l’instrument le plus direct : il accorde à l’inventeur un **monopole temporaire** (20 ans en général) en échange de la **publication** de l’invention. C’est un compromis assumé entre deux objectifs contradictoires — inciter à innover, et diffuser la connaissance.
+C’est l’institution la plus déterminante pour l’innovation : sans garantie de pouvoir s’approprier le fruit de son effort, **personne n’investit** sur le long terme.
 
-## Institutions inclusives et institutions extractives
-Acemoglu et Robinson distinguent :
-- les institutions **inclusives**, qui répartissent largement le pouvoir et sécurisent les droits du plus grand nombre : elles favorisent l’innovation ;
-- les institutions **extractives**, qui concentrent le pouvoir et les revenus au profit d’une élite : elles bloquent la destruction créatrice, parce que celle-ci menace les rentes en place.
+Le **brevet** en est l’instrument le plus direct.
+
+| Ce qu’il accorde | Ce qu’il exige en retour |
+| Un **monopole temporaire** — 20 ans en général | La **publication** de l’invention |
+
+> C’est un **compromis assumé** entre deux objectifs contradictoires : **inciter** à innover, et **diffuser** la connaissance. Un brevet trop large ou trop long bloque les innovations suivantes, qui s’appuient toujours sur les précédentes.
+
+## Inclusives ou extractives
+**Acemoglu et Robinson** distinguent deux familles.
+
+| | Institutions **inclusives** | Institutions **extractives** |
+| Le pouvoir | Largement réparti | Concentré sur une élite |
+| Les droits | Sécurisés pour le plus grand nombre | Réservés |
+| L’effet sur l’innovation | Elles la **favorisent** | Elles la **bloquent** |
+| Pourquoi | La destruction créatrice est acceptée | Elle menace les **rentes** en place |
 
 ## Le rôle de l’État
-L’État soutient la croissance par plusieurs canaux :
-- il **finance** la recherche fondamentale, non rentable à court terme ;
-- il **produit** les infrastructures et l’éducation ;
-- il **sécurise** les contrats et la concurrence ;
-- il **réduit l’incertitude** par la stabilité de la règle.
-
-## Les droits de propriété peuvent aussi freiner
-Un brevet trop large ou trop long bloque les innovations suivantes, qui s’appuient toujours sur les précédentes. Le débat sur les brevets pharmaceutiques ou sur les logiciels libres porte exactement sur ce point : où placer le curseur entre incitation et diffusion.
+| Canal | Ce qu’il apporte |
+| **Financer** la recherche fondamentale | Elle n’est pas rentable à court terme |
+| **Produire** infrastructures et éducation | Aucune entreprise ne le ferait seule |
+| **Sécuriser** contrats et concurrence | Il rend l’investissement possible |
+| **Réduire l’incertitude** | Par la stabilité de la règle |
 
 ## L’innovation n’est pas que technologique
-Elle peut porter sur le **produit**, le **procédé**, l’**organisation** (le taylorisme, le toyotisme) ou le **débouché** (un nouveau marché). Schumpeter le disait déjà : l’entrepreneur innovant n’est pas nécessairement un inventeur.
+| Type d’innovation | Exemple |
+| De **produit** | Un bien nouveau |
+| De **procédé** | Une façon de produire moins chère |
+| d’**organisation** | Le taylorisme, le toyotisme |
+| De **débouché** | Un marché nouveau |
 
-> Le lien institutions-croissance n’est pas mécanique : il joue dans les deux sens, et les pays riches ont aussi les moyens de se doter de bonnes institutions. Le repérer, c’est éviter le raccourci du sujet de dissertation.`,
+Schumpeter le disait déjà : l’entrepreneur innovant n’est **pas nécessairement** un inventeur.
+
+> Le lien institutions-croissance n’est **pas mécanique** : il joue dans les deux sens, et les pays riches ont aussi les moyens de se doter de bonnes institutions. Le signaler évite le raccourci le plus fréquent en dissertation.`,
           },
           questions: [
             ['Qu’est-ce qu’une institution, en économie ?', ['L’ensemble des règles du jeu qui fixent les incitations des agents', 'Un organisme public', 'Une entreprise publique', 'Une association reconnue d’utilité publique'], 0, 'Lois, contrats, droits de propriété, mais aussi normes et habitudes.'],
@@ -231,31 +258,47 @@ Elle peut porter sur le **produit**, le **procédé**, l’**organisation** (le 
           axe: 'Quelles sont les sources et quels sont les défis de la croissance économique ?',
           lecon: {
             titre: 'Une croissance infinie dans un monde fini ?',
-            cours: `La croissance a un coût écologique. La question du programme n’est pas de savoir s’il existe, mais s’il est **surmontable** — et par quels moyens.
+            cours: `La croissance a un coût écologique. La question du programme n’est pas de savoir s’il **existe**, mais s’il est **surmontable** — et par quels moyens.
 
 ## Les limites écologiques
-Deux types de limites pèsent sur la croissance :
-- l’**épuisement des ressources non renouvelables** (énergies fossiles, métaux rares) ;
-- la **dégradation des milieux** : climat, biodiversité, qualité de l’air et de l’eau. La pollution est une **externalité négative** : le pollueur n’en supporte pas le coût.
+| Limite | Ce qu’elle recouvre |
+| **Épuisement** des ressources non renouvelables | Énergies fossiles, métaux rares |
+| **Dégradation** des milieux | Climat, biodiversité, air, eau |
 
-## Croissance soutenable
-Le **développement durable** (rapport Brundtland, 1987) est celui qui « répond aux besoins du présent sans compromettre la capacité des générations futures à répondre aux leurs ». Il articule trois piliers : économique, social, environnemental.
+La pollution est une **externalité négative** : le pollueur n’en supporte pas le coût. C’est une défaillance de marché, pas une fatalité.
+
+## Le développement durable
+Rapport **Brundtland** (1987) : celui qui « répond aux besoins du présent sans compromettre la capacité des générations futures à répondre aux leurs ». Il articule trois piliers — économique, social, environnemental.
 
 ## Les quatre capitaux
-On distingue le capital **physique**, **humain**, **social** (la qualité des relations et de la confiance) et **naturel**. La soutenabilité se pose alors comme une question de substitution :
-- **soutenabilité faible** : les capitaux sont **substituables** — la perte de capital naturel peut être compensée par du capital technologique. Le progrès technique résout le problème ;
-- **soutenabilité forte** : certains éléments du capital naturel sont **irremplaçables** (le climat, une espèce éteinte). Il faut alors préserver un stock minimal, quoi qu’il en coûte.
+| Capital | Ce qu’il recouvre |
+| **Physique** | Machines, infrastructures |
+| **Humain** | Compétences, santé |
+| **Social** | La qualité des relations et de la confiance |
+| **Naturel** | Ressources et milieux |
+
+## Soutenabilité faible ou forte
+| | Soutenabilité **faible** | Soutenabilité **forte** |
+| Les capitaux sont… | **Substituables** | Certains sont **irremplaçables** |
+| La perte de capital naturel | Compensée par du capital technologique | Ne se compense pas |
+| Ce qu’il faut faire | Innover | Préserver un **stock minimal** |
+| L’exemple qui tranche | — | Le climat, une espèce éteinte |
 
 ## Le découplage
-Le **découplage** entre croissance et pression environnementale est **relatif** quand les émissions croissent moins vite que le PIB, **absolu** quand elles baissent alors que le PIB augmente. Certains pays développés affichent un découplage absolu de leurs émissions territoriales — mais une part s’explique par la **délocalisation** des industries polluantes : l’**empreinte carbone**, qui compte les émissions importées, recule bien plus lentement.
+| Type | Ce qu’il signifie |
+| **Relatif** | Les émissions croissent **moins vite** que le PIB |
+| **Absolu** | Les émissions **baissent** alors que le PIB augmente |
+
+> Certains pays développés affichent un découplage absolu de leurs émissions **territoriales**. Mais une part s’explique par la **délocalisation** des industries polluantes : l’**empreinte carbone**, qui compte les émissions importées, recule bien plus lentement. Distinguer les deux mesures est décisif.
 
 ## Les positions en présence
-- les tenants de la **croissance verte** misent sur l’innovation et le signal-prix pour verdir la production ;
-- les partisans de la **décroissance** jugent le découplage absolu trop lent et trop partiel pour tenir les objectifs climatiques, et proposent de réduire la production elle-même.
+| Position | Son pari | Son argument |
+| **Croissance verte** | L’innovation et le signal-prix verdiront la production | Le découplage absolu est possible |
+| **Décroissance** | Il faut réduire la production elle-même | Le découplage est trop lent et trop partiel |
 
-Le programme n’arbitre pas : il demande de connaître les arguments et les données.
+Le programme n’arbitre pas : il demande de **connaître les arguments et les données**.
 
-> Le PIB ignore la destruction du capital naturel : une marée noire l’augmente, puisque le nettoyage est une production. C’est la critique la plus solide de son usage comme boussole.`,
+> Le PIB ignore la destruction du capital naturel : une marée noire l’**augmente**, puisque le nettoyage est une production. C’est la critique la plus solide de son usage comme boussole.`,
           },
           questions: [
             ['Qu’est-ce qu’une externalité négative ?', ['Un effet néfaste subi par un tiers sans compensation par le marché', 'Une perte comptable pour l’entreprise', 'Un impôt sur les bénéfices', 'Une baisse de la demande'], 0, 'La pollution en est l’exemple type : le pollueur n’en supporte pas le coût.'],
@@ -274,27 +317,33 @@ Le programme n’arbitre pas : il demande de connaître les arguments et les don
           axe: 'Quels sont les fondements du commerce international et de l’internationalisation de la production ?',
           lecon: {
             titre: 'Pourquoi deux pays ont intérêt à échanger',
-            cours: `Le commerce international ne se réduit pas à « chacun vend ce qu’il sait faire ». Les théories du programme expliquent pourquoi l’échange peut profiter aux deux partenaires, même quand l’un est meilleur en tout.
+            cours: `Le commerce international ne se réduit pas à « chacun vend ce qu’il sait faire ». Les théories du programme expliquent pourquoi l’échange peut profiter **aux deux** partenaires — même quand l’un est meilleur en tout.
 
-## L’avantage absolu (Smith)
-Chaque pays se spécialise dans le bien qu’il produit **avec moins de facteurs** que l’autre, et échange le surplus. Le raisonnement s’arrête net si un pays est meilleur partout.
+## Les trois théories
+| Théorie | Son critère | Sa limite |
+| **Avantage absolu** (Smith) | Produire avec **moins de facteurs** que l’autre | Le raisonnement s’arrête si un pays est meilleur partout |
+| **Avantage comparatif** (Ricardo) | Le **coût d’opportunité** le plus bas | Elle suppose des facteurs immobiles |
+| **Dotation factorielle** (HOS) | L’abondance **relative** en facteurs | Elle explique mal le commerce entre pays semblables |
 
-## L’avantage comparatif (Ricardo)
-La réponse de Ricardo est décisive : un pays a intérêt à se spécialiser là où son **désavantage est le plus faible** — c’est-à-dire là où son **coût d’opportunité** est le plus bas. Même le pays le moins productif en tout gagne à l’échange, car ce qui compte est le rapport **entre** ses productions, pas la comparaison avec l’étranger.
-
-## La dotation factorielle (HOS)
-Le modèle **Heckscher-Ohlin-Samuelson** explique la spécialisation par la **dotation relative en facteurs** : un pays abondant en main-d’œuvre peu qualifiée se spécialise dans les productions intensives en ce facteur, un pays abondant en capital et en travail qualifié dans les autres.
+> L’apport de **Ricardo** est décisif : un pays a intérêt à se spécialiser là où son **désavantage est le plus faible**. Ce qui compte est le rapport **entre ses propres productions**, jamais la comparaison avec l’étranger. Même le pays le moins productif en tout gagne à l’échange.
 
 ## Le commerce entre pays semblables
-Ces théories expliquent le commerce **interbranche** (des voitures contre du textile). Or l’essentiel des échanges se fait aujourd’hui **entre pays développés** et **à l’intérieur d’une même branche** : c’est le commerce **intrabranche** (des voitures contre des voitures). Trois explications :
-- la **différenciation des produits** : les consommateurs veulent de la variété ;
-- les **économies d’échelle** : produire en grande série abaisse le coût unitaire, ce qui pousse chaque pays à se spécialiser sur un segment ;
-- la **fragmentation de la chaîne de valeur** : les pièces d’un même produit traversent plusieurs frontières.
+Les théories ci-dessus expliquent le commerce **interbranche** — des voitures contre du textile. Or l’essentiel des échanges se fait **entre pays développés** et **dans une même branche**.
+
+| Explication du commerce **intrabranche** | Ce qu’elle avance |
+| La **différenciation des produits** | Les consommateurs veulent de la variété |
+| Les **économies d’échelle** | La grande série abaisse le coût unitaire : chacun se spécialise sur un segment |
+| La **fragmentation** de la chaîne de valeur | Les pièces d’un même produit traversent plusieurs frontières |
 
 ## Les avantages comparatifs se construisent
-Ils ne sont pas donnés une fois pour toutes : la Corée du Sud n’avait aucun avantage comparatif dans l’électronique en 1960. La formation, la recherche et parfois le **protectionnisme éducateur** (List) les fabriquent.
+Ils ne sont **pas donnés une fois pour toutes** : la Corée du Sud n’avait aucun avantage comparatif dans l’électronique en 1960.
 
-> Dire qu’un pays « gagne à l’échange » ne dit rien de la répartition du gain **à l’intérieur** du pays : c’est tout l’objet de la fiche suivante.`,
+| Ce qui les fabrique | Exemple |
+| La **formation** | Le capital humain |
+| La **recherche** | Le capital technologique |
+| Le **protectionnisme éducateur** (List) | Protéger une industrie naissante, le temps qu’elle mûrisse |
+
+> Dire qu’un pays « gagne à l’échange » ne dit **rien** de la répartition du gain **à l’intérieur** du pays. C’est l’objet de la fiche suivante — et c’est là que se joue tout le débat politique.`,
           },
           questions: [
             ['Sur quoi repose l’avantage comparatif de Ricardo ?', ['Le coût d’opportunité : se spécialiser là où le désavantage est le plus faible', 'La productivité absolue la plus élevée', 'La dotation en capital', 'Le niveau des salaires'], 0, 'Même un pays moins productif en tout gagne à l’échange.'],
@@ -312,31 +361,42 @@ Ils ne sont pas donnés une fois pour toutes : la Corée du Sud n’avait aucun 
           axe: 'Quels sont les fondements du commerce international et de l’internationalisation de la production ?',
           lecon: {
             titre: 'Les gagnants, les perdants, et ce que fait l’État',
-            cours: `Le libre-échange augmente la richesse totale disponible. Il ne dit rien de sa répartition — et c’est de là que viennent tous les débats.
+            cours: `Le libre-échange augmente la **richesse totale** disponible. Il ne dit **rien** de sa répartition — et c’est de là que viennent tous les débats.
 
 ## Les gains de l’échange
-- pour le **consommateur** : des prix plus bas (mise en concurrence des producteurs) et une **variété** plus grande ;
-- pour le **producteur** : un marché élargi, donc des économies d’échelle et un accès à des intrants moins chers ;
-- pour l’**économie** : une pression concurrentielle qui pousse à l’innovation et à la productivité.
+| Pour qui | Le gain |
+| Le **consommateur** | Des prix plus bas, une **variété** plus grande |
+| Le **producteur** | Un marché élargi, des économies d’échelle, des intrants moins chers |
+| L’**économie** | Une pression concurrentielle qui pousse à innover |
 
 ## Les perdants
-La spécialisation détruit les emplois des secteurs exposés qui ne résistent pas. Ces pertes sont **concentrées** (une usine, un bassin d’emploi, une qualification) alors que les gains sont **diffus** (quelques euros par consommateur). Cette asymétrie explique la force politique du protectionnisme : les perdants savent qui ils sont, les gagnants l’ignorent.
+La spécialisation détruit les emplois des secteurs exposés qui ne résistent pas.
 
-Le modèle HOS le prédit : dans un pays développé, l’ouverture profite au travail qualifié et pèse sur le travail peu qualifié.
+| | Les **pertes** | Les **gains** |
+| Leur nature | **Concentrées** : une usine, un bassin d’emploi | **Diffus** : quelques euros par consommateur |
+| Qui les ressent | Ceux qui les subissent **le savent** | Les bénéficiaires l’**ignorent** |
 
-## Le rôle de l’État
-Deux réponses possibles :
-- **accompagner** : formation, indemnisation, mobilité, politique industrielle — c’est la « flexicurité » à la danoise ;
-- **protéger** : droits de douane, quotas, normes, subventions. Le protectionnisme préserve à court terme, mais renchérit les intrants, invite aux représailles et retarde l’adaptation.
+> Cette asymétrie explique la **force politique** du protectionnisme, bien mieux qu’un calcul économique. Le modèle HOS le prédit d’ailleurs : dans un pays développé, l’ouverture profite au travail **qualifié** et pèse sur le travail **peu qualifié**.
+
+## Les deux réponses de l’État
+| Réponse | Ce qu’elle fait | Son coût |
+| **Accompagner** | Formation, indemnisation, mobilité, politique industrielle | Elle demande du temps et des moyens |
+| **Protéger** | Droits de douane, quotas, normes, subventions | Intrants renchéris, représailles, adaptation retardée |
+
+La « flexicurité » danoise est l’exemple canonique de la première.
 
 ## Les instruments du protectionnisme
-- **tarifaires** : droits de douane ;
-- **non tarifaires** : quotas, normes sanitaires ou techniques, subventions, marchés publics réservés. Ce sont aujourd’hui les plus utilisés, car les tarifs sont encadrés par l’OMC.
+| Type | Exemples | Leur usage aujourd’hui |
+| **Tarifaire** | Droits de douane | Encadré par l’OMC |
+| **Non tarifaire** | Quotas, normes sanitaires ou techniques, subventions, marchés publics réservés | **Les plus utilisés** |
 
 ## La régulation multilatérale
-Le **GATT** (1947) puis l’**OMC** (1995) organisent la baisse des barrières et arbitrent les conflits (organe de règlement des différends). Depuis les années 2010, le multilatéralisme s’essouffle au profit d’**accords régionaux** (UE, ALENA/ACEUM, Mercosur) et d’un retour des mesures unilatérales.
+| Date | L’institution | Ce qu’elle fait |
+| 1947 | **GATT** | Organise la baisse des barrières |
+| **1995** | **OMC** | Arbitre les conflits : organe de règlement des différends |
+| Depuis 2010 | Le multilatéralisme s’essouffle | Accords **régionaux** et mesures unilatérales |
 
-> Un pays peut gagner à l’échange ET compter des perdants nombreux. Les deux propositions sont vraies ensemble : c’est ce que dissertations et épreuves composées attendent qu’on tienne des deux mains.`,
+> Un pays peut **gagner à l’échange** ET compter des **perdants nombreux**. Les deux propositions sont vraies **ensemble** : c’est ce qu’une dissertation doit tenir des deux mains, sans choisir.`,
           },
           questions: [
             ['Pourquoi le protectionnisme est-il politiquement puissant ?', ['Les pertes sont concentrées et visibles, les gains diffus et invisibles', 'Parce qu’il enrichit toujours le pays', 'Parce que l’OMC l’encourage', 'Parce que les consommateurs le réclament'], 0, 'Les perdants savent qui ils sont, les gagnants l’ignorent.'],
@@ -354,31 +414,44 @@ Le **GATT** (1947) puis l’**OMC** (1995) organisent la baisse des barrières e
           axe: 'Quels sont les fondements du commerce international et de l’internationalisation de la production ?',
           lecon: {
             titre: 'Quand un seul produit traverse dix frontières',
-            cours: `Ce ne sont plus des pays qui échangent des produits finis, mais des **firmes multinationales** qui découpent leur production entre plusieurs pays. Environ un tiers du commerce mondial est du commerce **intra-firme**.
+            cours: `Ce ne sont plus des pays qui échangent des produits finis, mais des **firmes multinationales** qui découpent leur production entre plusieurs pays. Environ **un tiers** du commerce mondial est du commerce **intra-firme**.
 
 ## La firme multinationale
-Une **FMN** est une entreprise qui possède au moins une unité de production hors de son pays d’origine. Elle réalise des **investissements directs à l’étranger (IDE)** : prise de contrôle durable d’une entreprise étrangère, ou création d’une filiale.
+Une **FMN** possède au moins une unité de production **hors de son pays d’origine**. Elle réalise des **investissements directs à l’étranger** : prise de contrôle durable, ou création d’une filiale.
 
 ## Pourquoi s’internationaliser
-Deux logiques, souvent confondues :
-- **conquérir un marché** : produire près du consommateur, contourner des barrières douanières, s’adapter aux goûts locaux. C’est le motif majoritaire des IDE ;
-- **réduire les coûts** : profiter d’un coût du travail plus bas, d’une fiscalité plus douce ou d’une réglementation plus souple. C’est la **délocalisation** au sens strict.
+| Logique | Ce qu’elle cherche | Son importance |
+| **Conquérir un marché** | Produire près du consommateur, contourner des barrières, s’adapter aux goûts | Le motif **majoritaire** des IDE |
+| **Réduire les coûts** | Coût du travail, fiscalité, réglementation | C’est la **délocalisation** au sens strict |
+| Accéder aux ressources | Matières premières | Secteur extractif |
+| Se rapprocher des compétences | Pôles technologiques | Recherche |
 
-S’y ajoutent l’accès aux ressources naturelles et la proximité d’un pôle de compétences.
+> Confondre IDE et délocalisation est l’erreur d’analyse la plus fréquente : la plupart des investissements à l’étranger visent à **vendre** sur place, pas à **produire moins cher**.
 
 ## La chaîne de valeur mondiale
-La production d’un bien se **fragmente** en tâches réparties selon l’avantage comparatif de chaque territoire : conception ici, composants là, assemblage ailleurs, service après-vente encore ailleurs. La valeur ajoutée se concentre aux deux extrémités — conception et commercialisation — et non dans l’assemblage : c’est la **courbe du sourire**.
+La production se **fragmente** en tâches réparties selon l’avantage comparatif de chaque territoire.
 
-Conséquence statistique : les statistiques douanières, qui comptent la valeur **totale** du bien à chaque passage de frontière, surestiment le poids des pays assembleurs. D’où les mesures en **valeur ajoutée**.
+| Étape | Où la valeur ajoutée est-elle ? |
+| Conception, R&D | **Élevée** |
+| Composants | Moyenne |
+| **Assemblage** | **Faible** |
+| Marque, commercialisation, service | **Élevée** |
+
+C’est la **courbe du sourire** : la valeur se concentre aux deux extrémités.
+
+Conséquence statistique : les statistiques douanières comptent la valeur **totale** du bien à chaque passage de frontière — elles **surestiment** le poids des pays assembleurs. D’où les mesures en **valeur ajoutée**.
 
 ## L’externalisation
-Fragmenter ne suppose pas de posséder : la firme peut **externaliser** à un sous-traitant indépendant. Elle garde alors le contrôle par le contrat et la marque, sans porter l’investissement ni le risque social.
+Fragmenter ne suppose pas de **posséder** : la firme peut externaliser à un sous-traitant indépendant. Elle garde le contrôle par le **contrat** et la **marque**, sans porter l’investissement ni le risque social.
 
 ## Les effets pour les pays
-- pour le pays d’accueil : emplois, transferts de technologie, mais aussi dépendance et concurrence fiscale ;
-- pour le pays d’origine : maintien des fonctions à forte valeur ajoutée, mais destruction d’emplois industriels et affaiblissement des recettes fiscales — la localisation des profits dans les pays à faible imposition ayant conduit à l’accord OCDE sur un **taux minimal de 15 %**.
+| | Pays d’**accueil** | Pays d’**origine** |
+| Ce qu’il gagne | Emplois, transferts de technologie | Les fonctions à forte valeur ajoutée |
+| Ce qu’il perd | Il devient dépendant, il entre en concurrence fiscale | Des emplois industriels, des recettes fiscales |
 
-> La désindustrialisation d’un pays développé s’explique par les gains de productivité industrielle autant que par les délocalisations. Attribuer tout à ces dernières est l’erreur d’analyse la plus courante.`,
+La localisation des profits dans les pays à faible imposition a conduit à l’accord OCDE sur un **taux minimal de 15 %**.
+
+> La désindustrialisation d’un pays développé s’explique par les **gains de productivité industrielle** autant que par les délocalisations. Tout attribuer à ces dernières est l’erreur d’analyse la plus courante du chapitre.`,
           },
           questions: [
             ['Qu’est-ce qu’un investissement direct à l’étranger (IDE) ?', ['Une prise de contrôle durable d’une entreprise étrangère ou la création d’une filiale', 'L’achat d’actions à but spéculatif', 'Une exportation de biens', 'Un prêt à un État étranger'], 0, 'Il se distingue de l’investissement de portefeuille par la durée et le contrôle.'],
@@ -397,33 +470,40 @@ Fragmenter ne suppose pas de posséder : la firme peut **externaliser** à un so
           axe: 'Comment lutter contre le chômage ?',
           lecon: {
             titre: 'Deux chiffres, deux définitions, deux réalités',
-            cours: `Le chômage est la première statistique commentée du débat public, et la plus mal comprise : deux organismes en publient deux mesures différentes, qui ne comptent pas la même chose.
+            cours: `Le chômage est la première statistique commentée du débat public — et la plus mal comprise : **deux** organismes en publient **deux** mesures différentes, qui ne comptent pas la même chose.
 
-## La définition du BIT
-Est **chômeur** au sens du Bureau international du travail toute personne qui remplit **trois conditions simultanées** :
-1. être **sans emploi** (pas une heure travaillée dans la semaine de référence) ;
-2. être **disponible** pour travailler dans les deux semaines ;
-3. avoir **recherché activement** un emploi dans le mois précédent (ou en avoir trouvé un qui commence sous trois mois).
+## Les trois conditions du BIT
+Est chômeur au sens du Bureau international du travail qui remplit **les trois simultanément** :
 
-C’est la définition mesurée par l’**INSEE**, à partir de l’**enquête Emploi**, qui interroge un échantillon de ménages. C’est la seule comparable au niveau international.
+| Condition | Ce qu’elle exige |
+| **Sans emploi** | Pas **une heure** travaillée dans la semaine de référence |
+| **Disponible** | Pour travailler dans les deux semaines |
+| **Recherche active** | Dans le mois précédent, ou un emploi trouvé qui commence sous trois mois |
 
-## Les inscrits à France Travail
-L’autre chiffre, publié mensuellement, est le nombre d’**inscrits** (catégories A, B, C…). Il repose sur une démarche administrative, pas sur une enquête. Un chômeur BIT peut ne pas être inscrit ; un inscrit peut travailler à temps partiel (catégories B et C) ou ne pas rechercher activement.
+C’est la définition mesurée par l’**INSEE**, via l’**enquête Emploi** auprès d’un échantillon de ménages. C’est la **seule comparable** au niveau international.
 
-## Population active et taux de chômage
-La **population active** rassemble les actifs occupés et les chômeurs. Le **taux de chômage** rapporte les chômeurs à la population active — et non à la population totale :
+## Les deux chiffres
+| | **Chômeurs BIT** | **Inscrits à France Travail** |
+| La source | Une **enquête** | Une **démarche administrative** |
+| La publication | Trimestrielle | Mensuelle |
+| Ce qu’elle inclut | Les trois conditions | Les catégories A, B, C… |
+| Le décalage | Un chômeur BIT peut ne pas être inscrit | Un inscrit peut travailler à temps partiel |
 
-taux de chômage = chômeurs / (actifs occupés + chômeurs)
+## Les taux
+| Taux | Sa formule | Ce qu’il révèle |
+| **Taux de chômage** | Chômeurs / **population active** | La part des actifs sans emploi |
+| **Taux d’emploi** | Actifs occupés / population en âge de travailler | Souvent **plus révélateur** |
 
-Attention à ne pas le confondre avec le **taux d’emploi** (actifs occupés / population en âge de travailler), qui est souvent plus révélateur : deux pays peuvent afficher le même taux de chômage avec des taux d’emploi très différents.
+La population active = actifs occupés + chômeurs. Le taux de chômage se rapporte à elle, **jamais** à la population totale.
 
-## Le halo autour du chômage
-Certaines personnes souhaitent travailler sans remplir les trois critères : elles ne recherchent pas activement (découragement), ou ne sont pas immédiatement disponibles. Elles forment le **halo autour du chômage** — plus de deux millions de personnes en France, invisibles dans le taux officiel.
+> Deux pays peuvent afficher le **même taux de chômage** avec des **taux d’emploi très différents**. Ne regarder que le premier, c’est manquer la moitié de l’information.
 
-## Le sous-emploi
-Les personnes à **temps partiel subi** ou en chômage technique sont comptées comme actives occupées, alors même qu’elles souhaitent travailler davantage. Ce **sous-emploi** est une autre face du même problème.
+## Ce que le taux officiel ne voit pas
+| Catégorie | Qui elle recouvre | Pourquoi elle échappe au chiffre |
+| Le **halo** autour du chômage | Plus de **deux millions** de personnes en France | Elles ne recherchent pas activement, ou ne sont pas disponibles |
+| Le **sous-emploi** | Temps partiel **subi**, chômage technique | Elles sont comptées comme **actives occupées** |
 
-> Le taux de chômage peut baisser parce que des chômeurs retrouvent un emploi — ou parce qu’ils se découragent et sortent de la population active. Regarder le taux d’emploi en même temps est le seul moyen de trancher.`,
+> Le taux de chômage peut baisser parce que des chômeurs **retrouvent un emploi** — ou parce qu’ils se **découragent** et sortent de la population active. Regarder le taux d’emploi **en même temps** est le seul moyen de trancher entre les deux.`,
           },
           questions: [
             ['Quelles sont les trois conditions du chômage au sens du BIT ?', ['Être sans emploi, disponible et en recherche active', 'Être inscrit à France Travail, indemnisé et disponible', 'Être sans emploi depuis plus de trois mois', 'Avoir moins de 25 ans et être sans diplôme'], 0, 'Les trois doivent être remplies simultanément.'],
@@ -441,34 +521,45 @@ Les personnes à **temps partiel subi** ou en chômage technique sont comptées 
           axe: 'Comment lutter contre le chômage ?',
           lecon: {
             titre: 'Trop cher, trop rigide, ou pas assez de demande ?',
-            cours: `Le programme distingue deux grandes familles d’explications. Elles ne se contredisent pas : elles désignent des chômages différents, qui coexistent.
+            cours: `Le programme distingue deux grandes familles d’explications. Elles ne se contredisent **pas** : elles désignent des chômages **différents**, qui coexistent.
 
-## Le chômage par insuffisance de la demande
-D’inspiration **keynésienne** : quand la demande anticipée par les entreprises est faible, elles produisent moins et embauchent moins, quel que soit le niveau des salaires. Le chômage est alors **conjoncturel** et **involontaire** — les chômeurs accepteraient le salaire en vigueur, mais aucun poste n’est ouvert.
+## Les deux familles
+| | Insuffisance de la **demande** | Fonctionnement du **marché du travail** |
+| Inspiration | **Keynésienne** | **Néoclassique** |
+| La cause | La demande anticipée est trop faible | Le salaire réel est au-dessus de l’équilibre |
+| Le chômage est… | **Conjoncturel** et **involontaire** | Lié aux institutions et au coût du travail |
+| Le remède | Soutenir la demande | Baisser le coût, assouplir |
 
-Le mécanisme s’auto-entretient : moins d’emploi → moins de revenu → moins de consommation → moins de demande. C’est le cercle vicieux que la relance budgétaire vise à briser.
+Dans le premier cas, les chômeurs **accepteraient** le salaire en vigueur — mais aucun poste n’est ouvert. Le mécanisme s’auto-entretient : moins d’emploi, moins de revenu, moins de consommation, moins de demande.
 
-## Les explications par le fonctionnement du marché du travail
-D’inspiration **néoclassique** : le chômage vient d’un salaire réel maintenu **au-dessus** du salaire d’équilibre.
-- le **salaire minimum** peut exclure les travailleurs dont la productivité lui est inférieure ;
-- les **cotisations sociales** creusent l’écart entre le coût du travail pour l’employeur et le salaire net perçu — c’est le **coin fiscalo-social** ;
-- les **institutions** (protection de l’emploi, négociation collective, indemnisation) réduisent la flexibilité.
+## Les rigidités invoquées
+| Rigidité | Le mécanisme allégué |
+| Le **salaire minimum** | Il exclut ceux dont la productivité lui est inférieure |
+| Les **cotisations sociales** | Elles creusent le **coin fiscalo-social** entre coût et salaire net |
+| Les **institutions** | Protection de l’emploi, négociation, indemnisation |
 
 ## Les asymétries d’information
-Deux théories nuancent la vision d’un marché transparent :
-- le **salaire d’efficience** : l’employeur paie **volontairement** au-dessus du marché pour attirer, fidéliser et motiver. Le chômage devient alors durable sans être imputable à une rigidité imposée ;
-- la théorie **insiders/outsiders** : les salariés en place négocient pour eux-mêmes, au détriment des candidats extérieurs.
+| Théorie | Ce qu’elle établit |
+| Le **salaire d’efficience** | L’employeur paie **volontairement** au-dessus du marché, pour attirer et motiver |
+| *Insiders / outsiders* | Les salariés en place négocient pour eux, au détriment des candidats extérieurs |
+
+> Le salaire d’efficience est décisif dans le débat : il produit un chômage **durable sans aucune rigidité imposée**. C’est une objection interne au raisonnement néoclassique, pas une objection keynésienne.
 
 ## Le chômage structurel
-Il subsiste même en haut de cycle. Trois sources :
-- l’**inadéquation** entre les qualifications offertes et demandées (*mismatch*) ;
-- la **friction** : le temps de la recherche et de l’appariement, incompressible ;
-- l’**inadéquation géographique** entre bassins d’emploi et lieux de résidence.
+Il subsiste même en haut de cycle.
+
+| Source | Ce qu’elle recouvre |
+| L’**inadéquation** des qualifications | Le *mismatch* entre offre et demande de compétences |
+| La **friction** | Le temps de recherche et d’appariement, incompressible |
+| L’inadéquation **géographique** | Bassins d’emploi et lieux de résidence disjoints |
 
 ## L’hystérésis
-Un chômage conjoncturel long finit par devenir structurel : les compétences se dégradent, le réseau se distend, l’employeur lit la durée d’inactivité comme un signal négatif. C’est l’**hystérésis**, argument central en faveur d’une réaction rapide aux récessions.
+Un chômage **conjoncturel long** finit par devenir **structurel** : les compétences se dégradent, le réseau se distend, et l’employeur lit la durée d’inactivité comme un signal négatif.
 
-> Le débat n’est pas « qui a raison » mais « quelle part de quoi » : une politique de demande est sans effet sur un chômage d’inadéquation, et une politique d’offre sans effet sur un chômage de récession.`,
+> C’est l’argument central en faveur d’une **réaction rapide** aux récessions : le coût d’attendre n’est pas seulement présent, il est **permanent**.
+
+## Ce que le débat demande vraiment
+Non pas « qui a raison », mais **quelle part de quoi** : une politique de demande est sans effet sur un chômage d’inadéquation, et une politique d’offre sans effet sur un chômage de récession.`,
           },
           questions: [
             ['Le chômage keynésien est un chômage…', ['Par insuffisance de la demande anticipée', 'Par excès de salaire réel', 'Par inadéquation des qualifications', 'Volontaire'], 0, 'Il est involontaire : les chômeurs accepteraient le salaire en vigueur.'],
@@ -486,31 +577,41 @@ Un chômage conjoncturel long finit par devenir structurel : les compétences se
           axe: 'Comment lutter contre le chômage ?',
           lecon: {
             titre: 'Chaque diagnostic appelle son remède',
-            cours: `Puisque les causes du chômage sont plurielles, les politiques le sont aussi. Le programme en distingue quatre familles, dont l’efficacité dépend du type de chômage visé.
+            cours: `Puisque les causes du chômage sont plurielles, les politiques le sont aussi. Leur efficacité dépend **entièrement** du type de chômage visé.
 
-## Les politiques de soutien à la demande
-D’inspiration keynésienne : relance **budgétaire** (dépense publique, baisse d’impôts) ou **monétaire** (baisse des taux directeurs) pour soutenir la demande anticipée et donc l’embauche.
+## Les quatre familles
+| Politique | Le chômage visé | Sa limite principale |
+| Soutien à la **demande** | Conjoncturel | Déficit, fuites vers les importations, délai |
+| Baisse du **coût du travail** | Structurel, bas salaires | Coût budgétaire, **effets d’aubaine** |
+| **Formation** | Structurel d’inadéquation | Effets **lents** |
+| **Flexibilisation** | Frictionnel | Effet sur le niveau d’emploi **discuté** |
 
-Limites : le **déficit** et la dette publique, les **fuites** vers les importations dans une économie ouverte, et le délai de mise en œuvre. Efficace contre le chômage conjoncturel, sans effet sur le structurel.
+## Le soutien à la demande
+Relance **budgétaire** — dépense publique, baisse d’impôts — ou **monétaire** — baisse des taux directeurs. Efficace contre le chômage conjoncturel, **sans effet** sur le structurel.
 
-## Les politiques de baisse du coût du travail
-**Allègements de cotisations** ciblés sur les bas salaires, où l’élasticité de l’emploi au coût du travail est la plus forte. Le raisonnement : rapprocher le coût du travail de la productivité des moins qualifiés.
+## La baisse du coût du travail
+Les allègements de cotisations sont ciblés sur les **bas salaires**, où l’élasticité de l’emploi au coût du travail est la plus forte.
 
-Limites : coût budgétaire élevé, **effets d’aubaine** (l’entreprise aurait embauché de toute façon), et **trappe à bas salaires** — les allègements dégressifs renchérissent brutalement toute augmentation.
+| Limite | Ce qu’elle produit |
+| Les **effets d’aubaine** | L’entreprise aurait embauché de toute façon |
+| La **trappe à bas salaires** | Les allègements dégressifs renchérissent brutalement toute augmentation |
 
-## Les politiques de formation
-Elles s’attaquent au chômage **structurel** d’inadéquation : formation initiale, formation continue, apprentissage, validation des acquis. Ce sont les politiques dont les évaluations montrent les effets les plus durables — mais les plus lents.
+## La formation
+Ce sont les politiques dont les évaluations montrent les effets les **plus durables** — et les **plus lents**. Formation initiale, formation continue, apprentissage, validation des acquis.
 
-## La flexibilisation du marché du travail
-Assouplir les règles d’embauche et de licenciement, faciliter les ruptures conventionnelles, décentraliser la négociation. L’effet sur le **niveau** de l’emploi est discuté ; l’effet sur sa **rotation** est établi. Le modèle de **flexicurité** danois y adjoint une indemnisation généreuse et un accompagnement intensif : la sécurité porte sur la personne, pas sur le poste.
+## La flexibilisation
+L’effet sur le **niveau** de l’emploi est discuté ; l’effet sur sa **rotation** est établi.
 
-## Politiques actives et passives
-- **passives** : indemniser (assurance chômage, préretraites) ;
-- **actives** : agir sur l’emploi lui-même (formation, accompagnement, emplois aidés, aides à la mobilité).
+> Le modèle de **flexicurité** danois y adjoint une indemnisation généreuse et un accompagnement intensif : **la sécurité porte sur la personne, pas sur le poste**. C’est cette combinaison, et non la flexibilité seule, que les évaluations valorisent.
 
-L’enjeu de l’indemnisation est un arbitrage : trop faible, elle appauvrit et pousse à accepter un emploi mal apparié ; trop généreuse ou trop longue, elle peut allonger la durée de recherche. Les évaluations montrent surtout qu’un **accompagnement intensif** raccourcit le retour à l’emploi.
+## Actives ou passives
+| Type | Ce qu’elles font | Exemples |
+| **Passives** | Indemniser | Assurance chômage, préretraites |
+| **Actives** | Agir sur l’emploi lui-même | Formation, accompagnement, emplois aidés, aides à la mobilité |
 
-> Aucune de ces politiques n’est bonne « en soi ». La question d’examen est toujours : quel chômage ce pays connaît-il, et cette politique s’y attaque-t-elle ?`,
+L’indemnisation est un **arbitrage** : trop faible, elle appauvrit et pousse à accepter un emploi mal apparié ; trop généreuse ou trop longue, elle peut allonger la recherche. Les évaluations montrent surtout qu’un **accompagnement intensif** raccourcit le retour à l’emploi.
+
+> Aucune de ces politiques n’est bonne « en soi ». La question d’examen est toujours la même : **quel chômage ce pays connaît-il, et cette politique s’y attaque-t-elle ?**`,
           },
           questions: [
             ['Quelle politique vise le chômage conjoncturel ?', ['La relance budgétaire ou monétaire', 'La formation professionnelle', 'La flexibilisation du licenciement', 'Les allègements de cotisations'], 0, 'Elle soutient la demande anticipée, donc l’embauche.'],
@@ -529,36 +630,41 @@ L’enjeu de l’indemnisation est un arbitrage : trop faible, elle appauvrit et
           axe: 'Comment expliquer les crises financières et réguler le système financier ?',
           lecon: {
             titre: 'Deux krachs, un même enchaînement',
-            cours: `Comparer 1929 et 2008 n’est pas un exercice d’histoire : les deux crises suivent le même scénario, et c’est ce qui en fait un modèle.
+            cours: `Comparer 1929 et 2008 n’est pas un exercice d’histoire : les deux crises suivent **le même scénario**, et c’est ce qui en fait un modèle.
 
-## Le scénario commun
-1. une **phase d’euphorie** : le crédit est abondant, les prix d’actifs montent, chacun anticipe qu’ils monteront encore ;
-2. un **retournement** : un événement révèle que les valorisations ne reposent sur rien ;
-3. une **panique** : chacun vend en même temps, les prix s’effondrent ;
-4. une **contagion** à l’économie réelle : le crédit se ferme, l’investissement et la consommation chutent, le chômage monte.
+## Le scénario en quatre temps
+| Temps | Ce qui se passe |
+| 1. **Euphorie** | Crédit abondant, prix d’actifs en hausse, anticipations auto-entretenues |
+| 2. **Retournement** | Un événement révèle que les valorisations ne reposent sur rien |
+| 3. **Panique** | Chacun vend en même temps, les prix s’effondrent |
+| 4. **Contagion** | Le crédit se ferme : investissement et consommation chutent, le chômage monte |
 
-## 1929
-La spéculation boursière est alimentée par l’achat **à crédit** de titres (*call loans*). Le krach d’octobre 1929 ruine les emprunteurs, puis les banques qui les ont financés. Des milliers de faillites bancaires détruisent l’épargne et le crédit. La **déflation** s’installe : les prix baissent, la valeur réelle des dettes augmente — c’est la **déflation par la dette** de Fisher. Le PIB américain recule d’environ 30 %, le chômage atteint 25 %.
+## Les deux crises, côte à côte
+| | **1929** | **2008** |
+| Le marché en cause | La **Bourse** | L’**immobilier** américain |
+| Le levier | L’achat de titres **à crédit** | Les crédits **subprimes** |
+| Le mécanisme de diffusion | Les faillites bancaires en chaîne | La **titrisation** : le risque dispersé et **illisible** |
+| Le déclencheur visible | Krach d’octobre 1929 | Faillite de **Lehman Brothers**, septembre 2008 |
+| Le PIB américain | **−30 %** | Récession sévère |
+| Le chômage | **25 %** | environ 10 % |
 
-L’erreur d’analyse de l’époque : l’orthodoxie budgétaire et monétaire, qui aggrave la contraction. Le tournant vient du **New Deal** et, en théorie, de Keynes.
+## Ce qui a aggravé 1929
+La **déflation par la dette** de Fisher : les prix baissent, donc la **valeur réelle des dettes augmente** — les débiteurs vendent pour rembourser, ce qui fait encore baisser les prix.
 
-## 2008
-Le point de départ est le marché immobilier américain et les crédits **subprimes**, consentis à des ménages peu solvables. Ces créances sont **titrisées** : transformées en titres revendus sur les marchés mondiaux, ce qui disperse le risque sans le supprimer et le rend **illisible**. Les agences de notation les évaluent mal.
+S’y ajoute l’**orthodoxie** budgétaire et monétaire de l’époque, qui aggrave la contraction. Le tournant vient du **New Deal** et, en théorie, de **Keynes**.
 
-Le retournement des prix immobiliers en 2006-2007 déclenche la chaîne. La faillite de **Lehman Brothers** (septembre 2008) fait basculer la défiance en panique : les banques cessent de se prêter entre elles.
+## Ce qui a évité la répétition en 2008
+| La réaction | Ce qu’elle a empêché |
+| Injections massives de liquidités, taux à **zéro** | L’assèchement du crédit |
+| Sauvetage des banques, déficits assumés | Les faillites en chaîne |
+| Les **stabilisateurs automatiques** | L’effondrement des revenus — ils n’existaient **pas** en 1929 |
 
-## Les différences décisives
-Ce qui a évité une répétition de 1929 tient à la **réaction des autorités** :
-- les banques centrales injectent massivement des liquidités et abaissent les taux à zéro ;
-- les États sauvent les banques et laissent filer les déficits ;
-- les **stabilisateurs automatiques** (indemnisation, protection sociale), inexistants en 1929, amortissent la chute des revenus.
+> C’est la **réaction des autorités**, et non la nature de la crise, qui sépare une récession sévère d’une dépression de dix ans. C’est la leçon la plus solide de la comparaison.
 
-Résultat : une récession sévère, mais pas une dépression de dix ans.
+## Ce qui s’est tout de même répété
+La crise s’est transmise à l’économie réelle et, en Europe, s’est prolongée en **crise des dettes souveraines** (2010-2012) — le sauvetage des banques ayant **transféré la dette privée vers les États**.
 
-## Ce qui s’est répété
-La crise s’est transmise à l’économie réelle et, en Europe, s’est prolongée en **crise des dettes souveraines** (2010-2012) — le sauvetage des banques ayant transféré la dette privée vers les États.
-
-> Une crise financière n’est jamais seulement financière : ce qui la rend grave, c’est le canal du crédit par lequel elle atteint les entreprises et les ménages.`,
+> Une crise financière n’est jamais **seulement** financière : ce qui la rend grave, c’est le **canal du crédit** par lequel elle atteint les entreprises et les ménages.`,
           },
           questions: [
             ['Qu’est-ce que la titrisation ?', ['La transformation de créances en titres revendus sur les marchés', 'L’émission d’actions par une entreprise', 'Le rachat de dette publique par la banque centrale', 'La cotation en bourse d’une société'], 0, 'Elle disperse le risque sans le supprimer, et le rend illisible.'],
@@ -576,33 +682,43 @@ La crise s’est transmise à l’économie réelle et, en Europe, s’est prolo
           axe: 'Comment expliquer les crises financières et réguler le système financier ?',
           lecon: {
             titre: 'Pourquoi il est rationnel de suivre la foule',
-            cours: `Une bulle n’est pas une folie collective : elle naît de comportements individuellement rationnels qui, mis bout à bout, produisent un résultat absurde.
+            cours: `Une bulle n’est **pas** une folie collective : elle naît de comportements **individuellement rationnels** qui, mis bout à bout, produisent un résultat absurde.
 
 ## La bulle spéculative
-Une **bulle** est un écart durable et croissant entre le prix d’un actif et sa **valeur fondamentale** (la somme actualisée des revenus qu’il rapportera). On l’achète non pour ce qu’il rapporte, mais pour le revendre plus cher.
+Un écart **durable et croissant** entre le prix d’un actif et sa **valeur fondamentale** — la somme actualisée des revenus qu’il rapportera. On l’achète non pour ce qu’il rapporte, mais pour le **revendre plus cher**.
 
 ## Les comportements mimétiques
-Keynes le résume par le **concours de beauté** : sur un marché, il ne s’agit pas de choisir le plus beau visage, mais celui que **les autres** choisiront. L’anticipation porte sur l’opinion moyenne, pas sur les fondamentaux.
+Keynes le résume par le **concours de beauté** : il ne s’agit pas de choisir le plus beau visage, mais **celui que les autres choisiront**.
 
-Les **prophéties auto-réalisatrices** en découlent : si tous croient que le prix montera, tous achètent — et le prix monte. Les fondamentaux deviennent secondaires.
+> L’anticipation porte sur l’**opinion moyenne**, pas sur les fondamentaux. D’où les **prophéties auto-réalisatrices** : si tous croient que le prix montera, tous achètent — et le prix monte. Les fondamentaux deviennent secondaires, et c’est **rationnel** de les ignorer.
 
 ## Les asymétries d’information
-- **aléa moral** : une banque qui se sait « trop grosse pour faire faillite » prend davantage de risques, car elle sait qu’elle sera secourue. Le trader dont la rémunération dépend du gain sans symétrie sur la perte fait le même calcul ;
-- **sélection adverse** : quand le prêteur ne distingue pas les bons des mauvais emprunteurs, il augmente le taux, ce qui décourage les bons et attire les mauvais.
+| Notion | Le mécanisme | L’exemple |
+| **Aléa moral** | Se savoir secouru pousse à prendre plus de risques | Une banque « trop grosse pour faire faillite » |
+| **Sélection adverse** | Ne pas distinguer les bons des mauvais emprunteurs | Monter le taux décourage les bons et attire les mauvais |
+
+Le trader dont la rémunération dépend du gain, **sans symétrie sur la perte**, fait exactement le calcul de l’aléa moral.
 
 ## Le canal bancaire
-La faillite d’une banque a trois canaux de propagation :
-- le **retrait de panique** (*bank run*) : la banque est solvable à long terme mais illiquide à court terme, car elle a transformé des dépôts courts en crédits longs ;
-- le **risque de contrepartie** : les banques se prêtent entre elles et se détiennent mutuellement ;
-- le **canal du crédit** : une banque fragilisée réduit ses prêts, ce qui atteint les entreprises.
+| Canal de propagation | Le mécanisme |
+| Le **retrait de panique** (*bank run*) | La banque est solvable à long terme mais **illiquide** à court terme : elle a transformé des dépôts courts en crédits longs |
+| Le **risque de contrepartie** | Les banques se prêtent entre elles et se détiennent mutuellement |
+| Le **canal du crédit** | Une banque fragilisée réduit ses prêts, ce qui atteint les entreprises |
 
 ## L’effet de levier
-Emprunter pour investir **amplifie** les gains… et les pertes. Un investisseur qui apporte 10 et emprunte 90 est ruiné par une baisse de 10 % du prix de l’actif. C’est le mécanisme qui transforme un retournement modéré en effondrement.
+| Apport | Emprunt | Une baisse de 10 % du prix… |
+| 100 | 0 | Coûte 10 % |
+| **10** | **90** | **Ruine l’investisseur** |
+
+C’est le mécanisme qui transforme un retournement **modéré** en effondrement.
 
 ## Le paradoxe de la tranquillité
-Hyman Minsky l’a formulé : plus une période de stabilité dure, plus les agents jugent le risque faible, plus ils s’endettent — et plus le système devient fragile. **La stabilité engendre l’instabilité.**
+**Hyman Minsky** l’a formulé : plus une période de stabilité dure, plus les agents jugent le risque faible, plus ils s’endettent — et **plus le système devient fragile**.
 
-> Une bulle ne se repère avec certitude qu’après avoir éclaté. C’est ce qui rend la régulation *ex ante* si difficile, et la régulation *ex post* si coûteuse.`,
+> « La stabilité engendre l’instabilité. » C’est la formule la plus contre-intuitive et la plus solide du chapitre.
+
+## Pourquoi la régulation est si difficile
+Une bulle ne se repère avec **certitude** qu’après avoir éclaté. C’est ce qui rend la régulation *ex ante* si difficile — et la régulation *ex post* si coûteuse.`,
           },
           questions: [
             ['Qu’est-ce qu’une bulle spéculative ?', ['Un écart durable entre le prix d’un actif et sa valeur fondamentale', 'Une hausse des prix à la consommation', 'Un excès d’épargne', 'Une baisse brutale des taux d’intérêt'], 0, 'L’actif est acheté pour être revendu plus cher, non pour ce qu’il rapporte.'],
@@ -620,37 +736,49 @@ Hyman Minsky l’a formulé : plus une période de stabilité dure, plus les age
           axe: 'Comment expliquer les crises financières et réguler le système financier ?',
           lecon: {
             titre: 'Ce que la banque centrale peut, et ce qu’elle ne peut pas',
-            cours: `Réguler le système financier suppose deux jeux d’outils : ceux de la **politique monétaire**, qui agissent sur la conjoncture, et ceux de la **supervision**, qui agissent sur la solidité des banques.
+            cours: `Réguler le système financier suppose **deux** jeux d’outils : ceux de la **politique monétaire**, qui agissent sur la conjoncture, et ceux de la **supervision**, qui agissent sur la solidité des banques.
 
-## Les objectifs de la banque centrale
-La **BCE** a pour objectif principal la **stabilité des prix**, définie comme une inflation de 2 % à moyen terme. Elle soutient les politiques économiques générales de l’Union **sans préjudice** de cet objectif. La Réserve fédérale américaine, elle, poursuit un **double mandat** : prix stables ET plein emploi.
+## Les objectifs
+| Banque centrale | Son mandat |
+| **BCE** | La **stabilité des prix** : 2 % à moyen terme. Le reste « sans préjudice » de cet objectif |
+| **Réserve fédérale** | Un **double mandat** : prix stables **et** plein emploi |
+
+Cette différence de mandat explique une bonne part des divergences de politique entre les deux zones.
 
 ## Les instruments conventionnels
-- les **taux directeurs** : le taux auquel la banque centrale prête aux banques commerciales. Les baisser rend le crédit moins cher, ce qui stimule l’investissement, la consommation et l’inflation ; les monter fait l’inverse ;
-- les **réserves obligatoires** : la part des dépôts que les banques doivent conserver ;
-- les **opérations d’open market** : achats et ventes de titres pour piloter la liquidité au jour le jour.
+| Instrument | Ce qu’il fait | L’effet d’une baisse |
+| Les **taux directeurs** | Le taux auquel la banque centrale prête aux banques | Crédit moins cher : investissement, consommation et inflation montent |
+| Les **réserves obligatoires** | La part des dépôts à conserver | Plus de liquidité disponible |
+| Les **opérations d’open market** | Achats et ventes de titres | Pilotage au jour le jour |
 
 ## Les instruments non conventionnels
-Quand les taux atteignent zéro, la marge disparaît. La BCE a alors employé :
-- l’**assouplissement quantitatif** (*quantitative easing*) : achat massif de titres, y compris de dette publique, pour faire baisser les taux longs ;
-- le ***forward guidance*** : annoncer à l’avance la trajectoire des taux, pour ancrer les anticipations ;
-- les **prêts de long terme aux banques** à taux très bas, sous condition de prêter à l’économie.
+Quand les taux atteignent **zéro**, la marge disparaît.
+
+| Instrument | Ce qu’il fait |
+| **Assouplissement quantitatif** | Achat massif de titres, y compris de dette publique, pour faire baisser les **taux longs** |
+| *Forward guidance* | Annoncer à l’avance la trajectoire des taux, pour **ancrer les anticipations** |
+| Prêts de long terme aux banques | À taux très bas, sous condition de prêter à l’économie |
 
 ## Le prêteur en dernier ressort
-En cas de panique, la banque centrale prête sans limite aux banques solvables : c’est ce qui casse la mécanique du *bank run*. La règle de Bagehot précise : prêter largement, à un taux de pénalité, contre de bonnes garanties.
+En cas de panique, la banque centrale prête **sans limite** aux banques **solvables** : c’est ce qui casse la mécanique du *bank run*.
+
+> La règle de **Bagehot** précise les trois conditions : prêter **largement**, à un **taux de pénalité**, contre de **bonnes garanties**. Sans elles, le sauvetage devient une prime à l’imprudence.
 
 ## La supervision prudentielle
-Les accords de **Bâle** (I, II, III) imposent aux banques :
-- des **ratios de fonds propres** — un capital minimal rapporté aux risques pris, pour absorber les pertes ;
-- des **ratios de liquidité**, pour tenir un mois de retraits ;
-- un **coussin contracyclique**, à constituer en haut de cycle.
+| Exigence des accords de **Bâle** | Ce qu’elle impose |
+| **Ratio de fonds propres** | Un capital minimal rapporté aux risques, pour absorber les pertes |
+| **Ratio de liquidité** | De quoi tenir un mois de retraits |
+| **Coussin contracyclique** | À constituer **en haut de cycle** |
 
-S’y ajoutent en Europe l’**union bancaire** (supervision unique par la BCE, mécanisme de résolution) et la garantie des dépôts jusqu’à 100 000 euros par déposant et par banque, qui décourage les retraits de panique.
+S’y ajoutent en Europe l’**union bancaire** — supervision par la BCE, mécanisme de résolution — et la **garantie des dépôts** jusqu’à 100 000 euros par déposant et par banque, qui décourage les retraits de panique.
 
 ## Les limites
-La politique monétaire n’a aucune prise sur un chômage structurel, elle alimente les prix d’actifs plus vite que les prix à la consommation, et la régulation pousse une part de l’activité vers le ***shadow banking***, moins supervisé.
+| Limite | Ce qu’elle signifie |
+| Aucune prise sur le chômage **structurel** | La monnaie ne forme personne |
+| Elle alimente les **prix d’actifs** plus vite que les prix à la consommation | D’où des bulles sans inflation apparente |
+| Le *shadow banking* | La régulation pousse une part de l’activité hors du périmètre supervisé |
 
-> L’inflation de 2021-2023 a rappelé un arbitrage brutal : remonter les taux pour casser l’inflation, c’est accepter de freiner l’activité et de fragiliser les emprunteurs.`,
+> L’inflation de 2021-2023 a rappelé un arbitrage brutal : **remonter les taux pour casser l’inflation, c’est accepter de freiner l’activité** et de fragiliser les emprunteurs. Il n’existe pas de politique monétaire sans perdants.`,
           },
           questions: [
             ['Quel est l’objectif principal de la BCE ?', ['La stabilité des prix, soit 2 % d’inflation à moyen terme', 'Le plein emploi', 'La croissance du PIB', 'L’équilibre budgétaire des États'], 0, 'La Fed, elle, poursuit un double mandat : prix stables et plein emploi.'],
@@ -669,40 +797,46 @@ La politique monétaire n’a aucune prise sur un chômage structurel, elle alim
           axe: 'Quelles politiques économiques dans le cadre européen ?',
           lecon: {
             titre: 'Du marché commun à la monnaie unique',
-            cours: `L’intégration européenne s’est faite par étapes, chacune ajoutant une contrainte nouvelle aux politiques économiques nationales.
+            cours: `L’intégration européenne s’est faite **par étapes**, et chaque étape a retiré un instrument aux politiques économiques nationales.
 
-## Les degrés d’intégration
-La typologie de Balassa distingue cinq degrés :
-1. la **zone de libre-échange** : suppression des droits de douane entre membres ;
-2. l’**union douanière** : s’y ajoute un tarif extérieur commun ;
-3. le **marché commun** : libre circulation des biens, services, capitaux et personnes — les « quatre libertés » ;
-4. l’**union économique** : harmonisation des politiques économiques ;
-5. l’**union monétaire** : une monnaie unique et une banque centrale commune.
+## Les cinq degrés de Balassa
+| Degré | Ce qu’il ajoute |
+| 1. **Zone de libre-échange** | Suppression des droits de douane entre membres |
+| 2. **Union douanière** | Un **tarif extérieur commun** |
+| 3. **Marché commun** | Les **quatre libertés** : biens, services, capitaux, personnes |
+| 4. **Union économique** | Harmonisation des politiques économiques |
+| 5. **Union monétaire** | Une **monnaie unique**, une banque centrale |
 
-L’Union européenne les a franchis dans cet ordre : CEE (1957), union douanière (1968), Acte unique et marché unique (1986-1993), Maastricht (1992), euro (1999-2002).
+L’Union les a franchis dans cet ordre : CEE **1957**, union douanière **1968**, marché unique **1986-1993**, Maastricht **1992**, euro **1999-2002**.
 
 ## Ce que le marché unique apporte
-Concurrence accrue, économies d’échelle, baisse des prix, mobilité des travailleurs, attractivité pour les investissements. Il s’accompagne d’une **politique de la concurrence** puissante — la Commission peut interdire une fusion ou sanctionner un abus de position dominante — et d’une **politique de cohésion** qui redistribue vers les régions les moins riches.
+Concurrence accrue, économies d’échelle, baisse des prix, mobilité du travail, attractivité pour les investissements. Il s’appuie sur deux politiques :
 
-## Ce que l’euro apporte
-- suppression du **risque de change** et des coûts de conversion à l’intérieur de la zone ;
-- transparence des prix, donc concurrence renforcée ;
-- taux d’intérêt bas et monnaie internationale.
+| Politique | Son pouvoir |
+| **Concurrence** | La Commission peut **interdire une fusion** ou sanctionner un abus de position dominante |
+| **Cohésion** | Elle redistribue vers les régions les moins riches |
 
-## Ce que l’euro coûte
-Chaque État membre **abandonne** deux instruments :
-- la **politique monétaire**, transférée à la BCE — un seul taux directeur pour des conjonctures nationales différentes ;
-- la **dévaluation**, qui permettait de restaurer une compétitivité perdue.
+## L’euro : ce qu’il donne, ce qu’il coûte
+| Ce qu’il apporte | Ce qu’il retire |
+| Fin du **risque de change** et des coûts de conversion | La **politique monétaire**, transférée à la BCE |
+| Transparence des prix, donc concurrence | La **dévaluation**, qui restaurait la compétitivité |
+| Taux bas, monnaie internationale | — |
 
-Il ne lui reste que la politique budgétaire, elle-même encadrée par le **pacte de stabilité et de croissance** (déficit sous 3 % du PIB, dette sous 60 %).
+Il ne reste à l’État que la politique budgétaire, elle-même encadrée par le **pacte de stabilité** : déficit sous **3 %** du PIB, dette sous **60 %**.
 
-## La théorie des zones monétaires optimales
-Mundell énonce les conditions pour qu’une union monétaire fonctionne : **mobilité du travail**, **flexibilité des prix et des salaires**, **budget commun** capable d’amortir les chocs asymétriques, et cycles économiques synchronisés. La zone euro ne les remplit qu’imparfaitement : la mobilité y est faible (langues, diplômes, logement) et le budget commun minuscule (environ 1 % du PIB de l’Union).
+## Les zones monétaires optimales
+**Mundell** énonce les conditions d’une union monétaire viable.
+
+| Condition | Où en est la zone euro |
+| **Mobilité du travail** | **Faible** : langues, diplômes, logement |
+| Flexibilité des prix et salaires | Partielle |
+| **Budget commun** amortisseur | **Minuscule** : environ 1 % du PIB de l’Union |
+| Cycles synchronisés | Imparfaitement |
 
 ## Un chantier inachevé
-La crise de 2010-2012 a conduit à créer le **Mécanisme européen de stabilité**, l’**union bancaire**, et, en 2020, un emprunt commun de grande ampleur pour financer le plan de relance — première mutualisation budgétaire d’envergure.
+La crise de 2010-2012 a produit le **Mécanisme européen de stabilité** et l’**union bancaire** ; 2020 a ajouté un **emprunt commun** de grande ampleur — la première mutualisation budgétaire d’envergure.
 
-> Une union monétaire sans union budgétaire est une construction asymétrique. Tout le débat européen depuis 2010 porte sur ce déséquilibre.`,
+> Une union monétaire **sans** union budgétaire est une construction asymétrique. Tout le débat européen depuis 2010 porte sur ce déséquilibre.`,
           },
           questions: [
             ['Quelles sont les « quatre libertés » du marché commun ?', ['Circulation des biens, services, capitaux et personnes', 'Liberté d’entreprendre, de commercer, d’exporter et d’importer', 'Liberté des prix, des salaires, du crédit et du change', 'Circulation des marchandises, des étudiants, des retraités et des salariés'], 0, 'Le marché commun est le troisième degré de la typologie de Balassa.'],
@@ -720,37 +854,44 @@ La crise de 2010-2012 a conduit à créer le **Mécanisme européen de stabilit�
           axe: 'Quelles politiques économiques dans le cadre européen ?',
           lecon: {
             titre: 'Une monnaie, dix-neuf budgets',
-            cours: `La zone euro combine une politique monétaire **unique** et des politiques budgétaires **nationales**. Cette asymétrie est la source de toutes ses difficultés de coordination.
+            cours: `La zone euro combine une politique monétaire **unique** et des politiques budgétaires **nationales**. Cette asymétrie est la source de toutes ses difficultés.
 
 ## Le choc asymétrique
-Un **choc asymétrique** frappe certains membres et pas d’autres, ou avec une intensité différente. Avec sa propre monnaie, un pays touché dévaluerait pour restaurer sa compétitivité. Dans l’union, il ne le peut plus : il lui reste la **dévaluation interne** — baisse des salaires et des prix —, longue, douloureuse et récessive.
+Un choc qui frappe certains membres et pas d’autres.
 
-Le taux directeur unique aggrave le problème : un taux adapté à la moyenne est trop élevé pour le pays en récession et trop bas pour celui en surchauffe.
+| Avec sa propre monnaie | Dans l’union monétaire |
+| Le pays **dévalue** | Il ne le peut plus |
+| Effet rapide sur la compétitivité | Il lui reste la **dévaluation interne** : baisse des salaires et des prix |
+| — | Longue, douloureuse, **récessive** |
 
-## La coordination budgétaire
-Le **pacte de stabilité et de croissance** encadre les déficits, mais il est critiqué des deux côtés :
-- il est **procyclique** : il impose de réduire le déficit au moment où l’économie ralentit, ce qui aggrave le ralentissement ;
-- il a été appliqué de façon **inégale** selon les États, ce qui a nui à sa crédibilité.
+Le taux directeur unique aggrave le problème : adapté à la moyenne, il est **trop élevé** pour le pays en récession et **trop bas** pour celui en surchauffe.
 
-Il a été suspendu en 2020 face à la pandémie, puis réformé pour laisser plus de place aux trajectoires nationales et à l’investissement.
+## Le pacte de stabilité, critiqué des deux côtés
+| Critique | Ce qu’elle reproche |
+| Il est **procyclique** | Il impose de réduire le déficit quand l’économie ralentit — ce qui aggrave le ralentissement |
+| Il a été appliqué **inégalement** | Selon les États, ce qui a ruiné sa crédibilité |
+
+Suspendu en 2020 face à la pandémie, il a été réformé pour laisser plus de place aux trajectoires nationales et à l’investissement.
 
 ## Les externalités entre États
-Une relance budgétaire dans un pays profite aux autres par les importations : c’est un **passager clandestin** possible — chacun a intérêt à ce que le voisin relance. Symétriquement, la modération salariale d’un pays améliore sa compétitivité **au détriment** de ses voisins : c’est une politique **non coopérative**.
-
-La **concurrence fiscale** obéit à la même logique : chaque État baisse son taux d’impôt sur les sociétés pour attirer les bases fiscales, et tous perdent des recettes.
+| Situation | Le comportement non coopératif |
+| Une relance profite aux voisins par les importations | Chacun attend que le **voisin** relance : le **passager clandestin** |
+| La modération salariale améliore la compétitivité | **Au détriment** des voisins |
+| La **concurrence fiscale** | Chacun baisse son impôt sur les sociétés, tous perdent des recettes |
 
 ## Les instruments de la coordination
-- le **semestre européen** : examen annuel des budgets nationaux avant leur vote ;
-- les **recommandations** de la Commission, peu contraignantes ;
-- les **fonds structurels** et, depuis 2020, le plan de relance européen, qui conditionne les versements à des réformes ;
-- l’action de la BCE, qui a de fait assuré la stabilité de la zone (« whatever it takes », 2012).
+| Instrument | Sa force |
+| Le **semestre européen** | Examen annuel des budgets **avant** leur vote |
+| Les recommandations de la Commission | Peu contraignantes |
+| Fonds structurels et plan de relance 2020 | Versements **conditionnés** à des réformes |
+| L’action de la BCE | De fait décisive — « *whatever it takes* », 2012 |
 
-## Le débat de fond
-Deux lectures s’opposent :
-- pour l’une, les difficultés viennent d’un **manque de discipline** de certains États ;
-- pour l’autre, elles viennent d’un **défaut d’architecture** : pas de budget fédéral, pas de mutualisation de la dette, pas de transferts automatiques entre régions comme il en existe à l’intérieur d’un État.
+## Les deux lectures du problème
+| Lecture | Le diagnostic |
+| Manque de **discipline** | Certains États n’ont pas tenu leurs engagements |
+| Défaut d’**architecture** | Pas de budget fédéral, pas de mutualisation de la dette, pas de transferts automatiques comme à l’intérieur d’un État |
 
-> Le programme demande de savoir décrire la contrainte, pas de trancher le débat. Une bonne copie expose l’asymétrie monétaire/budgétaire et l’illustre par un exemple daté.`,
+> Le programme demande de savoir **décrire la contrainte**, pas de trancher le débat. Une bonne copie expose l’asymétrie monétaire/budgétaire et l’illustre par un exemple **daté**.`,
           },
           questions: [
             ['Qu’est-ce qu’un choc asymétrique ?', ['Un choc qui frappe certains pays de l’union et pas d’autres', 'Un choc d’offre mondial', 'Une crise financière', 'Une hausse générale des prix'], 0, 'Sans dévaluation possible, le pays touché doit passer par une dévaluation interne.'],
@@ -771,35 +912,40 @@ Deux lectures s’opposent :
             titre: 'Les lignes qui découpent une société',
             cours: `Une société n’est pas un ensemble d’individus interchangeables : elle est **structurée** par des différences qui se cumulent et se transmettent. Reste à savoir lesquelles retenir.
 
-## Les facteurs de structuration
-Le programme en retient six :
-- la **catégorie socioprofessionnelle** ;
-- le **revenu** et le **patrimoine** ;
-- le **diplôme** ;
-- la **position dans le cycle de vie** (l’âge) ;
-- la **composition du ménage** ;
-- le **sexe** et le **lieu de résidence**.
+## Les six facteurs du programme
+| Facteur | Ce qu’il capte |
+| La **catégorie socioprofessionnelle** | La position dans le travail |
+| Le **revenu** et le **patrimoine** | Les ressources — flux et stock |
+| Le **diplôme** | Le capital scolaire |
+| La position dans le **cycle de vie** | L’âge |
+| La composition du **ménage** | Le nombre de personnes à charge |
+| Le **sexe** et le **lieu de résidence** | Genre et territoire |
 
-Aucun ne suffit seul : ils se **croisent**. Une femme cadre de 30 ans en région parisienne et un homme ouvrier de 55 ans en zone rurale diffèrent sur plusieurs dimensions à la fois.
+> Aucun ne suffit seul : ils se **croisent**. Une femme cadre de 30 ans en région parisienne et un homme ouvrier de 55 ans en zone rurale diffèrent sur **plusieurs dimensions à la fois**.
 
 ## La nomenclature des PCS
-L’INSEE classe la population active en **six grands groupes** : agriculteurs exploitants ; artisans, commerçants et chefs d’entreprise ; cadres et professions intellectuelles supérieures ; professions intermédiaires ; employés ; ouvriers. Trois critères la construisent : le **statut** (indépendant ou salarié), la **qualification** et le **secteur d’activité**.
+Six grands groupes d’actifs : agriculteurs exploitants ; artisans, commerçants et chefs d’entreprise ; cadres et professions intellectuelles supérieures ; professions intermédiaires ; employés ; ouvriers.
 
-Ses limites sont connues : elle repose sur l’activité professionnelle (mal adaptée aux retraités, chômeurs et étudiants), elle range dans le même groupe des situations très différentes, et elle a longtemps classé les femmes d’après la profession de leur conjoint.
+| Les trois critères | Les limites connues |
+| Le **statut** : indépendant ou salarié | Elle repose sur l’activité : mal adaptée aux retraités, chômeurs, étudiants |
+| La **qualification** | Elle range ensemble des situations très différentes |
+| Le **secteur d’activité** | Elle a longtemps classé les femmes d’après la profession du conjoint |
 
 ## Le cycle de vie
-La position sociale n’est pas fixe : le revenu croît généralement avec l’âge jusqu’à la retraite, le patrimoine s’accumule tout au long de la vie. Comparer les revenus de deux personnes d’âges différents mélange deux effets : un **effet d’âge** et un **effet de génération**.
+La position sociale n’est pas fixe : le revenu croît avec l’âge jusqu’à la retraite, le patrimoine s’accumule toute la vie.
 
-## L’approche multidimensionnelle
-Une analyse en termes de **classes** met l’accent sur la position économique ; une analyse en termes de **strates** ordonne les individus sur une échelle continue de prestige, de revenu ou de diplôme. Weber articule les deux en distinguant trois ordres :
-- l’ordre **économique** (les classes) ;
-- l’ordre **social** (les groupes de statut, définis par le prestige et le style de vie) ;
-- l’ordre **politique** (les partis).
+> Comparer les revenus de deux personnes d’âges différents mélange **deux effets** : un effet d’**âge** et un effet de **génération**.
 
-## Les inégalités multiformes
-Les facteurs de structuration produisent des inégalités **cumulatives** : un faible diplôme conduit à un emploi moins qualifié, donc à un revenu plus faible, donc à un logement plus éloigné, donc à une santé et à une espérance de vie moindres. C’est ce cumul, plus qu’une différence isolée, qui fait la structure sociale.
+## Classes ou strates
+| Approche | Son principe | Chez Weber |
+| **Classes** | La position **économique** | L’ordre économique |
+| **Strates** | Une échelle **continue** de prestige, revenu, diplôme | L’ordre social — les groupes de statut |
+| — | — | L’ordre **politique** — les partis |
 
-> Le programme demande de savoir **croiser** les facteurs, pas d’en désigner un principal. C’est le sens du mot « multidimensionnelle » dans le libellé officiel.`,
+## Le cumul
+Un faible diplôme conduit à un emploi moins qualifié, donc à un revenu plus faible, donc à un logement plus éloigné, donc à une santé et à une espérance de vie moindres.
+
+> C’est ce **cumul**, plus qu’une différence isolée, qui fait la structure sociale. Le programme demande de **croiser** les facteurs, pas d’en désigner un principal — c’est le sens du mot « multidimensionnelle » dans le libellé officiel.`,
           },
           questions: [
             ['Combien de grands groupes compte la nomenclature des PCS de l’INSEE ?', ['Six', 'Quatre', 'Huit', 'Douze'], 0, 'Agriculteurs, artisans-commerçants, cadres, professions intermédiaires, employés, ouvriers.'],
@@ -817,30 +963,36 @@ Les facteurs de structuration produisent des inégalités **cumulatives** : un f
           axe: 'Comment est structurée la société française actuelle ?',
           lecon: {
             titre: 'Ce qui s’est vraiment déformé en soixante-dix ans',
-            cours: `La société française de 2020 ne ressemble plus à celle de 1950. Trois transformations expliquent l’essentiel.
+            cours: `La société française de 2020 ne ressemble plus à celle de 1950. Trois transformations expliquent l’essentiel — et une quatrième les traverse toutes.
 
-## La salarisation
-En 1950, un actif sur trois était indépendant (agriculteur, artisan, commerçant). Aujourd’hui, près de **neuf actifs sur dix sont salariés**. L’exode rural et la disparition des petites exploitations en sont la cause principale. Le mouvement s’est stabilisé, et l’essor du statut d’auto-entrepreneur en a même infléchi la tendance depuis 2009.
+## Les trois grandes déformations
+| Mouvement | 1950 | Aujourd’hui | La cause principale |
+| **Salarisation** | Un actif sur **trois** indépendant | Près de **9 sur 10** salariés | Exode rural, fin des petites exploitations |
+| **Tertiarisation** | Agriculture et industrie dominantes | Environ **3 emplois sur 4** dans les services | Gains de productivité, externalisation, délocalisations |
+| **Qualification** | Moins de **10 %** de bacheliers | Environ **80 %** d’une génération | Massification scolaire |
 
-## La tertiarisation
-L’emploi s’est déplacé de l’agriculture puis de l’industrie vers les **services**, qui représentent aujourd’hui environ **trois emplois sur quatre**. La part de l’industrie dans l’emploi a été divisée par plus de deux depuis 1970 : c’est la **désindustrialisation**, produite conjointement par les gains de productivité, l’externalisation de services autrefois comptés comme industriels, et les délocalisations.
+La salarisation s’est stabilisée, et l’auto-entrepreneuriat en a même infléchi la tendance depuis **2009**.
 
-## L’élévation du niveau de qualification
-La massification scolaire a fait passer la part d’une génération obtenant le baccalauréat de moins de 10 % en 1950 à environ 80 % aujourd’hui. Les **cadres et professions intellectuelles supérieures** sont passés d’environ 3 % à près de 20 % des actifs, tandis que la part des **ouvriers** reculait d’environ 40 % à 20 %.
+## Le déplacement des groupes
+| Groupe | Part des actifs, hier | Aujourd’hui |
+| **Cadres** et professions intellectuelles | environ 3 % | près de **20 %** |
+| **Ouvriers** | environ 40 % | environ **20 %** |
 
-## La féminisation de l’emploi
-Le taux d’activité des femmes de 25 à 49 ans est passé d’environ 40 % dans les années 1960 à plus de 80 %. Mais l’emploi féminin reste **concentré** dans quelques métiers (santé, éducation, services à la personne), plus souvent à temps partiel, et l’écart de salaire persiste.
+## La féminisation
+Le taux d’activité des femmes de 25 à 49 ans est passé d’environ **40 %** dans les années 1960 à plus de **80 %**. Mais l’emploi féminin reste **concentré** (santé, éducation, services à la personne), plus souvent à temps partiel, et l’écart de salaire persiste.
 
 ## Ce qui n’a pas disparu
-La structure sociale s’est déformée, pas aplanie :
-- les **inégalités de patrimoine** restent bien plus fortes que celles de revenu, et se sont accrues depuis les années 1980 ;
-- le groupe ouvrier, moins nombreux et moins visible, représente encore un actif sur cinq ;
-- les **positions relatives** se sont maintenues : la massification scolaire a élevé le niveau de tous sans rebattre les rangs.
+| Constat | Ce qu’il signifie |
+| Les inégalités de **patrimoine** | Bien plus fortes que celles de revenu, et **accrues** depuis les années 1980 |
+| Le groupe **ouvrier** | Moins visible, mais encore **un actif sur cinq** |
+| Les **positions relatives** | La massification a élevé le niveau de tous **sans rebattre les rangs** |
 
-## Le débat sur la moyennisation
-Les années 1960-1970 ont vu se développer la thèse de la **moyennisation** (Mendras) : une vaste classe moyenne absorberait les extrêmes, effaçant les conflits de classe. Depuis les années 1990, la thèse est contestée : on observe une **polarisation** de l’emploi (croissance des emplois très qualifiés et des emplois de service peu qualifiés, recul des emplois intermédiaires) et un décrochage du haut de la distribution.
+## Moyennisation ou polarisation
+| Thèse | Sa période | Son contenu |
+| **Moyennisation** (Mendras) | Années 1960-1970 | Une vaste classe moyenne absorbe les extrêmes, les conflits de classe s’effacent |
+| **Polarisation** | Depuis les années 1990 | Croissance des emplois très qualifiés **et** des services peu qualifiés, recul des emplois intermédiaires, décrochage du haut de la distribution |
 
-> Deux constats se tiennent ensemble : la société s’est enrichie et qualifiée pour presque tous, ET les écarts de patrimoine se sont creusés. Une bonne copie ne choisit pas entre les deux.`,
+> Deux constats se tiennent **ensemble** : la société s’est enrichie et qualifiée pour presque tous, ET les écarts de patrimoine se sont creusés. Une bonne copie ne choisit pas entre les deux.`,
           },
           questions: [
             ['Quelle part des actifs français est aujourd’hui salariée ?', ['Environ neuf sur dix', 'Environ deux sur trois', 'La moitié', 'Un sur trois'], 0, 'Contre environ deux sur trois en 1950 : c’est la salarisation.'],
@@ -860,37 +1012,45 @@ Les années 1960-1970 ont vu se développer la thèse de la **moyennisation** (M
             titre: 'Marx, Weber, Bourdieu : trois façons de découper',
             cours: `« Classe sociale » n’est pas un mot neutre : chaque auteur lui donne un contenu différent, et le débat sur son actualité en dépend.
 
+## Les trois découpages
+| | **Marx** | **Weber** | **Bourdieu** |
+| Le critère | La place dans les **rapports de production** | Trois **ordres** distincts | Le volume et la **structure** des capitaux |
+| Le découpage | **Deux** classes | Une stratification **continue** | Des positions dans un espace |
+| Le moteur | Le **conflit** | La pluralité des hiérarchies | La **distinction** |
+
 ## Marx : deux classes en conflit
-La classe se définit par la **place dans les rapports de production** : possède-t-on les moyens de production, ou seulement sa force de travail ? D’où deux classes principales, la **bourgeoisie** et le **prolétariat**, en **conflit** structurel autour de la répartition de la valeur.
+Possède-t-on les moyens de production, ou seulement sa force de travail ? D’où la **bourgeoisie** et le **prolétariat**, en conflit structurel autour de la répartition de la valeur.
 
-Marx distingue :
-- la **classe en soi** : une position objective, partagée sans en avoir conscience ;
-- la **classe pour soi** : la même position, devenue **conscience commune** et action collective.
+| Notion | Ce qu’elle désigne |
+| La classe **en soi** | Une position objective, partagée sans en avoir conscience |
+| La classe **pour soi** | La même position devenue **conscience commune** et action collective |
 
-Le passage de l’une à l’autre n’a rien d’automatique : il est le produit d’un travail politique.
+> Le passage de l’une à l’autre n’a **rien d’automatique** : il est le produit d’un travail politique.
 
-## Weber : trois dimensions, une approche graduelle
-Weber refuse de tout réduire à l’économie. Il distingue :
-- l’ordre **économique** : les classes, définies par les chances d’accès aux biens sur le marché ;
-- l’ordre **social** : les **groupes de statut**, définis par le prestige et le **style de vie** ;
-- l’ordre **politique** : les partis, qui recherchent le pouvoir.
+## Weber : trois ordres
+| Ordre | Ce qui le définit |
+| **Économique** | Les classes : les chances d’accès aux biens sur le marché |
+| **Social** | Les **groupes de statut** : le prestige et le style de vie |
+| **Politique** | Les partis, qui recherchent le pouvoir |
 
-Ces trois ordres ne se recouvrent pas : un professeur peut avoir un prestige élevé et un revenu modeste. La stratification est **continue** et **multiple**, non binaire.
+Ces ordres ne se recouvrent pas : un professeur peut avoir un prestige élevé et un revenu modeste.
 
 ## Bourdieu : les capitaux et l’habitus
-Bourdieu combine les deux traditions. La position se définit par le volume et la structure de trois **capitaux** :
-- **économique** (revenus, patrimoine) ;
-- **culturel** (diplômes, savoirs, aisance culturelle) ;
-- **social** (le réseau de relations mobilisable).
+| Capital | Ce qu’il recouvre |
+| **Économique** | Revenus, patrimoine |
+| **Culturel** | Diplômes, savoirs, aisance culturelle |
+| **Social** | Le réseau de relations mobilisable |
 
-L’**habitus** — l’ensemble des dispositions incorporées par la socialisation — fait que les membres d’une même classe partagent des goûts, des manières et des choix qui les distinguent. La **distinction** est ce travail permanent de démarcation par les pratiques culturelles.
+L’**habitus** — les dispositions incorporées par la socialisation — fait que les membres d’une même classe partagent goûts, manières et choix. La **distinction** est le travail permanent de démarcation par les pratiques culturelles.
 
-## Le débat contemporain
-Les classes sont-elles encore pertinentes ?
-- **arguments pour** : les inégalités de revenu, de patrimoine, de santé et de pratiques restent fortement corrélées à la PCS ; l’homogamie sociale reste élevée ;
-- **arguments contre** : l’**individualisation** des trajectoires, la moyennisation, le brouillage des frontières (un ouvrier propriétaire de son logement), la montée d’autres clivages (genre, âge, origine, territoire) et l’affaiblissement de la conscience de classe.
+## Les classes sont-elles encore pertinentes ?
+| Arguments **pour** | Arguments **contre** |
+| Revenu, patrimoine, santé et pratiques restent corrélés à la PCS | L’**individualisation** des trajectoires |
+| L’**homogamie** sociale reste élevée | La moyennisation et le brouillage des frontières |
+| — | La montée d’autres clivages : genre, âge, origine, territoire |
+| — | L’affaiblissement de la **conscience de classe** |
 
-> Le programme n’attend pas un verdict, mais la capacité à opposer les deux séries d’arguments **en les datant** et en les appuyant sur des données.`,
+> Le programme n’attend **pas un verdict**, mais la capacité à opposer les deux séries d’arguments **en les datant** et en les appuyant sur des données.`,
           },
           questions: [
             ['Chez Marx, qu’est-ce qui définit la classe sociale ?', ['La place dans les rapports de production', 'Le niveau de revenu', 'Le prestige social', 'Le diplôme obtenu'], 0, 'Possède-t-on les moyens de production, ou seulement sa force de travail ?'],
@@ -909,33 +1069,41 @@ Les classes sont-elles encore pertinentes ?
           axe: 'Quelle est l’action de l’École sur les destins individuels et sur l’évolution de la société ?',
           lecon: {
             titre: 'Beaucoup plus d’élèves, pas les mêmes places',
-            cours: `Depuis 1950, la France a fait entrer dans l’enseignement secondaire puis supérieur des générations entières. C’est la **massification** — un mouvement massif, mais qui n’a pas produit ce qu’on en attendait.
+            cours: `Depuis 1950, la France a fait entrer dans le secondaire puis le supérieur des générations entières. C’est la **massification** — un mouvement massif, qui n’a pas produit ce qu’on en attendait.
 
-## Les chiffres du mouvement
-- **1959** : scolarité obligatoire portée à 16 ans (réforme Berthoin) ;
-- **1975** : collège unique (réforme Haby), qui supprime les filières séparées à l’entrée en sixième ;
-- **1985** : objectif de 80 % d’une génération au niveau du baccalauréat ;
-- aujourd’hui : environ **80 %** d’une génération obtient le bac, contre 5 % en 1950 ; plus de la moitié d’une génération accède à l’enseignement supérieur.
+## Les dates du mouvement
+| Date | La mesure |
+| **1959** | Scolarité obligatoire portée à **16 ans** (réforme Berthoin) |
+| **1975** | **Collège unique** (réforme Haby) : fin des filières séparées en sixième |
+| **1985** | Objectif de **80 %** d’une génération au niveau du bac ; création du bac professionnel |
+| Aujourd’hui | Environ **80 %** obtiennent le bac, contre **5 %** en 1950 ; plus d’un jeune sur deux accède au supérieur |
 
-## Les moteurs
-- la **demande sociale** des familles, qui voient dans le diplôme une protection contre le chômage et un moyen de mobilité ;
-- la **demande économique** : la tertiarisation et l’élévation des qualifications requises ;
-- l’**offre publique** : construction de collèges et de lycées, création du bac professionnel (1985), ouverture des universités.
+## Les trois moteurs
+| Moteur | Ce qui le pousse |
+| La demande **sociale** | Le diplôme protège du chômage et permet la mobilité |
+| La demande **économique** | Tertiarisation et élévation des qualifications requises |
+| L’offre **publique** | Collèges, lycées, bac professionnel, ouverture des universités |
 
 ## Massification n’est pas démocratisation
-La distinction est au cœur du chapitre :
-- la **massification** est quantitative : plus d’élèves atteignent chaque niveau ;
-- la **démocratisation** est qualitative : les écarts entre milieux sociaux se réduisent à niveau donné.
+| | **Massification** | **Démocratisation** |
+| Nature | **Quantitative** | **Qualitative** |
+| Ce qu’elle mesure | Plus d’élèves à chaque niveau | La **réduction des écarts** entre milieux sociaux |
+| En France | Indiscutable | **Ségrégative** (Merle) |
 
-La France a connu une massification indiscutable, et une démocratisation **ségrégative** (Merle) : tous montent, mais les enfants de cadres se dirigent vers les filières les plus rentables (générale, prépas, grandes écoles) pendant que les enfants d’ouvriers accèdent surtout au bac professionnel et aux filières courtes. Les hiérarchies se sont **déplacées à l’intérieur** du système plutôt que résorbées.
+Tous montent, mais les enfants de cadres se dirigent vers les filières les plus rentables — générale, prépas, grandes écoles — pendant que les enfants d’ouvriers accèdent surtout au bac professionnel et aux filières courtes.
 
-## Le paradoxe d’Anderson et l’inflation scolaire
-Quand le nombre de diplômés croît plus vite que le nombre d’emplois qualifiés, la valeur du diplôme sur le marché du travail se **dévalue** : c’est l’**inflation scolaire**. Le **paradoxe d’Anderson** en découle : être plus diplômé que son père ne garantit plus une position sociale supérieure, puisque le niveau de référence s’est élevé pour tout le monde. Le **déclassement** — occuper un emploi en dessous de son niveau de diplôme — en est la manifestation.
+> Les hiérarchies se sont **déplacées à l’intérieur** du système plutôt que résorbées.
+
+## Inflation scolaire et déclassement
+| Notion | Le mécanisme |
+| L’**inflation scolaire** | Les diplômés croissent plus vite que les emplois qualifiés : le diplôme se **dévalue** |
+| Le **paradoxe d’Anderson** | Être plus diplômé que son père ne garantit plus une position supérieure : le niveau de référence a monté pour tous |
+| Le **déclassement** | Occuper un emploi **en dessous** de son niveau de diplôme |
 
 ## Ce que le diplôme protège encore
-Malgré l’inflation, le diplôme reste le meilleur rempart contre le chômage : le taux de chômage des non-diplômés est plusieurs fois supérieur à celui des diplômés du supérieur. La dévaluation est **relative**, pas absolue.
+Le taux de chômage des non-diplômés reste **plusieurs fois supérieur** à celui des diplômés du supérieur.
 
-> Massification, démocratisation, inflation scolaire, déclassement : quatre notions distinctes qu’une copie doit manier séparément. Les confondre est l’erreur la plus sanctionnée du chapitre.`,
+> La dévaluation est **relative**, pas absolue. Massification, démocratisation, inflation scolaire, déclassement : quatre notions distinctes qu’une copie doit manier séparément. Les confondre est l’erreur la plus sanctionnée du chapitre.`,
           },
           questions: [
             ['Quelle est la différence entre massification et démocratisation scolaires ?', ['La massification est quantitative, la démocratisation réduit les écarts entre milieux sociaux', 'Ce sont deux synonymes', 'La démocratisation concerne l’enseignement privé', 'La massification concerne le supérieur uniquement'], 0, 'La France a connu la première sans vraiment connaître la seconde.'],
@@ -953,34 +1121,46 @@ Malgré l’inflation, le diplôme reste le meilleur rempart contre le chômage 
           axe: 'Quelle est l’action de l’École sur les destins individuels et sur l’évolution de la société ?',
           lecon: {
             titre: 'Pourquoi l’École reproduit ce qu’elle prétend corriger',
-            cours: `À diplôme du père identique, la trajectoire scolaire d’un enfant reste largement prévisible. Le chapitre explique pourquoi, par trois familles de mécanismes.
+            cours: `À milieu d’origine identique, la trajectoire scolaire d’un enfant reste largement prévisible. Le chapitre explique pourquoi, par **trois familles** de mécanismes.
 
 ## Le constat
-En France, environ **70 %** des enfants de cadres obtiennent un diplôme du supérieur, contre moins de **30 %** des enfants d’ouvriers. L’écart se creuse dès l’école primaire et se retrouve, amplifié, à l’entrée des grandes écoles.
+| Origine | Part obtenant un diplôme du supérieur |
+| Enfants de **cadres** | environ **70 %** |
+| Enfants d’**ouvriers** | moins de **30 %** |
 
-## Le capital culturel (Bourdieu et Passeron)
-L’École valorise implicitement une culture — un langage, des références, un rapport au savoir — qui est celle des classes favorisées. Les enfants qui la possèdent déjà par leur famille sont avantagés **sans effort visible**, ce qui fait passer un héritage pour un don. Bourdieu et Passeron parlent de **violence symbolique** : les dominés adhèrent au verdict scolaire et l’intériorisent comme un jugement sur leurs capacités.
+L’écart se creuse dès l’école primaire et se retrouve, **amplifié**, à l’entrée des grandes écoles.
 
-Le capital culturel existe sous trois formes : **incorporée** (les dispositions), **objectivée** (les livres, les instruments) et **institutionnalisée** (les diplômes).
+## Le capital culturel — Bourdieu et Passeron
+L’École valorise implicitement une culture — un langage, des références, un rapport au savoir — qui est celle des classes favorisées. Ceux qui la possèdent déjà sont avantagés **sans effort visible** : un héritage passe pour un don.
 
-## Les stratégies familiales (Boudon)
-Boudon propose une explication **individualiste** : à chaque palier d’orientation, la famille compare coûts, risques et bénéfices attendus. Or ces trois termes ne sont pas les mêmes selon le milieu :
-- le **coût** d’études longues pèse davantage sur une famille modeste ;
-- le **risque** d’échec y est perçu comme plus grave ;
-- le **bénéfice** est jugé à l’aune de la position à conserver — pour un enfant de cadre, il faut faire des études longues **pour ne pas déchoir**.
+| Forme du capital culturel | Ce qu’elle recouvre |
+| **Incorporée** | Les dispositions, l’aisance, le langage |
+| **Objectivée** | Les livres, les instruments, les œuvres |
+| **Institutionnalisée** | Les diplômes |
 
-D’où des choix d’orientation différents **à résultats scolaires identiques** : c’est l’effet le mieux documenté du chapitre.
+> La **violence symbolique** : les dominés **adhèrent** au verdict scolaire et l’intériorisent comme un jugement sur leurs capacités.
 
-## Les inégalités produites par l’institution
-- la **carte scolaire** et la ségrégation résidentielle concentrent les difficultés dans certains établissements ;
-- les **effets d’établissement** et de classe ;
-- l’**effet Pygmalion** : les attentes de l’enseignant influencent les résultats de l’élève ;
-- les stratégies d’**évitement** (options rares, privé, dérogations) sont mieux maîtrisées par les familles informées.
+## Les stratégies familiales — Boudon
+À chaque palier d’orientation, la famille compare coûts, risques et bénéfices. Ces trois termes ne valent pas la même chose selon le milieu.
 
-## Les politiques mises en œuvre
-Éducation prioritaire (ZEP en 1981, REP et REP+ aujourd’hui), dédoublement des classes de CP et CE1 en éducation prioritaire, cordées de la réussite, quotas de boursiers. Les évaluations montrent des effets réels mais modestes : l’École seule ne compense pas des inégalités qui la précèdent et lui survivent.
+| Terme | En milieu modeste | En milieu favorisé |
+| Le **coût** d’études longues | Il pèse lourd | Il est absorbé |
+| Le **risque** d’échec | Perçu comme plus grave | Relativisé |
+| Le **bénéfice** attendu | Un gain | Il faut ces études **pour ne pas déchoir** |
 
-> Bourdieu et Boudon ne se contredisent pas : le premier explique pourquoi les élèves n’ont pas les mêmes armes, le second pourquoi, à armes égales, ils ne font pas les mêmes choix.`,
+> D’où des choix d’orientation différents **à résultats scolaires identiques** : c’est l’effet le mieux documenté du chapitre.
+
+## Ce que l’institution produit elle-même
+| Mécanisme | Son effet |
+| La **carte scolaire** et la ségrégation résidentielle | Elles concentrent les difficultés dans certains établissements |
+| Les effets d’**établissement** et de classe | Le même élève ne progresse pas pareil selon où il est |
+| L’effet **Pygmalion** | Les attentes de l’enseignant influencent les résultats |
+| Les stratégies d’**évitement** | Options rares, privé, dérogations : mieux maîtrisées par les familles informées |
+
+## Les politiques et leurs effets
+Éducation prioritaire (**ZEP** en 1981, REP et REP+ aujourd’hui), **dédoublement** des CP et CE1 en éducation prioritaire, cordées de la réussite, quotas de boursiers. Les évaluations montrent des effets **réels mais modestes**.
+
+> Bourdieu et Boudon ne se contredisent pas : le premier explique pourquoi les élèves n’ont pas les **mêmes armes**, le second pourquoi, à armes égales, ils ne font pas les **mêmes choix**.`,
           },
           questions: [
             ['Qu’est-ce que le capital culturel ?', ['Les savoirs, dispositions et références transmis par la famille et valorisés par l’École', 'Le budget culturel d’un ménage', 'Le nombre de livres publiés dans un pays', 'Les subventions à la culture'], 0, 'Il existe sous forme incorporée, objectivée et institutionnalisée.'],
@@ -1001,33 +1181,38 @@ D’où des choix d’orientation différents **à résultats scolaires identiqu
             titre: 'Lire une table de mobilité sans se tromper de ligne',
             cours: `La **mobilité sociale** est le changement de position sociale d’une génération à l’autre. La mesurer suppose un outil précis — et savoir le lire est la compétence la plus évaluée du chapitre.
 
-## Les distinctions de vocabulaire
-- **intergénérationnelle** : entre la position du fils (ou de la fille) et celle du père (ou de la mère). C’est celle que mesure l’INSEE ;
-- **intragénérationnelle** : au cours de la carrière d’une même personne ;
-- **verticale** (ascendante ou descendante) ou **horizontale** (changement de groupe sans changement de niveau) ;
-- l’absence de mobilité s’appelle la **reproduction sociale**.
+## Le vocabulaire
+| Terme | Ce qu’il compare |
+| **Intergénérationnelle** | La position de l’enfant à celle du parent — c’est celle que mesure l’INSEE |
+| **Intragénérationnelle** | Deux moments de la carrière d’une **même** personne |
+| **Verticale** | Ascendante ou descendante |
+| **Horizontale** | Changement de groupe **sans** changement de niveau |
+| **Reproduction sociale** | L’absence de mobilité |
 
-## La table de destinée
-Elle se lit **en ligne** : « parmi 100 fils d’ouvriers, combien sont devenus cadres, employés, ouvriers… ? » Elle répond à la question : **que deviennent** les enfants d’un milieu donné ?
+## Les deux tables — la source d’erreur n° 1
+| | **Table de destinée** | **Table de recrutement** |
+| Elle se lit… | **En ligne** | **En colonne** |
+| Sa question | « Que **deviennent** les fils d’ouvriers ? » | « **D’où viennent** les cadres ? » |
+| Le point de départ | Le milieu d’**origine** | La position **d’arrivée** |
 
-## La table de recrutement
-Elle se lit **en colonne** : « parmi 100 cadres, combien avaient un père cadre, ouvrier, employé… ? » Elle répond à la question : **d’où viennent** les membres d’un groupe ?
+> Les deux tables donnent des réponses différentes à partir des **mêmes données**, parce que les groupes n’ont pas la même taille. Une phrase construite sur la destinée ne peut **jamais** être justifiée par le recrutement.
 
-Les deux tables donnent des réponses différentes à partir des mêmes données, parce que les groupes n’ont pas la même taille. C’est la source d’erreur numéro un : une phrase construite sur la table de destinée ne peut pas être justifiée par la table de recrutement.
+## Structurelle ou nette
+| | **Mobilité structurelle** | **Mobilité nette** (de circulation) |
+| Sa cause | La transformation de la **structure des emplois** | Ce qui reste une fois cet effet retiré |
+| Exemple | Les places de cadres augmentent, celles d’agriculteurs s’effondrent : il **faut** partir | On mesure ce qui reste après |
+| Ce qu’elle mesure | Une contrainte | La **fluidité sociale** réelle |
 
-## Mobilité structurelle et mobilité nette
-- la **mobilité structurelle** est celle qu’imposent les transformations de la structure des emplois : quand le nombre de places de cadres augmente et que celui des agriculteurs s’effondre, il **faut** que des enfants d’agriculteurs deviennent autre chose ;
-- la **mobilité nette** (ou de circulation) est ce qui reste une fois cet effet retiré. C’est elle qui mesure la **fluidité sociale** réelle d’une société.
-
-Une société peut afficher beaucoup de mobilité observée et très peu de fluidité : c’est le cas de la France des Trente Glorieuses.
+> Une société peut afficher beaucoup de mobilité observée et **très peu** de fluidité : c’est le cas de la France des Trente Glorieuses.
 
 ## Les limites de la mesure
-- les tables reposent sur la PCS, avec toutes ses limites ;
-- elles ont longtemps ignoré les femmes, ou les ont classées d’après leur conjoint ;
-- elles ne disent rien de la mobilité **à l’intérieur** d’un groupe (un ouvrier qualifié devenu ouvrier non qualifié) ;
-- elles comparent une position en fin de carrière du père à une position parfois précoce du fils.
+| Limite | Ce qu’elle fausse |
+| Les tables reposent sur la **PCS** | Avec toutes ses limites |
+| Les femmes | Longtemps ignorées, ou classées d’après leur conjoint |
+| La mobilité **intra-groupe** | Un ouvrier qualifié devenu non qualifié n’apparaît pas |
+| Le moment de la mesure | Fin de carrière du père contre position parfois précoce du fils |
 
-> Retenir la formule : destinée = « que deviennent-ils ? » (en ligne), recrutement = « d’où viennent-ils ? » (en colonne). Tout le reste du chapitre en dépend.`,
+> Destinée = « que deviennent-ils ? » (en ligne). Recrutement = « d’où viennent-ils ? » (en colonne). Tout le reste du chapitre en dépend.`,
           },
           questions: [
             ['Comment se lit une table de destinée ?', ['En ligne : que deviennent les enfants d’un milieu donné', 'En colonne : d’où viennent les membres d’un groupe', 'En diagonale uniquement', 'Par totaux généraux'], 0, 'La table de recrutement, elle, se lit en colonne.'],
@@ -1045,34 +1230,38 @@ Une société peut afficher beaucoup de mobilité observée et très peu de flui
           axe: 'Quels sont les caractéristiques contemporaines et les facteurs de la mobilité sociale ?',
           lecon: {
             titre: 'Beaucoup de mouvement, peu de fluidité',
-            cours: `Les enquêtes FQP de l’INSEE permettent de suivre la mobilité sociale française depuis les années 1970. Le constat d’ensemble est stable, et contre-intuitif.
+            cours: `Les enquêtes **FQP** de l’INSEE suivent la mobilité française depuis les années 1970. Le constat d’ensemble est stable — et contre-intuitif.
 
 ## Ce que montrent les données
-Environ **deux tiers** des hommes actifs occupent une position différente de celle de leur père. La mobilité observée est donc massive. Mais :
-- une grande part est **structurelle**, produite par la salarisation, la tertiarisation et l’essor des emplois qualifiés ;
-- la **fluidité sociale** — la mobilité nette — n’a que **peu évolué** depuis les années 1980 ;
-- la mobilité est majoritairement **de courte distance** : on passe d’ouvrier à employé bien plus souvent que d’ouvrier à cadre.
+| Constat | Sa portée |
+| Environ **deux tiers** des hommes actifs occupent une position différente de celle de leur père | La mobilité **observée** est massive |
+| Une grande part est **structurelle** | Salarisation, tertiarisation, essor des emplois qualifiés |
+| La **fluidité sociale** a peu évolué depuis les années 1980 | La mobilité **nette** stagne |
+| La mobilité est de **courte distance** | D’ouvrier à employé bien plus souvent que d’ouvrier à cadre |
 
 ## L’asymétrie de la reproduction
-Les extrémités de la hiérarchie sont les plus **fermées** : les fils de cadres restent cadres bien plus souvent que le hasard ne le voudrait, et les fils d’ouvriers restent ouvriers. Les positions intermédiaires sont plus ouvertes des deux côtés.
+| Position | Son degré d’ouverture |
+| Les **extrémités** de la hiérarchie | Les plus **fermées** : fils de cadres et fils d’ouvriers restent dans leur groupe |
+| Les positions **intermédiaires** | Plus ouvertes des deux côtés |
 
 ## Le tournant des années 1980
-La mobilité **ascendante** a ralenti : les générations nées après 1960 sont les premières à connaître une mobilité descendante plus fréquente que leurs aînées, la structure des emplois n’offrant plus la même expansion de places qualifiées. Le **déclassement** intergénérationnel augmente, surtout pour les enfants des classes moyennes.
+La mobilité **ascendante** a ralenti : les générations nées après 1960 connaissent une mobilité descendante plus fréquente que leurs aînées, la structure des emplois n’offrant plus la même expansion de places qualifiées. Le **déclassement** intergénérationnel augmente, surtout pour les enfants des classes moyennes.
 
-## Les facteurs de la mobilité
-- l’**École** : le diplôme est le premier vecteur, mais son rendement s’est dégradé (inflation scolaire) ;
-- la **famille** : capital culturel, capital social, aspirations, soutien financier ;
-- la **structure des emplois** : c’est elle qui ouvre ou ferme les places disponibles ;
-- la **conjoncture** : entrer sur le marché du travail en récession laisse une trace durable sur toute la carrière ;
-- l’**homogamie** : se mettre en couple dans son milieu limite la mobilité du ménage.
+## Les cinq facteurs
+| Facteur | Son rôle |
+| L’**École** | Premier vecteur, mais rendement dégradé par l’inflation scolaire |
+| La **famille** | Capital culturel, capital social, aspirations, soutien financier |
+| La **structure des emplois** | Elle ouvre ou ferme les places disponibles |
+| La **conjoncture** | Entrer sur le marché en récession laisse une trace sur toute la carrière |
+| L’**homogamie** | Se mettre en couple dans son milieu limite la mobilité du ménage |
 
 ## La mobilité des femmes
-Longtemps invisible dans les tables, elle est aujourd’hui mesurée. Elle est plus forte que celle des hommes en apparence — parce que la structure des emplois féminins s’est transformée plus vite —, mais les femmes restent concentrées dans certaines PCS et le **plafond de verre** limite l’accès aux positions dirigeantes.
+Longtemps invisible dans les tables, elle est aujourd’hui mesurée. Elle paraît plus forte que celle des hommes — la structure des emplois féminins s’étant transformée plus vite — mais les femmes restent concentrées dans certaines PCS, et le **plafond de verre** limite l’accès aux positions dirigeantes.
 
-## Ce que la mobilité dit d’une société
-Une société fluide n’est pas nécessairement égalitaire : la fluidité mesure la **circulation** entre positions, pas l’écart entre elles. À l’inverse, une société très inégalitaire mais fluide reste plus acceptable pour ses membres qu’une société inégalitaire et fermée. Les deux dimensions doivent être tenues ensemble.
+## Fluidité n’est pas égalité
+La fluidité mesure la **circulation** entre positions, pas l’**écart** entre elles. Une société très inégalitaire mais fluide reste plus acceptable pour ses membres qu’une société inégalitaire et fermée.
 
-> La bonne formule d’examen : « la France connaît une mobilité importante mais largement structurelle, et une fluidité sociale stable depuis quarante ans ».`,
+> La formule d’examen : « la France connaît une mobilité **importante mais largement structurelle**, et une fluidité sociale **stable depuis quarante ans** ».`,
           },
           questions: [
             ['Quelle part des hommes actifs occupe une position différente de celle de leur père ?', ['Environ deux tiers', 'Environ un tiers', 'La quasi-totalité', 'Environ un dixième'], 0, 'Mais une grande partie de cette mobilité est structurelle.'],
@@ -1094,27 +1283,35 @@ Une société fluide n’est pas nécessairement égalitaire : la fluidité mesu
             cours: `Le **travail** est une activité de production ; l’**emploi** est le cadre juridique et social dans lequel il s’exerce. Le second a beaucoup plus changé que le premier.
 
 ## La norme d’emploi
-La société salariale d’après-guerre a produit une norme : le **CDI à temps plein**, avec une protection sociale attachée au poste, une carrière dans une même entreprise et une convention collective. Elle reste majoritaire — environ **trois emplois sur quatre** sont des CDI — mais elle s’est effritée sur ses marges.
+La société salariale d’après-guerre a produit une norme : le **CDI à temps plein**, protection sociale attachée au poste, carrière dans une même entreprise, convention collective. Elle reste majoritaire — environ **3 emplois sur 4** — mais s’est effritée sur ses marges.
 
-## Les formes particulières d’emploi
-CDD, intérim, temps partiel, apprentissage, stages : elles ne représentent qu’environ 12 à 15 % de l’emploi total, mais l’essentiel des **embauches** — plus de 85 % des recrutements se font en CDD, dont une majorité de très courte durée. Le CDI est donc devenu une position à atteindre plutôt qu’un point de départ.
+## Le paradoxe des stocks et des flux
+| | Part de l’**emploi total** | Part des **embauches** |
+| Le **CDI** | environ 75 % | moins de 15 % |
+| Les **formes particulières** | 12 à 15 % | plus de **85 %**, dont une majorité de très courte durée |
 
-## La polarisation
-Deux mouvements simultanés :
-- **en haut** : croissance des emplois très qualifiés, autonomes, bien rémunérés ;
-- **en bas** : croissance des emplois de service peu qualifiés, difficilement automatisables (aide à domicile, livraison, nettoyage, caisse) ;
-- **au milieu** : recul des emplois intermédiaires, les plus exposés à l’automatisation et à la délocalisation.
+> Le CDI est devenu une position **à atteindre**, non un point de départ. C’est le chiffre qui fait la différence dans une copie.
 
-## Le travail indépendant et les plateformes
-Le statut d’**auto-entrepreneur** (2009) et l’essor des plateformes numériques ont fait remonter la part des indépendants après un siècle de baisse. Le débat porte sur la **dépendance économique** : un livreur qui ne choisit ni ses tarifs ni son organisation est juridiquement indépendant et économiquement subordonné. Plusieurs décisions de justice ont requalifié ces relations en contrat de travail.
+## La polarisation de l’emploi
+| Segment | Ce qui s’y passe |
+| **En haut** | Croissance des emplois très qualifiés, autonomes, bien rémunérés |
+| **Au milieu** | **Recul** des emplois intermédiaires, exposés à l’automatisation et à la délocalisation |
+| **En bas** | Croissance des services peu qualifiés, difficilement automatisables : aide à domicile, livraison, nettoyage, caisse |
+
+## Indépendance et plateformes
+Le statut d’**auto-entrepreneur** (2009) et les plateformes numériques ont fait remonter la part des indépendants après un siècle de baisse.
+
+> Le débat porte sur la **dépendance économique** : un livreur qui ne choisit ni ses tarifs ni son organisation est juridiquement **indépendant** et économiquement **subordonné**. Plusieurs décisions de justice ont requalifié ces relations en contrat de travail.
 
 ## La précarité
-Elle ne se réduit pas au type de contrat : elle combine l’instabilité de l’emploi, la faiblesse du revenu, l’imprévisibilité des horaires et l’absence de perspectives. Les **travailleurs pauvres** — occupés mais sous le seuil de pauvreté — en sont la manifestation la plus nette : environ un actif occupé sur vingt en France.
+Elle combine quatre dimensions : instabilité de l’emploi, faiblesse du revenu, imprévisibilité des horaires, absence de perspectives. Les **travailleurs pauvres** — occupés mais sous le seuil de pauvreté — en sont la manifestation la plus nette : environ **un actif occupé sur vingt**.
 
-## Qui est concerné
-La segmentation du marché du travail oppose un **marché primaire** (emplois stables, bien rémunérés, avec perspectives) et un **marché secondaire** (emplois instables, peu qualifiés, sans mobilité vers le premier). Les jeunes, les femmes, les peu diplômés et les personnes issues de l’immigration y sont surreprésentés.
+## Le marché segmenté
+| | **Marché primaire** | **Marché secondaire** |
+| Les emplois | Stables, bien rémunérés, avec perspectives | Instables, peu qualifiés, sans passerelle |
+| Qui y est surreprésenté | — | Jeunes, femmes, peu diplômés, personnes issues de l’immigration |
 
-> La question d’examen n’est pas « le CDI a-t-il disparu ? » — il n’a pas disparu — mais « pour qui la norme d’emploi vaut-elle encore ? ». C’est là que les données sur les embauches font la différence.`,
+> La question d’examen n’est pas « le CDI a-t-il disparu ? » — il n’a pas disparu — mais « **pour qui** la norme d’emploi vaut-elle encore ? ».`,
           },
           questions: [
             ['Quelle part de l’emploi français est en CDI ?', ['Environ trois sur quatre', 'Environ la moitié', 'Environ un sur cinq', 'La quasi-totalité'], 0, 'La norme reste majoritaire en stock, minoritaire en flux d’embauches.'],
@@ -1132,40 +1329,42 @@ La segmentation du marché du travail oppose un **marché primaire** (emplois st
           axe: 'Quelles mutations du travail et de l’emploi ?',
           lecon: {
             titre: 'De la chaîne au tableau de bord',
-            cours: `La façon d’organiser le travail n’est pas une question technique : elle décide de l’autonomie, de la qualification et de la santé de ceux qui l’exécutent.
+            cours: `La façon d’organiser le travail n’est pas une question technique : elle décide de l’**autonomie**, de la **qualification** et de la **santé** de ceux qui l’exécutent.
 
-## Le taylorisme
-Formalisé par Taylor au début du XXe siècle, il repose sur :
-- la **division verticale** du travail : séparation stricte entre ceux qui conçoivent (le bureau des méthodes) et ceux qui exécutent ;
-- la **division horizontale** : décomposition du travail en tâches élémentaires, répétitives, chronométrées ;
-- le **salaire au rendement**, pour aligner l’intérêt de l’ouvrier sur la cadence.
+## Les deux grands modèles
+| | **Taylorisme et fordisme** | **Toyotisme** |
+| Le stock | Produire pour stocker | **Juste-à-temps** : produire à la commande |
+| La qualité | Contrôle **en bout de chaîne** | **Auto-contrôle** par l’opérateur |
+| Le poste | Une tâche, répétée | **Polyvalence**, équipes autonomes |
+| L’amélioration | Décidée par le bureau des méthodes | *Kaizen* : les suggestions des opérateurs |
+| Le produit | **Standardisé** | Différencié |
 
-Ford y ajoute la **chaîne de montage** (qui impose le rythme), la **standardisation** du produit et le *five dollars day* — un salaire élevé pour retenir la main-d’œuvre et solvabiliser la demande.
+## Les principes de Taylor
+| Principe | Ce qu’il sépare ou découpe |
+| Division **verticale** | Ceux qui **conçoivent** (bureau des méthodes) et ceux qui **exécutent** |
+| Division **horizontale** | Le travail en tâches élémentaires, répétitives, chronométrées |
+| **Salaire au rendement** | Il aligne l’intérêt de l’ouvrier sur la cadence |
 
-Le gain de productivité est spectaculaire ; le coût est l’**aliénation**, l’absentéisme et le turnover.
+Ford y ajoute la **chaîne de montage** (qui impose le rythme), la **standardisation** et le *five dollars day* — un salaire élevé pour retenir la main-d’œuvre et solvabiliser la demande.
 
-## La crise du modèle
-À partir des années 1970 : demande plus variable et plus exigeante en variété, refus social du travail parcellisé, rigidité d’un système incapable de changer vite de production.
+> Le gain de productivité est spectaculaire ; le coût est l’**aliénation**, l’absentéisme et le *turnover*.
 
-## Le toyotisme
-Développé par Ohno chez Toyota, il inverse plusieurs principes :
-- le **juste-à-temps** : produire à la commande, sans stock, ce qui rend le système réactif mais fragile ;
-- la **qualité totale** et l’auto-contrôle par l’opérateur, au lieu d’un contrôle en bout de chaîne ;
-- la **polyvalence** et le travail en **équipes autonomes** ;
-- l’**amélioration continue** (*kaizen*), qui sollicite les suggestions des opérateurs.
-
-Le travail redevient plus varié — mais l’intensité augmente : le juste-à-temps supprime les temps morts qui servaient de respiration.
+## Pourquoi le modèle a cassé
+Années 1970 : demande plus **variable** et exigeante en variété, refus social du travail parcellisé, rigidité d’un système incapable de changer vite de production.
 
 ## Le travail aujourd’hui
-- l’**informatisation** et l’automatisation déplacent le travail vers le contrôle de machines et le traitement de l’information ;
-- le **management par objectifs** remplace la surveillance directe par l’**évaluation des résultats** : l’autonomie dans les moyens s’accompagne d’une contrainte accrue sur les fins ;
-- le **télétravail**, généralisé après 2020, brouille la frontière entre vie professionnelle et vie privée ;
-- l’**ubérisation** externalise le contrôle vers l’algorithme et la notation par le client.
+| Transformation | Ce qu’elle change |
+| **Informatisation** et automatisation | Le travail se déplace vers le contrôle de machines et l’information |
+| **Management par objectifs** | L’autonomie sur les **moyens**, une contrainte accrue sur les **fins** |
+| **Télétravail**, généralisé après 2020 | La frontière vie professionnelle / vie privée se brouille |
+| **Ubérisation** | Le contrôle est externalisé vers l’algorithme et la note du client |
 
-## Les conséquences sur la santé
-Les troubles musculo-squelettiques restent la première maladie professionnelle reconnue, et les **risques psychosociaux** (stress, épuisement, perte de sens) progressent. Le modèle de Karasek l’explique : la souffrance naît de la combinaison d’une **forte demande** et d’une **faible latitude décisionnelle**.
+## La santé au travail
+Les **troubles musculo-squelettiques** restent la première maladie professionnelle reconnue, et les **risques psychosociaux** progressent.
 
-> Aucun modèle n’a remplacé le précédent : une même entreprise peut être taylorienne dans son entrepôt, toyotiste dans son atelier et managée par objectifs dans ses bureaux.`,
+> Le modèle de **Karasek** l’explique : la souffrance naît de la combinaison d’une **forte demande** et d’une **faible latitude décisionnelle**. Le juste-à-temps supprime les temps morts qui servaient de respiration : le travail devient plus varié **et** plus intense.
+
+> Aucun modèle n’a remplacé le précédent : une même entreprise peut être **taylorienne** dans son entrepôt, **toyotiste** dans son atelier et **managée par objectifs** dans ses bureaux.`,
           },
           questions: [
             ['Qu’est-ce que la division verticale du travail chez Taylor ?', ['La séparation entre ceux qui conçoivent et ceux qui exécutent', 'La décomposition en tâches élémentaires', 'La hiérarchie des salaires', 'La séparation entre ateliers'], 0, 'La division horizontale, elle, découpe le travail en tâches répétitives.'],
@@ -1185,31 +1384,43 @@ Les troubles musculo-squelettiques restent la première maladie professionnelle 
             titre: 'Le travail intègre-t-il encore ?',
             cours: `Durkheim en avait fait le cœur de sa sociologie : dans les sociétés modernes, c’est la **division du travail** qui produit la solidarité. Un siècle plus tard, la question se repose autrement.
 
-## Le travail comme facteur d’intégration
-Il intègre par trois canaux :
-- **économique** : un revenu, donc une autonomie et une capacité de consommer ;
-- **social** : des collègues, un collectif, un réseau, une sociabilité quotidienne ;
-- **symbolique** : un statut, une identité, une reconnaissance et une place assignable dans la société.
+## Les trois canaux de l’intégration par le travail
+| Canal | Ce qu’il apporte |
+| **Économique** | Un revenu, donc une autonomie et une capacité de consommer |
+| **Social** | Des collègues, un collectif, un réseau, une sociabilité quotidienne |
+| **Symbolique** | Un statut, une identité, une reconnaissance, une place assignable |
 
-Durkheim distingue la **solidarité mécanique** des sociétés traditionnelles (l’unité naît de la ressemblance) et la **solidarité organique** des sociétés modernes (l’unité naît de la complémentarité des fonctions). La seconde suppose une division du travail qui ne soit pas « anomique » — c’est-à-dire encadrée par des règles reconnues.
+## Les deux solidarités de Durkheim
+| | **Mécanique** | **Organique** |
+| La société | Traditionnelle | Moderne |
+| L’unité naît de… | La **ressemblance** | La **complémentarité** des fonctions |
+| La condition | — | Une division du travail **non anomique**, encadrée par des règles reconnues |
 
 ## Ce qui fragilise ce rôle
-- le **chômage** de longue durée détruit les trois canaux à la fois. Schnapper a montré comment il désorganise le temps et l’identité ;
-- la **précarité** rend l’appartenance provisoire : on ne s’intègre pas à un collectif que l’on quittera dans trois mois ;
-- l’**individualisation** du travail (objectifs individuels, primes, évaluations) affaiblit le collectif de travail ;
-- le **télétravail** et l’externalisation dispersent physiquement les équipes ;
-- le **sous-emploi** et le déclassement fournissent un revenu sans reconnaissance.
+| Facteur | Ce qu’il attaque |
+| Le **chômage** de longue durée | Les **trois** canaux à la fois — Schnapper a montré la désorganisation du temps et de l’identité |
+| La **précarité** | On ne s’intègre pas à un collectif qu’on quittera dans trois mois |
+| L’**individualisation** (objectifs, primes, évaluations) | Le collectif de travail |
+| Le **télétravail** et l’externalisation | La présence physique des équipes |
+| Le **sous-emploi** et le déclassement | Ils donnent un revenu **sans** reconnaissance |
 
-## La désaffiliation
-Robert Castel décrit un continuum plutôt qu’une frontière : entre l’**intégration** (travail stable, relations solides) et la **désaffiliation** (ni travail ni lien) se trouve la **vulnérabilité** — travail précaire, relations fragiles. Le basculement est progressif, ce qui explique qu’il soit longtemps invisible.
+## La désaffiliation — Castel
+Un **continuum**, non une frontière.
+
+| Zone | Le travail | Les relations |
+| **Intégration** | Stable | Solides |
+| **Vulnérabilité** | Précaire | Fragiles |
+| **Désaffiliation** | Aucun | Rompues |
+
+> Le basculement est **progressif** : c’est ce qui le rend longtemps invisible.
 
 ## Ce qui subsiste
-Le travail reste, dans les enquêtes, l’une des principales sources d’identité et de sociabilité des Français — l’attachement au travail y demeure élevé, y compris chez les jeunes générations, dont les attentes portent davantage sur le **sens** et l’équilibre des temps que sur la seule rémunération.
+Le travail reste, dans les enquêtes, l’une des principales sources d’identité et de sociabilité des Français. L’attachement au travail demeure élevé, y compris chez les jeunes générations — dont les attentes portent davantage sur le **sens** et l’équilibre des temps que sur la seule rémunération.
 
-## Les autres instances d’intégration
-La famille, l’École, la protection sociale, les associations, la citoyenneté politique produisent aussi du lien. La question du programme est de savoir si elles **compensent** l’affaiblissement du travail — ou si elles se fragilisent en même temps que lui, la protection sociale française étant largement adossée à l’emploi.
+## Les autres instances
+Famille, École, protection sociale, associations, citoyenneté politique produisent aussi du lien. La question est de savoir si elles **compensent** l’affaiblissement du travail — ou si elles se fragilisent **en même temps que lui**, la protection sociale française étant largement adossée à l’emploi.
 
-> Formule utile : le travail intègre toujours, mais il intègre **inégalement** — et ce sont ceux qui en auraient le plus besoin qui en bénéficient le moins.`,
+> Le travail intègre toujours, mais il intègre **inégalement** — et ce sont ceux qui en auraient le plus besoin qui en bénéficient le moins.`,
           },
           questions: [
             ['Par quels canaux le travail intègre-t-il ?', ['Économique, social et symbolique', 'Économique uniquement', 'Familial et scolaire', 'Politique et juridique'], 0, 'Un revenu, un collectif, et une identité reconnue.'],
@@ -1230,33 +1441,35 @@ La famille, l’École, la protection sociale, les associations, la citoyenneté
             titre: 'Pourquoi s’engager quand on pourrait ne rien faire',
             cours: `L’**engagement politique** ne se réduit pas au vote : il désigne toute participation volontaire à la vie de la cité. Le chapitre en explique la variété — et le paradoxe qui le rend théoriquement improbable.
 
-## Les répertoires de l’engagement
-- le **vote**, forme la plus répandue et la moins coûteuse ;
-- le **militantisme** : adhésion à un parti, un syndicat, une association ;
-- l’**engagement associatif**, très large en France ;
-- la **consommation engagée** : boycott et *buycott*, achat responsable ;
-- les **actions protestataires** : manifestation, pétition, grève, occupation, désobéissance civile.
+## Les répertoires
+| Répertoire | Sa forme |
+| Le **vote** | Le plus répandu, le moins coûteux |
+| Le **militantisme** | Parti, syndicat, association |
+| L’engagement **associatif** | Très large en France |
+| La **consommation engagée** | Boycott, *buycott*, achat responsable |
+| Les actions **protestataires** | Manifestation, pétition, grève, occupation, désobéissance civile |
 
-Ces répertoires ne se remplacent pas : ceux qui manifestent sont aussi ceux qui votent le plus.
+> Ces répertoires ne se remplacent pas : ceux qui manifestent sont **aussi** ceux qui votent le plus.
 
-## Le paradoxe de l’action collective (Olson)
-Si l’objectif d’une action collective est un **bien collectif** — une hausse de salaire pour toute la branche, un air plus pur —, chacun en bénéficiera qu’il ait participé ou non. L’individu rationnel a donc intérêt à **ne pas** participer : c’est le **passager clandestin** (*free rider*).
+## Le paradoxe de l’action collective — Olson
+Si l’objectif est un **bien collectif** — une hausse de salaire pour toute la branche, un air plus pur — chacun en bénéficiera qu’il ait participé **ou non**. L’individu rationnel a donc intérêt à **ne pas** participer : c’est le **passager clandestin**.
 
-Trois réponses expliquent que l’action collective existe malgré tout :
-- les **incitations sélectives** : avantages réservés aux seuls participants (services syndicaux, caisse de grève) ;
-- la **taille réduite** du groupe, où l’abstention se voit ;
-- les **rétributions symboliques** du militantisme (Gaxie) : sociabilité, reconnaissance, estime de soi, apprentissage — le militant y gagne autre chose que la cause elle-même.
+| La réponse | Ce qu’elle apporte |
+| Les **incitations sélectives** | Avantages réservés aux participants : services syndicaux, caisse de grève |
+| La **taille réduite** du groupe | L’abstention s’y voit |
+| Les **rétributions symboliques** (Gaxie) | Sociabilité, reconnaissance, estime de soi, apprentissage — on y gagne **autre chose** que la cause |
 
 ## Les variables de l’engagement
-- l’**âge** : effet de cycle de vie (l’engagement associatif culmine à l’âge mûr) et effet de génération ;
-- le **diplôme** et la **catégorie socioprofessionnelle** : plus on est diplômé, plus on s’engage, sous toutes les formes ;
-- le **sexe** : les formes d’engagement diffèrent plus que leur intensité ;
-- la **génération** : chaque cohorte garde la marque des événements politiques de sa jeunesse.
+| Variable | Son effet |
+| L’**âge** | Effet de **cycle de vie** (l’associatif culmine à l’âge mûr) et effet de **génération** |
+| Le **diplôme** et la **PCS** | Plus on est diplômé, plus on s’engage, sous toutes les formes |
+| Le **sexe** | Les **formes** diffèrent plus que l’intensité |
+| La **génération** | Chaque cohorte garde la marque des événements politiques de sa jeunesse |
 
-## Les transformations récentes
-Le militantisme partisan et syndical recule — la France a l’un des taux de syndicalisation les plus faibles de l’OCDE, environ 10 %. Mais l’engagement ne disparaît pas : il devient plus **ponctuel**, plus **distancié**, davantage centré sur des **causes** que sur des organisations, et il investit massivement le **numérique**. Ion parle de militantisme « **post-it** » : intense, court, renouvelable.
+## Ce qui a changé
+Le militantisme partisan et syndical recule — la France a l’un des taux de syndicalisation les plus faibles de l’OCDE, environ **10 %**. Mais l’engagement se transforme : plus **ponctuel**, plus **distancié**, centré sur des **causes** plutôt que sur des organisations, et massivement **numérique**. Ion parle de militantisme « **post-it** » : intense, court, renouvelable.
 
-> Le recul des organisations n’est pas le recul de l’engagement. Confondre les deux est l’erreur d’interprétation la plus fréquente sur ce chapitre.`,
+> Le recul des **organisations** n’est pas le recul de l’**engagement**. Confondre les deux est l’erreur d’interprétation la plus fréquente du chapitre.`,
           },
           questions: [
             ['Qu’est-ce que le paradoxe de l’action collective d’Olson ?', ['L’individu rationnel a intérêt à ne pas participer, puisqu’il bénéficiera du résultat', 'Les groupes nombreux sont plus efficaces', 'L’action collective échoue toujours', 'Le vote est irrationnel'], 0, 'C’est le problème du passager clandestin.'],
@@ -1274,32 +1487,41 @@ Le militantisme partisan et syndical recule — la France a l’un des taux de s
           axe: 'Comment expliquer l’engagement politique dans les sociétés démocratiques ?',
           lecon: {
             titre: 'Des conflits du travail aux mouvements de société',
-            cours: `L’action collective n’a pas disparu : elle a changé d’acteurs, d’objets et de moyens. Le chapitre suit ces trois déplacements.
+            cours: `L’action collective n’a pas disparu : elle a changé d’**acteurs**, d’**objets** et de **moyens**. Le chapitre suit ces trois déplacements.
 
 ## Le modèle du conflit du travail
-Jusqu’aux années 1970, la forme dominante est le **conflit du travail** : des syndicats structurés, un adversaire identifié (l’employeur), un enjeu de répartition (salaires, temps de travail, conditions), un répertoire éprouvé (grève, occupation, négociation).
+Jusqu’aux années 1970, la forme dominante.
 
-Le nombre de journées non travaillées pour fait de grève a fortement reculé depuis, mais les conflits se sont **individualisés** (recours prud’homaux) et **diversifiés** (débrayages courts, refus d’heures supplémentaires, absentéisme).
+| Élément | Sa forme classique |
+| L’organisation | Des **syndicats** structurés |
+| L’adversaire | L’**employeur**, identifié |
+| L’enjeu | La **répartition** : salaires, temps, conditions |
+| Le répertoire | Grève, occupation, négociation |
+
+Les journées de grève ont fortement reculé, mais les conflits se sont **individualisés** (recours prud’homaux) et **diversifiés** (débrayages courts, refus d’heures supplémentaires, absentéisme).
 
 ## Les nouveaux mouvements sociaux
-À partir des années 1970, Touraine et d’autres identifient des mobilisations dont l’enjeu n’est plus principalement la répartition mais l’**identité**, les **droits** et le **mode de vie** : féminisme, écologie, antiracisme, droits des minorités sexuelles, régionalismes.
+Depuis les années 1970, l’enjeu n’est plus principalement la répartition mais l’**identité**, les **droits** et le **mode de vie** : féminisme, écologie, antiracisme, droits des minorités sexuelles, régionalismes.
 
-Leurs traits communs :
-- des acteurs plus **diplômés**, souvent issus des classes moyennes ;
-- des organisations plus **souples**, moins hiérarchiques ;
-- un rapport privilégié aux **médias** ;
-- un enjeu **post-matérialiste** (Inglehart) : une fois les besoins matériels assurés, les valeurs d’autonomie et d’expression prennent le pas.
+| Trait commun | Ce qu’il change |
+| Des acteurs plus **diplômés** | Souvent issus des classes moyennes |
+| Des organisations **souples** | Moins hiérarchiques |
+| Un rapport privilégié aux **médias** | La visibilité devient une ressource |
+| Un enjeu **post-matérialiste** (Inglehart) | Une fois les besoins matériels assurés, autonomie et expression priment |
 
 ## Les objets ne s’excluent pas
-La lecture en « anciens » contre « nouveaux » mouvements est contestée : les mobilisations récentes mêlent souvent les deux registres. Les Gilets jaunes conjuguent une revendication de pouvoir d’achat (répartition) et une demande de reconnaissance (identité) ; les mobilisations climatiques articulent justice sociale et enjeu environnemental.
+La lecture « anciens contre nouveaux » est contestée : les Gilets jaunes conjuguent pouvoir d’achat (**répartition**) et demande de reconnaissance (**identité**) ; les mobilisations climatiques articulent justice sociale et environnement.
 
-## Les acteurs et les répertoires
-- les **syndicats** conservent la capacité de négocier, malgré une adhésion faible : leur audience se mesure aux élections professionnelles, non aux adhérents ;
-- les **associations** et les **ONG** portent l’expertise et le contentieux — le recours au juge est devenu un répertoire à part entière (contentieux climatique) ;
-- les **réseaux sociaux** abaissent le coût de la mobilisation, permettent des mouvements sans organisation formelle, mais rendent la durée et la représentation plus difficiles.
+## Les acteurs aujourd’hui
+| Acteur | Sa ressource |
+| Les **syndicats** | La capacité de **négocier** — leur audience se mesure aux élections professionnelles, non aux adhérents |
+| Les **associations** et **ONG** | L’expertise et le **contentieux** — le recours au juge est devenu un répertoire à part entière |
+| Les **réseaux sociaux** | Un coût de mobilisation très bas, sans organisation formelle |
 
 ## Ce que le numérique change
-Il accélère le déclenchement, élargit l’audience et permet la coordination sans structure. En retour, il fragilise la **négociation** : sans porte-parole légitime, un mouvement peut être massif et sans interlocuteur. Il expose aussi à la **dispersion** — beaucoup d’engagements de faible intensité (le *clicktivisme*).
+| Il apporte | Il fragilise |
+| Un déclenchement plus rapide, une audience plus large | La **négociation** : sans porte-parole légitime, un mouvement peut être massif et **sans interlocuteur** |
+| La coordination sans structure | L’intensité : beaucoup d’engagements faibles — le *clicktivisme* |
 
 > Le fil du chapitre : l’action collective se transforme au rythme des transformations de la société elle-même — de sa structure sociale, de ses valeurs et de ses techniques.`,
           },
@@ -1320,36 +1542,41 @@ Il accélère le déclenchement, élargit l’audience et permet la coordination
           axe: 'Quelles inégalités sont compatibles avec les différentes conceptions de la justice sociale ?',
           lecon: {
             titre: 'Une différence n’est pas une inégalité',
-            cours: `Toute différence entre individus n’est pas une inégalité : il y a **inégalité** quand une différence se traduit par un accès inégal à des ressources **socialement valorisées**. Encore faut-il savoir lesquelles.
+            cours: `Toute différence n’est pas une inégalité : il y a **inégalité** quand une différence se traduit par un accès inégal à des ressources **socialement valorisées**.
 
-## Des inégalités économiques…
-- de **revenu** : revenu d’activité, du patrimoine, de transfert. Le revenu **disponible** est ce qui reste après prélèvements et prestations ;
-- de **patrimoine** : bien plus concentrées que celles de revenu. En France, les 10 % les mieux dotés détiennent environ la moitié du patrimoine total, les 50 % les moins dotés moins de 10 %.
+## Les inégalités économiques
+| Type | Ce qu’il recouvre |
+| De **revenu** | Revenu d’activité, du patrimoine, de transfert. Le revenu **disponible** est ce qui reste après prélèvements et prestations |
+| De **patrimoine** | Bien plus concentrées : les **10 %** les mieux dotés détiennent environ la **moitié** du patrimoine, les 50 % les moins dotés moins de **10 %** |
 
-## …aux inégalités sociales
-Elles concernent l’accès à des ressources non monétaires :
-- **santé** : l’écart d’espérance de vie à 35 ans entre un cadre et un ouvrier est d’environ six ans chez les hommes ;
-- **éducation** : voir le chapitre 7 ;
-- **logement** : surface, confort, exposition aux nuisances ;
-- **loisirs et culture** : les pratiques les plus légitimes restent socialement très marquées ;
-- **genre** : écart de rémunération, temps partiel subi, répartition du travail domestique.
+## Les inégalités sociales
+| Domaine | La donnée qui frappe |
+| **Santé** | Environ **six ans** d’écart d’espérance de vie à 35 ans entre un cadre et un ouvrier, chez les hommes |
+| **Éducation** | Voir le chapitre sur l’école |
+| **Logement** | Surface, confort, exposition aux nuisances |
+| **Loisirs et culture** | Les pratiques les plus légitimes restent socialement très marquées |
+| **Genre** | Écart de rémunération, temps partiel subi, travail domestique |
 
-## Le caractère cumulatif
-Ces inégalités ne s’additionnent pas au hasard : elles se **renforcent**. Un faible capital culturel conduit à un diplôme plus court, donc à un emploi moins qualifié, donc à un revenu plus faible, donc à un logement moins bien situé, donc à une santé dégradée — et à la transmission de ce désavantage à la génération suivante. C’est le **cumul** qui fait le caractère structurel de l’inégalité.
+## Cumulatives et multiformes
+Un faible capital culturel conduit à un diplôme plus court, donc à un emploi moins qualifié, donc à un revenu plus faible, donc à un logement moins bien situé, donc à une santé dégradée — et à la transmission du désavantage.
 
-Elles sont aussi **multiformes** : plusieurs dimensions peuvent se croiser sur une même personne (genre, origine, territoire, handicap), ce que l’on nomme l’**intersectionnalité**.
+> C’est le **cumul** qui fait le caractère structurel de l’inégalité. Et plusieurs dimensions peuvent se croiser sur une même personne — genre, origine, territoire, handicap : c’est l’**intersectionnalité**.
 
 ## Ce que les moyennes cachent
-Un revenu **moyen** est tiré par les valeurs extrêmes ; le revenu **médian** partage la population en deux moitiés et décrit mieux le milieu de la distribution. C’est pourquoi le seuil de pauvreté se calcule à partir du médian (60 % du niveau de vie médian en France), et non de la moyenne.
+| Indicateur | Ce qu’il décrit |
+| La **moyenne** | Tirée par les valeurs **extrêmes** |
+| La **médiane** | Elle partage la population en deux moitiés — elle décrit mieux le milieu |
+
+C’est pourquoi le seuil de pauvreté se calcule à **60 % du niveau de vie médian**, et non de la moyenne.
 
 ## Inégalité n’est pas pauvreté
-Deux notions distinctes :
-- la **pauvreté absolue** : ne pas atteindre un panier de biens jugé vital ;
-- la **pauvreté relative** : vivre trop en dessous du niveau habituel de sa société. C’est la mesure européenne.
+| | **Pauvreté absolue** | **Pauvreté relative** |
+| Le critère | Ne pas atteindre un panier de biens **vital** | Vivre trop en dessous du niveau **habituel** de sa société |
+| L’usage | Comparaisons internationales larges | La mesure **européenne** |
 
-Une société peut réduire la pauvreté et voir les inégalités augmenter, si le haut de la distribution progresse plus vite que le bas.
+> Une société peut **réduire la pauvreté** et voir les **inégalités augmenter**, si le haut de la distribution progresse plus vite que le bas.
 
-> Retenir la ligne : une inégalité se **constate** avec des données, elle se **juge** avec une conception de la justice. Le chapitre demande les deux, dans cet ordre.`,
+> Une inégalité se **constate** avec des données, elle se **juge** avec une conception de la justice. Le chapitre demande les deux, dans cet ordre.`,
           },
           questions: [
             ['Quand une différence devient-elle une inégalité ?', ['Quand elle se traduit par un accès inégal à des ressources socialement valorisées', 'Quand elle est mesurable', 'Quand elle concerne le revenu', 'Quand elle est jugée injuste'], 0, 'Toute différence n’est pas une inégalité, et toute inégalité n’est pas jugée injuste.'],
@@ -1367,36 +1594,44 @@ Une société peut réduire la pauvreté et voir les inégalités augmenter, si 
           axe: 'Quelles inégalités sont compatibles avec les différentes conceptions de la justice sociale ?',
           lecon: {
             titre: 'Trois outils, trois questions différentes',
-            cours: `Mesurer une inégalité, c’est choisir un outil — et chaque outil éclaire une facette différente de la distribution.
+            cours: `Mesurer une inégalité, c’est choisir un outil — et chaque outil éclaire une **facette différente** de la distribution.
 
-## Les quantiles et les rapports interdéciles
-On ordonne la population par niveau de vie croissant et on la découpe :
-- **déciles** : dix parts égales, séparées par D1 à D9 ;
-- **quartiles**, **quintiles**, **centiles**.
+## Les trois familles d’outils
+| Outil | Ce qu’il regarde |
+| Les **quantiles** et le rapport interdécile | Deux **seuils** de la distribution |
+| La **courbe de Lorenz** et l’indice de **Gini** | La distribution **entière**, résumée |
+| Les **parts de masse** | Le **haut** de la distribution |
 
-Le **rapport interdécile D9/D1** compare le seuil au-dessus duquel se trouvent les 10 % les plus aisés à celui en dessous duquel se trouvent les 10 % les plus modestes. En France, il est d’environ 3,4 pour le niveau de vie après redistribution.
+## Les quantiles
+On ordonne la population par niveau de vie croissant : **déciles** (dix parts égales, séparées par D1 à D9), quartiles, quintiles, centiles.
 
-Attention à la formulation : D9 n’est pas « le revenu des 10 % les plus riches », c’est un **seuil**. La confusion coûte des points à chaque épreuve.
+Le rapport **D9/D1** compare le seuil au-dessus duquel se trouvent les 10 % les plus aisés à celui en dessous duquel se trouvent les 10 % les plus modestes. En France : environ **3,4** après redistribution.
 
-## La courbe de Lorenz et l’indice de Gini
-La **courbe de Lorenz** représente la part cumulée du revenu total détenue par la part cumulée de la population, du plus modeste au plus aisé. L’égalité parfaite est la **diagonale** ; plus la courbe s’en écarte, plus la distribution est inégalitaire.
+> D9 n’est **pas** « le revenu des 10 % les plus riches » : c’est un **seuil**. La confusion coûte des points à chaque épreuve.
 
-L’**indice de Gini** mesure cet écart : il vaut **0** en égalité parfaite et **1** quand une seule personne détient tout. Il synthétise l’ensemble de la distribution en un chiffre — sa force et sa faiblesse, puisque deux distributions très différentes peuvent avoir le même Gini.
+## Lorenz et Gini
+La courbe de Lorenz représente la part cumulée du revenu détenue par la part cumulée de la population, du plus modeste au plus aisé. L’égalité parfaite est la **diagonale** ; plus la courbe s’en écarte, plus la distribution est inégalitaire.
+
+| Valeur du Gini | Ce qu’elle signifie |
+| **0** | Égalité parfaite |
+| **1** | Une seule personne détient tout |
+
+> Il résume toute la distribution en un chiffre : c’est sa force **et** sa faiblesse — deux distributions très différentes peuvent avoir le même Gini.
 
 ## Les parts de masse
-« Les 1 % les plus riches détiennent X % du revenu total » : cette mesure, popularisée par les travaux de Piketty et du *World Inequality Lab*, éclaire spécifiquement le **haut** de la distribution, que le Gini et le D9/D1 lissent.
+« Les 1 % les plus riches détiennent X % du revenu total » : popularisée par Piketty et le *World Inequality Lab*, cette mesure éclaire le **haut** de la distribution, que le Gini et le D9/D1 lissent.
 
 ## Avant ou après redistribution
-Toute mesure doit préciser son périmètre :
-- **revenu primaire** : ce que le marché distribue (activité, patrimoine) ;
-- **revenu disponible** : après prélèvements et prestations.
+| Périmètre | Ce qu’il contient |
+| Le revenu **primaire** | Ce que le **marché** distribue : activité, patrimoine |
+| Le revenu **disponible** | Après prélèvements et prestations |
 
-En France, la redistribution réduit le rapport interdécile d’environ 22 à environ 3,4 : c’est l’un des systèmes les plus redistributifs de l’OCDE, et l’essentiel de l’effet vient des **prestations** (surtout familiales et logement) plus que de la progressivité de l’impôt.
+En France, la redistribution fait passer le rapport interdécile d’environ **22** à environ **3,4** : l’un des systèmes les plus redistributifs de l’OCDE. L’essentiel de l’effet vient des **prestations** — familiales et logement — plus que de la progressivité de l’impôt.
 
 ## Ce qu’aucun indicateur ne dit
-Ni le Gini ni le D9/D1 ne renseignent sur le **patrimoine**, sur la **mobilité** entre les positions, ni sur les inégalités non monétaires. Un pays très inégal mais très mobile n’a pas le même visage qu’un pays également inégal et figé.
+Ni le Gini ni le D9/D1 ne renseignent sur le **patrimoine**, sur la **mobilité** entre positions, ni sur les inégalités non monétaires.
 
-> Choisir un indicateur, c’est déjà choisir ce dont on veut parler. Une bonne copie justifie son choix au lieu d’aligner les chiffres.`,
+> Choisir un indicateur, c’est déjà choisir **ce dont on veut parler**. Une bonne copie justifie son choix au lieu d’aligner les chiffres.`,
           },
           questions: [
             ['Que représente le rapport interdécile D9/D1 ?', ['Le rapport entre deux seuils de niveau de vie, celui des 10 % les plus aisés et celui des 10 % les plus modestes', 'Le rapport entre les revenus moyens des riches et des pauvres', 'La part du revenu des 10 % les plus riches', 'Le nombre de personnes pauvres'], 0, 'D9 et D1 sont des seuils, pas des revenus moyens : la confusion est très pénalisée.'],
@@ -1414,35 +1649,41 @@ Ni le Gini ni le D9/D1 ne renseignent sur le **patrimoine**, sur la **mobilité*
           axe: 'Quelles inégalités sont compatibles avec les différentes conceptions de la justice sociale ?',
           lecon: {
             titre: 'Quelle égalité vise-t-on, au juste ?',
-            cours: `Une même donnée sur les inégalités appelle des conclusions opposées selon la conception de la justice qu’on retient. Le chapitre exige de les distinguer avant de juger.
+            cours: `Une même donnée sur les inégalités appelle des conclusions **opposées** selon la conception de la justice retenue. Le chapitre exige de les distinguer **avant** de juger.
 
 ## Trois conceptions de l’égalité
-- l’**égalité des droits** : les mêmes règles pour tous, l’absence de discrimination. C’est le socle libéral ;
-- l’**égalité des chances** : tous doivent partir avec les mêmes possibilités, quelles que soient leurs origines. Les positions inégales sont alors justes si la compétition l’était ;
-- l’**égalité des situations** (ou des résultats) : viser une réduction des écarts eux-mêmes, et pas seulement des conditions d’accès.
+| Conception | Ce qu’elle exige |
+| Égalité des **droits** | Les mêmes règles pour tous, l’absence de discrimination — le socle libéral |
+| Égalité des **chances** | Les mêmes possibilités au départ ; les positions inégales sont justes si la compétition l’était |
+| Égalité des **situations** | Réduire les **écarts eux-mêmes**, pas seulement les conditions d’accès |
 
-Les trois ne sont pas compatibles entre elles : l’égalité des chances suppose des traitements **différenciés** (discrimination positive, éducation prioritaire), ce qui heurte l’égalité stricte des droits.
+> Elles ne sont pas compatibles entre elles : l’égalité des chances suppose des traitements **différenciés** — discrimination positive, éducation prioritaire — ce qui heurte l’égalité stricte des droits.
 
-## Les théories de la justice
-- **utilitarisme** (Bentham) : est juste ce qui maximise le bien-être total ;
-- **libertarisme** (Nozick) : seule la légitimité du processus compte (acquisition et transfert justes) ; une redistribution imposée est une atteinte aux droits individuels ;
-- **libéralisme égalitaire** (Rawls) : sous le **voile d’ignorance**, des individus rationnels choisiraient l’égale liberté, puis le **principe de différence** — les inégalités ne sont justes que si elles profitent aux plus défavorisés ;
-- **approche par les capabilités** (Sen) : ce qui compte n’est pas la ressource mais la **liberté réelle** d’en faire quelque chose. Donner un vélo à qui ne sait pas en faire n’est pas donner la mobilité.
+## Quatre théories de la justice
+| Auteur | Son critère |
+| **Bentham** — utilitarisme | Est juste ce qui maximise le **bien-être total** |
+| **Nozick** — libertarisme | Seule la **légitimité du processus** compte ; une redistribution imposée viole les droits |
+| **Rawls** — libéralisme égalitaire | Sous le **voile d’ignorance** : égale liberté, puis **principe de différence** — les inégalités ne sont justes que si elles profitent aux **plus défavorisés** |
+| **Sen** — capabilités | Ce qui compte n’est pas la ressource mais la **liberté réelle** d’en faire quelque chose |
 
-## Les instruments des pouvoirs publics
-- la **fiscalité** : impôt progressif sur le revenu, imposition du patrimoine et des successions ;
-- la **protection sociale** : assurance (chômage, retraite, maladie) et assistance (RSA, minima sociaux) ;
-- les **services collectifs** : école, santé, transports — ils réduisent les inégalités de **niveau de vie réel** sans passer par le revenu, et représentent l’essentiel de la redistribution en nature ;
-- la **lutte contre les discriminations** : sanctions, testings, obligations de résultats ;
-- la **discrimination positive** : traitement préférentiel ciblé sur un territoire (éducation prioritaire) ou un groupe (quotas de femmes dans les conseils d’administration).
+> Donner un vélo à qui ne sait pas en faire n’est pas donner la mobilité. C’est toute la différence entre une ressource et une capabilité.
 
-## Les limites et les effets pervers
-- les **effets désincitatifs** supposés sur l’offre de travail et l’épargne, au cœur du débat sur la « trappe à inactivité » ;
-- le **non-recours** : une part importante des ayants droit ne demandent pas les prestations auxquelles ils ont droit ;
-- la **complexité** du système, qui rend les droits illisibles ;
-- le **coût** et son financement, dans un contexte de contrainte budgétaire et de concurrence fiscale.
+## Les instruments publics
+| Instrument | Son action |
+| La **fiscalité** | Impôt progressif, imposition du patrimoine et des successions |
+| La **protection sociale** | **Assurance** (chômage, retraite, maladie) et **assistance** (RSA, minima sociaux) |
+| Les **services collectifs** | École, santé, transports : l’essentiel de la redistribution **en nature**, sans passer par le revenu |
+| La lutte contre les **discriminations** | Sanctions, *testings*, obligations de résultats |
+| La **discrimination positive** | Ciblée sur un territoire (éducation prioritaire) ou un groupe (quotas) |
 
-> La question du programme est bien « quelles inégalités sont **compatibles** avec quelle conception » — pas « les inégalités sont-elles justes ». Poser d’abord la conception, ensuite l’inégalité : l’ordre inverse produit une copie d’opinion.`,
+## Les limites
+| Limite | Ce qu’elle produit |
+| Les effets **désincitatifs** supposés | Le débat sur la « trappe à inactivité » |
+| Le **non-recours** | Une part importante des ayants droit ne demandent pas leurs prestations |
+| La **complexité** | Des droits illisibles |
+| Le **coût** | Contrainte budgétaire et concurrence fiscale |
+
+> La question du programme est « quelles inégalités sont **compatibles** avec quelle conception » — pas « les inégalités sont-elles justes ». Poser d’abord la conception, ensuite l’inégalité : l’ordre inverse produit une copie d’opinion.`,
           },
           questions: [
             ['Que défend l’égalité des chances ?', ['Que chacun parte avec les mêmes possibilités, quelles que soient ses origines', 'Que chacun obtienne le même revenu', 'Que les mêmes règles s’appliquent à tous', 'Que l’État ne redistribue pas'], 0, 'Les positions inégales sont alors jugées justes si la compétition l’était.'],
@@ -1464,32 +1705,37 @@ Les trois ne sont pas compatibles entre elles : l’égalité des chances suppos
             cours: `Le climat est un **bien commun mondial** : nul ne peut en être exclu, et sa dégradation par les uns affecte tous les autres. Cette caractéristique explique pourquoi l’action publique y est si difficile.
 
 ## Le problème économique
-Le climat est un bien **non excluable** (on ne peut empêcher personne d’en bénéficier) et **rival** dans sa dégradation (chaque émission réduit la capacité d’absorption disponible). D’où :
-- la **tragédie des communs** (Hardin) : chacun a intérêt à surexploiter une ressource commune, et l’addition des comportements individuellement rationnels détruit la ressource ;
-- le **passager clandestin** : à l’échelle internationale, un pays a intérêt à ce que les autres réduisent leurs émissions sans réduire les siennes.
+Le climat est **non excluable** — on ne peut empêcher personne d’en bénéficier — et **rival dans sa dégradation** : chaque émission réduit la capacité d’absorption disponible.
 
-Elinor Ostrom a nuancé ce pessimisme : elle a montré empiriquement que des communautés locales gèrent durablement des ressources communes, à condition de disposer de **règles**, de **sanctions graduées**, d’un **suivi** et de mécanismes de résolution des conflits.
+| Mécanisme | Ce qu’il produit |
+| La **tragédie des communs** (Hardin) | Chacun a intérêt à surexploiter ; l’addition des comportements rationnels **détruit la ressource** |
+| Le **passager clandestin** | Un pays a intérêt à ce que les **autres** réduisent leurs émissions |
 
-## La pluralité des acteurs
-L’action publique environnementale n’est pas le monopole des États. Y participent :
-- les **pouvoirs publics** nationaux et locaux ;
-- les **organisations internationales** (CCNUCC, GIEC — qui produit l’expertise sans décider) ;
-- les **entreprises**, qui innovent, lobbyisent et s’engagent ;
-- les **ONG**, qui alertent, expertisent et saisissent les tribunaux ;
-- les **mouvements citoyens**, les scientifiques, les médias.
+> **Elinor Ostrom** a nuancé ce pessimisme : des communautés gèrent durablement des ressources communes, à condition de disposer de **règles**, de **sanctions graduées**, d’un **suivi** et de mécanismes de résolution des conflits.
 
-## La coopération internationale
-- le **protocole de Kyoto** (1997) : des objectifs contraignants, mais pour les seuls pays développés, et sans les États-Unis ;
-- l’**accord de Paris** (2015) : universel, avec un objectif commun (bien en dessous de 2 °C, en visant 1,5 °C), mais des engagements **nationaux volontaires** et non contraignants. La logique a changé : de la contrainte négociée vers l’engagement public et la pression par la transparence.
+## Les acteurs
+| Acteur | Son rôle |
+| Les **pouvoirs publics** | Nationaux et locaux : la norme et le budget |
+| Les **organisations internationales** | CCNUCC ; le **GIEC** produit l’expertise **sans décider** |
+| Les **entreprises** | Elles innovent, font du *lobbying*, s’engagent |
+| Les **ONG** | Elles alertent, expertisent, saisissent les tribunaux |
+| Les **mouvements citoyens**, scientifiques, médias | Ils mettent à l’agenda |
 
-## Les conflits
-Ils sont structurels, et le programme demande de les nommer :
-- entre **pays développés et pays en développement** : responsabilité historique des émissions contre besoin de développement, d’où le principe des « responsabilités communes mais différenciées » et le financement climatique ;
-- entre **générations** : le coût est immédiat, le bénéfice lointain ;
-- entre **groupes sociaux** : une taxe carbone uniforme pèse davantage sur les ménages modestes et ruraux, plus dépendants de la voiture — c’est l’enjeu de justice qui a déclenché le mouvement des Gilets jaunes ;
-- entre **échelles** : ce qui est décidé au niveau mondial doit être appliqué localement, par des acteurs qui n’ont pas participé à la décision.
+## Deux accords, deux logiques
+| | **Kyoto** (1997) | **Paris** (2015) |
+| La portée | Les seuls pays **développés**, sans les États-Unis | **Universel** |
+| Les engagements | **Contraignants** | **Nationaux et volontaires** |
+| L’objectif | Des cibles chiffrées par pays | Bien en dessous de **2 °C**, en visant **1,5 °C** |
+| Le levier | La contrainte négociée | La **transparence** et la pression des pairs |
 
-> Une politique climatique efficace mais perçue comme injuste est politiquement intenable. C’est la leçon centrale de ce chapitre, et elle fait la jonction avec le chapitre sur la justice sociale.`,
+## Les quatre conflits
+| Conflit | Ce qui s’oppose |
+| Pays **développés / en développement** | Responsabilité historique contre besoin de développement — d’où les « responsabilités communes mais **différenciées** » |
+| Entre **générations** | Le coût est **immédiat**, le bénéfice **lointain** |
+| Entre **groupes sociaux** | Une taxe carbone uniforme pèse plus sur les ménages modestes et ruraux, dépendants de la voiture |
+| Entre **échelles** | Ce qui se décide au niveau mondial s’applique localement, par des acteurs qui n’ont pas décidé |
+
+> Une politique climatique **efficace mais perçue comme injuste** est politiquement intenable. C’est la leçon centrale du chapitre, et la jonction avec celui sur la justice sociale.`,
           },
           questions: [
             ['Pourquoi le climat est-il qualifié de bien commun ?', ['Nul ne peut en être exclu, et sa dégradation affecte tout le monde', 'Il appartient aux États', 'Il est géré par l’ONU', 'Il est gratuit à produire'], 0, 'Non excluable, et rival dans sa dégradation.'],
@@ -1507,33 +1753,42 @@ Ils sont structurels, et le programme demande de les nommer :
           axe: 'Quelle action publique pour l’environnement ?',
           lecon: {
             titre: 'Interdire, taxer, ou faire payer le droit de polluer',
-            cours: `Le programme retient **trois familles d’instruments**, dont il faut connaître le mécanisme, l’avantage et la limite. Ils ne s’excluent pas : les politiques réelles les combinent.
+            cours: `Le programme retient **trois familles d’instruments**. Elles ne s’excluent pas : les politiques réelles les combinent.
+
+## Les trois instruments d’un coup d’œil
+| Instrument | Ce qu’il fixe | Ce qu’il laisse s’ajuster |
+| La **réglementation** | Le **comportement** autorisé | Rien |
+| La **taxation** | Le **prix** de l’émission | La quantité émise |
+| Le **marché de quotas** | La **quantité** totale | Le prix du quota |
 
 ## La réglementation
-Interdictions, normes, quotas, seuils : interdiction des ampoules à incandescence, normes d’émission des véhicules, obligations d’isolation, zones à faibles émissions.
+Interdictions, normes, quotas, seuils : ampoules à incandescence, émissions des véhicules, isolation, zones à faibles émissions.
 
-- **avantage** : effet direct, prévisible, immédiatement lisible, et le seul instrument possible quand le risque est grave et irréversible (amiante, CFC) ;
-- **limite** : rigidité et **coût inefficace** — la norme impose le même effort à tous, y compris à ceux pour qui il coûte très cher, alors qu’un autre acteur aurait pu réduire davantage à moindre coût. Elle n’incite pas non plus à faire **mieux** que la norme.
+| Avantage | Limite |
+| Effet **direct**, prévisible, lisible | **Rigide** : le même effort imposé à tous, y compris à ceux pour qui il coûte très cher |
+| Le seul instrument possible quand le risque est **grave et irréversible** — amiante, CFC | Elle n’incite pas à faire **mieux** que la norme |
 
 Le **protocole de Montréal** (1987), qui a interdit les CFC et permis la reconstitution de la couche d’ozone, reste l’exemple d’une réglementation internationale réussie.
 
 ## La taxation
-Faire payer l’émission pour internaliser l’**externalité négative** : c’est la **taxe pigouvienne**, qui doit en principe égaler le dommage marginal causé.
+Faire payer l’émission pour internaliser l’**externalité négative** : la **taxe pigouvienne**, qui doit égaler le dommage marginal causé.
 
-- **avantage** : elle laisse chacun libre de son moyen d’adaptation, elle incite à réduire **au-delà** du minimum, elle rapporte des recettes qui peuvent être redistribuées (« dividende carbone ») ;
-- **limite** : son effet dépend de l’**élasticité-prix** de la demande — si aucune alternative n’existe, la taxe pèse sans réduire les émissions ; elle est **régressive** sans compensation ; et le prix qui déclenche le changement est difficile à fixer.
+| Avantage | Limite |
+| Chacun reste libre de son moyen d’adaptation | Son effet dépend de l’**élasticité-prix** : sans alternative, elle pèse **sans** réduire les émissions |
+| Elle incite à réduire **au-delà** du minimum | Elle est **régressive** sans compensation |
+| Elle rapporte des recettes redistribuables — le « dividende carbone » | Le prix déclencheur est difficile à fixer |
 
-## Le marché de quotas d’émission
-L’autorité fixe un **plafond global** d’émissions, distribue ou vend des quotas, et laisse les acteurs les **échanger**. C’est le **marché carbone européen** (SEQE-UE), en place depuis 2005.
+## Le marché de quotas
+L’autorité fixe un **plafond global**, distribue ou vend des quotas, et laisse les acteurs les **échanger**. C’est le **SEQE-UE**, en place depuis **2005**.
 
-- **avantage** : la quantité totale est **garantie** par le plafond, et l’échange fait porter la réduction par ceux qui la réalisent au moindre coût ;
-- **limite** : le prix est **volatil** ; un plafond fixé trop haut ou des quotas distribués gratuitement effondrent le prix — ce fut le cas en Europe jusqu’à la réforme de la réserve de stabilité.
-
-## Taxe ou marché ?
-La différence tient à ce que l’on choisit de fixer : la **taxe fixe le prix** et laisse la quantité s’ajuster ; le **marché fixe la quantité** et laisse le prix s’ajuster. En situation d’incertitude, ce choix n’est pas neutre.
+| Avantage | Limite |
+| La quantité totale est **garantie** par le plafond | Le prix est **volatil** |
+| L’échange fait porter la réduction par ceux qui la réalisent **au moindre coût** | Un plafond trop haut ou des quotas gratuits **effondrent** le prix — ce fut le cas en Europe avant la réserve de stabilité |
 
 ## Ce qui les complète
-La **subvention** à l’innovation verte et aux alternatives (rénovation, transport public), l’**information** (étiquette énergie, affichage carbone) et la **commande publique**. Aucun instrument ne suffit seul : la taxe n’a d’effet que si une alternative existe, ce qui suppose des investissements publics.
+La **subvention** à l’innovation verte et aux alternatives (rénovation, transport public), l’**information** (étiquette énergie, affichage carbone) et la **commande publique**.
+
+> Aucun instrument ne suffit seul : la taxe n’a d’effet que si une **alternative existe**, ce qui suppose des investissements publics.
 
 > La question d’examen porte presque toujours sur la comparaison **efficacité / équité / acceptabilité**. Traiter les trois, avec un exemple daté par instrument, suffit à faire une bonne copie.`,
           },

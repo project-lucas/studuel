@@ -138,25 +138,41 @@ DELETE FROM public.chapters c
           axe: 'La coordination par le marché',
           lecon: {
             titre: 'Une institution, pas un lieu',
-            cours: `Un **marché** est le lieu — réel ou non — de rencontre entre une **offre** et une **demande**, d’où sortent un **prix** et une **quantité échangée**. La Bourse, un site de petites annonces et le marché du travail sont des marchés au même titre que la place du village.
+            cours: `Un **marché** est le lieu — **réel ou non** — de rencontre entre une **offre** et une **demande**, d’où sortent un **prix** et une **quantité échangée**.
+
+> La Bourse, un site de petites annonces et le **marché du travail** sont des marchés **au même titre que la place du village**.
 
 ## Le marché est une institution
-Un échange marchand suppose des règles, et ces règles ne tombent pas du ciel :
-- des **droits de propriété** clairement définis et protégés — on ne vend que ce qu’on possède ;
-- une **monnaie** acceptée par tous, qui évite le troc et sa double coïncidence des désirs ;
-- des **contrats** dont l’exécution est garantie par la justice ;
-- de l’**information** sur les produits (étiquetage, normes, garanties).
+Un échange marchand suppose des **règles** — et **ces règles ne tombent pas du ciel**.
 
-> Sans État de droit, pas de marché : c’est l’institution qui rend l’échange possible, pas l’inverse.
+| Règle nécessaire | Ce qu’elle permet |
+| Des **droits de propriété** définis et protégés | **On ne vend que ce qu’on possède** |
+| Une **monnaie** acceptée par tous | Elle évite le **troc** et sa **double coïncidence des désirs** |
+| Des **contrats** exécutoires | Garantis par la **justice** |
+| De l’**information** | Étiquetage, normes, garanties |
 
-## Ce que le marché coordonne
-Des millions de décisions individuelles sans qu’aucun bureau central ne les organise. Le **prix** joue le rôle de signal : il informe (une hausse dit que le produit devient rare), il incite (elle pousse les producteurs à en offrir davantage) et il rationne (elle écarte les acheteurs qui n’en veulent pas à ce prix).
+> **Sans État de droit, pas de marché** : c’est l’**institution qui rend l’échange possible**, pas l’inverse.
 
-## Coûts de transaction
-Échanger n’est jamais gratuit : il faut chercher l’information, négocier, rédiger et faire respecter le contrat. Ce sont les **coûts de transaction**. Les plateformes numériques, les places de marché et les intermédiaires vivent précisément de leur réduction.
+## Ce que le prix fait
+Il coordonne **des millions de décisions individuelles** sans qu’aucun bureau central ne les organise.
+
+| Rôle du prix | Ce qu’il fait |
+| Il **informe** | Une hausse dit que le produit **devient rare** |
+| Il **incite** | Elle pousse les producteurs à **en offrir davantage** |
+| Il **rationne** | Elle **écarte** les acheteurs qui n’en veulent pas à ce prix |
+
+## Les coûts de transaction
+Échanger n’est **jamais gratuit** : chercher l’information, **négocier**, rédiger le contrat, le faire respecter.
+
+> Les **plateformes numériques**, les places de marché et les intermédiaires **vivent précisément de leur réduction**.
 
 ## Marché et autres modes de coordination
-Le marché n’est pas le seul : la **hiérarchie** (l’entreprise, l’administration) coordonne par l’ordre, la **réciprocité** (le don, l’entraide) par l’obligation sociale. Une économie réelle mêle les trois.`,
+| Mode | Son ressort |
+| Le **marché** | Le **prix** |
+| La **hiérarchie** — entreprise, administration | L’**ordre** |
+| La **réciprocité** — don, entraide | L’**obligation sociale** |
+
+> Une économie réelle **mêle les trois**.`,
           },
           questions: [
             ['Qu’est-ce qui sort de la rencontre entre l’offre et la demande sur un marché ?', ['Un prix et une quantité échangée', 'Un salaire et un profit', 'Un impôt et une subvention', 'Un contrat de travail'], 0, 'Le prix et la quantité d’équilibre sont les deux résultats de la confrontation.'],
@@ -174,29 +190,42 @@ Le marché n’est pas le seul : la **hiérarchie** (l’entreprise, l’adminis
           axe: 'La coordination par le marché',
           lecon: {
             titre: 'Offre, demande et prix d’équilibre',
-            cours: `La **concurrence parfaite** est un modèle : cinq conditions y sont réunies — atomicité (une multitude d’offreurs et de demandeurs), homogénéité du produit, libre entrée et sortie, information parfaite, libre circulation des facteurs de production.
+            cours: `La **concurrence parfaite** est un **modèle** : **cinq conditions** y sont réunies.
+
+| Condition | Ce qu’elle exige |
+| **Atomicité** | Une **multitude** d’offreurs et de demandeurs |
+| **Homogénéité** | Le produit est **identique** partout |
+| **Libre entrée et sortie** | Aucune barrière |
+| **Information parfaite** | Tous savent tout |
+| **Libre circulation** des facteurs | Capital et travail se déplacent |
 
 ## Les deux courbes
-- La **demande** est décroissante : plus le prix monte, moins les consommateurs achètent.
-- L’**offre** est croissante : plus le prix monte, plus les producteurs trouvent rentable de vendre.
+| Courbe | Son sens | Pourquoi |
+| La **demande** | **Décroissante** | Plus le prix monte, **moins on achète** |
+| L’**offre** | **Croissante** | Plus le prix monte, **plus il est rentable de vendre** |
 
-Leur intersection donne le **prix d’équilibre**, celui pour lequel la quantité offerte égale la quantité demandée.
+> Leur **intersection** donne le **prix d’équilibre** : celui pour lequel **la quantité offerte égale la quantité demandée**.
 
 ## Le retour à l’équilibre
-Si le prix est trop élevé, l’offre dépasse la demande : la mévente pousse les vendeurs à baisser le prix. S’il est trop bas, la pénurie fait monter les enchères. Le marché s’ajuste **par les prix**.
+| Si le prix est… | Ce qui se passe |
+| **Trop élevé** | L’offre dépasse la demande : la **mévente** fait **baisser** le prix |
+| **Trop bas** | La **pénurie** fait **monter** les enchères |
 
-## Le preneur de prix
-En concurrence parfaite, aucun agent n’a de pouvoir de marché : chacun est **price taker**. Un producteur qui vendrait plus cher que le prix du marché ne vendrait rien, puisque le produit est identique partout et que l’information est parfaite.
+> Le marché s’ajuste **par les prix**. Et **aucun agent n’a de pouvoir** : chacun est *price taker*.
 
-## Déplacements le long de la courbe, déplacements de la courbe
-Distinction décisive en devoir :
-- une variation du **prix du bien** fait se déplacer **le long** de la courbe ;
-- une variation d’**autre chose** (revenu, prix d’un bien substituable, goûts, coût de production, technologie) **déplace la courbe entière**.
+## Le piège du devoir
+| La variation porte sur… | Ce qui se passe |
+| Le **prix du bien** | On se **déplace le long** de la courbe |
+| **Autre chose** — revenu, prix d’un substitut, goûts, coût, technologie | On **déplace la courbe entière** |
 
-> Une hausse du revenu des ménages ne remonte pas la courbe de demande le long de son tracé : elle la décale vers la droite, et le nouveau prix d’équilibre est plus élevé.
+> Une hausse du revenu des ménages **ne remonte pas la courbe de demande le long de son tracé** : elle la **décale vers la droite** — et le **nouveau prix d’équilibre est plus élevé**.
 
 ## Le surplus
-Le **surplus du consommateur** est l’écart entre ce qu’il était prêt à payer et ce qu’il paie ; le **surplus du producteur**, entre le prix reçu et le prix qu’il aurait accepté. Leur somme mesure le gain à l’échange.`,
+| Surplus | Ce qu’il mesure |
+| Du **consommateur** | L’écart entre **ce qu’il était prêt à payer** et **ce qu’il paie** |
+| Du **producteur** | Entre le **prix reçu** et **le prix qu’il aurait accepté** |
+
+> Leur **somme** mesure le **gain à l’échange**.`,
           },
           questions: [
             ['Combien de conditions définissent la concurrence parfaite ?', ['Cinq', 'Deux', 'Trois', 'Sept'], 0, 'Atomicité, homogénéité, libre entrée et sortie, transparence, mobilité des facteurs.'],
@@ -214,21 +243,44 @@ Le **surplus du consommateur** est l’écart entre ce qu’il était prêt à p
           axe: 'La coordination par le marché',
           lecon: {
             titre: 'Monopole, oligopole et concurrence monopolistique',
-            cours: `Dans la réalité, une des cinq conditions manque presque toujours. Le producteur cesse d’être preneur de prix : il devient **faiseur de prix** (*price maker*).
+            cours: `Dans la réalité, **une des cinq conditions manque presque toujours**. Le producteur cesse d’être **preneur de prix** : il devient **faiseur de prix** (*price maker*).
+
+## Les trois structures
+| Structure | Le nombre d’offreurs | Le produit |
+| **Monopole** | **Un seul** | — |
+| **Oligopole** | **Quelques-uns** | Souvent homogène |
+| **Concurrence monopolistique** | **Beaucoup** | **Différencié** |
 
 ## Le monopole
-Un seul offreur face à une multitude de demandeurs. Il fixe son prix au-dessus du coût marginal et vend une quantité inférieure à celle de la concurrence : le prix est plus élevé, la quantité plus faible, et une partie du surplus du consommateur lui est transférée. Ses sources : un brevet, le contrôle d’une ressource, une **économie d’échelle** telle qu’un seul producteur est plus efficace (monopole **naturel** : les rails, les réseaux d’eau).
+| Ce qu’il fait | Le résultat |
+| Il fixe son prix **au-dessus du coût marginal** | **Prix plus élevé**, **quantité plus faible** |
+| Il capte une part du surplus | Une partie du **surplus du consommateur lui est transférée** |
+
+| Sa source | L’exemple |
+| Un **brevet** | Le médicament protégé |
+| Le contrôle d’une **ressource** | Une mine unique |
+| Une **économie d’échelle** telle qu’un seul producteur est plus efficace | Le monopole **naturel** : les **rails**, les **réseaux d’eau** |
 
 ## L’oligopole
-Quelques offreurs seulement. Chacun tient compte de ce que feront les autres : c’est l’**interdépendance stratégique**. Deux issues opposées — la **guerre des prix**, qui bénéficie au consommateur, ou l’**entente** (cartel), interdite parce qu’elle reconstitue un monopole.
+Chacun **tient compte de ce que feront les autres** : c’est l’**interdépendance stratégique**.
+
+| Issue | Pour le consommateur |
+| La **guerre des prix** | **Bénéfique** |
+| L’**entente** (cartel) | **Interdite** — elle **reconstitue un monopole** |
 
 ## La concurrence monopolistique
-Beaucoup d’offreurs, mais des produits **différenciés** : chacun détient un petit monopole sur sa variété. La différenciation peut être objective (qualité, caractéristiques) ou subjective (marque, image, publicité). C’est le cas le plus répandu — restauration, vêtements, téléphonie.
+Chacun détient un **petit monopole sur sa variété**.
+
+| Différenciation | Son moyen |
+| **Objective** | Qualité, caractéristiques |
+| **Subjective** | **Marque**, image, **publicité** |
+
+> C’est **le cas le plus répandu** : restauration, vêtements, téléphonie.
 
 ## Le pouvoir de marché
-C’est la capacité à fixer un prix supérieur au coût marginal. Il s’acquiert par l’innovation, la publicité, la fidélisation, la taille — ou par des **barrières à l’entrée** qui découragent les nouveaux venus.
+La capacité à fixer un prix **supérieur au coût marginal** : par l’**innovation**, la publicité, la fidélisation, la **taille** — ou par des **barrières à l’entrée**.
 
-> La politique de la concurrence surveille trois choses : les ententes, les abus de position dominante et les concentrations. Elle ne combat pas la taille en soi, mais l’usage qui en est fait.`,
+> La **politique de la concurrence** surveille **trois choses** : les **ententes**, les **abus de position dominante**, les **concentrations**. Elle ne combat **pas la taille en soi**, mais **l’usage qui en est fait**.`,
           },
           questions: [
             ['Qu’est-ce qu’un « faiseur de prix » ?', ['Un producteur qui dispose d’un pouvoir de marché et fixe son prix', 'Un consommateur qui négocie', 'Un producteur qui subit le prix du marché', 'L’État quand il fixe un prix administré'], 0, 'C’est l’inverse du price taker de la concurrence parfaite.'],
@@ -246,24 +298,36 @@ C’est la capacité à fixer un prix supérieur au coût marginal. Il s’acqui
           axe: 'La coordination par le marché',
           lecon: {
             titre: 'Externalités, biens collectifs et asymétries d’information',
-            cours: `Une **défaillance de marché** est une situation où la coordination marchande, laissée à elle-même, n’aboutit pas à une allocation efficace des ressources. Trois cas au programme.
+            cours: `Une **défaillance de marché** est une situation où la coordination marchande, **laissée à elle-même**, **n’aboutit pas** à une allocation efficace. **Trois cas** au programme.
 
 ## Les externalités
-Une **externalité** existe quand l’action d’un agent affecte le bien-être d’un autre sans compensation monétaire.
-- **Négative** : la pollution d’une usine, dont le coût est supporté par les riverains et non par le producteur. Le prix de marché est trop bas, la quantité produite trop élevée.
-- **Positive** : la vaccination, la recherche, l’apiculture voisine d’un verger. Le marché en produit trop peu.
+Une **externalité** existe quand l’action d’un agent **affecte le bien-être d’un autre sans compensation monétaire**.
 
-Les remèdes : la **taxe** (principe pollueur-payeur), la **subvention**, la **réglementation**, ou la création d’un marché de droits à polluer (quotas échangeables).
+| Type | L’exemple | Ce que le marché fait |
+| **Négative** | La **pollution** d’une usine, dont le coût est supporté par les riverains | Prix **trop bas**, quantité **trop élevée** |
+| **Positive** | La **vaccination**, la recherche, l’apiculture voisine d’un verger | Le marché en produit **trop peu** |
+
+| Remède | Son principe |
+| La **taxe** | Le **pollueur-payeur** |
+| La **subvention** | Encourager l’externalité positive |
+| La **réglementation** | Interdire ou imposer |
+| Un **marché de droits à polluer** | Des **quotas échangeables** |
 
 ## Les biens collectifs
-Ils sont **non rivaux** (ma consommation n’empêche pas la vôtre) et **non excluables** (on ne peut empêcher personne d’en profiter) : l’éclairage public, la défense nationale, un phare. Comme personne ne peut être exclu, chacun a intérêt à attendre que les autres paient — c’est le **passager clandestin**. Le marché ne les produit pas : la puissance publique s’en charge, financée par l’impôt.
+| Propriété | Ce qu’elle signifie |
+| **Non rival** | **Ma consommation n’empêche pas la vôtre** |
+| **Non excluable** | **On ne peut empêcher personne d’en profiter** |
+
+Exemples : l’**éclairage public**, la **défense nationale**, un **phare**.
+
+> Comme personne ne peut être exclu, **chacun a intérêt à attendre que les autres paient** : c’est le **passager clandestin**. **Le marché ne les produit pas** — la puissance publique s’en charge, **financée par l’impôt**.
 
 ## Les asymétries d’information
-Une partie en sait plus que l’autre.
-- **Avant** le contrat : la **sélection adverse**. Akerlof l’a montrée sur le marché des voitures d’occasion — l’acheteur ne distinguant pas les bonnes des mauvaises, il n’offre qu’un prix moyen, les bons vendeurs se retirent, et il ne reste que les *lemons*.
-- **Après** le contrat : l’**aléa moral**. Un assuré tous risques devient moins prudent.
+| Quand | Le mécanisme | L’exemple |
+| **Avant** le contrat | La **sélection adverse** | **Akerlof** : sur le marché des voitures d’occasion, l’acheteur ne distinguant pas les bonnes des mauvaises **n’offre qu’un prix moyen** — les bons vendeurs **se retirent**, il ne reste que les *lemons* |
+| **Après** le contrat | L’**aléa moral** | Un **assuré tous risques devient moins prudent** |
 
-> Les remèdes tournent tous autour du même principe : réduire l’écart d’information — garanties, labels, certifications, contrôle technique, franchise d’assurance.`,
+> Les remèdes tournent tous autour du **même principe** : **réduire l’écart d’information** — garanties, labels, certifications, contrôle technique, **franchise** d’assurance.`,
           },
           questions: [
             ['Qu’est-ce qu’une externalité négative ?', ['Un effet dommageable subi par un tiers sans compensation', 'Une perte subie par le producteur', 'Une taxe sur la production', 'Un défaut de qualité du produit'], 0, 'La pollution en est l’exemple type : son coût n’entre pas dans le prix.'],
@@ -283,24 +347,40 @@ Une partie en sait plus que l’autre.
           axe: 'La monnaie et le financement',
           lecon: {
             titre: 'Besoin de financement, capacité de financement',
-            cours: `Chaque année, un agent économique compare son **épargne** à son **investissement**. S’il épargne plus qu’il n’investit, il dégage une **capacité de financement** ; sinon, il a un **besoin de financement**.
+            cours: `Chaque année, un agent compare son **épargne** à son **investissement**.
+
+| Situation | Ce qu’elle signifie |
+| Épargne **supérieure** à l’investissement | Une **capacité de financement** |
+| Épargne **inférieure** | Un **besoin de financement** |
 
 ## Qui est dans quelle situation
-- Les **ménages** dégagent, dans l’ensemble, une capacité de financement : ils épargnent plus qu’ils n’achètent de logements.
-- Les **entreprises** ont le plus souvent un besoin de financement : leurs investissements dépassent leurs profits non distribués.
-- Les **administrations publiques** ont un besoin de financement dès que le budget est en déficit.
+| Agent | Sa position habituelle |
+| Les **ménages** | **Capacité** : ils épargnent plus qu’ils n’achètent de logements |
+| Les **entreprises** | **Besoin** : leurs investissements dépassent leurs profits non distribués |
+| Les **administrations publiques** | **Besoin** dès que le budget est **en déficit** |
 
-Le système financier a une fonction simple à énoncer : **transférer** les fonds des premiers vers les seconds.
+> La fonction du système financier tient en un mot : **transférer** les fonds des premiers vers les seconds.
 
-## Se financer sur ses propres ressources
-L’**autofinancement** utilise l’épargne déjà constituée — pour une entreprise, les bénéfices mis en réserve. Il ne coûte pas d’intérêts et ne dilue pas le pouvoir, mais il est limité par la taille des profits passés.
+## L’autofinancement
+Il utilise l’**épargne déjà constituée** — pour une entreprise, les **bénéfices mis en réserve**.
 
-## Se financer auprès des autres
-Le **financement externe** prend deux formes.
-- **Direct** (ou de marché) : l’agent émet un titre acheté par l’épargnant, sans intermédiaire décisionnaire. Une **action** est un titre de propriété, qui donne droit à un dividende et à un vote ; une **obligation** est un titre de créance, qui donne droit à un intérêt et au remboursement.
-- **Indirect** (ou intermédié) : une **banque** prête, après avoir collecté des dépôts ou créé de la monnaie. C’est le financement de l’immense majorité des PME et des ménages.
+| Son avantage | Sa limite |
+| **Pas d’intérêts**, **pas de dilution du pouvoir** | Il est **limité par la taille des profits passés** |
 
-> Une action ne se rembourse pas : elle se revend. Une obligation, si — à l’échéance. C’est la distinction que l’on attend en devoir.`,
+## Le financement externe
+| Forme | Comment ça marche |
+| **Direct** (de marché) | L’agent **émet un titre** acheté par l’épargnant, **sans intermédiaire décisionnaire** |
+| **Indirect** (intermédié) | Une **banque** prête, après avoir collecté des dépôts **ou créé de la monnaie** |
+
+> L’indirect finance **l’immense majorité des PME et des ménages**.
+
+## Action ou obligation
+| | **Action** | **Obligation** |
+| Sa nature | Un titre de **propriété** | Un titre de **créance** |
+| Ce qu’elle donne | Un **dividende** et un **droit de vote** | Un **intérêt** et le **remboursement** |
+| Son remboursement | **Elle ne se rembourse pas : elle se revend** | **À l’échéance** |
+
+> C’est la **distinction attendue en devoir**.`,
           },
           questions: [
             ['Quand un agent a-t-il un besoin de financement ?', ['Quand son investissement dépasse son épargne', 'Quand son épargne dépasse son investissement', 'Quand son revenu baisse', 'Quand il rembourse un emprunt'], 0, 'Il doit alors trouver des fonds auprès des agents à capacité de financement.'],
@@ -318,24 +398,37 @@ Le **financement externe** prend deux formes.
           axe: 'La monnaie et le financement',
           lecon: {
             titre: 'Le prix du temps et du risque',
-            cours: `Le **taux d’intérêt** est le prix du temps : ce que l’emprunteur paie pour disposer aujourd’hui d’une somme qu’il rendra demain, et ce que le prêteur exige pour renoncer à cette somme.
+            cours: `Le **taux d’intérêt** est le **prix du temps** : ce que l’emprunteur paie pour disposer **aujourd’hui** d’une somme qu’il rendra **demain** — et ce que le prêteur exige **pour y renoncer**.
 
 ## Ce qui fait varier le taux
-- La **durée** : plus le prêt est long, plus l’incertitude est grande, plus le taux est élevé.
-- Le **risque de crédit** : la probabilité que l’emprunteur ne rembourse pas. Une entreprise fragile emprunte plus cher qu’un État solide — c’est la **prime de risque**.
-- Le **taux directeur** de la banque centrale, qui fixe le coût de refinancement des banques et se répercute sur tous les taux.
+| Facteur | Son effet |
+| La **durée** | Plus le prêt est long, **plus l’incertitude est grande**, plus le taux est élevé |
+| Le **risque de crédit** | La **prime de risque** : une entreprise fragile emprunte **plus cher** qu’un État solide |
+| Le **taux directeur** de la banque centrale | Il fixe le coût de refinancement des banques et **se répercute sur tous les taux** |
 
 ## Taux nominal, taux réel
-Le **taux réel** est approximativement le taux nominal moins le taux d’inflation. Une inflation forte réduit le coût réel d’un emprunt à taux fixe : elle avantage l’emprunteur et pénalise le prêteur.
+**Taux réel ≈ taux nominal − taux d’inflation**
 
-> Emprunter à 3 % quand les prix montent de 5 % revient à emprunter à un taux réel négatif.
+| Une inflation forte | Qui elle avantage |
+| Elle **réduit le coût réel** d’un emprunt à taux fixe | L’**emprunteur** — au détriment du **prêteur** |
 
-## Les marchés de capitaux
-- Le **marché primaire** est celui de l’émission : c’est là que l’entreprise ou l’État lève effectivement des fonds.
-- Le **marché secondaire** est celui de la revente entre investisseurs. Il n’apporte pas d’argent neuf à l’émetteur, mais il rend les titres **liquides** — sans cette possibilité de revendre, personne n’achèterait sur le primaire.
+> Emprunter à **3 %** quand les prix montent de **5 %**, c’est emprunter à un **taux réel négatif**.
+
+## Les deux marchés de capitaux
+| | **Marché primaire** | **Marché secondaire** |
+| Ce qui s’y passe | L’**émission** | La **revente entre investisseurs** |
+| L’émetteur | Il **lève effectivement des fonds** | Il **ne reçoit rien** |
+| Sa fonction | Le financement | Il rend les titres **liquides** |
+
+> **Sans la possibilité de revendre, personne n’achèterait sur le primaire.** C’est le lien à savoir énoncer.
 
 ## Le rôle des banques
-Elles font trois métiers à la fois : elles **collectent** l’épargne, elles **transforment** des dépôts courts en prêts longs, et elles **évaluent** le risque de chaque emprunteur — un travail que le marché, seul, fait mal pour une PME.`,
+| Métier | Ce qu’il fait |
+| **Collecter** | L’épargne |
+| **Transformer** | Des **dépôts courts** en **prêts longs** |
+| **Évaluer** | Le **risque de chaque emprunteur** |
+
+> Ce dernier travail, **le marché seul le fait mal** pour une **PME**.`,
           },
           questions: [
             ['Que rémunère le taux d’intérêt ?', ['Le renoncement à une somme d’argent pendant une durée', 'Le travail du banquier', 'La qualité du bien financé', 'Le montant de l’impôt payé'], 0, 'C’est le prix du temps, majoré d’une prime de risque.'],
@@ -353,25 +446,35 @@ Elles font trois métiers à la fois : elles **collectent** l’épargne, elles 
           axe: 'La monnaie et le financement',
           lecon: {
             titre: 'Les formes de la monnaie',
-            cours: `La monnaie est ce qui est **accepté par tous en règlement d’une dette**. Sa valeur ne tient pas à sa matière mais à la **confiance** qu’elle inspire.
+            cours: `La monnaie est ce qui est **accepté par tous en règlement d’une dette**.
 
-## Trois formes, dont deux survivantes
-- La **monnaie marchandise** : le sel, le bétail, les métaux précieux. Elle vaut par ce qu’elle est.
-- La **monnaie fiduciaire** : les billets et les pièces. Le mot vient de *fiducia*, la confiance : le papier ne vaut rien en lui-même. Elle ne représente plus aujourd’hui qu’une petite part de la masse monétaire.
-- La **monnaie scripturale** : de simples écritures sur les comptes bancaires. Elle représente l’essentiel de la monnaie en circulation.
+> Sa valeur **ne tient pas à sa matière** mais à la **confiance** qu’elle inspire.
 
-## Attention à la confusion la plus fréquente
-La carte bancaire, le chèque et le virement **ne sont pas de la monnaie** : ce sont des **instruments de circulation** de la monnaie scripturale. La monnaie, c’est le solde du compte ; la carte n’est qu’un moyen d’y toucher.
+## Trois formes
+| Forme | Ce qu’elle est | Sa place aujourd’hui |
+| **Marchandise** | Sel, bétail, métaux précieux : elle **vaut par ce qu’elle est** | Disparue |
+| **Fiduciaire** | Billets et pièces — de *fiducia*, la **confiance** : **le papier ne vaut rien en lui-même** | Une **petite part** de la masse monétaire |
+| **Scripturale** | De simples **écritures sur les comptes bancaires** | L’**essentiel** de la monnaie en circulation |
 
-## La confiance, en trois piliers
-- **Méthodique** : la monnaie fonctionne parce qu’elle fonctionne — chacun l’accepte parce qu’il sait que les autres l’accepteront.
-- **Hiérarchique** : une autorité (la banque centrale, l’État) en garantit le cours légal.
-- **Éthique** : les valeurs collectives attachées à la stabilité des prix.
+## La confusion la plus fréquente
+> La **carte bancaire**, le **chèque** et le **virement** ne sont **pas de la monnaie** : ce sont des **instruments de circulation** de la monnaie scripturale.
 
-> Quand la confiance s’effondre, la monnaie aussi : lors de l’hyperinflation allemande de 1923, les billets valaient moins que le bois qu’ils servaient à remplacer dans les poêles.
+**La monnaie, c’est le solde du compte** — la carte n’est **qu’un moyen d’y toucher**.
+
+## Les trois piliers de la confiance
+| Pilier | Ce qu’il repose sur |
+| **Méthodique** | **Chacun l’accepte parce qu’il sait que les autres l’accepteront** |
+| **Hiérarchique** | Une **autorité** — banque centrale, État — en **garantit le cours légal** |
+| **Éthique** | Les **valeurs collectives** attachées à la **stabilité des prix** |
+
+> Quand la confiance s’effondre, la monnaie aussi : lors de l’**hyperinflation allemande de 1923**, **les billets valaient moins que le bois qu’ils servaient à remplacer dans les poêles**.
 
 ## Et les cryptomonnaies ?
-Elles remplissent mal les fonctions de la monnaie : trop volatiles pour servir de réserve de valeur, trop peu acceptées pour servir d’intermédiaire des échanges. Elles relèvent davantage de l’actif spéculatif.`,
+| Fonction | Ce qu’elles font |
+| **Réserve de valeur** | **Trop volatiles** |
+| **Intermédiaire des échanges** | **Trop peu acceptées** |
+
+> Elles relèvent **davantage de l’actif spéculatif** que de la monnaie.`,
           },
           questions: [
             ['Quelle forme de monnaie représente aujourd’hui l’essentiel de la masse monétaire ?', ['La monnaie scripturale', 'La monnaie fiduciaire', 'La monnaie marchandise', 'Les cryptomonnaies'], 0, 'Ce sont les soldes des comptes bancaires, de simples écritures.'],
@@ -389,24 +492,38 @@ Elles remplissent mal les fonctions de la monnaie : trop volatiles pour servir d
           axe: 'La monnaie et le financement',
           lecon: {
             titre: 'Compter, échanger, conserver',
-            cours: `Une monnaie se reconnaît moins à ce qu’elle est qu’à ce qu’elle **fait**. Trois fonctions, énoncées depuis Aristote.
+            cours: `Une monnaie se reconnaît **moins à ce qu’elle est qu’à ce qu’elle fait**. **Trois fonctions**, énoncées depuis **Aristote**.
 
 ## Unité de compte
-La monnaie donne une **mesure commune** de la valeur. Sans elle, il faudrait connaître le prix de chaque bien dans chaque autre bien : pour 100 biens, 4 950 prix relatifs. Avec une unité de compte, 100 prix suffisent. C’est un gain d’information colossal.
+Elle donne une **mesure commune** de la valeur.
+
+| Sans unité de compte | Avec |
+| Il faudrait le prix de chaque bien **dans chaque autre bien** : pour 100 biens, **4 950 prix relatifs** | **100 prix suffisent** |
+
+> C’est un **gain d’information colossal**.
 
 ## Intermédiaire des échanges
-Elle brise le troc et sa **double coïncidence des désirs** : il ne suffisait pas de trouver quelqu’un qui a ce que je veux, il fallait aussi qu’il veuille ce que j’ai. La monnaie coupe l’échange en deux — je vends, puis j’achète, à qui je veux et quand je veux.
+Elle brise le **troc** et sa **double coïncidence des désirs**.
+
+> Il ne suffisait pas de trouver quelqu’un **qui a ce que je veux** : il fallait aussi **qu’il veuille ce que j’ai**.
+
+> La monnaie **coupe l’échange en deux** : **je vends, puis j’achète** — à qui je veux, quand je veux.
 
 ## Réserve de valeur
-Elle permet de **différer** un achat : le pouvoir d’achat gagné aujourd’hui se conserve pour demain. C’est la fonction la plus fragile, car l’**inflation** l’érode. Une inflation de 5 % par an ampute d’environ un tiers le pouvoir d’achat d’une somme conservée sept ans.
+Elle permet de **différer** un achat : le pouvoir d’achat gagné aujourd’hui **se conserve pour demain**.
 
-> C’est parce que la monnaie est une réserve de valeur qu’on peut la thésauriser — Keynes en fait le motif de la préférence pour la liquidité.
+| Sa fragilité | Le chiffre |
+| L’**inflation** l’érode | **5 % par an** ampute d’environ **un tiers** le pouvoir d’achat d’une somme conservée **sept ans** |
+
+> C’est **parce que la monnaie est une réserve de valeur** qu’on peut la **thésauriser** — **Keynes** en fait le motif de la **préférence pour la liquidité**.
 
 ## Les agrégats monétaires
-La Banque centrale européenne classe la monnaie par liquidité décroissante :
-- **M1** : pièces, billets et dépôts à vue — immédiatement disponibles ;
-- **M2** : M1 plus les dépôts à court terme (livrets) ;
-- **M3** : M2 plus les titres d’organismes de placement à court terme.`,
+Classés par **liquidité décroissante** par la Banque centrale européenne.
+
+| Agrégat | Ce qu’il contient |
+| **M1** | Pièces, billets et **dépôts à vue** — **immédiatement disponibles** |
+| **M2** | M1 **plus** les dépôts à court terme (livrets) |
+| **M3** | M2 **plus** les titres d’organismes de placement à court terme |`,
           },
           questions: [
             ['Quelles sont les trois fonctions de la monnaie ?', ['Unité de compte, intermédiaire des échanges, réserve de valeur', 'Épargne, investissement, consommation', 'Émission, circulation, destruction', 'Prêt, dépôt, placement'], 0, 'Elles sont identifiées depuis Aristote et restent au programme.'],
@@ -424,30 +541,39 @@ La Banque centrale européenne classe la monnaie par liquidité décroissante :
           axe: 'La monnaie et le financement',
           lecon: {
             titre: 'Les crédits font les dépôts',
-            cours: `La monnaie n’est pas prélevée sur un stock existant : elle est **créée** par un jeu d’écritures, chaque fois qu’une banque commerciale accorde un crédit.
+            cours: `La monnaie **n’est pas prélevée sur un stock existant** : elle est **créée** par un **jeu d’écritures**, chaque fois qu’une banque commerciale accorde un crédit.
 
 ## Le mécanisme
-Quand la banque prête 10 000 euros, elle inscrit une créance à son actif et crédite le compte du client à son passif. Cette somme n’existait nulle part une seconde plus tôt. **Les crédits font les dépôts**, et non l’inverse. Symétriquement, tout remboursement **détruit** de la monnaie.
+| Ce que fait la banque | Où |
+| Elle inscrit une **créance** | À son **actif** |
+| Elle **crédite le compte** du client | À son **passif** |
 
-## Les trois sources de création
-- Le **crédit à l’économie**, de loin la principale ;
-- l’achat de **devises** contre euros ;
-- le financement du **Trésor public**.
+> Cette somme **n’existait nulle part une seconde plus tôt**. **Les crédits font les dépôts**, et non l’inverse.
+
+> Symétriquement, **tout remboursement détruit de la monnaie**.
+
+## Les trois sources
+| Source | Sa part |
+| Le **crédit à l’économie** | **De loin la principale** |
+| L’achat de **devises** contre euros | Secondaire |
+| Le financement du **Trésor public** | Encadré |
 
 ## Les limites
-La banque ne crée pas sans borne :
-- les **fuites** : une partie des sommes prêtées quitte la banque (retraits en billets, virements vers une autre banque) et doit être couverte en **monnaie centrale** ;
-- les **réserves obligatoires** déposées à la banque centrale ;
-- les **ratios prudentiels** (Bâle III), qui imposent un montant de fonds propres proportionné aux risques ;
-- la **demande de crédit** elle-même : une banque ne prête pas si personne n’emprunte, ni si l’emprunteur ne semble pas solvable.
+| Limite | Ce qu’elle impose |
+| Les **fuites** | Une partie des sommes prêtées **quitte la banque** — retraits en billets, virements — et doit être couverte en **monnaie centrale** |
+| Les **réserves obligatoires** | Déposées à la banque centrale |
+| Les **ratios prudentiels** — Bâle III | Des **fonds propres proportionnés aux risques** |
+| La **demande de crédit** | Une banque **ne prête pas si personne n’emprunte** — ni si l’emprunteur **ne semble pas solvable** |
 
 ## La banque centrale
-Elle ne crée pas la monnaie que nous utilisons au quotidien : elle crée la **monnaie centrale**, celle qui circule entre les banques. Elle agit par :
-- le **taux directeur**, coût du refinancement des banques ;
-- les **réserves obligatoires** ;
-- l’**open market** et, depuis 2015, les achats massifs de titres.
+> Elle **ne crée pas la monnaie que nous utilisons au quotidien** : elle crée la **monnaie centrale**, **celle qui circule entre les banques**.
 
-> Son objectif principal, dans la zone euro, est la **stabilité des prix** — une inflation proche de 2 % à moyen terme.`,
+| Son instrument | Ce qu’il fait |
+| Le **taux directeur** | Le coût du **refinancement** des banques |
+| Les **réserves obligatoires** | Elles bornent la création |
+| L’**open market** et, depuis 2015, les **achats massifs de titres** | Ils pilotent les taux longs |
+
+> Son objectif principal, dans la zone euro : la **stabilité des prix** — une inflation **proche de 2 %** à moyen terme.`,
           },
           questions: [
             ['Qui crée l’essentiel de la monnaie en circulation ?', ['Les banques commerciales, en accordant des crédits', 'La banque centrale, en imprimant des billets', 'L’État, par l’impôt', 'Les entreprises, en émettant des actions'], 0, 'La monnaie scripturale naît de l’écriture qui accompagne le crédit.'],
@@ -467,28 +593,33 @@ Elle ne crée pas la monnaie que nous utilisons au quotidien : elle crée la **m
           axe: 'Comment la socialisation contribue-t-elle à expliquer les différences de comportement des individus ?',
           lecon: {
             titre: 'Devenir un être social',
-            cours: `La **socialisation** est le processus par lequel un individu apprend et intériorise les **normes**, les **valeurs** et les **rôles** de la société où il vit. On ne naît pas social : on le devient.
+            cours: `La **socialisation** est le processus par lequel un individu **apprend et intériorise** les **normes**, les **valeurs** et les **rôles** de sa société.
 
-## Normes, valeurs, rôles
-- Une **valeur** est un idéal partagé (l’égalité, la réussite, la solidarité).
-- Une **norme** est la règle concrète qui traduit une valeur (ne pas couper la parole, respecter la file d’attente).
-- Un **rôle** est le comportement attendu de celui qui occupe une position sociale (l’élève, le parent, le médecin).
+> **On ne naît pas social : on le devient.**
+
+## Trois notions à distinguer
+| Notion | Sa définition | L’exemple |
+| Une **valeur** | Un **idéal partagé** | L’égalité, la réussite, la solidarité |
+| Une **norme** | La **règle concrète** qui traduit une valeur | Ne pas couper la parole, respecter la file |
+| Un **rôle** | Le **comportement attendu** de celui qui occupe une position | L’élève, le parent, le médecin |
 
 ## Les instances de socialisation
-- La **famille** : la première, la plus durable, celle qui transmet le langage, les manières de table, le rapport au corps et à l’argent.
-- L’**école** : elle transmet des savoirs mais aussi des dispositions — la ponctualité, l’effort, le respect de la règle impersonnelle.
-- Les **pairs** : décisifs à l’adolescence, ils imposent leurs codes, parfois contre ceux de la famille.
-- Les **médias** et les réseaux sociaux, qui diffusent des modèles.
+| Instance | Ce qu’elle transmet |
+| La **famille** | La **première**, la plus **durable** : le langage, les manières de table, le rapport au corps et à l’argent |
+| L’**école** | Des savoirs — **et des dispositions** : ponctualité, effort, respect de la **règle impersonnelle** |
+| Les **pairs** | Décisifs à l’**adolescence** : ils imposent leurs codes, **parfois contre ceux de la famille** |
+| Les **médias** et réseaux sociaux | Des **modèles** |
 
 ## Comment on socialise
-- Par **inculcation** explicite : on énonce la règle, on récompense, on sanctionne.
-- Par **imitation** : l’enfant reproduit les conduites qu’il observe.
-- Par **interaction** : l’enfant n’est pas passif, il négocie, résiste, réinterprète.
+| Mode | Ce qu’il suppose |
+| L’**inculcation** explicite | On énonce la règle, on **récompense**, on **sanctionne** |
+| L’**imitation** | L’enfant **reproduit** ce qu’il observe |
+| L’**interaction** | L’enfant **n’est pas passif** : il **négocie, résiste, réinterprète** |
 
-> Bourdieu appelle **habitus** l’ensemble des dispositions durables ainsi incorporées : elles orientent les goûts, les gestes et les choix sans que l’individu ait à y penser.
+> **Bourdieu** appelle **habitus** l’ensemble des **dispositions durables** ainsi **incorporées** : elles orientent goûts, gestes et choix **sans que l’individu ait à y penser**.
 
 ## Une socialisation différenciée
-Elle ne produit pas des individus identiques : selon le **milieu social** et le **genre**, les mêmes instances transmettent des contenus différents.`,
+> Elle **ne produit pas des individus identiques** : selon le **milieu social** et le **genre**, **les mêmes instances transmettent des contenus différents**.`,
           },
           questions: [
             ['Qu’est-ce que la socialisation ?', ['L’apprentissage et l’intériorisation des normes et valeurs d’une société', 'Le fait de se faire des amis', 'L’inscription à une association', 'L’adaptation au marché du travail'], 0, 'C’est le processus qui fait de l’individu un être social.'],
@@ -506,26 +637,31 @@ Elle ne produit pas des individus identiques : selon le **milieu social** et le 
           axe: 'Comment la socialisation contribue-t-elle à expliquer les différences de comportement des individus ?',
           lecon: {
             titre: 'Ce que l’enfance dépose, ce que la vie adulte remanie',
-            cours: `La socialisation ne s’arrête pas à l’enfance, mais elle ne s’y poursuit pas non plus à l’identique.
+            cours: `La socialisation **ne s’arrête pas à l’enfance** — mais elle **ne s’y poursuit pas non plus à l’identique**.
 
-## La socialisation primaire
-Celle de l’enfance et de l’adolescence. Elle a trois traits :
-- elle est **globale** : elle porte sur tout, du langage aux émotions ;
-- elle est **affective** : elle passe par des liens d’attachement, ce qui la rend puissante ;
-- elle est **durable** : ce qu’elle dépose résiste, parce qu’il a été appris comme allant de soi.
+## Les deux socialisations
+| | **Primaire** | **Secondaire** |
+| Quand | Enfance et adolescence | Âge adulte |
+| Son étendue | **Globale** : du langage aux émotions | **Spécialisée** : un domaine |
+| Son ressort | **Affective** : elle passe par l’**attachement** | Plus **négociée** |
+| L’individu | Il **subit** davantage | Il est plus **actif** : **il choisit souvent le groupe qui va le socialiser** |
+| Sa force | **Durable** : appris comme **allant de soi** | Elle **se dépose dessus** |
 
-## La socialisation secondaire
-Celle de l’âge adulte, liée aux nouveaux univers que l’on rejoint : le travail, le couple, la parentalité, un parti, une équipe sportive, une communauté religieuse. Elle est plus **spécialisée** (elle porte sur un domaine), plus **négociée**, et l’individu y est plus **actif** — il choisit souvent le groupe qui va le socialiser.
+Les univers de la secondaire : le **travail**, le **couple**, la **parentalité**, un parti, une équipe, une communauté religieuse.
 
 ## Continuité ou rupture
-- Le plus souvent, la seconde **prolonge** la première : on épouse un conjoint du même milieu, on choisit un métier compatible avec ses dispositions.
-- Parfois elle la **contredit** : une trajectoire de mobilité sociale, une conversion, une entrée dans une institution totale imposent une **resocialisation** qui défait une partie de l’acquis.
-- Berger et Luckmann parlent alors d’**alternation** : la nouvelle socialisation doit d’abord démolir l’ancienne pour s’installer.
+| Cas | Ce qui se passe |
+| Le plus souvent | La seconde **prolonge** la première : on épouse dans son milieu, on choisit un métier compatible |
+| Parfois | Elle la **contredit** : mobilité sociale, **conversion**, **institution totale** — d’où une **resocialisation** |
+| Le terme | **Berger et Luckmann** parlent d’**alternation** : la nouvelle socialisation doit **d’abord démolir l’ancienne** |
 
 ## La socialisation anticipatrice
-Merton a montré qu’on peut intérioriser les normes d’un groupe **auquel on n’appartient pas encore**, dans l’espoir de le rejoindre : l’étudiant qui adopte les codes du métier qu’il vise. Elle facilite la mobilité — et laisse en porte-à-faux celui qui n’est finalement pas admis.
+**Merton** l’a montrée : on peut **intérioriser les normes d’un groupe auquel on n’appartient pas encore**, **dans l’espoir de le rejoindre**.
 
-> La socialisation secondaire ne remplace pas la primaire : elle se dépose dessus, et les conflits entre les deux sont le lot ordinaire des trajectoires improbables.`,
+| Ce qu’elle facilite | Ce qu’elle risque |
+| La **mobilité** | Elle laisse **en porte-à-faux** celui qui **n’est finalement pas admis** |
+
+> La socialisation secondaire **ne remplace pas la primaire** : elle **se dépose dessus** — et les **conflits entre les deux** sont **le lot ordinaire des trajectoires improbables**.`,
           },
           questions: [
             ['Quels sont les trois traits de la socialisation primaire ?', ['Globale, affective et durable', 'Courte, choisie et spécialisée', 'Professionnelle, volontaire et réversible', 'Scolaire, obligatoire et publique'], 0, 'C’est ce qui lui donne son empreinte particulière.'],
@@ -543,28 +679,38 @@ Merton a montré qu’on peut intérioriser les normes d’un groupe **auquel on
           axe: 'Comment la socialisation contribue-t-elle à expliquer les différences de comportement des individus ?',
           lecon: {
             titre: 'Le genre, le milieu social, et les exceptions',
-            cours: `Si la socialisation explique les comportements, c’est parce qu’elle **diffère** selon la position sociale. Deux différenciations sont au programme.
+            cours: `Si la socialisation explique les comportements, c’est parce qu’elle **diffère** selon la position sociale. **Deux différenciations** au programme.
 
 ## La socialisation genrée
-Dès la naissance, filles et garçons ne reçoivent pas le même traitement : couleurs, jouets, vocabulaire employé pour décrire un même comportement (« vive » / « turbulent »), tolérance différente à la prise de risque, encouragements scolaires distincts. Ces différences n’ont rien de naturel : elles produisent des **dispositions** qui pèsent ensuite sur l’orientation scolaire, le choix du métier, le partage des tâches domestiques.
+Dès la naissance, filles et garçons **ne reçoivent pas le même traitement**.
 
-> Les filles réussissent mieux à l’école que les garçons et s’orientent pourtant moins vers les filières scientifiques et techniques les mieux rémunérées : la socialisation, et non l’aptitude, explique l’écart.
+| Différence | Le détail |
+| Les **couleurs** et les **jouets** | Un univers séparé |
+| Le **vocabulaire** | Un même comportement dit « **vive** » ou « **turbulent** » |
+| La **tolérance à la prise de risque** | Inégale |
+| Les **encouragements scolaires** | Distincts |
+
+> Ces différences **n’ont rien de naturel** : elles produisent des **dispositions** qui pèsent sur l’**orientation**, le **choix du métier**, le **partage des tâches domestiques**.
+
+> **Les filles réussissent mieux à l’école** que les garçons **et s’orientent pourtant moins** vers les filières scientifiques les mieux rémunérées : **c’est la socialisation, non l’aptitude, qui explique l’écart**.
 
 ## La socialisation de classe
-Les pratiques transmises varient avec le milieu :
-- rapport au **langage** — élaboré et abstrait, ou pratique et contextuel ;
-- rapport au **temps** et à l’avenir, qui rend le calcul scolaire plus ou moins évident ;
-- **pratiques culturelles**, qui rapprochent ou éloignent de la culture valorisée par l’école.
+| Ce qui varie avec le milieu | Ce que cela produit |
+| Le rapport au **langage** | Élaboré et **abstrait**, ou **pratique** et contextuel |
+| Le rapport au **temps** et à l’avenir | Il rend le **calcul scolaire** plus ou moins évident |
+| Les **pratiques culturelles** | Elles **rapprochent ou éloignent** de la culture valorisée par l’école |
 
-C’est ce que Bourdieu appelle le **capital culturel** : un héritage invisible, que l’école récompense sans l’avoir transmis.
+> C’est ce que Bourdieu appelle le **capital culturel** : un **héritage invisible**, **que l’école récompense sans l’avoir transmis**.
 
 ## Les trajectoires improbables
-Elles existent : l’enfant d’ouvriers devenu professeur d’université, la fille d’immigrés devenue ingénieure. Elles reposent souvent sur :
-- une **configuration familiale** particulière (une mère qui investit massivement la scolarité, un frère aîné qui ouvre la voie) ;
-- une **rencontre** décisive avec un enseignant ;
-- une **socialisation anticipatrice** réussie.
+| Ce sur quoi elles reposent souvent | L’exemple |
+| Une **configuration familiale** particulière | Une mère qui **investit massivement la scolarité**, un frère aîné qui **ouvre la voie** |
+| Une **rencontre** décisive | Un enseignant |
+| Une **socialisation anticipatrice** réussie | Les codes adoptés à temps |
 
-Elles ne réfutent pas la sociologie : elles rappellent que la socialisation produit des **probabilités**, non des destins. Un déterminisme statistique n’est pas une fatalité individuelle.`,
+> Elles **ne réfutent pas la sociologie** : elles rappellent que la socialisation produit des **probabilités**, **non des destins**.
+
+> **Un déterminisme statistique n’est pas une fatalité individuelle.**`,
           },
           questions: [
             ['Qu’est-ce que la socialisation genrée ?', ['La transmission de normes et de rôles différents selon le sexe', 'L’apprentissage de la biologie à l’école', 'Le choix d’un métier par les parents', 'La séparation des classes filles et garçons'], 0, 'Elle commence dès la naissance et produit des dispositions durables.'],
@@ -584,27 +730,33 @@ Elles ne réfutent pas la sociologie : elles rappellent que la socialisation pro
           axe: 'Comment se construisent et évoluent les liens sociaux ?',
           lecon: {
             titre: 'Groupe social, agrégat, catégorie statistique',
-            cours: `Toute réunion d’individus n’est pas un **groupe social**. Trois notions à ne jamais confondre en devoir.
+            cours: `Toute réunion d’individus **n’est pas un groupe social**. **Trois notions** à ne **jamais confondre** en devoir.
 
-## Les trois notions
-- Le **groupe social** suppose des **interactions** entre ses membres, un **sentiment d’appartenance** et une reconnaissance par les autres : une famille, une équipe, une association, un service d’entreprise.
-- L’**agrégat physique** rassemble des individus au même endroit, sans lien : les voyageurs d’un wagon, une file d’attente.
-- La **catégorie statistique** regroupe des individus qui partagent un caractère mesurable, sans se connaître : les gauchers, les 15-24 ans, les cadres.
+| Notion | Ce qu’elle suppose | L’exemple |
+| Le **groupe social** | Des **interactions**, un **sentiment d’appartenance**, une **reconnaissance par les autres** | Une famille, une équipe, une association |
+| L’**agrégat physique** | Le **même endroit**, **sans lien** | Les voyageurs d’un wagon, une file d’attente |
+| La **catégorie statistique** | Un **caractère mesurable** commun, **sans se connaître** | Les gauchers, les 15-24 ans, les cadres |
 
-> Une catégorie statistique peut devenir un groupe social si ses membres prennent conscience de ce qu’ils ont en commun et s’organisent — c’est le passage marxiste de la « classe en soi » à la « classe pour soi ».
+> Une **catégorie statistique peut devenir un groupe social** si ses membres **prennent conscience de ce qu’ils ont en commun** et **s’organisent** : c’est le passage marxiste de la « **classe en soi** » à la « **classe pour soi** ».
 
-## Groupe primaire, groupe secondaire
-Cooley distingue :
-- le **groupe primaire**, restreint, fondé sur des relations directes, durables et affectives (famille, bande d’amis) ;
-- le **groupe secondaire**, plus vaste, fondé sur des relations formelles et fonctionnelles, orientées vers un but (entreprise, syndicat, parti).
+## Primaire ou secondaire — Cooley
+| | **Groupe primaire** | **Groupe secondaire** |
+| Sa taille | **Restreint** | Plus **vaste** |
+| Ses relations | **Directes, durables, affectives** | **Formelles et fonctionnelles** |
+| Son but | Aucun en particulier | **Orienté vers un but** |
+| L’exemple | Famille, bande d’amis | Entreprise, syndicat, parti |
 
 ## Formel ou informel
-Un groupe **formel** a des statuts, des règles écrites, une hiérarchie explicite ; un groupe **informel** naît des affinités et fonctionne à l’implicite. Les deux coexistent dans la même organisation : les « bandes » d’un atelier sont informelles, l’organigramme est formel.
+| | **Formel** | **Informel** |
+| Ce qu’il a | Statuts, **règles écrites**, hiérarchie explicite | Des **affinités** et de l’**implicite** |
 
-## Pourquoi les individus s’associent
-- Par **intérêt** : le groupe donne accès à des ressources qu’on n’obtiendrait pas seul.
-- Par **affinité** : l’**homophilie** — on s’associe à ceux qui nous ressemblent (âge, milieu, goûts).
-- Par **héritage** : on ne choisit ni sa famille ni son quartier d’enfance.`,
+> **Les deux coexistent dans la même organisation** : les « **bandes** » d’un atelier sont informelles, **l’organigramme est formel**.
+
+## Pourquoi on s’associe
+| Motif | Ce qu’il apporte |
+| L’**intérêt** | Des **ressources** qu’on n’obtiendrait pas seul |
+| L’**affinité** — l’**homophilie** | **On s’associe à ceux qui nous ressemblent** : âge, milieu, goûts |
+| L’**héritage** | **On ne choisit ni sa famille ni son quartier d’enfance** |`,
           },
           questions: [
             ['Quelles sont les trois conditions d’un groupe social ?', ['Des interactions, un sentiment d’appartenance et une reconnaissance extérieure', 'Un lieu, une heure et un but commun', 'Un statut juridique, un budget et un président', 'Un âge, un sexe et une profession communs'], 0, 'Sans interactions ni conscience d’appartenance, il n’y a pas de groupe.'],
@@ -622,23 +774,38 @@ Un groupe **formel** a des statuts, des règles écrites, une hiérarchie explic
           axe: 'Comment se construisent et évoluent les liens sociaux ?',
           lecon: {
             titre: 'Celui auquel on appartient, celui auquel on aspire',
-            cours: `Un individu appartient à plusieurs groupes à la fois, et n’adopte pas forcément les normes de ceux auxquels il appartient.
+            cours: `Un individu **appartient à plusieurs groupes à la fois** — et **n’adopte pas forcément les normes de ceux auxquels il appartient**.
 
 ## Appartenance et référence
-- Le **groupe d’appartenance** est celui dont on fait effectivement partie.
-- Le **groupe de référence**, notion de Merton, est celui dont on emprunte les normes et les valeurs pour se juger soi-même, qu’on en fasse partie ou non.
+| | **Groupe d’appartenance** | **Groupe de référence** (Merton) |
+| Ce qu’il est | Celui dont on **fait effectivement partie** | Celui dont on **emprunte les normes pour se juger** |
+| La condition | L’appartenance | **Qu’on en fasse partie ou non** |
 
-Quand les deux diffèrent, l’individu vit un décalage : l’étudiant boursier qui adopte les codes des grandes écoles, l’adolescent qui prend pour modèle un groupe qu’il ne fréquente pas encore. C’est le terrain de la **socialisation anticipatrice**.
+| Quand les deux diffèrent | L’exemple |
+| L’individu vit un **décalage** | L’étudiant **boursier** qui adopte les codes des grandes écoles |
+| — | L’adolescent qui prend pour modèle **un groupe qu’il ne fréquente pas encore** |
 
-## Les liens sociaux et leur évolution
-Les sociologues distinguent quatre grands liens : de **filiation** (la famille), de **participation élective** (les amis, le couple, les associations choisies), de **participation organique** (le travail, la division du travail), et de **citoyenneté** (l’appartenance politique).
+> C’est le terrain de la **socialisation anticipatrice**.
 
-Ils n’ont pas disparu, ils se sont **transformés** : plus **électifs** (on choisit davantage), plus **réversibles** (ils se défont plus facilement), plus **nombreux** mais souvent moins **intenses**.
+## Les quatre liens sociaux
+| Lien | Ce qu’il recouvre |
+| De **filiation** | La famille |
+| De **participation élective** | Les amis, le couple, les associations **choisies** |
+| De **participation organique** | Le **travail**, la division du travail |
+| De **citoyenneté** | L’appartenance **politique** |
+
+> Ils **n’ont pas disparu** : ils se sont **transformés** — plus **électifs** (on choisit davantage), plus **réversibles** (ils se défont plus facilement), plus **nombreux** mais souvent **moins intenses**.
 
 ## La sociabilité
-C’est l’ensemble des relations qu’un individu entretient effectivement. Elle est **socialement inégale** : elle croît avec le diplôme et le revenu, mais sa **forme** change — sociabilité de voisinage et de famille dans les milieux populaires, sociabilité associative et amicale, plus étendue géographiquement, dans les milieux favorisés.
+L’ensemble des relations **effectivement entretenues**. Elle est **socialement inégale**.
 
-> L’isolement relationnel touche d’abord les personnes âgées, les chômeurs de longue durée et les personnes en situation de précarité : le lien social se défait avec l’emploi.`,
+| Milieu | La forme de sa sociabilité |
+| **Populaire** | De **voisinage** et de **famille** |
+| **Favorisé** | **Associative et amicale**, **plus étendue géographiquement** |
+
+Elle **croît avec le diplôme et le revenu** — mais c’est sa **forme** qui change le plus.
+
+> L’**isolement relationnel** touche d’abord les **personnes âgées**, les **chômeurs de longue durée** et les personnes en **précarité** : **le lien social se défait avec l’emploi**.`,
           },
           questions: [
             ['Qu’est-ce qu’un groupe de référence ?', ['Un groupe dont on adopte les normes, qu’on en fasse partie ou non', 'Le groupe où l’on est né', 'Le groupe le plus nombreux d’une société', 'Un groupe reconnu par la loi'], 0, 'Merton l’a distingué du groupe d’appartenance.'],
@@ -656,23 +823,36 @@ C’est l’ensemble des relations qu’un individu entretient effectivement. El
           axe: 'Comment se construisent et évoluent les liens sociaux ?',
           lecon: {
             titre: 'La force des liens faibles',
-            cours: `Un **réseau social** est l’ensemble des relations qui relient un individu à d’autres. Il ne s’agit pas d’abord des plateformes numériques : la sociologie des réseaux est antérieure à leur apparition.
+            cours: `Un **réseau social** est l’ensemble des relations qui relient un individu à d’autres.
 
-## Liens forts, liens faibles
-Granovetter (1973) distingue :
-- les **liens forts** : famille proche, amis intimes. Ils sont peu nombreux, chaleureux, mais **redondants** — ces personnes se connaissent entre elles et disposent des mêmes informations que nous.
-- les **liens faibles** : connaissances, anciens collègues, amis d’amis. Ils sont nombreux, distants, mais ils **relient des mondes séparés**.
+> Il ne s’agit **pas d’abord des plateformes numériques** : **la sociologie des réseaux est antérieure à leur apparition**.
 
-> Sa découverte, contre-intuitive : la plupart des emplois se trouvent par des liens faibles. L’information neuve vient de ceux qu’on connaît mal.
+## Liens forts, liens faibles — Granovetter, 1973
+| | **Liens forts** | **Liens faibles** |
+| Qui | Famille proche, amis intimes | Connaissances, anciens collègues, **amis d’amis** |
+| Leur nombre | **Peu nombreux** | **Nombreux** |
+| Leur ton | **Chaleureux** | **Distants** |
+| Leur information | **Redondante** : ces personnes **se connaissent entre elles** | Ils **relient des mondes séparés** |
+
+> La découverte contre-intuitive : **la plupart des emplois se trouvent par des liens faibles**. **L’information neuve vient de ceux qu’on connaît mal.**
 
 ## Le capital social
-C’est l’ensemble des ressources auxquelles un individu accède grâce à son réseau. Il est **inégalement réparti** — les cadres ont des réseaux plus étendus, plus diversifiés et mieux placés que les ouvriers — et il se **convertit** : un réseau peut valoir un emploi, un stage, un logement.
+L’ensemble des **ressources auxquelles un individu accède grâce à son réseau**.
+
+| Sa propriété | Le détail |
+| Il est **inégalement réparti** | Les **cadres** ont des réseaux **plus étendus, plus diversifiés, mieux placés** que les ouvriers |
+| Il se **convertit** | Un réseau peut valoir **un emploi, un stage, un logement** |
 
 ## Ce que les plateformes changent
-Elles élargissent considérablement le nombre de liens faibles et abaissent le coût de leur entretien. Mais elles n’abolissent pas les inégalités : l’**homophilie** y règne autant qu’ailleurs, et les algorithmes de recommandation renforcent l’entre-soi. Elles créent en outre de nouvelles asymétries — la visibilité y est très concentrée.
+| Ce qu’elles apportent | Ce qu’elles n’abolissent pas |
+| Elles **élargissent le nombre de liens faibles** | L’**homophilie** y règne **autant qu’ailleurs** |
+| Elles **abaissent le coût de leur entretien** | Les **algorithmes de recommandation renforcent l’entre-soi** |
+| — | Elles créent de **nouvelles asymétries** : la **visibilité y est très concentrée** |
 
 ## Réseau et action collective
-Un réseau dense facilite la mobilisation : il fait circuler l’information, exerce une pression au conformisme et réduit le coût de l’engagement. C’est un des mécanismes qui limite le comportement de **passager clandestin** décrit par Olson.`,
+Un réseau **dense** **facilite la mobilisation** : il **fait circuler l’information**, exerce une **pression au conformisme** et **réduit le coût de l’engagement**.
+
+> C’est l’un des mécanismes qui **limite le comportement de passager clandestin** décrit par **Olson**.`,
           },
           questions: [
             ['Qui a mis en évidence la force des liens faibles ?', ['Mark Granovetter', 'Robert Merton', 'Émile Durkheim', 'Charles Cooley'], 0, 'Son article de 1973 est devenu un classique de la sociologie des réseaux.'],
@@ -692,23 +872,34 @@ Un réseau dense facilite la mobilisation : il fait circuler l’information, ex
           axe: 'Quels sont les processus sociaux qui contribuent à la déviance ?',
           lecon: {
             titre: 'Contrôle formel, contrôle informel',
-            cours: `Le **contrôle social** est l’ensemble des moyens par lesquels une société obtient de ses membres qu’ils respectent ses normes. Il ne se réduit pas à la police.
+            cours: `Le **contrôle social** est l’ensemble des moyens par lesquels une société obtient de ses membres qu’ils **respectent ses normes**. **Il ne se réduit pas à la police.**
 
 ## Deux formes
-- Le **contrôle social formel** est exercé par des institutions spécialisées, selon des règles écrites : police, justice, administration, inspection du travail. La sanction y est **codifiée**.
-- Le **contrôle social informel** est exercé par l’entourage — famille, voisins, collègues, pairs — au moyen du regard, de la moquerie, de la réprobation, de l’exclusion. La sanction y est **diffuse** mais souvent plus efficace.
+| | **Formel** | **Informel** |
+| Qui l’exerce | Des **institutions spécialisées** : police, justice, administration, inspection du travail | L’**entourage** : famille, voisins, collègues, pairs |
+| Comment | Selon des **règles écrites** | Par le **regard**, la **moquerie**, la réprobation, l’**exclusion** |
+| Sa sanction | **Codifiée** | **Diffuse** — mais **souvent plus efficace** |
 
-> Le contrôle le plus puissant est celui qu’on exerce sur soi-même : les normes intériorisées lors de la socialisation évitent la plupart des transgressions sans qu’aucune sanction n’intervienne.
+> Le contrôle **le plus puissant** est celui qu’on **exerce sur soi-même** : les **normes intériorisées** lors de la socialisation **évitent la plupart des transgressions sans qu’aucune sanction n’intervienne**.
 
 ## Une évolution en deux temps
-- **Recul du contrôle informel de proximité** : l’exode rural, l’anonymat urbain et la mobilité ont affaibli le contrôle du village et du voisinage.
-- **Montée du contrôle formel et technologique** : vidéosurveillance, traçage numérique, contrôle automatisé de la vitesse, données de connexion. Le contrôle devient **permanent, distant et invisible**.
+| Mouvement | Ce qui se passe |
+| **Recul** du contrôle informel de proximité | L’**exode rural**, l’**anonymat urbain** et la **mobilité** ont affaibli le contrôle du village et du voisinage |
+| **Montée** du contrôle formel et technologique | **Vidéosurveillance**, **traçage numérique**, contrôle automatisé de la vitesse, données de connexion |
+
+> Le contrôle devient **permanent, distant et invisible**.
 
 ## Le débat
-Ce déplacement pose une question politique : jusqu’où une société peut-elle surveiller sans porter atteinte aux libertés ? La **CNIL**, en France, encadre l’usage des données personnelles ; le RGPD le fait à l’échelle européenne.
+> Jusqu’où une société peut-elle **surveiller sans porter atteinte aux libertés** ?
+
+| Encadrement | Son échelle |
+| La **CNIL** | La France |
+| Le **RGPD** | L’Europe |
 
 ## Contrôle et déviance
-Le contrôle social ne se contente pas d’empêcher la déviance : il la **définit**. Une même conduite est déviante ou non selon la société, l’époque et le groupe qui juge — le tabac, le duel, l’homosexualité ont changé de statut normatif.`,
+> Le contrôle social ne se contente pas d’**empêcher** la déviance : **il la définit**.
+
+Une **même conduite** est déviante ou non **selon la société, l’époque et le groupe qui juge** : le **tabac**, le **duel**, l’**homosexualité** ont **changé de statut normatif**.`,
           },
           questions: [
             ['Qu’est-ce que le contrôle social informel ?', ['Le contrôle exercé par l’entourage au moyen de sanctions diffuses', 'Le contrôle exercé par la police', 'Le contrôle des comptes d’une entreprise', 'La surveillance vidéo des espaces publics'], 0, 'Regard, moquerie, réprobation : la sanction n’est pas codifiée.'],
@@ -726,21 +917,44 @@ Le contrôle social ne se contente pas d’empêcher la déviance : il la **déf
           axe: 'Quels sont les processus sociaux qui contribuent à la déviance ?',
           lecon: {
             titre: 'Anomie, étiquetage, carrière déviante',
-            cours: `La **déviance** est la transgression d’une norme sociale, quelle qu’elle soit ; la **délinquance** est la transgression d’une norme **juridique** pénalement sanctionnée. Toute délinquance est déviante, l’inverse est faux.
+            cours: `Transgresser une norme sociale, ce n'est pas la même chose que transgresser la loi.
 
-## L’explication par l’anomie
-- **Durkheim** appelle **anomie** l’affaiblissement des normes collectives : quand la société ne parvient plus à réguler les aspirations, les conduites se dérèglent.
-- **Merton** en tire une théorie plus fine : la déviance naît de l’écart entre les **buts** valorisés par la société (la réussite matérielle) et les **moyens légitimes** d’y accéder, inégalement distribués. Cinq adaptations en découlent : conformité, **innovation** (le but sans les moyens légitimes), ritualisme, évasion, rébellion.
+## Deux mots à ne pas confondre
+| Le mot | Ce qu'il transgresse | Portée |
+| **Déviance** | Une **norme sociale**, quelle qu'elle soit | Large |
+| **Délinquance** | Une **norme juridique** pénalement sanctionnée | Étroite |
 
-## L’explication par l’étiquetage
-Becker renverse la perspective : la déviance n’est pas une qualité de l’acte, mais le **produit de la réaction sociale**. « Le déviant est celui auquel l’étiquette a été appliquée avec succès. »
+> Toute délinquance est déviante. L'inverse est faux.
 
-Il décrit la **carrière déviante** : une transgression initiale, une réaction sociale qui étiquette, une **stigmatisation** qui ferme les portes de la vie ordinaire, puis l’entrée dans un groupe déviant qui fournit à son tour des normes. L’étiquette produit ce qu’elle prétend décrire — c’est une **prophétie auto-réalisatrice**.
+## L'explication par l'anomie
+| L'auteur | Sa thèse |
+| **Durkheim** | L'**anomie** est l'affaiblissement des normes collectives : quand la société ne régule plus les aspirations, les conduites se dérèglent |
+| **Merton** | La déviance naît de l'écart entre les **buts** valorisés (la réussite) et les **moyens légitimes** d'y accéder, inégalement distribués |
+
+Les cinq adaptations de Merton :
+1. **Conformité** — les buts et les moyens légitimes.
+2. **Innovation** — le but, mais par des moyens illégitimes.
+3. **Ritualisme** — les moyens sans le but.
+4. **Évasion** — ni l'un ni l'autre.
+5. **Rébellion** — d'autres buts et d'autres moyens.
+
+## L'explication par l'étiquetage
+Becker renverse la perspective : la déviance n'est pas une qualité de l'acte, mais le **produit de la réaction sociale**.
+
+| L'étape de la carrière déviante | Ce qui se passe |
+| La transgression initiale | Un acte, souvent banal |
+| La **réaction sociale** | Le groupe étiquette |
+| La **stigmatisation** | Les portes de la vie ordinaire se ferment |
+| L'entrée dans un groupe déviant | Il fournit à son tour des normes |
+
+> « Le déviant est celui auquel l'étiquette a été appliquée avec succès. » L'étiquette produit ce qu'elle prétend décrire : c'est une **prophétie auto-réalisatrice**.
 
 ## Ce que cela change
-Les deux approches ne s’opposent pas : Merton explique pourquoi certaines positions sociales exposent davantage à la transgression, Becker pourquoi le traitement social de cette transgression l’aggrave ou l’enferme.
+| L'approche | Ce qu'elle explique | La politique qui en découle |
+| **Merton** | Pourquoi certaines positions exposent à la transgression | Agir sur les inégalités d'accès aux moyens |
+| **Becker** | Pourquoi le traitement social aggrave la transgression | Éviter la stigmatisation précoce des mineurs |
 
-> D’où deux politiques opposées : durcir la sanction, ou éviter la stigmatisation précoce des mineurs.`,
+> Les deux ne s'opposent pas : elles décrivent deux moments différents.`,
           },
           questions: [
             ['Quelle est la différence entre déviance et délinquance ?', ['La délinquance transgresse une norme juridique, la déviance une norme sociale quelconque', 'Elles sont synonymes', 'La déviance est toujours pénalement sanctionnée', 'La délinquance concerne uniquement les mineurs'], 0, 'Toute délinquance est déviante, mais toute déviance n’est pas délinquante.'],
@@ -758,24 +972,34 @@ Les deux approches ne s’opposent pas : Merton explique pourquoi certaines posi
           axe: 'Quels sont les processus sociaux qui contribuent à la déviance ?',
           lecon: {
             titre: 'Statistiques policières, enquêtes de victimation, chiffre noir',
-            cours: `Compter la délinquance est un problème de méthode avant d’être un débat politique. Trois sources, aucune parfaite.
+            cours: `Compter la délinquance est un problème de méthode avant d'être un débat politique.
+
+## Trois sources, aucune parfaite
+| La source | Ce qu'elle compte | Sa limite principale |
+| **Statistiques administratives** | Les plaintes enregistrées, les condamnations | Seulement ce qui est **déclaré** |
+| **Enquêtes de victimation** | Les atteintes **subies**, déclarées ou non | Reposent sur le **souvenir** de l'enquêté |
+| **Chiffre noir** | L'écart entre les deux | Par définition, il ne se mesure pas directement |
 
 ## Les statistiques administratives
-Établies à partir des **plaintes enregistrées** par la police et la gendarmerie, puis des condamnations prononcées. Leurs limites sont connues :
-- elles ne comptent que ce qui est **déclaré** ;
-- elles dépendent de l’**activité des services** : plus de contrôles routiers, ce sont mécaniquement plus d’infractions constatées ;
-- elles varient avec les **changements de législation** et de nomenclature — un acte peut entrer ou sortir du champ pénal.
+Elles dépendent d'autre chose que de la délinquance elle-même :
+- de l'**activité des services** — plus de contrôles routiers, ce sont mécaniquement plus d'infractions constatées ;
+- des **changements de législation** et de nomenclature, un acte pouvant entrer ou sortir du champ pénal ;
+- de la **propension à porter plainte**, très variable selon l'infraction.
 
 ## Les enquêtes de victimation
-On interroge un échantillon représentatif de la population sur les atteintes subies, qu’elles aient été déclarées ou non (en France, l’enquête *Cadre de vie et sécurité*, puis *Vécu et ressenti en matière de sécurité*). Elles font apparaître ce que les plaintes manquent — mais elles reposent sur le **souvenir** et la **volonté de déclarer** de l’enquêté, et couvrent mal les infractions sans victime directe (trafic, corruption).
+On interroge un échantillon représentatif sur les atteintes subies : en France, l'enquête *Cadre de vie et sécurité*, puis *Vécu et ressenti en matière de sécurité*.
+
+Elles font apparaître ce que les plaintes manquent, mais couvrent mal les infractions **sans victime directe** : trafic, corruption, fraude fiscale.
 
 ## Le chiffre noir
-C’est l’écart entre la délinquance **réelle** et la délinquance **enregistrée**. Il varie fortement selon l’infraction : très faible pour les vols de voiture (la plainte est exigée par l’assurance), très élevé pour les violences intrafamiliales et sexuelles.
+| L'infraction | Son chiffre noir | Pourquoi |
+| Vol de voiture | Très **faible** | La plainte est exigée par l'assurance |
+| Violences intrafamiliales et sexuelles | Très **élevé** | Honte, peur, dépendance à l'agresseur |
 
-> Une hausse des plaintes peut donc signaler une hausse des violences… ou une meilleure prise de parole des victimes. Les deux lectures s’appuient sur le même chiffre.
+> Une hausse des plaintes peut signaler une hausse des violences… ou une meilleure prise de parole des victimes. Les deux lectures s'appuient sur le même chiffre.
 
-## Les biais du traitement pénal
-La population carcérale est très majoritairement jeune, masculine et issue des milieux populaires. Ce constat mêle deux choses : des expositions différentes à la transgression, et un traitement pénal lui-même sélectif — la délinquance en col blanc est moins détectée et moins sanctionnée.`,
+## Un traitement pénal sélectif
+La population carcérale est très majoritairement **jeune**, **masculine** et issue des **milieux populaires**. Ce constat mêle deux choses : des expositions différentes à la transgression, et un filtre pénal lui-même inégal — la délinquance en col blanc est moins détectée et moins sanctionnée.`,
           },
           questions: [
             ['Que mesure une enquête de victimation ?', ['Les atteintes subies déclarées par un échantillon de la population', 'Le nombre de condamnations prononcées', 'Le nombre de policiers en activité', 'Le sentiment d’insécurité uniquement'], 0, 'Elle recense aussi ce qui n’a jamais fait l’objet d’une plainte.'],
@@ -795,24 +1019,32 @@ La population carcérale est très majoritairement jeune, masculine et issue des
           axe: 'Vote et opinion publique',
           lecon: {
             titre: 'Des salons aux sondages',
-            cours: `L’**opinion publique** désigne l’ensemble des jugements partagés par une population sur les affaires communes. Ce n’est pas une donnée naturelle : c’est une **construction historique**.
+            cours: `L'opinion publique n'est pas une donnée naturelle : c'est une construction historique.
+
+## Une définition
+L'**opinion publique** désigne l'ensemble des jugements partagés par une population sur les affaires communes.
 
 ## Une histoire
-Elle naît au XVIIIe siècle avec l’**espace public** décrit par Habermas : salons, cafés, presse, où des particuliers discutent publiquement des affaires de l’État. Elle s’élargit avec l’alphabétisation, la presse de masse, puis la radio et la télévision. Les réseaux sociaux en constituent la dernière transformation : chacun peut y publier, mais la visibilité y est très inégalement distribuée.
+| L'époque | Le lieu de l'opinion |
+| **XVIIIe siècle** | Salons, cafés, presse : l'**espace public** décrit par Habermas |
+| **XIXe et XXe siècles** | Alphabétisation, presse de masse, puis radio et télévision |
+| **Aujourd'hui** | Réseaux sociaux : chacun peut publier, mais la visibilité reste très inégale |
 
 ## Le sondage
-Instrument dominant depuis Gallup (1936). Il repose sur un **échantillon représentatif**, construit le plus souvent par la **méthode des quotas**, et donne un résultat assorti d’une **marge d’erreur**.
+Instrument dominant depuis Gallup, en 1936. Il repose sur un **échantillon représentatif**, construit le plus souvent par la **méthode des quotas**, et donne un résultat assorti d'une **marge d'erreur**.
 
-Ses limites sont au programme :
-- la **formulation de la question** oriente la réponse ;
-- l’**ordre des questions** produit des effets de contexte ;
-- les **non-réponses** et les réponses données faute d’opinion réelle ;
-- la tentation de lire un écart inférieur à la marge d’erreur comme une différence réelle.
+| La limite | L'effet produit |
+| La **formulation** de la question | Elle oriente la réponse |
+| L'**ordre** des questions | Il crée des effets de contexte |
+| Les **non-réponses** | Elles masquent l'absence d'opinion réelle |
+| La **marge d'erreur** oubliée | Un écart minime est lu comme une différence |
 
-> Bourdieu, en 1973 : « L’opinion publique n’existe pas » — non pour nier les opinions, mais pour contester le postulat que tout le monde a un avis sur tout, que toutes les opinions se valent et qu’il existe un consensus sur les questions qui méritent d’être posées.
+> Bourdieu, en 1973 : « L'opinion publique n'existe pas » — non pour nier les opinions, mais pour contester trois postulats : que tout le monde a un avis sur tout, que toutes les opinions se valent, et qu'il existe un accord sur les questions qui méritent d'être posées.
 
-## Sondage et démocratie
-Deux lectures s’affrontent. Le sondage **éclaire** le débat en donnant la parole à ceux qui ne l’ont pas d’ordinaire ; ou il **fabrique** l’opinion qu’il prétend mesurer, en imposant l’agenda et en produisant des effets sur le vote (effet *bandwagon*, vote utile).`,
+## Sondage et démocratie : deux lectures
+| La lecture | Son argument |
+| Le sondage **éclaire** | Il donne la parole à ceux qu'on n'entend pas d'ordinaire |
+| Le sondage **fabrique** | Il impose l'agenda et produit des effets sur le vote : effet *bandwagon*, vote utile |`,
           },
           questions: [
             ['Qu’est-ce que l’espace public au sens de Habermas ?', ['Un espace de discussion des affaires communes par des particuliers', 'Les rues et les places d’une ville', 'Les bâtiments appartenant à l’État', 'Les médias publics'], 0, 'Salons, cafés et presse en constituent la forme historique.'],
@@ -830,27 +1062,36 @@ Deux lectures s’affrontent. Le sondage **éclaire** le débat en donnant la pa
           axe: 'Vote et opinion publique',
           lecon: {
             titre: 'Variables lourdes, vote sur enjeux, abstention',
-            cours: `Le vote est un **acte individuel et secret**, mais il obéit à des régularités sociales que la sociologie électorale mesure depuis les années 1940.
+            cours: `Le vote est un acte individuel et secret, mais il obéit à des régularités sociales mesurées depuis les années 1940.
 
 ## Les variables lourdes
-Trois caractéristiques prédisent historiquement le vote :
-- l’**appartenance de classe** (position professionnelle, niveau de diplôme, patrimoine) ;
-- la **religion** — la pratique religieuse régulière reste l’une des variables les plus prédictives ;
-- le **lieu de résidence**, dont l’effet s’est renforcé avec la géographie sociale des territoires.
+| La variable | Ce qu'elle recouvre |
+| L'**appartenance de classe** | Profession, diplôme, patrimoine |
+| La **religion** | La pratique régulière reste l'une des plus prédictives |
+| Le **lieu de résidence** | Son effet s'est renforcé avec la géographie sociale |
 
-L’**âge**, le **genre** et la **socialisation politique familiale** complètent le tableau. Lazarsfeld avait montré dès 1944 que le vote se prédisait mieux par ces variables que par les campagnes elles-mêmes.
+L'**âge**, le **genre** et la **socialisation politique familiale** complètent le tableau.
+
+> Lazarsfeld montrait dès 1944 que le vote se prédisait mieux par ces variables que par les campagnes elles-mêmes.
 
 ## Leur affaiblissement
-Ces variables expliquent moins qu’autrefois : recul de la pratique religieuse, brouillage des frontières de classe, montée du diplôme, affaiblissement des partis de masse. L’électeur est devenu plus **volatil** — il change de vote d’une élection à l’autre — et plus sensible au **vote sur enjeux** (*issue voting*), qui privilégie un problème du moment, et au **vote sur bilan**, qui sanctionne ou récompense les sortants.
+| La cause | La conséquence |
+| Recul de la pratique religieuse | Une variable qui pèse moins |
+| Brouillage des frontières de classe | Des blocs électoraux moins nets |
+| Affaiblissement des partis de masse | Moins d'encadrement du vote |
 
-## L’abstention
-Elle n’est pas un simple désintérêt. On distingue :
-- l’**abstention hors du jeu** : celle des plus éloignés du système politique, cumulant faible diplôme, précarité et isolement ;
-- l’**abstention dans le jeu** : celle d’électeurs politisés qui s’abstiennent ponctuellement pour protester ou faute d’offre satisfaisante.
+L'électeur est devenu plus **volatil** : il change de vote d'une élection à l'autre. Deux logiques nouvelles apparaissent :
+- le **vote sur enjeux**, qui privilégie un problème du moment ;
+- le **vote sur bilan**, qui sanctionne ou récompense les sortants.
 
-Elle est très inégale selon le **type de scrutin** — forte aux élections européennes et locales, plus faible à la présidentielle — et selon l’**âge**, les jeunes votant beaucoup plus intermittemment.
+## L'abstention
+| Sa forme | Qui s'abstient | Pourquoi |
+| **Hors du jeu** | Les plus éloignés du système politique | Faible diplôme, précarité, isolement |
+| **Dans le jeu** | Des électeurs politisés | Protestation, ou absence d'offre satisfaisante |
 
-> Le vote reste un acte **socialement encouragé** : la sociabilité, la mobilisation par l’entourage et l’inscription dans un réseau associatif augmentent nettement la participation.`,
+Elle varie fortement selon le **type de scrutin** — forte aux européennes et aux locales, plus faible à la présidentielle — et selon l'**âge**, les jeunes votant beaucoup plus par intermittence.
+
+> Le vote reste un acte **socialement encouragé** : la sociabilité, la mobilisation par l'entourage et l'inscription associative augmentent nettement la participation.`,
           },
           questions: [
             ['Que sont les « variables lourdes » du vote ?', ['L’appartenance de classe, la religion et le lieu de résidence', 'L’âge, le sexe et la taille du ménage', 'Le revenu, l’épargne et le patrimoine', 'Le programme, le débat et la campagne'], 0, 'Ce sont les caractéristiques sociales les plus prédictives du vote.'],
@@ -870,23 +1111,32 @@ Elle est très inégale selon le **type de scrutin** — forte aux élections eu
           axe: 'Regards croisés',
           lecon: {
             titre: 'Risque, mutualisation, protection sociale',
-            cours: `Un **risque** est un événement incertain aux conséquences dommageables : maladie, accident, chômage, vieillesse, dépendance. Les sociétés développées l’affrontent par la **mutualisation** — le partage du coût entre un grand nombre.
+            cours: `Un risque est un événement incertain aux conséquences dommageables. Les sociétés développées l'affrontent par la mutualisation.
+
+## Les risques et leur partage
+Maladie, accident, chômage, vieillesse, dépendance : la **mutualisation** consiste à partager le coût entre un grand nombre, pour qu'aucun ne le supporte seul.
 
 ## Deux logiques de protection
-- La logique d’**assurance** (bismarckienne) : on cotise, on est couvert à proportion de ce que l’on a cotisé. Elle couvre les travailleurs et leurs ayants droit. En France, les retraites et l’assurance chômage en relèvent.
-- La logique d’**assistance** (beveridgienne) : une prestation est versée sous **condition de ressources**, financée par l’impôt, indépendamment de toute cotisation. Le RSA en relève.
+| La logique | Son principe | Son financement | Un exemple français |
+| **Assurance** (bismarckienne) | On cotise, on est couvert à proportion | Cotisations sociales | Retraites, assurance chômage |
+| **Assistance** (beveridgienne) | Prestation sous **condition de ressources** | Impôt | RSA |
 
-Le système français est **hybride** : construit en 1945 sur une base assurantielle, il s’est élargi à mesure que la CSG a pris la place des cotisations.
+> Le système français est **hybride** : construit en 1945 sur une base assurantielle, il s'est élargi à mesure que la CSG a pris la place des cotisations.
 
 ## Les acteurs
-La protection sociale n’est pas seulement publique : elle mêle la **Sécurité sociale**, les **mutuelles** et les **assurances privées**, les **associations** et la **famille** — qui reste, pour la dépendance et la garde des enfants, un producteur majeur de protection.
+La protection sociale n'est pas seulement publique. Elle mêle :
+- la **Sécurité sociale** ;
+- les **mutuelles** et les **assurances privées** ;
+- les **associations** ;
+- la **famille**, qui reste pour la dépendance et la garde des enfants un producteur majeur de protection.
 
 ## Les limites
-- L’**aléa moral** : être couvert peut réduire la prudence ou l’effort de retour à l’emploi. Franchises, délais de carence et dégressivité y répondent.
-- La **sélection adverse** : dans une assurance facultative, les bons risques se retirent et les mauvais restent, ce qui fait monter la prime. C’est un argument fort en faveur de l’**obligation** d’affiliation.
-- Le **coût** : la protection sociale représente environ un tiers du PIB français, ce qui pose la question de son financement dans une population vieillissante.
+| La limite | Ce qu'elle décrit | La réponse |
+| **Aléa moral** | Être couvert peut réduire la prudence ou l'effort | Franchises, délais de carence, dégressivité |
+| **Sélection adverse** | Dans une assurance facultative, les bons risques partent, la prime monte | **Obligation** d'affiliation |
+| **Coût** | Environ un tiers du PIB français | Question du financement dans une population vieillissante |
 
-> Les prélèvements et les prestations réduisent fortement les inégalités : le rapport entre les revenus des 10 % les plus aisés et des 10 % les plus modestes est près de deux fois plus faible après redistribution qu’avant.`,
+> Prélèvements et prestations réduisent fortement les inégalités : l'écart entre les revenus des 10 % les plus aisés et des 10 % les plus modestes est près de deux fois plus faible après redistribution qu'avant.`,
           },
           questions: [
             ['Qu’est-ce que la mutualisation d’un risque ?', ['Le partage du coût d’un dommage entre un grand nombre de personnes', 'La suppression du risque', 'L’assurance d’un seul individu', 'L’épargne de précaution individuelle'], 0, 'C’est le principe commun à l’assurance et à la protection sociale.'],
@@ -904,25 +1154,28 @@ La protection sociale n’est pas seulement publique : elle mêle la **Sécurit�
           axe: 'Regards croisés',
           lecon: {
             titre: 'Tailles, statuts, figures de l’entrepreneur',
-            cours: `L’**entreprise** est une organisation qui combine des facteurs de production pour produire des biens ou des services destinés à être vendus. Sous ce mot unique se cachent des réalités très différentes.
+            cours: `Une entreprise combine des facteurs de production pour vendre des biens ou des services. Sous ce mot unique, des réalités très différentes.
 
 ## Une diversité de tailles
-- Les **microentreprises** (moins de 10 salariés) sont de très loin les plus nombreuses.
-- Les **PME** et les **ETI** forment le tissu productif intermédiaire.
-- Les **grandes entreprises**, peu nombreuses, concentrent une part très importante de l’emploi salarié, du chiffre d’affaires et de l’exportation.
+| La catégorie | Le seuil | Son poids |
+| **Microentreprises** | Moins de 10 salariés | De très loin les plus **nombreuses** |
+| **PME** et **ETI** | Le tissu intermédiaire | Ossature de l'emploi local |
+| **Grandes entreprises** | Peu nombreuses | Concentrent l'emploi salarié, le chiffre d'affaires et l'export |
 
 ## Une diversité de statuts
-- L’**entreprise individuelle**, où le patrimoine de l’entrepreneur est engagé, et son régime simplifié du micro-entrepreneur.
-- Les **sociétés** (SARL, SAS, SA), qui séparent le patrimoine de l’entreprise de celui de ses propriétaires.
-- L’**économie sociale et solidaire** : coopératives, mutuelles, associations, où le profit n’est pas la finalité et où la gouvernance obéit souvent à la règle « une personne, une voix ».
-- Les **entreprises publiques**, détenues majoritairement par l’État.
+| Le statut | Ce qui le caractérise |
+| **Entreprise individuelle** | Le patrimoine de l'entrepreneur est engagé ; régime simplifié du micro-entrepreneur |
+| **Sociétés** (SARL, SAS, SA) | Le patrimoine de l'entreprise est séparé de celui des propriétaires |
+| **Économie sociale et solidaire** | Coopératives, mutuelles, associations : le profit n'est pas la finalité, souvent « une personne, une voix » |
+| **Entreprises publiques** | Détenues majoritairement par l'État |
 
-## Les figures de l’entrepreneur
-- Chez **Schumpeter**, l’entrepreneur est celui qui **innove** : il introduit un produit, un procédé, un débouché ou une organisation nouvelle, et déclenche la « destruction créatrice ».
-- Chez **Knight**, il est celui qui assume l’**incertitude** — le risque non calculable, non assurable.
-- La sociologie ajoute que l’on ne devient pas entrepreneur au hasard : l’origine sociale, le capital économique disponible et le réseau pèsent lourdement sur la probabilité de créer et sur la survie de l’entreprise.
+## Les figures de l'entrepreneur
+| L'auteur | Ce qui définit l'entrepreneur |
+| **Schumpeter** | Celui qui **innove** — produit, procédé, débouché ou organisation nouvelle — et déclenche la « destruction créatrice » |
+| **Knight** | Celui qui assume l'**incertitude** : le risque non calculable, non assurable |
+| La **sociologie** | Origine sociale, capital économique et réseau pèsent sur la probabilité de créer et sur la survie |
 
-> Le statut de micro-entrepreneur, créé en 2008, a fait bondir le nombre de créations d’entreprises — sans transformer autant la structure du tissu productif, ces entreprises étant très petites et souvent sans salarié.`,
+> Le statut de micro-entrepreneur, créé en 2008, a fait bondir le nombre de créations d'entreprises — sans transformer autant le tissu productif, ces entreprises étant très petites et souvent sans salarié.`,
           },
           questions: [
             ['Quelle catégorie d’entreprises est de loin la plus nombreuse en France ?', ['Les microentreprises', 'Les grandes entreprises', 'Les ETI', 'Les entreprises publiques'], 0, 'Elles emploient moins de 10 salariés et constituent l’essentiel des unités.'],
@@ -940,24 +1193,37 @@ La protection sociale n’est pas seulement publique : elle mêle la **Sécurit�
           axe: 'Regards croisés',
           lecon: {
             titre: 'Hiérarchie, coopération, conflits et gouvernance',
-            cours: `Une entreprise n’est pas seulement un lieu de production : c’est une **organisation** traversée par des relations de pouvoir, de coopération et de conflit.
+            cours: `Une entreprise n'est pas seulement un lieu de production : c'est une organisation traversée par le pouvoir, la coopération et le conflit.
 
-## L’organisation du travail
-- Le **taylorisme** repose sur la division verticale (concevoir / exécuter) et horizontale (parcelliser les tâches), le chronométrage et le salaire au rendement. Le **fordisme** y ajoute la chaîne, la standardisation et les hauts salaires qui écoulent la production.
-- Le **toyotisme** répond à leurs limites (monotonie, absentéisme, rigidité) par la production en **flux tendus**, la **qualité totale**, la polyvalence et l’**autonomie d’équipe**.
-- L’ère numérique prolonge le mouvement : travail en projet, télétravail, plateformes qui externalisent la relation de travail.
+## L'organisation du travail
+| Le modèle | Ses principes | Sa limite |
+| **Taylorisme** | Division verticale (concevoir / exécuter) et horizontale, chronométrage, salaire au rendement | Monotonie, absentéisme |
+| **Fordisme** | La chaîne, la standardisation, les hauts salaires qui écoulent la production | Rigidité de la production de masse |
+| **Toyotisme** | Flux tendus, qualité totale, polyvalence, autonomie d'équipe | Intensification du travail |
+| **Ère numérique** | Travail en projet, télétravail, plateformes | Externalisation de la relation de travail |
 
 ## Coopération et conflits
-La **coordination** dans l’entreprise passe par la **hiérarchie**, mais aussi par des règles, des routines et une culture d’entreprise. Le sociologue Crozier a montré que chaque acteur dispose d’une **zone d’incertitude** — une marge que sa position lui donne — et qu’il s’en sert comme d’une ressource de pouvoir, y compris à un échelon subalterne.
+La coordination passe par la **hiérarchie**, mais aussi par des règles, des routines et une culture d'entreprise.
 
-Les **conflits** ne sont pas une pathologie : ils portent sur les salaires, les conditions de travail, l’emploi, la reconnaissance. Leurs formes évoluent — recul des grèves longues et massives dans le privé, montée de formes individuelles (absentéisme, turnover, recours prud’homal) et de mobilisations plus courtes et médiatisées.
+> Crozier a montré que chaque acteur dispose d'une **zone d'incertitude** — une marge que sa position lui donne — et qu'il s'en sert comme d'une ressource de pouvoir, y compris à un échelon subalterne.
+
+Les **conflits** ne sont pas une pathologie : ils portent sur les salaires, les conditions de travail, l'emploi, la reconnaissance.
+
+| Forme en recul | Forme en hausse |
+| Grèves longues et massives dans le privé | Formes individuelles : absentéisme, turnover, recours prud'homal |
+| | Mobilisations courtes et médiatisées |
 
 ## La gouvernance
-Elle désigne la manière dont le pouvoir se distribue entre **actionnaires**, **dirigeants** et **parties prenantes** (salariés, clients, fournisseurs, territoire).
+Elle désigne la manière dont le pouvoir se distribue entre **actionnaires**, **dirigeants** et **parties prenantes** : salariés, clients, fournisseurs, territoire.
 
-Le problème central est celui de la **relation d’agence** : le dirigeant (l’agent) ne poursuit pas nécessairement l’intérêt de l’actionnaire (le principal), et il en sait plus que lui. D’où les mécanismes de contrôle : conseil d’administration, audit, rémunération en actions.
+Le problème central est la **relation d'agence** : le dirigeant (l'agent) ne poursuit pas nécessairement l'intérêt de l'actionnaire (le principal), et il en sait plus que lui.
 
-> Depuis les années 1980, la gouvernance actionnariale a pris le pas dans les grandes sociétés cotées ; la loi PACTE de 2019 a réintroduit en France l’idée que l’entreprise doit considérer les enjeux sociaux et environnementaux de son activité.`,
+| Le mécanisme de contrôle | Ce qu'il vise |
+| Conseil d'administration | Surveiller les décisions |
+| Audit | Vérifier l'information |
+| Rémunération en actions | Aligner les intérêts |
+
+> Depuis les années 1980, la gouvernance actionnariale a pris le pas dans les grandes sociétés cotées ; la loi PACTE de 2019 a réintroduit en France l'idée que l'entreprise doit considérer les enjeux sociaux et environnementaux de son activité.`,
           },
           questions: [
             ['Sur quoi repose le taylorisme ?', ['La division verticale et horizontale du travail et le chronométrage', 'L’autonomie des équipes', 'Les flux tendus', 'La polyvalence des salariés'], 0, 'Concevoir et exécuter sont séparés, les tâches sont parcellisées.'],

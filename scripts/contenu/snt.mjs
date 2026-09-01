@@ -13,19 +13,27 @@ export default {
           titre: 'Internet',
           lecon: {
             titre: 'Comment circulent les données',
-            cours: `Internet est un **réseau de réseaux** : aucune machine ne le dirige.
+            cours: `Internet est un **réseau de réseaux** : aucune machine ne le dirige, et c’est précisément ce qui le rend robuste.
 
 ## La commutation de paquets
-Un message est découpé en **paquets** qui voyagent indépendamment, éventuellement par des chemins différents, et sont réassemblés à l'arrivée. C'est ce qui rend le réseau robuste : si un lien tombe, les paquets passent ailleurs.
+Un message est découpé en **paquets** qui voyagent **indépendamment**, éventuellement par des chemins différents, et sont réassemblés à l’arrivée.
+
+> C’est ce découpage qui rend le réseau robuste : si un lien tombe, les paquets suivants passent ailleurs sans que personne n’ait à décider quoi que ce soit de central.
 
 ## Les protocoles
-**IP** achemine les paquets grâce aux adresses ; **TCP** garantit qu'ils arrivent tous, dans l'ordre, en redemandant ceux qui manquent. L'ensemble forme la pile **TCP/IP**.
+| Protocole | Ce dont il se charge | Ce qu’il ne fait pas |
+| **IP** | Acheminer les paquets grâce aux adresses | Garantir qu’ils arrivent |
+| **TCP** | Vérifier, remettre dans l’ordre, redemander les manquants | Choisir la route |
+
+L’ensemble forme la pile **TCP/IP** : deux responsabilités séparées, ce qui permet de faire évoluer l’une sans toucher à l’autre.
 
 ## Les adresses IP
-IPv4 s'écrit sur 32 bits (ex. 192.168.1.1) et offre environ 4,3 milliards d'adresses — épuisées. IPv6, sur 128 bits, en offre un nombre pratiquement illimité.
+| Version | Taille | Nombre d’adresses | État |
+| IPv4 | 32 bits (192.168.1.1) | environ 4,3 milliards | Épuisées |
+| IPv6 | 128 bits | pratiquement illimité | En déploiement |
 
 ## Le routage et le DNS
-Les **routeurs** choisissent le prochain saut vers la destination. Le **DNS** traduit un nom de domaine lisible (*studuel.fr*) en adresse IP : c'est l'annuaire d'Internet.`,
+Les **routeurs** ne connaissent pas le chemin complet : ils choisissent seulement le **prochain saut** vers la destination. Le **DNS** traduit un nom de domaine lisible en adresse IP — c’est l’annuaire d’Internet, et son point de fragilité le plus exploité.`,
           },
           questions: [
             ['Que fait le protocole TCP ?', ['Il garantit l’arrivée complète et ordonnée des paquets', 'Il attribue les adresses', 'Il chiffre les données', 'Il affiche les pages'], 0, 'IP achemine, TCP fiabilise.'],
@@ -42,19 +50,35 @@ Les **routeurs** choisissent le prochain saut vers la destination. Le **DNS** tr
           titre: 'Le Web',
           lecon: {
             titre: 'Pages, liens et moteurs de recherche',
-            cours: `Le Web est une **application** d'Internet, pas Internet lui-même.
+            cours: `Le Web est une **application** d’Internet, pas Internet lui-même. Confondre les deux, c’est confondre la route et les voitures.
 
 ## Les trois inventions de 1989-1991
-Tim Berners-Lee, au CERN, invente le **HTML** (langage de description des pages), l'**URL** (adresse d'une ressource) et le **HTTP** (protocole de transfert). Trois briques qui, ensemble, font le Web.
+Tim Berners-Lee, au CERN, invente trois briques qui, ensemble, font le Web.
+
+| Brique | Ce qu’elle apporte |
+| **HTML** | Un langage pour décrire une page |
+| **URL** | Une adresse unique pour chaque ressource |
+| **HTTP** | Un protocole pour transférer la ressource |
 
 ## Client et serveur
-Le navigateur (**client**) demande une page ; le **serveur** la renvoie. HTTPS ajoute le chiffrement : sans lui, tout le contenu circule en clair.
+Le navigateur (**client**) demande une page ; le **serveur** la renvoie. **HTTPS** ajoute le chiffrement — sans lui, tout le contenu circule en clair et peut être lu par n’importe quel intermédiaire du réseau.
 
 ## HTML et CSS
-Le **HTML** structure le contenu (titres, paragraphes, liens, images) ; le **CSS** en décrit la présentation (couleurs, polices, mise en page). Séparer les deux permet de changer l'apparence sans toucher au contenu.
+| Langage | Ce qu’il décrit | Exemple |
+| **HTML** | La **structure** du contenu | Titres, paragraphes, liens, images |
+| **CSS** | La **présentation** | Couleurs, polices, mise en page |
+
+Séparer les deux permet de changer entièrement l’apparence d’un site sans toucher à une ligne de son contenu.
 
 ## Les moteurs de recherche
-Trois étapes : des **robots** parcourent le Web (*crawling*), le contenu est **indexé**, puis **classé** par un algorithme. Le PageRank historique de Google évalue une page selon les liens qui pointent vers elle. Le classement n'est jamais neutre : il est le produit d'un algorithme et d'un modèle économique.`,
+| Étape | Ce qui s’y passe |
+| **Crawling** | Des robots parcourent le Web de lien en lien |
+| **Indexation** | Le contenu est stocké et découpé en mots-clés |
+| **Classement** | Un algorithme ordonne les résultats |
+
+Le **PageRank** historique de Google évalue une page selon les liens qui pointent vers elle — une page est importante si des pages importantes la citent.
+
+> Le classement n’est **jamais neutre** : il est le produit d’un algorithme et d’un modèle économique. La première page de résultats est un choix, pas un fait.`,
           },
           questions: [
             ['Qui a inventé le Web ?', ['Tim Berners-Lee', 'Steve Jobs', 'Vinton Cerf', 'Alan Turing'], 0, 'Au CERN, entre 1989 et 1991.'],
@@ -71,19 +95,32 @@ Trois étapes : des **robots** parcourent le Web (*crawling*), le contenu est **
           titre: 'Les réseaux sociaux',
           lecon: {
             titre: 'Modèle économique et effets de réseau',
-            cours: `Un réseau social est un service **gratuit** dont le produit est l'attention de ses utilisateurs.
+            cours: `Un réseau social est un service **gratuit** dont le produit est l’attention de ses utilisateurs. Tout le chapitre découle de cette phrase.
 
 ## Le graphe social
-Les utilisateurs sont des **sommets**, les relations des **arêtes**. On y mesure le **degré** (nombre de relations), le **diamètre** (plus longue distance minimale entre deux sommets) et la **centralité**. L'expérience de Milgram (1967) a popularisé l'idée des « six degrés de séparation ».
+Les utilisateurs sont des **sommets**, les relations des **arêtes**.
+
+| Mesure | Ce qu’elle dit |
+| Le **degré** | Le nombre de relations d’un sommet |
+| Le **diamètre** | La plus longue distance minimale entre deux sommets |
+| La **centralité** | À quel point un sommet est un passage obligé |
+
+L’expérience de **Milgram** (1967) a popularisé l’idée des « six degrés de séparation » : le diamètre du graphe humain serait très petit malgré sa taille.
 
 ## Le modèle économique
-La gratuité est financée par la **publicité ciblée** : plus le service connaît l'utilisateur, plus l'espace publicitaire se vend cher. Le temps passé devient donc l'objectif de conception.
+La gratuité est financée par la **publicité ciblée** : plus le service connaît l’utilisateur, plus l’espace publicitaire se vend cher.
+
+> Le **temps passé** devient donc l’objectif de conception, avant la qualité du service rendu. Ce n’est pas un dérapage : c’est ce que le modèle économique demande.
 
 ## Les algorithmes de recommandation
-Ils sélectionnent ce qui apparaît dans le fil. Optimisés sur l'engagement, ils favorisent ce qui fait réagir — d'où les **bulles de filtre** et la viralité des contenus clivants.
+Ils sélectionnent ce qui apparaît dans le fil. Optimisés sur l’**engagement**, ils favorisent ce qui fait réagir — d’où les **bulles de filtre** et la viralité des contenus clivants, qui suscitent plus de réactions que les contenus nuancés.
 
 ## Risques et régulation
-Cyberharcèlement, désinformation, exposition des mineurs, données personnelles. Le **RGPD** encadre les données ; le **DSA** européen impose depuis 2023 des obligations de modération et de transparence aux grandes plateformes.`,
+| Risque | Le texte qui l’encadre |
+| Données personnelles | Le **RGPD** (2018) |
+| Modération et transparence | Le **DSA** européen (2023) |
+| Cyberharcèlement | Délit aggravé au code pénal |
+| Exposition des mineurs | Âge minimal, contrôle parental |`,
           },
           questions: [
             ['Dans un graphe social, que représente une arête ?', ['Une relation entre deux utilisateurs', 'Un utilisateur', 'Un message', 'Un serveur'], 0, 'Les sommets sont les utilisateurs.'],
@@ -100,19 +137,33 @@ Cyberharcèlement, désinformation, exposition des mineurs, données personnelle
           titre: 'Les données structurées',
           lecon: {
             titre: 'Tableaux, formats et traitement',
-            cours: `Une donnée seule ne vaut rien : c'est sa **structure** qui la rend exploitable.
+            cours: `Une donnée seule ne vaut rien : c’est sa **structure** qui la rend exploitable.
 
 ## Donnée, information, connaissance
-La **donnée** est brute (37,2). L'**information** naît du contexte (37,2 °C, température corporelle). La **connaissance** vient de l'interprétation (une température normale).
+| Niveau | Exemple | Ce qui a été ajouté |
+| **Donnée** | 37,2 | Rien : c’est brut |
+| **Information** | 37,2 °C, température corporelle | Le contexte |
+| **Connaissance** | Une température normale | L’interprétation |
 
 ## Les tables
-Une table organise les données en **lignes** (les enregistrements, ou descripteurs d'une entité) et **colonnes** (les attributs). Un attribut a un **type** : entier, flottant, chaîne, booléen, date.
+Une table organise les données en **lignes** (les enregistrements, un par entité décrite) et en **colonnes** (les attributs). Chaque attribut a un **type** : entier, flottant, chaîne, booléen, date. C’est le type qui autorise ou interdit un traitement — on ne fait pas la moyenne d’une chaîne.
 
 ## Les formats
-**CSV** : texte simple, une ligne par enregistrement, séparateurs — universel mais sans types. **JSON** : imbriqué, typé, standard du Web. Un format **ouvert** garantit l'interopérabilité et la pérennité, contrairement à un format propriétaire.
+| Format | Ce qu’il permet | Sa limite |
+| **CSV** | Texte simple, une ligne par enregistrement | Aucun type, aucune imbrication |
+| **JSON** | Imbrication et types, standard du Web | Plus verbeux |
+
+> Un format **ouvert** garantit l’interopérabilité et la pérennité : un fichier propriétaire dépend d’un logiciel qui peut disparaître, un format ouvert se relit dans vingt ans.
 
 ## Les traitements
-**Rechercher**, **trier**, **filtrer**, **fusionner** (joindre deux tables sur un attribut commun), **agréger** (compter, sommer, moyenner). Le **big data** se caractérise par les 3 V : volume, vitesse, variété — et pose la question du stockage, de l'énergie et de la propriété des données.`,
+| Traitement | Ce qu’il fait |
+| Rechercher | Retrouver un enregistrement |
+| Trier | Ordonner selon un attribut |
+| Filtrer | Ne garder que les lignes qui vérifient un critère |
+| Fusionner | Joindre deux tables sur un attribut commun |
+| Agréger | Compter, sommer, moyenner |
+
+Le **big data** se caractérise par les 3 V — volume, vitesse, variété — et pose la question du stockage, de l’énergie consommée et de la **propriété** des données.`,
           },
           questions: [
             ['Dans une table de données, que représente une ligne ?', ['Un enregistrement (une entité décrite)', 'Un attribut', 'Un type', 'Un fichier'], 0, 'Les colonnes portent les attributs.'],
@@ -129,19 +180,32 @@ Une table organise les données en **lignes** (les enregistrements, ou descripte
           titre: 'Localisation et photographie numérique',
           lecon: {
             titre: 'GPS, cartographie et image capturée',
-            cours: `Deux usages quotidiens qui reposent sur des principes physiques précis.
+            cours: `Deux usages quotidiens qui reposent sur des principes physiques précis — et qui laissent tous deux des traces.
 
 ## Le GPS
-Une constellation de satellites émet en permanence l'heure exacte et sa position. Le récepteur calcule sa distance à chaque satellite par le **temps de trajet du signal** : c'est la **trilatération**. Il faut au moins **quatre** satellites — trois pour la position, un pour corriger l'horloge du récepteur.
+Une constellation de satellites émet en permanence l’heure exacte et sa position. Le récepteur calcule sa distance à chaque satellite par le **temps de trajet du signal** : c’est la **trilatération**.
+
+| Nombre de satellites | À quoi il sert |
+| 3 | Déterminer la position |
+| 1 de plus, soit 4 au total | Corriger l’horloge du récepteur |
+
+> Le quatrième satellite n’est pas un supplément de précision : sans lui, une erreur d’un millionième de seconde sur l’horloge du récepteur fausse la position de 300 mètres.
 
 ## Les protocoles et la carte
-La trame **NMEA** transporte les données de position. Les cartes numériques superposent des **couches** (relief, routes, bâtiments) ; **OpenStreetMap** est une carte libre alimentée par ses contributeurs.
+La trame **NMEA** transporte les données de position. Les cartes numériques superposent des **couches** — relief, routes, bâtiments — que l’on active séparément. **OpenStreetMap** est une carte libre, alimentée par ses contributeurs.
 
-## L'image numérique
-Une photo est une matrice de **pixels**. En RVB, chaque pixel porte trois composantes de 0 à 255, soit **3 octets** — d'où 16,7 millions de couleurs possibles. La **définition** est le nombre de pixels ; la **résolution**, leur densité.
+## L’image numérique
+Une photo est une matrice de **pixels**. En RVB, chaque pixel porte trois composantes de 0 à 255.
+
+| Grandeur | Ce qu’elle mesure |
+| Poids d’un pixel | 3 octets, soit 16,7 millions de couleurs possibles |
+| **Définition** | Le nombre total de pixels |
+| **Résolution** | Leur densité, en points par pouce |
 
 ## Les métadonnées EXIF
-Une photo embarque date, modèle d'appareil, réglages et souvent la **position GPS**. Publier une photo, c'est donc parfois publier le lieu où elle a été prise — ce que la plupart des gens ignorent.`,
+Une photo embarque la date, le modèle d’appareil, les réglages — et souvent la **position GPS** du lieu de prise de vue.
+
+> Publier une photo, c’est donc parfois publier l’endroit où l’on habite. La plupart des gens l’ignorent, et aucun réseau social ne le rappelle au moment de l’envoi.`,
           },
           questions: [
             ['Combien de satellites au minimum pour une position GPS fiable ?', ['4', '2', '3', '6'], 0, 'Trois pour la position, un quatrième pour corriger l’horloge du récepteur.'],

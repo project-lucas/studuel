@@ -95,19 +95,27 @@ chapters et lessons sont ON DELETE CASCADE).`,
           titre: 'La conscience',
           lecon: {
             titre: 'Être présent à soi',
-            cours: `« Conscience » vient du latin *cum scientia* : accompagné de savoir. Être conscient, ce n'est pas seulement percevoir, c'est savoir que l'on perçoit.
+            cours: `« Conscience » vient du latin *cum scientia* : accompagné de savoir. Être conscient, ce n’est pas seulement percevoir — c’est **savoir que l’on perçoit**.
 
 ## Trois degrés
-La conscience **immédiate** est le rapport spontané au monde : je vois, je marche, j'ai froid. La conscience **réfléchie** est le retour de la pensée sur elle-même : je sais que je vois. La conscience **morale**, elle, ne dit pas ce qui est mais ce qui vaut : elle juge ce que je fais.
+| Degré | Ce qu’il est | Exemple |
+| Conscience **immédiate** | Le rapport spontané au monde | Je vois, je marche, j’ai froid |
+| Conscience **réfléchie** | Le retour de la pensée sur elle-même | Je sais que je vois |
+| Conscience **morale** | Non ce qui est, mais ce qui vaut | Je juge ce que je fais |
 
 ## Le sujet pensant
-Descartes cherche une certitude que le doute ne puisse pas entamer. Il peut douter de ses sens, du monde, de son corps — mais s'il doute, il pense, et s'il pense, il est. « Je pense, donc je suis » (*Discours de la méthode*, 1637). Le doute n'est pas ici du scepticisme : il est **méthodique**, il sert à trouver un point fixe.
+Descartes cherche une certitude que le doute ne puisse pas entamer. Il peut douter de ses sens, du monde, de son corps — mais s’il doute, il pense, et s’il pense, il est. « Je pense, donc je suis » (*Discours de la méthode*, 1637).
+
+> Le doute cartésien n’est pas du scepticisme : il est **méthodique**. Il ne sert pas à ruiner le savoir, il sert à trouver le point fixe à partir duquel le reconstruire.
 
 ## Les soupçons
-Kant accorde que le « je pense » accompagne toutes mes représentations, mais il ajoute que je me connais seulement comme phénomène : la conscience ne me livre pas ce que je suis en moi-même. Freud fait de la conscience une petite partie du psychisme. Sartre, lui, retourne l'affaire : la conscience n'est pas une chose, elle est vide, elle n'est rien d'autre que le mouvement par lequel elle vise le monde et se choisit.
+| Penseur | Ce qu’il conteste au « je pense » |
+| **Kant** | Le « je pense » accompagne mes représentations, mais je ne me connais que comme **phénomène** : jamais tel que je suis en moi-même |
+| **Freud** | La conscience n’est qu’une petite partie du psychisme, et pas la plus décisive |
+| **Sartre** | La conscience n’est pas une chose : elle est **vide**, pur mouvement vers le monde |
 
-## Une séparation d'avec soi
-Être conscient, c'est ne plus coïncider avec soi : je me juge, je me projette, je me regrette. Pascal y voit à la fois notre inquiétude et notre grandeur — l'homme est « un roseau, le plus faible de la nature, mais un roseau pensant », et « toute notre dignité consiste en la pensée ».`,
+## Une séparation d’avec soi
+Être conscient, c’est ne plus coïncider avec soi : je me juge, je me projette, je me regrette. **Pascal** y voit à la fois notre inquiétude et notre grandeur — l’homme est « un roseau, le plus faible de la nature, mais un roseau pensant », et « toute notre dignité consiste en la pensée ».`,
           },
           questions: [
             ['Que dit l’étymologie latine du mot « conscience » (*cum scientia*) ?', ['Accompagné de savoir', 'Sans savoir', 'Au-dessus du savoir', 'Contre le savoir'], 0, 'Être conscient, c’est savoir que l’on sait.'],
@@ -125,19 +133,38 @@ Kant accorde que le « je pense » accompagne toutes mes représentations, mais 
           titre: 'L’inconscient',
           lecon: {
             titre: 'Ce qui agit en nous à notre insu',
-            cours: `Peut-on parler d'une pensée qui échappe à la conscience ? L'idée paraît contradictoire — et c'est pourtant l'hypothèse que Freud transforme en méthode.
+            cours: `Peut-on parler d’une pensée qui échappe à la conscience ? L’idée paraît contradictoire — et c’est pourtant l’hypothèse que Freud transforme en méthode.
 
-## Ce que l'inconscient n'est pas
-Il ne désigne pas le **non-conscient** biologique (la digestion, le rythme cardiaque), ni l'inattention, ni l'oubli banal. L'inconscient **psychique** est fait de représentations qui ont un sens et qui agissent : des pensées, mais des pensées que le sujet ne peut pas reconnaître comme siennes.
+## Ce que l’inconscient n’est pas
+| Ce n’est pas… | Parce que… |
+| Le non-conscient biologique | La digestion n’a pas de **sens**, elle n’est pas une pensée |
+| L’inattention | Elle est réversible : il suffit d’y prêter attention |
+| L’oubli banal | Il n’agit pas, il laisse un vide |
+
+L’inconscient **psychique** est fait de représentations qui ont un sens et qui **agissent** : des pensées, mais que le sujet ne peut reconnaître comme siennes.
 
 ## Le refoulement et ses retours
-Certains désirs, incompatibles avec les exigences morales et sociales, sont **refoulés** : repoussés hors de la conscience par une censure. Ils ne disparaissent pas pour autant, ils reviennent déguisés — dans les **rêves**, les **lapsus**, les **actes manqués**, les **symptômes**. Rien n'est fortuit dans la vie psychique : c'est le **déterminisme psychique**.
+Certains désirs, incompatibles avec les exigences morales et sociales, sont **refoulés** — repoussés hors de la conscience par une censure. Ils ne disparaissent pas : ils reviennent déguisés.
+
+| La voie de retour | Ce qu’elle révèle |
+| Le **rêve** | La « voie royale » vers l’inconscient |
+| Le **lapsus** | Un mot pour un autre, qui dit ce qu’on tait |
+| L’**acte manqué** | Un acte réussi, mais d’une autre intention |
+| Le **symptôme** | Un compromis entre le désir et l’interdit |
+
+> Rien n’est fortuit dans la vie psychique : c’est le **déterminisme psychique**. L’hypothèse n’est pas gratuite, elle est ce qui rend ces phénomènes interprétables au lieu d’absurdes.
 
 ## Les deux topiques
-Première topique : inconscient / préconscient / conscient. Seconde topique : le **Ça** (les pulsions, qui ne connaît que le plaisir), le **Moi** (qui compose avec le réel) et le **Surmoi** (les interdits intériorisés). D'où la formule : le Moi « n'est pas maître dans sa propre maison ».
+| Topique | Les instances | Ce qu’elle décrit |
+| Première | Inconscient, préconscient, conscient | Des lieux et un accès |
+| Seconde | **Ça** (les pulsions), **Moi** (le réel), **Surmoi** (les interdits) | Des forces en conflit |
 
-## L'objection de la mauvaise foi
-Sartre refuse l'inconscient : pour censurer un désir, la censure devrait déjà le connaître — donc en être consciente. Ce que Freud appelle refoulement, il l'appelle **mauvaise foi** : une fuite de la conscience devant sa propre liberté, dont on reste responsable. C'est là tout l'enjeu : l'inconscient explique-t-il l'homme, ou l'excuse-t-il ?`,
+D’où la formule : le Moi « n’est pas maître dans sa propre maison ».
+
+## L’objection de la mauvaise foi
+**Sartre** refuse l’inconscient : pour censurer un désir, la censure devrait déjà le connaître — donc en être consciente. Ce que Freud appelle refoulement, il l’appelle **mauvaise foi** : une fuite de la conscience devant sa propre liberté, dont on reste responsable.
+
+Tout l’enjeu du chapitre tient là : l’inconscient **explique**-t-il l’homme, ou l’**excuse**-t-il ?`,
           },
           questions: [
             ['L’inconscient psychique freudien désigne…', ['Des représentations refoulées qui agissent à notre insu', 'Les fonctions du corps comme la digestion', 'Un simple manque d’attention', 'La perte de mémoire liée à l’âge'], 0, 'Ce sont des pensées porteuses de sens, pas des mécanismes biologiques.'],
@@ -155,19 +182,36 @@ Sartre refuse l'inconscient : pour censurer un désir, la censure devrait déjà
           titre: 'La nature',
           lecon: {
             titre: 'Ce qui n’est pas l’œuvre de l’homme',
-            cours: `Le mot « nature » sert à tout : la campagne, l'univers, l'essence d'une chose, ce qui est normal. Une dissertation commence toujours par y mettre de l'ordre.
+            cours: `Le mot « nature » sert à tout : la campagne, l’univers, l’essence d’une chose, ce qui est normal. Une dissertation commence toujours par y mettre de l’ordre.
 
 ## Deux sens à distinguer
-La **nature d'une chose** est ce qu'elle est essentiellement (« la nature du triangle »). **La nature** est l'ensemble de ce qui existe et se produit sans l'homme. Les Grecs opposent la *phusis*, ce qui pousse et se développe de soi-même, à la *technè*, ce qui est produit par l'art humain. Aristote y ajoute une idée forte : dans la nature, chaque être tend vers sa fin — « la nature ne fait rien en vain ».
+| Expression | Ce qu’elle désigne |
+| « La nature du triangle » | L’**essence** : ce qu’une chose est |
+| « Protéger la nature » | L’**ensemble** de ce qui existe sans l’homme |
+
+Les Grecs opposent la *phusis* — ce qui pousse et se développe de soi-même — à la *technè*, ce qui est produit par l’art humain. **Aristote** y ajoute une idée forte : dans la nature, chaque être tend vers sa fin, « la nature ne fait rien en vain ».
 
 ## Nature et culture
-Est **naturel** ce qui est universel et spontané ; est **culturel** ce qui varie d'une société à l'autre et relève de la norme. Lévi-Strauss note que la prohibition de l'inceste tient les deux à la fois : universelle comme la nature, règle comme la culture. C'est le seuil où l'humain commence.
+| | Naturel | Culturel |
+| Le critère | Universel et spontané | Variable d’une société à l’autre |
+| Le régime | Le fait | La norme |
+
+**Lévi-Strauss** note que la prohibition de l’inceste tient les deux à la fois : **universelle** comme la nature, **règle** comme la culture. C’est le seuil où l’humain commence.
 
 ## Y a-t-il une nature humaine ?
-L'état de nature de Hobbes ou de Rousseau n'est pas un fait historique : c'est une **fiction méthodique** qui sert à comprendre ce que la société nous a fait. Chez Hobbes, l'homme sans État vit dans « la guerre de tous contre tous » ; chez Rousseau, il est paisible, ignorant, mû par l'amour de soi et la pitié. Sartre récuse la question : « l'existence précède l'essence », rien n'est donné d'avance à l'homme.
+| Penseur | L’état de nature | Ce que la société y ajoute |
+| **Hobbes** | « La guerre de tous contre tous » | La sécurité, par le pouvoir commun |
+| **Rousseau** | Paisible, ignorant, mû par l’amour de soi et la pitié | La propriété, l’inégalité, la corruption |
+| **Sartre** | Il n’y en a pas : « l’existence précède l’essence » | Rien n’est donné d’avance à l’homme |
+
+> L’état de nature n’est **pas un fait historique** : c’est une fiction méthodique, qui sert à mesurer ce que la société nous a fait. Le traiter comme une thèse anthropologique est le contresens le plus fréquent.
 
 ## Maîtriser ou ménager
-Descartes veut nous rendre « comme maîtres et possesseurs de la nature » : la connaître pour l'utiliser. La crise écologique retourne le programme — Hans Jonas demande d'agir de telle sorte que les effets de nos actes soient compatibles avec la permanence d'une vie humaine sur terre. La nature devient alors moins une réserve qu'une responsabilité.`,
+| Position | Le programme |
+| **Descartes** | Nous rendre « comme maîtres et possesseurs de la nature » : la connaître pour l’utiliser |
+| **Hans Jonas** | Agir de telle sorte que les effets de nos actes soient compatibles avec la permanence d’une vie humaine sur terre |
+
+La crise écologique retourne le programme cartésien : la nature devient moins une réserve qu’une **responsabilité**.`,
           },
           questions: [
             ['À quoi les Grecs opposent-ils la *phusis* (la nature) ?', ['À la *technè*, ce qui est produit par l’art humain', 'Au *logos*', 'À la *polis*', 'À la *doxa*'], 0, 'Ce qui pousse de soi-même s’oppose à ce qui est fabriqué.'],
@@ -185,16 +229,31 @@ Descartes veut nous rendre « comme maîtres et possesseurs de la nature » : la
           titre: 'Le bonheur',
           lecon: {
             titre: 'Le souverain bien',
-            cours: `Tout le monde veut être heureux : c'est ce que les philosophes appellent le **souverain bien**, la fin que l'on recherche pour elle-même et non pour autre chose. Le désaccord commence dès qu'on demande en quoi il consiste.
+            cours: `Tout le monde veut être heureux : c’est ce que les philosophes appellent le **souverain bien**, la fin recherchée pour elle-même et non pour autre chose. Le désaccord commence dès qu’on demande en quoi il consiste.
 
 ## Un idéal flou
-Kant y voit « un idéal, non de la raison, mais de l'imagination » : chacun le veut, personne ne peut dire précisément ce qu'il veut. Le bonheur n'est pas non plus le **plaisir**, qui est ponctuel et fugitif, ni la **joie**, qui est une émotion : il désigne un état durable de satisfaction complète.
+| Notion | Ce qu’elle est | Sa durée |
+| Le **plaisir** | Une satisfaction sensible | Ponctuel, fugitif |
+| La **joie** | Une émotion | Passagère, intense |
+| Le **bonheur** | Un état de satisfaction complète | Durable, global |
+
+**Kant** y voit « un idéal, non de la raison, mais de l’imagination » : chacun le veut, personne ne peut dire précisément ce qu’il veut.
 
 ## Les recettes antiques
-**Épicure** distingue les désirs naturels et nécessaires (manger), naturels et non nécessaires (bien manger), ni naturels ni nécessaires (la gloire, la richesse). Réduire ses désirs suffit : le bonheur est l'*ataraxie*, l'absence de trouble. Les **stoïciens** (Épictète, Marc Aurèle) distinguent ce qui dépend de nous — nos jugements — et ce qui n'en dépend pas : vouloir changer le reste, c'est se condamner au malheur. **Aristote** répond autrement : le bonheur est l'activité de l'âme conforme à la vertu, dans une vie accomplie ; il y faut aussi des amis et un minimum de biens.
+| École | Le diagnostic | Le remède |
+| **Épicure** | Nous souffrons de désirs vains | Trier ses désirs, viser l’*ataraxie* — l’absence de trouble |
+| **Stoïciens** | Nous voulons ce qui ne dépend pas de nous | Distinguer ce qui dépend de nous (nos jugements) du reste |
+| **Aristote** | Le bonheur n’est pas un état, c’est une activité | Vivre selon la **vertu**, dans une vie accomplie |
+
+Épicure classe les désirs en trois : naturels et nécessaires (manger), naturels et non nécessaires (bien manger), ni naturels ni nécessaires (la gloire, la richesse). Aristote, lui, admet qu’il y faut aussi des amis et un minimum de biens : la vertu seule ne suffit pas.
 
 ## Les objections
-Pascal soutient que nous ne cherchons pas le bonheur mais le **divertissement** : nous fuyons le repos, où nous rencontrerions notre condition. Schopenhauer décrit une oscillation entre la souffrance du manque et l'ennui de la satisfaction. Kant, lui, sépare morale et bonheur : la morale n'apprend pas à être heureux mais à se rendre **digne** de l'être.`,
+| Penseur | Ce qu’il oppose |
+| **Pascal** | Nous ne cherchons pas le bonheur mais le **divertissement** : nous fuyons le repos, où nous rencontrerions notre condition |
+| **Schopenhauer** | La vie oscille entre la souffrance du manque et l’ennui de la satisfaction |
+| **Kant** | La morale n’apprend pas à être heureux, mais à se rendre **digne** de l’être |
+
+> L’objection kantienne est la plus redoutable en dissertation : elle ne dit pas que le bonheur est impossible, elle dit qu’il n’est pas le critère du bien. Un homme heureux peut être injuste.`,
           },
           questions: [
             ['Le « souverain bien » désigne…', ['La fin recherchée pour elle-même', 'Le plaisir immédiat', 'La richesse', 'Le pouvoir politique'], 0, 'Tout le reste est recherché en vue de lui.'],
@@ -212,19 +271,37 @@ Pascal soutient que nous ne cherchons pas le bonheur mais le **divertissement** 
           titre: 'Le travail',
           lecon: {
             titre: 'Peine, œuvre et valeur',
-            cours: `Le mot vient du latin *tripalium*, un instrument de torture — et la Genèse fait du travail une punition. Pourtant, c'est aussi par lui que l'homme se fait lui-même.
+            cours: `Le mot vient du latin *tripalium*, un instrument de torture — et la Genèse fait du travail une punition. Pourtant, c’est aussi par lui que l’homme se fait lui-même. Toute la notion tient dans cette tension.
 
 ## La nécessité et la peine
-Travailler, c'est transformer la nature pour subsister : une activité contrainte, pénible, qui prend du temps de vie. Les Grecs la réservaient aux esclaves, laissant aux citoyens libres le loisir (*skholè*) — d'où vient notre mot « école ».
+Travailler, c’est transformer la nature pour subsister : une activité contrainte, pénible, qui prend du temps de vie. Les Grecs la réservaient aux esclaves, laissant aux citoyens libres le loisir (*skholè*) — d’où vient notre mot « école ».
 
 ## Le travail qui humanise
-Hegel renverse ce mépris. Dans la dialectique du **maître et de l'esclave**, c'est l'esclave qui, en travaillant la chose, forme le monde et se forme lui-même : il se reconnaît dans son œuvre, tandis que le maître, qui ne fait que consommer, ne produit rien. Marx ajoute la différence décisive : « ce qui distingue dès l'abord le plus mauvais architecte de l'abeille la plus experte, c'est qu'il a construit la cellule dans sa tête avant de la construire dans la ruche ».
+| Penseur | Ce qu’il établit |
+| **Hegel** | Dans la dialectique du maître et de l’esclave, c’est l’**esclave** qui, en travaillant la chose, forme le monde et se forme lui-même |
+| **Marx** | « Ce qui distingue le plus mauvais architecte de l’abeille la plus experte, c’est qu’il a construit la cellule dans sa tête avant de la construire dans la ruche » |
 
-## L'aliénation
-Mais le travail peut aussi défaire celui qui travaille. Marx appelle **aliénation** la situation où le travailleur ne se reconnaît plus dans son produit : il vend sa force de travail, l'objet lui échappe, la tâche est parcellisée. Adam Smith avait déjà décrit les gains de la division du travail ; Marx en montre le prix humain.
+Le maître, qui ne fait que consommer, ne produit rien — et ne se reconnaît dans rien.
+
+## L’aliénation
+Mais le travail peut aussi défaire celui qui travaille. **Marx** appelle **aliénation** la situation où le travailleur ne se reconnaît plus dans son produit.
+
+| La forme de l’aliénation | Ce qui est perdu |
+| Il vend sa force de travail | Le temps de sa vie devient une marchandise |
+| L’objet lui échappe | Il ne possède pas ce qu’il produit |
+| La tâche est parcellisée | Il ne voit plus le tout auquel il contribue |
+
+Adam Smith avait décrit les **gains** de la division du travail ; Marx en montre le **prix humain**.
 
 ## Œuvre, travail, action
-Hannah Arendt distingue le **travail** (qui produit du consommable et recommence sans fin), l'**œuvre** (qui produit un monde durable) et l'**action** (la parole et l'initiative politiques). Sa question reste ouverte : une société qui ne valorise plus que le travail sait-elle encore ce qu'elle fait des deux autres ?`,
+**Hannah Arendt** distingue trois activités que la langue courante confond :
+
+| Activité | Ce qu’elle produit | Sa temporalité |
+| Le **travail** | Du consommable | Il recommence sans fin |
+| L’**œuvre** | Un monde durable | Elle laisse une trace |
+| L’**action** | De la parole et de l’initiative politiques | Elle ouvre du nouveau |
+
+> Sa question reste ouverte : une société qui ne valorise plus que le travail sait-elle encore ce qu’elle fait des deux autres ?`,
           },
           questions: [
             ['Le mot « travail » vient du latin *tripalium*, qui désignait…', ['Un instrument de torture', 'Une charrue', 'Un salaire', 'Un atelier'], 0, 'L’étymologie garde la trace de la peine.'],
@@ -242,19 +319,28 @@ Hannah Arendt distingue le **travail** (qui produit du consommable et recommence
           titre: 'L’État',
           lecon: {
             titre: 'Pourquoi obéir à un pouvoir commun',
-            cours: `L'État n'est pas la société : c'est l'institution qui détient le pouvoir politique sur un territoire, avec ses lois, son administration, sa police, ses tribunaux.
+            cours: `L’État n’est pas la société : c’est l’**institution** qui détient le pouvoir politique sur un territoire, avec ses lois, son administration, sa police, ses tribunaux.
 
-## Le pari de Hobbes
-Sans pouvoir commun, dit Hobbes, les hommes sont dans « la guerre de tous contre tous », et la vie y est « solitaire, misérable, dangereuse, animale et brève ». Chacun renonce alors à son droit sur tout au profit d'un souverain — le **Léviathan** — en échange de la sécurité. L'État naît d'un **contrat**, non de la nature.
+## Les trois contrats
+Aucun de ces auteurs ne raconte une histoire : chacun construit une hypothèse pour justifier — ou limiter — l’obéissance.
 
-## Les autres contrats
-Locke n'accepte pas un pouvoir absolu : les individus ont des droits naturels (vie, liberté, propriété) que l'État doit **garantir**, et qu'il perd le droit de gouverner s'il les viole. Rousseau change encore la donne : le peuple ne se donne pas un maître, il devient souverain ; obéir à la **volonté générale** exprimée par la loi, c'est n'obéir qu'à soi-même.
+| Penseur | L’état de nature | Ce que fonde le contrat | La limite du pouvoir |
+| **Hobbes** | « Guerre de tous contre tous » : vie « solitaire, misérable, dangereuse, animale et brève » | La sécurité, par le **Léviathan** | Aucune, ou presque |
+| **Locke** | Des droits naturels : vie, liberté, propriété | La **garantie** de ces droits | L’État qui les viole perd sa légitimité |
+| **Rousseau** | Une liberté que la société a perdue | La **volonté générale** : le peuple est souverain | Obéir à la loi, c’est n’obéir qu’à soi |
 
-## Ce qui définit l'État moderne
-Max Weber le définit par le **monopole de la violence physique légitime** sur un territoire donné : l'État seul peut contraindre légalement, et cette contrainte est reconnue comme fondée. S'y ajoutent l'impersonnalité du droit et une administration réglée.
+## Ce qui définit l’État moderne
+**Max Weber** le définit par le **monopole de la violence physique légitime** sur un territoire donné : l’État seul peut contraindre légalement, et cette contrainte est reconnue comme fondée. S’y ajoutent l’impersonnalité du droit et une administration réglée.
 
 ## Les critiques
-Pour Marx, l'État n'est pas neutre : il est l'instrument par lequel une classe maintient sa domination. La Boétie s'étonne d'autre chose — de la **servitude volontaire**, qui fait que des millions d'hommes obéissent à un seul sans y être forcés. Reste alors la question de fond : jusqu'où l'État doit-il aller, et où commence la tyrannie ?`,
+| Critique | Ce qu’elle vise |
+| **Marx** | L’État n’est pas neutre : il est l’instrument par lequel une classe maintient sa domination |
+| **La Boétie** | La **servitude volontaire** : des millions d’hommes obéissent à un seul sans y être forcés |
+
+> La question de La Boétie est la plus dérangeante : elle ne demande pas pourquoi le pouvoir contraint, mais **pourquoi on lui obéit sans contrainte**. Aucune théorie du contrat n’y répond vraiment.
+
+## Ce qui reste à trancher
+Jusqu’où l’État doit-il aller ? La réponse libérale limite ses fonctions à la protection des droits ; la réponse sociale lui confie la réduction des inégalités. Et la tyrannie ne commence pas là où l’État fait beaucoup, mais là où il n’est plus **contrôlable**.`,
           },
           questions: [
             ['Pour Hobbes, l’État naît…', ['D’un contrat par lequel chacun renonce à son droit sur tout', 'De la nature humaine sociable', 'De la volonté divine', 'De la conquête militaire uniquement'], 0, 'C’est un artifice destiné à sortir de la guerre de tous contre tous.'],
@@ -272,19 +358,34 @@ Pour Marx, l'État n'est pas neutre : il est l'instrument par lequel une classe 
           titre: 'La justice et le droit',
           lecon: {
             titre: 'Le juste, le légal, le légitime',
-            cours: `Le droit dit ce qui est **légal** ; la justice demande ce qui est **légitime**. Tant que les deux coïncident, la question dort ; c'est quand une loi paraît injuste qu'elle se réveille.
+            cours: `Le droit dit ce qui est **légal** ; la justice demande ce qui est **légitime**. Tant que les deux coïncident, la question dort ; c’est quand une loi paraît injuste qu’elle se réveille.
 
 ## Droit positif et droit naturel
-Le **droit positif** est l'ensemble des règles effectivement en vigueur dans une société, à une époque. Le **droit naturel** désigne des principes valables indépendamment des lois écrites, auxquels on peut les mesurer. Antigone, chez Sophocle, oppose déjà « les lois non écrites des dieux » à l'édit de Créon : la scène pose le problème une fois pour toutes.
+| | Droit positif | Droit naturel |
+| Ce que c’est | Les règles effectivement en vigueur | Des principes valables indépendamment des lois écrites |
+| Comment on le connaît | On le lit dans les codes | On le pense, on l’argumente |
+| Sa fonction | Régler la vie commune | Permettre de **juger** les lois |
 
-## Les deux justices d'Aristote
-La justice **distributive** répartit les biens et les honneurs selon le mérite : c'est une égalité **proportionnelle** (à chacun selon sa contribution). La justice **corrective** rétablit l'équilibre rompu par un tort, indépendamment des personnes : c'est une égalité **arithmétique**. Confondre les deux, c'est se tromper d'exigence.
+**Antigone**, chez Sophocle, oppose déjà « les lois non écrites des dieux » à l’édit de Créon : la scène pose le problème une fois pour toutes.
+
+## Les deux justices d’Aristote
+| Justice | Ce qu’elle fait | Quelle égalité |
+| **Distributive** | Répartit biens et honneurs selon le mérite | **Proportionnelle** : à chacun selon sa contribution |
+| **Corrective** | Rétablit l’équilibre rompu par un tort | **Arithmétique** : indépendante des personnes |
+
+> Confondre les deux, c’est se tromper d’exigence : un tribunal qui jugerait selon le mérite social de l’accusé ferait de la distribution là où l’on attend de la correction.
 
 ## La force et la justice
-Pascal constate froidement : « ne pouvant faire que ce qui est juste fût fort, on a fait que ce qui est fort fût juste ». Rawls cherche une issue : imaginons des personnes choisissant les règles de leur société sous un **voile d'ignorance**, sans savoir la place qu'elles y occuperont. Elles n'accepteraient d'inégalités que si elles profitent aux plus défavorisés.
+**Pascal** constate froidement : « ne pouvant faire que ce qui est juste fût fort, on a fait que ce qui est fort fût juste ».
+
+**Rawls** cherche une issue : imaginons des personnes choisissant les règles de leur société sous un **voile d’ignorance**, sans savoir la place qu’elles y occuperont. Elles n’accepteraient d’inégalités que si celles-ci profitent aux plus défavorisés.
 
 ## Punir
-Pourquoi punir ? Par **rétribution** — la peine répare l'ordre rompu, elle est due au crime ; ou par **prévention** — elle dissuade et protège. Beccaria en tire une règle qui a fait le droit pénal moderne : ce n'est pas la sévérité de la peine qui dissuade, mais sa certitude.`,
+| Justification | Ce qu’elle vise | Son regard |
+| **Rétribution** | Réparer l’ordre rompu ; la peine est due au crime | Vers le passé |
+| **Prévention** | Dissuader et protéger | Vers l’avenir |
+
+**Beccaria** en tire la règle qui a fait le droit pénal moderne : ce n’est pas la **sévérité** de la peine qui dissuade, mais sa **certitude**.`,
           },
           questions: [
             ['Le droit positif désigne…', ['Les règles effectivement en vigueur dans une société', 'Les principes universels de la morale', 'Les droits que l’on mérite', 'Les lois favorables aux citoyens'], 0, 'Il s’oppose au droit naturel, qui sert à le juger.'],
@@ -302,19 +403,41 @@ Pourquoi punir ? Par **rétribution** — la peine répare l'ordre rompu, elle e
           titre: 'Le devoir',
           lecon: {
             titre: 'Agir par devoir',
-            cours: `Le devoir n'est pas la contrainte. La contrainte me force de l'extérieur ; l'obligation morale me lie de l'intérieur — je peux toujours y désobéir, et c'est pourquoi elle a un sens.
+            cours: `Le devoir n’est pas la contrainte. La contrainte me force de l’extérieur ; l’obligation morale me lie de l’intérieur — je peux toujours y désobéir, et c’est précisément pourquoi elle a un sens.
 
 ## Par devoir, ou conformément au devoir
-Kant introduit la distinction décisive. Le commerçant honnête par intérêt agit **conformément** au devoir ; celui qui l'est parce que c'est juste agit **par** devoir. Seule la seconde intention a une valeur morale : « il n'est rien dans le monde que l'on puisse concevoir sans restriction comme bon, à l'exception d'une bonne volonté ».
+| | Conformément au devoir | Par devoir |
+| L’acte | Il est correct | Il est correct |
+| Le mobile | L’intérêt, l’inclination | Le respect de la loi morale |
+| L’exemple de Kant | Le commerçant honnête par calcul | Le commerçant honnête parce que c’est juste |
+| Sa valeur morale | Aucune | Entière |
 
-## L'impératif catégorique
-Un impératif **hypothétique** dit : si tu veux X, fais Y. L'impératif **catégorique** commande sans condition. Kant en donne deux formulations à retenir : « agis uniquement d'après la maxime qui fait que tu peux vouloir en même temps qu'elle devienne une loi universelle » ; et « agis de façon à traiter l'humanité, en toi comme en autrui, toujours en même temps comme une fin, jamais simplement comme un moyen ».
+« Il n’est rien dans le monde que l’on puisse concevoir sans restriction comme bon, à l’exception d’une **bonne volonté**. »
+
+## L’impératif catégorique
+| Type d’impératif | Sa forme | Exemple |
+| **Hypothétique** | Si tu veux X, fais Y | Si tu veux être estimé, sois honnête |
+| **Catégorique** | Fais Y, sans condition | Sois honnête |
+
+Kant en donne deux formulations à retenir :
+
+1. « Agis uniquement d’après la maxime qui fait que tu peux vouloir en même temps qu’elle devienne une **loi universelle**. »
+2. « Agis de façon à traiter l’humanité, en toi comme en autrui, toujours en même temps comme une **fin**, jamais simplement comme un **moyen**. »
 
 ## Les objections
-Benjamin Constant objecte le cas du mensonge : faut-il dire la vérité à l'assassin qui cherche sa victime ? L'**utilitarisme** (Bentham, Mill) répond autrement — une action est bonne selon ses conséquences, par la plus grande somme de bonheur du plus grand nombre. Nietzsche, lui, soupçonne : la morale du devoir serait une invention des faibles, un **ressentiment** retourné en vertu.
+| Objection | Ce qu’elle reproche à Kant |
+| **Constant** | Faut-il dire la vérité à l’assassin qui cherche sa victime ? La rigueur devient complice |
+| L’**utilitarisme** (Bentham, Mill) | Une action est bonne par ses **conséquences** : la plus grande somme de bonheur du plus grand nombre |
+| **Nietzsche** | La morale du devoir serait une invention des faibles, un **ressentiment** retourné en vertu |
 
 ## Conviction et responsabilité
-Max Weber propose une sortie utile : l'**éthique de conviction** juge l'acte sur son principe, l'**éthique de responsabilité** sur ses effets prévisibles. Un homme d'action sérieux tient les deux, sans jamais les confondre.`,
+**Max Weber** propose une sortie utile :
+
+| Éthique | Elle juge l’acte sur… |
+| De **conviction** | Son principe, quoi qu’il arrive |
+| De **responsabilité** | Ses effets prévisibles |
+
+> Un homme d’action sérieux tient les deux **sans les confondre**. Renoncer à la conviction, c’est le cynisme ; ignorer les conséquences, c’est l’irresponsabilité.`,
           },
           questions: [
             ['Chez Kant, agir « conformément au devoir » sans agir « par devoir », c’est…', ['Faire ce qu’il faut, mais par intérêt', 'Désobéir à la loi', 'Agir sans réfléchir', 'Agir par pitié'], 0, 'L’acte est correct, mais sa valeur morale est nulle.'],
@@ -332,19 +455,30 @@ Max Weber propose une sortie utile : l'**éthique de conviction** juge l'acte su
           titre: 'La raison',
           lecon: {
             titre: 'Le pouvoir de rendre raison',
-            cours: `La raison est double : c'est la **faculté** de penser et de juger, et c'est aussi la **cause** d'une chose — « la raison de ce phénomène ». Les deux sens tiennent ensemble : rendre raison, c'est expliquer.
+            cours: `La raison est double : c’est la **faculté** de penser et de juger, et c’est aussi la **cause** d’une chose — « la raison de ce phénomène ». Les deux sens tiennent ensemble : rendre raison, c’est expliquer.
 
 ## Le principe de raison
-Leibniz le formule : « rien n'arrive sans qu'il y ait une raison suffisante ». C'est ce principe qui interdit de se satisfaire du hasard ou du merveilleux, et qui a fait sortir la pensée du mythe : au lieu de raconter comment le monde est né, on cherche par quoi il s'explique.
+**Leibniz** le formule : « rien n’arrive sans qu’il y ait une raison suffisante ».
+
+> C’est ce principe qui interdit de se satisfaire du hasard ou du merveilleux, et qui a fait sortir la pensée du mythe : au lieu de **raconter** comment le monde est né, on cherche par quoi il s’**explique**.
 
 ## Rationalisme et empirisme
-Descartes soutient que la raison — « la chose du monde la mieux partagée » — peut atteindre le vrai par ses seules idées claires et distinctes. Hume répond que toute connaissance vient de l'**expérience**, et que notre idée de causalité n'est qu'une habitude : nous avons vu mille fois B suivre A, nous n'avons jamais vu de lien nécessaire. Kant tranche : « des pensées sans contenu sont vides, des intuitions sans concepts sont aveugles » — il faut les deux.
+| | Rationalisme (**Descartes**) | Empirisme (**Hume**) |
+| D’où vient le savoir | De la raison seule, par idées claires et distinctes | De l’**expérience**, toujours |
+| Le statut de la causalité | Un lien nécessaire, connaissable | Une **habitude** : on a vu mille fois B suivre A |
+| Le modèle | Les mathématiques | L’observation |
+
+**Kant** tranche : « des pensées sans contenu sont vides, des intuitions sans concepts sont aveugles ». Il faut les deux — l’expérience fournit la matière, l’entendement la forme.
 
 ## Les limites de la raison
-Kant montre que la raison s'égare quand elle veut connaître ce qui excède toute expérience possible (Dieu, l'âme, le monde comme totalité) : elle produit alors des raisonnements également démontrables et contradictoires. Pascal ajoute : « le cœur a ses raisons que la raison ne connaît point » — non pour renoncer à penser, mais pour marquer un autre ordre.
+Kant montre que la raison s’égare quand elle veut connaître ce qui excède toute expérience possible — Dieu, l’âme, le monde comme totalité. Elle produit alors des raisonnements **également démontrables et contradictoires**.
+
+**Pascal** ajoute : « le cœur a ses raisons que la raison ne connaît point » — non pour renoncer à penser, mais pour marquer un autre ordre.
 
 ## Raison et histoire
-Les Lumières font de la raison une émancipation : « Sapere aude ! Aie le courage de te servir de ton propre entendement », écrit Kant. Le XXe siècle apporte la contre-épreuve : une rationalité purement **instrumentale**, qui calcule parfaitement les moyens sans jamais interroger les fins, peut servir le pire.`,
+| Époque | Ce que la raison promet | Ce que l’histoire montre |
+| Les **Lumières** | « Sapere aude ! Aie le courage de te servir de ton propre entendement » | L’émancipation par le savoir |
+| Le **XXe siècle** | Une rationalité **instrumentale** | Elle calcule parfaitement les moyens sans jamais interroger les fins — et peut servir le pire |`,
           },
           questions: [
             ['Le principe de raison suffisante, formulé par Leibniz, affirme que…', ['Rien n’arrive sans raison', 'Tout est le fruit du hasard', 'La raison est infaillible', 'Seule l’expérience compte'], 0, 'Il interdit de se contenter du merveilleux ou de l’inexpliqué.'],
@@ -362,19 +496,36 @@ Les Lumières font de la raison une émancipation : « Sapere aude ! Aie le cour
           titre: 'La liberté de faire ce qui me plaît',
           lecon: {
             titre: 'Indépendance, caprice et licence',
-            cours: `Le premier sens du mot est le plus spontané : être libre, ce serait n'être gêné par rien ni personne, faire ce qui me plaît. Ce sens ne résiste pas longtemps à l'examen — et c'est précisément ce qu'une dissertation doit montrer.
+            cours: `Le premier sens du mot est le plus spontané : être libre, ce serait n’être gêné par rien ni personne, faire ce qui me plaît. Ce sens ne résiste pas longtemps à l’examen — et c’est précisément ce qu’une dissertation doit montrer.
 
-## L'indépendance
-Au sens le plus simple, la liberté est l'absence d'obstacle : je suis libre quand rien ne m'empêche de faire ce que je veux. Hobbes en reste à cette définition, celle du mouvement sans entrave. Mais elle laisse une question entière : d'où viennent les désirs que je suis ?
+## L’indépendance
+Au sens le plus simple, la liberté est l’**absence d’obstacle** : je suis libre quand rien ne m’empêche de faire ce que je veux. **Hobbes** en reste à cette définition, celle du mouvement sans entrave. Mais elle laisse une question entière : d’où viennent les désirs que je suis ?
 
-## Le caprice n'est pas la liberté
-Spinoza prend l'exemple de l'ivrogne « qui croit dire par un libre décret de son esprit ce qu'ensuite, à jeun, il voudrait avoir tu ». Les hommes « se croient libres parce qu'ils ont conscience de leurs actions et ignorants des causes qui les déterminent ». Suivre le premier désir venu, ce n'est pas être libre : c'est obéir à ce qui, en nous, a été mis par autre chose — la mode, l'habitude, la publicité, l'humeur.
+## Le caprice n’est pas la liberté
+**Spinoza** prend l’exemple de l’ivrogne « qui croit dire par un libre décret de son esprit ce qu’ensuite, à jeun, il voudrait avoir tu ». Les hommes « se croient libres parce qu’ils ont conscience de leurs actions et ignorants des causes qui les déterminent ».
 
-## La limite d'autrui
-« La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui » (Déclaration des droits de l'homme et du citoyen, 1789, article 4). La liberté sans limite est la **licence** : elle se détruit elle-même, puisque la liberté de chacun y devient la proie de la force du plus fort.
+| Ce que je crois | Ce qui se passe |
+| Je choisis librement mon désir | Le désir m’est venu sans que je le décide |
+| J’agis par ma volonté | J’ignore les causes qui m’ont déterminé |
+
+> Suivre le premier désir venu, ce n’est pas être libre : c’est obéir à ce qui, en nous, a été mis par autre chose — la mode, l’habitude, la publicité, l’humeur.
+
+## La limite d’autrui
+« La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui » — Déclaration des droits de l’homme et du citoyen, 1789, article 4.
+
+| Notion | Ce qu’elle désigne | Ce qu’elle produit |
+| **Liberté** | Une puissance d’agir bornée par celle d’autrui | Une coexistence possible |
+| **Licence** | Une liberté sans limite | Elle se détruit elle-même : le plus fort l’emporte |
 
 ## Se libérer de soi
-D'où le renversement de toute la tradition : être libre, ce n'est pas assouvir ses désirs, c'est en devenir le maître. Épicure trie ses désirs, les stoïciens s'attachent à ce qui dépend d'eux, Rousseau écrit que « l'impulsion du seul appétit est esclavage, et l'obéissance à la loi qu'on s'est prescrite est liberté ». La liberté cesse d'être un point de départ : elle devient une conquête.`,
+D’où le renversement de toute la tradition : être libre, ce n’est pas assouvir ses désirs, c’est en devenir le **maître**.
+
+| Penseur | La conquête proposée |
+| **Épicure** | Trier ses désirs |
+| Les **stoïciens** | S’attacher à ce qui dépend de nous |
+| **Rousseau** | « L’impulsion du seul appétit est esclavage, et l’obéissance à la loi qu’on s’est prescrite est liberté » |
+
+La liberté cesse alors d’être un point de départ : elle devient une **conquête**.`,
           },
           questions: [
             ['Définir la liberté comme simple absence d’obstacle, c’est en rester…', ['À l’indépendance', 'À l’autonomie', 'Au libre arbitre', 'À la liberté politique'], 0, 'C’est le premier sens, celui du mouvement sans entrave.'],
@@ -392,19 +543,37 @@ D'où le renversement de toute la tradition : être libre, ce n'est pas assouvir
           titre: 'Le libre arbitre',
           lecon: {
             titre: 'Sommes-nous les auteurs de nos actes ?',
-            cours: `Le libre arbitre est le pouvoir de choisir entre plusieurs possibles, et d'avoir pu faire autrement. Sans lui, la responsabilité et le mérite s'effondrent : on ne juge pas une pierre qui tombe.
+            cours: `Le libre arbitre est le pouvoir de choisir entre plusieurs possibles, et d’**avoir pu faire autrement**. Sans lui, la responsabilité et le mérite s’effondrent : on ne juge pas une pierre qui tombe.
 
 ## Le pouvoir de la volonté
-Descartes fait de la volonté ce qu'il y a de plus grand en nous : « elle est si ample qu'elle nous rend en quelque façon semblables à Dieu ». Mais il ajoute une nuance qu'on oublie souvent : la **liberté d'indifférence** — choisir sans aucune raison, à pile ou face — est « le plus bas degré de la liberté ». Choisir librement, c'est choisir en connaissance de cause.
+**Descartes** fait de la volonté ce qu’il y a de plus grand en nous : « elle est si ample qu’elle nous rend en quelque façon semblables à Dieu ». Mais il ajoute une nuance qu’on oublie souvent.
+
+| Degré de liberté | Ce que c’est | Sa valeur |
+| Liberté d’**indifférence** | Choisir sans aucune raison, à pile ou face | « Le plus bas degré de la liberté » |
+| Liberté **éclairée** | Choisir en connaissance de cause | La liberté véritable |
+
+> Contre l’intuition courante : plus les raisons de choisir sont fortes, **plus** je suis libre, non moins. Hésiter n’est pas le sommet de la liberté, c’en est le degré le plus pauvre.
 
 ## Le déterminisme
-Toute chose a une cause ; nos actes aussi. Spinoza y voit une illusion tenace, et Laplace pousse l'idée jusqu'au bout : une intelligence qui connaîtrait toutes les forces et toutes les positions à un instant donné saurait l'avenir. Les sciences humaines rendent l'objection concrète — origine sociale, éducation, neurologie, contexte : nos décisions sont conditionnées.
+Toute chose a une cause ; nos actes aussi.
+
+| Penseur ou champ | L’argument |
+| **Spinoza** | Nous nous croyons libres parce que nous ignorons les causes qui nous déterminent |
+| **Laplace** | Une intelligence connaissant toutes les forces et positions saurait tout l’avenir |
+| Les sciences humaines | Origine sociale, éducation, neurologie, contexte : nos décisions sont conditionnées |
 
 ## Une confusion à éviter
-Le **fatalisme** dit que l'avenir arrivera quoi que je fasse : mes actes ne changent rien. Le **déterminisme** dit que mes actes ont des causes — mais ils sont bien des causes à leur tour. C'est très différent : un déterministe conséquent peut soutenir que ce que je fais compte, tout en niant que j'aurais pu faire autrement.
+| | Fatalisme | Déterminisme |
+| Ce qu’il affirme | L’avenir arrivera **quoi que je fasse** | Mes actes ont des causes |
+| Le statut de mes actes | Ils ne changent rien | Ils sont des **causes à leur tour** |
+| Conséquence pratique | Autant ne rien faire | Ce que je fais compte |
+
+Un déterministe conséquent peut donc soutenir que mes actes comptent, tout en niant que j’aurais pu faire autrement. Confondre les deux thèses est l’erreur la plus coûteuse de la notion.
 
 ## Sauver la liberté
-Kant sépare les plans : comme phénomène, je suis soumis aux lois de la nature ; comme sujet moral, je dois me penser libre, sinon le devoir n'aurait aucun sens. Sartre va plus loin : l'homme est « condamné à être libre », il ne peut pas ne pas choisir, et invoquer ses déterminations est déjà un choix — celui de la mauvaise foi.`,
+| Penseur | La solution proposée |
+| **Kant** | Séparer les plans : comme phénomène, je suis soumis aux lois de la nature ; comme sujet moral, je dois me penser libre, sinon le devoir n’a aucun sens |
+| **Sartre** | L’homme est « condamné à être libre » : il ne peut pas ne pas choisir, et invoquer ses déterminations est **déjà un choix** — celui de la mauvaise foi |`,
           },
           questions: [
             ['Le libre arbitre est le pouvoir…', ['De choisir entre plusieurs possibles', 'De faire ce qui plaît', 'De vivre sans lois', 'De prévoir l’avenir'], 0, 'Sans lui, il n’y a ni mérite ni responsabilité.'],
@@ -422,19 +591,38 @@ Kant sépare les plans : comme phénomène, je suis soumis aux lois de la nature
           titre: 'La liberté politique',
           lecon: {
             titre: 'Obéir à la loi qu’on s’est prescrite',
-            cours: `Comment être libre dans une société qui impose des lois ? La réponse dépend de ce que l'on met sous le mot : ou bien la loi est l'ennemie de la liberté, ou bien elle en est la condition.
+            cours: `Comment être libre dans une société qui impose des lois ? Tout dépend de ce qu’on met sous le mot : ou bien la loi est l’ennemie de la liberté, ou bien elle en est la **condition**.
 
 ## La loi rend libre
-Pour Rousseau, l'obéissance n'est pas la servitude quand la loi est l'expression de la **volonté générale** : le citoyen obéit à ce qu'il a voulu comme membre du souverain. Ce qui compte n'est donc pas la quantité de lois, mais leur origine. Sans loi, ce n'est pas la liberté qui règne : c'est la force.
+Pour **Rousseau**, l’obéissance n’est pas la servitude quand la loi est l’expression de la **volonté générale** : le citoyen obéit à ce qu’il a voulu comme membre du souverain.
+
+> Ce qui compte n’est donc pas la **quantité** de lois, mais leur **origine**. Et sans loi, ce n’est pas la liberté qui règne : c’est la force.
 
 ## Deux libertés
-Benjamin Constant distingue la liberté des **Anciens** — participer directement aux décisions collectives, quitte à ce que l'individu soit entièrement soumis à la cité — et la liberté des **Modernes** : jouir paisiblement de son indépendance privée, avec des droits garantis contre le pouvoir. Une démocratie sérieuse tient les deux, sans sacrifier l'une à l'autre.
+**Benjamin Constant** distingue deux modèles qu’on confond constamment dans le débat public.
+
+| | Liberté des **Anciens** | Liberté des **Modernes** |
+| En quoi elle consiste | Participer directement aux décisions collectives | Jouir paisiblement de son indépendance privée |
+| Le prix à payer | L’individu est entièrement soumis à la cité | Le citoyen se désintéresse des affaires publiques |
+| Sa garantie | L’assemblée | Des droits opposables au pouvoir |
+
+Une démocratie sérieuse tient les deux, sans sacrifier l’une à l’autre.
 
 ## Les garanties
-La liberté politique ne repose pas sur la vertu des gouvernants mais sur des **institutions**. Montesquieu : « pour qu'on ne puisse abuser du pouvoir, il faut que, par la disposition des choses, le pouvoir arrête le pouvoir » — d'où la séparation des pouvoirs, l'État de droit, l'indépendance de la justice et la liberté de la presse.
+La liberté politique ne repose pas sur la vertu des gouvernants mais sur des **institutions**. **Montesquieu** : « pour qu’on ne puisse abuser du pouvoir, il faut que, par la disposition des choses, le pouvoir arrête le pouvoir ».
+
+| Garantie | Ce qu’elle empêche |
+| Séparation des pouvoirs | Qu’un seul organe décide et juge |
+| État de droit | Que le pouvoir s’exempte de ses propres lois |
+| Justice indépendante | Que le gouvernement dicte les verdicts |
+| Liberté de la presse | Que l’abus reste invisible |
 
 ## Les menaces
-Tocqueville avertit contre la **tyrannie de la majorité** : un pouvoir légitime par le nombre peut écraser les minorités et l'esprit d'indépendance. Mill pose la limite : la seule raison d'user de la contrainte envers un individu est d'**empêcher qu'il ne nuise à autrui**. Reste la question limite : que faire quand la loi est injuste ? La désobéissance civile assume la sanction, publiquement, au nom du droit lui-même.`,
+| Penseur | L’avertissement |
+| **Tocqueville** | La **tyrannie de la majorité** : un pouvoir légitime par le nombre peut écraser les minorités |
+| **Mill** | La seule raison d’user de la contrainte envers un individu est d’**empêcher qu’il ne nuise à autrui** |
+
+Reste la question limite : que faire quand la loi est injuste ? La **désobéissance civile** y répond d’une manière précise — elle est publique, non violente, et **assume la sanction**, au nom du droit lui-même.`,
           },
           questions: [
             ['Pour Rousseau, l’obéissance à la loi est compatible avec la liberté quand la loi…', ['Exprime la volonté générale', 'Vient d’un roi éclairé', 'Est ancienne', 'Est peu contraignante'], 0, 'Le citoyen obéit alors à ce qu’il a lui-même voulu.'],
@@ -452,19 +640,36 @@ Tocqueville avertit contre la **tyrannie de la majorité** : un pouvoir légitim
           titre: 'Le langage',
           lecon: {
             titre: 'Parler, penser, agir',
-            cours: `Le **langage** est la faculté de communiquer par des signes ; une **langue** est le système particulier d'une communauté ; la **parole** en est l'usage individuel. Trois mots à ne pas confondre.
+            cours: `Trois mots à ne pas confondre, et la moitié des contresens disparaît.
+
+| Terme | Ce qu’il désigne |
+| Le **langage** | La faculté de communiquer par des signes |
+| Une **langue** | Le système particulier d’une communauté |
+| La **parole** | L’usage individuel qu’on en fait |
 
 ## Le signe et la convention
-Saussure décompose le signe en **signifiant** (l'image sonore) et **signifié** (le concept), et pose que leur lien est **arbitraire** : rien dans l'animal n'impose le mot « chien » plutôt que *dog*. Arbitraire ne veut pas dire libre : le locuteur ne peut pas changer sa langue à volonté, elle lui préexiste.
+**Saussure** décompose le signe en **signifiant** (l’image sonore) et **signifié** (le concept), et pose que leur lien est **arbitraire** : rien dans l’animal n’impose le mot « chien » plutôt que *dog*.
+
+> Arbitraire ne veut pas dire **libre** : le locuteur ne peut pas changer sa langue à volonté, elle lui préexiste et s’impose à lui. L’arbitraire est historique, pas individuel.
 
 ## Le langage et la pensée
-Peut-on penser sans mots ? Hegel soutient que c'est dans le mot que la pensée trouve son existence : sans langage, elle reste une brume. Bergson objecte que le mot commun écrase la nuance et la singularité du vécu : « le mot brutal, qui emmagasine ce qu'il y a de stable, d'impersonnel dans les impressions de l'humanité, écrase les impressions délicates et fugitives de notre conscience individuelle ». Les deux ont raison contre un tiers : le langage rend la pensée possible **et** la trahit.
+| Position | La thèse | Ce qu’elle éclaire |
+| **Hegel** | C’est dans le mot que la pensée trouve son existence | Sans langage, la pensée reste une brume |
+| **Bergson** | Le mot commun écrase la nuance du vécu | « Le mot brutal écrase les impressions délicates et fugitives de notre conscience » |
 
-## Parler, c'est agir
-Austin remarque que certaines phrases ne décrivent rien : « je promets », « je te baptise », « la séance est ouverte » — ce sont des **performatifs**, elles font ce qu'elles disent. D'où le pouvoir des mots : promettre, insulter, ordonner, séduire, propager. Une langue truquée fabrique une pensée truquée — c'est ce que montrent les analyses de la propagande.
+Les deux ont raison contre un tiers : le langage rend la pensée possible **et** la trahit. C’est cette tension qu’une dissertation doit tenir, non trancher trop vite.
 
-## Le propre de l'homme ?
-Les abeilles transmettent des informations, certains animaux communiquent. Mais Benveniste souligne une différence : leur code est fixe, sans dialogue ni combinaison libre. Descartes en tirait un argument : ce qui manque aux animaux n'est pas la voix, c'est le pouvoir d'arranger des mots pour répondre à toute situation nouvelle.`,
+## Parler, c’est agir
+**Austin** remarque que certaines phrases ne décrivent rien.
+
+| Type d’énoncé | Ce qu’il fait | Exemple |
+| **Constatif** | Il décrit, il est vrai ou faux | « La séance dure une heure » |
+| **Performatif** | Il **fait** ce qu’il dit | « Je promets », « la séance est ouverte » |
+
+D’où le pouvoir des mots : promettre, insulter, ordonner, séduire. Une langue truquée fabrique une pensée truquée — c’est ce que montrent les analyses de la propagande.
+
+## Le propre de l’homme ?
+Les abeilles transmettent des informations, certains animaux communiquent. **Benveniste** souligne la différence décisive : leur code est **fixe**, sans dialogue ni combinaison libre. Descartes en tirait déjà son argument — ce qui manque aux animaux n’est pas la voix, c’est le pouvoir d’**arranger** des mots pour répondre à toute situation nouvelle.`,
           },
           questions: [
             ['Chez Saussure, le lien entre signifiant et signifié est…', ['Arbitraire', 'Naturel', 'Imposé par la logique', 'Décidé par chaque locuteur'], 0, 'Rien dans l’animal n’impose le mot « chien » plutôt que *dog*.'],
@@ -482,19 +687,35 @@ Les abeilles transmettent des informations, certains animaux communiquent. Mais 
           titre: 'La vérité',
           lecon: {
             titre: 'Ce qui se dit du discours',
-            cours: `Une chose n'est ni vraie ni fausse : elle est. Le vrai et le faux se disent d'un **jugement**, d'une proposition. C'est la première précaution à prendre, et elle règle déjà la moitié des confusions.
+            cours: `Une chose n’est ni vraie ni fausse : elle **est**. Le vrai et le faux se disent d’un **jugement**, d’une proposition. C’est la première précaution à prendre, et elle règle déjà la moitié des confusions.
 
 ## La définition classique
-Est vrai le discours **conforme à ce qui est** : c'est la vérité-correspondance, ou adéquation. La difficulté saute aux yeux : pour comparer mon idée à la chose, il faudrait sortir de ma pensée. D'où d'autres critères — la **cohérence** (pas de contradiction), l'**évidence** (Descartes : ce qui se présente si clairement à l'esprit qu'on ne peut en douter), la **vérification** par l'expérience.
+Est vrai le discours **conforme à ce qui est** : c’est la vérité-correspondance, ou adéquation. La difficulté saute aux yeux — pour comparer mon idée à la chose, il faudrait sortir de ma pensée. D’où d’autres critères, aucun suffisant à lui seul :
+
+| Critère | Ce qu’il exige | Sa limite |
+| **Correspondance** | L’accord avec le réel | Comment y accéder hors de la pensée ? |
+| **Cohérence** | L’absence de contradiction | Un système faux peut être cohérent |
+| **Évidence** | Ce qui se présente si clairement qu’on ne peut en douter | L’évidence a souvent trompé |
+| **Vérification** | L’épreuve de l’expérience | Elle ne conclut jamais définitivement |
 
 ## Vérité, réalité, opinion
-Le vrai n'est pas le réel, et il n'est pas non plus le vraisemblable. L'**opinion** (*doxa*) est un avis reçu sans examen : elle peut se trouver juste par accident, mais elle ne sait pas pourquoi elle l'est. Dans l'allégorie de la caverne, Platon décrit des prisonniers qui prennent les ombres pour la réalité — et qui n'accueillent pas volontiers celui qui revient leur dire qu'ils se trompent.
+Le vrai n’est pas le réel, et il n’est pas non plus le vraisemblable. L’**opinion** (*doxa*) est un avis reçu sans examen : elle peut se trouver juste **par accident**, mais elle ne sait pas pourquoi elle l’est.
+
+Dans l’allégorie de la caverne, **Platon** décrit des prisonniers qui prennent les ombres pour la réalité — et qui n’accueillent pas volontiers celui qui revient leur dire qu’ils se trompent.
 
 ## Le relativisme et sa réfutation
-Protagoras affirme que « l'homme est la mesure de toute chose » : à chacun sa vérité. L'objection est classique et redoutable — si toute vérité est relative, cette affirmation l'est aussi, et se détruit elle-même. Confondre la tolérance (respecter les personnes) et le relativisme (renoncer à distinguer le vrai du faux) revient à désarmer la discussion.
+**Protagoras** affirme que « l’homme est la mesure de toute chose » : à chacun sa vérité.
+
+> L’objection est classique et redoutable : si **toute** vérité est relative, cette affirmation l’est aussi — et se détruit elle-même.
+
+| À ne pas confondre | Ce que c’est |
+| La **tolérance** | Respecter les personnes, quelles que soient leurs idées |
+| Le **relativisme** | Renoncer à distinguer le vrai du faux |
+
+Les confondre revient à désarmer la discussion : si tout se vaut, il n’y a plus rien à se dire.
 
 ## Vérité et pouvoir
-Chercher la vérité n'est pas neutre : elle dérange les intérêts établis. Le procès de Socrate, celui de Galilée, la fabrication moderne du mensonge organisé rappellent que la vérité a besoin d'institutions — écoles, sciences, presse libre — pour être autre chose qu'une opinion parmi d'autres.`,
+Chercher la vérité n’est pas neutre : elle dérange les intérêts établis. Le procès de Socrate, celui de Galilée, la fabrication moderne du mensonge organisé rappellent que la vérité a besoin d’**institutions** — écoles, sciences, presse libre — pour être autre chose qu’une opinion parmi d’autres.`,
           },
           questions: [
             ['Le vrai et le faux se disent proprement…', ['D’un jugement ou d’une proposition', 'D’une chose', 'd’une sensation', 'D’une personne'], 0, 'Une chose est réelle ou non, elle n’est pas « vraie ».'],
@@ -512,19 +733,38 @@ Chercher la vérité n'est pas neutre : elle dérange les intérêts établis. L
           titre: 'La science',
           lecon: {
             titre: 'Expérience, hypothèse, réfutation',
-            cours: `La science ne se définit pas par son objet mais par sa **méthode** : elle explique au lieu de raconter, elle démontre au lieu d'affirmer, et elle accepte d'avoir tort.
+            cours: `La science ne se définit pas par son objet mais par sa **méthode** : elle explique au lieu de raconter, elle démontre au lieu d’affirmer, et elle accepte d’avoir tort.
 
 ## La rupture avec le mythe
-Le mythe raconte une origine ; la science cherche des lois. Galilée fait le pas décisif en écrivant que le grand livre de la nature « est écrit en langue mathématique » : mesurer, quantifier, idéaliser (le plan sans frottement, le corps sans résistance de l'air) — la science ne décrit pas le monde tel qu'il apparaît, elle en construit le modèle.
+| | Le mythe | La science |
+| Ce qu’il fournit | Un récit d’origine | Des lois |
+| Sa réponse à l’objection | Il l’absorbe | Il se corrige ou tombe |
+
+**Galilée** fait le pas décisif : le grand livre de la nature « est écrit en langue mathématique ». Mesurer, quantifier, idéaliser — le plan sans frottement, le corps sans résistance de l’air : la science ne décrit pas le monde tel qu’il apparaît, elle en **construit le modèle**.
 
 ## La méthode expérimentale
-Claude Bernard en donne la formule : l'**observation** fait naître une **hypothèse**, l'**expérience** la met à l'épreuve, et le savant doit être prêt à l'abandonner. « L'expérimentateur doit douter, fuir les idées fixes ». Le fait ne parle jamais seul : il ne répond qu'à une question qu'on lui pose.
+**Claude Bernard** en donne la formule, en trois temps :
+
+1. L’**observation** fait naître une question.
+2. L’**hypothèse** propose une réponse.
+3. L’**expérience** la met à l’épreuve — et le savant doit être prêt à l’abandonner.
+
+> « L’expérimentateur doit douter, fuir les idées fixes. » Le fait ne parle jamais seul : il ne répond qu’à une question qu’on lui pose.
 
 ## Induire, ou réfuter
-Passer de « tous les cygnes observés sont blancs » à « tous les cygnes sont blancs », c'est induire — et Hume montre que rien ne le garantit. Popper renverse le problème : aucune expérience ne prouve définitivement une théorie, une seule peut la **réfuter**. Est donc scientifique un énoncé **falsifiable**, qui prend le risque d'être démenti ; une théorie que rien ne pourrait contredire n'est pas invincible, elle est hors du jeu.
+| | L’induction | La réfutation (**Popper**) |
+| Le raisonnement | Tous les cygnes observés sont blancs, donc tous le sont | Un seul cygne noir suffit à démentir |
+| Ce qu’elle peut | Suggérer une loi | **Éliminer** une théorie |
+| Sa garantie | Aucune (**Hume**) | Logique et définitive |
+
+Est donc scientifique un énoncé **falsifiable**, qui prend le risque d’être démenti. Une théorie que rien ne pourrait contredire n’est pas invincible : elle est **hors du jeu**.
 
 ## Les révolutions
-Bachelard montre que le savoir ne s'accumule pas sagement : il progresse contre des **obstacles épistémologiques**, des évidences familières qu'il faut détruire. Kuhn décrit des **paradigmes** qui se succèdent par crises. La science n'est donc pas un stock de vérités définitives, mais une pratique collective, faillible et contrôlée — ce qui fait sa force, non sa faiblesse.`,
+| Penseur | Ce qu’il montre |
+| **Bachelard** | Le savoir progresse **contre** des obstacles épistémologiques — des évidences familières à détruire |
+| **Kuhn** | Des **paradigmes** se succèdent par crises, non par accumulation |
+
+La science n’est donc pas un stock de vérités définitives, mais une pratique collective, faillible et contrôlée — ce qui fait sa **force**, non sa faiblesse.`,
           },
           questions: [
             ['Selon Galilée, le grand livre de la nature est écrit…', ['En langue mathématique', 'En grec ancien', 'Dans le langage des mythes', 'Par la seule observation'], 0, 'Mesurer et quantifier fondent la science moderne.'],
@@ -542,19 +782,33 @@ Bachelard montre que le savoir ne s'accumule pas sagement : il progresse contre 
           titre: 'La technique',
           lecon: {
             titre: 'Prolonger le corps, transformer le monde',
-            cours: `La technique est l'ensemble des procédés et des outils par lesquels l'homme transforme son milieu. Elle n'est pas de la science appliquée : elle lui est bien antérieure — on taillait des silex avant d'avoir des théories.
+            cours: `La technique est l’ensemble des procédés et des outils par lesquels l’homme transforme son milieu. Elle n’est **pas** de la science appliquée : elle lui est bien antérieure — on taillait des silex avant d’avoir des théories.
 
-## L'outil et l'espèce
-Bergson propose de nommer notre espèce *Homo faber* plutôt que *sapiens* : l'intelligence se reconnaît d'abord à sa capacité de fabriquer des outils, et des outils pour fabriquer des outils. L'outil prolonge le corps : le marteau prolonge le poing, la roue la marche, l'ordinateur la mémoire.
+## L’outil et l’espèce
+**Bergson** propose de nommer notre espèce *Homo faber* plutôt que *sapiens* : l’intelligence se reconnaît d’abord à sa capacité de fabriquer des outils — et des outils pour fabriquer des outils.
+
+| L’outil | Ce qu’il prolonge |
+| Le marteau | Le poing |
+| La roue | La marche |
+| Le télescope | L’œil |
+| L’ordinateur | La mémoire et le calcul |
 
 ## Le mythe de Prométhée
-Dans le mythe raconté par Protagoras chez Platon, l'homme naît nu, sans griffes ni fourrure : la technique compense un défaut originel. Elle n'est donc pas un luxe mais la condition même de la survie humaine — et Descartes lui donne son programme moderne : connaître la nature pour nous en rendre « comme maîtres et possesseurs », notamment pour la santé.
+Dans le mythe raconté par Protagoras chez Platon, l’homme naît **nu**, sans griffes ni fourrure : la technique compense un défaut originel. Elle n’est donc pas un luxe mais la condition même de la survie humaine.
+
+**Descartes** lui donne son programme moderne : connaître la nature pour nous en rendre « comme maîtres et possesseurs », notamment pour la santé.
 
 ## Quand le moyen devient une fin
-La question moderne n'est plus « la technique est-elle utile ? » mais « qui commande ? ». Heidegger soutient que la technique moderne n'est pas un simple outil neutre : elle impose un regard qui traite tout ce qui existe — la forêt, le fleuve, l'homme — comme un stock disponible. Jacques Ellul décrit un **système technicien** qui se développe selon sa propre logique d'efficacité, sans qu'aucune décision politique ne l'oriente vraiment.
+La question moderne n’est plus « la technique est-elle utile ? » mais **« qui commande ? »**.
+
+| Penseur | Sa thèse |
+| **Heidegger** | La technique moderne n’est pas un outil neutre : elle impose un regard qui traite tout ce qui existe — forêt, fleuve, homme — comme un **stock disponible** |
+| **Jacques Ellul** | Un **système technicien** se développe selon sa propre logique d’efficacité, sans qu’aucune décision politique ne l’oriente vraiment |
 
 ## La responsabilité
-Le pouvoir technique a changé d'échelle : il engage désormais des générations qui ne sont pas nées. D'où l'impératif de Hans Jonas : « agis de telle sorte que les effets de ton action soient compatibles avec la permanence d'une vie authentiquement humaine sur terre ». Ce que nous pouvons faire ne dit toujours pas ce que nous devons faire.`,
+Le pouvoir technique a changé d’**échelle** : il engage désormais des générations qui ne sont pas nées. D’où l’impératif de **Hans Jonas** : « agis de telle sorte que les effets de ton action soient compatibles avec la permanence d’une vie authentiquement humaine sur terre ».
+
+> Ce que nous **pouvons** faire ne dit toujours pas ce que nous **devons** faire. Aucun progrès technique n’a jamais répondu à cette question, et aucun ne le fera.`,
           },
           questions: [
             ['La technique est-elle née de la science ?', ['Non, elle lui est très antérieure', 'Oui, au XVIIe siècle', 'Oui, au XIXe siècle', 'Oui, dès l’Antiquité grecque'], 0, 'On taillait des outils bien avant toute théorie scientifique.'],
@@ -572,19 +826,36 @@ Le pouvoir technique a changé d'échelle : il engage désormais des génératio
           titre: 'L’art',
           lecon: {
             titre: 'Le beau, l’œuvre et le génie',
-            cours: `« Art » a d'abord voulu dire savoir-faire — l'*ars* latine traduit la *technè* grecque. L'art au sens des beaux-arts, activité désintéressée qui produit des œuvres, est une idée récente : elle date du XVIIIe siècle.
+            cours: `« Art » a d’abord voulu dire **savoir-faire** — l’*ars* latine traduit la *technè* grecque. L’art au sens des beaux-arts, activité désintéressée qui produit des œuvres, est une idée récente : elle date du XVIIIe siècle.
 
-## Le beau n'est pas l'agréable
-Kant distingue trois jugements. L'**agréable** plaît aux sens, et ne se discute pas (chacun ses goûts). Le **bon** plaît par le concept qu'on en a. Le **beau** plaît « universellement sans concept » : le jugement de goût est **désintéressé** — je ne veux pas posséder ni consommer l'objet — et pourtant je prétends que les autres devraient en juger comme moi. C'est le paradoxe du goût : subjectif, mais qui exige un accord.
+## Le beau n’est pas l’agréable
+**Kant** distingue trois jugements qu’on confond dans la conversation ordinaire.
 
-## L'œuvre et le produit
-L'artisan sait d'avance ce qu'il fabrique, et il peut le refaire à l'identique. L'artiste, dit Kant, travaille par **génie** : « le talent par lequel la nature donne ses règles à l'art » — il produit une œuvre exemplaire dont il ne peut pas expliquer la recette. Walter Benjamin ajoute que la reproduction technique (photo, cinéma, écran) fait perdre à l'œuvre son *hic et nunc*, ce qu'il appelle son **aura**.
+| Jugement | Ce qui plaît | Se discute-t-il ? |
+| L’**agréable** | Aux sens | Non : chacun ses goûts |
+| Le **bon** | Par le concept qu’on en a | Oui, par des raisons |
+| Le **beau** | « Universellement sans concept » | Oui, et c’est le paradoxe |
+
+Le jugement de goût est **désintéressé** — je ne veux ni posséder ni consommer l’objet — et pourtant je prétends que les autres devraient en juger comme moi.
+
+> C’est le paradoxe du goût : **subjectif, mais qui exige un accord**. « J’aime » n’engage que moi ; « c’est beau » engage les autres.
+
+## L’œuvre et le produit
+| | L’artisan | L’artiste |
+| Le projet | Il sait d’avance ce qu’il fabrique | L’œuvre se découvre en se faisant |
+| La reproduction | Il peut refaire à l’identique | L’œuvre est unique |
+| La règle | Il l’applique | Il la **donne**, par **génie** |
+
+Kant définit le génie comme « le talent par lequel la nature donne ses règles à l’art » : l’artiste produit une œuvre exemplaire dont il ne peut pas expliquer la recette. **Walter Benjamin** ajoute que la reproduction technique fait perdre à l’œuvre son *hic et nunc* — ce qu’il appelle son **aura**.
 
 ## Imiter ou créer
-Platon condamne l'art comme imitation d'imitation, éloigné deux fois du vrai. Aristote le réhabilite : la **mimèsis** n'est pas une copie, elle donne à comprendre, et la tragédie opère une **catharsis**, une purgation des passions. L'art moderne, lui, rompt souvent avec la ressemblance : ce qu'il vise n'est plus de reproduire le visible, mais de rendre visible.
+| Penseur | Son verdict sur l’imitation |
+| **Platon** | Imitation d’imitation : l’art est deux fois éloigné du vrai, il est à bannir |
+| **Aristote** | La **mimèsis** donne à comprendre, et la tragédie opère une **catharsis** |
+| L’art moderne | Rompt avec la ressemblance : non plus reproduire le visible, mais **rendre visible** |
 
 ## À quoi bon
-Hegel voit dans l'art une présentation sensible de la vérité, une manière de penser autrement que par concepts. D'autres y voient une contestation, un plaisir, un marché. Une œuvre peut déplaire et compter ; c'est ce qui distingue l'art du divertissement.`,
+**Hegel** voit dans l’art une présentation sensible de la vérité, une manière de penser autrement que par concepts. D’autres y voient une contestation, un plaisir, un marché. Une œuvre peut **déplaire et compter** : c’est ce qui distingue l’art du divertissement.`,
           },
           questions: [
             ['Pour Kant, le jugement de goût est…', ['Désintéressé et pourtant prétendument universel', 'Un simple goût personnel sans portée', 'Une connaissance par concepts', 'Un calcul d’utilité'], 0, 'C’est tout le paradoxe du beau : subjectif, mais réclamant l’accord d’autrui.'],
@@ -602,19 +873,35 @@ Hegel voit dans l'art une présentation sensible de la vérité, une manière de
           titre: 'La religion',
           lecon: {
             titre: 'Croire, savoir, relier',
-            cours: `Deux étymologies se disputent le mot : *religare*, relier les hommes entre eux et au divin ; *relegere*, recueillir avec scrupule ce qui a été transmis. Les deux disent quelque chose de vrai du phénomène.
+            cours: `Deux étymologies se disputent le mot, et toutes deux disent quelque chose de vrai du phénomène.
+
+| Racine | Ce qu’elle souligne |
+| *Religare* | **Relier** les hommes entre eux et au divin |
+| *Relegere* | **Recueillir** avec scrupule ce qui a été transmis |
 
 ## Un fait humain
-Une religion, ce n'est pas seulement une croyance : c'est un ensemble de **rites**, de textes, d'interdits et une **communauté**. Durkheim en propose une définition sociologique : elle repose sur le partage du **sacré** et du **profane**, et la société y célèbre aussi, sans le savoir, sa propre unité.
+Une religion, ce n’est pas seulement une croyance : c’est un ensemble de **rites**, de textes, d’interdits — et une **communauté**. **Durkheim** en propose une définition sociologique : elle repose sur le partage du **sacré** et du **profane**, et la société y célèbre aussi, sans le savoir, sa propre unité.
 
-## Croire n'est pas savoir
-La foi n'est pas une connaissance imparfaite : elle est d'un autre ordre. Le savant démontre et doit céder devant la preuve contraire ; le croyant adhère et engage sa vie. Les preuves classiques de l'existence de Dieu (l'ordre du monde, la cause première) ont été discutées puis critiquées par Kant : elles dépassent ce que la raison peut établir. Pascal en tire son **pari** — puisque la raison ne tranche pas, il faut miser, et l'enjeu est infini.
+## Croire n’est pas savoir
+| | Le savant | Le croyant |
+| Ce qu’il fait | Il démontre | Il adhère |
+| Devant une preuve contraire | Il doit céder | Sa foi n’est pas de cet ordre |
+| Ce qu’il engage | Un énoncé | Sa vie |
+
+Les preuves classiques de l’existence de Dieu — l’ordre du monde, la cause première — ont été discutées puis critiquées par **Kant** : elles dépassent ce que la raison peut établir. **Pascal** en tire son **pari** : puisque la raison ne tranche pas, il faut miser, et l’enjeu est infini.
 
 ## Les soupçons
-Feuerbach y voit une **projection** : l'homme met en Dieu ce qu'il y a de meilleur en lui, et s'appauvrit d'autant. Marx la dit « opium du peuple » — consolation réelle d'une misère réelle, mais qui la fait supporter au lieu de la supprimer. Freud parle d'une **illusion** née du désir infantile de protection. Ces critiques ne prouvent pas que Dieu n'existe pas : elles expliquent pourquoi on y croit.
+| Penseur | Ce qu’il voit dans la religion |
+| **Feuerbach** | Une **projection** : l’homme met en Dieu ce qu’il a de meilleur, et s’en appauvrit |
+| **Marx** | « L’opium du peuple » : consolation réelle d’une misère réelle, mais qui la fait supporter |
+| **Freud** | Une **illusion** née du désir infantile de protection |
+
+> Ces critiques ne prouvent pas que Dieu n’existe pas : elles expliquent **pourquoi on y croit**. Confondre les deux est un contresens fréquent — et il coûte cher en dissertation.
 
 ## Tolérance et laïcité
-Spinoza et Locke posent une distinction devenue politique : le salut relève de la conscience, l'ordre public relève de l'État. La **laïcité** n'est pas l'hostilité aux religions mais la neutralité de l'État, qui garantit à chacun la liberté de croire, de changer de croyance ou de n'en avoir aucune.`,
+**Spinoza** et **Locke** posent une distinction devenue politique : le salut relève de la **conscience**, l’ordre public relève de l’**État**.
+
+La **laïcité** n’est donc pas l’hostilité aux religions, mais la **neutralité de l’État**, qui garantit à chacun la liberté de croire, de changer de croyance, ou de n’en avoir aucune.`,
           },
           questions: [
             ['L’étymologie *religare* renvoie à l’idée…', ['De lien', 'De secret', 'De sacrifice', 'De loi écrite'], 0, 'Relier les hommes entre eux et au divin.'],
@@ -632,19 +919,39 @@ Spinoza et Locke posent une distinction devenue politique : le salut relève de 
           titre: 'Le temps',
           lecon: {
             titre: 'Le passage, la durée, la mort',
-            cours: `« Qu'est-ce donc que le temps ? Si personne ne me le demande, je le sais ; si je veux l'expliquer à qui me le demande, je ne le sais plus. » L'aveu d'Augustin dit l'essentiel : rien n'est plus familier ni plus obscur.
+            cours: `« Qu’est-ce donc que le temps ? Si personne ne me le demande, je le sais ; si je veux l’expliquer à qui me le demande, je ne le sais plus. » L’aveu d’**Augustin** dit l’essentiel : rien n’est plus familier ni plus obscur.
 
 ## Mesurer le temps
-Aristote le définit comme « le nombre du mouvement selon l'antérieur et le postérieur » : sans changement, pas de temps mesurable. Newton en fait au contraire un cadre absolu, qui s'écoule uniformément, indépendant de ce qui s'y produit. Kant renverse encore : le temps n'est ni une chose ni une propriété des choses, c'est la **forme de notre sensibilité**, la manière dont un sujet ordonne nécessairement ses expériences.
+| Penseur | Ce qu’est le temps |
+| **Aristote** | « Le nombre du mouvement selon l’antérieur et le postérieur » : sans changement, pas de temps mesurable |
+| **Newton** | Un cadre **absolu**, qui s’écoule uniformément, indépendant de ce qui s’y produit |
+| **Kant** | Ni une chose ni une propriété des choses : la **forme de notre sensibilité** |
 
 ## Le temps vécu
-Augustin remarque le paradoxe : le passé n'est plus, le futur n'est pas encore, et le présent n'a pas d'épaisseur. Il propose de parler de trois présents : le présent du passé (la mémoire), le présent du présent (l'attention), le présent de l'avenir (l'attente). Bergson oppose le temps **spatialisé** des horloges — des instants juxtaposés, tous équivalents — à la **durée** vécue, continue et hétérogène, où une heure d'ennui et une heure de joie n'ont rien de commun.
+Augustin remarque le paradoxe : le passé n’est plus, le futur n’est pas encore, et le présent n’a pas d’épaisseur. Il propose donc de parler de **trois présents**.
+
+| Le présent… | C’est |
+| du passé | La mémoire |
+| du présent | L’attention |
+| de l’avenir | L’attente |
+
+**Bergson** oppose deux temps que la langue courante confond :
+
+| | Le temps spatialisé | La **durée** |
+| Ce que c’est | Des instants juxtaposés, tous équivalents | Un écoulement continu et hétérogène |
+| Où on le trouve | Sur l’horloge | Dans la conscience |
+| Une heure y vaut | Une heure | Rien de commun entre une heure d’ennui et une heure de joie |
 
 ## Le temps et la mort
-Le temps humain est celui d'un être qui sait qu'il finira. Épicure veut désamorcer la crainte : « la mort n'est rien pour nous, car quand nous sommes, la mort n'est pas là, et quand elle est là, nous ne sommes plus ». Sénèque déplace la question : « ce n'est pas que nous ayons peu de temps, c'est que nous en perdons beaucoup » — et Horace en tire le *carpe diem*, cueille le jour.
+| Penseur | Ce qu’il propose |
+| **Épicure** | « La mort n’est rien pour nous : quand nous sommes, elle n’est pas là ; quand elle est là, nous ne sommes plus » |
+| **Sénèque** | « Ce n’est pas que nous ayons peu de temps, c’est que nous en perdons beaucoup » |
+| **Horace** | *Carpe diem* : cueille le jour |
 
 ## Ce que le temps rend possible
-L'irréversibilité fait le regret, le remords, le vieillissement. Mais elle fait aussi le projet, la promesse et l'histoire : parce que le temps passe, mes actes engagent quelque chose. Une existence sans temps ne serait pas éternelle : elle serait sans conséquence.`,
+L’irréversibilité fait le regret, le remords, le vieillissement. Mais elle fait aussi le **projet**, la **promesse** et l’**histoire** : parce que le temps passe, mes actes engagent quelque chose.
+
+> Une existence sans temps ne serait pas éternelle : elle serait **sans conséquence**. C’est l’irréversibilité qui donne du poids à ce que nous faisons.`,
           },
           questions: [
             ['Qui écrit : « Si personne ne me le demande, je le sais ; si je veux l’expliquer, je ne le sais plus » ?', ['Augustin', 'Aristote', 'Bergson', 'Kant'], 0, 'Le livre XI des *Confessions* est le texte de référence sur le temps.'],

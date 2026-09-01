@@ -16,19 +16,34 @@ export default {
           titre: 'Analyser un système',
           lecon: {
             titre: 'Besoin, fonctions et chaînes',
-            cours: `L'ingénieur ne commence pas par une solution : il commence par un **besoin**.
+            cours: `L’ingénieur ne commence pas par une solution : il commence par un **besoin**. Tout le reste en découle, et se vérifie par rapport à lui.
 
 ## Le cahier des charges
-Il exprime le besoin en **fonctions de service**, chacune assortie de **critères**, de **niveaux** et de **flexibilité**. Exemple : « permettre le déplacement d'une personne » — critère : autonomie ; niveau : 40 km ; flexibilité : ± 5 km. Sans critère chiffré, une fonction n'est pas vérifiable.
+Il exprime le besoin en **fonctions de service**, chacune assortie de trois éléments — sans lesquels la fonction n’est pas vérifiable.
 
-## Les écarts
-Toute la démarche SI se lit dans trois écarts : entre le **cahier des charges** et le **modèle** (l'hypothèse est-elle valable ?), entre le **modèle** et le **réel** (la simulation prédit-elle bien ?), entre le **réel** et le **cahier des charges** (le produit répond-il au besoin ?).
+| Élément | Ce qu’il précise | Exemple |
+| La fonction | Ce que le système doit permettre | Permettre le déplacement d’une personne |
+| Le critère | Sur quoi on la mesure | L’autonomie |
+| Le niveau | La valeur attendue | 40 km |
+| La flexibilité | La tolérance admise | ± 5 km |
 
-## La chaîne d'information
-**Acquérir** (capteurs) → **traiter** (microcontrôleur, calculateur) → **communiquer** (bus, réseau, IHM). Elle décide.
+> Une fonction sans critère chiffré n’est pas une exigence : c’est une intention. Elle ne pourra ni être validée, ni être contestée.
 
-## La chaîne d'énergie
-**Alimenter** (batterie, secteur) → **distribuer** (relais, variateur, hacheur) → **convertir** (moteur, vérin) → **transmettre** (réducteur, courroie, engrenage) → **agir**. Elle exécute. Ces deux chaînes se croisent : l'information commande l'énergie, l'énergie renvoie de l'information par les capteurs.`,
+## Les trois écarts
+Toute la démarche SI se lit dans trois écarts, et chacun pose une question différente.
+
+| Écart | Entre quoi et quoi | La question posée |
+| **Écart 1** | Cahier des charges et modèle | L’hypothèse retenue est-elle valable ? |
+| **Écart 2** | Modèle et réel | La simulation prédit-elle bien ? |
+| **Écart 3** | Réel et cahier des charges | Le produit répond-il au besoin ? |
+
+## Les deux chaînes
+| | Chaîne d’information | Chaîne d’énergie |
+| Ce qu’elle fait | Elle **décide** | Elle **exécute** |
+| Ses maillons | Acquérir → traiter → communiquer | Alimenter → distribuer → convertir → transmettre → agir |
+| Ses composants | Capteurs, microcontrôleur, bus, IHM | Batterie, variateur, moteur, réducteur |
+
+Les deux chaînes se croisent : l’**information commande l’énergie**, et l’énergie renvoie de l’information par les capteurs. C’est cette boucle qui fait un système, et non la simple juxtaposition des deux.`,
           },
           questions: [
             ['Quelles sont les étapes de la chaîne d’énergie ?', ['Alimenter, distribuer, convertir, transmettre, agir', 'Acquérir, traiter, communiquer', 'Analyser, modéliser, valider', 'Mesurer, comparer, corriger'], 0, 'La chaîne d’information, elle, acquiert, traite et communique.'],
@@ -45,19 +60,40 @@ Toute la démarche SI se lit dans trois écarts : entre le **cahier des charges*
           titre: 'Énergie et mécanique',
           lecon: {
             titre: 'Puissance, rendement et mouvement',
-            cours: `Un système ne crée pas d'énergie : il en convertit, avec des pertes.
+            cours: `Un système ne crée pas d’énergie : il en **convertit**, avec des pertes. Toute l’étude consiste à suivre cette conversion et à chiffrer ce qui se perd.
 
 ## Puissance et énergie
-En électricité : P = U × I (watts, volts, ampères). En mécanique de rotation : P = C × ω, où C est le couple en newton-mètre et ω la vitesse angulaire en radians par seconde. L'énergie est la puissance intégrée dans le temps : E = P × t.
+| Domaine | Formule | Unités |
+| Électrique | P = U × I | watts, volts, ampères |
+| Mécanique de rotation | P = C × ω | watts, newton-mètres, radians par seconde |
+| Énergie | E = P × t | joules, watts, secondes |
 
 ## Le rendement
-η = puissance utile / puissance absorbée. Il est **toujours inférieur à 1** : les pertes se font en chaleur (effet Joule), en frottement, en bruit. Les rendements se **multiplient** en cascade : trois éléments à 0,9 donnent 0,73 au total.
+η = puissance utile / puissance absorbée.
+
+> Il est **toujours inférieur à 1** : les pertes partent en chaleur (effet Joule), en frottement, en bruit. Et surtout, les rendements se **multiplient** en cascade — trois éléments à 0,9 chacun donnent 0,9 × 0,9 × 0,9 = **0,73** au total, pas 0,9.
+
+| Nombre d’éléments à 0,9 | Rendement global |
+| 1 | 0,90 |
+| 2 | 0,81 |
+| 3 | 0,73 |
+| 5 | 0,59 |
 
 ## Statique et dynamique
-Un solide est en équilibre si la somme des forces **et** la somme des moments sont nulles. En dynamique, le principe fondamental relie la résultante des forces à l'accélération : somme des forces = m × a.
+| Situation | La condition | Ce qu’elle donne |
+| **Statique** | Somme des forces nulle **et** somme des moments nulle | L’équilibre |
+| **Dynamique** | Somme des forces = m × a | L’accélération |
+
+Les deux conditions de la statique sont nécessaires : un solide peut avoir une résultante nulle et tourner malgré tout.
 
 ## Transmission de mouvement
-**Engrenages** (rapport = nombre de dents), **poulies-courroie** (rapport = diamètres), **vis-écrou** (transforme rotation en translation), **bielle-manivelle**. Réduire la vitesse **augmente** le couple d'autant : c'est le même produit P = C × ω qui se conserve, aux pertes près.`,
+| Système | Rapport de transmission | Ce qu’il fait |
+| Engrenages | Nombre de dents | Rotation vers rotation |
+| Poulies-courroie | Diamètres | Rotation vers rotation, à distance |
+| Vis-écrou | Pas de la vis | Rotation vers **translation** |
+| Bielle-manivelle | Géométrie | Rotation vers translation alternée |
+
+> Réduire la vitesse **augmente le couple** d’autant : c’est le même produit P = C × ω qui se conserve, aux pertes près. Un réducteur ne crée pas de force, il échange de la vitesse contre du couple.`,
           },
           questions: [
             ['Quelle est la relation entre puissance, couple et vitesse angulaire ?', ['P = C × ω', 'P = C / ω', 'P = C + ω', 'P = C × ω²'], 0, 'Avec C en N·m et ω en rad/s.'],
@@ -74,19 +110,40 @@ Un solide est en équilibre si la somme des forces **et** la somme des moments s
           titre: 'Information, capteurs et programmation',
           lecon: {
             titre: 'Du signal physique à la décision',
-            cours: `Un système intelligent perçoit, décide, agit — et recommence.
+            cours: `Un système intelligent perçoit, décide, agit — et recommence. Trois maillons, chacun avec ses limites propres.
 
 ## Les capteurs
-Un capteur transforme une grandeur physique en signal exploitable. **TOR** (tout ou rien : fin de course, bouton), **analogique** (température, luminosité, pression), **numérique** (bus I2C, SPI). Ses caractéristiques : étendue de mesure, **sensibilité**, **précision**, **temps de réponse**.
+Un capteur transforme une grandeur physique en signal exploitable.
+
+| Type | Ce qu’il rend | Exemples |
+| **TOR** (tout ou rien) | Deux états seulement | Fin de course, bouton, détecteur |
+| **Analogique** | Une tension continue | Température, luminosité, pression |
+| **Numérique** | Une valeur codée sur un bus | Capteurs I2C, SPI |
+
+Ses caractéristiques : étendue de mesure, **sensibilité**, **précision**, **temps de réponse**. Un capteur trop lent fausse un asservissement rapide même s’il est parfaitement précis.
 
 ## La conversion analogique-numérique
-Le CAN échantillonne et quantifie. Sur n bits, on dispose de 2 puissance n niveaux : 10 bits donnent 1024 niveaux. Le théorème de Shannon impose une fréquence d'échantillonnage **au moins double** de la fréquence maximale du signal, sinon le signal est irrémédiablement déformé.
+Le CAN **échantillonne** (dans le temps) et **quantifie** (en amplitude).
 
-## L'algorithme et le programme
-Variables, conditions, boucles, fonctions. Un système embarqué exécute typiquement une **boucle infinie** : lire les entrées, calculer, écrire les sorties. L'algorithme se décrit avant d'être codé — organigramme, pseudo-code ou diagramme d'états.
+| Résolution | Nombre de niveaux |
+| 8 bits | 256 |
+| 10 bits | 1 024 |
+| 12 bits | 4 096 |
 
-## Les diagrammes d'états
-Un état, des transitions, des conditions de franchissement. C'est l'outil le plus adapté pour décrire un système séquentiel : un portail (fermé, en ouverture, ouvert, en fermeture) se modélise en quatre états.`,
+> Le théorème de **Shannon** impose une fréquence d’échantillonnage **au moins double** de la fréquence maximale du signal. En dessous, le signal n’est pas seulement dégradé : il est **irrémédiablement déformé**, et aucun traitement ultérieur ne le récupère.
+
+## L’algorithme et le programme
+Un système embarqué exécute typiquement une **boucle infinie** :
+
+1. **Lire** les entrées (capteurs).
+2. **Calculer** l’action à mener.
+3. **Écrire** les sorties (actionneurs).
+4. Recommencer.
+
+L’algorithme se décrit **avant** d’être codé — organigramme, pseudo-code ou diagramme d’états.
+
+## Les diagrammes d’états
+Un état, des transitions, des conditions de franchissement : c’est l’outil le plus adapté aux systèmes **séquentiels**. Un portail se modélise ainsi en quatre états — fermé, en ouverture, ouvert, en fermeture — et chaque transition porte sa condition.`,
           },
           questions: [
             ['Un capteur TOR délivre…', ['Deux états possibles seulement', 'Une valeur continue', 'Une trame numérique', 'Une image'], 0, 'Tout ou rien : un fin de course, un bouton.'],
@@ -108,19 +165,37 @@ Un état, des transitions, des conditions de franchissement. C'est l'outil le pl
           titre: 'Systèmes asservis',
           lecon: {
             titre: 'Boucle fermée, précision, stabilité',
-            cours: `Asservir, c'est corriger en permanence l'écart entre ce qu'on veut et ce qu'on obtient.
+            cours: `Asservir, c’est corriger en permanence l’écart entre ce qu’on veut et ce qu’on obtient. Tout le chapitre tient dans cette boucle et dans les compromis qu’elle impose.
 
 ## Boucle ouverte, boucle fermée
-En **boucle ouverte**, la commande est envoyée sans vérification : une perturbation fausse le résultat. En **boucle fermée**, un capteur mesure la sortie, un comparateur calcule l'**erreur** (consigne − mesure), et le correcteur agit sur cette erreur.
+| | Boucle ouverte | Boucle fermée |
+| Ce qui se passe | La commande part sans vérification | Un capteur mesure la sortie |
+| Face à une perturbation | Le résultat est faussé | L’erreur est mesurée et corrigée |
+| L’organe clé | Aucun | Le **comparateur** : erreur = consigne − mesure |
+| Exemple | Un four réglé sur une durée | Un four réglé sur une température |
 
 ## Les trois performances
-**Stabilité** (le système converge au lieu d'osciller), **précision** (erreur statique faible), **rapidité** (temps de réponse court). Elles sont **antagonistes** : gagner en rapidité dégrade souvent la stabilité. Régler un asservissement, c'est arbitrer.
+| Performance | Ce qu’on mesure |
+| **Stabilité** | Le système converge au lieu d’osciller |
+| **Précision** | L’erreur statique est faible |
+| **Rapidité** | Le temps de réponse est court |
+
+> Ces trois performances sont **antagonistes** : gagner en rapidité dégrade presque toujours la stabilité. Régler un asservissement n’est pas optimiser, c’est **arbitrer**.
 
 ## Le correcteur PID
-**P** (proportionnel) : réagit à l'erreur présente — augmente la rapidité, laisse une erreur statique. **I** (intégral) : accumule l'erreur passée — annule l'erreur statique, ralentit et déstabilise. **D** (dérivé) : anticipe la variation — amortit les oscillations, amplifie le bruit.
+| Action | Sur quoi elle agit | Ce qu’elle apporte | Ce qu’elle coûte |
+| **P** proportionnel | L’erreur présente | Rapidité | Laisse une erreur statique |
+| **I** intégral | L’erreur passée accumulée | Annule l’erreur statique | Ralentit, déstabilise |
+| **D** dérivé | La variation de l’erreur | Amortit les oscillations | Amplifie le bruit |
 
 ## Lire une réponse indicielle
-Sur la réponse à un échelon, on lit le **temps de réponse à 5 %**, le **dépassement** (en % de la valeur finale) et l'**erreur statique** (écart résiduel). Ces trois lectures suffisent à diagnostiquer un réglage.`,
+Sur la réponse à un échelon, trois lectures suffisent à diagnostiquer un réglage :
+
+1. Le **temps de réponse à 5 %** : le système est-il assez rapide ?
+2. Le **dépassement**, en pourcentage de la valeur finale : est-il stable ?
+3. L’**erreur statique** : l’écart résiduel une fois stabilisé.
+
+Un fort dépassement avec une erreur statique nulle signale un intégral trop marqué ; une erreur statique persistante, un correcteur purement proportionnel.`,
           },
           questions: [
             ['Que calcule le comparateur d’un système asservi ?', ['L’erreur entre la consigne et la mesure', 'La puissance consommée', 'Le rendement', 'La vitesse maximale'], 0, 'C’est cette erreur que le correcteur traite.'],
@@ -137,19 +212,37 @@ Sur la réponse à un échelon, on lit le **temps de réponse à 5 %**, le **dé
           titre: 'Modélisation et simulation',
           lecon: {
             titre: 'Prédire avant de fabriquer',
-            cours: `Simuler coûte mille fois moins cher que se tromper en production.
+            cours: `Simuler coûte mille fois moins cher que se tromper en production. Encore faut-il savoir ce qu’un modèle peut dire — et ce qu’il ne dira jamais.
 
 ## Pourquoi modéliser
-Un modèle est une **représentation simplifiée** destinée à répondre à une question précise. Il n'est jamais « vrai » : il est **valide dans un domaine**. Un modèle de frottement sec suffit pour dimensionner un frein, pas pour prévoir son usure.
+Un modèle est une **représentation simplifiée** destinée à répondre à une question précise.
+
+> Un modèle n’est jamais « vrai » : il est **valide dans un domaine**. Un modèle de frottement sec suffit pour dimensionner un frein, pas pour prévoir son usure. La première question devant un modèle n’est donc pas « est-il juste ? » mais « pour quelle question a-t-il été construit ? ».
 
 ## Les modèles multiphysiques
-Un même système associe mécanique, électrique, thermique, informatique. Les logiciels de simulation multiphysique permettent de coupler ces domaines et de voir, par exemple, comment l'échauffement d'un moteur dégrade son couple.
+Un même système associe plusieurs domaines, et c’est leur **couplage** qui produit les surprises.
+
+| Domaine | Ce qu’il décrit | Exemple de couplage |
+| Mécanique | Efforts, mouvements | Le couple disponible sur l’arbre |
+| Électrique | Courants, tensions | Le courant absorbé par le moteur |
+| Thermique | Échauffements | L’échauffement dégrade le couple |
+| Informatique | Lois de commande | Le correcteur compense la dérive |
 
 ## La validation
-On compare la **simulation** aux **mesures expérimentales**. Un écart n'invalide pas nécessairement le modèle : il faut d'abord se demander si l'hypothèse écartée (frottements négligés, inertie du capteur, jeu mécanique) explique l'écart observé.
+On compare la **simulation** aux **mesures expérimentales**. Un écart n’invalide pas nécessairement le modèle : il faut d’abord chercher l’hypothèse écartée qui l’explique.
+
+| L’écart observé | L’hypothèse à interroger |
+| Réponse plus lente que prévu | Inertie ou jeu mécanique négligés |
+| Amplitude plus faible | Frottements négligés |
+| Retard constant | Temps de réponse du capteur |
 
 ## Les diagrammes SysML
-**Diagramme des exigences** (ce que le système doit faire), **de définition de blocs** (de quoi il est fait), **de blocs internes** (comment les blocs échangent), **d'états** et **de séquence** (comment il se comporte dans le temps).`,
+| Diagramme | Ce qu’il décrit |
+| Des exigences | Ce que le système **doit** faire |
+| De définition de blocs | De quoi il **est fait** |
+| De blocs internes | Comment les blocs **échangent** |
+| D’états | Dans quels états il peut se trouver |
+| De séquence | Comment il se comporte **dans le temps** |`,
           },
           questions: [
             ['Un modèle est…', ['Une représentation simplifiée valide dans un domaine donné', 'Une copie exacte du réel', 'Un prototype', 'Un plan de fabrication'], 0, 'Il répond à une question précise, pas à toutes.'],
@@ -166,19 +259,39 @@ On compare la **simulation** aux **mesures expérimentales**. Un écart n'invali
           titre: 'Projet et démarche d’ingénieur',
           lecon: {
             titre: 'Conduire un projet jusqu’au prototype',
-            cours: `L'épreuve de projet évalue une **démarche**, pas seulement un objet qui fonctionne.
+            cours: `L’épreuve de projet évalue une **démarche**, pas seulement un objet qui fonctionne. Un prototype réussi sans justification vaut moins qu’un prototype imparfait dont chaque choix est tracé.
 
 ## Les étapes
-Analyse du besoin → recherche de solutions → choix argumenté → conception détaillée → réalisation → essais → validation. Chaque étape produit un livrable, et chaque choix se justifie par un critère du cahier des charges.
+1. **Analyser le besoin** : à quoi le système doit-il répondre, et pour qui ?
+2. **Rechercher des solutions** : plusieurs, et vraiment différentes.
+3. **Choisir**, en argumentant sur les critères du cahier des charges.
+4. **Concevoir** en détail : dimensionnement, matériaux, interfaces.
+5. **Réaliser** le prototype.
+6. **Essayer**, selon un protocole écrit à l’avance.
+7. **Valider** : le besoin de l’étape 1 est-il satisfait ?
+
+Chaque étape produit un **livrable**, et chaque choix se justifie par un critère.
 
 ## Le choix de solutions
-Un tableau de comparaison croise les solutions candidates avec des critères **pondérés**. L'intérêt n'est pas le score final mais la **traçabilité** : on sait pourquoi telle solution a été écartée.
+Un tableau de comparaison croise les solutions candidates avec des critères **pondérés**.
 
-## L'expérimentation
-Un protocole d'essai précise : la grandeur mesurée, le moyen de mesure, les conditions, le nombre de répétitions. Une mesure unique ne prouve rien ; une mesure sans incertitude annoncée n'est pas exploitable.
+> L’intérêt du tableau n’est pas le score final — qu’on peut toujours faire dire ce qu’on veut — mais la **traçabilité** : on sait, six mois plus tard, pourquoi telle solution a été écartée.
+
+## L’expérimentation
+Un protocole d’essai précise quatre choses :
+
+| Ce qu’il précise | Pourquoi |
+| La grandeur mesurée | Pour savoir ce qu’on compare |
+| Le moyen de mesure | Il porte sa propre incertitude |
+| Les conditions | Température, charge, alimentation |
+| Le nombre de répétitions | Une mesure unique ne prouve rien |
+
+Une mesure sans incertitude annoncée n’est pas exploitable : c’est un chiffre, pas un résultat.
 
 ## Le développement durable
-Analyse du cycle de vie : extraction, fabrication, transport, usage, fin de vie. Un système économe à l'usage mais coûteux à produire peut avoir un bilan global défavorable — l'ingénieur doit raisonner sur tout le cycle, pas sur la seule phase visible.`,
+L’**analyse du cycle de vie** couvre cinq phases : extraction, fabrication, transport, usage, fin de vie.
+
+> Un système économe à l’usage mais coûteux à produire peut avoir un bilan global défavorable. L’ingénieur raisonne sur **tout** le cycle, jamais sur la seule phase visible par l’utilisateur.`,
           },
           questions: [
             ['Dans un tableau de choix de solutions, l’essentiel est…', ['La traçabilité des critères de décision', 'Le score final', 'Le nombre de solutions', 'La rapidité du choix'], 0, 'On doit pouvoir expliquer pourquoi une solution a été écartée.'],

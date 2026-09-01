@@ -147,27 +147,44 @@ DELETE FROM public.chapters c
           axe: 'La planète Terre, l’environnement et l’action humaine',
           lecon: {
             titre: 'Une planète parmi d’autres, mais habitable',
-            cours: `Le **système solaire** s’est formé il y a environ **4,6 milliards d’années** à partir d’un nuage de gaz et de poussières. Au centre, le **Soleil**, une étoile qui produit son énergie par fusion nucléaire ; autour, huit planètes en orbite.
+            cours: `Le système solaire s'est formé il y a environ 4,6 milliards d'années à partir d'un nuage de gaz et de poussières.
 
 ## Deux familles de planètes
-- Les planètes **telluriques** (Mercure, Vénus, la Terre, Mars) : petites, rocheuses, denses, proches du Soleil.
-- Les planètes **géantes gazeuses** (Jupiter, Saturne) et **glacées** (Uranus, Neptune) : volumineuses, peu denses, entourées d’anneaux et de nombreux satellites.
-S’y ajoutent la ceinture d’astéroïdes, les comètes et les planètes naines comme Pluton.
+| La famille | Ses membres | Ses caractères |
+| **Telluriques** | Mercure, Vénus, **Terre**, Mars | Petites, rocheuses, denses, proches du Soleil |
+| **Géantes gazeuses** | Jupiter, Saturne | Volumineuses, peu denses, anneaux et nombreux satellites |
+| **Géantes glacées** | Uranus, Neptune | Idem, plus froides |
+
+S'y ajoutent la ceinture d'astéroïdes, les comètes et les planètes naines comme Pluton.
 
 ## Les mouvements de la Terre
-La Terre tourne sur elle-même en **24 heures** (la **rotation**, qui produit l’alternance jour-nuit) et autour du Soleil en **365,25 jours** (la **révolution**). L’axe de rotation est **incliné de 23,5°** : c’est cette inclinaison, et non la distance au Soleil, qui produit les **saisons**.
+| Le mouvement | Sa durée | Ce qu'il produit |
+| La **rotation** sur elle-même | **24 heures** | L'alternance jour-nuit |
+| La **révolution** autour du Soleil | **365,25 jours** | L'année |
+| L'**inclinaison** de l'axe | 23,5° | Les **saisons** |
 
-> En été, l’hémisphère concerné reçoit les rayons plus à la verticale et pendant plus longtemps : il chauffe davantage.
+> Ce sont les saisons de l'inclinaison, non de la distance au Soleil. En été, l'hémisphère concerné reçoit les rayons plus à la verticale et plus longtemps : il chauffe davantage.
 
 ## Pourquoi la Terre est habitable
-- Sa **distance au Soleil** permet l’existence d’eau **liquide**.
-- Sa **masse** est suffisante pour retenir une **atmosphère**.
-- L’atmosphère assure un **effet de serre naturel** (sans lui, environ −18 °C en moyenne au lieu de +15 °C) et filtre les ultraviolets grâce à la couche d’**ozone**.
-- Un **champ magnétique** dévie le vent solaire.
-Vénus, trop chaude par emballement de l’effet de serre, et Mars, qui a perdu son atmosphère, montrent à quel point cet équilibre est étroit.
+| La condition | Ce qu'elle permet |
+| Sa **distance au Soleil** | De l'eau **liquide** |
+| Sa **masse** | Retenir une **atmosphère** |
+| L'**effet de serre naturel** | +15 °C en moyenne, au lieu de −18 °C sans lui |
+| La couche d'**ozone** | Elle filtre les ultraviolets |
+| Le **champ magnétique** | Il dévie le vent solaire |
+
+| La planète voisine | Son problème |
+| **Vénus** | Un emballement de l'effet de serre : trop chaude |
+| **Mars** | Elle a perdu son atmosphère |
+
+> Cet équilibre est étroit.
 
 ## Le temps long
-La Terre a **4,54 milliards d’années**. Les roches, les fossiles et la radioactivité permettent de la dater. À cette échelle, l’humanité n’occupe qu’un instant : rapportée à une année, l’apparition d’*Homo sapiens* tiendrait dans les dernières minutes du 31 décembre.`,
+| Le repère | Sa valeur |
+| L'âge de la Terre | **4,54 milliards d'années** |
+| Les outils de datation | Roches, fossiles, **radioactivité** |
+
+> Rapportée à une année, l'apparition d'*Homo sapiens* tiendrait dans les dernières minutes du 31 décembre.`,
           },
           questions: [
             ['Quel âge a le système solaire ?', ['Environ 4,6 milliards d’années', 'Environ 4,6 millions d’années', 'Environ 13,8 milliards d’années', 'Environ 500 millions d’années'], 0, 'Il s’est formé à partir d’un nuage de gaz et de poussières.'],
@@ -185,23 +202,35 @@ La Terre a **4,54 milliards d’années**. Les roches, les fossiles et la radioa
           axe: 'La planète Terre, l’environnement et l’action humaine',
           lecon: {
             titre: 'Une surface découpée et mobile',
-            cours: `La surface de la Terre n’est pas d’un seul tenant : la **lithosphère** (croûte + partie supérieure du manteau, rigide) est découpée en une douzaine de **plaques** qui se déplacent de quelques **centimètres par an** sur l’**asthénosphère**, plus ductile.
+            cours: `La lithosphère — croûte et partie supérieure du manteau, rigide — est découpée en une douzaine de plaques qui se déplacent de quelques centimètres par an sur l'asthénosphère, plus ductile.
 
-## L’histoire d’une idée
-En 1912, **Alfred Wegener** propose la **dérive des continents** : la forme des côtes, les fossiles identiques de part et d’autre de l’Atlantique, la continuité des chaînes de montagnes et les traces glaciaires convergent. Faute d’expliquer le moteur, l’idée est rejetée. Les années 1960 lui donnent raison : cartographie des fonds océaniques, sismologie et **anomalies magnétiques** symétriques de part et d’autre des dorsales démontrent l’**expansion océanique**.
+## L'histoire d'une idée
+| L'étape | Sa date | Son contenu |
+| La **dérive des continents** de **Wegener** | 1912 | Forme des côtes, fossiles identiques, chaînes continues, traces glaciaires |
+| Son rejet | — | Faute d'expliquer le **moteur** |
+| La confirmation | Années **1960** | Cartographie des fonds, sismologie, **anomalies magnétiques** symétriques : l'**expansion océanique** |
 
 ## Trois types de frontières
-- **Divergentes** : au niveau des **dorsales océaniques**, deux plaques s’écartent, du magma remonte et crée de la lithosphère neuve. Volcanisme effusif, séismes superficiels.
-- **Convergentes** : deux plaques se rapprochent. Une plaque océanique dense plonge sous l’autre (**subduction**) : fosse océanique, séismes profonds, volcanisme explosif. Deux plaques continentales se heurtent (**collision**) : chaînes de montagnes comme l’Himalaya ou les Alpes.
-- **Coulissantes** : les plaques glissent l’une contre l’autre le long d’une **faille transformante** (San Andreas) : séismes, pas de volcanisme.
+| La frontière | Le mouvement | Ce qui s'y passe | Ses manifestations |
+| **Divergente** | Les plaques s'**écartent** | Du magma remonte aux **dorsales** et crée de la lithosphère neuve | Volcanisme effusif, séismes superficiels |
+| **Convergente**, en **subduction** | Une plaque océanique **plonge** | Fosse océanique | Séismes profonds, volcanisme explosif |
+| **Convergente**, en **collision** | Deux plaques continentales se heurtent | Chaînes de montagnes | Himalaya, Alpes |
+| **Coulissante** | Les plaques **glissent** l'une contre l'autre | Une **faille transformante** | Séismes ; pas de volcanisme |
 
 > Ce qui naît aux dorsales disparaît en subduction : la surface de la Terre se **recycle**.
 
 ## Le moteur
-La chaleur interne, issue de la radioactivité et de la formation de la planète, met le manteau en **convection** lente. Les mouvements de matière entraînent les plaques ; la traction de la plaque plongeante y contribue fortement.
+| L'élément | Son rôle |
+| La **chaleur interne** | Issue de la radioactivité et de la formation de la planète |
+| La **convection** du manteau | Elle entraîne les plaques |
+| La **traction** de la plaque plongeante | Elle y contribue fortement |
 
 ## Ce que cela explique
-La répartition des **séismes** et des **volcans** en ceintures étroites (la « ceinture de feu » du Pacifique), la formation des montagnes, l’ouverture et la fermeture des océans, et le déplacement passé des continents (la **Pangée**, il y a environ 250 millions d’années).`,
+| Le fait | Son explication |
+| Séismes et volcans **en ceintures** | La « ceinture de feu » du Pacifique suit les frontières |
+| La formation des **montagnes** | La collision |
+| L'ouverture et la fermeture des **océans** | Le cycle des plaques |
+| La **Pangée**, il y a environ 250 millions d'années | Le déplacement passé des continents |`,
           },
           questions: [
             ['De quoi est faite la lithosphère ?', ['De la croûte et de la partie supérieure rigide du manteau', 'Du noyau et du manteau', 'De la croûte uniquement', 'De l’asthénosphère uniquement'], 0, 'Elle repose sur l’asthénosphère, plus ductile.'],
@@ -219,30 +248,49 @@ La répartition des **séismes** et des **volcans** en ceintures étroites (la �
           axe: 'La planète Terre, l’environnement et l’action humaine',
           lecon: {
             titre: 'De la rupture de la roche au risque humain',
-            cours: `Un **séisme** est une vibration du sol provoquée par une **rupture brutale** des roches en profondeur, le long d’une **faille**.
+            cours: `Un séisme est une vibration du sol provoquée par une rupture brutale des roches en profondeur, le long d'une faille.
 
 ## Le mécanisme
-Sous l’effet des mouvements des plaques, les roches se **déforment** et accumulent de l’énergie élastique. Quand la contrainte dépasse leur résistance, elles **cassent** : l’énergie est libérée d’un coup sous forme d’**ondes sismiques**. Le point de rupture en profondeur est le **foyer** (ou hypocentre) ; le point situé à sa verticale en surface est l’**épicentre**, là où les dégâts sont en général maximaux. Des **répliques** suivent souvent la secousse principale.
+| L'étape | Ce qui se passe |
+| 1 | Les mouvements de plaques **déforment** les roches |
+| 2 | Elles accumulent de l'**énergie élastique** |
+| 3 | La contrainte dépasse leur résistance : elles **cassent** |
+| 4 | L'énergie part d'un coup en **ondes sismiques** |
+| 5 | Des **répliques** suivent souvent |
+
+| Le point | Sa position |
+| Le **foyer** (hypocentre) | Le point de rupture, en profondeur |
+| L'**épicentre** | À sa verticale, en surface : les dégâts y sont en général maximaux |
 
 ## Mesurer un séisme
-- La **magnitude** (échelle de Richter, puis magnitude de moment) mesure l’**énergie libérée**. Elle est **logarithmique** : +1 de magnitude correspond à environ 30 fois plus d’énergie. Il n’y a qu’une magnitude par séisme.
-- L’**intensité** (échelle MSK ou EMS) mesure les **effets ressentis et observés** en un lieu donné : elle varie d’un endroit à l’autre pour un même séisme.
+| La grandeur | Ce qu'elle mesure | Combien de valeurs par séisme |
+| La **magnitude** | L'**énergie libérée** | **Une seule** |
+| L'**intensité** | Les **effets** ressentis et observés | **Une par lieu** |
 
-> Un séisme de magnitude modérée peut faire plus de victimes qu’un séisme puissant, si les constructions sont fragiles et la population dense.
+L'échelle de magnitude est **logarithmique** : +1 correspond à environ **30 fois** plus d'énergie.
+
+> Un séisme de magnitude modérée peut faire plus de victimes qu'un séisme puissant, si les constructions sont fragiles et la population dense.
 
 ## Risque, aléa, vulnérabilité
-Le **risque** est le croisement d’un **aléa** (la probabilité qu’un séisme se produise) et d’une **vulnérabilité** (des personnes, des bâtiments, des activités exposés). On ne peut pas agir sur l’aléa ; on peut réduire la vulnérabilité.
+| La notion | Sa définition | Peut-on agir dessus |
+| L'**aléa** | La probabilité qu'un séisme se produise | **Non** |
+| La **vulnérabilité** | Les personnes, bâtiments et activités exposés | **Oui** |
+| Le **risque** | Le croisement des deux | Par la vulnérabilité |
 
 ## Prévoir et prévenir
-On ne sait pas **prédire** la date d’un séisme. On peut en revanche :
-- cartographier les **zones sismiques** et les failles actives ;
-- imposer des **normes parasismiques** aux constructions ;
-- surveiller en continu par des réseaux de **sismographes** ;
-- éduquer la population aux bons réflexes et organiser les secours ;
-- alerter en cas de **tsunami**, quand un séisme sous-marin déplace la colonne d’eau.
+> On ne sait pas **prédire** la date d'un séisme.
+
+| Le moyen | Ce qu'il apporte |
+| Cartographier les **zones sismiques** | Savoir où le risque est fort |
+| Les **normes parasismiques** | Des bâtiments qui tiennent |
+| Les réseaux de **sismographes** | Une surveillance continue |
+| L'**éducation** et les secours | Les bons réflexes |
+| L'alerte **tsunami** | Quand un séisme sous-marin déplace la colonne d'eau |
 
 ## En France
-La sismicité est modérée mais réelle : Alpes, Pyrénées, Provence, Alsace, et forte aux Antilles, où les normes parasismiques sont obligatoires.`,
+| La zone | Sa sismicité |
+| Alpes, Pyrénées, Provence, Alsace | Modérée mais réelle |
+| Les **Antilles** | Forte : normes parasismiques obligatoires |`,
           },
           questions: [
             ['Quelle est la cause d’un séisme ?', ['La rupture brutale de roches le long d’une faille', 'Une éruption volcanique systématique', 'Le passage d’une comète', 'Le réchauffement de l’atmosphère'], 0, 'Les roches accumulent de l’énergie avant de casser.'],
@@ -260,23 +308,44 @@ La sismicité est modérée mais réelle : Alpes, Pyrénées, Provence, Alsace, 
           axe: 'La planète Terre, l’environnement et l’action humaine',
           lecon: {
             titre: 'Deux types d’éruptions, deux dangers',
-            cours: `Le **volcanisme** est l’arrivée en surface de **magma**, une roche fondue formée en profondeur. Le magma s’accumule dans un **réservoir**, remonte par une **cheminée** et sort par un **cratère**.
+            cours: `Le volcanisme est l'arrivée en surface de magma, une roche fondue formée en profondeur.
 
-## Ce qui décide du type d’éruption
-Tout tient à la **viscosité** du magma et à sa teneur en **gaz** dissous.
-- Un magma **fluide**, pauvre en silice, laisse les gaz s’échapper facilement : l’éruption est **effusive**. Des **coulées de lave** s’écoulent, parfois sur des kilomètres, et des fontaines de lave jaillissent. Exemples : Piton de la Fournaise, volcans d’Hawaï, Islande.
-- Un magma **visqueux**, riche en silice, retient les gaz jusqu’à la rupture : l’éruption est **explosive**. Elle projette des **cendres**, des blocs, et produit des **nuées ardentes** (mélange brûlant de gaz et de particules dévalant les pentes à plusieurs centaines de km/h). Exemples : montagne Pelée, Vésuve, Merapi.
+Il s'accumule dans un **réservoir**, remonte par une **cheminée**, sort par un **cratère**.
 
-> Le magma fluide fait des coulées qu’on peut souvent fuir ; le magma visqueux fait des nuées ardentes qu’on ne peut pas fuir.
+## Les deux types d'éruption
+| Le critère | Éruption **effusive** | Éruption **explosive** |
+| Le magma | **Fluide**, pauvre en silice | **Visqueux**, riche en silice |
+| Les gaz | Ils s'échappent facilement | Ils sont **retenus** jusqu'à la rupture |
+| Ce qui sort | **Coulées de lave**, fontaines | **Cendres**, blocs, **nuées ardentes** |
+| Ses exemples | Piton de la Fournaise, Hawaï, Islande | Montagne Pelée, Vésuve, Merapi |
 
-## Où sont les volcans ?
-Ils se concentrent le long des frontières de plaques : volcanisme **effusif** aux dorsales et aux rifts, **explosif** dans les zones de **subduction** (ceinture de feu du Pacifique). Certains apparaissent loin de toute frontière, au-dessus d’un **point chaud** (Hawaï, La Réunion).
+> Le magma fluide fait des coulées qu'on peut souvent fuir ; le magma visqueux fait des nuées ardentes qu'on ne peut pas fuir — plusieurs centaines de km/h.
+
+## Où sont les volcans
+| Le contexte | Le type de volcanisme |
+| Les **dorsales** et les rifts | **Effusif** |
+| Les zones de **subduction** | **Explosif** — la ceinture de feu du Pacifique |
+| Les **points chauds**, loin de toute frontière | Hawaï, La Réunion |
 
 ## Les risques
-Coulées de lave, nuées ardentes, retombées de cendres (toits effondrés, trafic aérien interrompu), **lahars** (coulées de boue), gaz toxiques, tsunamis en cas d’effondrement.
+| L'aléa | Son danger |
+| Coulées de lave | Destruction, mais lente |
+| **Nuées ardentes** | Mortelles, immédiates |
+| Retombées de **cendres** | Toits effondrés, trafic aérien interrompu |
+| **Lahars** | Coulées de boue |
+| Gaz toxiques | Asphyxie |
+| Effondrement d'édifice | Tsunami |
 
 ## Prévoir et se protéger
-Contrairement aux séismes, une éruption est souvent **précédée de signes** : petits séismes, gonflement de l’édifice mesuré par GPS et inclinomètres, changement de composition des gaz, hausse de température. Les **observatoires volcanologiques** surveillent en continu, définissent des niveaux d’alerte et préparent les **plans d’évacuation** — c’est ce qui a sauvé des dizaines de milliers de vies au Pinatubo en 1991.`,
+Contrairement aux séismes, une éruption est souvent **précédée de signes**.
+
+| Le signe précurseur | Son instrument |
+| Petits **séismes** | Sismographes |
+| **Gonflement** de l'édifice | GPS, inclinomètres |
+| Changement de composition des **gaz** | Analyseurs |
+| Hausse de **température** | Capteurs, imagerie |
+
+> Les **observatoires volcanologiques** surveillent en continu, définissent des niveaux d'alerte et préparent les évacuations — c'est ce qui a sauvé des dizaines de milliers de vies au **Pinatubo**, en 1991.`,
           },
           questions: [
             ['Qu’est-ce que le magma ?', ['De la roche fondue formée en profondeur', 'De la lave refroidie en surface', 'Un mélange de cendres et d’eau', 'Un gaz volcanique'], 0, 'On parle de lave une fois qu’il est sorti.'],
@@ -298,24 +367,41 @@ Contrairement aux séismes, une éruption est souvent **précédée de signes** 
           axe: 'Le climat et la météorologie',
           lecon: {
             titre: 'Le moteur solaire de l’atmosphère et des océans',
-            cours: `L’atmosphère et les océans sont en mouvement permanent. Le moteur est toujours le même : le **rayonnement solaire** chauffe la Terre de façon **inégale** selon la latitude.
+            cours: `L'atmosphère et les océans sont en mouvement permanent. Le moteur est toujours le même : le rayonnement solaire chauffe la Terre de façon inégale.
 
 ## Un chauffage inégal
-À l’**équateur**, les rayons arrivent presque à la verticale : l’énergie se concentre sur une petite surface. Aux **pôles**, ils arrivent très inclinés et se répartissent sur une grande surface, en traversant plus d’atmosphère. Il en résulte un **excédent** d’énergie aux basses latitudes et un **déficit** aux hautes latitudes. Les circulations d’air et d’eau **redistribuent** cette chaleur.
+| La latitude | L'angle des rayons | Le bilan d'énergie |
+| L'**équateur** | Presque à la verticale : l'énergie se concentre | **Excédent** |
+| Les **pôles** | Très inclinés, sur une grande surface, à travers plus d'atmosphère | **Déficit** |
+
+> Les circulations d'air et d'eau **redistribuent** cette chaleur.
 
 ## La circulation atmosphérique
-L’air chaud est moins dense : il **s’élève**, ce qui crée une zone de **basse pression** (dépression) ; l’air froid, plus dense, **descend** et crée une **haute pression** (anticyclone). Le **vent** est simplement de l’air qui se déplace de la haute vers la basse pression. La rotation de la Terre dévie ces mouvements (**force de Coriolis**), ce qui organise l’atmosphère en grandes cellules et en vents dominants (alizés, vents d’ouest).
+| L'air | Sa densité | Son mouvement | La pression créée |
+| **Chaud** | Plus faible | Il **s'élève** | **Basse** : une dépression |
+| **Froid** | Plus forte | Il **descend** | **Haute** : un anticyclone |
 
-> Météo et climat ne sont pas la même chose : la **météo** décrit le temps qu’il fait sur quelques jours, le **climat** décrit les moyennes et la variabilité sur au moins trente ans.
+Le **vent** est de l'air qui va de la haute vers la basse pression. La rotation de la Terre le dévie : c'est la **force de Coriolis**, qui organise l'atmosphère en grandes cellules et en vents dominants — alizés, vents d'ouest.
+
+> **Météo** et **climat** ne sont pas la même chose : la météo décrit le temps sur quelques jours, le climat les moyennes et la variabilité sur au moins **trente ans**.
 
 ## Les courants océaniques
-En surface, les **courants** sont entraînés par les vents : le **Gulf Stream** transporte de l’eau chaude vers l’Atlantique nord et adoucit le climat de l’Europe de l’Ouest. En profondeur, les différences de **température** et de **salinité** créent la **circulation thermohaline**, un immense tapis roulant qui met environ mille ans à boucler son parcours.
+| Le niveau | Son moteur | Son exemple |
+| En **surface** | Les vents | Le **Gulf Stream**, qui adoucit le climat de l'Europe de l'Ouest |
+| En **profondeur** | Les différences de **température** et de **salinité** | La **circulation thermohaline**, un tapis roulant de mille ans |
 
 ## Les phénomènes météorologiques
-La rencontre de masses d’air aux caractéristiques différentes forme des **fronts**, à l’origine des perturbations. L’évaporation, la condensation en nuages et les précipitations constituent le **cycle de l’eau**. Les **cyclones tropicaux** naissent au-dessus d’océans chauds (plus de 26 °C) et libèrent une énergie considérable.
+| Le phénomène | Son mécanisme |
+| Les **fronts** | La rencontre de masses d'air différentes |
+| Le **cycle de l'eau** | Évaporation, condensation en nuages, précipitations |
+| Les **cyclones tropicaux** | Ils naissent sur des océans à plus de **26 °C** |
 
 ## Prévoir le temps
-Satellites, stations au sol, ballons-sondes et bouées alimentent des **modèles numériques**. La prévision est fiable à quelques jours, mais l’atmosphère est un système **chaotique** : au-delà d’environ deux semaines, la prévision détaillée devient impossible.`,
+| L'outil | Ce qu'il apporte |
+| Satellites, stations au sol, ballons-sondes, bouées | Les données |
+| Les **modèles numériques** | La prévision |
+
+> L'atmosphère est un système **chaotique** : au-delà d'environ **deux semaines**, la prévision détaillée devient impossible.`,
           },
           questions: [
             ['Pourquoi l’équateur reçoit-il plus d’énergie solaire que les pôles ?', ['Les rayons y arrivent presque à la verticale', 'L’équateur est plus proche du Soleil', 'L’atmosphère y est absente', 'Le sol y est plus sombre'], 0, 'Aux pôles, la même énergie se répartit sur une plus grande surface.'],
@@ -333,28 +419,56 @@ Satellites, stations au sol, ballons-sondes et bouées alimentent des **modèles
           axe: 'Le climat et la météorologie',
           lecon: {
             titre: 'Un réchauffement rapide et ses conséquences',
-            cours: `Le climat de la Terre a toujours varié : alternance de périodes **glaciaires** et **interglaciaires**, liée notamment aux variations de l’orbite terrestre (**paramètres de Milankovitch**), à l’activité volcanique et à la teneur de l’atmosphère en gaz à effet de serre. Ces variations naturelles s’étalent sur des **dizaines de milliers d’années**.
+            cours: `Le climat a toujours varié. Ce qui change aujourd'hui, c'est la vitesse de la variation, et sa cause.
 
-## Ce qui est différent aujourd’hui
-Depuis l’ère industrielle, la température moyenne mondiale a augmenté d’environ **1,1 à 1,2 °C**, et la **vitesse** de ce réchauffement n’a pas d’équivalent connu. La cause est identifiée : les **émissions de gaz à effet de serre** d’origine humaine — **CO₂** (combustibles fossiles, déforestation, ciment), **méthane** (élevage, rizières, fuites de gaz), **protoxyde d’azote** (engrais).
+## Les variations naturelles
+| La cause | Son échelle de temps |
+| Les **paramètres de Milankovitch** — variations de l'orbite | Des dizaines de milliers d'années |
+| L'activité **volcanique** | Des années à des siècles |
+| La teneur de l'atmosphère en gaz à effet de serre | Longue |
 
-## L’effet de serre, naturel puis renforcé
-Les gaz à effet de serre laissent passer le rayonnement solaire et retiennent une partie du rayonnement infrarouge renvoyé par le sol. Naturel, cet effet rend la Terre habitable ; **renforcé** par les activités humaines, il déséquilibre le bilan énergétique de la planète.
+Elles produisent l'alternance de périodes **glaciaires** et **interglaciaires**.
 
-## Comment le sait-on ?
-Les **carottes de glace** du Groenland et de l’Antarctique piègent des bulles d’air vieilles de 800 000 ans : on y lit directement la teneur passée en CO₂. S’y ajoutent les sédiments, les pollens, les cernes des arbres et, depuis 1850, les mesures directes.
+## Ce qui est différent aujourd'hui
+| Le fait | Sa valeur |
+| Le réchauffement depuis l'ère industrielle | Environ **1,1 à 1,2 °C** |
+| Sa **vitesse** | Sans équivalent connu |
+| Sa cause | Les **émissions de gaz à effet de serre** d'origine humaine |
+
+| Le gaz | Ses sources principales |
+| **CO₂** | Combustibles fossiles, déforestation, ciment |
+| **Méthane** | Élevage, rizières, fuites de gaz |
+| **Protoxyde d'azote** | Engrais |
+
+## L'effet de serre, naturel puis renforcé
+| L'état | Son effet |
+| **Naturel** | Il rend la Terre habitable |
+| **Renforcé** par les activités humaines | Il déséquilibre le bilan énergétique de la planète |
+
+Les gaz laissent passer le rayonnement solaire et retiennent une partie de l'infrarouge renvoyé par le sol.
+
+## Comment le sait-on
+| L'archive | Ce qu'elle donne |
+| Les **carottes de glace** du Groenland et de l'Antarctique | Des bulles d'air vieilles de **800 000 ans** : la teneur passée en CO₂ |
+| Sédiments, pollens, cernes des arbres | Des températures reconstituées |
+| Les mesures directes | Depuis 1850 |
 
 ## Les conséquences
-- Hausse du **niveau des mers** (dilatation de l’eau, fonte des glaciers et des calottes).
-- **Fonte** de la banquise arctique et du **permafrost**.
-- **Acidification** des océans par dissolution du CO₂.
-- Multiplication et intensification des **événements extrêmes** : canicules, sécheresses, incendies, pluies diluviennes, cyclones plus intenses.
-- Déplacement des aires de répartition des espèces, perte de récoltes, migrations.
+| La conséquence | Son mécanisme |
+| La hausse du **niveau des mers** | Dilatation de l'eau, fonte des glaciers et des calottes |
+| La fonte de la **banquise** et du **permafrost** | Le réchauffement polaire, deux fois plus rapide |
+| L'**acidification** des océans | La dissolution du CO₂ |
+| Les **événements extrêmes** | Canicules, sécheresses, incendies, pluies diluviennes, cyclones plus intenses |
+| Le déplacement des **espèces** | Perte de récoltes, migrations |
 
-> Le climat ne réagit pas instantanément : une partie du réchauffement à venir est déjà engagée par les émissions passées.
+> Le climat ne réagit pas instantanément : une partie du réchauffement à venir est **déjà engagée** par les émissions passées.
 
 ## Agir
-L’**atténuation** réduit les émissions (énergies décarbonées, sobriété, transports, isolation, alimentation, reforestation). L’**adaptation** réduit la vulnérabilité (digues, urbanisme, alerte, cultures adaptées). L’**accord de Paris** (2015) fixe l’objectif de contenir le réchauffement nettement en dessous de 2 °C.`,
+| L'action | Son objet | Ses moyens |
+| L'**atténuation** | Réduire les émissions | Énergies décarbonées, sobriété, transports, isolation, alimentation, reforestation |
+| L'**adaptation** | Réduire la vulnérabilité | Digues, urbanisme, alerte, cultures adaptées |
+
+L'**accord de Paris** (2015) fixe l'objectif de contenir le réchauffement nettement en dessous de 2 °C.`,
           },
           questions: [
             ['Quelle est la cause principale du réchauffement climatique actuel ?', ['Les émissions humaines de gaz à effet de serre', 'Les variations de l’orbite terrestre', 'L’activité volcanique récente', 'La fonte naturelle des glaciers'], 0, 'CO₂, méthane et protoxyde d’azote en sont les principaux.'],
@@ -376,27 +490,57 @@ L’**atténuation** réduit les émissions (énergies décarbonées, sobriété
           axe: 'L’exploitation des ressources naturelles',
           lecon: {
             titre: 'Une ressource abondante et pourtant rare',
-            cours: `L’eau couvre 70 % de la surface du globe, mais **97,5 %** de ce volume est **salé**. Sur les 2,5 % d’eau douce restants, l’essentiel est immobilisé dans les glaces et les nappes profondes : l’eau douce **accessible** représente moins de 1 % du total.
+            cours: `L'eau couvre 70 % de la surface du globe. Elle est pourtant rare — parce que presque tout est salé ou inaccessible.
 
-## Le cycle de l’eau
-Le Soleil fait **s’évaporer** l’eau des océans et des sols ; la vapeur se **condense** en nuages ; les **précipitations** la restituent. Une partie **ruisselle** vers les rivières, une autre **s’infiltre** et alimente les **nappes phréatiques**. La ressource est donc **renouvelable**, mais à un rythme qui ne dépend pas de nous.
+## La répartition
+| L'eau | Sa part |
+| **Salée** | **97,5 %** |
+| Douce | 2,5 % |
+| Douce **accessible** | Moins de **1 %** du total |
+
+L'essentiel de l'eau douce est immobilisé dans les glaces et les nappes profondes.
+
+## Le cycle de l'eau
+| L'étape | Ce qui se passe |
+| L'**évaporation** | Le Soleil vaporise l'eau des océans et des sols |
+| La **condensation** | La vapeur forme des nuages |
+| Les **précipitations** | L'eau retombe |
+| Le **ruissellement** | Elle rejoint les rivières |
+| L'**infiltration** | Elle alimente les **nappes phréatiques** |
+
+> La ressource est **renouvelable**, mais à un rythme qui ne dépend pas de nous.
 
 ## Comment on la prélève
-Captage de **sources**, pompage en **rivière**, **forages** dans les nappes, retenues de **barrages**, et — là où il n’y a rien d’autre — **dessalement** de l’eau de mer, très coûteux en énergie.
+Captage de sources, pompage en rivière, **forages** dans les nappes, retenues de **barrages** — et, là où il n'y a rien d'autre, **dessalement** de l'eau de mer, très coûteux en énergie.
 
-## Qui la consomme ?
-À l’échelle mondiale, environ **70 %** des prélèvements vont à l’**agriculture** (irrigation), **20 %** à l’**industrie** et **10 %** aux **usages domestiques**. Un Français utilise environ 150 litres par jour à la maison, dont une part infime pour boire.
+## Qui la consomme
+| L'usage | Sa part mondiale |
+| L'**agriculture**, par l'irrigation | Environ **70 %** |
+| L'**industrie** | 20 % |
+| Le **domestique** | 10 % |
 
-> L’**eau virtuelle** est celle qu’il a fallu pour produire un bien : environ 15 000 litres pour un kilo de bœuf, 2 700 litres pour un tee-shirt en coton. Notre consommation réelle dépasse largement le robinet.
+Un Français utilise environ **150 litres par jour** à la maison, dont une part infime pour boire.
 
-## Rendre l’eau potable
-Une **station de potabilisation** enchaîne dégrillage, floculation-décantation, filtration sur sable, filtration sur charbon actif et **désinfection** (chlore ou ozone). Après usage, une **station d’épuration** traite les eaux usées par voie mécanique puis biologique avant de les rejeter dans le milieu.
+> L'**eau virtuelle** est celle qu'il a fallu pour produire un bien : environ 15 000 litres pour un kilo de bœuf, 2 700 litres pour un tee-shirt en coton.
 
-## Les pressions sur la ressource
-**Surexploitation** des nappes (niveau qui baisse plus vite qu’il ne se recharge), **pollutions** agricoles (nitrates, pesticides), industrielles et domestiques, **salinisation** des nappes côtières, **conflits d’usage** entre agriculture, industrie, tourisme et particuliers, et sécheresses plus fréquentes avec le changement climatique.
+## Rendre l'eau potable, puis la rendre au milieu
+| L'étape de potabilisation | Son rôle |
+| Dégrillage | Retirer les gros débris |
+| Floculation-décantation | Agglomérer et faire tomber les particules |
+| Filtration sur **sable** | Retenir les fines |
+| Filtration sur **charbon actif** | Retenir les molécules dissoutes |
+| **Désinfection** | Chlore ou ozone |
 
-## Économiser
-Réparer les fuites des réseaux (elles peuvent dépasser 20 % de l’eau distribuée), irriguer au goutte-à-goutte, recycler les eaux industrielles, récupérer l’eau de pluie, protéger les zones de captage.`,
+Après usage, une **station d'épuration** traite les eaux usées par voie mécanique puis biologique.
+
+## Les pressions et les remèdes
+| La pression | Le remède |
+| **Surexploitation** des nappes | Réduire les prélèvements |
+| **Pollutions** agricoles, industrielles, domestiques | Protéger les zones de captage |
+| **Salinisation** des nappes côtières | Limiter le pompage littoral |
+| **Conflits d'usage** | Arbitrer entre agriculture, industrie, tourisme, particuliers |
+| Les **fuites** des réseaux, parfois plus de 20 % | Les réparer |
+| L'irrigation gourmande | Le **goutte-à-goutte** |`,
           },
           questions: [
             ['Quelle part de l’eau de la planète est salée ?', ['Environ 97,5 %', 'Environ 70 %', 'Environ 50 %', 'Environ 30 %'], 0, 'L’eau douce accessible représente moins de 1 % du total.'],
@@ -414,32 +558,51 @@ Réparer les fuites des réseaux (elles peuvent dépasser 20 % de l’eau distri
           axe: 'L’exploitation des ressources naturelles',
           lecon: {
             titre: 'Une énergie fossile, donc non renouvelable',
-            cours: `Le **pétrole** est une **énergie fossile** : il provient de la transformation, sur des **millions d’années**, de matière organique (plancton, algues) accumulée au fond des mers.
+            cours: `Le pétrole est une énergie fossile : il provient de la transformation, sur des millions d'années, de matière organique accumulée au fond des mers.
 
-## Comment il se forme
-Quatre conditions doivent être réunies :
-1. une **roche mère** riche en matière organique, déposée en milieu pauvre en oxygène ;
-2. un **enfouissement** progressif sous des sédiments, qui élève la température et la pression ;
-3. la **migration** des hydrocarbures formés vers le haut, à travers une roche poreuse (**roche réservoir**) ;
-4. une **roche couverture** imperméable qui les **piège** et les empêche de s’échapper.
-Sans le piège, pas de gisement exploitable.
+## Les quatre conditions de formation
+| La condition | Son contenu |
+| Une **roche mère** | Riche en matière organique, déposée en milieu pauvre en oxygène |
+| L'**enfouissement** | Sous des sédiments : température et pression s'élèvent |
+| La **migration** | Les hydrocarbures montent à travers une **roche réservoir** poreuse |
+| La **roche couverture** | Imperméable, elle les **piège** |
 
-> Le pétrole met des millions d’années à se former et quelques décennies à se consommer : c’est ce qui le rend **non renouvelable** à l’échelle humaine.
+> Sans le piège, pas de gisement exploitable.
+
+> Le pétrole met des millions d'années à se former et quelques décennies à se consommer : c'est ce qui le rend **non renouvelable** à l'échelle humaine.
 
 ## De la prospection au produit
-La **prospection** utilise la géologie et surtout la **sismique réflexion** (des ondes envoyées dans le sous-sol et leurs échos analysés). Vient ensuite le **forage**, à terre ou en mer, puis l’**extraction**, le **transport** (oléoducs, pétroliers) et le **raffinage**. La **distillation fractionnée** sépare le brut selon les températures d’ébullition : gaz, essences, kérosène, gazole, fiouls, bitumes.
+| L'étape | Sa technique |
+| La **prospection** | La géologie, et surtout la **sismique réflexion** : des ondes envoyées dans le sous-sol, et leurs échos |
+| Le **forage** | À terre ou en mer |
+| L'**extraction** | Puis le transport par oléoducs et pétroliers |
+| Le **raffinage** | La **distillation fractionnée**, qui sépare selon les températures d'ébullition |
+
+| Le produit issu du raffinage | Son usage |
+| Gaz, essences | Carburants légers |
+| Kérosène | L'aviation |
+| Gazole, fiouls | Transport lourd, chauffage |
+| Bitumes | Les routes |
 
 ## À quoi il sert
-Aux **carburants** (transport routier, aérien, maritime), au **chauffage**, et à la **pétrochimie** : plastiques, textiles synthétiques, engrais, médicaments, cosmétiques, peintures. Sortir du pétrole ne concerne donc pas que les voitures.
+| Le débouché | Ses produits |
+| Les **carburants** | Routier, aérien, maritime |
+| Le **chauffage** | Fioul domestique |
+| La **pétrochimie** | Plastiques, textiles synthétiques, engrais, médicaments, cosmétiques, peintures |
+
+> Sortir du pétrole ne concerne donc pas que les voitures.
 
 ## Les problèmes
-- **Épuisement** : les réserves sont finies et inégalement réparties.
-- **Climat** : la combustion libère du **CO₂**, principal gaz à effet de serre d’origine humaine.
-- **Pollutions** : marées noires, dégazages, fuites, torchage, pollution de l’air (particules, oxydes d’azote).
-- **Géopolitique** : dépendance des pays importateurs, volatilité des prix, conflits.
+| Le problème | Son contenu |
+| L'**épuisement** | Des réserves finies et inégalement réparties |
+| Le **climat** | La combustion libère du **CO₂** |
+| Les **pollutions** | Marées noires, dégazages, fuites, torchage, particules, oxydes d'azote |
+| La **géopolitique** | Dépendance des importateurs, volatilité des prix, conflits |
 
 ## Les alternatives
-Énergies **renouvelables** (solaire, éolien, hydraulique, biomasse, géothermie), nucléaire, sobriété et efficacité énergétiques, recyclage des plastiques, développement des transports collectifs. Aucune ne remplace le pétrole à elle seule : c’est la combinaison qui compte.`,
+Énergies **renouvelables** — solaire, éolien, hydraulique, biomasse, géothermie —, nucléaire, **sobriété** et efficacité énergétiques, recyclage des plastiques, transports collectifs.
+
+> Aucune ne remplace le pétrole à elle seule : c'est la **combinaison** qui compte.`,
           },
           questions: [
             ['De quoi provient le pétrole ?', ['De la transformation de matière organique marine sur des millions d’années', 'De la fusion des roches du manteau', 'De la décomposition rapide de déchets végétaux', 'De réactions chimiques dans l’atmosphère'], 0, 'Plancton et algues en sont à l’origine.'],
@@ -461,28 +624,48 @@ Aux **carburants** (transport routier, aérien, maritime), au **chauffage**, et 
           axe: 'Écosystèmes et activités humaines',
           lecon: {
             titre: 'Quand le climat bouge plus vite que le vivant',
-            cours: `Un **écosystème** est l’ensemble formé par un **milieu** (la biocénose vit dans un biotope) et par les **êtres vivants** qui l’occupent, avec toutes leurs relations : alimentation, compétition, coopération, reproduction.
+            cours: `Un écosystème est l'ensemble formé par un milieu et par les êtres vivants qui l'occupent, avec toutes leurs relations.
 
 ## Ce que le réchauffement modifie
-- Les **aires de répartition** se déplacent : vers le nord dans l’hémisphère nord, et vers l’altitude en montagne. Les espèces de haute montagne, qui n’ont plus où monter, sont menacées.
-- La **phénologie** change : floraisons plus précoces, arrivée décalée des migrateurs, éclosion des insectes en avance.
-- Des **désynchronisations** apparaissent : si les chenilles éclosent avant l’arrivée des oiseaux qui s’en nourrissent, les nichées manquent de nourriture.
-- Les **coraux blanchissent** : au-delà d’un seuil de température, ils expulsent les algues symbiotiques qui les nourrissent, et meurent si l’épisode dure.
-- L’**acidification** des océans fragilise les organismes à coquille et à squelette calcaire.
+| Le changement | Sa manifestation |
+| Les **aires de répartition** | Elles se déplacent vers le nord, et vers l'altitude en montagne |
+| La **phénologie** | Floraisons précoces, migrateurs décalés, insectes en avance |
+| Les **désynchronisations** | Si les chenilles éclosent avant l'arrivée des oiseaux, les nichées manquent de nourriture |
+| Le **blanchissement des coraux** | Au-delà d'un seuil, ils expulsent leurs algues symbiotiques |
+| L'**acidification** des océans | Elle fragilise coquilles et squelettes calcaires |
 
-> Le problème n’est pas seulement l’ampleur du changement, c’est sa **vitesse** : beaucoup d’espèces ne peuvent ni se déplacer ni s’adapter aussi vite.
+> Les espèces de haute montagne, qui n'ont plus où monter, sont particulièrement menacées.
 
-## Les réponses possibles du vivant
-Trois issues, et une seule est bonne : **se déplacer**, **s’adapter** (par sélection naturelle, sur plusieurs générations), ou **disparaître** localement. Les espèces à génération courte et à forte descendance s’en tirent mieux.
+> Le problème n'est pas seulement l'ampleur du changement, c'est sa **vitesse** : beaucoup d'espèces ne peuvent ni se déplacer ni s'adapter aussi vite.
+
+## Les trois réponses possibles du vivant
+| La réponse | Sa condition |
+| Se **déplacer** | Un milieu accessible, sans obstacle |
+| S'**adapter** | Par sélection naturelle, sur plusieurs générations |
+| **Disparaître** localement | Quand aucune des deux n'est possible |
+
+> Les espèces à génération courte et à forte descendance s'en tirent mieux.
 
 ## Les effets en chaîne
-Un écosystème est un réseau : la disparition d’une espèce **clé de voûte** en entraîne d’autres. La fonte du permafrost libère du méthane, qui renforce le réchauffement — c’est une **rétroaction positive**, un effet qui amplifie sa propre cause.
+| Le mécanisme | Son effet |
+| La disparition d'une espèce **clé de voûte** | Elle en entraîne d'autres |
+| La fonte du **permafrost** | Elle libère du méthane, qui renforce le réchauffement |
 
-## Ce que les écosystèmes nous rendent
-Ce sont les **services écosystémiques** : pollinisation des cultures, épuration de l’eau, stockage de carbone par les forêts et les océans, protection des côtes par les mangroves et les récifs, fertilité des sols, ressources alimentaires et médicinales.
+> C'est une **rétroaction positive** : un effet qui amplifie sa propre cause.
+
+## Les services écosystémiques
+| Le service | Ce qu'il apporte |
+| La **pollinisation** | Une large part des cultures |
+| L'**épuration** de l'eau | Zones humides et sols |
+| Le **stockage de carbone** | Forêts et océans |
+| La protection des côtes | Mangroves et récifs |
+| La **fertilité des sols** | La production agricole |
+| Les ressources alimentaires et médicinales | Des molécules issues du vivant |
 
 ## Protéger
-Aires protégées, **corridors écologiques** qui permettent aux espèces de se déplacer, restauration des zones humides et des forêts, réduction des autres pressions (pollution, surexploitation) pour laisser aux écosystèmes une chance de s’adapter.`,
+Aires protégées, **corridors écologiques** pour permettre les déplacements, restauration des zones humides et des forêts, réduction des autres pressions.
+
+> Réduire pollution et surexploitation laisse aux écosystèmes une chance de s'adapter au climat.`,
           },
           questions: [
             ['Qu’est-ce qu’un écosystème ?', ['Un milieu et l’ensemble des êtres vivants qui l’occupent, avec leurs relations', 'Une population d’une seule espèce', 'Un climat régional', 'Une réserve naturelle protégée'], 0, 'Il associe un biotope et une biocénose.'],
@@ -500,29 +683,51 @@ Aires protégées, **corridors écologiques** qui permettent aux espèces de se 
           axe: 'Écosystèmes et activités humaines',
           lecon: {
             titre: 'Une empreinte à l’échelle de la planète',
-            cours: `Depuis deux siècles, l’humanité modifie la planète à une échelle telle que certains scientifiques parlent d’**Anthropocène**, une époque géologique marquée par l’action humaine.
+            cours: `Depuis deux siècles, l'humanité modifie la planète à une échelle telle que certains scientifiques parlent d'Anthropocène.
 
-## Les grandes pressions
-- **Changement climatique** : émissions de gaz à effet de serre.
-- **Destruction et fragmentation des habitats** : déforestation, urbanisation, artificialisation des sols, drainage des zones humides.
-- **Surexploitation** : surpêche, coupes forestières, prélèvement excessif dans les nappes.
-- **Pollutions** : plastiques, pesticides, nitrates, métaux lourds, air, bruit, lumière.
-- **Espèces invasives** transportées par le commerce mondial.
-Ces cinq pressions agissent ensemble, et leurs effets se cumulent.
+## Les cinq grandes pressions
+| La pression | Sa forme |
+| Le **changement climatique** | Les émissions de gaz à effet de serre |
+| La **destruction des habitats** | Déforestation, urbanisation, artificialisation, drainage |
+| La **surexploitation** | Surpêche, coupes forestières, prélèvement dans les nappes |
+| Les **pollutions** | Plastiques, pesticides, nitrates, métaux lourds, air, bruit, lumière |
+| Les **espèces invasives** | Transportées par le commerce mondial |
 
-## L’érosion de la biodiversité
-Le taux d’extinction actuel est estimé de **100 à 1 000 fois** supérieur au taux naturel : on parle de **sixième extinction de masse**. La biodiversité se perd à trois niveaux : la diversité des **écosystèmes**, celle des **espèces** et celle des **gènes** au sein d’une espèce — cette dernière, invisible, conditionne la capacité future à s’adapter.
+> Elles agissent **ensemble**, et leurs effets se cumulent.
 
-> Une espèce disparue ne revient pas : la perte est **irréversible**, à la différence d’une pollution qui peut être traitée.
+## L'érosion de la biodiversité
+| Le repère | Sa valeur |
+| Le taux d'extinction actuel | **100 à 1 000 fois** le taux naturel |
+| Son nom | La **sixième extinction de masse** |
 
-## Mesurer l’impact
-L’**empreinte écologique** évalue la surface nécessaire pour produire ce qu’une population consomme et absorber ses déchets. Le **jour du dépassement** marque la date à laquelle l’humanité a consommé ce que la planète peut renouveler en un an : il tombe chaque année plus tôt. L’**empreinte carbone** mesure les émissions liées à un mode de vie.
+| Le niveau de perte | Ce qu'il recouvre |
+| Les **écosystèmes** | Des milieux entiers disparaissent |
+| Les **espèces** | Le niveau visible |
+| Les **gènes** | Invisible, il conditionne la capacité future à s'adapter |
+
+> Une espèce disparue ne revient pas : la perte est **irréversible**, à la différence d'une pollution qui peut être traitée.
+
+## Mesurer l'impact
+| L'indicateur | Ce qu'il mesure |
+| L'**empreinte écologique** | La surface nécessaire pour produire ce qu'on consomme et absorber ses déchets |
+| Le **jour du dépassement** | La date à laquelle l'humanité a consommé le renouvelable annuel — il tombe chaque année plus tôt |
+| L'**empreinte carbone** | Les émissions liées à un mode de vie |
 
 ## Développement durable
-Il vise à concilier trois piliers : **économique**, **social** et **environnemental**, en répondant aux besoins du présent sans compromettre ceux des générations futures. Sur le terrain : économie **circulaire** (réduire, réutiliser, réparer, recycler), agroécologie, énergies renouvelables, transports collectifs, protection d’aires naturelles, restauration des milieux.
+| Son pilier | Son exigence |
+| **Économique** | Une activité viable |
+| **Social** | Des conditions de vie décentes |
+| **Environnemental** | Des milieux préservés |
+
+Sur le terrain : économie **circulaire** — réduire, réutiliser, réparer, recycler —, agroécologie, énergies renouvelables, transports collectifs, aires protégées, restauration des milieux.
 
 ## Ce qui marche déjà
-Le protocole de Montréal (1987) a réduit les gaz destructeurs d’**ozone** et la couche se reconstitue ; des espèces ont été sauvées par des plans de protection ; des rivières autrefois mortes ont retrouvé des poissons. Les décisions collectives produisent des effets mesurables.`,
+| Le succès | Son résultat |
+| Le protocole de **Montréal**, 1987 | La couche d'**ozone** se reconstitue |
+| Les plans de protection d'espèces | Certaines ont été sauvées |
+| La dépollution de rivières | Les poissons sont revenus |
+
+> Les décisions collectives produisent des effets mesurables.`,
           },
           questions: [
             ['Que désigne le terme Anthropocène ?', ['Une époque géologique marquée par l’action humaine sur la planète', 'La période des grandes glaciations', 'L’ère des dinosaures', 'Le début de l’agriculture'], 0, 'Le terme souligne l’ampleur de l’empreinte humaine.'],
@@ -544,29 +749,50 @@ Le protocole de Montréal (1987) a réduit les gaz destructeurs d’**ozone** et
           axe: 'Nutrition et organisation des animaux',
           lecon: {
             titre: 'Ce que chaque cellule réclame, et comment le corps le fournit',
-            cours: `Toutes les cellules de l’organisme, quelle que soit leur spécialité, ont les mêmes besoins fondamentaux : du **dioxygène**, des **nutriments** (glucose, acides aminés, acides gras), de l’**eau**, des **sels minéraux** et des **vitamines**.
+            cours: `Toutes les cellules, quelle que soit leur spécialité, ont les mêmes besoins fondamentaux.
 
-## Pourquoi ces besoins
-Le **glucose** et le **dioxygène** permettent la **respiration cellulaire**, qui libère l’énergie nécessaire au fonctionnement de la cellule :
-**glucose + dioxygène → dioxyde de carbone + eau + énergie**
-Les **acides aminés** servent à fabriquer les protéines ; les **acides gras** entrent dans la composition des membranes et constituent une réserve d’énergie.
+## Les besoins
+| Le besoin | Son rôle |
+| Le **dioxygène** | La respiration cellulaire |
+| Le **glucose** | La source d'énergie |
+| Les **acides aminés** | Fabriquer les protéines |
+| Les **acides gras** | Les membranes, et une réserve d'énergie |
+| L'**eau**, les **sels minéraux**, les **vitamines** | Le fonctionnement général |
+
+La respiration cellulaire :
+
+glucose + dioxygène donne dioxyde de carbone + eau + énergie
 
 ## Une organisation en niveaux
-**Cellule → tissu → organe → appareil → organisme.** Un **tissu** rassemble des cellules de même type ; un **organe** associe plusieurs tissus pour une fonction ; un **appareil** réunit des organes qui concourent au même but.
+| Le niveau | Ce qu'il est |
+| La **cellule** | L'unité |
+| Le **tissu** | Des cellules de même type |
+| L'**organe** | Plusieurs tissus, pour une fonction |
+| L'**appareil** | Des organes qui concourent au même but |
+| L'**organisme** | L'ensemble |
 
 ## Trois appareils, un même service
-- L’appareil **digestif** fournit les **nutriments** en simplifiant les aliments.
-- L’appareil **respiratoire** fournit le **dioxygène** et évacue le **dioxyde de carbone**.
-- L’appareil **circulatoire** **transporte** les uns et les autres jusqu’à chaque cellule, et emporte les déchets.
-- L’appareil **excréteur** élimine ces déchets.
+| L'appareil | Ce qu'il fournit ou évacue |
+| **Digestif** | Les **nutriments**, en simplifiant les aliments |
+| **Respiratoire** | Le **dioxygène** ; il évacue le CO₂ |
+| **Circulatoire** | Il **transporte** les uns et les autres jusqu'à chaque cellule |
+| **Excréteur** | Il élimine les déchets |
 
-> Aucun de ces appareils ne se suffit à lui-même : c’est leur **coordination** qui maintient l’organisme en vie.
+> Aucun ne se suffit à lui-même : c'est leur **coordination** qui maintient l'organisme en vie.
 
 ## Des besoins variables
-Un muscle au repos consomme peu ; en effort, sa consommation de dioxygène et de glucose est multipliée. Le **cerveau**, lui, consomme environ 20 % du glucose de l’organisme alors qu’il n’en représente que 2 % de la masse — et il ne supporte aucune interruption d’approvisionnement.
+| L'organe | Sa consommation |
+| Un **muscle** au repos | Faible |
+| Le même en **effort** | Multipliée |
+| Le **cerveau** | Environ **20 %** du glucose, pour **2 %** de la masse — et sans interruption possible |
 
-## L’échelle des échanges
-Les échanges se font toujours à travers des **surfaces d’échange** fines, très étendues et très vascularisées : alvéoles pulmonaires (environ 100 m²), villosités intestinales (environ 200 m²), capillaires sanguins. La nature répète partout la même solution : maximiser la surface dans un volume réduit.`,
+## L'échelle des échanges
+| La surface d'échange | Son étendue |
+| Les **alvéoles pulmonaires** | Environ **100 m²** |
+| Les **villosités intestinales** | Environ **200 m²** |
+| Les **capillaires** | Une paroi d'une seule cellule |
+
+> La nature répète partout la même solution : **maximiser la surface** dans un volume réduit.`,
           },
           questions: [
             ['Quels sont les besoins fondamentaux de toute cellule ?', ['Dioxygène, nutriments, eau, sels minéraux et vitamines', 'Dioxyde de carbone et azote', 'Uniquement du glucose', 'Uniquement du dioxygène'], 0, 'Ils sont les mêmes quelle que soit la spécialité de la cellule.'],
@@ -584,27 +810,46 @@ Les échanges se font toujours à travers des **surfaces d’échange** fines, t
           axe: 'Nutrition et organisation des animaux',
           lecon: {
             titre: 'Respirer et absorber : deux portes d’entrée',
-            cours: `Le corps ne fabrique ni son dioxygène ni ses nutriments : il les **prélève** dans le milieu, par deux appareils spécialisés.
+            cours: `Le corps ne fabrique ni son dioxygène ni ses nutriments : il les prélève dans le milieu, par deux appareils spécialisés.
 
-## L’appareil respiratoire
-L’air entre par les **fosses nasales**, passe par le pharynx, le **larynx**, la **trachée**, se divise dans les deux **bronches**, puis dans les bronchioles, jusqu’aux **alvéoles pulmonaires** — environ 300 millions, pour une surface totale d’environ **100 m²**.
+## L'appareil respiratoire
+| L'étape du trajet de l'air | L'organe |
+| L'entrée | Les **fosses nasales**, le pharynx |
+| La conduction | Le **larynx**, la **trachée**, les deux **bronches**, les bronchioles |
+| L'échange | Les **alvéoles pulmonaires** : environ 300 millions, pour **100 m²** |
 
-La **ventilation** est mécanique : à l’**inspiration**, le **diaphragme** s’abaisse et les muscles intercostaux soulèvent les côtes ; la cage thoracique augmente de volume et l’air entre. À l’**expiration**, le mouvement s’inverse.
+| Le mouvement | Ce qui se passe |
+| L'**inspiration** | Le **diaphragme** s'abaisse, les côtes se soulèvent : le volume augmente, l'air entre |
+| L'**expiration** | Le mouvement s'inverse |
 
-Dans l’alvéole, les gaz traversent une paroi très fine, par **diffusion**, du plus concentré vers le moins concentré : le **dioxygène** passe de l’air vers le sang, le **dioxyde de carbone** fait le trajet inverse.
+Dans l'alvéole, les gaz traversent une paroi très fine par **diffusion**, du plus concentré vers le moins concentré.
 
-## L’appareil digestif
-Les aliments sont d’abord **transformés** : action **mécanique** (mastication, brassage de l’estomac, péristaltisme) et action **chimique** (les **enzymes** de la salive, de l’estomac, du pancréas et de l’intestin coupent les grosses molécules en molécules simples).
+| Le gaz | Son sens de passage |
+| Le **dioxygène** | De l'air vers le sang |
+| Le **dioxyde de carbone** | Du sang vers l'air |
 
-Le résultat est **absorbé** au niveau de l’**intestin grêle**, dont la paroi porte des replis, des **villosités** et des microvillosités : environ **200 m²** de surface d’échange, richement irriguée. Nutriments, eau, sels minéraux et vitamines passent dans le sang (et les graisses en partie dans la lymphe).
+## L'appareil digestif
+| L'action | Ses moyens |
+| **Mécanique** | Mastication, brassage de l'estomac, péristaltisme |
+| **Chimique** | Les **enzymes** de la salive, de l'estomac, du pancréas et de l'intestin |
 
-> Deux appareils, deux milieux, une même stratégie : une **paroi fine**, une **très grande surface**, une **circulation abondante** de l’autre côté.
+L'**absorption** se fait dans l'**intestin grêle** : replis, **villosités** et microvillosités portent la surface à environ **200 m²**, richement irriguée.
+
+> Deux appareils, deux milieux, une même stratégie : une **paroi fine**, une **très grande surface**, une **circulation abondante** de l'autre côté.
 
 ## Le transport
-Le **sang** prend le relais. Le **dioxygène** est fixé par l’**hémoglobine** des globules rouges ; les nutriments circulent dissous dans le **plasma**. Le sang venu de l’intestin passe d’abord par le **foie**, qui trie, stocke le glucose sous forme de **glycogène** et neutralise certaines substances.
+| Ce qui est transporté | Comment |
+| Le **dioxygène** | Fixé par l'**hémoglobine** des globules rouges |
+| Les **nutriments** | Dissous dans le **plasma** |
+
+Le sang venu de l'intestin passe d'abord par le **foie**, qui trie, stocke le glucose en **glycogène** et neutralise certaines substances.
 
 ## Quand cela ne fonctionne plus
-Asthme et bronchite obstruent les voies respiratoires ; le tabac détruit les cils et les alvéoles ; le monoxyde de carbone prend la place du dioxygène sur l’hémoglobine ; une maladie de l’intestin ou une résection réduisent la surface d’absorption et provoquent des carences.`,
+| Le trouble | Son effet |
+| Asthme, bronchite | Les voies respiratoires s'obstruent |
+| Le **tabac** | Il détruit les cils et les alvéoles |
+| Le **monoxyde de carbone** | Il prend la place du dioxygène sur l'hémoglobine |
+| Une maladie de l'intestin, une résection | La surface d'absorption diminue : **carences** |`,
           },
           questions: [
             ['Où se font les échanges gazeux dans le poumon ?', ['Dans les alvéoles pulmonaires', 'Dans la trachée', 'Dans les bronches principales', 'Dans le larynx'], 0, 'Elles offrent environ 100 m² de surface d’échange.'],
@@ -622,28 +867,52 @@ Asthme et bronchite obstruent les voies respiratoires ; le tabac détruit les ci
           axe: 'Nutrition et organisation des animaux',
           lecon: {
             titre: 'Circuler, filtrer, se défendre',
-            cours: `Le **cœur** est une double pompe : quatre cavités (deux **oreillettes**, deux **ventricules**) séparées par une cloison étanche, et des **valves** qui imposent un sens unique au sang.
+            cours: `Le cœur est une double pompe : quatre cavités séparées par une cloison étanche, et des valves qui imposent un sens unique au sang.
 
 ## Deux circulations
-- La **circulation pulmonaire** (ou petite circulation) : le ventricule droit envoie le sang pauvre en dioxygène vers les **poumons** ; il en revient enrichi vers l’oreillette gauche.
-- La **circulation générale** (ou grande circulation) : le ventricule gauche — le plus musclé — envoie le sang riche en dioxygène vers tous les organes ; il revient chargé de CO₂ à l’oreillette droite.
+| La circulation | Son départ | Son trajet | Son retour |
+| **Pulmonaire** (petite) | Ventricule **droit** | Vers les **poumons** | Oreillette gauche, sang enrichi |
+| **Générale** (grande) | Ventricule **gauche**, le plus musclé | Vers tous les organes | Oreillette droite, sang chargé de CO₂ |
 
 ## Trois types de vaisseaux
-Les **artères** partent du cœur, à paroi épaisse et élastique ; les **veines** y reviennent, à paroi fine, souvent munies de valvules ; les **capillaires**, d’un diamètre proche de celui d’un globule rouge et à paroi d’une seule cellule, sont le lieu **exclusif** des échanges avec les cellules.
+| Le vaisseau | Son sens | Sa paroi | Son rôle |
+| **Artère** | Elle **part** du cœur | Épaisse, élastique | Résister à la pression |
+| **Veine** | Elle y **revient** | Fine, souvent à valvules | Le retour |
+| **Capillaire** | Entre les deux | **Une seule cellule** | Le lieu **exclusif** des échanges |
 
 ## Le sang
-**Plasma** (55 %, essentiellement de l’eau, qui transporte nutriments, hormones et déchets), **globules rouges** (transport du dioxygène par l’hémoglobine), **globules blancs** (défense), **plaquettes** (coagulation).
+| Le constituant | Sa part ou son rôle |
+| Le **plasma** | 55 %, essentiellement de l'eau : nutriments, hormones, déchets |
+| Les **globules rouges** | Le dioxygène, par l'hémoglobine |
+| Les **globules blancs** | La défense |
+| Les **plaquettes** | La coagulation |
 
-## L’élimination des déchets
-Les **reins** filtrent en permanence le sang et forment l’**urine**, qui évacue l’**urée** (déchet du métabolisme des protéines), l’excès d’eau, de sels et certaines substances. Les **poumons** éliminent le **dioxyde de carbone**, le **foie** transforme les déchets azotés et neutralise certains toxiques, la **peau** élimine un peu d’eau et de sels par la sueur.
+## L'élimination des déchets
+| L'organe | Ce qu'il élimine |
+| Les **reins** | L'**urée**, l'excès d'eau et de sels, dans l'**urine** |
+| Les **poumons** | Le **dioxyde de carbone** |
+| Le **foie** | Il transforme les déchets azotés et neutralise certains toxiques |
+| La **peau** | Un peu d'eau et de sels, par la sueur |
 
-> Toute substance absorbée finit par passer par le sang : c’est pourquoi une drogue, un médicament ou un polluant atteignent l’organisme entier.
+> Toute substance absorbée finit par passer par le sang : c'est pourquoi une drogue, un médicament ou un polluant atteignent l'organisme **entier**.
 
 ## Les micro-organismes
-Nous vivons entourés de **bactéries**, **virus**, **champignons** et **protozoaires**. La plupart sont inoffensifs, beaucoup sont utiles — le **microbiote** intestinal, cutané et respiratoire participe à la digestion, à la synthèse de vitamines et à l’éducation du système immunitaire. Seule une minorité est **pathogène**.
+| Le groupe | Son statut |
+| Bactéries, virus, champignons, protozoaires | La plupart sont **inoffensifs** |
+| Le **microbiote** intestinal, cutané, respiratoire | **Utile** : digestion, vitamines, éducation immunitaire |
+| Les **pathogènes** | Une **minorité** |
 
 ## Les barrières naturelles
-La **peau** intacte, les **muqueuses** et leur mucus, les **cils** des voies respiratoires, l’**acidité** de l’estomac et le microbiote lui-même empêchent l’installation des pathogènes. Une **contamination** est l’entrée du micro-organisme ; l’**infection** est sa multiplication dans l’organisme.`,
+| La barrière | Son action |
+| La **peau** intacte | Une frontière physique |
+| Les **muqueuses** et le mucus | Ils piègent |
+| Les **cils** des voies respiratoires | Ils évacuent |
+| L'**acidité** de l'estomac | Elle détruit |
+| Le **microbiote** | Il occupe la place |
+
+| Le terme | Sa définition |
+| La **contamination** | L'entrée du micro-organisme |
+| L'**infection** | Sa multiplication dans l'organisme |`,
           },
           questions: [
             ['Combien de cavités compte le cœur humain ?', ['Quatre', 'Deux', 'Trois', 'Six'], 0, 'Deux oreillettes et deux ventricules, séparés par une cloison étanche.'],
@@ -665,27 +934,46 @@ La **peau** intacte, les **muqueuses** et leur mucus, les **cils** des voies res
           axe: 'Nutrition et organisation des plantes',
           lecon: {
             titre: 'Fabriquer sa matière avec de la lumière',
-            cours: `Les plantes chlorophylliennes sont **autotrophes** : elles **fabriquent** leur propre matière organique à partir de matière minérale et de lumière. Les animaux, **hétérotrophes**, doivent la prélever toute faite.
+            cours: `Les plantes chlorophylliennes sont autotrophes : elles fabriquent leur propre matière organique à partir de matière minérale et de lumière.
 
 ## La photosynthèse
-Dans les **chloroplastes** des cellules des feuilles, la **chlorophylle** capte l’énergie lumineuse :
-**dioxyde de carbone + eau + énergie lumineuse → glucose + dioxygène**
-Le glucose produit sert à construire l’ensemble de la plante (amidon, cellulose, protéines après incorporation d’azote) ; le dioxygène est rejeté. La photosynthèse est à la base de presque toutes les chaînes alimentaires et de la teneur en dioxygène de l’atmosphère.
+Dans les **chloroplastes** des feuilles, la **chlorophylle** capte l'énergie lumineuse :
 
-> Attention : la plante **respire aussi**, jour et nuit. Le jour, la photosynthèse l’emporte largement sur la respiration.
+dioxyde de carbone + eau + énergie lumineuse donne glucose + dioxygène
+
+| Le produit | Son devenir |
+| Le **glucose** | Il construit toute la plante : amidon, cellulose, protéines après incorporation d'azote |
+| Le **dioxygène** | Il est rejeté |
+
+> Attention : la plante **respire aussi**, jour et nuit. Le jour, la photosynthèse l'emporte largement.
 
 ## Deux prélèvements, deux organes
-- Les **racines** prélèvent dans le sol l’**eau** et les **sels minéraux**, grâce aux **poils absorbants**, qui multiplient énormément la surface de contact.
-- Les **feuilles** prélèvent le **dioxyde de carbone** de l’air par de minuscules ouvertures, les **stomates**, qui s’ouvrent et se ferment pour régler à la fois les échanges gazeux et les pertes d’eau.
+| L'organe | Ce qu'il prélève | Son dispositif |
+| Les **racines** | L'eau et les **sels minéraux** | Les **poils absorbants**, qui multiplient la surface |
+| Les **feuilles** | Le **dioxyde de carbone** | Les **stomates**, qui règlent aussi les pertes d'eau |
 
 ## Deux circulations
-Les **vaisseaux du xylème** conduisent la **sève brute** (eau + sels minéraux) des racines vers les feuilles ; la **transpiration** au niveau des stomates crée l’appel qui la fait monter. Les **vaisseaux du phloème** conduisent la **sève élaborée** (riche en sucres) des feuilles vers tous les organes, y compris les racines et les organes de réserve.
+| Le vaisseau | Sa sève | Son sens | Son moteur |
+| Le **xylème** | **Brute** : eau et sels minéraux | Racines vers feuilles | La **transpiration** des stomates |
+| Le **phloème** | **Élaborée** : riche en sucres | Feuilles vers tous les organes | La pression osmotique |
 
 ## Un organisme fixé
-Une plante ne peut pas fuir. Elle a donc développé d’autres réponses : **croissance orientée** vers la lumière, épines et substances toxiques contre les herbivores, feuilles caduques pour passer l’hiver, graines et spores résistantes pour traverser les mauvaises saisons, et des **relations** avec d’autres espèces — **mycorhizes** avec des champignons, **nodosités** à bactéries fixatrices d’azote chez les légumineuses, pollinisation par les insectes.
+Une plante ne peut pas fuir. Elle a donc d'autres réponses.
 
-## De la plante à l’écosystème
-En tant que **producteurs primaires**, les plantes sont le premier maillon des réseaux trophiques, stockent du carbone, retiennent les sols, alimentent la nappe en filtrant l’eau et abritent une part majeure de la biodiversité terrestre.`,
+| La contrainte | Sa réponse |
+| Chercher la lumière | Une **croissance orientée** |
+| Les herbivores | Épines et substances toxiques |
+| L'hiver | Les feuilles **caduques** |
+| Les mauvaises saisons | Graines et spores résistantes |
+| L'immobilité | Des **relations** : mycorhizes, nodosités à bactéries fixatrices d'azote, pollinisation par les insectes |
+
+## De la plante à l'écosystème
+| Son rôle | Son effet |
+| **Producteur primaire** | Le premier maillon des réseaux trophiques |
+| Le **stockage de carbone** | Il freine le réchauffement |
+| La **rétention des sols** | Elle limite l'érosion |
+| La filtration de l'eau | Elle alimente la nappe |
+| L'abri | Une part majeure de la biodiversité terrestre |`,
           },
           questions: [
             ['Que signifie « autotrophe » ?', ['Capable de fabriquer sa propre matière organique', 'Capable de se déplacer pour se nourrir', 'Qui se nourrit d’autres organismes', 'Qui vit sans dioxygène'], 0, 'Les animaux, eux, sont hétérotrophes.'],
@@ -707,29 +995,47 @@ En tant que **producteurs primaires**, les plantes sont le premier maillon des r
           axe: 'Reproduction sexuée et asexuée : dynamique des populations',
           lecon: {
             titre: 'Deux cellules, un nouvel individu, et un milieu qui décide',
-            cours: `La **reproduction sexuée** met en jeu deux **cellules reproductrices** — ou **gamètes** — produites par deux individus : un gamète **mâle** (spermatozoïde, grain de pollen) et un gamète **femelle** (ovule, ovule végétal).
+            cours: `La reproduction sexuée met en jeu deux cellules reproductrices — les gamètes — produites par deux individus.
 
 ## La fécondation
-La **fécondation** est la fusion des deux gamètes. Elle donne une **cellule œuf** (ou zygote), unique, qui contient **la moitié de l’information génétique de chaque parent**. Cette cellule se divise ensuite et se différencie : c’est le **développement**.
-- **Fécondation externe** : gamètes libérés dans l’eau (poissons, amphibiens, oursins). Peu de chances de rencontre, donc énormément de gamètes produits.
-- **Fécondation interne** : dépôt du gamète mâle dans les voies femelles (mammifères, oiseaux, reptiles, insectes). Rendement bien meilleur, descendance moins nombreuse mais mieux protégée.
+| L'étape | Ce qui se passe |
+| La rencontre | Un gamète **mâle** et un gamète **femelle** fusionnent |
+| Le résultat | Une **cellule œuf**, avec **la moitié de l'information génétique de chaque parent** |
+| La suite | Elle se divise et se différencie : le **développement** |
 
-> Un nouvel individu issu de reproduction sexuée n’est identique à aucun de ses deux parents : le brassage des gamètes crée à chaque fois une **combinaison nouvelle**.
+| Le type de fécondation | Où | Son rendement | Ses exemples |
+| **Externe** | Dans l'eau | Faible : d'où **énormément** de gamètes | Poissons, amphibiens, oursins |
+| **Interne** | Dans les voies femelles | Bien meilleur : descendance moins nombreuse, mieux protégée | Mammifères, oiseaux, reptiles, insectes |
+
+> Un individu issu de reproduction sexuée n'est identique à aucun de ses deux parents : le brassage crée à chaque fois une **combinaison nouvelle**.
 
 ## Ce que le milieu décide
-La reproduction n’a lieu que si les conditions le permettent :
-- **température** (elle détermine même le sexe des petits chez certaines tortues et crocodiles) ;
-- **durée du jour** (photopériode), qui déclenche la reproduction saisonnière ;
-- **ressources alimentaires** disponibles pour nourrir la descendance ;
-- **présence de partenaires** et densité de la population ;
-- **abris et sites de ponte** ;
-- **polluants**, dont certains (perturbateurs endocriniens) dérèglent la fertilité.
+| Le facteur | Son effet |
+| La **température** | Elle détermine même le sexe des petits chez certaines tortues et crocodiles |
+| La **photopériode** | Elle déclenche la reproduction saisonnière |
+| Les **ressources alimentaires** | Elles conditionnent la survie de la descendance |
+| La présence de **partenaires** | Et la densité de population |
+| Les **abris** et sites de ponte | Ils permettent la nidification |
+| Les **polluants** | Certains, perturbateurs endocriniens, dérèglent la fertilité |
 
-## La dynamique d’une population
-L’effectif d’une population dépend de quatre termes : **natalité**, **mortalité**, **immigration**, **émigration**. Deux stratégies s’observent : produire **beaucoup** de descendants peu protégés (poissons, insectes), ou **peu** de descendants longuement pris en charge (grands mammifères, oiseaux).
+## La dynamique d'une population
+| Le terme | Son effet sur l'effectif |
+| La **natalité** | Il augmente |
+| La **mortalité** | Il diminue |
+| L'**immigration** | Il augmente |
+| L'**émigration** | Il diminue |
 
-## L’action humaine
-Destruction des sites de reproduction, **fragmentation** des milieux qui empêche les rencontres, surpêche prélevant les adultes reproducteurs, pollution lumineuse et sonore, introduction d’espèces concurrentes : autant de facteurs qui font chuter le **succès reproducteur**. À l’inverse, passes à poissons, mise en réserve, restauration de zones humides et calendriers de protection le font remonter.`,
+| La stratégie | Son principe | Ses exemples |
+| Beaucoup de descendants **peu protégés** | Miser sur le nombre | Poissons, insectes |
+| Peu de descendants **longuement pris en charge** | Miser sur la survie | Grands mammifères, oiseaux |
+
+## L'action humaine
+| Ce qui fait chuter le succès reproducteur | Ce qui le fait remonter |
+| Destruction des sites de reproduction | Restauration de zones humides |
+| **Fragmentation** des milieux | Passes à poissons, corridors |
+| Surpêche des adultes reproducteurs | Mise en réserve |
+| Pollutions lumineuse et sonore | Calendriers de protection |
+| Introduction d'espèces concurrentes | Lutte contre les invasives |`,
           },
           questions: [
             ['Qu’est-ce que la fécondation ?', ['La fusion d’un gamète mâle et d’un gamète femelle', 'La division de la cellule œuf', 'La production de gamètes', 'Le développement de l’embryon'], 0, 'Elle donne une cellule œuf unique.'],
@@ -747,31 +1053,48 @@ Destruction des sites de reproduction, **fragmentation** des milieux qui empêch
           axe: 'Reproduction sexuée et asexuée : dynamique des populations',
           lecon: {
             titre: 'Se reproduire seul : des clones et une conquête rapide',
-            cours: `La **reproduction asexuée** produit de nouveaux individus **à partir d’un seul parent**, **sans gamète ni fécondation**. Les descendants sont des **clones** : ils possèdent la même information génétique que le parent.
+            cours: `La reproduction asexuée produit de nouveaux individus à partir d'un seul parent, sans gamète ni fécondation. Les descendants sont des clones.
 
 ## Les formes chez les animaux
-- **Bourgeonnement** : un bourgeon se forme sur le parent puis se détache (hydre, corail, éponge, levure).
-- **Scissiparité** : l’individu se divise en deux (bactéries, paramécies, certaines anémones).
-- **Fragmentation** et **régénération** : un fragment reconstitue un individu entier (étoile de mer, planaire).
-- **Parthénogenèse** : un ovule se développe sans être fécondé (pucerons en été, certains lézards, abeilles pour les mâles).
+| La forme | Son principe | Ses exemples |
+| **Bourgeonnement** | Un bourgeon se forme puis se détache | Hydre, corail, éponge, levure |
+| **Scissiparité** | L'individu se divise en deux | Bactéries, paramécies, certaines anémones |
+| **Fragmentation** et régénération | Un fragment reconstitue un individu entier | Étoile de mer, planaire |
+| **Parthénogenèse** | Un ovule se développe **sans** être fécondé | Pucerons en été, certains lézards, abeilles pour les mâles |
 
 ## Les formes chez les végétaux
-La **multiplication végétative** est la règle : **stolons** du fraisier, **rhizomes** du bambou et de l’iris, **tubercules** de la pomme de terre, **bulbes** de la tulipe, **marcottage**, **bouturage**, **drageons** du peuplier. L’horticulture l’exploite systématiquement — un cépage de vigne ou une variété de pomme de terre est un clone entretenu depuis des décennies.
+| L'organe ou la technique | Son exemple |
+| **Stolons** | Le fraisier |
+| **Rhizomes** | Le bambou, l'iris |
+| **Tubercules** | La pomme de terre |
+| **Bulbes** | La tulipe |
+| **Marcottage**, **bouturage** | Pratiques horticoles |
+| **Drageons** | Le peuplier |
 
-## Avantages
-- **Rapidité** : aucune recherche de partenaire, aucun temps perdu.
-- **Sécurité** : un individu isolé peut coloniser à lui seul un milieu favorable.
-- **Fidélité** : les caractères avantageux du parent sont conservés à l’identique.
+> Un cépage de vigne ou une variété de pomme de terre est un **clone** entretenu depuis des décennies.
 
-## Inconvénients
-- **Aucune diversité génétique** : tous les individus réagissent de la même façon. Une maladie ou un changement du milieu peut anéantir la population entière — c’est ce qui s’est produit lors de la grande famine irlandaise de la pomme de terre au XIXe siècle.
-- **Compétition** entre individus identiques pour les mêmes ressources.
-- **Accumulation** des mutations défavorables, sans brassage pour les éliminer.
+## Avantages et inconvénients
+| L'avantage | L'inconvénient |
+| **Rapidité** : aucune recherche de partenaire | **Aucune diversité génétique** |
+| **Sécurité** : un individu isolé peut coloniser seul | Tous réagissent de la même façon à une maladie |
+| **Fidélité** : les caractères avantageux sont conservés | **Compétition** entre individus identiques |
+| — | **Accumulation** des mutations défavorables, sans brassage pour les éliminer |
 
-> La reproduction sexuée coûte cher mais fabrique de la **diversité** ; l’asexuée est efficace mais fabrique de l’**uniformité**. C’est un arbitrage entre la vitesse et l’avenir.
+> La grande famine irlandaise de la pomme de terre, au XIXe siècle, est la démonstration du premier inconvénient.
+
+## L'arbitrage
+| La reproduction | Ce qu'elle coûte | Ce qu'elle fabrique |
+| **Sexuée** | Cher : partenaire, temps, énergie | De la **diversité** |
+| **Asexuée** | Peu | De l'**uniformité** |
+
+> C'est un arbitrage entre la **vitesse** et l'**avenir**.
 
 ## Les deux à la fois
-Beaucoup d’espèces alternent : le puceron se reproduit par parthénogenèse tant que les conditions sont bonnes, puis sexuellement à l’automne, produisant des œufs résistants. Le fraisier fait des stolons **et** des fleurs. L’un sert à occuper le terrain, l’autre à préparer l’imprévu.`,
+| L'espèce | Son alternance |
+| Le **puceron** | Parthénogenèse tant que les conditions sont bonnes, puis reproduction sexuée à l'automne : des œufs résistants |
+| Le **fraisier** | Des stolons **et** des fleurs |
+
+> L'un sert à occuper le terrain, l'autre à préparer l'imprévu.`,
           },
           questions: [
             ['Qu’est-ce que la reproduction asexuée ?', ['La production de descendants à partir d’un seul parent, sans fécondation', 'La fusion de deux gamètes identiques', 'La reproduction sans partenaire mais avec gamètes', 'La reproduction par pollinisation'], 0, 'Les descendants sont des clones du parent.'],
@@ -789,27 +1112,42 @@ Beaucoup d’espèces alternent : le puceron se reproduit par parthénogenèse t
           axe: 'Reproduction sexuée et asexuée : dynamique des populations',
           lecon: {
             titre: 'Comment l’information passe d’une génération à l’autre',
-            cours: `Chaque cellule du corps humain contient **46 chromosomes**, soit **23 paires**. Dans chaque paire, un chromosome vient du **père**, l’autre de la **mère**. La 23e paire détermine le sexe : **XX** chez la femme, **XY** chez l’homme.
+            cours: `Chaque cellule du corps humain contient 46 chromosomes, soit 23 paires. Dans chaque paire, un chromosome vient du père, l'autre de la mère.
+
+| La 23e paire | Le sexe |
+| **XX** | Femme |
+| **XY** | Homme |
 
 ## Deux divisions, deux rôles
-- La **mitose** est la division des cellules du corps : une cellule mère à 46 chromosomes donne **deux cellules filles identiques**, à 46 chromosomes. Elle assure la croissance, le renouvellement et la réparation des tissus.
-- La **méiose** est la division qui produit les **gamètes** : elle réduit le nombre de chromosomes de **46 à 23**. Chaque spermatozoïde et chaque ovule ne reçoit ainsi qu’**un chromosome de chaque paire**.
+| La division | Ce qu'elle produit | Le nombre de chromosomes | Son rôle |
+| La **mitose** | **Deux cellules identiques** | 46 → 46 | Croissance, renouvellement, réparation |
+| La **méiose** | Les **gamètes** | **46 → 23** | Un chromosome de chaque paire |
 
-## Pourquoi cette réduction est indispensable
-Si les gamètes avaient 46 chromosomes, la cellule œuf en aurait 92, puis 184 à la génération suivante. La méiose divise, la fécondation rétablit : le nombre reste **constant** d’une génération à l’autre.
+## Pourquoi la réduction est indispensable
+| Sans méiose | Avec méiose |
+| Les gamètes auraient 46 chromosomes | Ils en ont **23** |
+| La cellule œuf en aurait **92**, puis 184 | Elle en a **46** |
+
+> La méiose divise, la fécondation rétablit : le nombre reste **constant** d'une génération à l'autre.
 
 ## Le brassage
-Deux mécanismes fabriquent la diversité :
-- lors de la méiose, la répartition des chromosomes de chaque paire dans les gamètes se fait **au hasard** — plus de 8 millions de combinaisons possibles pour un seul individu ;
-- lors de la fécondation, la rencontre d’**un** spermatozoïde parmi des millions et d’**un** ovule est elle aussi aléatoire.
+| Le mécanisme | Ce qu'il apporte |
+| La répartition **au hasard** des chromosomes lors de la méiose | Plus de **8 millions** de combinaisons par individu |
+| La rencontre **aléatoire** d'un spermatozoïde et d'un ovule | Un tirage parmi des millions |
 
-> C’est pourquoi deux enfants des mêmes parents se ressemblent sans être identiques — sauf les **vrais jumeaux**, issus d’une même cellule œuf, donc génétiquement identiques.
+> C'est pourquoi deux enfants des mêmes parents se ressemblent sans être identiques — sauf les **vrais jumeaux**, issus d'une même cellule œuf.
 
 ## Les anomalies
-Une erreur de répartition lors de la méiose peut donner un gamète avec un chromosome en trop ou en moins. La **trisomie 21** correspond à trois exemplaires du chromosome 21 : le caryotype (photographie ordonnée des chromosomes) permet de la mettre en évidence.
+| L'erreur | Sa conséquence | Sa mise en évidence |
+| Une mauvaise répartition lors de la méiose | Un gamète avec un chromosome en trop ou en moins | Le **caryotype**, photographie ordonnée des chromosomes |
+| La **trisomie 21** | Trois exemplaires du chromosome 21 | — |
 
 ## Ce qui se transmet, ce qui ne se transmet pas
-Seules les modifications présentes dans les **cellules reproductrices** se transmettent. Un caractère acquis au cours de la vie — une musculature développée, un bronzage, une cicatrice, une langue apprise — n’est **pas** transmis à la descendance : il ne modifie pas l’information génétique des gamètes.`,
+| Le caractère | Est-il transmis |
+| Une modification des **cellules reproductrices** | **Oui** |
+| Un caractère **acquis** : musculature, bronzage, cicatrice, langue apprise | **Non** |
+
+> Un caractère acquis ne modifie pas l'information génétique des gamètes.`,
           },
           questions: [
             ['Combien de chromosomes contient une cellule humaine ?', ['46, soit 23 paires', '23, soit 46 paires', '48, soit 24 paires', '44, soit 22 paires'], 0, 'Un chromosome de chaque paire vient de chaque parent.'],
@@ -830,25 +1168,38 @@ Seules les modifications présentes dans les **cellules reproductrices** se tran
           axe: 'La parenté des êtres vivants',
           lecon: {
             titre: 'Un arbre unique pour tout le vivant',
-            cours: `Tous les êtres vivants actuels descendent d’**ancêtres communs**. Les classer, ce n’est pas les ranger par ressemblance générale, c’est reconstituer leurs **liens de parenté**.
+            cours: `Tous les êtres vivants actuels descendent d'ancêtres communs. Les classer, c'est reconstituer leurs liens de parenté.
 
 ## Les indices de la parenté
-- Les **caractères partagés** : quatre membres, une colonne vertébrale, des plumes, un squelette interne. Plus deux espèces partagent de caractères **dérivés**, plus leur ancêtre commun est récent.
-- Les **homologies** : le membre antérieur du chat, de la baleine, de la chauve-souris et de l’humain a le même plan d’organisation (un os, puis deux, puis les doigts) malgré des fonctions très différentes. Même plan = même héritage.
-- Les **similitudes moléculaires** : tous les êtres vivants utilisent l’**ADN** et le même code génétique. Plus deux espèces ont des séquences proches, plus leur parenté est étroite.
-- Le développement **embryonnaire**, qui révèle des ressemblances effacées chez l’adulte.
-- Les **fossiles**, qui documentent les formes intermédiaires.
+| L'indice | Ce qu'il montre |
+| Les **caractères partagés** | Plus deux espèces partagent de caractères **dérivés**, plus leur ancêtre commun est récent |
+| Les **homologies** | Le membre antérieur du chat, de la baleine, de la chauve-souris et de l'humain suit le **même plan** : un os, puis deux, puis les doigts |
+| Les **similitudes moléculaires** | Tous utilisent l'**ADN** et le même code génétique |
+| Le développement **embryonnaire** | Des ressemblances effacées chez l'adulte |
+| Les **fossiles** | Les formes intermédiaires |
 
-> Ne pas confondre **homologie** (ressemblance héritée d’un ancêtre commun : bras et aile de chauve-souris) et **convergence** (ressemblance due à un mode de vie commun : aile d’oiseau et aile d’insecte).
+| À ne pas confondre | Sa définition | Son exemple |
+| L'**homologie** | Une ressemblance **héritée** d'un ancêtre commun | Bras humain et aile de chauve-souris |
+| La **convergence** | Une ressemblance due à un **mode de vie** commun | Aile d'oiseau et aile d'insecte |
 
-## L’arbre du vivant
-On le représente par un **arbre phylogénétique** : chaque **nœud** est un ancêtre commun hypothétique, chaque **branche** une lignée. Les groupes sont **emboîtés** : les humains sont des primates, qui sont des mammifères, qui sont des vertébrés, qui sont des eucaryotes.
+## L'arbre du vivant
+| L'élément de l'arbre | Ce qu'il représente |
+| Un **nœud** | Un ancêtre commun hypothétique |
+| Une **branche** | Une lignée |
+
+Les groupes sont **emboîtés** : les humains sont des primates, qui sont des mammifères, qui sont des vertébrés, qui sont des eucaryotes.
 
 ## Les grandes étapes
-La vie apparaît il y a environ **3,8 milliards d’années**, sous forme unicellulaire. Suivent les cellules à noyau, la pluricellularité, l’explosion de formes du Cambrien (−540 Ma), la sortie des eaux, les grandes **crises biologiques** — dont celle qui met fin aux dinosaures non aviens il y a **66 millions d’années** — puis la diversification des mammifères, et l’apparition d’*Homo sapiens* il y a environ **300 000 ans**.
+| L'événement | Sa date |
+| L'apparition de la vie, unicellulaire | Environ **3,8 milliards d'années** |
+| Les cellules à noyau, puis la pluricellularité | Ensuite |
+| L'explosion du **Cambrien** | −540 millions d'années |
+| La sortie des eaux | −400 millions d'années |
+| La fin des dinosaures non aviens | **−66 millions d'années** |
+| L'apparition d'*Homo sapiens* | Environ **300 000 ans** |
 
 ## Les crises, moteurs de renouvellement
-Cinq grandes extinctions de masse ont éliminé une part majeure des espèces. Chaque fois, les groupes survivants se sont diversifiés dans les milieux libérés : les mammifères doivent leur essor à la disparition des dinosaures.`,
+> Cinq grandes extinctions de masse ont éliminé une part majeure des espèces. Chaque fois, les survivants se sont diversifiés dans les milieux libérés : les **mammifères** doivent leur essor à la disparition des dinosaures.`,
           },
           questions: [
             ['Sur quoi repose la classification actuelle des êtres vivants ?', ['Sur les liens de parenté et les caractères partagés', 'Sur la taille et le poids des organismes', 'Sur le milieu de vie', 'Sur l’ordre alphabétique des noms'], 0, 'Plus les caractères dérivés partagés sont nombreux, plus l’ancêtre commun est récent.'],
@@ -866,32 +1217,47 @@ Cinq grandes extinctions de masse ont éliminé une part majeure des espèces. C
           axe: 'La parenté des êtres vivants',
           lecon: {
             titre: 'Le mécanisme découvert par Darwin',
-            cours: `L’**évolution** est la transformation des espèces au cours du temps. Son mécanisme principal, décrit par **Charles Darwin** en 1859 dans *L’Origine des espèces*, est la **sélection naturelle**.
+            cours: `L'évolution est la transformation des espèces au cours du temps. Son mécanisme principal, décrit par Darwin en 1859, est la sélection naturelle.
 
 ## Le raisonnement en quatre temps
-1. Au sein d’une population, les individus présentent des **variations** héréditaires (couleur, taille, résistance, comportement).
-2. Ils produisent **plus de descendants** que le milieu ne peut en nourrir : il y a **compétition** pour les ressources.
-3. Les individus dont les caractères sont les **mieux adaptés** au milieu survivent et se reproduisent davantage.
-4. Ces caractères deviennent, **génération après génération**, plus fréquents dans la population.
+| L'étape | Son contenu |
+| 1 | Les individus présentent des **variations héréditaires** |
+| 2 | Ils produisent **plus de descendants** que le milieu ne peut en nourrir : il y a **compétition** |
+| 3 | Les mieux **adaptés** survivent et se reproduisent davantage |
+| 4 | Leurs caractères deviennent plus **fréquents**, génération après génération |
 
 > La sélection ne crée rien : elle **trie** ce que le hasard des mutations a produit. Le hasard fournit, le milieu choisit.
 
-## L’origine des variations
-Les **mutations** de l’ADN, aléatoires, apparaissent spontanément ou sous l’effet d’agents mutagènes. Une mutation n’est ni bonne ni mauvaise en soi : c’est le **milieu** qui décide de sa valeur. Le brassage de la reproduction sexuée redistribue ensuite ces variations à chaque génération.
+## L'origine des variations
+| La source | Son caractère |
+| Les **mutations** de l'ADN | **Aléatoires**, spontanées ou provoquées |
+| Le **brassage** de la reproduction sexuée | Il redistribue à chaque génération |
+
+> Une mutation n'est ni bonne ni mauvaise en soi : c'est le **milieu** qui décide de sa valeur.
 
 ## Des exemples observés
-- La **phalène du bouleau** : en Angleterre industrielle, les troncs noircis par la suie ont favorisé la forme sombre du papillon ; l’air redevenu propre, la forme claire est redevenue majoritaire.
-- La **résistance aux antibiotiques** : les bactéries porteuses d’une mutation de résistance survivent au traitement et se multiplient. C’est la sélection naturelle à l’œuvre en quelques jours.
-- La résistance des insectes aux insecticides, la taille des becs des pinsons des Galápagos selon les sécheresses.
+| L'exemple | Ce qui se passe |
+| La **phalène du bouleau** | Les troncs noircis favorisent la forme sombre ; l'air redevenu propre, la forme claire revient |
+| La **résistance aux antibiotiques** | Les bactéries mutées survivent au traitement et se multiplient — en quelques jours |
+| Les insectes et les insecticides | Même mécanisme |
+| Les **pinsons des Galápagos** | La taille des becs varie selon les sécheresses |
 
 ## Deux autres mécanismes
-La **dérive génétique** modifie les fréquences par simple hasard, surtout dans les petites populations. La **sélection sexuelle** favorise les caractères qui améliorent l’accès aux partenaires, même coûteux (la queue du paon).
+| Le mécanisme | Son principe |
+| La **dérive génétique** | Le pur hasard, surtout dans les petites populations |
+| La **sélection sexuelle** | Elle favorise les caractères qui améliorent l'accès aux partenaires, même coûteux — la queue du paon |
 
-## De la population à l’espèce nouvelle
-Si deux populations d’une même espèce sont **isolées** durablement (montagne, mer, comportement), elles accumulent des différences jusqu’à ne plus pouvoir se reproduire entre elles : c’est la **spéciation**, l’apparition d’une espèce nouvelle.
+## De la population à l'espèce nouvelle
+| L'étape | Ce qui se passe |
+| L'**isolement** durable | Montagne, mer, comportement |
+| L'accumulation de différences | Génération après génération |
+| La **spéciation** | Les deux populations ne peuvent plus se reproduire entre elles |
 
-## Ce qu’il ne faut pas dire
-L’évolution n’a **pas de but** et ne va pas « vers le mieux ». Aucun organisme ne se transforme volontairement pour s’adapter : les girafes n’ont pas allongé leur cou en tendant vers les branches — celles dont le cou était plus long se sont simplement mieux reproduites.`,
+## Ce qu'il ne faut pas dire
+| L'erreur | La correction |
+| L'évolution va « vers le mieux » | Elle n'a **aucun but** |
+| Un organisme se transforme pour s'adapter | Il ne le décide pas |
+| Les girafes ont allongé leur cou en tendant vers les branches | Celles dont le cou était **déjà** plus long se sont mieux reproduites |`,
           },
           questions: [
             ['Qui décrit le mécanisme de la sélection naturelle en 1859 ?', ['Charles Darwin', 'Jean-Baptiste de Lamarck', 'Gregor Mendel', 'Louis Pasteur'], 0, 'Dans L’Origine des espèces.'],
@@ -913,25 +1279,47 @@ L’évolution n’a **pas de but** et ne va pas « vers le mieux ». Aucun orga
           axe: 'Diversité et stabilité génétique des êtres vivants',
           lecon: {
             titre: 'Où est écrite l’information, et pourquoi nous différons',
-            cours: `Au sein d’une même espèce, tous les individus partagent les mêmes **caractères d’espèce** (deux yeux, une colonne vertébrale, cinq doigts) mais diffèrent par leurs **caractères individuels** (couleur des yeux, groupe sanguin, taille, forme du visage).
+            cours: `Au sein d'une même espèce, tous partagent les mêmes caractères d'espèce, mais diffèrent par leurs caractères individuels.
 
-## Où est l’information ?
-Elle est dans le **noyau** de chaque cellule. Les expériences de **transfert de noyau** l’ont démontré : si l’on remplace le noyau d’une cellule d’acétabulaire ou d’un ovule de grenouille par celui d’un autre individu, c’est le **noyau** qui impose les caractères. Le clonage de la brebis **Dolly** (1996) repose exactement sur ce principe.
+| Le caractère | Ses exemples |
+| D'**espèce** | Deux yeux, une colonne vertébrale, cinq doigts |
+| **Individuel** | Couleur des yeux, groupe sanguin, taille, forme du visage |
+
+## Où est l'information
+Elle est dans le **noyau** de chaque cellule.
+
+| L'expérience | Ce qu'elle démontre |
+| Le **transfert de noyau** chez l'acétabulaire ou l'ovule de grenouille | C'est le **noyau** qui impose les caractères |
+| Le clonage de la brebis **Dolly**, 1996 | Le même principe, appliqué à un mammifère |
 
 ## Chromosomes, ADN, gènes
-Dans le noyau, l’information est portée par les **chromosomes**, visibles au microscope au moment de la division cellulaire. Un chromosome est une longue molécule d’**ADN** (acide désoxyribonucléique) associée à des protéines. Un **gène** est un segment d’ADN qui porte l’information d’un **caractère** — ou plus exactement l’information pour fabriquer une **protéine**.
+| Le niveau | Ce qu'il est |
+| Le **chromosome** | Visible au microscope au moment de la division |
+| L'**ADN** | Une longue molécule associée à des protéines |
+| Le **gène** | Un segment d'ADN portant l'information d'un caractère — plus exactement, de fabrication d'une **protéine** |
 
-> Le même ADN est présent dans **toutes** les cellules d’un individu ; ce qui change d’un tissu à l’autre, ce sont les gènes qui s’y **expriment**.
+> Le même ADN est présent dans **toutes** les cellules d'un individu ; ce qui change d'un tissu à l'autre, ce sont les gènes qui s'y **expriment**.
 
-## La structure de l’ADN
-L’ADN est une **double hélice** formée de deux brins complémentaires, décrite en 1953 par Watson, Crick, Franklin et Wilkins. Il est composé de quatre bases : **A**, **T**, **G**, **C**, qui s’apparient toujours A avec T et G avec C. L’ordre de ces bases constitue le **message** génétique — un alphabet de quatre lettres, universel dans tout le vivant.
+## La structure de l'ADN
+| Le point | Son contenu |
+| Sa forme | Une **double hélice** de deux brins complémentaires |
+| Sa description | Watson, Crick, Franklin et Wilkins, **1953** |
+| Ses bases | **A**, **T**, **G**, **C** |
+| Leur appariement | **A avec T**, **G avec C** |
+
+> L'ordre de ces bases constitue le message génétique : un alphabet de quatre lettres, universel dans tout le vivant.
 
 ## Deux origines à la diversité
-- **Génétique** : chaque individu reçoit une combinaison unique de versions de gènes.
-- **Environnementale** : l’alimentation, l’activité physique, l’exposition au soleil, l’apprentissage modulent l’expression des caractères. La taille adulte, par exemple, dépend des gènes **et** de la nutrition pendant la croissance.
+| L'origine | Son action |
+| **Génétique** | Chaque individu reçoit une combinaison unique de versions de gènes |
+| **Environnementale** | Alimentation, activité physique, soleil, apprentissage modulent l'expression |
 
-## Deux individus identiques ?
-Seuls les **vrais jumeaux** et les individus issus de reproduction asexuée partagent le même ADN. Et même eux ne sont pas exactement semblables : l’environnement et le hasard du développement finissent toujours par les distinguer.`,
+> La taille adulte dépend des gènes **et** de la nutrition pendant la croissance.
+
+## Deux individus identiques
+Seuls les **vrais jumeaux** et les individus issus de reproduction asexuée partagent le même ADN.
+
+> Et même eux ne sont pas exactement semblables : l'environnement et le hasard du développement finissent toujours par les distinguer.`,
           },
           questions: [
             ['Où se trouve l’information génétique dans une cellule ?', ['Dans le noyau', 'Dans la membrane', 'Dans le cytoplasme uniquement', 'Dans les mitochondries uniquement'], 0, 'Les expériences de transfert de noyau l’ont démontré.'],
@@ -949,28 +1337,54 @@ Seuls les **vrais jumeaux** et les individus issus de reproduction asexuée part
           axe: 'Diversité et stabilité génétique des êtres vivants',
           lecon: {
             titre: 'Un gène, plusieurs versions',
-            cours: `Un **gène** occupe toujours la **même place** (le même **locus**) sur le même chromosome, chez tous les individus de l’espèce. Mais il peut en exister plusieurs **versions** : ce sont les **allèles**.
+            cours: `Un gène occupe toujours la même place — le même locus — sur le même chromosome. Mais il peut en exister plusieurs versions : les allèles.
 
 ## Le vocabulaire
-Comme les chromosomes vont par paires, chaque individu porte **deux allèles** de chaque gène — un venu du père, un de la mère.
-- Si les deux allèles sont identiques, l’individu est **homozygote** pour ce gène.
-- S’ils sont différents, il est **hétérozygote**.
-- Un allèle **dominant** s’exprime dès qu’il est présent ; un allèle **récessif** ne s’exprime que s’il est présent **en double**.
-- Certains allèles sont **codominants** : tous deux s’expriment (groupe sanguin AB).
+Chaque individu porte **deux allèles** de chaque gène : un du père, un de la mère.
+
+| Le terme | Sa définition |
+| **Homozygote** | Les deux allèles sont **identiques** |
+| **Hétérozygote** | Ils sont **différents** |
+| Allèle **dominant** | Il s'exprime dès qu'il est présent |
+| Allèle **récessif** | Il ne s'exprime qu'en **double** |
+| Allèles **codominants** | Tous deux s'expriment — le groupe AB |
 
 ## Génotype et phénotype
-Le **génotype** est l’ensemble des allèles portés par l’individu ; le **phénotype** est l’ensemble des caractères observables. Deux génotypes différents peuvent donner le même phénotype : un individu homozygote dominant et un hétérozygote se ressemblent, mais ne transmettront pas la même chose.
+| Le terme | Ce qu'il désigne |
+| Le **génotype** | L'ensemble des allèles portés |
+| Le **phénotype** | L'ensemble des caractères **observables** |
 
-> C’est pourquoi une maladie récessive peut apparaître chez un enfant dont **aucun** des deux parents n’est malade : chacun était **porteur sain**.
+> Deux génotypes différents peuvent donner le même phénotype : un homozygote dominant et un hétérozygote se ressemblent, mais ne transmettront pas la même chose.
+
+> C'est pourquoi une maladie récessive peut apparaître chez un enfant dont **aucun** des parents n'est malade : chacun était **porteur sain**.
 
 ## Un exemple : les groupes sanguins
-Le gène du système ABO possède trois allèles : **A**, **B** et **O**. A et B sont dominants sur O et codominants entre eux. Un individu de groupe A peut donc être A//A ou A//O ; un individu de groupe O est nécessairement O//O.
+| L'allèle | Sa relation aux autres |
+| **A** | Dominant sur O, codominant avec B |
+| **B** | Dominant sur O, codominant avec A |
+| **O** | **Récessif** |
 
-## D’où viennent les allèles ?
-Des **mutations** : une modification de la séquence d’ADN crée une nouvelle version du gène. La plupart sont neutres, certaines défavorables, quelques-unes avantageuses. Les mutations peuvent être spontanées (erreurs de copie) ou provoquées par des agents **mutagènes** : ultraviolets, tabac, certains produits chimiques, rayonnements ionisants.
+| Le groupe | Les génotypes possibles |
+| A | A//A ou A//O |
+| B | B//B ou B//O |
+| AB | A//B |
+| O | **O//O** seulement |
+
+## D'où viennent les allèles
+Des **mutations** : une modification de la séquence d'ADN crée une nouvelle version du gène.
+
+| L'origine de la mutation | Ses agents |
+| **Spontanée** | Erreurs de copie |
+| **Provoquée** | Ultraviolets, tabac, produits chimiques, rayonnements ionisants |
+
+La plupart sont neutres, certaines défavorables, quelques-unes avantageuses.
 
 ## Pourquoi la diversité compte
-Une population génétiquement diverse contient des individus capables de résister à une maladie ou à un changement du milieu. Une population uniforme — un champ d’une seule variété clonée, par exemple — peut être détruite d’un seul coup. La **diversité génétique** est une assurance sur l’avenir.`,
+| La population | Sa résistance |
+| Génétiquement **diverse** | Certains individus résistent à une maladie ou à un changement |
+| **Uniforme** — un champ d'une seule variété clonée | Elle peut être détruite d'un seul coup |
+
+> La diversité génétique est une **assurance sur l'avenir**.`,
           },
           questions: [
             ['Qu’est-ce qu’un allèle ?', ['Une version d’un gène', 'Un chromosome entier', 'Une cellule reproductrice', 'Une protéine codée par un gène'], 0, 'Un gène occupe toujours le même locus, mais peut avoir plusieurs versions.'],
@@ -988,27 +1402,42 @@ Une population génétiquement diverse contient des individus capables de résis
           axe: 'Diversité et stabilité génétique des êtres vivants',
           lecon: {
             titre: 'Copier fidèlement, transmettre à la génération suivante',
-            cours: `Pour que chaque cellule d’un organisme possède la même information, l’ADN doit être **copié** avant chaque division. Pour que l’espèce se perpétue, cette information doit ensuite être **transmise** aux descendants.
+            cours: `Pour que chaque cellule possède la même information, l'ADN doit être copié avant chaque division. Pour que l'espèce se perpétue, il doit ensuite être transmis.
 
-## La réplication de l’ADN
-Avant une division, la double hélice s’ouvre et chaque brin sert de **modèle** : la complémentarité des bases (A-T, G-C) impose la séquence du brin neuf. On obtient **deux molécules identiques** à l’originale. C’est cette copie fidèle qui explique que toutes les cellules d’un individu aient le même ADN.
+## La réplication de l'ADN
+| L'étape | Ce qui se passe |
+| 1 | La double hélice s'**ouvre** |
+| 2 | Chaque brin sert de **modèle** |
+| 3 | La complémentarité (A-T, G-C) impose la séquence du brin neuf |
+| 4 | On obtient **deux molécules identiques** |
 
-## Mitose : la stabilité
-Après la réplication, la **mitose** répartit les chromosomes copiés en deux lots strictement égaux : **deux cellules filles identiques** entre elles et à la cellule mère. Croissance, cicatrisation, renouvellement de la peau et du sang reposent sur elle.
+## Les deux divisions
+| La division | Son résultat | Ce qu'elle assure |
+| La **mitose** | Deux cellules **identiques**, à 46 chromosomes | Croissance, cicatrisation, renouvellement de la peau et du sang |
+| La **méiose** | Des gamètes à **23** chromosomes, tirés au hasard | La variabilité |
+| La **fécondation** | Deux gamètes tirés au hasard parmi des millions | Chaque individu est **génétiquement unique** |
 
-## Méiose et fécondation : la variabilité
-La **méiose** produit des gamètes à **23 chromosomes**, un de chaque paire, tirés au hasard. La **fécondation** réunit ensuite deux gamètes tirés eux aussi au hasard parmi des millions. Résultat : chaque individu issu de reproduction sexuée est **génétiquement unique**.
-
-> La mitose **conserve**, la méiose et la fécondation **brassent**. Un organisme a besoin des deux : de stabilité pour fonctionner, de variabilité pour durer en tant qu’espèce.
+> La mitose **conserve**, la méiose et la fécondation **brassent**. Un organisme a besoin des deux : de stabilité pour fonctionner, de variabilité pour durer en tant qu'espèce.
 
 ## Comment on suit un caractère
-Un **arbre généalogique** permet de déterminer si un caractère est dominant ou récessif, porté ou non par un chromosome sexuel. Deux indices classiques : un caractère qui **saute une génération** est probablement récessif ; un caractère qui touche presque uniquement les garçons est probablement porté par le chromosome **X**, comme le daltonisme ou l’hémophilie.
+| L'observation sur l'arbre généalogique | La conclusion probable |
+| Le caractère **saute une génération** | Il est **récessif** |
+| Il touche presque uniquement les **garçons** | Il est porté par le chromosome **X** — daltonisme, hémophilie |
 
 ## Quand la copie se trompe
-Une erreur de réplication non réparée devient une **mutation**. Si elle survient dans une cellule du corps, elle ne touche que la descendance de cette cellule — c’est ainsi que naissent certains cancers. Si elle survient dans une cellule reproductrice, elle est **transmissible** à la descendance.
+| Où survient la mutation | Sa portée |
+| Dans une cellule **du corps** | Elle ne touche que la descendance de cette cellule — c'est ainsi que naissent certains cancers |
+| Dans une cellule **reproductrice** | Elle est **transmissible** à la descendance |
 
-## Ce que cela permet aujourd’hui
-Tests génétiques, diagnostic prénatal, identification par empreintes génétiques, thérapie génique, sélection variétale : toutes ces techniques reposent sur la connaissance de la structure et de la transmission de l’ADN — et posent des questions **éthiques** que la science seule ne tranche pas.`,
+## Ce que cela permet aujourd'hui
+| L'application | Son usage |
+| Les **tests génétiques** | Dépistage, diagnostic |
+| Le **diagnostic prénatal** | Détecter une anomalie |
+| Les **empreintes génétiques** | Identification |
+| La **thérapie génique** | Corriger un gène |
+| La **sélection variétale** | Agriculture |
+
+> Toutes reposent sur la connaissance de l'ADN — et posent des questions **éthiques** que la science seule ne tranche pas.`,
           },
           questions: [
             ['Que se passe-t-il lors de la réplication de l’ADN ?', ['Chaque brin sert de modèle pour fabriquer un brin complémentaire', 'Les deux brins sont détruits puis reconstruits', 'L’ADN se transforme en protéine', 'Les chromosomes s’échangent entre paires'], 0, 'On obtient deux molécules identiques à l’originale.'],
@@ -1030,28 +1459,50 @@ Tests génétiques, diagnostic prénatal, identification par empreintes généti
           axe: 'Le fonctionnement de l’organisme',
           lecon: {
             titre: 'Ce que le corps modifie pour fournir de l’énergie',
-            cours: `Pendant un effort, les muscles consomment beaucoup plus de **glucose** et de **dioxygène** qu’au repos, et produisent davantage de **dioxyde de carbone** et de **chaleur**. L’organisme s’adapte immédiatement.
+            cours: `Pendant un effort, les muscles consomment beaucoup plus de glucose et de dioxygène qu'au repos. L'organisme s'adapte immédiatement.
 
 ## Les modifications immédiates
-- **Fréquence cardiaque** : elle passe d’environ 70 à 150-190 battements par minute.
-- **Débit cardiaque** : il peut être multiplié par 5 (volume d’éjection × fréquence).
-- **Fréquence et amplitude respiratoires** augmentent fortement ; la consommation de dioxygène est multipliée par 10 ou plus.
-- **Redistribution du sang** : les vaisseaux des muscles se **dilatent**, ceux des organes digestifs se **contractent**. Au repos, les muscles reçoivent environ 20 % du débit sanguin ; à l’effort intense, plus de 80 %.
-- **Sudation** : elle évacue la chaleur produite, au prix d’une perte d’eau et de sels.
+| La modification | Sa valeur |
+| La **fréquence cardiaque** | De 70 à **150-190** battements par minute |
+| Le **débit cardiaque** | Multiplié par 5 |
+| La **ventilation** | Fréquence et amplitude augmentent ; la consommation de dioxygène est multipliée par 10 ou plus |
+| La **redistribution du sang** | Les muscles passent d'environ 20 % à plus de **80 %** du débit |
+| La **sudation** | Elle évacue la chaleur, au prix d'eau et de sels |
 
-> Toutes ces adaptations poursuivent un seul but : **amener plus de dioxygène et de glucose aux muscles**, et évacuer plus vite le CO₂ et la chaleur.
+> Toutes ces adaptations poursuivent un seul but : amener **plus de dioxygène et de glucose aux muscles**, et évacuer plus vite CO₂ et chaleur.
 
-## D’où vient l’énergie
-Le muscle puise d’abord dans ses **réserves de glycogène**, puis dans le **glucose sanguin** — réapprovisionné par le foie — puis dans les **lipides** pour les efforts longs. La respiration cellulaire produit l’énergie ; lorsque l’apport en dioxygène ne suffit plus, la **fermentation lactique** prend le relais, moins efficace et productrice d’acide lactique.
+## D'où vient l'énergie
+| L'ordre de puisement | La réserve |
+| 1 | Le **glycogène** du muscle |
+| 2 | Le **glucose sanguin**, réapprovisionné par le foie |
+| 3 | Les **lipides**, pour les efforts longs |
+
+| La voie | Sa condition | Son rendement |
+| La **respiration cellulaire** | Assez de dioxygène | Élevé |
+| La **fermentation lactique** | Le dioxygène manque | Faible, et productrice d'acide lactique |
 
 ## Les limites
-Essoufflement, douleur, crampes, **déshydratation**, hypoglycémie, coup de chaleur : ce sont des signaux d’alerte. Les ignorer expose à l’accident. L’**échauffement** prépare progressivement le cœur, les muscles et les articulations ; la **récupération** et l’hydratation permettent au corps de reconstituer ses réserves.
+| Le signal d'alerte | Ce qu'il indique |
+| Essoufflement, douleur | La limite est atteinte |
+| **Crampes** | Fatigue, déshydratation |
+| **Déshydratation** | Une perte d'eau non compensée |
+| **Hypoglycémie** | Les réserves de glucose sont épuisées |
+| Coup de chaleur | La thermorégulation est dépassée |
 
-## L’entraînement
-Répété, l’effort transforme durablement l’organisme : le cœur devient plus puissant et la fréquence de repos **diminue** chez le sportif entraîné, les muscles se renforcent, le réseau de capillaires se densifie, la capacité respiratoire augmente et la récupération est plus rapide.
+L'**échauffement** prépare progressivement cœur, muscles et articulations ; la **récupération** et l'hydratation reconstituent les réserves.
 
-## Ce qu’il ne faut pas faire
-Forcer sans échauffement, s’entraîner malade, jeûner avant un effort long, ignorer la douleur, se doper. Les produits dopants améliorent une performance immédiate au prix de risques cardiaques, hormonaux et psychiques majeurs.`,
+## L'entraînement
+| L'effet durable | Sa manifestation |
+| Un cœur plus puissant | La fréquence de **repos diminue** |
+| Des muscles renforcés | Plus de force et d'endurance |
+| Un réseau de **capillaires** densifié | Un meilleur apport |
+| Une capacité respiratoire accrue | Plus de dioxygène disponible |
+| Une récupération plus rapide | Des séances plus rapprochées |
+
+## Ce qu'il ne faut pas faire
+Forcer sans échauffement, s'entraîner malade, jeûner avant un effort long, ignorer la douleur, se **doper**.
+
+> Les produits dopants améliorent une performance immédiate au prix de risques cardiaques, hormonaux et psychiques majeurs.`,
           },
           questions: [
             ['Que consomment davantage les muscles pendant un effort ?', ['Du glucose et du dioxygène', 'Du dioxyde de carbone et de l’eau', 'Des protéines uniquement', 'De l’azote'], 0, 'Ils produisent en retour du CO₂ et de la chaleur.'],
@@ -1069,31 +1520,58 @@ Forcer sans échauffement, s’entraîner malade, jeûner avant un effort long, 
           axe: 'Le fonctionnement de l’organisme',
           lecon: {
             titre: 'Bouger, un déterminant majeur de la santé',
-            cours: `La santé, selon l’**OMS**, n’est pas seulement l’absence de maladie : c’est un état de complet bien-être **physique**, **mental** et **social**. L’activité physique agit sur les trois.
+            cours: `Selon l'OMS, la santé n'est pas seulement l'absence de maladie : c'est un état de complet bien-être physique, mental et social. L'activité physique agit sur les trois.
 
 ## Les bénéfices
-- **Cardiovasculaires** : cœur plus efficace, pression artérielle mieux régulée, réduction du risque d’infarctus et d’AVC.
-- **Métaboliques** : meilleur contrôle du poids, prévention du diabète de type 2, meilleur profil de cholestérol.
-- **Musculo-squelettiques** : muscles renforcés, os plus denses (prévention de l’ostéoporose), articulations mieux tenues, meilleur équilibre.
-- **Mentaux** : réduction du stress et de l’anxiété, amélioration du sommeil, de l’humeur et de la concentration.
-- **Sociaux** : appartenance à un groupe, règles partagées, coopération.
+| Le domaine | Ce que l'activité apporte |
+| **Cardiovasculaire** | Cœur plus efficace, pression mieux régulée, moins d'infarctus et d'AVC |
+| **Métabolique** | Contrôle du poids, prévention du diabète de type 2, meilleur cholestérol |
+| **Musculo-squelettique** | Muscles renforcés, os plus denses, articulations tenues, meilleur équilibre |
+| **Mental** | Moins de stress et d'anxiété, meilleur sommeil, humeur et concentration |
+| **Social** | Appartenance à un groupe, règles partagées, coopération |
 
-> L’OMS recommande aux adolescents au moins **60 minutes** d’activité physique modérée à soutenue **par jour**.
+> L'OMS recommande aux adolescents au moins **60 minutes** d'activité modérée à soutenue **par jour**.
 
 ## Les risques de la sédentarité
-Rester assis longtemps est un facteur de risque **indépendant** : surpoids, diabète, maladies cardiovasculaires, mal de dos, troubles du sommeil. Le temps passé devant les écrans y contribue directement.
+| Le risque | Son mécanisme |
+| Surpoids, diabète | Une dépense énergétique trop faible |
+| Maladies cardiovasculaires | Un facteur de risque **indépendant** |
+| Mal de dos, troubles du sommeil | La position assise prolongée |
+
+> Le temps passé devant les écrans y contribue directement.
 
 ## Bien pratiquer
-Échauffement, progressivité, matériel adapté, hydratation, récupération, sommeil suffisant, alimentation équilibrée. La **surcharge d’entraînement** existe aussi : fatigue persistante, blessures à répétition, troubles du sommeil, perte de motivation en sont les signes.
+| La règle | Son objet |
+| **Échauffement**, progressivité | Préparer le corps |
+| Matériel adapté | Éviter la blessure |
+| **Hydratation**, récupération, sommeil | Reconstituer |
+| Alimentation équilibrée | Fournir |
+
+| Le signe de **surcharge** | Ce qu'il indique |
+| Fatigue persistante | Le repos manque |
+| Blessures à répétition | Le corps ne récupère plus |
+| Troubles du sommeil, perte de motivation | Le surentraînement |
 
 ## Alimentation et effort
-Les besoins énergétiques augmentent avec l’activité, mais l’équilibre reste le même : **glucides complexes** pour l’endurance, **protéines** pour la réparation musculaire, **lipides** de qualité, vitamines et minéraux, et surtout de l’**eau**. Aucun complément ne remplace une alimentation variée, et les régimes restrictifs à l’adolescence sont dangereux pendant la croissance.
+| L'apport | Son rôle |
+| Les **glucides complexes** | L'endurance |
+| Les **protéines** | La réparation musculaire |
+| Les **lipides** de qualité | Une réserve, et les membranes |
+| Vitamines et minéraux | Le fonctionnement |
+| L'**eau** | Indispensable |
+
+> Aucun complément ne remplace une alimentation variée, et les régimes restrictifs à l'adolescence sont dangereux pendant la croissance.
 
 ## Le dopage
-Utiliser une substance interdite pour améliorer une performance, c’est tricher — et se mettre en danger : troubles cardiaques, hormonaux, psychiques, dépendance. La règle sportive rejoint ici la règle sanitaire.
+| Ce qu'il est | Ce qu'il coûte |
+| Une tricherie sportive | Troubles cardiaques, hormonaux, psychiques, dépendance |
 
 ## Une responsabilité individuelle et collective
-Choisir de bouger relève de chacun, mais dépend aussi des **conditions** : pistes cyclables, équipements sportifs accessibles, cours d’EPS, sécurité des trajets. La santé publique se joue autant dans l’aménagement que dans la volonté individuelle.`,
+| Le niveau | Ce dont il dépend |
+| **Individuel** | Le choix de bouger |
+| **Collectif** | Pistes cyclables, équipements accessibles, cours d'EPS, sécurité des trajets |
+
+> La santé publique se joue autant dans l'aménagement que dans la volonté individuelle.`,
           },
           questions: [
             ['Comment l’OMS définit-elle la santé ?', ['Un état de complet bien-être physique, mental et social', 'L’absence de maladie', 'Une bonne condition physique', 'Une espérance de vie élevée'], 0, 'L’activité physique agit sur les trois dimensions.'],
@@ -1115,30 +1593,48 @@ Choisir de bouger relève de chacun, mais dépend aussi des **conditions** : pis
           axe: 'Système nerveux et comportement responsable',
           lecon: {
             titre: 'Recevoir, traiter, réagir — et protéger son cerveau',
-            cours: `Le **système nerveux** relie l’organisme à son environnement. Il se compose du **système nerveux central** (encéphale et moelle épinière) et du **système nerveux périphérique** (les **nerfs**).
+            cours: `Le système nerveux relie l'organisme à son environnement.
 
-## Le trajet d’un message
-1. Un **stimulus** est capté par un **récepteur sensoriel** (œil, oreille, peau, langue, nez).
-2. Un **message nerveux sensitif** part par un **nerf sensitif** vers le centre nerveux.
-3. Le **centre nerveux** (cerveau ou moelle épinière) **traite** l’information et élabore une réponse.
-4. Un **message nerveux moteur** part par un **nerf moteur** vers un **organe effecteur** (muscle, glande).
+| Sa partie | Ce qu'elle comprend |
+| Le système nerveux **central** | L'encéphale et la moelle épinière |
+| Le système nerveux **périphérique** | Les **nerfs** |
 
-Le **réflexe** court-circuite le cerveau : le traitement se fait dans la **moelle épinière**, ce qui rend la réaction beaucoup plus rapide (retirer sa main d’une source brûlante avant même d’avoir eu mal).
+## Le trajet d'un message
+| L'étape | Ce qui se passe |
+| 1 | Un **stimulus** est capté par un **récepteur sensoriel** : œil, oreille, peau, langue, nez |
+| 2 | Un message **sensitif** part par un **nerf sensitif** |
+| 3 | Le **centre nerveux** traite et élabore une réponse |
+| 4 | Un message **moteur** part vers un **organe effecteur** : muscle, glande |
+
+| Le type de réaction | Où se fait le traitement | Sa vitesse |
+| Volontaire | Le **cerveau** | Plus lente |
+| Le **réflexe** | La **moelle épinière** | Beaucoup plus rapide |
+
+> On retire sa main d'une source brûlante **avant** d'avoir eu mal.
 
 ## Le neurone
-La cellule nerveuse comprend un **corps cellulaire**, des **dendrites** qui reçoivent et un **axone** qui transmet. Le message circule sous forme d’**influx électrique** le long du neurone, puis franchit la **synapse** grâce à des **neurotransmetteurs** chimiques. C’est précisément là que la plupart des drogues agissent.
+| Sa partie | Son rôle |
+| Le **corps cellulaire** | Le centre de la cellule |
+| Les **dendrites** | Elles **reçoivent** |
+| L'**axone** | Il **transmet** |
+| La **synapse** | Le message y passe par des **neurotransmetteurs** chimiques |
 
-> Le cerveau adulte compte environ 86 milliards de neurones et des milliers de milliards de connexions, qui se remodèlent avec l’apprentissage : c’est la **plasticité cérébrale**.
+> C'est à la synapse que la plupart des drogues agissent.
+
+> Le cerveau adulte compte environ **86 milliards** de neurones et des milliers de milliards de connexions, qui se remodèlent avec l'apprentissage : c'est la **plasticité cérébrale**.
 
 ## Ce qui perturbe le système nerveux
-- L’**alcool** : ralentissement des réflexes, altération du jugement, coma à forte dose. Il est particulièrement toxique pour le cerveau **en développement** de l’adolescent.
-- Le **cannabis** : troubles de la mémoire, de l’attention et de la motivation, risques psychiatriques accrus chez les jeunes usagers.
-- Le **tabac** et les autres **drogues** : dépendance, altération du circuit de la récompense.
-- Le **manque de sommeil** : le sommeil consolide les apprentissages ; en manquer dégrade mémoire, humeur et attention.
-- Le **bruit** intense et les écouteurs à fort volume : destruction irréversible des cellules ciliées de l’oreille interne.
+| Le facteur | Ses effets |
+| L'**alcool** | Réflexes ralentis, jugement altéré, coma à forte dose — particulièrement toxique pour le cerveau **en développement** |
+| Le **cannabis** | Troubles de la mémoire, de l'attention, de la motivation ; risques psychiatriques accrus chez les jeunes |
+| Le **tabac** et les autres drogues | Dépendance, altération du circuit de la récompense |
+| Le **manque de sommeil** | Le sommeil consolide les apprentissages : en manquer dégrade mémoire, humeur, attention |
+| Le **bruit** intense, les écouteurs forts | Destruction **irréversible** des cellules ciliées de l'oreille interne |
 
 ## Le comportement responsable
-Casque à vélo et en deux-roues, protection auditive, respect du temps de sommeil, refus des substances, prudence sur les écrans avant le coucher : ces gestes protègent un organe qui ne se répare pas comme la peau. Un neurone détruit n’est, dans la plupart des cas, pas remplacé.`,
+Casque à vélo et en deux-roues, protection auditive, respect du temps de sommeil, refus des substances, prudence sur les écrans avant le coucher.
+
+> Un neurone détruit n'est, dans la plupart des cas, **pas remplacé**.`,
           },
           questions: [
             ['De quoi se compose le système nerveux central ?', ['De l’encéphale et de la moelle épinière', 'Des nerfs sensitifs et moteurs', 'Des récepteurs sensoriels', 'Des muscles et des glandes'], 0, 'Les nerfs forment le système nerveux périphérique.'],
@@ -1160,33 +1656,58 @@ Casque à vélo et en deux-roues, protection auditive, respect du temps de somme
           axe: 'Alimentation et digestion',
           lecon: {
             titre: 'De l’aliment au nutriment, et ce qui fait un repas équilibré',
-            cours: `Les **aliments** apportent des **nutriments** en proportions variables. La digestion sert à les rendre assimilables : c’est la **simplification** des grosses molécules en petites, capables de traverser la paroi intestinale.
+            cours: `Les aliments apportent des nutriments. La digestion sert à les rendre assimilables : simplifier les grosses molécules en petites, capables de traverser la paroi intestinale.
 
 ## Le trajet des aliments
-**Bouche** (mastication, salive) → **œsophage** (péristaltisme) → **estomac** (brassage, suc gastrique acide) → **intestin grêle** (suc pancréatique, bile, suc intestinal ; c’est là que se fait l’essentiel de la digestion **et** de l’absorption) → **gros intestin** (réabsorption d’eau, microbiote, formation des matières fécales) → rectum et anus.
+| L'organe | Ce qui s'y passe |
+| La **bouche** | Mastication, salive |
+| L'**œsophage** | Péristaltisme |
+| L'**estomac** | Brassage, suc gastrique acide |
+| L'**intestin grêle** | Sucs pancréatique, biliaire, intestinal : l'essentiel de la digestion **et** de l'absorption |
+| Le **gros intestin** | Réabsorption d'eau, microbiote, formation des matières fécales |
 
 ## Deux actions complémentaires
-- L’action **mécanique** : mastication, brassage, contractions. Elle **fragmente**, augmentant la surface d’attaque.
-- L’action **chimique** : les **enzymes** digestives coupent les liaisons des grosses molécules. Chaque enzyme est **spécifique** d’un type de molécule (amylase pour l’amidon, protéases pour les protéines, lipases pour les graisses).
+| L'action | Ce qu'elle fait | Ses moyens |
+| **Mécanique** | Elle **fragmente**, augmentant la surface d'attaque | Mastication, brassage, contractions |
+| **Chimique** | Elle **coupe** les liaisons | Les **enzymes**, chacune **spécifique** |
+
+| L'enzyme | Ce qu'elle attaque |
+| **Amylase** | L'amidon |
+| **Protéases** | Les protéines |
+| **Lipases** | Les graisses |
 
 ## Ce que deviennent les grandes familles
-- **Glucides complexes** (amidon) → **glucose**.
-- **Protéines** → **acides aminés**.
-- **Lipides** → **acides gras** et **glycérol**.
-- **Eau**, **sels minéraux** et **vitamines** passent sans transformation.
+| L'aliment | Le nutriment obtenu |
+| Glucides complexes (amidon) | Le **glucose** |
+| Protéines | Les **acides aminés** |
+| Lipides | Les **acides gras** et le glycérol |
+| Eau, sels minéraux, vitamines | Ils passent **sans transformation** |
 
-> Les **fibres** ne sont pas digérées par nos enzymes : elles régulent le transit et nourrissent le microbiote. Elles sont indispensables même sans valeur énergétique.
+> Les **fibres** ne sont pas digérées par nos enzymes : elles régulent le transit et nourrissent le microbiote. Indispensables, même sans valeur énergétique.
 
-## L’équilibre alimentaire
-Il ne s’évalue pas repas par repas mais **sur plusieurs jours**. Les repères : des fruits et légumes à chaque repas, des féculents (de préférence complets) selon l’appétit et l’activité, des protéines variées (dont légumineuses), des produits laitiers, peu de produits sucrés, salés et ultratransformés, et de l’**eau** comme seule boisson indispensable.
+## L'équilibre alimentaire
+Il ne s'évalue pas repas par repas, mais **sur plusieurs jours**.
 
-Les besoins **varient** : un adolescent en croissance, un sportif, une femme enceinte et une personne âgée n’ont ni les mêmes besoins énergétiques ni les mêmes besoins en calcium, fer ou protéines.
+| Le repère | Sa fréquence |
+| Fruits et légumes | À chaque repas |
+| Féculents, de préférence complets | Selon l'appétit et l'activité |
+| Protéines variées, dont **légumineuses** | Chaque jour |
+| Produits laitiers | Chaque jour |
+| Produits sucrés, salés, ultratransformés | **Peu** |
+| **Eau** | La seule boisson indispensable |
 
-## Quand l’équilibre est rompu
-**Dénutrition** et **carences** (fer, calcium, vitamine D) freinent la croissance et fatiguent. **Surpoids** et **obésité** résultent d’un apport durablement supérieur aux dépenses, et augmentent le risque de diabète de type 2 et de maladies cardiovasculaires. Les **troubles du comportement alimentaire** (anorexie, boulimie) sont des maladies qui se soignent et pour lesquelles il faut demander de l’aide.
+> Les besoins **varient** : un adolescent en croissance, un sportif, une femme enceinte et une personne âgée n'ont ni les mêmes besoins énergétiques ni les mêmes besoins en calcium, fer ou protéines.
+
+## Quand l'équilibre est rompu
+| Le trouble | Sa cause ou son effet |
+| **Dénutrition**, carences en fer, calcium, vitamine D | Croissance freinée, fatigue |
+| **Surpoids** et **obésité** | Un apport durablement supérieur aux dépenses ; risque de diabète de type 2 et de maladies cardiovasculaires |
+| Les **troubles du comportement alimentaire** | Anorexie, boulimie : des **maladies** qui se soignent — il faut demander de l'aide |
 
 ## Sécurité alimentaire
-Chaîne du froid, cuisson suffisante, lavage des mains et des végétaux, dates de consommation, séparation du cru et du cuit : ces règles évitent les **intoxications alimentaires**, dues à des bactéries comme *Salmonella* ou *Listeria*.`,
+Chaîne du froid, cuisson suffisante, lavage des mains et des végétaux, dates de consommation, séparation du cru et du cuit.
+
+> Ces règles évitent les **intoxications alimentaires**, dues à des bactéries comme *Salmonella* ou *Listeria*.`,
           },
           questions: [
             ['À quoi sert la digestion ?', ['À simplifier les grosses molécules en nutriments assimilables', 'À stocker les aliments dans l’estomac', 'À produire de l’énergie directement', 'À éliminer les déchets du sang'], 0, 'Les nutriments peuvent alors traverser la paroi intestinale.'],
@@ -1208,26 +1729,47 @@ Chaîne du froid, cuisson suffisante, lavage des mains et des végétaux, dates 
           axe: 'Le monde microbien et la santé',
           lecon: {
             titre: 'Comment le corps se défend, et comment il apprend',
-            cours: `Malgré les barrières naturelles, un micro-organisme peut franchir la peau ou une muqueuse : c’est la **contamination**. S’il se multiplie dans l’organisme, il y a **infection**. Le **système immunitaire** intervient alors en deux temps.
+            cours: `Malgré les barrières naturelles, un micro-organisme peut franchir la peau ou une muqueuse. Le système immunitaire intervient alors en deux temps.
 
-## La réponse immédiate : l’immunité innée
-Elle est **rapide** (quelques minutes à quelques heures) et **non spécifique** : elle traite tous les intrus de la même façon. Elle se manifeste par la **réaction inflammatoire** — rougeur, chaleur, gonflement, douleur — et par la **phagocytose** : des globules blancs appelés **phagocytes** englobent le micro-organisme et le digèrent. Dans la plupart des cas, cela suffit.
+## Les deux réponses
+| La réponse | Sa vitesse | Sa spécificité | Ses acteurs |
+| **Innée** | Quelques minutes à quelques heures | **Non spécifique** | Réaction inflammatoire, **phagocytes** |
+| **Adaptative** | Quelques **jours** | **Spécifique** | **Lymphocytes B** et **T** |
+
+## La réponse immédiate
+| Le signe de la réaction inflammatoire | Sa cause |
+| Rougeur, chaleur | La dilatation des vaisseaux |
+| Gonflement | Le passage de liquide |
+| Douleur | Les médiateurs chimiques |
+
+La **phagocytose** : un phagocyte englobe le micro-organisme et le digère.
+
+> Dans la plupart des cas, cela suffit.
 
 ## La réponse adaptative
-Si l’infection persiste, une réponse **plus lente** (quelques jours) mais **spécifique** se met en place, portée par les **lymphocytes**.
-- Les **lymphocytes B** fabriquent des **anticorps**, protéines en forme de Y qui se fixent **spécifiquement** sur un **antigène** — un élément reconnu comme étranger — et neutralisent le micro-organisme, qui est ensuite phagocyté.
-- Les **lymphocytes T** détruisent directement les cellules infectées.
+| Le lymphocyte | Ce qu'il fait |
+| **B** | Il fabrique des **anticorps**, protéines en Y qui se fixent sur un **antigène** et neutralisent l'intrus |
+| **T** | Il détruit directement les cellules infectées |
 
-> Un anticorps ne reconnaît **qu’un seul** antigène : c’est la clé de la spécificité, et c’est aussi ce qui explique qu’on puisse attraper plusieurs fois un rhume, provoqué chaque fois par un virus différent.
+> Un anticorps ne reconnaît **qu'un seul** antigène. C'est la clé de la spécificité — et c'est pourquoi on peut attraper plusieurs fois un rhume, provoqué chaque fois par un virus différent.
 
 ## La mémoire immunitaire
-Après une infection, une partie des lymphocytes devient des **cellules mémoire**, qui persistent des années. Lors d’un second contact avec le même antigène, la réponse est **beaucoup plus rapide et plus intense** : le micro-organisme est éliminé avant même de provoquer des symptômes. La personne est **immunisée**.
+| Le contact | La réponse |
+| Le **premier** | Lente, quelques jours ; des **cellules mémoire** persistent des années |
+| Le **second**, avec le même antigène | **Beaucoup plus rapide et intense** : l'intrus est éliminé avant tout symptôme |
+
+La personne est **immunisée**.
 
 ## La vaccination
-Le **vaccin** exploite exactement ce mécanisme : il présente à l’organisme un antigène rendu inoffensif (micro-organisme tué, atténué, fragment, ou instruction pour en fabriquer un fragment). Il déclenche une réponse et surtout une **mémoire**, **sans** provoquer la maladie. Un **rappel** entretient cette mémoire.
+| Ce que le vaccin apporte | Ce qu'il ne provoque pas |
+| Un **antigène rendu inoffensif** : micro-organisme tué, atténué, fragment, ou instruction pour en fabriquer un | La **maladie** |
 
-## L’immunité collective
-Quand une proportion suffisante d’une population est immunisée, le micro-organisme ne circule plus assez pour atteindre les personnes non protégées — nourrissons, immunodéprimés. C’est ce qui a permis d’**éradiquer la variole** en 1980.`,
+Il déclenche une réponse et surtout une **mémoire**. Un **rappel** l'entretient.
+
+## L'immunité collective
+Quand une proportion suffisante de la population est immunisée, le micro-organisme ne circule plus assez pour atteindre les personnes non protégées — nourrissons, immunodéprimés.
+
+> C'est ce qui a permis d'**éradiquer la variole**, en 1980.`,
           },
           questions: [
             ['Quelle différence entre contamination et infection ?', ['La contamination est l’entrée du micro-organisme, l’infection sa multiplication', 'La contamination est bactérienne, l’infection virale', 'La contamination est bénigne, l’infection grave', 'Les deux termes sont synonymes'], 0, 'Toute contamination ne débouche pas sur une infection.'],
@@ -1245,29 +1787,54 @@ Quand une proportion suffisante d’une population est immunisée, le micro-orga
           axe: 'Le monde microbien et la santé',
           lecon: {
             titre: 'Hygiène, vaccins, antibiotiques : trois leviers distincts',
-            cours: `Face aux infections, trois moyens complémentaires existent — et il est essentiel de ne pas les confondre.
+            cours: `Face aux infections, trois moyens complémentaires — qu'il est essentiel de ne pas confondre.
+
+## Les trois leviers
+| Le levier | Son moment | Ce qu'il fait |
+| L'**hygiène** | Avant la contamination | Elle empêche l'arrivée du microbe |
+| La **vaccination** | Avant la maladie | Elle **prépare** l'organisme |
+| Les **antibiotiques** | Après l'infection | Ils **soignent** — les bactéries seulement |
 
 ## Prévenir la contamination
-L’**hygiène** reste le premier levier : lavage des mains, eau potable, assainissement, cuisson et conservation des aliments, protection des plaies, aération des locaux. En milieu de soins s’y ajoutent l’**asepsie** (éviter l’arrivée des microbes : stérilisation, matériel à usage unique) et l’**antisepsie** (éliminer ceux déjà présents sur la peau, par un antiseptique).
+| La mesure | Son objet |
+| Lavage des mains, eau potable, assainissement | Le quotidien |
+| Cuisson et conservation, protection des plaies, aération | Les gestes simples |
+| L'**asepsie** | Éviter l'arrivée des microbes : stérilisation, usage unique |
+| L'**antisepsie** | Éliminer ceux déjà présents sur la peau |
 
-Pour les infections **sexuellement transmissibles**, le **préservatif** est le seul moyen qui protège à la fois des IST et d’une grossesse non désirée ; le dépistage permet de traiter tôt et d’éviter la transmission.
+> Pour les **IST**, le **préservatif** est le seul moyen qui protège à la fois d'une infection et d'une grossesse non désirée. Le dépistage permet de traiter tôt et d'éviter la transmission.
 
-## Prévenir la maladie : la vaccination
-Le vaccin prépare l’organisme **avant** la rencontre. Certains vaccins sont **obligatoires** en France pour les jeunes enfants, d’autres **recommandés** (papillomavirus, grippe, rappels). La vaccination protège l’individu **et** la collectivité. C’est une mesure **préventive** : elle n’a aucun effet sur une infection déjà déclarée.
+## La vaccination
+| Le statut en France | Ce qu'il recouvre |
+| **Obligatoires** | Plusieurs vaccins pour les jeunes enfants |
+| **Recommandés** | Papillomavirus, grippe, rappels |
 
-## Soigner : les antibiotiques
-Un **antibiotique** est une substance qui tue les **bactéries** ou bloque leur multiplication. Il est **sans aucun effet sur les virus** : grippe, rhume, bronchiolite, angine virale ne s’en traitent pas. Le médecin peut recourir à un **test rapide** (angine) ou à un **antibiogramme** pour choisir la molécule efficace.
+> C'est une mesure **préventive** : elle n'a aucun effet sur une infection déjà déclarée. Elle protège l'individu **et** la collectivité.
 
-> Deux règles : **le bon antibiotique** et **le traitement complet**. Arrêter dès qu’on va mieux laisse survivre les bactéries les plus résistantes.
+## Les antibiotiques
+| Ce qu'ils font | Ce qu'ils ne font pas |
+| Ils tuent les **bactéries** ou bloquent leur multiplication | **Aucun effet sur les virus** : grippe, rhume, bronchiolite, angine virale |
 
-## L’antibiorésistance
-Un usage excessif ou mal conduit sélectionne les bactéries résistantes — c’est la sélection naturelle appliquée aux microbes. Certaines infections deviennent difficiles à traiter, et l’OMS classe l’antibiorésistance parmi les grandes menaces sanitaires mondiales. D’où la campagne : « les antibiotiques, c’est pas automatique ».
+| L'outil du médecin | Ce qu'il permet |
+| Le **test rapide** d'angine | Distinguer bactérienne et virale |
+| L'**antibiogramme** | Choisir la molécule efficace |
+
+> Deux règles : **le bon antibiotique**, et **le traitement complet**. Arrêter dès qu'on va mieux laisse survivre les bactéries les plus résistantes.
+
+## L'antibiorésistance
+| Le mécanisme | Sa conséquence |
+| Un usage excessif ou mal conduit **sélectionne** les bactéries résistantes | C'est la sélection naturelle appliquée aux microbes |
+| Certaines infections deviennent difficiles à traiter | L'OMS classe l'antibiorésistance parmi les grandes menaces sanitaires |
+
+D'où la campagne : « les antibiotiques, c'est pas automatique ».
 
 ## Sérum et antiviraux
-Le **sérum thérapeutique** apporte des anticorps déjà formés : il agit **immédiatement** mais **sans mémoire**, et sert en urgence. Les **antiviraux** ciblent les virus, mais sont peu nombreux et spécifiques.
+| Le traitement | Son action |
+| Le **sérum thérapeutique** | Des anticorps déjà formés : effet **immédiat**, **sans mémoire** — pour l'urgence |
+| Les **antiviraux** | Ils ciblent les virus, mais sont peu nombreux et très spécifiques |
 
-## Ce qui a changé l’espérance de vie
-Eau potable, assainissement, hygiène, vaccination et antibiotiques ont fait reculer la mortalité infectieuse plus qu’aucune autre avancée médicale. Les préserver est un enjeu collectif.`,
+## Ce qui a changé l'espérance de vie
+Eau potable, assainissement, hygiène, vaccination et antibiotiques ont fait reculer la mortalité infectieuse plus qu'aucune autre avancée médicale.`,
           },
           questions: [
             ['Quelle différence entre asepsie et antisepsie ?', ['L’asepsie évite l’arrivée des microbes, l’antisepsie élimine ceux déjà présents', 'L’asepsie concerne la peau, l’antisepsie le matériel', 'L’asepsie utilise des antibiotiques', 'Les deux termes sont synonymes'], 0, 'Stérilisation d’un côté, antiseptique de l’autre.'],
@@ -1289,26 +1856,38 @@ Eau potable, assainissement, hygiène, vaccination et antibiotiques ont fait rec
           axe: 'Reproduction et comportements sexuels responsables',
           lecon: {
             titre: 'Devenir capable de se reproduire',
-            cours: `La **puberté** est la période de transformation qui rend l’organisme **capable de se reproduire**. Elle se déroule en moyenne entre 10 et 16 ans, avec de **grandes variations individuelles** parfaitement normales.
+            cours: `La puberté est la période de transformation qui rend l'organisme capable de se reproduire. Elle se déroule en moyenne entre 10 et 16 ans, avec de grandes variations individuelles parfaitement normales.
 
 ## Ce qui change
-- **Caractères sexuels primaires** : les organes génitaux se développent et deviennent fonctionnels.
-- **Caractères sexuels secondaires** : pilosité, développement des seins, mue de la voix, élargissement des hanches ou des épaules, poussée de croissance, modification de la peau.
-- **Transformations psychologiques et sociales** : nouvelles émotions, sentiment amoureux, besoin d’autonomie, rapport au corps et au regard des autres.
+| Le domaine | Ses transformations |
+| Caractères sexuels **primaires** | Les organes génitaux se développent et deviennent fonctionnels |
+| Caractères sexuels **secondaires** | Pilosité, seins, mue de la voix, hanches ou épaules, poussée de croissance, peau |
+| **Psychologiques et sociales** | Nouvelles émotions, sentiment amoureux, besoin d'autonomie, rapport au corps |
 
 ## Ce qui déclenche tout
-Le **cerveau** commande. L’**hypophyse**, une petite glande située à sa base, libère des **hormones** qui circulent dans le sang et activent les **gonades** — les **testicules** chez le garçon, les **ovaires** chez la fille. Ceux-ci produisent à leur tour la **testostérone** ou les **œstrogènes** et la **progestérone**, responsables des transformations.
+| L'étage | Son action |
+| Le **cerveau** | Il commande |
+| L'**hypophyse** | Elle libère des hormones dans le sang |
+| Les **gonades** — testicules ou ovaires | Elles produisent **testostérone**, ou **œstrogènes** et **progestérone** |
 
-> Une **hormone** est un message chimique produit par une glande, transporté par le sang, et qui n’agit que sur les cellules capables de le reconnaître.
+> Une **hormone** est un message chimique produit par une glande, transporté par le sang, et qui n'agit que sur les cellules capables de le reconnaître.
 
-## L’appareil génital masculin
-Les **testicules** produisent, **de façon continue à partir de la puberté et pendant toute la vie**, des **spermatozoïdes**. Ceux-ci mûrissent dans l’**épididyme**, transitent par les **canaux déférents** et sont mélangés aux sécrétions des **vésicules séminales** et de la **prostate** pour former le **sperme**, émis lors de l’**éjaculation**.
+## Les deux appareils
+| Le point | **Masculin** | **Féminin** |
+| La production de gamètes | **Continue**, dès la puberté et toute la vie | **Cyclique** : un ovule environ tous les **28 jours** |
+| Le stock initial | Aucun : ils sont fabriqués en permanence | Constitué **dès la naissance** |
+| L'organe producteur | Les **testicules** | Les **ovaires** |
+| Le trajet | Épididyme, canaux déférents, mélange aux sécrétions des vésicules séminales et de la prostate : le **sperme** | La **trompe**, lieu possible de la fécondation |
+| L'organe d'accueil | — | L'**utérus**, dont la muqueuse s'épaissit chaque cycle |
+| Sans fécondation | — | La muqueuse est éliminée : les **règles**, premier jour du cycle |
+| L'arrêt | Aucun net | La **ménopause** |
 
-## L’appareil génital féminin
-Les **ovaires** contiennent dès la naissance un stock d’ovules. À partir de la puberté, **un ovule** est libéré environ **tous les 28 jours** : c’est l’**ovulation**, au milieu du **cycle menstruel**. Il est capté par une **trompe**, où peut avoir lieu la fécondation. L’**utérus** prépare chaque cycle une muqueuse épaissie pour accueillir un embryon ; sans fécondation, elle est éliminée : ce sont les **règles**, qui marquent le premier jour du cycle. Ce fonctionnement cyclique s’arrête à la **ménopause**.
+## Ce qu'il faut retenir sur la fertilité
+| Le moment | Ce qui est possible |
+| Dès la **première ovulation** — qui **précède** les premières règles | Une grossesse |
+| Dès les premières éjaculations | Idem |
 
-## Ce qu’il faut retenir sur la fertilité
-Dès la première ovulation — qui précède les premières règles — une grossesse est possible. Chez le garçon, dès les premières éjaculations. Les cycles irréguliers du début n’offrent aucune protection.`,
+> Les cycles irréguliers du début n'offrent **aucune** protection.`,
           },
           questions: [
             ['Qu’est-ce que la puberté ?', ['La période qui rend l’organisme capable de se reproduire', 'Le début de la croissance', 'La fin de la croissance osseuse', 'La première année de la vie'], 0, 'Elle s’accompagne de transformations physiques et psychologiques.'],
@@ -1326,28 +1905,55 @@ Dès la première ovulation — qui précède les premières règles — une gro
           axe: 'Reproduction et comportements sexuels responsables',
           lecon: {
             titre: 'Neuf mois de développement',
-            cours: `La **fécondation** a lieu dans une **trompe** : un seul **spermatozoïde** pénètre l’**ovule**, et les deux noyaux fusionnent. La **cellule œuf** ainsi formée contient 46 chromosomes et porte déjà toute l’information du futur individu — dont son sexe, déterminé par le chromosome apporté par le spermatozoïde (X ou Y).
+            cours: `La fécondation a lieu dans une trompe : un seul spermatozoïde pénètre l'ovule, et les deux noyaux fusionnent.
 
-## Les premiers jours
-La cellule œuf se **divise** en descendant vers l’utérus. Vers le **6e ou 7e jour**, l’amas de cellules s’implante dans la muqueuse utérine : c’est la **nidation**. Sans nidation, il n’y a pas de grossesse.
+La **cellule œuf** contient 46 chromosomes et porte déjà toute l'information du futur individu — dont son **sexe**, déterminé par le chromosome apporté par le spermatozoïde.
 
-## Embryon puis fœtus
-- De la nidation à la **8e semaine** : l’**embryon** met en place tous les organes (**organogenèse**). C’est la période la **plus sensible** aux agressions extérieures.
-- De la 9e semaine à la naissance : le **fœtus** grandit, ses organes achèvent leur maturation. Il mesure environ 3 cm à 8 semaines et 50 cm à terme.
+## Le calendrier
+| L'étape | Sa date |
+| La **division** de la cellule œuf, en descendant vers l'utérus | Jours 1 à 6 |
+| La **nidation** dans la muqueuse utérine | **6e ou 7e jour** |
+| L'**embryon** : mise en place de tous les organes, l'**organogenèse** | Jusqu'à la **8e semaine** |
+| Le **fœtus** : croissance et maturation | De la 9e semaine à la naissance |
+
+> Sans nidation, il n'y a pas de grossesse. Et la période embryonnaire est la **plus sensible** aux agressions extérieures.
+
+| Le stade | La taille |
+| À 8 semaines | Environ 3 cm |
+| À terme | Environ 50 cm |
 
 ## Les échanges avec la mère
-Le **placenta** est l’organe des échanges. Les sangs maternel et fœtal **ne se mélangent pas** : ils circulent de part et d’autre d’une barrière très fine, à travers laquelle passent le **dioxygène** et les **nutriments** vers le fœtus, et le **dioxyde de carbone** et les **déchets** vers la mère. Le **cordon ombilical** relie le fœtus au placenta ; le **liquide amniotique** l’amortit, le protège des chocs et maintient sa température.
+| L'organe | Son rôle |
+| Le **placenta** | L'organe des échanges |
+| Le **cordon ombilical** | Il relie le fœtus au placenta |
+| Le **liquide amniotique** | Il amortit, protège des chocs, maintient la température |
 
-> Le placenta n’est **pas** un filtre absolu : alcool, tabac, drogues, certains médicaments et certains virus le traversent.
+| Le sens de passage | Ce qui passe |
+| De la mère au fœtus | **Dioxygène** et **nutriments** |
+| Du fœtus à la mère | **Dioxyde de carbone** et **déchets** |
+
+> Les sangs maternel et fœtal **ne se mélangent pas** : ils circulent de part et d'autre d'une barrière très fine.
+
+> Le placenta n'est **pas** un filtre absolu : alcool, tabac, drogues, certains médicaments et certains virus le traversent.
 
 ## Ce qui protège la grossesse
-Aucun alcool — il n’existe **aucune dose sans risque** —, pas de tabac ni de drogue, pas de médicament sans avis médical, une alimentation équilibrée, la vaccination à jour, et un **suivi médical** régulier : consultations, **échographies** (datation, morphologie, croissance), analyses.
+| La règle | Sa raison |
+| **Aucun alcool** | Il n'existe **aucune dose sans risque** |
+| Ni tabac, ni drogue | Ils traversent le placenta |
+| Aucun médicament sans avis médical | Certains sont tératogènes |
+| Une alimentation équilibrée, vaccination à jour | Les besoins augmentent |
+| Un **suivi médical** régulier | Consultations, **échographies** de datation, morphologie, croissance ; analyses |
 
-## L’accouchement
-Après environ **9 mois** (39 semaines depuis la fécondation), les contractions de l’utérus dilatent le col, le bébé est expulsé, le cordon est coupé, puis le placenta est délivré. Le nouveau-né respire alors par lui-même et sa circulation se réorganise en quelques minutes.
+## L'accouchement
+| L'étape | Ce qui se passe |
+| Les **contractions** | Elles dilatent le col |
+| L'**expulsion** | Le bébé naît, après environ **9 mois** |
+| Le **cordon** | Il est coupé |
+| La **délivrance** | Le placenta est expulsé |
+| Les premières minutes | Le nouveau-né respire seul, sa circulation se réorganise |
 
 ## Les débuts de la vie
-L’allaitement ou le lait infantile assurent la nutrition ; le nouveau-né bénéficie encore quelques mois des **anticorps** transmis par sa mère, avant que son propre système immunitaire ne prenne le relais.`,
+L'allaitement ou le lait infantile assurent la nutrition ; le nouveau-né bénéficie encore quelques mois des **anticorps** transmis par sa mère.`,
           },
           questions: [
             ['Où a lieu la fécondation ?', ['Dans une trompe', 'Dans l’utérus', 'Dans l’ovaire', 'Dans le placenta'], 0, 'La cellule œuf descend ensuite vers l’utérus.'],
@@ -1365,33 +1971,52 @@ L’allaitement ou le lait infantile assurent la nutrition ; le nouveau-né bén
           axe: 'Reproduction et comportements sexuels responsables',
           lecon: {
             titre: 'Choisir d’avoir un enfant, ou d’attendre',
-            cours: `Maîtriser sa **procréation**, c’est pouvoir éviter une grossesse non désirée — la **contraception** — et, à l’inverse, être aidé lorsqu’une grossesse souhaitée ne vient pas.
+            cours: `Maîtriser sa procréation, c'est pouvoir éviter une grossesse non désirée — et, à l'inverse, être aidé lorsqu'une grossesse souhaitée ne vient pas.
 
 ## Les moyens de contraception
-- **Hormonaux** : **pilule** (bloque l’ovulation), implant, patch, anneau, injection. Efficaces s’ils sont pris régulièrement.
-- **Mécaniques** : **préservatif** masculin ou féminin, **stérilet** (dispositif intra-utérin, hormonal ou au cuivre), diaphragme.
-- **Définitifs** : ligature des trompes, vasectomie — réservés à l’adulte, après réflexion et délai légal.
-- La **contraception d’urgence** (« pilule du lendemain ») s’utilise après un rapport non protégé ou un accident de contraception, le plus tôt possible. Elle est délivrée sans ordonnance, gratuitement pour les mineures, et ne remplace **jamais** une contraception régulière.
+| Le type | Ses moyens | Son principe |
+| **Hormonal** | Pilule, implant, patch, anneau, injection | La pilule bloque l'**ovulation** ; efficace si prise régulièrement |
+| **Mécanique** | **Préservatif** masculin ou féminin, **stérilet**, diaphragme | Une barrière ou une action locale |
+| **Définitif** | Ligature des trompes, vasectomie | Réservé à l'adulte, après réflexion et délai légal |
+| D'**urgence** | La « pilule du lendemain » | Après un rapport non protégé, **le plus tôt possible** |
 
-> Un seul moyen protège **à la fois** d’une grossesse et des **infections sexuellement transmissibles** : le **préservatif**.
+La contraception d'urgence est délivrée sans ordonnance, gratuitement pour les mineures.
+
+> Elle ne remplace **jamais** une contraception régulière.
+
+> Un seul moyen protège **à la fois** d'une grossesse et des **infections sexuellement transmissibles** : le **préservatif**.
 
 ## Comment choisir
-Un moyen adapté dépend de l’âge, de la santé, du mode de vie, des contre-indications et du désir de chacun. La consultation, gratuite et **confidentielle** pour les mineurs en centre de santé sexuelle (ex-planning familial), permet d’en parler et d’obtenir une prescription.
+| Ce dont dépend le choix | Où en parler |
+| L'âge, la santé, le mode de vie | En **centre de santé sexuelle** |
+| Les contre-indications, le désir de chacun | La consultation est **gratuite et confidentielle** pour les mineurs |
 
-## L’IVG
-L’**interruption volontaire de grossesse** est un droit en France, autorisée par la loi Veil de 1975. Elle est possible jusqu’à **14 semaines de grossesse** (16 semaines d’aménorrhée), par voie médicamenteuse ou chirurgicale, et prise en charge à 100 %. Elle n’est pas un moyen de contraception, mais un droit garanti.
+## L'IVG
+| Le point | Son contenu |
+| Son statut | Un **droit** en France, autorisé par la **loi Veil de 1975** |
+| Son délai | Jusqu'à **14 semaines de grossesse**, soit 16 d'aménorrhée |
+| Ses méthodes | Médicamenteuse ou chirurgicale |
+| Sa prise en charge | **100 %** |
 
-## L’infertilité
-Un couple sur six consulte pour des difficultés à concevoir. Les causes peuvent être féminines (trompes obstruées, troubles de l’ovulation, endométriose), masculines (spermatozoïdes peu nombreux ou peu mobiles), mixtes, ou inexpliquées.
+> Ce n'est pas un moyen de contraception, mais un droit garanti.
 
-## L’assistance médicale à la procréation
-- **Stimulation ovarienne** : des hormones déclenchent ou régularisent l’ovulation.
-- **Insémination artificielle** : le sperme est déposé directement dans l’utérus.
-- **FIV** (fécondation in vitro) : la rencontre des gamètes se fait au laboratoire, puis un embryon est transféré dans l’utérus.
-- **ICSI** : un spermatozoïde unique est injecté dans l’ovule.
-- Recours possible à un **don** de gamètes.
+## L'infertilité
+| L'origine | Ses causes possibles |
+| **Féminine** | Trompes obstruées, troubles de l'ovulation, endométriose |
+| **Masculine** | Spermatozoïdes peu nombreux ou peu mobiles |
+| **Mixte** ou inexpliquée | — |
 
-Ces techniques posent des questions **éthiques** — devenir des embryons congelés, anonymat des donneurs, accès aux techniques — que la **loi de bioéthique**, régulièrement révisée, tranche par le débat démocratique et non par la seule science.`,
+Un couple sur six consulte pour des difficultés à concevoir.
+
+## L'assistance médicale à la procréation
+| La technique | Son principe |
+| La **stimulation ovarienne** | Des hormones déclenchent ou régularisent l'ovulation |
+| L'**insémination artificielle** | Le sperme est déposé dans l'utérus |
+| La **FIV** | La rencontre des gamètes se fait au laboratoire ; un embryon est transféré |
+| L'**ICSI** | Un spermatozoïde unique est injecté dans l'ovule |
+| Le **don** de gamètes | Quand les gamètes du couple ne conviennent pas |
+
+> Ces techniques posent des questions **éthiques** — devenir des embryons congelés, anonymat des donneurs, accès aux techniques — que la **loi de bioéthique**, régulièrement révisée, tranche par le débat démocratique et non par la seule science.`,
           },
           questions: [
             ['Comment la pilule contraceptive agit-elle principalement ?', ['Elle bloque l’ovulation', 'Elle détruit les spermatozoïdes', 'Elle empêche la nidation uniquement', 'Elle ferme les trompes'], 0, 'C’est une contraception hormonale.'],

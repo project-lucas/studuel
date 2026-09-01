@@ -8,7 +8,7 @@ import {
   noteSur20,
   type Correction,
 } from '@/lib/francais/dictee/correction'
-import { awardXp } from '@/lib/wallet-server'
+import { walletTouch } from '@/lib/wallet-server'
 import { estDemo, texteAttenduDemo } from '@/lib/francais/dictee/demo'
 
 // Le mode Dictée (migration 318) : enregistrement d'une tentative. La
@@ -115,10 +115,10 @@ export async function enregistrerDictee(
     return { ...ECHEC, note, erreurs, correction }
   }
 
-  // Une dictée est du travail : elle vaut l'XP d'une session de flashcards.
-  // Clé = la dictée : refaire la même dictée dix fois dans l'heure ne verse pas
-  // dix fois l'XP (la RPC dédoublonne).
-  await awardXp(supabase, 'flashcards', `dictee:${dicteeId}`)
+  // Une dictée est du travail : elle fait avancer la série. Elle ne verse plus
+  // d'XP par elle-même — l'XP se gagne sur ce qu'on ACQUIERT (cf. lib/wallet),
+  // et une dictée réussie le prouve par les cartes qu'elle fait progresser.
+  await walletTouch(supabase)
 
   revalidatePath('/reviser/francais/dictee')
   return { ok: true, note, erreurs, correction }

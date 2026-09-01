@@ -424,6 +424,23 @@ export type BilanCours = {
 /** Seuil au-delà duquel une carte est considérée comme acquise (jours). */
 export const SEUIL_ACQUISE = 21
 
+/** Une carte est-elle acquise ? (diplômée, et revue à plus de 21 jours) */
+export function estAcquise(state: CardState): boolean {
+  return state.phase === 'revision' && state.intervalDays >= SEUIL_ACQUISE
+}
+
+/**
+ * La carte vient-elle de BASCULER en « acquise » ?
+ *
+ * C'est le seul moment qui paye de l'XP côté révision : l'acquisition, pas la
+ * séance. Une carte déjà acquise qu'on revoit ne repaye rien — et une carte qui
+ * retombe puis remonte non plus, la clé d'unicité étant la question elle-même
+ * (cf. migration 348).
+ */
+export function vientDEtreAcquise(avant: CardState, apres: CardState): boolean {
+  return estAcquise(apres) && !estAcquise(avant)
+}
+
 export function bilanCours(
   cartes: readonly CarteACaler[],
   nowIso: string,

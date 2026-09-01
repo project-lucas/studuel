@@ -2203,6 +2203,18 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     decision:
       'ÉCRITURE PURE, aucun UUID touché : la progression des élèves est intacte. ⚠️ CE NIVEAU COUVRE AUSSI LES CONTENUS IMPORTÉS — en anglais, en espagnol, en physique-chimie, en SVT et en technologie, la 4e et la 5e réutilisent les fiches de la 3e, mais sous des UUID qui leur sont propres : les migrations 341 → 344 ne les avaient donc PAS touchées. Un fichier par niveau, comme la 341 : les cours sont corrigés à la source dans les seeds (un clone neuf sort juste), mais la base EN SERVICE ne les rejouera jamais, leurs INSERT étant gardés par `ON CONFLICT DO NOTHING`. Les trois fichiers pèsent 0,24, 0,49 et 0,50 Mo — sous le plafond d’environ 1 Mo du SQL Editor, mesuré à la 342. ⚠️ À exécuter APRÈS tous les seeds de contenu du niveau 4e.',
   },
+  {
+    id: '348',
+    fichier: '348_economie_apprendre_et_jouer.sql',
+    feature:
+      'L’XP mesure l’APPRIS et non le clic (leçon 5, carte acquise 5, couronnes 30/40/60, chacune payée une seule fois), la série se détache de l’XP (`wallet_touch`), et la fuite de gemmes du défi est colmatée (clé « leçon:jour » → « jour »)',
+    siAbsente:
+      'L’XP continue de payer le GESTE : un élève qui refait cinquante fois le même quiz facile monte comme celui qui a maîtrisé cinquante chapitres, et le niveau ne dit rien de lui. Surtout, la victoire de défi paye 10 gemmes PAR LEÇON et par jour — soit ~2 500 gemmes quotidiennes possibles pour un élève de 4e, quand un chapitre en coûte 30 : la seule monnaie sans plafond de l’app, et la seule dont la source répétable grandit avec le catalogue.',
+    // Sondable par la table du catalogue des hauts faits, qu'elle crée.
+    sonde: { type: 'table', table: 'gem_achievements' },
+    decision:
+      'LE MODÈLE VIENT DE CLASH ROYALE : on n’y gagne pas d’XP en jouant des matchs, on en gagne en améliorant ses cartes — le niveau mesure la collection bâtie, pas le temps passé. Ici, l’XP ne paye plus que l’acquisition, et la clé devient OBLIGATOIRE : l’index `xp_events_once_per_key` (192) fait qu’une notion ne se paye qu’une fois. ⚠️ EFFET DE BORD LE PLUS DANGEREUX, ET TRAITÉ : la série stockée n’avançait QUE dans `wallet_award_xp` — couper l’XP du jeu aurait tué la gemme des 7 jours pour qui ne fait que jouer. D’où `wallet_touch()`, que toute activité appelle. ⚠️ SOCLE GELÉ : l’XP déjà gagnée reste acquise, les sources historiques renvoient 0 au lieu d’échouer — personne ne redescend d’un niveau. La doctrine de lib/gems.ts est inchangée : aucune conversion écus → gemmes.',
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

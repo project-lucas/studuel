@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { computeXp, levelFor, sessionXp, XP_RULES } from '@/lib/xp'
+import { computeXp, levelFor, XP_RULES } from '@/lib/xp'
 
 describe('computeXp', () => {
   it('additionne quiz, decks, leçons et défis selon les règles', () => {
@@ -53,33 +53,5 @@ describe('levelFor', () => {
     expect(top.level).toBe(10)
     expect(top.progress).toBe(1)
     expect(top.nextAt).toBeNull()
-  })
-})
-
-describe('sessionXp', () => {
-  it('paye le forfait du quiz, bonus compris à partir de 8/10', () => {
-    expect(sessionXp('quiz', 7, 10)).toBe(20)
-    expect(sessionXp('quiz', 8, 10)).toBe(30)
-    expect(sessionXp('quiz', 10, 10)).toBe(30)
-  })
-
-  it("verse l'XP MÊME sans aucune bonne réponse", () => {
-    // Doctrine du projet : on récompense d'être venu réviser, on ne punit pas.
-    expect(sessionXp('quiz', 0, 10)).toBe(20)
-  })
-
-  it('paye les flashcards au forfait', () => {
-    expect(sessionXp('deck', 12, 12)).toBe(10)
-  })
-
-  it('la file « À revoir » ne rapporte pas moins que le quiz', () => {
-    // C'est le geste qu'on veut quotidien : il serait absurde qu'il paye moins.
-    expect(sessionXp('review', 8, 10)).toBe(sessionXp('quiz', 8, 10))
-  })
-
-  it('borne les valeurs aberrantes', () => {
-    expect(sessionXp('quiz', 999, 10)).toBe(30) // ratio absurde → simple bonus
-    expect(sessionXp('quiz', -5, 10)).toBe(20) // score négatif ramené au forfait
-    expect(sessionXp('quiz', 3, -1)).toBe(20) // total absurde → pas de bonus
   })
 })

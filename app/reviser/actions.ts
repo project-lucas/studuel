@@ -21,7 +21,13 @@ import {
   type OralTextStatus,
 } from '@/lib/oral-texts'
 import { DAILY_GOAL_OPTIONS, type DailyGoalMinutes } from '@/lib/daily-goal'
-import { awardGems, awardQuizProgression, awardXp } from '@/lib/wallet-server'
+import {
+  awardChapterCrowns,
+  awardGems,
+  awardQuizProgression,
+  awardXp,
+  walletTouch,
+} from '@/lib/wallet-server'
 import {
   creditTraque,
   creditTraqueFromAnswers,
@@ -54,12 +60,22 @@ export async function completeLesson(
   if (!error) {
     await Promise.all([
       validateRevisionToday(supabase, user.id),
+      // LES DEUX SEULES SOURCES D'XP DE CE GESTE. La leçon elle-même vaut 5,
+      // une fois pour toutes (clé = la leçon) ; et comme une leçon terminée
+      // pose le plancher de 0,30 sur son chapitre, elle peut allumer la
+      // PREMIÈRE couronne — que le serveur recalcule seul.
+      awardXp(supabase, 'lecon', lessonId),
       lessonContext(supabase, lessonId).then((ctx) =>
-        creditTraque(supabase, {
-          subject: ctx.subject,
-          event: { lecon: 1 },
-          chapterIds: ctx.chapterId ? [ctx.chapterId] : [],
-        }),
+        Promise.all([
+          creditTraque(supabase, {
+            subject: ctx.subject,
+            event: { lecon: 1 },
+            chapterIds: ctx.chapterId ? [ctx.chapterId] : [],
+          }),
+          ctx.chapterId
+            ? awardChapterCrowns(supabase, ctx.chapterId)
+            : Promise.resolve(0),
+        ]),
       ),
     ])
   }
@@ -247,7 +263,7 @@ export async function finishReviewSession(
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id),
       // Une session « À revoir » paye comme un quiz (portefeuille 192).
-      awardQuizProgression(supabase, score, clean.length),
+      awardQuizProgression(supabase),
       traqueCredits,
     ])
     apparition = apparitionOf(await traqueCredits, Date.now())
@@ -335,7 +351,7 @@ export async function finishExamBlanc(
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id),
       // L'examen blanc paye comme un gros quiz (portefeuille 192).
-      awardQuizProgression(supabase, cleanScore, cleanTotal),
+      awardQuizProgression(supabase),
     ])
   }
 
@@ -361,7 +377,7 @@ export async function recordLessonDefi(
 
   const key = `${lessonId}:${toDayKey(new Date())}`
   const [award, gems] = await Promise.all([
-    awardXp(supabase, 'defi', key),
+    walletTouch(supabase),
     won ? awardGems(supabase, 'defi_win', key) : Promise.resolve(0),
   ])
   await validateRevisionToday(supabase, user.id)

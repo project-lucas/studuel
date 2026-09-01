@@ -137,7 +137,7 @@ export async function recordTestSession(
     await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id),
-      awardQuizProgression(supabase, cleanScore, cleanTotal, quizId),
+      awardQuizProgression(supabase, quizId),
       supabase
         .rpc('complete_prep_session_for_quiz', { p_quiz: quizId })
         .then(({ error: prepError }) => {

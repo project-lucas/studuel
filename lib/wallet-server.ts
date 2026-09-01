@@ -1,5 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
-import { quizXpSource, walletLevelInfo, type XpSource } from '@/lib/wallet'
+import { walletLevelInfo, type XpSource } from '@/lib/wallet'
 import { levelFor, type LevelInfo } from '@/lib/xp'
 
 // Accès serveur au portefeuille de progression (migration 192).
@@ -68,22 +68,51 @@ export async function fetchDisplayLevel(
   return levelFor(fallbackXp)
 }
 
-/** Verse l'XP d'une activité. Renvoie l'état après coup, null sur échec. */
+/**
+ * Verse l'XP d'une ACQUISITION. Renvoie l'état après coup, null sur échec.
+ *
+ * ⚠️ LA CLÉ EST OBLIGATOIRE, et c'est tout le système : l'index
+ * `xp_events_once_per_key` (migration 192) fait qu'une même acquisition ne se
+ * paye qu'une fois, à jamais. Une leçon relue, un chapitre re-maîtrisé, une
+ * carte qui repasse le seuil : zéro. C'est ce qui distingue l'XP — qui mesure
+ * l'acquis — des trophées, couronnes et écus, qui mesurent le geste.
+ */
 export async function awardXp(
   supabase: SupabaseClient,
   source: XpSource,
-  key?: string,
-  amount?: number,
+  key: string,
 ): Promise<WalletAward | null> {
   const { data, error } = await supabase.rpc('wallet_award_xp', {
     p_source: source,
-    p_key: key ?? null,
-    p_amount: amount ?? null,
+    p_key: key,
+    p_amount: null,
   })
   if (error) {
-    // Migration 192 absente ou panne : la session reste enregistrée, seul le
+    // Migration absente ou panne : la session reste enregistrée, seul le
     // versement saute — on le voit dans les logs au lieu de le deviner.
     console.error('[wallet] XP non versée:', error.message)
+    return null
+  }
+  return (data as WalletAward | null) ?? null
+}
+
+/**
+ * Marque une ACTIVITÉ sans verser d'XP : la série stockée avance, et le palier
+ * de 7 jours paye sa gemme.
+ *
+ * ⚠️ CETTE FONCTION EXISTE PARCE QUE LA SÉRIE ÉTAIT ACCROCHÉE À L'XP. Avant,
+ * `wallet_award_xp` faisait les deux : verser l'XP ET faire avancer la série.
+ * Le jour où l'XP a cessé de payer le jeu (quiz rejoué, duel, arène), la série
+ * serait morte avec — un élève qui ne fait que jouer n'aurait plus jamais
+ * touché sa gemme des 7 jours. La série n'est pas de l'XP : c'est un compteur
+ * d'assiduité, et il se nourrit de TOUTE activité.
+ */
+export async function walletTouch(
+  supabase: SupabaseClient,
+): Promise<WalletAward | null> {
+  const { data, error } = await supabase.rpc('wallet_touch')
+  if (error) {
+    console.error('[wallet] activité non enregistrée:', error.message)
     return null
   }
   return (data as WalletAward | null) ?? null
@@ -92,7 +121,7 @@ export async function awardXp(
 /** Tente un versement de gemmes de jeu. Renvoie les gemmes versées (0 sinon). */
 export async function awardGems(
   supabase: SupabaseClient,
-  source: 'chapter_crowns' | 'defi_win',
+  source: 'chapter_crowns' | 'defi_win' | 'achievement' | 'filon',
   key: string,
 ): Promise<number> {
   const { data, error } = await supabase.rpc('wallet_award_gems', {
@@ -107,18 +136,48 @@ export async function awardGems(
 }
 
 /**
- * Progression complète d'un quiz terminé : XP (forfait, bonus à 8/10) puis
- * gemme des 3 couronnes si ce quiz vient de compléter son chapitre (le seuil
- * est re-vérifié en SQL — quizId absent pour les sessions sans quiz :
- * « À revoir », examen blanc).
+ * Verse l'XP des paliers de couronne franchis sur un chapitre. Renvoie l'XP
+ * réellement versée (0 si aucun palier neuf).
+ *
+ * ⚠️ ON N'ENVOIE QUE L'ID DU CHAPITRE. La valeur (meilleur quiz, plancher 0,30
+ * si une leçon est terminée) est RECALCULÉE EN SQL : un client ne peut pas
+ * s'attribuer une couronne qu'il n'a pas. Chaque palier porte sa clé
+ * « chapitre:palier », donc se paye une fois pour toutes — un chapitre qui
+ * retombe puis remonte ne repaye rien.
+ */
+export async function awardChapterCrowns(
+  supabase: SupabaseClient,
+  chapterId: string,
+): Promise<number> {
+  const { data, error } = await supabase.rpc('wallet_award_chapter_crowns', {
+    p_chapter: chapterId,
+  })
+  if (error) {
+    console.error('[wallet] couronnes non versées:', error.message)
+    return 0
+  }
+  return Number(data ?? 0)
+}
+
+/**
+ * Progression d'un quiz terminé : la gemme des 3 couronnes si ce quiz vient de
+ * compléter son chapitre (le seuil est re-vérifié en SQL).
+ *
+ * L'XP, elle, ne passe plus par ici : elle se verse sur les COURONNES
+ * (awardCouronnes), qui sont l'acquis réel — un quiz raté n'acquiert rien.
  */
 export async function awardQuizProgression(
   supabase: SupabaseClient,
-  score: number,
-  total: number,
   quizId?: string,
 ): Promise<WalletAward | null> {
-  const award = await awardXp(supabase, quizXpSource(score, total))
-  if (quizId) await awardGems(supabase, 'chapter_crowns', quizId)
+  const award = await walletTouch(supabase)
+  if (quizId) {
+    await Promise.all([
+      awardGems(supabase, 'chapter_crowns', quizId),
+      // L'XP du quiz ne vient plus du quiz : elle vient des COURONNES qu'il
+      // allume. Un quiz raté n'acquiert rien, donc ne paye rien.
+      supabase.rpc('wallet_award_crowns_by_quiz', { p_quiz: quizId }),
+    ])
+  }
   return award
 }

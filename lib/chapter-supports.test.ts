@@ -194,11 +194,17 @@ describe('buildChapterSupports', () => {
     expect(chips[chips.length - 1].kind).toBe('erreurs')
   })
 
-  test('les récompenses promises sont celles du portefeuille', () => {
+  test('ne promet plus d’XP sur un geste qui n’en paye plus', () => {
+    // Les tuiles annonçaient « +20 XP », « +10 XP », « +25 XP ». Depuis que
+    // l'XP se gagne sur l'ACQUIS (lib/wallet.XP_AWARDS), ces trois gestes n'en
+    // versent plus directement : le quiz paye par les COURONNES qu'il allume,
+    // les flashcards par les cartes qu'elles font passer en « acquise ».
+    // Afficher un chiffre ici serait devenu une promesse fausse — et une
+    // promesse fausse sur une récompense se paye cher en confiance.
     const chips = buildChapterSupports(input([lesson({ id: 'l1' })]))
-    expect(chips.find((c) => c.kind === 'quiz')?.xp).toBe(20)
-    expect(chips.find((c) => c.kind === 'flashcards')?.xp).toBe(10)
-    expect(chips.find((c) => c.kind === 'defi')?.xp).toBe(25)
+    expect(chips.find((c) => c.kind === 'quiz')?.xp).toBeUndefined()
+    expect(chips.find((c) => c.kind === 'flashcards')?.xp).toBeUndefined()
+    expect(chips.find((c) => c.kind === 'defi')?.xp).toBeUndefined()
     expect(chips.find((c) => c.kind === 'carte')?.xp).toBeUndefined()
   })
 })

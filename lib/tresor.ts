@@ -177,6 +177,38 @@ export const SHOP_CATALOG: ShopItem[] = [
       emoji: '🤓',
       kind: 'compagnon',
     },
+    // ─────────────────────────────────────── les consommables qui SERVENT
+    // La boutique ne vendait que du décor, sauf le gel de série et le double XP.
+    // Une monnaie dont tous les articles s'achètent une fois pour toutes finit
+    // par n'avoir plus rien à acheter — et cesse d'être une monnaie. Ces trois-là
+    // se rachètent, et ils aident à APPRENDRE plutôt qu'à se montrer.
+    //
+    // ⚠️ AUCUN NE DONNE DE CONTENU. Ils achètent du temps et du confort : c'est
+    // la ligne qui sépare l'écu de la gemme, et elle ne se franchit pas.
+    {
+      id: 'indice',
+      name: 'Indice',
+      desc: 'Élimine une mauvaise réponse sur une question difficile.',
+      price: 40,
+      emoji: '💡',
+      kind: 'boost',
+    },
+    {
+      id: 'seconde-chance',
+      name: 'Seconde chance',
+      desc: 'Refais une question ratée à la fin du quiz.',
+      price: 60,
+      emoji: '↩️',
+      kind: 'boost',
+    },
+    {
+      id: 'relance-coffre',
+      name: 'Relance de coffre',
+      desc: 'Retire au sort une seconde fois sur le même coffre.',
+      price: 90,
+      emoji: '🎲',
+      kind: 'boost',
+    },
     {
       id: 'compagnon-echarpe',
       name: 'Écharpe d’hiver',
@@ -231,4 +263,79 @@ export function getMockShop(): ShopItem[] {
 
 export function getMockCollection(): CollectItem[] {
   return collectionWithUnlocks(new Set(['c1', 'c2', 'c3', 'c4']))
+}
+
+// ---------------------------------------------------------- la boutique du jour
+//
+// POURQUOI FAIRE TOURNER. Le catalogue tenait sur un écran et ne bougeait
+// jamais : une fois les articles achetés, l'onglet Trésor n'avait plus rien à
+// montrer, et l'écu plus rien à acheter. C'est le geste de Clash Royale — la
+// raison d'ouvrir la boutique chaque jour n'est pas l'article, c'est de VOIR
+// LEQUEL.
+//
+// TIRAGE DÉTERMINISTE, jamais aléatoire : la même journée montre la même
+// boutique à la même personne, quel que soit le nombre de rechargements. Un
+// tirage au hasard donnerait une vitrine qui change à chaque F5 — c'est-à-dire
+// une vitrine à laquelle on ne peut pas se fier.
+
+/** Remise de l'article en promotion. */
+export const PROMO_REMISE = 0.3
+
+/** Nombre d'articles présentés chaque jour. */
+export const TAILLE_VITRINE = 4
+
+export type ArticleDuJour = ShopItem & {
+  /** L'article du jour en promotion — il y en a exactement un. */
+  promo: boolean
+  /** Prix réellement demandé, remise comprise. */
+  prixAffiche: number
+}
+
+/** Entier stable tiré d'une chaîne (djb2). Même clé, même nombre, partout. */
+function graine(cle: string): number {
+  let h = 5381
+  for (let i = 0; i < cle.length; i += 1) h = ((h * 33) ^ cle.charCodeAt(i)) >>> 0
+  return h >>> 0
+}
+
+/**
+ * La vitrine d'un jour : `TAILLE_VITRINE` articles, dont un en promotion.
+ *
+ * L'OFFSET TOURNE D'UN CRAN PAR JOUR plutôt que de tirer au sort : sur un
+ * catalogue de N articles, chacun revient tous les N/4 jours environ, et aucun
+ * ne peut disparaître des semaines par malchance. Un vrai tirage laisserait des
+ * trous — et c'est justement l'article qu'on attend qui ne sortirait jamais.
+ *
+ * `jour` est une clé UTC 'YYYY-MM-DD' (lib/time), la même que partout ailleurs.
+ */
+export function boutiqueDuJour(
+  jour: string,
+  catalogue: readonly ShopItem[] = SHOP_CATALOG,
+  taille: number = TAILLE_VITRINE,
+): ArticleDuJour[] {
+  const n = catalogue.length
+  if (n === 0 || taille <= 0) return []
+  const combien = Math.min(taille, n)
+
+  // Le jour donne un point de départ ; on avance ensuite d'un cran, si bien que
+  // la vitrine de demain chevauche celle d'aujourd'hui — la rotation se voit
+  // sans que tout change d'un coup.
+  const depart = graine(jour) % n
+  const choisis: ShopItem[] = []
+  for (let i = 0; i < combien; i += 1) choisis.push(catalogue[(depart + i) % n])
+
+  // La promo tombe sur un rang de la vitrine, pas sur un article : un même
+  // article n'est donc pas soldé deux jours de suite parce qu'il est « le bon ».
+  const rangPromo = graine(`${jour}:promo`) % combien
+
+  return choisis.map((article, rang) => {
+    const promo = rang === rangPromo
+    return {
+      ...article,
+      promo,
+      prixAffiche: promo
+        ? Math.max(1, Math.round(article.price * (1 - PROMO_REMISE)))
+        : article.price,
+    }
+  })
 }

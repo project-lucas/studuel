@@ -10,7 +10,7 @@ import { XP_RULES } from '@/lib/xp'
 import { MODE_XP_BONUS, modeXpBonus, type GameModeId } from '@/lib/defi-modes'
 import { weeklyBoss, weeklyTrophyId, WEEKLY_TROPHY_COINS } from '@/lib/bosses'
 import { toDayKey } from '@/lib/streak'
-import { awardXp } from '@/lib/wallet-server'
+import { walletTouch } from '@/lib/wallet-server'
 import type { CommuteSlot } from '@/lib/types'
 
 // Enregistre un défi terminé : compte pour la série, les habitudes et l'XP.
@@ -89,7 +89,7 @@ export async function recordChallenge(
       // session : le montant est relu dessus côté serveur, et l'index unique
       // sur la clé interdit de la réclamer deux fois.
       session?.id
-        ? awardXp(supabase, 'defi_arena', session.id)
+        ? walletTouch(supabase)
         : Promise.resolve(null),
     ])
   }

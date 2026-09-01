@@ -11,7 +11,6 @@ import { bestStreak, COMBO_HOT } from '@/lib/juice'
 import { missedQuestions, canRetryMissed } from '@/lib/quiz-retry'
 import { verdictFor, verdictSrc } from '@/lib/verdict'
 import ComboBadge from '@/components/ComboBadge'
-import { sessionXp } from '@/lib/xp'
 import {
   bilanDuQuiz,
   formatDureeGain,
@@ -539,17 +538,7 @@ export default function QuizPlayer({
                   partielle. */}
               {record ? (
                 <div className="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-highlight/20 px-3 py-2">
-                  {!isPartial ? (
-                    <>
-                      <span className="font-heading text-base font-extrabold text-[color-mix(in_oklch,var(--highlight),black_25%)]">
-                        +{sessionXp('quiz', score, questions.length)} XP
-                      </span>
-                      <span
-                        className="h-3 w-px bg-foreground/15"
-                        aria-hidden="true"
-                      />
-                    </>
-                  ) : null}
+
                   <span
                     className="font-heading flex items-center gap-1 text-base font-extrabold text-[color-mix(in_oklch,var(--highlight),black_25%)]"
                     title="Temps de révision ajouté à ton total"

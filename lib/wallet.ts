@@ -18,38 +18,91 @@
 // Toute évolution doit toucher les deux.
 
 // ------------------------------------------------------------------ barème XP
+//
+// L'XP MESURE CE QU'ON A ACQUIS, PAS CE QU'ON A CLIQUÉ.
+//
+// Elle a d'abord compté les gestes : quiz 20, flashcards 10, défi 25, sans
+// distinguer la première fois de la cinquantième. Un élève qui refaisait le même
+// quiz facile cinquante fois montait de niveau exactement comme celui qui avait
+// maîtrisé cinquante chapitres — le niveau ne disait donc rien de lui.
+//
+// LE MODÈLE VIENT DE CLASH ROYALE, et il est contre-intuitif : on n'y gagne pas
+// d'XP en jouant des matchs, on en gagne en AMÉLIORANT SES CARTES. Le King Level
+// ne mesure pas le temps passé, il mesure la collection qu'on a bâtie. Transposé
+// ici : l'XP ne paye que l'ACQUISITION, et chaque acquisition ne se paye
+// qu'UNE FOIS — l'index `xp_events_once_per_key` (migration 192) le garantit,
+// puisque toute source porte désormais une clé obligatoire.
+//
+// CE QU'ON NE RETIRE PAS. Rejouer continue de payer en trophées (le classement),
+// en couronnes (la piste de saison) et en écus (la boutique). Seule l'XP
+// s'arrête, parce qu'elle dit désormais autre chose : on sépare « j'ai joué » de
+// « j'ai appris », et chaque unité en prend une.
+//
+// ORDRE DE GRANDEUR VOULU. Un élève de 4e a ~250 leçons et ~60 chapitres :
+// 250 × 5 + 60 × 130 ≈ 9 000 XP, soit le niveau 14 pour une année entièrement
+// travaillée. Le niveau est donc BORNÉ par le programme, plus par l'endurance.
 
-/** XP forfaitaire par activité — affiché sur l'item AVANT de jouer (« +20 XP »). */
+/** XP forfaitaire par acquisition — affichée avant le geste (« +5 XP »). */
 export const XP_AWARDS = {
-  /** Quiz complété. */
-  quiz: 20,
-  /** Bonus de quiz brillant (≥ QUIZ_BONUS_RATIO de bonnes réponses). */
-  quizBonus: 10,
-  /** Session de flashcards terminée. */
-  flashcards: 10,
-  /** Défi de leçon relevé (gagné ou perdu : on récompense d'avoir joué). */
-  defi: 25,
+  /** Une leçon lue, la première fois. */
+  lecon: 5,
+  /** Une carte de révision qui passe en « acquise » (intervalle ≥ 21 j). */
+  carte: 5,
+  /** La 1re couronne d'un chapitre. */
+  couronne1: 30,
+  /** La 2e. */
+  couronne2: 40,
+  /** La 3e — le chapitre est maîtrisé. */
+  couronne3: 60,
 } as const
 
-/** Seuil du bonus de quiz : 8/10 et au-delà. */
-export const QUIZ_BONUS_RATIO = 0.8
+/** Sources d'XP encore versées. Toutes exigent une clé : rien n'est répétable. */
+export type XpSource = keyof typeof XP_AWARDS
 
-/** Sources d'XP acceptées par la RPC `wallet_award_xp` (miroir SQL). */
-export type XpSource = 'quiz' | 'quiz_top' | 'flashcards' | 'defi' | 'defi_arena'
+/**
+ * Sources HISTORIQUES, plus jamais versées.
+ *
+ * Elles restent déclarées parce que `xp_events` en contient des centaines de
+ * milliers de lignes et que le CHECK de la table les accepte toujours. L'XP
+ * déjà gagnée reste acquise — c'est le SOCLE GELÉ : personne ne redescend d'un
+ * niveau parce que le barème a changé. Seuls les versements NEUFS s'arrêtent.
+ */
+export type XpSourceHistorique =
+  | 'quiz'
+  | 'quiz_top'
+  | 'flashcards'
+  | 'defi'
+  | 'defi_arena'
+  | 'quests'
+  | 'clan_week'
 
-/** XP d'un quiz terminé : forfait + bonus si ≥ 8/10. */
-export function xpForQuiz(score: number, total: number): number {
-  return XP_AWARDS.quiz + (isQuizTop(score, total) ? XP_AWARDS.quizBonus : 0)
+/** La source d'XP du palier de couronne franchi (1, 2 ou 3). */
+export function couronneSource(palier: 1 | 2 | 3): XpSource {
+  return palier === 1 ? 'couronne1' : palier === 2 ? 'couronne2' : 'couronne3'
 }
 
-/** Le quiz mérite-t-il le bonus (≥ 80 % de bonnes réponses) ? */
-export function isQuizTop(score: number, total: number): boolean {
-  return total > 0 && score / total >= QUIZ_BONUS_RATIO
+/**
+ * Les paliers de couronne franchis en passant de `avant` à `apres`.
+ *
+ * Un seul quiz peut faire sauter un chapitre de 0 à 3 couronnes : il doit alors
+ * payer les TROIS paliers (30 + 40 + 60), pas seulement le dernier. À l'inverse
+ * une régression ne rend rien — l'XP ne redescend jamais, c'est ce qui la rend
+ * lisible comme un CV.
+ */
+export function paliersFranchis(avant: number, apres: number): (1 | 2 | 3)[] {
+  const de = Math.max(0, Math.min(3, Math.floor(avant)))
+  const a = Math.max(0, Math.min(3, Math.floor(apres)))
+  const out: (1 | 2 | 3)[] = []
+  for (let p = de + 1; p <= a; p += 1) out.push(p as 1 | 2 | 3)
+  return out
 }
 
-/** Source RPC d'un quiz selon son score (le montant est fixé côté SQL). */
-export function quizXpSource(score: number, total: number): XpSource {
-  return isQuizTop(score, total) ? 'quiz_top' : 'quiz'
+/** L'XP totale que valent les paliers franchis de `avant` à `apres`. */
+export function xpPourCouronnes(avant: number, apres: number): number {
+  return paliersFranchis(avant, apres).reduce(
+    (somme, palier) => somme + XP_AWARDS[couronneSource(palier)],
+    0,
+  )
 }
 
 // ------------------------------------------------------------------- niveaux

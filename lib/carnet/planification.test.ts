@@ -10,6 +10,7 @@ import {
   estDue,
   estNouvelle,
   etatInitial,
+  vientDEtreAcquise,
   ETAPES_APPRENTISSAGE,
   INTERVALLE_FACILE,
   INTERVALLE_MAX,
@@ -394,5 +395,35 @@ describe('bilanCours & couronnes', () => {
     // les deux au même rang.
     const devinee = carte({ reps: 1, phase: 'revision', intervalDays: 1 })
     expect(bilanCours([devinee], T0).acquises).toBe(0)
+  })
+})
+
+// -----------------------------------------------------------------------------
+// LE PASSAGE EN « ACQUISE » — le seul moment qui paye de l'XP côté révision.
+// -----------------------------------------------------------------------------
+
+describe('vientDEtreAcquise', () => {
+  const carte = (phase: CardState['phase'], intervalDays: number): CardState => ({
+    ...etatInitial('2026-09-01T00:00:00.000Z'),
+    phase,
+    intervalDays,
+  })
+
+  it('reconnaît la bascule au franchissement des 21 jours', () => {
+    expect(vientDEtreAcquise(carte('revision', 15), carte('revision', 21))).toBe(true)
+  })
+
+  it('NE REPAYE PAS une carte déjà acquise', () => {
+    // C'est tout l'enjeu : sans cette garde, chaque révision d'une vieille carte
+    // reverserait 5 XP, et l'XP redeviendrait un compteur de clics.
+    expect(vientDEtreAcquise(carte('revision', 30), carte('revision', 60))).toBe(false)
+  })
+
+  it('ne paye pas sous le seuil', () => {
+    expect(vientDEtreAcquise(carte('revision', 5), carte('revision', 20))).toBe(false)
+  })
+
+  it('exige la phase de révision, pas seulement l’intervalle', () => {
+    expect(vientDEtreAcquise(carte('apprentissage', 0), carte('apprentissage', 90))).toBe(false)
   })
 })

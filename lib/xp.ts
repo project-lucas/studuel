@@ -12,7 +12,6 @@
 //     session puis versée au portefeuille via la source 'defi_arena'.
 // Les niveaux et titres vivent désormais dans lib/wallet.walletLevelInfo.
 
-import { XP_AWARDS, xpForQuiz } from '@/lib/wallet'
 
 export const XP_RULES = {
   quizPerCorrect: 10,
@@ -82,22 +81,8 @@ export function levelFor(xp: number): LevelInfo {
   }
 }
 
-// XP gagnée par UNE session, pour l'annoncer à l'élève à la fin.
-//
-// Aligné sur le barème FORFAITAIRE du portefeuille (lib/wallet.XP_AWARDS) :
-// c'est ce que la Server Action verse réellement, donc ce que l'écran de fin
-// doit annoncer — la promesse « +20 XP » affichée sur l'item avant de jouer et
-// la récompense affichée après doivent être le même nombre.
-//
-// L'XP tombe MÊME à 0 bonne réponse : on récompense d'être venu réviser, on ne
-// punit pas l'échec (doctrine du projet, cf. la douceur du barème de trophées).
-export function sessionXp(
-  kind: 'quiz' | 'deck' | 'review',
-  score: number,
-  total: number,
-): number {
-  if (kind === 'deck') return XP_AWARDS.flashcards
-  // Une session « À revoir » paye comme un quiz : c'est le geste qu'on veut
-  // quotidien, il ne doit pas rapporter moins que le quiz de la leçon.
-  return xpForQuiz(score, total)
-}
+// `sessionXp` A ÉTÉ SUPPRIMÉE (348). Elle annonçait « +20 XP » en fin de
+// session ; depuis que l'XP mesure l'ACQUIS et non le geste, une session ne
+// paye plus rien par elle-même — elle paye par ce qu'elle fait acquérir. La
+// garder aurait affiché « +0 XP » sur les deux écrans de fin, ce qui est pire
+// que de ne rien afficher.

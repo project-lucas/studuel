@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday } from '@/lib/habits'
-import { awardXp } from '@/lib/wallet-server'
+import { walletTouch } from '@/lib/wallet-server'
 import { advanceQuests } from '@/lib/quests-server'
 import { contributeToClan } from '@/lib/clan-week-server'
 import { addCrowns } from '@/lib/saison-server'
@@ -121,7 +121,7 @@ export async function recordDuel90(
       error ? Promise.resolve(null) : validateRevisionToday(supabase, user.id),
       error || !session?.id
         ? Promise.resolve(null)
-        : awardXp(supabase, 'defi_arena', session.id),
+        : walletTouch(supabase),
       // Clan : jouer contribue déjà, gagner contribue plus.
       contributeToClan(supabase, 'duel_play'),
       result.outcome === 'win'

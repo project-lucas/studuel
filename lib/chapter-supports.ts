@@ -12,7 +12,6 @@
 // Une seule règle de choix, testée, pour que le pied de cours et l'onglet ne
 // racontent jamais deux histoires différentes du même chapitre.
 
-import { XP_AWARDS } from '@/lib/wallet'
 import {
   COMPLETE_THRESHOLD,
   SUPPORT_LABELS,
@@ -111,7 +110,6 @@ export function buildChapterSupports(
       badge: quizBadge(quizLesson.best, quizLesson.questionCount),
       href: `/test/${quizLesson.quizId}`,
       done: (quizLesson.best?.ratio ?? 0) >= COMPLETE_THRESHOLD,
-      xp: XP_AWARDS.quiz,
     })
   }
 
@@ -128,7 +126,6 @@ export function buildChapterSupports(
       badge: flashcardsBadge(cardsLesson.questionCount, cardsLesson.dueCount),
       href: `/reviser/${subjectSlug}/${chapterId}/${cardsLesson.id}/flashcards`,
       done: false,
-      xp: XP_AWARDS.flashcards,
     })
   }
 
@@ -159,7 +156,6 @@ export function buildChapterSupports(
       badge: null,
       href: `/reviser/${subjectSlug}/${chapterId}/${defiLesson.id}/defi`,
       done: defiLesson.defiAttempted,
-      xp: XP_AWARDS.defi,
     })
   }
 

@@ -16,7 +16,6 @@ import ComboBadge from '@/components/ComboBadge'
 import ConfettiRain from '@/components/ConfettiRain'
 import QuitGuardButton from '@/components/QuitGuardButton'
 import { bestStreak, COMBO_HOT } from '@/lib/juice'
-import { sessionXp } from '@/lib/xp'
 import { deckProgress } from '@/lib/flashcards'
 import { recordStudySession } from '@/app/studio/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
@@ -161,10 +160,6 @@ export default function FlashcardPlayer({
           <p className="font-mono text-6xl font-bold tabular-nums">
             {rate}
             <span className="text-2xl opacity-60"> %</span>
-          </p>
-
-          <p className="font-heading text-lg font-extrabold text-highlight">
-            +{sessionXp('deck', cards.length, cards.length)} XP
           </p>
 
           {best >= COMBO_HOT ? (

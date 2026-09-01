@@ -2,32 +2,63 @@ import { describe, expect, it } from 'vitest'
 import {
   GEM_AWARDS,
   XP_AWARDS,
-  isQuizTop,
+  couronneSource,
   isStreakMilestone,
   levelFromXp,
   nextStreak,
-  quizXpSource,
+  paliersFranchis,
   walletLevelInfo,
   xpChip,
   xpForLevel,
-  xpForQuiz,
+  xpPourCouronnes,
 } from './wallet'
 
-describe('barème XP', () => {
-  it('paye le forfait du quiz, avec bonus à partir de 8/10', () => {
-    expect(xpForQuiz(7, 10)).toBe(XP_AWARDS.quiz)
-    expect(xpForQuiz(8, 10)).toBe(XP_AWARDS.quiz + XP_AWARDS.quizBonus)
-    expect(xpForQuiz(10, 10)).toBe(XP_AWARDS.quiz + XP_AWARDS.quizBonus)
+describe('barème XP — l’XP mesure l’acquis, pas le clic', () => {
+  it('nomme la source de chaque palier de couronne', () => {
+    expect(couronneSource(1)).toBe('couronne1')
+    expect(couronneSource(2)).toBe('couronne2')
+    expect(couronneSource(3)).toBe('couronne3')
   })
 
-  it('ne verse jamais le bonus sur un quiz vide', () => {
-    expect(isQuizTop(0, 0)).toBe(false)
-    expect(xpForQuiz(0, 0)).toBe(XP_AWARDS.quiz)
+  it('PAYE TOUS LES PALIERS d’un chapitre franchi d’un coup', () => {
+    // LE test du chantier. Un seul quiz peut faire passer un chapitre de 0 à
+    // 3 couronnes : il doit payer les trois (30 + 40 + 60), pas seulement le
+    // dernier. Ne payer que le dernier pénaliserait l’élève qui réussit du
+    // premier coup — exactement celui qu’on veut récompenser.
+    expect(paliersFranchis(0, 3)).toEqual([1, 2, 3])
+    expect(xpPourCouronnes(0, 3)).toBe(
+      XP_AWARDS.couronne1 + XP_AWARDS.couronne2 + XP_AWARDS.couronne3,
+    )
   })
 
-  it('mappe le score vers la source RPC', () => {
-    expect(quizXpSource(5, 10)).toBe('quiz')
-    expect(quizXpSource(9, 10)).toBe('quiz_top')
+  it('ne paye QUE les paliers neufs', () => {
+    expect(paliersFranchis(1, 3)).toEqual([2, 3])
+    expect(xpPourCouronnes(1, 3)).toBe(
+      XP_AWARDS.couronne2 + XP_AWARDS.couronne3,
+    )
+  })
+
+  it('ne rend RIEN quand le chapitre redescend', () => {
+    // L’XP ne redescend jamais : c’est ce qui la rend lisible comme un CV.
+    expect(paliersFranchis(3, 1)).toEqual([])
+    expect(xpPourCouronnes(3, 0)).toBe(0)
+  })
+
+  it('borne les entrées absurdes au lieu de partir en vrille', () => {
+    expect(paliersFranchis(-5, 99)).toEqual([1, 2, 3])
+    expect(paliersFranchis(0, 0)).toEqual([])
+  })
+
+  it('monte avec la difficulté du palier', () => {
+    // Une 3e couronne vaut plus qu’une 1re : le dernier tiers est le plus dur.
+    expect(XP_AWARDS.couronne1).toBeLessThan(XP_AWARDS.couronne2)
+    expect(XP_AWARDS.couronne2).toBeLessThan(XP_AWARDS.couronne3)
+  })
+
+  it('paye la leçon et la carte au même petit tarif', () => {
+    // Ce sont les deux acquisitions unitaires : elles doivent se valoir, sinon
+    // l’élève arbitre entre lire et réviser sur le prix plutôt que sur l’utilité.
+    expect(XP_AWARDS.lecon).toBe(XP_AWARDS.carte)
   })
 })
 

@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday } from '@/lib/habits'
-import { awardXp } from '@/lib/wallet-server'
+import { walletTouch } from '@/lib/wallet-server'
 
 // Enregistre une session de flashcards terminée (série + heatmap Habitude).
 // Visiteur non connecté : rien n'est enregistré, sans erreur.
@@ -28,11 +28,12 @@ export async function recordStudySession(
   })
 
   // Coche « Révision quotidienne » du jour tout de suite si le seuil est
-  // atteint, et verse le forfait flashcards du portefeuille (192).
+  // atteint, et fait avancer la série. Plus d'XP ici : elle se gagne sur
+  // l'acquis, pas sur la session (cf. lib/wallet).
   if (!error) {
     await Promise.all([
       validateRevisionToday(supabase, user.id),
-      awardXp(supabase, 'flashcards'),
+      walletTouch(supabase),
     ])
     revalidatePath('/moi')
   }

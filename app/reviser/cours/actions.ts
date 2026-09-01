@@ -31,11 +31,12 @@ import {
   isVerdict,
   planifier,
   verdictAutomatique,
+  vientDEtreAcquise,
   type Verdict,
 } from '@/lib/carnet/planification'
 import { chargerEtats, ecrireEtat } from '@/lib/carnet/etats-server'
 import { nettoyerSaisie } from '@/lib/carnet/import-colle'
-import { awardXp } from '@/lib/wallet-server'
+import { awardXp, walletTouch } from '@/lib/wallet-server'
 import {
   comparerReponse,
   corrigerTrous,
@@ -1226,7 +1227,15 @@ export async function recordAttempt(
   const apres = planifie
     ? planifier(avant, verdict, nowIso, Math.random())
     : avant
-  if (planifie) await ecrireEtat(supabase, userId, questionId, apres)
+  if (planifie) {
+    await ecrireEtat(supabase, userId, questionId, apres)
+    // L'ACQUISITION, et elle seule, paye de l'XP côté révision : la carte vient
+    // de franchir les 21 jours d'intervalle. Clé = la question, donc une fois
+    // pour toutes — la revoir plus tard ne repaye rien (migration 348).
+    if (vientDEtreAcquise(avant, apres)) {
+      await awardXp(supabase, 'carte', questionId)
+    }
+  }
 
   return {
     ok: true,
@@ -1265,7 +1274,7 @@ export async function endReviewSession(sessionId: string): Promise<Ok> {
   // la fin d'une même session ne verse pas deux fois. Un échec de versement
   // n'annule pas la session (elle est déjà close ci-dessus) — il se lit dans
   // les logs de `awardXp`.
-  await awardXp(supabase, 'flashcards', sessionId)
+  await walletTouch(supabase)
 
   // La série, elle, se lit sur `carnet_review_sessions` depuis la 317 : rien
   // à écrire ici, la ligne de session suffit.

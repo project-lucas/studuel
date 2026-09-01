@@ -38,14 +38,26 @@ describe('isHudLevelHidden', () => {
 })
 
 describe('isHudAccountHidden', () => {
-  it('replie l’engrenage sur l’arène (il vit dans le burger)', () => {
-    expect(isHudAccountHidden('/defi')).toBe(true)
+  it('retire l’engrenage PARTOUT pour un élève connecté', () => {
+    // Les réglages n'ont plus qu'une porte : la carte de profil de l'onglet
+    // Moi. Le bandeau est une rangée d'objets `shrink-0` — le carré de 44 px
+    // de l'engrenage se payait sur la pastille de niveau, seule élastique.
+    for (const path of ['/', '/moi', '/reviser', '/amis', '/tresor', '/defi/jouer']) {
+      expect(isHudAccountHidden(path, true), path).toBe(true)
+    }
   })
 
-  it('le garde partout ailleurs, y compris les sous-pages du Défi', () => {
-    for (const path of ['/', '/moi', '/reviser', '/defi/jouer', '/defi/duel']) {
-      expect(isHudAccountHidden(path), path).toBe(false)
+  it('LAISSE au visiteur son bouton — ce n’est pas un engrenage', () => {
+    // Chez qui n'a pas de compte, cette case affiche « Se connecter » : c'est
+    // la seule porte d'entrée du bandeau. La règle porte sur les RÉGLAGES.
+    for (const path of ['/', '/moi', '/reviser', '/defi/jouer']) {
+      expect(isHudAccountHidden(path, false), path).toBe(false)
     }
+  })
+
+  it('replie la case sur l’arène même pour un visiteur (le menu a la sienne)', () => {
+    expect(isHudAccountHidden('/defi', false)).toBe(true)
+    expect(isHudAccountHidden('/defi', true)).toBe(true)
   })
 })
 

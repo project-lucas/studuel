@@ -44,15 +44,28 @@ export function isHudLevelHidden(pathname: string): boolean {
 }
 
 /**
- * Sur l'écran d'arène (/defi exactement), l'ENGRENAGE des réglages quitte le
- * bandeau : il a rejoint le menu burger de l'arène (façon Clash Royale), avec
- * l'historique, les classements et le tournoi. Le haut de l'écran est ainsi
- * rendu au jeu — pastille de niveau dans l'angle gauche, pièces à droite, et
- * le bandeau de saison au centre entre les deux. Les sous-pages du Défi
- * (/defi/jouer…) n'ont pas de burger : elles gardent l'engrenage.
+ * L'ENGRENAGE DES RÉGLAGES A QUITTÉ LE BANDEAU. Il n'y a plus qu'une porte vers
+ * `/compte` pour un élève connecté : la carte de profil de l'onglet **Moi**.
+ *
+ * Il y en avait quatre — l'engrenage du bandeau (sur tous les écrans), le menu
+ * de l'arène, la carte de profil, et la sidebar du bureau. Trois de trop pour
+ * un écran qu'on ouvre une fois par mois, et la quatrième coûtait cher : le
+ * bandeau est une rangée d'objets `shrink-0`, si bien que le carré de 44 px de
+ * l'engrenage se payait sur le SEUL élément élastique, la pastille de niveau.
+ * Mesuré sur un iPhone 14 (390 px) : elle tombait à 74 px au lieu de 149, son
+ * libellé « NIVEAU 7 » réduit à 10 px de large et sa barre d'XP à 10 px. Le
+ * réglage le plus rare de l'app écrasait le compteur le plus regardé.
+ *
+ * ⚠️ LE VISITEUR, LUI, GARDE SON BOUTON — et ce n'est pas une exception, c'est
+ * la même règle : ce bouton-là n'est pas un engrenage mais un « Se connecter »,
+ * la seule porte d'entrée du bandeau pour qui n'a pas de compte. D'où le
+ * paramètre `connected` : la règle porte sur les RÉGLAGES, pas sur la case.
+ *
+ * `/defi` reste dans la règle pour le visiteur : l'arène a son propre
+ * « Se connecter » dans le menu.
  */
-export function isHudAccountHidden(pathname: string): boolean {
-  return pathname === '/defi'
+export function isHudAccountHidden(pathname: string, connected: boolean): boolean {
+  return connected || pathname === '/defi'
 }
 
 /**

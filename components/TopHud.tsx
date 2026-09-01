@@ -112,10 +112,11 @@ export default function TopHud({
   // Scène sombre (arène) : les pastilles prennent le verre de nuit du HUD de
   // jeu au lieu du crème des onglets clairs. Un seul matériau par écran.
   const dark = isHudOverDarkScene(pathname)
-  // Sur l'arène, l'engrenage est passé DANS le burger (avec l'historique, les
-  // classements, le tournoi…) : le bandeau ne garde que les pièces, et le haut
-  // de l'écran laisse la place au bandeau de saison, au centre.
-  const accountHidden = isHudAccountHidden(pathname)
+  // L'engrenage a quitté le bandeau : pour un élève connecté, les réglages ne
+  // vivent plus qu'à UN endroit, la carte de profil de l'onglet Moi. Le
+  // visiteur, lui, garde la case — chez lui ce n'est pas un engrenage mais un
+  // « Se connecter ». Voir lib/top-hud-routes.
+  const accountHidden = isHudAccountHidden(pathname, connected)
   // Le fond commun des pastilles : verre de nuit sur l'arène, carte crème
   // ailleurs. Écrit une fois, appliqué aux trois pastilles du bandeau.
   const pillSurface = dark
@@ -136,7 +137,7 @@ export default function TopHud({
           {levelHidden ? null : (
             <div
               className={cn(
-                'pointer-events-auto flex min-w-0 items-center gap-2.5 rounded-full py-1 pr-3.5 pl-1',
+                'pointer-events-auto flex min-w-0 items-center gap-2.5 rounded-full py-1 pr-3 pl-1',
                 pillSurface,
               )}
               title={levelTitle ?? undefined}
@@ -175,16 +176,70 @@ export default function TopHud({
                       style={{ width: `${pct}%` }}
                     />
                   </div>
-                  <span
-                    className={cn(
-                      'hidden min-[360px]:inline font-mono text-[9px] leading-none font-bold tabular-nums',
-                      dark ? 'text-white/70' : 'text-muted-foreground',
-                    )}
-                  >
-                    {pct}%
-                  </span>
                 </div>
               </div>
+
+              {/* LA SÉRIE, DANS LE BLOC NIVEAU. Elle avait sa propre pastille,
+                  poussée contre le bord droit avec les monnaies. Deux
+                  conséquences, l'une visible et l'autre mesurée :
+
+                  · sur l'accueil Réviser, elle DOUBLAIT la carte de série
+                    située 120 px plus bas — même fichier d'image, même gris
+                    éteint à zéro, même nombre ;
+                  · elle coûtait 68 px à une rangée d'objets `shrink-0`, donc
+                    à la pastille de niveau, seule élastique du lot. Sur un
+                    iPhone 14, celle-ci tombait à 74 px et son libellé
+                    « NIVEAU 7 » à 10 px.
+
+                  Niveau et série ne se contredisent pas — l'un dit le chemin
+                  parcouru, l'autre la régularité — mais ce sont deux comptes du
+                  MÊME élève : ils tiennent dans le même écusson, séparés d'un
+                  filet. Le pourcentage a cédé la place : la barre le montre
+                  déjà, et un nombre qui répète une barre n'apprend rien.
+
+                  ⚠️ Sur l'arène (/defi), où la pastille de niveau se replie au
+                  profit de la carte joueur du décor, la série retrouve sa
+                  pastille séparée — sinon elle disparaîtrait de l'écran. */}
+              {streak === null ? null : (
+                <span
+                  className={cn(
+                    'flex shrink-0 items-center gap-1 self-stretch border-l pl-2.5',
+                    dark ? 'border-white/15' : 'border-black/[0.07]',
+                  )}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/serie/flamme.webp"
+                    alt=""
+                    aria-hidden="true"
+                    width={128}
+                    height={128}
+                    className={cn(
+                      'size-7 shrink-0 object-contain',
+                      streak > 0 ? 'flame-breathe' : 'opacity-40 grayscale',
+                    )}
+                  />
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      'font-mono text-sm font-extrabold tabular-nums',
+                      streak > 0
+                        ? dark
+                          ? 'text-highlight'
+                          : 'text-foreground'
+                        : 'text-muted-foreground',
+                    )}
+                  >
+                    {streak}
+                  </span>
+                  {/* Le nombre seul ne dit pas de quoi il est le compte : les
+                      deux chiffres de l'écusson (niveau, série) se lisent à
+                      l'œil par leurs dessins, à l'oreille par ce texte. */}
+                  <span className="sr-only">
+                    Série : {streak} jour{streak > 1 ? 's' : ''}
+                  </span>
+                </span>
+              )}
             </div>
           )}
 
@@ -202,13 +257,16 @@ export default function TopHud({
                 haut de CHAQUE écran, pas rangée dans l'onglet qui la calcule.
                 Une série qu'on ne voit qu'en allant la chercher ne retient
                 personne — il faut qu'elle croise le regard sur l'arène, dans la
-                boutique, chez les amis.
+                boutique, chez les amis. Série à zéro = flamme éteinte
+                (désaturée) et non absente : la place reste, à rallumer.
 
-                Elle garde sa propre pastille : le niveau dit le chemin
-                parcouru, la série dit la régularité, ce sont deux comptes
-                différents. Série à zéro = flamme éteinte (désaturée) et non
-                pastille absente : la place reste, à rallumer. */}
-            {streak === null ? null : (
+                ELLE N'A PLUS SA PASTILLE QUE SUR L'ARÈNE. Ailleurs, elle est
+                passée DANS l'écusson de niveau (plus haut) : deux comptes du
+                même élève, un seul objet. Ici, sur /defi, l'écusson se replie au
+                profit de la carte joueur du décor — la série y retrouve donc sa
+                pastille, sans quoi elle quitterait l'écran. Une seule flamme à
+                l'écran dans les deux cas. */}
+            {!levelHidden || streak === null ? null : (
               <div
                 className={cn(
                   'pointer-events-auto flex h-11 shrink-0 items-center gap-1 rounded-full pr-3 pl-1.5',

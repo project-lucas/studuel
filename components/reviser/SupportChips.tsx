@@ -165,8 +165,10 @@ export default function SupportChips({
                   <span
                     className={cn(
                       'absolute -bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-0.5 rounded-full px-1.5 py-0.5 text-[10px] leading-tight font-bold whitespace-nowrap',
+                      // Vert pour « fait », comme la coche des fiches dépliées :
+                      // le violet est la couleur de l'action, pas de l'acquis.
                       chip.done
-                        ? 'bg-primary text-primary-foreground'
+                        ? 'bg-success text-white'
                         : 'bg-muted text-muted-foreground',
                     )}
                   >
@@ -273,12 +275,16 @@ function Raccourci({ chip }: { chip: SupportChip }) {
             className={cn('h-auto w-11', chip.locked ? VERROUILLE : null)}
           />
         </span>
-        {/* L'état en COIN, pas en couleur seule : « fait » ne se voyait qu'à un
-            liseré violet qu'on ne remarquait pas. */}
+        {/* L'ÉTAT EN COIN, ET EN VERT.
+            Il était VIOLET — la couleur de l'action dans toute l'app, celle des
+            boutons sur lesquels on tape. Une coche violette se lit comme « va
+            ici », exactement l'inverse de « c'est fait ». Le vert de `success`
+            est déjà celui des bonnes réponses du quiz et du bouton « Revoir mes
+            erreurs » : c'est la couleur que l'élève associe à la réussite. */}
         {chip.done ? (
           <span
             aria-hidden="true"
-            className="absolute -right-1 -bottom-1 grid size-4.5 place-items-center rounded-full bg-primary text-primary-foreground ring-2 ring-background"
+            className="absolute -right-1 -bottom-1 grid size-4.5 place-items-center rounded-full bg-success text-white ring-2 ring-background"
           >
             <Check className="size-3" strokeWidth={3.5} />
           </span>
@@ -299,16 +305,31 @@ function Raccourci({ chip }: { chip: SupportChip }) {
           </span>
         ) : null}
       </span>
-      {/* Le NOM, et rien d'autre. La ligne d'état grise qui vivait dessous
-          (« À lire », « --/8 », « 8 cartes ») faisait cinq colonnes de texte
-          minuscule sous cinq icônes déjà parlantes : deux fois l'information,
-          dont une illisible. Ce qui compte vraiment — fait, verrouillé — est
-          passé en pastille de coin sur l'icône, là où l'œil va d'abord.
-          L'état complet reste écrit en toutes lettres sur l'écran de chapitre
-          et en pied de cours, qui ont la place. */}
       <span className="block text-[11px] leading-tight font-bold text-balance">
         {chip.label}
       </span>
+
+      {/* LE CHIFFRE D'AVANCEMENT, REVENU — mais pas pour tout le monde.
+          Une ligne d'état grise a déjà vécu ici et en est partie : elle
+          affichait cinq colonnes de texte minuscule (« À lire », « 8 cartes »)
+          sous cinq icônes déjà parlantes, deux fois la même information dont
+          une illisible. Le défaut inverse s'est révélé pire : sous une fiche
+          dépliée, plus RIEN ne disait où l'on en était — ni si le quiz avait
+          été tenté, ni combien de cartes attendaient.
+
+          Seuls reviennent les supports qui portent un NOMBRE : le quiz
+          (« 7/10 », « --/8 » tant qu'on n'a pas essayé), les flashcards
+          (« 4 à revoir ») et les erreurs. Le cours, les fiches et le défi n'en
+          ont pas — leur état tient dans la coche du coin, et c'est justement
+          ce qui rendait l'ancienne ligne bavarde.
+
+          Un support VERROUILLÉ n'affiche rien non plus : la gemme du coin dit
+          déjà « débloquer », l'écrire une seconde fois ne l'ouvre pas. */}
+      {chip.badge && !chip.locked ? (
+        <span className="font-mono text-[10px] leading-none font-bold text-muted-foreground tabular-nums">
+          {chip.badge}
+        </span>
+      ) : null}
     </Link>
   )
 }

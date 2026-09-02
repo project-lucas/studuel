@@ -1,18 +1,7 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { sfx } from '@/lib/sounds'
-import type { Boss } from '@/lib/bosses'
-
-interface ArenaHeroProps {
-  /**
-   * Le gardien DÉBUSQUÉ (La Traque) : sa silhouette se pose sur l'île, derrière
-   * le personnage, et la lumière du sol vire à l'écarlate. Null quand aucun
-   * boss n'est sorti — l'île retrouve son calme d'elle-même.
-   */
-  boss?: Boss | null
-}
 
 /**
  * La scène du héros de l'arène. Elle ne DESSINE plus de personnage : depuis le
@@ -21,14 +10,21 @@ interface ArenaHeroProps {
  * que l'image ne peut pas faire :
  *
  *   · la PORTE du vestiaire, posée sur le podium peint (un tap → /moi/avatar) ;
- *   · le gardien de La Traque, qui surgit en surimpression quand il est
- *     débusqué ;
  *   · les étincelles d'or qui dérivent sur la scène.
  *
  * Le personnage dessiné (perso-1) et son socle de marbre SVG vivaient ici : ils
  * doublaient la mascotte peinte, deux personnages sur deux podiums.
+ *
+ * ⚠️ LE GARDIEN DÉBUSQUÉ N'Y SURGIT PLUS (01/09, à la demande). Sa silhouette
+ * se posait derrière la mascotte, plus grande qu'elle, avec un halo écarlate au
+ * sol : deux personnages sur une île qui n'en contient qu'un, et le gardien
+ * mordait sur le podium — c'est-à-dire sur la porte du vestiaire.
+ *
+ * L'APPEL AU COMBAT NE DISPARAÎT PAS : il vit dans la bannière du bas
+ * (`BossFlash`), qui est le seul des deux à être CLIQUABLE. La silhouette était
+ * du décor — elle disait la menace, la bannière la nomme et l'ouvre.
  */
-export default function ArenaHero({ boss }: ArenaHeroProps) {
+export default function ArenaHero() {
   return (
     <div className="relative flex flex-col items-center">
       {/* Étincelles d'or qui dérivent autour de la scène. */}
@@ -63,37 +59,6 @@ export default function ArenaHero({ boss }: ArenaHeroProps) {
       {/* Le halo doré qui rétro-éclairait le personnage a été retiré avec lui :
           la nouvelle illustration peint déjà sa propre lumière derrière la
           mascotte, et deux halos superposés ne faisaient que laver la scène. */}
-
-      {/* LA TRAQUE — le gardien débusqué se pose sur l'île, derrière le
-          personnage : plus grand que lui, décalé, la lumière du sol virant à
-          l'écarlate. On ne lit pas une notification, on VOIT la menace. Le
-          combat, lui, se lance depuis le message éclair (BossFlash) : cette
-          silhouette est du décor, pas un bouton — deux cibles tactiles
-          superposées sur le podium se disputeraient le pouce. */}
-      {boss ? (
-        <>
-          <span
-            aria-hidden="true"
-            className="arena-boss-glow pointer-events-none absolute bottom-[14%] left-1/2 size-52 -translate-x-1/2 rounded-full"
-          />
-          <span
-            aria-hidden="true"
-            className="arena-boss-loom pointer-events-none absolute -top-[14%] right-[-6%] z-[1] block w-[132px]"
-          >
-            {boss.image ? (
-              <Image
-                src={boss.image}
-                alt=""
-                width={132}
-                height={132}
-                className="w-full object-contain object-bottom"
-              />
-            ) : (
-              <span className="block text-center text-6xl">{boss.emoji}</span>
-            )}
-          </span>
-        </>
-      ) : null}
 
       {/* LA ZONE DU PODIUM. Le personnage du joueur (perso-1) et son socle de
           marbre étaient DESSINÉS ici, par-dessus le décor. La nouvelle

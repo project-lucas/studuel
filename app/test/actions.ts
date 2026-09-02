@@ -7,6 +7,7 @@ import { weekProgress } from '@/lib/streak'
 import type { JourSerie } from '@/lib/serie-celebration'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { awardQuizProgression } from '@/lib/wallet-server'
+import type { Gain } from '@/lib/gains'
 import { creditTraque, quizContext } from '@/lib/traque-server'
 import { apparitionOf, type TraqueApparition } from '@/lib/traque'
 
@@ -91,10 +92,18 @@ export async function recordTestSession(
   apparition: TraqueApparition | null
   /** L'état de la série JUSTE AVANT cette session (null si illisible). */
   serieAvant: { semaine: JourSerie[]; serie: number } | null
+  /**
+   * CE QUE LA SESSION A RAPPORTÉ, tel que la base l'a écrit — l'écran de fin
+   * le fait voler vers le bandeau. Vide sur un rejeu : l'XP d'un chapitre déjà
+   * maîtrisé ne se repaye pas, et on préfère ne rien annoncer plutôt
+   * qu'annoncer un gain que le compteur ne montrerait pas.
+   */
+  gains: Gain[]
 }> {
   const supabase = await createClient()
   const user = await getCurrentUser()
-  if (!user) return { saved: false, apparition: null, serieAvant: null }
+  if (!user)
+    return { saved: false, apparition: null, serieAvant: null, gains: [] }
 
   // AVANT l'écriture : c'est la seule fenêtre où la case du jour est encore
   // vide, donc la seule où l'on peut savoir quoi animer.
@@ -122,6 +131,7 @@ export async function recordTestSession(
   // (plan de préparation, migration 203) — réviser fait avancer le plan sans
   // détour. Échec silencieux si 203 n'est pas passée (RPC absente).
   let apparition: TraqueApparition | null = null
+  let gains: Gain[] = []
   if (!error) {
     // La Traque (212) : un quiz de chapitre terminé remplit la jauge du
     // gardien de la matière, et son chapitre entre dans le pool du combat.
@@ -134,10 +144,11 @@ export async function recordTestSession(
         chapterIds: ctx.chapterId ? [ctx.chapterId] : [],
       }),
     )
+    const versement = awardQuizProgression(supabase, quizId)
     await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id),
-      awardQuizProgression(supabase, quizId),
+      versement,
       supabase
         .rpc('complete_prep_session_for_quiz', { p_quiz: quizId })
         .then(({ error: prepError }) => {
@@ -149,11 +160,12 @@ export async function recordTestSession(
     ])
     const credit = await traqueCredit
     apparition = apparitionOf(credit ? [credit] : [], Date.now())
+    gains = (await versement).gains
     revalidatePath('/moi')
     revalidatePath('/reviser')
     // L'arène doit montrer la jauge qui vient de monter (et le boss qui sort).
     revalidatePath('/defi')
   }
 
-  return { saved: !error, apparition, serieAvant }
+  return { saved: !error, apparition, serieAvant, gains }
 }

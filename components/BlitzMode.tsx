@@ -1,12 +1,13 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Timer, Zap, Check, X, RotateCcw, Trophy } from 'lucide-react'
+import { Timer, Check, X, RotateCcw, Trophy } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
 import { MODE_TIMBRE } from '@/lib/defi-modes'
-import { XP_RULES } from '@/lib/xp'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import type { Gain } from '@/lib/gains'
 import { recordChallenge } from '@/app/defi/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
@@ -53,6 +54,8 @@ export default function BlitzMode({
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // Ce que la partie a rapporté, tel que la base l'a écrit.
+  const [gains, setGains] = useState<Gain[]>([])
   // Miroirs des compteurs pour la fin de partie, déclenchée par le chrono
   // (le callback d'intervalle ne voit pas les states frais).
   const statsRef = useRef({ score: 0, correct: 0, answered: 0 })
@@ -123,7 +126,10 @@ export default function BlitzMode({
       setPhase('done')
       // L'XP est recalculée côté serveur depuis score/total.
       recordChallenge(c, n, 'blitz')
-        .then((r) => setSaved(r.saved))
+        .then((r) => {
+          setSaved(r.saved)
+          setGains(r.gains)
+        })
         .catch(() => setSaved(false))
       // Reprogramme chaque question dans la file « À revoir ».
       recordReviewAnswers(reviewsRef.current).catch(() => {})
@@ -222,7 +228,6 @@ export default function BlitzMode({
 
   // -------------------------------------------------------------------- done
   if (phase === 'done') {
-    const xp = correct * XP_RULES.challengePerCorrect + XP_RULES.challengeBonus
     return (
       <div className="mx-auto flex max-w-xl flex-col items-center gap-5 pt-8 text-center">
         <div className="animate-in zoom-in text-6xl duration-500">
@@ -244,9 +249,15 @@ export default function BlitzMode({
           ) : null}
         </div>
 
-        <div className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-6 py-3 font-mono text-2xl font-bold text-foreground shadow-lg duration-700 tabular-nums">
-          <Zap className="size-6" /> +{xp} XP
-        </div>
+        {/* CE QUE LA PARTIE A RAPPORTÉ, et le geste de Clash Royale qui va
+            avec : les pastilles se posent, puis une poignée de jetons s'en
+            détache et file vers le bandeau du haut.
+
+            ⚠️ CE BLOC ÉTAIT UN « +XX XP » EN GROS CHIFFRES, ET IL MENTAIT :
+            la valeur venait de `XP_RULES`, un barème PUR calculé côté client,
+            alors que depuis la migration 348 jouer n'acquiert rien et que le
+            portefeuille ne verse plus un point pour une partie. */}
+        <PanneauRecompenses gains={gains} className="w-full max-w-sm" />
 
         <p className="text-sm text-muted-foreground">
           {saved === true

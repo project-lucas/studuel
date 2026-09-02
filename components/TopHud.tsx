@@ -6,7 +6,9 @@ import { usePathname } from 'next/navigation'
 import { LogIn } from 'lucide-react'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { CristalIcon, EcuIcon } from '@/components/ui/MonnaieIcon'
+import type { UniteGain } from '@/lib/gains'
 import { GEM_COST_CHAPTER } from '@/lib/gems'
+import { ecouterGains } from '@/lib/hud-gains'
 import {
   isHudAccountHidden,
   isHudHidden,
@@ -67,6 +69,13 @@ export default function TopHud({
   })
   const openPurse = opened.path === pathname ? opened.purse : null
   const pursesRef = useRef<HTMLDivElement>(null)
+  // L'écusson encaisse les jetons d'XP : il ne porte pas de nombre, donc il n'a
+  // rien à incrémenter — seul le sursaut dit que quelque chose est arrivé. La
+  // barre, elle, se remplira au rafraîchissement qui suit la volée.
+  //
+  // ⚠️ APPELÉ ICI, AVANT le `return null` du parcours plein écran : un hook
+  // placé après un retour anticipé ne s'exécute pas à tous les rendus.
+  const { ref: refXp } = useEncaissement('xp', level)
 
   const togglePurse = (purse: Exclude<OpenPurse, null>) =>
     setOpened({ purse: openPurse === purse ? null : purse, path: pathname })
@@ -136,6 +145,9 @@ export default function TopHud({
               Replié sur /defi (le ProfileChip de l'arène est LA source). */}
           {levelHidden ? null : (
             <div
+              ref={refXp}
+              // La cible du vol des récompenses (cf. lib/gains, UNITES).
+              data-hud-cible="xp"
               className={cn(
                 'pointer-events-auto flex min-w-0 items-center gap-2.5 rounded-full py-1 pr-3 pl-1',
                 pillSurface,
@@ -319,6 +331,7 @@ export default function TopHud({
               n'en fait pas partie — elle n'ouvre aucune bulle. */}
             <div ref={pursesRef} className="flex shrink-0 items-center gap-1.5">
               <ResourcePill
+                unite="ecu"
                 name="Écu"
                 nameClassName={
                   dark
@@ -337,7 +350,7 @@ export default function TopHud({
                 }
                 open={openPurse === 'ecu'}
                 onToggle={() => togglePurse('ecu')}
-                label={`${coins} écus — à quoi sert cette monnaie`}
+                label={(n) => `${n} écus — à quoi sert cette monnaie`}
                 plusLabel="Obtenir des écus"
                 value={coins}
                 icon={<EcuIcon className="size-5" />}
@@ -358,6 +371,7 @@ export default function TopHud({
                 monnaies reviennent. */}
               {gems !== null ? (
                 <ResourcePill
+                  unite="gemme"
                   name="Cristal"
                   nameClassName={dark ? 'text-[#c9b4ff]' : 'text-primary'}
                   description={
@@ -369,7 +383,7 @@ export default function TopHud({
                   }
                   open={openPurse === 'cristal'}
                   onToggle={() => togglePurse('cristal')}
-                  label={`${gems} cristaux — à quoi sert cette monnaie`}
+                  label={(n) => `${n} cristaux — à quoi sert cette monnaie`}
                   plusLabel="Obtenir des cristaux"
                   value={gems}
                   icon={<CristalIcon className="size-5" />}
@@ -474,6 +488,64 @@ export default function TopHud({
 }
 
 /**
+ * LE COMPTEUR QUI ENCAISSE — la moitié « arrivée » du geste de Clash Royale.
+ *
+ * Chaque jeton qui atterrit sur cette pastille crie son montant (un événement
+ * de fenêtre, cf. lib/hud-gains) ; on l'ajoute au solde du serveur et la
+ * pastille sursaute. Le solde ne saute donc pas d'un coup : il s'égrène au
+ * rythme de la pluie, ce qui est TOUT l'effet — un compteur qui monte d'un
+ * bloc ne se distingue pas d'un rechargement de page.
+ *
+ * ⚠️ POURQUOI UN ÉVÉNEMENT ET PAS UN ÉTAT REACT. Le vol est monté autour du
+ * CONTENU de la page, ce bandeau à côté, dans le layout : le seul ancêtre
+ * commun est la racine. Y faire remonter le compteur re-rendrait toute
+ * l'application à chaque jeton — soit une douzaine de rendus complets par
+ * récompense. Ici, seule la pastille concernée se re-rend.
+ *
+ * ⚠️ LE DELTA S'EFFACE QUAND LE SERVEUR PARLE. Le rafraîchissement qui suit la
+ * volée rapporte un solde qui contient DÉJÀ ces jetons : garder le delta les
+ * compterait deux fois. C'est aussi le filet de sécurité de tout l'édifice —
+ * si l'optimisme et la base divergent pour une raison quelconque, la base
+ * gagne, sans à-coup et sans que personne ait à s'en occuper.
+ */
+function useEncaissement(unite: UniteGain, valeurServeur: number | null) {
+  // Le delta est stocké AVEC le solde serveur sur lequel il a été posé. C'est
+  // ce couple qui permet de l'oublier par simple DÉRIVATION : dès que le
+  // serveur renvoie un autre solde, celui-ci contient déjà les jetons, et le
+  // delta cesse d'exister sans qu'aucun effet n'ait à le remettre à zéro.
+  // (Un `useEffect` qui appellerait `setDelta(0)` déclencherait un rendu en
+  // cascade à chaque rafraîchissement — et le lint du projet l'interdit.)
+  const [encaisse, setEncaisse] = useState<{ base: number | null; delta: number }>(
+    { base: valeurServeur, delta: 0 },
+  )
+  const ref = useRef<HTMLDivElement>(null)
+  const delta = encaisse.base === valeurServeur ? encaisse.delta : 0
+
+  useEffect(
+    () =>
+      ecouterGains((detail) => {
+        if (detail.unite !== unite) return
+        setEncaisse((prec) => ({
+          base: valeurServeur,
+          delta: (prec.base === valeurServeur ? prec.delta : 0) + detail.montant,
+        }))
+
+        const el = ref.current
+        if (!el) return
+        // Rejouer une animation CSS impose un reflow ENTRE le retrait et la
+        // repose de la classe : sans lui le navigateur regroupe les deux
+        // écritures, ne voit aucun changement, et ne rejoue rien.
+        el.classList.remove('hud-encaisse')
+        void el.getBoundingClientRect().width
+        el.classList.add('hud-encaisse')
+      }),
+    [unite, valeurServeur],
+  )
+
+  return { delta, ref }
+}
+
+/**
  * Une pastille de ressource de la bande du haut. Elle porte DEUX gestes
  * distincts, et c'est voulu — c'est le partage de Brawl Stars :
  *   • à GAUCHE (picto + solde) : un bouton qui déplie une bulle expliquant à
@@ -482,6 +554,7 @@ export default function TopHud({
  *     compteur passif en PORTE.
  */
 function ResourcePill({
+  unite,
   name,
   nameClassName,
   description,
@@ -494,13 +567,16 @@ function ResourcePill({
   dark,
   className,
 }: {
+  /** L'unité que cette pastille compte — c'est elle qui reçoit les jetons. */
+  unite: UniteGain
   /** Le nom de la monnaie, écrit dans SA couleur en tête de la bulle. */
   name: string
   nameClassName: string
   description: ReactNode
   open: boolean
   onToggle: () => void
-  label: string
+  /** Construit le libellé à partir du solde AFFICHÉ (jetons compris). */
+  label: (affiche: number) => string
   plusLabel: string
   value: number
   icon: ReactNode
@@ -510,10 +586,17 @@ function ResourcePill({
   className: string
 }) {
   const panelId = `bourse-${name.toLowerCase()}`
+  const { delta, ref } = useEncaissement(unite, value)
+  // Le solde AFFICHÉ = celui du serveur + ce que les jetons ont déjà déposé.
+  // Il redevient le solde du serveur seul dès que celui-ci se met à jour.
+  const affiche = value + delta
 
   return (
     <div className="pointer-events-auto relative shrink-0">
       <div
+        ref={ref}
+        // La cible du vol des récompenses (cf. lib/gains, UNITES).
+        data-hud-cible={unite}
         className={cn(
           'flex min-h-11 items-center rounded-full font-mono text-sm font-extrabold tabular-nums',
           className,
@@ -524,11 +607,11 @@ function ResourcePill({
           onClick={onToggle}
           aria-expanded={open}
           aria-controls={panelId}
-          aria-label={label}
+          aria-label={label(affiche)}
           className="flex min-h-11 items-center gap-1.5 rounded-full py-1.5 pr-3.5 pl-3 transition active:scale-95"
         >
           {icon}
-          {value.toLocaleString('fr-FR')}
+          {affiche.toLocaleString('fr-FR')}
         </button>
       </div>
 

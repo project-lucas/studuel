@@ -18,6 +18,7 @@
 
 export type MarcelVue =
   | 'aujourdhui'
+  | 'mission'
   | 'methode'
   | 'oral'
   | 'entrainement'
@@ -34,12 +35,24 @@ export type MarcelEntree = {
   hint: string
 }
 
+// « La mission du jour » ouvre la liste depuis que l'accueil est l'ÉCRAN DU
+// COACH : Marcel y salue, dit son diagnostic en une bulle, et propose. Le point
+// du jour détaillé (le bloc violet, la séance en trois temps) n'a plus à occuper
+// le haut de l'accueil — il devient la première chose qu'on peut demander, et
+// garde sa page entière. Rien n'est perdu : ce qui était plié dans l'accueil est
+// simplement rangé derrière la carte qui le nomme.
+//
 // « L'oral » est placé APRÈS « Méthode » et avant « S'entraîner » : c'est un
 // entraînement, mais d'une autre nature — on n'y répond pas à des questions, on
 // y parle. Le mettre en dernier l'aurait enterré, alors que c'est le seul
 // exercice que les élèves ne font jamais seuls et qui décide de trois épreuves
 // du bac et du brevet.
 export const MARCEL_ENTREES: MarcelEntree[] = [
+  {
+    key: 'mission',
+    label: 'La mission du jour',
+    hint: 'Ce qu’il faut travailler aujourd’hui',
+  },
   {
     key: 'methode',
     label: 'Méthode',

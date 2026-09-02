@@ -175,7 +175,9 @@ export const GEM_AWARDS = {
   chapterCrowns: 30,
   /** Palier de série : tous les 7 jours consécutifs. */
   streak7: 20,
-  /** Victoire d'un défi (une fois par leçon et par jour). */
+  /** Victoire d'un défi — UNE FOIS PAR JOUR, toutes leçons confondues.
+   *  La clé valait « leçon:jour » : la migration 348 la ramène au seul jour,
+   *  et c'est le serveur qui la fixe — celle de l'appelant est ignorée. */
   defiWin: 10,
   /** Passage de niveau (une seule fois par niveau). */
   levelUp: 15,

@@ -6,7 +6,8 @@ import { Heart, Zap, Check, X, RotateCcw, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
-import { XP_RULES } from '@/lib/xp'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import type { Gain } from '@/lib/gains'
 import { recordChallenge } from '@/app/defi/actions'
 import {
   MODE_TIMBRE,
@@ -136,6 +137,8 @@ export default function BossMode({
   const [outcome, setOutcome] = useState<'won' | 'lost' | null>(null)
   const [rankedUp, setRankedUp] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // Ce que le combat a rapporté, tel que la base l'a écrit.
+  const [gains, setGains] = useState<Gain[]>([])
 
   const question = pool.length > 0 ? pool[qIndex % pool.length] : null
   const answered = selected !== null
@@ -231,7 +234,10 @@ export default function BossMode({
       finalAnswered,
       result === 'won' ? 'boss' : undefined,
     )
-      .then((r) => setSaved(r.saved))
+      .then((r) => {
+        setSaved(r.saved)
+        setGains(r.gains)
+      })
       .catch(() => setSaved(false))
     // Reprogramme chaque question dans la file « À revoir ».
     recordReviewAnswers(reviewsRef.current).catch(() => {})
@@ -432,10 +438,6 @@ export default function BossMode({
 
   // -------------------------------------------------------------------- done
   if (phase === 'done') {
-    const xp =
-      correct * XP_RULES.challengePerCorrect +
-      XP_RULES.challengeBonus +
-      (outcome === 'won' ? MODE_XP_BONUS.boss : 0)
     return (
       <div
         className={cn(
@@ -503,15 +505,17 @@ export default function BossMode({
             l'appelant — c'est lui qui a parlé au serveur. */}
         {rewardSlot}
 
-        <div className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-6 py-3 font-mono text-2xl font-bold text-foreground shadow-lg duration-700 tabular-nums">
-          <Zap className="size-6" /> +{xp} XP
-        </div>
+        {/* CE QUE LE COMBAT A RAPPORTÉ, et le geste de Clash Royale qui va
+            avec. ⚠️ C'était un « +XX XP » calculé côté client (`XP_RULES` +
+            `MODE_XP_BONUS.boss`) que le portefeuille ne versait plus depuis la
+            migration 348 — jouer n'acquiert rien. */}
+        <PanneauRecompenses gains={gains} className="w-full max-w-sm" />
 
         <p className={cn('text-sm', inkSoft)}>
           {saved === true
             ? '✓ Journée validée — ta série continue 🔥'
             : saved === false
-              ? 'Combat non enregistré (connecte-toi pour garder ton XP).'
+              ? 'Combat non enregistré (connecte-toi pour garder ta progression).'
               : ''}
         </p>
 

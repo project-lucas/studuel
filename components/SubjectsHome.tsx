@@ -2,7 +2,15 @@
 
 import { useRef, useState, useTransition } from 'react'
 import Link from 'next/link'
-import { Check, Pencil, CalendarClock, Crown, Search, X } from 'lucide-react'
+import {
+  Check,
+  Pencil,
+  CalendarClock,
+  Crown,
+  Search,
+  Swords,
+  X,
+} from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { subjectTheme, subjectVignette } from '@/lib/subject-style'
 import {
@@ -13,6 +21,9 @@ import {
 import SubjectIcon from '@/components/SubjectIcon'
 import WorldBackdrop from '@/components/WorldBackdrop'
 import { sfx } from '@/lib/sounds'
+import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
+import { countdownLabel } from '@/lib/traque'
+import type { GardienSorti } from '@/lib/traque-server'
 import { useDialogFocus } from '@/lib/use-dialog'
 import { toast } from '@/lib/toast'
 import { saveSelectedSubjects } from '@/app/reviser/actions'
@@ -59,9 +70,19 @@ const RANK_COLOR: Record<MasteryRank, string> = {
 function CrownRating({
   rank,
   subjectName,
+  sombre = false,
 }: {
   rank: MasteryRank | null
   subjectName: string
+  /**
+   * La carte est-elle sur fond SOMBRE (dossier d'un gardien sorti) ?
+   *
+   * Les couronnes vides sont une encre grise à 25 % : sur le crème d'une carte
+   * ordinaire elles se lisent comme des emplacements à remplir, sur l'écarlate
+   * elles disparaissent — et « 1 sur 3 » devient « 1 », c'est-à-dire un rang
+   * qu'on ne peut plus situer.
+   */
+  sombre?: boolean
 }) {
   const filled = rank ? RANK_CROWNS[rank] : 0
   const color = rank ? RANK_COLOR[rank] : ''
@@ -86,12 +107,36 @@ function CrownRating({
           strokeWidth={2.4}
           className={cn(
             'size-3.5',
-            i < filled ? cn(color, 'fill-current') : 'text-muted-foreground/25',
+            i < filled
+              ? cn(color, 'fill-current')
+              : sombre
+                ? 'text-white/35'
+                : 'text-muted-foreground/25',
           )}
         />
       ))}
     </span>
   )
+}
+
+/**
+ * Le gardien s'il est ENCORE sorti, sinon rien.
+ *
+ * La page est rendue une fois ; sa fenêtre, elle, dure une heure et se referme
+ * pendant qu'on regarde l'écran. Sans ce filtre, un dossier resterait écarlate
+ * avec « moins d'une minute » figé au-dessus d'un combat que le serveur
+ * refuserait — la promesse en l'air que la bannière de l'arène évite déjà.
+ *
+ * `maintenant` vaut `null` au rendu serveur : on s'en tient alors au verdict du
+ * serveur, qui vient de le calculer.
+ */
+function gardienVivant(
+  gardien: GardienSorti | undefined,
+  maintenant: number | null,
+): GardienSorti | null {
+  if (!gardien) return null
+  if (maintenant !== null && maintenant >= gardien.endsAt) return null
+  return gardien
 }
 
 // Défaut de `emptySlugs`. Constant de module, et non `new Set()` écrit dans les
@@ -250,6 +295,8 @@ function SubjectRow({
   onToggle,
   exam,
   empty,
+  gardien,
+  maintenant,
   delayMs,
 }: {
   subject: Subject
@@ -260,6 +307,10 @@ function SubjectRow({
   exam?: SubjectExamHint
   /** Aucun chapitre à ce niveau : la carte l'annonce au lieu de le cacher. */
   empty?: boolean
+  /** Le gardien sorti sur cette matière — la carte passe alors à l'écarlate. */
+  gardien?: GardienSorti | null
+  /** Battement d'horloge, pour égrener le compte à rebours du gardien. */
+  maintenant?: number | null
   delayMs: number
 }) {
   const theme = subjectTheme(subject.color)
@@ -278,8 +329,16 @@ function SubjectRow({
         // À 24 px contre 28, l'angle des cartes matières se lisait plus sec que
         // celui du bloc juste au-dessus — deux familles de coins sur un écran
         // qui n'empile que des cartes blanches.
-        'pop-in rev-card relative flex min-h-[76px] items-center gap-3 rounded-[1.75rem] bg-white p-2.5 ring-1 ring-black/[0.06] transition-all duration-150 will-change-transform',
-        prox ? `ring-2 ${prox.ring}` : null,
+        'pop-in rev-card relative flex min-h-[76px] items-center gap-3 rounded-[1.75rem] p-2.5 transition-all duration-150 will-change-transform',
+        // LE DOSSIER D'UN GARDIEN SORTI prend l'écarlate de la bannière
+        // d'alerte de l'arène — la même classe, donc le même liseré or et le
+        // même éclair qui la balaie. Un dossier rouge au milieu de dossiers
+        // blancs se voit sans qu'on le cherche, et il se voit d'assez loin
+        // pour qu'une fenêtre d'une heure ne passe pas inaperçue.
+        gardien
+          ? 'traque-eclair text-white'
+          : 'bg-white ring-1 ring-black/[0.06]',
+        prox && !gardien ? `ring-2 ${prox.ring}` : null,
         !editing &&
           'group-hover:-translate-y-0.5 group-active:translate-y-[2px]',
         editing && 'cursor-pointer',
@@ -287,7 +346,7 @@ function SubjectRow({
       )}
     >
       {/* Pastille « contrôle » : compte à rebours coloré, coin haut-droit. */}
-      {exam && prox && !editing ? (
+      {exam && prox && !editing && !gardien ? (
         <span
           className={cn(
             'absolute -top-2 right-2 z-20 flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold shadow-sm',
@@ -347,15 +406,60 @@ function SubjectRow({
             devant une page où il n'y a rien à jouer — la promesse serait fausse.
             Le mot dit que le manque vient de nous, pas de l'élève. */}
         {empty ? (
-          <span className="mt-1 w-fit rounded-full bg-muted px-2 py-0.5 text-[10px] font-bold text-muted-foreground">
+          <span
+            className={cn(
+              'mt-1 w-fit rounded-full px-2 py-0.5 text-[10px] font-bold',
+              gardien
+                ? 'bg-white/20 text-white'
+                : 'bg-muted text-muted-foreground',
+            )}
+          >
             Bientôt
             <span className="sr-only"> — pas encore de chapitre</span>
           </span>
         ) : (
-          <CrownRating
-            rank={rankForValue(pct / 100)}
-            subjectName={subject.name}
-          />
+          <span className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
+            <CrownRating
+              rank={rankForValue(pct / 100)}
+              subjectName={subject.name}
+              sombre={Boolean(gardien)}
+            />
+
+            {/* LE NOM DU GARDIEN, en pastille dorée.
+                ⚠️ DANS LE FLUX, ET PAS EN PASTILLE DE COIN. Elle était posée
+                en absolu à cheval sur le bord haut de la carte, comme celle des
+                contrôles — mais `.traque-eclair` porte `overflow: hidden` (son
+                éclair balaie de −120 % à +120 %, il DOIT être découpé), et la
+                pastille se retrouvait tranchée net. Sur la ligne des couronnes,
+                elle ne dépasse de rien, et elle passe à la ligne toute seule
+                sur une carte étroite.
+
+                ⚠️ LA COULEUR NE PORTE JAMAIS SEULE. Un garçon sur douze ne
+                distingue pas le rouge, et cet écran s'adresse d'abord à des
+                collégiens : un dossier qui ne se signale que par sa teinte ne
+                se signale pas pour tout le monde. Le nom dit QUI est sorti — ce
+                que la couleur ne peut pas dire de toute façon. */}
+            {gardien && !editing ? (
+              <span className="gardien-pouls flex min-w-0 items-center gap-1 rounded-full bg-highlight px-1.5 py-0.5 text-[10px] leading-tight font-bold text-[color-mix(in_oklch,var(--highlight),black_58%)]">
+                <Swords className="size-2.5 shrink-0" aria-hidden="true" />
+                <span className="sr-only">Gardien sorti : </span>
+                <span className="truncate">{gardien.boss}</span>
+                {/* LE COMPTE À REBOURS. Un gardien ne reste sorti qu'UNE HEURE,
+                    et le dossier écarlate ne disait pas qu'il y avait urgence —
+                    juste qu'il se passait quelque chose. Le chiffre transforme
+                    la couleur en échéance.
+
+                    Il n'apparaît qu'une fois l'horloge du client démarrée : au
+                    rendu serveur, `maintenant` vaut null et la valeur calculée
+                    là-bas serait périmée à la seconde suivante. */}
+                {typeof maintenant === 'number' ? (
+                  <span className="shrink-0 tabular-nums opacity-80">
+                    · {countdownLabel(gardien.endsAt - maintenant)}
+                  </span>
+                ) : null}
+              </span>
+            ) : null}
+          </span>
         )}
       </span>
 
@@ -422,6 +526,8 @@ function SubjectGrid({
   progressBySlug,
   examBySubject,
   emptySlugs,
+  gardiens,
+  maintenant,
   delayOffset = 0,
 }: {
   groups: SubjectGroup[]
@@ -431,6 +537,10 @@ function SubjectGrid({
   progressBySlug: Record<string, number>
   examBySubject: Record<string, SubjectExamHint>
   emptySlugs: Set<string>
+  /** Slug → gardien SORTI. Vide la plupart du temps. */
+  gardiens: Record<string, GardienSorti>
+  /** Battement d'horloge, ou `null` au rendu serveur. */
+  maintenant: number | null
   delayOffset?: number
 }) {
   let cardIndex = delayOffset
@@ -454,6 +564,8 @@ function SubjectGrid({
                 onToggle={() => onToggle(s.slug)}
                 exam={examBySubject[s.slug]}
                 empty={emptySlugs.has(s.slug)}
+                gardien={gardienVivant(gardiens[s.slug], maintenant)}
+                maintenant={maintenant}
                 delayMs={cardIndex++ * 40}
               />
             ))}
@@ -476,6 +588,7 @@ export default function SubjectsHome({
   progressBySlug,
   examBySubject = {},
   emptySlugs = EMPTY_SLUGS,
+  gardiens = {},
   topSlot,
 }: {
   subjects: Subject[]
@@ -491,10 +604,25 @@ export default function SubjectsHome({
    * à annoncer ce qui n'est pas encore écrit.
    */
   emptySlugs?: Set<string>
+  /**
+   * Les matières dont le GARDIEN est sorti, par slug.
+   *
+   * Un boss débusqué ne se voyait que sur l'arène : l'élève apprenait qu'il
+   * rôdait sur un onglet et devait deviner tout seul dans quel dossier aller le
+   * chercher, en moins d'une heure. La carte de sa matière prend donc
+   * l'écarlate de la bannière d'alerte, ici, sur l'écran où l'on choisit ce
+   * qu'on révise.
+   */
+  gardiens?: Record<string, GardienSorti>
   // Blocs insérés au-dessus de la grille des matières (série/semaine, contrôles,
   // reprise…) — rendus côté serveur et passés en enfant.
   topSlot?: React.ReactNode
 }) {
+  // UNE horloge pour toute la liste, et pas une par carte : c'est elle qui
+  // égrène le compte à rebours des gardiens et qui éteint un dossier dès que sa
+  // fenêtre se referme. `null` au rendu serveur — on s'en tient alors au verdict
+  // du serveur, qui vient de le calculer.
+  const maintenant = useClock(CLOCK_STEP_MS)
   const [editing, setEditing] = useState(false)
   const [picked, setPicked] = useState<Set<string>>(
     () => new Set(selected ?? subjects.map((s) => s.slug)),
@@ -638,6 +766,8 @@ export default function SubjectsHome({
               progressBySlug={progressBySlug}
               examBySubject={examBySubject}
               emptySlugs={emptySlugs}
+              gardiens={gardiens}
+              maintenant={maintenant}
             />
           </div>
         )}
@@ -669,6 +799,8 @@ export default function SubjectsHome({
               progressBySlug={progressBySlug}
               examBySubject={examBySubject}
               emptySlugs={emptySlugs}
+              gardiens={gardiens}
+              maintenant={maintenant}
               delayOffset={programmeCount}
             />
           </div>

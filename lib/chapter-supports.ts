@@ -45,6 +45,16 @@ export type SupportLesson = {
   defiAttempted: boolean
   /** Le quiz est-il celui de la leçon (`false` = emprunté au chapitre) ? */
   ownQuiz: boolean
+  /**
+   * La leçon a-t-elle été TERMINÉE (`lesson_completions`) ?
+   *
+   * C'est le seul jalon que l'élève pose lui-même, et il n'était pas remonté
+   * jusqu'ici : la tuile « Cours » affichait `done: false` en dur, quel que
+   * soit le travail fourni. Sous une fiche dépliée, aucun des six supports ne
+   * portait donc jamais la moindre marque — on ne pouvait pas savoir ce qu'on
+   * avait déjà fait sans rouvrir chacun d'eux.
+   */
+  read: boolean
 }
 
 export type ChapterSupportsInput = {
@@ -89,7 +99,10 @@ export function buildChapterSupports(
       meta: coursLesson.title,
       badge: null,
       href: `/reviser/${subjectSlug}/${chapterId}/${coursLesson.id}/cours`,
-      done: false,
+      // Lu = fait. En pied de cours, la tuile pointe la leçon SUIVANTE : c'est
+      // donc bien l'état de celle-là qu'on affiche, pas de celle qu'on vient
+      // de finir.
+      done: coursLesson.read,
     })
   }
 
@@ -125,6 +138,12 @@ export function buildChapterSupports(
       meta: flashcardsMeta(cardsLesson.questionCount, cardsLesson.dueCount),
       badge: flashcardsBadge(cardsLesson.questionCount, cardsLesson.dueCount),
       href: `/reviser/${subjectSlug}/${chapterId}/${cardsLesson.id}/flashcards`,
+      // ⚠️ JAMAIS « FAIT », ET C'EST VOLONTAIRE. On serait tenté de cocher
+      // quand plus rien n'est dû (`dueCount === 0`) — mais un paquet JAMAIS
+      // OUVERT ne doit rien non plus, et les deux se ressemblent d'ici. Cocher
+      // sur cette base afficherait « à jour » sur des cartes qu'on n'a jamais
+      // vues. Le badge, lui, dit l'état sans mentir : « 12 cartes » quand rien
+      // n'est dû, « 4 à revoir » sinon.
       done: false,
     })
   }

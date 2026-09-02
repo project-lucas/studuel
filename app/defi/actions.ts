@@ -10,7 +10,8 @@ import { XP_RULES } from '@/lib/xp'
 import { MODE_XP_BONUS, modeXpBonus, type GameModeId } from '@/lib/defi-modes'
 import { weeklyBoss, weeklyTrophyId, WEEKLY_TROPHY_COINS } from '@/lib/bosses'
 import { toDayKey } from '@/lib/streak'
-import { walletTouch } from '@/lib/wallet-server'
+import { gainsVerses, walletTouch, type WalletAward } from '@/lib/wallet-server'
+import type { Gain } from '@/lib/gains'
 import type { CommuteSlot } from '@/lib/types'
 
 // Enregistre un défi terminé : compte pour la série, les habitudes et l'XP.
@@ -25,10 +26,10 @@ export async function recordChallenge(
   score: number,
   total: number,
   mode?: GameModeId,
-): Promise<{ saved: boolean; xp: number }> {
+): Promise<{ saved: boolean; gains: Gain[] }> {
   const supabase = await createClient()
   const user = await getCurrentUser()
-  if (!user) return { saved: false, xp: 0 }
+  if (!user) return { saved: false, gains: [] }
 
   const clean = (n: number, max: number) =>
     Number.isFinite(n) ? Math.max(0, Math.min(Math.round(n), max)) : 0
@@ -80,24 +81,26 @@ export async function recordChallenge(
 
   // Coche « Révision quotidienne » (et « Test sur trajets » si on est en
   // créneau) du jour tout de suite, sans attendre le prochain chargement de /moi.
+  let award: WalletAward | null = null
   if (!error) {
-    await Promise.all([
+    const [, , touche] = await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id, slots),
-      // Verse la même XP au portefeuille (192) — la session reste la trace
-      // historique, le portefeuille le total courant. La clé est l'id de la
-      // session : le montant est relu dessus côté serveur, et l'index unique
-      // sur la clé interdit de la réclamer deux fois.
-      session?.id
-        ? walletTouch(supabase)
-        : Promise.resolve(null),
+      // JOUER N'ACQUIERT RIEN, ET N'EN PAYE DONC PLUS L'XP (migration 348).
+      // La colonne `challenge_sessions.xp` ci-dessus reste la trace historique
+      // de la partie ; le portefeuille, lui, ne bouge que sur la SÉRIE — et
+      // c'est elle qui peut faire tomber la gemme des 7 jours.
+      session?.id ? walletTouch(supabase) : Promise.resolve(null),
     ])
+    award = touche
   }
 
   revalidatePath('/defi')
   revalidatePath('/moi')
-  // `xp` seulement si la session a bien été écrite : rien n'a été versé sinon.
-  return { saved: !error, xp: error ? 0 : xp }
+  // ⚠️ ON NE REND QUE CE QUI A ÉTÉ VERSÉ. Le `xp` calculé plus haut n'a JAMAIS
+  // été crédité au portefeuille depuis la 348 : le rendre à l'écran de fin
+  // ferait annoncer « +85 XP » par-dessus un compteur qui ne bouge pas.
+  return { saved: !error, gains: error ? [] : gainsVerses(award) }
 }
 
 // Victoire sur le boss de la semaine : débloque le trophée exclusif de la

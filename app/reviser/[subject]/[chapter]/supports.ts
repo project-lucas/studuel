@@ -58,8 +58,15 @@ export async function loadChapterSupports(
     rows.map((l) => ownQuizByLesson.get(l.id)).find(Boolean) ?? null
   const quizIds = [...new Set((quizzes ?? []).map((q) => q.id))]
 
-  const [{ data: questions }, { data: sessions }, { data: defiEvents }, reviewItems, tier, unlocked] =
-    await Promise.all([
+  const [
+    { data: questions },
+    { data: sessions },
+    { data: defiEvents },
+    { data: lues },
+    reviewItems,
+    tier,
+    unlocked,
+  ] = await Promise.all([
       quizIds.length
         ? supabase
             .from('quiz_questions')
@@ -83,6 +90,17 @@ export async function loadChapterSupports(
         .eq('user_id', userId)
         .eq('source', 'defi')
         .returns<{ source_key: string | null }[]>(),
+      // Les leçons DÉJÀ TERMINÉES du chapitre : c'est ce qui coche la tuile
+      // « Cours ». Bornée aux leçons de ce chapitre, donc une lecture courte.
+      supabase
+        .from('lesson_completions')
+        .select('lesson_id')
+        .eq('user_id', userId)
+        .in(
+          'lesson_id',
+          rows.map((l) => l.id),
+        )
+        .returns<{ lesson_id: string }[]>(),
       getReviewItems(supabase, userId),
       getUserTierFor(supabase, userId),
       fetchUnlockedChapters(supabase, userId),
@@ -111,6 +129,8 @@ export async function loadChapterSupports(
       bestByQuiz.set(s.quiz_id, { score: s.score, total: s.total, ratio })
   }
 
+  const lecons_lues = new Set((lues ?? []).map((l) => l.lesson_id))
+
   const defiAttempted = new Set(
     (defiEvents ?? []).flatMap((e) =>
       e.source_key ? [e.source_key.split(':')[0]] : [],
@@ -129,6 +149,7 @@ export async function loadChapterSupports(
       best: ownQuizId ? (bestByQuiz.get(ownQuizId) ?? null) : null,
       defiAttempted: defiAttempted.has(l.id),
       ownQuiz: ownQuizId !== null,
+      read: lecons_lues.has(l.id),
     }
   })
 

@@ -851,7 +851,7 @@ export default async function DefiPage() {
             }
             seasonSlot={seasonBand}
           >
-            <ArenaHero boss={traqueFeatured?.boss ?? null} />
+            <ArenaHero />
           </ArenaHud>
 
           {/* Le GROUPE d'action du bas : CTA duel + ligne CLASSÉ / MODES, soudés

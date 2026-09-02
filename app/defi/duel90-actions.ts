@@ -4,7 +4,8 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday } from '@/lib/habits'
-import { walletTouch } from '@/lib/wallet-server'
+import { gainsVerses, walletTouch } from '@/lib/wallet-server'
+import type { Gain } from '@/lib/gains'
 import { advanceQuests } from '@/lib/quests-server'
 import { contributeToClan } from '@/lib/clan-week-server'
 import { addCrowns } from '@/lib/saison-server'
@@ -43,6 +44,15 @@ export type Duel90Outcome = {
   questDayDone: boolean
   /** Couronnes de saison gagnées (0 = plafond du jour, ou migration absente). */
   crowns: number
+  /**
+   * CE QUI A ÉTÉ VERSÉ, prêt à voler vers le bandeau (components/recompenses).
+   *
+   * Un duel ne donne plus d'XP depuis la 348 — jouer n'acquiert rien — mais il
+   * fait avancer la série, et c'est elle qui peut faire tomber la gemme des
+   * 7 jours. Les couronnes de saison y figurent aussi : elles n'ont pas de
+   * compteur dans le bandeau, donc elles s'affichent sans voler.
+   */
+  gains: Gain[]
 }
 
 /**
@@ -93,6 +103,7 @@ export async function recordDuel90(
       questsCompleted: [],
       questDayDone: false,
       crowns: 0,
+      gains: [],
     }
   }
 
@@ -115,7 +126,7 @@ export async function recordDuel90(
   }
 
   // Les retombées ne dépendent pas les unes des autres : en parallèle.
-  const [, , clanPlay, clanWin, quests, ranked, crownPlay, crownWin] =
+  const [, award, clanPlay, clanWin, quests, ranked, crownPlay, crownWin] =
     await Promise.all([
       // Série + habitude « Révision quotidienne » : un duel EST une révision.
       error ? Promise.resolve(null) : validateRevisionToday(supabase, user.id),
@@ -164,6 +175,7 @@ export async function recordDuel90(
     questsCompleted: quests.justCompleted,
     questDayDone: quests.allDone,
     crowns: crownPlay + crownWin,
+    gains: gainsVerses(award, { couronnes: crownPlay + crownWin }),
   }
 }
 

@@ -1,17 +1,9 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import {
-  Swords,
-  Zap,
-  Trophy,
-  Flame,
-  RotateCcw,
-  Users,
-  Target,
-  Crown,
-} from 'lucide-react'
+import { Swords, Flame, RotateCcw, Users, Target } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx, buzz } from '@/lib/sounds'
 // `nowMs` plutôt que `Date.now` : l'horloge du jeu passe par lib/defi-modes,
@@ -293,23 +285,27 @@ export default function Duel90Mode({
           {bestCombo}
         </p>
 
+        {/* CE QUE LE DUEL A VRAIMENT RAPPORTÉ, et le geste de Clash Royale
+            qui va avec : les pastilles se posent, une poignée de jetons s'en
+            détache et file vers le bandeau du haut.
+
+            ⚠️ DEUX PASTILLES ONT ÉTÉ RETIRÉES D'ICI, ET C'ÉTAIENT DEUX
+            MENSONGES. « +240 XP » venait de `duel90Xp`, un barème PUR calculé
+            côté client : depuis la migration 348, jouer n'acquiert rien et le
+            portefeuille ne verse plus un point d'XP pour un duel. « +30 🏆 »
+            venait de `duel90Trophies` : depuis la 238, les trophées sont la
+            SOMME des compteurs par (matière × jeu) et le duel 90 s n'y touche
+            plus du tout — `applyTrophies` ne fait que relire le total.
+
+            Les deux nombres s'affichaient donc en grand, et aucun des deux ne
+            se retrouvait dans le solde. Un écran de fin qui annonce un gain que
+            le compteur ne montre pas est pire qu'un écran muet : il apprend à
+            l'élève à ne plus croire ses compteurs. */}
+        {outcome ? (
+          <PanneauRecompenses gains={outcome.gains} className="w-full" />
+        ) : null}
+
         <div className="flex flex-wrap items-center justify-center gap-2">
-          <Pill icon={<Zap className="size-4" />} tone="highlight">
-            {result ? `+${result.xp} XP` : '… XP'}
-          </Pill>
-          <Pill
-            icon={<Trophy className="size-4" />}
-            tone={won ? 'primary' : 'muted'}
-          >
-            {result
-              ? `${result.trophies >= 0 ? '+' : ''}${result.trophies} 🏆`
-              : '… 🏆'}
-          </Pill>
-          {outcome && outcome.crowns > 0 ? (
-            <Pill icon={<Crown className="size-4" />} tone="muted">
-              +{outcome.crowns} couronnes
-            </Pill>
-          ) : null}
           {outcome && outcome.clanPoints > 0 ? (
             <Pill icon={<Users className="size-4" />} tone="muted">
               +{outcome.clanPoints} pour ton clan
@@ -318,12 +314,12 @@ export default function Duel90Mode({
         </div>
 
         {/* Le serveur a répondu, mais sans résultat : l'appel a échoué (réseau).
-            On ne peut pas savoir si l'XP a été versée — le dire vaut mieux que
+            On ne peut pas savoir ce qui a été versé — le dire vaut mieux que
             d'afficher un zéro qui passerait pour la vérité. */}
         {recorded && !result ? (
           <p className="text-sm text-muted-foreground">
-            Résultat non confirmé par le serveur — ton XP apparaîtra au prochain
-            chargement.
+            Résultat non confirmé par le serveur — tes gains apparaîtront au
+            prochain chargement.
           </p>
         ) : null}
 

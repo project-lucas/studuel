@@ -8,8 +8,15 @@ import {
 } from '@/lib/coach/marcel-vues'
 
 describe('parseVue', () => {
-  it('accepte les quatre vues secondaires et l’accueil', () => {
-    for (const vue of ['aujourdhui', 'methode', 'oral', 'entrainement', 'progres']) {
+  it('accepte les cinq vues secondaires et l’accueil', () => {
+    for (const vue of [
+      'aujourdhui',
+      'mission',
+      'methode',
+      'oral',
+      'entrainement',
+      'progres',
+    ]) {
       expect(parseVue(vue), vue).toBe(vue)
     }
   })
@@ -24,10 +31,15 @@ describe('parseVue', () => {
 })
 
 describe('MARCEL_ENTREES', () => {
-  it('couvre les quatre vues secondaires, l’accueil exclu', () => {
-    // L'accueil N'EST PAS une tuile : c'est la page elle-même. S'il réapparaît
-    // dans le catalogue, le hub proposerait un lien vers l'écran déjà affiché.
+  it('couvre les cinq vues secondaires, l’accueil exclu', () => {
+    // L'accueil N'EST PAS une carte : c'est l'écran du coach lui-même (la
+    // salutation, la bulle du diagnostic, le champ). S'il réapparaissait dans le
+    // catalogue, le rail proposerait un lien vers l'écran déjà affiché.
+    //
+    // « La mission du jour » ouvre la liste : c'est la réponse par défaut à
+    // « qu'est-ce que je peux faire pour toi ? ».
     expect(MARCEL_ENTREES.map((e) => e.key)).toEqual([
+      'mission',
       'methode',
       'oral',
       'entrainement',
@@ -50,6 +62,7 @@ describe('titreVue', () => {
   it('rend le titre d’une sous-page', () => {
     expect(titreVue('progres')).toBe('Progrès')
     expect(titreVue('methode')).toBe('Méthode')
+    expect(titreVue('mission')).toBe('La mission du jour')
   })
 
   it('null sur l’accueil — son contenu se présente tout seul', () => {

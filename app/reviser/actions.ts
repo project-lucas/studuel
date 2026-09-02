@@ -21,9 +21,11 @@ import {
   type OralTextStatus,
 } from '@/lib/oral-texts'
 import { DAILY_GOAL_OPTIONS, type DailyGoalMinutes } from '@/lib/daily-goal'
+import type { Gain } from '@/lib/gains'
 import {
   awardChapterCrowns,
   awardGems,
+  gainsVerses,
   awardQuizProgression,
   awardXp,
   walletTouch,
@@ -39,12 +41,12 @@ import { apparitionOf, type TraqueApparition } from '@/lib/traque'
 // et la journée est validée dans la série.
 export async function completeLesson(
   lessonId: string,
-): Promise<{ saved: boolean }> {
+): Promise<{ saved: boolean; gains: Gain[] }> {
   const user = await getCurrentUser()
-  if (!user) return { saved: false }
+  if (!user) return { saved: false, gains: [] }
   // Même garde que markLessonActivity : un id non-UUID ferait échouer le cast
   // Postgres (saved:false silencieux) — on refuse tôt et proprement.
-  if (!UUID_RE.test(String(lessonId))) return { saved: false }
+  if (!UUID_RE.test(String(lessonId))) return { saved: false, gains: [] }
 
   const supabase = await createClient()
   const { error } = await supabase
@@ -57,8 +59,9 @@ export async function completeLesson(
   // Coche « Révision quotidienne » du jour tout de suite si le seuil est atteint.
   // Et nourrit La Traque (212) : une leçon terminée vaut 15 points sur la jauge
   // du gardien de sa matière — le boss sort en révisant, jamais autrement.
+  let gains: Gain[] = []
   if (!error) {
-    await Promise.all([
+    const [, award, [, couronnes]] = await Promise.all([
       validateRevisionToday(supabase, user.id),
       // LES DEUX SEULES SOURCES D'XP DE CE GESTE. La leçon elle-même vaut 5,
       // une fois pour toutes (clé = la leçon) ; et comme une leçon terminée
@@ -78,12 +81,16 @@ export async function completeLesson(
         ]),
       ),
     ])
+    // Relire la MÊME leçon ne rend rien : les deux versements portent une clé
+    // (la leçon, puis « chapitre:palier »). Le pied de cours n'annonce alors
+    // rien du tout, ce qui est exact.
+    gains = gainsVerses(award, { xp: couronnes })
   }
 
   revalidatePath('/reviser')
   revalidatePath('/moi')
   revalidatePath('/defi')
-  return { saved: !error }
+  return { saved: !error, gains }
 }
 
 // Trace la consultation d'un support de leçon (fiche de révision, studygram) :
@@ -360,20 +367,24 @@ export async function finishExamBlanc(
   return { saved: !examError && !xpError }
 }
 
-// Fin d'un défi de leçon (DefiSoloPlayer) : +25 XP d'avoir joué (une fois par
-// leçon et par jour — l'idempotence est portée par la clé « leçon:jour » côté
-// SQL), et +10 gemmes en cas de victoire (même clé, même garde-fou). Le défi
-// ne persiste pas ses manches : gagné/perdu est déclaré par le client, mais
-// les montants et la fréquence sont verrouillés en base.
+// Fin d'un défi de leçon (DefiSoloPlayer) : la série avance, et une victoire
+// paye la gemme du jour. Le défi ne persiste pas ses manches — gagné/perdu est
+// déclaré par le client — mais les montants ET la fréquence sont verrouillés en
+// base : la clé de `defi_win` est LE JOUR, fixée côté SQL, et celle qu'on
+// envoie ici est ignorée (migration 348). Un client qui mentirait sur sa
+// victoire ne gagnerait donc rien de plus qu'une fois par jour.
+//
+// Plus d'XP depuis la 348 : jouer n'acquiert rien. La série, elle, avance —
+// c'est `walletTouch`, et c'est elle qui peut faire tomber la gemme des 7 jours.
 export async function recordLessonDefi(
   lessonId: string,
   won: boolean,
-): Promise<{ saved: boolean; xp: number; gems: number }> {
-  if (!UUID_RE.test(String(lessonId))) return { saved: false, xp: 0, gems: 0 }
+): Promise<{ saved: boolean; gains: Gain[] }> {
+  if (!UUID_RE.test(String(lessonId))) return { saved: false, gains: [] }
 
   const supabase = await createClient()
   const user = await getCurrentUser()
-  if (!user) return { saved: false, xp: 0, gems: 0 }
+  if (!user) return { saved: false, gains: [] }
 
   const key = `${lessonId}:${toDayKey(new Date())}`
   const [award, gems] = await Promise.all([
@@ -383,7 +394,7 @@ export async function recordLessonDefi(
   await validateRevisionToday(supabase, user.id)
 
   revalidatePath('/reviser')
-  return { saved: award !== null, xp: award?.awarded ?? 0, gems }
+  return { saved: award !== null, gains: gainsVerses(award, { gemmes: gems }) }
 }
 
 // Persiste la sélection de matières de l'élève (bouton « Éditer »).

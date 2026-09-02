@@ -86,7 +86,7 @@ export default function AnatomyTable({
     record: recordPalier,
     reset: resetPalier,
   } = usePalierRun(format.id, palier)
-  const { saved, awardedXp, trophies, report, reset } = useGameReport(
+  const { saved, gains, trophies, report, reset } = useGameReport(
     subject,
     format.id,
   )
@@ -287,7 +287,7 @@ export default function AnatomyTable({
             best={best}
             isRecord={isRecord}
             saved={saved}
-            awardedXp={awardedXp}
+            gains={gains}
             trophies={trophies}
             ghost={ghost}
             onReplay={startCountdown}

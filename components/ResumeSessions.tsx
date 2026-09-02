@@ -128,7 +128,14 @@ function LeadCard({ item }: { item: ResumeItem }) {
         href={`/reviser/${item.subject.slug}/${item.chapterId}`}
         onClick={() => sfx.tap()}
         aria-label={`${leadAction(item.kind)} : ${item.chapterTitle}, ${item.subject.name} — ${tag}, ${item.minutes} minutes`}
-        className="rev-card group flex items-center gap-3.5 rounded-[1.75rem] bg-primary p-3.5 text-primary-foreground ring-1 ring-black/5 transition-transform hover:-translate-y-0.5 active:scale-[0.99]"
+        // `rev-appel` : un halo violet s'écarte lentement de la carte (3,2 s).
+        // C'est LA recommandation de l'écran — la réponse à « qu'est-ce que je
+        // fais maintenant ? » — et elle n'était qu'une carte violette parmi des
+        // cartes blanches : distincte, mais silencieuse. Le halo appelle sans
+        // que rien ne bouge : une carte qui se déplace en boucle se lit comme
+        // un défaut d'affichage, et elle se disputerait le `transform` du
+        // survol.
+        className="rev-card rev-appel group flex items-center gap-3.5 rounded-[1.75rem] bg-primary p-3.5 text-primary-foreground ring-1 ring-black/5 transition-transform hover:-translate-y-0.5 active:scale-[0.99]"
       >
         {/* La vignette peinte de la matière, en grand : à cette taille elle
             identifie la session avant même la lecture du titre.

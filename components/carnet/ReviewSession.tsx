@@ -15,6 +15,7 @@ import {
 import QuestionPlayer, {
   type PlayerResult,
 } from '@/components/carnet/QuestionPlayer'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 
 export type PlayableQuestion = {
   id: string
@@ -78,6 +79,10 @@ export default function ReviewSession({
   const [retour, setRetour] = useState<AttemptResult | null>(null)
   const [correctCount, setCorrectCount] = useState(repriseJustes)
   const [finished, setFinished] = useState(false)
+  // Somme de l'XP versée par les cartes que cette session a fait ACQUÉRIR
+  // (intervalle ≥ 21 jours franchi). Zéro sur une session de révision
+  // ordinaire — et le panneau ne s'affiche alors pas du tout.
+  const [xpSession, setXpSession] = useState(0)
   // Les questions ratées de CETTE session : la matière du « rejouer mes erreurs ».
   const [rates, setRates] = useState<PlayableQuestion[]>([])
   // La file jouée — remplacée par les erreurs quand on les rejoue.
@@ -128,7 +133,13 @@ export default function ReviewSession({
       result.given,
       planifie,
     ).then((res) => {
-      if (res.ok) setRetour(res)
+      if (!res.ok) return
+      setRetour(res)
+      // L'XP DES CARTES ACQUISES, cumulée sur toute la session. Elle est versée
+      // carte par carte (chacune sous sa clé), mais l'annoncer à chaque réponse
+      // hacherait la révision — c'est l'écran de fin qui la fait voler, en une
+      // fois, vers l'écusson du bandeau.
+      if (res.xpAcquise > 0) setXpSession((x) => x + res.xpAcquise)
     })
   }
 
@@ -203,6 +214,17 @@ export default function ReviewSession({
           <p className="text-xs font-bold text-muted-foreground">
             bonnes réponses ({pct} %)
           </p>
+
+          {/* CE QUE LA SESSION A FAIT ACQUÉRIR. Pas « ce qu'elle a fait
+              réviser » : l'XP ne paye que les cartes qui viennent de franchir
+              les 21 jours de mémoire, une fois pour toutes. Une session de
+              révision ordinaire n'affiche donc rien ici, et c'est juste — elle
+              entretient, elle n'acquiert pas. */}
+          <PanneauRecompenses
+            gains={[{ unite: 'xp', montant: xpSession }]}
+            titre="Acquis"
+            className="mt-4"
+          />
 
           <div className="mt-5 flex flex-col gap-2">
             {/* LA porte de sortie utile : refermer la boucle sur ce qui a raté,

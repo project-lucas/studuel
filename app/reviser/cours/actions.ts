@@ -1081,6 +1081,12 @@ export type AttemptResult = {
   presque: boolean
   /** La carte vient de passer sangsue : elle est à reformuler. */
   sangsue: boolean
+  /**
+   * XP versée par CETTE carte — 5 si elle vient d'être acquise (21 jours
+   * d'intervalle franchis), 0 sinon, y compris à la relecture d'une carte déjà
+   * acquise. L'écran de fin de session en fait la somme et la fait voler.
+   */
+  xpAcquise: number
 }
 
 const ATTEMPT_FAIL: AttemptResult = {
@@ -1090,6 +1096,7 @@ const ATTEMPT_FAIL: AttemptResult = {
   orthographe: null,
   presque: false,
   sangsue: false,
+  xpAcquise: 0,
 }
 
 export async function recordAttempt(
@@ -1227,19 +1234,24 @@ export async function recordAttempt(
   const apres = planifie
     ? planifier(avant, verdict, nowIso, Math.random())
     : avant
+  let xpAcquise = 0
   if (planifie) {
     await ecrireEtat(supabase, userId, questionId, apres)
     // L'ACQUISITION, et elle seule, paye de l'XP côté révision : la carte vient
     // de franchir les 21 jours d'intervalle. Clé = la question, donc une fois
     // pour toutes — la revoir plus tard ne repaye rien (migration 348).
     if (vientDEtreAcquise(avant, apres)) {
-      await awardXp(supabase, 'carte', questionId)
+      const award = await awardXp(supabase, 'carte', questionId)
+      // Le montant vient de la RPC, jamais du barème : une carte déjà payée
+      // (clé unique) rend 0, et l'écran de fin n'annonce alors rien.
+      xpAcquise = award?.awarded ?? 0
     }
   }
 
   return {
     ok: true,
     verdict,
+    xpAcquise,
     prochainJours:
       planifie && apres.phase === 'revision' ? apres.intervalDays : 0,
     orthographe,

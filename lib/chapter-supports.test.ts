@@ -9,6 +9,7 @@ const lesson = (over: Partial<SupportLesson> & { id: string }): SupportLesson =>
   best: null,
   defiAttempted: false,
   ownQuiz: true,
+  read: false,
   ...over,
 })
 
@@ -22,6 +23,55 @@ const input = (
   lessons,
   carte: { available: carteAvailable, locked: false },
   erreurs,
+})
+
+describe('ce que la fiche dit de l’avancement', () => {
+  test('coche le COURS quand la leçon a été terminée', () => {
+    // Le seul jalon que l'élève pose lui-même. Il valait `false` en dur : sous
+    // une fiche dépliée, aucun des six supports ne portait jamais de marque, et
+    // on ne pouvait pas savoir ce qu'on avait déjà fait sans tout rouvrir.
+    const nonLue = buildChapterSupports(input([lesson({ id: 'l1' })]))
+    expect(nonLue.find((c) => c.kind === 'cours')?.done).toBe(false)
+
+    const lue = buildChapterSupports(input([lesson({ id: 'l1', read: true })]))
+    expect(lue.find((c) => c.kind === 'cours')?.done).toBe(true)
+  })
+
+  test('coche le QUIZ à partir du seuil de maîtrise, pas avant', () => {
+    const rate = buildChapterSupports(
+      input([lesson({ id: 'l1', best: { score: 5, total: 10, ratio: 0.5 } })]),
+    )
+    expect(rate.find((c) => c.kind === 'quiz')?.done).toBe(false)
+
+    const reussi = buildChapterSupports(
+      input([lesson({ id: 'l1', best: { score: 9, total: 10, ratio: 0.9 } })]),
+    )
+    expect(reussi.find((c) => c.kind === 'quiz')?.done).toBe(true)
+  })
+
+  test('DIT le score du quiz, et dit aussi qu’on n’a pas essayé', () => {
+    // « --/10 » n'est pas un trou : c'est l'information « jamais tenté », et
+    // c'est elle qui manquait le plus sous une fiche dépliée.
+    const jamais = buildChapterSupports(input([lesson({ id: 'l1' })]))
+    expect(jamais.find((c) => c.kind === 'quiz')?.badge).toBe('--/10')
+
+    const tente = buildChapterSupports(
+      input([lesson({ id: 'l1', best: { score: 7, total: 10, ratio: 0.7 } })]),
+    )
+    expect(tente.find((c) => c.kind === 'quiz')?.badge).toBe('7/10')
+  })
+
+  test('NE COCHE JAMAIS les flashcards, même quand rien n’est dû', () => {
+    // Un paquet jamais ouvert et un paquet à jour ont le même `dueCount` : 0.
+    // Cocher sur cette base afficherait « à jour » sur des cartes jamais vues.
+    const chips = buildChapterSupports(
+      input([lesson({ id: 'l1', dueCount: 0 })]),
+    )
+    const cartes = chips.find((c) => c.kind === 'flashcards')
+    expect(cartes?.done).toBe(false)
+    // Le badge, lui, dit l'état sans mentir.
+    expect(cartes?.badge).toBe('10 cartes')
+  })
 })
 
 describe('buildChapterSupports', () => {

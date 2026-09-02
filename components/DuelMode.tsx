@@ -7,7 +7,8 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
 import DefiTimer from '@/components/DefiTimer'
-import { XP_RULES } from '@/lib/xp'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import type { Gain } from '@/lib/gains'
 import { recordChallenge, recordDuelResult, saveDuelRecording } from '@/app/defi/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
@@ -97,9 +98,12 @@ export default function DuelMode({
   // (XP, fantôme, mission du jour).
   const advanceTimerRef = useRef<number | null>(null)
 
-  // Cumul pour l'XP (le serveur recalcule depuis score/total).
-  const [totalCorrect, setTotalCorrect] = useState(0)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // Ce que le duel a rapporté, en DEUX aller-retours distincts : la série (et
+  // donc la gemme du palier de 7 jours) vient de `recordChallenge`, les écus de
+  // victoire de `recordDuelResult`. Ils atterrissent chacun de leur côté, d'où
+  // la concaténation — `agregerGains` fusionnera ce qui doit l'être.
+  const [gains, setGains] = useState<Gain[]>([])
   // Réponses du duel pour la répétition espacée (SRS + Revanche).
   const reviewsRef = useRef<ReviewAnswer[]>([])
 
@@ -127,7 +131,6 @@ export default function DuelMode({
     setOpponent(friend)
     setDuelKey(`${friend.id}-${nowMs()}`)
     setRounds([])
-    setTotalCorrect(0)
     setSaved(null)
     reviewsRef.current = []
     setPhase('vs')
@@ -188,7 +191,6 @@ export default function DuelMode({
     streakRef.current = good ? streakRef.current + 1 : 0
     const newRoundCorrect = roundCorrect + (good ? 1 : 0)
     setRoundCorrect(newRoundCorrect)
-    setTotalCorrect((c) => c + (good ? 1 : 0))
 
     // Auto-avance : dans un duel, le rythme fait partie du jeu (le temps
     // départage les manches à égalité) — pas de bouton « Suivant ».
@@ -250,10 +252,21 @@ export default function DuelMode({
     const answeredCount = newRounds.length * ROUND_SIZE
     const correctCount = newRounds.reduce((s, r) => s + r.me, 0)
     recordChallenge(correctCount, answeredCount, 'duel')
-      .then((r) => setSaved(r.saved))
+      .then((r) => {
+        setSaved(r.saved)
+        setGains((prec) => [...prec, ...r.gains])
+      })
       .catch(() => setSaved(false))
-    // Bilan Victoires/Défaites (+ monnaie de victoire) — hors trophées/classement.
-    recordDuelResult(w === 'me').catch(() => {})
+    // Bilan Victoires/Défaites + LES ÉCUS DE VICTOIRE. Le montant était versé
+    // en base et jeté ici (`.catch(() => {})` sur une promesse dont personne ne
+    // lisait le résultat) : l'élève gagnait des écus qu'aucun écran ne lui
+    // annonçait, et son solde changeait sans qu'il sache pourquoi.
+    recordDuelResult(w === 'me')
+      .then((r) => {
+        if (!r) return
+        setGains((prec) => [...prec, { unite: 'ecu', montant: r.coinsAwarded }])
+      })
+      .catch(() => {})
     // Reprogramme chaque question dans la file « À revoir » — sauf pour les
     // jeux de salon, dont les questions ne vivent pas dans quiz_questions.
     if (srs) recordReviewAnswers(reviewsRef.current).catch(() => {})
@@ -564,8 +577,8 @@ export default function DuelMode({
             opponent={opponent}
             score={score}
             iWon={winner === 'me'}
-            totalCorrect={totalCorrect}
             saved={saved}
+            gains={gains}
             onRematch={() => startDuel(opponent)}
             onExit={onExit}
           />
@@ -614,21 +627,20 @@ function DuelDone({
   opponent,
   score,
   iWon,
-  totalCorrect,
   saved,
+  gains,
   onRematch,
   onExit,
 }: {
   opponent: Friend
   score: { me: number; them: number }
   iWon: boolean
-  totalCorrect: number
   saved: boolean | null
+  /** Ce que le duel a rapporté, tel que la base l'a écrit. */
+  gains: Gain[]
   onRematch: () => void
   onExit: () => void
 }) {
-  const xp = totalCorrect * XP_RULES.challengePerCorrect + XP_RULES.challengeBonus
-
   // Le retour au calme sonore/visuel : focus sur la carte de résultat.
   useEffect(() => {
     document.getElementById('duel-result')?.focus()
@@ -678,22 +690,29 @@ function DuelDone({
         </div>
       </div>
 
-      <div className="flex gap-2">
-        <span className="flex items-center gap-1.5 rounded-full bg-highlight px-4 py-2 font-mono text-sm font-bold tabular-nums">
-          +{xp} XP
+      {/* LES ÉCUS DE LA VICTOIRE, et le geste de Clash Royale qui va avec :
+          ils jaillissent de cette pastille et filent vers la bourse du bandeau,
+          qui monte à mesure qu'ils y tombent.
+
+          ⚠️ CE BLOC ÉTAIT UN « +48 XP » QUI NE CORRESPONDAIT À RIEN. La valeur
+          venait de `XP_RULES`, un barème pur côté client ; depuis la migration
+          348, jouer n'acquiert rien et le portefeuille ne versait pas cette XP.
+          Pendant ce temps, les écus RÉELLEMENT versés par `record_duel_result`
+          n'étaient annoncés nulle part. On affichait donc la monnaie qu'on ne
+          gagnait pas, et on taisait celle qu'on gagnait. */}
+      <PanneauRecompenses gains={gains} className="w-full" />
+
+      {iWon ? (
+        <span className="flex items-center gap-1.5 rounded-full border bg-card px-4 py-2 text-sm font-bold shadow-sm">
+          <Trophy className="size-4 text-highlight" /> +1 victoire
         </span>
-        {iWon ? (
-          <span className="flex items-center gap-1.5 rounded-full border bg-card px-4 py-2 text-sm font-bold shadow-sm">
-            <Trophy className="size-4 text-highlight" /> +1 victoire
-          </span>
-        ) : null}
-      </div>
+      ) : null}
 
       <p className="text-sm text-muted-foreground">
         {saved === true
           ? '✓ Journée validée — ta série continue 🔥'
           : saved === false
-            ? 'Duel non enregistré (connecte-toi pour garder ton XP).'
+            ? 'Duel non enregistré (connecte-toi pour garder ta progression).'
             : ''}
       </p>
 

@@ -7,10 +7,11 @@ import {
   type GameTrophyOutcome,
 } from '@/app/defi/actions'
 import { programmeSlug } from '@/lib/jeux/programme'
+import type { Gain } from '@/lib/gains'
 
-// Le COMPTE RENDU d'une partie de salon : ce que le serveur en retient (l'XP)
-// et ce qu'elle rapporte sur la Route des trophées (le compteur du couple
-// matière × jeu).
+// Le COMPTE RENDU d'une partie de salon : ce que le serveur en a RÉELLEMENT
+// retiré (les gains versés) et ce qu'elle rapporte sur la Route des trophées
+// (le compteur du couple matière × jeu).
 //
 // Pourquoi un hook. Les quatre tables de jeu (GameTable, OrderTable,
 // CountdownTable, AnatomyTable) portaient le MÊME bloc recopié : deux états,
@@ -27,8 +28,16 @@ import { programmeSlug } from '@/lib/jeux/programme'
 export type GameReport = {
   /** Partie enregistrée côté serveur : null tant que la réponse n'est pas là. */
   saved: boolean | null
-  /** XP réellement versée, telle que renvoyée par le serveur (null en attente). */
-  awardedXp: number | null
+  /**
+   * CE QUE LA PARTIE A RAPPORTÉ, tel que la base l'a écrit. Vide tant que le
+   * serveur n'a pas répondu, et vide aussi quand il n'y a rien eu.
+   *
+   * ⚠️ IL N'Y A PLUS D'XP ICI, ET C'EST VOULU. Jouer n'acquiert rien depuis la
+   * migration 348 : l'écran affichait un « +85 XP » calculé côté client que le
+   * portefeuille ne versait pas. Reste ce qui tombe vraiment — la gemme du
+   * palier de série, quand il tombe le jour de la partie.
+   */
+  gains: Gain[]
   /** Mouvement de trophées, ou null (visiteur, refus serveur, ou en attente). */
   trophies: GameTrophyOutcome
   /** À appeler à la fin d'une partie. */
@@ -49,7 +58,7 @@ export type GameReport = {
  */
 export function useGameReport(subject: string, gameId: string): GameReport {
   const [saved, setSaved] = useState<boolean | null>(null)
-  const [awardedXp, setAwardedXp] = useState<number | null>(null)
+  const [gains, setGains] = useState<Gain[]>([])
   const [trophies, setTrophies] = useState<GameTrophyOutcome>(null)
   const partieRef = useRef(0)
 
@@ -58,13 +67,13 @@ export function useGameReport(subject: string, gameId: string): GameReport {
       const partie = partieRef.current
       const fresh = () => partie === partieRef.current
 
-      // L'XP est recalculée côté serveur depuis score/total. Pas de mode passé :
-      // les bonus de mode appartiennent à l'Arène, pas aux salons.
+      // Pas de mode passé : les bonus de mode appartiennent à l'Arène, pas aux
+      // salons.
       recordChallenge(run.correct, run.answered)
         .then((r) => {
           if (!fresh()) return
           setSaved(r.saved)
-          if (r.saved) setAwardedXp(r.xp)
+          if (r.saved) setGains(r.gains)
         })
         .catch(() => {
           if (fresh()) setSaved(false)
@@ -92,10 +101,10 @@ export function useGameReport(subject: string, gameId: string): GameReport {
 
   const reset = useCallback(() => {
     setSaved(null)
-    setAwardedXp(null)
+    setGains([])
     setTrophies(null)
     partieRef.current += 1
   }, [])
 
-  return { saved, awardedXp, trophies, report, reset }
+  return { saved, gains, trophies, report, reset }
 }

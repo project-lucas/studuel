@@ -219,7 +219,7 @@ export default function SerieBar({
                 // on lit un mouvement et non sept apparitions successives.
                 style={d.done ? { animationDelay: `${i * 50}ms` } : undefined}
                 className={cn(
-                  'flex size-8 items-center justify-center rounded-full transition',
+                  'relative flex size-8 items-center justify-center rounded-full transition',
                   d.done
                     ? 'wave-in bg-primary text-primary-foreground'
                     : d.isFuture
@@ -228,6 +228,22 @@ export default function SerieBar({
                   d.isToday && 'ring-2 ring-primary ring-offset-2',
                 )}
               >
+                {/* L'ONDE DU JOUR EN COURS. L'anneau violet le distinguait des
+                    six autres, mais immobile au milieu de six pastilles grises
+                    il était présent sans être trouvé. Une onde s'en écarte
+                    toutes les deux secondes et demie : c'est le seul mouvement
+                    de la barre, donc l'œil y va.
+
+                    Elle est POSÉE PAR-DESSOUS (`-z-10`) et déborde (`-inset-1`)
+                    : elle ne doit ni recouvrir la coche, ni intercepter un tap.
+                    Le jour reste marqué par son anneau quand le mouvement est
+                    réduit — un halo ne porte jamais seul une information. */}
+                {d.isToday ? (
+                  <span
+                    aria-hidden="true"
+                    className="jour-onde pointer-events-none absolute -inset-1 -z-10 rounded-full ring-2 ring-primary"
+                  />
+                ) : null}
                 {d.done ? (
                   <Check className="size-4" strokeWidth={3.4} aria-hidden="true" />
                 ) : null}

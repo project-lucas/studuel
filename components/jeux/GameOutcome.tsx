@@ -9,11 +9,11 @@ import {
   Timer,
   Trophy,
   Unlock,
-  Zap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { XP_RULES } from '@/lib/xp'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import type { Gain } from '@/lib/gains'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { runAchieved, runTarget, type GameRun } from '@/lib/jeux/run'
 import type { GameTrophyOutcome } from '@/app/defi/actions'
@@ -54,7 +54,7 @@ export default function GameOutcome({
   best,
   isRecord,
   saved,
-  awardedXp,
+  gains,
   trophies,
   ghost,
   onReplay,
@@ -82,7 +82,8 @@ export default function GameOutcome({
   /** Partie enregistrée côté serveur : null tant que la réponse n'est pas là. */
   saved: boolean | null
   /** XP réellement versée, telle que renvoyée par le serveur (null en attente). */
-  awardedXp: number | null
+  /** Ce que la partie a rapporté, tel que la base l'a écrit. */
+  gains: Gain[]
   /**
    * Mouvement de trophées sur la Route (null en attente, ou quand le serveur
    * n'a rien accordé : visiteur, couple hors catalogue, borne de rythme).
@@ -99,12 +100,6 @@ export default function GameOutcome({
   onExit?: () => void
 }) {
   const won = run.status === 'won'
-  // Le serveur fait foi dès qu'il a répondu : lui seul connaît le bonus de
-  // trajet et l'écrêtage. L'estimation locale ne sert qu'à ne pas laisser un
-  // trou à l'écran pendant l'aller-retour.
-  const xp =
-    awardedXp ??
-    run.correct * XP_RULES.challengePerCorrect + XP_RULES.challengeBonus
   const target = runTarget(format)
   // `runAchieved` et non `runProgress` : la case porte un libellé de RÉUSSITE
   // (« drapeau planté », « organe localisé »), pas d'avancement.
@@ -163,9 +158,16 @@ export default function GameOutcome({
         <Stat label="record" value={String(best)} />
       </dl>
 
-      <div className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-6 py-3 font-mono text-2xl font-bold text-foreground shadow-lg duration-500 tabular-nums">
-        <Zap className="size-6" aria-hidden="true" /> +{xp} XP
-      </div>
+      {/* CE QUE LA PARTIE A RAPPORTÉ, et le geste qui va avec : les pastilles
+          se posent, puis une poignée de jetons file vers le bandeau du haut.
+
+          ⚠️ CE BLOC ÉTAIT UN « +85 XP » EN GROS CHIFFRES, ET IL MENTAIT. La
+          valeur venait de `XP_RULES` — un barème PUR, calculé côté client —
+          alors que depuis la migration 348 jouer n'acquiert rien : le
+          portefeuille ne versait pas un point pour une partie de salon. Le
+          badge le plus voyant de l'écran de fin annonçait donc une récompense
+          que le compteur du bandeau ne recevait jamais. */}
+      <PanneauRecompenses gains={gains} className="w-full" />
 
       <TrophyLine trophies={trophies} />
       <GhostLine ghost={ghost} score={run.score} />
@@ -174,7 +176,7 @@ export default function GameOutcome({
         {saved === true
           ? '✓ Journée validée — ta série continue 🔥'
           : saved === false
-            ? 'Partie non enregistrée (connecte-toi pour garder ton XP).'
+            ? 'Partie non enregistrée (connecte-toi pour garder ta progression).'
             : ''}
       </p>
 

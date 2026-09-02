@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { ArrowLeft, Flame } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
-import MarcelHub from '@/components/marcel/MarcelHub'
+import CoachEntete from '@/components/marcel/CoachEntete'
+import CoachSuggestions from '@/components/marcel/CoachSuggestions'
 import VueHeader from '@/components/marcel/VueHeader'
 import PointDuJourHero from '@/components/marcel/PointDuJourHero'
 import SeanceCard from '@/components/marcel/SeanceCard'
@@ -22,11 +23,18 @@ export const metadata = { title: 'Marcel — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // L'onglet Marcel — le prof. Il dit POURQUOI et COMMENT ; Réviser reste
-// l'endroit OÙ on travaille (le bouton du point du jour y renvoie).
+// l'endroit OÙ on travaille (le bouton de la mission y renvoie).
+//
+// L'ACCUEIL EST L'ÉCRAN DU COACH : son nom en logo, une salutation, le
+// diagnostic du jour en bulle, le personnage en grand, le rail de ce qu'il sait
+// faire, et le champ pour lui parler. Rien n'a été retiré — le point du jour
+// détaillé et la séance en trois temps ont leur page (`?vue=mission`), ouverte
+// par la première carte du rail. Ce qui change est l'ORDRE : on rencontre
+// quelqu'un avant de lire un tableau de bord.
 //
 // Aucune logique ici : la décision est pure et testée (lib/coach/*), le serveur
-// ne fait qu'assembler et afficher. Aucun appel IA sur cet écran — tout ce qu'on
-// y lit est déterministe.
+// ne fait qu'assembler et afficher. Aucun appel IA au rendu — tout ce qu'on lit
+// sur cet écran est déterministe ; seul le champ, à la demande, coûte.
 
 const JOURS = [
   'Dimanche',
@@ -100,7 +108,7 @@ export default async function MarcelPage({
   } = await getMarcelSnapshot(supabase, user.id)
 
   // L'échelle de l'oral n'est chargée QUE sur sa vue : c'est deux requêtes de
-  // plus, et l'écran « Aujourd'hui » n'en a aucun besoin.
+  // plus, et l'écran d'accueil n'en a aucun besoin.
   const oral = vue === 'oral' ? await getOralSnapshot(supabase, user.id) : null
 
   // La matière du panneau Méthode : celle de l'URL, sinon celle de la mission du
@@ -109,19 +117,15 @@ export default async function MarcelPage({
   const courante = demandee ?? matieres[0] ?? null
 
   // Les entraînements sont dérivés pour la vue « S'entraîner », et leur compte
-  // sert de repère sur la tuile du hub — même calcul, une seule fois.
+  // sert de repère sur la carte du rail — même calcul, une seule fois.
   const entrainements = entrainementsFor({ matieres, disponiblesBySlug })
   const titre = titreVue(vue)
 
   return (
     <div className="pb-6">
       <div className="px-4 pt-2">
-        {/* Pas de titre « Marcel » : la tête du coach vient d'être touchée, et
-            ces 40 px servent mieux au contenu. La date et la série ne coiffent
-            QUE l'accueil — sur une sous-page, c'est son propre titre qui doit
-            occuper le haut de l'écran. */}
         {vue === 'aujourdhui' ? (
-          <div className="mx-0.5 mt-1 mb-2 flex items-center justify-between">
+          <>
             {/* LA SORTIE. Marcel n'a plus d'onglet : on entre ici par sa tête
                 flottante, en bas à droite de Réviser. Sans cette flèche,
                 l'accueil du coach est un cul-de-sac — la barre du bas n'y
@@ -130,8 +134,12 @@ export default async function MarcelPage({
 
                 Vrai lien plutôt que `history.back()`, comme la flèche des
                 sous-pages (VueHeader) : arrivé par une notification ou un lien
-                partagé, un retour d'historique sortirait de l'app. */}
-            <div className="flex min-w-0 items-center gap-2.5">
+                partagé, un retour d'historique sortirait de l'app.
+
+                La ligne ne porte plus la date : elle est passée sur la page de
+                la mission, où elle veut dire quelque chose (« voilà ton travail
+                de ce mardi »). Ici, elle volait la place du logo. */}
+            <div className="mx-0.5 mb-1 flex items-start justify-between">
               <Link
                 href="/reviser"
                 aria-label="Revenir à Réviser"
@@ -143,23 +151,18 @@ export default async function MarcelPage({
                   strokeWidth={2.6}
                 />
               </Link>
-              <time className="text-[13px] font-extrabold">{dateDuJour()}</time>
+              {streak >= 2 && (
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ffeed2] px-2.5 py-1 text-xs font-extrabold text-[#b4550c]">
+                  <Flame aria-hidden="true" className="size-3.5" />
+                  {streak} jours
+                </span>
+              )}
             </div>
-            {streak >= 2 && (
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ffeed2] px-2.5 py-1 text-xs font-extrabold text-[#b4550c]">
-                <Flame aria-hidden="true" className="size-3.5" />
-                {streak} jours
-              </span>
-            )}
-          </div>
-        ) : titre ? (
-          <VueHeader titre={titre} />
-        ) : null}
 
-        {vue === 'aujourdhui' ? (
-          <>
-            <PointDuJourHero point={point} />
-            <SeanceCard etapes={point.seance} minutes={point.minutes} />
+            {/* La salutation est fixe, le diagnostic ne l'est pas : c'est
+                `point.titre`, écrit par lib/coach/point-du-jour à partir du
+                travail réel. Marcel n'ouvre jamais sur une question vide. */}
+            <CoachEntete salut="Salut !" bulle={point.titre} />
 
             {catalogueVide && (
               <p className="bg-card text-muted-foreground mt-3 rounded-[20px] p-4 text-center text-[13px] leading-relaxed font-semibold">
@@ -168,13 +171,10 @@ export default async function MarcelPage({
               </p>
             )}
 
-            {/* Les quatre autres métiers de Marcel. Le pont vers la méthode du
-                jour vivait ici en lien pointillé séparé : la tuile « Méthode »
-                le remplace, et emporte la matière du point du jour — un seul
-                chemin vers un seul écran, au lieu de deux. */}
-            <MarcelHub
+            <CoachSuggestions
               matiere={point.matiere?.slug ?? courante?.slug}
               stats={{
+                mission: `${point.minutes} min`,
                 entrainement:
                   entrainements.length > 0
                     ? `${countPretes(entrainements)}/${entrainements.length} prêtes`
@@ -186,28 +186,41 @@ export default async function MarcelPage({
               }}
             />
 
-            {/* L'IA en dernier : Marcel est d'abord un repère de méthode. */}
             <DemanderMarcel
               tier={demande.tier}
               utilisesAujourdhui={demande.utilisesAujourdhui}
               jetons={demande.jetons}
               gemmes={demande.gemmes}
-              matiereSlug={point.matiere?.slug ?? null}
-              matiereName={point.matiere?.name ?? null}
+              matieres={matieres.map((m) => ({ slug: m.slug, name: m.name }))}
+              matiereParDefaut={point.matiere?.slug ?? null}
             />
           </>
-        ) : vue === 'methode' ? (
-          <MethodePanel matieres={matieres} courante={courante} />
-        ) : vue === 'oral' && oral ? (
-          <OralPanel snapshot={oral} />
-        ) : vue === 'entrainement' ? (
-          <EntrainementPanel matieres={entrainements} />
         ) : (
-          <ProgresPanel
-            chapitres={chapitresCouverts}
-            slugsExamen={slugsExamen}
-            oral={oralDescriptif}
-          />
+          <>
+            {titre ? <VueHeader titre={titre} /> : null}
+
+            {vue === 'mission' ? (
+              <>
+                <time className="text-muted-foreground mx-0.5 mb-2 block text-[13px] font-extrabold">
+                  {dateDuJour()}
+                </time>
+                <PointDuJourHero point={point} />
+                <SeanceCard etapes={point.seance} minutes={point.minutes} />
+              </>
+            ) : vue === 'methode' ? (
+              <MethodePanel matieres={matieres} courante={courante} />
+            ) : vue === 'oral' && oral ? (
+              <OralPanel snapshot={oral} />
+            ) : vue === 'entrainement' ? (
+              <EntrainementPanel matieres={entrainements} />
+            ) : (
+              <ProgresPanel
+                chapitres={chapitresCouverts}
+                slugsExamen={slugsExamen}
+                oral={oralDescriptif}
+              />
+            )}
+          </>
         )}
       </div>
     </div>

@@ -112,7 +112,7 @@ export default function GameTable({
     record: recordUltime,
     reset: resetUltime,
   } = useUltimeRun(format.id, isUltime)
-  const { saved, awardedXp, trophies, report, reset } = useGameReport(
+  const { saved, gains, trophies, report, reset } = useGameReport(
     subject,
     format.id,
   )
@@ -390,7 +390,7 @@ export default function GameTable({
             best={best}
             isRecord={isRecord}
             saved={saved}
-            awardedXp={awardedXp}
+            gains={gains}
             trophies={trophies}
             ghost={ghost}
             onReplay={startCountdown}

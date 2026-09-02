@@ -274,6 +274,138 @@
   }
 }
 
+/* ──────────────────────────────────────── TROIS APPELS DU REGARD, DISCRETS
+
+   Trois endroits où l'écran doit dire « c'est ici » sans clignoter. Aucun des
+   trois ne déplace son objet : ce qui bouge est un HALO, autour. Un élément qui
+   se déplace en boucle se lit comme un défaut d'affichage, et il déclenche le
+   réflexe de le suivre au lieu de le lire. */
+
+/* 1. LE JOUR EN COURS, dans la semaine de la série. Il portait un simple
+      anneau violet, immobile au milieu de six pastilles grises : présent, mais
+      pas trouvé. Une onde part de lui toutes les deux secondes et demie, comme
+      un écho radar — c'est le seul mouvement de la barre, donc l'œil y va. */
+@keyframes jour-onde {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.5;
+  }
+  70%,
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+.jour-onde {
+  animation: jour-onde 2.5s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+
+/* 2. LE GARDIEN SORTI, sur le dossier de sa matière. Le dossier est déjà
+      écarlate ; ce halo dit que le compte à rebours COURT. Plus rapide que les
+      deux autres (1,8 s) : il ne reste qu'une heure. */
+@keyframes gardien-pouls {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(226, 72, 72, 0.55);
+  }
+  60% {
+    box-shadow: 0 0 0 8px rgba(226, 72, 72, 0);
+  }
+}
+.gardien-pouls {
+  animation: gardien-pouls 1.8s ease-out infinite;
+}
+
+/* 3. « ON COMMENCE PAR ÇA » — la seule recommandation de l'écran. Elle était
+      une carte violette parmi des cartes blanches : distincte, mais silencieuse.
+      Un halo de sa propre couleur s'en écarte lentement (3,2 s), assez pour
+      qu'on la remarque en arrivant, assez lent pour qu'on l'oublie ensuite. */
+@keyframes rev-appel {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in oklch, var(--primary), transparent 62%);
+  }
+  55% {
+    box-shadow: 0 0 0 10px color-mix(in oklch, var(--primary), transparent 100%);
+  }
+}
+.rev-appel {
+  animation: rev-appel 3.2s ease-out infinite;
+}
+
+/* Mouvement réduit : les trois appels se taisent. Ce qu'ils signalent est
+   toujours dit par autre chose — l'anneau du jour, l'écarlate du dossier, le
+   violet de la carte. Un halo n'a jamais porté seul une information. */
+@media (prefers-reduced-motion: reduce) {
+  .jour-onde,
+  .gardien-pouls,
+  .rev-appel {
+    animation: none;
+  }
+  .jour-onde {
+    opacity: 0;
+  }
+}
+
+/* ────────────────────────────────── LES RÉCOMPENSES QUI VOLENT (Clash Royale)
+
+   Deux mouvements, aux deux bouts du trajet. Entre les deux, le vol lui-même
+   est calculé en JS (components/recompenses) : ses images-clés dépendent de
+   deux points connus à l'exécution seulement — la pastille de départ et celle
+   du bandeau — ce qu'une règle CSS ne sait pas porter sans en injecter une par
+   jeton. */
+
+/* LE DÉPART : la pastille de récompense se pose, avec le léger dépassement de
+   `wave-in`. Le délai est porté en ligne par le composant, réglé sur la cadence
+   exacte de la volée qui va en partir — les deux doivent se lire comme un seul
+   mouvement, pas comme une apparition suivie d'un lancer. */
+@keyframes gain-apparait {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(8px);
+  }
+  62% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.gain-apparait {
+  animation: gain-apparait 0.42s var(--ease) backwards;
+}
+
+/* L'ARRIVÉE : le compteur du bandeau encaisse. Un jeton qui atteint sa cible
+   sans que rien ne bouge là-haut n'a pas « atterri » — il a disparu. Le sursaut
+   est court et sans translation : la pastille garde sa place dans la rangée,
+   sinon tout le bandeau tremblerait à chaque jeton. */
+@keyframes hud-encaisse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.16);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.hud-encaisse {
+  animation: hud-encaisse 0.28s var(--ease);
+}
+
+/* Mouvement réduit : les pastilles apparaissent sans rebond et le compteur ne
+   sursaute pas. Le NOMBRE, lui, monte toujours — c'est l'information, pas la
+   décoration (le fournisseur verse alors le gain d'un coup, sans vol). */
+@media (prefers-reduced-motion: reduce) {
+  .gain-apparait,
+  .hud-encaisse {
+    animation: none;
+  }
+}
+
 /* Les barres de progression se remplissent à l'arrivée */
 @keyframes bar-grow {
   from {
@@ -961,72 +1093,17 @@ a:active > .arena-menu-row {
 }
 
 /* --- LA TRAQUE : le gardien débusqué (lib/traque.ts) ------------------------
-   Deux mises en scène, un seul événement : la MENACE se voit sur l'île, et
-   l'APPEL au combat se lit dans la bannière. Aucun des deux n'est une
-   notification — c'est le décor lui-même qui change.
+   L'APPEL au combat se lit dans la bannière, et c'est tout : elle n'est pas une
+   notification, c'est le décor lui-même qui change.
 
-   1. `.arena-boss-loom` — la silhouette du gardien qui se pose derrière le
-      personnage. Elle ARRIVE (montée + fondu), puis respire lentement, avec
-      son halo écarlate en dessous. On ne lit pas la menace, on la voit. */
-@keyframes arena-boss-loom-in {
-  from {
-    opacity: 0;
-    transform: translateY(26px) scale(0.88);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-@keyframes arena-boss-breathe {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-7px) scale(1.02);
-  }
-}
-.arena-boss-loom {
-  filter: drop-shadow(0 0 22px rgba(226, 72, 72, 0.55))
-    drop-shadow(0 12px 18px rgba(23, 16, 48, 0.6));
-}
-@media (prefers-reduced-motion: no-preference) {
-  .arena-boss-loom {
-    transform-origin: 50% 100%;
-    animation:
-      arena-boss-loom-in 0.8s cubic-bezier(0.2, 0.8, 0.3, 1) both,
-      arena-boss-breathe 5.5s ease-in-out 0.8s infinite;
-  }
-}
+   ⚠️ IL Y AVAIT UNE SECONDE MISE EN SCÈNE, RETIRÉE LE 01/09 : `.arena-boss-loom`
+   (la silhouette du gardien qui se posait derrière la mascotte, en respirant) et
+   `.arena-boss-glow` (la lueur écarlate au sol). Deux personnages sur une île
+   qui n'en contient qu'un, et le gardien mordait sur le podium — c'est-à-dire
+   sur la porte du vestiaire. La bannière, elle, NOMME le gardien et s'ouvre d'un
+   tap ; la silhouette n'était que du décor.
 
-/* La lueur écarlate au sol : le décor vire quand le gardien est là. */
-@keyframes arena-boss-glow-pulse {
-  0%,
-  100% {
-    opacity: 0.55;
-    transform: translateX(-50%) scale(1);
-  }
-  50% {
-    opacity: 0.85;
-    transform: translateX(-50%) scale(1.08);
-  }
-}
-.arena-boss-glow {
-  background: radial-gradient(
-    circle,
-    rgba(226, 72, 72, 0.6) 0%,
-    rgba(226, 72, 72, 0) 68%
-  );
-  opacity: 0.6;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .arena-boss-glow {
-    animation: arena-boss-glow-pulse 3.2s ease-in-out infinite;
-  }
-}
-
-/* 2. `.traque-eclair` — la bannière d'alerte. Écarlate (la seule de l'arène :
+   `.traque-eclair` — la bannière d'alerte. Écarlate (la seule de l'arène :
       corail = ce qui réclame maintenant), liseré or, et un ÉCLAIR qui la
       balaie en boucle pour que l'œil y revienne sans qu'elle clignote. */
 .traque-eclair {
@@ -1205,9 +1282,11 @@ a:active > .arena-menu-row {
   );
   filter: blur(18px);
 }
-/* Battement propre : `arena-boss-glow-pulse` porte un translateX(-50%) de
-   recentrage dont cette scène, déjà centrée, n'a pas besoin — le réutiliser
-   décalerait le halo d'une demi-largeur. */
+/* Battement PROPRE à cette scène, déjà centrée : le halo de l'arène portait un
+   translateX(-50%) de recentrage dont elle n'a pas besoin, et le réutiliser
+   décalait le halo d'une demi-largeur. (Ce halo-là a été retiré depuis — voir
+   « LA TRAQUE » plus haut ; la remarque reste valable pour tout battement
+   qu'on serait tenté de mutualiser avec une scène décentrée.) */
 @keyframes traque-rideau-pulse {
   0%,
   100% {
@@ -3679,6 +3758,117 @@ a:active > .arena-menu-row {
   .coach-fab:focus-visible {
     transition: none;
     transform: none;
+  }
+}
+
+/* --- L'ÉCRAN DU COACH (/marcel) ---------------------------------------------
+   L'accueil de Marcel n'est plus un tableau de bord : c'est un COACH qui te
+   salue. Le logo, deux bulles, le personnage en grand, ce qu'il sait faire,
+   puis le champ où on lui parle — dans cet ordre, parce que c'est l'ordre d'une
+   rencontre. Tout ce qui se calculait (le point du jour détaillé, la séance en
+   trois temps) est rangé derrière sa carte, pas supprimé.
+
+   Le nom du coach est un LOGO, pas un titre de page : même grammaire à deux
+   couches que le wordmark du splash (cf. plus bas) — l'élément porte le contour
+   crème et le socle, `::after` relit le mot depuis `data-mot` et y découpe le
+   dégradé violet. Le remplissage est en ::after et non en ::before + z-index :
+   `-webkit-text-stroke` déborde de moitié À L'INTÉRIEUR de la lettre, il faut
+   donc que la couleur passe PAR-DESSUS pour recouvrir cette moitié. */
+.coach-wordmark {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.24em;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 8.6vw, 2.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.coach-wordmark > span {
+  color: var(--foreground);
+}
+.coach-wordmark > b {
+  position: relative;
+  display: inline-block;
+  /* La couche du dessous est ENTIÈREMENT crème : c'est elle qui fabrique la
+     pastille arrondie autour des lettres, comme une gommette collée. */
+  color: var(--card);
+  -webkit-text-stroke: 0.2em var(--card);
+  /* Le blanc de la gommette se détache du crème du fond, mais de peu : c'est le
+     SOCLE violet sous les lettres qui fait le relief, comme sous les boutons de
+     l'app. Sans lui, le mot retombait en texte violet ordinaire. */
+  text-shadow:
+    0 0.06em 0 color-mix(in oklch, var(--primary), black 44%),
+    0 0.15em 0.2em color-mix(in oklch, var(--primary), transparent 55%);
+}
+.coach-wordmark > b::after {
+  content: attr(data-mot);
+  position: absolute;
+  inset: 0;
+  /* Sans ces deux remises à zéro, la couche du dessus hériterait du contour et
+     du socle, et les redessinerait par-dessus le dégradé. */
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), white 24%) 0%,
+    var(--primary) 54%,
+    color-mix(in oklch, var(--primary), black 20%) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Les bulles de Marcel. Contour plutôt que fond plein : ce sont des paroles
+   posées sur le crème, pas des cartes de plus — l'écran en compte déjà cinq
+   (les suggestions) et une de plus (le champ). */
+.coach-bulle {
+  max-width: 92%;
+  border-radius: 22px;
+  background: var(--card);
+  box-shadow:
+    inset 0 0 0 1.5px color-mix(in oklch, var(--foreground), transparent 90%),
+    0 10px 20px -18px color-mix(in oklch, var(--foreground), transparent 20%);
+  padding: 0.55rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+/* L'ARRIVÉE. Marcel n'est pas « déjà là » quand l'écran s'ouvre : il salue, puis
+   il parle, puis il se montre. Quatre temps décalés de 90 ms — assez pour se
+   lire comme une entrée en scène, trop court pour faire attendre. Le
+   `both` garde l'état initial avant le départ : sans lui, tout clignote au
+   premier rendu. */
+.coach-entree > * {
+  animation: coach-entree 460ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.coach-entree > *:nth-child(2) {
+  animation-delay: 90ms;
+}
+.coach-entree > *:nth-child(3) {
+  animation-delay: 180ms;
+}
+.coach-entree > *:nth-child(4) {
+  animation-delay: 270ms;
+}
+@keyframes coach-entree {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .coach-entree > * {
+    animation: none;
   }
 }
 

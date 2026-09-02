@@ -22,6 +22,7 @@ import DailyLoginReward from "@/components/DailyLoginReward";
 import BackGuard from "@/components/BackGuard";
 // Toasts globaux (« Enregistré ✓ ») : file lib/toast, aucun provider.
 import Toaster from "@/components/Toaster";
+import RecompensesProvider from "@/components/recompenses/RecompensesProvider";
 // Écran de chargement au lancement, façon jeu mobile (illustration + barre).
 import SplashScreen from "@/components/SplashScreen";
 // Capteur « le premier écran est peint » : autorise le rideau à lever.
@@ -154,9 +155,18 @@ export default async function RootLayout({
             }
           />
           {user ? <DailyLoginReward /> : null}
-          <AppMain>
-            <SwipeTabs>{children}</SwipeTabs>
-          </AppMain>
+          {/* LES RÉCOMPENSES QUI VOLENT (Clash Royale) : monté ICI, autour du
+              contenu, et une seule fois pour toute l'application. Les jetons
+              doivent survoler la page ENTIÈRE — bandeau compris — donc échapper
+              à tout conteneur qui découpe ; et la couche doit être unique,
+              sinon deux écrans de fin montés ensemble feraient deux volées et
+              deux rafraîchissements concurrents. Il ne rend rien tant que
+              personne n'a rien gagné. */}
+          <RecompensesProvider>
+            <AppMain>
+              <SwipeTabs>{children}</SwipeTabs>
+            </AppMain>
+          </RecompensesProvider>
         </div>
         <Toaster />
       </body>

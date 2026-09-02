@@ -70,5 +70,10 @@ describe('les marqueurs des cours', () => {
     }
 
     expect(orphelins, orphelins.join('\n')).toEqual([])
-  })
+    // TIMEOUT EXPLICITE. Ce test ouvre et scanne les 65 modules de contenu,
+    // soit plusieurs megaoctets. Seul il tient en 2 s ; lance en parallele du
+    // reste de la suite il a depasse les 5 s par defaut et vire au rouge sans
+    // qu'aucun cours ne soit fautif. Un test rouge par LENTEUR apprend a
+    // ignorer le rouge.
+  }, 30_000)
 })

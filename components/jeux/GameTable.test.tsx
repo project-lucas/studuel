@@ -98,7 +98,10 @@ async function repondre(libelle: 'Juste' | 'Faux') {
 beforeEach(() => {
   vi.useFakeTimers()
   recordChallenge.mockReset()
-  recordChallenge.mockResolvedValue({ saved: true, xp: 77 })
+  recordChallenge.mockResolvedValue({
+    saved: true,
+    gains: [{ unite: 'gemme', montant: 20 }],
+  })
   window.localStorage.clear()
 })
 
@@ -139,10 +142,12 @@ describe('GameTable — une partie de salon se termine, et son écran de fin ne 
     expect(answered).toBe(5)
   })
 
-  it('affiche l’XP DU SERVEUR dès qu’il répond, pas son estimation locale', async () => {
-    // Le serveur connaît des bonus que le client ignore (trajet, écrêtage) :
-    // l'estimation locale ne doit jamais rester à l'écran une fois la vraie
-    // valeur connue.
+  it('n’affiche QUE les gains du serveur, jamais une estimation locale', async () => {
+    // ⚠️ CE TEST GARDAIT UN MENSONGE. Il vérifiait un « +77 XP » — mais le
+    // gros badge de l'écran de fin lisait `XP_RULES`, un barème PUR côté
+    // client, alors que depuis la migration 348 jouer n'acquiert rien : le
+    // portefeuille ne versait pas un point pour une partie de salon. L'écran
+    // ne lit désormais que ce que la Server Action dit avoir versé.
     render(<GameTable {...PROPS} />)
     await lancerLaPartie()
     await repondre('Faux')
@@ -150,14 +155,16 @@ describe('GameTable — une partie de salon se termine, et son écran de fin ne 
     await repondre('Faux')
     await act(async () => {})
 
-    expect(screen.getByText(/\+77 XP/)).toBeInTheDocument()
+    expect(screen.getByText(/20 cristaux/)).toBeInTheDocument()
     expect(screen.getByText(/série continue/)).toBeInTheDocument()
+    // Aucune XP : la partie n'en verse plus.
+    expect(screen.queryByText(/XP/)).not.toBeInTheDocument()
   })
 
-  it('ne repeint pas l’écran d’une NOUVELLE partie avec l’XP de la précédente', async () => {
+  it('ne repeint pas l’écran d’une NOUVELLE partie avec les gains de la précédente', async () => {
     // Le garde-fou `partieRef`. Sur réseau lent, la réponse de la partie 1
     // arrive APRÈS que le joueur a rejoué ET reperdu : sans garde, elle
-    // repeindrait l'écran de fin de la partie 2 avec l'XP de la partie 1.
+    // repeindrait l'écran de fin de la partie 2 avec les gains de la partie 1.
     let repondre1: (v: unknown) => void = () => {}
     let repondre2: (v: unknown) => void = () => {}
     recordChallenge
@@ -183,14 +190,14 @@ describe('GameTable — une partie de salon se termine, et son écran de fin ne 
 
     // La réponse RETARDATAIRE de la partie 1 arrive maintenant.
     await act(async () => {
-      repondre1({ saved: true, xp: 11 })
+      repondre1({ saved: true, gains: [{ unite: 'ecu', montant: 11 }] })
     })
-    expect(screen.queryByText(/\+11 XP/)).not.toBeInTheDocument()
+    expect(screen.queryByText(/11 écus/)).not.toBeInTheDocument()
 
     // Celle de la partie 2, elle, fait foi.
     await act(async () => {
-      repondre2({ saved: true, xp: 99 })
+      repondre2({ saved: true, gains: [{ unite: 'ecu', montant: 99 }] })
     })
-    expect(screen.getByText(/\+99 XP/)).toBeInTheDocument()
+    expect(screen.getByText(/99 écus/)).toBeInTheDocument()
   })
 })

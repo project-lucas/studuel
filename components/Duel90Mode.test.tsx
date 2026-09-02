@@ -159,9 +159,16 @@ describe('Duel90Mode — l’écran de fin ne ment pas', () => {
     expect(screen.getByText(String(score))).toBeInTheDocument()
   })
 
-  it('affiche l’XP DU SERVEUR, jamais un zéro en attendant sa réponse', async () => {
+  it('n’annonce QUE ce que le serveur dit avoir versé', async () => {
     // La Server Action ne répond pas tout de suite : c'est la vraie vie (réseau
     // mobile). Pendant ce temps, l'écran ne doit annoncer AUCUN chiffre.
+    //
+    // ⚠️ CE TEST GARDAIT AUTREFOIS DEUX MENSONGES. Il vérifiait « +42 XP » et
+    // « +7 🏆 » lus dans `result` — c'est-à-dire dans le barème PUR de
+    // lib/duel90, calculé côté client. Or depuis la migration 348 le duel ne
+    // verse plus d'XP (jouer n'acquiert rien) et depuis la 238 il ne touche
+    // plus aux trophées. Les deux chiffres s'affichaient sans que rien ne les
+    // paye. L'écran ne lit désormais QUE `gains`, rempli par les RPC.
     let resoudre: (v: unknown) => void = () => {}
     recordDuel90.mockReturnValue(
       new Promise((r) => {
@@ -172,9 +179,8 @@ describe('Duel90Mode — l’écran de fin ne ment pas', () => {
     await repondre('Vrai')
     await laisserFilerLeChrono()
 
-    // Pendant l'attente : pas de « +0 XP » qui passerait pour la vérité.
-    expect(screen.getByText('… XP')).toBeInTheDocument()
-    expect(screen.queryByText('+0 XP')).not.toBeInTheDocument()
+    // Pendant l'attente : aucun chiffre de récompense à l'écran.
+    expect(screen.queryByText(/Récompenses/i)).not.toBeInTheDocument()
 
     await act(async () => {
       resoudre({
@@ -184,12 +190,18 @@ describe('Duel90Mode — l’écran de fin ne ment pas', () => {
         clanPoints: 0,
         questsCompleted: [],
         questDayDone: false,
-        crowns: 0,
+        crowns: 3,
+        gains: [
+          { unite: 'couronne', montant: 3 },
+          { unite: 'gemme', montant: 20 },
+        ],
       })
     })
 
-    expect(screen.getByText('+42 XP')).toBeInTheDocument()
-    expect(screen.getByText('+7 🏆')).toBeInTheDocument()
+    expect(screen.getByText(/3 couronnes, 20 cristaux/)).toBeInTheDocument()
+    // Et surtout PAS les deux nombres du barème client, que rien ne verse.
+    expect(screen.queryByText(/\+42/)).not.toBeInTheDocument()
+    expect(screen.queryByText(/\+7 /)).not.toBeInTheDocument()
   })
 
   it('dit franchement quand le serveur n’a pas confirmé (panne réseau)', async () => {

@@ -1,11 +1,12 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Hourglass, Zap, Check, X, RotateCcw, Trophy } from 'lucide-react'
+import { Hourglass, Check, X, RotateCcw, Trophy } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
-import { XP_RULES } from '@/lib/xp'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import type { Gain } from '@/lib/gains'
 import { recordChallenge } from '@/app/defi/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
@@ -16,7 +17,6 @@ import {
   CHRONO_MAX_SECONDS,
   CHRONO_BEST_STORAGE_KEY,
   MODE_TIMBRE,
-  MODE_XP_BONUS,
   chronoAfterAnswer,
   type ModeQuestion,
 } from '@/lib/defi-modes'
@@ -56,6 +56,8 @@ export default function ChronoMode({
   const [best, setBest] = useState(0)
   const [isRecord, setIsRecord] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // Ce que la partie a rapporté, tel que la base l'a écrit.
+  const [gains, setGains] = useState<Gain[]>([])
   const statsRef = useRef({ correct: 0, answered: 0 })
   const secondsRef = useRef(CHRONO_START_SECONDS)
   const finishedRef = useRef(false)
@@ -118,7 +120,10 @@ export default function ChronoMode({
       setBest(Math.max(prevBest, c))
       setPhase('done')
       recordChallenge(c, n, 'chrono')
-        .then((r) => setSaved(r.saved))
+        .then((r) => {
+          setSaved(r.saved)
+          setGains(r.gains)
+        })
         .catch(() => setSaved(false))
       // Reprogramme chaque question dans la file « À revoir ».
       recordReviewAnswers(reviewsRef.current).catch(() => {})
@@ -214,10 +219,6 @@ export default function ChronoMode({
 
   // -------------------------------------------------------------------- done
   if (phase === 'done') {
-    const xp =
-      correct * XP_RULES.challengePerCorrect +
-      XP_RULES.challengeBonus +
-      MODE_XP_BONUS.chrono
     return (
       <div className="mx-auto flex max-w-xl flex-col items-center gap-5 pt-8 text-center">
         <div className="animate-in zoom-in text-6xl duration-500">
@@ -240,9 +241,15 @@ export default function ChronoMode({
           ) : null}
         </div>
 
-        <div className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-6 py-3 font-mono text-2xl font-bold text-foreground shadow-lg duration-700 tabular-nums">
-          <Zap className="size-6" /> +{xp} XP
-        </div>
+        {/* CE QUE LA PARTIE A RAPPORTÉ, et le geste de Clash Royale qui va
+            avec : les pastilles se posent, puis une poignée de jetons s'en
+            détache et file vers le bandeau du haut.
+
+            ⚠️ CE BLOC ÉTAIT UN « +XX XP » EN GROS CHIFFRES, ET IL MENTAIT :
+            la valeur venait de `XP_RULES`, un barème PUR calculé côté client,
+            alors que depuis la migration 348 jouer n'acquiert rien et que le
+            portefeuille ne verse plus un point pour une partie. */}
+        <PanneauRecompenses gains={gains} className="w-full max-w-sm" />
 
         <p className="text-sm text-muted-foreground">
           {saved === true

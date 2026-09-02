@@ -114,7 +114,14 @@ describe('QuizPlayer — l’écran de fin ne ment pas', () => {
     expect(
       screen.getByLabelText('1 bonne réponse sur 2'),
     ).toBeInTheDocument()
-    expect(screen.getByText('Score du quiz')).toBeInTheDocument()
+    // Le chiffre brut « 1 / 2 » a quitté l'écran : la case RÉUSSITE porte
+    // désormais le résultat, en pourcentage, avec sa jauge. On lit la JAUGE
+    // plutôt que le texte — c'est elle qui porte la valeur de façon
+    // accessible, et le nombre est coupé en deux nœuds par son signe « % ».
+    expect(screen.getByText('Réussite')).toBeInTheDocument()
+    expect(
+      screen.getByRole('progressbar', { name: 'Réussite' }),
+    ).toHaveAttribute('aria-valuenow', '50')
   })
 
   it('affiche 2/2 quand les deux réponses sont bonnes', async () => {
@@ -140,6 +147,79 @@ describe('QuizPlayer — l’écran de fin ne ment pas', () => {
 // La feuille de la mascotte a d'abord été posée sur le seul anglais 3e, puis
 // généralisée : elle porte désormais TOUT le retour après réponse, quelle que
 // soit la matière — l'ancien bandeau en ligne n'existe plus.
+describe('QuizPlayer — la question à trous', () => {
+  // La troisième forme, celle de Duolingo : on lit LA PHRASE, avec un manque au
+  // milieu, et l'option touchée vient s'y poser. Elle ne coûte aucune migration
+  // — c'est un QCM dont l'énoncé porte « ___ ».
+  const TROU: QuizQuestion[] = [
+    {
+      id: 'q-trou',
+      quiz_id: 'quiz-test',
+      question: 'La capitale du Royaume-Uni est ___ depuis 1066.',
+      kind: 'mcq',
+      options: ['Londres', 'Dublin', 'Édimbourg', 'Cardiff'],
+      correct_index: 0,
+      explanation: null,
+      position: 0,
+    },
+  ]
+
+  const rendreTrou = () =>
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={TROU}
+        record={false}
+      />,
+    )
+
+  it('affiche la PHRASE, pas le souligné brut', () => {
+    rendreTrou()
+    // Les trois soulignés ne doivent jamais atteindre l'écran.
+    expect(screen.queryByText(/___/)).not.toBeInTheDocument()
+    expect(screen.getByText(/La capitale du Royaume-Uni est/)).toBeInTheDocument()
+    expect(screen.getByText(/depuis 1066/)).toBeInTheDocument()
+  })
+
+  it('change la CONSIGNE : on complète, on ne choisit pas', () => {
+    rendreTrou()
+    expect(screen.getByText('Complète la phrase')).toBeInTheDocument()
+    expect(screen.queryByText('Choisis la bonne réponse')).not.toBeInTheDocument()
+  })
+
+  it('annonce le creux vide au lecteur d’écran', () => {
+    // Sans ça, la phrase s'entend en deux morceaux sans rien entre les deux.
+    rendreTrou()
+    expect(screen.getByText('blanc à compléter')).toBeInTheDocument()
+  })
+
+  it('POSE le mot choisi dans le creux', async () => {
+    const user = userEvent.setup()
+    rendreTrou()
+    await user.click(screen.getByRole('button', { name: 'Londres' }))
+    // Le mot apparaît DEUX fois : sur sa plaque de réponse et dans la phrase.
+    expect(screen.getAllByText('Londres').length).toBeGreaterThan(1)
+    expect(screen.queryByText('blanc à compléter')).not.toBeInTheDocument()
+  })
+
+  it('laisse un QCM ordinaire exactement comme avant', () => {
+    // Les 3 300 questions du catalogue n'ont pas de trou : rien ne doit changer
+    // pour elles. (`rendreQuestion` vit plus bas dans le fichier — on rend ici
+    // directement, pour ne pas dépendre de l'ordre des blocs.)
+    render(
+      <QuizPlayer
+        quizId="quiz-test"
+        title="Test"
+        questions={QUESTIONS}
+        record={false}
+      />,
+    )
+    expect(screen.getByText('Choisis la bonne réponse')).toBeInTheDocument()
+    expect(screen.queryByText('blanc à compléter')).not.toBeInTheDocument()
+  })
+})
+
 describe('QuizPlayer — feuille de la mascotte (toutes matières)', () => {
   it('remplace le feedback en ligne par la feuille, avec la bonne réponse', async () => {
     const user = userEvent.setup()
@@ -414,26 +494,14 @@ describe('QuizPlayer — l’écran de question', () => {
     ).toBeInTheDocument()
   })
 
-  it('« Je ne sais pas » compte la question ratée et montre la réponse', async () => {
-    // Un aveu, pas un abandon : le proposer évite le clic au hasard, qui
-    // apprendrait à la répétition espacée que la carte est sue.
-    const user = userEvent.setup()
-    render(
-      <QuizPlayer
-        quizId="quiz-test"
-        title="Test"
-        questions={QUESTIONS}
-        record={false}
-      />,
-    )
-    await user.click(screen.getByRole('button', { name: 'Je ne sais pas' }))
-    expect(screen.getByText(/La bonne réponse/)).toBeInTheDocument()
-
-    await user.click(screen.getByRole('button', { name: 'Continuer' }))
-    await repondre(user, '4')
-    await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
-    // 1 sur 2 : la question passée est bien comptée fausse.
-    expect(screen.getByLabelText('1 bonne réponse sur 2')).toBeInTheDocument()
+  it('ne propose PLUS « Je ne sais pas »', async () => {
+    // Retiré le 01/09 à la demande. Ce qu'on perd est écrit dans QuizPlayer :
+    // l'élève qui ne sait pas doit désormais tenter, et un coup de chance
+    // apprend à la répétition espacée que la carte est sue.
+    rendreQuestion()
+    expect(
+      screen.queryByRole('button', { name: 'Je ne sais pas' }),
+    ).not.toBeInTheDocument()
   })
 
   it('montre l’ILLUSTRATION de la matière — l’écran n’était que teinté', () => {
@@ -454,15 +522,6 @@ describe('QuizPlayer — l’écran de question', () => {
   it('n’invente pas d’illustration pour un quiz sans matière', () => {
     const { container } = rendreQuestion()
     expect(container.querySelector('img[src*="vignettes"]')).toBeNull()
-  })
-
-  it('« Je ne sais pas » est une PLAQUE, pas un texte nu', async () => {
-    // Il n'avait ni contour ni fond : rien ne disait qu'on pouvait le toucher,
-    // et sa zone tactile s'arrêtait aux lettres.
-    rendreQuestion()
-    const bouton = screen.getByRole('button', { name: 'Je ne sais pas' })
-    expect(bouton.className).toContain('quiz-plaque')
-    expect(bouton.className).toContain('--plaque-bord')
   })
 
   it('« Valider » reste une plaque même ÉTEINT', async () => {
@@ -490,16 +549,32 @@ describe('QuizPlayer — l’écran de question', () => {
 
     await user.click(screen.getByRole('button', { name: 'Paris' }))
     const valider = screen.getByRole('button', { name: 'Valider' })
-    const formeValider = ['quiz-plaque', 'h-13', 'w-full'].filter((c) =>
+    const formeValider = ['quiz-plaque', 'h-14', 'w-full', 'text-lg'].filter((c) =>
       valider.className.includes(c),
     )
-    expect(formeValider).toHaveLength(3)
+    expect(formeValider).toHaveLength(4)
 
     await user.click(valider)
     const continuer = screen.getByRole('button', { name: 'Continuer' })
     for (const classe of formeValider) {
       expect(continuer.className, classe).toContain(classe)
     }
+  })
+
+  it('ne met RIEN sous « Valider »', async () => {
+    // C'est le mécanisme qui met « Valider » et « Continuer » au même pixel :
+    // « Valider » doit être le DERNIER élément de sa colonne. « Je ne sais
+    // pas » était dessous, et ses 48 px plus la gouttière poussaient
+    // « Valider » 58 px plus haut que le « Continuer » qui allait le
+    // remplacer — le bouton sautait sous le pouce à l'instant précis où il
+    // change de rôle. Tout ce qu'on rajouterait là referait le défaut.
+    const user = userEvent.setup()
+    rendreQuestion()
+    await user.click(screen.getByRole('button', { name: 'Paris' }))
+
+    const valider = screen.getByRole('button', { name: 'Valider' })
+    const fratrie = [...(valider.parentElement?.children ?? [])]
+    expect(fratrie.at(-1)).toBe(valider)
   })
 
   it('fait poser la question par Marcel, dans une bulle', () => {
@@ -546,6 +621,18 @@ describe('QuizPlayer — l’écran de question', () => {
   })
 })
 
+/**
+ * La case « Temps » de l'écran de fin. Elle portait une infobulle
+ * (`title="Temps de révision…"`) tant qu'elle était une boîte à bandeau ; son
+ * explication vit désormais derrière le « i » de la carte. On la retrouve donc
+ * par son titre, et on lit la case entière.
+ */
+const caseTemps = (): HTMLElement => {
+  const carte = screen.getByText('Temps').closest('li')
+  if (!carte) throw new Error('case « Temps » introuvable')
+  return carte
+}
+
 describe('QuizPlayer — les reprises de l’écran de fin', () => {
   /** Joue la session de 2 questions avec UNE erreur, et rend les 2 boutons. */
   const jusquAuBout = async (user: ReturnType<typeof userEvent.setup>) => {
@@ -557,7 +644,7 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
     await repondre(user, '5') // faux
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
     return {
-      revoir: screen.getByRole('button', { name: /À revoir/ }),
+      revoir: screen.getByRole('button', { name: /Revoir mes/ }),
       refaire: screen.getByRole('button', { name: /Continuer/ }),
     }
   }
@@ -576,17 +663,28 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
     }
   })
 
-  it('ne les étire pas sur toute la largeur', async () => {
+  // ⚠️ CES DEUX RÈGLES ONT ÉTÉ RETOURNÉES, ET C'EST VOULU.
+  // Elles gardaient l'état d'avant : deux pilules étroites posées côte à côte.
+  // L'écran de fin a été refait sur le modèle de Duolingo, dont le CONTINUER
+  // occupe toute la largeur en bas — deux cibles à demi-largeur, c'est un pouce
+  // qui vise ; une plaque pleine largeur, c'est un pouce qui pose. Si un jour
+  // ces tests redeviennent rouges, la question à se poser est « a-t-on voulu
+  // revenir à deux pilules ? », pas « comment les faire repasser au vert ? ».
+  it('les ÉTIRE sur toute la largeur', async () => {
     const { revoir, refaire } = await jusquAuBout(userEvent.setup())
-    expect(revoir.className).not.toContain('w-full')
-    expect(refaire.className).not.toContain('w-full')
+    expect(revoir.className).toContain('w-full')
+    expect(refaire.className).toContain('w-full')
   })
 
-  it('les pose CÔTE À CÔTE, sur une seule rangée', async () => {
+  it('les EMPILE, le plus utile en premier', async () => {
     const { revoir, refaire } = await jusquAuBout(userEvent.setup())
-    // Même parent, en ligne : la rangée ne doit jamais repasser en colonne.
+    // Même parent, en colonne.
     expect(revoir.parentElement).toBe(refaire.parentElement)
-    expect(revoir.parentElement?.className).not.toContain('flex-col')
+    expect(revoir.parentElement?.className).toContain('flex-col')
+    // « Revoir mes erreurs » est AU-DESSUS de « Continuer » : les questions
+    // ratées sont le seul contenu utile qui reste après un quiz.
+    const rangee = [...(revoir.parentElement?.children ?? [])]
+    expect(rangee.indexOf(revoir)).toBeLessThan(rangee.indexOf(refaire))
   })
 
   it('donne à chacun sa couleur — et PLUS DE ROUGE sur « À revoir »', async () => {
@@ -604,15 +702,14 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
     expect(revoir.className).not.toBe(refaire.className)
   })
 
-  it('dit « Continuer » et « À revoir », courts et sur une ligne', async () => {
+  it('nomme l’action en toutes lettres, avec le compte dedans', async () => {
+    // Le libellé était raccourci à « À revoir » + une pastille de compte, pour
+    // tenir dans une pilule étroite. Sur une plaque pleine largeur la place ne
+    // manque plus, et « Revoir mes 3 erreurs » dit ce qui va se passer sans
+    // qu'on ait à lire un chiffre posé à côté.
     const { revoir, refaire } = await jusquAuBout(userEvent.setup())
     expect(refaire.textContent?.trim()).toBe('Continuer')
-    // Le compte des erreurs passe en PASTILLE, à côté du libellé : celui-ci ne
-    // s'allonge plus avec lui (« Revoir mes 5 erreurs » repassait sur deux
-    // lignes dès qu'on était à l'étroit).
-    expect(revoir.textContent).toContain('À revoir')
-    expect(revoir.textContent).toContain('1')
-    expect(revoir.textContent).not.toContain('erreur')
+    expect(revoir.textContent).toContain('Revoir mes 1 erreur')
   })
 
   it('FIGE le chrono au bilan — il ne doit pas grimper sous les yeux', async () => {
@@ -634,7 +731,7 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
     await repondre(user, '4')
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
 
-    const chrono = screen.getByTitle(/Temps de révision/)
+    const chrono = caseTemps()
     const avant = chrono.textContent
     // Une bonne seconde de plus passe sur l'écran de score : le hook a eu le
     // temps de faire au moins un tic, donc de trahir une valeur non figée.
@@ -666,26 +763,56 @@ describe('QuizPlayer — les reprises de l’écran de fin', () => {
 
     const secondesDe = (t: string | null) =>
       Number(/\+(\d+)s/.exec(t ?? '')?.[1] ?? -1)
-    const premier = secondesDe(screen.getByTitle(/Temps de révision/).textContent)
+    const premier = secondesDe(caseTemps().textContent)
 
     // On repart sur l'erreur, après une seconde de lecture de la correction.
     await act(async () => {
       await new Promise((r) => setTimeout(r, 1300))
     })
-    await user.click(screen.getByRole('button', { name: /À revoir/ }))
+    await user.click(screen.getByRole('button', { name: /Revoir mes/ }))
     await repondre(user, '4')
     await user.click(screen.getByRole('button', { name: 'Voir mon score' }))
 
-    const second = secondesDe(screen.getByTitle(/Temps de révision/).textContent)
+    const second = secondesDe(caseTemps().textContent)
     expect(second).toBeGreaterThan(premier)
   })
 
-  it('sont plus petits qu’avant — une pilule, pas une plaque', async () => {
+  it('sont assez hauts pour un pouce', async () => {
+    // 56 px : la hauteur du CONTINUER de Duolingo. Les pilules faisaient 44 px,
+    // le minimum tactile — assez pour être touchées, pas pour être visées sans
+    // regarder.
     const { refaire } = await jusquAuBout(userEvent.setup())
-    expect(refaire.className).toContain('h-11')
+    expect(refaire.className).toContain('h-14')
     // Le coin plein vient de `.quiz-pilule` (border-radius: 999px) ET de la
     // base du Button : les deux disent la même chose, aucune ne contredit.
     expect(refaire.className).toContain('rounded-full')
+  })
+
+  it('REPLIE la correction, et l’ouvre au tap', async () => {
+    // Elle s'affichait dépliée sous le score : autant de cartes que de
+    // questions, à traverser avant d'atteindre quoi que ce soit d'autre. Elle
+    // se consulte — elle ne s'impose pas.
+    const user = userEvent.setup()
+    await jusquAuBout(user)
+
+    const volet = screen.getByRole('button', { name: /Voir la correction/ })
+    expect(volet).toHaveAttribute('aria-expanded', 'false')
+    // Rien de la correction n'est à l'écran tant qu'on n'a pas ouvert.
+    expect(screen.queryByText(/Bonne réponse/)).not.toBeInTheDocument()
+
+    await user.click(volet)
+    expect(volet).toHaveAttribute('aria-expanded', 'true')
+    expect(screen.getAllByText(/Bonne réponse/).length).toBeGreaterThan(0)
+  })
+
+  it('met la MASCOTTE en tête, et en grand', async () => {
+    // Elle tenait 112 px dans un coin, à droite d'un chiffre de 48 px. C'est le
+    // seul personnage de l'app : sur l'écran qu'on regarde le plus longtemps,
+    // elle passe devant.
+    await jusquAuBout(userEvent.setup())
+    const mascotte = document.querySelector('img[src*="reaction-"]')
+    expect(mascotte).not.toBeNull()
+    expect(mascotte?.className).toContain('w-56')
   })
 
   it('portent le traitement du bouton DUEL, pas le socle plat de la maison', async () => {

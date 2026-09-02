@@ -1,4 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
+import type { Gain } from '@/lib/gains'
 import { walletLevelInfo, type XpSource } from '@/lib/wallet'
 import { levelFor, type LevelInfo } from '@/lib/xp'
 
@@ -160,24 +161,62 @@ export async function awardChapterCrowns(
 }
 
 /**
+ * CE QUI A RÉELLEMENT ÉTÉ VERSÉ, mis en forme pour l'écran de fin.
+ *
+ * ⚠️ « RÉELLEMENT » EST LE MOT. Tous les montants viennent des RPC, jamais du
+ * barème : une acquisition déjà payée rend 0, un plafond quotidien rend 0, une
+ * migration absente rend 0. L'écran de fin ne peut donc pas annoncer un gain
+ * que le solde ne montrerait pas — un « +30 XP » suivi d'un compteur immobile
+ * serait pire que le silence, il ferait douter du compteur.
+ */
+export function gainsVerses(
+  award: WalletAward | null,
+  extra: { xp?: number; gemmes?: number; ecus?: number; couronnes?: number } = {},
+): Gain[] {
+  const gains: Gain[] = [
+    { unite: 'xp', montant: (award?.awarded ?? 0) + (extra.xp ?? 0) },
+    // La gemme du palier de série sort de `wallet_touch` : elle se gagne en
+    // étant là, pas en réussissant — mais elle se fête au même endroit.
+    { unite: 'gemme', montant: (award?.gems_gained ?? 0) + (extra.gemmes ?? 0) },
+    { unite: 'ecu', montant: extra.ecus ?? 0 },
+    { unite: 'couronne', montant: extra.couronnes ?? 0 },
+  ]
+  // Les montants nuls sont écartés à l'affichage (cf. lib/gains.agregerGains) :
+  // on les laisse passer ici pour que l'appelant n'ait rien à filtrer.
+  return gains
+}
+
+/**
  * Progression d'un quiz terminé : la gemme des 3 couronnes si ce quiz vient de
  * compléter son chapitre (le seuil est re-vérifié en SQL).
  *
  * L'XP, elle, ne passe plus par ici : elle se verse sur les COURONNES
  * (awardCouronnes), qui sont l'acquis réel — un quiz raté n'acquiert rien.
+ *
+ * Renvoie les gains à faire voler vers le bandeau, en plus de l'état du
+ * portefeuille.
  */
 export async function awardQuizProgression(
   supabase: SupabaseClient,
   quizId?: string,
-): Promise<WalletAward | null> {
+): Promise<{ award: WalletAward | null; gains: Gain[] }> {
   const award = await walletTouch(supabase)
-  if (quizId) {
-    await Promise.all([
-      awardGems(supabase, 'chapter_crowns', quizId),
-      // L'XP du quiz ne vient plus du quiz : elle vient des COURONNES qu'il
-      // allume. Un quiz raté n'acquiert rien, donc ne paye rien.
-      supabase.rpc('wallet_award_crowns_by_quiz', { p_quiz: quizId }),
-    ])
-  }
-  return award
+  if (!quizId) return { award, gains: gainsVerses(award) }
+
+  const [gemmes, couronnes] = await Promise.all([
+    awardGems(supabase, 'chapter_crowns', quizId),
+    // L'XP du quiz ne vient plus du quiz : elle vient des COURONNES qu'il
+    // allume. Un quiz raté n'acquiert rien, donc ne paye rien.
+    supabase
+      .rpc('wallet_award_crowns_by_quiz', { p_quiz: quizId })
+      .then(({ data, error }) => {
+        if (error) {
+          console.error('[wallet] couronnes du quiz non versées:', error.message)
+          return 0
+        }
+        return Number(data ?? 0)
+      }),
+  ])
+
+  return { award, gains: gainsVerses(award, { gemmes, xp: couronnes }) }
 }

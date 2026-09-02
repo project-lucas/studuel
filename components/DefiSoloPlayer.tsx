@@ -15,7 +15,6 @@ import BackButton from '@/components/BackButton'
 import { useDialogFocus } from '@/lib/use-dialog'
 import ProgressRing from '@/components/ProgressRing'
 import PairMatch from '@/components/PairMatch'
-import GemIcon from '@/components/ui/GemIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
@@ -26,6 +25,8 @@ import {
   starsForScore,
 } from '@/lib/defi-solo'
 import { recordLessonDefi } from '@/app/reviser/actions'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import { aDesGains, type Gain } from '@/lib/gains'
 import type { QuizQuestion } from '@/lib/types'
 
 // Défi solo par niveaux monté sur le quiz de la leçon. Chaque niveau est une
@@ -76,15 +77,17 @@ export default function DefiSoloPlayer({
   const [eliminated, setEliminated] = useState<number[]>([])
   const [correction, setCorrection] = useState(false)
   const [lastGain, setLastGain] = useState(0)
-  // Récompense réellement versée en fin de partie (0 = déjà relevé aujourd'hui).
-  const [reward, setReward] = useState<{ xp: number; gems: number } | null>(null)
+  // Récompenses réellement versées en fin de partie. Tableau VIDE = rien n'est
+  // tombé (défi déjà relevé aujourd'hui) ; `null` = le serveur n'a pas encore
+  // répondu. Les deux se disent différemment à l'écran, d'où le null.
+  const [reward, setReward] = useState<Gain[] | null>(null)
 
   // Fin de partie : versement en « fire and forget » — l'idempotence (une fois
   // par leçon et par jour) est portée par la clé côté SQL, rejouer ne re-paye pas.
   const finishDefi = (won: boolean) => {
     if (!lessonId) return
     recordLessonDefi(lessonId, won)
-      .then((r) => setReward({ xp: r.xp, gems: r.gems }))
+      .then((r) => setReward(r.gains))
       .catch(() => {})
   }
 
@@ -408,19 +411,12 @@ export default function DefiSoloPlayer({
             </p>
             <Stars count={starsForScore(score, max)} />
           </div>
-          {reward && (reward.xp > 0 || reward.gems > 0) ? (
-            <p className="bg-muted mt-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold">
-              {reward.xp > 0 ? <span>+{reward.xp} XP</span> : null}
-              {reward.gems > 0 ? (
-                <span className="text-primary inline-flex items-center gap-1">
-                  +{reward.gems}
-                  <GemIcon className="size-4" aria-hidden="true" />
-                </span>
-              ) : null}
-            </p>
+          {reward && aDesGains(reward) ? (
+            <PanneauRecompenses gains={reward} className="mt-4 w-full" />
           ) : reward ? (
             <p className="text-muted-foreground mt-4 text-xs font-medium">
-              Défi déjà relevé aujourd&apos;hui — reviens demain pour l&apos;XP !
+              Défi déjà relevé aujourd&apos;hui — reviens demain pour la
+              récompense !
             </p>
           ) : null}
           <div className="mt-6 flex w-full flex-col gap-3">

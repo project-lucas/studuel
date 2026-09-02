@@ -7,22 +7,25 @@ import { recordTestSession } from '@/app/test/actions'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import type { ReviewAnswer } from '@/lib/srs'
 import { sfx, buzz } from '@/lib/sounds'
-import { bestStreak, COMBO_HOT } from '@/lib/juice'
+import { bestStreak, COMBO_FIRE } from '@/lib/juice'
 import { missedQuestions, canRetryMissed } from '@/lib/quiz-retry'
 import { verdictFor, verdictSrc } from '@/lib/verdict'
 import ComboBadge from '@/components/ComboBadge'
-import {
-  bilanDuQuiz,
-  formatDureeGain,
-  formatDureeTotale,
-  type EtatBilan,
-} from '@/lib/quiz-bilan'
+import { formatDureeGain, formatDureeTotale } from '@/lib/quiz-bilan'
 import {
   preparerCelebration,
   type Celebration,
 } from '@/lib/serie-celebration'
 import SerieCelebration from '@/components/quiz/SerieCelebration'
-import BilanCartes from '@/components/quiz/BilanCartes'
+import CarteBilan from '@/components/quiz/CarteBilan'
+import EnonceATrou from '@/components/quiz/EnonceATrou'
+import { estTexteATrou } from '@/lib/quiz-trous'
+import IconeUnite from '@/components/recompenses/IconeUnite'
+import {
+  origineUnique,
+  useRecompenses,
+} from '@/components/recompenses/RecompensesProvider'
+import { agregerGains, libelleGain, type Gain } from '@/lib/gains'
 import { useWorkTimer } from '@/components/useWorkTimer'
 import BackButton from '@/components/BackButton'
 import QuitGuardButton from '@/components/QuitGuardButton'
@@ -34,10 +37,14 @@ import QuizFeedbackMascotte from '@/components/QuizFeedbackMascotte'
 import { feedbackTitle, reactionSrc } from '@/lib/quiz-feedback'
 import type { TraqueApparition } from '@/lib/traque'
 import {
+  ChevronDown,
   CircleCheck,
   CircleX,
   Clock,
+  Flame,
   RotateCcw,
+  Sparkles,
+  Trophy,
   ArrowLeft,
   X,
 } from 'lucide-react'
@@ -56,9 +63,14 @@ import type { QuizQuestion } from '@/lib/types'
  * socle de la maison (`--btn-edge` / `--btn-depth`) pour ne garder que celui-là.
  */
 /**
- * La réponse d'une question passée sans que l'élève en propose une
- * (« Je ne sais pas »). Jamais égale à un index d'option, donc toujours comptée
- * ratée — par le score, par `missedQuestions` et par la répétition espacée.
+ * La réponse d'une question passée sans que l'élève en propose une. Jamais
+ * égale à un index d'option, donc toujours comptée ratée — par le score, par
+ * `missedQuestions` et par la répétition espacée.
+ *
+ * Le bouton « Je ne sais pas » qui l'empruntait a été retiré ; le garde-fou
+ * reste, parce que `valider` accepte toujours `null` et que le jour où une
+ * question se solde sans choix (un chrono, un abandon), elle doit compter
+ * ratée plutôt que de passer pour la première option.
  */
 const SANS_REPONSE = -1
 
@@ -185,9 +197,6 @@ export default function QuizPlayer({
   const [best, setBest] = useState(0)
   const [finished, setFinished] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
-  // Les états du moteur APRÈS la session : la matière des trois chiffres de
-  // fin (réussite / avancement / ancrage).
-  const [etatsBilan, setEtatsBilan] = useState<EtatBilan[] | null>(null)
   // La fête de série, quand cette session est la PREMIÈRE du jour. Elle se pose
   // par-dessus tout, avant même l'écran de score : c'est le moment où la case
   // du jour se remplit, et il ne doit pas passer derrière un bilan chiffré.
@@ -223,6 +232,21 @@ export default function QuizPlayer({
   // serveur le dit en enregistrant la session ; le rideau s'ouvre par-dessus
   // l'écran de fin, jamais au milieu d'une question.
   const [apparition, setApparition] = useState<TraqueApparition | null>(null)
+  // Ce que la session a RAPPORTÉ, tel que la base l'a écrit. Vide sur un rejeu
+  // (l'XP d'un chapitre déjà maîtrisé ne se repaye pas) : le panneau ne
+  // s'affiche alors pas, plutôt que d'annoncer un gain qui n'existe pas.
+  const [gains, setGains] = useState<Gain[]>([])
+  // La correction est REPLIÉE à l'arrivée : elle se consulte, elle ne s'impose
+  // pas (cf. l'écran de fin, plus bas).
+  const [correctionOuverte, setCorrectionOuverte] = useState(false)
+  // La case « Gagné » du bilan sert de point de DÉPART aux jetons : c'est d'elle
+  // qu'ils jaillissent pour rejoindre le bandeau du haut.
+  const caseGainRef = useRef<HTMLLIElement>(null)
+  const { celebrer } = useRecompenses()
+  // Le vol ne se joue qu'une fois. Ces écrans reçoivent une seconde réponse
+  // serveur en retard (le bilan des cartes) : sans ce verrou, chaque re-rendu
+  // relancerait la volée et le compteur monterait deux fois.
+  const envoleRef = useRef(false)
 
   const question = questions[index]
   // Rejeu partiel : le paquet en cours ne couvre plus tout le quiz.
@@ -235,6 +259,27 @@ export default function QuizPlayer({
   // dernière question pourrait franchir le garde `selected` (state périmé) et
   // enregistrer la session deux fois.
   const finishedRef = useRef(false)
+
+  // LE VOL DES RÉCOMPENSES (cf. components/recompenses). Une poignée de jetons
+  // jaillit de la case « Gagné » et file vers le bandeau, où le compteur monte
+  // à mesure qu'ils y tombent.
+  //
+  // ⚠️ ON ATTEND QUE LE RIDEAU DU GARDIEN SOIT REFERMÉ. Sous une apparition
+  // plein écran, les jetons voleraient derrière elle, donc pour personne.
+  // `gains` et `apparition` arrivent dans la MÊME réponse : le vol part donc
+  // soit tout de suite, soit à la fermeture du rideau, jamais deux fois.
+  useEffect(() => {
+    if (envoleRef.current || !finished || apparition !== null) return
+    if (agregerGains(gains).length === 0) return
+    envoleRef.current = true
+    // Le délai laisse la case se poser : des jetons qui partent d'un élément
+    // encore en train d'apparaître volent depuis un point qui a déjà bougé.
+    const t = setTimeout(
+      () => celebrer(gains, origineUnique(caseGainRef.current, gains)),
+      560,
+    )
+    return () => clearTimeout(t)
+  }, [finished, apparition, gains, celebrer])
   // Verrou synchrone anti double-tap sur une option : `selected` (state) ne se
   // met à jour qu'au prochain rendu ; sans ce ref, deux taps rapprochés
   // pousseraient une réponse en double dans reviewsRef. Relâché à la suivante.
@@ -265,6 +310,7 @@ export default function QuizPlayer({
         .then((r) => {
           setSaved(r.saved)
           setApparition(r.apparition)
+          setGains(r.gains)
           // L'état de la série lu AVANT l'écriture : c'est lui qui sait si la
           // case du jour était encore vide, donc s'il y a quelque chose à
           // remplir à l'écran.
@@ -284,14 +330,11 @@ export default function QuizPlayer({
     // Le scope, c'est le QUIZ ENTIER : l'avancement et l'ancrage se lisent sur
     // lui, pas sur le paquet servi ce jour-là (une séance d'entraînement de 5
     // questions sur 8 ne fait pas « 100 % du chapitre »).
-    recordReviewAnswers(
-      reviewsRef.current,
-      allQuestions.map((q) => q.id),
-    )
-      .then((r) => {
-        if (r.etats) setEtatsBilan(r.etats)
-      })
-      .catch(() => {})
+    // ⚠️ PLUS DE SECOND ARGUMENT. Il demandait au serveur de RELIRE l'état de
+    // toutes les questions du quiz après l'écriture — une requête de plus à
+    // chaque fin de quiz — pour alimenter les cases « Avancement » et
+    // « Ancrage ». Elles ont été supprimées ; la lecture avec elles.
+    recordReviewAnswers(reviewsRef.current).catch(() => {})
   }
 
   // Répondre : on révèle tout de suite le résultat (juste/faux, bonne réponse,
@@ -344,7 +387,7 @@ export default function QuizPlayer({
     // `finish()` avaient déjà leur verrou, pas celui-ci.
     if (!valide || advancingRef.current) return
     advancingRef.current = true
-    // `SANS_REPONSE` pour « Je ne sais pas » : jamais égal à `correct_index`,
+    // `SANS_REPONSE` : jamais égal à `correct_index`,
     // donc compté raté par le score comme par `missedQuestions`.
     const next = [...choices, selected ?? SANS_REPONSE]
     setChoices(next)
@@ -409,13 +452,10 @@ export default function QuizPlayer({
     // Y a-t-il des erreurs à revoir ? La réponse commande le LIBELLÉ comme la
     // robe des deux boutons de reprise : calculée une fois, pas trois.
     const peutRevoir = canRetryMissed(questions.length, missed.length)
-    // Les trois lectures de fin. `etatsBilan` arrive après l'écriture des
-    // réponses (donc après un aller-retour) : tant qu'il est nul, avancement et
-    // ancrage valent 0 — et la réussite, elle, est immédiate.
-    const bilan = bilanDuQuiz(allQuestions.length, etatsBilan ?? [], {
-      justes: score,
-      posees: questions.length,
-    })
+    // Ce que la manche a RAPPORTÉ, tel que la base l'a écrit — jamais le barème
+    // espéré. Vide sur un rejeu : l'XP d'un chapitre déjà maîtrisé ne se repaye
+    // pas, et la case « Gagné » disparaît alors au lieu d'annoncer « +0 ».
+    const gagne = agregerGains(gains)
 
     // LA FÊTE DE SÉRIE PASSE DEVANT LE BILAN. Elle est montée par-dessus tout
     // (position fixe) tant que l'élève ne l'a pas refermée : le score l'attend
@@ -436,9 +476,34 @@ export default function QuizPlayer({
       // donc de l'état de ComboBadge) ne tient qu'à l'alignement positionnel
       // des deux arbres JSX — une coïncidence qu'un simple <div> ajouté plus
       // tard casserait, en faisant réapparaître un badge fantôme.
-      <div key="quiz-fin" className="-mx-4 -mt-16 md:-mx-8 md:-mt-10">
+      //
+      // ─────────────────────────────────────────────────────────────────────
+      // L'ÉCRAN DE FIN, REPRIS DE DUOLINGO. Il empilait onze blocs : score,
+      // pastilles, récompenses, temps, meilleure série, trois lectures du
+      // chapitre, mot de la mascotte, note de séance, note d'enregistrement,
+      // reprises, puis la correction ENTIÈRE dépliée. Sur un téléphone il
+      // fallait faire défiler deux écrans avant d'atteindre le bouton qu'on
+      // cherchait, et la mascotte — le seul personnage de l'app — y tenait
+      // 112 px dans un coin, en concurrence avec un chiffre de 48 px.
+      //
+      // La forme de Duolingo tient en quatre temps, et c'est celle-ci :
+      //   1. le personnage, GRAND et seul, au centre ;
+      //   2. un titre de deux mots, qu'on lit d'un coup d'œil ;
+      //   3. trois cases de bilan côte à côte (gagné · temps · justesse) ;
+      //   4. des boutons pleine largeur.
+      // Le reste — les trois lectures du chapitre et la correction — descend
+      // sous un volet REPLIÉ. Rien n'est perdu ; ce qui n'était pas la réponse
+      // à « comment je m'en suis sorti ? » cesse simplement de la couvrir.
+      // ─────────────────────────────────────────────────────────────────────
+      <div
+        key="quiz-fin"
+        className={cn(
+          robe,
+          'jeu-table min-h-svh px-4 pt-6 pb-16 text-foreground md:px-8 md:pt-8',
+        )}
+      >
         {/* La Traque : si ce quiz a fait déborder la jauge, le gardien surgit
-            PAR-DESSUS le score. Il se monte en portail (document.body), donc sa
+            PAR-DESSUS le bilan. Il se monte en portail (document.body), donc sa
             position dans cet arbre n'a aucune incidence sur la mise en page. */}
         {apparition ? (
           <BossApparition
@@ -447,264 +512,314 @@ export default function QuizPlayer({
           />
         ) : null}
 
-        {/* Volet score, dans la robe de la matière — même table que l'écran de
-            fin d'un jeu de salon. */}
-        <div
-          className={cn(
-            robe,
-            'jeu-table px-4 pt-16 pb-10 text-foreground md:px-8 md:pt-12',
-          )}
-        >
-          <div className="mx-auto w-full max-w-xl">
-            <BackButton
-              fallback={backHref}
-              label="Quitter le quiz"
-              className="mb-4"
-            >
-              <X className="size-5" aria-hidden="true" />
-            </BackButton>
+        <div className="mx-auto flex w-full max-w-md flex-col items-center">
+          <BackButton
+            fallback={backHref}
+            label="Quitter le quiz"
+            className="mb-1 self-start"
+          >
+            <X className="size-5" aria-hidden="true" />
+          </BackButton>
 
-            <div className="rounded-3xl bg-card p-5 shadow-sm ring-1 ring-black/5">
-              {/* LE SCORE ET LA MASCOTTE, CÔTE À CÔTE.
-                  Elle était posée plus bas, entre le score et les boutons, dans
-                  une bulle qui poussait tout le reste hors de l'écran : sur un
-                  téléphone, il fallait faire défiler pour voir les reprises.
-                  Remontée à droite du score, elle réagit AU MOMENT où on lit le
-                  chiffre — et libère la place centrale pour ce qui manquait
-                  vraiment, les trois lectures du chapitre. */}
-              <div className="flex items-center gap-3">
-                <div className="min-w-0 flex-1 text-left">
-                  <h1 className="font-heading text-base font-bold text-muted-foreground">
-                    Score du quiz
-                  </h1>
-                  <p className="mt-0.5 font-mono text-5xl font-bold tabular-nums">
-                    {score}
-                    <span className="text-xl text-muted-foreground">
-                      {' '}
-                      / {questions.length}
-                    </span>
-                  </p>
+          {/* LA MASCOTTE, EN GRAND ET SEULE. Elle tenait 112 px à droite du
+              score, en concurrence avec un chiffre de 48 px — donc elle
+              perdait. Ici elle n'a rien contre quoi lutter : c'est le premier
+              objet de l'écran, et le seul de cette taille. */}
+          <Image
+            src={verdictSrc(ratio)}
+            alt=""
+            aria-hidden="true"
+            width={500}
+            height={360}
+            sizes="(min-width: 640px) 288px, 62vw"
+            priority
+            className="pop-in h-auto w-56 max-w-[62%] sm:w-72"
+          />
 
-                  {/* Une pastille par question. PLEINE = juste, ÉVIDÉE = ratée :
-                      la couleur ne doit pas être le seul porteur de
-                      l'information — un garçon sur douze ne distingue pas le
-                      vert du rouge, et cette app s'adresse d'abord à des
-                      collégiens. La forme le dit aussi, sans rien coûter. */}
-                  <div
-                    className="mt-3 flex flex-wrap gap-1"
-                    aria-label={`${score} bonne${score > 1 ? 's' : ''} réponse${score > 1 ? 's' : ''} sur ${questions.length}`}
-                  >
-                    {questions.map((q, i) => (
-                      <span
-                        key={q.id}
-                        aria-hidden="true"
-                        className={cn(
-                          'h-2 w-4 rounded-full',
-                          choices[i] === q.correct_index
-                            ? 'bg-success'
-                            : 'border-2 border-destructive bg-destructive/20',
-                        )}
-                      />
-                    ))}
-                  </div>
-                </div>
+          <h1 className="font-heading mt-1 text-center text-3xl font-extrabold text-balance">
+            {v.titre}
+          </h1>
+          <p className="mt-1 text-center text-sm font-semibold text-balance text-muted-foreground">
+            {v.message}
+          </p>
 
-                {/* LA MASCOTTE RÉAGIT AU SCORE — en dessin, plus en emoji.
-                    Le canevas des réactions est en 500×360 : c'est la largeur
-                    du CADRE qu'on cale, jamais celle du personnage. */}
-                <Image
-                  src={verdictSrc(ratio)}
-                  alt=""
-                  aria-hidden="true"
-                  width={500}
-                  height={360}
-                  sizes="132px"
-                  className="h-auto w-28 max-w-full shrink-0 sm:w-32"
-                />
-              </div>
+          {/* LES TROIS LECTURES, EN TÊTE D'ÉCRAN.
+              Elles étaient trois boîtes à bandeau de couleur (façon Duolingo),
+              et le bloc « Réussite / Avancement / Ancrage » vivait plus bas,
+              dans le volet de la correction. C'est la CARTE DU BAS qui a gagné,
+              et elle est montée : elle porte une pastille d'icône, un « i » qui
+              explique la mesure et une jauge sous le nombre — trois choses que
+              le bandeau n'avait pas, et qui servent toutes les trois.
 
-              {/* LA RÉCOMPENSE ET LE TEMPS, sur la même ligne jaune.
-                  L'XP existait sans être dite ; le TEMPS de révision, lui,
-                  était compté en silence et versé au profil sans que l'élève le
-                  voie jamais. Deux gains, deux chiffres, au même endroit. */}
-              {/* LA RÉCOMPENSE ET LE TEMPS.
-                  L'XP n'est versée que sur une manche COMPLÈTE : un rejeu des
-                  erreurs ne recompte pas dans le score du quiz (cf. `finish`),
-                  donc l'annoncer serait un mensonge.
-                  Le TEMPS, lui, est gagné dans tous les cas — refaire ses
-                  erreurs est du travail en plus, et ces minutes vont déjà au
-                  total du profil. La bande s'affiche donc dès qu'on enregistre,
-                  et c'est l'XP seule qui se retire quand la manche est
-                  partielle. */}
-              {record ? (
-                <div className="mt-4 flex items-center justify-center gap-2 rounded-2xl bg-highlight/20 px-3 py-2">
+              ⚠️ AVANCEMENT ET ANCRAGE SONT SUPPRIMÉS (01/09, à la demande). Ils
+              répondaient à « ai-je fait le tour du chapitre ? » et « est-ce que
+              ça tient dans le temps ? » — deux questions justes, mais posées au
+              moment où l'élève veut savoir comment il vient de s'en sortir. Ce
+              qu'on perd : la seule vue de la MÉMORISATION dans l'app, celle qui
+              distinguait « j'ai eu 8/10 » de « je le retiendrai ».
 
-                  <span
-                    className="font-heading flex items-center gap-1 text-base font-extrabold text-[color-mix(in_oklch,var(--highlight),black_25%)]"
-                    title="Temps de révision ajouté à ton total"
-                  >
-                    <Clock className="size-3.5" strokeWidth={2.6} aria-hidden="true" />
-                    {formatDureeGain(secondesAffichees ?? 0)}
-                  </span>
-                </div>
-              ) : null}
-
-              {best >= COMBO_HOT ? (
-                <p className="mt-2 text-center text-sm font-semibold text-foreground">
-                  🔥 Meilleure série : {best} d&apos;affilée
-                </p>
-              ) : null}
-
-              {/* LES TROIS LECTURES, à la place que la mascotte occupait.
-                  « 3 / 8 » ne dit ni si on a fait le tour du chapitre, ni si ça
-                  tient dans le temps. */}
-              <div className="mt-4">
-                <BilanCartes bilan={bilan} />
-              </div>
-
-              {/* Le mot de la mascotte, sous les chiffres — la bulle n'a plus à
-                  porter l'image, donc plus besoin de la recouvrir. */}
-              <div className="mt-4 rounded-2xl bg-muted px-4 py-3">
-                <p className="text-center text-sm font-semibold text-balance text-foreground">
-                  {v.message}
-                </p>
-              </div>
-
-              {/* `record &&` est essentiel : un quiz PERSONNEL (bibliothèque)
-                  n'écrit RIEN — ni session, ni SRS (`finish` sort avant
-                  `recordReviewAnswers`). Promettre « tes erreurs sont
-                  reprogrammées » y serait un mensonge pur. */}
-              {isPartial ? (
-                <p className="mt-3 text-center text-sm text-pretty text-muted-foreground">
-                  {record
-                    ? "Séance d'entraînement : elle ne recompte pas dans ton score du quiz, mais tes erreurs sont bien reprogrammées."
-                    : "Séance d'entraînement sur tes erreurs."}
-                </p>
-              ) : null}
-
-              {saved === true ? (
-                <p className="mt-3 text-center text-xs text-muted-foreground">
-                  ✓ Session enregistrée — ta série continue 🔥
-                </p>
-              ) : saved === false ? (
-                <p className="mt-3 text-center text-xs text-muted-foreground">
-                  <Link href="/login" className="underline underline-offset-4">
-                    Connecte-toi
-                  </Link>{' '}
-                  pour sauvegarder ta progression.
-                </p>
-              ) : null}
-            </div>
-
-            {/* LES REPRISES — deux pilules, plus petites et plus douces.
-                Elles étaient hautes, larges et posées sur un socle sombre :
-                deux plaques qui pesaient autant que le score au-dessus.
-
-                LE ROUGE EST PARTI. « Revoir mes erreurs » portait le corail des
-                pastilles ratées — cohérent sur le papier, mais un bouton rouge
-                se lit comme un avertissement : on l'évite. Or c'est LE geste
-                qu'on veut voir cliqué, puisque les questions ratées sont le
-                seul contenu utile qui reste. Il prend donc le VERT du succès,
-                celui des pastilles justes : « va les chercher », pas « attention ».
-
-                Et les libellés raccourcissent — « À revoir » / « Continuer » —
-                parce que deux mots tiennent sur une ligne à n'importe quelle
-                largeur, ce qui n'était pas le cas de « Revoir mes 5 erreurs ». */}
-            <div className="mt-4 flex items-center justify-center gap-2.5">
-              {peutRevoir ? (
-                <Button
-                  onClick={() => replay(missed)}
-                  className={cn(PILULE_REPRISE, ROBE_ERREURS)}
-                >
-                  <RotateCcw className="size-3.5" aria-hidden="true" />À revoir
-                  <span className="ml-0.5 rounded-full bg-white/25 px-1.5 text-[11px] tabular-nums">
-                    {missed.length}
-                  </span>
-                </Button>
-              ) : null}
-
-              <Button
-                onClick={restart}
-                className={cn(PILULE_REPRISE, ROBE_CONTINUER)}
+              La case « Gagné » ne paraît que s'il y a quelque chose à annoncer :
+              un quiz rejoué ne verse plus d'XP, et une case « +0 » ferait de
+              chaque révision un constat d'échec. */}
+          <ul
+            className="mt-5 flex w-full items-stretch gap-2"
+            aria-label={`${score} bonne${score > 1 ? 's' : ''} réponse${score > 1 ? 's' : ''} sur ${questions.length}`}
+          >
+            {gagne.length > 0 ? (
+              <CarteBilan
+                ton="gain"
+                titre="Gagné"
+                aide="Ce que cette session vient de te rapporter, versé sur ton compte."
+                icone={<Sparkles className="size-3" strokeWidth={2.6} aria-hidden="true" />}
+                ref={caseGainRef}
               >
-                Continuer
+                {gagne.map((g) => (
+                  <span key={g.unite} className="flex items-baseline gap-0.5">
+                    +{g.montant}
+                    <IconeUnite unite={g.unite} className="size-4 self-center" />
+                  </span>
+                ))}
+              </CarteBilan>
+            ) : null}
+
+            {/* LA CASE DU MILIEU CHANGE SELON CE QU'IL Y A À DIRE — c'est le
+                geste de Duolingo, dont la troisième boîte passe de « RAPIDE » à
+                « COMBO » selon la partie. Une belle série d'affilée est la
+                nouvelle du jour : elle passe devant le temps, qui se lit déjà
+                en haut de l'écran pendant toute la session.
+
+                ⚠️ LE SEUIL EST CELUI DU FEU (4), PAS CELUI DU BADGE (2). Le
+                badge de session s'allume tôt exprès, pour que l'escalade
+                commence vite — mais ici la case ÉVINCE le temps, et « ×2 »
+                n'est pas une nouvelle qui vaut qu'on cache autre chose. Sur un
+                quiz de deux questions, tout sans-faute aurait sinon affiché une
+                série au lieu du temps.
+
+                Ni l'une ni l'autre ne porte de JAUGE : une durée et une série
+                n'ont pas de plein auquel se comparer. */}
+            {best >= COMBO_FIRE ? (
+              <CarteBilan
+                ton="effort"
+                titre="Série"
+                aide="Ta plus longue suite de bonnes réponses d’affilée dans cette session."
+                icone={<Flame className="size-3" strokeWidth={2.6} aria-hidden="true" />}
+              >
+                ×{best}
+              </CarteBilan>
+            ) : record ? (
+              <CarteBilan
+                ton="effort"
+                titre="Temps"
+                aide="Le temps de révision de cette session, ajouté à ton total."
+                icone={<Clock className="size-3" strokeWidth={2.6} aria-hidden="true" />}
+              >
+                {formatDureeGain(secondesAffichees ?? 0)}
+              </CarteBilan>
+            ) : null}
+
+            <CarteBilan
+              ton="reussite"
+              titre="Réussite"
+              aide="Le pourcentage de bonnes réponses de cette session."
+              icone={<Trophy className="size-3" strokeWidth={2.6} aria-hidden="true" />}
+              jauge={Math.round(ratio * 100)}
+            >
+              {Math.round(ratio * 100)}
+              <span className="text-base">&nbsp;%</span>
+            </CarteBilan>
+          </ul>
+
+          {/* La récompense, dite en une phrase : « +30 » à côté d'un dessin ne
+              s'entend pas. */}
+          {gagne.length > 0 ? (
+            <p className="sr-only">
+              Tu as gagné {gagne.map((g) => libelleGain(g)).join(', ')}.
+            </p>
+          ) : null}
+
+          {isPartial ? (
+            <p className="mt-3 text-center text-xs text-pretty text-muted-foreground">
+              {record
+                ? "Séance d'entraînement : elle ne recompte pas dans ton score du quiz, mais tes erreurs sont bien reprogrammées."
+                : "Séance d'entraînement sur tes erreurs."}
+            </p>
+          ) : null}
+
+          {/* L'ENREGISTREMENT NE SE DIT PLUS QUE QUAND IL A ÉCHOUÉ. Le
+              « ✓ Session enregistrée » n'apprenait rien : c'est le cas normal,
+              et les jetons qui filent vers le bandeau le prouvent mieux qu'une
+              ligne de texte. L'échec, lui, appelle un geste — il reste. */}
+          {saved === false ? (
+            <p className="mt-3 text-center text-xs text-muted-foreground">
+              <Link href="/login" className="underline underline-offset-4">
+                Connecte-toi
+              </Link>{' '}
+              pour sauvegarder ta progression.
+            </p>
+          ) : null}
+
+          {/* LES REPRISES — pleine largeur, empilées, comme le CONTINUER de
+              Duolingo. Elles étaient côte à côte et à moitié larges : deux
+              cibles étroites pour un pouce, au lieu d'une évidence.
+
+              « À revoir » passe DEVANT et garde son vert : c'est le geste qu'on
+              veut voir cliqué, les questions ratées étant le seul contenu utile
+              qui reste après un quiz. */}
+          <div className="mt-6 flex w-full flex-col gap-2.5">
+            {peutRevoir ? (
+              <Button
+                onClick={() => replay(missed)}
+                className={cn(
+                  PILULE_REPRISE,
+                  ROBE_ERREURS,
+                  'h-14 w-full text-base',
+                )}
+              >
+                <RotateCcw className="size-4" aria-hidden="true" />
+                Revoir mes {missed.length} erreur{missed.length > 1 ? 's' : ''}
               </Button>
-            </div>
-          </div>
-        </div>
+            ) : null}
 
-        {/* Correction détaillée, scrollable */}
-        <div className="relative -mt-4 rounded-t-3xl bg-background">
-          <div className="mx-auto w-full max-w-xl px-4 pt-4 pb-24 md:px-8">
-            <div
-              className="mx-auto h-1.5 w-12 rounded-full bg-muted-foreground/30"
-              aria-hidden="true"
-            />
-            <h2 className="font-heading mt-4 text-center text-2xl font-bold">
-              Correction
-            </h2>
-
-            <ol className="mt-6 flex flex-col gap-4">
-              {questions.map((q, i) => {
-                const chosen = choices[i]
-                const good = chosen === q.correct_index
-                return (
-                  <li
-                    key={q.id}
-                    className="rounded-3xl border bg-card p-5 shadow-sm"
-                  >
-                    <p className="flex gap-3 font-semibold">
-                      <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-muted font-mono text-sm font-bold">
-                        {i + 1}
-                      </span>
-                      <span className="min-w-0">{q.question}</span>
-                    </p>
-
-                    <div className="mt-4 flex flex-col gap-2">
-                      {/* La bonne réponse, toujours montrée */}
-                      <p className="flex items-center gap-2.5 rounded-2xl bg-success/10 px-4 py-3 text-sm font-medium text-success">
-                        <CircleCheck
-                          className="size-5 shrink-0 fill-success text-white"
-                          aria-hidden="true"
-                        />
-                        <span className="min-w-0">
-                          <span className="sr-only">Bonne réponse : </span>
-                          {q.options[q.correct_index]}
-                        </span>
-                      </p>
-                      {/* Le choix de l'élève, seulement s'il était faux */}
-                      {!good && chosen !== undefined && q.options[chosen] !== undefined ? (
-                        <p className="flex items-center gap-2.5 rounded-2xl bg-destructive/10 px-4 py-3 text-sm font-medium text-destructive">
-                          <CircleX
-                            className="size-5 shrink-0 fill-destructive text-white"
-                            aria-hidden="true"
-                          />
-                          <span className="min-w-0">
-                            <span className="sr-only">Ta réponse : </span>
-                            {q.options[chosen]}
-                          </span>
-                        </p>
-                      ) : null}
-                    </div>
-
-                    {q.explanation ? (
-                      <div className="mt-4 border-t border-dashed pt-4">
-                        <h3 className="text-sm font-bold">Explication</h3>
-                        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                          {q.explanation}
-                        </p>
-                      </div>
-                    ) : null}
-                  </li>
-                )
-              })}
-            </ol>
-
-            <Button variant="outline" asChild className="mt-6 w-full rounded-full">
-              <Link href={backHref}>
-                <ArrowLeft className="size-4" /> Retour aux révisions
-              </Link>
+            <Button
+              onClick={restart}
+              className={cn(
+                PILULE_REPRISE,
+                ROBE_CONTINUER,
+                'h-14 w-full text-base',
+              )}
+            >
+              Continuer
             </Button>
+          </div>
+
+          {/* LE VOLET, REPLIÉ PAR DÉFAUT. La correction s'ouvrait toute seule,
+              dépliée, sous le score : autant de cartes que de questions, qu'il
+              fallait traverser pour atteindre quoi que ce soit d'autre. Elle
+              est précieuse, mais elle se CONSULTE — elle ne s'impose pas.
+
+              Tenu en état React plutôt qu'en <details> natif : le bouton porte
+              le compte et fait pivoter son chevron, et un repli déclenché par
+              le navigateur échapperait à React. */}
+          <div className="mt-6 w-full">
+            <button
+              type="button"
+              onClick={() => {
+                sfx.tap()
+                setCorrectionOuverte((o) => !o)
+              }}
+              aria-expanded={correctionOuverte}
+              aria-controls="quiz-correction"
+              className="font-heading flex min-h-11 w-full items-center justify-between gap-2 rounded-2xl bg-card px-4 py-3 text-sm font-extrabold text-foreground shadow-sm ring-1 ring-black/5 transition active:translate-y-px"
+            >
+              <span>Voir la correction</span>
+              <span className="flex items-center gap-2">
+                <span className="font-mono text-sm text-muted-foreground tabular-nums">
+                  {score}/{questions.length}
+                </span>
+                <ChevronDown
+                  className={cn(
+                    'size-4 shrink-0 transition-transform duration-200',
+                    correctionOuverte && 'rotate-180',
+                  )}
+                  aria-hidden="true"
+                />
+              </span>
+            </button>
+
+            {correctionOuverte ? (
+              <div id="quiz-correction" className="mt-4">
+                {/* Une pastille par question. PLEINE = juste, ÉVIDÉE = ratée :
+                    la couleur ne doit pas être le seul porteur de
+                    l'information — un garçon sur douze ne distingue pas le vert
+                    du rouge, et cette app s'adresse d'abord à des collégiens.
+                    Descendue du bandeau de score jusqu'ici : c'est la CARTE de
+                    la liste qui suit, sa place est en tête de cette liste. */}
+                <div
+                  className="flex flex-wrap justify-center gap-1"
+                  aria-hidden="true"
+                >
+                  {questions.map((q, i) => (
+                    <span
+                      key={q.id}
+                      className={cn(
+                        'h-2 w-4 rounded-full',
+                        choices[i] === q.correct_index
+                          ? 'bg-success'
+                          : 'border-2 border-destructive bg-destructive/20',
+                      )}
+                    />
+                  ))}
+                </div>
+
+                <ol className="mt-4 flex flex-col gap-4">
+                  {questions.map((q, i) => {
+                    const chosen = choices[i]
+                    const good = chosen === q.correct_index
+                    return (
+                      <li
+                        key={q.id}
+                        className="rounded-3xl bg-card p-5 shadow-sm ring-1 ring-black/5"
+                      >
+                        <p className="flex gap-3 font-semibold">
+                          <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-muted font-mono text-sm font-bold">
+                            {i + 1}
+                          </span>
+                          <span className="min-w-0">{q.question}</span>
+                        </p>
+
+                        <div className="mt-4 flex flex-col gap-2">
+                          {/* La bonne réponse, toujours montrée */}
+                          <p className="flex items-center gap-2.5 rounded-2xl bg-success/10 px-4 py-3 text-sm font-medium text-success">
+                            <CircleCheck
+                              className="size-5 shrink-0 fill-success text-white"
+                              aria-hidden="true"
+                            />
+                            <span className="min-w-0">
+                              <span className="sr-only">Bonne réponse : </span>
+                              {q.options[q.correct_index]}
+                            </span>
+                          </p>
+                          {/* Le choix de l'élève, seulement s'il était faux */}
+                          {!good &&
+                          chosen !== undefined &&
+                          q.options[chosen] !== undefined ? (
+                            <p className="flex items-center gap-2.5 rounded-2xl bg-destructive/10 px-4 py-3 text-sm font-medium text-destructive">
+                              <CircleX
+                                className="size-5 shrink-0 fill-destructive text-white"
+                                aria-hidden="true"
+                              />
+                              <span className="min-w-0">
+                                <span className="sr-only">Ta réponse : </span>
+                                {q.options[chosen]}
+                              </span>
+                            </p>
+                          ) : null}
+                        </div>
+
+                        {q.explanation ? (
+                          <div className="mt-4 border-t border-dashed pt-4">
+                            <h3 className="text-sm font-bold">Explication</h3>
+                            <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                              {q.explanation}
+                            </p>
+                          </div>
+                        ) : null}
+                      </li>
+                    )
+                  })}
+                </ol>
+
+                <Button
+                  variant="outline"
+                  asChild
+                  className="mt-6 w-full rounded-full"
+                >
+                  <Link href={backHref}>
+                    <ArrowLeft className="size-4" /> Retour aux révisions
+                  </Link>
+                </Button>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
@@ -721,6 +836,10 @@ export default function QuizPlayer({
   // qui choisit l'illustration et le titre. Les deux compteurs sont déjà à jour
   // ici (`choose` les a posés), et l'un des deux vaut forcément 0.
   const run = isCorrect ? streak : missStreak
+  // La question se lit-elle comme un texte à trous ? Décidé à la FORME de
+  // l'énoncé (« ___ »), jamais à la matière — même doctrine que
+  // `lib/quiz-layout` pour la disposition des réponses.
+  const trou = estTexteATrou(question.question)
   return (
     // data-no-swipe : pendant une question, le balayage d'onglet (SwipeTabs)
     // est neutralisé — sinon un glissé du pouce quitte le quiz sans passer par
@@ -732,14 +851,23 @@ export default function QuizPlayer({
         robe,
         // `quiz-fond` par-dessus `jeu-table` : le lavis de la matière, assez
         // dense pour qu'un quiz d'allemand ne ressemble pas à un quiz de maths.
-        'jeu-table quiz-fond relative flex min-h-svh flex-col overflow-hidden px-4 pt-3 pb-4 text-foreground md:px-8',
+        'jeu-table quiz-fond relative flex min-h-svh flex-col overflow-hidden px-4 pt-3 text-foreground md:px-8',
       )}
       // La feuille de la mascotte se pose PAR-DESSUS le bas de l'écran : sans
       // cette marge, la dernière réponse disparaîtrait sous elle. Elle tient
       // compte de la mascotte, qui dépasse du panneau de toute sa moitié haute.
-      // En ligne (et non en classe) pour la même raison que dans
-      // QuizFeedbackMascotte.
-      style={answered ? { paddingBottom: '21rem' } : undefined}
+      //
+      // Hors feuille, la marge du bas est la BARRE SYSTÈME SEULE, exactement
+      // comme celle de la feuille — c'est ce qui met « Valider » et
+      // « Continuer » au même pixel (le confort d'1 rem est porté par le bloc
+      // des boutons, des deux côtés). En ligne, et sans `calc()` autour de
+      // `env()` : jsdom ne sait pas le réduire et casse dans getComputedStyle,
+      // ce qui ferait tomber toute requête par rôle dans les tests.
+      style={
+        answered
+          ? { paddingBottom: '21rem' }
+          : { paddingBottom: 'env(safe-area-inset-bottom)' }
+      }
     >
       {/* L'ILLUSTRATION DE LA MATIÈRE, DANS L'ANGLE.
           Elle occupait le creux entre l'énoncé et les réponses, au CENTRE de
@@ -885,11 +1013,32 @@ export default function QuizPlayer({
             blanches, c'était trois fois la même surface pour trois rôles
             différents. Posé à même le fond, en grand, il n'a plus besoin d'un
             cadre pour se distinguer — ce sont les réponses qui en portent un. */}
-        <div className="mt-4 shrink-0">
+        {/* LA RESPIRATION DU HAUT. L'énoncé était collé sous la barre de
+            progression, tout en haut de l'écran, tandis que les réponses
+            tenaient le bas : entre les deux, deux cent cinquante pixels de
+            vide, et un aller-retour du regard à chaque question.
+
+            Il descend d'un tiers. Le vide ne disparaît pas — il se partage, et
+            l'énoncé se rapproche de ce qu'il commande.
+
+            Les trois respirations valent 0,8 (ici) · 0,7 (avant les réponses) ·
+            0,3 (sous elles). L'énoncé se pose donc JUSTE AU-DESSUS du milieu —
+            assez bas pour tomber dans l'axe du regard, assez haut pour que les
+            réponses restent sous le pouce. Aucun des trois creux ne domine :
+            c'est ce qui évite de retomber sur la carte blanche flottante. */}
+        <div className="min-h-2 flex-[0.8]" aria-hidden="true" />
+
+        <div className="shrink-0">
+          {/* LA CONSIGNE DIT LA FORME. Elle annonçait « Choisis la bonne
+              réponse » sur tout ce qui n'était pas un vrai/faux : sur une
+              phrase à compléter, c'est faux — on ne choisit pas une réponse, on
+              complète un texte. Trois formes, trois consignes. */}
           <p className="mb-2.5 text-xs font-extrabold tracking-wide text-foreground/45 uppercase">
-            {question.kind === 'true_false'
-              ? 'Vrai ou faux ?'
-              : 'Choisis la bonne réponse'}
+            {trou
+              ? 'Complète la phrase'
+              : question.kind === 'true_false'
+                ? 'Vrai ou faux ?'
+                : 'Choisis la bonne réponse'}
           </p>
 
           {/* MARCEL POSE LA QUESTION.
@@ -914,20 +1063,46 @@ export default function QuizPlayer({
               aria-hidden="true"
               width={256}
               height={256}
-              sizes="64px"
+              sizes="80px"
               priority
-              className="size-16 shrink-0 rounded-full"
+              className="size-20 shrink-0 rounded-full"
             />
-            <div className="relative min-w-0 flex-1 rounded-3xl border-2 border-black/10 bg-card px-4 py-3.5">
-              <p className="font-heading text-lg leading-snug font-extrabold text-balance text-foreground">
-                {question.question}
-              </p>
+            {/* L'ÉNONCÉ EN GRAND. Il était en `text-lg` (18 px) — la taille
+                d'un paragraphe — pour la seule chose que l'élève doit lire sur
+                cet écran. À 24 px il devient le sujet de l'écran, ce qu'il est.
+                `text-balance` répartit les lignes pour qu'aucune ne reste
+                seule, et `text-pretty` évite les mots orphelins. */}
+            <div className="relative min-w-0 flex-1 rounded-3xl border-2 border-black/10 bg-card px-4 py-4">
+              {/* TROIS FORMES DE QUESTION, UNE SEULE BULLE.
+                  Duolingo n'en pose jamais huit fois la même : il alterne. Le
+                  quiz servait DEUX formes — QCM et vrai/faux — sur les 3 300
+                  questions du catalogue, soit huit écrans identiques d'affilée
+                  où seul le texte change.
+
+                  La question À TROU est la troisième, et elle ne coûte AUCUNE
+                  migration : c'est un QCM dont l'énoncé porte « ___ ». On lit
+                  la phrase, pas la consigne, et l'option touchée vient se poser
+                  dans le creux. Le contenu n'a qu'à écrire le souligné. */}
+              {trou ? (
+                <EnonceATrou
+                  enonce={question.question}
+                  options={question.options}
+                  choisi={selected}
+                  correctIndex={question.correct_index}
+                  revele={answered}
+                  className="font-heading text-2xl leading-tight font-extrabold text-balance text-foreground"
+                />
+              ) : (
+                <p className="font-heading text-2xl leading-tight font-extrabold text-balance text-foreground">
+                  {question.question}
+                </p>
+              )}
               {/* La pointe, côté mascotte. Deux bords seulement, tournés à 45° :
                   le carré emprunte au cadre de la bulle son trait et son fond,
                   donc il suit toute retouche sans qu'on y pense. */}
               <span
                 aria-hidden="true"
-                className="absolute top-6 -left-[9px] size-4 rotate-45 border-b-2 border-l-2 border-black/10 bg-card"
+                className="absolute top-8 -left-[9px] size-4 rotate-45 border-b-2 border-l-2 border-black/10 bg-card"
               />
             </div>
           </div>
@@ -936,7 +1111,7 @@ export default function QuizPlayer({
         {/* LA RESPIRATION avant les réponses. Elle ne porte plus rien depuis
             que l'illustration est passée dans l'angle : c'est du vide, et c'est
             son rôle — séparer ce qu'on lit de ce qu'on tape. */}
-        <div className="min-h-3 flex-1" aria-hidden="true" />
+        <div className="min-h-3 flex-[0.7]" aria-hidden="true" />
 
         {/* LES RÉPONSES, ANCRÉES EN BAS — au plus près du pouce.
             Elles suivaient la question dans le flux : sur un écran haut, elles
@@ -967,28 +1142,39 @@ export default function QuizPlayer({
           />
         </div>
 
-        {/* La respiration du BAS : elle remonte les réponses vers le centre au
-            lieu de les coller au bord, maintenant qu'un bouton occupe le bas. */}
-        <div className="min-h-3 flex-1" aria-hidden="true" />
+        {/* La respiration du BAS. Elle vaut moins que celle du haut (0,35
+            contre 1) : les réponses doivent tomber PRÈS DU POUCE, juste
+            au-dessus des boutons, pas flotter au milieu de l'écran. Le vide se
+            rassemble donc au-dessus d'elles, entre l'énoncé et le plateau, là
+            où il sert de respiration à la lecture. */}
+        <div className="min-h-3 flex-[0.35]" aria-hidden="true" />
 
-        {/* VALIDER, et « Je ne sais pas » dessous.
+        {/* VALIDER, SEUL.
             Le tap sur une réponse corrigeait immédiatement : un doigt qui
             ripe coûtait la question, sans recours. Le geste se dédouble — on
             choisit, puis on valide — et le bouton reste ÉTEINT tant que rien
             n'est coché, ce qui dit sans un mot ce qu'il attend.
 
-            « Je ne sais pas » n'est pas un abandon mais un aveu : il compte la
-            question ratée (donc la reprogramme) et montre la bonne réponse. Le
-            proposer, c'est éviter le clic au hasard — qui, lui, apprend à la
-            répétition espacée que la carte est sue. */}
+            ⚠️ « JE NE SAIS PAS » A ÉTÉ RETIRÉ (01/09, à la demande). Il vivait
+            juste au-dessus et comptait la question ratée sans faire deviner.
+            Ce qu'on perd en le retirant : l'élève qui ne sait pas n'a plus
+            d'autre issue que de tenter au hasard, et un coup de chance apprend
+            à la répétition espacée que la carte est SUE — elle la reprogramme
+            alors trop loin. Si ce défaut se voit un jour dans les données de
+            révision, c'est ici qu'il faut revenir. */}
         {!answered ? (
-          <div className="mt-3 flex shrink-0 flex-col gap-2.5">
+          // `mb-4` : le même confort d'1 rem que le bloc de la feuille de
+          // retour. Avec la barre système portée par le conteneur (ci-dessus),
+          // « Valider » et « Continuer » ont le MÊME bord bas — c'est le seul
+          // point fixe de la session, celui où le pouce revient sans regarder.
+          // Tout ce qu'on ajouterait SOUS ce bouton le déplacerait.
+          <div className="mt-3 mb-4 flex shrink-0 flex-col gap-2.5">
             <button
               type="button"
               disabled={selected === null}
               onClick={() => valider(selected)}
               className={cn(
-                'quiz-plaque h-13 w-full text-base font-extrabold tracking-wide uppercase',
+                'quiz-plaque h-14 w-full text-lg font-extrabold tracking-wide uppercase',
                 selected === null
                   ? // ÉTEINT — mais toujours une PLAQUE. Il était plat, sans
                     // contour ni tranche : un aplat beige qui ne ressemblait
@@ -1005,20 +1191,6 @@ export default function QuizPlayer({
               )}
             >
               Valider
-            </button>
-
-            {/* « JE NE SAIS PAS » EST UN BOUTON, DONC IL A DES CONTOURS.
-                C'était un texte gris posé sur le fond : rien ne disait qu'on
-                pouvait le toucher, et sa zone tactile s'arrêtait aux lettres.
-                Même plaque que « Valider », en robe claire — c'est le rang qui
-                les distingue (la couleur, la saturation), pas la présence ou
-                l'absence de bouton. */}
-            <button
-              type="button"
-              onClick={() => valider(null)}
-              className="quiz-plaque h-12 w-full cursor-pointer text-sm font-extrabold text-foreground/75 [--plaque-bas:color-mix(in_oklab,var(--card),black_7%)] [--plaque-bord:color-mix(in_oklab,var(--jeu-accent),black_34%)] [--plaque-haut:var(--card)]"
-            >
-              Je ne sais pas
             </button>
           </div>
         ) : null}

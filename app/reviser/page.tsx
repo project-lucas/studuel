@@ -26,6 +26,7 @@ import CarnetButton from '@/components/carnet/CarnetButton'
 import SerieBar from '@/components/reviser/SerieBar'
 import MarcelFab from '@/components/reviser/MarcelFab'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
+import { fetchGauges, gardiensSortis } from '@/lib/traque-server'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import {
@@ -146,6 +147,12 @@ export default async function ReviserPage() {
     { data: sessionRows },
     cachedSubjects,
     chapitresVus,
+    // Les jauges de La Traque. Lues ICI, dans la vague déjà partie : elles ne
+    // dépendent ni de la classe ni du catalogue, et `buildTraqueBoard` compose
+    // ensuite le plateau SANS requête. C'est le geste de l'arène, à
+    // l'identique — rien ne justifierait une vague de plus pour colorer des
+    // dossiers.
+    jauges,
   ] = await Promise.all([
     readRowTolerant<ProfileRow>(supabase, 'profiles', 'id', user.id, [
       'full_name',
@@ -207,6 +214,8 @@ export default async function ReviserPage() {
     // couronnes. Sans cette lecture, cet écran et le tableau de Marcel
     // afficheraient deux pourcentages différents pour la même matière.
     getChapitresVus(supabase, user.id),
+    // Les jauges de La Traque — voir `gardiens`, plus bas.
+    fetchGauges(supabase, user.id),
   ])
 
   const grade = profile.grade_level ?? null
@@ -325,6 +334,17 @@ export default async function ReviserPage() {
   // Le Défi, lui, garde le filtre : là une matière sans question ne donne pas
   // une page vide mais un duel qui ne peut pas se jouer.
   const ofLevel = allSubjects.filter((s) => s.levels.includes(grade))
+
+  // LES GARDIENS SORTIS, par matière. Un boss débusqué ne se voyait QUE sur
+  // l'arène : l'élève apprenait qu'il rôdait sur un onglet, et devait deviner
+  // tout seul dans quel dossier aller le chercher. Sa fenêtre dure une heure —
+  // le temps de la manquer. Le dossier de sa matière prend donc l'écarlate de
+  // la bannière d'alerte, sur l'écran où l'on choisit ce qu'on révise.
+  //
+  // `gardiensSortis` est PUR : il compose depuis les jauges déjà lues, et il
+  // raisonne MATIÈRE PAR MATIÈRE — contrairement au plateau de l'arène, qui
+  // n'affiche qu'une carte par gardien (voir son avertissement).
+  const gardiens = gardiensSortis(jauges, ofLevel)
   const withContent = new Set(
     subjectsWithContentAt(ofLevel, subjectLevels, grade).map((s) => s.slug),
   )
@@ -625,6 +645,7 @@ export default async function ReviserPage() {
               progressBySlug={progressBySlug}
               examBySubject={examBySubject}
               emptySlugs={emptySlugs}
+              gardiens={gardiens}
               topSlot={
                 /* DEUX blocs avant les matières, plus cinq. L'accueil empilait
                    la mission du jour, la ligne des contrôles, la boucle

@@ -8,11 +8,13 @@ import { toDayKey } from '@/lib/streak'
 import {
   chaptersBySubject,
   emptyGauge,
+  gaugeStatus,
   normalizeGauge,
   pointsFor,
   poolChapters,
   sortCards,
   traqueCard,
+  windowEndMs,
   type TraqueCard,
   type TraqueEvent,
   type TraqueGauge,
@@ -295,6 +297,57 @@ export async function fetchGardienCard(
     nowMs,
     subject.slug,
   )
+}
+
+/**
+ * LES GARDIENS SORTIS, par slug de matière → nom du boss.
+ *
+ * ⚠️ CE N'EST PAS `buildTraqueBoard`, ET C'EST TOUT L'ENJEU. Le plateau de
+ * l'arène compose une carte par GARDIEN : il écarte les matières qui retombent
+ * sur Nox (le filet de sécurité) et n'en garde qu'une par boss, pour ne pas
+ * afficher dix fois la même carte. Deux règles justes là-bas, fausses ici :
+ *
+ *   · une matière sous Nox n'aurait JAMAIS son dossier en alerte, alors que sa
+ *     propre page lui montre bien un gardien (cf. `fetchGardienCard`, qui a
+ *     déjà tranché ce point : « un dossier sans écusson pendant que le voisin
+ *     en a un se lirait comme un bug ») ;
+ *   · deux matières qui PARTAGENT un boss (Physique et Chimie) n'en verraient
+ *     qu'une s'allumer — alors que la jauge est commune et que réviser l'une ou
+ *     l'autre la nourrit.
+ *
+ * On raisonne donc matière par matière, exactement comme la page d'une matière.
+ * Pur : aucune requête, les jauges sont déjà lues.
+ */
+export type GardienSorti = {
+  /** Nom du gardien (« Big Ben »). */
+  boss: string
+  /**
+   * Fin de la fenêtre d'une heure, en ms epoch.
+   *
+   * Rendue au client PLUTÔT QUE le temps restant : un « il reste 38 min »
+   * calculé au rendu serveur se périme à la seconde suivante. Le client repart
+   * de cette borne et l'égrène lui-même — même geste que la bannière de
+   * l'arène (`TraqueCard.endsAt`).
+   */
+  endsAt: number
+}
+
+export function gardiensSortis(
+  gauges: Map<string, TraqueGauge> | null,
+  subjects: readonly { name: string; slug: string }[],
+  nowMs: number = Date.now(),
+): Record<string, GardienSorti> {
+  const out: Record<string, GardienSorti> = {}
+  if (gauges === null) return out
+  for (const { name, slug } of subjects) {
+    const boss = bossForSubject(name)
+    const gauge = gauges.get(boss.id) ?? emptyGauge(boss.id)
+    if (gaugeStatus(gauge, nowMs) !== 'debusque') continue
+    const fin = windowEndMs(gauge)
+    if (fin === null) continue
+    out[slug] = { boss: boss.name, endsAt: fin }
+  }
+  return out
 }
 
 /**

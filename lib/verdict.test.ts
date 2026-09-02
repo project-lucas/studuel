@@ -15,9 +15,16 @@ describe('verdictFor', () => {
 
   it('n’envoie pas « Aïeee » à un Terminale', () => {
     // Le défaut corrigé : le ton collège était servi à tout le monde.
-    expect(verdictFor(0.2, '6e').message).toContain('Aïeee')
-    expect(verdictFor(0.2, 'Tle').message).not.toContain('Aïeee')
-    expect(verdictFor(0.2, 'Tle').message).not.toEqual(verdictFor(0.2, '6e').message)
+    // On regarde le verdict ENTIER (titre + message) : « Aïeee » est passé de
+    // l'un à l'autre le jour où l'écran de fin a reçu un titre, et un test qui
+    // ne lisait qu'un champ aurait laissé le ton fuir dans l'autre.
+    const texte = (grade: string) => {
+      const v = verdictFor(0.2, grade)
+      return `${v.titre} ${v.message}`
+    }
+    expect(texte('6e')).toContain('Aïeee')
+    expect(texte('Tle')).not.toContain('Aïeee')
+    expect(texte('Tle')).not.toEqual(texte('6e'))
   })
 
   it('traite 2de, 1re et Tle comme du lycée, le reste comme du collège', () => {
@@ -36,12 +43,24 @@ describe('verdictFor', () => {
     expect(verdictFor(0.9, undefined)).toEqual(verdictFor(0.9, '6e'))
   })
 
-  it('donne toujours un emoji et un message non vides', () => {
+  it('donne toujours un emoji, un titre et un message non vides', () => {
     for (const ratio of [0, 0.3, 0.5, 0.8, 1]) {
       for (const grade of ['6e', 'Tle', null]) {
         const v = verdictFor(ratio, grade)
         expect(v.emoji.length).toBeGreaterThan(0)
+        expect(v.titre.length).toBeGreaterThan(0)
         expect(v.message.length).toBeGreaterThan(0)
+      }
+    }
+  })
+
+  it('garde le TITRE court — l’écran de fin le sert en très gros', () => {
+    // Au-delà de vingt caractères, le titre passe à la ligne sous la mascotte
+    // et l'écran cesse de se lire d'un coup d'œil.
+    for (const ratio of [0, 0.3, 0.5, 0.8, 1]) {
+      for (const grade of ['6e', 'Tle', 'CE2', null]) {
+        const v = verdictFor(ratio, grade)
+        expect(v.titre.length, `${grade} @ ${ratio} : « ${v.titre} »`).toBeLessThanOrEqual(20)
       }
     }
   })

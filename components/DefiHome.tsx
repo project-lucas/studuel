@@ -40,6 +40,8 @@ import ModeStage from '@/components/defi/ModeStage'
 import type { RankPlayer } from '@/lib/trophies'
 import { bossForSubject, dominantSubject } from '@/lib/bosses'
 import { XP_RULES, type LevelInfo } from '@/lib/xp'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import type { Gain } from '@/lib/gains'
 import { isCommuteNow } from '@/lib/trajet'
 import type { CommuteSlot } from '@/lib/types'
 import { recordChallenge } from '@/app/defi/actions'
@@ -176,6 +178,8 @@ export default function DefiHome({
   const [correct, setCorrect] = useState(0)
   const [xp, setXp] = useState(0)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // Ce que le défi a rapporté, tel que la base l'a écrit.
+  const [gains, setGains] = useState<Gain[]>([])
   // Mode trajet : testé après montage (heure du téléphone de l'élève), pour
   // ne pas figer un état « en trajet » dans le HTML servi.
   const [commuteMode, setCommuteMode] = useState(false)
@@ -233,7 +237,10 @@ export default function DefiHome({
     sfx.complete()
     // L'XP envoyée n'est qu'un affichage local : le serveur la recalcule.
     recordChallenge(finalCorrect, items.length)
-      .then((r) => setSaved(r.saved))
+      .then((r) => {
+        setSaved(r.saved)
+        setGains(r.gains)
+      })
       .catch(() => setSaved(false))
     // Reprogramme chaque item dans la file « À revoir » (SRS + Revanche).
     recordReviewAnswers(reviewsRef.current).catch(() => {})
@@ -787,15 +794,19 @@ export default function DefiHome({
           </p>
         </div>
 
-        <div className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-6 py-3 font-mono text-2xl font-bold text-foreground shadow-lg duration-700 tabular-nums">
-          <Zap className="size-6" /> +{xp} XP
-        </div>
+        {/* CE QUE LE DÉFI A RAPPORTÉ, et le geste de Clash Royale qui va avec.
 
-        {/* Exploit de trajet : le temps mort est devenu de l'XP. */}
+            ⚠️ C'était un « +{xp} XP » en gros chiffres, calculé côté client par
+            `XP_RULES` : depuis la migration 348, jouer n'acquiert rien et le
+            portefeuille ne verse plus cette XP. Le compteur du bandeau ne
+            bougeait donc jamais d'autant. */}
+        <PanneauRecompenses gains={gains} className="w-full max-w-sm" />
+
+        {/* Exploit de trajet : le défi a été joué dans un créneau de trajet. */}
         {commuteExploit ? (
           <p className="animate-in fade-in flex items-center gap-1.5 text-sm font-semibold text-white duration-700">
             <BusFront className="size-4 text-highlight" />
-            Exploit de trajet ! +{XP_RULES.commuteBonus} XP bonus inclus
+            Exploit de trajet — cette session compte double pour tes habitudes.
           </p>
         ) : null}
 

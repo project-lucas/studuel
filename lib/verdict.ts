@@ -7,7 +7,19 @@ import { schoolLevelForGrade, type SchoolLevel } from './clan'
 // prépare le bac. Le ton se règle donc sur le CYCLE, les seuils restant
 // identiques pour que la progression se lise pareil partout.
 
-export type Verdict = { emoji: string; message: string }
+export type Verdict = {
+  emoji: string
+  /**
+   * LE TITRE — deux ou trois mots, en gros, sous la mascotte.
+   *
+   * L'écran de fin n'avait que le `message`, une phrase entière servie en petit
+   * corps de texte. Duolingo ouvre par un TITRE que l'œil prend d'un coup, et
+   * garde la phrase pour dessous : on sait comment on s'en est sorti avant
+   * d'avoir lu quoi que ce soit. Même ton que le message, même palier.
+   */
+  titre: string
+  message: string
+}
 
 type Palier = 'parfait' | 'bien' | 'moyen' | 'faible'
 
@@ -15,26 +27,26 @@ type Palier = 'parfait' | 'bien' | 'moyen' | 'faible'
 // retravailler au fond » ne veut rien dire pour un CE1 — et « Aïeee » de la
 // version collège se lit comme une moquerie à cet âge, pas comme un clin d'œil.
 const PRIMAIRE: Record<Palier, Verdict> = {
-  parfait: { emoji: '🌟', message: 'Tout juste ! Bravo, tu as tout bon.' },
-  bien: { emoji: '😄', message: 'Très bien ! Il ne manquait presque rien.' },
-  moyen: { emoji: '🙂', message: 'C’est un bon début. On regarde ensemble ce qui a coincé ?' },
-  faible: { emoji: '🌱', message: 'Pas grave, ça s’apprend. On refait un tour tranquillement.' },
+  parfait: { emoji: '🌟', titre: 'Tout juste !', message: 'Bravo, tu as tout bon.' },
+  bien: { emoji: '😄', titre: 'Très bien !', message: 'Il ne manquait presque rien.' },
+  moyen: { emoji: '🙂', titre: 'Bon début !', message: 'On regarde ensemble ce qui a coincé ?' },
+  faible: { emoji: '🌱', titre: 'Ça s’apprend', message: 'Pas grave. On refait un tour tranquillement.' },
 }
 
 const COLLEGE: Record<Palier, Verdict> = {
-  parfait: { emoji: '🤩', message: 'Parfait, sans faute ! Tu maîtrises cette leçon.' },
-  bien: { emoji: '😎', message: 'Excellent ! Encore un petit effort pour le sans-faute.' },
-  moyen: { emoji: '🙂', message: 'Pas mal ! Relis la correction et retente ta chance.' },
-  faible: { emoji: '😮', message: 'Aïeee… Tu peux faire mieux ! On recommence ?' },
+  parfait: { emoji: '🤩', titre: 'Sans faute !', message: 'Tu maîtrises cette leçon.' },
+  bien: { emoji: '😎', titre: 'Excellent !', message: 'Encore un petit effort pour le sans-faute.' },
+  moyen: { emoji: '🙂', titre: 'Pas mal !', message: 'Relis la correction et retente ta chance.' },
+  faible: { emoji: '😮', titre: 'Aïeee…', message: 'Tu peux faire mieux ! On recommence ?' },
 }
 
 // Ton lycée : sobre, tourné vers l'examen. On parle résultat et méthode, pas
 // « aïeee ».
 const LYCEE: Record<Palier, Verdict> = {
-  parfait: { emoji: '🎯', message: 'Sans faute. Ce chapitre est acquis.' },
-  bien: { emoji: '📈', message: 'Bon niveau. Reprends les points ratés pour sécuriser.' },
-  moyen: { emoji: '📚', message: 'Les bases sont là, mais il reste des trous à combler.' },
-  faible: { emoji: '🧭', message: 'Chapitre à retravailler au fond avant de le valider.' },
+  parfait: { emoji: '🎯', titre: 'Chapitre acquis', message: 'Sans faute.' },
+  bien: { emoji: '📈', titre: 'Bon niveau', message: 'Reprends les points ratés pour sécuriser.' },
+  moyen: { emoji: '📚', titre: 'À consolider', message: 'Les bases sont là, mais il reste des trous à combler.' },
+  faible: { emoji: '🧭', titre: 'À retravailler', message: 'Ce chapitre est à reprendre au fond avant de le valider.' },
 }
 
 const TONS: Record<SchoolLevel, Record<Palier, Verdict>> = {

@@ -3,11 +3,13 @@ import { PrefetchKind } from 'next/dist/client/components/router-reducer/router-
 import { NAV_TABS } from './nav-tabs'
 import {
   CADENCE_RONDE_MS,
+  DELAI_PREMIER_DOSSIER_MS,
   DELAI_PREMIER_PRECHARGEMENT_MS,
   ESPACEMENT_MS,
   INACTIVITE_MAX_MS,
   PRECHARGEMENT_COMPLET,
   doitPrecharger,
+  dossiersAPrecharger,
   ongletsAPrecharger,
   planifierRonde,
 } from './precharge-onglets'
@@ -105,6 +107,24 @@ describe('planifierRonde', () => {
 
   it('est vide hors des onglets', () => {
     expect(planifierRonde('/test/abc', 0)).toEqual([])
+  })
+})
+
+describe('dossiersAPrecharger', () => {
+  it('prend les premiers dossiers de la grille, dans l’ordre', () => {
+    expect(
+      dossiersAPrecharger(['maths', 'francais', 'histoire', 'svt', 'anglais']),
+    ).toEqual(['/reviser/maths', '/reviser/francais', '/reviser/histoire'])
+  })
+
+  it('accepte une grille plus courte', () => {
+    expect(dossiersAPrecharger(['maths'])).toEqual(['/reviser/maths'])
+    expect(dossiersAPrecharger([])).toEqual([])
+  })
+
+  it('part après le dernier onglet, avec une marge', () => {
+    const dernierOnglet = DELAI_PREMIER_PRECHARGEMENT_MS + 3 * ESPACEMENT_MS
+    expect(DELAI_PREMIER_DOSSIER_MS).toBeGreaterThan(dernierOnglet + ESPACEMENT_MS)
   })
 })
 

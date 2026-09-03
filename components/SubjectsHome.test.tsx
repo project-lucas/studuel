@@ -10,6 +10,12 @@ import type { Subject } from '@/lib/types'
 // pur ; ici on vérifie qu'il arrive bien à l'écran — et qu'il en repart quand
 // la fenêtre se referme sous les yeux de l'élève.
 
+// Le routeur Next n'est pas monté dans un rendu de test : la grille s'en sert
+// pour précharger les dossiers (PrechargeurDossiers, et le doigt qui se pose).
+vi.mock('next/navigation', () => ({
+  useRouter: () => ({ prefetch: vi.fn(), push: vi.fn() }),
+  usePathname: () => '/reviser',
+}))
 vi.mock('@/lib/sounds', () => ({ sfx: { tap: vi.fn() } }))
 vi.mock('@/lib/toast', () => ({ toast: vi.fn() }))
 vi.mock('@/app/reviser/actions', () => ({ saveSelectedSubjects: vi.fn() }))

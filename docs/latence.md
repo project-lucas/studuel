@@ -77,6 +77,29 @@ Deux pièges de mesure rencontrés, à connaître :
 5. **Les icônes** : `app/icon.png` 483 → 17 Ko (192 px, palette),
    `apple-icon` 76 → 15 Ko, `icons/icon-192` 85 → 17 Ko, `icon-512` 483 → 85 Ko.
 
+### Second lot (03/09, soir) — les dossiers de matière
+
+Lucas : « l'ouverture des dossiers de matière est longue au premier clic ».
+Cause, lue dans `app/reviser/[subject]/page.tsx` : **cinq allers-retours
+Supabase en file indienne** (profil → programme → données personnelles → cours
+du carnet → questions du carnet), et parmi eux la lecture la plus lourde du
+dossier : les **colonnes complètes de toutes les questions de la matière**
+(énoncé, options, explication — plusieurs centaines de lignes) pour n'en garder
+que 60 au hasard pour le boss. Et rien ne préchargeait un dossier avant le tap.
+
+Changé :
+
+- **3 vagues au lieu de 5** : tout ce qui ne dépend que de l'élève et de la
+  matière (avancement, file SRS, classement, axes, annales, gardien, cours du
+  carnet) part PENDANT la lecture du programme ; la vague finale ne garde que
+  ce qui dépend des quiz ou du carnet.
+- **Le boss tire au sort 10 quiz** et ne lit en entier que leurs questions ;
+  le compte par quiz et le rattachement SRS ne lisent que les identifiants.
+- **`PrechargeurDossiers`** (monté par la grille de Réviser) : les 3 premiers
+  dossiers de la grille sont préchargés en entier, un par un, une fois les
+  onglets servis (`DELAI_PREMIER_DOSSIER_MS`). Et le doigt qui se pose sur un
+  dossier relance celui-là (`onPointerDown`).
+
 ## Comment vérifier sur le téléphone (après déploiement)
 
 1. Ouvrir l'app, attendre le hub (rideau levé), **ne rien toucher 3 s**.

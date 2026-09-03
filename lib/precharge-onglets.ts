@@ -108,15 +108,38 @@ export function doitPrecharger({
 }
 
 /**
- * Le plan d'une ronde : chaque onglet avec son retard de départ, du premier
- * (`delaiInitialMs`) au dernier, espacés de `ESPACEMENT_MS`.
+ * Le plan d'une liste : chaque route avec son retard de départ, de la première
+ * (`delaiInitialMs`) à la dernière, espacées de `ESPACEMENT_MS`.
  */
+export function planifierListe(
+  hrefs: string[],
+  delaiInitialMs: number,
+): Array<{ href: string; retardMs: number }> {
+  return hrefs.map((href, i) => ({
+    href,
+    retardMs: delaiInitialMs + i * ESPACEMENT_MS,
+  }))
+}
+
+/** Le plan d'une ronde d'onglets, depuis la route courante. */
 export function planifierRonde(
   pathname: string,
   delaiInitialMs: number,
 ): Array<{ href: string; retardMs: number }> {
-  return ongletsAPrecharger(pathname).map((href, i) => ({
-    href,
-    retardMs: delaiInitialMs + i * ESPACEMENT_MS,
-  }))
+  return planifierListe(ongletsAPrecharger(pathname), delaiInitialMs)
+}
+
+/**
+ * LES DOSSIERS DE MATIÈRE. Depuis Réviser, les premiers dossiers de la grille
+ * sont préchargés à leur tour — après les onglets, qui passent d'abord : le
+ * premier onglet part à `DELAI_PREMIER_PRECHARGEMENT_MS`, le dernier des quatre
+ * trois espacements plus tard ; les dossiers prennent la suite avec une marge.
+ */
+export const DOSSIERS_PRECHARGES = 3
+export const DELAI_PREMIER_DOSSIER_MS =
+  DELAI_PREMIER_PRECHARGEMENT_MS + 4 * ESPACEMENT_MS + 600
+
+/** Les dossiers à précharger, dans l'ordre de la grille : les premiers. */
+export function dossiersAPrecharger(slugs: string[]): string[] {
+  return slugs.slice(0, DOSSIERS_PRECHARGES).map((slug) => `/reviser/${slug}`)
 }

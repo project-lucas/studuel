@@ -2,6 +2,10 @@
 
 import { useRef, useState, useTransition } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { prechargerOnglet } from '@/components/PrechargeurOnglets'
+import PrechargeurDossiers from '@/components/reviser/PrechargeurDossiers'
+import { dossiersAPrecharger } from '@/lib/precharge-onglets'
 import {
   Check,
   Pencil,
@@ -313,6 +317,7 @@ function SubjectRow({
   maintenant?: number | null
   delayMs: number
 }) {
+  const router = useRouter()
   const theme = subjectTheme(subject.color)
   const prox = exam ? PROX_STYLE[exam.proximity] : null
   // Illustration dédiée de la matière (toile carrée normalisée). Elle reste
@@ -503,6 +508,10 @@ function SubjectRow({
   return (
     <Link
       href={`/reviser/${subject.slug}`}
+      // Le doigt qui se pose relance le dossier visé, en entier : s'il n'est
+      // pas parmi les premiers préchargés (PrechargeurDossiers) ou si son
+      // entrée a expiré, on gagne le temps du geste. Sans coût s'il est frais.
+      onPointerDown={() => prechargerOnglet(router, `/reviser/${subject.slug}`)}
       onClick={() => sfx.tap()}
       className="group block"
     >
@@ -676,6 +685,15 @@ export default function SubjectsHome({
     <section aria-label="Tes matières">
       {/* Fond crème pleine page, derrière tout le contenu de l'onglet. */}
       <WorldBackdrop className="tab-bg" />
+      {/* Les premiers dossiers de la grille, préchargés en arrière-plan une
+          fois les onglets servis — pas en édition, où l'on ne les ouvre pas. */}
+      <PrechargeurDossiers
+        hrefs={
+          editing
+            ? []
+            : dossiersAPrecharger(groups.flatMap((g) => g.items.map((s) => s.slug)))
+        }
+      />
 
       {/* Plus de carte d'identité : les blocs d'action (série/semaine,
           contrôles, reprise) arrivent directement, puis la grille des matières. */}

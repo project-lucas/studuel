@@ -1,5 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
-import { getChapterMastery, chapterState } from '@/lib/mastery'
+import { chapterState } from '@/lib/mastery'
+import { getChapterMastery } from '@/lib/mastery-server'
 import {
   getSubjectsCached,
   getGradeChaptersCached,

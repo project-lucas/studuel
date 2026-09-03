@@ -13,6 +13,9 @@ import NavMoiBust from "@/components/NavMoiBust";
 // Balayage horizontal (façon Clash Royale) : change d'onglet depuis n'importe
 // quel endroit de l'écran.
 import SwipeTabs from "@/components/SwipeTabs";
+// Préchargeur d'onglets : les quatre autres onglets sont demandés au routeur
+// en arrière-plan, un par un, pour qu'un tap les ouvre sans attendre.
+import PrechargeurOnglets from "@/components/PrechargeurOnglets";
 // Rebond sonore aux extrémités : « bwomp » grave quand on tire une liste au-delà
 // de son haut ou de son bas (aucun son pendant le défilement normal).
 import ScrollEdgeSound from "@/components/ScrollEdgeSound";
@@ -114,6 +117,9 @@ export default async function RootLayout({
         <div className="flex min-h-screen">
           <BackGuard />
           <ScrollEdgeSound />
+          {/* Ne rend rien. Réservé aux élèves connectés : un visiteur n'a
+              que des vitrines, inutile de les calculer d'avance. */}
+          {user ? <PrechargeurOnglets /> : null}
           {/* Bandeau du haut streamé : ne bloque pas le rendu de la page. Le
               repli est une barre vide de même hauteur (aucun saut de mise en
               page). */}

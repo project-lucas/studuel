@@ -13,7 +13,7 @@ import {
 } from '@/lib/jeux/programme'
 import { poolSizeFor } from '@/lib/jeux/formats'
 import { toModeQuestions, type QuickQuestionRow } from '@/lib/defi/quick-pool'
-import { getChapterMastery } from '@/lib/mastery'
+import { getChapterMastery } from '@/lib/mastery-server'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { fetchGameGhost } from '@/lib/jeux/ghost-server'

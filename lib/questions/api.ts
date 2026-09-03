@@ -257,7 +257,7 @@ export type MasteryRequest = {
  * Où en est un chapitre, vu par le moteur : part réellement ancrée, dette à
  * rattraper, reste à découvrir.
  *
- * À NE PAS CONFONDRE avec `getChapterMastery` de `lib/mastery.ts`, qui mesure
+ * À NE PAS CONFONDRE avec `getChapterMastery` de `lib/mastery-server.ts`, qui mesure
  * autre chose : le meilleur SCORE DE QUIZ du chapitre. Les deux coexistent
  * volontairement — l'un dit « ce que l'élève a réussi une fois », l'autre « ce
  * qu'il retient encore ». Les couronnes de Réviser continuent de lire le

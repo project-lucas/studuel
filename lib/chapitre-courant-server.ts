@@ -1,5 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
-import { getChapterMastery } from '@/lib/mastery'
+import { getChapterMastery } from '@/lib/mastery-server'
 import {
   getGradeQuizzesCached,
   getLessonChapterPairsCached,

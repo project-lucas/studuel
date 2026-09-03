@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import dynamic from 'next/dynamic'
 import {
   Zap,
   Check,
@@ -29,12 +30,10 @@ import StreakMascot from '@/components/StreakMascot'
 import DefiTimer from '@/components/DefiTimer'
 import BlitzMode from '@/components/BlitzMode'
 import DuelMode from '@/components/DuelMode'
-import LiveDuelMode from '@/components/LiveDuelMode'
 import ChronoMode from '@/components/ChronoMode'
 import SurvivalMode from '@/components/SurvivalMode'
 import BossMode from '@/components/BossMode'
 import RankedHero from '@/components/RankedHero'
-import CoopMode from '@/components/CoopMode'
 import ArenaBackButton from '@/components/defi/ArenaBackButton'
 import ModeStage from '@/components/defi/ModeStage'
 import type { RankPlayer } from '@/lib/trophies'
@@ -60,6 +59,27 @@ import {
   type GameModeId,
   type ModeQuestion,
 } from '@/lib/defi-modes'
+
+// LES DEUX MODES EN DIRECT SE CHARGENT À LA DEMANDE. Ils sont les seuls, sur
+// l'arène, à ouvrir un canal temps réel : ils embarquent le client Supabase du
+// navigateur (Realtime, PostgREST, Auth — près de 60 Ko compressés), que
+// l'arène tirait à CHAQUE ouverture de l'app, pour une salle de duel qu'on
+// n'entre qu'en choisissant ce mode. Le morceau part maintenant au moment du
+// choix ; le temps de le recevoir, la scène du mode affiche une ligne
+// d'attente plutôt qu'un vide.
+const attenteDuMode = () => (
+  <p className="py-10 text-center text-sm font-semibold text-white/80">
+    Connexion à la salle…
+  </p>
+)
+const LiveDuelMode = dynamic(() => import('@/components/LiveDuelMode'), {
+  ssr: false,
+  loading: attenteDuMode,
+})
+const CoopMode = dynamic(() => import('@/components/CoopMode'), {
+  ssr: false,
+  loading: attenteDuMode,
+})
 
 export type ChallengeItem =
   | {

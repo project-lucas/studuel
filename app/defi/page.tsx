@@ -31,7 +31,7 @@ import {
   type SubjectLadder,
 } from '@/lib/subject-rank'
 import { unlockedSubjectSlugs } from '@/lib/subject-unlock'
-import { getChapterMastery } from '@/lib/mastery'
+import { getChapterMastery } from '@/lib/mastery-server'
 import { fetchAreneVague1 } from '@/lib/arene-vague1'
 import { reviewQueue } from '@/lib/srs'
 import WeeklyLeague from '@/components/defi/WeeklyLeague'
@@ -255,6 +255,18 @@ export default async function DefiPage() {
   // Abonné Studuel+ ? Décide de la pastille d'appel du HUD. `false` par défaut :
   // un visiteur non connecté est justement la cible du message.
   let isPremium = false
+
+  // LE PROFIL DE JEU PART MAINTENANT, en même temps que les vagues de l'arène.
+  // Il ne dépend que de l'élève, pas des classements ni du chapitre, mais il
+  // était attendu APRÈS eux : ses propres allers-retours (attribution des
+  // badges, puis stats, puis bannières, puis école) s'ajoutaient bout à bout à
+  // ceux de la page — sept vagues en file indienne, ~400 ms de serveur pour
+  // l'écran d'accueil. Lancé ici, il court en parallèle et la page ne l'attend
+  // qu'au moment de dessiner la carte. Le `catch` vide ne masque rien : la
+  // promesse est bien attendue plus bas, et son erreur y est relancée — il
+  // évite seulement un « rejet non géré » si la page échoue avant d'y arriver.
+  const profileDataPromise = user ? getProfileData() : Promise.resolve(null)
+  profileDataPromise.catch(() => {})
 
   if (user) {
     // Semaine écoulée : borne du coffre de clan, connue sans aucune requête.
@@ -553,10 +565,10 @@ export default async function DefiPage() {
     leaguePreview = meMock ? `${meMock.rank}e` : undefined
   }
 
-  // Profil de jeu (carte haut-gauche) : agrégation stats + badges + cosmétiques.
-  // Null pour un visiteur non connecté (pas de carte). Attribue au passage les
-  // badges mérités (recalcul serveur).
-  const profileData = user ? await getProfileData() : null
+  // Profil de jeu (carte haut-gauche) : agrégation stats + badges + cosmétiques,
+  // lancée tout en haut de la page. Null pour un visiteur non connecté (pas de
+  // carte). Attribue au passage les badges mérités (recalcul serveur).
+  const profileData = await profileDataPromise
 
   // LE BURGER — la porte unique du second rang, façon Clash Royale. La colonne
   // droite portait une cartouche de rang, une grappe de deux objets ET un

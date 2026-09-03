@@ -72,7 +72,10 @@ export async function getProfileData(): Promise<ProfileData | null> {
     : []
 
   // 2) Stats d'affichage (RPC unique), identité de base + colonnes profil (200),
-  //    catalogue de badges + badges de l'élève — en parallèle.
+  //    catalogue de badges + badges de l'élève, bannières équipables — TOUT en
+  //    parallèle. Les bannières faisaient une vague à part, après celle-ci,
+  //    alors qu'elles ne dépendent de rien d'autre que de l'élève : un
+  //    aller-retour de moins sur le chemin critique de l'arène.
   const [
     { data: statsRaw },
     { data: base },
@@ -80,6 +83,8 @@ export async function getProfileData(): Promise<ProfileData | null> {
     { data: catalog },
     { data: mine },
     { data: standingsRow },
+    { data: freeBanners },
+    { data: ownedBanners },
   ] = await Promise.all([
     supabase.rpc('profile_stats'),
     // Lecture TOLÉRANTE : `primaire_school_id` n'existe qu'après la migration
@@ -114,11 +119,8 @@ export async function getProfileData(): Promise<ProfileData | null> {
     // trophées » en « top 2 % des 3e ». RPC SECURITY DEFINER obligatoire — la
     // RLS de `profiles` ne laisserait voir qu'une seule ligne à l'élève.
     supabase.rpc('my_grade_standings'),
-  ])
-
-  // Bannières équipables : les gratuites d'office (price + unlock null) et
-  // celles que l'élève possède (user_avatar_items), catégorie 'banner'.
-  const [{ data: freeBanners }, { data: ownedBanners }] = await Promise.all([
+    // Bannières équipables : les gratuites d'office (price + unlock null) et
+    // celles que l'élève possède (user_avatar_items), catégorie 'banner'.
     supabase
       .from('avatar_items')
       .select('asset_key')
@@ -130,6 +132,7 @@ export async function getProfileData(): Promise<ProfileData | null> {
       .select('avatar_items(asset_key, category)')
       .eq('user_id', user.id),
   ])
+
   const availableBanners = Array.from(
     new Set([
       ...(Array.isArray(freeBanners) ? freeBanners : []).map((r) =>

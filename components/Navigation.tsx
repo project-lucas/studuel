@@ -2,13 +2,14 @@
 
 import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import type { ReactNode } from 'react'
 import { CircleUser } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { estChromeMasque } from '@/lib/quiz-chrome'
 import { sfx } from '@/lib/sounds'
 import { NAV_TABS, type NavIconName } from '@/lib/nav-tabs'
+import { prechargerOnglet } from '@/components/PrechargeurOnglets'
 import amisIcone from '@/public/images/nav/amis.webp'
 import reviserIcone from '@/public/images/nav/reviser.webp'
 import defiIcone from '@/public/images/nav/defi.webp'
@@ -92,6 +93,7 @@ export default function Navigation({
   avatarSlot?: ReactNode
 }) {
   const pathname = usePathname()
+  const router = useRouter()
 
   // Routes sans chrome : parcours d'accueil (façon Duolingo) ET sessions plein
   // écran (quiz, dictée). Le verdict est pris ICI, sur `usePathname()`, et non
@@ -149,16 +151,19 @@ export default function Navigation({
               <li key={path} className="relative z-10 flex-1">
                 <Link
                   href={path}
-                  // PAS DE PRÉCHARGEMENT. Chaque onglet est une page
-                  // entièrement dynamique qui coûte de dix à quinze requêtes
-                  // Supabase : précharger les cinq revenait à faire calculer
-                  // toute l'app au serveur dès qu'un onglet entrait dans le
-                  // champ. En production, les journaux montraient /tresor rendu
-                  // quatre fois et /defi trois fois en une seconde, et des 503
-                  // sur les préchargements — c'est-à-dire une app SATURÉE PAR
-                  // ELLE-MÊME. Le cache client du routeur (staleTimes) fait le
-                  // travail, lui, sans rien demander au serveur.
+                  // PAS DE PRÉCHARGEMENT PAR LE LIEN. Chaque onglet est une
+                  // page entièrement dynamique qui coûte de dix à quinze
+                  // requêtes Supabase : laisser les cinq liens précharger dès
+                  // leur entrée dans le champ revenait à faire calculer toute
+                  // l'app au serveur d'un coup — en production, /tresor rendu
+                  // quatre fois et /defi trois fois en une seconde, et des 503.
+                  // Le préchargement existe toujours, mais il est PILOTÉ :
+                  // `PrechargeurOnglets` (layout) demande les onglets un par
+                  // un, une fois la page peinte, et les garde frais ; ici, le
+                  // doigt qui se pose relance juste celui qu'il vise, au cas
+                  // où son entrée a expiré — sans coût quand elle est fraîche.
                   prefetch={false}
+                  onPointerDown={() => prechargerOnglet(router, path)}
                   onClick={() => sfx.tap()}
                   aria-label={name}
                   aria-current={active ? 'page' : undefined}
